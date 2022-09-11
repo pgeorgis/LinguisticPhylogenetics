@@ -10,10 +10,15 @@ from nltk import edit_distance
 from sklearn.metrics import jaccard_score
 from scipy.spatial.distance import cosine
 from statistics import mean
-from nwunsch_alignment import best_alignment 
-from auxiliary_functions import strip_ch
+from nwunsch_alignment import best_alignment
+
+def strip_ch(string, to_remove):
+    """Removes a set of characters from strings"""
+    return ''.join([ch for ch in string if ch not in to_remove])
 
 #IMPORT SOUND DATA
+save_dir = '/'.join(__file__.split('/')[:-1])
+os.chdir(save_dir)
 phone_data = pd.read_csv('Phones/segments.csv', sep=',')
 
 def binary_feature(feature):
@@ -115,6 +120,23 @@ def verify_charset(text):
     unk_ch = set(ch for ch in chs if ch not in set(all_sounds+diacritics+tonemes+[' ']))
     return unk_ch
 
+def is_ch(ch, l):
+    try:
+        if strip_diacritics(ch)[0] in l:
+            return True
+        else:
+            return False
+    except IndexError:
+        return False
+
+def is_vowel(ch):
+    return is_ch(ch, vowels)
+
+def is_consonant(ch):
+    return is_ch(ch, consonants)
+
+def is_glide(ch):
+    return is_ch(ch, glides)
 
 #%%
 #BASIC PHONE ANALYSIS: Methods for yielding feature dictionaries of phone segments

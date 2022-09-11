@@ -1,8 +1,10 @@
 from collections import defaultdict
 import pandas as pd
-import math, unidecode, re, operator, os
-import numpy as np
-from statistics import mean, median, stdev
+from math import log, sqrt, e
+import re, operator, os
+from unidecode import unidecode
+from numpy import array, amax, zeros
+from statistics import mean, stdev
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, linkage, fcluster, to_tree
 from scipy.spatial.distance import squareform
@@ -70,7 +72,7 @@ def strip_ch(string, to_remove):
     return ''.join([ch for ch in string if ch not in to_remove])
 
 def format_as_variable(string):
-    variable = unidecode.unidecode(string)
+    variable = unidecode(string)
     variable = re.sub(' ', '', variable)
     variable = re.sub("'", '', variable)
     variable = re.sub('-', '_', variable)
@@ -143,7 +145,7 @@ def normalize_dict(dict_, default=False, lmbda=None, return_=True):
 #INFORMATION CONTENT
 def surprisal(p):
     try:
-        return -math.log(p, 2)
+        return -log(p, 2)
     except ValueError:
         print(f'Math Domain Error: cannot take the log of {p}')
         raise ValueError
@@ -203,7 +205,7 @@ def lidstone_smoothing(x, N, d, alpha=0.3):
 #%%
 #PLOTTING PAIRWISE SIMILARITY / DISTANCE
 def euclidean_dist(dists):
-    return math.sqrt(sum([dist**2 for dist in dists]))
+    return sqrt(sum([dist**2 for dist in dists]))
 
 def list_mostsimilar(item1, comp_group, dist_func, n=5, sim=True, return_=False,
                      **kwargs):
@@ -218,7 +220,7 @@ def list_mostsimilar(item1, comp_group, dist_func, n=5, sim=True, return_=False,
 
 def distance_matrix(group, dist_func, sim=False, **kwargs):
     #Initialize nxn distance matrix filled with zeros
-    mat = np.zeros((len(group),len(group)))
+    mat = zeros((len(group),len(group)))
     
     #Calculate pairwise distances between items and add to matrix
     for i in range(len(group)):
@@ -316,9 +318,9 @@ def linkage2newick(linkage_matrix, leaf_labels):
 
 def dm2coords(dm, dimensions=2):
     """Returns coordinate embeddings of an array of items from their distance matrix"""
-    adist = np.array(dm)
-    amax = np.amax(adist)
-    adist /= amax
+    adist = array(dm)
+    a_max = amax(adist)
+    adist /= a_max
     mds = manifold.MDS(n_components=dimensions, 
                        dissimilarity="precomputed", 
                        random_state=42)
@@ -360,6 +362,7 @@ def plot_distances(group, dist_func=None, sim=False, dimensions=2, labels=None,
     plt.show()
 
 #%%
+"""
 from kneed import KneeLocator
 from sklearn.cluster import KMeans, DBSCAN
 from sklearn.metrics import silhouette_score
@@ -447,7 +450,7 @@ def dbscan_cluster(dm, scaler=True, item_labels=None):
     #Otherwise just return the list of cluster labels
     else:
         return labels
-    
+"""
         
 
 #%%
@@ -471,7 +474,7 @@ def network_plot(group, labels,
         if method == 'coords':
             min_edges = len(group)
         else:
-            min_edges = round(math.sqrt(len(group)))
+            min_edges = round(sqrt(len(group)))
             
     #Determine the maximum number of edges to display per node
     #By default, set the maximum to the total number of nodes
@@ -734,7 +737,7 @@ def new_network_plot(group, labels,
                 
                 for pair, dist in closest_pairs:
                     i, j = pair
-                    edges_to_add.append((i, j, dist)) #math.sqrt(dist)))#*math.log((iteration+1), 2))) #math.sqrt(iteration)))#
+                    edges_to_add.append((i, j, dist)) #sqrt(dist)))#*log((iteration+1), 2))) #sqrt(iteration)))#
             
                 #Update cluster lists
                 combined.extend(list(cluster_iterations[iteration-1][cluster2]))
@@ -825,7 +828,7 @@ def newer_network_plot(group, labels,
                  coordpos=True, dimensions=3, seed=1,
                  step_size=0.05, connection_decay=0.5,
                  edgelabels=False, edge_label_dist=True,
-                 scale_dist_func=math.sqrt,
+                 scale_dist_func=sqrt,
                  scale_dist=100, edge_decimals=1,
                  scale_nodes=False, node_sizes=None, node_colors=None,
                  invert_yaxis=False, invert_xaxis=False,
@@ -882,7 +885,7 @@ def newer_network_plot(group, labels,
     gr = nx.Graph()
     
     def add_edge(node_i, node_j, dist):
-        gr.add_edge(node_i, node_j, distance=dist, weight=(1-dist)**2)#((math.e**-dist))**2)
+        gr.add_edge(node_i, node_j, distance=dist, weight=(1-dist)**2)#((e**-dist))**2)
         
         #Label edges with distances; scale and round according to parameter specifications
         if edge_label_dist == True:
@@ -976,7 +979,7 @@ def newer_network_plot(group, labels,
         iteration_clusters = get_clusters(lm, cutoff=cluster_threshold)
         if len(iteration_clusters) < len(cluster_iterations[max(cluster_iterations.keys())]):
             #connection_proportion = 1/(iteration**2)
-            #scale_distance = math.sqrt(iteration) #math.log((iteration+1), 2) #iteration
+            #scale_distance = sqrt(iteration) #log((iteration+1), 2) #iteration
             scale_distance = scale_dist_func(iteration)
             connect_clusters(iteration_clusters,
                              connect_proportion=connect_proportion, 
