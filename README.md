@@ -1,7 +1,20 @@
 # LinguisticPhylogenetics
 
-To activate virtual environment:
+
+## Table of Contents
+* [Setup](#setup)
+
+# Setup 
+When setting up for the first time, please create and activate the virtual environment (venv) and install required packages. After the initial set up, only activation of the venv is required. 
+
+- Create the virtual environment:
+
+`python -m venv venv`
+
+- Activate virtual environment:
+
 `source venv/bin/activate`
 
-If activating for the first time, then run the following to install required packages:
+- Install required packages:
+
 `venv/bin/pip install -r requirements.txt`
