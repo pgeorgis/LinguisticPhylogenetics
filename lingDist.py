@@ -1,5 +1,5 @@
-from auxiliary_functions import euclidean_dist, normalize_dict
-from word_evaluation import *
+from auxFuncs import euclidean_dist, normalize_dict
+from wordSim import *
 from statistics import mean, stdev, StatisticsError
 import math, random
 from scipy.stats import norm

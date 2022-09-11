@@ -1,6 +1,7 @@
-from phonetic_distance import *
-from phoneme_correspondences import PhonemeCorrDetector
-from auxiliary_functions import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
+from phonDist import *
+from phonAlign import *
+from phonCorr import PhonemeCorrDetector
+from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
 from asjp import ipa2asjp
 from nltk import edit_distance
 

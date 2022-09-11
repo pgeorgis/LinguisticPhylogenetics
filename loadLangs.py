@@ -2,14 +2,15 @@ import os, re, itertools, copy, glob
 from statistics import mean
 from collections import defaultdict
 import math, bcubed, random
-from auxiliary_functions import *
+from auxFuncs import *
 from pathlib import Path
 local_dir = Path(str(os.getcwd()))
 parent_dir = local_dir.parent
-from phonetic_distance import *
-from word_evaluation import *
-from phoneme_correspondences import PhonemeCorrDetector
-from linguistic_distance import *
+from phonDist import *
+from phonAlign import *
+from wordSim import *
+from phonCorr import PhonemeCorrDetector
+from lingDist import *
 
 class LexicalDataset: 
     def __init__(self, filepath, name, 
@@ -1374,72 +1375,70 @@ def combine_datasets(dataset_list):
     pass
 
     
+if __name__ == "__main__":
+    #LOAD COMMON CONCEPTS
+    common_concepts = pd.read_csv(str(parent_dir) + '/Datasets/Concepts/common_concepts.csv', sep='\t')
+    common_concepts = set(concept 
+                        for i, row in common_concepts.iterrows() 
+                        for concept in row['Alternate_Labels'].split('; '))
 
-#%%
-#LOAD COMMON CONCEPTS
-common_concepts = pd.read_csv(str(parent_dir) + '/Datasets/Concepts/common_concepts.csv', sep='\t')
-common_concepts = set(concept 
-                      for i, row in common_concepts.iterrows() 
-                      for concept in row['Alternate_Labels'].split('; '))
+    #LOAD FAMILIES AND WRITE VOCABULARY INDEX FILES
+    datasets_path = str(parent_dir) + '/Datasets/'
+    os.chdir(datasets_path)
+    families = {}
 
-#LOAD FAMILIES AND WRITE VOCABULARY INDEX FILES
-datasets_path = str(parent_dir) + '/Datasets/'
-os.chdir(datasets_path)
-families = {}
+    def load_family(family):
+        family_path = re.sub('-', '_', family).lower()
+        filepath = datasets_path + family + f'/{family_path}_data.csv'
+        print(f'Loading {family}...')
+        families[family] = LexicalDataset(filepath, family)
+        #families[family].prune_languages(min_amc=0.75, concept_list=common_concepts)
+        #families[family].write_vocab_index()
+        language_variables = {format_as_variable(lang):families[family].languages[lang] 
+                            for lang in families[family].languages}
+        globals().update(language_variables)
+        return families[family]
+        
 
-def load_family(family):
-    family_path = re.sub('-', '_', family).lower()
-    filepath = datasets_path + family + f'/{family_path}_data.csv'
-    print(f'Loading {family}...')
-    families[family] = LexicalDataset(filepath, family)
-    #families[family].prune_languages(min_amc=0.75, concept_list=common_concepts)
-    #families[family].write_vocab_index()
-    language_variables = {format_as_variable(lang):families[family].languages[lang] 
-                          for lang in families[family].languages}
-    globals().update(language_variables)
-    return families[family]
-    
+    # for family in ['Arabic', 
+    #                'Balto-Slavic', 
+    #                'Bantu',
+    #                'Dravidian',
+    #                #'French',
+    #                'Germanic',
+    #                'Hellenic',
+    #                'Hokan',
+    #                'Italic',
+    #                'Japonic',
+    #                'Polynesian',
+    #                'Quechuan',
+    #                'Sinitic', 
+    #                'Turkic', 
+    #                'Uralic',
+    #                'Uto-Aztecan',
+    #                'Vietic'
+    #                ]:
+    #     family_path = re.sub('-', '_', family).lower()
+    #     filepath = datasets_path + family + f'/{family_path}_data.csv'
+    #     print(f'Loading {family}...')
+    #     families[family] = LexicalDataset(filepath, family)
+    #     #families[family].prune_languages(min_amc=0.75, concept_list=common_concepts)
+    #     #families[family].write_vocab_index()
+    #     language_variables = {format_as_variable(lang):families[family].languages[lang] 
+    #                           for lang in families[family].languages}
+    #     globals().update(language_variables)
 
-# for family in ['Arabic', 
-#                'Balto-Slavic', 
-#                'Bantu',
-#                'Dravidian',
-#                #'French',
-#                'Germanic',
-#                'Hellenic',
-#                'Hokan',
-#                'Italic',
-#                'Japonic',
-#                'Polynesian',
-#                'Quechuan',
-#                'Sinitic', 
-#                'Turkic', 
-#                'Uralic',
-#                'Uto-Aztecan',
-#                'Vietic'
-#                ]:
-#     family_path = re.sub('-', '_', family).lower()
-#     filepath = datasets_path + family + f'/{family_path}_data.csv'
-#     print(f'Loading {family}...')
-#     families[family] = LexicalDataset(filepath, family)
-#     #families[family].prune_languages(min_amc=0.75, concept_list=common_concepts)
-#     #families[family].write_vocab_index()
-#     language_variables = {format_as_variable(lang):families[family].languages[lang] 
-#                           for lang in families[family].languages}
-#     globals().update(language_variables)
+    #Add some commmonly used subsets
+    #families['Pomoan'] = families['Hokan'].subset('Pomoan', include=[lang for lang in families['Hokan'].languages if 'Pomo' in lang]+['Kashaya'])
+    #families['Yana'] = families['Hokan'].subset('Yana', include=['Northern Yana', 'Central Yana', 'Yahi'])
+    #families['Yuman'] = families['Hokan'].subset('Yuman', include=['Mohave', 'Yavapai', 'Tipai', 'Ipai', 'Cocopa'])
 
-#Add some commmonly used subsets
-#families['Pomoan'] = families['Hokan'].subset('Pomoan', include=[lang for lang in families['Hokan'].languages if 'Pomo' in lang]+['Kashaya'])
-#families['Yana'] = families['Hokan'].subset('Yana', include=['Northern Yana', 'Central Yana', 'Yahi'])
-#families['Yuman'] = families['Hokan'].subset('Yuman', include=['Mohave', 'Yavapai', 'Tipai', 'Ipai', 'Cocopa'])
+    # globals().update({format_as_variable(family):families[family] for family in families})
+    # os.chdir(local_dir)
 
-# globals().update({format_as_variable(family):families[family] for family in families})
-# os.chdir(local_dir)
-
-# #Get lists and counts of languages/families
-# all_languages = [families[family].languages[lang] for family in families 
-#                  for lang in families[family].languages]
-# all_families = [families[family] for family in families]
-# total_languages = len(all_languages)
-# total_families = len(all_families)
-
+    # #Get lists and counts of languages/families
+    # all_languages = [families[family].languages[lang] for family in families 
+    #                  for lang in families[family].languages]
+    # all_families = [families[family] for family in families]
+    # total_languages = len(all_languages)
+    # total_families = len(all_families)

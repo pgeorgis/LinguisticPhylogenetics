@@ -7,7 +7,7 @@ Created on Tue Nov 30 21:20:50 2021
 """
 import os, glob
 from collections import defaultdict
-from load_languages import *
+from loadLangs import *
 
 def write_data(data_dict, output_file, sep='\t'):
     features = list(data_dict[list(data_dict.keys())[0]].keys())

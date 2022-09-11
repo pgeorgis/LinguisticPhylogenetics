@@ -1,6 +1,7 @@
 import os, itertools, random
-from auxiliary_functions import *
-from phonetic_distance import *
+from auxFuncs import *
+from phonDist import *
+from phonAlign import *
 from statistics import mean, stdev
 
 
