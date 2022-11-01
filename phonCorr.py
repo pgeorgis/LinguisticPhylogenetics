@@ -1,6 +1,6 @@
 import os, itertools, random
 from auxFuncs import *
-from phonDist import *
+from phonSim import *
 from phonAlign import *
 from statistics import mean, stdev
 

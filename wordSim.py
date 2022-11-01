@@ -1,9 +1,10 @@
-from phonDist import *
+from phonSim import *
 from phonAlign import *
 from phonCorr import PhonemeCorrDetector
 from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
 from asjp import ipa2asjp
 from nltk import edit_distance
+from statistics import mean
 
 
 def prepare_alignment(item1, item2, **kwargs):

@@ -1,5 +1,5 @@
 from nwunschAlign import best_alignment
-from phonDist import *
+from phonSim import *
 
 #WORD-LEVEL PHONETIC COMPARISON AND ALIGNMENT
 def compatible_segments(seg1, seg2):
