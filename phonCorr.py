@@ -222,14 +222,16 @@ class PhonemeCorrDetector:
         disqualified_words = default_dict({iteration:diff_sample}, l=[])
         while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
             iteration += 1
-            
+
             #Align the qualifying words of the previous step using previous step's PMI
             cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], 
-                                                     added_penalty_dict=PMI_iterations[iteration-1])
+                                                     added_penalty_dict=PMI_iterations[iteration-1],
+                                                     segmented=True)
             
             #Align the sample of different meaning and non-qualifying words again using previous step's PMI
             noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1],
-                                                        added_penalty_dict=PMI_iterations[iteration-1])
+                                                        added_penalty_dict=PMI_iterations[iteration-1],
+                                                        segmented=True)
             
             #Calculate correspondence probabilities and PMI values from these alignments
             cognate_probs = self.correspondence_probs(cognate_alignments)
@@ -241,7 +243,8 @@ class PhonemeCorrDetector:
             
             #Align all same-meaning word pairs
             all_alignments = self.align_wordlist(self.same_meaning, 
-                                                 added_penalty_dict=PMI_iterations[iteration-1])
+                                                 added_penalty_dict=PMI_iterations[iteration-1],
+                                                 segmented=True)
 
             #Score PMI for different meaning words and words disqualified in previous iteration
             noncognate_PMI = []
@@ -406,9 +409,11 @@ class PhonemeCorrDetector:
         #Align same-meaning and different meaning word pairs using PMI values: 
         #the alignments will remain the same throughout iteration
         same_meaning_alignments = self.align_wordlist(self.same_meaning,
-                                                      added_penalty_dict=self.pmi_dict)
+                                                      added_penalty_dict=self.pmi_dict,
+                                                      segmented=True)
         diff_meaning_alignments = self.align_wordlist(diff_sample,
-                                                      added_penalty_dict=self.pmi_dict)
+                                                      added_penalty_dict=self.pmi_dict,
+                                                      segmented=True)
         
         #At each iteration, re-calculate surprisal for qualifying and disqualified pairs
         #Then test each same-meaning word pair to see if if it meets the qualifying threshold
