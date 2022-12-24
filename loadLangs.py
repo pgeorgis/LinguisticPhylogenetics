@@ -2,11 +2,13 @@ import os, re, itertools, copy, glob
 from statistics import mean
 from collections import defaultdict
 import math, bcubed, random
+from skbio import DistanceMatrix
+from skbio.tree import nj
 from auxFuncs import *
 from pathlib import Path
 local_dir = Path(str(os.getcwd()))
 parent_dir = local_dir.parent
-from phonDist import *
+from phonSim import *
 from phonAlign import *
 from wordSim import *
 from phonCorr import PhonemeCorrDetector
@@ -250,7 +252,7 @@ class LexicalDataset:
                     
                     checked.append((lang1, lang2))
     
-    def load_phoneme_pmi(self, pmi_file=None, excepted=[]):
+    def load_phoneme_pmi(self, pmi_file=None, excepted=[], **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
         
         #Designate the default file name to search for if no alternative is provided
@@ -264,7 +266,7 @@ class LexicalDataset:
         #If the file is not found, recalculate the PMI values and save to 
         #a file with the specified name
         except FileNotFoundError:
-            self.calculate_phoneme_pmi(output_file=pmi_file)
+            self.calculate_phoneme_pmi(output_file=pmi_file, **kwargs)
             pmi_data = pd.read_csv(pmi_file)
         
         #Iterate through the dataframe and save the PMI values to the Language
@@ -714,7 +716,7 @@ class LexicalDataset:
             clustered_concepts = defaultdict(lambda:defaultdict(lambda:[]))
             for concept in concept_list:
                 cognate_ids = [cognate_id for cognate_id in self.cognate_sets 
-                               if cognate_id.split('_')[0] == concept]
+                               if cognate_id.rsplit('_', maxsplit=1)[0] == concept]
                 for cognate_id in cognate_ids:
                     for lang in self.cognate_sets[cognate_id]:
                         for form in self.cognate_sets[cognate_id][lang]:
@@ -753,23 +755,39 @@ class LexicalDataset:
                        concept_list=None, 
                        cluster_func=None, cluster_sim=None, cutoff=None, 
                        cognates='auto',
-                       method='average', metric='euclidean',
+                       method='ward', metric='euclidean',
                        **kwargs):
+        
+        # Ensure the linkage method is valid
+        if method not in ('nj', 'average', 'complete', 'single', 'weighted', 'ward'):
+            raise ValueError(f'Error: Unrecognized linkage type "{method}". Accepted values are: "average", "complete", "single", "weighted", "ward", "nj"')
+
+        # Create distance matrix
         dm = self.distance_matrix(dist_func, sim, 
-                                  concept_list, 
-                                  cluster_func, cluster_sim, cutoff, 
-                                  cognates, 
-                                  **kwargs)
+                                concept_list, 
+                                cluster_func, cluster_sim, cutoff, 
+                                cognates, 
+                                **kwargs)
         dists = squareform(dm)
-        lm = linkage(dists, method, metric)
-        return lm    
+
+        # Neighbor Joining linkage
+        if method == 'nj':
+            languages = list(self.languages.values()) 
+            names = [lang.name for lang in languages]
+            nj_dm = DistanceMatrix(dists, ids=names)
+            return nj_dm
+        
+        # Other linkage methods
+        else:
+            lm = linkage(dists, method, metric)
+            return lm    
     
     
     def draw_tree(self, 
                   dist_func, sim, concept_list=None,                  
                   cluster_func=None, cluster_sim=None, cutoff=None,
                   cognates='auto', 
-                  method='average', metric='euclidean',
+                  method='ward', metric='euclidean',
                   title=None, save_directory=None,
                   return_newick=False,
                   orientation='left', p=30,
@@ -788,21 +806,33 @@ class LexicalDataset:
                                  cognates, method, metric, 
                                  **kwargs)
         
-        sns.set(font_scale=1.0)
-        if len(group) >= 100:
-            plt.figure(figsize=(20,20))
-        elif len(group) >= 60:
-            plt.figure(figsize=(10,10))
-        else:
-            plt.figure(figsize=(10,8))
-        
-        dendrogram(lm, p=p, orientation=orientation, labels=labels)
-        if title != None:
-            plt.title(title, fontsize=30)
-        plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=300)
-        plt.show()
+        # Not possible to plot NJ trees in Python (yet? TBD)
+        if method != 'nj':
+            sns.set(font_scale=1.0)
+            if len(group) >= 100:
+                plt.figure(figsize=(20,20))
+            elif len(group) >= 60:
+                plt.figure(figsize=(10,10))
+            else:
+                plt.figure(figsize=(10,8))
+            
+            dendrogram(lm, p=p, orientation=orientation, labels=labels)
+            if title != None:
+                plt.title(title, fontsize=30)
+            plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=300)
+            plt.show()
+
         if return_newick == True:
-            return linkage2newick(lm, labels)
+            if method == 'nj':
+                newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
+            else:
+                newick_tree = linkage2newick(lm, labels)
+
+            #Fix formatting of Newick string
+            newick_tree = re.sub('\s', '_', newick_tree)
+            newick_tree = re.sub(',_', ',', newick_tree)
+            
+            return newick_tree
 
 
     def plot_languages(self, 
@@ -1367,78 +1397,21 @@ class Language(LexicalDataset):
             
         
         return s
-    
-#%%
-#COMBINING DATASETS
 
+
+#COMBINING DATASETS
 def combine_datasets(dataset_list):
     pass
 
-    
-if __name__ == "__main__":
-    #LOAD COMMON CONCEPTS
-    common_concepts = pd.read_csv(str(parent_dir) + '/Datasets/Concepts/common_concepts.csv', sep='\t')
-    common_concepts = set(concept 
-                        for i, row in common_concepts.iterrows() 
-                        for concept in row['Alternate_Labels'].split('; '))
 
-    #LOAD FAMILIES AND WRITE VOCABULARY INDEX FILES
-    datasets_path = str(parent_dir) + '/Datasets/'
-    os.chdir(datasets_path)
-    families = {}
-
-    def load_family(family):
-        family_path = re.sub('-', '_', family).lower()
-        filepath = datasets_path + family + f'/{family_path}_data.csv'
-        print(f'Loading {family}...')
-        families[family] = LexicalDataset(filepath, family)
-        #families[family].prune_languages(min_amc=0.75, concept_list=common_concepts)
-        #families[family].write_vocab_index()
-        language_variables = {format_as_variable(lang):families[family].languages[lang] 
-                            for lang in families[family].languages}
-        globals().update(language_variables)
-        return families[family]
-        
-
-    # for family in ['Arabic', 
-    #                'Balto-Slavic', 
-    #                'Bantu',
-    #                'Dravidian',
-    #                #'French',
-    #                'Germanic',
-    #                'Hellenic',
-    #                'Hokan',
-    #                'Italic',
-    #                'Japonic',
-    #                'Polynesian',
-    #                'Quechuan',
-    #                'Sinitic', 
-    #                'Turkic', 
-    #                'Uralic',
-    #                'Uto-Aztecan',
-    #                'Vietic'
-    #                ]:
-    #     family_path = re.sub('-', '_', family).lower()
-    #     filepath = datasets_path + family + f'/{family_path}_data.csv'
-    #     print(f'Loading {family}...')
-    #     families[family] = LexicalDataset(filepath, family)
-    #     #families[family].prune_languages(min_amc=0.75, concept_list=common_concepts)
-    #     #families[family].write_vocab_index()
-    #     language_variables = {format_as_variable(lang):families[family].languages[lang] 
-    #                           for lang in families[family].languages}
-    #     globals().update(language_variables)
-
-    #Add some commmonly used subsets
-    #families['Pomoan'] = families['Hokan'].subset('Pomoan', include=[lang for lang in families['Hokan'].languages if 'Pomo' in lang]+['Kashaya'])
-    #families['Yana'] = families['Hokan'].subset('Yana', include=['Northern Yana', 'Central Yana', 'Yahi'])
-    #families['Yuman'] = families['Hokan'].subset('Yuman', include=['Mohave', 'Yavapai', 'Tipai', 'Ipai', 'Cocopa'])
-
-    # globals().update({format_as_variable(family):families[family] for family in families})
-    # os.chdir(local_dir)
-
-    # #Get lists and counts of languages/families
-    # all_languages = [families[family].languages[lang] for family in families 
-    #                  for lang in families[family].languages]
-    # all_families = [families[family] for family in families]
-    # total_languages = len(all_languages)
-    # total_families = len(all_families)
+def load_family(family, data_file, min_amc=None, concept_list=None):
+    print(f'Loading {family}...')
+    family = LexicalDataset(data_file, family)
+    if min_amc is not None:
+        #min_amc default: 0.75
+        family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
+    #families[family].write_vocab_index()
+    language_variables = {format_as_variable(lang):family.languages[lang] 
+                        for lang in family.languages}
+    globals().update(language_variables)
+    return family
