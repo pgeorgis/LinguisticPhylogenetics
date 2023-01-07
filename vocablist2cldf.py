@@ -1,13 +1,7 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 30 21:20:50 2021
-
-@author: phgeorgis
-"""
 import os, glob
 from collections import defaultdict
-from loadLangs import *
+from phonSim import segment_word
+import argparse
 
 def write_data(data_dict, output_file, sep='\t'):
     features = list(data_dict[list(data_dict.keys())[0]].keys())
@@ -21,7 +15,7 @@ def write_data(data_dict, output_file, sep='\t'):
                 print(data_dict[i])
             f.write(f'{values}\n')
 
-def vocablist2cldf(family_name, lang_files, dest_dir):
+def vocablist2cldf(lang_files):
     #start_dir = os.getcwd()
     #os.chdir(list_dir)
     #lang_files = glob.glob('*.txt')
@@ -55,9 +49,19 @@ def vocablist2cldf(family_name, lang_files, dest_dir):
                     entry['Loan'] = 'TRUE' if '*' in gloss else ''
                     entry['Comment'] = line[2] if len(line) > 3 else ''
                     entry['Source'] = ''
-    
-    write_data(data, output_file=dest_dir+f'/{family_name}_data.csv', sep='\t')
-    #os.chdir(start_dir)
-    
-    
-    
+    return data
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description='')
+    parser.add_argument('--family', required=True, help='Family name')
+    parser.add_argument('--dir', required=True, help='Directory from which to extract txt files')
+    parser.add_argument('--langs', required=True, nargs='+', help='Language names to extract (.txt extension added automatically)')
+    parser.add_argument('--dest', required=True, help='Destination directory for CLDF file')
+    args = parser.parse_args()
+
+    lang_files = [os.path.join(args.dir, l + '.txt') for l in args.langs]
+    data = vocablist2cldf(lang_files)
+
+    write_data(data, output_file=os.path.join(args.dest, args.family+'_data.csv'), sep='\t')
