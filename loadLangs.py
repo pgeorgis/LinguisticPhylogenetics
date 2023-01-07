@@ -224,12 +224,16 @@ class LexicalDataset:
         #Check whether phoneme PMI has been calculated already for this pair
         #If not, calculate it now
         checked = []
+        printed = []
         for pair in itertools.product(l, l):
             lang1, lang2 = pair
+            if lang1.name not in printed:
+                print(f'Calculating phoneme PMI for {lang1.name}...')
+                printed.append(lang1.name)
             if (lang2, lang1) not in checked:
                     
                 if len(lang1.phoneme_pmi[lang2]) == 0:
-                    print(f'Calculating phoneme PMI for {lang1.name} and {lang2.name}...')
+                    #print(f'Calculating phoneme PMI for {lang1.name} and {lang2.name}...')
                     pmi = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
                 
         #Save calculated PMI values to file
@@ -299,11 +303,11 @@ class LexicalDataset:
         
         #Check whether phoneme surprisal has been calculated already for this pair
         for lang1 in self.languages.values():
+            print(f'Calculating phoneme surprisal for {lang1.name}...')
             for lang2 in self.languages.values():
                     
                 #If not, calculate it now
                 if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
-                    print(f'Calculating phoneme surprisal for {lang1.name} and {lang2.name}...')
                     phoneme_surprisal = PhonemeCorrDetector(lang1, lang2).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
                 
         #Save calculated surprisal values to file
@@ -345,7 +349,7 @@ class LexicalDataset:
         #If the file is not found, recalculate the surprisal values and save to 
         #a file with the specified name
         except FileNotFoundError:
-            self.calculate_phoneme_surprisal(output_file=surprisal_file)
+            self.calculate_phoneme_surprisal(ngram_size=ngram_size, output_file=surprisal_file)
             surprisal_data = pd.read_csv(surprisal_file)
         
         #Iterate through the dataframe and save the surprisal values to the Language
@@ -774,7 +778,9 @@ class LexicalDataset:
         if method == 'nj':
             languages = list(self.languages.values()) 
             names = [lang.name for lang in languages]
-            nj_dm = DistanceMatrix(dists, ids=names)
+            lang_names = [re.sub('\(', '{', l) for l in names]
+            lang_names = [re.sub('\)', '}', l) for l in lang_names]
+            nj_dm = DistanceMatrix(dists, ids=lang_names)
             return nj_dm
         
         # Other linkage methods
