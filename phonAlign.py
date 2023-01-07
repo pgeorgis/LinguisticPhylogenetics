@@ -1,5 +1,6 @@
+from math import log, inf
 from nwunschAlign import best_alignment
-from phonSim import *
+from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_word, phone_sim
 
 #WORD-LEVEL PHONETIC COMPARISON AND ALIGNMENT
 def compatible_segments(seg1, seg2):
@@ -49,9 +50,9 @@ def align_costs(seq1, seq2,
             #If similarity function, turn into distance and ensure it is negative
             if sim == True:
                 if cost > 0:
-                    cost = math.log(cost)
+                    cost = log(cost)
                 else:
-                    cost = -math.inf
+                    cost = -inf
             
             alignment_costs[(i, j)] = cost
     return alignment_costs

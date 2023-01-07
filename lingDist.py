@@ -1,7 +1,8 @@
-from auxFuncs import euclidean_dist, normalize_dict
-from wordSim import *
+from auxFuncs import euclidean_dist
+from phonCorr import PhonemeCorrDetector
+from wordSim import Z_dist
 from statistics import mean, stdev, StatisticsError
-import math, random
+from math import e
 from scipy.stats import norm
 
 
@@ -78,7 +79,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                         
                         #Transform distance into similarity
                         if eval_sim == False:
-                            score = math.e**-score
+                            score = e**-score
                         
                         concept_sims[(l1_word, l2_word)] = score
                         
@@ -116,7 +117,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
             
             #Transform distance scores into similarity scores
             if eval_sim == False:
-                noncognate_scores = [math.e**-score for score in noncognate_scores]
+                noncognate_scores = [e**-score for score in noncognate_scores]
             
             #Calculate mean and standard deviation from this sample distribution
             mean_nc_score = mean(noncognate_scores)

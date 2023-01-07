@@ -1,11 +1,13 @@
-from phonSim import *
-from phonAlign import *
-from phonCorr import PhonemeCorrDetector
-from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
+from collections import defaultdict
+from math import sqrt, log, e, exp
+from statistics import mean
 from asjp import ipa2asjp
 from nltk import edit_distance
-from statistics import mean
-
+from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, suprasegmental_diacritics, strip_diacritics
+from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_environment_weight
+from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
+from phonAlign import phone_align, reverse_alignment
+from phonCorr import PhonemeCorrDetector
 
 def prepare_alignment(item1, item2, **kwargs):
     """Prepares alignment of two items, either:
@@ -235,7 +237,7 @@ def word_sim(word1, word2=None,
                                     for j in range(len(alignment))
                                     if alignment[j][deleted_index] != '-']
                     prosodic_env_weight = prosodic_environment_weight(segment_list, deleted_i)
-                    penalty /= math.sqrt(abs(prosodic_env_weight-7)+1)
+                    penalty /= sqrt(abs(prosodic_env_weight-7)+1)
                 
                 
                 #Add the final penalty to penalty list
@@ -251,8 +253,8 @@ def word_sim(word1, word2=None,
         else:
             word_dist = mean(penalties)
         
-        #Return as similarity: math.e**-distance = 1/(math.e**distance)
-        word_sim = math.e**-word_dist
+        #Return as similarity: e**-distance = 1/(e**distance)
+        word_sim = e**-word_dist
         
         #Save the calculated score
         if word2 != None:
@@ -330,11 +332,6 @@ def segmental_word_sim(word1, word2=None,
     return (c_weight * c_score) + (v_weight * v_score) + (syl_weight * syl_score)
 
 
-
-
-#%%
-
-
 combined_surprisal_dicts = {}
 scored_WAS = {}
 def mutual_surprisal(pair1, pair2, ngram_size=1, **kwargs):
@@ -398,11 +395,11 @@ def surprisal_sim(pair1, pair2, ngram_size=1, **kwargs):
     try:
         return surprisal_sims[(pair1, pair2, ngram_size)] 
     except KeyError:
-        score = math.e**-(mutual_surprisal(pair1, pair2, ngram_size=ngram_size, **kwargs))
+        score = e**-(mutual_surprisal(pair1, pair2, ngram_size=ngram_size, **kwargs))
         surprisal_sims[(pair1, pair2, ngram_size)] = score
         return score
 
-#%%
+
 def phonetic_surprisal(pair1, pair2, surprisal_dict=None, normalize=True, ngram_size=1):
     lang1, lang2 = pair1[1], pair2[1]
     alignment = prepare_alignment(pair1, pair2)
@@ -431,11 +428,9 @@ def phonetic_surprisal(pair1, pair2, surprisal_dict=None, normalize=True, ngram_
     #Calculate phonetic surprisal as phonetic distance * surprisal
     phon_surprisal = [phon_dists[i]*surprisal_values[i] for i in range(len(alignment))]
     
-    return math.e**-sum(phon_surprisal)
+    return e**-sum(phon_surprisal)
     
 
-
-#%%
 combined_PMI_dicts = {}
 def combine_PMI(lang1, lang2, **kwargs):
     #Return already calculated dictionary if possible
@@ -495,7 +490,7 @@ def score_pmi(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
         PMI_score = mean(PMI_values) 
         
         if sim2dist == True:
-            PMI_dist = math.exp(-max(PMI_score, 0)**alpha)
+            PMI_dist = exp(-max(PMI_score, 0)**alpha)
             scored_word_pmi[(pair1, pair2, sim2dist)] = PMI_dist
             return PMI_dist
         
@@ -503,7 +498,6 @@ def score_pmi(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
             scored_word_pmi[(pair1, pair2, sim2dist)] = PMI_score
             return PMI_score
 
-#%%
 def LevenshteinDist(word1, word2, normalize=True, asjp=True):
     if type(word1) == tuple:
         word1 = word1[0]
@@ -527,14 +521,11 @@ def LevenshteinDist(word1, word2, normalize=True, asjp=True):
         
     return LevDist
         
-
-
-#%%
 hybrid_scores = {}
 def hybrid_distance(pair1, pair2, funcs, func_sims, **kwargs):
     #Try to retrieve previously calculated value if possible
-    if (pair1, pair2, tuple(funcs), tuple(weights)) in hybrid_scores:
-        return hybrid_scores[(pair1, pair2, tuple(funcs), tuple(weights))]
+    if (pair1, pair2, tuple(funcs)) in hybrid_scores:
+        return hybrid_scores[(pair1, pair2, tuple(funcs))]
     
     scores = []
     for func, func_sim in zip(funcs, func_sims):
@@ -547,25 +538,23 @@ def hybrid_distance(pair1, pair2, funcs, func_sims, **kwargs):
         
 def hybrid_similarity(pair1, pair2, **kwargs):
     hybrid_d = hybrid_distance(pair1, pair2, funcs=[word_sim, score_pmi, surprisal_sim], func_sims=[True, False, True])
-    hybrid_sim = math.e**-(hybrid_d)
+    hybrid_sim = e**-(hybrid_d)
     return hybrid_sim
 
 def phonetic_surprisal_sim(pair1, pair2, **kwargs):
     hybrid_d = hybrid_distance(pair1, pair2, funcs=[word_sim, surprisal_sim], func_sims=[True, True])
-    hybrid_sim = math.e**-(hybrid_d)
+    hybrid_sim = e**-(hybrid_d)
     return hybrid_sim
-
-#%%
     
 def Z_score(p_values):
-    neg_log_p = [-math.log(p) for p in p_values]
-    return (sum(neg_log_p) - len(p_values)) / math.sqrt(len(p_values))
+    neg_log_p = [-log(p) for p in p_values]
+    return (sum(neg_log_p) - len(p_values)) / sqrt(len(p_values))
 
 def Z_max(n_concepts):
-    return ((n_concepts * -math.log(1/((n_concepts**2)-n_concepts+1))) - n_concepts) / math.sqrt(n_concepts)
+    return ((n_concepts * -log(1/((n_concepts**2)-n_concepts+1))) - n_concepts) / sqrt(n_concepts)
 
 def Z_min(n_concepts):
-    return (n_concepts * -math.log(1) - n_concepts) / math.sqrt(n_concepts)
+    return (n_concepts * -log(1) - n_concepts) / sqrt(n_concepts)
 
 def Z_dist(p_values):
     N = len(p_values)

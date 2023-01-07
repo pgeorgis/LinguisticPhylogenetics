@@ -1,9 +1,10 @@
-import os, itertools, random
-from auxFuncs import *
-from phonSim import *
-from phonAlign import *
+from collections import defaultdict
+from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
+from phonAlign import phone_align, compatible_segments
 from statistics import mean, stdev
-
+import random
+from itertools import product
+from math import log
 
 class PhonemeCorrDetector:
     def __init__(self, lang1, lang2, wordlist=None):
@@ -33,7 +34,7 @@ class PhonemeCorrDetector:
                        for concept in wordlist for entry in self.lang2.vocabulary[concept]]
         
         #Get all combinations of L1 and L2 words
-        all_wordpairs = itertools.product(l1_wordlist, l2_wordlist)
+        all_wordpairs = product(l1_wordlist, l2_wordlist)
         
         #Sort out same-meaning from different-meaning word pairs, and loanwords
         same_meaning, diff_meaning, loanwords = [], [], []
@@ -157,7 +158,7 @@ class PhonemeCorrDetector:
             p_ind = l1.phonemes[seg1] * l2.phonemes[seg2]
             cognate_prob = dependent_probs[seg1].get(seg2, p_ind)
             noncognate_prob = independent_probs[seg1].get(seg2, p_ind)
-            pmi_dict[seg1][seg2] = math.log(cognate_prob/noncognate_prob)
+            pmi_dict[seg1][seg2] = log(cognate_prob/noncognate_prob)
         
         return pmi_dict
 
@@ -343,7 +344,7 @@ class PhonemeCorrDetector:
         smoothed_surprisal = defaultdict(lambda:defaultdict(lambda:self.lang2.phoneme_entropy*ngram_size))
         
         #Iterate over all possible ngrams
-        all_ngrams = list(itertools.product(list(self.lang1.phonemes.keys())+['#', '-'], repeat=ngram_size))
+        all_ngrams = list(product(list(self.lang1.phonemes.keys())+['#', '-'], repeat=ngram_size))
         
         #Only perform calculation for ngrams which have actually been observed 
         #in the current dataset or which could have been observed (with gaps)

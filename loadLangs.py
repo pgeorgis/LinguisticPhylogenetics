@@ -1,18 +1,23 @@
-import os, re, itertools, copy, glob
-from statistics import mean
+import os, re, copy, glob
 from collections import defaultdict
-import math, bcubed, random
+from itertools import product
+from math import log, sqrt
+from statistics import mean
+import bcubed, random
+from matplotlib import pyplot as plt
+import pandas as pd
+from scipy.cluster.hierarchy import dendrogram
+from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
-from auxFuncs import *
-from pathlib import Path
-local_dir = Path(str(os.getcwd()))
-parent_dir = local_dir.parent
-from phonSim import *
-from phonAlign import *
-from wordSim import *
+import seaborn as sns
+from unidecode import unidecode
+from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, create_folder, csv2dict
+from auxFuncs import entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
+from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
+from phonSim.phonSim import verify_charset, strip_diacritics, segment_word, phone_sim
 from phonCorr import PhonemeCorrDetector
-from lingDist import *
+from lingDist import Z_score_dist
 
 class LexicalDataset: 
     def __init__(self, filepath, name, 
@@ -67,7 +72,7 @@ class LexicalDataset:
     def load_data(self, filepath, doculects=None, sep='\t'):
         
         #Load data file
-        data = csv_to_dict(filepath, sep=sep)
+        data = csv2dict(filepath, sep=sep)
         self.data = data
         
         #Initialize languages
@@ -168,7 +173,7 @@ class LexicalDataset:
         
         #Calculate average mutual coverage
         mutual_coverages = {}
-        for lang_pair in itertools.product(self.languages.values(), self.languages.values()):
+        for lang_pair in product(self.languages.values(), self.languages.values()):
             lang1, lang2 = lang_pair
             if lang1 != lang2:
                 pair_mutual_coverage = len([concept for concept in concept_list 
@@ -225,7 +230,7 @@ class LexicalDataset:
         #If not, calculate it now
         checked = []
         printed = []
-        for pair in itertools.product(l, l):
+        for pair in product(l, l):
             lang1, lang2 = pair
             if lang1.name not in printed:
                 print(f'Calculating phoneme PMI for {lang1.name}...')
@@ -240,7 +245,7 @@ class LexicalDataset:
         with open(output_file, 'w') as f:
             f.write('Language1,Phone1,Language2,Phone2,PMI\n')
             checked = []
-            for pair in itertools.product(l, l):
+            for pair in product(l, l):
                 lang1, lang2 = pair
                 if (lang2, lang1) not in checked:
                 
@@ -654,7 +659,7 @@ class LexicalDataset:
                 TN = results.count((False, False))
                 FN = results.count((True, False))
                 num = (TP * TN) - (FP * FN)
-                dem = math.sqrt((TP+FP)*(TP+FN)*(TN+FP)*(TN+FN))
+                dem = sqrt((TP+FP)*(TP+FN)*(TN+FP)*(TN+FN))
                 try:
                     mcc = num/dem
                 except ZeroDivisionError:
@@ -1094,7 +1099,6 @@ class LexicalDataset:
         
         return s
 
-#%%
 class Language(LexicalDataset):
     def __init__(self, name, data, 
                  lang_id=None, glottocode=None, iso_code=None, family=None,
@@ -1309,7 +1313,7 @@ class Language(LexicalDataset):
             gappy_counts += self.gappy_trigrams[(padded[i-2], padded[i-1], 'X')]
             gappy_counts += self.gappy_trigrams[(padded[i-1], 'X', padded[i+1])]
             gappy_counts += self.gappy_trigrams[('X', padded[i+1], padded[i+2])]
-            info_content[i-2] = (padded[i], -math.log(trigram_counts/gappy_counts, 2))
+            info_content[i-2] = (padded[i], -log(trigram_counts/gappy_counts, 2))
         self.info_contents[''.join(padded[2:-2])] = info_content
         return info_content
     

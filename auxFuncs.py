@@ -83,7 +83,7 @@ def format_as_variable(string):
 
 #%%
 #CSV/EXCEL FILE TOOLS
-def csv_to_dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
+def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
     """Reads a CSV file into a dictionary"""
     csv_dict = defaultdict(lambda:defaultdict(lambda:''))
     with open(csvfile, 'r', encoding=encoding) as csv_file:
