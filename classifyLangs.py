@@ -14,6 +14,7 @@ if __name__ == "__main__":
     parser.add_argument('--cutoff', default=None, type=float, help='Cutoff threshold in range [0,1] for clustering cognate sets')
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
     parser.add_argument('--min_similarity', default=0, type=float, help='Minimum similarity threshold for word form evaluation')
+    parser.add_argument('--ngram', default=1, type=int, help='Phoneme ngram size used for phoneme surprisal calculation')
     parser.add_argument('--no_calibration', dest='calibrate', action='store_false', help='Does not use cumulative density function calibration')
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.set_defaults(
@@ -45,7 +46,7 @@ if __name__ == "__main__":
 
     # Load or calculate phoneme surprisal
     print(f'Loading {family.name} phoneme surprisal...')
-    family.load_phoneme_surprisal()
+    family.load_phoneme_surprisal(ngram_size=args.ngram)
 
     # Load pre-clustered cognate sets, if available
     family.load_clustered_cognates()
