@@ -227,7 +227,7 @@ def distance_matrix(group, dist_func, sim=False, **kwargs):
 
 
 def linkage_matrix(group, dist_func, sim=False, 
-                   method = 'average', metric="euclidean",
+                   method='average', metric='euclidean',
                    **kwargs):
     """Methods: average, centroid, median, single, complete, ward, weighted
         See: https://docs.scipy.org/doc/scipy/reference/generated/scipy.cluster.hierarchy.linkage.html"""

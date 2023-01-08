@@ -6,7 +6,7 @@ from statistics import mean
 import bcubed, random
 from matplotlib import pyplot as plt
 import pandas as pd
-from scipy.cluster.hierarchy import dendrogram
+from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
