@@ -421,8 +421,7 @@ class LexicalDataset:
                        for i in range(len(self.cognate_sets[cognate_id][key]))]
         labels = [f'{lang_labels[i]} /{words[i]}/' for i in range(len(words))]
         
-        #if dist_func in [word_sim, word_adaptation_surprisal, score_pmi]:
-        #For this function, it requires tuple input of (word, lang)
+        #Create tuple input of (word, lang)
         langs = [self.languages[lang] for lang in lang_labels]
         words = list(zip(words, langs))
         
@@ -459,8 +458,7 @@ class LexicalDataset:
                            for entry in self.concepts[concept][lang]]
             labels = [f'{lang_labels[i]} /{words[i]}/' for i in range(len(words))]
             
-            #if dist_func in [word_sim, word_adaptation_surprisal, score_pmi]:
-            #For this function, it requires tuple input of (word, lang)
+            #Create tuple input of (word, lang)
             langs = [self.languages[lang] for lang in lang_labels]
             words = list(zip(words, langs))
     

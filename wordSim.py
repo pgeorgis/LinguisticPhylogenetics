@@ -3,6 +3,7 @@ from math import sqrt, log, e, exp
 from statistics import mean
 from asjp import ipa2asjp
 from nltk import edit_distance
+import re
 from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, suprasegmental_diacritics, strip_diacritics
 from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_environment_weight
 from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
