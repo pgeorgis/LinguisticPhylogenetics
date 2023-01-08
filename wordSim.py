@@ -460,7 +460,7 @@ def combine_PMI(lang1, lang2, **kwargs):
 
 
 scored_word_pmi = {}
-def score_pmi(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
+def pmi_dist(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
     if (pair1, pair2, sim2dist) in scored_word_pmi:
         return scored_word_pmi[(pair1, pair2, sim2dist)]
     
@@ -538,7 +538,7 @@ def hybrid_dist(pair1, pair2, funcs, func_sims, **kwargs):
     return euclidean_dist(scores)
         
 def hybrid_sim(pair1, pair2, **kwargs):
-    hybrid_d = hybrid_dist(pair1, pair2, funcs=[word_sim, score_pmi, surprisal_sim], func_sims=[True, False, True])
+    hybrid_d = hybrid_dist(pair1, pair2, funcs=[word_sim, pmi_dist, surprisal_sim], func_sims=[True, False, True])
     hybrid_sim = e**-(hybrid_d)
     return hybrid_sim
 

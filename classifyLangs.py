@@ -1,7 +1,7 @@
 import argparse, os
 from loadLangs import load_family
 from lingDist import cognate_sim
-from wordSim import score_pmi, surprisal_sim, word_sim, hybrid_sim, LevenshteinDist
+from wordSim import pmi_dist, surprisal_sim, word_sim, hybrid_sim, LevenshteinDist
 
 if __name__ == "__main__":
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # Mapping of function labels and default cutoff values
     function_map = {
         #'label':(function, sim, cutoff)
-        'pmi':(score_pmi, False, 0.36),
+        'pmi':(pmi_dist, False, 0.36),
         'surprisal':(surprisal_sim, True, 0.74),
         'phonetic':(word_sim, True, 0.16),
         'hybrid':(hybrid_sim, True, 0.57),
