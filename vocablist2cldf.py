@@ -1,6 +1,6 @@
 import os, glob
 from collections import defaultdict
-from phonSim import segment_word
+from phonSim import segment_ipa
 import argparse
 
 def write_data(data_dict, output_file, sep='\t'):
@@ -44,7 +44,7 @@ def vocablist2cldf(lang_files):
                     entry['Parameter_ID'] = gloss
                     entry['Value'] = orth
                     entry['Form'] = tr
-                    entry['Segments'] = ' '.join(segment_word(tr))
+                    entry['Segments'] = ' '.join(segment_ipa(tr))
                     entry['Cognate_ID'] = gloss
                     entry['Loan'] = 'TRUE' if '*' in gloss else ''
                     entry['Comment'] = line[2] if len(line) > 3 else ''

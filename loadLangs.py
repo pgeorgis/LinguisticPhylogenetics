@@ -15,7 +15,7 @@ from unidecode import unidecode
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict
 from auxFuncs import entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
-from phonSim.phonSim import invalid_ch, strip_diacritics, segment_word, phone_sim
+from phonSim.phonSim import invalid_ch, strip_diacritics, segment_ipa, phone_sim
 from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 
@@ -1152,14 +1152,14 @@ class Language(LexicalDataset):
         
     def create_vocabulary(self):
         # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces
-        diacritics_to_remove = list(suprasegmental_diacritics) + ['̩', '̍', ' ']
+        diacritics_to_remove = ''.join(suprasegmental_diacritics.union({'̩', '̍', ' '}))
         
         for i in self.data:
             entry = self.data[i]
             concept = entry[self.concept_c]
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
-            segments = segment_word(ipa, remove_ch=diacritics_to_remove)
+            segments = segment_ipa(ipa, remove_ch=diacritics_to_remove)
             if len(segments) > 0:
                 if [orthography, ipa, segments] not in self.vocabulary[concept]:
                     self.vocabulary[concept].append([orthography, ipa, segments])
@@ -1292,7 +1292,7 @@ class Language(LexicalDataset):
         # First segment the word if necessary
         # Then pad the segmented word
         if not segmented:
-            segments = segment_word(word)
+            segments = segment_ipa(word)
             padded = ['# ', '# '] + segments + ['# ', '# ']
         else:
             padded = ['# ', '# '] + word + ['# ', '# ']

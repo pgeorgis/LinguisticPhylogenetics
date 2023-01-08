@@ -1,6 +1,6 @@
 from math import log, inf
 from nwunschAlign import best_alignment
-from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_word, phone_sim
+from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_ipa, phone_sim
 
 # WORD-LEVEL PHONETIC COMPARISON AND ALIGNMENT
 def compatible_segments(seg1, seg2):
@@ -69,7 +69,7 @@ def phone_align(word1, word2,
     If not segmented, the words are first segmented before being aligned.
     GOP = -1.22 by default, determined by cross-validation on gold alignments."""
     if not segmented:        
-        segments1, segments2 = segment_word(word1), segment_word(word2)
+        segments1, segments2 = map(segment_ipa, (word1, word2))
     else:
         segments1, segments2 = word1, word2  
     
