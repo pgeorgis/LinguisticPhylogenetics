@@ -37,7 +37,7 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
                 not_shared += 1
         
         if (l1_words > 0) and (l2_words > 0):
-            if exclude_synonyms == True:
+            if exclude_synonyms:
                 sims[concept] = min(shared, 1) if shared > 0 else 0
                 total_cognate_ids += 1
             else:
@@ -78,13 +78,13 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                         score = eval_func((l1_word, lang1), (l2_word, lang2), **kwargs)
                         
                         #Transform distance into similarity
-                        if eval_sim == False:
+                        if not eval_sim:
                             score = e**-score
                         
                         concept_sims[(l1_word, l2_word)] = score
                         
             if len(concept_sims) > 0:
-                if exclude_synonyms == True:
+                if exclude_synonyms:
                     sims[concept] = max(concept_sims.values())
                 else:
                     sims[concept] = mean(concept_sims.values())
@@ -102,7 +102,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         
     #Get the non-synonymous word pair scores against which to 
     #calibrate the synonymous word scores
-    if calibrate == True:
+    if calibrate:
         
         try:
             #Try to load previously calculated calibration parameters
@@ -116,7 +116,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
             #nc_len = len(noncognate_scores)
             
             #Transform distance scores into similarity scores
-            if eval_sim == False:
+            if not eval_sim:
                 noncognate_scores = [e**-score for score in noncognate_scores]
             
             #Calculate mean and standard deviation from this sample distribution
@@ -140,13 +140,13 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         #The higher this value, the more confident we can be that
         #the given score does not come from that distribution, 
         #i.e. that it is truly a cognate
-        if calibrate == True:
+        if calibrate:
             pnorm = norm.cdf(score, loc=mean_nc_score, scale=nc_score_stdev)
             score *= pnorm
         
         sims[concept] = score if score >= min_similarity else 0
     
-    if return_score_dict == True:
+    if return_score_dict:
         return sims 
     
     else:
@@ -161,7 +161,7 @@ def weighted_cognate_sim(lang1, lang2,
                          exclude_synonyms=True, 
                          return_score_dict=False,
                          **kwargs):
-    if weights == None:
+    if weights is None:
         weights = [1/len(eval_funcs) for i in range(len(eval_funcs))]
     sim_score = 0
     for eval_func, eval_sim, weight in zip(eval_funcs, eval_sims, weights):
@@ -190,7 +190,7 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
                  concept_list=None, exclude_synonyms=True,
                  seed=1,
                  **kwargs):
-    if concept_list == None:
+    if concept_list is None:
         concept_list = [concept for concept in lang1.vocabulary 
                         if concept in lang2.vocabulary]
     else:
@@ -217,7 +217,7 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
         
     
     #Calculate the p-values for the synonymous word pairs against non-synonymous word pairs
-    if eval_sim == True:
+    if eval_sim:
         p_values = {concept:[(len([nc_score for nc_score in noncognate_scores if nc_score >= score])+1) / (nc_len+1) 
                              for score in scores[concept]] 
                     for concept in scores}
@@ -229,7 +229,7 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
                     for concept in scores}
    
     #Exclude synonyms if specified
-    if exclude_synonyms == True:
+    if exclude_synonyms:
         p_values = [min(p_values[concept]) for concept in p_values]
     else:
         p_values = [p for concept in p_values for p in p_values[concept]]

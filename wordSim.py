@@ -66,7 +66,7 @@ def basic_word_sim(word1, word2=None, sim_func=phone_sim, **kwargs):
     If word2 is not provided, word1 is assumed to be an alignment."""
     
     #Calculate or retrieve the alignment
-    if word2 != None:
+    if word2:
         alignment = prepare_alignment(word1, word2)
     else:
         alignment = word1
@@ -98,9 +98,9 @@ def word_sim(word1, word2=None,
     word2 : string (second word) or tuple (second word, second language)"""
     
 
-    #If word2 == None, we assume word1 argument is actually an aligned word pair
+    #If word2 is None, we assume word1 argument is actually an aligned word pair
     #Otherwise, align the two words
-    if word2 != None:
+    if word2:
         alignment = prepare_alignment(word1, word2)
     else:
         alignment = word1
@@ -128,7 +128,7 @@ def word_sim(word1, word2=None,
                     deleted_segment = seg1
                     index = len([alignment[j][0] for j in range(i) if alignment[j][0] != '-'])
                 
-                if penalize_sonority == True:
+                if penalize_sonority:
                     sonority = get_sonority(deleted_segment)
                     sonority_penalty = 1-(sonority/(max_sonority+1))
                     penalty *= sonority_penalty
@@ -137,7 +137,7 @@ def word_sim(word1, word2=None,
                 gap_index = deleted_index-1
                 
                 #Lessen the penalty under certain circumstances
-                if context_reduction == True:
+                if context_reduction:
                     stripped_deleted = strip_diacritics(deleted_segment)
                     if i > 0:
                         previous_seg = alignment[i-1][gap_index]
@@ -226,10 +226,10 @@ def word_sim(word1, word2=None,
                                 if ('ː' in prev_pair[gap_index]) or ('ˑ' in prev_pair[gap_index]):
                                     penalty = 0
                                 
-                    if double == True:
+                    if double:
                         penalty /= penalty_discount
                 
-                if prosodic_env_scaling == True:
+                if prosodic_env_scaling:
                     #Discount deletion penalty according to prosodic sonority 
                     #environment (based on List, 2012)
                     deleted_i = sum([1 for j in range(i+1) if alignment[j][deleted_index] != '-'])-1
@@ -248,7 +248,7 @@ def word_sim(word1, word2=None,
                 distance = 1 - sim_func(seg1, seg2, **kwargs)
                 penalties.append(distance)
         
-        if total_sim == True:
+        if total_sim:
             word_dist = sum(penalties)
         else:
             word_dist = mean(penalties)
@@ -257,7 +257,7 @@ def word_sim(word1, word2=None,
         word_sim = e**-word_dist
         
         #Save the calculated score
-        if word2 != None:
+        if word2:
             calculated_word_sims[(tuple(alignment), sim_func, 
                                  penalize_sonority, 
                                  context_reduction, prosodic_env_scaling, 
@@ -274,9 +274,9 @@ def segmental_word_sim(word1, word2=None,
     
     assert round(sum([c_weight, v_weight, syl_weight]),1) == 1.0
     
-    #If word2 == None, we assume word1 argument is actually an aligned word pair
+    #If word2 is None, we assume word1 argument is actually an aligned word pair
     #Otherwise, align the two words
-    if word2 != None:
+    if word2:
         alignment = prepare_alignment(word1, word2)
     else:
         alignment = word1
@@ -405,8 +405,8 @@ def phonetic_surprisal(pair1, pair2, surprisal_dict=None, normalize=True, ngram_
     alignment = prepare_alignment(pair1, pair2)
     
     #If no surprisal dictionary is specified, use the standard L1-->L2/L2-->L1 phoneme surprisal
-    if surprisal_dict == None:
-        assert (lang1 != None) and (lang2 != None)
+    if surprisal_dict is None:
+        assert lang1 and lang2
         
         #Calculate phoneme surprisal if not already done
         if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
@@ -489,7 +489,7 @@ def score_pmi(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
         PMI_values = [pmi_dict[pair[0]][pair[1]] for pair in alignment]
         PMI_score = mean(PMI_values) 
         
-        if sim2dist == True:
+        if sim2dist:
             PMI_dist = exp(-max(PMI_score, 0)**alpha)
             scored_word_pmi[(pair1, pair2, sim2dist)] = PMI_dist
             return PMI_dist
@@ -511,12 +511,12 @@ def LevenshteinDist(word1, word2, normalize=True, asjp=True):
         word1 = re.sub(f, fixes[f], word1)
         word2 = re.sub(f, fixes[f], word2)
         
-    if asjp == True:
+    if asjp:
         word1 = strip_ch(ipa2asjp(word1), ["~"])        
         word2 = strip_ch(ipa2asjp(word2), ["~"])
         
     LevDist = edit_distance(word1, word2)
-    if normalize == True:
+    if normalize:
         LevDist /= max(len(word1), len(word2))
         
     return LevDist
@@ -530,7 +530,7 @@ def hybrid_distance(pair1, pair2, funcs, func_sims, **kwargs):
     scores = []
     for func, func_sim in zip(funcs, func_sims):
         score = func(pair1, pair2, **kwargs)
-        if func_sim == True:
+        if func_sim:
             score = 1 - score
         scores.append(score)
     

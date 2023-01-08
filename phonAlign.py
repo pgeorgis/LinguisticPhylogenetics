@@ -48,7 +48,7 @@ def align_costs(seq1, seq2,
             cost = dist_func(seq1_i, seq2_j, **kwargs)
             
             #If similarity function, turn into distance and ensure it is negative
-            if sim == True:
+            if sim:
                 if cost > 0:
                     cost = log(cost)
                 else:
@@ -66,20 +66,20 @@ def phone_align(word1, word2,
                 **kwargs):
     """Align segments of word1 with segments of word2 according to Needleman-
     Wunsch algorithm, with costs determined by phonetic and sonority similarity;
-    If segmented == False, the words are first segmented before being aligned.
+    If not segmented, the words are first segmented before being aligned.
     GOP = -1.22 by default, determined by cross-validation on gold alignments."""
-    if segmented == False:        
+    if not segmented:        
         segments1, segments2 = segment_word(word1), segment_word(word2)
     else:
         segments1, segments2 = word1, word2  
     
     #Combine base distances from distance function with additional penalties, if specified
-    if added_penalty_dict != None:
+    if added_penalty_dict:
         def added_penalty_dist(seq1, seq2, **kwargs):
             added_penalty = added_penalty_dict[seq1][seq2]
             base_dist = dist_func(seq1, seq2, **kwargs)
             #If similarity function, turn into distance and ensure it is negative
-            if sim == True:
+            if sim:
                 base_dist = -(1 - base_dist)
             return base_dist + added_penalty
         

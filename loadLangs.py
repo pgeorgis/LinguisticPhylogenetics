@@ -83,7 +83,7 @@ class LexicalDataset:
         language_vocabulary = defaultdict(lambda:defaultdict(lambda:{}))
         for i in data:
             lang = data[i][self.language_name_c]
-            if ((doculects == None) or (lang in doculects)):
+            if ((doculects is None) or (lang in doculects)):
                 features = list(data[i].keys())
                 for feature in features:
                     value = data[i][feature]
@@ -134,10 +134,10 @@ class LexicalDataset:
                           sep='\t', variants_sep='~'):
         """Write cognate set index to .csv file"""
         assert sep != variants_sep
-        if output_file == None:
+        if output_file is None:
             output_file = f'{self.directory}{self.name} Vocabulary Index.csv'
         
-        if concept_list == None:
+        if concept_list is None:
             concept_list = sorted(list(self.cognate_sets.keys()))
         else:
             concept_list = sorted([c for c in concept_list if c in self.concepts])
@@ -163,7 +163,7 @@ class LexicalDataset:
         of the dataset on a particular wordlist"""
         
         #By default use the entire vocabulary if no specific concept list is given
-        if concept_list == None:
+        if concept_list is None:
             concept_list = self.concepts
         
         #Calculate mutual coverage
@@ -194,7 +194,7 @@ class LexicalDataset:
         until the dataset's AMC score reaches the minimum value"""
         
         #By default use the entire vocabulary if no specific concept list is given
-        if concept_list == None:
+        if concept_list is None:
             concept_list = self.concepts
         
         pruned = []
@@ -224,7 +224,7 @@ class LexicalDataset:
         the results to file"""
         
         #Specify output file name if none is specified
-        if output_file == None:
+        if output_file is None:
             output_file = f'{self.directory}{self.name}_phoneme_PMI.csv'
         
         l = list(self.languages.values())
@@ -268,7 +268,7 @@ class LexicalDataset:
         """Loads pre-calculated phoneme PMI values from file"""
         
         #Designate the default file name to search for if no alternative is provided
-        if pmi_file == None:
+        if pmi_file is None:
             pmi_file = f'{self.directory}{self.name}_phoneme_PMI.csv'
         
         #Try to load the file of saved PMI values
@@ -306,7 +306,7 @@ class LexicalDataset:
         self.load_phoneme_pmi()
         
         #Specify output file name if none is specified
-        if output_file == None:
+        if output_file is None:
             output_file = f'{self.directory}{self.name}_phoneme_surprisal_{ngram_size}gram.csv'
         
         #Check whether phoneme surprisal has been calculated already for this pair
@@ -347,7 +347,7 @@ class LexicalDataset:
         """Loads pre-calculated phoneme surprisal values from file"""
         
         #Designate the default file name to search for if no alternative is provided
-        if surprisal_file == None:
+        if surprisal_file is None:
             surprisal_file = f'{self.directory}{self.name}_phoneme_surprisal_{ngram_size}gram.csv'
         
         #Try to load the file of saved PMI values
@@ -406,7 +406,7 @@ class LexicalDataset:
                                method='average',
                                title=None, save_directory=None,
                                **kwargs):
-        if combine_cognate_sets == True:
+        if combine_cognate_sets:
             cognate_ids = [c for c in self.cognate_sets if c.split('_')[0] == cognate_id]
         else:
             cognate_ids = [cognate_id]
@@ -426,10 +426,10 @@ class LexicalDataset:
         langs = [self.languages[lang] for lang in lang_labels]
         words = list(zip(words, langs))
         
-        if title == None:
+        if title is None:
             title = f'{self.name} "{cognate_id}"'
         
-        if save_directory == None:
+        if save_directory is None:
             save_directory = self.plots_dir
 
         draw_dendrogram(group=words,
@@ -605,10 +605,10 @@ class LexicalDataset:
                                 f'model={model}',
                                 f'data={name}.csv',
                                 f'rate_variation={rate_variation}'])
-            if clock_model != None:
+            if clock_model:
                 config += f'\n[clock default]\ntype={clock_model}'
             
-            if calibration != None:
+            if calibration:
                 config += '\n[calibration]'
                 for lang_group in calibration:
                     config += f'\n{lang_group}={calibration[lang_group]}'
@@ -696,7 +696,7 @@ class LexicalDataset:
             return self.distance_matrices[code]
         
         #Use all available concepts by default
-        if concept_list == None:
+        if concept_list is None:
             concept_list = sorted([concept for concept in self.concepts.keys() 
                                    if len(self.concepts[concept]) > 1])
         else:
@@ -707,9 +707,9 @@ class LexicalDataset:
             cognates = 'none'
         #Automatic cognate clustering        
         if cognates == 'auto':
-            assert cluster_func != None
-            assert cluster_sim != None
-            assert cutoff != None
+            assert cluster_func is not None
+            assert cluster_sim is not None
+            assert cutoff is not None
             
             cognate_code = f'{self.name}_distfunc-{cluster_func.__name__}_sim-{sim}_cutoff-{cutoff}'
             #for key, value in kwargs.items():
@@ -809,9 +809,9 @@ class LexicalDataset:
         
         group = [self.languages[lang] for lang in self.languages]
         labels = [lang.name for lang in group]
-        if title == None:
+        if title is None:
             title = f'{self.name}'
-        if save_directory == None:
+        if save_directory is None:
             save_directory = self.plots_dir
             
         lm = self.linkage_matrix(dist_func, sim, 
@@ -831,12 +831,12 @@ class LexicalDataset:
                 plt.figure(figsize=(10,8))
             
             dendrogram(lm, p=p, orientation=orientation, labels=labels)
-            if title != None:
+            if title:
                 plt.title(title, fontsize=30)
             plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=300)
             plt.show()
 
-        if return_newick == True:
+        if return_newick:
             if method == 'nj':
                 newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
             else:
@@ -873,7 +873,7 @@ class LexicalDataset:
         
         #Set the plot dimensions
         sns.set(font_scale=1.0)
-        if plotsize == None:
+        if plotsize is None:
             x_coords = [coords[i][0] for i in range(len(coords))]
             y_coords = [coords[i][1] for i in range(len(coords))]
             x_range = max(x_coords) - min(x_coords)
@@ -908,22 +908,22 @@ class LexicalDataset:
                             coords1, coords2 = coords[i], coords[j]
                             x1, y1 = coords1
                             x2, y2 = coords2
-                            if alpha_func == None:
+                            if alpha_func is None:
                                 plt.plot([x1, x2],[y1, y2], alpha=1-dist)
                             else:
                                 plt.plot([x1, x2],[y1, y2], alpha=alpha_func(dist))
                             connected.append((i,j))
         
         #Optionally invert axes
-        if invert_yaxis == True:    
+        if invert_yaxis:    
             plt.gca().invert_yaxis()
-        if invert_xaxis == True:
+        if invert_xaxis:
             plt.gca().invert_xaxis()
             
         #Save the plot
-        if title == None:
+        if title is None:
             title = f'{self.name} plot'
-            if save_directory == None:
+            if save_directory is None:
                 save_directory = self.plots_dir
             plt.savefig(f'{os.path.join(save_directory, title)}.png', bbox_inches='tight', dpi=300)
         
@@ -940,7 +940,7 @@ class LexicalDataset:
                   **kwargs):
         
         #Use all available concepts by default
-        if concept_list == None:
+        if concept_list is None:
             concept_list = sorted([concept for concept in self.concepts.keys() 
                                    if len(self.concepts[concept]) > 1])
         else:
@@ -951,9 +951,9 @@ class LexicalDataset:
             cognates = 'none'
         #Automatic cognate clustering        
         if cognates == 'auto':
-            assert cluster_func != None
-            assert cluster_sim != None
-            assert cutoff != None
+            assert cluster_func is not None
+            assert cluster_sim is not None
+            assert cutoff is not None
             
             code = f'{self.name}_distfunc-{cluster_func.__name__}_sim-{sim}_cutoff-{cutoff}'
             #for key, value in kwargs.items():
@@ -995,9 +995,9 @@ class LexicalDataset:
         #Dendrogram characteristics
         languages = [self.languages[lang] for lang in self.languages]
         names = [lang.name for lang in languages]
-        if title == None:
+        if title is None:
             title = f'{self.name} network'
-        if save_directory == None:
+        if save_directory is None:
             save_directory = self.plots_dir
         
         return network_function(group=languages, 
@@ -1013,15 +1013,15 @@ class LexicalDataset:
     
     def examine_cognates(self, language_list=None, concepts=None, cognate_sets=None,
                          min_langs=2):
-        if language_list == None:
+        if language_list is None:
             language_list = list(self.languages.values())
         else:
             language_list = [self.languages[l] for l in language_list]
         
-        if (concepts == None) and (cognate_sets == None):
+        if (concepts is None) and (cognate_sets is None):
             cognate_sets = sorted(list(self.cognate_sets.keys()))
         
-        elif concepts != None:
+        elif concepts:
             cognate_sets = []
             for concept in concepts:
                 cognate_sets.extend([c for c in self.cognate_sets if '_'.join(c.split('_')[:-1]) == concept])
@@ -1074,10 +1074,10 @@ class LexicalDataset:
         new_dataset = copy.deepcopy(self)
         
         #Remove languages not part of new subset
-        if include != None:
+        if include:
             to_delete = [lang for lang in self.languages if lang not in include]
         else:
-            assert exclude != None
+            assert exclude is not None
             to_delete = exclude
         new_dataset.remove_languages(to_delete)
         
@@ -1265,10 +1265,10 @@ class Language(LexicalDataset):
         for concept in self.vocabulary:
             for entry in self.vocabulary[concept]:
                 orthography, transcription, segments = entry
-                if re.search(segment, entry[field_index]) != None:
+                if re.search(segment, entry[field_index]):
                     matches.append((concept, orthography, transcription))
         
-        if return_list == True:
+        if return_list:
             return matches
         
         else:
@@ -1290,7 +1290,7 @@ class Language(LexicalDataset):
     
     def calculate_infocontent(self, word, segmented=False):
         #Return the pre-calculated information content of the word, if possible
-        if segmented == True:
+        if segmented:
             joined = ''.join([ch for ch in word])
             if joined in self.info_contents:
                 return self.info_contents[joined]
@@ -1301,7 +1301,7 @@ class Language(LexicalDataset):
         #Otherwise calculate it from scratch
         #First segment the word if necessary
         #Then pad the segmented word
-        if segmented == False:
+        if not segmented:
             segments = segment_word(word)
             padded = ['#', '#'] + segments + ['#', '#']
         else:
@@ -1322,7 +1322,7 @@ class Language(LexicalDataset):
     
     def self_surprisal(self, word, segmented=False, normalize=False):
         info_content = self.calculate_infocontent(word, segmented=segmented)
-        if normalize == True:
+        if normalize:
             return mean(info_content[j][1] for j in info_content)
         else:
             return sum(info_content[j][1] for j in info_content)
@@ -1364,18 +1364,18 @@ class Language(LexicalDataset):
                          exclude_length=True, exclude_tones=True,
                          title=None, save_directory=None,
                          **kwargs):
-        if title == None:
+        if title is None:
             title = f'Phonetic Inventory of {self.name}'
         
-        if save_directory == None:
+        if save_directory is None:
             save_directory = self.plots_dir
             
         phonemes = list(self.phonemes.keys())
         
-        if exclude_length == True:
+        if exclude_length:
             phonemes = list(set(strip_ch(p, ['ː']) for p in phonemes))
         
-        if exclude_tones == True:
+        if exclude_tones:
             phonemes = [p for p in phonemes if p not in self.tonemes]
         
         return draw_dendrogram(group=phonemes,
@@ -1394,7 +1394,7 @@ class Language(LexicalDataset):
         s += f'\nFamily: {self.family.name}'
         s += f'\nRelatives: {len(self.family.languages)}'
         s += f'\nConsonants: {len(self.consonants)}, Vowels: {len(self.vowels)}'
-        if self.tonal == True:
+        if self.tonal:
             s += f', Tones: {len(self.tonemes)}'
         percent_loanwords = len([1 for concept in self.loanwords for entry in self.loanwords[concept]]) / len([1 for concept in self.vocabulary for entry in self.vocabulary[concept]])
         percent_loanwords *= 100
@@ -1420,7 +1420,7 @@ def combine_datasets(dataset_list):
 def load_family(family, data_file, min_amc=None, concept_list=None):
     print(f'Loading {family}...')
     family = LexicalDataset(data_file, family)
-    if min_amc is not None:
+    if min_amc:
         #min_amc default: 0.75
         family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
     #families[family].write_vocab_index()

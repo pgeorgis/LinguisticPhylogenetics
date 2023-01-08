@@ -13,12 +13,12 @@ import seaborn as sns
 import networkx as nx
 
 #GENERAL AUXILIARY FUNCTIONS
-def dict_tuplelist(dic, sort=True, reverse=True):
+def dict_tuplelist(dic, sort=True, n=1, reverse=True):
     """Returns a list of (key, value) tuples from the dictionary
-    if sort == True, sorts the list by the value, by default in decending order"""
+    if sort == True, sorts the list by the nth tuple item, by default in decending order"""
     d = [(key, dic[key]) for key in dic]
-    if sort == True:
-        d.sort(key=operator.itemgetter(1), reverse=reverse)
+    if sort:
+        d.sort(key=operator.itemgetter(n), reverse=reverse)
     return d
 
 def default_dict(dic, l):
@@ -79,13 +79,13 @@ def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
     with open(csvfile, 'r', encoding=encoding) as csv_file:
         csv_file = csv_file.readlines()
         columns = [item.strip() for item in csv_file[start].split(sep)]
-        if header == True:
+        if header:
             start += 1
         for i in range(start, len(csv_file)):
             line = [item.strip() for item in csv_file[i].split(sep)]
             for j in range(len(columns)):
                 key = ''
-                if header == True:
+                if header:
                     key += columns[j]
                 else:
                     key += str(j)
@@ -98,14 +98,14 @@ def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
 def xlsx_to_csv(excel_path, csv_path=None, sheet=None, 
                 sep=',', index=None, header=True):
     """Converts an Excel file to a CSV file"""
-    if sheet != None:
+    if sheet:
         excel_file = pd.read_excel(excel_path, sheet_name=sheet)
     else:
         excel_file = pd.read_excel(excel_path)
     
     #Automatically name the output .csv file the same as the Excel file if 
     #no other name is specified
-    if csv_path == None:
+    if csv_path is None:
         csv_path = excel_path.split('.')[0] + '.csv'
     
     #Write to .csv file
@@ -124,11 +124,11 @@ def normalize_dict(dict_, default=False, lmbda=None, return_=True):
         normalized = {}
     total = sum(list(dict_.values()))
     for key in dict_:
-        if return_ == True:
+        if return_:
             normalized[key] = dict_[key] / total
         else:
             dict_[key] = dict_[key] / total
-    if return_ == True:
+    if return_:
         return normalized
    
 #%%
@@ -145,7 +145,7 @@ def surprisal(p):
 #         surprisal values for the sequence corresponcences"""
 #     values = [surprisal_dict[pair[0]][pair[1]] for pair in alignment]
 
-#     if normalize == True:
+#     if normalize:
 #         return mean(values)
 #     else:
 #         return sum(values)
@@ -170,7 +170,7 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, normalize=True
         seg2 = seg2[0]
         values.append(surprisal_dict[seg1][seg2])
 
-    if normalize == True:
+    if normalize:
         return mean(values)
     else:
         return sum(values)
@@ -202,7 +202,7 @@ def list_mostsimilar(item1, comp_group, dist_func, n=5, sim=True, return_=False,
     n = min(len(comp_group), n)
     sim_list = [(item2, dist_func(item1, item2, **kwargs)) for item2 in comp_group if item1 != item2]
     sim_list.sort(key=operator.itemgetter(1), reverse=sim)
-    if return_ == True:
+    if return_:
         return sim_list[:n]
     else:
         for item in sim_list[:n]:
@@ -218,7 +218,7 @@ def distance_matrix(group, dist_func, sim=False, **kwargs):
             dist = dist_func(group[i], group[j], **kwargs)
             
             #Convert similarities to distances
-            if sim == True:
+            if sim:
                 dist = 1 - min(1, dist)
                 
             mat[i][j] = dist
@@ -254,11 +254,11 @@ def cluster_items(group, labels,
 
 # def lm2dendrogram(lm, p=30, orientation='left', labels=None):
 #     dendrogram(lm, p=p, orientation=orientation, labels=labels)
-#     if title != None:
+#     if title:
 #         plt.title(title, fontsize=30)
 #     plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=300)
 #     plt.show()
-#     if return_newick == True:
+#     if return_newick:
 #         return linkage2newick(lm, labels)
 
 def draw_dendrogram(group, dist_func, title=None, sim=False, labels=None, 
@@ -276,11 +276,11 @@ def draw_dendrogram(group, dist_func, title=None, sim=False, labels=None,
         plt.figure(figsize=(10,8))
     lm = linkage_matrix(group, dist_func, sim, method, metric, **kwargs)
     dendrogram(lm, p=p, orientation=orientation, labels=labels)
-    if title != None:
+    if title:
         plt.title(title, fontsize=30)
     plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=300)
     plt.show()
-    if return_newick == True:
+    if return_newick:
         return linkage2newick(lm, labels)
 
 def getNewick(node, newick, parentdist, leaf_names):
@@ -326,7 +326,7 @@ def plot_distances(group, dist_func=None, sim=False, dimensions=2, labels=None,
     dm = distance_matrix(group, dist_func, sim, **kwargs)
     coords = dm2coords(dm, dimensions)
     sns.set(font_scale=1.0)
-    if plotsize == None:
+    if plotsize is None:
         x_coords = [coords[i][0] for i in range(len(coords))]
         y_coords = [coords[i][1] for i in range(len(coords))]
         x_range = max(x_coords) - min(x_coords)
@@ -344,9 +344,9 @@ def plot_distances(group, dist_func=None, sim=False, dimensions=2, labels=None,
             xy = (x, y), xytext = (5, -5),
             textcoords = 'offset points', ha = 'left', va = 'bottom',
             )
-    if invert_yaxis == True:    
+    if invert_yaxis:    
         plt.gca().invert_yaxis()
-    if invert_xaxis == True:
+    if invert_xaxis:
         plt.gca().invert_xaxis()
     plt.savefig(f'{directory}{title}.png', bbox_inches='tight', dpi=300)
     plt.show()
@@ -407,7 +407,7 @@ def k_means_cluster(dm, k='elbow', n_init=10, max_iter=300, random_state=42, sca
     labels = kmeans.labels_
     
     #If item labels are provided, return dictionary of item labels within each cluster
-    if item_labels != None:
+    if item_labels:
         assert len(item_labels) == len(labels)
         clusters = defaultdict(lambda:[])
         for item, cluster in zip(item_labels, labels):
@@ -430,7 +430,7 @@ def dbscan_cluster(dm, scaler=True, item_labels=None):
     labels = dbscan.labels_
     
     #If item labels are provided, return dictionary of item labels within each cluster
-    if item_labels != None:
+    if item_labels:
         assert len(item_labels) == len(labels)
         clusters = defaultdict(lambda:[])
         for item, cluster in zip(item_labels, labels):
@@ -460,7 +460,7 @@ def network_plot(group, labels,
     #Determine the minimum number of edges per node to display
     #By default, take the square root of total number of network nodes
     #for spring networks, and the total number of network nodes for coordinate networks
-    if min_edges == None:
+    if min_edges is None:
         if method == 'coords':
             min_edges = len(group)
         else:
@@ -468,7 +468,7 @@ def network_plot(group, labels,
             
     #Determine the maximum number of edges to display per node
     #By default, set the maximum to the total number of nodes
-    if max_edges == None:
+    if max_edges is None:
         max_edges = len(group)
     
     #Create dictionary of node indices and their labels
@@ -482,7 +482,7 @@ def network_plot(group, labels,
         coordinates[n] = (x, y)
         
     #Calculate the threshold for plotting edges: the mean distance among items in the network
-    if threshold == None:
+    if threshold is None:
         dists = [dm[i][j] for i in range(len(dm)) for j in range(len(dm[i])) if i != j]
         threshold = mean(dists) + stdev(dists)
     
@@ -507,7 +507,7 @@ def network_plot(group, labels,
         gr.add_edge(node_i, node_j, distance=dist, weight=(1-dist)**2)
         
         #Label edges with distances; scale and round according to parameter specifications
-        if edge_label_dist == True:
+        if edge_label_dist:
             edge_labels[(node_i, node_j)] = str(round(dist*scale_dist, edge_decimals))
         
         #Label edges with similarities; scale and round according to parameter specifications
@@ -556,8 +556,8 @@ def network_plot(group, labels,
     edgeList, colorsList = zip(*nx.get_edge_attributes(gr,'distance').items())
     
     #Scale nodes according to specified sizes, if given
-    if scale_nodes == True:
-        if node_sizes == None:
+    if scale_nodes:
+        if node_sizes is None:
             print('Provide a list of node sizes in order to scale nodes!')
             raise ValueError
         node_sizes = [node_sizes[node] for node in gr.nodes()]
@@ -566,13 +566,13 @@ def network_plot(group, labels,
     #Otherwise plot all nodes with equal size, either specified through 
     #node_sizes parameter or 300 by default
     else:
-        if node_sizes == None:
+        if node_sizes is None:
             nz_node_sizes = [300 for i in range(len(group))]
         else:
             nz_node_sizes = [node_sizes for i in range(len(group))]
     
     #Color all nodes light blue by default if no other color is specified 
-    if node_colors == None:
+    if node_colors is None:
         node_colors = ['#70B0F0' for i in range(len(group))]
     
     #Draw the network
@@ -581,17 +581,17 @@ def network_plot(group, labels,
             node_color=node_colors, font_weight='bold', node_size=nz_node_sizes)
     
     #Add edge labels
-    if edgelabels == True:
+    if edgelabels:
         nx.draw_networkx_edge_labels(gr, pos=pos, edge_labels=edge_labels, font_size=8)
     
     #Invert axes
-    if invert_yaxis == True:    
+    if invert_yaxis:    
         plt.gca().invert_yaxis()
-    if invert_xaxis == True:
+    if invert_xaxis:
         plt.gca().invert_xaxis()
     
     #Add title to the plot and save 
-    if title != None:
+    if title:
         plt.title(f'{title}: (method = {method}, {dimensions}-D, {min_edges} min edges, {max_edges} max edges, threshold = {round(threshold, 3)})', fontsize=20)
         plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=600)
     
@@ -662,7 +662,7 @@ def new_network_plot(group, labels,
         gr.add_edge(node_i, node_j, distance=dist)
         
         #Label edges with distances; scale and round according to parameter specifications
-        if edge_label_dist == True:
+        if edge_label_dist:
             edge_labels[(node_i, node_j)] = str(round(dist*scale_dist, edge_decimals))
         
         #Label edges with similarities; scale and round according to parameter specifications
@@ -769,8 +769,8 @@ def new_network_plot(group, labels,
     edgeList, colorsList = zip(*nx.get_edge_attributes(gr,'distance').items())
     
     #Scale nodes according to specified sizes, if given
-    if scale_nodes == True:
-        if node_sizes == None:
+    if scale_nodes:
+        if node_sizes is None:
             print('Provide a list of node sizes in order to scale nodes!')
             raise ValueError
         node_sizes = [node_sizes[node] for node in gr.nodes()]
@@ -779,13 +779,13 @@ def new_network_plot(group, labels,
     #Otherwise plot all nodes with equal size, either specified through 
     #node_sizes parameter or 300 by default
     else:
-        if node_sizes == None:
+        if node_sizes is None:
             nz_node_sizes = [300 for i in range(len(group))]
         else:
             nz_node_sizes = [node_sizes for i in range(len(group))]
     
     #Color all nodes light blue by default if no other color is specified 
-    if node_colors == None:
+    if node_colors is None:
         node_colors = ['#70B0F0' for i in range(len(group))]
     
     #Draw the network
@@ -794,17 +794,17 @@ def new_network_plot(group, labels,
             node_color=node_colors, font_weight='bold', node_size=nz_node_sizes)
     
     #Add edge labels
-    if edgelabels == True:
+    if edgelabels:
         nx.draw_networkx_edge_labels(gr, pos=pos, edge_labels=edge_labels, font_size=8)
     
     #Invert axes
-    if invert_yaxis == True:    
+    if invert_yaxis:    
         plt.gca().invert_yaxis()
-    if invert_xaxis == True:
+    if invert_xaxis:
         plt.gca().invert_xaxis()
     
     #Add title to the plot and save 
-    if title != None:
+    if title:
         plt.title(f'{title}: (method = {method}, {dimensions}-D, cluster_threshold={cluster_threshold}, items={nearest_items}, clusters={original_nearest_clusters}', fontsize=20)
         plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=600)
     
@@ -878,7 +878,7 @@ def newer_network_plot(group, labels,
         gr.add_edge(node_i, node_j, distance=dist, weight=(1-dist)**2)#((e**-dist))**2)
         
         #Label edges with distances; scale and round according to parameter specifications
-        if edge_label_dist == True:
+        if edge_label_dist:
             edge_labels[(node_i, node_j)] = str(round(dist*scale_dist, edge_decimals))
         
         #Label edges with similarities; scale and round according to parameter specifications
@@ -999,8 +999,8 @@ def newer_network_plot(group, labels,
     edgeList, colorsList = zip(*nx.get_edge_attributes(gr,'distance').items())
     
     #Scale nodes according to specified sizes, if given
-    if scale_nodes == True:
-        if node_sizes == None:
+    if scale_nodes:
+        if node_sizes is None:
             print('Provide a list of node sizes in order to scale nodes!')
             raise ValueError
         node_sizes = [node_sizes[node] for node in gr.nodes()]
@@ -1009,13 +1009,13 @@ def newer_network_plot(group, labels,
     #Otherwise plot all nodes with equal size, either specified through 
     #node_sizes parameter or 300 by default
     else:
-        if node_sizes == None:
+        if node_sizes is None:
             nz_node_sizes = [300 for i in range(len(group))]
         else:
             nz_node_sizes = [node_sizes for i in range(len(group))]
     
     #Color all nodes light blue by default if no other color is specified 
-    if node_colors == None:
+    if node_colors is None:
         node_colors = ['#70B0F0' for i in range(len(group))]
     
     #Draw the network
@@ -1024,17 +1024,17 @@ def newer_network_plot(group, labels,
             node_color=node_colors, font_weight='bold', node_size=nz_node_sizes)
     
     #Add edge labels
-    if edgelabels == True:
+    if edgelabels:
         nx.draw_networkx_edge_labels(gr, pos=pos, edge_labels=edge_labels, font_size=8)
     
     #Invert axes
-    if invert_yaxis == True:    
+    if invert_yaxis:    
         plt.gca().invert_yaxis()
-    if invert_xaxis == True:
+    if invert_xaxis:
         plt.gca().invert_xaxis()
     
     #Add title to the plot and save 
-    if title != None:
+    if title:
         plt.title(f'{title}: step_size={step_size}, connection_decay={connection_decay}', fontsize=20)
         plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=600)
     

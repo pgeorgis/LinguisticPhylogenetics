@@ -17,7 +17,7 @@ class PhonemeCorrDetector:
     def prepare_wordlists(self, wordlist):
     
         #If no wordlist is provided, by default use all concepts shared by the two languages
-        if wordlist == None:
+        if wordlist is None:
             wordlist = [concept for concept in self.lang1.vocabulary 
                         if concept in self.lang2.vocabulary]
         
@@ -70,7 +70,7 @@ class PhonemeCorrDetector:
         exclude_null : Bool; if True, does not consider aligned pairs including a null segment"""
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
-            if exclude_null == True:
+            if exclude_null:
                 alignment = [pair for pair in alignment if '-' not in pair]
             if ngram_size > 1:
                 pad_n = ngram_size - 1
@@ -81,7 +81,7 @@ class PhonemeCorrDetector:
                 segs = list(zip(*ngram))
                 seg1, seg2 = segs
                 corr_counts[seg1][seg2] += 1
-        if counts == False:
+        if not counts:
             for seg1 in corr_counts:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
         return corr_counts
@@ -100,10 +100,10 @@ class PhonemeCorrDetector:
                     seg2 = segs2[j]
                     
                     #Only count sounds which are compatible as corresponding
-                    if compatible_segments(seg1, seg2) == True:
+                    if compatible_segments(seg1, seg2):
                         corr_dict[seg1][seg2] += 1
                         
-        if normalize == True:
+        if normalize:
             for seg1 in corr_dict:
                 corr_dict[seg1] = normalize_dict(corr_dict[seg1])
         
@@ -123,14 +123,14 @@ class PhonemeCorrDetector:
         dependent_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         independent_probs : None, or nested dictionary of conditional correspondence probabilities in non-cognates
         """
-        if l1 == None:
+        if l1 is None:
             l1 = self.lang1
-        if l2 == None:
+        if l2 is None:
             l2 = self.lang2
 
         #If no independent probabilities are specified, 
         #use product of phoneme probabilities by default
-        if independent_probs == None:
+        if independent_probs is None:
             independent_probs = defaultdict(lambda:defaultdict(lambda:0))
             for phoneme1 in l1.phonemes:
                 for phoneme2 in l2.phonemes:
@@ -275,7 +275,7 @@ class PhonemeCorrDetector:
             disqualified_words[iteration] = disqualified + diff_sample
             
             #Print results of this iteration
-            if print_iterations == True:
+            if print_iterations:
                 print(f'Iteration {iteration}')
                 print(f'\tQualified: {len(qualifying)}')
                 added = [item for item in qualifying_words[iteration]
@@ -295,7 +295,7 @@ class PhonemeCorrDetector:
                     
         #Return and save the final iteration's PMI results
         results = PMI_iterations[max(PMI_iterations.keys())]
-        if save == True:
+        if save:
             self.lang1.phoneme_pmi[self.lang2] = results
             self.lang2.phoneme_pmi[self.lang1] = self.reverse_corr_dict(results)
             #self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
@@ -315,7 +315,7 @@ class PhonemeCorrDetector:
         noncognate_word_forms = [((item[0][2], self.lang1), (item[1][2], self.lang2)) for item in diff_sample]
         noncognate_scores = [eval_func(pair[0], pair[1], **kwargs) for pair in noncognate_word_forms]
         
-        if save == True:
+        if save:
             self.lang1.noncognate_thresholds[(self.lang2, eval_func)] = noncognate_scores
         
         return noncognate_scores
@@ -324,7 +324,7 @@ class PhonemeCorrDetector:
     def phoneme_surprisal(self, correspondence_counts, ngram_size=1, weights=None,
                           attested_only=True):
         #Interpolation smoothing
-        if weights == None:
+        if weights is None:
             weights = [1/ngram_size for i in range(ngram_size)]
         interpolation = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         
@@ -348,7 +348,7 @@ class PhonemeCorrDetector:
         
         #Only perform calculation for ngrams which have actually been observed 
         #in the current dataset or which could have been observed (with gaps)
-        if attested_only == True:
+        if attested_only:
             attested = [tuple(ngram.split()) if type(ngram) == str else ngram for ngram in self.lang1.list_ngrams(ngram_size)]
             gappy = [ngram for ngram in all_ngrams if '-' in ngram]
             all_ngrams = set(attested + gappy)
@@ -471,7 +471,7 @@ class PhonemeCorrDetector:
             disqualified_words[iteration] = disqualified
             
             #Print results of this iteration
-            if print_iterations == True:
+            if print_iterations:
                 print(f'Iteration {iteration}')
                 print(f'\tQualified: {len(qualifying)}')
                 added = [self.same_meaning[i] for i in qualifying_words[iteration]
@@ -491,7 +491,7 @@ class PhonemeCorrDetector:
         
         #Return and save the final iteration's surprisal results
         results = surprisal_iterations[iteration]
-        if save == True:
+        if save:
             self.lang1.phoneme_surprisal[(self.lang2, ngram_size)] = results
         self.surprisal_dict = results
         
