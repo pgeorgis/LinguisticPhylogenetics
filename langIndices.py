@@ -39,15 +39,15 @@ def write_lang_index(dataset_file, language_metadata, output_file):
                               concept_count, word_count]))
             f.write('\n')
 
-#%%
-#LOAD LANGUAGE METADATA
+
+# LOAD LANGUAGE METADATA
 lang_metadata_file = str(parent_dir) + '/Datasets/Languages.csv'
 lang_metadata = pd.read_csv(lang_metadata_file, sep='\t')
 
-#Replace NA values in dataframe with empty string
+# Replace NA values in dataframe with empty string
 lang_metadata = lang_metadata.replace(np.nan, '', regex=True)
 
-#Ensure that all languages have unique names, print warning message otherwise
+# Ensure that all languages have unique names, print warning message otherwise
 warnings = []
 for i in range(len(list(lang_metadata['Name']))):
     name = lang_metadata['Name'][i]
@@ -57,8 +57,8 @@ for i in range(len(list(lang_metadata['Name']))):
             print(f'Warning: "{name}" appears {len(name_entries)} times in dataset (indices {", ".join([str(j) for j in name_entries])})!')
             warnings.append(name)
 
-#%%
-#WRITE LANGUAGE INDICES
+
+# WRITE LANGUAGE INDICES
 for dataset in ['Arabic',
                 'Balto-Slavic',
                 'Bantu',

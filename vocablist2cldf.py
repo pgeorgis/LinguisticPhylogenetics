@@ -16,10 +16,10 @@ def write_data(data_dict, output_file, sep='\t'):
             f.write(f'{values}\n')
 
 def vocablist2cldf(lang_files):
-    #start_dir = os.getcwd()
-    #os.chdir(list_dir)
-    #lang_files = glob.glob('*.txt')
-    #lang_files = [file for file in lang_files
+    # start_dir = os.getcwd()
+    # os.chdir(list_dir)
+    # lang_files = glob.glob('*.txt')
+    # lang_files = [file for file in lang_files
     #             if file.split('.')[0] in language_list]
     
     data = defaultdict(lambda:{})

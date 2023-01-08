@@ -57,7 +57,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 return_score_dict=False,
                 **kwargs):
     if (lang1, lang2, clustered_id, eval_func, eval_sim, exclude_synonyms, min_similarity) in cognate_sims:
-        #Try to retrieve previously calculated similarity dictionary
+        # Try to retrieve previously calculated similarity dictionary
         sims = cognate_sims[(lang1, lang2, clustered_id, eval_func, eval_sim, exclude_synonyms, min_similarity)]
     
     else:
@@ -77,7 +77,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                     for l2_word in l2_words:
                         score = eval_func((l1_word, lang1), (l2_word, lang2), **kwargs)
                         
-                        #Transform distance into similarity
+                        # Transform distance into similarity
                         if not eval_sim:
                             score = e**-score
                         
@@ -96,15 +96,15 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         if len(sims) == 0:
             raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
             
-        #Save score dictionary
+        # Save score dictionary
         cognate_sims[(lang1, lang2, clustered_id, eval_func, eval_sim, exclude_synonyms, min_similarity)] = sims
         
-    #Get the non-synonymous word pair scores against which to 
-    #calibrate the synonymous word scores
+    # Get the non-synonymous word pair scores against which to 
+    # calibrate the synonymous word scores
     if calibrate:
         
         try:
-            #Try to load previously calculated calibration parameters
+            # Try to load previously calculated calibration parameters
             mean_nc_score, nc_score_stdev = calibration_params[(lang1, lang2, eval_func)]
             
         except KeyError:
@@ -112,33 +112,33 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
             else:
                 noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func, **kwargs)
-            #nc_len = len(noncognate_scores)
+            # nc_len = len(noncognate_scores)
             
-            #Transform distance scores into similarity scores
+            # Transform distance scores into similarity scores
             if not eval_sim:
                 noncognate_scores = [e**-score for score in noncognate_scores]
             
-            #Calculate mean and standard deviation from this sample distribution
+            # Calculate mean and standard deviation from this sample distribution
             mean_nc_score = mean(noncognate_scores)
             nc_score_stdev = stdev(noncognate_scores)
             
-            #Save calibration parameters
+            # Save calibration parameters
             calibration_params[(lang1, lang2, eval_func)] = mean_nc_score, nc_score_stdev
     
-    #Apply minimum similarity and calibration
+    # Apply minimum similarity and calibration
     for concept in sims:
         score = sims[concept]
         
-        #Calibrate score against scores of non-synonymous word pairs
-        #pnorm: proportion of values from a normal distribution with
-        #mean and standard deviation defined by those of the sample
-        #of non-synonymous word pair scores, which are lower than
-        #a particular value (score)
-        #e.g. pnorm = 0.99 = 99% of values from the distribution
-        #of non-synonymous word pair scores are lower than the given score
-        #The higher this value, the more confident we can be that
-        #the given score does not come from that distribution, 
-        #i.e. that it is truly a cognate
+        # Calibrate score against scores of non-synonymous word pairs
+        # pnorm: proportion of values from a normal distribution with
+        # mean and standard deviation defined by those of the sample
+        # of non-synonymous word pair scores, which are lower than
+        # a particular value (score)
+        # e.g. pnorm = 0.99 = 99% of values from the distribution
+        # of non-synonymous word pair scores are lower than the given score
+        # The higher this value, the more confident we can be that
+        # the given score does not come from that distribution, 
+        # i.e. that it is truly a cognate
         if calibrate:
             pnorm = norm.cdf(score, loc=mean_nc_score, scale=nc_score_stdev)
             score *= pnorm
@@ -182,9 +182,7 @@ def hybrid_cognate_dist(lang1, lang2,
         scores.append(1-measure)
     return euclidean_dist(scores)
     
-
-#%%
-
+    
 def Z_score_dist(lang1, lang2, eval_func, eval_sim,
                  concept_list=None, exclude_synonyms=True,
                  seed=1,
@@ -197,17 +195,17 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
                         if concept in lang1.vocabulary 
                         if concept in lang2.vocabulary]
     
-    #Generate a dictionary of word form pairs
+    # Generate a dictionary of word form pairs
     word_forms = {concept:[((entry1[1], lang1), (entry2[1], lang2)) 
                            for entry1 in lang1.vocabulary[concept] 
                            for entry2 in lang2.vocabulary[concept]] 
                   for concept in concept_list}
     
-    #Score the word form pairs according to the specified function
+    # Score the word form pairs according to the specified function
     scores = {concept:[eval_func(pair[0], pair[1], **kwargs) for pair in word_forms[concept]] 
               for concept in word_forms}
     
-    #Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
+    # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
     if len(lang1.noncognate_thresholds[(lang2, eval_func)]) > 0:
         noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
     else:
@@ -215,7 +213,7 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
     nc_len = len(noncognate_scores)
         
     
-    #Calculate the p-values for the synonymous word pairs against non-synonymous word pairs
+    # Calculate the p-values for the synonymous word pairs against non-synonymous word pairs
     if eval_sim:
         p_values = {concept:[(len([nc_score for nc_score in noncognate_scores if nc_score >= score])+1) / (nc_len+1) 
                              for score in scores[concept]] 
@@ -227,7 +225,7 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
                              for score in scores[concept]] 
                     for concept in scores}
    
-    #Exclude synonyms if specified
+    # Exclude synonyms if specified
     if exclude_synonyms:
         p_values = [min(p_values[concept]) for concept in p_values]
     else:
@@ -237,13 +235,13 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
     return Z_dist(p_values)    
 
 
-#DONE:
-#1) Binary cognate similarity (with/without synonyms)
-#2) Phonetic word similarity (basic/advanced, with and without feature weighting)
-#3) PMI similarity/distance
-#4) Surprisal distance
-#5) Hybrid distance
-#6) Z-score distance
+# DONE:
+# 1) Binary cognate similarity (with/without synonyms)
+# 2) Phonetic word similarity (basic/advanced, with and without feature weighting)
+# 3) PMI similarity/distance
+# 4) Surprisal distance
+# 5) Hybrid distance
+# 6) Z-score distance
     
     
     

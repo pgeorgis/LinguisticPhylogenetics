@@ -9,7 +9,7 @@ if __name__ == "__main__":
     parser.add_argument('--family', required=True, help='Name of language group to classify')
     parser.add_argument('--file', required=True, help='Input CLDF data file path')
     parser.add_argument('--linkage', default='nj', choices=['nj', 'average', 'complete', 'ward', 'weighted', 'single'], help='Linkage method')
-    parser.add_argument('--cognates', default='auto', choices=['auto', 'gold', 'none'], help='Cognate clusters to use') #needs better description
+    parser.add_argument('--cognates', default='auto', choices=['auto', 'gold', 'none'], help='Cognate clusters to use') # needs better description
     parser.add_argument('--cluster', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Cognate clustering method')
     parser.add_argument('--cutoff', default=None, type=float, help='Cutoff threshold in range [0,1] for clustering cognate sets')
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     # Mapping of function labels and default cutoff values
     function_map = {
-        #'label':(function, sim, cutoff)
+        # 'label':(function, sim, cutoff)
         'pmi':(pmi_dist, False, 0.36),
         'surprisal':(surprisal_sim, True, 0.74),
         'phonetic':(word_sim, True, 0.16),
@@ -57,15 +57,15 @@ if __name__ == "__main__":
 
     # Generate Newick tree string
     tree = family.draw_tree(
-        dist_func=cognate_sim, #other options?
-        sim=True, #cognate_sim
+        dist_func=cognate_sim, # other options?
+        sim=True, # cognate_sim
         cluster_func=function_map[args.cluster][0],
         cluster_sim=function_map[args.cluster][1],
         cutoff=args.cutoff,
         eval_func=function_map[args.eval][0], 
         eval_sim=function_map[args.eval][1],
         cognates=args.cognates, 
-        method=args.linkage, #this should be changed to linkage rather than method
+        method=args.linkage, # this should be changed to linkage rather than method
         calibrate=args.calibrate,
         min_similarity=args.min_similarity,
         title=family.name, 

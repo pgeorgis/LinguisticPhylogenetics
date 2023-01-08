@@ -36,8 +36,8 @@ def return_alignment(ALIGNMENTS):
         final_alignments.append(list(zip(final_alignment[1], final_alignment[0])))
     return final_alignments
 
-def find_each_path(c_i,c_j,ALN_PATHWAYS,MATRIX,path=''): #Nested function to discover new aln pathways
-    #global ALN_PATHWAYS 
+def find_each_path(c_i,c_j,ALN_PATHWAYS,MATRIX,path=''): # Nested function to discover new aln pathways
+    # global ALN_PATHWAYS 
     i = c_i 
     j = c_j 
     if i == 0 and j==0: 
@@ -77,9 +77,9 @@ def find_each_path(c_i,c_j,ALN_PATHWAYS,MATRIX,path=''): #Nested function to dis
 
 
 def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, GAP_SCORE=-1, GAP_CHARACTER='-'):
-    MATRIX_ROW_N = len(SEQUENCE_1)+1 #Initiation Matrix Size (Rows)
-    MATRIX_COLUMN_N = len(SEQUENCE_2)+1 #Initiation Matrix Size (Columns)
-    ALN_PATHWAYS = [] #Initiating List of Discovered aln Pathways
+    MATRIX_ROW_N = len(SEQUENCE_1)+1 # Initiation Matrix Size (Rows)
+    MATRIX_COLUMN_N = len(SEQUENCE_2)+1 # Initiation Matrix Size (Columns)
+    ALN_PATHWAYS = [] # Initiating List of Discovered aln Pathways
     MATRIX = [[[[None] for i in range(2)] for i in range(MATRIX_COLUMN_N)] for i in range(MATRIX_ROW_N)] # Initiating Score Matrix
     for i in range(MATRIX_ROW_N):
         MATRIX[i][0] = [GAP_SCORE*i,[]]
@@ -94,7 +94,7 @@ def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, GAP_SCORE=-1, GAP_CHARAC
             o_val = [h_val, d_val, v_val]
             MATRIX[i][j] = [max(o_val), [i+1 for i,v in enumerate(o_val) if v==max(o_val)]] # h = 1, d = 2, v = 3
     
-    #Matrix Evaulation [end]
+    # Matrix Evaulation [end]
     OVERALL_SCORE = MATRIX[i][j][0]
     score = OVERALL_SCORE
     l_i = i
@@ -102,7 +102,7 @@ def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, GAP_SCORE=-1, GAP_CHARAC
     ALIGNMENTS = []
     tot_aln = find_each_path(i,j,ALN_PATHWAYS,MATRIX)
     aln_count = 0
-    #Compiling alignments based on discovered matrix pathways
+    # Compiling alignments based on discovered matrix pathways
     for elem in ALN_PATHWAYS:
         i = l_i-1
         j = l_j-1

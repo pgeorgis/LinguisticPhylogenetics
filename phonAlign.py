@@ -2,7 +2,7 @@ from math import log, inf
 from nwunschAlign import best_alignment
 from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_word, phone_sim
 
-#WORD-LEVEL PHONETIC COMPARISON AND ALIGNMENT
+# WORD-LEVEL PHONETIC COMPARISON AND ALIGNMENT
 def compatible_segments(seg1, seg2):
     """Returns True if the two segments are either:
         two consonants
@@ -31,7 +31,7 @@ def compatible_segments(seg1, seg2):
                 return False
         else:
             return False
-    #Tonemes
+    # Tonemes
     else: 
         if strip_seg2[0] in tonemes:
             return True
@@ -47,7 +47,7 @@ def align_costs(seq1, seq2,
             seq1_i, seq2_j = seq1[i], seq2[j]
             cost = dist_func(seq1_i, seq2_j, **kwargs)
             
-            #If similarity function, turn into distance and ensure it is negative
+            # If similarity function, turn into distance and ensure it is negative
             if sim:
                 if cost > 0:
                     cost = log(cost)
@@ -73,12 +73,12 @@ def phone_align(word1, word2,
     else:
         segments1, segments2 = word1, word2  
     
-    #Combine base distances from distance function with additional penalties, if specified
+    # Combine base distances from distance function with additional penalties, if specified
     if added_penalty_dict:
         def added_penalty_dist(seq1, seq2, **kwargs):
             added_penalty = added_penalty_dict[seq1][seq2]
             base_dist = dist_func(seq1, seq2, **kwargs)
-            #If similarity function, turn into distance and ensure it is negative
+            # If similarity function, turn into distance and ensure it is negative
             if sim:
                 base_dist = -(1 - base_dist)
             return base_dist + added_penalty
@@ -87,13 +87,13 @@ def phone_align(word1, word2,
                                       dist_func=added_penalty_dist, sim=False, 
                                       **kwargs)
     
-    #Otherwise calculate alignment costs for each segment pair using only the base distance function
+    # Otherwise calculate alignment costs for each segment pair using only the base distance function
     else:
         alignment_costs = align_costs(segments1, segments2, 
                                       dist_func=phone_sim, sim=sim, 
                                       **kwargs)
     
-    #Calculate best alignment using Needleman-Wunsch algorithm
+    # Calculate best alignment using Needleman-Wunsch algorithm
     best = best_alignment(SEQUENCE_1=segments1, SEQUENCE_2=segments2,
                           SCORES_DICT=alignment_costs, GAP_SCORE=gop)
     return best
