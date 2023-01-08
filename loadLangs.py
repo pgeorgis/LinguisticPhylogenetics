@@ -15,7 +15,7 @@ from unidecode import unidecode
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict
 from auxFuncs import entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
-from phonSim.phonSim import verify_charset, strip_diacritics, segment_word, phone_sim
+from phonSim.phonSim import invalid_ch, strip_diacritics, segment_word, phone_sim
 from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 
@@ -528,7 +528,7 @@ class LexicalDataset:
                         form_i = form_i.strip()
                         
                         # Verify that all characters used in transcriptions are recognized
-                        unk_ch = verify_charset(form_i)
+                        unk_ch = invalid_ch(form_i)
                         if len(unk_ch) > 0:
                             unk_ch_s = '< ' + ' '.join(unk_ch) + ' >'
                             raise ValueError(f'Error: Unable to parse characters {unk_ch_s} in {lang} /{form_i}/ "{gloss}"!')
