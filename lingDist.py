@@ -94,8 +94,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                     sims[concept] = 0        
         
         if len(sims) == 0:
-            print(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
-            raise StatisticsError
+            raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
             
         #Save score dictionary
         cognate_sims[(lang1, lang2, clustered_id, eval_func, eval_sim, exclude_synonyms, min_similarity)] = sims

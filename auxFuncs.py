@@ -137,8 +137,7 @@ def surprisal(p):
     try:
         return -log(p, 2)
     except ValueError:
-        print(f'Math Domain Error: cannot take the log of {p}')
-        raise ValueError
+        raise ValueError(f'Math Domain Error: cannot take the log of {p}')
         
 # def adaptation_surprisal(alignment, surprisal_dict, normalize=True):
 #     """Calculates the surprisal of an aligned sequence, given a dictionary of 
@@ -549,8 +548,7 @@ def network_plot(group, labels,
     
     #Raise error for unrecognized methods
     else:
-        print(f'Method {method} is not recognized!')
-        raise ValueError
+        raise ValueError(f'Error: Method {method} is not recognized!')
         
     #Get lists of edges and their distances for color-coding 
     edgeList, colorsList = zip(*nx.get_edge_attributes(gr,'distance').items())
@@ -558,8 +556,7 @@ def network_plot(group, labels,
     #Scale nodes according to specified sizes, if given
     if scale_nodes:
         if node_sizes is None:
-            print('Provide a list of node sizes in order to scale nodes!')
-            raise ValueError
+            raise ValueError('Error: Provide a list of node sizes in order to scale nodes!')
         node_sizes = [node_sizes[node] for node in gr.nodes()]
         nz_node_sizes = [rescale(i, node_sizes, 200, 2000) for i in node_sizes]
     
@@ -762,8 +759,7 @@ def new_network_plot(group, labels,
     
     #Raise error for unrecognized methods
     else:
-        print(f'Method {method} is not recognized!')
-        raise ValueError
+        raise ValueError(f'Error: Method {method} is not recognized!')
         
     #Get lists of edges and their distances for color-coding 
     edgeList, colorsList = zip(*nx.get_edge_attributes(gr,'distance').items())
@@ -771,8 +767,7 @@ def new_network_plot(group, labels,
     #Scale nodes according to specified sizes, if given
     if scale_nodes:
         if node_sizes is None:
-            print('Provide a list of node sizes in order to scale nodes!')
-            raise ValueError
+            raise ValueError('Error: Provide a list of node sizes in order to scale nodes!')
         node_sizes = [node_sizes[node] for node in gr.nodes()]
         nz_node_sizes = [rescale(i, node_sizes, 200, 2000) for i in node_sizes]
     
@@ -1001,8 +996,7 @@ def newer_network_plot(group, labels,
     #Scale nodes according to specified sizes, if given
     if scale_nodes:
         if node_sizes is None:
-            print('Provide a list of node sizes in order to scale nodes!')
-            raise ValueError
+            raise ValueError('Error: Provide a list of node sizes in order to scale nodes!')
         node_sizes = [node_sizes[node] for node in gr.nodes()]
         nz_node_sizes = [rescale(i, node_sizes, 200, 2000) for i in node_sizes]
     

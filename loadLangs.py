@@ -533,8 +533,7 @@ class LexicalDataset:
                         unk_ch = verify_charset(form_i)
                         if len(unk_ch) > 0:
                             unk_ch_s = '< ' + ' '.join(unk_ch) + ' >'
-                            print(f'Unable to parse characters {unk_ch_s} in {lang} /{form_i}/ "{gloss}"!')
-                            raise ValueError
+                            raise ValueError(f'Error: Unable to parse characters {unk_ch_s} in {lang} /{form_i}/ "{gloss}"!')
                         if len(form_i.strip()) > 0:
                             index[gloss][cognate_class].append(f'{lang} /{form_i}/')   
         
@@ -542,9 +541,7 @@ class LexicalDataset:
 
 
     def load_clustered_cognates(self, **kwargs):
-        cwd = os.getcwd()
-        os.chdir(self.cognates_dir)
-        cognate_files = glob.glob('*.cog')
+        cognate_files = glob.glob(f'{self.cognates_dir}/*.cog')
         for cognate_file in cognate_files:
             code = cognate_file.rsplit('.', maxsplit=1)[0]
             self.clustered_cognates[code] = self.load_cognate_index(cognate_file, **kwargs)
@@ -555,8 +552,6 @@ class LexicalDataset:
         else:
             s += ' index.'
         print(s)
-        os.chdir(cwd)
-            
         
                 
     def write_BEASTling_input(self, clustered_cognates, 
@@ -670,8 +665,7 @@ class LexicalDataset:
                 mcc_scores[concept] = mcc
                 
             else:
-                print(f'Error: Method "{method}" not recognized for cluster evaluation!')
-                raise ValueError
+                raise ValueError(f'Error: Method "{method}" not recognized for cluster evaluation!')
         if method == 'bcubed':
             return mean(precision_scores.values()), mean(recall_scores.values()), mean(f1_scores.values())
         elif method == 'mcc':
@@ -745,8 +739,7 @@ class LexicalDataset:
         
         #Raise error for unrecognized cognate clustering methods
         else:
-            print(f'Error: cognate clustering method "{cognates}" not recognized!')
-            raise ValueError
+            raise ValueError(f'Error: cognate clustering method "{cognates}" not recognized!')
         
         languages = [self.languages[lang] for lang in self.languages]
         names = [lang.name for lang in languages]
@@ -989,8 +982,7 @@ class LexicalDataset:
         
         #Raise error for unrecognized cognate clustering methods
         else:
-            print(f'Error: cognate clustering method "{cognates}" not recognized!')
-            raise ValueError
+            raise ValueError(f'Error: cognate clustering method "{cognates}" not recognized!')
         
         #Dendrogram characteristics
         languages = [self.languages[lang] for lang in self.languages]
@@ -1258,8 +1250,7 @@ class Language(LexicalDataset):
         elif field == 'orthography':
             field_index = 0
         else:
-            print(f'Error: search field should be either "transcription" or "orthography"!')
-            raise ValueError
+            raise ValueError('Error: search field must be either "transcription" or "orthography"!')
         
         matches = []
         for concept in self.vocabulary:
