@@ -523,7 +523,7 @@ def LevenshteinDist(word1, word2, normalize=True, asjp=True):
     return LevDist
         
 hybrid_scores = {}
-def hybrid_distance(pair1, pair2, funcs, func_sims, **kwargs):
+def hybrid_dist(pair1, pair2, funcs, func_sims, **kwargs):
     #Try to retrieve previously calculated value if possible
     if (pair1, pair2, tuple(funcs)) in hybrid_scores:
         return hybrid_scores[(pair1, pair2, tuple(funcs))]
@@ -537,13 +537,13 @@ def hybrid_distance(pair1, pair2, funcs, func_sims, **kwargs):
     
     return euclidean_dist(scores)
         
-def hybrid_similarity(pair1, pair2, **kwargs):
-    hybrid_d = hybrid_distance(pair1, pair2, funcs=[word_sim, score_pmi, surprisal_sim], func_sims=[True, False, True])
+def hybrid_sim(pair1, pair2, **kwargs):
+    hybrid_d = hybrid_dist(pair1, pair2, funcs=[word_sim, score_pmi, surprisal_sim], func_sims=[True, False, True])
     hybrid_sim = e**-(hybrid_d)
     return hybrid_sim
 
 def phonetic_surprisal_sim(pair1, pair2, **kwargs):
-    hybrid_d = hybrid_distance(pair1, pair2, funcs=[word_sim, surprisal_sim], func_sims=[True, True])
+    hybrid_d = hybrid_dist(pair1, pair2, funcs=[word_sim, surprisal_sim], func_sims=[True, True])
     hybrid_sim = e**-(hybrid_d)
     return hybrid_sim
     
