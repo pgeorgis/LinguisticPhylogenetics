@@ -269,15 +269,16 @@ class LexicalDataset:
         
         # Designate the default file name to search for if no alternative is provided
         if pmi_file is None:
-            pmi_file = f'{self.directory}{self.name}_phoneme_PMI.csv'
+            pmi_file = os.path.join(self.directory, f'{self.name}_phoneme_PMI.csv')
         
+
         # Try to load the file of saved PMI values
-        try:
-            pmi_data = pd.read_csv(pmi_file)
-            
         # If the file is not found, recalculate the PMI values and save to 
         # a file with the specified name
-        except FileNotFoundError:
+        if os.path.exists(pmi_file):
+            pmi_data = pd.read_csv(pmi_file)
+            
+        else:
             self.calculate_phoneme_pmi(output_file=pmi_file, **kwargs)
             pmi_data = pd.read_csv(pmi_file)
         
@@ -348,15 +349,15 @@ class LexicalDataset:
         
         # Designate the default file name to search for if no alternative is provided
         if surprisal_file is None:
-            surprisal_file = f'{self.directory}{self.name}_phoneme_surprisal_{ngram_size}gram.csv'
+            surprisal_file = os.path.join(self.directory, f'{self.name}_phoneme_surprisal_{ngram_size}gram.csv')
         
         # Try to load the file of saved PMI values
-        try:
-            surprisal_data = pd.read_csv(surprisal_file)
-            
         # If the file is not found, recalculate the surprisal values and save to 
         # a file with the specified name
-        except FileNotFoundError:
+        if os.path.exists(surprisal_file):
+            surprisal_data = pd.read_csv(surprisal_file)
+            
+        else:
             self.calculate_phoneme_surprisal(ngram_size=ngram_size, output_file=surprisal_file)
             surprisal_data = pd.read_csv(surprisal_file)
         
