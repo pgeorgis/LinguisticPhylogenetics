@@ -39,16 +39,6 @@ def keywithminval(d):
     v = list(d.values())
     k = list(d.keys())
     return k[v.index(min(v))]
-
-def create_folder(folder_name, directory=None):
-    """Creates a folder with the specified name, by default in the current
-    working directory (or else in a specified directory)"""
-    cwd = os.getcwd()
-    if directory != None:
-        os.chdir(directory)
-    if not os.path.exists(folder_name):
-        os.makedirs(folder_name)
-    os.chdir(cwd)
     
 def chunk_list(lis, n):
     """Splits a list into sublists of length n; if not evenly divisible by n,

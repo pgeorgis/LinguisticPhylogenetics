@@ -12,7 +12,7 @@ from skbio import DistanceMatrix
 from skbio.tree import nj
 import seaborn as sns
 from unidecode import unidecode
-from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, create_folder, csv2dict
+from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict
 from auxFuncs import entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
 from phonSim.phonSim import verify_charset, strip_diacritics, segment_word, phone_sim
@@ -37,8 +37,11 @@ class LexicalDataset:
         self.directory = self.filepath.rsplit('/', maxsplit=1)[0] + '/'
         
         #Create a folder for plots and detected cognate sets within the dataset's directory
-        create_folder('Plots', self.directory)
-        create_folder('Cognates', self.directory)
+        self.plots_dir = os.path.join(self.directory, 'Plots')
+        self.cognates_dir = os.path.join(self.directory, 'Cognates')
+        for dir in (self.plots_dir, self.cognates_dir):
+            if not os.path.exists(dir):
+                os.makedirs(dir)
         
         #Columns of dataset
         self.id_c = id_c
@@ -427,8 +430,8 @@ class LexicalDataset:
             title = f'{self.name} "{cognate_id}"'
         
         if save_directory == None:
-            save_directory = self.directory + '/Plots/'
-        
+            save_directory = self.plots_dir
+
         draw_dendrogram(group=words,
                         labels=labels,
                         dist_func=dist_func,
@@ -476,7 +479,7 @@ class LexicalDataset:
         for key, value in kwargs.items():
             code += f'_{key}-{value}'
         self.clustered_cognates[code] = clustered_cognates
-        self.write_cognate_index(clustered_cognates, os.path.join(self.directory, 'Cognates', f'{code}.cog'))
+        self.write_cognate_index(clustered_cognates, os.path.join(self.cognates_dir, f'{code}.cog'))
 
         return clustered_cognates
     
@@ -540,7 +543,7 @@ class LexicalDataset:
 
     def load_clustered_cognates(self, **kwargs):
         cwd = os.getcwd()
-        os.chdir(os.path.join(self.directory, 'Cognates'))
+        os.chdir(self.cognates_dir)
         cognate_files = glob.glob('*.cog')
         for cognate_file in cognate_files:
             code = cognate_file.rsplit('.', maxsplit=1)[0]
@@ -809,7 +812,7 @@ class LexicalDataset:
         if title == None:
             title = f'{self.name}'
         if save_directory == None:
-            save_directory = self.directory + 'Plots/'
+            save_directory = self.plots_dir
             
         lm = self.linkage_matrix(dist_func, sim, 
                                  concept_list, 
@@ -921,7 +924,7 @@ class LexicalDataset:
         if title == None:
             title = f'{self.name} plot'
             if save_directory == None:
-                save_directory = os.path.join(self.directory, 'Plots/')
+                save_directory = self.plots_dir
             plt.savefig(f'{os.path.join(save_directory, title)}.png', bbox_inches='tight', dpi=300)
         
         #Show the figure
@@ -995,7 +998,7 @@ class LexicalDataset:
         if title == None:
             title = f'{self.name} network'
         if save_directory == None:
-            save_directory = self.directory + 'Plots/'
+            save_directory = self.plots_dir
         
         return network_function(group=languages, 
                             labels=names, 
@@ -1365,7 +1368,7 @@ class Language(LexicalDataset):
             title = f'Phonetic Inventory of {self.name}'
         
         if save_directory == None:
-            save_directory = self.family.directory + '/Plots/'
+            save_directory = self.plots_dir
             
         phonemes = list(self.phonemes.keys())
         
