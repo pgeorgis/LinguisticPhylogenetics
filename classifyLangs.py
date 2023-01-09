@@ -26,12 +26,23 @@ if __name__ == "__main__":
     # Mapping of function labels and default cutoff values
     function_map = {
         # 'label':(function, sim, cutoff)
-        'pmi':(pmi_dist, False, 0.36),
-        'surprisal':(surprisal_sim, True, 0.74),
+        'pmi':(pmi_dist, False, {}, 0.36),
+        #'surprisal':(lambda x, y: surprisal_sim(x, y, ngram_size=args.ngram), True, 0.74),
+        'surprisal':(surprisal_sim, True, {'ngram_size':args.ngram}, 0.74),
         'phonetic':(word_sim, True, 0.16),
-        'hybrid':(hybrid_sim, True, 0.57),
         'levenshtein':(LevenshteinDist, False, 0.73)
         }
+    function_map['hybrid'] = (lambda x, y: hybrid_sim(
+        x, y, 
+        funcs={
+            pmi_dist:{}, 
+            surprisal_sim:{'ngram_size':args.ngram}, 
+            word_sim:{}
+            },
+        func_sims=[False, True, True]),
+        True,
+        {},
+        0.57) # this cutoff value pertains to ngram_size=1 only, would need to be recalculated for other ngram sizes
     
     # Set cutoff to default for specified function, if not otherwise specified
     if args.cutoff is None:
@@ -62,7 +73,7 @@ if __name__ == "__main__":
         cluster_func=function_map[args.cluster][0],
         cluster_sim=function_map[args.cluster][1],
         cutoff=args.cutoff,
-        eval_func=function_map[args.eval][0], 
+        eval_func=(function_map[args.eval][0], function_map[args.eval][-2]), #function, kwargs
         eval_sim=function_map[args.eval][1],
         cognates=args.cognates, 
         method=args.linkage, # this should be changed to linkage rather than method

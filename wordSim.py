@@ -377,7 +377,7 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, **kwargs):
                                         surprisal_dict=lang2.phoneme_surprisal[(lang1, ngram_size)],
                                         ngram_size=ngram_size,
                                         normalize=False)
-        
+
         # Calculate self-surprisal values in each direction
         self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False) 
         self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False) 
@@ -523,27 +523,37 @@ def LevenshteinDist(word1, word2, normalize=True, asjp=True):
     return LevDist
         
 hybrid_scores = {}
-def hybrid_dist(pair1, pair2, funcs, func_sims, **kwargs):
+def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims)->float:
+    """Uses the euclidean distance to calculate the hybrid distance of multiple distance or similarity functions
+
+    Args:
+        pair1 (tuple): (word, Language) pair
+        pair2 (tuple): (word, Language) pair
+        funcs (dict): dictionary of functions with their kwargs {function:{arg:val}}
+        func_sims (iterable): list of Boolean values representing whether each function is a similarity function
+
+    Returns:
+        float: hybrid similarity measure
+    """
     # Try to retrieve previously calculated value if possible
-    if (pair1, pair2, tuple(funcs)) in hybrid_scores:
-        return hybrid_scores[(pair1, pair2, tuple(funcs))]
+    if (pair1, pair2, tuple(funcs.keys())) in hybrid_scores:
+        return hybrid_scores[(pair1, pair2, tuple(funcs.keys()))]
     
     scores = []
     for func, func_sim in zip(funcs, func_sims):
+        kwargs = funcs[func]
         score = func(pair1, pair2, **kwargs)
         if func_sim:
             score = 1 - score
         scores.append(score)
     
-    return euclidean_dist(scores)
+    score = euclidean_dist(scores)
+    hybrid_scores[(pair1, pair2, tuple(funcs.keys()))] = score
+    
+    return score
         
-def hybrid_sim(pair1, pair2, **kwargs):
-    hybrid_d = hybrid_dist(pair1, pair2, funcs=[word_sim, pmi_dist, surprisal_sim], func_sims=[True, False, True])
-    hybrid_sim = e**-(hybrid_d)
-    return hybrid_sim
-
-def phonetic_surprisal_sim(pair1, pair2, **kwargs):
-    hybrid_d = hybrid_dist(pair1, pair2, funcs=[word_sim, surprisal_sim], func_sims=[True, True])
+def hybrid_sim(pair1, pair2, funcs, func_sims, **kwargs):
+    hybrid_d = hybrid_dist(pair1, pair2, funcs=funcs, func_sims=func_sims)
     hybrid_sim = e**-(hybrid_d)
     return hybrid_sim
     

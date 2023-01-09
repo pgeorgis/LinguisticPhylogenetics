@@ -304,7 +304,8 @@ class PhonemeCorrDetector:
         return results
 
     
-    def noncognate_thresholds(self, eval_func, seed=1, save=True, **kwargs):
+    def noncognate_thresholds(self, eval_func, seed=1, save=True):
+        #eval func is tuple (function, {kwarg:value})
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
         
         random.seed(seed)
@@ -313,10 +314,10 @@ class PhonemeCorrDetector:
         sample_size = len(self.same_meaning)
         diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
         noncognate_word_forms = [((item[0][2], self.lang1), (item[1][2], self.lang2)) for item in diff_sample]
-        noncognate_scores = [eval_func(pair[0], pair[1], **kwargs) for pair in noncognate_word_forms]
+        noncognate_scores = [eval_func[0](pair[0], pair[1], **eval_func[1]) for pair in noncognate_word_forms]
         
         if save:
-            self.lang1.noncognate_thresholds[(self.lang2, eval_func)] = noncognate_scores
+            self.lang1.noncognate_thresholds[(self.lang2, (eval_func[0], tuple(eval_func[1].items())))] = noncognate_scores
         
         return noncognate_scores
         

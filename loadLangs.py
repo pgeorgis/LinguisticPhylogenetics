@@ -671,6 +671,7 @@ class LexicalDataset:
             return mean(mcc_scores.values())
     
     def distance_matrix(self, dist_func, sim, 
+                        eval_func, eval_sim, 
                         concept_list=None,
                         cluster_func=None, cluster_sim=None, cutoff=None, 
                         cognates='auto',
@@ -746,6 +747,7 @@ class LexicalDataset:
         # Compute distance matrix
         dm = distance_matrix(group=languages, labels=names, 
                              dist_func=dist_func, sim=sim,
+                             eval_func=eval_func, eval_sim=eval_sim,
                              clustered_cognates=clustered_concepts,
                              **kwargs)
         
@@ -755,7 +757,8 @@ class LexicalDataset:
         return dm
     
     
-    def linkage_matrix(self, dist_func, sim, 
+    def linkage_matrix(self, dist_func, sim,
+                       eval_func, eval_sim,
                        concept_list=None, 
                        cluster_func=None, cluster_sim=None, cutoff=None, 
                        cognates='auto',
@@ -767,7 +770,8 @@ class LexicalDataset:
             raise ValueError(f'Error: Unrecognized linkage type "{method}". Accepted values are: "average", "complete", "single", "weighted", "ward", "nj"')
 
         # Create distance matrix
-        dm = self.distance_matrix(dist_func, sim, 
+        dm = self.distance_matrix(dist_func, sim,
+                                eval_func, eval_sim, 
                                 concept_list, 
                                 cluster_func, cluster_sim, cutoff, 
                                 cognates, 
@@ -790,7 +794,9 @@ class LexicalDataset:
     
     
     def draw_tree(self, 
-                  dist_func, sim, concept_list=None,                  
+                  dist_func, sim, 
+                  eval_func, eval_sim,
+                  concept_list=None,            
                   cluster_func=None, cluster_sim=None, cutoff=None,
                   cognates='auto', 
                   method='ward', metric='euclidean',
@@ -805,8 +811,9 @@ class LexicalDataset:
             title = f'{self.name}'
         if save_directory is None:
             save_directory = self.plots_dir
-            
-        lm = self.linkage_matrix(dist_func, sim, 
+
+        lm = self.linkage_matrix(dist_func, sim,
+                                 eval_func, eval_sim, 
                                  concept_list, 
                                  cluster_func, cluster_sim, cutoff, 
                                  cognates, method, metric, 
