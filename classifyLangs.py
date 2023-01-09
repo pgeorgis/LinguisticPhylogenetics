@@ -27,10 +27,9 @@ if __name__ == "__main__":
     function_map = {
         # 'label':(function, sim, cutoff)
         'pmi':(pmi_dist, False, {}, 0.36),
-        #'surprisal':(lambda x, y: surprisal_sim(x, y, ngram_size=args.ngram), True, 0.74),
         'surprisal':(surprisal_sim, True, {'ngram_size':args.ngram}, 0.74),
-        'phonetic':(word_sim, True, 0.16),
-        'levenshtein':(LevenshteinDist, False, 0.73)
+        'phonetic':(word_sim, True, {}, 0.16),
+        'levenshtein':(LevenshteinDist, False, {}, 0.73)
         }
     function_map['hybrid'] = (lambda x, y: hybrid_sim(
         x, y, 
@@ -39,7 +38,11 @@ if __name__ == "__main__":
             surprisal_sim:{'ngram_size':args.ngram}, 
             word_sim:{}
             },
-        func_sims=[False, True, True]),
+        func_sims=[
+            False, 
+            True, 
+            True
+            ]),
         True,
         {},
         0.57) # this cutoff value pertains to ngram_size=1 only, would need to be recalculated for other ngram sizes
