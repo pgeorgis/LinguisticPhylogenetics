@@ -1,6 +1,6 @@
 from collections import defaultdict
 from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import phone_align, compatible_segments
+from phonAlign import phone_align, compatible_segments, prosodic_env_alignment
 from phonSim.phonSim import prosodic_environment_weight
 from statistics import mean, stdev
 import random
@@ -87,19 +87,13 @@ class PhonemeCorrDetector:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
         return corr_counts
 
+
     def prosodic_env_corr_probs(self, alignment_list, counts=False):
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
-            word1_aligned, word2_aligned = tuple(zip(*alignment))
-            segs1 = [pair[0] for pair in word1_aligned if pair[0] != '-']
-            gap_count = 0
-            for i in range(len(word1_aligned)):
-                if word1_aligned[i] == '-':
-                    gap_count += 1
-                else:
-                    seg1_index = i - gap_count
-                    weight = prosodic_environment_weight(segs1, seg1_index)
-                    corr_counts[(word1_aligned[i], weight)][word2_aligned[i]] += 1
+            pros_env_align = prosodic_env_alignment(alignment)
+            for seg_weight1, seg2 in pros_env_align:
+                corr_counts[seg_weight1][seg2] += 1
         if not counts:
             for seg1 in corr_counts:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
@@ -453,6 +447,7 @@ class PhonemeCorrDetector:
                                                                                                exclude_null=False, 
                                                                                                ngram_size=ngram_size), 
                                                                      ngram_size=ngram_size)
+                                                                     
             # Retrieve the alignments of different-meaning and disqualified word pairs
             # and calculate adaptation surprisal for them using new surprisal values
             noncognate_alignments = diff_meaning_alignments + [same_meaning_alignments[i]

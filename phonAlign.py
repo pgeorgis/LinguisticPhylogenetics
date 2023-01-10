@@ -1,6 +1,6 @@
 from math import log, inf
 from nwunschAlign import best_alignment
-from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_ipa, phone_sim
+from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_ipa, phone_sim, prosodic_environment_weight
 
 # WORD-LEVEL PHONETIC COMPARISON AND ALIGNMENT
 def compatible_segments(seg1, seg2):
@@ -132,3 +132,36 @@ def reverse_alignment(alignment):
     for pair in alignment:
         reverse.append((pair[1], pair[0]))
     return reverse
+
+
+def prosodic_env_alignment(alignment, word2=False):
+    """Adds the prosodic environment weight of segments to an alignment
+    e.g. prosodic_env_alignment([('d', 'ʒ'), ('i', 'u'), ('ə', 'r'), ('-', 'n')])
+    = [(('d', 7), 'ʒ'), (('i', 3), 'u'), (('ə', 1), 'r'), ('-', 'n')]
+    """
+    word1_aligned, word2_aligned = tuple(zip(*alignment))
+    word1_aligned = list(word1_aligned)
+    segs1 = tuple([pair[0] for pair in word1_aligned if pair[0] != '-'])
+    if word2:
+        segs2 = tuple([pair[0] for pair in word2_aligned if pair[0] != '-'])
+    gap_count1, gap_count2 = 0, 0
+
+    def add_prosodic_weight(word_aligned, segs, i, gap_count):
+        if word_aligned[i] == '-':
+            gap_count += 1
+        
+        else:
+            seg_index = i - gap_count
+            prosodic_weight = prosodic_environment_weight(segs, seg_index)
+            word_aligned[i] = word_aligned[i], prosodic_weight
+        
+        return word1_aligned, gap_count
+
+    for i in range(len(word1_aligned)):
+        word1_aligned, gap_count1 = add_prosodic_weight(word1_aligned, segs1, i, gap_count1)
+        
+        # Do the same for word2 (not done by default)
+        if word2:
+            word2_aligned, gap_count2 = add_prosodic_weight(word2_aligned, segs2, i, gap_count2)
+    
+    return zip(word1_aligned, word2_aligned)
