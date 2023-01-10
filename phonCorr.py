@@ -1,6 +1,7 @@
 from collections import defaultdict
 from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
 from phonAlign import phone_align, compatible_segments
+from phonSim.phonSim import prosodic_environment_weight
 from statistics import mean, stdev
 import random
 from itertools import product
@@ -85,7 +86,26 @@ class PhonemeCorrDetector:
             for seg1 in corr_counts:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
         return corr_counts
-    
+
+    def prosodic_env_corr_probs(self, alignment_list, counts=False):
+        corr_counts = defaultdict(lambda:defaultdict(lambda:0))
+        for alignment in alignment_list:
+            word1_aligned, word2_aligned = tuple(zip(*alignment))
+            segs1 = [pair[0] for pair in word1_aligned if pair[0] != '-']
+            gap_count = 0
+            for i in range(len(word1_aligned)):
+                if word1_aligned[i] == '-':
+                    gap_count += 1
+                else:
+                    seg1_index = i - gap_count
+                    weight = prosodic_environment_weight(segs1, seg1_index)
+                    corr_counts[(word1_aligned[i], weight)][word2_aligned[i]] += 1
+        if not counts:
+            for seg1 in corr_counts:
+                corr_counts[seg1] = normalize_dict(corr_counts[seg1])
+        
+        return corr_counts
+                          
     
     def radial_counts(self, wordlist, radius=2, normalize=True):
         """Checks the number of times that phones occur within a specified 

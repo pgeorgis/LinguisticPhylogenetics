@@ -230,6 +230,7 @@ def word_sim(word1, word2=None,
                     if double:
                         penalty /= penalty_discount
                 
+                # TODO: is this right?
                 if prosodic_env_scaling:
                     # Discount deletion penalty according to prosodic sonority 
                     # environment (based on List, 2012)
