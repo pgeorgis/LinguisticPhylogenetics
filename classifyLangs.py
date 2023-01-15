@@ -17,6 +17,7 @@ if __name__ == "__main__":
     parser.add_argument('--ngram', default=1, type=int, help='Phoneme ngram size used for phoneme surprisal calculation')
     parser.add_argument('--no_calibration', dest='calibrate', action='store_false', help='Does not use cumulative density function calibration')
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
+    parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
     parser.set_defaults(
         calibrate=True,
         newick=False,
@@ -52,7 +53,7 @@ if __name__ == "__main__":
         args.cutoff = function_map[args.cluster][-1]
 
     # Load CLDF dataset
-    family = load_family(args.family, args.file)
+    family = load_family(args.family, args.file, exclude=args.exclude)
 
     # Load or calculate phoneme PMI
     print(f'Loading {family.name} phoneme PMI...')
