@@ -780,7 +780,7 @@ class LexicalDataset:
 
         # Neighbor Joining linkage
         if method == 'nj':
-            languages = list(self.languages.values()) 
+            languages = self.languages.values()
             names = [lang.name for lang in languages]
             lang_names = [re.sub('\(', '{', l) for l in names]
             lang_names = [re.sub('\)', '}', l) for l in lang_names]
@@ -1012,7 +1012,7 @@ class LexicalDataset:
     def examine_cognates(self, language_list=None, concepts=None, cognate_sets=None,
                          min_langs=2):
         if language_list is None:
-            language_list = list(self.languages.values())
+            language_list = self.languages.values()
         else:
             language_list = [self.languages[l] for l in language_list]
         
@@ -1414,9 +1414,11 @@ def combine_datasets(dataset_list):
     pass
 
 
-def load_family(family, data_file, min_amc=None, concept_list=None):
+def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None):
     print(f'Loading {family}...')
     family = LexicalDataset(data_file, family)
+    if exclude:
+        family.remove_languages(exclude)
     if min_amc:
         # min_amc default: 0.75
         family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
