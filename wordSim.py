@@ -343,8 +343,8 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, **kwargs):
         word1, lang1 = pair1
         word2, lang2 = pair2
         
-        # Remove suprasegmental diacritics
-        diacritics_to_remove = list(suprasegmental_diacritics) + ['̩', '̍', ' ']
+        # Remove suprasegmental and other ignored characters
+        diacritics_to_remove = lang1.ch_to_remove.union(lang2.ch_to_remove)
         word1 = strip_ch(word1, diacritics_to_remove)
         word2 = strip_ch(word2, diacritics_to_remove)
         
