@@ -30,7 +30,8 @@ class LexicalDataset:
                  cognate_c = 'Cognate_ID',
                  loan_c = 'Loan',
                  glottocode_c='Glottocode',
-                 iso_code_c='ISO 639-3'):
+                 iso_code_c='ISO 639-3',
+                 ignore_stress=False):
 
         # Directory to dataset 
         self.filepath = filepath
@@ -63,6 +64,11 @@ class LexicalDataset:
         self.iso_codes = {}
         self.distance_matrices = {}
         
+        # Transcription parameters
+        self.ch_to_remove = suprasegmental_diacritics.union({' '})
+        if not ignore_stress:
+            self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
+            
         # Concepts in dataset
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
         self.cognate_sets = defaultdict(lambda:defaultdict(lambda:[]))
@@ -70,6 +76,7 @@ class LexicalDataset:
         self.load_data(self.filepath)
         self.load_cognate_sets()
         self.mutual_coverage = self.calculate_mutual_coverage()
+
         
         
     def load_data(self, filepath, doculects=None, sep='\t'):
@@ -387,7 +394,7 @@ class LexicalDataset:
             concept = cognate_set.split('_')[0]
             forms = []
             for lang1 in self.cognate_sets[cognate_set]:
-                forms.extend([strip_ch(w, ['(', ')']+ch_to_remove) for w in self.cognate_sets[cognate_set][lang1]])
+                forms.extend([strip_ch(w, ch_to_remove.union({'(', ')'})) for w in self.cognate_sets[cognate_set][lang1]])
             lf = len(forms)
             if lf > 1:
                 # diversity_scores[cognate_set] = len(set(forms)) / lf
@@ -617,7 +624,7 @@ class LexicalDataset:
         cognate clustering against dataset's gold cognate classes"""
         
         precision_scores, recall_scores, f1_scores, mcc_scores = {}, {}, {}, {}
-        ch_to_remove = list(suprasegmental_diacritics) + ['̩', '̍', ' ', '(', ')']
+        ch_to_remove = self.ch_to_remove.union({'(', ')'})
         for concept in clustered_cognates:
             clusters = {'/'.join([strip_diacritics(unidecode.unidecode(item.split('/')[0])), 
                                   strip_ch(item.split('/')[1], ch_to_remove)])+'/':set([i]) for i in clustered_cognates[concept] 
@@ -684,7 +691,7 @@ class LexicalDataset:
             # if type(value) == function:
             #    value = value.__name__
             code += f'_{key}-{value}'
-        # doesn't yet account for concept_list ID
+        # TODO : doesn't yet account for concept_list ID; others may also not be working 
         
         if code in self.distance_matrices:
             return self.distance_matrices[code]
@@ -1105,7 +1112,7 @@ class Language(LexicalDataset):
                  lang_id=None, glottocode=None, iso_code=None, family=None,
                  segments_c='Segments', ipa_c='Form', 
                  orthography_c='Value', concept_c='Parameter_ID',
-                 loan_c='Loan', id_c='ID'):
+                 loan_c='Loan', id_c='ID', ignore_stress=False):
         
         # Attributes for parsing data dictionary (could this be inherited via a subclass?)
         self.id_c = id_c
@@ -1142,6 +1149,13 @@ class Language(LexicalDataset):
         self.vocabulary = defaultdict(lambda:[])
         self.loanwords = defaultdict(lambda:[])
         
+        # Transcription parameters
+        if self.family:
+            self.ch_to_remove = self.family.ch_to_remove
+        else:
+            self.ch_to_remove = suprasegmental_diacritics.union({' ', '‿'})
+            if ignore_stress:
+                self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
         
         self.create_vocabulary()
         self.create_phoneme_inventory()
@@ -1158,15 +1172,14 @@ class Language(LexicalDataset):
         self.noncognate_thresholds = defaultdict(lambda:[])
         
     def create_vocabulary(self):
-        # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces
-        diacritics_to_remove = ''.join(suprasegmental_diacritics.union({'̩', '̍', ' '}))
         
         for i in self.data:
             entry = self.data[i]
             concept = entry[self.concept_c]
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
-            segments = segment_ipa(ipa, remove_ch=diacritics_to_remove)
+            # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
+            segments = segment_ipa(ipa, remove_ch=''.join(self.ch_to_remove))
             if len(segments) > 0:
                 if [orthography, ipa, segments] not in self.vocabulary[concept]:
                     self.vocabulary[concept].append([orthography, ipa, segments])
@@ -1313,6 +1326,7 @@ class Language(LexicalDataset):
             gappy_counts += self.gappy_trigrams[(padded[i-2], padded[i-1], 'X')]
             gappy_counts += self.gappy_trigrams[(padded[i-1], 'X', padded[i+1])]
             gappy_counts += self.gappy_trigrams[('X', padded[i+1], padded[i+2])]
+            # TODO : needs smoothing
             info_content[i-2] = (padded[i], -log(trigram_counts/gappy_counts, 2))
         self.info_contents[''.join(padded[2:-2])] = info_content
         return info_content
