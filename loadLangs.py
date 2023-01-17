@@ -1428,9 +1428,9 @@ def combine_datasets(dataset_list):
     pass
 
 
-def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None):
+def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None, ignore_stress=False):
     print(f'Loading {family}...')
-    family = LexicalDataset(data_file, family)
+    family = LexicalDataset(data_file, family, ignore_stress=ignore_stress)
     if exclude:
         family.remove_languages(exclude)
     if min_amc:
