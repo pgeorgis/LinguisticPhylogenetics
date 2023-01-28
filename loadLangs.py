@@ -38,9 +38,10 @@ class LexicalDataset:
         self.directory = self.filepath.rsplit('/', maxsplit=1)[0] + '/'
         
         # Create a folder for plots and detected cognate sets within the dataset's directory
-        self.plots_dir = os.path.join(self.directory, 'Plots')
-        self.cognates_dir = os.path.join(self.directory, 'Cognates')
-        for dir in (self.plots_dir, self.cognates_dir):
+        self.plots_dir = os.path.join(self.directory, 'plots')
+        self.cognates_dir = os.path.join(self.directory, 'cognates')
+        self.phone_corr_dir = os.path.join(self.directory, 'phone_corr')
+        for dir in (self.plots_dir, self.cognates_dir, self.phone_corr_dir):
             if not os.path.exists(dir):
                 os.makedirs(dir)
         
@@ -232,7 +233,7 @@ class LexicalDataset:
         
         # Specify output file name if none is specified
         if output_file is None:
-            output_file = f'{self.directory}{self.name}_phoneme_PMI.csv'
+            output_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
         
         l = list(self.languages.values())
         
@@ -276,7 +277,7 @@ class LexicalDataset:
         
         # Designate the default file name to search for if no alternative is provided
         if pmi_file is None:
-            pmi_file = os.path.join(self.directory, f'{self.name}_phoneme_PMI.csv')
+            pmi_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
         
 
         # Try to load the file of saved PMI values
@@ -315,7 +316,7 @@ class LexicalDataset:
         
         # Specify output file name if none is specified
         if output_file is None:
-            output_file = f'{self.directory}{self.name}_phoneme_surprisal_{ngram_size}gram.csv'
+            output_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_surprisal_{ngram_size}gram.csv')
         
         # Check whether phoneme surprisal has been calculated already for this pair
         for lang1 in self.languages.values():
@@ -356,7 +357,7 @@ class LexicalDataset:
         
         # Designate the default file name to search for if no alternative is provided
         if surprisal_file is None:
-            surprisal_file = os.path.join(self.directory, f'{self.name}_phoneme_surprisal_{ngram_size}gram.csv')
+            surprisal_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_surprisal_{ngram_size}gram.csv')
         
         # Try to load the file of saved PMI values
         # If the file is not found, recalculate the surprisal values and save to 
