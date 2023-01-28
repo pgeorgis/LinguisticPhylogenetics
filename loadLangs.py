@@ -12,8 +12,8 @@ from skbio import DistanceMatrix
 from skbio.tree import nj
 import seaborn as sns
 from unidecode import unidecode
-from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict
-from auxFuncs import entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
+from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
+from auxFuncs import surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
 from phonSim.phonSim import invalid_ch, strip_diacritics, segment_ipa, phone_sim
 from phonCorr import PhonemeCorrDetector
@@ -351,6 +351,32 @@ class LexicalDataset:
                             if phoneme_surprisal[seg1][seg2] != oov_smoothed:
                                 f.write(f'{lang1.name},{" ".join(seg1)},{lang2.name},{seg2},{phoneme_surprisal[seg1][seg2]},{oov_smoothed}\n')
 
+        # Write a report on the most likely phoneme correspondences per language pair (TODO : create a cross-linguistic chart automatically)
+        self.write_phoneme_corr_report(ngram_size=ngram_size, n=2)
+
+    def write_phoneme_corr_report(self, langs=None, ngram_size=1, n=2):
+        if langs is None:
+            langs = self.languages.values()
+
+        with open(os.path.join(self.phone_corr_dir, f'phoneme_correspondences_{ngram_size}gram.tsv'), 'w') as f:
+            header = '\t'.join(['l1', 'phone_l1', 'l2', 'phone_l2', 'surprisal'])
+            f.write(f'{header}\n')
+            for lang1, lang2 in product(langs, langs):
+                if lang1 != lang2:
+                    threshold = surprisal(1/len(lang2.phonemes))
+                    for p1 in sorted(list(lang1.phoneme_surprisal[(lang2, ngram_size)])):#lang1.phonemes:
+                        if p1 == ('-',):
+                            continue
+                        p2_candidates = lang1.phoneme_surprisal[(lang2, ngram_size)][p1]
+                        if len(p2_candidates) > 0:
+                            p2_candidates = dict_tuplelist(p2_candidates)[-n:]
+                            p2_candidates.reverse()
+                            for p2, sur in p2_candidates:
+                                if sur >= threshold:
+                                    break
+                                line = '\t'.join([lang1.name, str(p1), lang2.name, str(p2), str(round(sur, 3))])
+                                f.write(f'{line}\n')
+                        
     
     def load_phoneme_surprisal(self, ngram_size=1, surprisal_file=None, excepted=[]):
         """Loads pre-calculated phoneme surprisal values from file"""
