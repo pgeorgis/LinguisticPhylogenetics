@@ -15,7 +15,7 @@ from unidecode import unidecode
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
 from auxFuncs import surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
-from phonSim.phonSim import invalid_ch, strip_diacritics, segment_ipa, phone_sim
+from phonSim.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim
 from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 
@@ -563,6 +563,7 @@ class LexicalDataset:
                         form_i = form_i.strip()
                         
                         # Verify that all characters used in transcriptions are recognized
+                        form_i = normalize_ipa_ch(form_i)
                         unk_ch = invalid_ch(form_i)
                         if len(unk_ch) > 0:
                             unk_ch_s = '< ' + ' '.join(unk_ch) + ' >'
