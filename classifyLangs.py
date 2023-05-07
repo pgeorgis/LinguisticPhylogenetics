@@ -19,6 +19,7 @@ if __name__ == "__main__":
     parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
+    parser.add_argument('--min_amc', default=None, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.set_defaults(
         ignore_stress=False,
         calibrate=True,
@@ -55,7 +56,14 @@ if __name__ == "__main__":
         args.cutoff = function_map[args.cluster][-1]
 
     # Load CLDF dataset
-    family = load_family(args.family, args.file, exclude=args.exclude, ignore_stress=args.ignore_stress)
+    if args.min_amc:
+        args.min_amc = float(args.min_amc)
+    family = load_family(args.family, 
+                         args.file, 
+                         exclude=args.exclude, 
+                         min_amc=args.min_amc,
+                         ignore_stress=args.ignore_stress
+                         )
 
     # Load or calculate phoneme PMI
     print(f'Loading {family.name} phoneme PMI...')
