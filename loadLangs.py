@@ -1072,10 +1072,13 @@ class LexicalDataset:
         """Removes a list of languages from a dataset"""
         
         for lang in langs_to_delete:
-            del self.languages[lang]
-            del self.lang_ids[lang]
-            del self.glottocodes[lang]
-            del self.iso_codes[lang]
+            try:
+                del self.languages[lang]
+                del self.lang_ids[lang]
+                del self.glottocodes[lang]
+                del self.iso_codes[lang]
+            except KeyError:
+                pass
         
             for concept in self.concepts:
                 try:
@@ -1199,7 +1202,7 @@ class Language(LexicalDataset):
         self.detected_noncognates = defaultdict(lambda:[])
         self.noncognate_thresholds = defaultdict(lambda:[])
         
-    def create_vocabulary(self):
+    def create_vocabulary(self, **kwargs):
         
         for i in self.data:
             entry = self.data[i]
@@ -1207,7 +1210,8 @@ class Language(LexicalDataset):
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
             # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
-            segments = segment_ipa(ipa, remove_ch=''.join(self.ch_to_remove))
+            segments = segment_ipa(ipa, remove_ch=''.join(self.ch_to_remove), **kwargs)
+            #segments = entry[self.segments_c]
             if len(segments) > 0:
                 if [orthography, ipa, segments] not in self.vocabulary[concept]:
                     self.vocabulary[concept].append([orthography, ipa, segments])
@@ -1288,22 +1292,22 @@ class Language(LexicalDataset):
         
     
     def lookup(self, segment, 
-               field='transcription',
+               field='segments',
                return_list=False):
         """Prints or returns a list of all word entries containing a given 
         segment/character or regular expression"""
-        if field == 'transcription':
-            field_index = 1
-        elif field == 'orthography':
-            field_index = 0
-        else:
-            raise ValueError('Error: search field must be either "transcription" or "orthography"!')
+        if field not in ('transcription', 'segments', 'orthography'):
+            raise ValueError('Error: search field must be either "transcription", "segments", "orthography"!')
         
         matches = []
         for concept in self.vocabulary:
             for entry in self.vocabulary[concept]:
                 orthography, transcription, segments = entry
-                if re.search(segment, entry[field_index]):
+                if field == 'transcription' and re.search(segment, transcription):
+                    matches.append((concept, orthography, transcription))
+                elif field == 'segments' and segment in segments:
+                    matches.append((concept, orthography, transcription))
+                elif field == 'orthography' and re.search(segment, orthography):
                     matches.append((concept, orthography, transcription))
         
         if return_list:
