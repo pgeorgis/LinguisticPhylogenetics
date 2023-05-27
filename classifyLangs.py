@@ -19,7 +19,7 @@ if __name__ == "__main__":
     parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
-    parser.add_argument('--min_amc', default=None, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
+    parser.add_argument('--min_amc', default=0.6, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.set_defaults(
         ignore_stress=False,
         calibrate=True,
@@ -96,6 +96,21 @@ if __name__ == "__main__":
         title=family.name, 
         save_directory=os.path.join(family.directory, 'Plots'),
         return_newick=args.newick)
+    
+    # family.plot_languages(
+    #     dist_func=cognate_sim, # other options?
+    #     sim=True, # cognate_sim
+    #     cluster_func=function_map[args.cluster][0],
+    #     cluster_sim=function_map[args.cluster][1],
+    #     cutoff=args.cutoff,
+    #     concept_list=None,
+    #     eval_func=(function_map[args.eval][0], function_map[args.eval][-2]), #function, kwargs
+    #     eval_sim=function_map[args.eval][1],
+    #     cognates=args.cognates)            
+    #     # dimensions=2, top_connections=0.3, max_dist=1, alpha_func=None,
+    #     # plotsize=None, invert_xaxis=False, invert_yaxis=False,
+    #     # title=None, save_directory=None
+    #     # **kwargs)
     
     if tree:
         print(tree)
