@@ -12,6 +12,7 @@ from skbio import DistanceMatrix
 from skbio.tree import nj
 import seaborn as sns
 from unidecode import unidecode
+import numpy as np
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
 from auxFuncs import surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
