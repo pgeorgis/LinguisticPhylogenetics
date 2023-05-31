@@ -42,9 +42,14 @@ class LexicalDataset:
         self.plots_dir = os.path.join(self.directory, 'plots')
         self.cognates_dir = os.path.join(self.directory, 'cognates')
         self.phone_corr_dir = os.path.join(self.directory, 'phone_corr')
-        for dir in (self.plots_dir, self.cognates_dir, self.phone_corr_dir):
-            if not os.path.exists(dir):
-                os.makedirs(dir)
+        self.dist_matrix_dir = os.path.join(self.directory, 'dist_matrices')
+        for dir in (
+            self.plots_dir, 
+            self.cognates_dir, 
+            self.phone_corr_dir, 
+            self.dist_matrix_dir
+        ):
+            os.makedirs(dir, exist_ok=True)
         
         # Columns of dataset
         self.id_c = id_c
@@ -711,6 +716,7 @@ class LexicalDataset:
                         concept_list=None,
                         cluster_func=None, cluster_sim=None, cutoff=None, 
                         cognates='auto',
+                        outfile=None,
                         **kwargs):
         
         # Try to skip re-calculation of distance matrix by retrieving
@@ -789,7 +795,12 @@ class LexicalDataset:
         
         # Store computed distance matrix
         self.distance_matrices[code] = dm
-        
+
+        # Write distance matrix file
+        if outfile is None:
+            outfile = os.path.join(self.dist_matrix_dir, f'{code}.tsv')
+        self.write_distance_matrix(dm, outfile)
+
         return dm
     
     
@@ -828,6 +839,28 @@ class LexicalDataset:
             lm = linkage(dists, method, metric)
             return lm    
     
+    def write_distance_matrix(self, dist_matrix, outfile, ordered_labels=None, float_format="%.5f"):
+        """Writes numpy distance matrix object to a TSV with decimals rounded to 5 places by default"""
+    
+        languages = [self.languages[lang] for lang in self.languages]
+        names = [lang.name for lang in languages]
+
+        # np.savetxt(outfile, dist_matrix, delimiter='\t', fmt=fmt)
+
+        # Create a DataFrame using the distance matrix and labels
+        df = pd.DataFrame(dist_matrix, index=names, columns=names)
+    
+        # Reorder the columns and rows based on the ordered list of labels
+        if ordered_labels:
+            ordered_labels = [label for label in ordered_labels if label in names]
+            if len(ordered_labels) == df.shape[0]: # only if the dimensions match
+                df = df.reindex(index=ordered_labels, columns=ordered_labels)
+                names = ordered_labels
+
+        # Add an empty column and row for the labels
+        df.insert(0, "Labels", names)
+        df.insert(0, " ", [" "] * len(names))
+        df.to_csv(outfile, sep='\t', index=False, float_format=float_format)
     
     def draw_tree(self, 
                   dist_func, sim, 
