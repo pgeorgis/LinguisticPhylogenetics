@@ -28,28 +28,28 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Mapping of function labels and default cutoff values
+    def hybridSim(x, y):
+
+        return hybrid_sim(
+            x, y, 
+            funcs={
+                pmi_dist:{}, 
+                surprisal_sim:{'ngram_size':args.ngram}, 
+                word_sim:{}
+            },
+            func_sims=[
+                False, 
+                True, 
+                True
+            ])
     function_map = {
         # 'label':(function, sim, cutoff)
         'pmi':(pmi_dist, False, {}, 0.36),
         'surprisal':(surprisal_sim, True, {'ngram_size':args.ngram}, 0.74),
         'phonetic':(word_sim, True, {}, 0.16),
-        'levenshtein':(LevenshteinDist, False, {}, 0.73)
+        'levenshtein':(LevenshteinDist, False, {}, 0.73),
+        'hybrid':(hybridSim, True, {}, 0.57), # TODO this cutoff value pertains to ngram_size=1 only, would need to be recalculated for other ngram sizes
         }
-    function_map['hybrid'] = (lambda x, y: hybrid_sim(
-        x, y, 
-        funcs={
-            pmi_dist:{}, 
-            surprisal_sim:{'ngram_size':args.ngram}, 
-            word_sim:{}
-            },
-        func_sims=[
-            False, 
-            True, 
-            True
-            ]),
-        True,
-        {},
-        0.57) # this cutoff value pertains to ngram_size=1 only, would need to be recalculated for other ngram sizes
     
     # Set cutoff to default for specified function, if not otherwise specified
     if args.cutoff is None:
