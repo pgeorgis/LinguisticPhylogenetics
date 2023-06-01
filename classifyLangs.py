@@ -34,12 +34,12 @@ if __name__ == "__main__":
             x, y, 
             funcs={
                 pmi_dist:{}, 
-                surprisal_sim:{'ngram_size':args.ngram}, 
+                #surprisal_sim:{'ngram_size':args.ngram},  # TODO temporarily excluding surprisal, results on Germanic are better
                 word_sim:{}
             },
             func_sims=[
                 False, 
-                True, 
+                #True, # TODO temporarily excluding surprisal, results on Germanic are better
                 True
             ])
     function_map = {
