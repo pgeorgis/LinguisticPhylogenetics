@@ -1,5 +1,5 @@
 import argparse, os
-from loadLangs import load_family
+from phyloLing import load_family
 from lingDist import cognate_sim
 from wordSim import pmi_dist, surprisal_sim, word_sim, hybrid_sim, LevenshteinDist
 import logging
