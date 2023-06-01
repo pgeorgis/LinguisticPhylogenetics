@@ -2,6 +2,7 @@ import argparse, os
 from loadLangs import load_family
 from lingDist import cognate_sim
 from wordSim import pmi_dist, surprisal_sim, word_sim, hybrid_sim, LevenshteinDist
+import logging
 
 if __name__ == "__main__":
 
@@ -26,6 +27,10 @@ if __name__ == "__main__":
         newick=False,
     )
     args = parser.parse_args()
+
+    # Configure the logger
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
+    logger = logging.getLogger(__name__)
 
     # Mapping of function labels and default cutoff values
     def hybridSim(x, y):
@@ -66,11 +71,11 @@ if __name__ == "__main__":
                          )
 
     # Load or calculate phoneme PMI
-    print(f'Loading {family.name} phoneme PMI...')
+    logger.info(f'Loading {family.name} phoneme PMI...')
     family.load_phoneme_pmi()
 
     # Load or calculate phoneme surprisal
-    print(f'Loading {family.name} phoneme surprisal...')
+    logger.info(f'Loading {family.name} phoneme surprisal...')
     family.load_phoneme_surprisal(ngram_size=args.ngram)
 
     # Load pre-clustered cognate sets, if available
