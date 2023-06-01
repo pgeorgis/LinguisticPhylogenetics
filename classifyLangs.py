@@ -21,6 +21,7 @@ if __name__ == "__main__":
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
     parser.add_argument('--min_amc', default=0.6, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
+    parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
     parser.set_defaults(
         ignore_stress=False,
         calibrate=True,
@@ -118,4 +119,8 @@ if __name__ == "__main__":
     #     # **kwargs)
     
     if tree:
-        print(tree)
+        if args.outtree:
+            with open(args.outtree, 'w') as f:
+                f.write(tree)
+        else:
+            print(tree)

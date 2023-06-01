@@ -48,11 +48,13 @@ class LexicalDataset:
         self.cognates_dir = os.path.join(self.directory, 'cognates')
         self.phone_corr_dir = os.path.join(self.directory, 'phone_corr')
         self.dist_matrix_dir = os.path.join(self.directory, 'dist_matrices')
+        self.tree_dir = os.path.join(self.directory, 'trees')
         for dir in (
             self.plots_dir, 
             self.cognates_dir, 
             self.phone_corr_dir, 
-            self.dist_matrix_dir
+            self.dist_matrix_dir,
+            self.tree_dir
         ):
             os.makedirs(dir, exist_ok=True)
         
@@ -717,6 +719,15 @@ class LexicalDataset:
         elif method == 'mcc':
             return mean(mcc_scores.values())
     
+    def generate_test_code(self, dist_func, sim, cognates, cutoff=None, **kwargs): # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
+        code = f'cognates-{cognates}_distfunc-{dist_func.__name__}_sim-{sim}'
+        if cognates != 'auto':
+            code += f'_cutoff-{cutoff}'
+        for key, value in kwargs.items():
+            code += f'_{key}-{value}'
+        # TODO : doesn't yet account for concept_list ID; others may also not be working 
+        return code
+    
     def distance_matrix(self, dist_func, sim, 
                         eval_func, eval_sim, 
                         concept_list=None,
@@ -724,15 +735,10 @@ class LexicalDataset:
                         cognates='auto',
                         outfile=None,
                         **kwargs):
-        
+
         # Try to skip re-calculation of distance matrix by retrieving
         # a previously computed distance matrix by its code
-        code = f'cognates-{cognates}_distfunc-{dist_func.__name__}_sim-{sim}_cutoff-{cutoff}'
-        for key, value in kwargs.items():
-            # if type(value) == function:
-            #    value = value.__name__
-            code += f'_{key}-{value}'
-        # TODO : doesn't yet account for concept_list ID; others may also not be working 
+        code = self.generate_test_code(dist_func, sim, cognates, cutoff, **kwargs)
         
         if code in self.distance_matrices:
             return self.distance_matrices[code]
@@ -875,6 +881,7 @@ class LexicalDataset:
                   cluster_func=None, cluster_sim=None, cutoff=None,
                   cognates='auto', 
                   method='ward', metric='euclidean',
+                  outtree=None,
                   title=None, save_directory=None,
                   return_newick=False,
                   orientation='left', p=30,
@@ -882,10 +889,13 @@ class LexicalDataset:
         
         group = [self.languages[lang] for lang in self.languages]
         labels = [lang.name for lang in group]
+        code = self.generate_test_code(dist_func, sim, cognates, cutoff, **kwargs)
         if title is None:
             title = f'{self.name}'
         if save_directory is None:
             save_directory = self.plots_dir
+        if outtree is None:
+            outtree = os.path.join(self.tree_dir, f'{code}.tre')
 
         lm = self.linkage_matrix(dist_func, sim,
                                  eval_func, eval_sim, 
@@ -894,7 +904,7 @@ class LexicalDataset:
                                  cognates, method, metric, 
                                  **kwargs)
         
-        # Not possible to plot NJ trees in Python (yet? TBD)
+        # Not possible to plot NJ trees in Python (yet? TBD) # TODO
         if method != 'nj':
             sns.set(font_scale=1.0)
             if len(group) >= 100:
@@ -910,7 +920,7 @@ class LexicalDataset:
             plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=300)
             plt.show()
 
-        if return_newick:
+        if return_newick or outtree:
             if method == 'nj':
                 newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
             else:
@@ -919,6 +929,11 @@ class LexicalDataset:
             # Fix formatting of Newick string
             newick_tree = re.sub('\s', '_', newick_tree)
             newick_tree = re.sub(',_', ',', newick_tree)
+
+            # Write tree to file
+            if outtree:
+                with open(outtree, 'w') as f:
+                    f.write(newick_tree)
             
             return newick_tree
 
