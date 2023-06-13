@@ -52,7 +52,7 @@ calibration_params = {}
 def cognate_sim(lang1, lang2, clustered_cognates,
                 eval_func, eval_sim, exclude_synonyms=True,
                 #eval func is tuple (function, {kwarg:value})
-                calibrate=False,
+                calibrate=True,
                 min_similarity=0,
                 clustered_id=None,
                 return_score_dict=False,
