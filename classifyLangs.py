@@ -40,12 +40,12 @@ if __name__ == "__main__":
             x, y, 
             funcs={
                 pmi_dist:{}, 
-                #surprisal_sim:{'ngram_size':args.ngram},  # TODO temporarily excluding surprisal, results on Germanic are better
+                surprisal_sim:{'ngram_size':args.ngram},
                 word_sim:{}
             },
             func_sims=[
                 False, 
-                #True, # TODO temporarily excluding surprisal, results on Germanic are better
+                True, 
                 True
             ])
     function_map = {
@@ -54,7 +54,7 @@ if __name__ == "__main__":
         'surprisal':(surprisal_sim, True, {'ngram_size':args.ngram}, 0.74),
         'phonetic':(word_sim, True, {}, 0.16),
         'levenshtein':(LevenshteinDist, False, {}, 0.73),
-        'hybrid':(hybridSim, True, {}, 0.57), # TODO this cutoff value pertains to ngram_size=1 only, would need to be recalculated for other ngram sizes
+        'hybrid':(hybridSim, True, {}, 0.57),
         }
     
     # Set cutoff to default for specified function, if not otherwise specified
@@ -76,8 +76,9 @@ if __name__ == "__main__":
     family.load_phoneme_pmi()
 
     # Load or calculate phoneme surprisal
-    logger.info(f'Loading {family.name} phoneme surprisal...')
-    family.load_phoneme_surprisal(ngram_size=args.ngram)
+    if args.eval == 'surprisal' or args.eval == 'hybrid':
+        logger.info(f'Loading {family.name} phoneme surprisal...')
+        family.load_phoneme_surprisal(ngram_size=args.ngram)
 
     # Load pre-clustered cognate sets, if available
     family.load_clustered_cognates()
