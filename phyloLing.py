@@ -1491,9 +1491,16 @@ class Language(LexicalDataset):
         s = f'{self.name.upper()} [{self.glottocode}][{self.iso_code}]'
         s += f'\nFamily: {self.family.name}'
         s += f'\nRelatives: {len(self.family.languages)}'
-        s += f'\nConsonants: {len(self.consonants)}, Vowels: {len(self.vowels)}'
+        s += f'\nConsonants: {len(self.consonants)}'
+        consonant_inventory = ', '.join([pair[0] for pair in dict_tuplelist(self.consonants)])
+        s += f'\n/{consonant_inventory}/'
+        s += f'\nVowels: {len(self.vowels)}'
+        vowel_inventory = ', '.join([pair[0] for pair in dict_tuplelist(self.vowels)])
+        s += f'\n/{vowel_inventory}/'
         if self.tonal:
+            toneme_inventory = ', '.join([pair[0] for pair in dict_tuplelist(self.tonemes)])
             s += f', Tones: {len(self.tonemes)}'
+            s += f'\n/{toneme_inventory}/'
         percent_loanwords = len([1 for concept in self.loanwords for entry in self.loanwords[concept]]) / len([1 for concept in self.vocabulary for entry in self.vocabulary[concept]])
         percent_loanwords *= 100
         if percent_loanwords > 0:
@@ -1504,7 +1511,7 @@ class Language(LexicalDataset):
             concept = random.choice(list(self.vocabulary.keys()))
             entry = random.choice(self.vocabulary[concept])
             orth, ipa, segs = entry
-            s+= f'\n\t"{concept.upper()}": /{ipa}/'
+            s+= f'\n\t"{concept.upper()}": /{ipa}/ <{orth}>'
             
         
         return s
