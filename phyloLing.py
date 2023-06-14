@@ -1230,7 +1230,7 @@ class Language(LexicalDataset):
         self.ngrams = defaultdict(lambda:defaultdict(lambda:0))
         self.gappy_trigrams = defaultdict(lambda:0)
         self.info_contents = {}
-        self.phon_environments = set()
+        self.phon_environments = defaultdict(lambda:defaultdict(lambda:0))
         
         # Lexical inventory
         self.vocabulary = defaultdict(lambda:[])
@@ -1285,6 +1285,12 @@ class Language(LexicalDataset):
                 for segment in segments:
                     self.phonemes[segment] += 1
                     self.unigrams[segment] += 1
+                
+                # Count phonological environments
+                for seg, env in zip(segments, word.phon_env):
+                    self.phon_environments[seg][env] += 1
+                for seg in self.phon_environments:
+                    self.phon_environments[seg] = normalize_dict(self.phon_environments[seg], default=True, lmbda=0) 
             
                 # Count trigrams and gappy trigrams
                 padded_segments = ['# ', '# '] + segments + ['# ', '# ']
