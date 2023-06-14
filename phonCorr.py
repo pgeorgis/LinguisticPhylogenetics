@@ -565,7 +565,11 @@ class PhonemeCorrDetector:
         cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
         pew_corrs = self.phon_env_corr_probs(cognate_alignments)
         if self.lang1.name != self.lang2.name:
-            self.phoneme_surprisal(self.correspondence_probs(cognate_alignments), phon_env_corr_counts=pew_corrs)
+            self.phoneme_surprisal(
+                self.correspondence_probs(cognate_alignments), 
+                phon_env_corr_counts=pew_corrs,
+                ngram_size=ngram_size
+                )
         
         # Return and save the final iteration's surprisal results
         results = surprisal_iterations[iteration]
