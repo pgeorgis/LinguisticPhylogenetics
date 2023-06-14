@@ -414,9 +414,12 @@ class PhonemeCorrDetector:
         # Only perform calculation for ngrams which have actually been observed 
         # in the current dataset or which could have been observed (with gaps)
         if attested_only:
-            attested = [tuple(ngram.split()) if type(ngram) == str else ngram for ngram in self.lang1.list_ngrams(ngram_size)]
-            gappy = [ngram for ngram in all_ngrams if '-' in ngram]
             if phon_env_corr_counts:
+                # environment calculation requires minimum 3gram
+                n = max(3, ngram_size)
+            attested = [tuple(ngram.split()) if type(ngram) == str else ngram for ngram in self.lang1.list_ngrams(n)]
+            gappy = [ngram for ngram in all_ngrams if '-' in ngram]
+            for ngram in attested:
                 # TODO
                 breakpoint()
 
