@@ -1,6 +1,6 @@
 from collections import defaultdict
 from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import phone_align, compatible_segments, prosodic_env_alignment
+from phonAlign import phone_align, compatible_segments, phon_env_alignment
 from statistics import mean, stdev
 import random
 from itertools import product, chain
@@ -87,12 +87,12 @@ class PhonemeCorrDetector:
         return corr_counts
 
 
-    def prosodic_env_corr_probs(self, alignment_list, counts=False):
-        # currently works only with ngram_size=1
+    def phon_env_corr_probs(self, alignment_list, counts=False):
+        # TODO currently works only with ngram_size=1
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
-            pros_env_align = prosodic_env_alignment(alignment)
-            for seg_weight1, seg2 in pros_env_align:
+            phon_env_align = phon_env_alignment(alignment)
+            for seg_weight1, seg2 in phon_env_align:
                 corr_counts[seg_weight1][seg2] += 1
         if not counts:
             for seg1 in corr_counts:
@@ -336,11 +336,11 @@ class PhonemeCorrDetector:
         return noncognate_scores
         
     
-    def phoneme_surprisal(self, correspondence_counts, prosodic_env_corr_counts=None, ngram_size=1, weights=None, attested_only=True):
+    def phoneme_surprisal(self, correspondence_counts, phon_env_corr_counts=None, ngram_size=1, weights=None, attested_only=True):
         # Interpolation smoothing
         if weights is None:
             n_weights = ngram_size
-            if prosodic_env_corr_counts is not None:
+            if phon_env_corr_counts is not None:
                 n_weights += 1
             weights = [1/n_weights for i in range(n_weights)]
         interpolation = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
@@ -357,33 +357,66 @@ class PhonemeCorrDetector:
                         # backward
                         interpolation[i][ngram1[:i]][ngram2[0]] += correspondence_counts[ngram1][ngram2]
         
-        # Add in prosodic environment correspondences, e.g. ('l', 7) (word-initial 'l') with 'ʎ' 
-        if prosodic_env_corr_counts:
-            for ngram1 in prosodic_env_corr_counts:
-                for ngram2 in prosodic_env_corr_counts[ngram1]:
+        # Add in phonological environment correspondences, e.g. ('l', '#S<') (word-initial 'l') with 'ʎ' 
+        if phon_env_corr_counts:
+            for ngram1 in phon_env_corr_counts:
+                for ngram2 in phon_env_corr_counts[ngram1]:
                     #backward
-                    interpolation['prosodic_env'][ngram1][ngram2] += prosodic_env_corr_counts[ngram1][ngram2]
+                    interpolation['phon_env'][ngram1][ngram2] += phon_env_corr_counts[ngram1][ngram2]
         
         smoothed_surprisal = defaultdict(lambda:defaultdict(lambda:self.lang2.phoneme_entropy*ngram_size))
         
         # Iterate over all possible ngrams
         all_ngrams = product(list(self.lang1.phonemes.keys())+['# ', '-'], repeat=ngram_size)
-        if prosodic_env_corr_counts:
-            # consonant prosodic env
-            prosodic_env_ngrams_C = product(self.lang1.consonants, {7, 2, 3, 4, 5})
-            # vowel prosodic env
-            prosodic_env_ngrams_V = product(self.lang1.vowels, {6, 1, 3, 4, 5})
-            # toneme prosodic env
-            prosodic_env_ngrams_T = product(self.lang1.tonemes, {0, 3, 4, 5})
-            # all prosodic env ngrams
-            all_prosodic_env_ngrams = chain(prosodic_env_ngrams_C, prosodic_env_ngrams_V, prosodic_env_ngrams_T)
+        if phon_env_corr_counts:
+            phon_env_shapes = {
+                '#S#', # free-standing segment
+                '#S<', # word-initial segment followed by segment of greater sonority
+                '#S>', # word-initial segment followed by segment of lower sonority
+                '#S=', # word-initial segment followed by segment of equal sonority
+                '#SS', # word-initial segment followed by identical segment
+
+                '>S#', # word-final segment preceded by segment of greater sonority
+                '<S#', # word-final segment preceded by segment of lower sonority
+                '=S#', # word-final segment preceded by segment of equal sonority
+                'SS#', # word-final segment preceded by identical segment
+                
+                '=S=', # word-medial segment preceded and followed by segments of equal sonority (sonority plateau)
+                '<S>', # word-medial segment preceded and followed by segments of lower sonority (sonority peak)
+                '>S<', # word-medial segment preceded and followed by segments of greater sonority (sonority trench)
+                
+                '>S>', # word-medial segment in descending sonority sequence
+                '<S<', # word-medial segment in ascending sonority sequence
+                
+                '<SS', # word-medial segment preceded by segment of lower sonority and followed by identical segment
+                '<S=', # word-medial segment preceded by segment of lower sonority and followed by segment of equal sonority
+                
+                '=S<', # word-medial segment preceded by segment of equal sonority and followed by segment of greater sonority
+                '=S>', # word-medial segment preceded by segment of equal sonority and followed by segment of lower sonority
+                '=SS', # word-medial segment preceded by segment of equal sonority and followed by identical segment
+
+                '>SS', # word-medial segment preceded by segment of greater sonority and followed by identical segment
+                '>S=', # word-medial segment preceded by segment of greater sonority and followed by segment of equal sonority
+                
+                'SS<', # word-medial segment preceded by identical segment and followed by segment of greater sonority
+                'SS>', # word-medial segment preceded by identical segment and followed by segment of lower sonority
+                'SS=', # word-medial segment preceded by identical segment and followed by segment of equal sonority
+            }
+            # consonant phon env
+            phon_env_ngrams_C = product(self.lang1.consonants, phon_env_shapes)
+            # vowel phon env
+            phon_env_ngrams_V = product(self.lang1.vowels, phon_env_shapes)
+            # toneme phon env
+            phon_env_ngrams_T = product(self.lang1.tonemes, {'T'})
+            # all phon env ngrams
+            all_phon_env_ngrams = chain(phon_env_ngrams_C, phon_env_ngrams_V, phon_env_ngrams_T)
 
         # Only perform calculation for ngrams which have actually been observed 
         # in the current dataset or which could have been observed (with gaps)
         if attested_only:
             attested = [tuple(ngram.split()) if type(ngram) == str else ngram for ngram in self.lang1.list_ngrams(ngram_size)]
             gappy = [ngram for ngram in all_ngrams if '-' in ngram]
-            if prosodic_env_corr_counts:
+            if phon_env_corr_counts:
                 # TODO
                 breakpoint()
 
@@ -528,11 +561,11 @@ class PhonemeCorrDetector:
                     print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
         
 
-        # Add prosodic environment weights after final iteration
+        # Add phonological environment weights after final iteration
         cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
-        pew_corrs = self.prosodic_env_corr_probs(cognate_alignments)
+        pew_corrs = self.phon_env_corr_probs(cognate_alignments)
         if self.lang1.name != self.lang2.name:
-            self.phoneme_surprisal(self.correspondence_probs(cognate_alignments), prosodic_env_corr_counts=pew_corrs)
+            self.phoneme_surprisal(self.correspondence_probs(cognate_alignments), phon_env_corr_counts=pew_corrs)
         
         # Return and save the final iteration's surprisal results
         results = surprisal_iterations[iteration]
