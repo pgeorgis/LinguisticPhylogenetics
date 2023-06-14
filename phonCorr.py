@@ -28,10 +28,10 @@ class PhonemeCorrDetector:
                         if concept in self.lang2.vocabulary]
             
         # Get tuple (concept, orthography, IPA, segmented IPA) for each word entry
-        l1_wordlist = [(concept, entry[0], entry[1], entry[2]) 
-                       for concept in wordlist for entry in self.lang1.vocabulary[concept]]
-        l2_wordlist = [(concept, entry[0], entry[1], entry[2]) 
-                       for concept in wordlist for entry in self.lang2.vocabulary[concept]]
+        l1_wordlist = [(concept, word.orthography, word.ipa, word.segments) 
+                       for concept in wordlist for word in self.lang1.vocabulary[concept]]
+        l2_wordlist = [(concept, word.orthography, word.ipa, word.segments) 
+                       for concept in wordlist for word in self.lang2.vocabulary[concept]]
         
         # Get all combinations of L1 and L2 words
         all_wordpairs = product(l1_wordlist, l2_wordlist)
@@ -417,6 +417,8 @@ class PhonemeCorrDetector:
             if phon_env_corr_counts:
                 # environment calculation requires minimum 3gram
                 n = max(3, ngram_size)
+            else:
+                n = ngram_size
             attested = [tuple(ngram.split()) if type(ngram) == str else ngram for ngram in self.lang1.list_ngrams(n)]
             gappy = [ngram for ngram in all_ngrams if '-' in ngram]
             for ngram in attested:

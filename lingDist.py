@@ -201,9 +201,9 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
                         if concept in lang2.vocabulary]
     
     # Generate a dictionary of word form pairs
-    word_forms = {concept:[((entry1[1], lang1), (entry2[1], lang2)) 
-                           for entry1 in lang1.vocabulary[concept] 
-                           for entry2 in lang2.vocabulary[concept]] 
+    word_forms = {concept:[((word1.ipa, lang1), (word2.ipa, lang2)) 
+                           for word1 in lang1.vocabulary[concept] 
+                           for word2 in lang2.vocabulary[concept]] 
                   for concept in concept_list}
     
     # Score the word form pairs according to the specified function

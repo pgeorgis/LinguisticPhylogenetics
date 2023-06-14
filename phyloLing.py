@@ -16,7 +16,7 @@ import numpy as np
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
 from auxFuncs import surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
-from phonSim.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim
+from phonSim.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim, phonEnvironment
 from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 import logging
@@ -1230,6 +1230,7 @@ class Language(LexicalDataset):
         self.ngrams = defaultdict(lambda:defaultdict(lambda:0))
         self.gappy_trigrams = defaultdict(lambda:0)
         self.info_contents = {}
+        self.phon_environments = set()
         
         # Lexical inventory
         self.vocabulary = defaultdict(lambda:[])
@@ -1264,23 +1265,21 @@ class Language(LexicalDataset):
             concept = entry[self.concept_c]
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
-            # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
-            segments = segment_ipa(ipa, remove_ch=''.join(self.ch_to_remove), **kwargs)
-            #segments = entry[self.segments_c]
-            if len(segments) > 0:
-                if [orthography, ipa, segments] not in self.vocabulary[concept]:
-                    self.vocabulary[concept].append([orthography, ipa, segments])
-                loan = entry[self.loan_c]
-            
-                # Mark known loanwords
-                if loan == 'TRUE':
-                    self.loanwords[concept].append([orthography, ipa, segments])
-                    
+            word = Word(ipa, concept, orthography, self.ch_to_remove, **kwargs)
+            if len(word.segments) > 0:
+                if word not in self.vocabulary[concept]:
+                    #self.vocabulary[concept].append([orthography, ipa, segments])
+                    self.vocabulary[concept].append(word)
+                
+                    # Mark known loanwords
+                    loan = entry[self.loan_c]
+                    if loan == 'TRUE':
+                        self.loanwords[concept].append(word)
                     
     def create_phoneme_inventory(self):
         for concept in self.vocabulary:
-            for entry in self.vocabulary[concept]:
-                orthography, ipa, segments = entry
+            for word in self.vocabulary[concept]:
+                segments = word.segments
                 
                 # Count phones
                 for segment in segments:
@@ -1336,7 +1335,7 @@ class Language(LexicalDataset):
             return self.ngrams[ngram_size]
         
         else:
-            segmented_words = [entry[2] for concept in self.vocabulary for entry in self.vocabulary[concept]]
+            segmented_words = (word.segments for concept in self.vocabulary for word in self.vocabulary[concept])
             for segs in segmented_words:
                 pad_n = ngram_size - 1
                 padded = ['# ']*pad_n + segs + ['# ']*pad_n
@@ -1356,8 +1355,10 @@ class Language(LexicalDataset):
         
         matches = []
         for concept in self.vocabulary:
-            for entry in self.vocabulary[concept]:
-                orthography, transcription, segments = entry
+            for word in self.vocabulary[concept]:
+                orthography = word.orthography
+                transcription = word.ipa
+                segments = word.segments
                 if field == 'transcription' and re.search(segment, transcription):
                     matches.append((concept, orthography, transcription))
                 elif field == 'segments' and segment in segments:
@@ -1509,13 +1510,33 @@ class Language(LexicalDataset):
         s += '\nExample Words:'
         for i in range(5):
             concept = random.choice(list(self.vocabulary.keys()))
-            entry = random.choice(self.vocabulary[concept])
-            orth, ipa, segs = entry
-            s+= f'\n\t"{concept.upper()}": /{ipa}/ <{orth}>'
+            word = random.choice(self.vocabulary[concept])
+            s+= f'\n\t"{concept.upper()}": /{word.ipa}/ <{word.orthography}>'
             
         
         return s
 
+class Word:
+    def __init__(self, ipa_string, concept, orthography=None, ch_to_remove=[], **kwargs):
+        self.ipa = ipa_string
+        self.concept = concept
+        self.orthography = orthography
+        self.segments = self.segment(ch_to_remove, **kwargs)
+        self.phon_env = self.getPhonEnv()
+    
+    def segment(self, ch_to_remove, **kwargs):
+        return segment_ipa(
+            self.ipa, 
+            # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
+            remove_ch=''.join(ch_to_remove), 
+            **kwargs
+        )
+    
+    def getPhonEnv(self):
+        phon_env = []
+        for i, seg in enumerate(self.segments):
+            phon_env.append(phonEnvironment(self.segments, i))
+        return phon_env
 
 # COMBINING DATASETS
 def combine_datasets(dataset_list):
