@@ -1229,8 +1229,9 @@ class Language(LexicalDataset):
         self.trigrams = defaultdict(lambda:0)
         self.ngrams = defaultdict(lambda:defaultdict(lambda:0))
         self.gappy_trigrams = defaultdict(lambda:0)
-        self.info_contents = {}
         self.phon_environments = defaultdict(lambda:defaultdict(lambda:0))
+        self.phon_env_ngrams = defaultdict(lambda:defaultdict(lambda:0))
+        self.info_contents = {}
         
         # Lexical inventory
         self.vocabulary = defaultdict(lambda:[])
@@ -1335,20 +1336,38 @@ class Language(LexicalDataset):
         if len(self.tonemes) > 0:
             self.tonal = True
     
-    def list_ngrams(self, ngram_size):
+    def list_ngrams(self, ngram_size, phon_env=False):
         """Returns a dictionary of ngrams of a particular size, with their counts"""
-        if len(self.ngrams[ngram_size]) > 0:
+
+        # Retrieve pre-calculated ngrams
+        if not phon_env and len(self.ngrams[ngram_size]) > 0:
             return self.ngrams[ngram_size]
         
+        elif phon_env and len(self.phon_env_ngrams[ngram_size]) > 0:
+            return self.phon_env_ngrams[ngram_size]
+        
         else:
-            segmented_words = (word.segments for concept in self.vocabulary for word in self.vocabulary[concept])
-            for segs in segmented_words:
-                pad_n = ngram_size - 1
-                padded = ['# ']*pad_n + segs + ['# ']*pad_n
-                for i in range(len(padded)-pad_n):
-                    ngram = tuple(padded[i:i+ngram_size])
-                    self.ngrams[ngram_size][ngram] += 1
-            return self.ngrams[ngram_size]
+            for concept in self.vocabulary:
+                for word in self.vocabulary[concept]:
+                    segments = word.segments
+                    if phon_env:
+                        phon_env_segments = list(zip(segments, word.phon_env))
+                    pad_n = ngram_size - 1
+                    padded = ['# ']*pad_n + segments + ['# ']*pad_n
+                    if phon_env:
+                        padded_phon_env = ['# ']*pad_n + phon_env_segments + ['# ']*pad_n
+                    for i in range(len(padded)-pad_n):
+                        ngram = tuple(padded[i:i+ngram_size])
+                        self.ngrams[ngram_size][ngram] += 1
+                        if phon_env:
+                            phon_env_ngram = tuple(padded_phon_env[i:i+ngram_size])
+                            self.phon_env_ngrams[ngram_size][phon_env_ngram] += 1
+
+            if phon_env:
+                return self.phon_env_ngrams[ngram_size]
+            
+            else:
+                return self.ngrams[ngram_size]
         
     
     def lookup(self, segment, 

@@ -5,6 +5,8 @@ from statistics import mean, stdev
 import random
 from itertools import product, chain
 from math import log
+import re
+from phonSim.phonSim import phonEnvironment
 
 class PhonemeCorrDetector:
     def __init__(self, lang1, lang2, wordlist=None):
@@ -335,16 +337,41 @@ class PhonemeCorrDetector:
         
         return noncognate_scores
         
+    def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
+        # Iterate over all possible/attested ngrams
+        # Only perform calculation for ngrams which have actually been observed/attested to 
+        # in the current dataset or which could have been observed (with gaps)
+        if phon_env:
+            attested = set(tuple(ngram.split()) 
+                           if type(ngram) == str else ngram 
+                           for ngram in lang.list_ngrams(ngram_size, phon_env=True))
+            phone_contexts = [(seg, env) 
+                              for seg in lang.phon_environments 
+                              for env in lang.phon_environments[seg]]
+            all_ngrams = product(phone_contexts+['# ', '-'], repeat=ngram_size)
+            
+        else:
+            attested = set(tuple(ngram.split()) 
+                           if type(ngram) == str else ngram 
+                           for ngram in lang.list_ngrams(ngram_size, phon_env=False))
+            all_ngrams = product(list(lang.phonemes.keys())+['# ', '-'], repeat=ngram_size)
+
+        gappy = set(ngram for ngram in all_ngrams if '-' in ngram)
+        all_ngrams = attested.union(gappy)
+        return all_ngrams
     
     def phoneme_surprisal(self, correspondence_counts, phon_env_corr_counts=None, ngram_size=1, weights=None, attested_only=True):
         # Interpolation smoothing
         if weights is None:
             n_weights = ngram_size
             if phon_env_corr_counts is not None:
+                phon_env = True
                 n_weights += 1
+            else:
+                phon_env = False
             weights = [1/n_weights for i in range(n_weights)]
         interpolation = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
-        
+
         for i in range(ngram_size,0,-1):
             for ngram1 in correspondence_counts:
                 for ngram2 in correspondence_counts[ngram1]:
@@ -356,81 +383,33 @@ class PhonemeCorrDetector:
                         
                         # backward
                         interpolation[i][ngram1[:i]][ngram2[0]] += correspondence_counts[ngram1][ngram2]
+        if phon_env:
+            index = 'phon_env'
+        else:
+            index = i
         
         # Add in phonological environment correspondences, e.g. ('l', '#S<') (word-initial 'l') with 'ʎ' 
-        if phon_env_corr_counts:
+        if phon_env:
             for ngram1 in phon_env_corr_counts:
                 for ngram2 in phon_env_corr_counts[ngram1]:
                     #backward
-                    interpolation['phon_env'][ngram1][ngram2] += phon_env_corr_counts[ngram1][ngram2]
+                    interpolation[index][ngram1][ngram2] += phon_env_corr_counts[ngram1][ngram2]
         
         smoothed_surprisal = defaultdict(lambda:defaultdict(lambda:self.lang2.phoneme_entropy*ngram_size))
-        
-        # Iterate over all possible ngrams
-        all_ngrams = product(list(self.lang1.phonemes.keys())+['# ', '-'], repeat=ngram_size)
-        if phon_env_corr_counts:
-            phon_env_shapes = {
-                '#S#', # free-standing segment
-                '#S<', # word-initial segment followed by segment of greater sonority
-                '#S>', # word-initial segment followed by segment of lower sonority
-                '#S=', # word-initial segment followed by segment of equal sonority
-                '#SS', # word-initial segment followed by identical segment
+        all_ngrams_lang1 = self.get_possible_ngrams(self.lang1, ngram_size=ngram_size, phon_env=phon_env)
+        # lang2 ngram size fixed at 1, only trying to predict single phone; also not trying to predict phon_env 
+        all_ngrams_lang2 = self.get_possible_ngrams(self.lang2, ngram_size=1, phon_env=False) 
+        all_ngrams_lang2 = [ngram[0] for ngram in all_ngrams_lang2]
 
-                '>S#', # word-final segment preceded by segment of greater sonority
-                '<S#', # word-final segment preceded by segment of lower sonority
-                '=S#', # word-final segment preceded by segment of equal sonority
-                'SS#', # word-final segment preceded by identical segment
-                
-                '=S=', # word-medial segment preceded and followed by segments of equal sonority (sonority plateau)
-                '<S>', # word-medial segment preceded and followed by segments of lower sonority (sonority peak)
-                '>S<', # word-medial segment preceded and followed by segments of greater sonority (sonority trench)
-                
-                '>S>', # word-medial segment in descending sonority sequence
-                '<S<', # word-medial segment in ascending sonority sequence
-                
-                '<SS', # word-medial segment preceded by segment of lower sonority and followed by identical segment
-                '<S=', # word-medial segment preceded by segment of lower sonority and followed by segment of equal sonority
-                
-                '=S<', # word-medial segment preceded by segment of equal sonority and followed by segment of greater sonority
-                '=S>', # word-medial segment preceded by segment of equal sonority and followed by segment of lower sonority
-                '=SS', # word-medial segment preceded by segment of equal sonority and followed by identical segment
-
-                '>SS', # word-medial segment preceded by segment of greater sonority and followed by identical segment
-                '>S=', # word-medial segment preceded by segment of greater sonority and followed by segment of equal sonority
-                
-                'SS<', # word-medial segment preceded by identical segment and followed by segment of greater sonority
-                'SS>', # word-medial segment preceded by identical segment and followed by segment of lower sonority
-                'SS=', # word-medial segment preceded by identical segment and followed by segment of equal sonority
-            }
-            # consonant phon env
-            phon_env_ngrams_C = product(self.lang1.consonants, phon_env_shapes)
-            # vowel phon env
-            phon_env_ngrams_V = product(self.lang1.vowels, phon_env_shapes)
-            # toneme phon env
-            phon_env_ngrams_T = product(self.lang1.tonemes, {'T'})
-            # all phon env ngrams
-            all_phon_env_ngrams = chain(phon_env_ngrams_C, phon_env_ngrams_V, phon_env_ngrams_T)
-
-        # Only perform calculation for ngrams which have actually been observed 
-        # in the current dataset or which could have been observed (with gaps)
-        if attested_only:
-            if phon_env_corr_counts:
-                # environment calculation requires minimum 3gram
-                n = max(3, ngram_size)
+        for ngram1 in all_ngrams_lang1:
+            if phon_env:
+                ngram1 = ngram1[0]
+                if ngram_size > 1:
+                    raise NotImplementedError('TODO: does ngram1[0] work with ngram_size > 1 here? if so, remove this error')
             else:
-                n = ngram_size
-            attested = [tuple(ngram.split()) if type(ngram) == str else ngram for ngram in self.lang1.list_ngrams(n)]
-            gappy = [ngram for ngram in all_ngrams if '-' in ngram]
-            for ngram in attested:
-                # TODO
-                breakpoint()
-
-
-            all_ngrams = set(attested + gappy)
-            
-        for ngram1 in all_ngrams:
-            for ngram2 in list(self.lang2.phonemes.keys())+['# ', '-']: 
-                # forward
+                ngram1 = ngram1[:i]
+            for ngram2 in all_ngrams_lang2: 
+                # forward # TODO has not been updated since before addition of phon_env
                 # estimates = [interpolation[i][ngram1[-i:]][ngram2] / sum(interpolation[i][ngram1[-i:]].values())
                 #              if i > 1 else lidstone_smoothing(x=interpolation[i][ngram1[-i:]][ngram2], 
                 #                                               N=sum(interpolation[i][ngram1[-i:]].values()), 
@@ -438,21 +417,25 @@ class PhonemeCorrDetector:
                 #              for i in range(ngram_size,0,-1)]
                 
                 # backward
-                estimates = [lidstone_smoothing(x=interpolation[i][ngram1[:i]].get(ngram2, 0), 
-                                                 N=sum(interpolation[i][ngram1[:i]].values()), 
+                estimates = [lidstone_smoothing(x=interpolation[index][ngram1].get(ngram2, 0), 
+                                                 N=sum(interpolation[index][ngram1].values()), 
                                                  d = len(self.lang2.phonemes) + 1,
                                                  alpha=0.1) 
-                              for i in range(ngram_size,0,-1)] 
-                
-                
+                              for i in range(ngram_size,0,-1)]
                 
                 smoothed = sum([estimate*weight for estimate, weight in zip(estimates, weights)])
                 smoothed_surprisal[ngram1][ngram2] = surprisal(smoothed)
-                
-            oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()), 
+
+            if phon_env:
+                indices = [index]
+            else:
+                indices = range(ngram_size,0,-1)
+            oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[index][ngram1].values()), 
                                              d = len(self.lang2.phonemes) + 1,
                                              alpha=0.1) 
-                          for i in range(ngram_size,0,-1)]
+                          for index in indices]
+            if ngram_size > 1:
+                raise NotImplementedError('TODO: need to confirm that the indices above work with ngram_size > 1; is interpolation actually occurring if we only look ad the phon_env values rather than ngram i sizes?')
             smoothed_oov = surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, weights)]))
             smoothed_surprisal[ngram1] = default_dict(smoothed_surprisal[ngram1], l=smoothed_oov)
                 
@@ -568,16 +551,16 @@ class PhonemeCorrDetector:
 
         # Add phonological environment weights after final iteration
         cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
-        pew_corrs = self.phon_env_corr_probs(cognate_alignments)
-        if self.lang1.name != self.lang2.name:
-            self.phoneme_surprisal(
-                self.correspondence_probs(cognate_alignments), 
-                phon_env_corr_counts=pew_corrs,
-                ngram_size=ngram_size
-                )
+        pew_corrs = self.phon_env_corr_probs(cognate_alignments, counts=True)
+        phon_env_surprisal = self.phoneme_surprisal(
+            self.correspondence_probs(cognate_alignments, counts=True), 
+            phon_env_corr_counts=pew_corrs,
+            ngram_size=ngram_size
+            )
         
         # Return and save the final iteration's surprisal results
-        results = surprisal_iterations[iteration]
+        #results = surprisal_iterations[iteration]
+        results = phon_env_surprisal
         if save:
             self.lang1.phoneme_surprisal[(self.lang2, ngram_size)] = results
         self.surprisal_dict = results
