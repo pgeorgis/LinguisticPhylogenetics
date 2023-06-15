@@ -142,9 +142,9 @@ def phon_env_alignment(alignment, word2=False, env_func=phonEnvironment):
     """
     word1_aligned, word2_aligned = tuple(zip(*alignment))
     word1_aligned = list(word1_aligned)
-    segs1 = tuple([pair[0] for pair in word1_aligned if pair[0] != '-'])
+    segs1 = tuple([seg for seg in word1_aligned if seg != '-'])
     if word2:
-        segs2 = tuple([pair[0] for pair in word2_aligned if pair[0] != '-'])
+        segs2 = tuple([seg for seg in word2_aligned if seg != '-'])
     gap_count1, gap_count2 = 0, 0
 
     def add_phon_env(word_aligned, segs, i, gap_count):
