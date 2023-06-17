@@ -378,9 +378,8 @@ class LexicalDataset:
             for lang1, lang2 in product(langs, langs):
                 if lang1 != lang2:
                     threshold = surprisal(1/len(lang2.phonemes))
-                    for p1 in sorted(list(lang1.phoneme_surprisal[(lang2, ngram_size)])):#lang1.phonemes:
-                        if p1 == ('-',):
-                            continue
+                    l1_phons = sorted([p for p in lang1.phoneme_surprisal[(lang2, ngram_size)].keys() if p != '-'])
+                    for p1 in l1_phons:
                         p2_candidates = lang1.phoneme_surprisal[(lang2, ngram_size)][p1]
                         if len(p2_candidates) > 0:
                             p2_candidates = dict_tuplelist(p2_candidates)[-n:]
@@ -786,10 +785,10 @@ class LexicalDataset:
         # No separation of cognates/non-cognates: 
         # all synonymous words are evaluated irrespective of cognacy
         elif cognates == 'none':
-            clustered_concepts = {concept:{concept:[f'{lang} /{self.concepts[concept][lang][i][1]}/'
+            clustered_concepts = {concept:{concept:[f'{lang} /{self.concepts[concept][lang][i].ipa}/'
                                   for lang in self.concepts[concept] 
                                   for i in range(len(self.concepts[concept][lang]))]}
-                                  for concept in concept_list}            
+                                  for concept in concept_list}
         
         # Raise error for unrecognized cognate clustering methods
         else:
