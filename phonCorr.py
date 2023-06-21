@@ -360,7 +360,13 @@ class PhonemeCorrDetector:
         all_ngrams = attested.union(gappy)
         return all_ngrams
     
-    def phoneme_surprisal(self, correspondence_counts, phon_env_corr_counts=None, ngram_size=1, weights=None, attested_only=True):
+    def phoneme_surprisal(self, 
+                          correspondence_counts, 
+                          phon_env_corr_counts=None, 
+                          ngram_size=1, 
+                          weights=None, 
+                          attested_only=True,
+                          alpha=0.1):
         # Interpolation smoothing
         if weights is None:
             n_weights = ngram_size
@@ -437,23 +443,33 @@ class PhonemeCorrDetector:
                 # backward
                 estimates = [lidstone_smoothing(x=interpolation[i][ngram1[:i]].get(ngram2, 0), 
                                                 N=sum(interpolation[i][ngram1[:i]].values()), 
-                                                #d = len(self.lang2.phonemes) + 1,
+                                                d = len(self.lang2.phonemes) + 1,
                                                 # modification: I believe the d (vocabulary size) value should be every combination of phones from lang1 and lang2
                                                 #d = n_ngram_pairs + 1,
                                                 # updated mod: it should actually be the vocabulary GIVEN the phone of lang1, otherwise skewed by frequency of phone1
-                                                d = len(interpolation[i][ngram1[:i]]),
-                                                alpha=0.1) # TODO I think alpha should be even smaller, perhaps 0.01
+                                                #d = len(interpolation[i][ngram1[:i]]),
+                                                alpha=alpha) # TODO I think alpha should be even smaller, perhaps 0.01
                             for i in range(ngram_size,0,-1)]
                 
                 # add interpolation with phon_env surprisal
                 if phon_env:
                     estimates.append(lidstone_smoothing(x=interpolation['phon_env'][ngram1_phon_env].get(ngram2, 0), 
                                                 N=sum(interpolation['phon_env'][ngram1_phon_env].values()), 
+                                                d = len(self.lang2.phonemes) + 1,
                                                 #d = n_ngram_pairs_phon_env + 1,
                                                 #d = len(interpolation['phon_env'][ngram1_phon_env]),
-                                                d = len(interpolation['phon_env'][ngram1_phon_env]),
-                                                alpha=0.1) 
+                                                #d = len(interpolation['phon_env'][ngram1_phon_env]),
+                                                alpha=alpha) 
                     )
+                    # TODO: I think it would be possible to interpolate among phon_envs of different detail levels, e.g.
+                    # F>S# - word-final segment preceded by a segment of greater sonority in a front vowel context
+                    # could be split into and interpolated among:
+                    # FS
+                    # >S
+                    # S#
+                    # F>S
+                    # FS#
+                    # >S#
                 
                 smoothed = sum([estimate*weight for estimate, weight in zip(estimates, weights)])
                 if phon_env:
@@ -462,14 +478,16 @@ class PhonemeCorrDetector:
                     smoothed_surprisal[ngram1][ngram2] = surprisal(smoothed)
 
             oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()), 
-                                             d = len(interpolation[i][ngram1[:i]]),
-                                             alpha=0.1) 
+                                             #d = len(interpolation[i][ngram1[:i]]),
+                                             d = len(self.lang2.phonemes) + 1,
+                                             alpha=alpha) 
                           for i in range(ngram_size,0,-1)]
             if phon_env:
                 oov_estimates.append(lidstone_smoothing(x=0, 
                                                 N=sum(interpolation['phon_env'][ngram1_phon_env].values()), 
-                                                d = len(interpolation['phon_env'][ngram1_phon_env]),
-                                                alpha=0.1)
+                                                #d = len(interpolation['phon_env'][ngram1_phon_env]),
+                                                d = len(self.lang2.phonemes) + 1,
+                                                alpha=alpha)
                 )
             
             if ngram_size > 1:
