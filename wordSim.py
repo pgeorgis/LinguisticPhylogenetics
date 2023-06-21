@@ -7,7 +7,7 @@ import re
 from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, suprasegmental_diacritics, strip_diacritics
 from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_environment_weight
 from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
-from phonAlign import phone_align, reverse_alignment
+from phonAlign import phone_align, reverse_alignment, phon_env_alignment
 from phonCorr import PhonemeCorrDetector
 
 def prepare_alignment(item1, item2, **kwargs):
@@ -336,7 +336,8 @@ def segmental_word_sim(word1, word2=None,
 
 combined_surprisal_dicts = {}
 scored_WAS = {}
-def mutual_surprisal(pair1, pair2, ngram_size=1, **kwargs):
+def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
+    # TODO change pairs into Word class objects and extract language from there
     if (pair1, pair2, ngram_size) in scored_WAS:
         return scored_WAS[(pair1, pair2, ngram_size)]
     
@@ -370,12 +371,21 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, **kwargs):
             
         # Calculate the word-adaptation surprisal in each direction
         # (note: alignment needs to be reversed to run in second direction)
+        if phon_env:
+            alignment = list(phon_env_alignment(alignment))
+            rev_alignment = list(phon_env_alignment(reverse_alignment(alignment)))
+            sur_dict1 = lang1.phon_env_surprisal[(lang2, ngram_size)]
+            sur_dict2 = lang2.phon_env_surprisal[(lang1, ngram_size)]
+        else:
+            rev_alignment = reverse_alignment(alignment)
+            sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
+            sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
         WAS_l1l2 = adaptation_surprisal(alignment, 
-                                        surprisal_dict=lang1.phoneme_surprisal[(lang2, ngram_size)],
+                                        surprisal_dict=sur_dict1,
                                         ngram_size=ngram_size,
                                         normalize=False)
-        WAS_l2l1 = adaptation_surprisal(reverse_alignment(alignment), 
-                                        surprisal_dict=lang2.phoneme_surprisal[(lang1, ngram_size)],
+        WAS_l2l1 = adaptation_surprisal(rev_alignment, 
+                                        surprisal_dict=sur_dict2,
                                         ngram_size=ngram_size,
                                         normalize=False)
 
