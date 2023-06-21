@@ -1254,6 +1254,7 @@ class Language(LexicalDataset):
         self.phoneme_correspondences = defaultdict(lambda:defaultdict(lambda:0))
         self.phoneme_pmi = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         self.phoneme_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
+        self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.detected_cognates = defaultdict(lambda:[])
         self.detected_noncognates = defaultdict(lambda:[])
         self.noncognate_thresholds = defaultdict(lambda:[])
@@ -1289,8 +1290,8 @@ class Language(LexicalDataset):
                 # Count phonological environments
                 for seg, env in zip(segments, word.phon_env):
                     self.phon_environments[seg][env] += 1
-                for seg in self.phon_environments:
-                    self.phon_environments[seg] = normalize_dict(self.phon_environments[seg], default=True, lmbda=0) 
+                #for seg in self.phon_environments:
+                #    self.phon_environments[seg] = normalize_dict(self.phon_environments[seg], default=True, lmbda=0) 
             
                 # Count trigrams and gappy trigrams
                 padded_segments = ['# ', '# '] + segments + ['# ', '# ']

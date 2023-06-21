@@ -393,21 +393,40 @@ class PhonemeCorrDetector:
             for ngram1 in phon_env_corr_counts:
                 for ngram2 in phon_env_corr_counts[ngram1]:
                     #backward
-                    interpolation[index][ngram1][ngram2] += phon_env_corr_counts[ngram1][ngram2]
+                    interpolation[index][(ngram1,)][ngram2] += phon_env_corr_counts[ngram1][ngram2]
         
         smoothed_surprisal = defaultdict(lambda:defaultdict(lambda:self.lang2.phoneme_entropy*ngram_size))
-        all_ngrams_lang1 = self.get_possible_ngrams(self.lang1, ngram_size=ngram_size, phon_env=phon_env)
+        all_ngrams_lang1 = self.get_possible_ngrams(self.lang1, ngram_size=ngram_size, phon_env=False)
         # lang2 ngram size fixed at 1, only trying to predict single phone; also not trying to predict phon_env 
         all_ngrams_lang2 = self.get_possible_ngrams(self.lang2, ngram_size=1, phon_env=False) 
         all_ngrams_lang2 = [ngram[0] for ngram in all_ngrams_lang2]
+        
+        # get the number of possible ngram pairs/combinations from lang1 and lang2
+        n_ngram_pairs = len(all_ngrams_lang1) * len(all_ngrams_lang2)
+        
+        if phon_env:
+            # phon_env ngrams fixed at size 1
+            all_ngrams_lang1 = self.get_possible_ngrams(self.lang1, ngram_size=1, phon_env=True)
+            n_ngram_pairs_phon_env = len(all_ngrams_lang1) * len(all_ngrams_lang2)
 
         for ngram1 in all_ngrams_lang1:
+            # if phon_env:
+            #     ngram1 = ngram1[0]
+            #     if ngram_size > 1:
+            #         raise NotImplementedError('TODO: does ngram1[0] work with ngram_size > 1 here? if so, remove this error')
+            # else:
+            if ngram1[0][0] == '-':
+                continue
+
             if phon_env:
-                ngram1 = ngram1[0]
-                if ngram_size > 1:
-                    raise NotImplementedError('TODO: does ngram1[0] work with ngram_size > 1 here? if so, remove this error')
-            else:
-                ngram1 = ngram1[:i]
+                ngram1_phon_env = ngram1[:][:i]
+                ngram1 = tuple(i[0] for i in ngram1)
+                if sum(interpolation['phon_env'][ngram1_phon_env].values()) == 0:
+                    continue
+
+            if sum(interpolation[i][ngram1[:i]].values()) == 0:
+                    continue
+
             for ngram2 in all_ngrams_lang2: 
                 # forward # TODO has not been updated since before addition of phon_env
                 # estimates = [interpolation[i][ngram1[-i:]][ngram2] / sum(interpolation[i][ngram1[-i:]].values())
@@ -415,29 +434,53 @@ class PhonemeCorrDetector:
                 #                                               N=sum(interpolation[i][ngram1[-i:]].values()), 
                 #                                               d = len(self.lang2.phonemes) + 1)  
                 #              for i in range(ngram_size,0,-1)]
-                
                 # backward
-                estimates = [lidstone_smoothing(x=interpolation[index][ngram1].get(ngram2, 0), 
-                                                 N=sum(interpolation[index][ngram1].values()), 
-                                                 d = len(self.lang2.phonemes) + 1,
-                                                 alpha=0.1) 
-                              for i in range(ngram_size,0,-1)]
+                estimates = [lidstone_smoothing(x=interpolation[i][ngram1[:i]].get(ngram2, 0), 
+                                                N=sum(interpolation[i][ngram1[:i]].values()), 
+                                                #d = len(self.lang2.phonemes) + 1,
+                                                # modification: I believe the d (vocabulary size) value should be every combination of phones from lang1 and lang2
+                                                #d = n_ngram_pairs + 1,
+                                                # updated mod: it should actually be the vocabulary GIVEN the phone of lang1, otherwise skewed by frequency of phone1
+                                                d = len(interpolation[i][ngram1[:i]]),
+                                                alpha=0.1) # TODO I think alpha should be even smaller, perhaps 0.01
+                            for i in range(ngram_size,0,-1)]
+                
+                # add interpolation with phon_env surprisal
+                if phon_env:
+                    estimates.append(lidstone_smoothing(x=interpolation['phon_env'][ngram1_phon_env].get(ngram2, 0), 
+                                                N=sum(interpolation['phon_env'][ngram1_phon_env].values()), 
+                                                #d = n_ngram_pairs_phon_env + 1,
+                                                #d = len(interpolation['phon_env'][ngram1_phon_env]),
+                                                d = len(interpolation['phon_env'][ngram1_phon_env]),
+                                                alpha=0.1) 
+                    )
                 
                 smoothed = sum([estimate*weight for estimate, weight in zip(estimates, weights)])
-                smoothed_surprisal[ngram1][ngram2] = surprisal(smoothed)
+                if phon_env:
+                    smoothed_surprisal[ngram1_phon_env][ngram2] = surprisal(smoothed)
+                else:
+                    smoothed_surprisal[ngram1][ngram2] = surprisal(smoothed)
 
-            if phon_env:
-                indices = [index]
-            else:
-                indices = range(ngram_size,0,-1)
-            oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[index][ngram1].values()), 
-                                             d = len(self.lang2.phonemes) + 1,
+            oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()), 
+                                             d = len(interpolation[i][ngram1[:i]]),
                                              alpha=0.1) 
-                          for index in indices]
+                          for i in range(ngram_size,0,-1)]
+            if phon_env:
+                oov_estimates.append(lidstone_smoothing(x=0, 
+                                                N=sum(interpolation['phon_env'][ngram1_phon_env].values()), 
+                                                d = len(interpolation['phon_env'][ngram1_phon_env]),
+                                                alpha=0.1)
+                )
+            
             if ngram_size > 1:
                 raise NotImplementedError('TODO: need to confirm that the indices above work with ngram_size > 1; is interpolation actually occurring if we only look ad the phon_env values rather than ngram i sizes?')
+            
             smoothed_oov = surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, weights)]))
-            smoothed_surprisal[ngram1] = default_dict(smoothed_surprisal[ngram1], l=smoothed_oov)
+            
+            if phon_env:
+                smoothed_surprisal[ngram1_phon_env] = default_dict(smoothed_surprisal[ngram1_phon_env], l=smoothed_oov)
+            else:
+                smoothed_surprisal[ngram1] = default_dict(smoothed_surprisal[ngram1], l=smoothed_oov)
                 
         return smoothed_surprisal
     
@@ -530,7 +573,7 @@ class PhonemeCorrDetector:
             disqualified_words[iteration] = disqualified
             
             # Print results of this iteration
-            if print_iterations:
+            if print_iterations: # TODO change this to loglevel=DEBUG
                 print(f'Iteration {iteration}')
                 print(f'\tQualified: {len(qualifying)}')
                 added = [self.same_meaning[i] for i in qualifying_words[iteration]
@@ -551,18 +594,17 @@ class PhonemeCorrDetector:
 
         # Add phonological environment weights after final iteration
         cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
-        pew_corrs = self.phon_env_corr_probs(cognate_alignments, counts=True)
         phon_env_surprisal = self.phoneme_surprisal(
             self.correspondence_probs(cognate_alignments, counts=True), 
-            phon_env_corr_counts=pew_corrs,
+            phon_env_corr_counts=self.phon_env_corr_probs(cognate_alignments, counts=True),
             ngram_size=ngram_size
             )
         
         # Return and save the final iteration's surprisal results
-        #results = surprisal_iterations[iteration]
-        results = phon_env_surprisal
+        results = surprisal_iterations[iteration]
         if save:
             self.lang1.phoneme_surprisal[(self.lang2, ngram_size)] = results
+            self.lang1.phon_env_surprisal[(self.lang2, ngram_size)] = phon_env_surprisal
         self.surprisal_dict = results
         
-        return results
+        return results, phon_env_surprisal
