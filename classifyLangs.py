@@ -10,7 +10,7 @@ if __name__ == "__main__":
     parser.add_argument('--family', required=True, help='Name of language group to classify')
     parser.add_argument('--file', required=True, help='Input CLDF data file path')
     parser.add_argument('--linkage', default='nj', choices=['nj', 'average', 'complete', 'ward', 'weighted', 'single'], help='Linkage method')
-    parser.add_argument('--cognates', default='auto', choices=['auto', 'gold', 'none'], help='Cognate clusters to use') # needs better description
+    parser.add_argument('--cognates', default='auto', choices=['auto', 'gold', 'none'], help='Cognate cluster type used for evaluation: "gold" cognates uses labels from dataset assuming that data are sorted into cognate classe; "auto" cognates auto-detects and clusters same-meaning words into cognate classes; "none" performs no separation of cognates from non-cognates')
     parser.add_argument('--cluster', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Cognate clustering method')
     parser.add_argument('--cutoff', default=None, type=float, help='Cutoff threshold in range [0,1] for clustering cognate sets')
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
@@ -78,7 +78,10 @@ if __name__ == "__main__":
     # Load or calculate phoneme surprisal
     if args.eval == 'surprisal' or args.eval == 'hybrid':
         logger.info(f'Loading {family.name} phoneme surprisal...')
-        family.load_phoneme_surprisal(ngram_size=args.ngram)
+        if args.cognates == 'gold':
+            family.load_phoneme_surprisal(ngram_size=args.ngram, gold=True)
+        else:
+            family.load_phoneme_surprisal(ngram_size=args.ngram, gold=False)
 
     # Load pre-clustered cognate sets, if available
     family.load_clustered_cognates()

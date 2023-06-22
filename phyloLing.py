@@ -391,7 +391,7 @@ class LexicalDataset:
                                 f.write(f'{line}\n')
                         
     
-    def load_phoneme_surprisal(self, ngram_size=1, surprisal_file=None, excepted=[]):
+    def load_phoneme_surprisal(self, ngram_size=1, surprisal_file=None, excepted=[], **kwargs):
         """Loads pre-calculated phoneme surprisal values from file"""
         
         # Designate the default file name to search for if no alternative is provided
@@ -405,7 +405,7 @@ class LexicalDataset:
             surprisal_data = pd.read_csv(surprisal_file)
             
         else:
-            self.calculate_phoneme_surprisal(ngram_size=ngram_size, output_file=surprisal_file)
+            self.calculate_phoneme_surprisal(ngram_size=ngram_size, output_file=surprisal_file, **kwargs)
             surprisal_data = pd.read_csv(surprisal_file)
         
         # Iterate through the dataframe and save the surprisal values to the Language
@@ -500,8 +500,8 @@ class LexicalDataset:
         clustered_cognates = {}
         for concept in sorted(concept_list):
             # logger.info(f'Clustering words for "{concept}"...')
-            words = [entry[1] for lang in self.concepts[concept] 
-                     for entry in self.concepts[concept][lang]]
+            words = [word.ipa for lang in self.concepts[concept] 
+                     for word in self.concepts[concept][lang]]
             lang_labels = [lang for lang in self.concepts[concept] 
                            for entry in self.concepts[concept][lang]]
             labels = [f'{lang_labels[i]} /{words[i]}/' for i in range(len(words))]
