@@ -370,13 +370,14 @@ class PhonemeCorrDetector:
                           #so far alpha=0.2 is best (at least on Romance)
         # Interpolation smoothing
         if weights is None:
-            n_weights = ngram_size
-            if phon_env_corr_counts is not None:
-                phon_env = True
-                n_weights += 1
-            else:
-                phon_env = False
-            weights = [1/n_weights for i in range(n_weights)]
+            weights = [1/ngram_size for i in range(ngram_size)]
+        if phon_env_corr_counts is not None:
+            phon_env = True
+            weights.append(5)
+            weight_sum = sum(weights)
+            weights = [i/weight_sum for i in weights]
+        else:
+            phon_env = False
         interpolation = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
 
         for i in range(ngram_size,0,-1):
@@ -445,7 +446,7 @@ class PhonemeCorrDetector:
                                                 #d = n_ngram_pairs + 1,
                                                 # updated mod: it should actually be the vocabulary GIVEN the phone of lang1, otherwise skewed by frequency of phone1
                                                 #d = len(interpolation[i][ngram1[:i]]),
-                                                alpha=alpha) # TODO I think alpha should be even smaller, perhaps 0.01
+                                                alpha=alpha)
                             for i in range(ngram_size,0,-1)]
                 
                 # add interpolation with phon_env surprisal

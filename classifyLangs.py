@@ -47,7 +47,11 @@ if __name__ == "__main__":
                 False, 
                 True, 
                 True
-            ])
+            ],
+            # TODO: seems to be best when all funcs weighted equally; or else with ~0.4, 0.2, 0.4 (PMI, surprisal, phonetic) scheme
+            # but PMI seems to affect outcome in correct direction more than others, though others are also needed
+            # could it have something to do with the fact that PMI dist is a DIST vs. the others are similarities? 
+            weights=[0.4, 0.2, 0.4])
     function_map = {
         # 'label':(function, sim, cutoff)
         'pmi':(pmi_dist, False, {}, 0.36),

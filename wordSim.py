@@ -534,7 +534,7 @@ def LevenshteinDist(word1, word2, normalize=True, asjp=True):
     return LevDist
         
 hybrid_scores = {}
-def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims)->float:
+def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->float:
     """Uses the euclidean distance to calculate the hybrid distance of multiple distance or similarity functions
 
     Args:
@@ -551,20 +551,22 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims)->float:
         return hybrid_scores[(pair1, pair2, tuple(funcs.keys()))]
     
     scores = []
-    for func, func_sim in zip(funcs, func_sims):
+    if weights is None:
+        weights = [1 for i in range(len(funcs))]
+    for func, func_sim, weight in zip(funcs, func_sims, weights):
         kwargs = funcs[func]
         score = func(pair1, pair2, **kwargs)
         if func_sim:
             score = 1 - score
-        scores.append(score)
+        scores.append(score*weight)
     
     score = euclidean_dist(scores)
     hybrid_scores[(pair1, pair2, tuple(funcs.keys()))] = score
     
     return score
         
-def hybrid_sim(pair1, pair2, funcs, func_sims, **kwargs):
-    hybrid_d = hybrid_dist(pair1, pair2, funcs=funcs, func_sims=func_sims)
+def hybrid_sim(pair1, pair2, funcs, func_sims, weights=None, **kwargs):
+    hybrid_d = hybrid_dist(pair1, pair2, funcs=funcs, func_sims=func_sims, weights=weights, **kwargs)
     hybrid_sim = e**-(hybrid_d)
     return hybrid_sim
     
