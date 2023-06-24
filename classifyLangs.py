@@ -18,12 +18,14 @@ if __name__ == "__main__":
     parser.add_argument('--ngram', default=1, type=int, help='Phoneme ngram size used for phoneme surprisal calculation')
     parser.add_argument('--no_calibration', dest='calibrate', action='store_false', help='Does not use cumulative density function calibration')
     parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
+    parser.add_argument('--combine_diphthongs', dest='combine_diphthongs', action='store_true', help='Performs IPA string segmentation including diphthongs as single segmental units')
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
     parser.add_argument('--min_amc', default=0.6, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
     parser.set_defaults(
         ignore_stress=False,
+        combine_diphthongs=False,
         calibrate=True,
         newick=False,
     )
@@ -72,7 +74,8 @@ if __name__ == "__main__":
                          args.file, 
                          exclude=args.exclude, 
                          min_amc=args.min_amc,
-                         ignore_stress=args.ignore_stress
+                         ignore_stress=args.ignore_stress,
+                         combine_diphthongs=args.combine_diphthongs
                          )
 
     # Load or calculate phoneme PMI

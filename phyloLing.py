@@ -37,7 +37,8 @@ class LexicalDataset:
                  loan_c = 'Loan',
                  glottocode_c='Glottocode',
                  iso_code_c='ISO 639-3',
-                 ignore_stress=False):
+                 ignore_stress=False,
+                 combine_diphthongs=True):
 
         # Directory to dataset 
         self.filepath = filepath
@@ -82,6 +83,7 @@ class LexicalDataset:
         self.ch_to_remove = suprasegmental_diacritics.union({' '})
         if not ignore_stress:
             self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
+        self.combine_diphthongs = combine_diphthongs
             
         # Concepts in dataset
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
@@ -125,7 +127,9 @@ class LexicalDataset:
                                             iso_code=self.iso_codes[lang],
                                             family=self,
                                             lang_id=self.lang_ids[lang],
-                                            loan_c=self.loan_c)
+                                            loan_c=self.loan_c,
+                                            combine_diphthongs=self.combine_diphthongs
+                                            )
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
         
@@ -1197,7 +1201,9 @@ class Language(LexicalDataset):
                  lang_id=None, glottocode=None, iso_code=None, family=None,
                  segments_c='Segments', ipa_c='Form', 
                  orthography_c='Value', concept_c='Parameter_ID',
-                 loan_c='Loan', id_c='ID', ignore_stress=False):
+                 loan_c='Loan', id_c='ID',
+                 combine_diphthongs=True,
+                 ignore_stress=False):
         
         # Attributes for parsing data dictionary (could this be inherited via a subclass?)
         self.id_c = id_c
@@ -1221,6 +1227,7 @@ class Language(LexicalDataset):
         self.consonants = defaultdict(lambda:0)
         self.tonemes = defaultdict(lambda:0)
         self.tonal = False
+        self.combine_diphthongs = combine_diphthongs
         
         # Phonological contexts
         self.unigrams = defaultdict(lambda:0)
@@ -1244,7 +1251,7 @@ class Language(LexicalDataset):
             if ignore_stress:
                 self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
         
-        self.create_vocabulary()
+        self.create_vocabulary(combine_diphthongs=self.combine_diphthongs)
         self.create_phoneme_inventory()
         self.check_affricates()
         
@@ -1425,7 +1432,7 @@ class Language(LexicalDataset):
         # First segment the word if necessary
         # Then pad the segmented word
         if not segmented:
-            segments = segment_ipa(word)
+            segments = segment_ipa(word, combine_diphthongs=self.combine_diphthongs)
             padded = ['# ', '# '] + segments + ['# ', '# ']
         else:
             padded = ['# ', '# '] + word + ['# ', '# ']
@@ -1568,9 +1575,9 @@ def combine_datasets(dataset_list):
     pass
 
 
-def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None, ignore_stress=False):
+def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None, **kwargs):
     logger.info(f'Loading {family}...')
-    family = LexicalDataset(data_file, family, ignore_stress=ignore_stress)
+    family = LexicalDataset(data_file, family, **kwargs)
     if exclude:
         family.remove_languages(exclude)
     if min_amc:

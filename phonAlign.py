@@ -70,7 +70,7 @@ def phone_align(word1, word2,
     If not segmented, the words are first segmented before being aligned.
     GOP = -1.22 by default, determined by cross-validation on gold alignments."""
     if not segmented:        
-        segments1, segments2 = map(segment_ipa, (word1, word2))
+        segments1, segments2 = map(segment_ipa, (word1, word2)) # TODO use Word class objects so we can access word.segments in order to have language-specific segmentation of diphthongs
     else:
         segments1, segments2 = word1, word2  
     
