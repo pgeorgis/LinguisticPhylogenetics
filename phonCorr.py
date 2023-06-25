@@ -487,10 +487,7 @@ class PhonemeCorrDetector:
                                                 d = len(self.lang2.phonemes) + 1,
                                                 alpha=alpha)
                 )
-            
-            if ngram_size > 1:
-                raise NotImplementedError('TODO: need to confirm that the indices above work with ngram_size > 1; is interpolation actually occurring if we only look ad the phon_env values rather than ngram i sizes?')
-            
+
             smoothed_oov = surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, weights)]))
             
             if phon_env:
