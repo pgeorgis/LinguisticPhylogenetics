@@ -1456,7 +1456,8 @@ class Language(LexicalDataset):
         if normalize:
             return mean(info_content[j][1] for j in info_content)
         else:
-            return sum(info_content[j][1] for j in info_content)
+            #return sum(info_content[j][1] for j in info_content)
+            return info_content
     
     def bigram_probability(self, bigram, delta=0.7):
         """Returns Kneser-Ney smoothed conditional probability P(p2|p1)"""

@@ -150,6 +150,7 @@ def phon_env_alignment(alignment, word2=False, env_func=phonEnvironment):
     def add_phon_env(word_aligned, segs, i, gap_count):
         if word_aligned[i] == '-':
             gap_count += 1
+            # TODO so gaps are skipped?
         
         else:
             seg_index = i - gap_count

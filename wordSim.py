@@ -393,12 +393,30 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
         self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False) 
         self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False) 
 
-        # Divide WAS by self-surprisal
-        WAS_l1l2 /= self_surprisal2
-        WAS_l2l1 /= self_surprisal1
+        # Weight surprisal values by self-surprisal/information content value of corresponding segment
+        # Segments with greater information content weighted more heavily
+        def weight_by_self_surprisal(alignment, self_surprisal):
+            self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
+            weighted_WAS = []
+            adjust = 0
+            for i, pair in enumerate(alignment):
+                if pair[0][0] != '-':
+                    weight = self_surprisal[(i-adjust)][-1] / self_info
+                    weighted = weight * WAS_l1l2[i]
+                    weighted_WAS.append(weighted)
+                else:
+                    adjust += 1
+            return weighted_WAS
+        weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, self_surprisal1)
+        weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, self_surprisal2)
+
+        # # Divide WAS by self-surprisal
+        # WAS_l1l2 /= self_surprisal2
+        # WAS_l2l1 /= self_surprisal1
         
         # Return and save the average of these two values
-        mean_WAS = mean([WAS_l1l2, WAS_l2l1])
+        mean_WAS = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
+        #mean_WAS = mean([WAS_l1l2, WAS_l2l1])
         scored_WAS[(pair1, pair2, ngram_size)] = mean_WAS
         return mean_WAS
 
