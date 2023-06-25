@@ -372,8 +372,8 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
         # Calculate the word-adaptation surprisal in each direction
         # (note: alignment needs to be reversed to run in second direction)
         if phon_env:
-            alignment = list(phon_env_alignment(alignment))
             rev_alignment = list(phon_env_alignment(reverse_alignment(alignment)))
+            alignment = list(phon_env_alignment(alignment))
             sur_dict1 = lang1.phon_env_surprisal[(lang2, ngram_size)]
             sur_dict2 = lang2.phon_env_surprisal[(lang1, ngram_size)]
         else:
@@ -392,7 +392,7 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
         # Calculate self-surprisal values in each direction
         self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False) 
         self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False) 
-        
+
         # Divide WAS by self-surprisal
         WAS_l1l2 /= self_surprisal2
         WAS_l2l1 /= self_surprisal1
