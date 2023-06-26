@@ -1,9 +1,9 @@
 from collections import defaultdict
 from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import phone_align, compatible_segments, phon_env_alignment
+from phonAlign import phone_align, compatible_segments, phon_env_alignment, phon_env_ngrams
 from statistics import mean, stdev
 import random
-from itertools import product, chain
+from itertools import product
 from math import log
 import re
 from phonSim.phonSim import phonEnvironment
@@ -395,9 +395,18 @@ class PhonemeCorrDetector:
         # Add in phonological environment correspondences, e.g. ('l', '#S<') (word-initial 'l') with 'ʎ' 
         if phon_env:
             for ngram1 in phon_env_corr_counts:
-                for ngram2 in phon_env_corr_counts[ngram1]:
-                    #backward
-                    interpolation['phon_env'][(ngram1,)][ngram2] += phon_env_corr_counts[ngram1][ngram2]
+                if ngram1 == '-':
+                    continue
+
+                phonEnv = ngram1[-1]
+                phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != 'S')
+                for context in phonEnv_contexts:
+                    ngram1_context = ngram1[:-1] + (context,)
+
+                    for ngram2 in phon_env_corr_counts[ngram1]: # TODO where do these ngram2 come from?
+
+                        #backward
+                        interpolation['phon_env'][(ngram1_context,)][ngram2] += phon_env_corr_counts[ngram1][ngram2]
         
         smoothed_surprisal = defaultdict(lambda:defaultdict(lambda:self.lang2.phoneme_entropy*ngram_size))
         all_ngrams_lang1 = self.get_possible_ngrams(self.lang1, ngram_size=ngram_size, phon_env=False)
@@ -405,13 +414,9 @@ class PhonemeCorrDetector:
         all_ngrams_lang2 = self.get_possible_ngrams(self.lang2, ngram_size=1, phon_env=False) 
         all_ngrams_lang2 = [ngram[0] for ngram in all_ngrams_lang2]
         
-        # get the number of possible ngram pairs/combinations from lang1 and lang2
-        n_ngram_pairs = len(all_ngrams_lang1) * len(all_ngrams_lang2)
-        
         if phon_env:
             # phon_env ngrams fixed at size 1
             all_ngrams_lang1 = self.get_possible_ngrams(self.lang1, ngram_size=1, phon_env=True)
-            n_ngram_pairs_phon_env = len(all_ngrams_lang1) * len(all_ngrams_lang2)
 
         for ngram1 in all_ngrams_lang1:
             # if phon_env:
@@ -451,23 +456,18 @@ class PhonemeCorrDetector:
                 
                 # add interpolation with phon_env surprisal
                 if phon_env:
-                    estimates.append(lidstone_smoothing(x=interpolation['phon_env'][ngram1_phon_env].get(ngram2, 0), 
-                                                N=sum(interpolation['phon_env'][ngram1_phon_env].values()), 
-                                                d = len(self.lang2.phonemes) + 1,
-                                                #d = n_ngram_pairs_phon_env + 1,
-                                                #d = len(interpolation['phon_env'][ngram1_phon_env]),
-                                                #d = len(interpolation['phon_env'][ngram1_phon_env]),
-                                                alpha=alpha) 
-                    )
-                    # TODO: I think it would be possible to interpolate among phon_envs of different detail levels, e.g.
-                    # F>S# - word-final segment preceded by a segment of greater sonority in a front vowel context
-                    # could be split into and interpolated among:
-                    # FS
-                    # >S
-                    # S#
-                    # F>S
-                    # FS#
-                    # >S#
+                    phonEnv = ngram1_phon_env[-1][-1]
+                    phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != 'S')
+                    context_estimates = []
+                    for context in phonEnv_contexts:
+                        ngram1_context = ngram1_phon_env[0][:-1] + (context,)
+                        context_estimates.append(lidstone_smoothing(x=interpolation['phon_env'][ngram1_context].get(ngram2, 0), 
+                                                                    N=sum(interpolation['phon_env'][ngram1_context].values()), 
+                                                                    d = len(self.lang2.phonemes) + 1,
+                                                                    alpha=alpha)
+                                                                    )
+                    estimates.append(mean(context_estimates))
+                    # TODO a better way to average these together would be to weight based on how many examples of each context there are
                 
                 smoothed = sum([estimate*weight for estimate, weight in zip(estimates, weights)])
                 if phon_env:
