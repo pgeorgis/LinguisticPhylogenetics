@@ -21,7 +21,7 @@ if __name__ == "__main__":
     parser.add_argument('--combine_diphthongs', dest='combine_diphthongs', action='store_true', help='Performs IPA string segmentation including diphthongs as single segmental units')
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
-    parser.add_argument('--min_amc', default=0.7, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
+    parser.add_argument('--min_amc', default=0.65, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
     parser.set_defaults(
         ignore_stress=False,
