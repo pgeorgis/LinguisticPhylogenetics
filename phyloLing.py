@@ -16,7 +16,7 @@ import numpy as np
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
 from auxFuncs import surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
-from phonSim.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim
+from phonSim.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim, phonEnvironment
 from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 import logging
@@ -37,7 +37,8 @@ class LexicalDataset:
                  loan_c = 'Loan',
                  glottocode_c='Glottocode',
                  iso_code_c='ISO 639-3',
-                 ignore_stress=False):
+                 ignore_stress=False,
+                 combine_diphthongs=True):
 
         # Directory to dataset 
         self.filepath = filepath
@@ -82,6 +83,7 @@ class LexicalDataset:
         self.ch_to_remove = suprasegmental_diacritics.union({' '})
         if not ignore_stress:
             self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
+        self.combine_diphthongs = combine_diphthongs
             
         # Concepts in dataset
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
@@ -125,7 +127,9 @@ class LexicalDataset:
                                             iso_code=self.iso_codes[lang],
                                             family=self,
                                             lang_id=self.lang_ids[lang],
-                                            loan_c=self.loan_c)
+                                            loan_c=self.loan_c,
+                                            combine_diphthongs=self.combine_diphthongs
+                                            )
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
         
@@ -378,9 +382,8 @@ class LexicalDataset:
             for lang1, lang2 in product(langs, langs):
                 if lang1 != lang2:
                     threshold = surprisal(1/len(lang2.phonemes))
-                    for p1 in sorted(list(lang1.phoneme_surprisal[(lang2, ngram_size)])):#lang1.phonemes:
-                        if p1 == ('-',):
-                            continue
+                    l1_phons = sorted([p for p in lang1.phoneme_surprisal[(lang2, ngram_size)].keys() if p != '-'])
+                    for p1 in l1_phons:
                         p2_candidates = lang1.phoneme_surprisal[(lang2, ngram_size)][p1]
                         if len(p2_candidates) > 0:
                             p2_candidates = dict_tuplelist(p2_candidates)[-n:]
@@ -392,7 +395,7 @@ class LexicalDataset:
                                 f.write(f'{line}\n')
                         
     
-    def load_phoneme_surprisal(self, ngram_size=1, surprisal_file=None, excepted=[]):
+    def load_phoneme_surprisal(self, ngram_size=1, surprisal_file=None, excepted=[], **kwargs):
         """Loads pre-calculated phoneme surprisal values from file"""
         
         # Designate the default file name to search for if no alternative is provided
@@ -406,7 +409,7 @@ class LexicalDataset:
             surprisal_data = pd.read_csv(surprisal_file)
             
         else:
-            self.calculate_phoneme_surprisal(ngram_size=ngram_size, output_file=surprisal_file)
+            self.calculate_phoneme_surprisal(ngram_size=ngram_size, output_file=surprisal_file, **kwargs)
             surprisal_data = pd.read_csv(surprisal_file)
         
         # Iterate through the dataframe and save the surprisal values to the Language
@@ -501,8 +504,8 @@ class LexicalDataset:
         clustered_cognates = {}
         for concept in sorted(concept_list):
             # logger.info(f'Clustering words for "{concept}"...')
-            words = [entry[1] for lang in self.concepts[concept] 
-                     for entry in self.concepts[concept][lang]]
+            words = [word.ipa for lang in self.concepts[concept] 
+                     for word in self.concepts[concept][lang]]
             lang_labels = [lang for lang in self.concepts[concept] 
                            for entry in self.concepts[concept][lang]]
             labels = [f'{lang_labels[i]} /{words[i]}/' for i in range(len(words))]
@@ -786,10 +789,10 @@ class LexicalDataset:
         # No separation of cognates/non-cognates: 
         # all synonymous words are evaluated irrespective of cognacy
         elif cognates == 'none':
-            clustered_concepts = {concept:{concept:[f'{lang} /{self.concepts[concept][lang][i][1]}/'
+            clustered_concepts = {concept:{concept:[f'{lang} /{self.concepts[concept][lang][i].ipa}/'
                                   for lang in self.concepts[concept] 
                                   for i in range(len(self.concepts[concept][lang]))]}
-                                  for concept in concept_list}            
+                                  for concept in concept_list}
         
         # Raise error for unrecognized cognate clustering methods
         else:
@@ -1198,7 +1201,9 @@ class Language(LexicalDataset):
                  lang_id=None, glottocode=None, iso_code=None, family=None,
                  segments_c='Segments', ipa_c='Form', 
                  orthography_c='Value', concept_c='Parameter_ID',
-                 loan_c='Loan', id_c='ID', ignore_stress=False):
+                 loan_c='Loan', id_c='ID',
+                 combine_diphthongs=True,
+                 ignore_stress=False):
         
         # Attributes for parsing data dictionary (could this be inherited via a subclass?)
         self.id_c = id_c
@@ -1222,6 +1227,7 @@ class Language(LexicalDataset):
         self.consonants = defaultdict(lambda:0)
         self.tonemes = defaultdict(lambda:0)
         self.tonal = False
+        self.combine_diphthongs = combine_diphthongs
         
         # Phonological contexts
         self.unigrams = defaultdict(lambda:0)
@@ -1229,6 +1235,8 @@ class Language(LexicalDataset):
         self.trigrams = defaultdict(lambda:0)
         self.ngrams = defaultdict(lambda:defaultdict(lambda:0))
         self.gappy_trigrams = defaultdict(lambda:0)
+        self.phon_environments = defaultdict(lambda:defaultdict(lambda:0))
+        self.phon_env_ngrams = defaultdict(lambda:defaultdict(lambda:0))
         self.info_contents = {}
         
         # Lexical inventory
@@ -1243,7 +1251,7 @@ class Language(LexicalDataset):
             if ignore_stress:
                 self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
         
-        self.create_vocabulary()
+        self.create_vocabulary(combine_diphthongs=self.combine_diphthongs)
         self.create_phoneme_inventory()
         self.check_affricates()
         
@@ -1253,6 +1261,7 @@ class Language(LexicalDataset):
         self.phoneme_correspondences = defaultdict(lambda:defaultdict(lambda:0))
         self.phoneme_pmi = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         self.phoneme_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
+        self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.detected_cognates = defaultdict(lambda:[])
         self.detected_noncognates = defaultdict(lambda:[])
         self.noncognate_thresholds = defaultdict(lambda:[])
@@ -1264,28 +1273,32 @@ class Language(LexicalDataset):
             concept = entry[self.concept_c]
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
-            # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
-            segments = segment_ipa(ipa, remove_ch=''.join(self.ch_to_remove), **kwargs)
-            #segments = entry[self.segments_c]
-            if len(segments) > 0:
-                if [orthography, ipa, segments] not in self.vocabulary[concept]:
-                    self.vocabulary[concept].append([orthography, ipa, segments])
-                loan = entry[self.loan_c]
-            
-                # Mark known loanwords
-                if loan == 'TRUE':
-                    self.loanwords[concept].append([orthography, ipa, segments])
-                    
+            word = Word(ipa, concept, orthography, self.ch_to_remove, **kwargs)
+            if len(word.segments) > 0:
+                if word not in self.vocabulary[concept]:
+                    #self.vocabulary[concept].append([orthography, ipa, segments])
+                    self.vocabulary[concept].append(word)
+                
+                    # Mark known loanwords
+                    loan = entry[self.loan_c]
+                    if loan == 'TRUE':
+                        self.loanwords[concept].append(word)
                     
     def create_phoneme_inventory(self):
         for concept in self.vocabulary:
-            for entry in self.vocabulary[concept]:
-                orthography, ipa, segments = entry
+            for word in self.vocabulary[concept]:
+                segments = word.segments
                 
                 # Count phones
                 for segment in segments:
                     self.phonemes[segment] += 1
                     self.unigrams[segment] += 1
+                
+                # Count phonological environments
+                for seg, env in zip(segments, word.phon_env):
+                    self.phon_environments[seg][env] += 1
+                #for seg in self.phon_environments:
+                #    self.phon_environments[seg] = normalize_dict(self.phon_environments[seg], default=True, lmbda=0) 
             
                 # Count trigrams and gappy trigrams
                 padded_segments = ['# ', '# '] + segments + ['# ', '# ']
@@ -1330,20 +1343,38 @@ class Language(LexicalDataset):
         if len(self.tonemes) > 0:
             self.tonal = True
     
-    def list_ngrams(self, ngram_size):
+    def list_ngrams(self, ngram_size, phon_env=False):
         """Returns a dictionary of ngrams of a particular size, with their counts"""
-        if len(self.ngrams[ngram_size]) > 0:
+
+        # Retrieve pre-calculated ngrams
+        if not phon_env and len(self.ngrams[ngram_size]) > 0:
             return self.ngrams[ngram_size]
         
+        elif phon_env and len(self.phon_env_ngrams[ngram_size]) > 0:
+            return self.phon_env_ngrams[ngram_size]
+        
         else:
-            segmented_words = [entry[2] for concept in self.vocabulary for entry in self.vocabulary[concept]]
-            for segs in segmented_words:
-                pad_n = ngram_size - 1
-                padded = ['# ']*pad_n + segs + ['# ']*pad_n
-                for i in range(len(padded)-pad_n):
-                    ngram = tuple(padded[i:i+ngram_size])
-                    self.ngrams[ngram_size][ngram] += 1
-            return self.ngrams[ngram_size]
+            for concept in self.vocabulary:
+                for word in self.vocabulary[concept]:
+                    segments = word.segments
+                    if phon_env:
+                        phon_env_segments = list(zip(segments, word.phon_env))
+                    pad_n = ngram_size - 1
+                    padded = ['# ']*pad_n + segments + ['# ']*pad_n
+                    if phon_env:
+                        padded_phon_env = ['# ']*pad_n + phon_env_segments + ['# ']*pad_n
+                    for i in range(len(padded)-pad_n):
+                        ngram = tuple(padded[i:i+ngram_size])
+                        self.ngrams[ngram_size][ngram] += 1
+                        if phon_env:
+                            phon_env_ngram = tuple(padded_phon_env[i:i+ngram_size])
+                            self.phon_env_ngrams[ngram_size][phon_env_ngram] += 1
+
+            if phon_env:
+                return self.phon_env_ngrams[ngram_size]
+            
+            else:
+                return self.ngrams[ngram_size]
         
     
     def lookup(self, segment, 
@@ -1356,8 +1387,10 @@ class Language(LexicalDataset):
         
         matches = []
         for concept in self.vocabulary:
-            for entry in self.vocabulary[concept]:
-                orthography, transcription, segments = entry
+            for word in self.vocabulary[concept]:
+                orthography = word.orthography
+                transcription = word.ipa
+                segments = word.segments
                 if field == 'transcription' and re.search(segment, transcription):
                     matches.append((concept, orthography, transcription))
                 elif field == 'segments' and segment in segments:
@@ -1399,7 +1432,7 @@ class Language(LexicalDataset):
         # First segment the word if necessary
         # Then pad the segmented word
         if not segmented:
-            segments = segment_ipa(word)
+            segments = segment_ipa(word, combine_diphthongs=self.combine_diphthongs)
             padded = ['# ', '# '] + segments + ['# ', '# ']
         else:
             padded = ['# ', '# '] + word + ['# ', '# ']
@@ -1423,7 +1456,8 @@ class Language(LexicalDataset):
         if normalize:
             return mean(info_content[j][1] for j in info_content)
         else:
-            return sum(info_content[j][1] for j in info_content)
+            #return sum(info_content[j][1] for j in info_content)
+            return info_content
     
     def bigram_probability(self, bigram, delta=0.7):
         """Returns Kneser-Ney smoothed conditional probability P(p2|p1)"""
@@ -1509,22 +1543,42 @@ class Language(LexicalDataset):
         s += '\nExample Words:'
         for i in range(5):
             concept = random.choice(list(self.vocabulary.keys()))
-            entry = random.choice(self.vocabulary[concept])
-            orth, ipa, segs = entry
-            s+= f'\n\t"{concept.upper()}": /{ipa}/ <{orth}>'
+            word = random.choice(self.vocabulary[concept])
+            s+= f'\n\t"{concept.upper()}": /{word.ipa}/ <{word.orthography}>'
             
         
         return s
 
+class Word:
+    def __init__(self, ipa_string, concept, orthography=None, ch_to_remove=[], **kwargs):
+        self.ipa = ipa_string
+        self.concept = concept
+        self.orthography = orthography
+        self.segments = self.segment(ch_to_remove, **kwargs)
+        self.phon_env = self.getPhonEnv()
+    
+    def segment(self, ch_to_remove, **kwargs):
+        return segment_ipa(
+            self.ipa, 
+            # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
+            remove_ch=''.join(ch_to_remove), 
+            **kwargs
+        )
+    
+    def getPhonEnv(self):
+        phon_env = []
+        for i, seg in enumerate(self.segments):
+            phon_env.append(phonEnvironment(self.segments, i))
+        return phon_env
 
 # COMBINING DATASETS
 def combine_datasets(dataset_list):
     pass
 
 
-def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None, ignore_stress=False):
+def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None, **kwargs):
     logger.info(f'Loading {family}...')
-    family = LexicalDataset(data_file, family, ignore_stress=ignore_stress)
+    family = LexicalDataset(data_file, family, **kwargs)
     if exclude:
         family.remove_languages(exclude)
     if min_amc:

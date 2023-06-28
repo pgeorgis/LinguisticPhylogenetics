@@ -15,7 +15,7 @@ def write_data(data_dict, output_file, sep='\t'):
                 print(data_dict[i])
             f.write(f'{values}\n')
 
-def vocablist2cldf(lang_files):
+def vocablist2cldf(lang_files, combine_diphthongs=True):
     # start_dir = os.getcwd()
     # os.chdir(list_dir)
     # lang_files = glob.glob('*.txt')
@@ -44,7 +44,7 @@ def vocablist2cldf(lang_files):
                     entry['Parameter_ID'] = gloss
                     entry['Value'] = orth
                     entry['Form'] = tr
-                    entry['Segments'] = ' '.join(segment_ipa(tr))
+                    entry['Segments'] = ' '.join(segment_ipa(tr, combine_diphthongs=combine_diphthongs))
                     entry['Cognate_ID'] = gloss
                     entry['Loan'] = 'TRUE' if '*' in gloss else ''
                     entry['Comment'] = line[2] if len(line) > 3 else ''

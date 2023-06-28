@@ -1,6 +1,9 @@
 from math import log, inf
+import re
+from itertools import combinations
 from nwunschAlign import best_alignment
 from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_ipa, phone_sim
+from phonSim.phonSim import phonEnvironment #, prosodic_environment_weight
 
 # WORD-LEVEL PHONETIC COMPARISON AND ALIGNMENT
 def compatible_segments(seg1, seg2):
@@ -69,7 +72,7 @@ def phone_align(word1, word2,
     If not segmented, the words are first segmented before being aligned.
     GOP = -1.22 by default, determined by cross-validation on gold alignments."""
     if not segmented:        
-        segments1, segments2 = map(segment_ipa, (word1, word2))
+        segments1, segments2 = map(segment_ipa, (word1, word2)) # TODO use Word class objects so we can access word.segments in order to have language-specific segmentation of diphthongs
     else:
         segments1, segments2 = word1, word2  
     
@@ -132,3 +135,66 @@ def reverse_alignment(alignment):
     for pair in alignment:
         reverse.append((pair[1], pair[0]))
     return reverse
+
+
+def phon_env_alignment(alignment, word2=False, env_func=phonEnvironment):
+    """Adds the phonological environment value of segments to an alignment
+    e.g. phon_env_alignment([('m', 'm'), ('j', '-'), ('ɔu̯', 'ɪ'), ('l̥', 'l'), ('k', 'ç')])
+    = [(('m', '#S<'), 'm'), (('j', '<S<'), '-'), (('ɔu̯', '<S>'), 'ɪ'), (('l̥', '>S>'), 'l'), (('k', '>S#'), 'ç')]
+    """
+    word1_aligned, word2_aligned = tuple(zip(*alignment))
+    word1_aligned = list(word1_aligned)
+    segs1 = tuple([seg for seg in word1_aligned if seg != '-'])
+    if word2:
+        segs2 = tuple([seg for seg in word2_aligned if seg != '-'])
+    gap_count1, gap_count2 = 0, 0
+
+    def add_phon_env(word_aligned, segs, i, gap_count):
+        if word_aligned[i] == '-':
+            gap_count += 1
+            # TODO so gaps are skipped?
+        
+        else:
+            seg_index = i - gap_count
+            phonEnv = env_func(segs, seg_index)
+            word_aligned[i] = word_aligned[i], phonEnv
+        
+        return word1_aligned, gap_count
+
+    for i in range(len(word1_aligned)):
+        word1_aligned, gap_count1 = add_phon_env(word1_aligned, segs1, i, gap_count1)
+        
+        # Do the same for word2 (not done by default)
+        if word2:
+            word2_aligned, gap_count2 = add_phon_env(word2_aligned, segs2, i, gap_count2)
+    
+    return zip(word1_aligned, word2_aligned)
+
+def phon_env_ngrams(phonEnv):
+    """Returns set of phonological environment strings of equal and lower order, 
+    e.g. ">S#" -> ">S", "S#", ">S#"
+
+    Args:
+        phonEnv (str): Phonological environment string, e.g. ">S#"
+
+    Returns:
+        set: possible equal and lower order phonological environment strings
+    """
+    assert re.search(r'.+S.+', phonEnv)
+    prefix = set(re.findall(r'[^S](?=.*S)', phonEnv))
+    prefixes = set()
+    for i in range(1, len(prefix)+1):
+        for x in combinations(prefix, i):
+            prefixes.add(''.join(x))
+    prefixes.add('')
+    suffix = set(re.search(r'(?<=S).+', phonEnv).group())
+    suffixes = set()
+    for i in range(1, len(suffix)+1):
+        for x in combinations(suffix, i):
+            suffixes.add(''.join(x))
+    suffixes.add('')
+    ngrams = set()
+    for prefix in prefixes:
+        for suffix in suffixes:
+            ngrams.add(f'{prefix}S{suffix}')
+    return ngrams

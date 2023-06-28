@@ -7,7 +7,7 @@ import re
 from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, suprasegmental_diacritics, strip_diacritics
 from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_environment_weight
 from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
-from phonAlign import phone_align, reverse_alignment
+from phonAlign import phone_align, reverse_alignment, phon_env_alignment
 from phonCorr import PhonemeCorrDetector
 
 def prepare_alignment(item1, item2, **kwargs):
@@ -230,6 +230,7 @@ def word_sim(word1, word2=None,
                     if double:
                         penalty /= penalty_discount
                 
+                # TODO: is this right?
                 if prosodic_env_scaling:
                     # Discount deletion penalty according to prosodic sonority 
                     # environment (based on List, 2012)
@@ -335,7 +336,8 @@ def segmental_word_sim(word1, word2=None,
 
 combined_surprisal_dicts = {}
 scored_WAS = {}
-def mutual_surprisal(pair1, pair2, ngram_size=1, **kwargs):
+def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
+    # TODO change pairs into Word class objects and extract language from there
     if (pair1, pair2, ngram_size) in scored_WAS:
         return scored_WAS[(pair1, pair2, ngram_size)]
     
@@ -369,25 +371,52 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, **kwargs):
             
         # Calculate the word-adaptation surprisal in each direction
         # (note: alignment needs to be reversed to run in second direction)
+        if phon_env:
+            rev_alignment = list(phon_env_alignment(reverse_alignment(alignment)))
+            alignment = list(phon_env_alignment(alignment))
+            sur_dict1 = lang1.phon_env_surprisal[(lang2, ngram_size)]
+            sur_dict2 = lang2.phon_env_surprisal[(lang1, ngram_size)]
+        else:
+            rev_alignment = reverse_alignment(alignment)
+            sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
+            sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
         WAS_l1l2 = adaptation_surprisal(alignment, 
-                                        surprisal_dict=lang1.phoneme_surprisal[(lang2, ngram_size)],
+                                        surprisal_dict=sur_dict1,
                                         ngram_size=ngram_size,
                                         normalize=False)
-        WAS_l2l1 = adaptation_surprisal(reverse_alignment(alignment), 
-                                        surprisal_dict=lang2.phoneme_surprisal[(lang1, ngram_size)],
+        WAS_l2l1 = adaptation_surprisal(rev_alignment, 
+                                        surprisal_dict=sur_dict2,
                                         ngram_size=ngram_size,
                                         normalize=False)
 
         # Calculate self-surprisal values in each direction
         self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False) 
         self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False) 
-        
-        # Divide WAS by self-surprisal
-        WAS_l1l2 /= self_surprisal2
-        WAS_l2l1 /= self_surprisal1
+
+        # Weight surprisal values by self-surprisal/information content value of corresponding segment
+        # Segments with greater information content weighted more heavily
+        def weight_by_self_surprisal(alignment, self_surprisal):
+            self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
+            weighted_WAS = []
+            adjust = 0
+            for i, pair in enumerate(alignment):
+                if pair[0][0] != '-':
+                    weight = self_surprisal[(i-adjust)][-1] / self_info
+                    weighted = weight * WAS_l1l2[i]
+                    weighted_WAS.append(weighted)
+                else:
+                    adjust += 1
+            return weighted_WAS
+        weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, self_surprisal1)
+        weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, self_surprisal2)
+
+        # # Divide WAS by self-surprisal
+        # WAS_l1l2 /= self_surprisal2
+        # WAS_l2l1 /= self_surprisal1
         
         # Return and save the average of these two values
-        mean_WAS = mean([WAS_l1l2, WAS_l2l1])
+        mean_WAS = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
+        #mean_WAS = mean([WAS_l1l2, WAS_l2l1])
         scored_WAS[(pair1, pair2, ngram_size)] = mean_WAS
         return mean_WAS
 
@@ -523,7 +552,7 @@ def LevenshteinDist(word1, word2, normalize=True, asjp=True):
     return LevDist
         
 hybrid_scores = {}
-def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims)->float:
+def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->float:
     """Uses the euclidean distance to calculate the hybrid distance of multiple distance or similarity functions
 
     Args:
@@ -540,20 +569,22 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims)->float:
         return hybrid_scores[(pair1, pair2, tuple(funcs.keys()))]
     
     scores = []
-    for func, func_sim in zip(funcs, func_sims):
+    if weights is None:
+        weights = [1 for i in range(len(funcs))]
+    for func, func_sim, weight in zip(funcs, func_sims, weights):
         kwargs = funcs[func]
         score = func(pair1, pair2, **kwargs)
         if func_sim:
             score = 1 - score
-        scores.append(score)
+        scores.append(score*weight)
     
     score = euclidean_dist(scores)
     hybrid_scores[(pair1, pair2, tuple(funcs.keys()))] = score
     
     return score
         
-def hybrid_sim(pair1, pair2, funcs, func_sims, **kwargs):
-    hybrid_d = hybrid_dist(pair1, pair2, funcs=funcs, func_sims=func_sims)
+def hybrid_sim(pair1, pair2, funcs, func_sims, weights=None, **kwargs):
+    hybrid_d = hybrid_dist(pair1, pair2, funcs=funcs, func_sims=func_sims, weights=weights, **kwargs)
     hybrid_sim = e**-(hybrid_d)
     return hybrid_sim
     

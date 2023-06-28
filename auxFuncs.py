@@ -172,7 +172,7 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, normalize=True
     if normalize:
         return mean(values)
     else:
-        return sum(values)
+        return values
 
 def entropy(X):
     """X should be a dictionary with absolute counts"""
