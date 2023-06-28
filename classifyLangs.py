@@ -80,11 +80,11 @@ if __name__ == "__main__":
 
     # Print some summary info about the loaded dataset
     logger.info(f'Loaded {len(family.languages)} doculects.')
-    amc = family.calculate_mutual_coverage()[-1]
-    if amc <= 0.7:
-        logger.warning(f'Average mutual coverage = {round(amc, 2)}. Recommend minimum is 0.7.')
+    abs_mc, avg_mc = family.calculate_mutual_coverage()
+    if avg_mc <= 0.7:
+        logger.warning(f'Average mutual coverage = {round(avg_mc, 2)}. Recommend minimum is 0.7.')
     else:
-        logger.debug(f'Average mutual coverage = {round(amc, 2)}.')
+        logger.info(f'Average mutual coverage is {round(avg_mc, 2)} ({abs_mc}/{len(family.concepts)} concepts in all {len(family.languages)} doculects).')
 
     # Load or calculate phoneme PMI
     logger.info(f'Loading {family.name} phoneme PMI...')
