@@ -55,7 +55,6 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 calibrate=True,
                 min_similarity=0,
                 clustered_id=None,
-                return_score_dict=False,
                 **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
 
     if (lang1, lang2, clustered_id, (eval_func[0], tuple(eval_func[1].items())), eval_sim, exclude_synonyms, min_similarity) in cognate_sims:
@@ -148,13 +147,9 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         
         sims[concept] = score if score >= min_similarity else 0
     
-    if return_score_dict:
-        return sims 
-    
-    else:
-        mean_sim = mean(sims.values())
+    mean_sim = mean(sims.values())
 
-        return mean_sim
+    return mean_sim
             
 
 # TODO: update this function if necessary
@@ -162,7 +157,6 @@ def weighted_cognate_sim(lang1, lang2,
                          clustered_cognates, 
                          eval_funcs, eval_sims, weights=None,
                          exclude_synonyms=True, 
-                         return_score_dict=False,
                          **kwargs):
     if weights is None:
         weights = [1/len(eval_funcs) for i in range(len(eval_funcs))]
