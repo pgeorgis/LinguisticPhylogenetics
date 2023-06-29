@@ -1,9 +1,10 @@
-from auxFuncs import euclidean_dist
+from auxFuncs import euclidean_dist, split_list_randomly
 from phonCorr import PhonemeCorrDetector
 from wordSim import Z_dist
 from statistics import mean, stdev, StatisticsError
 from math import e
 from scipy.stats import norm
+import numpy as np
 
 
 def binary_cognate_sim(lang1, lang2, clustered_cognates,
@@ -47,7 +48,6 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
     return sum(sims.values()) / total_cognate_ids
 
 
-cognate_sims = {}
 calibration_params = {}
 def cognate_sim(lang1, lang2, clustered_cognates,
                 eval_func, eval_sim, exclude_synonyms=True,
@@ -55,15 +55,19 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 calibrate=True,
                 min_similarity=0,
                 clustered_id=None,
+                seed=1,
                 **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
-
-    if (lang1, lang2, clustered_id, (eval_func[0], tuple(eval_func[1].items())), eval_sim, exclude_synonyms, min_similarity) in cognate_sims:
-        # Try to retrieve previously calculated similarity dictionary
-        sims = cognate_sims[(lang1, lang2, clustered_id, (eval_func[0], tuple(eval_func[1].items())), eval_sim, exclude_synonyms, min_similarity)]
     
-    else:
+    # Random forest approximation
+    # Randomly split concepts into N=10 groups
+    # Calculate cognate sim using each sample group
+    # Average together the cognate sim estimates
+    np.random.seed(seed)
+    concept_groups = split_list_randomly(list(clustered_cognates.keys()), n=10)
+    group_scores = []
+    for group in concept_groups:
         sims = {}
-        for concept in clustered_cognates:
+        for concept in group:
             concept_sims = {}
             l1_wordcount, l2_wordcount = 0, 0
                 
@@ -95,61 +99,61 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                     sims[concept] = 0        
         
         if len(sims) == 0:
-            raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
+            #raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
+            continue # TODO
             
-        # Save score dictionary
-        cognate_sims[(lang1, lang2, clustered_id, (eval_func[0], tuple(eval_func[1].items())), eval_sim, exclude_synonyms, min_similarity)] = sims
-        
-    # Get the non-synonymous word pair scores against which to 
-    # calibrate the synonymous word scores
-    if calibrate:
-        
-        try:
-            # Try to load previously calculated calibration parameters
-            mean_nc_score, nc_score_stdev = calibration_params[(lang1, lang2, (eval_func[0], tuple(eval_func[1].items())))]
-            
-        except KeyError:
-            if len(lang1.noncognate_thresholds[(lang2, (eval_func[0], tuple(eval_func[1].items())))]) > 0:
-                noncognate_scores = lang1.noncognate_thresholds[(lang2, (eval_func[0], tuple(eval_func[1].items())))]
-            else:
-                kwargs = eval_func[1]
-                noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func)
-            # nc_len = len(noncognate_scores)
-            
-            # Transform distance scores into similarity scores
-            if not eval_sim:
-                noncognate_scores = [e**-score for score in noncognate_scores]
-            
-            # Calculate mean and standard deviation from this sample distribution
-            mean_nc_score = mean(noncognate_scores)
-            nc_score_stdev = stdev(noncognate_scores)
-            
-            # Save calibration parameters
-            calibration_params[(lang1, lang2, (eval_func[0], tuple(eval_func[1].items())))] = mean_nc_score, nc_score_stdev
-    
-    # Apply minimum similarity and calibration
-    for concept in sims:
-        score = sims[concept]
-        
-        # Calibrate score against scores of non-synonymous word pairs
-        # pnorm: proportion of values from a normal distribution with
-        # mean and standard deviation defined by those of the sample
-        # of non-synonymous word pair scores, which are lower than
-        # a particular value (score)
-        # e.g. pnorm = 0.99 = 99% of values from the distribution
-        # of non-synonymous word pair scores are lower than the given score
-        # The higher this value, the more confident we can be that
-        # the given score does not come from that distribution, 
-        # i.e. that it is truly a cognate
+        # Get the non-synonymous word pair scores against which to 
+        # calibrate the synonymous word scores
         if calibrate:
-            pnorm = norm.cdf(score, loc=mean_nc_score, scale=nc_score_stdev)
-            score *= pnorm
+            
+            try:
+                # Try to load previously calculated calibration parameters
+                mean_nc_score, nc_score_stdev = calibration_params[(lang1, lang2, (eval_func[0], tuple(eval_func[1].items())))]
+                
+            except KeyError:
+                if len(lang1.noncognate_thresholds[(lang2, (eval_func[0], tuple(eval_func[1].items())))]) > 0:
+                    noncognate_scores = lang1.noncognate_thresholds[(lang2, (eval_func[0], tuple(eval_func[1].items())))]
+                else:
+                    kwargs = eval_func[1]
+                    noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func)
+                # nc_len = len(noncognate_scores)
+                
+                # Transform distance scores into similarity scores
+                if not eval_sim:
+                    noncognate_scores = [e**-score for score in noncognate_scores]
+                
+                # Calculate mean and standard deviation from this sample distribution
+                mean_nc_score = mean(noncognate_scores)
+                nc_score_stdev = stdev(noncognate_scores)
+                
+                # Save calibration parameters
+                calibration_params[(lang1, lang2, (eval_func[0], tuple(eval_func[1].items())))] = mean_nc_score, nc_score_stdev
         
-        sims[concept] = score if score >= min_similarity else 0
-    
-    mean_sim = mean(sims.values())
+        # Apply minimum similarity and calibration
+        for concept in sims:
+            score = sims[concept]
+            
+            # Calibrate score against scores of non-synonymous word pairs
+            # pnorm: proportion of values from a normal distribution with
+            # mean and standard deviation defined by those of the sample
+            # of non-synonymous word pair scores, which are lower than
+            # a particular value (score)
+            # e.g. pnorm = 0.99 = 99% of values from the distribution
+            # of non-synonymous word pair scores are lower than the given score
+            # The higher this value, the more confident we can be that
+            # the given score does not come from that distribution, 
+            # i.e. that it is truly a cognate
+            if calibrate:
+                pnorm = norm.cdf(score, loc=mean_nc_score, scale=nc_score_stdev)
+                score *= pnorm
+            
+            sims[concept] = score if score >= min_similarity else 0
+        
+        mean_sim = mean(sims.values())
 
-    return mean_sim
+        group_scores.append(mean_sim)
+
+    return mean(group_scores)
             
 
 # TODO: update this function if necessary
