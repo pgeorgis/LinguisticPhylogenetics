@@ -1,10 +1,10 @@
-from auxFuncs import euclidean_dist, split_list_randomly
+from auxFuncs import euclidean_dist
 from phonCorr import PhonemeCorrDetector
 from wordSim import Z_dist
 from statistics import mean, stdev, StatisticsError
 from math import e
 from scipy.stats import norm
-import numpy as np
+import random
 
 
 def binary_cognate_sim(lang1, lang2, clustered_cognates,
@@ -56,16 +56,32 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 min_similarity=0,
                 clustered_id=None,
                 seed=1,
+                n_trees=50,
+                forest_size=100,
                 **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
     
     # Random forest approximation
-    # Randomly split concepts into N=10 groups
-    # Calculate cognate sim using each sample group
-    # Average together the cognate sim estimates
-    np.random.seed(seed)
-    concept_groups = split_list_randomly(list(clustered_cognates.keys()), n=10)
-    group_scores = []
-    for group in concept_groups:
+    # Take N samples of the available concepts of size K
+    # Calculate the cognate sim for each sample, then average together
+    random.seed(seed)
+    concept_groups = {}
+    group_scores = {}
+    for n in range(n_trees):
+        concept_groups[n] = random.choices(list(clustered_cognates.keys()), k=forest_size)
+    # Ensure that every concept is in at least one of the groups
+    # If not, add to smallest (if equal sizes then add to one at random)
+    for concept in clustered_cognates:
+        present = False
+        for n, group in concept_groups.items():
+            if concept in group:
+                present = True
+                continue
+        if not present:
+            smallest = min(concept_groups.keys(), lambda x: len(concept_groups[x]))
+            concept_groups[smallest].append(concept)
+
+    # TODO some of this calculation is redundant, should not be repeated per concept_group
+    for n, group in concept_groups.items():
         sims = {}
         for concept in group:
             concept_sims = {}
@@ -99,8 +115,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                     sims[concept] = 0        
         
         if len(sims) == 0:
-            #raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
-            continue # TODO
+            continue
             
         # Get the non-synonymous word pair scores against which to 
         # calibrate the synonymous word scores
@@ -151,9 +166,12 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         
         mean_sim = mean(sims.values())
 
-        group_scores.append(mean_sim)
+        group_scores[n] = mean_sim
 
-    return mean(group_scores)
+    if len(group_scores) == 0:
+        raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
+    
+    return mean(group_scores.values())
             
 
 # TODO: update this function if necessary
