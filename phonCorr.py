@@ -181,7 +181,8 @@ class PhonemeCorrDetector:
 
     def calc_phoneme_pmi(self, radius=2, max_iterations=10,
                           p_threshold=0.1,
-                          seed=1, 
+                          seed=1,
+                          samples=5,
                           print_iterations=False, save=True):
         """
         Parameters
@@ -203,18 +204,8 @@ class PhonemeCorrDetector:
         results : collections.defaultdict
             Nested dictionary of phoneme PMI values.
         """
-        
-        random.seed(seed)
-        # Take a sample of different-meaning words, as large as the same-meaning set
-        sample_size = len(self.same_meaning)
-        diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-
         # First step: calculate probability of phones co-occuring within within 
         # a set radius of positions within their respective words
-        # synonyms_radius = self.radial_counts(self.same_meaning, radius)
-        
-        
-        # new
         synonyms_radius1 = self.radial_counts(self.same_meaning, radius, normalize=False)
         synonyms_radius2 = self.reverse_corr_dict(synonyms_radius1)
         for d in [synonyms_radius1, synonyms_radius2]:
@@ -230,87 +221,110 @@ class PhonemeCorrDetector:
             for seg2 in pmi_dict_l1l2[seg1]:
                 pmi_step1[seg1][seg2] = mean([pmi_dict_l1l2[seg1][seg2], pmi_dict_l2l1[seg2][seg1]])
         
-        
-        # At each following iteration N, re-align using the pmi_stepN as an 
-        # additional penalty, and then recalculate PMI
-        iteration = 0
-        PMI_iterations = {iteration:pmi_step1}
-        qualifying_words = default_dict({iteration:sorted(self.same_meaning)}, l=[])
-        disqualified_words = default_dict({iteration:diff_sample}, l=[])
-        while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
-            iteration += 1
+        sample_results = {}
+        sample_size = len(self.same_meaning)
+        # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
+        for sample_n in range(samples):
+            random.seed(seed+sample_n)
+            # Take a sample of different-meaning words, as large as the same-meaning set
+            diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
 
-            # Align the qualifying words of the previous step using previous step's PMI
-            cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], 
-                                                     added_penalty_dict=PMI_iterations[iteration-1],
-                                                     segmented=True)
-            
-            # Align the sample of different meaning and non-qualifying words again using previous step's PMI
-            noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1],
+            # At each following iteration N, re-align using the pmi_stepN as an 
+            # additional penalty, and then recalculate PMI
+            iteration = 0
+            PMI_iterations = {iteration:pmi_step1}
+            qualifying_words = default_dict({iteration:sorted(self.same_meaning)}, l=[])
+            disqualified_words = default_dict({iteration:diff_sample}, l=[])
+            while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
+                iteration += 1
+
+                # Align the qualifying words of the previous step using previous step's PMI
+                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], 
                                                         added_penalty_dict=PMI_iterations[iteration-1],
                                                         segmented=True)
-            
-            # Calculate correspondence probabilities and PMI values from these alignments
-            cognate_probs = self.correspondence_probs(cognate_alignments)
-            cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
-                                                for v in cognate_probs[k]} 
-                                          for k in cognate_probs}, l=defaultdict(lambda:0))
-            # noncognate_probs = self.correspondence_probs(noncognate_alignments)
-            PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs)# , noncognate_probs)
-            
-            # Align all same-meaning word pairs
-            all_alignments = self.align_wordlist(self.same_meaning, 
-                                                 added_penalty_dict=PMI_iterations[iteration-1],
-                                                 segmented=True)
+                
+                # Align the sample of different meaning and non-qualifying words again using previous step's PMI
+                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1],
+                                                            added_penalty_dict=PMI_iterations[iteration-1],
+                                                            segmented=True)
+                
+                # Calculate correspondence probabilities and PMI values from these alignments
+                cognate_probs = self.correspondence_probs(cognate_alignments)
+                cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
+                                                    for v in cognate_probs[k]} 
+                                            for k in cognate_probs}, l=defaultdict(lambda:0))
+                # noncognate_probs = self.correspondence_probs(noncognate_alignments)
+                PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs)# , noncognate_probs)
+                
+                # Align all same-meaning word pairs
+                all_alignments = self.align_wordlist(self.same_meaning, 
+                                                    added_penalty_dict=PMI_iterations[iteration-1],
+                                                    segmented=True)
 
-            # Score PMI for different meaning words and words disqualified in previous iteration
-            noncognate_PMI = []
-            for alignment in noncognate_alignments:
-                noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] 
-                                            for pair in alignment]))
-            # nc_mean = mean(noncognate_PMI)
-            # nc_stdev = stdev(noncognate_PMI)
-            
-            # Score same-meaning alignments for overall PMI and calculate p-value
-            # against different-meaning alignments
-            qualifying, disqualified = [], []
-            for i in range(len(self.same_meaning)):
-                alignment = all_alignments[i]
-                item = self.same_meaning[i]
-                PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] 
-                                for pair in alignment])
+                # Score PMI for different meaning words and words disqualified in previous iteration
+                noncognate_PMI = []
+                for alignment in noncognate_alignments:
+                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] 
+                                                for pair in alignment]))
+                # nc_mean = mean(noncognate_PMI)
+                # nc_stdev = stdev(noncognate_PMI)
                 
-                # pnorm = norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
-                # p_value = 1 - pnorm
-                p_value = (len([score for score in noncognate_PMI if score >= PMI_score])+1) / (len(noncognate_PMI)+1)
-                if p_value < p_threshold:
-                    qualifying.append(item)
-                else:
-                    disqualified.append(item)
-            qualifying_words[iteration] = sorted(qualifying)
-            disqualified_words[iteration] = disqualified + diff_sample
-            
-            # Print results of this iteration
-            if print_iterations:
-                print(f'Iteration {iteration}')
-                print(f'\tQualified: {len(qualifying)}')
-                added = [item for item in qualifying_words[iteration]
-                         if item not in qualifying_words[iteration-1]]
-                for item in added:
-                    word1, word2 = item[0][1], item[1][1]
-                    ipa1, ipa2 = item[0][2], item[1][2]
-                    print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
-                
-                print(f'\tDisqualified: {len(disqualified)}')
-                removed = [item for item in qualifying_words[iteration-1]
-                         if item not in qualifying_words[iteration]]
-                for item in removed:
-                    word1, word2 = item[0][1], item[1][1]
-                    ipa1, ipa2 = item[0][2], item[1][2]
-                    print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                # Score same-meaning alignments for overall PMI and calculate p-value
+                # against different-meaning alignments
+                qualifying, disqualified = [], []
+                for i in range(len(self.same_meaning)):
+                    alignment = all_alignments[i]
+                    item = self.same_meaning[i]
+                    PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] 
+                                    for pair in alignment])
                     
-        # Return and save the final iteration's PMI results
-        results = PMI_iterations[max(PMI_iterations.keys())]
+                    # pnorm = norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
+                    # p_value = 1 - pnorm
+                    p_value = (len([score for score in noncognate_PMI if score >= PMI_score])+1) / (len(noncognate_PMI)+1)
+                    if p_value < p_threshold:
+                        qualifying.append(item)
+                    else:
+                        disqualified.append(item)
+                qualifying_words[iteration] = sorted(qualifying)
+                disqualified_words[iteration] = disqualified + diff_sample
+                
+                # Print results of this iteration
+                if print_iterations:
+                    print(f'Iteration {iteration}')
+                    print(f'\tQualified: {len(qualifying)}')
+                    added = [item for item in qualifying_words[iteration]
+                            if item not in qualifying_words[iteration-1]]
+                    for item in added:
+                        word1, word2 = item[0][1], item[1][1]
+                        ipa1, ipa2 = item[0][2], item[1][2]
+                        print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                    
+                    print(f'\tDisqualified: {len(disqualified)}')
+                    removed = [item for item in qualifying_words[iteration-1]
+                            if item not in qualifying_words[iteration]]
+                    for item in removed:
+                        word1, word2 = item[0][1], item[1][1]
+                        ipa1, ipa2 = item[0][2], item[1][2]
+                        print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                        
+            # Return and save the final iteration's PMI results
+            results = PMI_iterations[max(PMI_iterations.keys())]
+            sample_results[sample_n] = results
+        
+        # Average together the PMI estimations from each sample
+        if samples > 1:
+            p1_all = set(p for sample_n in sample_results for p in sample_results[sample_n])
+            p2_all = set(p2 for sample_n in sample_results for p1 in sample_results[sample_n] for p2 in sample_results[sample_n][p1])
+            results = defaultdict(lambda:defaultdict(lambda:0))
+            for p1 in p1_all:
+                p1_dict = defaultdict(lambda:[])
+                for p2 in p2_all:
+                    for sample_n in sample_results:
+                        p1_dict[p2].append(sample_results[sample_n][p1][p2])
+                    results[p1][p2] = mean(p1_dict[p2])
+        else:
+            results = sample_results[0]
+
         if save:
             self.lang1.phoneme_pmi[self.lang2] = results
             self.lang2.phoneme_pmi[self.lang1] = self.reverse_corr_dict(results)
