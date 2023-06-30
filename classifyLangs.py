@@ -106,8 +106,11 @@ if __name__ == "__main__":
         cog_id = f'{family.name}_distfunc-{args.cluster}-{function_map[args.cluster][1]}_cutoff-{args.cutoff}'
 
     # Generate Newick tree string
+    logger.info(f'Generating phylogenetic tree...')
+    dist_func = cognate_sim # TODO other options?
+    code = family.generate_test_code(dist_func, sim=True, cognates=args.cognates, cutoff=args.cutoff)
     tree = family.draw_tree(
-        dist_func=cognate_sim, # other options?
+        dist_func=dist_func,
         sim=True, # cognate_sim
         cluster_func=function_map[args.cluster][0],
         cluster_sim=function_map[args.cluster][1],
@@ -119,8 +122,12 @@ if __name__ == "__main__":
         calibrate=args.calibrate,
         min_similarity=args.min_similarity,
         title=family.name, 
-        save_directory=os.path.join(family.directory, 'Plots'),
+        outtree=args.outtree,
         return_newick=args.newick)
+    if args.outtree:
+        logger.info(f'Wrote Newick tree to {args.outtree}')
+    else:
+        logger.info(f'Wrote Newick tree to {os.path.join(family.tree_dir, f"{code}.tre")}')
     
     # family.plot_languages(
     #     dist_func=cognate_sim, # other options?
