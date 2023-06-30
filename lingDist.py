@@ -2,7 +2,6 @@ from auxFuncs import euclidean_dist
 from phonCorr import PhonemeCorrDetector
 from wordSim import Z_dist
 from statistics import mean, stdev, StatisticsError
-from itertools import combinations
 from math import e
 from scipy.stats import norm
 import random
@@ -77,8 +76,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         # Set default forest size to 70% of shared concepts
         if not forest_size:
             forest_size = round(0.7*len(shared_concepts))
-        combinations_count = len(list(combinations(shared_concepts, forest_size)))
-        for n in range(min(n_trees, combinations_count)):
+        for n in range(n_trees):
             concept_groups[n] = random.choices(shared_concepts, k=forest_size)
         # Ensure that every shared concept is in at least one of the groups
         # If not, add to smallest (if equal sizes then add to one at random)
