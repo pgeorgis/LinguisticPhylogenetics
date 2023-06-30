@@ -517,15 +517,15 @@ class PhonemeCorrDetector:
                                ngram_size=2,
                                gold=False, # TODO add same with PMI?
                                print_iterations=False,
+                               samples=5,
                                seed=1,
                                save=True):
         # METHOD
         # 1) Calculate phoneme PMI
         # 2) Use phoneme PMI to align 
         # 3) Iterate
-        random.seed(seed)
-        
         # Calculate phoneme PMI if not already done, for alignment purposes
+
         if len(self.pmi_dict) == 0:
             self.pmi_dict = self.calc_phoneme_pmi(radius=radius, 
                                                   max_iterations=max_iterations, 
@@ -537,91 +537,116 @@ class PhonemeCorrDetector:
         same_meaning_alignments = self.align_wordlist(self.same_meaning,
                                                       added_penalty_dict=self.pmi_dict,
                                                       segmented=True)
+
         # Take a sample of different-meaning words, as large as the same-meaning set
         if not gold:
             sample_size = len(self.same_meaning)
-            diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-            diff_meaning_alignments = self.align_wordlist(diff_sample,
-                                                        added_penalty_dict=self.pmi_dict,
-                                                        segmented=True)
+            # Take N samples of different-meaning words, perform surprisal calibration, then average all of the estimates from the various samples
+            sample_results = {}
+            for sample_n in range(samples):
+                random.seed(seed+sample_n)
+            
+                diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
+                diff_meaning_alignments = self.align_wordlist(diff_sample,
+                                                            added_penalty_dict=self.pmi_dict,
+                                                            segmented=True)
 
-            # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
-            # Then test each same-meaning word pair to see if if it meets the qualifying threshold
-            iteration = 0
-            surprisal_iterations = {}
-            qualifying_words = default_dict({iteration:list(range(len(same_meaning_alignments)))}, l=[])
-            disqualified_words = defaultdict(lambda:[])
-            while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
-                iteration += 1
-                
-                # Calculate surprisal from the qualifying alignments of the previous iteration
-                cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration-1]]
-                surprisal_iterations[iteration] = self.phoneme_surprisal(self.correspondence_probs(cognate_alignments,
-                                                                                                counts=True,
-                                                                                                exclude_null=False, 
-                                                                                                ngram_size=ngram_size), 
-                                                                        ngram_size=ngram_size)
+                # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
+                # Then test each same-meaning word pair to see if if it meets the qualifying threshold
+                iteration = 0
+                surprisal_iterations = {}
+                qualifying_words = default_dict({iteration:list(range(len(same_meaning_alignments)))}, l=[])
+                disqualified_words = defaultdict(lambda:[])
+                while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
+                    iteration += 1
+                    
+                    # Calculate surprisal from the qualifying alignments of the previous iteration
+                    cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration-1]]
+                    surprisal_iterations[iteration] = self.phoneme_surprisal(self.correspondence_probs(cognate_alignments,
+                                                                                                    counts=True,
+                                                                                                    exclude_null=False, 
+                                                                                                    ngram_size=ngram_size), 
+                                                                            ngram_size=ngram_size)
 
-                # Retrieve the alignments of different-meaning and disqualified word pairs
-                # and calculate adaptation surprisal for them using new surprisal values
-                noncognate_alignments = diff_meaning_alignments + [same_meaning_alignments[i]
-                                                                for i in disqualified_words[iteration-1]]
-                noncognate_surprisal = [adaptation_surprisal(alignment, 
+                    # Retrieve the alignments of different-meaning and disqualified word pairs
+                    # and calculate adaptation surprisal for them using new surprisal values
+                    noncognate_alignments = diff_meaning_alignments + [same_meaning_alignments[i]
+                                                                    for i in disqualified_words[iteration-1]]
+                    noncognate_surprisal = [adaptation_surprisal(alignment, 
+                                                                surprisal_dict=surprisal_iterations[iteration], 
+                                                                normalize=True,
+                                                                ngram_size=ngram_size) 
+                                            for alignment in noncognate_alignments]
+                    
+                    # Normalize different-meaning pair surprisal scores by self-surprisal of word2
+                    # for i in range(len(noncognate_alignments)):
+                    #     alignment = noncognate_alignments[i]
+                    #     word2 = ''.join([pair[1] for pair in alignment if pair[1] != '-'])
+                    #     self_surprisal = self.lang2.self_surprisal(word2, segmented=False, normalize=False)
+                    #     noncognate_surprisal[i] /= self_surprisal
+
+                    # Score same-meaning alignments for surprisal and calculate p-value
+                    # against different-meaning alignments
+                    qualifying, disqualified = [], []
+                    for i in range(len(self.same_meaning)):
+                        alignment = same_meaning_alignments[i]
+                        item = self.same_meaning[i]
+                        surprisal_score = adaptation_surprisal(alignment, 
                                                             surprisal_dict=surprisal_iterations[iteration], 
                                                             normalize=True,
-                                                            ngram_size=ngram_size) 
-                                        for alignment in noncognate_alignments]
-                
-                # Normalize different-meaning pair surprisal scores by self-surprisal of word2
-                # for i in range(len(noncognate_alignments)):
-                #     alignment = noncognate_alignments[i]
-                #     word2 = ''.join([pair[1] for pair in alignment if pair[1] != '-'])
-                #     self_surprisal = self.lang2.self_surprisal(word2, segmented=False, normalize=False)
-                #     noncognate_surprisal[i] /= self_surprisal
-
-                # Score same-meaning alignments for surprisal and calculate p-value
-                # against different-meaning alignments
-                qualifying, disqualified = [], []
-                for i in range(len(self.same_meaning)):
-                    alignment = same_meaning_alignments[i]
-                    item = self.same_meaning[i]
-                    surprisal_score = adaptation_surprisal(alignment, 
-                                                        surprisal_dict=surprisal_iterations[iteration], 
-                                                        normalize=True,
-                                                        ngram_size=ngram_size)
-                    segs2 = item[1][3]
-                    # self_surprisal = self.lang2.self_surprisal(segs2, segmented=True, normalize=False)
-                    # surprisal_score /= self_surprisal
-                    p_value = (len([score for score in noncognate_surprisal if score <= surprisal_score])+1) / (len(noncognate_surprisal)+1)
-                    if p_value < p_threshold:
-                        qualifying.append(i)
-                    else:
-                        disqualified.append(i)
-                qualifying_words[iteration] = qualifying
-                disqualified_words[iteration] = disqualified
-                
-                # Print results of this iteration
-                if print_iterations: # TODO change this to loglevel=DEBUG
-                    print(f'Iteration {iteration}')
-                    print(f'\tQualified: {len(qualifying)}')
-                    added = [self.same_meaning[i] for i in qualifying_words[iteration]
-                            if i not in qualifying_words[iteration-1]]
-                    for item in added:
-                        word1, word2 = item[0][1], item[1][1]
-                        ipa1, ipa2 = item[0][2], item[1][2]
-                        print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                                                            ngram_size=ngram_size)
+                        segs2 = item[1][3]
+                        # self_surprisal = self.lang2.self_surprisal(segs2, segmented=True, normalize=False)
+                        # surprisal_score /= self_surprisal
+                        p_value = (len([score for score in noncognate_surprisal if score <= surprisal_score])+1) / (len(noncognate_surprisal)+1)
+                        if p_value < p_threshold:
+                            qualifying.append(i)
+                        else:
+                            disqualified.append(i)
+                    qualifying_words[iteration] = qualifying
+                    disqualified_words[iteration] = disqualified
                     
-                    print(f'\tDisqualified: {len(disqualified)}')
-                    removed = [self.same_meaning[i] for i in qualifying_words[iteration-1] 
-                            if i not in qualifying_words[iteration]]
-                    for item in removed:
-                        word1, word2 = item[0][1], item[1][1]
-                        ipa1, ipa2 = item[0][2], item[1][2]
-                        print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                    # Print results of this iteration
+                    if print_iterations: # TODO change this to loglevel=DEBUG
+                        print(f'Iteration {iteration}')
+                        print(f'\tQualified: {len(qualifying)}')
+                        added = [self.same_meaning[i] for i in qualifying_words[iteration]
+                                if i not in qualifying_words[iteration-1]]
+                        for item in added:
+                            word1, word2 = item[0][1], item[1][1]
+                            ipa1, ipa2 = item[0][2], item[1][2]
+                            print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                        
+                        print(f'\tDisqualified: {len(disqualified)}')
+                        removed = [self.same_meaning[i] for i in qualifying_words[iteration-1] 
+                                if i not in qualifying_words[iteration]]
+                        for item in removed:
+                            word1, word2 = item[0][1], item[1][1]
+                            ipa1, ipa2 = item[0][2], item[1][2]
+                            print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                
+                cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
+                sample_results[sample_n] = surprisal_iterations[iteration]
             
-            cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
-            surprisal_results = surprisal_iterations[iteration]
-        
+            # Average together the PMI estimations from each sample
+            if samples > 1:
+                p1_all = set(p for sample_n in sample_results for p in sample_results[sample_n])
+                p2_all = set(p2 for sample_n in sample_results for p1 in sample_results[sample_n] for p2 in sample_results[sample_n][p1])
+                surprisal_results = defaultdict(lambda:defaultdict(lambda:0))
+                for p1 in p1_all:
+                    p1_dict = defaultdict(lambda:[])
+                    for p2 in p2_all:
+                        for sample_n in sample_results:
+                            p1_dict[p2].append(sample_results[sample_n][p1][p2])
+                        surprisal_results[p1][p2] = mean(p1_dict[p2])
+                    oov_values = []
+                    for sample_n in sample_results:
+                        # Use non-IPA character <?> to retrieve OOV value from surprisal dict
+                        oov_values.append(sample_results[sample_n][p1]['?'])
+                    surprisal_results[p1] = default_dict(surprisal_results[p1], l=mean(oov_values))
+            else:
+                surprisal_results = sample_results[0]
+
         else: # gold : assumes wordlist is already coded by cognate; skip iteration and calculate surprisal directly 
             # TODO need to confirm that when the gloss/concept is checked, it considers the possible cognate class ID, e.g. rain_1
             cognate_alignments = same_meaning_alignments
