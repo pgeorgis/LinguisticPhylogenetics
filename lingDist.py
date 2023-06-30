@@ -56,6 +56,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 min_similarity=0,
                 clustered_id=None,
                 seed=1,
+                random_forest=True,
                 n_trees=50,
                 forest_size=100,
                 **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
@@ -63,22 +64,25 @@ def cognate_sim(lang1, lang2, clustered_cognates,
     # Random forest approximation
     # Take N samples of the available concepts of size K
     # Calculate the cognate sim for each sample, then average together
-    random.seed(seed)
     concept_groups = {}
     group_scores = {}
-    for n in range(n_trees):
-        concept_groups[n] = random.choices(list(clustered_cognates.keys()), k=forest_size)
-    # Ensure that every concept is in at least one of the groups
-    # If not, add to smallest (if equal sizes then add to one at random)
-    for concept in clustered_cognates:
-        present = False
-        for n, group in concept_groups.items():
-            if concept in group:
-                present = True
-                continue
-        if not present:
-            smallest = min(concept_groups.keys(), lambda x: len(concept_groups[x]))
-            concept_groups[smallest].append(concept)
+    if random_forest:
+        random.seed(seed)
+        for n in range(n_trees):
+            concept_groups[n] = random.choices(list(clustered_cognates.keys()), k=forest_size)
+        # Ensure that every concept is in at least one of the groups
+        # If not, add to smallest (if equal sizes then add to one at random)
+        for concept in clustered_cognates:
+            present = False
+            for n, group in concept_groups.items():
+                if concept in group:
+                    present = True
+                    continue
+            if not present:
+                smallest = min(concept_groups.keys(), lambda x: len(concept_groups[x]))
+                concept_groups[smallest].append(concept)
+    else:
+        concept_groups[1] = list(clustered_cognates.keys())
 
     # TODO some of this calculation is redundant, should not be repeated per concept_group
     for n, group in concept_groups.items():
