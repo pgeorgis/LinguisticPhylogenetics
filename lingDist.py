@@ -2,6 +2,7 @@ from auxFuncs import euclidean_dist
 from phonCorr import PhonemeCorrDetector
 from wordSim import Z_dist
 from statistics import mean, stdev, StatisticsError
+from itertools import combinations
 from math import e
 from scipy.stats import norm
 import random
@@ -57,10 +58,15 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 clustered_id=None,
                 seed=1,
                 random_forest=True,
-                n_trees=50,
-                forest_size=100,
+                n_trees=200,
+                forest_size=None,
                 **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
     
+    # Get list of shared concepts between the two languages
+    shared_concepts = [concept for concept in clustered_cognates if concept in lang1.vocabulary if concept in lang2.vocabulary]
+    if len(shared_concepts) == 0:
+        raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
+
     # Random forest approximation
     # Take N samples of the available concepts of size K
     # Calculate the cognate sim for each sample, then average together
@@ -68,21 +74,25 @@ def cognate_sim(lang1, lang2, clustered_cognates,
     group_scores = {}
     if random_forest:
         random.seed(seed)
-        for n in range(n_trees):
-            concept_groups[n] = random.choices(list(clustered_cognates.keys()), k=forest_size)
-        # Ensure that every concept is in at least one of the groups
+        # Set default forest size to 70% of shared concepts
+        if not forest_size:
+            forest_size = round(0.7*len(shared_concepts))
+        combinations_count = len(list(combinations(shared_concepts, forest_size)))
+        for n in range(min(n_trees, combinations_count)):
+            concept_groups[n] = random.choices(shared_concepts, k=forest_size)
+        # Ensure that every shared concept is in at least one of the groups
         # If not, add to smallest (if equal sizes then add to one at random)
-        for concept in clustered_cognates:
+        for concept in shared_concepts:
             present = False
             for n, group in concept_groups.items():
                 if concept in group:
                     present = True
                     continue
             if not present:
-                smallest = min(concept_groups.keys(), lambda x: len(concept_groups[x]))
+                smallest = min(concept_groups.keys(), key=lambda x: len(concept_groups[x]))
                 concept_groups[smallest].append(concept)
     else:
-        concept_groups[1] = list(clustered_cognates.keys())
+        concept_groups[1] = shared_concepts
 
     # TODO some of this calculation is redundant, should not be repeated per concept_group
     for n, group in concept_groups.items():
@@ -171,9 +181,6 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         mean_sim = mean(sims.values())
 
         group_scores[n] = mean_sim
-
-    if len(group_scores) == 0:
-        raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
     
     return mean(group_scores.values())
             
