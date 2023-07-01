@@ -1,5 +1,5 @@
 from collections import defaultdict
-from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
+from auxFuncs import normalize_dict, default_dict, dict_tuplelist, lidstone_smoothing, surprisal, adaptation_surprisal
 from phonAlign import phone_align, compatible_segments, phon_env_alignment, phon_env_ngrams
 from statistics import mean, stdev
 import random
@@ -15,6 +15,7 @@ class PhonemeCorrDetector:
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
         # self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2]
+        self.scored_words = defaultdict(lambda:{})
     
     def prepare_wordlists(self, wordlist):
     
@@ -335,17 +336,28 @@ class PhonemeCorrDetector:
         return results
 
     
-    def noncognate_thresholds(self, eval_func, seed=1, save=True):
+    def noncognate_thresholds(self, eval_func, seed=1, sample_size=None, save=True):
         #eval func is tuple (function, {kwarg:value})
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
         
         random.seed(seed)
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
-        sample_size = len(self.same_meaning)
+        if sample_size is None:
+            sample_size = len(self.same_meaning)
         diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
         noncognate_word_forms = [((item[0][2], self.lang1), (item[1][2], self.lang2)) for item in diff_sample]
-        noncognate_scores = [eval_func[0](pair[0], pair[1], **eval_func[1]) for pair in noncognate_word_forms]
+        noncognate_scores = []
+        func, kwargs = eval_func
+        kwargs_hashable = tuple(dict_tuplelist(kwargs))
+        func_key = (func, kwargs_hashable)
+        for pair in noncognate_word_forms:
+            if pair in self.scored_words[func_key]:
+                noncognate_scores.append(self.scored_words[func_key][pair])
+            else:
+                score = func(pair[0], pair[1], **kwargs)
+                noncognate_scores.append(score)
+                self.scored_words[func_key][pair] = score
         
         if save:
             self.lang1.noncognate_thresholds[(self.lang2, (eval_func[0], tuple(eval_func[1].items())))] = noncognate_scores
