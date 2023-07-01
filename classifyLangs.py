@@ -16,7 +16,7 @@ if __name__ == "__main__":
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
     parser.add_argument('--min_similarity', default=0, type=float, help='Minimum similarity threshold for word form evaluation')
     parser.add_argument('--ngram', default=1, type=int, help='Phoneme ngram size used for phoneme surprisal calculation')
-    parser.add_argument('--n_samples', default=50, type=int, help='Number of random samples for distance evaluation')
+    parser.add_argument('--n_samples', default=10, type=int, help='Number of random samples for distance evaluation')
     parser.add_argument('--no_calibration', dest='calibrate', action='store_false', help='Does not use cumulative density function calibration')
     parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
     parser.add_argument('--combine_diphthongs', dest='combine_diphthongs', action='store_true', help='Performs IPA string segmentation including diphthongs as single segmental units')
