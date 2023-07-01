@@ -57,7 +57,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 clustered_id=None,
                 seed=1,
                 n_samples=50,
-                sample_size=0.7,
+                sample_size=0.8,
                 logger=None,
                 **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
     
@@ -73,7 +73,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
     group_scores = {}
     if n_samples > 1:
         random.seed(seed)
-        # Set default sample size to 70% of shared concepts
+        # Set default sample size to 80% of shared concepts
         sample_n = round(sample_size*len(shared_concepts))
         for n in range(n_samples):
             concept_groups[n] = random.choices(shared_concepts, k=sample_n)
