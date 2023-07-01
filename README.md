@@ -18,3 +18,7 @@ When setting up for the first time, please create and activate the virtual envir
 - Install required packages:
 
 `venv/bin/pip3 install -r requirements.txt`
+
+- Install submodules:
+`git submodule init`
+`git submodule update`
