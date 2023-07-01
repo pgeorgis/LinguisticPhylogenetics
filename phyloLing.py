@@ -1280,7 +1280,12 @@ class Language(LexicalDataset):
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
             segments = entry[self.segments_c]
-            word = Word(ipa, concept, orthography, self.ch_to_remove, **kwargs)
+            word = Word(
+                ipa_string=ipa, 
+                concept=concept, 
+                orthography=orthography, 
+                ch_to_remove=self.ch_to_remove, 
+                **kwargs)
             if len(word.segments) > 0:
                 if word not in self.vocabulary[concept]:
                     #self.vocabulary[concept].append([orthography, ipa, segments])
@@ -1546,7 +1551,7 @@ class Language(LexicalDataset):
         return s
 
 class Word:
-    def __init__(self, ipa_string, concept, orthography=None, segments=None, ch_to_remove=[], **kwargs):
+    def __init__(self, ipa_string, concept, orthography=None, ch_to_remove=[], **kwargs):
         self.ipa = self.preprocess(ipa_string)
         self.concept = concept
         self.orthography = orthography

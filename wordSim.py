@@ -346,9 +346,8 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
         word2, lang2 = pair2
         
         # Remove suprasegmental and other ignored characters
-        diacritics_to_remove = lang1.ch_to_remove.union(lang2.ch_to_remove)
-        word1 = strip_ch(word1, diacritics_to_remove)
-        word2 = strip_ch(word2, diacritics_to_remove)
+        word1 = strip_ch(word1, lang1.ch_to_remove)
+        word2 = strip_ch(word2, lang2.ch_to_remove)
         
         # Calculate combined phoneme PMI if not already done
         # pmi_dict = combine_PMI(lang1, lang2, **kwargs)
@@ -390,8 +389,8 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
                                         normalize=False)
 
         # Calculate self-surprisal values in each direction
-        self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False) 
-        self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False) 
+        self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False)
+        self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False)
 
         # Weight surprisal values by self-surprisal/information content value of corresponding segment
         # Segments with greater information content weighted more heavily
@@ -401,6 +400,7 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
             adjust = 0
             for i, pair in enumerate(alignment):
                 if pair[0][0] != '-':
+                    # TODO I wonder if skipping the gaps had something to do with the former success?
                     weight = self_surprisal[(i-adjust)][-1] / self_info
                     weighted = weight * WAS[i]
                     weighted_WAS.append(weighted)
@@ -409,16 +409,14 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
             return weighted_WAS
         weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1)
         weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2)
-
-        # # Divide WAS by self-surprisal
-        # WAS_l1l2 /= self_surprisal2
-        # WAS_l2l1 /= self_surprisal1
         
         # Return and save the average of these two values
-        mean_WAS = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
-        #mean_WAS = mean([WAS_l1l2, WAS_l2l1])
-        scored_WAS[(pair1, pair2, ngram_size)] = mean_WAS
-        return mean_WAS
+        score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
+        # TODO Treat surprisal values as distances and compute euclidean distance over these, then take average
+        # score = mean([euclidean_dist(weighted_WAS_l1l2), euclidean_dist(weighted_WAS_l2l1)])
+
+        scored_WAS[(pair1, pair2, ngram_size)] = score
+        return score
 
 surprisal_sims = {}
 def surprisal_sim(pair1, pair2, ngram_size=1, **kwargs):
