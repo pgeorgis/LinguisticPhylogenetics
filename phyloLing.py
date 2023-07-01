@@ -109,7 +109,6 @@ class LexicalDataset:
         
         # Initialize languages
         language_vocab_data = defaultdict(lambda:defaultdict(lambda:{}))
-        language_vocabulary = defaultdict(lambda:defaultdict(lambda:{}))
         for i in data:
             lang = data[i][self.language_name_c]
             if ((doculects is None) or (lang in doculects)):

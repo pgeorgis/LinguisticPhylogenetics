@@ -82,17 +82,18 @@ def basic_word_sim(word1, word2=None, sim_func=phone_sim, **kwargs):
     return mean(phone_sims)
 
 
-calculated_word_sims = {}
-def word_sim(word1, word2=None, 
+calculated_phon_word_dists = {} # TODO shouldn't be a global variable
+def phon_word_dist(word1, word2=None, 
               sim_func=phone_sim,
               penalize_infocontent=False, 
               penalize_sonority=True,
               context_reduction=True, penalty_discount=2,
               prosodic_env_scaling=True,
-              total_sim=False,
+              total_sim=False, # TODO confirm that this is the better default; I think averaging is required to normalize for different word lengths
               **kwargs):
-    """Calculates phonetic similarity of an alignment without weighting by 
-    segment type, position, etc.
+    """Calculates phonological distance between two words on the basis of 
+    the phonetic similarity of aligned segments and phonological deletion penalties.
+    No weighting by segment type, position, etc.
     
     word1 : string (first word), list (alignment of two words), 
             or tuple (first word, second language)
@@ -107,8 +108,8 @@ def word_sim(word1, word2=None,
         alignment = word1
     
     if (tuple(alignment), sim_func, penalize_sonority, 
-       context_reduction, prosodic_env_scaling, total_sim) in calculated_word_sims: 
-        return calculated_word_sims[(tuple(alignment), sim_func, penalize_sonority, 
+       context_reduction, prosodic_env_scaling, total_sim) in calculated_phon_word_dists: 
+        return calculated_phon_word_dists[(tuple(alignment), sim_func, penalize_sonority, 
                                      context_reduction, prosodic_env_scaling, total_sim)] 
     else:
         # Get list of penalties
@@ -253,19 +254,16 @@ def word_sim(word1, word2=None,
         if total_sim:
             word_dist = sum(penalties)
         else:
-            word_dist = mean(penalties)
-        
-        # Return as similarity: e**-distance = 1/(e**distance)
-        word_sim = e**-word_dist
+            word_dist = euclidean_dist(penalties)
         
         # Save the calculated score
         if word2:
-            calculated_word_sims[(tuple(alignment), sim_func, 
-                                 penalize_sonority, 
-                                 context_reduction, prosodic_env_scaling, 
-                                 total_sim)] = word_sim
+            calculated_phon_word_dists[(tuple(alignment), sim_func, 
+                                        penalize_sonority, 
+                                        context_reduction, prosodic_env_scaling, 
+                                        total_sim)] = word_dist
             
-        return word_sim
+        return word_dist
 
 
 def segmental_word_sim(word1, word2=None, 
@@ -549,7 +547,7 @@ def LevenshteinDist(word1, word2, normalize=True, asjp=True):
         
     return LevDist
         
-hybrid_scores = {}
+hybrid_scores = {} # TODO shouldn't be global variable
 def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->float:
     """Calculates a hybrid distance of multiple distance or similarity functions
 
@@ -575,9 +573,13 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->
         score = func(pair1, pair2, **kwargs)
         if func_sim:
             score = 1 - score
+        
+        # Distance weighting concept: if a distance is weighted with a higher coefficient relative to another distance,
+        # it is as if that dimension is more impactful 
         scores.append(score*weight)
-    
+
     score = euclidean_dist(scores)
+
     hybrid_scores[(pair1, pair2, tuple(funcs.keys()))] = score
     
     return score
@@ -585,6 +587,7 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->
 def hybrid_sim(pair1, pair2, funcs, func_sims, weights=None, **kwargs):
     hybrid_d = hybrid_dist(pair1, pair2, funcs=funcs, func_sims=func_sims, weights=weights, **kwargs)
     hybrid_sim = e**-(hybrid_d)
+    #hybrid_sim = 1 / (1 + hybrid_d)
     return hybrid_sim
     
 def Z_score(p_values):

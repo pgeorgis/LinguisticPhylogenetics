@@ -1,7 +1,7 @@
 import argparse, os
 from phyloLing import load_family
 from lingDist import cognate_sim
-from wordSim import pmi_dist, surprisal_sim, word_sim, hybrid_sim, LevenshteinDist
+from wordSim import pmi_dist, mutual_surprisal, phon_word_dist, hybrid_sim, LevenshteinDist
 import logging
 
 if __name__ == "__main__":
@@ -51,25 +51,26 @@ if __name__ == "__main__":
             x, y, 
             funcs={
                 pmi_dist:{}, 
-                surprisal_sim:{'ngram_size':args.ngram},
-                word_sim:{}
+                mutual_surprisal:{'ngram_size':args.ngram},
+                phon_word_dist:{}
             },
             func_sims=[
                 False, 
-                True, 
-                True
+                False, 
+                False
             ],
             # TODO: seems to be best when all funcs weighted equally; or else with ~0.4, 0.2, 0.4 (PMI, surprisal, phonetic) scheme
             # but PMI seems to affect outcome in correct direction more than others, though others are also needed
-            # could it have something to do with the fact that PMI dist is a DIST vs. the others are similarities? 
-            weights=[0.4, 0.2, 0.4])
+            #weights=[0.5, 0.25, 0.25] # this combo works well
+            #weights=[0.5, 0.3, 0.2]
+            )
     function_map = {
         # 'label':(function, sim, cutoff)
         'pmi':(pmi_dist, False, {}, 0.36),
-        'surprisal':(surprisal_sim, True, {'ngram_size':args.ngram}, 0.74),
-        'phonetic':(word_sim, True, {}, 0.16),
+        'surprisal':(mutual_surprisal, False, {'ngram_size':args.ngram}, 0.74), # TODO cutoff needs to be recalibrated
+        'phonetic':(phon_word_dist, False, {}, 0.16), # TODO cutoff needs to be recalibrated
         'levenshtein':(LevenshteinDist, False, {}, 0.73),
-        'hybrid':(hybridSim, True, {}, 0.57),
+        'hybrid':(hybridSim, True, {}, 0.57), # TODO cutoff needs to be recalibrated
         }
     
     # Set cutoff to default for specified function, if not otherwise specified
