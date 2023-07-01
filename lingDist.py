@@ -50,7 +50,7 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
 
 calibration_params = {}
 def cognate_sim(lang1, lang2, clustered_cognates,
-                eval_func, eval_sim, exclude_synonyms=True,
+                eval_func, eval_sim, exclude_synonyms=True, # TODO improve exclude_synonyms
                 #eval func is tuple (function, {kwarg:value})
                 calibrate=True,
                 min_similarity=0,

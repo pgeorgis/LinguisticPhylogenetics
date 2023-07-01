@@ -182,7 +182,7 @@ class PhonemeCorrDetector:
     def calc_phoneme_pmi(self, radius=2, max_iterations=10,
                           p_threshold=0.1,
                           seed=1,
-                          samples=5,
+                          samples=10,
                           print_iterations=False, save=True):
         """
         Parameters
@@ -222,10 +222,12 @@ class PhonemeCorrDetector:
                 pmi_step1[seg1][seg2] = mean([pmi_dict_l1l2[seg1][seg2], pmi_dict_l2l1[seg2][seg1]])
         
         sample_results = {}
-        sample_size = len(self.same_meaning)
+        # Take a sample of same-meaning words, by default 70% of available same-meaning pairs
+        sample_size = round(len(self.same_meaning)*0.7)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         for sample_n in range(samples):
             random.seed(seed+sample_n)
+            synonym_sample = random.sample(self.same_meaning, sample_size)
             # Take a sample of different-meaning words, as large as the same-meaning set
             diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
 
@@ -233,7 +235,7 @@ class PhonemeCorrDetector:
             # additional penalty, and then recalculate PMI
             iteration = 0
             PMI_iterations = {iteration:pmi_step1}
-            qualifying_words = default_dict({iteration:sorted(self.same_meaning)}, l=[])
+            qualifying_words = default_dict({iteration:sorted(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
                 iteration += 1
@@ -257,7 +259,7 @@ class PhonemeCorrDetector:
                 PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs)# , noncognate_probs)
                 
                 # Align all same-meaning word pairs
-                all_alignments = self.align_wordlist(self.same_meaning, 
+                all_alignments = self.align_wordlist(synonym_sample, 
                                                     added_penalty_dict=PMI_iterations[iteration-1],
                                                     segmented=True)
 
@@ -272,9 +274,8 @@ class PhonemeCorrDetector:
                 # Score same-meaning alignments for overall PMI and calculate p-value
                 # against different-meaning alignments
                 qualifying, disqualified = [], []
-                for i in range(len(self.same_meaning)):
+                for i, item in enumerate(synonym_sample):
                     alignment = all_alignments[i]
-                    item = self.same_meaning[i]
                     PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] 
                                     for pair in alignment])
                     
@@ -517,7 +518,7 @@ class PhonemeCorrDetector:
                                ngram_size=2,
                                gold=False, # TODO add same with PMI?
                                print_iterations=False,
-                               samples=5,
+                               samples=10,
                                seed=1,
                                save=True):
         # METHOD
@@ -532,24 +533,24 @@ class PhonemeCorrDetector:
                                                   p_threshold=p_threshold, 
                                                   seed=seed)
 
-        # Align same-meaning and different meaning word pairs using PMI values: 
-        # the alignments will remain the same throughout iteration
-        same_meaning_alignments = self.align_wordlist(self.same_meaning,
-                                                      added_penalty_dict=self.pmi_dict,
-                                                      segmented=True)
-
-        # Take a sample of different-meaning words, as large as the same-meaning set
         if not gold:
-            sample_size = len(self.same_meaning)
-            # Take N samples of different-meaning words, perform surprisal calibration, then average all of the estimates from the various samples
+            # Take N samples of same and different-meaning words, perform surprisal calibration, then average all of the estimates from the various samples
+            sample_size = round(len(self.same_meaning)*0.7)
             sample_results = {}
             for sample_n in range(samples):
                 random.seed(seed+sample_n)
-            
+                same_sample = random.sample(self.same_meaning, sample_size)
+                # Take a sample of different-meaning words, as large as the same-meaning set
                 diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
                 diff_meaning_alignments = self.align_wordlist(diff_sample,
                                                             added_penalty_dict=self.pmi_dict,
                                                             segmented=True)
+
+                # Align same-meaning and different meaning word pairs using PMI values: 
+                # the alignments will remain the same throughout iteration
+                same_meaning_alignments = self.align_wordlist(same_sample,
+                                                              added_penalty_dict=self.pmi_dict,
+                                                              segmented=True)
 
                 # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
                 # Then test each same-meaning word pair to see if if it meets the qualifying threshold
@@ -588,14 +589,12 @@ class PhonemeCorrDetector:
                     # Score same-meaning alignments for surprisal and calculate p-value
                     # against different-meaning alignments
                     qualifying, disqualified = [], []
-                    for i in range(len(self.same_meaning)):
+                    for i, item in enumerate(same_sample):
                         alignment = same_meaning_alignments[i]
-                        item = self.same_meaning[i]
                         surprisal_score = adaptation_surprisal(alignment, 
                                                             surprisal_dict=surprisal_iterations[iteration], 
                                                             normalize=True,
                                                             ngram_size=ngram_size)
-                        segs2 = item[1][3]
                         # self_surprisal = self.lang2.self_surprisal(segs2, segmented=True, normalize=False)
                         # surprisal_score /= self_surprisal
                         p_value = (len([score for score in noncognate_surprisal if score <= surprisal_score])+1) / (len(noncognate_surprisal)+1)
@@ -610,7 +609,7 @@ class PhonemeCorrDetector:
                     if print_iterations: # TODO change this to loglevel=DEBUG
                         print(f'Iteration {iteration}')
                         print(f'\tQualified: {len(qualifying)}')
-                        added = [self.same_meaning[i] for i in qualifying_words[iteration]
+                        added = [same_sample[i] for i in qualifying_words[iteration]
                                 if i not in qualifying_words[iteration-1]]
                         for item in added:
                             word1, word2 = item[0][1], item[1][1]
@@ -618,7 +617,7 @@ class PhonemeCorrDetector:
                             print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
                         
                         print(f'\tDisqualified: {len(disqualified)}')
-                        removed = [self.same_meaning[i] for i in qualifying_words[iteration-1] 
+                        removed = [same_sample[i] for i in qualifying_words[iteration-1] 
                                 if i not in qualifying_words[iteration]]
                         for item in removed:
                             word1, word2 = item[0][1], item[1][1]
@@ -648,6 +647,12 @@ class PhonemeCorrDetector:
                 surprisal_results = sample_results[0]
 
         else: # gold : assumes wordlist is already coded by cognate; skip iteration and calculate surprisal directly 
+            # Align same-meaning and different meaning word pairs using PMI values: 
+            # the alignments will remain the same throughout iteration
+            same_meaning_alignments = self.align_wordlist(self.same_meaning,
+                                                        added_penalty_dict=self.pmi_dict,
+                                                        segmented=True)
+            
             # TODO need to confirm that when the gloss/concept is checked, it considers the possible cognate class ID, e.g. rain_1
             cognate_alignments = same_meaning_alignments
             surprisal_results = self.phoneme_surprisal(self.correspondence_probs(same_meaning_alignments,

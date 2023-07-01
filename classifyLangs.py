@@ -25,7 +25,7 @@ if __name__ == "__main__":
     parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
     parser.set_defaults(
         ignore_stress=False,
-        combine_diphthongs=False,
+        combine_diphthongs=False, # this needs to be True for Germanic, no?
         calibrate=True,
         newick=False,
     )
