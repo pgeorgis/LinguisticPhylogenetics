@@ -16,6 +16,8 @@ if __name__ == "__main__":
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
     parser.add_argument('--min_similarity', default=0, type=float, help='Minimum similarity threshold for word form evaluation')
     parser.add_argument('--ngram', default=1, type=int, help='Phoneme ngram size used for phoneme surprisal calculation')
+    parser.add_argument('--n_samples', default=10, type=int, help='Number of random samples for distance evaluation')
+    parser.add_argument('--sample_size', default=0.7, type=float, help='Percent of shared concepts to evaluate per sample (default 70%)')
     parser.add_argument('--no_calibration', dest='calibrate', action='store_false', help='Does not use cumulative density function calibration')
     parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
     parser.add_argument('--combine_diphthongs', dest='combine_diphthongs', action='store_true', help='Performs IPA string segmentation including diphthongs as single segmental units')
@@ -23,16 +25,23 @@ if __name__ == "__main__":
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
     parser.add_argument('--min_amc', default=0.65, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
+    parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
     parser.set_defaults(
         ignore_stress=False,
-        combine_diphthongs=False,
+        combine_diphthongs=False, # this needs to be True for Germanic, no?
         calibrate=True,
         newick=False,
     )
     args = parser.parse_args()
 
     # Configure the logger
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
+    log_levels = {
+        'DEBUG':logging.DEBUG,
+        'INFO':logging.INFO,
+        'WARNING':logging.WARNING,
+        'ERROR':logging.ERROR,
+    }
+    logging.basicConfig(level=log_levels[args.loglevel], format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
     logger = logging.getLogger(__name__)
 
     # Mapping of function labels and default cutoff values
@@ -75,7 +84,8 @@ if __name__ == "__main__":
                          exclude=args.exclude, 
                          min_amc=args.min_amc,
                          ignore_stress=args.ignore_stress,
-                         combine_diphthongs=args.combine_diphthongs
+                         combine_diphthongs=args.combine_diphthongs,
+                         logger=logger
                          )
 
     # Print some summary info about the loaded dataset
@@ -106,8 +116,11 @@ if __name__ == "__main__":
         cog_id = f'{family.name}_distfunc-{args.cluster}-{function_map[args.cluster][1]}_cutoff-{args.cutoff}'
 
     # Generate Newick tree string
+    logger.info(f'Generating phylogenetic tree...')
+    dist_func = cognate_sim # TODO other options?
+    code = family.generate_test_code(dist_func, sim=True, cognates=args.cognates, cutoff=args.cutoff)
     tree = family.draw_tree(
-        dist_func=cognate_sim, # other options?
+        dist_func=dist_func,
         sim=True, # cognate_sim
         cluster_func=function_map[args.cluster][0],
         cluster_sim=function_map[args.cluster][1],
@@ -116,11 +129,18 @@ if __name__ == "__main__":
         eval_sim=function_map[args.eval][1],
         cognates=args.cognates, 
         method=args.linkage, # this should be changed to linkage rather than method
-        calibrate=args.calibrate,
-        min_similarity=args.min_similarity,
+        calibrate=args.calibrate, # argument for cognate_sim
+        n_samples=args.n_samples, # argument for cognate_sim
+        sample_size=args.sample_size, # argument for cognate_sim
+        min_similarity=args.min_similarity, # argument for cognate_sim
+        logger=logger, # argument for cognate_sim
         title=family.name, 
-        save_directory=os.path.join(family.directory, 'Plots'),
+        outtree=args.outtree,
         return_newick=args.newick)
+    if args.outtree:
+        logger.info(f'Wrote Newick tree to {args.outtree}')
+    else:
+        logger.info(f'Wrote Newick tree to {os.path.join(family.tree_dir, f"{code}.tre")}')
     
     # family.plot_languages(
     #     dist_func=cognate_sim, # other options?

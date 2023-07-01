@@ -3,7 +3,8 @@ import pandas as pd
 from math import log, sqrt, e
 import re, operator, os
 from unidecode import unidecode
-from numpy import array, amax, zeros
+from numpy import array, amax, zeros, array_split
+from numpy.random import permutation
 from statistics import mean, stdev
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, linkage, fcluster, to_tree
@@ -44,6 +45,18 @@ def chunk_list(lis, n):
     """Splits a list into sublists of length n; if not evenly divisible by n,
     the final sublist contains the remainder"""
     return [lis[i * n:(i + 1) * n] for i in range((len(lis) + n - 1) // n)]
+
+def split_list_randomly(lst, n):
+    if n <= 0:
+        raise ValueError("Number of groups (n) should be greater than zero.")
+    if n > len(lst):
+        raise ValueError("Number of groups (n) should not exceed the length of the list.")
+
+    random_indices = permutation(len(lst))
+    lst_array = array(lst)
+    groups = array_split(lst_array[random_indices], n)
+
+    return groups
 
 def rescale(val, lis, new_min = 0.0, new_max = 1.0):
     """Rescales a value between new_min and new_max according to the values of lis"""
