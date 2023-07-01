@@ -16,6 +16,7 @@ if __name__ == "__main__":
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
     parser.add_argument('--min_similarity', default=0, type=float, help='Minimum similarity threshold for word form evaluation')
     parser.add_argument('--ngram', default=1, type=int, help='Phoneme ngram size used for phoneme surprisal calculation')
+    parser.add_argument('--n_samples', default=50, type=int, help='Number of random samples for distance evaluation')
     parser.add_argument('--no_calibration', dest='calibrate', action='store_false', help='Does not use cumulative density function calibration')
     parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
     parser.add_argument('--combine_diphthongs', dest='combine_diphthongs', action='store_true', help='Performs IPA string segmentation including diphthongs as single segmental units')
@@ -23,6 +24,7 @@ if __name__ == "__main__":
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
     parser.add_argument('--min_amc', default=0.65, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
+    parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
     parser.set_defaults(
         ignore_stress=False,
         combine_diphthongs=False, # this needs to be True for Germanic, no?
@@ -32,7 +34,13 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Configure the logger
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
+    log_levels = {
+        'DEBUG':logging.DEBUG,
+        'INFO':logging.INFO,
+        'WARNING':logging.WARNING,
+        'ERROR':logging.ERROR,
+    }
+    logging.basicConfig(level=log_levels[args.loglevel], format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
     logger = logging.getLogger(__name__)
 
     # Mapping of function labels and default cutoff values
@@ -75,7 +83,8 @@ if __name__ == "__main__":
                          exclude=args.exclude, 
                          min_amc=args.min_amc,
                          ignore_stress=args.ignore_stress,
-                         combine_diphthongs=args.combine_diphthongs
+                         combine_diphthongs=args.combine_diphthongs,
+                         logger=logger
                          )
 
     # Print some summary info about the loaded dataset
@@ -119,8 +128,10 @@ if __name__ == "__main__":
         eval_sim=function_map[args.eval][1],
         cognates=args.cognates, 
         method=args.linkage, # this should be changed to linkage rather than method
-        calibrate=args.calibrate,
-        min_similarity=args.min_similarity,
+        calibrate=args.calibrate, # argument for cognate_sim
+        n_samples=args.n_samples, # argument for cognate_sim
+        min_similarity=args.min_similarity, # argument for cognate_sim
+        logger=logger, # argument for cognate_sim
         title=family.name, 
         outtree=args.outtree,
         return_newick=args.newick)

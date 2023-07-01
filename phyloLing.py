@@ -21,10 +21,6 @@ from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 import logging
 
-# Configure the logger
-logging.basicConfig(level=logging.INFO, format='%(asctime)s phyloLing %(levelname)s: %(message)s')
-logger = logging.getLogger(__name__)
-
 class LexicalDataset: 
     def __init__(self, filepath, name, 
                  id_c = 'ID',
@@ -38,7 +34,18 @@ class LexicalDataset:
                  glottocode_c='Glottocode',
                  iso_code_c='ISO 639-3',
                  ignore_stress=False,
-                 combine_diphthongs=True):
+                 combine_diphthongs=True,
+                 logger=None):
+        
+        # Dataset name and logger
+        self.name = name
+        if logger:
+            self.logger = logger
+        else:
+            # Configure the logger from scratch, default loglevel=INFO
+            logging.basicConfig(level=logging.INFO, format='%(asctime)s phyloLing %(levelname)s: %(message)s')
+            logger = logging.getLogger(__name__)
+        self.logger.info(f'Loading {self.name}...')
 
         # Directory to dataset 
         self.filepath = filepath
@@ -72,7 +79,6 @@ class LexicalDataset:
         self.iso_code_c = iso_code_c
     
         # Information about languages included
-        self.name = name
         self.languages = {}
         self.lang_ids = {}
         self.glottocodes = {}
@@ -242,7 +248,8 @@ class LexicalDataset:
                 else:
                     prune_log += f'\n\t\t{lang} ({vocab_size} concepts)'
             prune_log += f'\tAMC increased from {round(original_amc, 2)} to {round(self.mutual_coverage[1], 2)}.'
-            logger.info(prune_log)
+            if self.logger:
+                self.logger.info(prune_log)
     
     
     def calculate_phoneme_pmi(self, output_file=None, **kwargs):
@@ -262,12 +269,12 @@ class LexicalDataset:
         for pair in product(l, l):
             lang1, lang2 = pair
             if lang1.name not in printed:
-                logger.info(f'Calculating phoneme PMI for {lang1.name}...')
+                self.logger.info(f'Calculating phoneme PMI for {lang1.name}...')
                 printed.append(lang1.name)
             if (lang2, lang1) not in checked:
                     
                 if len(lang1.phoneme_pmi[lang2]) == 0:
-                    # logger.info(f'Calculating phoneme PMI for {lang1.name} and {lang2.name}...')
+                    # self.logger.info(f'Calculating phoneme PMI for {lang1.name} and {lang2.name}...')
                     pmi = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
                 
         # Save calculated PMI values to file
@@ -338,7 +345,7 @@ class LexicalDataset:
         
         # Check whether phoneme surprisal has been calculated already for this pair
         for lang1 in self.languages.values():
-            logger.info(f'Calculating phoneme surprisal for {lang1.name}...')
+            self.logger.info(f'Calculating phoneme surprisal for {lang1.name}...')
             for lang2 in self.languages.values():
                     
                 # If not, calculate it now
@@ -503,7 +510,7 @@ class LexicalDataset:
                         if len(self.concepts[concept]) > 1]
         clustered_cognates = {}
         for concept in sorted(concept_list):
-            # logger.info(f'Clustering words for "{concept}"...')
+            # self.logger.info(f'Clustering words for "{concept}"...')
             words = [word.ipa for lang in self.concepts[concept] 
                      for word in self.concepts[concept][lang]]
             lang_labels = [lang for lang in self.concepts[concept] 
@@ -602,7 +609,7 @@ class LexicalDataset:
             s += ' indices.'
         else:
             s += ' index.'
-        logger.info(s)
+        self.logger.info(s)
         
                 
     def write_BEASTling_input(self, clustered_cognates, 
@@ -661,7 +668,7 @@ class LexicalDataset:
                 
             f.write(config)
         
-        logger.info(f'Wrote BEASTling input to {directory}.')
+        self.logger.info(f'Wrote BEASTling input to {directory}.')
                 
     
     def evaluate_clusters(self, clustered_cognates, method='bcubed'):
@@ -768,7 +775,7 @@ class LexicalDataset:
             if cognate_code in self.clustered_cognates:
                 clustered_concepts = self.clustered_cognates[cognate_code]
             else:
-                logger.info('Clustering cognates...')
+                self.logger.info('Clustering cognates...')
                 clustered_concepts = self.cluster_cognates(concept_list,
                                                         dist_func=cluster_func, 
                                                         sim=cluster_sim, 
@@ -1053,7 +1060,7 @@ class LexicalDataset:
             if code in self.clustered_cognates:
                 clustered_concepts = self.clustered_cognates[code]
             else:
-                logger.info('Clustering cognates...')
+                self.logger.info('Clustering cognates...')
                 clustered_concepts = self.cluster_cognates(concept_list,
                                                         dist_func=cluster_func, 
                                                         sim=cluster_sim, 
@@ -1415,7 +1422,7 @@ class Language(LexicalDataset):
             lig, double = aff_pair
             if lig in self.phonemes:
                 if double in self.phonemes:
-                    logger.warning(f'Both /{lig}/ and /{double}/ are in {self.name} transcriptions!')
+                    self.logger.warning(f'Both /{lig}/ and /{double}/ are in {self.name} transcriptions!')
     
     
     def calculate_infocontent(self, word, segmented=False):
@@ -1576,9 +1583,8 @@ def combine_datasets(dataset_list):
     pass
 
 
-def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None, **kwargs):
-    logger.info(f'Loading {family}...')
-    family = LexicalDataset(data_file, family, **kwargs)
+def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None, logger=None, **kwargs):
+    family = LexicalDataset(data_file, family, logger=logger, **kwargs)
     if exclude:
         family.remove_languages(exclude)
     if min_amc:
