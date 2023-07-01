@@ -1260,7 +1260,6 @@ class Language(LexicalDataset):
         
         self.create_vocabulary(combine_diphthongs=self.combine_diphthongs)
         self.create_phoneme_inventory()
-        self.check_affricates()
         
         self.phoneme_entropy = entropy(self.phonemes)
         
@@ -1280,6 +1279,7 @@ class Language(LexicalDataset):
             concept = entry[self.concept_c]
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
+            segments = entry[self.segments_c]
             word = Word(ipa, concept, orthography, self.ch_to_remove, **kwargs)
             if len(word.segments) > 0:
                 if word not in self.vocabulary[concept]:
@@ -1412,17 +1412,6 @@ class Language(LexicalDataset):
             for match in matches:
                 concept, orthography, transcription = match
                 print(f"<{orthography}> /{transcription}/ '{concept}'")
-            
-                
-    def check_affricates(self):
-        """Ensure that affricates have consistent representation"""
-        ligatures = ['ʦ', 'ʣ', 'ʧ', 'ʤ', 'ʨ', 'ʥ']
-        double_ch = ['t͡s', 'd͡z', 't͡ʃ', 'd͡ʒ', 't͡ɕ', 'd͡ʑ']
-        for aff_pair in zip(ligatures, double_ch):
-            lig, double = aff_pair
-            if lig in self.phonemes:
-                if double in self.phonemes:
-                    self.logger.warning(f'Both /{lig}/ and /{double}/ are in {self.name} transcriptions!')
     
     
     def calculate_infocontent(self, word, segmented=False):
@@ -1557,12 +1546,23 @@ class Language(LexicalDataset):
         return s
 
 class Word:
-    def __init__(self, ipa_string, concept, orthography=None, ch_to_remove=[], **kwargs):
-        self.ipa = ipa_string
+    def __init__(self, ipa_string, concept, orthography=None, segments=None, ch_to_remove=[], **kwargs):
+        self.ipa = self.preprocess(ipa_string)
         self.concept = concept
         self.orthography = orthography
         self.segments = self.segment(ch_to_remove, **kwargs)
         self.phon_env = self.getPhonEnv()
+    
+    def preprocess(self, ipa_string, normalize_geminates=False):
+        # Normalize common IPA character mistakes
+        # Normalize affricates to special ligature characters, where available
+        ipa_string = normalize_ipa_ch(ipa_string)
+
+        # Normalize geminate consonants to /Cː/
+        if normalize_geminates:
+            ipa_string = re.sub(fr'([{consonants}])\1', r'\1ː', ipa_string)
+
+        return normalize_ipa_ch(ipa_string)
     
     def segment(self, ch_to_remove, **kwargs):
         return segment_ipa(
