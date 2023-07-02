@@ -569,7 +569,7 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->
     scores = []
     if weights is None:
         weights = [1/len(funcs) for i in range(len(funcs))]
-    # assert round(sum(weights)) == 1.0
+    assert round(sum(weights)) == 1.0
     for func, func_sim, weight in zip(funcs, func_sims, weights):
         kwargs = funcs[func]
         score = func(pair1, pair2, **kwargs)
