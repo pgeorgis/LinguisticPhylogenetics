@@ -20,7 +20,7 @@ if __name__ == "__main__":
     parser.add_argument('--sample_size', default=0.8, type=float, help='Percent of shared concepts to evaluate per sample (default 70%)')
     parser.add_argument('--no_calibration', dest='calibrate', action='store_false', help='Does not use cumulative density function calibration')
     parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
-    parser.add_argument('--combine_diphthongs', dest='combine_diphthongs', action='store_true', help='Performs IPA string segmentation including diphthongs as single segmental units')
+    parser.add_argument('--no_diphthongs', dest='no_diphthongs', action='store_true', help='Performs IPA string segmentation without diphthongs as single segmental units')
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
     parser.add_argument('--min_amc', default=0.65, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
@@ -28,7 +28,7 @@ if __name__ == "__main__":
     parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
     parser.set_defaults(
         ignore_stress=False,
-        combine_diphthongs=False, # this needs to be True for Germanic, no?
+        no_diphthongs=False,
         calibrate=True,
         newick=False,
     )
@@ -84,7 +84,7 @@ if __name__ == "__main__":
                          exclude=args.exclude, 
                          min_amc=args.min_amc,
                          ignore_stress=args.ignore_stress,
-                         combine_diphthongs=args.combine_diphthongs,
+                         combine_diphthongs=not args.no_diphthongs,
                          logger=logger
                          )
 
