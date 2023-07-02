@@ -397,12 +397,11 @@ class PhonemeCorrDetector:
                           #so far alpha=0.2 is best (at least on Romance)
         # Interpolation smoothing
         if weights is None:
-            weights = [1/ngram_size for i in range(ngram_size)]
+            # Each ngram estimate will be weighted proportional to its size
+            # Weight the estimate from a 2gram twice as much as 1gram, etc.
+            weights = [i+1 for i in range(ngram_size)]
         if phon_env_corr_counts is not None:
             phon_env = True
-            weights.append(5)
-            weight_sum = sum(weights)
-            weights = [i/weight_sum for i in weights]
         else:
             phon_env = False
         interpolation = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
@@ -463,7 +462,8 @@ class PhonemeCorrDetector:
             if sum(interpolation[i][ngram1[:i]].values()) == 0:
                     continue
 
-            for ngram2 in all_ngrams_lang2: 
+            for ngram2 in all_ngrams_lang2:
+                ngram_weights = weights[:]
                 # forward # TODO has not been updated since before addition of phon_env
                 # estimates = [interpolation[i][ngram1[-i:]][ngram2] / sum(interpolation[i][ngram1[-i:]].values())
                 #              if i > 1 else lidstone_smoothing(x=interpolation[i][ngram1[-i:]][ngram2], 
@@ -485,36 +485,41 @@ class PhonemeCorrDetector:
                 if phon_env:
                     phonEnv = ngram1_phon_env[-1][-1]
                     phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != 'S')
-                    context_estimates = []
                     for context in phonEnv_contexts:
                         ngram1_context = ngram1_phon_env[0][:-1] + (context,)
-                        context_estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0), 
-                                                                    N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
-                                                                    d = len(self.lang2.phonemes) + 1,
-                                                                    alpha=alpha)
-                                                                    )
-                    estimates.append(mean(context_estimates))
-                    # TODO a better way to average these together would be to weight based on how many examples of each context there are
+                        estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0), 
+                                                            N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
+                                                            d = len(self.lang2.phonemes) + 1,
+                                                            alpha=alpha)
+                                                            )
+                        # Weight each contextual estimate based on the size of the context
+                        # #S< would have weight 3 because it considers the segment plus context on both sides
+                        # #S would have weight 2 because it considers only the segment plus context on one side 
+                        ngram_weights.append(len(context))
+                        
 
-                smoothed = sum([estimate*weight for estimate, weight in zip(estimates, weights)])
+                weight_sum = sum(ngram_weights)
+                ngram_weights = [i/weight_sum for i in ngram_weights]
+                assert(len(ngram_weights) == len(estimates))
+                smoothed = sum([estimate*weight for estimate, weight in zip(estimates, ngram_weights)])
                 if phon_env:
                     smoothed_surprisal[ngram1_phon_env][ngram2] = surprisal(smoothed)
                 else:
                     smoothed_surprisal[ngram1][ngram2] = surprisal(smoothed)
 
             oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()), 
-                                             #d = len(interpolation[i][ngram1[:i]]),
                                              d = len(self.lang2.phonemes) + 1,
                                              alpha=alpha) 
                           for i in range(ngram_size,0,-1)]
             if phon_env:
-                oov_estimates.append(lidstone_smoothing(x=0, 
-                                                N=sum(interpolation['phon_env'][ngram1_phon_env].values()), 
-                                                #d = len(interpolation['phon_env'][ngram1_phon_env]),
-                                                d = len(self.lang2.phonemes) + 1,
-                                                alpha=alpha)
-                )
-
+                for context in phonEnv_contexts:
+                    ngram1_context = ngram1_phon_env[0][:-1] + (context,)
+                    oov_estimates.append(lidstone_smoothing(x=0, 
+                                                            N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
+                                                            d = len(self.lang2.phonemes) + 1,
+                                                            alpha=alpha)
+                    )
+            assert (len(ngram_weights) == len(oov_estimates))
             smoothed_oov = surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, weights)]))
             
             if phon_env:
