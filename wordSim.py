@@ -254,7 +254,9 @@ def phon_word_dist(word1, word2=None,
         if total_sim:
             word_dist = sum(penalties)
         else:
-            word_dist = euclidean_dist(penalties)
+            # Euclidean distance of all penalties (= distance per dimension of the word)
+            # normalized by square root of number of dimensions
+            word_dist = euclidean_dist(penalties) / sqrt(len(penalties))
         
         # Save the calculated score
         if word2:
@@ -567,7 +569,7 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->
     scores = []
     if weights is None:
         weights = [1/len(funcs) for i in range(len(funcs))]
-    assert round(sum(weights)) == 1.0
+    # assert round(sum(weights)) == 1.0
     for func, func_sim, weight in zip(funcs, func_sims, weights):
         kwargs = funcs[func]
         score = func(pair1, pair2, **kwargs)
@@ -577,8 +579,9 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->
         # Distance weighting concept: if a distance is weighted with a higher coefficient relative to another distance,
         # it is as if that dimension is more impactful 
         scores.append(score*weight)
-
-    score = euclidean_dist(scores)
+    # print(f'PMI: {round(scores[0],3)} | Sur: {round(scores[1],3)} | Phon: {round(scores[-1],3)}')
+    #score = euclidean_dist(scores)
+    score = sum(scores)
 
     hybrid_scores[(pair1, pair2, tuple(funcs.keys()))] = score
     

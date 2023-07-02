@@ -63,6 +63,16 @@ if __name__ == "__main__":
             # but PMI seems to affect outcome in correct direction more than others, though others are also needed
             #weights=[0.5, 0.25, 0.25] # this combo works well
             #weights=[0.5, 0.3, 0.2]
+
+            # I computed the stdev of each measure based on Romance and Germanic (measured on both cognates/non-cognates)
+            # if you divide 1/stdev, you get a number that can be used like a weight for multiplying the contribution of each measure
+            # (Pdb) round(1/stdev(measures_data['PMI']),2)
+            # 10.76
+            # (Pdb) round(1/stdev(measures_data['Surprisal']),2)
+            # 4.61
+            # (Pdb) round(1/stdev(measures_data['PhonDist']),2)
+            # 9.78
+            #weights=[10.76, 4.61, 9.78] # these produce bad results though
             )
     function_map = {
         # 'label':(function, sim, cutoff)
