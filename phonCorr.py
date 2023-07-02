@@ -639,7 +639,7 @@ class PhonemeCorrDetector:
                 cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
                 sample_results[sample_n] = surprisal_iterations[iteration]
             
-            # Average together the PMI estimations from each sample
+            # Average together the surprisal estimations from each sample
             if samples > 1:
                 p1_all = set(p for sample_n in sample_results for p in sample_results[sample_n])
                 p2_all = set(p2 for sample_n in sample_results for p1 in sample_results[sample_n] for p2 in sample_results[sample_n][p1])

@@ -421,6 +421,7 @@ class LexicalDataset:
         
         # Iterate through the dataframe and save the surprisal values to the Language
         # class objects' phoneme_surprisal attribute
+        oov_vals = defaultdict(lambda:{})
         for index, row in surprisal_data.iterrows():
             try:
                 lang1 = self.languages[row['Language1']]
@@ -429,14 +430,21 @@ class LexicalDataset:
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     phone1 = tuple(phone1.split())
                     surprisal_value = row['Surprisal']
-                    if phone1 not in lang1.phoneme_surprisal[(lang2, ngram_size)]:
-                        oov_smoothed = row['OOV_Smoothed']
-                        lang1.phoneme_surprisal[(lang2, ngram_size)][phone1] = defaultdict(lambda:oov_smoothed)
                     lang1.phoneme_surprisal[(lang2, ngram_size)][phone1][phone2] = surprisal_value
+                    if phone1 not in oov_vals[(lang1, lang2)]:
+                        oov_smoothed = row['OOV_Smoothed']
+                        oov_vals[(lang1, lang2)][phone1] = oov_smoothed
             
             # Skip loaded surprisal values for languages which are not in dataset
             except KeyError:
                 pass
+        
+        # Iterate back through language pairs and phone1 combinations and set OOV values
+        for lang1, lang2 in oov_vals:
+            for phone1 in oov_vals[(lang1, lang2)]:
+                oov_val = oov_vals[(lang1, lang2)][phone1]
+                lang1.phoneme_surprisal[(lang2, ngram_size)][phone1] = default_dict(lang1.phoneme_surprisal[(lang2, ngram_size)][phone1],
+                                                                                    l=oov_val)
     
     def phonetic_diversity(self, ch_to_remove=[]):
         # diversity_scores = {}
