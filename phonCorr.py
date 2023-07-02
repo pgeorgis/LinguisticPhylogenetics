@@ -463,6 +463,9 @@ class PhonemeCorrDetector:
                     continue
 
             for ngram2 in all_ngrams_lang2:
+                if interpolation[i][ngram1[:i]].get(ngram2, 0) == 0:
+                    continue
+
                 ngram_weights = weights[:]
                 # forward # TODO has not been updated since before addition of phon_env
                 # estimates = [interpolation[i][ngram1[-i:]][ngram2] / sum(interpolation[i][ngram1[-i:]].values())
@@ -496,7 +499,6 @@ class PhonemeCorrDetector:
                         # #S< would have weight 3 because it considers the segment plus context on both sides
                         # #S would have weight 2 because it considers only the segment plus context on one side 
                         ngram_weights.append(len(context))
-                        
 
                 weight_sum = sum(ngram_weights)
                 ngram_weights = [i/weight_sum for i in ngram_weights]
