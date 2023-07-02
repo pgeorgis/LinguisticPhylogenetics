@@ -488,14 +488,14 @@ class PhonemeCorrDetector:
                     context_estimates = []
                     for context in phonEnv_contexts:
                         ngram1_context = ngram1_phon_env[0][:-1] + (context,)
-                        context_estimates.append(lidstone_smoothing(x=interpolation['phon_env'][ngram1_context].get(ngram2, 0), 
-                                                                    N=sum(interpolation['phon_env'][ngram1_context].values()), 
+                        context_estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0), 
+                                                                    N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
                                                                     d = len(self.lang2.phonemes) + 1,
                                                                     alpha=alpha)
                                                                     )
                     estimates.append(mean(context_estimates))
                     # TODO a better way to average these together would be to weight based on how many examples of each context there are
-                
+
                 smoothed = sum([estimate*weight for estimate, weight in zip(estimates, weights)])
                 if phon_env:
                     smoothed_surprisal[ngram1_phon_env][ngram2] = surprisal(smoothed)
