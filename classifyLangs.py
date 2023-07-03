@@ -23,6 +23,7 @@ if __name__ == "__main__":
     parser.add_argument('--no_diphthongs', dest='no_diphthongs', action='store_true', help='Performs IPA string segmentation without diphthongs as single segmental units')
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
+    parser.add_argument('--refresh', default=[], nargs='+', help='Languages whose phoneme PMI and/or surprisal should be recalculated')
     parser.add_argument('--min_amc', default=0.65, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
     parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
@@ -100,15 +101,21 @@ if __name__ == "__main__":
 
     # Load or calculate phoneme PMI
     logger.info(f'Loading {family.name} phoneme PMI...')
-    family.load_phoneme_pmi()
+    family.load_phoneme_pmi(excepted=args.refresh)
 
     # Load or calculate phoneme surprisal
     if args.eval == 'surprisal' or args.eval == 'hybrid':
         logger.info(f'Loading {family.name} phoneme surprisal...')
         if args.cognates == 'gold':
-            family.load_phoneme_surprisal(ngram_size=args.ngram, gold=True)
+            family.load_phoneme_surprisal(ngram_size=args.ngram, gold=True, excepted=args.refresh)
         else:
-            family.load_phoneme_surprisal(ngram_size=args.ngram, gold=False)
+            family.load_phoneme_surprisal(ngram_size=args.ngram, gold=False, excepted=args.refresh)
+
+    # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
+    if len(args.refresh) > 0:
+        family.write_phoneme_pmi()
+        if args.eval == 'surprisal' or args.eval == 'hybrid':
+            family.write_phoneme_surprisal(ngram_size=args.ngram)
 
     # Load pre-clustered cognate sets, if available
     family.load_clustered_cognates()

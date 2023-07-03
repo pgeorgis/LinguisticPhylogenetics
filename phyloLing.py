@@ -251,13 +251,9 @@ class LexicalDataset:
                 self.logger.info(prune_log)
     
     
-    def calculate_phoneme_pmi(self, output_file=None, **kwargs):
+    def calculate_phoneme_pmi(self, save=True, **kwargs):
         """Calculates phoneme PMI for all language pairs in the dataset and saves
         the results to file"""
-        
-        # Specify output file name if none is specified
-        if output_file is None:
-            output_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
         
         l = list(self.languages.values())
         
@@ -268,14 +264,23 @@ class LexicalDataset:
         for pair in product(l, l):
             lang1, lang2 = pair
             if lang1.name not in printed:
-                self.logger.info(f'Calculating phoneme PMI for {lang1.name}...')
+                self.logger.info(f'Calculating phoneme PMI for {lang1.name}...') # TODO move this logging message into PhonemeCorrDetector
                 printed.append(lang1.name)
             if (lang2, lang1) not in checked:
                     
                 if len(lang1.phoneme_pmi[lang2]) == 0:
                     # self.logger.info(f'Calculating phoneme PMI for {lang1.name} and {lang2.name}...')
                     pmi = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
-                
+        
+        if save:
+            self.write_phoneme_pmi()
+
+
+    def write_phoneme_pmi(self, output_file=None):
+        # Specify output file name if none is specified
+        if output_file is None:
+            output_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
+
         # Save calculated PMI values to file
         with open(output_file, 'w') as f:
             f.write('Language1,Phone1,Language2,Phone2,PMI\n')
@@ -286,16 +291,19 @@ class LexicalDataset:
                 
                     # Retrieve the precalculated values
                     pmi = lang1.phoneme_pmi[lang2]
-                        
+                    if len(pmi) == 0:
+                        self.logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
+                        continue
+
                     # Save all segment pairs with non-zero PMI values to file
                     # Also skip extremely small decimals that are close to zero
                     for seg1 in pmi:
                         for seg2 in pmi[seg1]:
                             if abs(pmi[seg1][seg2]) > lang1.phonemes[seg1] * lang2.phonemes[seg2]:
                                 f.write(f'{lang1.name},{seg1},{lang2.name},{seg2},{pmi[seg1][seg2]}\n')
-                    
                     checked.append((lang1, lang2))
-    
+
+
     def load_phoneme_pmi(self, pmi_file=None, excepted=[], **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
         
@@ -303,7 +311,6 @@ class LexicalDataset:
         if pmi_file is None:
             pmi_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
         
-
         # Try to load the file of saved PMI values
         # If the file is not found, recalculate the PMI values and save to 
         # a file with the specified name
@@ -320,7 +327,7 @@ class LexicalDataset:
             try:
                 lang1 = self.languages[row['Language1']]
                 lang2 = self.languages[row['Language2']]
-                if (lang1 not in excepted) and (lang2 not in excepted):
+                if (lang1.name not in excepted) and (lang2.name not in excepted):
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     pmi_value = row['PMI']
                     lang1.phoneme_pmi[lang2][phone1][phone2] = pmi_value
@@ -330,18 +337,14 @@ class LexicalDataset:
             except KeyError:
                 pass
     
-    
-    def calculate_phoneme_surprisal(self, ngram_size=1, **kwargs):
+
+    def calculate_phoneme_surprisal(self, ngram_size=1, save=True, **kwargs):
         """Calculates phoneme surprisal for all language pairs in the dataset and saves
         the results to file"""
         
         # First ensure that phoneme PMI has been calculated and loaded
         self.load_phoneme_pmi()
-        
-        # Specify output file names
-        outfile = os.path.join(self.phone_corr_dir, f'phoneme_surprisal_{ngram_size}gram.csv')
-        outfile_phon_env = os.path.join(self.phone_corr_dir, 'phoneme_env_surprisal.csv')
-        
+                
         # Check whether phoneme surprisal has been calculated already for this pair
         for lang1 in self.languages.values():
             self.logger.info(f'Calculating phoneme surprisal for {lang1.name}...')
@@ -351,6 +354,15 @@ class LexicalDataset:
                 if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
                     phoneme_surprisal = PhonemeCorrDetector(lang1, lang2).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
                 
+        if save:
+            self.write_phoneme_surprisal(ngram_size=ngram_size)
+
+
+    def write_phoneme_surprisal(self, ngram_size=1):
+        # Specify output file names
+        outfile = os.path.join(self.phone_corr_dir, f'phoneme_surprisal_{ngram_size}gram.csv')
+        outfile_phon_env = os.path.join(self.phone_corr_dir, 'phoneme_env_surprisal.csv')
+        
         # Save calculated surprisal values to file
         with open(outfile, 'w') as f:
             f.write('Language1,Phone1,Language2,Phone2,Surprisal,OOV_Smoothed\n')
@@ -358,6 +370,9 @@ class LexicalDataset:
                 for lang2 in self.languages.values():
                         
                     phoneme_surprisal = lang1.phoneme_surprisal[(lang2, ngram_size)]
+                    if len(phoneme_surprisal) == 0:
+                        self.logger.warning(f'Phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}.')
+                        continue
                         
                     # Save values
                     for seg1 in phoneme_surprisal:
@@ -382,6 +397,9 @@ class LexicalDataset:
                 for lang2 in self.languages.values():
                         
                     phoneme_surprisal = lang1.phon_env_surprisal[(lang2, ngram_size)]
+                    if len(phoneme_surprisal) == 0:
+                        self.logger.warning(f'Phonological environment surprisal has not been calculated for pair: {lang1.name} - {lang2.name}.')
+                        continue
                         
                     # Save values
                     for seg1 in phoneme_surprisal:
@@ -402,6 +420,7 @@ class LexicalDataset:
         # Write a report on the most likely phoneme correspondences per language pair (TODO : create a cross-linguistic chart automatically)
         self.write_phoneme_corr_report(ngram_size=ngram_size, n=2)
         # TODO doesn't yet include phon_env 
+
 
     def write_phoneme_corr_report(self, langs=None, ngram_size=1, n=2):
         if langs is None:
@@ -453,7 +472,7 @@ class LexicalDataset:
                 try:
                     lang1 = self.languages[row['Language1']]
                     lang2 = self.languages[row['Language2']]
-                    if (lang1 not in excepted) and (lang2 not in excepted):
+                    if (lang1.name not in excepted) and (lang2.name not in excepted):
                         phone1, phone2 = row['Phone1'], row['Phone2']
                         phone1 = tuple(phone1.split())
                         if phon_env:
