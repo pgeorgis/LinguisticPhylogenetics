@@ -418,16 +418,6 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
         scored_WAS[(pair1, pair2, ngram_size)] = score
         return score
 
-surprisal_sims = {}
-def surprisal_sim(pair1, pair2, ngram_size=1, **kwargs):
-    try:
-        return surprisal_sims[(pair1, pair2, ngram_size)] 
-    except KeyError:
-        score = e**-(mutual_surprisal(pair1, pair2, ngram_size=ngram_size, **kwargs))
-        surprisal_sims[(pair1, pair2, ngram_size)] = score
-        return score
-
-
 def phonetic_surprisal(pair1, pair2, surprisal_dict=None, normalize=True, ngram_size=1):
     lang1, lang2 = pair1[1], pair2[1]
     alignment = prepare_alignment(pair1, pair2)
