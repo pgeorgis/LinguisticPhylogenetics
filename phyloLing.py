@@ -281,6 +281,7 @@ class LexicalDataset:
         if output_file is None:
             output_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
 
+        l = list(self.languages.values())
         # Save calculated PMI values to file
         with open(output_file, 'w') as f:
             f.write('Language1,Phone1,Language2,Phone2,PMI\n')
