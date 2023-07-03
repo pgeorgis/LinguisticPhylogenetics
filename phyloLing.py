@@ -685,65 +685,6 @@ class LexicalDataset:
         else:
             s += ' index.'
         self.logger.info(s)
-        
-                
-    def write_BEASTling_input(self, clustered_cognates, 
-                              name, directory,
-                              log_params=False,
-                              chainlength=2000000,
-                              model='covarion',
-                              rate_variation=True,
-                              clock_model='relaxed',
-                              calibration=None,
-                              sep=','):
-        """Writes a CSV file suitable as input for BEASTling from a 
-        clustered cognate set using specified parameters.
-        This can then be fed into BEASTling to create an .xml file to run
-        in BEAST2 for Bayesian phylogenetic inference.
-        
-        calibration :   dictionary with comma-separated language names (strings) as keys,
-                        values as range of millennia, e.g. '1.4-1.6' for 1400-1600 years
-        """
-        
-        csv_file = directory + name + '.csv'
-        config_file = directory + name + '.conf'
-        
-        cognate_id_count = 0
-        with open(csv_file, 'w') as f:
-            header = sep.join(['Language_ID', 'Feature_ID', 'IPA', 'Value'])
-            f.write(f'{header}\n')
-            for concept in clustered_cognates:
-                cognate_ids = list(clustered_cognates[concept].keys())
-                for i in range(len(cognate_ids)):
-                    cognate_id = cognate_ids[i]
-                    for entry in clustered_cognates[concept][cognate_id]:
-                        lang, word = entry[:-1].split(' /')
-                        lang = re.sub('\s', '_', lang)
-                        line = sep.join([lang, concept, word, str(i+1+cognate_id_count)])
-                        f.write(f'{line}\n')
-                cognate_id_count += len(cognate_ids)
-        
-        with open(config_file, 'w') as f:
-            config = '\n'.join([f'[admin]',
-                                f'basename={name}',
-                                f'log_params={log_params}',
-                                f'[MCMC]',
-                                f'chainlength={chainlength}',
-                                f'[model {name}]',
-                                f'model={model}',
-                                f'data={name}.csv',
-                                f'rate_variation={rate_variation}'])
-            if clock_model:
-                config += f'\n[clock default]\ntype={clock_model}'
-            
-            if calibration:
-                config += '\n[calibration]'
-                for lang_group in calibration:
-                    config += f'\n{lang_group}={calibration[lang_group]}'
-                
-            f.write(config)
-        
-        self.logger.info(f'Wrote BEASTling input to {directory}.')
                 
     
     def evaluate_clusters(self, clustered_cognates, method='bcubed'):
