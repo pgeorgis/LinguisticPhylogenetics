@@ -111,6 +111,15 @@ if __name__ == "__main__":
         else:
             family.load_phoneme_surprisal(ngram_size=args.ngram, gold=False, excepted=args.refresh)
 
+    # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
+    # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
+    if len(args.refresh) > 0:
+        family.calculate_phoneme_pmi()
+        family.write_phoneme_pmi()
+        if args.eval == 'surprisal' or args.eval == 'hybrid':
+            family.calculate_phoneme_surprisal(ngram_size=args.ngram)
+            family.write_phoneme_surprisal(ngram_size=args.ngram)
+
     # Load pre-clustered cognate sets, if available
     family.load_clustered_cognates()
 
@@ -160,12 +169,6 @@ if __name__ == "__main__":
     #     # title=None, save_directory=None
     #     # **kwargs)
     
-    # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
-    # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
-    if len(args.refresh) > 0:
-        family.write_phoneme_pmi()
-        if args.eval == 'surprisal' or args.eval == 'hybrid':
-            family.write_phoneme_surprisal(ngram_size=args.ngram)
 
     if tree:
         if args.outtree:
