@@ -10,6 +10,23 @@ from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
 from phonAlign import phone_align, reverse_alignment, phon_env_alignment
 from phonCorr import PhonemeCorrDetector
 
+class DistFunction:
+    def __init__(self, func, cutoff=None, sim=False, **kwargs):
+        self.func = func
+        self.kwargs = kwargs
+        self.sim = False
+        self.cutoff = cutoff
+        self.calculated = {}
+    
+    def eval(self, x, y):
+        return self.func(x, y, **self.kwargs)
+    
+    def to_sim(self):
+        if self.sim is False:
+            return lambda x: e**-(self.eval(x))
+        else:
+            return self.eval
+
 def prepare_alignment(item1, item2, **kwargs):
     """Prepares alignment of two items, either:
         ("word1", Lang1) : tuples of an IPA string and a Language class object
