@@ -337,7 +337,7 @@ class PhonemeCorrDetector:
 
     
     def noncognate_thresholds(self, eval_func, seed=1, sample_size=None, save=True):
-        #eval func was formerly tuple (function, {kwarg:value}), now is DistFunction class object
+        #eval func was formerly tuple (function, {kwarg:value}), now is Distance class object
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
         
         random.seed(seed)

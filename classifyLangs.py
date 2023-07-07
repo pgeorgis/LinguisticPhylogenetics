@@ -45,29 +45,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=log_levels[args.loglevel], format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
     logger = logging.getLogger(__name__)
 
-    # Mapping of function labels and default cutoff values
-    def hybridSim(x, y):
-
-        return hybrid_sim(
-            x, y, 
-            funcs={
-                pmi_dist:{}, 
-                mutual_surprisal:{'ngram_size':args.ngram},
-                phon_word_dist:{}
-            },
-            func_sims=[
-                False, 
-                False, 
-                False
-            ],
-            # TODO: seems to be best when all funcs weighted equally; or else with ~0.4, 0.2, 0.4 (PMI, surprisal, phonetic) scheme
-            # basically, PMI alone produces the best results, at least for Romance
-            # but it can be improved by adding in surprisal and phonetic to a lesser extent
-            # weights=[0.7, 0.2, 0.1] # best so far
-            #weights=[0.7, 0.25, 0.05]
-            )
     function_map = {
-        # 'label':(function, sim, cutoff)
         'pmi':PMIDist,
         'surprisal':SurprisalDist,
         'phonetic':PhonologicalDist, # TODO name doesn't match
@@ -128,18 +106,16 @@ if __name__ == "__main__":
 
     # Set cognate cluster ID according to settings
     if args.cognates == 'auto':
-        cog_id = f'{family.name}_distfunc-{args.cluster}-{function_map[args.cluster][1]}_cutoff-{args.cutoff}'
+        cog_id = f'{family.name}_distfunc-{args.cluster}-{function_map[args.cluster][1]}_cutoff-{args.cluster_threshold}'
 
     # Generate Newick tree string
     logger.info(f'Generating phylogenetic tree...')
     #dist_func = cognate_sim # TODO other options?
-    code = family.generate_test_code(dist_func, sim=True, cognates=args.cognates, cutoff=args.cutoff)
+    code = family.generate_test_code(dist_func, sim=True, cognates=args.cognates, cutoff=args.cluster_threshold)
     tree = family.draw_tree(
         dist_func=cognate_sim, # TODO other options?
-        sim=True, # cognate_sim
         cluster_func=clusterDist,
-        eval_func=(function_map[args.eval][0], function_map[args.eval][-2]), #function, kwargs
-        eval_sim=function_map[args.eval][1],
+        eval_func=evalDist,
         cognates=args.cognates, 
         method=args.linkage, # this should be changed to linkage rather than method
         calibrate=args.calibrate, # argument for cognate_sim
@@ -154,22 +130,6 @@ if __name__ == "__main__":
         logger.info(f'Wrote Newick tree to {args.outtree}')
     else:
         logger.info(f'Wrote Newick tree to {os.path.join(family.tree_dir, f"{code}.tre")}')
-    
-    # family.plot_languages(
-    #     dist_func=cognate_sim, # other options?
-    #     sim=True, # cognate_sim
-    #     cluster_func=function_map[args.cluster][0],
-    #     cluster_sim=function_map[args.cluster][1],
-    #     cutoff=args.cutoff,
-    #     concept_list=None,
-    #     eval_func=(function_map[args.eval][0], function_map[args.eval][-2]), #function, kwargs
-    #     eval_sim=function_map[args.eval][1],
-    #     cognates=args.cognates)            
-    #     # dimensions=2, top_connections=0.3, max_dist=1, alpha_func=None,
-    #     # plotsize=None, invert_xaxis=False, invert_yaxis=False,
-    #     # title=None, save_directory=None
-    #     # **kwargs)
-    
 
     if tree:
         if args.outtree:

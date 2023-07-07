@@ -205,7 +205,40 @@ def lidstone_smoothing(x, N, d, alpha=0.3):
     return (x + alpha) / (N + (alpha*d))
 
 
-# PLOTTING PAIRWISE SIMILARITY / DISTANCE
+# PAIRWISE SIMILARITY / DISTANCE
+class Distance:
+    def __init__(self, func, cluster_threshold=0.5, sim=False, name=None, **kwargs):
+        self.func = func
+        self.kwargs = kwargs
+        self.sim = False
+        self.cluster_threshold = cluster_threshold
+        self.name = name if name else self.func.__name__
+        self.measured = {}
+    
+    def set(self, param, value):
+        self.kwargs[param] = value
+    
+    def eval(self, x, y, **kwargs):
+        if (x, y, self.kwargs) in self.measured:
+            return self.measured[(x, y, self.kwargs)]
+        else:
+            for arg, val in kwargs:
+                self.set(arg, val)
+            result = self.func(x, y, **self.kwargs)
+            self.measured[(x, y, self.kwargs)] = result
+            return result
+    
+    def to_similarity(self):
+        if self.sim is False:
+            return Distance(
+                func=lambda x, y: e**-(self.func(x, y, **self.kwargs)), 
+                #func=lambda x, y: 1/(1+self.func(x, y, **self.kwargs)), # TODO make this conversion option possible via method argument
+                cutoff=self.cutoff, 
+                sim=True, 
+                **self.kwargs)
+        else:
+            return self
+
 def euclidean_dist(dists):
     return sqrt(sum([dist**2 for dist in dists]))
 

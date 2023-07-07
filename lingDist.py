@@ -1,6 +1,6 @@
 from auxFuncs import euclidean_dist
 from phonCorr import PhonemeCorrDetector
-from wordSim import DistFunction, Z_dist
+from wordSim import Z_dist
 from statistics import mean, stdev, StatisticsError
 from math import e
 from scipy.stats import norm
@@ -51,7 +51,7 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
 calibration_params = {} # TODO shouldn't be global variable
 def cognate_sim(lang1, lang2, clustered_cognates,
                 eval_func, exclude_synonyms=True, # TODO improve exclude_synonyms
-                #eval func was tuple (function, {kwarg:value}), now DistFunction class object
+                #eval func was tuple (function, {kwarg:value}), now Distance class object
                 calibrate=True,
                 min_similarity=0,
                 clustered_id=None, # TODO incorporate or remove
@@ -195,37 +195,50 @@ def cognate_sim(lang1, lang2, clustered_cognates,
             
 
 # TODO: update this function if necessary
-def weighted_cognate_sim(lang1, lang2, 
+def weighted_cognate_sim(lang1, 
+                         lang2, 
                          clustered_cognates, 
-                         eval_funcs, eval_sims, weights=None,
+                         eval_funcs, 
+                         weights=None,
                          exclude_synonyms=True, 
                          **kwargs):
     if weights is None:
         weights = [1/len(eval_funcs) for i in range(len(eval_funcs))]
     sim_score = 0
-    for eval_func, eval_sim, weight in zip(eval_funcs, eval_sims, weights):
-        sim_score += (cognate_sim(lang1, lang2, clustered_cognates=clustered_cognates, 
-                                  eval_func=eval_func, eval_sim=eval_sim, **kwargs) * weight)
+    for eval_func, weight in zip(eval_funcs, weights):
+        sim_score += (cognate_sim(lang1, 
+                                  lang2, 
+                                  clustered_cognates=clustered_cognates, 
+                                  eval_func=eval_func, 
+                                  **kwargs
+                                  ) 
+                                  * weight)
     return sim_score
             
     
 def hybrid_cognate_dist(lang1, lang2,
                        clustered_cognates,
-                       eval_funcs, eval_sims,
+                       eval_funcs,
                        exclude_synonyms=True,
                        **kwargs):
     scores = []
-    for eval_func, eval_sim in zip(eval_funcs, eval_sims):
-        measure = cognate_sim(lang1, lang2, clustered_cognates, 
-                              eval_func=eval_func, eval_sim=eval_sim,
-                              exclude_synonyms=exclude_synonyms)
+    for eval_func in eval_funcs:
+        measure = cognate_sim(lang1, 
+                              lang2, 
+                              clustered_cognates, 
+                              eval_func=eval_func,
+                              exclude_synonyms=exclude_synonyms
+                              )
         scores.append(1-measure)
     return euclidean_dist(scores)
     
     
-def Z_score_dist(lang1, lang2, eval_func, eval_sim,
-                #eval func was tuple (function, {kwarg:value}), now is DistFunction class object
-                 concept_list=None, exclude_synonyms=True,
+def Z_score_dist(lang1, 
+                 lang2, 
+                 eval_func,
+                #eval func was tuple (function, {kwarg:value}), now is Distance class object
+                 concept_list=None, 
+                 exclude_synonyms=True,
                  seed=1,
                  **kwargs):
     if concept_list is None:
@@ -254,7 +267,7 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
     nc_len = len(noncognate_scores)
         
     # Calculate the p-values for the synonymous word pairs against non-synonymous word pairs
-    if eval_sim:
+    if eval_func.sim:
         p_values = {concept:[(len([nc_score for nc_score in noncognate_scores if nc_score >= score])+1) / (nc_len+1) 
                              for score in scores[concept]] 
                     for concept in scores}

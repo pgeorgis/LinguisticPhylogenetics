@@ -6,41 +6,9 @@ from nltk import edit_distance
 import re
 from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, suprasegmental_diacritics, strip_diacritics
 from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_environment_weight
-from auxFuncs import strip_ch, euclidean_dist, surprisal, adaptation_surprisal
+from auxFuncs import Distance, strip_ch, euclidean_dist, adaptation_surprisal
 from phonAlign import phone_align, reverse_alignment, phon_env_alignment
 from phonCorr import PhonemeCorrDetector
-
-class DistFunction:
-    def __init__(self, func, cluster_threshold=0.5, sim=False, **kwargs):
-        self.func = func
-        self.kwargs = kwargs
-        self.sim = False
-        self.cluster_threshold = cluster_threshold
-        self.calculated = {}
-    
-    def set(self, param, value):
-        self.kwargs[param] = value
-    
-    def eval(self, x, y, **kwargs):
-        if (x, y, self.kwargs) in self.calculated:
-            return self.calculated[(x, y, self.kwargs)]
-        else:
-            for arg, val in kwargs:
-                self.set(arg, val)
-            result = self.func(x, y, **self.kwargs)
-            self.calculated[(x, y, self.kwargs)] = result
-            return result
-    
-    def to_similarity(self):
-        if self.sim is False:
-            return DistFunction(
-                func=lambda x, y: e**-(self.func(x, y, **self.kwargs)), 
-                #func=lambda x, y: 1/(1+self.func(x, y, **self.kwargs)), # TODO make this conversion option possible via method argument
-                cutoff=self.cutoff, 
-                sim=True, 
-                **self.kwargs)
-        else:
-            return self
 
 def prepare_alignment(item1, item2, **kwargs):
     """Prepares alignment of two items, either:
@@ -515,7 +483,7 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, weights=None)->float:
     Args:
         pair1 (tuple): (word, Language) pair
         pair2 (tuple): (word, Language) pair
-        funcs (iterable): iterable of DistFunction class objects
+        funcs (iterable): iterable of Distance class objects
     Returns:
         float: hybrid similarity measure
     """
@@ -538,28 +506,28 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, weights=None)->float:
     
     return score
 
-# Initialize distance functions as DistFunction objects
-LevenshteinDist = DistFunction(
+# Initialize distance functions as Distance objects
+LevenshteinDist = Distance(
     func=levenshtein_dist,
     cluster_threshold=0.73)
-PhoneticDist = DistFunction(
+PhoneticDist = Distance(
     func=phonetic_dist)
-SegmentalDist = DistFunction(
+SegmentalDist = Distance(
     func=segmental_word_dist)
-PhonologicalDist = DistFunction(
+PhonologicalDist = Distance(
     func=phonological_dist,
-    cluster_threshold=0.16 # TODO cutoff (renamed to "cluster_threshold") needs to be recalibrated; this value was from when it was a similarity function
+    cluster_threshold=0.16 # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
 ) 
-PMIDist = DistFunction(
+PMIDist = Distance(
     func=pmi_dist,
     cluster_threshold=0.36)
-SurprisalDist = DistFunction(
+SurprisalDist = Distance(
     func=mutual_surprisal, 
-    cluster_threshold=0.74, # TODO cutoff (renamed to "cluster_threshold") needs to be recalibrated; this value was from when it was a similarity function
+    cluster_threshold=0.74, # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
-HybridDist = DistFunction(
+HybridDist = Distance(
     func=hybrid_dist,
-    cluster_threshold=0.57, # TODO cutoff (renamed to "cluster_threshold")needs to be recalibrated
+    cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
     funcs=[PMIDist, SurprisalDist, PhonologicalDist],
 )
 HybridSim = HybridDist.to_similarity() 
@@ -581,5 +549,3 @@ def Z_dist(p_values):
     Zmin = Z_min(N)
     Zscore = Z_score(p_values)
     return (Zmax - Zscore) / (Zmax - Zmin)
-    
-    

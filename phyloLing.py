@@ -14,7 +14,7 @@ import seaborn as sns
 from unidecode import unidecode
 import numpy as np
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
-from auxFuncs import surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
+from auxFuncs import Distance, surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
 from phonSim.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim, phonEnvironment
 from phonCorr import PhonemeCorrDetector
@@ -535,11 +535,13 @@ class LexicalDataset:
         
         
     
-    def cognate_set_dendrogram(self, cognate_id, 
-                               dist_func, sim=True, 
+    def cognate_set_dendrogram(self, 
+                               cognate_id, 
+                               dist_func,
                                combine_cognate_sets=True,
                                method='average',
-                               title=None, save_directory=None,
+                               title=None, 
+                               save_directory=None,
                                **kwargs):
         if combine_cognate_sets:
             cognate_ids = [c for c in self.cognate_sets if c.split('_')[0] == cognate_id]
@@ -569,7 +571,7 @@ class LexicalDataset:
         draw_dendrogram(group=words,
                         labels=labels,
                         dist_func=dist_func,
-                        sim=sim,
+                        sim=dist_func.sim,
                         method=method,
                         title=title,
                         save_directory=save_directory,
@@ -577,13 +579,21 @@ class LexicalDataset:
                         )
 
 
-    def cluster_cognates(self, concept_list,
-                         dist_func, sim,
-                         cutoff,
+    def cluster_cognates(self, 
+                         concept_list,
+                         dist_func, 
                          method='average',
                          **kwargs):
+        # TODO make option for instead using k-means clustering given a known/desired number of clusters, as a mutually exclusive parameter with cutoff
+
+        self.logger.info('Clustering cognates...')
+        self.logger.info(f'Cluster function: {dist_func.name}')
+        self.logger.info(f'Cluster threshold: {dist_func.cluster_threshold}')
+
         concept_list = [concept for concept in concept_list 
                         if len(self.concepts[concept]) > 1]
+        self.logger.info(f'Total concepts: {len(concept_list)}')
+        
         clustered_cognates = {}
         for concept in sorted(concept_list):
             # self.logger.info(f'Clustering words for "{concept}"...')
@@ -601,16 +611,14 @@ class LexicalDataset:
             clusters = cluster_items(group=words,
                                      labels=labels,
                                      dist_func=dist_func,
-                                     sim=sim,
-                                     cutoff=cutoff,
+                                     sim=dist_func.sim,
+                                     cutoff=dist_func.cluster_threshold,
                                      **kwargs)
             
             clustered_cognates[concept] = clusters
         
         # Create code and store the result
-        code = f'{self.name}_distfunc-{dist_func.__name__}_sim-{sim}_cutoff-{cutoff}'
-        for key, value in kwargs.items():
-            code += f'_{key}-{value}'
+        code = self.generate_test_code(dist_func, cognates='auto')
         self.clustered_cognates[code] = clustered_cognates
         self.write_cognate_index(clustered_cognates, os.path.join(self.cognates_dir, f'{code}.cog'))
 
@@ -746,26 +754,35 @@ class LexicalDataset:
         elif method == 'mcc':
             return mean(mcc_scores.values())
     
-    def generate_test_code(self, dist_func, sim, cognates, cutoff=None, **kwargs): # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
-        code = f'cognates-{cognates}_distfunc-{dist_func.__name__}_sim-{sim}'
+    def generate_test_code(self, dist_func, cognates, **kwargs): # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
+        if type(dist_func) != Distance:
+            self.logger.error(f'dist_func must be a Distance class object, found {type(dist_func)} instead.')
+            raise TypeError
+        
+        name = dist_func.name if dist_func.name else dist_func.func.__name__
+        code = f'cognates-{cognates}_distfunc-{name}'
         if cognates != 'auto':
-            code += f'_cutoff-{cutoff}'
-        for key, value in kwargs.items():
+            code += f'_cutoff-{dist_func.cluster_threshold}'
+        for key, value in dist_func.kwargs.items():
             code += f'_{key}-{value}'
+        for key, value in kwargs.items():
+            if key not in kwargs:
+                code += f'_{key}-{value}'
         # TODO : doesn't yet account for concept_list ID; others may also not be working 
         return code
     
-    def distance_matrix(self, dist_func, sim, 
-                        eval_func, eval_sim, 
+    def distance_matrix(self, 
+                        dist_func,
+                        eval_func, 
                         concept_list=None,
-                        cluster_func=None, cluster_sim=None, cutoff=None, 
+                        cluster_func=None, 
                         cognates='auto',
                         outfile=None,
                         **kwargs):
 
         # Try to skip re-calculation of distance matrix by retrieving
         # a previously computed distance matrix by its code
-        code = self.generate_test_code(dist_func, sim, cognates, cutoff, **kwargs)
+        code = self.generate_test_code(dist_func, cognates=cognates, eval_func=eval_func, **kwargs))
         
         if code in self.distance_matrices:
             return self.distance_matrices[code]
@@ -780,23 +797,18 @@ class LexicalDataset:
         
         if dist_func == Z_score_dist:
             cognates = 'none'
+            raise NotImplementedError
+
         # Automatic cognate clustering        
         if cognates == 'auto':
             assert cluster_func is not None
-            assert cluster_sim is not None
-            assert cutoff is not None
             
-            cognate_code = f'{self.name}_distfunc-{cluster_func.__name__}_sim-{sim}_cutoff-{cutoff}'
             # for key, value in kwargs.items():
             #    code += f'_{key}-{value}'
-            if cognate_code in self.clustered_cognates:
-                clustered_concepts = self.clustered_cognates[cognate_code]
+            if code in self.clustered_cognates:
+                clustered_concepts = self.clustered_cognates[code]
             else:
-                self.logger.info('Clustering cognates...')
-                clustered_concepts = self.cluster_cognates(concept_list,
-                                                        dist_func=cluster_func, 
-                                                        sim=cluster_sim, 
-                                                        cutoff=cutoff)
+                clustered_concepts = self.cluster_cognates(concept_list, dist_func=cluster_func)
 
         # Use gold cognate classes
         elif cognates == 'gold':
@@ -820,15 +832,18 @@ class LexicalDataset:
         
         # Raise error for unrecognized cognate clustering methods
         else:
-            raise ValueError(f'Error: cognate clustering method "{cognates}" not recognized!')
+            self.logger.error(f'Cognate clustering method "{cognates}" not recognized!')
+            raise ValueError
         
         languages = [self.languages[lang] for lang in self.languages]
         names = [lang.name for lang in languages]
         
         # Compute distance matrix
-        dm = distance_matrix(group=languages, labels=names, 
-                             dist_func=dist_func, sim=sim,
-                             eval_func=eval_func, eval_sim=eval_sim,
+        dm = distance_matrix(group=languages, 
+                             labels=names, 
+                             dist_func=dist_func, 
+                             sim=dist_func.sim,
+                             eval_func=eval_func,
                              clustered_cognates=clustered_concepts,
                              **kwargs)
         
@@ -843,12 +858,14 @@ class LexicalDataset:
         return dm
     
     
-    def linkage_matrix(self, dist_func, sim,
-                       eval_func, eval_sim,
+    def linkage_matrix(self, 
+                       dist_func,
+                       eval_func,
+                       cluster_func=None, 
                        concept_list=None, 
-                       cluster_func=None, cluster_sim=None, cutoff=None, 
                        cognates='auto',
-                       method='ward', metric='euclidean',
+                       method='ward', 
+                       metric='euclidean',
                        **kwargs):
         
         # Ensure the linkage method is valid
@@ -856,12 +873,13 @@ class LexicalDataset:
             raise ValueError(f'Error: Unrecognized linkage type "{method}". Accepted values are: "average", "complete", "single", "weighted", "ward", "nj"')
 
         # Create distance matrix
-        dm = self.distance_matrix(dist_func, sim,
-                                eval_func, eval_sim, 
-                                concept_list, 
-                                cluster_func, cluster_sim, cutoff, 
-                                cognates, 
-                                **kwargs)
+        dm = self.distance_matrix(dist_func=dist_func,
+                                  eval_func=eval_func,
+                                  cluster_func=cluster_func,
+                                  concept_list=concept_list,
+                                  cognates=cognates,
+                                  **kwargs
+                                  )
         dists = squareform(dm)
 
         # Neighbor Joining linkage
@@ -902,21 +920,25 @@ class LexicalDataset:
         df.to_csv(outfile, sep='\t', index=False, float_format=float_format)
     
     def draw_tree(self, 
-                  dist_func, sim, 
-                  eval_func, eval_sim,
+                  dist_func, 
+                  eval_func,
                   concept_list=None,            
-                  cluster_func=None, cluster_sim=None, cutoff=None,
+                  cluster_func=None,
                   cognates='auto', 
-                  method='ward', metric='euclidean',
+                  method='ward', 
+                  metric='euclidean',
                   outtree=None,
-                  title=None, save_directory=None,
+                  title=None, 
+                  save_directory=None,
                   return_newick=False,
-                  orientation='left', p=30,
+                  orientation='left', 
+                  p=30,
                   **kwargs):
         
         group = [self.languages[lang] for lang in self.languages]
         labels = [lang.name for lang in group]
-        code = self.generate_test_code(dist_func, sim, cognates, cutoff, **kwargs)
+        code = self.generate_test_code(dist_func, cognates, **kwargs)
+        
         if title is None:
             title = f'{self.name}'
         if save_directory is None:
@@ -924,11 +946,13 @@ class LexicalDataset:
         if outtree is None:
             outtree = os.path.join(self.tree_dir, f'{code}.tre')
 
-        lm = self.linkage_matrix(dist_func, sim,
-                                 eval_func, eval_sim, 
+        lm = self.linkage_matrix(dist_func,
+                                 eval_func, 
                                  concept_list, 
-                                 cluster_func, cluster_sim, cutoff, 
-                                 cognates, method, metric, 
+                                 cluster_func,
+                                 cognates, 
+                                 method, 
+                                 metric, 
                                  **kwargs)
         
         # Not possible to plot NJ trees in Python (yet? TBD) # TODO
@@ -966,12 +990,19 @@ class LexicalDataset:
 
 
     def plot_languages(self, 
-                       dist_func, sim, concept_list=None, 
-                       cluster_func=None, cluster_sim=None, cutoff=None, 
+                       dist_func, 
+                       concept_list=None, 
+                       cluster_func=None,
                        cognates='auto', 
-                       dimensions=2, top_connections=0.3, max_dist=1, alpha_func=None,
-                       plotsize=None, invert_xaxis=False, invert_yaxis=False,
-                       title=None, save_directory=None, 
+                       dimensions=2, 
+                       top_connections=0.3, 
+                       max_dist=1, 
+                       alpha_func=None,
+                       plotsize=None, 
+                       invert_xaxis=False, 
+                       invert_yaxis=False,
+                       title=None, 
+                       save_directory=None, 
                        **kwargs):
         
         # Get lists of language objects and their labels
@@ -979,9 +1010,10 @@ class LexicalDataset:
         labels = [lang.name for lang in group]
         
         # Compute a distance matrix
-        dm = self.distance_matrix(dist_func=dist_func, sim=sim, concept_list=concept_list, 
-                                  cluster_func=cluster_func, cluster_sim=cluster_sim, 
-                                  cutoff=cutoff, cognates=cognates,
+        dm = self.distance_matrix(dist_func=dist_func, 
+                                  concept_list=concept_list, 
+                                  cluster_func=cluster_func, 
+                                  cognates=cognates,
                                   **kwargs)
         
         # Use MDS to compute coordinate embeddings from distance matrix
@@ -1048,10 +1080,13 @@ class LexicalDataset:
         plt.close()
     
     def draw_network(self, 
-                  dist_func, sim, concept_list=None,                  
-                  cluster_func=None, cluster_sim=None, cutoff=None,
-                  cognates='auto', method='spring',
-                  title=None, save_directory=None,
+                  dist_func, 
+                  concept_list=None,                  
+                  cluster_func=None,
+                  cognates='auto', 
+                  method='spring',
+                  title=None, 
+                  save_directory=None,
                   network_function=newer_network_plot,
                   **kwargs):
         
@@ -1068,20 +1103,11 @@ class LexicalDataset:
         # Automatic cognate clustering        
         if cognates == 'auto':
             assert cluster_func is not None
-            assert cluster_sim is not None
-            assert cutoff is not None
-            
-            code = f'{self.name}_distfunc-{cluster_func.__name__}_sim-{sim}_cutoff-{cutoff}'
-            # for key, value in kwargs.items():
-            #    code += f'_{key}-{value}'
+            code = self.generate_test_code(cluster_func, cognates, **kwargs)
             if code in self.clustered_cognates:
                 clustered_concepts = self.clustered_cognates[code]
             else:
-                self.logger.info('Clustering cognates...')
-                clustered_concepts = self.cluster_cognates(concept_list,
-                                                        dist_func=cluster_func, 
-                                                        sim=cluster_sim, 
-                                                        cutoff=cutoff)
+                clustered_concepts = self.cluster_cognates(concept_list, dist_func=cluster_func)
 
         # Use gold cognate classes
         elif cognates == 'gold':
@@ -1118,7 +1144,7 @@ class LexicalDataset:
         return network_function(group=languages, 
                             labels=names, 
                             dist_func=dist_func,
-                            sim=sim,
+                            sim=dist_func.sim,
                             method=method,
                             title=title,
                             save_directory=save_directory,
@@ -1511,8 +1537,10 @@ class Language(LexicalDataset):
     def phone_dendrogram(self, 
                          similarity='weighted_dice', 
                          method='ward', 
-                         exclude_length=True, exclude_tones=True,
-                         title=None, save_directory=None,
+                         exclude_length=True, 
+                         exclude_tones=True,
+                         title=None, 
+                         save_directory=None,
                          **kwargs):
         if title is None:
             title = f'Phonetic Inventory of {self.name}'
@@ -1531,7 +1559,7 @@ class Language(LexicalDataset):
         return draw_dendrogram(group=phonemes,
                                labels=phonemes, 
                                dist_func=phone_sim, 
-                               sim=True, 
+                               sim=True, # phone_sim
                                similarity=similarity, 
                                method=method, 
                                title=title, 
