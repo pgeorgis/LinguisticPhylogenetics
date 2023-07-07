@@ -11,21 +11,36 @@ from phonAlign import phone_align, reverse_alignment, phon_env_alignment
 from phonCorr import PhonemeCorrDetector
 
 class DistFunction:
-    def __init__(self, func, cutoff=None, sim=False, **kwargs):
+    def __init__(self, func, cluster_threshold=0.5, sim=False, **kwargs):
         self.func = func
         self.kwargs = kwargs
         self.sim = False
-        self.cutoff = cutoff
+        self.cluster_threshold = cluster_threshold
         self.calculated = {}
     
-    def eval(self, x, y):
-        return self.func(x, y, **self.kwargs)
+    def set(self, param, value):
+        self.kwargs[param] = value
     
-    def to_sim(self):
-        if self.sim is False:
-            return lambda x: e**-(self.eval(x))
+    def eval(self, x, y, **kwargs):
+        if (x, y, self.kwargs) in self.calculated:
+            return self.calculated[(x, y, self.kwargs)]
         else:
-            return self.eval
+            for arg, val in kwargs:
+                self.set(arg, val)
+            result = self.func(x, y, **self.kwargs)
+            self.calculated[(x, y, self.kwargs)] = result
+            return result
+    
+    def to_similarity(self):
+        if self.sim is False:
+            return DistFunction(
+                func=lambda x, y: e**-(self.func(x, y, **self.kwargs)), 
+                #func=lambda x, y: 1/(1+self.func(x, y, **self.kwargs)), # TODO make this conversion option possible via method argument
+                cutoff=self.cutoff, 
+                sim=True, 
+                **self.kwargs)
+        else:
+            return self
 
 def prepare_alignment(item1, item2, **kwargs):
     """Prepares alignment of two items, either:
@@ -70,8 +85,8 @@ def prepare_alignment(item1, item2, **kwargs):
     return alignment
 
 
-def basic_word_sim(word1, word2=None, sim_func=phone_sim, **kwargs):
-    """Calculates phonetic similarity of an alignment without weighting by 
+def phonetic_dist(word1, word2=None, sim_func=phone_sim, **kwargs):
+    """Calculates phonetic distance of an alignment without weighting by 
     segment type, position, etc.
     
     Input:
@@ -95,12 +110,11 @@ def basic_word_sim(word1, word2=None, sim_func=phone_sim, **kwargs):
                   if '-' not in pair else 0 
                   for pair in alignment]
     
-    # Return the mean similarity
-    return mean(phone_sims)
+    # Return the mean distance
+    return 1 - mean(phone_sims)
 
-
-calculated_phon_word_dists = {} # TODO shouldn't be a global variable
-def phon_word_dist(word1, word2=None, 
+# TODO name of function below to be confirmed
+def phonological_dist(word1, word2=None, 
               sim_func=phone_sim,
               penalize_infocontent=False, 
               penalize_sonority=True,
@@ -116,7 +130,6 @@ def phon_word_dist(word1, word2=None,
             or tuple (first word, second language)
     word2 : string (second word) or tuple (second word, second language)"""
     
-
     # If word2 is None, we assume word1 argument is actually an aligned word pair
     # Otherwise, align the two words
     if word2:
@@ -124,168 +137,156 @@ def phon_word_dist(word1, word2=None,
     else:
         alignment = word1
     
-    if (tuple(alignment), sim_func, penalize_sonority, 
-       context_reduction, prosodic_env_scaling, total_sim) in calculated_phon_word_dists: 
-        return calculated_phon_word_dists[(tuple(alignment), sim_func, penalize_sonority, 
-                                     context_reduction, prosodic_env_scaling, total_sim)] 
-    else:
-        # Get list of penalties
-        penalties = []
-        for i in range(len(alignment)):
-            pair = alignment[i]
-            seg1, seg2 = pair
-            
-            # If the pair is a gap-aligned segment, assign the penalty 
-            # based on the sonority and information content (if available) of the deleted segment
-            if '-' in pair:
-                penalty = 1
-                if seg1 == '-':
-                    deleted_segment = seg2
-                    index = len([alignment[j][1] for j in range(i) if alignment[j][1] != '-'])
-                    
-                else:
-                    deleted_segment = seg1
-                    index = len([alignment[j][0] for j in range(i) if alignment[j][0] != '-'])
+    # Get list of penalties
+    penalties = []
+    for i in range(len(alignment)):
+        pair = alignment[i]
+        seg1, seg2 = pair
+        
+        # If the pair is a gap-aligned segment, assign the penalty 
+        # based on the sonority and information content (if available) of the deleted segment
+        if '-' in pair:
+            penalty = 1
+            if seg1 == '-':
+                deleted_segment = seg2
+                index = len([alignment[j][1] for j in range(i) if alignment[j][1] != '-'])
                 
-                if penalize_sonority:
-                    sonority = get_sonority(deleted_segment)
-                    sonority_penalty = 1-(sonority/(max_sonority+1))
-                    penalty *= sonority_penalty
-                
-                deleted_index = pair.index(deleted_segment)
-                gap_index = deleted_index-1
-                
-                # Lessen the penalty under certain circumstances
-                if context_reduction:
-                    stripped_deleted = strip_diacritics(deleted_segment)
-                    if i > 0:
-                        previous_seg = alignment[i-1][gap_index]
-                        # 1) If the deleted segment is a nasal and the corresponding 
-                        # precending segment was nasalized
-                        if stripped_deleted in nasals:
-                            if '̃' in previous_seg: # check for nasalization diacritic:
-                                penalty /= penalty_discount
-                        
-                        # 2) If the deleted segment is a palatal glide (j, ɥ, i̯, ɪ̯),  
-                        # and the corresponding preceding segment was palatalized
-                        # or is a palatal consonant
-                        elif strip_diacritics(deleted_segment, excepted=['̯']) in {'j', 'ɥ', 
-                                                                                   'i̯', 'ɪ̯'}:
-                            if strip_diacritics(previous_seg)[0] in palatal:
-                                penalty /= penalty_discount
-                            elif ('ʲ' in previous_seg) or ('ᶣ' in previous_seg):
-                                penalty /= penalty_discount
-                                
-                        # 3) If the deleted segment is a high rounded/labial glide
-                        # and the corresponding preceding segment was labialized
-                        elif strip_diacritics(deleted_segment, excepted=['̯']) in {'w', 'ʍ', 'ʋ', 
-                                                                                   'u', 'ʊ', 
-                                                                                   'y', 'ʏ'}:
-                            if ('ʷ' in previous_seg) or ('ᶣ' in previous_seg):
-                                penalty /= penalty_discount
-                        
-                        # 4) If the deleted segment is /h, ɦ/ and the corresponding 
-                        # preceding segment was aspirated or breathy
-                        elif stripped_deleted in {'h', 'ɦ'}:
-                            if ('ʰ' in previous_seg) or ('ʱ' in previous_seg) or ('̤' in previous_seg):
-                                penalty /= penalty_discount
-                        
-                            # Or if the following corresponding segment is breathy or
-                            # pre-aspirated
-                            else:
-                                try:
-                                    next_seg = alignment[i+1][gap_index]
-                                    if ('̤' in next_seg) or (next_seg[0] in {'ʰ', 'ʱ'}):
-                                        penalty /= penalty_discount
-                                except IndexError:
-                                    pass
-                            
-                        # 5) If the deleted segment is a rhotic approximant /ɹ, ɻ/
-                        # and the corresponding preceding segment was rhoticized
-                        elif stripped_deleted in {'ɹ', 'ɻ'}:
-                            if (strip_diacritics(previous_seg) == 'ɚ') or ('˞' in previous_seg):
-                                penalty /= penalty_discount
-                        
-                        # 6) If the deleted segment is a glottal stop and the corresponding
-                        # preceding segment was glottalized (or creaky?)
-                        elif stripped_deleted == 'ʔ':
-                            if 'ˀ' in previous_seg:
-                                penalty /= penalty_discount
-                        
-                        
-                    # 6) if the deleted segment is part of a long/geminate segment represented as double (e.g. /tt/ rather than /tː/), 
-                    # where at least one part of the geminate has been aligned
-                    # Method: check if the preceding or following pair contained the deleted segment at deleted_index, aligned to something other than the gap character
-                    # Check following pair
-                    double = False
-                    try:
-                        nxt_pair = alignment[i+1]
-                        if '-' not in nxt_pair:
-                            if nxt_pair[deleted_index] == deleted_segment:
-                                double = True
-                                
-                                # Eliminate the penalty altogether if the gemination
-                                # is simply transcribed differently (see example below)
-                                if ('ː' in nxt_pair[gap_index]) or ('ˑ' in nxt_pair[gap_index]):
-                                    penalty = 0
-                            
-                    except IndexError:
-                        pass
-                    
-                    # Check preceding pair
-                    if i > 0:
-                        prev_pair = alignment[i-1]
-                        if '-' not in prev_pair:
-                            if prev_pair[deleted_index] == deleted_segment:
-                                double = True
-                            
-                                # Eliminate the penalty altogether in the case of 
-                                # an alignment like: [('t', 'tː'), ('t', '-')]
-                                # where the gemination is simply transcribed differently
-                                if ('ː' in prev_pair[gap_index]) or ('ˑ' in prev_pair[gap_index]):
-                                    penalty = 0
-                                
-                    if double:
-                        penalty /= penalty_discount
-                
-                # TODO: is this right?
-                if prosodic_env_scaling:
-                    # Discount deletion penalty according to prosodic sonority 
-                    # environment (based on List, 2012)
-                    deleted_i = sum([1 for j in range(i+1) if alignment[j][deleted_index] != '-'])-1
-                    segment_list = [alignment[j][deleted_index] 
-                                    for j in range(len(alignment))
-                                    if alignment[j][deleted_index] != '-']
-                    prosodic_env_weight = prosodic_environment_weight(segment_list, deleted_i)
-                    penalty /= sqrt(abs(prosodic_env_weight-7)+1)
-                
-                
-                # Add the final penalty to penalty list
-                penalties.append(penalty)
-            
-            # Otherwise take the penalty as the phonetic distance between the aligned segments
             else:
-                distance = 1 - sim_func(seg1, seg2, **kwargs)
-                penalties.append(distance)
-        
-        if total_sim:
-            word_dist = sum(penalties)
-        else:
-            # Euclidean distance of all penalties (= distance per dimension of the word)
-            # normalized by square root of number of dimensions
-            word_dist = euclidean_dist(penalties) / sqrt(len(penalties))
-        
-        # Save the calculated score
-        if word2:
-            calculated_phon_word_dists[(tuple(alignment), sim_func, 
-                                        penalize_sonority, 
-                                        context_reduction, prosodic_env_scaling, 
-                                        total_sim)] = word_dist
+                deleted_segment = seg1
+                index = len([alignment[j][0] for j in range(i) if alignment[j][0] != '-'])
             
-        return word_dist
+            if penalize_sonority:
+                sonority = get_sonority(deleted_segment)
+                sonority_penalty = 1-(sonority/(max_sonority+1))
+                penalty *= sonority_penalty
+            
+            deleted_index = pair.index(deleted_segment)
+            gap_index = deleted_index-1
+            
+            # Lessen the penalty under certain circumstances
+            if context_reduction:
+                stripped_deleted = strip_diacritics(deleted_segment)
+                if i > 0:
+                    previous_seg = alignment[i-1][gap_index]
+                    # 1) If the deleted segment is a nasal and the corresponding 
+                    # precending segment was nasalized
+                    if stripped_deleted in nasals:
+                        if '̃' in previous_seg: # check for nasalization diacritic:
+                            penalty /= penalty_discount
+                    
+                    # 2) If the deleted segment is a palatal glide (j, ɥ, i̯, ɪ̯),  
+                    # and the corresponding preceding segment was palatalized
+                    # or is a palatal consonant
+                    elif strip_diacritics(deleted_segment, excepted=['̯']) in {'j', 'ɥ', 
+                                                                                'i̯', 'ɪ̯'}:
+                        if strip_diacritics(previous_seg)[0] in palatal:
+                            penalty /= penalty_discount
+                        elif ('ʲ' in previous_seg) or ('ᶣ' in previous_seg):
+                            penalty /= penalty_discount
+                            
+                    # 3) If the deleted segment is a high rounded/labial glide
+                    # and the corresponding preceding segment was labialized
+                    elif strip_diacritics(deleted_segment, excepted=['̯']) in {'w', 'ʍ', 'ʋ', 
+                                                                                'u', 'ʊ', 
+                                                                                'y', 'ʏ'}:
+                        if ('ʷ' in previous_seg) or ('ᶣ' in previous_seg):
+                            penalty /= penalty_discount
+                    
+                    # 4) If the deleted segment is /h, ɦ/ and the corresponding 
+                    # preceding segment was aspirated or breathy
+                    elif stripped_deleted in {'h', 'ɦ'}:
+                        if ('ʰ' in previous_seg) or ('ʱ' in previous_seg) or ('̤' in previous_seg):
+                            penalty /= penalty_discount
+                    
+                        # Or if the following corresponding segment is breathy or
+                        # pre-aspirated
+                        else:
+                            try:
+                                next_seg = alignment[i+1][gap_index]
+                                if ('̤' in next_seg) or (next_seg[0] in {'ʰ', 'ʱ'}):
+                                    penalty /= penalty_discount
+                            except IndexError:
+                                pass
+                        
+                    # 5) If the deleted segment is a rhotic approximant /ɹ, ɻ/
+                    # and the corresponding preceding segment was rhoticized
+                    elif stripped_deleted in {'ɹ', 'ɻ'}:
+                        if (strip_diacritics(previous_seg) == 'ɚ') or ('˞' in previous_seg):
+                            penalty /= penalty_discount
+                    
+                    # 6) If the deleted segment is a glottal stop and the corresponding
+                    # preceding segment was glottalized (or creaky?)
+                    elif stripped_deleted == 'ʔ':
+                        if 'ˀ' in previous_seg:
+                            penalty /= penalty_discount
+                    
+                    
+                # 6) if the deleted segment is part of a long/geminate segment represented as double (e.g. /tt/ rather than /tː/), 
+                # where at least one part of the geminate has been aligned
+                # Method: check if the preceding or following pair contained the deleted segment at deleted_index, aligned to something other than the gap character
+                # Check following pair
+                double = False
+                try:
+                    nxt_pair = alignment[i+1]
+                    if '-' not in nxt_pair:
+                        if nxt_pair[deleted_index] == deleted_segment:
+                            double = True
+                            
+                            # Eliminate the penalty altogether if the gemination
+                            # is simply transcribed differently (see example below)
+                            if ('ː' in nxt_pair[gap_index]) or ('ˑ' in nxt_pair[gap_index]):
+                                penalty = 0
+                        
+                except IndexError:
+                    pass
+                
+                # Check preceding pair
+                if i > 0:
+                    prev_pair = alignment[i-1]
+                    if '-' not in prev_pair:
+                        if prev_pair[deleted_index] == deleted_segment:
+                            double = True
+                        
+                            # Eliminate the penalty altogether in the case of 
+                            # an alignment like: [('t', 'tː'), ('t', '-')]
+                            # where the gemination is simply transcribed differently
+                            if ('ː' in prev_pair[gap_index]) or ('ˑ' in prev_pair[gap_index]):
+                                penalty = 0
+                            
+                if double:
+                    penalty /= penalty_discount
+            
+            # TODO: is this right?
+            if prosodic_env_scaling:
+                # Discount deletion penalty according to prosodic sonority 
+                # environment (based on List, 2012)
+                deleted_i = sum([1 for j in range(i+1) if alignment[j][deleted_index] != '-'])-1
+                segment_list = [alignment[j][deleted_index] 
+                                for j in range(len(alignment))
+                                if alignment[j][deleted_index] != '-']
+                prosodic_env_weight = prosodic_environment_weight(segment_list, deleted_i)
+                penalty /= sqrt(abs(prosodic_env_weight-7)+1)
+            
+            
+            # Add the final penalty to penalty list
+            penalties.append(penalty)
+        
+        # Otherwise take the penalty as the phonetic distance between the aligned segments
+        else:
+            distance = 1 - sim_func(seg1, seg2, **kwargs)
+            penalties.append(distance)
+    
+    if total_sim:
+        word_dist = sum(penalties)
+    else:
+        # Euclidean distance of all penalties (= distance per dimension of the word)
+        # normalized by square root of number of dimensions
+        word_dist = euclidean_dist(penalties) / sqrt(len(penalties))
+        
+    return word_dist
 
-
-def segmental_word_sim(word1, word2=None, 
+# TODO name of this function TBD
+def segmental_word_dist(word1, word2=None, 
                        c_weight=0.5, v_weight=0.3, syl_weight=0.2):
     """Calculates the phonetic similarity of an aligned word pair according to
     weighted average similarity of consonantal segments, vocalic segments, and 
@@ -345,96 +346,86 @@ def segmental_word_sim(word1, word2=None,
     
     # Syllable score: length-normalized Levenshtein distance of syllable structure strings
     syl_structure1, syl_structure2 = ''.join(syl_structure1), ''.join(syl_structure2)
-    syl_score = 1 - (edit_distance(syl_structure1, syl_structure2) / len(alignment))
+    syl_score = edit_distance(syl_structure1, syl_structure2) / len(alignment)
     
-    # Final score: weighted sum of each component score
-    return (c_weight * c_score) + (v_weight * v_score) + (syl_weight * syl_score)
+    # Final score: weighted sum of each component score as distance
+    return (c_weight * (1-c_score)) + (v_weight * (1-v_score)) + (syl_weight * syl_score)
 
 
-combined_surprisal_dicts = {}
-scored_WAS = {}
 def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
     # TODO change pairs into Word class objects and extract language from there
-    if (pair1, pair2, ngram_size) in scored_WAS:
-        return scored_WAS[(pair1, pair2, ngram_size)]
+    word1, lang1 = pair1
+    word2, lang2 = pair2
     
+    # Remove suprasegmental and other ignored characters
+    word1 = strip_ch(word1, lang1.ch_to_remove)
+    word2 = strip_ch(word2, lang2.ch_to_remove)
+    
+    # Check whether phoneme PMI has been calculated for this language pair
+    # Otherwise calculate from scratch
+    if len(lang1.phoneme_pmi[lang2]) > 0:
+        pmi_dict = lang1.phoneme_pmi[lang2]
     else:
-        word1, lang1 = pair1
-        word2, lang2 = pair2
+        pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
+    
+    # Generate alignments in each direction: alignments need to come from PMI
+    alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict)
+    
+    # Calculate phoneme surprisal if not already done
+    if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
+        surprisal_dict_l1l2 = PhonemeCorrDetector(lang1, lang2).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+    if len(lang2.phoneme_surprisal[(lang1, ngram_size)]) == 0:
+        surprisal_dict_l2l1 = PhonemeCorrDetector(lang2, lang1).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
         
-        # Remove suprasegmental and other ignored characters
-        word1 = strip_ch(word1, lang1.ch_to_remove)
-        word2 = strip_ch(word2, lang2.ch_to_remove)
-        
-        # Calculate combined phoneme PMI if not already done
-        # pmi_dict = combine_PMI(lang1, lang2, **kwargs)
-        
-        # Check whether phoneme PMI has been calculated for this language pair
-        # Otherwise calculate from scratch
-        if len(lang1.phoneme_pmi[lang2]) > 0:
-            pmi_dict = lang1.phoneme_pmi[lang2]
-        else:
-            pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
-        
-        # Generate alignments in each direction: alignments need to come from PMI
-        alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict)
-        
-        # Calculate phoneme surprisal if not already done
-        if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
-            surprisal_dict_l1l2 = PhonemeCorrDetector(lang1, lang2).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-        if len(lang2.phoneme_surprisal[(lang1, ngram_size)]) == 0:
-            surprisal_dict_l2l1 = PhonemeCorrDetector(lang2, lang1).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-            
-        # Calculate the word-adaptation surprisal in each direction
-        # (note: alignment needs to be reversed to run in second direction)
-        if phon_env:
-            rev_alignment = list(phon_env_alignment(reverse_alignment(alignment)))
-            alignment = list(phon_env_alignment(alignment))
-            sur_dict1 = lang1.phon_env_surprisal[(lang2, ngram_size)]
-            sur_dict2 = lang2.phon_env_surprisal[(lang1, ngram_size)]
-        else:
-            rev_alignment = reverse_alignment(alignment)
-            sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
-            sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
-        WAS_l1l2 = adaptation_surprisal(alignment, 
-                                        surprisal_dict=sur_dict1,
-                                        ngram_size=ngram_size,
-                                        normalize=False)
-        WAS_l2l1 = adaptation_surprisal(rev_alignment, 
-                                        surprisal_dict=sur_dict2,
-                                        ngram_size=ngram_size,
-                                        normalize=False)
+    # Calculate the word-adaptation surprisal in each direction
+    # (note: alignment needs to be reversed to run in second direction)
+    if phon_env:
+        rev_alignment = list(phon_env_alignment(reverse_alignment(alignment)))
+        alignment = list(phon_env_alignment(alignment))
+        sur_dict1 = lang1.phon_env_surprisal[(lang2, ngram_size)]
+        sur_dict2 = lang2.phon_env_surprisal[(lang1, ngram_size)]
+    else:
+        rev_alignment = reverse_alignment(alignment)
+        sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
+        sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
+    WAS_l1l2 = adaptation_surprisal(alignment, 
+                                    surprisal_dict=sur_dict1,
+                                    ngram_size=ngram_size,
+                                    normalize=False)
+    WAS_l2l1 = adaptation_surprisal(rev_alignment, 
+                                    surprisal_dict=sur_dict2,
+                                    ngram_size=ngram_size,
+                                    normalize=False)
 
-        # Calculate self-surprisal values in each direction
-        self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False)
-        self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False)
+    # Calculate self-surprisal values in each direction
+    self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False)
+    self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False)
 
-        # Weight surprisal values by self-surprisal/information content value of corresponding segment
-        # Segments with greater information content weighted more heavily
-        def weight_by_self_surprisal(alignment, WAS, self_surprisal):
-            self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
-            weighted_WAS = []
-            adjust = 0
-            for i, pair in enumerate(alignment):
-                if pair[0][0] != '-':
-                    # TODO I wonder if skipping the gaps had something to do with the former success?
-                    weight = self_surprisal[(i-adjust)][-1] / self_info
-                    weighted = weight * WAS[i]
-                    weighted_WAS.append(weighted)
-                else:
-                    adjust += 1
-            return weighted_WAS
-        weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1)
-        weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2)
-        
-        # Return and save the average of these two values
-        score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
-        # TODO Treat surprisal values as distances and compute euclidean distance over these, then take average
-        # score = mean([euclidean_dist(weighted_WAS_l1l2), euclidean_dist(weighted_WAS_l2l1)])
+    # Weight surprisal values by self-surprisal/information content value of corresponding segment
+    # Segments with greater information content weighted more heavily
+    def weight_by_self_surprisal(alignment, WAS, self_surprisal):
+        self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
+        weighted_WAS = []
+        adjust = 0
+        for i, pair in enumerate(alignment):
+            if pair[0][0] != '-':
+                # TODO I wonder if skipping the gaps had something to do with the former success?
+                weight = self_surprisal[(i-adjust)][-1] / self_info
+                weighted = weight * WAS[i]
+                weighted_WAS.append(weighted)
+            else:
+                adjust += 1
+        return weighted_WAS
+    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1)
+    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2)
+    
+    # Return and save the average of these two values
+    score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
+    # TODO Treat surprisal values as distances and compute euclidean distance over these, then take average
+    # score = mean([euclidean_dist(weighted_WAS_l1l2), euclidean_dist(weighted_WAS_l2l1)])
+    return score
 
-        scored_WAS[(pair1, pair2, ngram_size)] = score
-        return score
-
+# TODO update or remove function below
 def phonetic_surprisal(pair1, pair2, surprisal_dict=None, normalize=True, ngram_size=1):
     lang1, lang2 = pair1[1], pair2[1]
     alignment = prepare_alignment(pair1, pair2)
@@ -464,76 +455,38 @@ def phonetic_surprisal(pair1, pair2, surprisal_dict=None, normalize=True, ngram_
     phon_surprisal = [phon_dists[i]*surprisal_values[i] for i in range(len(alignment))]
     
     return e**-sum(phon_surprisal)
+
+def pmi_dist(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
+    word1, lang1 = pair1
+    word2, lang2 = pair2
     
-
-combined_PMI_dicts = {}
-def combine_PMI(lang1, lang2, **kwargs):
-    # Return already calculated dictionary if possible
-    if (lang1, lang2) in combined_PMI_dicts:
-        return combined_PMI_dicts[(lang1, lang2)]
-
+    # Remove suprasegmental diacritics
+    diacritics_to_remove = list(suprasegmental_diacritics) + ['̩', '̍', ' ']
+    word1 = strip_ch(word1, diacritics_to_remove)
+    word2 = strip_ch(word2, diacritics_to_remove)
+    
+    # Check whether phoneme PMI has been calculated for this language pair
     # Otherwise calculate from scratch
     if len(lang1.phoneme_pmi[lang2]) > 0:
-        pmi_dict_l1l2 = lang1.phoneme_pmi[lang2]
+        pmi_dict = lang1.phoneme_pmi[lang2]
     else:
-        pmi_dict_l1l2 = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
-    if len(lang2.phoneme_pmi[lang1]) > 0:
-        pmi_dict_l2l1 = lang2.phoneme_pmi[lang1]
-    else:
-        pmi_dict_l2l1 = PhonemeCorrDetector(lang2, lang1).calc_phoneme_pmi(**kwargs)
+        pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
         
-    # Average together the PMI values from each direction
-    pmi_dict = defaultdict(lambda:defaultdict(lambda:0))
-    for seg1 in pmi_dict_l1l2:
-        for seg2 in pmi_dict_l1l2[seg1]:
-            pmi_dict[seg1][seg2] = mean([pmi_dict_l1l2[seg1][seg2], pmi_dict_l2l1[seg2][seg1]])
-    combined_PMI_dicts[(lang1, lang2)] = pmi_dict
-    combined_PMI_dicts[(lang2, lang1)] = pmi_dict
-    return pmi_dict
-
-
-
-scored_word_pmi = {}
-def pmi_dist(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
-    if (pair1, pair2, sim2dist) in scored_word_pmi:
-        return scored_word_pmi[(pair1, pair2, sim2dist)]
+    # Align the words with PMI
+    alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict)
+    
+    # Calculate PMI scores for each aligned pair
+    PMI_values = [pmi_dict[pair[0]][pair[1]] for pair in alignment]
+    PMI_score = mean(PMI_values) 
+    
+    if sim2dist:
+        PMI_dist = exp(-max(PMI_score, 0)**alpha)
+        return PMI_dist
     
     else:
-        word1, lang1 = pair1
-        word2, lang2 = pair2
-        
-        # Remove suprasegmental diacritics
-        diacritics_to_remove = list(suprasegmental_diacritics) + ['̩', '̍', ' ']
-        word1 = strip_ch(word1, diacritics_to_remove)
-        word2 = strip_ch(word2, diacritics_to_remove)
-        
-        # Calculate PMI in both directions if not already done, otherwise retrieve the dictionaries
-        # pmi_dict = combine_PMI(lang1, lang2, **kwargs)
-        
-        # Check whether phoneme PMI has been calculated for this language pair
-        # Otherwise calculate from scratch
-        if len(lang1.phoneme_pmi[lang2]) > 0:
-            pmi_dict = lang1.phoneme_pmi[lang2]
-        else:
-            pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
-            
-        # Align the words with PMI
-        alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict)
-        
-        # Calculate PMI scores for each aligned pair
-        PMI_values = [pmi_dict[pair[0]][pair[1]] for pair in alignment]
-        PMI_score = mean(PMI_values) 
-        
-        if sim2dist:
-            PMI_dist = exp(-max(PMI_score, 0)**alpha)
-            scored_word_pmi[(pair1, pair2, sim2dist)] = PMI_dist
-            return PMI_dist
-        
-        else:
-            scored_word_pmi[(pair1, pair2, sim2dist)] = PMI_score
-            return PMI_score
+        return PMI_score
 
-def LevenshteinDist(word1, word2, normalize=True, asjp=True):
+def levenshtein_dist(word1, word2, normalize=True, asjp=True):
     if type(word1) == tuple:
         word1 = word1[0]
     if type(word2) == tuple:
@@ -555,31 +508,24 @@ def LevenshteinDist(word1, word2, normalize=True, asjp=True):
         LevDist /= max(len(word1), len(word2))
         
     return LevDist
-        
-hybrid_scores = {} # TODO shouldn't be global variable
-def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->float:
+
+def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, weights=None)->float:
     """Calculates a hybrid distance of multiple distance or similarity functions
 
     Args:
         pair1 (tuple): (word, Language) pair
         pair2 (tuple): (word, Language) pair
-        funcs (dict): dictionary of functions with their kwargs {function:{arg:val}}
-        func_sims (iterable): list of Boolean values representing whether each function is a similarity function
-
+        funcs (iterable): iterable of DistFunction class objects
     Returns:
         float: hybrid similarity measure
     """
-    # Try to retrieve previously calculated value if possible
-    if (pair1, pair2, tuple(funcs.keys())) in hybrid_scores:
-        return hybrid_scores[(pair1, pair2, tuple(funcs.keys()))]
-    
     scores = []
     if weights is None:
         weights = [1/len(funcs) for i in range(len(funcs))]
     assert round(sum(weights)) == 1.0
-    for func, func_sim, weight in zip(funcs, func_sims, weights):
-        kwargs = funcs[func]
-        score = func(pair1, pair2, **kwargs)
+    for func, weight in zip(funcs, weights):
+        func_sim = func.sim
+        score = func.eval(pair1, pair2)
         if func_sim:
             score = 1 - score
         
@@ -589,17 +535,36 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, func_sims, weights=None)->
     # print(f'PMI: {round(scores[0],3)} | Sur: {round(scores[1],3)} | Phon: {round(scores[-1],3)}')
     #score = euclidean_dist(scores)
     score = sum(scores)
-
-    hybrid_scores[(pair1, pair2, tuple(funcs.keys()))] = score
     
     return score
-        
-def hybrid_sim(pair1, pair2, funcs, func_sims, weights=None, **kwargs):
-    hybrid_d = hybrid_dist(pair1, pair2, funcs=funcs, func_sims=func_sims, weights=weights, **kwargs)
-    hybrid_sim = e**-(hybrid_d)
-    #hybrid_sim = 1 / (1 + hybrid_d)
-    return hybrid_sim
-    
+
+# Initialize distance functions as DistFunction objects
+LevenshteinDist = DistFunction(
+    func=levenshtein_dist,
+    cluster_threshold=0.73)
+PhoneticDist = DistFunction(
+    func=phonetic_dist)
+SegmentalDist = DistFunction(
+    func=segmental_word_dist)
+PhonologicalDist = DistFunction(
+    func=phonological_dist,
+    cluster_threshold=0.16 # TODO cutoff (renamed to "cluster_threshold") needs to be recalibrated; this value was from when it was a similarity function
+) 
+PMIDist = DistFunction(
+    func=pmi_dist,
+    cluster_threshold=0.36)
+SurprisalDist = DistFunction(
+    func=mutual_surprisal, 
+    cluster_threshold=0.74, # TODO cutoff (renamed to "cluster_threshold") needs to be recalibrated; this value was from when it was a similarity function
+    ngram_size=1)
+HybridDist = DistFunction(
+    func=hybrid_dist,
+    cluster_threshold=0.57, # TODO cutoff (renamed to "cluster_threshold")needs to be recalibrated
+    funcs=[PMIDist, SurprisalDist, PhonologicalDist],
+)
+HybridSim = HybridDist.to_similarity() 
+
+# Z SCORE
 def Z_score(p_values):
     neg_log_p = [-log(p) for p in p_values]
     return (sum(neg_log_p) - len(p_values)) / sqrt(len(p_values))

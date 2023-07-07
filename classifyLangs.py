@@ -1,7 +1,7 @@
 import argparse, os
 from phyloLing import load_family
 from lingDist import cognate_sim
-from wordSim import pmi_dist, mutual_surprisal, phon_word_dist, hybrid_sim, LevenshteinDist
+from wordSim import PMIDist, SurprisalDist, PhonologicalDist, HybridSim, LevenshteinDist
 import logging
 
 if __name__ == "__main__":
@@ -12,7 +12,7 @@ if __name__ == "__main__":
     parser.add_argument('--linkage', default='nj', choices=['nj', 'average', 'complete', 'ward', 'weighted', 'single'], help='Linkage method')
     parser.add_argument('--cognates', default='auto', choices=['auto', 'gold', 'none'], help='Cognate cluster type used for evaluation: "gold" cognates uses labels from dataset assuming that data are sorted into cognate classe; "auto" cognates auto-detects and clusters same-meaning words into cognate classes; "none" performs no separation of cognates from non-cognates')
     parser.add_argument('--cluster', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Cognate clustering method')
-    parser.add_argument('--cutoff', default=None, type=float, help='Cutoff threshold in range [0,1] for clustering cognate sets')
+    parser.add_argument('--cluster_threshold', default=None, type=float, help='Cutoff threshold in range [0,1] for clustering cognate sets')
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
     parser.add_argument('--min_similarity', default=0, type=float, help='Minimum similarity threshold for word form evaluation')
     parser.add_argument('--ngram', default=1, type=int, help='Phoneme ngram size used for phoneme surprisal calculation')
@@ -68,17 +68,20 @@ if __name__ == "__main__":
             )
     function_map = {
         # 'label':(function, sim, cutoff)
-        'pmi':(pmi_dist, False, {}, 0.36),
-        'surprisal':(mutual_surprisal, False, {'ngram_size':args.ngram}, 0.74), # TODO cutoff needs to be recalibrated
-        'phonetic':(phon_word_dist, False, {}, 0.16), # TODO cutoff needs to be recalibrated
-        'levenshtein':(LevenshteinDist, False, {}, 0.73),
-        'hybrid':(hybridSim, True, {}, 0.57), # TODO cutoff needs to be recalibrated
+        'pmi':PMIDist,
+        'surprisal':SurprisalDist,
+        'phonetic':PhonologicalDist, # TODO name doesn't match
+        'levenshtein':LevenshteinDist,
+        'hybrid':HybridSim,
         }
+    if args.cognates == 'auto':
+        clusterDist = function_map[args.cluster]
+    evalDist = function_map[args.eval]
     
-    # Set cutoff to default for specified function, if not otherwise specified
-    if args.cutoff is None:
-        args.cutoff = function_map[args.cluster][-1]
-
+    # Set specified cluster threshold, if different from default
+    if args.cluster_threshold:
+        clusterDist.cluster_threshold = args.cluster_threshold
+    
     # Load CLDF dataset
     if args.min_amc:
         args.min_amc = float(args.min_amc)
@@ -129,14 +132,12 @@ if __name__ == "__main__":
 
     # Generate Newick tree string
     logger.info(f'Generating phylogenetic tree...')
-    dist_func = cognate_sim # TODO other options?
+    #dist_func = cognate_sim # TODO other options?
     code = family.generate_test_code(dist_func, sim=True, cognates=args.cognates, cutoff=args.cutoff)
     tree = family.draw_tree(
-        dist_func=dist_func,
+        dist_func=cognate_sim, # TODO other options?
         sim=True, # cognate_sim
-        cluster_func=function_map[args.cluster][0],
-        cluster_sim=function_map[args.cluster][1],
-        cutoff=args.cutoff,
+        cluster_func=clusterDist,
         eval_func=(function_map[args.eval][0], function_map[args.eval][-2]), #function, kwargs
         eval_sim=function_map[args.eval][1],
         cognates=args.cognates, 

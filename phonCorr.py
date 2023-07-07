@@ -337,7 +337,7 @@ class PhonemeCorrDetector:
 
     
     def noncognate_thresholds(self, eval_func, seed=1, sample_size=None, save=True):
-        #eval func is tuple (function, {kwarg:value})
+        #eval func was formerly tuple (function, {kwarg:value}), now is DistFunction class object
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
         
         random.seed(seed)
@@ -348,19 +348,18 @@ class PhonemeCorrDetector:
         diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
         noncognate_word_forms = [((item[0][2], self.lang1), (item[1][2], self.lang2)) for item in diff_sample]
         noncognate_scores = []
-        func, kwargs = eval_func
-        kwargs_hashable = tuple(dict_tuplelist(kwargs))
-        func_key = (func, kwargs_hashable)
+        kwargs_hashable = tuple(dict_tuplelist(eval_func.kwargs))
+        func_key = (eval_func, kwargs_hashable)
         for pair in noncognate_word_forms:
             if pair in self.scored_words[func_key]:
                 noncognate_scores.append(self.scored_words[func_key][pair])
             else:
-                score = func(pair[0], pair[1], **kwargs)
+                score = eval_func.eval(pair[0], pair[1])
                 noncognate_scores.append(score)
                 self.scored_words[func_key][pair] = score
         
         if save:
-            self.lang1.noncognate_thresholds[(self.lang2, (eval_func[0], tuple(eval_func[1].items())))] = noncognate_scores
+            self.lang1.noncognate_thresholds[(self.lang2, eval_func)] = noncognate_scores
         
         return noncognate_scores
         
