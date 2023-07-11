@@ -233,7 +233,7 @@ class Distance:
             return Distance(
                 func=lambda x, y: e**-(self.func(x, y, **self.kwargs)), 
                 #func=lambda x, y: 1/(1+self.func(x, y, **self.kwargs)), # TODO make this conversion option possible via method argument
-                cutoff=self.cutoff, 
+                cluster_threshold=self.cluster_threshold, 
                 sim=True, 
                 **self.kwargs)
         else:
