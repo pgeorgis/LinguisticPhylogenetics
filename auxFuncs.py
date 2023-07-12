@@ -214,30 +214,52 @@ class Distance:
         self.cluster_threshold = cluster_threshold
         self.name = name if name else self.func.__name__
         self.measured = {}
+        self.hashable_kwargs = self.get_hashable_kwargs(self.kwargs)
     
     def set(self, param, value):
         self.kwargs[param] = value
+        self.hashable_kwargs = self.get_hashable_kwargs(self.kwargs)
     
     def eval(self, x, y, **kwargs):
-        if (x, y, self.kwargs) in self.measured:
-            return self.measured[(x, y, self.kwargs)]
+        if (x, y, self.hashable_kwargs) in self.measured:
+            return self.measured[(x, y, self.hashable_kwargs)]
         else:
-            for arg, val in kwargs:
+            for arg, val in kwargs.items():
                 self.set(arg, val)
             result = self.func(x, y, **self.kwargs)
-            self.measured[(x, y, self.kwargs)] = result
+            self.measured[(x, y, self.hashable_kwargs)] = result
             return result
     
     def to_similarity(self):
         if self.sim is False:
-            return Distance(
-                func=lambda x, y: e**-(self.func(x, y, **self.kwargs)), 
+            def sim_func(x, y, **kwargs):
                 #func=lambda x, y: 1/(1+self.func(x, y, **self.kwargs)), # TODO make this conversion option possible via method argument
+                return e**-(self.func(x, y, **kwargs))
+            
+            return Distance(
+                func=sim_func,
                 cluster_threshold=self.cluster_threshold, 
                 sim=True, 
                 **self.kwargs)
+        
         else:
             return self
+
+    def get_hashable_kwargs(self, kwargs):
+        hashable = []
+        for key, value in kwargs.items():
+            # Recursively convert nested dictionaries
+            if isinstance(value, dict):
+                value = self.get_hashable_kwargs(value) 
+            
+            # Convert lists to tuples
+            elif isinstance(value, list):
+                value = tuple(value)  
+
+            hashable.append((key, value))
+
+        return tuple(sorted(hashable))
+
 
 def euclidean_dist(dists):
     return sqrt(sum([dist**2 for dist in dists]))
@@ -254,13 +276,27 @@ def list_mostsimilar(item1, comp_group, dist_func, n=5, sim=True, return_=False,
             print(f'{item[0].name}: {round(item[1], 2)}')
 
 def distance_matrix(group, dist_func, sim=False, **kwargs):
+
+    if type(dist_func) is Distance:
+        sim = dist_func.sim
+        func = False
+        
+    elif type(dist_func) is function:
+        func = True
+
+    else:
+        raise TypeError(f'dist_func expected to be Distance class object or function, found {type(dist_func)}')
+
     # Initialize nxn distance matrix filled with zeros
     mat = zeros((len(group),len(group)))
     
     # Calculate pairwise distances between items and add to matrix
     for i in range(len(group)):
         for j in range(i+1, len(group)):
-            dist = dist_func(group[i], group[j], **kwargs)
+            if func:
+                dist = dist_func(group[i], group[j], **kwargs)
+            else:
+                dist = dist_func.eval(group[i], group[j], **kwargs)
             
             # Convert similarities to distances
             if sim:

@@ -348,8 +348,7 @@ class PhonemeCorrDetector:
         diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
         noncognate_word_forms = [((item[0][2], self.lang1), (item[1][2], self.lang2)) for item in diff_sample]
         noncognate_scores = []
-        kwargs_hashable = tuple(dict_tuplelist(eval_func.kwargs))
-        func_key = (eval_func, kwargs_hashable)
+        func_key = (eval_func, eval_func.hashable_kwargs)
         for pair in noncognate_word_forms:
             if pair in self.scored_words[func_key]:
                 noncognate_scores.append(self.scored_words[func_key][pair])

@@ -773,7 +773,6 @@ class LexicalDataset:
     
     def distance_matrix(self, 
                         dist_func,
-                        eval_func, 
                         concept_list=None,
                         cluster_func=None, 
                         cognates='auto',
@@ -782,7 +781,7 @@ class LexicalDataset:
 
         # Try to skip re-calculation of distance matrix by retrieving
         # a previously computed distance matrix by its code
-        code = self.generate_test_code(dist_func, cognates=cognates, eval_func=eval_func, **kwargs)
+        code = self.generate_test_code(dist_func, cognates=cognates, **kwargs)
         
         if code in self.distance_matrices:
             return self.distance_matrices[code]
@@ -843,7 +842,6 @@ class LexicalDataset:
                              labels=names, 
                              dist_func=dist_func, 
                              sim=dist_func.sim,
-                             eval_func=eval_func,
                              clustered_cognates=clustered_concepts,
                              **kwargs)
         
@@ -860,7 +858,6 @@ class LexicalDataset:
     
     def linkage_matrix(self, 
                        dist_func,
-                       eval_func,
                        cluster_func=None, 
                        concept_list=None, 
                        cognates='auto',
@@ -874,7 +871,6 @@ class LexicalDataset:
 
         # Create distance matrix
         dm = self.distance_matrix(dist_func=dist_func,
-                                  eval_func=eval_func,
                                   cluster_func=cluster_func,
                                   concept_list=concept_list,
                                   cognates=cognates,
@@ -920,8 +916,7 @@ class LexicalDataset:
         df.to_csv(outfile, sep='\t', index=False, float_format=float_format)
     
     def draw_tree(self, 
-                  dist_func, 
-                  eval_func,
+                  dist_func,
                   concept_list=None,            
                   cluster_func=None,
                   cognates='auto', 
@@ -947,7 +942,6 @@ class LexicalDataset:
             outtree = os.path.join(self.tree_dir, f'{code}.tre')
 
         lm = self.linkage_matrix(dist_func,
-                                 eval_func, 
                                  concept_list, 
                                  cluster_func,
                                  cognates, 

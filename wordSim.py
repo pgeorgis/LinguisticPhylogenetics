@@ -509,24 +509,31 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, weights=None)->float:
 # Initialize distance functions as Distance objects
 LevenshteinDist = Distance(
     func=levenshtein_dist,
+    name='LevenshteinDist',
     cluster_threshold=0.73)
 PhoneticDist = Distance(
-    func=phonetic_dist)
+    func=phonetic_dist,
+    name='PhoneticDist') # TODO name TBD
 SegmentalDist = Distance(
-    func=segmental_word_dist)
+    func=segmental_word_dist,
+    name='SegmentalDist') # TODO name TBD
 PhonologicalDist = Distance(
     func=phonological_dist,
+    name='PhonologicalDist', # TODO name TBD
     cluster_threshold=0.16 # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
 ) 
 PMIDist = Distance(
     func=pmi_dist,
+    name='PMIDist',
     cluster_threshold=0.36)
 SurprisalDist = Distance(
     func=mutual_surprisal, 
+    name='SurprisalDist',
     cluster_threshold=0.74, # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
 HybridDist = Distance(
     func=hybrid_dist,
+    name='HybridDist',
     cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
     funcs=[PMIDist, SurprisalDist, PhonologicalDist],
 )

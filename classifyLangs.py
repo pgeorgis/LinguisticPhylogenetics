@@ -2,6 +2,7 @@ import argparse, os
 from phyloLing import load_family
 from lingDist import cognate_sim
 from wordSim import PMIDist, SurprisalDist, PhonologicalDist, HybridSim, LevenshteinDist
+from auxFuncs import Distance
 import logging
 
 if __name__ == "__main__":
@@ -54,6 +55,8 @@ if __name__ == "__main__":
         }
     if args.cognates == 'auto':
         clusterDist = function_map[args.cluster]
+    else:
+        clusterDist = None
     evalDist = function_map[args.eval]
     
     # Set specified cluster threshold, if different from default
@@ -108,21 +111,29 @@ if __name__ == "__main__":
     if args.cognates == 'auto':
         cog_id = f'{family.name}_distfunc-{args.cluster}-{function_map[args.cluster][1]}_cutoff-{args.cluster_threshold}'
 
+    # Create Distance measure according to settings
+    dist_func = cognate_sim # TODO other options?
+    distFunc = Distance(
+        func=dist_func, 
+        name='CognateSim',
+        sim=True, 
+        # cognate_sim kwargs
+        eval_func=evalDist,
+        n_samples=args.n_samples, 
+        sample_size=args.sample_size, 
+        calibrate=args.calibrate,
+        min_similarity=args.min_similarity,
+        logger=logger,
+        )
+    
     # Generate Newick tree string
     logger.info(f'Generating phylogenetic tree...')
-    #dist_func = cognate_sim # TODO other options?
-    code = family.generate_test_code(dist_func, sim=True, cognates=args.cognates, cutoff=args.cluster_threshold)
+    code = family.generate_test_code(distFunc, sim=True, cognates=args.cognates, cutoff=args.cluster_threshold)
     tree = family.draw_tree(
-        dist_func=cognate_sim, # TODO other options?
+        dist_func=distFunc,
         cluster_func=clusterDist,
-        eval_func=evalDist,
         cognates=args.cognates, 
         method=args.linkage, # this should be changed to linkage rather than method
-        calibrate=args.calibrate, # argument for cognate_sim
-        n_samples=args.n_samples, # argument for cognate_sim
-        sample_size=args.sample_size, # argument for cognate_sim
-        min_similarity=args.min_similarity, # argument for cognate_sim
-        logger=logger, # argument for cognate_sim
         title=family.name, 
         outtree=args.outtree,
         return_newick=args.newick)
