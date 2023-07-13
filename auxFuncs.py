@@ -210,7 +210,7 @@ class Distance:
     def __init__(self, func, cluster_threshold=0.5, sim=False, name=None, **kwargs):
         self.func = func
         self.kwargs = kwargs
-        self.sim = False
+        self.sim = sim
         self.cluster_threshold = cluster_threshold
         self.name = name if name else self.func.__name__
         self.measured = {}
