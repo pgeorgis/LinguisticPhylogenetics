@@ -230,16 +230,20 @@ class Distance:
             self.measured[(x, y, self.hashable_kwargs)] = result
             return result
     
-    def to_similarity(self):
+    def to_similarity(self, name=None):
         if self.sim is False:
             def sim_func(x, y, **kwargs):
                 #func=lambda x, y: 1/(1+self.func(x, y, **self.kwargs)), # TODO make this conversion option possible via method argument
                 return e**-(self.func(x, y, **kwargs))
             
+            if name is None:
+                name = self.name + '_asSimilarity'
+
             return Distance(
                 func=sim_func,
                 cluster_threshold=self.cluster_threshold, 
-                sim=True, 
+                sim=True,
+                name=name,
                 **self.kwargs)
         
         else:
@@ -254,7 +258,11 @@ class Distance:
             
             # Convert lists to tuples
             elif isinstance(value, list):
-                value = tuple(value)  
+                value = tuple(value)
+
+            # Get just name of other Distance functions as kwargs
+            elif isinstance(value, Distance):
+                value = value.name
 
             hashable.append((key, value))
 

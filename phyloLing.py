@@ -319,7 +319,8 @@ class LexicalDataset:
             pmi_data = pd.read_csv(pmi_file)
             
         else:
-            self.calculate_phoneme_pmi(output_file=pmi_file, **kwargs)
+            self.calculate_phoneme_pmi(**kwargs)
+            self.write_phoneme_pmi(output_file=pmi_file)
             pmi_data = pd.read_csv(pmi_file)
         
         # Iterate through the dataframe and save the PMI values to the Language
@@ -754,21 +755,20 @@ class LexicalDataset:
         elif method == 'mcc':
             return mean(mcc_scores.values())
     
-    def generate_test_code(self, dist_func, cognates, **kwargs): # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
+    def generate_test_code(self, dist_func, cognates, exclude=['logger'], **kwargs): # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
         if type(dist_func) != Distance:
             self.logger.error(f'dist_func must be a Distance class object, found {type(dist_func)} instead.')
             raise TypeError
-        
         name = dist_func.name if dist_func.name else dist_func.func.__name__
         code = f'cognates-{cognates}_distfunc-{name}'
-        if cognates != 'auto':
+        if cognates == 'auto':
             code += f'_cutoff-{dist_func.cluster_threshold}'
-        for key, value in dist_func.kwargs.items():
-            code += f'_{key}-{value}'
+        for key, value in dist_func.hashable_kwargs:
+            if key not in exclude:
+                code += f'_{key}-{value}'
         for key, value in kwargs.items():
             if key not in kwargs:
                 code += f'_{key}-{value}'
-        # TODO : doesn't yet account for concept_list ID; others may also not be working 
         return code
     
     def distance_matrix(self, 

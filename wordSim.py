@@ -537,7 +537,7 @@ HybridDist = Distance(
     cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
     funcs=[PMIDist, SurprisalDist, PhonologicalDist],
 )
-HybridSim = HybridDist.to_similarity() 
+HybridSim = HybridDist.to_similarity(name='HybridSim') 
 
 # Z SCORE
 def Z_score(p_values):
