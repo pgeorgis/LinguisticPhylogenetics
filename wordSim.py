@@ -490,8 +490,12 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, weights=None)->float:
     scores = []
     if weights is None:
         weights = [1/len(funcs) for i in range(len(funcs))]
+    else:
+        assert len(weights) == len(funcs)
     assert round(sum(weights)) == 1.0
     for func, weight in zip(funcs, weights):
+        if weight == 0:
+            continue
         func_sim = func.sim
         score = func.eval(pair1, pair2)
         if func_sim:
