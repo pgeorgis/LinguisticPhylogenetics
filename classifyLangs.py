@@ -12,6 +12,7 @@ if __name__ == "__main__":
     parser.add_argument('--file', required=True, help='Input CLDF data file path')
     parser.add_argument('--linkage', default='nj', choices=['nj', 'average', 'complete', 'ward', 'weighted', 'single'], help='Linkage method')
     parser.add_argument('--cognates', default='auto', choices=['auto', 'gold', 'none'], help='Cognate cluster type used for evaluation: "gold" cognates uses labels from dataset assuming that data are sorted into cognate classe; "auto" cognates auto-detects and clusters same-meaning words into cognate classes; "none" performs no separation of cognates from non-cognates')
+    # TODO possibly change default setting to "none"; possibly rename "none" to "no clustering" or make clearer that there is no explicit clustering, but the calibration argument would still effectively apply some kind of weighting towards true cognates
     parser.add_argument('--cluster', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Cognate clustering method')
     parser.add_argument('--cluster_threshold', default=None, type=float, help='Cutoff threshold in range [0,1] for clustering cognate sets')
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
@@ -53,6 +54,8 @@ if __name__ == "__main__":
         'levenshtein':LevenshteinDist,
         'hybrid':HybridSim,
         }
+    # this weighting scheme works well seemingly (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
+    function_map['hybrid'].set('weights', (0.25, 0.5, 0.25)) # PMI, surprisal, phonological
     if args.cognates == 'auto':
         clusterDist = function_map[args.cluster]
     else:
@@ -126,9 +129,12 @@ if __name__ == "__main__":
         logger=logger,
         )
     
+    # Generate test code 
+    code = family.generate_test_code(distFunc, sim=True, cognates=args.cognates, cutoff=args.cluster_threshold)
+    logger.debug(f'Experiment ID: {code}')
+
     # Generate Newick tree string
     logger.info(f'Generating phylogenetic tree...')
-    code = family.generate_test_code(distFunc, sim=True, cognates=args.cognates, cutoff=args.cluster_threshold)
     tree = family.draw_tree(
         dist_func=distFunc,
         cluster_func=clusterDist,
@@ -148,3 +154,14 @@ if __name__ == "__main__":
                 f.write(tree)
         else:
             print(tree)
+    
+    def write_lang_dists_to_tsv(dist, outfile):
+        with open(outfile, 'w') as f:
+            header = '\t'.join(['Language1', 'Language2', 'Measurement'])
+            f.write(f'{header}\n')
+            for key, value in dist.measured.items():
+                lang1, lang2, kwargs = key
+                line = '\t'.join([lang1.name, lang2.name, str(value)])
+                f.write(f'{line}\n')
+    
+    write_lang_dists_to_tsv(distFunc, outfile=os.path.join(family.dist_matrix_dir, f'{code}_scored.tsv'))
