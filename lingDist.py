@@ -101,6 +101,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
             l1_wordcount, l2_wordcount = 0, 0
                 
             for cognate_id in clustered_cognates[concept]:
+                # TODO make these Word objects instead of strings "LANGUAGE /ipastring/"
                 items = [entry.split('/') for entry in clustered_cognates[concept][cognate_id]]
                 items = [(item[0].strip(), item[1]) for item in items]
                 l1_words = [item[1] for item in items if item[0] == lang1.name]
