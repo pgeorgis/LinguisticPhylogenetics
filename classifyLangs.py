@@ -55,7 +55,8 @@ if __name__ == "__main__":
         'hybrid':HybridSim,
         }
     # this weighting scheme works well seemingly (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
-    function_map['hybrid'].set('weights', (0.25, 0.5, 0.25)) # PMI, surprisal, phonological
+    #function_map['hybrid'].set('weights', (0.25, 0.5, 0.25)) # PMI, surprisal, phonological
+    function_map['hybrid'].set('weights', (0.5, 0.25, 0.25)) # PMI, surprisal, phonological
     if args.cognates == 'auto':
         clusterDist = function_map[args.cluster]
     else:
