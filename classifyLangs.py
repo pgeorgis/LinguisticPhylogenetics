@@ -108,11 +108,12 @@ if __name__ == "__main__":
             family.calculate_phoneme_surprisal(ngram_size=args.ngram)
             family.write_phoneme_surprisal(ngram_size=args.ngram)
 
-    # Load pre-clustered cognate sets, if available
-    family.load_clustered_cognates()
-
-    # Set cognate cluster ID according to settings
+    # Auto cognate clustering only
     if args.cognates == 'auto':
+        # Load pre-clustered cognate sets, if available
+        family.load_clustered_cognates()
+
+        # Set cognate cluster ID according to settings
         cog_id = f'{family.name}_distfunc-{args.cluster}-{function_map[args.cluster][1]}_cutoff-{args.cluster_threshold}'
 
     # Create Distance measure according to settings
