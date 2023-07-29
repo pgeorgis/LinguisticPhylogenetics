@@ -9,7 +9,6 @@ from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_envi
 from auxFuncs import Distance, strip_ch, euclidean_dist, adaptation_surprisal
 from phonAlign import Alignment, phon_env_alignment
 from phonCorr import PhonemeCorrDetector
-# TODO this script should be renamed -> wordDist.py since the measures are now all distances
 
 def prepare_alignment(item1, item2, **kwargs):
     """Prepares alignment of two items, either:

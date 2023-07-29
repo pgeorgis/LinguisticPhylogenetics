@@ -1,7 +1,7 @@
 import argparse, os
 from phyloLing import load_family
 from lingDist import cognate_sim
-from wordSim import PMIDist, SurprisalDist, PhonologicalDist, HybridSim, LevenshteinDist
+from wordDist import PMIDist, SurprisalDist, PhonologicalDist, HybridSim, LevenshteinDist
 from auxFuncs import Distance
 import logging
 

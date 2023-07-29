@@ -1,6 +1,6 @@
 from auxFuncs import euclidean_dist
 from phonCorr import PhonemeCorrDetector
-from wordSim import Z_dist
+from wordDist import Z_dist
 from statistics import mean, stdev, StatisticsError
 from math import e
 from scipy.stats import norm
