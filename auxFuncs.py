@@ -151,27 +151,32 @@ def surprisal(p):
         return -log(p, 2)
     except ValueError:
         raise ValueError(f'Math Domain Error: cannot take the log of {p}')
-        
-# def adaptation_surprisal(alignment, surprisal_dict, normalize=True):
-#     """Calculates the surprisal of an aligned sequence, given a dictionary of 
-#         surprisal values for the sequence corresponcences"""
-#     values = [surprisal_dict[pair[0]][pair[1]] for pair in alignment]
-
-#     if normalize:
-#         return mean(values)
-#     else:
-#         return sum(values)
 
 def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, normalize=True):
     """Calculates the surprisal of an aligned sequence, given a dictionary of 
     surprisal values for the sequence corresponcences"""
+
+    # if type(alignment) is Alignment:
+    #     length = alignment.length
+    #     alignment = alignment.alignment
+    # elif type(alignment) is list:
+    #     length = len(alignment)
+    # else:
+    #     raise TypeError
+    # TODO problem: this function needs to live in this script (auxFuncs.py) to avoid circular imports but importing Alignment object from phonAlign.py would also cause a circular import
+    # Temporary solution: assume that if the alignment is not a list, it is an Alignment class object
+    if type(alignment) is list:
+        length = len(alignment)
+    else:
+        length = alignment.length
+        alignment = alignment.alignment
     
     pad_n = ngram_size - 1
     if ngram_size > 1:
         alignment = [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
     
     values = []
-    for i in range(pad_n, len(alignment)-pad_n):
+    for i in range(pad_n, length-pad_n):
         ngram = alignment[i:i+ngram_size]
         segs = list(zip(*ngram))
         seg1, seg2 = segs

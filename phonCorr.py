@@ -1,11 +1,10 @@
 from collections import defaultdict
-from auxFuncs import normalize_dict, default_dict, dict_tuplelist, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import phone_align, compatible_segments, phon_env_alignment, phon_env_ngrams
-from statistics import mean, stdev
+from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
+from phonAlign import Alignment, compatible_segments, phon_env_alignment, phon_env_ngrams
+from statistics import mean
 import random
 from itertools import product
 from math import log
-import re
 from phonSim.phonSim import phonEnvironment
 
 class PhonemeCorrDetector:
@@ -21,16 +20,14 @@ class PhonemeCorrDetector:
     
         # If no wordlist is provided, by default use all concepts shared by the two languages
         if wordlist is None:
-            wordlist = [concept for concept in self.lang1.vocabulary 
-                        if concept in self.lang2.vocabulary]
+            wordlist = self.lang1.vocabulary.keys() & self.lang2.vocabulary.keys()
         
         # If a wordlist is provided, use only the concepts shared by both languages
         else:
-            wordlist = [concept for concept in wordlist 
-                        if concept in self.lang1.vocabulary 
-                        if concept in self.lang2.vocabulary]
+            wordlist = set(wordlist) & self.lang1.vocabulary.keys() & self.lang2.vocabulary.keys()
             
         # Get tuple (concept, orthography, IPA, segmented IPA) for each word entry
+        # TODO create Wordlist class to handle this
         l1_wordlist = [(concept, word.orthography, word.ipa, word.segments) 
                        for concept in wordlist for word in self.lang1.vocabulary[concept]]
         l2_wordlist = [(concept, word.orthography, word.ipa, word.segments) 
@@ -58,11 +55,18 @@ class PhonemeCorrDetector:
         return same_meaning, diff_meaning, loanwords
     
     
-    def align_wordlist(self, wordlist, 
-                       align_function=phone_align, **kwargs):
+    def align_wordlist(self, 
+                       wordlist,
+                       added_penalty_dict=None,
+                       **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
-        return [align_function(pair[0][-1], pair[1][-1], **kwargs)
-                for pair in wordlist]
+        return [Alignment(
+            seq1=pair[0][-1], 
+            seq2=pair[1][-1],
+            added_penalty_dict=added_penalty_dict,
+            **kwargs
+            ).alignment # TODO handle Alignment class objects better; currently this only accesses the string alignment but the object contains other possibly useful info
+            for pair in wordlist] # TODO: tuple would be better than list if possible
     
     
     def correspondence_probs(self, alignment_list, ngram_size=1,
@@ -242,14 +246,10 @@ class PhonemeCorrDetector:
                 iteration += 1
 
                 # Align the qualifying words of the previous step using previous step's PMI
-                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], 
-                                                        added_penalty_dict=PMI_iterations[iteration-1],
-                                                        segmented=True)
+                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1])
                 
                 # Align the sample of different meaning and non-qualifying words again using previous step's PMI
-                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1],
-                                                            added_penalty_dict=PMI_iterations[iteration-1],
-                                                            segmented=True)
+                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1])
                 
                 # Calculate correspondence probabilities and PMI values from these alignments
                 cognate_probs = self.correspondence_probs(cognate_alignments)
@@ -260,15 +260,12 @@ class PhonemeCorrDetector:
                 PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs)# , noncognate_probs)
                 
                 # Align all same-meaning word pairs
-                all_alignments = self.align_wordlist(synonym_sample, 
-                                                    added_penalty_dict=PMI_iterations[iteration-1],
-                                                    segmented=True)
+                all_alignments = self.align_wordlist(synonym_sample, added_penalty_dict=PMI_iterations[iteration-1])
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
-                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] 
-                                                for pair in alignment]))
+                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment]))
                 # nc_mean = mean(noncognate_PMI)
                 # nc_stdev = stdev(noncognate_PMI)
                 
@@ -559,15 +556,11 @@ class PhonemeCorrDetector:
                 same_sample = random.sample(self.same_meaning, sample_size)
                 # Take a sample of different-meaning words, as large as the same-meaning set
                 diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-                diff_meaning_alignments = self.align_wordlist(diff_sample,
-                                                            added_penalty_dict=self.pmi_dict,
-                                                            segmented=True)
+                diff_meaning_alignments = self.align_wordlist(diff_sample, added_penalty_dict=self.pmi_dict)
 
                 # Align same-meaning and different meaning word pairs using PMI values: 
                 # the alignments will remain the same throughout iteration
-                same_meaning_alignments = self.align_wordlist(same_sample,
-                                                              added_penalty_dict=self.pmi_dict,
-                                                              segmented=True)
+                same_meaning_alignments = self.align_wordlist(same_sample, added_penalty_dict=self.pmi_dict)
 
                 # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
                 # Then test each same-meaning word pair to see if if it meets the qualifying threshold
@@ -666,9 +659,7 @@ class PhonemeCorrDetector:
         else: # gold : assumes wordlist is already coded by cognate; skip iteration and calculate surprisal directly 
             # Align same-meaning and different meaning word pairs using PMI values: 
             # the alignments will remain the same throughout iteration
-            same_meaning_alignments = self.align_wordlist(self.same_meaning,
-                                                        added_penalty_dict=self.pmi_dict,
-                                                        segmented=True)
+            same_meaning_alignments = self.align_wordlist(self.same_meaning, added_penalty_dict=self.pmi_dict)
             
             # TODO need to confirm that when the gloss/concept is checked, it considers the possible cognate class ID, e.g. rain_1
             cognate_alignments = same_meaning_alignments

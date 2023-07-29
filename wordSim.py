@@ -7,8 +7,9 @@ import re
 from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, suprasegmental_diacritics, strip_diacritics
 from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_environment_weight
 from auxFuncs import Distance, strip_ch, euclidean_dist, adaptation_surprisal
-from phonAlign import phone_align, reverse_alignment, phon_env_alignment
+from phonAlign import Alignment, phon_env_alignment
 from phonCorr import PhonemeCorrDetector
+# TODO this script should be renamed -> wordDist.py since the measures are now all distances
 
 def prepare_alignment(item1, item2, **kwargs):
     """Prepares alignment of two items, either:
@@ -24,7 +25,7 @@ def prepare_alignment(item1, item2, **kwargs):
     If phonetic PMI has not been previously calculated, it will be calculated
     automatically here."""
     
-    # Check the structure of the input, whether tuples or strings
+    # Check the structure of the input, whether tuples or strings # TODO use Word class objects instead to simplify this
     if (type(item1) == tuple and type(item2) == tuple):
         word1, lang1 = item1
         word2, lang2 = item2
@@ -44,11 +45,12 @@ def prepare_alignment(item1, item2, **kwargs):
             pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi()
         
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
-        alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
+        #alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
+        alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
         
     # Perform phonetic alignment without PMI support
     else:
-        alignment = phone_align(word1, word2, **kwargs)
+        alignment = Alignment(word1, word2, **kwargs)
     
     return alignment
 
@@ -64,7 +66,7 @@ def phonetic_dist(word1, word2=None, sim_func=phone_sim, **kwargs):
         
     "word1" : IPA strings
     
-    If word2 is not provided, word1 is assumed to be an alignment."""
+    If word2 is not provided, word1 is assumed to be an alignment.""" # TODO this can be simplified using my new classes
     
     # Calculate or retrieve the alignment
     if word2:
@@ -75,11 +77,12 @@ def phonetic_dist(word1, word2=None, sim_func=phone_sim, **kwargs):
     # Calculate the phonetic similarity of each aligned segment
     # Gap alignments receive a score of 0
     phone_sims = [sim_func(pair[0], pair[1], **kwargs) 
-                  if '-' not in pair else 0 
-                  for pair in alignment]
+                  if alignment.gap_ch not in pair else 0 
+                  for pair in alignment.alignment]
     
     # Return the mean distance
     return 1 - mean(phone_sims)
+
 
 # TODO name of function below to be confirmed
 def phonological_dist(word1, word2=None, 
@@ -98,30 +101,32 @@ def phonological_dist(word1, word2=None,
             or tuple (first word, second language)
     word2 : string (second word) or tuple (second word, second language)"""
     
-    # If word2 is None, we assume word1 argument is actually an aligned word pair
+    # If word2 is None, we assume word1 argument is actually an aligned word pair # TODO this can be simplified with Word/Alignment classes
     # Otherwise, align the two words
     if word2:
         alignment = prepare_alignment(word1, word2)
     else:
         alignment = word1
+    gap_ch = alignment.gap_ch
+    length = alignment.length
+    alignment = alignment.alignment
     
     # Get list of penalties
     penalties = []
-    for i in range(len(alignment)):
-        pair = alignment[i]
+    for i, pair in enumerate(alignment):
         seg1, seg2 = pair
         
         # If the pair is a gap-aligned segment, assign the penalty 
         # based on the sonority and information content (if available) of the deleted segment
-        if '-' in pair:
+        if gap_ch in pair:
             penalty = 1
-            if seg1 == '-':
+            if seg1 == gap_ch:
                 deleted_segment = seg2
-                index = len([alignment[j][1] for j in range(i) if alignment[j][1] != '-'])
+                index = len([alignment[j][1] for j in range(i) if alignment[j][1] != gap_ch])
                 
             else:
                 deleted_segment = seg1
-                index = len([alignment[j][0] for j in range(i) if alignment[j][0] != '-'])
+                index = len([alignment[j][0] for j in range(i) if alignment[j][0] != gap_ch])
             
             if penalize_sonority:
                 sonority = get_sonority(deleted_segment)
@@ -196,7 +201,7 @@ def phonological_dist(word1, word2=None,
                 double = False
                 try:
                     nxt_pair = alignment[i+1]
-                    if '-' not in nxt_pair:
+                    if gap_ch not in nxt_pair:
                         if nxt_pair[deleted_index] == deleted_segment:
                             double = True
                             
@@ -211,7 +216,7 @@ def phonological_dist(word1, word2=None,
                 # Check preceding pair
                 if i > 0:
                     prev_pair = alignment[i-1]
-                    if '-' not in prev_pair:
+                    if gap_ch not in prev_pair:
                         if prev_pair[deleted_index] == deleted_segment:
                             double = True
                         
@@ -228,10 +233,10 @@ def phonological_dist(word1, word2=None,
             if prosodic_env_scaling:
                 # Discount deletion penalty according to prosodic sonority 
                 # environment (based on List, 2012)
-                deleted_i = sum([1 for j in range(i+1) if alignment[j][deleted_index] != '-'])-1
+                deleted_i = sum([1 for j in range(i+1) if alignment[j][deleted_index] != gap_ch])-1
                 segment_list = [alignment[j][deleted_index] 
-                                for j in range(len(alignment))
-                                if alignment[j][deleted_index] != '-']
+                                for j in range(length)
+                                if alignment[j][deleted_index] != gap_ch]
                 prosodic_env_weight = prosodic_environment_weight(segment_list, deleted_i)
                 penalty /= sqrt(abs(prosodic_env_weight-7)+1)
             
@@ -263,11 +268,13 @@ def segmental_word_dist(word1, word2=None,
     assert round(sum([c_weight, v_weight, syl_weight]),1) == 1.0
     
     # If word2 is None, we assume word1 argument is actually an aligned word pair
-    # Otherwise, align the two words
+    # Otherwise, align the two words # TODO this can be simplified using Word/Alignment classes
     if word2:
         alignment = prepare_alignment(word1, word2)
     else:
         alignment = word1
+    length = alignment.length
+    alignment = alignment.alignment
     
     # Iterate through pairs of alignment:
     # Add fully consonant pairs to c_list, fully vowel/glide pairs to v_list
@@ -314,11 +321,10 @@ def segmental_word_dist(word1, word2=None,
     
     # Syllable score: length-normalized Levenshtein distance of syllable structure strings
     syl_structure1, syl_structure2 = ''.join(syl_structure1), ''.join(syl_structure2)
-    syl_score = edit_distance(syl_structure1, syl_structure2) / len(alignment)
+    syl_score = edit_distance(syl_structure1, syl_structure2) / length
     
     # Final score: weighted sum of each component score as distance
     return (c_weight * (1-c_score)) + (v_weight * (1-v_score)) + (syl_weight * syl_score)
-
 
 def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
     # TODO change pairs into Word class objects and extract language from there
@@ -337,7 +343,8 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
         pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
     
     # Generate alignments in each direction: alignments need to come from PMI
-    alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict)
+    alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
+    gap_ch = alignment.gap_ch
     
     # Calculate phoneme surprisal if not already done
     if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
@@ -348,15 +355,15 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
     # Calculate the word-adaptation surprisal in each direction
     # (note: alignment needs to be reversed to run in second direction)
     if phon_env:
-        rev_alignment = list(phon_env_alignment(reverse_alignment(alignment)))
-        alignment = list(phon_env_alignment(alignment))
+        rev_alignment = list(phon_env_alignment(alignment.reverse_alignment()))
+        alignment = list(phon_env_alignment(alignment.alignment)) # TODO change phon_env_alignment into method of Alignment class
         sur_dict1 = lang1.phon_env_surprisal[(lang2, ngram_size)]
         sur_dict2 = lang2.phon_env_surprisal[(lang1, ngram_size)]
     else:
-        rev_alignment = reverse_alignment(alignment)
+        rev_alignment = alignment.reverse_alignment()
         sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
         sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
-    WAS_l1l2 = adaptation_surprisal(alignment, 
+    WAS_l1l2 = adaptation_surprisal(alignment,
                                     surprisal_dict=sur_dict1,
                                     ngram_size=ngram_size,
                                     normalize=False)
@@ -371,14 +378,16 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
 
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily
-    def weight_by_self_surprisal(alignment, WAS, self_surprisal):
+    def weight_by_self_surprisal(alignment, WAS, self_surprisal, gap_ch=gap_ch):
         self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
         weighted_WAS = []
         adjust = 0
+        if type(alignment) is Alignment:
+            alignment = alignment.alignment
         for i, pair in enumerate(alignment):
-            if pair[0][0] != '-':
+            if pair[0][0] != gap_ch: # TODO: is the second 0 index necessary here? I think pair[0] would work exactly the same
                 # TODO I wonder if skipping the gaps had something to do with the former success?
-                weight = self_surprisal[(i-adjust)][-1] / self_info
+                weight = self_surprisal[(i-adjust)][-1] / self_info # TODO: this adjust method might not work if the gap is at the beginning of the alignment
                 weighted = weight * WAS[i]
                 weighted_WAS.append(weighted)
             else:
@@ -393,45 +402,14 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
     # score = mean([euclidean_dist(weighted_WAS_l1l2), euclidean_dist(weighted_WAS_l2l1)])
     return score
 
-# TODO update or remove function below
-def phonetic_surprisal(pair1, pair2, surprisal_dict=None, normalize=True, ngram_size=1):
-    lang1, lang2 = pair1[1], pair2[1]
-    alignment = prepare_alignment(pair1, pair2)
-    
-    # If no surprisal dictionary is specified, use the standard L1-->L2/L2-->L1 phoneme surprisal
-    if surprisal_dict is None:
-        assert lang1 and lang2
-        
-        # Calculate phoneme surprisal if not already done
-        if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
-            surprisal_dict_l1l2 = PhonemeCorrDetector(lang1, lang2).calc_phoneme_surprisal(ngram_size=ngram_size)
-        if len(lang2.phoneme_surprisal[(lang1, ngram_size)]) == 0:
-            surprisal_dict_l2l1 = PhonemeCorrDetector(lang2, lang1).calc_phoneme_surprisal(ngram_size=ngram_size)
-        
-        # Take surprisal value as average of surprisal from each direction
-        surprisal_values = [mean([lang1.phoneme_surprisal[(lang2, ngram_size)][tuple(pair[0].split())][pair[1]],
-                                  lang2.phoneme_surprisal[(lang1, ngram_size)][tuple(pair[1].split())][pair[0]]]) 
-                            for pair in alignment]
-        
-    else:
-        surprisal_values = [surprisal_dict[pair[0]][pair[1]] for pair in alignment]        
-    
-    # Calculate phonetic distance of aligned segments, with distance to gap = 1
-    phon_dists = [1 - phone_sim(pair[0], pair[1]) if '-' not in pair else 0 for pair in alignment]
-    
-    # Calculate phonetic surprisal as phonetic distance * surprisal
-    phon_surprisal = [phon_dists[i]*surprisal_values[i] for i in range(len(alignment))]
-    
-    return e**-sum(phon_surprisal)
 
 def pmi_dist(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
     word1, lang1 = pair1
     word2, lang2 = pair2
     
     # Remove suprasegmental diacritics
-    diacritics_to_remove = list(suprasegmental_diacritics) + ['̩', '̍', ' ']
-    word1 = strip_ch(word1, diacritics_to_remove)
-    word2 = strip_ch(word2, diacritics_to_remove)
+    word1 = strip_ch(word1, lang1.ch_to_remove)
+    word2 = strip_ch(word2, lang1.ch_to_remove)
     
     # Check whether phoneme PMI has been calculated for this language pair
     # Otherwise calculate from scratch
@@ -441,10 +419,50 @@ def pmi_dist(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
         pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
         
     # Align the words with PMI
-    alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict)
+    alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
     
     # Calculate PMI scores for each aligned pair
-    PMI_values = [pmi_dict[pair[0]][pair[1]] for pair in alignment]
+    PMI_values = [pmi_dict[pair[0]][pair[1]] for pair in alignment.alignment]
+
+    # # TODO: Weight by information content per segment
+    # info_content1 = lang1.calculate_infocontent(word1, segmented=False)
+    # info_content2 = lang2.calculate_infocontent(word2, segmented=False)
+    # def weight_by_info_content(alignment, PMI_vals, info1, info2):
+    #     self_info1 = sum([info1[j][-1] for j in info1])
+    #     self_info2 = sum([info2[j][-1] for j in info2])
+    #     weighted_PMI = []
+    #     #adjust1, adjust2 = 0, 0
+    #     for i, pair in enumerate(alignment.alignment):
+    #         breakpoint()
+    #         # if pair[0] == '-':
+    #         #     adjust1 += 1
+    #         # elif pair[1] == '-':
+    #         #     adjust2 += 1
+    #         if pair[0] == '-':
+    #             pass
+    #         else:
+    #             pass
+    #         if pair[-1] == '-':
+    #             pass
+    #         else:
+    #             pass
+
+            
+    #         # Take the information content value of each segment within the respective word
+    #         # Divide this by the total info content of the word to calculate the proportion of info content constituted by the segment
+    #         # Average together the info contents of each aligned segment
+    #         # Weight by the averaged values
+    #         weight1 = info1[i-adjust1][-1] / self_info1
+    #         try:
+    #             weight2 = info2[i-adjust2][-1] / self_info2
+    #         except KeyError:
+    #             breakpoint()
+    #         weight = mean([weight1, weight2])
+    #         weighted = weight * PMI_vals[i]
+    #         weighted_PMI.append(weighted)
+    #     return weighted_PMI
+    
+    # PMI_values = weight_by_info_content(alignment, PMI_values, info_content1, info_content2)
     PMI_score = mean(PMI_values) 
     
     if sim2dist:
@@ -455,6 +473,7 @@ def pmi_dist(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
         return PMI_score
 
 def levenshtein_dist(word1, word2, normalize=True, asjp=True):
+    # TODO use Word class objects to simplify this; the fact that the word is the first item of the tuple is arbitrary 
     if type(word1) == tuple:
         word1 = word1[0]
     if type(word2) == tuple:
@@ -481,7 +500,7 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, weights=None)->float:
     """Calculates a hybrid distance of multiple distance or similarity functions
 
     Args:
-        pair1 (tuple): (word, Language) pair
+        pair1 (tuple): (word, Language) pair # TODO change to just Word objects and extract Language from its attributes
         pair2 (tuple): (word, Language) pair
         funcs (iterable): iterable of Distance class objects
     Returns:
