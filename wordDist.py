@@ -372,8 +372,8 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
                                     normalize=False)
 
     # Calculate self-surprisal values in each direction
-    self_surprisal1 = lang1.self_surprisal(word1, segmented=False, normalize=False)
-    self_surprisal2 = lang2.self_surprisal(word2, segmented=False, normalize=False)
+    self_surprisal1 = lang1.self_surprisal(word1, normalize=False)
+    self_surprisal2 = lang2.self_surprisal(word2, normalize=False)
 
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily

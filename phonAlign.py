@@ -22,7 +22,7 @@ class Alignment:
                  #segmented=False,
                  **kwargs
                  ):
-        if type(cost_func) is not Distance:
+        if not isinstance(cost_func, Distance):
             raise TypeError(f'Expected cost_func to be a Distance class object, was {type(cost_func)}')
         
         # TODO use Word class objects so we can access word.segments in order to have language-specific segmentation of diphthongs

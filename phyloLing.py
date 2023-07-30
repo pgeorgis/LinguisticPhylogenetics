@@ -1247,6 +1247,8 @@ class Language(LexicalDataset):
                  orthography_c='Value', concept_c='Parameter_ID',
                  loan_c='Loan', id_c='ID',
                  combine_diphthongs=True,
+                 normalize_geminates=False,
+                 preaspiration=True,
                  ignore_stress=False):
         
         # Attributes for parsing data dictionary (could this be inherited via a subclass?)
@@ -1271,7 +1273,6 @@ class Language(LexicalDataset):
         self.consonants = defaultdict(lambda:0)
         self.tonemes = defaultdict(lambda:0)
         self.tonal = False
-        self.combine_diphthongs = combine_diphthongs
         
         # Phonological contexts
         self.unigrams = defaultdict(lambda:0)
@@ -1281,21 +1282,26 @@ class Language(LexicalDataset):
         self.gappy_trigrams = defaultdict(lambda:0)
         self.phon_environments = defaultdict(lambda:defaultdict(lambda:0))
         self.phon_env_ngrams = defaultdict(lambda:defaultdict(lambda:0))
-        self.info_contents = {}
         
         # Lexical inventory
         self.vocabulary = defaultdict(lambda:[])
         self.loanwords = defaultdict(lambda:[])
         
-        # Transcription parameters
+        # Transcription and segmentation parameters
         if self.family:
             self.ch_to_remove = self.family.ch_to_remove
         else:
             self.ch_to_remove = suprasegmental_diacritics.union({' ', '‿'})
             if ignore_stress:
                 self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
+        self.segmentation_params = {
+            'ch_to_remove':self.ch_to_remove,
+            'normalize_geminates':normalize_geminates,
+            'combine_diphthongs':combine_diphthongs,
+            'preaspiration':preaspiration
+        }
         
-        self.create_vocabulary(combine_diphthongs=self.combine_diphthongs)
+        self.create_vocabulary()
         self.create_phoneme_inventory()
         
         self.phoneme_entropy = entropy(self.phonemes)
@@ -1309,23 +1315,26 @@ class Language(LexicalDataset):
         self.detected_noncognates = defaultdict(lambda:[])
         self.noncognate_thresholds = defaultdict(lambda:[])
         
-    def create_vocabulary(self, **kwargs):
-        
+    def create_vocabulary(self):
         for i in self.data:
             entry = self.data[i]
             concept = entry[self.concept_c]
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
-            segments = entry[self.segments_c]
+            #segments = entry[self.segments_c]
             word = Word(
                 ipa_string=ipa, 
                 concept=concept, 
                 orthography=orthography, 
-                ch_to_remove=self.ch_to_remove, 
-                **kwargs)
+                ch_to_remove=self.ch_to_remove,
+                normalize_geminates = self.segmentation_params['normalize_geminates'],
+                combine_diphthongs = self.segmentation_params['combine_diphthongs'],
+                preaspiration = self.segmentation_params['preaspiration'],
+                language=self
+                )
+            
             if len(word.segments) > 0:
                 if word not in self.vocabulary[concept]:
-                    #self.vocabulary[concept].append([orthography, ipa, segments])
                     self.vocabulary[concept].append(word)
                 
                     # Mark known loanwords
@@ -1456,24 +1465,32 @@ class Language(LexicalDataset):
                 print(f"<{orthography}> /{transcription}/ '{concept}'")
     
     
-    def calculate_infocontent(self, word, segmented=False):
-        # Return the pre-calculated information content of the word, if possible
-        if segmented:
-            joined = ''.join([ch for ch in word])
-            if joined in self.info_contents:
-                return self.info_contents[joined]
+    def calculate_infocontent(self, word):
+        # Disambiguation by type of input
+        if isinstance(word, Word): # Word object, no further modification needed
+            pass
+        elif isinstance(word, str) or isinstance(word, list):
+            if isinstance(word, str):
+                ipa_string = word
+            else:
+                ipa_string = ''.join(word)
+            word = Word(
+                ipa_string=ipa_string,
+                ch_to_remove=self.ch_to_remove,
+                normalize_geminates = self.segmentation_params['normalize_geminates'],
+                combine_diphthongs = self.segmentation_params['combine_diphthongs'],
+                preaspiration = self.segmentation_params['preaspiration'],
+                language=self)
         else:
-            if word in self.info_contents:
-                return self.info_contents[word]
+            raise TypeError
+
+        # Return the pre-calculated information content of the word, if possible
+        if word.info_content:
+            return word.info_content
         
         # Otherwise calculate it from scratch
-        # First segment the word if necessary
-        # Then pad the segmented word
-        if not segmented:
-            segments = segment_ipa(word, combine_diphthongs=self.combine_diphthongs)
-            padded = ['# ', '# '] + segments + ['# ', '# ']
-        else:
-            padded = ['# ', '# '] + word + ['# ', '# ']
+        # Pad the segmented word
+        padded = ['# ', '# '] + word.segments + ['# ', '# ']
         info_content = {}
         for i in range(2, len(padded)-2):
             trigram_counts = 0
@@ -1486,11 +1503,11 @@ class Language(LexicalDataset):
             gappy_counts += self.gappy_trigrams[('X', padded[i+1], padded[i+2])]
             # TODO : needs smoothing
             info_content[i-2] = (padded[i], -log(trigram_counts/gappy_counts, 2))
-        self.info_contents[''.join(padded[2:-2])] = info_content
+        
         return info_content
     
-    def self_surprisal(self, word, segmented=False, normalize=False):
-        info_content = self.calculate_infocontent(word, segmented=segmented)
+    def self_surprisal(self, word, normalize=False):
+        info_content = self.calculate_infocontent(word)
         if normalize:
             return mean(info_content[j][1] for j in info_content)
         else:
@@ -1590,12 +1607,32 @@ class Language(LexicalDataset):
         return s
 
 class Word:
-    def __init__(self, ipa_string, concept, orthography=None, ch_to_remove=[], **kwargs):
-        self.ipa = self.preprocess(ipa_string)
+    def __init__(self, 
+                 ipa_string, 
+                 concept=None, 
+                 orthography=None, 
+                 language=None, 
+                 # Parameters for preprocessing and segmentation
+                 ch_to_remove=[], 
+                 normalize_geminates=False,
+                 combine_diphthongs=True,
+                 preaspiration=True
+                 ):
+        self.language = language
+        self.parameters = {
+            'ch_to_remove':ch_to_remove,
+            'normalize_geminates':normalize_geminates,
+            'combine_diphthongs':combine_diphthongs,
+            'preaspiration':preaspiration
+        }
+        self.ipa = self.preprocess(ipa_string, normalize_geminates=normalize_geminates)
         self.concept = concept
         self.orthography = orthography
-        self.segments = self.segment(ch_to_remove, **kwargs)
+        self.segments = self.segment(ch_to_remove, 
+                                     combine_diphthongs=combine_diphthongs, 
+                                     preaspiration=preaspiration)
         self.phon_env = self.getPhonEnv()
+        self.info_content = None
     
     def preprocess(self, ipa_string, normalize_geminates=False):
         # Normalize common IPA character mistakes
@@ -1606,14 +1643,15 @@ class Word:
         if normalize_geminates:
             ipa_string = re.sub(fr'([{consonants}])\1', r'\1ː', ipa_string)
 
-        return normalize_ipa_ch(ipa_string)
+        return ipa_string
     
-    def segment(self, ch_to_remove, **kwargs):
+    def segment(self, ch_to_remove, combine_diphthongs, preaspiration):
         return segment_ipa(
             self.ipa, 
             # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
             remove_ch=''.join(ch_to_remove), 
-            **kwargs
+            combine_diphthongs=combine_diphthongs,
+            preaspiration=preaspiration
         )
     
     def getPhonEnv(self):
@@ -1621,9 +1659,18 @@ class Word:
         for i, seg in enumerate(self.segments):
             phon_env.append(phonEnvironment(self.segments, i))
         return phon_env
+    
+    def getInfoContent(self):
+        if self.language is None:
+            raise AssertionError('Language must be specified in order to calculate information content.')
+        
+        self.info_content = self.language.calculate_infocontent(self)
+        return self.info_content
+
 
 # COMBINING DATASETS
 def combine_datasets(dataset_list):
+    # TODO
     pass
 
 
