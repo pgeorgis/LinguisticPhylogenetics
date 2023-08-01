@@ -76,13 +76,28 @@ def strip_ch(string, to_remove):
 
 def format_as_variable(string):
     variable = unidecode(string)
-    variable = re.sub(' ', '', variable)
-    variable = re.sub("'", '', variable)
+    variable = re.sub("[\s'\(\)]", '', variable)
     variable = re.sub('-', '_', variable)
-    variable = re.sub('\(', '', variable)
-    variable = re.sub('\)', '', variable)
     return variable
 
+def get_variable_name(var):
+    return f'{var=}'.split('=')[0]
+
+
+# TYPE VALIDATION
+def validate_class(objs, classes):
+    """Validates that a set of of objects are of the expected classes.
+
+    Args:
+        objs (iterable): iterable of objects
+        classes (iterable): iterable of possible classes
+
+    Raises:
+        TypeError: if the object is of an unexpected class
+    """
+    for obj, _classes in zip(objs, classes):
+        if not isinstance(obj, _classes):
+            raise TypeError(f'Expected {get_variable_name(obj)} to be {", ".join(_classes)}. Found: {type(obj)}')
 
 
 # CSV/EXCEL FILE TOOLS
