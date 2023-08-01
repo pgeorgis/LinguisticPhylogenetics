@@ -191,7 +191,7 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, normalize=True
         alignment = [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
     
     values = []
-    for i in range(pad_n, length-pad_n):
+    for i in range(pad_n, length+pad_n):
         ngram = alignment[i:i+ngram_size]
         segs = list(zip(*ngram))
         seg1, seg2 = segs
