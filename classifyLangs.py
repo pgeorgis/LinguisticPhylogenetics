@@ -1,7 +1,7 @@
 import argparse, os
 from phyloLing import load_family
 from lingDist import cognate_sim
-from wordDist import PMIDist, SurprisalDist, PhonologicalDist, HybridSim, LevenshteinDist
+from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist
 from auxFuncs import Distance
 import logging
 
@@ -52,15 +52,35 @@ if __name__ == "__main__":
         'surprisal':SurprisalDist,
         'phonetic':PhonologicalDist, # TODO name doesn't match
         'levenshtein':LevenshteinDist,
-        'hybrid':HybridSim,
         }
-    # this weighting scheme works well seemingly (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
-    #function_map['hybrid'].set('weights', (0.25, 0.5, 0.25)) # PMI, surprisal, phonological
-    function_map['hybrid'].set('weights', (0.5, 0.25, 0.25)) # PMI, surprisal, phonological
+    
+    # Set ngram size used for surprisal
+    if args.eval == 'surprisal' or args.eval == 'hybrid':
+        function_map['surprisal'].set('ngram_size', args.ngram)
+        SurprisalDist = function_map['surprisal']
+
+        # Initialize HybridDist object 
+        if args.eval == 'hybrid':
+            HybridDist = Distance(
+                func=hybrid_dist,
+                name='HybridDist',
+                cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
+                funcs=[PMIDist, SurprisalDist, PhonologicalDist],
+                # this weighting scheme works well seemingly (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
+                weights=(0.5, 0.25, 0.25),
+            )
+            HybridSim = HybridDist.to_similarity(name='HybridSim') 
+
+            # Add HybridSim to function map
+            function_map['hybrid'] = HybridSim
+
+    # Designate cluster function if performing auto cognate clustering 
     if args.cognates == 'auto':
         clusterDist = function_map[args.cluster]
     else:
         clusterDist = None
+    
+    # Designate evaluation function
     evalDist = function_map[args.eval]
     
     # Set specified cluster threshold, if different from default
