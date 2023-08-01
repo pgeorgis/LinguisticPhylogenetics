@@ -5,6 +5,7 @@ from nwunschAlign import best_alignment
 from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_ipa, phone_sim
 from phonSim.phonSim import phonEnvironment #, prosodic_environment_weight
 from auxFuncs import Distance
+import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 
 AlignmentPhoneSim = Distance(
     func=phone_sim,
@@ -14,35 +15,76 @@ AlignmentPhoneSim = Distance(
 
 class Alignment:
     def __init__(self, 
-                 seq1, seq2, 
+                 seq1, seq2,
+                 lang1=None, 
+                 lang2=None,
                  cost_func=AlignmentPhoneSim, 
                  added_penalty_dict=None,
                  gap_ch='-',
                  gop=-0.7,
-                 #segmented=False,
                  **kwargs
                  ):
-        if not isinstance(cost_func, Distance):
-            raise TypeError(f'Expected cost_func to be a Distance class object, was {type(cost_func)}')
-        
-        # TODO use Word class objects so we can access word.segments in order to have language-specific segmentation of diphthongs
-        # if we use Word class objects, we can more easily/accurately distinguish between segmented and non-segmented sequences
-        segmented1 = type(seq1) != str
-        segmented2 = type(seq2) != str
-        assert segmented1 == segmented2
-        segmented = segmented1
+        """Produces a pairwise alignment of two phone sequences. 
 
-        self.seq1 = seq1 if segmented else segment_ipa(seq1)
-        self.seq2 = seq2 if segmented else segment_ipa(seq2)
-        self.word1 = seq1 if not segmented else ''.join(seq1)
-        self.word2 = seq1 if not segmented else ''.join(seq2)
+        Args:
+            seq1 (phyloLing.Word or str): first phone sequence
+            seq2 (phyloLing.Word or str): second phone sequence
+            lang1 (phyloLing.Language, optional): Language of seq1. Defaults to None.
+            lang2 (phyloLing.Language, optional): Language of seq2. Defaults to None.
+            cost_func (Distance, optional): Cost function used for minimizing overall alignment cost. Defaults to AlignmentPhoneSim.
+            added_penalty_dict (dict, optional): Dictionary of additional penalties to combine with cost_func. Defaults to None.
+            gap_ch (str, optional): Gap character. Defaults to '-'.
+            gop (float, optional): Gap opening penalty. Defaults to -0.7.
+        """
+        
+        # Verify that input arguments are of the correct types
+        self.validate_args(seq1, seq2, lang1, lang2, cost_func)
+    
+        # Prepare the input sequences for alignment
+        self.seq1, self.word1 = self.prepare_seq(seq1, lang1)
+        self.seq2, self.word2 = self.prepare_seq(seq2, lang2)
+
+        # Designate alignment parameters
         self.gap_ch = gap_ch
         self.gop = gop
         self.cost_func = cost_func
         self.added_penalty_dict = added_penalty_dict
         self.kwargs = kwargs
+
+        # Perform alignment
         self.alignment = self.align()
+
+        # Save length of alignment
         self.length = len(self.alignment)
+        # TODO also save total cost of alignment, will require adjustment to nwunschAlign.py
+
+
+    def validate_args(self, seq1, seq2, lang1, lang2, cost_func):
+        """Verifies that all input arguments are of the correct types"""
+
+        # Validate cost function
+        if not isinstance(cost_func, Distance):
+            raise TypeError(f'Expected cost_func to be a Distance class object, was {type(cost_func)}')
+        
+        # Validate sequences
+        for seq, label in zip((seq1, seq2), ('seq1', 'seq2')):
+            if type(seq) not in (phyloLing.Word, str):
+                raise TypeError(f'Expected {label} to be a Word class object or string, was {type(seq)}')
+        
+        # Validate languages
+        for lang, label in zip((lang1, lang2), ('lang1', 'lang2')):
+            if lang and type(lang) is not phyloLing.Language:
+                raise TypeError(f'Expected {label} to be a Language class object, was {type(lang)}')
+
+
+    def prepare_seq(self, seq, lang):
+        if isinstance(seq, phyloLing.Word):
+            word1 = seq
+        elif isinstance(seq, str):
+            word1 = phyloLing.Word(seq, language=lang)
+        
+        return word1.segments, word1
+
 
     def calculate_alignment_costs(self, cost_func):
         """Calculates pairwise alignment costs for phone sequences using a specified cost function.
@@ -173,7 +215,7 @@ def undo_visual_align(visual_alignment, gap_ch='-'):
     seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]
     return seg_pairs
 
-
+# TODO add as class method of Alignment
 def phon_env_alignment(alignment, word2=False, env_func=phonEnvironment, gap_ch='-'):
     """Adds the phonological environment value of segments to an alignment
     e.g. phon_env_alignment([('m', 'm'), ('j', '-'), ('ɔu̯', 'ɪ'), ('l̥', 'l'), ('k', 'ç')])
