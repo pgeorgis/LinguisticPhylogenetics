@@ -1,6 +1,6 @@
 from collections import defaultdict
 from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import Alignment, compatible_segments, phon_env_alignment, phon_env_ngrams
+from phonAlign import Alignment, compatible_segments, phon_env_ngrams
 from statistics import mean
 import random
 from itertools import product
@@ -98,7 +98,7 @@ class PhonemeCorrDetector:
         # TODO currently works only with ngram_size=1
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
-            phon_env_align = phon_env_alignment(alignment)
+            phon_env_align = phon_env_alignment(alignment) # TODO needs to be updated using Alignment class and add_phon_env() method; this won't work anymore
             for seg_weight1, seg2 in phon_env_align:
                 corr_counts[seg_weight1][seg2] += 1
         if not counts:

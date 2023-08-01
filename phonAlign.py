@@ -1,10 +1,11 @@
 from math import log, inf
 import re
+from collections.abc import Iterable
 from itertools import combinations
 from nwunschAlign import best_alignment
 from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_ipa, phone_sim
 from phonSim.phonSim import phonEnvironment #, prosodic_environment_weight
-from auxFuncs import Distance
+from auxFuncs import Distance, validate_class
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 
 AlignmentPhoneSim = Distance(
@@ -21,7 +22,8 @@ class Alignment:
                  cost_func=AlignmentPhoneSim, 
                  added_penalty_dict=None,
                  gap_ch='-',
-                 gop=-0.7,
+                 gop=-0.7, # TODO possibly need to recalibrate
+                 phon_env=False,
                  **kwargs
                  ):
         """Produces a pairwise alignment of two phone sequences. 
@@ -35,6 +37,7 @@ class Alignment:
             added_penalty_dict (dict, optional): Dictionary of additional penalties to combine with cost_func. Defaults to None.
             gap_ch (str, optional): Gap character. Defaults to '-'.
             gop (float, optional): Gap opening penalty. Defaults to -0.7.
+            phon_env (Bool, optional): Adds phonological environment to alignment. Defaults to False.
         """
         
         # Verify that input arguments are of the correct types
@@ -54,6 +57,12 @@ class Alignment:
         # Perform alignment
         self.alignment = self.align()
 
+        # Phonological environment alignment
+        if phon_env:
+            self.phon_env_alignment = self.add_phon_env()
+        else:
+            self.phon_env_alignment = None
+
         # Save length of alignment
         self.length = len(self.alignment)
         # TODO also save total cost of alignment, will require adjustment to nwunschAlign.py
@@ -62,19 +71,12 @@ class Alignment:
     def validate_args(self, seq1, seq2, lang1, lang2, cost_func):
         """Verifies that all input arguments are of the correct types"""
 
-        # Validate cost function
-        if not isinstance(cost_func, Distance):
-            raise TypeError(f'Expected cost_func to be a Distance class object, was {type(cost_func)}')
-        
-        # Validate sequences
-        for seq, label in zip((seq1, seq2), ('seq1', 'seq2')):
-            if type(seq) not in (phyloLing.Word, str):
-                raise TypeError(f'Expected {label} to be a Word class object or string, was {type(seq)}')
-        
-        # Validate languages
-        for lang, label in zip((lang1, lang2), ('lang1', 'lang2')):
-            if lang and type(lang) is not phyloLing.Language:
-                raise TypeError(f'Expected {label} to be a Language class object, was {type(lang)}')
+        validate_class((cost_func,), (Distance,))
+        validate_class((seq1,), ((phyloLing.Word, str),))
+        validate_class((seq2,), ((phyloLing.Word, str),))
+        for lang in (lang1, lang2):
+            if lang: # skip if None
+                validate_class((lang,), (phyloLing.Language,))
 
 
     def prepare_seq(self, seq, lang):
@@ -141,17 +143,40 @@ class Alignment:
                               SCORES_DICT=alignment_costs, 
                               GAP_SCORE=self.gop)
         
-        return best # TODO add ability to return best N alignments
+        return best # TODO add ability to return best N alignments (self.alignments vs. self.best, maybe)
 
 
-    def reverse_alignment(self):
-        """Flips the alignment, e.g.:
-            reverse_alignment([('s', 's̪'), ('o', 'ɔ'), ('l', 'l'), ('-', 'ɛ'), ('-', 'j')])
-            = [('s̪', 's'), ('ɔ', 'o'), ('l', 'l'), ('ɛ', '-'), ('j', '-')]"""
-        reverse = []
-        for pair in self.alignment:
-            reverse.append((pair[1], pair[0]))
-        return reverse
+    def add_phon_env(self, word2=False, env_func=phonEnvironment):
+        """Adds the phonological environment value of segments to an alignment
+        e.g. 
+        [('m', 'm'), ('j', '-'), ('ɔu̯', 'ɪ'), ('l̥', 'l'), ('k', 'ç')]) 
+        becomes
+        [(('m', '#S<'), 'm'), (('j', '<S<'), '-'), (('ɔu̯', '<S>'), 'ɪ'), (('l̥', '>S>'), 'l'), (('k', '>S#'), 'ç')]
+        """
+        word1_aligned, word2_aligned = tuple(zip(*self.alignment))
+        word1_aligned = list(word1_aligned) # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
+        gap_count1, gap_count2 = 0, 0
+
+        def _add_phon_env(word_aligned, segs, i, gap_count):
+            if word_aligned[i] == self.gap_ch:
+                gap_count += 1
+                # TODO so gaps are skipped?
+            else:
+                seg_index = i - gap_count
+                phonEnv = env_func(segs, seg_index)
+                word_aligned[i] = word_aligned[i], phonEnv
+            
+            return word1_aligned, gap_count
+
+        for i, seg in enumerate(word1_aligned):
+            word1_aligned, gap_count1 = _add_phon_env(word1_aligned, self.seq1, i, gap_count1)
+            
+            # Do the same for word2 (not done by default)
+            if word2:
+                word2_aligned, gap_count2 = _add_phon_env(word2_aligned, self.seq2, i, gap_count2)
+
+        # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
+        return list(zip(word1_aligned, word2_aligned))
 
 
 def compatible_segments(seg1, seg2):
@@ -190,22 +215,51 @@ def compatible_segments(seg1, seg2):
             return False
 
 
-# TODO: should the other functions below also be incorporated into Alignment class methods?
-def visual_align(alignment, gap_ch='-'):
+def get_alignment_iter(alignment, phon_env=False):
+    # Handle class of input alignment: should be either an Alignment object or an iterable
+    validate_class((alignment,), (Alignment, Iterable))
+    if isinstance(alignment, Alignment):
+        if phon_env:
+            alignment = alignment.phon_env_alignment
+        else:
+            alignment = alignment.alignment
+    
+    return alignment
+
+
+def reverse_alignment(alignment, phon_env=False):
+    """Flips the alignment, e.g.:
+        reverse_alignment([('s', 's̪'), ('o', 'ɔ'), ('l', 'l'), ('-', 'ɛ'), ('-', 'j')])
+        = [('s̪', 's'), ('ɔ', 'o'), ('l', 'l'), ('ɛ', '-'), ('j', '-')]"""
+    
+    alignment = get_alignment_iter(alignment, phon_env)
+
+    # TODO use tuple if possible, see above TODO comments
+    return [(pair[1], pair[0]) for pair in alignment]
+
+
+def visual_align(alignment, gap_ch='-', null='∅', phon_env=False):
     """Renders list of aligned segment pairs as an easily interpretable
     alignment string, with <∅> representing null segments,
     e.g.:
     visual_align([('z̪', 'ɡ'),('vʲ', 'v'),('ɪ', 'j'),('-', 'ˈa'),('z̪', 'z̪'),('d̪', 'd'),('ˈa', 'a')])
     = 'z̪-ɡ / vʲ-v / ɪ-j / ∅-ˈa / z̪-z̪ / d̪-d / ˈa-a' """
+
+    if isinstance(alignment, Alignment) and gap_ch != alignment.gap_ch:
+        raise ValueError(f'Gap character "{gap_ch}" does not match gap character of alignment "{alignment.gap_ch}"')
+    
+    alignment = get_alignment_iter(alignment, phon_env)
+    if phon_env:
+        raise NotImplementedError('TODO needs to be updated for phon_env') # TODO
     a = []
     for item in alignment:
         if gap_ch not in item:
             a.append(f'{item[0]}-{item[1]}')
         else:
             if item[0] == gap_ch:
-                a.append(f'∅-{item[1]}')
+                a.append(f'{null}-{item[1]}')
             else:
-                a.append(f'{item[0]}-∅')
+                a.append(f'{item[0]}-{null}')
     return ' / '.join(a)
 
 
@@ -215,41 +269,7 @@ def undo_visual_align(visual_alignment, gap_ch='-'):
     seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]
     return seg_pairs
 
-# TODO add as class method of Alignment
-def phon_env_alignment(alignment, word2=False, env_func=phonEnvironment, gap_ch='-'):
-    """Adds the phonological environment value of segments to an alignment
-    e.g. phon_env_alignment([('m', 'm'), ('j', '-'), ('ɔu̯', 'ɪ'), ('l̥', 'l'), ('k', 'ç')])
-    = [(('m', '#S<'), 'm'), (('j', '<S<'), '-'), (('ɔu̯', '<S>'), 'ɪ'), (('l̥', '>S>'), 'l'), (('k', '>S#'), 'ç')]
-    """
-    word1_aligned, word2_aligned = tuple(zip(*alignment))
-    word1_aligned = list(word1_aligned)
-    segs1 = tuple([seg for seg in word1_aligned if seg != gap_ch])
-    if word2:
-        segs2 = tuple([seg for seg in word2_aligned if seg != gap_ch])
-    gap_count1, gap_count2 = 0, 0
-
-    def add_phon_env(word_aligned, segs, i, gap_count, gap_ch=gap_ch):
-        if word_aligned[i] == gap_ch:
-            gap_count += 1
-            # TODO so gaps are skipped?
-        
-        else:
-            seg_index = i - gap_count
-            phonEnv = env_func(segs, seg_index)
-            word_aligned[i] = word_aligned[i], phonEnv
-        
-        return word1_aligned, gap_count
-
-    for i in range(len(word1_aligned)):
-        word1_aligned, gap_count1 = add_phon_env(word1_aligned, segs1, i, gap_count1)
-        
-        # Do the same for word2 (not done by default)
-        if word2:
-            word2_aligned, gap_count2 = add_phon_env(word2_aligned, segs2, i, gap_count2)
-    
-    return zip(word1_aligned, word2_aligned)
-
-def phon_env_ngrams(phonEnv):
+def phon_env_ngrams(phonEnv): # TODO move to other module where this is used
     """Returns set of phonological environment strings of equal and lower order, 
     e.g. ">S#" -> ">S", "S#", ">S#"
 
