@@ -3,7 +3,6 @@ from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal
 from phonAlign import Alignment, compatible_segments, phon_env_ngrams
 from statistics import mean
 import random
-import copy
 from itertools import product
 from math import log
 from phonSim.phonSim import phonEnvironment

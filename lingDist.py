@@ -1,4 +1,3 @@
-from auxFuncs import euclidean_dist
 from phonCorr import PhonemeCorrDetector
 from wordDist import Z_dist
 from statistics import mean, stdev, StatisticsError
