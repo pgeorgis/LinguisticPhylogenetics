@@ -80,9 +80,6 @@ def format_as_variable(string):
     variable = re.sub('-', '_', variable)
     return variable
 
-def get_variable_name(var):
-    return f'{var=}'.split('=')[0]
-
 
 # TYPE VALIDATION
 def validate_class(objs, classes):
@@ -95,9 +92,9 @@ def validate_class(objs, classes):
     Raises:
         TypeError: if the object is of an unexpected class
     """
-    for obj, _classes in zip(objs, classes):
-        if not isinstance(obj, _classes):
-            raise TypeError(f'Expected {get_variable_name(obj)} to be {", ".join(_classes)}. Found: {type(obj)}')
+    for obj in objs:
+        if not any(isinstance(obj, cls) for cls in classes):
+            raise TypeError(f"Object {obj} (type = {type(obj)}) is not of the expected classes: {classes}")
 
 
 # CSV/EXCEL FILE TOOLS
