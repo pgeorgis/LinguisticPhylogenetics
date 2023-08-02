@@ -8,13 +8,14 @@ from math import log
 from phonSim.phonSim import phonEnvironment
 
 class PhonemeCorrDetector:
-    def __init__(self, lang1, lang2, wordlist=None):
+    def __init__(self, lang1, lang2, wordlist=None, seed=1):
         self.lang1 = lang1
         self.lang2 = lang2
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
         # self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2]
         self.scored_words = defaultdict(lambda:{})
+        self.seed = seed
     
     def prepare_wordlists(self, wordlist):
     
@@ -181,7 +182,6 @@ class PhonemeCorrDetector:
 
     def calc_phoneme_pmi(self, radius=2, max_iterations=10,
                           p_threshold=0.1,
-                          seed=1,
                           samples=10,
                           print_iterations=False, save=True):
         """
@@ -193,8 +193,6 @@ class PhonemeCorrDetector:
             Maximum number of iterations. The default is 3.
         p_threshold : float, optional
             p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.05.
-        seed : int, optional
-            Random seed for drawing a sample of different meaning word pairs. The default is 1.
         print_iterations : bool, optional
             Whether to print the results of each iteration. The default is False.
         save : bool, optional
@@ -226,7 +224,7 @@ class PhonemeCorrDetector:
         sample_size = round(len(self.same_meaning)*0.7)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         for sample_n in range(samples):
-            random.seed(seed+sample_n)
+            random.seed(self.seed+sample_n)
             synonym_sample = random.sample(self.same_meaning, sample_size)
             # Take a sample of different-meaning words, as large as the same-meaning set
             diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
@@ -332,20 +330,21 @@ class PhonemeCorrDetector:
         return results
 
     
-    def noncognate_thresholds(self, eval_func, seed=1, sample_size=None, save=True):
-        #eval func was formerly tuple (function, {kwarg:value}), now is Distance class object
+    def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
         
+        # Set random seed: may or may not be the default seed attribute of the PhonemeCorrDetector class
+        if not seed:
+            seed = self.seed
         random.seed(seed)
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
         if sample_size is None:
             sample_size = len(self.same_meaning)
         diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-        noncognate_word_forms = [((item[0][2], self.lang1), (item[1][2], self.lang2)) for item in diff_sample]
         noncognate_scores = []
         func_key = (eval_func, eval_func.hashable_kwargs)
-        for pair in noncognate_word_forms:
+        for pair in diff_sample:
             if pair in self.scored_words[func_key]:
                 noncognate_scores.append(self.scored_words[func_key][pair])
             else:
@@ -532,7 +531,6 @@ class PhonemeCorrDetector:
                                gold=False, # TODO add same with PMI?
                                print_iterations=False,
                                samples=10,
-                               seed=1,
                                save=True):
         # METHOD
         # 1) Calculate phoneme PMI
@@ -543,15 +541,14 @@ class PhonemeCorrDetector:
         if len(self.pmi_dict) == 0:
             self.pmi_dict = self.calc_phoneme_pmi(radius=radius, 
                                                   max_iterations=max_iterations, 
-                                                  p_threshold=p_threshold, 
-                                                  seed=seed)
+                                                  p_threshold=p_threshold)
 
         if not gold:
             # Take N samples of same and different-meaning words, perform surprisal calibration, then average all of the estimates from the various samples
             sample_size = round(len(self.same_meaning)*0.7)
             sample_results = {}
             for sample_n in range(samples):
-                random.seed(seed+sample_n)
+                random.seed(self.seed+sample_n)
                 same_sample = random.sample(self.same_meaning, sample_size)
                 # Take a sample of different-meaning words, as large as the same-meaning set
                 diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))

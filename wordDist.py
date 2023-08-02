@@ -86,7 +86,7 @@ def phonological_dist(word1, word2=None, # TODO word2=None is weird, could inste
     the phonetic similarity of aligned segments and phonological deletion penalties.
     No weighting by segment type, position, etc.
     
-    word1 : string (first word), list (alignment of two words), 
+    word1 : string (first word), list (alignment of two words), # TODO update to new classes
             or tuple (first word, second language)
     word2 : string (second word) or tuple (second word, second language)"""
     
