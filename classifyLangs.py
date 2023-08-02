@@ -21,9 +21,9 @@ if __name__ == "__main__":
     parser.add_argument('--n_samples', default=10, type=int, help='Number of random samples for distance evaluation')
     parser.add_argument('--sample_size', default=0.8, type=float, help='Percent of shared concepts to evaluate per sample (default 70%)')
     parser.add_argument('--no_calibration', dest='calibrate', action='store_false', help='Does not use cumulative density function calibration')
-    parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
-    parser.add_argument('--no_diphthongs', dest='no_diphthongs', action='store_true', help='Performs IPA string segmentation without diphthongs as single segmental units')
-    parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
+    parser.add_argument('--ignore_stress', dest='ignore_stress', action='store_true', default=False, help='Ignores stress annotation when loading CLDF dataset and computing phone correspondences')
+    parser.add_argument('--no_diphthongs', dest='no_diphthongs', action='store_true', default=False, help='Performs IPA string segmentation without diphthongs as single segmental units')
+    parser.add_argument('--newick', dest='newick', action='store_true', default=False, help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
     parser.add_argument('--refresh', default=[], nargs='+', help='Languages whose phoneme PMI and/or surprisal should be recalculated')
     parser.add_argument('--refresh_all_pmi', dest='refresh_all_pmi', action='store_true', default=False, help='Recalculates phoneme PMI for all language pairs')
@@ -31,12 +31,7 @@ if __name__ == "__main__":
     parser.add_argument('--min_amc', default=0.65, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
     parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
-    parser.set_defaults(
-        ignore_stress=False,
-        no_diphthongs=False,
-        calibrate=True,
-        newick=False,
-    )
+    parser.set_defaults(calibrate=True)
     args = parser.parse_args()
 
     # Configure the logger
@@ -139,6 +134,7 @@ if __name__ == "__main__":
         family.load_clustered_cognates()
 
         # Set cognate cluster ID according to settings
+        # TODO this ID won't work because of function_map[args.cluster][1]
         cog_id = f'{family.name}_distfunc-{args.cluster}-{function_map[args.cluster][1]}_cutoff-{args.cluster_threshold}'
 
     # Create Distance measure according to settings
