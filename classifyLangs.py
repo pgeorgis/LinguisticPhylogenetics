@@ -26,6 +26,8 @@ if __name__ == "__main__":
     parser.add_argument('--newick', dest='newick', action='store_true', help='Returns a Newick tree instead of a dendrogram')
     parser.add_argument('--exclude', default=None, nargs='+', help='Languages from CLDF data file to exclude')
     parser.add_argument('--refresh', default=[], nargs='+', help='Languages whose phoneme PMI and/or surprisal should be recalculated')
+    parser.add_argument('--refresh_all_pmi', dest='refresh_all_pmi', action='store_true', default=False, help='Recalculates phoneme PMI for all language pairs')
+    parser.add_argument('--refresh_all_surprisal', dest='refresh_all_surprisal', action='store_true', default=False, help='Recalculates phoneme surprisal for all language pairs')
     parser.add_argument('--min_amc', default=0.65, help='Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached')
     parser.add_argument('--outtree', default=None, help='Output file to which Newick tree string should be written')
     parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
@@ -47,6 +49,7 @@ if __name__ == "__main__":
     logging.basicConfig(level=log_levels[args.loglevel], format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
     logger = logging.getLogger(__name__)
 
+    # Create a mapping of distance method labels to Distance objects
     function_map = {
         'pmi':PMIDist,
         'surprisal':SurprisalDist,
@@ -108,20 +111,22 @@ if __name__ == "__main__":
         logger.info(f'Average mutual coverage is {round(avg_mc, 2)} ({abs_mc}/{len(family.concepts)} concepts in all {len(family.languages)} doculects).')
 
     # Load or calculate phoneme PMI
-    logger.info(f'Loading {family.name} phoneme PMI...')
-    family.load_phoneme_pmi(excepted=args.refresh)
+    if not args.refresh_all_pmi:
+        logger.info(f'Loading {family.name} phoneme PMI...')
+        family.load_phoneme_pmi(excepted=args.refresh)
 
     # Load or calculate phoneme surprisal
-    if args.eval == 'surprisal' or args.eval == 'hybrid':
-        logger.info(f'Loading {family.name} phoneme surprisal...')
-        if args.cognates == 'gold':
-            family.load_phoneme_surprisal(ngram_size=args.ngram, gold=True, excepted=args.refresh)
-        else:
-            family.load_phoneme_surprisal(ngram_size=args.ngram, gold=False, excepted=args.refresh)
+    if not args.refresh_all_surprisal:
+        if args.eval == 'surprisal' or args.eval == 'hybrid':
+            logger.info(f'Loading {family.name} phoneme surprisal...')
+            if args.cognates == 'gold':
+                family.load_phoneme_surprisal(ngram_size=args.ngram, gold=True, excepted=args.refresh)
+            else:
+                family.load_phoneme_surprisal(ngram_size=args.ngram, gold=False, excepted=args.refresh)
 
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
-    if len(args.refresh) > 0:
+    if args.refresh_all_pmi or args.refresh_all_surprisal or len(args.refresh) > 0:
         family.calculate_phoneme_pmi()
         family.write_phoneme_pmi()
         if args.eval == 'surprisal' or args.eval == 'hybrid':
