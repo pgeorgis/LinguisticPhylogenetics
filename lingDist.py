@@ -11,7 +11,7 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
     """Calculates the proportion of shared cognates between the two languages.
     lang1   :   Language class object
     lang2   :   Language class object
-    clustered_cognates  :   nested dictionary of concepts and cognate IDs with their forms
+    clustered_cognates  :   nested dictionary of concepts and cognate IDs with their forms # TODO will likely need to be updated
     exclude_synonyms    :   Bool, default = True
         if True, calculation is based on concepts rather than cognate IDs 
         (i.e. maximum score = 1 for each concept, regardless of how many forms
@@ -61,7 +61,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
     
     # Get list of shared concepts between the two languages
-    shared_concepts = clustered_cognates.keys() & lang1.vocabulary.keys() & lang2.vocabulary.keys()
+    shared_concepts = list(clustered_cognates.keys() & lang1.vocabulary.keys() & lang2.vocabulary.keys())
     if len(shared_concepts) == 0:
         raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
 
@@ -100,11 +100,8 @@ def cognate_sim(lang1, lang2, clustered_cognates,
             l1_wordcount, l2_wordcount = 0, 0
                 
             for cognate_id in clustered_cognates[concept]:
-                # TODO make these Word objects instead of strings "LANGUAGE /ipastring/"
-                items = [entry.split('/') for entry in clustered_cognates[concept][cognate_id]]
-                items = [(item[0].strip(), item[1]) for item in items]
-                l1_words = [item[1] for item in items if item[0] == lang1.name]
-                l2_words = [item[1] for item in items if item[0] == lang2.name]
+                l1_words = [word for word in clustered_cognates[concept][cognate_id] if word.language == lang1]
+                l2_words = [word for word in clustered_cognates[concept][cognate_id] if word.language == lang2]
                 l1_wordcount += len(l1_words)
                 l2_wordcount += len(l2_words)
                 for l1_word in l1_words:
