@@ -3,6 +3,7 @@ from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal
 from phonAlign import Alignment, compatible_segments, phon_env_ngrams
 from statistics import mean
 import random
+import copy
 from itertools import product
 from math import log
 from phonSim.phonSim import phonEnvironment
@@ -57,44 +58,44 @@ class PhonemeCorrDetector:
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
         return [Alignment(
-            seq1=pair[0][-1], 
-            seq2=pair[1][-1],
+            seq1=word1, 
+            seq2=word2,
             added_penalty_dict=added_penalty_dict,
             **kwargs
-            ).alignment # TODO handle Alignment class objects better; currently this only accesses the string alignment but the object contains other possibly useful info
-            for pair in wordlist] # TODO: tuple would be better than list if possible
+            ) for word1, word2 in wordlist] # TODO: tuple would be better than list if possible
     
     
     def correspondence_probs(self, alignment_list, ngram_size=1,
                              counts=False, exclude_null=True):
         """Returns a dictionary of conditional phone probabilities, based on a list
-        of alignments.
+        of Alignment objects.
         counts : Bool; if True, returns raw counts instead of normalized probabilities;
         exclude_null : Bool; if True, does not consider aligned pairs including a null segment"""
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
             if exclude_null:
-                alignment = [pair for pair in alignment if '-' not in pair]
+                _alignment = alignment.remove_gaps()
+            else:
+                _alignment = alignment.alignment
             if ngram_size > 1:
-                pad_n = ngram_size - 1
-                alignment = [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
+                _alignment = _alignment.pad(ngram_size, _alignment)
                 
-            for i in range(ngram_size-1, len(alignment)):
-                ngram = alignment[i-(ngram_size-1):i+1]
-                segs = list(zip(*ngram))
-                seg1, seg2 = segs
+            for i in range(ngram_size-1, len(_alignment)):
+                ngram = _alignment[i-(ngram_size-1):i+1]
+                seg1, seg2 = list(zip(*ngram))
                 corr_counts[seg1][seg2] += 1
         if not counts:
             for seg1 in corr_counts:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
+
         return corr_counts
 
 
     def phon_env_corr_probs(self, alignment_list, counts=False):
-        # TODO currently works only with ngram_size=1
+        # TODO currently works only with ngram_size=1 (I think this is fine?hh)
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
-            phon_env_align = phon_env_alignment(alignment) # TODO needs to be updated using Alignment class and add_phon_env() method; this won't work anymore
+            phon_env_align = alignment._add_phon_env()
             for seg_weight1, seg2 in phon_env_align:
                 corr_counts[seg_weight1][seg2] += 1
         if not counts:
@@ -108,9 +109,8 @@ class PhonemeCorrDetector:
         """Checks the number of times that phones occur within a specified 
         radius of positions in their respective words from one another"""
         corr_dict = defaultdict(lambda:defaultdict(lambda:0))
-        
-        for item in wordlist:
-            segs1, segs2 = item[0][3], item[1][3]
+        for word1, word2 in wordlist:
+            segs1, segs2 = word1.segments, word2.segments
             for i in range(len(segs1)):
                 seg1 = segs1[i]
                 for j in range(max(0, i-radius), min(i+radius+1, len(segs2))):
@@ -236,7 +236,11 @@ class PhonemeCorrDetector:
             # additional penalty, and then recalculate PMI
             iteration = 0
             PMI_iterations = {iteration:pmi_step1}
-            qualifying_words = default_dict({iteration:sorted(synonym_sample)}, l=[])
+            
+            def _sort_wordlist(wordlist):
+                return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
+
+            qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
                 iteration += 1
@@ -261,7 +265,7 @@ class PhonemeCorrDetector:
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
-                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment]))
+                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment]))
                 # nc_mean = mean(noncognate_PMI)
                 # nc_stdev = stdev(noncognate_PMI)
                 
@@ -270,8 +274,7 @@ class PhonemeCorrDetector:
                 qualifying, disqualified = [], []
                 for i, item in enumerate(synonym_sample):
                     alignment = all_alignments[i]
-                    PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] 
-                                    for pair in alignment])
+                    PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment])
                     
                     # pnorm = norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
                     # p_value = 1 - pnorm
@@ -280,11 +283,12 @@ class PhonemeCorrDetector:
                         qualifying.append(item)
                     else:
                         disqualified.append(item)
-                qualifying_words[iteration] = sorted(qualifying)
+                qualifying_words[iteration] = _sort_wordlist(qualifying)
                 disqualified_words[iteration] = disqualified + diff_sample
                 
                 # Print results of this iteration
                 if print_iterations:
+                    raise NotImplementedError('needs to be updated using logger.debug AND Word class objects') # TODO
                     print(f'Iteration {iteration}')
                     print(f'\tQualified: {len(qualifying)}')
                     added = [item for item in qualifying_words[iteration]

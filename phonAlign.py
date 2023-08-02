@@ -144,6 +144,24 @@ class Alignment:
                               GAP_SCORE=self.gop)
         
         return best # TODO add ability to return best N alignments (self.alignments vs. self.best, maybe)
+    
+
+    def remove_gaps(self, alignment=None):
+        """Returns the alignment without gap-aligned positions.
+
+        Returns:
+            list: gap-free alignment list # TODO change to tuple later if possible
+        """
+        if alignment is None:
+            alignment = self.alignment
+        return [pair for pair in alignment if self.gap_ch not in pair] 
+    
+
+    def pad(self, ngram_size, alignment=None):
+        if alignment is None:
+            alignment = self.alignment
+        pad_n = max(0, ngram_size-1)
+        return [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
 
 
     def _add_phon_env(self, env_func=phonEnvironment):
