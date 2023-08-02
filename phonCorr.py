@@ -27,11 +27,9 @@ class PhonemeCorrDetector:
             wordlist = set(wordlist) & self.lang1.vocabulary.keys() & self.lang2.vocabulary.keys()
             
         # Get tuple (concept, orthography, IPA, segmented IPA) for each word entry
-        # TODO create Wordlist class to handle this
-        l1_wordlist = [(concept, word.orthography, word.ipa, word.segments) 
-                       for concept in wordlist for word in self.lang1.vocabulary[concept]]
-        l2_wordlist = [(concept, word.orthography, word.ipa, word.segments) 
-                       for concept in wordlist for word in self.lang2.vocabulary[concept]]
+        # TODO create Wordlist class to handle this better
+        l1_wordlist = [word for concept in wordlist for word in self.lang1.vocabulary[concept]]
+        l2_wordlist = [word for concept in wordlist for word in self.lang2.vocabulary[concept]]
         
         # Get all combinations of L1 and L2 words
         all_wordpairs = product(l1_wordlist, l2_wordlist)
@@ -39,12 +37,10 @@ class PhonemeCorrDetector:
         # Sort out same-meaning from different-meaning word pairs, and loanwords
         same_meaning, diff_meaning, loanwords = [], [], []
         for pair in all_wordpairs:
-            l1_entry, l2_entry = pair
-            gloss1, gloss2 = l1_entry[0], l2_entry[0]
-            if gloss1 == gloss2:
-                if list(l1_entry[1:]) in self.lang1.loanwords[gloss1]:
-                    loanwords.append(pair)
-                elif list(l2_entry[1:]) in self.lang2.loanwords[gloss2]:
+            word1, word2 = pair
+            concept1, concept2 = word1.concept, word2.concept
+            if concept1 == concept2:
+                if word1.loanword or word2.loanword:
                     loanwords.append(pair)
                 else:
                     same_meaning.append(pair)

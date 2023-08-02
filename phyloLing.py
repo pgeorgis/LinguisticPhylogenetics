@@ -796,7 +796,7 @@ class LexicalDataset:
         
         if dist_func == Z_score_dist:
             cognates = 'none'
-            raise NotImplementedError
+            raise NotImplementedError # TODO
 
         # Automatic cognate clustering        
         if cognates == 'auto':
@@ -824,6 +824,7 @@ class LexicalDataset:
         # No separation of cognates/non-cognates: 
         # all synonymous words are evaluated irrespective of cognacy
         elif cognates == 'none':
+            raise NotImplementedError # TODO these dict values need to be Word objects instead of strings "LANGUAGE /ipastring/"
             clustered_concepts = {concept:{concept:[f'{lang} /{self.concepts[concept][lang][i].ipa}/'
                                   for lang in self.concepts[concept] 
                                   for i in range(len(self.concepts[concept][lang]))]}
@@ -1322,6 +1323,7 @@ class Language(LexicalDataset):
             orthography = entry[self.orthography_c]
             ipa = entry[self.ipa_c]
             #segments = entry[self.segments_c]
+            loan = True if re.match(r'((TRUE)|1)$', entry[self.loan_c], re.IGNORECASE) else False
             word = Word(
                 ipa_string=ipa, 
                 concept=concept, 
@@ -1330,7 +1332,8 @@ class Language(LexicalDataset):
                 normalize_geminates = self.segmentation_params['normalize_geminates'],
                 combine_diphthongs = self.segmentation_params['combine_diphthongs'],
                 preaspiration = self.segmentation_params['preaspiration'],
-                language=self
+                language=self,
+                loanword=loan
                 )
             
             if len(word.segments) > 0:
@@ -1338,8 +1341,7 @@ class Language(LexicalDataset):
                     self.vocabulary[concept].append(word)
                 
                     # Mark known loanwords
-                    loan = entry[self.loan_c]
-                    if loan == 'TRUE':
+                    if loan:
                         self.loanwords[concept].append(word)
                     
     def create_phoneme_inventory(self):
@@ -1611,7 +1613,8 @@ class Word:
                  ipa_string, 
                  concept=None, 
                  orthography=None, 
-                 language=None, 
+                 language=None,
+                 loanword=False,
                  # Parameters for preprocessing and segmentation
                  ch_to_remove=[], 
                  normalize_geminates=False,
@@ -1627,6 +1630,7 @@ class Word:
         }
         self.ipa = self.preprocess(ipa_string, normalize_geminates=normalize_geminates)
         self.concept = concept
+        self.loanword = loanword
         self.orthography = orthography
         self.segments = self.segment(ch_to_remove, 
                                      combine_diphthongs=combine_diphthongs, 
