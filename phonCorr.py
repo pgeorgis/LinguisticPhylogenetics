@@ -5,7 +5,6 @@ from statistics import mean
 import random
 from itertools import product
 from math import log
-from phonSim.phonSim import phonEnvironment
 
 class PhonemeCorrDetector:
     def __init__(self, lang1, lang2, wordlist=None, seed=1):
