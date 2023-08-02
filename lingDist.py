@@ -110,7 +110,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                             score = scored_pairs[(l1_word, l2_word)]
 
                         else:
-                            score = eval_func.eval((l1_word, lang1), (l2_word, lang2))
+                            score = eval_func.eval(l1_word, l2_word)
                         
                             # Transform distance into similarity
                             if not eval_func.sim:
