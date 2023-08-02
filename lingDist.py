@@ -62,7 +62,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
     
     # Get list of shared concepts between the two languages
-    shared_concepts = [concept for concept in clustered_cognates if concept in lang1.vocabulary if concept in lang2.vocabulary]
+    shared_concepts = clustered_cognates.keys() & lang1.vocabulary.keys() & lang2.vocabulary.keys()
     if len(shared_concepts) == 0:
         raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
 
@@ -193,45 +193,6 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         logger.debug(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
     
     return score
-            
-
-# TODO: update this function if necessary
-def weighted_cognate_sim(lang1, 
-                         lang2, 
-                         clustered_cognates, 
-                         eval_funcs, 
-                         weights=None,
-                         exclude_synonyms=True, 
-                         **kwargs):
-    if weights is None:
-        weights = [1/len(eval_funcs) for i in range(len(eval_funcs))]
-    sim_score = 0
-    for eval_func, weight in zip(eval_funcs, weights):
-        sim_score += (cognate_sim(lang1, 
-                                  lang2, 
-                                  clustered_cognates=clustered_cognates, 
-                                  eval_func=eval_func, 
-                                  **kwargs
-                                  ) 
-                                  * weight)
-    return sim_score
-            
-    
-def hybrid_cognate_dist(lang1, lang2,
-                       clustered_cognates,
-                       eval_funcs,
-                       exclude_synonyms=True,
-                       **kwargs):
-    scores = []
-    for eval_func in eval_funcs:
-        measure = cognate_sim(lang1, 
-                              lang2, 
-                              clustered_cognates, 
-                              eval_func=eval_func,
-                              exclude_synonyms=exclude_synonyms
-                              )
-        scores.append(1-measure)
-    return euclidean_dist(scores)
     
     
 def Z_score_dist(lang1, 
