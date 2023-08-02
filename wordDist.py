@@ -7,34 +7,25 @@ import re
 from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, suprasegmental_diacritics, strip_diacritics
 from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_environment_weight
 from auxFuncs import Distance, strip_ch, euclidean_dist, adaptation_surprisal
-from phonAlign import Alignment, phon_env_alignment
+from phonAlign import Alignment, add_phon_env, reverse_alignment, get_alignment_iter
 from phonCorr import PhonemeCorrDetector
 
-def prepare_alignment(item1, item2, **kwargs):
-    """Prepares alignment of two items, either:
-        ("word1", Lang1) : tuples of an IPA string and a Language class object
-        
-        or
-        
-        "word1" : IPA strings
-        
-    If the language class objects are provided, phoneme PMI is additionally used
-    for the alignment, otherwise only phonetic similarity.
-    
-    If phonetic PMI has not been previously calculated, it will be calculated
-    automatically here."""
-    
-    # Check the structure of the input, whether tuples or strings # TODO use Word class objects instead to simplify this
-    if (type(item1) == tuple and type(item2) == tuple):
-        word1, lang1 = item1
-        word2, lang2 = item2
-    
-    else:
-        word1, word2 = item1, item2
-        lang1, lang2 = None, None
-        
-    # If language input has been given, incorporate their phoneme PMI for the alignment
-    if (lang1, lang2) != (None, None):
+def prepare_alignment(word1, word2, **kwargs):
+    """Prepares pairwise alignment of two Word objects. 
+    If the language of both words is specified, phoneme PMI is additionally used for the alignment, else only phonetic similarity. 
+    If phonetic PMI has not been previously calculated, it will be calculated automatically here.
+
+    Args:
+        word1 (Word): first Word object to align
+        word2 (Word): second Word object to align
+
+    Returns:
+        Alignment: aligned object of the two words
+    """
+
+    # If language is specified for both words, incorporate their phoneme PMI for the alignment
+    lang1, lang2 = word1.language, word2.language
+    if lang1 is not None and lang2 is not None:
         
         # Check whether phoneme PMI has been calculated for this language pair
         # If not, then calculate it; if so, then retrieve it
@@ -44,7 +35,6 @@ def prepare_alignment(item1, item2, **kwargs):
             pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi()
         
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
-        #alignment = phone_align(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
         alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
         
     # Perform phonetic alignment without PMI support
@@ -84,7 +74,7 @@ def phonetic_dist(word1, word2=None, sim_func=phone_sim, **kwargs):
 
 
 # TODO name of function below to be confirmed
-def phonological_dist(word1, word2=None, 
+def phonological_dist(word1, word2=None, # TODO word2=None is weird, could instead require either two words or a single alignment as input 
               sim_func=phone_sim,
               penalize_infocontent=False, 
               penalize_sonority=True,
@@ -325,47 +315,47 @@ def segmental_word_dist(word1, word2=None,
     # Final score: weighted sum of each component score as distance
     return (c_weight * (1-c_score)) + (v_weight * (1-v_score)) + (syl_weight * syl_score)
 
-def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
-    # TODO change pairs into Word class objects and extract language from there
-    word1, lang1 = pair1
-    word2, lang2 = pair2
-    
-    # Remove suprasegmental and other ignored characters
-    word1 = strip_ch(word1, lang1.ch_to_remove)
-    word2 = strip_ch(word2, lang2.ch_to_remove)
+
+def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
+    lang1 = word1.language
+    lang2 = word2.language
     
     # Check whether phoneme PMI has been calculated for this language pair
-    # Otherwise calculate from scratch
+    # Otherwise calculate from scratch # TODO use helper function
     if len(lang1.phoneme_pmi[lang2]) > 0:
         pmi_dict = lang1.phoneme_pmi[lang2]
     else:
         pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
     
-    # Generate alignments in each direction: alignments need to come from PMI
-    alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
-    gap_ch = alignment.gap_ch
-    
-    # Calculate phoneme surprisal if not already done
+    # Calculate phoneme surprisal if not already done # TODO use helper function
     if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
+        # TODO add a logging message so that we know surprisal is being calculated (again) -- maybe best within phonCorr.py
         surprisal_dict_l1l2 = PhonemeCorrDetector(lang1, lang2).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
     if len(lang2.phoneme_surprisal[(lang1, ngram_size)]) == 0:
         surprisal_dict_l2l1 = PhonemeCorrDetector(lang2, lang1).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-        
+    
+    # Generate alignments in each direction: alignments need to come from PMI
+    alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
+    gap_ch = alignment.gap_ch
+    forward_alignment = get_alignment_iter(alignment, phon_env=phon_env)
+    # Reverse alignment: needs to be reversed, then phological environment added 
+    rev_alignment = add_phon_env(reverse_alignment(alignment, phon_env=False), gap_ch=gap_ch)
+
     # Calculate the word-adaptation surprisal in each direction
     # (note: alignment needs to be reversed to run in second direction)
     if phon_env:
-        rev_alignment = list(phon_env_alignment(alignment.reverse_alignment()))
-        alignment = list(phon_env_alignment(alignment.alignment)) # TODO change phon_env_alignment into method of Alignment class
         sur_dict1 = lang1.phon_env_surprisal[(lang2, ngram_size)]
         sur_dict2 = lang2.phon_env_surprisal[(lang1, ngram_size)]
     else:
-        rev_alignment = alignment.reverse_alignment()
         sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
         sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
-    WAS_l1l2 = adaptation_surprisal(alignment,
+    WAS_l1l2 = adaptation_surprisal(forward_alignment,
                                     surprisal_dict=sur_dict1,
                                     ngram_size=ngram_size,
                                     normalize=False)
+    if ngram_size > 1:
+        breakpoint() # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts... 
+        raise NotImplementedError
     WAS_l2l1 = adaptation_surprisal(rev_alignment, 
                                     surprisal_dict=sur_dict2,
                                     ngram_size=ngram_size,
@@ -399,19 +389,16 @@ def mutual_surprisal(pair1, pair2, ngram_size=1, phon_env=True, **kwargs):
     score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
     # TODO Treat surprisal values as distances and compute euclidean distance over these, then take average
     # score = mean([euclidean_dist(weighted_WAS_l1l2), euclidean_dist(weighted_WAS_l2l1)])
+
     return score
 
 
-def pmi_dist(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
-    word1, lang1 = pair1
-    word2, lang2 = pair2
-    
-    # Remove suprasegmental diacritics
-    word1 = strip_ch(word1, lang1.ch_to_remove)
-    word2 = strip_ch(word2, lang1.ch_to_remove)
+def pmi_dist(word1, word2, sim2dist=True, alpha=0.5, **kwargs):
+    lang1 = word1.language
+    lang2 = word2.language
     
     # Check whether phoneme PMI has been calculated for this language pair
-    # Otherwise calculate from scratch
+    # Otherwise calculate from scratch # TODO create a function or something for this since this requirement appears in multiple places
     if len(lang1.phoneme_pmi[lang2]) > 0:
         pmi_dict = lang1.phoneme_pmi[lang2]
     else:
@@ -471,13 +458,11 @@ def pmi_dist(pair1, pair2, sim2dist=True, alpha=0.5, **kwargs):
     else:
         return PMI_score
 
+
 def levenshtein_dist(word1, word2, normalize=True, asjp=True):
-    # TODO use Word class objects to simplify this; the fact that the word is the first item of the tuple is arbitrary 
-    if type(word1) == tuple:
-        word1 = word1[0]
-    if type(word2) == tuple:
-        word2 = word2[0]
-        
+    word1 = word1.ipa
+    word2 = word2.ipa
+    # TODO create helper function for these fixes
     fixes = {'ᵐ':'m', # bilabial prenasalization diacritic
              '̈':'', # central diacritic
              }
@@ -495,12 +480,13 @@ def levenshtein_dist(word1, word2, normalize=True, asjp=True):
         
     return LevDist
 
-def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, weights=None)->float:
+
+def hybrid_dist(word1, word2, funcs:dict, weights=None)->float:
     """Calculates a hybrid distance of multiple distance or similarity functions
 
     Args:
-        pair1 (tuple): (word, Language) pair # TODO change to just Word objects and extract Language from its attributes
-        pair2 (tuple): (word, Language) pair
+        word1 (phyloLing.Word): first Word object
+        word2 (phyloLing.Word): second Word object
         funcs (iterable): iterable of Distance class objects
     Returns:
         float: hybrid similarity measure
@@ -515,14 +501,14 @@ def hybrid_dist(pair1:tuple, pair2:tuple, funcs:dict, weights=None)->float:
         if weight == 0:
             continue
         func_sim = func.sim
-        score = func.eval(pair1, pair2)
+        score = func.eval(word1, word2)
         if func_sim:
             score = 1 - score
         
         # Distance weighting concept: if a distance is weighted with a higher coefficient relative to another distance,
         # it is as if that dimension is more impactful 
         scores.append(score*weight)
-    # print(f'PMI: {round(scores[0],3)} | Sur: {round(scores[1],3)} | Phon: {round(scores[-1],3)}')
+
     #score = euclidean_dist(scores)
     score = sum(scores)
     
@@ -553,13 +539,7 @@ SurprisalDist = Distance(
     name='SurprisalDist',
     cluster_threshold=0.74, # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
-HybridDist = Distance(
-    func=hybrid_dist,
-    name='HybridDist',
-    cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
-    funcs=[PMIDist, SurprisalDist, PhonologicalDist],
-)
-HybridSim = HybridDist.to_similarity(name='HybridSim') 
+# Note: Hybrid distance needs to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
 
 # Z SCORE
 def Z_score(p_values):
