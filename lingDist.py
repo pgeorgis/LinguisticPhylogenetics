@@ -11,12 +11,12 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
     """Calculates the proportion of shared cognates between the two languages.
     lang1   :   Language class object
     lang2   :   Language class object
-    clustered_cognates  :   nested dictionary of concepts and cognate IDs with their forms # TODO will likely need to be updated
+    clustered_cognates  :   nested dictionary of words organized by concepts and cognate classes
     exclude_synonyms    :   Bool, default = True
         if True, calculation is based on concepts rather than cognate IDs 
         (i.e. maximum score = 1 for each concept, regardless of how many forms
          or cognate IDs there are for the concept)"""
-        
+    raise NotImplementedError('update for Word class objects') # TODO
     sims = {}
     total_cognate_ids = 0
     for concept in clustered_cognates:
@@ -48,17 +48,18 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
 
 
 calibration_params = {} # TODO shouldn't be global variable
-def cognate_sim(lang1, lang2, clustered_cognates,
-                eval_func, exclude_synonyms=True, # TODO improve exclude_synonyms
-                #eval func was tuple (function, {kwarg:value}), now Distance class object
+def cognate_sim(lang1, 
+                lang2, 
+                clustered_cognates,
+                eval_func, 
+                exclude_synonyms=True, # TODO improve exclude_synonyms
                 calibrate=True,
                 min_similarity=0,
                 clustered_id=None, # TODO incorporate or remove
                 seed=1,
                 n_samples=50,
                 sample_size=0.8,
-                logger=None,
-                **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
+                logger=None):
     
     # Get list of shared concepts between the two languages
     shared_concepts = list(clustered_cognates.keys() & lang1.vocabulary.keys() & lang2.vocabulary.keys())
@@ -157,6 +158,7 @@ def cognate_sim(lang1, lang2, clustered_cognates,
                 nc_score_stdev = stdev(noncognate_scores)
                 
                 # Save calibration parameters
+                # TODO this could be an attribute of PhonemeCorrDetector class? which could in turn be saved as an attribute of Language objects?
                 calibration_params[(lang1, lang2, eval_func, n)] = mean_nc_score, nc_score_stdev
         
         # Apply minimum similarity and calibration

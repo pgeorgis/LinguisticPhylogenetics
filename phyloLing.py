@@ -831,9 +831,7 @@ class LexicalDataset:
         
         # Compute distance matrix over Language objects
         languages = [self.languages[lang] for lang in self.languages]
-        names = [lang.name for lang in languages]
-        dm = distance_matrix(group=languages, 
-                             labels=names, 
+        dm = distance_matrix(group=languages,
                              dist_func=dist_func, 
                              sim=dist_func.sim,
                              clustered_cognates=clustered_concepts,
@@ -1432,9 +1430,7 @@ class Language(LexicalDataset):
                 return self.ngrams[ngram_size]
         
     
-    def lookup(self, segment, 
-               field='segments',
-               return_list=False):
+    def lookup(self, segment, field='segments', return_list=False):
         """Prints or returns a list of all word entries containing a given 
         segment/character or regular expression"""
         if field not in ('transcription', 'segments', 'orthography'):
@@ -1511,7 +1507,7 @@ class Language(LexicalDataset):
             #return sum(info_content[j][1] for j in info_content)
             return info_content
     
-    def bigram_probability(self, bigram, delta=0.7):
+    def bigram_probability(self, bigram, delta=0.7): # TODO is this used for anything?
         """Returns Kneser-Ney smoothed conditional probability P(p2|p1)"""
         
         p1, p2 = bigram
@@ -1539,8 +1535,7 @@ class Language(LexicalDataset):
         numerator = max((self.bigrams.get(bigram, 0)-delta), 0)
         
         return (numerator/total_start_p1_counts) + (l_KN*pKN_p1)
-        
-        
+                
     
     def phone_dendrogram(self, 
                          similarity='weighted_dice', 
@@ -1599,9 +1594,9 @@ class Language(LexicalDataset):
             concept = random.choice(list(self.vocabulary.keys()))
             word = random.choice(self.vocabulary[concept])
             s+= f'\n\t"{concept.upper()}": /{word.ipa}/ <{word.orthography}>'
-            
-        
+
         return s
+
 
 class Word:
     def __init__(self, 
@@ -1634,7 +1629,8 @@ class Word:
                                      preaspiration=preaspiration)
         self.phon_env = self.getPhonEnv()
         self.info_content = None
-    
+
+
     def preprocess(self, ipa_string, normalize_geminates=False):
         # Normalize common IPA character mistakes
         # Normalize affricates to special ligature characters, where available
@@ -1645,7 +1641,8 @@ class Word:
             ipa_string = re.sub(fr'([{consonants}])\1', r'\1ː', ipa_string)
 
         return ipa_string
-    
+
+
     def segment(self, ch_to_remove, combine_diphthongs, preaspiration):
         return segment_ipa(
             self.ipa, 
@@ -1655,12 +1652,14 @@ class Word:
             preaspiration=preaspiration
         )
     
+
     def getPhonEnv(self):
         phon_env = []
         for i, seg in enumerate(self.segments):
             phon_env.append(phonEnvironment(self.segments, i))
         return phon_env
-    
+
+
     def getInfoContent(self):
         if self.language is None:
             raise AssertionError('Language must be specified in order to calculate information content.')
@@ -1680,9 +1679,8 @@ def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None
     if exclude:
         family.remove_languages(exclude)
     if min_amc:
-        # min_amc default: 0.75
         family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
-    # families[family].write_vocab_index()
+    # families[family].write_vocab_index() # TODO
     language_variables = {format_as_variable(lang):family.languages[lang] 
                         for lang in family.languages}
     globals().update(language_variables)
