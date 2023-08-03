@@ -1,10 +1,8 @@
 from math import log, inf
-import re
 from collections.abc import Iterable
-from itertools import combinations
 from nwunschAlign import best_alignment
 from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_ipa, phone_sim
-from phonSim.phonSim import phonEnvironment #, prosodic_environment_weight
+from phonSim.phonSim import phonEnvironment
 from auxFuncs import Distance, validate_class
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 
@@ -298,32 +296,3 @@ def undo_visual_align(visual_alignment, gap_ch='-'):
     seg_pairs = visual_alignment.split(' / ')
     seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]
     return seg_pairs
-
-def phon_env_ngrams(phonEnv): # TODO move to other module where this is used
-    """Returns set of phonological environment strings of equal and lower order, 
-    e.g. ">S#" -> ">S", "S#", ">S#"
-
-    Args:
-        phonEnv (str): Phonological environment string, e.g. ">S#"
-
-    Returns:
-        set: possible equal and lower order phonological environment strings
-    """
-    assert re.search(r'.+S.+', phonEnv)
-    prefix = set(re.findall(r'[^S](?=.*S)', phonEnv))
-    prefixes = set()
-    for i in range(1, len(prefix)+1):
-        for x in combinations(prefix, i):
-            prefixes.add(''.join(x))
-    prefixes.add('')
-    suffix = set(re.search(r'(?<=S).+', phonEnv).group())
-    suffixes = set()
-    for i in range(1, len(suffix)+1):
-        for x in combinations(suffix, i):
-            suffixes.add(''.join(x))
-    suffixes.add('')
-    ngrams = set()
-    for prefix in prefixes:
-        for suffix in suffixes:
-            ngrams.add(f'{prefix}S{suffix}')
-    return ngrams

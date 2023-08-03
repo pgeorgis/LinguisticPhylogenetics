@@ -1,9 +1,10 @@
 from collections import defaultdict
 from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import Alignment, compatible_segments, phon_env_ngrams
+from phonAlign import Alignment, compatible_segments
 from statistics import mean
 import random
-from itertools import product
+import re
+from itertools import product, combinations
 from math import log
 
 class PhonemeCorrDetector:
@@ -678,3 +679,32 @@ class PhonemeCorrDetector:
         self.surprisal_dict = surprisal_results
         
         return surprisal_results, phon_env_surprisal
+
+def phon_env_ngrams(phonEnv):
+    """Returns set of phonological environment strings of equal and lower order, 
+    e.g. ">S#" -> ">S", "S#", ">S#"
+
+    Args:
+        phonEnv (str): Phonological environment string, e.g. ">S#"
+
+    Returns:
+        set: possible equal and lower order phonological environment strings
+    """
+    assert re.search(r'.+S.+', phonEnv)
+    prefix = set(re.findall(r'[^S](?=.*S)', phonEnv))
+    prefixes = set()
+    for i in range(1, len(prefix)+1):
+        for x in combinations(prefix, i):
+            prefixes.add(''.join(x))
+    prefixes.add('')
+    suffix = set(re.search(r'(?<=S).+', phonEnv).group())
+    suffixes = set()
+    for i in range(1, len(suffix)+1):
+        for x in combinations(suffix, i):
+            suffixes.add(''.join(x))
+    suffixes.add('')
+    ngrams = set()
+    for prefix in prefixes:
+        for suffix in suffixes:
+            ngrams.add(f'{prefix}S{suffix}')
+    return ngrams
