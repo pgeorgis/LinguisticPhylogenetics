@@ -355,6 +355,9 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
                                     normalize=False)
     if ngram_size > 1:
         breakpoint() # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts... 
+        # the way to get around this is:
+        # calculate the 2gram, then get the 2gram's phon_env equivalent
+        # interpolate the probability/surprisal of the 2gram with that of the phon_env equivalent 
         raise NotImplementedError
     WAS_l2l1 = adaptation_surprisal(rev_alignment, 
                                     surprisal_dict=sur_dict2,
