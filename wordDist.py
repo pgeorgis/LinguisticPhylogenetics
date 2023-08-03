@@ -370,7 +370,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
 
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily
-    def weight_by_self_surprisal(alignment, WAS, self_surprisal, gap_ch=gap_ch):
+    def weight_by_self_surprisal(alignment, WAS, self_surprisal, gap_ch=gap_ch): # TODO change to use new alignment.map_to_seqs() method
         self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
         weighted_WAS = []
         adjust = 0
@@ -413,45 +413,43 @@ def pmi_dist(word1, word2, sim2dist=True, alpha=0.5, **kwargs):
     # Calculate PMI scores for each aligned pair
     PMI_values = [pmi_dict[pair[0]][pair[1]] for pair in alignment.alignment]
 
-    # # TODO: Weight by information content per segment
-    # info_content1 = lang1.calculate_infocontent(word1, segmented=False)
-    # info_content2 = lang2.calculate_infocontent(word2, segmented=False)
-    # def weight_by_info_content(alignment, PMI_vals, info1, info2):
-    #     self_info1 = sum([info1[j][-1] for j in info1])
-    #     self_info2 = sum([info2[j][-1] for j in info2])
-    #     weighted_PMI = []
-    #     #adjust1, adjust2 = 0, 0
-    #     for i, pair in enumerate(alignment.alignment):
-    #         breakpoint()
-    #         # if pair[0] == '-':
-    #         #     adjust1 += 1
-    #         # elif pair[1] == '-':
-    #         #     adjust2 += 1
-    #         if pair[0] == '-':
-    #             pass
-    #         else:
-    #             pass
-    #         if pair[-1] == '-':
-    #             pass
-    #         else:
-    #             pass
-
+    # Weight by information content per segment
+    def weight_by_info_content(alignment, PMI_vals):
+        word1, word2 = alignment.word1, alignment.word2
+        info_content1 = word1.getInfoContent()
+        info_content2 = word2.getInfoContent()
+        total_info1 = sum([info_content1[j][-1] for j in info_content1])
+        total_info2 = sum([info_content2[j][-1] for j in info_content2])
+        seq_map1, seq_map2 = alignment.map_to_seqs()
+        weighted_PMI = []
+        for i, pair in enumerate(alignment.alignment):
+            # Take the information content value of each segment within the respective word
+            # Divide this by the total info content of the word to calculate the proportion of info content constituted by the segment
+            if seq_map1[i] is not None:
+                weight1 = info_content1[seq_map1[i]][-1] / total_info1
+            else:
+                weight1 = None
             
-    #         # Take the information content value of each segment within the respective word
-    #         # Divide this by the total info content of the word to calculate the proportion of info content constituted by the segment
-    #         # Average together the info contents of each aligned segment
-    #         # Weight by the averaged values
-    #         weight1 = info1[i-adjust1][-1] / self_info1
-    #         try:
-    #             weight2 = info2[i-adjust2][-1] / self_info2
-    #         except KeyError:
-    #             breakpoint()
-    #         weight = mean([weight1, weight2])
-    #         weighted = weight * PMI_vals[i]
-    #         weighted_PMI.append(weighted)
-    #     return weighted_PMI
-    
-    # PMI_values = weight_by_info_content(alignment, PMI_values, info_content1, info_content2)
+            if seq_map2[i] is not None:
+                weight2 = info_content2[seq_map2[i]][-1] / total_info2
+            else:
+                weight2 = None
+            
+            # Average together the info contents of each aligned segment
+            if weight1 is None:
+                weight = weight2
+            elif weight2 is None:
+                weight = weight1
+            else:
+                weight = mean([weight1, weight2])
+
+            # Weight by the averaged values
+            weighted = weight * PMI_vals[i]
+            weighted_PMI.append(weighted)
+
+        return weighted_PMI
+
+    PMI_values = weight_by_info_content(alignment, PMI_values)
     PMI_score = mean(PMI_values) 
     
     if sim2dist:
