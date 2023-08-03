@@ -1,7 +1,7 @@
 from math import log, inf
 from collections.abc import Iterable
 from nwunschAlign import best_alignment
-from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, segment_ipa, phone_sim
+from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, phone_sim
 from phonSim.phonSim import phonEnvironment
 from auxFuncs import Distance, validate_class
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
