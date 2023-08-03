@@ -164,6 +164,31 @@ class Alignment:
             alignment = self.alignment
         pad_n = max(0, ngram_size-1)
         return [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
+    
+
+    def map_to_seqs(self):
+        """Maps aligned pair indices to their respective sequence indices
+        e.g.
+        self.alignment = [('ʃ', 's'), ('ˈa', 'ˈɛ'), ('p', '-'), ('t', 't'), ('e', '-')]
+        map1 = {0:0, 1:1, 2:2, 3:3, 4:4}
+        map2 = {0:0, 1:1, 2:None, 3:3, 4:None}
+        """
+        map1, map2 = {}, {}
+        adjust1, adjust2 = 0, 0
+        for i, pair in enumerate(self.alignment):
+            seg1, seg2 = pair
+            if seg1 == self.gap_ch:
+                map1[i] = None
+                adjust1 += 1
+            else:
+                map1[i] = i-adjust1
+            if seg2 == self.gap_ch:
+                map2[i] = None
+                adjust2 += 1
+            else:
+                map2[i] = i-adjust2
+
+        return map1, map2
 
 
     def _add_phon_env(self, env_func=phonEnvironment):
