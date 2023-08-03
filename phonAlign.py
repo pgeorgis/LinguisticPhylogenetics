@@ -23,6 +23,7 @@ class Alignment:
                  added_penalty_dict=None,
                  gap_ch='-',
                  gop=-0.7, # TODO possibly need to recalibrate
+                 n_best=1,
                  phon_env=False,
                  **kwargs
                  ):
@@ -37,6 +38,7 @@ class Alignment:
             added_penalty_dict (dict, optional): Dictionary of additional penalties to combine with cost_func. Defaults to None.
             gap_ch (str, optional): Gap character. Defaults to '-'.
             gop (float, optional): Gap opening penalty. Defaults to -0.7.
+            n_best (int, optional): Number of best (least costly) alignments to return. Defaults to 1.
             phon_env (Bool, optional): Adds phonological environment to alignment. Defaults to False.
         """
         
@@ -55,17 +57,18 @@ class Alignment:
         self.kwargs = kwargs
 
         # Perform alignment
-        self.alignment = self.align()
+        self.n_best = self.align(n_best)
+        self.alignment = self.n_best[0][0]
 
+        # Save length and cost of single best alignment
+        self.cost = self.n_best[0][-1]
+        self.length = len(self.alignment)
+        
         # Phonological environment alignment
         if phon_env:
             self.phon_env_alignment = self._add_phon_env()
         else:
             self.phon_env_alignment = None
-
-        # Save length of alignment
-        self.length = len(self.alignment)
-        # TODO also save total cost of alignment, will require adjustment to nwunschAlign.py
 
 
     def validate_args(self, seq1, seq2, lang1, lang2, cost_func):
@@ -114,7 +117,7 @@ class Alignment:
         return alignment_costs
 
 
-    def align(self):
+    def align(self, n_best=1):
         """Align segments of word1 with segments of word2 according to Needleman-
         Wunsch algorithm, with costs determined by phonetic and sonority similarity;
         If not segmented, the words are first segmented before being aligned.
@@ -137,13 +140,14 @@ class Alignment:
         else:
             alignment_costs = self.calculate_alignment_costs(self.cost_func)
         
-        # Calculate least costly alignment using Needleman-Wunsch algorithm
+        # Calculate least costly N best alignment(s) using Needleman-Wunsch algorithm
         best = best_alignment(SEQUENCE_1=self.seq1, 
                               SEQUENCE_2=self.seq2,
                               SCORES_DICT=alignment_costs, 
-                              GAP_SCORE=self.gop)
+                              GAP_SCORE=self.gop,
+                              N_BEST=n_best)
         
-        return best # TODO add ability to return best N alignments (self.alignments vs. self.best, maybe)
+        return best
     
 
     def remove_gaps(self, alignment=None):

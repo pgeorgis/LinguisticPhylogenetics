@@ -23,12 +23,7 @@ SOFTWARE.
 Modified by Philip Georgis from:
     https://github.com/mmtechslv/nwunch
 """
-
-def keywithmaxval(d):
-    """Returns the dictionary key with the highest value"""
-    v = list(d.values())
-    k = list(d.keys())
-    return k[v.index(max(v))]
+from auxFuncs import dict_tuplelist
 
 def return_alignment(ALIGNMENTS):
     final_alignments = []
@@ -76,7 +71,7 @@ def find_each_path(c_i,c_j,ALN_PATHWAYS,MATRIX,path=''): # Nested function to di
 
 
 
-def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, GAP_SCORE=-1, GAP_CHARACTER='-'):
+def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, GAP_SCORE=-1, GAP_CHARACTER='-', N_BEST=1):
     MATRIX_ROW_N = len(SEQUENCE_1)+1 # Initiation Matrix Size (Rows)
     MATRIX_COLUMN_N = len(SEQUENCE_2)+1 # Initiation Matrix Size (Columns)
     ALN_PATHWAYS = [] # Initiating List of Discovered aln Pathways
@@ -132,16 +127,14 @@ def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, GAP_SCORE=-1, GAP_CHARAC
         side_aln.reverse()
         top_aln.reverse()
         ALIGNMENTS.append([top_aln,side_aln,elem,aln_info,aln_count])
-    if len(ALIGNMENTS) > 1:
-        alignment_scores = {}
-        for i in range(len(ALIGNMENTS)):
-            a = ALIGNMENTS[i][3]
-            alignment_pmi_scores = 0
-            for item in a:
-                pmi_score = item[1]
-                alignment_pmi_scores += item[1]
-            alignment_scores[i] = alignment_pmi_scores
-        return return_alignment(ALIGNMENTS)[keywithmaxval(alignment_scores)]
-    else:
-        return return_alignment(ALIGNMENTS)[0]
+
+    # Return N best alignments
+    alignment_scores = {}
+    for i, item in enumerate(ALIGNMENTS):
+        a = item[3]
+        alignment_pmi_scores = sum(item[1] for item in a)
+        alignment_scores[i] = alignment_pmi_scores
+    alignment_scores = dict_tuplelist(alignment_scores)
+    best_N_alignments = [(return_alignment(ALIGNMENTS)[i], score) for i, score in alignment_scores[:N_BEST]]
+    return best_N_alignments
     
