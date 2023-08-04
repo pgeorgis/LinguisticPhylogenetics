@@ -44,18 +44,17 @@ def prepare_alignment(word1, word2, **kwargs):
     return alignment
 
 
-def phonetic_dist(word1, word2=None, sim_func=phone_sim, **kwargs):
+def phonetic_dist(word1, word2=None, phone_sim_func=phone_sim, **kwargs):
     """Calculates phonetic distance of an alignment without weighting by 
     segment type, position, etc.
+
+    Args:
+        word1 (phyloLing.Word): first Word object, or an Alignment object
+        word2 (phyloLing.Word): second Word object, or an Alignment object. Defaults to None.
+        phone_sim_func (phone_sim, optional): Phonetic similarity function. Defaults to phone_sim.
+    """
     
-    Input:
-    ("word1", Lang1) : tuples of an IPA string and a Language class object
-        
-    or
-        
-    "word1" : IPA strings
-    
-    If word2 is not provided, word1 is assumed to be an alignment.""" # TODO this can be simplified using my new classes
+    #If word2 is not provided, word1 is assumed to be an alignment.""" # TODO this should not be done
     
     # Calculate or retrieve the alignment
     if word2:
@@ -65,7 +64,7 @@ def phonetic_dist(word1, word2=None, sim_func=phone_sim, **kwargs):
     
     # Calculate the phonetic similarity of each aligned segment
     # Gap alignments receive a score of 0
-    phone_sims = [sim_func(pair[0], pair[1], **kwargs) 
+    phone_sims = [phone_sim_func(pair[0], pair[1], **kwargs) 
                   if alignment.gap_ch not in pair else 0 
                   for pair in alignment.alignment]
     
@@ -73,24 +72,33 @@ def phonetic_dist(word1, word2=None, sim_func=phone_sim, **kwargs):
     return 1 - mean(phone_sims)
 
 
-# TODO name of function below to be confirmed
-def phonological_dist(word1, word2=None, # TODO word2=None is weird, could instead require either two words or a single alignment as input 
-              sim_func=phone_sim,
-              penalize_infocontent=False, 
-              penalize_sonority=True,
-              context_reduction=True, penalty_discount=2,
-              prosodic_env_scaling=True,
-              total_sim=False, # TODO confirm that this is the better default; I think averaging is required to normalize for different word lengths
-              **kwargs):
-    """Calculates phonological distance between two words on the basis of 
-    the phonetic similarity of aligned segments and phonological deletion penalties.
+def phonological_dist(word1, 
+                      word2=None,
+                      sim_func=phone_sim,
+                      penalize_sonority=True,
+                      context_reduction=True, 
+                      penalty_discount=2,
+                      prosodic_env_scaling=True,
+                      total_dist=False, # TODO confirm that this is the better default; I think averaging is required to normalize for different word lengths
+                      **kwargs):
+    """Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
     No weighting by segment type, position, etc.
+
+    Args:
+        word1 (phyloLing.Word): first Word object, or an Alignment object
+        word2 (phyloLing.Word): second Word object, or an Alignment object. Defaults to None. # TODO word2=None is weird, could instead require either two words or a single alignment as input  
+        sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
+        penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
+        context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
+        penalty_discount (int, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
+        prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
+        total_dist (bool, optional): Computes phonological distance as the sum of all penalties. Defaults to False.
+
+    Returns:
+        float: phonological distance value
+    """
     
-    word1 : string (first word), list (alignment of two words), # TODO update to new classes
-            or tuple (first word, second language)
-    word2 : string (second word) or tuple (second word, second language)"""
-    
-    # If word2 is None, we assume word1 argument is actually an aligned word pair # TODO this can be simplified with Word/Alignment classes
+    # If word2 is None, we assume word1 argument is actually an aligned word pair
     # Otherwise, align the two words
     if word2:
         alignment = prepare_alignment(word1, word2)
@@ -238,7 +246,7 @@ def phonological_dist(word1, word2=None, # TODO word2=None is weird, could inste
             distance = 1 - sim_func(seg1, seg2, **kwargs)
             penalties.append(distance)
     
-    if total_sim:
+    if total_dist:
         word_dist = sum(penalties)
     else:
         # Euclidean distance of all penalties (= distance per dimension of the word)
