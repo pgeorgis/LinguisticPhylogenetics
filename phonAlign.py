@@ -58,12 +58,16 @@ class Alignment:
         self.n_best = self.align(n_best)
         self.alignment = self.n_best[0][0]
 
+        # Map aligned pairs to respective sequence indices
+        self.seq_map = self.map_to_seqs()
+
         # Save length and cost of single best alignment
         self.cost = self.n_best[0][-1]
         self.length = len(self.alignment)
         
         # Phonological environment alignment
-        if phon_env:
+        self.phon_env = phon_env
+        if self.phon_env:
             self.phon_env_alignment = self._add_phon_env()
         else:
             self.phon_env_alignment = None
@@ -192,10 +196,46 @@ class Alignment:
 
 
     def _add_phon_env(self, env_func=phonEnvironment):
+        self.phon_env = True
         return add_phon_env(self.alignment,
                             env_func=env_func, 
                             gap_ch=self.gap_ch,
                             segs1=self.seq1)
+    
+
+    def _reverse(self):
+        return ReversedAlignment(self)
+        
+
+class ReversedAlignment(Alignment):
+    def __init__(self, alignment):
+        validate_class((alignment,), (Alignment,))
+        self.seq1 = alignment.seq2
+        self.seq2 = alignment.seq1
+        self.word1 = alignment.word2
+        self.word2 = alignment.word1
+        self.gap_ch = alignment.gap_ch
+        self.gop = alignment.gop
+        self.cost_func = alignment.cost_func
+        self.added_penalty_dict = alignment.added_penalty_dict
+        self.kwargs = alignment.kwargs
+        self.n_best = [(reverse_alignment(alignment_n), cost) for alignment_n, cost in alignment.n_best]
+        self.alignment = self.n_best[0][0]
+
+        # Map aligned pairs to respective sequence indices
+        self.seq_map = tuple(reversed(alignment.seq_map))
+
+        # Save length and cost of single best alignment
+        self.cost = self.n_best[0][-1]
+        self.length = len(self.alignment)
+        
+        # Phonological environment alignment
+        self.phon_env = alignment.phon_env
+        if self.phon_env:
+            self.phon_env_alignment = super()._add_phon_env()
+        else:
+            self.phon_env_alignment = None
+
 
 
 def compatible_segments(seg1, seg2):
