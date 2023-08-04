@@ -65,7 +65,7 @@ if __name__ == "__main__":
                 cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
                 funcs=[PMIDist, SurprisalDist, PhonologicalDist],
                 # this weighting scheme works well seemingly (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
-                weights=(0.5, 0.25, 0.25),
+                weights=(0.25, 0.5, 0.25),
             )
             HybridSim = HybridDist.to_similarity(name='HybridSim') 
 
