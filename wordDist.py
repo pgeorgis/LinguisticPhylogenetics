@@ -336,10 +336,9 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
     
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
-    gap_ch = alignment.gap_ch
     forward_alignment = get_alignment_iter(alignment, phon_env=phon_env)
-    # Reverse alignment: needs to be reversed, then phological environment added 
-    rev_alignment = add_phon_env(reverse_alignment(alignment, phon_env=False), gap_ch=gap_ch)
+    rev_alignment = alignment._reverse()
+    backward_alignment = get_alignment_iter(rev_alignment, phon_env=phon_env)
 
     # Calculate the word-adaptation surprisal in each direction
     # (note: alignment needs to be reversed to run in second direction)
@@ -359,7 +358,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
         # calculate the 2gram, then get the 2gram's phon_env equivalent
         # interpolate the probability/surprisal of the 2gram with that of the phon_env equivalent 
         raise NotImplementedError
-    WAS_l2l1 = adaptation_surprisal(rev_alignment, 
+    WAS_l2l1 = adaptation_surprisal(backward_alignment, 
                                     surprisal_dict=sur_dict2,
                                     ngram_size=ngram_size,
                                     normalize=False)
@@ -370,24 +369,19 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
 
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily
-    def weight_by_self_surprisal(alignment, WAS, self_surprisal, gap_ch=gap_ch): # TODO change to use new alignment.map_to_seqs() method
+    def weight_by_self_surprisal(alignment, WAS, self_surprisal):
         self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
         weighted_WAS = []
-        adjust = 0
-        if type(alignment) is Alignment:
-            alignment = alignment.alignment
-        for i, pair in enumerate(alignment):
-            if pair[0][0] != gap_ch: # TODO: is the second 0 index necessary here? I think pair[0] would work exactly the same
-                # TODO I wonder if skipping the gaps had something to do with the former success?
-                weight = self_surprisal[(i-adjust)][-1] / self_info # TODO: this adjust method might not work if the gap is at the beginning of the alignment
+        seq_map1 = alignment.seq_map[0]
+        for i, pair in enumerate(alignment.alignment):
+            if seq_map1[i] is not None:
+                weight = self_surprisal[seq_map1[i]][-1] / self_info
                 weighted = weight * WAS[i]
                 weighted_WAS.append(weighted)
-            else:
-                adjust += 1
         return weighted_WAS
     weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1)
     weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2)
-    
+
     # Return and save the average of these two values
     score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
     # TODO Treat surprisal values as distances and compute euclidean distance over these, then take average
@@ -420,7 +414,7 @@ def pmi_dist(word1, word2, sim2dist=True, alpha=0.5, **kwargs):
         info_content2 = word2.getInfoContent()
         total_info1 = sum([info_content1[j][-1] for j in info_content1])
         total_info2 = sum([info_content2[j][-1] for j in info_content2])
-        seq_map1, seq_map2 = alignment.map_to_seqs()
+        seq_map1, seq_map2 = alignment.seq_map
         weighted_PMI = []
         for i, pair in enumerate(alignment.alignment):
             # Take the information content value of each segment within the respective word
