@@ -504,7 +504,7 @@ class LexicalDataset:
             raise FileNotFoundError
 
     
-    def phonetic_diversity(self, ch_to_remove=[]):
+    def phonetic_diversity(self, ch_to_remove=[]): # TODO
         # diversity_scores = {}
         diversity_scores = defaultdict(lambda:[])
         for cognate_set in self.cognate_sets:
@@ -523,7 +523,7 @@ class LexicalDataset:
         return mean(diversity_scores.values())
                     
         
-    def cognate_set_dendrogram(self, 
+    def cognate_set_dendrogram(self,  # TODO UPDATE THIS FUNCTION
                                cognate_id, 
                                dist_func,
                                combine_cognate_sets=True,
@@ -1237,7 +1237,7 @@ class LexicalDataset:
         
         return s
 
-class Language(LexicalDataset):
+class Language:
     def __init__(self, 
                  name, 
                  data, 
