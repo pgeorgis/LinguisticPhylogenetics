@@ -119,12 +119,10 @@ def phonological_dist(word1,
             penalty = 1
             if seg1 == gap_ch:
                 deleted_segment = seg2
-                index = len([alignment[j][1] for j in range(i) if alignment[j][1] != gap_ch])
                 
             else:
                 deleted_segment = seg1
-                index = len([alignment[j][0] for j in range(i) if alignment[j][0] != gap_ch])
-            
+                
             if penalize_sonority:
                 sonority = get_sonority(deleted_segment)
                 sonority_penalty = 1-(sonority/(max_sonority+1))
@@ -140,15 +138,14 @@ def phonological_dist(word1,
                     previous_seg = alignment[i-1][gap_index]
                     # 1) If the deleted segment is a nasal and the corresponding 
                     # precending segment was nasalized
-                    if stripped_deleted in nasals:
+                    if stripped_deleted in nasals: # TODO use regex instead e.g. re.search(nasals, deleted_segment)
                         if '̃' in previous_seg: # check for nasalization diacritic:
                             penalty /= penalty_discount
                     
                     # 2) If the deleted segment is a palatal glide (j, ɥ, i̯, ɪ̯),  
                     # and the corresponding preceding segment was palatalized
                     # or is a palatal consonant
-                    elif strip_diacritics(deleted_segment, excepted=['̯']) in {'j', 'ɥ', 
-                                                                                'i̯', 'ɪ̯'}:
+                    elif strip_diacritics(deleted_segment, excepted=['̯']) in {'j', 'ɥ', 'i̯', 'ɪ̯'}:
                         if strip_diacritics(previous_seg)[0] in palatal:
                             penalty /= penalty_discount
                         elif ('ʲ' in previous_seg) or ('ᶣ' in previous_seg):
@@ -156,9 +153,7 @@ def phonological_dist(word1,
                             
                     # 3) If the deleted segment is a high rounded/labial glide
                     # and the corresponding preceding segment was labialized
-                    elif strip_diacritics(deleted_segment, excepted=['̯']) in {'w', 'ʍ', 'ʋ', 
-                                                                                'u', 'ʊ', 
-                                                                                'y', 'ʏ'}:
+                    elif strip_diacritics(deleted_segment, excepted=['̯']) in {'w', 'ʍ', 'ʋ', 'u', 'ʊ', 'y', 'ʏ'}:
                         if ('ʷ' in previous_seg) or ('ᶣ' in previous_seg):
                             penalty /= penalty_discount
                     
