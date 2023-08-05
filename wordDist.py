@@ -1,13 +1,12 @@
-from collections import defaultdict
-from math import sqrt, log, e, exp
+from math import sqrt, log, exp
 from statistics import mean
 from asjp import ipa2asjp
 from nltk import edit_distance
 import re
-from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, suprasegmental_diacritics, strip_diacritics
+from phonSim.phonSim import consonants, vowels, glides, nasals, palatal, strip_diacritics
 from phonSim.phonSim import phone_sim, get_sonority, max_sonority, prosodic_environment_weight
 from auxFuncs import Distance, strip_ch, euclidean_dist, adaptation_surprisal
-from phonAlign import Alignment, add_phon_env, reverse_alignment, get_alignment_iter
+from phonAlign import Alignment, get_alignment_iter
 from phonCorr import PhonemeCorrDetector
 
 def prepare_alignment(word1, word2, **kwargs):
