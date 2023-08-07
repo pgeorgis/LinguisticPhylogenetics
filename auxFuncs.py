@@ -239,6 +239,7 @@ class Distance:
         self.kwargs[param] = value
         self.hashable_kwargs = self.get_hashable_kwargs(self.kwargs)
     
+    # TODO possibly use lru_cache instead
     def eval(self, x, y, **kwargs):
         if (x, y, self.hashable_kwargs) in self.measured:
             return self.measured[(x, y, self.hashable_kwargs)]
