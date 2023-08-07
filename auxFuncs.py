@@ -72,7 +72,9 @@ def rescale(val, lis, new_min = 0.0, new_max = 1.0):
 # STRING MANIPULATION
 def strip_ch(string, to_remove):
     """Removes a set of characters from strings"""
-    return ''.join([ch for ch in string if ch not in to_remove])
+    to_remove_regex = '|'.join(to_remove)
+    string = re.sub(to_remove_regex, '', string)
+    return string
 
 def format_as_variable(string):
     variable = unidecode(string)

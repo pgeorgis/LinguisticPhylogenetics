@@ -1,8 +1,7 @@
 from math import log, inf
 from collections.abc import Iterable
 from nwunschAlign import best_alignment
-from phonSim.phonSim import consonants, vowels, tonemes, phone_id, strip_diacritics, phone_sim
-from phonSim.phonSim import phonEnvironment
+from PhoneticSimilarity.phonSim import Segment, _toSegment, consonants, vowels, tonemes, strip_diacritics, phone_sim, get_phon_env
 from auxFuncs import Distance, validate_class
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 
@@ -195,7 +194,7 @@ class Alignment:
         return map1, map2
 
 
-    def _add_phon_env(self, env_func=phonEnvironment):
+    def _add_phon_env(self, env_func=get_phon_env):
         self.phon_env = True
         return add_phon_env(self.alignment,
                             env_func=env_func, 
@@ -239,43 +238,31 @@ class ReversedAlignment(Alignment):
 
 
 def compatible_segments(seg1, seg2):
-    """Returns True if the two segments are either:
+    """Determines whether a pair of segments are compatible for alignment. 
+    Returns True if the two segments are either:
         two consonants
         two vowels
         a vowel and a sonorant consonant (nasals, liquids, glides)
         two tonemes
     Else returns False"""
-    strip_seg1, strip_seg2 = map(strip_diacritics, [seg1, seg2])
-    if strip_seg1[0] in consonants:
-        if strip_seg2[0] in consonants:
-            return True
-        elif strip_seg2[0] in vowels:
-            if phone_id(seg1)['sonorant'] == 1:
-                return True
-            else:
-                return False
-        else:
-            return False
-    elif strip_seg1[0] in vowels:
-        if strip_seg2[0] in vowels:
-            return True
-        elif strip_seg2[0] in consonants:
-            if phone_id(seg2)['sonorant'] == 1:
-                return True
-            else:
-                return False
-        else:
-            return False
-    # Tonemes
-    else: 
-        if strip_seg2[0] in tonemes:
-            return True
-        else:
-            return False
+    seg1, seg2 = map(_toSegment, [seg1, seg2])
+    phone_class1, phone_class2 = seg1.phone_class, seg2.phone_class
+    if phone_class1 == 'CONSONANT' and phone_class2 in ('CONSONANT', 'GLIDE'):
+        return True
+    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
+        return True
+    elif phone_class1 == 'TONEME' and phone_class2 == 'TONEME':
+        return True
+    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['sonorant'] == 1:
+        return True
+    elif seg1.features['sonorant'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
+        return True
+    else:
+        return False
 
 
 def add_phon_env(alignment,
-                 env_func=phonEnvironment, 
+                 env_func=get_phon_env, 
                  gap_ch='-',
                  segs1=None):
     """Adds the phonological environment value of segments to an alignment

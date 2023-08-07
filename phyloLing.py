@@ -15,8 +15,8 @@ from unidecode import unidecode
 import numpy as np
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
 from auxFuncs import Distance, surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
-from phonSim.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
-from phonSim.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim, phonEnvironment
+from PhoneticSimilarity.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
+from PhoneticSimilarity.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim, get_phon_env
 from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 import logging
@@ -1656,7 +1656,7 @@ class Word:
     def getPhonEnv(self):
         phon_env = []
         for i, seg in enumerate(self.segments):
-            phon_env.append(phonEnvironment(self.segments, i))
+            phon_env.append(get_phon_env(self.segments, i))
         return phon_env
 
 
