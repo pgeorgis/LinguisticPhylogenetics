@@ -1,3 +1,4 @@
+from functools import lru_cache
 import random
 from statistics import mean, stdev, StatisticsError
 from scipy.stats import norm
@@ -46,8 +47,27 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
     
     return sum(sims.values()) / total_cognate_ids
 
+@lru_cache(maxsize=None)
+def get_calibration_params(lang1, lang2, eval_func, n, seed, group_size):
+    # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
+    if len(lang1.noncognate_thresholds[(lang2, eval_func, n)]) > 0:
+        noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
+    else:
+        # TODO add PhonemeCorrDetector as attribute of Language class
+        noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func, seed=seed+n, sample_size=group_size)
+    
+    # Transform distance scores into similarity scores
+    if not eval_func.sim:
+        noncognate_scores = map(dist_to_sim, noncognate_scores)
+    
+    # Calculate mean and standard deviation from this sample distribution
+    mean_nc_score = mean(noncognate_scores)
+    nc_score_stdev = stdev(noncognate_scores)
+    
+    # Save calibration parameters
+    return mean_nc_score, nc_score_stdev
 
-calibration_params = {} # TODO shouldn't be global variable
+
 def cognate_sim(lang1, 
                 lang2, 
                 clustered_cognates,
@@ -137,29 +157,7 @@ def cognate_sim(lang1,
             
         # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
         if calibrate:
-            
-            try:
-                # Try to load previously calculated calibration parameters
-                mean_nc_score, nc_score_stdev = calibration_params[(lang1, lang2, eval_func, n)]
-                
-            except KeyError:
-                if len(lang1.noncognate_thresholds[(lang2, eval_func, n)]) > 0:
-                    noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
-                else:
-                    # TODO add PhonemeCorrDetector as attribute of Language class
-                    noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func, seed=seed+n, sample_size=group_size)
-                
-                # Transform distance scores into similarity scores
-                if not eval_func.sim:
-                    noncognate_scores = map(dist_to_sim, noncognate_scores)
-                
-                # Calculate mean and standard deviation from this sample distribution
-                mean_nc_score = mean(noncognate_scores)
-                nc_score_stdev = stdev(noncognate_scores)
-                
-                # Save calibration parameters
-                # TODO this could be an attribute of PhonemeCorrDetector class? which could in turn be saved as an attribute of Language objects?
-                calibration_params[(lang1, lang2, eval_func, n)] = mean_nc_score, nc_score_stdev
+            mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, n, seed, group_size)
         
         # Apply minimum similarity and calibration
         for concept in sims:
