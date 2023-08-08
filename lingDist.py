@@ -151,8 +151,9 @@ def cognate_sim(lang1,
             
         # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
         if calibrate:
-            # TODO is this necessary to recalculate per group?
-            mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, seed+n, group_size)
+            # TODO theoretically this would probably be better to recalculate per group as seed+n rather than seed, but doesn't seem to make a significant difference in tree topology but does significantly impact computational time
+            # should investigate explicitly whether this makes a significant difference
+            mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, seed, group_size)
         
         # Apply minimum similarity and calibration
         for concept, score in sims.items():
