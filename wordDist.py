@@ -382,7 +382,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
     if len(lang1.phoneme_pmi[lang2]) > 0:
         pmi_dict = lang1.phoneme_pmi[lang2]
     else:
-        pmi_dict = lang1.get_phoneme_correlator(lang2).calc_phoneme_pmi()
+        pmi_dict = lang1.get_phoneme_correlator(lang2).calc_phoneme_pmi(**kwargs)
 
     # Calculate phoneme surprisal if not already done # TODO use helper function
     if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:

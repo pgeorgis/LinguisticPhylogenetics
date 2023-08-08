@@ -48,13 +48,14 @@ def binary_cognate_sim(lang1, lang2, clustered_cognates,
     return sum(sims.values()) / total_cognate_ids
 
 @lru_cache(maxsize=None)
-def get_calibration_params(lang1, lang2, eval_func, n, seed, group_size):
+def get_calibration_params(lang1, lang2, eval_func, seed, sample_size):
     # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
-    if len(lang1.noncognate_thresholds[(lang2, eval_func, n)]) > 0:
-        noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
+    key = (lang2, eval_func, sample_size, seed)
+    if len(lang1.noncognate_thresholds[key]) > 0:
+        noncognate_scores = lang1.noncognate_thresholds[key]
     else:
         correlator = lang1.get_phoneme_correlator(lang2)
-        noncognate_scores = correlator.noncognate_thresholds(eval_func, seed=seed+n, sample_size=group_size)
+        noncognate_scores = correlator.noncognate_thresholds(eval_func, seed=seed, sample_size=sample_size)
     
     # Transform distance scores into similarity scores
     if not eval_func.sim:
@@ -151,7 +152,7 @@ def cognate_sim(lang1,
         # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
         if calibrate:
             # TODO is this necessary to recalculate per group?
-            mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, n, seed, group_size)
+            mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, seed+n, group_size)
         
         # Apply minimum similarity and calibration
         for concept, score in sims.items():

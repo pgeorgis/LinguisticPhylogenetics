@@ -1310,7 +1310,7 @@ class Language:
         self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.detected_cognates = defaultdict(lambda:[]) # TODO is this used?
         self.detected_noncognates = defaultdict(lambda:[]) # TODO is this used?
-        self.noncognate_thresholds = defaultdict(lambda:[]) # TODO is this used?
+        self.noncognate_thresholds = defaultdict(lambda:[])
 
 
     def create_vocabulary(self):

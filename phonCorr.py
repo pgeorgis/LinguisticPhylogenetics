@@ -353,10 +353,12 @@ class PhonemeCorrDetector:
                 self.scored_words[func_key][pair] = score
         
         if save:
-            self.lang1.noncognate_thresholds[(self.lang2, eval_func)] = noncognate_scores
+            key = (self.lang2, eval_func, sample_size, seed)
+            self.lang1.noncognate_thresholds[key] = noncognate_scores
         
         return noncognate_scores
-        
+
+
     def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
         # Iterate over all possible/attested ngrams
         # Only perform calculation for ngrams which have actually been observed/attested to 
