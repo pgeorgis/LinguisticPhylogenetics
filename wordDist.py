@@ -5,7 +5,7 @@ from asjp import ipa2asjp
 from nltk import edit_distance
 from PhoneticSimilarity.phonSim import consonants, vowels, glides, nasals, palatal, alveolopalatal, postalveolar, strip_diacritics
 from PhoneticSimilarity.phonSim import Segment, _toSegment, phone_sim
-from auxFuncs import Distance, strip_ch, euclidean_dist, adaptation_surprisal
+from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal
 from phonAlign import Alignment, get_alignment_iter
 from phonCorr import PhonemeCorrDetector
 
@@ -503,8 +503,8 @@ def pmi_dist(word1, word2, sim2dist=True, alpha=0.5, **kwargs):
     PMI_score = mean(PMI_values) 
     
     if sim2dist:
-        PMI_dist = exp(-max(PMI_score, 0)**alpha)
-        return PMI_dist
+        #PMI_dist = exp(-max(PMI_score, 0)**alpha)
+        return sim_to_dist(PMI_score, alpha)
     
     else:
         return PMI_score

@@ -1,6 +1,6 @@
 from collections import defaultdict
 import pandas as pd
-from math import log, sqrt, e
+from math import log, sqrt, exp
 import re, operator, os
 from unidecode import unidecode
 from numpy import array, amax, zeros, array_split
@@ -254,7 +254,7 @@ class Distance:
         if self.sim is False:
             def sim_func(x, y, **kwargs):
                 #func=lambda x, y: 1/(1+self.func(x, y, **self.kwargs)), # TODO make this conversion option possible via method argument
-                return e**-(self.func(x, y, **kwargs))
+                return dist_to_sim(self.func(x, y, **kwargs))
             
             if name is None:
                 name = self.name + '_asSimilarity'
@@ -287,6 +287,14 @@ class Distance:
             hashable.append((key, value))
 
         return tuple(sorted(hashable))
+
+
+def dist_to_sim(distance):
+    return exp(-distance)
+
+
+def sim_to_dist(similarity, alpha):
+    return exp(-max(similarity, 0)**alpha)
 
 
 def euclidean_dist(dists):

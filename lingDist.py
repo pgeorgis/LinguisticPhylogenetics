@@ -1,9 +1,9 @@
+import random
+from statistics import mean, stdev, StatisticsError
+from scipy.stats import norm
+from auxFuncs import dist_to_sim
 from phonCorr import PhonemeCorrDetector
 from wordDist import Z_dist
-from statistics import mean, stdev, StatisticsError
-from math import e
-from scipy.stats import norm
-import random
 
 
 def binary_cognate_sim(lang1, lang2, clustered_cognates,
@@ -151,7 +151,7 @@ def cognate_sim(lang1,
                 
                 # Transform distance scores into similarity scores
                 if not eval_func.sim:
-                    noncognate_scores = [e**-score for score in noncognate_scores]
+                    noncognate_scores = map(dist_to_sim, noncognate_scores)
                 
                 # Calculate mean and standard deviation from this sample distribution
                 mean_nc_score = mean(noncognate_scores)
