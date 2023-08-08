@@ -4,7 +4,6 @@ import random
 from statistics import mean, stdev, StatisticsError
 from scipy.stats import norm
 from auxFuncs import dist_to_sim
-from phonCorr import PhonemeCorrDetector
 from wordDist import Z_dist
 
 
@@ -54,8 +53,8 @@ def get_calibration_params(lang1, lang2, eval_func, n, seed, group_size):
     if len(lang1.noncognate_thresholds[(lang2, eval_func, n)]) > 0:
         noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
     else:
-        # TODO add PhonemeCorrDetector as attribute of Language class
-        noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func, seed=seed+n, sample_size=group_size)
+        correlator = lang1.get_phoneme_correlator(lang2)
+        noncognate_scores = correlator.noncognate_thresholds(eval_func, seed=seed+n, sample_size=group_size)
     
     # Transform distance scores into similarity scores
     if not eval_func.sim:
@@ -213,7 +212,8 @@ def Z_score_dist(lang1,
     if len(lang1.noncognate_thresholds[(lang2, eval_func)]) > 0:
         noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
     else:
-        noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func)
+        correlator = lang1.get_phoneme_correlator(lang2)
+        noncognate_scores = correlator.noncognate_thresholds(eval_func)
     nc_len = len(noncognate_scores)
         
     # Calculate the p-values for the synonymous word pairs against non-synonymous word pairs

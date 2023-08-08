@@ -49,7 +49,7 @@ class LexicalDataset:
 
         # Directory to dataset 
         self.filepath = filepath
-        self.directory = self.filepath.rsplit('/', maxsplit=1)[0] + '/'
+        self.directory = self.filepath.rsplit('/', maxsplit=1)[0] + '/' # TODO this is bad form
         
         # Create a folder for plots and detected cognate sets within the dataset's directory
         self.plots_dir = os.path.join(self.directory, 'plots')
@@ -258,8 +258,8 @@ class LexicalDataset:
             if (lang2, lang1) not in checked:
                     
                 if len(lang1.phoneme_pmi[lang2]) == 0:
-                    # self.logger.info(f'Calculating phoneme PMI for {lang1.name} and {lang2.name}...')
-                    pmi = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
+                    correlator = lang1.get_phoneme_correlator(lang2)
+                    correlator.calc_phoneme_pmi(**kwargs)
         
         if save:
             self.write_phoneme_pmi()
@@ -343,7 +343,8 @@ class LexicalDataset:
                     
                 # If not, calculate it now
                 if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
-                    phoneme_surprisal = PhonemeCorrDetector(lang1, lang2).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+                    correlator = lang1.get_phoneme_correlator(lang2)
+                    correlator.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
                 
         if save:
             self.write_phoneme_surprisal(ngram_size=ngram_size)
@@ -1302,14 +1303,16 @@ class Language:
         self.phoneme_entropy = entropy(self.phonemes)
         
         # Comparison with other languages
+        self.phoneme_correlators = {}
         self.phoneme_correspondences = defaultdict(lambda:defaultdict(lambda:0))
         self.phoneme_pmi = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         self.phoneme_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
-        self.detected_cognates = defaultdict(lambda:[])
-        self.detected_noncognates = defaultdict(lambda:[])
-        self.noncognate_thresholds = defaultdict(lambda:[])
-        
+        self.detected_cognates = defaultdict(lambda:[]) # TODO is this used?
+        self.detected_noncognates = defaultdict(lambda:[]) # TODO is this used?
+        self.noncognate_thresholds = defaultdict(lambda:[]) # TODO is this used?
+
+
     def create_vocabulary(self):
         for i in self.data:
             entry = self.data[i]
@@ -1395,7 +1398,8 @@ class Language:
         # Designate language as tonal if it has tonemes
         if len(self.tonemes) > 0:
             self.tonal = True
-    
+
+
     def list_ngrams(self, ngram_size, phon_env=False):
         """Returns a dictionary of ngrams of a particular size, with their counts"""
 
@@ -1499,6 +1503,7 @@ class Language:
         
         return info_content
     
+    
     def self_surprisal(self, word, normalize=False):
         info_content = self.calculate_infocontent(word)
         if normalize:
@@ -1506,6 +1511,7 @@ class Language:
         else:
             #return sum(info_content[j][1] for j in info_content)
             return info_content
+    
     
     def bigram_probability(self, bigram, delta=0.7): # TODO is this used for anything?
         """Returns Kneser-Ney smoothed conditional probability P(p2|p1)"""
@@ -1569,8 +1575,21 @@ class Language:
                                save_directory=save_directory, 
                                **kwargs)
     
+    
+    def get_phoneme_correlator(self, lang2, wordlist=None, seed=1):
+        key = (lang2, wordlist, seed)
+        if key not in self.phoneme_correlators:
+            self.phoneme_correlators[key] = PhonemeCorrDetector(lang1=self,
+                                                                lang2=lang2,
+                                                                wordlist=wordlist, 
+                                                                seed=seed)
+
+        return self.phoneme_correlators[key]
+    
+    
     def __str__(self):
         """Print a summary of the language object"""
+        # TODO improve this
         s = f'{self.name.upper()} [{self.glottocode}][{self.iso_code}]'
         s += f'\nFamily: {self.family.name}'
         s += f'\nRelatives: {len(self.family.languages)}'
@@ -1666,6 +1685,11 @@ class Word:
         
         self.info_content = self.language.calculate_infocontent(self)
         return self.info_content
+    
+    
+    def __str__(self):
+        # TODO add this
+        pass
 
 
 # COMBINING DATASETS

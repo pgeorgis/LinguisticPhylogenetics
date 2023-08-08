@@ -7,7 +7,7 @@ from PhoneticSimilarity.phonSim import consonants, vowels, glides, nasals, palat
 from PhoneticSimilarity.phonSim import Segment, _toSegment, phone_sim
 from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal
 from phonAlign import Alignment, get_alignment_iter
-from phonCorr import PhonemeCorrDetector
+
 
 def prepare_alignment(word1, word2, **kwargs):
     """Prepares pairwise alignment of two Word objects. 
@@ -31,7 +31,8 @@ def prepare_alignment(word1, word2, **kwargs):
         if len(lang1.phoneme_pmi[lang2]) > 0:
             pmi_dict = lang1.phoneme_pmi[lang2]
         else:
-            pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi()
+            correlator = lang1.get_phoneme_correlator(lang2)
+            pmi_dict = correlator.calc_phoneme_pmi()
         
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
         alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
@@ -381,14 +382,16 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
     if len(lang1.phoneme_pmi[lang2]) > 0:
         pmi_dict = lang1.phoneme_pmi[lang2]
     else:
-        pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
-    
+        pmi_dict = lang1.get_phoneme_correlator(lang2).calc_phoneme_pmi()
+
     # Calculate phoneme surprisal if not already done # TODO use helper function
     if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
+        correlator1 = lang1.get_phoneme_correlator(lang2)
         # TODO add a logging message so that we know surprisal is being calculated (again) -- maybe best within phonCorr.py
-        surprisal_dict_l1l2 = PhonemeCorrDetector(lang1, lang2).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+        correlator1.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
     if len(lang2.phoneme_surprisal[(lang1, ngram_size)]) == 0:
-        surprisal_dict_l2l1 = PhonemeCorrDetector(lang2, lang1).calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+        correlator2 = lang2.get_phoneme_correlator(lang1)
+        correlator2.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
     
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
@@ -455,7 +458,8 @@ def pmi_dist(word1, word2, sim2dist=True, alpha=0.5, **kwargs):
     if len(lang1.phoneme_pmi[lang2]) > 0:
         pmi_dict = lang1.phoneme_pmi[lang2]
     else:
-        pmi_dict = PhonemeCorrDetector(lang1, lang2).calc_phoneme_pmi(**kwargs)
+        correlator = lang1.get_phoneme_correlator(lang2)
+        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
         
     # Align the words with PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
