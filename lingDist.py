@@ -1,3 +1,4 @@
+from collections import defaultdict
 from functools import lru_cache
 import random
 from statistics import mean, stdev, StatisticsError
@@ -89,30 +90,40 @@ def cognate_sim(lang1,
     # Random forest-like sampling
     # Take N samples of the available concepts of size K
     # Calculate the cognate sim for each sample, then average together
-    concept_groups = {}
     group_scores = {}
     if n_samples > 1:
         random.seed(seed)
         # Set default sample size to 80% of shared concepts
         sample_n = round(sample_size*len(shared_concepts))
-        for n in range(n_samples):
-            concept_groups[n] = random.choices(shared_concepts, k=sample_n)
+        # Create N samples of size K
+        concept_groups = {n: set(random.choices(shared_concepts, k=sample_n)) for n in range(n_samples)}
+
         # Ensure that every shared concept is in at least one of the groups
         # If not, add to smallest (if equal sizes then add to one at random)
         for concept in shared_concepts:
-            present = False
-            for n, group in concept_groups.items():
-                if concept in group:
-                    present = True
-                    continue
-            if not present:
-                smallest = min(concept_groups.keys(), key=lambda x: len(concept_groups[x]))
-                concept_groups[smallest].append(concept)
+            if concept not in concept_groups.values():
+                smallest_group = min(concept_groups.keys(), key=lambda x: len(concept_groups[x]))
+                concept_groups[smallest_group].add(concept)
     else:
-        concept_groups[1] = shared_concepts
+        concept_groups = {0: shared_concepts}
 
-    # TODO some of this calculation is redundant, should not be repeated per concept_group
-    scored_pairs = {}
+    # Score all shared concepts in advance, then calculate similarity based on the N samples of concepts
+    scored_pairs = defaultdict(lambda:{})
+    for concept in shared_concepts:
+        for cognate_id in clustered_cognates[concept]:
+            l1_words = list(filter(lambda word: word.language == lang1, clustered_cognates[concept][cognate_id]))
+            l2_words = list(filter(lambda word: word.language == lang2, clustered_cognates[concept][cognate_id]))
+            for l1_word in l1_words:
+                for l2_word in l2_words:
+                    score = eval_func.eval(l1_word, l2_word)
+                    
+                    # Transform distance into similarity
+                    if not eval_func.sim:
+                        score = dist_to_sim(score)
+                    
+                    # Save in scored_pairs
+                    scored_pairs[cognate_id][(l1_word, l2_word)] = score
+
     for n, group in concept_groups.items():
         sims = {}
         group_size = len(group)
@@ -120,27 +131,10 @@ def cognate_sim(lang1,
             concept_sims = {}
             l1_wordcount, l2_wordcount = 0, 0
                 
-            for cognate_id in clustered_cognates[concept]:
-                l1_words = [word for word in clustered_cognates[concept][cognate_id] if word.language == lang1]
-                l2_words = [word for word in clustered_cognates[concept][cognate_id] if word.language == lang2]
-                l1_wordcount += len(l1_words)
-                l2_wordcount += len(l2_words)
-                for l1_word in l1_words:
-                    for l2_word in l2_words:
-                        if (l1_word, l2_word) in scored_pairs:
-                            score = scored_pairs[(l1_word, l2_word)]
-
-                        else:
-                            score = eval_func.eval(l1_word, l2_word)
-                        
-                            # Transform distance into similarity
-                            if not eval_func.sim:
-                                score = e**-score
-                            
-                            # Save in scored_pairs
-                            scored_pairs[(l1_word, l2_word)] = score
-                        
-                        concept_sims[(l1_word, l2_word)] = score
+            for cognate_id in clustered_cognates[concept]:                
+                l1_wordcount += len(set(pair[0] for pair in scored_pairs[cognate_id]))
+                l1_wordcount += len(set(pair[1] for pair in scored_pairs[cognate_id]))
+                concept_sims.update(scored_pairs[cognate_id])
                         
             if len(concept_sims) > 0:
                 if exclude_synonyms:
@@ -157,11 +151,11 @@ def cognate_sim(lang1,
             
         # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
         if calibrate:
+            # TODO is this necessary to recalculate per group?
             mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, n, seed, group_size)
         
         # Apply minimum similarity and calibration
-        for concept in sims:
-            score = sims[concept]
+        for concept, score in sims.items():
             
             # Calibrate score against scores of non-synonymous word pairs
             # pnorm: proportion of values from a normal distribution with
@@ -179,9 +173,7 @@ def cognate_sim(lang1,
             
             sims[concept] = score if score >= min_similarity else 0
         
-        mean_sim = mean(sims.values())
-
-        group_scores[n] = mean_sim
+        group_scores[n] = mean(sims.values())
     
     score = mean(group_scores.values())
 
