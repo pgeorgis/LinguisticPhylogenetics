@@ -494,7 +494,7 @@ class LexicalDataset:
             lang.phoneme_surprisal = loaded_surprisal[lang]
         
         # Do the same for phonological environment surprisal
-        if os.path.exists(surprisal_file):
+        if os.path.exists(surprisal_file_phon_env):
             phon_env_surprisal_data = pd.read_csv(surprisal_file_phon_env)
             loaded_phon_env_surprisal = extract_surprisal_from_df(phon_env_surprisal_data, phon_env=True)
             for lang in self.languages.values():
