@@ -5,22 +5,10 @@
 * [Setup](#setup)
 
 # Setup 
-When setting up for the first time, please create and activate the virtual environment (venv) and install required packages. After the initial set up, only activation of the venv is required. 
+When setting up for the first time, run the following command to create the virtual environment and install required packages. After the initial set up, only activation of the virtual environment (venv) is required. 
 
-- Create the virtual environment:
+`./make.sh`
 
-`python3 -m venv venv`
-
-- Activate virtual environment:
+To activate the virtual environment after initial setup:
 
 `source venv/bin/activate`
-
-- Install required packages:
-
-`venv/bin/pip3 install -r requirements.txt`
-
-- Install submodules:
-
-`git submodule init`
-
-`git submodule update`
