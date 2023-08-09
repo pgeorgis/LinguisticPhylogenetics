@@ -175,11 +175,11 @@ def cognate_sim(lang1,
             sims[concept] = score if score >= min_similarity else 0
         
         group_scores[n] = mean(sims.values())
+        # TODO try alternative calculation:
+        # prop_non_zero = sum(1 for score in sims.values() if score > 0) / len(sims)
+        # group_scores[n] = sum(sims.values()) * prop_non_zero 
     
     score = mean(group_scores.values())
-    # TODO try alternative calculation: 
-    # prop_non_zero = len([i for i in group_scores.values() if i > 0]) / len(group_scores.values()) 
-    # score = sum(group_scores.values()) * prop_non_zero 
 
     if logger:
         logger.debug(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
