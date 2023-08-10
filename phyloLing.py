@@ -1,5 +1,6 @@
 import os, re, copy, glob
 from collections import defaultdict
+from collections.abc import Iterable
 from itertools import product
 from math import log, sqrt
 from statistics import mean
@@ -749,20 +750,50 @@ class LexicalDataset:
             return mean(mcc_scores.values())
 
 
-    def generate_test_code(self, dist_func, cognates, exclude=['logger'], **kwargs): # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
-        if type(dist_func) != Distance:
+    def generate_test_code(self, dist_func, cognates=None, exclude=['logger'], **kwargs): # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
+        """Creates a unique identifier for the current experiment"""
+        
+        if not isinstance(dist_func, Distance):
             self.logger.error(f'dist_func must be a Distance class object, found {type(dist_func)} instead.')
             raise TypeError
+        
         name = dist_func.name if dist_func.name else dist_func.func.__name__
-        code = f'cognates-{cognates}_distfunc-{name}'
+        code = f'cognates-{cognates}_distfunc-{name}_'
         if cognates == 'auto':
-            code += f'_cutoff-{dist_func.cluster_threshold}'
-        for key, value in dist_func.hashable_kwargs:
-            if key not in exclude:
-                code += f'_{key}-{value}'
-        for key, value in kwargs.items():
-            if key not in kwargs:
-                code += f'_{key}-{value}'
+            code += f'cutoff-{dist_func.cluster_threshold}'
+            
+        def val_to_str(value):
+            if isinstance(value, str):
+                return value
+            elif isinstance(value, Iterable):
+                return '-'.join([val_to_str(val) for val in value])
+            elif isinstance(value, (bool,int,float)):
+                return str(value)
+            elif isinstance(value, Distance):
+                return value.name if value.name else value.func.__name__
+            elif value is None:
+                return None
+            else:
+                raise TypeError
+        
+        def kwargs_to_str(kwargs, exclude):
+            str_vals = []
+            for key, value in kwargs:
+                if key in exclude:
+                    continue
+                val = val_to_str(value)
+                if val:
+                    str_vals.append(f'{key}_{val}')
+            return '_'.join(str_vals)
+        
+        code += kwargs_to_str(dist_func.hashable_kwargs, exclude)
+        code += kwargs_to_str(kwargs.items(), exclude)
+            
+        # Replace spaces with underscores
+        code = re.sub(r'\s', '_', code)
+        # Remove trailing underscore
+        code = re.sub(r'_$', '', code)
+                
         return code
 
 
