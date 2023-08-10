@@ -81,9 +81,12 @@ def cognate_sim(lang1,
                 n_samples=50,
                 sample_size=0.8,
                 logger=None):
+    # Set random seed
+    random.seed(seed)
     
     # Get list of shared concepts between the two languages
-    shared_concepts = list(clustered_cognates.keys() & lang1.vocabulary.keys() & lang2.vocabulary.keys())
+    # Needs to be sorted in order to guarantee that random samples of these will be reproducible
+    shared_concepts = sorted(list(clustered_cognates.keys() & lang1.vocabulary.keys() & lang2.vocabulary.keys()))
     if len(shared_concepts) == 0:
         raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
 
@@ -92,7 +95,6 @@ def cognate_sim(lang1,
     # Calculate the cognate sim for each sample, then average together
     group_scores = {}
     if n_samples > 1:
-        random.seed(seed)
         # Set default sample size to 80% of shared concepts
         sample_n = round(sample_size*len(shared_concepts))
         # Create N samples of size K

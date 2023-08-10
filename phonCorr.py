@@ -27,10 +27,13 @@ class PhonemeCorrDetector:
         else:
             wordlist = set(wordlist) & self.lang1.vocabulary.keys() & self.lang2.vocabulary.keys()
             
-        # Get tuple (concept, orthography, IPA, segmented IPA) for each word entry
-        # TODO create Wordlist class to handle this better
+        # Get lexical items in each language belonging to the specified wordlist
         l1_wordlist = [word for concept in wordlist for word in self.lang1.vocabulary[concept]]
         l2_wordlist = [word for concept in wordlist for word in self.lang2.vocabulary[concept]]
+        
+        # Sort the wordlists in order to ensure that random samples of same/different meaning pairs are reproducible
+        l1_wordlist = sorted(l1_wordlist, key=lambda x: x.ipa)
+        l2_wordlist = sorted(l2_wordlist, key=lambda x: x.ipa)
         
         # Get all combinations of L1 and L2 words
         all_wordpairs = product(l1_wordlist, l2_wordlist)
