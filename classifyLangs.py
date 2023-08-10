@@ -16,6 +16,7 @@ if __name__ == "__main__":
     parser.add_argument('--cluster', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Cognate clustering method')
     parser.add_argument('--cluster_threshold', default=None, type=float, help='Cutoff threshold in range [0,1] for clustering cognate sets')
     parser.add_argument('--eval', default='hybrid', choices=['phonetic', 'pmi', 'surprisal', 'hybrid', 'levenshtein'], help='Word form evaluation method')
+    parser.add_argument('--weights', default=(0.25, 0.5, 0.25), help='Weights for hybrid similarity calculation: PMI, surprisal, phonological')
     parser.add_argument('--min_similarity', default=0, type=float, help='Minimum similarity threshold for word form evaluation')
     parser.add_argument('--ngram', default=1, type=int, help='Phoneme ngram size used for phoneme surprisal calculation')
     parser.add_argument('--n_samples', default=10, type=int, help='Number of random samples for distance evaluation')
@@ -65,7 +66,7 @@ if __name__ == "__main__":
                 cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
                 funcs=[PMIDist, SurprisalDist, PhonologicalDist],
                 # this weighting scheme works well seemingly (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
-                weights=(0.25, 0.5, 0.25),
+                weights=args.weights,
             )
             HybridSim = HybridDist.to_similarity(name='HybridSim') 
 
@@ -153,7 +154,8 @@ if __name__ == "__main__":
         )
     
     # Generate test code 
-    code = family.generate_test_code(distFunc, sim=True, cognates=args.cognates, cutoff=args.cluster_threshold)
+    code = family.generate_test_code(distFunc, cognates=args.cognates, cutoff=args.cluster_threshold)
+    code += family.generate_test_code(evalDist)
     logger.debug(f'Experiment ID: {code}')
 
     # Generate Newick tree string
