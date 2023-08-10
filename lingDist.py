@@ -96,7 +96,7 @@ def cognate_sim(lang1,
         # Set default sample size to 80% of shared concepts
         sample_n = round(sample_size*len(shared_concepts))
         # Create N samples of size K
-        concept_groups = {n: set(random.choices(shared_concepts, k=sample_n)) for n in range(n_samples)}
+        concept_groups = {n: set(random.sample(shared_concepts, k=sample_n)) for n in range(n_samples)}
 
         # Ensure that every shared concept is in at least one of the groups
         # If not, add to smallest (if equal sizes then add to one at random)
