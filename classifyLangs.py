@@ -107,14 +107,22 @@ if __name__ == "__main__":
     # Validate parameters
     validate_params(params, valid_params, logger)
     
+    # Get shorthand for each parameter section
+    family_params = params['family']
+    transcription_params = params['transcription']
+    pmi_params = params['pmi']
+    surprisal_params = params['surprisal']
+    cluster_params = params['cluster']
+    eval_params = params['evaluation']
+    tree_params = params['tree']
     
     # Set ngram size used for surprisal
-    if params['evaluation']['method'] == 'surprisal' or params['evaluation']['method'] == 'hybrid':
-        function_map['surprisal'].set('ngram_size', params['surprisal']['ngram'])
+    if eval_params['method'] == 'surprisal' or eval_params['method'] == 'hybrid':
+        function_map['surprisal'].set('ngram_size', surprisal_params['ngram'])
         SurprisalDist = function_map['surprisal']
 
         # Initialize HybridDist object 
-        if params['evaluation']['method'] == 'hybrid':
+        if eval_params['method'] == 'hybrid':
             HybridDist = Distance(
                 func=hybrid_dist,
                 name='HybridDist',
@@ -122,9 +130,9 @@ if __name__ == "__main__":
                 funcs=[PMIDist, SurprisalDist, PhonologicalDist],
                 # this weighting scheme works well seemingly (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
                 weights=(
-                    params['evaluation']['pmi_weight'],
-                    params['evaluation']['surprisal_weight'],
-                    params['evaluation']['phon_weight'],
+                    eval_params['pmi_weight'],
+                    eval_params['surprisal_weight'],
+                    eval_params['phon_weight'],
                 )
             )
             HybridSim = HybridDist.to_similarity(name='HybridSim') 
@@ -133,25 +141,25 @@ if __name__ == "__main__":
             function_map['hybrid'] = HybridSim
 
     # Designate cluster function if performing auto cognate clustering 
-    if params['cluster']['cognates'] == 'auto':
+    if cluster_params['cognates'] == 'auto':
         clusterDist = function_map[params['cognates']['method']]
         # Set specified cluster threshold
-        clusterDist.cluster_threshold = params['cluster']['cluster_threshold']
+        clusterDist.cluster_threshold = cluster_params['cluster_threshold']
     else:
         clusterDist = None
     
     # Designate evaluation function
-    evalDist = function_map[params['evaluation']['method']]
+    evalDist = function_map[eval_params['method']]
     
     # Load CLDF dataset
-    if params['family']['min_amc']:
-        params['family']['min_amc'] = float(params['family']['min_amc'])
-    family = load_family(params['family']['name'], 
-                         params['family']['file'], 
-                         exclude=params['family']['exclude'], 
-                         min_amc=params['family']['min_amc'],
-                         ignore_stress=params['transcription']['ignore_stress'],
-                         combine_diphthongs=params['transcription']['combine_diphthongs'],
+    if family_params['min_amc']:
+        family_params['min_amc'] = float(family_params['min_amc'])
+    family = load_family(family_params['name'], 
+                         family_params['file'], 
+                         exclude=family_params['exclude'], 
+                         min_amc=family_params['min_amc'],
+                         ignore_stress=transcription_params['ignore_stress'],
+                         combine_diphthongs=transcription_params['combine_diphthongs'],
                          logger=logger
                          )
 
@@ -164,36 +172,42 @@ if __name__ == "__main__":
         logger.info(f'Average mutual coverage is {round(avg_mc, 2)} ({abs_mc}/{len(family.concepts)} concepts in all {len(family.languages)} doculects).')
 
     # Load or calculate phoneme PMI
-    if not params['pmi']['refresh_all_pmi']:
+    if not pmi_params['refresh_all_pmi']:
         logger.info(f'Loading {family.name} phoneme PMI...')
-        family.load_phoneme_pmi(excepted=params['pmi']['refresh'])
+        family.load_phoneme_pmi(excepted=pmi_params['refresh'])
 
     # Load or calculate phoneme surprisal
-    if not params['surprisal']['refresh_all_surprisal']:
-        if params['evaluation']['method'] == 'surprisal' or params['evaluation']['method'] == 'hybrid':
+    if not surprisal_params['refresh_all_surprisal']:
+        if eval_params['method'] == 'surprisal' or eval_params['method'] == 'hybrid':
             logger.info(f'Loading {family.name} phoneme surprisal...')
-            if params['cluster']['cognates'] == 'gold':
-                family.load_phoneme_surprisal(ngram_size=params['surprisal']['ngram'], gold=True, excepted=params['surprisal']['refresh'])
+            if cluster_params['cognates'] == 'gold':
+                family.load_phoneme_surprisal(
+                    ngram_size=surprisal_params['ngram'], 
+                    gold=True, 
+                    excepted=surprisal_params['refresh'])
             else:
-                family.load_phoneme_surprisal(ngram_size=params['surprisal']['ngram'], gold=False, excepted=params['surprisal']['refresh'])
+                family.load_phoneme_surprisal(
+                    ngram_size=surprisal_params['ngram'], 
+                    gold=False, 
+                    excepted=surprisal_params['refresh'])
 
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
-    if params['pmi']['refresh_all_pmi'] or params['surprisal']['refresh_all_surprisal'] or len(params['pmi']['refresh']) or len(params['surprisal']['refresh']) > 0:
+    if pmi_params['refresh_all_pmi'] or surprisal_params['refresh_all_surprisal'] or len(pmi_params['refresh']) or len(surprisal_params['refresh']) > 0:
         family.calculate_phoneme_pmi()
         family.write_phoneme_pmi()
-        if params['evaluation']['method'] == 'surprisal' or params['evaluation']['method'] == 'hybrid':
-            family.calculate_phoneme_surprisal(ngram_size=params['surprisal']['ngram'])
-            family.write_phoneme_surprisal(ngram_size=params['surprisal']['ngram'])
+        if eval_params['method'] == 'surprisal' or eval_params['method'] == 'hybrid':
+            family.calculate_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
+            family.write_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
 
     # Auto cognate clustering only
-    if params['cluster']['cognates'] == 'auto':
+    if cluster_params['cognates'] == 'auto':
         # Load pre-clustered cognate sets, if available
         family.load_clustered_cognates()
 
         # Set cognate cluster ID according to settings
         # TODO this ID won't work because of function_map[params['cognates']['method']][1]
-        cog_id = f"{family.name}_distfunc-{params['cognates']['method']}-{function_map[params['cognates']['method']][1]}_cutoff-{params['cluster']['cluster_threshold']}"
+        cog_id = f"{family.name}_distfunc-{params['cognates']['method']}-{function_map[params['cognates']['method']][1]}_cutoff-{cluster_params['cluster_threshold']}"
 
     # Create Distance measure according to settings
     dist_func = cognate_sim # TODO other options?
@@ -203,29 +217,29 @@ if __name__ == "__main__":
         sim=True, 
         # cognate_sim kwargs
         eval_func=evalDist,
-        n_samples=params['evaluation']['n_samples'], 
-        sample_size=params['evaluation']['sample_size'], 
-        calibrate=params['evaluation']['calibrate'],
-        min_similarity=params['evaluation']['min_similarity'],
+        n_samples=eval_params['n_samples'], 
+        sample_size=eval_params['sample_size'], 
+        calibrate=eval_params['calibrate'],
+        min_similarity=eval_params['min_similarity'],
         logger=logger,
         )
     
     # Generate test code 
-    code = family.generate_test_code(distFunc, cognates=params['cluster']['cognates'], cutoff=params['cluster']['cluster_threshold'])
+    code = family.generate_test_code(distFunc, cognates=cluster_params['cognates'], cutoff=cluster_params['cluster_threshold'])
     code += family.generate_test_code(evalDist)
     logger.debug(f'Experiment ID: {code}')
 
     # Generate Newick tree string
     logger.info(f'Generating phylogenetic tree...')
-    outtree = os.path.join(params['family']['outdir'], 'trees', code+'.tre') # TODO this could still be improved
+    outtree = os.path.join(family_params['outdir'], 'trees', code+'.tre') # TODO this could still be improved
     tree = family.draw_tree(
         cluster_func=clusterDist,
         dist_func=distFunc,
-        cognates=params['cluster']['cognates'], 
-        method=params['tree']['linkage'], # TODO this should be changed within draw_tree() to linkage rather than method
+        cognates=cluster_params['cognates'], 
+        method=tree_params['linkage'], # TODO this should be changed within draw_tree() to linkage rather than method
         title=family.name, 
         outtree=outtree,
-        return_newick=params['tree']['newick'])
+        return_newick=tree_params['newick'])
     with open(outtree, 'w') as f:
         f.write(tree)
     logger.info(f'Wrote Newick tree to {outtree}')
