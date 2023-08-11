@@ -20,7 +20,6 @@ transcription:
   # TODO gemination and any other preprocessing parameters
 
 pmi:
-# TODO change free-standing refresh to separate for PMI and surprisal, no clear place for it in the config
   # Individual languages whose phoneme PMI should be recalculated
   refresh: []
   # Recalculates phoneme PMI for all language pairs
