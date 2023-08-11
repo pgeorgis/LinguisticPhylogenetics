@@ -17,7 +17,8 @@ transcription:
   ignore_stress: false # TODO would be better if we could set per language
   # Performs IPA string segmentation without diphthongs as single segmental units
   combine_diphthongs: true # TODO would be better if we could set per language
-  # TODO gemination and any other preprocessing parameters
+  normalize_geminates: false # TODO would be better if we could set per language
+  # TODO add preaspiration and any other preprocessing parameters
 
 pmi:
   # Individual languages whose phoneme PMI should be recalculated

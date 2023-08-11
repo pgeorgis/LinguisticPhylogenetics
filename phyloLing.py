@@ -37,6 +37,7 @@ class LexicalDataset:
                  iso_code_c='ISO 639-3',
                  ignore_stress=False,
                  combine_diphthongs=True,
+                 normalize_geminates=False,
                  logger=None):
         
         # Dataset name and logger
@@ -94,6 +95,7 @@ class LexicalDataset:
         if not ignore_stress:
             self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
         self.combine_diphthongs = combine_diphthongs
+        self.normalize_geminates = normalize_geminates
             
         # Concepts in dataset
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
@@ -132,7 +134,8 @@ class LexicalDataset:
                                             family=self,
                                             data = language_vocab_data[lang],
                                             columns = self.columns,
-                                            combine_diphthongs=self.combine_diphthongs
+                                            combine_diphthongs=self.combine_diphthongs,
+                                            normalize_geminates=self.normalize_geminates
                                             )
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])

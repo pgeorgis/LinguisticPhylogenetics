@@ -163,6 +163,7 @@ if __name__ == "__main__":
                          min_amc=family_params['min_amc'],
                          ignore_stress=transcription_params['ignore_stress'],
                          combine_diphthongs=transcription_params['combine_diphthongs'],
+                         normalize_geminates=transcription_params['normalize_geminates'],
                          logger=logger
                          )
 
