@@ -24,6 +24,7 @@ import logging
 
 class LexicalDataset: 
     def __init__(self, filepath, name, 
+                 outdir = None,
                  id_c = 'ID',
                  language_name_c='Language_ID',
                  concept_c = 'Parameter_ID',
@@ -50,7 +51,7 @@ class LexicalDataset:
 
         # Directory to dataset 
         self.filepath = filepath
-        self.directory = self.filepath.rsplit('/', maxsplit=1)[0] + '/' # TODO this is bad form
+        self.directory = outdir if outdir else os.path.dirname(os.path.abspath(filepath))
         
         # Create a folder for plots and detected cognate sets within the dataset's directory
         self.plots_dir = os.path.join(self.directory, 'plots')

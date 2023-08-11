@@ -57,10 +57,7 @@ def load_config(config_path):
 def validate_params(params, valid_params, logger):
     for section_name in valid_params:
         for param_name in valid_params[section_name]:
-            try:
-                param_value = params[section_name][param_name]
-            except KeyError:
-                breakpoint()
+            param_value = params[section_name][param_name]
             if param_value not in valid_params[section_name][param_name]:
                 logger.error(f'Invalid parameter value "{param_value}" for parameter "{param_name}". Valid options: {", ".join(valid_params[section_name][param_name])}')
                 raise ValueError
@@ -69,6 +66,12 @@ def validate_params(params, valid_params, logger):
     if 'file' not in params['family']:
         logger.error('Input file ("file") argument must be specified!')
         raise ValueError
+    
+    # Designate outdir as the input file directory if unspecified
+    if params['family']['outdir'] is None:
+        outdir = os.path.dirname(os.path.abspath(params['family']['file']))
+        logger.debug(f'Setting experiment outdir to {outdir}')
+        params['family']['outdir'] = outdir
 
 
 def write_lang_dists_to_tsv(dist, outfile):
@@ -115,7 +118,7 @@ if __name__ == "__main__":
     cluster_params = params['cluster']
     eval_params = params['evaluation']
     tree_params = params['tree']
-    
+
     # Set ngram size used for surprisal
     if eval_params['method'] == 'surprisal' or eval_params['method'] == 'hybrid':
         function_map['surprisal'].set('ngram_size', surprisal_params['ngram'])
@@ -128,7 +131,6 @@ if __name__ == "__main__":
                 name='HybridDist',
                 cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
                 funcs=[PMIDist, SurprisalDist, PhonologicalDist],
-                # this weighting scheme works well seemingly (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
                 weights=(
                     eval_params['pmi_weight'],
                     eval_params['surprisal_weight'],
@@ -156,6 +158,7 @@ if __name__ == "__main__":
         family_params['min_amc'] = float(family_params['min_amc'])
     family = load_family(family_params['name'], 
                          family_params['file'], 
+                         outdir=family_params['outdir'],
                          exclude=family_params['exclude'], 
                          min_amc=family_params['min_amc'],
                          ignore_stress=transcription_params['ignore_stress'],
