@@ -1,84 +1,49 @@
-# TODO add these descriptions into README instead
-
 family:
-  # Name of language group to classify
   name:
-  # Input CLDF data file path
-  #file: path_to_input_file
-  # Minimum average mutual coverage among doculects: doculect with lowest coverage is dropped until minimum value is reached
+  # file: path/to/input/file
   min_amc: 0.65 # TODO 0.7?
-  # Doculects from CLDF data file to exclude
   exclude: []
-  # Output file to which Newick tree string should be written
-  outdir: 
-
-  # TODO add preaspiration and any other preprocessing parameters
+  # outdir: path/to/outdir
 
 transcription:
-    # Default transcription parameters to apply to all doculects unless overridden below
     global:
-        # Ignores stress annotation when loading CLDF dataset and computing phone correspondences
         ignore_stress: false
-        # Performs IPA string segmentation without diphthongs as single segmental units
         combine_diphthongs: true
-        # Normalizes geminates transcribed as double /bb/ to /bː/
         normalize_geminates: false
-        # Accounts for preaspiration during IPA string segmentation
         preaspiration: true
-        # Characters to remove: suprasegmental diacritics (TODO change this)
         ch_to_remove: {'̂', '̆', 'ˈ', '̋', '̀', '́', '̄', 'ˑ', ' ', '̏', '̌', 'ˌ'}
-    # Override transcription parameters for individual doculects, specified as shown using names of doculects
     # doculects:
     #     French:
     #         ignore_stress: true
-    #         combine_diphthongs: false
     #     Italian:
     #         normalize_geminates: true
 
-
 pmi:
-  # Individual languages whose phoneme PMI should be recalculated
   refresh: []
-  # Recalculates phoneme PMI for all language pairs
   refresh_all_pmi: false
 
 surprisal:
-  # Ngram size used for phoneme surprisal calculation
   ngram: 1
   phon_env: true 
-  # Individual languages whose phoneme surprisal should be recalculated
   refresh: []
-  # Recalculates phoneme surprisal for all language pairs
   refresh_all_surprisal: false
 
 cluster:
-  # Cognate cluster type used for evaluation: "gold" cognates uses labels from dataset assuming that data are sorted into cognate classe; "auto" cognates auto-detects and clusters same-meaning words into cognate classes; "none" performs no separation of cognates from non-cognates
-  # TODO possibly change default setting to "none"; possibly rename "none" to "no clustering" or make clearer that there is no explicit clustering, but the calibration argument would still effectively apply some kind of weighting towards true cognates
   cognates: auto
-  # Cognate clustering method
   method: hybrid
-  # Cutoff threshold in range [0,1] for clustering cognate sets
   cluster_threshold: 0.5
 
 evaluation:
-  # Word form evaluation method
   method: hybrid
-  # Number of random forest-like samples for distance evaluation
-  n_samples: 10
-  # Proportion of shared concepts to evaluate per sample
-  # this weighting scheme works well for Romance (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
-  sample_size: 0.8
   pmi_weight: 0.25
   surprisal_weight: 0.5
   phon_weight: 0.25
-  # TODO would be better if user can define custome combination of eval functions and weights
-  # Cumulative density function calibration
+  n_samples: 10
+  sample_size: 0.8
+  # TODO would be better if user can define custom combination of eval functions and weights
   calibrate: true
-  # Minimum similarity threshold for word form evaluation
   min_similarity: 0
 
 tree:
-  # Linkage method
   linkage: nj
-  # Returns a Newick tree instead of a dendrogram
-  newick: true # TODO change default to true
+  newick: true # TODO change default to true in phyloLing.py

@@ -26,11 +26,12 @@ cluster:
 
 evaluation:
     method: hybrid
-    n_samples: 10
-    sample_size: 0.8
+    # this weighting scheme works well for Romance (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
     pmi_weight: 0.25
     surprisal_weight: 0.5
     phon_weight: 0.25
+    n_samples: 10
+    sample_size: 0.8
     calibrate: true
     min_similarity: 0
 
