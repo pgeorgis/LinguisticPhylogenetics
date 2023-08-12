@@ -6,7 +6,7 @@
 * [Running a Phylogenetic Experiment](#running-a-phylogenetic-experiment)
 * [Parameters](#parameters)
 
-# Setup 
+## Setup 
 When setting up for the first time, run the following command to create the virtual environment and install required packages. After the initial set up, only activation of the virtual environment (venv) is required. 
 
 `./make.sh`
@@ -15,7 +15,7 @@ To activate the virtual environment after initial setup:
 
 `source venv/bin/activate`
 
-# Running a phylogenetic experiment
+## Running a phylogenetic experiment
 A phylogenetic experiment can be run using classifyLangs.py along with a config.yml file that specifies parameters for various aspects of the phylogenetic analysis:
 
 `python3 classifyLangs.py [PATH TO CONFIG FILE]`
@@ -34,10 +34,10 @@ Any parameters left unspecified in the config file will default to those listed 
 
 If no `outdir` parameter is specified (also under the `family` section), the results will be saved to the same directory where the input file is saved.
 
-# Parameters
+## Parameters
 The following is a brief description of the configurable parameters.
 
-`family`:
+### `family`:
 
   `name`: Name of language group to classify
 
@@ -50,31 +50,31 @@ The following is a brief description of the configurable parameters.
   `outdir`: Directory where results of the experiment are saved. 
 
 
-`transcription`:
+### `transcription`:
 
-  `global`: Default transcription parameters to apply to all doculects unless overridden below for individual doculects.
+#### `global`: Default transcription parameters to apply to all doculects unless overridden below for individual doculects.
     
-    `ignore_stress`: If `true`, removes stress annotation from transcriptions in order to treat stressed and unstressed segments identically. If `false`, stressed and unstressed segments are treated separately. Default is `false`.
+  `ignore_stress`: If `true`, removes stress annotation from transcriptions in order to treat stressed and unstressed segments identically. If `false`, stressed and unstressed segments are treated separately. Default is `false`.
+  
+  `combine_diphthongs`: If `true`, sequences of a non-syllabic vowel plus a syllabic vowel (/VV̯/ or /V̯V/) are treated as a single diphthongal segment during IPA string segmentation. If `false`, they are segmented into separate units. Default is `true`.
 
-    `combine_diphthongs`: If `true`, sequences of a non-syllabic vowel plus a syllabic vowel (/VV̯/ or /V̯V/) are treated as a single diphthongal segment during IPA string segmentation. If `false`, they are segmented into separate units. Default is `true`.
+  `normalize_geminates`: If `true`, geminates transcribed as double consonants, e.g. /bb/, are normalized to, e.g. /bː/. In this case /b/ and /bː/ are treated as separate phonemes. Default is `false`, which does not alter the input transcriptions.
 
-    `normalize_geminates`: If `true`, geminates transcribed as double consonants, e.g. /bb/, are normalized to, e.g. /bː/. In this case /b/ and /bː/ are treated as separate phonemes. Default is `false`, which does not alter the input transcriptions.
+  `preaspiration`: If `true`, accounts for prespirated consonants during IPA string segmentation, e.g. Icelandic <þakka> /θˈaʰka/would be segmented as /θ/, /ˈa/, /ʰk/, /a/. If `false`, aspiration diacritics (<ʰ>, <ʱ>) are assumed to modify the preceding segment. Default is `true`.
 
-    `preaspiration`: If `true`, accounts for prespirated consonants during IPA string segmentation, e.g. Icelandic <þakka> /θˈaʰka/would be segmented as /θ/, /ˈa/, /ʰk/, /a/. If `false`, aspiration diacritics (<ʰ>, <ʱ>) are assumed to modify the preceding segment. Default is `true`.
+  `ch_to_remove`: Set of characters which are preprocessed out of transcriptions. By default this includes all suprasegmental diacritics. # TODO should this be changed? Maybe make a `keep_suprasegmentals` parameter that is set to `false` by default?
 
-    `ch_to_remove`: Set of characters which are preprocessed out of transcriptions. By default this includes all suprasegmental diacritics. # TODO should this be changed? Maybe make a `keep_suprasegmentals` parameter that is set to `false` by default?
-
-  `doculects`: Override transcription parameters for individual doculects, if different from the globally specified transcription parameters. Unspecified doculects or parameters will default to the globally specified parameters. See `config/default_config.yml` for an example.
+#### `doculects`: Override transcription parameters for individual doculects, if different from the globally specified transcription parameters. Unspecified doculects or parameters will default to the globally specified parameters. See `config/default_config.yml` for an example.
 
 
-`pmi`:
+### `pmi`:
 
   `refresh`: List of individual doculects for which phoneme PMI should be recalculated from scratch. Otherwise pre-calculated PMI values will be reloaded, if available.
 
   `refresh_all_pmi`: Recalculates phoneme PMI for all doculect pairs. Default is `false`.
 
 
-`surprisal`:
+### `surprisal`:
 
   `ngram`: Ngram size used for phoneme surprisal calculation. Default is 1.
 
@@ -85,7 +85,7 @@ The following is a brief description of the configurable parameters.
   `refresh_all_surprisal`: Recalculates phoneme surprisal for all doculect pairs. Default is `false`.
 
 
-`cluster`:
+### `cluster`:
 
   `cognates`: Method for handling cognate clustering: [`auto`, `gold`, `none`]. `auto` performs cognate clustering using the `method` and `cluster_threshold` specified below to sort same-meaning words into cognate classes. `gold` uses cognate class labels from the input dataset, assuming that data are already annotated for the relevant cognate classes. `none` performs no cognate clustering and treats all same-meaning words as if they belong to the same cognate class. Default is `auto`. # TODO change to `none`?
 
@@ -94,7 +94,7 @@ The following is a brief description of the configurable parameters.
   `cluster_threshold`: Cutoff threshold in range [0,1] for clustering cognate sets. Default is 0.5.
 
 
-`evaluation`:
+### `evaluation`:
 
   `method`: Distance measure used for cognate clustering: [`pmi`, `surprisal`, `phon`, `hybrid`, `levenshtein`]. The default is `hybrid`, which combines `pmi`, `surprisal`, and `phon`.
 
@@ -113,7 +113,7 @@ The following is a brief description of the configurable parameters.
   `min_similarity`: Minimum similarity threshold for word pairs, adding non-linearity to the evaluation. If the evaluated similarity is below the threshold, the similarity is evaluated as 0 instead. Default is 0. # TODO experiment with this
 
 
-`tree`:
+### `tree`:
 
   `linkage`: Linkage method for producing a phylogenetic tree: [`nj`, `average`, `centroid`, `median`, `single`, `complete`, `ward`, `weighted`]. Default is `nj`, using the Neighbor-Joining algorithm (Saitou & Nei, 1987). Other methods use hierarchical clustering.
 
