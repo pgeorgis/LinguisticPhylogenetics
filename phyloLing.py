@@ -22,8 +22,19 @@ from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 import logging
 
+
+transcription_param_defaults = {
+    'ignore_stress':False,
+    'combine_diphthongs':True,
+    'normalize_geminates':False,
+    'preaspiration':True,
+    'ch_to_remove':suprasegmental_diacritics.union({' '}),
+    }
+
+
 class LexicalDataset: 
     def __init__(self, filepath, name, 
+                 outdir = None,
                  id_c = 'ID',
                  language_name_c='Language_ID',
                  concept_c = 'Parameter_ID',
@@ -34,9 +45,9 @@ class LexicalDataset:
                  loan_c = 'Loan',
                  glottocode_c='Glottocode',
                  iso_code_c='ISO 639-3',
-                 ignore_stress=False,
-                 combine_diphthongs=True,
-                 logger=None):
+                 transcription_params={'global':transcription_param_defaults},
+                 logger=None
+                 ):
         
         # Dataset name and logger
         self.name = name
@@ -50,7 +61,7 @@ class LexicalDataset:
 
         # Directory to dataset 
         self.filepath = filepath
-        self.directory = self.filepath.rsplit('/', maxsplit=1)[0] + '/' # TODO this is bad form
+        self.directory = outdir if outdir else os.path.dirname(os.path.abspath(filepath))
         
         # Create a folder for plots and detected cognate sets within the dataset's directory
         self.plots_dir = os.path.join(self.directory, 'plots')
@@ -89,10 +100,9 @@ class LexicalDataset:
         self.distance_matrices = {}
         
         # Transcription parameters
-        self.ch_to_remove = suprasegmental_diacritics.union({' '})
-        if not ignore_stress:
-            self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
-        self.combine_diphthongs = combine_diphthongs
+        self.transcription_params = transcription_params
+        if not self.transcription_params['global']['ignore_stress']:
+            self.transcription_params['global']['ch_to_remove'] = self.transcription_params['global']['ch_to_remove'] - {'ˈ', 'ˌ'}
             
         # Concepts in dataset
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
@@ -131,7 +141,7 @@ class LexicalDataset:
                                             family=self,
                                             data = language_vocab_data[lang],
                                             columns = self.columns,
-                                            combine_diphthongs=self.combine_diphthongs
+                                            transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global'])
                                             )
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
@@ -696,7 +706,7 @@ class LexicalDataset:
         cognate clustering against dataset's gold cognate classes"""
         
         precision_scores, recall_scores, f1_scores, mcc_scores = {}, {}, {}, {}
-        ch_to_remove = self.ch_to_remove.union({'(', ')'})
+        ch_to_remove = self.transcription_params['global']['ch_to_remove'].union({'(', ')'})
         for concept in clustered_cognates:
             clusters = {'/'.join([strip_diacritics(unidecode.unidecode(item.split('/')[0])), 
                                   strip_ch(item.split('/')[1], ch_to_remove)])+'/':set([i]) for i in clustered_cognates[concept] 
@@ -1274,14 +1284,12 @@ class Language:
                  name, 
                  data, 
                  columns,
+                 transcription_params=transcription_param_defaults,
                  lang_id=None, 
                  glottocode=None, 
                  iso_code=None, 
                  family=None,
-                 combine_diphthongs=True,
-                 normalize_geminates=False,
-                 preaspiration=True,
-                 ignore_stress=False):
+                 ):
         
         # Language data
         self.name = name
@@ -1315,22 +1323,13 @@ class Language:
         self.loanwords = defaultdict(lambda:set())
         
         # Transcription and segmentation parameters
-        if self.family:
-            self.ch_to_remove = self.family.ch_to_remove
-        else:
-            self.ch_to_remove = suprasegmental_diacritics.union({' ', '‿'})
-            if ignore_stress:
-                self.ch_to_remove = self.ch_to_remove - {'ˈ', 'ˌ'}
-        self.segmentation_params = {
-            'ch_to_remove':self.ch_to_remove,
-            'normalize_geminates':normalize_geminates,
-            'combine_diphthongs':combine_diphthongs,
-            'preaspiration':preaspiration
-        }
+        self.transcription_params = transcription_params
+        if not self.transcription_params['ignore_stress']:
+            self.transcription_params['ch_to_remove'] = self.transcription_params['ch_to_remove'] - {'ˈ', 'ˌ'}
         
+        # Initialize vocabulary and phoneme inventory
         self.create_vocabulary()
         self.create_phoneme_inventory()
-        
         self.phoneme_entropy = entropy(self.phonemes)
         
         # Comparison with other languages
@@ -1355,10 +1354,10 @@ class Language:
                 ipa_string = entry[self.columns['ipa']], 
                 concept = concept, 
                 orthography = entry[self.columns['orthography']], 
-                ch_to_remove = self.ch_to_remove,
-                normalize_geminates = self.segmentation_params['normalize_geminates'],
-                combine_diphthongs = self.segmentation_params['combine_diphthongs'],
-                preaspiration = self.segmentation_params['preaspiration'],
+                ch_to_remove = self.transcription_params['ch_to_remove'],
+                normalize_geminates = self.transcription_params['normalize_geminates'],
+                combine_diphthongs = self.transcription_params['combine_diphthongs'],
+                preaspiration = self.transcription_params['preaspiration'],
                 language = self,
                 cognate_class = cognate_class,
                 loanword = loan,
@@ -1505,9 +1504,9 @@ class Language:
             word = Word(
                 ipa_string=ipa_string,
                 ch_to_remove=self.ch_to_remove,
-                normalize_geminates = self.segmentation_params['normalize_geminates'],
-                combine_diphthongs = self.segmentation_params['combine_diphthongs'],
-                preaspiration = self.segmentation_params['preaspiration'],
+                normalize_geminates = self.transcription_params['normalize_geminates'],
+                combine_diphthongs = self.transcription_params['combine_diphthongs'],
+                preaspiration = self.transcription_params['preaspiration'],
                 language=self)
         else:
             raise TypeError

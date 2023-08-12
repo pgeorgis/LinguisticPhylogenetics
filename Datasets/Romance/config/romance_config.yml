@@ -1,0 +1,40 @@
+family:
+    name: Romance
+    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/datasets/Romance/romance_data.tsv
+    min_amc: 0.65
+    exclude: ['Dalmatian', 'Savoyard']
+    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/datasets/Romance/
+
+transcription:
+    global:
+        ignore_stress: false
+        combine_diphthongs: true
+        normalize_geminates: false
+
+pmi:
+    refresh: []
+    refresh_all_pmi: false
+
+surprisal:
+    ngram: 1
+    phon_env: true 
+    refresh: []
+    refresh_all_surprisal: false
+
+cluster:
+    cognates: none
+
+evaluation:
+    method: hybrid
+    # this weighting scheme works well for Romance (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
+    pmi_weight: 0.25
+    surprisal_weight: 0.5
+    phon_weight: 0.25
+    n_samples: 10
+    sample_size: 0.8
+    calibrate: true
+    min_similarity: 0
+
+tree:
+    linkage: nj
+    newick: true
