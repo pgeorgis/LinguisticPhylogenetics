@@ -9,7 +9,7 @@
 ## Setup 
 When setting up for the first time, run the following command to create the virtual environment and install required packages. After the initial set up, only activation of the virtual environment (venv) is required. 
 
-`./make.sh`
+`make init`
 
 To activate the virtual environment after initial setup:
 
@@ -18,8 +18,25 @@ To activate the virtual environment after initial setup:
 ## Running a phylogenetic experiment
 A phylogenetic experiment can be run using classifyLangs.py along with a config.yml file that specifies parameters for various aspects of the phylogenetic analysis:
 
-`python3 classifyLangs.py [PATH TO CONFIG FILE]`
+### `make classify`
+`make classify CONFIG=<PATH TO CONFIG FILE> [LOGLEVEL=<DESIRED LOG LEVEL>]`
 
+Replace <PATH TO CONFIG FILE> with the path to your configuration file. You can also include an optional LOGLEVEL argument to specify the desired log level (e.g., DEBUG, INFO, etc.). 
+
+You will find the results in your specified `outdir` (see below) under `logs/classify.log`.
+
+### Using Python directly
+Alternatively, you can run the classification script directly using Python:
+
+Activate the virtual environment (if not already activated):
+
+`source venv/bin/activate`
+
+Run the classification script:
+
+`python3 classifyLangs.py <PATH TO CONFIG FILE> [--loglevel <DESIRED LOG LEVEL>]`
+
+### Config
 A sample config file with default parameters is saved at `config/default_config.yml`. The user only needs to specify the path to the input CLDF file in the `file` parameter under the `family` section, e.g.:
 
 ```
@@ -32,6 +49,7 @@ family:
 
 Any parameters left unspecified in the config file will default to those listed in `config/default_config.yml`.
 
+### Results
 If no `outdir` parameter is specified (also under the `family` section), the results will be saved to the same directory where the input file is saved.
 
 ## Parameters
