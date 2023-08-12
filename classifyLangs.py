@@ -3,7 +3,7 @@ import os
 import logging
 import yaml
 from auxFuncs import Distance
-from phyloLing import load_family
+from phyloLing import load_family, transcription_param_defaults
 from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist
 from lingDist import cognate_sim
 
@@ -72,6 +72,19 @@ def validate_params(params, valid_params, logger):
         outdir = os.path.dirname(os.path.abspath(params['family']['file']))
         logger.debug(f'Setting experiment outdir to {outdir}')
         params['family']['outdir'] = outdir
+    
+    # Designate global transcription parameter defaults
+    for transcription_param in transcription_param_defaults:
+        if transcription_param not in params['transcription']['global']:
+            params['transcription']['global'][transcription_param] = transcription_param_defaults[transcription_param]
+        # If transcription parameters are specified for individual doculects, ensure all are included 
+        # (copy from global defaults if unspecified)
+    if 'doculects' in params['transcription']: 
+        for doculect in params['transcription']['doculects']:
+            params['transcription']['doculects'][doculect] = {
+                transcription_param:params['transcription']['doculects'].get(transcription_param, params['transcription']['global'][transcription_param])
+                for transcription_param in transcription_param_defaults
+            }
 
 
 def write_lang_dists_to_tsv(dist, outfile):
@@ -161,9 +174,7 @@ if __name__ == "__main__":
                          outdir=family_params['outdir'],
                          exclude=family_params['exclude'], 
                          min_amc=family_params['min_amc'],
-                         ignore_stress=transcription_params['ignore_stress'],
-                         combine_diphthongs=transcription_params['combine_diphthongs'],
-                         normalize_geminates=transcription_params['normalize_geminates'],
+                         transcription_params=transcription_params,
                          logger=logger
                          )
 

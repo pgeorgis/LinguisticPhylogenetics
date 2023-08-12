@@ -12,13 +12,29 @@ family:
   # Output file to which Newick tree string should be written
   outdir: 
 
-transcription:
-  # Ignores stress annotation when loading CLDF dataset and computing phone correspondences
-  ignore_stress: false # TODO would be better if we could set per language
-  # Performs IPA string segmentation without diphthongs as single segmental units
-  combine_diphthongs: true # TODO would be better if we could set per language
-  normalize_geminates: false # TODO would be better if we could set per language
   # TODO add preaspiration and any other preprocessing parameters
+
+transcription:
+    # Default transcription parameters to apply to all doculects unless overridden below
+    global:
+        # Ignores stress annotation when loading CLDF dataset and computing phone correspondences
+        ignore_stress: false
+        # Performs IPA string segmentation without diphthongs as single segmental units
+        combine_diphthongs: true
+        # Normalizes geminates transcribed as double /bb/ to /bː/
+        normalize_geminates: false
+        # Accounts for preaspiration during IPA string segmentation
+        preaspiration: true
+        # Characters to remove: suprasegmental diacritics (TODO change this)
+        ch_to_remove: {'̂', '̆', 'ˈ', '̋', '̀', '́', '̄', 'ˑ', ' ', '̏', '̌', 'ˌ'}
+    # Override transcription parameters for individual doculects, specified as shown using names of doculects
+    # doculects:
+    #     French:
+    #         ignore_stress: true
+    #         combine_diphthongs: false
+    #     Italian:
+    #         normalize_geminates: true
+
 
 pmi:
   # Individual languages whose phoneme PMI should be recalculated
