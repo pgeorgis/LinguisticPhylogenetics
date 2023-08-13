@@ -163,7 +163,7 @@ if __name__ == "__main__":
 
     # Designate cluster function if performing auto cognate clustering 
     if cluster_params['cognates'] == 'auto':
-        clusterDist = function_map[params['cognates']['method']]
+        clusterDist = function_map[cluster_params['method']]
         # Set specified cluster threshold
         clusterDist.cluster_threshold = cluster_params['cluster_threshold']
     else:
@@ -227,8 +227,8 @@ if __name__ == "__main__":
         family.load_clustered_cognates()
 
         # Set cognate cluster ID according to settings
-        # TODO this ID won't work because of function_map[params['cognates']['method']][1]
-        cog_id = f"{family.name}_distfunc-{params['cognates']['method']}-{function_map[params['cognates']['method']][1]}_cutoff-{cluster_params['cluster_threshold']}"
+        cog_id = f"{family.name}_distfunc-{cluster_params['method']}_cutoff-{cluster_params['cluster_threshold']}"
+        # TODO cog_id should include weights and any other params for hybrid
 
     # Create cognate similarity (Distance object) measure according to settings
     if eval_params['similarity'] == 'gradient':

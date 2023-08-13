@@ -978,11 +978,11 @@ class LexicalDataset:
             outtree = os.path.join(self.tree_dir, f'{code}.tre')
 
         lm = self.linkage_matrix(dist_func,
-                                 concept_list, 
-                                 cluster_func,
-                                 cognates, 
-                                 method, 
-                                 metric, 
+                                 concept_list=concept_list, 
+                                 cluster_func=cluster_func,
+                                 cognates=cognates, 
+                                 method=method, 
+                                 metric=metric, 
                                  **kwargs)
         
         # Not possible to plot NJ trees in Python (yet? TBD) # TODO
