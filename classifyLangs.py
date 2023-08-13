@@ -5,7 +5,7 @@ import yaml
 from auxFuncs import Distance
 from phyloLing import load_family, transcription_param_defaults
 from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist
-from lingDist import cognate_sim
+from lingDist import gradient_cognate_sim, binary_cognate_sim
 
 # Loglevel mapping
 log_levels = {
@@ -22,6 +22,7 @@ valid_params = {
         'method':{'phon', 'pmi', 'surprisal', 'hybrid', 'levenshtein'},
     },
     'evaluation':{
+        'similarity':{'gradient', 'binary'},
         'method':{'phon', 'pmi', 'surprisal', 'hybrid', 'levenshtein'},
     },
     'tree':{
@@ -64,7 +65,7 @@ def validate_params(params, valid_params, logger):
             
     # Ensure that minimally the input file path is specified
     if 'file' not in params['family']:
-        logger.error('Input file ("file") argument must be specified!')
+        logger.error('Input file (`file`) argument must be specified!')
         raise ValueError
     
     # Designate outdir as the input file directory if unspecified
@@ -85,6 +86,11 @@ def validate_params(params, valid_params, logger):
                 transcription_param:params['transcription']['doculects'].get(transcription_param, params['transcription']['global'][transcription_param])
                 for transcription_param in transcription_param_defaults
             }
+            
+    # Raise error if binary cognate similarity is used with "none" cognate clustering
+    if params['cluster']['cognates'] == 'none' and params['evaluation']['similarity'] == 'binary':
+        logger.error('Binary cognate similarity cannot use "none" cognate clustering. Valid options are: [`auto`, `gold`]')
+        raise ValueError
 
 
 def write_lang_dists_to_tsv(dist, outfile):
@@ -224,24 +230,35 @@ if __name__ == "__main__":
         # TODO this ID won't work because of function_map[params['cognates']['method']][1]
         cog_id = f"{family.name}_distfunc-{params['cognates']['method']}-{function_map[params['cognates']['method']][1]}_cutoff-{cluster_params['cluster_threshold']}"
 
-    # Create Distance measure according to settings
-    dist_func = cognate_sim # TODO other options?
-    distFunc = Distance(
-        func=dist_func, 
-        name='CognateSim',
-        sim=True, 
-        # cognate_sim kwargs
-        eval_func=evalDist,
-        n_samples=eval_params['n_samples'], 
-        sample_size=eval_params['sample_size'], 
-        calibrate=eval_params['calibrate'],
-        min_similarity=eval_params['min_similarity'],
-        logger=logger,
-        )
+    # Create cognate similarity (Distance object) measure according to settings
+    if eval_params['similarity'] == 'gradient':
+        dist_func = gradient_cognate_sim
+        distFunc = Distance(
+            func=dist_func, 
+            name='GradientCognateSim',
+            sim=True,
+            eval_func=evalDist,
+            n_samples=eval_params['n_samples'], 
+            sample_size=eval_params['sample_size'], 
+            calibrate=eval_params['calibrate'],
+            min_similarity=eval_params['min_similarity'],
+            logger=logger,
+            )
+    elif eval_params['similarity'] == 'binary':
+        dist_func = binary_cognate_sim
+        distFunc = Distance(
+            func=dist_func, 
+            name='BinaryCognateSim',
+            sim=True,
+            eval_func=evalDist,
+            #n_samples=eval_params['n_samples'], 
+            #sample_size=eval_params['sample_size'],
+            )
     
     # Generate test code 
     code = family.generate_test_code(distFunc, cognates=cluster_params['cognates'], cutoff=cluster_params['cluster_threshold'])
-    code += family.generate_test_code(evalDist)
+    if eval_params['similarity'] == 'gradient':
+        code += family.generate_test_code(evalDist)
     logger.debug(f'Experiment ID: {code}')
 
     # Generate Newick tree string

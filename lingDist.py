@@ -91,6 +91,7 @@ def binary_cognate_sim(lang1,
     Returns:
         float: Similarity value
     """
+    # TODO add random forest sampling
     sims = {}
     total_cognate_ids = 0
     shared_concepts = get_shared_concepts(lang1, lang2, clustered_cognates)
@@ -124,18 +125,18 @@ def binary_cognate_sim(lang1,
 
 
 # TODO think of a better name of this function: maybe gradient_cognate_sim
-def cognate_sim(lang1, 
-                lang2, 
-                clustered_cognates,
-                eval_func, 
-                exclude_synonyms=True, # TODO improve exclude_synonyms
-                calibrate=True,
-                min_similarity=0,
-                clustered_id=None, # TODO incorporate or remove
-                seed=1,
-                n_samples=50,
-                sample_size=0.8,
-                logger=None):
+def gradient_cognate_sim(lang1, 
+                         lang2, 
+                         clustered_cognates,
+                         eval_func, 
+                         exclude_synonyms=True, # TODO improve exclude_synonyms
+                         calibrate=True, # TODO rename
+                         min_similarity=0,
+                         clustered_id=None, # TODO incorporate or remove
+                         seed=1,
+                         n_samples=50,
+                         sample_size=0.8,
+                         logger=None):
     
     # Set random seed
     random.seed(seed)

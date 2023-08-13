@@ -34,6 +34,7 @@ cluster:
   cluster_threshold: 0.5
 
 evaluation:
+  similarity: gradient
   method: hybrid
   pmi_weight: 0.25
   surprisal_weight: 0.5

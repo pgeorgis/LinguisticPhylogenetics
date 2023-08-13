@@ -114,7 +114,9 @@ The following is a brief description of the configurable parameters.
 
 ### `evaluation`:
 
-  `method`: Distance measure used for cognate clustering: [`pmi`, `surprisal`, `phon`, `hybrid`, `levenshtein`]. The default is `hybrid`, which combines `pmi`, `surprisal`, and `phon`.
+  `similarity`: Type of cognate similarity measure: [`gradient`, `binary`]. `gradient` calculates linguistic similarity using a gradient measure applied to cognate word forms. `binary` calculates linguistic similarity based solely on the proportion of shared cognates two doculects share. Default is `gradient`.
+
+  `method`: Distance measure used for `gradient` cognate similarity: [`pmi`, `surprisal`, `phon`, `hybrid`, `levenshtein`]. The default is `hybrid`, which combines `pmi`, `surprisal`, and `phon`.
 
   `pmi_weight`: Weight for `pmi` contribution to `hybrid` distance.
 
@@ -126,9 +128,9 @@ The following is a brief description of the configurable parameters.
 
   `sample_size`: Proportion of shared concepts to evaluate per sample. Default is 0.8.
 
-  `calibrate`: Uses the cumulative distribution function (CDF) of a normal (Gaussian) distribution to calibrate and weight the contribution of each shared word pair by its likelihood of being cognate, compared against a sample of non-synonymous word pairs from the two doculects. Default is `true`. # TODO possibly change the name of this parameter
+  `calibrate`: Uses the cumulative distribution function (CDF) of a normal (Gaussian) distribution to calibrate and weight the contribution of each shared word pair by its likelihood of being cognate, compared against a sample of non-synonymous word pairs from the two doculects. Default is `true`. Only available for `similarity`=`gradient`. # TODO possibly change the name of this parameter
 
-  `min_similarity`: Minimum similarity threshold for word pairs, adding non-linearity to the evaluation. If the evaluated similarity is below the threshold, the similarity is evaluated as 0 instead. Default is 0. # TODO experiment with this
+  `min_similarity`: Minimum similarity threshold for word pairs, adding non-linearity to the evaluation. If the evaluated similarity is below the threshold, the similarity is evaluated as 0 instead. Default is 0. Only available for `similarity`=`gradient`. # TODO experiment with this parameter
 
 
 ### `tree`:
