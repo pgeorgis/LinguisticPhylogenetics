@@ -97,19 +97,19 @@ def binary_cognate_sim(lang1,
     shared_concepts = get_shared_concepts(lang1, lang2, clustered_cognates)
     for concept in shared_concepts:
         shared, not_shared = 0, 0
-        l1_words, l2_words = 0, 0
+        n_l1_words, n_l2_words = 0, 0
         for cognate_id in clustered_cognates[concept]:
             l1_words = filter_cognates_by_lang(lang1, clustered_cognates[concept][cognate_id])
             l2_words = filter_cognates_by_lang(lang2, clustered_cognates[concept][cognate_id])
             if len(l1_words) > 0 and len(l2_words) > 0:
-                l1_words += 1
-                l2_words += 1
+                n_l1_words += 1
+                n_l2_words += 1
                 shared += 1
             elif len(l1_words) > 0:
-                l1_words += 1
+                n_l1_words += 1
                 not_shared += 1
             elif len(l2_words) > 0:
-                l2_words += 1
+                n_l2_words += 1
                 not_shared += 1
                 
         if exclude_synonyms:

@@ -250,7 +250,6 @@ if __name__ == "__main__":
             func=dist_func, 
             name='BinaryCognateSim',
             sim=True,
-            eval_func=evalDist,
             #n_samples=eval_params['n_samples'], 
             #sample_size=eval_params['sample_size'],
             )
