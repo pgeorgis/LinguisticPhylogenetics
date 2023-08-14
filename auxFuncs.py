@@ -355,14 +355,20 @@ def linkage_matrix(group, dist_func, sim=False,
     return lm
 
 
-def cluster_items(group, labels,
-                  dist_func, sim, cutoff,
-                  method = 'average', metric='euclidean',
+def cluster_items(group, 
+                  dist_func, 
+                  sim, 
+                  cutoff,
+                  labels=None,
+                  method='average', 
+                  metric='euclidean',
+                  return_labels=False,
                   **kwargs):
     lm = linkage_matrix(group, dist_func, sim, method, metric, **kwargs)
     cluster_labels = fcluster(lm, cutoff, 'distance')
+    targets = labels if labels else group
     clusters = defaultdict(lambda:[])
-    for item, cluster in sorted(zip(labels, cluster_labels), key=lambda x: x[1]):
+    for item, cluster in sorted(zip(targets, cluster_labels), key=lambda x: x[1]):
         # sorting just makes it so that the cluster dictionary will be returned
         # with the clusters in numerical order
         clusters[cluster].append(item)

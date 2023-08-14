@@ -585,39 +585,23 @@ class LexicalDataset:
                          method='average',
                          **kwargs):
     
-        breakpoint()
-        raise NotImplementedError # TODO needs to be updated to handle Word objects and output a dictionary in the same format as for gold and none methods in self.distance_matrix()
         # TODO make option for instead using k-means clustering given a known/desired number of clusters, as a mutually exclusive parameter with cutoff
 
         self.logger.info('Clustering cognates...')
-        self.logger.info(f'Cluster function: {dist_func.name}')
-        self.logger.info(f'Cluster threshold: {dist_func.cluster_threshold}')
+        self.logger.debug(f'Cluster function: {dist_func.name}')
+        self.logger.debug(f'Cluster threshold: {dist_func.cluster_threshold}')
 
-        concept_list = [concept for concept in concept_list 
-                        if len(self.concepts[concept]) > 1]
-        self.logger.info(f'Total concepts: {len(concept_list)}')
-        
+        concept_list = [concept for concept in concept_list if len(self.concepts[concept]) > 1]
+        self.logger.debug(f'Total concepts: {len(concept_list)}')
         clustered_cognates = {}
         for concept in sorted(concept_list):
-            # self.logger.info(f'Clustering words for "{concept}"...')
-            words = [word.ipa for lang in self.concepts[concept] 
-                     for word in self.concepts[concept][lang]]
-            lang_labels = [lang for lang in self.concepts[concept] 
-                           for entry in self.concepts[concept][lang]]
-            labels = [f'{lang_labels[i]} /{words[i]}/' for i in range(len(words))]
-            
-            # Create tuple input of (word, lang)
-            langs = [self.languages[lang] for lang in lang_labels]
-            words = list(zip(words, langs))
-    
-            
+            self.logger.debug(f'Clustering words for "{concept}"...')
+            words = [word for lang in self.concepts[concept] for word in self.concepts[concept][lang]]
             clusters = cluster_items(group=words,
-                                     labels=labels,
                                      dist_func=dist_func,
                                      sim=dist_func.sim,
                                      cutoff=dist_func.cluster_threshold,
                                      **kwargs)
-            
             clustered_cognates[concept] = clusters
         
         # Create code and store the result
@@ -628,8 +612,11 @@ class LexicalDataset:
         return clustered_cognates
 
 
-    def write_cognate_index(self, clustered_cognates, output_file,
-                        sep='\t', variants_sep='~'):
+    def write_cognate_index(self, 
+                            clustered_cognates, 
+                            output_file,
+                            sep='\t',
+                            variants_sep='~'):
         assert sep != variants_sep
         
         cognate_index = defaultdict(lambda:defaultdict(lambda:[]))
@@ -637,9 +624,9 @@ class LexicalDataset:
         for concept in clustered_cognates:
             for i in clustered_cognates[concept]:
                 cognate_id = f'{concept}_{i}'
-                for entry in clustered_cognates[concept][i]:
-                    lang, word = entry[:-1].split(' /')
-                    cognate_index[cognate_id][lang].append(word)
+                for word in clustered_cognates[concept][i]:
+                    lang = word.language.name
+                    cognate_index[cognate_id][lang].append(word.ipa)
                     languages.append(lang)
         languages = sorted(list(set(languages)))
         
@@ -654,6 +641,8 @@ class LexicalDataset:
                     line.append(entry)
                 line = sep.join(line)
                 f.write(f'{line}\n')
+        
+        self.logger.info(f'Wrote clustered cognate index to {output_file}')
 
 
     def load_cognate_index(self, index_file, sep='\t', variants_sep='~'):
@@ -665,11 +654,11 @@ class LexicalDataset:
             for line in f[1:]:
                 line = line.split(sep)
                 cognate_id = line[0].rsplit('_', maxsplit=1)
-                # print(cognate_id, line[0].rsplit('_', maxsplit=1))
                 try:
-                    gloss, cognate_class = cognate_id
+                    concept, cognate_class = cognate_id
                 except ValueError:
-                    gloss, cognate_class = cognate_id, '' # confirm that this is correct
+                    concept, cognate_class = cognate_id, '' # TODO confirm that this is correct
+                    breakpoint()
                 for lang, form in zip(doculects, line[1:]):
                     forms = form.split(variants_sep)
                     for form_i in forms:
@@ -680,9 +669,12 @@ class LexicalDataset:
                         unk_ch = invalid_ch(form_i)
                         if len(unk_ch) > 0:
                             unk_ch_s = '< ' + ' '.join(unk_ch) + ' >'
-                            raise ValueError(f'Error: Unable to parse characters {unk_ch_s} in {lang} /{form_i}/ "{gloss}"!')
+                            raise ValueError(f'Error: Unable to parse characters {unk_ch_s} in {lang} /{form_i}/ "{concept}"!')
                         if len(form_i.strip()) > 0:
-                            index[gloss][cognate_class].append(f'{lang} /{form_i}/')   
+                            if isinstance(lang, str):
+                                lang = self.languages[lang]
+                            word = lang._get_Word(form_i, concept=concept, cognate_class='_'.join(cognate_id))
+                            index[concept][cognate_class].append(word)
         
         return index
 
@@ -690,7 +682,7 @@ class LexicalDataset:
     def load_clustered_cognates(self, **kwargs):
         cognate_files = glob.glob(f'{self.cognates_dir}/*.cog')
         for cognate_file in cognate_files:
-            code = cognate_file.rsplit('.', maxsplit=1)[0]
+            code = os.path.splitext(os.path.basename(cognate_file))[0]
             self.clustered_cognates[code] = self.load_cognate_index(cognate_file, **kwargs)
         n = len(cognate_files)
         s = f'Loaded {n} cognate'
@@ -837,14 +829,13 @@ class LexicalDataset:
         # Automatic cognate clustering        
         if cognates == 'auto':
             assert cluster_func is not None
+            cluster_code = self.generate_test_code(cluster_func, cognates='auto')
             
-            if code in self.clustered_cognates:
-                clustered_concepts = self.clustered_cognates[code]
+            if cluster_code in self.clustered_cognates:
+                clustered_concepts = self.clustered_cognates[cluster_code]
             else:
                 clustered_concepts = self.cluster_cognates(concept_list, dist_func=cluster_func)
-            breakpoint()
-            raise NotImplementedError # TODO needs to be updated to handle Word objects and output a dictionary in the same format as for gold and none methods below
-
+            
         # Use gold cognate classes
         elif cognates == 'gold':
             clustered_concepts = defaultdict(lambda:defaultdict(lambda:[]))
@@ -870,10 +861,8 @@ class LexicalDataset:
             self.logger.error(f'Cognate clustering method "{cognates}" not recognized!')
             raise ValueError
         
-        
         # Compute distance matrix over Language objects
-        languages = [self.languages[lang] for lang in self.languages]
-        dm = distance_matrix(group=languages,
+        dm = distance_matrix(group=list(self.languages.values()),
                              dist_func=dist_func, 
                              sim=dist_func.sim,
                              clustered_cognates=clustered_concepts,
@@ -1490,6 +1479,32 @@ class Language:
             for match in matches:
                 concept, orthography, transcription = match
                 print(f"<{orthography}> /{transcription}/ '{concept}'")
+                
+                
+    def _get_Word(self, ipa, concept=None, orthography=None, transcription_params=None, cognate_class=None, loan=None):
+        # Check if the word already exists in the vocabulary
+        if concept in self.vocabulary:
+            for word in self.vocabulary[concept]:
+                if ipa in (word.ipa, word.raw_ipa):
+                    return word
+            
+        # If not, create a new Word object
+        if not transcription_params:
+            transcription_params = self.transcription_params
+        word = Word(
+                ipa_string = ipa, 
+                concept = concept, 
+                orthography = orthography, 
+                ch_to_remove = transcription_params['ch_to_remove'],
+                normalize_geminates = transcription_params['normalize_geminates'],
+                combine_diphthongs = transcription_params['combine_diphthongs'],
+                preaspiration = transcription_params['preaspiration'],
+                language = self,
+                cognate_class = cognate_class,
+                loanword = loan,
+                )
+        
+        return word    
     
     
     def calculate_infocontent(self, word):
@@ -1668,6 +1683,7 @@ class Word:
             'combine_diphthongs':combine_diphthongs,
             'preaspiration':preaspiration
         }
+        self.raw_ipa = ipa_string
         self.ipa = self.preprocess(ipa_string, normalize_geminates=normalize_geminates)
         self.concept = concept
         self.cognate_class = cognate_class
