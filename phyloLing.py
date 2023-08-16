@@ -1320,6 +1320,7 @@ class Language:
         
         # Initialize vocabulary and phoneme inventory
         self.create_vocabulary()
+        self.write_missing_concepts()
         self.create_phoneme_inventory()
         self.write_phoneme_inventory()
         self.phoneme_entropy = entropy(self.phonemes)
@@ -1360,6 +1361,13 @@ class Language:
                 # Mark known loanwords
                 if loan:
                     self.loanwords[concept].add(word)
+    
+    
+    def write_missing_concepts(self):
+        missing_lst = os.path.join(self.family.doculects_dir, self.name, 'missing_concepts.lst')
+        missing_concepts = '\n'.join(sorted(list(self.family.concepts.keys() - self.vocabulary.keys())))
+        with open(missing_lst, 'w') as f:
+            f.write(missing_concepts)
                     
 
     def create_phoneme_inventory(self):
