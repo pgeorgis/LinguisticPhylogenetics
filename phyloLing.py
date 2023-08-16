@@ -67,12 +67,14 @@ class LexicalDataset:
         self.plots_dir = os.path.join(self.directory, 'plots')
         self.cognates_dir = os.path.join(self.directory, 'cognates')
         self.phone_corr_dir = os.path.join(self.directory, 'phone_corr')
+        self.doculects_dir = os.path.join(self.directory, 'doculects')
         self.dist_matrix_dir = os.path.join(self.directory, 'dist_matrices')
         self.tree_dir = os.path.join(self.directory, 'trees')
         for dir in (
             self.plots_dir, 
             self.cognates_dir, 
             self.phone_corr_dir, 
+            self.doculects_dir, 
             self.dist_matrix_dir,
             self.tree_dir
         ):
@@ -1319,6 +1321,7 @@ class Language:
         # Initialize vocabulary and phoneme inventory
         self.create_vocabulary()
         self.create_phoneme_inventory()
+        self.write_phoneme_inventory()
         self.phoneme_entropy = entropy(self.phonemes)
         
         # Comparison with other languages
@@ -1417,6 +1420,30 @@ class Language:
         # Designate language as tonal if it has tonemes
         if len(self.tonemes) > 0:
             self.tonal = True
+    
+    
+    def write_phoneme_inventory(self, n_examples=3, seed=1):
+        doculect_dir = os.path.join(self.family.doculects_dir, self.name)
+        os.makedirs(doculect_dir, exist_ok=True)
+        random.seed(seed)
+        with open(os.path.join(doculect_dir, 'phones.lst'), 'w') as f:    
+            for group, label in zip([self.vowels,
+                                    self.consonants,
+                                    self.tonemes],
+                                    ['VOWELS',
+                                    'CONSONANTS',
+                                    'TONEMES']):
+                if len(group) > 0:
+                    f.write(f'{label}\n')
+                    for phone, prob in dict_tuplelist(group):
+                        prob = round(self.phonemes[phone], 3)
+                        f.write(f'/{phone}/ ({prob})\n')
+                        examples = self.lookup(phone, return_list=True)
+                        examples = random.sample(examples, min(n_examples, len(examples)))
+                        for concept, orth, ipa in examples:
+                            f.write(f'\t<{orth}> /{ipa}/ "{concept}"\n')
+                        f.write('\n')    
+                    f.write('\n\n')
 
 
     def list_ngrams(self, ngram_size, phon_env=False):
