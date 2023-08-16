@@ -148,7 +148,6 @@ if __name__ == "__main__":
             HybridDist = Distance(
                 func=hybrid_dist,
                 name='HybridDist',
-                cluster_threshold=0.57, # TODO cluster_threshold needs to be recalibrated
                 funcs=[PMIDist, SurprisalDist, PhonologicalDist],
                 weights=(
                     eval_params['pmi_weight'],
@@ -164,7 +163,7 @@ if __name__ == "__main__":
     # Designate cluster function if performing auto cognate clustering 
     if cluster_params['cognates'] == 'auto':
         clusterDist = function_map[cluster_params['method']]
-        # Set specified cluster threshold
+        # Set specified cluster threshold # TODO cluster_threshold needs to be recalibrated
         clusterDist.cluster_threshold = cluster_params['cluster_threshold']
     else:
         clusterDist = None
