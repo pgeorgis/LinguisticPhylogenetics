@@ -1,11 +1,13 @@
 from collections import defaultdict
-from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import Alignment, compatible_segments
-from statistics import mean
-import random
-import re
 from itertools import product, combinations
 from math import log
+import os
+import random
+import re
+from statistics import mean
+from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
+from phonAlign import Alignment, compatible_segments
+
 
 class PhonemeCorrDetector:
     def __init__(self, lang1, lang2, wordlist=None, seed=1, logger=None):
@@ -13,11 +15,12 @@ class PhonemeCorrDetector:
         self.lang2 = lang2
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
-        # self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2]
         self.scored_words = defaultdict(lambda:{})
         self.seed = seed
         self.logger = logger
-    
+        self.outdir = self.lang1.family.phone_corr_dir
+
+
     def prepare_wordlists(self, wordlist):
     
         # If no wordlist is provided, by default use all concepts shared by the two languages
@@ -184,10 +187,13 @@ class PhonemeCorrDetector:
         return pmi_dict
 
 
-    def calc_phoneme_pmi(self, radius=2, max_iterations=10,
-                          p_threshold=0.1,
-                          samples=10,
-                          print_iterations=False, save=True):
+    def calc_phoneme_pmi(self, 
+                         radius=2, 
+                         max_iterations=10, # TODO make configurable
+                         p_threshold=0.1,
+                         samples=10, # TODO make configurable
+                         log_iterations=True,
+                         save=True):
         """
         Parameters
         ----------
@@ -197,8 +203,8 @@ class PhonemeCorrDetector:
             Maximum number of iterations. The default is 3.
         p_threshold : float, optional
             p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.05.
-        print_iterations : bool, optional
-            Whether to print the results of each iteration. The default is False.
+        log_iterations : bool, optional
+            Whether to log the results of each iteration. The default is False.
         save : bool, optional
             Whether to save the results to the Language class object's phoneme_pmi attribute. The default is True.
         Returns
@@ -246,6 +252,7 @@ class PhonemeCorrDetector:
 
             qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
+            iter_logs = []
             while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
                 iteration += 1
 
@@ -290,25 +297,19 @@ class PhonemeCorrDetector:
                 qualifying_words[iteration] = _sort_wordlist(qualifying)
                 disqualified_words[iteration] = disqualified + diff_sample
                 
-                # Print results of this iteration
-                if print_iterations:
-                    raise NotImplementedError('needs to be updated using logger.debug AND Word class objects') # TODO
-                    print(f'Iteration {iteration}')
-                    print(f'\tQualified: {len(qualifying)}')
-                    added = [item for item in qualifying_words[iteration]
-                            if item not in qualifying_words[iteration-1]]
-                    for item in added:
-                        word1, word2 = item[0][1], item[1][1]
-                        ipa1, ipa2 = item[0][2], item[1][2]
-                        print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
-                    
-                    print(f'\tDisqualified: {len(disqualified)}')
-                    removed = [item for item in qualifying_words[iteration-1]
-                            if item not in qualifying_words[iteration]]
-                    for item in removed:
-                        word1, word2 = item[0][1], item[1][1]
-                        ipa1, ipa2 = item[0][2], item[1][2]
-                        print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                # Log results of this iteration
+                if log_iterations:
+                    iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
+                    iter_logs.append(iter_log)
+            
+            # Write the iteration log
+            if log_iterations:
+                pmi_log_dir = os.path.join(self.outdir, 'pmi_logs')
+                os.makedirs(pmi_log_dir, exist_ok=True)
+                log_file = os.path.join(pmi_log_dir, f'{self.lang1.name}-{self.lang2.name}_PMI_iterations.log')
+                iter_logs = '\n\n'.join(iter_logs)
+                with open(log_file, 'w') as f:
+                    f.write(iter_logs)
                         
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
@@ -533,12 +534,13 @@ class PhonemeCorrDetector:
                 
         return smoothed_surprisal
     
+    
     def calc_phoneme_surprisal(self, radius=2, 
                                max_iterations=10, 
                                p_threshold=0.1,
                                ngram_size=2,
                                gold=False, # TODO add same with PMI?
-                               print_iterations=False,
+                               log_iterations=True,
                                samples=10,
                                save=True):
         # METHOD
@@ -623,24 +625,19 @@ class PhonemeCorrDetector:
                     qualifying_words[iteration] = qualifying
                     disqualified_words[iteration] = disqualified
                     
-                    # Print results of this iteration
-                    if print_iterations: # TODO change this to loglevel=DEBUG
-                        print(f'Iteration {iteration}')
-                        print(f'\tQualified: {len(qualifying)}')
-                        added = [same_sample[i] for i in qualifying_words[iteration]
-                                if i not in qualifying_words[iteration-1]]
-                        for item in added:
-                            word1, word2 = item[0][1], item[1][1]
-                            ipa1, ipa2 = item[0][2], item[1][2]
-                            print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
-                        
-                        print(f'\tDisqualified: {len(disqualified)}')
-                        removed = [same_sample[i] for i in qualifying_words[iteration-1] 
-                                if i not in qualifying_words[iteration]]
-                        for item in removed:
-                            word1, word2 = item[0][1], item[1][1]
-                            ipa1, ipa2 = item[0][2], item[1][2]
-                            print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                # Log results of this iteration
+                if log_iterations:
+                    iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
+                    iter_logs.append(iter_log)
+            
+            # Write the iteration log
+            if log_iterations:
+                surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs')
+                os.makedirs(surprisal_log_dir, exist_ok=True)
+                log_file = os.path.join(surprisal_log_dir, f'{self.lang1.name}-{self.lang2.name}_surprisal_iterations.log')
+                iter_logs = '\n\n'.join(iter_logs)
+                with open(log_file, 'w') as f:
+                    f.write(iter_logs)
                 
                 cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
                 sample_results[sample_n] = surprisal_iterations[iteration]
@@ -691,6 +688,27 @@ class PhonemeCorrDetector:
         self.surprisal_dict = surprisal_results
         
         return surprisal_results, phon_env_surprisal
+
+
+    def _log_iteration(self, iteration, qualifying_words, disqualified_words):
+        iter_log = []
+        qualifying = qualifying_words[iteration]
+        disqualified = disqualified_words[iteration]
+        iter_log.append(f'Iteration {iteration}')
+        iter_log.append(f'\tQualified: {len(qualifying)}')
+        added = set(qualifying) - set(qualifying_words[iteration-1])
+        for word1, word2 in added:
+            iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
+        
+        iter_log.append(f'\tDisqualified: {len(disqualified)}')
+        removed = set(disqualified) - set(disqualified_words[iteration-1])
+        for word1, word2 in removed:
+            iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
+        
+        iter_log = '\n'.join(iter_log)
+        
+        return iter_log
+
 
 def phon_env_ngrams(phonEnv):
     """Returns set of phonological environment strings of equal and lower order, 
