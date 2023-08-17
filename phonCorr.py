@@ -192,6 +192,7 @@ class PhonemeCorrDetector:
                          max_iterations=10, # TODO make configurable
                          p_threshold=0.1,
                          samples=10, # TODO make configurable
+                         sample_size=0.8, # TODO make configurable
                          log_iterations=True,
                          save=True):
         """
@@ -233,9 +234,10 @@ class PhonemeCorrDetector:
                 pmi_step1[seg1][seg2] = mean([pmi_dict_l1l2[seg1][seg2], pmi_dict_l2l1[seg2][seg1]])
         
         sample_results = {}
-        # Take a sample of same-meaning words, by default 70% of available same-meaning pairs
-        sample_size = round(len(self.same_meaning)*0.7)
+        # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
+        sample_size = round(len(self.same_meaning)*sample_size)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
+        iter_logs = defaultdict(lambda:[])
         for sample_n in range(samples):
             random.seed(self.seed+sample_n)
             synonym_sample = random.sample(self.same_meaning, sample_size)
@@ -252,7 +254,6 @@ class PhonemeCorrDetector:
 
             qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
-            iter_logs = []
             while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
                 iteration += 1
 
@@ -300,16 +301,8 @@ class PhonemeCorrDetector:
                 # Log results of this iteration
                 if log_iterations:
                     iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
-                    iter_logs.append(iter_log)
+                    iter_logs[sample_n].append(iter_log)
             
-            # Write the iteration log
-            if log_iterations:
-                pmi_log_dir = os.path.join(self.outdir, 'pmi_logs')
-                os.makedirs(pmi_log_dir, exist_ok=True)
-                log_file = os.path.join(pmi_log_dir, f'{self.lang1.name}-{self.lang2.name}_PMI_iterations.log')
-                iter_logs = '\n\n'.join(iter_logs)
-                with open(log_file, 'w') as f:
-                    f.write(iter_logs)
                         
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
@@ -328,6 +321,13 @@ class PhonemeCorrDetector:
                     results[p1][p2] = mean(p1_dict[p2])
         else:
             results = sample_results[0]
+
+        # Write the iteration log
+        if log_iterations:
+            pmi_log_dir = os.path.join(self.outdir, 'pmi_logs')
+            os.makedirs(pmi_log_dir, exist_ok=True)
+            log_file = os.path.join(pmi_log_dir, f'{self.lang1.name}-{self.lang2.name}_PMI_iterations.log')
+            self.write_iter_log(iter_logs, log_file)
 
         if save:
             self.lang1.phoneme_pmi[self.lang2] = results
@@ -542,6 +542,7 @@ class PhonemeCorrDetector:
                                gold=False, # TODO add same with PMI?
                                log_iterations=True,
                                samples=10,
+                               sample_size=0.8, # TODO make configurable
                                save=True):
         # METHOD
         # 1) Calculate phoneme PMI
@@ -559,8 +560,9 @@ class PhonemeCorrDetector:
 
         if not gold:
             # Take N samples of same and different-meaning words, perform surprisal calibration, then average all of the estimates from the various samples
-            sample_size = round(len(self.same_meaning)*0.7)
+            sample_size = round(len(self.same_meaning)*sample_size)
             sample_results = {}
+            iter_logs = defaultdict(lambda:[])
             for sample_n in range(samples):
                 random.seed(self.seed+sample_n)
                 same_sample = random.sample(self.same_meaning, sample_size)
@@ -628,16 +630,7 @@ class PhonemeCorrDetector:
                 # Log results of this iteration
                 if log_iterations:
                     iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
-                    iter_logs.append(iter_log)
-            
-            # Write the iteration log
-            if log_iterations:
-                surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs')
-                os.makedirs(surprisal_log_dir, exist_ok=True)
-                log_file = os.path.join(surprisal_log_dir, f'{self.lang1.name}-{self.lang2.name}_surprisal_iterations.log')
-                iter_logs = '\n\n'.join(iter_logs)
-                with open(log_file, 'w') as f:
-                    f.write(iter_logs)
+                    iter_logs[sample_n].append(iter_log)
                 
                 cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
                 sample_results[sample_n] = surprisal_iterations[iteration]
@@ -674,6 +667,13 @@ class PhonemeCorrDetector:
                                                                                  ngram_size=ngram_size), 
                                                                                  ngram_size=ngram_size)
         
+        # Write the iteration log
+        if log_iterations and not gold:
+            surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs', self.lang1.name)
+            os.makedirs(surprisal_log_dir, exist_ok=True)
+            log_file = os.path.join(surprisal_log_dir, f'{self.lang1.name}-{self.lang2.name}_surprisal_iterations.log')
+            self.write_iter_log(iter_logs, log_file)
+                
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
             self.correspondence_probs(cognate_alignments, counts=True), 
@@ -708,6 +708,15 @@ class PhonemeCorrDetector:
         iter_log = '\n'.join(iter_log)
         
         return iter_log
+    
+    
+    def write_iter_log(self, iter_logs, log_file):
+        with open(log_file, 'w') as f:
+            for n in iter_logs:
+                iter_log = '\n\n'.join(iter_logs[n])
+                f.write(f'****SAMPLE {n+1}****\n')
+                f.write(iter_log)
+                f.write('\n\n-------------------\n\n')
 
 
 def phon_env_ngrams(phonEnv):
