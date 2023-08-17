@@ -261,18 +261,11 @@ class LexicalDataset:
         
         # Check whether phoneme PMI has been calculated already for this pair
         # If not, calculate it now
-        checked = []
-        printed = []
         for pair in product(l, l):
-            lang1, lang2 = pair
-            if lang1.name not in printed:
-                self.logger.info(f'Calculating phoneme PMI for {lang1.name}...') # TODO move this logging message into PhonemeCorrDetector
-                printed.append(lang1.name)
-            if (lang2, lang1) not in checked:
-                    
-                if len(lang1.phoneme_pmi[lang2]) == 0:
-                    correlator = lang1.get_phoneme_correlator(lang2)
-                    correlator.calc_phoneme_pmi(**kwargs)
+            lang1, lang2 = pair      
+            if len(lang1.phoneme_pmi[lang2]) == 0:
+                correlator = lang1.get_phoneme_correlator(lang2)
+                correlator.calc_phoneme_pmi(**kwargs)
         
         if save:
             self.write_phoneme_pmi()
@@ -351,7 +344,6 @@ class LexicalDataset:
                 
         # Check whether phoneme surprisal has been calculated already for this pair
         for lang1 in self.languages.values():
-            self.logger.info(f'Calculating phoneme surprisal for {lang1.name}...')
             for lang2 in self.languages.values():
                     
                 # If not, calculate it now
@@ -1662,7 +1654,8 @@ class Language:
             self.phoneme_correlators[key] = PhonemeCorrDetector(lang1=self,
                                                                 lang2=lang2,
                                                                 wordlist=wordlist, 
-                                                                seed=seed)
+                                                                seed=seed,
+                                                                logger=self.family.logger)
 
         return self.phoneme_correlators[key]
     

@@ -8,7 +8,7 @@ from itertools import product, combinations
 from math import log
 
 class PhonemeCorrDetector:
-    def __init__(self, lang1, lang2, wordlist=None, seed=1):
+    def __init__(self, lang1, lang2, wordlist=None, seed=1, logger=None):
         self.lang1 = lang1
         self.lang2 = lang2
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
@@ -16,6 +16,7 @@ class PhonemeCorrDetector:
         # self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2]
         self.scored_words = defaultdict(lambda:{})
         self.seed = seed
+        self.logger = logger
     
     def prepare_wordlists(self, wordlist):
     
@@ -205,6 +206,9 @@ class PhonemeCorrDetector:
         results : collections.defaultdict
             Nested dictionary of phoneme PMI values.
         """
+        if self.logger:
+            self.logger.info(f'Calculating phoneme PMI: {self.lang1.name}-{self.lang2.name}...')
+        
         # First step: calculate probability of phones co-occuring within within 
         # a set radius of positions within their respective words
         synonyms_radius1 = self.radial_counts(self.same_meaning, radius, normalize=False)
@@ -547,6 +551,9 @@ class PhonemeCorrDetector:
             self.pmi_dict = self.calc_phoneme_pmi(radius=radius, 
                                                   max_iterations=max_iterations, 
                                                   p_threshold=p_threshold)
+        
+        if self.logger:
+            self.logger.info(f'Calculating phoneme surprisal: {self.lang1.name}-{self.lang2.name}...')
 
         if not gold:
             # Take N samples of same and different-meaning words, perform surprisal calibration, then average all of the estimates from the various samples
