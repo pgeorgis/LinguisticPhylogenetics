@@ -1,4 +1,5 @@
 from collections import defaultdict
+from functools import lru_cache
 from itertools import product, combinations
 from math import log
 import os
@@ -85,7 +86,7 @@ class PhonemeCorrDetector:
             else:
                 _alignment = alignment.alignment
             if ngram_size > 1:
-                _alignment = _alignment.pad(ngram_size, _alignment)
+                _alignment = alignment.pad(ngram_size, _alignment)
                 
             for i in range(ngram_size-1, len(_alignment)):
                 ngram = _alignment[i-(ngram_size-1):i+1]
@@ -428,7 +429,7 @@ class PhonemeCorrDetector:
                     continue
 
                 phonEnv = ngram1[-1]
-                phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != 'S')
+                phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != '|S|')
                 for context in phonEnv_contexts:
                     ngram1_context = ngram1[:-1] + (context,)
 
@@ -490,7 +491,7 @@ class PhonemeCorrDetector:
                 # add interpolation with phon_env surprisal
                 if phon_env:
                     phonEnv = ngram1_phon_env[-1][-1]
-                    phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != 'S')
+                    phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != '|S|')
                     for context in phonEnv_contexts:
                         ngram1_context = ngram1_phon_env[0][:-1] + (context,)
                         estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0), 
@@ -499,9 +500,7 @@ class PhonemeCorrDetector:
                                                             alpha=alpha)
                                                             )
                         # Weight each contextual estimate based on the size of the context
-                        # #S< would have weight 3 because it considers the segment plus context on both sides
-                        # #S would have weight 2 because it considers only the segment plus context on one side 
-                        ngram_weights.append(len(context))
+                        ngram_weights.append(get_phonEnv_weight(context))
 
                 weight_sum = sum(ngram_weights)
                 ngram_weights = [i/weight_sum for i in ngram_weights]
@@ -719,9 +718,10 @@ class PhonemeCorrDetector:
                 f.write('\n\n-------------------\n\n')
 
 
+@lru_cache(maxsize=None)
 def phon_env_ngrams(phonEnv):
     """Returns set of phonological environment strings of equal and lower order, 
-    e.g. ">S#" -> ">S", "S#", ">S#"
+    e.g. ">|S|#" -> ">|S", "S|#", ">|S|#"
 
     Args:
         phonEnv (str): Phonological environment string, e.g. ">S#"
@@ -729,21 +729,39 @@ def phon_env_ngrams(phonEnv):
     Returns:
         set: possible equal and lower order phonological environment strings
     """
-    assert re.search(r'.+S.+', phonEnv)
-    prefix = set(re.findall(r'[^S](?=.*S)', phonEnv))
+    assert re.search(r'.+\|S\|.+', phonEnv)
+    prefix, base, suffix = phonEnv.split('|')
+    prefix = prefix.split('_')
     prefixes = set()
     for i in range(1, len(prefix)+1):
         for x in combinations(prefix, i):
-            prefixes.add(''.join(x))
+            prefixes.add('_'.join(x))
     prefixes.add('')
-    suffix = set(re.search(r'(?<=S).+', phonEnv).group())
+    suffix = suffix.split('_')
     suffixes = set()
     for i in range(1, len(suffix)+1):
         for x in combinations(suffix, i):
-            suffixes.add(''.join(x))
+            suffixes.add('_'.join(x))
     suffixes.add('')
     ngrams = set()
     for prefix in prefixes:
         for suffix in suffixes:
-            ngrams.add(f'{prefix}S{suffix}')
+            ngrams.add(f'{prefix}|S|{suffix}')
+
     return ngrams
+
+
+@lru_cache(maxsize=None)
+def get_phonEnv_weight(phonEnv):
+    # Weight contextual estimate based on the size of the context
+    # #|S|< would have weight 3 because it considers the segment plus context on both sides
+    # #|S would have weight 2 because it considers only the segment plus context on one side
+    # #|S|<_l would have weight 4 because it the context on both sides, with two attributes of RHS context
+    # #|S|<_ALVEOLAR_l would have weight 5 because it the context on both sides, with three attributes of RHS context
+    prefix, base, suffix = phonEnv.split('|')
+    weight = 1 
+    prefix = [p for p in prefix.split('_') if p != '']
+    suffix = [s for s in suffix.split('_') if s != '']
+    weight += len(prefix)
+    weight += len(suffix)
+    return weight
