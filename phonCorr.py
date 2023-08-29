@@ -524,7 +524,7 @@ class PhonemeCorrDetector:
                                                             alpha=alpha)
                     )
             assert (len(ngram_weights) == len(oov_estimates))
-            smoothed_oov = surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, weights)]))
+            smoothed_oov = surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, ngram_weights)]))
             
             if phon_env:
                 smoothed_surprisal[ngram1_phon_env] = default_dict(smoothed_surprisal[ngram1_phon_env], l=smoothed_oov)
