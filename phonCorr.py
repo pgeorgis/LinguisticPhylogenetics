@@ -529,8 +529,8 @@ class PhonemeCorrDetector:
             if phon_env:
                 smoothed_surprisal[ngram1_phon_env] = default_dict(smoothed_surprisal[ngram1_phon_env], l=smoothed_oov)
             else:
-                smoothed_surprisal[ngram1] = default_dict(smoothed_surprisal[ngram1], l=smoothed_oov)
-                
+                smoothed_surprisal[ngram1] = default_dict(smoothed_surprisal[ngram1], l=smoothed_oov)       
+
         return smoothed_surprisal
     
     
@@ -625,12 +625,12 @@ class PhonemeCorrDetector:
                             disqualified.append(i)
                     qualifying_words[iteration] = qualifying
                     disqualified_words[iteration] = disqualified
+                        
+                    # Log results of this iteration
+                    if log_iterations:
+                        iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words, method='surprisal', same_meaning_alignments=same_meaning_alignments)
+                        iter_logs[sample_n].append(iter_log)
                     
-                # Log results of this iteration
-                if log_iterations:
-                    iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
-                    iter_logs[sample_n].append(iter_log)
-                
                 cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
                 sample_results[sample_n] = surprisal_iterations[iteration]
             
@@ -689,18 +689,32 @@ class PhonemeCorrDetector:
         return surprisal_results, phon_env_surprisal
 
 
-    def _log_iteration(self, iteration, qualifying_words, disqualified_words):
+    def _log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
         iter_log = []
-        qualifying = qualifying_words[iteration]
-        disqualified = disqualified_words[iteration]
+        if method == 'surprisal':
+            assert same_meaning_alignments is not None
+            
+            def get_word_pairs(indices, lst):
+                aligns = [lst[i] for i in indices]
+                pairs = [(align.word1, align.word2) for align in aligns]
+                return pairs
+            
+            qualifying = get_word_pairs(qualifying_words[iteration], same_meaning_alignments)
+            prev_qualifying = get_word_pairs(qualifying_words[iteration-1], same_meaning_alignments)
+            disqualified = get_word_pairs(disqualified_words[iteration], same_meaning_alignments)
+            prev_disqualified = get_word_pairs(disqualified_words[iteration-1], same_meaning_alignments)
+        else:
+            qualifying = qualifying_words[iteration]
+            prev_qualifying = qualifying_words[iteration-1]
+            disqualified = disqualified_words[iteration]
+            prev_disqualified = disqualified_words[iteration-1]
         iter_log.append(f'Iteration {iteration}')
         iter_log.append(f'\tQualified: {len(qualifying)}')
-        added = set(qualifying) - set(qualifying_words[iteration-1])
+        added = set(qualifying) - set(prev_qualifying)
         for word1, word2 in added:
             iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
-        
         iter_log.append(f'\tDisqualified: {len(disqualified)}')
-        removed = set(disqualified) - set(disqualified_words[iteration-1])
+        removed = set(disqualified) - set(prev_disqualified)
         for word1, word2 in removed:
             iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
         
