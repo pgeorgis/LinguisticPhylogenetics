@@ -136,6 +136,7 @@ class LexicalDataset:
         
         language_list = sorted(list(language_vocab_data.keys()))
         for lang in language_list:
+            os.makedirs(os.path.join(self.doculects_dir, lang), exist_ok=True)
             self.languages[lang] = Language(name = lang, 
                                             lang_id=self.lang_ids[lang],
                                             glottocode=self.glottocodes[lang],
@@ -292,10 +293,10 @@ class LexicalDataset:
                         continue
 
                     # Save all segment pairs with non-zero PMI values to file
-                    # Also skip extremely small decimals that are close to zero
+                    # Skip extremely small decimals that are close to zero
                     for seg1 in pmi:
                         for seg2 in pmi[seg1]:
-                            if abs(pmi[seg1][seg2]) > lang1.phonemes[seg1] * lang2.phonemes[seg2]:
+                            if abs(pmi[seg1][seg2]) > 0.0001:
                                 f.write(f'{lang1.name},{seg1},{lang2.name},{seg2},{pmi[seg1][seg2]}\n')
                     checked.append((lang1, lang2))
 
@@ -413,7 +414,7 @@ class LexicalDataset:
                         for seg2 in phoneme_surprisal[seg1]:
                             if phoneme_surprisal[seg1][seg2] < oov_smoothed:
                                 f.write(f'{lang1.name},{" ".join(seg1[0])},{lang2.name},{seg2},{phoneme_surprisal[seg1][seg2]},{oov_smoothed}\n')
-
+                            
         # Write a report on the most likely phoneme correspondences per language pair (TODO : create a cross-linguistic chart automatically)
         self.write_phoneme_corr_report(ngram_size=ngram_size, n=2)
         # TODO doesn't yet include phon_env 
@@ -444,6 +445,7 @@ class LexicalDataset:
     
     def load_phoneme_surprisal(self, ngram_size=1, surprisal_file=None, excepted=[], **kwargs):
         """Loads pre-calculated phoneme surprisal values from file"""
+        # TODO there is still a difference when using preloaded values for surprisal
         
         # Designate the default file name to search for if no alternative is provided
         if surprisal_file is None:
