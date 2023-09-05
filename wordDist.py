@@ -428,19 +428,20 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
 
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily
-    def weight_by_self_surprisal(alignment, WAS, self_surprisal):
+    # Normalize by phoneme entropy
+    def weight_by_self_surprisal(alignment, WAS, self_surprisal, normalize_by):
         self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
         weighted_WAS = []
         seq_map1 = alignment.seq_map[0]
         for i, pair in enumerate(alignment.alignment):
             if seq_map1[i] is not None:
                 weight = self_surprisal[seq_map1[i]][-1] / self_info
-                weighted = weight * WAS[i]
+                normalized = WAS[i] / normalize_by
+                weighted = weight * normalized
                 weighted_WAS.append(weighted)
         return weighted_WAS
-    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1)
-    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2)
-
+    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1, normalize_by=lang2.phoneme_entropy)
+    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2, normalize_by=lang1.phoneme_entropy)
     # Return and save the average of these two values
     score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
     # TODO Treat surprisal values as distances and compute euclidean distance over these, then take average
