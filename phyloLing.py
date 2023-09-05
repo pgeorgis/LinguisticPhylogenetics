@@ -1,7 +1,7 @@
 import os, re, copy, glob
 from collections import defaultdict
 from collections.abc import Iterable
-from itertools import product
+from itertools import product, combinations
 from math import log, sqrt
 from statistics import mean
 import bcubed, random
@@ -258,12 +258,10 @@ class LexicalDataset:
         """Calculates phoneme PMI for all language pairs in the dataset and saves
         the results to file"""
         
-        l = list(self.languages.values())
-        
+        lang_pairs = self.get_doculect_pairs(bidirectional=False)
         # Check whether phoneme PMI has been calculated already for this pair
         # If not, calculate it now
-        for pair in product(l, l):
-            lang1, lang2 = pair      
+        for lang1, lang2 in lang_pairs:      
             if len(lang1.phoneme_pmi[lang2]) == 0:
                 correlator = lang1.get_phoneme_correlator(lang2)
                 correlator.calc_phoneme_pmi(**kwargs)
@@ -277,28 +275,23 @@ class LexicalDataset:
         if output_file is None:
             output_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
 
-        l = list(self.languages.values())
+        lang_pairs = self.get_doculect_pairs(bidirectional=False)
         # Save calculated PMI values to file
         with open(output_file, 'w') as f:
             f.write('Language1,Phone1,Language2,Phone2,PMI\n')
-            checked = []
-            for pair in product(l, l):
-                lang1, lang2 = pair
-                if (lang2, lang1) not in checked:
-                
-                    # Retrieve the precalculated values
-                    pmi = lang1.phoneme_pmi[lang2]
-                    if len(pmi) == 0:
-                        self.logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
-                        continue
+            for lang1, lang2 in lang_pairs:
+                # Retrieve the precalculated values
+                pmi = lang1.phoneme_pmi[lang2]
+                if len(pmi) == 0:
+                    self.logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
+                    continue
 
-                    # Save all segment pairs with non-zero PMI values to file
-                    # Skip extremely small decimals that are close to zero
-                    for seg1 in pmi:
-                        for seg2 in pmi[seg1]:
-                            if abs(pmi[seg1][seg2]) > 0.0001:
-                                f.write(f'{lang1.name},{seg1},{lang2.name},{seg2},{pmi[seg1][seg2]}\n')
-                    checked.append((lang1, lang2))
+                # Save all segment pairs with non-zero PMI values to file
+                # Skip extremely small decimals that are close to zero
+                for seg1 in pmi:
+                    for seg2 in pmi[seg1]:
+                        if abs(pmi[seg1][seg2]) > 0.0001:
+                            f.write(f'{lang1.name},{seg1},{lang2.name},{seg2},{pmi[seg1][seg2]}\n')
 
 
     def load_phoneme_pmi(self, pmi_file=None, excepted=[], **kwargs):
@@ -344,14 +337,13 @@ class LexicalDataset:
         self.load_phoneme_pmi()
                 
         # Check whether phoneme surprisal has been calculated already for this pair
-        for lang1 in self.languages.values():
-            for lang2 in self.languages.values():
-                    
-                # If not, calculate it now
-                if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
-                    correlator = lang1.get_phoneme_correlator(lang2)
-                    correlator.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-                
+        lang_pairs = self.get_doculect_pairs(bidirectional=True)
+        for lang1, lang2 in lang_pairs:
+            # If not, calculate it now
+            if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
+                correlator = lang1.get_phoneme_correlator(lang2)
+                correlator.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+            
         if save:
             self.write_phoneme_surprisal(ngram_size=ngram_size)
 
@@ -510,6 +502,15 @@ class LexicalDataset:
         else:
             self.logger.error(f'No saved phonological environment surprisal file found for {self.name}!')
             raise FileNotFoundError
+
+
+    def get_doculect_pairs(self, bidirectional=False):
+        if bidirectional:
+            doculect_pairs = product(self.languages.values(), self.languages.values())
+        else:
+            doculect_pairs = combinations(self.languages.values(), 2)
+        return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs if lang1 != lang2],
+                      key=lambda x:(x[0].name, x[1].name))
 
     
     def phonetic_diversity(self, ch_to_remove=[]): # TODO
