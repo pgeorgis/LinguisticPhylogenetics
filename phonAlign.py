@@ -1,7 +1,9 @@
 from math import log, inf
 from collections.abc import Iterable
 from nwunschAlign import best_alignment
-from PhoneticSimilarity.phonSim import Segment, _toSegment, consonants, vowels, tonemes, strip_diacritics, phone_sim, get_phon_env
+from PhoneticSimilarity.segment import _toSegment
+from PhoneticSimilarity.phonSim import phone_sim
+from PhoneticSimilarity.phonEnv import get_phon_env
 from auxFuncs import Distance, validate_class
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 

@@ -3,8 +3,10 @@ import re
 from statistics import mean
 from asjp import ipa2asjp
 from nltk import edit_distance
-from PhoneticSimilarity.phonSim import consonants, vowels, glides, nasals, palatal, alveolopalatal, postalveolar, strip_diacritics
-from PhoneticSimilarity.phonSim import Segment, _toSegment, phone_sim
+from PhoneticSimilarity.initPhoneData import consonants, vowels, glides, nasals, palatal, alveolopalatal, postalveolar
+from PhoneticSimilarity.ipaTools import strip_diacritics
+from PhoneticSimilarity.segment import _toSegment
+from PhoneticSimilarity.phonSim import phone_sim
 from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal
 from phonAlign import Alignment, get_alignment_iter
 

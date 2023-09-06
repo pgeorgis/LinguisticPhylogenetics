@@ -1,6 +1,6 @@
 import os, glob
 from collections import defaultdict
-from PhoneticSimilarity.phonSim import segment_ipa
+from PhoneticSimilarity.segment import segment_ipa
 import argparse
 
 def write_data(data_dict, output_file, sep='\t'):

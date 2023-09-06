@@ -16,8 +16,12 @@ from unidecode import unidecode
 import numpy as np
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
 from auxFuncs import Distance, surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
-from PhoneticSimilarity.phonSim import vowels, consonants, tonemes, suprasegmental_diacritics
-from PhoneticSimilarity.phonSim import normalize_ipa_ch, invalid_ch, strip_diacritics, segment_ipa, phone_sim, get_phon_env
+from PhoneticSimilarity.initPhoneData import vowels, consonants, tonemes, suprasegmental_diacritics
+from PhoneticSimilarity.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
+from PhoneticSimilarity.segment import segment_ipa
+from PhoneticSimilarity.phonSim import phone_sim
+from PhoneticSimilarity.phonEnv import get_phon_env
+from PhoneticSimilarity.syllables import syllabify
 from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 import logging
@@ -1723,6 +1727,7 @@ class Word:
         self.segments = self.segment(ch_to_remove, 
                                      combine_diphthongs=combine_diphthongs, 
                                      preaspiration=preaspiration)
+        self.syllables = None
         self.phon_env = self.getPhonEnv()
         self.info_content = None
 
@@ -1747,7 +1752,14 @@ class Word:
             combine_diphthongs=combine_diphthongs,
             preaspiration=preaspiration
         )
-    
+        
+    def get_syllables(self, **kwargs):
+        self.syllables = syllabify(
+            word=self.ipa,
+            segments=self.segments,
+            **kwargs
+        )
+        return self.syllables
 
     def getPhonEnv(self):
         phon_env = []

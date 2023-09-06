@@ -2,6 +2,7 @@ asjp==0.0.2
 bcubed==1.5
 kneed==0.8.1
 matplotlib==3.5.3
+more-itertools==9.0.0
 networkx==2.6.3
 nltk==3.7
 numpy==1.24.0
