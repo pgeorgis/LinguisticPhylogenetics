@@ -141,9 +141,11 @@ class PhonemeCorrDetector:
                 reverse[seg2][seg1] = corr_dict[seg1][seg2]
         return reverse
 
-    def phoneme_pmi(self, dependent_probs,
+    def phoneme_pmi(self, 
+                    dependent_probs,
                     independent_probs=None,
-                    l1=None, l2=None):
+                    l1=None, 
+                    l2=None):
         """
         dependent_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         independent_probs : None, or nested dictionary of conditional correspondence probabilities in non-cognates
@@ -156,10 +158,12 @@ class PhonemeCorrDetector:
         # If no independent probabilities are specified, 
         # use product of phoneme probabilities by default
         if independent_probs is None:
-            independent_probs = defaultdict(lambda:defaultdict(lambda:0))
+            independent_probs = {}
             for phoneme1 in l1.phonemes:
+                phoneme1_probs = {}
                 for phoneme2 in l2.phonemes:
-                    independent_probs[phoneme1][phoneme2] = l1.phonemes[phoneme1] * l2.phonemes[phoneme2]
+                    phoneme1_probs[phoneme2] = l1.phonemes[phoneme1] * l2.phonemes[phoneme2]
+                independent_probs[phoneme1] = phoneme1_probs 
 
         # Calculate joint probabilities from conditional probabilities
         for corr_dict in [dependent_probs, independent_probs]:
@@ -204,7 +208,7 @@ class PhonemeCorrDetector:
         max_iterations : int, optional
             Maximum number of iterations. The default is 3.
         p_threshold : float, optional
-            p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.05.
+            p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.1.
         log_iterations : bool, optional
             Whether to log the results of each iteration. The default is False.
         save : bool, optional
@@ -239,6 +243,8 @@ class PhonemeCorrDetector:
         sample_size = round(len(self.same_meaning)*sample_size)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         iter_logs = defaultdict(lambda:[])
+        def _sort_wordlist(wordlist):
+            return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
         for sample_n in range(samples):
             random.seed(self.seed+sample_n)
             synonym_sample = random.sample(self.same_meaning, sample_size)
@@ -250,9 +256,6 @@ class PhonemeCorrDetector:
             iteration = 0
             PMI_iterations = {iteration:pmi_step1}
             
-            def _sort_wordlist(wordlist):
-                return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
-
             qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
@@ -396,9 +399,9 @@ class PhonemeCorrDetector:
                           phon_env_corr_counts=None, 
                           ngram_size=1, 
                           weights=None, 
-                          attested_only=True,
-                          alpha=0.2): # TODO conduct more formal experiment to select default alpha, or find way to adjust automatically
-                          #so far alpha=0.2 is best (at least on Romance)
+                          #attested_only=True,
+                          #alpha=0.2 # TODO conduct more formal experiment to select default alpha, or find way to adjust automatically; so far alpha=0.2 is best (at least on Romance)
+                          ):
         # Interpolation smoothing
         if weights is None:
             # Each ngram estimate will be weighted proportional to its size
@@ -478,15 +481,17 @@ class PhonemeCorrDetector:
                 #                                               d = len(self.lang2.phonemes) + 1)  
                 #              for i in range(ngram_size,0,-1)]
                 # backward
-                estimates = [lidstone_smoothing(x=interpolation[i][ngram1[:i]].get(ngram2, 0), 
-                                                N=sum(interpolation[i][ngram1[:i]].values()), 
-                                                d = len(self.lang2.phonemes) + 1,
-                                                # modification: I believe the d (vocabulary size) value should be every combination of phones from lang1 and lang2
-                                                #d = n_ngram_pairs + 1,
-                                                # updated mod: it should actually be the vocabulary GIVEN the phone of lang1, otherwise skewed by frequency of phone1
-                                                #d = len(interpolation[i][ngram1[:i]]),
-                                                alpha=alpha)
-                            for i in range(ngram_size,0,-1)]
+                estimates = [interpolation[i][ngram1[:i]].get(ngram2, 0) / sum(interpolation[i][ngram1[:i]].values()) 
+                             for i in range(ngram_size,0,-1)]
+                # estimates = [lidstone_smoothing(x=interpolation[i][ngram1[:i]].get(ngram2, 0), 
+                #                                 N=sum(interpolation[i][ngram1[:i]].values()), 
+                #                                 d = len(self.lang2.phonemes) + 1,
+                #                                 # modification: I believe the d (vocabulary size) value should be every combination of phones from lang1 and lang2
+                #                                 #d = n_ngram_pairs + 1,
+                #                                 # updated mod: it should actually be the vocabulary GIVEN the phone of lang1, otherwise skewed by frequency of phone1
+                #                                 #d = len(interpolation[i][ngram1[:i]]),
+                #                                 alpha=alpha)
+                #             for i in range(ngram_size,0,-1)]
                 
                 # add interpolation with phon_env surprisal
                 if phon_env:
@@ -494,11 +499,12 @@ class PhonemeCorrDetector:
                     phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != '|S|')
                     for context in phonEnv_contexts:
                         ngram1_context = ngram1_phon_env[0][:-1] + (context,)
-                        estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0), 
-                                                            N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
-                                                            d = len(self.lang2.phonemes) + 1,
-                                                            alpha=alpha)
-                                                            )
+                        estimates.append(interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0) / sum(interpolation['phon_env'][(ngram1_context,)].values()))
+                        # estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0), 
+                        #                                     N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
+                        #                                     d = len(self.lang2.phonemes) + 1,
+                        #                                     alpha=alpha)
+                        #                                     )
                         # Weight each contextual estimate based on the size of the context
                         ngram_weights.append(get_phonEnv_weight(context))
 
@@ -511,25 +517,31 @@ class PhonemeCorrDetector:
                 else:
                     smoothed_surprisal[ngram1][ngram2] = surprisal(smoothed)
 
-            oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()), 
-                                             d = len(self.lang2.phonemes) + 1,
-                                             alpha=alpha) 
-                          for i in range(ngram_size,0,-1)]
-            if phon_env:
-                for context in phonEnv_contexts:
-                    ngram1_context = ngram1_phon_env[0][:-1] + (context,)
-                    oov_estimates.append(lidstone_smoothing(x=0, 
-                                                            N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
-                                                            d = len(self.lang2.phonemes) + 1,
-                                                            alpha=alpha)
-                    )
-            assert (len(ngram_weights) == len(oov_estimates))
-            smoothed_oov = surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, ngram_weights)]))
+            # oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()), 
+            #                                  d = len(self.lang2.phonemes) + 1,
+            #                                  alpha=alpha) 
+            #               for i in range(ngram_size,0,-1)]
+            # if phon_env:
+            #     for context in phonEnv_contexts:
+            #         ngram1_context = ngram1_phon_env[0][:-1] + (context,)
+            #         oov_estimates.append(lidstone_smoothing(x=0, 
+            #                                                 N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
+            #                                                 d = len(self.lang2.phonemes) + 1,
+            #                                                 alpha=alpha)
+            #         )
+            # assert (len(ngram_weights) == len(oov_estimates))
+            #smoothed_oov = max(surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, ngram_weights)])), self.lang2.phoneme_entropy)
+            smoothed_oov = self.lang2.phoneme_entropy
             
             if phon_env:
                 smoothed_surprisal[ngram1_phon_env] = default_dict(smoothed_surprisal[ngram1_phon_env], l=smoothed_oov)
             else:
-                smoothed_surprisal[ngram1] = default_dict(smoothed_surprisal[ngram1], l=smoothed_oov)       
+                smoothed_surprisal[ngram1] = default_dict(smoothed_surprisal[ngram1], l=smoothed_oov)
+        
+            # Prune saved surprisal values which exceed the phoneme entropy of lang2
+            to_prune = [ngram2 for ngram2 in smoothed_surprisal[ngram1] if smoothed_surprisal[ngram1][ngram2] > self.lang2.phoneme_entropy]
+            for ngram_to_prune in to_prune:
+                del smoothed_surprisal[ngram1][ngram_to_prune]            
 
         return smoothed_surprisal
     
@@ -645,11 +657,13 @@ class PhonemeCorrDetector:
                         for sample_n in sample_results:
                             p1_dict[p2].append(sample_results[sample_n][p1][p2])
                         surprisal_results[p1][p2] = mean(p1_dict[p2])
-                    oov_values = []
-                    for sample_n in sample_results:
-                        # Use non-IPA character <?> to retrieve OOV value from surprisal dict
-                        oov_values.append(sample_results[sample_n][p1]['?'])
-                    surprisal_results[p1] = default_dict(surprisal_results[p1], l=mean(oov_values))
+                    # oov_values = []
+                    # for sample_n in sample_results:
+                    #     # Use non-IPA character <?> to retrieve OOV value from surprisal dict
+                    #     oov_values.append(sample_results[sample_n][p1]['?'])
+                    # surprisal_results[p1] = default_dict(surprisal_results[p1], l=mean(oov_values))
+                    surprisal_results[p1] = default_dict(surprisal_results[p1], l=self.lang2.phoneme_entropy)
+                    
             else:
                 surprisal_results = sample_results[0]
 
