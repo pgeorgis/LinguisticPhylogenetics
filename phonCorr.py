@@ -5,7 +5,8 @@ from math import log
 import os
 import random
 import re
-from statistics import mean
+from scipy.stats import norm
+from statistics import mean, stdev
 from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
 from phonAlign import Alignment, compatible_segments
 
@@ -611,6 +612,8 @@ class PhonemeCorrDetector:
                                                                 normalize=True,
                                                                 ngram_size=ngram_size) 
                                             for alignment in noncognate_alignments]
+                    mean_nc_score = mean(noncognate_surprisal)
+                    nc_score_stdev = stdev(noncognate_surprisal)
                     
                     # Normalize different-meaning pair surprisal scores by self-surprisal of word2
                     # for i in range(len(noncognate_alignments)):
@@ -628,13 +631,14 @@ class PhonemeCorrDetector:
                                                             surprisal_dict=surprisal_iterations[iteration], 
                                                             normalize=True,
                                                             ngram_size=ngram_size)
-                        # self_surprisal = self.lang2.self_surprisal(segs2, segmented=True, normalize=False)
-                        # surprisal_score /= self_surprisal
-                        p_value = (len([score for score in noncognate_surprisal if score <= surprisal_score])+1) / (len(noncognate_surprisal)+1)
-                        if p_value < p_threshold:
+                        
+                        # Proportion of non-cognate word pairs which would have a surprisal score at least as low as this word pair
+                        pnorm = norm.cdf(surprisal_score, loc=mean_nc_score, scale=nc_score_stdev)
+                        if pnorm < p_threshold:
                             qualifying.append(i)
                         else:
                             disqualified.append(i)
+                            
                     qualifying_words[iteration] = qualifying
                     disqualified_words[iteration] = disqualified
                         
