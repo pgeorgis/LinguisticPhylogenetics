@@ -113,7 +113,7 @@ class PhonemeCorrDetector:
         return corr_counts
                           
     
-    def radial_counts(self, wordlist, radius=2, normalize=True):
+    def radial_counts(self, wordlist, radius=1, normalize=True):
         """Checks the number of times that phones occur within a specified 
         radius of positions in their respective words from one another"""
         corr_dict = defaultdict(lambda:defaultdict(lambda:0))
@@ -193,7 +193,7 @@ class PhonemeCorrDetector:
 
 
     def calc_phoneme_pmi(self, 
-                         radius=2, 
+                         radius=1, # TODO make configurable
                          max_iterations=10, # TODO make configurable
                          p_threshold=0.1,
                          samples=10, # TODO make configurable
@@ -546,7 +546,7 @@ class PhonemeCorrDetector:
         return smoothed_surprisal
     
     
-    def calc_phoneme_surprisal(self, radius=2, 
+    def calc_phoneme_surprisal(self, radius=1, 
                                max_iterations=10, 
                                p_threshold=0.1,
                                ngram_size=2,
