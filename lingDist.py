@@ -124,7 +124,6 @@ def binary_cognate_sim(lang1,
     return similarity
 
 
-# TODO think of a better name of this function: maybe gradient_cognate_sim
 def gradient_cognate_sim(lang1, 
                          lang2, 
                          clustered_cognates,
