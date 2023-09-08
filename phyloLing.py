@@ -4,6 +4,7 @@ from collections.abc import Iterable
 from itertools import product, combinations
 from math import log, sqrt
 from statistics import mean
+from asjp import ipa2asjp
 import bcubed, random
 from matplotlib import pyplot as plt
 import pandas as pd
@@ -28,6 +29,7 @@ import logging
 
 
 transcription_param_defaults = {
+    'asjp':False,
     'ignore_stress':False,
     'combine_diphthongs':True,
     'normalize_geminates':False,
@@ -1347,6 +1349,7 @@ class Language:
                 concept = concept, 
                 orthography = entry[self.columns['orthography']], 
                 ch_to_remove = self.transcription_params['ch_to_remove'],
+                asjp = self.transcription_params['asjp'],
                 normalize_geminates = self.transcription_params['normalize_geminates'],
                 combine_diphthongs = self.transcription_params['combine_diphthongs'],
                 preaspiration = self.transcription_params['preaspiration'],
@@ -1707,6 +1710,7 @@ class Word:
                  loanword=False,
                  # Parameters for preprocessing and segmentation
                  ch_to_remove=[], 
+                 asjp=False,
                  normalize_geminates=False,
                  combine_diphthongs=True,
                  preaspiration=True
@@ -1714,12 +1718,13 @@ class Word:
         self.language = language
         self.parameters = {
             'ch_to_remove':ch_to_remove,
+            'asjp':asjp,
             'normalize_geminates':normalize_geminates,
             'combine_diphthongs':combine_diphthongs,
             'preaspiration':preaspiration
         }
         self.raw_ipa = ipa_string
-        self.ipa = self.preprocess(ipa_string, normalize_geminates=normalize_geminates)
+        self.ipa = self.preprocess(ipa_string, asjp=asjp, normalize_geminates=normalize_geminates)
         self.concept = concept
         self.cognate_class = cognate_class
         self.loanword = loanword
@@ -1732,14 +1737,42 @@ class Word:
         self.info_content = None
 
 
-    def preprocess(self, ipa_string, normalize_geminates=False):
+    def preprocess(self, ipa_string, asjp=False, normalize_geminates=False):
+
         # Normalize common IPA character mistakes
         # Normalize affricates to special ligature characters, where available
         ipa_string = normalize_ipa_ch(ipa_string)
-
+        
         # Normalize geminate consonants to /Cː/
         if normalize_geminates:
             ipa_string = re.sub(fr'([{consonants}])\1', r'\1ː', ipa_string)
+        
+        # Convert to ASJP transcription
+        if asjp:
+            ipa_string = re.sub('~', '', ipa2asjp(ipa_string))
+            
+            # Convert some non-IPA ASJP characters to IPA equivalents # TODO move this mapping external
+            # Preserves set of ASJP characters/mapping, but keeps IPA compatibility
+            ipa_string = re.sub('4', 'n̪', ipa_string)
+            ipa_string = re.sub('5', 'ɲ', ipa_string)
+            ipa_string = re.sub('N', 'ŋ', ipa_string)
+            ipa_string = re.sub('L', 'ʎ', ipa_string)
+            ipa_string = re.sub('c', 'ʦ', ipa_string)
+            ipa_string = re.sub('T', 'c', ipa_string)
+            ipa_string = re.sub('g', 'ɡ', ipa_string)
+            ipa_string = re.sub('G', 'ɢ', ipa_string)
+            ipa_string = re.sub('7', 'ʔ', ipa_string)
+            ipa_string = re.sub('C', 'ʧ', ipa_string)
+            ipa_string = re.sub('j', 'ʤ', ipa_string)
+            ipa_string = re.sub('8', 'θ', ipa_string)
+            ipa_string = re.sub('S', 'ʃ', ipa_string)
+            ipa_string = re.sub('Z', 'ʒ', ipa_string)
+            ipa_string = re.sub('X', 'χ', ipa_string)
+            ipa_string = re.sub('y', 'j', ipa_string)
+            ipa_string = re.sub('E', 'ɛ', ipa_string)
+            ipa_string = re.sub('3', 'ə', ipa_string)
+            ipa_string = re.sub(r'\*', '̃', ipa_string)
+
 
         return ipa_string
 
