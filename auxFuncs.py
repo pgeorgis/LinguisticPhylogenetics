@@ -24,10 +24,7 @@ def dict_tuplelist(dic, sort=True, n=1, reverse=True):
 
 def default_dict(dic, l):
     """Turns an existing dictionary into a default dictionary with default value l"""
-    dd = defaultdict(lambda:l)
-    for key in dic:
-        dd[key] = dic[key]
-    return dd
+    return defaultdict(lambda: l, dic)
 
 def keywithmaxval(d):
     """Returns the dictionary key with the highest value"""

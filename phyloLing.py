@@ -443,7 +443,6 @@ class LexicalDataset:
     
     def load_phoneme_surprisal(self, ngram_size=1, surprisal_file=None, excepted=[], **kwargs):
         """Loads pre-calculated phoneme surprisal values from file"""
-        # TODO there is still a difference when using preloaded values for surprisal
         
         # Designate the default file name to search for if no alternative is provided
         if surprisal_file is None:
@@ -463,7 +462,7 @@ class LexicalDataset:
         def extract_surprisal_from_df(surprisal_data, phon_env=False):
             # Iterate through the dataframe and save the surprisal values to the Language
             # class objects' phoneme_surprisal attribute
-            surprisal_dict = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0))))
+            surprisal_dict = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:{})))
             oov_vals = defaultdict(lambda:{})
             for index, row in surprisal_data.iterrows():
                 try:
@@ -490,6 +489,7 @@ class LexicalDataset:
                     oov_val = oov_vals[(lang1, lang2)][phone1]
                     surprisal_dict[lang1][(lang2, ngram_size)][phone1] = default_dict(surprisal_dict[lang1][(lang2, ngram_size)][phone1],
                                                                                         l=oov_val)
+                surprisal_dict[lang1][(lang2, ngram_size)] = default_dict(surprisal_dict[lang1][(lang2, ngram_size)], l=defaultdict(lambda:oov_val))
             
             return surprisal_dict
         
