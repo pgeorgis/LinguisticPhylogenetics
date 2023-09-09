@@ -693,7 +693,7 @@ class PhonemeCorrDetector:
                 
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
-            self.correspondence_probs(cognate_alignments, counts=True), 
+            self.correspondence_probs(cognate_alignments, counts=True, exclude_null=False), 
             phon_env_corr_counts=self.phon_env_corr_probs(cognate_alignments, counts=True),
             ngram_size=ngram_size
             )
