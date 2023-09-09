@@ -4,7 +4,7 @@ import logging
 import yaml
 from auxFuncs import Distance
 from phyloLing import load_family, transcription_param_defaults
-from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist
+from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, CascadeSim
 from lingDist import gradient_cognate_sim, binary_cognate_sim
 
 # Loglevel mapping
@@ -19,11 +19,11 @@ log_levels = {
 valid_params = {
     'cluster':{
         'cognates':{'auto', 'gold', 'none'},
-        'method':{'phon', 'pmi', 'surprisal', 'hybrid', 'levenshtein'},
+        'method':{'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid', 'cascade'},
     },
     'evaluation':{
         'similarity':{'gradient', 'binary'},
-        'method':{'phon', 'pmi', 'surprisal', 'hybrid', 'levenshtein'},
+        'method':{'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid', 'cascade'},
     },
     'tree':{
         'linkage':{'nj', 'average', 'complete', 'ward', 'weighted', 'single'},
@@ -36,6 +36,7 @@ function_map = {
     'surprisal':SurprisalDist,
     'phon':PhonologicalDist, # TODO name doesn't match (I think phon is fine because it is neutral between phonological and phonetic, could rename Distance as PhonDist)
     'levenshtein':LevenshteinDist,
+    'cascade':CascadeSim,
     }
 
 
@@ -159,6 +160,8 @@ if __name__ == "__main__":
 
             # Add HybridSim to function map
             function_map['hybrid'] = HybridSim
+            
+            # TODO: same procedure for CascadeSim with configuring surprisal ngram_size, etc.
 
     # Designate cluster function if performing auto cognate clustering 
     if cluster_params['cognates'] == 'auto':
@@ -198,7 +201,7 @@ if __name__ == "__main__":
 
     # Load or calculate phoneme surprisal
     if not surprisal_params['refresh_all_surprisal']:
-        if eval_params['method'] == 'surprisal' or eval_params['method'] == 'hybrid':
+        if eval_params['method'] in ('surprisal', 'hybrid', 'cascade'):
             logger.info(f'Loading {family.name} phoneme surprisal...')
             if cluster_params['cognates'] == 'gold':
                 family.load_phoneme_surprisal(
