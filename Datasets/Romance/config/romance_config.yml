@@ -1,7 +1,7 @@
 family:
     name: Romance
     file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Romance/romance_data.tsv
-    min_amc: 0.65
+    min_amc: 0.7
     exclude: ['Dalmatian', 'Savoyard']
     outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Romance/
 
@@ -26,14 +26,14 @@ cluster:
 
 evaluation:
     similarity: gradient
-    method: hybrid
+    method: cascade
     # this weighting scheme works well for Romance (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
-    pmi_weight: 0.25
-    surprisal_weight: 0.5
+    pmi_weight: 0.5
+    surprisal_weight: 0.25
     phon_weight: 0.25
     n_samples: 10
     sample_size: 0.8
-    calibrate: true
+    calibrate: false
     min_similarity: 0
 
 tree:
