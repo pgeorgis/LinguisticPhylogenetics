@@ -265,6 +265,24 @@ class Distance:
         
         else:
             return self
+    
+    def to_distance(self, name=None, alpha=0.5):
+        if self.sim is False:
+            return self
+        else:
+            def dist_func(x, y, **kwargs):
+                return sim_to_dist(self.func(x, y, **kwargs), alpha=alpha)
+            
+            if name is None:
+                name = self.name + '_asDistance'
+            
+            return Distance(
+                func=dist_func,
+                cluster_threshold=self.cluster_threshold,
+                sim=False,
+                name=name,
+                **self.kwargs
+            )
 
     def get_hashable_kwargs(self, kwargs):
         hashable = []
@@ -309,16 +327,11 @@ def list_mostsimilar(item1, comp_group, dist_func, n=5, sim=True, return_=False,
             print(f'{item[0].name}: {round(item[1], 2)}')
 
 def distance_matrix(group, dist_func, sim=False, **kwargs):
-
-    if type(dist_func) is Distance:
-        sim = dist_func.sim
-        func = False
-        
-    elif type(dist_func) is function:
-        func = True
-
-    else:
-        raise TypeError(f'dist_func expected to be Distance class object or function, found {type(dist_func)}')
+    if not isinstance(dist_func, Distance):
+        raise TypeError(f'dist_func expected to be Distance class object, found {type(dist_func)}')
+    
+    sim = dist_func.sim
+    func = False
 
     # Initialize nxn distance matrix filled with zeros
     mat = zeros((len(group),len(group)))
@@ -326,10 +339,7 @@ def distance_matrix(group, dist_func, sim=False, **kwargs):
     # Calculate pairwise distances between items and add to matrix
     for i in range(len(group)):
         for j in range(i+1, len(group)):
-            if func:
-                dist = dist_func(group[i], group[j], **kwargs)
-            else:
-                dist = dist_func.eval(group[i], group[j], **kwargs)
+            dist = dist_func.eval(group[i], group[j], **kwargs)
             
             # Convert similarities to distances
             if sim:

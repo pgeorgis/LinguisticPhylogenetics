@@ -375,7 +375,7 @@ def segmental_word_dist(word1, word2=None,
     return (c_weight * (1-c_score)) + (v_weight * (1-v_score)) + (syl_weight * syl_score)
 
 
-def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
+def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, **kwargs):
     lang1 = word1.language
     lang2 = word2.language
     
@@ -445,14 +445,17 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, **kwargs):
     weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1, normalize_by=lang2.phoneme_entropy)
     weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2, normalize_by=lang1.phoneme_entropy)
     # Return and save the average of these two values
-    score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
+    if normalize:
+        score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
     # TODO Treat surprisal values as distances and compute euclidean distance over these, then take average
     # score = mean([euclidean_dist(weighted_WAS_l1l2), euclidean_dist(weighted_WAS_l2l1)])
+    else:
+        score = mean([sum(weighted_WAS_l1l2), sum(weighted_WAS_l2l1)])
 
     return score
 
 
-def pmi_dist(word1, word2, sim2dist=True, alpha=0.5, **kwargs):
+def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, **kwargs):
     lang1 = word1.language
     lang2 = word2.language
     
@@ -507,10 +510,13 @@ def pmi_dist(word1, word2, sim2dist=True, alpha=0.5, **kwargs):
         return weighted_PMI
 
     PMI_values = weight_by_info_content(alignment, PMI_values)
-    PMI_score = mean(PMI_values) 
+    
+    if normalize:
+        PMI_score = mean(PMI_values)
+    else:
+        PMI_score = sum(PMI_values)
     
     if sim2dist:
-        #PMI_dist = exp(-max(PMI_score, 0)**alpha)
         return sim_to_dist(PMI_score, alpha)
     
     else:
@@ -573,10 +579,14 @@ def hybrid_dist(word1, word2, funcs:dict, weights=None)->float:
     return score
 
 def cascade_sim(word1, word2):
+    #pmi_score = pmi_dist(word1, word2, normalize=False, sim2dist=False)
     pmi_score = pmi_dist(word1, word2, sim2dist=False)
+    #surprisal_score = mutual_surprisal(word1, word2, normalize=False)
     surprisal_score = mutual_surprisal(word1, word2)
     phon_score = phonological_dist(word1, word2)
-    score = (pmi_score - surprisal_score) * (1-phon_score)
+    #phon_score = phonological_dist(word1, word2, total_dist=True)
+    score = ((1.5*pmi_score) - (2*surprisal_score)) * (1-phon_score)
+    #score = (pmi_score - (2*surprisal_score)) / (1+phon_score)
     return max(0, score)
 
 # Initialize distance functions as Distance objects
@@ -606,11 +616,11 @@ SurprisalDist = Distance(
     ngram_size=1)
 # Note: Hybrid distance needs to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
 
-CascadeSim = Distance(
+CascadeDist = Distance(
     func=cascade_sim,
     name='CascadeSim',
     sim=True
-)
+).to_distance('CascadeDist', alpha=0.8)
 
 # Z SCORE
 def Z_score(p_values):

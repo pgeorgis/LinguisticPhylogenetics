@@ -4,7 +4,7 @@ import logging
 import yaml
 from auxFuncs import Distance
 from phyloLing import load_family, transcription_param_defaults
-from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, CascadeSim
+from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, CascadeDist
 from lingDist import gradient_cognate_sim, binary_cognate_sim
 
 # Loglevel mapping
@@ -36,7 +36,7 @@ function_map = {
     'surprisal':SurprisalDist,
     'phon':PhonologicalDist, # TODO name doesn't match (I think phon is fine because it is neutral between phonological and phonetic, could rename Distance as PhonDist)
     'levenshtein':LevenshteinDist,
-    'cascade':CascadeSim,
+    'cascade':CascadeDist,
     }
 
 
