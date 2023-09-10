@@ -252,30 +252,28 @@ def phonological_dist(word1,
                 double = False
                 try:
                     nxt_pair = alignment[i+1]
-                    if gap_ch not in nxt_pair and nxt_pair[deleted_index] == deleted_segment:
+                    if gap_ch not in nxt_pair and nxt_pair[deleted_index] == deleted_segment.segment:
+                        penalty = 0 # eliminate the current penalty altogether
+                        alignment[i+1] = list(alignment[i+1])
+                        # Adjust transcription of next segment to include gemination/length
+                        # Penalty for next pair will take it into account
+                        alignment[i+1][deleted_index] = f'{deleted_segment.segment}ː'
                         double = True
-                        
-                        # Eliminate the penalty altogether if the length is simply transcribed with a diacritic
-                        if re.search(r'[ːˑ]', nxt_pair[gap_index]):
-                            penalty = 0
                         
                 except IndexError:
                     pass
                 
                 # Check preceding pair
-                if i > 0:
+                
+                if i > 0 and not double:
                     prev_pair = alignment[i-1]
-                    if gap_ch not in prev_pair and prev_pair[deleted_index] == deleted_segment:
-                        double = True
-                    
-                        # Eliminate the penalty altogether in the case of 
-                        # an alignment like: [('t', 'tː'), ('t', '-')]
-                        # where the length/gemination is simply transcribed differently
-                        if re.search(r'[ːˑ]', prev_pair[gap_index]):
-                            penalty = 0
-                            
-                if double:
-                    penalty /= penalty_discount
+                    if gap_ch not in prev_pair and prev_pair[deleted_index] == deleted_segment.segment:
+                        penalty = 0 # eliminate the current penalty altogether
+                        alignment[i-1] = list(alignment[i-1])
+                        # Adjust previous penalty to include the length/gemination
+                        alignment[i-1][deleted_index] = f'{deleted_segment.segment}ː'
+                        s1, s2 = alignment[i-1]
+                        penalties[-1] = 1 - sim_func(s1, s2, **kwargs)
             
             # TODO: is this right?
             if prosodic_env_scaling:

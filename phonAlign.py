@@ -1,7 +1,7 @@
 from math import log, inf
 from collections.abc import Iterable
 from nwunschAlign import best_alignment
-from PhoneticSimilarity.segment import _toSegment
+from PhoneticSimilarity.segment import _toSegment, consonants
 from PhoneticSimilarity.phonSim import phone_sim
 from PhoneticSimilarity.phonEnv import get_phon_env
 from auxFuncs import Distance, validate_class
@@ -170,6 +170,27 @@ class Alignment:
         pad_n = max(0, ngram_size-1)
         return [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
     
+    
+    def normalize_geminates(self, alignment=None):
+        if alignment is None:
+            alignment = self.alignment
+        
+        if alignment is None:
+            breakpoint()
+        for i, pair in enumerate(alignment):
+            if i == 0:
+                continue
+        
+            seg1, seg2 = pair
+            prev_pair = alignment[i-1]
+            prev_seg1, prev_seg2 = prev_pair
+            if prev_seg1 == seg1:
+                breakpoint()
+            #     alignment[i-1][0] = f'{prev_seg1}ː'
+            # if prev_seg2 == seg2:
+            #     alignment[alignment]
+            
+            
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices
