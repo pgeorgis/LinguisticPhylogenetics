@@ -154,6 +154,8 @@ class LexicalDataset:
                                             )
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
+        for lang in language_list:
+            self.languages[lang].write_missing_concepts()
         
     
     def load_gold_cognate_sets(self):
@@ -1321,7 +1323,6 @@ class Language:
         
         # Initialize vocabulary and phoneme inventory
         self.create_vocabulary()
-        self.write_missing_concepts()
         self.create_phoneme_inventory()
         self.write_phoneme_inventory()
         self.phoneme_entropy = entropy(self.phonemes)
