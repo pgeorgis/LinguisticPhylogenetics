@@ -219,7 +219,7 @@ if __name__ == "__main__":
     if pmi_params['refresh_all_pmi'] or surprisal_params['refresh_all_surprisal'] or len(pmi_params['refresh']) or len(surprisal_params['refresh']) > 0:
         family.calculate_phoneme_pmi()
         family.write_phoneme_pmi()
-        if eval_params['method'] == 'surprisal' or eval_params['method'] == 'hybrid':
+        if eval_params['method'] in ('surprisal', 'hybrid', 'cascade'):
             family.calculate_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
             family.write_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
 
