@@ -4,7 +4,7 @@ import logging
 import yaml
 from auxFuncs import Distance
 from phyloLing import load_family, transcription_param_defaults
-from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, CascadeDist
+from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, cascade_sim
 from lingDist import gradient_cognate_sim, binary_cognate_sim
 
 # Loglevel mapping
@@ -35,8 +35,7 @@ function_map = {
     'pmi':PMIDist,
     'surprisal':SurprisalDist,
     'phon':PhonologicalDist, # TODO name doesn't match (I think phon is fine because it is neutral between phonological and phonetic, could rename Distance as PhonDist)
-    'levenshtein':LevenshteinDist,
-    'cascade':CascadeDist,
+    'levenshtein':LevenshteinDist
     }
 
 
@@ -94,6 +93,39 @@ def validate_params(params, valid_params, logger):
         raise ValueError
 
 
+def init_hybrid(function_map, eval_params):
+    HybridDist = Distance(
+        func=hybrid_dist,
+        name='HybridDist',
+        funcs=[function_map['pmi'], function_map['surprisal'], function_map['phon']],
+        weights=(
+            eval_params['pmi_weight'],
+            eval_params['surprisal_weight'],
+            eval_params['phon_weight'],
+        )
+    )
+    HybridSim = HybridDist.to_similarity(name='HybridSim') 
+    
+    return HybridSim
+
+
+def init_cascade(params):
+    eval_params = params['evaluation']
+    surprisal_params = params['surprisal']
+    CascadeSim = Distance(
+        func=cascade_sim,
+        name='CascadeSim',
+        sim=True,
+        pmi_weight=eval_params['pmi_weight'],
+        surprisal_weight=eval_params['surprisal_weight'],
+        ngram_size=surprisal_params['ngram'],
+        phon_env=surprisal_params['phon_env'],
+    )
+    CascadeDist = CascadeSim.to_distance('CascadeDist', alpha=0.8)
+    
+    return CascadeDist
+
+
 def write_lang_dists_to_tsv(dist, outfile):
     # TODO add description
     with open(outfile, 'w') as f:
@@ -140,28 +172,15 @@ if __name__ == "__main__":
     tree_params = params['tree']
 
     # Set ngram size used for surprisal
-    if eval_params['method'] == 'surprisal' or eval_params['method'] == 'hybrid':
+    if eval_params['method'] in ('surprisal', 'hybrid', 'cascade'):
         function_map['surprisal'].set('ngram_size', surprisal_params['ngram'])
         SurprisalDist = function_map['surprisal']
 
-        # Initialize HybridDist object 
+        # Initialize hybrid or cascade distance/similarity objects 
         if eval_params['method'] == 'hybrid':
-            HybridDist = Distance(
-                func=hybrid_dist,
-                name='HybridDist',
-                funcs=[PMIDist, SurprisalDist, PhonologicalDist],
-                weights=(
-                    eval_params['pmi_weight'],
-                    eval_params['surprisal_weight'],
-                    eval_params['phon_weight'],
-                )
-            )
-            HybridSim = HybridDist.to_similarity(name='HybridSim') 
-
-            # Add HybridSim to function map
-            function_map['hybrid'] = HybridSim
-            
-            # TODO: same procedure for CascadeSim with configuring surprisal ngram_size, etc.
+            function_map['hybrid'] = init_hybrid(function_map, eval_params)
+        elif eval_params['method'] == 'cascade':
+            function_map['cascade'] = init_cascade(params)
 
     # Designate cluster function if performing auto cognate clustering 
     if cluster_params['cognates'] == 'auto':

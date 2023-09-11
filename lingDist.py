@@ -65,7 +65,7 @@ def get_calibration_params(lang1, lang2, eval_func, seed, sample_size):
     
     # Transform distance scores into similarity scores
     if not eval_func.sim:
-        noncognate_scores = map(dist_to_sim, noncognate_scores)
+        noncognate_scores = [dist_to_sim(score) for score in noncognate_scores]
     
     # Calculate mean and standard deviation from this sample distribution
     mean_nc_score = mean(noncognate_scores) # TODO why is this being recalculated each time?

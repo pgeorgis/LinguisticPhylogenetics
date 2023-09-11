@@ -516,7 +516,7 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, **kwargs):
     
     if sim2dist:
         return sim_to_dist(PMI_score, alpha)
-    
+        
     else:
         return PMI_score
 
@@ -576,14 +576,14 @@ def hybrid_dist(word1, word2, funcs:dict, weights=None)->float:
     
     return score
 
-def cascade_sim(word1, word2):
+def cascade_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
     #pmi_score = pmi_dist(word1, word2, normalize=False, sim2dist=False)
     pmi_score = pmi_dist(word1, word2, sim2dist=False)
     #surprisal_score = mutual_surprisal(word1, word2, normalize=False)
-    surprisal_score = mutual_surprisal(word1, word2)
+    surprisal_score = mutual_surprisal(word1, word2, **kwargs)
     phon_score = phonological_dist(word1, word2)
     #phon_score = phonological_dist(word1, word2, total_dist=True)
-    score = ((1.5*pmi_score) - (2*surprisal_score)) * (1-phon_score)
+    score = ((pmi_weight*pmi_score) - (surprisal_weight*surprisal_score)) * (1-phon_score)
     #score = (pmi_score - (2*surprisal_score)) / (1+phon_score)
     return max(0, score)
 
@@ -612,13 +612,7 @@ SurprisalDist = Distance(
     name='SurprisalDist',
     cluster_threshold=0.74, # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
-# Note: Hybrid distance needs to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
-
-CascadeDist = Distance(
-    func=cascade_sim,
-    name='CascadeSim',
-    sim=True
-).to_distance('CascadeDist', alpha=0.8)
+# Note: Hybrid and Cascade distance needs to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
 
 # Z SCORE
 def Z_score(p_values):
