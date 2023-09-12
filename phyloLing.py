@@ -152,6 +152,7 @@ class LexicalDataset:
                                             columns = self.columns,
                                             transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global'])
                                             )
+            self.logger.info(f'Loaded doculect {lang}.')
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
         for lang in language_list:
@@ -368,7 +369,7 @@ class LexicalDataset:
                 for lang2 in self.languages.values():
                         
                     phoneme_surprisal = lang1.phoneme_surprisal[(lang2, ngram_size)]
-                    if len(phoneme_surprisal) == 0:
+                    if lang1 != lang2 and len(phoneme_surprisal) == 0:
                         self.logger.warning(f'Phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}.')
                         continue
                         
@@ -395,7 +396,7 @@ class LexicalDataset:
                 for lang2 in self.languages.values():
                         
                     phoneme_surprisal = lang1.phon_env_surprisal[(lang2, ngram_size)]
-                    if len(phoneme_surprisal) == 0:
+                    if lang1 != lang2 and len(phoneme_surprisal) == 0:
                         self.logger.warning(f'Phonological environment surprisal has not been calculated for pair: {lang1.name} - {lang2.name}.')
                         continue
                         
