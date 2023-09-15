@@ -1,98 +1,184 @@
-from auxFuncs import euclidean_dist
-from phonCorr import PhonemeCorrDetector
-from wordSim import Z_dist
-from statistics import mean, stdev, StatisticsError
-from math import e
-from scipy.stats import norm
+from collections import defaultdict
+from functools import lru_cache
 import random
+from statistics import mean, stdev, StatisticsError
+from scipy.stats import norm
+from auxFuncs import dist_to_sim
+from wordDist import Z_dist
 
+# HELPER FUNCTIONS
+def get_shared_concepts(lang1, lang2, clustered_cognates):
+    """Returns a sorted list of concepts from a clustered cognate class dictionary that both doculects share.
 
-def binary_cognate_sim(lang1, lang2, clustered_cognates,
-                       exclude_synonyms=True):
-    """Calculates the proportion of shared cognates between the two languages.
-    lang1   :   Language class object
-    lang2   :   Language class object
-    clustered_cognates  :   nested dictionary of concepts and cognate IDs with their forms
-    exclude_synonyms    :   Bool, default = True
-        if True, calculation is based on concepts rather than cognate IDs 
-        (i.e. maximum score = 1 for each concept, regardless of how many forms
-         or cognate IDs there are for the concept)"""
-        
-    sims = {}
-    total_cognate_ids = 0
-    for concept in clustered_cognates:
-        shared, not_shared = 0, 0
-        l1_words, l2_words = 0, 0
-        for cognate_id in clustered_cognates[concept]:
-            langs_with_form = set(entry.split('/')[0].strip() 
-                               for entry in clustered_cognates[concept][cognate_id])
-            if lang1.name in langs_with_form:
-                l1_words += 1
-                if lang2.name in langs_with_form:
-                    l2_words += 1
-                    shared += 1
-                else:
-                    not_shared += 1
-            elif lang2.name in langs_with_form:
-                l2_words += 1
-                not_shared += 1
-        
-        if (l1_words > 0) and (l2_words > 0):
-            if exclude_synonyms:
-                sims[concept] = min(shared, 1) if shared > 0 else 0
-                total_cognate_ids += 1
-            else:
-                sims[concept] = max(shared, 0)
-                total_cognate_ids += shared + not_shared
-    
-    return sum(sims.values()) / total_cognate_ids
+    Args:
+        lang1 (phyloLing.Language): First Language object
+        lang2 (phyloLing.Language): Second Language object
+        clustered_cognates (dict): Nested dictionary of Word objects organized by concepts and cognate classes
 
+    Raises:
+        StatisticsError: if no concepts are shared between the two doculects
 
-calibration_params = {} # TODO shouldn't be global variable
-def cognate_sim(lang1, lang2, clustered_cognates,
-                eval_func, eval_sim, exclude_synonyms=True, # TODO improve exclude_synonyms
-                #eval func is tuple (function, {kwarg:value})
-                calibrate=True,
-                min_similarity=0,
-                clustered_id=None,
-                seed=1,
-                n_samples=50,
-                sample_size=0.8,
-                logger=None,
-                **kwargs): # TODO **kwargs isn't used but causes an error if it's not here
-    
-    # Get list of shared concepts between the two languages
-    shared_concepts = [concept for concept in clustered_cognates if concept in lang1.vocabulary if concept in lang2.vocabulary]
+    Returns:
+        list: Sorted list of concepts from the cognate class dictionary shared by both doculects. 
+    """
+    # Needs to be sorted in order to guarantee that random samples of these will be reproducible
+    shared_concepts = sorted(list(clustered_cognates.keys() & lang1.vocabulary.keys() & lang2.vocabulary.keys()))
     if len(shared_concepts) == 0:
         raise StatisticsError(f'Error: no shared concepts found between {lang1.name} and {lang2.name}!')
+    return shared_concepts
+
+
+def filter_cognates_by_lang(lang, cluster):
+    """Filters an iterable of Word objects and returns only those that belong to a particular language.
+
+    Args:
+        lang (phyloLing.Language): Language object of interest
+        cluster (iterable): Iterable of Word objects
+
+    Returns:
+        list: Word objects belonging to the specified Language
+    """
+    return list(filter(lambda word: word.language == lang, cluster))
+
+
+@lru_cache(maxsize=None)
+def get_calibration_params(lang1, lang2, eval_func, seed, sample_size):
+    """Gets the mean and standard deviation of similarity of a random sample of non-cognates (word pairs with different concepts) from two doculects to use for CDF weighting.
+
+    Args:
+        lang1 (phyloLing.Language): First doculect to compare
+        lang2 (phyloLing.Language): Second doculect to compare
+        eval_func (auxFuncs.Distance): Distance to apply to word pairs
+        seed (int): Random seed
+        sample_size (int): Size of random sample
+
+    Returns:
+        tuple: Mean and standard deviation of similarity of random sampling of non-cognate word pairs
+    """
+    # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
+    key = (lang2, eval_func, sample_size, seed)
+    if len(lang1.noncognate_thresholds[key]) > 0:
+        noncognate_scores = lang1.noncognate_thresholds[key]
+    else:
+        correlator = lang1.get_phoneme_correlator(lang2)
+        noncognate_scores = correlator.noncognate_thresholds(eval_func, seed=seed, sample_size=sample_size)
+    
+    # Transform distance scores into similarity scores
+    if not eval_func.sim:
+        noncognate_scores = [dist_to_sim(score) for score in noncognate_scores]
+    
+    # Calculate mean and standard deviation from this sample distribution
+    mean_nc_score = mean(noncognate_scores) # TODO why is this being recalculated each time?
+    nc_score_stdev = stdev(noncognate_scores)
+    
+    # Save calibration parameters
+    return mean_nc_score, nc_score_stdev
+
+
+# LINGUISTIC SIMILARITY MEASURES
+def binary_cognate_sim(lang1, 
+                       lang2, 
+                       clustered_cognates,
+                       exclude_synonyms=True):
+    """Calculates linguistic similarity based on the proportion of shared cognates between two doculects.
+
+    Args:
+        lang1 (phyloLing.Language): First doculect to compare
+        lang2 (phyloLing.Language): Second doculect to compare
+        clustered_cognates (dict): Nested dictionary of Word objects organized by concepts and cognate classes
+        exclude_synonyms (bool, optional): If more than one cognate class is present for the same concept, takes only the most similar pair. Defaults to True.
+
+    Returns:
+        float: Similarity value
+    """
+    # TODO add random forest sampling
+    sims = {}
+    total_cognate_ids = 0
+    shared_concepts = get_shared_concepts(lang1, lang2, clustered_cognates)
+    for concept in shared_concepts:
+        shared, not_shared = 0, 0
+        n_l1_words, n_l2_words = 0, 0
+        for cognate_id in clustered_cognates[concept]:
+            l1_words = filter_cognates_by_lang(lang1, clustered_cognates[concept][cognate_id])
+            l2_words = filter_cognates_by_lang(lang2, clustered_cognates[concept][cognate_id])
+            if len(l1_words) > 0 and len(l2_words) > 0:
+                n_l1_words += 1
+                n_l2_words += 1
+                shared += 1
+            elif len(l1_words) > 0:
+                n_l1_words += 1
+                not_shared += 1
+            elif len(l2_words) > 0:
+                n_l2_words += 1
+                not_shared += 1
+                
+        if exclude_synonyms:
+            sims[concept] = min(shared, 1) if shared > 0 else 0
+            total_cognate_ids += 1
+        else:
+            sims[concept] = shared
+            total_cognate_ids += shared + not_shared
+    
+    similarity = sum(sims.values()) / total_cognate_ids
+    
+    return similarity
+
+
+def gradient_cognate_sim(lang1, 
+                         lang2, 
+                         clustered_cognates,
+                         eval_func, 
+                         exclude_synonyms=True, # TODO improve exclude_synonyms
+                         calibrate=True, # TODO rename
+                         min_similarity=0,
+                         clustered_id=None, # TODO incorporate or remove
+                         seed=1,
+                         n_samples=50,
+                         sample_size=0.8,
+                         logger=None):
+    
+    # Set random seed
+    random.seed(seed)
+    
+    # Get list of shared concepts between the two languages
+    shared_concepts = get_shared_concepts(lang1, lang2, clustered_cognates)
 
     # Random forest-like sampling
     # Take N samples of the available concepts of size K
     # Calculate the cognate sim for each sample, then average together
-    concept_groups = {}
     group_scores = {}
     if n_samples > 1:
-        random.seed(seed)
         # Set default sample size to 80% of shared concepts
         sample_n = round(sample_size*len(shared_concepts))
-        for n in range(n_samples):
-            concept_groups[n] = random.choices(shared_concepts, k=sample_n)
+        # Create N samples of size K
+        concept_groups = {n: set(random.sample(shared_concepts, k=sample_n)) for n in range(n_samples)}
+
         # Ensure that every shared concept is in at least one of the groups
         # If not, add to smallest (if equal sizes then add to one at random)
         for concept in shared_concepts:
-            present = False
-            for n, group in concept_groups.items():
-                if concept in group:
-                    present = True
-                    continue
-            if not present:
-                smallest = min(concept_groups.keys(), key=lambda x: len(concept_groups[x]))
-                concept_groups[smallest].append(concept)
+            if concept not in concept_groups.values():
+                smallest_group = min(concept_groups.keys(), key=lambda x: len(concept_groups[x]))
+                concept_groups[smallest_group].add(concept)
     else:
-        concept_groups[1] = shared_concepts
+        concept_groups = {0: shared_concepts}
 
-    # TODO some of this calculation is redundant, should not be repeated per concept_group
-    scored_pairs = {}
+    # Score all shared concepts in advance, then calculate similarity based on the N samples of concepts
+    scored_pairs = defaultdict(lambda:{})
+    for concept in shared_concepts:
+        for cognate_id in clustered_cognates[concept]:
+            l1_words = filter_cognates_by_lang(lang1, clustered_cognates[concept][cognate_id])
+            l2_words = filter_cognates_by_lang(lang2, clustered_cognates[concept][cognate_id])
+            for l1_word in l1_words:
+                for l2_word in l2_words:
+                    score = eval_func.eval(l1_word, l2_word)
+                    
+                    # Transform distance into similarity
+                    if not eval_func.sim:
+                        score = dist_to_sim(score)
+                    
+                    # Save in scored_pairs
+                    scored_pairs[cognate_id][(l1_word, l2_word)] = score
+
     for n, group in concept_groups.items():
         sims = {}
         group_size = len(group)
@@ -100,29 +186,10 @@ def cognate_sim(lang1, lang2, clustered_cognates,
             concept_sims = {}
             l1_wordcount, l2_wordcount = 0, 0
                 
-            for cognate_id in clustered_cognates[concept]:
-                items = [entry.split('/') for entry in clustered_cognates[concept][cognate_id]]
-                items = [(item[0].strip(), item[1]) for item in items]
-                l1_words = [item[1] for item in items if item[0] == lang1.name]
-                l2_words = [item[1] for item in items if item[0] == lang2.name]
-                l1_wordcount += len(l1_words)
-                l2_wordcount += len(l2_words)
-                for l1_word in l1_words:
-                    for l2_word in l2_words:
-                        if (l1_word, l2_word) in scored_pairs:
-                            score = scored_pairs[(l1_word, l2_word)]
-
-                        else:
-                            score = eval_func[0]((l1_word, lang1), (l2_word, lang2), **eval_func[1])
-                        
-                            # Transform distance into similarity
-                            if not eval_sim:
-                                score = e**-score
-                            
-                            # Save in scored_pairs
-                            scored_pairs[(l1_word, l2_word)] = score
-                        
-                        concept_sims[(l1_word, l2_word)] = score
+            for cognate_id in clustered_cognates[concept]:                
+                l1_wordcount += len(set(pair[0] for pair in scored_pairs[cognate_id]))
+                l1_wordcount += len(set(pair[1] for pair in scored_pairs[cognate_id]))
+                concept_sims.update(scored_pairs[cognate_id])
                         
             if len(concept_sims) > 0:
                 if exclude_synonyms:
@@ -139,32 +206,12 @@ def cognate_sim(lang1, lang2, clustered_cognates,
             
         # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
         if calibrate:
-            
-            try:
-                # Try to load previously calculated calibration parameters
-                mean_nc_score, nc_score_stdev = calibration_params[(lang1, lang2, (eval_func[0], tuple(eval_func[1].items())), n)]
-                
-            except KeyError:
-                if len(lang1.noncognate_thresholds[(lang2, (eval_func[0], tuple(eval_func[1].items())), n)]) > 0:
-                    noncognate_scores = lang1.noncognate_thresholds[(lang2, (eval_func[0], tuple(eval_func[1].items())))]
-                else:
-                    # TODO add PhonemeCorrDetector as attribute of Language class
-                    noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func, seed=seed+n, sample_size=group_size)
-                
-                # Transform distance scores into similarity scores
-                if not eval_sim:
-                    noncognate_scores = [e**-score for score in noncognate_scores]
-                
-                # Calculate mean and standard deviation from this sample distribution
-                mean_nc_score = mean(noncognate_scores)
-                nc_score_stdev = stdev(noncognate_scores)
-                
-                # Save calibration parameters
-                calibration_params[(lang1, lang2, (eval_func[0], tuple(eval_func[1].items())), n)] = mean_nc_score, nc_score_stdev
+            # TODO theoretically this would probably be better to recalculate per group as seed+n rather than seed, but doesn't seem to make a significant difference in tree topology but does significantly impact computational time
+            # should investigate explicitly whether this makes a significant difference
+            mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, seed, group_size)
         
         # Apply minimum similarity and calibration
-        for concept in sims:
-            score = sims[concept]
+        for concept, score in sims.items():
             
             # Calibrate score against scores of non-synonymous word pairs
             # pnorm: proportion of values from a normal distribution with
@@ -182,9 +229,10 @@ def cognate_sim(lang1, lang2, clustered_cognates,
             
             sims[concept] = score if score >= min_similarity else 0
         
-        mean_sim = mean(sims.values())
-
-        group_scores[n] = mean_sim
+        group_scores[n] = mean(sims.values())
+        # TODO try alternative calculation:
+        # prop_non_zero = sum(1 for score in sims.values() if score > 0) / len(sims)
+        # group_scores[n] = sum(sims.values()) * prop_non_zero 
     
     score = mean(group_scores.values())
 
@@ -192,40 +240,15 @@ def cognate_sim(lang1, lang2, clustered_cognates,
         logger.debug(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
     
     return score
-            
+    
 
-# TODO: update this function if necessary
-def weighted_cognate_sim(lang1, lang2, 
-                         clustered_cognates, 
-                         eval_funcs, eval_sims, weights=None,
-                         exclude_synonyms=True, 
-                         **kwargs):
-    if weights is None:
-        weights = [1/len(eval_funcs) for i in range(len(eval_funcs))]
-    sim_score = 0
-    for eval_func, eval_sim, weight in zip(eval_funcs, eval_sims, weights):
-        sim_score += (cognate_sim(lang1, lang2, clustered_cognates=clustered_cognates, 
-                                  eval_func=eval_func, eval_sim=eval_sim, **kwargs) * weight)
-    return sim_score
-            
-    
-def hybrid_cognate_dist(lang1, lang2,
-                       clustered_cognates,
-                       eval_funcs, eval_sims,
-                       exclude_synonyms=True,
-                       **kwargs):
-    scores = []
-    for eval_func, eval_sim in zip(eval_funcs, eval_sims):
-        measure = cognate_sim(lang1, lang2, clustered_cognates, 
-                              eval_func=eval_func, eval_sim=eval_sim,
-                              exclude_synonyms=exclude_synonyms)
-        scores.append(1-measure)
-    return euclidean_dist(scores)
-    
-    
-def Z_score_dist(lang1, lang2, eval_func, eval_sim,
-                #eval func is tuple (function, {kwarg:value})
-                 concept_list=None, exclude_synonyms=True,
+# TODO update or remove Z_score_dist    
+def Z_score_dist(lang1, 
+                 lang2, 
+                 eval_func,
+                #eval func was tuple (function, {kwarg:value}), now is Distance class object
+                 concept_list=None, 
+                 exclude_synonyms=True,
                  seed=1,
                  **kwargs):
     if concept_list is None:
@@ -243,23 +266,22 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
                   for concept in concept_list}
     
     # Score the word form pairs according to the specified function
-    scores = {concept:[eval_func[0](pair[0], pair[1], **eval_func[1]) for pair in word_forms[concept]] 
+    scores = {concept:[eval_func.eval(pair[0], pair[1]) for pair in word_forms[concept]] 
               for concept in word_forms}
     
     # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
-    if len(lang1.noncognate_thresholds[(lang2, (eval_func[0], tuple(eval_func[1].items())))]) > 0:
-        noncognate_scores = lang1.noncognate_thresholds[(lang2, (eval_func[0], tuple(eval_func[1].items())))]
+    if len(lang1.noncognate_thresholds[(lang2, eval_func)]) > 0:
+        noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
     else:
-        noncognate_scores = PhonemeCorrDetector(lang1, lang2).noncognate_thresholds(eval_func)
+        correlator = lang1.get_phoneme_correlator(lang2)
+        noncognate_scores = correlator.noncognate_thresholds(eval_func)
     nc_len = len(noncognate_scores)
         
-    
     # Calculate the p-values for the synonymous word pairs against non-synonymous word pairs
-    if eval_sim:
+    if eval_func.sim:
         p_values = {concept:[(len([nc_score for nc_score in noncognate_scores if nc_score >= score])+1) / (nc_len+1) 
                              for score in scores[concept]] 
                     for concept in scores}
-        
         
     else:
         p_values = {concept:[(len([nc_score for nc_score in noncognate_scores if nc_score <= score])+1) / (nc_len+1) 
@@ -274,15 +296,3 @@ def Z_score_dist(lang1, lang2, eval_func, eval_sim,
     
     
     return Z_dist(p_values)    
-
-
-# DONE:
-# 1) Binary cognate similarity (with/without synonyms)
-# 2) Phonetic word similarity (basic/advanced, with and without feature weighting)
-# 3) PMI similarity/distance
-# 4) Surprisal distance
-# 5) Hybrid distance
-# 6) Z-score distance
-    
-    
-    

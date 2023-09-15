@@ -1,40 +1,45 @@
 from collections import defaultdict
-from auxFuncs import normalize_dict, default_dict, dict_tuplelist, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import phone_align, compatible_segments, phon_env_alignment, phon_env_ngrams
-from statistics import mean, stdev
-import random
-from itertools import product
+from functools import lru_cache
+from itertools import product, combinations
 from math import log
+import os
+import random
 import re
-from phonSim.phonSim import phonEnvironment
+from scipy.stats import norm
+from statistics import mean, stdev
+from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
+from phonAlign import Alignment, compatible_segments
+
 
 class PhonemeCorrDetector:
-    def __init__(self, lang1, lang2, wordlist=None):
+    def __init__(self, lang1, lang2, wordlist=None, seed=1, logger=None):
         self.lang1 = lang1
         self.lang2 = lang2
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
-        # self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2]
         self.scored_words = defaultdict(lambda:{})
-    
+        self.seed = seed
+        self.logger = logger
+        self.outdir = self.lang1.family.phone_corr_dir
+
+
     def prepare_wordlists(self, wordlist):
     
         # If no wordlist is provided, by default use all concepts shared by the two languages
         if wordlist is None:
-            wordlist = [concept for concept in self.lang1.vocabulary 
-                        if concept in self.lang2.vocabulary]
+            wordlist = self.lang1.vocabulary.keys() & self.lang2.vocabulary.keys()
         
         # If a wordlist is provided, use only the concepts shared by both languages
         else:
-            wordlist = [concept for concept in wordlist 
-                        if concept in self.lang1.vocabulary 
-                        if concept in self.lang2.vocabulary]
+            wordlist = set(wordlist) & self.lang1.vocabulary.keys() & self.lang2.vocabulary.keys()
             
-        # Get tuple (concept, orthography, IPA, segmented IPA) for each word entry
-        l1_wordlist = [(concept, word.orthography, word.ipa, word.segments) 
-                       for concept in wordlist for word in self.lang1.vocabulary[concept]]
-        l2_wordlist = [(concept, word.orthography, word.ipa, word.segments) 
-                       for concept in wordlist for word in self.lang2.vocabulary[concept]]
+        # Get lexical items in each language belonging to the specified wordlist
+        l1_wordlist = [word for concept in wordlist for word in self.lang1.vocabulary[concept]]
+        l2_wordlist = [word for concept in wordlist for word in self.lang2.vocabulary[concept]]
+        
+        # Sort the wordlists in order to ensure that random samples of same/different meaning pairs are reproducible
+        l1_wordlist = sorted(l1_wordlist, key=lambda x: x.ipa)
+        l2_wordlist = sorted(l2_wordlist, key=lambda x: x.ipa)
         
         # Get all combinations of L1 and L2 words
         all_wordpairs = product(l1_wordlist, l2_wordlist)
@@ -42,12 +47,10 @@ class PhonemeCorrDetector:
         # Sort out same-meaning from different-meaning word pairs, and loanwords
         same_meaning, diff_meaning, loanwords = [], [], []
         for pair in all_wordpairs:
-            l1_entry, l2_entry = pair
-            gloss1, gloss2 = l1_entry[0], l2_entry[0]
-            if gloss1 == gloss2:
-                if list(l1_entry[1:]) in self.lang1.loanwords[gloss1]:
-                    loanwords.append(pair)
-                elif list(l2_entry[1:]) in self.lang2.loanwords[gloss2]:
+            word1, word2 = pair
+            concept1, concept2 = word1.concept, word2.concept
+            if concept1 == concept2:
+                if word1.loanword or word2.loanword:
                     loanwords.append(pair)
                 else:
                     same_meaning.append(pair)
@@ -58,43 +61,50 @@ class PhonemeCorrDetector:
         return same_meaning, diff_meaning, loanwords
     
     
-    def align_wordlist(self, wordlist, 
-                       align_function=phone_align, **kwargs):
+    def align_wordlist(self, 
+                       wordlist,
+                       added_penalty_dict=None,
+                       **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
-        return [align_function(pair[0][-1], pair[1][-1], **kwargs)
-                for pair in wordlist]
+        return [Alignment(
+            seq1=word1, 
+            seq2=word2,
+            added_penalty_dict=added_penalty_dict,
+            **kwargs
+            ) for word1, word2 in wordlist] # TODO: tuple would be better than list if possible
     
     
     def correspondence_probs(self, alignment_list, ngram_size=1,
                              counts=False, exclude_null=True):
         """Returns a dictionary of conditional phone probabilities, based on a list
-        of alignments.
+        of Alignment objects.
         counts : Bool; if True, returns raw counts instead of normalized probabilities;
         exclude_null : Bool; if True, does not consider aligned pairs including a null segment"""
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
             if exclude_null:
-                alignment = [pair for pair in alignment if '-' not in pair]
+                _alignment = alignment.remove_gaps()
+            else:
+                _alignment = alignment.alignment
             if ngram_size > 1:
-                pad_n = ngram_size - 1
-                alignment = [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
+                _alignment = alignment.pad(ngram_size, _alignment)
                 
-            for i in range(ngram_size-1, len(alignment)):
-                ngram = alignment[i-(ngram_size-1):i+1]
-                segs = list(zip(*ngram))
-                seg1, seg2 = segs
+            for i in range(ngram_size-1, len(_alignment)):
+                ngram = _alignment[i-(ngram_size-1):i+1]
+                seg1, seg2 = list(zip(*ngram))
                 corr_counts[seg1][seg2] += 1
         if not counts:
             for seg1 in corr_counts:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
+
         return corr_counts
 
 
     def phon_env_corr_probs(self, alignment_list, counts=False):
-        # TODO currently works only with ngram_size=1
+        # TODO currently works only with ngram_size=1 (I think this is fine?hh)
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
-            phon_env_align = phon_env_alignment(alignment)
+            phon_env_align = alignment._add_phon_env()
             for seg_weight1, seg2 in phon_env_align:
                 corr_counts[seg_weight1][seg2] += 1
         if not counts:
@@ -104,13 +114,12 @@ class PhonemeCorrDetector:
         return corr_counts
                           
     
-    def radial_counts(self, wordlist, radius=2, normalize=True):
+    def radial_counts(self, wordlist, radius=1, normalize=True):
         """Checks the number of times that phones occur within a specified 
         radius of positions in their respective words from one another"""
         corr_dict = defaultdict(lambda:defaultdict(lambda:0))
-        
-        for item in wordlist:
-            segs1, segs2 = item[0][3], item[1][3]
+        for word1, word2 in wordlist:
+            segs1, segs2 = word1.segments, word2.segments
             for i in range(len(segs1)):
                 seg1 = segs1[i]
                 for j in range(max(0, i-radius), min(i+radius+1, len(segs2))):
@@ -133,9 +142,11 @@ class PhonemeCorrDetector:
                 reverse[seg2][seg1] = corr_dict[seg1][seg2]
         return reverse
 
-    def phoneme_pmi(self, dependent_probs,
+    def phoneme_pmi(self, 
+                    dependent_probs,
                     independent_probs=None,
-                    l1=None, l2=None):
+                    l1=None, 
+                    l2=None):
         """
         dependent_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         independent_probs : None, or nested dictionary of conditional correspondence probabilities in non-cognates
@@ -148,10 +159,12 @@ class PhonemeCorrDetector:
         # If no independent probabilities are specified, 
         # use product of phoneme probabilities by default
         if independent_probs is None:
-            independent_probs = defaultdict(lambda:defaultdict(lambda:0))
+            independent_probs = {}
             for phoneme1 in l1.phonemes:
+                phoneme1_probs = {}
                 for phoneme2 in l2.phonemes:
-                    independent_probs[phoneme1][phoneme2] = l1.phonemes[phoneme1] * l2.phonemes[phoneme2]
+                    phoneme1_probs[phoneme2] = l1.phonemes[phoneme1] * l2.phonemes[phoneme2]
+                independent_probs[phoneme1] = phoneme1_probs 
 
         # Calculate joint probabilities from conditional probabilities
         for corr_dict in [dependent_probs, independent_probs]:
@@ -180,11 +193,14 @@ class PhonemeCorrDetector:
         return pmi_dict
 
 
-    def calc_phoneme_pmi(self, radius=2, max_iterations=10,
-                          p_threshold=0.1,
-                          seed=1,
-                          samples=10,
-                          print_iterations=False, save=True):
+    def calc_phoneme_pmi(self, 
+                         radius=1, # TODO make configurable
+                         max_iterations=10, # TODO make configurable
+                         p_threshold=0.1,
+                         samples=10, # TODO make configurable
+                         sample_size=0.8, # TODO make configurable
+                         log_iterations=True,
+                         save=True):
         """
         Parameters
         ----------
@@ -193,11 +209,9 @@ class PhonemeCorrDetector:
         max_iterations : int, optional
             Maximum number of iterations. The default is 3.
         p_threshold : float, optional
-            p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.05.
-        seed : int, optional
-            Random seed for drawing a sample of different meaning word pairs. The default is 1.
-        print_iterations : bool, optional
-            Whether to print the results of each iteration. The default is False.
+            p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.1.
+        log_iterations : bool, optional
+            Whether to log the results of each iteration. The default is False.
         save : bool, optional
             Whether to save the results to the Language class object's phoneme_pmi attribute. The default is True.
         Returns
@@ -205,6 +219,9 @@ class PhonemeCorrDetector:
         results : collections.defaultdict
             Nested dictionary of phoneme PMI values.
         """
+        if self.logger:
+            self.logger.info(f'Calculating phoneme PMI: {self.lang1.name}-{self.lang2.name}...')
+        
         # First step: calculate probability of phones co-occuring within within 
         # a set radius of positions within their respective words
         synonyms_radius1 = self.radial_counts(self.same_meaning, radius, normalize=False)
@@ -223,11 +240,14 @@ class PhonemeCorrDetector:
                 pmi_step1[seg1][seg2] = mean([pmi_dict_l1l2[seg1][seg2], pmi_dict_l2l1[seg2][seg1]])
         
         sample_results = {}
-        # Take a sample of same-meaning words, by default 70% of available same-meaning pairs
-        sample_size = round(len(self.same_meaning)*0.7)
+        # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
+        sample_size = round(len(self.same_meaning)*sample_size)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
+        iter_logs = defaultdict(lambda:[])
+        def _sort_wordlist(wordlist):
+            return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
         for sample_n in range(samples):
-            random.seed(seed+sample_n)
+            random.seed(self.seed+sample_n)
             synonym_sample = random.sample(self.same_meaning, sample_size)
             # Take a sample of different-meaning words, as large as the same-meaning set
             diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
@@ -236,20 +256,17 @@ class PhonemeCorrDetector:
             # additional penalty, and then recalculate PMI
             iteration = 0
             PMI_iterations = {iteration:pmi_step1}
-            qualifying_words = default_dict({iteration:sorted(synonym_sample)}, l=[])
+            
+            qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
                 iteration += 1
 
                 # Align the qualifying words of the previous step using previous step's PMI
-                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], 
-                                                        added_penalty_dict=PMI_iterations[iteration-1],
-                                                        segmented=True)
+                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1])
                 
                 # Align the sample of different meaning and non-qualifying words again using previous step's PMI
-                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1],
-                                                            added_penalty_dict=PMI_iterations[iteration-1],
-                                                            segmented=True)
+                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1])
                 
                 # Calculate correspondence probabilities and PMI values from these alignments
                 cognate_probs = self.correspondence_probs(cognate_alignments)
@@ -260,15 +277,12 @@ class PhonemeCorrDetector:
                 PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs)# , noncognate_probs)
                 
                 # Align all same-meaning word pairs
-                all_alignments = self.align_wordlist(synonym_sample, 
-                                                    added_penalty_dict=PMI_iterations[iteration-1],
-                                                    segmented=True)
+                all_alignments = self.align_wordlist(synonym_sample, added_penalty_dict=PMI_iterations[iteration-1])
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
-                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] 
-                                                for pair in alignment]))
+                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment]))
                 # nc_mean = mean(noncognate_PMI)
                 # nc_stdev = stdev(noncognate_PMI)
                 
@@ -277,8 +291,7 @@ class PhonemeCorrDetector:
                 qualifying, disqualified = [], []
                 for i, item in enumerate(synonym_sample):
                     alignment = all_alignments[i]
-                    PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] 
-                                    for pair in alignment])
+                    PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment])
                     
                     # pnorm = norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
                     # p_value = 1 - pnorm
@@ -287,27 +300,14 @@ class PhonemeCorrDetector:
                         qualifying.append(item)
                     else:
                         disqualified.append(item)
-                qualifying_words[iteration] = sorted(qualifying)
+                qualifying_words[iteration] = _sort_wordlist(qualifying)
                 disqualified_words[iteration] = disqualified + diff_sample
                 
-                # Print results of this iteration
-                if print_iterations:
-                    print(f'Iteration {iteration}')
-                    print(f'\tQualified: {len(qualifying)}')
-                    added = [item for item in qualifying_words[iteration]
-                            if item not in qualifying_words[iteration-1]]
-                    for item in added:
-                        word1, word2 = item[0][1], item[1][1]
-                        ipa1, ipa2 = item[0][2], item[1][2]
-                        print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
-                    
-                    print(f'\tDisqualified: {len(disqualified)}')
-                    removed = [item for item in qualifying_words[iteration-1]
-                            if item not in qualifying_words[iteration]]
-                    for item in removed:
-                        word1, word2 = item[0][1], item[1][1]
-                        ipa1, ipa2 = item[0][2], item[1][2]
-                        print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
+                # Log results of this iteration
+                if log_iterations:
+                    iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
+                    iter_logs[sample_n].append(iter_log)
+            
                         
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
@@ -327,6 +327,13 @@ class PhonemeCorrDetector:
         else:
             results = sample_results[0]
 
+        # Write the iteration log
+        if log_iterations:
+            pmi_log_dir = os.path.join(self.outdir, 'pmi_logs')
+            os.makedirs(pmi_log_dir, exist_ok=True)
+            log_file = os.path.join(pmi_log_dir, f'{self.lang1.name}-{self.lang2.name}_PMI_iterations.log')
+            self.write_iter_log(iter_logs, log_file)
+
         if save:
             self.lang1.phoneme_pmi[self.lang2] = results
             self.lang2.phoneme_pmi[self.lang1] = self.reverse_corr_dict(results)
@@ -336,34 +343,35 @@ class PhonemeCorrDetector:
         return results
 
     
-    def noncognate_thresholds(self, eval_func, seed=1, sample_size=None, save=True):
-        #eval func is tuple (function, {kwarg:value})
+    def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
         
+        # Set random seed: may or may not be the default seed attribute of the PhonemeCorrDetector class
+        if not seed:
+            seed = self.seed
         random.seed(seed)
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
         if sample_size is None:
             sample_size = len(self.same_meaning)
         diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-        noncognate_word_forms = [((item[0][2], self.lang1), (item[1][2], self.lang2)) for item in diff_sample]
         noncognate_scores = []
-        func, kwargs = eval_func
-        kwargs_hashable = tuple(dict_tuplelist(kwargs))
-        func_key = (func, kwargs_hashable)
-        for pair in noncognate_word_forms:
+        func_key = (eval_func, eval_func.hashable_kwargs)
+        for pair in diff_sample:
             if pair in self.scored_words[func_key]:
                 noncognate_scores.append(self.scored_words[func_key][pair])
             else:
-                score = func(pair[0], pair[1], **kwargs)
+                score = eval_func.eval(pair[0], pair[1])
                 noncognate_scores.append(score)
                 self.scored_words[func_key][pair] = score
         
         if save:
-            self.lang1.noncognate_thresholds[(self.lang2, (eval_func[0], tuple(eval_func[1].items())))] = noncognate_scores
+            key = (self.lang2, eval_func, sample_size, seed)
+            self.lang1.noncognate_thresholds[key] = noncognate_scores
         
         return noncognate_scores
-        
+
+
     def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
         # Iterate over all possible/attested ngrams
         # Only perform calculation for ngrams which have actually been observed/attested to 
@@ -392,9 +400,9 @@ class PhonemeCorrDetector:
                           phon_env_corr_counts=None, 
                           ngram_size=1, 
                           weights=None, 
-                          attested_only=True,
-                          alpha=0.2): # TODO conduct more formal experiment to select default alpha, or find way to adjust automatically
-                          #so far alpha=0.2 is best (at least on Romance)
+                          #attested_only=True,
+                          #alpha=0.2 # TODO conduct more formal experiment to select default alpha, or find way to adjust automatically; so far alpha=0.2 is best (at least on Romance)
+                          ):
         # Interpolation smoothing
         if weights is None:
             # Each ngram estimate will be weighted proportional to its size
@@ -425,7 +433,7 @@ class PhonemeCorrDetector:
                     continue
 
                 phonEnv = ngram1[-1]
-                phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != 'S')
+                phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != '|S|')
                 for context in phonEnv_contexts:
                     ngram1_context = ngram1[:-1] + (context,)
 
@@ -474,31 +482,32 @@ class PhonemeCorrDetector:
                 #                                               d = len(self.lang2.phonemes) + 1)  
                 #              for i in range(ngram_size,0,-1)]
                 # backward
-                estimates = [lidstone_smoothing(x=interpolation[i][ngram1[:i]].get(ngram2, 0), 
-                                                N=sum(interpolation[i][ngram1[:i]].values()), 
-                                                d = len(self.lang2.phonemes) + 1,
-                                                # modification: I believe the d (vocabulary size) value should be every combination of phones from lang1 and lang2
-                                                #d = n_ngram_pairs + 1,
-                                                # updated mod: it should actually be the vocabulary GIVEN the phone of lang1, otherwise skewed by frequency of phone1
-                                                #d = len(interpolation[i][ngram1[:i]]),
-                                                alpha=alpha)
-                            for i in range(ngram_size,0,-1)]
+                estimates = [interpolation[i][ngram1[:i]].get(ngram2, 0) / sum(interpolation[i][ngram1[:i]].values()) 
+                             for i in range(ngram_size,0,-1)]
+                # estimates = [lidstone_smoothing(x=interpolation[i][ngram1[:i]].get(ngram2, 0), 
+                #                                 N=sum(interpolation[i][ngram1[:i]].values()), 
+                #                                 d = len(self.lang2.phonemes) + 1,
+                #                                 # modification: I believe the d (vocabulary size) value should be every combination of phones from lang1 and lang2
+                #                                 #d = n_ngram_pairs + 1,
+                #                                 # updated mod: it should actually be the vocabulary GIVEN the phone of lang1, otherwise skewed by frequency of phone1
+                #                                 #d = len(interpolation[i][ngram1[:i]]),
+                #                                 alpha=alpha)
+                #             for i in range(ngram_size,0,-1)]
                 
                 # add interpolation with phon_env surprisal
                 if phon_env:
                     phonEnv = ngram1_phon_env[-1][-1]
-                    phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != 'S')
+                    phonEnv_contexts = set(context for context in phon_env_ngrams(phonEnv) if context != '|S|')
                     for context in phonEnv_contexts:
                         ngram1_context = ngram1_phon_env[0][:-1] + (context,)
-                        estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0), 
-                                                            N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
-                                                            d = len(self.lang2.phonemes) + 1,
-                                                            alpha=alpha)
-                                                            )
+                        estimates.append(interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0) / sum(interpolation['phon_env'][(ngram1_context,)].values()))
+                        # estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0), 
+                        #                                     N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
+                        #                                     d = len(self.lang2.phonemes) + 1,
+                        #                                     alpha=alpha)
+                        #                                     )
                         # Weight each contextual estimate based on the size of the context
-                        # #S< would have weight 3 because it considers the segment plus context on both sides
-                        # #S would have weight 2 because it considers only the segment plus context on one side 
-                        ngram_weights.append(len(context))
+                        ngram_weights.append(get_phonEnv_weight(context))
 
                 weight_sum = sum(ngram_weights)
                 ngram_weights = [i/weight_sum for i in ngram_weights]
@@ -509,36 +518,43 @@ class PhonemeCorrDetector:
                 else:
                     smoothed_surprisal[ngram1][ngram2] = surprisal(smoothed)
 
-            oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()), 
-                                             d = len(self.lang2.phonemes) + 1,
-                                             alpha=alpha) 
-                          for i in range(ngram_size,0,-1)]
-            if phon_env:
-                for context in phonEnv_contexts:
-                    ngram1_context = ngram1_phon_env[0][:-1] + (context,)
-                    oov_estimates.append(lidstone_smoothing(x=0, 
-                                                            N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
-                                                            d = len(self.lang2.phonemes) + 1,
-                                                            alpha=alpha)
-                    )
-            assert (len(ngram_weights) == len(oov_estimates))
-            smoothed_oov = surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, weights)]))
+            # oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()), 
+            #                                  d = len(self.lang2.phonemes) + 1,
+            #                                  alpha=alpha) 
+            #               for i in range(ngram_size,0,-1)]
+            # if phon_env:
+            #     for context in phonEnv_contexts:
+            #         ngram1_context = ngram1_phon_env[0][:-1] + (context,)
+            #         oov_estimates.append(lidstone_smoothing(x=0, 
+            #                                                 N=sum(interpolation['phon_env'][(ngram1_context,)].values()), 
+            #                                                 d = len(self.lang2.phonemes) + 1,
+            #                                                 alpha=alpha)
+            #         )
+            # assert (len(ngram_weights) == len(oov_estimates))
+            #smoothed_oov = max(surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, ngram_weights)])), self.lang2.phoneme_entropy)
+            smoothed_oov = self.lang2.phoneme_entropy
             
             if phon_env:
                 smoothed_surprisal[ngram1_phon_env] = default_dict(smoothed_surprisal[ngram1_phon_env], l=smoothed_oov)
             else:
                 smoothed_surprisal[ngram1] = default_dict(smoothed_surprisal[ngram1], l=smoothed_oov)
-                
+        
+            # Prune saved surprisal values which exceed the phoneme entropy of lang2
+            to_prune = [ngram2 for ngram2 in smoothed_surprisal[ngram1] if smoothed_surprisal[ngram1][ngram2] > self.lang2.phoneme_entropy]
+            for ngram_to_prune in to_prune:
+                del smoothed_surprisal[ngram1][ngram_to_prune]            
+
         return smoothed_surprisal
     
-    def calc_phoneme_surprisal(self, radius=2, 
+    
+    def calc_phoneme_surprisal(self, radius=1, 
                                max_iterations=10, 
                                p_threshold=0.1,
                                ngram_size=2,
                                gold=False, # TODO add same with PMI?
-                               print_iterations=False,
+                               log_iterations=True,
                                samples=10,
-                               seed=1,
+                               sample_size=0.8, # TODO make configurable
                                save=True):
         # METHOD
         # 1) Calculate phoneme PMI
@@ -549,27 +565,26 @@ class PhonemeCorrDetector:
         if len(self.pmi_dict) == 0:
             self.pmi_dict = self.calc_phoneme_pmi(radius=radius, 
                                                   max_iterations=max_iterations, 
-                                                  p_threshold=p_threshold, 
-                                                  seed=seed)
+                                                  p_threshold=p_threshold)
+        
+        if self.logger:
+            self.logger.info(f'Calculating phoneme surprisal: {self.lang1.name}-{self.lang2.name}...')
 
         if not gold:
             # Take N samples of same and different-meaning words, perform surprisal calibration, then average all of the estimates from the various samples
-            sample_size = round(len(self.same_meaning)*0.7)
+            sample_size = round(len(self.same_meaning)*sample_size)
             sample_results = {}
+            iter_logs = defaultdict(lambda:[])
             for sample_n in range(samples):
-                random.seed(seed+sample_n)
+                random.seed(self.seed+sample_n)
                 same_sample = random.sample(self.same_meaning, sample_size)
                 # Take a sample of different-meaning words, as large as the same-meaning set
                 diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-                diff_meaning_alignments = self.align_wordlist(diff_sample,
-                                                            added_penalty_dict=self.pmi_dict,
-                                                            segmented=True)
+                diff_meaning_alignments = self.align_wordlist(diff_sample, added_penalty_dict=self.pmi_dict)
 
                 # Align same-meaning and different meaning word pairs using PMI values: 
                 # the alignments will remain the same throughout iteration
-                same_meaning_alignments = self.align_wordlist(same_sample,
-                                                              added_penalty_dict=self.pmi_dict,
-                                                              segmented=True)
+                same_meaning_alignments = self.align_wordlist(same_sample, added_penalty_dict=self.pmi_dict)
 
                 # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
                 # Then test each same-meaning word pair to see if if it meets the qualifying threshold
@@ -597,6 +612,8 @@ class PhonemeCorrDetector:
                                                                 normalize=True,
                                                                 ngram_size=ngram_size) 
                                             for alignment in noncognate_alignments]
+                    mean_nc_score = mean(noncognate_surprisal)
+                    nc_score_stdev = stdev(noncognate_surprisal)
                     
                     # Normalize different-meaning pair surprisal scores by self-surprisal of word2
                     # for i in range(len(noncognate_alignments)):
@@ -614,35 +631,22 @@ class PhonemeCorrDetector:
                                                             surprisal_dict=surprisal_iterations[iteration], 
                                                             normalize=True,
                                                             ngram_size=ngram_size)
-                        # self_surprisal = self.lang2.self_surprisal(segs2, segmented=True, normalize=False)
-                        # surprisal_score /= self_surprisal
-                        p_value = (len([score for score in noncognate_surprisal if score <= surprisal_score])+1) / (len(noncognate_surprisal)+1)
-                        if p_value < p_threshold:
+                        
+                        # Proportion of non-cognate word pairs which would have a surprisal score at least as low as this word pair
+                        pnorm = norm.cdf(surprisal_score, loc=mean_nc_score, scale=nc_score_stdev)
+                        if pnorm < p_threshold:
                             qualifying.append(i)
                         else:
                             disqualified.append(i)
+                            
                     qualifying_words[iteration] = qualifying
                     disqualified_words[iteration] = disqualified
-                    
-                    # Print results of this iteration
-                    if print_iterations: # TODO change this to loglevel=DEBUG
-                        print(f'Iteration {iteration}')
-                        print(f'\tQualified: {len(qualifying)}')
-                        added = [same_sample[i] for i in qualifying_words[iteration]
-                                if i not in qualifying_words[iteration-1]]
-                        for item in added:
-                            word1, word2 = item[0][1], item[1][1]
-                            ipa1, ipa2 = item[0][2], item[1][2]
-                            print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
                         
-                        print(f'\tDisqualified: {len(disqualified)}')
-                        removed = [same_sample[i] for i in qualifying_words[iteration-1] 
-                                if i not in qualifying_words[iteration]]
-                        for item in removed:
-                            word1, word2 = item[0][1], item[1][1]
-                            ipa1, ipa2 = item[0][2], item[1][2]
-                            print(f'\t\t{word1} /{ipa1}/ - {word2} /{ipa2}/')
-                
+                    # Log results of this iteration
+                    if log_iterations:
+                        iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words, method='surprisal', same_meaning_alignments=same_meaning_alignments)
+                        iter_logs[sample_n].append(iter_log)
+                    
                 cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
                 sample_results[sample_n] = surprisal_iterations[iteration]
             
@@ -657,20 +661,20 @@ class PhonemeCorrDetector:
                         for sample_n in sample_results:
                             p1_dict[p2].append(sample_results[sample_n][p1][p2])
                         surprisal_results[p1][p2] = mean(p1_dict[p2])
-                    oov_values = []
-                    for sample_n in sample_results:
-                        # Use non-IPA character <?> to retrieve OOV value from surprisal dict
-                        oov_values.append(sample_results[sample_n][p1]['?'])
-                    surprisal_results[p1] = default_dict(surprisal_results[p1], l=mean(oov_values))
+                    # oov_values = []
+                    # for sample_n in sample_results:
+                    #     # Use non-IPA character <?> to retrieve OOV value from surprisal dict
+                    #     oov_values.append(sample_results[sample_n][p1]['?'])
+                    # surprisal_results[p1] = default_dict(surprisal_results[p1], l=mean(oov_values))
+                    surprisal_results[p1] = default_dict(surprisal_results[p1], l=self.lang2.phoneme_entropy)
+                    
             else:
                 surprisal_results = sample_results[0]
 
         else: # gold : assumes wordlist is already coded by cognate; skip iteration and calculate surprisal directly 
             # Align same-meaning and different meaning word pairs using PMI values: 
             # the alignments will remain the same throughout iteration
-            same_meaning_alignments = self.align_wordlist(self.same_meaning,
-                                                        added_penalty_dict=self.pmi_dict,
-                                                        segmented=True)
+            same_meaning_alignments = self.align_wordlist(self.same_meaning, added_penalty_dict=self.pmi_dict)
             
             # TODO need to confirm that when the gloss/concept is checked, it considers the possible cognate class ID, e.g. rain_1
             cognate_alignments = same_meaning_alignments
@@ -680,9 +684,16 @@ class PhonemeCorrDetector:
                                                                                  ngram_size=ngram_size), 
                                                                                  ngram_size=ngram_size)
         
+        # Write the iteration log
+        if log_iterations and not gold:
+            surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs', self.lang1.name)
+            os.makedirs(surprisal_log_dir, exist_ok=True)
+            log_file = os.path.join(surprisal_log_dir, f'{self.lang1.name}-{self.lang2.name}_surprisal_iterations.log')
+            self.write_iter_log(iter_logs, log_file)
+                
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
-            self.correspondence_probs(cognate_alignments, counts=True), 
+            self.correspondence_probs(cognate_alignments, counts=True, exclude_null=False), 
             phon_env_corr_counts=self.phon_env_corr_probs(cognate_alignments, counts=True),
             ngram_size=ngram_size
             )
@@ -694,3 +705,95 @@ class PhonemeCorrDetector:
         self.surprisal_dict = surprisal_results
         
         return surprisal_results, phon_env_surprisal
+
+
+    def _log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
+        iter_log = []
+        if method == 'surprisal':
+            assert same_meaning_alignments is not None
+            
+            def get_word_pairs(indices, lst):
+                aligns = [lst[i] for i in indices]
+                pairs = [(align.word1, align.word2) for align in aligns]
+                return pairs
+            
+            qualifying = get_word_pairs(qualifying_words[iteration], same_meaning_alignments)
+            prev_qualifying = get_word_pairs(qualifying_words[iteration-1], same_meaning_alignments)
+            disqualified = get_word_pairs(disqualified_words[iteration], same_meaning_alignments)
+            prev_disqualified = get_word_pairs(disqualified_words[iteration-1], same_meaning_alignments)
+        else:
+            qualifying = qualifying_words[iteration]
+            prev_qualifying = qualifying_words[iteration-1]
+            disqualified = disqualified_words[iteration]
+            prev_disqualified = disqualified_words[iteration-1]
+        iter_log.append(f'Iteration {iteration}')
+        iter_log.append(f'\tQualified: {len(qualifying)}')
+        added = set(qualifying) - set(prev_qualifying)
+        for word1, word2 in added:
+            iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
+        iter_log.append(f'\tDisqualified: {len(disqualified)}')
+        removed = set(disqualified) - set(prev_disqualified)
+        for word1, word2 in removed:
+            iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
+        
+        iter_log = '\n'.join(iter_log)
+        
+        return iter_log
+    
+    
+    def write_iter_log(self, iter_logs, log_file):
+        with open(log_file, 'w') as f:
+            for n in iter_logs:
+                iter_log = '\n\n'.join(iter_logs[n])
+                f.write(f'****SAMPLE {n+1}****\n')
+                f.write(iter_log)
+                f.write('\n\n-------------------\n\n')
+
+
+@lru_cache(maxsize=None)
+def phon_env_ngrams(phonEnv):
+    """Returns set of phonological environment strings of equal and lower order, 
+    e.g. ">|S|#" -> ">|S", "S|#", ">|S|#"
+
+    Args:
+        phonEnv (str): Phonological environment string, e.g. ">S#"
+
+    Returns:
+        set: possible equal and lower order phonological environment strings
+    """
+    assert re.search(r'.+\|S\|.+', phonEnv)
+    prefix, base, suffix = phonEnv.split('|')
+    prefix = prefix.split('_')
+    prefixes = set()
+    for i in range(1, len(prefix)+1):
+        for x in combinations(prefix, i):
+            prefixes.add('_'.join(x))
+    prefixes.add('')
+    suffix = suffix.split('_')
+    suffixes = set()
+    for i in range(1, len(suffix)+1):
+        for x in combinations(suffix, i):
+            suffixes.add('_'.join(x))
+    suffixes.add('')
+    ngrams = set()
+    for prefix in prefixes:
+        for suffix in suffixes:
+            ngrams.add(f'{prefix}|S|{suffix}')
+
+    return ngrams
+
+
+@lru_cache(maxsize=None)
+def get_phonEnv_weight(phonEnv):
+    # Weight contextual estimate based on the size of the context
+    # #|S|< would have weight 3 because it considers the segment plus context on both sides
+    # #|S would have weight 2 because it considers only the segment plus context on one side
+    # #|S|<_l would have weight 4 because it the context on both sides, with two attributes of RHS context
+    # #|S|<_ALVEOLAR_l would have weight 5 because it the context on both sides, with three attributes of RHS context
+    prefix, base, suffix = phonEnv.split('|')
+    weight = 1 
+    prefix = [p for p in prefix.split('_') if p != '']
+    suffix = [s for s in suffix.split('_') if s != '']
+    weight += len(prefix)
+    weight += len(suffix)
+    return weight

@@ -1,6 +1,6 @@
 from collections import defaultdict
 import pandas as pd
-from math import log, sqrt, e
+from math import log, sqrt, exp
 import re, operator, os
 from unidecode import unidecode
 from numpy import array, amax, zeros, array_split
@@ -24,10 +24,7 @@ def dict_tuplelist(dic, sort=True, n=1, reverse=True):
 
 def default_dict(dic, l):
     """Turns an existing dictionary into a default dictionary with default value l"""
-    dd = defaultdict(lambda:l)
-    for key in dic:
-        dd[key] = dic[key]
-    return dd
+    return defaultdict(lambda: l, dic)
 
 def keywithmaxval(d):
     """Returns the dictionary key with the highest value"""
@@ -72,17 +69,31 @@ def rescale(val, lis, new_min = 0.0, new_max = 1.0):
 # STRING MANIPULATION
 def strip_ch(string, to_remove):
     """Removes a set of characters from strings"""
-    return ''.join([ch for ch in string if ch not in to_remove])
+    to_remove_regex = '|'.join(to_remove)
+    string = re.sub(to_remove_regex, '', string)
+    return string
 
 def format_as_variable(string):
     variable = unidecode(string)
-    variable = re.sub(' ', '', variable)
-    variable = re.sub("'", '', variable)
+    variable = re.sub("[\s'\(\)]", '', variable)
     variable = re.sub('-', '_', variable)
-    variable = re.sub('\(', '', variable)
-    variable = re.sub('\)', '', variable)
     return variable
 
+
+# TYPE VALIDATION
+def validate_class(objs, classes):
+    """Validates that a set of of objects are of the expected classes.
+
+    Args:
+        objs (iterable): iterable of objects
+        classes (iterable): iterable of possible classes
+
+    Raises:
+        TypeError: if the object is of an unexpected class
+    """
+    for obj in objs:
+        if not any(isinstance(obj, cls) for cls in classes):
+            raise TypeError(f"Object {obj} (type = {type(obj)}) is not of the expected classes: {classes}")
 
 
 # CSV/EXCEL FILE TOOLS
@@ -151,27 +162,32 @@ def surprisal(p):
         return -log(p, 2)
     except ValueError:
         raise ValueError(f'Math Domain Error: cannot take the log of {p}')
-        
-# def adaptation_surprisal(alignment, surprisal_dict, normalize=True):
-#     """Calculates the surprisal of an aligned sequence, given a dictionary of 
-#         surprisal values for the sequence corresponcences"""
-#     values = [surprisal_dict[pair[0]][pair[1]] for pair in alignment]
-
-#     if normalize:
-#         return mean(values)
-#     else:
-#         return sum(values)
 
 def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, normalize=True):
     """Calculates the surprisal of an aligned sequence, given a dictionary of 
     surprisal values for the sequence corresponcences"""
+
+    # if type(alignment) is Alignment:
+    #     length = alignment.length
+    #     alignment = alignment.alignment
+    # elif type(alignment) is list:
+    #     length = len(alignment)
+    # else:
+    #     raise TypeError
+    # TODO problem: this function needs to live in this script (auxFuncs.py) to avoid circular imports but importing Alignment object from phonAlign.py would also cause a circular import
+    # Temporary solution: assume that if the alignment is not a list, it is an Alignment class object
+    if type(alignment) is list:
+        length = len(alignment)
+    else:
+        length = alignment.length
+        alignment = alignment.alignment
     
     pad_n = ngram_size - 1
     if ngram_size > 1:
         alignment = [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
     
     values = []
-    for i in range(pad_n, len(alignment)-pad_n):
+    for i in range(pad_n, length+pad_n):
         ngram = alignment[i:i+ngram_size]
         segs = list(zip(*ngram))
         seg1, seg2 = segs
@@ -205,7 +221,97 @@ def lidstone_smoothing(x, N, d, alpha=0.3):
     return (x + alpha) / (N + (alpha*d))
 
 
-# PLOTTING PAIRWISE SIMILARITY / DISTANCE
+# PAIRWISE SIMILARITY / DISTANCE
+class Distance:
+    def __init__(self, func, cluster_threshold=0.5, sim=False, name=None, **kwargs):
+        self.func = func
+        self.kwargs = kwargs
+        self.sim = sim
+        self.cluster_threshold = cluster_threshold
+        self.name = name if name else self.func.__name__
+        self.measured = {}
+        self.hashable_kwargs = self.get_hashable_kwargs(self.kwargs)
+    
+    def set(self, param, value):
+        self.kwargs[param] = value
+        self.hashable_kwargs = self.get_hashable_kwargs(self.kwargs)
+    
+    # TODO possibly use lru_cache instead
+    def eval(self, x, y, **kwargs):
+        if (x, y, self.hashable_kwargs) in self.measured:
+            return self.measured[(x, y, self.hashable_kwargs)]
+        else:
+            for arg, val in kwargs.items():
+                self.set(arg, val)
+            result = self.func(x, y, **self.kwargs)
+            self.measured[(x, y, self.hashable_kwargs)] = result
+            return result
+    
+    def to_similarity(self, name=None):
+        if self.sim is False:
+            def sim_func(x, y, **kwargs):
+                #func=lambda x, y: 1/(1+self.func(x, y, **self.kwargs)), # TODO make this conversion option possible via method argument
+                return dist_to_sim(self.func(x, y, **kwargs))
+            
+            if name is None:
+                name = self.name + '_asSimilarity'
+
+            return Distance(
+                func=sim_func,
+                cluster_threshold=self.cluster_threshold, 
+                sim=True,
+                name=name,
+                **self.kwargs)
+        
+        else:
+            return self
+    
+    def to_distance(self, name=None, alpha=0.5):
+        if self.sim is False:
+            return self
+        else:
+            def dist_func(x, y, **kwargs):
+                return sim_to_dist(self.func(x, y, **kwargs), alpha=alpha)
+            
+            if name is None:
+                name = self.name + '_asDistance'
+            
+            return Distance(
+                func=dist_func,
+                cluster_threshold=self.cluster_threshold,
+                sim=False,
+                name=name,
+                **self.kwargs
+            )
+
+    def get_hashable_kwargs(self, kwargs):
+        hashable = []
+        for key, value in kwargs.items():
+            # Recursively convert nested dictionaries
+            if isinstance(value, dict):
+                value = self.get_hashable_kwargs(value) 
+            
+            # Convert lists to tuples
+            elif isinstance(value, list):
+                value = tuple(value)
+
+            # Get just name of other Distance functions as kwargs
+            elif isinstance(value, Distance):
+                value = value.name
+
+            hashable.append((key, value))
+
+        return tuple(sorted(hashable))
+
+
+def dist_to_sim(distance):
+    return exp(-distance)
+
+
+def sim_to_dist(similarity, alpha):
+    return exp(-max(similarity, 0)**alpha)
+
+
 def euclidean_dist(dists):
     return sqrt(sum([dist**2 for dist in dists]))
 
@@ -221,13 +327,19 @@ def list_mostsimilar(item1, comp_group, dist_func, n=5, sim=True, return_=False,
             print(f'{item[0].name}: {round(item[1], 2)}')
 
 def distance_matrix(group, dist_func, sim=False, **kwargs):
+    if not isinstance(dist_func, Distance):
+        raise TypeError(f'dist_func expected to be Distance class object, found {type(dist_func)}')
+    
+    sim = dist_func.sim
+    func = False
+
     # Initialize nxn distance matrix filled with zeros
     mat = zeros((len(group),len(group)))
     
     # Calculate pairwise distances between items and add to matrix
     for i in range(len(group)):
         for j in range(i+1, len(group)):
-            dist = dist_func(group[i], group[j], **kwargs)
+            dist = dist_func.eval(group[i], group[j], **kwargs)
             
             # Convert similarities to distances
             if sim:
@@ -250,14 +362,20 @@ def linkage_matrix(group, dist_func, sim=False,
     return lm
 
 
-def cluster_items(group, labels,
-                  dist_func, sim, cutoff,
-                  method = 'average', metric='euclidean',
+def cluster_items(group, 
+                  dist_func, 
+                  sim, 
+                  cutoff,
+                  labels=None,
+                  method='average', 
+                  metric='euclidean',
+                  return_labels=False,
                   **kwargs):
     lm = linkage_matrix(group, dist_func, sim, method, metric, **kwargs)
     cluster_labels = fcluster(lm, cutoff, 'distance')
+    targets = labels if labels else group
     clusters = defaultdict(lambda:[])
-    for item, cluster in sorted(zip(labels, cluster_labels), key=lambda x: x[1]):
+    for item, cluster in sorted(zip(targets, cluster_labels), key=lambda x: x[1]):
         # sorting just makes it so that the cluster dictionary will be returned
         # with the clusters in numerical order
         clusters[cluster].append(item)
