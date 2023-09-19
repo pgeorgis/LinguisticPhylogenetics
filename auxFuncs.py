@@ -1,4 +1,5 @@
 from collections import defaultdict
+import datetime
 import pandas as pd
 from math import log, sqrt, exp
 import re, operator, os
@@ -14,6 +15,16 @@ import seaborn as sns
 import networkx as nx
 
 # GENERAL AUXILIARY FUNCTIONS
+def create_timestamp():
+    # Get the current date and time
+    current_datetime = datetime.datetime.now()
+
+    # Format the date and time as a string
+    formatted_datetime = current_datetime.strftime("%Y-%m-%d_%H-%M-%S")
+    
+    return formatted_datetime
+
+
 def dict_tuplelist(dic, sort=True, n=1, reverse=True):
     """Returns a list of (key, value) tuples from the dictionary
     if sort == True, sorts the list by the nth tuple item, by default in decending order"""

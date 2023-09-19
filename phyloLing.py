@@ -15,7 +15,7 @@ from skbio.tree import nj
 import seaborn as sns
 from unidecode import unidecode
 import numpy as np
-from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist
+from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist, create_timestamp
 from auxFuncs import Distance, surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from PhoneticSimilarity.initPhoneData import vowels, consonants, tonemes, suprasegmental_diacritics
 from PhoneticSimilarity.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
@@ -970,7 +970,8 @@ class LexicalDataset:
         if save_directory is None:
             save_directory = self.plots_dir
         if outtree is None:
-            outtree = os.path.join(self.tree_dir, f'{code}.tre')
+            timestamp = create_timestamp()
+            outtree = os.path.join(self.tree_dir, f'{timestamp}.tre') # full code is too long as file name
 
         lm = self.linkage_matrix(dist_func,
                                  concept_list=concept_list, 

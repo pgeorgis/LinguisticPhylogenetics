@@ -2,7 +2,7 @@ import argparse
 import os
 import logging
 import yaml
-from auxFuncs import Distance
+from auxFuncs import Distance, create_timestamp
 from phyloLing import load_family, transcription_param_defaults
 from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, cascade_sim
 from lingDist import gradient_cognate_sim, binary_cognate_sim
@@ -284,7 +284,8 @@ if __name__ == "__main__":
 
     # Generate Newick tree string
     logger.info(f'Generating phylogenetic tree...')
-    outtree = os.path.join(family_params['outdir'], 'trees', code+'.tre') # TODO this could still be improved
+    timestamp = create_timestamp()
+    outtree = os.path.join(family_params['outdir'], 'trees', timestamp+'.tre') # TODO this could still be improved
     tree = family.draw_tree(
         cluster_func=clusterDist,
         dist_func=distFunc,
@@ -298,6 +299,6 @@ if __name__ == "__main__":
     logger.info(f'Wrote Newick tree to {outtree}')
     print(tree)
     
-    write_lang_dists_to_tsv(distFunc, outfile=os.path.join(family.dist_matrix_dir, f'{code}_scored.tsv'))
+    write_lang_dists_to_tsv(distFunc, outfile=os.path.join(family.dist_matrix_dir, f'{timestamp}_scored.tsv'))
     
     logger.info('Completed successfully.')
