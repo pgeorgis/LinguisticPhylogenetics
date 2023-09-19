@@ -42,7 +42,7 @@ evaluation:
   phon_weight: 0.25
   n_samples: 10
   sample_size: 0.8
-  # TODO would be better if user can define custom combination of eval functions and weights
+  exclude_synonyms: true
   calibrate: true
   min_similarity: 0
 

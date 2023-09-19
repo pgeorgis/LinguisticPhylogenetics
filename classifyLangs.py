@@ -261,6 +261,7 @@ if __name__ == "__main__":
             eval_func=evalDist,
             n_samples=eval_params['n_samples'], 
             sample_size=eval_params['sample_size'], 
+            exclude_synonyms=eval_params['exclude_synonyms'],
             calibrate=eval_params['calibrate'],
             min_similarity=eval_params['min_similarity'],
             logger=logger,
