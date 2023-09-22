@@ -34,7 +34,8 @@ transcription_param_defaults = {
     'combine_diphthongs':True,
     'normalize_geminates':False,
     'preaspiration':True,
-    'ch_to_remove':suprasegmental_diacritics.union({' '}),
+    'ch_to_remove':{' '},
+    'suprasegmentals':suprasegmental_diacritics,
     }
 
 
@@ -1322,6 +1323,7 @@ class Language:
         self.transcription_params = transcription_params
         if not self.transcription_params['ignore_stress']:
             self.transcription_params['ch_to_remove'] = self.transcription_params['ch_to_remove'] - {'ˈ', 'ˌ'}
+        self.transcription_params['suprasegmentals'] = suprasegmental_diacritics.union(self.transcription_params['suprasegmentals'])
         
         # Initialize vocabulary and phoneme inventory
         self.create_vocabulary()
@@ -1356,6 +1358,7 @@ class Language:
                 normalize_geminates = self.transcription_params['normalize_geminates'],
                 combine_diphthongs = self.transcription_params['combine_diphthongs'],
                 preaspiration = self.transcription_params['preaspiration'],
+                suprasegmentals = self.transcription_params['suprasegmentals'],
                 language = self,
                 cognate_class = cognate_class,
                 loanword = loan,
@@ -1716,7 +1719,8 @@ class Word:
                  asjp=False,
                  normalize_geminates=False,
                  combine_diphthongs=True,
-                 preaspiration=True
+                 preaspiration=True,
+                 suprasegmentals=None
                  ):
         self.language = language
         self.parameters = {
@@ -1724,7 +1728,8 @@ class Word:
             'asjp':asjp,
             'normalize_geminates':normalize_geminates,
             'combine_diphthongs':combine_diphthongs,
-            'preaspiration':preaspiration
+            'preaspiration':preaspiration,
+            'suprasegmentals':suprasegmentals
         }
         self.raw_ipa = ipa_string
         self.ipa = self.preprocess(ipa_string, asjp=asjp, normalize_geminates=normalize_geminates)
@@ -1734,7 +1739,11 @@ class Word:
         self.orthography = orthography
         self.segments = self.segment(ch_to_remove, 
                                      combine_diphthongs=combine_diphthongs, 
-                                     preaspiration=preaspiration)
+                                     preaspiration=preaspiration,
+                                     suprasegmentals=suprasegmentals
+                                     )
+        if self.language.name == 'Czech':
+            breakpoint()
         self.syllables = None
         self.phon_env = self.getPhonEnv()
         self.info_content = None
@@ -1780,13 +1789,14 @@ class Word:
         return ipa_string
 
 
-    def segment(self, ch_to_remove, combine_diphthongs, preaspiration):
+    def segment(self, ch_to_remove, combine_diphthongs, preaspiration, suprasegmentals):
         return segment_ipa(
             self.ipa, 
             # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
             remove_ch=''.join(ch_to_remove), 
             combine_diphthongs=combine_diphthongs,
-            preaspiration=preaspiration
+            preaspiration=preaspiration,
+            suprasegmentals=suprasegmentals
         )
         
     def get_syllables(self, **kwargs):
