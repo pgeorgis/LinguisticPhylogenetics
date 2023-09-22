@@ -83,7 +83,7 @@ def validate_params(params, valid_params, logger):
     if 'doculects' in params['transcription']: 
         for doculect in params['transcription']['doculects']:
             params['transcription']['doculects'][doculect] = {
-                transcription_param:params['transcription']['doculects'].get(transcription_param, params['transcription']['global'][transcription_param])
+                transcription_param:params['transcription']['doculects'][doculect].get(transcription_param, params['transcription']['global'][transcription_param])
                 for transcription_param in transcription_param_defaults
             }
             
