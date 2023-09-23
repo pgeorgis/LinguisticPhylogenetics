@@ -17,12 +17,12 @@ from unidecode import unidecode
 import numpy as np
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist, create_timestamp
 from auxFuncs import Distance, surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
-from PhoneticSimilarity.initPhoneData import vowels, consonants, tonemes, suprasegmental_diacritics
-from PhoneticSimilarity.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
-from PhoneticSimilarity.segment import segment_ipa
-from PhoneticSimilarity.phonSim import phone_sim
-from PhoneticSimilarity.phonEnv import get_phon_env
-from PhoneticSimilarity.syllables import syllabify
+from phonUtils.initPhoneData import vowels, consonants, tonemes, suprasegmental_diacritics
+from phonUtils.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
+from phonUtils.segment import segment_ipa
+from phonUtils.phonSim import phone_sim
+from phonUtils.phonEnv import get_phon_env
+from phonUtils.syllables import syllabify
 from phonCorr import PhonemeCorrDetector
 from lingDist import Z_score_dist
 import logging
