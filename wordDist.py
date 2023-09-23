@@ -3,10 +3,10 @@ import re
 from statistics import mean
 from asjp import ipa2asjp
 from nltk import edit_distance
-from PhoneticSimilarity.initPhoneData import consonants, vowels, glides, nasals, palatal, alveolopalatal, postalveolar
-from PhoneticSimilarity.ipaTools import strip_diacritics
-from PhoneticSimilarity.segment import _toSegment
-from PhoneticSimilarity.phonSim import phone_sim
+from phonUtils.initPhoneData import consonants, vowels, glides, nasals, palatal, alveolopalatal, postalveolar
+from phonUtils.ipaTools import strip_diacritics
+from phonUtils.segment import _toSegment
+from phonUtils.phonSim import phone_sim
 from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal
 from phonAlign import Alignment, get_alignment_iter
 
@@ -150,7 +150,7 @@ def phonological_dist(word1,
         word2 (phyloLing.Word): second Word object, or an Alignment object. Defaults to None. # TODO word2=None is weird, could instead require either two words or a single alignment as input  
         sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
-        max_sonority (int, optional): Maximum sonority value. Defaults to 16 as defined in PhoneticSimilarity submodule.
+        max_sonority (int, optional): Maximum sonority value. Defaults to 16 as defined in phonUtils submodule.
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
         penalty_discount (int, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
         prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
