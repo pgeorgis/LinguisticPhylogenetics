@@ -19,7 +19,7 @@ from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable,
 from auxFuncs import Distance, surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonUtils.initPhoneData import vowels, consonants, tonemes, suprasegmental_diacritics
 from phonUtils.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
-from phonUtils.segment import segment_ipa
+from phonUtils.segment import segment_ipa, _toSegment
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 from phonUtils.syllables import syllabify
@@ -1321,8 +1321,8 @@ class Language:
         
         # Transcription and segmentation parameters
         self.transcription_params = transcription_params
-        if not self.transcription_params['ignore_stress']:
-            self.transcription_params['ch_to_remove'] = self.transcription_params['ch_to_remove'] - {'ˈ', 'ˌ'}
+        if self.transcription_params['ignore_stress']:
+            self.transcription_params['ch_to_remove'].update({'ˈ', 'ˌ'})
         self.transcription_params['suprasegmentals'] = suprasegmental_diacritics.union(self.transcription_params['suprasegmentals'])
         
         # Initialize vocabulary and phoneme inventory
@@ -1420,17 +1420,18 @@ class Language:
         # Get dictionaries of vowels and consonants
         self.vowels = normalize_dict({v:self.phonemes[v] 
                                       for v in self.phonemes 
-                                      if strip_diacritics(v)[0] in vowels}, 
+                                      if v not in suprasegmental_diacritics and strip_diacritics(v)[0] in vowels}, # TODO this should be improved
                                      default=True, lmbda=0)
         
         self.consonants = normalize_dict({c:self.phonemes[c] 
                                          for c in self.phonemes 
-                                         if strip_diacritics(c)[0] in consonants}, 
+                                         if c not in suprasegmental_diacritics and strip_diacritics(c)[0] in consonants}, # TODO this should be improved
                                          default=True, lmbda=0)
         
+        # TODO: rename as self.suprasegmentals
         self.tonemes = normalize_dict({t:self.phonemes[t] 
                                        for t in self.phonemes 
-                                       if strip_diacritics(t)[0] in tonemes}, 
+                                       if t in suprasegmental_diacritics or strip_diacritics(t)[0] in tonemes}, # TODO this should be improved
                                       default=True, lmbda=0)
         
         # Designate language as tonal if it has tonemes
@@ -1448,7 +1449,7 @@ class Language:
                                     self.tonemes],
                                     ['VOWELS',
                                     'CONSONANTS',
-                                    'TONEMES']):
+                                    'SUPRASEGMENTALS']):
                 if len(group) > 0:
                     f.write(f'{label}\n')
                     for phone, prob in dict_tuplelist(group):
@@ -1742,8 +1743,6 @@ class Word:
                                      preaspiration=preaspiration,
                                      suprasegmentals=suprasegmentals
                                      )
-        if self.language.name == 'Czech':
-            breakpoint()
         self.syllables = None
         self.phon_env = self.getPhonEnv()
         self.info_content = None

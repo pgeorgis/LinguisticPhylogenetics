@@ -761,24 +761,27 @@ def phon_env_ngrams(phonEnv):
     Returns:
         set: possible equal and lower order phonological environment strings
     """
-    assert re.search(r'.+\|S\|.+', phonEnv)
-    prefix, base, suffix = phonEnv.split('|')
-    prefix = prefix.split('_')
-    prefixes = set()
-    for i in range(1, len(prefix)+1):
-        for x in combinations(prefix, i):
-            prefixes.add('_'.join(x))
-    prefixes.add('')
-    suffix = suffix.split('_')
-    suffixes = set()
-    for i in range(1, len(suffix)+1):
-        for x in combinations(suffix, i):
-            suffixes.add('_'.join(x))
-    suffixes.add('')
-    ngrams = set()
-    for prefix in prefixes:
-        for suffix in suffixes:
-            ngrams.add(f'{prefix}|S|{suffix}')
+    if re.search(r'.\|S\|.+', phonEnv):
+        prefix, base, suffix = phonEnv.split('|')
+        prefix = prefix.split('_')
+        prefixes = set()
+        for i in range(1, len(prefix)+1):
+            for x in combinations(prefix, i):
+                prefixes.add('_'.join(x))
+        prefixes.add('')
+        suffix = suffix.split('_')
+        suffixes = set()
+        for i in range(1, len(suffix)+1):
+            for x in combinations(suffix, i):
+                suffixes.add('_'.join(x))
+        suffixes.add('')
+        ngrams = set()
+        for prefix in prefixes:
+            for suffix in suffixes:
+                ngrams.add(f'{prefix}|S|{suffix}')
+    else:
+        assert phonEnv == '|S|'
+        return [phonEnv]
 
     return ngrams
 
