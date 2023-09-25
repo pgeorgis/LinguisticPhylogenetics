@@ -195,9 +195,10 @@ class PhonemeCorrDetector:
 
     def calc_phoneme_pmi(self, 
                          radius=1, # TODO make configurable
-                         max_iterations=10, # TODO make configurable
-                         p_threshold=0.1,
-                         samples=10, # TODO make configurable
+                         p_threshold=0.05,
+                         p_step=0.02,
+                         max_p=0.25,
+                         samples=5, # TODO make configurable
                          sample_size=0.8, # TODO make configurable
                          log_iterations=True,
                          save=True):
@@ -221,6 +222,7 @@ class PhonemeCorrDetector:
         """
         if self.logger:
             self.logger.info(f'Calculating phoneme PMI: {self.lang1.name}-{self.lang2.name}...')
+            
         
         # First step: calculate probability of phones co-occuring within within 
         # a set radius of positions within their respective words
@@ -246,6 +248,7 @@ class PhonemeCorrDetector:
         iter_logs = defaultdict(lambda:[])
         def _sort_wordlist(wordlist):
             return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
+        max_iterations = max(round((max_p-p_threshold)/p_step), 2)
         for sample_n in range(samples):
             random.seed(self.seed+sample_n)
             synonym_sample = random.sample(self.same_meaning, sample_size)
@@ -256,10 +259,12 @@ class PhonemeCorrDetector:
             # additional penalty, and then recalculate PMI
             iteration = 0
             PMI_iterations = {iteration:pmi_step1}
-            
+            p_threshold_sample = p_threshold
             qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
-            while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
+            #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
+            while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0,iteration-5),iteration)]):
+            #while (iteration < max_iterations) and (nc_thresholds[iteration-1] not in [nc_thresholds[i] for i in range(max(0,iteration-2),iteration-1)]):
                 iteration += 1
 
                 # Align the qualifying words of the previous step using previous step's PMI
@@ -283,8 +288,8 @@ class PhonemeCorrDetector:
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
                     noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment]))
-                # nc_mean = mean(noncognate_PMI)
-                # nc_stdev = stdev(noncognate_PMI)
+                nc_mean = mean(noncognate_PMI)
+                nc_stdev = stdev(noncognate_PMI)
                 
                 # Score same-meaning alignments for overall PMI and calculate p-value
                 # against different-meaning alignments
@@ -293,25 +298,31 @@ class PhonemeCorrDetector:
                     alignment = all_alignments[i]
                     PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment])
                     
-                    # pnorm = norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
-                    # p_value = 1 - pnorm
-                    p_value = (len([score for score in noncognate_PMI if score >= PMI_score])+1) / (len(noncognate_PMI)+1)
-                    if p_value < p_threshold:
+                    # Proportion of non-cognate word pairs which would have a PMI score at least as low as this word pair
+                    pnorm = 1 - norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
+                    if pnorm < p_threshold_sample:
                         qualifying.append(item)
                     else:
                         disqualified.append(item)
                 qualifying_words[iteration] = _sort_wordlist(qualifying)
                 disqualified_words[iteration] = disqualified + diff_sample
+                if p_threshold_sample+p_step <= max_p:
+                    p_threshold_sample += p_step
                 
                 # Log results of this iteration
                 if log_iterations:
                     iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
                     iter_logs[sample_n].append(iter_log)
             
-                        
+            # Save final set of qualifying/disqualified word pairs
+            if log_iterations:
+                iter_logs[sample_n].append((qualifying_words[iteration], _sort_wordlist(disqualified)))
+            
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
             sample_results[sample_n] = results
+            # if self.logger:
+            #     self.logger.debug(f'Sample {sample_n+1} converged after {iteration} iterations.')
         
         # Average together the PMI estimations from each sample
         if samples > 1:
@@ -646,6 +657,11 @@ class PhonemeCorrDetector:
                     if log_iterations:
                         iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words, method='surprisal', same_meaning_alignments=same_meaning_alignments)
                         iter_logs[sample_n].append(iter_log)
+
+                # Save final set of qualifying/disqualified word pairs
+                if log_iterations:
+                    iter_logs[sample_n].append(([same_sample[i] for i in qualifying], 
+                                                [same_sample[i] for i in disqualified]))
                     
                 cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
                 sample_results[sample_n] = surprisal_iterations[iteration]
@@ -728,11 +744,13 @@ class PhonemeCorrDetector:
             prev_disqualified = disqualified_words[iteration-1]
         iter_log.append(f'Iteration {iteration}')
         iter_log.append(f'\tQualified: {len(qualifying)}')
+        iter_log.append(f'\tDisqualified: {len(disqualified)}')
         added = set(qualifying) - set(prev_qualifying)
+        iter_log.append(f'\tAdded: {len(added)}')
         for word1, word2 in added:
             iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
-        iter_log.append(f'\tDisqualified: {len(disqualified)}')
         removed = set(disqualified) - set(prev_disqualified)
+        iter_log.append(f'\tRemoved: {len(removed)}')
         for word1, word2 in removed:
             iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
         
@@ -743,10 +761,18 @@ class PhonemeCorrDetector:
     
     def write_iter_log(self, iter_logs, log_file):
         with open(log_file, 'w') as f:
+            f.write(f'Same meaning pairs: {len(self.same_meaning)}\n')
             for n in iter_logs:
-                iter_log = '\n\n'.join(iter_logs[n])
+                iter_log = '\n\n'.join(iter_logs[n][:-1])
                 f.write(f'****SAMPLE {n+1}****\n')
                 f.write(iter_log)
+                final_qualifying, final_disqualified = iter_logs[n][-1]
+                f.write('\n\nFinal qualifying:\n')
+                for word1, word2 in final_qualifying:
+                    f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
+                f.write('\nFinal disqualified:\n')
+                for word1, word2 in final_disqualified:
+                    f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
                 f.write('\n\n-------------------\n\n')
 
 

@@ -37,18 +37,37 @@ def compatible_segments(seg1, seg2):
         return False
 
 
-def phon_alignment_sim(seg1, seg2, phon_func=phone_sim):
-    phon_sim = phon_func(seg1, seg2)
-    if compatible_segments(seg1, seg2):
-        return phon_sim + 0.5
+def phon_alignment_cost(seg1, seg2, phon_func=phone_sim):
+    # sim = phon_func(seg1, seg2)
+    # if sim > 0:
+    #     dist = log(sim)
+    # else:
+    #     dist = 1
+    # if not compatible_segments(seg1, seg2):
+    #     return phon_dist + 0.5
+    # else:
+    #     return phon_dist
+    if seg1 == seg2:
+        return 0
+    elif compatible_segments(seg1, seg2):
+        ph_sim = phon_func(seg1, seg2)
+        if ph_sim > 0:
+            return log(ph_sim)
+        else:
+            return -0.1
     else:
-        return phon_sim
+        # ph_sim = phon_func(seg1, seg2)
+        # if ph_sim > 0:
+        #     return log(ph_sim)
+        # else:
+        #     return -inf
+        return -inf
 
 
-AlignmentPhoneSim = Distance(
-    func=phon_alignment_sim,
-    sim=True,
-    name='AlignmentPhoneSim'
+AlignmentCost = Distance(
+    func=phon_alignment_cost,
+    sim=False,
+    name='AlignmentCost'
 )
 
 class Alignment:
@@ -56,10 +75,10 @@ class Alignment:
                  seq1, seq2,
                  lang1=None, 
                  lang2=None,
-                 cost_func=AlignmentPhoneSim, 
+                 cost_func=AlignmentCost, 
                  added_penalty_dict=None,
                  gap_ch='-',
-                 gop=-0.7, # TODO possibly need to recalibrate **
+                 gop=-0.3, # TODO possibly need to recalibrate **
                  n_best=1,
                  phon_env=False,
                  **kwargs
@@ -94,7 +113,7 @@ class Alignment:
         self.kwargs = kwargs
 
         # Perform alignment
-        self.n_best = self.align(n_best)
+        self.alignment_costs, self.n_best = self.align(n_best)
         self.alignment = self.n_best[0][0]
 
         # Map aligned pairs to respective sequence indices
@@ -172,7 +191,9 @@ class Alignment:
                 # If similarity function, turn into distance and ensure it is negative # TODO add into Distance object
                 if self.cost_func.sim:
                     base_dist = -(1 - base_dist)
-                return base_dist + added_penalty
+                    return base_dist + added_penalty
+                else:
+                    return min(base_dist, -base_dist) + added_penalty
             
             AddedPenaltyDist = Distance(func=added_penalty_dist, **self.kwargs)
             alignment_costs = self.calculate_alignment_costs(AddedPenaltyDist)
@@ -188,7 +209,7 @@ class Alignment:
                               GAP_SCORE=self.gop,
                               N_BEST=n_best)
         
-        return best
+        return alignment_costs, best
     
 
     def remove_gaps(self, alignment=None):
