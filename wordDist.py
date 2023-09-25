@@ -136,7 +136,7 @@ def phonological_dist(word1,
                       word2=None,
                       sim_func=phone_sim,
                       penalize_sonority=True,
-                      max_sonority=16,
+                      max_sonority=17, # Highest sonority: suprasegmentals/tonemes = lowest deletion penalty
                       context_reduction=True, 
                       penalty_discount=2,
                       prosodic_env_scaling=True,
@@ -150,7 +150,7 @@ def phonological_dist(word1,
         word2 (phyloLing.Word): second Word object, or an Alignment object. Defaults to None. # TODO word2=None is weird, could instead require either two words or a single alignment as input  
         sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
-        max_sonority (int, optional): Maximum sonority value. Defaults to 16 as defined in phonUtils submodule.
+        max_sonority (int, optional): Maximum sonority value. Defaults to 17 as defined in phonUtils.segment submodule.
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
         penalty_discount (int, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
         prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
@@ -264,7 +264,6 @@ def phonological_dist(word1,
                     pass
                 
                 # Check preceding pair
-                
                 if i > 0 and not double:
                     prev_pair = alignment[i-1]
                     if gap_ch not in prev_pair and prev_pair[deleted_index] == deleted_segment.segment:
@@ -274,6 +273,22 @@ def phonological_dist(word1,
                         alignment[i-1][deleted_index] = f'{deleted_segment.segment}ː'
                         s1, s2 = alignment[i-1]
                         penalties[-1] = 1 - sim_func(s1, s2, **kwargs)
+                
+                # 8) Stress/accent in different positions should be penalized only once
+                # Check if a later pair includes a deleted suprasegmental/toneme in the opposite alignment position
+                # If so, skip penalizing the current pair altogether
+                if deleted_segment.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
+                    shifted = False
+                    for k in range(i+1, len(alignment)):
+                        if gap_ch in alignment[k]:
+                            gap_k = alignment[k].index(gap_ch)
+                            deleted_k = gap_k - 1
+                            deleted_seg_k = _toSegment(alignment[k][deleted_k])
+                            if deleted_k != deleted_index and deleted_seg_k.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
+                                shifted = True
+                                break
+                    if shifted:
+                        continue
             
             # TODO: is this right?
             if prosodic_env_scaling:
