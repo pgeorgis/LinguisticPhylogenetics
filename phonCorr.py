@@ -7,7 +7,7 @@ import random
 import re
 from scipy.stats import norm
 from statistics import mean, stdev
-from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
+from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal, dict_tuplelist
 from phonAlign import Alignment, compatible_segments, visual_align
 
 
@@ -726,6 +726,10 @@ class PhonemeCorrDetector:
             # Write alignments log
             align_log_file = os.path.join(surprisal_log_dir, 'surprisal_alignments.log')
             self.write_alignments_log(align_log, align_log_file)
+            
+            # Write phoneme correlation report
+            phon_corr_report = os.path.join(surprisal_log_dir, 'surprisal_phon_corr.log')
+            self.write_phon_corr_report(surprisal_results, phon_corr_report, label='Surprisal')
                 
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
@@ -808,6 +812,21 @@ class PhonemeCorrDetector:
                 for alignment in alignment_log[key]:
                     f.write(f'{alignment}\n')
                 f.write('-------------------\n')
+    
+    def write_phon_corr_report(self, corr, outfile, label, n=5):
+        with open(outfile, 'w') as f:
+            f.write(f'{self.lang1.name}\t{self.lang2.name}\t{label}\n')
+            l1_phons = sorted([p for p in corr if p[0] != '-'])
+            for p1 in l1_phons:
+                p2_candidates = corr[p1]
+                if len(p2_candidates) > 0:
+                    p2_candidates = dict_tuplelist(p2_candidates)[-n:]
+                    p2_candidates.reverse()
+                    for p2, sur in p2_candidates:
+                        if sur >= self.lang2.phoneme_entropy:
+                            break
+                        line = '\t'.join([' '.join(p1), str(p2), str(round(sur, 3))])
+                        f.write(f'{line}\n')
 
 
 @lru_cache(maxsize=None)
