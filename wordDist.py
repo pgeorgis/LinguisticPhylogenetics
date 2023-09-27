@@ -449,6 +449,19 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
         weighted_WAS = []
         seq_map1 = alignment.seq_map[0]
         for i, pair in enumerate(alignment.alignment):
+
+            # Skip pairs with aligned suprasegmental features with a gap
+            # when the paired language (of the gap) does not have phonemic tones/suprasegmental features
+            if alignment.gap_ch in pair:
+                gap_index = pair.index(alignment.gap_ch)
+                seg = pair[gap_index-1]
+                if gap_index == 0:
+                    seg_lang, gap_lang = alignment.word2.language, alignment.word1.language
+                else:
+                    seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
+                if seg in seg_lang.tonemes and gap_lang.tonal is False:
+                    continue 
+
             if seq_map1[i] is not None:
                 weight = self_surprisal[seq_map1[i]][-1] / self_info
                 normalized = WAS[i] / normalize_by
