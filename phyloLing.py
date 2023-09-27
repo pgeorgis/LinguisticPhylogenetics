@@ -34,8 +34,8 @@ transcription_param_defaults = {
     'combine_diphthongs':True,
     'normalize_geminates':False,
     'preaspiration':True,
-    'ch_to_remove':{' '},
-    'suprasegmentals':suprasegmental_diacritics,
+    'ch_to_remove':{' '}, # TODO add syllabic diacritics here
+    'suprasegmentals':None,
     }
 
 
@@ -1323,7 +1323,8 @@ class Language:
         self.transcription_params = transcription_params
         if self.transcription_params['ignore_stress']:
             self.transcription_params['ch_to_remove'].update({'ˈ', 'ˌ'})
-        self.transcription_params['suprasegmentals'] = suprasegmental_diacritics.union(self.transcription_params['suprasegmentals'])
+        if self.transcription_params['suprasegmentals']:
+            self.transcription_params['suprasegmentals'] = suprasegmental_diacritics.union(self.transcription_params['suprasegmentals'])
         
         # Initialize vocabulary and phoneme inventory
         self.create_vocabulary()

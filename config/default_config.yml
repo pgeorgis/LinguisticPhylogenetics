@@ -12,6 +12,7 @@ transcription:
         combine_diphthongs: true
         normalize_geminates: false
         preaspiration: true
+        suprasegmentals: 
         ch_to_remove: {'̂', '̆', 'ˈ', '̋', '̀', '́', '̄', 'ˑ', ' ', '̏', '̌', 'ˌ'}
     # doculects:
     #     French:
