@@ -8,7 +8,7 @@ import re
 from scipy.stats import norm
 from statistics import mean, stdev
 from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal
-from phonAlign import Alignment, compatible_segments
+from phonAlign import Alignment, compatible_segments, visual_align
 
 
 class PhonemeCorrDetector:
@@ -262,6 +262,7 @@ class PhonemeCorrDetector:
             p_threshold_sample = p_threshold
             qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
+            align_log = defaultdict(lambda:set())
             #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
             while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0,iteration-5),iteration)]):
             #while (iteration < max_iterations) and (nc_thresholds[iteration-1] not in [nc_thresholds[i] for i in range(max(0,iteration-2),iteration-1)]):
@@ -294,6 +295,7 @@ class PhonemeCorrDetector:
                 # Score same-meaning alignments for overall PMI and calculate p-value
                 # against different-meaning alignments
                 qualifying, disqualified = [], []
+                qualifying_alignments = []
                 for i, item in enumerate(synonym_sample):
                     alignment = all_alignments[i]
                     PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment])
@@ -302,6 +304,7 @@ class PhonemeCorrDetector:
                     pnorm = 1 - norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
                     if pnorm < p_threshold_sample:
                         qualifying.append(item)
+                        qualifying_alignments.append(alignment)
                     else:
                         disqualified.append(item)
                 qualifying_words[iteration] = _sort_wordlist(qualifying)
@@ -314,9 +317,12 @@ class PhonemeCorrDetector:
                     iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
                     iter_logs[sample_n].append(iter_log)
             
-            # Save final set of qualifying/disqualified word pairs
+            # Log final set of qualifying/disqualified word pairs
             if log_iterations:
                 iter_logs[sample_n].append((qualifying_words[iteration], _sort_wordlist(disqualified)))
+            
+                # Log final alignments from which PMI was calculated
+                align_log = self._log_alignments(qualifying_alignments, align_log)
             
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
@@ -340,10 +346,14 @@ class PhonemeCorrDetector:
 
         # Write the iteration log
         if log_iterations:
-            pmi_log_dir = os.path.join(self.outdir, 'pmi_logs')
+            pmi_log_dir = os.path.join(self.outdir, 'pmi_logs', f'{self.lang1.name}-{self.lang2.name}')
             os.makedirs(pmi_log_dir, exist_ok=True)
-            log_file = os.path.join(pmi_log_dir, f'{self.lang1.name}-{self.lang2.name}_PMI_iterations.log')
+            log_file = os.path.join(pmi_log_dir, f'PMI_iterations.log')
             self.write_iter_log(iter_logs, log_file)
+            
+            # Write alignment log
+            align_log_file = os.path.join(pmi_log_dir, 'PMI_alignments.log')
+            self.write_alignments_log(align_log, align_log_file)
 
         if save:
             self.lang1.phoneme_pmi[self.lang2] = results
@@ -603,6 +613,7 @@ class PhonemeCorrDetector:
                 surprisal_iterations = {}
                 qualifying_words = default_dict({iteration:list(range(len(same_meaning_alignments)))}, l=[])
                 disqualified_words = defaultdict(lambda:[])
+                align_log = defaultdict(lambda:set())
                 while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
                     iteration += 1
                     
@@ -636,6 +647,7 @@ class PhonemeCorrDetector:
                     # Score same-meaning alignments for surprisal and calculate p-value
                     # against different-meaning alignments
                     qualifying, disqualified = [], []
+                    qualifying_alignments = []
                     for i, item in enumerate(same_sample):
                         alignment = same_meaning_alignments[i]
                         surprisal_score = adaptation_surprisal(alignment, 
@@ -647,6 +659,7 @@ class PhonemeCorrDetector:
                         pnorm = norm.cdf(surprisal_score, loc=mean_nc_score, scale=nc_score_stdev)
                         if pnorm < p_threshold:
                             qualifying.append(i)
+                            qualifying_alignments.append(alignment)
                         else:
                             disqualified.append(i)
                             
@@ -657,6 +670,9 @@ class PhonemeCorrDetector:
                     if log_iterations:
                         iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words, method='surprisal', same_meaning_alignments=same_meaning_alignments)
                         iter_logs[sample_n].append(iter_log)
+
+                        # Log final alignments from which PMI was calculated
+                        align_log = self._log_alignments(qualifying_alignments, align_log)
 
                 # Save final set of qualifying/disqualified word pairs
                 if log_iterations:
@@ -702,10 +718,14 @@ class PhonemeCorrDetector:
         
         # Write the iteration log
         if log_iterations and not gold:
-            surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs', self.lang1.name)
+            surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs', self.lang1.name, self.lang2.name)
             os.makedirs(surprisal_log_dir, exist_ok=True)
-            log_file = os.path.join(surprisal_log_dir, f'{self.lang1.name}-{self.lang2.name}_surprisal_iterations.log')
+            log_file = os.path.join(surprisal_log_dir, f'surprisal_iterations.log')
             self.write_iter_log(iter_logs, log_file)
+            
+            # Write alignments log
+            align_log_file = os.path.join(surprisal_log_dir, 'surprisal_alignments.log')
+            self.write_alignments_log(align_log, align_log_file)
                 
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
@@ -758,7 +778,6 @@ class PhonemeCorrDetector:
         
         return iter_log
     
-    
     def write_iter_log(self, iter_logs, log_file):
         with open(log_file, 'w') as f:
             f.write(f'Same meaning pairs: {len(self.same_meaning)}\n')
@@ -774,6 +793,21 @@ class PhonemeCorrDetector:
                 for word1, word2 in final_disqualified:
                     f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
                 f.write('\n\n-------------------\n\n')
+    
+    def _log_alignments(self, alignments, align_log=defaultdict(lambda:set())):
+        for alignment in alignments:
+            key = f'/{alignment.word1.ipa}/ - /{alignment.word2.ipa}/'
+            align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
+            align_log[key].add(align_str)
+        return align_log
+    
+    def write_alignments_log(self, alignment_log, log_file):
+        with open(log_file, 'w') as f:
+            for key in alignment_log:
+                f.write(f'{key}\n')
+                for alignment in alignment_log[key]:
+                    f.write(f'{alignment}\n')
+                f.write('-------------------\n')
 
 
 @lru_cache(maxsize=None)
