@@ -111,7 +111,7 @@ class LexicalDataset:
         # Transcription parameters
         self.transcription_params = transcription_params
         if not self.transcription_params['global']['ignore_stress']:
-            self.transcription_params['global']['ch_to_remove'] = self.transcription_params['global']['ch_to_remove'] - {'ˈ', 'ˌ'}
+            self.transcription_params['global']['ch_to_remove'] = set(self.transcription_params['global']['ch_to_remove']) - {'ˈ', 'ˌ'}
             
         # Concepts in dataset
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
