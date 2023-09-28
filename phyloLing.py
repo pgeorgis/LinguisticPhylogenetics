@@ -1311,9 +1311,9 @@ class Language:
         self.phoneme_pmi = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         self.phoneme_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
-        self.detected_cognates = defaultdict(lambda:[]) # TODO is this used?
-        self.detected_noncognates = defaultdict(lambda:[]) # TODO is this used?
         self.noncognate_thresholds = defaultdict(lambda:[])
+        self.lexical_comparison = defaultdict(lambda:defaultdict(lambda:{}))
+        self.lexical_comparison['measures'] = set()
 
 
     def create_vocabulary(self):
@@ -1649,6 +1649,18 @@ class Language:
                                                                 logger=self.family.logger)
 
         return self.phoneme_correlators[key]
+    
+
+    def write_lexical_comparison(self, lang2, outfile):
+        measures = sorted(list(self.lexical_comparison['measures']))
+        with open(outfile, 'w') as f:
+            header = '\t'.join([self.name, lang2.name]+measures)
+            f.write(f'{header}\n')
+            for word1, word2 in self.lexical_comparison[lang2]:
+                values = [self.lexical_comparison[lang2][(word1, word2)].get(measure, 'n/a') for measure in measures]
+                values = [str(v) for v in values]
+                line = '\t'.join([word1.ipa, word2.ipa]+values)
+                f.write(f'{line}\n')
     
     
     def __str__(self):

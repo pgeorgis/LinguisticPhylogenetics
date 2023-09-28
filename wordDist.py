@@ -613,7 +613,24 @@ def cascade_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
     #phon_score = phonological_dist(word1, word2, total_dist=True)
     score = ((pmi_weight*pmi_score) - (surprisal_weight*surprisal_score)) * (1-phon_score)
     #score = (pmi_score - (2*surprisal_score)) / (1+phon_score)
+    
+    # Record word scores # TODO into Distance class object?
+    if word1.concept == word2.concept:
+        log_word_score(word1, word2, score, key='cascade')
+        log_word_score(word1, word2, pmi_score, key='PMI')
+        log_word_score(word1, word2, surprisal_score, key='surprisal')
+        log_word_score(word1, word2, phon_score, key='phon')
+    
     return max(0, score)
+
+
+def log_word_score(word1, word2, score, key):
+    lang1, lang2 = word1.language, word2.language
+    lang1.lexical_comparison[lang2][(word1, word2)][key] = score
+    lang2.lexical_comparison[lang1][(word2, word1)][key] = score
+    lang1.lexical_comparison['measures'].add(key)
+    lang2.lexical_comparison['measures'].add(key)
+    
 
 # Initialize distance functions as Distance objects
 LevenshteinDist = Distance(

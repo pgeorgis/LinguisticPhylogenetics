@@ -299,6 +299,12 @@ if __name__ == "__main__":
     logger.info(f'Wrote Newick tree to {outtree}')
     print(tree)
     
+    # if log_scores:
     write_lang_dists_to_tsv(distFunc, outfile=os.path.join(family.dist_matrix_dir, f'{timestamp}_scored.tsv'))
+    for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):
+        lex_comp_log_dir = os.path.join(family_params['outdir'], 'distances', lang1.name, lang2.name)
+        os.makedirs(lex_comp_log_dir, exist_ok=True)
+        lex_comp_log = os.path.join(lex_comp_log_dir, 'lexical_comparison.tsv')
+        lang1.write_lexical_comparison(lang2, lex_comp_log)
     
     logger.info('Completed successfully.')
