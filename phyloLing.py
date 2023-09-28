@@ -1391,21 +1391,24 @@ class Language:
         for phoneme in self.phonemes:
             self.phonemes[phoneme] = self.phonemes[phoneme] / total_tokens
         
+        # Phone classes
+        phone_classes = {p:_toSegment(p).phone_class for p in self.phonemes}
+        
         # Get dictionaries of vowels and consonants
         self.vowels = normalize_dict({v:self.phonemes[v] 
-                                      for v in self.phonemes 
-                                      if v not in suprasegmental_diacritics and strip_diacritics(v)[0] in vowels}, # TODO this should be improved
+                                      for v in self.phonemes
+                                      if phone_classes[v] in ('VOWEL', 'DIPHTHONG')},
                                      default=True, lmbda=0)
         
         self.consonants = normalize_dict({c:self.phonemes[c] 
-                                         for c in self.phonemes 
-                                         if c not in suprasegmental_diacritics and strip_diacritics(c)[0] in consonants}, # TODO this should be improved
+                                         for c in self.phonemes
+                                         if phone_classes[c] in ('CONSONANT', 'GLIDE')},
                                          default=True, lmbda=0)
         
         # TODO: rename as self.suprasegmentals
         self.tonemes = normalize_dict({t:self.phonemes[t] 
                                        for t in self.phonemes 
-                                       if t in suprasegmental_diacritics or strip_diacritics(t)[0] in tonemes}, # TODO this should be improved
+                                       if phone_classes[t] in ('TONEME', 'SUPRASEGMENTAL')},
                                       default=True, lmbda=0)
         
         # Designate language as tonal if it has tonemes
