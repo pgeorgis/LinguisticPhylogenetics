@@ -859,7 +859,7 @@ def phon_env_ngrams(phonEnv):
             for suffix in suffixes:
                 ngrams.add(f'{prefix}|S|{suffix}')
     else:
-        assert phonEnv == '|S|'
+        assert phonEnv == '|T|'
         return [phonEnv]
 
     return ngrams
