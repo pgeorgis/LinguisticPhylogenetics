@@ -1717,19 +1717,23 @@ class Word:
         return self.parameters.get(label, TRANSCRIPTION_PARAM_DEFAULTS[label])
 
     def preprocess(self, ipa_string):
-        asjp=self.get_parameter('asjp')
-        normalize_geminates=self.get_parameter('normalize_geminates')
 
         # Normalize common IPA character mistakes
         # Normalize affricates to special ligature characters, where available
         ipa_string = normalize_ipa_ch(ipa_string)
         
         # Normalize geminate consonants to /Cː/
-        if normalize_geminates:
+        if self.get_parameter('normalize_geminates'):
             ipa_string = re.sub(fr'([{consonants}])\1', r'\1ː', ipa_string)
         
+        # Level any suprasegmentals to stress annotation
+        supraseg_target = self.get_parameter('level_suprasegmentals')
+        if supraseg_target:
+            suprasegs = self.get_parameter('suprasegmentals')
+            ipa_string = re.sub(fr'[{suprasegs}]', supraseg_target, ipa_string)
+        
         # Convert to ASJP transcription
-        if asjp:
+        if self.get_parameter('asjp'):
             ipa_string = re.sub('~', '', ipa2asjp(ipa_string))
             
             # Convert some non-IPA ASJP characters to IPA equivalents # TODO move this mapping external

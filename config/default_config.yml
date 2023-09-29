@@ -13,7 +13,8 @@ transcription:
         normalize_geminates: false
         preaspiration: true
         suprasegmentals: 
-        ch_to_remove: {'̂', '̆', 'ˈ', '̋', '̀', '́', '̄', 'ˑ', ' ', '̏', '̌', 'ˌ'}
+        level_suprasegmentals: 
+        ch_to_remove: {' '}
     # doculects:
     #     French:
     #         ignore_stress: true
