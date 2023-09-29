@@ -174,7 +174,10 @@ def surprisal(p):
     except ValueError:
         raise ValueError(f'Math Domain Error: cannot take the log of {p}')
 
-def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, normalize=True):
+def surprisal_to_prob(s):
+    return 2**-s
+
+def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False, normalize=True):
     """Calculates the surprisal of an aligned sequence, given a dictionary of 
     surprisal values for the sequence corresponcences"""
 
@@ -191,7 +194,10 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, normalize=True
         length = len(alignment)
     else:
         length = alignment.length
-        alignment = alignment.alignment
+        if phon_env:
+            alignment = alignment.phon_env_alignment
+        else:
+            alignment = alignment.alignment
     
     pad_n = ngram_size - 1
     if ngram_size > 1:
