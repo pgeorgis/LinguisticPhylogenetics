@@ -1405,15 +1405,19 @@ class Language:
                                          if phone_classes[c] in ('CONSONANT', 'GLIDE')},
                                          default=True, lmbda=0)
         
-        # TODO: rename as self.suprasegmentals
+        # TODO: rename as self.suprasegmentals, possibly distinguish tonemes from other suprasegmentals
         self.tonemes = normalize_dict({t:self.phonemes[t] 
                                        for t in self.phonemes 
                                        if phone_classes[t] in ('TONEME', 'SUPRASEGMENTAL')},
                                       default=True, lmbda=0)
         
-        # Designate language as tonal if it has tonemes
+        # Designate language as tonal if it has tonemes # TODO improve
         if len(self.tonemes) > 0:
             self.tonal = True
+        if set(self.tonemes.keys()) in ({"ˈ"}, {"ˈ", "ˌ"}):
+            self.prosodic_typology = 'STRESS'
+        else:
+            self.prosodic_typology = 'OTHER' # TODO add other prosodic typologies
     
     
     def write_phoneme_inventory(self, n_examples=3, seed=1):
