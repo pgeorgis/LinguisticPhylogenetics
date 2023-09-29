@@ -478,18 +478,17 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                     if accent_is_shifted(align_iter, i, alignment.gap_ch):
                         continue
 
-            # Continued from above:
-            # When comparing between a pitch accent and stress accent language, 
-            # reduce surprisal from perspective of stress accent language
-            # by instead using total probability of being aligned with any suprasegmental in the pitch accent language
-            # Amounts to normalizing to accented vs. non-accented syllable from the perspective of stress accent language
-            # TODO: unsure if accessing probability is possible, maybe just halve the surprisal
-            # TODO : confirm that this should be done
-            elif alignment.word1.language.prosodic_typology == 'STRESS' and alignment.word2.language.prosodic_typology != 'STRESS':
-                if self_surprisal[seq_map1[i]][0] in {"ˈ", "ˌ"}:
-                    corr = sur_dict[(pair[0],)]
-                    accent_probs = [surprisal_to_prob(corr[c]) for c in corr if c != alignment.gap_ch]
-                    WAS[i] = surprisal(sum(accent_probs))
+            # # Continued from above:
+            # # When comparing between a pitch accent and stress accent language, 
+            # # reduce surprisal from perspective of stress accent language
+            # # by instead using total probability of being aligned with any suprasegmental in the pitch accent language
+            # # Amounts to normalizing to accented vs. non-accented syllable from the perspective of stress accent language
+            # # TODO : confirm that this should be done
+            # elif alignment.word1.language.prosodic_typology == 'STRESS' and alignment.word2.language.prosodic_typology != 'STRESS':
+            #     if self_surprisal[seq_map1[i]][0] in {"ˈ", "ˌ"}:
+            #         corr = sur_dict[(pair[0],)]
+            #         accent_probs = [surprisal_to_prob(corr[c]) for c in corr if c != alignment.gap_ch]
+            #         WAS[i] = surprisal(sum(accent_probs))
 
             if seq_map1[i] is not None:
                 weight = self_surprisal[seq_map1[i]][-1] / self_info
