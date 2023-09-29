@@ -28,7 +28,7 @@ from lingDist import Z_score_dist
 import logging
 
 
-transcription_param_defaults = {
+TRANSCRIPTION_PARAM_DEFAULTS = {
     'asjp':False,
     'ignore_stress':False,
     'combine_diphthongs':True,
@@ -36,6 +36,7 @@ transcription_param_defaults = {
     'preaspiration':True,
     'ch_to_remove':{' '}, # TODO add syllabic diacritics here
     'suprasegmentals':None,
+    'level_suprasegmentals':None,
     }
 
 
@@ -52,7 +53,7 @@ class LexicalDataset:
                  loan_c = 'Loan',
                  glottocode_c='Glottocode',
                  iso_code_c='ISO 639-3',
-                 transcription_params={'global':transcription_param_defaults},
+                 transcription_params={'global':TRANSCRIPTION_PARAM_DEFAULTS},
                  logger=None
                  ):
         
@@ -1254,7 +1255,7 @@ class Language:
                  name, 
                  data, 
                  columns,
-                 transcription_params=transcription_param_defaults,
+                 transcription_params=TRANSCRIPTION_PARAM_DEFAULTS,
                  lang_id=None, 
                  glottocode=None, 
                  iso_code=None, 
@@ -1327,12 +1328,7 @@ class Language:
                 ipa_string = entry[self.columns['ipa']], 
                 concept = concept, 
                 orthography = entry[self.columns['orthography']], 
-                ch_to_remove = self.transcription_params['ch_to_remove'],
-                asjp = self.transcription_params['asjp'],
-                normalize_geminates = self.transcription_params['normalize_geminates'],
-                combine_diphthongs = self.transcription_params['combine_diphthongs'],
-                preaspiration = self.transcription_params['preaspiration'],
-                suprasegmentals = self.transcription_params['suprasegmentals'],
+                transcription_parameters=self.transcription_params,
                 language = self,
                 cognate_class = cognate_class,
                 loanword = loan,
@@ -1520,10 +1516,7 @@ class Language:
                 ipa_string = ipa, 
                 concept = concept, 
                 orthography = orthography, 
-                ch_to_remove = transcription_params['ch_to_remove'],
-                normalize_geminates = transcription_params['normalize_geminates'],
-                combine_diphthongs = transcription_params['combine_diphthongs'],
-                preaspiration = transcription_params['preaspiration'],
+                transcription_parameters=transcription_params,
                 language = self,
                 cognate_class = cognate_class,
                 loanword = loan,
@@ -1543,10 +1536,7 @@ class Language:
                 ipa_string = ''.join(word)
             word = Word(
                 ipa_string=ipa_string,
-                ch_to_remove=self.ch_to_remove,
-                normalize_geminates = self.transcription_params['normalize_geminates'],
-                combine_diphthongs = self.transcription_params['combine_diphthongs'],
-                preaspiration = self.transcription_params['preaspiration'],
+                transcription_parameters=self.transcription_params,
                 language=self)
         else:
             raise TypeError
@@ -1708,40 +1698,27 @@ class Word:
                  language=None,
                  cognate_class=None,
                  loanword=False,
-                 # Parameters for preprocessing and segmentation
-                 ch_to_remove=[], 
-                 asjp=False,
-                 normalize_geminates=False,
-                 combine_diphthongs=True,
-                 preaspiration=True,
-                 suprasegmentals=None
+                 transcription_parameters=TRANSCRIPTION_PARAM_DEFAULTS,
                  ):
         self.language = language
-        self.parameters = {
-            'ch_to_remove':ch_to_remove,
-            'asjp':asjp,
-            'normalize_geminates':normalize_geminates,
-            'combine_diphthongs':combine_diphthongs,
-            'preaspiration':preaspiration,
-            'suprasegmentals':suprasegmentals
-        }
+        self.parameters = transcription_parameters
         self.raw_ipa = ipa_string
-        self.ipa = self.preprocess(ipa_string, asjp=asjp, normalize_geminates=normalize_geminates)
+        self.ipa = self.preprocess(ipa_string)
         self.concept = concept
         self.cognate_class = cognate_class
         self.loanword = loanword
         self.orthography = orthography
-        self.segments = self.segment(ch_to_remove, 
-                                     combine_diphthongs=combine_diphthongs, 
-                                     preaspiration=preaspiration,
-                                     suprasegmentals=suprasegmentals
-                                     )
+        self.segments = self.segment()
         self.syllables = None
         self.phon_env = self.getPhonEnv()
         self.info_content = None
+    
+    def get_parameter(self, label):
+        return self.parameters.get(label, TRANSCRIPTION_PARAM_DEFAULTS[label])
 
-
-    def preprocess(self, ipa_string, asjp=False, normalize_geminates=False):
+    def preprocess(self, ipa_string):
+        asjp=self.get_parameter('asjp')
+        normalize_geminates=self.get_parameter('normalize_geminates')
 
         # Normalize common IPA character mistakes
         # Normalize affricates to special ligature characters, where available
@@ -1781,14 +1758,14 @@ class Word:
         return ipa_string
 
 
-    def segment(self, ch_to_remove, combine_diphthongs, preaspiration, suprasegmentals):
+    def segment(self):
         return segment_ipa(
             self.ipa, 
             # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
-            remove_ch=''.join(ch_to_remove), 
-            combine_diphthongs=combine_diphthongs,
-            preaspiration=preaspiration,
-            suprasegmentals=suprasegmentals
+            remove_ch=''.join(self.get_parameter('ch_to_remove')),
+            combine_diphthongs=self.get_parameter('combine_diphthongs'),
+            preaspiration=self.get_parameter('preaspiration'),
+            suprasegmentals=self.get_parameter('suprasegmentals')
         )
         
     def get_syllables(self, **kwargs):
