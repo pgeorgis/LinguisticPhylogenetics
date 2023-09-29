@@ -7,7 +7,7 @@ from phonUtils.initPhoneData import consonants, vowels, glides, nasals, palatal,
 from phonUtils.ipaTools import strip_diacritics
 from phonUtils.segment import _toSegment
 from phonUtils.phonSim import phone_sim
-from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal
+from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal, surprisal, surprisal_to_prob
 from phonAlign import Alignment, get_alignment_iter
 
 
@@ -410,9 +410,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
-    forward_alignment = get_alignment_iter(alignment, phon_env=phon_env)
     rev_alignment = alignment._reverse()
-    backward_alignment = get_alignment_iter(rev_alignment, phon_env=phon_env)
 
     # Calculate the word-adaptation surprisal in each direction
     # (note: alignment needs to be reversed to run in second direction)
@@ -422,9 +420,10 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     else:
         sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
         sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
-    WAS_l1l2 = adaptation_surprisal(forward_alignment,
+    WAS_l1l2 = adaptation_surprisal(alignment,
                                     surprisal_dict=sur_dict1,
                                     ngram_size=ngram_size,
+                                    phon_env=phon_env,
                                     normalize=False)
     if ngram_size > 1:
         breakpoint() # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts... 
@@ -432,9 +431,10 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
         # calculate the 2gram, then get the 2gram's phon_env equivalent
         # interpolate the probability/surprisal of the 2gram with that of the phon_env equivalent 
         raise NotImplementedError
-    WAS_l2l1 = adaptation_surprisal(backward_alignment, 
+    WAS_l2l1 = adaptation_surprisal(rev_alignment, 
                                     surprisal_dict=sur_dict2,
                                     ngram_size=ngram_size,
+                                    phon_env=phon_env,
                                     normalize=False)
 
     # Calculate self-surprisal values in each direction
@@ -444,14 +444,17 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily
     # Normalize by phoneme entropy
-    def weight_by_self_surprisal(alignment, WAS, self_surprisal, normalize_by):
+    def weight_by_self_surprisal(alignment, WAS, self_surprisal, normalize_by, sur_dict, phon_env):
         self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
         weighted_WAS = []
         seq_map1 = alignment.seq_map[0]
-        for i, pair in enumerate(alignment.alignment):
+        align_iter = get_alignment_iter(alignment, phon_env=phon_env)
+        for i, pair in enumerate(align_iter):
 
             # Skip pairs with aligned suprasegmental features with a gap
             # when the paired language (of the gap) does not have phonemic tones/suprasegmental features
+            # Such gaps skew linguistic distances since tones/suprasegmental features occur on most or all words
+            # and never have any equivalent
             if alignment.gap_ch in pair:
                 gap_index = pair.index(alignment.gap_ch)
                 seg = pair[gap_index-1]
@@ -460,16 +463,30 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                 else:
                     seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
                 if seg in seg_lang.tonemes and gap_lang.tonal is False:
-                    continue 
+                    continue
+
+            # Continued from above:
+            # When comparing between a pitch accent and stress accent language, 
+            # reduce surprisal from perspective of stress accent language
+            # by instead using total probability of being aligned with any suprasegmental in the pitch accent language
+            # Amounts to normalizing to accented vs. non-accented syllable from the perspective of stress accent language
+            # TODO: unsure if accessing probability is possible, maybe just halve the surprisal
+            # TODO : confirm that this should be done
+            elif alignment.word1.language.prosodic_typology == 'STRESS' and alignment.word2.language.prosodic_typology != 'STRESS':
+                if self_surprisal[seq_map1[i]][0] in {"ˈ", "ˌ"}:
+                    corr = sur_dict[(pair[0],)]
+                    accent_probs = [surprisal_to_prob(corr[c]) for c in corr if c != alignment.gap_ch]
+                    WAS[i] = surprisal(sum(accent_probs))
 
             if seq_map1[i] is not None:
                 weight = self_surprisal[seq_map1[i]][-1] / self_info
                 normalized = WAS[i] / normalize_by
                 weighted = weight * normalized
                 weighted_WAS.append(weighted)
+                
         return weighted_WAS
-    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1, normalize_by=lang2.phoneme_entropy)
-    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2, normalize_by=lang1.phoneme_entropy)
+    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1, normalize_by=lang2.phoneme_entropy, sur_dict=sur_dict1, phon_env=phon_env)
+    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2, normalize_by=lang1.phoneme_entropy, sur_dict=sur_dict2, phon_env=phon_env)
     # Return and save the average of these two values
     if normalize:
         score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
@@ -607,12 +624,11 @@ def hybrid_dist(word1, word2, funcs:dict, weights=None)->float:
 def cascade_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
     #pmi_score = pmi_dist(word1, word2, normalize=False, sim2dist=False)
     pmi_score = pmi_dist(word1, word2, sim2dist=False)
-    #surprisal_score = mutual_surprisal(word1, word2, normalize=False)
+    #surprisal_score = mutual_surprisal(word1, word2, normalize=False, **kwargs)
     surprisal_score = mutual_surprisal(word1, word2, **kwargs)
     phon_score = phonological_dist(word1, word2)
     #phon_score = phonological_dist(word1, word2, total_dist=True)
     score = ((pmi_weight*pmi_score) - (surprisal_weight*surprisal_score)) * (1-phon_score)
-    #score = (pmi_score - (2*surprisal_score)) / (1+phon_score)
     
     # Record word scores # TODO into Distance class object?
     if word1.concept == word2.concept:
