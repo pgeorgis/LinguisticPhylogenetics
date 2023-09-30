@@ -472,10 +472,10 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                     seg_lang, gap_lang = alignment.word2.language, alignment.word1.language
                 else:
                     seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
-                if seg in seg_lang.tonemes and gap_lang.tonal is False:
-                    continue
-                else:
-                    if accent_is_shifted(align_iter, i, alignment.gap_ch):
+                if seg in seg_lang.tonemes: 
+                    if gap_lang.tonal is False:
+                        continue
+                    elif accent_is_shifted(align_iter, i, alignment.gap_ch):
                         continue
 
             # # Continued from above:
