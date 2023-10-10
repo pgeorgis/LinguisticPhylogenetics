@@ -27,7 +27,6 @@ cluster:
 evaluation:
     similarity: gradient
     method: cascade
-    # this weighting scheme works well for Romance (PMI, surprisal, phonological): 0.5, 0.25, 0.25 OR 0.25, 0.5, 0.25
     pmi_weight: 1.5
     surprisal_weight: 2
     phon_weight: 1
