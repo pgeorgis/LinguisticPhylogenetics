@@ -1348,7 +1348,7 @@ class Language:
             f.write(missing_concepts)
                     
 
-    def create_phoneme_inventory(self):
+    def create_phoneme_inventory(self, warn_n=3):
         for concept in self.vocabulary:
             for word in self.vocabulary[concept]:
                 segments = word.segments
@@ -1385,7 +1385,10 @@ class Language:
         # Normalize counts
         total_tokens = sum(self.phonemes.values())
         for phoneme in self.phonemes:
-            self.phonemes[phoneme] = self.phonemes[phoneme] / total_tokens
+            count = self.phonemes[phoneme]
+            if count < warn_n:
+                self.family.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
+            self.phonemes[phoneme] = count / total_tokens
         
         # Phone classes
         phone_classes = {p:_toSegment(p).phone_class for p in self.phonemes}
