@@ -31,7 +31,11 @@ def compatible_segments(seg1, seg2):
         return True
     elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['sonorant'] == 1:
         return True
+    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['syllabic'] == 1:
+        return True
     elif seg1.features['sonorant'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
+        return True
+    elif seg1.features['syllabic'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
         return True
     else:
         return False
