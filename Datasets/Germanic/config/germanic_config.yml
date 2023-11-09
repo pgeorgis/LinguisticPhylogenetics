@@ -1,8 +1,8 @@
 family:
     name: Germanic
     file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/germanic_data.tsv
-    min_amc: 0.74
-    exclude: ['Old English', 'Old Enɡlish', 'Old Norse', 'Gothic', 'Alsatian']
+    min_amc: 0.65
+    exclude: ['Old English', 'Old Enɡlish', 'Old Norse', 'Gothic', 'Alsatian', 'Low Saxon (old)', 'Northern Low German (Sass)']
     outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/
 
 transcription:

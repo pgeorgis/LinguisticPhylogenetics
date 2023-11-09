@@ -1348,7 +1348,7 @@ class Language:
             f.write(missing_concepts)
                     
 
-    def create_phoneme_inventory(self, warn_n=3):
+    def create_phoneme_inventory(self, warn_n=0):
         for concept in self.vocabulary:
             for word in self.vocabulary[concept]:
                 segments = word.segments
