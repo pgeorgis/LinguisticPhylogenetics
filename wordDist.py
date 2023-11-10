@@ -7,7 +7,7 @@ from phonUtils.initPhoneData import consonants, vowels, glides, nasals, palatal,
 from phonUtils.ipaTools import strip_diacritics
 from phonUtils.segment import _toSegment
 from phonUtils.phonSim import phone_sim
-from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal
+from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal, surprisal, surprisal_to_prob
 from phonAlign import Alignment, get_alignment_iter
 
 
@@ -132,12 +132,31 @@ def prosodic_environment_weight(segments, i):
         # TODO: sonority of free-standing vowels (and consonants)?: would assume same as word-initial
 
 
+def accent_is_shifted(alignment, i, gap_ch):
+    """Returns True if there is an unaligned suprasegmental in the opposite alignment position later in the word relative to position i"""
+    shifted = False
+    deleted_index = alignment[i].index(gap_ch)-1
+    for k in range(i+1, len(alignment)):
+        if gap_ch in alignment[k]:
+            gap_k = alignment[k].index(gap_ch)
+            deleted_k = gap_k - 1
+            if isinstance(alignment[k][deleted_k], tuple): # TODO handle this better, maybe set phon env as Segment object attribute
+                deleted_seg_k = _toSegment(alignment[k][deleted_k][0])
+            else:
+                deleted_seg_k = _toSegment(alignment[k][deleted_k])
+            if abs(deleted_k) != abs(deleted_index) and deleted_seg_k.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
+                shifted = True
+                break
+    return shifted
+
+
 def phonological_dist(word1, 
                       word2=None,
                       sim_func=phone_sim,
                       penalize_sonority=True,
-                      max_sonority=16,
-                      context_reduction=True, 
+                      max_sonority=17, # Highest sonority: suprasegmentals/tonemes = lowest deletion penalty
+                      normalize_geminates=True, 
+                      context_reduction=False, 
                       penalty_discount=2,
                       prosodic_env_scaling=True,
                       total_dist=False, # TODO confirm that this is the better default; I think averaging is required to normalize for different word lengths
@@ -150,7 +169,8 @@ def phonological_dist(word1,
         word2 (phyloLing.Word): second Word object, or an Alignment object. Defaults to None. # TODO word2=None is weird, could instead require either two words or a single alignment as input  
         sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
-        max_sonority (int, optional): Maximum sonority value. Defaults to 16 as defined in phonUtils submodule.
+        max_sonority (int, optional): Maximum sonority value. Defaults to 17 as defined in phonUtils.segment submodule.
+        normalize_geminates (bool, optional): Adjusts deletion penalties when geminates (double consonants) are aligned with long consonants. Defaults to True.
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
         penalty_discount (int, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
         prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
@@ -243,8 +263,8 @@ def phonological_dist(word1,
                     elif deleted_segment.base == 'ʔ':
                         if re.search(r'[ˀ̰]', previous_seg.segment):
                             penalty /= penalty_discount
-                    
-                    
+                       
+            elif normalize_geminates:
                 # 7) If the deleted segment is part of a long/geminate segment transcribed as double (e.g. /tt/ rather than /tː/), 
                 # where at least one part of the geminate has been aligned
                 # Method: check if the preceding or following pair contained the deleted segment at deleted_index, aligned to something other than the gap character
@@ -264,7 +284,6 @@ def phonological_dist(word1,
                     pass
                 
                 # Check preceding pair
-                
                 if i > 0 and not double:
                     prev_pair = alignment[i-1]
                     if gap_ch not in prev_pair and prev_pair[deleted_index] == deleted_segment.segment:
@@ -274,6 +293,13 @@ def phonological_dist(word1,
                         alignment[i-1][deleted_index] = f'{deleted_segment.segment}ː'
                         s1, s2 = alignment[i-1]
                         penalties[-1] = 1 - sim_func(s1, s2, **kwargs)
+                
+                # 8) Stress/accent in different positions should be penalized only once
+                # Check if a later pair includes a deleted suprasegmental/toneme in the opposite alignment position
+                # If so, skip penalizing the current pair altogether
+                if deleted_segment.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
+                    if accent_is_shifted(alignment, i, gap_ch):
+                        continue
             
             # TODO: is this right?
             if prosodic_env_scaling:
@@ -395,9 +421,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
-    forward_alignment = get_alignment_iter(alignment, phon_env=phon_env)
     rev_alignment = alignment._reverse()
-    backward_alignment = get_alignment_iter(rev_alignment, phon_env=phon_env)
 
     # Calculate the word-adaptation surprisal in each direction
     # (note: alignment needs to be reversed to run in second direction)
@@ -407,9 +431,10 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     else:
         sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
         sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
-    WAS_l1l2 = adaptation_surprisal(forward_alignment,
+    WAS_l1l2 = adaptation_surprisal(alignment,
                                     surprisal_dict=sur_dict1,
                                     ngram_size=ngram_size,
+                                    phon_env=phon_env,
                                     normalize=False)
     if ngram_size > 1:
         breakpoint() # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts... 
@@ -417,9 +442,10 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
         # calculate the 2gram, then get the 2gram's phon_env equivalent
         # interpolate the probability/surprisal of the 2gram with that of the phon_env equivalent 
         raise NotImplementedError
-    WAS_l2l1 = adaptation_surprisal(backward_alignment, 
+    WAS_l2l1 = adaptation_surprisal(rev_alignment, 
                                     surprisal_dict=sur_dict2,
                                     ngram_size=ngram_size,
+                                    phon_env=phon_env,
                                     normalize=False)
 
     # Calculate self-surprisal values in each direction
@@ -429,19 +455,52 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily
     # Normalize by phoneme entropy
-    def weight_by_self_surprisal(alignment, WAS, self_surprisal, normalize_by):
+    def weight_by_self_surprisal(alignment, WAS, self_surprisal, normalize_by, sur_dict, phon_env):
         self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
         weighted_WAS = []
         seq_map1 = alignment.seq_map[0]
-        for i, pair in enumerate(alignment.alignment):
+        align_iter = get_alignment_iter(alignment, phon_env=phon_env)
+        for i, pair in enumerate(align_iter):
+
+            # Skip pairs with aligned suprasegmental features with a gap
+            # when the paired language (of the gap) does not have phonemic tones/suprasegmental features
+            # Such gaps skew linguistic distances since tones/suprasegmental features occur on most or all words
+            # and never have any equivalent
+            # Also don't double-penalize deletion for shifted accent
+            if alignment.gap_ch in pair:
+                gap_index = pair.index(alignment.gap_ch)
+                seg = pair[gap_index-1]
+                if gap_index == 0:
+                    seg_lang, gap_lang = alignment.word2.language, alignment.word1.language
+                else:
+                    seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
+                if seg in seg_lang.tonemes: 
+                    if gap_lang.tonal is False:
+                        continue
+                    elif accent_is_shifted(align_iter, i, alignment.gap_ch):
+                        continue
+
+            # # Continued from above:
+            # # When comparing between a pitch accent and stress accent language, 
+            # # reduce surprisal from perspective of stress accent language
+            # # by instead using total probability of being aligned with any suprasegmental in the pitch accent language
+            # # Amounts to normalizing to accented vs. non-accented syllable from the perspective of stress accent language
+            # # TODO : confirm that this should be done
+            # elif alignment.word1.language.prosodic_typology == 'STRESS' and alignment.word2.language.prosodic_typology != 'STRESS':
+            #     if self_surprisal[seq_map1[i]][0] in {"ˈ", "ˌ"}:
+            #         corr = sur_dict[(pair[0],)]
+            #         accent_probs = [surprisal_to_prob(corr[c]) for c in corr if c != alignment.gap_ch]
+            #         WAS[i] = surprisal(sum(accent_probs))
+
             if seq_map1[i] is not None:
                 weight = self_surprisal[seq_map1[i]][-1] / self_info
                 normalized = WAS[i] / normalize_by
                 weighted = weight * normalized
                 weighted_WAS.append(weighted)
+                
         return weighted_WAS
-    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1, normalize_by=lang2.phoneme_entropy)
-    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2, normalize_by=lang1.phoneme_entropy)
+    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1, normalize_by=lang2.phoneme_entropy, sur_dict=sur_dict1, phon_env=phon_env)
+    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2, normalize_by=lang1.phoneme_entropy, sur_dict=sur_dict2, phon_env=phon_env)
     # Return and save the average of these two values
     if normalize:
         score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
@@ -494,10 +553,18 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, **kwargs):
                 weight2 = None
             
             # Average together the info contents of each aligned segment
+            # Don't double-penalize deletion in case of shifted stress/accent: skip adding value if shifted later
             if weight1 is None:
                 weight = weight2
+                if pair[-1] in alignment.word2.language.tonemes:
+                    if accent_is_shifted(alignment.alignment, i, alignment.gap_ch):
+                        continue
+                    
             elif weight2 is None:
                 weight = weight1
+                if pair[0] in alignment.word1.language.tonemes:
+                    if accent_is_shifted(alignment.alignment, i, alignment.gap_ch):
+                        continue
             else:
                 weight = mean([weight1, weight2])
 
@@ -579,13 +646,29 @@ def hybrid_dist(word1, word2, funcs:dict, weights=None)->float:
 def cascade_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
     #pmi_score = pmi_dist(word1, word2, normalize=False, sim2dist=False)
     pmi_score = pmi_dist(word1, word2, sim2dist=False)
-    #surprisal_score = mutual_surprisal(word1, word2, normalize=False)
+    #surprisal_score = mutual_surprisal(word1, word2, normalize=False, **kwargs)
     surprisal_score = mutual_surprisal(word1, word2, **kwargs)
     phon_score = phonological_dist(word1, word2)
     #phon_score = phonological_dist(word1, word2, total_dist=True)
     score = ((pmi_weight*pmi_score) - (surprisal_weight*surprisal_score)) * (1-phon_score)
-    #score = (pmi_score - (2*surprisal_score)) / (1+phon_score)
+    
+    # Record word scores # TODO into Distance class object?
+    if word1.concept == word2.concept:
+        log_word_score(word1, word2, score, key='cascade')
+        log_word_score(word1, word2, pmi_score, key='PMI')
+        log_word_score(word1, word2, surprisal_score, key='surprisal')
+        log_word_score(word1, word2, phon_score, key='phon')
+    
     return max(0, score)
+
+
+def log_word_score(word1, word2, score, key):
+    lang1, lang2 = word1.language, word2.language
+    lang1.lexical_comparison[lang2][(word1, word2)][key] = score
+    lang2.lexical_comparison[lang1][(word2, word1)][key] = score
+    lang1.lexical_comparison['measures'].add(key)
+    lang2.lexical_comparison['measures'].add(key)
+    
 
 # Initialize distance functions as Distance objects
 LevenshteinDist = Distance(

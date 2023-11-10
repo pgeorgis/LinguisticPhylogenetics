@@ -3,7 +3,7 @@ import os
 import logging
 import yaml
 from auxFuncs import Distance, create_timestamp
-from phyloLing import load_family, transcription_param_defaults
+from phyloLing import load_family, TRANSCRIPTION_PARAM_DEFAULTS
 from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, cascade_sim
 from lingDist import gradient_cognate_sim, binary_cognate_sim
 
@@ -75,16 +75,16 @@ def validate_params(params, valid_params, logger):
         params['family']['outdir'] = outdir
     
     # Designate global transcription parameter defaults
-    for transcription_param in transcription_param_defaults:
+    for transcription_param in TRANSCRIPTION_PARAM_DEFAULTS:
         if transcription_param not in params['transcription']['global']:
-            params['transcription']['global'][transcription_param] = transcription_param_defaults[transcription_param]
+            params['transcription']['global'][transcription_param] = TRANSCRIPTION_PARAM_DEFAULTS[transcription_param]
         # If transcription parameters are specified for individual doculects, ensure all are included 
         # (copy from global defaults if unspecified)
     if 'doculects' in params['transcription']: 
         for doculect in params['transcription']['doculects']:
             params['transcription']['doculects'][doculect] = {
                 transcription_param:params['transcription']['doculects'][doculect].get(transcription_param, params['transcription']['global'][transcription_param])
-                for transcription_param in transcription_param_defaults
+                for transcription_param in TRANSCRIPTION_PARAM_DEFAULTS
             }
             
     # Raise error if binary cognate similarity is used with "none" cognate clustering
@@ -299,6 +299,12 @@ if __name__ == "__main__":
     logger.info(f'Wrote Newick tree to {outtree}')
     print(tree)
     
+    # if log_scores:
     write_lang_dists_to_tsv(distFunc, outfile=os.path.join(family.dist_matrix_dir, f'{timestamp}_scored.tsv'))
+    for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):
+        lex_comp_log_dir = os.path.join(family_params['outdir'], 'distances', lang1.name, lang2.name)
+        os.makedirs(lex_comp_log_dir, exist_ok=True)
+        lex_comp_log = os.path.join(lex_comp_log_dir, 'lexical_comparison.tsv')
+        lang1.write_lexical_comparison(lang2, lex_comp_log)
     
     logger.info('Completed successfully.')

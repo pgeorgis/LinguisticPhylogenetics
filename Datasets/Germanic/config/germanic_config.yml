@@ -1,15 +1,17 @@
 family:
-    name: Romance
-    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Romance/romance_data.tsv
-    min_amc: 0.7
-    exclude: ['Dalmatian', 'Savoyard']
-    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Romance/
+    name: Germanic
+    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/germanic_data.tsv
+    min_amc: 0.65
+    exclude: ['Old English', 'Old Enɡlish', 'Old Norse', 'Alsatian', 'Low Saxon (old)', 'Northern Low German (Sass)']
+    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/
 
 transcription:
     global:
         ignore_stress: false
         combine_diphthongs: true
-        normalize_geminates: false
+        normalize_geminates: true
+        #suprasegmentals: ['ˀ']
+        ch_to_remove: ['̩']
 
 pmi:
     refresh: []
@@ -32,7 +34,7 @@ evaluation:
     phon_weight: 1
     n_samples: 10
     sample_size: 0.8
-    calibrate: false
+    calibrate: true
     min_similarity: 0
 
 tree:

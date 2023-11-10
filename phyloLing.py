@@ -19,7 +19,7 @@ from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable,
 from auxFuncs import Distance, surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonUtils.initPhoneData import vowels, consonants, tonemes, suprasegmental_diacritics
 from phonUtils.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
-from phonUtils.segment import segment_ipa
+from phonUtils.segment import segment_ipa, _toSegment
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 from phonUtils.syllables import syllabify
@@ -28,13 +28,15 @@ from lingDist import Z_score_dist
 import logging
 
 
-transcription_param_defaults = {
+TRANSCRIPTION_PARAM_DEFAULTS = {
     'asjp':False,
     'ignore_stress':False,
     'combine_diphthongs':True,
     'normalize_geminates':False,
     'preaspiration':True,
-    'ch_to_remove':suprasegmental_diacritics.union({' '}),
+    'ch_to_remove':{' '}, # TODO add syllabic diacritics here
+    'suprasegmentals':None,
+    'level_suprasegmentals':None,
     }
 
 
@@ -51,7 +53,7 @@ class LexicalDataset:
                  loan_c = 'Loan',
                  glottocode_c='Glottocode',
                  iso_code_c='ISO 639-3',
-                 transcription_params={'global':transcription_param_defaults},
+                 transcription_params={'global':TRANSCRIPTION_PARAM_DEFAULTS},
                  logger=None
                  ):
         
@@ -110,7 +112,7 @@ class LexicalDataset:
         # Transcription parameters
         self.transcription_params = transcription_params
         if not self.transcription_params['global']['ignore_stress']:
-            self.transcription_params['global']['ch_to_remove'] = self.transcription_params['global']['ch_to_remove'] - {'ˈ', 'ˌ'}
+            self.transcription_params['global']['ch_to_remove'] = set(self.transcription_params['global']['ch_to_remove']) - {'ˈ', 'ˌ'}
             
         # Concepts in dataset
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
@@ -415,33 +417,6 @@ class LexicalDataset:
                         for seg2 in phoneme_surprisal[seg1]:
                             if phoneme_surprisal[seg1][seg2] < oov_smoothed:
                                 f.write(f'{lang1.name},{" ".join(seg1[0])},{lang2.name},{seg2},{phoneme_surprisal[seg1][seg2]},{oov_smoothed}\n')
-                            
-        # Write a report on the most likely phoneme correspondences per language pair (TODO : create a cross-linguistic chart automatically)
-        self.write_phoneme_corr_report(ngram_size=ngram_size, n=2)
-        # TODO doesn't yet include phon_env 
-
-
-    def write_phoneme_corr_report(self, langs=None, ngram_size=1, n=2):
-        if langs is None:
-            langs = self.languages.values()
-
-        with open(os.path.join(self.phone_corr_dir, f'phoneme_correspondences_{ngram_size}gram.tsv'), 'w') as f:
-            header = '\t'.join(['l1', 'phone_l1', 'l2', 'phone_l2', 'surprisal'])
-            f.write(f'{header}\n')
-            for lang1, lang2 in product(langs, langs):
-                if lang1 != lang2:
-                    threshold = surprisal(1/len(lang2.phonemes))
-                    l1_phons = sorted([p for p in lang1.phoneme_surprisal[(lang2, ngram_size)].keys() if p != '-'])
-                    for p1 in l1_phons:
-                        p2_candidates = lang1.phoneme_surprisal[(lang2, ngram_size)][p1]
-                        if len(p2_candidates) > 0:
-                            p2_candidates = dict_tuplelist(p2_candidates)[-n:]
-                            p2_candidates.reverse()
-                            for p2, sur in p2_candidates:
-                                if sur >= threshold:
-                                    break
-                                line = '\t'.join([lang1.name, str(p1), lang2.name, str(p2), str(round(sur, 3))])
-                                f.write(f'{line}\n')
                         
     
     def load_phoneme_surprisal(self, ngram_size=1, surprisal_file=None, excepted=[], **kwargs):
@@ -1280,7 +1255,7 @@ class Language:
                  name, 
                  data, 
                  columns,
-                 transcription_params=transcription_param_defaults,
+                 transcription_params=TRANSCRIPTION_PARAM_DEFAULTS,
                  lang_id=None, 
                  glottocode=None, 
                  iso_code=None, 
@@ -1320,8 +1295,10 @@ class Language:
         
         # Transcription and segmentation parameters
         self.transcription_params = transcription_params
-        if not self.transcription_params['ignore_stress']:
-            self.transcription_params['ch_to_remove'] = self.transcription_params['ch_to_remove'] - {'ˈ', 'ˌ'}
+        if self.transcription_params['ignore_stress']:
+            self.transcription_params['ch_to_remove'].update({'ˈ', 'ˌ'})
+        if self.transcription_params['suprasegmentals']:
+            self.transcription_params['suprasegmentals'] = suprasegmental_diacritics.union(self.transcription_params['suprasegmentals'])
         
         # Initialize vocabulary and phoneme inventory
         self.create_vocabulary()
@@ -1335,9 +1312,9 @@ class Language:
         self.phoneme_pmi = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         self.phoneme_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
-        self.detected_cognates = defaultdict(lambda:[]) # TODO is this used?
-        self.detected_noncognates = defaultdict(lambda:[]) # TODO is this used?
         self.noncognate_thresholds = defaultdict(lambda:[])
+        self.lexical_comparison = defaultdict(lambda:defaultdict(lambda:{}))
+        self.lexical_comparison['measures'] = set()
 
 
     def create_vocabulary(self):
@@ -1351,11 +1328,7 @@ class Language:
                 ipa_string = entry[self.columns['ipa']], 
                 concept = concept, 
                 orthography = entry[self.columns['orthography']], 
-                ch_to_remove = self.transcription_params['ch_to_remove'],
-                asjp = self.transcription_params['asjp'],
-                normalize_geminates = self.transcription_params['normalize_geminates'],
-                combine_diphthongs = self.transcription_params['combine_diphthongs'],
-                preaspiration = self.transcription_params['preaspiration'],
+                transcription_parameters=self.transcription_params,
                 language = self,
                 cognate_class = cognate_class,
                 loanword = loan,
@@ -1375,7 +1348,7 @@ class Language:
             f.write(missing_concepts)
                     
 
-    def create_phoneme_inventory(self):
+    def create_phoneme_inventory(self, warn_n=0):
         for concept in self.vocabulary:
             for word in self.vocabulary[concept]:
                 segments = word.segments
@@ -1412,27 +1385,38 @@ class Language:
         # Normalize counts
         total_tokens = sum(self.phonemes.values())
         for phoneme in self.phonemes:
-            self.phonemes[phoneme] = self.phonemes[phoneme] / total_tokens
+            count = self.phonemes[phoneme]
+            if count < warn_n:
+                self.family.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
+            self.phonemes[phoneme] = count / total_tokens
+        
+        # Phone classes
+        phone_classes = {p:_toSegment(p).phone_class for p in self.phonemes}
         
         # Get dictionaries of vowels and consonants
         self.vowels = normalize_dict({v:self.phonemes[v] 
-                                      for v in self.phonemes 
-                                      if strip_diacritics(v)[0] in vowels}, 
+                                      for v in self.phonemes
+                                      if phone_classes[v] in ('VOWEL', 'DIPHTHONG')},
                                      default=True, lmbda=0)
         
         self.consonants = normalize_dict({c:self.phonemes[c] 
-                                         for c in self.phonemes 
-                                         if strip_diacritics(c)[0] in consonants}, 
+                                         for c in self.phonemes
+                                         if phone_classes[c] in ('CONSONANT', 'GLIDE')},
                                          default=True, lmbda=0)
         
+        # TODO: rename as self.suprasegmentals, possibly distinguish tonemes from other suprasegmentals
         self.tonemes = normalize_dict({t:self.phonemes[t] 
                                        for t in self.phonemes 
-                                       if strip_diacritics(t)[0] in tonemes}, 
+                                       if phone_classes[t] in ('TONEME', 'SUPRASEGMENTAL')},
                                       default=True, lmbda=0)
         
-        # Designate language as tonal if it has tonemes
+        # Designate language as tonal if it has tonemes # TODO improve
         if len(self.tonemes) > 0:
             self.tonal = True
+        if set(self.tonemes.keys()) in ({"ˈ"}, {"ˈ", "ˌ"}):
+            self.prosodic_typology = 'STRESS'
+        else:
+            self.prosodic_typology = 'OTHER' # TODO add other prosodic typologies
     
     
     def write_phoneme_inventory(self, n_examples=3, seed=1):
@@ -1445,7 +1429,7 @@ class Language:
                                     self.tonemes],
                                     ['VOWELS',
                                     'CONSONANTS',
-                                    'TONEMES']):
+                                    'SUPRASEGMENTALS']):
                 if len(group) > 0:
                     f.write(f'{label}\n')
                     for phone, prob in dict_tuplelist(group):
@@ -1535,10 +1519,7 @@ class Language:
                 ipa_string = ipa, 
                 concept = concept, 
                 orthography = orthography, 
-                ch_to_remove = transcription_params['ch_to_remove'],
-                normalize_geminates = transcription_params['normalize_geminates'],
-                combine_diphthongs = transcription_params['combine_diphthongs'],
-                preaspiration = transcription_params['preaspiration'],
+                transcription_parameters=transcription_params,
                 language = self,
                 cognate_class = cognate_class,
                 loanword = loan,
@@ -1558,10 +1539,7 @@ class Language:
                 ipa_string = ''.join(word)
             word = Word(
                 ipa_string=ipa_string,
-                ch_to_remove=self.ch_to_remove,
-                normalize_geminates = self.transcription_params['normalize_geminates'],
-                combine_diphthongs = self.transcription_params['combine_diphthongs'],
-                preaspiration = self.transcription_params['preaspiration'],
+                transcription_parameters=self.transcription_params,
                 language=self)
         else:
             raise TypeError
@@ -1672,6 +1650,18 @@ class Language:
 
         return self.phoneme_correlators[key]
     
+
+    def write_lexical_comparison(self, lang2, outfile):
+        measures = sorted(list(self.lexical_comparison['measures']))
+        with open(outfile, 'w') as f:
+            header = '\t'.join([self.name, lang2.name]+measures)
+            f.write(f'{header}\n')
+            for word1, word2 in self.lexical_comparison[lang2]:
+                values = [self.lexical_comparison[lang2][(word1, word2)].get(measure, 'n/a') for measure in measures]
+                values = [str(v) for v in values]
+                line = '\t'.join([word1.ipa, word2.ipa]+values)
+                f.write(f'{line}\n')
+    
     
     def __str__(self):
         """Print a summary of the language object"""
@@ -1711,47 +1701,42 @@ class Word:
                  language=None,
                  cognate_class=None,
                  loanword=False,
-                 # Parameters for preprocessing and segmentation
-                 ch_to_remove=[], 
-                 asjp=False,
-                 normalize_geminates=False,
-                 combine_diphthongs=True,
-                 preaspiration=True
+                 transcription_parameters=TRANSCRIPTION_PARAM_DEFAULTS,
                  ):
         self.language = language
-        self.parameters = {
-            'ch_to_remove':ch_to_remove,
-            'asjp':asjp,
-            'normalize_geminates':normalize_geminates,
-            'combine_diphthongs':combine_diphthongs,
-            'preaspiration':preaspiration
-        }
+        self.parameters = transcription_parameters
         self.raw_ipa = ipa_string
-        self.ipa = self.preprocess(ipa_string, asjp=asjp, normalize_geminates=normalize_geminates)
+        self.ipa = self.preprocess(ipa_string)
         self.concept = concept
         self.cognate_class = cognate_class
         self.loanword = loanword
         self.orthography = orthography
-        self.segments = self.segment(ch_to_remove, 
-                                     combine_diphthongs=combine_diphthongs, 
-                                     preaspiration=preaspiration)
+        self.segments = self.segment()
         self.syllables = None
         self.phon_env = self.getPhonEnv()
         self.info_content = None
+    
+    def get_parameter(self, label):
+        return self.parameters.get(label, TRANSCRIPTION_PARAM_DEFAULTS[label])
 
-
-    def preprocess(self, ipa_string, asjp=False, normalize_geminates=False):
+    def preprocess(self, ipa_string):
 
         # Normalize common IPA character mistakes
         # Normalize affricates to special ligature characters, where available
         ipa_string = normalize_ipa_ch(ipa_string)
         
         # Normalize geminate consonants to /Cː/
-        if normalize_geminates:
+        if self.get_parameter('normalize_geminates'):
             ipa_string = re.sub(fr'([{consonants}])\1', r'\1ː', ipa_string)
         
+        # Level any suprasegmentals to stress annotation
+        supraseg_target = self.get_parameter('level_suprasegmentals')
+        if supraseg_target:
+            suprasegs = self.get_parameter('suprasegmentals')
+            ipa_string = re.sub(fr'[{suprasegs}]', supraseg_target, ipa_string)
+        
         # Convert to ASJP transcription
-        if asjp:
+        if self.get_parameter('asjp'):
             ipa_string = re.sub('~', '', ipa2asjp(ipa_string))
             
             # Convert some non-IPA ASJP characters to IPA equivalents # TODO move this mapping external
@@ -1780,13 +1765,14 @@ class Word:
         return ipa_string
 
 
-    def segment(self, ch_to_remove, combine_diphthongs, preaspiration):
+    def segment(self):
         return segment_ipa(
             self.ipa, 
             # Remove stress and tone diacritics from segmented words; syllabic diacritics (above and below); spaces and <‿> linking tie
-            remove_ch=''.join(ch_to_remove), 
-            combine_diphthongs=combine_diphthongs,
-            preaspiration=preaspiration
+            remove_ch=''.join(self.get_parameter('ch_to_remove')),
+            combine_diphthongs=self.get_parameter('combine_diphthongs'),
+            preaspiration=self.get_parameter('preaspiration'),
+            suprasegmentals=self.get_parameter('suprasegmentals')
         )
         
     def get_syllables(self, **kwargs):

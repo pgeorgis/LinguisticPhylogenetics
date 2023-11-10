@@ -7,10 +7,71 @@ from phonUtils.phonEnv import get_phon_env
 from auxFuncs import Distance, validate_class
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 
-AlignmentPhoneSim = Distance(
-    func=phone_sim,
-    sim=True,
-    name='AlignmentPhoneSim'
+
+def compatible_segments(seg1, seg2):
+    """Determines whether a pair of segments are compatible for alignment. 
+    Returns True if the two segments are either:
+        two consonants
+        two vowels
+        a vowel and a sonorant consonant (nasals, liquids, glides)
+        two tonemes/suprasegmentals
+    Else returns False"""
+    seg1, seg2 = map(_toSegment, [seg1, seg2])
+    phone_class1, phone_class2 = seg1.phone_class, seg2.phone_class
+    if phone_class1 in ('TONEME', 'SUPRASEGMENTAL') and phone_class2 in ('TONEME', 'SUPRASEGMENTAL'):
+        return True
+    elif phone_class1 in ('TONEME', 'SUPRASEGMENTAL'):
+        return False
+    elif phone_class2 in ('TONEME', 'SUPRASEGMENTAL'):
+        return False
+    
+    if phone_class1 == 'CONSONANT' and phone_class2 in ('CONSONANT', 'GLIDE'):
+        return True
+    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
+        return True
+    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['sonorant'] == 1:
+        return True
+    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['syllabic'] == 1:
+        return True
+    elif seg1.features['sonorant'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
+        return True
+    elif seg1.features['syllabic'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
+        return True
+    else:
+        return False
+
+
+def phon_alignment_cost(seg1, seg2, phon_func=phone_sim):
+    # sim = phon_func(seg1, seg2)
+    # if sim > 0:
+    #     dist = log(sim)
+    # else:
+    #     dist = 1
+    # if not compatible_segments(seg1, seg2):
+    #     return phon_dist + 0.5
+    # else:
+    #     return phon_dist
+    if seg1 == seg2:
+        return 0
+    elif compatible_segments(seg1, seg2):
+        ph_sim = phon_func(seg1, seg2)
+        if ph_sim > 0:
+            return log(ph_sim)
+        else:
+            return -0.1
+    else:
+        # ph_sim = phon_func(seg1, seg2)
+        # if ph_sim > 0:
+        #     return log(ph_sim)
+        # else:
+        #     return -inf
+        return -inf
+
+
+AlignmentCost = Distance(
+    func=phon_alignment_cost,
+    sim=False,
+    name='AlignmentCost'
 )
 
 class Alignment:
@@ -18,10 +79,10 @@ class Alignment:
                  seq1, seq2,
                  lang1=None, 
                  lang2=None,
-                 cost_func=AlignmentPhoneSim, 
+                 cost_func=AlignmentCost, 
                  added_penalty_dict=None,
                  gap_ch='-',
-                 gop=-0.7, # TODO possibly need to recalibrate
+                 gop=-0.3, # TODO possibly need to recalibrate **
                  n_best=1,
                  phon_env=False,
                  **kwargs
@@ -56,7 +117,7 @@ class Alignment:
         self.kwargs = kwargs
 
         # Perform alignment
-        self.n_best = self.align(n_best)
+        self.alignment_costs, self.n_best = self.align(n_best)
         self.alignment = self.n_best[0][0]
 
         # Map aligned pairs to respective sequence indices
@@ -134,7 +195,9 @@ class Alignment:
                 # If similarity function, turn into distance and ensure it is negative # TODO add into Distance object
                 if self.cost_func.sim:
                     base_dist = -(1 - base_dist)
-                return base_dist + added_penalty
+                    return base_dist + added_penalty
+                else:
+                    return min(base_dist, -base_dist) + added_penalty
             
             AddedPenaltyDist = Distance(func=added_penalty_dist, **self.kwargs)
             alignment_costs = self.calculate_alignment_costs(AddedPenaltyDist)
@@ -150,7 +213,7 @@ class Alignment:
                               GAP_SCORE=self.gop,
                               N_BEST=n_best)
         
-        return best
+        return alignment_costs, best
     
 
     def remove_gaps(self, alignment=None):
@@ -260,28 +323,6 @@ class ReversedAlignment(Alignment):
 
 
 
-def compatible_segments(seg1, seg2):
-    """Determines whether a pair of segments are compatible for alignment. 
-    Returns True if the two segments are either:
-        two consonants
-        two vowels
-        a vowel and a sonorant consonant (nasals, liquids, glides)
-        two tonemes
-    Else returns False"""
-    seg1, seg2 = map(_toSegment, [seg1, seg2])
-    phone_class1, phone_class2 = seg1.phone_class, seg2.phone_class
-    if phone_class1 == 'CONSONANT' and phone_class2 in ('CONSONANT', 'GLIDE'):
-        return True
-    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
-        return True
-    elif phone_class1 == 'TONEME' and phone_class2 == 'TONEME':
-        return True
-    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['sonorant'] == 1:
-        return True
-    elif seg1.features['sonorant'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
-        return True
-    else:
-        return False
 
 
 def add_phon_env(alignment,
