@@ -155,7 +155,8 @@ def phonological_dist(word1,
                       sim_func=phone_sim,
                       penalize_sonority=True,
                       max_sonority=17, # Highest sonority: suprasegmentals/tonemes = lowest deletion penalty
-                      context_reduction=True, 
+                      normalize_geminates=True, 
+                      context_reduction=False, 
                       penalty_discount=2,
                       prosodic_env_scaling=True,
                       total_dist=False, # TODO confirm that this is the better default; I think averaging is required to normalize for different word lengths
@@ -169,6 +170,7 @@ def phonological_dist(word1,
         sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
         max_sonority (int, optional): Maximum sonority value. Defaults to 17 as defined in phonUtils.segment submodule.
+        normalize_geminates (bool, optional): Adjusts deletion penalties when geminates (double consonants) are aligned with long consonants. Defaults to True.
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
         penalty_discount (int, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
         prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
@@ -261,8 +263,8 @@ def phonological_dist(word1,
                     elif deleted_segment.base == 'ʔ':
                         if re.search(r'[ˀ̰]', previous_seg.segment):
                             penalty /= penalty_discount
-                    
-                    
+                       
+            elif normalize_geminates:
                 # 7) If the deleted segment is part of a long/geminate segment transcribed as double (e.g. /tt/ rather than /tː/), 
                 # where at least one part of the geminate has been aligned
                 # Method: check if the preceding or following pair contained the deleted segment at deleted_index, aligned to something other than the gap character
