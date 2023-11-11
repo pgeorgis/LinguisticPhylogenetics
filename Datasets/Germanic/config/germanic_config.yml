@@ -15,13 +15,13 @@ transcription:
 
 pmi:
     refresh: []
-    refresh_all_pmi: false
+    refresh_all_pmi: true
 
 surprisal:
     ngram: 1
     phon_env: true 
     refresh: []
-    refresh_all_surprisal: false
+    refresh_all_surprisal: true
 
 cluster:
     cognates: none
