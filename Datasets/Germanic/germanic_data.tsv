@@ -14,7 +14,7 @@ East Low German	East Low German			cheese_NOUN	Kees	kʰˈɛɪ̯s	kʰ ˈɛɪ̯ s		
 Dutch	Dutch			cheese_NOUN	kaas	kˈaːs	k ˈaː s		cheese_NOUN_1			
 Afrikaans	Afrikaans			cheese_NOUN	kaas	kˈɑːs	k ˈɑː s		cheese_NOUN_1			
 West Flemish	West Flemish			cheese_NOUN	koas	kˈɒːs	k ˈɒː s		cheese_NOUN_1			
-Limburgish	Limburgish			cheese_NOUN	kieës	kˈiːə̯s	k ˈiːə̯ s		cheese_NOUN_1			
+Limburgish	Limburgish			cheese_NOUN	kies	kˈis	k ˈi s		cheese_NOUN_1			
 Ripuarian	Ripuarian			cheese_NOUN	Kies	kˈiːs	k ˈiː s		cheese_NOUN_1			
 Luxembourgish	Luxembourgish			cheese_NOUN	Kéis	kʰˈəɪ̯s	kʰ ˈəɪ̯ s		cheese_NOUN_1			
 Pennsylvania German	Pennsylvania German			cheese_NOUN	Kaes	kʰˈɛːs	kʰ ˈɛː s		cheese_NOUN_1			
@@ -44,6 +44,7 @@ East Low German	East Low German			church_NOUN_FEM	Kirch	kʰˈiːæç	kʰ ˈiː �
 Dutch	Dutch			church_NOUN_FEM	kerk	kˈɛɾk	k ˈɛ ɾ k		church_NOUN_FEM_1			
 Afrikaans	Afrikaans			church_NOUN_FEM	kerk	kˈɛrk	k ˈɛ r k		church_NOUN_FEM_1			
 West Flemish	West Flemish			church_NOUN_FEM	kerke	kˈæɾkə	k ˈæ ɾ k ə		church_NOUN_FEM_1			
+Limburgish	Limburgish			church_NOUN_FEM	kèrk	kˈɛːʀək	k ˈɛː ʀ ə k		church_NOUN_FEM_1			
 Ripuarian	Ripuarian			church_NOUN_FEM	Kirch	kˈiɐɕ	k ˈi ɐ ɕ		church_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			church_NOUN_FEM	Kierch	kʰˈiːɐɕ	kʰ ˈiː ɐ ɕ		church_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			church_NOUN_FEM	Kaerich	kʰˈɛːɾɪç	kʰ ˈɛː ɾ ɪ ç		church_NOUN_FEM_1			
@@ -67,7 +68,7 @@ North Frisian	North Frisian			plight_NOUN	placht	plˈaxt	p l ˈa x t		plight_NOU
 Dutch	Dutch			plight_NOUN	plicht	pɫˈɪχt	p ɫ ˈɪ χ t		plight_NOUN_1			
 Afrikaans	Afrikaans			plight_NOUN	plig	pɫˈəχ	p ɫ ˈə χ		plight_NOUN_1			
 West Flemish	West Flemish			plight_NOUN	plicht	plˈɛht	p l ˈɛ h t		plight_NOUN_1			
-Limburgish	Limburgish			plight_NOUN	pliech	plˈiːç	p l ˈiː ç		plight_NOUN_1			
+Limburgish	Limburgish			plight_NOUN	pliech	plˈix	p l ˈi x		plight_NOUN_1			
 Ripuarian	Ripuarian			plight_NOUN	Flich	flˈiɕ	f l ˈi ɕ		plight_NOUN_1			
 Luxembourgish	Luxembourgish			plight_NOUN	Flicht	flˈiɕt	f l ˈi ɕ t		plight_NOUN_1			
 Pennsylvania German	Pennsylvania German			plight_NOUN	Pflicht	p͡flˈɪçt	p͡f l ˈɪ ç t		plight_NOUN_1			
@@ -93,6 +94,7 @@ East Low German	East Low German			speech_NOUN_FEM	Språk	ʃprˈɒːk	ʃ p r ˈɒ
 Dutch	Dutch			speech_NOUN_FEM	spraak	spɾˈaːk	s p ɾ ˈaː k		speech_NOUN_FEM_1			
 Afrikaans	Afrikaans			speech_NOUN_FEM	spraak	sprˈɑːk	s p r ˈɑː k		speech_NOUN_FEM_1			
 West Flemish	West Flemish			speech_NOUN_FEM	sproake	spɾˈɒːkə	s p ɾ ˈɒː k ə		speech_NOUN_FEM_1			
+Limburgish	Limburgish			speech_NOUN_FEM	spraok	spʀˈɒːk	s p ʀ ˈɒː k		speech_NOUN_FEM_1			
 Ripuarian	Ripuarian			speech_NOUN_FEM	Sprooch	ʃpʀˈoːx	ʃ p ʀ ˈoː x		speech_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			speech_NOUN_FEM	Sprooch	ʃpʀˈoːχ	ʃ p ʀ ˈoː χ		speech_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			speech_NOUN_FEM	Schprooch	ʃpɾˈoːx	ʃ p ɾ ˈoː x		speech_NOUN_FEM_1			
@@ -155,6 +157,7 @@ East Low German	East Low German			oak_NOUN_FEM	Eik	ˈae̯k	ˈae̯ k		oak_NOUN_FE
 Dutch	Dutch			oak_NOUN_FEM	eik	ˈɛi̯k	ˈɛi̯ k		oak_NOUN_FEM_1			
 Afrikaans	Afrikaans			oak_NOUN_FEM	eik	ˈəɪ̯k	ˈəɪ̯ k		oak_NOUN_FEM_1			
 West Flemish	West Flemish			oak_NOUN_FEM	eik	ˈɛːk	ˈɛː k		oak_NOUN_FEM_1			
+Limburgish	Limburgish			oak_NOUN_FEM	eik	ˈɛːk	ˈɛː k		oak_NOUN_FEM_1			
 Ripuarian	Ripuarian			oak_NOUN_FEM	Eech	ˈeːɕ	ˈeː ɕ		oak_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			oak_NOUN_FEM	Eech	ˈeːɕ	ˈeː ɕ		oak_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			oak_NOUN_FEM	Eeche	ˈeːçə	ˈeː ç ə		oak_NOUN_FEM_1			
@@ -195,7 +198,7 @@ East Low German	East Low German			one_NUM	ein	ˈae̯n	ˈae̯ n		one_NUM_1
 Dutch	Dutch			one_NUM	één	ˈeːn	ˈeː n		one_NUM_1			
 Afrikaans	Afrikaans			one_NUM	een	ˈɪə̯n	ˈɪə̯ n		one_NUM_1			
 West Flemish	West Flemish			one_NUM	êen	ˈɛːn	ˈɛː n		one_NUM_1			
-Limburgish	Limburgish			one_NUM	ein	ˈɛi̯n	ˈɛi̯ n		one_NUM_1			
+Limburgish	Limburgish			one_NUM	eine	ˈɛːnə	ˈɛː n ə		one_NUM_1			
 Ripuarian	Ripuarian			one_NUM	een	ˈeːn	ˈeː n		one_NUM_1			
 Luxembourgish	Luxembourgish			one_NUM	eent	ˈeːnt	ˈeː n t		one_NUM_1			
 Pennsylvania German	Pennsylvania German			one_NUM	ee	ˈeː	ˈeː		one_NUM_1			
@@ -226,7 +229,7 @@ Northern Low Saxon	Northern Low Saxon			egg_NOUN_NEU	Ei	ˈaɪ̯	ˈaɪ̯		egg_NOU
 East Low German	East Low German			egg_NOUN_NEU	Ei	ˈae̯	ˈae̯		egg_NOUN_NEU_1			
 Dutch	Dutch			egg_NOUN_NEU	ei	ˈɛi̯	ˈɛi̯		egg_NOUN_NEU_1			
 West Flemish	West Flemish			egg_NOUN_NEU	ei	ˈɛː	ˈɛː		egg_NOUN_NEU_1			
-Limburgish	Limburgish			egg_NOUN_NEU	ei	ˈɛi̯	ˈɛi̯		egg_NOUN_NEU_1			
+Limburgish	Limburgish			egg_NOUN_NEU	ei	ˈɛːi̯	ˈɛːi̯		egg_NOUN_NEU_1			
 Ripuarian	Ripuarian			egg_NOUN_NEU	Ei	ˈeɪ̯	ˈeɪ̯		egg_NOUN_NEU_1			
 Luxembourgish	Luxembourgish			egg_NOUN_NEU	Ee	ˈeː	ˈeː		egg_NOUN_NEU_1			
 Pennsylvania German	Pennsylvania German			egg_NOUN_NEU	Oi	ˈɔɪ̯	ˈɔɪ̯		egg_NOUN_NEU_1			
@@ -252,7 +255,7 @@ East Low German	East Low German			old_ADJ	olt	ˈɔlt	ˈɔ l t		old_ADJ_1
 Dutch	Dutch			old_ADJ	oud	ˈɑu̯t	ˈɑu̯ t		old_ADJ_1			
 Afrikaans	Afrikaans			old_ADJ	oud	ˈœu̯t	ˈœu̯ t		old_ADJ_1			
 West Flemish	West Flemish			old_ADJ	oud	ˈut	ˈu t		old_ADJ_1			
-Limburgish	Limburgish			old_ADJ	awd	ˈɑwt	ˈɑ w t		old_ADJ_1			
+Limburgish	Limburgish			old_ADJ	aw	ˈɑβ	ˈɑ β		old_ADJ_1			
 Ripuarian	Ripuarian			old_ADJ	alt	ˈalt	ˈa l t		old_ADJ_1			
 Luxembourgish	Luxembourgish			old_ADJ	al	ˈaːl	ˈaː l		old_ADJ_1			
 Pennsylvania German	Pennsylvania German			old_ADJ	alt	ˈalt	ˈa l t		old_ADJ_1			
@@ -283,6 +286,7 @@ Northern Low Saxon	Northern Low Saxon			all_ADJ	all	ˈal	ˈa l		all_ADJ_1
 East Low German	East Low German			all_ADJ	all	ˈal	ˈa l		all_ADJ_1			
 Dutch	Dutch			all_ADJ	al	ˈɑɫ	ˈɑ ɫ		all_ADJ_1			
 Afrikaans	Afrikaans			all_ADJ	al	ˈaɫ	ˈa ɫ		all_ADJ_1			
+Limburgish	Limburgish			all_ADJ	al	ˈɑːl	ˈɑː l		all_ADJ_1			
 Ripuarian	Ripuarian			all_ADJ	all	ˈal	ˈa l		all_ADJ_1			
 Luxembourgish	Luxembourgish			all_ADJ	all	ˈɑl	ˈɑ l		all_ADJ_1			
 Pennsylvania German	Pennsylvania German			all_ADJ	all	ˈal	ˈa l		all_ADJ_1			
@@ -314,6 +318,7 @@ East Low German	East Low German			other_ADJ	anner	ˈanæ	ˈa n æ		other_ADJ_1
 Dutch	Dutch			other_ADJ	ander	ˈɑndəɾ	ˈɑ n d ə ɾ		other_ADJ_1			
 Afrikaans	Afrikaans			other_ADJ	ander	ˈandər	ˈa n d ə r		other_ADJ_1			
 West Flemish	West Flemish			other_ADJ	ander	ˈɑndəɾ	ˈɑ n d ə ɾ		other_ADJ_1			
+Limburgish	Limburgish			other_ADJ	ander	ˈɑːndəʀ	ˈɑː n d ə ʀ		other_ADJ_1			
 Luxembourgish	Luxembourgish			other_ADJ	aner	ˈaːnɐ	ˈaː n ɐ		other_ADJ_1			
 Pennsylvania German	Pennsylvania German			other_ADJ	anner	ˈanɑ	ˈa n ɑ		other_ADJ_1			
 German	German			other_ADJ	anderer	ˈandəʁɐ	ˈa n d ə ʁ ɐ		other_ADJ_1			
@@ -375,6 +380,7 @@ East Low German	East Low German			ape_NOUN	Åp	ˈɒːp	ˈɒː p		ape_NOUN_1
 Dutch	Dutch			ape_NOUN	aap	ˈaːp	ˈaː p		ape_NOUN_1			
 Afrikaans	Afrikaans			ape_NOUN	aap	ˈɑːp	ˈɑː p		ape_NOUN_1			
 West Flemish	West Flemish			ape_NOUN	oap	ˈɒːp	ˈɒː p		ape_NOUN_1			
+Limburgish	Limburgish			ape_NOUN	aap	ˈaːp	ˈaː p		ape_NOUN_1			
 Luxembourgish	Luxembourgish			ape_NOUN	Af	ˈaːf	ˈaː f		ape_NOUN_1			
 Pennsylvania German	Pennsylvania German			ape_NOUN	Aff	ˈaf	ˈa f		ape_NOUN_1			
 German	German			ape_NOUN	Affe	ˈafə	ˈa f ə		ape_NOUN_1			
@@ -404,7 +410,7 @@ East Low German	East Low German			arm_NOUN	Arm	ˈaːm	ˈaː m		arm_NOUN_1
 Dutch	Dutch			arm_NOUN	arm	ˈɑɾm	ˈɑ ɾ m		arm_NOUN_1			
 Afrikaans	Afrikaans			arm_NOUN	arm	ˈarm	ˈa r m		arm_NOUN_1			
 West Flemish	West Flemish			arm_NOUN	oarm	ˈɒːɾm	ˈɒː ɾ m		arm_NOUN_1			
-Limburgish	Limburgish			arm_NOUN	erm	ˈæʁm	ˈæ ʁ m		arm_NOUN_1			
+Limburgish	Limburgish			arm_NOUN	erm	ˈæːʀəm	ˈæː ʀ ə m		arm_NOUN_1			
 Ripuarian	Ripuarian			arm_NOUN	Ärm	ˈɛɐm	ˈɛ ɐ m		arm_NOUN_1			
 Luxembourgish	Luxembourgish			arm_NOUN	Aarm	ˈaːm	ˈaː m		arm_NOUN_1			
 Pennsylvania German	Pennsylvania German			arm_NOUN	Arm	ˈaːm	ˈaː m		arm_NOUN_1			
@@ -436,7 +442,7 @@ East Low German	East Low German			ash_NOUN	Asch	ˈaʃ	ˈa ʃ		ash_NOUN_1
 Dutch	Dutch			ash_NOUN	as	ˈɑs	ˈɑ s		ash_NOUN_1			
 Afrikaans	Afrikaans			ash_NOUN	ash	ˈas	ˈa s		ash_NOUN_1			
 West Flemish	West Flemish			ash_NOUN	asse	ˈɑsə	ˈɑ s ə		ash_NOUN_1			
-Limburgish	Limburgish			ash_NOUN	asj	ˈɑʃ	ˈɑ ʃ		ash_NOUN_1			
+Limburgish	Limburgish			ash_NOUN	es	ˈæs	ˈæ s		ash_NOUN_1			
 Ripuarian	Ripuarian			ash_NOUN	Äsch	ˈɛʃ	ˈɛ ʃ		ash_NOUN_1			
 Luxembourgish	Luxembourgish			ash_NOUN	Äsch	ˈæʃ	ˈæ ʃ		ash_NOUN_1			
 Pennsylvania German	Pennsylvania German			ash_NOUN	Esch	ˈɛʃ	ˈɛ ʃ		ash_NOUN_1			
@@ -467,7 +473,7 @@ East Low German	East Low German			eye_NOUN	Ooch	ˈaʊ̯x	ˈaʊ̯ x		eye_NOUN_1
 Dutch	Dutch			eye_NOUN	oog	ˈoːχ	ˈoː χ		eye_NOUN_1			
 Afrikaans	Afrikaans			eye_NOUN	oog	ˈʊə̯χ	ˈʊə̯ χ		eye_NOUN_1			
 West Flemish	West Flemish			eye_NOUN	ooge	ˈoːɦə	ˈoː ɦ ə		eye_NOUN_1			
-Limburgish	Limburgish			eye_NOUN	oug	ˈɔu̯χ	ˈɔu̯ χ		eye_NOUN_1			
+Limburgish	Limburgish			eye_NOUN	oug	ˈɔu̯x	ˈɔu̯ x		eye_NOUN_1			
 Ripuarian	Ripuarian			eye_NOUN	Ooch	ˈoːx	ˈoː x		eye_NOUN_1			
 Luxembourgish	Luxembourgish			eye_NOUN	A	ˈaː	ˈaː		eye_NOUN_1			
 Pennsylvania German	Pennsylvania German			eye_NOUN	Aag	ˈɔːk	ˈɔː k		eye_NOUN_1			
@@ -499,7 +505,7 @@ East Low German	East Low German			ear_NOUN	Uhr	ˈuːæ	ˈuː æ		ear_NOUN_1
 Dutch	Dutch			ear_NOUN	oor	ˈoːɾ	ˈoː ɾ		ear_NOUN_1			
 Afrikaans	Afrikaans			ear_NOUN	oor	ˈʊə̯r	ˈʊə̯ r		ear_NOUN_1			
 West Flemish	West Flemish			ear_NOUN	ôore	ˈoːɾə	ˈoː ɾ ə		ear_NOUN_1			
-Limburgish	Limburgish			ear_NOUN	oer	ˈuːʁ	ˈuː ʁ		ear_NOUN_1			
+Limburgish	Limburgish			ear_NOUN	oer	ˈuːʀ	ˈuː ʀ		ear_NOUN_1			
 Ripuarian	Ripuarian			ear_NOUN	Uhr	ˈuɐ	ˈu ɐ		ear_NOUN_1			
 Luxembourgish	Luxembourgish			ear_NOUN	Ouer	ˈəʊ̯ɐ	ˈəʊ̯ ɐ		ear_NOUN_1			
 Pennsylvania German	Pennsylvania German			ear_NOUN	Ohr	ˈoːɑ	ˈoː ɑ		ear_NOUN_1			
@@ -576,6 +582,7 @@ East Low German	East Low German			better_ADJ	bäder	bˈɛːɾæ	b ˈɛː ɾ æ		
 Dutch	Dutch			better_ADJ	beter	bˈeːtəɾ	b ˈeː t ə ɾ		better_ADJ_1			
 Afrikaans	Afrikaans			better_ADJ	beter	bˈɪə̯tər	b ˈɪə̯ t ə r		better_ADJ_1			
 West Flemish	West Flemish			better_ADJ	beter	bˈeːtəɾ	b ˈeː t ə ɾ		better_ADJ_1			
+Limburgish	Limburgish			better_ADJ	beter	bˈeːtəʀ	b ˈeː t ə ʀ		better_ADJ_1			
 Ripuarian	Ripuarian			better_ADJ	besser	bˈɛsɐ	b ˈɛ s ɐ		better_ADJ_1			
 Luxembourgish	Luxembourgish			better_ADJ	besser	bˈɛsɐ	b ˈɛ s ɐ		better_ADJ_1			
 Pennsylvania German	Pennsylvania German			better_ADJ	besser	bˈɛsɑ	b ˈɛ s ɑ		better_ADJ_1			
@@ -602,7 +609,7 @@ East Low German	East Low German			tree_NOUN	Bom	bˈaʊ̯m	b ˈaʊ̯ m		tree_NOUN
 Dutch	Dutch			tree_NOUN	boom	bˈoːm	b ˈoː m		tree_NOUN_1			
 Afrikaans	Afrikaans			tree_NOUN	boom	bˈʊə̯m	b ˈʊə̯ m		tree_NOUN_1			
 West Flemish	West Flemish			tree_NOUN	boom	bˈoːm	b ˈoː m		tree_NOUN_1			
-Limburgish	Limburgish			tree_NOUN	boum	bˈɔu̯m	b ˈɔu̯ m		tree_NOUN_1			
+Limburgish	Limburgish			tree_NOUN	boum	bˈɔːm	b ˈɔː m		tree_NOUN_1			
 Ripuarian	Ripuarian			tree_NOUN	Boom	bˈoːm	b ˈoː m		tree_NOUN_1			
 Luxembourgish	Luxembourgish			tree_NOUN	Bam	bˈaːm	b ˈaː m		tree_NOUN_1			
 Pennsylvania German	Pennsylvania German			tree_NOUN	Baam	bˈɔːm	b ˈɔː m		tree_NOUN_1			
@@ -633,6 +640,7 @@ East Low German	East Low German			bath_NOUN_NEU	Bad	bˈaːd	b ˈaː d		bath_NOUN
 Dutch	Dutch			bath_NOUN_NEU	bad	bˈɑt	b ˈɑ t		bath_NOUN_NEU_1			
 Afrikaans	Afrikaans			bath_NOUN_NEU	bad	bˈat	b ˈa t		bath_NOUN_NEU_1			
 West Flemish	West Flemish			bath_NOUN_NEU	bad	bˈɑt	b ˈɑ t		bath_NOUN_NEU_1			
+Limburgish	Limburgish			bath_NOUN_NEU	bad	bˈɑt	b ˈɑ t		bath_NOUN_NEU_1			
 Ripuarian	Ripuarian			bath_NOUN_NEU	Badd	bˈat	b ˈa t		bath_NOUN_NEU_1			
 Luxembourgish	Luxembourgish			bath_NOUN_NEU	Bad	bˈaːt	b ˈaː t		bath_NOUN_NEU_1			
 Pennsylvania German	Pennsylvania German			bath_NOUN_NEU	Baad	bˈɔːt	b ˈɔː t		bath_NOUN_NEU_1			
@@ -663,7 +671,7 @@ East Low German	East Low German			mountain_NOUN	Barch	bˈaːx	b ˈaː x		mountai
 Dutch	Dutch			mountain_NOUN	berg	bˈɛɾχ	b ˈɛ ɾ χ		mountain_NOUN_1			
 Afrikaans	Afrikaans			mountain_NOUN	berg	bˈæːrχ	b ˈæː r χ		mountain_NOUN_1			
 West Flemish	West Flemish			mountain_NOUN	berg	bˈæɾh	b ˈæ ɾ h		mountain_NOUN_1			
-Limburgish	Limburgish			mountain_NOUN	berg	bˈæʁχ	b ˈæ ʁ χ		mountain_NOUN_1			
+Limburgish	Limburgish			mountain_NOUN	berg	bˈæːʀəx	b ˈæː ʀ ə x		mountain_NOUN_1			
 Ripuarian	Ripuarian			mountain_NOUN	Berch	bˈɛɐɕ	b ˈɛ ɐ ɕ		mountain_NOUN_1			
 Luxembourgish	Luxembourgish			mountain_NOUN	Bierg	bˈiːɐɕ	b ˈiː ɐ ɕ		mountain_NOUN_1			
 Pennsylvania German	Pennsylvania German			mountain_NOUN	Baerig	bˈɛːɾɪk	b ˈɛː ɾ ɪ k		mountain_NOUN_1			
@@ -695,7 +703,7 @@ Northern Low Saxon	Northern Low Saxon			bear_NOUN	Baar	bˈoːɐ	b ˈoː ɐ		bear
 East Low German	East Low German			bear_NOUN	Bor	bˈoːæ	b ˈoː æ		bear_NOUN_1			
 Dutch	Dutch			bear_NOUN	beer	bˈeːɾ	b ˈeː ɾ		bear_NOUN_1			
 Afrikaans	Afrikaans			bear_NOUN	beer	bˈɪə̯r	b ˈɪə̯ r		bear_NOUN_1			
-Limburgish	Limburgish			bear_NOUN	baer	bˈæːʁ	b ˈæː ʁ		bear_NOUN_1			
+Limburgish	Limburgish			bear_NOUN	beer	bˈeːʀ	b ˈeː ʀ		bear_NOUN_1			
 Ripuarian	Ripuarian			bear_NOUN	Bär	bˈɛɐ	b ˈɛ ɐ		bear_NOUN_1			
 Luxembourgish	Luxembourgish			bear_NOUN	Bier	bˈiːɐ	b ˈiː ɐ		bear_NOUN_1			
 Pennsylvania German	Pennsylvania German			bear_NOUN	Baer	bˈɛːɑ	b ˈɛː ɑ		bear_NOUN_1			
@@ -813,7 +821,7 @@ East Low German	East Low German			leaf_NOUN_NEU	Blatt	blˈat	b l ˈa t		leaf_NOU
 Dutch	Dutch			leaf_NOUN_NEU	blad	bɫˈɑt	b ɫ ˈɑ t		leaf_NOUN_NEU_1			
 Afrikaans	Afrikaans			leaf_NOUN_NEU	blaar	bɫˈɑːr	b ɫ ˈɑː r		leaf_NOUN_NEU_1			
 West Flemish	West Flemish			leaf_NOUN_NEU	bloar	blˈɒːɾ	b l ˈɒː ɾ		leaf_NOUN_NEU_1			
-Limburgish	Limburgish			leaf_NOUN_NEU	blaad	bɫˈaːt	b ɫ ˈaː t		leaf_NOUN_NEU_1			
+Limburgish	Limburgish			leaf_NOUN_NEU	blaad	blˈaːt	b l ˈaː t		leaf_NOUN_NEU_1			
 Ripuarian	Ripuarian			leaf_NOUN_NEU	Blatt	blˈat	b l ˈa t		leaf_NOUN_NEU_1			
 Luxembourgish	Luxembourgish			leaf_NOUN_NEU	Blat	blˈaːt	b l ˈaː t		leaf_NOUN_NEU_1			
 Pennsylvania German	Pennsylvania German			leaf_NOUN_NEU	Blaatt	blˈɔːt	b l ˈɔː t		leaf_NOUN_NEU_1			
@@ -844,7 +852,7 @@ East Low German	East Low German			flower_NOUN	Blaum	blˈaʊ̯m	b l ˈaʊ̯ m		fl
 Dutch	Dutch			flower_NOUN	bloem	bɫˈum	b ɫ ˈu m		flower_NOUN_1			
 Afrikaans	Afrikaans			flower_NOUN	blom	bɫˈɔm	b ɫ ˈɔ m		flower_NOUN_1			
 West Flemish	West Flemish			flower_NOUN	bloeme	blˈuə̯mə	b l ˈuə̯ m ə		flower_NOUN_1			
-Limburgish	Limburgish			flower_NOUN	blóm	bɫˈom	b ɫ ˈo m		flower_NOUN_1			
+Limburgish	Limburgish			flower_NOUN	blom	blˈɔm	b l ˈɔ m		flower_NOUN_1			
 Ripuarian	Ripuarian			flower_NOUN	Bloom 	blˈoːm	b l ˈoː m		flower_NOUN_1			
 Luxembourgish	Luxembourgish			flower_NOUN	Blumm	blˈum	b l ˈu m		flower_NOUN_1			
 Pennsylvania German	Pennsylvania German			flower_NOUN	Blumm	blˈʊm	b l ˈʊ m		flower_NOUN_1			
@@ -875,7 +883,7 @@ East Low German	East Low German			blood_NOUN	Blaut	blˈaʊ̯t	b l ˈaʊ̯ t		blo
 Dutch	Dutch			blood_NOUN	bloed	bɫˈut	b ɫ ˈu t		blood_NOUN_1			
 Afrikaans	Afrikaans			blood_NOUN	bloed	bɫˈut	b ɫ ˈu t		blood_NOUN_1			
 West Flemish	West Flemish			blood_NOUN	bloed	blˈuə̯t	b l ˈuə̯ t		blood_NOUN_1			
-Limburgish	Limburgish			blood_NOUN	blood	bɫˈoːt	b ɫ ˈoː t		blood_NOUN_1			
+Limburgish	Limburgish			blood_NOUN	blood	blˈʊːt	b l ˈʊː t		blood_NOUN_1			
 Ripuarian	Ripuarian			blood_NOUN	Blot	blˈoːt	b l ˈoː t		blood_NOUN_1			
 Luxembourgish	Luxembourgish			blood_NOUN	Blutt	blˈʊt	b l ˈʊ t		blood_NOUN_1			
 Pennsylvania German	Pennsylvania German			blood_NOUN	Blut	blˈuːt	b l ˈuː t		blood_NOUN_1			
@@ -938,7 +946,7 @@ East Low German	East Low German			bread_NOUN	Brot	brˈaʊ̯t	b r ˈaʊ̯ t		brea
 Dutch	Dutch			bread_NOUN	brood	bɾˈoːt	b ɾ ˈoː t		bread_NOUN_1			
 Afrikaans	Afrikaans			bread_NOUN	brood	brˈʊə̯t	b r ˈʊə̯ t		bread_NOUN_1			
 West Flemish	West Flemish			bread_NOUN	brood	bɾˈoːt	b ɾ ˈoː t		bread_NOUN_1			
-Limburgish	Limburgish			bread_NOUN	broead	bʁˈuːɑ̯t	b ʁ ˈuːɑ̯ t		bread_NOUN_1			
+Limburgish	Limburgish			bread_NOUN	broed	bʀˈut	b ʀ ˈu t		bread_NOUN_1			
 Ripuarian	Ripuarian			bread_NOUN	Brut	bʀˈuːt	b ʀ ˈuː t		bread_NOUN_1			
 Luxembourgish	Luxembourgish			bread_NOUN	Brout	bʀˈəʊ̯t	b ʀ ˈəʊ̯ t		bread_NOUN_1			
 Pennsylvania German	Pennsylvania German			bread_NOUN	Brot	bɾˈoːt	b ɾ ˈoː t		bread_NOUN_1			
@@ -970,6 +978,7 @@ East Low German	East Low German			breast_NOUN	Bost	bˈɔst	b ˈɔ s t		breast_NO
 Dutch	Dutch			breast_NOUN	borst	bˈɔɾst	b ˈɔ ɾ s t		breast_NOUN_1			
 Afrikaans	Afrikaans			breast_NOUN	bors	bˈɔːrs	b ˈɔː r s		breast_NOUN_1			
 West Flemish	West Flemish			breast_NOUN	borst	bˈɔɾst	b ˈɔ ɾ s t		breast_NOUN_1			
+Limburgish	Limburgish			breast_NOUN	boors	bˈʊːʀs	b ˈʊː ʀ s		breast_NOUN_1			
 Ripuarian	Ripuarian			breast_NOUN	Bross	bʀˈos	b ʀ ˈo s		breast_NOUN_1			
 Luxembourgish	Luxembourgish			breast_NOUN	Broscht	bʀˈoʃt	b ʀ ˈo ʃ t		breast_NOUN_1			
 Pennsylvania German	Pennsylvania German			breast_NOUN	Bruscht	bɾˈʊʃt	b ɾ ˈʊ ʃ t		breast_NOUN_1			
@@ -1002,7 +1011,7 @@ Dutch	Dutch			brother_NOUN	broeder	bɾˈudəɾ	b ɾ ˈu d ə ɾ		brother_NOUN_1
 Dutch	Dutch			brother_NOUN	broer	bɾˈuɾ	b ɾ ˈu ɾ		brother_NOUN_1			
 Afrikaans	Afrikaans			brother_NOUN	broer	brˈuːr	b r ˈuː r		brother_NOUN_1			
 West Flemish	West Flemish			brother_NOUN	broer	bɾˈuə̯ɾ	b ɾ ˈuə̯ ɾ		brother_NOUN_1			
-Limburgish	Limburgish			brother_NOUN	broor	bʁˈoːʁ	b ʁ ˈoː ʁ		brother_NOUN_1			
+Limburgish	Limburgish			brother_NOUN	breur	bʀˈøːʀ	b ʀ ˈøː ʀ		brother_NOUN_1			
 Ripuarian	Ripuarian			brother_NOUN	Broder	bʀˈoːdɐ	b ʀ ˈoː d ɐ		brother_NOUN_1			
 Luxembourgish	Luxembourgish			brother_NOUN	Brudder	bʀˈʊdɐ	b ʀ ˈʊ d ɐ		brother_NOUN_1			
 Pennsylvania German	Pennsylvania German			brother_NOUN	Bruder	bɾˈuːdɑ	b ɾ ˈuː d ɑ		brother_NOUN_1			
@@ -1033,6 +1042,7 @@ East Low German	East Low German			bridge_NOUN	Brügg	brˈʏç	b r ˈʏ ç		bridg
 Dutch	Dutch			bridge_NOUN	brug	bɾˈʏχ	b ɾ ˈʏ χ		bridge_NOUN_1			
 Afrikaans	Afrikaans			bridge_NOUN	brug	brˈœχ	b r ˈœ χ		bridge_NOUN_1			
 West Flemish	West Flemish			bridge_NOUN	brugge	bɾˈœɦə	b ɾ ˈœ ɦ ə		bridge_NOUN_1			
+Limburgish	Limburgish			bridge_NOUN	brögk	bʀˈœk	b ʀ ˈœ k		bridge_NOUN_1			
 Ripuarian	Ripuarian			bridge_NOUN	Bröck	bʀˈøk	b ʀ ˈø k		bridge_NOUN_1			
 Luxembourgish	Luxembourgish			bridge_NOUN	Bréck	bʀˈek	b ʀ ˈe k		bridge_NOUN_1			
 Pennsylvania German	Pennsylvania German			bridge_NOUN	Brick	bɾˈɪk	b ɾ ˈɪ k		bridge_NOUN_1			
@@ -1064,7 +1074,7 @@ East Low German	East Low German			day_NOUN	Dach	dˈax	d ˈa x		day_NOUN_1
 Dutch	Dutch			day_NOUN	dag	dˈɑχ	d ˈɑ χ		day_NOUN_1			
 Afrikaans	Afrikaans			day_NOUN	dag	dˈaχ	d ˈa χ		day_NOUN_1			
 West Flemish	West Flemish			day_NOUN	dag	dˈɑh	d ˈɑ h		day_NOUN_1			
-Limburgish	Limburgish			day_NOUN	daag	dˈaːχ	d ˈaː χ		day_NOUN_1			
+Limburgish	Limburgish			day_NOUN	daag	dˈaːx	d ˈaː x		day_NOUN_1			
 Ripuarian	Ripuarian			day_NOUN	Daach	dˈaːx	d ˈaː x		day_NOUN_1			
 Luxembourgish	Luxembourgish			day_NOUN	Dag	dˈaːχ	d ˈaː χ		day_NOUN_1			
 Pennsylvania German	Pennsylvania German			day_NOUN	Daag	dˈɔːk	d ˈɔː k		day_NOUN_1			
@@ -1096,6 +1106,7 @@ East Low German	East Low German			death_NOUN	Dod	dˈaʊ̯d	d ˈaʊ̯ d		death_NO
 Dutch	Dutch			death_NOUN	dood	dˈoːt	d ˈoː t		death_NOUN_1			
 Afrikaans	Afrikaans			death_NOUN	dood	dˈʊə̯t	d ˈʊə̯ t		death_NOUN_1			
 West Flemish	West Flemish			death_NOUN	dôod	dˈoːt	d ˈoː t		death_NOUN_1			
+Limburgish	Limburgish			death_NOUN	doed	dˈut	d ˈu t		death_NOUN_1			
 Ripuarian	Ripuarian			death_NOUN	Dud	dˈuːt	d ˈuː t		death_NOUN_1			
 Luxembourgish	Luxembourgish			death_NOUN	Doud	dˈəʊ̯t	d ˈəʊ̯ t		death_NOUN_1			
 Pennsylvania German	Pennsylvania German			death_NOUN	Dod	dˈoːt	d ˈoː t		death_NOUN_1			
@@ -1160,6 +1171,7 @@ East Low German	East Low German			animal_NOUN	Diert	dˈiːæt	d ˈiː æ t		anim
 Dutch	Dutch			animal_NOUN	dier	dˈiɾ	d ˈi ɾ		animal_NOUN_1			
 Afrikaans	Afrikaans			animal_NOUN	dier	dˈiːr	d ˈiː r		animal_NOUN_1			
 West Flemish	West Flemish			animal_NOUN	dier	dˈiə̯ɾ	d ˈiə̯ ɾ		animal_NOUN_1			
+Limburgish	Limburgish			animal_NOUN	dier	dˈiːʀ	d ˈiː ʀ		animal_NOUN_1			
 Ripuarian	Ripuarian			animal_NOUN	Dier	dˈiɐ	d ˈi ɐ		animal_NOUN_1			
 Luxembourgish	Luxembourgish			animal_NOUN	Déier	dˈəɪ̯ɐ	d ˈəɪ̯ ɐ		animal_NOUN_1			
 Pennsylvania German	Pennsylvania German			animal_NOUN	Dier	dˈiːɑ	d ˈiː ɑ		animal_NOUN_1			
@@ -1189,7 +1201,7 @@ East Low German	East Low German			dear_ADJ	düer	dˈyːæ	d ˈyː æ		dear_ADJ_1
 Dutch	Dutch			dear_ADJ	duur	dˈyːɾ	d ˈyː ɾ		dear_ADJ_1			
 Afrikaans	Afrikaans			dear_ADJ	duur	dˈyːr	d ˈyː r		dear_ADJ_1			
 West Flemish	West Flemish			dear_ADJ	diere	dˈiə̯ɾə	d ˈiə̯ ɾ ə		dear_ADJ_1			
-Limburgish	Limburgish			dear_ADJ	deur	dˈøːʁ	d ˈøː ʁ		dear_ADJ_1			
+Limburgish	Limburgish			dear_ADJ	deur	dˈøːʀ	d ˈøː ʀ		dear_ADJ_1			
 Ripuarian	Ripuarian			dear_ADJ	döör	dˈøɐ	d ˈø ɐ		dear_ADJ_1			
 Ripuarian	Ripuarian			dear_ADJ	düür	dˈyɐ	d ˈy ɐ		dear_ADJ_1			
 Luxembourgish	Luxembourgish			dear_ADJ	deier	dˈɑɪ̯ɐ	d ˈɑɪ̯ ɐ		dear_ADJ_1			
@@ -1214,7 +1226,7 @@ East Low German	East Low German			dry_ADJ	drööch	drˈøːç	d r ˈøː ç		dry
 Dutch	Dutch			dry_ADJ	droog	dɾˈoːχ	d ɾ ˈoː χ		dry_ADJ_1			
 Afrikaans	Afrikaans			dry_ADJ	droog	drˈʊə̯χ	d r ˈʊə̯ χ		dry_ADJ_1			
 West Flemish	West Flemish			dry_ADJ	droog	dɾˈoːh	d ɾ ˈoː h		dry_ADJ_1			
-Limburgish	Limburgish			dry_ADJ	druug	dʁˈyːʝ	d ʁ ˈyː ʝ		dry_ADJ_1			
+Limburgish	Limburgish			dry_ADJ	druug	dʀˈyx	d ʀ ˈy x		dry_ADJ_1			
 Ripuarian	Ripuarian			dry_ADJ	drüch	dʀˈyɕ	d ʀ ˈy ɕ		dry_ADJ_1			
 Proto-Germanic	Proto-Germanic			dream_NOUN	draumaz	drˈɑu̯mɑz	d r ˈɑu̯ m ɑ z		dream_NOUN_1			
 Old Norse	Old Norse			dream_NOUN	draumr	drˈɑu̯mr	d r ˈɑu̯ m r		dream_NOUN_1			
@@ -1238,7 +1250,7 @@ East Low German	East Low German			dream_NOUN	Drom	drˈaʊ̯m	d r ˈaʊ̯ m		drea
 Dutch	Dutch			dream_NOUN	droom	dɾˈoːm	d ɾ ˈoː m		dream_NOUN_1			
 Afrikaans	Afrikaans			dream_NOUN	droom	drˈʊə̯m	d r ˈʊə̯ m		dream_NOUN_1			
 West Flemish	West Flemish			dream_NOUN	droom	dɾˈoːm	d ɾ ˈoː m		dream_NOUN_1			
-Limburgish	Limburgish			dream_NOUN	droum	dʁˈɔu̯m	d ʁ ˈɔu̯ m		dream_NOUN_1			
+Limburgish	Limburgish			dream_NOUN	droum	dʀˈɔːm	d ʀ ˈɔː m		dream_NOUN_1			
 Ripuarian	Ripuarian			dream_NOUN	Draum	dʀˈaʊ̯m	d ʀ ˈaʊ̯ m		dream_NOUN_1			
 Luxembourgish	Luxembourgish			dream_NOUN	Dram	dʀˈaːm	d ʀ ˈaː m		dream_NOUN_1			
 Pennsylvania German	Pennsylvania German			dream_NOUN	Draam	dɾˈɔːm	d ɾ ˈɔː m		dream_NOUN_1			
@@ -1270,7 +1282,7 @@ East Low German	East Low German			drink_VERB	drinken	drˈɪŋkn̩	d r ˈɪ ŋ k 
 Dutch	Dutch			drink_VERB	drinken	dɾˈɪŋkən	d ɾ ˈɪ ŋ k ə n		drink_VERB_1			
 Afrikaans	Afrikaans			drink_VERB	drink	drˈəŋk	d r ˈə ŋ k		drink_VERB_1			
 West Flemish	West Flemish			drink_VERB	drinkn	dɾˈɪŋkn̩	d ɾ ˈɪ ŋ k n̩		drink_VERB_1			
-Limburgish	Limburgish			drink_VERB	drinke	dʁˈɪŋkə	d ʁ ˈɪ ŋ k ə		drink_VERB_1			
+Limburgish	Limburgish			drink_VERB	drinke	dʀˈɪːŋkə	d ʀ ˈɪː ŋ k ə		drink_VERB_1			
 Ripuarian	Ripuarian			drink_VERB	drenke	dʀˈeŋkə	d ʀ ˈe ŋ k ə		drink_VERB_1			
 Luxembourgish	Luxembourgish			drink_VERB	drénken	dʀˈeŋkən	d ʀ ˈe ŋ k ə n		drink_VERB_1			
 Pennsylvania German	Pennsylvania German			drink_VERB	drinke	dɾˈɪŋkə	d ɾ ˈɪ ŋ k ə		drink_VERB_1			
@@ -1309,7 +1321,7 @@ East Low German	East Low German			daughter_NOUN	Dochter	dˈɔxtæ	d ˈɔ x t æ	
 Dutch	Dutch			daughter_NOUN	dochter	dˈɔχtəɾ	d ˈɔ χ t ə ɾ		daughter_NOUN_1			
 Afrikaans	Afrikaans			daughter_NOUN	dogter	dˈɔχtər	d ˈɔ χ t ə r		daughter_NOUN_1			
 West Flemish	West Flemish			daughter_NOUN	dochter	dˈɔhtɾ̩	d ˈɔ h t ɾ̩		daughter_NOUN_1			
-Limburgish	Limburgish			daughter_NOUN	dóchter	dˈoxtəʁ	d ˈo x t ə ʁ		daughter_NOUN_1			
+Limburgish	Limburgish			daughter_NOUN	dochter	dˈɔxtəʀ	d ˈɔ x t ə ʀ		daughter_NOUN_1			
 Ripuarian	Ripuarian			daughter_NOUN	Dochter	dˈɔxtɐ	d ˈɔ x t ɐ		daughter_NOUN_1			
 Luxembourgish	Luxembourgish			daughter_NOUN	Duechter	dˈʊɪ̯ʃtɐ	d ˈʊɪ̯ ʃ t ɐ		daughter_NOUN_1			
 Pennsylvania German	Pennsylvania German			daughter_NOUN	Dochder	dˈɔxdɑ	d ˈɔ x d ɑ		daughter_NOUN_1			
@@ -1334,6 +1346,7 @@ West Frisian	West Frisian			dwarf_NOUN	dwerch	dvˈɛrχ	d v ˈɛ r χ		dwarf_NOU
 Saterland Frisian	Saterland Frisian			dwarf_NOUN	Dwärch	dvˈɛrx	d v ˈɛ r x		dwarf_NOUN_1			
 Dutch	Dutch			dwarf_NOUN	dwerg	dʋˈɛɾχ	d ʋ ˈɛ ɾ χ		dwarf_NOUN_1			
 Afrikaans	Afrikaans			dwarf_NOUN	dwerg	dvˈɛrχ	d v ˈɛ r χ		dwarf_NOUN_1			
+Limburgish	Limburgish			dwarf_NOUN	dwerg	dβˈæːʀəx	d β ˈæː ʀ ə x		dwarf_NOUN_1			
 Ripuarian	Ripuarian			dwarf_NOUN	Zwerg	ʦvˈɛɐk	ʦ v ˈɛ ɐ k		dwarf_NOUN_1			
 Pennsylvania German	Pennsylvania German			dwarf_NOUN	Zwaerich	ʦʋˈɛːɾɪç	ʦ ʋ ˈɛː ɾ ɪ ç		dwarf_NOUN_1			
 German	German			dwarf_NOUN	Zwerg	ʦvˈɛɐk	ʦ v ˈɛ ɐ k		dwarf_NOUN_1			
@@ -1360,7 +1373,9 @@ Northern Low Saxon	Northern Low Saxon			I_PRON	ik	ˈɪɡ	ˈɪ ɡ		I_PRON_1
 East Low German	East Low German			I_PRON	ik	ˈɪk	ˈɪ k		I_PRON_1			
 Dutch	Dutch			I_PRON	ik	ˈɪk	ˈɪ k		I_PRON_1			
 Afrikaans	Afrikaans			I_PRON	ek	ˈæk	ˈæ k		I_PRON_1			
-West Flemish	West Flemish			I_PRON	k	ˈɛk	ˈɛ k		I_PRON_1			
+West Flemish	West Flemish			I_PRON	k	ək	ə k		I_PRON_1			
+Limburgish	Limburgish			I_PRON	iech	ˈix	ˈi x		I_PRON_1			
+Limburgish	Limburgish			I_PRON	'ch	əx	ə x		I_PRON_1			
 Ripuarian	Ripuarian			I_PRON	ich	ˈiɕ	ˈi ɕ		I_PRON_1			
 Luxembourgish	Luxembourgish			I_PRON	ech	ˈəɕ	ˈə ɕ		I_PRON_1			
 Pennsylvania German	Pennsylvania German			I_PRON	ich	ˈɪç	ˈɪ ç		I_PRON_1			
@@ -1389,6 +1404,7 @@ Northern Low Saxon	Northern Low Saxon			eel_NOUN	Aal	ˈoːl	ˈoː l		eel_NOUN_1
 East Low German	East Low German			eel_NOUN	Ål	ˈɒːl	ˈɒː l		eel_NOUN_1			
 Dutch	Dutch			eel_NOUN	aal	ˈaːɫ	ˈaː ɫ		eel_NOUN_1			
 Afrikaans	Afrikaans			eel_NOUN	aal	ˈɑːɫ	ˈɑː ɫ		eel_NOUN_1			
+Limburgish	Limburgish			eel_NOUN	iel	ˈil	ˈi l		eel_NOUN_1			
 Ripuarian	Ripuarian			eel_NOUN	Ööl	ˈøːl	ˈøː l		eel_NOUN_1			
 Luxembourgish	Luxembourgish			eel_NOUN	Éil	ˈəɪ̯l	ˈəɪ̯ l		eel_NOUN_1			
 Pennsylvania German	Pennsylvania German			eel_NOUN	Ool	ˈoːl	ˈoː l		eel_NOUN_1			
@@ -1417,7 +1433,7 @@ East Low German	East Low German			earth_NOUN	Ierd	ˈiːæ	ˈiː æ		earth_NOUN_1
 Dutch	Dutch			earth_NOUN	aard	ˈaːɾt	ˈaː ɾ t		earth_NOUN_1			
 Afrikaans	Afrikaans			earth_NOUN	aarde	ˈɑːrdə	ˈɑː r d ə		earth_NOUN_1			
 West Flemish	West Flemish			earth_NOUN	eirde	ˈɛːɾdə	ˈɛː ɾ d ə		earth_NOUN_1			
-Limburgish	Limburgish			earth_NOUN	eerd	ˈeːʁt	ˈeː ʁ t		earth_NOUN_1			
+Limburgish	Limburgish			earth_NOUN	eerd	ˈeːʀt	ˈeː ʀ t		earth_NOUN_1			
 Ripuarian	Ripuarian			earth_NOUN	Ääd	ˈɛːt	ˈɛː t		earth_NOUN_1			
 Luxembourgish	Luxembourgish			earth_NOUN	Äerd	ˈɛːɐt	ˈɛː ɐ t		earth_NOUN_1			
 Pennsylvania German	Pennsylvania German			earth_NOUN	Erd	ˈɛɑt	ˈɛ ɑ t		earth_NOUN_1			
@@ -1448,7 +1464,7 @@ East Low German	East Low German			eat_VERB	äten	ˈɛːtn̩	ˈɛː t n̩		eat_VE
 Dutch	Dutch			eat_VERB	eten	ˈeːtən	ˈeː t ə n		eat_VERB_1			
 Afrikaans	Afrikaans			eat_VERB	eet	ˈɪə̯t	ˈɪə̯ t		eat_VERB_1			
 West Flemish	West Flemish			eat_VERB	eetn	ˈeːtn̩	ˈeː t n̩		eat_VERB_1			
-Limburgish	Limburgish			eat_VERB	aete	ˈæːtə	ˈæː t ə		eat_VERB_1			
+Limburgish	Limburgish			eat_VERB	ete	ˈeːtə	ˈeː t ə		eat_VERB_1			
 Ripuarian	Ripuarian			eat_VERB	äße	ˈɛːsə	ˈɛː s ə		eat_VERB_1			
 Luxembourgish	Luxembourgish			eat_VERB	iessen	ˈiə̯sən	ˈiə̯ s ə n		eat_VERB_1			
 Pennsylvania German	Pennsylvania German			eat_VERB	esse	ˈɛsə	ˈɛ s ə		eat_VERB_1			
@@ -1479,7 +1495,7 @@ East Low German	East Low German			father_NOUN	Vadder	fˈaɾæ	f ˈa ɾ æ		fathe
 Dutch	Dutch			father_NOUN	vader	vˈaːdəɾ	v ˈaː d ə ɾ		father_NOUN_1			
 Afrikaans	Afrikaans			father_NOUN	vader	fˈɑːdər	f ˈɑː d ə r		father_NOUN_1			
 West Flemish	West Flemish			father_NOUN	voader	vˈɒːdɾ̩	v ˈɒː d ɾ̩		father_NOUN_1			
-Limburgish	Limburgish			father_NOUN	vader	vˈɑdəʁ	v ˈɑ d ə ʁ		father_NOUN_1			
+Limburgish	Limburgish			father_NOUN	vaajer	vˈaːjəʀ	v ˈaː j ə ʀ		father_NOUN_1			
 Ripuarian	Ripuarian			father_NOUN	Vader	fˈadɐ	f ˈa d ɐ		father_NOUN_1			
 Pennsylvania German	Pennsylvania German			father_NOUN	Vadder	fˈadɑ	f ˈa d ɑ		father_NOUN_1			
 German	German			father_NOUN	Vater	fˈaːtɐ	f ˈaː t ɐ		father_NOUN_1			
@@ -1495,6 +1511,7 @@ Saterland Frisian	Saterland Frisian			fast_ADJ	fääst	fˈɛːst	f ˈɛː s t		f
 North Frisian	North Frisian			fast_ADJ	fååst	fˈɒːst	f ˈɒː s t		fast_ADJ_1			
 Dutch	Dutch			fast_ADJ	vast	vˈɑst	v ˈɑ s t		fast_ADJ_1			
 West Flemish	West Flemish			fast_ADJ	vast	vˈɑst	v ˈɑ s t		fast_ADJ_1			
+Limburgish	Limburgish			fast_ADJ	vas	vˈɑs	v ˈɑ s		fast_ADJ_1			
 German	German			fast_ADJ	fast	fˈast	f ˈa s t		fast_ADJ_1			
 German	German			fast_ADJ	fest	fˈɛst	f ˈɛ s t		fast_ADJ_1			
 Proto-Germanic	Proto-Germanic			few_ADJ	fawaz	ɸˈɑwɑz	ɸ ˈɑ w ɑ z		few_ADJ_1			
@@ -1532,7 +1549,7 @@ East Low German	East Low German			four_NUM	vier	fˈiːæ	f ˈiː æ		four_NUM_1
 Dutch	Dutch			four_NUM	vier	vˈiɾ	v ˈi ɾ		four_NUM_1			
 Afrikaans	Afrikaans			four_NUM	vier	fˈiːr	f ˈiː r		four_NUM_1			
 West Flemish	West Flemish			four_NUM	viere	vˈiə̯ɾə	v ˈiə̯ ɾ ə		four_NUM_1			
-Limburgish	Limburgish			four_NUM	veer	vˈeːʁ	v ˈeː ʁ		four_NUM_1			
+Limburgish	Limburgish			four_NUM	veer	vˈeːʀ	v ˈeː ʀ		four_NUM_1			
 Ripuarian	Ripuarian			four_NUM	vier	fˈiɐ	f ˈi ɐ		four_NUM_1			
 Luxembourgish	Luxembourgish			four_NUM	véier	fˈəɪ̯ɐ	f ˈəɪ̯ ɐ		four_NUM_1			
 Pennsylvania German	Pennsylvania German			four_NUM	vier	fˈiːɑ	f ˈiː ɑ		four_NUM_1			
@@ -1561,7 +1578,7 @@ Northern Low Saxon	Northern Low Saxon			feather_NOUN	Fedder	fˈɛlə	f ˈɛ l ə
 East Low German	East Low German			feather_NOUN	Fedder	fˈɛɾæ	f ˈɛ ɾ æ		feather_NOUN_1			
 Dutch	Dutch			feather_NOUN	veer	vˈeːɾ	v ˈeː ɾ		feather_NOUN_1			
 Afrikaans	Afrikaans			feather_NOUN	veer	fˈɪə̯r	f ˈɪə̯ r		feather_NOUN_1			
-Limburgish	Limburgish			feather_NOUN	vaer	vˈæːʁ	v ˈæː ʁ		feather_NOUN_1			
+Limburgish	Limburgish			feather_NOUN	veer	vˈeːʀ	v ˈeː ʀ		feather_NOUN_1			
 Ripuarian	Ripuarian			feather_NOUN	Fedder	fˈɛdɐ	f ˈɛ d ɐ		feather_NOUN_1			
 Luxembourgish	Luxembourgish			feather_NOUN	Fieder	fˈiə̯dɐ	f ˈiə̯ d ɐ		feather_NOUN_1			
 Pennsylvania German	Pennsylvania German			feather_NOUN	Fedder	fˈɛdɑ	f ˈɛ d ɑ		feather_NOUN_1			
@@ -1625,6 +1642,7 @@ East Low German	East Low German			finger_NOUN	Finger	fˈɪŋæ	f ˈɪ ŋ æ		fin
 Dutch	Dutch			finger_NOUN	vinger	vˈɪŋəɾ	v ˈɪ ŋ ə ɾ		finger_NOUN_1			
 Afrikaans	Afrikaans			finger_NOUN	vinger	fˈəŋər	f ˈə ŋ ə r		finger_NOUN_1			
 West Flemish	West Flemish			finger_NOUN	vinger	vˈɪŋɾ̩	v ˈɪ ŋ ɾ̩		finger_NOUN_1			
+Limburgish	Limburgish			finger_NOUN	vinger	ˈvɪːŋəʀ	ˈv ɪː ŋ ə ʀ		finger_NOUN_1			
 Ripuarian	Ripuarian			finger_NOUN	Finger	fˈɪŋɐ	f ˈɪ ŋ ɐ		finger_NOUN_1			
 Luxembourgish	Luxembourgish			finger_NOUN	Fanger	fˈɑŋɐ	f ˈɑ ŋ ɐ		finger_NOUN_1			
 Pennsylvania German	Pennsylvania German			finger_NOUN	Finger	fˈɪŋɑ	f ˈɪ ŋ ɑ		finger_NOUN_1			
@@ -1655,7 +1673,7 @@ East Low German	East Low German			fish_NOUN	Fisch	fˈɪʃ	f ˈɪ ʃ		fish_NOUN_1
 Dutch	Dutch			fish_NOUN	vis	vˈɪs	v ˈɪ s		fish_NOUN_1			
 Afrikaans	Afrikaans			fish_NOUN	vis	fˈəs	f ˈə s		fish_NOUN_1			
 West Flemish	West Flemish			fish_NOUN	vis	vˈɛs	v ˈɛ s		fish_NOUN_1			
-Limburgish	Limburgish			fish_NOUN	vèsj	vˈɛʃ	v ˈɛ ʃ		fish_NOUN_1			
+Limburgish	Limburgish			fish_NOUN	vès	vˈɛs	v ˈɛ s		fish_NOUN_1			
 Ripuarian	Ripuarian			fish_NOUN	Fesch	fˈeʃ	f ˈe ʃ		fish_NOUN_1			
 Luxembourgish	Luxembourgish			fish_NOUN	Fësch	fˈəʃ	f ˈə ʃ		fish_NOUN_1			
 Pennsylvania German	Pennsylvania German			fish_NOUN	Fisch	fˈɪʃ	f ˈɪ ʃ		fish_NOUN_1			
@@ -1679,7 +1697,7 @@ East Low German	East Low German			flesh_NOUN	Fleisch	flˈae̯ʃ	f l ˈae̯ ʃ		f
 Dutch	Dutch			flesh_NOUN	vlees	vɫˈeːs	v ɫ ˈeː s		flesh_NOUN_1			
 Afrikaans	Afrikaans			flesh_NOUN	vleis	fɫˈəɪ̯s	f ɫ ˈəɪ̯ s		flesh_NOUN_1			
 West Flemish	West Flemish			flesh_NOUN	vlees	vlˈeːs	v l ˈeː s		flesh_NOUN_1			
-Limburgish	Limburgish			flesh_NOUN	vleisj	vlˈɛi̯ʃ	v l ˈɛi̯ ʃ		flesh_NOUN_1			
+Limburgish	Limburgish			flesh_NOUN	vleis	vlˈɛːs	v l ˈɛː s		flesh_NOUN_1			
 Ripuarian	Ripuarian			flesh_NOUN	Fleesch	flˈeːʃ	f l ˈeː ʃ		flesh_NOUN_1			
 Luxembourgish	Luxembourgish			flesh_NOUN	Fleesch	flˈeːʃ	f l ˈeː ʃ		flesh_NOUN_1			
 Pennsylvania German	Pennsylvania German			flesh_NOUN	Fleesch	flˈeːʃ	f l ˈeː ʃ		flesh_NOUN_1			
@@ -1710,7 +1728,7 @@ East Low German	East Low German			fly_VERB	flegen	flˈae̯ŋ	f l ˈae̯ ŋ		fly_
 Dutch	Dutch			fly_VERB	vliegen	vɫˈiχən	v ɫ ˈi χ ə n		fly_VERB_1			
 Afrikaans	Afrikaans			fly_VERB	vlieg	fɫˈiχ	f ɫ ˈi χ		fly_VERB_1			
 West Flemish	West Flemish			fly_VERB	vliegn	vlˈiə̯ɦn̩	v l ˈiə̯ ɦ n̩		fly_VERB_1			
-Limburgish	Limburgish			fly_VERB	vlege	vlˈeːʝə	v l ˈeː ʝ ə		fly_VERB_1			
+Limburgish	Limburgish			fly_VERB	vlege	vlˈeːɣə	v l ˈeː ɣ ə		fly_VERB_1			
 Ripuarian	Ripuarian			fly_VERB	fleeje	flˈeːjə	f l ˈeː j ə		fly_VERB_1			
 Luxembourgish	Luxembourgish			fly_VERB	fléien	flˈəɪ̯ən	f l ˈəɪ̯ ə n		fly_VERB_1			
 Pennsylvania German	Pennsylvania German			fly_VERB	fliege	flˈiːjə	f l ˈiː j ə		fly_VERB_1			
@@ -1740,6 +1758,7 @@ East Low German	East Low German			housefly_NOUN	Fleich	flˈae̯ç	f l ˈae̯ ç	
 Dutch	Dutch			housefly_NOUN	vlieg	vɫˈiχ	v ɫ ˈi χ		housefly_NOUN_1			
 Afrikaans	Afrikaans			housefly_NOUN	vlieg	fɫˈiχ	f ɫ ˈi χ		housefly_NOUN_1			
 West Flemish	West Flemish			housefly_NOUN	vliege	vlˈiə̯ɦə	v l ˈiə̯ ɦ ə		housefly_NOUN_1			
+Limburgish	Limburgish			housefly_NOUN	vleeg	vlˈeːx	v l ˈeː x		housefly_NOUN_1			
 Ripuarian	Ripuarian			housefly_NOUN	Fleeg	flˈeːɕ	f l ˈeː ɕ		housefly_NOUN_1			
 Luxembourgish	Luxembourgish			housefly_NOUN	Fléi	flˈəɪ̯	f l ˈəɪ̯		housefly_NOUN_1			
 German	German			housefly_NOUN	Fliege	flˈiːɡə	f l ˈiː ɡ ə		housefly_NOUN_1			
@@ -1761,7 +1780,7 @@ East Low German	East Low German			feel_VERB	fäuhlen	fˈɔʏ̯ln̩	f ˈɔʏ̯ l 
 Dutch	Dutch			feel_VERB	voelen	vˈuɫən	v ˈu ɫ ə n		feel_VERB_1			
 Afrikaans	Afrikaans			feel_VERB	voel	fˈuɫ	f ˈu ɫ		feel_VERB_1			
 West Flemish	West Flemish			feel_VERB	voeln	vˈuə̯ln̩	v ˈuə̯ l n̩		feel_VERB_1			
-Limburgish	Limburgish			feel_VERB	veule	vˈøːɫə	v ˈøː ɫ ə		feel_VERB_1			
+Limburgish	Limburgish			feel_VERB	veule	vˈøːlə	v ˈøː l ə		feel_VERB_1			
 Ripuarian	Ripuarian			feel_VERB	föhle	fˈøːlə	f ˈøː l ə		feel_VERB_1			
 Luxembourgish	Luxembourgish			feel_VERB	fillen	fˈilən	f ˈi l ə n		feel_VERB_1			
 Pennsylvania German	Pennsylvania German			feel_VERB	fiehle	fˈiːlə	f ˈiː l ə		feel_VERB_1			
@@ -1793,7 +1812,7 @@ East Low German	East Low German			fire_NOUN	Füer	fˈyːæ	f ˈyː æ		fire_NOUN
 Dutch	Dutch			fire_NOUN	vuur	vˈyːɾ	v ˈyː ɾ		fire_NOUN_2			
 Afrikaans	Afrikaans			fire_NOUN	vuur	fˈyːr	f ˈyː r		fire_NOUN_2			
 West Flemish	West Flemish			fire_NOUN	vier	vˈiə̯ɾ	v ˈiə̯ ɾ		fire_NOUN_2			
-Limburgish	Limburgish			fire_NOUN	vuur	vˈyːʁ	v ˈyː ʁ		fire_NOUN_2			
+Limburgish	Limburgish			fire_NOUN	vuur	vˈyːʀ	v ˈyː ʀ		fire_NOUN_2			
 Ripuarian	Ripuarian			fire_NOUN	Füür	fˈyɐ	f ˈy ɐ		fire_NOUN_2			
 Luxembourgish	Luxembourgish			fire_NOUN	Feier	fˈɑɪ̯ɐ	f ˈɑɪ̯ ɐ		fire_NOUN_2			
 Pennsylvania German	Pennsylvania German			fire_NOUN	Feier	fˈaɪ̯ɑ	f ˈaɪ̯ ɑ		fire_NOUN_2			
@@ -1825,7 +1844,7 @@ East Low German	East Low German			foot_NOUN	Faut	fˈaʊ̯t	f ˈaʊ̯ t		foot_NOU
 Dutch	Dutch			foot_NOUN	voet	vˈut	v ˈu t		foot_NOUN_1			
 Afrikaans	Afrikaans			foot_NOUN	voet	fˈut	f ˈu t		foot_NOUN_1			
 West Flemish	West Flemish			foot_NOUN	voet	vˈuə̯t	v ˈuə̯ t		foot_NOUN_1			
-Limburgish	Limburgish			foot_NOUN	voot	vˈoːt	v ˈoː t		foot_NOUN_1			
+Limburgish	Limburgish			foot_NOUN	voot	vˈʊːt	v ˈʊː t		foot_NOUN_1			
 Ripuarian	Ripuarian			foot_NOUN	Foß	fˈoːs	f ˈoː s		foot_NOUN_1			
 Luxembourgish	Luxembourgish			foot_NOUN	Fouss	fˈəʊ̯s	f ˈəʊ̯ s		foot_NOUN_1			
 Pennsylvania German	Pennsylvania German			foot_NOUN	Fuuss	fˈuːs	f ˈuː s		foot_NOUN_1			
@@ -1842,6 +1861,7 @@ East Low German	East Low German			woman_NOUN	Fru	frˈuː	f r ˈuː		woman_NOUN_1
 Dutch	Dutch			woman_NOUN	vrouw	vɾˈɑu̯	v ɾ ˈɑu̯		woman_NOUN_1			
 Afrikaans	Afrikaans			woman_NOUN	frou	frˈœu̯	f r ˈœu̯		woman_NOUN_1			
 West Flemish	West Flemish			woman_NOUN	vrouwe	vɾˈuʋə	v ɾ ˈu ʋ ə		woman_NOUN_1			
+Limburgish	Limburgish			woman_NOUN	vrouw	vʀˈɔu̯	v ʀ ˈɔu̯		woman_NOUN_1			
 Luxembourgish	Luxembourgish			woman_NOUN	Fra	fʀˈaː	f ʀ ˈaː		woman_NOUN_1			
 Pennsylvania German	Pennsylvania German			woman_NOUN	Fraa	fɾˈɔː	f ɾ ˈɔː		woman_NOUN_1			
 German	German			woman_NOUN	Frau	fʁˈaʊ̯	f ʁ ˈaʊ̯		woman_NOUN_1			
@@ -1864,6 +1884,7 @@ East Low German	East Low German			free_ADJ	frie	frˈiː	f r ˈiː		free_ADJ_1
 Dutch	Dutch			free_ADJ	vrij	vɾˈɛi̯	v ɾ ˈɛi̯		free_ADJ_1			
 Afrikaans	Afrikaans			free_ADJ	vry	frˈəɪ̯	f r ˈəɪ̯		free_ADJ_1			
 West Flemish	West Flemish			free_ADJ	vry	vɾˈi	v ɾ ˈi		free_ADJ_1			
+Limburgish	Limburgish			free_ADJ	vrij	vʀˈɛːi̯	v ʀ ˈɛːi̯		free_ADJ_1			
 Ripuarian	Ripuarian			free_ADJ	frei	fʀˈeɪ̯	f ʀ ˈeɪ̯		free_ADJ_1			
 Luxembourgish	Luxembourgish			free_ADJ	fräi	fʀˈæːɪ̯	f ʀ ˈæːɪ̯		free_ADJ_1			
 Pennsylvania German	Pennsylvania German			free_ADJ	frei	fɾˈaɪ̯	f ɾ ˈaɪ̯		free_ADJ_1			
@@ -1893,6 +1914,7 @@ East Low German	East Low German			friend_NOUN	Fründ	frˈʏnd	f r ˈʏ n d		frie
 Dutch	Dutch			friend_NOUN	vriend	vɾˈint	v ɾ ˈi n t		friend_NOUN_1			
 Afrikaans	Afrikaans			friend_NOUN	vriend	frˈint	f r ˈi n t		friend_NOUN_1			
 West Flemish	West Flemish			friend_NOUN	vriend	vɾˈiə̯nt	v ɾ ˈiə̯ n t		friend_NOUN_1			
+Limburgish	Limburgish			friend_NOUN	vrund	 vʀˈʏːnt	v ʀ ˈʏː n t		friend_NOUN_1			
 Luxembourgish	Luxembourgish			friend_NOUN	Frënd	fʀˈənt	f ʀ ˈə n t		friend_NOUN_1			
 Pennsylvania German	Pennsylvania German			friend_NOUN	Freind	fɾˈaɪ̯nt	f ɾ ˈaɪ̯ n t		friend_NOUN_1			
 German	German			friend_NOUN	Freund	fʁˈɔʏ̯nt	f ʁ ˈɔʏ̯ n t		friend_NOUN_1			
@@ -1921,6 +1943,7 @@ East Low German	East Low German			fresh_ADJ	frisch	frˈɪʃ	f r ˈɪ ʃ		fresh_A
 Dutch	Dutch			fresh_ADJ	vers	vˈɛɾs	v ˈɛ ɾ s		fresh_ADJ_1			
 Afrikaans	Afrikaans			fresh_ADJ	fars	fˈars	f ˈa r s		fresh_ADJ_1			
 West Flemish	West Flemish			fresh_ADJ	vers	vˈæɾs	v ˈæ ɾ s		fresh_ADJ_1			
+Limburgish	Limburgish			fresh_ADJ	veers	vˈeːʀs	v ˈeː ʀ s		fresh_ADJ_1			
 Luxembourgish	Luxembourgish			fresh_ADJ	frësch	fʀˈəʃ	f ʀ ˈə ʃ		fresh_ADJ_1			
 Pennsylvania German	Pennsylvania German			fresh_ADJ	frisch	fɾˈɪʃ	f ɾ ˈɪ ʃ		fresh_ADJ_1			
 German	German			fresh_ADJ	frisch	fʁˈɪʃ	f ʁ ˈɪ ʃ		fresh_ADJ_1			
@@ -1950,7 +1973,7 @@ East Low German	East Low German			bird_NOUN_MASC	Vågel	fˈɒːɡl̩	f ˈɒː ɡ
 Dutch	Dutch			bird_NOUN_MASC	vogel	vˈoːχəɫ	v ˈoː χ ə ɫ		bird_NOUN_MASC_1			
 Afrikaans	Afrikaans			bird_NOUN_MASC	voël	fˈʊə̯ɫ	f ˈʊə̯ ɫ		bird_NOUN_MASC_1			
 West Flemish	West Flemish			bird_NOUN_MASC	veugel	vˈøːɦəl	v ˈøː ɦ ə l		bird_NOUN_MASC_1			
-Limburgish	Limburgish			bird_NOUN_MASC	vogel	vˈoːɣəɫ	v ˈoː ɣ ə ɫ		bird_NOUN_MASC_1			
+Limburgish	Limburgish			bird_NOUN_MASC	vogel	vˈoːɣəl	v ˈoː ɣ ə l		bird_NOUN_MASC_1			
 Ripuarian	Ripuarian			bird_NOUN_MASC	Vuggel	fˈuɣəl	f ˈu ɣ ə l		bird_NOUN_MASC_1			
 Luxembourgish	Luxembourgish			bird_NOUN_MASC	Vull	fˈul	f ˈu l		bird_NOUN_MASC_1			
 Pennsylvania German	Pennsylvania German			bird_NOUN_MASC	Voggel	fˈɔɣl̩	f ˈɔ ɣ l̩		bird_NOUN_MASC_1			
@@ -1974,6 +1997,7 @@ East Low German	East Low German			fox_NOUN	Voss	fˈɔs	f ˈɔ s		fox_NOUN_1
 Dutch	Dutch			fox_NOUN	vos	vˈɔs	v ˈɔ s		fox_NOUN_1			
 Afrikaans	Afrikaans			fox_NOUN	vos	fˈɔs	f ˈɔ s		fox_NOUN_1			
 West Flemish	West Flemish			fox_NOUN	vos	vˈɔs	v ˈɔ s		fox_NOUN_1			
+Limburgish	Limburgish			fox_NOUN	vos	vˈɔs	v ˈɔ s		fox_NOUN_1			
 Ripuarian	Ripuarian			fox_NOUN	Fuss	fˈus	f ˈu s		fox_NOUN_1			
 Luxembourgish	Luxembourgish			fox_NOUN	Fuuss	fˈuːs	f ˈuː s		fox_NOUN_1			
 Pennsylvania German	Pennsylvania German			fox_NOUN	Fuchs	fˈʊks	f ˈʊ k s		fox_NOUN_1			
@@ -1996,7 +2020,7 @@ East Low German	East Low German			follow_VERB	folgen	fˈɔlɡn̩	f ˈɔ l ɡ n̩
 Dutch	Dutch			follow_VERB	volgen	vˈɔɫχən	v ˈɔ ɫ χ ə n		follow_VERB_1			
 Afrikaans	Afrikaans			follow_VERB	volg	fˈɔɫχ	f ˈɔ ɫ χ		follow_VERB_1			
 West Flemish	West Flemish			follow_VERB	volgn	vˈɔlɦn̩	v ˈɔ l ɦ n̩		follow_VERB_1			
-Limburgish	Limburgish			follow_VERB	vólge	vˈoɫɣə	v ˈo ɫ ɣ ə		follow_VERB_1			
+Limburgish	Limburgish			follow_VERB	volge	vˈɔləɣə	v ˈɔ l ə ɣ ə		follow_VERB_1			
 Ripuarian	Ripuarian			follow_VERB	folge	fˈɔlɣə	f ˈɔ l ɣ ə		follow_VERB_1			
 Luxembourgish	Luxembourgish			follow_VERB	follegen	fˈoləʑən	f ˈo l ə ʑ ə n		follow_VERB_1			
 Pennsylvania German	Pennsylvania German			follow_VERB	folye	fˈɔljə	f ˈɔ l j ə		follow_VERB_1			
@@ -2029,7 +2053,7 @@ Northern Low Saxon	Northern Low Saxon			folk_NOUN	Volk	fˈʊlɡ	f ˈʊ l ɡ		fol
 Dutch	Dutch			folk_NOUN	volk	vˈɔɫk	v ˈɔ ɫ k		folk_NOUN_1			
 Afrikaans	Afrikaans			folk_NOUN	volk	fˈɔɫk	f ˈɔ ɫ k		folk_NOUN_1			
 West Flemish	West Flemish			folk_NOUN	volk	vˈɔwk	v ˈɔ w k		folk_NOUN_1			
-Limburgish	Limburgish			folk_NOUN	vouk	vˈɔu̯k	v ˈɔu̯ k		folk_NOUN_1			
+Limburgish	Limburgish			folk_NOUN	volk	vˈɔːlək	v ˈɔː l ə k		folk_NOUN_1			
 Ripuarian	Ripuarian			folk_NOUN	Volk	fˈɔlk	f ˈɔ l k		folk_NOUN_1			
 Luxembourgish	Luxembourgish			folk_NOUN	Vollek	fˈolək	f ˈo l ə k		folk_NOUN_1			
 Pennsylvania German	Pennsylvania German			folk_NOUN	Volk	fˈɔlk	f ˈɔ l k		folk_NOUN_1			
@@ -2060,7 +2084,7 @@ East Low German	East Low German			full_ADJ	vull	fˈʊl	f ˈʊ l		full_ADJ_1
 Dutch	Dutch			full_ADJ	vol	vˈɔɫ	v ˈɔ ɫ		full_ADJ_1			
 Afrikaans	Afrikaans			full_ADJ	vol	fˈɔɫ	f ˈɔ ɫ		full_ADJ_1			
 West Flemish	West Flemish			full_ADJ	vul	vˈœl	v ˈœ l		full_ADJ_1			
-Limburgish	Limburgish			full_ADJ	vol	vˈɔɫ	v ˈɔ ɫ		full_ADJ_1			
+Limburgish	Limburgish			full_ADJ	vol	vˈɔl	v ˈɔ l		full_ADJ_1			
 Ripuarian	Ripuarian			full_ADJ	voll	fˈɔl	f ˈɔ l		full_ADJ_1			
 Luxembourgish	Luxembourgish			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1			
 Pennsylvania German	Pennsylvania German			full_ADJ	voll	fˈɔl	f ˈɔ l		full_ADJ_1			
@@ -2082,6 +2106,7 @@ East Low German	East Low German			ghost_NOUN	Geist	jˈae̯st	j ˈae̯ s t		ghost
 Dutch	Dutch			ghost_NOUN	geest	χˈeːst	χ ˈeː s t		ghost_NOUN_1			
 Afrikaans	Afrikaans			ghost_NOUN	gees	χˈɪə̯s	χ ˈɪə̯ s		ghost_NOUN_1			
 West Flemish	West Flemish			ghost_NOUN	geist	ɦˈɛːst	ɦ ˈɛː s t		ghost_NOUN_1			
+Limburgish	Limburgish			ghost_NOUN	geis	ɣˈɛːs	ɣ ˈɛː s		ghost_NOUN_1			
 Luxembourgish	Luxembourgish			ghost_NOUN	Geescht	ɡˈeːʃt	ɡ ˈeː ʃ t		ghost_NOUN_1			
 Pennsylvania German	Pennsylvania German			ghost_NOUN	Geescht	ɡˈeːʃt	ɡ ˈeː ʃ t		ghost_NOUN_1			
 German	German			ghost_NOUN	Geist	ɡˈaɪ̯st	ɡ ˈaɪ̯ s t		ghost_NOUN_1			
@@ -2112,6 +2137,7 @@ East Low German	East Low German			goose_NOUN	Gaus	ɡˈaʊ̯s	ɡ ˈaʊ̯ s		goose
 Dutch	Dutch			goose_NOUN	gans	χˈɑns	χ ˈɑ n s		goose_NOUN_1			
 Afrikaans	Afrikaans			goose_NOUN	gans	χˈans	χ ˈa n s		goose_NOUN_1			
 West Flemish	West Flemish			goose_NOUN	ganze	ɦˈɑnzə	ɦ ˈɑ n z ə		goose_NOUN_1			
+Limburgish	Limburgish			goose_NOUN	gaajs	ɣˈaːjs	ɣ ˈaː j s		goose_NOUN_1			
 Luxembourgish	Luxembourgish			goose_NOUN	Gäns	ɡˈæns	ɡ ˈæ n s		goose_NOUN_1			
 Pennsylvania German	Pennsylvania German			goose_NOUN	Gans	ɡˈans	ɡ ˈa n s		goose_NOUN_1			
 German	German			goose_NOUN	Gans	ɡˈans	ɡ ˈa n s		goose_NOUN_1			
@@ -2139,6 +2165,7 @@ East Low German	East Low German			guest_NOUN	Gast	ɡˈas	ɡ ˈa s		guest_NOUN_1
 Dutch	Dutch			guest_NOUN	gast	χˈɑst	χ ˈɑ s t		guest_NOUN_1			
 Afrikaans	Afrikaans			guest_NOUN	gas	χˈas	χ ˈa s		guest_NOUN_1			
 West Flemish	West Flemish			guest_NOUN	gast	ɦˈɑst	ɦ ˈɑ s t		guest_NOUN_1			
+Limburgish	Limburgish			guest_NOUN	gas	ɣˈɑs	ɣ ˈɑ s		guest_NOUN_1			
 Luxembourgish	Luxembourgish			guest_NOUN	Gaascht	ɡˈaːʃt	ɡ ˈaː ʃ t		guest_NOUN_1			
 Pennsylvania German	Pennsylvania German			guest_NOUN	Gascht	ɡˈaʃt	ɡ ˈa ʃ t		guest_NOUN_1			
 German	German			guest_NOUN	Gast	ɡˈast	ɡ ˈa s t		guest_NOUN_1			
@@ -2168,7 +2195,7 @@ East Low German	East Low German			give_VERB	gäben	jˈɛːbm̩	j ˈɛː b m̩		g
 Dutch	Dutch			give_VERB	geven	χˈeːvən	χ ˈeː v ə n		give_VERB_1			
 Afrikaans	Afrikaans			give_VERB	gee	χˈɪə̯	χ ˈɪə̯		give_VERB_1			
 West Flemish	West Flemish			give_VERB	geevn	ɦˈeːvn̩	ɦ ˈeː v n̩		give_VERB_1			
-Limburgish	Limburgish			give_VERB	gaeve	ʝˈæːvə	ʝ ˈæː v ə		give_VERB_1			
+Limburgish	Limburgish			give_VERB	geve	ɣˈeːvə	ɣ ˈeː v ə		give_VERB_1			
 Ripuarian	Ripuarian			give_VERB	jevve	jˈɛvə	j ˈɛ v ə		give_VERB_1			
 Luxembourgish	Luxembourgish			give_VERB	ginn	ɡˈin	ɡ ˈi n		give_VERB_1			
 Pennsylvania German	Pennsylvania German			give_VERB	gewwe	ɡˈɛvə	ɡ ˈɛ v ə		give_VERB_1			
@@ -2199,7 +2226,7 @@ East Low German	East Low German			yellow_ADJ	gäl	jˈɛl	j ˈɛ l		yellow_ADJ_1
 Dutch	Dutch			yellow_ADJ	geel	χˈeːɫ	χ ˈeː ɫ		yellow_ADJ_1			
 Afrikaans	Afrikaans			yellow_ADJ	geel	χˈɪə̯ɫ	χ ˈɪə̯ ɫ		yellow_ADJ_1			
 West Flemish	West Flemish			yellow_ADJ	geel	ɦˈeːl	ɦ ˈeː l		yellow_ADJ_1			
-Limburgish	Limburgish			yellow_ADJ	gael	ʝˈæːl	ʝ ˈæː l		yellow_ADJ_1			
+Limburgish	Limburgish			yellow_ADJ	geel	ɣˈeːl 	ɣ ˈeː l		yellow_ADJ_1			
 Ripuarian	Ripuarian			yellow_ADJ	jäl	jˈɛːl	j ˈɛː l		yellow_ADJ_1			
 Luxembourgish	Luxembourgish			yellow_ADJ	giel	ɡˈiə̯l	ɡ ˈiə̯ l		yellow_ADJ_1			
 Pennsylvania German	Pennsylvania German			yellow_ADJ	gehl	ɡˈeːl	ɡ ˈeː l		yellow_ADJ_1			
@@ -2231,7 +2258,7 @@ East Low German	East Low German			good_ADJ	gaut	ɡˈaʊ̯t	ɡ ˈaʊ̯ t		good_AD
 Dutch	Dutch			good_ADJ	goed	χˈut	χ ˈu t		good_ADJ_1			
 Afrikaans	Afrikaans			good_ADJ	goed	χˈut	χ ˈu t		good_ADJ_1			
 West Flemish	West Flemish			good_ADJ	goed	ɦˈuə̯t	ɦ ˈuə̯ t		good_ADJ_1			
-Limburgish	Limburgish			good_ADJ	good	ɣˈoːt	ɣ ˈoː t		good_ADJ_1			
+Limburgish	Limburgish			good_ADJ	gooj	ɣˈʊːj	ɣ ˈʊː j		good_ADJ_1			
 Ripuarian	Ripuarian			good_ADJ	jot	jˈoːt	j ˈoː t		good_ADJ_1			
 Luxembourgish	Luxembourgish			good_ADJ	gutt	ɡˈʊt	ɡ ˈʊ t		good_ADJ_1			
 Pennsylvania German	Pennsylvania German			good_ADJ	gut	ɡˈuːt	ɡ ˈuː t		good_ADJ_1			
@@ -2262,7 +2289,7 @@ East Low German	East Low German			grass_NOUN_NEU	Gras	ɡrˈaːs	ɡ r ˈaː s		gr
 Dutch	Dutch			grass_NOUN_NEU	gras	χɾˈɑs	χ ɾ ˈɑ s		grass_NOUN_NEU_1			
 Afrikaans	Afrikaans			grass_NOUN_NEU	gras	χrˈas	χ r ˈa s		grass_NOUN_NEU_1			
 West Flemish	West Flemish			grass_NOUN_NEU	gras	ɦɾˈɑs	ɦ ɾ ˈɑ s		grass_NOUN_NEU_1			
-Limburgish	Limburgish			grass_NOUN_NEU	graas	ɣʁˈaːs	ɣ ʁ ˈaː s		grass_NOUN_NEU_1			
+Limburgish	Limburgish			grass_NOUN_NEU	graas	ɣʀˈaːs	ɣ ʀ ˈaː s		grass_NOUN_NEU_1			
 Ripuarian	Ripuarian			grass_NOUN_NEU	Jras	jʀˈaːs	j ʀ ˈaː s		grass_NOUN_NEU_1			
 Luxembourgish	Luxembourgish			grass_NOUN_NEU	Gras	ɡʀˈaːs	ɡ ʀ ˈaː s		grass_NOUN_NEU_1			
 Pennsylvania German	Pennsylvania German			grass_NOUN_NEU	Graas	ɡɾˈaːs	ɡ ɾ ˈaː s		grass_NOUN_NEU_1			
@@ -2286,7 +2313,7 @@ East Low German	East Low German			great_ADJ	grot	ɡrˈaʊ̯t	ɡ r ˈaʊ̯ t		gre
 Dutch	Dutch			great_ADJ	groot	χɾˈoːt	χ ɾ ˈoː t		great_ADJ_1			
 Afrikaans	Afrikaans			great_ADJ	groot	χrˈʊə̯t	χ r ˈʊə̯ t		great_ADJ_1			
 West Flemish	West Flemish			great_ADJ	grôot	ɦɾˈoːt	ɦ ɾ ˈoː t		great_ADJ_1			
-Limburgish	Limburgish			great_ADJ	groeat	ɣʁˈuːɑ̯t	ɣ ʁ ˈuːɑ̯ t		great_ADJ_1			
+Limburgish	Limburgish			great_ADJ	groet	ɣʀˈut	ɣ ʀ ˈu t		great_ADJ_1			
 Ripuarian	Ripuarian			great_ADJ	jruß	jʀˈuːs	j ʀ ˈuː s		great_ADJ_1			
 Luxembourgish	Luxembourgish			great_ADJ	grouss	ɡʀˈəʊ̯s	ɡ ʀ ˈəʊ̯ s		great_ADJ_1			
 Pennsylvania German	Pennsylvania German			great_ADJ	grooss	ɡɾˈoːs	ɡ ɾ ˈoː s		great_ADJ_1			
@@ -2317,7 +2344,7 @@ East Low German	East Low German			green_ADJ	gräun	jrˈɔʏ̯n	j r ˈɔʏ̯ n		g
 Dutch	Dutch			green_ADJ	groen	χɾˈun	χ ɾ ˈu n		green_ADJ_1			
 Afrikaans	Afrikaans			green_ADJ	groen	χrˈun	χ r ˈu n		green_ADJ_1			
 West Flemish	West Flemish			green_ADJ	groene	ɦɾˈuə̯nə	ɦ ɾ ˈuə̯ n ə		green_ADJ_1			
-Limburgish	Limburgish			green_ADJ	greun	ɣʁˈøːn	ɣ ʁ ˈøː n		green_ADJ_1			
+Limburgish	Limburgish			green_ADJ	greun	ɣʀˈøːn	ɣ ʀ ˈøː n		green_ADJ_1			
 Ripuarian	Ripuarian			green_ADJ	jrön	jʀˈøːn	j ʀ ˈøː n		green_ADJ_1			
 Luxembourgish	Luxembourgish			green_ADJ	gréng	ɡʀˈeŋ	ɡ ʀ ˈe ŋ		green_ADJ_1			
 Pennsylvania German	Pennsylvania German			green_ADJ	grie	ɡɾˈiː	ɡ ɾ ˈiː		green_ADJ_1			
@@ -2349,6 +2376,7 @@ East Low German	East Low German			god_NOUN	Gott	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1
 Dutch	Dutch			god_NOUN	god	χˈɔt	χ ˈɔ t		god_NOUN_1			
 Afrikaans	Afrikaans			god_NOUN	god	χˈɔt	χ ˈɔ t		god_NOUN_1			
 West Flemish	West Flemish			god_NOUN	god	ɦˈɔt	ɦ ˈɔ t		god_NOUN_1			
+Limburgish	Limburgish			god_NOUN	god	ɣˈɔt	ɣ ˈɔ t		god_NOUN_1			
 Ripuarian	Ripuarian			god_NOUN	Jott	jˈɔt	j ˈɔ t		god_NOUN_1			
 Luxembourgish	Luxembourgish			god_NOUN	Gott	ɡˈot	ɡ ˈo t		god_NOUN_1			
 Pennsylvania German	Pennsylvania German			god_NOUN	Gott	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1			
@@ -2380,7 +2408,7 @@ East Low German	East Low German			gold_NOUN_NEU	Gold	ɡˈɔld	ɡ ˈɔ l d		gold_
 Dutch	Dutch			gold_NOUN_NEU	goud	χˈɑu̯t	χ ˈɑu̯ t		gold_NOUN_NEU_1			
 Afrikaans	Afrikaans			gold_NOUN_NEU	goud	χˈœu̯t	χ ˈœu̯ t		gold_NOUN_NEU_1			
 West Flemish	West Flemish			gold_NOUN_NEU	goud	ɦˈut	ɦ ˈu t		gold_NOUN_NEU_1			
-Limburgish	Limburgish			gold_NOUN_NEU	góldj	ɣˈolʤ̊	ɣ ˈo l ʤ̊		gold_NOUN_NEU_1			
+Limburgish	Limburgish			gold_NOUN_NEU	goud	ɣˈɔːwt	ɣ ˈɔː w t		gold_NOUN_NEU_1			
 Ripuarian	Ripuarian			gold_NOUN_NEU	Jold	jˈolt	j ˈo l t		gold_NOUN_NEU_1			
 Luxembourgish	Luxembourgish			gold_NOUN_NEU	Gold	ɡˈolt	ɡ ˈo l t		gold_NOUN_NEU_1			
 Pennsylvania German	Pennsylvania German			gold_NOUN_NEU	Gold	ɡˈɔlt	ɡ ˈɔ l t		gold_NOUN_NEU_1			
@@ -2412,6 +2440,7 @@ East Low German	East Low German			holy_ADJ	hillig	hˈɪlɪç	h ˈɪ l ɪ ç		hol
 Dutch	Dutch			holy_ADJ	heilig	ɦˈɛi̯ɫəχ	ɦ ˈɛi̯ ɫ ə χ		holy_ADJ_1			
 Afrikaans	Afrikaans			holy_ADJ	heilig	ɦˈəɪ̯ɫəχ	ɦ ˈəɪ̯ ɫ ə χ		holy_ADJ_1			
 West Flemish	West Flemish			holy_ADJ	eillig	ˈɛləç	ˈɛ l ə ç		holy_ADJ_1			
+Limburgish	Limburgish			holy_ADJ	heileg	ɦˈɛːləx	ɦ ˈɛː l ə x		holy_ADJ_1			
 Ripuarian	Ripuarian			holy_ADJ	hellig	hˈɛləɕ	h ˈɛ l ə ɕ		holy_ADJ_1			
 Luxembourgish	Luxembourgish			holy_ADJ	helleg	hˈɛləɕ	h ˈɛ l ə ɕ		holy_ADJ_1			
 Pennsylvania German	Pennsylvania German			holy_ADJ	heilich	hˈaɪ̯lɪç	h ˈaɪ̯ l ɪ ç		holy_ADJ_1			
@@ -2438,6 +2467,7 @@ North Frisian	North Frisian			home_NOUN	hiim	hˈiːm	h ˈiː m		home_NOUN_1
 Dutch	Dutch			home_NOUN	heem	ɦˈeːm	ɦ ˈeː m		home_NOUN_1			
 Afrikaans	Afrikaans			home_NOUN	heim	ɦˈəɪ̯m	ɦ ˈəɪ̯ m		home_NOUN_1			
 West Flemish	West Flemish			home_NOUN	heem	ɦˈeːm	ɦ ˈeː m		home_NOUN_1			
+Limburgish	Limburgish			home_NOUN	heim	ɦˈɛːi̯m	ɦ ˈɛːi̯ m		home_NOUN_1			
 Luxembourgish	Luxembourgish			home_NOUN	Heem	hˈeːm	h ˈeː m		home_NOUN_1			
 Pennsylvania German	Pennsylvania German			home_NOUN	heem	hˈeːm	h ˈeː m		home_NOUN_1			
 German	German			home_NOUN	Heim	hˈaɪ̯m	h ˈaɪ̯ m		home_NOUN_1			
@@ -2465,6 +2495,7 @@ Eastphalian	Eastphalian			hot_ADJ	heit	hˈɛɪ̯t	h ˈɛɪ̯ t		hot_ADJ_1
 Northern Low Saxon	Northern Low Saxon			hot_ADJ	hitt	hˈɪd	h ˈɪ d		hot_ADJ_1			
 East Low German	East Low German			hot_ADJ	heit	hˈae̯t	h ˈae̯ t		hot_ADJ_1			
 Dutch	Dutch			hot_ADJ	heet	ɦˈeːt	ɦ ˈeː t		hot_ADJ_1			
+Limburgish	Limburgish			hot_ADJ	heit	ɦˈɛːt	ɦ ˈɛː t		hot_ADJ_1			
 Ripuarian	Ripuarian			hot_ADJ	heeß	hˈeːs	h ˈeː s		hot_ADJ_1			
 Luxembourgish	Luxembourgish			hot_ADJ	heeß	hˈeːs	h ˈeː s		hot_ADJ_1			
 Pennsylvania German	Pennsylvania German			hot_ADJ	heess	hˈeːs	h ˈeː s		hot_ADJ_1			
@@ -2496,7 +2527,7 @@ East Low German	East Low German			hand_NOUN_FEM	Hand	hˈand	h ˈa n d		hand_NOUN
 Dutch	Dutch			hand_NOUN_FEM	hand	ɦˈɑnt	ɦ ˈɑ n t		hand_NOUN_FEM_1			
 Afrikaans	Afrikaans			hand_NOUN_FEM	hand	ɦˈant	ɦ ˈa n t		hand_NOUN_FEM_1			
 West Flemish	West Flemish			hand_NOUN_FEM	and	ˈɑnt	ˈɑ n t		hand_NOUN_FEM_1			
-Limburgish	Limburgish			hand_NOUN_FEM	handj	hˈanʤ̊	h ˈa n ʤ̊		hand_NOUN_FEM_1			
+Limburgish	Limburgish			hand_NOUN_FEM	hand	ɦˈɑːnt	ɦ ˈɑː n t		hand_NOUN_FEM_1			
 Ripuarian	Ripuarian			hand_NOUN_FEM	Hand	hˈant	h ˈa n t		hand_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			hand_NOUN_FEM	Hand	hˈɑnt	h ˈɑ n t		hand_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			hand_NOUN_FEM	Hand	hˈant	h ˈa n t		hand_NOUN_FEM_1			
@@ -2525,7 +2556,7 @@ East Low German	East Low German			head_NOUN	Höft	hˈœft	h ˈœ f t		head_NOUN_
 Dutch	Dutch			head_NOUN	hoofd	ɦˈoːft	ɦ ˈoː f t		head_NOUN_1			
 Afrikaans	Afrikaans			head_NOUN	hoof	ɦˈʊə̯f	ɦ ˈʊə̯ f		head_NOUN_1			
 West Flemish	West Flemish			head_NOUN	oofd	ˈoːft	ˈoː f t		head_NOUN_1			
-Limburgish	Limburgish			head_NOUN	huid	hˈœy̯t	h ˈœy̯ t		head_NOUN_1			
+Limburgish	Limburgish			head_NOUN	höd	ɦˈœt	ɦ ˈœ t		head_NOUN_1			
 Ripuarian	Ripuarian			head_NOUN	Haup	hˈaʊ̯p	h ˈaʊ̯ p		head_NOUN_1			
 Pennsylvania German	Pennsylvania German			head_NOUN	Haapt	hˈɔːpt	h ˈɔː p t		head_NOUN_1			
 German	German			head_NOUN	Haupt	hˈaʊ̯pt	h ˈaʊ̯ p t		head_NOUN_1			
@@ -2556,6 +2587,7 @@ East Low German	East Low German			high_ADJ	hoch	hˈaʊ̯x	h ˈaʊ̯ x		high_ADJ_
 Dutch	Dutch			high_ADJ	hoog	ɦˈoːχ	ɦ ˈoː χ		high_ADJ_2			
 Afrikaans	Afrikaans			high_ADJ	hoog	ɦˈʊə̯χ	ɦ ˈʊə̯ χ		high_ADJ_2			
 West Flemish	West Flemish			high_ADJ	oog	ˈoːh	ˈoː h		high_ADJ_2			
+Limburgish	Limburgish			high_ADJ	hoeg	ɦˈux	ɦ ˈu x		high_ADJ_2			
 Ripuarian	Ripuarian			high_ADJ	huh	hˈuː	h ˈuː		high_ADJ_2			
 Luxembourgish	Luxembourgish			high_ADJ	héich	hˈəɪ̯ɕ	h ˈəɪ̯ ɕ		high_ADJ_2			
 Pennsylvania German	Pennsylvania German			high_ADJ	hooch	hˈoːx	h ˈoː x		high_ADJ_2			
@@ -2586,6 +2618,7 @@ Northern Low Saxon	Northern Low Saxon			here_ADV	hier	hˈiːɐ	h ˈiː ɐ		here_
 East Low German	East Low German			here_ADV	hier	hˈiːæ	h ˈiː æ		here_ADV_1			
 Dutch	Dutch			here_ADV	hier	ɦˈiɾ	ɦ ˈi ɾ		here_ADV_1			
 Afrikaans	Afrikaans			here_ADV	hier	ɦˈir	ɦ ˈi r		here_ADV_1			
+Limburgish	Limburgish			here_ADV	heer	ɦˈeːʀ	ɦ ˈeː ʀ		here_ADV_1			
 Ripuarian	Ripuarian			here_ADV	hee	hˈeː	h ˈeː		here_ADV_1			
 Luxembourgish	Luxembourgish			here_ADV	hei	hˈɑɪ̯	h ˈɑɪ̯		here_ADV_1			
 German	German			here_ADV	hier	hˈiːɐ	h ˈiː ɐ		here_ADV_1			
@@ -2613,7 +2646,7 @@ East Low German	East Low German			hair_NOUN	Hor	hˈoːæ	h ˈoː æ		hair_NOUN_1
 Dutch	Dutch			hair_NOUN	haar	ɦˈaːɾ	ɦ ˈaː ɾ		hair_NOUN_1			
 Afrikaans	Afrikaans			hair_NOUN	haar	ɦˈɑːr	ɦ ˈɑː r		hair_NOUN_1			
 West Flemish	West Flemish			hair_NOUN	oar	ˈɒːɾ	ˈɒː ɾ		hair_NOUN_1			
-Limburgish	Limburgish			hair_NOUN	haor	hˈɒːʁ	h ˈɒː ʁ		hair_NOUN_1			
+Limburgish	Limburgish			hair_NOUN	haor	ɦˈɒːʀ	ɦ ˈɒː ʀ		hair_NOUN_1			
 Ripuarian	Ripuarian			hair_NOUN	Hoor	hˈoːɐ	h ˈoː ɐ		hair_NOUN_1			
 Luxembourgish	Luxembourgish			hair_NOUN	Hoer	hˈoːɐ	h ˈoː ɐ		hair_NOUN_1			
 Pennsylvania German	Pennsylvania German			hair_NOUN	Haar	hˈɔːɑ	h ˈɔː ɑ		hair_NOUN_1			
@@ -2645,7 +2678,7 @@ East Low German	East Low German			heart_NOUN	Hart	hˈaːt	h ˈaː t		heart_NOUN_
 Dutch	Dutch			heart_NOUN	hart	ɦˈɑɾt	ɦ ˈɑ ɾ t		heart_NOUN_1			
 Afrikaans	Afrikaans			heart_NOUN	hart	ɦˈart	ɦ ˈa r t		heart_NOUN_1			
 West Flemish	West Flemish			heart_NOUN	erte	ˈæɾtə	ˈæ ɾ t ə		heart_NOUN_1			
-Limburgish	Limburgish			heart_NOUN	hert	hˈæʁt	h ˈæ ʁ t		heart_NOUN_1			
+Limburgish	Limburgish			heart_NOUN	hart	ɦˈɑʀt	ɦ ˈɑ ʀ t		heart_NOUN_1			
 Ripuarian	Ripuarian			heart_NOUN	Hätz	hˈɛʦ	h ˈɛ ʦ		heart_NOUN_1			
 Luxembourgish	Luxembourgish			heart_NOUN	Häerz	hˈɛːɐʦ	h ˈɛː ɐ ʦ		heart_NOUN_1			
 Pennsylvania German	Pennsylvania German			heart_NOUN	Haerz	hˈɛːɑʦ	h ˈɛː ɑ ʦ		heart_NOUN_1			
@@ -2676,6 +2709,7 @@ East Low German	East Low German			laugh_VERB	lachen	lˈaxn̩	l ˈa x n̩		laugh_
 Dutch	Dutch			laugh_VERB	lachen	ɫˈɑχən	ɫ ˈɑ χ ə n		laugh_VERB_1			
 Afrikaans	Afrikaans			laugh_VERB	lag	lˈaχ	l ˈa χ		laugh_VERB_1			
 West Flemish	West Flemish			laugh_VERB	lachn	lˈɑhn̩	l ˈɑ h n̩		laugh_VERB_1			
+Limburgish	Limburgish			laugh_VERB	lache	lˈɑxə	l ˈɑ x ə		laugh_VERB_1			
 Luxembourgish	Luxembourgish			laugh_VERB	laachen	lˈaːχən	l ˈaː χ ə n		laugh_VERB_1			
 Pennsylvania German	Pennsylvania German			laugh_VERB	lache	lˈaxə	l ˈa x ə		laugh_VERB_1			
 German	German			laugh_VERB	lachen	lˈaxən	l ˈa x ə n		laugh_VERB_1			
@@ -2705,7 +2739,7 @@ East Low German	East Low German			ring_NOUN	Ring	rˈɪŋ	r ˈɪ ŋ		ring_NOUN_1
 Dutch	Dutch			ring_NOUN	ring	ɾˈɪŋ	ɾ ˈɪ ŋ		ring_NOUN_1			
 Afrikaans	Afrikaans			ring_NOUN	ring	rˈəŋ	r ˈə ŋ		ring_NOUN_1			
 West Flemish	West Flemish			ring_NOUN	ring	ɾˈɪŋk	ɾ ˈɪ ŋ k		ring_NOUN_1			
-Limburgish	Limburgish			ring_NOUN	rink	ʁˈɪŋk	ʁ ˈɪ ŋ k		ring_NOUN_1			
+Limburgish	Limburgish			ring_NOUN	rink	ʀˈɪːŋk	ʀ ˈɪː ŋ k		ring_NOUN_1			
 Luxembourgish	Luxembourgish			ring_NOUN	Rank	ʀˈɑŋk	ʀ ˈɑ ŋ k		ring_NOUN_1			
 Pennsylvania German	Pennsylvania German			ring_NOUN	Ring	ɾˈɪŋ	ɾ ˈɪ ŋ		ring_NOUN_1			
 German	German			ring_NOUN	Ring	ʁˈɪŋ	ʁ ˈɪ ŋ		ring_NOUN_1			
@@ -2751,6 +2785,7 @@ Eastphalian	Eastphalian			skin_NOUN	Hut	hˈuːt	h ˈuː t		skin_NOUN_1
 Northern Low Saxon	Northern Low Saxon			skin_NOUN	Huut	hˈuːd	h ˈuː d		skin_NOUN_1			
 East Low German	East Low German			skin_NOUN	Hut	hˈuːt	h ˈuː t		skin_NOUN_1			
 Dutch	Dutch			skin_NOUN	huid	ɦˈœy̯t	ɦ ˈœy̯ t		skin_NOUN_1			
+Limburgish	Limburgish			skin_NOUN	hoed	ɦˈuːt	ɦ ˈuː t		skin_NOUN_1			
 Ripuarian	Ripuarian			skin_NOUN	Huut	hˈuːt	h ˈuː t		skin_NOUN_1			
 Luxembourgish	Luxembourgish			skin_NOUN	Haut	hˈæːʊ̯t	h ˈæːʊ̯ t		skin_NOUN_1			
 Pennsylvania German	Pennsylvania German			skin_NOUN	Haut	hˈaʊ̯t	h ˈaʊ̯ t		skin_NOUN_1			
@@ -2787,6 +2822,7 @@ West Frisian	West Frisian			honey_NOUN	huning	hˈynɪŋ	h ˈy n ɪ ŋ		honey_NOU
 North Frisian	North Frisian			honey_NOUN	hönning	hˈœnɪŋ	h ˈœ n ɪ ŋ		honey_NOUN_2			
 Dutch	Dutch			honey_NOUN	honing	ɦˈoːnɪŋ	ɦ ˈoː n ɪ ŋ		honey_NOUN_2			
 Afrikaans	Afrikaans			honey_NOUN	heuning	ɦˈɪø̯nəŋ	ɦ ˈɪø̯ n ə ŋ		honey_NOUN_2			
+Limburgish	Limburgish			honey_NOUN	honing	ɦˈoːnɪŋ	ɦ ˈoː n ɪ ŋ		honey_NOUN_2			
 Proto-Germanic	Proto-Germanic			hundred_NUM	hundaradą	xˈundɑrɑðɑ̃	x ˈu n d ɑ r ɑ ð ɑ̃		hundred_NUM_1			
 Gothic	Gothic			hundred_NUM	𐌷𐌿𐌽𐌳	hˈund	h ˈu n d		hundred_NUM_1			
 Old Norse	Old Norse			hundred_NUM	hundrað	hˈundɾɑð	h ˈu n d ɾ ɑ ð		hundred_NUM_1			
@@ -2808,7 +2844,7 @@ Northern Low Saxon	Northern Low Saxon			hundred_NUM	hunnert	hˈʊnɐt	h ˈʊ n �
 East Low German	East Low German			hundred_NUM	hunnert	hˈʊnæt	h ˈʊ n æ t		hundred_NUM_1			
 Dutch	Dutch			hundred_NUM	honderd	ɦˈɔndəɾt	ɦ ˈɔ n d ə ɾ t		hundred_NUM_1			
 Afrikaans	Afrikaans			hundred_NUM	honderd	ɦˈɔndərt	ɦ ˈɔ n d ə r t		hundred_NUM_1			
-Limburgish	Limburgish			hundred_NUM	hóngert	hˈoŋəʁt	h ˈo ŋ ə ʁ t		hundred_NUM_1			
+Limburgish	Limburgish			hundred_NUM	hoonderd	ɦˈʊːndəʀt	ɦ ˈʊː n d ə ʀ t		hundred_NUM_1			
 Ripuarian	Ripuarian			hundred_NUM	hongert	hˈoŋɐt	h ˈo ŋ ɐ t		hundred_NUM_1	TRUE	IRREGULAR OR LOAN	
 Luxembourgish	Luxembourgish			hundred_NUM	honnert	hˈɔnɐt	h ˈɔ n ɐ t		hundred_NUM_1	TRUE	IRREGULAR OR LOAN	
 Pennsylvania German	Pennsylvania German			hundred_NUM	hunnert	hˈʊnɑt	h ˈʊ n ɑ t		hundred_NUM_1			
@@ -2838,7 +2874,7 @@ East Low German	East Low German			dog_NOUN	Hund	hˈʊnd	h ˈʊ n d		dog_NOUN_1
 Dutch	Dutch			dog_NOUN	hond	ɦˈɔnt	ɦ ˈɔ n t		dog_NOUN_1			
 Afrikaans	Afrikaans			dog_NOUN	hond	ɦˈɔnt	ɦ ˈɔ n t		dog_NOUN_1			
 West Flemish	West Flemish			dog_NOUN	oend	ˈunt	ˈu n t		dog_NOUN_1			
-Limburgish	Limburgish			dog_NOUN	hóndj	hˈonʤ̊	h ˈo n ʤ̊		dog_NOUN_1			
+Limburgish	Limburgish			dog_NOUN	hoond	ɦˈʊːnt	ɦ ˈʊː n t		dog_NOUN_1			
 Ripuarian	Ripuarian			dog_NOUN	Honk	hˈoŋk	h ˈo ŋ k		dog_NOUN_1			
 Luxembourgish	Luxembourgish			dog_NOUN	Hond	hˈont	h ˈo n t		dog_NOUN_1			
 Pennsylvania German	Pennsylvania German			dog_NOUN	Hund	hˈʊnt	h ˈʊ n t		dog_NOUN_1			
@@ -2866,6 +2902,7 @@ East Low German	East Low German			hunger_NOUN	Hunger	hˈʊŋæ	h ˈʊ ŋ æ		hun
 Dutch	Dutch			hunger_NOUN	honger	ɦˈɔŋəɾ	ɦ ˈɔ ŋ ə ɾ		hunger_NOUN_1			
 Afrikaans	Afrikaans			hunger_NOUN	honger	ɦˈɔŋər	ɦ ˈɔ ŋ ə r		hunger_NOUN_1			
 West Flemish	West Flemish			hunger_NOUN	ounger	ˈuŋɾ̩	ˈu ŋ ɾ̩		hunger_NOUN_1			
+Limburgish	Limburgish			hunger_NOUN	hoonger	ɦˈʊːŋəʀ	ɦ ˈʊː ŋ ə ʀ		hunger_NOUN_1			
 Luxembourgish	Luxembourgish			hunger_NOUN	Honger	hˈoŋɐ	h ˈo ŋ ɐ		hunger_NOUN_1			
 Pennsylvania German	Pennsylvania German			hunger_NOUN	Hunger	hˈʊŋɑ	h ˈʊ ŋ ɑ		hunger_NOUN_1			
 German	German			hunger_NOUN	Hunger	hˈʊŋɐ	h ˈʊ ŋ ɐ		hunger_NOUN_1			
@@ -2895,7 +2932,7 @@ East Low German	East Low German			horn_NOUN	Huurn	hˈuːæn	h ˈuː æ n		horn_N
 Dutch	Dutch			horn_NOUN	hoorn	ɦˈoːɾn	ɦ ˈoː ɾ n		horn_NOUN_1			
 Afrikaans	Afrikaans			horn_NOUN	horing	ɦˈʊə̯rəŋ	ɦ ˈʊə̯ r ə ŋ		horn_NOUN_1			
 West Flemish	West Flemish			horn_NOUN	oorn	ˈoːɾn	ˈoː ɾ n		horn_NOUN_1			
-Limburgish	Limburgish			horn_NOUN	hore	hˈoːʁə	h ˈoː ʁ ə		horn_NOUN_1			
+Limburgish	Limburgish			horn_NOUN	hore	ɦˈʊːʀə	ɦ ˈʊː ʀ ə		horn_NOUN_1			
 Ripuarian	Ripuarian			horn_NOUN	Horn	hˈɔɐn	h ˈɔ ɐ n		horn_NOUN_1			
 Luxembourgish	Luxembourgish			horn_NOUN	Har	hˈaːʀ	h ˈaː ʀ		horn_NOUN_1			
 Pennsylvania German	Pennsylvania German			horn_NOUN	Harn	hˈaːn	h ˈaː n		horn_NOUN_1			
@@ -2926,7 +2963,7 @@ East Low German	East Low German			house_NOUN	Hus	hˈuːs	h ˈuː s		house_NOUN_1
 Dutch	Dutch			house_NOUN	huis	ɦˈœy̯s	ɦ ˈœy̯ s		house_NOUN_1			
 Afrikaans	Afrikaans			house_NOUN	huis	ɦˈœɪ̯s	ɦ ˈœɪ̯ s		house_NOUN_1			
 West Flemish	West Flemish			house_NOUN	uus	ˈyːs	ˈyː s		house_NOUN_1			
-Limburgish	Limburgish			house_NOUN	hoes	hˈuːs	h ˈuː s		house_NOUN_1			
+Limburgish	Limburgish			house_NOUN	hoes	ɦˈuːs	ɦ ˈuː s		house_NOUN_1			
 Ripuarian	Ripuarian			house_NOUN	Huus	hˈuːs	h ˈuː s		house_NOUN_1			
 Luxembourgish	Luxembourgish			house_NOUN	Haus	hˈæːʊ̯s	h ˈæːʊ̯ s		house_NOUN_1			
 Pennsylvania German	Pennsylvania German			house_NOUN	Haus	hˈaʊ̯s	h ˈaʊ̯ s		house_NOUN_1			
@@ -2959,7 +2996,7 @@ East Low German	East Low German			what_PRON	wat	vˈat	v ˈa t		what_PRON_1
 Dutch	Dutch			what_PRON	wat	ʋˈɑt	ʋ ˈɑ t		what_PRON_1			
 Afrikaans	Afrikaans			what_PRON	wat	vˈat	v ˈa t		what_PRON_1			
 West Flemish	West Flemish			what_PRON	wat	ʋˈɑt	ʋ ˈɑ t		what_PRON_1			
-Limburgish	Limburgish			what_PRON	waat	wˈaːt	w ˈaː t		what_PRON_1			
+Limburgish	Limburgish			what_PRON	wat	βˈɑt	β ˈɑ t		what_PRON_1			
 Ripuarian	Ripuarian			what_PRON	wat	ʋˈat	ʋ ˈa t		what_PRON_1			
 Luxembourgish	Luxembourgish			what_PRON	wat	vˈaːt	v ˈaː t		what_PRON_1			
 Pennsylvania German	Pennsylvania German			what_PRON	was	vˈas	v ˈa s		what_PRON_1			
@@ -2980,7 +3017,7 @@ Saterland Frisian	Saterland Frisian			wheel_NOUN	Wäil	vˈɛɪ̯l	v ˈɛɪ̯ l		
 North Frisian	North Frisian			wheel_NOUN	fiilj	fˈiːlʲ	f ˈiː lʲ		wheel_NOUN_1			
 Dutch	Dutch			wheel_NOUN	wiel	ʋˈiɫ	ʋ ˈi ɫ		wheel_NOUN_1			
 Afrikaans	Afrikaans			wheel_NOUN	wiel	vˈiɫ	v ˈi ɫ		wheel_NOUN_1			
-Limburgish	Limburgish			wheel_NOUN	weel	wˈeːɫ	w ˈeː ɫ		wheel_NOUN_1			
+Limburgish	Limburgish			wheel_NOUN	wiel	βˈil	β ˈi l		wheel_NOUN_1			
 Proto-Germanic	Proto-Germanic			wheel_NOUN	hweulō	xʷˈeu̯lɔː	xʷ ˈeu̯ l ɔː		wheel_NOUN_2			
 Old Norse	Old Norse			wheel_NOUN	hjól	çˈoːl	ç ˈoː l		wheel_NOUN_2			
 Icelandic	Icelandic			wheel_NOUN	hjól	çˈoːu̯l	ç ˈoːu̯ l		wheel_NOUN_2			
@@ -3011,7 +3048,7 @@ East Low German	East Low German			white_ADJ	witt	vˈɪt	v ˈɪ t		white_ADJ_1
 Dutch	Dutch			white_ADJ	wit	ʋˈɪt	ʋ ˈɪ t		white_ADJ_1			
 Afrikaans	Afrikaans			white_ADJ	wit	vˈət	v ˈə t		white_ADJ_1			
 West Flemish	West Flemish			white_ADJ	wit	ʋˈɛt	ʋ ˈɛ t		white_ADJ_1			
-Limburgish	Limburgish			white_ADJ	wit	wˈɪt	w ˈɪ t		white_ADJ_1			
+Limburgish	Limburgish			white_ADJ	wit	βˈɪt	β ˈɪ t		white_ADJ_1			
 Ripuarian	Ripuarian			white_ADJ	wieß	ʋˈiːs	ʋ ˈiː s		white_ADJ_1			
 Luxembourgish	Luxembourgish			white_ADJ	wäiss	vˈæːɪ̯s	v ˈæːɪ̯ s		white_ADJ_1			
 Pennsylvania German	Pennsylvania German			white_ADJ	weiss	ʋˈaɪ̯s	ʋ ˈaɪ̯ s		white_ADJ_1			
@@ -3043,7 +3080,7 @@ East Low German	East Low German			in_PREP	in	ˈɪn	ˈɪ n		in_PREP_1
 Dutch	Dutch			in_PREP	in	ˈɪn	ˈɪ n		in_PREP_1			
 Afrikaans	Afrikaans			in_PREP	in	ˈən	ˈə n		in_PREP_1			
 West Flemish	West Flemish			in_PREP	in	ˈɪn	ˈɪ n		in_PREP_1			
-Limburgish	Limburgish			in_PREP	in	ˈɪn	ˈɪ n		in_PREP_1			
+Limburgish	Limburgish			in_PREP	in	ˈɪːn	ˈɪː n		in_PREP_1			
 Ripuarian	Ripuarian			in_PREP	en	ˈen	ˈe n		in_PREP_1			
 Luxembourgish	Luxembourgish			in_PREP	an	ˈɑn	ˈɑ n		in_PREP_1			
 Pennsylvania German	Pennsylvania German			in_PREP	an	ˈan	ˈa n		in_PREP_1			
@@ -3105,7 +3142,7 @@ East Low German	East Low German			year_NOUN	Johr	jˈoːæ	j ˈoː æ		year_NOUN_
 Dutch	Dutch			year_NOUN	jaar	jˈaːɾ	j ˈaː ɾ		year_NOUN_1			
 Afrikaans	Afrikaans			year_NOUN	jaar	jˈɑːr	j ˈɑː r		year_NOUN_1			
 West Flemish	West Flemish			year_NOUN	joar	jˈɒːɾ	j ˈɒː ɾ		year_NOUN_1			
-Limburgish	Limburgish			year_NOUN	jaor	jˈɒːʁ	j ˈɒː ʁ		year_NOUN_1			
+Limburgish	Limburgish			year_NOUN	jaor	jˈɒːʀ	j ˈɒː ʀ		year_NOUN_1			
 Ripuarian	Ripuarian			year_NOUN	Johr	jˈoːɐ	j ˈoː ɐ		year_NOUN_1			
 Luxembourgish	Luxembourgish			year_NOUN	Joer	jˈoːɐ	j ˈoː ɐ		year_NOUN_1			
 Pennsylvania German	Pennsylvania German			year_NOUN	Yaahr	jˈɔːɑ	j ˈɔː ɑ		year_NOUN_1			
@@ -3137,6 +3174,7 @@ East Low German	East Low German			young_NOUN	jung	jˈʊŋk	j ˈʊ ŋ k		young_NO
 Dutch	Dutch			young_NOUN	jong	jˈɔŋ	j ˈɔ ŋ		young_NOUN_1			
 Afrikaans	Afrikaans			young_NOUN	jong	jˈɔŋ	j ˈɔ ŋ		young_NOUN_1			
 West Flemish	West Flemish			young_NOUN	joung	jˈuŋk	j ˈu ŋ k		young_NOUN_1			
+Limburgish	Limburgish			young_NOUN	joonk	jˈʊːŋk	j ˈʊː ŋ k		young_NOUN_1			
 Ripuarian	Ripuarian			young_NOUN	jonk	jˈoŋk	j ˈo ŋ k		young_NOUN_1			
 Luxembourgish	Luxembourgish			young_NOUN	jonk	jˈʊŋk	j ˈʊ ŋ k		young_NOUN_1			
 Pennsylvania German	Pennsylvania German			young_NOUN	yung	jˈʊŋ	j ˈʊ ŋ		young_NOUN_1			
@@ -3168,6 +3206,7 @@ East Low German	East Low German			calf_NOUN	Kalf	kʰˈalf	kʰ ˈa l f		calf_NOUN
 Dutch	Dutch			calf_NOUN	kalf	kˈɑɫf	k ˈɑ ɫ f		calf_NOUN_1			
 Afrikaans	Afrikaans			calf_NOUN	kalf	kˈaɫf	k ˈa ɫ f		calf_NOUN_1			
 West Flemish	West Flemish			calf_NOUN	kolf	kˈɔwf	k ˈɔ w f		calf_NOUN_1			
+Limburgish	Limburgish			calf_NOUN	kaaf	kˈaːf	k ˈaː f		calf_NOUN_1			
 Ripuarian	Ripuarian			calf_NOUN	Kalv	kˈalf	k ˈa l f		calf_NOUN_1			
 Luxembourgish	Luxembourgish			calf_NOUN	Kallef	kʰˈɑləf	kʰ ˈɑ l ə f		calf_NOUN_1			
 Pennsylvania German	Pennsylvania German			calf_NOUN	Kalb	kʰˈalp	kʰ ˈa l p		calf_NOUN_1			
@@ -3199,7 +3238,7 @@ East Low German	East Low German			cold_ADJ	kolt	kʰˈaʊ̯lt	kʰ ˈaʊ̯ l t		co
 Dutch	Dutch			cold_ADJ	koud	kˈɑu̯t	k ˈɑu̯ t		cold_ADJ_1			
 Afrikaans	Afrikaans			cold_ADJ	koud	kˈœu̯t	k ˈœu̯ t		cold_ADJ_1			
 West Flemish	West Flemish			cold_ADJ	koud	kˈut	k ˈu t		cold_ADJ_1			
-Limburgish	Limburgish			cold_ADJ	kawd	kˈɑwt	k ˈɑ w t		cold_ADJ_1			
+Limburgish	Limburgish			cold_ADJ	kaajd	kˈaːjt	k ˈaː j t		cold_ADJ_1			
 Ripuarian	Ripuarian			cold_ADJ	kalt	kˈalt	k ˈa l t		cold_ADJ_1			
 Luxembourgish	Luxembourgish			cold_ADJ	kal	kʰˈaːl	kʰ ˈaː l		cold_ADJ_1			
 Pennsylvania German	Pennsylvania German			cold_ADJ	kalt	kʰˈalt	kʰ ˈa l t		cold_ADJ_1			
@@ -3228,7 +3267,7 @@ East Low German	East Low German			child_NOUN	Kind	kʰˈɪnd	kʰ ˈɪ n d		child_
 Dutch	Dutch			child_NOUN	kind	kˈɪnt	k ˈɪ n t		child_NOUN_2			
 Afrikaans	Afrikaans			child_NOUN	kind	kˈənt	k ˈə n t		child_NOUN_2			
 West Flemish	West Flemish			child_NOUN	kind	kˈɪnt	k ˈɪ n t		child_NOUN_2			
-Limburgish	Limburgish			child_NOUN	kèndj	kˈɛnʤ̊	k ˈɛ n ʤ̊		child_NOUN_2			
+Limburgish	Limburgish			child_NOUN	keend	kˈeːnt	k ˈeː n t		child_NOUN_2			
 Luxembourgish	Luxembourgish			child_NOUN	Kand	kʰˈɑnt	kʰ ˈɑ n t		child_NOUN_2			
 Pennsylvania German	Pennsylvania German			child_NOUN	Kind	kʰˈɪnt	kʰ ˈɪ n t		child_NOUN_2			
 German	German			child_NOUN	Kind	kʰˈɪnt	kʰ ˈɪ n t		child_NOUN_2			
@@ -3247,6 +3286,7 @@ Northern Low Saxon	Northern Low Saxon			chicken_NOUN	Küken	kʰˈyːɡn̩	kʰ ˈ
 East Low German	East Low German			chicken_NOUN	Küken	kʰˈyːkn̩	kʰ ˈyː k n̩		chicken_NOUN_1			
 Dutch	Dutch			chicken_NOUN	kuiken	kˈœy̯kən	k ˈœy̯ k ə n		chicken_NOUN_1			
 West Flemish	West Flemish			chicken_NOUN	kiekn	kˈiə̯kn̩	k ˈiə̯ k n̩		chicken_NOUN_1			
+Limburgish	Limburgish			chicken_NOUN	kuke	kˈyːkə	k ˈyː k ə		chicken_NOUN_1			
 German	German			chicken_NOUN	Küken	kʰˈyːkən	kʰ ˈyː k ə n		chicken_NOUN_1	TRUE	IRREGULAR OR LOAN	
 Swiss German	Swiss German			chicken_NOUN	Chüche	χˈyːχə	χ ˈyː χ ə		chicken_NOUN_1			
 Proto-Germanic	Proto-Germanic			knee_NOUN	knewą	knˈewɑ̃	k n ˈe w ɑ̃		knee_NOUN_1			
@@ -3310,7 +3350,7 @@ Northern Low Saxon	Northern Low Saxon			can_VERB	könen	kʰˈœːn̩	kʰ ˈœː 
 East Low German	East Low German			can_VERB	kœnen	kʰˈœːn̩	kʰ ˈœː n̩		can_VERB_1			
 Dutch	Dutch			can_VERB	kunnen	kˈʏnən	k ˈʏ n ə n		can_VERB_1			
 Afrikaans	Afrikaans			can_VERB	kan	kˈan	k ˈa n		can_VERB_1	TRUE	IRREGULAR OR LOAN	
-Limburgish	Limburgish			can_VERB	kónne	kˈonə	k ˈo n ə		can_VERB_1			
+Limburgish	Limburgish			can_VERB	kinne	kˈɪnə	k ˈɪ n ə		can_VERB_1			
 Ripuarian	Ripuarian			can_VERB	könne	kˈønə	k ˈø n ə		can_VERB_1			
 Luxembourgish	Luxembourgish			can_VERB	kënnen	kʰˈənən	kʰ ˈə n ə n		can_VERB_1			
 Pennsylvania German	Pennsylvania German			can_VERB	kenne	kʰˈɛnə	kʰ ˈɛ n ə		can_VERB_1			
@@ -3323,7 +3363,10 @@ Westphalian	Westphalian			head_NOUN	Kop	kˈɔp	k ˈɔ p		head_NOUN_2
 Eastphalian	Eastphalian			head_NOUN	Kopp	kˈɔp	k ˈɔ p		head_NOUN_2			
 Northern Low Saxon	Northern Low Saxon			head_NOUN	Kopp	kʰˈɔb	kʰ ˈɔ b		head_NOUN_2			
 East Low German	East Low German			head_NOUN	Kopp	kʰˈɔp	kʰ ˈɔ p		head_NOUN_2			
+Dutch	Dutch			head_NOUN	kop	kˈɔp	k ˈɔ p		head_NOUN_2			
+Afrikaans	Afrikaans			head_NOUN	kop	kˈɔp	k ˈɔ p		head_NOUN_2			
 West Flemish	West Flemish			head_NOUN	kop	kˈɔp	k ˈɔ p		head_NOUN_2			
+Limburgish	Limburgish			head_NOUN	kop	kˈɔp	k ˈɔ p		head_NOUN_2			
 Ripuarian	Ripuarian			head_NOUN	Kopp	kˈɔp	k ˈɔ p		head_NOUN_2			
 Luxembourgish	Luxembourgish			head_NOUN	Kapp	kʰˈɑp	kʰ ˈɑ p		head_NOUN_2			
 Pennsylvania German	Pennsylvania German			head_NOUN	Kopp	kʰˈɔp	kʰ ˈɔ p		head_NOUN_2			
@@ -3351,6 +3394,7 @@ North Frisian	North Frisian			corn_NOUN	korn	kˈɔrn	k ˈɔ r n		corn_NOUN_1
 Dutch	Dutch			corn_NOUN	koren	kˈoːɾən	k ˈoː ɾ ə n		corn_NOUN_1			
 Afrikaans	Afrikaans			corn_NOUN	koring	kˈʊə̯rəŋ	k ˈʊə̯ r ə ŋ		corn_NOUN_1			
 West Flemish	West Flemish			corn_NOUN	koorn	kˈoːɾn	k ˈoː ɾ n		corn_NOUN_1			
+Limburgish	Limburgish			corn_NOUN	kore	kˈʊːʀə	k ˈʊː ʀ ə		corn_NOUN_1			
 Ripuarian	Ripuarian			corn_NOUN	Koon	kˈoːn	k ˈoː n		corn_NOUN_1			
 Luxembourgish	Luxembourgish			corn_NOUN	Kar	kʰˈaːʀ	kʰ ˈaː ʀ		corn_NOUN_1			
 Pennsylvania German	Pennsylvania German			corn_NOUN	Karn	kʰˈaːn	kʰ ˈaː n		corn_NOUN_1			
@@ -3378,7 +3422,7 @@ East Low German	East Low German			cow_NOUN	Kauh	kʰˈaʊ̯	kʰ ˈaʊ̯		cow_NOUN
 Dutch	Dutch			cow_NOUN	koe	kˈu	k ˈu		cow_NOUN_1			
 Afrikaans	Afrikaans			cow_NOUN	koei	kˈuːi̯	k ˈuːi̯		cow_NOUN_1			
 West Flemish	West Flemish			cow_NOUN	koe	kˈuə̯	k ˈuə̯		cow_NOUN_1			
-Limburgish	Limburgish			cow_NOUN	ków	kˈow	k ˈo w		cow_NOUN_1			
+Limburgish	Limburgish			cow_NOUN	kooj	kˈoːj	k ˈoː j		cow_NOUN_1			
 Ripuarian	Ripuarian			cow_NOUN	Koh	kˈoː	k ˈoː		cow_NOUN_1			
 Luxembourgish	Luxembourgish			cow_NOUN	Kou	kʰˈəʊ̯	kʰ ˈəʊ̯		cow_NOUN_1			
 Pennsylvania German	Pennsylvania German			cow_NOUN	Kuh	kʰˈuː	kʰ ˈuː		cow_NOUN_1			
@@ -3427,7 +3471,7 @@ East Low German	East Low German			lamb_NOUN	Lamm	lˈam	l ˈa m		lamb_NOUN_1
 Dutch	Dutch			lamb_NOUN	lam	ɫˈɑm	ɫ ˈɑ m		lamb_NOUN_1			
 Afrikaans	Afrikaans			lamb_NOUN	lam	ɫˈam	ɫ ˈa m		lamb_NOUN_1			
 West Flemish	West Flemish			lamb_NOUN	lam	lˈɑm	l ˈɑ m		lamb_NOUN_1			
-Limburgish	Limburgish			lamb_NOUN	laam	ɫˈaːm	ɫ ˈaː m		lamb_NOUN_1			
+Limburgish	Limburgish			lamb_NOUN	laam	lˈaːm	l ˈaː m		lamb_NOUN_1			
 Ripuarian	Ripuarian			lamb_NOUN	Lamm	lˈam	l ˈa m		lamb_NOUN_1			
 Luxembourgish	Luxembourgish			lamb_NOUN	Lamm	lˈɑm	l ˈɑ m		lamb_NOUN_1			
 Pennsylvania German	Pennsylvania German			lamb_NOUN	Lamm	lˈam	l ˈa m		lamb_NOUN_1			
@@ -3456,6 +3500,7 @@ East Low German	East Low German			land_NOUN	Land	lˈand	l ˈa n d		land_NOUN_1
 Dutch	Dutch			land_NOUN	land	ɫˈɑnt	ɫ ˈɑ n t		land_NOUN_1			
 Afrikaans	Afrikaans			land_NOUN	land	lˈant	l ˈa n t		land_NOUN_1			
 West Flemish	West Flemish			land_NOUN	land	lˈɑnt	l ˈɑ n t		land_NOUN_1			
+Limburgish	Limburgish			land_NOUN	land	lˈɑːnt	l ˈɑː n t		land_NOUN_1			
 Luxembourgish	Luxembourgish			land_NOUN	Land	lˈɑnt	l ˈɑ n t		land_NOUN_1			
 Pennsylvania German	Pennsylvania German			land_NOUN	Land	lˈant	l ˈa n t		land_NOUN_1			
 German	German			land_NOUN	Land	lˈant	l ˈa n t		land_NOUN_1			
@@ -3485,6 +3530,7 @@ East Low German	East Low German			long_ADJ	lang	lˈaŋk	l ˈa ŋ k		long_ADJ_1
 Dutch	Dutch			long_ADJ	lang	ɫˈɑŋ	ɫ ˈɑ ŋ		long_ADJ_1			
 Afrikaans	Afrikaans			long_ADJ	lank	ɫˈaŋk	ɫ ˈa ŋ k		long_ADJ_1			
 West Flemish	West Flemish			long_ADJ	lang	lˈɑŋ	l ˈɑ ŋ		long_ADJ_1			
+Limburgish	Limburgish			long_ADJ	laank	lˈaːŋk	l ˈaː ŋ k		long_ADJ_1			
 Ripuarian	Ripuarian			long_ADJ	lank	lˈaŋk	l ˈa ŋ k		long_ADJ_1			
 Luxembourgish	Luxembourgish			long_ADJ	laang	lˈaːŋ	l ˈaː ŋ		long_ADJ_1			
 Pennsylvania German	Pennsylvania German			long_ADJ	lang	lˈaŋ	l ˈa ŋ		long_ADJ_1			
@@ -3540,7 +3586,7 @@ East Low German	East Low German			light_NOUN	Licht	lˈɪç	l ˈɪ ç		light_NOUN
 Dutch	Dutch			light_NOUN	licht	ɫˈɪχt	ɫ ˈɪ χ t		light_NOUN_2			
 Afrikaans	Afrikaans			light_NOUN	lig	ɫˈəχ	ɫ ˈə χ		light_NOUN_2			
 West Flemish	West Flemish			light_NOUN	lucht	lˈœht	l ˈœ h t		light_NOUN_2			
-Limburgish	Limburgish			light_NOUN	lèch	lˈɛç	l ˈɛ ç		light_NOUN_2			
+Limburgish	Limburgish			light_NOUN	leech	lˈeːx	l ˈeː x		light_NOUN_2			
 Ripuarian	Ripuarian			light_NOUN	Leech	lˈeːɕ	l ˈeː ɕ		light_NOUN_2			
 Luxembourgish	Luxembourgish			light_NOUN	Liicht	lˈiːɕt	l ˈiː ɕ t		light_NOUN_2			
 Pennsylvania German	Pennsylvania German			light_NOUN	Licht	lˈɪçt	l ˈɪ ç t		light_NOUN_2			
@@ -3566,7 +3612,7 @@ North Frisian	North Frisian			liver_NOUN	liwer	lˈivər	l ˈi v ə r		liver_NOUN
 Dutch	Dutch			liver_NOUN	lever	ɫˈeːvəɾ	ɫ ˈeː v ə ɾ		liver_NOUN_1			
 Afrikaans	Afrikaans			liver_NOUN	lewer	ɫˈɪə̯vər	ɫ ˈɪə̯ v ə r		liver_NOUN_1			
 West Flemish	West Flemish			liver_NOUN	lever	lˈeːvɾ̩	l ˈeː v ɾ̩		liver_NOUN_1			
-Limburgish	Limburgish			liver_NOUN	laever	lˈæːvəʁ	l ˈæː v ə ʁ		liver_NOUN_1			
+Limburgish	Limburgish			liver_NOUN	lever	lˈeːvəʀ	l ˈeː v ə ʀ		liver_NOUN_1			
 Ripuarian	Ripuarian			liver_NOUN	Levver	lˈɛvɐ	l ˈɛ v ɐ		liver_NOUN_1			
 Luxembourgish	Luxembourgish			liver_NOUN	Liewer	lˈiə̯vɐ	l ˈiə̯ v ɐ		liver_NOUN_1			
 Pennsylvania German	Pennsylvania German			liver_NOUN	Lewwer	lˈɛvɑ	l ˈɛ v ɑ		liver_NOUN_1			
@@ -3595,6 +3641,7 @@ Northern Low Saxon	Northern Low Saxon			light_ADJ	licht	lˈɪç	l ˈɪ ç		light
 East Low German	East Low German			light_ADJ	licht	lˈɪç	l ˈɪ ç		light_ADJ_1			
 Dutch	Dutch			light_ADJ	licht	ɫˈɪχt	ɫ ˈɪ χ t		light_ADJ_1			
 Afrikaans	Afrikaans			light_ADJ	lig	ɫˈəχ	ɫ ˈə χ		light_ADJ_1			
+Limburgish	Limburgish			light_ADJ	liech	lˈix	l ˈi x		light_ADJ_1			
 Ripuarian	Ripuarian			light_ADJ	leech	lˈeːɕ	l ˈeː ɕ		light_ADJ_1			
 Luxembourgish	Luxembourgish			light_ADJ	liicht	lˈiːɕt	l ˈiː ɕ t		light_ADJ_1			
 Pennsylvania German	Pennsylvania German			light_ADJ	leicht	lˈaɪ̯çt	l ˈaɪ̯ ç t		light_ADJ_1			
@@ -3622,7 +3669,7 @@ East Low German	East Low German			louse_NOUN	Lus	lˈuːs	l ˈuː s		louse_NOUN_1
 Dutch	Dutch			louse_NOUN	luis	ɫˈœy̯s	ɫ ˈœy̯ s		louse_NOUN_1			
 Afrikaans	Afrikaans			louse_NOUN	luis	ɫˈœɪ̯s	ɫ ˈœɪ̯ s		louse_NOUN_1			
 West Flemish	West Flemish			louse_NOUN	luus	lˈyːs	l ˈyː s		louse_NOUN_1			
-Limburgish	Limburgish			louse_NOUN	loes	ɫˈuːs	ɫ ˈuː s		louse_NOUN_1			
+Limburgish	Limburgish			louse_NOUN	loes	lˈuːs	l ˈuː s		louse_NOUN_1			
 Ripuarian	Ripuarian			louse_NOUN	Luus	lˈuːs	l ˈuː s		louse_NOUN_1			
 Luxembourgish	Luxembourgish			louse_NOUN	Laus	lˈæːʊ̯s	l ˈæːʊ̯ s		louse_NOUN_1			
 Pennsylvania German	Pennsylvania German			louse_NOUN	Laus	lˈaʊ̯s	l ˈaʊ̯ s		louse_NOUN_1			
@@ -3650,7 +3697,7 @@ Northern Low Saxon	Northern Low Saxon			man_NOUN	Mann	mˈan	m ˈa n		man_NOUN_1
 East Low German	East Low German			man_NOUN	Mann	mˈan	m ˈa n		man_NOUN_1			
 Dutch	Dutch			man_NOUN	man	mˈɑn	m ˈɑ n		man_NOUN_1			
 Afrikaans	Afrikaans			man_NOUN	man	mˈan	m ˈa n		man_NOUN_1			
-Limburgish	Limburgish			man_NOUN	man	mˈɑn	m ˈɑ n		man_NOUN_1			
+Limburgish	Limburgish			man_NOUN	maan	mˈaːn	m ˈaː n		man_NOUN_1			
 Ripuarian	Ripuarian			man_NOUN	Mann	mˈan	m ˈa n		man_NOUN_1			
 Luxembourgish	Luxembourgish			man_NOUN	Mann	mˈɑn	m ˈɑ n		man_NOUN_1			
 Pennsylvania German	Pennsylvania German			man_NOUN	Mann	mˈan	m ˈa n		man_NOUN_1			
@@ -3678,6 +3725,7 @@ East Low German	East Low German			person_NOUN	Minsch	mˈɪnʃ	m ˈɪ n ʃ		perso
 Dutch	Dutch			person_NOUN	mens	mˈɛns	m ˈɛ n s		person_NOUN_1			
 Afrikaans	Afrikaans			person_NOUN	mens	mˈɛns	m ˈɛ n s		person_NOUN_1			
 West Flemish	West Flemish			person_NOUN	mins	mˈɪns	m ˈɪ n s		person_NOUN_1			
+Limburgish	Limburgish			person_NOUN	mins	mˈɪns	m ˈɪ n s		person_NOUN_1			
 Ripuarian	Ripuarian			person_NOUN	Minsch	mˈɪnʃ	m ˈɪ n ʃ		person_NOUN_1			
 Luxembourgish	Luxembourgish			person_NOUN	Mënsch	mˈənʃ	m ˈə n ʃ		person_NOUN_1			
 Pennsylvania German	Pennsylvania German			person_NOUN	Mensch	mˈɛnʃ	m ˈɛ n ʃ		person_NOUN_1			
@@ -3695,7 +3743,7 @@ American English	American English			sea_NOUN	mere	mˈiɹ	m ˈi ɹ		sea_NOUN_1
 Old English	Old English			sea_NOUN	mere	mˈere	m ˈe r e		sea_NOUN_1			
 West Frisian	West Frisian			sea_NOUN	mar	mˈar	m ˈa r		sea_NOUN_1			
 Dutch	Dutch			sea_NOUN	meer	mˈeːɾ	m ˈeː ɾ		sea_NOUN_1			
-Limburgish	Limburgish			sea_NOUN	maer	mˈæːʁ	m ˈæː ʁ		sea_NOUN_1			
+Limburgish	Limburgish			sea_NOUN	meer	mˈeːʀ	m ˈeː ʀ		sea_NOUN_1			
 Ripuarian	Ripuarian			sea_NOUN	Meer	mˈeːɐ	m ˈeː ɐ		sea_NOUN_1			
 Luxembourgish	Luxembourgish			sea_NOUN	Mier	mˈiːɐ	m ˈiː ɐ		sea_NOUN_1			
 German	German			sea_NOUN	Meer	mˈeːɐ	m ˈeː ɐ		sea_NOUN_1			
@@ -3723,7 +3771,7 @@ East Low German	East Low German			milk_NOUN_FEM	Melk	mˈɛlk	m ˈɛ l k		milk_NO
 Dutch	Dutch			milk_NOUN_FEM	melk	mˈɛɫk	m ˈɛ ɫ k		milk_NOUN_FEM_1			
 Afrikaans	Afrikaans			milk_NOUN_FEM	melk	mˈɛɫk	m ˈɛ ɫ k		milk_NOUN_FEM_1			
 West Flemish	West Flemish			milk_NOUN_FEM	melk	mˈæwk	m ˈæ w k		milk_NOUN_FEM_1			
-Limburgish	Limburgish			milk_NOUN_FEM	mèlk	mˈɛɫk	m ˈɛ ɫ k		milk_NOUN_FEM_1			
+Limburgish	Limburgish			milk_NOUN_FEM	mèlk	mˈɛːlək	m ˈɛː l ə k		milk_NOUN_FEM_1			
 Ripuarian	Ripuarian			milk_NOUN_FEM	Milch	mˈɪlɕ	m ˈɪ l ɕ		milk_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			milk_NOUN_FEM	Mëllech	mˈələɕ	m ˈə l ə ɕ		milk_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			milk_NOUN_FEM	Millich	mˈɪlɪç	m ˈɪ l ɪ ç		milk_NOUN_FEM_1			
@@ -3784,7 +3832,7 @@ East Low German	East Low German			mother_NOUN	Mauder	mˈaʊ̯ɾæ	m ˈaʊ̯ ɾ �
 Dutch	Dutch			mother_NOUN	moeder	mˈudəɾ	m ˈu d ə ɾ		mother_NOUN_1			
 Afrikaans	Afrikaans			mother_NOUN	moeder	mˈudər	m ˈu d ə r		mother_NOUN_1			
 West Flemish	West Flemish			mother_NOUN	moedr	mˈuə̯dɾ̩	m ˈuə̯ d ɾ̩		mother_NOUN_1			
-Limburgish	Limburgish			mother_NOUN	moder	mˈoːdəʁ	m ˈoː d ə ʁ		mother_NOUN_1			
+Limburgish	Limburgish			mother_NOUN	moojer	mˈoːjəʀ	m ˈoː j ə ʀ		mother_NOUN_1			
 Ripuarian	Ripuarian			mother_NOUN	Mooder	mˈoːdɐ	m ˈoː d ɐ		mother_NOUN_1			
 Pennsylvania German	Pennsylvania German			mother_NOUN	Mudder	mˈʊdɑ	m ˈʊ d ɑ		mother_NOUN_1			
 German	German			mother_NOUN	Mutter	mˈʊtɐ	m ˈʊ t ɐ		mother_NOUN_1			
@@ -3798,6 +3846,7 @@ Eastphalian	Eastphalian			mouth_NOUN	Muul	mˈuːl	m ˈuː l		mouth_NOUN_1
 Northern Low Saxon	Northern Low Saxon			mouth_NOUN	Muul	mˈuːl	m ˈuː l		mouth_NOUN_1			
 East Low German	East Low German			mouth_NOUN	Mul	mˈuːl	m ˈuː l		mouth_NOUN_1			
 Dutch	Dutch			mouth_NOUN	muil	mˈœy̯ɫ	m ˈœy̯ ɫ		mouth_NOUN_1			
+Limburgish	Limburgish			mouth_NOUN	moele	mˈuːlə	m ˈuː l ə		mouth_NOUN_1			
 Ripuarian	Ripuarian			mouth_NOUN	Muul	mˈuːl	m ˈuː l		mouth_NOUN_1			
 Pennsylvania German	Pennsylvania German			mouth_NOUN	Maul	mˈaʊ̯l	m ˈaʊ̯ l		mouth_NOUN_1			
 German	German			mouth_NOUN	Maul	mˈaʊ̯l	m ˈaʊ̯ l		mouth_NOUN_1			
@@ -3829,7 +3878,7 @@ East Low German	East Low German			mouth_NOUN	Mund	mˈʊnd	m ˈʊ n d		mouth_NOUN
 Dutch	Dutch			mouth_NOUN	mond	mˈɔnt	m ˈɔ n t		mouth_NOUN_2			
 Afrikaans	Afrikaans			mouth_NOUN	mond	mˈɔnt	m ˈɔ n t		mouth_NOUN_2			
 West Flemish	West Flemish			mouth_NOUN	mound	mˈunt	m ˈu n t		mouth_NOUN_2			
-Limburgish	Limburgish			mouth_NOUN	móndj	mˈonʤ̊	m ˈo n ʤ̊		mouth_NOUN_2			
+Limburgish	Limburgish			mouth_NOUN	moond	mˈʊːnt	m ˈʊː n t		mouth_NOUN_2			
 Ripuarian	Ripuarian			mouth_NOUN	Mond	mˈɔnt	m ˈɔ n t		mouth_NOUN_2			
 Luxembourgish	Luxembourgish			mouth_NOUN	Mond	mˈɔnt	m ˈɔ n t		mouth_NOUN_2			
 Pennsylvania German	Pennsylvania German			mouth_NOUN	Mund	mˈʊnt	m ˈʊ n t		mouth_NOUN_2			
@@ -3888,7 +3937,7 @@ East Low German	East Low German			fingernail_NOUN	Någel	nˈɒːɡl̩	n ˈɒː �
 Dutch	Dutch			fingernail_NOUN	nagel	nˈaːχəɫ	n ˈaː χ ə ɫ		fingernail_NOUN_1			
 Afrikaans	Afrikaans			fingernail_NOUN	nael	nˈɔːɫ	n ˈɔː ɫ		fingernail_NOUN_1			
 West Flemish	West Flemish			fingernail_NOUN	noagel	nˈɒːɦəl	n ˈɒː ɦ ə l		fingernail_NOUN_1			
-Limburgish	Limburgish			fingernail_NOUN	nagel	nˈaːɣəɫ	n ˈaː ɣ ə ɫ		fingernail_NOUN_1			
+Limburgish	Limburgish			fingernail_NOUN	nagel	nˈaːɣəl	n ˈaː ɣ ə l		fingernail_NOUN_1			
 Ripuarian	Ripuarian			fingernail_NOUN	Nääl	nˈɛːl	n ˈɛː l		fingernail_NOUN_1			
 Luxembourgish	Luxembourgish			fingernail_NOUN	Nol	nˈoːl	n ˈoː l		fingernail_NOUN_1			
 Pennsylvania German	Pennsylvania German			fingernail_NOUN	Naggel	nˈaɣl̩	n ˈa ɣ l̩		fingernail_NOUN_1			
@@ -3947,6 +3996,7 @@ Northern Low Saxon	Northern Low Saxon			naked_ADJ	naakt	nˈoːkt	n ˈoː k t		na
 East Low German	East Low German			naked_ADJ	nåkt	nˈɒːkt	n ˈɒː k t		naked_ADJ_1			
 Dutch	Dutch			naked_ADJ	naakt	nˈaːkt	n ˈaː k t		naked_ADJ_1			
 Afrikaans	Afrikaans			naked_ADJ	naak	nˈɑːk	n ˈɑː k		naked_ADJ_1			
+Limburgish	Limburgish			naked_ADJ	naak	nˈaːk	n ˈaː k		naked_ADJ_1			
 Ripuarian	Ripuarian			naked_ADJ	nack	nˈak	n ˈa k		naked_ADJ_1			
 Pennsylvania German	Pennsylvania German			naked_ADJ	nackich	nˈakɪç	n ˈa k ɪ ç		naked_ADJ_1			
 German	German			naked_ADJ	nackt	nˈakt	n ˈa k t		naked_ADJ_1			
@@ -3976,7 +4026,7 @@ East Low German	East Low German			name_NOUN	Nåm	nˈɒːm	n ˈɒː m		name_NOUN_
 Dutch	Dutch			name_NOUN	naam	nˈaːm	n ˈaː m		name_NOUN_1			
 Afrikaans	Afrikaans			name_NOUN	naam	nˈɑːm	n ˈɑː m		name_NOUN_1			
 West Flemish	West Flemish			name_NOUN	noame	nˈɒːmə	n ˈɒː m ə		name_NOUN_1			
-Limburgish	Limburgish			name_NOUN	naam	nˈaːm	n ˈaː m		name_NOUN_1			
+Limburgish	Limburgish			name_NOUN	naom	nˈɒːm	n ˈɒː m		name_NOUN_1			
 Ripuarian	Ripuarian			name_NOUN	Name	nˈaːmə	n ˈaː m ə		name_NOUN_1			
 Luxembourgish	Luxembourgish			name_NOUN	Numm	nˈum	n ˈu m		name_NOUN_1			
 Pennsylvania German	Pennsylvania German			name_NOUN	Naame	nˈɔːmə	n ˈɔː m ə		name_NOUN_1			
@@ -4006,7 +4056,7 @@ East Low German	East Low German			nose_NOUN	Näs	nˈɛːs	n ˈɛː s		nose_NOUN_
 Dutch	Dutch			nose_NOUN	neus	nˈøːs	n ˈøː s		nose_NOUN_1			
 Afrikaans	Afrikaans			nose_NOUN	neus	nˈɪø̯s	n ˈɪø̯ s		nose_NOUN_1			
 West Flemish	West Flemish			nose_NOUN	neus	nˈøːs	n ˈøː s		nose_NOUN_1			
-Limburgish	Limburgish			nose_NOUN	naas	nˈaːs	n ˈaː s		nose_NOUN_1			
+Limburgish	Limburgish			nose_NOUN	naos	nˈɒːs	n ˈɒː s		nose_NOUN_1			
 Ripuarian	Ripuarian			nose_NOUN	Nas	nˈaːs	n ˈaː s		nose_NOUN_1			
 Luxembourgish	Luxembourgish			nose_NOUN	Nues	nˈuə̯s	n ˈuə̯ s		nose_NOUN_1			
 Pennsylvania German	Pennsylvania German			nose_NOUN	Naas	nˈɔːs	n ˈɔː s		nose_NOUN_1			
@@ -4037,7 +4087,7 @@ East Low German	East Low German			nine_NUM	negen	nˈɛːɣn̩	n ˈɛː ɣ n̩		n
 Dutch	Dutch			nine_NUM	negen	nˈeːχən	n ˈeː χ ə n		nine_NUM_1			
 Afrikaans	Afrikaans			nine_NUM	nege	nˈɪə̯χə	n ˈɪə̯ χ ə		nine_NUM_1			
 West Flemish	West Flemish			nine_NUM	neegn	nˈeːɦn̩	n ˈeː ɦ n̩		nine_NUM_1			
-Limburgish	Limburgish			nine_NUM	nege	nˈeːʝə	n ˈeː ʝ ə		nine_NUM_1			
+Limburgish	Limburgish			nine_NUM	nege	nˈeːɣə	n ˈeː ɣ ə		nine_NUM_1			
 Ripuarian	Ripuarian			nine_NUM	nüng	nˈʏŋ	n ˈʏ ŋ		nine_NUM_1			
 Luxembourgish	Luxembourgish			nine_NUM	néng	nˈeŋ	n ˈe ŋ		nine_NUM_1			
 Pennsylvania German	Pennsylvania German			nine_NUM	nein	nˈaɪ̯n	n ˈaɪ̯ n		nine_NUM_1			
@@ -4067,6 +4117,7 @@ Northern Low Saxon	Northern Low Saxon			needle_NOUN	Nadel	nˈoːdl̩	n ˈoː d l
 East Low German	East Low German			needle_NOUN	Nådel	nˈɒːdl̩	n ˈɒː d l̩		needle_NOUN_1			
 Dutch	Dutch			needle_NOUN	naald	nˈaːɫt	n ˈaː ɫ t		needle_NOUN_1			
 Afrikaans	Afrikaans			needle_NOUN	naald	nˈɑːɫt	n ˈɑː ɫ t		needle_NOUN_1			
+Limburgish	Limburgish			needle_NOUN	naoje	nˈɒːjə	n ˈɒː j ə		needle_NOUN_1			
 Ripuarian	Ripuarian			needle_NOUN	Nodel	nˈoːdəl	n ˈoː d ə l		needle_NOUN_1			
 Luxembourgish	Luxembourgish			needle_NOUN	Nol	nˈoːl	n ˈoː l		needle_NOUN_1			
 Pennsylvania German	Pennsylvania German			needle_NOUN	Nodel	nˈoːdl̩	n ˈoː d l̩		needle_NOUN_1			
@@ -4097,7 +4148,7 @@ East Low German	East Low German			new_ADJ	niech	nˈiːç	n ˈiː ç		new_ADJ_1
 Dutch	Dutch			new_ADJ	nieuw	nˈiw	n ˈi w		new_ADJ_1			
 Afrikaans	Afrikaans			new_ADJ	nuut	nˈit	n ˈi t		new_ADJ_1			
 West Flemish	West Flemish			new_ADJ	nieuwe	nˈiə̯ʋə	n ˈiə̯ ʋ ə		new_ADJ_1			
-Limburgish	Limburgish			new_ADJ	nuuj	nˈyːj	n ˈyː j		new_ADJ_1			
+Limburgish	Limburgish			new_ADJ	nui	nˈœi̯	n ˈœi̯		new_ADJ_1			
 Ripuarian	Ripuarian			new_ADJ	neu	nˈɔʏ̯	n ˈɔʏ̯		new_ADJ_1			
 Luxembourgish	Luxembourgish			new_ADJ	nei	nˈɑɪ̯	n ˈɑɪ̯		new_ADJ_1			
 Pennsylvania German	Pennsylvania German			new_ADJ	nei	nˈaɪ̯	n ˈaɪ̯		new_ADJ_1			
@@ -4126,6 +4177,7 @@ East Low German	East Low German			north_NOUN	Nuurd	nˈuːæd	n ˈuː æ d		north
 Dutch	Dutch			north_NOUN	noord	nˈoːɾt	n ˈoː ɾ t		north_NOUN_1			
 Afrikaans	Afrikaans			north_NOUN	noord	nˈʊə̯rt	n ˈʊə̯ r t		north_NOUN_1			
 West Flemish	West Flemish			north_NOUN	nôord	nˈoːɾt	n ˈoː ɾ t		north_NOUN_1			
+Limburgish	Limburgish			north_NOUN	noorde	nˈʊːʀdə	n ˈʊː ʀ d ə		north_NOUN_1			
 Luxembourgish	Luxembourgish			north_NOUN	Norden	nˈoʀdən	n ˈo ʀ d ə n		north_NOUN_1			
 Pennsylvania German	Pennsylvania German			north_NOUN	Nadd	nˈat	n ˈa t		north_NOUN_1			
 German	German			north_NOUN	Nord	nˈɔɐt	n ˈɔ ɐ t		north_NOUN_1			
@@ -4154,7 +4206,7 @@ East Low German	East Low German			red_ADJ	rot	rˈaʊ̯t	r ˈaʊ̯ t		red_ADJ_1
 Dutch	Dutch			red_ADJ	rood	ɾˈoːt	ɾ ˈoː t		red_ADJ_1			
 Afrikaans	Afrikaans			red_ADJ	rooi	rˈoːi̯	r ˈoːi̯		red_ADJ_1			
 West Flemish	West Flemish			red_ADJ	rôod	ɾˈoːt	ɾ ˈoː t		red_ADJ_1			
-Limburgish	Limburgish			red_ADJ	root	ʁˈoːt	ʁ ˈoː t		red_ADJ_1			
+Limburgish	Limburgish			red_ADJ	roed	ʀˈut	ʀ ˈu t		red_ADJ_1			
 Ripuarian	Ripuarian			red_ADJ	rut	ʀˈuːt	ʀ ˈuː t		red_ADJ_1			
 Luxembourgish	Luxembourgish			red_ADJ	rout	ʀˈəʊ̯t	ʀ ˈəʊ̯ t		red_ADJ_1			
 Pennsylvania German	Pennsylvania German			red_ADJ	rot	ɾˈoːt	ɾ ˈoː t		red_ADJ_1			
@@ -4185,7 +4237,7 @@ East Low German	East Low German			smoke_NOUN	Rok	rˈaʊ̯k	r ˈaʊ̯ k		smoke_NO
 Dutch	Dutch			smoke_NOUN	rook	ɾˈoːk	ɾ ˈoː k		smoke_NOUN_1			
 Afrikaans	Afrikaans			smoke_NOUN	rook	rˈʊə̯k	r ˈʊə̯ k		smoke_NOUN_1			
 West Flemish	West Flemish			smoke_NOUN	rook	ɾˈoːk	ɾ ˈoː k		smoke_NOUN_1			
-Limburgish	Limburgish			smoke_NOUN	rouk	ʁˈɔu̯k	ʁ ˈɔu̯ k		smoke_NOUN_1			
+Limburgish	Limburgish			smoke_NOUN	rouk	ʀˈɔːk 	ʀ ˈɔː k		smoke_NOUN_1			
 Luxembourgish	Luxembourgish			smoke_NOUN	Raach	ʀˈaːχ	ʀ ˈaː χ		smoke_NOUN_1			
 Pennsylvania German	Pennsylvania German			smoke_NOUN	Rauch	ɾˈaʊ̯x	ɾ ˈaʊ̯ x		smoke_NOUN_1			
 German	German			smoke_NOUN	Rauch	ʁˈaʊ̯x	ʁ ˈaʊ̯ x		smoke_NOUN_1			
@@ -4215,7 +4267,7 @@ East Low German	East Low German			rain_NOUN	Rägen	rˈɛŋ	r ˈɛ ŋ		rain_NOUN_
 Dutch	Dutch			rain_NOUN	regen	ɾˈeːχən	ɾ ˈeː χ ə n		rain_NOUN_1			
 Afrikaans	Afrikaans			rain_NOUN	reën	rˈɪə̯n	r ˈɪə̯ n		rain_NOUN_1			
 West Flemish	West Flemish			rain_NOUN	regn	ɾˈeːɦn̩	ɾ ˈeː ɦ n̩		rain_NOUN_1			
-Limburgish	Limburgish			rain_NOUN	rege	ʁˈeːʝə	ʁ ˈeː ʝ ə		rain_NOUN_1			
+Limburgish	Limburgish			rain_NOUN	rege	ʀˈeːɣə	ʀ ˈeː ɣ ə		rain_NOUN_1			
 Ripuarian	Ripuarian			rain_NOUN	Rään	ʀˈɛːn	ʀ ˈɛː n		rain_NOUN_1			
 Luxembourgish	Luxembourgish			rain_NOUN	Reen	ʀˈeːn	ʀ ˈeː n		rain_NOUN_1			
 Pennsylvania German	Pennsylvania German			rain_NOUN	Regge	ɾˈɛjə	ɾ ˈɛ j ə		rain_NOUN_1			
@@ -4246,6 +4298,7 @@ Northern Low Saxon	Northern Low Saxon			right_ADJ	Recht	rˈɛçt	r ˈɛ ç t		ri
 East Low German	East Low German			right_ADJ	Recht	rˈɛçt	r ˈɛ ç t		right_ADJ_1			
 Dutch	Dutch			right_ADJ	recht	ɾˈɛχt	ɾ ˈɛ χ t		right_ADJ_1			
 West Flemish	West Flemish			right_ADJ	recht	ɾˈæht	ɾ ˈæ h t		right_ADJ_1			
+Limburgish	Limburgish			right_ADJ	rech	ʀˈæx	ʀ ˈæ x		right_ADJ_1			
 Ripuarian	Ripuarian			right_ADJ	rääch	ʀˈɛːɕ	ʀ ˈɛː ɕ		right_ADJ_1			
 Luxembourgish	Luxembourgish			right_ADJ	riicht	ʀˈiːɕt	ʀ ˈiː ɕ t		right_ADJ_1			
 Pennsylvania German	Pennsylvania German			right_ADJ	Recht	ɾˈɛçt	ɾ ˈɛ ç t		right_ADJ_1			
@@ -4276,7 +4329,7 @@ East Low German	East Low German			rich_ADJ	riek	rˈiːk	r ˈiː k		rich_ADJ_1
 Dutch	Dutch			rich_ADJ	rijk	ɾˈɛi̯k	ɾ ˈɛi̯ k		rich_ADJ_1			
 Afrikaans	Afrikaans			rich_ADJ	ryk	rˈəɪ̯k	r ˈəɪ̯ k		rich_ADJ_1			
 West Flemish	West Flemish			rich_ADJ	ryk	ɾˈik	ɾ ˈi k		rich_ADJ_1			
-Limburgish	Limburgish			rich_ADJ	riek	ʁˈiːk	ʁ ˈiː k		rich_ADJ_1			
+Limburgish	Limburgish			rich_ADJ	riek	ʀˈiːk	ʀ ˈiː k		rich_ADJ_1			
 Ripuarian	Ripuarian			rich_ADJ	rich	ʀˈiɕ	ʀ ˈi ɕ		rich_ADJ_1			
 Luxembourgish	Luxembourgish			rich_ADJ	räich	ʀˈæɪ̯ɕ	ʀ ˈæɪ̯ ɕ		rich_ADJ_1			
 Pennsylvania German	Pennsylvania German			rich_ADJ	reich	ɾˈaɪ̯ç	ɾ ˈaɪ̯ ç		rich_ADJ_1			
@@ -4306,6 +4359,7 @@ East Low German	East Low German			say_VERB	seggen	zˈɛŋ	z ˈɛ ŋ		say_VERB_1
 Dutch	Dutch			say_VERB	zeggen	zˈɛχən	z ˈɛ χ ə n		say_VERB_1			
 Afrikaans	Afrikaans			say_VERB	sê	sˈɛː	s ˈɛː		say_VERB_1			
 West Flemish	West Flemish			say_VERB	zegn	zˈɛɦn̩	z ˈɛ ɦ n̩		say_VERB_1			
+Limburgish	Limburgish			say_VERB	zègke	zˈɛɡə	z ˈɛ ɡ ə		say_VERB_1			
 Ripuarian	Ripuarian			say_VERB	sage	zˈaːɣə	z ˈaː ɣ ə		say_VERB_1			
 Luxembourgish	Luxembourgish			say_VERB	soen	zˈoːən	z ˈoː ə n		say_VERB_1			
 Pennsylvania German	Pennsylvania German			say_VERB	saage	sˈɔːɣə	s ˈɔː ɣ ə		say_VERB_1			
@@ -4338,7 +4392,7 @@ East Low German	East Low German			soul_NOUN	Seel	zˈeːl	z ˈeː l		soul_NOUN_1
 Dutch	Dutch			soul_NOUN	ziel	zˈiɫ	z ˈi ɫ		soul_NOUN_1			
 Afrikaans	Afrikaans			soul_NOUN	ziel	sˈiɫ	s ˈi ɫ		soul_NOUN_1			
 West Flemish	West Flemish			soul_NOUN	ziele	zˈiə̯lə	z ˈiə̯ l ə		soul_NOUN_1			
-Limburgish	Limburgish			soul_NOUN	zeel	zˈeːl	z ˈeː l		soul_NOUN_1			
+Limburgish	Limburgish			soul_NOUN	ziel	zˈil	z ˈi l		soul_NOUN_1			
 Ripuarian	Ripuarian			soul_NOUN	Siel	zˈiːl	z ˈiː l		soul_NOUN_1			
 Luxembourgish	Luxembourgish			soul_NOUN	Séil	zˈəɪ̯l	z ˈəɪ̯ l		soul_NOUN_1			
 Pennsylvania German	Pennsylvania German			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1			
@@ -4366,6 +4420,7 @@ East Low German	East Low German			sea_NOUN	See	zˈeː	z ˈeː		sea_NOUN_2
 Dutch	Dutch			sea_NOUN	zee	zˈeː	z ˈeː		sea_NOUN_2			
 Afrikaans	Afrikaans			sea_NOUN	see	sˈɪə̯	s ˈɪə̯		sea_NOUN_2			
 West Flemish	West Flemish			sea_NOUN	zêe	zˈɛː	z ˈɛː		sea_NOUN_2			
+Limburgish	Limburgish			sea_NOUN	zie	zˈi	z ˈi		sea_NOUN_2			
 Ripuarian	Ripuarian			sea_NOUN	Sie	zˈiː	z ˈiː		sea_NOUN_2			
 Pennsylvania German	Pennsylvania German			sea_NOUN	See	sˈeː	s ˈeː		sea_NOUN_2			
 German	German			sea_NOUN	See	zˈeː	z ˈeː		sea_NOUN_2			
@@ -4394,7 +4449,7 @@ East Low German	East Low German			salt_NOUN	Solt	zˈɔlt	z ˈɔ l t		salt_NOUN_1
 Dutch	Dutch			salt_NOUN	zout	zˈɑu̯t	z ˈɑu̯ t		salt_NOUN_1			
 Afrikaans	Afrikaans			salt_NOUN	soet	sˈœu̯t	s ˈœu̯ t		salt_NOUN_1			
 West Flemish	West Flemish			salt_NOUN	zout	zˈut	z ˈu t		salt_NOUN_1			
-Limburgish	Limburgish			salt_NOUN	zawt	zˈɑwt	z ˈɑ w t		salt_NOUN_1			
+Limburgish	Limburgish			salt_NOUN	zaajt	zˈaːjt	z ˈaː j t		salt_NOUN_1			
 Ripuarian	Ripuarian			salt_NOUN	Salz	zˈalʦ	z ˈa l ʦ		salt_NOUN_1			
 Luxembourgish	Luxembourgish			salt_NOUN	Salz	zˈɑlʦ	z ˈɑ l ʦ		salt_NOUN_1			
 Pennsylvania German	Pennsylvania German			salt_NOUN	Sals	sˈals	s ˈa l s		salt_NOUN_1			
@@ -4425,7 +4480,7 @@ East Low German	East Low German			sand_NOUN	Sand	zˈand	z ˈa n d		sand_NOUN_1
 Dutch	Dutch			sand_NOUN	zand	zˈɑnt	z ˈɑ n t		sand_NOUN_1			
 Afrikaans	Afrikaans			sand_NOUN	sand	sˈant	s ˈa n t		sand_NOUN_1			
 West Flemish	West Flemish			sand_NOUN	zand	zˈɑnt	z ˈɑ n t		sand_NOUN_1			
-Limburgish	Limburgish			sand_NOUN	zandj	zˈɑnʤ̊	z ˈɑ n ʤ̊		sand_NOUN_1			
+Limburgish	Limburgish			sand_NOUN	zand	zˈɑːnt	z ˈɑː n t		sand_NOUN_1			
 Luxembourgish	Luxembourgish			sand_NOUN	Sand	zˈɑnt	z ˈɑ n t		sand_NOUN_1			
 Pennsylvania German	Pennsylvania German			sand_NOUN	Sand	sˈant	s ˈa n t		sand_NOUN_1			
 German	German			sand_NOUN	Sand	zˈant	z ˈa n t		sand_NOUN_1			
@@ -4518,7 +4573,7 @@ East Low German	East Low German			see_VERB	seihn	zˈae̯n	z ˈae̯ n		see_VERB_1
 Dutch	Dutch			see_VERB	zien	zˈin	z ˈi n		see_VERB_1			
 Afrikaans	Afrikaans			see_VERB	sien	sˈin	s ˈi n		see_VERB_1			
 West Flemish	West Flemish			see_VERB	zien	zˈiə̯n	z ˈiə̯ n		see_VERB_1			
-Limburgish	Limburgish			see_VERB	zeen	zˈeːn	z ˈeː n		see_VERB_1			
+Limburgish	Limburgish			see_VERB	zien	zˈiːn	z ˈiː n		see_VERB_1			
 Ripuarian	Ripuarian			see_VERB	sehn	zˈeːn	z ˈeː n		see_VERB_1			
 Luxembourgish	Luxembourgish			see_VERB	gesinn	ɡəzˈin	ɡ ə z ˈi n		see_VERB_1			
 Pennsylvania German	Pennsylvania German			see_VERB	sehne	sˈeːnə	s ˈeː n ə		see_VERB_1			
@@ -4548,6 +4603,7 @@ East Low German	East Low German			side_NOUN	Siet	zˈiːt	z ˈiː t		side_NOUN_1
 Dutch	Dutch			side_NOUN	zijde	zˈɛi̯də	z ˈɛi̯ d ə		side_NOUN_1			
 Afrikaans	Afrikaans			side_NOUN	sy	sˈəɪ̯	s ˈəɪ̯		side_NOUN_1			
 West Flemish	West Flemish			side_NOUN	zyde	zˈidə	z ˈi d ə		side_NOUN_1			
+Limburgish	Limburgish			side_NOUN	zij	zˈɛj	z ˈɛ j		side_NOUN_1			
 Ripuarian	Ripuarian			side_NOUN	Sigg	zˈɪk	z ˈɪ k		side_NOUN_1			
 Luxembourgish	Luxembourgish			side_NOUN	Säit	zˈæːɪ̯t	z ˈæːɪ̯ t		side_NOUN_1			
 Pennsylvania German	Pennsylvania German			side_NOUN	Seit	sˈaɪ̯t	s ˈaɪ̯ t		side_NOUN_1			
@@ -4578,7 +4634,7 @@ East Low German	East Low German			sing_VERB	singen	zˈɪŋ	z ˈɪ ŋ		sing_VERB_
 Dutch	Dutch			sing_VERB	zingen	zˈɪŋən	z ˈɪ ŋ ə n		sing_VERB_1			
 Afrikaans	Afrikaans			sing_VERB	sing	sˈəŋ	s ˈə ŋ		sing_VERB_1			
 West Flemish	West Flemish			sing_VERB	zingn	zˈɪŋn̩	z ˈɪ ŋ n̩		sing_VERB_1			
-Limburgish	Limburgish			sing_VERB	zinge	zˈɪŋə	z ˈɪ ŋ ə		sing_VERB_1			
+Limburgish	Limburgish			sing_VERB	zinge	zˈɪːŋə	z ˈɪː ŋ ə		sing_VERB_1			
 Ripuarian	Ripuarian			sing_VERB	singe	zˈɪŋə	z ˈɪ ŋ ə		sing_VERB_1			
 Luxembourgish	Luxembourgish			sing_VERB	sangen	zˈɑŋən	z ˈɑ ŋ ə n		sing_VERB_1			
 Pennsylvania German	Pennsylvania German			sing_VERB	singe	sˈɪŋə	s ˈɪ ŋ ə		sing_VERB_1			
@@ -4642,6 +4698,7 @@ East Low German	East Low German			sharp_ADJ	scharp	ʃˈaːp	ʃ ˈaː p		sharp_AD
 Dutch	Dutch			sharp_ADJ	scherp	sχˈɛɾp	s χ ˈɛ ɾ p		sharp_ADJ_1			
 Afrikaans	Afrikaans			sharp_ADJ	skerp	skˈærp	s k ˈæ r p		sharp_ADJ_1			
 West Flemish	West Flemish			sharp_ADJ	scherp	ʃhˈæɾp	ʃ h ˈæ ɾ p		sharp_ADJ_1			
+Limburgish	Limburgish			sharp_ADJ	sjerp	ʃˈæːʀəp	ʃ ˈæː ʀ ə p		sharp_ADJ_1			
 Ripuarian	Ripuarian			sharp_ADJ	schärp	ʃˈɛɐp	ʃ ˈɛ ɐ p		sharp_ADJ_1			
 Luxembourgish	Luxembourgish			sharp_ADJ	schaarf	ʃˈaːf	ʃ ˈaː f		sharp_ADJ_1			
 Pennsylvania German	Pennsylvania German			sharp_ADJ	scharef	ʃˈaːɾəf	ʃ ˈaː ɾ ə f		sharp_ADJ_1			
@@ -4671,6 +4728,7 @@ Northern Low Saxon	Northern Low Saxon			shit_NOUN	Schiet	ʃˈiːd	ʃ ˈiː d		sh
 East Low German	East Low German			shit_NOUN	Schiet	ʃˈiːt	ʃ ˈiː t		shit_NOUN_1			
 Dutch	Dutch			shit_NOUN	schijt	sχˈɛi̯t	s χ ˈɛi̯ t		shit_NOUN_1			
 West Flemish	West Flemish			shit_NOUN	schyt	ʃhˈit	ʃ h ˈi t		shit_NOUN_1			
+Limburgish	Limburgish			shit_NOUN	sjiet	ʃˈiːt	ʃ ˈiː t		shit_NOUN_1			
 Luxembourgish	Luxembourgish			shit_NOUN	Schäiss	ʃˈæːɪ̯s	ʃ ˈæːɪ̯ s		shit_NOUN_1			
 German	German			shit_NOUN	Scheiße	ʃˈaɪ̯sə	ʃ ˈaɪ̯ s ə		shit_NOUN_1			
 Swabian	Swabian			shit_NOUN	Scheiß	ʃˈəi̯s	ʃ ˈəi̯ s		shit_NOUN_1			
@@ -4697,7 +4755,7 @@ East Low German	East Low German			slay_VERB	schlån	ʃlˈɒːn	ʃ l ˈɒː n		sl
 Dutch	Dutch			slay_VERB	slaan	sɫˈaːn	s ɫ ˈaː n		slay_VERB_1			
 Afrikaans	Afrikaans			slay_VERB	slaan	slˈɑːn	s l ˈɑː n		slay_VERB_1			
 West Flemish	West Flemish			slay_VERB	slaon	slˈɒːn	s l ˈɒː n		slay_VERB_1			
-Limburgish	Limburgish			slay_VERB	slaon	sɫˈɒːn	s ɫ ˈɒː n		slay_VERB_1			
+Limburgish	Limburgish			slay_VERB	sloon	slˈʊːn	s l ˈʊː n		slay_VERB_1			
 Ripuarian	Ripuarian			slay_VERB	schloon	ʃlˈoːn	ʃ l ˈoː n		slay_VERB_1			
 Luxembourgish	Luxembourgish			slay_VERB	schloen	ʃlˈoːən	ʃ l ˈoː ə n		slay_VERB_1			
 Pennsylvania German	Pennsylvania German			slay_VERB	schlaage	ʃlˈɔːɣə	ʃ l ˈɔː ɣ ə		slay_VERB_1			
@@ -4722,7 +4780,7 @@ East Low German	East Low German			snake_NOUN	Schlang	ʃlˈaŋ	ʃ l ˈa ŋ		snake
 Dutch	Dutch			snake_NOUN	slang	sɫˈɑŋ	s ɫ ˈɑ ŋ		snake_NOUN_1			
 Afrikaans	Afrikaans			snake_NOUN	slang	sɫˈaŋ	s ɫ ˈa ŋ		snake_NOUN_1			
 West Flemish	West Flemish			snake_NOUN	slang	slˈɑŋ	s l ˈɑ ŋ		snake_NOUN_1			
-Limburgish	Limburgish			snake_NOUN	sjlang	ʃɫˈɑŋ	ʃ ɫ ˈɑ ŋ		snake_NOUN_1			
+Limburgish	Limburgish			snake_NOUN	slang	slˈɑŋ	s l ˈɑ ŋ		snake_NOUN_1			
 Ripuarian	Ripuarian			snake_NOUN	Schlang	ʃlˈaŋ	ʃ l ˈa ŋ		snake_NOUN_1			
 Luxembourgish	Luxembourgish			snake_NOUN	Schlaang	ʃlˈaːŋ	ʃ l ˈaː ŋ		snake_NOUN_1			
 Pennsylvania German	Pennsylvania German			snake_NOUN	Schlang	ʃlˈaŋ	ʃ l ˈa ŋ		snake_NOUN_1			
@@ -4745,7 +4803,7 @@ East Low German	East Low German			sleep_VERB	schlåpen	ʃlˈɒːbm̩	ʃ l ˈɒː
 Dutch	Dutch			sleep_VERB	slapen	sɫˈaːpən	s ɫ ˈaː p ə n		sleep_VERB_1			
 Afrikaans	Afrikaans			sleep_VERB	slaap	sɫˈɑːp	s ɫ ˈɑː p		sleep_VERB_1			
 West Flemish	West Flemish			sleep_VERB	sloapn	slˈɒːpn̩	s l ˈɒː p n̩		sleep_VERB_1			
-Limburgish	Limburgish			sleep_VERB	sjlape	ʃɫˈaːpə	ʃ ɫ ˈaː p ə		sleep_VERB_1			
+Limburgish	Limburgish			sleep_VERB	slaope	slˈɒːpə	s l ˈɒː p ə		sleep_VERB_1			
 Ripuarian	Ripuarian			sleep_VERB	schlofe	ʃlˈɔːfə	ʃ l ˈɔː f ə		sleep_VERB_1			
 Luxembourgish	Luxembourgish			sleep_VERB	schlofen	ʃlˈoːfən	ʃ l ˈoː f ə n		sleep_VERB_1			
 Pennsylvania German	Pennsylvania German			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB_1			
@@ -4777,7 +4835,7 @@ East Low German	East Low German			snow_NOUN	Schnei	ʃnˈae̯	ʃ n ˈae̯		snow_N
 Dutch	Dutch			snow_NOUN	sneeuw	snˈeːw	s n ˈeː w		snow_NOUN_1			
 Afrikaans	Afrikaans			snow_NOUN	sneeu	snˈiw	s n ˈi w		snow_NOUN_1			
 West Flemish	West Flemish			snow_NOUN	snêeuw	snˈɛːw	s n ˈɛː w		snow_NOUN_1			
-Limburgish	Limburgish			snow_NOUN	sjnie	ʃnˈiː	ʃ n ˈiː		snow_NOUN_1			
+Limburgish	Limburgish			snow_NOUN	snie	snˈi	s n ˈi		snow_NOUN_1			
 Ripuarian	Ripuarian			snow_NOUN	Schnie	ʃnˈiː	ʃ n ˈiː		snow_NOUN_1			
 Luxembourgish	Luxembourgish			snow_NOUN	Schnéi	ʃnˈəɪ̯	ʃ n ˈəɪ̯		snow_NOUN_1			
 Pennsylvania German	Pennsylvania German			snow_NOUN	Schnee	ʃnˈeː	ʃ n ˈeː		snow_NOUN_1			
@@ -4809,7 +4867,7 @@ East Low German	East Low German			stone_NOUN	Stein	ʃtˈae̯n	ʃ t ˈae̯ n		sto
 Dutch	Dutch			stone_NOUN	steen	stˈeːn	s t ˈeː n		stone_NOUN_1			
 Afrikaans	Afrikaans			stone_NOUN	steen	stˈɪə̯n	s t ˈɪə̯ n		stone_NOUN_1			
 West Flemish	West Flemish			stone_NOUN	stêen	stˈɛːn	s t ˈɛː n		stone_NOUN_1			
-Limburgish	Limburgish			stone_NOUN	sjtein	ʃtˈɛi̯n	ʃ t ˈɛi̯ n		stone_NOUN_1			
+Limburgish	Limburgish			stone_NOUN	stein	stˈɛːn	s t ˈɛː n		stone_NOUN_1			
 Ripuarian	Ripuarian			stone_NOUN	Steen	ʃtˈeːn	ʃ t ˈeː n		stone_NOUN_1			
 Luxembourgish	Luxembourgish			stone_NOUN	Steen	ʃtˈeːn	ʃ t ˈeː n		stone_NOUN_1			
 Pennsylvania German	Pennsylvania German			stone_NOUN	Schtee	ʃtˈeː	ʃ t ˈeː		stone_NOUN_1			
@@ -4841,6 +4899,7 @@ East Low German	East Low German			star_NOUN	Stiern	ʃtˈiːæn	ʃ t ˈiː æ n		
 Dutch	Dutch			star_NOUN	ster	stˈɛɾ	s t ˈɛ ɾ		star_NOUN_1			
 Afrikaans	Afrikaans			star_NOUN	ster	stˈæːr	s t ˈæː r		star_NOUN_1			
 West Flemish	West Flemish			star_NOUN	sterre	stˈæɾə	s t ˈæ ɾ ə		star_NOUN_1			
+Limburgish	Limburgish			star_NOUN	staar	stˈaːʀ	s t ˈaː ʀ		star_NOUN_1			
 Ripuarian	Ripuarian			star_NOUN	Stään	ʃtˈɛːn	ʃ t ˈɛː n		star_NOUN_1			
 Luxembourgish	Luxembourgish			star_NOUN	Stär	ʃtˈɛːɐ	ʃ t ˈɛː ɐ		star_NOUN_1			
 Pennsylvania German	Pennsylvania German			star_NOUN	Schtaern	ʃtˈɛːɑn	ʃ t ˈɛː ɑ n		star_NOUN_1			
@@ -4872,7 +4931,7 @@ East Low German	East Low German			stool_NOUN	Stauhl	ʃtˈaʊ̯l	ʃ t ˈaʊ̯ l		
 Dutch	Dutch			stool_NOUN	stoel	stˈuɫ	s t ˈu ɫ		stool_NOUN_1			
 Afrikaans	Afrikaans			stool_NOUN	stoel	stˈuɫ	s t ˈu ɫ		stool_NOUN_1			
 West Flemish	West Flemish			stool_NOUN	stoel	stˈuə̯l	s t ˈuə̯ l		stool_NOUN_1			
-Limburgish	Limburgish			stool_NOUN	stool	stˈoːɫ	s t ˈoː ɫ		stool_NOUN_1			
+Limburgish	Limburgish			stool_NOUN	stool	stˈʊːl	s t ˈʊː l		stool_NOUN_1			
 Ripuarian	Ripuarian			stool_NOUN	Stohl	ʃtˈoːl	ʃ t ˈoː l		stool_NOUN_1			
 Luxembourgish	Luxembourgish			stool_NOUN	Stull	ʃtˈul	ʃ t ˈu l		stool_NOUN_1			
 Pennsylvania German	Pennsylvania German			stool_NOUN	Schtuhl	ʃtˈuːl	ʃ t ˈuː l		stool_NOUN_1			
@@ -4910,6 +4969,7 @@ East Low German	East Low German			storm_NOUN	Sturm	ʃtˈuːæm	ʃ t ˈuː æ m		
 Dutch	Dutch			storm_NOUN	storm	stˈɔɾm	s t ˈɔ ɾ m		storm_NOUN_1			
 Afrikaans	Afrikaans			storm_NOUN	storm	stˈɔrm	s t ˈɔ r m		storm_NOUN_1			
 West Flemish	West Flemish			storm_NOUN	storm	stˈɔɾm	s t ˈɔ ɾ m		storm_NOUN_1			
+Limburgish	Limburgish			storm_NOUN	störm	stˈœːʀəm	s t ˈœː ʀ ə m		storm_NOUN_1			
 Ripuarian	Ripuarian			storm_NOUN	Storm	ʃtˈɔɐm	ʃ t ˈɔ ɐ m		storm_NOUN_1			
 Luxembourgish	Luxembourgish			storm_NOUN	Stuerm	ʃtˈuːɐm	ʃ t ˈuː ɐ m		storm_NOUN_1			
 Pennsylvania German	Pennsylvania German			storm_NOUN	Schtarem	ʃtˈaːɾəm	ʃ t ˈaː ɾ ə m		storm_NOUN_1			
@@ -4940,6 +5000,7 @@ East Low German	East Low German			son_NOUN	Sœhn	zˈœːn	z ˈœː n		son_NOUN_1
 Dutch	Dutch			son_NOUN	zoon	zˈoːn	z ˈoː n		son_NOUN_1			
 Afrikaans	Afrikaans			son_NOUN	seun	sˈɪø̯n	s ˈɪø̯ n		son_NOUN_1			
 West Flemish	West Flemish			son_NOUN	zeune	zˈøːnə	z ˈøː n ə		son_NOUN_1			
+Limburgish	Limburgish			son_NOUN	zoon	zˈʊːn	z ˈʊː n		son_NOUN_1			
 Pennsylvania German	Pennsylvania German			son_NOUN	Soh	sˈoː	s ˈoː		son_NOUN_1			
 German	German			son_NOUN	Sohn	zˈoːn	z ˈoː n		son_NOUN_1			
 Yiddish	Yiddish			son_NOUN	זון	zˈʊn	z ˈʊ n		son_NOUN_1			
@@ -4969,7 +5030,7 @@ East Low German	East Low German			black_ADJ	schwart	ʃwˈat	ʃ w ˈa t		black_AD
 Dutch	Dutch			black_ADJ	zwart	zʋˈɑɾt	z ʋ ˈɑ ɾ t		black_ADJ_1			
 Afrikaans	Afrikaans			black_ADJ	swart	swˈart	s w ˈa r t		black_ADJ_1			
 West Flemish	West Flemish			black_ADJ	zwart	zʋˈɑɾt	z ʋ ˈɑ ɾ t		black_ADJ_1			
-Limburgish	Limburgish			black_ADJ	zjwart	ʒwˈɑʁt	ʒ w ˈɑ ʁ t		black_ADJ_1			
+Limburgish	Limburgish			black_ADJ	zwart	zβˈɑʀt	z β ˈɑ ʀ t		black_ADJ_1			
 Ripuarian	Ripuarian			black_ADJ	schwatz	ʃʋˈaʦ	ʃ ʋ ˈa ʦ		black_ADJ_1			
 Luxembourgish	Luxembourgish			black_ADJ	schwaarz	ʃwˈaːʦ	ʃ w ˈaː ʦ		black_ADJ_1			
 Pennsylvania German	Pennsylvania German			black_ADJ	schwarz	ʃʋˈaːʦ	ʃ ʋ ˈaː ʦ		black_ADJ_1			
@@ -5004,7 +5065,7 @@ Northern Low Saxon	Northern Low Saxon			sword_NOUN	Sweert	ʃvˈeːɐd	ʃ v ˈeː
 Dutch	Dutch			sword_NOUN	zwaard	zʋˈaːɾt	z ʋ ˈaː ɾ t		sword_NOUN_1			
 Afrikaans	Afrikaans			sword_NOUN	swaard	swˈɑːrt	s w ˈɑː r t		sword_NOUN_1			
 West Flemish	West Flemish			sword_NOUN	zwoard	zʋˈɒːɾt	z ʋ ˈɒː ɾ t		sword_NOUN_1			
-Limburgish	Limburgish			sword_NOUN	zweerd	zwˈeːʁt	z w ˈeː ʁ t		sword_NOUN_1			
+Limburgish	Limburgish			sword_NOUN	zweerd	zβˈeːʀt	z β ˈeː ʀ t		sword_NOUN_1			
 Ripuarian	Ripuarian			sword_NOUN	Schwäät	ʃʋˈɛːt	ʃ ʋ ˈɛː t		sword_NOUN_1			
 Luxembourgish	Luxembourgish			sword_NOUN	Schwäert	ʃwˈɛːɐt	ʃ w ˈɛː ɐ t		sword_NOUN_1			
 Pennsylvania German	Pennsylvania German			sword_NOUN	Schwaert	ʃʋˈɛːɑt	ʃ ʋ ˈɛː ɑ t		sword_NOUN_1			
@@ -5036,7 +5097,7 @@ East Low German	East Low German			sister_NOUN	Süster	sˈʏstæ	s ˈʏ s t æ		s
 Dutch	Dutch			sister_NOUN	zuster	zˈʏstəɾ	z ˈʏ s t ə ɾ		sister_NOUN_1			
 Afrikaans	Afrikaans			sister_NOUN	suster	sˈœstər	s ˈœ s t ə r		sister_NOUN_1			
 West Flemish	West Flemish			sister_NOUN	zustr	zˈœstɾ̩	z ˈœ s t ɾ̩		sister_NOUN_1			
-Limburgish	Limburgish			sister_NOUN	zöster	zˈœstəʁ	z ˈœ s t ə ʁ		sister_NOUN_1			
+Limburgish	Limburgish			sister_NOUN	zuster	zˈʏːstəʀ	z ˈʏː s t ə ʀ		sister_NOUN_1			
 Ripuarian	Ripuarian			sister_NOUN	Sester	zˈɛstɐ	z ˈɛ s t ɐ		sister_NOUN_1			
 Ripuarian	Ripuarian			sister_NOUN	Söster	zˈœstɐ	z ˈœ s t ɐ		sister_NOUN_1			
 Luxembourgish	Luxembourgish			sister_NOUN	Sëschter	zˈəʃtɐ	z ˈə ʃ t ɐ		sister_NOUN_1			
@@ -5067,7 +5128,7 @@ East Low German	East Low German			swim_VERB	schwemmen	ʃwˈɛm	ʃ w ˈɛ m		swim
 Dutch	Dutch			swim_VERB	zwemmen	zʋˈɛmən	z ʋ ˈɛ m ə n		swim_VERB_1			
 Afrikaans	Afrikaans			swim_VERB	swem	svˈɛm	s v ˈɛ m		swim_VERB_1			
 West Flemish	West Flemish			swim_VERB	zwemmn	zʋˈæmn̩	z ʋ ˈæ m n̩		swim_VERB_1			
-Limburgish	Limburgish			swim_VERB	zwömme	zwˈœmə	z w ˈœ m ə		swim_VERB_1			
+Limburgish	Limburgish			swim_VERB	zwumme	zβˈʏmə	z β ˈʏ m ə		swim_VERB_1			
 Ripuarian	Ripuarian			swim_VERB	schwemme	ʃʋˈɛmə	ʃ ʋ ˈɛ m ə		swim_VERB_1			
 Luxembourgish	Luxembourgish			swim_VERB	schwammen	ʃwˈɑmən	ʃ w ˈɑ m ə n		swim_VERB_1			
 Pennsylvania German	Pennsylvania German			swim_VERB	schwimme	ʃʋˈɪmə	ʃ ʋ ˈɪ m ə		swim_VERB_1			
@@ -5099,6 +5160,7 @@ East Low German	East Low German			swine_NOUN	Schwien	ʃwˈiːn	ʃ w ˈiː n		swi
 Dutch	Dutch			swine_NOUN	zwijn	zʋˈɛi̯n	z ʋ ˈɛi̯ n		swine_NOUN_1			
 Afrikaans	Afrikaans			swine_NOUN	swyn	swˈəɪ̯n	s w ˈəɪ̯ n		swine_NOUN_1			
 West Flemish	West Flemish			swine_NOUN	zwyn	zʋˈin	z ʋ ˈi n		swine_NOUN_1			
+Limburgish	Limburgish			swine_NOUN	zwien	zβˈiːn	z β ˈiː n		swine_NOUN_1			
 Luxembourgish	Luxembourgish			swine_NOUN	Schwäin	ʃwˈæːɪ̯n	ʃ w ˈæːɪ̯ n		swine_NOUN_1			
 Pennsylvania German	Pennsylvania German			swine_NOUN	Schwein	ʃʋˈaɪ̯n	ʃ ʋ ˈaɪ̯ n		swine_NOUN_1			
 German	German			swine_NOUN	Schwein	ʃvˈaɪ̯n	ʃ v ˈaɪ̯ n		swine_NOUN_1			
@@ -5170,7 +5232,7 @@ East Low German	East Low German			tooth_NOUN	Tähn	tʰˈɛːn	tʰ ˈɛː n		toot
 Dutch	Dutch			tooth_NOUN	tand	tˈɑnt	t ˈɑ n t		tooth_NOUN_1			
 Afrikaans	Afrikaans			tooth_NOUN	tand	tˈant	t ˈa n t		tooth_NOUN_1			
 West Flemish	West Flemish			tooth_NOUN	tand	tˈɑnt	t ˈɑ n t		tooth_NOUN_1			
-Limburgish	Limburgish			tooth_NOUN	tandj	tˈɑnʤ̊	t ˈɑ n ʤ̊		tooth_NOUN_1			
+Limburgish	Limburgish			tooth_NOUN	tand	tˈɑːnt	t ˈɑː n t		tooth_NOUN_1			
 Ripuarian	Ripuarian			tooth_NOUN	Zank	ʦˈaŋk	ʦ ˈa ŋ k		tooth_NOUN_1			
 Luxembourgish	Luxembourgish			tooth_NOUN	Zand	ʦˈɑnt	ʦ ˈɑ n t		tooth_NOUN_1			
 Pennsylvania German	Pennsylvania German			tooth_NOUN	Zaah	ʦˈɔː	ʦ ˈɔː		tooth_NOUN_1			
@@ -5202,6 +5264,7 @@ East Low German	East Low German			ten_NUM	teihn	tʰˈae̯n	tʰ ˈae̯ n		ten_NUM
 Dutch	Dutch			ten_NUM	tien	tˈin	t ˈi n		ten_NUM_1			
 Afrikaans	Afrikaans			ten_NUM	tien	tˈin	t ˈi n		ten_NUM_1			
 West Flemish	West Flemish			ten_NUM	tienne	tˈiə̯nə	t ˈiə̯ n ə		ten_NUM_1			
+Limburgish	Limburgish			ten_NUM	tien	tˈin	t ˈi n		ten_NUM_1			
 Ripuarian	Ripuarian			ten_NUM	zehn	ʦˈeːn	ʦ ˈeː n		ten_NUM_1			
 Luxembourgish	Luxembourgish			ten_NUM	zéng	ʦˈeŋ	ʦ ˈe ŋ		ten_NUM_1			
 Pennsylvania German	Pennsylvania German			ten_NUM	zehe	ʦˈeːə	ʦ ˈeː ə		ten_NUM_1			
@@ -5251,7 +5314,7 @@ East Low German	East Low German			tear_NOUN_FEM	Trån	tʰrˈɒːn	tʰ r ˈɒː n
 Dutch	Dutch			tear_NOUN_FEM	traan	tɾˈaːn	t ɾ ˈaː n		tear_NOUN_FEM_1			
 Afrikaans	Afrikaans			tear_NOUN_FEM	traan	trˈɑːn	t r ˈɑː n		tear_NOUN_FEM_1			
 West Flemish	West Flemish			tear_NOUN_FEM	troan	tɾˈɒːn	t ɾ ˈɒː n		tear_NOUN_FEM_1			
-Limburgish	Limburgish			tear_NOUN_FEM	traon	tʁˈɒːn	t ʁ ˈɒː n		tear_NOUN_FEM_1			
+Limburgish	Limburgish			tear_NOUN_FEM	traon	tʀˈɒːn	t ʀ ˈɒː n		tear_NOUN_FEM_1			
 Ripuarian	Ripuarian			tear_NOUN_FEM	Tron	tʀˈɔːn	t ʀ ˈɔː n		tear_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			tear_NOUN_FEM	Tréin	tʰʀˈəɪ̯n	tʰ ʀ ˈəɪ̯ n		tear_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			tear_NOUN_FEM	Draen	dɾˈɛːn	d ɾ ˈɛː n		tear_NOUN_FEM_1			
@@ -5294,7 +5357,7 @@ East Low German	East Low German			tongue_NOUN	Tung	tʰˈʊŋ	tʰ ˈʊ ŋ		tongue
 Dutch	Dutch			tongue_NOUN	tong	tˈɔŋ	t ˈɔ ŋ		tongue_NOUN_1			
 Afrikaans	Afrikaans			tongue_NOUN	tong	tˈɔŋ	t ˈɔ ŋ		tongue_NOUN_1			
 West Flemish	West Flemish			tongue_NOUN	tonge	tˈuŋə	t ˈu ŋ ə		tongue_NOUN_1			
-Limburgish	Limburgish			tongue_NOUN	tóng	tˈoŋ	t ˈo ŋ		tongue_NOUN_1			
+Limburgish	Limburgish			tongue_NOUN	tong	tˈʊŋ	t ˈʊ ŋ		tongue_NOUN_1			
 Ripuarian	Ripuarian			tongue_NOUN	Zong	ʦˈoŋ	ʦ ˈo ŋ		tongue_NOUN_1			
 Luxembourgish	Luxembourgish			tongue_NOUN	Zong	ʦˈɔŋ	ʦ ˈɔ ŋ		tongue_NOUN_1			
 Pennsylvania German	Pennsylvania German			tongue_NOUN	Zung	ʦˈʊŋ	ʦ ˈʊ ŋ		tongue_NOUN_1			
@@ -5327,7 +5390,7 @@ East Low German	East Low German			two_NUM	twei	tʰvˈae̯	tʰ v ˈae̯		two_NUM_
 Dutch	Dutch			two_NUM	twee	tʋˈeː	t ʋ ˈeː		two_NUM_1			
 Afrikaans	Afrikaans			two_NUM	twee	tvˈɪə̯	t v ˈɪə̯		two_NUM_1			
 West Flemish	West Flemish			two_NUM	twêe	tʋˈɛː	t ʋ ˈɛː		two_NUM_1			
-Limburgish	Limburgish			two_NUM	twie	twˈiː	t w ˈiː		two_NUM_1			
+Limburgish	Limburgish			two_NUM	twie	tβˈi	t β ˈi		two_NUM_1			
 Ripuarian	Ripuarian			two_NUM	zwee	ʦʋˈeː	ʦ ʋ ˈeː		two_NUM_1			
 Luxembourgish	Luxembourgish			two_NUM	zwee	ʦvˈeː	ʦ v ˈeː		two_NUM_1			
 Pennsylvania German	Pennsylvania German			two_NUM	zwee	ʦʋˈeː	ʦ ʋ ˈeː		two_NUM_1			
@@ -5360,7 +5423,7 @@ East Low German	East Low German			twenty_NUM	twintig	tʰvˈɪntɪç	tʰ v ˈɪ n
 Dutch	Dutch			twenty_NUM	twintig	tʋˈɪntəχ	t ʋ ˈɪ n t ə χ		twenty_NUM_1			
 Afrikaans	Afrikaans			twenty_NUM	twintig	twˈɪntəχ	t w ˈɪ n t ə χ		twenty_NUM_1			
 West Flemish	West Flemish			twenty_NUM	twientig	tʋˈiə̯ntəh	t ʋ ˈiə̯ n t ə h		twenty_NUM_1			
-Limburgish	Limburgish			twenty_NUM	twintjig	twˈɪnʧɪx	t w ˈɪ n ʧ ɪ x		twenty_NUM_1			
+Limburgish	Limburgish			twenty_NUM	twinteg	tβˈɪːntəx	t β ˈɪː n t ə x		twenty_NUM_1			
 Ripuarian	Ripuarian			twenty_NUM	zwanzig	ʦʋˈanʦɪɕ	ʦ ʋ ˈa n ʦ ɪ ɕ		twenty_NUM_1			
 Luxembourgish	Luxembourgish			twenty_NUM	zwanzeg	ʦwˈɑnʦəɕ	ʦ w ˈɑ n ʦ ə ɕ		twenty_NUM_1			
 Pennsylvania German	Pennsylvania German			twenty_NUM	zwansich	ʦʋˈansɪç	ʦ ʋ ˈa n s ɪ ç		twenty_NUM_1			
@@ -5384,6 +5447,7 @@ East Low German	East Low German			over_PREP	œwer	ˈœːvæ	ˈœː v æ		over_PR
 Dutch	Dutch			over_PREP	over	ˈoːvəɾ	ˈoː v ə ɾ		over_PREP_1			
 Afrikaans	Afrikaans			over_PREP	oor	ˈʊə̯r	ˈʊə̯ r		over_PREP_1			
 West Flemish	West Flemish			over_PREP	oovr	ˈoːvɾ̩	ˈoː v ɾ̩		over_PREP_1			
+Limburgish	Limburgish			over_PREP	euver	ˈøːvəʀ	ˈøː v ə ʀ		over_PREP_1			
 Proto-Germanic	Proto-Germanic			over_PREP	ubiri	ˈuβiri	ˈu β i r i		over_PREP_2			
 Old Norse	Old Norse			over_PREP	yfir	ˈyfir	ˈy f i r		over_PREP_2			
 Icelandic	Icelandic			over_PREP	yfir	ˈivɪr̥	ˈi v ɪ r̥		over_PREP_2			
@@ -5420,6 +5484,7 @@ East Low German	East Low German			oven_NOUN	Åben	ˈɒːm	ˈɒː m		oven_NOUN_1
 Dutch	Dutch			oven_NOUN	oven	ˈoːvən	ˈoː v ə n		oven_NOUN_1			
 Afrikaans	Afrikaans			oven_NOUN	oond	ˈʊə̯nt	ˈʊə̯ n t		oven_NOUN_1			
 West Flemish	West Flemish			oven_NOUN	oovn	ˈoːvn̩	ˈoː v n̩		oven_NOUN_1			
+Limburgish	Limburgish			oven_NOUN	ove	ˈoːvə	ˈoː v ə		oven_NOUN_1			
 Ripuarian	Ripuarian			oven_NOUN	Ovve	ˈɔvə	ˈɔ v ə		oven_NOUN_1			
 Luxembourgish	Luxembourgish			oven_NOUN	Uewen	ˈuə̯vən	ˈuə̯ v ə n		oven_NOUN_1			
 Pennsylvania German	Pennsylvania German			oven_NOUN	Offe	ˈɔfə	ˈɔ f ə		oven_NOUN_1			
@@ -5452,7 +5517,7 @@ Northern Low Saxon	Northern Low Saxon			us_PRON	uns	ˈʊns	ˈʊ n s		us_PRON_1
 East Low German	East Low German			us_PRON	uns	ˈʊns	ˈʊ n s		us_PRON_1			
 Dutch	Dutch			us_PRON	ons	ˈɔns	ˈɔ n s		us_PRON_1			
 Afrikaans	Afrikaans			us_PRON	ons	ˈɔns	ˈɔ n s		us_PRON_1			
-Limburgish	Limburgish			us_PRON	ós	ˈos	ˈo s		us_PRON_1			
+Limburgish	Limburgish			us_PRON	eus	ˈʏːs	ˈʏː s		us_PRON_1			
 Ripuarian	Ripuarian			us_PRON	uns	ˈʊns	ˈʊ n s		us_PRON_1			
 Luxembourgish	Luxembourgish			us_PRON	eis	ˈɑɪ̯s	ˈɑɪ̯ s		us_PRON_1			
 Pennsylvania German	Pennsylvania German			us_PRON	uns	ˈʊns	ˈʊ n s		us_PRON_1			
@@ -5484,6 +5549,7 @@ East Low German	East Low German			out_PREP	ut	ˈuːt	ˈuː t		out_PREP_1
 Dutch	Dutch			out_PREP	uit	ˈœy̯t	ˈœy̯ t		out_PREP_1			
 Afrikaans	Afrikaans			out_PREP	uit	ˈœɪ̯t	ˈœɪ̯ t		out_PREP_1			
 West Flemish	West Flemish			out_PREP	uut	ˈyːt	ˈyː t		out_PREP_1			
+Limburgish	Limburgish			out_PREP	oet	ˈuːt	ˈuː t		out_PREP_1			
 Luxembourgish	Luxembourgish			out_PREP	aus	ˈæːʊ̯s	ˈæːʊ̯ s		out_PREP_1			
 Pennsylvania German	Pennsylvania German			out_PREP	aus	ˈaʊ̯s	ˈaʊ̯ s		out_PREP_1			
 German	German			out_PREP	aus	ˈaʊ̯s	ˈaʊ̯ s		out_PREP_1			
@@ -5513,7 +5579,7 @@ East Low German	East Low German			owl_NOUN	Ul	ˈuːl	ˈuː l		owl_NOUN_1
 Dutch	Dutch			owl_NOUN	uil	ˈœy̯ɫ	ˈœy̯ ɫ		owl_NOUN_1			
 Afrikaans	Afrikaans			owl_NOUN	uil	ˈœɪ̯ɫ	ˈœɪ̯ ɫ		owl_NOUN_1			
 West Flemish	West Flemish			owl_NOUN	uul	ˈyːl	ˈyː l		owl_NOUN_1			
-Limburgish	Limburgish			owl_NOUN	uil	ˈœy̯l	ˈœy̯ l		owl_NOUN_1			
+Limburgish	Limburgish			owl_NOUN	uil	ˈœi̯l	ˈœi̯ l		owl_NOUN_1			
 Ripuarian	Ripuarian			owl_NOUN	Üül	ˈyːl	ˈyː l		owl_NOUN_1			
 Luxembourgish	Luxembourgish			owl_NOUN	Eil	ˈɑɪ̯l	ˈɑɪ̯ l		owl_NOUN_1			
 Pennsylvania German	Pennsylvania German			owl_NOUN	Eil	ˈaɪ̯l	ˈaɪ̯ l		owl_NOUN_1			
@@ -5541,7 +5607,7 @@ East Low German	East Low German			warm_ADJ	warm	vˈaːm	v ˈaː m		warm_ADJ_1
 Dutch	Dutch			warm_ADJ	warm	ʋˈɑɾm	ʋ ˈɑ ɾ m		warm_ADJ_1			
 Afrikaans	Afrikaans			warm_ADJ	warm	vˈarm	v ˈa r m		warm_ADJ_1			
 West Flemish	West Flemish			warm_ADJ	warm	ʋˈɑɾm	ʋ ˈɑ ɾ m		warm_ADJ_1			
-Limburgish	Limburgish			warm_ADJ	werm	wˈæʁm	w ˈæ ʁ m		warm_ADJ_1			
+Limburgish	Limburgish			warm_ADJ	werm	βˈæʀəm	β ˈæ ʀ ə m		warm_ADJ_1			
 Ripuarian	Ripuarian			warm_ADJ	wärm	ʋˈɛɐm	ʋ ˈɛ ɐ m		warm_ADJ_1			
 Luxembourgish	Luxembourgish			warm_ADJ	waarm	vˈaːm	v ˈaː m		warm_ADJ_1			
 Pennsylvania German	Pennsylvania German			warm_ADJ	waarm	ʋˈɔːɑm	ʋ ˈɔː ɑ m		warm_ADJ_1			
@@ -5574,7 +5640,7 @@ East Low German	East Low German			water_NOUN	Wåter	vˈɒːtæ	v ˈɒː t æ		wa
 Dutch	Dutch			water_NOUN	water	ʋˈaːtəɾ	ʋ ˈaː t ə ɾ		water_NOUN_2			
 Afrikaans	Afrikaans			water_NOUN	water	vˈɑːtər	v ˈɑː t ə r		water_NOUN_2			
 West Flemish	West Flemish			water_NOUN	woater	ʋˈɒːtɾ̩	ʋ ˈɒː t ɾ̩		water_NOUN_2			
-Limburgish	Limburgish			water_NOUN	water	wˈaːtəʁ	w ˈaː t ə ʁ		water_NOUN_2			
+Limburgish	Limburgish			water_NOUN	water	βˈaːtəʀ	β ˈaː t ə ʀ		water_NOUN_2			
 Ripuarian	Ripuarian			water_NOUN	Waßer	ʋˈaːsɐ	ʋ ˈaː s ɐ		water_NOUN_2			
 Luxembourgish	Luxembourgish			water_NOUN	Waasser	vˈaːsɐ	v ˈaː s ɐ		water_NOUN_2			
 Pennsylvania German	Pennsylvania German			water_NOUN	Wasser	ʋˈasɑ	ʋ ˈa s ɑ		water_NOUN_2			
@@ -5605,7 +5671,7 @@ East Low German	East Low German			weather_NOUN	Wäder	vˈɛːɾæ	v ˈɛː ɾ æ
 Dutch	Dutch			weather_NOUN	weer	ʋˈeːɾ	ʋ ˈeː ɾ		weather_NOUN_1			
 Afrikaans	Afrikaans			weather_NOUN	weer	vˈɪə̯r	v ˈɪə̯ r		weather_NOUN_1			
 West Flemish	West Flemish			weather_NOUN	weer	ʋˈeːɾ	ʋ ˈeː ɾ		weather_NOUN_1			
-Limburgish	Limburgish			weather_NOUN	weer	wˈeːʁ	w ˈeː ʁ		weather_NOUN_1			
+Limburgish	Limburgish			weather_NOUN	weer	βˈeːʀ	β ˈeː ʀ		weather_NOUN_1			
 Ripuarian	Ripuarian			weather_NOUN	Wedder	ʋˈɛdɐ	ʋ ˈɛ d ɐ		weather_NOUN_1			
 Luxembourgish	Luxembourgish			weather_NOUN	Wieder	vˈiə̯dɐ	v ˈiə̯ d ɐ		weather_NOUN_1			
 Pennsylvania German	Pennsylvania German			weather_NOUN	Wedder	ʋˈɛdɑ	ʋ ˈɛ d ɑ		weather_NOUN_1			
@@ -5637,7 +5703,7 @@ East Low German	East Low German			way_NOUN	Wech	vˈɛç	v ˈɛ ç		way_NOUN_1
 Dutch	Dutch			way_NOUN	weg	ʋˈɛχ	ʋ ˈɛ χ		way_NOUN_1			
 Afrikaans	Afrikaans			way_NOUN	weg	vˈɛχ	v ˈɛ χ		way_NOUN_1			
 West Flemish	West Flemish			way_NOUN	weg	ʋˈæh	ʋ ˈæ h		way_NOUN_1			
-Limburgish	Limburgish			way_NOUN	waeg	wˈæːχ	w ˈæː χ		way_NOUN_1			
+Limburgish	Limburgish			way_NOUN	weeg	βˈeːx	β ˈeː x		way_NOUN_1			
 Ripuarian	Ripuarian			way_NOUN	Wääch	ʋˈɛːɕ	ʋ ˈɛː ɕ		way_NOUN_1			
 Luxembourgish	Luxembourgish			way_NOUN	Wee	vˈeː	v ˈeː		way_NOUN_1			
 Pennsylvania German	Pennsylvania German			way_NOUN	Weg	ʋˈeːk	ʋ ˈeː k		way_NOUN_1			
@@ -5663,7 +5729,7 @@ Saterland Frisian	Saterland Frisian			weapon_NOUN	Wäipen	vˈɛɪ̯pən	v ˈɛɪ
 North Frisian	North Frisian			weapon_NOUN	wååben	vˈɒːbən	v ˈɒː b ə n		weapon_NOUN_1			
 Dutch	Dutch			weapon_NOUN	wapen	ʋˈaːpən	ʋ ˈaː p ə n		weapon_NOUN_1			
 Afrikaans	Afrikaans			weapon_NOUN	wapen	vˈɑːpən	v ˈɑː p ə n		weapon_NOUN_1			
-Limburgish	Limburgish			weapon_NOUN	waope	wˈɒːpə	w ˈɒː p ə		weapon_NOUN_1			
+Limburgish	Limburgish			weapon_NOUN	waope	βˈɒːpə	β ˈɒː p ə		weapon_NOUN_1			
 Luxembourgish	Luxembourgish			weapon_NOUN	Waff	vˈɑf	v ˈɑ f		weapon_NOUN_1			
 German	German			weapon_NOUN	Waffe	vˈafə	v ˈa f ə		weapon_NOUN_1			
 Yiddish	Yiddish			weapon_NOUN	וואָפֿן	vˈɔfn̩	v ˈɔ f n̩		weapon_NOUN_1			
@@ -5682,7 +5748,7 @@ East Low German	East Low German			wife_NOUN	Wief	vˈiːf	v ˈiː f		wife_NOUN_1
 Dutch	Dutch			wife_NOUN	wijf	ʋˈɛi̯f	ʋ ˈɛi̯ f		wife_NOUN_1			
 Afrikaans	Afrikaans			wife_NOUN	wyf	vˈəɪ̯f	v ˈəɪ̯ f		wife_NOUN_1			
 West Flemish	West Flemish			wife_NOUN	wuuf	ʋˈyːf	ʋ ˈyː f		wife_NOUN_1			
-Limburgish	Limburgish			wife_NOUN	wief	wˈiːf	w ˈiː f		wife_NOUN_1			
+Limburgish	Limburgish			wife_NOUN	wief	βˈiːf	β ˈiː f		wife_NOUN_1			
 Ripuarian	Ripuarian			wife_NOUN	Wiev	ʋˈiːf	ʋ ˈiː f		wife_NOUN_1			
 Pennsylvania German	Pennsylvania German			wife_NOUN	Weib	ʋˈaɪ̯p	ʋ ˈaɪ̯ p		wife_NOUN_1			
 German	German			wife_NOUN	Weib	vˈaɪ̯p	v ˈaɪ̯ p		wife_NOUN_1			
@@ -5712,7 +5778,7 @@ East Low German	East Low German			wind_NOUN	Wind	vˈɪnd	v ˈɪ n d		wind_NOUN_1
 Dutch	Dutch			wind_NOUN	wind	ʋˈɪnt	ʋ ˈɪ n t		wind_NOUN_1			
 Afrikaans	Afrikaans			wind_NOUN	wind	vˈənt	v ˈə n t		wind_NOUN_1			
 West Flemish	West Flemish			wind_NOUN	wind	ʋˈɪnt	ʋ ˈɪ n t		wind_NOUN_1			
-Limburgish	Limburgish			wind_NOUN	wèndj	wˈɛnʤ̊	w ˈɛ n ʤ̊		wind_NOUN_1			
+Limburgish	Limburgish			wind_NOUN	wind	βˈɪːnt	β ˈɪː n t		wind_NOUN_1			
 Ripuarian	Ripuarian			wind_NOUN	Wind	ʋˈɪnt	ʋ ˈɪ n t		wind_NOUN_1			
 Luxembourgish	Luxembourgish			wind_NOUN	Wand	vˈɑnt	v ˈɑ n t		wind_NOUN_1			
 Pennsylvania German	Pennsylvania German			wind_NOUN	Wind	ʋˈɪnt	ʋ ˈɪ n t		wind_NOUN_1			
@@ -5742,7 +5808,7 @@ Northern Low Saxon	Northern Low Saxon			know_VERB	weten	vˈeːdn̩	v ˈeː d n̩
 East Low German	East Low German			know_VERB	weiten	vˈae̯tn̩	v ˈae̯ t n̩		know_VERB_1			
 Dutch	Dutch			know_VERB	weten	ʋˈeːtən	ʋ ˈeː t ə n		know_VERB_1			
 Afrikaans	Afrikaans			know_VERB	weet	vˈɪə̯t	v ˈɪə̯ t		know_VERB_1			
-Limburgish	Limburgish			know_VERB	weite	wˈɛi̯tə	w ˈɛi̯ t ə		know_VERB_1			
+Limburgish	Limburgish			know_VERB	weite	βˈɛːtə	β ˈɛː t ə		know_VERB_1			
 Ripuarian	Ripuarian			know_VERB	wesse	ʋˈesə	ʋ ˈe s ə		know_VERB_1			
 Luxembourgish	Luxembourgish			know_VERB	wëssen	vˈəsən	v ˈə s ə n		know_VERB_1			
 Pennsylvania German	Pennsylvania German			know_VERB	wisse	ʋˈɪsə	ʋ ˈɪ s ə		know_VERB_1			
@@ -5784,7 +5850,7 @@ Northern Low Saxon	Northern Low Saxon			wolf_NOUN	Wulf	vˈʊlf	v ˈʊ l f		wolf_
 East Low German	East Low German			wolf_NOUN	Wulf	vˈʊlf	v ˈʊ l f		wolf_NOUN_1			
 Dutch	Dutch			wolf_NOUN	wolf	ʋˈɔɫf	ʋ ˈɔ ɫ f		wolf_NOUN_1			
 Afrikaans	Afrikaans			wolf_NOUN	wolf	vˈɔɫf	v ˈɔ ɫ f		wolf_NOUN_1			
-Limburgish	Limburgish			wolf_NOUN	wólf	wˈoɫf	w ˈo ɫ f		wolf_NOUN_1			
+Limburgish	Limburgish			wolf_NOUN	wolf	βˈɔːləf	β ˈɔː l ə f		wolf_NOUN_1			
 Ripuarian	Ripuarian			wolf_NOUN	Wolf	ʋˈɔlf	ʋ ˈɔ l f		wolf_NOUN_1			
 Luxembourgish	Luxembourgish			wolf_NOUN	Wollef	vˈoləf	v ˈo l ə f		wolf_NOUN_1			
 Pennsylvania German	Pennsylvania German			wolf_NOUN	Wolf	ʋˈɔlf	ʋ ˈɔ l f		wolf_NOUN_1			
@@ -5817,6 +5883,7 @@ East Low German	East Low German			wool_NOUN_FEM	Wull	vˈʊl	v ˈʊ l		wool_NOUN_
 Dutch	Dutch			wool_NOUN_FEM	wol	ʋˈɔɫ	ʋ ˈɔ ɫ		wool_NOUN_FEM_1			
 Afrikaans	Afrikaans			wool_NOUN_FEM	wol	vˈɔɫ	v ˈɔ ɫ		wool_NOUN_FEM_1			
 West Flemish	West Flemish			wool_NOUN_FEM	wulle	ʋˈœlə	ʋ ˈœ l ə		wool_NOUN_FEM_1			
+Limburgish	Limburgish			wool_NOUN_FEM	wol	βˈɔl	β ˈɔ l		wool_NOUN_FEM_1			
 Ripuarian	Ripuarian			wool_NOUN_FEM	Woll	ʋˈɔl	ʋ ˈɔ l		wool_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			wool_NOUN_FEM	Woll	vˈol	v ˈo l		wool_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			wool_NOUN_FEM	Woll	ʋˈɔl	ʋ ˈɔ l		wool_NOUN_FEM_1			
@@ -5847,7 +5914,7 @@ Northern Low Saxon	Northern Low Saxon			wish_VERB	wünschen	vˈʏnʃn̩	v ˈʏ n
 East Low German	East Low German			wish_VERB	wünschen	vˈʏnʃn̩	v ˈʏ n ʃ n̩		wish_VERB_1			
 Dutch	Dutch			wish_VERB	wensen	ʋˈɛnsən	ʋ ˈɛ n s ə n		wish_VERB_1			
 Afrikaans	Afrikaans			wish_VERB	wens	vˈɛns	v ˈɛ n s		wish_VERB_1			
-Limburgish	Limburgish			wish_VERB	wönsje	wˈœnʃə	w ˈœ n ʃ ə		wish_VERB_1			
+Limburgish	Limburgish			wish_VERB	winse	βˈɪːnsə	β ˈɪː n s ə		wish_VERB_1			
 Ripuarian	Ripuarian			wish_VERB	wünsche	ʋˈʏnʃə	ʋ ˈʏ n ʃ ə		wish_VERB_1			
 Luxembourgish	Luxembourgish			wish_VERB	wënschen	vˈənʃən	v ˈə n ʃ ə n		wish_VERB_1			
 Pennsylvania German	Pennsylvania German			wish_VERB	winsche	ʋˈɪnʃə	ʋ ˈɪ n ʃ ə		wish_VERB_1			
@@ -5879,7 +5946,7 @@ East Low German	East Low German			word_NOUN	Wuurt	vˈuːæt	v ˈuː æ t		word_N
 Dutch	Dutch			word_NOUN	woord	ʋˈoːɾt	ʋ ˈoː ɾ t		word_NOUN_1			
 Afrikaans	Afrikaans			word_NOUN	woord	vˈʊə̯rt	v ˈʊə̯ r t		word_NOUN_1			
 West Flemish	West Flemish			word_NOUN	woord	ʋˈoːɾt	ʋ ˈoː ɾ t		word_NOUN_1			
-Limburgish	Limburgish			word_NOUN	waord	wˈɒːʁt	w ˈɒː ʁ t		word_NOUN_1			
+Limburgish	Limburgish			word_NOUN	woord	βˈʊːʀt	β ˈʊː ʀ t		word_NOUN_1			
 Ripuarian	Ripuarian			word_NOUN	Wood	ʋˈoːt	ʋ ˈoː t		word_NOUN_1			
 Luxembourgish	Luxembourgish			word_NOUN	Wuert	vˈuːɐt	v ˈuː ɐ t		word_NOUN_1			
 Pennsylvania German	Pennsylvania German			word_NOUN	Wart	ʋˈaːt	ʋ ˈaː t		word_NOUN_1			
@@ -5910,7 +5977,7 @@ Northern Low Saxon	Northern Low Saxon			worm_NOUN	Worm	vˈɔːm	v ˈɔː m		worm
 East Low German	East Low German			worm_NOUN	Worm	vˈoːæm	v ˈoː æ m		worm_NOUN_1			
 Dutch	Dutch			worm_NOUN	worm	ʋˈɔɾm	ʋ ˈɔ ɾ m		worm_NOUN_1			
 Afrikaans	Afrikaans			worm_NOUN	wurm	vˈœrəm	v ˈœ r ə m		worm_NOUN_1			
-Limburgish	Limburgish			worm_NOUN	wörm	wˈœʁm	w ˈœ ʁ m		worm_NOUN_1			
+Limburgish	Limburgish			worm_NOUN	wörm	βˈœːʀəm	β ˈœː ʀ ə m		worm_NOUN_1			
 Ripuarian	Ripuarian			worm_NOUN	Wurm	ʋˈʊɐm	ʋ ˈʊ ɐ m		worm_NOUN_1			
 Luxembourgish	Luxembourgish			worm_NOUN	Wuerm	vˈuːɐm	v ˈuː ɐ m		worm_NOUN_1			
 Pennsylvania German	Pennsylvania German			worm_NOUN	Warem	ʋˈaːɾəm	ʋ ˈaː ɾ ə m		worm_NOUN_1			
@@ -5938,7 +6005,7 @@ Northern Low Saxon	Northern Low Saxon			thank_VERB	danken	dˈaŋkn̩	d ˈa ŋ k 
 East Low German	East Low German			thank_VERB	danken	dˈaŋkn̩	d ˈa ŋ k n̩		thank_VERB_1			
 Dutch	Dutch			thank_VERB	danken	dˈɑŋkən	d ˈɑ ŋ k ə n		thank_VERB_1			
 Afrikaans	Afrikaans			thank_VERB	dank	dˈaŋk	d ˈa ŋ k		thank_VERB_1			
-Limburgish	Limburgish			thank_VERB	danke	dˈɑŋkə	d ˈɑ ŋ k ə		thank_VERB_1			
+Limburgish	Limburgish			thank_VERB	daanke	dˈaːŋkə	d ˈaː ŋ k ə		thank_VERB_1			
 Ripuarian	Ripuarian			thank_VERB	danke	dˈaŋkə	d ˈa ŋ k ə		thank_VERB_1			
 Luxembourgish	Luxembourgish			thank_VERB	danken	dˈɑŋkən	d ˈɑ ŋ k ə n		thank_VERB_1			
 Pennsylvania German	Pennsylvania German			thank_VERB	danke	dˈaŋkə	d ˈa ŋ k ə		thank_VERB_1			
@@ -6029,7 +6096,7 @@ East Low German	East Low German			thing_NOUN	Ding	dˈɪŋ	d ˈɪ ŋ		thing_NOUN_
 Dutch	Dutch			thing_NOUN	ding	dˈɪŋ	d ˈɪ ŋ		thing_NOUN_1			
 Afrikaans	Afrikaans			thing_NOUN	ding	dˈəŋ	d ˈə ŋ		thing_NOUN_1			
 West Flemish	West Flemish			thing_NOUN	ding	dˈɪŋk	d ˈɪ ŋ k		thing_NOUN_1			
-Limburgish	Limburgish			thing_NOUN	dink	dˈɪŋk	d ˈɪ ŋ k		thing_NOUN_1			
+Limburgish	Limburgish			thing_NOUN	dink	dˈɪːŋk	d ˈɪː ŋ k		thing_NOUN_1			
 Ripuarian	Ripuarian			thing_NOUN	Dinge	dˈɪŋə	d ˈɪ ŋ ə		thing_NOUN_1			
 Luxembourgish	Luxembourgish			thing_NOUN	Déngen	dˈeŋən	d ˈe ŋ ə n		thing_NOUN_1			
 Pennsylvania German	Pennsylvania German			thing_NOUN	Ding	dˈɪŋ	d ˈɪ ŋ		thing_NOUN_1			
@@ -6055,7 +6122,7 @@ East Low German	East Low German			Teutonic_ADJ	düütsch	dˈyːtʃ	d ˈyː t ʃ	
 Dutch	Dutch			Teutonic_ADJ	duits	dˈœy̯ts	d ˈœy̯ t s		Teutonic_ADJ_1			
 Afrikaans	Afrikaans			Teutonic_ADJ	duits	dˈœɪ̯ts	d ˈœɪ̯ t s		Teutonic_ADJ_1			
 West Flemish	West Flemish			Teutonic_ADJ	duuts	dˈyːts	d ˈyː t s		Teutonic_ADJ_1			
-Limburgish	Limburgish			Teutonic_ADJ	dutsj	dˈʏtʃ	d ˈʏ t ʃ		Teutonic_ADJ_1			
+Limburgish	Limburgish			Teutonic_ADJ	duits	dˈœi̯ʦ	d ˈœi̯ ʦ		Teutonic_ADJ_1			
 Ripuarian	Ripuarian			Teutonic_ADJ	dütsch	dˈʏtʃ	d ˈʏ t ʃ		Teutonic_ADJ_1			
 Luxembourgish	Luxembourgish			Teutonic_ADJ	däitsch	dˈæːɪ̯tʃ	d ˈæːɪ̯ t ʃ		Teutonic_ADJ_1			
 Pennsylvania German	Pennsylvania German			Teutonic_ADJ	deitsch	dˈaɪ̯tʃ	d ˈaɪ̯ t ʃ		Teutonic_ADJ_1			
@@ -6088,7 +6155,7 @@ East Low German	East Low German			three_NUM	drei	drˈae̯	d r ˈae̯		three_NUM_
 Dutch	Dutch			three_NUM	drie	dɾˈi	d ɾ ˈi		three_NUM_1			
 Afrikaans	Afrikaans			three_NUM	drie	drˈi	d r ˈi		three_NUM_1			
 West Flemish	West Flemish			three_NUM	drieje	dɾˈiə̯	d ɾ ˈiə̯		three_NUM_1			
-Limburgish	Limburgish			three_NUM	drie	dʁˈiː	d ʁ ˈiː		three_NUM_1			
+Limburgish	Limburgish			three_NUM	drei	dʀˈɛi̯	d ʀ ˈɛi̯		three_NUM_1			
 Ripuarian	Ripuarian			three_NUM	drei	dʀˈeɪ̯	d ʀ ˈeɪ̯		three_NUM_1			
 Luxembourgish	Luxembourgish			three_NUM	dräi	dʀˈæːɪ̯	d ʀ ˈæːɪ̯		three_NUM_1			
 Pennsylvania German	Pennsylvania German			three_NUM	drei	dɾˈaɪ̯	d ɾ ˈaɪ̯		three_NUM_1			
@@ -6139,7 +6206,7 @@ East Low German	East Low German			thin_ADJ	dünn	dˈʏn	d ˈʏ n		thin_ADJ_1
 Dutch	Dutch			thin_ADJ	dun	dˈʏn	d ˈʏ n		thin_ADJ_1			
 Afrikaans	Afrikaans			thin_ADJ	dun	dˈœn	d ˈœ n		thin_ADJ_1			
 West Flemish	West Flemish			thin_ADJ	dinne	dˈɪnə	d ˈɪ n ə		thin_ADJ_1			
-Limburgish	Limburgish			thin_ADJ	dön	dˈœn	d ˈœ n		thin_ADJ_1			
+Limburgish	Limburgish			thin_ADJ	dun	dˈʏn	d ˈʏ n		thin_ADJ_1			
 Ripuarian	Ripuarian			thin_ADJ	dönn	dˈœn	d ˈœ n		thin_ADJ_1			
 Luxembourgish	Luxembourgish			thin_ADJ	dënn	dˈən	d ˈə n		thin_ADJ_1			
 Pennsylvania German	Pennsylvania German			thin_ADJ	dinn	dˈɪn	d ˈɪ n		thin_ADJ_1			
@@ -6169,6 +6236,7 @@ East Low German	East Low German			thunder_NOUN	Dunner	dˈʊnæ	d ˈʊ n æ		thun
 Dutch	Dutch			thunder_NOUN	donder	dˈɔndəɾ	d ˈɔ n d ə ɾ		thunder_NOUN_1			
 Afrikaans	Afrikaans			thunder_NOUN	donder	dˈɔndər	d ˈɔ n d ə r		thunder_NOUN_1			
 West Flemish	West Flemish			thunder_NOUN	dundr	dˈœndɾ̩	d ˈœ n d ɾ̩		thunder_NOUN_1			
+Limburgish	Limburgish			thunder_NOUN	donder	dˈɔndəʀ	d ˈɔ n d ə ʀ		thunder_NOUN_1			
 Ripuarian	Ripuarian			thunder_NOUN	Donner	dˈonɐ	d ˈo n ɐ		thunder_NOUN_1			
 Luxembourgish	Luxembourgish			thunder_NOUN	Donner	dˈonɐ	d ˈo n ɐ		thunder_NOUN_1			
 Pennsylvania German	Pennsylvania German			thunder_NOUN	Dunner	dˈʊnɑ	d ˈʊ n ɑ		thunder_NOUN_1			
@@ -6197,6 +6265,7 @@ East Low German	East Low German			thorn_NOUN	Duurn	dˈuːæn	d ˈuː æ n		thorn
 Dutch	Dutch			thorn_NOUN	doorn	dˈoːɾn	d ˈoː ɾ n		thorn_NOUN_1			
 Afrikaans	Afrikaans			thorn_NOUN	doring	dˈʊə̯rəŋ	d ˈʊə̯ r ə ŋ		thorn_NOUN_1			
 West Flemish	West Flemish			thorn_NOUN	doorn	dˈoːɾn	d ˈoː ɾ n		thorn_NOUN_1			
+Limburgish	Limburgish			thorn_NOUN	dore	dˈʊːʀə	d ˈʊː ʀ ə		thorn_NOUN_1			
 Ripuarian	Ripuarian			thorn_NOUN	Doon	dˈoːn	d ˈoː n		thorn_NOUN_1			
 Luxembourgish	Luxembourgish			thorn_NOUN	Dar	dˈaːʀ	d ˈaː ʀ		thorn_NOUN_1			
 Pennsylvania German	Pennsylvania German			thorn_NOUN	Dann	dˈan	d ˈa n		thorn_NOUN_1			
@@ -6214,7 +6283,7 @@ Swedish	Swedish			dry_ADJ	torr	tʰˈɔrr	tʰ ˈɔ r r		dry_ADJ_3
 Old English	Old English			dry_ADJ	þyrre	θˈyrre	θ ˈy r r e		dry_ADJ_3			
 Dutch	Dutch			dry_ADJ	dor	dˈɔɾ	d ˈɔ ɾ		dry_ADJ_3			
 Afrikaans	Afrikaans			dry_ADJ	dor	dˈɔr	d ˈɔ r		dry_ADJ_3			
-Limburgish	Limburgish			dry_ADJ	dór	dˈoʁ	d ˈo ʁ		dry_ADJ_3			
+Limburgish	Limburgish			dry_ADJ	dor	dˈɔʀ	d ˈɔ ʀ		dry_ADJ_3			
 Luxembourgish	Luxembourgish			dry_ADJ	dier	dˈiːɐ	d ˈiː ɐ		dry_ADJ_3			
 Pennsylvania German	Pennsylvania German			dry_ADJ	daerr	dˈɛːɑ	d ˈɛː ɑ		dry_ADJ_3			
 German	German			dry_ADJ	dürr	dˈʏɐ	d ˈʏ ɐ		dry_ADJ_3			
@@ -6241,7 +6310,7 @@ East Low German	East Low German			thousand_NUM	dusend	dˈuːzn̩d	d ˈuː z n̩ 
 Dutch	Dutch			thousand_NUM	duizend	dˈœy̯zənt	d ˈœy̯ z ə n t		thousand_NUM_1			
 Afrikaans	Afrikaans			thousand_NUM	duisend	dˈœɪ̯sən	d ˈœɪ̯ s ə n		thousand_NUM_1			
 West Flemish	West Flemish			thousand_NUM	duusd	dˈyːst	d ˈyː s t		thousand_NUM_1			
-Limburgish	Limburgish			thousand_NUM	doezjendj	dˈuːʒənʤ̊	d ˈuː ʒ ə n ʤ̊		thousand_NUM_1			
+Limburgish	Limburgish			thousand_NUM	doezend	dˈuːzənt	d ˈuː z ə n t		thousand_NUM_1			
 Ripuarian	Ripuarian			thousand_NUM	dausend	dˈaʊ̯zənt	d ˈaʊ̯ z ə n t		thousand_NUM_1			
 Luxembourgish	Luxembourgish			thousand_NUM	dausend	dˈɑʊ̯zənt	d ˈɑʊ̯ z ə n t		thousand_NUM_1			
 Pennsylvania German	Pennsylvania German			thousand_NUM	dausend	dˈaʊ̯sənt	d ˈaʊ̯ s ə n t		thousand_NUM_1			
