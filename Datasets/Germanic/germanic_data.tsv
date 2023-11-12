@@ -45,7 +45,7 @@ Dutch	Dutch			church_NOUN_FEM	kerk	kˈɛɾk	k ˈɛ ɾ k		church_NOUN_FEM_1
 Afrikaans	Afrikaans			church_NOUN_FEM	kerk	kˈɛrk	k ˈɛ r k		church_NOUN_FEM_1			
 West Flemish	West Flemish			church_NOUN_FEM	kerke	kˈæɾkə	k ˈæ ɾ k ə		church_NOUN_FEM_1			
 Limburgish	Limburgish			church_NOUN_FEM	kèrk	kˈɛːʀək	k ˈɛː ʀ ə k		church_NOUN_FEM_1			
-Ripuarian	Ripuarian			church_NOUN_FEM	Kirch	kˈiɐɕ	k ˈi ɐ ɕ		church_NOUN_FEM_1			
+Ripuarian	Ripuarian			church_NOUN_FEM	Kirch	kˈiːɐɕ	k ˈiː ɐ ɕ		church_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			church_NOUN_FEM	Kierch	kʰˈiːɐɕ	kʰ ˈiː ɐ ɕ		church_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			church_NOUN_FEM	Kaerich	kʰˈɛːɾɪç	kʰ ˈɛː ɾ ɪ ç		church_NOUN_FEM_1			
 German	German			church_NOUN_FEM	Kirche	kʰˈɪɐçə	kʰ ˈɪ ɐ ç ə		church_NOUN_FEM_1			
@@ -69,7 +69,7 @@ Dutch	Dutch			plight_NOUN	plicht	pɫˈɪχt	p ɫ ˈɪ χ t		plight_NOUN_1
 Afrikaans	Afrikaans			plight_NOUN	plig	pɫˈəχ	p ɫ ˈə χ		plight_NOUN_1			
 West Flemish	West Flemish			plight_NOUN	plicht	plˈɛht	p l ˈɛ h t		plight_NOUN_1			
 Limburgish	Limburgish			plight_NOUN	pliech	plˈix	p l ˈi x		plight_NOUN_1			
-Ripuarian	Ripuarian			plight_NOUN	Flich	flˈiɕ	f l ˈi ɕ		plight_NOUN_1			
+Ripuarian	Ripuarian			plight_NOUN	Flich	flˈɪɕ	f l ˈɪ ɕ		plight_NOUN_1			
 Luxembourgish	Luxembourgish			plight_NOUN	Flicht	flˈiɕt	f l ˈi ɕ t		plight_NOUN_1			
 Pennsylvania German	Pennsylvania German			plight_NOUN	Pflicht	p͡flˈɪçt	p͡f l ˈɪ ç t		plight_NOUN_1			
 German	German			plight_NOUN	Pflicht	p͡flˈɪçt	p͡f l ˈɪ ç t		plight_NOUN_1			
@@ -99,7 +99,7 @@ Ripuarian	Ripuarian			speech_NOUN_FEM	Sprooch	ʃpʀˈoːx	ʃ p ʀ ˈoː x		speec
 Luxembourgish	Luxembourgish			speech_NOUN_FEM	Sprooch	ʃpʀˈoːχ	ʃ p ʀ ˈoː χ		speech_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			speech_NOUN_FEM	Schprooch	ʃpɾˈoːx	ʃ p ɾ ˈoː x		speech_NOUN_FEM_1			
 German	German			speech_NOUN_FEM	Sprache	ʃpʁˈaːxə	ʃ p ʁ ˈaː x ə		speech_NOUN_FEM_1			
-Yiddish	Yiddish			speech_NOUN_FEM	שפּראַך	ʃpʀˈaχ	ʃ p ʀ ˈa χ		speech_NOUN_FEM_1			
+Yiddish	Yiddish			speech_NOUN_FEM	שפּראַך	ʃpʀˈaχ	ʃ p ʀ ˈa χ		speech_NOUN_FEM_1	TRUE	IRREGULAR OR LOAN	
 Swabian	Swabian			speech_NOUN_FEM	Schbroch	ʃb̥ʁˈɔːx	ʃ b̥ ʁ ˈɔː x		speech_NOUN_FEM_1			
 Swiss German	Swiss German			speech_NOUN_FEM	Sproch	ʃprˈoːχ	ʃ p r ˈoː χ		speech_NOUN_FEM_1			
 Bavarian	Bavarian			speech_NOUN_FEM	Språch	ʃprˈɒːx	ʃ p r ˈɒː x		speech_NOUN_FEM_1			
@@ -411,7 +411,7 @@ Dutch	Dutch			arm_NOUN	arm	ˈɑɾm	ˈɑ ɾ m		arm_NOUN_1
 Afrikaans	Afrikaans			arm_NOUN	arm	ˈarm	ˈa r m		arm_NOUN_1			
 West Flemish	West Flemish			arm_NOUN	oarm	ˈɒːɾm	ˈɒː ɾ m		arm_NOUN_1			
 Limburgish	Limburgish			arm_NOUN	erm	ˈæːʀəm	ˈæː ʀ ə m		arm_NOUN_1			
-Ripuarian	Ripuarian			arm_NOUN	Ärm	ˈɛɐm	ˈɛ ɐ m		arm_NOUN_1			
+Ripuarian	Ripuarian			arm_NOUN	Ärm	ˈɛːɐm	ˈɛː ɐ m		arm_NOUN_1			
 Luxembourgish	Luxembourgish			arm_NOUN	Aarm	ˈaːm	ˈaː m		arm_NOUN_1			
 Pennsylvania German	Pennsylvania German			arm_NOUN	Arm	ˈaːm	ˈaː m		arm_NOUN_1			
 German	German			arm_NOUN	Arm	ˈaɐm	ˈa ɐ m		arm_NOUN_1			
@@ -506,7 +506,7 @@ Dutch	Dutch			ear_NOUN	oor	ˈoːɾ	ˈoː ɾ		ear_NOUN_1
 Afrikaans	Afrikaans			ear_NOUN	oor	ˈʊə̯r	ˈʊə̯ r		ear_NOUN_1			
 West Flemish	West Flemish			ear_NOUN	ôore	ˈoːɾə	ˈoː ɾ ə		ear_NOUN_1			
 Limburgish	Limburgish			ear_NOUN	oer	ˈuːʀ	ˈuː ʀ		ear_NOUN_1			
-Ripuarian	Ripuarian			ear_NOUN	Uhr	ˈuɐ	ˈu ɐ		ear_NOUN_1			
+Ripuarian	Ripuarian			ear_NOUN	Uhr	ˈuːɐ	ˈuː ɐ		ear_NOUN_1			
 Luxembourgish	Luxembourgish			ear_NOUN	Ouer	ˈəʊ̯ɐ	ˈəʊ̯ ɐ		ear_NOUN_1			
 Pennsylvania German	Pennsylvania German			ear_NOUN	Ohr	ˈoːɑ	ˈoː ɑ		ear_NOUN_1			
 German	German			ear_NOUN	Ohr	ˈoːɐ	ˈoː ɐ		ear_NOUN_1			
@@ -672,7 +672,7 @@ Dutch	Dutch			mountain_NOUN	berg	bˈɛɾχ	b ˈɛ ɾ χ		mountain_NOUN_1
 Afrikaans	Afrikaans			mountain_NOUN	berg	bˈæːrχ	b ˈæː r χ		mountain_NOUN_1			
 West Flemish	West Flemish			mountain_NOUN	berg	bˈæɾh	b ˈæ ɾ h		mountain_NOUN_1			
 Limburgish	Limburgish			mountain_NOUN	berg	bˈæːʀəx	b ˈæː ʀ ə x		mountain_NOUN_1			
-Ripuarian	Ripuarian			mountain_NOUN	Berch	bˈɛɐɕ	b ˈɛ ɐ ɕ		mountain_NOUN_1			
+Ripuarian	Ripuarian			mountain_NOUN	Berch	bˈɛːɐɕ	b ˈɛː ɐ ɕ		mountain_NOUN_1			
 Luxembourgish	Luxembourgish			mountain_NOUN	Bierg	bˈiːɐɕ	b ˈiː ɐ ɕ		mountain_NOUN_1			
 Pennsylvania German	Pennsylvania German			mountain_NOUN	Baerig	bˈɛːɾɪk	b ˈɛː ɾ ɪ k		mountain_NOUN_1			
 German	German			mountain_NOUN	Berg	bˈɛɐk	b ˈɛ ɐ k		mountain_NOUN_1			
@@ -704,7 +704,7 @@ East Low German	East Low German			bear_NOUN	Bor	bˈoːæ	b ˈoː æ		bear_NOUN_1
 Dutch	Dutch			bear_NOUN	beer	bˈeːɾ	b ˈeː ɾ		bear_NOUN_1			
 Afrikaans	Afrikaans			bear_NOUN	beer	bˈɪə̯r	b ˈɪə̯ r		bear_NOUN_1			
 Limburgish	Limburgish			bear_NOUN	beer	bˈeːʀ	b ˈeː ʀ		bear_NOUN_1			
-Ripuarian	Ripuarian			bear_NOUN	Bär	bˈɛɐ	b ˈɛ ɐ		bear_NOUN_1			
+Ripuarian	Ripuarian			bear_NOUN	Bär	bˈɛːɐ	b ˈɛː ɐ		bear_NOUN_1			
 Luxembourgish	Luxembourgish			bear_NOUN	Bier	bˈiːɐ	b ˈiː ɐ		bear_NOUN_1			
 Pennsylvania German	Pennsylvania German			bear_NOUN	Baer	bˈɛːɑ	b ˈɛː ɑ		bear_NOUN_1			
 German	German			bear_NOUN	Bär	bˈɛːɐ	b ˈɛː ɐ		bear_NOUN_1			
@@ -853,7 +853,7 @@ Dutch	Dutch			flower_NOUN	bloem	bɫˈum	b ɫ ˈu m		flower_NOUN_1
 Afrikaans	Afrikaans			flower_NOUN	blom	bɫˈɔm	b ɫ ˈɔ m		flower_NOUN_1			
 West Flemish	West Flemish			flower_NOUN	bloeme	blˈuə̯mə	b l ˈuə̯ m ə		flower_NOUN_1			
 Limburgish	Limburgish			flower_NOUN	blom	blˈɔm	b l ˈɔ m		flower_NOUN_1			
-Ripuarian	Ripuarian			flower_NOUN	Bloom 	blˈoːm	b l ˈoː m		flower_NOUN_1			
+Ripuarian	Ripuarian			flower_NOUN	Bloom	blˈoːm	b l ˈoː m		flower_NOUN_1			
 Luxembourgish	Luxembourgish			flower_NOUN	Blumm	blˈum	b l ˈu m		flower_NOUN_1			
 Pennsylvania German	Pennsylvania German			flower_NOUN	Blumm	blˈʊm	b l ˈʊ m		flower_NOUN_1			
 German	German			flower_NOUN	Blume	blˈuːmə	b l ˈuː m ə		flower_NOUN_1			
@@ -1043,7 +1043,7 @@ Dutch	Dutch			bridge_NOUN	brug	bɾˈʏχ	b ɾ ˈʏ χ		bridge_NOUN_1
 Afrikaans	Afrikaans			bridge_NOUN	brug	brˈœχ	b r ˈœ χ		bridge_NOUN_1			
 West Flemish	West Flemish			bridge_NOUN	brugge	bɾˈœɦə	b ɾ ˈœ ɦ ə		bridge_NOUN_1			
 Limburgish	Limburgish			bridge_NOUN	brögk	bʀˈœk	b ʀ ˈœ k		bridge_NOUN_1			
-Ripuarian	Ripuarian			bridge_NOUN	Bröck	bʀˈøk	b ʀ ˈø k		bridge_NOUN_1			
+Ripuarian	Ripuarian			bridge_NOUN	Bröck	bʀˈœk	b ʀ ˈœ k		bridge_NOUN_1			
 Luxembourgish	Luxembourgish			bridge_NOUN	Bréck	bʀˈek	b ʀ ˈe k		bridge_NOUN_1			
 Pennsylvania German	Pennsylvania German			bridge_NOUN	Brick	bɾˈɪk	b ɾ ˈɪ k		bridge_NOUN_1			
 German	German			bridge_NOUN	Brücke	bʁˈʏkə	b ʁ ˈʏ k ə		bridge_NOUN_1			
@@ -1172,7 +1172,7 @@ Dutch	Dutch			animal_NOUN	dier	dˈiɾ	d ˈi ɾ		animal_NOUN_1
 Afrikaans	Afrikaans			animal_NOUN	dier	dˈiːr	d ˈiː r		animal_NOUN_1			
 West Flemish	West Flemish			animal_NOUN	dier	dˈiə̯ɾ	d ˈiə̯ ɾ		animal_NOUN_1			
 Limburgish	Limburgish			animal_NOUN	dier	dˈiːʀ	d ˈiː ʀ		animal_NOUN_1			
-Ripuarian	Ripuarian			animal_NOUN	Dier	dˈiɐ	d ˈi ɐ		animal_NOUN_1			
+Ripuarian	Ripuarian			animal_NOUN	Dier	dˈiːɐ	d ˈiː ɐ		animal_NOUN_1			
 Luxembourgish	Luxembourgish			animal_NOUN	Déier	dˈəɪ̯ɐ	d ˈəɪ̯ ɐ		animal_NOUN_1			
 Pennsylvania German	Pennsylvania German			animal_NOUN	Dier	dˈiːɑ	d ˈiː ɑ		animal_NOUN_1			
 German	German			animal_NOUN	Tier	tʰˈiːɐ	tʰ ˈiː ɐ		animal_NOUN_1			
@@ -1202,8 +1202,8 @@ Dutch	Dutch			dear_ADJ	duur	dˈyːɾ	d ˈyː ɾ		dear_ADJ_1
 Afrikaans	Afrikaans			dear_ADJ	duur	dˈyːr	d ˈyː r		dear_ADJ_1			
 West Flemish	West Flemish			dear_ADJ	diere	dˈiə̯ɾə	d ˈiə̯ ɾ ə		dear_ADJ_1			
 Limburgish	Limburgish			dear_ADJ	deur	dˈøːʀ	d ˈøː ʀ		dear_ADJ_1			
-Ripuarian	Ripuarian			dear_ADJ	döör	dˈøɐ	d ˈø ɐ		dear_ADJ_1			
-Ripuarian	Ripuarian			dear_ADJ	düür	dˈyɐ	d ˈy ɐ		dear_ADJ_1			
+Ripuarian	Ripuarian			dear_ADJ	döör	dˈøːɐ	d ˈøː ɐ		dear_ADJ_1			
+Ripuarian	Ripuarian			dear_ADJ	düür	dˈyːɐ	d ˈyː ɐ		dear_ADJ_1			
 Luxembourgish	Luxembourgish			dear_ADJ	deier	dˈɑɪ̯ɐ	d ˈɑɪ̯ ɐ		dear_ADJ_1			
 Pennsylvania German	Pennsylvania German			dear_ADJ	deier	dˈaɪ̯ɑ	d ˈaɪ̯ ɑ		dear_ADJ_1			
 German	German			dear_ADJ	teuer	tʰˈɔʏ̯ɐ	tʰ ˈɔʏ̯ ɐ		dear_ADJ_1			
@@ -1227,7 +1227,7 @@ Dutch	Dutch			dry_ADJ	droog	dɾˈoːχ	d ɾ ˈoː χ		dry_ADJ_1
 Afrikaans	Afrikaans			dry_ADJ	droog	drˈʊə̯χ	d r ˈʊə̯ χ		dry_ADJ_1			
 West Flemish	West Flemish			dry_ADJ	droog	dɾˈoːh	d ɾ ˈoː h		dry_ADJ_1			
 Limburgish	Limburgish			dry_ADJ	druug	dʀˈyx	d ʀ ˈy x		dry_ADJ_1			
-Ripuarian	Ripuarian			dry_ADJ	drüch	dʀˈyɕ	d ʀ ˈy ɕ		dry_ADJ_1			
+Ripuarian	Ripuarian			dry_ADJ	drüch	dʀˈyːɕ	d ʀ ˈyː ɕ		dry_ADJ_1			
 Proto-Germanic	Proto-Germanic			dream_NOUN	draumaz	drˈɑu̯mɑz	d r ˈɑu̯ m ɑ z		dream_NOUN_1			
 Old Norse	Old Norse			dream_NOUN	draumr	drˈɑu̯mr	d r ˈɑu̯ m r		dream_NOUN_1			
 Icelandic	Icelandic			dream_NOUN	draumur	d̥rˈøːy̯mʏr̥	d̥ r ˈøːy̯ m ʏ r̥		dream_NOUN_1			
@@ -1376,7 +1376,7 @@ Afrikaans	Afrikaans			I_PRON	ek	ˈæk	ˈæ k		I_PRON_1
 West Flemish	West Flemish			I_PRON	k	ək	ə k		I_PRON_1			
 Limburgish	Limburgish			I_PRON	iech	ˈix	ˈi x		I_PRON_1			
 Limburgish	Limburgish			I_PRON	'ch	əx	ə x		I_PRON_1			
-Ripuarian	Ripuarian			I_PRON	ich	ˈiɕ	ˈi ɕ		I_PRON_1			
+Ripuarian	Ripuarian			I_PRON	ich	ˈɪɕ	ˈɪ ɕ		I_PRON_1			
 Luxembourgish	Luxembourgish			I_PRON	ech	ˈəɕ	ˈə ɕ		I_PRON_1			
 Pennsylvania German	Pennsylvania German			I_PRON	ich	ˈɪç	ˈɪ ç		I_PRON_1			
 German	German			I_PRON	ich	ˈɪç	ˈɪ ç		I_PRON_1			
@@ -1496,7 +1496,7 @@ Dutch	Dutch			father_NOUN	vader	vˈaːdəɾ	v ˈaː d ə ɾ		father_NOUN_1
 Afrikaans	Afrikaans			father_NOUN	vader	fˈɑːdər	f ˈɑː d ə r		father_NOUN_1			
 West Flemish	West Flemish			father_NOUN	voader	vˈɒːdɾ̩	v ˈɒː d ɾ̩		father_NOUN_1			
 Limburgish	Limburgish			father_NOUN	vaajer	vˈaːjəʀ	v ˈaː j ə ʀ		father_NOUN_1			
-Ripuarian	Ripuarian			father_NOUN	Vader	fˈadɐ	f ˈa d ɐ		father_NOUN_1			
+Ripuarian	Ripuarian			father_NOUN	Vader	fˈaːdɐ	f ˈaː d ɐ		father_NOUN_1			
 Pennsylvania German	Pennsylvania German			father_NOUN	Vadder	fˈadɑ	f ˈa d ɑ		father_NOUN_1			
 German	German			father_NOUN	Vater	fˈaːtɐ	f ˈaː t ɐ		father_NOUN_1			
 Yiddish	Yiddish			father_NOUN	פֿאָטער	fˈɔtəʀ	f ˈɔ t ə ʀ		father_NOUN_1			
@@ -1550,7 +1550,7 @@ Dutch	Dutch			four_NUM	vier	vˈiɾ	v ˈi ɾ		four_NUM_1
 Afrikaans	Afrikaans			four_NUM	vier	fˈiːr	f ˈiː r		four_NUM_1			
 West Flemish	West Flemish			four_NUM	viere	vˈiə̯ɾə	v ˈiə̯ ɾ ə		four_NUM_1			
 Limburgish	Limburgish			four_NUM	veer	vˈeːʀ	v ˈeː ʀ		four_NUM_1			
-Ripuarian	Ripuarian			four_NUM	vier	fˈiɐ	f ˈi ɐ		four_NUM_1			
+Ripuarian	Ripuarian			four_NUM	vier	fˈiːɐ	f ˈiː ɐ		four_NUM_1			
 Luxembourgish	Luxembourgish			four_NUM	véier	fˈəɪ̯ɐ	f ˈəɪ̯ ɐ		four_NUM_1			
 Pennsylvania German	Pennsylvania German			four_NUM	vier	fˈiːɑ	f ˈiː ɑ		four_NUM_1			
 German	German			four_NUM	vier	fˈiːɐ	f ˈiː ɐ		four_NUM_1			
@@ -1611,7 +1611,7 @@ Dutch	Dutch			five_NUM	vijf	vˈɛi̯f	v ˈɛi̯ f		five_NUM_1
 Afrikaans	Afrikaans			five_NUM	vyf	fˈəɪ̯f	f ˈəɪ̯ f		five_NUM_1			
 West Flemish	West Flemish			five_NUM	vuve	vˈœvə	v ˈœ v ə		five_NUM_1			
 Limburgish	Limburgish			five_NUM	vief	vˈiːf	v ˈiː f		five_NUM_1			
-Ripuarian	Ripuarian			five_NUM	fönnef	fˈønəf	f ˈø n ə f		five_NUM_1			
+Ripuarian	Ripuarian			five_NUM	fönnef	fˈœnəf	f ˈœ n ə f		five_NUM_1			
 Luxembourgish	Luxembourgish			five_NUM	fënnef	fˈənəf	f ˈə n ə f		five_NUM_1			
 Pennsylvania German	Pennsylvania German			five_NUM	finf	fˈɪnf	f ˈɪ n f		five_NUM_1			
 German	German			five_NUM	fünf	fˈʏnf	f ˈʏ n f		five_NUM_1			
@@ -1813,7 +1813,7 @@ Dutch	Dutch			fire_NOUN	vuur	vˈyːɾ	v ˈyː ɾ		fire_NOUN_2
 Afrikaans	Afrikaans			fire_NOUN	vuur	fˈyːr	f ˈyː r		fire_NOUN_2			
 West Flemish	West Flemish			fire_NOUN	vier	vˈiə̯ɾ	v ˈiə̯ ɾ		fire_NOUN_2			
 Limburgish	Limburgish			fire_NOUN	vuur	vˈyːʀ	v ˈyː ʀ		fire_NOUN_2			
-Ripuarian	Ripuarian			fire_NOUN	Füür	fˈyɐ	f ˈy ɐ		fire_NOUN_2			
+Ripuarian	Ripuarian			fire_NOUN	Füür	fˈyːɐ	f ˈyː ɐ		fire_NOUN_2			
 Luxembourgish	Luxembourgish			fire_NOUN	Feier	fˈɑɪ̯ɐ	f ˈɑɪ̯ ɐ		fire_NOUN_2			
 Pennsylvania German	Pennsylvania German			fire_NOUN	Feier	fˈaɪ̯ɑ	f ˈaɪ̯ ɑ		fire_NOUN_2			
 German	German			fire_NOUN	Feuer	fˈɔʏ̯ɐ	f ˈɔʏ̯ ɐ		fire_NOUN_2			
@@ -1862,6 +1862,7 @@ Dutch	Dutch			woman_NOUN	vrouw	vɾˈɑu̯	v ɾ ˈɑu̯		woman_NOUN_1
 Afrikaans	Afrikaans			woman_NOUN	frou	frˈœu̯	f r ˈœu̯		woman_NOUN_1			
 West Flemish	West Flemish			woman_NOUN	vrouwe	vɾˈuʋə	v ɾ ˈu ʋ ə		woman_NOUN_1			
 Limburgish	Limburgish			woman_NOUN	vrouw	vʀˈɔu̯	v ʀ ˈɔu̯		woman_NOUN_1			
+Ripuarian	Ripuarian			woman_NOUN	Frau	fʀˈaʊ̯	f ʀ ˈaʊ̯		woman_NOUN_1			
 Luxembourgish	Luxembourgish			woman_NOUN	Fra	fʀˈaː	f ʀ ˈaː		woman_NOUN_1			
 Pennsylvania German	Pennsylvania German			woman_NOUN	Fraa	fɾˈɔː	f ɾ ˈɔː		woman_NOUN_1			
 German	German			woman_NOUN	Frau	fʁˈaʊ̯	f ʁ ˈaʊ̯		woman_NOUN_1			
@@ -1915,6 +1916,7 @@ Dutch	Dutch			friend_NOUN	vriend	vɾˈint	v ɾ ˈi n t		friend_NOUN_1
 Afrikaans	Afrikaans			friend_NOUN	vriend	frˈint	f r ˈi n t		friend_NOUN_1			
 West Flemish	West Flemish			friend_NOUN	vriend	vɾˈiə̯nt	v ɾ ˈiə̯ n t		friend_NOUN_1			
 Limburgish	Limburgish			friend_NOUN	vrund	 vʀˈʏːnt	v ʀ ˈʏː n t		friend_NOUN_1			
+Ripuarian	Ripuarian			friend_NOUN	Frönk	fʀˈœŋk	f ʀ ˈœ ŋ k		friend_NOUN_1			
 Luxembourgish	Luxembourgish			friend_NOUN	Frënd	fʀˈənt	f ʀ ˈə n t		friend_NOUN_1			
 Pennsylvania German	Pennsylvania German			friend_NOUN	Freind	fɾˈaɪ̯nt	f ɾ ˈaɪ̯ n t		friend_NOUN_1			
 German	German			friend_NOUN	Freund	fʁˈɔʏ̯nt	f ʁ ˈɔʏ̯ n t		friend_NOUN_1			
@@ -2528,7 +2530,7 @@ Dutch	Dutch			hand_NOUN_FEM	hand	ɦˈɑnt	ɦ ˈɑ n t		hand_NOUN_FEM_1
 Afrikaans	Afrikaans			hand_NOUN_FEM	hand	ɦˈant	ɦ ˈa n t		hand_NOUN_FEM_1			
 West Flemish	West Flemish			hand_NOUN_FEM	and	ˈɑnt	ˈɑ n t		hand_NOUN_FEM_1			
 Limburgish	Limburgish			hand_NOUN_FEM	hand	ɦˈɑːnt	ɦ ˈɑː n t		hand_NOUN_FEM_1			
-Ripuarian	Ripuarian			hand_NOUN_FEM	Hand	hˈant	h ˈa n t		hand_NOUN_FEM_1			
+Ripuarian	Ripuarian			hand_NOUN_FEM	Hank	hˈaŋk	h ˈa ŋ k		hand_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			hand_NOUN_FEM	Hand	hˈɑnt	h ˈɑ n t		hand_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			hand_NOUN_FEM	Hand	hˈant	h ˈa n t		hand_NOUN_FEM_1			
 German	German			hand_NOUN_FEM	Hand	hˈant	h ˈa n t		hand_NOUN_FEM_1			
@@ -2710,6 +2712,7 @@ Dutch	Dutch			laugh_VERB	lachen	ɫˈɑχən	ɫ ˈɑ χ ə n		laugh_VERB_1
 Afrikaans	Afrikaans			laugh_VERB	lag	lˈaχ	l ˈa χ		laugh_VERB_1			
 West Flemish	West Flemish			laugh_VERB	lachn	lˈɑhn̩	l ˈɑ h n̩		laugh_VERB_1			
 Limburgish	Limburgish			laugh_VERB	lache	lˈɑxə	l ˈɑ x ə		laugh_VERB_1			
+Ripuarian	Ripuarian			laugh_VERB	laache	lˈaːxə	l ˈaː x ə		laugh_VERB_1			
 Luxembourgish	Luxembourgish			laugh_VERB	laachen	lˈaːχən	l ˈaː χ ə n		laugh_VERB_1			
 Pennsylvania German	Pennsylvania German			laugh_VERB	lache	lˈaxə	l ˈa x ə		laugh_VERB_1			
 German	German			laugh_VERB	lachen	lˈaxən	l ˈa x ə n		laugh_VERB_1			
@@ -3351,7 +3354,7 @@ East Low German	East Low German			can_VERB	kœnen	kʰˈœːn̩	kʰ ˈœː n̩		c
 Dutch	Dutch			can_VERB	kunnen	kˈʏnən	k ˈʏ n ə n		can_VERB_1			
 Afrikaans	Afrikaans			can_VERB	kan	kˈan	k ˈa n		can_VERB_1	TRUE	IRREGULAR OR LOAN	
 Limburgish	Limburgish			can_VERB	kinne	kˈɪnə	k ˈɪ n ə		can_VERB_1			
-Ripuarian	Ripuarian			can_VERB	könne	kˈønə	k ˈø n ə		can_VERB_1			
+Ripuarian	Ripuarian			can_VERB	könne	kˈœnə	k ˈœ n ə		can_VERB_1			
 Luxembourgish	Luxembourgish			can_VERB	kënnen	kʰˈənən	kʰ ˈə n ə n		can_VERB_1			
 Pennsylvania German	Pennsylvania German			can_VERB	kenne	kʰˈɛnə	kʰ ˈɛ n ə		can_VERB_1			
 German	German			can_VERB	können	kʰˈœnən	kʰ ˈœ n ə n		can_VERB_1			
@@ -4330,7 +4333,7 @@ Dutch	Dutch			rich_ADJ	rijk	ɾˈɛi̯k	ɾ ˈɛi̯ k		rich_ADJ_1
 Afrikaans	Afrikaans			rich_ADJ	ryk	rˈəɪ̯k	r ˈəɪ̯ k		rich_ADJ_1			
 West Flemish	West Flemish			rich_ADJ	ryk	ɾˈik	ɾ ˈi k		rich_ADJ_1			
 Limburgish	Limburgish			rich_ADJ	riek	ʀˈiːk	ʀ ˈiː k		rich_ADJ_1			
-Ripuarian	Ripuarian			rich_ADJ	rich	ʀˈiɕ	ʀ ˈi ɕ		rich_ADJ_1			
+Ripuarian	Ripuarian			rich_ADJ	riech	ʀˈiːɕ	ʀ ˈiː ɕ		rich_ADJ_1			
 Luxembourgish	Luxembourgish			rich_ADJ	räich	ʀˈæɪ̯ɕ	ʀ ˈæɪ̯ ɕ		rich_ADJ_1			
 Pennsylvania German	Pennsylvania German			rich_ADJ	reich	ɾˈaɪ̯ç	ɾ ˈaɪ̯ ç		rich_ADJ_1			
 German	German			rich_ADJ	reich	ʁˈaɪ̯ç	ʁ ˈaɪ̯ ç		rich_ADJ_1			
@@ -4422,6 +4425,7 @@ Afrikaans	Afrikaans			sea_NOUN	see	sˈɪə̯	s ˈɪə̯		sea_NOUN_2
 West Flemish	West Flemish			sea_NOUN	zêe	zˈɛː	z ˈɛː		sea_NOUN_2			
 Limburgish	Limburgish			sea_NOUN	zie	zˈi	z ˈi		sea_NOUN_2			
 Ripuarian	Ripuarian			sea_NOUN	Sie	zˈiː	z ˈiː		sea_NOUN_2			
+Luxembourgish	Luxembourgish			sea_NOUN	Séi	zˈəɪ̯	z ˈəɪ̯		sea_NOUN_2			
 Pennsylvania German	Pennsylvania German			sea_NOUN	See	sˈeː	s ˈeː		sea_NOUN_2			
 German	German			sea_NOUN	See	zˈeː	z ˈeː		sea_NOUN_2			
 Swiss German	Swiss German			sea_NOUN	See	sˈeː	s ˈeː		sea_NOUN_2			
@@ -4481,6 +4485,7 @@ Dutch	Dutch			sand_NOUN	zand	zˈɑnt	z ˈɑ n t		sand_NOUN_1
 Afrikaans	Afrikaans			sand_NOUN	sand	sˈant	s ˈa n t		sand_NOUN_1			
 West Flemish	West Flemish			sand_NOUN	zand	zˈɑnt	z ˈɑ n t		sand_NOUN_1			
 Limburgish	Limburgish			sand_NOUN	zand	zˈɑːnt	z ˈɑː n t		sand_NOUN_1			
+Ripuarian	Ripuarian			sand_NOUN	Sank	zˈaŋk	z ˈa ŋ k		sand_NOUN_1			
 Luxembourgish	Luxembourgish			sand_NOUN	Sand	zˈɑnt	z ˈɑ n t		sand_NOUN_1			
 Pennsylvania German	Pennsylvania German			sand_NOUN	Sand	sˈant	s ˈa n t		sand_NOUN_1			
 German	German			sand_NOUN	Sand	zˈant	z ˈa n t		sand_NOUN_1			
@@ -4511,7 +4516,7 @@ Dutch	Dutch			seven_NUM	zeven	zˈeːvən	z ˈeː v ə n		seven_NUM_1
 Afrikaans	Afrikaans			seven_NUM	sewe	sˈɪə̯və	s ˈɪə̯ v ə		seven_NUM_1			
 West Flemish	West Flemish			seven_NUM	zeevn	zˈeːvn̩	z ˈeː v n̩		seven_NUM_1			
 Limburgish	Limburgish			seven_NUM	zeve	zˈeːvə	z ˈeː v ə		seven_NUM_1			
-Ripuarian	Ripuarian			seven_NUM	sibbe	zˈibə	z ˈi b ə		seven_NUM_1			
+Ripuarian	Ripuarian			seven_NUM	sivve	zˈɪvə	z ˈɪ v ə		seven_NUM_1			
 Luxembourgish	Luxembourgish			seven_NUM	siwen	zˈiːvən	z ˈiː v ə n		seven_NUM_1			
 Pennsylvania German	Pennsylvania German			seven_NUM	siwwe	sˈɪvə	s ˈɪ v ə		seven_NUM_1			
 German	German			seven_NUM	sieben	zˈiːbən	z ˈiː b ə n		seven_NUM_1			
@@ -4699,7 +4704,7 @@ Dutch	Dutch			sharp_ADJ	scherp	sχˈɛɾp	s χ ˈɛ ɾ p		sharp_ADJ_1
 Afrikaans	Afrikaans			sharp_ADJ	skerp	skˈærp	s k ˈæ r p		sharp_ADJ_1			
 West Flemish	West Flemish			sharp_ADJ	scherp	ʃhˈæɾp	ʃ h ˈæ ɾ p		sharp_ADJ_1			
 Limburgish	Limburgish			sharp_ADJ	sjerp	ʃˈæːʀəp	ʃ ˈæː ʀ ə p		sharp_ADJ_1			
-Ripuarian	Ripuarian			sharp_ADJ	schärp	ʃˈɛɐp	ʃ ˈɛ ɐ p		sharp_ADJ_1			
+Ripuarian	Ripuarian			sharp_ADJ	schärp	ʃˈɛːɐp	ʃ ˈɛː ɐ p		sharp_ADJ_1			
 Luxembourgish	Luxembourgish			sharp_ADJ	schaarf	ʃˈaːf	ʃ ˈaː f		sharp_ADJ_1			
 Pennsylvania German	Pennsylvania German			sharp_ADJ	scharef	ʃˈaːɾəf	ʃ ˈaː ɾ ə f		sharp_ADJ_1			
 German	German			sharp_ADJ	scharf	ʃˈaɐf	ʃ ˈa ɐ f		sharp_ADJ_1			
@@ -4804,7 +4809,7 @@ Dutch	Dutch			sleep_VERB	slapen	sɫˈaːpən	s ɫ ˈaː p ə n		sleep_VERB_1
 Afrikaans	Afrikaans			sleep_VERB	slaap	sɫˈɑːp	s ɫ ˈɑː p		sleep_VERB_1			
 West Flemish	West Flemish			sleep_VERB	sloapn	slˈɒːpn̩	s l ˈɒː p n̩		sleep_VERB_1			
 Limburgish	Limburgish			sleep_VERB	slaope	slˈɒːpə	s l ˈɒː p ə		sleep_VERB_1			
-Ripuarian	Ripuarian			sleep_VERB	schlofe	ʃlˈɔːfə	ʃ l ˈɔː f ə		sleep_VERB_1			
+Ripuarian	Ripuarian			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB_1			
 Luxembourgish	Luxembourgish			sleep_VERB	schlofen	ʃlˈoːfən	ʃ l ˈoː f ə n		sleep_VERB_1			
 Pennsylvania German	Pennsylvania German			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB_1			
 German	German			sleep_VERB	schlafen	ʃlˈaːfən	ʃ l ˈaː f ə n		sleep_VERB_1			
@@ -5315,7 +5320,7 @@ Dutch	Dutch			tear_NOUN_FEM	traan	tɾˈaːn	t ɾ ˈaː n		tear_NOUN_FEM_1
 Afrikaans	Afrikaans			tear_NOUN_FEM	traan	trˈɑːn	t r ˈɑː n		tear_NOUN_FEM_1			
 West Flemish	West Flemish			tear_NOUN_FEM	troan	tɾˈɒːn	t ɾ ˈɒː n		tear_NOUN_FEM_1			
 Limburgish	Limburgish			tear_NOUN_FEM	traon	tʀˈɒːn	t ʀ ˈɒː n		tear_NOUN_FEM_1			
-Ripuarian	Ripuarian			tear_NOUN_FEM	Tron	tʀˈɔːn	t ʀ ˈɔː n		tear_NOUN_FEM_1			
+Ripuarian	Ripuarian			tear_NOUN_FEM	Tron	tʀˈoːn	t ʀ ˈoː n		tear_NOUN_FEM_1			
 Luxembourgish	Luxembourgish			tear_NOUN_FEM	Tréin	tʰʀˈəɪ̯n	tʰ ʀ ˈəɪ̯ n		tear_NOUN_FEM_1			
 Pennsylvania German	Pennsylvania German			tear_NOUN_FEM	Draen	dɾˈɛːn	d ɾ ˈɛː n		tear_NOUN_FEM_1			
 German	German			tear_NOUN_FEM	Träne	tʰʁˈɛːnə	tʰ ʁ ˈɛː n ə		tear_NOUN_FEM_1			
@@ -5779,7 +5784,7 @@ Dutch	Dutch			wind_NOUN	wind	ʋˈɪnt	ʋ ˈɪ n t		wind_NOUN_1
 Afrikaans	Afrikaans			wind_NOUN	wind	vˈənt	v ˈə n t		wind_NOUN_1			
 West Flemish	West Flemish			wind_NOUN	wind	ʋˈɪnt	ʋ ˈɪ n t		wind_NOUN_1			
 Limburgish	Limburgish			wind_NOUN	wind	βˈɪːnt	β ˈɪː n t		wind_NOUN_1			
-Ripuarian	Ripuarian			wind_NOUN	Wind	ʋˈɪnt	ʋ ˈɪ n t		wind_NOUN_1			
+Ripuarian	Ripuarian			wind_NOUN	Wank	ʋˈaŋk	ʋ ˈa ŋ k		wind_NOUN_1			
 Luxembourgish	Luxembourgish			wind_NOUN	Wand	vˈɑnt	v ˈɑ n t		wind_NOUN_1			
 Pennsylvania German	Pennsylvania German			wind_NOUN	Wind	ʋˈɪnt	ʋ ˈɪ n t		wind_NOUN_1			
 German	German			wind_NOUN	Wind	vˈɪnt	v ˈɪ n t		wind_NOUN_1			
