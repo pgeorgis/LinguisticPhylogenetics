@@ -343,7 +343,7 @@ def list_mostsimilar(item1, comp_group, dist_func, n=5, sim=True, return_=False,
         for item in sim_list[:n]:
             print(f'{item[0].name}: {round(item[1], 2)}')
 
-def distance_matrix(group, dist_func, sim=False, **kwargs):
+def distance_matrix(group, dist_func, sim=False, scalar=1, **kwargs):
     if not isinstance(dist_func, Distance):
         raise TypeError(f'dist_func expected to be Distance class object, found {type(dist_func)}')
     
@@ -364,7 +364,11 @@ def distance_matrix(group, dist_func, sim=False, **kwargs):
                 
             mat[i][j] = dist
             mat[j][i] = dist
-            
+    
+    # Scale matrix to accentuate differences
+    if scalar > 1:
+        mat = mat ** scalar    
+      
     return mat
 
 
