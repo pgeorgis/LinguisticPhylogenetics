@@ -78,8 +78,9 @@ class PhonemeCorrDetector:
                              alignment_list, 
                              ngram_size=1,
                              counts=False, 
+                             prune=None,
                              exclude_null=True,
-                             compact_null=True
+                             compact_null=True,
                              ):
         """Returns a dictionary of conditional phone probabilities, based on a list
         of Alignment objects.
@@ -137,9 +138,56 @@ class PhonemeCorrDetector:
         if compact_null:
             # Prune any without at least 2 occurrences
             compacted_corr_counts = self.prune_corrs(compacted_corr_counts, min_val=2)
-            # if self.lang1.name == 'American English' and self.lang2.name == 'West Frisian':
-            #     breakpoint()
-        
+            rev_compacted_corr_counts = self.reverse_corr_dict(compacted_corr_counts)
+            rev_corr_counts = self.reverse_corr_dict(corr_counts)
+            to_prune, to_adjust = [], []
+            for corr in compacted_corr_counts:
+                if isinstance(corr, tuple): # e.g. ('s', 'k')
+                    gap_segs, larger_ngram = compacted_corr_counts[corr], corr
+                    for gap_seg in gap_segs:
+                        comp_count = compacted_corr_counts[larger_ngram][gap_seg]
+                        rev_comp_count = rev_compacted_corr_counts[gap_seg][larger_ngram]
+                        corr_count = sum(corr_counts[(part,)].get((gap_seg,), 0) for part in larger_ngram)
+                        rev_corr_count = sum(rev_corr_counts[(gap_seg,)].get((part,), 0) for part in larger_ngram)
+                        if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
+                            to_adjust.append((corr, gap_seg, comp_count))
+                        else:
+                            to_prune.append((corr, gap_seg))
+                else: # str e.g. 'ʃ'
+                    gap_seg, larger_ngrams = corr, compacted_corr_counts[corr]
+                    for larger_ngram in larger_ngrams:
+                        comp_count = compacted_corr_counts[gap_seg][larger_ngram]
+                        rev_comp_count = rev_compacted_corr_counts[larger_ngram][gap_seg]
+                        corr_count = sum([corr_counts[(gap_seg,)].get((larger_ngram[i],), 0) for i, part in enumerate(larger_ngram)])
+                        rev_corr_count = sum(rev_corr_counts[(part,)][(gap_seg,)] for part in larger_ngram)
+                        if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
+                            to_adjust.append((corr, larger_ngram, comp_count))
+                        else:
+                            to_prune.append((corr, larger_ngram))
+            for corr, nested_corr, count in to_adjust:
+                if isinstance(corr, tuple):
+                    for part in corr:
+                        corr_counts[(part,)][nested_corr] -= count
+                else: # str
+                    for part in compacted_corr_counts[corr]:
+                        corr_counts[(corr,)][(part,)] -= count
+            for corr, nested_corr in to_prune:
+                del compacted_corr_counts[corr][nested_corr]
+            compacted_corr_counts = self.prune_corrs(compacted_corr_counts)
+            for corr in compacted_corr_counts:
+                if isinstance(corr, tuple):
+                    corr_counts[corr] = compacted_corr_counts[corr]
+                else:
+                    corr_counts[(corr,)] = compacted_corr_counts[corr]
+            #corr_counts.update(compacted_corr_counts)
+            
+            for corr in corr_counts:
+                if len(corr) > 1:
+                    breakpoint()
+
+        if prune:
+            corr_counts = self.prune_corrs(corr_counts, min_val=prune)
+
         if not counts:
             for seg1 in corr_counts:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
