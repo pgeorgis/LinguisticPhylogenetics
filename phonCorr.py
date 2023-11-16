@@ -74,13 +74,40 @@ class PhonemeCorrDetector:
             ) for word1, word2 in wordlist] # TODO: tuple would be better than list if possible
     
     
-    def correspondence_probs(self, alignment_list, ngram_size=1,
-                             counts=False, exclude_null=True):
+    def correspondence_probs(self, 
+                             alignment_list, 
+                             ngram_size=1,
+                             counts=False, 
+                             exclude_null=True,
+                             compact_null=True
+                             ):
         """Returns a dictionary of conditional phone probabilities, based on a list
         of Alignment objects.
         counts : Bool; if True, returns raw counts instead of normalized probabilities;
         exclude_null : Bool; if True, does not consider aligned pairs including a null segment"""
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
+        if compact_null:
+            compacted_corr_counts = defaultdict(lambda:defaultdict(lambda:0))
+            def compact_next_ngram(alignment, gap_ch, i, ngram, ngram_i, gap_index):
+                opposite_index = gap_index-1
+                next_ngram = alignment[i+1-(ngram_size-1):i+2]
+                if gap_ch not in (next_ngram[ngram_i][gap_index], next_ngram[ngram_i][opposite_index]):
+                    gap_seg = next_ngram[ngram_i][gap_index]
+                    larger_ngram = (ngram[ngram_i][opposite_index], next_ngram[ngram_i][opposite_index])
+                    if gap_index == 0:
+                        compacted_corr_counts[gap_seg][larger_ngram] += 1
+                    else: # 1 
+                        compacted_corr_counts[larger_ngram][gap_seg] += 1
+            def compact_prev_ngram(alignment, gap_ch, i, ngram, ngram_i, gap_index):
+                opposite_index = gap_index-1
+                prev_ngram = alignment[i-1-(ngram_size-1):i]
+                if gap_ch not in (prev_ngram[ngram_i][gap_index], prev_ngram[ngram_i][opposite_index]):
+                    gap_seg = prev_ngram[ngram_i][gap_index]
+                    larger_ngram = (prev_ngram[ngram_i][opposite_index], ngram[ngram_i][opposite_index])
+                    if gap_index == 0:
+                        compacted_corr_counts[gap_seg][larger_ngram] += 1
+                    else: # 1 
+                        compacted_corr_counts[larger_ngram][gap_seg] += 1
         for alignment in alignment_list:
             if exclude_null:
                 _alignment = alignment.remove_gaps()
@@ -93,12 +120,43 @@ class PhonemeCorrDetector:
                 ngram = _alignment[i-(ngram_size-1):i+1]
                 seg1, seg2 = list(zip(*ngram))
                 corr_counts[seg1][seg2] += 1
+                if compact_null and any([alignment.gap_ch in ngram_i for ngram_i in ngram]):
+                    if ngram_size > 1:
+                        raise NotImplementedError # unsure if this will work for ngram size > 1
+                    else:
+                        ngram_i = 0
+                    gap_index = ngram[ngram_i].index(alignment.gap_ch)
+                    if i > 0 and i < len(_alignment)-1: # medial (has preceding and following)
+                        compact_next_ngram(_alignment, alignment.gap_ch, i, ngram, ngram_i, gap_index)
+                        compact_prev_ngram(_alignment, alignment.gap_ch, i, ngram, ngram_i, gap_index)
+                    elif i > 0: # final (preceding only)
+                        compact_prev_ngram(_alignment, alignment.gap_ch, i, ngram, ngram_i, gap_index)
+                    elif len(_alignment) > 1: # initial with following ngram
+                        compact_next_ngram(_alignment, alignment.gap_ch, i, ngram, ngram_i, gap_index)
+                    
+        if compact_null:
+            # Prune any without at least 2 occurrences
+            compacted_corr_counts = self.prune_corrs(compacted_corr_counts, min_val=2)
+            # if self.lang1.name == 'American English' and self.lang2.name == 'West Frisian':
+            #     breakpoint()
+        
         if not counts:
             for seg1 in corr_counts:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
 
         return corr_counts
 
+    def prune_corrs(self, corr_dict, min_val=2):
+        # Prune correspondences below a minimum count/probability threshold 
+        for seg1 in corr_dict:
+            seg2_to_del = [seg2 for seg2 in corr_dict[seg1] if corr_dict[seg1][seg2] < min_val]
+            for seg2 in seg2_to_del:
+                del corr_dict[seg1][seg2]
+        # Delete empty seg1 entries
+        seg1_to_del = [seg1 for seg1 in corr_dict if len(corr_dict[seg1]) < 1]
+        for seg1 in seg1_to_del:
+            del corr_dict[seg1]
+        return corr_dict
 
     def phon_env_corr_probs(self, alignment_list, counts=False):
         # TODO currently works only with ngram_size=1 (I think this is fine?hh)
