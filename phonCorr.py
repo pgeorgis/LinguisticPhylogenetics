@@ -80,7 +80,7 @@ class PhonemeCorrDetector:
                              counts=False, 
                              prune=None,
                              exclude_null=True,
-                             compact_null=True,
+                             compact_null=False,
                              ):
         """Returns a dictionary of conditional phone probabilities, based on a list
         of Alignment objects.
