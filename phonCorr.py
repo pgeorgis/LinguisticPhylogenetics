@@ -11,7 +11,7 @@ from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal
 from phonAlign import Alignment, compatible_segments, visual_align
 
 
-class PhonemeCorrDetector:
+class PhonCorrelator:
     def __init__(self, lang1, lang2, wordlist=None, seed=1, logger=None):
         self.lang1 = lang1
         self.lang2 = lang2
@@ -21,7 +21,6 @@ class PhonemeCorrDetector:
         self.seed = seed
         self.logger = logger
         self.outdir = self.lang1.family.phone_corr_dir
-
 
     def prepare_wordlists(self, wordlist):
     
@@ -248,44 +247,46 @@ class PhonemeCorrDetector:
                 reverse[seg2][seg1] = corr_dict[seg1][seg2]
         return reverse
 
+    # def default_independent_corr_probs(self, l1=None, l2=None):
+    #     l1, l2 = self._get_langs(l1=l1, l2=l2)
+    #     independent_probs = {}
+    #     for phoneme1 in l1.phonemes:
+    #         phoneme1_probs = {}
+    #         for phoneme2 in l2.phonemes:
+    #             phoneme1_probs[phoneme2] = l1.phonemes[phoneme1] * l2.phonemes[phoneme2]
+    #         independent_probs[phoneme1] = phoneme1_probs
+    #     return independent_probs
+    
     def phoneme_pmi(self, 
                     dependent_probs,
-                    independent_probs=None,
+                    #independent_probs=None,
                     l1=None, 
                     l2=None):
         """
         dependent_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         independent_probs : None, or nested dictionary of conditional correspondence probabilities in non-cognates
         """
-        if l1 is None:
-            l1 = self.lang1
-        if l2 is None:
-            l2 = self.lang2
-
-        # If no independent probabilities are specified, 
-        # use product of phoneme probabilities by default
-        if independent_probs is None:
-            independent_probs = {}
-            for phoneme1 in l1.phonemes:
-                phoneme1_probs = {}
-                for phoneme2 in l2.phonemes:
-                    phoneme1_probs[phoneme2] = l1.phonemes[phoneme1] * l2.phonemes[phoneme2]
-                independent_probs[phoneme1] = phoneme1_probs 
+        l1, l2 = self._get_langs(l1=l1, l2=l2)
+        
+        # # If no independent probabilities are specified, 
+        # # use product of phoneme probabilities by default
+        # if independent_probs is None:
+        #     independent_probs = self.default_independent_corr_probs(l1=l1, l2=l2)
 
         # Calculate joint probabilities from conditional probabilities
-        for corr_dict in [dependent_probs, independent_probs]:
-            for seg1 in corr_dict:
-                seg1_totals = sum(corr_dict[seg1].values())
-                for seg2 in corr_dict[seg1]:
-                    cond_prob = corr_dict[seg1][seg2] / seg1_totals
-                    joint_prob = cond_prob * l1.phonemes[seg1]
-                    corr_dict[seg1][seg2] = joint_prob
+        #for corr_dict in [dependent_probs, independent_probs]:
+        corr_dict = dependent_probs
+        for seg1 in corr_dict:
+            seg1_totals = sum(corr_dict[seg1].values())
+            for seg2 in corr_dict[seg1]:
+                cond_prob = corr_dict[seg1][seg2] / seg1_totals
+                joint_prob = cond_prob * l1.phonemes[seg1]
+                corr_dict[seg1][seg2] = joint_prob
                     
         # Get set of all possible phoneme correspondences
         segment_pairs = set([(seg1, seg2)
-                         for corr_dict in [dependent_probs, independent_probs]
-                         for seg1 in corr_dict 
-                         for seg2 in corr_dict[seg1]])
+                         for seg1 in l1.phonemes 
+                         for seg2 in l2.phonemes])
             
         # Calculate PMI for all phoneme pairs
         pmi_dict = defaultdict(lambda:defaultdict(lambda:0))
@@ -293,8 +294,9 @@ class PhonemeCorrDetector:
             seg1, seg2 = segment_pair
             p_ind = l1.phonemes[seg1] * l2.phonemes[seg2]
             cognate_prob = dependent_probs[seg1].get(seg2, p_ind)
-            noncognate_prob = independent_probs[seg1].get(seg2, p_ind)
-            pmi_dict[seg1][seg2] = log(cognate_prob/noncognate_prob)
+            #noncognate_prob = independent_probs[seg1].get(seg2, p_ind)
+            #pmi_dict[seg1][seg2] = log(cognate_prob/noncognate_prob)
+            pmi_dict[seg1][seg2] = log(cognate_prob/p_ind)
         
         return pmi_dict
 
@@ -481,7 +483,7 @@ class PhonemeCorrDetector:
     def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
         
-        # Set random seed: may or may not be the default seed attribute of the PhonemeCorrDetector class
+        # Set random seed: may or may not be the default seed attribute of the PhonCorrelator class
         if not seed:
             seed = self.seed
         random.seed(seed)
@@ -947,6 +949,13 @@ class PhonemeCorrDetector:
                             break
                         line = '\t'.join([' '.join(p1), str(p2), str(round(sur, 3))])
                         f.write(f'{line}\n')
+
+    def _get_langs(self, l1=None, l2=None):
+        if l1 is None:
+            l1 = self.lang1
+        if l2 is None:
+            l2 = self.lang2
+        return l1, l2
 
 
 @lru_cache(maxsize=None)

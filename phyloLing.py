@@ -23,7 +23,7 @@ from phonUtils.segment import segment_ipa, _toSegment
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 from phonUtils.syllables import syllabify
-from phonCorr import PhonemeCorrDetector
+from phonCorr import PhonCorrelator
 from lingDist import Z_score_dist
 import logging
 
@@ -1642,7 +1642,7 @@ class Language:
     def get_phoneme_correlator(self, lang2, wordlist=None, seed=1):
         key = (lang2, wordlist, seed)
         if key not in self.phoneme_correlators:
-            self.phoneme_correlators[key] = PhonemeCorrDetector(lang1=self,
+            self.phoneme_correlators[key] = PhonCorrelator(lang1=self,
                                                                 lang2=lang2,
                                                                 wordlist=wordlist, 
                                                                 seed=seed,
