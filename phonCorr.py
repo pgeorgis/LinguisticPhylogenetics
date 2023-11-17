@@ -306,6 +306,7 @@ class PhonemeCorrDetector:
                          max_p=0.25,
                          samples=5, # TODO make configurable
                          sample_size=0.8, # TODO make configurable
+                         cumulative=False,
                          log_iterations=True,
                          save=True):
         """
@@ -369,7 +370,8 @@ class PhonemeCorrDetector:
             qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             align_log = defaultdict(lambda:set())
-            all_cognate_alignments = []
+            if cumulative:
+                all_cognate_alignments = []
             #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
             while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0,iteration-5),iteration)]):
             #while (iteration < max_iterations) and (nc_thresholds[iteration-1] not in [nc_thresholds[i] for i in range(max(0,iteration-2),iteration-1)]):
@@ -382,10 +384,12 @@ class PhonemeCorrDetector:
                 noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1])
                 
                 # Add these alignments into running pool of alignments
-                all_cognate_alignments.extend(cognate_alignments)
+                if cumulative:
+                    all_cognate_alignments.extend(cognate_alignments)
+                    cognate_alignments = all_cognate_alignments
                 
                 # Calculate correspondence probabilities and PMI values from these alignments
-                cognate_probs = self.correspondence_probs(all_cognate_alignments)
+                cognate_probs = self.correspondence_probs(cognate_alignments)
                 cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
                                                     for v in cognate_probs[k]} 
                                             for k in cognate_probs}, l=defaultdict(lambda:0))
@@ -686,6 +690,7 @@ class PhonemeCorrDetector:
                                log_iterations=True,
                                samples=10,
                                sample_size=0.8, # TODO make configurable
+                               cumulative=False,
                                save=True):
         # METHOD
         # 1) Calculate phoneme PMI
@@ -724,14 +729,17 @@ class PhonemeCorrDetector:
                 qualifying_words = default_dict({iteration:list(range(len(same_meaning_alignments)))}, l=[])
                 disqualified_words = defaultdict(lambda:[])
                 align_log = defaultdict(lambda:set())
-                all_cognate_alignments = []
+                if cumulative:
+                    all_cognate_alignments = []
                 while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
                     iteration += 1
                     
                     # Calculate surprisal from the qualifying alignments of the previous iteration
                     cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration-1]]
-                    all_cognate_alignments.extend(cognate_alignments)
-                    surprisal_iterations[iteration] = self.phoneme_surprisal(self.correspondence_probs(all_cognate_alignments,
+                    if cumulative:
+                        all_cognate_alignments.extend(cognate_alignments)
+                        cognate_alignments = all_cognate_alignments
+                    surprisal_iterations[iteration] = self.phoneme_surprisal(self.correspondence_probs(cognate_alignments,
                                                                                                     counts=True,
                                                                                                     exclude_null=False, 
                                                                                                     ngram_size=ngram_size), 
