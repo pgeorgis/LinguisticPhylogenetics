@@ -1,6 +1,7 @@
 import os, re, copy, glob
 from collections import defaultdict
 from collections.abc import Iterable
+from functools import lru_cache
 from itertools import product, combinations
 from math import log, sqrt
 from statistics import mean
@@ -1575,8 +1576,8 @@ class Language:
             #return sum(info_content[j][1] for j in info_content)
             return info_content
     
-    
-    def bigram_probability(self, bigram, delta=0.7): # TODO is this used for anything?
+    @lru_cache(maxsize=None)
+    def bigram_probability(self, bigram, delta=0.7):
         """Returns Kneser-Ney smoothed conditional probability P(p2|p1)"""
         
         p1, p2 = bigram
@@ -1643,10 +1644,10 @@ class Language:
         key = (lang2, wordlist, seed)
         if key not in self.phoneme_correlators:
             self.phoneme_correlators[key] = PhonCorrelator(lang1=self,
-                                                                lang2=lang2,
-                                                                wordlist=wordlist, 
-                                                                seed=seed,
-                                                                logger=self.family.logger)
+                                                            lang2=lang2,
+                                                            wordlist=wordlist, 
+                                                            seed=seed,
+                                                            logger=self.family.logger)
 
         return self.phoneme_correlators[key]
     

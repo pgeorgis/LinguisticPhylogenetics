@@ -41,7 +41,7 @@ def reverse_corr_dict(corr_dict):
     return reverse
 
 class PhonCorrelator:
-    def __init__(self, lang1, lang2, wordlist=None, seed=1, logger=None):
+    def __init__(self, lang1, lang2, wordlist=None, gap_ch='-', seed=1, logger=None):
         # Set random seed
         self.seed = seed
         
@@ -53,6 +53,7 @@ class PhonCorrelator:
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
         
         # Other
+        self.gap_ch = gap_ch
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
         self.scored_words = defaultdict(lambda:{})
         self.logger = logger
@@ -102,7 +103,7 @@ class PhonCorrelator:
         # Return a tuple of the three word type lists
         return same_meaning, diff_meaning, loanwords
 
-    def align_wordlist(self, 
+    def align_wordlist(self,
                        wordlist,
                        added_penalty_dict=None,
                        **kwargs):
@@ -111,6 +112,7 @@ class PhonCorrelator:
             seq1=word1, 
             seq2=word2,
             added_penalty_dict=added_penalty_dict,
+            gap_ch=self.gap_ch,
             **kwargs
             ) for word1, word2 in wordlist] # TODO: tuple would be better than list if possible
 
@@ -130,7 +132,9 @@ class PhonCorrelator:
         if compact_null:
             null_compacter = NullCompacter(corr_counts, ngram_size=ngram_size)
         for alignment in alignment_list:
-            if exclude_null:
+            if exclude_null and compact_null:
+                _alignment = alignment.alignment # do nothing, will get excluded on recursive call when compact_null=False
+            elif exclude_null:
                 _alignment = alignment.remove_gaps()
             else:
                 _alignment = alignment.alignment
@@ -145,11 +149,20 @@ class PhonCorrelator:
                     null_compacter.compact_null(_alignment, alignment.gap_ch, i, ngram)
                     
         if compact_null:
-            corr_counts = null_compacter.combine_corrs()
-            
-            for corr in corr_counts:
-                if len(corr) > 1:
-                    breakpoint()
+            #complex_ngrams = null_compacter.combine_corrs()        
+            # Prune any without at least 2 occurrences
+            null_compacter.prune(min_val=2)
+            complex_ngrams = null_compacter.compacted_corr_counts
+            for alignment in alignment_list:
+                alignment.compact_gaps(complex_ngrams)
+            return self.correspondence_probs(
+                alignment_list, 
+                ngram_size=ngram_size, 
+                counts=counts, 
+                prune=prune, 
+                exclude_null=exclude_null, 
+                compact_null=False
+            )
 
         if prune:
             corr_counts = prune_corrs(corr_counts, min_val=prune)
@@ -227,7 +240,8 @@ class PhonCorrelator:
             seg1_totals = sum(corr_dict[seg1].values())
             for seg2 in corr_dict[seg1]:
                 cond_prob = corr_dict[seg1][seg2] / seg1_totals
-                joint_prob = cond_prob * l1.phonemes[seg1]
+                p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
+                joint_prob = cond_prob * p_ind1
                 corr_dict[seg1][seg2] = joint_prob
                     
         # Get set of all possible phoneme correspondences
@@ -239,12 +253,14 @@ class PhonCorrelator:
         pmi_dict = defaultdict(lambda:defaultdict(lambda:0))
         for segment_pair in segment_pairs:
             seg1, seg2 = segment_pair
-            p_ind = l1.phonemes[seg1] * l2.phonemes[seg2]
-            cognate_prob = dependent_probs[seg1].get(seg2, p_ind)
+            p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
+            p_ind2 = l2.phonemes[seg2] if not isinstance(seg2, tuple) else l2.bigram_probability(seg2)
+            p_ind = p_ind1 * p_ind2
+            cognate_prob = dependent_probs.get(seg1, {}).get(seg2, p_ind)
             #noncognate_prob = independent_probs[seg1].get(seg2, p_ind)
             #pmi_dict[seg1][seg2] = log(cognate_prob/noncognate_prob)
             pmi_dict[seg1][seg2] = log(cognate_prob/p_ind)
-        
+            
         return pmi_dict
 
     def calc_phoneme_pmi(self, 
@@ -331,7 +347,7 @@ class PhonCorrelator:
                     cognate_alignments = all_cognate_alignments
                 
                 # Calculate correspondence probabilities and PMI values from these alignments
-                cognate_probs = self.correspondence_probs(cognate_alignments)
+                cognate_probs = self.correspondence_probs(cognate_alignments, exclude_null=True)
                 cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
                                                     for v in cognate_probs[k]} 
                                             for k in cognate_probs}, l=defaultdict(lambda:0))
@@ -458,15 +474,15 @@ class PhonCorrelator:
             phone_contexts = [(seg, env) 
                               for seg in lang.phon_environments 
                               for env in lang.phon_environments[seg]]
-            all_ngrams = product(phone_contexts+['# ', '-'], repeat=ngram_size)
+            all_ngrams = product(phone_contexts+['# ', self.gap_ch], repeat=ngram_size)
             
         else:
             attested = set(tuple(ngram.split()) 
                            if type(ngram) == str else ngram 
                            for ngram in lang.list_ngrams(ngram_size, phon_env=False))
-            all_ngrams = product(list(lang.phonemes.keys())+['# ', '-'], repeat=ngram_size)
+            all_ngrams = product(list(lang.phonemes.keys())+['# ', self.gap_ch], repeat=ngram_size)
 
-        gappy = set(ngram for ngram in all_ngrams if '-' in ngram)
+        gappy = set(ngram for ngram in all_ngrams if self.gap_ch in ngram)
         all_ngrams = attested.union(gappy)
         return all_ngrams
     
@@ -494,7 +510,7 @@ class PhonCorrelator:
                 for ngram2 in correspondence_counts[ngram1]:
                     # Exclude correspondences with a fully null ngram, e.g. ('k', 'a') with ('-', '-')
                     # Only needs to be done with ngram_size > 1
-                    if ('-',)*(max(ngram_size, 2)) not in [ngram1, ngram2]:
+                    if (self.gap_ch,)*(max(ngram_size, 2)) not in [ngram1, ngram2]:
                         # forward
                         # interpolation[i][ngram1[-i:]][ngram2[-1]] += correspondence_counts[ngram1][ngram2]
                         
@@ -504,7 +520,7 @@ class PhonCorrelator:
         # Add in phonological environment correspondences, e.g. ('l', '#S<') (word-initial 'l') with 'ʎ' 
         if phon_env:
             for ngram1 in phon_env_corr_counts:
-                if ngram1 == '-':
+                if ngram1 == self.gap_ch:
                     continue
 
                 phonEnv = ngram1[-1]
@@ -533,7 +549,7 @@ class PhonCorrelator:
             #     if ngram_size > 1:
             #         raise NotImplementedError('TODO: does ngram1[0] work with ngram_size > 1 here? if so, remove this error')
             # else:
-            if ngram1[0][0] == '-': # TODO change to not have gap character hard-coded
+            if ngram1[0][0] == self.gap_ch: # TODO change to not have gap character hard-coded
                 continue
 
             if phon_env:
@@ -699,7 +715,7 @@ class PhonCorrelator:
                     # Normalize different-meaning pair surprisal scores by self-surprisal of word2
                     # for i in range(len(noncognate_alignments)):
                     #     alignment = noncognate_alignments[i]
-                    #     word2 = ''.join([pair[1] for pair in alignment if pair[1] != '-'])
+                    #     word2 = ''.join([pair[1] for pair in alignment if pair[1] != self.gap_ch])
                     #     self_surprisal = self.lang2.self_surprisal(word2, segmented=False, normalize=False)
                     #     noncognate_surprisal[i] /= self_surprisal
 
@@ -710,9 +726,9 @@ class PhonCorrelator:
                     for i, item in enumerate(same_sample):
                         alignment = same_meaning_alignments[i]
                         surprisal_score = adaptation_surprisal(alignment, 
-                                                            surprisal_dict=surprisal_iterations[iteration], 
-                                                            normalize=True,
-                                                            ngram_size=ngram_size)
+                                                               surprisal_dict=surprisal_iterations[iteration], 
+                                                               normalize=True,
+                                                               ngram_size=ngram_size)
                         
                         # Proportion of non-cognate word pairs which would have a surprisal score at least as low as this word pair
                         pnorm = norm.cdf(surprisal_score, loc=mean_nc_score, scale=nc_score_stdev)
@@ -874,7 +890,7 @@ class PhonCorrelator:
     def _write_phon_corr_report(self, corr, outfile, label, n=5):
         with open(outfile, 'w') as f:
             f.write(f'{self.lang1.name}\t{self.lang2.name}\t{label}\n')
-            l1_phons = sorted([p for p in corr if p[0] != '-'])
+            l1_phons = [p for p in corr if p[0] != self.gap_ch]
             for p1 in l1_phons:
                 p2_candidates = corr[p1]
                 if len(p2_candidates) > 0:
@@ -993,8 +1009,6 @@ class NullCompacter:
         return to_prune, to_adjust
 
     def combine_corrs(self, min_val=2):
-        # Prune any without at least 2 occurrences
-        self.prune(min_val=min_val)
         rev_compacted_corr_counts = reverse_corr_dict(self.compacted_corr_counts)
         rev_corr_counts = reverse_corr_dict(self.corr_counts)
         to_prune, to_adjust = self.get_valid_corrs(rev_compacted_corr_counts, rev_corr_counts)

@@ -219,32 +219,87 @@ class Alignment:
         """
         if alignment is None:
             alignment = self.alignment
-        return [pair for pair in alignment if self.gap_ch not in pair] 
+        return [pair for pair in alignment if self.gap_ch not in pair]
     
+    def gaps(self):
+        """Returns a list of Gap objects in the alignment.
+
+        Returns:
+            list: list of Gap class objects
+        """
+        return [Gap(self, i) for i, pair in enumerate(self.alignment) if self.gap_ch in pair]
+
+    def merge_align_positions(self, indices, new_index=None):
+        indices.sort()
+        if new_index is None:
+            new_index = indices[0]
+            
+        to_merge = [(index, self.alignment[index]) for index in indices]
+        merged = [[], []]
+        for i, pair in to_merge:
+            if self.gap_ch in pair:
+                gap = Gap(self, i)
+                merged[gap.seg_i].append(gap.segment)
+            else:
+                seg1, seg2 = pair
+                merged[0].append(seg1)
+                merged[1].append(seg2)
+        merged = tuple([tuple(item) if len(item) > 1 else item[0] for item in merged])
+        
+        indices.reverse()
+        #merged_alignment = deepcopy(self.alignment)
+        for index in indices:
+            del self.alignment[index]
+        self.alignment.insert(new_index, merged)
+        self.length = len(self.alignment)
+
+    def compact_gaps(self, complex_ngrams):
+        l1_bigrams, l2_bigrams = [], []
+        l1_unigrams, l2_unigrams = [], []
+        for ngram in complex_ngrams:
+            if isinstance(ngram, tuple):
+                l1_bigrams.append(ngram)
+            else:
+                l1_unigrams.append(ngram)
+            for nested_ngram in complex_ngrams[ngram]:
+                if isinstance(nested_ngram, tuple):
+                    l2_bigrams.append(nested_ngram)
+                else:
+                    l2_unigrams.append(nested_ngram)
+        l1_bigram_segs = set(seg for bigram in l1_bigrams for seg in bigram)
+        l2_bigram_segs = set(seg for bigram in l2_bigrams for seg in bigram)
+
+        gaps = self.gaps()
+        gaps.reverse()
+        for gap in gaps:
+            # If the gap is in the first position, that means lang1 has a single seg where lang2 has two segs
+            # gap.segment is the segment this gap is aligned to
+            # gap.segment should be part of l2_bigram_segs 
+            if gap.gap_i == 0 and gap.segment in l2_bigram_segs:
+                for left_corr, right_corr in l2_bigrams:
+                    if self.alignment[gap.index-1:gap.index+1] in (
+                        [(gap.gap_ch, left_corr), (gap.segment, right_corr)],
+                        [(gap.segment, left_corr), (gap.gap_ch, right_corr)],
+                    ):
+                        self.merge_align_positions(indices=list(range(gap.index-1,gap.index+1)))
+                        break
+
+            # If gap is not in first position, this means that lang1 has two segs where lang2 has one seg
+            # gap.segment should be part of l1_bigram_segs
+            elif gap.gap_i != 0 and gap.segment in l1_bigram_segs:
+                for left_corr, right_corr in l1_bigrams:
+                    if self.alignment[gap.index-1:gap.index+1] in (
+                        [(left_corr, gap.gap_ch), (right_corr, gap.segment)],
+                        [(left_corr, gap.segment), (right_corr, gap.gap_ch)],
+                    ):
+                        self.merge_align_positions(indices=list(range(gap.index-1,gap.index+1)))
+                        break
+
     def pad(self, ngram_size, alignment=None):
         if alignment is None:
             alignment = self.alignment
         pad_n = max(0, ngram_size-1)
         return [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
-    
-    def normalize_geminates(self, alignment=None):
-        if alignment is None:
-            alignment = self.alignment
-        
-        if alignment is None:
-            breakpoint()
-        for i, pair in enumerate(alignment):
-            if i == 0:
-                continue
-        
-            seg1, seg2 = pair
-            prev_pair = alignment[i-1]
-            prev_seg1, prev_seg2 = prev_pair
-            if prev_seg1 == seg1:
-                breakpoint()
-            #     alignment[i-1][0] = f'{prev_seg1}ː'
-            # if prev_seg2 == seg2:
-            #     alignment[alignment]
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices
@@ -279,7 +334,10 @@ class Alignment:
 
     def reverse(self):
         return ReversedAlignment(self)
-        
+    
+    def __str__(self):
+        return visual_align(self.alignment, gap_ch=self.gap_ch, phon_env=self.phon_env)
+
 
 class ReversedAlignment(Alignment):
     def __init__(self, alignment):
@@ -309,6 +367,39 @@ class ReversedAlignment(Alignment):
             self.phon_env_alignment = super().add_phon_env()
         else:
             self.phon_env_alignment = None
+
+class AlignedPair:
+    def __init__(self, alignment, index):
+        self.alignment = alignment
+        self.gap_ch = self.alignment.gap_ch
+        self.index = index
+        self.pair = self.alignment.alignment[self.index]
+    
+    def prev_pair(self):
+        if self.index > 0:
+            return AlignedPair(self.alignment, self.index-1)
+        else:
+            return None
+        
+    def next_pair(self):
+        try:
+            return AlignedPair(self.alignment, self.index+1)
+        except IndexError:
+            return None
+    
+    def context(self):
+        return self.prev_pair(), self.next_pair()
+    
+    def is_gap(self):
+        return self.gap_ch in self.pair
+        
+
+class Gap(AlignedPair):
+    def __init__(self, alignment, index):
+        super().__init__(alignment, index)
+        self.gap_i = self.pair.index(self.gap_ch)
+        self.seg_i = abs(self.gap_i - 1)
+        self.segment = self.pair[self.seg_i]
 
 def add_phon_env(alignment,
                  env_func=get_phon_env, 
@@ -381,14 +472,21 @@ def visual_align(alignment, gap_ch='-', null='∅', phon_env=False):
     if phon_env:
         raise NotImplementedError('TODO needs to be updated for phon_env') # TODO
     a = []
-    for item in alignment:
-        if gap_ch not in item:
-            a.append(f'{item[0]}-{item[1]}')
+    for pair in alignment:
+        pair = list(pair)
+        for i, seg in enumerate(pair):
+            if isinstance(seg, tuple):
+                pair[i] = ' '.join(seg)
+            
+        seg1, seg2 = pair
+        if gap_ch not in pair:
+            a.append(f'{seg1}-{seg2}')
         else:
-            if item[0] == gap_ch:
-                a.append(f'{null}-{item[1]}')
+            if seg1 == gap_ch:
+                a.append(f'{null}-{seg2}')
             else:
-                a.append(f'{item[0]}-{null}')
+                a.append(f'{seg1}-{null}')
+                
     return ' / '.join(a)
 
 
