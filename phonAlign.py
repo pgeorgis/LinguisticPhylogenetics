@@ -130,10 +130,9 @@ class Alignment:
         # Phonological environment alignment
         self.phon_env = phon_env
         if self.phon_env:
-            self.phon_env_alignment = self._add_phon_env()
+            self.phon_env_alignment = self.add_phon_env()
         else:
             self.phon_env_alignment = None
-
 
     def validate_args(self, seq1, seq2, lang1, lang2, cost_func):
         """Verifies that all input arguments are of the correct types"""
@@ -145,7 +144,6 @@ class Alignment:
             if lang: # skip if None
                 validate_class((lang,), (phyloLing.Language,))
 
-
     def prepare_seq(self, seq, lang):
         if isinstance(seq, phyloLing.Word):
             word1 = seq
@@ -153,7 +151,6 @@ class Alignment:
             word1 = phyloLing.Word(seq, language=lang)
         
         return word1.segments, word1
-
 
     def calculate_alignment_costs(self, cost_func):
         """Calculates pairwise alignment costs for phone sequences using a specified cost function.
@@ -179,7 +176,6 @@ class Alignment:
                 alignment_costs[(i, j)] = cost
 
         return alignment_costs
-
 
     def align(self, n_best=1):
         """Align segments of word1 with segments of word2 according to Needleman-
@@ -215,7 +211,6 @@ class Alignment:
         
         return alignment_costs, best
     
-
     def remove_gaps(self, alignment=None):
         """Returns the alignment without gap-aligned positions.
 
@@ -226,13 +221,11 @@ class Alignment:
             alignment = self.alignment
         return [pair for pair in alignment if self.gap_ch not in pair] 
     
-
     def pad(self, ngram_size, alignment=None):
         if alignment is None:
             alignment = self.alignment
         pad_n = max(0, ngram_size-1)
         return [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
-    
     
     def normalize_geminates(self, alignment=None):
         if alignment is None:
@@ -252,8 +245,6 @@ class Alignment:
             #     alignment[i-1][0] = f'{prev_seg1}ː'
             # if prev_seg2 == seg2:
             #     alignment[alignment]
-            
-            
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices
@@ -279,16 +270,14 @@ class Alignment:
 
         return map1, map2
 
-
-    def _add_phon_env(self, env_func=get_phon_env):
+    def add_phon_env(self, env_func=get_phon_env):
         self.phon_env = True
         return add_phon_env(self.alignment,
                             env_func=env_func, 
                             gap_ch=self.gap_ch,
                             segs1=self.seq1)
-    
 
-    def _reverse(self):
+    def reverse(self):
         return ReversedAlignment(self)
         
 
@@ -317,13 +306,9 @@ class ReversedAlignment(Alignment):
         # Phonological environment alignment
         self.phon_env = alignment.phon_env
         if self.phon_env:
-            self.phon_env_alignment = super()._add_phon_env()
+            self.phon_env_alignment = super().add_phon_env()
         else:
             self.phon_env_alignment = None
-
-
-
-
 
 def add_phon_env(alignment,
                  env_func=get_phon_env, 
@@ -341,7 +326,7 @@ def add_phon_env(alignment,
         segs1 = tuple([seg for seg in word1_aligned if seg != gap_ch])
     gap_count1, gap_count2 = 0, 0
 
-    def _add_phon_env(word_aligned, segs, i, gap_count, gap_ch):
+    def add_phon_env(word_aligned, segs, i, gap_count, gap_ch):
         if word_aligned[i] == gap_ch:
             gap_count += 1
             # TODO so gaps are skipped?
@@ -353,7 +338,7 @@ def add_phon_env(alignment,
         return word1_aligned, gap_count
 
     for i, seg in enumerate(word1_aligned):
-        word1_aligned, gap_count1 = _add_phon_env(word1_aligned, segs1, i, gap_count1, gap_ch)
+        word1_aligned, gap_count1 = add_phon_env(word1_aligned, segs1, i, gap_count1, gap_ch)
 
     # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
     return list(zip(word1_aligned, word2_aligned))

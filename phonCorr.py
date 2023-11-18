@@ -7,20 +7,36 @@ import random
 import re
 from scipy.stats import norm
 from statistics import mean, stdev
-from auxFuncs import normalize_dict, default_dict, lidstone_smoothing, surprisal, adaptation_surprisal, dict_tuplelist
+from auxFuncs import normalize_dict, default_dict, surprisal, adaptation_surprisal, dict_tuplelist
 from phonAlign import Alignment, compatible_segments, visual_align
 
+def sort_wordlist(wordlist):
+    return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
 
 class PhonCorrelator:
     def __init__(self, lang1, lang2, wordlist=None, seed=1, logger=None):
+        # Set random seed
+        self.seed = seed
+        
+        # Set Language objects
         self.lang1 = lang1
         self.lang2 = lang2
+        
+        # Sort out same/different-meaning words and loanwords
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
+        
+        # Other
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
         self.scored_words = defaultdict(lambda:{})
-        self.seed = seed
         self.logger = logger
         self.outdir = self.lang1.family.phone_corr_dir
+
+    def langs(self, l1=None, l2=None):
+        if l1 is None:
+            l1 = self.lang1
+        if l2 is None:
+            l2 = self.lang2
+        return l1, l2
 
     def prepare_wordlists(self, wordlist):
     
@@ -58,8 +74,7 @@ class PhonCorrelator:
         
         # Return a tuple of the three word type lists
         return same_meaning, diff_meaning, loanwords
-    
-    
+
     def align_wordlist(self, 
                        wordlist,
                        added_penalty_dict=None,
@@ -71,7 +86,6 @@ class PhonCorrelator:
             added_penalty_dict=added_penalty_dict,
             **kwargs
             ) for word1, word2 in wordlist] # TODO: tuple would be better than list if possible
-    
     
     def correspondence_probs(self, 
                              alignment_list, 
@@ -204,12 +218,20 @@ class PhonCorrelator:
         for seg1 in seg1_to_del:
             del corr_dict[seg1]
         return corr_dict
+    
+    def average_corrs(self, corr_dict1, corr_dict2):
+        # Average together values from nested dictionaries in opposite directions
+        avg_corr = defaultdict(lambda:defaultdict(lambda:0))
+        for seg1 in corr_dict1:
+            for seg2 in corr_dict1[seg1]:
+                avg_corr[seg1][seg2] = mean([corr_dict1[seg1][seg2], corr_dict2[seg2][seg1]])
+        return avg_corr
 
     def phon_env_corr_probs(self, alignment_list, counts=False):
         # TODO currently works only with ngram_size=1 (I think this is fine?hh)
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
-            phon_env_align = alignment._add_phon_env()
+            phon_env_align = alignment.add_phon_env()
             for seg_weight1, seg2 in phon_env_align:
                 corr_counts[seg_weight1][seg2] += 1
         if not counts:
@@ -217,7 +239,6 @@ class PhonCorrelator:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
         
         return corr_counts
-                          
     
     def radial_counts(self, wordlist, radius=1, normalize=True):
         """Checks the number of times that phones occur within a specified 
@@ -248,7 +269,7 @@ class PhonCorrelator:
         return reverse
 
     # def default_independent_corr_probs(self, l1=None, l2=None):
-    #     l1, l2 = self._get_langs(l1=l1, l2=l2)
+    #     l1, l2 = self.langs(l1=l1, l2=l2)
     #     independent_probs = {}
     #     for phoneme1 in l1.phonemes:
     #         phoneme1_probs = {}
@@ -266,7 +287,7 @@ class PhonCorrelator:
         dependent_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         independent_probs : None, or nested dictionary of conditional correspondence probabilities in non-cognates
         """
-        l1, l2 = self._get_langs(l1=l1, l2=l2)
+        l1, l2 = self.langs(l1=l1, l2=l2)
         
         # # If no independent probabilities are specified, 
         # # use product of phoneme probabilities by default
@@ -300,7 +321,6 @@ class PhonCorrelator:
         
         return pmi_dict
 
-
     def calc_phoneme_pmi(self, 
                          radius=1, # TODO make configurable
                          p_threshold=0.05,
@@ -332,7 +352,6 @@ class PhonCorrelator:
         if self.logger:
             self.logger.info(f'Calculating phoneme PMI: {self.lang1.name}-{self.lang2.name}...')
             
-        
         # First step: calculate probability of phones co-occuring within within 
         # a set radius of positions within their respective words
         synonyms_radius1 = self.radial_counts(self.same_meaning, radius, normalize=False)
@@ -345,18 +364,13 @@ class PhonCorrelator:
         pmi_dict_l1l2, pmi_dict_l2l1 = pmi_step1
         
         # Average together the PMI values from each direction
-        pmi_step1 = defaultdict(lambda:defaultdict(lambda:0))
-        for seg1 in pmi_dict_l1l2:
-            for seg2 in pmi_dict_l1l2[seg1]:
-                pmi_step1[seg1][seg2] = mean([pmi_dict_l1l2[seg1][seg2], pmi_dict_l2l1[seg2][seg1]])
+        pmi_step1 = self.average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
         
-        sample_results = {}
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
+        sample_results = {}
         sample_size = round(len(self.same_meaning)*sample_size)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         iter_logs = defaultdict(lambda:[])
-        def _sort_wordlist(wordlist):
-            return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
         max_iterations = max(round((max_p-p_threshold)/p_step), 2)
         for sample_n in range(samples):
             random.seed(self.seed+sample_n)
@@ -369,7 +383,7 @@ class PhonCorrelator:
             iteration = 0
             PMI_iterations = {iteration:pmi_step1}
             p_threshold_sample = p_threshold
-            qualifying_words = default_dict({iteration:_sort_wordlist(synonym_sample)}, l=[])
+            qualifying_words = default_dict({iteration:sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             align_log = defaultdict(lambda:set())
             if cumulative:
@@ -423,7 +437,7 @@ class PhonCorrelator:
                         qualifying_alignments.append(alignment)
                     else:
                         disqualified.append(item)
-                qualifying_words[iteration] = _sort_wordlist(qualifying)
+                qualifying_words[iteration] = sort_wordlist(qualifying)
                 disqualified_words[iteration] = disqualified + diff_sample
                 if p_threshold_sample+p_step <= max_p:
                     p_threshold_sample += p_step
@@ -435,7 +449,7 @@ class PhonCorrelator:
             
             # Log final set of qualifying/disqualified word pairs
             if log_iterations:
-                iter_logs[sample_n].append((qualifying_words[iteration], _sort_wordlist(disqualified)))
+                iter_logs[sample_n].append((qualifying_words[iteration], sort_wordlist(disqualified)))
             
                 # Log final alignments from which PMI was calculated
                 align_log = self._log_alignments(qualifying_alignments, align_log)
@@ -465,11 +479,11 @@ class PhonCorrelator:
             pmi_log_dir = os.path.join(self.outdir, 'pmi_logs', f'{self.lang1.name}-{self.lang2.name}')
             os.makedirs(pmi_log_dir, exist_ok=True)
             log_file = os.path.join(pmi_log_dir, f'PMI_iterations.log')
-            self.write_iter_log(iter_logs, log_file)
+            self._write_iter_log(iter_logs, log_file)
             
             # Write alignment log
             align_log_file = os.path.join(pmi_log_dir, 'PMI_alignments.log')
-            self.write_alignments_log(align_log, align_log_file)
+            self._write_alignments_log(align_log, align_log_file)
 
         if save:
             self.lang1.phoneme_pmi[self.lang2] = results
@@ -478,7 +492,6 @@ class PhonCorrelator:
         self.pmi_dict = results
         
         return results
-
     
     def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
@@ -507,7 +520,6 @@ class PhonCorrelator:
             self.lang1.noncognate_thresholds[key] = noncognate_scores
         
         return noncognate_scores
-
 
     def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
         # Iterate over all possible/attested ngrams
@@ -595,7 +607,7 @@ class PhonCorrelator:
             #     if ngram_size > 1:
             #         raise NotImplementedError('TODO: does ngram1[0] work with ngram_size > 1 here? if so, remove this error')
             # else:
-            if ngram1[0][0] == '-':
+            if ngram1[0][0] == '-': # TODO change to not have gap character hard-coded
                 continue
 
             if phon_env:
@@ -682,7 +694,6 @@ class PhonCorrelator:
                 del smoothed_surprisal[ngram1][ngram_to_prune]            
 
         return smoothed_surprisal
-    
     
     def calc_phoneme_surprisal(self, radius=1, 
                                max_iterations=10, 
@@ -843,15 +854,15 @@ class PhonCorrelator:
             surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs', self.lang1.name, self.lang2.name)
             os.makedirs(surprisal_log_dir, exist_ok=True)
             log_file = os.path.join(surprisal_log_dir, f'surprisal_iterations.log')
-            self.write_iter_log(iter_logs, log_file)
+            self._write_iter_log(iter_logs, log_file)
             
             # Write alignments log
             align_log_file = os.path.join(surprisal_log_dir, 'surprisal_alignments.log')
-            self.write_alignments_log(align_log, align_log_file)
+            self._write_alignments_log(align_log, align_log_file)
             
             # Write phoneme correlation report
             phon_corr_report = os.path.join(surprisal_log_dir, 'surprisal_phon_corr.log')
-            self.write_phon_corr_report(surprisal_results, phon_corr_report, label='Surprisal')
+            self._write_phon_corr_report(surprisal_results, phon_corr_report, label='Surprisal')
                 
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
@@ -867,7 +878,6 @@ class PhonCorrelator:
         self.surprisal_dict = surprisal_results
         
         return surprisal_results, phon_env_surprisal
-
 
     def _log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
         iter_log = []
@@ -904,7 +914,7 @@ class PhonCorrelator:
         
         return iter_log
     
-    def write_iter_log(self, iter_logs, log_file):
+    def _write_iter_log(self, iter_logs, log_file):
         with open(log_file, 'w') as f:
             f.write(f'Same meaning pairs: {len(self.same_meaning)}\n')
             for n in iter_logs:
@@ -927,7 +937,7 @@ class PhonCorrelator:
             align_log[key].add(align_str)
         return align_log
     
-    def write_alignments_log(self, alignment_log, log_file):
+    def _write_alignments_log(self, alignment_log, log_file):
         with open(log_file, 'w') as f:
             for key in alignment_log:
                 f.write(f'{key}\n')
@@ -935,7 +945,7 @@ class PhonCorrelator:
                     f.write(f'{alignment}\n')
                 f.write('-------------------\n')
     
-    def write_phon_corr_report(self, corr, outfile, label, n=5):
+    def _write_phon_corr_report(self, corr, outfile, label, n=5):
         with open(outfile, 'w') as f:
             f.write(f'{self.lang1.name}\t{self.lang2.name}\t{label}\n')
             l1_phons = sorted([p for p in corr if p[0] != '-'])
@@ -949,13 +959,6 @@ class PhonCorrelator:
                             break
                         line = '\t'.join([' '.join(p1), str(p2), str(round(sur, 3))])
                         f.write(f'{line}\n')
-
-    def _get_langs(self, l1=None, l2=None):
-        if l1 is None:
-            l1 = self.lang1
-        if l2 is None:
-            l2 = self.lang2
-        return l1, l2
 
 
 @lru_cache(maxsize=None)
