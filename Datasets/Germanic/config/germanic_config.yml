@@ -10,18 +10,22 @@ transcription:
         ignore_stress: false
         combine_diphthongs: true
         normalize_geminates: true
-        #suprasegmentals: ['ˀ']
         ch_to_remove: ['̩']
+    # doculects:
+    #     "Swiss German":
+    #         normalize_geminates: false
+    #     Danish:
+    #         suprasegmentals: ['ˀ']
 
 pmi:
     refresh: []
-    refresh_all_pmi: false
+    refresh_all_pmi: true
 
 surprisal:
     ngram: 1
     phon_env: true 
     refresh: []
-    refresh_all_surprisal: false
+    refresh_all_surprisal: true
 
 cluster:
     cognates: none
