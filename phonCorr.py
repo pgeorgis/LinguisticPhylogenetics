@@ -314,6 +314,7 @@ class PhonCorrelator:
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         iter_logs = defaultdict(lambda:[])
         max_iterations = max(round((max_p-p_threshold)/p_step), 2)
+        sample_iterations = {}
         for sample_n in range(samples):
             random.seed(self.seed+sample_n)
             synonym_sample = random.sample(self.same_meaning, sample_size)
@@ -338,9 +339,6 @@ class PhonCorrelator:
                 # Align the qualifying words of the previous step using previous step's PMI
                 cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1])
                 
-                # Align the sample of different meaning and non-qualifying words again using previous step's PMI
-                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1])
-                
                 # Add these alignments into running pool of alignments
                 if cumulative:
                     all_cognate_alignments.extend(cognate_alignments)
@@ -351,11 +349,13 @@ class PhonCorrelator:
                 cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
                                                     for v in cognate_probs[k]} 
                                             for k in cognate_probs}, l=defaultdict(lambda:0))
-                # noncognate_probs = self.correspondence_probs(noncognate_alignments)
                 PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs)# , noncognate_probs)
                 
                 # Align all same-meaning word pairs
-                all_alignments = self.align_wordlist(synonym_sample, added_penalty_dict=PMI_iterations[iteration-1])
+                aligned_synonym_sample = self.align_wordlist(synonym_sample, added_penalty_dict=PMI_iterations[iteration])
+                # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
+                # disqualified_words[iteration-1] already contains both types
+                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1], added_penalty_dict=PMI_iterations[iteration])
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
@@ -369,7 +369,7 @@ class PhonCorrelator:
                 qualifying, disqualified = [], []
                 qualifying_alignments = []
                 for i, item in enumerate(synonym_sample):
-                    alignment = all_alignments[i]
+                    alignment = aligned_synonym_sample[i]
                     PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment])
                     
                     # Proportion of non-cognate word pairs which would have a PMI score at least as low as this word pair
@@ -399,6 +399,7 @@ class PhonCorrelator:
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
             sample_results[sample_n] = results
+            sample_iterations[sample_n] = len(PMI_iterations)-1
             # if self.logger:
             #     self.logger.debug(f'Sample {sample_n+1} converged after {iteration} iterations.')
         
@@ -418,6 +419,7 @@ class PhonCorrelator:
 
         # Write the iteration log
         if log_iterations:
+            self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             pmi_log_dir = os.path.join(self.outdir, 'pmi_logs', f'{self.lang1.name}-{self.lang2.name}')
             os.makedirs(pmi_log_dir, exist_ok=True)
             log_file = os.path.join(pmi_log_dir, f'PMI_iterations.log')
@@ -666,6 +668,7 @@ class PhonCorrelator:
             sample_size = round(len(self.same_meaning)*sample_size)
             sample_results = {}
             iter_logs = defaultdict(lambda:[])
+            sample_iterations = {}
             for sample_n in range(samples):
                 random.seed(self.seed+sample_n)
                 same_sample = random.sample(self.same_meaning, sample_size)
@@ -756,6 +759,7 @@ class PhonCorrelator:
                     
                 cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
                 sample_results[sample_n] = surprisal_iterations[iteration]
+                sample_iterations[sample_n] = iteration
             
             # Average together the surprisal estimations from each sample
             if samples > 1:
@@ -793,6 +797,7 @@ class PhonCorrelator:
         
         # Write the iteration log
         if log_iterations and not gold:
+            self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs', self.lang1.name, self.lang2.name)
             os.makedirs(surprisal_log_dir, exist_ok=True)
             log_file = os.path.join(surprisal_log_dir, f'surprisal_iterations.log')
