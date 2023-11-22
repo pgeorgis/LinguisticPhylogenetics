@@ -71,16 +71,24 @@ class PhonCorrelator:
         self.complex_ngrams = None
         self.scored_words = defaultdict(lambda:{})
         
-        # Other parameters
+        # Logging
         self.outdir = self.lang1.family.phone_corr_dir
+        self.pmi_log_dir, self.surprisal_log_dir = self.log_dirs()
         self.logger = logger
-
+        
     def langs(self, l1=None, l2=None):
         if l1 is None:
             l1 = self.lang1
         if l2 is None:
             l2 = self.lang2
         return l1, l2
+
+    def log_dirs(self):
+        pmi_log_dir = os.path.join(self.outdir, 'pmi', self.lang1.name, self.lang2.name)
+        surprisal_log_dir = os.path.join(self.outdir, 'surprisal', self.lang1.name, self.lang2.name)
+        os.makedirs(pmi_log_dir, exist_ok=True)
+        os.makedirs(surprisal_log_dir, exist_ok=True)
+        return pmi_log_dir, surprisal_log_dir
 
     def prepare_wordlists(self, wordlist):
     
@@ -454,20 +462,20 @@ class PhonCorrelator:
         # Write the iteration log
         if log_iterations:
             self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
-            pmi_log_dir = os.path.join(self.outdir, 'pmi_logs', f'{self.lang1.name}-{self.lang2.name}')
-            os.makedirs(pmi_log_dir, exist_ok=True)
-            log_file = os.path.join(pmi_log_dir, f'PMI_iterations.log')
+            log_file = os.path.join(self.pmi_log_dir, f'PMI_iterations.log')
             self._write_iter_log(iter_logs, log_file)
             
             # Write alignment log
-            align_log_file = os.path.join(pmi_log_dir, 'PMI_alignments.log')
+            align_log_file = os.path.join(self.pmi_log_dir, 'PMI_alignments.log')
             self._write_alignments_log(align_log, align_log_file)
 
         if save:
             self.lang1.phoneme_pmi[self.lang2] = results
             self.lang2.phoneme_pmi[self.lang1] = reverse_corr_dict(results)
             # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
+            
         self.pmi_dict = results
+        self.write_phoneme_pmi()
         
         return results
     
@@ -832,17 +840,15 @@ class PhonCorrelator:
         # Write the iteration log
         if log_iterations and not gold:
             self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
-            surprisal_log_dir = os.path.join(self.outdir, 'surprisal_logs', self.lang1.name, self.lang2.name)
-            os.makedirs(surprisal_log_dir, exist_ok=True)
-            log_file = os.path.join(surprisal_log_dir, f'surprisal_iterations.log')
+            log_file = os.path.join(self.surprisal_log_dir, f'surprisal_iterations.log')
             self._write_iter_log(iter_logs, log_file)
             
             # Write alignments log
-            align_log_file = os.path.join(surprisal_log_dir, 'surprisal_alignments.log')
+            align_log_file = os.path.join(self.surprisal_log_dir, 'surprisal_alignments.log')
             self._write_alignments_log(align_log, align_log_file)
             
             # Write phoneme correlation report
-            phon_corr_report = os.path.join(surprisal_log_dir, 'surprisal_phon_corr.log')
+            phon_corr_report = os.path.join(self.surprisal_log_dir, 'surprisal_phon_corr.log')
             self._write_phon_corr_report(surprisal_results, phon_corr_report, label='Surprisal')
                 
         # Add phonological environment weights after final iteration
@@ -859,6 +865,20 @@ class PhonCorrelator:
         self.surprisal_dict = surprisal_results
         
         return surprisal_results, phon_env_surprisal
+
+    def write_phoneme_pmi(self, outfile=None, threshold=0.0001):
+        # Save calculated PMI values to file
+        if outfile is None:
+            outfile = os.path.join(self.pmi_log_dir, 'phonPMI.csv')
+
+        with open(outfile, 'w') as f:
+            f.write('Phone1,Phone2,PMI\n')
+            # Save all segment pairs with non-zero PMI values to file
+            # Skip extremely small decimals that are close to zero
+            for seg1 in self.pmi_dict:
+                for seg2 in self.pmi_dict[seg1]:
+                    if abs(self.pmi_dict[seg1][seg2]) > threshold:
+                        f.write(f'{seg1},{seg2},{self.pmi_dict[seg1][seg2]}\n')
 
     def _log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
         iter_log = []

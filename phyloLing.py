@@ -281,65 +281,41 @@ class LexicalDataset:
         if save:
             self.write_phoneme_pmi()
 
-
-    def write_phoneme_pmi(self, output_file=None):
-        # Specify output file name if none is specified
-        if output_file is None:
-            output_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
-
-        lang_pairs = self.get_doculect_pairs(bidirectional=False)
-        # Save calculated PMI values to file
-        with open(output_file, 'w') as f:
-            f.write('Language1,Phone1,Language2,Phone2,PMI\n')
-            for lang1, lang2 in lang_pairs:
-                # Retrieve the precalculated values
-                pmi = lang1.phoneme_pmi[lang2]
-                if len(pmi) == 0:
-                    self.logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
-                    continue
-
-                # Save all segment pairs with non-zero PMI values to file
-                # Skip extremely small decimals that are close to zero
-                for seg1 in pmi:
-                    for seg2 in pmi[seg1]:
-                        if abs(pmi[seg1][seg2]) > 0.0001:
-                            f.write(f'{lang1.name},{seg1},{lang2.name},{seg2},{pmi[seg1][seg2]}\n')
-
-
-    def load_phoneme_pmi(self, pmi_file=None, excepted=[], **kwargs):
+    def load_phoneme_pmi(self, pmi_dir=None, excepted=[], **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
         
-        # Designate the default file name to search for if no alternative is provided
-        if pmi_file is None:
-            pmi_file = os.path.join(self.phone_corr_dir, f'{self.name}_phoneme_PMI.csv')
+        # Designate the default directory to search for if no alternative is provided
+        if pmi_dir is None:
+            pmi_dir = os.path.join(self.phone_corr_dir, 'pmi')
         
-        # Try to load the file of saved PMI values
-        # If the file is not found, recalculate the PMI values and save to 
-        # a file with the specified name
-        if os.path.exists(pmi_file):
-            pmi_data = pd.read_csv(pmi_file)
+        for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
+            if (lang1.name not in excepted) and (lang2.name not in excepted):
+                pmi_file = os.path.join(pmi_dir, lang1.name, lang2.name, 'phonPMI.csv')
+                
+                # Try to load the file of saved PMI values, otherwise calculate PMI first
+                if not os.path.exists(pmi_file):
+                    correlator = lang1.get_phoneme_correlator(lang2)
+                    correlator.calc_phoneme_pmi(**kwargs)
+                    correlator.write_phoneme_pmi(outfile=pmi_file)
+                pmi_data = pd.read_csv(pmi_file)
             
-        else:
-            self.calculate_phoneme_pmi(**kwargs)
-            self.write_phoneme_pmi(output_file=pmi_file)
-            pmi_data = pd.read_csv(pmi_file)
-        
-        # Iterate through the dataframe and save the PMI values to the Language
-        # class objects' phoneme_pmi attribute
-        for index, row in pmi_data.iterrows():
-            try:
-                lang1 = self.languages[row['Language1']]
-                lang2 = self.languages[row['Language2']]
-                if (lang1.name not in excepted) and (lang2.name not in excepted):
+                # Iterate through the dataframe and save the PMI values to the Language
+                # class objects' phoneme_pmi attribute
+                for index, row in pmi_data.iterrows():
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     pmi_value = row['PMI']
                     lang1.phoneme_pmi[lang2][phone1][phone2] = pmi_value
                     lang2.phoneme_pmi[lang1][phone2][phone1] = pmi_value
+
+    def write_phoneme_pmi(self, **kwargs):
+        for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
+            # Retrieve the precalculated values
+            if len(lang1.phoneme_pmi[lang2]) == 0:
+                self.logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
+                continue
             
-            # Skip loaded PMI values for languages which are not in dataset
-            except KeyError:
-                pass
-    
+            correlator = lang1.get_phoneme_correlator(lang2)
+            correlator.write_phoneme_pmi(**kwargs)
 
     def calculate_phoneme_surprisal(self, ngram_size=1, save=True, **kwargs):
         """Calculates phoneme surprisal for all language pairs in the dataset and saves
@@ -360,7 +336,7 @@ class LexicalDataset:
             self.write_phoneme_surprisal(ngram_size=ngram_size)
 
 
-    def write_phoneme_surprisal(self, ngram_size=1):
+    def write_phoneme_surprisal(self, ngram_size=1): # TODO move into phonCorr.py and split into one file per lang pair
         # Specify output file names
         outfile = os.path.join(self.phone_corr_dir, f'phoneme_surprisal_{ngram_size}gram.csv')
         outfile_phon_env = os.path.join(self.phone_corr_dir, 'phoneme_env_surprisal.csv')
