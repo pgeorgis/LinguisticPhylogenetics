@@ -168,6 +168,15 @@ def normalize_dict(dict_, default=False, lmbda=None, return_=True):
    
 
 # INFORMATION CONTENT
+def flatten_ngram(nested_ngram):
+    flat = []
+    for item in nested_ngram:
+        if isinstance(item, tuple):
+            flat.extend(flatten_ngram(item))
+        else:
+            flat.append(item)        
+    return flat
+
 def surprisal(p):
     try:
         return -log(p, 2)

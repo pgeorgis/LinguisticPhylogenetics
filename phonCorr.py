@@ -7,7 +7,7 @@ import random
 import re
 from scipy.stats import norm
 from statistics import mean, stdev
-from auxFuncs import normalize_dict, default_dict, surprisal, adaptation_surprisal, dict_tuplelist
+from auxFuncs import normalize_dict, default_dict, surprisal, adaptation_surprisal, dict_tuplelist, flatten_ngram
 from phonAlign import Alignment, compatible_segments, visual_align
 
 def sort_wordlist(wordlist):
@@ -106,15 +106,29 @@ class PhonCorrelator:
     def align_wordlist(self,
                        wordlist,
                        added_penalty_dict=None,
+                       complex_ngrams=None,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
-        return [Alignment(
-            seq1=word1, 
-            seq2=word2,
-            added_penalty_dict=added_penalty_dict,
-            gap_ch=self.gap_ch,
-            **kwargs
-            ) for word1, word2 in wordlist] # TODO: tuple would be better than list if possible
+        alignment_list = [
+            Alignment(
+                seq1=word1, 
+                seq2=word2,
+                added_penalty_dict=added_penalty_dict,
+                gap_ch=self.gap_ch,
+                **kwargs
+            )
+            for word1, word2 in wordlist
+        ] # TODO: tuple would be better than list if possible
+        if complex_ngrams:
+            compacted_alignments = self.compact_alignments(alignment_list, complex_ngrams)
+            return compacted_alignments
+        else:
+            return alignment_list
+    
+    def compact_alignments(self, alignment_list, complex_ngrams):
+        for alignment in alignment_list:
+            alignment.compact_gaps(complex_ngrams)
+        return alignment_list        
 
     def correspondence_probs(self, 
                              alignment_list, 
@@ -153,17 +167,17 @@ class PhonCorrelator:
             # Prune any without at least 2 occurrences
             null_compacter.prune(min_val=2)
             complex_ngrams = null_compacter.compacted_corr_counts
-            for alignment in alignment_list:
-                alignment.compact_gaps(complex_ngrams)
-            return self.correspondence_probs(
-                alignment_list, 
+            compacted_alignments = self.compact_alignments(alignment_list, complex_ngrams)
+            adjusted_corrs = self.correspondence_probs(
+                compacted_alignments, 
                 ngram_size=ngram_size, 
                 counts=counts, 
                 prune=prune, 
                 exclude_null=exclude_null, 
                 compact_null=False
             )
-
+            return adjusted_corrs, complex_ngrams
+            
         if prune:
             corr_counts = prune_corrs(corr_counts, min_val=prune)
 
@@ -240,7 +254,10 @@ class PhonCorrelator:
             seg1_totals = sum(corr_dict[seg1].values())
             for seg2 in corr_dict[seg1]:
                 cond_prob = corr_dict[seg1][seg2] / seg1_totals
-                p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
+                try:
+                    p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
+                except ZeroDivisionError:
+                    breakpoint()
                 joint_prob = cond_prob * p_ind1
                 corr_dict[seg1][seg2] = joint_prob
                     
@@ -332,12 +349,13 @@ class PhonCorrelator:
             if cumulative:
                 all_cognate_alignments = []
             #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
+            complex_ngrams = None
             while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0,iteration-5),iteration)]):
             #while (iteration < max_iterations) and (nc_thresholds[iteration-1] not in [nc_thresholds[i] for i in range(max(0,iteration-2),iteration-1)]):
                 iteration += 1
 
                 # Align the qualifying words of the previous step using previous step's PMI
-                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1])
+                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1], complex_ngrams=complex_ngrams)
                 
                 # Add these alignments into running pool of alignments
                 if cumulative:
@@ -345,17 +363,25 @@ class PhonCorrelator:
                     cognate_alignments = all_cognate_alignments
                 
                 # Calculate correspondence probabilities and PMI values from these alignments
-                cognate_probs = self.correspondence_probs(cognate_alignments, exclude_null=True)
+                cognate_probs, complex_ngrams = self.correspondence_probs(cognate_alignments, exclude_null=True)
                 cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
                                                     for v in cognate_probs[k]} 
                                             for k in cognate_probs}, l=defaultdict(lambda:0))
                 PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs)# , noncognate_probs)
                 
                 # Align all same-meaning word pairs
-                aligned_synonym_sample = self.align_wordlist(synonym_sample, added_penalty_dict=PMI_iterations[iteration])
+                aligned_synonym_sample = self.align_wordlist(synonym_sample, added_penalty_dict=PMI_iterations[iteration], complex_ngrams=complex_ngrams)
                 # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
                 # disqualified_words[iteration-1] already contains both types
-                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1], added_penalty_dict=PMI_iterations[iteration])
+                noncognate_alignments = self.align_wordlist(disqualified_words[iteration-1], added_penalty_dict=PMI_iterations[iteration], complex_ngrams=complex_ngrams)
+                # for alignment in aligned_synonym_sample:
+                #     for left, right in alignment.alignment:
+                #         if isinstance(left, tuple):
+                #             print(visual_align(alignment))
+                #             continue
+                #         elif isinstance(right, tuple):
+                #             print(visual_align(alignment))
+                #             continue
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
@@ -697,7 +723,7 @@ class PhonCorrelator:
                     if cumulative:
                         all_cognate_alignments.extend(cognate_alignments)
                         cognate_alignments = all_cognate_alignments
-                    surprisal_iterations[iteration] = self.phoneme_surprisal(self.correspondence_probs(cognate_alignments,
+                    surprisal_iterations[iteration], complex_ngrams = self.phoneme_surprisal(self.correspondence_probs(cognate_alignments,
                                                                                                     counts=True,
                                                                                                     exclude_null=False, 
                                                                                                     ngram_size=ngram_size), 
@@ -789,7 +815,7 @@ class PhonCorrelator:
             
             # TODO need to confirm that when the gloss/concept is checked, it considers the possible cognate class ID, e.g. rain_1
             cognate_alignments = same_meaning_alignments
-            surprisal_results = self.phoneme_surprisal(self.correspondence_probs(same_meaning_alignments,
+            surprisal_results, complex_ngrams = self.phoneme_surprisal(self.correspondence_probs(same_meaning_alignments,
                                                                                  counts=True,
                                                                                  exclude_null=False, 
                                                                                  ngram_size=ngram_size), 
@@ -813,7 +839,7 @@ class PhonCorrelator:
                 
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
-            self.correspondence_probs(cognate_alignments, counts=True, exclude_null=False), 
+            self.correspondence_probs(cognate_alignments, counts=True, exclude_null=False, compact_null=False), 
             phon_env_corr_counts=self.phon_env_corr_probs(cognate_alignments, counts=True),
             ngram_size=ngram_size
             )
@@ -954,7 +980,7 @@ class NullCompacter:
         next_ngram = alignment[i+1-(self.ngram_size-1):i+2]
         if gap_ch not in (next_ngram[ngram_i][gap_index], next_ngram[ngram_i][opposite_index]):
             gap_seg = next_ngram[ngram_i][gap_index]
-            larger_ngram = (ngram[ngram_i][opposite_index], next_ngram[ngram_i][opposite_index])
+            larger_ngram = tuple(flatten_ngram((ngram[ngram_i][opposite_index], next_ngram[ngram_i][opposite_index])))
             if gap_index == 0:
                 self.compacted_corr_counts[gap_seg][larger_ngram] += 1
             else: # 1 
@@ -965,7 +991,7 @@ class NullCompacter:
         prev_ngram = alignment[i-1-(self.ngram_size-1):i]
         if gap_ch not in (prev_ngram[ngram_i][gap_index], prev_ngram[ngram_i][opposite_index]):
             gap_seg = prev_ngram[ngram_i][gap_index]
-            larger_ngram = (prev_ngram[ngram_i][opposite_index], ngram[ngram_i][opposite_index])
+            larger_ngram = tuple(flatten_ngram((prev_ngram[ngram_i][opposite_index], ngram[ngram_i][opposite_index])))
             if gap_index == 0:
                 self.compacted_corr_counts[gap_seg][larger_ngram] += 1
             else: # 1 

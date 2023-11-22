@@ -254,46 +254,47 @@ class Alignment:
         self.length = len(self.alignment)
 
     def compact_gaps(self, complex_ngrams):
-        l1_bigrams, l2_bigrams = [], []
-        l1_unigrams, l2_unigrams = [], []
-        for ngram in complex_ngrams:
-            if isinstance(ngram, tuple):
-                l1_bigrams.append(ngram)
-            else:
-                l1_unigrams.append(ngram)
-            for nested_ngram in complex_ngrams[ngram]:
-                if isinstance(nested_ngram, tuple):
-                    l2_bigrams.append(nested_ngram)
-                else:
-                    l2_unigrams.append(nested_ngram)
+        l1_bigrams = [ngram for ngram in complex_ngrams if isinstance(ngram, tuple)]
+        l2_bigrams = [nested_ngram for ngram in complex_ngrams 
+                      for nested_ngram in complex_ngrams[ngram] if isinstance(nested_ngram, tuple)]
         l1_bigram_segs = set(seg for bigram in l1_bigrams for seg in bigram)
         l2_bigram_segs = set(seg for bigram in l2_bigrams for seg in bigram)
-
+         
         gaps = self.gaps()
         gaps.reverse()
         for gap in gaps:
+            slices = gap.bigram_slices()
             # If the gap is in the first position, that means lang1 has a single seg where lang2 has two segs
             # gap.segment is the segment this gap is aligned to
             # gap.segment should be part of l2_bigram_segs 
             if gap.gap_i == 0 and gap.segment in l2_bigram_segs:
-                for left_corr, right_corr in l2_bigrams:
-                    if self.alignment[gap.index-1:gap.index+1] in (
-                        [(gap.gap_ch, left_corr), (gap.segment, right_corr)],
-                        [(gap.segment, left_corr), (gap.gap_ch, right_corr)],
-                    ):
-                        self.merge_align_positions(indices=list(range(gap.index-1,gap.index+1)))
-                        break
+                for bigram in l2_bigrams:
+                    if gap.segment in bigram:
+                        gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram)
+                        unigrams = [uni_corr for uni_corr in complex_ngrams if bigram in complex_ngrams[uni_corr]]
+                        for unigram_corr in unigrams:                            
+                            for start_i, end_i in slices:
+                                if self.alignment[start_i:end_i] in (
+                                    [(gap.gap_ch, gap_aligned_corr), (unigram_corr, seg_aligned_corr)],
+                                    [(unigram_corr, seg_aligned_corr), (gap.gap_ch, gap_aligned_corr)],
+                                ):
+                                    self.merge_align_positions(indices=list(range(start_i,end_i)))
+                                    break
 
             # If gap is not in first position, this means that lang1 has two segs where lang2 has one seg
             # gap.segment should be part of l1_bigram_segs
             elif gap.gap_i != 0 and gap.segment in l1_bigram_segs:
-                for left_corr, right_corr in l1_bigrams:
-                    if self.alignment[gap.index-1:gap.index+1] in (
-                        [(left_corr, gap.gap_ch), (right_corr, gap.segment)],
-                        [(left_corr, gap.segment), (right_corr, gap.gap_ch)],
-                    ):
-                        self.merge_align_positions(indices=list(range(gap.index-1,gap.index+1)))
-                        break
+                for bigram in l1_bigrams:
+                    if gap.segment in bigram:
+                        gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram)
+                        for unigram_corr in complex_ngrams[bigram]:
+                            for start_i, end_i in slices:
+                                if self.alignment[start_i:end_i] in (
+                                    [(gap_aligned_corr, gap.gap_ch), (seg_aligned_corr, unigram_corr)],
+                                    [(seg_aligned_corr, unigram_corr), (gap_aligned_corr, gap.gap_ch)],
+                                ):
+                                    self.merge_align_positions(indices=list(range(start_i,end_i)))
+                                    break
 
     def pad(self, ngram_size, alignment=None):
         if alignment is None:
@@ -400,6 +401,26 @@ class Gap(AlignedPair):
         self.gap_i = self.pair.index(self.gap_ch)
         self.seg_i = abs(self.gap_i - 1)
         self.segment = self.pair[self.seg_i]
+    
+    def bigram_slices(self):
+        slices = [
+                # e.g. kt ~ ʧ
+                # ('-', 'k'), ('ʧ', 't') or ('k', '-'), ('t', 'ʧ')
+                (self.index, self.index+2), 
+                # ('ʧ', 'k'), ('-', 't') or ('k', 'ʧ'), ('t', '-')
+                (self.index-1, self.index+1)
+        ]
+        return slices
+    
+    def bigram_aligned_segs(self, bigram):
+        """Given a bigram tuple that the gap forms a larger alignment unit with, 
+        this function identifies the bigram segment aligned to the gap 
+        and the bigram segment aligned to another segment"""
+        gap_aligned_corr_i = bigram.index(self.segment)
+        seg_aligned_corr_i = abs(gap_aligned_corr_i-1)
+        gap_aligned_corr = bigram[gap_aligned_corr_i]
+        seg_aligned_corr = bigram[seg_aligned_corr_i]
+        return gap_aligned_corr, seg_aligned_corr  
 
 def add_phon_env(alignment,
                  env_func=get_phon_env, 

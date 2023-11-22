@@ -16,9 +16,9 @@ from skbio.tree import nj
 import seaborn as sns
 from unidecode import unidecode
 import numpy as np
-from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist, create_timestamp
-from auxFuncs import Distance, surprisal, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
-from phonUtils.initPhoneData import vowels, consonants, tonemes, suprasegmental_diacritics
+from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist, flatten_ngram, create_timestamp
+from auxFuncs import Distance, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
+from phonUtils.initPhoneData import consonants, suprasegmental_diacritics
 from phonUtils.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
 from phonUtils.segment import segment_ipa, _toSegment
 from phonUtils.phonSim import phone_sim
@@ -1579,7 +1579,10 @@ class Language:
     @lru_cache(maxsize=None)
     def bigram_probability(self, bigram, delta=0.7):
         """Returns Kneser-Ney smoothed conditional probability P(p2|p1)"""
-        
+        bigram = tuple(flatten_ngram(bigram))
+        if len(bigram) > 2:
+            breakpoint()
+            raise NotImplementedError
         p1, p2 = bigram
         
         # Total number of distinct bigrams
