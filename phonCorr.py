@@ -33,6 +33,19 @@ def average_corrs(corr_dict1, corr_dict2):
             avg_corr[seg1][seg2] = mean([corr_dict1[seg1][seg2], corr_dict2[seg2][seg1]])
     return avg_corr
 
+def average_nested_dicts(dict_list, default=0):
+    corr1_all = set(corr1 for d in dict_list for corr1 in d)
+    corr2_all = {corr1:set(corr2 for d in dict_list for corr2 in d[corr1]) for corr1 in corr1_all}
+    results = defaultdict(lambda:defaultdict(lambda:0))
+    for corr1 in corr1_all:
+        for corr2 in corr2_all[corr1]:
+            vals = []
+            for d in dict_list:
+                vals.append(d.get(corr1, {}).get(corr2, default))
+            if len(vals) > 0:
+                results[corr1][corr2] = mean(vals)
+    return results
+
 def reverse_corr_dict(corr_dict):
     reverse = defaultdict(lambda:defaultdict(lambda:0))
     for seg1 in corr_dict:
@@ -257,22 +270,31 @@ class PhonCorrelator:
             seg1_totals = sum(corr_dict[seg1].values())
             for seg2 in corr_dict[seg1]:
                 cond_prob = corr_dict[seg1][seg2] / seg1_totals
-                try:
-                    p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
-                except ZeroDivisionError:
-                    breakpoint()
+                p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
                 joint_prob = cond_prob * p_ind1
                 corr_dict[seg1][seg2] = joint_prob
                     
         # Get set of all possible phoneme correspondences
-        segment_pairs = set([(seg1, seg2)
-                         for seg1 in l1.phonemes 
-                         for seg2 in l2.phonemes])
+        segment_pairs = set(
+            [
+                (seg1, seg2)
+                for seg1 in l1.phonemes 
+                for seg2 in l2.phonemes
+            ]
+        )
+        # Extend with any more complex ngram correspondences discovered
+        segment_pairs.update(
+            [
+                (corr1, corr2) 
+                for corr1 in corr_dict 
+                for corr2 in corr_dict[corr1]
+                if corr1 not in l1.phonemes or corr2 not in l2.phonemes
+            ]
+        )
             
         # Calculate PMI for all phoneme pairs
         pmi_dict = defaultdict(lambda:defaultdict(lambda:0))
-        for segment_pair in segment_pairs:
-            seg1, seg2 = segment_pair
+        for seg1, seg2 in segment_pairs:
             p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
             p_ind2 = l2.phonemes[seg2] if not isinstance(seg2, tuple) else l2.bigram_probability(seg2)
             p_ind = p_ind1 * p_ind2
@@ -425,15 +447,7 @@ class PhonCorrelator:
         
         # Average together the PMI estimations from each sample
         if samples > 1:
-            p1_all = set(p for sample_n in sample_results for p in sample_results[sample_n])
-            p2_all = set(p2 for sample_n in sample_results for p1 in sample_results[sample_n] for p2 in sample_results[sample_n][p1])
-            results = defaultdict(lambda:defaultdict(lambda:0))
-            for p1 in p1_all:
-                p1_dict = defaultdict(lambda:[])
-                for p2 in p2_all:
-                    for sample_n in sample_results:
-                        p1_dict[p2].append(sample_results[sample_n][p1][p2])
-                    results[p1][p2] = mean(p1_dict[p2])
+            results = average_nested_dicts(list(sample_results.values()))
         else:
             results = sample_results[0]
 
