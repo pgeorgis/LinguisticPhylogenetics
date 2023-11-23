@@ -281,31 +281,38 @@ class LexicalDataset:
         if save:
             self.write_phoneme_pmi()
 
-    def load_phoneme_pmi(self, pmi_dir=None, excepted=[], **kwargs):
+    def load_phoneme_pmi(self, pmi_dir=None, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
         
         # Designate the default directory to search for if no alternative is provided
         if pmi_dir is None:
             pmi_dir = os.path.join(self.phone_corr_dir, 'pmi')
         
+        def str2ngram(str, join_ch='_'):
+            ngram = str.split(join_ch)
+            if len(ngram) > 1:
+                return tuple(ngram)
+            else:
+                return str
+        
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                pmi_file = os.path.join(pmi_dir, lang1.name, lang2.name, 'phonPMI.csv')
+                pmi_file = os.path.join(pmi_dir, lang1.name, lang2.name, 'phonPMI.tsv')
                 
                 # Try to load the file of saved PMI values, otherwise calculate PMI first
                 if not os.path.exists(pmi_file):
                     correlator = lang1.get_phoneme_correlator(lang2)
                     correlator.calc_phoneme_pmi(**kwargs)
                     correlator.write_phoneme_pmi(outfile=pmi_file)
-                pmi_data = pd.read_csv(pmi_file)
+                pmi_data = pd.read_csv(pmi_file, sep=sep)
             
                 # Iterate through the dataframe and save the PMI values to the Language
                 # class objects' phoneme_pmi attribute
                 for index, row in pmi_data.iterrows():
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     pmi_value = row['PMI']
-                    lang1.phoneme_pmi[lang2][phone1][phone2] = pmi_value
-                    lang2.phoneme_pmi[lang1][phone2][phone1] = pmi_value
+                    lang1.phoneme_pmi[lang2][str2ngram(phone1)][str2ngram(phone2)] = pmi_value
+                    lang2.phoneme_pmi[lang1][str2ngram(phone2)][str2ngram(phone1)] = pmi_value
 
     def write_phoneme_pmi(self, **kwargs):
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):

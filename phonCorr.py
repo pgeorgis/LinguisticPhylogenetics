@@ -866,19 +866,32 @@ class PhonCorrelator:
         
         return surprisal_results, phon_env_surprisal
 
-    def write_phoneme_pmi(self, outfile=None, threshold=0.0001):
+    def write_phoneme_pmi(self, outfile=None, threshold=0.0001, sep='\t'):
         # Save calculated PMI values to file
         if outfile is None:
-            outfile = os.path.join(self.pmi_log_dir, 'phonPMI.csv')
+            outfile = os.path.join(self.pmi_log_dir, 'phonPMI.tsv')
+            
+        def ngram2str(ngram, join_ch='_'):
+            if isinstance(ngram, tuple):
+                return '_'.join(ngram)
+            return ngram
 
+        # Save all segment pairs with non-zero PMI values to file
+        # Skip extremely small decimals that are close to zero
+        lines = []
+        for seg1 in self.pmi_dict:
+            for seg2 in self.pmi_dict[seg1]:
+                pmi_val = self.pmi_dict[seg1][seg2]
+                if abs(pmi_val) > threshold:
+                    line = [ngram2str(seg1), ngram2str(seg2), str(pmi_val)]
+                    lines.append(line)
+        # Sort PMI in descending order
+        lines = sorted(lines, key=lambda x:x[-1], reverse=True)
+        lines = '\n'.join([sep.join(line) for line in lines])
+        
         with open(outfile, 'w') as f:
-            f.write('Phone1,Phone2,PMI\n')
-            # Save all segment pairs with non-zero PMI values to file
-            # Skip extremely small decimals that are close to zero
-            for seg1 in self.pmi_dict:
-                for seg2 in self.pmi_dict[seg1]:
-                    if abs(self.pmi_dict[seg1][seg2]) > threshold:
-                        f.write(f'{seg1},{seg2},{self.pmi_dict[seg1][seg2]}\n')
+            header = sep.join(['Phone1', 'Phone2', 'PMI'])
+            f.write(f'{header}\n{lines}')
 
     def _log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
         iter_log = []
