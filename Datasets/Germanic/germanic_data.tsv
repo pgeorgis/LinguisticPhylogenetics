@@ -407,7 +407,7 @@ Proto-Germanic	Proto-Germanic			apple_NOUN	apaliją	ˈɑpɑlijɑ̃	ˈɑ p ɑ l i
 Gothic	Gothic			apple_NOUN		ˈapel	ˈa p e l		apple_NOUN_1			
 Old Norse	Old Norse			apple_NOUN	epli	ˈɛpli	ˈɛ p l i		apple_NOUN_1			
 Icelandic	Icelandic			apple_NOUN	epli	ˈɛʰplɪ	ˈɛ ʰp l ɪ		apple_NOUN_1			
-Faroese	Faroese			apple_NOUN	epli	ˈeːʰplɪ	ˈeːʰ p l ɪ		apple_NOUN_1			
+Faroese	Faroese			apple_NOUN	epli	ˈeːʰplɪ	ˈeː ʰp l ɪ		apple_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			apple_NOUN	eple	ˈɛple	ˈɛ p l e		apple_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			apple_NOUN	eple	ˈɛplə	ˈɛ p l ə		apple_NOUN_1			
 Danish	Danish			apple_NOUN	æble	ˈeːb̥lə	ˈeː b̥ l ə		apple_NOUN_1			
@@ -633,7 +633,7 @@ Bavarian	Bavarian			bone_NOUN	Boa	b̥ˈoɐ̯	b̥ ˈoɐ̯		bone_NOUN_1
 Proto-Germanic	Proto-Germanic			boat_NOUN	baitaz	bˈɑi̯tɑz	b ˈɑi̯ t ɑ z		boat_NOUN_1			
 Old Norse	Old Norse			boat_NOUN	bátr	bˈɑːtr	b ˈɑː t r		boat_NOUN_1			
 Icelandic	Icelandic			boat_NOUN	bátur	b̥ˈaːu̯tʏr̥	b̥ ˈaːu̯ t ʏ r̥		boat_NOUN_1			
-Faroese	Faroese			boat_NOUN	bátur	b̥ˈɔ̯aːʰtʊɹ	b̥ ˈɔ̯aːʰ t ʊ ɹ		boat_NOUN_1			
+Faroese	Faroese			boat_NOUN	bátur	b̥ˈɔ̯aːʰtʊɹ	b̥ ˈɔ̯aː ʰt ʊ ɹ		boat_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			boat_NOUN	båt	bˈoːt	b ˈoː t		boat_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			boat_NOUN	båt	bˈoːt	b ˈoː t		boat_NOUN_1			
 Danish	Danish			boat_NOUN	båd	b̥ˈɔˀð̞ˠ	b̥ ˈɔˀ ð̞ˠ		boat_NOUN_1			
@@ -1411,7 +1411,7 @@ Dutch	Dutch			dream_NOUN	droom	dɾˈoːm	d ɾ ˈoː m		dream_NOUN_1
 Afrikaans	Afrikaans			dream_NOUN	droom	drˈʊə̯m	d r ˈʊə̯ m		dream_NOUN_1			
 West Flemish	West Flemish			dream_NOUN	droom	dɾˈoːm	d ɾ ˈoː m		dream_NOUN_1			
 Limburgish	Limburgish			dream_NOUN	droum	dʀˈɔːm	d ʀ ˈɔː m		dream_NOUN_1			
-Ripuarian	Ripuarian			dream_NOUN	Draum	dʀˈaʊ̯m	d ʀ ˈaʊ̯ m		dream_NOUN_1			
+Ripuarian	Ripuarian			dream_NOUN	Droom	dʀˈoːm	d ʀ ˈoː m		dream_NOUN_1			
 Luxembourgish	Luxembourgish			dream_NOUN	Dram	dʀˈaːm	d ʀ ˈaː m		dream_NOUN_1			
 Pennsylvania German	Pennsylvania German			dream_NOUN	Draam	dɾˈɔːm	d ɾ ˈɔː m		dream_NOUN_1			
 German	German			dream_NOUN	Traum	tʰʁˈaʊ̯m	tʰ ʁ ˈaʊ̯ m		dream_NOUN_1			
@@ -1420,6 +1420,34 @@ Swabian	Swabian			dream_NOUN	Draum	dʁˈao̯m	d ʁ ˈao̯ m		dream_NOUN_1
 Alsatian	Alsatian			dream_NOUN	Traum	tʁˈʊːm	t ʁ ˈʊː m		dream_NOUN_1			
 Swiss German	Swiss German			dream_NOUN	Traum	trˈau̯m	t r ˈau̯ m		dream_NOUN_1			
 Bavarian	Bavarian			dream_NOUN	Dràm	d̥rˈaːm	d̥ r ˈaː m		dream_NOUN_1			
+Proto-Germanic	Proto-Germanic			dream_VERB	draumijaną	drˈɑu̯mijɑnɑ̃	d r ˈɑu̯ m i j ɑ n ɑ̃		dream_VERB_1			
+Old Norse	Old Norse			dream_VERB	dreyma	drˈøy̯ma	d r ˈøy̯ m a		dream_VERB_1			
+Icelandic	Icelandic			dream_VERB	dreyma	d̥rˈeːi̯ma	d̥ r ˈeːi̯ m a		dream_VERB_1			
+Faroese	Faroese			dream_VERB	droyma	d̥ɹˈɔːi̯ma	d̥ ɹ ˈɔːi̯ m a		dream_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			dream_VERB	drøyma	dɾˈœʏ̯mɑ	d ɾ ˈœʏ̯ m ɑ		dream_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			dream_VERB	drømme	dɾˈœmmə	d ɾ ˈœ m m ə		dream_VERB_1			
+Danish	Danish			dream_VERB	drømme	d̥ʁˈœmə	d̥ ʁ ˈœ m ə		dream_VERB_1			
+Swedish	Swedish			dream_VERB	drömma	drˈœmma	d r ˈœ m m a		dream_VERB_1			
+English	English			dream_VERB	dream	dɹˈiːm	d ɹ ˈiː m		dream_VERB_1			
+American English	American English			dream_VERB	dream	dɹˈim	d ɹ ˈi m		dream_VERB_1			
+Old English	Old English			dream_VERB	drīeman	drˈiːy̯mɑn	d r ˈiːy̯ m ɑ n		dream_VERB_1			
+Saterland Frisian	Saterland Frisian			dream_VERB	dreme	drˈeːmə	d r ˈeː m ə		dream_VERB_1			
+North Frisian	North Frisian			dream_VERB	driime	drˈiːmə	d r ˈiː m ə		dream_VERB_1			
+Westphalian	Westphalian			dream_VERB	draimen	drˈaɪ̯mn̩	d r ˈaɪ̯ m n̩		dream_VERB_1			
+Eastphalian	Eastphalian			dream_VERB	drömen	drˈøːmn̩	d r ˈøː m n̩		dream_VERB_1			
+Northern Low Saxon	Northern Low Saxon			dream_VERB	drömen	drˈɔʏ̯m	d r ˈɔʏ̯ m		dream_VERB_1			
+East Low German	East Low German			dream_VERB	drömen	drˈɔʏ̯m	d r ˈɔʏ̯ m		dream_VERB_1			
+Dutch	Dutch			dream_VERB	dromen	dɾˈoːmən	d ɾ ˈoː m ə n		dream_VERB_1			
+Afrikaans	Afrikaans			dream_VERB	droom	drˈʊə̯m	d r ˈʊə̯ m		dream_VERB_1			
+Limburgish	Limburgish			dream_VERB	druime	dʀˈœi̯mə	d ʀ ˈœi̯ m ə		dream_VERB_1			
+Ripuarian	Ripuarian			dream_VERB	drööme	dʀˈøːmə	d ʀ ˈøː m ə		dream_VERB_1			
+Luxembourgish	Luxembourgish			dream_VERB	dreemen	dʀˈeːmən	d ʀ ˈeː m ə n		dream_VERB_1			
+Pennsylvania German	Pennsylvania German			dream_VERB	draame	dɾˈɔːmə	d ɾ ˈɔː m ə		dream_VERB_1			
+German	German			dream_VERB	träumen	tʰʁˈɔɪ̯mn̩	tʰ ʁ ˈɔɪ̯ m n̩		dream_VERB_1			
+Yiddish	Yiddish			dream_VERB	טרוימען	tʀˈɔɪ̯mən	t ʀ ˈɔɪ̯ m ə n		dream_VERB_1			
+Swabian	Swabian			dream_VERB	draima	dʁˈae̯ma	d ʁ ˈae̯ m a		dream_VERB_1			
+Alsatian	Alsatian			dream_VERB	traime	tʁˈai̯mə	t ʁ ˈai̯ m ə		dream_VERB_1			
+Swiss German	Swiss German			dream_VERB	tröime	trˈøi̯mə	t r ˈøi̯ m ə		dream_VERB_1			
 Proto-Germanic	Proto-Germanic			drink_VERB	drinkaną	drˈiŋkɑnɑ̃	d r ˈi ŋ k ɑ n ɑ̃		drink_VERB_1			
 Gothic	Gothic			drink_VERB	𐌳𐍂𐌹𐌲𐌺𐌰𐌽	drˈiŋkan	d r ˈi ŋ k a n		drink_VERB_1			
 Old Norse	Old Norse			drink_VERB	drekka	drˈekkɑ	d r ˈe k k ɑ		drink_VERB_1			
@@ -1610,7 +1638,7 @@ Bavarian	Bavarian			earth_NOUN	Ead	ˈeɐd̥	ˈe ɐ d̥		earth_NOUN_1
 Proto-Germanic	Proto-Germanic			eat_VERB	etaną	ˈetɑnɑ̃	ˈe t ɑ n ɑ̃		eat_VERB_1			
 Old Norse	Old Norse			eat_VERB	eta	ˈetɑ	ˈe t ɑ		eat_VERB_1			
 Icelandic	Icelandic			eat_VERB	éta	jˈɛta	j ˈɛ t a		eat_VERB_1			
-Faroese	Faroese			eat_VERB	eta	ˈeːʰta	ˈeːʰ t a		eat_VERB_1			
+Faroese	Faroese			eat_VERB	eta	ˈeːʰta	ˈeː ʰt a		eat_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			eat_VERB	eta	ˈeːtɑ	ˈeː t ɑ		eat_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			eat_VERB	ete	ˈeːtə	ˈeː t ə		eat_VERB_1			
 Danish	Danish			eat_VERB	æde	ˈɛːð̞ˠə	ˈɛː ð̞ˠ ə		eat_VERB_1			
@@ -3761,7 +3789,7 @@ Old English	Old English			child_NOUN	ċild	ʧˈiɫd	ʧ ˈi ɫ d		child_NOUN_1
 Proto-Germanic	Proto-Germanic			meat_NOUN	ketwą	kˈetwɑ̃	k ˈe t w ɑ̃		meat_NOUN_1			
 Old Norse	Old Norse			meat_NOUN	kjǫt	cʰjˈɔt	cʰ j ˈɔ t		meat_NOUN_1			
 Icelandic	Icelandic			meat_NOUN	kjöt	cʰjˈœt	cʰ j ˈœ t		meat_NOUN_1			
-Faroese	Faroese			meat_NOUN	kjøt	ʧʰˈøːʰt	ʧʰ ˈøːʰ t		meat_NOUN_1			
+Faroese	Faroese			meat_NOUN	kjøt	ʧʰˈøːʰt	ʧʰ ˈøː ʰt		meat_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			meat_NOUN	kjøt	çˈøːt	ç ˈøː t		meat_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			meat_NOUN	kjøtt	çˈœtt	ç ˈœ t t		meat_NOUN_1			
 Danish	Danish			meat_NOUN	kød	kʰˈœð̞ˠ	kʰ ˈœ ð̞ˠ		meat_NOUN_1			
@@ -4264,6 +4292,9 @@ Swiss German	Swiss German			might_NOUN	Macht	mˈɒχt	m ˈɒ χ t		might_NOUN_1
 Bavarian	Bavarian			might_NOUN	Mocht	mˈɔxt	m ˈɔ x t		might_NOUN_1			
 Proto-Germanic	Proto-Germanic			man_NOUN	mann-	mˈɑnn	m ˈɑ n n		man_NOUN_1			
 Gothic	Gothic			man_NOUN	𐌼𐌰𐌽𐌽𐌰	mˈanna	m ˈa n n a		man_NOUN_1			
+Old Norse	Old Norse			man_NOUN	maðr	mˈaðr	m ˈa ð r		man_NOUN_1			
+Icelandic	Icelandic			man_NOUN	maður	mˈaːðʏr̥	m ˈaː ð ʏ r̥		man_NOUN_1			
+Faroese	Faroese			man_NOUN	maður	mˈɛːa̯vʊɹ	m ˈɛːa̯ v ʊ ɹ		man_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			man_NOUN	mann	mˈɑnn	m ˈɑ n n		man_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			man_NOUN	mann	mˈɑnn	m ˈɑ n n		man_NOUN_1			
 Danish	Danish			man_NOUN	mand	mˈɛnˀ	m ˈɛ nˀ		man_NOUN_1			
@@ -4271,7 +4302,7 @@ Swedish	Swedish			man_NOUN	mann	mˈann	m ˈa n n		man_NOUN_1
 Scots	Scots			man_NOUN	man	mˈɑn	m ˈɑ n		man_NOUN_1			
 English	English			man_NOUN	man	mˈæn	m ˈæ n		man_NOUN_1			
 American English	American English			man_NOUN	man	mˈæn	m ˈæ n		man_NOUN_1			
-Old English	Old English			man_NOUN	mann	mˈɑnː	m ˈɑ nː		man_NOUN_1			
+Old English	Old English			man_NOUN	mann	mˈɑnn	m ˈɑ n n		man_NOUN_1			
 West Frisian	West Frisian			man_NOUN	man	mˈan	m ˈa n		man_NOUN_1			
 Saterland Frisian	Saterland Frisian			man_NOUN	Mon	mˈɔn	m ˈɔ n		man_NOUN_1			
 North Frisian	North Frisian			man_NOUN	moon	mˈɔːn	m ˈɔː n		man_NOUN_1			
@@ -4319,6 +4350,29 @@ Yiddish	Yiddish			person_NOUN	מענטש	mˈɛnʧ	m ˈɛ n ʧ		person_NOUN_1
 Alsatian	Alsatian			person_NOUN	Mensch	mˈenʃ	m ˈe n ʃ		person_NOUN_1			
 Swiss German	Swiss German			person_NOUN	Mänsch	mˈænʃ	m ˈæ n ʃ		person_NOUN_1			
 Bavarian	Bavarian			person_NOUN	Mensch	mˈɛnʃ	m ˈɛ n ʃ		person_NOUN_1			
+Proto-Germanic	Proto-Germanic			men_NOUN	manniz	mˈɑnniz	m ˈɑ n n i z		men_NOUN_1			
+Gothic	Gothic			men_NOUN	𐌼𐌰𐌽𐍃	mˈans	m ˈa n s		men_NOUN_1			
+Old Norse	Old Norse			men_NOUN	menn	mˈɛnn	m ˈɛ n n		men_NOUN_1			
+Icelandic	Icelandic			men_NOUN	menn	mˈɛnn	m ˈɛ n n		men_NOUN_1			
+Faroese	Faroese			men_NOUN	menn	mˈɛnn	m ˈɛ n n		men_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			men_NOUN	menn	mˈɛnn	m ˈɛ n n		men_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			men_NOUN	menn	mˈɛnn	m ˈɛ n n		men_NOUN_1			
+Danish	Danish			men_NOUN	mænd	mˈenˀ	m ˈe nˀ		men_NOUN_1			
+Swedish	Swedish			men_NOUN	män	mˈɛn	m ˈɛ n		men_NOUN_1			
+English	English			men_NOUN	men	mˈen	m ˈe n		men_NOUN_1			
+American English	American English			men_NOUN	men	mˈɛn	m ˈɛ n		men_NOUN_1			
+Old English	Old English			men_NOUN	menn	mˈɛnn	m ˈɛ n n		men_NOUN_1			
+Dutch	Dutch			men_NOUN	mannen	mˈɑnən	m ˈɑ n ə n		men_NOUN_1			
+Afrikaans	Afrikaans			men_NOUN	mans	mˈans	m ˈa n s		men_NOUN_1			
+Limburgish	Limburgish			men_NOUN	manne	mˈɑnə	m ˈɑ n ə		men_NOUN_1			
+Luxembourgish	Luxembourgish			men_NOUN	Männer	mˈænɐ	m ˈæ n ɐ		men_NOUN_1			
+Pennsylvania German	Pennsylvania German			men_NOUN	Menner	mˈɛnɑ	m ˈɛ n ɑ		men_NOUN_1			
+German	German			men_NOUN	Männer	mˈɛnɐ	m ˈɛ n ɐ		men_NOUN_1			
+Yiddish	Yiddish			men_NOUN	מענער	mˈɛnəʀ	m ˈɛ n ə ʀ		men_NOUN_1			
+Swabian	Swabian			men_NOUN	Männr	mˈɛnʌ	m ˈɛ n ʌ		men_NOUN_1			
+Alsatian	Alsatian			men_NOUN	Männer	mˈɛnəʁ	m ˈɛ n ə ʁ		men_NOUN_1			
+Swiss German	Swiss German			men_NOUN	Männer	mˈænnər	m ˈæ n n ə r		men_NOUN_1			
+Bavarian	Bavarian			men_NOUN	Månner	mˈɒnɐ	m ˈɒ n ɐ		men_NOUN_1			
 Proto-Germanic	Proto-Germanic			sea_NOUN	mari	mˈɑri	m ˈɑ r i		sea_NOUN_1			
 Gothic	Gothic			sea_NOUN	𐌼𐌰𐍂𐌴𐌹	mˈariː	m ˈa r iː		sea_NOUN_1			
 Old Norse	Old Norse			sea_NOUN	marr	mˈɑrr	m ˈɑ r r		sea_NOUN_1			
@@ -4342,7 +4396,7 @@ Icelandic	Icelandic			milk_NOUN_FEM	mjólk	mjˈɔu̯l̥k	m j ˈɔu̯ l̥ k		milk
 Faroese	Faroese			milk_NOUN_FEM	mjólk	mjˈœl̥k	m j ˈœ l̥ k		milk_NOUN_FEM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			milk_NOUN_FEM	mjølk	mjˈœlk	m j ˈœ l k		milk_NOUN_FEM_1			
 Bokmål Norwegian	Bokmål Norwegian			milk_NOUN_FEM	melk	mˈɛlk	m ˈɛ l k		milk_NOUN_FEM_1			
-Danish	Danish			milk_NOUN_FEM	mælk	mˈɛlˀk	m ˈɛ lˀ k		milk_NOUN_FEM_1			
+Danish	Danish			milk_NOUN_FEM	mælk	mˈelˀk	m ˈe lˀ k		milk_NOUN_FEM_1			
 Swedish	Swedish			milk_NOUN_FEM	mjölk	mjˈœlk	m j ˈœ l k		milk_NOUN_FEM_1			
 Scots	Scots			milk_NOUN_FEM	milk	mˈɪlk	m ˈɪ l k		milk_NOUN_FEM_1			
 English	English			milk_NOUN_FEM	milk	mˈɪɫk	m ˈɪ ɫ k		milk_NOUN_FEM_1			
@@ -4539,6 +4593,31 @@ Swabian	Swabian			mouse_NOUN_FEM	Maus	mˈao̯s	m ˈao̯ s		mouse_NOUN_FEM_1
 Alsatian	Alsatian			mouse_NOUN_FEM	Müs	mˈyːs	m ˈyː s		mouse_NOUN_FEM_1			
 Swiss German	Swiss German			mouse_NOUN_FEM	Muus	mˈuːs	m ˈuː s		mouse_NOUN_FEM_1			
 Bavarian	Bavarian			mouse_NOUN_FEM	Maus	mˈau̯s	m ˈau̯ s		mouse_NOUN_FEM_1			
+Proto-Germanic	Proto-Germanic			mice_NOUN	mūsiz	mˈuːsiz	m ˈuː s i z		mice_NOUN_1			
+Icelandic	Icelandic			mice_NOUN	mýs	mˈiːs	m ˈiː s		mice_NOUN_1			
+Faroese	Faroese			mice_NOUN	mýs	mˈʊ̯iːs	m ˈʊ̯iː s		mice_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			mice_NOUN	myser	mˈyːseɾ	m ˈyː s e ɾ		mice_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			mice_NOUN	mus	mˈʉːs	m ˈʉː s		mice_NOUN_1			
+Danish	Danish			mice_NOUN	mus	mˈuˀs	m ˈuˀ s		mice_NOUN_1			
+Swedish	Swedish			mice_NOUN	möss	mˈœss	m ˈœ s s		mice_NOUN_1			
+English	English			mice_NOUN	mice	mˈaɪ̯s	m ˈaɪ̯ s		mice_NOUN_1			
+American English	American English			mice_NOUN	mice	mˈaɪ̯s	m ˈaɪ̯ s		mice_NOUN_1			
+Old English	Old English			mice_NOUN	mȳs	mˈyːs	m ˈyː s		mice_NOUN_1			
+West Frisian	West Frisian			mice_NOUN	mûsen	mˈuːsən	m ˈuː s ə n		mice_NOUN_1			
+Saterland Frisian	Saterland Frisian			mice_NOUN	Muze	mˈuːzə	m ˈuː z ə		mice_NOUN_1			
+North Frisian	North Frisian			mice_NOUN	müs	mˈyːs	m ˈyː s		mice_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			mice_NOUN	Müüs	mˈyːs	m ˈyː s		mice_NOUN_1			
+Dutch	Dutch			mice_NOUN	muizen	mˈœy̯zən	m ˈœy̯ z ə n		mice_NOUN_1			
+Afrikaans	Afrikaans			mice_NOUN	muise	mˈœɪ̯sə	m ˈœɪ̯ s ə		mice_NOUN_1			
+Limburgish	Limburgish			mice_NOUN	muis	mˈœi̯s	m ˈœi̯ s		mice_NOUN_1			
+Luxembourgish	Luxembourgish			mice_NOUN	Mais	mˈɑɪ̯s	m ˈɑɪ̯ s		mice_NOUN_1			
+Pennsylvania German	Pennsylvania German			mice_NOUN	Meis	mˈaɪ̯s	m ˈaɪ̯ s		mice_NOUN_1			
+German	German			mice_NOUN	Mäuse	mˈɔʏ̯zə	m ˈɔʏ̯ z ə		mice_NOUN_1			
+Yiddish	Yiddish			mice_NOUN	מײַז	mˈaɪ̯z	m ˈaɪ̯ z		mice_NOUN_1			
+Swabian	Swabian			mice_NOUN	Meis	mˈae̯s	m ˈae̯ s		mice_NOUN_1			
+Alsatian	Alsatian			mice_NOUN	Miis	mˈiːs	m ˈiː s		mice_NOUN_1			
+Swiss German	Swiss German			mice_NOUN	Müüs	mˈyːs	m ˈyː s		mice_NOUN_1			
+Bavarian	Bavarian			mice_NOUN	Mais	mˈai̯s	m ˈai̯ s		mice_NOUN_1			
 Proto-Germanic	Proto-Germanic			fingernail_NOUN	naglaz	nˈɑɣlɑz	n ˈɑ ɣ l ɑ z		fingernail_NOUN_1			
 Gothic	Gothic			fingernail_NOUN	𐌽𐌰𐌲𐌻𐍃	nˈaɡls	n ˈa ɡ l s		fingernail_NOUN_1			
 Old Norse	Old Norse			fingernail_NOUN	nagl	nˈɑɣl	n ˈɑ ɣ l		fingernail_NOUN_1			
@@ -4665,7 +4744,7 @@ Alsatian	Alsatian			name_NOUN	Nàmme	nˈɒmə	n ˈɒ m ə		name_NOUN_1
 Swiss German	Swiss German			name_NOUN	Naame	nˈɒːmə	n ˈɒː m ə		name_NOUN_1			
 Bavarian	Bavarian			name_NOUN	Nama	nˈaːma	n ˈaː m a		name_NOUN_1			
 Proto-Germanic	Proto-Germanic			nose_NOUN	nasō	nˈɑsɔː	n ˈɑ s ɔː		nose_NOUN_1			
-Old Norse	Old Norse			nose_NOUN	nef	nˈev	n ˈe v		nose_NOUN_1			
+Old Norse	Old Norse			nose_NOUN	nef	nˈɛv	n ˈɛ v		nose_NOUN_1			
 Icelandic	Icelandic			nose_NOUN	nef	nˈɛːv	n ˈɛː v		nose_NOUN_1			
 Faroese	Faroese			nose_NOUN	nøs	nˈøːs	n ˈøː s		nose_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			nose_NOUN	nase	nˈɑːse	n ˈɑː s e		nose_NOUN_1			
@@ -5361,6 +5440,36 @@ Yiddish	Yiddish			sharp_ADJ	שאַרף	ʃˈaʀf	ʃ ˈa ʀ f		sharp_ADJ_1
 Swabian	Swabian			sharp_ADJ	scharf	ʃˈaʕf	ʃ ˈa ʕ f		sharp_ADJ_1			
 Swiss German	Swiss German			sharp_ADJ	scharpf	ʃˈarp͡f	ʃ ˈa r p͡f		sharp_ADJ_1			
 Bavarian	Bavarian			sharp_ADJ	scharf	ʃˈarf	ʃ ˈa r f		sharp_ADJ_1			
+Proto-Germanic	Proto-Germanic			beautiful_ADJ	skauniz	skˈɑu̯niz	s k ˈɑu̯ n i z		beautiful_ADJ_1			
+Gothic	Gothic			beautiful_ADJ	𐍃𐌺𐌰𐌿𐌽𐍃	skˈɔːns	s k ˈɔː n s		beautiful_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			beautiful_ADJ	skjønn	ʃˈœnn	ʃ ˈœ n n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
+Bokmål Norwegian	Bokmål Norwegian			beautiful_ADJ	skjønn	ʃˈœnn	ʃ ˈœ n n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
+Danish	Danish			beautiful_ADJ	skøn	skˈœˀn	s k ˈœˀ n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
+Swedish	Swedish			beautiful_ADJ	skön	ɧˈøːn	ɧ ˈøː n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
+Scots	Scots			beautiful_ADJ	shene	ʃˈiːn	ʃ ˈiː n		beautiful_ADJ_1			
+English	English			beautiful_ADJ	sheen	ʃˈiːn	ʃ ˈiː n		beautiful_ADJ_1			
+American English	American English			beautiful_ADJ	sheen	ʃˈin	ʃ ˈi n		beautiful_ADJ_1			
+Old English	Old English			beautiful_ADJ	sċīene	ʃˈiːy̯ne	ʃ ˈiːy̯ n e		beautiful_ADJ_1			
+West Frisian	West Frisian			beautiful_ADJ	skjin	skjˈɪn	s k j ˈɪ n		beautiful_ADJ_1			
+Saterland Frisian	Saterland Frisian			beautiful_ADJ	skeen	skˈeːn	s k ˈeː n		beautiful_ADJ_1			
+North Frisian	North Frisian			beautiful_ADJ	schien	ʃˈiːn	ʃ ˈiː n		beautiful_ADJ_1			
+Westphalian	Westphalian			beautiful_ADJ	schöön	ʃˈøːn	ʃ ˈøː n		beautiful_ADJ_1			
+Eastphalian	Eastphalian			beautiful_ADJ	schöne	ʃˈøːnə	ʃ ˈøː n ə		beautiful_ADJ_1			
+Northern Low Saxon	Northern Low Saxon			beautiful_ADJ	schöön	ʃˈɔʏ̯n	ʃ ˈɔʏ̯ n		beautiful_ADJ_1			
+East Low German	East Low German			beautiful_ADJ	schäun	ʃˈɔʏ̯n	ʃ ˈɔʏ̯ n		beautiful_ADJ_1			
+Dutch	Dutch			beautiful_ADJ	schoon	sχˈoːn	s χ ˈoː n		beautiful_ADJ_1			
+Afrikaans	Afrikaans			beautiful_ADJ	skoon	skˈʊə̯n	s k ˈʊə̯ n		beautiful_ADJ_1			
+West Flemish	West Flemish			beautiful_ADJ	schoon	ʃhˈoːn	ʃ h ˈoː n		beautiful_ADJ_1			
+Limburgish	Limburgish			beautiful_ADJ	sjoen	ʃˈun	ʃ ˈu n		beautiful_ADJ_1			
+Ripuarian	Ripuarian			beautiful_ADJ	schün	ʃˈyːn	ʃ ˈyː n		beautiful_ADJ_1			
+Luxembourgish	Luxembourgish			beautiful_ADJ	schéin	ʃˈəɪ̯n	ʃ ˈəɪ̯ n		beautiful_ADJ_1			
+Pennsylvania German	Pennsylvania German			beautiful_ADJ	schee	ʃˈeː	ʃ ˈeː		beautiful_ADJ_1			
+German	German			beautiful_ADJ	schön	ʃˈøːn	ʃ ˈøː n		beautiful_ADJ_1			
+Yiddish	Yiddish			beautiful_ADJ	שיין	ʃˈɛɪ̯n	ʃ ˈɛɪ̯ n		beautiful_ADJ_1			
+Swabian	Swabian			beautiful_ADJ	schee	ʃˈeː	ʃ ˈeː		beautiful_ADJ_1			
+Alsatian	Alsatian			beautiful_ADJ	scheen	ʃˈeːn	ʃ ˈeː n		beautiful_ADJ_1			
+Swiss German	Swiss German			beautiful_ADJ	schöön	ʃˈøːn	ʃ ˈøː n		beautiful_ADJ_1			
+Bavarian	Bavarian			beautiful_ADJ	schee	ʃˈeː	ʃ ˈeː		beautiful_ADJ_1			
 Proto-Germanic	Proto-Germanic			sheep_NOUN	skēpą	skˈɛːpɑ̃	s k ˈɛː p ɑ̃		sheep_NOUN_2			
 Scots	Scots			sheep_NOUN	sheep	ʃˈiːp	ʃ ˈiː p		sheep_NOUN_2			
 English	English			sheep_NOUN	sheep	ʃˈiːp	ʃ ˈiː p		sheep_NOUN_2			
