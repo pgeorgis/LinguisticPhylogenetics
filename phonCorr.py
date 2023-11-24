@@ -1054,8 +1054,8 @@ class NullCompacter:
                 self.compact_next_ngram(alignment, gap_ch, i, ngram, ngram_i, gap_index)
     
     def select_valid_corrs(self):
-        rev_compacted_corr_counts = reverse_corr_dict(self.compacted_corr_counts)
-        rev_corr_counts = reverse_corr_dict(self.corr_counts)
+        #rev_compacted_corr_counts = reverse_corr_dict(self.compacted_corr_counts)
+        #rev_corr_counts = reverse_corr_dict(self.corr_counts)
         #to_prune, to_adjust = [], []
         valid_corrs = defaultdict(lambda:[])
         for corr in self.compacted_corr_counts:
@@ -1063,10 +1063,13 @@ class NullCompacter:
                 gap_segs, larger_ngram = self.compacted_corr_counts[corr], corr
                 for gap_seg in gap_segs:
                     comp_count = self.compacted_corr_counts[larger_ngram][gap_seg]
-                    rev_comp_count = rev_compacted_corr_counts[gap_seg][larger_ngram]
+                    #rev_comp_count = rev_compacted_corr_counts[gap_seg][larger_ngram]
                     corr_count = sum(self.corr_counts[(part,)].get((gap_seg,), 0) for part in larger_ngram)
-                    rev_corr_count = sum(rev_corr_counts[(gap_seg,)].get((part,), 0) for part in larger_ngram)
-                    if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
+                    #rev_corr_count = sum(rev_corr_counts[(gap_seg,)].get((part,), 0) for part in larger_ngram)
+                    # if corr == ('s', 'k'):
+                    #     breakpoint()
+                    #if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
+                    if comp_count >= corr_count:
                         valid_corrs[corr].append(gap_seg)
                     #     to_adjust.append((corr, gap_seg, comp_count))
                     # else:
@@ -1075,10 +1078,11 @@ class NullCompacter:
                 gap_seg, larger_ngrams = corr, self.compacted_corr_counts[corr]
                 for larger_ngram in larger_ngrams:
                     comp_count = self.compacted_corr_counts[gap_seg][larger_ngram]
-                    rev_comp_count = rev_compacted_corr_counts[larger_ngram][gap_seg]
+                    #rev_comp_count = rev_compacted_corr_counts[larger_ngram][gap_seg]
                     corr_count = sum([self.corr_counts[(gap_seg,)].get((larger_ngram[i],), 0) for i, part in enumerate(larger_ngram)])
-                    rev_corr_count = sum(rev_corr_counts[(part,)][(gap_seg,)] for part in larger_ngram)
-                    if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
+                    #rev_corr_count = sum(rev_corr_counts[(part,)][(gap_seg,)] for part in larger_ngram)
+                    #if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
+                    if comp_count >= corr_count:
                         valid_corrs[corr].append(larger_ngram)
                     #     to_adjust.append((corr, larger_ngram, comp_count))
                     # else:
