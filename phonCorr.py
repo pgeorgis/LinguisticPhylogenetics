@@ -190,7 +190,7 @@ class PhonCorrelator:
             #complex_ngrams = null_compacter.combine_corrs()        
             # Prune any without at least 2 occurrences
             null_compacter.prune(min_val=2)
-            self.complex_ngrams = null_compacter.compacted_corr_counts
+            self.complex_ngrams = null_compacter.select_valid_corrs()
             compacted_alignments = self.compact_alignments(alignment_list, self.complex_ngrams)
             adjusted_corrs = self.correspondence_probs(
                 compacted_alignments, 
@@ -1053,8 +1053,11 @@ class NullCompacter:
             elif len(alignment) > 1: # initial with following ngram
                 self.compact_next_ngram(alignment, gap_ch, i, ngram, ngram_i, gap_index)
     
-    def get_valid_corrs(self, rev_compacted_corr_counts, rev_corr_counts):
-        to_prune, to_adjust = [], []
+    def select_valid_corrs(self):
+        rev_compacted_corr_counts = reverse_corr_dict(self.compacted_corr_counts)
+        rev_corr_counts = reverse_corr_dict(self.corr_counts)
+        #to_prune, to_adjust = [], []
+        valid_corrs = defaultdict(lambda:[])
         for corr in self.compacted_corr_counts:
             if isinstance(corr, tuple): # e.g. ('s', 'k')
                 gap_segs, larger_ngram = self.compacted_corr_counts[corr], corr
@@ -1064,9 +1067,10 @@ class NullCompacter:
                     corr_count = sum(self.corr_counts[(part,)].get((gap_seg,), 0) for part in larger_ngram)
                     rev_corr_count = sum(rev_corr_counts[(gap_seg,)].get((part,), 0) for part in larger_ngram)
                     if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
-                        to_adjust.append((corr, gap_seg, comp_count))
-                    else:
-                        to_prune.append((corr, gap_seg))
+                        valid_corrs[corr].append(gap_seg)
+                    #     to_adjust.append((corr, gap_seg, comp_count))
+                    # else:
+                    #     to_prune.append((corr, gap_seg))
             else: # str e.g. 'ʃ'
                 gap_seg, larger_ngrams = corr, self.compacted_corr_counts[corr]
                 for larger_ngram in larger_ngrams:
@@ -1075,34 +1079,32 @@ class NullCompacter:
                     corr_count = sum([self.corr_counts[(gap_seg,)].get((larger_ngram[i],), 0) for i, part in enumerate(larger_ngram)])
                     rev_corr_count = sum(rev_corr_counts[(part,)][(gap_seg,)] for part in larger_ngram)
                     if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
-                        to_adjust.append((corr, larger_ngram, comp_count))
-                    else:
-                        to_prune.append((corr, larger_ngram))
-        return to_prune, to_adjust
+                        valid_corrs[corr].append(larger_ngram)
+                    #     to_adjust.append((corr, larger_ngram, comp_count))
+                    # else:
+                    #     to_prune.append((corr, larger_ngram))
 
-    def combine_corrs(self, min_val=2):
-        rev_compacted_corr_counts = reverse_corr_dict(self.compacted_corr_counts)
-        rev_corr_counts = reverse_corr_dict(self.corr_counts)
-        to_prune, to_adjust = self.get_valid_corrs(rev_compacted_corr_counts, rev_corr_counts)
+        return valid_corrs
 
-        # Update counts of valid corrs
-        for corr, nested_corr, count in to_adjust:
-            if isinstance(corr, tuple):
-                for part in corr:
-                    self.corr_counts[(part,)][nested_corr] -= count
-            else: # str
-                for part in self.compacted_corr_counts[corr]:
-                    self.corr_counts[(corr,)][(part,)] -= count
-        for corr, nested_corr in to_prune:
-            del self.compacted_corr_counts[corr][nested_corr]
-        self.prune(min_val=min_val)
-        for corr in self.compacted_corr_counts:
-            if isinstance(corr, tuple):
-                self.corr_counts[corr] = self.compacted_corr_counts[corr]
-            else:
-                self.corr_counts[(corr,)] = self.compacted_corr_counts[corr]
+    # def combine_corrs(self, min_val=2):
+    #     # Update counts of valid corrs
+    #     for corr, nested_corr, count in to_adjust:
+    #         if isinstance(corr, tuple):
+    #             for part in corr:
+    #                 self.corr_counts[(part,)][nested_corr] -= count
+    #         else: # str
+    #             for part in self.compacted_corr_counts[corr]:
+    #                 self.corr_counts[(corr,)][(part,)] -= count
+    #     for corr, nested_corr in to_prune:
+    #         del self.compacted_corr_counts[corr][nested_corr]
+    #     self.prune(min_val=min_val)
+    #     for corr in self.compacted_corr_counts:
+    #         if isinstance(corr, tuple):
+    #             self.corr_counts[corr] = self.compacted_corr_counts[corr]
+    #         else:
+    #             self.corr_counts[(corr,)] = self.compacted_corr_counts[corr]
 
-        return self.corr_counts
+    #     return self.corr_counts
 
     def prune(self, min_val=2):
         self.compacted_corr_counts = prune_corrs(self.compacted_corr_counts, min_val=min_val)
