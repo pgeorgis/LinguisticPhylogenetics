@@ -1,7 +1,8 @@
 from collections import defaultdict
 import datetime
+from functools import lru_cache
 import pandas as pd
-from math import log, sqrt, exp
+from math import log, sqrt, exp, factorial
 import re, operator, os
 from unidecode import unidecode
 from numpy import array, amax, zeros, array_split
@@ -167,7 +168,22 @@ def normalize_dict(dict_, default=False, lmbda=None, return_=True):
         return normalized
    
 
-# INFORMATION CONTENT
+# NGRAMS and INFORMATION CONTENT
+@lru_cache(maxsize=None)
+def count_subsequences(seq_len, subseq_len):
+    if subseq_len > seq_len:
+        return 0
+    
+    # Calculate factorials
+    L_factorial = factorial(seq_len)
+    S_factorial = factorial(subseq_len)
+    LS_factorial = factorial(seq_len - subseq_len)
+
+    # Calculate the binomial coefficient
+    num_subsequences = L_factorial // (S_factorial * LS_factorial)
+
+    return num_subsequences
+
 def flatten_ngram(nested_ngram):
     flat = []
     for item in nested_ngram:
@@ -179,6 +195,10 @@ def flatten_ngram(nested_ngram):
 
 def pointwise_mutual_info(p_joint, p_x, p_y):
     return log(p_joint/(p_x*p_y)) # TODO should it be log base 2?
+
+def bayes_pmi(pX_given_Y, pX):  # TODO should it be log base 2?
+    # via Bayes Theorem : pmi = log( p(x,y) / ( p(x) * p(y) ) ) = log( p(x|y) / p(x) )
+    return log(pX_given_Y/pX)
 
 def surprisal(p):
     try:
