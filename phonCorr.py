@@ -7,7 +7,7 @@ import random
 import re
 from scipy.stats import norm
 from statistics import mean, stdev
-from auxFuncs import normalize_dict, default_dict, surprisal, adaptation_surprisal, dict_tuplelist, flatten_ngram
+from auxFuncs import normalize_dict, default_dict, surprisal, adaptation_surprisal, pointwise_mutual_info, dict_tuplelist, flatten_ngram
 from phonAlign import Alignment, compatible_segments, visual_align
 
 def sort_wordlist(wordlist):
@@ -255,32 +255,26 @@ class PhonCorrelator:
     #         independent_probs[phoneme1] = phoneme1_probs
     #     return independent_probs
     
-    def phoneme_pmi(self, 
-                    dependent_probs,
-                    #independent_probs=None,
-                    l1=None, 
-                    l2=None):
-        """
-        dependent_probs : nested dictionary of conditional correspondence probabilities in potential cognates
-        independent_probs : None, or nested dictionary of conditional correspondence probabilities in non-cognates
-        """
+    def joint_probs(self, conditional_counts, l1=None, l2=None):
+        """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
         l1, l2 = self.langs(l1=l1, l2=l2)
-        
-        # # If no independent probabilities are specified, 
-        # # use product of phoneme probabilities by default
-        # if independent_probs is None:
-        #     independent_probs = self.default_independent_corr_probs(l1=l1, l2=l2)
-
-        # Calculate joint probabilities from conditional probabilities
-        #for corr_dict in [dependent_probs, independent_probs]:
-        corr_dict = dependent_probs
-        for seg1 in corr_dict:
-            seg1_totals = sum(corr_dict[seg1].values())
-            for seg2 in corr_dict[seg1]:
-                cond_prob = corr_dict[seg1][seg2] / seg1_totals
+        joint_prob_dist = defaultdict(lambda:{})
+        for seg1 in conditional_counts:
+            seg1_totals = sum(conditional_counts[seg1].values())
+            for seg2 in conditional_counts[seg1]:
+                cond_prob = conditional_counts[seg1][seg2] / seg1_totals
                 p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
                 joint_prob = cond_prob * p_ind1
-                corr_dict[seg1][seg2] = joint_prob
+                joint_prob_dist[seg1][seg2] = joint_prob
+        return joint_prob_dist
+    
+    def phoneme_pmi(self, conditional_counts, l1=None, l2=None):
+        """
+        conditional_probs : nested dictionary of conditional correspondence probabilities in potential cognates
+        """
+        l1, l2 = self.langs(l1=l1, l2=l2)
+        # Convert conditional probabilities to joint probabilities
+        joint_prob_dist = self.joint_probs(conditional_counts, l1=l1, l2=l2)
                     
         # Get set of all possible phoneme correspondences
         segment_pairs = set(
@@ -294,8 +288,8 @@ class PhonCorrelator:
         segment_pairs.update(
             [
                 (corr1, corr2) 
-                for corr1 in corr_dict 
-                for corr2 in corr_dict[corr1]
+                for corr1 in joint_prob_dist 
+                for corr2 in joint_prob_dist[corr1]
                 if corr1 not in l1.phonemes or corr2 not in l2.phonemes
             ]
         )
@@ -306,10 +300,8 @@ class PhonCorrelator:
             p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
             p_ind2 = l2.phonemes[seg2] if not isinstance(seg2, tuple) else l2.bigram_probability(seg2)
             p_ind = p_ind1 * p_ind2
-            cognate_prob = dependent_probs.get(seg1, {}).get(seg2, p_ind)
-            #noncognate_prob = independent_probs[seg1].get(seg2, p_ind)
-            #pmi_dict[seg1][seg2] = log(cognate_prob/noncognate_prob)
-            pmi_dict[seg1][seg2] = log(cognate_prob/p_ind)
+            joint_prob = joint_prob_dist.get(seg1, {}).get(seg2, p_ind)
+            pmi_dict[seg1][seg2] = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
             
         return pmi_dict
 
@@ -351,8 +343,8 @@ class PhonCorrelator:
         for d in [synonyms_radius1, synonyms_radius2]:
             for seg1 in d:
                 d[seg1] = normalize_dict(d[seg1])
-        pmi_step1 = [self.phoneme_pmi(dependent_probs=synonyms_radius1, l1=self.lang1, l2=self.lang2),
-                     self.phoneme_pmi(dependent_probs=synonyms_radius2, l1=self.lang2, l2=self.lang1)]
+        pmi_step1 = [self.phoneme_pmi(conditional_counts=synonyms_radius1, l1=self.lang1, l2=self.lang2),
+                     self.phoneme_pmi(conditional_counts=synonyms_radius2, l1=self.lang2, l2=self.lang1)]
         pmi_dict_l1l2, pmi_dict_l2l1 = pmi_step1
         
         # Average together the PMI values from each direction
@@ -1066,11 +1058,11 @@ class NullCompacter:
                     #rev_comp_count = rev_compacted_corr_counts[gap_seg][larger_ngram]
                     corr_count = sum(self.corr_counts[(part,)].get((gap_seg,), 0) for part in larger_ngram)
                     #rev_corr_count = sum(rev_corr_counts[(gap_seg,)].get((part,), 0) for part in larger_ngram)
-                    # if corr == ('s', 'k'):
-                    #     breakpoint()
                     #if (comp_count >= corr_count) or (rev_comp_count >= rev_corr_count):
                     if comp_count >= corr_count:
                         valid_corrs[corr].append(gap_seg)
+                        # if corr == ('s', 'k'):
+                        #     breakpoint()
                     #     to_adjust.append((corr, gap_seg, comp_count))
                     # else:
                     #     to_prune.append((corr, gap_seg))
