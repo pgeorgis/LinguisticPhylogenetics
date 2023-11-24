@@ -1091,12 +1091,15 @@ class NullCompacter:
         for corr in self.compacted_corr_counts:
             if isinstance(corr, tuple): # e.g. ('s', 'k')
                 gap_segs, larger_ngram = self.compacted_corr_counts[corr], corr
-                for gap_seg in gap_segs:
+                for gap_seg in gap_segs:                    
                     comp_count = self.compacted_corr_counts[larger_ngram][gap_seg]
-                    #corr_count = sum(self.corr_counts[(part,)].get((gap_seg,), 0) for part in larger_ngram)
                     # the below calculation gives a more precise probability specific to this set of alignments, which corresponds to shared coverage between l1 and l2
                     # using lang.phonemes will consider all words in the vocabulary
-                    gap_seg_prob = ngram_count_wordlist((gap_seg,), self.seqs2) / seqs2_len_total
+                    if isinstance(gap_seg, tuple): # TODO need better handling than just tuple vs. str here and elsewhere to distinguish between unigram vs. n>1-gram
+                        gap_seg_count = ngram_count_wordlist(gap_seg, self.seqs2)
+                        gap_seg_prob = gap_seg_count / sum([count_subsequences(l, len(gap_seg)) for l in seqs2_lens])
+                    else:
+                        gap_seg_prob = ngram_count_wordlist((gap_seg,), self.seqs2) / seqs2_len_total
                     larger_ngram_count = ngram_count_wordlist(larger_ngram, self.seqs1)
                     larger_ngram_prob = larger_ngram_count / sum([count_subsequences(l, len(larger_ngram)) for l in seqs1_lens])
                     cond_prob_complex = comp_count/larger_ngram_count
@@ -1113,16 +1116,19 @@ class NullCompacter:
                             pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
                     if pmi_complex > pmi_basic:
                         valid_corrs[larger_ngram].append(gap_seg)
-                        print(f'{larger_ngram} - {gap_seg}')
                         
             else: # str e.g. 'ʃ'
                 gap_seg, larger_ngrams = corr, self.compacted_corr_counts[corr]
                 for larger_ngram in larger_ngrams:
                     comp_count = self.compacted_corr_counts[gap_seg][larger_ngram]
-                    #corr_count = sum([self.corr_counts[(gap_seg,)].get((larger_ngram[i],), 0) for i, part in enumerate(larger_ngram)])
                     # the below calculation gives a more precise probability specific to this set of alignments, which corresponds to shared coverage between l1 and l2
                     # using lang.phonemes will consider all words in the vocabulary
-                    gap_seg_prob = ngram_count_wordlist((gap_seg,), self.seqs1) / seqs1_len_total
+                    
+                    if isinstance(gap_seg, tuple): # TODO need better handling than just tuple vs. str here and elsewhere to distinguish between unigram vs. n>1-gram
+                        gap_seg_count = ngram_count_wordlist(gap_seg, self.seqs1)
+                        gap_seg_prob = gap_seg_count / sum([count_subsequences(l, len(gap_seg)) for l in seqs1_lens])
+                    else:
+                        gap_seg_prob = ngram_count_wordlist((gap_seg,), self.seqs1) / seqs1_len_total
                     larger_ngram_count = ngram_count_wordlist(larger_ngram, self.seqs2)
                     larger_ngram_prob = larger_ngram_count / sum([count_subsequences(l, len(larger_ngram)) for l in seqs2_lens])
                     cond_prob_complex = comp_count/larger_ngram_count
@@ -1139,7 +1145,6 @@ class NullCompacter:
                             pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
                     if pmi_complex > pmi_basic:
                         valid_corrs[gap_seg].append(larger_ngram)
-                        print(f'{gap_seg} - {larger_ngram}')
 
         return valid_corrs
 
