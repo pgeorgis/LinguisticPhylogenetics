@@ -4,7 +4,7 @@ from nwunschAlign import best_alignment
 from phonUtils.segment import _toSegment, consonants
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
-from auxFuncs import Distance, validate_class
+from auxFuncs import Distance, validate_class, flatten_ngram
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 
 
@@ -254,11 +254,11 @@ class Alignment:
         self.length = len(self.alignment)
 
     def compact_gaps(self, complex_ngrams):
-        l1_bigrams = [ngram for ngram in complex_ngrams if isinstance(ngram, tuple)]
+        l1_bigrams = [ngram for ngram in complex_ngrams if ngram.size > 1]
         l2_bigrams = [nested_ngram for ngram in complex_ngrams 
-                      for nested_ngram in complex_ngrams[ngram] if isinstance(nested_ngram, tuple)]
-        l1_bigram_segs = set(seg for bigram in l1_bigrams for seg in bigram)
-        l2_bigram_segs = set(seg for bigram in l2_bigrams for seg in bigram)
+                      for nested_ngram in complex_ngrams[ngram] if nested_ngram.size > 1]
+        l1_bigram_segs = set(seg for bigram in l1_bigrams for seg in bigram.ngram)
+        l2_bigram_segs = set(seg for bigram in l2_bigrams for seg in bigram.ngram)
          
         gaps = self.gaps()
         gaps.reverse()
@@ -269,14 +269,14 @@ class Alignment:
             # gap.segment should be part of l2_bigram_segs 
             if gap.gap_i == 0 and gap.segment in l2_bigram_segs:
                 for bigram in l2_bigrams:
-                    if gap.segment in bigram:
-                        gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram)
+                    if gap.segment in bigram.ngram:
+                        gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram.ngram)
                         unigrams = [uni_corr for uni_corr in complex_ngrams if bigram in complex_ngrams[uni_corr]]
-                        for unigram_corr in unigrams:                            
+                        for unigram_corr in unigrams:
                             for start_i, end_i in slices:
                                 if self.alignment[start_i:end_i] in (
-                                    [(gap.gap_ch, gap_aligned_corr), (unigram_corr, seg_aligned_corr)],
-                                    [(unigram_corr, seg_aligned_corr), (gap.gap_ch, gap_aligned_corr)],
+                                    [(gap.gap_ch, gap_aligned_corr), (unigram_corr.string, seg_aligned_corr)],
+                                    [(unigram_corr.string, seg_aligned_corr), (gap.gap_ch, gap_aligned_corr)],
                                 ):
                                     self.merge_align_positions(indices=list(range(start_i,end_i)))
                                     break
@@ -285,13 +285,13 @@ class Alignment:
             # gap.segment should be part of l1_bigram_segs
             elif gap.gap_i != 0 and gap.segment in l1_bigram_segs:
                 for bigram in l1_bigrams:
-                    if gap.segment in bigram:
-                        gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram)
-                        for unigram_corr in complex_ngrams[bigram]:
+                    if gap.segment in bigram.ngram:
+                        gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram.ngram)
+                        for unigram_corr in complex_ngrams[bigram]:                   
                             for start_i, end_i in slices:
                                 if self.alignment[start_i:end_i] in (
-                                    [(gap_aligned_corr, gap.gap_ch), (seg_aligned_corr, unigram_corr)],
-                                    [(seg_aligned_corr, unigram_corr), (gap_aligned_corr, gap.gap_ch)],
+                                    [(gap_aligned_corr, gap.gap_ch), (seg_aligned_corr, unigram_corr.string)],
+                                    [(seg_aligned_corr, unigram_corr.string), (gap_aligned_corr, gap.gap_ch)],
                                 ):
                                     self.merge_align_positions(indices=list(range(start_i,end_i)))
                                     break
@@ -368,6 +368,28 @@ class ReversedAlignment(Alignment):
             self.phon_env_alignment = super().add_phon_env()
         else:
             self.phon_env_alignment = None
+
+class Ngram:
+    def __init__(self, ngram, lang=None, seg_sep='_'):
+        self.raw = ngram
+        self.ngram = self.get_ngram(ngram, seg_sep)
+        self.string = seg_sep.join(self.ngram)
+        self.size = len(self.ngram)
+        self.lang = lang
+    
+    @staticmethod
+    def get_ngram(ngram, seg_sep='_'):
+        if isinstance(ngram, str):
+            return tuple(ngram.split(seg_sep))
+        elif isinstance(ngram, Ngram):
+            return ngram.ngram
+        elif isinstance(ngram, tuple):
+            return flatten_ngram(ngram)
+        else:
+            return flatten_ngram(tuple(ngram))
+    
+    def __str__(self):
+        return self.string
 
 class AlignedPair:
     def __init__(self, alignment, index):

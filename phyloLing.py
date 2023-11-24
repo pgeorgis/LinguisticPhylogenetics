@@ -1562,7 +1562,7 @@ class Language:
     @lru_cache(maxsize=None)
     def bigram_probability(self, bigram, delta=0.7):
         """Returns Kneser-Ney smoothed conditional probability P(p2|p1)"""
-        bigram = tuple(flatten_ngram(bigram))
+        bigram = flatten_ngram(bigram)
         if len(bigram) > 2:
             breakpoint()
             raise NotImplementedError

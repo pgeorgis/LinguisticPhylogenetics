@@ -8,7 +8,7 @@ import re
 from scipy.stats import norm
 from statistics import mean, stdev
 from auxFuncs import normalize_dict, default_dict, surprisal, adaptation_surprisal, pointwise_mutual_info, bayes_pmi, dict_tuplelist, flatten_ngram, count_subsequences
-from phonAlign import Alignment, compatible_segments, visual_align
+from phonAlign import Alignment, Ngram, compatible_segments, visual_align
 
 def sort_wordlist(wordlist):
     return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
@@ -1024,6 +1024,7 @@ def phon_env_ngrams(phonEnv):
 class NullCompacter:
     def __init__(self, corr_counts, alignments, lang1, lang2, gap_ch, ngram_size=1):
         self.gap_ch = gap_ch
+        self.gap_ngram = Ngram(self.gap_ch).ngram
         self.ngram_size = ngram_size
         self.corr_counts = corr_counts
         self.alignments = alignments
@@ -1042,7 +1043,7 @@ class NullCompacter:
         next_ngram = alignment[i+1-(self.ngram_size-1):i+2]
         if self.gap_ch not in (next_ngram[ngram_i][gap_index], next_ngram[ngram_i][opposite_index]):
             gap_seg = next_ngram[ngram_i][gap_index]
-            larger_ngram = tuple(flatten_ngram((ngram[ngram_i][opposite_index], next_ngram[ngram_i][opposite_index])))
+            larger_ngram = flatten_ngram((ngram[ngram_i][opposite_index], next_ngram[ngram_i][opposite_index]))
             if gap_index == 0:
                 self.compacted_corr_counts[gap_seg][larger_ngram] += 1
             else: # 1 
@@ -1053,7 +1054,7 @@ class NullCompacter:
         prev_ngram = alignment[i-1-(self.ngram_size-1):i]
         if self.gap_ch not in (prev_ngram[ngram_i][gap_index], prev_ngram[ngram_i][opposite_index]):
             gap_seg = prev_ngram[ngram_i][gap_index]
-            larger_ngram = tuple(flatten_ngram((prev_ngram[ngram_i][opposite_index], ngram[ngram_i][opposite_index])))
+            larger_ngram = flatten_ngram((prev_ngram[ngram_i][opposite_index], ngram[ngram_i][opposite_index]))
             if gap_index == 0:
                 self.compacted_corr_counts[gap_seg][larger_ngram] += 1
             else: # 1 
@@ -1089,63 +1090,71 @@ class NullCompacter:
             return bayes_pmi(p_seg_given_gap, p_seg)
         
         for corr in self.compacted_corr_counts:
-            if isinstance(corr, tuple): # e.g. ('s', 'k')
-                gap_segs, larger_ngram = self.compacted_corr_counts[corr], corr
+            corr = Ngram(corr, lang=self.lang1)
+            if corr.size > 1: # e.g. ('s', 'k')
+                gap_segs, larger_ngram = self.compacted_corr_counts[corr.raw], corr
                 for gap_seg in gap_segs:                    
-                    comp_count = self.compacted_corr_counts[larger_ngram][gap_seg]
+                    gap_seg = Ngram(gap_seg, lang=self.lang2)
+                    comp_count = self.compacted_corr_counts[larger_ngram.raw][gap_seg.raw]
                     # the below calculation gives a more precise probability specific to this set of alignments, which corresponds to shared coverage between l1 and l2
                     # using lang.phonemes will consider all words in the vocabulary
-                    if isinstance(gap_seg, tuple): # TODO need better handling than just tuple vs. str here and elsewhere to distinguish between unigram vs. n>1-gram
-                        gap_seg_count = ngram_count_wordlist(gap_seg, self.seqs2)
-                        gap_seg_prob = gap_seg_count / sum([count_subsequences(l, len(gap_seg)) for l in seqs2_lens])
+                    if gap_seg.size > 1: # gap seg is also a n>1-ngram
+                        gap_seg_count = ngram_count_wordlist(gap_seg.ngram, self.seqs2)
+                        gap_seg_prob = gap_seg_count / sum([count_subsequences(l, gap_seg.size) for l in seqs2_lens])
                     else:
-                        gap_seg_prob = ngram_count_wordlist((gap_seg,), self.seqs2) / seqs2_len_total
-                    larger_ngram_count = ngram_count_wordlist(larger_ngram, self.seqs1)
-                    larger_ngram_prob = larger_ngram_count / sum([count_subsequences(l, len(larger_ngram)) for l in seqs1_lens])
+                        gap_seg_prob = ngram_count_wordlist(gap_seg.ngram, self.seqs2) / seqs2_len_total
+                    larger_ngram_count = ngram_count_wordlist(larger_ngram.ngram, self.seqs1)
+                    larger_ngram_prob = larger_ngram_count / sum([count_subsequences(l, larger_ngram.size) for l in seqs1_lens])
                     cond_prob_complex = comp_count/larger_ngram_count
                     joint_prob_complex = cond_prob_complex * larger_ngram_prob
                     pmi_complex = pointwise_mutual_info(joint_prob_complex, larger_ngram_prob, gap_seg_prob)
                     pmi_basic = 0
-                    for seg in larger_ngram:
-                        seg_prob = ngram_count_wordlist((seg,), self.seqs1) / seqs1_len_total
-                        p_seg_given_gap = self.corr_counts[(self.gap_ch,)].get((seg,), 0) / sum(self.corr_counts[(self.gap_ch,)].values())
+                    for seg in larger_ngram.ngram:
+                        seg = Ngram(seg, lang=self.lang1)
+                        seg_prob = ngram_count_wordlist(seg.ngram, self.seqs1) / seqs1_len_total
+                        p_seg_given_gap = self.corr_counts[self.gap_ngram].get(seg.ngram, 0) / sum(self.corr_counts[self.gap_ngram].values())
                         if p_seg_given_gap > 0:
                             pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
-                        p_gap_seg_given_seg = self.corr_counts[(seg,)].get((gap_seg,), 0) / sum(self.corr_counts[(seg,)].values())
+                        try:
+                            p_gap_seg_given_seg = self.corr_counts[seg.ngram].get(gap_seg.ngram, 0) / sum(self.corr_counts[seg.ngram].values())
+                        except ZeroDivisionError:
+                            breakpoint()
                         if p_gap_seg_given_seg > 0:
                             pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
                     if pmi_complex > pmi_basic:
                         valid_corrs[larger_ngram].append(gap_seg)
                         
             else: # str e.g. 'ʃ'
-                gap_seg, larger_ngrams = corr, self.compacted_corr_counts[corr]
+                gap_seg, larger_ngrams = corr, self.compacted_corr_counts[corr.raw]
                 for larger_ngram in larger_ngrams:
-                    comp_count = self.compacted_corr_counts[gap_seg][larger_ngram]
+                    larger_ngram = Ngram(larger_ngram, lang=self.lang1)
+                    comp_count = self.compacted_corr_counts[gap_seg.raw][larger_ngram.raw]
                     # the below calculation gives a more precise probability specific to this set of alignments, which corresponds to shared coverage between l1 and l2
                     # using lang.phonemes will consider all words in the vocabulary
                     
-                    if isinstance(gap_seg, tuple): # TODO need better handling than just tuple vs. str here and elsewhere to distinguish between unigram vs. n>1-gram
-                        gap_seg_count = ngram_count_wordlist(gap_seg, self.seqs1)
-                        gap_seg_prob = gap_seg_count / sum([count_subsequences(l, len(gap_seg)) for l in seqs1_lens])
+                    if gap_seg.size > 1: # gap seg is also a n>1-ngram
+                        gap_seg_count = ngram_count_wordlist(gap_seg.ngram, self.seqs1)
+                        gap_seg_prob = gap_seg_count / sum([count_subsequences(l, gap_seg.size) for l in seqs1_lens])
                     else:
-                        gap_seg_prob = ngram_count_wordlist((gap_seg,), self.seqs1) / seqs1_len_total
-                    larger_ngram_count = ngram_count_wordlist(larger_ngram, self.seqs2)
-                    larger_ngram_prob = larger_ngram_count / sum([count_subsequences(l, len(larger_ngram)) for l in seqs2_lens])
+                        gap_seg_prob = ngram_count_wordlist(gap_seg.ngram, self.seqs1) / seqs1_len_total
+                    larger_ngram_count = ngram_count_wordlist(larger_ngram.ngram, self.seqs2)
+                    larger_ngram_prob = larger_ngram_count / sum([count_subsequences(l, larger_ngram.size) for l in seqs2_lens])
                     cond_prob_complex = comp_count/larger_ngram_count
                     joint_prob_complex = cond_prob_complex * larger_ngram_prob
                     pmi_complex = pointwise_mutual_info(joint_prob_complex, larger_ngram_prob, gap_seg_prob)
                     pmi_basic = 0
-                    for seg in larger_ngram:
-                        seg_prob = ngram_count_wordlist((seg,), self.seqs2) / seqs2_len_total
-                        p_seg_given_gap = reversed_corr_counts[(self.gap_ch,)].get((seg,), 0) / sum(reversed_corr_counts[(self.gap_ch,)].values())
+                    for seg in larger_ngram.ngram:
+                        seg = Ngram(seg, lang=self.lang2)
+                        seg_prob = ngram_count_wordlist(seg.ngram, self.seqs2) / seqs2_len_total
+                        p_seg_given_gap = reversed_corr_counts[self.gap_ngram].get(seg.ngram, 0) / sum(reversed_corr_counts[self.gap_ngram].values())
                         if p_seg_given_gap > 0:
                             pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
-                        p_gap_seg_given_seg = reversed_corr_counts[(seg,)].get((gap_seg,), 0) / sum(reversed_corr_counts[(seg,)].values())
+                        p_gap_seg_given_seg = reversed_corr_counts[seg.ngram].get(gap_seg.ngram, 0) / sum(reversed_corr_counts[seg.ngram].values())
                         if p_gap_seg_given_seg > 0:
                             pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
                     if pmi_complex > pmi_basic:
                         valid_corrs[gap_seg].append(larger_ngram)
-
+                        
         return valid_corrs
 
     # def combine_corrs(self, min_val=2):

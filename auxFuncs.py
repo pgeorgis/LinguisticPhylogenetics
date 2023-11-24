@@ -191,7 +191,7 @@ def flatten_ngram(nested_ngram):
             flat.extend(flatten_ngram(item))
         else:
             flat.append(item)        
-    return flat
+    return tuple(flat)
 
 def pointwise_mutual_info(p_joint, p_x, p_y):
     return log(p_joint/(p_x*p_y)) # TODO should it be log base 2?
