@@ -7,6 +7,27 @@ from phonUtils.phonEnv import get_phon_env
 from auxFuncs import Distance, validate_class, flatten_ngram
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 
+class Ngram:
+    def __init__(self, ngram, lang=None, seg_sep='_'):
+        self.raw = ngram
+        self.ngram = self.get_ngram(ngram, seg_sep)
+        self.string = seg_sep.join(self.ngram)
+        self.size = len(self.ngram)
+        self.lang = lang
+    
+    @staticmethod
+    def get_ngram(ngram, seg_sep='_'):
+        if isinstance(ngram, str):
+            return tuple(ngram.split(seg_sep))
+        elif isinstance(ngram, Ngram):
+            return ngram.ngram
+        elif isinstance(ngram, tuple):
+            return flatten_ngram(ngram)
+        else:
+            return flatten_ngram(tuple(ngram))
+    
+    def __str__(self):
+        return self.string
 
 def compatible_segments(seg1, seg2):
     """Determines whether a pair of segments are compatible for alignment. 
@@ -295,6 +316,10 @@ class Alignment:
                                 ):
                                     self.merge_align_positions(indices=list(range(start_i,end_i)))
                                     break
+        
+        # Update sequence map and length for compacted alignment
+        self.seq_map = self.map_to_seqs()
+        self.length = len(self.alignment)
 
     def pad(self, ngram_size, alignment=None):
         if alignment is None:
@@ -310,19 +335,31 @@ class Alignment:
         map2 = {0:0, 1:1, 2:None, 3:3, 4:None}
         """
         map1, map2 = {}, {}
-        adjust1, adjust2 = 0, 0
+        adjust_gap1, adjust_gap2 = 0, 0
+        adjust_complex1, adjust_complex2 = 0, 0
         for i, pair in enumerate(self.alignment):
             seg1, seg2 = pair
             if seg1 == self.gap_ch:
                 map1[i] = None
-                adjust1 += 1
+                adjust_gap1 += 1
             else:
-                map1[i] = i-adjust1
+                map1[i] = [i-adjust_gap1+adjust_complex1]
+                ngram = Ngram(seg1)
+                if ngram.size > 1:
+                    adjust_complex1 += ngram.size-1
+                    for n in range(map1[i][0]+1, min(map1[i][0]+ngram.size, len(self.alignment)-1)):
+                        map1[i].append(n)
+                    
             if seg2 == self.gap_ch:
                 map2[i] = None
-                adjust2 += 1
+                adjust_gap2 += 1
             else:
-                map2[i] = i-adjust2
+                map2[i] = [i-adjust_gap2+adjust_complex2]
+                ngram = Ngram(seg2)
+                if ngram.size > 1:
+                    adjust_complex2 += ngram.size-1
+                    for n in range(map2[i][0]+1, min(map2[i][0]+ngram.size, len(self.alignment)-1)):
+                        map2[i].append(n)
 
         return map1, map2
 
@@ -368,28 +405,6 @@ class ReversedAlignment(Alignment):
             self.phon_env_alignment = super().add_phon_env()
         else:
             self.phon_env_alignment = None
-
-class Ngram:
-    def __init__(self, ngram, lang=None, seg_sep='_'):
-        self.raw = ngram
-        self.ngram = self.get_ngram(ngram, seg_sep)
-        self.string = seg_sep.join(self.ngram)
-        self.size = len(self.ngram)
-        self.lang = lang
-    
-    @staticmethod
-    def get_ngram(ngram, seg_sep='_'):
-        if isinstance(ngram, str):
-            return tuple(ngram.split(seg_sep))
-        elif isinstance(ngram, Ngram):
-            return ngram.ngram
-        elif isinstance(ngram, tuple):
-            return flatten_ngram(ngram)
-        else:
-            return flatten_ngram(tuple(ngram))
-    
-    def __str__(self):
-        return self.string
 
 class AlignedPair:
     def __init__(self, alignment, index):

@@ -493,7 +493,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
             #         WAS[i] = surprisal(sum(accent_probs))
 
             if seq_map1[i] is not None:
-                weight = self_surprisal[seq_map1[i]][-1] / self_info
+                weight = sum([self_surprisal[index][-1] for j, index in enumerate(seq_map1[i])]) / self_info
                 normalized = WAS[i] / normalize_by
                 weighted = weight * normalized
                 weighted_WAS.append(weighted)
@@ -547,12 +547,13 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, **kwargs):
             # Take the information content value of each segment within the respective word
             # Divide this by the total info content of the word to calculate the proportion of info content constituted by the segment
             if seq_map1[i] is not None:
-                weight1 = info_content1[seq_map1[i]][-1] / total_info1
+                weight1 = sum([info_content1[index][-1] for j, index in enumerate(seq_map1[i])]) / total_info1
+            
             else:
                 weight1 = None
             
             if seq_map2[i] is not None:
-                weight2 = info_content2[seq_map2[i]][-1] / total_info2
+                weight2 = sum([info_content2[index][-1] for j, index in enumerate(seq_map2[i])]) / total_info2
             else:
                 weight2 = None
             
@@ -561,13 +562,13 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, **kwargs):
             if weight1 is None:
                 weight = weight2
                 if pair[-1] in alignment.word2.language.tonemes:
-                    if accent_is_shifted(alignment.alignment, i, alignment.gap_ch):
+                    if accent_is_shifted(alignment.alignment, i, alignment.gap_ch): # TODO does this still work if the pair includes a n>1-gram?
                         continue
                     
             elif weight2 is None:
                 weight = weight1
                 if pair[0] in alignment.word1.language.tonemes:
-                    if accent_is_shifted(alignment.alignment, i, alignment.gap_ch):
+                    if accent_is_shifted(alignment.alignment, i, alignment.gap_ch): # TODO does this still work if the pair includes a n>1-gram?
                         continue
             else:
                 weight = mean([weight1, weight2])
