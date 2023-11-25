@@ -13,11 +13,13 @@ def compatible_segments(seg1, seg2):
     Returns True if the two segments are either:
         two consonants
         two vowels
-        a vowel and a sonorant consonant (nasals, liquids, glides)
+        a vowel and a sonorant (nasals, liquids, glides) and/or syllabic consonant
         two tonemes/suprasegmentals
     Else returns False"""
     seg1, seg2 = map(_toSegment, [seg1, seg2])
     phone_class1, phone_class2 = seg1.phone_class, seg2.phone_class
+    
+    # Tonemes/suprasegmentals can only be aligned with tonemes/suprasegmentals
     if phone_class1 in ('TONEME', 'SUPRASEGMENTAL') and phone_class2 in ('TONEME', 'SUPRASEGMENTAL'):
         return True
     elif phone_class1 in ('TONEME', 'SUPRASEGMENTAL'):
@@ -25,17 +27,24 @@ def compatible_segments(seg1, seg2):
     elif phone_class2 in ('TONEME', 'SUPRASEGMENTAL'):
         return False
     
+    # Consonants can always be aligned with consonants and glides
     if phone_class1 == 'CONSONANT' and phone_class2 in ('CONSONANT', 'GLIDE'):
         return True
+    elif phone_class2 == 'CONSONANT' and phone_class1 in ('CONSONANT', 'GLIDE'):
+        return True
+
+    # Vowels/diphthongs/glides can always be aligned with one another    
     elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
+        return True
+    
+    # Sonorant and syllabic consonants can be aligned with vowels/diphthongs
+    elif seg1.features['sonorant'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
+        return True
+    elif seg1.features['syllabic'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
         return True
     elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['sonorant'] == 1:
         return True
     elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['syllabic'] == 1:
-        return True
-    elif seg1.features['sonorant'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
-        return True
-    elif seg1.features['syllabic'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
         return True
     else:
         return False
