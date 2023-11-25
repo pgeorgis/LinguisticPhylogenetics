@@ -187,6 +187,7 @@ class PhonCorrelator:
                                            alignment_list, 
                                            ngram_size=ngram_size, 
                                            gap_ch=self.gap_ch,
+                                           pad_ch=self.pad_ch,
                                            lang1=self.lang1, 
                                            lang2=self.lang2)
         for alignment in alignment_list:
@@ -196,11 +197,16 @@ class PhonCorrelator:
                 _alignment = alignment.remove_gaps()
             else:
                 _alignment = alignment.alignment
-            if ngram_size > 1:
-                _alignment = alignment.pad(ngram_size, _alignment, pad_ch=self.pad_ch)
+            # Pad with at least one boundary position
+            pad_n = max(1, ngram_size-1)
+            _alignment = alignment.pad(ngram_size, 
+                                       _alignment, 
+                                       pad_ch=self.pad_ch, 
+                                       pad_n=pad_n,
+            )
                 
-            for i in range(ngram_size-1, len(_alignment)):
-                ngram = _alignment[i-(ngram_size-1):i+1]
+            for i in range(pad_n, len(_alignment)):
+                ngram = _alignment[i-min(pad_n,ngram_size-1):i+1]
                 seg1, seg2 = list(zip(*ngram))
                 corr_counts[seg1][seg2] += 1
                 if compact_null:
@@ -1031,8 +1037,9 @@ def phon_env_ngrams(phonEnv):
     return ngrams
 
 class NullCompacter:
-    def __init__(self, corr_counts, alignments, lang1, lang2, gap_ch, ngram_size=1):
+    def __init__(self, corr_counts, alignments, lang1, lang2, gap_ch, pad_ch, ngram_size=1):
         self.gap_ch = gap_ch
+        self.pad_ch = pad_ch
         self.gap_ngram = Ngram(self.gap_ch).ngram
         self.ngram_size = ngram_size
         self.corr_counts = corr_counts
