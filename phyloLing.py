@@ -304,7 +304,7 @@ class LexicalDataset:
                     ngram2 = str2ngram(phone2)
                     lang1.phoneme_pmi[lang2][ngram1.ngram][ngram2.ngram] = pmi_value
                     lang2.phoneme_pmi[lang1][ngram2.ngram][ngram1.ngram] = pmi_value
-                    if ngram1.size > 1 or ngram2.size > 1 and pmi_value > 0:
+                    if ngram1.size > 1 or ngram2.size > 1:
                         lang1.complex_ngrams[lang2][ngram1].append(ngram2)
                         lang2.complex_ngrams[lang1][ngram2].append(ngram1)
                     
