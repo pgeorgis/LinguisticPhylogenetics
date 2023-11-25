@@ -1231,26 +1231,6 @@ class NullCompacter:
                 
         return self.valid_corrs
 
-    # def combine_corrs(self, min_val=2):
-    #     # Update counts of valid corrs
-    #     for corr, nested_corr, count in to_adjust:
-    #         if isinstance(corr, tuple):
-    #             for part in corr:
-    #                 self.corr_counts[(part,)][nested_corr] -= count
-    #         else: # str
-    #             for part in self.compacted_corr_counts[corr]:
-    #                 self.corr_counts[(corr,)][(part,)] -= count
-    #     for corr, nested_corr in to_prune:
-    #         del self.compacted_corr_counts[corr][nested_corr]
-    #     self.prune(min_val=min_val)
-    #     for corr in self.compacted_corr_counts:
-    #         if isinstance(corr, tuple):
-    #             self.corr_counts[corr] = self.compacted_corr_counts[corr]
-    #         else:
-    #             self.corr_counts[(corr,)] = self.compacted_corr_counts[corr]
-
-    #     return self.corr_counts
-
     def prune(self, min_val=2):
         self.compacted_corr_counts = prune_corrs(self.compacted_corr_counts, min_val=min_val)
 
