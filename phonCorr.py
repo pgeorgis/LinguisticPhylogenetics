@@ -1115,12 +1115,11 @@ class NullCompacter:
                         p_seg_given_gap = self.corr_counts[self.gap_ngram].get(seg.ngram, 0) / sum(self.corr_counts[self.gap_ngram].values())
                         if p_seg_given_gap > 0:
                             pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
-                        try:
-                            p_gap_seg_given_seg = self.corr_counts[seg.ngram].get(gap_seg.ngram, 0) / sum(self.corr_counts[seg.ngram].values())
-                        except ZeroDivisionError:
-                            breakpoint()
-                        if p_gap_seg_given_seg > 0:
-                            pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
+                        count_gap_seg_given_seg = self.corr_counts[seg.ngram].get(gap_seg.ngram, 0)
+                        if count_gap_seg_given_seg > 0:
+                            p_gap_seg_given_seg = count_gap_seg_given_seg / sum(self.corr_counts[seg.ngram].values())
+                            if p_gap_seg_given_seg > 0:
+                                pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
                     if pmi_complex > pmi_basic:
                         valid_corrs[larger_ngram].append(gap_seg)
                         
@@ -1149,9 +1148,11 @@ class NullCompacter:
                         p_seg_given_gap = reversed_corr_counts[self.gap_ngram].get(seg.ngram, 0) / sum(reversed_corr_counts[self.gap_ngram].values())
                         if p_seg_given_gap > 0:
                             pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
-                        p_gap_seg_given_seg = reversed_corr_counts[seg.ngram].get(gap_seg.ngram, 0) / sum(reversed_corr_counts[seg.ngram].values())
-                        if p_gap_seg_given_seg > 0:
-                            pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
+                        count_gap_seg_given_seg = reversed_corr_counts[seg.ngram].get(gap_seg.ngram, 0)
+                        if count_gap_seg_given_seg > 0:
+                            p_gap_seg_given_seg = count_gap_seg_given_seg / sum(reversed_corr_counts[seg.ngram].values())
+                            if p_gap_seg_given_seg > 0:
+                                pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
                     if pmi_complex > pmi_basic:
                         valid_corrs[gap_seg].append(larger_ngram)
                         
