@@ -16,7 +16,7 @@ from skbio.tree import nj
 import seaborn as sns
 from unidecode import unidecode
 import numpy as np
-from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist, flatten_ngram, create_timestamp
+from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist, flatten_ngram, pad_sequence, create_timestamp
 from auxFuncs import Distance, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonUtils.initPhoneData import consonants, suprasegmental_diacritics
 from phonUtils.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
@@ -1348,7 +1348,7 @@ class Language:
             
                 # Count trigrams and gappy trigrams
                 pad_ch = self.alignment_params['pad_ch']
-                padded_segments = [pad_ch, pad_ch] + segments + [pad_ch, pad_ch]
+                padded_segments = pad_sequence(segments, pad_ch=pad_ch, pad_n=2)
                 for j in range(1, len(padded_segments)-1):
                     trigram = (padded_segments[j-1], padded_segments[j], padded_segments[j+1])
                     self.trigrams[Ngram(trigram).ngram] += 1
@@ -1444,9 +1444,9 @@ class Language:
                     if phon_env:
                         phon_env_segments = list(zip(segments, word.phon_env))
                     pad_n = ngram_size - 1
-                    padded = [pad_ch]*pad_n + segments + [pad_ch]*pad_n
+                    padded = pad_sequence(segments, pad_ch=pad_ch, pad_n=pad_n)
                     if phon_env:
-                        padded_phon_env = [pad_ch]*pad_n + phon_env_segments + [pad_ch]*pad_n
+                        padded_phon_env = pad_sequence(phon_env_segments, pad_ch=pad_ch, pad_n=pad_n)
                     for i in range(len(padded)-pad_n):
                         ngram = tuple(padded[i:i+ngram_size])
                         self.ngrams[ngram_size][ngram] += 1
@@ -1535,7 +1535,7 @@ class Language:
         # Otherwise calculate it from scratch
         # Pad the segmented word
         pad_ch = self.alignment_params['pad_ch']
-        padded = [pad_ch, pad_ch] + word.segments + [pad_ch, pad_ch]
+        padded = pad_sequence(word.segments, pad_ch=pad_ch, pad_n=2)
         info_content = {}
         for i in range(2, len(padded)-2):
             trigram_counts = 0

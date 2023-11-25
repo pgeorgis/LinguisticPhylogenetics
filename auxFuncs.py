@@ -193,6 +193,9 @@ def flatten_ngram(nested_ngram):
             flat.append(item)        
     return tuple(flat)
 
+def pad_sequence(seq, pad_ch='#', pad_n=1):
+    return [f'{pad_ch}_']*pad_n + seq + [f'_{pad_ch}']*pad_n
+
 def pointwise_mutual_info(p_joint, p_x, p_y):
     return log(p_joint/(p_x*p_y)) # TODO should it be log base 2?
 
