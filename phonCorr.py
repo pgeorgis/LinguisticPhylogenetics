@@ -83,6 +83,8 @@ class PhonCorrelator:
         
         # PMI, ngrams, scored words
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
+        self.total_unigrams = (sum([len(word1.segments) for word1, word2 in self.same_meaning]),
+                               sum([len(word2.segments) for word1, word2 in self.same_meaning]))
         self.complex_ngrams = None
         self.scored_words = defaultdict(lambda:{})
         
@@ -176,6 +178,7 @@ class PhonCorrelator:
                              prune=None,
                              exclude_null=True,
                              compact_null=True,
+                             pad=True,
                              ):
         """Returns a dictionary of conditional phone probabilities, based on a list
         of Alignment objects.
@@ -199,11 +202,13 @@ class PhonCorrelator:
                 _alignment = alignment.alignment
             # Pad with at least one boundary position
             pad_n = max(1, ngram_size-1)
-            _alignment = alignment.pad(ngram_size, 
-                                       _alignment, 
-                                       pad_ch=self.pad_ch, 
-                                       pad_n=pad_n,
-            )
+            if pad:
+                _alignment = alignment.pad(ngram_size, 
+                                        _alignment, 
+                                        pad_ch=self.pad_ch, 
+                                        pad_n=pad_n,
+                )
+                alignment.alignment = _alignment
                 
             for i in range(pad_n, len(_alignment)):
                 ngram = _alignment[i-min(pad_n,ngram_size-1):i+1]
@@ -224,7 +229,8 @@ class PhonCorrelator:
                 counts=counts, 
                 prune=prune, 
                 exclude_null=exclude_null, 
-                compact_null=False
+                compact_null=False,
+                pad=False,
             )
             return adjusted_corrs
             
@@ -289,7 +295,7 @@ class PhonCorrelator:
             seg1_totals = sum(conditional_counts[seg1].values())
             for seg2 in conditional_counts[seg1]:
                 cond_prob = conditional_counts[seg1][seg2] / seg1_totals
-                p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
+                p_ind1 = l1.ngram_probability(Ngram(seg1))
                 joint_prob = cond_prob * p_ind1
                 joint_prob_dist[seg1][seg2] = joint_prob
         return joint_prob_dist
@@ -301,6 +307,7 @@ class PhonCorrelator:
         l1, l2 = self.langs(l1=l1, l2=l2)
         # Convert conditional probabilities to joint probabilities
         joint_prob_dist = self.joint_probs(conditional_counts, l1=l1, l2=l2)
+        reverse_cond_counts = reverse_corr_dict(conditional_counts)
                     
         # Get set of all possible phoneme correspondences
         segment_pairs = set(
@@ -323,11 +330,26 @@ class PhonCorrelator:
         # Calculate PMI for all phoneme pairs
         pmi_dict = defaultdict(lambda:defaultdict(lambda:0))
         for seg1, seg2 in segment_pairs:
-            p_ind1 = l1.phonemes[seg1] if not isinstance(seg1, tuple) else l1.bigram_probability(seg1)
-            p_ind2 = l2.phonemes[seg2] if not isinstance(seg2, tuple) else l2.bigram_probability(seg2)
-            p_ind = p_ind1 * p_ind2
-            joint_prob = joint_prob_dist.get(seg1, {}).get(seg2, p_ind)
-            pmi_dict[seg1][seg2] = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
+            seg1_ngram = Ngram(seg1)
+            seg2_ngram = Ngram(seg2)
+            if self.pad_ch in seg1 and self.pad_ch in seg2: # (seg1, seg2) == (self.pad_ch, self.pad_ch)
+                continue
+            elif self.pad_ch in seg1:
+                cond_prob = conditional_counts[seg1][seg2] / sum(conditional_counts[seg1].values())
+                p_boundary = len(self.same_meaning) / self.total_unigrams[0]
+                pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_boundary)
+                print((seg1, seg2), round(pmi_dict[seg1][seg2], 2))
+            elif self.pad_ch in seg2:
+                cond_prob = reverse_cond_counts[seg2][seg1] / sum(reverse_cond_counts[seg2].values())
+                p_boundary = len(self.same_meaning) / self.total_unigrams[-1]
+                pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_boundary)
+                print((seg1, seg2), round(pmi_dict[seg1][seg2], 2))
+            else:
+                p_ind1 = l1.ngram_probability(seg1_ngram)
+                p_ind2 = l2.ngram_probability(seg2_ngram)
+                p_ind = p_ind1 * p_ind2
+                joint_prob = joint_prob_dist.get(seg1, {}).get(seg2, p_ind)
+                pmi_dict[seg1][seg2] = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
             
         return pmi_dict
 
@@ -413,7 +435,7 @@ class PhonCorrelator:
                     cognate_alignments = all_cognate_alignments
                 
                 # Calculate correspondence probabilities and PMI values from these alignments
-                cognate_probs = self.correspondence_probs(cognate_alignments, exclude_null=True)
+                cognate_probs = self.correspondence_probs(cognate_alignments, exclude_null=True, counts=True)
                 cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
                                                     for v in cognate_probs[k]} 
                                             for k in cognate_probs}, l=defaultdict(lambda:0))
@@ -540,13 +562,13 @@ class PhonCorrelator:
             phone_contexts = [(seg, env) 
                               for seg in lang.phon_environments 
                               for env in lang.phon_environments[seg]]
-            all_ngrams = product(phone_contexts+[self.pad_ch, self.gap_ch], repeat=ngram_size)
+            all_ngrams = product(phone_contexts+[f'{self.pad_ch}_', f'_{self.pad_ch}', self.gap_ch], repeat=ngram_size)
             
         else:
             attested = set(tuple(ngram.split()) 
                            if type(ngram) == str else ngram 
                            for ngram in lang.list_ngrams(ngram_size, phon_env=False))
-            all_ngrams = product(list(lang.phonemes.keys())+[self.pad_ch, self.gap_ch], repeat=ngram_size)
+            all_ngrams = product(list(lang.phonemes.keys())+[f'{self.pad_ch}_', f'_{self.pad_ch}', self.gap_ch], repeat=ngram_size) 
 
         gappy = set(ngram for ngram in all_ngrams if self.gap_ch in ngram)
         all_ngrams = attested.union(gappy)
@@ -1138,7 +1160,7 @@ class NullCompacter:
                 comp_count = compacted_corr_counts[larger_ngram.raw][gap_seg.raw]
                 
                 # Special handling for boundary (start/end seq) gaps, marked with pad_ch
-                if self.pad_ch in gap_seg.ngram:
+                if self.pad_ch in gap_seg.string:
                     # Logic: PAD_CH corresponds to either the start or end of an alignment/segmented sequence
                     # Every sequence has exactly one of each, therefore the probability (irrespective whether beginning/end) is just the number of sequences divided by the total number of unigrams
                     gap_seg_prob = len(seqs) / total_seq_len
@@ -1153,7 +1175,7 @@ class NullCompacter:
                     gap_seg_prob = ngram_count_wordlist(gap_seg.ngram, seqs) / total_seq_len
                 
                 # Estimate PMI of larger/complex ngram correlation 
-                if self.pad_ch in larger_ngram.ngram:
+                if self.pad_ch in larger_ngram.string:
                     # See above logic at gap_seg_prob definition for handling of boundary gaps
                     larger_ngram_count = len(opp_seqs)
                     larger_ngram_prob = larger_ngram_count / opp_total_seq_len
@@ -1165,7 +1187,7 @@ class NullCompacter:
                 pmi_complex = pointwise_mutual_info(joint_prob_complex, larger_ngram_prob, gap_seg_prob)
                 
                 # Estimate PMI of simpler ngram (unigram) correlation 
-                if self.pad_ch in larger_ngram.ngram:
+                if self.pad_ch in larger_ngram.string:
                     pmi_basic = bayes_pmi(cond_prob_complex, gap_seg_prob)
                 else:
                     pmi_basic = 0
