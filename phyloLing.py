@@ -1338,7 +1338,7 @@ class Language:
                 # Count phones
                 for segment in segments:
                     self.phonemes[segment] += 1
-                    self.unigrams[segment] += 1
+                    self.unigrams[Ngram(segment).ngram] += 1
                 
                 # Count phonological environments
                 for seg, env in zip(segments, word.phon_env):
@@ -1351,7 +1351,7 @@ class Language:
                 padded_segments = [pad_ch, pad_ch] + segments + [pad_ch, pad_ch]
                 for j in range(1, len(padded_segments)-1):
                     trigram = (padded_segments[j-1], padded_segments[j], padded_segments[j+1])
-                    self.trigrams[trigram] += 1
+                    self.trigrams[Ngram(trigram).ngram] += 1
                     self.gappy_trigrams[('X', padded_segments[j], padded_segments[j+1])] += 1
                     self.gappy_trigrams[(padded_segments[j-1], 'X', padded_segments[j+1])] += 1
                     self.gappy_trigrams[(padded_segments[j-1], padded_segments[j], 'X')] += 1
@@ -1360,7 +1360,7 @@ class Language:
                 padded_segments = padded_segments[1:-1]
                 for j in range(1, len(padded_segments)):
                     bigram = (padded_segments[j-1], padded_segments[j])
-                    self.bigrams[bigram] += 1
+                    self.bigrams[Ngram(bigram).ngram] += 1
         self.ngrams[1] = self.unigrams
         self.ngrams[2] = self.bigrams
         self.ngrams[3] = self.trigrams
@@ -1560,8 +1560,12 @@ class Language:
             #return sum(info_content[j][1] for j in info_content)
             return info_content
     
+    def ngram_probability(self, ngram):
+        ngram = Ngram(ngram)
+        return self.ngrams[ngram.size][ngram.ngram] / sum(self.ngrams[ngram.size].values())
+        
     @lru_cache(maxsize=None)
-    def bigram_probability(self, bigram, delta=0.7):
+    def KN_bigram_probability(self, bigram, delta=0.7):
         """Returns Kneser-Ney smoothed conditional probability P(p2|p1)"""
         bigram = flatten_ngram(bigram)
         if len(bigram) > 2:
