@@ -1112,9 +1112,11 @@ class NullCompacter:
                     for seg in larger_ngram.ngram:
                         seg = Ngram(seg, lang=self.lang1)
                         seg_prob = ngram_count_wordlist(seg.ngram, self.seqs1) / seqs1_len_total
-                        p_seg_given_gap = self.corr_counts[self.gap_ngram].get(seg.ngram, 0) / sum(self.corr_counts[self.gap_ngram].values())
-                        if p_seg_given_gap > 0:
-                            pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
+                        count_seg_given_gap = self.corr_counts[self.gap_ngram].get(seg.ngram, 0)
+                        if count_seg_given_gap > 0:
+                            p_seg_given_gap = count_seg_given_gap / sum(self.corr_counts[self.gap_ngram].values())
+                            if p_seg_given_gap > 0:
+                                pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
                         count_gap_seg_given_seg = self.corr_counts[seg.ngram].get(gap_seg.ngram, 0)
                         if count_gap_seg_given_seg > 0:
                             p_gap_seg_given_seg = count_gap_seg_given_seg / sum(self.corr_counts[seg.ngram].values())
@@ -1145,9 +1147,11 @@ class NullCompacter:
                     for seg in larger_ngram.ngram:
                         seg = Ngram(seg, lang=self.lang2)
                         seg_prob = ngram_count_wordlist(seg.ngram, self.seqs2) / seqs2_len_total
-                        p_seg_given_gap = reversed_corr_counts[self.gap_ngram].get(seg.ngram, 0) / sum(reversed_corr_counts[self.gap_ngram].values())
-                        if p_seg_given_gap > 0:
-                            pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
+                        count_seg_given_gap = reversed_corr_counts[self.gap_ngram].get(seg.ngram, 0)
+                        if count_seg_given_gap > 0:
+                            p_seg_given_gap = count_seg_given_gap / sum(reversed_corr_counts[self.gap_ngram].values())
+                            if p_seg_given_gap > 0:
+                                pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
                         count_gap_seg_given_seg = reversed_corr_counts[seg.ngram].get(gap_seg.ngram, 0)
                         if count_gap_seg_given_seg > 0:
                             p_gap_seg_given_seg = count_gap_seg_given_seg / sum(reversed_corr_counts[seg.ngram].values())
