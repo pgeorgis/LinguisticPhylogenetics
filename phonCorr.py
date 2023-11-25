@@ -198,7 +198,8 @@ class PhonCorrelator:
             else:
                 _alignment = alignment.alignment
             # Pad with at least one boundary position
-            pad_n = max(1, ngram_size-1)
+            # pad_n = max(1, ngram_size-1)
+            pad_n = max(0, ngram_size-1)
             _alignment = alignment.pad(ngram_size, 
                                        _alignment, 
                                        pad_ch=self.pad_ch, 
