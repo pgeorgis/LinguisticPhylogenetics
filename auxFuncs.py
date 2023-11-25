@@ -209,7 +209,7 @@ def surprisal(p):
 def surprisal_to_prob(s):
     return 2**-s
 
-def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False, normalize=True):
+def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False, normalize=True, pad_ch='#'):
     """Calculates the surprisal of an aligned sequence, given a dictionary of 
     surprisal values for the sequence corresponcences"""
 
@@ -222,7 +222,7 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False
     #     raise TypeError
     # TODO problem: this function needs to live in this script (auxFuncs.py) to avoid circular imports but importing Alignment object from phonAlign.py would also cause a circular import
     # Temporary solution: assume that if the alignment is not a list, it is an Alignment class object
-    if type(alignment) is list:
+    if isinstance(alignment, list):
         length = len(alignment)
     else:
         length = alignment.length
@@ -233,7 +233,7 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False
     
     pad_n = ngram_size - 1
     if ngram_size > 1:
-        alignment = [('# ', '# ')]*pad_n + alignment + [('# ', '# ')]*pad_n
+        alignment = [(pad_ch, pad_ch)]*pad_n + alignment + [(pad_ch, pad_ch)]*pad_n
     
     values = []
     for i in range(pad_n, length+pad_n):

@@ -408,7 +408,8 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     if len(lang1.phoneme_pmi[lang2]) > 0:
         pmi_dict = lang1.phoneme_pmi[lang2]
     else:
-        pmi_dict = lang1.get_phoneme_correlator(lang2).calc_phoneme_pmi(**kwargs)
+        correlator = lang1.get_phoneme_correlator(lang2)
+        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
 
     # Calculate phoneme surprisal if not already done # TODO use helper function
     if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
@@ -435,7 +436,9 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                                     surprisal_dict=sur_dict1,
                                     ngram_size=ngram_size,
                                     phon_env=phon_env,
-                                    normalize=False)
+                                    normalize=False,
+                                    pad_ch=lang1.alignment_params['pad_ch'],
+                                    )
     if ngram_size > 1:
         breakpoint() # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts... 
         # the way to get around this is:
@@ -446,7 +449,9 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                                     surprisal_dict=sur_dict2,
                                     ngram_size=ngram_size,
                                     phon_env=phon_env,
-                                    normalize=False)
+                                    normalize=False,
+                                    pad_ch=lang2.alignment_params['pad_ch'],
+                                    )
 
     # Calculate self-surprisal values in each direction
     self_surprisal1 = lang1.self_surprisal(word1, normalize=False)

@@ -68,13 +68,14 @@ def ngram_count_wordlist(ngram, seq_list):
     return count
 
 class PhonCorrelator:
-    def __init__(self, lang1, lang2, wordlist=None, gap_ch='-', seed=1, logger=None):        
+    def __init__(self, lang1, lang2, wordlist=None, gap_ch='-', pad_ch='#', seed=1, logger=None):        
         # Set Language objects
         self.lang1 = lang1
         self.lang2 = lang2
         
         # Alignment parameters
         self.gap_ch = gap_ch
+        self.pad_ch = pad_ch
         self.seed = seed
         
         # Prepare wordlists: sort out same/different-meaning words and loanwords
@@ -196,7 +197,7 @@ class PhonCorrelator:
             else:
                 _alignment = alignment.alignment
             if ngram_size > 1:
-                _alignment = alignment.pad(ngram_size, _alignment)
+                _alignment = alignment.pad(ngram_size, _alignment, pad_ch=self.pad_ch)
                 
             for i in range(ngram_size-1, len(_alignment)):
                 ngram = _alignment[i-(ngram_size-1):i+1]
@@ -533,13 +534,13 @@ class PhonCorrelator:
             phone_contexts = [(seg, env) 
                               for seg in lang.phon_environments 
                               for env in lang.phon_environments[seg]]
-            all_ngrams = product(phone_contexts+['# ', self.gap_ch], repeat=ngram_size)
+            all_ngrams = product(phone_contexts+[self.pad_ch, self.gap_ch], repeat=ngram_size)
             
         else:
             attested = set(tuple(ngram.split()) 
                            if type(ngram) == str else ngram 
                            for ngram in lang.list_ngrams(ngram_size, phon_env=False))
-            all_ngrams = product(list(lang.phonemes.keys())+['# ', self.gap_ch], repeat=ngram_size)
+            all_ngrams = product(list(lang.phonemes.keys())+[self.pad_ch, self.gap_ch], repeat=ngram_size)
 
         gappy = set(ngram for ngram in all_ngrams if self.gap_ch in ngram)
         all_ngrams = attested.union(gappy)
@@ -767,7 +768,9 @@ class PhonCorrelator:
                     noncognate_surprisal = [adaptation_surprisal(alignment, 
                                                                 surprisal_dict=surprisal_iterations[iteration], 
                                                                 normalize=True,
-                                                                ngram_size=ngram_size) 
+                                                                ngram_size=ngram_size,
+                                                                pad_ch=self.pad_ch,
+                                                                ) 
                                             for alignment in noncognate_alignments]
                     mean_nc_score = mean(noncognate_surprisal)
                     nc_score_stdev = stdev(noncognate_surprisal)
@@ -788,7 +791,9 @@ class PhonCorrelator:
                         surprisal_score = adaptation_surprisal(alignment, 
                                                                surprisal_dict=surprisal_iterations[iteration], 
                                                                normalize=True,
-                                                               ngram_size=ngram_size)
+                                                               ngram_size=ngram_size,
+                                                               pad_ch=self.pad_ch,
+                                                               )
                         
                         # Proportion of non-cognate word pairs which would have a surprisal score at least as low as this word pair
                         pnorm = norm.cdf(surprisal_score, loc=mean_nc_score, scale=nc_score_stdev)

@@ -91,6 +91,10 @@ def validate_params(params, valid_params, logger):
     if params['cluster']['cognates'] == 'none' and params['evaluation']['similarity'] == 'binary':
         logger.error('Binary cognate similarity cannot use "none" cognate clustering. Valid options are: [`auto`, `gold`]')
         raise ValueError
+    
+    # Ensure gap character and pad character are different
+    if params['alignment']['gap_ch'] == params['alignment']['pad_ch']:
+        raise ValueError(f"Gap character and pad character must be different! Both are set to '{params['alignment']['gap_ch']}'")
 
 
 def init_hybrid(function_map, eval_params):
@@ -165,6 +169,7 @@ if __name__ == "__main__":
     # Get shorthand for each parameter section
     family_params = params['family']
     transcription_params = params['transcription']
+    alignment_params = params['alignment']
     pmi_params = params['pmi']
     surprisal_params = params['surprisal']
     cluster_params = params['cluster']
@@ -202,6 +207,7 @@ if __name__ == "__main__":
                          exclude=family_params['exclude'], 
                          min_amc=family_params['min_amc'],
                          transcription_params=transcription_params,
+                         alignment_params=alignment_params,
                          logger=logger
                          )
 

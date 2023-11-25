@@ -21,6 +21,10 @@ transcription:
     #     Italian:
     #         normalize_geminates: true
 
+alignment:
+  gap_ch: '-' # alternative null character <∅> looks too similar to IPA character <ø>
+  pad_ch: '#'
+
 pmi:
   refresh: []
   refresh_all_pmi: false

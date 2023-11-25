@@ -27,19 +27,8 @@ from phonUtils.syllables import syllabify
 from phonCorr import PhonCorrelator
 from phonAlign import Ngram
 from lingDist import Z_score_dist
+from constants import TRANSCRIPTION_PARAM_DEFAULTS, ALIGNMENT_PARAM_DEFAULTS
 import logging
-
-
-TRANSCRIPTION_PARAM_DEFAULTS = {
-    'asjp':False,
-    'ignore_stress':False,
-    'combine_diphthongs':True,
-    'normalize_geminates':False,
-    'preaspiration':True,
-    'ch_to_remove':{' '}, # TODO add syllabic diacritics here
-    'suprasegmentals':None,
-    'level_suprasegmentals':None,
-    }
 
 
 class LexicalDataset: 
@@ -56,6 +45,7 @@ class LexicalDataset:
                  glottocode_c='Glottocode',
                  iso_code_c='ISO 639-3',
                  transcription_params={'global':TRANSCRIPTION_PARAM_DEFAULTS},
+                 alignment_params=ALIGNMENT_PARAM_DEFAULTS,
                  logger=None
                  ):
         
@@ -111,10 +101,11 @@ class LexicalDataset:
         self.iso_codes = {}
         self.distance_matrices = {}
         
-        # Transcription parameters
+        # Transcription and alignment parameters
         self.transcription_params = transcription_params
         if not self.transcription_params['global']['ignore_stress']:
             self.transcription_params['global']['ch_to_remove'] = set(self.transcription_params['global']['ch_to_remove']) - {'ˈ', 'ˌ'}
+        self.alignment_params = alignment_params
             
         # Concepts in dataset
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
@@ -154,7 +145,8 @@ class LexicalDataset:
                                             family=self,
                                             data = language_vocab_data[lang],
                                             columns = self.columns,
-                                            transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global'])
+                                            transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global']),
+                                            alignment_params=self.alignment_params,
                                             )
             self.logger.info(f'Loaded doculect {lang}.')
             for concept in self.languages[lang].vocabulary:
@@ -1243,6 +1235,7 @@ class Language:
                  data, 
                  columns,
                  transcription_params=TRANSCRIPTION_PARAM_DEFAULTS,
+                 alignment_params=ALIGNMENT_PARAM_DEFAULTS,
                  lang_id=None, 
                  glottocode=None, 
                  iso_code=None, 
@@ -1280,12 +1273,13 @@ class Language:
         self.vocabulary = defaultdict(lambda:set())
         self.loanwords = defaultdict(lambda:set())
         
-        # Transcription and segmentation parameters
+        # Transcription, segmentation, and alignment parameters
         self.transcription_params = transcription_params
         if self.transcription_params['ignore_stress']:
             self.transcription_params['ch_to_remove'].update({'ˈ', 'ˌ'})
         if self.transcription_params['suprasegmentals']:
             self.transcription_params['suprasegmentals'] = suprasegmental_diacritics.union(self.transcription_params['suprasegmentals'])
+        self.alignment_params = alignment_params
         
         # Initialize vocabulary and phoneme inventory
         self.create_vocabulary()
@@ -1353,7 +1347,8 @@ class Language:
                 #    self.phon_environments[seg] = normalize_dict(self.phon_environments[seg], default=True, lmbda=0) 
             
                 # Count trigrams and gappy trigrams
-                padded_segments = ['# ', '# '] + segments + ['# ', '# ']
+                pad_ch = self.alignment_params['pad_ch']
+                padded_segments = [pad_ch, pad_ch] + segments + [pad_ch, pad_ch]
                 for j in range(1, len(padded_segments)-1):
                     trigram = (padded_segments[j-1], padded_segments[j], padded_segments[j+1])
                     self.trigrams[trigram] += 1
@@ -1442,15 +1437,16 @@ class Language:
             return self.phon_env_ngrams[ngram_size]
         
         else:
+            pad_ch = self.alignment_params['pad_ch']
             for concept in self.vocabulary:
                 for word in self.vocabulary[concept]:
                     segments = word.segments
                     if phon_env:
                         phon_env_segments = list(zip(segments, word.phon_env))
                     pad_n = ngram_size - 1
-                    padded = ['# ']*pad_n + segments + ['# ']*pad_n
+                    padded = [pad_ch]*pad_n + segments + [pad_ch]*pad_n
                     if phon_env:
-                        padded_phon_env = ['# ']*pad_n + phon_env_segments + ['# ']*pad_n
+                        padded_phon_env = [pad_ch]*pad_n + phon_env_segments + [pad_ch]*pad_n
                     for i in range(len(padded)-pad_n):
                         ngram = tuple(padded[i:i+ngram_size])
                         self.ngrams[ngram_size][ngram] += 1
@@ -1538,7 +1534,8 @@ class Language:
         
         # Otherwise calculate it from scratch
         # Pad the segmented word
-        padded = ['# ', '# '] + word.segments + ['# ', '# ']
+        pad_ch = self.alignment_params['pad_ch']
+        padded = [pad_ch, pad_ch] + word.segments + [pad_ch, pad_ch]
         info_content = {}
         for i in range(2, len(padded)-2):
             trigram_counts = 0
@@ -1635,7 +1632,9 @@ class Language:
         if key not in self.phoneme_correlators:
             self.phoneme_correlators[key] = PhonCorrelator(lang1=self,
                                                             lang2=lang2,
-                                                            wordlist=wordlist, 
+                                                            wordlist=wordlist,
+                                                            gap_ch=self.alignment_params.get('gap_ch', ALIGNMENT_PARAM_DEFAULTS['gap_ch']), 
+                                                            pad_ch=self.alignment_params.get('pad_ch', ALIGNMENT_PARAM_DEFAULTS['pad_ch']), 
                                                             seed=seed,
                                                             logger=self.family.logger)
 
