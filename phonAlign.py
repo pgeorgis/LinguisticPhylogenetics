@@ -1,5 +1,6 @@
 from math import log, inf
 from collections.abc import Iterable
+import re
 from nwunschAlign import best_alignment
 from phonUtils.segment import _toSegment, consonants
 from phonUtils.phonSim import phone_sim
@@ -18,7 +19,7 @@ class Ngram:
     @staticmethod
     def get_ngram(ngram, seg_sep='_'):
         if isinstance(ngram, str):
-            return tuple(ngram.split(seg_sep))
+            return tuple(re.split(rf'(?<!^){seg_sep}(?!$)', ngram))
         elif isinstance(ngram, Ngram):
             return ngram.ngram
         elif isinstance(ngram, tuple):
@@ -326,7 +327,7 @@ class Alignment:
             alignment = self.alignment
         if pad_n is None:
             pad_n = max(0, ngram_size-1)
-        return [(pad_ch, pad_ch)]*pad_n + alignment + [(pad_ch, pad_ch)]*pad_n
+        return [(f'{pad_ch}', f'{pad_ch}_')]*pad_n + alignment + [(f'_{pad_ch}', f'_{pad_ch}')]*pad_n
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices
