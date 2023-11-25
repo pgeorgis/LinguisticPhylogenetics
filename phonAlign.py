@@ -321,10 +321,11 @@ class Alignment:
         self.seq_map = self.map_to_seqs()
         self.length = len(self.alignment)
 
-    def pad(self, ngram_size, alignment=None, pad_ch='#'):
+    def pad(self, ngram_size, alignment=None, pad_ch='#', pad_n=None):
         if alignment is None:
             alignment = self.alignment
-        pad_n = max(0, ngram_size-1)
+        if pad_n is None:
+            pad_n = max(0, ngram_size-1)
         return [(pad_ch, pad_ch)]*pad_n + alignment + [(pad_ch, pad_ch)]*pad_n
 
     def map_to_seqs(self):
