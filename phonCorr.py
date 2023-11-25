@@ -486,7 +486,7 @@ class PhonCorrelator:
             self.lang1.complex_ngrams[self.lang2] = self.complex_ngrams
             reversed_complex_ngrams = {val:set(key for key in self.complex_ngrams if val in self.complex_ngrams[key]) 
                                        for key in self.complex_ngrams for val in self.complex_ngrams[key]}
-            self.lang2.complex_ngrams[self.lang1] = reversed_complex_ngrams
+            self.lang2.complex_ngrams[self.lang1] = default_dict(reversed_complex_ngrams, l=[])
             # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
             
         self.pmi_dict = results
