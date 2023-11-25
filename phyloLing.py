@@ -25,6 +25,7 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 from phonUtils.syllables import syllabify
 from phonCorr import PhonCorrelator
+from phonAlign import Ngram
 from lingDist import Z_score_dist
 import logging
 
@@ -289,11 +290,7 @@ class LexicalDataset:
             pmi_dir = os.path.join(self.phone_corr_dir, 'pmi')
         
         def str2ngram(str, join_ch='_'):
-            ngram = str.split(join_ch)
-            if len(ngram) > 1:
-                return tuple(ngram)
-            else:
-                return str
+            return Ngram(str, lang=self, seg_sep=join_ch)
         
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
@@ -311,8 +308,14 @@ class LexicalDataset:
                 for index, row in pmi_data.iterrows():
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     pmi_value = row['PMI']
-                    lang1.phoneme_pmi[lang2][str2ngram(phone1)][str2ngram(phone2)] = pmi_value
-                    lang2.phoneme_pmi[lang1][str2ngram(phone2)][str2ngram(phone1)] = pmi_value
+                    ngram1 = str2ngram(phone1)
+                    ngram2 = str2ngram(phone2)
+                    lang1.phoneme_pmi[lang2][ngram1.ngram][ngram2.ngram] = pmi_value
+                    lang2.phoneme_pmi[lang1][ngram2.ngram][ngram1.ngram] = pmi_value
+                    if ngram1.size > 1 or ngram2.size > 1 and pmi_value > 0:
+                        lang1.complex_ngrams[lang2][ngram1].append(ngram2)
+                        lang2.complex_ngrams[lang1][ngram2].append(ngram1)
+                    
 
     def write_phoneme_pmi(self, **kwargs):
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
@@ -1294,6 +1297,7 @@ class Language:
         self.phoneme_correlators = {}
         self.phoneme_correspondences = defaultdict(lambda:defaultdict(lambda:0))
         self.phoneme_pmi = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
+        self.complex_ngrams = defaultdict(lambda:defaultdict(lambda:[]))
         self.phoneme_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.noncognate_thresholds = defaultdict(lambda:[])

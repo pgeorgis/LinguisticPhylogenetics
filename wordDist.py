@@ -8,7 +8,7 @@ from phonUtils.ipaTools import strip_diacritics
 from phonUtils.segment import _toSegment
 from phonUtils.phonSim import phone_sim
 from auxFuncs import Distance, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal, surprisal, surprisal_to_prob
-from phonAlign import Alignment, get_alignment_iter
+from phonAlign import Alignment, Ngram, get_alignment_iter
 
 
 def prepare_alignment(word1, word2, **kwargs):
@@ -526,9 +526,13 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, **kwargs):
         
     # Align the words with PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
+    alignment.compact_gaps(lang1.complex_ngrams[lang2])
     
     # Calculate PMI scores for each aligned pair
-    PMI_values = [pmi_dict[pair[0]][pair[1]] for pair in alignment.alignment]
+    PMI_values = [
+        pmi_dict[Ngram(pair_left).ngram][Ngram(pair_right).ngram]
+        for pair_left, pair_right in alignment.alignment
+    ]
 
     # Weight by information content per segment
     def weight_by_info_content(alignment, PMI_vals):
