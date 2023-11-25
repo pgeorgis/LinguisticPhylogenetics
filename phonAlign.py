@@ -27,6 +27,9 @@ class Ngram:
         else:
             return flatten_ngram(tuple(ngram))
     
+    def unigrams(self):
+        return (Ngram(seg) for seg in self.ngram)
+    
     def __str__(self):
         return self.string
 
@@ -327,7 +330,7 @@ class Alignment:
             alignment = self.alignment
         if pad_n is None:
             pad_n = max(0, ngram_size-1)
-        return [(f'{pad_ch}', f'{pad_ch}_')]*pad_n + alignment + [(f'_{pad_ch}', f'_{pad_ch}')]*pad_n
+        return [(f'{pad_ch}_', f'{pad_ch}_')]*pad_n + alignment + [(f'_{pad_ch}', f'_{pad_ch}')]*pad_n
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices

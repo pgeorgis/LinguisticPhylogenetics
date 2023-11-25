@@ -332,16 +332,39 @@ class PhonCorrelator:
         for seg1, seg2 in segment_pairs:
             seg1_ngram = Ngram(seg1)
             seg2_ngram = Ngram(seg2)
+            # Skip full boundary gap alignments
             if self.pad_ch in seg1 and self.pad_ch in seg2: # (seg1, seg2) == (self.pad_ch, self.pad_ch)
                 continue
+            # Boundary gaps: use reverse-direction corr dicts
             elif self.pad_ch in seg1:
-                cond_prob = conditional_counts[seg1][seg2] / sum(conditional_counts[seg1].values())
-                p_boundary = len(self.same_meaning) / self.total_unigrams[0]
-                pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_boundary)
+                assert self.pad_ch in seg2_ngram.string
+                if re.search(rf'__{self.pad_ch}$', seg2_ngram.string):
+                    #direction = 'END'
+                    counts_seg2 = len([word2 for word1, word2 in self.same_meaning 
+                                if tuple(word2.segments[-(seg2_ngram.size-1):]) == seg2[:-1]])
+                    p_seg2 = counts_seg2 / len(self.same_meaning)
+                    cond_prob = reverse_cond_counts[seg2][seg1] / counts_seg2
+                    pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg2)
+                else:
+                    #direction = 'START'
+                    breakpoint()
+                    continue
+            
             elif self.pad_ch in seg2:
-                cond_prob = reverse_cond_counts[seg2][seg1] / sum(reverse_cond_counts[seg2].values())
-                p_boundary = len(self.same_meaning) / self.total_unigrams[-1]
-                pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_boundary)
+                assert self.pad_ch in seg1_ngram.string
+                if re.search(rf'__{self.pad_ch}$', seg1_ngram.string):
+                    #direction = 'END'
+                    counts_seg1 = len([word1 for word1, word2 in self.same_meaning 
+                                if tuple(word1.segments[-(seg1_ngram.size-1):]) == seg1[:-1]])
+                    p_seg1 = counts_seg1 / len(self.same_meaning)
+                    cond_prob = conditional_counts[seg1][seg2] / counts_seg1
+                    pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg1)
+                else:
+                    #direction = 'START'
+                    breakpoint()
+                    continue
+            
+            # Standard alignment pairs
             else:
                 p_ind1 = l1.ngram_probability(seg1_ngram)
                 p_ind2 = l2.ngram_probability(seg2_ngram)
@@ -1063,6 +1086,7 @@ class NullCompacter:
         self.gap_ch = gap_ch
         self.pad_ch = pad_ch
         self.gap_ngram = Ngram(self.gap_ch).ngram
+        self.pad_ngrams = (Ngram(f'{self.pad_ch}_').ngram, Ngram(f'_{self.pad_ch}').ngram)
         self.ngram_size = ngram_size
         self.corr_counts = corr_counts
         self.alignments = alignments
@@ -1131,19 +1155,21 @@ class NullCompacter:
         
     def eval_null_corr(self, larger_ngrams, gap_segs, direction):
         # Determine direction
+        self.reverse_corr_counts()
         if direction == 'FORWARD':
             seqs, opp_seqs = self.seqs2, self.seqs1
             seq_lens, opp_seq_lens = self.seqs2_lens, self.seqs1_lens
             total_seq_len, opp_total_seq_len = self.seqs2_len_total, self.seqs1_len_total
             corr_counts = self.corr_counts
             compacted_corr_counts = self.compacted_corr_counts
+            reversed_compacted_corr_counts = self.reversed_compacted_corr_counts
         elif direction == 'BACKWARD':
-            self.reverse_corr_counts()
             seqs, opp_seqs = self.seqs1, self.seqs2
             seq_lens, opp_seq_lens = self.seqs1_lens, self.seqs2_lens
             total_seq_len, opp_total_seq_len = self.seqs1_len_total, self.seqs2_len_total
             corr_counts = self.reversed_corr_counts
             compacted_corr_counts = self.reversed_compacted_corr_counts
+            reversed_compacted_corr_counts = self.compacted_corr_counts
         else:
             raise ValueError
         
@@ -1159,13 +1185,12 @@ class NullCompacter:
                 larger_ngram = Ngram(larger_ngram)
                 comp_count = compacted_corr_counts[larger_ngram.raw][gap_seg.raw]
                 
-                # Special handling for boundary (start/end seq) gaps, marked with pad_ch
                 if self.pad_ch in gap_seg.string:
+                    # Special handling for boundary (start/end seq) gaps, marked with pad_ch, see details below
                     # Logic: PAD_CH corresponds to either the start or end of an alignment/segmented sequence
                     # Every sequence has exactly one of each, therefore the probability (irrespective whether beginning/end) is just the number of sequences divided by the total number of unigrams
                     gap_seg_prob = len(seqs) / total_seq_len
-                    
-                # Calculation below gives a more precise probability specific to this set of alignments, 
+                # Calculation below gives a more precise probability specific to this set of alignments,  # TODO add this method with ngram_count_wordlist() in calculation of PMI elsewhere
                 # which directly reflects shared coverage between l1 and l2
                 # Else, using lang.phonemes will consider all words in the vocabulary
                 elif gap_seg.size > 1: # gap seg is also a n>1-ngram
@@ -1176,21 +1201,40 @@ class NullCompacter:
                 
                 # Estimate PMI of larger/complex ngram correlation 
                 if self.pad_ch in larger_ngram.string:
-                    # See above logic at gap_seg_prob definition for handling of boundary gaps
-                    larger_ngram_count = len(opp_seqs)
-                    larger_ngram_prob = larger_ngram_count / opp_total_seq_len
+                    # Logic: PAD_CH corresponds to either the start or end of an alignment/segmented sequence
+                    # Each word by definition has exactly 1 of these, but we are interested in the ones aligned with a particular sequence
+                    # Probability of boundary gaps with complex ngrams can be calculated by counting the number of 
+                    # words starting/ending with the sequence aligned to the opposite-language boundary gap
+                    # and then via Bayes theorem, given this probability and the conditional probability, we can get the PMI
+                    if re.search(rf'{self.pad_ch}$', gap_seg.string): # ENDING BOUNDARY
+                        larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[-gap_seg.size:]) == larger_ngram.ngram[:-1]])
+                        larger_ngram_prob = larger_ngram_count / len(opp_seqs)
+                        
+                    else: # STARTING BOUNDARY
+                        larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[:gap_seg.size]) == larger_ngram.ngram[1:]])
+                        larger_ngram_prob = larger_ngram_count / len(opp_seqs)
+                    
+                    cond_count_complex = reversed_compacted_corr_counts[gap_seg.raw][larger_ngram.raw]
+                    cond_prob_complex = cond_count_complex / larger_ngram_count
+                    pmi_complex = bayes_pmi(cond_prob_complex, larger_ngram_prob)
+                        
                 else:
                     larger_ngram_count = ngram_count_wordlist(larger_ngram.ngram, opp_seqs)
                     larger_ngram_prob = larger_ngram_count / sum([count_subsequences(l, larger_ngram.size) for l in opp_seq_lens])
-                cond_prob_complex = comp_count/larger_ngram_count
-                joint_prob_complex = cond_prob_complex * larger_ngram_prob
-                pmi_complex = pointwise_mutual_info(joint_prob_complex, larger_ngram_prob, gap_seg_prob)
+                    cond_prob_complex = comp_count/larger_ngram_count
+                    joint_prob_complex = cond_prob_complex * larger_ngram_prob
+                    pmi_complex = pointwise_mutual_info(joint_prob_complex, larger_ngram_prob, gap_seg_prob)
                 
-                # Estimate PMI of simpler ngram (unigram) correlation 
+                # Estimate PMI of simpler ngram (unigram) correlation
+                pmi_basic = 0
                 if self.pad_ch in larger_ngram.string:
-                    pmi_basic = bayes_pmi(cond_prob_complex, gap_seg_prob)
+                    for unigram in larger_ngram.unigrams():
+                        if unigram.ngram not in self.pad_ngrams:
+                            cond_prob_basic = corr_counts[unigram.ngram][self.gap_ngram] / sum(corr_counts[unigram.ngram].values())
+                            if cond_prob_basic > 0:
+                                pmi_basic += max(0, bayes_pmi(cond_prob_basic, gap_seg_prob))
+                    
                 else:
-                    pmi_basic = 0
                     for seg in larger_ngram.ngram:
                         seg = Ngram(seg)
                         seg_prob = ngram_count_wordlist(seg.ngram, opp_seqs) / opp_total_seq_len
@@ -1199,11 +1243,11 @@ class NullCompacter:
                             p_seg_given_gap = count_seg_given_gap / sum(corr_counts[self.gap_ngram].values())
                             if p_seg_given_gap > 0:
                                 pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
-                            count_gap_seg_given_seg = corr_counts[seg.ngram].get(gap_seg.ngram, 0)
-                            if count_gap_seg_given_seg > 0:
-                                p_gap_seg_given_seg = count_gap_seg_given_seg / sum(corr_counts[seg.ngram].values())
-                                if p_gap_seg_given_seg > 0:
-                                    pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
+                        count_gap_seg_given_seg = corr_counts[seg.ngram].get(gap_seg.ngram, 0)
+                        if count_gap_seg_given_seg > 0:
+                            p_gap_seg_given_seg = count_gap_seg_given_seg / sum(corr_counts[seg.ngram].values())
+                            if p_gap_seg_given_seg > 0:
+                                pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
                                 
                 # Consider the compacted null alignment to be valid if its PMI is greater than that of the simpler ngram correlations
                 if pmi_complex > pmi_basic:
