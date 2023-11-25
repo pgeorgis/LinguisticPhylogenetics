@@ -67,12 +67,16 @@ def validate_params(params, valid_params, logger):
     if 'file' not in params['family']:
         logger.error('Input file (`file`) argument must be specified!')
         raise ValueError
+    params['family']['file'] = os.path.abspath(params['family']['file'])
+    logger.debug(f"Data source: {params['family']['file']}")
     
     # Designate outdir as the input file directory if unspecified
     if params['family']['outdir'] is None:
         outdir = os.path.dirname(os.path.abspath(params['family']['file']))
-        logger.debug(f'Setting experiment outdir to {outdir}')
         params['family']['outdir'] = outdir
+    else:
+        outdir = os.path.abspath(params['family']['outdir'])
+    logger.debug(f'Experiment outdir: {outdir}')
     
     # Designate global transcription parameter defaults
     for transcription_param in TRANSCRIPTION_PARAM_DEFAULTS:
