@@ -338,12 +338,10 @@ class PhonCorrelator:
                 cond_prob = conditional_counts[seg1][seg2] / sum(conditional_counts[seg1].values())
                 p_boundary = len(self.same_meaning) / self.total_unigrams[0]
                 pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_boundary)
-                print((seg1, seg2), round(pmi_dict[seg1][seg2], 2))
             elif self.pad_ch in seg2:
                 cond_prob = reverse_cond_counts[seg2][seg1] / sum(reverse_cond_counts[seg2].values())
                 p_boundary = len(self.same_meaning) / self.total_unigrams[-1]
                 pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_boundary)
-                print((seg1, seg2), round(pmi_dict[seg1][seg2], 2))
             else:
                 p_ind1 = l1.ngram_probability(seg1_ngram)
                 p_ind2 = l2.ngram_probability(seg2_ngram)
@@ -977,6 +975,8 @@ class PhonCorrelator:
         return iter_log
     
     def _write_iter_log(self, iter_logs, log_file):
+        log_dir = os.path.abspath(os.path.dirname(log_file))
+        os.makedirs(log_dir, exist_ok=True)
         with open(log_file, 'w') as f:
             f.write(f'Same meaning pairs: {len(self.same_meaning)}\n')
             for n in iter_logs:
