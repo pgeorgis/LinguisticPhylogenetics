@@ -1291,7 +1291,7 @@ class Language:
         self.phoneme_correlators = {}
         self.phoneme_correspondences = defaultdict(lambda:defaultdict(lambda:0))
         self.phoneme_pmi = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
-        self.complex_ngrams = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:[])))
+        self.complex_ngrams = defaultdict(lambda:defaultdict(lambda:[]))
         self.phoneme_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.noncognate_thresholds = defaultdict(lambda:[])
