@@ -489,7 +489,7 @@ def add_phon_env(alignment,
         segs1 = tuple([seg for seg in word1_aligned if seg != gap_ch])
     gap_count1, gap_count2 = 0, 0
 
-    def add_phon_env(word_aligned, segs, i, gap_count, gap_ch):
+    def add_phon_env_i(word_aligned, segs, i, gap_count, gap_ch):
         if word_aligned[i] == gap_ch:
             gap_count += 1
             # TODO so gaps are skipped?
@@ -501,7 +501,7 @@ def add_phon_env(alignment,
         return word1_aligned, gap_count
 
     for i, seg in enumerate(word1_aligned):
-        word1_aligned, gap_count1 = add_phon_env(word1_aligned, segs1, i, gap_count1, gap_ch)
+        word1_aligned, gap_count1 = add_phon_env_i(word1_aligned, segs1, i, gap_count1, gap_ch)
 
     # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
     return list(zip(word1_aligned, word2_aligned))
