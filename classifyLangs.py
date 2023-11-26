@@ -99,7 +99,12 @@ def validate_params(params, valid_params, logger):
     # Ensure gap character and pad character are different
     if params['alignment']['gap_ch'] == params['alignment']['pad_ch']:
         raise ValueError(f"Gap character and pad character must be different! Both are set to '{params['alignment']['gap_ch']}'")
-
+    # Ensure pad character is not < or >, which are used in combination with the pad character for indicating side of padding
+    # Neither pad nor gap character can be _, which is used for joining ngrams
+    if params['alignment']['pad_ch'] in ('<', '>', '_'):
+        raise ValueError('Invalid pad character. Pad character may not be "<", ">", or "_".') 
+    if params['alignment']['gap_ch'] in ('_'):
+        raise ValueError('Invalid gap character. Gap character may not be "_".')
 
 def init_hybrid(function_map, eval_params):
     HybridDist = Distance(

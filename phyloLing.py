@@ -17,7 +17,7 @@ import seaborn as sns
 from unidecode import unidecode
 import numpy as np
 from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist, flatten_ngram, pad_sequence, create_timestamp
-from auxFuncs import Distance, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
+from auxFuncs import Distance, Ngram, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonUtils.initPhoneData import consonants, suprasegmental_diacritics
 from phonUtils.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
 from phonUtils.segment import segment_ipa, _toSegment
@@ -25,7 +25,6 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 from phonUtils.syllables import syllabify
 from phonCorr import PhonCorrelator
-from phonAlign import Ngram
 from lingDist import Z_score_dist
 from constants import TRANSCRIPTION_PARAM_DEFAULTS, ALIGNMENT_PARAM_DEFAULTS
 import logging
@@ -302,8 +301,8 @@ class LexicalDataset:
                     pmi_value = row['PMI']
                     ngram1 = str2ngram(phone1)
                     ngram2 = str2ngram(phone2)
-                    lang1.phoneme_pmi[lang2][ngram1.ngram][ngram2.ngram] = pmi_value
-                    lang2.phoneme_pmi[lang1][ngram2.ngram][ngram1.ngram] = pmi_value
+                    lang1.phoneme_pmi[lang2][ngram1.undo()][ngram2.undo()] = pmi_value
+                    lang2.phoneme_pmi[lang1][ngram2.undo()][ngram1.undo()] = pmi_value
                     if ngram1.size > 1 or ngram2.size > 1:
                         lang1.complex_ngrams[lang2][ngram1].append(ngram2)
                         lang2.complex_ngrams[lang1][ngram2].append(ngram1)
@@ -1448,11 +1447,11 @@ class Language:
                     if phon_env:
                         padded_phon_env = pad_sequence(phon_env_segments, pad_ch=pad_ch, pad_n=pad_n)
                     for i in range(len(padded)-pad_n):
-                        ngram = tuple(padded[i:i+ngram_size])
-                        self.ngrams[ngram_size][ngram] += 1
+                        ngram = Ngram(padded[i:i+ngram_size])
+                        self.ngrams[ngram_size][ngram.ngram] += 1
                         if phon_env:
-                            phon_env_ngram = tuple(padded_phon_env[i:i+ngram_size])
-                            self.phon_env_ngrams[ngram_size][phon_env_ngram] += 1
+                            phon_env_ngram = Ngram(padded_phon_env[i:i+ngram_size])
+                            self.phon_env_ngrams[ngram_size][phon_env_ngram.ngram] += 1
 
             if phon_env:
                 return self.phon_env_ngrams[ngram_size]

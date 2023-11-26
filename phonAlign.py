@@ -5,33 +5,8 @@ from nwunschAlign import best_alignment
 from phonUtils.segment import _toSegment, consonants
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
-from auxFuncs import Distance, validate_class, flatten_ngram
+from auxFuncs import Distance, validate_class, Ngram
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
-
-class Ngram:
-    def __init__(self, ngram, lang=None, seg_sep='_'):
-        self.raw = ngram
-        self.ngram = self.get_ngram(ngram, seg_sep)
-        self.string = seg_sep.join(self.ngram)
-        self.size = len(self.ngram)
-        self.lang = lang
-    
-    @staticmethod
-    def get_ngram(ngram, seg_sep='_'):
-        if isinstance(ngram, str):
-            return tuple(re.split(rf'(?<!^){seg_sep}(?!$)', ngram))
-        elif isinstance(ngram, Ngram):
-            return ngram.ngram
-        elif isinstance(ngram, tuple):
-            return flatten_ngram(ngram)
-        else:
-            return flatten_ngram(tuple(ngram))
-    
-    def unigrams(self):
-        return (Ngram(seg) for seg in self.ngram)
-    
-    def __str__(self):
-        return self.string
 
 def compatible_segments(seg1, seg2):
     """Determines whether a pair of segments are compatible for alignment. 
@@ -339,7 +314,7 @@ class Alignment:
             alignment = self.alignment
         if pad_n is None:
             pad_n = max(0, ngram_size-1)
-        return [(f'{pad_ch}_', f'{pad_ch}_')]*pad_n + alignment + [(f'_{pad_ch}', f'_{pad_ch}')]*pad_n
+        return [(f'<{pad_ch}', f'<{pad_ch}')]*pad_n + alignment + [(f'{pad_ch}>', f'{pad_ch}>')]*pad_n
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices

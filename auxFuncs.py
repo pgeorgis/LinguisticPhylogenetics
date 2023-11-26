@@ -169,6 +169,37 @@ def normalize_dict(dict_, default=False, lmbda=None, return_=True):
    
 
 # NGRAMS and INFORMATION CONTENT
+class Ngram:
+    def __init__(self, ngram, lang=None, seg_sep='_'):
+        self.raw = ngram
+        self.ngram = self.get_ngram(ngram, seg_sep)
+        self.string = seg_sep.join(self.ngram)
+        self.size = len(self.ngram)
+        self.lang = lang
+    
+    @staticmethod
+    def get_ngram(ngram, seg_sep='_'):
+        if isinstance(ngram, str):
+            return tuple(re.split(rf'(?<!^){seg_sep}(?!$)', ngram))
+        elif isinstance(ngram, Ngram):
+            return ngram.ngram
+        elif isinstance(ngram, tuple):
+            return flatten_ngram(ngram)
+        else:
+            return flatten_ngram(tuple(ngram))
+    
+    def unigrams(self):
+        return (Ngram(seg) for seg in self.ngram)
+    
+    def undo(self):
+        if self.size == 1:
+            return self.string
+        else:
+            return self.ngram
+    
+    def __str__(self):
+        return self.string
+
 @lru_cache(maxsize=None)
 def count_subsequences(seq_len, subseq_len):
     if subseq_len > seq_len:
@@ -243,11 +274,9 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False
         ngram = alignment[i:i+ngram_size]
         segs = list(zip(*ngram))
         seg1, seg2 = segs
-        # forward
-        # seg2 = seg2[-1]
-        
-        # backward
-        seg2 = seg2[0]
+        # Convert to form stored in correspondence dictionaries, whereby unigrams are strings and larger ngrams are tuples
+        seg1 = Ngram(seg1).undo()
+        seg2 = Ngram(seg2).undo()
         values.append(surprisal_dict[seg1][seg2])
 
     if normalize:
