@@ -85,7 +85,7 @@ class PhonCorrelator:
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
         self.total_unigrams = (sum([len(word1.segments) for word1, word2 in self.same_meaning]),
                                sum([len(word2.segments) for word1, word2 in self.same_meaning]))
-        self.complex_ngrams = None
+        self.complex_ngrams = self.lang1.complex_ngrams[self.lang2]
         self.scored_words = defaultdict(lambda:{})
         
         # Logging
@@ -184,6 +184,11 @@ class PhonCorrelator:
         of Alignment objects.
         counts : Bool; if True, returns raw counts instead of normalized probabilities;
         exclude_null : Bool; if True, does not consider aligned pairs including a null segment"""
+        
+        # Purpose of padding is to achieve null alignment compacting, so no need to pad if this is not being performed
+        if compact_null is False:
+            pad = False
+        
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         if compact_null:
             null_compacter = NullCompacter(corr_counts, 
@@ -781,11 +786,11 @@ class PhonCorrelator:
                 same_sample = random.sample(self.same_meaning, sample_size)
                 # Take a sample of different-meaning words, as large as the same-meaning set
                 diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-                diff_meaning_alignments = self.align_wordlist(diff_sample, added_penalty_dict=self.pmi_dict)
+                diff_meaning_alignments = self.align_wordlist(diff_sample, added_penalty_dict=self.pmi_dict, complex_ngrams=self.complex_ngrams)
 
                 # Align same-meaning and different meaning word pairs using PMI values: 
                 # the alignments will remain the same throughout iteration
-                same_meaning_alignments = self.align_wordlist(same_sample, added_penalty_dict=self.pmi_dict)
+                same_meaning_alignments = self.align_wordlist(same_sample, added_penalty_dict=self.pmi_dict, complex_ngrams=self.complex_ngrams)
 
                 # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
                 # Then test each same-meaning word pair to see if if it meets the qualifying threshold
@@ -806,7 +811,8 @@ class PhonCorrelator:
                         cognate_alignments = all_cognate_alignments
                     surprisal_iterations[iteration] = self.phoneme_surprisal(self.correspondence_probs(cognate_alignments,
                                                                                                        counts=True,
-                                                                                                       exclude_null=False, 
+                                                                                                       exclude_null=False,
+                                                                                                       compact_null=False,
                                                                                                        ngram_size=ngram_size), 
                                                                              ngram_size=ngram_size)
 
@@ -903,6 +909,7 @@ class PhonCorrelator:
             surprisal_results = self.phoneme_surprisal(self.correspondence_probs(same_meaning_alignments,
                                                                                  counts=True,
                                                                                  exclude_null=False, 
+                                                                                 compact_null=False, 
                                                                                  ngram_size=ngram_size), 
                                                                                  ngram_size=ngram_size)
         
