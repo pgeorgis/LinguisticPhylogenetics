@@ -341,20 +341,20 @@ class PhonCorrelator:
             # Skip full boundary gap alignments
             if self.pad_ch in seg1 and self.pad_ch in seg2: # (seg1, seg2) == (self.pad_ch, self.pad_ch)
                 continue
-            # Boundary gaps: use reverse-direction corr dicts
+            # Boundary gap alignments with segments
             elif self.pad_ch in seg1:
                 assert self.pad_ch in seg2_ngram.string
                 if re.search(rf'__{self.pad_ch}$', seg2_ngram.string):
                     #direction = 'END'
                     counts_seg2 = len([word2 for word1, word2 in self.same_meaning 
                                 if tuple(word2.segments[-(seg2_ngram.size-1):]) == seg2[:-1]])
-                    p_seg2 = counts_seg2 / len(self.same_meaning)
-                    cond_prob = reverse_cond_counts[seg2][seg1] / counts_seg2
-                    pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg2)
                 else:
                     #direction = 'START'
-                    breakpoint()
-                    raise NotImplementedError # TODO NOT YET IMPLEMENTED BECAUSE NO EXAMPLES YET TRIGGERED
+                    counts_seg2 = len([word2 for word1, word2 in self.same_meaning 
+                                if tuple(word2.segments[:seg2_ngram.size-1]) == seg2[1:]])
+                p_seg2 = counts_seg2 / len(self.same_meaning)
+                cond_prob = conditional_counts[seg1][seg2] / counts_seg2
+                pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg2)
             
             elif self.pad_ch in seg2:
                 assert self.pad_ch in seg1_ngram.string
@@ -362,13 +362,13 @@ class PhonCorrelator:
                     #direction = 'END'
                     counts_seg1 = len([word1 for word1, word2 in self.same_meaning 
                                 if tuple(word1.segments[-(seg1_ngram.size-1):]) == seg1[:-1]])
-                    p_seg1 = counts_seg1 / len(self.same_meaning)
-                    cond_prob = conditional_counts[seg1][seg2] / counts_seg1
-                    pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg1)
                 else:
                     #direction = 'START'
-                    breakpoint()
-                    raise NotImplementedError # TODO NOT YET IMPLEMENTED BECAUSE NO EXAMPLES YET TRIGGERED
+                    counts_seg1 = len([word1 for word1, word2 in self.same_meaning
+                                       if tuple(word1.segments[:seg1_ngram.size-1]) == seg1[1:]])
+                p_seg1 = counts_seg1 / len(self.same_meaning)
+                cond_prob = reverse_cond_counts[seg2][seg1] / counts_seg1
+                pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg1)
             
             # Standard alignment pairs
             else:
