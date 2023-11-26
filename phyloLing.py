@@ -26,7 +26,7 @@ from phonUtils.phonEnv import get_phon_env
 from phonUtils.syllables import syllabify
 from phonCorr import PhonCorrelator
 from lingDist import Z_score_dist
-from constants import TRANSCRIPTION_PARAM_DEFAULTS, ALIGNMENT_PARAM_DEFAULTS
+from constants import TRANSCRIPTION_PARAM_DEFAULTS, ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH
 import logging
 
 
@@ -353,7 +353,7 @@ class LexicalDataset:
         if surprisal_dir is None:
             surprisal_dir = os.path.join(self.phone_corr_dir, 'surprisal')
         
-        def str2ngram(str, join_ch='_'):
+        def str2ngram(str, join_ch=SEG_JOIN_CH):
             return Ngram(str, lang=self, seg_sep=join_ch)
         
         def extract_surprisal_from_df(surprisal_data, lang2, phon_env=False):
@@ -361,14 +361,17 @@ class LexicalDataset:
             oov_vals = {}
             for index, row in surprisal_data.iterrows():
                 phone1, phone2 = row['Phone1'], row['Phone2']
+                surprisal_value = row['Surprisal']
                 if ngram_size > 1:
                     breakpoint() # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
                 ngram1, ngram2 = map(str2ngram, [phone1, phone2])
-                if phon_env:
-                    phone1 = (phone1,) # phon_env needs to be saved as ((phone, env),)
-                surprisal_value = row['Surprisal']
-                ngram1_dict_form = ngram1.undo()
                 ngram2_dict_form = ngram2.undo()
+                if phon_env:
+                    phone1, env = phone1.split(PHON_ENV_JOIN_CH)
+                    #phon_env needs to be saved as ((phone, env),) e.g. (('ˈœ', '<|S|>_R'),)
+                    ngram1_dict_form = ((Ngram(phone1).undo(), env),) # TODO check that this format is correct when this dict is called in adaptation surprisal
+                else:
+                    ngram1_dict_form = ngram1.undo()
                 surprisal_dict[(lang2, ngram_size)][ngram1_dict_form][ngram2_dict_form] = surprisal_value
                 if ngram1_dict_form not in oov_vals:
                     oov_smoothed = row['OOV_Smoothed']

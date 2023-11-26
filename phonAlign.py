@@ -1,12 +1,12 @@
 from math import log, inf
 from collections.abc import Iterable
-import re
 from nwunschAlign import best_alignment
 from phonUtils.segment import _toSegment, consonants
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 from auxFuncs import Distance, validate_class, Ngram
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
+from constants import START_PAD_CH, END_PAD_CH
 
 def compatible_segments(seg1, seg2):
     """Determines whether a pair of segments are compatible for alignment. 
@@ -314,7 +314,7 @@ class Alignment:
             alignment = self.alignment
         if pad_n is None:
             pad_n = max(0, ngram_size-1)
-        return [(f'<{pad_ch}', f'<{pad_ch}')]*pad_n + alignment + [(f'{pad_ch}>', f'{pad_ch}>')]*pad_n
+        return [(f'{START_PAD_CH}{pad_ch}', f'{START_PAD_CH}{pad_ch}')]*pad_n + alignment + [(f'{pad_ch}{END_PAD_CH}', f'{pad_ch}{END_PAD_CH}')]*pad_n
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices

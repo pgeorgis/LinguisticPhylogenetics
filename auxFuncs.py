@@ -14,6 +14,7 @@ from scipy.spatial.distance import squareform
 from sklearn import manifold
 import seaborn as sns
 import networkx as nx
+from constants import SEG_JOIN_CH
 
 # GENERAL AUXILIARY FUNCTIONS
 def create_timestamp():
@@ -170,7 +171,7 @@ def normalize_dict(dict_, default=False, lmbda=None, return_=True):
 
 # NGRAMS and INFORMATION CONTENT
 class Ngram:
-    def __init__(self, ngram, lang=None, seg_sep='_'):
+    def __init__(self, ngram, lang=None, seg_sep=SEG_JOIN_CH):
         self.raw = ngram
         self.ngram = self.get_ngram(ngram, seg_sep)
         self.string = seg_sep.join(self.ngram)
@@ -178,7 +179,7 @@ class Ngram:
         self.lang = lang
     
     @staticmethod
-    def get_ngram(ngram, seg_sep='_'):
+    def get_ngram(ngram, seg_sep=SEG_JOIN_CH):
         if isinstance(ngram, str):
             return tuple(re.split(rf'(?<!^){seg_sep}(?!$)', ngram))
         elif isinstance(ngram, Ngram):

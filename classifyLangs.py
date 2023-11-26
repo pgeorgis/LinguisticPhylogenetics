@@ -3,9 +3,10 @@ import os
 import logging
 import yaml
 from auxFuncs import Distance, create_timestamp
-from phyloLing import load_family, TRANSCRIPTION_PARAM_DEFAULTS
+from phyloLing import load_family
 from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, cascade_sim
 from lingDist import gradient_cognate_sim, binary_cognate_sim
+from constants import TRANSCRIPTION_PARAM_DEFAULTS, SPECIAL_JOIN_CHS
 
 # Loglevel mapping
 log_levels = {
@@ -99,12 +100,12 @@ def validate_params(params, valid_params, logger):
     # Ensure gap character and pad character are different
     if params['alignment']['gap_ch'] == params['alignment']['pad_ch']:
         raise ValueError(f"Gap character and pad character must be different! Both are set to '{params['alignment']['gap_ch']}'")
-    # Ensure pad character is not < or >, which are used in combination with the pad character for indicating side of padding
-    # Neither pad nor gap character can be _, which is used for joining ngrams
-    if params['alignment']['pad_ch'] in ('<', '>', '_'):
-        raise ValueError('Invalid pad character. Pad character may not be "<", ">", or "_".') 
-    if params['alignment']['gap_ch'] in ('_'):
-        raise ValueError('Invalid gap character. Gap character may not be "_".')
+    # Ensure pad character and gap character are not any of the special joinining/delimiting characters
+    invalid_special_ch_str = ','.join([f'"{ch}"' for ch in SPECIAL_JOIN_CHS])
+    if params['alignment']['pad_ch'] in SPECIAL_JOIN_CHS:
+        raise ValueError(f"Invalid pad character. Pad character may not be {invalid_special_ch_str}.") 
+    if params['alignment']['gap_ch'] in SPECIAL_JOIN_CHS:
+        raise ValueError(f"Invalid gap character. Gap character may not be {invalid_special_ch_str}.")
 
 def init_hybrid(function_map, eval_params):
     HybridDist = Distance(

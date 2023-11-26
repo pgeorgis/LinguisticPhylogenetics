@@ -12,6 +12,7 @@ from auxFuncs import Ngram # TODO move to its own module?
 from phonAlign import Alignment, compatible_segments, visual_align
 from phonUtils.segment import _toSegment
 from phonUtils.phonEnv import relative_prev_sonority, relative_post_sonority
+from constants import PHON_ENV_JOIN_CH, START_PAD_CH, END_PAD_CH
 
 def sort_wordlist(wordlist):
     return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
@@ -70,10 +71,12 @@ def ngram_count_wordlist(ngram, seq_list):
         count += ngram_count_word(ngram, seq)
     return count
 
-def ngram2str(ngram, join_ch='_'):
-    if isinstance(ngram, tuple):
-        return join_ch.join(ngram)
-    return ngram
+def ngram2str(ngram, phon_env=False):
+    if phon_env:
+        ngram, phon_env = ngram[:-1], ngram[-1]
+        return PHON_ENV_JOIN_CH.join([Ngram(ngram).string, phon_env])
+    else:
+        return Ngram(ngram).string
 
 class PhonCorrelator:
     def __init__(self, lang1, lang2, wordlist=None, gap_ch='-', pad_ch='#', seed=1, logger=None):        
@@ -358,7 +361,7 @@ class PhonCorrelator:
             # Boundary gap alignments with segments
             elif self.pad_ch in seg1:
                 assert self.pad_ch in seg2_ngram.string
-                if re.search(rf'{self.pad_ch}>', seg2_ngram.string):
+                if re.search(rf'{self.pad_ch}{END_PAD_CH}', seg2_ngram.string):
                     #direction = 'END'
                     counts_seg2 = len([word2 for word1, word2 in self.same_meaning 
                                 if tuple(word2.segments[-(seg2_ngram.size-1):]) == seg2[:-1]])
@@ -372,7 +375,7 @@ class PhonCorrelator:
             
             elif self.pad_ch in seg2:
                 assert self.pad_ch in seg1_ngram.string
-                if re.search(rf'{self.pad_ch}>', seg1_ngram.string):
+                if re.search(rf'{self.pad_ch}{END_PAD_CH}', seg1_ngram.string):
                     #direction = 'END'
                     counts_seg1 = len([word1 for word1, word2 in self.same_meaning 
                                 if tuple(word1.segments[-(seg1_ngram.size-1):]) == seg1[:-1]])
@@ -603,11 +606,11 @@ class PhonCorrelator:
             phone_contexts = [(seg, env) 
                               for seg in lang.phon_environments 
                               for env in lang.phon_environments[seg]]
-            all_ngrams = product(phone_contexts+[f'{self.pad_ch}>', f'<{self.pad_ch}', self.gap_ch], repeat=ngram_size)
+            all_ngrams = product(phone_contexts+[f'{self.pad_ch}{END_PAD_CH}', f'{START_PAD_CH}{self.pad_ch}', self.gap_ch], repeat=ngram_size)
             
         else:
             attested = lang.list_ngrams(ngram_size, phon_env=False)
-            all_ngrams = product(list(lang.phonemes.keys())+[f'{self.pad_ch}>', f'<{self.pad_ch}', self.gap_ch], repeat=ngram_size) 
+            all_ngrams = product(list(lang.phonemes.keys())+[f'{self.pad_ch}{END_PAD_CH}', f'{START_PAD_CH}{self.pad_ch}', self.gap_ch], repeat=ngram_size) 
 
         gappy = set(ngram for ngram in all_ngrams if self.gap_ch in ngram)
         all_ngrams = gappy.union(attested.keys())
@@ -1041,8 +1044,10 @@ class PhonCorrelator:
                 if surprisal_val < oov_smoothed:
                     if ngram_size > 1:
                         breakpoint() # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
-                    line = [ngram2str(seg1), ngram2str(seg2), str(surprisal_val), str(oov_smoothed)]
-                    lines.append(line)
+                    lines.append([ngram2str(seg1, phon_env=phon_env), 
+                                  ngram2str(seg2, phon_env=False), # phon_env only on seg1  
+                                  str(surprisal_val), 
+                                  str(oov_smoothed)])
         
         # Sort surprisal in ascending order
         lines = sorted(lines, key=lambda x:x[2], reverse=False)
@@ -1177,7 +1182,7 @@ class NullCompacter:
         self.gap_ch = gap_ch
         self.pad_ch = pad_ch
         self.gap_ngram = Ngram(self.gap_ch).ngram
-        self.pad_ngrams = (Ngram(f'{self.pad_ch}>').ngram, Ngram(f'<{self.pad_ch}').ngram)
+        self.pad_ngrams = (Ngram(f'{self.pad_ch}{END_PAD_CH}').ngram, Ngram(f'{START_PAD_CH}{self.pad_ch}').ngram)
         self.ngram_size = ngram_size
         self.corr_counts = corr_counts
         self.alignments = alignments
@@ -1297,7 +1302,7 @@ class NullCompacter:
                     # Probability of boundary gaps with complex ngrams can be calculated by counting the number of 
                     # words starting/ending with the sequence aligned to the opposite-language boundary gap
                     # and then via Bayes theorem, given this probability and the conditional probability, we can get the PMI
-                    if re.search(rf'{self.pad_ch}>', gap_seg.string): # ENDING BOUNDARY
+                    if re.search(rf'{self.pad_ch}{END_PAD_CH}', gap_seg.string): # ENDING BOUNDARY
                         larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[-gap_seg.size:]) == larger_ngram.ngram[:-1]])
                         larger_ngram_prob = larger_ngram_count / len(opp_seqs)
                         

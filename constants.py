@@ -13,3 +13,15 @@ ALIGNMENT_PARAM_DEFAULTS = {
     'gap_ch':'-', # alternative null character <∅> looks too similar to IPA character <ø>
     'pad_ch':'#',
 }
+
+# SPECIAL CHARACTERS FOR JOINING AND/OR DELIMITING PHON CORRS
+SEG_JOIN_CH = '_'
+PHON_ENV_JOIN_CH = ';'
+START_PAD_CH = '<'
+END_PAD_CH = '>'
+SPECIAL_JOIN_CHS = [
+    SEG_JOIN_CH,
+    PHON_ENV_JOIN_CH,
+    START_PAD_CH,
+    END_PAD_CH,
+]
