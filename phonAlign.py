@@ -6,7 +6,7 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 from auxFuncs import Distance, validate_class, Ngram
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
-from constants import START_PAD_CH, END_PAD_CH
+from constants import START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, NULL_CH_DEFAULT
 
 def compatible_segments(seg1, seg2):
     """Determines whether a pair of segments are compatible for alignment. 
@@ -90,13 +90,13 @@ class Alignment:
                  lang2=None,
                  cost_func=AlignmentCost, 
                  added_penalty_dict=None,
-                 gap_ch='-',
+                 gap_ch=GAP_CH_DEFAULT,
                  gop=-0.3, # TODO possibly need to recalibrate **
                  n_best=1,
                  phon_env=False,
                  **kwargs
                  ):
-        """Produces a pairwise alignment of two phone sequences. 
+        f"""Produces a pairwise alignment of two phone sequences. 
 
         Args:
             seq1 (phyloLing.Word or str): first phone sequence
@@ -105,7 +105,7 @@ class Alignment:
             lang2 (phyloLing.Language, optional): Language of seq2. Defaults to None.
             cost_func (Distance, optional): Cost function used for minimizing overall alignment cost. Defaults to AlignmentPhoneSim.
             added_penalty_dict (dict, optional): Dictionary of additional penalties to combine with cost_func. Defaults to None.
-            gap_ch (str, optional): Gap character. Defaults to '-'.
+            gap_ch (str, optional): Gap character. Defaults to '{GAP_CH_DEFAULT}'.
             gop (float, optional): Gap opening penalty. Defaults to -0.7.
             n_best (int, optional): Number of best (least costly) alignments to return. Defaults to 1.
             phon_env (Bool, optional): Adds phonological environment to alignment. Defaults to False.
@@ -309,7 +309,7 @@ class Alignment:
         self.seq_map = self.map_to_seqs()
         self.length = len(self.alignment)
 
-    def pad(self, ngram_size, alignment=None, pad_ch='#', pad_n=None):
+    def pad(self, ngram_size, alignment=None, pad_ch=PAD_CH_DEFAULT, pad_n=None):
         if alignment is None:
             alignment = self.alignment
         if pad_n is None:
@@ -450,7 +450,7 @@ class Gap(AlignedPair):
 
 def add_phon_env(alignment,
                  env_func=get_phon_env, 
-                 gap_ch='-',
+                 gap_ch=GAP_CH_DEFAULT,
                  segs1=None):
     """Adds the phonological environment value of segments to an alignment
     e.g. 
@@ -505,12 +505,12 @@ def reverse_alignment(alignment, phon_env=False):
     return [(pair[1], pair[0]) for pair in alignment]
 
 
-def visual_align(alignment, gap_ch='-', null='∅', phon_env=False):
+def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_env=False):
     """Renders list of aligned segment pairs as an easily interpretable
-    alignment string, with <∅> representing null segments,
+    alignment string, with <{NULL_CH_DEFAULT}> representing null segments,
     e.g.:
     visual_align([('z̪', 'ɡ'),('vʲ', 'v'),('ɪ', 'j'),('-', 'ˈa'),('z̪', 'z̪'),('d̪', 'd'),('ˈa', 'a')])
-    = 'z̪-ɡ / vʲ-v / ɪ-j / ∅-ˈa / z̪-z̪ / d̪-d / ˈa-a' """
+    = 'z̪-ɡ / vʲ-v / ɪ-j / {NULL_CH_DEFAULT}-ˈa / z̪-z̪ / d̪-d / ˈa-a' """
 
     if isinstance(alignment, Alignment) and gap_ch != alignment.gap_ch:
         raise ValueError(f'Gap character "{gap_ch}" does not match gap character of alignment "{alignment.gap_ch}"')
@@ -537,7 +537,7 @@ def visual_align(alignment, gap_ch='-', null='∅', phon_env=False):
     return ' / '.join(a)
 
 
-def undo_visual_align(visual_alignment, gap_ch='-'):
+def undo_visual_align(visual_alignment, gap_ch=GAP_CH_DEFAULT):
     """Reverts a visual alignment to a list of tuple segment pairs"""
     seg_pairs = visual_alignment.split(' / ')
     seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]

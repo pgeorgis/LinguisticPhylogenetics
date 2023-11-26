@@ -12,7 +12,7 @@ from auxFuncs import Ngram # TODO move to its own module?
 from phonAlign import Alignment, compatible_segments, visual_align
 from phonUtils.segment import _toSegment
 from phonUtils.phonEnv import relative_prev_sonority, relative_post_sonority
-from constants import PHON_ENV_JOIN_CH, START_PAD_CH, END_PAD_CH
+from constants import PHON_ENV_JOIN_CH, START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT
 
 def sort_wordlist(wordlist):
     return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
@@ -79,7 +79,7 @@ def ngram2str(ngram, phon_env=False):
         return Ngram(ngram).string
 
 class PhonCorrelator:
-    def __init__(self, lang1, lang2, wordlist=None, gap_ch='-', pad_ch='#', seed=1, logger=None):        
+    def __init__(self, lang1, lang2, wordlist=None, gap_ch=GAP_CH_DEFAULT, pad_ch=PAD_CH_DEFAULT, seed=1, logger=None):        
         # Set Language objects
         self.lang1 = lang1
         self.lang2 = lang2

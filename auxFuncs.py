@@ -14,7 +14,7 @@ from scipy.spatial.distance import squareform
 from sklearn import manifold
 import seaborn as sns
 import networkx as nx
-from constants import SEG_JOIN_CH
+from constants import SEG_JOIN_CH, PAD_CH_DEFAULT, START_PAD_CH, END_PAD_CH
 
 # GENERAL AUXILIARY FUNCTIONS
 def create_timestamp():
@@ -225,8 +225,8 @@ def flatten_ngram(nested_ngram):
             flat.append(item)        
     return tuple(flat)
 
-def pad_sequence(seq, pad_ch='#', pad_n=1):
-    return [f'{pad_ch}_']*pad_n + seq + [f'_{pad_ch}']*pad_n
+def pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=1):
+    return [f'{pad_ch}{START_PAD_CH}']*pad_n + seq + [f'{END_PAD_CH}{pad_ch}']*pad_n
 
 def pointwise_mutual_info(p_joint, p_x, p_y):
     return log(p_joint/(p_x*p_y)) # TODO should it be log base 2?
@@ -244,7 +244,7 @@ def surprisal(p):
 def surprisal_to_prob(s):
     return 2**-s
 
-def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False, normalize=True, pad_ch='#'):
+def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False, normalize=True, pad_ch=PAD_CH_DEFAULT):
     """Calculates the surprisal of an aligned sequence, given a dictionary of 
     surprisal values for the sequence corresponcences"""
 
