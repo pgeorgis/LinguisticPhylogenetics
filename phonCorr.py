@@ -70,6 +70,11 @@ def ngram_count_wordlist(ngram, seq_list):
         count += ngram_count_word(ngram, seq)
     return count
 
+def ngram2str(ngram, join_ch='_'):
+    if isinstance(ngram, tuple):
+        return join_ch.join(ngram)
+    return ngram
+
 class PhonCorrelator:
     def __init__(self, lang1, lang2, wordlist=None, gap_ch='-', pad_ch='#', seed=1, logger=None):        
         # Set Language objects
@@ -86,6 +91,7 @@ class PhonCorrelator:
         
         # PMI, ngrams, scored words
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
+        self.surprisal_dict = self.lang2.phoneme_surprisal[self.lang2]
         self.total_unigrams = (sum([len(word1.segments) for word1, word2 in self.same_meaning]),
                                sum([len(word2.segments) for word1, word2 in self.same_meaning]))
         self.complex_ngrams = self.lang1.complex_ngrams[self.lang2]
@@ -556,7 +562,7 @@ class PhonCorrelator:
             # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
             
         self.pmi_dict = results
-        self.write_phoneme_pmi()
+        self.log_phoneme_pmi()
         
         return results
     
@@ -951,16 +957,17 @@ class PhonCorrelator:
         
         # Write the iteration log
         if log_iterations and not gold:
+            surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
             self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
-            log_file = os.path.join(self.surprisal_log_dir, f'surprisal_iterations.log')
+            log_file = os.path.join(surprisal_ngram_log_dir, f'surprisal_iterations.log')
             self._write_iter_log(iter_logs, log_file)
             
             # Write alignments log
-            align_log_file = os.path.join(self.surprisal_log_dir, 'surprisal_alignments.log')
+            align_log_file = os.path.join(surprisal_ngram_log_dir, 'surprisal_alignments.log')
             self._write_alignments_log(align_log, align_log_file)
             
-            # Write phoneme correlation report
-            phon_corr_report = os.path.join(self.surprisal_log_dir, 'surprisal_phon_corr.log')
+            # Write phoneme correlation report # TODO might not be needed any longer given new format of surprisal logs
+            phon_corr_report = os.path.join(surprisal_ngram_log_dir, 'surprisal_phon_corr.log')
             self._write_phon_corr_report(surprisal_results, phon_corr_report, label='Surprisal')
                 
         # Add phonological environment weights after final iteration
@@ -974,19 +981,17 @@ class PhonCorrelator:
         if save:
             self.lang1.phoneme_surprisal[(self.lang2, ngram_size)] = surprisal_results
             self.lang1.phon_env_surprisal[(self.lang2, ngram_size)] = phon_env_surprisal
-        self.surprisal_dict = surprisal_results
+        self.surprisal_dict[ngram_size] = surprisal_results
+        self.phon_env_surprisal_dict = phon_env_surprisal
+        self.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size)
+        self.log_phoneme_surprisal(phon_env=True)
         
         return surprisal_results, phon_env_surprisal
 
-    def write_phoneme_pmi(self, outfile=None, threshold=0.0001, sep='\t'):
+    def log_phoneme_pmi(self, outfile=None, threshold=0.0001, sep='\t'):
         # Save calculated PMI values to file
         if outfile is None:
             outfile = os.path.join(self.pmi_log_dir, 'phonPMI.tsv')
-            
-        def ngram2str(ngram, join_ch='_'):
-            if isinstance(ngram, tuple):
-                return join_ch.join(ngram)
-            return ngram
 
         # Save all segment pairs with non-zero PMI values to file
         # Skip extremely small decimals that are close to zero
@@ -1003,6 +1008,48 @@ class PhonCorrelator:
         
         with open(outfile, 'w') as f:
             header = sep.join(['Phone1', 'Phone2', 'PMI'])
+            f.write(f'{header}\n{lines}')
+    
+    def log_phoneme_surprisal(self, outfile=None, sep='\t', phon_env=True, ngram_size=1):
+        if outfile is None:
+            if phon_env:
+                outfile = os.path.join(self.surprisal_log_dir, 'phonEnv', 'phonEnvSurprisal.tsv')
+            else:
+                surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
+                outfile = os.path.join(surprisal_ngram_log_dir, 'phonSurprisal.tsv')
+        outdir = os.path.abspath(os.path.dirname(outfile))
+        os.makedirs(outdir, exist_ok=True)
+        
+        if phon_env:
+            surprisal_dict = self.phon_env_surprisal_dict
+        else:
+            surprisal_dict = self.surprisal_dict[ngram_size]
+            
+        lines = []
+        for seg1 in surprisal_dict:
+            # Determine the smoothed value for unseen ("out of vocabulary") correspondences
+            # Check using a non-IPA character
+            non_IPA = '<NON-IPA>'
+            oov_smoothed = surprisal_dict[seg1][non_IPA]
+            
+            # Then remove this character from the surprisal dictionary
+            del surprisal_dict[seg1][non_IPA]
+            
+            # Save values which are not equal to (less than) the OOV smoothed value
+            for seg2 in surprisal_dict[seg1]:
+                surprisal_val = surprisal_dict[seg1][seg2]
+                if surprisal_val < oov_smoothed:
+                    if ngram_size > 1:
+                        breakpoint() # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
+                    line = [ngram2str(seg1), ngram2str(seg2), str(surprisal_val), str(oov_smoothed)]
+                    lines.append(line)
+        
+        # Sort surprisal in ascending order
+        lines = sorted(lines, key=lambda x:x[2], reverse=False)
+        lines = '\n'.join([sep.join(line) for line in lines])
+        
+        with open(outfile, 'w') as f:
+            header = sep.join(['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed'])
             f.write(f'{header}\n{lines}')
 
     def _log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
