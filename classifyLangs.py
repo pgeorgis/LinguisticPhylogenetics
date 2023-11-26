@@ -4,7 +4,7 @@ import logging
 import yaml
 from auxFuncs import Distance, create_timestamp
 from phyloLing import load_family
-from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, cascade_sim
+from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, composite_sim
 from lingDist import gradient_cognate_sim, binary_cognate_sim
 from constants import TRANSCRIPTION_PARAM_DEFAULTS, SPECIAL_JOIN_CHS
 
@@ -20,11 +20,11 @@ log_levels = {
 valid_params = {
     'cluster':{
         'cognates':{'auto', 'gold', 'none'},
-        'method':{'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid', 'cascade'},
+        'method':{'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid', 'composite'},
     },
     'evaluation':{
         'similarity':{'gradient', 'binary'},
-        'method':{'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid', 'cascade'},
+        'method':{'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid', 'composite'},
     },
     'tree':{
         'linkage':{'nj', 'average', 'complete', 'ward', 'weighted', 'single'},
@@ -123,11 +123,11 @@ def init_hybrid(function_map, eval_params):
     return HybridSim
 
 
-def init_cascade(params):
+def init_composite(params):
     eval_params = params['evaluation']
     surprisal_params = params['surprisal']
     CascadeSim = Distance(
-        func=cascade_sim,
+        func=composite_sim,
         name='CascadeSim',
         sim=True,
         pmi_weight=eval_params['pmi_weight'],
@@ -187,15 +187,15 @@ if __name__ == "__main__":
     tree_params = params['tree']
 
     # Set ngram size used for surprisal
-    if eval_params['method'] in ('surprisal', 'hybrid', 'cascade'):
+    if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
         function_map['surprisal'].set('ngram_size', surprisal_params['ngram'])
         SurprisalDist = function_map['surprisal']
 
-        # Initialize hybrid or cascade distance/similarity objects 
+        # Initialize hybrid or composite distance/similarity objects 
         if eval_params['method'] == 'hybrid':
             function_map['hybrid'] = init_hybrid(function_map, eval_params)
-        elif eval_params['method'] == 'cascade':
-            function_map['cascade'] = init_cascade(params)
+        elif eval_params['method'] == 'composite':
+            function_map['composite'] = init_composite(params)
 
     # Designate cluster function if performing auto cognate clustering 
     if cluster_params['cognates'] == 'auto':
@@ -236,7 +236,7 @@ if __name__ == "__main__":
 
     # Load or calculate phoneme surprisal
     if not surprisal_params['refresh_all_surprisal']:
-        if eval_params['method'] in ('surprisal', 'hybrid', 'cascade'):
+        if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
             logger.info(f'Loading {family.name} phoneme surprisal...')
             if cluster_params['cognates'] == 'gold':
                 family.load_phoneme_surprisal(
@@ -254,7 +254,7 @@ if __name__ == "__main__":
     if pmi_params['refresh_all_pmi'] or surprisal_params['refresh_all_surprisal'] or len(pmi_params['refresh']) or len(surprisal_params['refresh']) > 0:
         family.calculate_phoneme_pmi()
         family.write_phoneme_pmi()
-        if eval_params['method'] in ('surprisal', 'hybrid', 'cascade'):
+        if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
             family.calculate_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
             family.write_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
 

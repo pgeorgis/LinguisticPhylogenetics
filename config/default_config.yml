@@ -42,10 +42,10 @@ cluster:
 
 evaluation:
   similarity: gradient
-  method: hybrid
-  pmi_weight: 0.25
-  surprisal_weight: 0.5
-  phon_weight: 0.25
+  method: composite
+  pmi_weight: 1.5
+  surprisal_weight: 2
+  phon_weight: 1
   n_samples: 10
   sample_size: 0.8
   exclude_synonyms: true

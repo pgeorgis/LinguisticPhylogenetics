@@ -652,7 +652,7 @@ def hybrid_dist(word1, word2, funcs:dict, weights=None)->float:
     
     return score
 
-def cascade_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
+def composite_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
     #pmi_score = pmi_dist(word1, word2, normalize=False, sim2dist=False)
     pmi_score = pmi_dist(word1, word2, sim2dist=False)
     #surprisal_score = mutual_surprisal(word1, word2, normalize=False, **kwargs)
@@ -663,7 +663,7 @@ def cascade_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
     
     # Record word scores # TODO into Distance class object?
     if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key='cascade')
+        log_word_score(word1, word2, score, key='composite')
         log_word_score(word1, word2, pmi_score, key='PMI')
         log_word_score(word1, word2, surprisal_score, key='surprisal')
         log_word_score(word1, word2, phon_score, key='phon')

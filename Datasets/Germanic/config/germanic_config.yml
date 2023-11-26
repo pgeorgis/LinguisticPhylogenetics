@@ -32,7 +32,7 @@ cluster:
 
 evaluation:
     similarity: gradient
-    method: cascade
+    method: composite
     pmi_weight: 1.5
     surprisal_weight: 2
     phon_weight: 1
