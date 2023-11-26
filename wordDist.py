@@ -414,7 +414,6 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     # Calculate phoneme surprisal if not already done # TODO use helper function
     if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
         correlator1 = lang1.get_phoneme_correlator(lang2)
-        # TODO add a logging message so that we know surprisal is being calculated (again) -- maybe best within phonCorr.py
         correlator1.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
     if len(lang2.phoneme_surprisal[(lang1, ngram_size)]) == 0:
         correlator2 = lang2.get_phoneme_correlator(lang1)

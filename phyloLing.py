@@ -352,16 +352,13 @@ class LexicalDataset:
         # Designate the default file name to search for if no alternative is provided
         if surprisal_dir is None:
             surprisal_dir = os.path.join(self.phone_corr_dir, 'surprisal')
-            #surprisal_file_phon_env = os.path.join(self.phone_corr_dir, 'phoneme_env_surprisal.csv')
         
         def str2ngram(str, join_ch='_'):
             return Ngram(str, lang=self, seg_sep=join_ch)
         
-        def extract_surprisal_from_df(surprisal_data, lang1, lang2, phon_env=False):
-            # Iterate through the dataframe and save the surprisal values to the Language
-            # class objects' phoneme_surprisal attribute
-            surprisal_dict = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:{})))
-            oov_vals = defaultdict(lambda:{})
+        def extract_surprisal_from_df(surprisal_data, lang2, phon_env=False):
+            surprisal_dict = defaultdict(lambda:defaultdict(lambda:{}))
+            oov_vals = {}
             for index, row in surprisal_data.iterrows():
                 phone1, phone2 = row['Phone1'], row['Phone2']
                 if ngram_size > 1:
@@ -372,18 +369,16 @@ class LexicalDataset:
                 surprisal_value = row['Surprisal']
                 ngram1_dict_form = ngram1.undo()
                 ngram2_dict_form = ngram2.undo()
-                surprisal_dict[lang1][(lang2, ngram_size)][ngram1_dict_form][ngram2_dict_form] = surprisal_value
-                if ngram1_dict_form not in oov_vals[(lang1, lang2)]:
+                surprisal_dict[(lang2, ngram_size)][ngram1_dict_form][ngram2_dict_form] = surprisal_value
+                if ngram1_dict_form not in oov_vals:
                     oov_smoothed = row['OOV_Smoothed']
-                    oov_vals[(lang1, lang2)][ngram1_dict_form] = oov_smoothed
+                    oov_vals[ngram1_dict_form] = oov_smoothed
             
             # Iterate back through language pairs and phone1 combinations and set OOV values
-            for lang1, lang2 in oov_vals:
-                for phone1 in oov_vals[(lang1, lang2)]:
-                    oov_val = oov_vals[(lang1, lang2)][phone1]
-                    surprisal_dict[lang1][(lang2, ngram_size)][phone1] = default_dict(surprisal_dict[lang1][(lang2, ngram_size)][phone1],
-                                                                                        l=oov_val)
-                surprisal_dict[lang1][(lang2, ngram_size)] = default_dict(surprisal_dict[lang1][(lang2, ngram_size)], l=defaultdict(lambda:oov_val))
+            for phone1 in oov_vals:
+                oov_val = oov_vals[phone1]
+                surprisal_dict[(lang2, ngram_size)][phone1] = default_dict(surprisal_dict[(lang2, ngram_size)][phone1], l=oov_val)
+            surprisal_dict[(lang2, ngram_size)] = default_dict(surprisal_dict[(lang2, ngram_size)], l=defaultdict(lambda:oov_val))
             
             return surprisal_dict
         
@@ -399,20 +394,17 @@ class LexicalDataset:
                 surprisal_data = pd.read_csv(surprisal_file, sep=sep)
         
                 # Extract and save the surprisal values to phoneme_surprisal attribute of language object
-                loaded_surprisal = extract_surprisal_from_df(surprisal_data, lang1, lang2, phon_env=False)
-                for lang in self.languages.values():
-                    lang.phoneme_surprisal = loaded_surprisal[lang]
+                loaded_surprisal = extract_surprisal_from_df(surprisal_data, lang2, phon_env=False)
+                lang1.phoneme_surprisal[(lang2, ngram_size)] = loaded_surprisal
                 
                 # Do the same for phonological environment surprisal
                 if os.path.exists(surprisal_file_phon_env):
-                    phon_env_surprisal_data = pd.read_csv(surprisal_file_phon_env)
-                    loaded_phon_env_surprisal = extract_surprisal_from_df(phon_env_surprisal_data, lang1, lang2, phon_env=True)
-                    for lang in self.languages.values():
-                        lang.phon_env_surprisal = loaded_phon_env_surprisal[lang]
+                    phon_env_surprisal_data = pd.read_csv(surprisal_file_phon_env, sep=sep)
+                    loaded_phon_env_surprisal = extract_surprisal_from_df(phon_env_surprisal_data, lang2, phon_env=True)
+                    lang1.phon_env_surprisal[lang2] = loaded_phon_env_surprisal
 
                 else:
-                    self.logger.error(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}!')
-                    raise FileNotFoundError
+                    self.logger.warning(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}')
 
     def get_doculect_pairs(self, bidirectional=False):
         if bidirectional:
