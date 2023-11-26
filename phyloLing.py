@@ -316,15 +316,16 @@ class LexicalDataset:
             correlator = lang1.get_phoneme_correlator(lang2)
             correlator.log_phoneme_pmi(**kwargs)
 
-    def write_phoneme_surprisal(self, phon_env=True, **kwargs):
+    def write_phoneme_surprisal(self, phon_env=True, ngram_size=1, **kwargs):
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
+            
             # Retrieve the precalculated values
-            if len(lang1.phoneme_surprisal[lang2]) == 0:
-                self.logger.warning(f'Phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}.')
+            if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
+                self.logger.warning(f'{ngram_size}-gram phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}')
                 continue
             
             correlator = lang1.get_phoneme_correlator(lang2)
-            correlator.log_phoneme_surprisal(phon_env=False, **kwargs)
+            correlator.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size, **kwargs)
             if phon_env:
                 correlator.log_phoneme_surprisal(phon_env=True, **kwargs)
 
