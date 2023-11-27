@@ -4,9 +4,11 @@ from nwunschAlign import best_alignment
 from phonUtils.segment import _toSegment, consonants
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
-from auxFuncs import Distance, validate_class, Ngram
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 from constants import START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, NULL_CH_DEFAULT
+from utils.distance import Distance
+from utils.sequence import Ngram
+from utils.utils import validate_class
 
 def compatible_segments(seg1, seg2):
     """Determines whether a pair of segments are compatible for alignment. 

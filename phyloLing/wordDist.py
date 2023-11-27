@@ -1,4 +1,4 @@
-from math import sqrt, log, exp
+from math import sqrt
 import re
 from statistics import mean
 from asjp import ipa2asjp
@@ -7,8 +7,11 @@ from phonUtils.initPhoneData import consonants, vowels, glides, nasals, palatal,
 from phonUtils.ipaTools import strip_diacritics
 from phonUtils.segment import _toSegment
 from phonUtils.phonSim import phone_sim
-from auxFuncs import Distance, Ngram, sim_to_dist, strip_ch, euclidean_dist, adaptation_surprisal, surprisal, surprisal_to_prob
 from phonAlign import Alignment, get_alignment_iter
+from utils.sequence import Ngram
+from utils.distance import Distance, euclidean_dist, sim_to_dist
+from utils.string import strip_ch
+from utils.information import adaptation_surprisal # surprisal, surprisal_to_prob
 
 
 def prepare_alignment(word1, word2, **kwargs):
@@ -705,21 +708,3 @@ SurprisalDist = Distance(
     cluster_threshold=0.74, # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
 # Note: Hybrid and Cascade distance needs to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
-
-# Z SCORE
-def Z_score(p_values):
-    neg_log_p = [-log(p) for p in p_values]
-    return (sum(neg_log_p) - len(p_values)) / sqrt(len(p_values))
-
-def Z_max(n_concepts):
-    return ((n_concepts * -log(1/((n_concepts**2)-n_concepts+1))) - n_concepts) / sqrt(n_concepts)
-
-def Z_min(n_concepts):
-    return (n_concepts * -log(1) - n_concepts) / sqrt(n_concepts)
-
-def Z_dist(p_values):
-    N = len(p_values)
-    Zmax = Z_max(N)
-    Zmin = Z_min(N)
-    Zscore = Z_score(p_values)
-    return (Zmax - Zscore) / (Zmax - Zmin)

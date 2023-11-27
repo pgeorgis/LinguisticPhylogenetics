@@ -23,7 +23,7 @@ SOFTWARE.
 Modified by Philip Georgis from:
     https://github.com/mmtechslv/nwunch
 """
-from auxFuncs import dict_tuplelist
+from utils.utils import dict_tuplelist
 
 def return_alignment(ALIGNMENTS):
     final_alignments = []

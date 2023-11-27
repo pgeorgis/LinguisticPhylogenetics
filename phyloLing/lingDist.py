@@ -3,8 +3,7 @@ from functools import lru_cache
 import random
 from statistics import mean, stdev, StatisticsError
 from scipy.stats import norm
-from auxFuncs import dist_to_sim
-from wordDist import Z_dist
+from utils.distance import dist_to_sim, Z_dist
 
 # HELPER FUNCTIONS
 def get_shared_concepts(lang1, lang2, clustered_cognates):

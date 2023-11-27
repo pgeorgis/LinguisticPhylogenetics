@@ -3,21 +3,21 @@ from collections import defaultdict
 from collections.abc import Iterable
 from functools import lru_cache
 from itertools import product, combinations
-from math import log, sqrt
-from statistics import mean
 from asjp import ipa2asjp
-import bcubed, random
+import bcubed
+import logging
+from math import log, sqrt
 from matplotlib import pyplot as plt
+import numpy as np
 import pandas as pd
+import random
 from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
 import seaborn as sns
+from statistics import mean
 from unidecode import unidecode
-import numpy as np
-from auxFuncs import default_dict, normalize_dict, strip_ch, format_as_variable, csv2dict, dict_tuplelist, flatten_ngram, pad_sequence, create_timestamp
-from auxFuncs import Distance, Ngram, entropy, distance_matrix, draw_dendrogram, linkage2newick, cluster_items, dm2coords, newer_network_plot
 from phonUtils.initPhoneData import consonants, suprasegmental_diacritics
 from phonUtils.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
 from phonUtils.segment import segment_ipa, _toSegment
@@ -27,8 +27,13 @@ from phonUtils.syllables import syllabify
 from phonCorr import PhonCorrelator
 from lingDist import Z_score_dist
 from constants import TRANSCRIPTION_PARAM_DEFAULTS, ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH
-import logging
-
+from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
+from utils.distance import Distance, distance_matrix
+from utils.information import entropy
+from utils.network import dm2coords, newer_network_plot
+from utils.string import strip_ch, format_as_variable
+from utils.sequence import Ngram, flatten_ngram, pad_sequence
+from utils.utils import create_timestamp, default_dict, normalize_dict, dict_tuplelist, csv2dict
 
 class LexicalDataset: 
     def __init__(self, filepath, name, 
