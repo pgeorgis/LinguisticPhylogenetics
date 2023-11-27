@@ -1,6 +1,7 @@
-from math import mean, log
+from math import log
+from statistics import mean
 from constants import PAD_CH_DEFAULT
-from sequence import Ngram
+from utils.sequence import Ngram
 
 def pointwise_mutual_info(p_joint, p_x, p_y):
     return log(p_joint/(p_x*p_y)) # TODO should it be log base 2?

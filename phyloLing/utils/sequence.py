@@ -1,5 +1,6 @@
 from functools import lru_cache
 from math import factorial
+import re
 from constants import SEG_JOIN_CH, PAD_CH_DEFAULT, START_PAD_CH, END_PAD_CH
 
 class Ngram:

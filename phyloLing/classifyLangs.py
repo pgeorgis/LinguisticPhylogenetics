@@ -2,11 +2,12 @@ import argparse
 import os
 import logging
 import yaml
-from auxFuncs import Distance, create_timestamp
 from phyloLing import load_family
 from wordDist import PMIDist, SurprisalDist, PhonologicalDist, LevenshteinDist, hybrid_dist, composite_sim
 from lingDist import gradient_cognate_sim, binary_cognate_sim
 from constants import TRANSCRIPTION_PARAM_DEFAULTS, SPECIAL_JOIN_CHS
+from utils.utils import create_timestamp
+from utils.distance import Distance
 
 # Loglevel mapping
 log_levels = {

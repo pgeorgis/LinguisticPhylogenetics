@@ -133,3 +133,21 @@ def distance_matrix(group, dist_func, sim=False, scalar=1, **kwargs):
         mat = mat ** scalar    
       
     return mat
+
+# Z SCORE
+def Z_score(p_values):
+    neg_log_p = [-log(p) for p in p_values]
+    return (sum(neg_log_p) - len(p_values)) / sqrt(len(p_values))
+
+def Z_max(n_concepts):
+    return ((n_concepts * -log(1/((n_concepts**2)-n_concepts+1))) - n_concepts) / sqrt(n_concepts)
+
+def Z_min(n_concepts):
+    return (n_concepts * -log(1) - n_concepts) / sqrt(n_concepts)
+
+def Z_dist(p_values):
+    N = len(p_values)
+    Zmax = Z_max(N)
+    Zmin = Z_min(N)
+    Zscore = Z_score(p_values)
+    return (Zmax - Zscore) / (Zmax - Zmin)

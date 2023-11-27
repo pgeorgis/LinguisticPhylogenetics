@@ -4,7 +4,7 @@ import re
 import seaborn as sns
 from scipy.cluster.hierarchy import dendrogram, linkage, fcluster, to_tree
 from scipy.spatial.distance import squareform
-from distance import distance_matrix
+from utils.distance import distance_matrix
 
 def linkage_matrix(group, dist_func, sim=False, 
                    method='average', metric='euclidean',

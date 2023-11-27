@@ -1,7 +1,7 @@
-import os, glob
-from collections import defaultdict
-from PhoneticSimilarity.segment import segment_ipa
 import argparse
+from collections import defaultdict
+import os
+from phonUtils.segment import segment_ipa
 
 def write_data(data_dict, output_file, sep='\t'):
     features = list(data_dict[list(data_dict.keys())[0]].keys())
@@ -64,4 +64,4 @@ if __name__ == "__main__":
     lang_files = [os.path.join(args.dir, l + '.txt') for l in args.langs]
     data = vocablist2cldf(lang_files)
 
-    write_data(data, output_file=os.path.join(args.dest, args.family+'_data.csv'), sep='\t')
+    write_data(data, output_file=os.path.join(args.dest, args.family+'_data.tsv'), sep='\t')

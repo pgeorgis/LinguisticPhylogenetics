@@ -4,7 +4,7 @@ import seaborn as sns
 from sklearn import manifold
 from matplotlib import pyplot as plt
 import networkx as nx
-from distance import distance_matrix
+from utils.distance import distance_matrix
 
 def dm2coords(dm, dimensions=2):
     """Returns coordinate embeddings of an array of items from their distance matrix"""
