@@ -131,12 +131,13 @@ class Alignment:
         self.alignment_costs, self.n_best = self.align(n_best)
         self.alignment = self.n_best[0][0]
 
-        # Map aligned pairs to respective sequence indices
-        self.seq_map = self.map_to_seqs()
-
         # Save length and cost of single best alignment
         self.cost = self.n_best[0][-1]
         self.length = len(self.alignment)
+        self.original_length = self.length
+        
+        # Map aligned pairs to respective sequence indices
+        self.seq_map = self.map_to_seqs()
         
         # Phonological environment alignment
         self.phon_env = phon_env
@@ -328,29 +329,44 @@ class Alignment:
         map1, map2 = {}, {}
         adjust_gap1, adjust_gap2 = 0, 0
         adjust_complex1, adjust_complex2 = 0, 0
-        for i, pair in enumerate(self.alignment):
-            seg1, seg2 = pair
-            if seg1 == self.gap_ch:
-                map1[i] = None
-                adjust_gap1 += 1
+        for i in range(max(self.length, self.original_length)):
+            seg1_i = i-adjust_gap1+adjust_complex1
+            seg2_i = i-adjust_gap2+adjust_complex2
+            if i >= self.length:
+                last_index = self.length-1
+                left, right = self.alignment[last_index]
+                if left == self.gap_ch:
+                    pass
+                elif Ngram(left).size > 1: 
+                    map1[last_index].append(seg1_i)
+                if right == self.gap_ch:
+                    pass
+                elif Ngram(right).size > 1:
+                    map2[last_index].append(seg2_i)
+                
             else:
-                map1[i] = [i-adjust_gap1+adjust_complex1]
-                ngram = Ngram(seg1)
-                if ngram.size > 1:
-                    adjust_complex1 += ngram.size-1
-                    for n in range(map1[i][0]+1, min(map1[i][0]+ngram.size, len(self.alignment)-1)):
-                        map1[i].append(n)
-                    
-            if seg2 == self.gap_ch:
-                map2[i] = None
-                adjust_gap2 += 1
-            else:
-                map2[i] = [i-adjust_gap2+adjust_complex2]
-                ngram = Ngram(seg2)
-                if ngram.size > 1:
-                    adjust_complex2 += ngram.size-1
-                    for n in range(map2[i][0]+1, min(map2[i][0]+ngram.size, len(self.alignment)-1)):
-                        map2[i].append(n)
+                seg1, seg2 = self.alignment[i]
+                if seg1 == self.gap_ch:
+                    map1[i] = None
+                    adjust_gap1 += 1
+                else:
+                    map1[i] = [seg1_i]
+                    ngram = Ngram(seg1)
+                    if i < self.length-1 and ngram.size > 1:
+                        adjust_complex1 += ngram.size-1
+                        for n in range(map1[i][0]+1, min(map1[i][0]+ngram.size, len(self.alignment)-1)):
+                            map1[i].append(n)
+                        
+                if seg2 == self.gap_ch:
+                    map2[i] = None
+                    adjust_gap2 += 1
+                else:
+                    map2[i] = [seg2_i]
+                    ngram = Ngram(seg2)
+                    if i < self.length-1 and ngram.size > 1:
+                        adjust_complex2 += ngram.size-1
+                        for n in range(map2[i][0]+1, min(map2[i][0]+ngram.size, len(self.alignment)-1)):
+                            map2[i].append(n)
 
         return map1, map2
 
