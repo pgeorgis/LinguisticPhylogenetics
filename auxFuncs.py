@@ -39,12 +39,6 @@ def default_dict(dic, l):
     """Turns an existing dictionary into a default dictionary with default value l"""
     return defaultdict(lambda: l, dic)
 
-def keywithmaxval(d):
-    """Returns the dictionary key with the highest value"""
-    v = list(d.values())
-    k = list(d.keys())
-    return k[v.index(max(v))]
-
 def keywithminval(d):
     """Returns the dictionary key with the lowest value"""
     v = list(d.values())
@@ -132,23 +126,6 @@ def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
                     pass
     return csv_dict
 
-def xlsx_to_csv(excel_path, csv_path=None, sheet=None, 
-                sep=',', index=None, header=True):
-    """Converts an Excel file to a CSV file"""
-    if sheet:
-        excel_file = pd.read_excel(excel_path, sheet_name=sheet)
-    else:
-        excel_file = pd.read_excel(excel_path)
-    
-    # Automatically name the output .csv file the same as the Excel file if 
-    # no other name is specified
-    if csv_path is None:
-        csv_path = excel_path.split('.')[0] + '.csv'
-    
-    # Write to .csv file
-    excel_file.to_csv(csv_path, index=index, header=header, sep=sep)
-    print(f'Wrote file to {csv_path}.')
-    
 
 # NORMALIZATION
 def normalize_dict(dict_, default=False, lmbda=None, return_=True):
