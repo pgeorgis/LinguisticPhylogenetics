@@ -338,15 +338,16 @@ class Alignment:
                     continue
                 last_index = self.length-1
                 left, right = self.alignment[last_index]
+                left_ngram, right_ngram = Ngram(left), Ngram(right)
                 
                 if left == self.gap_ch:
                     pass
-                elif Ngram(left).size > 1:
+                elif left_ngram.size > 1 and len(map1[last_index]) < left_ngram.size:
                     map1[last_index].append(seg1_i)
                     
                 if right == self.gap_ch:
                     pass
-                elif Ngram(right).size > 1:
+                elif right_ngram.size > 1 and len(map2[last_index]) < right_ngram.size:
                     map2[last_index].append(seg2_i)
                 
             else:
