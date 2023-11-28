@@ -984,7 +984,7 @@ class PhonCorrelator:
         # Return and save the final iteration's surprisal results
         if save:
             self.lang1.phoneme_surprisal[(self.lang2, ngram_size)] = surprisal_results
-            self.lang1.phon_env_surprisal[(self.lang2, ngram_size)] = phon_env_surprisal
+            self.lang1.phon_env_surprisal[self.lang2] = phon_env_surprisal
         self.surprisal_dict[ngram_size] = surprisal_results
         self.phon_env_surprisal_dict = phon_env_surprisal
         self.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size)

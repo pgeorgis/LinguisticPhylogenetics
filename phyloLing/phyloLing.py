@@ -362,7 +362,7 @@ class LexicalDataset:
             return Ngram(str, lang=self, seg_sep=join_ch)
         
         def extract_surprisal_from_df(surprisal_data, lang2, phon_env=False):
-            surprisal_dict = defaultdict(lambda:defaultdict(lambda:{}))
+            surprisal_dict = defaultdict(lambda:{})
             oov_vals = {}
             for index, row in surprisal_data.iterrows():
                 phone1, phone2 = row['Phone1'], row['Phone2']
@@ -373,11 +373,10 @@ class LexicalDataset:
                 ngram2_dict_form = ngram2.undo()
                 if phon_env:
                     phone1, env = phone1.split(PHON_ENV_JOIN_CH)
-                    #phon_env needs to be saved as ((phone, env),) e.g. (('ˈœ', '<|S|>_R'),)
-                    ngram1_dict_form = ((Ngram(phone1).undo(), env),) # TODO check that this format is correct when this dict is called in adaptation surprisal
+                    ngram1_dict_form = (Ngram(phone1).undo(), env)
                 else:
                     ngram1_dict_form = ngram1.undo()
-                surprisal_dict[(lang2, ngram_size)][ngram1_dict_form][ngram2_dict_form] = surprisal_value
+                surprisal_dict[ngram1_dict_form][ngram2_dict_form] = surprisal_value
                 if ngram1_dict_form not in oov_vals:
                     oov_smoothed = row['OOV_Smoothed']
                     oov_vals[ngram1_dict_form] = oov_smoothed
@@ -385,8 +384,8 @@ class LexicalDataset:
             # Iterate back through language pairs and phone1 combinations and set OOV values
             for phone1 in oov_vals:
                 oov_val = oov_vals[phone1]
-                surprisal_dict[(lang2, ngram_size)][phone1] = default_dict(surprisal_dict[(lang2, ngram_size)][phone1], l=oov_val)
-            surprisal_dict[(lang2, ngram_size)] = default_dict(surprisal_dict[(lang2, ngram_size)], l=defaultdict(lambda:oov_val))
+                surprisal_dict[phone1] = default_dict(surprisal_dict[phone1], l=oov_val)
+            surprisal_dict = default_dict(surprisal_dict, l=defaultdict(lambda:oov_val))
             
             return surprisal_dict
         
