@@ -129,7 +129,7 @@ class Alignment:
 
         # Perform alignment
         self.alignment_costs, self.n_best = self.align(n_best)
-        self.alignment = self.n_best[0][0]
+        self.alignment = self.n_best[0][0][:]
 
         # Save length and cost of single best alignment
         self.cost = self.n_best[0][-1]
@@ -406,7 +406,7 @@ class ReversedAlignment(Alignment):
         self.added_penalty_dict = alignment.added_penalty_dict
         self.kwargs = alignment.kwargs
         self.n_best = [(reverse_alignment(alignment_n), cost) for alignment_n, cost in alignment.n_best]
-        self.alignment = self.n_best[0][0]
+        self.alignment = reverse_alignment(alignment.alignment)
 
         # Map aligned pairs to respective sequence indices
         self.seq_map = tuple(reversed(alignment.seq_map))

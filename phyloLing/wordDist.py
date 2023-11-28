@@ -424,6 +424,9 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
+    alignment.compact_gaps(lang1.complex_ngrams[lang2])
+    if phon_env:
+        alignment.phon_env_alignment = alignment.add_phon_env()
     rev_alignment = alignment.reverse()
 
     # Calculate the word-adaptation surprisal in each direction
