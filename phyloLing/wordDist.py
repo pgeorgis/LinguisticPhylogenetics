@@ -12,7 +12,7 @@ from utils.sequence import Ngram
 from utils.distance import Distance, euclidean_dist, sim_to_dist
 from utils.string import strip_ch
 from utils.information import adaptation_surprisal # surprisal, surprisal_to_prob
-
+from constants import PAD_CH_DEFAULT
 
 def prepare_alignment(word1, word2, **kwargs):
     """Prepares pairwise alignment of two Word objects. 
@@ -522,7 +522,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     return score
 
 
-def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, **kwargs):
+def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_CH_DEFAULT, **kwargs):
     lang1 = word1.language
     lang2 = word2.language
     
@@ -536,7 +536,11 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, **kwargs):
         
     # Align the words with PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
+    # Pad (ngram_size=1, but need to set as min 2 to yield any padding) 
+    alignment.alignment = alignment.pad(ngram_size=2, alignment=alignment.alignment, pad_ch=pad_ch)
+    # Compact_gaps, then remove uncompacted pad positions as they are irrelevant
     alignment.compact_gaps(lang1.complex_ngrams[lang2])
+    alignment.remove_padding()
     
     # Calculate PMI scores for each aligned pair
     PMI_values = [
