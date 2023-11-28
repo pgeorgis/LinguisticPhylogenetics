@@ -311,9 +311,16 @@ class Alignment:
                                     break
         
         # Update sequence map and length for compacted alignment
-        self.seq_map = self.map_to_seqs()
-        self.length = len(self.alignment)
+        self.update()
 
+    def start_boundary(self):
+        # ('<#', '<#')
+        return (f'{START_PAD_CH}{self.pad_ch}', f'{START_PAD_CH}{self.pad_ch}')
+    
+    def end_boundary(self):
+        # ('#>', '#>')
+        return (f'{self.pad_ch}{END_PAD_CH}', f'{self.pad_ch}{END_PAD_CH}')
+    
     def pad(self, ngram_size, alignment=None, pad_ch=PAD_CH_DEFAULT, pad_n=None):
         self.pad_ch = pad_ch
         if alignment is None:
@@ -322,13 +329,17 @@ class Alignment:
             pad_n = max(0, ngram_size-1)
         return [self.start_boundary()]*pad_n + alignment + [self.end_boundary()]*pad_n
     
-    def start_boundary(self):
-        # ('<#', '<#')
-        return (f'{START_PAD_CH}{self.pad_ch}', f'{START_PAD_CH}{self.pad_ch}')
-    
-    def end_boundary(self):
-        # ('#>', '#>')
-        return (f'{self.pad_ch}{END_PAD_CH}', f'{self.pad_ch}{END_PAD_CH}')
+    def remove_padding(self):
+        start_pad_i = 0
+        start_pad = self.start_boundary()
+        while self.alignment[start_pad_i] == start_pad:
+            start_pad_i += 1
+        end_pad_i = len(self.alignment)-1
+        end_pad = self.end_boundary()
+        while self.alignment[end_pad_i] == end_pad:
+            end_pad_i -= 1
+        self.alignment = self.alignment[start_pad_i:end_pad_i+1]
+        self.update()
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices
@@ -444,6 +455,10 @@ class Alignment:
 
     def reverse(self):
         return ReversedAlignment(self)
+    
+    def update(self):
+        self.seq_map = self.map_to_seqs()
+        self.length = len(self.alignment)
     
     def __str__(self):
         return visual_align(self.alignment, gap_ch=self.gap_ch, phon_env=self.phon_env)
