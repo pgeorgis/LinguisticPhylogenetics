@@ -402,7 +402,7 @@ def segmental_word_dist(word1, word2=None,
     return (c_weight * (1-c_score)) + (v_weight * (1-v_score)) + (syl_weight * syl_score)
 
 
-def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, **kwargs):
+def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, pad_ch=PAD_CH_DEFAULT, **kwargs):
     lang1 = word1.language
     lang2 = word2.language
     
@@ -424,9 +424,15 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
+    # Pad (need to set as ngram_size=min 2 to yield any padding) 
+    alignment.alignment = alignment.pad(ngram_size=max(2, ngram_size), alignment=alignment.alignment, pad_ch=pad_ch)
+    # Compact_gaps, then remove uncompacted pad positions as they are irrelevant
     alignment.compact_gaps(lang1.complex_ngrams[lang2])
+    alignment.remove_padding()
+    # Add phon env
     if phon_env:
         alignment.phon_env_alignment = alignment.add_phon_env()
+    # Finally, reverse alignment
     rev_alignment = alignment.reverse()
 
     # Calculate the word-adaptation surprisal in each direction
