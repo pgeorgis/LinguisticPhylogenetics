@@ -94,6 +94,7 @@ class Alignment:
                  added_penalty_dict=None,
                  gap_ch=GAP_CH_DEFAULT,
                  gop=-0.3, # TODO possibly need to recalibrate **
+                 pad_ch=PAD_CH_DEFAULT,
                  n_best=1,
                  phon_env=False,
                  **kwargs
@@ -123,6 +124,7 @@ class Alignment:
         # Designate alignment parameters
         self.gap_ch = gap_ch
         self.gop = gop
+        self.pad_ch = pad_ch
         self.cost_func = cost_func
         self.added_penalty_dict = added_penalty_dict
         self.kwargs = kwargs
@@ -313,11 +315,20 @@ class Alignment:
         self.length = len(self.alignment)
 
     def pad(self, ngram_size, alignment=None, pad_ch=PAD_CH_DEFAULT, pad_n=None):
+        self.pad_ch = pad_ch
         if alignment is None:
             alignment = self.alignment
         if pad_n is None:
             pad_n = max(0, ngram_size-1)
-        return [(f'{START_PAD_CH}{pad_ch}', f'{START_PAD_CH}{pad_ch}')]*pad_n + alignment + [(f'{pad_ch}{END_PAD_CH}', f'{pad_ch}{END_PAD_CH}')]*pad_n
+        return [self.start_boundary()]*pad_n + alignment + [self.end_boundary()]*pad_n
+    
+    def start_boundary(self):
+        # ('<#', '<#')
+        return (f'{START_PAD_CH}{self.pad_ch}', f'{START_PAD_CH}{self.pad_ch}')
+    
+    def end_boundary(self):
+        # ('#>', '#>')
+        return (f'{self.pad_ch}{END_PAD_CH}', f'{self.pad_ch}{END_PAD_CH}')
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices
@@ -326,58 +337,102 @@ class Alignment:
         map1 = {0:0, 1:1, 2:2, 3:3, 4:4}
         map2 = {0:0, 1:1, 2:None, 3:3, 4:None}
         """
+        # Update current alignment length, in case it was padded or otherwise modified
+        self.length = len(self.alignment)
+        
         map1, map2 = {}, {}
         adjust_gap1, adjust_gap2 = 0, 0
         adjust_complex1, adjust_complex2 = 0, 0
+        adjust_complex_start = 0
         n_complex = sum([1 for left, right in self.alignment if Ngram(left).size > 1 or Ngram(right).size > 1])
-        for i in range(max(self.length, self.original_length)):
+        for i in range(max(self.length, self.original_length)):            
+            # Skip alignment positions containing only boundary padding, e.g. ('<#', '<#')
+            if i == 0 and self.alignment[i] == self.start_boundary():
+                adjust_gap1 += 1
+                adjust_gap2 += 1
+                map1[i] = None
+                map2[i] = None
+                continue
+            # ('#>', '#>')
+            elif i == self.length-1 and self.alignment[i] == self.end_boundary():
+                continue
+            
             seg1_i = i-adjust_gap1+adjust_complex1
             seg2_i = i-adjust_gap2+adjust_complex2
+            
             if i >= self.length:                
-                if n_complex > 1 and ((i+1)-self.length) == n_complex:
+                if n_complex > 1 and ((i+1+adjust_complex_start)-self.length) == (n_complex-adjust_complex_start):
                     continue
                 last_index = self.length-1
                 left, right = self.alignment[last_index]
                 left_ngram, right_ngram = Ngram(left), Ngram(right)
                 
-                if left == self.gap_ch:
+                if left == self.gap_ch or self.pad_ch in left:
                     pass
                 elif left_ngram.size > 1 and len(map1[last_index]) < left_ngram.size:
-                    map1[last_index].append(seg1_i)
+                    if self.pad_ch not in left_ngram.ngram[len(map1[last_index])]:
+                        map1[last_index].append(seg1_i)
                     
-                if right == self.gap_ch:
+                if right == self.gap_ch or self.pad_ch in right:
                     pass
                 elif right_ngram.size > 1 and len(map2[last_index]) < right_ngram.size:
-                    map2[last_index].append(seg2_i)
+                    if self.pad_ch not in right_ngram.ngram[len(map2[last_index])]:
+                        map2[last_index].append(seg2_i)
                 
             else:
                 seg1, seg2 = self.alignment[i]
                 if seg1 == self.gap_ch:
                     map1[i] = None
                     adjust_gap1 += 1
+                elif self.pad_ch in seg1:
+                    map1[i] = None
+                    adjust_gap1 += 1
                 else:
-                    map1[i] = [seg1_i]
+                    map1[i] = []
                     ngram = Ngram(seg1)
                     if ngram.size > 1 and i < self.length-1:
                         adjust_complex1 += ngram.size-1
-                        for n in range(map1[i][0]+1, min(map1[i][0]+ngram.size, len(self.seq1))):
-                            map1[i].append(n)
+                        adjust_ngram = 0
+                        for n in range(seg1_i, min(seg1_i+ngram.size, len(self.seq1))):
+                            if self.pad_ch not in ngram.ngram[n-seg1_i]:
+                                map1[i].append(n-adjust_ngram)
+                            else:
+                                adjust_gap1 += 1
+                                adjust_ngram += 1
+                                if i == 0:
+                                    adjust_complex_start += 1
+                    else:
+                        map1[i].append(seg1_i)
+                        
                         
                 if seg2 == self.gap_ch:
                     map2[i] = None
                     adjust_gap2 += 1
+                elif self.pad_ch in seg2:
+                    map2[i] = None
+                    adjust_gap2 += 1
                 else:
-                    map2[i] = [seg2_i]
+                    map2[i] = []
                     ngram = Ngram(seg2)
                     if ngram.size > 1 and i < self.length-1:
                         adjust_complex2 += ngram.size-1
-                        for n in range(map2[i][0]+1, min(map2[i][0]+ngram.size, len(self.seq2))):
-                            map2[i].append(n)
+                        adjust_ngram = 0
+                        for n in range(seg2_i, min(seg2_i+ngram.size, len(self.seq2))):
+                            if self.pad_ch not in ngram.ngram[n-seg2_i]:
+                                map2[i].append(n-adjust_ngram)
+                            else:
+                                adjust_gap2 += 1
+                                adjust_ngram += 1
+                                if i == 0:
+                                    adjust_complex_start += 1
+                                
+                    else:
+                        map2[i].append(seg2_i)
             
-        # Check that all segments were mapped
+        # Check that all sequence units were mapped to alignment positions
         assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
         assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
-
+        
         return map1, map2
 
     def add_phon_env(self, env_func=get_phon_env):
