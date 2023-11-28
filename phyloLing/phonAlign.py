@@ -329,16 +329,21 @@ class Alignment:
         map1, map2 = {}, {}
         adjust_gap1, adjust_gap2 = 0, 0
         adjust_complex1, adjust_complex2 = 0, 0
+        n_complex = sum([1 for left, right in self.alignment if Ngram(left).size > 1 or Ngram(right).size > 1])
         for i in range(max(self.length, self.original_length)):
             seg1_i = i-adjust_gap1+adjust_complex1
             seg2_i = i-adjust_gap2+adjust_complex2
-            if i >= self.length:
+            if i >= self.length:                
+                if n_complex > 1 and ((i+1)-self.length) == n_complex:
+                    continue
                 last_index = self.length-1
                 left, right = self.alignment[last_index]
+                
                 if left == self.gap_ch:
                     pass
-                elif Ngram(left).size > 1: 
+                elif Ngram(left).size > 1:
                     map1[last_index].append(seg1_i)
+                    
                 if right == self.gap_ch:
                     pass
                 elif Ngram(right).size > 1:
@@ -352,9 +357,9 @@ class Alignment:
                 else:
                     map1[i] = [seg1_i]
                     ngram = Ngram(seg1)
-                    if i < self.length-1 and ngram.size > 1:
+                    if ngram.size > 1 and i < self.length-1:
                         adjust_complex1 += ngram.size-1
-                        for n in range(map1[i][0]+1, min(map1[i][0]+ngram.size, len(self.alignment)-1)):
+                        for n in range(map1[i][0]+1, min(map1[i][0]+ngram.size, len(self.seq1))):
                             map1[i].append(n)
                         
                 if seg2 == self.gap_ch:
@@ -363,10 +368,14 @@ class Alignment:
                 else:
                     map2[i] = [seg2_i]
                     ngram = Ngram(seg2)
-                    if i < self.length-1 and ngram.size > 1:
+                    if ngram.size > 1 and i < self.length-1:
                         adjust_complex2 += ngram.size-1
-                        for n in range(map2[i][0]+1, min(map2[i][0]+ngram.size, len(self.alignment)-1)):
+                        for n in range(map2[i][0]+1, min(map2[i][0]+ngram.size, len(self.seq2))):
                             map2[i].append(n)
+            
+        # Check that all segments were mapped
+        assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
+        assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
 
         return map1, map2
 
