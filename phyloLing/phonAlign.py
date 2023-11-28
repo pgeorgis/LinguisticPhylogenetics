@@ -371,24 +371,26 @@ class Alignment:
             seg1_i = i-adjust_gap1+adjust_complex1
             seg2_i = i-adjust_gap2+adjust_complex2
             
-            if i >= self.length:                
+            if i >= self.length:     
                 if n_complex > 1 and ((i+1+adjust_complex_start)-self.length) == (n_complex-adjust_complex_start):
                     continue
                 last_index = self.length-1
                 left, right = self.alignment[last_index]
                 left_ngram, right_ngram = Ngram(left), Ngram(right)
-                
+                      
                 if left == self.gap_ch or self.pad_ch in left:
                     pass
                 elif left_ngram.size > 1 and len(map1[last_index]) < left_ngram.size:
                     if self.pad_ch not in left_ngram.ngram[len(map1[last_index])]:
-                        map1[last_index].append(seg1_i)
+                        map1[last_index].append(min(seg1_i,map1[last_index][-1]+1))
+                        adjust_complex1 += 1
                     
                 if right == self.gap_ch or self.pad_ch in right:
                     pass
                 elif right_ngram.size > 1 and len(map2[last_index]) < right_ngram.size:
                     if self.pad_ch not in right_ngram.ngram[len(map2[last_index])]:
-                        map2[last_index].append(seg2_i)
+                        map2[last_index].append(min(seg2_i,map2[last_index][-1]+1))
+                        adjust_complex1 += 1
                 
             else:
                 seg1, seg2 = self.alignment[i]
