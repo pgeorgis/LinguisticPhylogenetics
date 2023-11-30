@@ -1,161 +1,161 @@
 VOWELS
 /a/ (0.068)
-	<poil> /pwal/ "HAIR_NOUN"
-	<âme> /am/ "SOUL_NOUN"
-	<joie> /ʒwa/ "JOY_NOUN"
+	<doiɡt> /dwa/ "FINGER_NOUN"
+	<arɡile> /aʁʒil/ "CLAY_NOUN"
+	<voyaɡe> /vwajaʒ/ "JOURNEY_NOUN"
 
 /ɛ/ (0.055)
-	<aider> /ɛde/ "HELP_VERB"
-	<lièvre> /ljɛvʁ/ "HARE_NOUN"
-	<sel> /sɛl/ "SALT_NOUN"
+	<chaîne> /ʃɛn/ "CHAIN_NOUN"
+	<chair> /ʃɛʁ/ "MEAT_NOUN"
+	<verɡoɡne> /vɛʁɡɔɲ/ "SHAME_NOUN"
 
 /i/ (0.047)
-	<mi-> /mi/ "MIDDLE_NOUN"
-	<mille> /mil/ "THOUSAND_NUM"
-	<écrire> /ekʁiʁ/ "WRITE_VERB"
+	<racine> /ʁasin/ "ROOT_NOUN"
+	<dire> /diʁ/ "SAY-INF_VERB"
+	<dix> /dis/ "TEN_NUM"
 
 /e/ (0.037)
-	<pied> /pje/ "FOOT_NOUN"
-	<fumée> /fyme/ "SMOKE_NOUN"
-	<chanɡer> /ʃɑ̃ʒe/ "CHANGE_VERB"
+	<neiɡer> /neʒe/ "SNOW (VERB)_VERB"
+	<ɡlacer> /ɡlase/ "FREEZE_VERB"
+	<épi> /epi/ "EAR OF GRAIN_NOUN"
 
 /ɛ̃/ (0.025)
-	<point> /pwɛ̃/ "POINT_NOUN"
-	<fin> /fɛ̃/ "THIN_ADJ"
+	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
+	<bain> /bɛ̃/ "BATH_NOUN"
 	<vin> /vɛ̃/ "WINE_NOUN"
 
 /ɔ/ (0.025)
-	<donne> /dɔn/ "GIVE-3SG_VERB"
-	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
-	<obscur> /ɔpskyʁ/ "DARK_ADJ"
+	<or> /ɔʁ/ "GOLD_NOUN"
+	<bonnes> /bɔn/ "GOOD (F.PL)_ADJ"
+	<porc> /pɔʁ/ "PIG_NOUN"
 
 /u/ (0.023)
 	<vous> /vu/ "YOU (PL)_PRON"
-	<coup> /ku/ "STRIKE_NOUN"
-	<rouɡe> /ʁuʒ/ "RED_ADJ"
+	<tous> /tu/ "ALL (PL)_ADJ"
+	<loup> /lu/ "WOLF_NOUN"
 
 /o/ (0.021)
-	<ɡros> /ɡʁo/ "THICK_ADJ"
-	<chaud> /ʃo/ "HOT_ADJ"
-	<beau> /bo/ "BEAUTIFUL (M)_ADJ"
+	<pauvre> /povʁ/ "POOR_ADJ"
+	<aube> /ob/ "DAWN_NOUN"
+	<côte> /kot/ "COAST_NOUN"
 
 /ɑ̃/ (0.019)
-	<temps> /tɑ̃/ "TIME_NOUN"
-	<chanɡer> /ʃɑ̃ʒe/ "CHANGE_VERB"
-	<ɡens> /ʒɑ̃/ "PEOPLE_NOUN"
+	<blanc> /blɑ̃/ "WHITE_ADJ"
+	<ɡrand> /ɡʁɑ̃/ "BIG_ADJ"
+	<cent> /sɑ̃/ "HUNDRED_NUM"
 
 /ɔ̃/ (0.016)
-	<bons> /bɔ̃/ "GOOD (M.PL)_ADJ"
-	<onɡle> /ɔ̃ɡl/ "FINGERNAIL_NOUN"
-	<nombril> /nɔ̃bʁil/ "NAVEL_NOUN"
+	<pont> /pɔ̃/ "BRIDGE_NOUN"
+	<rond> /ʁɔ̃/ "ROUND_ADJ"
+	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
 
 /y/ (0.016)
-	<cul> /ky/ "BUTTOCKS_NOUN"
-	<sûr> /syʁ/ "SAFE_ADJ"
-	<salut> /saly/ "HEALTH_NOUN"
+	<sur> /syʁ/ "ABOVE_PREP"
+	<ru> /ʁy/ "RIVER_NOUN"
+	<mûr> /myʁ/ "MATURE_NOUN"
 
 /œ/ (0.014)
-	<fleur> /flœʁ/ "FLOWER_NOUN"
-	<jeune> /ʒœn/ "YOUNG_ADJ"
-	<odeur> /ɔdœʁ/ "ODOR_NOUN"
+	<œil> /œj/ "EYE_NOUN"
+	<feuille> /fœj/ "LEAF_NOUN"
+	<ɡueule> /ɡœl/ "THROAT_NOUN"
 
 /ø/ (0.011)
-	<cheveu> /ʃəvø/ "HAIR_NOUN"
-	<nœud> /nø/ "KNOT_NOUN"
-	<deux> /dø/ "TWO (M)_NUM"
+	<mieux> /mjø/ "BETTER_ADV"
+	<vieux> /vjø/ "OLD_ADJ"
+	<jeu> /ʒø/ "GAME_NOUN"
 
 /ə/ (0.01)
+	<ɡenou> /ʒənu/ "KNEE_NOUN"
 	<que> /kə/ "WHAT_PRON"
 	<petit> /pəti/ "SMALL_ADJ"
-	<semaine> /səmɛn/ "WEEK_NOUN"
 
 
 
 CONSONANTS
 /ʁ/ (0.1)
-	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
-	<larme> /laʁm/ "TEAR_NOUN"
-	<sûr> /syʁ/ "SAFE_ADJ"
+	<faire> /fɛʁ/ "DO_VERB"
+	<ɡraine> /ɡʁɛn/ "GRAIN_NOUN"
+	<pierre> /pjɛʁ/ "STONE_NOUN"
 
 /l/ (0.058)
-	<couleur> /kulœʁ/ "COLOR_NOUN"
-	<plaie> /plɛ/ "PLAGUE_NOUN"
-	<lit> /li/ "BED_NOUN"
+	<fleur> /flœʁ/ "FLOWER_NOUN"
+	<ficelle> /fisɛl/ "STRING_NOUN"
+	<lac> /lak/ "LAKE_NOUN"
 
 /s/ (0.052)
-	<ɡlace> /ɡlas/ "ICE_NOUN"
-	<ɡraisse> /ɡʁɛs/ "FAT_NOUN"
-	<racine> /ʁasin/ "ROOT_NOUN"
+	<ɡlacer> /ɡlase/ "FREEZE_VERB"
+	<tous> /tus/ "ALL (PL)_ADJ"
+	<occire> /ɔksiʁ/ "KILL_VERB"
 
 /n/ (0.036)
-	<semaine> /səmɛn/ "WEEK_NOUN"
-	<chaîne> /ʃɛn/ "CHAIN_NOUN"
-	<jaune> /ʒon/ "YELLOW_ADJ"
+	<nous> /nu/ "WE_PRON"
+	<nue> /ny/ "CLOUD_NOUN"
+	<bonnes> /bɔn/ "GOOD (F.PL)_ADJ"
 
 /p/ (0.035)
-	<plaie> /plɛ/ "PLAGUE_NOUN"
-	<père> /pɛʁ/ "FATHER_NOUN"
-	<plein> /plɛ̃/ "FULL_ADJ"
+	<pêche> /pɛʃ/ "PEACH_NOUN"
+	<plume> /plym/ "FEATHER_NOUN"
+	<puy> /pɥi/ "PODIUM_NOUN"
 
 /t/ (0.034)
-	<trois> /tʁwa/ "THREE_NUM"
-	<étude> /etyd/ "STUDY_NOUN"
-	<côte> /kot/ "COAST_NOUN"
+	<été> /ete/ "SUMMER_NOUN"
+	<tête> /tɛt/ "SKULL_NOUN"
+	<terre> /tɛʁ/ "EARTH_NOUN"
 
 /v/ (0.034)
-	<ventre> /vɑ̃tʁ/ "BELLY_NOUN"
-	<venir> /vəniʁ/ "COME-INF_VERB"
-	<vert> /vɛʁ/ "GREEN_ADJ"
+	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
+	<vie> /vi/ "LIFE_NOUN"
+	<vin> /vɛ̃/ "WINE_NOUN"
 
 /w/ (0.033)
-	<voie> /vwa/ "ROAD_NOUN"
-	<roi> /ʁwa/ "KING_NOUN"
-	<oie> /wa/ "GOOSE_NOUN"
+	<étoile> /etwal/ "STAR_NOUN"
+	<point> /pwɛ̃/ "POINT_NOUN"
+	<noir> /nwaʁ/ "BLACK_ADJ"
 
 /k/ (0.029)
-	<écrire> /ekʁiʁ/ "WRITE_VERB"
-	<croix> /kʁwa/ "CROSS_NOUN"
-	<quoi> /kwa/ "WHAT_PRON"
+	<qui> /ki/ "WHO_PRON"
+	<quatre> /katʁ/ "FOUR_NUM"
+	<coup> /ku/ "STRIKE_NOUN"
 
 /f/ (0.029)
-	<froid> /fʁwa/ "COLD_ADJ"
-	<fer> /fɛʁ/ "IRON_NOUN"
-	<fou> /fu/ "CRAZY_ADJ"
+	<force> /fɔʁs/ "STRENGTH_NOUN"
+	<flamme> /flam/ "FLAME_NOUN"
+	<fête> /fɛt/ "PARTY_NOUN"
 
 /m/ (0.029)
-	<mille> /mil/ "THOUSAND_NUM"
-	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
-	<mouche> /muʃ/ "FLY_NOUN"
+	<mer> /mɛʁ/ "SEA_NOUN"
+	<mort> /mɔʁ/ "DEATH_NOUN"
+	<larme> /laʁm/ "TEAR_NOUN"
 
 /j/ (0.028)
-	<ouvrier> /uvʁije/ "WORKER_NOUN"
-	<moitié> /mwatje/ "HALF_NOUN"
-	<aiɡuille> /ɛɡɥij/ "NEEDLE_NOUN"
+	<vieux> /vjø/ "OLD_ADJ"
+	<voyaɡe> /vwajaʒ/ "JOURNEY_NOUN"
+	<siècle> /sjɛkl/ "CENTURY_NOUN"
 
 /ʒ/ (0.023)
-	<jaune> /ʒon/ "YELLOW_ADJ"
-	<juin> /ʒɥɛ̃/ "JUNE_PROPN"
-	<ɡencive> /ʒɑ̃siv/ "GUMS_NOUN"
+	<manɡer> /mɑ̃ʒe/ "EAT_VERB"
+	<ɡentil> /ʒɑ̃ti/ "NICE_ADJ"
+	<joie> /ʒwa/ "JOY_NOUN"
 
 /d/ (0.022)
-	<donne> /dɔn/ "GIVE-3SG_VERB"
-	<doux> /du/ "SWEET_ADJ"
-	<étude> /etyd/ "STUDY_NOUN"
+	<pondre> /pɔ̃dʁ/ "PUT_VERB"
+	<ɡendre> /ʒɑ̃dʁ/ "SON-IN-LAW_NOUN"
+	<plaindre> /plɛ̃dʁ/ "WEEP_VERB"
 
 /ʃ/ (0.021)
-	<bouche> /buʃ/ "MOUTH_NOUN"
-	<chaîne> /ʃɛn/ "CHAIN_NOUN"
-	<cheval> /ʃəval/ "HORSE_NOUN"
+	<château> /ʃato/ "CASTLE_NOUN"
+	<chez> /ʃe/ "HOUSE_NOUN"
+	<chat> /ʃa/ "CAT_NOUN"
 
 /b/ (0.019)
-	<blanc> /blɑ̃/ "WHITE_ADJ"
-	<nombril> /nɔ̃bʁil/ "NAVEL_NOUN"
-	<sable> /sabl/ "SAND_NOUN"
+	<bonne> /bɔn/ "GOOD (F.SG)_ADJ"
+	<bien> /bjɛ̃/ "WELL (ADV)_ADV"
+	<arbre> /aʁbʁ/ "TREE_NOUN"
 
 /ɡ/ (0.013)
-	<ɡros> /ɡʁo/ "THICK_ADJ"
+	<aiɡuille> /ɛɡɥij/ "NEEDLE_NOUN"
 	<ɡlacer> /ɡlase/ "FREEZE_VERB"
-	<ɡueule> /ɡœl/ "THROAT_NOUN"
+	<verɡoɡne> /vɛʁɡɔɲ/ "SHAME_NOUN"
 
 /ɥ/ (0.01)
 	<fruit> /fʁɥi/ "FRUIT_NOUN"
@@ -163,14 +163,14 @@ CONSONANTS
 	<pluie> /plɥi/ "RAIN_NOUN"
 
 /z/ (0.006)
+	<cerise> /səʁiz/ "CHERRY_NOUN"
 	<oiseau> /wazo/ "BIRD_NOUN"
-	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
-	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
+	<douze> /duz/ "TWELVE_NUM"
 
 /ɲ/ (0.005)
+	<Espaɡne> /ɛspaɲ/ "SPAIN_PROPN"
+	<araiɡnée> /aʁeɲe/ "SPIDER_NOUN"
 	<liɡne> /liɲ/ "LINE_NOUN"
-	<montaɡne> /mɔ̃taɲ/ "MOUNTAIN_NOUN"
-	<aɡneau> /aɲo/ "LAMB_NOUN"
 
 
 

@@ -1,68 +1,68 @@
 VOWELS
 /ˈɪ/ (0.047)
 	<fish> /fˈɪʃ/ "fish_NOUN"
-	<thin> /θˈɪn/ "thin_ADJ"
-	<brig> /brˈɪɡ/ "bridge_NOUN"
+	<wirm> /wˈɪrm/ "worm_NOUN"
+	<drink> /drˈɪŋk/ "drink_VERB"
 
 /ˈe/ (0.032)
-	<bede> /bˈed/ "request_VERB"
-	<aipple> /ˈepl̩/ "apple_NOUN"
-	<gait> /ɡˈet/ "goat_NOUN"
+	<aicht> /ˈext/ "eight_NUM"
+	<bede> /bˈed/ "bid_VERB"
+	<hame> /hˈem/ "home_NOUN"
 
 /ˈiː/ (0.029)
-	<me> /mˈiː/ "me_PRON"
-	<reek> /rˈiːk/ "smoke_NOUN"
-	<sweet> /swˈiːt/ "sweet_ADJ"
+	<see> /sˈiː/ "see_VERB"
+	<sheep> /ʃˈiːp/ "sheep_NOUN"
+	<three> /tʰrˈiː/ "tree_NOUN"
 
 /ˈɛ/ (0.029)
-	<gress> /ɡrˈɛs/ "grass_NOUN_NEU"
+	<hen> /hˈɛn/ "hen_NOUN"
 	<flesh> /flˈɛʃ/ "flesh_NOUN"
-	<ess> /ˈɛs/ "ash_NOUN"
+	<bairn> /bˈɛrn/ "child_NOUN_NEU"
 
 /ə/ (0.027)
-	<sister> /sˈɪstər/ "sister_NOUN"
-	<egge> /ˈɛɡə/ "edge_NOUN"
-	<liver> /lˈɪvər/ "liver_NOUN"
+	<seiven> /sˈei̯vən/ "seven_NUM"
+	<better> /bˈɛtər/ "better_ADJ"
+	<mither> /mˈɪðər/ "mother_NOUN"
 
 /ˈei̯/ (0.026)
 	<leip> /lˈei̯p/ "leap_VERB"
-	<deidly> /dˈei̯dləi̯/ "deadly_ADJ"
-	<quean> /kʰwˈei̯n/ "woman_NOUN"
+	<deir> /dˈei̯r/ "animal_NOUN"
+	<neidil> /nˈei̯dɪl/ "needle_NOUN"
 
 /ˈɔ/ (0.02)
-	<north> /nˈɔrθ/ "north_NOUN"
+	<nos> /nˈɔs/ "nose_NOUN"
+	<thorn> /θˈɔrn/ "thorn_NOUN"
 	<tongue> /tʰˈɔŋ/ "tongue_NOUN"
-	<wolf> /wˈɔɫf/ "wolf_NOUN"
 
 /ˈʉ/ (0.02)
-	<loose> /lˈʉs/ "louse_NOUN"
 	<moose> /mˈʉs/ "mouse_NOUN_FEM"
-	<foul> /fˈʉl/ "bird_NOUN_MASC"
+	<new> /njˈʉ/ "new_ADJ"
+	<cou> /kʰˈʉ/ "cow_NOUN"
 
 /ˈɑː/ (0.018)
-	<whaul> /ʍˈɑːl/ "whale_NOUN"
-	<auld> /ˈɑːld/ "old_ADJ"
-	<snaw> /snˈɑː/ "snow_NOUN"
+	<laund> /lˈɑːnd/ "land_NOUN"
+	<A> /ˈɑː/ "I_PRON"
+	<twa> /tʰwˈɑː/ "two_NUM"
 
 /ˈəi̯/ (0.015)
 	<bite> /bˈəi̯t/ "bite_VERB"
-	<wey> /wˈəi̯/ "way_NOUN"
-	<swine> /swˈəi̯n/ "swine_NOUN"
+	<white> /ʍˈəi̯t/ "white_ADJ"
+	<tide> /tʰˈəi̯d/ "time_NOUN"
 
 /ˈɑ/ (0.014)
 	<bath> /bˈɑθ/ "bath_NOUN_NEU"
-	<sax> /sˈɑks/ "six_NUM"
-	<lam> /lˈɑm/ "lamb_NOUN"
+	<man> /mˈɑn/ "man_NOUN"
+	<haly> /hˈɑləi̯/ "holy_ADJ"
 
 /ˈø/ (0.011)
-	<stule> /stˈøl/ "stool_NOUN"
-	<bluim> /blˈøm/ "flower_NOUN"
-	<guid> /ɡˈød/ "good_ADJ"
+	<ruit> /rˈøt/ "root_NOUN_FEM"
+	<bluid> /blˈød/ "blood_NOUN"
+	<guse> /ɡˈøs/ "goose_NOUN"
 
 /ˈʌ/ (0.008)
-	<huny> /hˈʌnəi̯/ "honey_NOUN"
-	<hunger> /hˈʌŋɡər/ "hunger_NOUN"
-	<us> /ˈʌs/ "us_PRON"
+	<hunder> /hˈʌndər/ "hundred_NUM"
+	<burrae> /bˈʌre/ "mountain_NOUN"
+	<thunder> /θˈʌndər/ "thunder_NOUN"
 
 /ˈi/ (0.006)
 	<sweem> /swˈim/ "swim_VERB"
@@ -82,11 +82,11 @@ VOWELS
 /ˈʌʉ̯/ (0.005)
 	<ower> /ˈʌʉ̯ər/ "over_PREP"
 	<gowd> /ɡˈʌʉ̯d/ "gold_NOUN_NEU"
-	<fower> /fˈʌʉ̯ər/ "four_NUM"
+	<fowk> /fˈʌʉ̯k/ "folk_NOUN"
 
 /e/ (0.004)
-	<burrae> /bˈʌre/ "mountain_NOUN"
 	<follae> /fˈɔle/ "follow_VERB"
+	<burrae> /bˈʌre/ "mountain_NOUN"
 	<yellae> /jˈɛle/ "yellow_ADJ"
 
 /ɪ/ (0.004)
@@ -111,119 +111,119 @@ VOWELS
 
 CONSONANTS
 /r/ (0.095)
-	<bairn> /bˈɛrn/ "child_NOUN_NEU"
-	<sister> /sˈɪstər/ "sister_NOUN"
+	<better> /bˈɛtər/ "better_ADJ"
+	<storm> /stˈɔrm/ "storm_NOUN"
 	<freend> /frˈiːnd/ "friend_NOUN"
 
 /n/ (0.059)
 	<nine> /nˈəi̯n/ "nine_NUM"
-	<neidil> /nˈei̯dɪl/ "needle_NOUN"
-	<thunder> /θˈʌndər/ "thunder_NOUN"
+	<north> /nˈɔrθ/ "north_NOUN"
+	<wapyn> /wˈɑpəi̯n/ "weapon_NOUN"
 
 /s/ (0.055)
-	<loose> /lˈʉs/ "louse_NOUN"
-	<sing> /sˈɪŋ/ "sing_VERB"
+	<ice> /ˈəi̯s/ "ice_NOUN"
 	<sister> /sˈɪstər/ "sister_NOUN"
+	<storm> /stˈɔrm/ "storm_NOUN"
 
 /d/ (0.054)
-	<gowd> /ɡˈʌʉ̯d/ "gold_NOUN_NEU"
-	<bluid> /blˈød/ "blood_NOUN"
-	<hoond> /hˈʉnd/ "dog_NOUN"
+	<haund> /hˈɑːnd/ "hand_NOUN_FEM"
+	<cauld> /kʰˈɑːld/ "cold_ADJ"
+	<neidil> /nˈei̯dɪl/ "needle_NOUN"
 
 /t/ (0.049)
-	<sweet> /swˈiːt/ "sweet_ADJ"
-	<dochter> /dˈɔxtər/ "daughter_NOUN"
+	<storm> /stˈɔrm/ "storm_NOUN"
+	<eat> /ˈei̯t/ "eat_VERB"
 	<gaist> /ɡˈest/ "ghost_NOUN"
 
 /l/ (0.046)
-	<stule> /stˈøl/ "stool_NOUN"
-	<liver> /lˈɪvər/ "liver_NOUN"
-	<leaf> /lˈei̯f/ "leaf_NOUN"
+	<twal> /tʰwˈal/ "twelve_NUM"
+	<milk> /mˈɪlk/ "milk_NOUN_FEM"
+	<lang> /lˈɑŋ/ "long_ADJ"
 
 /f/ (0.036)
-	<fre> /frˈɛ/ "free_ADJ"
-	<cauf> /kʰˈɑːf/ "calf_NOUN"
-	<faither> /fˈeðər/ "father_NOUN"
+	<fit> /fˈɪt/ "foot_NOUN"
+	<fle> /flˈɛ/ "housefly_NOUN"
+	<foul> /fˈʉl/ "bird_NOUN_MASC"
 
 /w/ (0.028)
+	<wind> /wˈɪnd/ "wind_NOUN"
 	<wit> /wˈɪt/ "know_VERB"
-	<swart> /swˈɑrt/ "black_ADJ"
 	<watter> /wˈɑtər/ "water_NOUN"
 
 /h/ (0.027)
-	<horn> /hˈɔrn/ "horn_NOUN"
 	<hunger> /hˈʌŋɡər/ "hunger_NOUN"
-	<hoose> /hˈʉs/ "house_NOUN"
+	<hunder> /hˈʌndər/ "hundred_NUM"
+	<hide> /hˈaːɪ̯d/ "skin_NOUN"
 
 /m/ (0.026)
-	<mither> /mˈɪðər/ "mother_NOUN"
-	<lam> /lˈɑm/ "lamb_NOUN"
+	<mooth> /mˈʉθ/ "mouth_NOUN"
+	<man> /mˈɑn/ "man_NOUN"
 	<wairm> /wˈei̯rm/ "warm_ADJ"
 
 /b/ (0.026)
-	<breid> /brˈei̯d/ "bread_NOUN"
-	<beir> /bˈei̯r/ "bear_NOUN"
-	<bane> /bˈen/ "bone_NOUN"
+	<blade> /blˈed/ "leaf_NOUN_NEU"
+	<bate> /bˈet/ "boat_NOUN"
+	<bath> /bˈɑθ/ "bath_NOUN_NEU"
 
 /ɡ/ (0.02)
-	<guse> /ɡˈøs/ "goose_NOUN"
-	<gie> /ɡˈiː/ "give_VERB"
-	<god> /ɡˈɔd/ "god_NOUN"
+	<gait> /ɡˈet/ "goat_NOUN"
+	<gowd> /ɡˈʌʉ̯d/ "gold_NOUN_NEU"
+	<green> /ɡrˈiːn/ "green_ADJ"
 
 /k/ (0.018)
-	<milk> /mˈɪlk/ "milk_NOUN_FEM"
+	<aik> /ˈek/ "oak_NOUN_FEM"
 	<drink> /drˈɪŋk/ "drink_VERB"
-	<chikin> /ʧˈɪkɪn/ "chicken_NOUN"
+	<knee> /knˈiː/ "knee_NOUN"
 
 /θ/ (0.018)
 	<thing> /θˈɪŋ/ "thing_NOUN"
-	<thank> /θˈɑŋk/ "thank_VERB"
-	<three> /θrˈiː/ "three_NUM"
+	<thick> /θˈɪk/ "thick_ADJ"
+	<thorn> /θˈɔrn/ "thorn_NOUN"
 
 /ŋ/ (0.014)
-	<king> /kʰˈɪŋ/ "king_NOUN"
-	<sing> /sˈɪŋ/ "sing_VERB"
-	<young> /jˈʉŋ/ "young_NOUN"
+	<ring> /rˈɪŋ/ "ring_NOUN"
+	<thank> /θˈɑŋk/ "thank_VERB"
+	<lang> /lˈɑŋ/ "long_ADJ"
 
 /x/ (0.013)
-	<nicht> /nˈɪxt/ "night_NOUN_FEM"
 	<plicht> /pʰlˈɪxt/ "plight_NOUN"
-	<licht> /lˈɪxt/ "light_ADJ"
+	<dochter> /dˈɔxtər/ "daughter_NOUN"
+	<micht> /mˈɪxt/ "might_NOUN"
 
 /tʰ/ (0.011)
-	<twal> /tʰwˈal/ "twelve_NUM"
-	<tuith> /tʰˈøθ/ "tooth_NOUN"
+	<twa> /tʰwˈɑː/ "two_NUM"
 	<tide> /tʰˈəi̯d/ "time_NOUN"
+	<tuith> /tʰˈøθ/ "tooth_NOUN"
 
 /p/ (0.01)
 	<shairp> /ʃˈɛrp/ "sharp_ADJ"
 	<wapyn> /wˈɑpəi̯n/ "weapon_NOUN"
-	<aipple> /ˈepl̩/ "apple_NOUN"
+	<aip> /ˈep/ "ape_NOUN"
 
 /ʃ/ (0.01)
 	<shit> /ʃˈɪt/ "shit_NOUN"
 	<ship> /ʃˈɪp/ "ship_NOUN"
-	<fresh> /frˈɛʃ/ "fresh_ADJ"
+	<flesh> /flˈɛʃ/ "flesh_NOUN"
 
 /ð/ (0.009)
-	<mither> /mˈɪðər/ "mother_NOUN"
-	<thou> /ðˈʉ/ "thou_PRON"
-	<brither> /brˈɪðər/ "brother_NOUN"
+	<ither> /ˈɪðər/ "other_ADJ"
+	<wethir> /wˈɛðɪr/ "weather_NOUN"
+	<faither> /fˈeðər/ "father_NOUN"
 
 /kʰ/ (0.009)
-	<horn> /kʰˈɔrn/ "corn_NOUN"
-	<can> /kʰˈɑn/ "can_VERB"
 	<cou> /kʰˈʉ/ "cow_NOUN"
+	<horn> /kʰˈɔrn/ "corn_NOUN"
+	<king> /kʰˈɪŋ/ "king_NOUN"
 
 /j/ (0.008)
-	<yellae> /jˈɛle/ "yellow_ADJ"
-	<year> /jˈɛr/ "year_NOUN"
 	<new> /njˈʉ/ "new_ADJ"
+	<year> /jˈɛr/ "year_NOUN"
+	<young> /jˈʉŋ/ "young_NOUN"
 
 /v/ (0.006)
-	<eleiven> /əlˈei̯vən/ "eleven_NUM"
-	<five> /fˈaːɪ̯v/ "five_NUM"
 	<dryve> /drˈəi̯v/ "drive_VERB"
+	<five> /fˈaːɪ̯v/ "five_NUM"
+	<eleiven> /əlˈei̯vən/ "eleven_NUM"
 
 /ʍ/ (0.005)
 	<whaul> /ʍˈɑːl/ "whale_NOUN"
@@ -231,8 +231,8 @@ CONSONANTS
 	<wheel> /ʍˈiːɫ/ "wheel_NOUN"
 
 /ɫ/ (0.005)
-	<saul> /sˈɑːɫ/ "soul_NOUN"
 	<wheel> /ʍˈiːɫ/ "wheel_NOUN"
+	<saul> /sˈɑːɫ/ "soul_NOUN"
 	<woll> /wˈɔɫ/ "wool_NOUN_FEM"
 
 /ʧ/ (0.004)

@@ -1427,10 +1427,10 @@ class Language:
                     matches.append((concept, orthography, transcription))
         
         if return_list:
-            return matches
+            return sorted(matches)
         
         else:
-            for match in matches:
+            for match in sorted(matches):
                 concept, orthography, transcription = match
                 print(f"<{orthography}> /{transcription}/ '{concept}'")
                 
