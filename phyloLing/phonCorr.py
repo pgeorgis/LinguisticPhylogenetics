@@ -801,7 +801,7 @@ class PhonCorrelator:
                                ngram_size=2,
                                gold=False, # TODO add same with PMI?
                                log_iterations=True,
-                               samples=10,
+                               samples=5,
                                sample_size=0.8, # TODO make configurable
                                cumulative=False,
                                save=True):
