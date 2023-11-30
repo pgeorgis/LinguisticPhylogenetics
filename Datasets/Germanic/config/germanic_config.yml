@@ -1,6 +1,6 @@
 family:
     name: Germanic
-    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/germanic_data.tsv
+    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/data/germanic_data.tsv
     min_amc: 0.65
     exclude: ['Old English', 'Old Norse']
     outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/
@@ -19,13 +19,13 @@ transcription:
 
 pmi:
     refresh: []
-    refresh_all_pmi: false
+    refresh_all_pmi: true
 
 surprisal:
     ngram: 1
     phon_env: true 
     refresh: []
-    refresh_all_surprisal: false
+    refresh_all_surprisal: true
 
 cluster:
     cognates: none

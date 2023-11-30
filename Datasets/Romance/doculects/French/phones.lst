@@ -1,0 +1,176 @@
+VOWELS
+/a/ (0.068)
+	<poil> /pwal/ "HAIR_NOUN"
+	<âme> /am/ "SOUL_NOUN"
+	<joie> /ʒwa/ "JOY_NOUN"
+
+/ɛ/ (0.055)
+	<aider> /ɛde/ "HELP_VERB"
+	<lièvre> /ljɛvʁ/ "HARE_NOUN"
+	<sel> /sɛl/ "SALT_NOUN"
+
+/i/ (0.047)
+	<mi-> /mi/ "MIDDLE_NOUN"
+	<mille> /mil/ "THOUSAND_NUM"
+	<écrire> /ekʁiʁ/ "WRITE_VERB"
+
+/e/ (0.037)
+	<pied> /pje/ "FOOT_NOUN"
+	<fumée> /fyme/ "SMOKE_NOUN"
+	<chanɡer> /ʃɑ̃ʒe/ "CHANGE_VERB"
+
+/ɛ̃/ (0.025)
+	<point> /pwɛ̃/ "POINT_NOUN"
+	<fin> /fɛ̃/ "THIN_ADJ"
+	<vin> /vɛ̃/ "WINE_NOUN"
+
+/ɔ/ (0.025)
+	<donne> /dɔn/ "GIVE-3SG_VERB"
+	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
+	<obscur> /ɔpskyʁ/ "DARK_ADJ"
+
+/u/ (0.023)
+	<vous> /vu/ "YOU (PL)_PRON"
+	<coup> /ku/ "STRIKE_NOUN"
+	<rouɡe> /ʁuʒ/ "RED_ADJ"
+
+/o/ (0.021)
+	<ɡros> /ɡʁo/ "THICK_ADJ"
+	<chaud> /ʃo/ "HOT_ADJ"
+	<beau> /bo/ "BEAUTIFUL (M)_ADJ"
+
+/ɑ̃/ (0.019)
+	<temps> /tɑ̃/ "TIME_NOUN"
+	<chanɡer> /ʃɑ̃ʒe/ "CHANGE_VERB"
+	<ɡens> /ʒɑ̃/ "PEOPLE_NOUN"
+
+/ɔ̃/ (0.016)
+	<bons> /bɔ̃/ "GOOD (M.PL)_ADJ"
+	<onɡle> /ɔ̃ɡl/ "FINGERNAIL_NOUN"
+	<nombril> /nɔ̃bʁil/ "NAVEL_NOUN"
+
+/y/ (0.016)
+	<cul> /ky/ "BUTTOCKS_NOUN"
+	<sûr> /syʁ/ "SAFE_ADJ"
+	<salut> /saly/ "HEALTH_NOUN"
+
+/œ/ (0.014)
+	<fleur> /flœʁ/ "FLOWER_NOUN"
+	<jeune> /ʒœn/ "YOUNG_ADJ"
+	<odeur> /ɔdœʁ/ "ODOR_NOUN"
+
+/ø/ (0.011)
+	<cheveu> /ʃəvø/ "HAIR_NOUN"
+	<nœud> /nø/ "KNOT_NOUN"
+	<deux> /dø/ "TWO (M)_NUM"
+
+/ə/ (0.01)
+	<que> /kə/ "WHAT_PRON"
+	<petit> /pəti/ "SMALL_ADJ"
+	<semaine> /səmɛn/ "WEEK_NOUN"
+
+
+
+CONSONANTS
+/ʁ/ (0.1)
+	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
+	<larme> /laʁm/ "TEAR_NOUN"
+	<sûr> /syʁ/ "SAFE_ADJ"
+
+/l/ (0.058)
+	<couleur> /kulœʁ/ "COLOR_NOUN"
+	<plaie> /plɛ/ "PLAGUE_NOUN"
+	<lit> /li/ "BED_NOUN"
+
+/s/ (0.052)
+	<ɡlace> /ɡlas/ "ICE_NOUN"
+	<ɡraisse> /ɡʁɛs/ "FAT_NOUN"
+	<racine> /ʁasin/ "ROOT_NOUN"
+
+/n/ (0.036)
+	<semaine> /səmɛn/ "WEEK_NOUN"
+	<chaîne> /ʃɛn/ "CHAIN_NOUN"
+	<jaune> /ʒon/ "YELLOW_ADJ"
+
+/p/ (0.035)
+	<plaie> /plɛ/ "PLAGUE_NOUN"
+	<père> /pɛʁ/ "FATHER_NOUN"
+	<plein> /plɛ̃/ "FULL_ADJ"
+
+/t/ (0.034)
+	<trois> /tʁwa/ "THREE_NUM"
+	<étude> /etyd/ "STUDY_NOUN"
+	<côte> /kot/ "COAST_NOUN"
+
+/v/ (0.034)
+	<ventre> /vɑ̃tʁ/ "BELLY_NOUN"
+	<venir> /vəniʁ/ "COME-INF_VERB"
+	<vert> /vɛʁ/ "GREEN_ADJ"
+
+/w/ (0.033)
+	<voie> /vwa/ "ROAD_NOUN"
+	<roi> /ʁwa/ "KING_NOUN"
+	<oie> /wa/ "GOOSE_NOUN"
+
+/k/ (0.029)
+	<écrire> /ekʁiʁ/ "WRITE_VERB"
+	<croix> /kʁwa/ "CROSS_NOUN"
+	<quoi> /kwa/ "WHAT_PRON"
+
+/f/ (0.029)
+	<froid> /fʁwa/ "COLD_ADJ"
+	<fer> /fɛʁ/ "IRON_NOUN"
+	<fou> /fu/ "CRAZY_ADJ"
+
+/m/ (0.029)
+	<mille> /mil/ "THOUSAND_NUM"
+	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
+	<mouche> /muʃ/ "FLY_NOUN"
+
+/j/ (0.028)
+	<ouvrier> /uvʁije/ "WORKER_NOUN"
+	<moitié> /mwatje/ "HALF_NOUN"
+	<aiɡuille> /ɛɡɥij/ "NEEDLE_NOUN"
+
+/ʒ/ (0.023)
+	<jaune> /ʒon/ "YELLOW_ADJ"
+	<juin> /ʒɥɛ̃/ "JUNE_PROPN"
+	<ɡencive> /ʒɑ̃siv/ "GUMS_NOUN"
+
+/d/ (0.022)
+	<donne> /dɔn/ "GIVE-3SG_VERB"
+	<doux> /du/ "SWEET_ADJ"
+	<étude> /etyd/ "STUDY_NOUN"
+
+/ʃ/ (0.021)
+	<bouche> /buʃ/ "MOUTH_NOUN"
+	<chaîne> /ʃɛn/ "CHAIN_NOUN"
+	<cheval> /ʃəval/ "HORSE_NOUN"
+
+/b/ (0.019)
+	<blanc> /blɑ̃/ "WHITE_ADJ"
+	<nombril> /nɔ̃bʁil/ "NAVEL_NOUN"
+	<sable> /sabl/ "SAND_NOUN"
+
+/ɡ/ (0.013)
+	<ɡros> /ɡʁo/ "THICK_ADJ"
+	<ɡlacer> /ɡlase/ "FREEZE_VERB"
+	<ɡueule> /ɡœl/ "THROAT_NOUN"
+
+/ɥ/ (0.01)
+	<fruit> /fʁɥi/ "FRUIT_NOUN"
+	<puits> /pɥi/ "WELL_NOUN"
+	<pluie> /plɥi/ "RAIN_NOUN"
+
+/z/ (0.006)
+	<oiseau> /wazo/ "BIRD_NOUN"
+	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
+	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
+
+/ɲ/ (0.005)
+	<liɡne> /liɲ/ "LINE_NOUN"
+	<montaɡne> /mɔ̃taɲ/ "MOUNTAIN_NOUN"
+	<aɡneau> /aɲo/ "LAMB_NOUN"
+
+
+

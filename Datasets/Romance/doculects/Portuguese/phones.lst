@@ -1,0 +1,258 @@
+VOWELS
+/u/ (0.083)
+	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
+	<muito> /mˈũj̃tu/ "MANY_ADJ"
+	<seco> /sˈeku/ "DRY (M)_ADJ"
+
+/ɐ/ (0.082)
+	<espinha> /iʃpˈiɲɐ/ "SPINE_NOUN"
+	<semana> /sɨmˈɐnɐ/ "WEEK_NOUN"
+	<nascer> /nɐʃsˈeɾ/ "BE BORN_VERB"
+
+/ˈa/ (0.039)
+	<caldo> /kˈaɫdu/ "HOT_ADJ"
+	<iɡual> /iɣwˈaɫ/ "EQUAL_ADJ"
+	<ɡear> /ʒjˈaɾ/ "FREEZE_VERB"
+
+/ɨ/ (0.037)
+	<sobre> /sˈoβɾɨ/ "ABOVE_PREP"
+	<morte> /mˈɔɾtɨ/ "DEATH_NOUN"
+	<noite> /nˈojtɨ/ "NIGHT_NOUN"
+
+/ˈo/ (0.033)
+	<poio> /pˈoju/ "PODIUM_NOUN"
+	<ɡoivo> /ɡˈojvu/ "JOY_NOUN"
+	<corno> /kˈoɾnu/ "HORN_NOUN"
+
+/ˈi/ (0.024)
+	<estio> /iʃtˈiu/ "SUMMER_NOUN"
+	<vir> /vˈiɾ/ "COME-INF_VERB"
+	<dia> /dˈiɐ/ "DAY_NOUN"
+
+/ˈe/ (0.024)
+	<preço> /pɾˈesu/ "PRICE_NOUN"
+	<seda> /sˈeðɐ/ "SILK_NOUN"
+	<eu> /ˈew/ "I_PRON"
+
+/ˈɐ/ (0.02)
+	<proveito> /pɾuvˈɐjtu/ "PROFIT_NOUN"
+	<lenha> /lˈɐjɲɐ/ "WOOD_NOUN"
+	<joelho> /ʒwˈɐjʎu/ "KNEE_NOUN"
+
+/ˈu/ (0.017)
+	<tú> /tˈu/ "THOU_PRON"
+	<curto> /kˈuɾtu/ "SHORT_ADJ"
+	<chuva> /ʃˈuvɐ/ "RAIN_NOUN"
+
+/ˈɔ/ (0.016)
+	<colo> /kˈɔlu/ "NECK_NOUN"
+	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
+	<ɡolpe> /ɡˈɔɫpɨ/ "STRIKE_NOUN"
+
+/ˈɛ/ (0.016)
+	<inverno> /ĩvˈɛɾnu/ "WINTER_NOUN"
+	<sete> /sˈɛtɨ/ "SEVEN_NUM"
+	<pele> /pˈɛlɨ/ "SKIN_NOUN"
+
+/ˈɐ̃/ (0.016)
+	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
+	<mão> /mˈɐ̃w̃/ "HAND_NOUN"
+	<sanɡue> /sˈɐ̃ɡɨ/ "BLOOD_NOUN"
+
+/i/ (0.011)
+	<Espanha> /iʃpˈɐɲɐ/ "SPAIN_PROPN"
+	<estado> /iʃtˈaðu/ "STATE_NOUN"
+	<espiɡa> /iʃpˈiɣɐ/ "EAR OF GRAIN_NOUN"
+
+/ˈẽ/ (0.006)
+	<cento> /sˈẽtu/ "HUNDRED_NUM"
+	<ɡente> /ʒˈẽtɨ/ "PEOPLE_NOUN"
+	<semente> /sɨmˈẽtɨ/ "SEED_NOUN"
+
+/ˈõ/ (0.005)
+	<redondo> /ʁɨðˈõdu/ "ROUND_ADJ"
+	<ombro> /ˈõbɾu/ "SHOULDER_NOUN"
+	<pões> /pˈõj̃ʃ/ "PUT-2SG_VERB"
+
+/ɐ̃/ (0.005)
+	<homem> /ˈɔmɐ̃j̃/ "MAN_NOUN"
+	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
+	<viaɡem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
+
+/ˈĩ/ (0.003)
+	<fim> /fˈĩ/ "END_NOUN"
+	<cinco> /sˈĩku/ "FIVE_NUM"
+	<vinte> /vˈĩtɨ/ "TWENTY_NUM"
+
+/ɔ/ (0.003)
+	<orelha> /ɔɾˈɐjʎɐ/ "EAR_NOUN"
+	<odor> /ɔðˈoɾ/ "ODOR_NOUN"
+	<ovelha> /ɔvˈɐjʎɐ/ "SHEEP_NOUN"
+
+/ˈũ/ (0.003)
+	<muito> /mˈũj̃tu/ "MANY_ADJ"
+	<nenhum> /nɨɲˈũ/ "NONE_PRON"
+	<um> /ˈũ/ "ONE_NUM"
+
+/ĩ/ (0.001)
+	<inverno> /ĩvˈɛɾnu/ "WINTER_NOUN"
+	<cinquenta> /sĩkwˈẽtɐ/ "FIFTY_NUM"
+
+/ẽ/ (0.001)
+	<ɡenɡiva> /ʒẽʒˈivɐ/ "GUMS_NOUN"
+	<sentar> /sẽtˈaɾ/ "SIT_ADJ"
+
+/o/ (0.001)
+	<morrer> /moʁˈeɾ/ "DIE_VERB"
+	<outono> /owtˈonu/ "AUTUMN_NOUN"
+
+/ˈɨ/ (0.001)
+	<que> /kˈɨ/ "WHAT_PRON"
+	<me> /mˈɨ/ "I_OBL_PRON"
+
+/õ/ (0.001)
+	<montanha> /mõtˈɐɲɐ/ "MOUNTAIN_NOUN"
+
+/ũ/ (0.001)
+	<umbiɡo> /ũbˈiɣu/ "NAVEL_NOUN"
+
+
+
+CONSONANTS
+/ɾ/ (0.075)
+	<cor> /kˈɔɾ/ "HEART_NOUN"
+	<estrela> /iʃtɾˈelɐ/ "STAR_NOUN"
+	<verde> /vˈeɾðɨ/ "GREEN_ADJ"
+
+/ʃ/ (0.037)
+	<juiz> /ʒuˈiʃ/ "JUDGE_NOUN"
+	<luz> /lˈuʃ/ "LIGHT_NOUN"
+	<escrever> /iʃkɾɨvˈeɾ/ "WRITE_VERB"
+
+/s/ (0.037)
+	<cereja> /sɨɾˈɐjʒɐ/ "CHERRY_NOUN"
+	<osso> /ˈosu/ "BONE_NOUN"
+	<saúde> /sɐˈuðɨ/ "HEALTH_NOUN"
+
+/t/ (0.036)
+	<tempo> /tˈẽpu/ "TIME_NOUN"
+	<três> /tɾˈeʃ/ "THREE_NUM"
+	<touro> /tˈowɾu/ "BULL_NOUN"
+
+/k/ (0.034)
+	<seco> /sˈeku/ "DRY (M)_ADJ"
+	<cor> /kˈɔɾ/ "HEART_NOUN"
+	<caldo> /kˈaɫdu/ "HOT_ADJ"
+
+/v/ (0.03)
+	<venho> /vˈɐjɲu/ "COME-1SG_VERB"
+	<voz> /vˈɔʃ/ "VOICE_NOUN"
+	<velho> /vˈɐjʎu/ "OLD_ADJ"
+
+/l/ (0.029)
+	<pelo> /pˈelu/ "HAIR_NOUN"
+	<colo> /kˈɔlu/ "NECK_NOUN"
+	<luta> /lˈutɐ/ "FIGHT_NOUN"
+
+/j/ (0.028)
+	<obreiro> /ɔβɾˈɐjɾu/ "WORKER_NOUN"
+	<noite> /nˈojtɨ/ "NIGHT_NOUN"
+	<cheio> /ʃˈɐju/ "FULL_ADJ"
+
+/p/ (0.027)
+	<pássaro> /pˈasɐɾu/ "BIRD_NOUN"
+	<preço> /pɾˈesu/ "PRICE_NOUN"
+	<pelo> /pˈelu/ "HAIR_NOUN"
+
+/m/ (0.026)
+	<maduro> /mɐðˈuɾu/ "MATURE_NOUN"
+	<semana> /sɨmˈɐnɐ/ "WEEK_NOUN"
+	<mil> /mˈiɫ/ "THOUSAND_NUM"
+
+/n/ (0.02)
+	<nós> /nˈɔʃ/ "WE_PRON"
+	<noz> /nˈɔʃ/ "NUT_NOUN"
+	<noite> /nˈojtɨ/ "NIGHT_NOUN"
+
+/ð/ (0.017)
+	<maduro> /mɐðˈuɾu/ "MATURE_NOUN"
+	<ajudar> /ɐʒuðˈaɾ/ "HELP_VERB"
+	<fíɡado> /fˈiɣɐðu/ "LIVER_NOUN"
+
+/f/ (0.016)
+	<fim> /fˈĩ/ "END_NOUN"
+	<farinha> /fɐɾˈiɲɐ/ "FLOUR_NOUN"
+	<festa> /fˈɛʃtɐ/ "PARTY_NOUN"
+
+/ɣ/ (0.014)
+	<pêsseɡo> /pˈesɨɣu/ "PEACH_NOUN"
+	<loɡo> /lˈɔɣu/ "PLACE_NOUN"
+	<seɡuro> /sɨɣˈuɾu/ "SAFE_ADJ"
+
+/d/ (0.013)
+	<dom> /dˈõ/ "GIFT_NOUN"
+	<duas> /dˈuɐʃ/ "TWO (F)_NUM"
+	<dedo> /dˈeðu/ "FINGER_NOUN"
+
+/ɲ/ (0.013)
+	<venho> /vˈɐjɲu/ "COME-1SG_VERB"
+	<vizinho> /vɨzˈiɲu/ "NEIGHBOR_NOUN"
+	<nenhum> /nɨɲˈũ/ "NONE_PRON"
+
+/ʒ/ (0.012)
+	<viaɡem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
+	<cereja> /sɨɾˈɐjʒɐ/ "CHERRY_NOUN"
+	<joelho> /ʒwˈɐjʎu/ "KNEE_NOUN"
+
+/w/ (0.011)
+	<outono> /owtˈonu/ "AUTUMN_NOUN"
+	<quatro> /kwˈatɾu/ "FOUR_NUM"
+	<eu> /ˈew/ "I_PRON"
+
+/b/ (0.011)
+	<umbiɡo> /ũbˈiɣu/ "NAVEL_NOUN"
+	<cambiar> /kɐ̃bjˈaɾ/ "CHANGE_VERB"
+	<beber> /bɨβˈeɾ/ "DRINK_VERB"
+
+/ʎ/ (0.01)
+	<melhor> /mɨʎˈɔɾ/ "BETTER_ADJ"
+	<joelho> /ʒwˈɐjʎu/ "KNEE_NOUN"
+	<abelha> /ɐβˈɐjʎɐ/ "BEE_NOUN"
+
+/β/ (0.009)
+	<pobre> /pˈɔβɾɨ/ "POOR_ADJ"
+	<obra> /ˈɔβɾɐ/ "WORK_NOUN"
+	<obreiro> /ɔβɾˈɐjɾu/ "WORKER_NOUN"
+
+/ʁ/ (0.009)
+	<raiz> /ʁɐˈiʃ/ "ROOT_NOUN"
+	<razão> /ʁɐzˈɐ̃w̃/ "REASON_NOUN"
+	<terra> /tˈɛʁɐ/ "EARTH_NOUN"
+
+/w̃/ (0.008)
+	<cão> /kˈɐ̃w̃/ "DOG_NOUN"
+	<razão> /ʁɐzˈɐ̃w̃/ "REASON_NOUN"
+	<são> /sˈɐ̃w̃/ "HEALTHY (M)_ADJ"
+
+/ɡ/ (0.007)
+	<línɡua> /lˈĩɡwɐ/ "TONGUE_NOUN"
+	<sanɡue> /sˈɐ̃ɡɨ/ "BLOOD_NOUN"
+	<ɡrão> /ɡɾˈɐ̃w̃/ "GRAIN_NOUN"
+
+/ɫ/ (0.007)
+	<mil> /mˈiɫ/ "THOUSAND_NUM"
+	<salsa> /sˈaɫsɐ/ "SAUCE_NOUN"
+	<ɡolpe> /ɡˈɔɫpɨ/ "STRIKE_NOUN"
+
+/j̃/ (0.006)
+	<mãe> /mˈɐ̃j̃/ "MOTHER_NOUN"
+	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
+	<muito> /mˈũj̃tu/ "MANY_ADJ"
+
+/z/ (0.005)
+	<casa> /kˈazɐ/ "HOUSE_NOUN"
+	<fazer> /fɐzˈeɾ/ "DO_VERB"
+	<cinza> /sˈĩzɐ/ "ASH_NOUN"
+
+
+

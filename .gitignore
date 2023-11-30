@@ -1,4 +1,14 @@
 venv/
 __pycache__/
 archive/
-Datasets/
+datasets/*/logs
+datasets/*/dist_matrices
+datasets/*/plots
+datasets/*/trees
+datasets/Arabic
+datasets/Celtic
+datasets/Japonic
+datasets/Sinitic
+datasets/Turkic
+datasets/Uralic
+datasets/Uto-Aztecan

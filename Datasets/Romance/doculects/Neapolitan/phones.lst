@@ -1,0 +1,189 @@
+VOWELS
+/ə/ (0.187)
+	<cuorpo> /kwˈɔɾpə/ "BODY_NOUN"
+	<baɡno> /vˈaɲɲə/ "BATH_NOUN"
+	<lacrima> /lˈakɾimə/ "TEAR_NOUN"
+
+/ˈa/ (0.055)
+	<apa> /ˈapə/ "BEE_NOUN"
+	<pane> /pˈanə/ "BREAD_NOUN"
+	<matre> /mˈatɾə/ "MOTHER_NOUN"
+
+/ˈi/ (0.031)
+	<cinche> /ʃˈiŋkə/ "FIVE_NUM"
+	<vinti> /vˈinti/ "TWENTY_NUM"
+	<mille> /mˈillə/ "THOUSAND_NUM"
+
+/ˈu/ (0.03)
+	<frùtto> /frˈuttə/ "FRUIT_NOUN"
+	<cruce> /kɾˈuʃə/ "CROSS_NOUN"
+	<punto> /pˈuntə/ "POINT_NOUN"
+
+/ˈɔ/ (0.026)
+	<vreòɡna> /vreˈɔɲɲə/ "SHAME_NOUN"
+	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
+	<otto> /ˈɔttə/ "EIGHT_NUM"
+
+/ˈɛ/ (0.024)
+	<vierno> /vjˈɛɾnə/ "WINTER_NOUN"
+	<sapè> /sapˈɛ/ "KNOW_VERB"
+	<leɡɡe> /lˈɛʤʤə/ "READ_VERB"
+
+/a/ (0.017)
+	<salute> /salˈutə/ "HEALTH_NOUN"
+	<autunno> /awtˈunnə/ "AUTUMN_NOUN"
+	<accidere> /aʧʧˈidəɾə/ "KILL_VERB"
+
+/ˈe/ (0.016)
+	<credere> /krˈeɾəɾə/ "BELIEVE_VERB"
+	<lenɡua> /lˈeŋɡwə/ "TONGUE_NOUN"
+	<recchia> /rˈekkjə/ "EAR_NOUN"
+
+/i/ (0.014)
+	<vicino> /viʃˈinə/ "NEIGHBOR_NOUN"
+	<piccirillo> /piʧʧˈiɾillə/ "SMALL_ADJ"
+	<vinti> /vˈinti/ "TWENTY_NUM"
+
+/ˈo/ (0.012)
+	<io> /jˈo/ "I_PRON"
+	<notte> /nˈottə/ "NIGHT_NOUN"
+	<jorno> /jˈornə/ "DAY_NOUN"
+
+/u/ (0.01)
+	<cunosce> /kunˈoʃʃə/ "BE ACQUAINTED WITH_VERB"
+	<putè> /putˈɛ/ "CAN_VERB"
+	<abbrucià> /abbruʃˈa/ "BURN_VERB"
+
+/e/ (0.005)
+	<famme> /fˈamme/ "HUNGER_NOUN"
+	<semmana> /semmˈanə/ "WEEK_NOUN"
+	<vellìculo> /vellˈikulə/ "NAVEL_NOUN"
+
+/o/ (0.003)
+	<urso> /ˈuɾso/ "BEAR_NOUN"
+	<quatto> /kwˈatto/ "FOUR_NUM"
+	<viento> /vjˈɛnto/ "WIND_NOUN"
+
+
+
+CONSONANTS
+/k/ (0.057)
+	<cuorpo> /kwˈɔɾpə/ "BODY_NOUN"
+	<cuorno> /kwˈɔɾnə/ "HORN_NOUN"
+	<che> /ke/ "WHAT_PRON"
+
+/n/ (0.056)
+	<lana> /lˈanə/ "WOOL_NOUN"
+	<tunno> /tˈunnə/ "ROUND_ADJ"
+	<nuve> /nˈuvə/ "CLOUD_NOUN"
+
+/t/ (0.054)
+	<tiempo> /tjˈɛmpə/ "TIME_NOUN"
+	<tu> /tˈu/ "THOU_PRON"
+	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
+
+/ɾ/ (0.047)
+	<cerasa> /ʃeɾˈasə/ "CHERRY_NOUN"
+	<dire> /dˈiɾə/ "SAY-INF_VERB"
+	<littera> /lˈittəɾə/ "LETTER_NOUN"
+
+/l/ (0.047)
+	<auciello> /awʃˈɛllə/ "BIRD_NOUN"
+	<salute> /salˈutə/ "HEALTH_NOUN"
+	<illa> /ˈillə/ "SHE_PRON"
+
+/ʃ/ (0.033)
+	<cinco> /ʃˈiŋkə/ "FIVE_NUM"
+	<scuro> /ʃkˈuɾə/ "DARK_ADJ"
+	<cunosce> /kunˈoʃʃə/ "BE ACQUAINTED WITH_VERB"
+
+/j/ (0.031)
+	<jénero> /jˈenəɾə/ "SON-IN-LAW_NOUN"
+	<fierro> /fjˈɛrrə/ "IRON_NOUN"
+	<studio> /ʃtˈudjə/ "STUDY_NOUN"
+
+/s/ (0.027)
+	<supra> /sˈuprə/ "ABOVE_PREP"
+	<urso> /ˈuɾso/ "BEAR_NOUN"
+	<sira> /sˈiɾə/ "EVENING_NOUN"
+
+/m/ (0.027)
+	<chiamà> /kjamˈa/ "CALL_VERB"
+	<tiempo> /tjˈɛmpə/ "TIME_NOUN"
+	<mare> /mˈaɾə/ "SEA_NOUN"
+
+/v/ (0.026)
+	<viecchio> /vjˈɛkkjə/ "OLD_ADJ"
+	<via> /vˈiə/ "ROAD_NOUN"
+	<erva> /ˈɛɾvə/ "GRASS_NOUN"
+
+/p/ (0.026)
+	<pena> /pˈenə/ "PAIN_NOUN"
+	<supra> /sˈuprə/ "ABOVE_PREP"
+	<capa> /kˈapə/ "HEAD_NOUN"
+
+/w/ (0.022)
+	<puorco> /pwˈɔrkə/ "PIG_NOUN"
+	<buone> /bwˈɔnə/ "GOOD (F.PL)_ADJ"
+	<cuollo> /kwˈɔllə/ "NECK_NOUN"
+
+/r/ (0.017)
+	<raɡiune> /raʤˈunə/ "REASON_NOUN"
+	<rina> /rˈinə/ "SAND_NOUN"
+	<ɡruosso> /ɡrwˈɔssə/ "THICK_ADJ"
+
+/ɲ/ (0.017)
+	<ɡiuɡno> /ʤˈuɲɲə/ "JUNE_PROPN"
+	<chiaɡnere> /kjˈaɲɲəɾə/ "WEEP_VERB"
+	<vreòɡna> /vreˈɔɲɲə/ "SHAME_NOUN"
+
+/f/ (0.015)
+	<fine> /fˈinə/ "END_NOUN"
+	<fame> /fˈame/ "HUNGER_NOUN"
+	<festa> /fˈɛstə/ "PARTY_NOUN"
+
+/d/ (0.014)
+	<verde> /vˈeɾdə/ "GREEN_ADJ"
+	<dùrece> /dˈuɾəʃə/ "TWELVE_NUM"
+	<dire> /dˈiɾə/ "SAY-INF_VERB"
+
+/ʤ/ (0.012)
+	<ɡelare> /ʤəlˈaɾə/ "FREEZE_VERB"
+	<leɡɡe> /lˈɛʤʤə/ "READ_VERB"
+	<ɡente> /ʤˈɛntə/ "PEOPLE_NOUN"
+
+/ʎ/ (0.009)
+	<aɡlio> /ˈaʎʎə/ "GARLIC_NOUN"
+	<fiɡlia> /fˈiʎʎə/ "DAUGHTER_NOUN"
+	<miɡliure> /miʎʎˈuɾə/ "BETTER_ADJ"
+
+/ʦ/ (0.007)
+	<scuòrzo> /ʃkwˈɔrʦə/ "BARK_NOUN"
+	<priezzo> /pɾjˈɛʦʦə/ "PRICE_NOUN"
+	<miezzo> /mjˈɛʦʦə/ "MIDDLE_NOUN"
+
+/ɡ/ (0.007)
+	<ɡuccia> /ɡˈuʃʃə/ "DROP_NOUN"
+	<luonɡo> /lwˈɔŋɡə/ "LONG_ADJ"
+	<ɡruosso> /ɡrwˈɔssə/ "THICK_ADJ"
+
+/b/ (0.007)
+	<buone> /bwˈɔnə/ "GOOD (M.PL)_ADJ"
+	<buona> /bwˈɔnə/ "GOOD (F.SG)_ADJ"
+	<biello> /bjˈɛllə/ "BEAUTIFUL (M)_ADJ"
+
+/ŋ/ (0.005)
+	<cinco> /ʃˈiŋkə/ "FIVE_NUM"
+	<cinche> /ʃˈiŋkə/ "FIVE_NUM"
+	<sanɡhe> /sˈaŋɡə/ "BLOOD_NOUN"
+
+/ʧ/ (0.003)
+	<piccirillo> /piʧʧˈiɾillə/ "SMALL_ADJ"
+	<noce> /nˈoʧə/ "NUT_NOUN"
+	<accidere> /aʧʧˈidəɾə/ "KILL_VERB"
+
+/z/ (0.001)
+	<cosa> /kˈɔzə/ "THING_NOUN"
+
+
+

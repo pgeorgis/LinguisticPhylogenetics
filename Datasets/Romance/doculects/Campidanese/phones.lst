@@ -1,0 +1,215 @@
+VOWELS
+/u/ (0.078)
+	<annu> /ˈannu/ "YEAR_NOUN"
+	<obu> /ˈoβu/ "EGG_NOUN"
+	<bentu> /bˈentu/ "WIND_NOUN"
+
+/i/ (0.072)
+	<arbori> /ˈarbori/ "TREE_NOUN"
+	<ɪspaɡna> /ispˈaɲɲa/ "SPAIN_PROPN"
+	<citadi> /ʧitˈadi/ "CITY_NOUN"
+
+/a/ (0.067)
+	<pinna> /pˈinna/ "FEATHER_NOUN"
+	<nébida> /nˈeβiða/ "FOG_NOUN"
+	<peraula> /perˈawla/ "WORD_NOUN"
+
+/ˈa/ (0.057)
+	<mandiɡari> /mandiɣˈari/ "EAT_VERB"
+	<craba> /krˈaβa/ "GOAT_NOUN"
+	<àteru> /ˈateru/ "OTHER_ADJ"
+
+/ˈo/ (0.042)
+	<morriri> /mˈoriri/ "DIE_VERB"
+	<fortza> /fˈorʦa/ "STRENGTH_NOUN"
+	<soli> /sˈoli/ "SUN_NOUN"
+
+/ˈi/ (0.039)
+	<milli> /mˈilli/ "THOUSAND_NUM"
+	<nia> /nˈia/ "SNOW_NOUN"
+	<ischis> /iskˈis/ "KNOW-2SG_VERB"
+
+/ˈe/ (0.039)
+	<bermi> /bˈermi/ "WORM_NOUN"
+	<beju> /bˈeju/ "OLD_ADJ"
+	<meli> /mˈeli/ "HONEY_NOUN"
+
+/e/ (0.031)
+	<seɡuru> /seɣˈuru/ "SAFE_ADJ"
+	<narrere> /nˈarrere/ "SAY-INF_VERB"
+	<lítera> /lˈitera/ "LETTER_NOUN"
+
+/ˈu/ (0.022)
+	<nuve> /nˈuβe/ "CLOUD_NOUN"
+	<curtzu> /kˈurʦu/ "SHORT_ADJ"
+	<breɡúnɡia> /breɣˈunʤa/ "SHAME_NOUN"
+
+/o/ (0.01)
+	<dormiri> /dormˈiri/ "SLEEP_VERB"
+	<arbori> /ˈarbori/ "TREE_NOUN"
+	<bolai> /bolˈai/ "FLY_VERB"
+
+/ŭ/ (0.004)
+	<corpus> /kˈorpuzŭ/ "BODY_NOUN"
+	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
+	<mezus> /mˈeʣuzŭ/ "BETTER_ADV"
+
+/ŏ/ (0.002)
+	<ojos> /ˈojozŏ/ "EYES_NOUN"
+	<bonos> /bˈonozŏ/ "GOOD (M.PL)_ADJ"
+	<duos> /dˈuozŏ/ "TWO (M)_NUM"
+
+/ĕ/ (0.002)
+	<bídere> /bˈiðerĕ/ "SEE_VERB"
+	<ses> /sˈezĕ/ "SIX_NUM"
+	<tres> /trˈezĕ/ "THREE_NUM"
+
+/ă/ (0.002)
+	<duas> /dˈuază/ "TWO (F)_NUM"
+	<bonas> /bˈonază/ "GOOD (F.PL)_ADJ"
+
+
+
+CONSONANTS
+/r/ (0.083)
+	<porri> /pˈorri/ "CAN_VERB"
+	<farsu> /farsu/ "FALSE_ADJ"
+	<ierru> /jˈerru/ "WINTER_NOUN"
+
+/n/ (0.063)
+	<leòni> /leˈoni/ "LION_NOUN"
+	<lana> /lˈana/ "WOOL_NOUN"
+	<cincuanta> /ʧiŋkwˈanta/ "FIFTY_NUM"
+
+/s/ (0.038)
+	<sali> /sˈali/ "SALT_NOUN"
+	<chisina> /kˈisina/ "ASH_NOUN"
+	<scroxu> /skrˈoʒu/ "BARK_NOUN"
+
+/l/ (0.037)
+	<luna> /lˈuna/ "MOON_NOUN"
+	<sali> /sˈali/ "SALT_NOUN"
+	<ànɡelu> /ˈanʤelu/ "ANGEL_NOUN"
+
+/b/ (0.034)
+	<bonas> /bˈonază/ "GOOD (F.PL)_ADJ"
+	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
+	<benuju> /benˈuju/ "KNEE_NOUN"
+
+/k/ (0.034)
+	<cabaddu> /kaβˈaɖɖu/ "HORSE_NOUN"
+	<corru> /kˈorru/ "HORN_NOUN"
+	<cuatru> /kwˈatru/ "FOUR_NUM"
+
+/t/ (0.033)
+	<santu> /sˈantu/ "SACRED_ADJ"
+	<témpus> /tˈempuzŭ/ "TIME_NOUN"
+	<forti> /fˈorti/ "STRONG_ADJ"
+
+/m/ (0.023)
+	<òmini> /ˈomini/ "MAN_NOUN"
+	<milli> /mˈilli/ "THOUSAND_NUM"
+	<bermi> /bˈermi/ "WORM_NOUN"
+
+/p/ (0.022)
+	<pinna> /pˈinna/ "FEATHER_NOUN"
+	<spina> /spˈina/ "SPINE_NOUN"
+	<pisci> /pˈiʃʃi/ "FISH_NOUN"
+
+/f/ (0.019)
+	<fizu> /fˈiʣu/ "SON_NOUN"
+	<foɡu> /fˈoɣu/ "FIRE_NOUN"
+	<fàere> /fˈaere/ "DO_VERB"
+
+/ɖ/ (0.015)
+	<isteddu> /istˈeɖɖu/ "STAR_NOUN"
+	<casteddu> /kastˈeɖɖu/ "CASTLE_NOUN"
+	<pedhi> /pˈeɖɖi/ "SKIN_NOUN"
+
+/j/ (0.015)
+	<noi> /nˈoj/ "NINE_NUM"
+	<ceréxia> /ʧerˈeʒja/ "CHERRY_NOUN"
+	<leài> /leˈaj/ "CARRY_VERB"
+
+/z/ (0.013)
+	<pétus> /pˈetuzŭ/ "BREAST_NOUN"
+	<bonas> /bˈonază/ "GOOD (F.PL)_ADJ"
+	<mésu> /mˈezu/ "MIDDLE_NOUN"
+
+/ɣ/ (0.013)
+	<breɡúnɡia> /breɣˈunʤa/ "SHAME_NOUN"
+	<foɡu> /fˈoɣu/ "FIRE_NOUN"
+	<prioɡu> /priˈoɣu/ "LOUSE_NOUN"
+
+/d/ (0.013)
+	<déu> /dˈeu/ "GOD_NOUN"
+	<duos> /dˈuozŏ/ "TWO (M)_NUM"
+	<birdi> /bˈirdi/ "GREEN_ADJ"
+
+/ð/ (0.012)
+	<bida> /bˈiða/ "LIFE_NOUN"
+	<seda> /sˈeða/ "SILK_NOUN"
+	<aɡiudare> /aʤuðˈare/ "HELP_VERB"
+
+/β/ (0.008)
+	<òbera> /ˈoβera/ "WORK_NOUN"
+	<abi> /ˈaβi/ "BEE_NOUN"
+	<nébida> /nˈeβiða/ "FOG_NOUN"
+
+/ɡ/ (0.008)
+	<unɡa> /ˈuŋɡa/ "FINGERNAIL_NOUN"
+	<lonɡu> /lˈoŋɡu/ "LONG_ADJ"
+	<aɡuali> /aɡwˈali/ "EQUAL_ADJ"
+
+/ʧ/ (0.008)
+	<cera> /ʧˈera/ "WAX_NOUN"
+	<cincuanta> /ʧiŋkwˈanta/ "FIFTY_NUM"
+	<ceréxia> /ʧerˈeʒja/ "CHERRY_NOUN"
+
+/ʒ/ (0.007)
+	<arɡidda> /arʒˈiɖɖa/ "CLAY_NOUN"
+	<cruxi> /krˈuʒi/ "CROSS_NOUN"
+	<dexi> /dˈeʒi/ "TEN_NUM"
+
+/ʃ/ (0.006)
+	<bàsciu> /bˈaʃʃu/ "LOW_ADJ"
+	<pisci> /pˈiʃʃi/ "FISH_NOUN"
+	<nesciúni> /neʃʃˈuni/ "NONE_PRON"
+
+/w/ (0.005)
+	<sanɡuini> /sˈaŋɡwini/ "BLOOD_NOUN"
+	<cuatru> /kwˈatru/ "FOUR_NUM"
+	<linɡua> /lˈiŋɡwa/ "TONGUE_NOUN"
+
+/ŋ/ (0.005)
+	<cincuanta> /ʧiŋkwˈanta/ "FIFTY_NUM"
+	<lonɡu> /lˈoŋɡu/ "LONG_ADJ"
+	<cincu> /ʧˈiŋku/ "FIVE_NUM"
+
+/ʤ/ (0.005)
+	<prànɡiri> /prˈanʤiri/ "WEEP_VERB"
+	<aɡiudare> /aʤuðˈare/ "HELP_VERB"
+	<leɡe> /lˈeʤe/ "LAW_NOUN"
+
+/ɲ/ (0.005)
+	<ɪspaɡna> /ispˈaɲɲa/ "SPAIN_PROPN"
+	<atóɡnu> /atˈoɲɲu/ "AUTUMN_NOUN"
+	<baɡnu> /bˈaɲɲu/ "BATH_NOUN"
+
+/ʣ/ (0.004)
+	<foza> /fˈoʣa/ "LEAF_NOUN"
+	<azu> /ˈaʣu/ "GARLIC_NOUN"
+	<fiza> /fˈiʣa/ "DAUGHTER_NOUN"
+
+/ʦ/ (0.003)
+	<curtzu> /kˈurʦu/ "SHORT_ADJ"
+	<putzu> /pˈuʦu/ "WELL_NOUN"
+	<fortza> /fˈorʦa/ "STRENGTH_NOUN"
+
+/v/ (0.003)
+	<iscrivere> /iskrˈivere/ "WRITE_VERB"
+	<alvu> /ˈalvu/ "WHITE_ADJ"
+	<líveru> /lˈiveru/ "FREE_ADJ"
+
+
+

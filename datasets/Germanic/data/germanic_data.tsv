@@ -251,9 +251,9 @@ Gothic	Gothic			eleven_NUM	𐌰𐌹𐌽𐌻𐌹𐍆	ˈɛːnlif	ˈɛː n l i f		e
 Old Norse	Old Norse			eleven_NUM	ellifu	ˈellivu	ˈe l l i v u		eleven_NUM_1			
 Icelandic	Icelandic			eleven_NUM	ellefu	ˈɛtl̥ɛvʏ	ˈɛ t l̥ ɛ v ʏ		eleven_NUM_1			
 Faroese	Faroese			eleven_NUM	ellivu	ˈɛtl̥ɪvʊ	ˈɛ t l̥ ɪ v ʊ		eleven_NUM_1			
-Nynorsk Norwegian	Nynorsk Norwegian			eleven_NUM	elleve	ˈɛlvə	ˈɛ l v ə		eleven_NUM_1			
-Bokmål Norwegian	Bokmål Norwegian			eleven_NUM	elleve	ˈɛlvə	ˈɛ l v ə		eleven_NUM_1			
-Danish	Danish			eleven_NUM	elleve	ˈɛlvə	ˈɛ l v ə		eleven_NUM_1			
+Nynorsk Norwegian	Nynorsk Norwegian			eleven_NUM	elleve	ˈɛlʋe	ˈɛ l ʋ e		eleven_NUM_1			
+Bokmål Norwegian	Bokmål Norwegian			eleven_NUM	elleve	ˈɛlʋə	ˈɛ l ʋ ə		eleven_NUM_1			
+Danish	Danish			eleven_NUM	elleve	ˈɛlʋə	ˈɛ l ʋ ə		eleven_NUM_1			
 Swedish	Swedish			eleven_NUM	elva	ˈɛlva	ˈɛ l v a		eleven_NUM_1			
 Scots	Scots			eleven_NUM	eleiven	əlˈei̯vən	ə l ˈei̯ v ə n		eleven_NUM_1			
 English	English			eleven_NUM	eleven	ɪlˈevən	ɪ l ˈe v ə n		eleven_NUM_1			
@@ -1478,6 +1478,38 @@ Yiddish	Yiddish			dream_VERB	טרוימען	tʀˈɔɪ̯mən	t ʀ ˈɔɪ̯ m ə n
 Swabian	Swabian			dream_VERB	draima	dʁˈae̯ma	d ʁ ˈae̯ m a		dream_VERB_1			
 Alsatian	Alsatian			dream_VERB	traime	tʁˈai̯mə	t ʁ ˈai̯ m ə		dream_VERB_1			
 Swiss German	Swiss German			dream_VERB	tröime	trˈøi̯mə	t r ˈøi̯ m ə		dream_VERB_1			
+Proto-Germanic	Proto-Germanic			drive_VERB	drībaną	drˈiːβɑnɑ̃	d r ˈiː β ɑ n ɑ̃		drive_VERB_1			
+Gothic	Gothic			drive_VERB	𐌳𐍂𐌴𐌹𐌱𐌰𐌽	drˈiːβan	d r ˈiː β a n		drive_VERB_1			
+Old Norse	Old Norse			drive_VERB	drífa	drˈiːva	d r ˈiː v a		drive_VERB_1			
+Icelandic	Icelandic			drive_VERB	drífa	d̥rˈiːva	d̥ r ˈiː v a		drive_VERB_1			
+Faroese	Faroese			drive_VERB	dríva	d̥ɹˈʊ̯iːva	d̥ ɹ ˈʊ̯iː v a		drive_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			drive_VERB	driva	dɾˈiːʋa	d ɾ ˈiː ʋ a		drive_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			drive_VERB	drive	dɾˈiːʋə	d ɾ ˈiː ʋ ə		drive_VERB_1			
+Danish	Danish			drive_VERB	drive	d̥ʁˈiːw	d̥ ʁ ˈiː w		drive_VERB_1			
+Swedish	Swedish			drive_VERB	driva	drˈiːva	d r ˈiː v a		drive_VERB_1			
+Scots	Scots			drive_VERB	dryve	drˈəi̯v	d r ˈəi̯ v		drive_VERB_1			
+English	English			drive_VERB	drive	dɹˈaɪ̯v	d ɹ ˈaɪ̯ v		drive_VERB_1			
+American English	American English			drive_VERB	drive	dɹˈaɪ̯v	d ɹ ˈaɪ̯ v		drive_VERB_1			
+Old English	Old English			drive_VERB	drīfan	drˈiːvɑn	d r ˈiː v ɑ n		drive_VERB_1			
+West Frisian	West Frisian			drive_VERB	driuwe	drjˈuːvə	d r j ˈuː v ə		drive_VERB_1			
+Saterland Frisian	Saterland Frisian			drive_VERB	drieuwe	drˈiːwə	d r ˈiː w ə		drive_VERB_1			
+North Frisian	North Frisian			drive_VERB	driwe	drˈiːvə	d r ˈiː v ə		drive_VERB_1			
+Westphalian	Westphalian			drive_VERB	driwen	drˈiːvn̩	d r ˈiː v n̩		drive_VERB_1			
+Eastphalian	Eastphalian			drive_VERB	driewen	drˈiːvn̩	d r ˈiː v n̩		drive_VERB_1			
+Northern Low Saxon	Northern Low Saxon			drive_VERB	drieven	drˈiːm	d r ˈiː m		drive_VERB_1			
+East Low German	East Low German			drive_VERB	driewen	drˈiːm	d r ˈiː m		drive_VERB_1			
+Dutch	Dutch			drive_VERB	drijven	dɾˈɛi̯vən	d ɾ ˈɛi̯ v ə n		drive_VERB_1			
+Afrikaans	Afrikaans			drive_VERB	dryf	drˈəɪ̯f	d r ˈəɪ̯ f		drive_VERB_1			
+Limburgish	Limburgish			drive_VERB	drieve	dʀˈiːvə	d ʀ ˈiː v ə		drive_VERB_1			
+Ripuarian	Ripuarian			drive_VERB	drieve	dʀˈiːvə	d ʀ ˈiː v ə		drive_VERB_1			
+Luxembourgish	Luxembourgish			drive_VERB	dreiwen	dʀˈɑɪ̯vən	d ʀ ˈɑɪ̯ v ə n		drive_VERB_1			
+Pennsylvania German	Pennsylvania German			drive_VERB	dreiwe	dɾˈaɪ̯və	d ɾ ˈaɪ̯ v ə		drive_VERB_1			
+German	German			drive_VERB	treiben	tʰʁˈaɪ̯bn̩	tʰ ʁ ˈaɪ̯ b n̩		drive_VERB_1			
+Yiddish	Yiddish			drive_VERB	טרײַבן	tʀˈaɪ̯bn̩	t ʀ ˈaɪ̯ b n̩		drive_VERB_1			
+Swabian	Swabian			drive_VERB	dreiba	dʁˈəi̯ba	d ʁ ˈəi̯ b a		drive_VERB_1			
+Alsatian	Alsatian			drive_VERB	tribe	tʁˈiːb̥ə	t ʁ ˈiː b̥ ə		drive_VERB_1			
+Swiss German	Swiss German			drive_VERB	triibe	trˈiːb̥ə	t r ˈiː b̥ ə		drive_VERB_1			
+Bavarian	Bavarian			drive_VERB	dreibn	d̥rˈai̯b̥n̩	d̥ r ˈai̯ b̥ n̩		drive_VERB_1			
 Proto-Germanic	Proto-Germanic			drink_VERB	drinkaną	drˈiŋkɑnɑ̃	d r ˈi ŋ k ɑ n ɑ̃		drink_VERB_1			
 Gothic	Gothic			drink_VERB	𐌳𐍂𐌹𐌲𐌺𐌰𐌽	drˈiŋkan	d r ˈi ŋ k a n		drink_VERB_1			
 Old Norse	Old Norse			drink_VERB	drekka	drˈekkɑ	d r ˈe k k ɑ		drink_VERB_1			
@@ -1556,8 +1588,8 @@ Proto-Germanic	Proto-Germanic			dwarf_NOUN	dwergaz	dwˈerɣɑz	d w ˈe r ɣ ɑ z
 Old Norse	Old Norse			dwarf_NOUN	dvergr	dvˈerɣr	d v ˈe r ɣ r		dwarf_NOUN_1			
 Icelandic	Icelandic			dwarf_NOUN	dvergur	d̥vˈɛrɡ̊ʏr̥	d̥ v ˈɛ r ɡ̊ ʏ r̥		dwarf_NOUN_1			
 Faroese	Faroese			dwarf_NOUN	dvørgur	d̥vˈœɹɡ̊ʊɹ	d̥ v ˈœ ɹ ɡ̊ ʊ ɹ		dwarf_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			dwarf_NOUN	dverg	dvˈɛɾɡ	d v ˈɛ ɾ ɡ		dwarf_NOUN_1			
-Bokmål Norwegian	Bokmål Norwegian			dwarf_NOUN	dverg	dvˈɛɾɡ	d v ˈɛ ɾ ɡ		dwarf_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			dwarf_NOUN	dverg	dʋˈɛɾɡ	d ʋ ˈɛ ɾ ɡ		dwarf_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			dwarf_NOUN	dverg	dʋˈɛɾɡ	d ʋ ˈɛ ɾ ɡ		dwarf_NOUN_1			
 Danish	Danish			dwarf_NOUN	dværg	d̥ʋˈæɐˀw	d̥ ʋ ˈæ ɐˀ w		dwarf_NOUN_1			
 Swedish	Swedish			dwarf_NOUN	dvärg	dvˈærj	d v ˈæ r j		dwarf_NOUN_1			
 Scots	Scots			dwarf_NOUN	droich	drˈoe̯ç	d r ˈoe̯ ç		dwarf_NOUN_1			
@@ -1835,7 +1867,7 @@ English	English			five_NUM	five	fˈaɪ̯v	f ˈaɪ̯ v		five_NUM_1
 American English	American English			five_NUM	five	fˈaɪ̯v	f ˈaɪ̯ v		five_NUM_1			
 Old English	Old English			five_NUM	fīf	fˈiːf	f ˈiː f		five_NUM_1			
 West Frisian	West Frisian			five_NUM	fiif	fˈiːf	f ˈiː f		five_NUM_1			
-Saterland Frisian	Saterland Frisian			five_NUM	fieuw	fˈiu̯	f ˈiu̯		five_NUM_1			
+Saterland Frisian	Saterland Frisian			five_NUM	fieuw	fˈiːw	f ˈiː w		five_NUM_1			
 North Frisian	North Frisian			five_NUM	fiiw	fˈiːv	f ˈiː v		five_NUM_1			
 Westphalian	Westphalian			five_NUM	fiew	fˈiːf	f ˈiː f		five_NUM_1			
 Eastphalian	Eastphalian			five_NUM	fief	fˈiːf	f ˈiː f		five_NUM_1			
@@ -1951,7 +1983,7 @@ Icelandic	Icelandic			fly_VERB	fljúga	fljˈuːa	f l j ˈuː a		fly_VERB_1
 Faroese	Faroese			fly_VERB	flúgva	flˈʏɡ̊va	f l ˈʏ ɡ̊ v a		fly_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			fly_VERB	flyga	flˈyːɡɑ	f l ˈyː ɡ ɑ		fly_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			fly_VERB	flyge	flˈyːɡə	f l ˈyː ɡ ə		fly_VERB_1			
-Danish	Danish			fly_VERB	flyve	flˈyːʋə	f l ˈyː ʋ ə		fly_VERB_1			
+Danish	Danish			fly_VERB	flyve	flˈyːw	f l ˈyː w		fly_VERB_1			
 Swedish	Swedish			fly_VERB	flyga	flˈyːɡa	f l ˈyː ɡ a		fly_VERB_1			
 Scots	Scots			fly_VERB	flee	flˈiː	f l ˈiː		fly_VERB_1			
 English	English			fly_VERB	fly	flˈaɪ̯	f l ˈaɪ̯		fly_VERB_1			
@@ -5953,7 +5985,7 @@ Icelandic	Icelandic			sleep_VERB	sofa	sˈɔːva	s ˈɔː v a		sleep_VERB_2
 Faroese	Faroese			sleep_VERB	sova	sˈoːva	s ˈoː v a		sleep_VERB_2			
 Nynorsk Norwegian	Nynorsk Norwegian			sleep_VERB	sova	sˈoːʋɑ	s ˈoː ʋ ɑ		sleep_VERB_2			
 Bokmål Norwegian	Bokmål Norwegian			sleep_VERB	sove	sˈoːʋə	s ˈoː ʋ ə		sleep_VERB_2			
-Danish	Danish			sleep_VERB	sove	sˈɔw	s ˈɔ w		sleep_VERB_2			
+Danish	Danish			sleep_VERB	sove	sˈɒːw	s ˈɒː w		sleep_VERB_2			
 Swedish	Swedish			sleep_VERB	sova	sˈoːva	s ˈoː v a		sleep_VERB_2			
 Proto-Germanic	Proto-Germanic			sword_NOUN	swerdą	swˈerðɑ̃	s w ˈe r ð ɑ̃		sword_NOUN_1			
 Old Norse	Old Norse			sword_NOUN	sverð	svˈerð	s v ˈe r ð		sword_NOUN_1			
@@ -6325,7 +6357,7 @@ Icelandic	Icelandic			twenty_NUM	tuttugu	tʰˈuʰtuɣu	tʰ ˈu ʰt u ɣ u		twent
 Faroese	Faroese			twenty_NUM	tjúgu	ʧʰˈʉːu̯wʊ	ʧʰ ˈʉːu̯ w ʊ		twenty_NUM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			twenty_NUM	tjue	çˈʉːe	ç ˈʉː e		twenty_NUM_1			
 Bokmål Norwegian	Bokmål Norwegian			twenty_NUM	tjue	çˈʉːə	ç ˈʉː ə		twenty_NUM_1			
-Danish	Danish			twenty_NUM	tyve	ʦʰˈyːʋə	ʦʰ ˈyː ʋ ə		twenty_NUM_1			
+Danish	Danish			twenty_NUM	tyve	ʦʰˈyːw	ʦʰ ˈyː w		twenty_NUM_1			
 Swedish	Swedish			twenty_NUM	tjugo	ɕˈʉːɡʊ	ɕ ˈʉː ɡ ʊ		twenty_NUM_1			
 Scots	Scots			twenty_NUM	twenty	tʰwˈɛnti	tʰ w ˈɛ n t i		twenty_NUM_1			
 English	English			twenty_NUM	twenty	tʰwˈentɪ	tʰ w ˈe n t ɪ		twenty_NUM_1			
@@ -6356,7 +6388,7 @@ Gothic	Gothic			twelve_NUM	𐍄𐍅𐌰𐌻𐌹𐍆	twˈalif	t w ˈa l i f		twel
 Old Norse	Old Norse			twelve_NUM	tolf	tʰˈolv	tʰ ˈo l v		twelve_NUM_1			
 Icelandic	Icelandic			twelve_NUM	tólf	tʰˈou̯l̥f	tʰ ˈou̯ l̥ f		twelve_NUM_1			
 Faroese	Faroese			twelve_NUM	tólv	tʰˈœlv	tʰ ˈœ l v		twelve_NUM_1			
-Nynorsk Norwegian	Nynorsk Norwegian			twelve_NUM	tolv	tʰˈɔlv	tʰ ˈɔ l v		twelve_NUM_1			
+Nynorsk Norwegian	Nynorsk Norwegian			twelve_NUM	tolv	tʰˈɔlʋ	tʰ ˈɔ l ʋ		twelve_NUM_1			
 Bokmål Norwegian	Bokmål Norwegian			twelve_NUM	tolv	tʰˈɔll	tʰ ˈɔ l l		twelve_NUM_1			
 Danish	Danish			twelve_NUM	tolv	ʦʰˈʌlˀ	ʦʰ ˈʌ lˀ		twelve_NUM_1			
 Swedish	Swedish			twelve_NUM	tolv	tʰˈɔlv	tʰ ˈɔ l v		twelve_NUM_1			
@@ -6757,7 +6789,7 @@ Old Norse	Old Norse			know_VERB	vita	vˈitɑ	v ˈi t ɑ		know_VERB_1
 Icelandic	Icelandic			know_VERB	vita	vˈɪːta	v ˈɪː t a		know_VERB_1			
 Faroese	Faroese			know_VERB	vita	vˈiːta	v ˈiː t a		know_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			know_VERB	vita	ʋˈiːtɑ	ʋ ˈiː t ɑ		know_VERB_1			
-Bokmål Norwegian	Bokmål Norwegian			know_VERB	vite	vˈiːtə	v ˈiː t ə		know_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			know_VERB	vite	ʋˈiːtə	ʋ ˈiː t ə		know_VERB_1			
 Danish	Danish			know_VERB	vide	ʋˈiːð̞ˠə	ʋ ˈiː ð̞ˠ ə		know_VERB_1			
 Swedish	Swedish			know_VERB	veta	vˈeːta	v ˈeː t a		know_VERB_1			
 Scots	Scots			know_VERB	wit	wˈɪt	w ˈɪ t		know_VERB_1			

@@ -1,0 +1,186 @@
+VOWELS
+/ə/ (0.133)
+	<cabell> /kəβˈɛʎ/ "HAIR_NOUN"
+	<terra> /tˈɛrə/ "EARTH_NOUN"
+	<anell> /ənˈeʎ/ "RING_NOUN"
+
+/ˈa/ (0.067)
+	<ɡras> /ɡrˈas/ "FAT_NOUN"
+	<escoltar> /əskultˈa/ "LISTEN_VERB"
+	<paraula> /pəɾˈawlə/ "WORD_NOUN"
+
+/ˈi/ (0.034)
+	<pit> /pˈit/ "BREAST_NOUN"
+	<cinc> /sˈiŋ/ "FIVE_NUM"
+	<vila> /bˈilə/ "TOWN_NOUN"
+
+/ˈɔ/ (0.034)
+	<home> /ˈɔmə/ "MAN_NOUN"
+	<coll> /kˈɔʎ/ "NECK_NOUN"
+	<or> /ˈɔr/ "GOLD_NOUN"
+
+/ˈɛ/ (0.031)
+	<set> /sˈɛt/ "SEVEN_NUM"
+	<solell> /sulˈɛʎ/ "SUN_NOUN"
+	<ple> /plˈɛ/ "FULL_ADJ"
+
+/ˈe/ (0.031)
+	<obrer> /ubɾˈe/ "WORKER_NOUN"
+	<vent> /bˈen/ "WIND_NOUN"
+	<néixer> /nˈeʃə/ "BE BORN_VERB"
+
+/ˈu/ (0.026)
+	<sabut> /səβˈut/ "KNOWN_VERB"
+	<ninɡú> /niŋɡˈu/ "NONE_PRON"
+	<llum> /ʎˈum/ "LIGHT_NOUN"
+
+/u/ (0.022)
+	<obrer> /ubɾˈe/ "WORKER_NOUN"
+	<orella> /uɾˈɛʎə/ "EAR_NOUN"
+	<ferro> /fˈɛru/ "IRON_NOUN"
+
+/ˈo/ (0.022)
+	<tots> /tˈots/ "ALL (PL)_ADJ"
+	<mosca> /mˈoskə/ "FLY_NOUN"
+	<llop> /ʎˈop/ "WOLF_NOUN"
+
+/i/ (0.011)
+	<iɡual> /iɣwˈal/ "EQUAL_ADJ"
+	<millor> /miʎˈo/ "BETTER_ADJ"
+	<savi> /sˈaβi/ "WISE_ADJ"
+
+
+
+CONSONANTS
+/s/ (0.063)
+	<falso> /fˈals/ "FALSE_ADJ"
+	<sàpiɡa> /sˈapiɣə/ "KNOW-SBJ-1SG_VERB"
+	<sol> /sˈɔl/ "SUN_NOUN"
+
+/k/ (0.042)
+	<dic> /dˈik/ "SAY-1SG_VERB"
+	<carn> /kˈarn/ "MEAT_NOUN"
+	<qui> /kˈi/ "WHO_PRON"
+
+/ɾ/ (0.042)
+	<mare> /mˈaɾə/ "MOTHER_NOUN"
+	<nostre> /nˈɔstɾə/ "OUR_ADJ"
+	<pare> /pˈaɾə/ "FATHER_NOUN"
+
+/n/ (0.042)
+	<corn> /kˈɔrn/ "HORN_NOUN"
+	<ɡran> /ɡɾˈan/ "BIG_ADJ"
+	<pont> /pˈɔn/ "BRIDGE_NOUN"
+
+/t/ (0.041)
+	<fred> /fɾˈɛt/ "COLD_ADJ"
+	<quatre> /kwˈatɾə/ "FOUR_NUM"
+	<llit> /ʎˈit/ "BED_NOUN"
+
+/ʎ/ (0.039)
+	<ɡuatlla> /ɡwˈaʎʎə/ "QUAIL_NOUN"
+	<llit> /ʎˈit/ "BED_NOUN"
+	<lletra> /ʎˈetɾə/ "LETTER_NOUN"
+
+/l/ (0.038)
+	<salsa> /sˈalsə/ "SAUCE_NOUN"
+	<iɡual> /iɣwˈal/ "EQUAL_ADJ"
+	<blanc> /blˈaŋ/ "WHITE_ADJ"
+
+/m/ (0.034)
+	<setmana> /səmmˈanə/ "WEEK_NOUN"
+	<menjar> /məɲʒˈa/ "EAT_VERB"
+	<cima> /sˈimə/ "SUMMIT_NOUN"
+
+/p/ (0.033)
+	<plaɡa> /plˈaɣə/ "PLAGUE_NOUN"
+	<porc> /pˈɔrk/ "PIG_NOUN"
+	<pena> /pˈɛnə/ "PAIN_NOUN"
+
+/b/ (0.031)
+	<vila> /bˈilə/ "TOWN_NOUN"
+	<bons> /bˈɔns/ "GOOD (M.PL)_ADJ"
+	<vuit> /bˈujt/ "EIGHT_NUM"
+
+/r/ (0.026)
+	<obscur> /upskˈur/ "DARK_ADJ"
+	<terra> /tˈɛrə/ "EARTH_NOUN"
+	<verm> /bˈɛrm/ "WORM_NOUN"
+
+/w/ (0.024)
+	<quatre> /kwˈatɾə/ "FOUR_NUM"
+	<ɡuatlla> /ɡwˈaʎʎə/ "QUAIL_NOUN"
+	<veure> /bˈɛwɾə/ "SEE_VERB"
+
+/f/ (0.02)
+	<farina> /fəɾˈinə/ "FLOUR_NOUN"
+	<fred> /fɾˈɛt/ "COLD_ADJ"
+	<fum> /fˈum/ "SMOKE_NOUN"
+
+/d/ (0.016)
+	<drac> /dɾˈak/ "DRAGON_NOUN"
+	<draɡó> /dɾəɣˈo/ "DRAGON_NOUN"
+	<déu> /dˈew/ "GOD_NOUN"
+
+/β/ (0.015)
+	<llevar> /ʎəβˈa/ "CARRY_VERB"
+	<savi> /sˈaβi/ "WISE_ADJ"
+	<sobre> /sˈoβɾə/ "ABOVE_PREP"
+
+/ʒ/ (0.014)
+	<ajudar> /əʒuðˈa/ "HELP_VERB"
+	<juny> /ʒˈuɲ/ "JUNE_PROPN"
+	<lleɡir> /ʎəʒˈi/ "READ_VERB"
+
+/ɡ/ (0.012)
+	<verɡonya> /bərɡˈoɲə/ "SHAME_NOUN"
+	<llenɡua> /ʎˈɛŋɡwə/ "TONGUE_NOUN"
+	<ɡuatlla> /ɡwˈaʎʎə/ "QUAIL_NOUN"
+
+/ɲ/ (0.011)
+	<llenya> /ʎˈeɲə/ "WOOD_NOUN"
+	<Espanya> /əspˈaɲə/ "SPAIN_PROPN"
+	<bany> /bˈaɲ/ "BATH_NOUN"
+
+/ð/ (0.01)
+	<poder> /puðˈɛ/ "CAN_VERB"
+	<vida> /bˈiðə/ "LIFE_NOUN"
+	<ajudar> /əʒuðˈa/ "HELP_VERB"
+
+/ɣ/ (0.009)
+	<plaɡa> /plˈaɣə/ "PLAGUE_NOUN"
+	<aɡulla> /əɣˈuʎə/ "NEEDLE_NOUN"
+	<llàɡrima> /ʎˈaɣɾimə/ "TEAR_NOUN"
+
+/j/ (0.007)
+	<vuit> /bˈujt/ "EIGHT_NUM"
+	<fruit> /fɾˈujt/ "FRUIT_NOUN"
+	<canviar> /kəmbjˈa/ "CHANGE_VERB"
+
+/ŋ/ (0.006)
+	<cinquanta> /siŋkwˈantə/ "FIFTY_NUM"
+	<blanc> /blˈaŋ/ "WHITE_ADJ"
+	<llenɡua> /ʎˈɛŋɡwə/ "TONGUE_NOUN"
+
+/ʃ/ (0.004)
+	<peix> /pˈeʃ/ "FISH_NOUN"
+	<baix> /bˈaʃ/ "LOW_ADJ"
+	<cuixa> /kˈuʃə/ "THIGH_NOUN"
+
+/z/ (0.004)
+	<vosaltres> /buzˈaltɾəs/ "YOU (PL)_PRON"
+	<espasa> /əspˈazə/ "SWORD_NOUN"
+	<nosaltres> /nuzˈaltɾəs/ "WE_PRON"
+
+/ʧ/ (0.004)
+	<miɡ> /mˈiʧ/ "MIDDLE_NOUN"
+	<puiɡ> /pˈuʧ/ "PODIUM_NOUN"
+	<ɡoiɡ> /ɡˈɔʧ/ "JOY_NOUN"
+
+/ʤ/ (0.003)
+	<fetɡe> /fˈeʤə/ "LIVER_NOUN"
+	<jutɡe> /ʒˈuʤə/ "JUDGE_NOUN"
+	<viatɡe> /biˈaʤə/ "JOURNEY_NOUN"
+
+
+
