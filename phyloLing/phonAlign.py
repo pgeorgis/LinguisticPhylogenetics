@@ -573,7 +573,7 @@ def add_phon_env(alignment,
             phonEnv = env_func(segs, seg_index)
             word_aligned[i] = word_aligned[i], phonEnv
         
-        return word1_aligned, gap_count
+        return word_aligned, gap_count
 
     for i, seg in enumerate(word1_aligned):
         word1_aligned, gap_count1 = add_phon_env_i(word1_aligned, segs1, i, gap_count1, gap_ch)
