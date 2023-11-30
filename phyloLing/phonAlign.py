@@ -5,7 +5,7 @@ from phonUtils.segment import _toSegment, consonants
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
-from constants import START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, NULL_CH_DEFAULT
+from constants import START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, NULL_CH_DEFAULT, SEG_JOIN_CH
 from utils.distance import Distance
 from utils.sequence import Ngram
 from utils.utils import validate_class
@@ -626,7 +626,7 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
         pair = list(pair)
         for i, seg in enumerate(pair):
             if isinstance(seg, tuple):
-                pair[i] = ' '.join(seg)
+                pair[i] = SEG_JOIN_CH.join(seg)
             
         seg1, seg2 = pair
         if gap_ch not in pair:
