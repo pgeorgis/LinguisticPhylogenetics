@@ -104,6 +104,7 @@ class PhonCorrelator:
         # Logging
         self.outdir = self.lang1.family.phone_corr_dir
         self.pmi_log_dir, self.surprisal_log_dir = self.log_dirs()
+        self.align_log = defaultdict(lambda:defaultdict(lambda:set()))
         self.logger = logger
         
     def langs(self, l1=None, l2=None):
@@ -463,7 +464,6 @@ class PhonCorrelator:
             p_threshold_sample = p_threshold
             qualifying_words = default_dict({iteration:sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
-            align_log = defaultdict(lambda:set())
             if cumulative:
                 all_cognate_alignments = []
             #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
@@ -531,7 +531,7 @@ class PhonCorrelator:
                 iter_logs[sample_n].append((qualifying_words[iteration], sort_wordlist(disqualified)))
             
                 # Log final alignments from which PMI was calculated
-                align_log = self._log_alignments(qualifying_alignments, align_log)
+                self._log_alignments(qualifying_alignments, self.align_log['PMI'])
             
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
@@ -554,7 +554,7 @@ class PhonCorrelator:
             
             # Write alignment log
             align_log_file = os.path.join(self.pmi_log_dir, 'PMI_alignments.log')
-            self._write_alignments_log(align_log, align_log_file)
+            self._write_alignments_log(self.align_log['PMI'], align_log_file)
 
         if save:
             self.lang1.phoneme_pmi[self.lang2] = results
@@ -912,8 +912,8 @@ class PhonCorrelator:
                         iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words, method='surprisal', same_meaning_alignments=same_meaning_alignments)
                         iter_logs[sample_n].append(iter_log)
 
-                        # Log final alignments from which PMI was calculated
-                        align_log = self._log_alignments(qualifying_alignments, align_log)
+                        # Log final alignments from which surprisal was calculated
+                        self._log_alignments(qualifying_alignments, self.align_log['surprisal'])
 
                 # Save final set of qualifying/disqualified word pairs
                 if log_iterations:
@@ -968,7 +968,7 @@ class PhonCorrelator:
             
             # Write alignments log
             align_log_file = os.path.join(surprisal_ngram_log_dir, 'surprisal_alignments.log')
-            self._write_alignments_log(align_log, align_log_file)
+            self._write_alignments_log(self.align_log['surprisal'], align_log_file)
             
             # Write phoneme correlation report # TODO might not be needed any longer given new format of surprisal logs
             phon_corr_report = os.path.join(surprisal_ngram_log_dir, 'surprisal_phon_corr.log')
@@ -1111,12 +1111,11 @@ class PhonCorrelator:
                     f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
                 f.write('\n\n-------------------\n\n')
     
-    def _log_alignments(self, alignments, align_log=defaultdict(lambda:set())):
+    def _log_alignments(self, alignments, align_log):
         for alignment in alignments:
             key = f'/{alignment.word1.ipa}/ - /{alignment.word2.ipa}/'
             align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
             align_log[key].add(align_str)
-        return align_log
     
     def _write_alignments_log(self, alignment_log, log_file):
         with open(log_file, 'w') as f:
