@@ -453,6 +453,7 @@ class Alignment:
         return add_phon_env(self.alignment,
                             env_func=env_func, 
                             gap_ch=self.gap_ch,
+                            pad_ch=self.pad_ch,
                             segs1=self.seq1)
 
     def reverse(self):
@@ -476,6 +477,7 @@ class ReversedAlignment(Alignment):
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.cost_func = alignment.cost_func
+        self.pad_ch = alignment.pad_ch
         self.added_penalty_dict = alignment.added_penalty_dict
         self.kwargs = alignment.kwargs
         self.n_best = [(reverse_alignment(alignment_n), cost) for alignment_n, cost in alignment.n_best]
@@ -551,6 +553,7 @@ class Gap(AlignedPair):
 def add_phon_env(alignment,
                  env_func=get_phon_env, 
                  gap_ch=GAP_CH_DEFAULT,
+                 pad_ch=PAD_CH_DEFAULT,
                  segs1=None):
     """Adds the phonological environment value of segments to an alignment
     e.g. 
@@ -561,11 +564,11 @@ def add_phon_env(alignment,
     word1_aligned, word2_aligned = tuple(zip(*alignment))
     word1_aligned = list(word1_aligned) # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
     if not segs1:
-        segs1 = tuple([seg for seg in word1_aligned if seg != gap_ch])
-    gap_count1, gap_count2 = 0, 0
+        segs1 = tuple([seg for seg in word1_aligned if seg != gap_ch and pad_ch not in seg])
+    gap_count1 = 0
 
-    def add_phon_env_i(word_aligned, segs, i, gap_count, gap_ch):
-        if word_aligned[i] == gap_ch:
+    def add_phon_env_i(word_aligned, segs, i, gap_count):
+        if word_aligned[i] == gap_ch or pad_ch in word1_aligned[i]:
             gap_count += 1
             # TODO so gaps are skipped?
         else:
@@ -576,7 +579,7 @@ def add_phon_env(alignment,
         return word_aligned, gap_count
 
     for i, seg in enumerate(word1_aligned):
-        word1_aligned, gap_count1 = add_phon_env_i(word1_aligned, segs1, i, gap_count1, gap_ch)
+        word1_aligned, gap_count1 = add_phon_env_i(word1_aligned, segs1, i, gap_count1)
 
     # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
     return list(zip(word1_aligned, word2_aligned))
