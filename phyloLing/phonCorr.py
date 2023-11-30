@@ -1118,11 +1118,12 @@ class PhonCorrelator:
             align_log[key].add(align_str)
     
     def _write_alignments_log(self, alignment_log, log_file):
-        sorted_alignments = sorted(alignment_log.keys())
+        sorted_alignment_keys = sorted(alignment_log.keys())
         with open(log_file, 'w') as f:
-            for key in sorted_alignments:
+            for key in sorted_alignment_keys:
                 f.write(f'{key}\n')
-                for alignment in alignment_log[key]:
+                sorted_alignments = sorted(alignment_log[key])
+                for alignment in sorted_alignments:
                     f.write(f'{alignment}\n')
                 f.write('\n-------------------\n\n')
     
