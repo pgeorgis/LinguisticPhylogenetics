@@ -1,0 +1,989 @@
+Same meaning pairs: 203
+****SAMPLE 1****
+Iteration 1
+	Qualified: 155
+	Disqualified: 169
+	Added: 0
+	Removed: 7
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		mar /mˈaːr/ - Sie /zˈiː/
+		allur /ˈatl̥ʏr̥/ - all /ˈal/
+		í /ˈiː/ - en /ˈen/
+		egg /ˈɛɡ̊ɡ̊/ - Ei /ˈeɪ̯/
+		þyrnir /θˈɪrtnɪr̥/ - Doon /dˈoːn/
+		eldur /ˈɛld̥ʏr̥/ - Füür /fˈyːɐ/
+
+Iteration 2
+	Qualified: 154
+	Disqualified: 170
+	Added: 1
+		allur /ˈatl̥ʏr̥/ - all /ˈal/
+	Removed: 2
+		fjórir /fjˈoːu̯rɪr̥/ - vier /fˈiːɐ/
+		sjór /sjˈoːu̯r̥/ - Sie /zˈiː/
+
+Iteration 3
+	Qualified: 155
+	Disqualified: 169
+	Added: 1
+		fjórir /fjˈoːu̯rɪr̥/ - vier /fˈiːɐ/
+	Removed: 0
+
+Iteration 4
+	Qualified: 156
+	Disqualified: 168
+	Added: 1
+		sjór /sjˈoːu̯r̥/ - Sie /zˈiː/
+	Removed: 0
+
+Iteration 5
+	Qualified: 156
+	Disqualified: 168
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bjóða /b̥jˈoːu̯ða/ - beede /bˈeːdə/
+		björn /b̥jˈœrtn̥/ - Bär /bˈɛːɐ/
+		blað /b̥lˈaːð/ - Blatt /blˈat/
+		blóm /b̥lˈoːu̯m/ - Bloom /blˈoːm/
+		blóð /b̥lˈoːu̯ð/ - Blot /blˈoːt/
+		brjóst /b̥rjˈoːu̯st/ - Bross /bʀˈos/
+		bróðir /b̥rˈoːu̯ðɪr̥/ - Broder /bʀˈoːdɐ/
+		brauð /b̥rˈœːy̯ð/ - Brut /bʀˈuːt/
+		bryggja /b̥rˈɪɟ̊ɟ̊a/ - Bröck /bʀˈœk/
+		bað /b̥ˈaːð/ - Badd /bˈat/
+		bíta /b̥ˈiːta/ - bieße /bˈiːsə/
+		bók /b̥ˈoːu̯k/ - Booch /bˈoːx/
+		berg /b̥ˈɛrɡ̊/ - Berch /bˈɛːɐɕ/
+		biðja /b̥ˈɪðja/ - bedde /bˈɛdə/
+		kýr /cʰˈiːr̥/ - Koh /kˈoː/
+		kirkja /cʰˈɪr̥ca/ - Kirch /kˈiːɐɕ/
+		dreyma /d̥rˈeːi̯ma/ - drööme /dʀˈøːmə/
+		drífa /d̥rˈiːva/ - drieve /dʀˈiːvə/
+		draumur /d̥rˈœːy̯mʏr̥/ - Droom /dʀˈoːm/
+		drekka /d̥rˈɛʰka/ - drenke /dʀˈeŋkə/
+		dvergur /d̥vˈɛrɡ̊ʏr̥/ - Zwerg /ʦvˈɛɐk/
+		dagur /d̥ˈaːɣʏr̥/ - Daach /dˈaːx/
+		dýr /d̥ˈiːr̥/ - Dier /dˈiːɐ/
+		dóttir /d̥ˈɔu̯ʰtɪr̥/ - Dochter /dˈɔxtɐ/
+		fjórir /fjˈoːu̯rɪr̥/ - vier /fˈiːɐ/
+		fljúga /fljˈuːa/ - fleeje /flˈeːjə/
+		frjósa /frjˈoːu̯sa/ - freere /fʀˈeːʀə/
+		frændi /frˈai̯nd̥ɪ/ - Frönk /fʀˈœŋk/
+		faðir /fˈaːðɪr̥/ - Vader /fˈaːdɐ/
+		fingur /fˈiŋɡ̊ʏr̥/ - Finger /fˈɪŋɐ/
+		fólk /fˈou̯l̥k/ - Volk /fˈɔlk/
+		fótur /fˈoːu̯tʏr̥/ - Foß /fˈoːs/
+		fylgja /fˈɪlɟ̊a/ - folge /fˈɔlɣə/
+		fimm /fˈɪm/ - fönnef /fˈœnəf/
+		fiskur /fˈɪskʏr̥/ - Fesch /fˈeʃ/
+		fullur /fˈʏtl̥ʏr̥/ - voll /fˈɔl/
+		fugl /fˈʏɡ̊l̥/ - Vuggel /fˈuɣəl/
+		funi /fˈʏːnɪ/ - Füür /fˈyːɐ/
+		hafa /hˈaːva/ - han /hˈan/
+		hús /hˈuːs/ - Huus /hˈuːs/
+		húð /hˈuːð/ - Huut /hˈuːt/
+		hönd /hˈœnd̥/ - Hank /hˈaŋk/
+		höfuð /hˈœːvʏð/ - Haup /hˈaʊ̯p/
+		höfuð /hˈœːvʏð/ - Kopp /kˈɔp/
+		hár /hˈɑːu̯r̥/ - Hoor /hˈoːɐ/
+		hár /hˈɑːu̯r̥/ - huh /hˈuː/
+		horn /hˈɔrtn̥/ - Horn /hˈɔɐn/
+		helgur /hˈɛlɡ̊ʏr̥/ - hellig /hˈɛləɕ/
+		heyra /hˈɛːi̯ra/ - hüre /hˈyːʀə/
+		hundur /hˈʏnd̥ʏr̥/ - Honk /hˈoŋk/
+		hunang /hˈʏːnɑu̯ŋɡ̊/ - Hunnig /hˈunəɕ/
+		jörð /jˈœrð/ - Ääd /ˈɛːt/
+		éta /jˈɛta/ - äße /ˈɛːsə/
+		ég /jˈɛːx/ - ich /ˈɪɕ/
+		hvalur /kʰvˈaːlʏr̥/ - Wal /vˈaːl/
+		hvað /kʰvˈaːð/ - wat /ʋˈat/
+		hvítur /kʰvˈiːtʏr̥/ - wieß /ʋˈiːs/
+		kaldur /kʰˈald̥ʏr̥/ - kalt /kˈalt/
+		kóngur /kʰˈou̯ŋɡ̊ʏr̥/ - Künning /kˈʏnɪŋ/
+		kálfur /kʰˈɑu̯lvʏr̥/ - Kalv /kˈalf/
+		korn /kʰˈɔrtn̥/ - Koon /kˈoːn/
+		kunna /kʰˈʏnːa/ - könne /kˈœnə/
+		ljós /ljˈoːu̯s/ - Leech /lˈeːɕ/
+		lús /lˈuːs/ - Luus /lˈuːs/
+		lauf /lˈœːy̯f/ - Lauv /lˈaʊ̯f/
+		lifur /lˈɪːvʏr̥/ - Levver /lˈɛvɐ/
+		hlæja /l̥ˈaːi̯ja/ - laache /lˈaːxə/
+		hlaupa /l̥ˈœːy̯pa/ - laufe /lˈaʊ̯fə/
+		mjólk /mjˈɔu̯l̥k/ - Milch /mˈɪlɕ/
+		manneskja /mˈanːɛsca/ - Minsch /mˈɪnʃ/
+		mar /mˈaːr/ - Meer /mˈeːɐ/
+		móðir /mˈoːu̯ðɪr̥/ - Mooder /mˈoːdɐ/
+		mús /mˈuːs/ - Muus /mˈuːs/
+		máni /mˈɑːu̯nɪ/ - Mond /mˈɔnt/
+		mig /mˈɪːx/ - mich /mˈɪɕ/
+		munnur /mˈʏnːʏr̥/ - Muul /mˈuːl/
+		munnur /mˈʏnːʏr̥/ - Mond /mˈɔnt/
+		nafn /nˈapn̥/ - Name /nˈaːmə/
+		nakinn /nˈaːcɪn/ - nack /nˈak/
+		níu /nˈiːjʏ/ - nüng /nˈʏŋ/
+		nýr /nˈiːr̥/ - neu /nˈɔʏ̯/
+		nögl /nˈœɡ̊l/ - Nääl /nˈɛːl/
+		nál /nˈɑːu̯l/ - Nodel /nˈoːdəl/
+		nótt /nˈɔu̯ʰt/ - Naach /nˈaːx/
+		nef /nˈɛːv/ - Nas /nˈaːs/
+		hné /n̥jˈɛː/ - Knee /knˈeː/
+		réttur /rjˈɛʰtʏr̥/ - rääch /ʀˈɛːɕ/
+		rauður /rˈœːy̯ðʏr̥/ - rut /ʀˈuːt/
+		skip /scˈɪːp/ - Scheff /ʃˈef/
+		sjór /sjˈoːu̯r̥/ - Sie /zˈiː/
+		sjö /sjˈœː/ - sivve /zˈɪvə/
+		sjá /sjˈɑːu̯/ - sehn /zˈeːn/
+		skarpur /skˈar̥pʏr̥/ - schärp /ʃˈɛːɐp/
+		slanga /slˈɑu̯ŋɡ̊a/ - Schlang /ʃlˈaŋ/
+		stjarna /stjˈartna/ - Stään /ʃtˈɛːn/
+		slá /stl̥ˈaːu̯/ - schloon /ʃlˈoːn/
+		stormur /stˈɔrmʏr̥/ - Storm /ʃtˈɔɐm/
+		stóll /stˈɔu̯tl̥/ - Stohl /ʃtˈoːl/
+		steinn /stˈɛi̯tn̥/ - Steen /ʃtˈeːn/
+		sverð /svˈɛrð/ - Schwäät /ʃʋˈɛːt/
+		salt /sˈal̥t/ - Salz /zˈalʦ/
+		sandur /sˈand̥ʏr̥/ - Sank /zˈaŋk/
+		sætur /sˈaːi̯tʏr̥/ - söß /zˈøːs/
+		syngja /sˈiɲɟ̊a/ - singe /zˈɪŋə/
+		sýr /sˈiːr̥/ - Sau /zˈaʊ̯/
+		síða /sˈiːða/ - Sigg /zˈɪk/
+		sofa /sˈɔːva/ - schlofe /ʃlˈoːfə/
+		sex /sˈɛks/ - sechs /zˈɛks/
+		segja /sˈɛːi̯ja/ - sage /zˈaːɣə/
+		systir /sˈɪstɪr̥/ - Sester /zˈɛstɐ/
+		tvö /tʰvˈœː/ - zwee /ʦʋˈeː/
+		tíu /tʰˈiːjʏ/ - zehn /ʦˈeːn/
+		tólf /tʰˈou̯l̥f/ - zwällef /ʦʋˈɛləf/
+		tunga /tʰˈuŋɡ̊a/ - Zong /ʦˈoŋ/
+		tuttugu /tʰˈuʰtuɣu/ - zwanzig /ʦʋˈanʦɪɕ/
+		varmur /vˈarmʏr̥/ - wärm /ʋˈɛɐm/
+		vatn /vˈaʰtn̥/ - Waßer /ʋˈaːsɐ/
+		veður /vˈɛːðʏr̥/ - Wedder /ʋˈɛdɐ/
+		vegur /vˈɛːɣʏr̥/ - Wääch /ʋˈɛːɕ/
+		vindur /vˈɪnd̥ʏr̥/ - Wank /ʋˈaŋk/
+		vita /vˈɪːta/ - wesse /ʋˈesə/
+		hjarta /çˈar̥ta/ - Hätz /hˈɛʦ/
+		héri /çˈɛːrɪ/ - Has /hˈaːs/
+		hér /çˈɛːr̥/ - hee /hˈeː/
+		gras /ɡ̊rˈaːs/ - Jras /jʀˈaːs/
+		guð /ɡ̊vˈʏːð/ - Jott /jˈɔt/
+		góður /ɡ̊ˈoːu̯ðʏr̥/ - jot /jˈoːt/
+		gull /ɡ̊ˈʏtl̥/ - Jold /jˈolt/
+		gulur /ɡ̊ˈʏːlʏr̥/ - jäl /jˈɛːl/
+		æskja /ˈai̯sca/ - wünsche /ʋˈʏnʃə/
+		armur /ˈarmʏr̥/ - Ärm /ˈɛːɐm/
+		aska /ˈaska/ - Äsch /ˈɛʃ/
+		allur /ˈatl̥ʏr̥/ - all /ˈal/
+		yfir /ˈivɪr̥/ - üvver /ˈʏvɐ/
+		úlfur /ˈulvʏr̥/ - Wolf /ʋˈɔlf/
+		auga /ˈœːy̯ɣa/ - Ooch /ˈoːx/
+		átta /ˈɑu̯ʰta/ - aach /ˈaːx/
+		áll /ˈɑːu̯tl̥/ - Ööl /ˈøːl/
+		ofn /ˈɔpn̥/ - Ovve /ˈɔvə/
+		ormur /ˈɔrmʏr̥/ - Wurm /ʋˈʊɐm/
+		oss /ˈɔsː/ - uns /ˈʊns/
+		einn /ˈɛi̯tn̥/ - een /ˈeːn/
+		ellefu /ˈɛtl̥ɛvʏ/ - ellef /ˈeləf/
+		epli /ˈɛʰplɪ/ - Appel /ˈapəl/
+		eik /ˈɛːi̯k/ - Eech /ˈeːɕ/
+		ull /ˈʏtl̥/ - Woll /ʋˈɔl/
+		ugla /ˈʏɡ̊la/ - Üül /ˈyːl/
+		þjófur /θjˈoːu̯vʏr̥/ - Deev /dˈeːf/
+		þrír /θrˈiːr̥/ - drei /dʀˈeɪ̯/
+		þakka /θˈaʰka/ - danke /dˈaŋkə/
+		þýskur /θˈiskʏr̥/ - dütsch /dˈʏtʃ/
+		þing /θˈiŋɡ̊/ - Dinge /dˈɪŋə/
+		þú /θˈuː/ - do /dˈoː/
+		þúsund /θˈuːsʏnd̥/ - dausend /dˈaʊ̯zənt/
+		þunnur /θˈʏnːʏr̥/ - dönn /dˈœn/
+		þurr /θˈʏrː̥/ - drüch /dʀˈyːɕ/
+
+Final disqualified:
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		mar /mˈaːr/ - Sie /zˈiː/
+		í /ˈiː/ - en /ˈen/
+		eldur /ˈɛld̥ʏr̥/ - Füür /fˈyːɐ/
+		egg /ˈɛɡ̊ɡ̊/ - Ei /ˈeɪ̯/
+		þyrnir /θˈɪrtnɪr̥/ - Doon /dˈoːn/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 155
+	Disqualified: 169
+	Added: 0
+	Removed: 7
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		mar /mˈaːr/ - Sie /zˈiː/
+		jörð /jˈœrð/ - Ääd /ˈɛːt/
+		í /ˈiː/ - en /ˈen/
+		bý /b̥ˈiː/ - Imm /ˈɪm/
+		björn /b̥jˈœrtn̥/ - Bär /bˈɛːɐ/
+		eldur /ˈɛld̥ʏr̥/ - Füür /fˈyːɐ/
+
+Iteration 2
+	Qualified: 155
+	Disqualified: 169
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bjóða /b̥jˈoːu̯ða/ - beede /bˈeːdə/
+		blað /b̥lˈaːð/ - Blatt /blˈat/
+		blóm /b̥lˈoːu̯m/ - Bloom /blˈoːm/
+		blóð /b̥lˈoːu̯ð/ - Blot /blˈoːt/
+		brjóst /b̥rjˈoːu̯st/ - Bross /bʀˈos/
+		bróðir /b̥rˈoːu̯ðɪr̥/ - Broder /bʀˈoːdɐ/
+		brauð /b̥rˈœːy̯ð/ - Brut /bʀˈuːt/
+		bryggja /b̥rˈɪɟ̊ɟ̊a/ - Bröck /bʀˈœk/
+		baðmur /b̥ˈaðmʏr̥/ - Boom /bˈoːm/
+		bátur /b̥ˈaːu̯tʏr̥/ - Boot /bˈoːt/
+		bað /b̥ˈaːð/ - Badd /bˈat/
+		bý /b̥ˈiː/ - Bien /bˈiːn/
+		bíta /b̥ˈiːta/ - bieße /bˈiːsə/
+		bók /b̥ˈoːu̯k/ - Booch /bˈoːx/
+		berg /b̥ˈɛrɡ̊/ - Berch /bˈɛːɐɕ/
+		bein /b̥ˈɛːi̯n/ - Been /bˈeːn/
+		kýr /cʰˈiːr̥/ - Koh /kˈoː/
+		kirkja /cʰˈɪr̥ca/ - Kirch /kˈiːɐɕ/
+		djúpur /d̥jˈuːpʏr̥/ - deef /dˈeːf/
+		dreyma /d̥rˈeːi̯ma/ - drööme /dʀˈøːmə/
+		draumur /d̥rˈœːy̯mʏr̥/ - Droom /dʀˈoːm/
+		dagur /d̥ˈaːɣʏr̥/ - Daach /dˈaːx/
+		dýr /d̥ˈiːr̥/ - düür /dˈyːɐ/
+		dýr /d̥ˈiːr̥/ - döör /dˈøːɐ/
+		dauður /d̥ˈœːy̯ðʏr̥/ - Dud /dˈuːt/
+		dóttir /d̥ˈɔu̯ʰtɪr̥/ - Dochter /dˈɔxtɐ/
+		fljúga /fljˈuːa/ - fleeje /flˈeːjə/
+		fluga /flˈʏːɣa/ - Fleeg /flˈeːɕ/
+		frjósa /frjˈoːu̯sa/ - freere /fʀˈeːʀə/
+		frændi /frˈai̯nd̥ɪ/ - Frönk /fʀˈœŋk/
+		fætur /fˈaːi̯tʏr̥/ - Föß /fˈøːs/
+		faðir /fˈaːðɪr̥/ - Vader /fˈaːdɐ/
+		fingur /fˈiŋɡ̊ʏr̥/ - Finger /fˈɪŋɐ/
+		fólk /fˈou̯l̥k/ - Volk /fˈɔlk/
+		fótur /fˈoːu̯tʏr̥/ - Foß /fˈoːs/
+		fylgja /fˈɪlɟ̊a/ - folge /fˈɔlɣə/
+		fimm /fˈɪm/ - fönnef /fˈœnəf/
+		fugl /fˈʏɡ̊l̥/ - Vuggel /fˈuɣəl/
+		hafa /hˈaːva/ - han /hˈan/
+		húð /hˈuːð/ - Huut /hˈuːt/
+		hönd /hˈœnd̥/ - Hank /hˈaŋk/
+		höfuð /hˈœːvʏð/ - Haup /hˈaʊ̯p/
+		hár /hˈɑːu̯r̥/ - huh /hˈuː/
+		horn /hˈɔrtn̥/ - Horn /hˈɔɐn/
+		helgur /hˈɛlɡ̊ʏr̥/ - hellig /hˈɛləɕ/
+		heyra /hˈɛːi̯ra/ - hüre /hˈyːʀə/
+		heitur /hˈɛːi̯tʏr̥/ - heeß /hˈeːs/
+		hundur /hˈʏnd̥ʏr̥/ - Honk /hˈoŋk/
+		hunang /hˈʏːnɑu̯ŋɡ̊/ - Hunnig /hˈunəɕ/
+		ég /jˈɛːx/ - ich /ˈɪɕ/
+		hvítur /kʰvˈiːtʏr̥/ - wieß /ʋˈiːs/
+		kaldur /kʰˈald̥ʏr̥/ - kalt /kˈalt/
+		kóngur /kʰˈou̯ŋɡ̊ʏr̥/ - Künning /kˈʏnɪŋ/
+		kálfur /kʰˈɑu̯lvʏr̥/ - Kalv /kˈalf/
+		korn /kʰˈɔrtn̥/ - Koon /kˈoːn/
+		kunna /kʰˈʏnːa/ - könne /kˈœnə/
+		ljós /ljˈoːu̯s/ - Leech /lˈeːɕ/
+		léttur /ljˈɛʰtʏr̥/ - leech /lˈeːɕ/
+		lamb /lˈamb̥/ - Lamm /lˈam/
+		lús /lˈuːs/ - Luus /lˈuːs/
+		lauf /lˈœːy̯f/ - Lauv /lˈaʊ̯f/
+		langur /lˈɑu̯ŋɡ̊ʏr̥/ - lank /lˈaŋk/
+		hlæja /l̥ˈaːi̯ja/ - laache /lˈaːxə/
+		mjólk /mjˈɔu̯l̥k/ - Milch /mˈɪlɕ/
+		mar /mˈaːr/ - Meer /mˈeːɐ/
+		móðir /mˈoːu̯ðɪr̥/ - Mooder /mˈoːdɐ/
+		mús /mˈuːs/ - Muus /mˈuːs/
+		máttur /mˈɑu̯ʰtʏr̥/ - Maach /mˈaːx/
+		máni /mˈɑːu̯nɪ/ - Mond /mˈɔnt/
+		mig /mˈɪːx/ - mich /mˈɪɕ/
+		munnur /mˈʏnːʏr̥/ - Muul /mˈuːl/
+		munnur /mˈʏnːʏr̥/ - Mond /mˈɔnt/
+		nakinn /nˈaːcɪn/ - nack /nˈak/
+		nýr /nˈiːr̥/ - neu /nˈɔʏ̯/
+		nál /nˈɑːu̯l/ - Nodel /nˈoːdəl/
+		nótt /nˈɔu̯ʰt/ - Naach /nˈaːx/
+		nef /nˈɛːv/ - Nas /nˈaːs/
+		hné /n̥jˈɛː/ - Knee /knˈeː/
+		réttur /rjˈɛʰtʏr̥/ - rääch /ʀˈɛːɕ/
+		rauður /rˈœːy̯ðʏr̥/ - rut /ʀˈuːt/
+		regn /rˈɛɡ̊n̥/ - Rään /ʀˈɛːn/
+		skip /scˈɪːp/ - Scheff /ʃˈef/
+		sjór /sjˈoːu̯r̥/ - Meer /mˈeːɐ/
+		sjór /sjˈoːu̯r̥/ - Sie /zˈiː/
+		sjá /sjˈɑːu̯/ - sehn /zˈeːn/
+		skarpur /skˈar̥pʏr̥/ - schärp /ʃˈɛːɐp/
+		slanga /slˈɑu̯ŋɡ̊a/ - Schlang /ʃlˈaŋ/
+		stjarna /stjˈartna/ - Stään /ʃtˈɛːn/
+		slá /stl̥ˈaːu̯/ - schloon /ʃlˈoːn/
+		snjór /stnjˈoːu̯r̥/ - Schnie /ʃnˈiː/
+		stóll /stˈɔu̯tl̥/ - Stohl /ʃtˈoːl/
+		steinn /stˈɛi̯tn̥/ - Steen /ʃtˈeːn/
+		svartur /svˈar̥tʏr̥/ - schwatz /ʃʋˈaʦ/
+		salt /sˈal̥t/ - Salz /zˈalʦ/
+		sandur /sˈand̥ʏr̥/ - Sank /zˈaŋk/
+		sætur /sˈaːi̯tʏr̥/ - söß /zˈøːs/
+		syngja /sˈiɲɟ̊a/ - singe /zˈɪŋə/
+		sýr /sˈiːr̥/ - Sau /zˈaʊ̯/
+		síða /sˈiːða/ - Sigg /zˈɪk/
+		sofa /sˈɔːva/ - schlofe /ʃlˈoːfə/
+		sex /sˈɛks/ - sechs /zˈɛks/
+		segja /sˈɛːi̯ja/ - sage /zˈaːɣə/
+		sitja /sˈɪːtja/ - setze /zˈeʦə/
+		tré /tʰrjˈɛː/ - Boom /bˈoːm/
+		tvö /tʰvˈœː/ - zwee /ʦʋˈeː/
+		tíð /tʰˈiːð/ - Zeck /ʦˈɛk/
+		tólf /tʰˈou̯l̥f/ - zwällef /ʦʋˈɛləf/
+		tunga /tʰˈuŋɡ̊a/ - Zong /ʦˈoŋ/
+		tönn /tʰˈœnː/ - Zank /ʦˈaŋk/
+		vér /vjˈɛːr̥/ - mir /mˈiːɐ/
+		varmur /vˈarmʏr̥/ - wärm /ʋˈɛɐm/
+		vatn /vˈaʰtn̥/ - Waßer /ʋˈaːsɐ/
+		veður /vˈɛːðʏr̥/ - Wedder /ʋˈɛdɐ/
+		vegur /vˈɛːɣʏr̥/ - Wääch /ʋˈɛːɕ/
+		vindur /vˈɪnd̥ʏr̥/ - Wank /ʋˈaŋk/
+		vita /vˈɪːta/ - wesse /ʋˈesə/
+		hjarta /çˈar̥ta/ - Hätz /hˈɛʦ/
+		héri /çˈɛːrɪ/ - Has /hˈaːs/
+		hér /çˈɛːr̥/ - hee /hˈeː/
+		grænn /ɡ̊rˈai̯tn̥/ - jrön /jʀˈøːn/
+		gras /ɡ̊rˈaːs/ - Jras /jʀˈaːs/
+		guð /ɡ̊vˈʏːð/ - Jott /jˈɔt/
+		góður /ɡ̊ˈoːu̯ðʏr̥/ - jot /jˈoːt/
+		gull /ɡ̊ˈʏtl̥/ - Jold /jˈolt/
+		gulur /ɡ̊ˈʏːlʏr̥/ - jäl /jˈɛːl/
+		æskja /ˈai̯sca/ - wünsche /ʋˈʏnʃə/
+		aska /ˈaska/ - Äsch /ˈɛʃ/
+		allur /ˈatl̥ʏr̥/ - all /ˈal/
+		yfir /ˈivɪr̥/ - üvver /ˈʏvɐ/
+		ís /ˈiːs/ - Ies /ˈiːs/
+		úlfur /ˈulvʏr̥/ - Wolf /ʋˈɔlf/
+		auga /ˈœːy̯ɣa/ - Ooch /ˈoːx/
+		átta /ˈɑu̯ʰta/ - aach /ˈaːx/
+		ár /ˈɑːu̯r̥/ - Johr /jˈoːɐ/
+		áll /ˈɑːu̯tl̥/ - Ööl /ˈøːl/
+		ofn /ˈɔpn̥/ - Ovve /ˈɔvə/
+		ormur /ˈɔrmʏr̥/ - Wurm /ʋˈʊɐm/
+		einn /ˈɛi̯tn̥/ - een /ˈeːn/
+		ellefu /ˈɛtl̥ɛvʏ/ - ellef /ˈeləf/
+		egg /ˈɛɡ̊ɡ̊/ - Ei /ˈeɪ̯/
+		epli /ˈɛʰplɪ/ - Appel /ˈapəl/
+		eik /ˈɛːi̯k/ - Eech /ˈeːɕ/
+		eyra /ˈɛːi̯ra/ - Uhr /ˈuːɐ/
+		ull /ˈʏtl̥/ - Woll /ʋˈɔl/
+		ugla /ˈʏɡ̊la/ - Üül /ˈyːl/
+		þjófur /θjˈoːu̯vʏr̥/ - Deev /dˈeːf/
+		þrír /θrˈiːr̥/ - drei /dʀˈeɪ̯/
+		þakka /θˈaʰka/ - danke /dˈaŋkə/
+		þýskur /θˈiskʏr̥/ - dütsch /dˈʏtʃ/
+		þing /θˈiŋɡ̊/ - Dinge /dˈɪŋə/
+		þú /θˈuː/ - do /dˈoː/
+		þúsund /θˈuːsʏnd̥/ - dausend /dˈaʊ̯zənt/
+		þyrnir /θˈɪrtnɪr̥/ - Doon /dˈoːn/
+		þykkur /θˈɪʰkʏr̥/ - deck /dˈek/
+		þurr /θˈʏrː̥/ - drüch /dʀˈyːɕ/
+
+Final disqualified:
+		björn /b̥jˈœrtn̥/ - Bär /bˈɛːɐ/
+		bý /b̥ˈiː/ - Imm /ˈɪm/
+		jörð /jˈœrð/ - Ääd /ˈɛːt/
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		mar /mˈaːr/ - Sie /zˈiː/
+		í /ˈiː/ - en /ˈen/
+		eldur /ˈɛld̥ʏr̥/ - Füür /fˈyːɐ/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 160
+	Disqualified: 164
+	Added: 0
+	Removed: 2
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		í /ˈiː/ - en /ˈen/
+
+Iteration 2
+	Qualified: 159
+	Disqualified: 165
+	Added: 0
+	Removed: 1
+		jörð /jˈœrð/ - Ääd /ˈɛːt/
+
+Iteration 3
+	Qualified: 160
+	Disqualified: 164
+	Added: 1
+		jörð /jˈœrð/ - Ääd /ˈɛːt/
+	Removed: 0
+
+Final qualifying:
+		bjóða /b̥jˈoːu̯ða/ - beede /bˈeːdə/
+		björn /b̥jˈœrtn̥/ - Bär /bˈɛːɐ/
+		blað /b̥lˈaːð/ - Blatt /blˈat/
+		blóm /b̥lˈoːu̯m/ - Bloom /blˈoːm/
+		blóð /b̥lˈoːu̯ð/ - Blot /blˈoːt/
+		brjóst /b̥rjˈoːu̯st/ - Bross /bʀˈos/
+		brauð /b̥rˈœːy̯ð/ - Brut /bʀˈuːt/
+		bryggja /b̥rˈɪɟ̊ɟ̊a/ - Bröck /bʀˈœk/
+		baðmur /b̥ˈaðmʏr̥/ - Boom /bˈoːm/
+		bátur /b̥ˈaːu̯tʏr̥/ - Boot /bˈoːt/
+		bað /b̥ˈaːð/ - Badd /bˈat/
+		bý /b̥ˈiː/ - Bien /bˈiːn/
+		bíta /b̥ˈiːta/ - bieße /bˈiːsə/
+		bók /b̥ˈoːu̯k/ - Booch /bˈoːx/
+		berg /b̥ˈɛrɡ̊/ - Berch /bˈɛːɐɕ/
+		betri /b̥ˈɛːtrɪ/ - besser /bˈɛsɐ/
+		biðja /b̥ˈɪðja/ - bedde /bˈɛdə/
+		kýr /cʰˈiːr̥/ - Koh /kˈoː/
+		kirkja /cʰˈɪr̥ca/ - Kirch /kˈiːɐɕ/
+		dreyma /d̥rˈeːi̯ma/ - drööme /dʀˈøːmə/
+		drífa /d̥rˈiːva/ - drieve /dʀˈiːvə/
+		draumur /d̥rˈœːy̯mʏr̥/ - Droom /dʀˈoːm/
+		dagur /d̥ˈaːɣʏr̥/ - Daach /dˈaːx/
+		dýr /d̥ˈiːr̥/ - Dier /dˈiːɐ/
+		dýr /d̥ˈiːr̥/ - düür /dˈyːɐ/
+		dauður /d̥ˈœːy̯ðʏr̥/ - Dud /dˈuːt/
+		dóttir /d̥ˈɔu̯ʰtɪr̥/ - Dochter /dˈɔxtɐ/
+		fjórir /fjˈoːu̯rɪr̥/ - vier /fˈiːɐ/
+		fljúga /fljˈuːa/ - fleeje /flˈeːjə/
+		fluga /flˈʏːɣa/ - Fleeg /flˈeːɕ/
+		frjósa /frjˈoːu̯sa/ - freere /fʀˈeːʀə/
+		frændi /frˈai̯nd̥ɪ/ - Frönk /fʀˈœŋk/
+		fætur /fˈaːi̯tʏr̥/ - Föß /fˈøːs/
+		faðir /fˈaːðɪr̥/ - Vader /fˈaːdɐ/
+		fingur /fˈiŋɡ̊ʏr̥/ - Finger /fˈɪŋɐ/
+		fólk /fˈou̯l̥k/ - Volk /fˈɔlk/
+		fylgja /fˈɪlɟ̊a/ - folge /fˈɔlɣə/
+		fimm /fˈɪm/ - fönnef /fˈœnəf/
+		fiskur /fˈɪskʏr̥/ - Fesch /fˈeʃ/
+		fullur /fˈʏtl̥ʏr̥/ - voll /fˈɔl/
+		fugl /fˈʏɡ̊l̥/ - Vuggel /fˈuɣəl/
+		funi /fˈʏːnɪ/ - Füür /fˈyːɐ/
+		hafa /hˈaːva/ - han /hˈan/
+		hús /hˈuːs/ - Huus /hˈuːs/
+		húð /hˈuːð/ - Huut /hˈuːt/
+		hönd /hˈœnd̥/ - Hank /hˈaŋk/
+		hár /hˈɑːu̯r̥/ - Hoor /hˈoːɐ/
+		hár /hˈɑːu̯r̥/ - huh /hˈuː/
+		horn /hˈɔrtn̥/ - Horn /hˈɔɐn/
+		heitur /hˈɛːi̯tʏr̥/ - heeß /hˈeːs/
+		hundur /hˈʏnd̥ʏr̥/ - Honk /hˈoŋk/
+		hunang /hˈʏːnɑu̯ŋɡ̊/ - Hunnig /hˈunəɕ/
+		jörð /jˈœrð/ - Ääd /ˈɛːt/
+		ég /jˈɛːx/ - ich /ˈɪɕ/
+		hvalur /kʰvˈaːlʏr̥/ - Wal /vˈaːl/
+		hvað /kʰvˈaːð/ - wat /ʋˈat/
+		hvítur /kʰvˈiːtʏr̥/ - wieß /ʋˈiːs/
+		kaldur /kʰˈald̥ʏr̥/ - kalt /kˈalt/
+		kóngur /kʰˈou̯ŋɡ̊ʏr̥/ - Künning /kˈʏnɪŋ/
+		korn /kʰˈɔrtn̥/ - Koon /kˈoːn/
+		kunna /kʰˈʏnːa/ - könne /kˈœnə/
+		ljós /ljˈoːu̯s/ - Leech /lˈeːɕ/
+		lamb /lˈamb̥/ - Lamm /lˈam/
+		lús /lˈuːs/ - Luus /lˈuːs/
+		langur /lˈɑu̯ŋɡ̊ʏr̥/ - lank /lˈaŋk/
+		lifur /lˈɪːvʏr̥/ - Levver /lˈɛvɐ/
+		hlaupa /l̥ˈœːy̯pa/ - laufe /lˈaʊ̯fə/
+		mjólk /mjˈɔu̯l̥k/ - Milch /mˈɪlɕ/
+		manneskja /mˈanːɛsca/ - Minsch /mˈɪnʃ/
+		mar /mˈaːr/ - Meer /mˈeːɐ/
+		maður /mˈaːðʏr̥/ - Mann /mˈan/
+		mús /mˈuːs/ - Muus /mˈuːs/
+		máttur /mˈɑu̯ʰtʏr̥/ - Maach /mˈaːx/
+		máni /mˈɑːu̯nɪ/ - Mond /mˈɔnt/
+		munnur /mˈʏnːʏr̥/ - Muul /mˈuːl/
+		munnur /mˈʏnːʏr̥/ - Mond /mˈɔnt/
+		nafn /nˈapn̥/ - Name /nˈaːmə/
+		nakinn /nˈaːcɪn/ - nack /nˈak/
+		níu /nˈiːjʏ/ - nüng /nˈʏŋ/
+		nýr /nˈiːr̥/ - neu /nˈɔʏ̯/
+		nál /nˈɑːu̯l/ - Nodel /nˈoːdəl/
+		nótt /nˈɔu̯ʰt/ - Naach /nˈaːx/
+		hné /n̥jˈɛː/ - Knee /knˈeː/
+		réttur /rjˈɛʰtʏr̥/ - rääch /ʀˈɛːɕ/
+		ríkur /rˈiːkʏr̥/ - riech /ʀˈiːɕ/
+		rauður /rˈœːy̯ðʏr̥/ - rut /ʀˈuːt/
+		regn /rˈɛɡ̊n̥/ - Rään /ʀˈɛːn/
+		skip /scˈɪːp/ - Scheff /ʃˈef/
+		sjór /sjˈoːu̯r̥/ - Meer /mˈeːɐ/
+		sjór /sjˈoːu̯r̥/ - Sie /zˈiː/
+		sjá /sjˈɑːu̯/ - sehn /zˈeːn/
+		skarpur /skˈar̥pʏr̥/ - schärp /ʃˈɛːɐp/
+		slanga /slˈɑu̯ŋɡ̊a/ - Schlang /ʃlˈaŋ/
+		slá /stl̥ˈaːu̯/ - schloon /ʃlˈoːn/
+		snjór /stnjˈoːu̯r̥/ - Schnie /ʃnˈiː/
+		stormur /stˈɔrmʏr̥/ - Storm /ʃtˈɔɐm/
+		stóll /stˈɔu̯tl̥/ - Stohl /ʃtˈoːl/
+		sverð /svˈɛrð/ - Schwäät /ʃʋˈɛːt/
+		salt /sˈal̥t/ - Salz /zˈalʦ/
+		sandur /sˈand̥ʏr̥/ - Sank /zˈaŋk/
+		sætur /sˈaːi̯tʏr̥/ - söß /zˈøːs/
+		syngja /sˈiɲɟ̊a/ - singe /zˈɪŋə/
+		síða /sˈiːða/ - Sigg /zˈɪk/
+		sál /sˈɑːu̯l/ - Siel /zˈiːl/
+		sofa /sˈɔːva/ - schlofe /ʃlˈoːfə/
+		sex /sˈɛks/ - sechs /zˈɛks/
+		segja /sˈɛːi̯ja/ - sage /zˈaːɣə/
+		systir /sˈɪstɪr̥/ - Söster /zˈœstɐ/
+		systir /sˈɪstɪr̥/ - Sester /zˈɛstɐ/
+		sitja /sˈɪːtja/ - setze /zˈeʦə/
+		tré /tʰrjˈɛː/ - Boom /bˈoːm/
+		tvö /tʰvˈœː/ - zwee /ʦʋˈeː/
+		tíð /tʰˈiːð/ - Zeck /ʦˈɛk/
+		tólf /tʰˈou̯l̥f/ - zwällef /ʦʋˈɛləf/
+		tuttugu /tʰˈuʰtuɣu/ - zwanzig /ʦʋˈanʦɪɕ/
+		tönn /tʰˈœnː/ - Zank /ʦˈaŋk/
+		vér /vjˈɛːr̥/ - mir /mˈiːɐ/
+		varmur /vˈarmʏr̥/ - wärm /ʋˈɛɐm/
+		vatn /vˈaʰtn̥/ - Waßer /ʋˈaːsɐ/
+		veður /vˈɛːðʏr̥/ - Wedder /ʋˈɛdɐ/
+		vegur /vˈɛːɣʏr̥/ - Wääch /ʋˈɛːɕ/
+		vindur /vˈɪnd̥ʏr̥/ - Wank /ʋˈaŋk/
+		vita /vˈɪːta/ - wesse /ʋˈesə/
+		hjarta /çˈar̥ta/ - Hätz /hˈɛʦ/
+		héri /çˈɛːrɪ/ - Has /hˈaːs/
+		gefa /ɟ̊ˈɛːva/ - jevve /jˈɛvə/
+		grænn /ɡ̊rˈai̯tn̥/ - jrön /jʀˈøːn/
+		gras /ɡ̊rˈaːs/ - Jras /jʀˈaːs/
+		guð /ɡ̊vˈʏːð/ - Jott /jˈɔt/
+		góður /ɡ̊ˈoːu̯ðʏr̥/ - jot /jˈoːt/
+		gull /ɡ̊ˈʏtl̥/ - Jold /jˈolt/
+		gulur /ɡ̊ˈʏːlʏr̥/ - jäl /jˈɛːl/
+		æskja /ˈai̯sca/ - wünsche /ʋˈʏnʃə/
+		armur /ˈarmʏr̥/ - Ärm /ˈɛːɐm/
+		yfir /ˈivɪr̥/ - üvver /ˈʏvɐ/
+		ís /ˈiːs/ - Ies /ˈiːs/
+		úlfur /ˈulvʏr̥/ - Wolf /ʋˈɔlf/
+		ungur /ˈuŋɡ̊ʏr̥/ - jonk /jˈoŋk/
+		auga /ˈœːy̯ɣa/ - Ooch /ˈoːx/
+		átta /ˈɑu̯ʰta/ - aach /ˈaːx/
+		ár /ˈɑːu̯r̥/ - Johr /jˈoːɐ/
+		áll /ˈɑːu̯tl̥/ - Ööl /ˈøːl/
+		ofn /ˈɔpn̥/ - Ovve /ˈɔvə/
+		ormur /ˈɔrmʏr̥/ - Wurm /ʋˈʊɐm/
+		orð /ˈɔrð/ - Wood /ʋˈoːt/
+		oss /ˈɔsː/ - uns /ˈʊns/
+		eldur /ˈɛld̥ʏr̥/ - Füür /fˈyːɐ/
+		ellefu /ˈɛtl̥ɛvʏ/ - ellef /ˈeləf/
+		egg /ˈɛɡ̊ɡ̊/ - Ei /ˈeɪ̯/
+		epli /ˈɛʰplɪ/ - Appel /ˈapəl/
+		eyra /ˈɛːi̯ra/ - Uhr /ˈuːɐ/
+		ull /ˈʏtl̥/ - Woll /ʋˈɔl/
+		ugla /ˈʏɡ̊la/ - Üül /ˈyːl/
+		þrír /θrˈiːr̥/ - drei /dʀˈeɪ̯/
+		þakka /θˈaʰka/ - danke /dˈaŋkə/
+		þing /θˈiŋɡ̊/ - Dinge /dˈɪŋə/
+		þú /θˈuː/ - do /dˈoː/
+		þyrnir /θˈɪrtnɪr̥/ - Doon /dˈoːn/
+		þunnur /θˈʏnːʏr̥/ - dönn /dˈœn/
+		þurr /θˈʏrː̥/ - drüch /dʀˈyːɕ/
+
+Final disqualified:
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		í /ˈiː/ - en /ˈen/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 159
+	Disqualified: 165
+	Added: 0
+	Removed: 3
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		mar /mˈaːr/ - Sie /zˈiː/
+		í /ˈiː/ - en /ˈen/
+
+Iteration 2
+	Qualified: 158
+	Disqualified: 166
+	Added: 0
+	Removed: 1
+		ull /ˈʏtl̥/ - Woll /ʋˈɔl/
+
+Iteration 3
+	Qualified: 158
+	Disqualified: 166
+	Added: 1
+		ull /ˈʏtl̥/ - Woll /ʋˈɔl/
+	Removed: 1
+		tré /tʰrjˈɛː/ - Boom /bˈoːm/
+
+Iteration 4
+	Qualified: 158
+	Disqualified: 166
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		björn /b̥jˈœrtn̥/ - Bär /bˈɛːɐ/
+		blað /b̥lˈaːð/ - Blatt /blˈat/
+		blóm /b̥lˈoːu̯m/ - Bloom /blˈoːm/
+		brjóst /b̥rjˈoːu̯st/ - Bross /bʀˈos/
+		bróðir /b̥rˈoːu̯ðɪr̥/ - Broder /bʀˈoːdɐ/
+		brauð /b̥rˈœːy̯ð/ - Brut /bʀˈuːt/
+		baðmur /b̥ˈaðmʏr̥/ - Boom /bˈoːm/
+		bátur /b̥ˈaːu̯tʏr̥/ - Boot /bˈoːt/
+		bað /b̥ˈaːð/ - Badd /bˈat/
+		bý /b̥ˈiː/ - Bei /bˈeɪ̯/
+		bý /b̥ˈiː/ - Bien /bˈiːn/
+		bíta /b̥ˈiːta/ - bieße /bˈiːsə/
+		berg /b̥ˈɛrɡ̊/ - Berch /bˈɛːɐɕ/
+		betri /b̥ˈɛːtrɪ/ - besser /bˈɛsɐ/
+		biðja /b̥ˈɪðja/ - bedde /bˈɛdə/
+		kýr /cʰˈiːr̥/ - Koh /kˈoː/
+		kirkja /cʰˈɪr̥ca/ - Kirch /kˈiːɐɕ/
+		djúpur /d̥jˈuːpʏr̥/ - deef /dˈeːf/
+		dreyma /d̥rˈeːi̯ma/ - drööme /dʀˈøːmə/
+		drífa /d̥rˈiːva/ - drieve /dʀˈiːvə/
+		draumur /d̥rˈœːy̯mʏr̥/ - Droom /dʀˈoːm/
+		drekka /d̥rˈɛʰka/ - drenke /dʀˈeŋkə/
+		dagur /d̥ˈaːɣʏr̥/ - Daach /dˈaːx/
+		dýr /d̥ˈiːr̥/ - Dier /dˈiːɐ/
+		dýr /d̥ˈiːr̥/ - düür /dˈyːɐ/
+		dýr /d̥ˈiːr̥/ - döör /dˈøːɐ/
+		dóttir /d̥ˈɔu̯ʰtɪr̥/ - Dochter /dˈɔxtɐ/
+		fjórir /fjˈoːu̯rɪr̥/ - vier /fˈiːɐ/
+		fjöður /fjˈœːðʏr̥/ - Fedder /fˈɛdɐ/
+		fljúga /fljˈuːa/ - fleeje /flˈeːjə/
+		fluga /flˈʏːɣa/ - Fleeg /flˈeːɕ/
+		frjósa /frjˈoːu̯sa/ - freere /fʀˈeːʀə/
+		fætur /fˈaːi̯tʏr̥/ - Föß /fˈøːs/
+		faðir /fˈaːðɪr̥/ - Vader /fˈaːdɐ/
+		fingur /fˈiŋɡ̊ʏr̥/ - Finger /fˈɪŋɐ/
+		fólk /fˈou̯l̥k/ - Volk /fˈɔlk/
+		fótur /fˈoːu̯tʏr̥/ - Foß /fˈoːs/
+		fylgja /fˈɪlɟ̊a/ - folge /fˈɔlɣə/
+		fimm /fˈɪm/ - fönnef /fˈœnəf/
+		fiskur /fˈɪskʏr̥/ - Fesch /fˈeʃ/
+		fullur /fˈʏtl̥ʏr̥/ - voll /fˈɔl/
+		fugl /fˈʏɡ̊l̥/ - Vuggel /fˈuɣəl/
+		funi /fˈʏːnɪ/ - Füür /fˈyːɐ/
+		hafa /hˈaːva/ - han /hˈan/
+		hús /hˈuːs/ - Huus /hˈuːs/
+		húð /hˈuːð/ - Huut /hˈuːt/
+		hönd /hˈœnd̥/ - Hank /hˈaŋk/
+		höfuð /hˈœːvʏð/ - Haup /hˈaʊ̯p/
+		hár /hˈɑːu̯r̥/ - Hoor /hˈoːɐ/
+		hár /hˈɑːu̯r̥/ - huh /hˈuː/
+		horn /hˈɔrtn̥/ - Horn /hˈɔɐn/
+		helgur /hˈɛlɡ̊ʏr̥/ - hellig /hˈɛləɕ/
+		heyra /hˈɛːi̯ra/ - hüre /hˈyːʀə/
+		heitur /hˈɛːi̯tʏr̥/ - heeß /hˈeːs/
+		hunang /hˈʏːnɑu̯ŋɡ̊/ - Hunnig /hˈunəɕ/
+		jörð /jˈœrð/ - Ääd /ˈɛːt/
+		éta /jˈɛta/ - äße /ˈɛːsə/
+		hvalur /kʰvˈaːlʏr̥/ - Wal /vˈaːl/
+		hvað /kʰvˈaːð/ - wat /ʋˈat/
+		hvítur /kʰvˈiːtʏr̥/ - wieß /ʋˈiːs/
+		kóngur /kʰˈou̯ŋɡ̊ʏr̥/ - Künning /kˈʏnɪŋ/
+		kálfur /kʰˈɑu̯lvʏr̥/ - Kalv /kˈalf/
+		korn /kʰˈɔrtn̥/ - Koon /kˈoːn/
+		kunna /kʰˈʏnːa/ - könne /kˈœnə/
+		ljós /ljˈoːu̯s/ - Leech /lˈeːɕ/
+		léttur /ljˈɛʰtʏr̥/ - leech /lˈeːɕ/
+		lús /lˈuːs/ - Luus /lˈuːs/
+		lauf /lˈœːy̯f/ - Lauv /lˈaʊ̯f/
+		langur /lˈɑu̯ŋɡ̊ʏr̥/ - lank /lˈaŋk/
+		lifur /lˈɪːvʏr̥/ - Levver /lˈɛvɐ/
+		hlaupa /l̥ˈœːy̯pa/ - laufe /lˈaʊ̯fə/
+		mjólk /mjˈɔu̯l̥k/ - Milch /mˈɪlɕ/
+		mar /mˈaːr/ - Meer /mˈeːɐ/
+		maður /mˈaːðʏr̥/ - Mann /mˈan/
+		móðir /mˈoːu̯ðɪr̥/ - Mooder /mˈoːdɐ/
+		mús /mˈuːs/ - Muus /mˈuːs/
+		máttur /mˈɑu̯ʰtʏr̥/ - Maach /mˈaːx/
+		máni /mˈɑːu̯nɪ/ - Mond /mˈɔnt/
+		mig /mˈɪːx/ - mich /mˈɪɕ/
+		munnur /mˈʏnːʏr̥/ - Muul /mˈuːl/
+		nafn /nˈapn̥/ - Name /nˈaːmə/
+		nakinn /nˈaːcɪn/ - nack /nˈak/
+		níu /nˈiːjʏ/ - nüng /nˈʏŋ/
+		nýr /nˈiːr̥/ - neu /nˈɔʏ̯/
+		nál /nˈɑːu̯l/ - Nodel /nˈoːdəl/
+		nótt /nˈɔu̯ʰt/ - Naach /nˈaːx/
+		hné /n̥jˈɛː/ - Knee /knˈeː/
+		réttur /rjˈɛʰtʏr̥/ - rääch /ʀˈɛːɕ/
+		rauður /rˈœːy̯ðʏr̥/ - rut /ʀˈuːt/
+		skip /scˈɪːp/ - Scheff /ʃˈef/
+		sjór /sjˈoːu̯r̥/ - Meer /mˈeːɐ/
+		sjór /sjˈoːu̯r̥/ - Sie /zˈiː/
+		sjö /sjˈœː/ - sivve /zˈɪvə/
+		sjá /sjˈɑːu̯/ - sehn /zˈeːn/
+		skarpur /skˈar̥pʏr̥/ - schärp /ʃˈɛːɐp/
+		slanga /slˈɑu̯ŋɡ̊a/ - Schlang /ʃlˈaŋ/
+		stjarna /stjˈartna/ - Stään /ʃtˈɛːn/
+		slá /stl̥ˈaːu̯/ - schloon /ʃlˈoːn/
+		snjór /stnjˈoːu̯r̥/ - Schnie /ʃnˈiː/
+		stormur /stˈɔrmʏr̥/ - Storm /ʃtˈɔɐm/
+		stóll /stˈɔu̯tl̥/ - Stohl /ʃtˈoːl/
+		steinn /stˈɛi̯tn̥/ - Steen /ʃtˈeːn/
+		svartur /svˈar̥tʏr̥/ - schwatz /ʃʋˈaʦ/
+		sandur /sˈand̥ʏr̥/ - Sank /zˈaŋk/
+		sætur /sˈaːi̯tʏr̥/ - söß /zˈøːs/
+		syngja /sˈiɲɟ̊a/ - singe /zˈɪŋə/
+		sýr /sˈiːr̥/ - Sau /zˈaʊ̯/
+		síða /sˈiːða/ - Sigg /zˈɪk/
+		sál /sˈɑːu̯l/ - Siel /zˈiːl/
+		sex /sˈɛks/ - sechs /zˈɛks/
+		systir /sˈɪstɪr̥/ - Söster /zˈœstɐ/
+		tvö /tʰvˈœː/ - zwee /ʦʋˈeː/
+		tíð /tʰˈiːð/ - Zeck /ʦˈɛk/
+		tunga /tʰˈuŋɡ̊a/ - Zong /ʦˈoŋ/
+		tuttugu /tʰˈuʰtuɣu/ - zwanzig /ʦʋˈanʦɪɕ/
+		varmur /vˈarmʏr̥/ - wärm /ʋˈɛɐm/
+		vatn /vˈaʰtn̥/ - Waßer /ʋˈaːsɐ/
+		vegur /vˈɛːɣʏr̥/ - Wääch /ʋˈɛːɕ/
+		vindur /vˈɪnd̥ʏr̥/ - Wank /ʋˈaŋk/
+		vita /vˈɪːta/ - wesse /ʋˈesə/
+		hjarta /çˈar̥ta/ - Hätz /hˈɛʦ/
+		héri /çˈɛːrɪ/ - Has /hˈaːs/
+		gefa /ɟ̊ˈɛːva/ - jevve /jˈɛvə/
+		grænn /ɡ̊rˈai̯tn̥/ - jrön /jʀˈøːn/
+		gras /ɡ̊rˈaːs/ - Jras /jʀˈaːs/
+		guð /ɡ̊vˈʏːð/ - Jott /jˈɔt/
+		góður /ɡ̊ˈoːu̯ðʏr̥/ - jot /jˈoːt/
+		gull /ɡ̊ˈʏtl̥/ - Jold /jˈolt/
+		gulur /ɡ̊ˈʏːlʏr̥/ - jäl /jˈɛːl/
+		æskja /ˈai̯sca/ - wünsche /ʋˈʏnʃə/
+		armur /ˈarmʏr̥/ - Ärm /ˈɛːɐm/
+		aska /ˈaska/ - Äsch /ˈɛʃ/
+		allur /ˈatl̥ʏr̥/ - all /ˈal/
+		yfir /ˈivɪr̥/ - üvver /ˈʏvɐ/
+		ís /ˈiːs/ - Ies /ˈiːs/
+		úlfur /ˈulvʏr̥/ - Wolf /ʋˈɔlf/
+		ungur /ˈuŋɡ̊ʏr̥/ - jonk /jˈoŋk/
+		auga /ˈœːy̯ɣa/ - Ooch /ˈoːx/
+		átta /ˈɑu̯ʰta/ - aach /ˈaːx/
+		ár /ˈɑːu̯r̥/ - Johr /jˈoːɐ/
+		áll /ˈɑːu̯tl̥/ - Ööl /ˈøːl/
+		ofn /ˈɔpn̥/ - Ovve /ˈɔvə/
+		oss /ˈɔsː/ - uns /ˈʊns/
+		einn /ˈɛi̯tn̥/ - een /ˈeːn/
+		ellefu /ˈɛtl̥ɛvʏ/ - ellef /ˈeləf/
+		egg /ˈɛɡ̊ɡ̊/ - Ei /ˈeɪ̯/
+		egg /ˈɛɡ̊ɡ̊/ - Eck /ˈɛk/
+		epli /ˈɛʰplɪ/ - Appel /ˈapəl/
+		eik /ˈɛːi̯k/ - Eech /ˈeːɕ/
+		eyra /ˈɛːi̯ra/ - Uhr /ˈuːɐ/
+		ull /ˈʏtl̥/ - Woll /ʋˈɔl/
+		ugla /ˈʏɡ̊la/ - Üül /ˈyːl/
+		þjófur /θjˈoːu̯vʏr̥/ - Deev /dˈeːf/
+		þrír /θrˈiːr̥/ - drei /dʀˈeɪ̯/
+		þakka /θˈaʰka/ - danke /dˈaŋkə/
+		þýskur /θˈiskʏr̥/ - dütsch /dˈʏtʃ/
+		þúsund /θˈuːsʏnd̥/ - dausend /dˈaʊ̯zənt/
+		þyrnir /θˈɪrtnɪr̥/ - Doon /dˈoːn/
+
+Final disqualified:
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		mar /mˈaːr/ - Sie /zˈiː/
+		tré /tʰrjˈɛː/ - Boom /bˈoːm/
+		í /ˈiː/ - en /ˈen/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 157
+	Disqualified: 167
+	Added: 0
+	Removed: 5
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		mar /mˈaːr/ - Sie /zˈiː/
+		snjór /stnjˈoːu̯r̥/ - Schnie /ʃnˈiː/
+		í /ˈiː/ - en /ˈen/
+		bý /b̥ˈiː/ - Imm /ˈɪm/
+
+Iteration 2
+	Qualified: 157
+	Disqualified: 167
+	Added: 1
+		snjór /stnjˈoːu̯r̥/ - Schnie /ʃnˈiː/
+	Removed: 1
+		tré /tʰrjˈɛː/ - Boom /bˈoːm/
+
+Iteration 3
+	Qualified: 157
+	Disqualified: 167
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bjóða /b̥jˈoːu̯ða/ - beede /bˈeːdə/
+		björn /b̥jˈœrtn̥/ - Bär /bˈɛːɐ/
+		blað /b̥lˈaːð/ - Blatt /blˈat/
+		blóm /b̥lˈoːu̯m/ - Bloom /blˈoːm/
+		blóð /b̥lˈoːu̯ð/ - Blot /blˈoːt/
+		brjóst /b̥rjˈoːu̯st/ - Bross /bʀˈos/
+		bróðir /b̥rˈoːu̯ðɪr̥/ - Broder /bʀˈoːdɐ/
+		brauð /b̥rˈœːy̯ð/ - Brut /bʀˈuːt/
+		bryggja /b̥rˈɪɟ̊ɟ̊a/ - Bröck /bʀˈœk/
+		baðmur /b̥ˈaðmʏr̥/ - Boom /bˈoːm/
+		bátur /b̥ˈaːu̯tʏr̥/ - Boot /bˈoːt/
+		bað /b̥ˈaːð/ - Badd /bˈat/
+		bý /b̥ˈiː/ - Bien /bˈiːn/
+		bíta /b̥ˈiːta/ - bieße /bˈiːsə/
+		bók /b̥ˈoːu̯k/ - Booch /bˈoːx/
+		bein /b̥ˈɛːi̯n/ - Been /bˈeːn/
+		betri /b̥ˈɛːtrɪ/ - besser /bˈɛsɐ/
+		biðja /b̥ˈɪðja/ - bedde /bˈɛdə/
+		kýr /cʰˈiːr̥/ - Koh /kˈoː/
+		kirkja /cʰˈɪr̥ca/ - Kirch /kˈiːɐɕ/
+		djúpur /d̥jˈuːpʏr̥/ - deef /dˈeːf/
+		drífa /d̥rˈiːva/ - drieve /dʀˈiːvə/
+		draumur /d̥rˈœːy̯mʏr̥/ - Droom /dʀˈoːm/
+		drekka /d̥rˈɛʰka/ - drenke /dʀˈeŋkə/
+		dvergur /d̥vˈɛrɡ̊ʏr̥/ - Zwerg /ʦvˈɛɐk/
+		dagur /d̥ˈaːɣʏr̥/ - Daach /dˈaːx/
+		dýr /d̥ˈiːr̥/ - Dier /dˈiːɐ/
+		dýr /d̥ˈiːr̥/ - düür /dˈyːɐ/
+		dýr /d̥ˈiːr̥/ - döör /dˈøːɐ/
+		dauður /d̥ˈœːy̯ðʏr̥/ - Dud /dˈuːt/
+		fjórir /fjˈoːu̯rɪr̥/ - vier /fˈiːɐ/
+		fjöður /fjˈœːðʏr̥/ - Fedder /fˈɛdɐ/
+		fljúga /fljˈuːa/ - fleeje /flˈeːjə/
+		frjósa /frjˈoːu̯sa/ - freere /fʀˈeːʀə/
+		frændi /frˈai̯nd̥ɪ/ - Frönk /fʀˈœŋk/
+		fætur /fˈaːi̯tʏr̥/ - Föß /fˈøːs/
+		faðir /fˈaːðɪr̥/ - Vader /fˈaːdɐ/
+		fingur /fˈiŋɡ̊ʏr̥/ - Finger /fˈɪŋɐ/
+		fólk /fˈou̯l̥k/ - Volk /fˈɔlk/
+		fótur /fˈoːu̯tʏr̥/ - Foß /fˈoːs/
+		fylgja /fˈɪlɟ̊a/ - folge /fˈɔlɣə/
+		fimm /fˈɪm/ - fönnef /fˈœnəf/
+		fiskur /fˈɪskʏr̥/ - Fesch /fˈeʃ/
+		fugl /fˈʏɡ̊l̥/ - Vuggel /fˈuɣəl/
+		funi /fˈʏːnɪ/ - Füür /fˈyːɐ/
+		hafa /hˈaːva/ - han /hˈan/
+		hús /hˈuːs/ - Huus /hˈuːs/
+		hönd /hˈœnd̥/ - Hank /hˈaŋk/
+		höfuð /hˈœːvʏð/ - Kopp /kˈɔp/
+		hár /hˈɑːu̯r̥/ - huh /hˈuː/
+		horn /hˈɔrtn̥/ - Horn /hˈɔɐn/
+		helgur /hˈɛlɡ̊ʏr̥/ - hellig /hˈɛləɕ/
+		heitur /hˈɛːi̯tʏr̥/ - heeß /hˈeːs/
+		hunang /hˈʏːnɑu̯ŋɡ̊/ - Hunnig /hˈunəɕ/
+		éta /jˈɛta/ - äße /ˈɛːsə/
+		ég /jˈɛːx/ - ich /ˈɪɕ/
+		hvalur /kʰvˈaːlʏr̥/ - Wal /vˈaːl/
+		hvað /kʰvˈaːð/ - wat /ʋˈat/
+		hvítur /kʰvˈiːtʏr̥/ - wieß /ʋˈiːs/
+		kálfur /kʰˈɑu̯lvʏr̥/ - Kalv /kˈalf/
+		korn /kʰˈɔrtn̥/ - Koon /kˈoːn/
+		kunna /kʰˈʏnːa/ - könne /kˈœnə/
+		ljós /ljˈoːu̯s/ - Leech /lˈeːɕ/
+		léttur /ljˈɛʰtʏr̥/ - leech /lˈeːɕ/
+		lamb /lˈamb̥/ - Lamm /lˈam/
+		lús /lˈuːs/ - Luus /lˈuːs/
+		lifur /lˈɪːvʏr̥/ - Levver /lˈɛvɐ/
+		hlæja /l̥ˈaːi̯ja/ - laache /lˈaːxə/
+		hlaupa /l̥ˈœːy̯pa/ - laufe /lˈaʊ̯fə/
+		manneskja /mˈanːɛsca/ - Minsch /mˈɪnʃ/
+		mar /mˈaːr/ - Meer /mˈeːɐ/
+		maður /mˈaːðʏr̥/ - Mann /mˈan/
+		móðir /mˈoːu̯ðɪr̥/ - Mooder /mˈoːdɐ/
+		máni /mˈɑːu̯nɪ/ - Mond /mˈɔnt/
+		mig /mˈɪːx/ - mich /mˈɪɕ/
+		munnur /mˈʏnːʏr̥/ - Muul /mˈuːl/
+		munnur /mˈʏnːʏr̥/ - Mond /mˈɔnt/
+		nafn /nˈapn̥/ - Name /nˈaːmə/
+		nakinn /nˈaːcɪn/ - nack /nˈak/
+		níu /nˈiːjʏ/ - nüng /nˈʏŋ/
+		nýr /nˈiːr̥/ - neu /nˈɔʏ̯/
+		nögl /nˈœɡ̊l/ - Nääl /nˈɛːl/
+		nál /nˈɑːu̯l/ - Nodel /nˈoːdəl/
+		nótt /nˈɔu̯ʰt/ - Naach /nˈaːx/
+		nef /nˈɛːv/ - Nas /nˈaːs/
+		hné /n̥jˈɛː/ - Knee /knˈeː/
+		réttur /rjˈɛʰtʏr̥/ - rääch /ʀˈɛːɕ/
+		ríkur /rˈiːkʏr̥/ - riech /ʀˈiːɕ/
+		rauður /rˈœːy̯ðʏr̥/ - rut /ʀˈuːt/
+		skip /scˈɪːp/ - Scheff /ʃˈef/
+		sjór /sjˈoːu̯r̥/ - Meer /mˈeːɐ/
+		skarpur /skˈar̥pʏr̥/ - schärp /ʃˈɛːɐp/
+		stjarna /stjˈartna/ - Stään /ʃtˈɛːn/
+		slá /stl̥ˈaːu̯/ - schloon /ʃlˈoːn/
+		snjór /stnjˈoːu̯r̥/ - Schnie /ʃnˈiː/
+		stormur /stˈɔrmʏr̥/ - Storm /ʃtˈɔɐm/
+		stóll /stˈɔu̯tl̥/ - Stohl /ʃtˈoːl/
+		steinn /stˈɛi̯tn̥/ - Steen /ʃtˈeːn/
+		svartur /svˈar̥tʏr̥/ - schwatz /ʃʋˈaʦ/
+		sverð /svˈɛrð/ - Schwäät /ʃʋˈɛːt/
+		salt /sˈal̥t/ - Salz /zˈalʦ/
+		sandur /sˈand̥ʏr̥/ - Sank /zˈaŋk/
+		syngja /sˈiɲɟ̊a/ - singe /zˈɪŋə/
+		sýr /sˈiːr̥/ - Sau /zˈaʊ̯/
+		síða /sˈiːða/ - Sigg /zˈɪk/
+		sál /sˈɑːu̯l/ - Siel /zˈiːl/
+		sex /sˈɛks/ - sechs /zˈɛks/
+		segja /sˈɛːi̯ja/ - sage /zˈaːɣə/
+		systir /sˈɪstɪr̥/ - Söster /zˈœstɐ/
+		systir /sˈɪstɪr̥/ - Sester /zˈɛstɐ/
+		sitja /sˈɪːtja/ - setze /zˈeʦə/
+		tíu /tʰˈiːjʏ/ - zehn /ʦˈeːn/
+		tólf /tʰˈou̯l̥f/ - zwällef /ʦʋˈɛləf/
+		tunga /tʰˈuŋɡ̊a/ - Zong /ʦˈoŋ/
+		tuttugu /tʰˈuʰtuɣu/ - zwanzig /ʦʋˈanʦɪɕ/
+		varmur /vˈarmʏr̥/ - wärm /ʋˈɛɐm/
+		vatn /vˈaʰtn̥/ - Waßer /ʋˈaːsɐ/
+		vegur /vˈɛːɣʏr̥/ - Wääch /ʋˈɛːɕ/
+		vita /vˈɪːta/ - wesse /ʋˈesə/
+		héri /çˈɛːrɪ/ - Has /hˈaːs/
+		hér /çˈɛːr̥/ - hee /hˈeː/
+		gefa /ɟ̊ˈɛːva/ - jevve /jˈɛvə/
+		grænn /ɡ̊rˈai̯tn̥/ - jrön /jʀˈøːn/
+		gras /ɡ̊rˈaːs/ - Jras /jʀˈaːs/
+		guð /ɡ̊vˈʏːð/ - Jott /jˈɔt/
+		góður /ɡ̊ˈoːu̯ðʏr̥/ - jot /jˈoːt/
+		gull /ɡ̊ˈʏtl̥/ - Jold /jˈolt/
+		gulur /ɡ̊ˈʏːlʏr̥/ - jäl /jˈɛːl/
+		æskja /ˈai̯sca/ - wünsche /ʋˈʏnʃə/
+		armur /ˈarmʏr̥/ - Ärm /ˈɛːɐm/
+		aska /ˈaska/ - Äsch /ˈɛʃ/
+		yfir /ˈivɪr̥/ - üvver /ˈʏvɐ/
+		ís /ˈiːs/ - Ies /ˈiːs/
+		úlfur /ˈulvʏr̥/ - Wolf /ʋˈɔlf/
+		ungur /ˈuŋɡ̊ʏr̥/ - jonk /jˈoŋk/
+		auga /ˈœːy̯ɣa/ - Ooch /ˈoːx/
+		átta /ˈɑu̯ʰta/ - aach /ˈaːx/
+		ár /ˈɑːu̯r̥/ - Johr /jˈoːɐ/
+		áll /ˈɑːu̯tl̥/ - Ööl /ˈøːl/
+		ofn /ˈɔpn̥/ - Ovve /ˈɔvə/
+		ormur /ˈɔrmʏr̥/ - Wurm /ʋˈʊɐm/
+		oss /ˈɔsː/ - uns /ˈʊns/
+		einn /ˈɛi̯tn̥/ - een /ˈeːn/
+		ellefu /ˈɛtl̥ɛvʏ/ - ellef /ˈeləf/
+		egg /ˈɛɡ̊ɡ̊/ - Ei /ˈeɪ̯/
+		egg /ˈɛɡ̊ɡ̊/ - Eck /ˈɛk/
+		epli /ˈɛʰplɪ/ - Appel /ˈapəl/
+		eyra /ˈɛːi̯ra/ - Uhr /ˈuːɐ/
+		ull /ˈʏtl̥/ - Woll /ʋˈɔl/
+		þjófur /θjˈoːu̯vʏr̥/ - Deev /dˈeːf/
+		þýskur /θˈiskʏr̥/ - dütsch /dˈʏtʃ/
+		þing /θˈiŋɡ̊/ - Dinge /dˈɪŋə/
+		þú /θˈuː/ - do /dˈoː/
+		þyrnir /θˈɪrtnɪr̥/ - Doon /dˈoːn/
+		þykkur /θˈɪʰkʏr̥/ - deck /dˈek/
+		þunnur /θˈʏnːʏr̥/ - dönn /dˈœn/
+		þurr /θˈʏrː̥/ - drüch /dʀˈyːɕ/
+
+Final disqualified:
+		bý /b̥ˈiː/ - Imm /ˈɪm/
+		kona /kʰˈɔna/ - Frau /fʀˈaʊ̯/
+		mar /mˈaːr/ - Sie /zˈiː/
+		tré /tʰrjˈɛː/ - Boom /bˈoːm/
+		í /ˈiː/ - en /ˈen/
+
+
+-------------------
+

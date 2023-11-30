@@ -1,0 +1,936 @@
+Same meaning pairs: 200
+****SAMPLE 1****
+Iteration 1
+	Qualified: 157
+	Disqualified: 163
+	Added: 0
+	Removed: 3
+		Eere /ˈeːrə/ - Ääd /ˈɛːt/
+		wi /vˈiː/ - mir /mˈiːɐ/
+		Imme /ˈɪmə/ - Bien /bˈiːn/
+
+Iteration 2
+	Qualified: 156
+	Disqualified: 164
+	Added: 0
+	Removed: 1
+		Muul /mˈuːl/ - Mond /mˈɔnt/
+
+Iteration 3
+	Qualified: 156
+	Disqualified: 164
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		Blaut /blˈaʊ̯d/ - Blot /blˈoːt/
+		Blaume /blˈaʊ̯mə/ - Bloom /blˈoːm/
+		Bläet /blˈɛə̯t/ - Blatt /blˈat/
+		Brauer /brˈaʊ̯ɐ/ - Broder /bʀˈoːdɐ/
+		Brot /brˈeo̯t/ - Brut /bʀˈuːt/
+		Brügge /brˈʏɣə/ - Bröck /bʀˈœk/
+		Barg /bˈaɐx/ - Berch /bˈɛːɐɕ/
+		Bauk /bˈaʊ̯k/ - Booch /bˈoːx/
+		Bad /bˈaːd/ - Badd /bˈat/
+		beter /bˈeːtɐ/ - besser /bˈɛsɐ/
+		Bost /bˈɔst/ - Bross /bʀˈos/
+		Bein /bˈɛɪ̯n/ - Been /bˈeːn/
+		Bär /bˈɛːɐ/ - Bär /bˈɛːɐ/
+		drömen /drˈøːmn̩/ - drööme /dʀˈøːmə/
+		dröge /drˈøːɣə/ - drüch /dʀˈyːɕ/
+		drei /drˈɛɪ̯/ - drei /dʀˈeɪ̯/
+		Dag /dˈax/ - Daach /dˈaːx/
+		danken /dˈaŋkn̩/ - danke /dˈaŋkə/
+		Dod /dˈeo̯d/ - Dud /dˈuːt/
+		dusend /dˈuːzn̩d/ - dausend /dˈaʊ̯zənt/
+		düer /dˈyːɐ/ - düür /dˈyːɐ/
+		deip /dˈɛɪ̯p/ - deef /dˈeːf/
+		Deirt /dˈɛɪ̯ɐt/ - Dier /dˈiːɐ/
+		Ding /dˈɪŋ/ - Dinge /dˈɪŋə/
+		Dunner /dˈʊnɐ/ - Donner /dˈonɐ/
+		dünne /dˈʏnə/ - dönn /dˈœn/
+		dütsch /dˈʏtʃ/ - dütsch /dˈʏtʃ/
+		frie /frˈiː/ - frei /fʀˈeɪ̯/
+		Fru /frˈuː/ - Frau /fʀˈaʊ̯/
+		freisen /frˈɛɪ̯zn̩/ - freere /fʀˈeːʀə/
+		Fründ /frˈʏnd/ - Frönk /fʀˈœŋk/
+		Faut /fˈaʊ̯t/ - Foß /fˈoːs/
+		Feer /fˈeːɐ/ - Fedder /fˈɛdɐ/
+		fief /fˈiːf/ - fönnef /fˈœnəf/
+		Vugel /fˈuːɣl̩/ - Vuggel /fˈuɣəl/
+		Füer /fˈyːɐ/ - Füür /fˈyːɐ/
+		Vader /fˈɒːdɐ/ - Vader /fˈaːdɐ/
+		folgen /fˈɔlɡn̩/ - folge /fˈɔlɣə/
+		Foss /fˈɔs/ - Fuss /fˈus/
+		feulen /fˈɔʏ̯ln̩/ - föhle /fˈøːlə/
+		veir /fˈɛɪ̯ɐ/ - vier /fˈiːɐ/
+		Finger /fˈɪŋɐ/ - Finger /fˈɪŋɐ/
+		Fisch /fˈɪʃ/ - Fesch /fˈeʃ/
+		vull /fˈʊl/ - voll /fˈɔl/
+		Hand /hˈand/ - Hank /hˈaŋk/
+		hoch /hˈeo̯x/ - huh /hˈuː/
+		hier /hˈiːɐ/ - hee /hˈeː/
+		Hus /hˈuːs/ - Huus /hˈuːs/
+		Hut /hˈuːt/ - Huut /hˈuːt/
+		Hase /hˈɒːzə/ - Has /hˈaːs/
+		Haar /hˈɒːɐ/ - Hoor /hˈoːɐ/
+		Honnig /hˈɔnɪç/ - Hunnig /hˈunəɕ/
+		heuren /hˈɔʏ̯ɐn/ - hüre /hˈyːʀə/
+		hebben /hˈɛbn̩/ - han /hˈan/
+		heit /hˈɛɪ̯t/ - heeß /hˈeːs/
+		hillig /hˈɪlɪç/ - hellig /hˈɛləɕ/
+		Hund /hˈʊnd/ - Honk /hˈoŋk/
+		greun /jrˈɔʏ̯n/ - jrön /jʀˈøːn/
+		Jahr /jˈaːɐ/ - Johr /jˈoːɐ/
+		geben /jˈeːm/ - jevve /jˈɛvə/
+		jung /jˈʊŋ/ - jonk /jˈoŋk/
+		Knei /knˈɛɪ̯/ - Knee /knˈeː/
+		Kalf /kˈalf/ - Kalv /kˈalf/
+		Kauh /kˈaʊ̯/ - Koh /kˈoː/
+		können /kˈœn̩/ - könne /kˈœnə/
+		kold /kˈɔld/ - kalt /kˈalt/
+		Kopp /kˈɔp/ - Kopp /kˈɔp/
+		Keese /kˈɛɪ̯zə/ - Kies /kˈiːs/
+		Kerke /kˈɛːɐkə/ - Kirch /kˈiːɐɕ/
+		Lamm /lˈam/ - Lamm /lˈam/
+		lachen /lˈaxn̩/ - laache /lˈaːxə/
+		lang /lˈaŋ/ - lank /lˈaŋk/
+		lopen /lˈoːbm̩/ - laufe /lˈaʊ̯fə/
+		Licht /lˈɪç/ - Leech /lˈeːɕ/
+		lichte /lˈɪçtə/ - leech /lˈeːɕ/
+		Macht /mˈaxt/ - Maach /mˈaːx/
+		mi /mˈiː/ - mich /mˈɪɕ/
+		Muul /mˈuːl/ - Muul /mˈuːl/
+		Mus /mˈuːs/ - Muus /mˈuːs/
+		Maan /mˈɒːn/ - Mond /mˈɔnt/
+		Melk /mˈɛlk/ - Milch /mˈɪlɕ/
+		Minsche /mˈɪnʃə/ - Minsch /mˈɪnʃ/
+		Mudder /mˈʊdɐ/ - Mooder /mˈoːdɐ/
+		Mund /mˈʊnd/ - Muul /mˈuːl/
+		Mund /mˈʊnd/ - Mond /mˈɔnt/
+		Nacht /nˈax/ - Naach /nˈaːx/
+		nie /nˈiː/ - neu /nˈɔʏ̯/
+		naket /nˈɒːkət/ - nack /nˈak/
+		Name /nˈɒːmə/ - Name /nˈaːmə/
+		Nägel /nˈɛːjl̩/ - Nääl /nˈɛːl/
+		Näse /nˈɛːzə/ - Nas /nˈaːs/
+		rot /rˈeo̯t/ - rut /ʀˈuːt/
+		riek /rˈiːk/ - riech /ʀˈiːɕ/
+		Recht /rˈɛçt/ - rääch /ʀˈɛːɕ/
+		Regen /rˈɛːn/ - Rään /ʀˈɛːn/
+		slapen /slˈɒːbm̩/ - schlofe /ʃlˈoːfə/
+		Sprake /sprˈɒːkə/ - Sprooch /ʃpʀˈoːx/
+		Steern /stˈeːɐn/ - Stään /ʃtˈɛːn/
+		Storm /stˈɔɐm/ - Storm /ʃtˈɔɐm/
+		Stein /stˈɛɪ̯n/ - Steen /ʃtˈeːn/
+		swart /swˈaɐt/ - schwatz /ʃʋˈaʦ/
+		Swester /swˈɛstɐ/ - Söster /zˈœstɐ/
+		Swester /swˈɛstɐ/ - Sester /zˈɛstɐ/
+		swimmen /swˈɪm/ - schwemme /ʃʋˈɛmə/
+		twölf /tvˈœlf/ - zwällef /ʦʋˈɛləf/
+		twei /tvˈɛɪ̯/ - zwee /ʦʋˈeː/
+		twintig /tvˈɪntɪç/ - zwanzig /ʦʋˈanʦɪɕ/
+		Tied /tˈiːd/ - Zeck /ʦˈɛk/
+		tein /tˈɛɪ̯n/ - zehn /ʦˈeːn/
+		Tähne /tˈɛːnə/ - Zank /ʦˈaŋk/
+		Tunge /tˈʊŋə/ - Zong /ʦˈoŋ/
+		wat /vˈat/ - wat /ʋˈat/
+		warm /vˈaːɐm/ - wärm /ʋˈɛɐm/
+		Wief /vˈiːf/ - Wiev /ʋˈiːf/
+		Worm /vˈoːɐm/ - Wurm /ʋˈʊɐm/
+		Wort /vˈoːɐt/ - Wood /ʋˈoːt/
+		Water /vˈɒːtɐ/ - Waßer /ʋˈaːsɐ/
+		Weg /vˈɛç/ - Wääch /ʋˈɛːɕ/
+		Wäer /vˈɛːɐ/ - Wedder /ʋˈɛdɐ/
+		Wind /vˈɪnd/ - Wank /ʋˈaŋk/
+		witt /vˈɪt/ - wieß /ʋˈiːs/
+		Wulf /vˈʊlf/ - Wolf /ʋˈɔlf/
+		Wulle /vˈʊlə/ - Woll /ʋˈɔl/
+		wünschen /vˈʏnʃn̩/ - wünsche /ʋˈʏnʃə/
+		Seele /zˈeːlə/ - Siel /zˈiːl/
+		seeben /zˈeːvn̩/ - sivve /zˈɪvə/
+		Solt /zˈɔlt/ - Salz /zˈalʦ/
+		seihn /zˈɛɪ̯n/ - sehn /zˈeːn/
+		sitten /zˈɪtn̩/ - setze /zˈeʦə/
+		Gras /ɣrˈaːs/ - Jras /jʀˈaːs/
+		grot /ɣrˈeo̯t/ - jruß /jʀˈuːs/
+		grote /ɣrˈeo̯tə/ - jruß /jʀˈuːs/
+		Gold /ɣˈɔld/ - Jold /jˈolt/
+		Gott /ɣˈɔt/ - Jott /jˈɔt/
+		Schap /ʃˈɒːp/ - Schof /ʃˈoːf/
+		Schipp /ʃˈɪp/ - Scheff /ʃˈef/
+		Appel /ˈapl̩/ - Appel /ˈapəl/
+		achte /ˈaxtə/ - aach /ˈaːx/
+		Arm /ˈaɐm/ - Ärm /ˈɛːɐm/
+		Asche /ˈaʃə/ - Äsch /ˈɛʃ/
+		Ies /ˈiːs/ - Ies /ˈiːs/
+		Oben /ˈoːm/ - Ovve /ˈɔvə/
+		ower /ˈoːvɐ/ - üvver /ˈʏvɐ/
+		Ule /ˈuːlə/ - Üül /ˈyːl/
+		ölwe /ˈœlvə/ - ellef /ˈeləf/
+		old /ˈɔld/ - alt /ˈalt/
+		eck /ˈɛk/ - ich /ˈɪɕ/
+		Ecke /ˈɛkə/ - Eck /ˈɛk/
+		Ei /ˈɛɪ̯/ - Ei /ˈeɪ̯/
+		Eike /ˈɛɪ̯kə/ - Eech /ˈeːɕ/
+		eine /ˈɛɪ̯nə/ - een /ˈeːn/
+		äten /ˈɛːtn̩/ - äße /ˈɛːsə/
+		Imme /ˈɪmə/ - Bei /bˈeɪ̯/
+		Imme /ˈɪmə/ - Imm /ˈɪm/
+		in /ˈɪn/ - en /ˈen/
+		üsch /ˈʏʃ/ - uns /ˈʊns/
+
+Final disqualified:
+		Muul /mˈuːl/ - Mond /mˈɔnt/
+		wi /vˈiː/ - mir /mˈiːɐ/
+		Eere /ˈeːrə/ - Ääd /ˈɛːt/
+		Imme /ˈɪmə/ - Bien /bˈiːn/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 157
+	Disqualified: 163
+	Added: 0
+	Removed: 3
+		Eere /ˈeːrə/ - Ääd /ˈɛːt/
+		wi /vˈiː/ - mir /mˈiːɐ/
+		Imme /ˈɪmə/ - Bien /bˈiːn/
+
+Iteration 2
+	Qualified: 155
+	Disqualified: 165
+	Added: 0
+	Removed: 2
+		Muul /mˈuːl/ - Mond /mˈɔnt/
+		Mund /mˈʊnd/ - Muul /mˈuːl/
+
+Iteration 3
+	Qualified: 155
+	Disqualified: 165
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		Blaut /blˈaʊ̯d/ - Blot /blˈoːt/
+		Blaume /blˈaʊ̯mə/ - Bloom /blˈoːm/
+		Bläet /blˈɛə̯t/ - Blatt /blˈat/
+		Brauer /brˈaʊ̯ɐ/ - Broder /bʀˈoːdɐ/
+		Brot /brˈeo̯t/ - Brut /bʀˈuːt/
+		Barg /bˈaɐx/ - Berch /bˈɛːɐɕ/
+		Bauk /bˈaʊ̯k/ - Booch /bˈoːx/
+		Bad /bˈaːd/ - Badd /bˈat/
+		Bohm /bˈeo̯m/ - Boom /bˈoːm/
+		Boot /bˈeo̯t/ - Boot /bˈoːt/
+		beter /bˈeːtɐ/ - besser /bˈɛsɐ/
+		Bost /bˈɔst/ - Bross /bʀˈos/
+		Bein /bˈɛɪ̯n/ - Been /bˈeːn/
+		beien /bˈɛɪ̯n̩/ - beede /bˈeːdə/
+		Bär /bˈɛːɐ/ - Bär /bˈɛːɐ/
+		bidden /bˈɪdn̩/ - bedde /bˈɛdə/
+		dröge /drˈøːɣə/ - drüch /dʀˈyːɕ/
+		drei /drˈɛɪ̯/ - drei /dʀˈeɪ̯/
+		drinken /drˈɪŋkn̩/ - drenke /dʀˈeŋkə/
+		Dag /dˈax/ - Daach /dˈaːx/
+		Dod /dˈeo̯d/ - Dud /dˈuːt/
+		dusend /dˈuːzn̩d/ - dausend /dˈaʊ̯zənt/
+		düer /dˈyːɐ/ - döör /dˈøːɐ/
+		Deif /dˈɛɪ̯f/ - Deev /dˈeːf/
+		deip /dˈɛɪ̯p/ - deef /dˈeːf/
+		Ding /dˈɪŋ/ - Dinge /dˈɪŋə/
+		Dunner /dˈʊnɐ/ - Donner /dˈonɐ/
+		dünne /dˈʏnə/ - dönn /dˈœn/
+		dütsch /dˈʏtʃ/ - dütsch /dˈʏtʃ/
+		Fleige /flˈɛɪ̯jə/ - Fleeg /flˈeːɕ/
+		fleigen /flˈɛɪ̯ŋ/ - fleeje /flˈeːjə/
+		Fleisch /flˈɛɪ̯ʃ/ - Fleesch /flˈeːʃ/
+		frie /frˈiː/ - frei /fʀˈeɪ̯/
+		Fru /frˈuː/ - Frau /fʀˈaʊ̯/
+		freisen /frˈɛɪ̯zn̩/ - freere /fʀˈeːʀə/
+		Fründ /frˈʏnd/ - Frönk /fʀˈœŋk/
+		Feer /fˈeːɐ/ - Fedder /fˈɛdɐ/
+		Füer /fˈyːɐ/ - Füür /fˈyːɐ/
+		folgen /fˈɔlɡn̩/ - folge /fˈɔlɣə/
+		feulen /fˈɔʏ̯ln̩/ - föhle /fˈøːlə/
+		veir /fˈɛɪ̯ɐ/ - vier /fˈiːɐ/
+		Finger /fˈɪŋɐ/ - Finger /fˈɪŋɐ/
+		Fisch /fˈɪʃ/ - Fesch /fˈeʃ/
+		vull /fˈʊl/ - voll /fˈɔl/
+		Hand /hˈand/ - Hank /hˈaŋk/
+		Harte /hˈaɐtə/ - Hätz /hˈɛʦ/
+		hoch /hˈeo̯x/ - huh /hˈuː/
+		hier /hˈiːɐ/ - hee /hˈeː/
+		Hus /hˈuːs/ - Huus /hˈuːs/
+		Hut /hˈuːt/ - Huut /hˈuːt/
+		Hase /hˈɒːzə/ - Has /hˈaːs/
+		Haar /hˈɒːɐ/ - Hoor /hˈoːɐ/
+		Honnig /hˈɔnɪç/ - Hunnig /hˈunəɕ/
+		heuren /hˈɔʏ̯ɐn/ - hüre /hˈyːʀə/
+		heit /hˈɛɪ̯t/ - heeß /hˈeːs/
+		Hund /hˈʊnd/ - Honk /hˈoŋk/
+		Jahr /jˈaːɐ/ - Johr /jˈoːɐ/
+		geben /jˈeːm/ - jevve /jˈɛvə/
+		gäl /jˈɛl/ - jäl /jˈɛːl/
+		jung /jˈʊŋ/ - jonk /jˈoŋk/
+		Knei /knˈɛɪ̯/ - Knee /knˈeː/
+		Kauh /kˈaʊ̯/ - Koh /kˈoː/
+		können /kˈœn̩/ - könne /kˈœnə/
+		Kopp /kˈɔp/ - Haup /hˈaʊ̯p/
+		Kopp /kˈɔp/ - Kopp /kˈɔp/
+		Keese /kˈɛɪ̯zə/ - Kies /kˈiːs/
+		Kerke /kˈɛːɐkə/ - Kirch /kˈiːɐɕ/
+		Lamm /lˈam/ - Lamm /lˈam/
+		lachen /lˈaxn̩/ - laache /lˈaːxə/
+		lang /lˈaŋ/ - lank /lˈaŋk/
+		lopen /lˈoːbm̩/ - laufe /lˈaʊ̯fə/
+		lichte /lˈɪçtə/ - leech /lˈeːɕ/
+		Mann /mˈan/ - Mann /mˈan/
+		Macht /mˈaxt/ - Maach /mˈaːx/
+		mi /mˈiː/ - mich /mˈɪɕ/
+		Muul /mˈuːl/ - Muul /mˈuːl/
+		Mus /mˈuːs/ - Muus /mˈuːs/
+		Maan /mˈɒːn/ - Mond /mˈɔnt/
+		Melk /mˈɛlk/ - Milch /mˈɪlɕ/
+		Minsche /mˈɪnʃə/ - Minsch /mˈɪnʃ/
+		Mudder /mˈʊdɐ/ - Mooder /mˈoːdɐ/
+		Mund /mˈʊnd/ - Mond /mˈɔnt/
+		Nacht /nˈax/ - Naach /nˈaːx/
+		negen /nˈeːɣn̩/ - nüng /nˈʏŋ/
+		nie /nˈiː/ - neu /nˈɔʏ̯/
+		naket /nˈɒːkət/ - nack /nˈak/
+		Name /nˈɒːmə/ - Name /nˈaːmə/
+		Nägel /nˈɛːjl̩/ - Nääl /nˈɛːl/
+		Näse /nˈɛːzə/ - Nas /nˈaːs/
+		rot /rˈeo̯t/ - rut /ʀˈuːt/
+		riek /rˈiːk/ - riech /ʀˈiːɕ/
+		Recht /rˈɛçt/ - rääch /ʀˈɛːɕ/
+		Regen /rˈɛːn/ - Rään /ʀˈɛːn/
+		Slange /slˈaŋə/ - Schlang /ʃlˈaŋ/
+		slapen /slˈɒːbm̩/ - schlofe /ʃlˈoːfə/
+		Sprake /sprˈɒːkə/ - Sprooch /ʃpʀˈoːx/
+		Staul /stˈaʊ̯l/ - Stohl /ʃtˈoːl/
+		Steern /stˈeːɐn/ - Stään /ʃtˈɛːn/
+		Storm /stˈɔɐm/ - Storm /ʃtˈɔɐm/
+		Stein /stˈɛɪ̯n/ - Steen /ʃtˈeːn/
+		swart /swˈaɐt/ - schwatz /ʃʋˈaʦ/
+		Swester /swˈɛstɐ/ - Söster /zˈœstɐ/
+		Swester /swˈɛstɐ/ - Sester /zˈɛstɐ/
+		swimmen /swˈɪm/ - schwemme /ʃʋˈɛmə/
+		Trane /trˈɒːnə/ - Tron /tʀˈoːn/
+		twölf /tvˈœlf/ - zwällef /ʦʋˈɛləf/
+		twei /tvˈɛɪ̯/ - zwee /ʦʋˈeː/
+		twintig /tvˈɪntɪç/ - zwanzig /ʦʋˈanʦɪɕ/
+		Tied /tˈiːd/ - Zeck /ʦˈɛk/
+		Tähne /tˈɛːnə/ - Zank /ʦˈaŋk/
+		wat /vˈat/ - wat /ʋˈat/
+		Wief /vˈiːf/ - Wiev /ʋˈiːf/
+		Worm /vˈoːɐm/ - Wurm /ʋˈʊɐm/
+		Wort /vˈoːɐt/ - Wood /ʋˈoːt/
+		wetten /vˈɛtn̩/ - wesse /ʋˈesə/
+		Weg /vˈɛç/ - Wääch /ʋˈɛːɕ/
+		Wäer /vˈɛːɐ/ - Wedder /ʋˈɛdɐ/
+		Wind /vˈɪnd/ - Wank /ʋˈaŋk/
+		witt /vˈɪt/ - wieß /ʋˈiːs/
+		Wulf /vˈʊlf/ - Wolf /ʋˈɔlf/
+		Wulle /vˈʊlə/ - Woll /ʋˈɔl/
+		wünschen /vˈʏnʃn̩/ - wünsche /ʋˈʏnʃə/
+		Sand /zˈand/ - Sank /zˈaŋk/
+		Seele /zˈeːlə/ - Siel /zˈiːl/
+		seeben /zˈeːvn̩/ - sivve /zˈɪvə/
+		Siete /zˈiːtə/ - Sigg /zˈɪk/
+		Solt /zˈɔlt/ - Salz /zˈalʦ/
+		seute /zˈɔʏ̯tə/ - söß /zˈøːs/
+		seihn /zˈɛɪ̯n/ - sehn /zˈeːn/
+		singen /zˈɪŋ/ - singe /zˈɪŋə/
+		Gras /ɣrˈaːs/ - Jras /jʀˈaːs/
+		grot /ɣrˈeo̯t/ - jruß /jʀˈuːs/
+		Gold /ɣˈɔld/ - Jold /jˈolt/
+		Gott /ɣˈɔt/ - Jott /jˈɔt/
+		schöne /ʃˈøːnə/ - schün /ʃˈyːn/
+		Schap /ʃˈɒːp/ - Schof /ʃˈoːf/
+		Schipp /ʃˈɪp/ - Scheff /ʃˈef/
+		alle /ˈalə/ - all /ˈal/
+		achte /ˈaxtə/ - aach /ˈaːx/
+		Ooge /ˈeo̯ɣə/ - Ooch /ˈoːx/
+		Oben /ˈoːm/ - Ovve /ˈɔvə/
+		Ule /ˈuːlə/ - Üül /ˈyːl/
+		ölwe /ˈœlvə/ - ellef /ˈeləf/
+		Aal /ˈɒːl/ - Ööl /ˈøːl/
+		old /ˈɔld/ - alt /ˈalt/
+		eck /ˈɛk/ - ich /ˈɪɕ/
+		Ecke /ˈɛkə/ - Eck /ˈɛk/
+		Ei /ˈɛɪ̯/ - Ei /ˈeɪ̯/
+		Eike /ˈɛɪ̯kə/ - Eech /ˈeːɕ/
+		eine /ˈɛɪ̯nə/ - een /ˈeːn/
+		äten /ˈɛːtn̩/ - äße /ˈɛːsə/
+		Imme /ˈɪmə/ - Bei /bˈeɪ̯/
+		Imme /ˈɪmə/ - Imm /ˈɪm/
+		in /ˈɪn/ - en /ˈen/
+		üsch /ˈʏʃ/ - uns /ˈʊns/
+
+Final disqualified:
+		Muul /mˈuːl/ - Mond /mˈɔnt/
+		Mund /mˈʊnd/ - Muul /mˈuːl/
+		wi /vˈiː/ - mir /mˈiːɐ/
+		Eere /ˈeːrə/ - Ääd /ˈɛːt/
+		Imme /ˈɪmə/ - Bien /bˈiːn/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 157
+	Disqualified: 163
+	Added: 0
+	Removed: 3
+		Eere /ˈeːrə/ - Ääd /ˈɛːt/
+		wi /vˈiː/ - mir /mˈiːɐ/
+		Imme /ˈɪmə/ - Bien /bˈiːn/
+
+Iteration 2
+	Qualified: 157
+	Disqualified: 163
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		Blaut /blˈaʊ̯d/ - Blot /blˈoːt/
+		Blaume /blˈaʊ̯mə/ - Bloom /blˈoːm/
+		Bläet /blˈɛə̯t/ - Blatt /blˈat/
+		Brauer /brˈaʊ̯ɐ/ - Broder /bʀˈoːdɐ/
+		Brot /brˈeo̯t/ - Brut /bʀˈuːt/
+		Brügge /brˈʏɣə/ - Bröck /bʀˈœk/
+		Bauk /bˈaʊ̯k/ - Booch /bˈoːx/
+		Bad /bˈaːd/ - Badd /bˈat/
+		Bohm /bˈeo̯m/ - Boom /bˈoːm/
+		Boot /bˈeo̯t/ - Boot /bˈoːt/
+		beter /bˈeːtɐ/ - besser /bˈɛsɐ/
+		Bost /bˈɔst/ - Bross /bʀˈos/
+		beien /bˈɛɪ̯n̩/ - beede /bˈeːdə/
+		Bär /bˈɛːɐ/ - Bär /bˈɛːɐ/
+		bidden /bˈɪdn̩/ - bedde /bˈɛdə/
+		driewen /drˈiːvn̩/ - drieve /dʀˈiːvə/
+		drömen /drˈøːmn̩/ - drööme /dʀˈøːmə/
+		dröge /drˈøːɣə/ - drüch /dʀˈyːɕ/
+		drei /drˈɛɪ̯/ - drei /dʀˈeɪ̯/
+		Dag /dˈax/ - Daach /dˈaːx/
+		danken /dˈaŋkn̩/ - danke /dˈaŋkə/
+		Dod /dˈeo̯d/ - Dud /dˈuːt/
+		dusend /dˈuːzn̩d/ - dausend /dˈaʊ̯zənt/
+		düer /dˈyːɐ/ - düür /dˈyːɐ/
+		düer /dˈyːɐ/ - döör /dˈøːɐ/
+		Deif /dˈɛɪ̯f/ - Deev /dˈeːf/
+		deip /dˈɛɪ̯p/ - deef /dˈeːf/
+		Deirt /dˈɛɪ̯ɐt/ - Dier /dˈiːɐ/
+		Ding /dˈɪŋ/ - Dinge /dˈɪŋə/
+		Dunner /dˈʊnɐ/ - Donner /dˈonɐ/
+		dünne /dˈʏnə/ - dönn /dˈœn/
+		dütsch /dˈʏtʃ/ - dütsch /dˈʏtʃ/
+		Fleige /flˈɛɪ̯jə/ - Fleeg /flˈeːɕ/
+		fleigen /flˈɛɪ̯ŋ/ - fleeje /flˈeːjə/
+		Fleisch /flˈɛɪ̯ʃ/ - Fleesch /flˈeːʃ/
+		frie /frˈiː/ - frei /fʀˈeɪ̯/
+		freisen /frˈɛɪ̯zn̩/ - freere /fʀˈeːʀə/
+		Faut /fˈaʊ̯t/ - Foß /fˈoːs/
+		Feer /fˈeːɐ/ - Fedder /fˈɛdɐ/
+		fief /fˈiːf/ - fönnef /fˈœnəf/
+		Vugel /fˈuːɣl̩/ - Vuggel /fˈuɣəl/
+		Füer /fˈyːɐ/ - Füür /fˈyːɐ/
+		Vader /fˈɒːdɐ/ - Vader /fˈaːdɐ/
+		folgen /fˈɔlɡn̩/ - folge /fˈɔlɣə/
+		Foss /fˈɔs/ - Fuss /fˈus/
+		Feute /fˈɔʏ̯tə/ - Föß /fˈøːs/
+		veir /fˈɛɪ̯ɐ/ - vier /fˈiːɐ/
+		Finger /fˈɪŋɐ/ - Finger /fˈɪŋɐ/
+		Fisch /fˈɪʃ/ - Fesch /fˈeʃ/
+		vull /fˈʊl/ - voll /fˈɔl/
+		Harte /hˈaɐtə/ - Hätz /hˈɛʦ/
+		hoch /hˈeo̯x/ - huh /hˈuː/
+		Hus /hˈuːs/ - Huus /hˈuːs/
+		Hase /hˈɒːzə/ - Has /hˈaːs/
+		Honnig /hˈɔnɪç/ - Hunnig /hˈunəɕ/
+		heuren /hˈɔʏ̯ɐn/ - hüre /hˈyːʀə/
+		hebben /hˈɛbn̩/ - han /hˈan/
+		hillig /hˈɪlɪç/ - hellig /hˈɛləɕ/
+		Hund /hˈʊnd/ - Honk /hˈoŋk/
+		greun /jrˈɔʏ̯n/ - jrön /jʀˈøːn/
+		Jahr /jˈaːɐ/ - Johr /jˈoːɐ/
+		geben /jˈeːm/ - jevve /jˈɛvə/
+		jung /jˈʊŋ/ - jonk /jˈoŋk/
+		Knei /knˈɛɪ̯/ - Knee /knˈeː/
+		Kauh /kˈaʊ̯/ - Koh /kˈoː/
+		können /kˈœn̩/ - könne /kˈœnə/
+		kold /kˈɔld/ - kalt /kˈalt/
+		Kopp /kˈɔp/ - Haup /hˈaʊ̯p/
+		Kerke /kˈɛːɐkə/ - Kirch /kˈiːɐɕ/
+		Lamm /lˈam/ - Lamm /lˈam/
+		lachen /lˈaxn̩/ - laache /lˈaːxə/
+		lang /lˈaŋ/ - lank /lˈaŋk/
+		lopen /lˈoːbm̩/ - laufe /lˈaʊ̯fə/
+		Licht /lˈɪç/ - Leech /lˈeːɕ/
+		lichte /lˈɪçtə/ - leech /lˈeːɕ/
+		Mann /mˈan/ - Mann /mˈan/
+		Macht /mˈaxt/ - Maach /mˈaːx/
+		mi /mˈiː/ - mich /mˈɪɕ/
+		Muul /mˈuːl/ - Muul /mˈuːl/
+		Mus /mˈuːs/ - Muus /mˈuːs/
+		Maan /mˈɒːn/ - Mond /mˈɔnt/
+		Melk /mˈɛlk/ - Milch /mˈɪlɕ/
+		Minsche /mˈɪnʃə/ - Minsch /mˈɪnʃ/
+		Mudder /mˈʊdɐ/ - Mooder /mˈoːdɐ/
+		Mund /mˈʊnd/ - Muul /mˈuːl/
+		Mund /mˈʊnd/ - Mond /mˈɔnt/
+		Nacht /nˈax/ - Naach /nˈaːx/
+		negen /nˈeːɣn̩/ - nüng /nˈʏŋ/
+		naket /nˈɒːkət/ - nack /nˈak/
+		Nägel /nˈɛːjl̩/ - Nääl /nˈɛːl/
+		Näse /nˈɛːzə/ - Nas /nˈaːs/
+		rot /rˈeo̯t/ - rut /ʀˈuːt/
+		Recht /rˈɛçt/ - rääch /ʀˈɛːɕ/
+		Slange /slˈaŋə/ - Schlang /ʃlˈaŋ/
+		slapen /slˈɒːbm̩/ - schlofe /ʃlˈoːfə/
+		Snei /snˈɛɪ̯/ - Schnie /ʃnˈiː/
+		Sprake /sprˈɒːkə/ - Sprooch /ʃpʀˈoːx/
+		Staul /stˈaʊ̯l/ - Stohl /ʃtˈoːl/
+		Steern /stˈeːɐn/ - Stään /ʃtˈɛːn/
+		Storm /stˈɔɐm/ - Storm /ʃtˈɔɐm/
+		Stein /stˈɛɪ̯n/ - Steen /ʃtˈeːn/
+		Swester /swˈɛstɐ/ - Sester /zˈɛstɐ/
+		Trane /trˈɒːnə/ - Tron /tʀˈoːn/
+		twölf /tvˈœlf/ - zwällef /ʦʋˈɛləf/
+		twei /tvˈɛɪ̯/ - zwee /ʦʋˈeː/
+		tein /tˈɛɪ̯n/ - zehn /ʦˈeːn/
+		Tunge /tˈʊŋə/ - Zong /ʦˈoŋ/
+		wat /vˈat/ - wat /ʋˈat/
+		warm /vˈaːɐm/ - wärm /ʋˈɛɐm/
+		Worm /vˈoːɐm/ - Wurm /ʋˈʊɐm/
+		Water /vˈɒːtɐ/ - Waßer /ʋˈaːsɐ/
+		wetten /vˈɛtn̩/ - wesse /ʋˈesə/
+		Weg /vˈɛç/ - Wääch /ʋˈɛːɕ/
+		Wäer /vˈɛːɐ/ - Wedder /ʋˈɛdɐ/
+		Wind /vˈɪnd/ - Wank /ʋˈaŋk/
+		witt /vˈɪt/ - wieß /ʋˈiːs/
+		Wulf /vˈʊlf/ - Wolf /ʋˈɔlf/
+		Wulle /vˈʊlə/ - Woll /ʋˈɔl/
+		wünschen /vˈʏnʃn̩/ - wünsche /ʋˈʏnʃə/
+		Sand /zˈand/ - Sank /zˈaŋk/
+		Seele /zˈeːlə/ - Siel /zˈiːl/
+		seeben /zˈeːvn̩/ - sivve /zˈɪvə/
+		Siete /zˈiːtə/ - Sigg /zˈɪk/
+		seute /zˈɔʏ̯tə/ - söß /zˈøːs/
+		seggen /zˈɛjn̩/ - sage /zˈaːɣə/
+		seihn /zˈɛɪ̯n/ - sehn /zˈeːn/
+		sitten /zˈɪtn̩/ - setze /zˈeʦə/
+		singen /zˈɪŋ/ - singe /zˈɪŋə/
+		Gras /ɣrˈaːs/ - Jras /jʀˈaːs/
+		grot /ɣrˈeo̯t/ - jruß /jʀˈuːs/
+		Gold /ɣˈɔld/ - Jold /jˈolt/
+		Gott /ɣˈɔt/ - Jott /jˈɔt/
+		gut /ɣˈʊt/ - jot /jˈoːt/
+		scharpe /ʃˈaɐpə/ - schärp /ʃˈɛːɐp/
+		schöne /ʃˈøːnə/ - schün /ʃˈyːn/
+		Schap /ʃˈɒːp/ - Schof /ʃˈoːf/
+		Schipp /ʃˈɪp/ - Scheff /ʃˈef/
+		Appel /ˈapl̩/ - Appel /ˈapəl/
+		achte /ˈaxtə/ - aach /ˈaːx/
+		Arm /ˈaɐm/ - Ärm /ˈɛːɐm/
+		Asche /ˈaʃə/ - Äsch /ˈɛʃ/
+		Ohr /ˈeo̯ɐ/ - Uhr /ˈuːɐ/
+		Ooge /ˈeo̯ɣə/ - Ooch /ˈoːx/
+		Ies /ˈiːs/ - Ies /ˈiːs/
+		Oben /ˈoːm/ - Ovve /ˈɔvə/
+		ower /ˈoːvɐ/ - üvver /ˈʏvɐ/
+		Ule /ˈuːlə/ - Üül /ˈyːl/
+		ölwe /ˈœlvə/ - ellef /ˈeləf/
+		Aal /ˈɒːl/ - Ööl /ˈøːl/
+		old /ˈɔld/ - alt /ˈalt/
+		eck /ˈɛk/ - ich /ˈɪɕ/
+		Ecke /ˈɛkə/ - Eck /ˈɛk/
+		Ei /ˈɛɪ̯/ - Ei /ˈeɪ̯/
+		Eike /ˈɛɪ̯kə/ - Eech /ˈeːɕ/
+		eine /ˈɛɪ̯nə/ - een /ˈeːn/
+		Imme /ˈɪmə/ - Bei /bˈeɪ̯/
+		in /ˈɪn/ - en /ˈen/
+
+Final disqualified:
+		wi /vˈiː/ - mir /mˈiːɐ/
+		Eere /ˈeːrə/ - Ääd /ˈɛːt/
+		Imme /ˈɪmə/ - Bien /bˈiːn/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 159
+	Disqualified: 161
+	Added: 0
+	Removed: 1
+		wi /vˈiː/ - mir /mˈiːɐ/
+
+Iteration 2
+	Qualified: 159
+	Disqualified: 161
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		Blaume /blˈaʊ̯mə/ - Bloom /blˈoːm/
+		Bläet /blˈɛə̯t/ - Blatt /blˈat/
+		Brauer /brˈaʊ̯ɐ/ - Broder /bʀˈoːdɐ/
+		Brügge /brˈʏɣə/ - Bröck /bʀˈœk/
+		Barg /bˈaɐx/ - Berch /bˈɛːɐɕ/
+		Bauk /bˈaʊ̯k/ - Booch /bˈoːx/
+		Bohm /bˈeo̯m/ - Boom /bˈoːm/
+		Boot /bˈeo̯t/ - Boot /bˈoːt/
+		beter /bˈeːtɐ/ - besser /bˈɛsɐ/
+		bieten /bˈiːtn̩/ - bieße /bˈiːsə/
+		Bost /bˈɔst/ - Bross /bʀˈos/
+		beien /bˈɛɪ̯n̩/ - beede /bˈeːdə/
+		bidden /bˈɪdn̩/ - bedde /bˈɛdə/
+		driewen /drˈiːvn̩/ - drieve /dʀˈiːvə/
+		drömen /drˈøːmn̩/ - drööme /dʀˈøːmə/
+		dröge /drˈøːɣə/ - drüch /dʀˈyːɕ/
+		drei /drˈɛɪ̯/ - drei /dʀˈeɪ̯/
+		drinken /drˈɪŋkn̩/ - drenke /dʀˈeŋkə/
+		Dag /dˈax/ - Daach /dˈaːx/
+		danken /dˈaŋkn̩/ - danke /dˈaŋkə/
+		Dod /dˈeo̯d/ - Dud /dˈuːt/
+		Doorn /dˈoːɐn/ - Doon /dˈoːn/
+		du /dˈuː/ - do /dˈoː/
+		dusend /dˈuːzn̩d/ - dausend /dˈaʊ̯zənt/
+		düer /dˈyːɐ/ - düür /dˈyːɐ/
+		düer /dˈyːɐ/ - döör /dˈøːɐ/
+		Dochter /dˈɔxtɐ/ - Dochter /dˈɔxtɐ/
+		deip /dˈɛɪ̯p/ - deef /dˈeːf/
+		Deirt /dˈɛɪ̯ɐt/ - Dier /dˈiːɐ/
+		dick /dˈɪk/ - deck /dˈek/
+		Ding /dˈɪŋ/ - Dinge /dˈɪŋə/
+		Dunner /dˈʊnɐ/ - Donner /dˈonɐ/
+		dünne /dˈʏnə/ - dönn /dˈœn/
+		Fleige /flˈɛɪ̯jə/ - Fleeg /flˈeːɕ/
+		fleigen /flˈɛɪ̯ŋ/ - fleeje /flˈeːjə/
+		Fleisch /flˈɛɪ̯ʃ/ - Fleesch /flˈeːʃ/
+		frie /frˈiː/ - frei /fʀˈeɪ̯/
+		Fru /frˈuː/ - Frau /fʀˈaʊ̯/
+		freisen /frˈɛɪ̯zn̩/ - freere /fʀˈeːʀə/
+		Fründ /frˈʏnd/ - Frönk /fʀˈœŋk/
+		Faut /fˈaʊ̯t/ - Foß /fˈoːs/
+		Feer /fˈeːɐ/ - Fedder /fˈɛdɐ/
+		fief /fˈiːf/ - fönnef /fˈœnəf/
+		Füer /fˈyːɐ/ - Füür /fˈyːɐ/
+		folgen /fˈɔlɡn̩/ - folge /fˈɔlɣə/
+		Foss /fˈɔs/ - Fuss /fˈus/
+		feulen /fˈɔʏ̯ln̩/ - föhle /fˈøːlə/
+		veir /fˈɛɪ̯ɐ/ - vier /fˈiːɐ/
+		Finger /fˈɪŋɐ/ - Finger /fˈɪŋɐ/
+		Fisch /fˈɪʃ/ - Fesch /fˈeʃ/
+		Harte /hˈaɐtə/ - Hätz /hˈɛʦ/
+		hoch /hˈeo̯x/ - huh /hˈuː/
+		hier /hˈiːɐ/ - hee /hˈeː/
+		Hus /hˈuːs/ - Huus /hˈuːs/
+		Hut /hˈuːt/ - Huut /hˈuːt/
+		Haar /hˈɒːɐ/ - Hoor /hˈoːɐ/
+		Honnig /hˈɔnɪç/ - Hunnig /hˈunəɕ/
+		heuren /hˈɔʏ̯ɐn/ - hüre /hˈyːʀə/
+		hebben /hˈɛbn̩/ - han /hˈan/
+		heit /hˈɛɪ̯t/ - heeß /hˈeːs/
+		hillig /hˈɪlɪç/ - hellig /hˈɛləɕ/
+		Hund /hˈʊnd/ - Honk /hˈoŋk/
+		greun /jrˈɔʏ̯n/ - jrön /jʀˈøːn/
+		Jahr /jˈaːɐ/ - Johr /jˈoːɐ/
+		geben /jˈeːm/ - jevve /jˈɛvə/
+		gäl /jˈɛl/ - jäl /jˈɛːl/
+		jung /jˈʊŋ/ - jonk /jˈoŋk/
+		Knei /knˈɛɪ̯/ - Knee /knˈeː/
+		kold /kˈɔld/ - kalt /kˈalt/
+		Kopp /kˈɔp/ - Haup /hˈaʊ̯p/
+		Kopp /kˈɔp/ - Kopp /kˈɔp/
+		Keese /kˈɛɪ̯zə/ - Kies /kˈiːs/
+		Kerke /kˈɛːɐkə/ - Kirch /kˈiːɐɕ/
+		Lamm /lˈam/ - Lamm /lˈam/
+		lachen /lˈaxn̩/ - laache /lˈaːxə/
+		lang /lˈaŋ/ - lank /lˈaŋk/
+		Licht /lˈɪç/ - Leech /lˈeːɕ/
+		lichte /lˈɪçtə/ - leech /lˈeːɕ/
+		Mann /mˈan/ - Mann /mˈan/
+		Macht /mˈaxt/ - Maach /mˈaːx/
+		Muul /mˈuːl/ - Muul /mˈuːl/
+		Muul /mˈuːl/ - Mond /mˈɔnt/
+		Mus /mˈuːs/ - Muus /mˈuːs/
+		Maan /mˈɒːn/ - Mond /mˈɔnt/
+		Minsche /mˈɪnʃə/ - Minsch /mˈɪnʃ/
+		Mudder /mˈʊdɐ/ - Mooder /mˈoːdɐ/
+		Mund /mˈʊnd/ - Mond /mˈɔnt/
+		Nacht /nˈax/ - Naach /nˈaːx/
+		negen /nˈeːɣn̩/ - nüng /nˈʏŋ/
+		nie /nˈiː/ - neu /nˈɔʏ̯/
+		naket /nˈɒːkət/ - nack /nˈak/
+		Näse /nˈɛːzə/ - Nas /nˈaːs/
+		rot /rˈeo̯t/ - rut /ʀˈuːt/
+		riek /rˈiːk/ - riech /ʀˈiːɕ/
+		Recht /rˈɛçt/ - rääch /ʀˈɛːɕ/
+		Regen /rˈɛːn/ - Rään /ʀˈɛːn/
+		Slange /slˈaŋə/ - Schlang /ʃlˈaŋ/
+		slapen /slˈɒːbm̩/ - schlofe /ʃlˈoːfə/
+		Snei /snˈɛɪ̯/ - Schnie /ʃnˈiː/
+		Sprake /sprˈɒːkə/ - Sprooch /ʃpʀˈoːx/
+		Staul /stˈaʊ̯l/ - Stohl /ʃtˈoːl/
+		Steern /stˈeːɐn/ - Stään /ʃtˈɛːn/
+		Storm /stˈɔɐm/ - Storm /ʃtˈɔɐm/
+		Swester /swˈɛstɐ/ - Söster /zˈœstɐ/
+		Swester /swˈɛstɐ/ - Sester /zˈɛstɐ/
+		swimmen /swˈɪm/ - schwemme /ʃʋˈɛmə/
+		Trane /trˈɒːnə/ - Tron /tʀˈoːn/
+		twölf /tvˈœlf/ - zwällef /ʦʋˈɛləf/
+		twei /tvˈɛɪ̯/ - zwee /ʦʋˈeː/
+		twintig /tvˈɪntɪç/ - zwanzig /ʦʋˈanʦɪɕ/
+		Tied /tˈiːd/ - Zeck /ʦˈɛk/
+		Tähne /tˈɛːnə/ - Zank /ʦˈaŋk/
+		Tunge /tˈʊŋə/ - Zong /ʦˈoŋ/
+		warm /vˈaːɐm/ - wärm /ʋˈɛɐm/
+		Wief /vˈiːf/ - Wiev /ʋˈiːf/
+		Worm /vˈoːɐm/ - Wurm /ʋˈʊɐm/
+		wetten /vˈɛtn̩/ - wesse /ʋˈesə/
+		Weg /vˈɛç/ - Wääch /ʋˈɛːɕ/
+		Wind /vˈɪnd/ - Wank /ʋˈaŋk/
+		witt /vˈɪt/ - wieß /ʋˈiːs/
+		Wulf /vˈʊlf/ - Wolf /ʋˈɔlf/
+		Wulle /vˈʊlə/ - Woll /ʋˈɔl/
+		wünschen /vˈʏnʃn̩/ - wünsche /ʋˈʏnʃə/
+		Sand /zˈand/ - Sank /zˈaŋk/
+		Seele /zˈeːlə/ - Siel /zˈiːl/
+		seeben /zˈeːvn̩/ - sivve /zˈɪvə/
+		Siete /zˈiːtə/ - Sigg /zˈɪk/
+		Solt /zˈɔlt/ - Salz /zˈalʦ/
+		seute /zˈɔʏ̯tə/ - söß /zˈøːs/
+		seggen /zˈɛjn̩/ - sage /zˈaːɣə/
+		seihn /zˈɛɪ̯n/ - sehn /zˈeːn/
+		sitten /zˈɪtn̩/ - setze /zˈeʦə/
+		singen /zˈɪŋ/ - singe /zˈɪŋə/
+		Gras /ɣrˈaːs/ - Jras /jʀˈaːs/
+		grot /ɣrˈeo̯t/ - jruß /jʀˈuːs/
+		grote /ɣrˈeo̯tə/ - jruß /jʀˈuːs/
+		Gold /ɣˈɔld/ - Jold /jˈolt/
+		Gott /ɣˈɔt/ - Jott /jˈɔt/
+		gut /ɣˈʊt/ - jot /jˈoːt/
+		scharpe /ʃˈaɐpə/ - schärp /ʃˈɛːɐp/
+		schöne /ʃˈøːnə/ - schün /ʃˈyːn/
+		Schap /ʃˈɒːp/ - Schof /ʃˈoːf/
+		Schipp /ʃˈɪp/ - Scheff /ʃˈef/
+		alle /ˈalə/ - all /ˈal/
+		Appel /ˈapl̩/ - Appel /ˈapəl/
+		achte /ˈaxtə/ - aach /ˈaːx/
+		Arm /ˈaɐm/ - Ärm /ˈɛːɐm/
+		Ohr /ˈeo̯ɐ/ - Uhr /ˈuːɐ/
+		Ies /ˈiːs/ - Ies /ˈiːs/
+		Oben /ˈoːm/ - Ovve /ˈɔvə/
+		ower /ˈoːvɐ/ - üvver /ˈʏvɐ/
+		Ule /ˈuːlə/ - Üül /ˈyːl/
+		ölwe /ˈœlvə/ - ellef /ˈeləf/
+		Aal /ˈɒːl/ - Ööl /ˈøːl/
+		old /ˈɔld/ - alt /ˈalt/
+		Ecke /ˈɛkə/ - Eck /ˈɛk/
+		Ei /ˈɛɪ̯/ - Ei /ˈeɪ̯/
+		Eike /ˈɛɪ̯kə/ - Eech /ˈeːɕ/
+		äten /ˈɛːtn̩/ - äße /ˈɛːsə/
+
+Final disqualified:
+		wi /vˈiː/ - mir /mˈiːɐ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 158
+	Disqualified: 162
+	Added: 0
+	Removed: 2
+		wi /vˈiː/ - mir /mˈiːɐ/
+		Imme /ˈɪmə/ - Bien /bˈiːn/
+
+Iteration 2
+	Qualified: 156
+	Disqualified: 164
+	Added: 0
+	Removed: 2
+		Muul /mˈuːl/ - Mond /mˈɔnt/
+		Mund /mˈʊnd/ - Muul /mˈuːl/
+
+Iteration 3
+	Qualified: 156
+	Disqualified: 164
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		Blaut /blˈaʊ̯d/ - Blot /blˈoːt/
+		Blaume /blˈaʊ̯mə/ - Bloom /blˈoːm/
+		Bläet /blˈɛə̯t/ - Blatt /blˈat/
+		Brauer /brˈaʊ̯ɐ/ - Broder /bʀˈoːdɐ/
+		Brot /brˈeo̯t/ - Brut /bʀˈuːt/
+		Brügge /brˈʏɣə/ - Bröck /bʀˈœk/
+		Barg /bˈaɐx/ - Berch /bˈɛːɐɕ/
+		Bauk /bˈaʊ̯k/ - Booch /bˈoːx/
+		Bad /bˈaːd/ - Badd /bˈat/
+		Bohm /bˈeo̯m/ - Boom /bˈoːm/
+		Boot /bˈeo̯t/ - Boot /bˈoːt/
+		beter /bˈeːtɐ/ - besser /bˈɛsɐ/
+		Bost /bˈɔst/ - Bross /bʀˈos/
+		beien /bˈɛɪ̯n̩/ - beede /bˈeːdə/
+		Bär /bˈɛːɐ/ - Bär /bˈɛːɐ/
+		Drom /drˈeo̯m/ - Droom /dʀˈoːm/
+		driewen /drˈiːvn̩/ - drieve /dʀˈiːvə/
+		drömen /drˈøːmn̩/ - drööme /dʀˈøːmə/
+		dröge /drˈøːɣə/ - drüch /dʀˈyːɕ/
+		drei /drˈɛɪ̯/ - drei /dʀˈeɪ̯/
+		drinken /drˈɪŋkn̩/ - drenke /dʀˈeŋkə/
+		danken /dˈaŋkn̩/ - danke /dˈaŋkə/
+		Dod /dˈeo̯d/ - Dud /dˈuːt/
+		du /dˈuː/ - do /dˈoː/
+		dusend /dˈuːzn̩d/ - dausend /dˈaʊ̯zənt/
+		düer /dˈyːɐ/ - döör /dˈøːɐ/
+		Dochter /dˈɔxtɐ/ - Dochter /dˈɔxtɐ/
+		Deif /dˈɛɪ̯f/ - Deev /dˈeːf/
+		Deirt /dˈɛɪ̯ɐt/ - Dier /dˈiːɐ/
+		dick /dˈɪk/ - deck /dˈek/
+		Ding /dˈɪŋ/ - Dinge /dˈɪŋə/
+		Dunner /dˈʊnɐ/ - Donner /dˈonɐ/
+		dünne /dˈʏnə/ - dönn /dˈœn/
+		dütsch /dˈʏtʃ/ - dütsch /dˈʏtʃ/
+		Fleige /flˈɛɪ̯jə/ - Fleeg /flˈeːɕ/
+		fleigen /flˈɛɪ̯ŋ/ - fleeje /flˈeːjə/
+		Fleisch /flˈɛɪ̯ʃ/ - Fleesch /flˈeːʃ/
+		frie /frˈiː/ - frei /fʀˈeɪ̯/
+		Fru /frˈuː/ - Frau /fʀˈaʊ̯/
+		freisen /frˈɛɪ̯zn̩/ - freere /fʀˈeːʀə/
+		Fründ /frˈʏnd/ - Frönk /fʀˈœŋk/
+		Faut /fˈaʊ̯t/ - Foß /fˈoːs/
+		fief /fˈiːf/ - fönnef /fˈœnəf/
+		Vugel /fˈuːɣl̩/ - Vuggel /fˈuɣəl/
+		Füer /fˈyːɐ/ - Füür /fˈyːɐ/
+		Vader /fˈɒːdɐ/ - Vader /fˈaːdɐ/
+		Foss /fˈɔs/ - Fuss /fˈus/
+		Feute /fˈɔʏ̯tə/ - Föß /fˈøːs/
+		Finger /fˈɪŋɐ/ - Finger /fˈɪŋɐ/
+		vull /fˈʊl/ - voll /fˈɔl/
+		Hand /hˈand/ - Hank /hˈaŋk/
+		Harte /hˈaɐtə/ - Hätz /hˈɛʦ/
+		hier /hˈiːɐ/ - hee /hˈeː/
+		Hut /hˈuːt/ - Huut /hˈuːt/
+		Haar /hˈɒːɐ/ - Hoor /hˈoːɐ/
+		Honnig /hˈɔnɪç/ - Hunnig /hˈunəɕ/
+		heuren /hˈɔʏ̯ɐn/ - hüre /hˈyːʀə/
+		hebben /hˈɛbn̩/ - han /hˈan/
+		heit /hˈɛɪ̯t/ - heeß /hˈeːs/
+		hillig /hˈɪlɪç/ - hellig /hˈɛləɕ/
+		Hund /hˈʊnd/ - Honk /hˈoŋk/
+		greun /jrˈɔʏ̯n/ - jrön /jʀˈøːn/
+		Jahr /jˈaːɐ/ - Johr /jˈoːɐ/
+		geben /jˈeːm/ - jevve /jˈɛvə/
+		gäl /jˈɛl/ - jäl /jˈɛːl/
+		jung /jˈʊŋ/ - jonk /jˈoŋk/
+		Kalf /kˈalf/ - Kalv /kˈalf/
+		Kauh /kˈaʊ̯/ - Koh /kˈoː/
+		können /kˈœn̩/ - könne /kˈœnə/
+		kold /kˈɔld/ - kalt /kˈalt/
+		Kopp /kˈɔp/ - Haup /hˈaʊ̯p/
+		Kerke /kˈɛːɐkə/ - Kirch /kˈiːɐɕ/
+		Lamm /lˈam/ - Lamm /lˈam/
+		lachen /lˈaxn̩/ - laache /lˈaːxə/
+		lang /lˈaŋ/ - lank /lˈaŋk/
+		lichte /lˈɪçtə/ - leech /lˈeːɕ/
+		Mann /mˈan/ - Mann /mˈan/
+		Macht /mˈaxt/ - Maach /mˈaːx/
+		mi /mˈiː/ - mich /mˈɪɕ/
+		Muul /mˈuːl/ - Muul /mˈuːl/
+		Mus /mˈuːs/ - Muus /mˈuːs/
+		Minsche /mˈɪnʃə/ - Minsch /mˈɪnʃ/
+		Mund /mˈʊnd/ - Mond /mˈɔnt/
+		Nacht /nˈax/ - Naach /nˈaːx/
+		nie /nˈiː/ - neu /nˈɔʏ̯/
+		Name /nˈɒːmə/ - Name /nˈaːmə/
+		Nägel /nˈɛːjl̩/ - Nääl /nˈɛːl/
+		Näse /nˈɛːzə/ - Nas /nˈaːs/
+		rot /rˈeo̯t/ - rut /ʀˈuːt/
+		riek /rˈiːk/ - riech /ʀˈiːɕ/
+		Recht /rˈɛçt/ - rääch /ʀˈɛːɕ/
+		Slange /slˈaŋə/ - Schlang /ʃlˈaŋ/
+		slapen /slˈɒːbm̩/ - schlofe /ʃlˈoːfə/
+		Snei /snˈɛɪ̯/ - Schnie /ʃnˈiː/
+		Sprake /sprˈɒːkə/ - Sprooch /ʃpʀˈoːx/
+		Staul /stˈaʊ̯l/ - Stohl /ʃtˈoːl/
+		Steern /stˈeːɐn/ - Stään /ʃtˈɛːn/
+		Storm /stˈɔɐm/ - Storm /ʃtˈɔɐm/
+		swart /swˈaɐt/ - schwatz /ʃʋˈaʦ/
+		Swester /swˈɛstɐ/ - Söster /zˈœstɐ/
+		Swester /swˈɛstɐ/ - Sester /zˈɛstɐ/
+		swimmen /swˈɪm/ - schwemme /ʃʋˈɛmə/
+		twölf /tvˈœlf/ - zwällef /ʦʋˈɛləf/
+		twei /tvˈɛɪ̯/ - zwee /ʦʋˈeː/
+		twintig /tvˈɪntɪç/ - zwanzig /ʦʋˈanʦɪɕ/
+		Tied /tˈiːd/ - Zeck /ʦˈɛk/
+		tein /tˈɛɪ̯n/ - zehn /ʦˈeːn/
+		Tunge /tˈʊŋə/ - Zong /ʦˈoŋ/
+		wat /vˈat/ - wat /ʋˈat/
+		warm /vˈaːɐm/ - wärm /ʋˈɛɐm/
+		Wief /vˈiːf/ - Wiev /ʋˈiːf/
+		Worm /vˈoːɐm/ - Wurm /ʋˈʊɐm/
+		wetten /vˈɛtn̩/ - wesse /ʋˈesə/
+		Weg /vˈɛç/ - Wääch /ʋˈɛːɕ/
+		Wind /vˈɪnd/ - Wank /ʋˈaŋk/
+		witt /vˈɪt/ - wieß /ʋˈiːs/
+		Wulf /vˈʊlf/ - Wolf /ʋˈɔlf/
+		Wulle /vˈʊlə/ - Woll /ʋˈɔl/
+		Sand /zˈand/ - Sank /zˈaŋk/
+		Seele /zˈeːlə/ - Siel /zˈiːl/
+		seeben /zˈeːvn̩/ - sivve /zˈɪvə/
+		Siete /zˈiːtə/ - Sigg /zˈɪk/
+		Solt /zˈɔlt/ - Salz /zˈalʦ/
+		seute /zˈɔʏ̯tə/ - söß /zˈøːs/
+		seggen /zˈɛjn̩/ - sage /zˈaːɣə/
+		seihn /zˈɛɪ̯n/ - sehn /zˈeːn/
+		sitten /zˈɪtn̩/ - setze /zˈeʦə/
+		Gras /ɣrˈaːs/ - Jras /jʀˈaːs/
+		grot /ɣrˈeo̯t/ - jruß /jʀˈuːs/
+		grote /ɣrˈeo̯tə/ - jruß /jʀˈuːs/
+		Gold /ɣˈɔld/ - Jold /jˈolt/
+		Gott /ɣˈɔt/ - Jott /jˈɔt/
+		gut /ɣˈʊt/ - jot /jˈoːt/
+		scharpe /ʃˈaɐpə/ - schärp /ʃˈɛːɐp/
+		schöne /ʃˈøːnə/ - schün /ʃˈyːn/
+		Schap /ʃˈɒːp/ - Schof /ʃˈoːf/
+		Schipp /ʃˈɪp/ - Scheff /ʃˈef/
+		Appel /ˈapl̩/ - Appel /ˈapəl/
+		achte /ˈaxtə/ - aach /ˈaːx/
+		Ohr /ˈeo̯ɐ/ - Uhr /ˈuːɐ/
+		Ies /ˈiːs/ - Ies /ˈiːs/
+		Oben /ˈoːm/ - Ovve /ˈɔvə/
+		ower /ˈoːvɐ/ - üvver /ˈʏvɐ/
+		ölwe /ˈœlvə/ - ellef /ˈeləf/
+		Aal /ˈɒːl/ - Ööl /ˈøːl/
+		old /ˈɔld/ - alt /ˈalt/
+		eck /ˈɛk/ - ich /ˈɪɕ/
+		Ecke /ˈɛkə/ - Eck /ˈɛk/
+		Ei /ˈɛɪ̯/ - Ei /ˈeɪ̯/
+		Eike /ˈɛɪ̯kə/ - Eech /ˈeːɕ/
+		eine /ˈɛɪ̯nə/ - een /ˈeːn/
+		äten /ˈɛːtn̩/ - äße /ˈɛːsə/
+		Imme /ˈɪmə/ - Bei /bˈeɪ̯/
+		Imme /ˈɪmə/ - Imm /ˈɪm/
+		in /ˈɪn/ - en /ˈen/
+		üsch /ˈʏʃ/ - uns /ˈʊns/
+
+Final disqualified:
+		Muul /mˈuːl/ - Mond /mˈɔnt/
+		Mund /mˈʊnd/ - Muul /mˈuːl/
+		wi /vˈiː/ - mir /mˈiːɐ/
+		Imme /ˈɪmə/ - Bien /bˈiːn/
+
+
+-------------------
+

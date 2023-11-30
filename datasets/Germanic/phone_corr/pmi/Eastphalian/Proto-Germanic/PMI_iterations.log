@@ -1,0 +1,1237 @@
+Same meaning pairs: 232
+****SAMPLE 1****
+Iteration 1
+	Qualified: 176
+	Disqualified: 196
+	Added: 0
+	Removed: 10
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		dröge /drˈøːɣə/ - þursuz /θˈursuz/
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+
+Iteration 2
+	Qualified: 176
+	Disqualified: 196
+	Added: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 3
+	Qualified: 177
+	Disqualified: 195
+	Added: 2
+		dröge /drˈøːɣə/ - þursuz /θˈursuz/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+
+Iteration 4
+	Qualified: 177
+	Disqualified: 195
+	Added: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 5
+	Qualified: 179
+	Disqualified: 193
+	Added: 2
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 0
+
+Iteration 6
+	Qualified: 178
+	Disqualified: 194
+	Added: 0
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 7
+	Qualified: 181
+	Disqualified: 191
+	Added: 3
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 0
+
+Iteration 8
+	Qualified: 181
+	Disqualified: 191
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		Blaut /blˈaʊ̯d/ - blōþą /blˈɔːθɑ̃/
+		Blaume /blˈaʊ̯mə/ - blōmô /blˈɔːmɔːː/
+		Bläet /blˈɛə̯t/ - bladą /blˈɑðɑ̃/
+		Brauer /brˈaʊ̯ɐ/ - brōþēr /brˈɔːθɛːr/
+		Brot /brˈeo̯t/ - braudą /brˈɑu̯ðɑ̃/
+		Brügge /brˈʏɣə/ - brugjǭ /brˈuɣjɔ̃ː/
+		Barg /bˈaɐx/ - bergaz /bˈerɣɑz/
+		Bauk /bˈaʊ̯k/ - bōks /bˈɔːks/
+		Bad /bˈaːd/ - baþą /bˈɑθɑ̃/
+		Bohm /bˈeo̯m/ - baumaz /bˈɑu̯mɑz/
+		Boot /bˈeo̯t/ - baitaz /bˈɑi̯tɑz/
+		Bein /bˈɛɪ̯n/ - bainą /bˈɑi̯nɑ̃/
+		beien /bˈɛɪ̯n̩/ - beudaną /bˈeu̯ðɑnɑ̃/
+		Bär /bˈɛːɐ/ - berô /bˈerɔːː/
+		bidden /bˈɪdn̩/ - bidjaną /bˈiðjɑnɑ̃/
+		dröge /drˈøːɣə/ - druknaz /drˈuknɑz/
+		dröge /drˈøːɣə/ - draugiz /drˈɑu̯ɣiz/
+		dröge /drˈøːɣə/ - þursuz /θˈursuz/
+		drei /drˈɛɪ̯/ - þrīz /θrˈiːz/
+		drinken /drˈɪŋkn̩/ - drinkaną /drˈiŋkɑnɑ̃/
+		Dag /dˈax/ - dagaz /dˈɑɣɑz/
+		Dod /dˈeo̯d/ - dauþuz /dˈɑu̯θuz/
+		Doorn /dˈoːɐn/ - þurnaz /θˈurnɑz/
+		dusend /dˈuːzn̩d/ - þūsundī /θˈuːsundiː/
+		düer /dˈyːɐ/ - diurijaz /dˈiu̯rijɑz/
+		Dochter /dˈɔxtɐ/ - duhtēr /dˈuxtɛːr/
+		Ding /dˈɪŋ/ - þinhsą /θˈinxsɑ̃/
+		Dunner /dˈʊnɐ/ - þunraz /θˈunrɑz/
+		dünne /dˈʏnə/ - þunniz /θˈunːiz/
+		dünne /dˈʏnə/ - þunnuz /θˈunːuz/
+		dütsch /dˈʏtʃ/ - þiudiskaz /θˈiu̯ðiskɑz/
+		Fleige /flˈɛɪ̯jə/ - fleugǭ /ɸlˈeu̯ɣɔ̃ː/
+		fleigen /flˈɛɪ̯ŋ/ - fleuganą /ɸlˈeu̯ɣɑnɑ̃/
+		Fleisch /flˈɛɪ̯ʃ/ - flaiski /ɸlˈɑi̯ski/
+		frie /frˈiː/ - frijaz /ɸrˈijɑz/
+		Fru /frˈuː/ - kwenǭ /kʷˈenɔ̃ː/
+		Fru /frˈuː/ - frawjǭ /ɸrˈɑwjɔ̃ː/
+		freisen /frˈɛɪ̯zn̩/ - freusaną /ɸrˈeu̯sɑnɑ̃/
+		frisch /frˈɪʃ/ - friskaz /ɸrˈiskɑz/
+		Fründ /frˈʏnd/ - frijōndz /ɸrˈijɔːndz/
+		Faut /fˈaʊ̯t/ - fōts /ɸˈɔːts/
+		Feer /fˈeːɐ/ - feþrō /ɸˈeθrɔː/
+		fief /fˈiːf/ - fimf /ɸˈimɸ/
+		Vugel /fˈuːɣl̩/ - fuglaz /ɸˈuɣlɑz/
+		Füer /fˈyːɐ/ - fōr /ɸˈɔːr/
+		Vader /fˈɒːdɐ/ - fadēr /ɸˈɑðɛːr/
+		folgen /fˈɔlɡn̩/ - fulgijaną /ɸˈulɣijɑnɑ̃/
+		folgen /fˈɔlɡn̩/ - fulgāną /ɸˈulɣɑːnɑ̃/
+		feulen /fˈɔʏ̯ln̩/ - fōlijaną /ɸˈɔlijɑnɑ̃/
+		Feute /fˈɔʏ̯tə/ - fōtiz /ɸˈɔːtiz/
+		veir /fˈɛɪ̯ɐ/ - fedwōr /ɸˈeðwɔːr/
+		Fisch /fˈɪʃ/ - fiskaz /ɸˈiskɑz/
+		vull /fˈʊl/ - fullaz /ɸˈulːɑz/
+		Hand /hˈand/ - handuz /xˈɑnduz/
+		Harte /hˈaɐtə/ - hertô /xˈertɔːː/
+		hoch /hˈeo̯x/ - hauhaz /xˈɑu̯xɑz/
+		hoch /hˈeo̯x/ - haugaz /xˈɑu̯ɣɑz/
+		hier /hˈiːɐ/ - hē₂r /xˈeːr/
+		Hus /hˈuːs/ - hūsą /xˈuːsɑ̃/
+		Hut /hˈuːt/ - hūdiz /xˈuːðiz/
+		Hase /hˈɒːzə/ - hasô /xˈɑsɔːː/
+		Haar /hˈɒːɐ/ - hērą /xˈɛːrɑ̃/
+		Honnig /hˈɔnɪç/ - hunagą /xˈunɑɣɑ̃/
+		heuren /hˈɔʏ̯ɐn/ - hauzijaną /xˈɑu̯zijɑnɑ̃/
+		Henn /hˈɛn/ - hanjō /xˈɑnjɔː/
+		Henn /hˈɛn/ - hōnijǭ /xˈɔːnijɔ̃ː/
+		hillig /hˈɪlɪç/ - hailagaz /xˈɑi̯lɑɣɑz/
+		Hund /hˈʊnd/ - hundaz /xˈundɑz/
+		greun /jrˈɔʏ̯n/ - grōniz /ɣrˈɔːniz/
+		Jahr /jˈaːɐ/ - jērą /jˈɛːrɑ̃/
+		geben /jˈeːm/ - gebaną /ɣˈeβɑnɑ̃/
+		gäl /jˈɛl/ - gelwaz /ɣˈelwɑz/
+		jung /jˈʊŋ/ - jungaz /jˈuŋɡɑz/
+		Kalf /kˈalf/ - kalbaz /kˈɑlβɑz/
+		Kauh /kˈaʊ̯/ - kūz /kˈuːz/
+		Küken /kˈyːkn̩/ - kiukīną /kˈiu̯kiːnɑ̃/
+		Küken /kˈyːkn̩/ - kukkilīngaz /kˈukːiliːŋɡaz/
+		Kopp /kˈɔp/ - kuppaz /kˈupːɑz/
+		Kind /kˈɪnd/ - kelþaz /kˈelθɑz/
+		Kind /kˈɪnd/ - kinþą /kˈinθɑ̃/
+		Land /lˈand/ - landą /lˈɑndɑ̃/
+		lang /lˈaŋ/ - langaz /lˈɑŋɡɑz/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+		Licht /lˈɪç/ - leuhsą /lˈeu̯xsɑ̃/
+		Licht /lˈɪç/ - leuhtą /lˈeu̯xtɑ̃/
+		lichte /lˈɪçtə/ - linhtaz /lˈĩːxtɑz/
+		Mann /mˈan/ - mann- /mˈɑnː/
+		Macht /mˈaxt/ - mahtiz /mˈɑxtiz/
+		mi /mˈiː/ - miz /mˈiz/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		Muul /mˈuːl/ - mūlą /mˈuːlɑ̃/
+		Mus /mˈuːs/ - mūs /mˈuːs/
+		Maan /mˈɒːn/ - mēnô /mˈɛːnɔːː/
+		Melk /mˈɛlk/ - meluks /mˈeluks/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		Mudder /mˈʊdɐ/ - mōdēr /mˈɔːðɛːr/
+		Mund /mˈʊnd/ - munþaz /mˈunθɑz/
+		Mund /mˈʊnd/ - mūlą /mˈuːlɑ̃/
+		Nacht /nˈax/ - nahts /nˈɑxts/
+		negen /nˈeːɣn̩/ - newun /nˈewun/
+		nie /nˈiː/ - niwjaz /nˈiu̯jɑz/
+		naket /nˈɒːkət/ - nakwadaz /nˈɑkʷɑðɑz/
+		Name /nˈɒːmə/ - namô /nˈɑmɔːː/
+		Nägel /nˈɛːjl̩/ - naglaz /nˈɑɣlɑz/
+		Näse /nˈɛːzə/ - nasō /nˈɑsɔː/
+		rot /rˈeo̯t/ - raudaz /rˈɑu̯ðɑz/
+		riek /rˈiːk/ - rīkijaz /rˈiːkijɑz/
+		Recht /rˈɛçt/ - rehtaz /rˈextɑz/
+		Regen /rˈɛːn/ - regną /rˈeɣnɑ̃/
+		Ring /rˈɪŋ/ - hringaz /xrˈiŋɡɑz/
+		Slange /slˈaŋə/ - slangô /slˈɑŋɡɔːː/
+		slapen /slˈɒːbm̩/ - slēpaną /slˈɛːpɑnɑ̃/
+		Snei /snˈɛɪ̯/ - snaiwaz /snˈɑi̯wɑz/
+		Staul /stˈaʊ̯l/ - stōlaz /stˈɔːlɑz/
+		Steern /stˈeːɐn/ - sternǭ /stˈernɔ̃ː/
+		Stein /stˈɛɪ̯n/ - stainaz /stˈɑi̯nɑz/
+		swart /swˈaɐt/ - swartaz /swˈɑrtɑz/
+		Swester /swˈɛstɐ/ - swestēr /swˈestɛːr/
+		swimmen /swˈɪm/ - swimmaną /swˈimːɑnɑ̃/
+		Trane /trˈɒːnə/ - trahnuz /trˈɑxnuz/
+		twei /tvˈɛɪ̯/ - twai /twˈɑi̯/
+		twintig /tvˈɪntɪç/ - twai tigiwiz /twɑi̯tˈiɣiwiz/
+		tein /tˈɛɪ̯n/ - tehun /tˈexun/
+		Tähne /tˈɛːnə/ - tanþs /tˈɑnθs/
+		Tunge /tˈʊŋə/ - tungǭ /tˈuŋɡɔ̃ː/
+		wat /vˈat/ - hwat /xʷˈɑt/
+		warm /vˈaːɐm/ - warmaz /wˈɑrmɑz/
+		wi /vˈiː/ - wīz /wˈiːz/
+		Wief /vˈiːf/ - wībą /wˈiːβɑ̃/
+		Worm /vˈoːɐm/ - wurmiz /wˈurmiz/
+		Water /vˈɒːtɐ/ - watnō /wˈɑtnɔː/
+		wetten /vˈɛtn̩/ - witaną /wˈitɑnɑ̃/
+		Wäer /vˈɛːɐ/ - wedrą /wˈeðrɑ̃/
+		Wind /vˈɪnd/ - windaz /wˈindɑz/
+		witt /vˈɪt/ - hwītaz /xʷˈiːtɑz/
+		Wulf /vˈʊlf/ - wulfaz /wˈulɸɑz/
+		wünschen /vˈʏnʃn̩/ - wunskijaną /wˈunskijɑnɑ̃/
+		Sand /zˈand/ - samdaz /sˈɑmdɑz/
+		seeben /zˈeːvn̩/ - sebun /sˈeβun/
+		Solt /zˈɔlt/ - saltą /sˈɑltɑ̃/
+		seggen /zˈɛjn̩/ - sagjaną /sˈɑɣjɑnɑ̃/
+		seihn /zˈɛɪ̯n/ - sehwaną /sˈexʷɑnɑ̃/
+		sitten /zˈɪtn̩/ - sitjaną /sˈitjɑnɑ̃/
+		singen /zˈɪŋ/ - singwaną /sˈiŋɡʷɑnɑ̃/
+		Gras /ɣrˈaːs/ - grasą /ɣrˈɑsɑ̃/
+		grot /ɣrˈeo̯t/ - grautaz /ɣrˈɑu̯tɑz/
+		grote /ɣrˈeo̯tə/ - grautaz /ɣrˈɑu̯tɑz/
+		Gott /ɣˈɔt/ - gudą /ɣˈuðɑ̃/
+		gut /ɣˈʊt/ - gōdaz /ɣˈɔːðɑz/
+		scharpe /ʃˈaɐpə/ - skarpaz /skˈɑrpɑz/
+		Schiete /ʃˈiːtə/ - skitaz /skˈitɑz/
+		schöne /ʃˈøːnə/ - skauniz /skˈɑu̯niz/
+		Schap /ʃˈɒːp/ - skēpą /skˈɛːpɑ̃/
+		Schipp /ʃˈɪp/ - skipą /skˈipɑ̃/
+		alle /ˈalə/ - allaz /ˈɑlːɑz/
+		anner /ˈanɐ/ - anþeraz /ˈɑnθerɑz/
+		Appel /ˈapl̩/ - apluz /ˈɑpluz/
+		Appel /ˈapl̩/ - apaliją /ˈɑpɑlijɑ̃/
+		achte /ˈaxtə/ - ahtōu /ˈɑxtɔːu̯/
+		Arm /ˈaɐm/ - armaz /ˈɑrmɑz/
+		Asche /ˈaʃə/ - askǭ /ˈɑskɔ̃ː/
+		Eere /ˈeːrə/ - erþō /ˈerθɔː/
+		Ies /ˈiːs/ - īsą /ˈiːsɑ̃/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		Ule /ˈuːlə/ - uwwalǭ /ˈuwːɑlɔ̃ː/
+		ut /ˈuːt/ - ūt /ˈuːt/
+		ölwe /ˈœlvə/ - ainalif /ˈɑi̯nɑliɸ/
+		Aal /ˈɒːl/ - ēlaz /ˈɛːlɑz/
+		Ape /ˈɒːpə/ - apô /ˈɑpɔːː/
+		old /ˈɔld/ - aldaz /ˈɑldɑz/
+		eck /ˈɛk/ - ek /ˈek/
+		Ecke /ˈɛkə/ - agjō /ˈɑɣjɔː/
+		Ei /ˈɛɪ̯/ - ajją /ˈɑjːɑ̃/
+		Eike /ˈɛɪ̯kə/ - aiks /ˈɑi̯ks/
+		eine /ˈɛɪ̯nə/ - ainaz /ˈɑi̯nɑz/
+		äten /ˈɛːtn̩/ - etaną /ˈetɑnɑ̃/
+		Imme /ˈɪmə/ - bijǭ /bˈijɔ̃ː/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+		in /ˈɪn/ - in /ˈin/
+		üsch /ˈʏʃ/ - uns /ˈuns/
+
+Final disqualified:
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 177
+	Disqualified: 195
+	Added: 0
+	Removed: 9
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+
+Iteration 2
+	Qualified: 177
+	Disqualified: 195
+	Added: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 3
+	Qualified: 180
+	Disqualified: 192
+	Added: 4
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+
+Iteration 4
+	Qualified: 181
+	Disqualified: 191
+	Added: 2
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 5
+	Qualified: 182
+	Disqualified: 190
+	Added: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 0
+
+Iteration 6
+	Qualified: 178
+	Disqualified: 194
+	Added: 0
+	Removed: 4
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 7
+	Qualified: 179
+	Disqualified: 193
+	Added: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 0
+
+Iteration 8
+	Qualified: 181
+	Disqualified: 191
+	Added: 3
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Final qualifying:
+		Blaut /blˈaʊ̯d/ - blōþą /blˈɔːθɑ̃/
+		Blaume /blˈaʊ̯mə/ - blōmô /blˈɔːmɔːː/
+		Bläet /blˈɛə̯t/ - bladą /blˈɑðɑ̃/
+		Brauer /brˈaʊ̯ɐ/ - brōþēr /brˈɔːθɛːr/
+		Brot /brˈeo̯t/ - braudą /brˈɑu̯ðɑ̃/
+		Brügge /brˈʏɣə/ - brugjǭ /brˈuɣjɔ̃ː/
+		Barg /bˈaɐx/ - bergaz /bˈerɣɑz/
+		Bauk /bˈaʊ̯k/ - bōks /bˈɔːks/
+		Bad /bˈaːd/ - baþą /bˈɑθɑ̃/
+		Bohm /bˈeo̯m/ - baumaz /bˈɑu̯mɑz/
+		bieten /bˈiːtn̩/ - bītaną /bˈiːtɑnɑ̃/
+		Bost /bˈɔst/ - breustą /brˈeu̯stɑ̃/
+		Bein /bˈɛɪ̯n/ - bainą /bˈɑi̯nɑ̃/
+		beien /bˈɛɪ̯n̩/ - beudaną /bˈeu̯ðɑnɑ̃/
+		Bär /bˈɛːɐ/ - berô /bˈerɔːː/
+		Drom /drˈeo̯m/ - draumaz /drˈɑu̯mɑz/
+		driewen /drˈiːvn̩/ - drībaną /drˈiːβɑnɑ̃/
+		drömen /drˈøːmn̩/ - draumijaną /drˈɑu̯mijɑnɑ̃/
+		dröge /drˈøːɣə/ - druknaz /drˈuknɑz/
+		dröge /drˈøːɣə/ - draugiz /drˈɑu̯ɣiz/
+		drei /drˈɛɪ̯/ - þrīz /θrˈiːz/
+		drinken /drˈɪŋkn̩/ - drinkaną /drˈiŋkɑnɑ̃/
+		Dag /dˈax/ - dagaz /dˈɑɣɑz/
+		danken /dˈaŋkn̩/ - þankōną /θˈɑŋkɔːnɑ̃/
+		Dod /dˈeo̯d/ - dauþuz /dˈɑu̯θuz/
+		du /dˈuː/ - þū /θˈuː/
+		dusend /dˈuːzn̩d/ - þūsundī /θˈuːsundiː/
+		düer /dˈyːɐ/ - diurijaz /dˈiu̯rijɑz/
+		Dochter /dˈɔxtɐ/ - duhtēr /dˈuxtɛːr/
+		deip /dˈɛɪ̯p/ - deupaz /dˈeu̯pɑz/
+		Deirt /dˈɛɪ̯ɐt/ - deuzą /dˈeu̯zɑ̃/
+		Ding /dˈɪŋ/ - þinhsą /θˈinxsɑ̃/
+		Ding /dˈɪŋ/ - þingą /θˈiŋɡɑ̃/
+		Dunner /dˈʊnɐ/ - þunraz /θˈunrɑz/
+		dünne /dˈʏnə/ - þunniz /θˈunːiz/
+		dünne /dˈʏnə/ - þunnuz /θˈunːuz/
+		dütsch /dˈʏtʃ/ - þiudiskaz /θˈiu̯ðiskɑz/
+		Fleige /flˈɛɪ̯jə/ - fleugǭ /ɸlˈeu̯ɣɔ̃ː/
+		fleigen /flˈɛɪ̯ŋ/ - fleuganą /ɸlˈeu̯ɣɑnɑ̃/
+		Fleisch /flˈɛɪ̯ʃ/ - flaiski /ɸlˈɑi̯ski/
+		frie /frˈiː/ - frijaz /ɸrˈijɑz/
+		Fru /frˈuː/ - kwenǭ /kʷˈenɔ̃ː/
+		Fru /frˈuː/ - frawjǭ /ɸrˈɑwjɔ̃ː/
+		freisen /frˈɛɪ̯zn̩/ - freusaną /ɸrˈeu̯sɑnɑ̃/
+		Fründ /frˈʏnd/ - frijōndz /ɸrˈijɔːndz/
+		Faut /fˈaʊ̯t/ - fōts /ɸˈɔːts/
+		fief /fˈiːf/ - fimf /ɸˈimɸ/
+		Vugel /fˈuːɣl̩/ - fuglaz /ɸˈuɣlɑz/
+		Vader /fˈɒːdɐ/ - fadēr /ɸˈɑðɛːr/
+		folgen /fˈɔlɡn̩/ - fulgāną /ɸˈulɣɑːnɑ̃/
+		Foss /fˈɔs/ - fuhsaz /ɸˈuxsɑz/
+		feulen /fˈɔʏ̯ln̩/ - fōlijaną /ɸˈɔlijɑnɑ̃/
+		veir /fˈɛɪ̯ɐ/ - fedwōr /ɸˈeðwɔːr/
+		Finger /fˈɪŋɐ/ - fingraz /ɸˈiŋɡrɑz/
+		Fisch /fˈɪʃ/ - fiskaz /ɸˈiskɑz/
+		Harte /hˈaɐtə/ - hertô /xˈertɔːː/
+		hoch /hˈeo̯x/ - haugaz /xˈɑu̯ɣɑz/
+		Hus /hˈuːs/ - hūsą /xˈuːsɑ̃/
+		Hase /hˈɒːzə/ - hasô /xˈɑsɔːː/
+		Haar /hˈɒːɐ/ - hērą /xˈɛːrɑ̃/
+		Honnig /hˈɔnɪç/ - hunangą /xˈunɑŋɡɑ̃/
+		Honnig /hˈɔnɪç/ - hunagą /xˈunɑɣɑ̃/
+		hebben /hˈɛbn̩/ - habjaną /xˈɑβjɑnɑ̃/
+		Henn /hˈɛn/ - hanjō /xˈɑnjɔː/
+		heit /hˈɛɪ̯t/ - haitaz /xˈɑi̯tɑz/
+		hillig /hˈɪlɪç/ - hailagaz /xˈɑi̯lɑɣɑz/
+		Hunger /hˈʊŋɐ/ - hunhruz /xˈunxruz/
+		Hunger /hˈʊŋɐ/ - hungruz /xˈuŋɡruz/
+		greun /jrˈɔʏ̯n/ - grōniz /ɣrˈɔːniz/
+		Jahr /jˈaːɐ/ - jērą /jˈɛːrɑ̃/
+		geben /jˈeːm/ - gebaną /ɣˈeβɑnɑ̃/
+		gäl /jˈɛl/ - gelwaz /ɣˈelwɑz/
+		jung /jˈʊŋ/ - jungaz /jˈuŋɡɑz/
+		Knei /knˈɛɪ̯/ - knewą /knˈewɑ̃/
+		Kalf /kˈalf/ - kalbaz /kˈɑlβɑz/
+		Küken /kˈyːkn̩/ - kiukīną /kˈiu̯kiːnɑ̃/
+		Küken /kˈyːkn̩/ - kukkilīngaz /kˈukːiliːŋɡaz/
+		kold /kˈɔld/ - kaldaz /kˈɑldɑz/
+		Kind /kˈɪnd/ - kelþaz /kˈelθɑz/
+		Kind /kˈɪnd/ - kinþą /kˈinθɑ̃/
+		Land /lˈand/ - landą /lˈɑndɑ̃/
+		lachen /lˈaxn̩/ - hlahjaną /xlˈɑxjɑnɑ̃/
+		lang /lˈaŋ/ - langaz /lˈɑŋɡɑz/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+		Licht /lˈɪç/ - leuhsą /lˈeu̯xsɑ̃/
+		Licht /lˈɪç/ - leuhtą /lˈeu̯xtɑ̃/
+		lichte /lˈɪçtə/ - linhtaz /lˈĩːxtɑz/
+		Mann /mˈan/ - mann- /mˈɑnː/
+		Macht /mˈaxt/ - mahtiz /mˈɑxtiz/
+		mi /mˈiː/ - miz /mˈiz/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		Muul /mˈuːl/ - mūlą /mˈuːlɑ̃/
+		Mus /mˈuːs/ - mūs /mˈuːs/
+		Melk /mˈɛlk/ - meluks /mˈeluks/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		Mudder /mˈʊdɐ/ - mōdēr /mˈɔːðɛːr/
+		Mund /mˈʊnd/ - munþaz /mˈunθɑz/
+		Mund /mˈʊnd/ - mūlą /mˈuːlɑ̃/
+		Nacht /nˈax/ - nahts /nˈɑxts/
+		negen /nˈeːɣn̩/ - newun /nˈewun/
+		nie /nˈiː/ - niwjaz /nˈiu̯jɑz/
+		naket /nˈɒːkət/ - nakwadaz /nˈɑkʷɑðɑz/
+		Name /nˈɒːmə/ - namô /nˈɑmɔːː/
+		Nägel /nˈɛːjl̩/ - naglaz /nˈɑɣlɑz/
+		Näse /nˈɛːzə/ - nasō /nˈɑsɔː/
+		Rook /rˈeo̯k/ - raukiz /rˈɑu̯kiz/
+		rot /rˈeo̯t/ - raudaz /rˈɑu̯ðɑz/
+		riek /rˈiːk/ - rīkijaz /rˈiːkijɑz/
+		Recht /rˈɛçt/ - rehtaz /rˈextɑz/
+		Regen /rˈɛːn/ - regną /rˈeɣnɑ̃/
+		Ring /rˈɪŋ/ - hringaz /xrˈiŋɡɑz/
+		Slange /slˈaŋə/ - slangô /slˈɑŋɡɔːː/
+		slapen /slˈɒːbm̩/ - slēpaną /slˈɛːpɑnɑ̃/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+		Snei /snˈɛɪ̯/ - snaiwaz /snˈɑi̯wɑz/
+		Staul /stˈaʊ̯l/ - stōlaz /stˈɔːlɑz/
+		Steern /stˈeːɐn/ - sternǭ /stˈernɔ̃ː/
+		Storm /stˈɔɐm/ - sturmaz /stˈurmɑz/
+		Stein /stˈɛɪ̯n/ - stainaz /stˈɑi̯nɑz/
+		swart /swˈaɐt/ - swartaz /swˈɑrtɑz/
+		Swien /swˈiːn/ - swīną /swˈiːnɑ̃/
+		swimmen /swˈɪm/ - swimmaną /swˈimːɑnɑ̃/
+		Trane /trˈɒːnə/ - trahnuz /trˈɑxnuz/
+		twölf /tvˈœlf/ - twalif /twˈɑliɸ/
+		twintig /tvˈɪntɪç/ - twai tigiwiz /twɑi̯tˈiɣiwiz/
+		tein /tˈɛɪ̯n/ - tehun /tˈexun/
+		warm /vˈaːɐm/ - warmaz /wˈɑrmɑz/
+		wi /vˈiː/ - wīz /wˈiːz/
+		Wief /vˈiːf/ - wībą /wˈiːβɑ̃/
+		Worm /vˈoːɐm/ - wurmiz /wˈurmiz/
+		Wort /vˈoːɐt/ - wurdą /wˈurðɑ̃/
+		wetten /vˈɛtn̩/ - witaną /wˈitɑnɑ̃/
+		Weg /vˈɛç/ - wegaz /wˈeɣɑz/
+		Wind /vˈɪnd/ - windaz /wˈindɑz/
+		witt /vˈɪt/ - hwītaz /xʷˈiːtɑz/
+		Wulle /vˈʊlə/ - wullō /wˈulːɔː/
+		wünschen /vˈʏnʃn̩/ - wunskijaną /wˈunskijɑnɑ̃/
+		Sand /zˈand/ - samdaz /sˈɑmdɑz/
+		Seele /zˈeːlə/ - saiwalu /sˈɑi̯wɑlu/
+		seeben /zˈeːvn̩/ - sebun /sˈeβun/
+		Siete /zˈiːtə/ - sīdǭ /sˈiːðɔ̃ː/
+		Sohn /zˈoːn/ - sunuz /sˈunuz/
+		Solt /zˈɔlt/ - saltą /sˈɑltɑ̃/
+		seute /zˈɔʏ̯tə/ - swōtuz /swˈɔːtuz/
+		seggen /zˈɛjn̩/ - sagjaną /sˈɑɣjɑnɑ̃/
+		seihn /zˈɛɪ̯n/ - sehwaną /sˈexʷɑnɑ̃/
+		sitten /zˈɪtn̩/ - sitjaną /sˈitjɑnɑ̃/
+		singen /zˈɪŋ/ - singwaną /sˈiŋɡʷɑnɑ̃/
+		Gras /ɣrˈaːs/ - grasą /ɣrˈɑsɑ̃/
+		grot /ɣrˈeo̯t/ - grautaz /ɣrˈɑu̯tɑz/
+		grote /ɣrˈeo̯tə/ - grautaz /ɣrˈɑu̯tɑz/
+		Gast /ɣˈas/ - gastiz /ɣˈɑstiz/
+		Gaus /ɣˈaʊ̯s/ - gans /ɣˈɑns/
+		Gold /ɣˈɔld/ - gulþą /ɣˈulθɑ̃/
+		Gott /ɣˈɔt/ - gudą /ɣˈuðɑ̃/
+		gut /ɣˈʊt/ - gōdaz /ɣˈɔːðɑz/
+		scharpe /ʃˈaɐpə/ - skarpaz /skˈɑrpɑz/
+		schöne /ʃˈøːnə/ - skauniz /skˈɑu̯niz/
+		Schap /ʃˈɒːp/ - skēpą /skˈɛːpɑ̃/
+		Schipp /ʃˈɪp/ - skipą /skˈipɑ̃/
+		alle /ˈalə/ - allaz /ˈɑlːɑz/
+		Appel /ˈapl̩/ - apaliją /ˈɑpɑlijɑ̃/
+		achte /ˈaxtə/ - ahtōu /ˈɑxtɔːu̯/
+		Asche /ˈaʃə/ - askǭ /ˈɑskɔ̃ː/
+		Ooge /ˈeo̯ɣə/ - augô /ˈɑu̯ɣɔːː/
+		Eere /ˈeːrə/ - erþō /ˈerθɔː/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		ower /ˈoːvɐ/ - uber /ˈuβer/
+		ower /ˈoːvɐ/ - ubiri /ˈuβiri/
+		Ule /ˈuːlə/ - uwwalǭ /ˈuwːɑlɔ̃ː/
+		ut /ˈuːt/ - ūt /ˈuːt/
+		ölwe /ˈœlvə/ - ainalif /ˈɑi̯nɑliɸ/
+		Ape /ˈɒːpə/ - apô /ˈɑpɔːː/
+		old /ˈɔld/ - aldaz /ˈɑldɑz/
+		eck /ˈɛk/ - ek /ˈek/
+		Ecke /ˈɛkə/ - agjō /ˈɑɣjɔː/
+		Ei /ˈɛɪ̯/ - ajją /ˈɑjːɑ̃/
+		eine /ˈɛɪ̯nə/ - ainaz /ˈɑi̯nɑz/
+		Imme /ˈɪmə/ - bijǭ /bˈijɔ̃ː/
+		in /ˈɪn/ - in /ˈin/
+
+Final disqualified:
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 179
+	Disqualified: 193
+	Added: 0
+	Removed: 7
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+
+Iteration 2
+	Qualified: 180
+	Disqualified: 192
+	Added: 2
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 3
+	Qualified: 180
+	Disqualified: 192
+	Added: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+
+Iteration 4
+	Qualified: 180
+	Disqualified: 192
+	Added: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Final qualifying:
+		Blaut /blˈaʊ̯d/ - blōþą /blˈɔːθɑ̃/
+		Blaume /blˈaʊ̯mə/ - blōmô /blˈɔːmɔːː/
+		Bläet /blˈɛə̯t/ - bladą /blˈɑðɑ̃/
+		Brauer /brˈaʊ̯ɐ/ - brōþēr /brˈɔːθɛːr/
+		Brot /brˈeo̯t/ - braudą /brˈɑu̯ðɑ̃/
+		Brügge /brˈʏɣə/ - brugjǭ /brˈuɣjɔ̃ː/
+		Bauk /bˈaʊ̯k/ - bōks /bˈɔːks/
+		Bohm /bˈeo̯m/ - baumaz /bˈɑu̯mɑz/
+		Boot /bˈeo̯t/ - baitaz /bˈɑi̯tɑz/
+		bieten /bˈiːtn̩/ - bītaną /bˈiːtɑnɑ̃/
+		beien /bˈɛɪ̯n̩/ - beudaną /bˈeu̯ðɑnɑ̃/
+		Bär /bˈɛːɐ/ - berô /bˈerɔːː/
+		Drom /drˈeo̯m/ - draumaz /drˈɑu̯mɑz/
+		driewen /drˈiːvn̩/ - drībaną /drˈiːβɑnɑ̃/
+		dröge /drˈøːɣə/ - druknaz /drˈuknɑz/
+		dröge /drˈøːɣə/ - draugiz /drˈɑu̯ɣiz/
+		dröge /drˈøːɣə/ - þursuz /θˈursuz/
+		drei /drˈɛɪ̯/ - þrīz /θrˈiːz/
+		drinken /drˈɪŋkn̩/ - drinkaną /drˈiŋkɑnɑ̃/
+		Dod /dˈeo̯d/ - dauþuz /dˈɑu̯θuz/
+		Doorn /dˈoːɐn/ - þurnaz /θˈurnɑz/
+		du /dˈuː/ - þū /θˈuː/
+		düer /dˈyːɐ/ - diurijaz /dˈiu̯rijɑz/
+		Dochter /dˈɔxtɐ/ - duhtēr /dˈuxtɛːr/
+		Deif /dˈɛɪ̯f/ - þeubaz /θˈeu̯βɑz/
+		Deirt /dˈɛɪ̯ɐt/ - deuzą /dˈeu̯zɑ̃/
+		dick /dˈɪk/ - þekuz /θˈekuz/
+		Ding /dˈɪŋ/ - þinhsą /θˈinxsɑ̃/
+		Ding /dˈɪŋ/ - þingą /θˈiŋɡɑ̃/
+		Dunner /dˈʊnɐ/ - þunraz /θˈunrɑz/
+		dünne /dˈʏnə/ - þunniz /θˈunːiz/
+		dünne /dˈʏnə/ - þunnuz /θˈunːuz/
+		Fleige /flˈɛɪ̯jə/ - fleugǭ /ɸlˈeu̯ɣɔ̃ː/
+		fleigen /flˈɛɪ̯ŋ/ - fleuganą /ɸlˈeu̯ɣɑnɑ̃/
+		frie /frˈiː/ - frijaz /ɸrˈijɑz/
+		Fru /frˈuː/ - kwenǭ /kʷˈenɔ̃ː/
+		Fru /frˈuː/ - frawjǭ /ɸrˈɑwjɔ̃ː/
+		freisen /frˈɛɪ̯zn̩/ - freusaną /ɸrˈeu̯sɑnɑ̃/
+		frisch /frˈɪʃ/ - friskaz /ɸrˈiskɑz/
+		Fründ /frˈʏnd/ - frijōndz /ɸrˈijɔːndz/
+		Faut /fˈaʊ̯t/ - fōts /ɸˈɔːts/
+		Feer /fˈeːɐ/ - feþrō /ɸˈeθrɔː/
+		Füer /fˈyːɐ/ - fōr /ɸˈɔːr/
+		Vader /fˈɒːdɐ/ - fadēr /ɸˈɑðɛːr/
+		folgen /fˈɔlɡn̩/ - fulgāną /ɸˈulɣɑːnɑ̃/
+		feulen /fˈɔʏ̯ln̩/ - fōlijaną /ɸˈɔlijɑnɑ̃/
+		veir /fˈɛɪ̯ɐ/ - fedwōr /ɸˈeðwɔːr/
+		Finger /fˈɪŋɐ/ - fingraz /ɸˈiŋɡrɑz/
+		Fisch /fˈɪʃ/ - fiskaz /ɸˈiskɑz/
+		Hand /hˈand/ - handuz /xˈɑnduz/
+		Harte /hˈaɐtə/ - hertô /xˈertɔːː/
+		hoch /hˈeo̯x/ - hauhaz /xˈɑu̯xɑz/
+		hoch /hˈeo̯x/ - haugaz /xˈɑu̯ɣɑz/
+		hier /hˈiːɐ/ - hē₂r /xˈeːr/
+		Hus /hˈuːs/ - hūsą /xˈuːsɑ̃/
+		Hut /hˈuːt/ - hūdiz /xˈuːðiz/
+		Hase /hˈɒːzə/ - hasô /xˈɑsɔːː/
+		Haar /hˈɒːɐ/ - hērą /xˈɛːrɑ̃/
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Honnig /hˈɔnɪç/ - hunangą /xˈunɑŋɡɑ̃/
+		Honnig /hˈɔnɪç/ - hunagą /xˈunɑɣɑ̃/
+		heuren /hˈɔʏ̯ɐn/ - hauzijaną /xˈɑu̯zijɑnɑ̃/
+		hebben /hˈɛbn̩/ - habjaną /xˈɑβjɑnɑ̃/
+		Henn /hˈɛn/ - hanjō /xˈɑnjɔː/
+		heit /hˈɛɪ̯t/ - haitaz /xˈɑi̯tɑz/
+		hillig /hˈɪlɪç/ - hailagaz /xˈɑi̯lɑɣɑz/
+		Hund /hˈʊnd/ - hundaz /xˈundɑz/
+		Hunger /hˈʊŋɐ/ - hunhruz /xˈunxruz/
+		geben /jˈeːm/ - gebaną /ɣˈeβɑnɑ̃/
+		gäl /jˈɛl/ - gelwaz /ɣˈelwɑz/
+		Knei /knˈɛɪ̯/ - knewą /knˈewɑ̃/
+		Kalf /kˈalf/ - kalbaz /kˈɑlβɑz/
+		Kauh /kˈaʊ̯/ - kūz /kˈuːz/
+		Küken /kˈyːkn̩/ - kiukīną /kˈiu̯kiːnɑ̃/
+		Küken /kˈyːkn̩/ - kukkilīngaz /kˈukːiliːŋɡaz/
+		können /kˈœn̩/ - kunnaną /kˈunːɑnɑ̃/
+		Kopp /kˈɔp/ - kuppaz /kˈupːɑz/
+		Kind /kˈɪnd/ - kelþaz /kˈelθɑz/
+		Kind /kˈɪnd/ - kinþą /kˈinθɑ̃/
+		Lamm /lˈam/ - lambaz /lˈɑmbɑz/
+		Land /lˈand/ - landą /lˈɑndɑ̃/
+		lachen /lˈaxn̩/ - hlahjaną /xlˈɑxjɑnɑ̃/
+		lang /lˈaŋ/ - langaz /lˈɑŋɡɑz/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+		Licht /lˈɪç/ - leuhsą /lˈeu̯xsɑ̃/
+		Licht /lˈɪç/ - leuhtą /lˈeu̯xtɑ̃/
+		Mann /mˈan/ - mann- /mˈɑnː/
+		Macht /mˈaxt/ - mahtiz /mˈɑxtiz/
+		Mus /mˈuːs/ - mūs /mˈuːs/
+		Maan /mˈɒːn/ - mēnô /mˈɛːnɔːː/
+		Melk /mˈɛlk/ - meluks /mˈeluks/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		Mund /mˈʊnd/ - mūlą /mˈuːlɑ̃/
+		Nacht /nˈax/ - nahts /nˈɑxts/
+		negen /nˈeːɣn̩/ - newun /nˈewun/
+		nie /nˈiː/ - niwjaz /nˈiu̯jɑz/
+		naket /nˈɒːkət/ - nakwadaz /nˈɑkʷɑðɑz/
+		Name /nˈɒːmə/ - namô /nˈɑmɔːː/
+		Näse /nˈɛːzə/ - nasō /nˈɑsɔː/
+		Rook /rˈeo̯k/ - raukiz /rˈɑu̯kiz/
+		rot /rˈeo̯t/ - raudaz /rˈɑu̯ðɑz/
+		riek /rˈiːk/ - rīkijaz /rˈiːkijɑz/
+		Regen /rˈɛːn/ - regną /rˈeɣnɑ̃/
+		Ring /rˈɪŋ/ - hringaz /xrˈiŋɡɑz/
+		Slange /slˈaŋə/ - slangô /slˈɑŋɡɔːː/
+		slapen /slˈɒːbm̩/ - slēpaną /slˈɛːpɑnɑ̃/
+		Snei /snˈɛɪ̯/ - snaiwaz /snˈɑi̯wɑz/
+		Steern /stˈeːɐn/ - sternǭ /stˈernɔ̃ː/
+		Storm /stˈɔɐm/ - sturmaz /stˈurmɑz/
+		Stein /stˈɛɪ̯n/ - stainaz /stˈɑi̯nɑz/
+		swart /swˈaɐt/ - swartaz /swˈɑrtɑz/
+		Swien /swˈiːn/ - swīną /swˈiːnɑ̃/
+		swimmen /swˈɪm/ - swimmaną /swˈimːɑnɑ̃/
+		Trane /trˈɒːnə/ - trahnuz /trˈɑxnuz/
+		twei /tvˈɛɪ̯/ - twai /twˈɑi̯/
+		twintig /tvˈɪntɪç/ - twai tigiwiz /twɑi̯tˈiɣiwiz/
+		Tied /tˈiːd/ - tīdiz /tˈiːðiz/
+		tein /tˈɛɪ̯n/ - tehun /tˈexun/
+		Tunge /tˈʊŋə/ - tungǭ /tˈuŋɡɔ̃ː/
+		wat /vˈat/ - hwat /xʷˈɑt/
+		warm /vˈaːɐm/ - warmaz /wˈɑrmɑz/
+		wi /vˈiː/ - wīz /wˈiːz/
+		Wief /vˈiːf/ - wībą /wˈiːβɑ̃/
+		Worm /vˈoːɐm/ - wurmiz /wˈurmiz/
+		Wort /vˈoːɐt/ - wurdą /wˈurðɑ̃/
+		Water /vˈɒːtɐ/ - watnō /wˈɑtnɔː/
+		Water /vˈɒːtɐ/ - watōr /wˈɑtɔːr/
+		wetten /vˈɛtn̩/ - witaną /wˈitɑnɑ̃/
+		Weg /vˈɛç/ - wegaz /wˈeɣɑz/
+		Wind /vˈɪnd/ - windaz /wˈindɑz/
+		witt /vˈɪt/ - hwītaz /xʷˈiːtɑz/
+		Wulf /vˈʊlf/ - wulfaz /wˈulɸɑz/
+		Wulle /vˈʊlə/ - wullō /wˈulːɔː/
+		wünschen /vˈʏnʃn̩/ - wunskijaną /wˈunskijɑnɑ̃/
+		Sand /zˈand/ - samdaz /sˈɑmdɑz/
+		Seele /zˈeːlə/ - saiwalu /sˈɑi̯wɑlu/
+		Siete /zˈiːtə/ - sīdǭ /sˈiːðɔ̃ː/
+		Sohn /zˈoːn/ - sunuz /sˈunuz/
+		seute /zˈɔʏ̯tə/ - swōtuz /swˈɔːtuz/
+		seggen /zˈɛjn̩/ - sagjaną /sˈɑɣjɑnɑ̃/
+		seihn /zˈɛɪ̯n/ - sehwaną /sˈexʷɑnɑ̃/
+		sitten /zˈɪtn̩/ - sitjaną /sˈitjɑnɑ̃/
+		singen /zˈɪŋ/ - singwaną /sˈiŋɡʷɑnɑ̃/
+		Gras /ɣrˈaːs/ - grasą /ɣrˈɑsɑ̃/
+		grot /ɣrˈeo̯t/ - grautaz /ɣrˈɑu̯tɑz/
+		grote /ɣrˈeo̯tə/ - grautaz /ɣrˈɑu̯tɑz/
+		Gast /ɣˈas/ - gastiz /ɣˈɑstiz/
+		Gaus /ɣˈaʊ̯s/ - gans /ɣˈɑns/
+		Gold /ɣˈɔld/ - gulþą /ɣˈulθɑ̃/
+		gut /ɣˈʊt/ - gōdaz /ɣˈɔːðɑz/
+		scharpe /ʃˈaɐpə/ - skarpaz /skˈɑrpɑz/
+		Schiete /ʃˈiːtə/ - skitaz /skˈitɑz/
+		schöne /ʃˈøːnə/ - skauniz /skˈɑu̯niz/
+		Schap /ʃˈɒːp/ - fahaz /ɸˈɑxɑz/
+		Schipp /ʃˈɪp/ - skipą /skˈipɑ̃/
+		alle /ˈalə/ - allaz /ˈɑlːɑz/
+		anner /ˈanɐ/ - anþeraz /ˈɑnθerɑz/
+		Appel /ˈapl̩/ - apluz /ˈɑpluz/
+		Appel /ˈapl̩/ - apaliją /ˈɑpɑlijɑ̃/
+		achte /ˈaxtə/ - ahtōu /ˈɑxtɔːu̯/
+		Arm /ˈaɐm/ - armaz /ˈɑrmɑz/
+		Asche /ˈaʃə/ - askǭ /ˈɑskɔ̃ː/
+		Ohr /ˈeo̯ɐ/ - ausô /ˈɑu̯sɔːː/
+		Ooge /ˈeo̯ɣə/ - augô /ˈɑu̯ɣɔːː/
+		Ies /ˈiːs/ - īsą /ˈiːsɑ̃/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		ower /ˈoːvɐ/ - uber /ˈuβer/
+		ower /ˈoːvɐ/ - ubiri /ˈuβiri/
+		Ule /ˈuːlə/ - uwwalǭ /ˈuwːɑlɔ̃ː/
+		ut /ˈuːt/ - ūt /ˈuːt/
+		ölwe /ˈœlvə/ - ainalif /ˈɑi̯nɑliɸ/
+		Aal /ˈɒːl/ - ēlaz /ˈɛːlɑz/
+		Ape /ˈɒːpə/ - apô /ˈɑpɔːː/
+		old /ˈɔld/ - aldaz /ˈɑldɑz/
+		eck /ˈɛk/ - ek /ˈek/
+		Ei /ˈɛɪ̯/ - ajją /ˈɑjːɑ̃/
+		Eike /ˈɛɪ̯kə/ - aiks /ˈɑi̯ks/
+		Imme /ˈɪmə/ - bijǭ /bˈijɔ̃ː/
+		in /ˈɪn/ - in /ˈin/
+
+Final disqualified:
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 181
+	Disqualified: 191
+	Added: 0
+	Removed: 5
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+
+Iteration 2
+	Qualified: 180
+	Disqualified: 192
+	Added: 0
+	Removed: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 3
+	Qualified: 181
+	Disqualified: 191
+	Added: 1
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 0
+
+Final qualifying:
+		Blaume /blˈaʊ̯mə/ - blōmô /blˈɔːmɔːː/
+		Bläet /blˈɛə̯t/ - bladą /blˈɑðɑ̃/
+		Brot /brˈeo̯t/ - braudą /brˈɑu̯ðɑ̃/
+		Brügge /brˈʏɣə/ - brugjǭ /brˈuɣjɔ̃ː/
+		Barg /bˈaɐx/ - bergaz /bˈerɣɑz/
+		Bauk /bˈaʊ̯k/ - bōks /bˈɔːks/
+		Bohm /bˈeo̯m/ - baumaz /bˈɑu̯mɑz/
+		Boot /bˈeo̯t/ - baitaz /bˈɑi̯tɑz/
+		beter /bˈeːtɐ/ - batizô /bˈɑtizɔːː/
+		bieten /bˈiːtn̩/ - bītaną /bˈiːtɑnɑ̃/
+		Bost /bˈɔst/ - breustą /brˈeu̯stɑ̃/
+		Bein /bˈɛɪ̯n/ - bainą /bˈɑi̯nɑ̃/
+		Bär /bˈɛːɐ/ - berô /bˈerɔːː/
+		Drom /drˈeo̯m/ - draumaz /drˈɑu̯mɑz/
+		driewen /drˈiːvn̩/ - drībaną /drˈiːβɑnɑ̃/
+		drömen /drˈøːmn̩/ - draumijaną /drˈɑu̯mijɑnɑ̃/
+		dröge /drˈøːɣə/ - druknaz /drˈuknɑz/
+		dröge /drˈøːɣə/ - draugiz /drˈɑu̯ɣiz/
+		dröge /drˈøːɣə/ - þursuz /θˈursuz/
+		drei /drˈɛɪ̯/ - þrīz /θrˈiːz/
+		drinken /drˈɪŋkn̩/ - drinkaną /drˈiŋkɑnɑ̃/
+		Dag /dˈax/ - dagaz /dˈɑɣɑz/
+		danken /dˈaŋkn̩/ - þankōną /θˈɑŋkɔːnɑ̃/
+		du /dˈuː/ - þū /θˈuː/
+		dusend /dˈuːzn̩d/ - þūsundī /θˈuːsundiː/
+		deip /dˈɛɪ̯p/ - deupaz /dˈeu̯pɑz/
+		Deirt /dˈɛɪ̯ɐt/ - deuzą /dˈeu̯zɑ̃/
+		Ding /dˈɪŋ/ - þinhsą /θˈinxsɑ̃/
+		Dunner /dˈʊnɐ/ - þunraz /θˈunrɑz/
+		dünne /dˈʏnə/ - þunniz /θˈunːiz/
+		dütsch /dˈʏtʃ/ - þiudiskaz /θˈiu̯ðiskɑz/
+		Fleige /flˈɛɪ̯jə/ - fleugǭ /ɸlˈeu̯ɣɔ̃ː/
+		fleigen /flˈɛɪ̯ŋ/ - fleuganą /ɸlˈeu̯ɣɑnɑ̃/
+		Fleisch /flˈɛɪ̯ʃ/ - flaiski /ɸlˈɑi̯ski/
+		frie /frˈiː/ - frijaz /ɸrˈijɑz/
+		Fru /frˈuː/ - kwenǭ /kʷˈenɔ̃ː/
+		Fru /frˈuː/ - frawjǭ /ɸrˈɑwjɔ̃ː/
+		freisen /frˈɛɪ̯zn̩/ - freusaną /ɸrˈeu̯sɑnɑ̃/
+		frisch /frˈɪʃ/ - friskaz /ɸrˈiskɑz/
+		Faut /fˈaʊ̯t/ - fōts /ɸˈɔːts/
+		fief /fˈiːf/ - fimf /ɸˈimɸ/
+		Vugel /fˈuːɣl̩/ - fuglaz /ɸˈuɣlɑz/
+		Füer /fˈyːɐ/ - fōr /ɸˈɔːr/
+		Vader /fˈɒːdɐ/ - fadēr /ɸˈɑðɛːr/
+		folgen /fˈɔlɡn̩/ - fulgijaną /ɸˈulɣijɑnɑ̃/
+		folgen /fˈɔlɡn̩/ - fulgāną /ɸˈulɣɑːnɑ̃/
+		Foss /fˈɔs/ - fuhsaz /ɸˈuxsɑz/
+		veir /fˈɛɪ̯ɐ/ - fedwōr /ɸˈeðwɔːr/
+		Finger /fˈɪŋɐ/ - fingraz /ɸˈiŋɡrɑz/
+		Fisch /fˈɪʃ/ - fiskaz /ɸˈiskɑz/
+		vull /fˈʊl/ - fullaz /ɸˈulːɑz/
+		Hand /hˈand/ - handuz /xˈɑnduz/
+		Harte /hˈaɐtə/ - hertô /xˈertɔːː/
+		hoch /hˈeo̯x/ - hauhaz /xˈɑu̯xɑz/
+		hoch /hˈeo̯x/ - haugaz /xˈɑu̯ɣɑz/
+		hier /hˈiːɐ/ - hē₂r /xˈeːr/
+		Hut /hˈuːt/ - hūdiz /xˈuːðiz/
+		Hase /hˈɒːzə/ - hasô /xˈɑsɔːː/
+		Haar /hˈɒːɐ/ - hērą /xˈɛːrɑ̃/
+		Honnig /hˈɔnɪç/ - hunangą /xˈunɑŋɡɑ̃/
+		Honnig /hˈɔnɪç/ - hunagą /xˈunɑɣɑ̃/
+		heuren /hˈɔʏ̯ɐn/ - hauzijaną /xˈɑu̯zijɑnɑ̃/
+		hebben /hˈɛbn̩/ - habjaną /xˈɑβjɑnɑ̃/
+		Henn /hˈɛn/ - hanjō /xˈɑnjɔː/
+		Henn /hˈɛn/ - hōnijǭ /xˈɔːnijɔ̃ː/
+		heit /hˈɛɪ̯t/ - haitaz /xˈɑi̯tɑz/
+		hillig /hˈɪlɪç/ - hailagaz /xˈɑi̯lɑɣɑz/
+		Hunger /hˈʊŋɐ/ - hunhruz /xˈunxruz/
+		Hunger /hˈʊŋɐ/ - hungruz /xˈuŋɡruz/
+		greun /jrˈɔʏ̯n/ - grōniz /ɣrˈɔːniz/
+		Jahr /jˈaːɐ/ - jērą /jˈɛːrɑ̃/
+		geben /jˈeːm/ - gebaną /ɣˈeβɑnɑ̃/
+		gäl /jˈɛl/ - gelwaz /ɣˈelwɑz/
+		jung /jˈʊŋ/ - jungaz /jˈuŋɡɑz/
+		Küken /kˈyːkn̩/ - kiukīną /kˈiu̯kiːnɑ̃/
+		können /kˈœn̩/ - kunnaną /kˈunːɑnɑ̃/
+		kold /kˈɔld/ - kaldaz /kˈɑldɑz/
+		Kopp /kˈɔp/ - kuppaz /kˈupːɑz/
+		Kind /kˈɪnd/ - kelþaz /kˈelθɑz/
+		Kind /kˈɪnd/ - kinþą /kˈinθɑ̃/
+		Land /lˈand/ - landą /lˈɑndɑ̃/
+		lachen /lˈaxn̩/ - hlahjaną /xlˈɑxjɑnɑ̃/
+		lang /lˈaŋ/ - langaz /lˈɑŋɡɑz/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+		Licht /lˈɪç/ - leuhsą /lˈeu̯xsɑ̃/
+		Licht /lˈɪç/ - leuhtą /lˈeu̯xtɑ̃/
+		lichte /lˈɪçtə/ - linhtaz /lˈĩːxtɑz/
+		Mann /mˈan/ - mann- /mˈɑnː/
+		Macht /mˈaxt/ - mahtiz /mˈɑxtiz/
+		mi /mˈiː/ - miz /mˈiz/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		Muul /mˈuːl/ - mūlą /mˈuːlɑ̃/
+		Mus /mˈuːs/ - mūs /mˈuːs/
+		Maan /mˈɒːn/ - mēnô /mˈɛːnɔːː/
+		Melk /mˈɛlk/ - meluks /mˈeluks/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		Mund /mˈʊnd/ - munþaz /mˈunθɑz/
+		Nacht /nˈax/ - nahts /nˈɑxts/
+		negen /nˈeːɣn̩/ - newun /nˈewun/
+		nie /nˈiː/ - niwjaz /nˈiu̯jɑz/
+		naket /nˈɒːkət/ - nakwadaz /nˈɑkʷɑðɑz/
+		Nägel /nˈɛːjl̩/ - naglaz /nˈɑɣlɑz/
+		Näse /nˈɛːzə/ - nasō /nˈɑsɔː/
+		rot /rˈeo̯t/ - raudaz /rˈɑu̯ðɑz/
+		riek /rˈiːk/ - rīkijaz /rˈiːkijɑz/
+		Recht /rˈɛçt/ - rehtaz /rˈextɑz/
+		Regen /rˈɛːn/ - regną /rˈeɣnɑ̃/
+		Ring /rˈɪŋ/ - hringaz /xrˈiŋɡɑz/
+		Slange /slˈaŋə/ - slangô /slˈɑŋɡɔːː/
+		Staul /stˈaʊ̯l/ - stōlaz /stˈɔːlɑz/
+		Steern /stˈeːɐn/ - sternǭ /stˈernɔ̃ː/
+		Storm /stˈɔɐm/ - sturmaz /stˈurmɑz/
+		Stein /stˈɛɪ̯n/ - stainaz /stˈɑi̯nɑz/
+		swart /swˈaɐt/ - swartaz /swˈɑrtɑz/
+		Swien /swˈiːn/ - swīną /swˈiːnɑ̃/
+		swimmen /swˈɪm/ - swimmaną /swˈimːɑnɑ̃/
+		Trane /trˈɒːnə/ - trahnuz /trˈɑxnuz/
+		twölf /tvˈœlf/ - twalif /twˈɑliɸ/
+		twei /tvˈɛɪ̯/ - twai /twˈɑi̯/
+		twintig /tvˈɪntɪç/ - twai tigiwiz /twɑi̯tˈiɣiwiz/
+		Tied /tˈiːd/ - tīdiz /tˈiːðiz/
+		tein /tˈɛɪ̯n/ - tehun /tˈexun/
+		Tunge /tˈʊŋə/ - tungǭ /tˈuŋɡɔ̃ː/
+		wat /vˈat/ - hwat /xʷˈɑt/
+		warm /vˈaːɐm/ - warmaz /wˈɑrmɑz/
+		Wief /vˈiːf/ - wībą /wˈiːβɑ̃/
+		Worm /vˈoːɐm/ - wurmiz /wˈurmiz/
+		Water /vˈɒːtɐ/ - watnō /wˈɑtnɔː/
+		Water /vˈɒːtɐ/ - watōr /wˈɑtɔːr/
+		wetten /vˈɛtn̩/ - witaną /wˈitɑnɑ̃/
+		Weg /vˈɛç/ - wegaz /wˈeɣɑz/
+		Wäer /vˈɛːɐ/ - wedrą /wˈeðrɑ̃/
+		Wind /vˈɪnd/ - windaz /wˈindɑz/
+		witt /vˈɪt/ - hwītaz /xʷˈiːtɑz/
+		Wulle /vˈʊlə/ - wullō /wˈulːɔː/
+		Seele /zˈeːlə/ - saiwalu /sˈɑi̯wɑlu/
+		seeben /zˈeːvn̩/ - sebun /sˈeβun/
+		Siete /zˈiːtə/ - sīdǭ /sˈiːðɔ̃ː/
+		Sohn /zˈoːn/ - sunuz /sˈunuz/
+		Solt /zˈɔlt/ - saltą /sˈɑltɑ̃/
+		seute /zˈɔʏ̯tə/ - swōtuz /swˈɔːtuz/
+		seihn /zˈɛɪ̯n/ - sehwaną /sˈexʷɑnɑ̃/
+		singen /zˈɪŋ/ - singwaną /sˈiŋɡʷɑnɑ̃/
+		Gras /ɣrˈaːs/ - grasą /ɣrˈɑsɑ̃/
+		grot /ɣrˈeo̯t/ - grautaz /ɣrˈɑu̯tɑz/
+		Gast /ɣˈas/ - gastiz /ɣˈɑstiz/
+		Gaus /ɣˈaʊ̯s/ - gans /ɣˈɑns/
+		Gold /ɣˈɔld/ - gulþą /ɣˈulθɑ̃/
+		Gott /ɣˈɔt/ - gudą /ɣˈuðɑ̃/
+		gut /ɣˈʊt/ - gōdaz /ɣˈɔːðɑz/
+		scharpe /ʃˈaɐpə/ - skarpaz /skˈɑrpɑz/
+		Schiete /ʃˈiːtə/ - skitaz /skˈitɑz/
+		schöne /ʃˈøːnə/ - skauniz /skˈɑu̯niz/
+		Schap /ʃˈɒːp/ - skēpą /skˈɛːpɑ̃/
+		Schap /ʃˈɒːp/ - fahaz /ɸˈɑxɑz/
+		Schipp /ʃˈɪp/ - skipą /skˈipɑ̃/
+		alle /ˈalə/ - allaz /ˈɑlːɑz/
+		anner /ˈanɐ/ - anþeraz /ˈɑnθerɑz/
+		Appel /ˈapl̩/ - apluz /ˈɑpluz/
+		Appel /ˈapl̩/ - apaliją /ˈɑpɑlijɑ̃/
+		achte /ˈaxtə/ - ahtōu /ˈɑxtɔːu̯/
+		Arm /ˈaɐm/ - armaz /ˈɑrmɑz/
+		Asche /ˈaʃə/ - askǭ /ˈɑskɔ̃ː/
+		Ohr /ˈeo̯ɐ/ - ausô /ˈɑu̯sɔːː/
+		Eere /ˈeːrə/ - erþō /ˈerθɔː/
+		Ies /ˈiːs/ - īsą /ˈiːsɑ̃/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Oben /ˈoːm/ - ufnaz /ˈuɸnɑz/
+		ower /ˈoːvɐ/ - ubiri /ˈuβiri/
+		Ule /ˈuːlə/ - uwwalǭ /ˈuwːɑlɔ̃ː/
+		ut /ˈuːt/ - ūt /ˈuːt/
+		ölwe /ˈœlvə/ - ainalif /ˈɑi̯nɑliɸ/
+		Aal /ˈɒːl/ - ēlaz /ˈɛːlɑz/
+		Ape /ˈɒːpə/ - apô /ˈɑpɔːː/
+		old /ˈɔld/ - aldaz /ˈɑldɑz/
+		eck /ˈɛk/ - ek /ˈek/
+		Ecke /ˈɛkə/ - agjō /ˈɑɣjɔː/
+		eine /ˈɛɪ̯nə/ - ainaz /ˈɑi̯nɑz/
+		Imme /ˈɪmə/ - bijǭ /bˈijɔ̃ː/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+		üsch /ˈʏʃ/ - uns /ˈuns/
+
+Final disqualified:
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		slapen /slˈɒːbm̩/ - swefaną /swˈeɸɑnɑ̃/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 179
+	Disqualified: 193
+	Added: 0
+	Removed: 7
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 2
+	Qualified: 179
+	Disqualified: 193
+	Added: 2
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 2
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+
+Iteration 3
+	Qualified: 180
+	Disqualified: 192
+	Added: 2
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+	Removed: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+
+Iteration 4
+	Qualified: 181
+	Disqualified: 191
+	Added: 1
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+	Removed: 0
+
+Iteration 5
+	Qualified: 179
+	Disqualified: 193
+	Added: 0
+	Removed: 2
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+
+Iteration 6
+	Qualified: 181
+	Disqualified: 191
+	Added: 2
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+	Removed: 0
+
+Final qualifying:
+		Blaut /blˈaʊ̯d/ - blōþą /blˈɔːθɑ̃/
+		Blaume /blˈaʊ̯mə/ - blōmô /blˈɔːmɔːː/
+		Bläet /blˈɛə̯t/ - bladą /blˈɑðɑ̃/
+		Brauer /brˈaʊ̯ɐ/ - brōþēr /brˈɔːθɛːr/
+		Brot /brˈeo̯t/ - braudą /brˈɑu̯ðɑ̃/
+		Brügge /brˈʏɣə/ - brugjǭ /brˈuɣjɔ̃ː/
+		Barg /bˈaɐx/ - bergaz /bˈerɣɑz/
+		Bauk /bˈaʊ̯k/ - bōks /bˈɔːks/
+		Bohm /bˈeo̯m/ - baumaz /bˈɑu̯mɑz/
+		Boot /bˈeo̯t/ - baitaz /bˈɑi̯tɑz/
+		bieten /bˈiːtn̩/ - bītaną /bˈiːtɑnɑ̃/
+		Bost /bˈɔst/ - breustą /brˈeu̯stɑ̃/
+		beien /bˈɛɪ̯n̩/ - beudaną /bˈeu̯ðɑnɑ̃/
+		bidden /bˈɪdn̩/ - bidjaną /bˈiðjɑnɑ̃/
+		Drom /drˈeo̯m/ - draumaz /drˈɑu̯mɑz/
+		driewen /drˈiːvn̩/ - drībaną /drˈiːβɑnɑ̃/
+		drömen /drˈøːmn̩/ - draumijaną /drˈɑu̯mijɑnɑ̃/
+		dröge /drˈøːɣə/ - druknaz /drˈuknɑz/
+		drinken /drˈɪŋkn̩/ - drinkaną /drˈiŋkɑnɑ̃/
+		danken /dˈaŋkn̩/ - þankōną /θˈɑŋkɔːnɑ̃/
+		Dod /dˈeo̯d/ - dauþuz /dˈɑu̯θuz/
+		Doorn /dˈoːɐn/ - þurnaz /θˈurnɑz/
+		du /dˈuː/ - þū /θˈuː/
+		dusend /dˈuːzn̩d/ - þūsundī /θˈuːsundiː/
+		düer /dˈyːɐ/ - diurijaz /dˈiu̯rijɑz/
+		Deif /dˈɛɪ̯f/ - þeubaz /θˈeu̯βɑz/
+		Deirt /dˈɛɪ̯ɐt/ - deuzą /dˈeu̯zɑ̃/
+		Ding /dˈɪŋ/ - þinhsą /θˈinxsɑ̃/
+		Ding /dˈɪŋ/ - þingą /θˈiŋɡɑ̃/
+		dünne /dˈʏnə/ - þunniz /θˈunːiz/
+		dünne /dˈʏnə/ - þunnuz /θˈunːuz/
+		dütsch /dˈʏtʃ/ - þiudiskaz /θˈiu̯ðiskɑz/
+		Fleige /flˈɛɪ̯jə/ - fleugǭ /ɸlˈeu̯ɣɔ̃ː/
+		fleigen /flˈɛɪ̯ŋ/ - fleuganą /ɸlˈeu̯ɣɑnɑ̃/
+		Fleisch /flˈɛɪ̯ʃ/ - flaiski /ɸlˈɑi̯ski/
+		Fru /frˈuː/ - frawjǭ /ɸrˈɑwjɔ̃ː/
+		freisen /frˈɛɪ̯zn̩/ - freusaną /ɸrˈeu̯sɑnɑ̃/
+		frisch /frˈɪʃ/ - friskaz /ɸrˈiskɑz/
+		Fründ /frˈʏnd/ - frijōndz /ɸrˈijɔːndz/
+		Faut /fˈaʊ̯t/ - fōts /ɸˈɔːts/
+		Feer /fˈeːɐ/ - feþrō /ɸˈeθrɔː/
+		fief /fˈiːf/ - fimf /ɸˈimɸ/
+		Füer /fˈyːɐ/ - fōr /ɸˈɔːr/
+		Vader /fˈɒːdɐ/ - fadēr /ɸˈɑðɛːr/
+		folgen /fˈɔlɡn̩/ - fulgijaną /ɸˈulɣijɑnɑ̃/
+		folgen /fˈɔlɡn̩/ - fulgāną /ɸˈulɣɑːnɑ̃/
+		Foss /fˈɔs/ - fuhsaz /ɸˈuxsɑz/
+		Feute /fˈɔʏ̯tə/ - fōtiz /ɸˈɔːtiz/
+		Finger /fˈɪŋɐ/ - fingraz /ɸˈiŋɡrɑz/
+		Fisch /fˈɪʃ/ - fiskaz /ɸˈiskɑz/
+		vull /fˈʊl/ - fullaz /ɸˈulːɑz/
+		Hand /hˈand/ - handuz /xˈɑnduz/
+		Harte /hˈaɐtə/ - hertô /xˈertɔːː/
+		hier /hˈiːɐ/ - hē₂r /xˈeːr/
+		Hus /hˈuːs/ - hūsą /xˈuːsɑ̃/
+		Hut /hˈuːt/ - hūdiz /xˈuːðiz/
+		Hase /hˈɒːzə/ - hasô /xˈɑsɔːː/
+		Haar /hˈɒːɐ/ - hērą /xˈɛːrɑ̃/
+		Honnig /hˈɔnɪç/ - hunangą /xˈunɑŋɡɑ̃/
+		Honnig /hˈɔnɪç/ - hunagą /xˈunɑɣɑ̃/
+		heuren /hˈɔʏ̯ɐn/ - hauzijaną /xˈɑu̯zijɑnɑ̃/
+		Henn /hˈɛn/ - hanjō /xˈɑnjɔː/
+		Henn /hˈɛn/ - hōnijǭ /xˈɔːnijɔ̃ː/
+		heit /hˈɛɪ̯t/ - haitaz /xˈɑi̯tɑz/
+		hillig /hˈɪlɪç/ - hailagaz /xˈɑi̯lɑɣɑz/
+		Hund /hˈʊnd/ - hundaz /xˈundɑz/
+		Hunger /hˈʊŋɐ/ - hunhruz /xˈunxruz/
+		Hunger /hˈʊŋɐ/ - hungruz /xˈuŋɡruz/
+		greun /jrˈɔʏ̯n/ - grōniz /ɣrˈɔːniz/
+		Jahr /jˈaːɐ/ - jērą /jˈɛːrɑ̃/
+		geben /jˈeːm/ - gebaną /ɣˈeβɑnɑ̃/
+		gäl /jˈɛl/ - gelwaz /ɣˈelwɑz/
+		jung /jˈʊŋ/ - jungaz /jˈuŋɡɑz/
+		Knei /knˈɛɪ̯/ - knewą /knˈewɑ̃/
+		Kalf /kˈalf/ - kalbaz /kˈɑlβɑz/
+		Kauh /kˈaʊ̯/ - kūz /kˈuːz/
+		Küken /kˈyːkn̩/ - kiukīną /kˈiu̯kiːnɑ̃/
+		können /kˈœn̩/ - kunnaną /kˈunːɑnɑ̃/
+		kold /kˈɔld/ - kaldaz /kˈɑldɑz/
+		Kopp /kˈɔp/ - kuppaz /kˈupːɑz/
+		Kind /kˈɪnd/ - kelþaz /kˈelθɑz/
+		Kind /kˈɪnd/ - kinþą /kˈinθɑ̃/
+		Lamm /lˈam/ - lambaz /lˈɑmbɑz/
+		lachen /lˈaxn̩/ - hlahjaną /xlˈɑxjɑnɑ̃/
+		lang /lˈaŋ/ - langaz /lˈɑŋɡɑz/
+		lopen /lˈoːbm̩/ - hlaupaną /xlˈɑu̯pɑnɑ̃/
+		Licht /lˈɪç/ - leuhsą /lˈeu̯xsɑ̃/
+		Licht /lˈɪç/ - leuhtą /lˈeu̯xtɑ̃/
+		lichte /lˈɪçtə/ - linhtaz /lˈĩːxtɑz/
+		Mann /mˈan/ - mann- /mˈɑnː/
+		Macht /mˈaxt/ - mahtiz /mˈɑxtiz/
+		Muul /mˈuːl/ - mūlą /mˈuːlɑ̃/
+		Mus /mˈuːs/ - mūs /mˈuːs/
+		Maan /mˈɒːn/ - mēnô /mˈɛːnɔːː/
+		Minsche /mˈɪnʃə/ - manniskaz /mˈɑnːiskɑz/
+		Mudder /mˈʊdɐ/ - mōdēr /mˈɔːðɛːr/
+		Nacht /nˈax/ - nahts /nˈɑxts/
+		negen /nˈeːɣn̩/ - newun /nˈewun/
+		nie /nˈiː/ - niwjaz /nˈiu̯jɑz/
+		naket /nˈɒːkət/ - nakwadaz /nˈɑkʷɑðɑz/
+		Name /nˈɒːmə/ - namô /nˈɑmɔːː/
+		Näse /nˈɛːzə/ - nasō /nˈɑsɔː/
+		Rook /rˈeo̯k/ - raukiz /rˈɑu̯kiz/
+		rot /rˈeo̯t/ - raudaz /rˈɑu̯ðɑz/
+		Recht /rˈɛçt/ - rehtaz /rˈextɑz/
+		Regen /rˈɛːn/ - regną /rˈeɣnɑ̃/
+		Ring /rˈɪŋ/ - hringaz /xrˈiŋɡɑz/
+		Slange /slˈaŋə/ - slangô /slˈɑŋɡɔːː/
+		slapen /slˈɒːbm̩/ - slēpaną /slˈɛːpɑnɑ̃/
+		Snei /snˈɛɪ̯/ - snaiwaz /snˈɑi̯wɑz/
+		Steern /stˈeːɐn/ - sternǭ /stˈernɔ̃ː/
+		Storm /stˈɔɐm/ - sturmaz /stˈurmɑz/
+		swart /swˈaɐt/ - swartaz /swˈɑrtɑz/
+		Swien /swˈiːn/ - swīną /swˈiːnɑ̃/
+		Swester /swˈɛstɐ/ - swestēr /swˈestɛːr/
+		swimmen /swˈɪm/ - swimmaną /swˈimːɑnɑ̃/
+		Trane /trˈɒːnə/ - trahnuz /trˈɑxnuz/
+		twölf /tvˈœlf/ - twalif /twˈɑliɸ/
+		twei /tvˈɛɪ̯/ - twai /twˈɑi̯/
+		twintig /tvˈɪntɪç/ - twai tigiwiz /twɑi̯tˈiɣiwiz/
+		Tied /tˈiːd/ - tīdiz /tˈiːðiz/
+		tein /tˈɛɪ̯n/ - tehun /tˈexun/
+		Tähne /tˈɛːnə/ - tanþs /tˈɑnθs/
+		Tunge /tˈʊŋə/ - tungǭ /tˈuŋɡɔ̃ː/
+		wat /vˈat/ - hwat /xʷˈɑt/
+		warm /vˈaːɐm/ - warmaz /wˈɑrmɑz/
+		Worm /vˈoːɐm/ - wurmiz /wˈurmiz/
+		Wort /vˈoːɐt/ - wurdą /wˈurðɑ̃/
+		Water /vˈɒːtɐ/ - watnō /wˈɑtnɔː/
+		Water /vˈɒːtɐ/ - watōr /wˈɑtɔːr/
+		wetten /vˈɛtn̩/ - witaną /wˈitɑnɑ̃/
+		Wäer /vˈɛːɐ/ - wedrą /wˈeðrɑ̃/
+		Wind /vˈɪnd/ - windaz /wˈindɑz/
+		Wulf /vˈʊlf/ - wulfaz /wˈulɸɑz/
+		Wulle /vˈʊlə/ - wullō /wˈulːɔː/
+		wünschen /vˈʏnʃn̩/ - wunskijaną /wˈunskijɑnɑ̃/
+		Sand /zˈand/ - samdaz /sˈɑmdɑz/
+		Seele /zˈeːlə/ - saiwalu /sˈɑi̯wɑlu/
+		Siete /zˈiːtə/ - sīdǭ /sˈiːðɔ̃ː/
+		Sohn /zˈoːn/ - sunuz /sˈunuz/
+		seute /zˈɔʏ̯tə/ - swōtuz /swˈɔːtuz/
+		seggen /zˈɛjn̩/ - sagjaną /sˈɑɣjɑnɑ̃/
+		seihn /zˈɛɪ̯n/ - sehwaną /sˈexʷɑnɑ̃/
+		sitten /zˈɪtn̩/ - sitjaną /sˈitjɑnɑ̃/
+		Gras /ɣrˈaːs/ - grasą /ɣrˈɑsɑ̃/
+		grot /ɣrˈeo̯t/ - grautaz /ɣrˈɑu̯tɑz/
+		grote /ɣrˈeo̯tə/ - grautaz /ɣrˈɑu̯tɑz/
+		Gast /ɣˈas/ - gastiz /ɣˈɑstiz/
+		Gaus /ɣˈaʊ̯s/ - gans /ɣˈɑns/
+		Gold /ɣˈɔld/ - gulþą /ɣˈulθɑ̃/
+		Gott /ɣˈɔt/ - gudą /ɣˈuðɑ̃/
+		gut /ɣˈʊt/ - gōdaz /ɣˈɔːðɑz/
+		scharpe /ʃˈaɐpə/ - skarpaz /skˈɑrpɑz/
+		Schiete /ʃˈiːtə/ - skitaz /skˈitɑz/
+		schöne /ʃˈøːnə/ - skauniz /skˈɑu̯niz/
+		Schap /ʃˈɒːp/ - skēpą /skˈɛːpɑ̃/
+		Schap /ʃˈɒːp/ - fahaz /ɸˈɑxɑz/
+		anner /ˈanɐ/ - anþeraz /ˈɑnθerɑz/
+		Appel /ˈapl̩/ - apluz /ˈɑpluz/
+		Appel /ˈapl̩/ - apaliją /ˈɑpɑlijɑ̃/
+		achte /ˈaxtə/ - ahtōu /ˈɑxtɔːu̯/
+		Asche /ˈaʃə/ - askǭ /ˈɑskɔ̃ː/
+		Eere /ˈeːrə/ - erþō /ˈerθɔː/
+		Ies /ˈiːs/ - īsą /ˈiːsɑ̃/
+		Oben /ˈoːm/ - uhnaz /ˈuxnɑz/
+		ower /ˈoːvɐ/ - uber /ˈuβer/
+		ower /ˈoːvɐ/ - ubiri /ˈuβiri/
+		Ule /ˈuːlə/ - uwwalǭ /ˈuwːɑlɔ̃ː/
+		ut /ˈuːt/ - ūt /ˈuːt/
+		ölwe /ˈœlvə/ - ainalif /ˈɑi̯nɑliɸ/
+		Ape /ˈɒːpə/ - apô /ˈɑpɔːː/
+		old /ˈɔld/ - aldaz /ˈɑldɑz/
+		eck /ˈɛk/ - ek /ˈek/
+		Ecke /ˈɛkə/ - agjō /ˈɑɣjɔː/
+		Ei /ˈɛɪ̯/ - ajją /ˈɑjːɑ̃/
+		Eike /ˈɛɪ̯kə/ - aiks /ˈɑi̯ks/
+		eine /ˈɛɪ̯nə/ - ainaz /ˈɑi̯nɑz/
+		äten /ˈɛːtn̩/ - etaną /ˈetɑnɑ̃/
+		Imme /ˈɪmə/ - bijǭ /bˈijɔ̃ː/
+		Imme /ˈɪmə/ - biniz /bˈiniz/
+		in /ˈɪn/ - in /ˈin/
+
+Final disqualified:
+		Bohm /bˈeo̯m/ - trewą /trˈewɑ̃/
+		Füer /fˈyːɐ/ - ailidaz /ˈɑi̯liðɑz/
+		Honnig /hˈɔnɪç/ - saimaz /sˈɑi̯mɑz/
+		Kopp /kˈɔp/ - haubudą /xˈɑu̯βuðɑ̃/
+		Muul /mˈuːl/ - munþaz /mˈunθɑz/
+
+
+-------------------
+
