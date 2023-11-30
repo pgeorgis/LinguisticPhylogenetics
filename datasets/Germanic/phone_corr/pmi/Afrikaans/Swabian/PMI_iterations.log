@@ -1,0 +1,988 @@
+Same meaning pairs: 200
+****SAMPLE 1****
+Iteration 1
+	Qualified: 155
+	Disqualified: 165
+	Added: 0
+	Removed: 5
+		kop /kˈɔp/ - Haubd /hˈao̯bd/
+		oond /ˈʊə̯nt/ - Ofa /ˈoːfa/
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+		al /ˈaɫ/ - älle /ˈɛle/
+		by /bˈəɪ̯/ - Imm /ˈim/
+
+Iteration 2
+	Qualified: 154
+	Disqualified: 166
+	Added: 1
+		al /ˈaɫ/ - älle /ˈɛle/
+	Removed: 2
+		een /ˈɪə̯n/ - ois /ˈɔe̯s/
+		mond /mˈɔnt/ - Maul /mˈao̯l/
+
+Iteration 3
+	Qualified: 154
+	Disqualified: 166
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		broer /brˈuːr/ - Bruadr /bʁˈuə̯dʌ/
+		brug /brˈœχ/ - Brugg /bʁˈuɡ/
+		brood /brˈʊə̯t/ - Brod /bʁˈoːd/
+		bloed /bɫˈut/ - Bluad /blˈuə̯d/
+		blaar /bɫˈɑːr/ - Bladd /blˈad/
+		blom /bɫˈɔm/ - Bloam /blˈɔə̯m/
+		bad /bˈat/ - Bad /bˈaːd/
+		boek /bˈuk/ - Buach /bˈuə̯x/
+		berg /bˈæːrχ/ - Berg /bˈʌɡ/
+		been /bˈɪə̯n/ - Boi /bˈɔe̯/
+		beer /bˈɪə̯r/ - Bär /bˈɛːʕ/
+		boom /bˈʊə̯m/ - Boom /bˈoːm/
+		droom /drˈʊə̯m/ - draima /dʁˈae̯ma/
+		droom /drˈʊə̯m/ - Draum /dʁˈao̯m/
+		droog /drˈʊə̯χ/ - drogga /dʁˈɔɡa/
+		dag /dˈaχ/ - Dag /dˈaːɡ/
+		dief /dˈif/ - Diab /dˈiə̯b/
+		diep /dˈip/ - diaf /dˈiə̯f/
+		duisend /dˈœɪ̯sən/ - dausad /dˈao̯sɐd/
+		duits /dˈœɪ̯ts/ - deidsch /dˈəi̯dʃ/
+		dik /dˈək/ - digg /dˈiɡ/
+		doring /dˈʊə̯rəŋ/ - Dorn /dˈɔʕn/
+		vriend /frˈint/ - Freind /fʁˈae̯nd/
+		vries /frˈis/ - friera /fʁˈiːʁa/
+		frou /frˈœu̯/ - Frau /fʁˈao̯/
+		vlieg /fɫˈiχ/ - fliaga /flˈiə̯ɡa/
+		voet /fˈut/ - Fuaß /fˈuə̯s/
+		voel /fˈuɫ/ - fiehla /fˈiːla/
+		vuur /fˈyːr/ - Feir /fˈəi̯ʌ/
+		vader /fˈɑːdər/ - Vaddr /fˈadʌ/
+		vos /fˈɔs/ - Fuchs /fˈuks/
+		vol /fˈɔɫ/ - voll /fˈol/
+		volg /fˈɔɫχ/ - folga /fˈolɡa/
+		vis /fˈəs/ - Fisch /fˈiʃ/
+		vinger /fˈəŋər/ - Fengr /fˈeŋʌ/
+		vyf /fˈəɪ̯f/ - femf /fˈɛmf/
+		veer /fˈɪə̯r/ - Fädr /fˈɛːdʌ/
+		voël /fˈʊə̯ɫ/ - Vogl /fˈoːɡl̩/
+		jaar /jˈɑːr/ - Johr /jˈɔːʕ/
+		kalf /kˈaɫf/ - Kalb /kʰˈalb/
+		koei /kˈuːi̯/ - Kuah /kʰˈuə̯/
+		koud /kˈœu̯t/ - kald /kʰˈald/
+		kaas /kˈɑːs/ - Käs /kʰˈɛːs/
+		kerk /kˈɛrk/ - Kirch /kʰˈʌç/
+		koning /kˈʊə̯nəŋ/ - Keenig /kʰˈeːniɡ/
+		land /lˈant/ - Land /lˈand/
+		lag /lˈaχ/ - lacha /lˈaxa/
+		loop /lˈʊə̯p/ - laufa /lˈao̯fa/
+		man /mˈan/ - Mo /mˈɔː/
+		mans /mˈans/ - Männr /mˈɛnʌ/
+		moeder /mˈudər/ - Muddr /mˈudʌ/
+		muis /mˈœɪ̯s/ - Maus /mˈao̯s/
+		muise /mˈœɪ̯sə/ - Meis /mˈae̯s/
+		mug /mˈœχ/ - Mugg /mˈuɡ/
+		maan /mˈɑːn/ - Mond /mˈond/
+		my /mˈəɪ̯/ - mi /mˈi/
+		melk /mˈɛɫk/ - Milch /mˈilç/
+		nuut /nˈit/ - nei /nˈəi̯/
+		naak /nˈɑːk/ - naggt /nˈaɡt/
+		naam /nˈɑːm/ - Noma /nˈɔːma/
+		naald /nˈɑːɫt/ - Nodl /nˈɔːdl̩/
+		nael /nˈɔːɫ/ - Nagl /nˈaːɡl̩/
+		neus /nˈɪø̯s/ - Nos /nˈɔːs/
+		rooi /rˈoːi̯/ - rod /ʁˈoːd/
+		ros /rˈɔs/ - Ross /ʁˈos/
+		ring /rˈəŋ/ - Reng /ʁˈeŋ/
+		ryk /rˈəɪ̯k/ - reich /ʁˈəi̯ç/
+		reën /rˈɪə̯n/ - Rega /ʁˈeːɡa/
+		skerp /skˈærp/ - scharf /ʃˈaʕf/
+		skaap /skˈɑːp/ - Schof /ʃˈoːf/
+		skip /skˈəp/ - Schiff /ʃˈif/
+		skoon /skˈʊə̯n/ - schee /ʃˈeː/
+		sneeu /snˈiw/ - Schnee /ʃnˈeː/
+		spraak /sprˈɑːk/ - Schbroch /ʃb̥ʁˈɔːx/
+		stoel /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		ster /stˈæːr/ - Schdärn /ʃdˈɛʕn/
+		steen /stˈɪə̯n/ - Schdoi /ʃdˈɔe̯/
+		swem /svˈɛm/ - schwemma /ʃʋˈema/
+		swart /swˈart/ - schwarz /ʃʋˈaʕʦ/
+		swaard /swˈɑːrt/ - Schwerd /ʃʋˈɛʕd/
+		slang /sɫˈaŋ/ - Schlang /ʃlˈaŋ/
+		slaap /sɫˈɑːp/ - schlofa /ʃlˈɔːfa/
+		sand /sˈant/ - Sand /sˈand/
+		sien /sˈin/ - seha /sˈeːa/
+		soet /sˈut/ - siaß /sˈiə̯s/
+		suster /sˈœstər/ - Schweschdr /ʃʋˈɛʃdʌ/
+		soet /sˈœu̯t/ - Salz /sˈalʦ/
+		sit /sˈət/ - sitza /sˈiʦa/
+		sing /sˈəŋ/ - singa /sˈɪŋa/
+		sy /sˈəɪ̯/ - Seide /sˈəi̯də/
+		ses /sˈɛs/ - seggs /sˈeɡs/
+		sê /sˈɛː/ - saga /sˈaːɡa/
+		seun /sˈɪø̯n/ - Soh /sˈoː/
+		traan /trˈɑːn/ - Drän /dʁˈɛːn/
+		twintig /twˈɪntəχ/ - zwanzg /ʦʋˈanʦɡ/
+		tand /tˈant/ - Zah /ʦˈaː/
+		tien /tˈin/ - zeah /ʦˈeə̯/
+		tyd /tˈœi̯t/ - Zeid /ʦˈəi̯d/
+		tong /tˈɔŋ/ - Zong /ʦˈoŋ/
+		warm /vˈarm/ - warm /ʋˈaʕm/
+		wat /vˈat/ - was /ʋˈas/
+		voete /vˈutə/ - Fiaß /fˈiə̯s/
+		wol /vˈɔɫ/ - Wolle /ʋˈole/
+		wolf /vˈɔɫf/ - Wolf /ʋˈolf/
+		wind /vˈənt/ - Weed /ʋˈeːd/
+		wit /vˈət/ - weiß /ʋˈəi̯s/
+		wyf /vˈəɪ̯f/ - Weib /ʋˈəi̯b/
+		wens /vˈɛns/ - winscha /ʋˈɪnʃa/
+		weg /vˈɛχ/ - Wäg /ʋˈɛːɡ/
+		weer /vˈɪə̯r/ - Weddr /ʋˈɛdʌ/
+		weet /vˈɪə̯t/ - wissa /ʋˈisa/
+		woord /vˈʊə̯rt/ - Wort /ʋˈoʕt/
+		hand /ɦˈant/ - Haad /hˈaːd/
+		hart /ɦˈart/ - Herz /hˈeʕʦ/
+		huis /ɦˈœɪ̯s/ - Haus /hˈao̯s/
+		haar /ɦˈɑːr/ - Hoor /hˈɔːʕ/
+		hond /ɦˈɔnt/ - Hond /hˈond/
+		honger /ɦˈɔŋər/ - Hongr /hˈoŋʌ/
+		heim /ɦˈəɪ̯m/ - hoim /hˈɔe̯m/
+		heilig /ɦˈəɪ̯ɫəχ/ - heilig /hˈae̯lɪɡ/
+		hen /ɦˈɛn/ - Henn /hˈɛn/
+		hê /ɦˈɛː/ - hann /hˈan/
+		heuning /ɦˈɪø̯nəŋ/ - Honig /hˈoːnɪɡ/
+		hoof /ɦˈʊə̯f/ - Kopf /kʰˈɔp͡f/
+		hoor /ɦˈʊə̯r/ - höra /hˈeːʁa/
+		hoog /ɦˈʊə̯χ/ - hauch /hˈao̯x/
+		lig /ɫˈəχ/ - Lichd /lˈiçd/
+		lig /ɫˈəχ/ - leichd /lˈəi̯çd/
+		ander /ˈandər/ - andr /ˈandʌ/
+		appel /ˈapəɫ/ - Abfl /ˈab̥͡fl̩/
+		arm /ˈarm/ - Arm /ˈaʕm/
+		ash /ˈas/ - Äsch /ˈɛʃ/
+		al /ˈaɫ/ - älle /ˈɛle/
+		uit /ˈœɪ̯t/ - aus /ˈao̯s/
+		uil /ˈœɪ̯ɫ/ - Eil /ˈae̯l/
+		aarde /ˈɑːrdə/ - Ärde /ˈɛʕde/
+		ons /ˈɔns/ - ons /ˈons/
+		in /ˈən/ - en /ˈen/
+		eik /ˈəɪ̯k/ - Oich /ˈɔe̯ç/
+		eg /ˈɛχ/ - Egg /ˈɛɡ/
+		eet /ˈɪə̯t/ - essa /ˈɛsa/
+		oor /ˈʊə̯r/ - Ohr /ˈoːʕ/
+		gras /χrˈas/ - Gras /ɡʁˈaːs/
+		groen /χrˈun/ - grea /ɡʁˈeə̯/
+		groot /χrˈʊə̯t/ - groß /ɡʁˈoːs/
+		gans /χˈans/ - Gaas /ɡˈaːs/
+		gas /χˈas/ - Gaschd /ɡˈaʃd/
+		goed /χˈut/ - guad /ɡˈuə̯d/
+		goud /χˈœu̯t/ - Gold /ɡˈold/
+		god /χˈɔt/ - Gott /ɡˈɔt/
+		geit /χˈəɪ̯t/ - Goiß /ɡˈɔe̯s/
+		gee /χˈɪə̯/ - gäba /ɡˈɛːba/
+		gees /χˈɪə̯s/ - Geischd /ɡˈae̯ʃd/
+		geel /χˈɪə̯ɫ/ - geal /ɡˈeə̯l/
+
+Final disqualified:
+		by /bˈəɪ̯/ - Imm /ˈim/
+		kop /kˈɔp/ - Haubd /hˈao̯bd/
+		mond /mˈɔnt/ - Maul /mˈao̯l/
+		een /ˈɪə̯n/ - ois /ˈɔe̯s/
+		oond /ˈʊə̯nt/ - Ofa /ˈoːfa/
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 155
+	Disqualified: 165
+	Added: 0
+	Removed: 5
+		reën /rˈɪə̯n/ - Rega /ʁˈeːɡa/
+		kop /kˈɔp/ - Haubd /hˈao̯bd/
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+		by /bˈəɪ̯/ - Imm /ˈim/
+		oud /ˈœu̯t/ - ald /ˈald/
+
+Iteration 2
+	Qualified: 155
+	Disqualified: 165
+	Added: 1
+		oud /ˈœu̯t/ - ald /ˈald/
+	Removed: 1
+		al /ˈaɫ/ - älle /ˈɛle/
+
+Iteration 3
+	Qualified: 156
+	Disqualified: 164
+	Added: 1
+		al /ˈaɫ/ - älle /ˈɛle/
+	Removed: 0
+
+Iteration 4
+	Qualified: 156
+	Disqualified: 164
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		broer /brˈuːr/ - Bruadr /bʁˈuə̯dʌ/
+		brug /brˈœχ/ - Brugg /bʁˈuɡ/
+		brood /brˈʊə̯t/ - Brod /bʁˈoːd/
+		bloed /bɫˈut/ - Bluad /blˈuə̯d/
+		blaar /bɫˈɑːr/ - Bladd /blˈad/
+		bad /bˈat/ - Bad /bˈaːd/
+		boek /bˈuk/ - Buach /bˈuə̯x/
+		berg /bˈæːrχ/ - Berg /bˈʌɡ/
+		bors /bˈɔːrs/ - Bruschd /bʁˈuʃd/
+		bid /bˈət/ - bidda /bˈɪda/
+		been /bˈɪə̯n/ - Boi /bˈɔe̯/
+		beer /bˈɪə̯r/ - Bär /bˈɛːʕ/
+		beter /bˈɪə̯tər/ - bessr /bˈɛsʌ/
+		boom /bˈʊə̯m/ - Boom /bˈoːm/
+		drie /drˈi/ - drei /dʁˈae̯/
+		droom /drˈʊə̯m/ - Draum /dʁˈao̯m/
+		droog /drˈʊə̯χ/ - drogga /dʁˈɔɡa/
+		dank /dˈaŋk/ - danga /dˈaŋɡa/
+		dag /dˈaχ/ - Dag /dˈaːɡ/
+		diep /dˈip/ - diaf /dˈiə̯f/
+		duisend /dˈœɪ̯sən/ - dausad /dˈao̯sɐd/
+		donder /dˈɔndər/ - Donndr /dˈondʌ/
+		dogter /dˈɔχtər/ - Dochdr /dˈɔxdʌ/
+		dik /dˈək/ - digg /dˈiɡ/
+		vriend /frˈint/ - Freind /fʁˈae̯nd/
+		vries /frˈis/ - friera /fʁˈiːʁa/
+		frou /frˈœu̯/ - Frau /fʁˈao̯/
+		vlieg /fɫˈiχ/ - fliaga /flˈiə̯ɡa/
+		vleis /fɫˈəɪ̯s/ - Floisch /flˈɔe̯ʃ/
+		fars /fˈars/ - frisch /fʁˈiʃ/
+		vier /fˈir/ - vier /fˈiʕ/
+		voet /fˈut/ - Fuaß /fˈuə̯s/
+		voel /fˈuɫ/ - fiehla /fˈiːla/
+		vuur /fˈyːr/ - Feir /fˈəi̯ʌ/
+		vader /fˈɑːdər/ - Vaddr /fˈadʌ/
+		vol /fˈɔɫ/ - voll /fˈol/
+		vinger /fˈəŋər/ - Fengr /fˈeŋʌ/
+		veer /fˈɪə̯r/ - Fädr /fˈɛːdʌ/
+		jaar /jˈɑːr/ - Johr /jˈɔːʕ/
+		kalf /kˈaɫf/ - Kalb /kʰˈalb/
+		koei /kˈuːi̯/ - Kuah /kʰˈuə̯/
+		koud /kˈœu̯t/ - kald /kʰˈald/
+		kaas /kˈɑːs/ - Käs /kʰˈɛːs/
+		kop /kˈɔp/ - Kopf /kʰˈɔp͡f/
+		kerk /kˈɛrk/ - Kirch /kʰˈʌç/
+		koning /kˈʊə̯nəŋ/ - Keenig /kʰˈeːniɡ/
+		land /lˈant/ - Land /lˈand/
+		lag /lˈaχ/ - lacha /lˈaxa/
+		loop /lˈʊə̯p/ - laufa /lˈao̯fa/
+		man /mˈan/ - Mo /mˈɔː/
+		mans /mˈans/ - Männr /mˈɛnʌ/
+		moeder /mˈudər/ - Muddr /mˈudʌ/
+		muise /mˈœɪ̯sə/ - Meis /mˈae̯s/
+		maan /mˈɑːn/ - Mond /mˈond/
+		my /mˈəɪ̯/ - mi /mˈi/
+		melk /mˈɛɫk/ - Milch /mˈilç/
+		nag /nˈaχ/ - Nachd /nˈaxd/
+		nuut /nˈit/ - nei /nˈəi̯/
+		naak /nˈɑːk/ - naggt /nˈaɡt/
+		naald /nˈɑːɫt/ - Nodl /nˈɔːdl̩/
+		nael /nˈɔːɫ/ - Nagl /nˈaːɡl̩/
+		nege /nˈɪə̯χə/ - nein /nˈae̯n/
+		rooi /rˈoːi̯/ - rod /ʁˈoːd/
+		ros /rˈɔs/ - Ross /ʁˈos/
+		ring /rˈəŋ/ - Reng /ʁˈeŋ/
+		ryk /rˈəɪ̯k/ - reich /ʁˈəi̯ç/
+		skerp /skˈærp/ - scharf /ʃˈaʕf/
+		skaap /skˈɑːp/ - Schof /ʃˈoːf/
+		skoon /skˈʊə̯n/ - schee /ʃˈeː/
+		slaan /slˈɑːn/ - schlaga /ʃlˈaːɡa/
+		sneeu /snˈiw/ - Schnee /ʃnˈeː/
+		spraak /sprˈɑːk/ - Schbroch /ʃb̥ʁˈɔːx/
+		stoel /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		ster /stˈæːr/ - Schdärn /ʃdˈɛʕn/
+		steen /stˈɪə̯n/ - Schdoi /ʃdˈɔe̯/
+		swem /svˈɛm/ - schwemma /ʃʋˈema/
+		swart /swˈart/ - schwarz /ʃʋˈaʕʦ/
+		swaard /swˈɑːrt/ - Schwerd /ʃʋˈɛʕd/
+		slang /sɫˈaŋ/ - Schlang /ʃlˈaŋ/
+		slaap /sɫˈɑːp/ - schlofa /ʃlˈɔːfa/
+		sand /sˈant/ - Sand /sˈand/
+		sien /sˈin/ - seha /sˈeːa/
+		ziel /sˈiɫ/ - Seel /sˈeːl/
+		soet /sˈut/ - siaß /sˈiə̯s/
+		suster /sˈœstər/ - Schweschdr /ʃʋˈɛʃdʌ/
+		soet /sˈœu̯t/ - Salz /sˈalʦ/
+		sit /sˈət/ - sitza /sˈiʦa/
+		sing /sˈəŋ/ - singa /sˈɪŋa/
+		sy /sˈəɪ̯/ - Seide /sˈəi̯də/
+		ses /sˈɛs/ - seggs /sˈeɡs/
+		sê /sˈɛː/ - saga /sˈaːɡa/
+		seun /sˈɪø̯n/ - Soh /sˈoː/
+		sewe /sˈɪə̯və/ - sieba /sˈiːba/
+		traan /trˈɑːn/ - Drän /dʁˈɛːn/
+		twintig /twˈɪntəχ/ - zwanzg /ʦʋˈanʦɡ/
+		twee /twˈɪə̯/ - zwoi /ʦʋˈɔe̯/
+		tand /tˈant/ - Zah /ʦˈaː/
+		tien /tˈin/ - zeah /ʦˈeə̯/
+		tyd /tˈœi̯t/ - Zeid /ʦˈəi̯d/
+		tong /tˈɔŋ/ - Zong /ʦˈoŋ/
+		warm /vˈarm/ - warm /ʋˈaʕm/
+		wat /vˈat/ - was /ʋˈas/
+		voete /vˈutə/ - Fiaß /fˈiə̯s/
+		water /vˈɑːtər/ - Wassr /ʋˈasʌ/
+		wol /vˈɔɫ/ - Wolle /ʋˈole/
+		wolf /vˈɔɫf/ - Wolf /ʋˈolf/
+		wind /vˈənt/ - Weed /ʋˈeːd/
+		wit /vˈət/ - weiß /ʋˈəi̯s/
+		wens /vˈɛns/ - winscha /ʋˈɪnʃa/
+		weer /vˈɪə̯r/ - Weddr /ʋˈɛdʌ/
+		woord /vˈʊə̯rt/ - Wort /ʋˈoʕt/
+		hand /ɦˈant/ - Haad /hˈaːd/
+		hart /ɦˈart/ - Herz /hˈeʕʦ/
+		huis /ɦˈœɪ̯s/ - Haus /hˈao̯s/
+		haas /ɦˈɑːs/ - Has /hˈaːs/
+		hond /ɦˈɔnt/ - Hond /hˈond/
+		honger /ɦˈɔŋər/ - Hongr /hˈoŋʌ/
+		heim /ɦˈəɪ̯m/ - hoim /hˈɔe̯m/
+		heilig /ɦˈəɪ̯ɫəχ/ - heilig /hˈae̯lɪɡ/
+		hen /ɦˈɛn/ - Henn /hˈɛn/
+		hê /ɦˈɛː/ - hann /hˈan/
+		heuning /ɦˈɪø̯nəŋ/ - Honig /hˈoːnɪɡ/
+		hoof /ɦˈʊə̯f/ - Haubd /hˈao̯bd/
+		hoof /ɦˈʊə̯f/ - Kopf /kʰˈɔp͡f/
+		hoor /ɦˈʊə̯r/ - höra /hˈeːʁa/
+		horing /ɦˈʊə̯rəŋ/ - Horn /hˈɔʕn/
+		hoog /ɦˈʊə̯χ/ - hauch /hˈao̯x/
+		lank /ɫˈaŋk/ - lang /lˈaŋ/
+		lig /ɫˈəχ/ - leichd /lˈəi̯çd/
+		lewer /ɫˈɪə̯vər/ - Läbr /lˈɛːbʌ/
+		ander /ˈandər/ - andr /ˈandʌ/
+		appel /ˈapəɫ/ - Abfl /ˈab̥͡fl̩/
+		ash /ˈas/ - Äsch /ˈɛʃ/
+		al /ˈaɫ/ - älle /ˈɛle/
+		oud /ˈœu̯t/ - ald /ˈald/
+		uit /ˈœɪ̯t/ - aus /ˈao̯s/
+		uil /ˈœɪ̯ɫ/ - Eil /ˈae̯l/
+		aap /ˈɑːp/ - Aff /ˈaf/
+		ons /ˈɔns/ - ons /ˈons/
+		elf /ˈɛlf/ - älf /ˈɛlf/
+		eg /ˈɛχ/ - Egg /ˈɛɡ/
+		eet /ˈɪə̯t/ - essa /ˈɛsa/
+		oor /ˈʊə̯r/ - Ohr /ˈoːʕ/
+		oog /ˈʊə̯χ/ - Aug /ˈao̯ɡ/
+		gras /χrˈas/ - Gras /ɡʁˈaːs/
+		groen /χrˈun/ - grea /ɡʁˈeə̯/
+		groot /χrˈʊə̯t/ - groß /ɡʁˈoːs/
+		gans /χˈans/ - Gaas /ɡˈaːs/
+		gas /χˈas/ - Gaschd /ɡˈaʃd/
+		goed /χˈut/ - guad /ɡˈuə̯d/
+		goud /χˈœu̯t/ - Gold /ɡˈold/
+		god /χˈɔt/ - Gott /ɡˈɔt/
+		geit /χˈəɪ̯t/ - Goiß /ɡˈɔe̯s/
+		gee /χˈɪə̯/ - gäba /ɡˈɛːba/
+		gees /χˈɪə̯s/ - Geischd /ɡˈae̯ʃd/
+		geel /χˈɪə̯ɫ/ - geal /ɡˈeə̯l/
+
+Final disqualified:
+		by /bˈəɪ̯/ - Imm /ˈim/
+		kop /kˈɔp/ - Haubd /hˈao̯bd/
+		reën /rˈɪə̯n/ - Rega /ʁˈeːɡa/
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 155
+	Disqualified: 165
+	Added: 0
+	Removed: 5
+		een /ˈɪə̯n/ - ois /ˈɔe̯s/
+		oond /ˈʊə̯nt/ - Ofa /ˈoːfa/
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+		by /bˈəɪ̯/ - Imm /ˈim/
+		oud /ˈœu̯t/ - ald /ˈald/
+
+Iteration 2
+	Qualified: 154
+	Disqualified: 166
+	Added: 1
+		oud /ˈœu̯t/ - ald /ˈald/
+	Removed: 2
+		reën /rˈɪə̯n/ - Rega /ʁˈeːɡa/
+		mond /mˈɔnt/ - Maul /mˈao̯l/
+
+Iteration 3
+	Qualified: 154
+	Disqualified: 166
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		broer /brˈuːr/ - Bruadr /bʁˈuə̯dʌ/
+		brug /brˈœχ/ - Brugg /bʁˈuɡ/
+		brood /brˈʊə̯t/ - Brod /bʁˈoːd/
+		bloed /bɫˈut/ - Bluad /blˈuə̯d/
+		blaar /bɫˈɑːr/ - Bladd /blˈad/
+		blom /bɫˈɔm/ - Bloam /blˈɔə̯m/
+		boek /bˈuk/ - Buach /bˈuə̯x/
+		berg /bˈæːrχ/ - Berg /bˈʌɡ/
+		bors /bˈɔːrs/ - Bruschd /bʁˈuʃd/
+		bid /bˈət/ - bidda /bˈɪda/
+		been /bˈɪə̯n/ - Boi /bˈɔe̯/
+		beter /bˈɪə̯tər/ - bessr /bˈɛsʌ/
+		boom /bˈʊə̯m/ - Boom /bˈoːm/
+		drie /drˈi/ - drei /dʁˈae̯/
+		dryf /drˈəɪ̯f/ - dreiba /dʁˈəi̯ba/
+		droom /drˈʊə̯m/ - draima /dʁˈae̯ma/
+		droom /drˈʊə̯m/ - Draum /dʁˈao̯m/
+		droog /drˈʊə̯χ/ - drogga /dʁˈɔɡa/
+		dag /dˈaχ/ - Dag /dˈaːɡ/
+		dief /dˈif/ - Diab /dˈiə̯b/
+		diep /dˈip/ - diaf /dˈiə̯f/
+		duisend /dˈœɪ̯sən/ - dausad /dˈao̯sɐd/
+		duits /dˈœɪ̯ts/ - deidsch /dˈəi̯dʃ/
+		donder /dˈɔndər/ - Donndr /dˈondʌ/
+		dogter /dˈɔχtər/ - Dochdr /dˈɔxdʌ/
+		dik /dˈək/ - digg /dˈiɡ/
+		doring /dˈʊə̯rəŋ/ - Dorn /dˈɔʕn/
+		vriend /frˈint/ - Freind /fʁˈae̯nd/
+		vries /frˈis/ - friera /fʁˈiːʁa/
+		frou /frˈœu̯/ - Frau /fʁˈao̯/
+		vlieg /fɫˈiχ/ - fliaga /flˈiə̯ɡa/
+		vleis /fɫˈəɪ̯s/ - Floisch /flˈɔe̯ʃ/
+		fars /fˈars/ - frisch /fʁˈiʃ/
+		vier /fˈir/ - vier /fˈiʕ/
+		voet /fˈut/ - Fuaß /fˈuə̯s/
+		vuur /fˈyːr/ - Feir /fˈəi̯ʌ/
+		vos /fˈɔs/ - Fuchs /fˈuks/
+		vol /fˈɔɫ/ - voll /fˈol/
+		volg /fˈɔɫχ/ - folga /fˈolɡa/
+		vis /fˈəs/ - Fisch /fˈiʃ/
+		vinger /fˈəŋər/ - Fengr /fˈeŋʌ/
+		vyf /fˈəɪ̯f/ - femf /fˈɛmf/
+		veer /fˈɪə̯r/ - Fädr /fˈɛːdʌ/
+		voël /fˈʊə̯ɫ/ - Vogl /fˈoːɡl̩/
+		jong /jˈɔŋ/ - jong /jˈoŋ/
+		kalf /kˈaɫf/ - Kalb /kʰˈalb/
+		koei /kˈuːi̯/ - Kuah /kʰˈuə̯/
+		koud /kˈœu̯t/ - kald /kʰˈald/
+		kaas /kˈɑːs/ - Käs /kʰˈɛːs/
+		kop /kˈɔp/ - Kopf /kʰˈɔp͡f/
+		kerk /kˈɛrk/ - Kirch /kʰˈʌç/
+		land /lˈant/ - Land /lˈand/
+		loop /lˈʊə̯p/ - laufa /lˈao̯fa/
+		mans /mˈans/ - Männr /mˈɛnʌ/
+		moeder /mˈudər/ - Muddr /mˈudʌ/
+		muis /mˈœɪ̯s/ - Maus /mˈao̯s/
+		mug /mˈœχ/ - Mugg /mˈuɡ/
+		maan /mˈɑːn/ - Mond /mˈond/
+		my /mˈəɪ̯/ - mi /mˈi/
+		melk /mˈɛɫk/ - Milch /mˈilç/
+		nuut /nˈit/ - nei /nˈəi̯/
+		naak /nˈɑːk/ - naggt /nˈaɡt/
+		naald /nˈɑːɫt/ - Nodl /nˈɔːdl̩/
+		nael /nˈɔːɫ/ - Nagl /nˈaːɡl̩/
+		neus /nˈɪø̯s/ - Nos /nˈɔːs/
+		nege /nˈɪə̯χə/ - nein /nˈae̯n/
+		ring /rˈəŋ/ - Reng /ʁˈeŋ/
+		ryk /rˈəɪ̯k/ - reich /ʁˈəi̯ç/
+		skerp /skˈærp/ - scharf /ʃˈaʕf/
+		skaap /skˈɑːp/ - Schof /ʃˈoːf/
+		skip /skˈəp/ - Schiff /ʃˈif/
+		skoon /skˈʊə̯n/ - schee /ʃˈeː/
+		slaan /slˈɑːn/ - schlaga /ʃlˈaːɡa/
+		sneeu /snˈiw/ - Schnee /ʃnˈeː/
+		spraak /sprˈɑːk/ - Schbroch /ʃb̥ʁˈɔːx/
+		stoel /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		steen /stˈɪə̯n/ - Schdoi /ʃdˈɔe̯/
+		swem /svˈɛm/ - schwemma /ʃʋˈema/
+		swart /swˈart/ - schwarz /ʃʋˈaʕʦ/
+		swaard /swˈɑːrt/ - Schwerd /ʃʋˈɛʕd/
+		slang /sɫˈaŋ/ - Schlang /ʃlˈaŋ/
+		slaap /sɫˈɑːp/ - schlofa /ʃlˈɔːfa/
+		sand /sˈant/ - Sand /sˈand/
+		sien /sˈin/ - seha /sˈeːa/
+		ziel /sˈiɫ/ - Seel /sˈeːl/
+		suster /sˈœstər/ - Schweschdr /ʃʋˈɛʃdʌ/
+		sit /sˈət/ - sitza /sˈiʦa/
+		sing /sˈəŋ/ - singa /sˈɪŋa/
+		sy /sˈəɪ̯/ - Seide /sˈəi̯də/
+		sê /sˈɛː/ - saga /sˈaːɡa/
+		sewe /sˈɪə̯və/ - sieba /sˈiːba/
+		traan /trˈɑːn/ - Drän /dʁˈɛːn/
+		twaalf /twˈɑːlf/ - zwelf /ʦʋˈelf/
+		twintig /twˈɪntəχ/ - zwanzg /ʦʋˈanʦɡ/
+		twee /twˈɪə̯/ - zwoi /ʦʋˈɔe̯/
+		tand /tˈant/ - Zah /ʦˈaː/
+		tien /tˈin/ - zeah /ʦˈeə̯/
+		tyd /tˈœi̯t/ - Zeid /ʦˈəi̯d/
+		wat /vˈat/ - was /ʋˈas/
+		water /vˈɑːtər/ - Wassr /ʋˈasʌ/
+		wol /vˈɔɫ/ - Wolle /ʋˈole/
+		wolf /vˈɔɫf/ - Wolf /ʋˈolf/
+		wyf /vˈəɪ̯f/ - Weib /ʋˈəi̯b/
+		weg /vˈɛχ/ - Wäg /ʋˈɛːɡ/
+		weer /vˈɪə̯r/ - Weddr /ʋˈɛdʌ/
+		weet /vˈɪə̯t/ - wissa /ʋˈisa/
+		woord /vˈʊə̯rt/ - Wort /ʋˈoʕt/
+		hart /ɦˈart/ - Herz /hˈeʕʦ/
+		haar /ɦˈɑːr/ - Hoor /hˈɔːʕ/
+		haas /ɦˈɑːs/ - Has /hˈaːs/
+		hond /ɦˈɔnt/ - Hond /hˈond/
+		honger /ɦˈɔŋər/ - Hongr /hˈoŋʌ/
+		heim /ɦˈəɪ̯m/ - hoim /hˈɔe̯m/
+		heilig /ɦˈəɪ̯ɫəχ/ - heilig /hˈae̯lɪɡ/
+		hen /ɦˈɛn/ - Henn /hˈɛn/
+		hê /ɦˈɛː/ - hann /hˈan/
+		heuning /ɦˈɪø̯nəŋ/ - Honig /hˈoːnɪɡ/
+		hoof /ɦˈʊə̯f/ - Haubd /hˈao̯bd/
+		hoof /ɦˈʊə̯f/ - Kopf /kʰˈɔp͡f/
+		hoor /ɦˈʊə̯r/ - höra /hˈeːʁa/
+		horing /ɦˈʊə̯rəŋ/ - Horn /hˈɔʕn/
+		lank /ɫˈaŋk/ - lang /lˈaŋ/
+		luis /ɫˈœɪ̯s/ - Laus /lˈao̯s/
+		lig /ɫˈəχ/ - Lichd /lˈiçd/
+		lig /ɫˈəχ/ - leichd /lˈəi̯çd/
+		lewer /ɫˈɪə̯vər/ - Läbr /lˈɛːbʌ/
+		ander /ˈandər/ - andr /ˈandʌ/
+		appel /ˈapəɫ/ - Abfl /ˈab̥͡fl̩/
+		ash /ˈas/ - Äsch /ˈɛʃ/
+		al /ˈaɫ/ - älle /ˈɛle/
+		agt /ˈaχt/ - achd /ˈaxd/
+		ek /ˈæk/ - i /ˈi/
+		oud /ˈœu̯t/ - ald /ˈald/
+		uit /ˈœɪ̯t/ - aus /ˈao̯s/
+		uil /ˈœɪ̯ɫ/ - Eil /ˈae̯l/
+		aarde /ˈɑːrdə/ - Ärde /ˈɛʕde/
+		ons /ˈɔns/ - ons /ˈons/
+		in /ˈən/ - en /ˈen/
+		eik /ˈəɪ̯k/ - Oich /ˈɔe̯ç/
+		ys /ˈəɪ̯s/ - Eis /ˈəi̯s/
+		elf /ˈɛlf/ - älf /ˈɛlf/
+		eg /ˈɛχ/ - Egg /ˈɛɡ/
+		eet /ˈɪə̯t/ - essa /ˈɛsa/
+		oor /ˈʊə̯r/ - Ohr /ˈoːʕ/
+		oog /ˈʊə̯χ/ - Aug /ˈao̯ɡ/
+		gras /χrˈas/ - Gras /ɡʁˈaːs/
+		groen /χrˈun/ - grea /ɡʁˈeə̯/
+		groot /χrˈʊə̯t/ - groß /ɡʁˈoːs/
+		gans /χˈans/ - Gaas /ɡˈaːs/
+		gas /χˈas/ - Gaschd /ɡˈaʃd/
+		goed /χˈut/ - guad /ɡˈuə̯d/
+		god /χˈɔt/ - Gott /ɡˈɔt/
+		geit /χˈəɪ̯t/ - Goiß /ɡˈɔe̯s/
+		gees /χˈɪə̯s/ - Geischd /ɡˈae̯ʃd/
+
+Final disqualified:
+		by /bˈəɪ̯/ - Imm /ˈim/
+		mond /mˈɔnt/ - Maul /mˈao̯l/
+		reën /rˈɪə̯n/ - Rega /ʁˈeːɡa/
+		een /ˈɪə̯n/ - ois /ˈɔe̯s/
+		oond /ˈʊə̯nt/ - Ofa /ˈoːfa/
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 156
+	Disqualified: 164
+	Added: 0
+	Removed: 4
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+		al /ˈaɫ/ - älle /ˈɛle/
+		by /bˈəɪ̯/ - Imm /ˈim/
+		oond /ˈʊə̯nt/ - Ofa /ˈoːfa/
+
+Iteration 2
+	Qualified: 155
+	Disqualified: 165
+	Added: 1
+		al /ˈaɫ/ - älle /ˈɛle/
+	Removed: 2
+		een /ˈɪə̯n/ - ois /ˈɔe̯s/
+		dor /dˈɔr/ - drogga /dʁˈɔɡa/
+
+Iteration 3
+	Qualified: 156
+	Disqualified: 164
+	Added: 1
+		dor /dˈɔr/ - drogga /dʁˈɔɡa/
+	Removed: 0
+
+Iteration 4
+	Qualified: 156
+	Disqualified: 164
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		brug /brˈœχ/ - Brugg /bʁˈuɡ/
+		brood /brˈʊə̯t/ - Brod /bʁˈoːd/
+		bloed /bɫˈut/ - Bluad /blˈuə̯d/
+		blom /bɫˈɔm/ - Bloam /blˈɔə̯m/
+		bad /bˈat/ - Bad /bˈaːd/
+		boek /bˈuk/ - Buach /bˈuə̯x/
+		bors /bˈɔːrs/ - Bruschd /bʁˈuʃd/
+		bid /bˈət/ - bidda /bˈɪda/
+		byt /bˈəɪ̯t/ - beißa /bˈəi̯sa/
+		been /bˈɪə̯n/ - Boi /bˈɔe̯/
+		beter /bˈɪə̯tər/ - bessr /bˈɛsʌ/
+		drie /drˈi/ - drei /dʁˈae̯/
+		dryf /drˈəɪ̯f/ - dreiba /dʁˈəi̯ba/
+		droom /drˈʊə̯m/ - draima /dʁˈae̯ma/
+		droom /drˈʊə̯m/ - Draum /dʁˈao̯m/
+		droog /drˈʊə̯χ/ - drogga /dʁˈɔɡa/
+		dank /dˈaŋk/ - danga /dˈaŋɡa/
+		dag /dˈaχ/ - Dag /dˈaːɡ/
+		dief /dˈif/ - Diab /dˈiə̯b/
+		diep /dˈip/ - diaf /dˈiə̯f/
+		dier /dˈir/ - Dier /dˈiːʕ/
+		duur /dˈyːr/ - deier /dˈəi̯ʌ/
+		duisend /dˈœɪ̯sən/ - dausad /dˈao̯sɐd/
+		duits /dˈœɪ̯ts/ - deidsch /dˈəi̯dʃ/
+		donder /dˈɔndər/ - Donndr /dˈondʌ/
+		dor /dˈɔr/ - drogga /dʁˈɔɡa/
+		dik /dˈək/ - digg /dˈiɡ/
+		doring /dˈʊə̯rəŋ/ - Dorn /dˈɔʕn/
+		dood /dˈʊə̯t/ - Dod /dˈoːd/
+		vriend /frˈint/ - Freind /fʁˈae̯nd/
+		vries /frˈis/ - friera /fʁˈiːʁa/
+		frou /frˈœu̯/ - Frau /fʁˈao̯/
+		vleis /fɫˈəɪ̯s/ - Floisch /flˈɔe̯ʃ/
+		fars /fˈars/ - frisch /fʁˈiʃ/
+		vier /fˈir/ - vier /fˈiʕ/
+		voet /fˈut/ - Fuaß /fˈuə̯s/
+		voel /fˈuɫ/ - fiehla /fˈiːla/
+		vuur /fˈyːr/ - Feir /fˈəi̯ʌ/
+		vader /fˈɑːdər/ - Vaddr /fˈadʌ/
+		vos /fˈɔs/ - Fuchs /fˈuks/
+		vol /fˈɔɫ/ - voll /fˈol/
+		volg /fˈɔɫχ/ - folga /fˈolɡa/
+		vinger /fˈəŋər/ - Fengr /fˈeŋʌ/
+		veer /fˈɪə̯r/ - Fädr /fˈɛːdʌ/
+		voël /fˈʊə̯ɫ/ - Vogl /fˈoːɡl̩/
+		jaar /jˈɑːr/ - Johr /jˈɔːʕ/
+		kalf /kˈaɫf/ - Kalb /kʰˈalb/
+		koei /kˈuːi̯/ - Kuah /kʰˈuə̯/
+		koud /kˈœu̯t/ - kald /kʰˈald/
+		kop /kˈɔp/ - Kopf /kʰˈɔp͡f/
+		kerk /kˈɛrk/ - Kirch /kʰˈʌç/
+		koning /kˈʊə̯nəŋ/ - Keenig /kʰˈeːniɡ/
+		land /lˈant/ - Land /lˈand/
+		lag /lˈaχ/ - lacha /lˈaxa/
+		man /mˈan/ - Mo /mˈɔː/
+		mans /mˈans/ - Männr /mˈɛnʌ/
+		moeder /mˈudər/ - Muddr /mˈudʌ/
+		muis /mˈœɪ̯s/ - Maus /mˈao̯s/
+		muise /mˈœɪ̯sə/ - Meis /mˈae̯s/
+		mug /mˈœχ/ - Mugg /mˈuɡ/
+		maan /mˈɑːn/ - Mond /mˈond/
+		mond /mˈɔnt/ - Maul /mˈao̯l/
+		my /mˈəɪ̯/ - mi /mˈi/
+		melk /mˈɛɫk/ - Milch /mˈilç/
+		nag /nˈaχ/ - Nachd /nˈaxd/
+		nuut /nˈit/ - nei /nˈəi̯/
+		naak /nˈɑːk/ - naggt /nˈaɡt/
+		neus /nˈɪø̯s/ - Nos /nˈɔːs/
+		nege /nˈɪə̯χə/ - nein /nˈae̯n/
+		rooi /rˈoːi̯/ - rod /ʁˈoːd/
+		ros /rˈɔs/ - Ross /ʁˈos/
+		ring /rˈəŋ/ - Reng /ʁˈeŋ/
+		ryk /rˈəɪ̯k/ - reich /ʁˈəi̯ç/
+		reën /rˈɪə̯n/ - Rega /ʁˈeːɡa/
+		skerp /skˈærp/ - scharf /ʃˈaʕf/
+		skip /skˈəp/ - Schiff /ʃˈif/
+		skoon /skˈʊə̯n/ - schee /ʃˈeː/
+		slaan /slˈɑːn/ - schlaga /ʃlˈaːɡa/
+		sneeu /snˈiw/ - Schnee /ʃnˈeː/
+		stoel /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		ster /stˈæːr/ - Schdärn /ʃdˈɛʕn/
+		steen /stˈɪə̯n/ - Schdoi /ʃdˈɔe̯/
+		swem /svˈɛm/ - schwemma /ʃʋˈema/
+		swaard /swˈɑːrt/ - Schwerd /ʃʋˈɛʕd/
+		slang /sɫˈaŋ/ - Schlang /ʃlˈaŋ/
+		sand /sˈant/ - Sand /sˈand/
+		sien /sˈin/ - seha /sˈeːa/
+		ziel /sˈiɫ/ - Seel /sˈeːl/
+		soet /sˈut/ - siaß /sˈiə̯s/
+		suster /sˈœstər/ - Schweschdr /ʃʋˈɛʃdʌ/
+		sing /sˈəŋ/ - singa /sˈɪŋa/
+		sy /sˈəɪ̯/ - Seide /sˈəi̯də/
+		ses /sˈɛs/ - seggs /sˈeɡs/
+		sê /sˈɛː/ - saga /sˈaːɡa/
+		seun /sˈɪø̯n/ - Soh /sˈoː/
+		sewe /sˈɪə̯və/ - sieba /sˈiːba/
+		traan /trˈɑːn/ - Drän /dʁˈɛːn/
+		twaalf /twˈɑːlf/ - zwelf /ʦʋˈelf/
+		twintig /twˈɪntəχ/ - zwanzg /ʦʋˈanʦɡ/
+		twee /twˈɪə̯/ - zwoi /ʦʋˈɔe̯/
+		tand /tˈant/ - Zah /ʦˈaː/
+		tien /tˈin/ - zeah /ʦˈeə̯/
+		warm /vˈarm/ - warm /ʋˈaʕm/
+		wat /vˈat/ - was /ʋˈas/
+		voete /vˈutə/ - Fiaß /fˈiə̯s/
+		water /vˈɑːtər/ - Wassr /ʋˈasʌ/
+		wol /vˈɔɫ/ - Wolle /ʋˈole/
+		wolf /vˈɔɫf/ - Wolf /ʋˈolf/
+		wind /vˈənt/ - Weed /ʋˈeːd/
+		wit /vˈət/ - weiß /ʋˈəi̯s/
+		wens /vˈɛns/ - winscha /ʋˈɪnʃa/
+		weg /vˈɛχ/ - Wäg /ʋˈɛːɡ/
+		weet /vˈɪə̯t/ - wissa /ʋˈisa/
+		woord /vˈʊə̯rt/ - Wort /ʋˈoʕt/
+		hand /ɦˈant/ - Haad /hˈaːd/
+		hart /ɦˈart/ - Herz /hˈeʕʦ/
+		haas /ɦˈɑːs/ - Has /hˈaːs/
+		hond /ɦˈɔnt/ - Hond /hˈond/
+		heim /ɦˈəɪ̯m/ - hoim /hˈɔe̯m/
+		heilig /ɦˈəɪ̯ɫəχ/ - heilig /hˈae̯lɪɡ/
+		hen /ɦˈɛn/ - Henn /hˈɛn/
+		hê /ɦˈɛː/ - hann /hˈan/
+		heuning /ɦˈɪø̯nəŋ/ - Honig /hˈoːnɪɡ/
+		hoof /ɦˈʊə̯f/ - Haubd /hˈao̯bd/
+		hoof /ɦˈʊə̯f/ - Kopf /kʰˈɔp͡f/
+		hoor /ɦˈʊə̯r/ - höra /hˈeːʁa/
+		horing /ɦˈʊə̯rəŋ/ - Horn /hˈɔʕn/
+		hoog /ɦˈʊə̯χ/ - hauch /hˈao̯x/
+		lank /ɫˈaŋk/ - lang /lˈaŋ/
+		luis /ɫˈœɪ̯s/ - Laus /lˈao̯s/
+		lig /ɫˈəχ/ - Lichd /lˈiçd/
+		lig /ɫˈəχ/ - leichd /lˈəi̯çd/
+		lewer /ɫˈɪə̯vər/ - Läbr /lˈɛːbʌ/
+		ander /ˈandər/ - andr /ˈandʌ/
+		appel /ˈapəɫ/ - Abfl /ˈab̥͡fl̩/
+		arm /ˈarm/ - Arm /ˈaʕm/
+		ash /ˈas/ - Äsch /ˈɛʃ/
+		al /ˈaɫ/ - älle /ˈɛle/
+		agt /ˈaχt/ - achd /ˈaxd/
+		ek /ˈæk/ - i /ˈi/
+		oud /ˈœu̯t/ - ald /ˈald/
+		uit /ˈœɪ̯t/ - aus /ˈao̯s/
+		uil /ˈœɪ̯ɫ/ - Eil /ˈae̯l/
+		aap /ˈɑːp/ - Aff /ˈaf/
+		aarde /ˈɑːrdə/ - Ärde /ˈɛʕde/
+		ons /ˈɔns/ - ons /ˈons/
+		in /ˈən/ - en /ˈen/
+		ys /ˈəɪ̯s/ - Eis /ˈəi̯s/
+		eet /ˈɪə̯t/ - essa /ˈɛsa/
+		oor /ˈʊə̯r/ - Ohr /ˈoːʕ/
+		oog /ˈʊə̯χ/ - Aug /ˈao̯ɡ/
+		gras /χrˈas/ - Gras /ɡʁˈaːs/
+		groot /χrˈʊə̯t/ - groß /ɡʁˈoːs/
+		gans /χˈans/ - Gaas /ɡˈaːs/
+		gas /χˈas/ - Gaschd /ɡˈaʃd/
+		goud /χˈœu̯t/ - Gold /ɡˈold/
+
+Final disqualified:
+		by /bˈəɪ̯/ - Imm /ˈim/
+		een /ˈɪə̯n/ - ois /ˈɔe̯s/
+		oond /ˈʊə̯nt/ - Ofa /ˈoːfa/
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 157
+	Disqualified: 163
+	Added: 0
+	Removed: 3
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+		by /bˈəɪ̯/ - Imm /ˈim/
+		oond /ˈʊə̯nt/ - Ofa /ˈoːfa/
+
+Iteration 2
+	Qualified: 154
+	Disqualified: 166
+	Added: 0
+	Removed: 3
+		een /ˈɪə̯n/ - ois /ˈɔe̯s/
+		dor /dˈɔr/ - drogga /dʁˈɔɡa/
+		reën /rˈɪə̯n/ - Rega /ʁˈeːɡa/
+
+Iteration 3
+	Qualified: 155
+	Disqualified: 165
+	Added: 1
+		dor /dˈɔr/ - drogga /dʁˈɔɡa/
+	Removed: 0
+
+Iteration 4
+	Qualified: 155
+	Disqualified: 165
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		broer /brˈuːr/ - Bruadr /bʁˈuə̯dʌ/
+		brug /brˈœχ/ - Brugg /bʁˈuɡ/
+		brood /brˈʊə̯t/ - Brod /bʁˈoːd/
+		bloed /bɫˈut/ - Bluad /blˈuə̯d/
+		blaar /bɫˈɑːr/ - Bladd /blˈad/
+		blom /bɫˈɔm/ - Bloam /blˈɔə̯m/
+		bad /bˈat/ - Bad /bˈaːd/
+		boek /bˈuk/ - Buach /bˈuə̯x/
+		berg /bˈæːrχ/ - Berg /bˈʌɡ/
+		bors /bˈɔːrs/ - Bruschd /bʁˈuʃd/
+		bid /bˈət/ - bidda /bˈɪda/
+		been /bˈɪə̯n/ - Boi /bˈɔe̯/
+		beter /bˈɪə̯tər/ - bessr /bˈɛsʌ/
+		boom /bˈʊə̯m/ - Boom /bˈoːm/
+		drink /drˈəŋk/ - dringa /dʁˈɪŋɡa/
+		dryf /drˈəɪ̯f/ - dreiba /dʁˈəi̯ba/
+		droom /drˈʊə̯m/ - draima /dʁˈae̯ma/
+		droom /drˈʊə̯m/ - Draum /dʁˈao̯m/
+		droog /drˈʊə̯χ/ - drogga /dʁˈɔɡa/
+		dank /dˈaŋk/ - danga /dˈaŋɡa/
+		dief /dˈif/ - Diab /dˈiə̯b/
+		diep /dˈip/ - diaf /dˈiə̯f/
+		duur /dˈyːr/ - deier /dˈəi̯ʌ/
+		duisend /dˈœɪ̯sən/ - dausad /dˈao̯sɐd/
+		donder /dˈɔndər/ - Donndr /dˈondʌ/
+		dor /dˈɔr/ - drogga /dʁˈɔɡa/
+		dogter /dˈɔχtər/ - Dochdr /dˈɔxdʌ/
+		doring /dˈʊə̯rəŋ/ - Dorn /dˈɔʕn/
+		dood /dˈʊə̯t/ - Dod /dˈoːd/
+		vriend /frˈint/ - Freind /fʁˈae̯nd/
+		vries /frˈis/ - friera /fʁˈiːʁa/
+		frou /frˈœu̯/ - Frau /fʁˈao̯/
+		vlieg /fɫˈiχ/ - fliaga /flˈiə̯ɡa/
+		vleis /fɫˈəɪ̯s/ - Floisch /flˈɔe̯ʃ/
+		fars /fˈars/ - frisch /fʁˈiʃ/
+		vier /fˈir/ - vier /fˈiʕ/
+		voet /fˈut/ - Fuaß /fˈuə̯s/
+		voel /fˈuɫ/ - fiehla /fˈiːla/
+		vuur /fˈyːr/ - Feir /fˈəi̯ʌ/
+		vader /fˈɑːdər/ - Vaddr /fˈadʌ/
+		vos /fˈɔs/ - Fuchs /fˈuks/
+		volg /fˈɔɫχ/ - folga /fˈolɡa/
+		vis /fˈəs/ - Fisch /fˈiʃ/
+		vinger /fˈəŋər/ - Fengr /fˈeŋʌ/
+		vyf /fˈəɪ̯f/ - femf /fˈɛmf/
+		voël /fˈʊə̯ɫ/ - Vogl /fˈoːɡl̩/
+		jong /jˈɔŋ/ - jong /jˈoŋ/
+		koei /kˈuːi̯/ - Kuah /kʰˈuə̯/
+		kaas /kˈɑːs/ - Käs /kʰˈɛːs/
+		kop /kˈɔp/ - Haubd /hˈao̯bd/
+		kop /kˈɔp/ - Kopf /kʰˈɔp͡f/
+		koning /kˈʊə̯nəŋ/ - Keenig /kʰˈeːniɡ/
+		lag /lˈaχ/ - lacha /lˈaxa/
+		man /mˈan/ - Mo /mˈɔː/
+		mans /mˈans/ - Männr /mˈɛnʌ/
+		moeder /mˈudər/ - Muddr /mˈudʌ/
+		muis /mˈœɪ̯s/ - Maus /mˈao̯s/
+		muise /mˈœɪ̯sə/ - Meis /mˈae̯s/
+		mug /mˈœχ/ - Mugg /mˈuɡ/
+		maan /mˈɑːn/ - Mond /mˈond/
+		mond /mˈɔnt/ - Maul /mˈao̯l/
+		my /mˈəɪ̯/ - mi /mˈi/
+		melk /mˈɛɫk/ - Milch /mˈilç/
+		nag /nˈaχ/ - Nachd /nˈaxd/
+		nuut /nˈit/ - nei /nˈəi̯/
+		naam /nˈɑːm/ - Noma /nˈɔːma/
+		naald /nˈɑːɫt/ - Nodl /nˈɔːdl̩/
+		nael /nˈɔːɫ/ - Nagl /nˈaːɡl̩/
+		neus /nˈɪø̯s/ - Nos /nˈɔːs/
+		nege /nˈɪə̯χə/ - nein /nˈae̯n/
+		ring /rˈəŋ/ - Reng /ʁˈeŋ/
+		ryk /rˈəɪ̯k/ - reich /ʁˈəi̯ç/
+		skerp /skˈærp/ - scharf /ʃˈaʕf/
+		skoon /skˈʊə̯n/ - schee /ʃˈeː/
+		slaan /slˈɑːn/ - schlaga /ʃlˈaːɡa/
+		sneeu /snˈiw/ - Schnee /ʃnˈeː/
+		spraak /sprˈɑːk/ - Schbroch /ʃb̥ʁˈɔːx/
+		stoel /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		ster /stˈæːr/ - Schdärn /ʃdˈɛʕn/
+		steen /stˈɪə̯n/ - Schdoi /ʃdˈɔe̯/
+		swaard /swˈɑːrt/ - Schwerd /ʃʋˈɛʕd/
+		slaap /sɫˈɑːp/ - schlofa /ʃlˈɔːfa/
+		sand /sˈant/ - Sand /sˈand/
+		sien /sˈin/ - seha /sˈeːa/
+		soet /sˈut/ - siaß /sˈiə̯s/
+		soet /sˈœu̯t/ - Salz /sˈalʦ/
+		sit /sˈət/ - sitza /sˈiʦa/
+		sing /sˈəŋ/ - singa /sˈɪŋa/
+		sy /sˈəɪ̯/ - Seide /sˈəi̯də/
+		ses /sˈɛs/ - seggs /sˈeɡs/
+		sê /sˈɛː/ - saga /sˈaːɡa/
+		sewe /sˈɪə̯və/ - sieba /sˈiːba/
+		traan /trˈɑːn/ - Drän /dʁˈɛːn/
+		twaalf /twˈɑːlf/ - zwelf /ʦʋˈelf/
+		twintig /twˈɪntəχ/ - zwanzg /ʦʋˈanʦɡ/
+		twee /twˈɪə̯/ - zwoi /ʦʋˈɔe̯/
+		tand /tˈant/ - Zah /ʦˈaː/
+		tien /tˈin/ - zeah /ʦˈeə̯/
+		tong /tˈɔŋ/ - Zong /ʦˈoŋ/
+		warm /vˈarm/ - warm /ʋˈaʕm/
+		wat /vˈat/ - was /ʋˈas/
+		voete /vˈutə/ - Fiaß /fˈiə̯s/
+		wol /vˈɔɫ/ - Wolle /ʋˈole/
+		wolf /vˈɔɫf/ - Wolf /ʋˈolf/
+		wind /vˈənt/ - Weed /ʋˈeːd/
+		wit /vˈət/ - weiß /ʋˈəi̯s/
+		wyf /vˈəɪ̯f/ - Weib /ʋˈəi̯b/
+		weg /vˈɛχ/ - Wäg /ʋˈɛːɡ/
+		weer /vˈɪə̯r/ - Weddr /ʋˈɛdʌ/
+		weet /vˈɪə̯t/ - wissa /ʋˈisa/
+		woord /vˈʊə̯rt/ - Wort /ʋˈoʕt/
+		hand /ɦˈant/ - Haad /hˈaːd/
+		hart /ɦˈart/ - Herz /hˈeʕʦ/
+		haas /ɦˈɑːs/ - Has /hˈaːs/
+		hond /ɦˈɔnt/ - Hond /hˈond/
+		heim /ɦˈəɪ̯m/ - hoim /hˈɔe̯m/
+		heilig /ɦˈəɪ̯ɫəχ/ - heilig /hˈae̯lɪɡ/
+		hen /ɦˈɛn/ - Henn /hˈɛn/
+		hê /ɦˈɛː/ - hann /hˈan/
+		hoof /ɦˈʊə̯f/ - Haubd /hˈao̯bd/
+		hoof /ɦˈʊə̯f/ - Kopf /kʰˈɔp͡f/
+		hoor /ɦˈʊə̯r/ - höra /hˈeːʁa/
+		horing /ɦˈʊə̯rəŋ/ - Horn /hˈɔʕn/
+		hoog /ɦˈʊə̯χ/ - hauch /hˈao̯x/
+		lank /ɫˈaŋk/ - lang /lˈaŋ/
+		luis /ɫˈœɪ̯s/ - Laus /lˈao̯s/
+		lig /ɫˈəχ/ - Lichd /lˈiçd/
+		lig /ɫˈəχ/ - leichd /lˈəi̯çd/
+		ander /ˈandər/ - andr /ˈandʌ/
+		appel /ˈapəɫ/ - Abfl /ˈab̥͡fl̩/
+		arm /ˈarm/ - Arm /ˈaʕm/
+		ash /ˈas/ - Äsch /ˈɛʃ/
+		al /ˈaɫ/ - älle /ˈɛle/
+		agt /ˈaχt/ - achd /ˈaxd/
+		ek /ˈæk/ - i /ˈi/
+		oud /ˈœu̯t/ - ald /ˈald/
+		uit /ˈœɪ̯t/ - aus /ˈao̯s/
+		uil /ˈœɪ̯ɫ/ - Eil /ˈae̯l/
+		aarde /ˈɑːrdə/ - Ärde /ˈɛʕde/
+		ons /ˈɔns/ - ons /ˈons/
+		ys /ˈəɪ̯s/ - Eis /ˈəi̯s/
+		eet /ˈɪə̯t/ - essa /ˈɛsa/
+		oog /ˈʊə̯χ/ - Aug /ˈao̯ɡ/
+		gras /χrˈas/ - Gras /ɡʁˈaːs/
+		groen /χrˈun/ - grea /ɡʁˈeə̯/
+		groot /χrˈʊə̯t/ - groß /ɡʁˈoːs/
+		gans /χˈans/ - Gaas /ɡˈaːs/
+		gas /χˈas/ - Gaschd /ɡˈaʃd/
+		goed /χˈut/ - guad /ɡˈuə̯d/
+		goud /χˈœu̯t/ - Gold /ɡˈold/
+		god /χˈɔt/ - Gott /ɡˈɔt/
+		geit /χˈəɪ̯t/ - Goiß /ɡˈɔe̯s/
+		gee /χˈɪə̯/ - gäba /ɡˈɛːba/
+		gees /χˈɪə̯s/ - Geischd /ɡˈae̯ʃd/
+		geel /χˈɪə̯ɫ/ - geal /ɡˈeə̯l/
+
+Final disqualified:
+		by /bˈəɪ̯/ - Imm /ˈim/
+		reën /rˈɪə̯n/ - Rega /ʁˈeːɡa/
+		een /ˈɪə̯n/ - ois /ˈɔe̯s/
+		oond /ˈʊə̯nt/ - Ofa /ˈoːfa/
+		oor /ˈʊə̯r/ - iber /ˈibʌ/
+
+
+-------------------
+

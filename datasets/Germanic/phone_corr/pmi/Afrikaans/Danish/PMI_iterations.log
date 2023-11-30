@@ -1,0 +1,969 @@
+Same meaning pairs: 208
+****SAMPLE 1****
+Iteration 1
+	Qualified: 163
+	Disqualified: 169
+	Added: 0
+	Removed: 3
+		boom /bˈʊə̯m/ - træ /ʦʰʁˈeˀ/
+		frou /frˈœu̯/ - kvinde /kʰʋˈenə/
+		aarde /ˈɑːrdə/ - jord /jˈoˀɐ/
+
+Iteration 2
+	Qualified: 162
+	Disqualified: 170
+	Added: 0
+	Removed: 1
+		frou /frˈœu̯/ - kone /kʰˈoːnə/
+
+Iteration 3
+	Qualified: 162
+	Disqualified: 170
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		broer /brˈuːr/ - bror /b̥ʁˈoɐ/
+		brug /brˈœχ/ - brygge /b̥ʁˈœɡ̊ə/
+		brood /brˈʊə̯t/ - brød /b̥ʁˈœˀð̞ˠ/
+		bloed /bɫˈut/ - blod /b̥lˈoˀð̞ˠ/
+		blaar /bɫˈɑːr/ - blad /b̥lˈað̞ˠ/
+		blom /bɫˈɔm/ - blomst /b̥lˈʌmˀst/
+		bad /bˈat/ - bad /b̥ˈað̞ˠ/
+		bied /bˈit/ - byde /b̥ˈyːð̞ˠə/
+		boek /bˈuk/ - bog /b̥ˈoˀw/
+		bid /bˈət/ - bede /b̥ˈeˀ/
+		beer /bˈɪə̯r/ - bjørn /b̥jˈœˀɐn/
+		beter /bˈɪə̯tər/ - bedre /b̥ˈeð̞ˠʁə/
+		dryf /drˈəɪ̯f/ - drive /d̥ʁˈiːw/
+		droom /drˈʊə̯m/ - drømme /d̥ʁˈœmə/
+		droom /drˈʊə̯m/ - drøm /d̥ʁˈœˀm/
+		droog /drˈʊə̯χ/ - tør /ʦʰˈœˀɐ/
+		dwerg /dvˈɛrχ/ - dværg /d̥ʋˈæɐˀw/
+		dank /dˈaŋk/ - takke /ʦʰˈɑkə/
+		dag /dˈaχ/ - dag /d̥ˈæˀj/
+		dief /dˈif/ - tyv /ʦʰˈyˀw/
+		diep /dˈip/ - dyb /d̥ˈyˀb̥/
+		dier /dˈir/ - dyr /d̥ˈyˀɐ/
+		duits /dˈœɪ̯ts/ - tysk /ʦʰˈysk/
+		dor /dˈɔr/ - tør /ʦʰˈœˀɐ/
+		dodelik /dˈʊə̯dələk/ - dødelig /d̥ˈøːð̞ˠəli/
+		dood /dˈʊə̯t/ - død /d̥ˈœˀð̞ˠ/
+		vriend /frˈint/ - frænde /fʁˈɑnə/
+		vries /frˈis/ - fryse /fʁˈyːsə/
+		vlieg /fɫˈiχ/ - flue /flˈuːə/
+		vlieg /fɫˈiχ/ - flyve /flˈyːw/
+		fars /fˈars/ - frisk /fʁˈesk/
+		vier /fˈir/ - fire /fˈiːɐ/
+		voet /fˈut/ - fod /fˈoˀð̞ˠ/
+		vuur /fˈyːr/ - ild /ˈilˀ/
+		vader /fˈɑːdər/ - far /fˈɑː/
+		vol /fˈɔɫ/ - fuld /fˈulˀ/
+		volg /fˈɔɫχ/ - følge /fˈœlə/
+		vis /fˈəs/ - fisk /fˈesk/
+		vinger /fˈəŋər/ - finger /fˈeŋˀɐ/
+		veer /fˈɪə̯r/ - fjer /fjˈeˀɐ/
+		voël /fˈʊə̯ɫ/ - fugl /fˈuˀl/
+		jaar /jˈɑːr/ - år /ˈɔˀ/
+		jong /jˈɔŋ/ - ung /ˈɔŋˀ/
+		knie /knˈi/ - knæ /kʰnˈeˀ/
+		kalf /kˈaɫf/ - kalv /kʰˈɛlˀv/
+		koei /kˈuːi̯/ - ko /kʰˈoˀ/
+		koud /kˈœu̯t/ - kold /kʰˈʌlˀ/
+		kop /kˈɔp/ - hoved /hˈoːəð̞ˠ/
+		koning /kˈʊə̯nəŋ/ - konge /kʰˈʌŋə/
+		koring /kˈʊə̯rəŋ/ - korn /kʰˈoɐˀn/
+		land /lˈant/ - land /lˈanˀ/
+		lag /lˈaχ/ - le /lˈeˀ/
+		loop /lˈʊə̯p/ - løbe /lˈøːb̥ə/
+		man /mˈan/ - mand /mˈɛnˀ/
+		mans /mˈans/ - mænd /mˈenˀ/
+		moeder /mˈudər/ - mor /mˈoːɐ/
+		muis /mˈœɪ̯s/ - mus /mˈuˀs/
+		muise /mˈœɪ̯sə/ - mus /mˈuˀs/
+		mug /mˈœχ/ - myg /mˈyɡ̊/
+		my /mˈəɪ̯/ - meg /mˈɑj/
+		mens /mˈɛns/ - menneske /mˈen̩skə/
+		nag /nˈaχ/ - nat /nˈɛt/
+		nuut /nˈit/ - ny /nˈyˀ/
+		naald /nˈɑːɫt/ - nål /nˈɔˀl/
+		nael /nˈɔːɫ/ - negl /nˈɑjˀl/
+		neus /nˈɪø̯s/ - næse /nˈɛːsə/
+		noord /nˈʊə̯rt/ - nord /nˈoɐˀ/
+		plig /pɫˈəχ/ - pligt /pʰlˈeɡ̊t/
+		rooi /rˈoːi̯/ - rød /ʁˈœˀð̞ˠ/
+		ros /rˈɔs/ - hors /hˈɒːs/
+		ring /rˈəŋ/ - ring /ʁˈeŋˀ/
+		ryk /rˈəɪ̯k/ - rig /ʁˈiˀ/
+		reën /rˈɪə̯n/ - regn /ʁˈɑjˀn/
+		rook /rˈʊə̯k/ - røg /ʁˈʌˀj/
+		skerp /skˈærp/ - skarp /skˈap/
+		skaap /skˈɑːp/ - får /fˈɒˀ/
+		skip /skˈəp/ - skib /skˈiˀb̥/
+		slaan /slˈɑːn/ - slå /slˈɔˀ/
+		sneeu /snˈiw/ - sne /snˈeˀ/
+		stoel /stˈuɫ/ - stol /stˈoˀl/
+		ster /stˈæːr/ - stjerne /stjˈæɐnə/
+		storm /stˈɔrm/ - storm /stˈɔˀm/
+		steen /stˈɪə̯n/ - sten /stˈeˀn/
+		swem /svˈɛm/ - svømme /sʋˈœmə/
+		swart /swˈart/ - sort /sˈoɐt/
+		swaard /swˈɑːrt/ - sværd /sʋˈɛɐˀ/
+		swyn /swˈəɪ̯n/ - svin /sʋˈiˀn/
+		slang /sɫˈaŋ/ - slange /slˈɑŋə/
+		slaap /sɫˈɑːp/ - sove /sˈɒːw/
+		sand /sˈant/ - sand /sˈanˀ/
+		sien /sˈin/ - se /sˈeː/
+		soet /sˈut/ - sød /sˈœˀð̞ˠ/
+		soet /sˈœu̯t/ - salt /sˈɛlˀt/
+		sit /sˈət/ - sidde /sˈeð̞ˠə/
+		sing /sˈəŋ/ - synge /sˈøŋə/
+		sy /sˈəɪ̯/ - side /sˈiːð̞ˠə/
+		sê /sˈɛː/ - sige /sˈiːə/
+		seun /sˈɪø̯n/ - søn /sˈœn/
+		sewe /sˈɪə̯və/ - syv /sˈyˀw/
+		twaalf /twˈɑːlf/ - tolv /ʦʰˈʌlˀ/
+		twintig /twˈɪntəχ/ - tyve /ʦʰˈyːw/
+		twee /twˈɪə̯/ - to /ʦʰˈoˀ/
+		tand /tˈant/ - tand /ʦʰˈanˀ/
+		tong /tˈɔŋ/ - tunge /ʦʰˈɔŋə/
+		wal /vˈal/ - hval /ʋˈɛˀl/
+		warm /vˈarm/ - varm /ʋˈɑˀm/
+		wat /vˈat/ - hvad /ʋˈað̞ˠ/
+		wiel /vˈiɫ/ - hjul /jˈuˀl/
+		voete /vˈutə/ - fødder /fˈœð̞ˠɐ/
+		wurm /vˈœrəm/ - orm /ˈoɐˀm/
+		wapen /vˈɑːpən/ - våben /vˈɔˀb̥m̩/
+		water /vˈɑːtər/ - vand /ʋˈanˀ/
+		wol /vˈɔɫ/ - uld /ˈulˀ/
+		wind /vˈənt/ - vind /ʋˈenˀ/
+		wit /vˈət/ - hvid /ʋˈiˀð̞ˠ/
+		wens /vˈɛns/ - ønske /ˈœnskə/
+		weg /vˈɛχ/ - vej /ʋˈɑˀj/
+		weer /vˈɪə̯r/ - vejr /ʋˈɛˀɐ/
+		weet /vˈɪə̯t/ - vide /ʋˈiːð̞ˠə/
+		hand /ɦˈant/ - hånd /hˈʌnˀ/
+		hier /ɦˈir/ - her /hˈɛˀɐ/
+		huis /ɦˈœɪ̯s/ - hus /hˈuˀs/
+		haar /ɦˈɑːr/ - hår /hˈɒˀ/
+		haas /ɦˈɑːs/ - hare /hˈɑːɐ/
+		honderd /ɦˈɔndərt/ - hundrede /hˈunɐð̞ˠə/
+		hond /ɦˈɔnt/ - hund /hˈunˀ/
+		heim /ɦˈəɪ̯m/ - hjem /jˈɛˀm/
+		hoof /ɦˈʊə̯f/ - hoved /hˈoːəð̞ˠ/
+		horing /ɦˈʊə̯rəŋ/ - horn /hˈoɐˀn/
+		hoog /ɦˈʊə̯χ/ - høj /hˈʌˀj/
+		lam /ɫˈam/ - lam /lˈɑmˀ/
+		lank /ɫˈaŋk/ - lang /lˈɑŋˀ/
+		luis /ɫˈœɪ̯s/ - lus /lˈuˀs/
+		lig /ɫˈəχ/ - let /lˈɛt/
+		ander /ˈandər/ - anden /ˈanən/
+		appel /ˈapəɫ/ - æble /ˈeːb̥lə/
+		arm /ˈarm/ - arm /ˈɑˀm/
+		al /ˈaɫ/ - al /ˈal/
+		agt /ˈaχt/ - otte /ˈoːtə/
+		ek /ˈæk/ - jeg /jˈɑj/
+		uit /ˈœɪ̯t/ - ud /ˈuˀð̞ˠ/
+		uil /ˈœɪ̯ɫ/ - ugle /ˈuːlə/
+		aap /ˈɑːp/ - abe /ˈaːb̥ə/
+		ons /ˈɔns/ - os /ˈʌs/
+		in /ˈən/ - i /ˈiˀ/
+		eik /ˈəɪ̯k/ - eg /ˈeˀj/
+		ys /ˈəɪ̯s/ - is /ˈiˀs/
+		elf /ˈɛlf/ - elleve /ˈɛlʋə/
+		eg /ˈɛχ/ - æg /ˈeˀɡ̊/
+		een /ˈɪə̯n/ - en /ˈeˀn/
+		oond /ˈʊə̯nt/ - ovn /ˈɒwˀn/
+		oor /ˈʊə̯r/ - over /ˈoːvɐ/
+		oor /ˈʊə̯r/ - øre /ˈøːɐ/
+		groen /χrˈun/ - grøn /ɡ̊ʁˈœˀn/
+		gans /χˈans/ - gås /ɡ̊ˈɔˀs/
+		gas /χˈas/ - gæst /ɡ̊ˈɛst/
+		goed /χˈut/ - god /ɡ̊ˈoˀð̞ˠ/
+		goud /χˈœu̯t/ - guld /ɡ̊ˈulˀ/
+		god /χˈɔt/ - gud /ɡ̊ˈuð̞ˠ/
+		geit /χˈəɪ̯t/ - ged /ɡ̊ˈeˀð̞ˠ/
+		gee /χˈɪə̯/ - give /ɡ̊ˈiˀ/
+		geel /χˈɪə̯ɫ/ - gul /ɡ̊ˈuˀl/
+
+Final disqualified:
+		boom /bˈʊə̯m/ - træ /ʦʰʁˈeˀ/
+		frou /frˈœu̯/ - kvinde /kʰʋˈenə/
+		frou /frˈœu̯/ - kone /kʰˈoːnə/
+		aarde /ˈɑːrdə/ - jord /jˈoˀɐ/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 161
+	Disqualified: 171
+	Added: 0
+	Removed: 5
+		boom /bˈʊə̯m/ - træ /ʦʰʁˈeˀ/
+		agt /ˈaχt/ - otte /ˈoːtə/
+		frou /frˈœu̯/ - kvinde /kʰʋˈenə/
+		tien /tˈin/ - ti /ʦʰˈiˀ/
+		woord /vˈʊə̯rt/ - ord /ˈoɐˀ/
+
+Iteration 2
+	Qualified: 160
+	Disqualified: 172
+	Added: 0
+	Removed: 1
+		frou /frˈœu̯/ - kone /kʰˈoːnə/
+
+Iteration 3
+	Qualified: 160
+	Disqualified: 172
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		broer /brˈuːr/ - bror /b̥ʁˈoɐ/
+		brug /brˈœχ/ - brygge /b̥ʁˈœɡ̊ə/
+		brood /brˈʊə̯t/ - brød /b̥ʁˈœˀð̞ˠ/
+		bloed /bɫˈut/ - blod /b̥lˈoˀð̞ˠ/
+		blaar /bɫˈɑːr/ - blad /b̥lˈað̞ˠ/
+		blom /bɫˈɔm/ - blomst /b̥lˈʌmˀst/
+		bad /bˈat/ - bad /b̥ˈað̞ˠ/
+		bied /bˈit/ - byde /b̥ˈyːð̞ˠə/
+		boek /bˈuk/ - bog /b̥ˈoˀw/
+		berg /bˈæːrχ/ - bjerg /b̥jˈɛɐˀw/
+		bors /bˈɔːrs/ - bryst /b̥ʁˈœst/
+		byt /bˈəɪ̯t/ - bide /b̥ˈiːð̞ˠə/
+		been /bˈɪə̯n/ - ben /b̥ˈeˀn/
+		beer /bˈɪə̯r/ - bjørn /b̥jˈœˀɐn/
+		beter /bˈɪə̯tər/ - bedre /b̥ˈeð̞ˠʁə/
+		boot /bˈʊə̯t/ - båd /b̥ˈɔˀð̞ˠ/
+		drie /drˈi/ - tre /ʦʰʁˈɛˀ/
+		drink /drˈəŋk/ - drikke /d̥ʁˈekə/
+		dryf /drˈəɪ̯f/ - drive /d̥ʁˈiːw/
+		droom /drˈʊə̯m/ - drømme /d̥ʁˈœmə/
+		droom /drˈʊə̯m/ - drøm /d̥ʁˈœˀm/
+		droog /drˈʊə̯χ/ - tør /ʦʰˈœˀɐ/
+		dank /dˈaŋk/ - takke /ʦʰˈɑkə/
+		dief /dˈif/ - tyv /ʦʰˈyˀw/
+		diep /dˈip/ - dyb /d̥ˈyˀb̥/
+		duur /dˈyːr/ - dyr /d̥ˈyˀɐ/
+		dun /dˈœn/ - tynd /ʦʰˈønˀ/
+		duits /dˈœɪ̯ts/ - tysk /ʦʰˈysk/
+		dor /dˈɔr/ - tør /ʦʰˈœˀɐ/
+		dik /dˈək/ - tyk /ʦʰˈyk/
+		ding /dˈəŋ/ - ting /ʦʰˈeŋˀ/
+		dodelik /dˈʊə̯dələk/ - dødelig /d̥ˈøːð̞ˠəli/
+		doring /dˈʊə̯rəŋ/ - tjørn /ʨˈœɐˀn/
+		dood /dˈʊə̯t/ - død /d̥ˈœˀð̞ˠ/
+		vriend /frˈint/ - frænde /fʁˈɑnə/
+		vries /frˈis/ - fryse /fʁˈyːsə/
+		vlieg /fɫˈiχ/ - flue /flˈuːə/
+		vlieg /fɫˈiχ/ - flyve /flˈyːw/
+		vier /fˈir/ - fire /fˈiːɐ/
+		voet /fˈut/ - fod /fˈoˀð̞ˠ/
+		vader /fˈɑːdər/ - far /fˈɑː/
+		volg /fˈɔɫχ/ - følge /fˈœlə/
+		vinger /fˈəŋər/ - finger /fˈeŋˀɐ/
+		voël /fˈʊə̯ɫ/ - fugl /fˈuˀl/
+		jaar /jˈɑːr/ - år /ˈɔˀ/
+		jong /jˈɔŋ/ - ung /ˈɔŋˀ/
+		knie /knˈi/ - knæ /kʰnˈeˀ/
+		kalf /kˈaɫf/ - kalv /kʰˈɛlˀv/
+		koei /kˈuːi̯/ - ko /kʰˈoˀ/
+		koud /kˈœu̯t/ - kold /kʰˈʌlˀ/
+		kop /kˈɔp/ - hoved /hˈoːəð̞ˠ/
+		koning /kˈʊə̯nəŋ/ - konge /kʰˈʌŋə/
+		koring /kˈʊə̯rəŋ/ - korn /kʰˈoɐˀn/
+		land /lˈant/ - land /lˈanˀ/
+		lag /lˈaχ/ - le /lˈeˀ/
+		man /mˈan/ - mand /mˈɛnˀ/
+		moeder /mˈudər/ - mor /mˈoːɐ/
+		muis /mˈœɪ̯s/ - mus /mˈuˀs/
+		muise /mˈœɪ̯sə/ - mus /mˈuˀs/
+		mug /mˈœχ/ - myg /mˈyɡ̊/
+		maan /mˈɑːn/ - måne /mˈɔːnə/
+		mond /mˈɔnt/ - mund /mˈɔnˀ/
+		my /mˈəɪ̯/ - meg /mˈɑj/
+		melk /mˈɛɫk/ - mælk /mˈelˀk/
+		nag /nˈaχ/ - nat /nˈɛt/
+		naak /nˈɑːk/ - nøgen /nˈʌjən/
+		naam /nˈɑːm/ - navn /nˈawˀn/
+		nael /nˈɔːɫ/ - negl /nˈɑjˀl/
+		neus /nˈɪø̯s/ - næse /nˈɛːsə/
+		noord /nˈʊə̯rt/ - nord /nˈoɐˀ/
+		plig /pɫˈəχ/ - pligt /pʰlˈeɡ̊t/
+		rooi /rˈoːi̯/ - rød /ʁˈœˀð̞ˠ/
+		ros /rˈɔs/ - hors /hˈɒːs/
+		ryk /rˈəɪ̯k/ - rig /ʁˈiˀ/
+		reën /rˈɪə̯n/ - regn /ʁˈɑjˀn/
+		rook /rˈʊə̯k/ - røg /ʁˈʌˀj/
+		skerp /skˈærp/ - skarp /skˈap/
+		skip /skˈəp/ - skib /skˈiˀb̥/
+		ster /stˈæːr/ - stjerne /stjˈæɐnə/
+		steen /stˈɪə̯n/ - sten /stˈeˀn/
+		swem /svˈɛm/ - svømme /sʋˈœmə/
+		swart /swˈart/ - sort /sˈoɐt/
+		swyn /swˈəɪ̯n/ - svin /sʋˈiˀn/
+		slang /sɫˈaŋ/ - slange /slˈɑŋə/
+		slaap /sɫˈɑːp/ - sove /sˈɒːw/
+		sand /sˈant/ - sand /sˈanˀ/
+		sien /sˈin/ - se /sˈeː/
+		soet /sˈut/ - sød /sˈœˀð̞ˠ/
+		suster /sˈœstər/ - søster /sˈœstɐ/
+		soet /sˈœu̯t/ - salt /sˈɛlˀt/
+		sit /sˈət/ - sidde /sˈeð̞ˠə/
+		sy /sˈəɪ̯/ - side /sˈiːð̞ˠə/
+		ses /sˈɛs/ - seks /sˈɛks/
+		sê /sˈɛː/ - sige /sˈiːə/
+		seun /sˈɪø̯n/ - søn /sˈœn/
+		sewe /sˈɪə̯və/ - syv /sˈyˀw/
+		twaalf /twˈɑːlf/ - tolv /ʦʰˈʌlˀ/
+		twintig /twˈɪntəχ/ - tyve /ʦʰˈyːw/
+		twee /twˈɪə̯/ - to /ʦʰˈoˀ/
+		tand /tˈant/ - tand /ʦʰˈanˀ/
+		tyd /tˈœi̯t/ - tid /ʦʰˈiˀð̞ˠ/
+		wal /vˈal/ - hval /ʋˈɛˀl/
+		warm /vˈarm/ - varm /ʋˈɑˀm/
+		wiel /vˈiɫ/ - hjul /jˈuˀl/
+		voete /vˈutə/ - fødder /fˈœð̞ˠɐ/
+		wurm /vˈœrəm/ - orm /ˈoɐˀm/
+		water /vˈɑːtər/ - vand /ʋˈanˀ/
+		wol /vˈɔɫ/ - uld /ˈulˀ/
+		wolf /vˈɔɫf/ - ulv /ˈulˀʋ/
+		wind /vˈənt/ - vind /ʋˈenˀ/
+		wens /vˈɛns/ - ønske /ˈœnskə/
+		weg /vˈɛχ/ - vej /ʋˈɑˀj/
+		weer /vˈɪə̯r/ - vejr /ʋˈɛˀɐ/
+		hand /ɦˈant/ - hånd /hˈʌnˀ/
+		hart /ɦˈart/ - hjerte /jˈɛɐtə/
+		hier /ɦˈir/ - her /hˈɛˀɐ/
+		huis /ɦˈœɪ̯s/ - hus /hˈuˀs/
+		haar /ɦˈɑːr/ - hår /hˈɒˀ/
+		haas /ɦˈɑːs/ - hare /hˈɑːɐ/
+		honderd /ɦˈɔndərt/ - hundrede /hˈunɐð̞ˠə/
+		hond /ɦˈɔnt/ - hund /hˈunˀ/
+		heim /ɦˈəɪ̯m/ - hjem /jˈɛˀm/
+		heilig /ɦˈəɪ̯ɫəχ/ - hellig /hˈɛli/
+		hen /ɦˈɛn/ - høne /hˈœːnə/
+		heuning /ɦˈɪø̯nəŋ/ - honning /hˈʌneŋ/
+		hoof /ɦˈʊə̯f/ - hoved /hˈoːəð̞ˠ/
+		horing /ɦˈʊə̯rəŋ/ - horn /hˈoɐˀn/
+		lam /ɫˈam/ - lam /lˈɑmˀ/
+		lig /ɫˈəχ/ - lys /lˈyˀs/
+		lig /ɫˈəχ/ - let /lˈɛt/
+		lewer /ɫˈɪə̯vər/ - lever /lˈeˀwɐ/
+		ander /ˈandər/ - anden /ˈanən/
+		appel /ˈapəɫ/ - æble /ˈeːb̥lə/
+		ash /ˈas/ - aske /ˈɛskə/
+		al /ˈaɫ/ - al /ˈal/
+		ek /ˈæk/ - jeg /jˈɑj/
+		uit /ˈœɪ̯t/ - ud /ˈuˀð̞ˠ/
+		uil /ˈœɪ̯ɫ/ - ugle /ˈuːlə/
+		aap /ˈɑːp/ - abe /ˈaːb̥ə/
+		aal /ˈɑːɫ/ - ål /ˈɔˀl/
+		ons /ˈɔns/ - os /ˈʌs/
+		in /ˈən/ - i /ˈiˀ/
+		eik /ˈəɪ̯k/ - eg /ˈeˀj/
+		ys /ˈəɪ̯s/ - is /ˈiˀs/
+		elf /ˈɛlf/ - elleve /ˈɛlʋə/
+		een /ˈɪə̯n/ - en /ˈeˀn/
+		eet /ˈɪə̯t/ - æde /ˈɛːð̞ˠə/
+		oond /ˈʊə̯nt/ - ovn /ˈɒwˀn/
+		oor /ˈʊə̯r/ - øre /ˈøːɐ/
+		oog /ˈʊə̯χ/ - øje /ˈʌjə/
+		gras /χrˈas/ - græs /ɡ̊ʁˈas/
+		groen /χrˈun/ - grøn /ɡ̊ʁˈœˀn/
+		gans /χˈans/ - gås /ɡ̊ˈɔˀs/
+		gas /χˈas/ - gæst /ɡ̊ˈɛst/
+		goed /χˈut/ - god /ɡ̊ˈoˀð̞ˠ/
+		goud /χˈœu̯t/ - guld /ɡ̊ˈulˀ/
+		god /χˈɔt/ - gud /ɡ̊ˈuð̞ˠ/
+		geit /χˈəɪ̯t/ - ged /ɡ̊ˈeˀð̞ˠ/
+		gee /χˈɪə̯/ - give /ɡ̊ˈiˀ/
+		geel /χˈɪə̯ɫ/ - gul /ɡ̊ˈuˀl/
+
+Final disqualified:
+		boom /bˈʊə̯m/ - træ /ʦʰʁˈeˀ/
+		frou /frˈœu̯/ - kvinde /kʰʋˈenə/
+		frou /frˈœu̯/ - kone /kʰˈoːnə/
+		tien /tˈin/ - ti /ʦʰˈiˀ/
+		woord /vˈʊə̯rt/ - ord /ˈoɐˀ/
+		agt /ˈaχt/ - otte /ˈoːtə/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 163
+	Disqualified: 169
+	Added: 0
+	Removed: 3
+		boom /bˈʊə̯m/ - træ /ʦʰʁˈeˀ/
+		tien /tˈin/ - ti /ʦʰˈiˀ/
+		woord /vˈʊə̯rt/ - ord /ˈoɐˀ/
+
+Iteration 2
+	Qualified: 163
+	Disqualified: 169
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		broer /brˈuːr/ - bror /b̥ʁˈoɐ/
+		brug /brˈœχ/ - brygge /b̥ʁˈœɡ̊ə/
+		brood /brˈʊə̯t/ - brød /b̥ʁˈœˀð̞ˠ/
+		bloed /bɫˈut/ - blod /b̥lˈoˀð̞ˠ/
+		blaar /bɫˈɑːr/ - blad /b̥lˈað̞ˠ/
+		blom /bɫˈɔm/ - blomst /b̥lˈʌmˀst/
+		bied /bˈit/ - byde /b̥ˈyːð̞ˠə/
+		boek /bˈuk/ - bog /b̥ˈoˀw/
+		berg /bˈæːrχ/ - bjerg /b̥jˈɛɐˀw/
+		bors /bˈɔːrs/ - bryst /b̥ʁˈœst/
+		byt /bˈəɪ̯t/ - bide /b̥ˈiːð̞ˠə/
+		beer /bˈɪə̯r/ - bjørn /b̥jˈœˀɐn/
+		beter /bˈɪə̯tər/ - bedre /b̥ˈeð̞ˠʁə/
+		drie /drˈi/ - tre /ʦʰʁˈɛˀ/
+		dryf /drˈəɪ̯f/ - drive /d̥ʁˈiːw/
+		droom /drˈʊə̯m/ - drømme /d̥ʁˈœmə/
+		droog /drˈʊə̯χ/ - tør /ʦʰˈœˀɐ/
+		dwerg /dvˈɛrχ/ - dværg /d̥ʋˈæɐˀw/
+		dank /dˈaŋk/ - takke /ʦʰˈɑkə/
+		diep /dˈip/ - dyb /d̥ˈyˀb̥/
+		dier /dˈir/ - dyr /d̥ˈyˀɐ/
+		duur /dˈyːr/ - dyr /d̥ˈyˀɐ/
+		duisend /dˈœɪ̯sən/ - tusind /ʦʰˈuˀsn̩/
+		duits /dˈœɪ̯ts/ - tysk /ʦʰˈysk/
+		dor /dˈɔr/ - tør /ʦʰˈœˀɐ/
+		dik /dˈək/ - tyk /ʦʰˈyk/
+		ding /dˈəŋ/ - ting /ʦʰˈeŋˀ/
+		dodelik /dˈʊə̯dələk/ - dødelig /d̥ˈøːð̞ˠəli/
+		doring /dˈʊə̯rəŋ/ - tjørn /ʨˈœɐˀn/
+		dood /dˈʊə̯t/ - død /d̥ˈœˀð̞ˠ/
+		vriend /frˈint/ - frænde /fʁˈɑnə/
+		vries /frˈis/ - fryse /fʁˈyːsə/
+		frou /frˈœu̯/ - kone /kʰˈoːnə/
+		vlieg /fɫˈiχ/ - flue /flˈuːə/
+		fars /fˈars/ - frisk /fʁˈesk/
+		vier /fˈir/ - fire /fˈiːɐ/
+		vuur /fˈyːr/ - ild /ˈilˀ/
+		vader /fˈɑːdər/ - far /fˈɑː/
+		vol /fˈɔɫ/ - fuld /fˈulˀ/
+		volg /fˈɔɫχ/ - følge /fˈœlə/
+		vis /fˈəs/ - fisk /fˈesk/
+		vinger /fˈəŋər/ - finger /fˈeŋˀɐ/
+		veer /fˈɪə̯r/ - fjer /fjˈeˀɐ/
+		voël /fˈʊə̯ɫ/ - fugl /fˈuˀl/
+		jaar /jˈɑːr/ - år /ˈɔˀ/
+		knie /knˈi/ - knæ /kʰnˈeˀ/
+		kalf /kˈaɫf/ - kalv /kʰˈɛlˀv/
+		koei /kˈuːi̯/ - ko /kʰˈoˀ/
+		koud /kˈœu̯t/ - kold /kʰˈʌlˀ/
+		kop /kˈɔp/ - hoved /hˈoːəð̞ˠ/
+		kerk /kˈɛrk/ - kirke /kʰˈiɐkə/
+		koning /kˈʊə̯nəŋ/ - konge /kʰˈʌŋə/
+		land /lˈant/ - land /lˈanˀ/
+		lag /lˈaχ/ - le /lˈeˀ/
+		loop /lˈʊə̯p/ - løbe /lˈøːb̥ə/
+		man /mˈan/ - mand /mˈɛnˀ/
+		moeder /mˈudər/ - mor /mˈoːɐ/
+		muis /mˈœɪ̯s/ - mus /mˈuˀs/
+		muise /mˈœɪ̯sə/ - mus /mˈuˀs/
+		mug /mˈœχ/ - myg /mˈyɡ̊/
+		mond /mˈɔnt/ - mund /mˈɔnˀ/
+		my /mˈəɪ̯/ - meg /mˈɑj/
+		melk /mˈɛɫk/ - mælk /mˈelˀk/
+		nag /nˈaχ/ - nat /nˈɛt/
+		naak /nˈɑːk/ - nøgen /nˈʌjən/
+		naam /nˈɑːm/ - navn /nˈawˀn/
+		naald /nˈɑːɫt/ - nål /nˈɔˀl/
+		nael /nˈɔːɫ/ - negl /nˈɑjˀl/
+		nege /nˈɪə̯χə/ - ni /nˈiˀ/
+		plig /pɫˈəχ/ - pligt /pʰlˈeɡ̊t/
+		rooi /rˈoːi̯/ - rød /ʁˈœˀð̞ˠ/
+		ryk /rˈəɪ̯k/ - rig /ʁˈiˀ/
+		reën /rˈɪə̯n/ - regn /ʁˈɑjˀn/
+		rook /rˈʊə̯k/ - røg /ʁˈʌˀj/
+		skaap /skˈɑːp/ - får /fˈɒˀ/
+		skip /skˈəp/ - skib /skˈiˀb̥/
+		slaan /slˈɑːn/ - slå /slˈɔˀ/
+		sneeu /snˈiw/ - sne /snˈeˀ/
+		stoel /stˈuɫ/ - stol /stˈoˀl/
+		storm /stˈɔrm/ - storm /stˈɔˀm/
+		swem /svˈɛm/ - svømme /sʋˈœmə/
+		swart /swˈart/ - sort /sˈoɐt/
+		swaard /swˈɑːrt/ - sværd /sʋˈɛɐˀ/
+		swyn /swˈəɪ̯n/ - svin /sʋˈiˀn/
+		slang /sɫˈaŋ/ - slange /slˈɑŋə/
+		slaap /sɫˈɑːp/ - sove /sˈɒːw/
+		sand /sˈant/ - sand /sˈanˀ/
+		sien /sˈin/ - se /sˈeː/
+		suster /sˈœstər/ - søster /sˈœstɐ/
+		soet /sˈœu̯t/ - salt /sˈɛlˀt/
+		sit /sˈət/ - sidde /sˈeð̞ˠə/
+		sing /sˈəŋ/ - synge /sˈøŋə/
+		sy /sˈəɪ̯/ - side /sˈiːð̞ˠə/
+		ses /sˈɛs/ - seks /sˈɛks/
+		sê /sˈɛː/ - sige /sˈiːə/
+		seun /sˈɪø̯n/ - søn /sˈœn/
+		sewe /sˈɪə̯və/ - syv /sˈyˀw/
+		twaalf /twˈɑːlf/ - tolv /ʦʰˈʌlˀ/
+		twintig /twˈɪntəχ/ - tyve /ʦʰˈyːw/
+		twee /twˈɪə̯/ - to /ʦʰˈoˀ/
+		tong /tˈɔŋ/ - tunge /ʦʰˈɔŋə/
+		warm /vˈarm/ - varm /ʋˈɑˀm/
+		wat /vˈat/ - hvad /ʋˈað̞ˠ/
+		voete /vˈutə/ - fødder /fˈœð̞ˠɐ/
+		wurm /vˈœrəm/ - orm /ˈoɐˀm/
+		wapen /vˈɑːpən/ - våben /vˈɔˀb̥m̩/
+		water /vˈɑːtər/ - vand /ʋˈanˀ/
+		wolf /vˈɔɫf/ - ulv /ˈulˀʋ/
+		wind /vˈənt/ - vind /ʋˈenˀ/
+		wit /vˈət/ - hvid /ʋˈiˀð̞ˠ/
+		wens /vˈɛns/ - ønske /ˈœnskə/
+		weg /vˈɛχ/ - vej /ʋˈɑˀj/
+		weer /vˈɪə̯r/ - vejr /ʋˈɛˀɐ/
+		weet /vˈɪə̯t/ - vide /ʋˈiːð̞ˠə/
+		hand /ɦˈant/ - hånd /hˈʌnˀ/
+		hart /ɦˈart/ - hjerte /jˈɛɐtə/
+		hier /ɦˈir/ - her /hˈɛˀɐ/
+		huis /ɦˈœɪ̯s/ - hus /hˈuˀs/
+		haar /ɦˈɑːr/ - hår /hˈɒˀ/
+		haas /ɦˈɑːs/ - hare /hˈɑːɐ/
+		honderd /ɦˈɔndərt/ - hundrede /hˈunɐð̞ˠə/
+		hond /ɦˈɔnt/ - hund /hˈunˀ/
+		heim /ɦˈəɪ̯m/ - hjem /jˈɛˀm/
+		heilig /ɦˈəɪ̯ɫəχ/ - hellig /hˈɛli/
+		hen /ɦˈɛn/ - høne /hˈœːnə/
+		hê /ɦˈɛː/ - have /hˈɛːw/
+		heuning /ɦˈɪø̯nəŋ/ - honning /hˈʌneŋ/
+		horing /ɦˈʊə̯rəŋ/ - horn /hˈoɐˀn/
+		hoog /ɦˈʊə̯χ/ - høj /hˈʌˀj/
+		lank /ɫˈaŋk/ - lang /lˈɑŋˀ/
+		luis /ɫˈœɪ̯s/ - lus /lˈuˀs/
+		lig /ɫˈəχ/ - let /lˈɛt/
+		lewer /ɫˈɪə̯vər/ - lever /lˈeˀwɐ/
+		ander /ˈandər/ - anden /ˈanən/
+		appel /ˈapəɫ/ - æble /ˈeːb̥lə/
+		arm /ˈarm/ - arm /ˈɑˀm/
+		ash /ˈas/ - aske /ˈɛskə/
+		al /ˈaɫ/ - al /ˈal/
+		agt /ˈaχt/ - otte /ˈoːtə/
+		ek /ˈæk/ - jeg /jˈɑj/
+		uit /ˈœɪ̯t/ - ud /ˈuˀð̞ˠ/
+		uil /ˈœɪ̯ɫ/ - ugle /ˈuːlə/
+		aap /ˈɑːp/ - abe /ˈaːb̥ə/
+		aal /ˈɑːɫ/ - ål /ˈɔˀl/
+		ons /ˈɔns/ - os /ˈʌs/
+		eik /ˈəɪ̯k/ - eg /ˈeˀj/
+		ys /ˈəɪ̯s/ - is /ˈiˀs/
+		elf /ˈɛlf/ - elleve /ˈɛlʋə/
+		eg /ˈɛχ/ - æg /ˈeˀɡ̊/
+		een /ˈɪə̯n/ - en /ˈeˀn/
+		eet /ˈɪə̯t/ - æde /ˈɛːð̞ˠə/
+		oond /ˈʊə̯nt/ - ovn /ˈɒwˀn/
+		oor /ˈʊə̯r/ - over /ˈoːvɐ/
+		oor /ˈʊə̯r/ - øre /ˈøːɐ/
+		oog /ˈʊə̯χ/ - øje /ˈʌjə/
+		gras /χrˈas/ - græs /ɡ̊ʁˈas/
+		groen /χrˈun/ - grøn /ɡ̊ʁˈœˀn/
+		gans /χˈans/ - gås /ɡ̊ˈɔˀs/
+		gas /χˈas/ - gæst /ɡ̊ˈɛst/
+		goed /χˈut/ - god /ɡ̊ˈoˀð̞ˠ/
+		god /χˈɔt/ - gud /ɡ̊ˈuð̞ˠ/
+		geit /χˈəɪ̯t/ - ged /ɡ̊ˈeˀð̞ˠ/
+		gee /χˈɪə̯/ - give /ɡ̊ˈiˀ/
+
+Final disqualified:
+		boom /bˈʊə̯m/ - træ /ʦʰʁˈeˀ/
+		tien /tˈin/ - ti /ʦʰˈiˀ/
+		woord /vˈʊə̯rt/ - ord /ˈoɐˀ/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 163
+	Disqualified: 169
+	Added: 0
+	Removed: 3
+		boom /bˈʊə̯m/ - træ /ʦʰʁˈeˀ/
+		frou /frˈœu̯/ - kvinde /kʰʋˈenə/
+		aarde /ˈɑːrdə/ - jord /jˈoˀɐ/
+
+Iteration 2
+	Qualified: 163
+	Disqualified: 169
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		brug /brˈœχ/ - brygge /b̥ʁˈœɡ̊ə/
+		brood /brˈʊə̯t/ - brød /b̥ʁˈœˀð̞ˠ/
+		bloed /bɫˈut/ - blod /b̥lˈoˀð̞ˠ/
+		blom /bɫˈɔm/ - blomst /b̥lˈʌmˀst/
+		bad /bˈat/ - bad /b̥ˈað̞ˠ/
+		bied /bˈit/ - byde /b̥ˈyːð̞ˠə/
+		berg /bˈæːrχ/ - bjerg /b̥jˈɛɐˀw/
+		bors /bˈɔːrs/ - bryst /b̥ʁˈœst/
+		bid /bˈət/ - bede /b̥ˈeˀ/
+		by /bˈəɪ̯/ - bi /b̥ˈiˀ/
+		byt /bˈəɪ̯t/ - bide /b̥ˈiːð̞ˠə/
+		beer /bˈɪə̯r/ - bjørn /b̥jˈœˀɐn/
+		drie /drˈi/ - tre /ʦʰʁˈɛˀ/
+		drink /drˈəŋk/ - drikke /d̥ʁˈekə/
+		dryf /drˈəɪ̯f/ - drive /d̥ʁˈiːw/
+		droom /drˈʊə̯m/ - drømme /d̥ʁˈœmə/
+		droom /drˈʊə̯m/ - drøm /d̥ʁˈœˀm/
+		droog /drˈʊə̯χ/ - tør /ʦʰˈœˀɐ/
+		dwerg /dvˈɛrχ/ - dværg /d̥ʋˈæɐˀw/
+		dank /dˈaŋk/ - takke /ʦʰˈɑkə/
+		dag /dˈaχ/ - dag /d̥ˈæˀj/
+		diep /dˈip/ - dyb /d̥ˈyˀb̥/
+		dier /dˈir/ - dyr /d̥ˈyˀɐ/
+		duur /dˈyːr/ - dyr /d̥ˈyˀɐ/
+		dun /dˈœn/ - tynd /ʦʰˈønˀ/
+		duits /dˈœɪ̯ts/ - tysk /ʦʰˈysk/
+		dor /dˈɔr/ - tør /ʦʰˈœˀɐ/
+		dogter /dˈɔχtər/ - datter /d̥ˈɛtɐ/
+		dik /dˈək/ - tyk /ʦʰˈyk/
+		ding /dˈəŋ/ - ting /ʦʰˈeŋˀ/
+		dodelik /dˈʊə̯dələk/ - dødelig /d̥ˈøːð̞ˠəli/
+		dood /dˈʊə̯t/ - død /d̥ˈœˀð̞ˠ/
+		vriend /frˈint/ - frænde /fʁˈɑnə/
+		vries /frˈis/ - fryse /fʁˈyːsə/
+		frou /frˈœu̯/ - kone /kʰˈoːnə/
+		vlieg /fɫˈiχ/ - flue /flˈuːə/
+		vlieg /fɫˈiχ/ - flyve /flˈyːw/
+		fars /fˈars/ - frisk /fʁˈesk/
+		vier /fˈir/ - fire /fˈiːɐ/
+		voet /fˈut/ - fod /fˈoˀð̞ˠ/
+		vuur /fˈyːr/ - ild /ˈilˀ/
+		vader /fˈɑːdər/ - far /fˈɑː/
+		vol /fˈɔɫ/ - fuld /fˈulˀ/
+		volg /fˈɔɫχ/ - følge /fˈœlə/
+		vinger /fˈəŋər/ - finger /fˈeŋˀɐ/
+		vyf /fˈəɪ̯f/ - fem /fˈɛmˀ/
+		veer /fˈɪə̯r/ - fjer /fjˈeˀɐ/
+		voël /fˈʊə̯ɫ/ - fugl /fˈuˀl/
+		jaar /jˈɑːr/ - år /ˈɔˀ/
+		jong /jˈɔŋ/ - ung /ˈɔŋˀ/
+		kalf /kˈaɫf/ - kalv /kʰˈɛlˀv/
+		kop /kˈɔp/ - hoved /hˈoːəð̞ˠ/
+		kerk /kˈɛrk/ - kirke /kʰˈiɐkə/
+		koning /kˈʊə̯nəŋ/ - konge /kʰˈʌŋə/
+		koring /kˈʊə̯rəŋ/ - korn /kʰˈoɐˀn/
+		land /lˈant/ - land /lˈanˀ/
+		lag /lˈaχ/ - le /lˈeˀ/
+		loop /lˈʊə̯p/ - løbe /lˈøːb̥ə/
+		man /mˈan/ - mand /mˈɛnˀ/
+		mans /mˈans/ - mænd /mˈenˀ/
+		moeder /mˈudər/ - mor /mˈoːɐ/
+		muis /mˈœɪ̯s/ - mus /mˈuˀs/
+		muise /mˈœɪ̯sə/ - mus /mˈuˀs/
+		mug /mˈœχ/ - myg /mˈyɡ̊/
+		maan /mˈɑːn/ - måne /mˈɔːnə/
+		my /mˈəɪ̯/ - meg /mˈɑj/
+		mens /mˈɛns/ - menneske /mˈen̩skə/
+		melk /mˈɛɫk/ - mælk /mˈelˀk/
+		nuut /nˈit/ - ny /nˈyˀ/
+		naak /nˈɑːk/ - nøgen /nˈʌjən/
+		naam /nˈɑːm/ - navn /nˈawˀn/
+		nael /nˈɔːɫ/ - negl /nˈɑjˀl/
+		neus /nˈɪø̯s/ - næse /nˈɛːsə/
+		nege /nˈɪə̯χə/ - ni /nˈiˀ/
+		noord /nˈʊə̯rt/ - nord /nˈoɐˀ/
+		plig /pɫˈəχ/ - pligt /pʰlˈeɡ̊t/
+		rooi /rˈoːi̯/ - rød /ʁˈœˀð̞ˠ/
+		ros /rˈɔs/ - hors /hˈɒːs/
+		ring /rˈəŋ/ - ring /ʁˈeŋˀ/
+		ryk /rˈəɪ̯k/ - rig /ʁˈiˀ/
+		reën /rˈɪə̯n/ - regn /ʁˈɑjˀn/
+		rook /rˈʊə̯k/ - røg /ʁˈʌˀj/
+		skaap /skˈɑːp/ - får /fˈɒˀ/
+		skip /skˈəp/ - skib /skˈiˀb̥/
+		slaan /slˈɑːn/ - slå /slˈɔˀ/
+		sneeu /snˈiw/ - sne /snˈeˀ/
+		stoel /stˈuɫ/ - stol /stˈoˀl/
+		storm /stˈɔrm/ - storm /stˈɔˀm/
+		steen /stˈɪə̯n/ - sten /stˈeˀn/
+		swart /swˈart/ - sort /sˈoɐt/
+		swaard /swˈɑːrt/ - sværd /sʋˈɛɐˀ/
+		swyn /swˈəɪ̯n/ - svin /sʋˈiˀn/
+		sand /sˈant/ - sand /sˈanˀ/
+		sien /sˈin/ - se /sˈeː/
+		soet /sˈut/ - sød /sˈœˀð̞ˠ/
+		suster /sˈœstər/ - søster /sˈœstɐ/
+		soet /sˈœu̯t/ - salt /sˈɛlˀt/
+		sit /sˈət/ - sidde /sˈeð̞ˠə/
+		sing /sˈəŋ/ - synge /sˈøŋə/
+		sy /sˈəɪ̯/ - side /sˈiːð̞ˠə/
+		ses /sˈɛs/ - seks /sˈɛks/
+		sê /sˈɛː/ - sige /sˈiːə/
+		sewe /sˈɪə̯və/ - syv /sˈyˀw/
+		twee /twˈɪə̯/ - to /ʦʰˈoˀ/
+		tand /tˈant/ - tand /ʦʰˈanˀ/
+		tien /tˈin/ - ti /ʦʰˈiˀ/
+		tyd /tˈœi̯t/ - tid /ʦʰˈiˀð̞ˠ/
+		tong /tˈɔŋ/ - tunge /ʦʰˈɔŋə/
+		wal /vˈal/ - hval /ʋˈɛˀl/
+		wat /vˈat/ - hvad /ʋˈað̞ˠ/
+		wiel /vˈiɫ/ - hjul /jˈuˀl/
+		wurm /vˈœrəm/ - orm /ˈoɐˀm/
+		wapen /vˈɑːpən/ - våben /vˈɔˀb̥m̩/
+		water /vˈɑːtər/ - vand /ʋˈanˀ/
+		wol /vˈɔɫ/ - uld /ˈulˀ/
+		wind /vˈənt/ - vind /ʋˈenˀ/
+		wit /vˈət/ - hvid /ʋˈiˀð̞ˠ/
+		wens /vˈɛns/ - ønske /ˈœnskə/
+		weg /vˈɛχ/ - vej /ʋˈɑˀj/
+		weer /vˈɪə̯r/ - vejr /ʋˈɛˀɐ/
+		weet /vˈɪə̯t/ - vide /ʋˈiːð̞ˠə/
+		woord /vˈʊə̯rt/ - ord /ˈoɐˀ/
+		hart /ɦˈart/ - hjerte /jˈɛɐtə/
+		hier /ɦˈir/ - her /hˈɛˀɐ/
+		huis /ɦˈœɪ̯s/ - hus /hˈuˀs/
+		haar /ɦˈɑːr/ - hår /hˈɒˀ/
+		haas /ɦˈɑːs/ - hare /hˈɑːɐ/
+		honderd /ɦˈɔndərt/ - hundrede /hˈunɐð̞ˠə/
+		hond /ɦˈɔnt/ - hund /hˈunˀ/
+		heim /ɦˈəɪ̯m/ - hjem /jˈɛˀm/
+		heilig /ɦˈəɪ̯ɫəχ/ - hellig /hˈɛli/
+		hen /ɦˈɛn/ - høne /hˈœːnə/
+		heuning /ɦˈɪø̯nəŋ/ - honning /hˈʌneŋ/
+		hoof /ɦˈʊə̯f/ - hoved /hˈoːəð̞ˠ/
+		hoog /ɦˈʊə̯χ/ - høj /hˈʌˀj/
+		lam /ɫˈam/ - lam /lˈɑmˀ/
+		lank /ɫˈaŋk/ - lang /lˈɑŋˀ/
+		luis /ɫˈœɪ̯s/ - lus /lˈuˀs/
+		lig /ɫˈəχ/ - lys /lˈyˀs/
+		lig /ɫˈəχ/ - let /lˈɛt/
+		lewer /ɫˈɪə̯vər/ - lever /lˈeˀwɐ/
+		ander /ˈandər/ - anden /ˈanən/
+		appel /ˈapəɫ/ - æble /ˈeːb̥lə/
+		arm /ˈarm/ - arm /ˈɑˀm/
+		ash /ˈas/ - aske /ˈɛskə/
+		al /ˈaɫ/ - al /ˈal/
+		agt /ˈaχt/ - otte /ˈoːtə/
+		ek /ˈæk/ - jeg /jˈɑj/
+		uil /ˈœɪ̯ɫ/ - ugle /ˈuːlə/
+		aap /ˈɑːp/ - abe /ˈaːb̥ə/
+		in /ˈən/ - i /ˈiˀ/
+		ys /ˈəɪ̯s/ - is /ˈiˀs/
+		eg /ˈɛχ/ - æg /ˈeˀɡ̊/
+		een /ˈɪə̯n/ - en /ˈeˀn/
+		eet /ˈɪə̯t/ - æde /ˈɛːð̞ˠə/
+		oond /ˈʊə̯nt/ - ovn /ˈɒwˀn/
+		oor /ˈʊə̯r/ - over /ˈoːvɐ/
+		oor /ˈʊə̯r/ - øre /ˈøːɐ/
+		oog /ˈʊə̯χ/ - øje /ˈʌjə/
+		gras /χrˈas/ - græs /ɡ̊ʁˈas/
+		groen /χrˈun/ - grøn /ɡ̊ʁˈœˀn/
+		geit /χˈəɪ̯t/ - ged /ɡ̊ˈeˀð̞ˠ/
+		gee /χˈɪə̯/ - give /ɡ̊ˈiˀ/
+
+Final disqualified:
+		boom /bˈʊə̯m/ - træ /ʦʰʁˈeˀ/
+		frou /frˈœu̯/ - kvinde /kʰʋˈenə/
+		aarde /ˈɑːrdə/ - jord /jˈoˀɐ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 163
+	Disqualified: 169
+	Added: 0
+	Removed: 3
+		frou /frˈœu̯/ - kvinde /kʰʋˈenə/
+		tien /tˈin/ - ti /ʦʰˈiˀ/
+		woord /vˈʊə̯rt/ - ord /ˈoɐˀ/
+
+Iteration 2
+	Qualified: 162
+	Disqualified: 170
+	Added: 0
+	Removed: 1
+		frou /frˈœu̯/ - kone /kʰˈoːnə/
+
+Iteration 3
+	Qualified: 162
+	Disqualified: 170
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		broer /brˈuːr/ - bror /b̥ʁˈoɐ/
+		brug /brˈœχ/ - brygge /b̥ʁˈœɡ̊ə/
+		bloed /bɫˈut/ - blod /b̥lˈoˀð̞ˠ/
+		blaar /bɫˈɑːr/ - blad /b̥lˈað̞ˠ/
+		blom /bɫˈɔm/ - blomst /b̥lˈʌmˀst/
+		bad /bˈat/ - bad /b̥ˈað̞ˠ/
+		bied /bˈit/ - byde /b̥ˈyːð̞ˠə/
+		boek /bˈuk/ - bog /b̥ˈoˀw/
+		berg /bˈæːrχ/ - bjerg /b̥jˈɛɐˀw/
+		bors /bˈɔːrs/ - bryst /b̥ʁˈœst/
+		bid /bˈət/ - bede /b̥ˈeˀ/
+		byt /bˈəɪ̯t/ - bide /b̥ˈiːð̞ˠə/
+		been /bˈɪə̯n/ - ben /b̥ˈeˀn/
+		beer /bˈɪə̯r/ - bjørn /b̥jˈœˀɐn/
+		beter /bˈɪə̯tər/ - bedre /b̥ˈeð̞ˠʁə/
+		boot /bˈʊə̯t/ - båd /b̥ˈɔˀð̞ˠ/
+		drie /drˈi/ - tre /ʦʰʁˈɛˀ/
+		drink /drˈəŋk/ - drikke /d̥ʁˈekə/
+		dryf /drˈəɪ̯f/ - drive /d̥ʁˈiːw/
+		droom /drˈʊə̯m/ - drømme /d̥ʁˈœmə/
+		droom /drˈʊə̯m/ - drøm /d̥ʁˈœˀm/
+		dwerg /dvˈɛrχ/ - dværg /d̥ʋˈæɐˀw/
+		dank /dˈaŋk/ - takke /ʦʰˈɑkə/
+		dag /dˈaχ/ - dag /d̥ˈæˀj/
+		dief /dˈif/ - tyv /ʦʰˈyˀw/
+		dier /dˈir/ - dyr /d̥ˈyˀɐ/
+		duur /dˈyːr/ - dyr /d̥ˈyˀɐ/
+		dun /dˈœn/ - tynd /ʦʰˈønˀ/
+		duisend /dˈœɪ̯sən/ - tusind /ʦʰˈuˀsn̩/
+		dor /dˈɔr/ - tør /ʦʰˈœˀɐ/
+		dogter /dˈɔχtər/ - datter /d̥ˈɛtɐ/
+		dik /dˈək/ - tyk /ʦʰˈyk/
+		dodelik /dˈʊə̯dələk/ - dødelig /d̥ˈøːð̞ˠəli/
+		doring /dˈʊə̯rəŋ/ - tjørn /ʨˈœɐˀn/
+		vriend /frˈint/ - frænde /fʁˈɑnə/
+		vries /frˈis/ - fryse /fʁˈyːsə/
+		vlieg /fɫˈiχ/ - flue /flˈuːə/
+		vlieg /fɫˈiχ/ - flyve /flˈyːw/
+		fars /fˈars/ - frisk /fʁˈesk/
+		voet /fˈut/ - fod /fˈoˀð̞ˠ/
+		vuur /fˈyːr/ - ild /ˈilˀ/
+		vader /fˈɑːdər/ - far /fˈɑː/
+		vol /fˈɔɫ/ - fuld /fˈulˀ/
+		vis /fˈəs/ - fisk /fˈesk/
+		vinger /fˈəŋər/ - finger /fˈeŋˀɐ/
+		vyf /fˈəɪ̯f/ - fem /fˈɛmˀ/
+		veer /fˈɪə̯r/ - fjer /fjˈeˀɐ/
+		voël /fˈʊə̯ɫ/ - fugl /fˈuˀl/
+		jong /jˈɔŋ/ - ung /ˈɔŋˀ/
+		knie /knˈi/ - knæ /kʰnˈeˀ/
+		kalf /kˈaɫf/ - kalv /kʰˈɛlˀv/
+		koud /kˈœu̯t/ - kold /kʰˈʌlˀ/
+		kop /kˈɔp/ - hoved /hˈoːəð̞ˠ/
+		kerk /kˈɛrk/ - kirke /kʰˈiɐkə/
+		koning /kˈʊə̯nəŋ/ - konge /kʰˈʌŋə/
+		koring /kˈʊə̯rəŋ/ - korn /kʰˈoɐˀn/
+		lag /lˈaχ/ - le /lˈeˀ/
+		loop /lˈʊə̯p/ - løbe /lˈøːb̥ə/
+		mans /mˈans/ - mænd /mˈenˀ/
+		moeder /mˈudər/ - mor /mˈoːɐ/
+		muis /mˈœɪ̯s/ - mus /mˈuˀs/
+		muise /mˈœɪ̯sə/ - mus /mˈuˀs/
+		mug /mˈœχ/ - myg /mˈyɡ̊/
+		maan /mˈɑːn/ - måne /mˈɔːnə/
+		mond /mˈɔnt/ - mund /mˈɔnˀ/
+		mens /mˈɛns/ - menneske /mˈen̩skə/
+		melk /mˈɛɫk/ - mælk /mˈelˀk/
+		nag /nˈaχ/ - nat /nˈɛt/
+		naak /nˈɑːk/ - nøgen /nˈʌjən/
+		nael /nˈɔːɫ/ - negl /nˈɑjˀl/
+		neus /nˈɪø̯s/ - næse /nˈɛːsə/
+		nege /nˈɪə̯χə/ - ni /nˈiˀ/
+		noord /nˈʊə̯rt/ - nord /nˈoɐˀ/
+		plig /pɫˈəχ/ - pligt /pʰlˈeɡ̊t/
+		rooi /rˈoːi̯/ - rød /ʁˈœˀð̞ˠ/
+		ros /rˈɔs/ - hors /hˈɒːs/
+		ring /rˈəŋ/ - ring /ʁˈeŋˀ/
+		ryk /rˈəɪ̯k/ - rig /ʁˈiˀ/
+		reën /rˈɪə̯n/ - regn /ʁˈɑjˀn/
+		rook /rˈʊə̯k/ - røg /ʁˈʌˀj/
+		skaap /skˈɑːp/ - får /fˈɒˀ/
+		skip /skˈəp/ - skib /skˈiˀb̥/
+		slaan /slˈɑːn/ - slå /slˈɔˀ/
+		sneeu /snˈiw/ - sne /snˈeˀ/
+		stoel /stˈuɫ/ - stol /stˈoˀl/
+		ster /stˈæːr/ - stjerne /stjˈæɐnə/
+		storm /stˈɔrm/ - storm /stˈɔˀm/
+		swem /svˈɛm/ - svømme /sʋˈœmə/
+		swart /swˈart/ - sort /sˈoɐt/
+		swaard /swˈɑːrt/ - sværd /sʋˈɛɐˀ/
+		slang /sɫˈaŋ/ - slange /slˈɑŋə/
+		suster /sˈœstər/ - søster /sˈœstɐ/
+		soet /sˈœu̯t/ - salt /sˈɛlˀt/
+		sit /sˈət/ - sidde /sˈeð̞ˠə/
+		sing /sˈəŋ/ - synge /sˈøŋə/
+		ses /sˈɛs/ - seks /sˈɛks/
+		sê /sˈɛː/ - sige /sˈiːə/
+		sewe /sˈɪə̯və/ - syv /sˈyˀw/
+		twaalf /twˈɑːlf/ - tolv /ʦʰˈʌlˀ/
+		twintig /twˈɪntəχ/ - tyve /ʦʰˈyːw/
+		twee /twˈɪə̯/ - to /ʦʰˈoˀ/
+		tyd /tˈœi̯t/ - tid /ʦʰˈiˀð̞ˠ/
+		wal /vˈal/ - hval /ʋˈɛˀl/
+		warm /vˈarm/ - varm /ʋˈɑˀm/
+		wiel /vˈiɫ/ - hjul /jˈuˀl/
+		voete /vˈutə/ - fødder /fˈœð̞ˠɐ/
+		wurm /vˈœrəm/ - orm /ˈoɐˀm/
+		wapen /vˈɑːpən/ - våben /vˈɔˀb̥m̩/
+		water /vˈɑːtər/ - vand /ʋˈanˀ/
+		wol /vˈɔɫ/ - uld /ˈulˀ/
+		wens /vˈɛns/ - ønske /ˈœnskə/
+		weg /vˈɛχ/ - vej /ʋˈɑˀj/
+		weer /vˈɪə̯r/ - vejr /ʋˈɛˀɐ/
+		weet /vˈɪə̯t/ - vide /ʋˈiːð̞ˠə/
+		hart /ɦˈart/ - hjerte /jˈɛɐtə/
+		hier /ɦˈir/ - her /hˈɛˀɐ/
+		huis /ɦˈœɪ̯s/ - hus /hˈuˀs/
+		honderd /ɦˈɔndərt/ - hundrede /hˈunɐð̞ˠə/
+		hond /ɦˈɔnt/ - hund /hˈunˀ/
+		heim /ɦˈəɪ̯m/ - hjem /jˈɛˀm/
+		heilig /ɦˈəɪ̯ɫəχ/ - hellig /hˈɛli/
+		hen /ɦˈɛn/ - høne /hˈœːnə/
+		hê /ɦˈɛː/ - have /hˈɛːw/
+		heuning /ɦˈɪø̯nəŋ/ - honning /hˈʌneŋ/
+		hoof /ɦˈʊə̯f/ - hoved /hˈoːəð̞ˠ/
+		hoor /ɦˈʊə̯r/ - høre /hˈøːɐ/
+		horing /ɦˈʊə̯rəŋ/ - horn /hˈoɐˀn/
+		hoog /ɦˈʊə̯χ/ - høj /hˈʌˀj/
+		lam /ɫˈam/ - lam /lˈɑmˀ/
+		lank /ɫˈaŋk/ - lang /lˈɑŋˀ/
+		lig /ɫˈəχ/ - lys /lˈyˀs/
+		lig /ɫˈəχ/ - let /lˈɛt/
+		lewer /ɫˈɪə̯vər/ - lever /lˈeˀwɐ/
+		ander /ˈandər/ - anden /ˈanən/
+		appel /ˈapəɫ/ - æble /ˈeːb̥lə/
+		arm /ˈarm/ - arm /ˈɑˀm/
+		ash /ˈas/ - aske /ˈɛskə/
+		al /ˈaɫ/ - al /ˈal/
+		agt /ˈaχt/ - otte /ˈoːtə/
+		ek /ˈæk/ - jeg /jˈɑj/
+		uit /ˈœɪ̯t/ - ud /ˈuˀð̞ˠ/
+		uil /ˈœɪ̯ɫ/ - ugle /ˈuːlə/
+		aap /ˈɑːp/ - abe /ˈaːb̥ə/
+		ons /ˈɔns/ - os /ˈʌs/
+		in /ˈən/ - i /ˈiˀ/
+		eik /ˈəɪ̯k/ - eg /ˈeˀj/
+		ys /ˈəɪ̯s/ - is /ˈiˀs/
+		elf /ˈɛlf/ - elleve /ˈɛlʋə/
+		eg /ˈɛχ/ - æg /ˈeˀɡ̊/
+		eet /ˈɪə̯t/ - æde /ˈɛːð̞ˠə/
+		oond /ˈʊə̯nt/ - ovn /ˈɒwˀn/
+		oor /ˈʊə̯r/ - over /ˈoːvɐ/
+		oor /ˈʊə̯r/ - øre /ˈøːɐ/
+		oog /ˈʊə̯χ/ - øje /ˈʌjə/
+		gras /χrˈas/ - græs /ɡ̊ʁˈas/
+		gans /χˈans/ - gås /ɡ̊ˈɔˀs/
+		gas /χˈas/ - gæst /ɡ̊ˈɛst/
+		goed /χˈut/ - god /ɡ̊ˈoˀð̞ˠ/
+		goud /χˈœu̯t/ - guld /ɡ̊ˈulˀ/
+		god /χˈɔt/ - gud /ɡ̊ˈuð̞ˠ/
+		geit /χˈəɪ̯t/ - ged /ɡ̊ˈeˀð̞ˠ/
+		gee /χˈɪə̯/ - give /ɡ̊ˈiˀ/
+
+Final disqualified:
+		frou /frˈœu̯/ - kvinde /kʰʋˈenə/
+		frou /frˈœu̯/ - kone /kʰˈoːnə/
+		tien /tˈin/ - ti /ʦʰˈiˀ/
+		woord /vˈʊə̯rt/ - ord /ˈoɐˀ/
+
+
+-------------------
+

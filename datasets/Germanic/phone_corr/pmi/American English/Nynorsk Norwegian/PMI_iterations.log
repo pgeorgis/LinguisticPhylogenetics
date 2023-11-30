@@ -1,0 +1,1241 @@
+Same meaning pairs: 217
+****SAMPLE 1****
+Iteration 1
+	Qualified: 163
+	Disqualified: 185
+	Added: 0
+	Removed: 11
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		beam /bˈim/ - tre /tʰɾˈeː/
+		light /ɫˈaɪ̯t/ - ljos /jˈuːs/
+		in /ˈɪn/ - i /ˈiː/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+		dry /dɹˈaɪ̯/ - turr /tʰˈʉɾ/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+		earth /ˈɝθ/ - jord /jˈuːɾ/
+		head /hˈɛd/ - hovud /hˈoːʋʉ/
+
+Iteration 2
+	Qualified: 162
+	Disqualified: 186
+	Added: 2
+		word /wˈɝd/ - ord /ˈuːɾ/
+		head /hˈɛd/ - hovud /hˈoːʋʉ/
+	Removed: 3
+		ash /ˈæʃ/ - oske /ˈʊske/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+
+Iteration 3
+	Qualified: 164
+	Disqualified: 184
+	Added: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+	Removed: 0
+
+Iteration 4
+	Qualified: 163
+	Disqualified: 185
+	Added: 0
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Iteration 5
+	Qualified: 163
+	Disqualified: 185
+	Added: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+	Removed: 1
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+
+Iteration 6
+	Qualified: 163
+	Disqualified: 185
+	Added: 1
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - blad /blˈɑːd/
+		bloom /blˈum/ - blom /blˈuːm/
+		blood /blˈʌd/ - blod /blˈuː/
+		bread /bɹˈɛd/ - braud /bɾˈæʉ̯/
+		breast /bɹˈɛst/ - bryst /bɾˈʏst/
+		bridge /bɹˈɪʤ/ - brygge /bɾˈʏɡːe/
+		brother /bɹˈʌðɚ/ - broder /bɾˈuːdeɾ/
+		brother /bɹˈʌðɚ/ - bror /bɾˈuːɾ/
+		bite /bˈaɪ̯t/ - bita /bˈiːtɑ/
+		bee /bˈi/ - bie /bˈiːə/
+		bone /bˈoʊ̯n/ - bein /bˈæːɪ̯n/
+		bear /bˈɛɚ/ - bjørn /bjˈœɾn/
+		better /bˈɛɾɚ/ - betre /bˈeːtɾe/
+		bid /bˈɪd/ - beda /bˈeːɑ/
+		bid /bˈɪd/ - by /bˈyː/
+		drive /dɹˈaɪ̯v/ - driva /dɾˈiːʋa/
+		dream /dɹˈim/ - draum /dɾˈæʉ̯m/
+		dream /dɹˈim/ - drøyma /dɾˈœʏ̯mɑ/
+		drink /dɹˈɪŋk/ - drikka /dɾˈɪʰkːɑ/
+		day /dˈeɪ̯/ - dag /dˈɑːɡ/
+		deep /dˈip/ - djup /jˈʉːp/
+		dear /dˈiɚ/ - dyr /dˈyːɾ/
+		deer /dˈiɚ/ - dyr /dˈyːɾ/
+		daughter /dˈɑtɚ/ - datter /dˈɔʰtːeɾ/
+		few /fjˈu/ - få /fˈoː/
+		fly /flˈaɪ̯/ - flyga /flˈyːɡɑ/
+		fire /fˈaɪ̯ɚ/ - fyr /fˈyːɾ/
+		fowl /fˈaʊ̯ɫ/ - fugl /fˈʉɡl/
+		feet /fˈit/ - føter /fˈøːteɾ/
+		father /fˈɑðɚ/ - far /fˈɑːɾ/
+		four /fˈɔɹ/ - fire /fˈiːɾe/
+		feather /fˈɛðɚ/ - fjør /fjˈøːɾ/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋːeɾ/
+		fish /fˈɪʃ/ - fisk /fˈɪsk/
+		foot /fˈʊt/ - fot /fˈuːt/
+		full /fˈʊɫ/ - full /fˈʉlː/
+		high /hˈaɪ̯/ - haug /hˈæʉ̯ɡ/
+		hide /hˈaɪ̯d/ - hud /hˈʉːd/
+		hound /hˈaʊ̯nd/ - hund /hˈʊnd/
+		house /hˈaʊ̯s/ - hus /hˈʉːs/
+		here /hˈiɚ/ - her /hˈeːɾ/
+		hear /hˈiɚ/ - høyra /hˈœʏ̯ɾɑ/
+		holy /hˈoʊ̯li/ - heilag /hˈæɪ̯laɡ/
+		home /hˈoʊ̯m/ - heim /hˈæɪ̯m/
+		hand /hˈænd/ - hand /hˈɑnː/
+		hot /hˈɑt/ - heit /hˈæɪ̯t/
+		heart /hˈɑɹt/ - hjarta /jˈɑɾtɑ/
+		horse /hˈɔɹs/ - hors /hˈɔɾs/
+		head /hˈɛd/ - hovud /hˈoːʋʉ/
+		hen /hˈɛn/ - høne /hˈøːnə/
+		hare /hˈɛɚ/ - hare /hˈɑːɾe/
+		hundred /hˈʌndɹəd/ - hundrad /hˈʉndɾɑ/
+		year /jˈiɚ/ - år /ˈoːɾ/
+		yellow /jˈɛloʊ̯/ - gul /ɡˈʉːl/
+		young /jˈʌŋ/ - ung /ˈʊŋː/
+		quean /kʰwˈin/ - kvinne /kʰʋˈɪnːe/
+		quean /kʰwˈin/ - kone /kʰˈuːne/
+		cow /kʰˈaʊ̯/ - ku /kʰˈʉː/
+		calf /kʰˈæf/ - kalv /kʰˈɑlʋ/
+		corn /kʰˈɔɹn/ - korn /kʰˈʊɾn/
+		leaf /lˈif/ - lauv /lˈæʉ̯ʋ/
+		leap /lˈip/ - laupa /lˈæʉ̯pɑ/
+		lamb /lˈæm/ - lamb /lˈɑmː/
+		land /lˈænd/ - land /lˈɑnd/
+		long /lˈɑŋ/ - lang /lˈɑŋː/
+		liver /lˈɪvɚ/ - lever /lˈeːʋeɾ/
+		mice /mˈaɪ̯s/ - myser /mˈyːseɾ/
+		mouse /mˈaʊ̯s/ - mus /mˈʉːs/
+		mouth /mˈaʊ̯θ/ - munn /mˈʉnː/
+		me /mˈi/ - meg /mˈeːɡ/
+		mere /mˈiɚ/ - sjø /ʃˈøː/
+		moon /mˈun/ - måne /mˈoːne/
+		man /mˈæn/ - mann /mˈɑnː/
+		men /mˈɛn/ - menn /mˈɛnː/
+		milk /mˈɪɫk/ - mjølk /mjˈœlk/
+		midge /mˈɪʤ/ - mygg /mˈʏɡː/
+		mother /mˈʌðɚ/ - mor /mˈuːɾ/
+		nine /nˈaɪ̯n/ - ni /nˈiː/
+		naked /nˈeɪ̯kɪd/ - naken /nˈɑːçen/
+		name /nˈeɪ̯m/ - namn /nˈɑmn/
+		knee /nˈi/ - kne /kʰnˈeː/
+		needle /nˈidɫ̩/ - nål /nˈoːl/
+		nose /nˈoʊ̯z/ - nase /nˈɑːse/
+		new /nˈu/ - ny /nˈyː/
+		north /nˈɔɹθ/ - nord /nˈuːɾ/
+		plight /pʰlˈaɪ̯t/ - plikt /pʰlˈɪkt/
+		slay /slˈeɪ̯/ - slå /slˈoː/
+		stone /stˈoʊ̯n/ - stein /stˈæɪ̯n/
+		stool /stˈuɫ/ - stol /stˈuːl/
+		star /stˈɑɹ/ - stjerne /sçˈɛnːe/
+		storm /stˈɔɹm/ - storm /stˈɔɾm/
+		swine /swˈaɪ̯n/ - svin /sʋˈiːn/
+		swart /swˈɔɹt/ - svart /sʋˈɑɾt/
+		swim /swˈɪm/ - symja /sˈʏmjɑ/
+		side /sˈaɪ̯d/ - side /sˈiːe/
+		sow /sˈaʊ̯/ - su /sˈʉː/
+		say /sˈeɪ̯/ - seia /sˈæɪ̯jɑ/
+		see /sˈi/ - sjå /ʃˈoː/
+		sea /sˈi/ - sjø /ʃˈøː/
+		soul /sˈoʊ̯ɫ/ - sål /sˈoːl/
+		sand /sˈænd/ - sand /sˈɑnː/
+		salt /sˈɑɫt/ - salt /sˈɑlt/
+		sword /sˈɔɹd/ - sverd /sʋˈɛːɾ/
+		sister /sˈɪstɚ/ - syster /sˈʏstɛɾ/
+		sing /sˈɪŋ/ - syngja /sˈʏɲjɑ/
+		twenty /tʰwˈɛnti/ - tjue /çˈʉːe/
+		twelve /tʰwˈɛɫv/ - tolv /tʰˈɔlʋ/
+		tide /tʰˈaɪ̯d/ - tid /tʰˈiː/
+		tear /tʰˈiɚ/ - tåre /tʰˈoːɾe/
+		two /tʰˈu/ - to /tʰˈuː/
+		tooth /tʰˈuθ/ - tann /tʰˈɑnː/
+		ten /tʰˈɛn/ - ti /tʰˈiː/
+		tongue /tʰˈʌŋ/ - tunge /tʰˈʊŋːe/
+		way /wˈeɪ̯/ - veg /ʋˈeːɡ/
+		whale /wˈeɪ̯ɫ/ - kval /kʰʋˈɑːl/
+		we /wˈi/ - vi /ʋˈiː/
+		water /wˈɑɾɚ/ - vatn /ʋˈɑtn/
+		warm /wˈɔɹm/ - varm /ʋˈɑɾm/
+		weapon /wˈɛpən/ - våpen /ʋˈoːpen/
+		weather /wˈɛðɚ/ - vêr /vˈɛːɾ/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		worm /wˈɝm/ - orm /ˈɔɾm/
+		wish /wˈɪʃ/ - ynskja /ˈʏnʃɑ/
+		wolf /wˈʊɫf/ - ulv /ˈʉlʋ/
+		one /wˈʌn/ - ein /ˈæɪ̯n/
+		thou /ðˈaʊ̯/ - du /dˈʉː/
+		eleven /əlˈɛvən/ - elleve /ˈɛlʋe/
+		grass /ɡɹˈæs/ - gras /ɡɾˈɑːs/
+		goose /ɡˈus/ - gås /ɡˈoːs/
+		god /ɡˈɑd/ - gud /ɡˈʉːd/
+		good /ɡˈʊd/ - god /ɡˈuː/
+		light /ɫˈaɪ̯t/ - lett /lˈɛʰtː/
+		rain /ɹˈeɪ̯n/ - regn /ɾˈɛɡn/
+		reek /ɹˈik/ - røyk /ɾˈœʏ̯k/
+		root /ɹˈut/ - rot /ɾˈuːt/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+		sharp /ʃˈɑɹp/ - skarp /skˈɑɾp/
+		church /ʧˈɝʧ/ - kyrkja /çˈʏɾçɑ/
+		chicken /ʧˈɪkɪn/ - kjukling /çˈʉklɪŋ/
+		ice /ˈaɪ̯s/ - is /ˈiːs/
+		owl /ˈaʊ̯l̩/ - ugle /ˈʊɡle/
+		out /ˈaʊ̯t/ - ut /ˈʉːt/
+		ape /ˈeɪ̯p/ - ape /ˈɑːpe/
+		eight /ˈeɪ̯t/ - åtte /ˈɔʰtːe/
+		eat /ˈit/ - eta /ˈeːtɑ/
+		ear /ˈiɚ/ - øyra /ˈœʏ̯ɾɑ/
+		eel /ˈiɫ/ - ål /ˈoːl/
+		over /ˈoʊ̯vɚ/ - over /ˈoːʋeɾ/
+		apple /ˈæpɫ̩/ - eple /ˈɛple/
+		all /ˈɑɫ/ - all /ˈɑlː/
+		arm /ˈɑɹm/ - arm /ˈɑɾm/
+		egg /ˈɛɡ/ - egg /ˈɛɡː/
+		us /ˈʌs/ - oss /ˈɔsː/
+		oven /ˈʌvn̩/ - omn /ˈɔmn/
+		other /ˈʌðɚ/ - annan /ˈɑnːɑn/
+		three /θɹˈi/ - tre /tʰɾˈeː/
+		thousand /θˈaʊ̯zn̩d/ - tusen /tʰˈʉːsen/
+		thank /θˈeɪ̯ŋk/ - takka /tʰˈɑʰkːɑ/
+		thief /θˈif/ - tjuv /çˈʉːʋ/
+		thorn /θˈɔɹn/ - torn /tʰˈʊɾn/
+		thick /θˈɪk/ - tjukk /çˈʊʰkː/
+		thin /θˈɪn/ - tynn /tʰˈʏnː/
+		thing /θˈɪŋ/ - ting /tʰˈɪŋː/
+
+Final disqualified:
+		beam /bˈim/ - tre /tʰɾˈeː/
+		dry /dɹˈaɪ̯/ - turr /tʰˈʉɾ/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+		light /ɫˈaɪ̯t/ - ljos /jˈuːs/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+		ash /ˈæʃ/ - oske /ˈʊske/
+		earth /ˈɝθ/ - jord /jˈuːɾ/
+		in /ˈɪn/ - i /ˈiː/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 164
+	Disqualified: 184
+	Added: 0
+	Removed: 10
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		beam /bˈim/ - tre /tʰɾˈeː/
+		light /ɫˈaɪ̯t/ - ljos /jˈuːs/
+		in /ˈɪn/ - i /ˈiː/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+		dry /dɹˈaɪ̯/ - turr /tʰˈʉɾ/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+		earth /ˈɝθ/ - jord /jˈuːɾ/
+
+Iteration 2
+	Qualified: 161
+	Disqualified: 187
+	Added: 0
+	Removed: 3
+		ash /ˈæʃ/ - oske /ˈʊske/
+		star /stˈɑɹ/ - stjerne /sçˈɛnːe/
+		wool /wˈʊɫ/ - ull /ˈʉlː/
+
+Iteration 3
+	Qualified: 163
+	Disqualified: 185
+	Added: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		wool /wˈʊɫ/ - ull /ˈʉlː/
+	Removed: 0
+
+Iteration 4
+	Qualified: 163
+	Disqualified: 185
+	Added: 1
+		in /ˈɪn/ - i /ˈiː/
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Iteration 5
+	Qualified: 164
+	Disqualified: 184
+	Added: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+	Removed: 0
+
+Iteration 6
+	Qualified: 163
+	Disqualified: 185
+	Added: 0
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - blad /blˈɑːd/
+		bloom /blˈum/ - blom /blˈuːm/
+		blood /blˈʌd/ - blod /blˈuː/
+		bread /bɹˈɛd/ - braud /bɾˈæʉ̯/
+		breast /bɹˈɛst/ - bryst /bɾˈʏst/
+		bridge /bɹˈɪʤ/ - brygge /bɾˈʏɡːe/
+		brother /bɹˈʌðɚ/ - broder /bɾˈuːdeɾ/
+		brother /bɹˈʌðɚ/ - bror /bɾˈuːɾ/
+		bite /bˈaɪ̯t/ - bita /bˈiːtɑ/
+		bee /bˈi/ - bie /bˈiːə/
+		barrow /bˈæɹoʊ̯/ - berg /bˈæɾɡ/
+		bath /bˈæθ/ - bad /bˈɑːd/
+		better /bˈɛɾɚ/ - betre /bˈeːtɾe/
+		bid /bˈɪd/ - beda /bˈeːɑ/
+		book /bˈʊk/ - bok /bˈuːk/
+		dwarf /dwˈɔɹf/ - dverg /dʋˈɛɾɡ/
+		drive /dɹˈaɪ̯v/ - driva /dɾˈiːʋa/
+		dream /dɹˈim/ - draum /dɾˈæʉ̯m/
+		dream /dɹˈim/ - drøyma /dɾˈœʏ̯mɑ/
+		drink /dɹˈɪŋk/ - drikka /dɾˈɪʰkːɑ/
+		day /dˈeɪ̯/ - dag /dˈɑːɡ/
+		dear /dˈiɚ/ - dyr /dˈyːɾ/
+		deer /dˈiɚ/ - dyr /dˈyːɾ/
+		daughter /dˈɑtɚ/ - datter /dˈɔʰtːeɾ/
+		deadly /dˈɛdli/ - dødeleg /dˈøːdeleɡ/
+		few /fjˈu/ - få /fˈoː/
+		fly /flˈaɪ̯/ - flyga /flˈyːɡɑ/
+		freeze /fɹˈiz/ - frysa /fɾˈyːsɑ/
+		friend /fɹˈɛnd/ - frende /fɾˈɛnde/
+		five /fˈaɪ̯v/ - fem /fˈɛm/
+		fire /fˈaɪ̯ɚ/ - fyr /fˈyːɾ/
+		fire /fˈaɪ̯ɚ/ - eld /ˈɛlː/
+		fowl /fˈaʊ̯ɫ/ - fugl /fˈʉɡl/
+		feet /fˈit/ - føter /fˈøːteɾ/
+		follow /fˈɑloʊ̯/ - fylgja /fˈʏljɑ/
+		father /fˈɑðɚ/ - far /fˈɑːɾ/
+		four /fˈɔɹ/ - fire /fˈiːɾe/
+		feather /fˈɛðɚ/ - fjør /fjˈøːɾ/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋːeɾ/
+		fish /fˈɪʃ/ - fisk /fˈɪsk/
+		foot /fˈʊt/ - fot /fˈuːt/
+		hound /hˈaʊ̯nd/ - hund /hˈʊnd/
+		house /hˈaʊ̯s/ - hus /hˈʉːs/
+		hear /hˈiɚ/ - høyra /hˈœʏ̯ɾɑ/
+		hand /hˈænd/ - hand /hˈɑnː/
+		have /hˈæv/ - ha /hˈɑː/
+		horn /hˈɔɹn/ - horn /hˈʊɾn/
+		horse /hˈɔɹs/ - hors /hˈɔɾs/
+		head /hˈɛd/ - hovud /hˈoːʋʉ/
+		hen /hˈɛn/ - høne /hˈøːnə/
+		hare /hˈɛɚ/ - hare /hˈɑːɾe/
+		hundred /hˈʌndɹəd/ - hundrad /hˈʉndɾɑ/
+		year /jˈiɚ/ - år /ˈoːɾ/
+		yellow /jˈɛloʊ̯/ - gul /ɡˈʉːl/
+		young /jˈʌŋ/ - ung /ˈʊŋː/
+		quean /kʰwˈin/ - kvinne /kʰʋˈɪnːe/
+		cow /kʰˈaʊ̯/ - ku /kʰˈʉː/
+		cold /kʰˈoʊ̯ɫd/ - kald /kʰˈɑlː/
+		calf /kʰˈæf/ - kalv /kʰˈɑlʋ/
+		corn /kʰˈɔɹn/ - korn /kʰˈʊɾn/
+		king /kʰˈɪŋ/ - kong /kʰˈʊŋ/
+		louse /lˈaʊ̯s/ - lus /lˈʉːs/
+		leaf /lˈif/ - lauv /lˈæʉ̯ʋ/
+		laugh /lˈæf/ - le /lˈeː/
+		land /lˈænd/ - land /lˈɑnd/
+		long /lˈɑŋ/ - lang /lˈɑŋː/
+		liver /lˈɪvɚ/ - lever /lˈeːʋeɾ/
+		might /mˈaɪ̯t/ - mått /mˈɔʰtː/
+		mouse /mˈaʊ̯s/ - mus /mˈʉːs/
+		mouth /mˈaʊ̯θ/ - munn /mˈʉnː/
+		me /mˈi/ - meg /mˈeːɡ/
+		mere /mˈiɚ/ - sjø /ʃˈøː/
+		man /mˈæn/ - mann /mˈɑnː/
+		men /mˈɛn/ - menn /mˈɛnː/
+		milk /mˈɪɫk/ - mjølk /mjˈœlk/
+		nine /nˈaɪ̯n/ - ni /nˈiː/
+		naked /nˈeɪ̯kɪd/ - naken /nˈɑːçen/
+		name /nˈeɪ̯m/ - namn /nˈɑmn/
+		nail /nˈeɪ̯ɫ/ - nagl /nˈɑɡl/
+		knee /nˈi/ - kne /kʰnˈeː/
+		needle /nˈidɫ̩/ - nål /nˈoːl/
+		new /nˈu/ - ny /nˈyː/
+		plight /pʰlˈaɪ̯t/ - plikt /pʰlˈɪkt/
+		slay /slˈeɪ̯/ - slå /slˈoː/
+		snow /snˈoʊ̯/ - snø /snˈøː/
+		stone /stˈoʊ̯n/ - stein /stˈæɪ̯n/
+		stool /stˈuɫ/ - stol /stˈuːl/
+		swine /swˈaɪ̯n/ - svin /sʋˈiːn/
+		sweet /swˈit/ - søt /sˈøːt/
+		swart /swˈɔɹt/ - svart /sʋˈɑɾt/
+		swim /swˈɪm/ - symja /sˈʏmjɑ/
+		side /sˈaɪ̯d/ - side /sˈiːe/
+		sow /sˈaʊ̯/ - su /sˈʉː/
+		say /sˈeɪ̯/ - seia /sˈæɪ̯jɑ/
+		see /sˈi/ - sjå /ʃˈoː/
+		soul /sˈoʊ̯ɫ/ - sål /sˈoːl/
+		sand /sˈænd/ - sand /sˈɑnː/
+		salt /sˈɑɫt/ - salt /sˈɑlt/
+		sword /sˈɔɹd/ - sverd /sʋˈɛːɾ/
+		six /sˈɪks/ - seks /sˈɛks/
+		sister /sˈɪstɚ/ - syster /sˈʏstɛɾ/
+		sit /sˈɪt/ - sitja /sˈɪçːɑ/
+		sing /sˈɪŋ/ - syngja /sˈʏɲjɑ/
+		son /sˈʌn/ - son /sˈɔn/
+		twenty /tʰwˈɛnti/ - tjue /çˈʉːe/
+		twelve /tʰwˈɛɫv/ - tolv /tʰˈɔlʋ/
+		tree /tʰɹˈi/ - tre /tʰɾˈeː/
+		tear /tʰˈiɚ/ - tåre /tʰˈoːɾe/
+		two /tʰˈu/ - to /tʰˈuː/
+		tooth /tʰˈuθ/ - tann /tʰˈɑnː/
+		white /wˈaɪ̯t/ - kvit /kʰʋˈiːt/
+		way /wˈeɪ̯/ - veg /ʋˈeːɡ/
+		whale /wˈeɪ̯ɫ/ - kval /kʰʋˈɑːl/
+		water /wˈɑɾɚ/ - vatn /ʋˈɑtn/
+		warm /wˈɔɹm/ - varm /ʋˈɑɾm/
+		weapon /wˈɛpən/ - våpen /ʋˈoːpen/
+		worm /wˈɝm/ - orm /ˈɔɾm/
+		wool /wˈʊɫ/ - ull /ˈʉlː/
+		wolf /wˈʊɫf/ - ulv /ˈʉlʋ/
+		one /wˈʌn/ - ein /ˈæɪ̯n/
+		thou /ðˈaʊ̯/ - du /dˈʉː/
+		eleven /əlˈɛvən/ - elleve /ˈɛlʋe/
+		green /ɡɹˈin/ - grøn /ɡɾˈøːn/
+		grass /ɡɹˈæs/ - gras /ɡɾˈɑːs/
+		goat /ɡˈoʊ̯t/ - geit /jˈæɪ̯t/
+		gold /ɡˈoʊ̯ɫd/ - gull /ɡˈʉlː/
+		goose /ɡˈus/ - gås /ɡˈoːs/
+		god /ɡˈɑd/ - gud /ɡˈʉːd/
+		good /ɡˈʊd/ - god /ɡˈuː/
+		light /ɫˈaɪ̯t/ - lett /lˈɛʰtː/
+		right /ɹˈaɪ̯t/ - rett /ɾˈɛʰtː/
+		rain /ɹˈeɪ̯n/ - regn /ɾˈɛɡn/
+		reek /ɹˈik/ - røyk /ɾˈœʏ̯k/
+		ring /ɹˈɪŋ/ - ring /ɾˈɪŋː/
+		rich /ɹˈɪʧ/ - rik /ɾˈiːk/
+		sharp /ʃˈɑɹp/ - skarp /skˈɑɾp/
+		ship /ʃˈɪp/ - skip /ʃˈiːp/
+		shit /ʃˈɪt/ - skit /ʃˈiːt/
+		church /ʧˈɝʧ/ - kyrkja /çˈʏɾçɑ/
+		chicken /ʧˈɪkɪn/ - kjukling /çˈʉklɪŋ/
+		ice /ˈaɪ̯s/ - is /ˈiːs/
+		owl /ˈaʊ̯l̩/ - ugle /ˈʊɡle/
+		out /ˈaʊ̯t/ - ut /ˈʉːt/
+		ape /ˈeɪ̯p/ - ape /ˈɑːpe/
+		eat /ˈit/ - eta /ˈeːtɑ/
+		ear /ˈiɚ/ - øyra /ˈœʏ̯ɾɑ/
+		eel /ˈiɫ/ - ål /ˈoːl/
+		over /ˈoʊ̯vɚ/ - over /ˈoːʋeɾ/
+		arm /ˈɑɹm/ - arm /ˈɑɾm/
+		egg /ˈɛɡ/ - egg /ˈɛɡː/
+		edge /ˈɛʤ/ - egg /ˈɛɡː/
+		in /ˈɪn/ - i /ˈiː/
+		us /ˈʌs/ - oss /ˈɔsː/
+		oven /ˈʌvn̩/ - omn /ˈɔmn/
+		other /ˈʌðɚ/ - annan /ˈɑnːɑn/
+		three /θɹˈi/ - tre /tʰɾˈeː/
+		thousand /θˈaʊ̯zn̩d/ - tusen /tʰˈʉːsen/
+		thank /θˈeɪ̯ŋk/ - takka /tʰˈɑʰkːɑ/
+		thief /θˈif/ - tjuv /çˈʉːʋ/
+		thorn /θˈɔɹn/ - torn /tʰˈʊɾn/
+		thick /θˈɪk/ - tjukk /çˈʊʰkː/
+		thin /θˈɪn/ - tynn /tʰˈʏnː/
+		thing /θˈɪŋ/ - ting /tʰˈɪŋː/
+
+Final disqualified:
+		beam /bˈim/ - tre /tʰɾˈeː/
+		dry /dɹˈaɪ̯/ - turr /tʰˈʉɾ/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+		star /stˈɑɹ/ - stjerne /sçˈɛnːe/
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		light /ɫˈaɪ̯t/ - ljos /jˈuːs/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+		ash /ˈæʃ/ - oske /ˈʊske/
+		earth /ˈɝθ/ - jord /jˈuːɾ/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 168
+	Disqualified: 180
+	Added: 0
+	Removed: 6
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+
+Iteration 2
+	Qualified: 166
+	Disqualified: 182
+	Added: 0
+	Removed: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+
+Iteration 3
+	Qualified: 167
+	Disqualified: 181
+	Added: 1
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+	Removed: 0
+
+Iteration 4
+	Qualified: 168
+	Disqualified: 180
+	Added: 1
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+	Removed: 0
+
+Iteration 5
+	Qualified: 168
+	Disqualified: 180
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - blad /blˈɑːd/
+		bloom /blˈum/ - blom /blˈuːm/
+		blood /blˈʌd/ - blod /blˈuː/
+		bread /bɹˈɛd/ - braud /bɾˈæʉ̯/
+		breast /bɹˈɛst/ - bryst /bɾˈʏst/
+		bridge /bɹˈɪʤ/ - brygge /bɾˈʏɡːe/
+		brother /bɹˈʌðɚ/ - bror /bɾˈuːɾ/
+		bee /bˈi/ - bie /bˈiːə/
+		beam /bˈim/ - tre /tʰɾˈeː/
+		barrow /bˈæɹoʊ̯/ - berg /bˈæɾɡ/
+		bear /bˈɛɚ/ - bjørn /bjˈœɾn/
+		better /bˈɛɾɚ/ - betre /bˈeːtɾe/
+		bid /bˈɪd/ - beda /bˈeːɑ/
+		book /bˈʊk/ - bok /bˈuːk/
+		dry /dɹˈaɪ̯/ - turr /tʰˈʉɾ/
+		drive /dɹˈaɪ̯v/ - driva /dɾˈiːʋa/
+		dream /dɹˈim/ - draum /dɾˈæʉ̯m/
+		dream /dɹˈim/ - drøyma /dɾˈœʏ̯mɑ/
+		drink /dɹˈɪŋk/ - drikka /dɾˈɪʰkːɑ/
+		day /dˈeɪ̯/ - dag /dˈɑːɡ/
+		dear /dˈiɚ/ - dyr /dˈyːɾ/
+		daughter /dˈɑtɚ/ - datter /dˈɔʰtːeɾ/
+		deadly /dˈɛdli/ - dødeleg /dˈøːdeleɡ/
+		fly /flˈaɪ̯/ - flyga /flˈyːɡɑ/
+		fly /flˈaɪ̯/ - fluge /flˈʉːɡe/
+		freeze /fɹˈiz/ - frysa /fɾˈyːsɑ/
+		fresh /fɹˈɛʃ/ - frisk /fɾˈɪsk/
+		five /fˈaɪ̯v/ - fem /fˈɛm/
+		fire /fˈaɪ̯ɚ/ - fyr /fˈyːɾ/
+		fire /fˈaɪ̯ɚ/ - eld /ˈɛlː/
+		fowl /fˈaʊ̯ɫ/ - fugl /fˈʉɡl/
+		feet /fˈit/ - føter /fˈøːteɾ/
+		follow /fˈɑloʊ̯/ - fylgja /fˈʏljɑ/
+		four /fˈɔɹ/ - fire /fˈiːɾe/
+		feather /fˈɛðɚ/ - fjør /fjˈøːɾ/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋːeɾ/
+		fish /fˈɪʃ/ - fisk /fˈɪsk/
+		foot /fˈʊt/ - fot /fˈuːt/
+		full /fˈʊɫ/ - full /fˈʉlː/
+		hide /hˈaɪ̯d/ - hud /hˈʉːd/
+		hound /hˈaʊ̯nd/ - hund /hˈʊnd/
+		house /hˈaʊ̯s/ - hus /hˈʉːs/
+		here /hˈiɚ/ - her /hˈeːɾ/
+		holy /hˈoʊ̯li/ - heilag /hˈæɪ̯laɡ/
+		home /hˈoʊ̯m/ - heim /hˈæɪ̯m/
+		hand /hˈænd/ - hand /hˈɑnː/
+		have /hˈæv/ - ha /hˈɑː/
+		hot /hˈɑt/ - heit /hˈæɪ̯t/
+		heart /hˈɑɹt/ - hjarta /jˈɑɾtɑ/
+		horse /hˈɔɹs/ - hors /hˈɔɾs/
+		hen /hˈɛn/ - høne /hˈøːnə/
+		hair /hˈɛɚ/ - hår /hˈoːɾ/
+		hare /hˈɛɚ/ - hare /hˈɑːɾe/
+		hundred /hˈʌndɹəd/ - hundrad /hˈʉndɾɑ/
+		year /jˈiɚ/ - år /ˈoːɾ/
+		yellow /jˈɛloʊ̯/ - gul /ɡˈʉːl/
+		young /jˈʌŋ/ - ung /ˈʊŋː/
+		cow /kʰˈaʊ̯/ - ku /kʰˈʉː/
+		cold /kʰˈoʊ̯ɫd/ - kald /kʰˈɑlː/
+		calf /kʰˈæf/ - kalv /kʰˈɑlʋ/
+		corn /kʰˈɔɹn/ - korn /kʰˈʊɾn/
+		king /kʰˈɪŋ/ - kong /kʰˈʊŋ/
+		louse /lˈaʊ̯s/ - lus /lˈʉːs/
+		leap /lˈip/ - laupa /lˈæʉ̯pɑ/
+		laugh /lˈæf/ - le /lˈeː/
+		lamb /lˈæm/ - lamb /lˈɑmː/
+		long /lˈɑŋ/ - lang /lˈɑŋː/
+		liver /lˈɪvɚ/ - lever /lˈeːʋeɾ/
+		mice /mˈaɪ̯s/ - myser /mˈyːseɾ/
+		might /mˈaɪ̯t/ - mått /mˈɔʰtː/
+		mouse /mˈaʊ̯s/ - mus /mˈʉːs/
+		mouth /mˈaʊ̯θ/ - munn /mˈʉnː/
+		mere /mˈiɚ/ - sjø /ʃˈøː/
+		moon /mˈun/ - måne /mˈoːne/
+		men /mˈɛn/ - menn /mˈɛnː/
+		milk /mˈɪɫk/ - mjølk /mjˈœlk/
+		midge /mˈɪʤ/ - mygg /mˈʏɡː/
+		mother /mˈʌðɚ/ - mor /mˈuːɾ/
+		nine /nˈaɪ̯n/ - ni /nˈiː/
+		night /nˈaɪ̯t/ - natt /nˈɑʰtː/
+		nail /nˈeɪ̯ɫ/ - nagl /nˈɑɡl/
+		knee /nˈi/ - kne /kʰnˈeː/
+		needle /nˈidɫ̩/ - nål /nˈoːl/
+		nose /nˈoʊ̯z/ - nase /nˈɑːse/
+		north /nˈɔɹθ/ - nord /nˈuːɾ/
+		plight /pʰlˈaɪ̯t/ - plikt /pʰlˈɪkt/
+		slay /slˈeɪ̯/ - slå /slˈoː/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+		snow /snˈoʊ̯/ - snø /snˈøː/
+		stone /stˈoʊ̯n/ - stein /stˈæɪ̯n/
+		stool /stˈuɫ/ - stol /stˈuːl/
+		swine /swˈaɪ̯n/ - svin /sʋˈiːn/
+		sweet /swˈit/ - søt /sˈøːt/
+		swart /swˈɔɹt/ - svart /sʋˈɑɾt/
+		swim /swˈɪm/ - symja /sˈʏmjɑ/
+		side /sˈaɪ̯d/ - side /sˈiːe/
+		sow /sˈaʊ̯/ - su /sˈʉː/
+		say /sˈeɪ̯/ - seia /sˈæɪ̯jɑ/
+		sea /sˈi/ - sjø /ʃˈøː/
+		soul /sˈoʊ̯ɫ/ - sål /sˈoːl/
+		salt /sˈɑɫt/ - salt /sˈɑlt/
+		sword /sˈɔɹd/ - sverd /sʋˈɛːɾ/
+		six /sˈɪks/ - seks /sˈɛks/
+		sister /sˈɪstɚ/ - syster /sˈʏstɛɾ/
+		sit /sˈɪt/ - sitja /sˈɪçːɑ/
+		sing /sˈɪŋ/ - syngja /sˈʏɲjɑ/
+		son /sˈʌn/ - son /sˈɔn/
+		twenty /tʰwˈɛnti/ - tjue /çˈʉːe/
+		twelve /tʰwˈɛɫv/ - tolv /tʰˈɔlʋ/
+		tree /tʰɹˈi/ - tre /tʰɾˈeː/
+		tide /tʰˈaɪ̯d/ - tid /tʰˈiː/
+		tear /tʰˈiɚ/ - tåre /tʰˈoːɾe/
+		ten /tʰˈɛn/ - ti /tʰˈiː/
+		tongue /tʰˈʌŋ/ - tunge /tʰˈʊŋːe/
+		white /wˈaɪ̯t/ - kvit /kʰʋˈiːt/
+		way /wˈeɪ̯/ - veg /ʋˈeːɡ/
+		whale /wˈeɪ̯ɫ/ - kval /kʰʋˈɑːl/
+		we /wˈi/ - vi /ʋˈiː/
+		warm /wˈɔɹm/ - varm /ʋˈɑɾm/
+		weapon /wˈɛpən/ - våpen /ʋˈoːpen/
+		weather /wˈɛðɚ/ - vêr /vˈɛːɾ/
+		worm /wˈɝm/ - orm /ˈɔɾm/
+		wit /wˈɪt/ - vita /ʋˈiːtɑ/
+		wish /wˈɪʃ/ - ynskja /ˈʏnʃɑ/
+		wolf /wˈʊɫf/ - ulv /ˈʉlʋ/
+		one /wˈʌn/ - ein /ˈæɪ̯n/
+		thou /ðˈaʊ̯/ - du /dˈʉː/
+		eleven /əlˈɛvən/ - elleve /ˈɛlʋe/
+		green /ɡɹˈin/ - grøn /ɡɾˈøːn/
+		grass /ɡɹˈæs/ - gras /ɡɾˈɑːs/
+		goat /ɡˈoʊ̯t/ - geit /jˈæɪ̯t/
+		goose /ɡˈus/ - gås /ɡˈoːs/
+		god /ɡˈɑd/ - gud /ɡˈʉːd/
+		good /ɡˈʊd/ - god /ɡˈuː/
+		light /ɫˈaɪ̯t/ - lett /lˈɛʰtː/
+		right /ɹˈaɪ̯t/ - rett /ɾˈɛʰtː/
+		rain /ɹˈeɪ̯n/ - regn /ɾˈɛɡn/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+		ring /ɹˈɪŋ/ - ring /ɾˈɪŋː/
+		rich /ɹˈɪʧ/ - rik /ɾˈiːk/
+		shit /ʃˈɪt/ - skit /ʃˈiːt/
+		church /ʧˈɝʧ/ - kyrkja /çˈʏɾçɑ/
+		ice /ˈaɪ̯s/ - is /ˈiːs/
+		owl /ˈaʊ̯l̩/ - ugle /ˈʊɡle/
+		out /ˈaʊ̯t/ - ut /ˈʉːt/
+		ape /ˈeɪ̯p/ - ape /ˈɑːpe/
+		eight /ˈeɪ̯t/ - åtte /ˈɔʰtːe/
+		eat /ˈit/ - eta /ˈeːtɑ/
+		ear /ˈiɚ/ - øyra /ˈœʏ̯ɾɑ/
+		eel /ˈiɫ/ - ål /ˈoːl/
+		oak /ˈoʊ̯k/ - eik /ˈæɪ̯k/
+		over /ˈoʊ̯vɚ/ - over /ˈoːʋeɾ/
+		apple /ˈæpɫ̩/ - eple /ˈɛple/
+		all /ˈɑɫ/ - all /ˈɑlː/
+		arm /ˈɑɹm/ - arm /ˈɑɾm/
+		egg /ˈɛɡ/ - egg /ˈɛɡː/
+		edge /ˈɛʤ/ - egg /ˈɛɡː/
+		earth /ˈɝθ/ - jord /jˈuːɾ/
+		in /ˈɪn/ - i /ˈiː/
+		us /ˈʌs/ - oss /ˈɔsː/
+		oven /ˈʌvn̩/ - omn /ˈɔmn/
+		other /ˈʌðɚ/ - annan /ˈɑnːɑn/
+		three /θɹˈi/ - tre /tʰɾˈeː/
+		thousand /θˈaʊ̯zn̩d/ - tusen /tʰˈʉːsen/
+		thief /θˈif/ - tjuv /çˈʉːʋ/
+		thorn /θˈɔɹn/ - torn /tʰˈʊɾn/
+		thick /θˈɪk/ - tjukk /çˈʊʰkː/
+		thin /θˈɪn/ - tynn /tʰˈʏnː/
+
+Final disqualified:
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 166
+	Disqualified: 182
+	Added: 0
+	Removed: 8
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		beam /bˈim/ - tre /tʰɾˈeː/
+		light /ɫˈaɪ̯t/ - ljos /jˈuːs/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+		dry /dɹˈaɪ̯/ - turr /tʰˈʉɾ/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		ash /ˈæʃ/ - oske /ˈʊske/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+
+Iteration 2
+	Qualified: 163
+	Disqualified: 185
+	Added: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+	Removed: 4
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+		star /stˈɑɹ/ - stjerne /sçˈɛnːe/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+
+Iteration 3
+	Qualified: 163
+	Disqualified: 185
+	Added: 1
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Iteration 4
+	Qualified: 164
+	Disqualified: 184
+	Added: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+	Removed: 0
+
+Iteration 5
+	Qualified: 163
+	Disqualified: 185
+	Added: 1
+		word /wˈɝd/ - ord /ˈuːɾ/
+	Removed: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+
+Iteration 6
+	Qualified: 165
+	Disqualified: 183
+	Added: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+	Removed: 0
+
+Iteration 7
+	Qualified: 166
+	Disqualified: 182
+	Added: 2
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Iteration 8
+	Qualified: 167
+	Disqualified: 181
+	Added: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+	Removed: 0
+
+Iteration 9
+	Qualified: 167
+	Disqualified: 181
+	Added: 1
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Iteration 10
+	Qualified: 168
+	Disqualified: 180
+	Added: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+	Removed: 0
+
+Final qualifying:
+		bloom /blˈum/ - blom /blˈuːm/
+		blood /blˈʌd/ - blod /blˈuː/
+		bread /bɹˈɛd/ - braud /bɾˈæʉ̯/
+		bridge /bɹˈɪʤ/ - brygge /bɾˈʏɡːe/
+		brother /bɹˈʌðɚ/ - broder /bɾˈuːdeɾ/
+		brother /bɹˈʌðɚ/ - bror /bɾˈuːɾ/
+		bee /bˈi/ - bie /bˈiːə/
+		bone /bˈoʊ̯n/ - bein /bˈæːɪ̯n/
+		boat /bˈoʊ̯t/ - båt /bˈoːt/
+		bath /bˈæθ/ - bad /bˈɑːd/
+		bear /bˈɛɚ/ - bjørn /bjˈœɾn/
+		bid /bˈɪd/ - beda /bˈeːɑ/
+		bid /bˈɪd/ - by /bˈyː/
+		book /bˈʊk/ - bok /bˈuːk/
+		dwarf /dwˈɔɹf/ - dverg /dʋˈɛɾɡ/
+		drive /dɹˈaɪ̯v/ - driva /dɾˈiːʋa/
+		dream /dɹˈim/ - draum /dɾˈæʉ̯m/
+		dream /dɹˈim/ - drøyma /dɾˈœʏ̯mɑ/
+		drink /dɹˈɪŋk/ - drikka /dɾˈɪʰkːɑ/
+		day /dˈeɪ̯/ - dag /dˈɑːɡ/
+		deep /dˈip/ - djup /jˈʉːp/
+		deer /dˈiɚ/ - dyr /dˈyːɾ/
+		daughter /dˈɑtɚ/ - datter /dˈɔʰtːeɾ/
+		deadly /dˈɛdli/ - dødeleg /dˈøːdeleɡ/
+		few /fjˈu/ - få /fˈoː/
+		fly /flˈaɪ̯/ - flyga /flˈyːɡɑ/
+		fly /flˈaɪ̯/ - fluge /flˈʉːɡe/
+		friend /fɹˈɛnd/ - frende /fɾˈɛnde/
+		fresh /fɹˈɛʃ/ - frisk /fɾˈɪsk/
+		fire /fˈaɪ̯ɚ/ - fyr /fˈyːɾ/
+		fowl /fˈaʊ̯ɫ/ - fugl /fˈʉɡl/
+		feet /fˈit/ - føter /fˈøːteɾ/
+		father /fˈɑðɚ/ - far /fˈɑːɾ/
+		four /fˈɔɹ/ - fire /fˈiːɾe/
+		feather /fˈɛðɚ/ - fjør /fjˈøːɾ/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋːeɾ/
+		fish /fˈɪʃ/ - fisk /fˈɪsk/
+		foot /fˈʊt/ - fot /fˈuːt/
+		full /fˈʊɫ/ - full /fˈʉlː/
+		high /hˈaɪ̯/ - haug /hˈæʉ̯ɡ/
+		hide /hˈaɪ̯d/ - hud /hˈʉːd/
+		hound /hˈaʊ̯nd/ - hund /hˈʊnd/
+		house /hˈaʊ̯s/ - hus /hˈʉːs/
+		hear /hˈiɚ/ - høyra /hˈœʏ̯ɾɑ/
+		home /hˈoʊ̯m/ - heim /hˈæɪ̯m/
+		hand /hˈænd/ - hand /hˈɑnː/
+		have /hˈæv/ - ha /hˈɑː/
+		hot /hˈɑt/ - heit /hˈæɪ̯t/
+		horn /hˈɔɹn/ - horn /hˈʊɾn/
+		hen /hˈɛn/ - høne /hˈøːnə/
+		hair /hˈɛɚ/ - hår /hˈoːɾ/
+		hare /hˈɛɚ/ - hare /hˈɑːɾe/
+		hundred /hˈʌndɹəd/ - hundrad /hˈʉndɾɑ/
+		year /jˈiɚ/ - år /ˈoːɾ/
+		yellow /jˈɛloʊ̯/ - gul /ɡˈʉːl/
+		young /jˈʌŋ/ - ung /ˈʊŋː/
+		quean /kʰwˈin/ - kvinne /kʰʋˈɪnːe/
+		quean /kʰwˈin/ - kone /kʰˈuːne/
+		cold /kʰˈoʊ̯ɫd/ - kald /kʰˈɑlː/
+		calf /kʰˈæf/ - kalv /kʰˈɑlʋ/
+		corn /kʰˈɔɹn/ - korn /kʰˈʊɾn/
+		king /kʰˈɪŋ/ - kong /kʰˈʊŋ/
+		leaf /lˈif/ - lauv /lˈæʉ̯ʋ/
+		leap /lˈip/ - laupa /lˈæʉ̯pɑ/
+		laugh /lˈæf/ - le /lˈeː/
+		lamb /lˈæm/ - lamb /lˈɑmː/
+		long /lˈɑŋ/ - lang /lˈɑŋː/
+		liver /lˈɪvɚ/ - lever /lˈeːʋeɾ/
+		might /mˈaɪ̯t/ - mått /mˈɔʰtː/
+		mouth /mˈaʊ̯θ/ - munn /mˈʉnː/
+		me /mˈi/ - meg /mˈeːɡ/
+		moon /mˈun/ - måne /mˈoːne/
+		man /mˈæn/ - mann /mˈɑnː/
+		milk /mˈɪɫk/ - mjølk /mjˈœlk/
+		midge /mˈɪʤ/ - mygg /mˈʏɡː/
+		mother /mˈʌðɚ/ - mor /mˈuːɾ/
+		night /nˈaɪ̯t/ - natt /nˈɑʰtː/
+		naked /nˈeɪ̯kɪd/ - naken /nˈɑːçen/
+		name /nˈeɪ̯m/ - namn /nˈɑmn/
+		knee /nˈi/ - kne /kʰnˈeː/
+		needle /nˈidɫ̩/ - nål /nˈoːl/
+		nose /nˈoʊ̯z/ - nase /nˈɑːse/
+		new /nˈu/ - ny /nˈyː/
+		north /nˈɔɹθ/ - nord /nˈuːɾ/
+		plight /pʰlˈaɪ̯t/ - plikt /pʰlˈɪkt/
+		slay /slˈeɪ̯/ - slå /slˈoː/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+		stone /stˈoʊ̯n/ - stein /stˈæɪ̯n/
+		stool /stˈuɫ/ - stol /stˈuːl/
+		storm /stˈɔɹm/ - storm /stˈɔɾm/
+		swine /swˈaɪ̯n/ - svin /sʋˈiːn/
+		sweet /swˈit/ - søt /sˈøːt/
+		swart /swˈɔɹt/ - svart /sʋˈɑɾt/
+		swim /swˈɪm/ - symja /sˈʏmjɑ/
+		side /sˈaɪ̯d/ - side /sˈiːe/
+		sow /sˈaʊ̯/ - su /sˈʉː/
+		say /sˈeɪ̯/ - seia /sˈæɪ̯jɑ/
+		see /sˈi/ - sjå /ʃˈoː/
+		sea /sˈi/ - sjø /ʃˈøː/
+		sand /sˈænd/ - sand /sˈɑnː/
+		salt /sˈɑɫt/ - salt /sˈɑlt/
+		sword /sˈɔɹd/ - sverd /sʋˈɛːɾ/
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		six /sˈɪks/ - seks /sˈɛks/
+		sister /sˈɪstɚ/ - syster /sˈʏstɛɾ/
+		sing /sˈɪŋ/ - syngja /sˈʏɲjɑ/
+		son /sˈʌn/ - son /sˈɔn/
+		twenty /tʰwˈɛnti/ - tjue /çˈʉːe/
+		tree /tʰɹˈi/ - tre /tʰɾˈeː/
+		tide /tʰˈaɪ̯d/ - tid /tʰˈiː/
+		tear /tʰˈiɚ/ - tåre /tʰˈoːɾe/
+		two /tʰˈu/ - to /tʰˈuː/
+		tooth /tʰˈuθ/ - tann /tʰˈɑnː/
+		ten /tʰˈɛn/ - ti /tʰˈiː/
+		tongue /tʰˈʌŋ/ - tunge /tʰˈʊŋːe/
+		white /wˈaɪ̯t/ - kvit /kʰʋˈiːt/
+		whale /wˈeɪ̯ɫ/ - kval /kʰʋˈɑːl/
+		warm /wˈɔɹm/ - varm /ʋˈɑɾm/
+		weapon /wˈɛpən/ - våpen /ʋˈoːpen/
+		weather /wˈɛðɚ/ - vêr /vˈɛːɾ/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		worm /wˈɝm/ - orm /ˈɔɾm/
+		wind /wˈɪnd/ - vind /ʋˈɪnː/
+		wish /wˈɪʃ/ - ynskja /ˈʏnʃɑ/
+		wool /wˈʊɫ/ - ull /ˈʉlː/
+		wolf /wˈʊɫf/ - ulv /ˈʉlʋ/
+		one /wˈʌn/ - ein /ˈæɪ̯n/
+		thou /ðˈaʊ̯/ - du /dˈʉː/
+		eleven /əlˈɛvən/ - elleve /ˈɛlʋe/
+		green /ɡɹˈin/ - grøn /ɡɾˈøːn/
+		goat /ɡˈoʊ̯t/ - geit /jˈæɪ̯t/
+		gold /ɡˈoʊ̯ɫd/ - gull /ɡˈʉlː/
+		goose /ɡˈus/ - gås /ɡˈoːs/
+		god /ɡˈɑd/ - gud /ɡˈʉːd/
+		good /ɡˈʊd/ - god /ɡˈuː/
+		light /ɫˈaɪ̯t/ - lett /lˈɛʰtː/
+		rain /ɹˈeɪ̯n/ - regn /ɾˈɛɡn/
+		reek /ɹˈik/ - røyk /ɾˈœʏ̯k/
+		root /ɹˈut/ - rot /ɾˈuːt/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+		ring /ɹˈɪŋ/ - ring /ɾˈɪŋː/
+		rich /ɹˈɪʧ/ - rik /ɾˈiːk/
+		sharp /ʃˈɑɹp/ - skarp /skˈɑɾp/
+		ship /ʃˈɪp/ - skip /ʃˈiːp/
+		shit /ʃˈɪt/ - skit /ʃˈiːt/
+		church /ʧˈɝʧ/ - kyrkja /çˈʏɾçɑ/
+		chicken /ʧˈɪkɪn/ - kjukling /çˈʉklɪŋ/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+		ice /ˈaɪ̯s/ - is /ˈiːs/
+		out /ˈaʊ̯t/ - ut /ˈʉːt/
+		eat /ˈit/ - eta /ˈeːtɑ/
+		ear /ˈiɚ/ - øyra /ˈœʏ̯ɾɑ/
+		eel /ˈiɫ/ - ål /ˈoːl/
+		over /ˈoʊ̯vɚ/ - over /ˈoːʋeɾ/
+		apple /ˈæpɫ̩/ - eple /ˈɛple/
+		ash /ˈæʃ/ - oske /ˈʊske/
+		all /ˈɑɫ/ - all /ˈɑlː/
+		arm /ˈɑɹm/ - arm /ˈɑɾm/
+		egg /ˈɛɡ/ - egg /ˈɛɡː/
+		earth /ˈɝθ/ - jord /jˈuːɾ/
+		in /ˈɪn/ - i /ˈiː/
+		us /ˈʌs/ - oss /ˈɔsː/
+		oven /ˈʌvn̩/ - omn /ˈɔmn/
+		other /ˈʌðɚ/ - annan /ˈɑnːɑn/
+		thank /θˈeɪ̯ŋk/ - takka /tʰˈɑʰkːɑ/
+		thief /θˈif/ - tjuv /çˈʉːʋ/
+		thorn /θˈɔɹn/ - torn /tʰˈʊɾn/
+		thick /θˈɪk/ - tjukk /çˈʊʰkː/
+
+Final disqualified:
+		beam /bˈim/ - tre /tʰɾˈeː/
+		dry /dɹˈaɪ̯/ - turr /tʰˈʉɾ/
+		star /stˈɑɹ/ - stjerne /sçˈɛnːe/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+		light /ɫˈaɪ̯t/ - ljos /jˈuːs/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 167
+	Disqualified: 181
+	Added: 0
+	Removed: 7
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		light /ɫˈaɪ̯t/ - ljos /jˈuːs/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		ash /ˈæʃ/ - oske /ˈʊske/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+
+Iteration 2
+	Qualified: 166
+	Disqualified: 182
+	Added: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+	Removed: 2
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+
+Iteration 3
+	Qualified: 167
+	Disqualified: 181
+	Added: 2
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Iteration 4
+	Qualified: 169
+	Disqualified: 179
+	Added: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+	Removed: 0
+
+Iteration 5
+	Qualified: 168
+	Disqualified: 180
+	Added: 1
+		word /wˈɝd/ - ord /ˈuːɾ/
+	Removed: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+
+Iteration 6
+	Qualified: 170
+	Disqualified: 178
+	Added: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+	Removed: 0
+
+Iteration 7
+	Qualified: 171
+	Disqualified: 177
+	Added: 2
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+	Removed: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+
+Iteration 8
+	Qualified: 172
+	Disqualified: 176
+	Added: 1
+		ash /ˈæʃ/ - oske /ˈʊske/
+	Removed: 0
+
+Iteration 9
+	Qualified: 170
+	Disqualified: 178
+	Added: 0
+	Removed: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+
+Iteration 10
+	Qualified: 172
+	Disqualified: 176
+	Added: 2
+		ash /ˈæʃ/ - oske /ˈʊske/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+	Removed: 0
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - blad /blˈɑːd/
+		bloom /blˈum/ - blom /blˈuːm/
+		blood /blˈʌd/ - blod /blˈuː/
+		bread /bɹˈɛd/ - braud /bɾˈæʉ̯/
+		breast /bɹˈɛst/ - bryst /bɾˈʏst/
+		bridge /bɹˈɪʤ/ - brygge /bɾˈʏɡːe/
+		brother /bɹˈʌðɚ/ - broder /bɾˈuːdeɾ/
+		brother /bɹˈʌðɚ/ - bror /bɾˈuːɾ/
+		bite /bˈaɪ̯t/ - bita /bˈiːtɑ/
+		bee /bˈi/ - bie /bˈiːə/
+		beam /bˈim/ - tre /tʰɾˈeː/
+		bone /bˈoʊ̯n/ - bein /bˈæːɪ̯n/
+		barrow /bˈæɹoʊ̯/ - berg /bˈæɾɡ/
+		bath /bˈæθ/ - bad /bˈɑːd/
+		bear /bˈɛɚ/ - bjørn /bjˈœɾn/
+		better /bˈɛɾɚ/ - betre /bˈeːtɾe/
+		bid /bˈɪd/ - by /bˈyː/
+		book /bˈʊk/ - bok /bˈuːk/
+		dwarf /dwˈɔɹf/ - dverg /dʋˈɛɾɡ/
+		drive /dɹˈaɪ̯v/ - driva /dɾˈiːʋa/
+		dream /dɹˈim/ - drøyma /dɾˈœʏ̯mɑ/
+		drink /dɹˈɪŋk/ - drikka /dɾˈɪʰkːɑ/
+		day /dˈeɪ̯/ - dag /dˈɑːɡ/
+		deep /dˈip/ - djup /jˈʉːp/
+		deer /dˈiɚ/ - dyr /dˈyːɾ/
+		dear /dˈiɚ/ - dyr /dˈyːɾ/
+		daughter /dˈɑtɚ/ - datter /dˈɔʰtːeɾ/
+		deadly /dˈɛdli/ - dødeleg /dˈøːdeleɡ/
+		few /fjˈu/ - få /fˈoː/
+		fly /flˈaɪ̯/ - fluge /flˈʉːɡe/
+		freeze /fɹˈiz/ - frysa /fɾˈyːsɑ/
+		friend /fɹˈɛnd/ - frende /fɾˈɛnde/
+		fresh /fɹˈɛʃ/ - frisk /fɾˈɪsk/
+		fire /fˈaɪ̯ɚ/ - fyr /fˈyːɾ/
+		fire /fˈaɪ̯ɚ/ - eld /ˈɛlː/
+		feet /fˈit/ - føter /fˈøːteɾ/
+		follow /fˈɑloʊ̯/ - fylgja /fˈʏljɑ/
+		father /fˈɑðɚ/ - far /fˈɑːɾ/
+		four /fˈɔɹ/ - fire /fˈiːɾe/
+		feather /fˈɛðɚ/ - fjør /fjˈøːɾ/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋːeɾ/
+		foot /fˈʊt/ - fot /fˈuːt/
+		full /fˈʊɫ/ - full /fˈʉlː/
+		high /hˈaɪ̯/ - haug /hˈæʉ̯ɡ/
+		hide /hˈaɪ̯d/ - hud /hˈʉːd/
+		hound /hˈaʊ̯nd/ - hund /hˈʊnd/
+		house /hˈaʊ̯s/ - hus /hˈʉːs/
+		here /hˈiɚ/ - her /hˈeːɾ/
+		home /hˈoʊ̯m/ - heim /hˈæɪ̯m/
+		hand /hˈænd/ - hand /hˈɑnː/
+		have /hˈæv/ - ha /hˈɑː/
+		hot /hˈɑt/ - heit /hˈæɪ̯t/
+		horn /hˈɔɹn/ - horn /hˈʊɾn/
+		head /hˈɛd/ - hovud /hˈoːʋʉ/
+		hair /hˈɛɚ/ - hår /hˈoːɾ/
+		hare /hˈɛɚ/ - hare /hˈɑːɾe/
+		hundred /hˈʌndɹəd/ - hundrad /hˈʉndɾɑ/
+		yellow /jˈɛloʊ̯/ - gul /ɡˈʉːl/
+		quean /kʰwˈin/ - kvinne /kʰʋˈɪnːe/
+		quean /kʰwˈin/ - kone /kʰˈuːne/
+		cow /kʰˈaʊ̯/ - ku /kʰˈʉː/
+		cold /kʰˈoʊ̯ɫd/ - kald /kʰˈɑlː/
+		calf /kʰˈæf/ - kalv /kʰˈɑlʋ/
+		corn /kʰˈɔɹn/ - korn /kʰˈʊɾn/
+		king /kʰˈɪŋ/ - kong /kʰˈʊŋ/
+		louse /lˈaʊ̯s/ - lus /lˈʉːs/
+		leap /lˈip/ - laupa /lˈæʉ̯pɑ/
+		laugh /lˈæf/ - le /lˈeː/
+		lamb /lˈæm/ - lamb /lˈɑmː/
+		land /lˈænd/ - land /lˈɑnd/
+		long /lˈɑŋ/ - lang /lˈɑŋː/
+		liver /lˈɪvɚ/ - lever /lˈeːʋeɾ/
+		might /mˈaɪ̯t/ - mått /mˈɔʰtː/
+		mouse /mˈaʊ̯s/ - mus /mˈʉːs/
+		mouth /mˈaʊ̯θ/ - munn /mˈʉnː/
+		me /mˈi/ - meg /mˈeːɡ/
+		mere /mˈiɚ/ - sjø /ʃˈøː/
+		moon /mˈun/ - måne /mˈoːne/
+		man /mˈæn/ - mann /mˈɑnː/
+		men /mˈɛn/ - menn /mˈɛnː/
+		milk /mˈɪɫk/ - mjølk /mjˈœlk/
+		midge /mˈɪʤ/ - mygg /mˈʏɡː/
+		mother /mˈʌðɚ/ - mor /mˈuːɾ/
+		night /nˈaɪ̯t/ - natt /nˈɑʰtː/
+		naked /nˈeɪ̯kɪd/ - naken /nˈɑːçen/
+		name /nˈeɪ̯m/ - namn /nˈɑmn/
+		nail /nˈeɪ̯ɫ/ - nagl /nˈɑɡl/
+		knee /nˈi/ - kne /kʰnˈeː/
+		needle /nˈidɫ̩/ - nål /nˈoːl/
+		nose /nˈoʊ̯z/ - nase /nˈɑːse/
+		new /nˈu/ - ny /nˈyː/
+		plight /pʰlˈaɪ̯t/ - plikt /pʰlˈɪkt/
+		slay /slˈeɪ̯/ - slå /slˈoː/
+		sleep /slˈip/ - sova /sˈoːʋɑ/
+		snow /snˈoʊ̯/ - snø /snˈøː/
+		stone /stˈoʊ̯n/ - stein /stˈæɪ̯n/
+		stool /stˈuɫ/ - stol /stˈuːl/
+		star /stˈɑɹ/ - stjerne /sçˈɛnːe/
+		sweet /swˈit/ - søt /sˈøːt/
+		swart /swˈɔɹt/ - svart /sʋˈɑɾt/
+		side /sˈaɪ̯d/ - side /sˈiːe/
+		sow /sˈaʊ̯/ - su /sˈʉː/
+		see /sˈi/ - sjå /ʃˈoː/
+		soul /sˈoʊ̯ɫ/ - sål /sˈoːl/
+		sand /sˈænd/ - sand /sˈɑnː/
+		sword /sˈɔɹd/ - sverd /sʋˈɛːɾ/
+		seven /sˈɛvən/ - sju /ʃˈʉː/
+		six /sˈɪks/ - seks /sˈɛks/
+		sister /sˈɪstɚ/ - syster /sˈʏstɛɾ/
+		sing /sˈɪŋ/ - syngja /sˈʏɲjɑ/
+		twenty /tʰwˈɛnti/ - tjue /çˈʉːe/
+		twelve /tʰwˈɛɫv/ - tolv /tʰˈɔlʋ/
+		tree /tʰɹˈi/ - tre /tʰɾˈeː/
+		tear /tʰˈiɚ/ - tåre /tʰˈoːɾe/
+		two /tʰˈu/ - to /tʰˈuː/
+		tooth /tʰˈuθ/ - tann /tʰˈɑnː/
+		ten /tʰˈɛn/ - ti /tʰˈiː/
+		tongue /tʰˈʌŋ/ - tunge /tʰˈʊŋːe/
+		white /wˈaɪ̯t/ - kvit /kʰʋˈiːt/
+		way /wˈeɪ̯/ - veg /ʋˈeːɡ/
+		we /wˈi/ - vi /ʋˈiː/
+		water /wˈɑɾɚ/ - vatn /ʋˈɑtn/
+		weapon /wˈɛpən/ - våpen /ʋˈoːpen/
+		word /wˈɝd/ - ord /ˈuːɾ/
+		worm /wˈɝm/ - orm /ˈɔɾm/
+		wind /wˈɪnd/ - vind /ʋˈɪnː/
+		wit /wˈɪt/ - vita /ʋˈiːtɑ/
+		wish /wˈɪʃ/ - ynskja /ˈʏnʃɑ/
+		wool /wˈʊɫ/ - ull /ˈʉlː/
+		wolf /wˈʊɫf/ - ulv /ˈʉlʋ/
+		one /wˈʌn/ - ein /ˈæɪ̯n/
+		what /wˈʌt/ - kva /kʰʋˈɑː/
+		thou /ðˈaʊ̯/ - du /dˈʉː/
+		eleven /əlˈɛvən/ - elleve /ˈɛlʋe/
+		grass /ɡɹˈæs/ - gras /ɡɾˈɑːs/
+		gold /ɡˈoʊ̯ɫd/ - gull /ɡˈʉlː/
+		goose /ɡˈus/ - gås /ɡˈoːs/
+		good /ɡˈʊd/ - god /ɡˈuː/
+		light /ɫˈaɪ̯t/ - lett /lˈɛʰtː/
+		right /ɹˈaɪ̯t/ - rett /ɾˈɛʰtː/
+		reek /ɹˈik/ - røyk /ɾˈœʏ̯k/
+		red /ɹˈɛd/ - raud /ɾˈæʉ̯/
+		sharp /ʃˈɑɹp/ - skarp /skˈɑɾp/
+		ship /ʃˈɪp/ - skip /ʃˈiːp/
+		shit /ʃˈɪt/ - skit /ʃˈiːt/
+		church /ʧˈɝʧ/ - kyrkja /çˈʏɾçɑ/
+		chicken /ʧˈɪkɪn/ - kjukling /çˈʉklɪŋ/
+		eye /ˈaɪ̯/ - auga /ˈæʉ̯ɡɑ/
+		ice /ˈaɪ̯s/ - is /ˈiːs/
+		owl /ˈaʊ̯l̩/ - ugle /ˈʊɡle/
+		ape /ˈeɪ̯p/ - ape /ˈɑːpe/
+		eight /ˈeɪ̯t/ - åtte /ˈɔʰtːe/
+		eat /ˈit/ - eta /ˈeːtɑ/
+		ear /ˈiɚ/ - øyra /ˈœʏ̯ɾɑ/
+		eel /ˈiɫ/ - ål /ˈoːl/
+		oak /ˈoʊ̯k/ - eik /ˈæɪ̯k/
+		over /ˈoʊ̯vɚ/ - over /ˈoːʋeɾ/
+		apple /ˈæpɫ̩/ - eple /ˈɛple/
+		ash /ˈæʃ/ - oske /ˈʊske/
+		arm /ˈɑɹm/ - arm /ˈɑɾm/
+		egg /ˈɛɡ/ - egg /ˈɛɡː/
+		edge /ˈɛʤ/ - egg /ˈɛɡː/
+		earth /ˈɝθ/ - jord /jˈuːɾ/
+		in /ˈɪn/ - i /ˈiː/
+		oven /ˈʌvn̩/ - omn /ˈɔmn/
+		three /θɹˈi/ - tre /tʰɾˈeː/
+		thousand /θˈaʊ̯zn̩d/ - tusen /tʰˈʉːsen/
+		thank /θˈeɪ̯ŋk/ - takka /tʰˈɑʰkːɑ/
+		thief /θˈif/ - tjuv /çˈʉːʋ/
+		thorn /θˈɔɹn/ - torn /tʰˈʊɾn/
+		thick /θˈɪk/ - tjukk /çˈʊʰkː/
+		thin /θˈɪn/ - tynn /tʰˈʏnː/
+
+Final disqualified:
+		light /ɫˈaɪ̯t/ - ljos /jˈuːs/
+		I /ˈaɪ̯/ - eg /ˈeːɡ/
+
+
+-------------------
+

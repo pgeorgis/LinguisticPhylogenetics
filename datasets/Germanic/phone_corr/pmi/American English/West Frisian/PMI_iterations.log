@@ -1,0 +1,1246 @@
+Same meaning pairs: 227
+****SAMPLE 1****
+Iteration 1
+	Qualified: 172
+	Disqualified: 192
+	Added: 0
+	Removed: 10
+		eat /ˈit/ - ite /ˈitə/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		eye /ˈaɪ̯/ - each /ˈɪə̯χ/
+		say /sˈeɪ̯/ - sizze /sˈɪzə/
+		egg /ˈɛɡ/ - aai /ˈaːj/
+		tree /tʰɹˈi/ - beam /bˈɪə̯m/
+		mere /mˈiɚ/ - see /sˈeː/
+		knee /nˈi/ - knibbel /knˈɪbəl/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		sea /sˈi/ - mar /mˈar/
+
+Iteration 2
+	Qualified: 168
+	Disqualified: 196
+	Added: 1
+		eat /ˈit/ - ite /ˈitə/
+	Removed: 5
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+		nine /nˈaɪ̯n/ - njoggen /njˈɔɣən/
+
+Iteration 3
+	Qualified: 170
+	Disqualified: 194
+	Added: 3
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 1
+		eat /ˈit/ - ite /ˈitə/
+
+Iteration 4
+	Qualified: 171
+	Disqualified: 193
+	Added: 2
+		nine /nˈaɪ̯n/ - njoggen /njˈɔɣən/
+		eat /ˈit/ - ite /ˈitə/
+	Removed: 1
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Iteration 5
+	Qualified: 172
+	Disqualified: 192
+	Added: 1
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 0
+
+Iteration 6
+	Qualified: 171
+	Disqualified: 193
+	Added: 0
+	Removed: 1
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - blêd /blˈɛːt/
+		bloom /blˈum/ - blom /blˈoːm/
+		blood /blˈʌd/ - bloed /blˈuə̯t/
+		bread /bɹˈɛd/ - brea /brˈɪə̯/
+		breast /bɹˈɛst/ - boarst /bˈoə̯st/
+		bridge /bɹˈɪʤ/ - brêge /brˈɛːɣə/
+		brother /bɹˈʌðɚ/ - broer /brˈuə̯r/
+		bite /bˈaɪ̯t/ - bite /bˈiːtə/
+		bee /bˈi/ - bij /bˈɛj/
+		beam /bˈim/ - beam /bˈɪə̯m/
+		bone /bˈoʊ̯n/ - bien /bˈiə̯n/
+		boat /bˈoʊ̯t/ - boat /bˈoə̯t/
+		better /bˈɛɾɚ/ - better /bˈɛtər/
+		bid /bˈɪd/ - biede /bˈiə̯də/
+		bid /bˈɪd/ - bidde /bˈɪdə/
+		book /bˈʊk/ - boek /bˈuə̯k/
+		drive /dɹˈaɪ̯v/ - driuwe /drjˈuːvə/
+		dream /dɹˈim/ - dream /drˈɪə̯m/
+		drink /dɹˈɪŋk/ - drinke /drˈɪŋkə/
+		day /dˈeɪ̯/ - dei /dˈɛi̯/
+		deep /dˈip/ - djip /djˈɪp/
+		dear /dˈiɚ/ - djoer /djˈuə̯r/
+		deer /dˈiɚ/ - dier /dˈiə̯r/
+		deadly /dˈɛdli/ - deadlik /dˈɪə̯dlɪk/
+		death /dˈɛθ/ - dea /dˈɪə̯/
+		flesh /flˈɛʃ/ - flêsk /flˈɛːsk/
+		free /fɹˈi/ - frij /frˈɛj/
+		freeze /fɹˈiz/ - frieze /frˈiə̯zə/
+		fowl /fˈaʊ̯ɫ/ - fûgel /fˈuɣəl/
+		feel /fˈiɫ/ - fiele /fˈiə̯lə/
+		folk /fˈoʊ̯k/ - folk /fˈɔlk/
+		fox /fˈɑks/ - foks /fˈɔks/
+		follow /fˈɑloʊ̯/ - folgje /fˈɔlɣjə/
+		father /fˈɑðɚ/ - fader /fˈaːdər/
+		four /fˈɔɹ/ - fjouwer /fjˈɔu̯ər/
+		feather /fˈɛðɚ/ - fear /fˈɪə̯r/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋər/
+		fish /fˈɪʃ/ - fisk /fˈɪsk/
+		foot /fˈʊt/ - foet /fˈuə̯t/
+		full /fˈʊɫ/ - fol /fˈɔl/
+		high /hˈaɪ̯/ - heech /hˈeːχ/
+		hide /hˈaɪ̯d/ - hûd /hˈuːt/
+		hound /hˈaʊ̯nd/ - hûn /hˈuːn/
+		house /hˈaʊ̯s/ - hûs /hˈuːs/
+		here /hˈiɚ/ - hjir /hjˈɪr/
+		hear /hˈiɚ/ - hearre /hˈɪə̯rə/
+		holy /hˈoʊ̯li/ - hillich /hˈɪləχ/
+		home /hˈoʊ̯m/ - hiem /hˈiə̯m/
+		hand /hˈænd/ - hân /hˈɔːn/
+		have /hˈæv/ - hawwe /hˈavə/
+		heart /hˈɑɹt/ - hert /hˈɛːt/
+		horn /hˈɔɹn/ - hoarn /hˈoə̯n/
+		horse /hˈɔɹs/ - hoars /hˈoə̯s/
+		hen /hˈɛn/ - hin /hˈɪn/
+		hare /hˈɛɚ/ - hazze /hˈazə/
+		hair /hˈɛɚ/ - hier /hˈiə̯r/
+		hundred /hˈʌndɹəd/ - hûndert /hˈundət/
+		honey /hˈʌni/ - hunich /hˈynəχ/
+		honey /hˈʌni/ - huning /hˈynɪŋ/
+		hunger /hˈʌŋɡɚ/ - honger /hˈɔŋər/
+		year /jˈiɚ/ - jier /jˈiə̯r/
+		young /jˈʌŋ/ - jong /jˈɔŋ/
+		cow /kʰˈaʊ̯/ - ko /kˈoː/
+		cold /kʰˈoʊ̯ɫd/ - kâld /kˈɔːt/
+		corn /kʰˈɔɹn/ - koarn /kˈoə̯n/
+		king /kʰˈɪŋ/ - kening /kˈeːnɪŋ/
+		leaf /lˈif/ - leaf /lˈɪə̯f/
+		leap /lˈip/ - ljeppe /ljˈɛpə/
+		long /lˈɑŋ/ - lang /lˈaŋ/
+		liver /lˈɪvɚ/ - lever /lˈeːvər/
+		mouse /mˈaʊ̯s/ - mûs /mˈuːs/
+		mouth /mˈaʊ̯θ/ - mûle /mˈuːlə/
+		mouth /mˈaʊ̯θ/ - mûn /mˈuːn/
+		me /mˈi/ - my /mˈi/
+		mere /mˈiɚ/ - mar /mˈar/
+		moon /mˈun/ - moanne /mˈoə̯nə/
+		man /mˈæn/ - man /mˈan/
+		milk /mˈɪɫk/ - molke /mˈɔlkə/
+		midge /mˈɪʤ/ - mich /mˈɪχ/
+		nine /nˈaɪ̯n/ - njoggen /njˈɔɣən/
+		night /nˈaɪ̯t/ - nacht /nˈaχt/
+		naked /nˈeɪ̯kɪd/ - neaken /nˈɪə̯kən/
+		name /nˈeɪ̯m/ - namme /nˈamə/
+		nail /nˈeɪ̯ɫ/ - neil /nˈɛi̯l/
+		needle /nˈidɫ̩/ - nulle /nˈølə/
+		nose /nˈoʊ̯z/ - noas /nˈoə̯s/
+		new /nˈu/ - nij /nˈɛj/
+		north /nˈɔɹθ/ - noard /nˈoə̯t/
+		plight /pʰlˈaɪ̯t/ - plicht /plˈɪχt/
+		slay /slˈeɪ̯/ - slaan /slˈaːn/
+		sleep /slˈip/ - sliepe /slˈiə̯pə/
+		snow /snˈoʊ̯/ - snie /snˈiə̯/
+		speech /spˈiʧ/ - sprake /sprˈaːkə/
+		stone /stˈoʊ̯n/ - stien /stˈiə̯n/
+		stool /stˈuɫ/ - stoel /stˈuə̯l/
+		star /stˈɑɹ/ - stjer /stjˈɛr/
+		storm /stˈɔɹm/ - stoarm /stˈoə̯rm/
+		swine /swˈaɪ̯n/ - swyn /svˈin/
+		sweet /swˈit/ - swiet /svˈiə̯t/
+		swart /swˈɔɹt/ - swart /svˈat/
+		swim /swˈɪm/ - swimme /svˈɪmə/
+		side /sˈaɪ̯d/ - side /sˈiːdə/
+		sea /sˈi/ - see /sˈeː/
+		see /sˈi/ - sjen /ɕˈeːn/
+		soul /sˈoʊ̯ɫ/ - siel /sˈiə̯l/
+		sand /sˈænd/ - sân /sˈɔːn/
+		salt /sˈɑɫt/ - sâlt /sˈɔːt/
+		sword /sˈɔɹd/ - swurd /svˈøt/
+		seven /sˈɛvən/ - sân /sˈɔːn/
+		sit /sˈɪt/ - sitte /sˈɪtə/
+		sing /sˈɪŋ/ - sjonge /ɕˈɔŋə/
+		son /sˈʌn/ - soan /sˈoə̯n/
+		twenty /tʰwˈɛnti/ - tweintich /tvˈɛi̯ntəχ/
+		twelve /tʰwˈɛɫv/ - tolve /tˈɔlvə/
+		tide /tʰˈaɪ̯d/ - tiid /tˈiːt/
+		two /tʰˈu/ - twa /tvˈaː/
+		tooth /tʰˈuθ/ - tine /tˈiːnə/
+		ten /tʰˈɛn/ - tsien /ʦˈiə̯n/
+		tongue /tʰˈʌŋ/ - tûnge /tˈuŋə/
+		white /wˈaɪ̯t/ - wyt /vˈit/
+		way /wˈeɪ̯/ - wei /ʋˈɛi̯/
+		whale /wˈeɪ̯ɫ/ - wal /ʋˈal/
+		we /wˈi/ - wy /vˈi/
+		wheel /wˈiɫ/ - fiel /fˈiə̯l/
+		water /wˈɑɾɚ/ - wetter /ʋˈɛtər/
+		warm /wˈɔɹm/ - waarm /ʋˈaːrm/
+		weapon /wˈɛpən/ - wapen /ʋˈaːpən/
+		weather /wˈɛðɚ/ - waar /ʋˈaːr/
+		wind /wˈɪnd/ - wyn /ʋˈin/
+		wool /wˈʊɫ/ - wolle /ʋˈɔlə/
+		one /wˈʌn/ - ien /ˈiə̯n/
+		thou /ðˈaʊ̯/ - do /dˈoː/
+		eleven /əlˈɛvən/ - alve /ˈalvə/
+		grass /ɡɹˈæs/ - gers /ɡˈɛːs/
+		ghost /ɡˈoʊ̯st/ - geast /ɡˈɪə̯st/
+		gold /ɡˈoʊ̯ɫd/ - goud /ɡˈɔu̯t/
+		goose /ɡˈus/ - goes /ɡˈuə̯s/
+		god /ɡˈɑd/ - god /ɡˈɔt/
+		good /ɡˈʊd/ - goed /ɡˈuə̯t/
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		rain /ɹˈeɪ̯n/ - rein /rˈɛi̯n/
+		reek /ɹˈik/ - reak /rˈɪə̯k/
+		red /ɹˈɛd/ - read /rˈɪə̯t/
+		sheep /ʃˈip/ - skiep /skˈiə̯p/
+		ship /ʃˈɪp/ - skip /skˈɪp/
+		cheese /ʧˈiz/ - tsiis /ʦˈiːs/
+		church /ʧˈɝʧ/ - tsjerke /ʦjˈɛrkə/
+		ice /ˈaɪ̯s/ - iis /ˈiːs/
+		owl /ˈaʊ̯l̩/ - ûle /ˈuːlə/
+		out /ˈaʊ̯t/ - út /ˈyːt/
+		ape /ˈeɪ̯p/ - aap /ˈaːp/
+		eight /ˈeɪ̯t/ - acht /ˈaχt/
+		eat /ˈit/ - ite /ˈitə/
+		ear /ˈiɚ/ - ear /ˈɪə̯r/
+		eel /ˈiɫ/ - iel /ˈiə̯l/
+		oak /ˈoʊ̯k/ - iik /ˈiːk/
+		over /ˈoʊ̯vɚ/ - oer /ˈuə̯r/
+		old /ˈoʊ̯ɫd/ - âld /ˈɔːt/
+		earth /ˈɝθ/ - ierde /ˈiə̯də/
+		in /ˈɪn/ - yn /ˈin/
+		us /ˈʌs/ - ús /ˈyːs/
+		oven /ˈʌvn̩/ - un /ˈuːn/
+		three /θɹˈi/ - trije /trˈɛjə/
+		thousand /θˈaʊ̯zn̩d/ - tûzen /tˈuːzən/
+		thank /θˈeɪ̯ŋk/ - tankje /tˈankjə/
+		thief /θˈif/ - tsjeaf /ʦjˈɪə̯f/
+		thorn /θˈɔɹn/ - toarn /tˈoə̯n/
+		thick /θˈɪk/ - tsjok /ʦjˈɔk/
+		thin /θˈɪn/ - tin /tˈɪn/
+		thunder /θˈʌndɚ/ - tonger /tˈɔŋər/
+
+Final disqualified:
+		mere /mˈiɚ/ - see /sˈeː/
+		knee /nˈi/ - knibbel /knˈɪbəl/
+		say /sˈeɪ̯/ - sizze /sˈɪzə/
+		sea /sˈi/ - mar /mˈar/
+		tree /tʰɹˈi/ - beam /bˈɪə̯m/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		eye /ˈaɪ̯/ - each /ˈɪə̯χ/
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		egg /ˈɛɡ/ - aai /ˈaːj/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 173
+	Disqualified: 191
+	Added: 0
+	Removed: 9
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		eye /ˈaɪ̯/ - each /ˈɪə̯χ/
+		say /sˈeɪ̯/ - sizze /sˈɪzə/
+		egg /ˈɛɡ/ - aai /ˈaːj/
+		mere /mˈiɚ/ - see /sˈeː/
+		knee /nˈi/ - knibbel /knˈɪbəl/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		sea /sˈi/ - mar /mˈar/
+
+Iteration 2
+	Qualified: 170
+	Disqualified: 194
+	Added: 0
+	Removed: 3
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Iteration 3
+	Qualified: 174
+	Disqualified: 190
+	Added: 4
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 0
+
+Iteration 4
+	Qualified: 171
+	Disqualified: 193
+	Added: 0
+	Removed: 3
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Iteration 5
+	Qualified: 173
+	Disqualified: 191
+	Added: 2
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 0
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - blêd /blˈɛːt/
+		bloom /blˈum/ - blom /blˈoːm/
+		blood /blˈʌd/ - bloed /blˈuə̯t/
+		bread /bɹˈɛd/ - brea /brˈɪə̯/
+		breast /bɹˈɛst/ - boarst /bˈoə̯st/
+		bridge /bɹˈɪʤ/ - brêge /brˈɛːɣə/
+		brother /bɹˈʌðɚ/ - broer /brˈuə̯r/
+		bite /bˈaɪ̯t/ - bite /bˈiːtə/
+		bee /bˈi/ - bij /bˈɛj/
+		beam /bˈim/ - beam /bˈɪə̯m/
+		bone /bˈoʊ̯n/ - bien /bˈiə̯n/
+		bath /bˈæθ/ - bad /bˈat/
+		bear /bˈɛɚ/ - bear /bˈɪə̯r/
+		bid /bˈɪd/ - biede /bˈiə̯də/
+		bid /bˈɪd/ - bidde /bˈɪdə/
+		dwarf /dwˈɔɹf/ - dwerch /dvˈɛrχ/
+		dry /dɹˈaɪ̯/ - drûch /drˈuːχ/
+		drive /dɹˈaɪ̯v/ - driuwe /drjˈuːvə/
+		dream /dɹˈim/ - dream /drˈɪə̯m/
+		drink /dɹˈɪŋk/ - drinke /drˈɪŋkə/
+		day /dˈeɪ̯/ - dei /dˈɛi̯/
+		deep /dˈip/ - djip /djˈɪp/
+		deer /dˈiɚ/ - dier /dˈiə̯r/
+		daughter /dˈɑtɚ/ - dochter /dˈɔχtər/
+		deadly /dˈɛdli/ - deadlik /dˈɪə̯dlɪk/
+		death /dˈɛθ/ - dea /dˈɪə̯/
+		fly /flˈaɪ̯/ - fleane /flˈɪə̯nə/
+		flesh /flˈɛʃ/ - flêsk /flˈɛːsk/
+		free /fɹˈi/ - frij /frˈɛj/
+		freeze /fɹˈiz/ - frieze /frˈiə̯zə/
+		fresh /fɹˈɛʃ/ - farsk /fˈask/
+		five /fˈaɪ̯v/ - fiif /fˈiːf/
+		fowl /fˈaʊ̯ɫ/ - fûgel /fˈuɣəl/
+		feet /fˈit/ - fuotten /fˈɵtən/
+		feel /fˈiɫ/ - fiele /fˈiə̯lə/
+		folk /fˈoʊ̯k/ - folk /fˈɔlk/
+		fast /fˈæst/ - fêst /fˈɛːst/
+		fox /fˈɑks/ - foks /fˈɔks/
+		follow /fˈɑloʊ̯/ - folgje /fˈɔlɣjə/
+		father /fˈɑðɚ/ - fader /fˈaːdər/
+		four /fˈɔɹ/ - fjouwer /fjˈɔu̯ər/
+		feather /fˈɛðɚ/ - fear /fˈɪə̯r/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋər/
+		high /hˈaɪ̯/ - heech /hˈeːχ/
+		hide /hˈaɪ̯d/ - hûd /hˈuːt/
+		hound /hˈaʊ̯nd/ - hûn /hˈuːn/
+		house /hˈaʊ̯s/ - hûs /hˈuːs/
+		here /hˈiɚ/ - hjir /hjˈɪr/
+		holy /hˈoʊ̯li/ - hillich /hˈɪləχ/
+		home /hˈoʊ̯m/ - hiem /hˈiə̯m/
+		have /hˈæv/ - hawwe /hˈavə/
+		hot /hˈɑt/ - hyt /hˈit/
+		heart /hˈɑɹt/ - hert /hˈɛːt/
+		horse /hˈɔɹs/ - hoars /hˈoə̯s/
+		hen /hˈɛn/ - hin /hˈɪn/
+		hair /hˈɛɚ/ - hier /hˈiə̯r/
+		hundred /hˈʌndɹəd/ - hûndert /hˈundət/
+		honey /hˈʌni/ - huning /hˈynɪŋ/
+		year /jˈiɚ/ - jier /jˈiə̯r/
+		young /jˈʌŋ/ - jong /jˈɔŋ/
+		cow /kʰˈaʊ̯/ - ko /kˈoː/
+		cold /kʰˈoʊ̯ɫd/ - kâld /kˈɔːt/
+		calf /kʰˈæf/ - keal /kˈɪə̯l/
+		corn /kʰˈɔɹn/ - koarn /kˈoə̯n/
+		louse /lˈaʊ̯s/ - lus /lˈuːs/
+		lamb /lˈæm/ - laam /lˈaːm/
+		land /lˈænd/ - lân /lˈɔːn/
+		long /lˈɑŋ/ - lang /lˈaŋ/
+		liver /lˈɪvɚ/ - lever /lˈeːvər/
+		mice /mˈaɪ̯s/ - mûsen /mˈuːsən/
+		might /mˈaɪ̯t/ - macht /mˈaχt/
+		mouse /mˈaʊ̯s/ - mûs /mˈuːs/
+		mouth /mˈaʊ̯θ/ - mûle /mˈuːlə/
+		me /mˈi/ - my /mˈi/
+		mere /mˈiɚ/ - mar /mˈar/
+		moon /mˈun/ - moanne /mˈoə̯nə/
+		milk /mˈɪɫk/ - molke /mˈɔlkə/
+		mother /mˈʌðɚ/ - moer /mˈuə̯r/
+		night /nˈaɪ̯t/ - nacht /nˈaχt/
+		naked /nˈeɪ̯kɪd/ - neaken /nˈɪə̯kən/
+		name /nˈeɪ̯m/ - namme /nˈamə/
+		nail /nˈeɪ̯ɫ/ - neil /nˈɛi̯l/
+		nose /nˈoʊ̯z/ - noas /nˈoə̯s/
+		north /nˈɔɹθ/ - noard /nˈoə̯t/
+		plight /pʰlˈaɪ̯t/ - plicht /plˈɪχt/
+		slay /slˈeɪ̯/ - slaan /slˈaːn/
+		snow /snˈoʊ̯/ - snie /snˈiə̯/
+		speech /spˈiʧ/ - sprake /sprˈaːkə/
+		stone /stˈoʊ̯n/ - stien /stˈiə̯n/
+		stool /stˈuɫ/ - stoel /stˈuə̯l/
+		storm /stˈɔɹm/ - stoarm /stˈoə̯rm/
+		swine /swˈaɪ̯n/ - swyn /svˈin/
+		sweet /swˈit/ - swiet /svˈiə̯t/
+		swart /swˈɔɹt/ - swart /svˈat/
+		swim /swˈɪm/ - swimme /svˈɪmə/
+		side /sˈaɪ̯d/ - side /sˈiːdə/
+		sea /sˈi/ - see /sˈeː/
+		see /sˈi/ - sjen /ɕˈeːn/
+		soul /sˈoʊ̯ɫ/ - siel /sˈiə̯l/
+		sand /sˈænd/ - sân /sˈɔːn/
+		sword /sˈɔɹd/ - swurd /svˈøt/
+		seven /sˈɛvən/ - sân /sˈɔːn/
+		six /sˈɪks/ - seis /sˈɛi̯s/
+		sister /sˈɪstɚ/ - suster /sˈøstər/
+		sit /sˈɪt/ - sitte /sˈɪtə/
+		sing /sˈɪŋ/ - sjonge /ɕˈɔŋə/
+		son /sˈʌn/ - soan /sˈoə̯n/
+		twenty /tʰwˈɛnti/ - tweintich /tvˈɛi̯ntəχ/
+		twelve /tʰwˈɛɫv/ - tolve /tˈɔlvə/
+		tree /tʰɹˈi/ - beam /bˈɪə̯m/
+		tide /tʰˈaɪ̯d/ - tiid /tˈiːt/
+		two /tʰˈu/ - twa /tvˈaː/
+		ten /tʰˈɛn/ - tsien /ʦˈiə̯n/
+		tongue /tʰˈʌŋ/ - tûnge /tˈuŋə/
+		white /wˈaɪ̯t/ - wyt /vˈit/
+		way /wˈeɪ̯/ - wei /ʋˈɛi̯/
+		whale /wˈeɪ̯ɫ/ - wal /ʋˈal/
+		we /wˈi/ - wy /vˈi/
+		wheel /wˈiɫ/ - fiel /fˈiə̯l/
+		water /wˈɑɾɚ/ - wetter /ʋˈɛtər/
+		warm /wˈɔɹm/ - waarm /ʋˈaːrm/
+		weapon /wˈɛpən/ - wapen /ʋˈaːpən/
+		weather /wˈɛðɚ/ - waar /ʋˈaːr/
+		worm /wˈɝm/ - wjirm /ʋjˈɪrm/
+		wind /wˈɪnd/ - wyn /ʋˈin/
+		wit /wˈɪt/ - witte /ʋˈɪtə/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		one /wˈʌn/ - ien /ˈiə̯n/
+		what /wˈʌt/ - wat /vˈat/
+		thou /ðˈaʊ̯/ - do /dˈoː/
+		green /ɡɹˈin/ - grien /ɡrˈiə̯n/
+		grass /ɡɹˈæs/ - gers /ɡˈɛːs/
+		ghost /ɡˈoʊ̯st/ - geast /ɡˈɪə̯st/
+		goat /ɡˈoʊ̯t/ - geit /ɡˈɛi̯t/
+		gold /ɡˈoʊ̯ɫd/ - goud /ɡˈɔu̯t/
+		goose /ɡˈus/ - goes /ɡˈuə̯s/
+		god /ɡˈɑd/ - god /ɡˈɔt/
+		good /ɡˈʊd/ - goed /ɡˈuə̯t/
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		light /ɫˈaɪ̯t/ - licht /lˈɪχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		rain /ɹˈeɪ̯n/ - rein /rˈɛi̯n/
+		reek /ɹˈik/ - reak /rˈɪə̯k/
+		ring /ɹˈɪŋ/ - ring /rˈɪŋ/
+		rich /ɹˈɪʧ/ - ryk /rˈik/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+		sheep /ʃˈip/ - skiep /skˈiə̯p/
+		sharp /ʃˈɑɹp/ - skerp /skˈɛrp/
+		shit /ʃˈɪt/ - skyt /skˈit/
+		cheese /ʧˈiz/ - tsiis /ʦˈiːs/
+		church /ʧˈɝʧ/ - tsjerke /ʦjˈɛrkə/
+		ice /ˈaɪ̯s/ - iis /ˈiːs/
+		owl /ˈaʊ̯l̩/ - ûle /ˈuːlə/
+		out /ˈaʊ̯t/ - út /ˈyːt/
+		eight /ˈeɪ̯t/ - acht /ˈaχt/
+		eat /ˈit/ - ite /ˈitə/
+		ear /ˈiɚ/ - ear /ˈɪə̯r/
+		oak /ˈoʊ̯k/ - iik /ˈiːk/
+		old /ˈoʊ̯ɫd/ - âld /ˈɔːt/
+		apple /ˈæpɫ̩/ - apel /ˈaːpəl/
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		arm /ˈɑɹm/ - earm /ˈɪə̯rm/
+		earth /ˈɝθ/ - ierde /ˈiə̯də/
+		in /ˈɪn/ - yn /ˈin/
+		oven /ˈʌvn̩/ - un /ˈuːn/
+		other /ˈʌðɚ/ - oar /ˈoə̯r/
+		three /θɹˈi/ - trije /trˈɛjə/
+		thousand /θˈaʊ̯zn̩d/ - tûzen /tˈuːzən/
+		thank /θˈeɪ̯ŋk/ - tankje /tˈankjə/
+		thief /θˈif/ - tsjeaf /ʦjˈɪə̯f/
+		thick /θˈɪk/ - tsjok /ʦjˈɔk/
+		thin /θˈɪn/ - tin /tˈɪn/
+		thunder /θˈʌndɚ/ - tonger /tˈɔŋər/
+
+Final disqualified:
+		mere /mˈiɚ/ - see /sˈeː/
+		knee /nˈi/ - knibbel /knˈɪbəl/
+		say /sˈeɪ̯/ - sizze /sˈɪzə/
+		sea /sˈi/ - mar /mˈar/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		eye /ˈaɪ̯/ - each /ˈɪə̯χ/
+		egg /ˈɛɡ/ - aai /ˈaːj/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 168
+	Disqualified: 196
+	Added: 0
+	Removed: 14
+		eat /ˈit/ - ite /ˈitə/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		say /sˈeɪ̯/ - sizze /sˈɪzə/
+		egg /ˈɛɡ/ - aai /ˈaːj/
+		tree /tʰɹˈi/ - beam /bˈɪə̯m/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+		mere /mˈiɚ/ - see /sˈeː/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		one /wˈʌn/ - ien /ˈiə̯n/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		sea /sˈi/ - mar /mˈar/
+
+Iteration 2
+	Qualified: 172
+	Disqualified: 192
+	Added: 4
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 0
+
+Iteration 3
+	Qualified: 173
+	Disqualified: 191
+	Added: 1
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+	Removed: 0
+
+Iteration 4
+	Qualified: 170
+	Disqualified: 194
+	Added: 0
+	Removed: 3
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Iteration 5
+	Qualified: 172
+	Disqualified: 192
+	Added: 2
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 0
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - blêd /blˈɛːt/
+		bloom /blˈum/ - blom /blˈoːm/
+		blood /blˈʌd/ - bloed /blˈuə̯t/
+		bread /bɹˈɛd/ - brea /brˈɪə̯/
+		breast /bɹˈɛst/ - boarst /bˈoə̯st/
+		bridge /bɹˈɪʤ/ - brêge /brˈɛːɣə/
+		bite /bˈaɪ̯t/ - bite /bˈiːtə/
+		beam /bˈim/ - beam /bˈɪə̯m/
+		bone /bˈoʊ̯n/ - bien /bˈiə̯n/
+		boat /bˈoʊ̯t/ - boat /bˈoə̯t/
+		bath /bˈæθ/ - bad /bˈat/
+		bid /bˈɪd/ - biede /bˈiə̯də/
+		bid /bˈɪd/ - bidde /bˈɪdə/
+		dwarf /dwˈɔɹf/ - dwerch /dvˈɛrχ/
+		dry /dɹˈaɪ̯/ - drûch /drˈuːχ/
+		dream /dɹˈim/ - dream /drˈɪə̯m/
+		drink /dɹˈɪŋk/ - drinke /drˈɪŋkə/
+		day /dˈeɪ̯/ - dei /dˈɛi̯/
+		deep /dˈip/ - djip /djˈɪp/
+		deer /dˈiɚ/ - dier /dˈiə̯r/
+		deadly /dˈɛdli/ - deadlik /dˈɪə̯dlɪk/
+		death /dˈɛθ/ - dea /dˈɪə̯/
+		fly /flˈaɪ̯/ - fleane /flˈɪə̯nə/
+		free /fɹˈi/ - frij /frˈɛj/
+		freeze /fɹˈiz/ - frieze /frˈiə̯zə/
+		friend /fɹˈɛnd/ - freon /frˈøə̯n/
+		five /fˈaɪ̯v/ - fiif /fˈiːf/
+		fire /fˈaɪ̯ɚ/ - fjoer /fjˈuə̯r/
+		fowl /fˈaʊ̯ɫ/ - fûgel /fˈuɣəl/
+		feet /fˈit/ - fuotten /fˈɵtən/
+		feel /fˈiɫ/ - fiele /fˈiə̯lə/
+		folk /fˈoʊ̯k/ - folk /fˈɔlk/
+		fast /fˈæst/ - fêst /fˈɛːst/
+		follow /fˈɑloʊ̯/ - folgje /fˈɔlɣjə/
+		father /fˈɑðɚ/ - fader /fˈaːdər/
+		four /fˈɔɹ/ - fjouwer /fjˈɔu̯ər/
+		feather /fˈɛðɚ/ - fear /fˈɪə̯r/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋər/
+		full /fˈʊɫ/ - fol /fˈɔl/
+		high /hˈaɪ̯/ - heech /hˈeːχ/
+		hide /hˈaɪ̯d/ - hûd /hˈuːt/
+		hound /hˈaʊ̯nd/ - hûn /hˈuːn/
+		hear /hˈiɚ/ - hearre /hˈɪə̯rə/
+		holy /hˈoʊ̯li/ - hillich /hˈɪləχ/
+		home /hˈoʊ̯m/ - hiem /hˈiə̯m/
+		have /hˈæv/ - hawwe /hˈavə/
+		heart /hˈɑɹt/ - hert /hˈɛːt/
+		horn /hˈɔɹn/ - hoarn /hˈoə̯n/
+		horse /hˈɔɹs/ - hoars /hˈoə̯s/
+		hen /hˈɛn/ - hin /hˈɪn/
+		hare /hˈɛɚ/ - hazze /hˈazə/
+		hundred /hˈʌndɹəd/ - hûndert /hˈundət/
+		honey /hˈʌni/ - hunich /hˈynəχ/
+		hunger /hˈʌŋɡɚ/ - honger /hˈɔŋər/
+		year /jˈiɚ/ - jier /jˈiə̯r/
+		yellow /jˈɛloʊ̯/ - giel /ɡˈiə̯l/
+		young /jˈʌŋ/ - jong /jˈɔŋ/
+		cow /kʰˈaʊ̯/ - ko /kˈoː/
+		cold /kʰˈoʊ̯ɫd/ - kâld /kˈɔːt/
+		calf /kʰˈæf/ - keal /kˈɪə̯l/
+		corn /kʰˈɔɹn/ - koarn /kˈoə̯n/
+		king /kʰˈɪŋ/ - kening /kˈeːnɪŋ/
+		louse /lˈaʊ̯s/ - lus /lˈuːs/
+		leaf /lˈif/ - leaf /lˈɪə̯f/
+		lamb /lˈæm/ - laam /lˈaːm/
+		land /lˈænd/ - lân /lˈɔːn/
+		long /lˈɑŋ/ - lang /lˈaŋ/
+		liver /lˈɪvɚ/ - lever /lˈeːvər/
+		might /mˈaɪ̯t/ - macht /mˈaχt/
+		mouth /mˈaʊ̯θ/ - mûle /mˈuːlə/
+		mouth /mˈaʊ̯θ/ - mûn /mˈuːn/
+		mere /mˈiɚ/ - mar /mˈar/
+		moon /mˈun/ - moanne /mˈoə̯nə/
+		man /mˈæn/ - man /mˈan/
+		milk /mˈɪɫk/ - molke /mˈɔlkə/
+		midge /mˈɪʤ/ - mich /mˈɪχ/
+		night /nˈaɪ̯t/ - nacht /nˈaχt/
+		naked /nˈeɪ̯kɪd/ - neaken /nˈɪə̯kən/
+		name /nˈeɪ̯m/ - namme /nˈamə/
+		nail /nˈeɪ̯ɫ/ - neil /nˈɛi̯l/
+		needle /nˈidɫ̩/ - nulle /nˈølə/
+		new /nˈu/ - nij /nˈɛj/
+		north /nˈɔɹθ/ - noard /nˈoə̯t/
+		plight /pʰlˈaɪ̯t/ - plicht /plˈɪχt/
+		speech /spˈiʧ/ - sprake /sprˈaːkə/
+		stone /stˈoʊ̯n/ - stien /stˈiə̯n/
+		stool /stˈuɫ/ - stoel /stˈuə̯l/
+		star /stˈɑɹ/ - stjer /stjˈɛr/
+		storm /stˈɔɹm/ - stoarm /stˈoə̯rm/
+		swine /swˈaɪ̯n/ - swyn /svˈin/
+		sweet /swˈit/ - swiet /svˈiə̯t/
+		swart /swˈɔɹt/ - swart /svˈat/
+		swim /swˈɪm/ - swimme /svˈɪmə/
+		side /sˈaɪ̯d/ - side /sˈiːdə/
+		sea /sˈi/ - see /sˈeː/
+		see /sˈi/ - sjen /ɕˈeːn/
+		soul /sˈoʊ̯ɫ/ - siel /sˈiə̯l/
+		salt /sˈɑɫt/ - sâlt /sˈɔːt/
+		sword /sˈɔɹd/ - swurd /svˈøt/
+		seven /sˈɛvən/ - sân /sˈɔːn/
+		six /sˈɪks/ - seis /sˈɛi̯s/
+		sister /sˈɪstɚ/ - suster /sˈøstər/
+		sit /sˈɪt/ - sitte /sˈɪtə/
+		sing /sˈɪŋ/ - sjonge /ɕˈɔŋə/
+		son /sˈʌn/ - soan /sˈoə̯n/
+		twenty /tʰwˈɛnti/ - tweintich /tvˈɛi̯ntəχ/
+		twelve /tʰwˈɛɫv/ - tolve /tˈɔlvə/
+		tide /tʰˈaɪ̯d/ - tiid /tˈiːt/
+		two /tʰˈu/ - twa /tvˈaː/
+		tooth /tʰˈuθ/ - tine /tˈiːnə/
+		ten /tʰˈɛn/ - tsien /ʦˈiə̯n/
+		tongue /tʰˈʌŋ/ - tûnge /tˈuŋə/
+		wife /wˈaɪ̯f/ - wiif /ʋˈiːf/
+		white /wˈaɪ̯t/ - wyt /vˈit/
+		way /wˈeɪ̯/ - wei /ʋˈɛi̯/
+		whale /wˈeɪ̯ɫ/ - wal /ʋˈal/
+		wheel /wˈiɫ/ - fiel /fˈiə̯l/
+		water /wˈɑɾɚ/ - wetter /ʋˈɛtər/
+		weapon /wˈɛpən/ - wapen /ʋˈaːpən/
+		weather /wˈɛðɚ/ - waar /ʋˈaːr/
+		worm /wˈɝm/ - wjirm /ʋjˈɪrm/
+		wind /wˈɪnd/ - wyn /ʋˈin/
+		wit /wˈɪt/ - witte /ʋˈɪtə/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		wool /wˈʊɫ/ - wolle /ʋˈɔlə/
+		wolf /wˈʊɫf/ - wolf /ʋˈɔlf/
+		what /wˈʌt/ - wat /vˈat/
+		thou /ðˈaʊ̯/ - do /dˈoː/
+		great /ɡɹˈeɪ̯t/ - grut /ɡrˈuːt/
+		green /ɡɹˈin/ - grien /ɡrˈiə̯n/
+		ghost /ɡˈoʊ̯st/ - geast /ɡˈɪə̯st/
+		goat /ɡˈoʊ̯t/ - geit /ɡˈɛi̯t/
+		god /ɡˈɑd/ - god /ɡˈɔt/
+		good /ɡˈʊd/ - goed /ɡˈuə̯t/
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		rain /ɹˈeɪ̯n/ - rein /rˈɛi̯n/
+		reek /ɹˈik/ - reak /rˈɪə̯k/
+		red /ɹˈɛd/ - read /rˈɪə̯t/
+		ring /ɹˈɪŋ/ - ring /rˈɪŋ/
+		rich /ɹˈɪʧ/ - ryk /rˈik/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+		sheep /ʃˈip/ - skiep /skˈiə̯p/
+		sharp /ʃˈɑɹp/ - skerp /skˈɛrp/
+		ship /ʃˈɪp/ - skip /skˈɪp/
+		shit /ʃˈɪt/ - skyt /skˈit/
+		cheese /ʧˈiz/ - tsiis /ʦˈiːs/
+		church /ʧˈɝʧ/ - tsjerke /ʦjˈɛrkə/
+		ice /ˈaɪ̯s/ - iis /ˈiːs/
+		owl /ˈaʊ̯l̩/ - ûle /ˈuːlə/
+		out /ˈaʊ̯t/ - út /ˈyːt/
+		eight /ˈeɪ̯t/ - acht /ˈaχt/
+		ear /ˈiɚ/ - ear /ˈɪə̯r/
+		eel /ˈiɫ/ - iel /ˈiə̯l/
+		oak /ˈoʊ̯k/ - iik /ˈiːk/
+		over /ˈoʊ̯vɚ/ - oer /ˈuə̯r/
+		old /ˈoʊ̯ɫd/ - âld /ˈɔːt/
+		apple /ˈæpɫ̩/ - apel /ˈaːpəl/
+		all /ˈɑɫ/ - al /ˈal/
+		arm /ˈɑɹm/ - earm /ˈɪə̯rm/
+		earth /ˈɝθ/ - ierde /ˈiə̯də/
+		in /ˈɪn/ - yn /ˈin/
+		us /ˈʌs/ - ús /ˈyːs/
+		oven /ˈʌvn̩/ - un /ˈuːn/
+		other /ˈʌðɚ/ - oar /ˈoə̯r/
+		thousand /θˈaʊ̯zn̩d/ - tûzen /tˈuːzən/
+		thank /θˈeɪ̯ŋk/ - tankje /tˈankjə/
+		thief /θˈif/ - tsjeaf /ʦjˈɪə̯f/
+		thorn /θˈɔɹn/ - toarn /tˈoə̯n/
+		thick /θˈɪk/ - tsjok /ʦjˈɔk/
+		thing /θˈɪŋ/ - ding /dˈɪŋ/
+		thunder /θˈʌndɚ/ - tonger /tˈɔŋər/
+
+Final disqualified:
+		mere /mˈiɚ/ - see /sˈeː/
+		say /sˈeɪ̯/ - sizze /sˈɪzə/
+		sea /sˈi/ - mar /mˈar/
+		tree /tʰɹˈi/ - beam /bˈɪə̯m/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		one /wˈʌn/ - ien /ˈiə̯n/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		eat /ˈit/ - ite /ˈitə/
+		egg /ˈɛɡ/ - aai /ˈaːj/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 173
+	Disqualified: 191
+	Added: 0
+	Removed: 9
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		egg /ˈɛɡ/ - aai /ˈaːj/
+		knee /nˈi/ - knibbel /knˈɪbəl/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		eye /ˈaɪ̯/ - each /ˈɪə̯χ/
+		sea /sˈi/ - mar /mˈar/
+
+Iteration 2
+	Qualified: 173
+	Disqualified: 191
+	Added: 2
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+	Removed: 2
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+
+Iteration 3
+	Qualified: 176
+	Disqualified: 188
+	Added: 3
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+	Removed: 0
+
+Iteration 4
+	Qualified: 173
+	Disqualified: 191
+	Added: 0
+	Removed: 3
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Iteration 5
+	Qualified: 175
+	Disqualified: 189
+	Added: 2
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 0
+
+Iteration 6
+	Qualified: 175
+	Disqualified: 189
+	Added: 2
+		egg /ˈɛɡ/ - aai /ˈaːj/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+	Removed: 2
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Iteration 7
+	Qualified: 176
+	Disqualified: 188
+	Added: 2
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 1
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+
+Iteration 8
+	Qualified: 174
+	Disqualified: 190
+	Added: 0
+	Removed: 2
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Iteration 9
+	Qualified: 177
+	Disqualified: 187
+	Added: 3
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 0
+
+Iteration 10
+	Qualified: 174
+	Disqualified: 190
+	Added: 0
+	Removed: 3
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Final qualifying:
+		bloom /blˈum/ - blom /blˈoːm/
+		blood /blˈʌd/ - bloed /blˈuə̯t/
+		breast /bɹˈɛst/ - boarst /bˈoə̯st/
+		bridge /bɹˈɪʤ/ - brêge /brˈɛːɣə/
+		brother /bɹˈʌðɚ/ - broer /brˈuə̯r/
+		bite /bˈaɪ̯t/ - bite /bˈiːtə/
+		beam /bˈim/ - beam /bˈɪə̯m/
+		bone /bˈoʊ̯n/ - bien /bˈiə̯n/
+		boat /bˈoʊ̯t/ - boat /bˈoə̯t/
+		barrow /bˈæɹoʊ̯/ - berch /bˈɛrχ/
+		bath /bˈæθ/ - bad /bˈat/
+		bear /bˈɛɚ/ - bear /bˈɪə̯r/
+		better /bˈɛɾɚ/ - better /bˈɛtər/
+		bid /bˈɪd/ - biede /bˈiə̯də/
+		bid /bˈɪd/ - bidde /bˈɪdə/
+		dwarf /dwˈɔɹf/ - dwerch /dvˈɛrχ/
+		dry /dɹˈaɪ̯/ - drûch /drˈuːχ/
+		drive /dɹˈaɪ̯v/ - driuwe /drjˈuːvə/
+		dream /dɹˈim/ - dream /drˈɪə̯m/
+		drink /dɹˈɪŋk/ - drinke /drˈɪŋkə/
+		day /dˈeɪ̯/ - dei /dˈɛi̯/
+		deep /dˈip/ - djip /djˈɪp/
+		dear /dˈiɚ/ - djoer /djˈuə̯r/
+		deer /dˈiɚ/ - dier /dˈiə̯r/
+		daughter /dˈɑtɚ/ - dochter /dˈɔχtər/
+		fly /flˈaɪ̯/ - fleane /flˈɪə̯nə/
+		flesh /flˈɛʃ/ - flêsk /flˈɛːsk/
+		fresh /fɹˈɛʃ/ - farsk /fˈask/
+		five /fˈaɪ̯v/ - fiif /fˈiːf/
+		fowl /fˈaʊ̯ɫ/ - fûgel /fˈuɣəl/
+		feel /fˈiɫ/ - fiele /fˈiə̯lə/
+		folk /fˈoʊ̯k/ - folk /fˈɔlk/
+		fox /fˈɑks/ - foks /fˈɔks/
+		follow /fˈɑloʊ̯/ - folgje /fˈɔlɣjə/
+		father /fˈɑðɚ/ - fader /fˈaːdər/
+		four /fˈɔɹ/ - fjouwer /fjˈɔu̯ər/
+		feather /fˈɛðɚ/ - fear /fˈɪə̯r/
+		finger /fˈɪŋɡɚ/ - finger /fˈɪŋər/
+		fish /fˈɪʃ/ - fisk /fˈɪsk/
+		foot /fˈʊt/ - foet /fˈuə̯t/
+		full /fˈʊɫ/ - fol /fˈɔl/
+		hide /hˈaɪ̯d/ - hûd /hˈuːt/
+		house /hˈaʊ̯s/ - hûs /hˈuːs/
+		here /hˈiɚ/ - hjir /hjˈɪr/
+		hear /hˈiɚ/ - hearre /hˈɪə̯rə/
+		holy /hˈoʊ̯li/ - hillich /hˈɪləχ/
+		home /hˈoʊ̯m/ - hiem /hˈiə̯m/
+		hand /hˈænd/ - hân /hˈɔːn/
+		have /hˈæv/ - hawwe /hˈavə/
+		hot /hˈɑt/ - hyt /hˈit/
+		horse /hˈɔɹs/ - hoars /hˈoə̯s/
+		head /hˈɛd/ - haad /hˈaːt/
+		hare /hˈɛɚ/ - hazze /hˈazə/
+		hair /hˈɛɚ/ - hier /hˈiə̯r/
+		hundred /hˈʌndɹəd/ - hûndert /hˈundət/
+		honey /hˈʌni/ - hunich /hˈynəχ/
+		honey /hˈʌni/ - huning /hˈynɪŋ/
+		hunger /hˈʌŋɡɚ/ - honger /hˈɔŋər/
+		yellow /jˈɛloʊ̯/ - giel /ɡˈiə̯l/
+		young /jˈʌŋ/ - jong /jˈɔŋ/
+		cow /kʰˈaʊ̯/ - ko /kˈoː/
+		cold /kʰˈoʊ̯ɫd/ - kâld /kˈɔːt/
+		calf /kʰˈæf/ - keal /kˈɪə̯l/
+		king /kʰˈɪŋ/ - kening /kˈeːnɪŋ/
+		louse /lˈaʊ̯s/ - lus /lˈuːs/
+		leaf /lˈif/ - leaf /lˈɪə̯f/
+		lamb /lˈæm/ - laam /lˈaːm/
+		land /lˈænd/ - lân /lˈɔːn/
+		long /lˈɑŋ/ - lang /lˈaŋ/
+		liver /lˈɪvɚ/ - lever /lˈeːvər/
+		mice /mˈaɪ̯s/ - mûsen /mˈuːsən/
+		might /mˈaɪ̯t/ - macht /mˈaχt/
+		mouse /mˈaʊ̯s/ - mûs /mˈuːs/
+		mouth /mˈaʊ̯θ/ - mûn /mˈuːn/
+		me /mˈi/ - my /mˈi/
+		man /mˈæn/ - man /mˈan/
+		midge /mˈɪʤ/ - mich /mˈɪχ/
+		mother /mˈʌðɚ/ - moer /mˈuə̯r/
+		night /nˈaɪ̯t/ - nacht /nˈaχt/
+		naked /nˈeɪ̯kɪd/ - neaken /nˈɪə̯kən/
+		nail /nˈeɪ̯ɫ/ - neil /nˈɛi̯l/
+		needle /nˈidɫ̩/ - nulle /nˈølə/
+		nose /nˈoʊ̯z/ - noas /nˈoə̯s/
+		new /nˈu/ - nij /nˈɛj/
+		north /nˈɔɹθ/ - noard /nˈoə̯t/
+		plight /pʰlˈaɪ̯t/ - plicht /plˈɪχt/
+		slay /slˈeɪ̯/ - slaan /slˈaːn/
+		sleep /slˈip/ - sliepe /slˈiə̯pə/
+		snow /snˈoʊ̯/ - snie /snˈiə̯/
+		speech /spˈiʧ/ - sprake /sprˈaːkə/
+		stone /stˈoʊ̯n/ - stien /stˈiə̯n/
+		stool /stˈuɫ/ - stoel /stˈuə̯l/
+		star /stˈɑɹ/ - stjer /stjˈɛr/
+		storm /stˈɔɹm/ - stoarm /stˈoə̯rm/
+		swine /swˈaɪ̯n/ - swyn /svˈin/
+		swart /swˈɔɹt/ - swart /svˈat/
+		side /sˈaɪ̯d/ - side /sˈiːdə/
+		sea /sˈi/ - see /sˈeː/
+		see /sˈi/ - sjen /ɕˈeːn/
+		soul /sˈoʊ̯ɫ/ - siel /sˈiə̯l/
+		sand /sˈænd/ - sân /sˈɔːn/
+		salt /sˈɑɫt/ - sâlt /sˈɔːt/
+		sword /sˈɔɹd/ - swurd /svˈøt/
+		seven /sˈɛvən/ - sân /sˈɔːn/
+		six /sˈɪks/ - seis /sˈɛi̯s/
+		sister /sˈɪstɚ/ - suster /sˈøstər/
+		sit /sˈɪt/ - sitte /sˈɪtə/
+		son /sˈʌn/ - soan /sˈoə̯n/
+		twelve /tʰwˈɛɫv/ - tolve /tˈɔlvə/
+		tree /tʰɹˈi/ - beam /bˈɪə̯m/
+		tide /tʰˈaɪ̯d/ - tiid /tˈiːt/
+		tooth /tʰˈuθ/ - tine /tˈiːnə/
+		ten /tʰˈɛn/ - tsien /ʦˈiə̯n/
+		tongue /tʰˈʌŋ/ - tûnge /tˈuŋə/
+		wife /wˈaɪ̯f/ - wiif /ʋˈiːf/
+		white /wˈaɪ̯t/ - wyt /vˈit/
+		way /wˈeɪ̯/ - wei /ʋˈɛi̯/
+		whale /wˈeɪ̯ɫ/ - wal /ʋˈal/
+		we /wˈi/ - wy /vˈi/
+		wheel /wˈiɫ/ - fiel /fˈiə̯l/
+		water /wˈɑɾɚ/ - wetter /ʋˈɛtər/
+		warm /wˈɔɹm/ - waarm /ʋˈaːrm/
+		weather /wˈɛðɚ/ - waar /ʋˈaːr/
+		worm /wˈɝm/ - wjirm /ʋjˈɪrm/
+		wind /wˈɪnd/ - wyn /ʋˈin/
+		wit /wˈɪt/ - witte /ʋˈɪtə/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		wool /wˈʊɫ/ - wolle /ʋˈɔlə/
+		wolf /wˈʊɫf/ - wolf /ʋˈɔlf/
+		one /wˈʌn/ - ien /ˈiə̯n/
+		what /wˈʌt/ - wat /vˈat/
+		eleven /əlˈɛvən/ - alve /ˈalvə/
+		green /ɡɹˈin/ - grien /ɡrˈiə̯n/
+		grass /ɡɹˈæs/ - gers /ɡˈɛːs/
+		goat /ɡˈoʊ̯t/ - geit /ɡˈɛi̯t/
+		gold /ɡˈoʊ̯ɫd/ - goud /ɡˈɔu̯t/
+		goose /ɡˈus/ - goes /ɡˈuə̯s/
+		god /ɡˈɑd/ - god /ɡˈɔt/
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		light /ɫˈaɪ̯t/ - licht /lˈɪχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		rain /ɹˈeɪ̯n/ - rein /rˈɛi̯n/
+		reek /ɹˈik/ - reak /rˈɪə̯k/
+		red /ɹˈɛd/ - read /rˈɪə̯t/
+		ring /ɹˈɪŋ/ - ring /rˈɪŋ/
+		rich /ɹˈɪʧ/ - ryk /rˈik/
+		sheep /ʃˈip/ - skiep /skˈiə̯p/
+		sharp /ʃˈɑɹp/ - skerp /skˈɛrp/
+		shit /ʃˈɪt/ - skyt /skˈit/
+		church /ʧˈɝʧ/ - tsjerke /ʦjˈɛrkə/
+		ice /ˈaɪ̯s/ - iis /ˈiːs/
+		owl /ˈaʊ̯l̩/ - ûle /ˈuːlə/
+		out /ˈaʊ̯t/ - út /ˈyːt/
+		ape /ˈeɪ̯p/ - aap /ˈaːp/
+		eight /ˈeɪ̯t/ - acht /ˈaχt/
+		eat /ˈit/ - ite /ˈitə/
+		ear /ˈiɚ/ - ear /ˈɪə̯r/
+		eel /ˈiɫ/ - iel /ˈiə̯l/
+		oak /ˈoʊ̯k/ - iik /ˈiːk/
+		old /ˈoʊ̯ɫd/ - âld /ˈɔːt/
+		apple /ˈæpɫ̩/ - apel /ˈaːpəl/
+		all /ˈɑɫ/ - al /ˈal/
+		arm /ˈɑɹm/ - earm /ˈɪə̯rm/
+		egg /ˈɛɡ/ - aai /ˈaːj/
+		in /ˈɪn/ - yn /ˈin/
+		us /ˈʌs/ - ús /ˈyːs/
+		oven /ˈʌvn̩/ - un /ˈuːn/
+		other /ˈʌðɚ/ - oar /ˈoə̯r/
+		three /θɹˈi/ - trije /trˈɛjə/
+		thief /θˈif/ - tsjeaf /ʦjˈɪə̯f/
+		thorn /θˈɔɹn/ - toarn /tˈoə̯n/
+		thin /θˈɪn/ - tin /tˈɪn/
+		thing /θˈɪŋ/ - ding /dˈɪŋ/
+		thunder /θˈʌndɚ/ - tonger /tˈɔŋər/
+
+Final disqualified:
+		knee /nˈi/ - knibbel /knˈɪbəl/
+		sea /sˈi/ - mar /mˈar/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		eye /ˈaɪ̯/ - each /ˈɪə̯χ/
+		ash /ˈæʃ/ - jiske /jˈɪskə/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 175
+	Disqualified: 189
+	Added: 0
+	Removed: 7
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		say /sˈeɪ̯/ - sizze /sˈɪzə/
+		mere /mˈiɚ/ - see /sˈeː/
+		knee /nˈi/ - knibbel /knˈɪbəl/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		sea /sˈi/ - mar /mˈar/
+
+Iteration 2
+	Qualified: 173
+	Disqualified: 191
+	Added: 1
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+	Removed: 3
+		nine /nˈaɪ̯n/ - njoggen /njˈɔɣən/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+
+Iteration 3
+	Qualified: 175
+	Disqualified: 189
+	Added: 3
+		nine /nˈaɪ̯n/ - njoggen /njˈɔɣən/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+	Removed: 1
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - blêd /blˈɛːt/
+		bloom /blˈum/ - blom /blˈoːm/
+		blood /blˈʌd/ - bloed /blˈuə̯t/
+		bread /bɹˈɛd/ - brea /brˈɪə̯/
+		breast /bɹˈɛst/ - boarst /bˈoə̯st/
+		bridge /bɹˈɪʤ/ - brêge /brˈɛːɣə/
+		brother /bɹˈʌðɚ/ - broer /brˈuə̯r/
+		bite /bˈaɪ̯t/ - bite /bˈiːtə/
+		beam /bˈim/ - beam /bˈɪə̯m/
+		bone /bˈoʊ̯n/ - bien /bˈiə̯n/
+		boat /bˈoʊ̯t/ - boat /bˈoə̯t/
+		bath /bˈæθ/ - bad /bˈat/
+		bear /bˈɛɚ/ - bear /bˈɪə̯r/
+		bid /bˈɪd/ - bidde /bˈɪdə/
+		book /bˈʊk/ - boek /bˈuə̯k/
+		dwarf /dwˈɔɹf/ - dwerch /dvˈɛrχ/
+		dry /dɹˈaɪ̯/ - drûch /drˈuːχ/
+		dream /dɹˈim/ - dream /drˈɪə̯m/
+		drink /dɹˈɪŋk/ - drinke /drˈɪŋkə/
+		dear /dˈiɚ/ - djoer /djˈuə̯r/
+		deer /dˈiɚ/ - dier /dˈiə̯r/
+		daughter /dˈɑtɚ/ - dochter /dˈɔχtər/
+		deadly /dˈɛdli/ - deadlik /dˈɪə̯dlɪk/
+		death /dˈɛθ/ - dea /dˈɪə̯/
+		fly /flˈaɪ̯/ - fleane /flˈɪə̯nə/
+		flesh /flˈɛʃ/ - flêsk /flˈɛːsk/
+		free /fɹˈi/ - frij /frˈɛj/
+		friend /fɹˈɛnd/ - freon /frˈøə̯n/
+		five /fˈaɪ̯v/ - fiif /fˈiːf/
+		fowl /fˈaʊ̯ɫ/ - fûgel /fˈuɣəl/
+		feet /fˈit/ - fuotten /fˈɵtən/
+		folk /fˈoʊ̯k/ - folk /fˈɔlk/
+		fast /fˈæst/ - fêst /fˈɛːst/
+		fox /fˈɑks/ - foks /fˈɔks/
+		follow /fˈɑloʊ̯/ - folgje /fˈɔlɣjə/
+		father /fˈɑðɚ/ - fader /fˈaːdər/
+		four /fˈɔɹ/ - fjouwer /fjˈɔu̯ər/
+		fish /fˈɪʃ/ - fisk /fˈɪsk/
+		foot /fˈʊt/ - foet /fˈuə̯t/
+		full /fˈʊɫ/ - fol /fˈɔl/
+		high /hˈaɪ̯/ - heech /hˈeːχ/
+		hide /hˈaɪ̯d/ - hûd /hˈuːt/
+		hound /hˈaʊ̯nd/ - hûn /hˈuːn/
+		hear /hˈiɚ/ - hearre /hˈɪə̯rə/
+		holy /hˈoʊ̯li/ - hillich /hˈɪləχ/
+		hand /hˈænd/ - hân /hˈɔːn/
+		have /hˈæv/ - hawwe /hˈavə/
+		hot /hˈɑt/ - hyt /hˈit/
+		horn /hˈɔɹn/ - hoarn /hˈoə̯n/
+		horse /hˈɔɹs/ - hoars /hˈoə̯s/
+		head /hˈɛd/ - haad /hˈaːt/
+		hen /hˈɛn/ - hin /hˈɪn/
+		hair /hˈɛɚ/ - hier /hˈiə̯r/
+		hundred /hˈʌndɹəd/ - hûndert /hˈundət/
+		honey /hˈʌni/ - hunich /hˈynəχ/
+		honey /hˈʌni/ - huning /hˈynɪŋ/
+		hunger /hˈʌŋɡɚ/ - honger /hˈɔŋər/
+		year /jˈiɚ/ - jier /jˈiə̯r/
+		yellow /jˈɛloʊ̯/ - giel /ɡˈiə̯l/
+		young /jˈʌŋ/ - jong /jˈɔŋ/
+		cow /kʰˈaʊ̯/ - ko /kˈoː/
+		cold /kʰˈoʊ̯ɫd/ - kâld /kˈɔːt/
+		calf /kʰˈæf/ - keal /kˈɪə̯l/
+		king /kʰˈɪŋ/ - kening /kˈeːnɪŋ/
+		louse /lˈaʊ̯s/ - lus /lˈuːs/
+		leaf /lˈif/ - leaf /lˈɪə̯f/
+		leap /lˈip/ - ljeppe /ljˈɛpə/
+		lamb /lˈæm/ - laam /lˈaːm/
+		land /lˈænd/ - lân /lˈɔːn/
+		long /lˈɑŋ/ - lang /lˈaŋ/
+		liver /lˈɪvɚ/ - lever /lˈeːvər/
+		mice /mˈaɪ̯s/ - mûsen /mˈuːsən/
+		might /mˈaɪ̯t/ - macht /mˈaχt/
+		mouse /mˈaʊ̯s/ - mûs /mˈuːs/
+		mouth /mˈaʊ̯θ/ - mûle /mˈuːlə/
+		me /mˈi/ - my /mˈi/
+		mere /mˈiɚ/ - mar /mˈar/
+		moon /mˈun/ - moanne /mˈoə̯nə/
+		man /mˈæn/ - man /mˈan/
+		mother /mˈʌðɚ/ - moer /mˈuə̯r/
+		nine /nˈaɪ̯n/ - njoggen /njˈɔɣən/
+		night /nˈaɪ̯t/ - nacht /nˈaχt/
+		name /nˈeɪ̯m/ - namme /nˈamə/
+		nail /nˈeɪ̯ɫ/ - neil /nˈɛi̯l/
+		nose /nˈoʊ̯z/ - noas /nˈoə̯s/
+		north /nˈɔɹθ/ - noard /nˈoə̯t/
+		plight /pʰlˈaɪ̯t/ - plicht /plˈɪχt/
+		slay /slˈeɪ̯/ - slaan /slˈaːn/
+		sleep /slˈip/ - sliepe /slˈiə̯pə/
+		snow /snˈoʊ̯/ - snie /snˈiə̯/
+		stone /stˈoʊ̯n/ - stien /stˈiə̯n/
+		stool /stˈuɫ/ - stoel /stˈuə̯l/
+		star /stˈɑɹ/ - stjer /stjˈɛr/
+		storm /stˈɔɹm/ - stoarm /stˈoə̯rm/
+		swine /swˈaɪ̯n/ - swyn /svˈin/
+		sweet /swˈit/ - swiet /svˈiə̯t/
+		swim /swˈɪm/ - swimme /svˈɪmə/
+		side /sˈaɪ̯d/ - side /sˈiːdə/
+		see /sˈi/ - sjen /ɕˈeːn/
+		soul /sˈoʊ̯ɫ/ - siel /sˈiə̯l/
+		sand /sˈænd/ - sân /sˈɔːn/
+		seven /sˈɛvən/ - sân /sˈɔːn/
+		six /sˈɪks/ - seis /sˈɛi̯s/
+		sister /sˈɪstɚ/ - suster /sˈøstər/
+		sit /sˈɪt/ - sitte /sˈɪtə/
+		sing /sˈɪŋ/ - sjonge /ɕˈɔŋə/
+		son /sˈʌn/ - soan /sˈoə̯n/
+		twelve /tʰwˈɛɫv/ - tolve /tˈɔlvə/
+		tide /tʰˈaɪ̯d/ - tiid /tˈiːt/
+		two /tʰˈu/ - twa /tvˈaː/
+		tooth /tʰˈuθ/ - tine /tˈiːnə/
+		ten /tʰˈɛn/ - tsien /ʦˈiə̯n/
+		tongue /tʰˈʌŋ/ - tûnge /tˈuŋə/
+		wife /wˈaɪ̯f/ - wiif /ʋˈiːf/
+		white /wˈaɪ̯t/ - wyt /vˈit/
+		whale /wˈeɪ̯ɫ/ - wal /ʋˈal/
+		we /wˈi/ - wy /vˈi/
+		wheel /wˈiɫ/ - fiel /fˈiə̯l/
+		water /wˈɑɾɚ/ - wetter /ʋˈɛtər/
+		weapon /wˈɛpən/ - wapen /ʋˈaːpən/
+		weather /wˈɛðɚ/ - waar /ʋˈaːr/
+		worm /wˈɝm/ - wjirm /ʋjˈɪrm/
+		wind /wˈɪnd/ - wyn /ʋˈin/
+		wit /wˈɪt/ - witte /ʋˈɪtə/
+		wish /wˈɪʃ/ - winskje /ʋˈɪnskjə/
+		wool /wˈʊɫ/ - wolle /ʋˈɔlə/
+		wolf /wˈʊɫf/ - wolf /ʋˈɔlf/
+		one /wˈʌn/ - ien /ˈiə̯n/
+		what /wˈʌt/ - wat /vˈat/
+		thou /ðˈaʊ̯/ - do /dˈoː/
+		great /ɡɹˈeɪ̯t/ - grut /ɡrˈuːt/
+		green /ɡɹˈin/ - grien /ɡrˈiə̯n/
+		grass /ɡɹˈæs/ - gers /ɡˈɛːs/
+		ghost /ɡˈoʊ̯st/ - geast /ɡˈɪə̯st/
+		gold /ɡˈoʊ̯ɫd/ - goud /ɡˈɔu̯t/
+		goose /ɡˈus/ - goes /ɡˈuə̯s/
+		god /ɡˈɑd/ - god /ɡˈɔt/
+		light /ɫˈaɪ̯t/ - ljocht /ljˈɔχt/
+		light /ɫˈaɪ̯t/ - licht /lˈɪχt/
+		right /ɹˈaɪ̯t/ - rjocht /rjˈɔχt/
+		rain /ɹˈeɪ̯n/ - rein /rˈɛi̯n/
+		red /ɹˈɛd/ - read /rˈɪə̯t/
+		ring /ɹˈɪŋ/ - ring /rˈɪŋ/
+		rich /ɹˈɪʧ/ - ryk /rˈik/
+		sheen /ʃˈin/ - skjin /skjˈɪn/
+		sharp /ʃˈɑɹp/ - skerp /skˈɛrp/
+		ship /ʃˈɪp/ - skip /skˈɪp/
+		shit /ʃˈɪt/ - skyt /skˈit/
+		cheese /ʧˈiz/ - tsiis /ʦˈiːs/
+		church /ʧˈɝʧ/ - tsjerke /ʦjˈɛrkə/
+		owl /ˈaʊ̯l̩/ - ûle /ˈuːlə/
+		out /ˈaʊ̯t/ - út /ˈyːt/
+		ape /ˈeɪ̯p/ - aap /ˈaːp/
+		eight /ˈeɪ̯t/ - acht /ˈaχt/
+		eat /ˈit/ - ite /ˈitə/
+		ear /ˈiɚ/ - ear /ˈɪə̯r/
+		eel /ˈiɫ/ - iel /ˈiə̯l/
+		over /ˈoʊ̯vɚ/ - oer /ˈuə̯r/
+		old /ˈoʊ̯ɫd/ - âld /ˈɔːt/
+		apple /ˈæpɫ̩/ - apel /ˈaːpəl/
+		all /ˈɑɫ/ - al /ˈal/
+		arm /ˈɑɹm/ - earm /ˈɪə̯rm/
+		in /ˈɪn/ - yn /ˈin/
+		us /ˈʌs/ - ús /ˈyːs/
+		oven /ˈʌvn̩/ - un /ˈuːn/
+		other /ˈʌðɚ/ - oar /ˈoə̯r/
+		three /θɹˈi/ - trije /trˈɛjə/
+		thousand /θˈaʊ̯zn̩d/ - tûzen /tˈuːzən/
+		thank /θˈeɪ̯ŋk/ - tankje /tˈankjə/
+		thief /θˈif/ - tsjeaf /ʦjˈɪə̯f/
+		thorn /θˈɔɹn/ - toarn /tˈoə̯n/
+		thick /θˈɪk/ - tsjok /ʦjˈɔk/
+		thin /θˈɪn/ - tin /tˈɪn/
+		thing /θˈɪŋ/ - ding /dˈɪŋ/
+		thunder /θˈʌndɚ/ - tonger /tˈɔŋər/
+
+Final disqualified:
+		mere /mˈiɚ/ - see /sˈeː/
+		knee /nˈi/ - knibbel /knˈɪbəl/
+		say /sˈeɪ̯/ - sizze /sˈɪzə/
+		sea /sˈi/ - mar /mˈar/
+		word /wˈɝd/ - oer /ˈuə̯r/
+		I /ˈaɪ̯/ - ik /ˈɪk/
+		edge /ˈɛʤ/ - igge /ˈɪɣə/
+
+
+-------------------
+

@@ -1,0 +1,955 @@
+Same meaning pairs: 195
+****SAMPLE 1****
+Iteration 1
+	Qualified: 149
+	Disqualified: 163
+	Added: 0
+	Removed: 7
+		ild /ˈɪlː/ - Füer /fˈyːɐ/
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+		egg /ˈɛɡː/ - Ei /ˈɛɪ̯/
+		kvinne /kʰʋˈɪnːə/ - Fru /frˈuː/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		tre /tʰɾˈeː/ - Bohm /bˈeo̯m/
+
+Iteration 2
+	Qualified: 149
+	Disqualified: 163
+	Added: 1
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+	Removed: 1
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+
+Iteration 3
+	Qualified: 149
+	Disqualified: 163
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bjørn /bjˈøːɳ/ - Bär /bˈɛːɐ/
+		blod /blˈuː/ - Blaut /blˈaʊ̯d/
+		blom /blˈuːm/ - Blaume /blˈaʊ̯mə/
+		blome /blˈuːmə/ - Blaume /blˈaʊ̯mə/
+		bror /bɾˈuːɾ/ - Brauer /brˈaʊ̯ɐ/
+		brød /bɾˈøː/ - Brot /brˈeo̯t/
+		bryst /bɾˈʏst/ - Bost /bˈɔst/
+		brygge /bɾˈʏɡːə/ - Brügge /brˈʏɣə/
+		bite /bˈiːtə/ - bieten /bˈiːtn̩/
+		båt /bˈoːt/ - Boot /bˈeo̯t/
+		bok /bˈuːk/ - Bauk /bˈaʊ̯k/
+		bein /bˈæɪ̯n/ - Bein /bˈɛɪ̯n/
+		drøm /dɾˈœm/ - Drom /drˈeo̯m/
+		drømme /dɾˈœmːə/ - drömen /drˈøːmn̩/
+		drikke /dɾˈɪkːə/ - drinken /drˈɪŋkn̩/
+		dyr /dˈyːɾ/ - düer /dˈyːɐ/
+		dyr /dˈyːɾ/ - Deirt /dˈɛɪ̯ɐt/
+		død /dˈøː/ - Dod /dˈeo̯d/
+		du /dˈʉː/ - du /dˈuː/
+		fjær /fjˈæːɾ/ - Feer /fˈeːɐ/
+		frende /fɾˈɛndə/ - Fründ /frˈʏnd/
+		frisk /fɾˈɪsk/ - frisch /frˈɪʃ/
+		får /fˈoːɾ/ - Schap /ʃˈɒːp/
+		fot /fˈuːt/ - Faut /fˈaʊ̯t/
+		fyr /fˈyːɾ/ - Füer /fˈyːɐ/
+		følge /fˈœlɡə/ - folgen /fˈɔlɡn̩/
+		fisk /fˈɪsk/ - Fisch /fˈɪʃ/
+		finger /fˈɪŋːəɾ/ - Finger /fˈɪŋɐ/
+		full /fˈʉlː/ - vull /fˈʊl/
+		fugl /fˈʉːl/ - Vugel /fˈuːɣl̩/
+		het /hˈeːt/ - heit /hˈɛɪ̯t/
+		hår /hˈoːɾ/ - Haar /hˈɒːɐ/
+		hode /hˈuːdə/ - Kopp /kˈɔp/
+		her /hˈæːɾ/ - hier /hˈiːɐ/
+		høy /hˈøːj/ - hoch /hˈeo̯x/
+		høne /hˈøːnə/ - Henn /hˈɛn/
+		høre /hˈøːɾə/ - heuren /hˈɔʏ̯ɐn/
+		hand /hˈɑnː/ - Hand /hˈand/
+		ha /hˈɑː/ - hebben /hˈɛbn̩/
+		hare /hˈɑːɾə/ - Hase /hˈɒːzə/
+		hellig /hˈɛlːi/ - hillig /hˈɪlɪç/
+		hund /hˈʉnː/ - Hund /hˈʊnd/
+		hunger /hˈʉŋːəɾ/ - Hunger /hˈʊŋɐ/
+		hud /hˈʉːd/ - Hut /hˈuːt/
+		hus /hˈʉːs/ - Hus /hˈuːs/
+		gi /jˈiː/ - geben /jˈeːm/
+		jord /jˈuːɾ/ - Eere /ˈeːrə/
+		jeg /jˈæj/ - eck /ˈɛk/
+		gjest /jˈɛst/ - Gast /ɣˈas/
+		hjerte /jˈɛʈːə/ - Harte /hˈaɐtə/
+		kne /kʰnˈeː/ - Knei /knˈɛɪ̯/
+		kone /kʰˈuːne/ - Fru /frˈuː/
+		kalv /kʰˈɑlʋ/ - Kalf /kˈalf/
+		kald /kʰˈɑlː/ - kold /kˈɔld/
+		kunne /kʰˈʉnːə/ - können /kˈœn̩/
+		ku /kʰˈʉː/ - Kauh /kˈaʊ̯/
+		lys /lˈyːs/ - Licht /lˈɪç/
+		løpe /lˈøːpə/ - lopen /lˈoːbm̩/
+		land /lˈɑnː/ - Land /lˈand/
+		lang /lˈɑŋː/ - lang /lˈaŋ/
+		lett /lˈɛtː/ - lichte /lˈɪçtə/
+		mor /mˈuːɾ/ - Mudder /mˈʊdɐ/
+		meg /mˈæɪ̯/ - mi /mˈiː/
+		mann /mˈɑnː/ - Mann /mˈan/
+		melk /mˈɛlk/ - Melk /mˈɛlk/
+		menneske /mˈɛnːəskə/ - Minsche /mˈɪnʃə/
+		munn /mˈʉnː/ - Muul /mˈuːl/
+		munn /mˈʉnː/ - Mund /mˈʊnd/
+		mus /mˈʉːs/ - Mus /mˈuːs/
+		nese /nˈeːsə/ - Näse /nˈɛːzə/
+		ni /nˈiː/ - negen /nˈeːɣn̩/
+		ny /nˈyː/ - nie /nˈiː/
+		negl /nˈæɪ̯l/ - Nägel /nˈɛːjl̩/
+		natt /nˈɑtː/ - Nacht /nˈax/
+		naken /nˈɑːkən/ - naket /nˈɒːkət/
+		skarp /skˈɑɾp/ - scharpe /ʃˈaɐpə/
+		slange /slˈɑŋːə/ - Slange /slˈaŋə/
+		snø /snˈøː/ - Snei /snˈɛɪ̯/
+		stjerne /stjˈæːɳə/ - Steern /stˈeːɐn/
+		stol /stˈuːl/ - Staul /stˈaʊ̯l/
+		svin /sʋˈiːn/ - Swien /swˈiːn/
+		svømme /sʋˈœmːə/ - swimmen /swˈɪm/
+		svart /sʋˈɑʈ/ - swart /swˈaɐt/
+		se /sˈeː/ - seihn /zˈɛɪ̯n/
+		si /sˈiː/ - seggen /zˈɛjn̩/
+		side /sˈiːə/ - Siete /zˈiːtə/
+		sove /sˈoːʋə/ - slapen /slˈɒːbm̩/
+		søt /sˈøːt/ - seute /zˈɔʏ̯tə/
+		sønn /sˈœn/ - Sohn /zˈoːn/
+		søster /sˈœstəɾ/ - Swester /swˈɛstɐ/
+		sand /sˈɑnː/ - Sand /zˈand/
+		sitte /sˈɪtːə/ - sitten /zˈɪtn̩/
+		synge /sˈʏŋːə/ - singen /zˈɪŋ/
+		tid /tʰˈiː/ - Tied /tˈiːd/
+		torn /tʰˈuːɳ/ - Doorn /dˈoːɐn/
+		tyv /tʰˈyːʋ/ - Deif /dˈɛɪ̯f/
+		tørr /tʰˈœɾ/ - dröge /drˈøːɣə/
+		takke /tʰˈɑkːə/ - danken /dˈaŋkn̩/
+		tann /tʰˈɑnː/ - Tähne /tˈɛːnə/
+		tolv /tʰˈɔlː/ - twölf /tvˈœlf/
+		ting /tʰˈɪŋː/ - Ding /dˈɪŋ/
+		tunge /tʰˈʊŋːə/ - Tunge /tˈʊŋə/
+		tynn /tʰˈʏnː/ - dünne /dˈʏnə/
+		tˈysk /tʰˈʏsk/ - dütsch /dˈʏtʃ/
+		kirke /çˈɪɾkə/ - Kerke /kˈɛːɐkə/
+		tjukk /çˈʉkː/ - dick /dˈɪk/
+		kylling /çˈʏlːɪŋ/ - Küken /kˈyːkn̩/
+		gress /ɡɾˈɛsː/ - Gras /ɣrˈaːs/
+		gås /ɡˈoːs/ - Gaus /ɣˈaʊ̯s/
+		gull /ɡˈʉlː/ - Gold /ɣˈɔld/
+		gud /ɡˈʉːd/ - Gott /ɣˈɔt/
+		gul /ɡˈʉːl/ - gäl /jˈɛl/
+		rik /ɾˈiːk/ - riek /rˈiːk/
+		regn /ɾˈæɪ̯n/ - Regen /rˈɛːn/
+		rød /ɾˈøː/ - rot /rˈeo̯t/
+		røyk /ɾˈœʏ̯k/ - Rook /rˈeo̯k/
+		rett /ɾˈɛtː/ - Recht /rˈɛçt/
+		ring /ɾˈɪŋː/ - Ring /rˈɪŋ/
+		skip /ʃˈiːp/ - Schipp /ʃˈɪp/
+		vi /ʋˈiː/ - wi /vˈiː/
+		hvit /ʋˈiːt/ - witt /vˈɪt/
+		vite /ʋˈiːtə/ - wetten /vˈɛtn̩/
+		vei /ʋˈæɪ̯/ - Weg /vˈɛç/
+		vær /ʋˈæːɾ/ - Wäer /vˈɛːɐ/
+		hva /ʋˈɑ/ - wat /vˈat/
+		vann /ʋˈɑnː/ - Water /vˈɒːtɐ/
+		varm /ʋˈɑɾm/ - warm /vˈaːɐm/
+		vind /ʋˈɪnː/ - Wind /vˈɪnd/
+		en /ˈeːn/ - eine /ˈɛɪ̯nə/
+		ete /ˈeːtə/ - äten /ˈɛːtn̩/
+		i /ˈiː/ - in /ˈɪn/
+		år /ˈoːɾ/ - Jahr /jˈaːɐ/
+		over /ˈoːʋəɾ/ - ower /ˈoːvɐ/
+		eik /ˈæɪ̯k/ - Eike /ˈɛɪ̯kə/
+		øre /ˈøːɾə/ - Ohr /ˈeo̯ɐ/
+		ønske /ˈœnskə/ - wünschen /vˈʏnʃn̩/
+		annen /ˈɑnːən/ - anner /ˈanɐ/
+		aske /ˈɑskə/ - Asche /ˈaʃə/
+		arm /ˈɑɾm/ - Arm /ˈaɐm/
+		ape /ˈɑːpə/ - Ape /ˈɒːpə/
+		oss /ˈɔsː/ - üsch /ˈʏʃ/
+		eple /ˈɛplə/ - Appel /ˈapl̩/
+		egg /ˈɛɡː/ - Ecke /ˈɛkə/
+		ulv /ˈʉlʋ/ - Wulf /vˈʊlf/
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+		ut /ˈʉːt/ - ut /ˈuːt/
+		ung /ˈʊŋː/ - jung /jˈʊŋ/
+		ugle /ˈʊɡlə/ - Ule /ˈuːlə/
+		orm /ˈʊɾm/ - Worm /vˈoːɐm/
+
+Final disqualified:
+		kvinne /kʰʋˈɪnːə/ - Fru /frˈuː/
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		tre /tʰɾˈeː/ - Bohm /bˈeo̯m/
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		egg /ˈɛɡː/ - Ei /ˈɛɪ̯/
+		ild /ˈɪlː/ - Füer /fˈyːɐ/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 152
+	Disqualified: 160
+	Added: 0
+	Removed: 4
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		egg /ˈɛɡː/ - Ei /ˈɛɪ̯/
+		ild /ˈɪlː/ - Füer /fˈyːɐ/
+
+Iteration 2
+	Qualified: 151
+	Disqualified: 161
+	Added: 0
+	Removed: 1
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+
+Iteration 3
+	Qualified: 151
+	Disqualified: 161
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bjørn /bjˈøːɳ/ - Bär /bˈɛːɐ/
+		blod /blˈuː/ - Blaut /blˈaʊ̯d/
+		blom /blˈuːm/ - Blaume /blˈaʊ̯mə/
+		blad /blˈɑːd/ - Bläet /blˈɛə̯t/
+		bror /bɾˈuːɾ/ - Brauer /brˈaʊ̯ɐ/
+		brød /bɾˈøː/ - Brot /brˈeo̯t/
+		bryst /bɾˈʏst/ - Bost /bˈɔst/
+		brygge /bɾˈʏɡːə/ - Brügge /brˈʏɣə/
+		be /bˈeː/ - bidden /bˈɪdn̩/
+		bedre /bˈeːdɾə/ - beter /bˈeːtɐ/
+		bite /bˈiːtə/ - bieten /bˈiːtn̩/
+		båt /bˈoːt/ - Boot /bˈeo̯t/
+		bok /bˈuːk/ - Bauk /bˈaʊ̯k/
+		by /bˈyː/ - beien /bˈɛɪ̯n̩/
+		bein /bˈæɪ̯n/ - Bein /bˈɛɪ̯n/
+		berg /bˈæɾɡ/ - Barg /bˈaɐx/
+		drømme /dɾˈœmːə/ - drömen /drˈøːmn̩/
+		drikke /dɾˈɪkːə/ - drinken /drˈɪŋkn̩/
+		dyp /dˈyːp/ - deip /dˈɛɪ̯p/
+		dyr /dˈyːɾ/ - Deirt /dˈɛɪ̯ɐt/
+		død /dˈøː/ - Dod /dˈeo̯d/
+		dag /dˈɑːɡ/ - Dag /dˈax/
+		du /dˈʉː/ - du /dˈuː/
+		flyge /flˈyːɡə/ - fleigen /flˈɛɪ̯ŋ/
+		fryse /fɾˈyːsə/ - freisen /frˈɛɪ̯zn̩/
+		frende /fɾˈɛndə/ - Fründ /frˈʏnd/
+		får /fˈoːɾ/ - Schap /ʃˈɒːp/
+		fot /fˈuːt/ - Faut /fˈaʊ̯t/
+		fyr /fˈyːɾ/ - Füer /fˈyːɐ/
+		følge /fˈœlɡə/ - folgen /fˈɔlɡn̩/
+		føtter /fˈœtːəɾ/ - Feute /fˈɔʏ̯tə/
+		far /fˈɑːɾ/ - Vader /fˈɒːdɐ/
+		fem /fˈɛm/ - fief /fˈiːf/
+		fisk /fˈɪsk/ - Fisch /fˈɪʃ/
+		finger /fˈɪŋːəɾ/ - Finger /fˈɪŋɐ/
+		full /fˈʉlː/ - vull /fˈʊl/
+		fugl /fˈʉːl/ - Vugel /fˈuːɣl̩/
+		høy /hˈøːj/ - hoch /hˈeo̯x/
+		høre /hˈøːɾə/ - heuren /hˈɔʏ̯ɐn/
+		ha /hˈɑː/ - hebben /hˈɛbn̩/
+		hare /hˈɑːɾə/ - Hase /hˈɒːzə/
+		hellig /hˈɛlːi/ - hillig /hˈɪlɪç/
+		hund /hˈʉnː/ - Hund /hˈʊnd/
+		hunger /hˈʉŋːəɾ/ - Hunger /hˈʊŋɐ/
+		hud /hˈʉːd/ - Hut /hˈuːt/
+		hus /hˈʉːs/ - Hus /hˈuːs/
+		honning /hˈʊnːɪŋ/ - Honnig /hˈɔnɪç/
+		gi /jˈiː/ - geben /jˈeːm/
+		jord /jˈuːɾ/ - Eere /ˈeːrə/
+		jeg /jˈæj/ - eck /ˈɛk/
+		gjest /jˈɛst/ - Gast /ɣˈas/
+		hjerte /jˈɛʈːə/ - Harte /hˈaɐtə/
+		kvinne /kʰʋˈɪnːə/ - Fru /frˈuː/
+		kone /kʰˈuːne/ - Fru /frˈuː/
+		kalv /kʰˈɑlʋ/ - Kalf /kˈalf/
+		kald /kʰˈɑlː/ - kold /kˈɔld/
+		ku /kʰˈʉː/ - Kauh /kˈaʊ̯/
+		løpe /lˈøːpə/ - lopen /lˈoːbm̩/
+		lam /lˈɑmː/ - Lamm /lˈam/
+		lang /lˈɑŋː/ - lang /lˈaŋ/
+		lett /lˈɛtː/ - lichte /lˈɪçtə/
+		måne /mˈoːnə/ - Maan /mˈɒːn/
+		mor /mˈuːɾ/ - Mudder /mˈʊdɐ/
+		meg /mˈæɪ̯/ - mi /mˈiː/
+		mann /mˈɑnː/ - Mann /mˈan/
+		melk /mˈɛlk/ - Melk /mˈɛlk/
+		menneske /mˈɛnːəskə/ - Minsche /mˈɪnʃə/
+		munn /mˈʉnː/ - Muul /mˈuːl/
+		munn /mˈʉnː/ - Mund /mˈʊnd/
+		mus /mˈʉːs/ - Mus /mˈuːs/
+		nese /nˈeːsə/ - Näse /nˈɛːzə/
+		ni /nˈiː/ - negen /nˈeːɣn̩/
+		ny /nˈyː/ - nie /nˈiː/
+		negl /nˈæɪ̯l/ - Nägel /nˈɛːjl̩/
+		naken /nˈɑːkən/ - naket /nˈɒːkət/
+		skarp /skˈɑɾp/ - scharpe /ʃˈaɐpə/
+		slange /slˈɑŋːə/ - Slange /slˈaŋə/
+		snø /snˈøː/ - Snei /snˈɛɪ̯/
+		stjerne /stjˈæːɳə/ - Steern /stˈeːɐn/
+		stol /stˈuːl/ - Staul /stˈaʊ̯l/
+		stein /stˈæɪ̯n/ - Stein /stˈɛɪ̯n/
+		svin /sʋˈiːn/ - Swien /swˈiːn/
+		svømme /sʋˈœmːə/ - swimmen /swˈɪm/
+		svart /sʋˈɑʈ/ - swart /swˈaɐt/
+		se /sˈeː/ - seihn /zˈɛɪ̯n/
+		si /sˈiː/ - seggen /zˈɛjn̩/
+		side /sˈiːə/ - Siete /zˈiːtə/
+		søt /sˈøːt/ - seute /zˈɔʏ̯tə/
+		sønn /sˈœn/ - Sohn /zˈoːn/
+		søster /sˈœstəɾ/ - Swester /swˈɛstɐ/
+		salt /sˈɑlt/ - Solt /zˈɔlt/
+		sand /sˈɑnː/ - Sand /zˈand/
+		sitte /sˈɪtːə/ - sitten /zˈɪtn̩/
+		synge /sˈʏŋːə/ - singen /zˈɪŋ/
+		tid /tʰˈiː/ - Tied /tˈiːd/
+		torn /tʰˈuːɳ/ - Doorn /dˈoːɐn/
+		tyv /tʰˈyːʋ/ - Deif /dˈɛɪ̯f/
+		tørr /tʰˈœɾ/ - dröge /drˈøːɣə/
+		takke /tʰˈɑkːə/ - danken /dˈaŋkn̩/
+		tann /tʰˈɑnː/ - Tähne /tˈɛːnə/
+		tolv /tʰˈɔlː/ - twölf /tvˈœlf/
+		ting /tʰˈɪŋː/ - Ding /dˈɪŋ/
+		tusen /tʰˈʉːsən/ - dusend /dˈuːzn̩d/
+		tunge /tʰˈʊŋːə/ - Tunge /tˈʊŋə/
+		tynn /tʰˈʏnː/ - dünne /dˈʏnə/
+		tˈysk /tʰˈʏsk/ - dütsch /dˈʏtʃ/
+		kirke /çˈɪɾkə/ - Kerke /kˈɛːɐkə/
+		tjukk /çˈʉkː/ - dick /dˈɪk/
+		kylling /çˈʏlːɪŋ/ - Küken /kˈyːkn̩/
+		grønn /ɡɾˈœnː/ - greun /jrˈɔʏ̯n/
+		gress /ɡɾˈɛsː/ - Gras /ɣrˈaːs/
+		gås /ɡˈoːs/ - Gaus /ɣˈaʊ̯s/
+		god /ɡˈuː/ - gut /ɣˈʊt/
+		gull /ɡˈʉlː/ - Gold /ɣˈɔld/
+		gud /ɡˈʉːd/ - Gott /ɣˈɔt/
+		gul /ɡˈʉːl/ - gäl /jˈɛl/
+		regn /ɾˈæɪ̯n/ - Regen /rˈɛːn/
+		rød /ɾˈøː/ - rot /rˈeo̯t/
+		rett /ɾˈɛtː/ - Recht /rˈɛçt/
+		ring /ɾˈɪŋː/ - Ring /rˈɪŋ/
+		sju /ʂˈʉː/ - seeben /zˈeːvn̩/
+		skip /ʃˈiːp/ - Schipp /ʃˈɪp/
+		vi /ʋˈiː/ - wi /vˈiː/
+		hvit /ʋˈiːt/ - witt /vˈɪt/
+		vær /ʋˈæːɾ/ - Wäer /vˈɛːɐ/
+		hva /ʋˈɑ/ - wat /vˈat/
+		vann /ʋˈɑnː/ - Water /vˈɒːtɐ/
+		varm /ʋˈɑɾm/ - warm /vˈaːɐm/
+		vind /ʋˈɪnː/ - Wind /vˈɪnd/
+		en /ˈeːn/ - eine /ˈɛɪ̯nə/
+		i /ˈiː/ - in /ˈɪn/
+		is /ˈiːs/ - Ies /ˈiːs/
+		ål /ˈoːl/ - Aal /ˈɒːl/
+		år /ˈoːɾ/ - Jahr /jˈaːɐ/
+		over /ˈoːʋəɾ/ - ower /ˈoːvɐ/
+		ord /ˈuːɾ/ - Wort /vˈoːɐt/
+		øye /ˈøːjə/ - Ooge /ˈeo̯ɣə/
+		øre /ˈøːɾə/ - Ohr /ˈeo̯ɐ/
+		ønske /ˈœnskə/ - wünschen /vˈʏnʃn̩/
+		annen /ˈɑnːən/ - anner /ˈanɐ/
+		aske /ˈɑskə/ - Asche /ˈaʃə/
+		oss /ˈɔsː/ - üsch /ˈʏʃ/
+		åtte /ˈɔtːə/ - achte /ˈaxtə/
+		elleve /ˈɛlʋə/ - ölwe /ˈœlvə/
+		eple /ˈɛplə/ - Appel /ˈapl̩/
+		egg /ˈɛɡː/ - Ecke /ˈɛkə/
+		ulv /ˈʉlʋ/ - Wulf /vˈʊlf/
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+		ut /ˈʉːt/ - ut /ˈuːt/
+		ung /ˈʊŋː/ - jung /jˈʊŋ/
+		ugle /ˈʊɡlə/ - Ule /ˈuːlə/
+
+Final disqualified:
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		egg /ˈɛɡː/ - Ei /ˈɛɪ̯/
+		ild /ˈɪlː/ - Füer /fˈyːɐ/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 148
+	Disqualified: 164
+	Added: 0
+	Removed: 8
+		ild /ˈɪlː/ - Füer /fˈyːɐ/
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+		egg /ˈɛɡː/ - Ei /ˈɛɪ̯/
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		i /ˈiː/ - in /ˈɪn/
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		tre /tʰɾˈeː/ - Bohm /bˈeo̯m/
+
+Iteration 2
+	Qualified: 149
+	Disqualified: 163
+	Added: 1
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+	Removed: 0
+
+Iteration 3
+	Qualified: 149
+	Disqualified: 163
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bjørn /bjˈøːɳ/ - Bär /bˈɛːɐ/
+		blod /blˈuː/ - Blaut /blˈaʊ̯d/
+		blom /blˈuːm/ - Blaume /blˈaʊ̯mə/
+		blome /blˈuːmə/ - Blaume /blˈaʊ̯mə/
+		blad /blˈɑːd/ - Bläet /blˈɛə̯t/
+		bror /bɾˈuːɾ/ - Brauer /brˈaʊ̯ɐ/
+		bryst /bɾˈʏst/ - Bost /bˈɔst/
+		brygge /bɾˈʏɡːə/ - Brügge /brˈʏɣə/
+		be /bˈeː/ - bidden /bˈɪdn̩/
+		bedre /bˈeːdɾə/ - beter /bˈeːtɐ/
+		bite /bˈiːtə/ - bieten /bˈiːtn̩/
+		båt /bˈoːt/ - Boot /bˈeo̯t/
+		by /bˈyː/ - beien /bˈɛɪ̯n̩/
+		bein /bˈæɪ̯n/ - Bein /bˈɛɪ̯n/
+		berg /bˈæɾɡ/ - Barg /bˈaɐx/
+		drive /dɾˈiːʋə/ - driewen /drˈiːvn̩/
+		drøm /dɾˈœm/ - Drom /drˈeo̯m/
+		drømme /dɾˈœmːə/ - drömen /drˈøːmn̩/
+		dyr /dˈyːɾ/ - düer /dˈyːɐ/
+		dyr /dˈyːɾ/ - Deirt /dˈɛɪ̯ɐt/
+		død /dˈøː/ - Dod /dˈeo̯d/
+		datter /dˈɑtːəɾ/ - Dochter /dˈɔxtɐ/
+		fjær /fjˈæːɾ/ - Feer /fˈeːɐ/
+		fryse /fɾˈyːsə/ - freisen /frˈɛɪ̯zn̩/
+		frende /fɾˈɛndə/ - Fründ /frˈʏnd/
+		frisk /fɾˈɪsk/ - frisch /frˈɪʃ/
+		fire /fˈiːɾə/ - veir /fˈɛɪ̯ɐ/
+		får /fˈoːɾ/ - Schap /ʃˈɒːp/
+		fot /fˈuːt/ - Faut /fˈaʊ̯t/
+		fyr /fˈyːɾ/ - Füer /fˈyːɐ/
+		følge /fˈœlɡə/ - folgen /fˈɔlɡn̩/
+		føtter /fˈœtːəɾ/ - Feute /fˈɔʏ̯tə/
+		far /fˈɑːɾ/ - Vader /fˈɒːdɐ/
+		fem /fˈɛm/ - fief /fˈiːf/
+		fisk /fˈɪsk/ - Fisch /fˈɪʃ/
+		finger /fˈɪŋːəɾ/ - Finger /fˈɪŋɐ/
+		full /fˈʉlː/ - vull /fˈʊl/
+		het /hˈeːt/ - heit /hˈɛɪ̯t/
+		hår /hˈoːɾ/ - Haar /hˈɒːɐ/
+		hode /hˈuːdə/ - Kopp /kˈɔp/
+		høy /hˈøːj/ - hoch /hˈeo̯x/
+		høne /hˈøːnə/ - Henn /hˈɛn/
+		høre /hˈøːɾə/ - heuren /hˈɔʏ̯ɐn/
+		hand /hˈɑnː/ - Hand /hˈand/
+		hellig /hˈɛlːi/ - hillig /hˈɪlɪç/
+		hund /hˈʉnː/ - Hund /hˈʊnd/
+		hunger /hˈʉŋːəɾ/ - Hunger /hˈʊŋɐ/
+		hud /hˈʉːd/ - Hut /hˈuːt/
+		hus /hˈʉːs/ - Hus /hˈuːs/
+		gi /jˈiː/ - geben /jˈeːm/
+		jeg /jˈæj/ - eck /ˈɛk/
+		hjerte /jˈɛʈːə/ - Harte /hˈaɐtə/
+		kne /kʰnˈeː/ - Knei /knˈɛɪ̯/
+		kvinne /kʰʋˈɪnːə/ - Fru /frˈuː/
+		kone /kʰˈuːne/ - Fru /frˈuː/
+		kald /kʰˈɑlː/ - kold /kˈɔld/
+		kunne /kʰˈʉnːə/ - können /kˈœn̩/
+		ku /kʰˈʉː/ - Kauh /kˈaʊ̯/
+		le /lˈeː/ - lachen /lˈaxn̩/
+		lys /lˈyːs/ - Licht /lˈɪç/
+		løpe /lˈøːpə/ - lopen /lˈoːbm̩/
+		lam /lˈɑmː/ - Lamm /lˈam/
+		land /lˈɑnː/ - Land /lˈand/
+		lang /lˈɑŋː/ - lang /lˈaŋ/
+		måne /mˈoːnə/ - Maan /mˈɒːn/
+		mann /mˈɑnː/ - Mann /mˈan/
+		menneske /mˈɛnːəskə/ - Minsche /mˈɪnʃə/
+		munn /mˈʉnː/ - Muul /mˈuːl/
+		munn /mˈʉnː/ - Mund /mˈʊnd/
+		mus /mˈʉːs/ - Mus /mˈuːs/
+		nese /nˈeːsə/ - Näse /nˈɛːzə/
+		ni /nˈiː/ - negen /nˈeːɣn̩/
+		ny /nˈyː/ - nie /nˈiː/
+		naken /nˈɑːkən/ - naket /nˈɒːkət/
+		skarp /skˈɑɾp/ - scharpe /ʃˈaɐpə/
+		snø /snˈøː/ - Snei /snˈɛɪ̯/
+		stjerne /stjˈæːɳə/ - Steern /stˈeːɐn/
+		stol /stˈuːl/ - Staul /stˈaʊ̯l/
+		stein /stˈæɪ̯n/ - Stein /stˈɛɪ̯n/
+		svin /sʋˈiːn/ - Swien /swˈiːn/
+		svømme /sʋˈœmːə/ - swimmen /swˈɪm/
+		svart /sʋˈɑʈ/ - swart /swˈaɐt/
+		se /sˈeː/ - seihn /zˈɛɪ̯n/
+		si /sˈiː/ - seggen /zˈɛjn̩/
+		side /sˈiːə/ - Siete /zˈiːtə/
+		sove /sˈoːʋə/ - slapen /slˈɒːbm̩/
+		søt /sˈøːt/ - seute /zˈɔʏ̯tə/
+		sand /sˈɑnː/ - Sand /zˈand/
+		synge /sˈʏŋːə/ - singen /zˈɪŋ/
+		tre /tʰɾˈeː/ - drei /drˈɛɪ̯/
+		ti /tʰˈiː/ - tein /tˈɛɪ̯n/
+		torn /tʰˈuːɳ/ - Doorn /dˈoːɐn/
+		tyv /tʰˈyːʋ/ - Deif /dˈɛɪ̯f/
+		tørr /tʰˈœɾ/ - dröge /drˈøːɣə/
+		takke /tʰˈɑkːə/ - danken /dˈaŋkn̩/
+		tann /tʰˈɑnː/ - Tähne /tˈɛːnə/
+		ting /tʰˈɪŋː/ - Ding /dˈɪŋ/
+		tunge /tʰˈʊŋːə/ - Tunge /tˈʊŋə/
+		tˈysk /tʰˈʏsk/ - dütsch /dˈʏtʃ/
+		kirke /çˈɪɾkə/ - Kerke /kˈɛːɐkə/
+		tjukk /çˈʉkː/ - dick /dˈɪk/
+		kylling /çˈʏlːɪŋ/ - Küken /kˈyːkn̩/
+		grønn /ɡɾˈœnː/ - greun /jrˈɔʏ̯n/
+		gress /ɡɾˈɛsː/ - Gras /ɣrˈaːs/
+		gås /ɡˈoːs/ - Gaus /ɣˈaʊ̯s/
+		god /ɡˈuː/ - gut /ɣˈʊt/
+		gull /ɡˈʉlː/ - Gold /ɣˈɔld/
+		gud /ɡˈʉːd/ - Gott /ɣˈɔt/
+		gul /ɡˈʉːl/ - gäl /jˈɛl/
+		rik /ɾˈiːk/ - riek /rˈiːk/
+		regn /ɾˈæɪ̯n/ - Regen /rˈɛːn/
+		rød /ɾˈøː/ - rot /rˈeo̯t/
+		røyk /ɾˈœʏ̯k/ - Rook /rˈeo̯k/
+		rett /ɾˈɛtː/ - Recht /rˈɛçt/
+		ring /ɾˈɪŋː/ - Ring /rˈɪŋ/
+		sju /ʂˈʉː/ - seeben /zˈeːvn̩/
+		skip /ʃˈiːp/ - Schipp /ʃˈɪp/
+		vi /ʋˈiː/ - wi /vˈiː/
+		hvit /ʋˈiːt/ - witt /vˈɪt/
+		vite /ʋˈiːtə/ - wetten /vˈɛtn̩/
+		vei /ʋˈæɪ̯/ - Weg /vˈɛç/
+		vær /ʋˈæːɾ/ - Wäer /vˈɛːɐ/
+		hva /ʋˈɑ/ - wat /vˈat/
+		varm /ʋˈɑɾm/ - warm /vˈaːɐm/
+		vind /ʋˈɪnː/ - Wind /vˈɪnd/
+		en /ˈeːn/ - eine /ˈɛɪ̯nə/
+		ete /ˈeːtə/ - äten /ˈɛːtn̩/
+		is /ˈiːs/ - Ies /ˈiːs/
+		år /ˈoːɾ/ - Jahr /jˈaːɐ/
+		over /ˈoːʋəɾ/ - ower /ˈoːvɐ/
+		ord /ˈuːɾ/ - Wort /vˈoːɐt/
+		eik /ˈæɪ̯k/ - Eike /ˈɛɪ̯kə/
+		øye /ˈøːjə/ - Ooge /ˈeo̯ɣə/
+		øre /ˈøːɾə/ - Ohr /ˈeo̯ɐ/
+		all /ˈɑlː/ - alle /ˈalə/
+		annen /ˈɑnːən/ - anner /ˈanɐ/
+		aske /ˈɑskə/ - Asche /ˈaʃə/
+		arm /ˈɑɾm/ - Arm /ˈaɐm/
+		ape /ˈɑːpə/ - Ape /ˈɒːpə/
+		oss /ˈɔsː/ - üsch /ˈʏʃ/
+		åtte /ˈɔtːə/ - achte /ˈaxtə/
+		ovn /ˈɔʋn/ - Oben /ˈoːm/
+		elleve /ˈɛlʋə/ - ölwe /ˈœlvə/
+		eple /ˈɛplə/ - Appel /ˈapl̩/
+		egg /ˈɛɡː/ - Ecke /ˈɛkə/
+		ulv /ˈʉlʋ/ - Wulf /vˈʊlf/
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+		ut /ˈʉːt/ - ut /ˈuːt/
+		ugle /ˈʊɡlə/ - Ule /ˈuːlə/
+
+Final disqualified:
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		tre /tʰɾˈeː/ - Bohm /bˈeo̯m/
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		i /ˈiː/ - in /ˈɪn/
+		egg /ˈɛɡː/ - Ei /ˈɛɪ̯/
+		ild /ˈɪlː/ - Füer /fˈyːɐ/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 148
+	Disqualified: 164
+	Added: 0
+	Removed: 8
+		ni /nˈiː/ - negen /nˈeːɣn̩/
+		egg /ˈɛɡː/ - Ei /ˈɛɪ̯/
+		kvinne /kʰʋˈɪnːə/ - Fru /frˈuː/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		le /lˈeː/ - lachen /lˈaxn̩/
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		tre /tʰɾˈeː/ - Bohm /bˈeo̯m/
+		hode /hˈuːdə/ - Kopp /kˈɔp/
+
+Iteration 2
+	Qualified: 147
+	Disqualified: 165
+	Added: 0
+	Removed: 1
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+
+Iteration 3
+	Qualified: 147
+	Disqualified: 165
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		blod /blˈuː/ - Blaut /blˈaʊ̯d/
+		blom /blˈuːm/ - Blaume /blˈaʊ̯mə/
+		blome /blˈuːmə/ - Blaume /blˈaʊ̯mə/
+		bror /bɾˈuːɾ/ - Brauer /brˈaʊ̯ɐ/
+		brød /bɾˈøː/ - Brot /brˈeo̯t/
+		bryst /bɾˈʏst/ - Bost /bˈɔst/
+		brygge /bɾˈʏɡːə/ - Brügge /brˈʏɣə/
+		be /bˈeː/ - bidden /bˈɪdn̩/
+		bedre /bˈeːdɾə/ - beter /bˈeːtɐ/
+		bite /bˈiːtə/ - bieten /bˈiːtn̩/
+		bie /bˈiːə/ - Imme /ˈɪmə/
+		båt /bˈoːt/ - Boot /bˈeo̯t/
+		by /bˈyː/ - beien /bˈɛɪ̯n̩/
+		berg /bˈæɾɡ/ - Barg /bˈaɐx/
+		bad /bˈɑːd/ - Bad /bˈaːd/
+		drive /dɾˈiːʋə/ - driewen /drˈiːvn̩/
+		drøm /dɾˈœm/ - Drom /drˈeo̯m/
+		drømme /dɾˈœmːə/ - drömen /drˈøːmn̩/
+		drikke /dɾˈɪkːə/ - drinken /drˈɪŋkn̩/
+		dyp /dˈyːp/ - deip /dˈɛɪ̯p/
+		dyr /dˈyːɾ/ - düer /dˈyːɐ/
+		dyr /dˈyːɾ/ - Deirt /dˈɛɪ̯ɐt/
+		død /dˈøː/ - Dod /dˈeo̯d/
+		datter /dˈɑtːəɾ/ - Dochter /dˈɔxtɐ/
+		dag /dˈɑːɡ/ - Dag /dˈax/
+		du /dˈʉː/ - du /dˈuː/
+		fjær /fjˈæːɾ/ - Feer /fˈeːɐ/
+		flyge /flˈyːɡə/ - fleigen /flˈɛɪ̯ŋ/
+		flue /flˈʉːə/ - Fleige /flˈɛɪ̯jə/
+		frende /fɾˈɛndə/ - Fründ /frˈʏnd/
+		frisk /fɾˈɪsk/ - frisch /frˈɪʃ/
+		fire /fˈiːɾə/ - veir /fˈɛɪ̯ɐ/
+		får /fˈoːɾ/ - Schap /ʃˈɒːp/
+		fot /fˈuːt/ - Faut /fˈaʊ̯t/
+		fyr /fˈyːɾ/ - Füer /fˈyːɐ/
+		føtter /fˈœtːəɾ/ - Feute /fˈɔʏ̯tə/
+		far /fˈɑːɾ/ - Vader /fˈɒːdɐ/
+		fem /fˈɛm/ - fief /fˈiːf/
+		fisk /fˈɪsk/ - Fisch /fˈɪʃ/
+		finger /fˈɪŋːəɾ/ - Finger /fˈɪŋɐ/
+		full /fˈʉlː/ - vull /fˈʊl/
+		fugl /fˈʉːl/ - Vugel /fˈuːɣl̩/
+		het /hˈeːt/ - heit /hˈɛɪ̯t/
+		hår /hˈoːɾ/ - Haar /hˈɒːɐ/
+		her /hˈæːɾ/ - hier /hˈiːɐ/
+		høy /hˈøːj/ - hoch /hˈeo̯x/
+		høre /hˈøːɾə/ - heuren /hˈɔʏ̯ɐn/
+		hand /hˈɑnː/ - Hand /hˈand/
+		ha /hˈɑː/ - hebben /hˈɛbn̩/
+		hellig /hˈɛlːi/ - hillig /hˈɪlɪç/
+		hund /hˈʉnː/ - Hund /hˈʊnd/
+		hunger /hˈʉŋːəɾ/ - Hunger /hˈʊŋɐ/
+		hud /hˈʉːd/ - Hut /hˈuːt/
+		hus /hˈʉːs/ - Hus /hˈuːs/
+		honning /hˈʊnːɪŋ/ - Honnig /hˈɔnɪç/
+		jeg /jˈæj/ - eck /ˈɛk/
+		gjest /jˈɛst/ - Gast /ɣˈas/
+		kne /kʰnˈeː/ - Knei /knˈɛɪ̯/
+		kone /kʰˈuːne/ - Fru /frˈuː/
+		kald /kʰˈɑlː/ - kold /kˈɔld/
+		kunne /kʰˈʉnːə/ - können /kˈœn̩/
+		ku /kʰˈʉː/ - Kauh /kˈaʊ̯/
+		lys /lˈyːs/ - Licht /lˈɪç/
+		løpe /lˈøːpə/ - lopen /lˈoːbm̩/
+		lam /lˈɑmː/ - Lamm /lˈam/
+		land /lˈɑnː/ - Land /lˈand/
+		lang /lˈɑŋː/ - lang /lˈaŋ/
+		lett /lˈɛtː/ - lichte /lˈɪçtə/
+		måne /mˈoːnə/ - Maan /mˈɒːn/
+		mor /mˈuːɾ/ - Mudder /mˈʊdɐ/
+		meg /mˈæɪ̯/ - mi /mˈiː/
+		mann /mˈɑnː/ - Mann /mˈan/
+		melk /mˈɛlk/ - Melk /mˈɛlk/
+		menneske /mˈɛnːəskə/ - Minsche /mˈɪnʃə/
+		munn /mˈʉnː/ - Mund /mˈʊnd/
+		mus /mˈʉːs/ - Mus /mˈuːs/
+		nese /nˈeːsə/ - Näse /nˈɛːzə/
+		negl /nˈæɪ̯l/ - Nägel /nˈɛːjl̩/
+		naken /nˈɑːkən/ - naket /nˈɒːkət/
+		skarp /skˈɑɾp/ - scharpe /ʃˈaɐpə/
+		snø /snˈøː/ - Snei /snˈɛɪ̯/
+		stjerne /stjˈæːɳə/ - Steern /stˈeːɐn/
+		stol /stˈuːl/ - Staul /stˈaʊ̯l/
+		stein /stˈæɪ̯n/ - Stein /stˈɛɪ̯n/
+		storm /stˈɔɾm/ - Storm /stˈɔɐm/
+		svin /sʋˈiːn/ - Swien /swˈiːn/
+		svart /sʋˈɑʈ/ - swart /swˈaɐt/
+		si /sˈiː/ - seggen /zˈɛjn̩/
+		sove /sˈoːʋə/ - slapen /slˈɒːbm̩/
+		søt /sˈøːt/ - seute /zˈɔʏ̯tə/
+		sønn /sˈœn/ - Sohn /zˈoːn/
+		søster /sˈœstəɾ/ - Swester /swˈɛstɐ/
+		salt /sˈɑlt/ - Solt /zˈɔlt/
+		sand /sˈɑnː/ - Sand /zˈand/
+		sitte /sˈɪtːə/ - sitten /zˈɪtn̩/
+		synge /sˈʏŋːə/ - singen /zˈɪŋ/
+		tre /tʰɾˈeː/ - drei /drˈɛɪ̯/
+		tid /tʰˈiː/ - Tied /tˈiːd/
+		torn /tʰˈuːɳ/ - Doorn /dˈoːɐn/
+		tyv /tʰˈyːʋ/ - Deif /dˈɛɪ̯f/
+		tørr /tʰˈœɾ/ - dröge /drˈøːɣə/
+		takke /tʰˈɑkːə/ - danken /dˈaŋkn̩/
+		tann /tʰˈɑnː/ - Tähne /tˈɛːnə/
+		tolv /tʰˈɔlː/ - twölf /tvˈœlf/
+		tusen /tʰˈʉːsən/ - dusend /dˈuːzn̩d/
+		tunge /tʰˈʊŋːə/ - Tunge /tˈʊŋə/
+		tˈysk /tʰˈʏsk/ - dütsch /dˈʏtʃ/
+		tjukk /çˈʉkː/ - dick /dˈɪk/
+		kylling /çˈʏlːɪŋ/ - Küken /kˈyːkn̩/
+		grønn /ɡɾˈœnː/ - greun /jrˈɔʏ̯n/
+		gul /ɡˈʉːl/ - gäl /jˈɛl/
+		rik /ɾˈiːk/ - riek /rˈiːk/
+		regn /ɾˈæɪ̯n/ - Regen /rˈɛːn/
+		rett /ɾˈɛtː/ - Recht /rˈɛçt/
+		ring /ɾˈɪŋː/ - Ring /rˈɪŋ/
+		sju /ʂˈʉː/ - seeben /zˈeːvn̩/
+		skip /ʃˈiːp/ - Schipp /ʃˈɪp/
+		vi /ʋˈiː/ - wi /vˈiː/
+		hvit /ʋˈiːt/ - witt /vˈɪt/
+		vite /ʋˈiːtə/ - wetten /vˈɛtn̩/
+		vei /ʋˈæɪ̯/ - Weg /vˈɛç/
+		vær /ʋˈæːɾ/ - Wäer /vˈɛːɐ/
+		hva /ʋˈɑ/ - wat /vˈat/
+		vann /ʋˈɑnː/ - Water /vˈɒːtɐ/
+		varm /ʋˈɑɾm/ - warm /vˈaːɐm/
+		vind /ʋˈɪnː/ - Wind /vˈɪnd/
+		en /ˈeːn/ - eine /ˈɛɪ̯nə/
+		ete /ˈeːtə/ - äten /ˈɛːtn̩/
+		i /ˈiː/ - in /ˈɪn/
+		is /ˈiːs/ - Ies /ˈiːs/
+		år /ˈoːɾ/ - Jahr /jˈaːɐ/
+		over /ˈoːʋəɾ/ - ower /ˈoːvɐ/
+		ord /ˈuːɾ/ - Wort /vˈoːɐt/
+		øye /ˈøːjə/ - Ooge /ˈeo̯ɣə/
+		øre /ˈøːɾə/ - Ohr /ˈeo̯ɐ/
+		annen /ˈɑnːən/ - anner /ˈanɐ/
+		aske /ˈɑskə/ - Asche /ˈaʃə/
+		arm /ˈɑɾm/ - Arm /ˈaɐm/
+		ape /ˈɑːpə/ - Ape /ˈɒːpə/
+		oss /ˈɔsː/ - üsch /ˈʏʃ/
+		åtte /ˈɔtːə/ - achte /ˈaxtə/
+		ovn /ˈɔʋn/ - Oben /ˈoːm/
+		elleve /ˈɛlʋə/ - ölwe /ˈœlvə/
+		eple /ˈɛplə/ - Appel /ˈapl̩/
+		egg /ˈɛɡː/ - Ecke /ˈɛkə/
+		ulv /ˈʉlʋ/ - Wulf /vˈʊlf/
+		ugle /ˈʊɡlə/ - Ule /ˈuːlə/
+
+Final disqualified:
+		hode /hˈuːdə/ - Kopp /kˈɔp/
+		kvinne /kʰʋˈɪnːə/ - Fru /frˈuː/
+		le /lˈeː/ - lachen /lˈaxn̩/
+		ni /nˈiː/ - negen /nˈeːɣn̩/
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		tre /tʰɾˈeː/ - Bohm /bˈeo̯m/
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		egg /ˈɛɡː/ - Ei /ˈɛɪ̯/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 147
+	Disqualified: 165
+	Added: 0
+	Removed: 9
+		ild /ˈɪlː/ - Füer /fˈyːɐ/
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+		ti /tʰˈiː/ - tein /tˈɛɪ̯n/
+		kvinne /kʰʋˈɪnːə/ - Fru /frˈuː/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		le /lˈeː/ - lachen /lˈaxn̩/
+		i /ˈiː/ - in /ˈɪn/
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		tre /tʰɾˈeː/ - Bohm /bˈeo̯m/
+
+Iteration 2
+	Qualified: 146
+	Disqualified: 166
+	Added: 1
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+	Removed: 2
+		tann /tʰˈɑnː/ - Tähne /tˈɛːnə/
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+
+Iteration 3
+	Qualified: 146
+	Disqualified: 166
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bjørn /bjˈøːɳ/ - Bär /bˈɛːɐ/
+		blod /blˈuː/ - Blaut /blˈaʊ̯d/
+		blom /blˈuːm/ - Blaume /blˈaʊ̯mə/
+		blome /blˈuːmə/ - Blaume /blˈaʊ̯mə/
+		blad /blˈɑːd/ - Bläet /blˈɛə̯t/
+		bror /bɾˈuːɾ/ - Brauer /brˈaʊ̯ɐ/
+		bryst /bɾˈʏst/ - Bost /bˈɔst/
+		brygge /bɾˈʏɡːə/ - Brügge /brˈʏɣə/
+		be /bˈeː/ - bidden /bˈɪdn̩/
+		bedre /bˈeːdɾə/ - beter /bˈeːtɐ/
+		bite /bˈiːtə/ - bieten /bˈiːtn̩/
+		båt /bˈoːt/ - Boot /bˈeo̯t/
+		by /bˈyː/ - beien /bˈɛɪ̯n̩/
+		bein /bˈæɪ̯n/ - Bein /bˈɛɪ̯n/
+		bad /bˈɑːd/ - Bad /bˈaːd/
+		drive /dɾˈiːʋə/ - driewen /drˈiːvn̩/
+		drøm /dɾˈœm/ - Drom /drˈeo̯m/
+		drømme /dɾˈœmːə/ - drömen /drˈøːmn̩/
+		drikke /dɾˈɪkːə/ - drinken /drˈɪŋkn̩/
+		dyp /dˈyːp/ - deip /dˈɛɪ̯p/
+		dyr /dˈyːɾ/ - düer /dˈyːɐ/
+		død /dˈøː/ - Dod /dˈeo̯d/
+		dag /dˈɑːɡ/ - Dag /dˈax/
+		du /dˈʉː/ - du /dˈuː/
+		flyge /flˈyːɡə/ - fleigen /flˈɛɪ̯ŋ/
+		flue /flˈʉːə/ - Fleige /flˈɛɪ̯jə/
+		fryse /fɾˈyːsə/ - freisen /frˈɛɪ̯zn̩/
+		frende /fɾˈɛndə/ - Fründ /frˈʏnd/
+		frisk /fɾˈɪsk/ - frisch /frˈɪʃ/
+		fire /fˈiːɾə/ - veir /fˈɛɪ̯ɐ/
+		får /fˈoːɾ/ - Schap /ʃˈɒːp/
+		fot /fˈuːt/ - Faut /fˈaʊ̯t/
+		fyr /fˈyːɾ/ - Füer /fˈyːɐ/
+		følge /fˈœlɡə/ - folgen /fˈɔlɡn̩/
+		føtter /fˈœtːəɾ/ - Feute /fˈɔʏ̯tə/
+		far /fˈɑːɾ/ - Vader /fˈɒːdɐ/
+		fem /fˈɛm/ - fief /fˈiːf/
+		fisk /fˈɪsk/ - Fisch /fˈɪʃ/
+		finger /fˈɪŋːəɾ/ - Finger /fˈɪŋɐ/
+		full /fˈʉlː/ - vull /fˈʊl/
+		fugl /fˈʉːl/ - Vugel /fˈuːɣl̩/
+		het /hˈeːt/ - heit /hˈɛɪ̯t/
+		hode /hˈuːdə/ - Kopp /kˈɔp/
+		her /hˈæːɾ/ - hier /hˈiːɐ/
+		høy /hˈøːj/ - hoch /hˈeo̯x/
+		høne /hˈøːnə/ - Henn /hˈɛn/
+		hand /hˈɑnː/ - Hand /hˈand/
+		ha /hˈɑː/ - hebben /hˈɛbn̩/
+		hare /hˈɑːɾə/ - Hase /hˈɒːzə/
+		hund /hˈʉnː/ - Hund /hˈʊnd/
+		hunger /hˈʉŋːəɾ/ - Hunger /hˈʊŋɐ/
+		hud /hˈʉːd/ - Hut /hˈuːt/
+		honning /hˈʊnːɪŋ/ - Honnig /hˈɔnɪç/
+		gi /jˈiː/ - geben /jˈeːm/
+		jord /jˈuːɾ/ - Eere /ˈeːrə/
+		gjest /jˈɛst/ - Gast /ɣˈas/
+		hjerte /jˈɛʈːə/ - Harte /hˈaɐtə/
+		kne /kʰnˈeː/ - Knei /knˈɛɪ̯/
+		kone /kʰˈuːne/ - Fru /frˈuː/
+		kald /kʰˈɑlː/ - kold /kˈɔld/
+		kunne /kʰˈʉnːə/ - können /kˈœn̩/
+		ku /kʰˈʉː/ - Kauh /kˈaʊ̯/
+		lys /lˈyːs/ - Licht /lˈɪç/
+		løpe /lˈøːpə/ - lopen /lˈoːbm̩/
+		lam /lˈɑmː/ - Lamm /lˈam/
+		land /lˈɑnː/ - Land /lˈand/
+		lang /lˈɑŋː/ - lang /lˈaŋ/
+		lett /lˈɛtː/ - lichte /lˈɪçtə/
+		mor /mˈuːɾ/ - Mudder /mˈʊdɐ/
+		mann /mˈɑnː/ - Mann /mˈan/
+		menneske /mˈɛnːəskə/ - Minsche /mˈɪnʃə/
+		munn /mˈʉnː/ - Muul /mˈuːl/
+		munn /mˈʉnː/ - Mund /mˈʊnd/
+		mus /mˈʉːs/ - Mus /mˈuːs/
+		nese /nˈeːsə/ - Näse /nˈɛːzə/
+		ni /nˈiː/ - negen /nˈeːɣn̩/
+		negl /nˈæɪ̯l/ - Nägel /nˈɛːjl̩/
+		natt /nˈɑtː/ - Nacht /nˈax/
+		naken /nˈɑːkən/ - naket /nˈɒːkət/
+		skarp /skˈɑɾp/ - scharpe /ʃˈaɐpə/
+		slange /slˈɑŋːə/ - Slange /slˈaŋə/
+		stol /stˈuːl/ - Staul /stˈaʊ̯l/
+		stein /stˈæɪ̯n/ - Stein /stˈɛɪ̯n/
+		svin /sʋˈiːn/ - Swien /swˈiːn/
+		svart /sʋˈɑʈ/ - swart /swˈaɐt/
+		side /sˈiːə/ - Siete /zˈiːtə/
+		sove /sˈoːʋə/ - slapen /slˈɒːbm̩/
+		søt /sˈøːt/ - seute /zˈɔʏ̯tə/
+		sønn /sˈœn/ - Sohn /zˈoːn/
+		søster /sˈœstəɾ/ - Swester /swˈɛstɐ/
+		salt /sˈɑlt/ - Solt /zˈɔlt/
+		sand /sˈɑnː/ - Sand /zˈand/
+		sitte /sˈɪtːə/ - sitten /zˈɪtn̩/
+		synge /sˈʏŋːə/ - singen /zˈɪŋ/
+		tre /tʰɾˈeː/ - drei /drˈɛɪ̯/
+		torn /tʰˈuːɳ/ - Doorn /dˈoːɐn/
+		tyv /tʰˈyːʋ/ - Deif /dˈɛɪ̯f/
+		tørr /tʰˈœɾ/ - dröge /drˈøːɣə/
+		takke /tʰˈɑkːə/ - danken /dˈaŋkn̩/
+		tolv /tʰˈɔlː/ - twölf /tvˈœlf/
+		ting /tʰˈɪŋː/ - Ding /dˈɪŋ/
+		tusen /tʰˈʉːsən/ - dusend /dˈuːzn̩d/
+		tynn /tʰˈʏnː/ - dünne /dˈʏnə/
+		tˈysk /tʰˈʏsk/ - dütsch /dˈʏtʃ/
+		kirke /çˈɪɾkə/ - Kerke /kˈɛːɐkə/
+		tjukk /çˈʉkː/ - dick /dˈɪk/
+		kylling /çˈʏlːɪŋ/ - Küken /kˈyːkn̩/
+		gås /ɡˈoːs/ - Gaus /ɣˈaʊ̯s/
+		gull /ɡˈʉlː/ - Gold /ɣˈɔld/
+		gul /ɡˈʉːl/ - gäl /jˈɛl/
+		regn /ɾˈæɪ̯n/ - Regen /rˈɛːn/
+		rød /ɾˈøː/ - rot /rˈeo̯t/
+		røyk /ɾˈœʏ̯k/ - Rook /rˈeo̯k/
+		rett /ɾˈɛtː/ - Recht /rˈɛçt/
+		ring /ɾˈɪŋː/ - Ring /rˈɪŋ/
+		sju /ʂˈʉː/ - seeben /zˈeːvn̩/
+		skip /ʃˈiːp/ - Schipp /ʃˈɪp/
+		vi /ʋˈiː/ - wi /vˈiː/
+		hvit /ʋˈiːt/ - witt /vˈɪt/
+		vite /ʋˈiːtə/ - wetten /vˈɛtn̩/
+		vei /ʋˈæɪ̯/ - Weg /vˈɛç/
+		vær /ʋˈæːɾ/ - Wäer /vˈɛːɐ/
+		varm /ʋˈɑɾm/ - warm /vˈaːɐm/
+		vind /ʋˈɪnː/ - Wind /vˈɪnd/
+		en /ˈeːn/ - eine /ˈɛɪ̯nə/
+		ete /ˈeːtə/ - äten /ˈɛːtn̩/
+		is /ˈiːs/ - Ies /ˈiːs/
+		ål /ˈoːl/ - Aal /ˈɒːl/
+		over /ˈoːʋəɾ/ - ower /ˈoːvɐ/
+		ord /ˈuːɾ/ - Wort /vˈoːɐt/
+		øye /ˈøːjə/ - Ooge /ˈeo̯ɣə/
+		øre /ˈøːɾə/ - Ohr /ˈeo̯ɐ/
+		all /ˈɑlː/ - alle /ˈalə/
+		annen /ˈɑnːən/ - anner /ˈanɐ/
+		aske /ˈɑskə/ - Asche /ˈaʃə/
+		arm /ˈɑɾm/ - Arm /ˈaɐm/
+		oss /ˈɔsː/ - üsch /ˈʏʃ/
+		åtte /ˈɔtːə/ - achte /ˈaxtə/
+		ovn /ˈɔʋn/ - Oben /ˈoːm/
+		elleve /ˈɛlʋə/ - ölwe /ˈœlvə/
+		egg /ˈɛɡː/ - Ecke /ˈɛkə/
+		ulv /ˈʉlʋ/ - Wulf /vˈʊlf/
+		ull /ˈʉlː/ - Wulle /vˈʊlə/
+		ung /ˈʊŋː/ - jung /jˈʊŋ/
+		ugle /ˈʊɡlə/ - Ule /ˈuːlə/
+		orm /ˈʊɾm/ - Worm /vˈoːɐm/
+
+Final disqualified:
+		kvinne /kʰʋˈɪnːə/ - Fru /frˈuː/
+		le /lˈeː/ - lachen /lˈaxn̩/
+		navn /nˈɑʋn/ - Name /nˈɒːmə/
+		tre /tʰɾˈeː/ - Bohm /bˈeo̯m/
+		ti /tʰˈiː/ - tein /tˈɛɪ̯n/
+		to /tʰˈuː/ - twei /tvˈɛɪ̯/
+		tann /tʰˈɑnː/ - Tähne /tˈɛːnə/
+		tjue /çˈʉːə/ - twintig /tvˈɪntɪç/
+		i /ˈiː/ - in /ˈɪn/
+		ild /ˈɪlː/ - Füer /fˈyːɐ/
+
+
+-------------------
+

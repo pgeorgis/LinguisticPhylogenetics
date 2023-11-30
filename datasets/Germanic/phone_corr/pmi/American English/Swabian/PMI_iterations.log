@@ -1,0 +1,1086 @@
+Same meaning pairs: 201
+****SAMPLE 1****
+Iteration 1
+	Qualified: 154
+	Disqualified: 168
+	Added: 0
+	Removed: 7
+		bee /bˈi/ - Imm /ˈim/
+		one /wˈʌn/ - ois /ˈɔe̯s/
+		eat /ˈit/ - essa /ˈɛsa/
+		we /wˈi/ - mir /mˈiʌ/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+
+Iteration 2
+	Qualified: 154
+	Disqualified: 168
+	Added: 1
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+	Removed: 1
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+
+Iteration 3
+	Qualified: 153
+	Disqualified: 169
+	Added: 0
+	Removed: 1
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+
+Iteration 4
+	Qualified: 155
+	Disqualified: 167
+	Added: 2
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+	Removed: 0
+
+Iteration 5
+	Qualified: 155
+	Disqualified: 167
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - Bladd /blˈad/
+		bloom /blˈum/ - Bloam /blˈɔə̯m/
+		blood /blˈʌd/ - Bluad /blˈuə̯d/
+		bread /bɹˈɛd/ - Brod /bʁˈoːd/
+		breast /bɹˈɛst/ - Bruschd /bʁˈuʃd/
+		bridge /bɹˈɪʤ/ - Brugg /bʁˈuɡ/
+		brother /bɹˈʌðɚ/ - Bruadr /bʁˈuə̯dʌ/
+		bite /bˈaɪ̯t/ - beißa /bˈəi̯sa/
+		barrow /bˈæɹoʊ̯/ - Berg /bˈʌɡ/
+		bear /bˈɛɚ/ - Bär /bˈɛːʕ/
+		better /bˈɛɾɚ/ - bessr /bˈɛsʌ/
+		bid /bˈɪd/ - bidda /bˈɪda/
+		book /bˈʊk/ - Buach /bˈuə̯x/
+		dry /dɹˈaɪ̯/ - drogga /dʁˈɔɡa/
+		dream /dɹˈim/ - Draum /dʁˈao̯m/
+		drink /dɹˈɪŋk/ - dringa /dʁˈɪŋɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+		deer /dˈiɚ/ - Dier /dˈiːʕ/
+		dear /dˈiɚ/ - deier /dˈəi̯ʌ/
+		daughter /dˈɑtɚ/ - Dochdr /dˈɔxdʌ/
+		fly /flˈaɪ̯/ - fliaga /flˈiə̯ɡa/
+		flesh /flˈɛʃ/ - Floisch /flˈɔe̯ʃ/
+		freeze /fɹˈiz/ - friera /fʁˈiːʁa/
+		fire /fˈaɪ̯ɚ/ - Feir /fˈəi̯ʌ/
+		fowl /fˈaʊ̯ɫ/ - Vogl /fˈoːɡl̩/
+		feel /fˈiɫ/ - fiehla /fˈiːla/
+		fox /fˈɑks/ - Fuchs /fˈuks/
+		follow /fˈɑloʊ̯/ - folga /fˈolɡa/
+		father /fˈɑðɚ/ - Vaddr /fˈadʌ/
+		feather /fˈɛðɚ/ - Fädr /fˈɛːdʌ/
+		finger /fˈɪŋɡɚ/ - Fengr /fˈeŋʌ/
+		fish /fˈɪʃ/ - Fisch /fˈiʃ/
+		foot /fˈʊt/ - Fuaß /fˈuə̯s/
+		full /fˈʊɫ/ - voll /fˈol/
+		high /hˈaɪ̯/ - hauch /hˈao̯x/
+		hide /hˈaɪ̯d/ - Haud /hˈao̯d/
+		hound /hˈaʊ̯nd/ - Hond /hˈond/
+		house /hˈaʊ̯s/ - Haus /hˈao̯s/
+		hear /hˈiɚ/ - höra /hˈeːʁa/
+		holy /hˈoʊ̯li/ - heilig /hˈae̯lɪɡ/
+		home /hˈoʊ̯m/ - hoim /hˈɔe̯m/
+		hand /hˈænd/ - Haad /hˈaːd/
+		have /hˈæv/ - hann /hˈan/
+		hot /hˈɑt/ - hoiß /hˈɔe̯s/
+		horn /hˈɔɹn/ - Horn /hˈɔʕn/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		head /hˈɛd/ - Haubd /hˈao̯bd/
+		head /hˈɛd/ - Kopf /kʰˈɔp͡f/
+		hen /hˈɛn/ - Henn /hˈɛn/
+		hare /hˈɛɚ/ - Has /hˈaːs/
+		honey /hˈʌni/ - Honig /hˈoːnɪɡ/
+		hunger /hˈʌŋɡɚ/ - Hongr /hˈoŋʌ/
+		yellow /jˈɛloʊ̯/ - geal /ɡˈeə̯l/
+		young /jˈʌŋ/ - jong /jˈoŋ/
+		cow /kʰˈaʊ̯/ - Kuah /kʰˈuə̯/
+		cold /kʰˈoʊ̯ɫd/ - kald /kʰˈald/
+		calf /kʰˈæf/ - Kalb /kʰˈalb/
+		king /kʰˈɪŋ/ - Keenig /kʰˈeːniɡ/
+		louse /lˈaʊ̯s/ - Laus /lˈao̯s/
+		laugh /lˈæf/ - lacha /lˈaxa/
+		land /lˈænd/ - Land /lˈand/
+		mice /mˈaɪ̯s/ - Meis /mˈae̯s/
+		mouse /mˈaʊ̯s/ - Maus /mˈao̯s/
+		me /mˈi/ - mi /mˈi/
+		moon /mˈun/ - Mond /mˈond/
+		man /mˈæn/ - Mo /mˈɔː/
+		men /mˈɛn/ - Männr /mˈɛnʌ/
+		milk /mˈɪɫk/ - Milch /mˈilç/
+		mother /mˈʌðɚ/ - Muddr /mˈudʌ/
+		nine /nˈaɪ̯n/ - nein /nˈae̯n/
+		night /nˈaɪ̯t/ - Nachd /nˈaxd/
+		naked /nˈeɪ̯kɪd/ - naggt /nˈaɡt/
+		name /nˈeɪ̯m/ - Noma /nˈɔːma/
+		nail /nˈeɪ̯ɫ/ - Nagl /nˈaːɡl̩/
+		needle /nˈidɫ̩/ - Nodl /nˈɔːdl̩/
+		nose /nˈoʊ̯z/ - Nos /nˈɔːs/
+		new /nˈu/ - nei /nˈəi̯/
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+		sleep /slˈip/ - schlofa /ʃlˈɔːfa/
+		snow /snˈoʊ̯/ - Schnee /ʃnˈeː/
+		speech /spˈiʧ/ - Schbroch /ʃb̥ʁˈɔːx/
+		stone /stˈoʊ̯n/ - Schdoi /ʃdˈɔe̯/
+		stool /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		sweet /swˈit/ - siaß /sˈiə̯s/
+		swart /swˈɔɹt/ - schwarz /ʃʋˈaʕʦ/
+		swim /swˈɪm/ - schwemma /ʃʋˈema/
+		sow /sˈaʊ̯/ - Sau /sˈao̯/
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		see /sˈi/ - seha /sˈeːa/
+		soul /sˈoʊ̯ɫ/ - Seel /sˈeːl/
+		sand /sˈænd/ - Sand /sˈand/
+		salt /sˈɑɫt/ - Salz /sˈalʦ/
+		sword /sˈɔɹd/ - Schwerd /ʃʋˈɛʕd/
+		seven /sˈɛvən/ - sieba /sˈiːba/
+		sister /sˈɪstɚ/ - Schweschdr /ʃʋˈɛʃdʌ/
+		sit /sˈɪt/ - sitza /sˈiʦa/
+		sing /sˈɪŋ/ - singa /sˈɪŋa/
+		son /sˈʌn/ - Soh /sˈoː/
+		twenty /tʰwˈɛnti/ - zwanzg /ʦʋˈanʦɡ/
+		twelve /tʰwˈɛɫv/ - zwelf /ʦʋˈelf/
+		tide /tʰˈaɪ̯d/ - Zeid /ʦˈəi̯d/
+		two /tʰˈu/ - zwoi /ʦʋˈɔe̯/
+		tooth /tʰˈuθ/ - Zah /ʦˈaː/
+		ten /tʰˈɛn/ - zeah /ʦˈeə̯/
+		tongue /tʰˈʌŋ/ - Zong /ʦˈoŋ/
+		wife /wˈaɪ̯f/ - Weib /ʋˈəi̯b/
+		water /wˈɑɾɚ/ - Wassr /ʋˈasʌ/
+		weather /wˈɛðɚ/ - Weddr /ʋˈɛdʌ/
+		word /wˈɝd/ - Wort /ʋˈoʕt/
+		wit /wˈɪt/ - wissa /ʋˈisa/
+		wish /wˈɪʃ/ - winscha /ʋˈɪnʃa/
+		wool /wˈʊɫ/ - Wolle /ʋˈole/
+		wolf /wˈʊɫf/ - Wolf /ʋˈolf/
+		what /wˈʌt/ - was /ʋˈas/
+		great /ɡɹˈeɪ̯t/ - groß /ɡʁˈoːs/
+		green /ɡɹˈin/ - grea /ɡʁˈeə̯/
+		grass /ɡɹˈæs/ - Gras /ɡʁˈaːs/
+		ghost /ɡˈoʊ̯st/ - Geischd /ɡˈae̯ʃd/
+		goat /ɡˈoʊ̯t/ - Goiß /ɡˈɔe̯s/
+		gold /ɡˈoʊ̯ɫd/ - Gold /ɡˈold/
+		goose /ɡˈus/ - Gaas /ɡˈaːs/
+		god /ɡˈɑd/ - Gott /ɡˈɔt/
+		good /ɡˈʊd/ - guad /ɡˈuə̯d/
+		light /ɫˈaɪ̯t/ - leichd /lˈəi̯çd/
+		right /ɹˈaɪ̯t/ - rechd /ʁˈɛxd/
+		rain /ɹˈeɪ̯n/ - Rega /ʁˈeːɡa/
+		red /ɹˈɛd/ - rod /ʁˈoːd/
+		ring /ɹˈɪŋ/ - Reng /ʁˈeŋ/
+		rich /ɹˈɪʧ/ - reich /ʁˈəi̯ç/
+		sheep /ʃˈip/ - Schof /ʃˈoːf/
+		sharp /ʃˈɑɹp/ - scharf /ʃˈaʕf/
+		ship /ʃˈɪp/ - Schiff /ʃˈif/
+		shit /ʃˈɪt/ - Scheiß /ʃˈəi̯s/
+		cheese /ʧˈiz/ - Käs /kʰˈɛːs/
+		church /ʧˈɝʧ/ - Kirch /kʰˈʌç/
+		I /ˈaɪ̯/ - i /ˈi/
+		ice /ˈaɪ̯s/ - Eis /ˈəi̯s/
+		owl /ˈaʊ̯l̩/ - Eil /ˈae̯l/
+		out /ˈaʊ̯t/ - aus /ˈao̯s/
+		ape /ˈeɪ̯p/ - Aff /ˈaf/
+		oak /ˈoʊ̯k/ - Oich /ˈɔe̯ç/
+		over /ˈoʊ̯vɚ/ - iber /ˈibʌ/
+		old /ˈoʊ̯ɫd/ - ald /ˈald/
+		apple /ˈæpɫ̩/ - Abfl /ˈab̥͡fl̩/
+		all /ˈɑɫ/ - älle /ˈɛle/
+		arm /ˈɑɹm/ - Arm /ˈaʕm/
+		earth /ˈɝθ/ - Ärde /ˈɛʕde/
+		in /ˈɪn/ - en /ˈen/
+		us /ˈʌs/ - ons /ˈons/
+		three /θɹˈi/ - drei /dʁˈae̯/
+		thousand /θˈaʊ̯zn̩d/ - dausad /dˈao̯sɐd/
+		thank /θˈeɪ̯ŋk/ - danga /dˈaŋɡa/
+		thief /θˈif/ - Diab /dˈiə̯b/
+		thorn /θˈɔɹn/ - Dorn /dˈɔʕn/
+		thunder /θˈʌndɚ/ - Donndr /dˈondʌ/
+
+Final disqualified:
+		bee /bˈi/ - Imm /ˈim/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		we /wˈi/ - mir /mˈiʌ/
+		one /wˈʌn/ - ois /ˈɔe̯s/
+		eat /ˈit/ - essa /ˈɛsa/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 152
+	Disqualified: 170
+	Added: 0
+	Removed: 9
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		ear /ˈiɚ/ - Ohr /ˈoːʕ/
+		bee /bˈi/ - Imm /ˈim/
+		eat /ˈit/ - essa /ˈɛsa/
+		we /wˈi/ - mir /mˈiʌ/
+		eye /ˈaɪ̯/ - Aug /ˈao̯ɡ/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+
+Iteration 2
+	Qualified: 152
+	Disqualified: 170
+	Added: 1
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+	Removed: 1
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+
+Iteration 3
+	Qualified: 154
+	Disqualified: 168
+	Added: 2
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+	Removed: 0
+
+Iteration 4
+	Qualified: 154
+	Disqualified: 168
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - Bladd /blˈad/
+		bloom /blˈum/ - Bloam /blˈɔə̯m/
+		blood /blˈʌd/ - Bluad /blˈuə̯d/
+		bread /bɹˈɛd/ - Brod /bʁˈoːd/
+		breast /bɹˈɛst/ - Bruschd /bʁˈuʃd/
+		brother /bɹˈʌðɚ/ - Bruadr /bʁˈuə̯dʌ/
+		bite /bˈaɪ̯t/ - beißa /bˈəi̯sa/
+		beam /bˈim/ - Boom /bˈoːm/
+		bone /bˈoʊ̯n/ - Boi /bˈɔe̯/
+		barrow /bˈæɹoʊ̯/ - Berg /bˈʌɡ/
+		bear /bˈɛɚ/ - Bär /bˈɛːʕ/
+		better /bˈɛɾɚ/ - bessr /bˈɛsʌ/
+		bid /bˈɪd/ - bidda /bˈɪda/
+		book /bˈʊk/ - Buach /bˈuə̯x/
+		dry /dɹˈaɪ̯/ - drogga /dʁˈɔɡa/
+		drink /dɹˈɪŋk/ - dringa /dʁˈɪŋɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+		deep /dˈip/ - diaf /dˈiə̯f/
+		deer /dˈiɚ/ - Dier /dˈiːʕ/
+		daughter /dˈɑtɚ/ - Dochdr /dˈɔxdʌ/
+		flesh /flˈɛʃ/ - Floisch /flˈɔe̯ʃ/
+		friend /fɹˈɛnd/ - Freind /fʁˈae̯nd/
+		five /fˈaɪ̯v/ - femf /fˈɛmf/
+		fire /fˈaɪ̯ɚ/ - Feir /fˈəi̯ʌ/
+		feel /fˈiɫ/ - fiehla /fˈiːla/
+		fox /fˈɑks/ - Fuchs /fˈuks/
+		follow /fˈɑloʊ̯/ - folga /fˈolɡa/
+		father /fˈɑðɚ/ - Vaddr /fˈadʌ/
+		four /fˈɔɹ/ - vier /fˈiʕ/
+		feather /fˈɛðɚ/ - Fädr /fˈɛːdʌ/
+		finger /fˈɪŋɡɚ/ - Fengr /fˈeŋʌ/
+		fish /fˈɪʃ/ - Fisch /fˈiʃ/
+		foot /fˈʊt/ - Fuaß /fˈuə̯s/
+		full /fˈʊɫ/ - voll /fˈol/
+		high /hˈaɪ̯/ - hauch /hˈao̯x/
+		hound /hˈaʊ̯nd/ - Hond /hˈond/
+		holy /hˈoʊ̯li/ - heilig /hˈae̯lɪɡ/
+		hand /hˈænd/ - Haad /hˈaːd/
+		hot /hˈɑt/ - hoiß /hˈɔe̯s/
+		horn /hˈɔɹn/ - Horn /hˈɔʕn/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		head /hˈɛd/ - Haubd /hˈao̯bd/
+		head /hˈɛd/ - Kopf /kʰˈɔp͡f/
+		hen /hˈɛn/ - Henn /hˈɛn/
+		hare /hˈɛɚ/ - Has /hˈaːs/
+		hair /hˈɛɚ/ - Hoor /hˈɔːʕ/
+		honey /hˈʌni/ - Honig /hˈoːnɪɡ/
+		hunger /hˈʌŋɡɚ/ - Hongr /hˈoŋʌ/
+		year /jˈiɚ/ - Johr /jˈɔːʕ/
+		yellow /jˈɛloʊ̯/ - geal /ɡˈeə̯l/
+		young /jˈʌŋ/ - jong /jˈoŋ/
+		cow /kʰˈaʊ̯/ - Kuah /kʰˈuə̯/
+		calf /kʰˈæf/ - Kalb /kʰˈalb/
+		louse /lˈaʊ̯s/ - Laus /lˈao̯s/
+		laugh /lˈæf/ - lacha /lˈaxa/
+		land /lˈænd/ - Land /lˈand/
+		long /lˈɑŋ/ - lang /lˈaŋ/
+		liver /lˈɪvɚ/ - Läbr /lˈɛːbʌ/
+		mice /mˈaɪ̯s/ - Meis /mˈae̯s/
+		mouth /mˈaʊ̯θ/ - Maul /mˈao̯l/
+		me /mˈi/ - mi /mˈi/
+		man /mˈæn/ - Mo /mˈɔː/
+		men /mˈɛn/ - Männr /mˈɛnʌ/
+		milk /mˈɪɫk/ - Milch /mˈilç/
+		midge /mˈɪʤ/ - Mugg /mˈuɡ/
+		mother /mˈʌðɚ/ - Muddr /mˈudʌ/
+		nine /nˈaɪ̯n/ - nein /nˈae̯n/
+		night /nˈaɪ̯t/ - Nachd /nˈaxd/
+		naked /nˈeɪ̯kɪd/ - naggt /nˈaɡt/
+		name /nˈeɪ̯m/ - Noma /nˈɔːma/
+		nail /nˈeɪ̯ɫ/ - Nagl /nˈaːɡl̩/
+		nose /nˈoʊ̯z/ - Nos /nˈɔːs/
+		new /nˈu/ - nei /nˈəi̯/
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+		sleep /slˈip/ - schlofa /ʃlˈɔːfa/
+		speech /spˈiʧ/ - Schbroch /ʃb̥ʁˈɔːx/
+		stone /stˈoʊ̯n/ - Schdoi /ʃdˈɔe̯/
+		stool /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		sweet /swˈit/ - siaß /sˈiə̯s/
+		swart /swˈɔɹt/ - schwarz /ʃʋˈaʕʦ/
+		swim /swˈɪm/ - schwemma /ʃʋˈema/
+		side /sˈaɪ̯d/ - Seide /sˈəi̯də/
+		sow /sˈaʊ̯/ - Sau /sˈao̯/
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		see /sˈi/ - seha /sˈeːa/
+		soul /sˈoʊ̯ɫ/ - Seel /sˈeːl/
+		sand /sˈænd/ - Sand /sˈand/
+		salt /sˈɑɫt/ - Salz /sˈalʦ/
+		sword /sˈɔɹd/ - Schwerd /ʃʋˈɛʕd/
+		seven /sˈɛvən/ - sieba /sˈiːba/
+		six /sˈɪks/ - seggs /sˈeɡs/
+		sister /sˈɪstɚ/ - Schweschdr /ʃʋˈɛʃdʌ/
+		sit /sˈɪt/ - sitza /sˈiʦa/
+		sing /sˈɪŋ/ - singa /sˈɪŋa/
+		son /sˈʌn/ - Soh /sˈoː/
+		twelve /tʰwˈɛɫv/ - zwelf /ʦʋˈelf/
+		tide /tʰˈaɪ̯d/ - Zeid /ʦˈəi̯d/
+		two /tʰˈu/ - zwoi /ʦʋˈɔe̯/
+		tooth /tʰˈuθ/ - Zah /ʦˈaː/
+		ten /tʰˈɛn/ - zeah /ʦˈeə̯/
+		tongue /tʰˈʌŋ/ - Zong /ʦˈoŋ/
+		wife /wˈaɪ̯f/ - Weib /ʋˈəi̯b/
+		way /wˈeɪ̯/ - Wäg /ʋˈɛːɡ/
+		water /wˈɑɾɚ/ - Wassr /ʋˈasʌ/
+		weather /wˈɛðɚ/ - Weddr /ʋˈɛdʌ/
+		word /wˈɝd/ - Wort /ʋˈoʕt/
+		wind /wˈɪnd/ - Weed /ʋˈeːd/
+		wish /wˈɪʃ/ - winscha /ʋˈɪnʃa/
+		wool /wˈʊɫ/ - Wolle /ʋˈole/
+		wolf /wˈʊɫf/ - Wolf /ʋˈolf/
+		thou /ðˈaʊ̯/ - du /dˈuː/
+		eleven /əlˈɛvən/ - älf /ˈɛlf/
+		great /ɡɹˈeɪ̯t/ - groß /ɡʁˈoːs/
+		green /ɡɹˈin/ - grea /ɡʁˈeə̯/
+		grass /ɡɹˈæs/ - Gras /ɡʁˈaːs/
+		ghost /ɡˈoʊ̯st/ - Geischd /ɡˈae̯ʃd/
+		goat /ɡˈoʊ̯t/ - Goiß /ɡˈɔe̯s/
+		gold /ɡˈoʊ̯ɫd/ - Gold /ɡˈold/
+		goose /ɡˈus/ - Gaas /ɡˈaːs/
+		god /ɡˈɑd/ - Gott /ɡˈɔt/
+		good /ɡˈʊd/ - guad /ɡˈuə̯d/
+		light /ɫˈaɪ̯t/ - Lichd /lˈiçd/
+		light /ɫˈaɪ̯t/ - leichd /lˈəi̯çd/
+		right /ɹˈaɪ̯t/ - rechd /ʁˈɛxd/
+		rain /ɹˈeɪ̯n/ - Rega /ʁˈeːɡa/
+		ring /ɹˈɪŋ/ - Reng /ʁˈeŋ/
+		rich /ɹˈɪʧ/ - reich /ʁˈəi̯ç/
+		sheep /ʃˈip/ - Schof /ʃˈoːf/
+		sharp /ʃˈɑɹp/ - scharf /ʃˈaʕf/
+		shit /ʃˈɪt/ - Scheiß /ʃˈəi̯s/
+		cheese /ʧˈiz/ - Käs /kʰˈɛːs/
+		church /ʧˈɝʧ/ - Kirch /kʰˈʌç/
+		I /ˈaɪ̯/ - i /ˈi/
+		ice /ˈaɪ̯s/ - Eis /ˈəi̯s/
+		owl /ˈaʊ̯l̩/ - Eil /ˈae̯l/
+		out /ˈaʊ̯t/ - aus /ˈao̯s/
+		eight /ˈeɪ̯t/ - achd /ˈaxd/
+		over /ˈoʊ̯vɚ/ - iber /ˈibʌ/
+		old /ˈoʊ̯ɫd/ - ald /ˈald/
+		ash /ˈæʃ/ - Äsch /ˈɛʃ/
+		arm /ˈɑɹm/ - Arm /ˈaʕm/
+		egg /ˈɛɡ/ - Oi /ˈɔe̯/
+		edge /ˈɛʤ/ - Egg /ˈɛɡ/
+		earth /ˈɝθ/ - Ärde /ˈɛʕde/
+		in /ˈɪn/ - en /ˈen/
+		us /ˈʌs/ - ons /ˈons/
+		oven /ˈʌvn̩/ - Ofa /ˈoːfa/
+		other /ˈʌðɚ/ - andr /ˈandʌ/
+		thousand /θˈaʊ̯zn̩d/ - dausad /dˈao̯sɐd/
+		thank /θˈeɪ̯ŋk/ - danga /dˈaŋɡa/
+		thief /θˈif/ - Diab /dˈiə̯b/
+		thorn /θˈɔɹn/ - Dorn /dˈɔʕn/
+		thick /θˈɪk/ - digg /dˈiɡ/
+		thunder /θˈʌndɚ/ - Donndr /dˈondʌ/
+
+Final disqualified:
+		bee /bˈi/ - Imm /ˈim/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		we /wˈi/ - mir /mˈiʌ/
+		eye /ˈaɪ̯/ - Aug /ˈao̯ɡ/
+		eat /ˈit/ - essa /ˈɛsa/
+		ear /ˈiɚ/ - Ohr /ˈoːʕ/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 153
+	Disqualified: 169
+	Added: 0
+	Removed: 8
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		ear /ˈiɚ/ - Ohr /ˈoːʕ/
+		bee /bˈi/ - Imm /ˈim/
+		eat /ˈit/ - essa /ˈɛsa/
+		eye /ˈaɪ̯/ - Aug /ˈao̯ɡ/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+
+Iteration 2
+	Qualified: 153
+	Disqualified: 169
+	Added: 1
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+	Removed: 1
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+
+Iteration 3
+	Qualified: 155
+	Disqualified: 167
+	Added: 2
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+	Removed: 0
+
+Iteration 4
+	Qualified: 155
+	Disqualified: 167
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - Bladd /blˈad/
+		bloom /blˈum/ - Bloam /blˈɔə̯m/
+		blood /blˈʌd/ - Bluad /blˈuə̯d/
+		bread /bɹˈɛd/ - Brod /bʁˈoːd/
+		breast /bɹˈɛst/ - Bruschd /bʁˈuʃd/
+		bridge /bɹˈɪʤ/ - Brugg /bʁˈuɡ/
+		bite /bˈaɪ̯t/ - beißa /bˈəi̯sa/
+		beam /bˈim/ - Boom /bˈoːm/
+		bone /bˈoʊ̯n/ - Boi /bˈɔe̯/
+		barrow /bˈæɹoʊ̯/ - Berg /bˈʌɡ/
+		bear /bˈɛɚ/ - Bär /bˈɛːʕ/
+		bid /bˈɪd/ - bidda /bˈɪda/
+		book /bˈʊk/ - Buach /bˈuə̯x/
+		dry /dɹˈaɪ̯/ - drogga /dʁˈɔɡa/
+		dream /dɹˈim/ - draima /dʁˈae̯ma/
+		dream /dɹˈim/ - Draum /dʁˈao̯m/
+		drink /dɹˈɪŋk/ - dringa /dʁˈɪŋɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+		deer /dˈiɚ/ - Dier /dˈiːʕ/
+		dear /dˈiɚ/ - deier /dˈəi̯ʌ/
+		daughter /dˈɑtɚ/ - Dochdr /dˈɔxdʌ/
+		flesh /flˈɛʃ/ - Floisch /flˈɔe̯ʃ/
+		freeze /fɹˈiz/ - friera /fʁˈiːʁa/
+		friend /fɹˈɛnd/ - Freind /fʁˈae̯nd/
+		five /fˈaɪ̯v/ - femf /fˈɛmf/
+		fire /fˈaɪ̯ɚ/ - Feir /fˈəi̯ʌ/
+		fowl /fˈaʊ̯ɫ/ - Vogl /fˈoːɡl̩/
+		feel /fˈiɫ/ - fiehla /fˈiːla/
+		fox /fˈɑks/ - Fuchs /fˈuks/
+		follow /fˈɑloʊ̯/ - folga /fˈolɡa/
+		father /fˈɑðɚ/ - Vaddr /fˈadʌ/
+		four /fˈɔɹ/ - vier /fˈiʕ/
+		feather /fˈɛðɚ/ - Fädr /fˈɛːdʌ/
+		finger /fˈɪŋɡɚ/ - Fengr /fˈeŋʌ/
+		fish /fˈɪʃ/ - Fisch /fˈiʃ/
+		full /fˈʊɫ/ - voll /fˈol/
+		hide /hˈaɪ̯d/ - Haud /hˈao̯d/
+		hound /hˈaʊ̯nd/ - Hond /hˈond/
+		house /hˈaʊ̯s/ - Haus /hˈao̯s/
+		hear /hˈiɚ/ - höra /hˈeːʁa/
+		holy /hˈoʊ̯li/ - heilig /hˈae̯lɪɡ/
+		home /hˈoʊ̯m/ - hoim /hˈɔe̯m/
+		hand /hˈænd/ - Haad /hˈaːd/
+		have /hˈæv/ - hann /hˈan/
+		heart /hˈɑɹt/ - Herz /hˈeʕʦ/
+		horn /hˈɔɹn/ - Horn /hˈɔʕn/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		head /hˈɛd/ - Haubd /hˈao̯bd/
+		head /hˈɛd/ - Kopf /kʰˈɔp͡f/
+		hare /hˈɛɚ/ - Has /hˈaːs/
+		hair /hˈɛɚ/ - Hoor /hˈɔːʕ/
+		hunger /hˈʌŋɡɚ/ - Hongr /hˈoŋʌ/
+		yellow /jˈɛloʊ̯/ - geal /ɡˈeə̯l/
+		cow /kʰˈaʊ̯/ - Kuah /kʰˈuə̯/
+		cold /kʰˈoʊ̯ɫd/ - kald /kʰˈald/
+		king /kʰˈɪŋ/ - Keenig /kʰˈeːniɡ/
+		louse /lˈaʊ̯s/ - Laus /lˈao̯s/
+		leap /lˈip/ - laufa /lˈao̯fa/
+		laugh /lˈæf/ - lacha /lˈaxa/
+		land /lˈænd/ - Land /lˈand/
+		liver /lˈɪvɚ/ - Läbr /lˈɛːbʌ/
+		mice /mˈaɪ̯s/ - Meis /mˈae̯s/
+		mouth /mˈaʊ̯θ/ - Maul /mˈao̯l/
+		me /mˈi/ - mi /mˈi/
+		moon /mˈun/ - Mond /mˈond/
+		man /mˈæn/ - Mo /mˈɔː/
+		midge /mˈɪʤ/ - Mugg /mˈuɡ/
+		mother /mˈʌðɚ/ - Muddr /mˈudʌ/
+		nine /nˈaɪ̯n/ - nein /nˈae̯n/
+		night /nˈaɪ̯t/ - Nachd /nˈaxd/
+		naked /nˈeɪ̯kɪd/ - naggt /nˈaɡt/
+		name /nˈeɪ̯m/ - Noma /nˈɔːma/
+		nail /nˈeɪ̯ɫ/ - Nagl /nˈaːɡl̩/
+		needle /nˈidɫ̩/ - Nodl /nˈɔːdl̩/
+		nose /nˈoʊ̯z/ - Nos /nˈɔːs/
+		new /nˈu/ - nei /nˈəi̯/
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+		snow /snˈoʊ̯/ - Schnee /ʃnˈeː/
+		speech /spˈiʧ/ - Schbroch /ʃb̥ʁˈɔːx/
+		stone /stˈoʊ̯n/ - Schdoi /ʃdˈɔe̯/
+		stool /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		star /stˈɑɹ/ - Schdärn /ʃdˈɛʕn/
+		sweet /swˈit/ - siaß /sˈiə̯s/
+		swart /swˈɔɹt/ - schwarz /ʃʋˈaʕʦ/
+		swim /swˈɪm/ - schwemma /ʃʋˈema/
+		side /sˈaɪ̯d/ - Seide /sˈəi̯də/
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		soul /sˈoʊ̯ɫ/ - Seel /sˈeːl/
+		sand /sˈænd/ - Sand /sˈand/
+		salt /sˈɑɫt/ - Salz /sˈalʦ/
+		seven /sˈɛvən/ - sieba /sˈiːba/
+		sister /sˈɪstɚ/ - Schweschdr /ʃʋˈɛʃdʌ/
+		sit /sˈɪt/ - sitza /sˈiʦa/
+		sing /sˈɪŋ/ - singa /sˈɪŋa/
+		son /sˈʌn/ - Soh /sˈoː/
+		twenty /tʰwˈɛnti/ - zwanzg /ʦʋˈanʦɡ/
+		twelve /tʰwˈɛɫv/ - zwelf /ʦʋˈelf/
+		tide /tʰˈaɪ̯d/ - Zeid /ʦˈəi̯d/
+		ten /tʰˈɛn/ - zeah /ʦˈeə̯/
+		wife /wˈaɪ̯f/ - Weib /ʋˈəi̯b/
+		white /wˈaɪ̯t/ - weiß /ʋˈəi̯s/
+		way /wˈeɪ̯/ - Wäg /ʋˈɛːɡ/
+		warm /wˈɔɹm/ - warm /ʋˈaʕm/
+		word /wˈɝd/ - Wort /ʋˈoʕt/
+		wind /wˈɪnd/ - Weed /ʋˈeːd/
+		wit /wˈɪt/ - wissa /ʋˈisa/
+		wish /wˈɪʃ/ - winscha /ʋˈɪnʃa/
+		wolf /wˈʊɫf/ - Wolf /ʋˈolf/
+		what /wˈʌt/ - was /ʋˈas/
+		thou /ðˈaʊ̯/ - du /dˈuː/
+		eleven /əlˈɛvən/ - älf /ˈɛlf/
+		great /ɡɹˈeɪ̯t/ - groß /ɡʁˈoːs/
+		green /ɡɹˈin/ - grea /ɡʁˈeə̯/
+		grass /ɡɹˈæs/ - Gras /ɡʁˈaːs/
+		ghost /ɡˈoʊ̯st/ - Geischd /ɡˈae̯ʃd/
+		goat /ɡˈoʊ̯t/ - Goiß /ɡˈɔe̯s/
+		gold /ɡˈoʊ̯ɫd/ - Gold /ɡˈold/
+		goose /ɡˈus/ - Gaas /ɡˈaːs/
+		god /ɡˈɑd/ - Gott /ɡˈɔt/
+		good /ɡˈʊd/ - guad /ɡˈuə̯d/
+		light /ɫˈaɪ̯t/ - leichd /lˈəi̯çd/
+		right /ɹˈaɪ̯t/ - rechd /ʁˈɛxd/
+		rain /ɹˈeɪ̯n/ - Rega /ʁˈeːɡa/
+		red /ɹˈɛd/ - rod /ʁˈoːd/
+		ring /ɹˈɪŋ/ - Reng /ʁˈeŋ/
+		rich /ɹˈɪʧ/ - reich /ʁˈəi̯ç/
+		sheen /ʃˈin/ - schee /ʃˈeː/
+		sheep /ʃˈip/ - Schof /ʃˈoːf/
+		ship /ʃˈɪp/ - Schiff /ʃˈif/
+		shit /ʃˈɪt/ - Scheiß /ʃˈəi̯s/
+		cheese /ʧˈiz/ - Käs /kʰˈɛːs/
+		church /ʧˈɝʧ/ - Kirch /kʰˈʌç/
+		I /ˈaɪ̯/ - i /ˈi/
+		ice /ˈaɪ̯s/ - Eis /ˈəi̯s/
+		out /ˈaʊ̯t/ - aus /ˈao̯s/
+		ape /ˈeɪ̯p/ - Aff /ˈaf/
+		eight /ˈeɪ̯t/ - achd /ˈaxd/
+		oak /ˈoʊ̯k/ - Oich /ˈɔe̯ç/
+		over /ˈoʊ̯vɚ/ - iber /ˈibʌ/
+		old /ˈoʊ̯ɫd/ - ald /ˈald/
+		apple /ˈæpɫ̩/ - Abfl /ˈab̥͡fl̩/
+		ash /ˈæʃ/ - Äsch /ˈɛʃ/
+		all /ˈɑɫ/ - älle /ˈɛle/
+		arm /ˈɑɹm/ - Arm /ˈaʕm/
+		egg /ˈɛɡ/ - Oi /ˈɔe̯/
+		edge /ˈɛʤ/ - Egg /ˈɛɡ/
+		earth /ˈɝθ/ - Ärde /ˈɛʕde/
+		in /ˈɪn/ - en /ˈen/
+		us /ˈʌs/ - ons /ˈons/
+		oven /ˈʌvn̩/ - Ofa /ˈoːfa/
+		other /ˈʌðɚ/ - andr /ˈandʌ/
+		three /θɹˈi/ - drei /dʁˈae̯/
+		thank /θˈeɪ̯ŋk/ - danga /dˈaŋɡa/
+		thief /θˈif/ - Diab /dˈiə̯b/
+		thick /θˈɪk/ - digg /dˈiɡ/
+
+Final disqualified:
+		bee /bˈi/ - Imm /ˈim/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		eye /ˈaɪ̯/ - Aug /ˈao̯ɡ/
+		eat /ˈit/ - essa /ˈɛsa/
+		ear /ˈiɚ/ - Ohr /ˈoːʕ/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 151
+	Disqualified: 171
+	Added: 0
+	Removed: 10
+		eat /ˈit/ - essa /ˈɛsa/
+		we /wˈi/ - mir /mˈiʌ/
+		eye /ˈaɪ̯/ - Aug /ˈao̯ɡ/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		night /nˈaɪ̯t/ - Nachd /nˈaxd/
+		egg /ˈɛɡ/ - Oi /ˈɔe̯/
+		right /ɹˈaɪ̯t/ - rechd /ʁˈɛxd/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+		eight /ˈeɪ̯t/ - achd /ˈaxd/
+
+Iteration 2
+	Qualified: 150
+	Disqualified: 172
+	Added: 1
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+	Removed: 2
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+
+Iteration 3
+	Qualified: 152
+	Disqualified: 170
+	Added: 2
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+	Removed: 0
+
+Iteration 4
+	Qualified: 153
+	Disqualified: 169
+	Added: 1
+		eye /ˈaɪ̯/ - Aug /ˈao̯ɡ/
+	Removed: 0
+
+Iteration 5
+	Qualified: 152
+	Disqualified: 170
+	Added: 0
+	Removed: 1
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+
+Iteration 6
+	Qualified: 155
+	Disqualified: 167
+	Added: 3
+		eight /ˈeɪ̯t/ - achd /ˈaxd/
+		night /nˈaɪ̯t/ - Nachd /nˈaxd/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+	Removed: 0
+
+Iteration 7
+	Qualified: 156
+	Disqualified: 166
+	Added: 1
+		right /ɹˈaɪ̯t/ - rechd /ʁˈɛxd/
+	Removed: 0
+
+Iteration 8
+	Qualified: 155
+	Disqualified: 167
+	Added: 1
+		egg /ˈɛɡ/ - Oi /ˈɔe̯/
+	Removed: 2
+		eight /ˈeɪ̯t/ - achd /ˈaxd/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+
+Iteration 9
+	Qualified: 157
+	Disqualified: 165
+	Added: 2
+		eight /ˈeɪ̯t/ - achd /ˈaxd/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+	Removed: 0
+
+Iteration 10
+	Qualified: 157
+	Disqualified: 165
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bloom /blˈum/ - Bloam /blˈɔə̯m/
+		blood /blˈʌd/ - Bluad /blˈuə̯d/
+		bread /bɹˈɛd/ - Brod /bʁˈoːd/
+		bridge /bɹˈɪʤ/ - Brugg /bʁˈuɡ/
+		brother /bɹˈʌðɚ/ - Bruadr /bʁˈuə̯dʌ/
+		bite /bˈaɪ̯t/ - beißa /bˈəi̯sa/
+		beam /bˈim/ - Boom /bˈoːm/
+		bone /bˈoʊ̯n/ - Boi /bˈɔe̯/
+		barrow /bˈæɹoʊ̯/ - Berg /bˈʌɡ/
+		bath /bˈæθ/ - Bad /bˈaːd/
+		bear /bˈɛɚ/ - Bär /bˈɛːʕ/
+		bid /bˈɪd/ - bidda /bˈɪda/
+		dry /dɹˈaɪ̯/ - drogga /dʁˈɔɡa/
+		dream /dɹˈim/ - draima /dʁˈae̯ma/
+		dream /dɹˈim/ - Draum /dʁˈao̯m/
+		drink /dɹˈɪŋk/ - dringa /dʁˈɪŋɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+		deep /dˈip/ - diaf /dˈiə̯f/
+		deer /dˈiɚ/ - Dier /dˈiːʕ/
+		dear /dˈiɚ/ - deier /dˈəi̯ʌ/
+		daughter /dˈɑtɚ/ - Dochdr /dˈɔxdʌ/
+		death /dˈɛθ/ - Dod /dˈoːd/
+		fly /flˈaɪ̯/ - fliaga /flˈiə̯ɡa/
+		flesh /flˈɛʃ/ - Floisch /flˈɔe̯ʃ/
+		freeze /fɹˈiz/ - friera /fʁˈiːʁa/
+		friend /fɹˈɛnd/ - Freind /fʁˈae̯nd/
+		fresh /fɹˈɛʃ/ - frisch /fʁˈiʃ/
+		fire /fˈaɪ̯ɚ/ - Feir /fˈəi̯ʌ/
+		fowl /fˈaʊ̯ɫ/ - Vogl /fˈoːɡl̩/
+		feet /fˈit/ - Fiaß /fˈiə̯s/
+		feel /fˈiɫ/ - fiehla /fˈiːla/
+		fox /fˈɑks/ - Fuchs /fˈuks/
+		follow /fˈɑloʊ̯/ - folga /fˈolɡa/
+		four /fˈɔɹ/ - vier /fˈiʕ/
+		feather /fˈɛðɚ/ - Fädr /fˈɛːdʌ/
+		finger /fˈɪŋɡɚ/ - Fengr /fˈeŋʌ/
+		fish /fˈɪʃ/ - Fisch /fˈiʃ/
+		foot /fˈʊt/ - Fuaß /fˈuə̯s/
+		full /fˈʊɫ/ - voll /fˈol/
+		high /hˈaɪ̯/ - hauch /hˈao̯x/
+		hide /hˈaɪ̯d/ - Haud /hˈao̯d/
+		hound /hˈaʊ̯nd/ - Hond /hˈond/
+		house /hˈaʊ̯s/ - Haus /hˈao̯s/
+		hear /hˈiɚ/ - höra /hˈeːʁa/
+		holy /hˈoʊ̯li/ - heilig /hˈae̯lɪɡ/
+		hand /hˈænd/ - Haad /hˈaːd/
+		have /hˈæv/ - hann /hˈan/
+		hot /hˈɑt/ - hoiß /hˈɔe̯s/
+		horn /hˈɔɹn/ - Horn /hˈɔʕn/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		head /hˈɛd/ - Haubd /hˈao̯bd/
+		hare /hˈɛɚ/ - Has /hˈaːs/
+		hair /hˈɛɚ/ - Hoor /hˈɔːʕ/
+		honey /hˈʌni/ - Honig /hˈoːnɪɡ/
+		hunger /hˈʌŋɡɚ/ - Hongr /hˈoŋʌ/
+		year /jˈiɚ/ - Johr /jˈɔːʕ/
+		young /jˈʌŋ/ - jong /jˈoŋ/
+		cow /kʰˈaʊ̯/ - Kuah /kʰˈuə̯/
+		cold /kʰˈoʊ̯ɫd/ - kald /kʰˈald/
+		calf /kʰˈæf/ - Kalb /kʰˈalb/
+		king /kʰˈɪŋ/ - Keenig /kʰˈeːniɡ/
+		louse /lˈaʊ̯s/ - Laus /lˈao̯s/
+		leap /lˈip/ - laufa /lˈao̯fa/
+		laugh /lˈæf/ - lacha /lˈaxa/
+		land /lˈænd/ - Land /lˈand/
+		long /lˈɑŋ/ - lang /lˈaŋ/
+		liver /lˈɪvɚ/ - Läbr /lˈɛːbʌ/
+		mice /mˈaɪ̯s/ - Meis /mˈae̯s/
+		mouse /mˈaʊ̯s/ - Maus /mˈao̯s/
+		mouth /mˈaʊ̯θ/ - Maul /mˈao̯l/
+		man /mˈæn/ - Mo /mˈɔː/
+		men /mˈɛn/ - Männr /mˈɛnʌ/
+		milk /mˈɪɫk/ - Milch /mˈilç/
+		midge /mˈɪʤ/ - Mugg /mˈuɡ/
+		mother /mˈʌðɚ/ - Muddr /mˈudʌ/
+		night /nˈaɪ̯t/ - Nachd /nˈaxd/
+		naked /nˈeɪ̯kɪd/ - naggt /nˈaɡt/
+		name /nˈeɪ̯m/ - Noma /nˈɔːma/
+		nail /nˈeɪ̯ɫ/ - Nagl /nˈaːɡl̩/
+		needle /nˈidɫ̩/ - Nodl /nˈɔːdl̩/
+		nose /nˈoʊ̯z/ - Nos /nˈɔːs/
+		new /nˈu/ - nei /nˈəi̯/
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+		snow /snˈoʊ̯/ - Schnee /ʃnˈeː/
+		speech /spˈiʧ/ - Schbroch /ʃb̥ʁˈɔːx/
+		star /stˈɑɹ/ - Schdärn /ʃdˈɛʕn/
+		sweet /swˈit/ - siaß /sˈiə̯s/
+		swart /swˈɔɹt/ - schwarz /ʃʋˈaʕʦ/
+		swim /swˈɪm/ - schwemma /ʃʋˈema/
+		side /sˈaɪ̯d/ - Seide /sˈəi̯də/
+		sow /sˈaʊ̯/ - Sau /sˈao̯/
+		soul /sˈoʊ̯ɫ/ - Seel /sˈeːl/
+		salt /sˈɑɫt/ - Salz /sˈalʦ/
+		sword /sˈɔɹd/ - Schwerd /ʃʋˈɛʕd/
+		seven /sˈɛvən/ - sieba /sˈiːba/
+		six /sˈɪks/ - seggs /sˈeɡs/
+		sit /sˈɪt/ - sitza /sˈiʦa/
+		sing /sˈɪŋ/ - singa /sˈɪŋa/
+		son /sˈʌn/ - Soh /sˈoː/
+		twenty /tʰwˈɛnti/ - zwanzg /ʦʋˈanʦɡ/
+		twelve /tʰwˈɛɫv/ - zwelf /ʦʋˈelf/
+		tide /tʰˈaɪ̯d/ - Zeid /ʦˈəi̯d/
+		ten /tʰˈɛn/ - zeah /ʦˈeə̯/
+		tongue /tʰˈʌŋ/ - Zong /ʦˈoŋ/
+		wife /wˈaɪ̯f/ - Weib /ʋˈəi̯b/
+		white /wˈaɪ̯t/ - weiß /ʋˈəi̯s/
+		way /wˈeɪ̯/ - Wäg /ʋˈɛːɡ/
+		water /wˈɑɾɚ/ - Wassr /ʋˈasʌ/
+		weather /wˈɛðɚ/ - Weddr /ʋˈɛdʌ/
+		word /wˈɝd/ - Wort /ʋˈoʕt/
+		wind /wˈɪnd/ - Weed /ʋˈeːd/
+		wit /wˈɪt/ - wissa /ʋˈisa/
+		wish /wˈɪʃ/ - winscha /ʋˈɪnʃa/
+		wool /wˈʊɫ/ - Wolle /ʋˈole/
+		wolf /wˈʊɫf/ - Wolf /ʋˈolf/
+		what /wˈʌt/ - was /ʋˈas/
+		thou /ðˈaʊ̯/ - du /dˈuː/
+		great /ɡɹˈeɪ̯t/ - groß /ɡʁˈoːs/
+		grass /ɡɹˈæs/ - Gras /ɡʁˈaːs/
+		ghost /ɡˈoʊ̯st/ - Geischd /ɡˈae̯ʃd/
+		gold /ɡˈoʊ̯ɫd/ - Gold /ɡˈold/
+		goose /ɡˈus/ - Gaas /ɡˈaːs/
+		god /ɡˈɑd/ - Gott /ɡˈɔt/
+		light /ɫˈaɪ̯t/ - Lichd /lˈiçd/
+		light /ɫˈaɪ̯t/ - leichd /lˈəi̯çd/
+		right /ɹˈaɪ̯t/ - rechd /ʁˈɛxd/
+		rain /ɹˈeɪ̯n/ - Rega /ʁˈeːɡa/
+		red /ɹˈɛd/ - rod /ʁˈoːd/
+		ring /ɹˈɪŋ/ - Reng /ʁˈeŋ/
+		rich /ɹˈɪʧ/ - reich /ʁˈəi̯ç/
+		sheen /ʃˈin/ - schee /ʃˈeː/
+		sheep /ʃˈip/ - Schof /ʃˈoːf/
+		sharp /ʃˈɑɹp/ - scharf /ʃˈaʕf/
+		ship /ʃˈɪp/ - Schiff /ʃˈif/
+		shit /ʃˈɪt/ - Scheiß /ʃˈəi̯s/
+		cheese /ʧˈiz/ - Käs /kʰˈɛːs/
+		church /ʧˈɝʧ/ - Kirch /kʰˈʌç/
+		eye /ˈaɪ̯/ - Aug /ˈao̯ɡ/
+		I /ˈaɪ̯/ - i /ˈi/
+		ice /ˈaɪ̯s/ - Eis /ˈəi̯s/
+		owl /ˈaʊ̯l̩/ - Eil /ˈae̯l/
+		out /ˈaʊ̯t/ - aus /ˈao̯s/
+		ape /ˈeɪ̯p/ - Aff /ˈaf/
+		eight /ˈeɪ̯t/ - achd /ˈaxd/
+		oak /ˈoʊ̯k/ - Oich /ˈɔe̯ç/
+		apple /ˈæpɫ̩/ - Abfl /ˈab̥͡fl̩/
+		ash /ˈæʃ/ - Äsch /ˈɛʃ/
+		all /ˈɑɫ/ - älle /ˈɛle/
+		arm /ˈɑɹm/ - Arm /ˈaʕm/
+		egg /ˈɛɡ/ - Oi /ˈɔe̯/
+		edge /ˈɛʤ/ - Egg /ˈɛɡ/
+		earth /ˈɝθ/ - Ärde /ˈɛʕde/
+		in /ˈɪn/ - en /ˈen/
+		us /ˈʌs/ - ons /ˈons/
+		oven /ˈʌvn̩/ - Ofa /ˈoːfa/
+		other /ˈʌðɚ/ - andr /ˈandʌ/
+		thank /θˈeɪ̯ŋk/ - danga /dˈaŋɡa/
+
+Final disqualified:
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		we /wˈi/ - mir /mˈiʌ/
+		eat /ˈit/ - essa /ˈɛsa/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 151
+	Disqualified: 171
+	Added: 0
+	Removed: 10
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		ear /ˈiɚ/ - Ohr /ˈoːʕ/
+		bee /bˈi/ - Imm /ˈim/
+		one /wˈʌn/ - ois /ˈɔe̯s/
+		we /wˈi/ - mir /mˈiʌ/
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		rain /ɹˈeɪ̯n/ - Rega /ʁˈeːɡa/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+
+Iteration 2
+	Qualified: 152
+	Disqualified: 170
+	Added: 2
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+	Removed: 1
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+
+Iteration 3
+	Qualified: 154
+	Disqualified: 168
+	Added: 2
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+	Removed: 0
+
+Iteration 4
+	Qualified: 154
+	Disqualified: 168
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		blade /blˈeɪ̯d/ - Bladd /blˈad/
+		bloom /blˈum/ - Bloam /blˈɔə̯m/
+		blood /blˈʌd/ - Bluad /blˈuə̯d/
+		bread /bɹˈɛd/ - Brod /bʁˈoːd/
+		breast /bɹˈɛst/ - Bruschd /bʁˈuʃd/
+		bridge /bɹˈɪʤ/ - Brugg /bʁˈuɡ/
+		brother /bɹˈʌðɚ/ - Bruadr /bʁˈuə̯dʌ/
+		bite /bˈaɪ̯t/ - beißa /bˈəi̯sa/
+		beam /bˈim/ - Boom /bˈoːm/
+		bone /bˈoʊ̯n/ - Boi /bˈɔe̯/
+		barrow /bˈæɹoʊ̯/ - Berg /bˈʌɡ/
+		bear /bˈɛɚ/ - Bär /bˈɛːʕ/
+		better /bˈɛɾɚ/ - bessr /bˈɛsʌ/
+		bid /bˈɪd/ - bidda /bˈɪda/
+		book /bˈʊk/ - Buach /bˈuə̯x/
+		drive /dɹˈaɪ̯v/ - dreiba /dʁˈəi̯ba/
+		dream /dɹˈim/ - draima /dʁˈae̯ma/
+		dream /dɹˈim/ - Draum /dʁˈao̯m/
+		drink /dɹˈɪŋk/ - dringa /dʁˈɪŋɡa/
+		day /dˈeɪ̯/ - Dag /dˈaːɡ/
+		deep /dˈip/ - diaf /dˈiə̯f/
+		dear /dˈiɚ/ - deier /dˈəi̯ʌ/
+		daughter /dˈɑtɚ/ - Dochdr /dˈɔxdʌ/
+		fly /flˈaɪ̯/ - fliaga /flˈiə̯ɡa/
+		flesh /flˈɛʃ/ - Floisch /flˈɔe̯ʃ/
+		friend /fɹˈɛnd/ - Freind /fʁˈae̯nd/
+		fresh /fɹˈɛʃ/ - frisch /fʁˈiʃ/
+		five /fˈaɪ̯v/ - femf /fˈɛmf/
+		fowl /fˈaʊ̯ɫ/ - Vogl /fˈoːɡl̩/
+		feet /fˈit/ - Fiaß /fˈiə̯s/
+		feel /fˈiɫ/ - fiehla /fˈiːla/
+		fox /fˈɑks/ - Fuchs /fˈuks/
+		follow /fˈɑloʊ̯/ - folga /fˈolɡa/
+		father /fˈɑðɚ/ - Vaddr /fˈadʌ/
+		four /fˈɔɹ/ - vier /fˈiʕ/
+		feather /fˈɛðɚ/ - Fädr /fˈɛːdʌ/
+		finger /fˈɪŋɡɚ/ - Fengr /fˈeŋʌ/
+		fish /fˈɪʃ/ - Fisch /fˈiʃ/
+		foot /fˈʊt/ - Fuaß /fˈuə̯s/
+		full /fˈʊɫ/ - voll /fˈol/
+		high /hˈaɪ̯/ - hauch /hˈao̯x/
+		hide /hˈaɪ̯d/ - Haud /hˈao̯d/
+		house /hˈaʊ̯s/ - Haus /hˈao̯s/
+		hear /hˈiɚ/ - höra /hˈeːʁa/
+		holy /hˈoʊ̯li/ - heilig /hˈae̯lɪɡ/
+		home /hˈoʊ̯m/ - hoim /hˈɔe̯m/
+		hand /hˈænd/ - Haad /hˈaːd/
+		have /hˈæv/ - hann /hˈan/
+		heart /hˈɑɹt/ - Herz /hˈeʕʦ/
+		horse /hˈɔɹs/ - Ross /ʁˈos/
+		head /hˈɛd/ - Kopf /kʰˈɔp͡f/
+		hare /hˈɛɚ/ - Has /hˈaːs/
+		hair /hˈɛɚ/ - Hoor /hˈɔːʕ/
+		honey /hˈʌni/ - Honig /hˈoːnɪɡ/
+		hunger /hˈʌŋɡɚ/ - Hongr /hˈoŋʌ/
+		year /jˈiɚ/ - Johr /jˈɔːʕ/
+		young /jˈʌŋ/ - jong /jˈoŋ/
+		cow /kʰˈaʊ̯/ - Kuah /kʰˈuə̯/
+		cold /kʰˈoʊ̯ɫd/ - kald /kʰˈald/
+		calf /kʰˈæf/ - Kalb /kʰˈalb/
+		king /kʰˈɪŋ/ - Keenig /kʰˈeːniɡ/
+		louse /lˈaʊ̯s/ - Laus /lˈao̯s/
+		leap /lˈip/ - laufa /lˈao̯fa/
+		laugh /lˈæf/ - lacha /lˈaxa/
+		land /lˈænd/ - Land /lˈand/
+		long /lˈɑŋ/ - lang /lˈaŋ/
+		liver /lˈɪvɚ/ - Läbr /lˈɛːbʌ/
+		mice /mˈaɪ̯s/ - Meis /mˈae̯s/
+		mouth /mˈaʊ̯θ/ - Maul /mˈao̯l/
+		me /mˈi/ - mi /mˈi/
+		moon /mˈun/ - Mond /mˈond/
+		man /mˈæn/ - Mo /mˈɔː/
+		milk /mˈɪɫk/ - Milch /mˈilç/
+		mother /mˈʌðɚ/ - Muddr /mˈudʌ/
+		nine /nˈaɪ̯n/ - nein /nˈae̯n/
+		night /nˈaɪ̯t/ - Nachd /nˈaxd/
+		nail /nˈeɪ̯ɫ/ - Nagl /nˈaːɡl̩/
+		needle /nˈidɫ̩/ - Nodl /nˈɔːdl̩/
+		nose /nˈoʊ̯z/ - Nos /nˈɔːs/
+		new /nˈu/ - nei /nˈəi̯/
+		slay /slˈeɪ̯/ - schlaga /ʃlˈaːɡa/
+		sleep /slˈip/ - schlofa /ʃlˈɔːfa/
+		speech /spˈiʧ/ - Schbroch /ʃb̥ʁˈɔːx/
+		stool /stˈuɫ/ - Schduhl /ʃdˈuːl/
+		sweet /swˈit/ - siaß /sˈiə̯s/
+		swart /swˈɔɹt/ - schwarz /ʃʋˈaʕʦ/
+		swim /swˈɪm/ - schwemma /ʃʋˈema/
+		say /sˈeɪ̯/ - saga /sˈaːɡa/
+		soul /sˈoʊ̯ɫ/ - Seel /sˈeːl/
+		salt /sˈɑɫt/ - Salz /sˈalʦ/
+		seven /sˈɛvən/ - sieba /sˈiːba/
+		six /sˈɪks/ - seggs /sˈeɡs/
+		sister /sˈɪstɚ/ - Schweschdr /ʃʋˈɛʃdʌ/
+		sit /sˈɪt/ - sitza /sˈiʦa/
+		sing /sˈɪŋ/ - singa /sˈɪŋa/
+		twenty /tʰwˈɛnti/ - zwanzg /ʦʋˈanʦɡ/
+		twelve /tʰwˈɛɫv/ - zwelf /ʦʋˈelf/
+		tide /tʰˈaɪ̯d/ - Zeid /ʦˈəi̯d/
+		tooth /tʰˈuθ/ - Zah /ʦˈaː/
+		ten /tʰˈɛn/ - zeah /ʦˈeə̯/
+		tongue /tʰˈʌŋ/ - Zong /ʦˈoŋ/
+		wife /wˈaɪ̯f/ - Weib /ʋˈəi̯b/
+		way /wˈeɪ̯/ - Wäg /ʋˈɛːɡ/
+		water /wˈɑɾɚ/ - Wassr /ʋˈasʌ/
+		warm /wˈɔɹm/ - warm /ʋˈaʕm/
+		weather /wˈɛðɚ/ - Weddr /ʋˈɛdʌ/
+		word /wˈɝd/ - Wort /ʋˈoʕt/
+		wind /wˈɪnd/ - Weed /ʋˈeːd/
+		wish /wˈɪʃ/ - winscha /ʋˈɪnʃa/
+		wool /wˈʊɫ/ - Wolle /ʋˈole/
+		wolf /wˈʊɫf/ - Wolf /ʋˈolf/
+		thou /ðˈaʊ̯/ - du /dˈuː/
+		eleven /əlˈɛvən/ - älf /ˈɛlf/
+		great /ɡɹˈeɪ̯t/ - groß /ɡʁˈoːs/
+		goat /ɡˈoʊ̯t/ - Goiß /ɡˈɔe̯s/
+		gold /ɡˈoʊ̯ɫd/ - Gold /ɡˈold/
+		goose /ɡˈus/ - Gaas /ɡˈaːs/
+		god /ɡˈɑd/ - Gott /ɡˈɔt/
+		good /ɡˈʊd/ - guad /ɡˈuə̯d/
+		light /ɫˈaɪ̯t/ - Lichd /lˈiçd/
+		light /ɫˈaɪ̯t/ - leichd /lˈəi̯çd/
+		right /ɹˈaɪ̯t/ - rechd /ʁˈɛxd/
+		red /ɹˈɛd/ - rod /ʁˈoːd/
+		ring /ɹˈɪŋ/ - Reng /ʁˈeŋ/
+		rich /ɹˈɪʧ/ - reich /ʁˈəi̯ç/
+		sheep /ʃˈip/ - Schof /ʃˈoːf/
+		sharp /ʃˈɑɹp/ - scharf /ʃˈaʕf/
+		ship /ʃˈɪp/ - Schiff /ʃˈif/
+		shit /ʃˈɪt/ - Scheiß /ʃˈəi̯s/
+		cheese /ʧˈiz/ - Käs /kʰˈɛːs/
+		church /ʧˈɝʧ/ - Kirch /kʰˈʌç/
+		eye /ˈaɪ̯/ - Aug /ˈao̯ɡ/
+		I /ˈaɪ̯/ - i /ˈi/
+		ice /ˈaɪ̯s/ - Eis /ˈəi̯s/
+		owl /ˈaʊ̯l̩/ - Eil /ˈae̯l/
+		ape /ˈeɪ̯p/ - Aff /ˈaf/
+		eight /ˈeɪ̯t/ - achd /ˈaxd/
+		oak /ˈoʊ̯k/ - Oich /ˈɔe̯ç/
+		old /ˈoʊ̯ɫd/ - ald /ˈald/
+		apple /ˈæpɫ̩/ - Abfl /ˈab̥͡fl̩/
+		ash /ˈæʃ/ - Äsch /ˈɛʃ/
+		all /ˈɑɫ/ - älle /ˈɛle/
+		egg /ˈɛɡ/ - Oi /ˈɔe̯/
+		edge /ˈɛʤ/ - Egg /ˈɛɡ/
+		earth /ˈɝθ/ - Ärde /ˈɛʕde/
+		in /ˈɪn/ - en /ˈen/
+		other /ˈʌðɚ/ - andr /ˈandʌ/
+		three /θɹˈi/ - drei /dʁˈae̯/
+		thousand /θˈaʊ̯zn̩d/ - dausad /dˈao̯sɐd/
+		thank /θˈeɪ̯ŋk/ - danga /dˈaŋɡa/
+		thief /θˈif/ - Diab /dˈiə̯b/
+		thorn /θˈɔɹn/ - Dorn /dˈɔʕn/
+		thick /θˈɪk/ - digg /dˈiɡ/
+		thunder /θˈʌndɚ/ - Donndr /dˈondʌ/
+
+Final disqualified:
+		bee /bˈi/ - Imm /ˈim/
+		quean /kʰwˈin/ - Frau /fʁˈao̯/
+		tree /tʰɹˈi/ - Boom /bˈoːm/
+		we /wˈi/ - mir /mˈiʌ/
+		one /wˈʌn/ - ois /ˈɔe̯s/
+		rain /ɹˈeɪ̯n/ - Rega /ʁˈeːɡa/
+		ear /ˈiɚ/ - Ohr /ˈoːʕ/
+
+
+-------------------
+
