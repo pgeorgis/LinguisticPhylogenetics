@@ -1,10 +1,10 @@
 VOWELS
-/ɑ/ (0.038)
+/ɑ/ (0.037)
 	<auga> /ˈɑu̯ɣɑ/ "eye_NOUN"
 	<kunna> /kʰˈunːɑ/ "can_VERB"
 	<hunang> /hˈunɑŋɡ/ "honey_NOUN"
 
-/ˈɑ/ (0.036)
+/ˈɑ/ (0.035)
 	<kaldr> /kʰˈɑldr/ "cold_ADJ"
 	<vatn> /vˈɑtn/ "water_NOUN"
 	<þakka> /θˈɑkːɑ/ "thank_VERB"
@@ -39,10 +39,10 @@ VOWELS
 	<ferskr> /fˈerskr/ "fresh_ADJ"
 	<ek> /ˈek/ "I_PRON"
 
-/ˈi/ (0.014)
-	<fingr> /fˈiŋɡr/ "finger_NOUN"
+/ˈi/ (0.015)
+	<finna> /fˈinːa/ "find_VERB"
 	<vindr> /vˈindr/ "wind_NOUN"
-	<svimma> /svˈimːɑ/ "swim_VERB"
+	<sitja> /sˈitjɑ/ "sit_VERB"
 
 /ˈiː/ (0.014)
 	<svín> /svˈiːn/ "swine_NOUN"
@@ -74,24 +74,24 @@ VOWELS
 	<hǫfuð> /hˈɔvuð/ "head_NOUN"
 	<bjǫrn> /bjˈɔrn/ "bear_NOUN"
 
+/a/ (0.008)
+	<ugla> /ˈuɡla/ "owl_NOUN"
+	<kona> /kʰˈoːna/ "woman_NOUN"
+	<fylgja> /fˈylɟa/ "follow_VERB"
+
 /u/ (0.008)
-	<níu> /nˈiːu/ "nine_NUM"
-	<tíu> /tʰˈiːu/ "ten_NUM"
+	<þúsund> /θˈuːsund/ "thousand_NUM"
 	<ellifu> /ˈelːivu/ "eleven_NUM"
+	<hǫfuð> /hˈɔvuð/ "head_NOUN"
 
 /ˈy/ (0.008)
-	<fylgja> /fˈylɟa/ "follow_VERB"
+	<syngja> /sˈyŋɟɑ/ "sing_VERB"
+	<bryggja> /brˈyɟːɑ/ "bridge_NOUN"
 	<systir> /sˈystir/ "sister_NOUN"
-	<þykkr> /θˈykːr/ "thick_ADJ"
-
-/a/ (0.007)
-	<kona> /kʰˈoːna/ "woman_NOUN"
-	<átta> /ˈɑːtːa/ "eight_NUM"
-	<dreyma> /drˈøy̯ma/ "dream_VERB"
 
 /ˈɑu̯/ (0.007)
-	<rauðr> /rˈɑu̯ðr/ "red_ADJ"
 	<auga> /ˈɑu̯ɣɑ/ "eye_NOUN"
+	<rauðr> /rˈɑu̯ðr/ "red_ADJ"
 	<hlaupa> /l̥ˈɑu̯pɑ/ "leap_VERB"
 
 /ˈeː/ (0.007)
@@ -173,29 +173,29 @@ CONSONANTS
 	<djúpr> /djˈuːpr/ "deep_ADJ"
 	<drífa> /drˈiːva/ "drive_VERB"
 
+/f/ (0.023)
+	<frjósa> /frjˈoːsɑ/ "freeze_VERB"
+	<fljúga> /fljˈuːɣɑ/ "fly_VERB"
+	<frændi> /frˈɛndi/ "friend_NOUN"
+
 /b/ (0.023)
-	<lamb> /lˈɑmb/ "lamb_NOUN"
 	<brjóst> /brjˈɒu̯st/ "breast_NOUN"
-	<berg> /bˈɛrɣ/ "mountain_NOUN"
+	<barn> /bˈɑrn/ "child_NOUN_NEU"
+	<bein> /bˈɛi̯n/ "bone_NOUN"
 
 /j/ (0.023)
-	<kjǫt> /cʰjˈɔt/ "meat_NOUN"
-	<biðja> /bˈiðjɑ/ "request_VERB"
-	<frjósa> /frjˈoːsɑ/ "freeze_VERB"
-
-/f/ (0.022)
-	<frændi> /frˈɛndi/ "friend_NOUN"
-	<fluga> /flˈuɣɑ/ "housefly_NOUN"
-	<fogl> /fˈoɣl/ "bird_NOUN_MASC"
+	<þjófr> /θjˈoːvr/ "thief_NOUN"
+	<sjau> /sjˈɑu̯/ "seven_NUM"
+	<snjór> /snjˈoːr/ "snow_NOUN"
 
 /m/ (0.022)
+	<armr> /ˈɑrmr/ "arm_NOUN"
 	<móðir> /mˈoːðir/ "mother_NOUN"
 	<marr> /mˈɑrː/ "sea_NOUN"
-	<heimr> /hˈɛi̯mr/ "home_NOUN"
 
 /ɡ/ (0.02)
+	<gull> /ɡˈulː/ "gold_NOUN_NEU"
 	<tunga> /tʰˈuŋɡɑ/ "tongue_NOUN"
-	<gulr> /ɡˈulr/ "yellow_ADJ"
 	<gás> /ɡˈɑːs/ "goose_NOUN"
 
 /h/ (0.02)
@@ -208,17 +208,17 @@ CONSONANTS
 	<fiskr> /fˈiskr/ "fish_NOUN"
 	<mjǫlk> /mjˈɔlk/ "milk_NOUN_FEM"
 
-/ɣ/ (0.014)
-	<berg> /bˈɛrɣ/ "mountain_NOUN"
-	<auga> /ˈɑu̯ɣɑ/ "eye_NOUN"
-	<vegr> /vˈeɣr/ "way_NOUN"
-
-/nː/ (0.013)
-	<einn> /ˈɛi̯nː/ "one_NUM"
+/nː/ (0.014)
 	<annarr> /ˈɑnːɑrː/ "other_ADJ"
-	<aldinn> /ˈɑldinː/ "old_ADJ"
+	<menn> /mˈɛnː/ "men_NOUN"
+	<tǫnn> /tʰˈɔnː/ "tooth_NOUN"
 
-/ŋ/ (0.013)
+/ɣ/ (0.014)
+	<heilagr> /hˈɛi̯lɑɣr/ "holy_ADJ"
+	<fluga> /flˈuɣɑ/ "housefly_NOUN"
+	<fljúga> /fljˈuːɣɑ/ "fly_VERB"
+
+/ŋ/ (0.012)
 	<hringr> /r̥ˈiŋɡr/ "ring_NOUN"
 	<langr> /lˈɑŋɡr/ "long_ADJ"
 	<kyklingr> /cʰˈykliŋɡr/ "chicken_NOUN"

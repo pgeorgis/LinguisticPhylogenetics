@@ -1,7 +1,7 @@
 VOWELS
-/ə/ (0.047)
+/ə/ (0.048)
 	<esse> /ˈɛsə/ "eat_VERB"
-	<dausend> /dˈaʊ̯sənt/ "thousand_NUM"
+	<danke> /dˈaŋkə/ "thank_VERB"
 	<draame> /dɾˈɔːmə/ "dream_VERB"
 
 /ˈa/ (0.039)
@@ -14,9 +14,9 @@ VOWELS
 	<Wedder> /ʋˈɛdɑ/ "weather_NOUN"
 	<Schtaern> /ʃtˈɛːɑn/ "star_NOUN"
 
-/ˈɪ/ (0.033)
-	<Wind> /ʋˈɪnt/ "wind_NOUN"
-	<finf> /fˈɪnf/ "five_NUM"
+/ˈɪ/ (0.034)
+	<Ding> /dˈɪŋ/ "thing_NOUN"
+	<Fisch> /fˈɪʃ/ "fish_NOUN"
 	<drinke> /dɾˈɪŋkə/ "drink_VERB"
 
 /ˈeː/ (0.025)
@@ -95,35 +95,35 @@ CONSONANTS
 	<Seel> /sˈeːl/ "soul_NOUN"
 	<gehl> /ɡˈeːl/ "yellow_ADJ"
 
-/t/ (0.056)
+/t/ (0.055)
 	<Hand> /hˈant/ "hand_NOUN_FEM"
 	<kalt> /kʰˈalt/ "cold_ADJ"
 	<Land> /lˈant/ "land_NOUN"
 
-/n/ (0.054)
-	<Schnee> /ʃnˈeː/ "snow_NOUN"
-	<Naas> /nˈɔːs/ "nose_NOUN"
-	<Wind> /ʋˈɪnt/ "wind_NOUN"
+/n/ (0.055)
+	<sehne> /sˈeːnə/ "see_VERB"
+	<Nadd> /nˈat/ "north_NOUN"
+	<uns> /ˈʊns/ "us_PRON"
 
 /s/ (0.053)
 	<heess> /hˈeːs/ "hot_ADJ"
 	<Naas> /nˈɔːs/ "nose_NOUN"
 	<Maus> /mˈaʊ̯s/ "mouse_NOUN_FEM"
 
-/d/ (0.044)
+/d/ (0.043)
 	<drei> /dɾˈaɪ̯/ "three_NUM"
 	<Dunner> /dˈʊnɑ/ "thunder_NOUN"
 	<Dieb> /dˈiːp/ "thief_NOUN"
 
-/ɾ/ (0.041)
-	<Brick> /bɾˈɪk/ "bridge_NOUN"
-	<drei> /dɾˈaɪ̯/ "three_NUM"
-	<Graas> /ɡɾˈaːs/ "grass_NOUN_NEU"
+/f/ (0.042)
+	<dief> /dˈiːf/ "deep_ADJ"
+	<schlofe> /ʃlˈoːfə/ "sleep_VERB"
+	<Volk> /fˈɔlk/ "folk_NOUN"
 
-/f/ (0.041)
-	<Offe> /ˈɔfə/ "oven_NOUN"
+/ɾ/ (0.041)
 	<scharef> /ʃˈaːɾəf/ "sharp_ADJ"
-	<finf> /fˈɪnf/ "five_NUM"
+	<Rauch> /ɾˈaʊ̯x/ "smoke_NOUN"
+	<frei> /fɾˈaɪ̯/ "free_ADJ"
 
 /ʃ/ (0.035)
 	<scharef> /ʃˈaːɾəf/ "sharp_ADJ"
@@ -150,7 +150,7 @@ CONSONANTS
 	<Harn> /hˈaːn/ "horn_NOUN"
 	<Hunnich> /hˈʊnɪç/ "honey_NOUN"
 
-/ç/ (0.021)
+/ç/ (0.02)
 	<Recht> /ɾˈɛçt/ "right_ADJ"
 	<ich> /ˈɪç/ "I_PRON"
 	<leicht> /lˈaɪ̯çt/ "light_ADJ"

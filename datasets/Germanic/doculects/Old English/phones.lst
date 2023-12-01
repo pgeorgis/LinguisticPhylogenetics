@@ -1,18 +1,18 @@
 VOWELS
-/e/ (0.041)
+/e/ (0.04)
 	<drȳġe> /drˈyːje/ "dry_ADJ"
 	<wæter> /wˈæter/ "water_NOUN"
 	<ċīese> /ʧˈiːy̯ze/ "cheese_NOUN"
 
-/ɑ/ (0.035)
-	<ġiefan> /jˈiy̯vɑn/ "give_VERB"
+/ɑ/ (0.036)
+	<frēosan> /frˈeːo̯zɑn/ "freeze_VERB"
 	<drīfan> /drˈiːvɑn/ "drive_VERB"
-	<swimman> /swˈimːɑn/ "swim_VERB"
+	<steora> /stˈeo̯rːɑ/ "star_NOUN"
 
-/ˈi/ (0.026)
-	<wind> /wˈind/ "wind_NOUN"
+/ˈi/ (0.027)
+	<þing> /θˈiŋɡ/ "thing_NOUN"
+	<pliht> /plˈiçt/ "plight_NOUN"
 	<biddan> /bˈidːɑn/ "request_VERB"
-	<riht> /rˈiçt/ "right_ADJ"
 
 /ˈeːo̯/ (0.019)
 	<cnēow> /knˈeːo̯w/ "knee_NOUN"
@@ -29,17 +29,17 @@ VOWELS
 	<gold> /ɡˈoɫd/ "gold_NOUN_NEU"
 	<norþ> /nˈorθ/ "north_NOUN"
 
-/ˈe/ (0.016)
+/ˈe/ (0.015)
 	<weġ> /wˈej/ "way_NOUN"
 	<cwene> /kwˈene/ "woman_NOUN"
 	<bera> /bˈerɑ/ "bear_NOUN"
 
-/ˈu/ (0.015)
+/ˈu/ (0.014)
 	<wulf> /wˈuɫf/ "wolf_NOUN"
 	<sunu> /sˈunu/ "son_NOUN"
 	<huniġ> /hˈunij/ "honey_NOUN"
 
-/ˈɑː/ (0.014)
+/ˈɑː/ (0.013)
 	<stān> /stˈɑːn/ "stone_NOUN"
 	<gāt> /ɡˈɑːt/ "goat_NOUN"
 	<snāw> /snˈɑːw/ "snow_NOUN"
@@ -139,27 +139,27 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.077)
+/n/ (0.079)
 	<drīfan> /drˈiːvɑn/ "drive_VERB"
-	<slǣpan> /slˈæːpɑn/ "sleep_VERB"
-	<þūsend> /θˈuːzend/ "thousand_NUM"
+	<slēan> /slˈæːɑ̯n/ "slay_VERB"
+	<þorn> /θˈorn/ "thorn_NOUN"
 
-/r/ (0.075)
+/r/ (0.074)
 	<dīere> /dˈiːy̯re/ "dear_ADJ"
 	<ēare> /ˈæːɑ̯re/ "ear_NOUN"
 	<wæter> /wˈæter/ "water_NOUN"
 
-/d/ (0.05)
-	<gold> /ɡˈoɫd/ "gold_NOUN_NEU"
-	<frēond> /frˈeːo̯nd/ "friend_NOUN"
-	<blæd> /blˈæd/ "leaf_NOUN_NEU"
+/d/ (0.051)
+	<god> /ɡˈod/ "god_NOUN"
+	<ǣled> /ˈæːled/ "fire_NOUN"
+	<land> /lˈɑnd/ "land_NOUN"
 
 /t/ (0.048)
 	<bītan> /bˈiːtɑn/ "bite_VERB"
 	<stōl> /stˈoːl/ "stool_NOUN"
 	<sweart> /swˈæɑ̯rt/ "black_ADJ"
 
-/s/ (0.046)
+/s/ (0.045)
 	<seofon> /sˈeo̯von/ "seven_NUM"
 	<swīn> /swˈiːn/ "swine_NOUN"
 	<swēte> /swˈeːte/ "sweet_ADJ"
@@ -169,15 +169,15 @@ CONSONANTS
 	<flēoge> /flˈeːo̯ɣe/ "housefly_NOUN"
 	<lang> /lˈɑŋɡ/ "long_ADJ"
 
-/w/ (0.032)
-	<nīewe> /nˈiːy̯we/ "new_ADJ"
-	<twā> /twˈɑː/ "two_NUM"
-	<snāw> /snˈɑːw/ "snow_NOUN"
+/f/ (0.032)
+	<fēlan> /fˈeːlɑn/ "feel_VERB"
+	<fōt> /fˈoːt/ "foot_NOUN"
+	<findan> /fˈindɑn/ "find_VERB"
 
-/f/ (0.031)
-	<fugol> /fˈuɣol/ "bird_NOUN_MASC"
-	<lēaf> /lˈæːɑ̯f/ "leaf_NOUN"
-	<fet> /fˈeːt/ "feet_NOUN"
+/w/ (0.032)
+	<sweart> /swˈæɑ̯rt/ "black_ADJ"
+	<wind> /wˈind/ "wind_NOUN"
+	<sweostor> /swˈeo̯stor/ "sister_NOUN"
 
 /m/ (0.024)
 	<nama> /nˈɑmɑ/ "name_NOUN"
@@ -209,12 +209,12 @@ CONSONANTS
 	<þūsend> /θˈuːzend/ "thousand_NUM"
 	<þēodisċ> /θˈeːo̯diʃ/ "Teutonic_ADJ"
 
-/j/ (0.015)
+/j/ (0.014)
 	<huniġ> /hˈunij/ "honey_NOUN"
 	<ġiest> /jˈiy̯st/ "guest_NOUN"
 	<twēntiġ> /twˈeːntij/ "twenty_NUM"
 
-/ɫ/ (0.014)
+/ɫ/ (0.013)
 	<eald> /ˈæɑ̯ɫd/ "old_ADJ"
 	<næġl> /nˈæjɫ/ "fingernail_NOUN"
 	<wull> /wˈuɫ/ "wool_NOUN_FEM"

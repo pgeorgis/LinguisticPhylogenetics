@@ -1,7 +1,7 @@
 VOWELS
-/ə/ (0.049)
+/ə/ (0.05)
 	<äße> /ˈɛːsə/ "eat_VERB"
-	<wünsche> /ʋˈʏnʃə/ "wish_VERB"
+	<zwällef> /ʦʋˈɛləf/ "twelve_NUM"
 	<könne> /kˈœnə/ "can_VERB"
 
 /ɐ/ (0.046)
@@ -49,35 +49,35 @@ VOWELS
 	<Kopp> /kˈɔp/ "head_NOUN"
 	<Dochter> /dˈɔxtɐ/ "daughter_NOUN"
 
-/ˈɪ/ (0.015)
+/ˈɪ/ (0.014)
 	<ich> /ˈɪɕ/ "I_PRON"
 	<Dinge> /dˈɪŋə/ "thing_NOUN"
 	<Sigg> /zˈɪk/ "side_NOUN"
 
-/ˈuː/ (0.015)
+/ˈuː/ (0.014)
 	<Brut> /bʀˈuːt/ "bread_NOUN"
 	<Luus> /lˈuːs/ "louse_NOUN"
 	<jruß> /jʀˈuːs/ "great_ADJ"
 
-/ˈe/ (0.011)
-	<setze> /zˈeʦə/ "sit_VERB"
+/ˈe/ (0.012)
 	<Scheff> /ʃˈef/ "ship_NOUN"
 	<drenke> /dʀˈeŋkə/ "drink_VERB"
+	<en> /ˈen/ "in_PREP"
 
 /ˈo/ (0.009)
-	<Donner> /dˈonɐ/ "thunder_NOUN"
 	<Honk> /hˈoŋk/ "dog_NOUN"
 	<hongert> /hˈoŋɐt/ "hundred_NUM"
+	<Zong> /ʦˈoŋ/ "tongue_NOUN"
 
 /ˈœ/ (0.009)
-	<Frönk> /fʀˈœŋk/ "friend_NOUN"
 	<Möck> /mˈœk/ "midge_NOUN"
 	<könne> /kˈœnə/ "can_VERB"
+	<fönnef> /fˈœnəf/ "five_NUM"
 
 /ˈøː/ (0.009)
-	<Ööl> /ˈøːl/ "eel_NOUN"
 	<drööme> /dʀˈøːmə/ "dream_VERB"
 	<jrön> /jʀˈøːn/ "green_ADJ"
+	<söß> /zˈøːs/ "sweet_ADJ"
 
 /ˈyː/ (0.008)
 	<Füür> /fˈyːɐ/ "fire_NOUN"
@@ -118,7 +118,7 @@ VOWELS
 
 
 CONSONANTS
-/l/ (0.061)
+/l/ (0.06)
 	<voll> /fˈɔl/ "full_ADJ"
 	<Leech> /lˈeːɕ/ "light_NOUN"
 	<Levver> /lˈɛvɐ/ "liver_NOUN"
@@ -128,22 +128,22 @@ CONSONANTS
 	<Nas> /nˈaːs/ "nose_NOUN"
 	<Doon> /dˈoːn/ "thorn_NOUN"
 
-/f/ (0.047)
-	<Fleeg> /flˈeːɕ/ "housefly_NOUN"
+/f/ (0.049)
+	<voll> /fˈɔl/ "full_ADJ"
 	<Fedder> /fˈɛdɐ/ "feather_NOUN"
-	<Scheff> /ʃˈef/ "ship_NOUN"
+	<Schof> /ʃˈoːf/ "sheep_NOUN"
 
 /d/ (0.041)
 	<deck> /dˈek/ "thick_ADJ"
 	<Fedder> /fˈɛdɐ/ "feather_NOUN"
 	<Broder> /bʀˈoːdɐ/ "brother_NOUN"
 
-/k/ (0.04)
+/k/ (0.039)
 	<danke> /dˈaŋkə/ "thank_VERB"
 	<kalt> /kˈalt/ "cold_ADJ"
 	<Künning> /kˈʏnɪŋ/ "king_NOUN"
 
-/t/ (0.04)
+/t/ (0.039)
 	<Tron> /tʀˈoːn/ "tear_NOUN_FEM"
 	<hongert> /hˈoŋɐt/ "hundred_NUM"
 	<jot> /jˈoːt/ "good_ADJ"
@@ -178,13 +178,13 @@ CONSONANTS
 	<schwatz> /ʃʋˈaʦ/ "black_ADJ"
 	<zwee> /ʦʋˈeː/ "two_NUM"
 
-/ŋ/ (0.024)
+/ŋ/ (0.025)
+	<Wank> /ʋˈaŋk/ "wind_NOUN"
 	<jonk> /jˈoŋk/ "young_NOUN"
-	<lank> /lˈaŋk/ "long_ADJ"
-	<danke> /dˈaŋkə/ "thank_VERB"
+	<Künning> /kˈʏnɪŋ/ "king_NOUN"
 
 /ɕ/ (0.022)
-	<Wääch> /ʋˈɛːɕ/ "way_NOUN"
+	<Flich> /flˈɪɕ/ "plight_NOUN"
 	<Eech> /ˈeːɕ/ "oak_NOUN_FEM"
 	<riech> /ʀˈiːɕ/ "rich_ADJ"
 
@@ -203,7 +203,7 @@ CONSONANTS
 	<schwatz> /ʃʋˈaʦ/ "black_ADJ"
 	<Zeck> /ʦˈɛk/ "time_NOUN"
 
-/j/ (0.015)
+/j/ (0.014)
 	<Johr> /jˈoːɐ/ "year_NOUN"
 	<Jott> /jˈɔt/ "god_NOUN"
 	<jonk> /jˈoŋk/ "young_NOUN"
@@ -213,7 +213,7 @@ CONSONANTS
 	<aach> /ˈaːx/ "eight_NUM"
 	<Naach> /nˈaːx/ "night_NOUN_FEM"
 
-/v/ (0.011)
+/v/ (0.01)
 	<drieve> /dʀˈiːvə/ "drive_VERB"
 	<Levver> /lˈɛvɐ/ "liver_NOUN"
 	<jevve> /jˈɛvə/ "give_VERB"

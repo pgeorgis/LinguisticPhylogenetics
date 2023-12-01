@@ -1,5 +1,5 @@
 VOWELS
-/ˈɪ/ (0.047)
+/ˈɪ/ (0.046)
 	<fish> /fˈɪʃ/ "fish_NOUN"
 	<dear> /dˈɪə/ "dear_ADJ"
 	<midge> /mˈɪʤ/ "midge_NOUN"
@@ -14,9 +14,9 @@ VOWELS
 	<other> /ˈɐðə/ "other_ADJ"
 	<hair> /hˈɛə/ "hair_NOUN"
 
-/ˈaɪ̯/ (0.034)
-	<wife> /wˈaɪ̯f/ "wife_NOUN"
-	<fire> /fˈaɪ̯ə/ "fire_NOUN"
+/ˈaɪ̯/ (0.035)
+	<white> /wˈaɪ̯t/ "white_ADJ"
+	<find> /fˈaɪ̯nd/ "find_VERB"
 	<drive> /dɹˈaɪ̯v/ "drive_VERB"
 
 /ˈe/ (0.031)
@@ -44,7 +44,7 @@ VOWELS
 	<nail> /nˈeɪ̯ɫ/ "fingernail_NOUN"
 	<say> /sˈeɪ̯/ "say_VERB"
 
-/ˈaʊ̯/ (0.016)
+/ˈaʊ̯/ (0.015)
 	<cow> /kʰˈaʊ̯/ "cow_NOUN"
 	<mouse> /mˈaʊ̯s/ "mouse_NOUN_FEM"
 	<fowl> /fˈaʊ̯ɫ/ "bird_NOUN_MASC"
@@ -97,50 +97,50 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.062)
-	<naked> /nˈeɪ̯kɪd/ "naked_ADJ"
+/n/ (0.063)
 	<quean> /kʰwˈiːn/ "woman_NOUN"
+	<moon> /mˈuːn/ "moon_NOUN"
 	<wind> /wˈɪnd/ "wind_NOUN"
 
-/d/ (0.057)
-	<bid> /bˈɪd/ "request_VERB"
-	<blade> /blˈeɪ̯d/ "leaf_NOUN_NEU"
-	<hound> /hˈaʊ̯nd/ "dog_NOUN"
+/d/ (0.058)
+	<red> /ɹˈed/ "red_ADJ"
+	<land> /lˈænd/ "land_NOUN"
+	<word> /wˈɜːd/ "word_NOUN"
 
-/s/ (0.056)
+/s/ (0.055)
+	<mice> /mˈaɪ̯s/ "mice_NOUN"
 	<seven> /sˈevən/ "seven_NUM"
 	<see> /sˈiː/ "see_VERB"
-	<swim> /swˈɪm/ "swim_VERB"
 
-/t/ (0.051)
+/t/ (0.05)
+	<what> /wˈɒt/ "what_PRON"
 	<stone> /stˈəʊ̯n/ "stone_NOUN"
 	<stool> /stˈuːɫ/ "stool_NOUN"
-	<root> /ɹˈuːt/ "root_NOUN_FEM"
 
-/f/ (0.04)
-	<four> /fˈɔː/ "four_NUM"
-	<leaf> /lˈiːf/ "leaf_NOUN"
-	<calf> /kʰˈɑːf/ "calf_NOUN"
+/f/ (0.041)
+	<full> /fˈʊɫ/ "full_ADJ"
+	<dwarf> /dwˈɔːf/ "dwarf_NOUN"
+	<wife> /wˈaɪ̯f/ "wife_NOUN"
 
 /w/ (0.035)
-	<whale> /wˈeɪ̯ɫ/ "whale_NOUN"
 	<twelve> /tʰwˈeɫv/ "twelve_NUM"
 	<quean> /kʰwˈiːn/ "woman_NOUN"
+	<word> /wˈɜːd/ "word_NOUN"
 
 /ɹ/ (0.035)
-	<three> /θɹˈiː/ "three_NUM"
 	<friend> /fɹˈend/ "friend_NOUN"
 	<grass> /ɡɹˈɑːs/ "grass_NOUN_NEU"
+	<right> /ɹˈaɪ̯t/ "right_ADJ"
 
 /l/ (0.031)
-	<sleep> /slˈiːp/ "sleep_VERB"
 	<fly> /flˈaɪ̯/ "fly_VERB"
 	<laugh> /lˈɑːf/ "laugh_VERB"
+	<louse> /lˈaʊ̯s/ "louse_NOUN"
 
 /m/ (0.031)
-	<name> /nˈeɪ̯m/ "name_NOUN"
 	<warm> /wˈɔːm/ "warm_ADJ"
 	<beam> /bˈiːm/ "tree_NOUN"
+	<worm> /wˈɜːm/ "worm_NOUN"
 
 /ɫ/ (0.028)
 	<light> /ɫˈaɪ̯t/ "light_NOUN"
@@ -152,7 +152,7 @@ CONSONANTS
 	<hare> /hˈɛə/ "hare_NOUN"
 	<head> /hˈed/ "head_NOUN"
 
-/b/ (0.025)
+/b/ (0.024)
 	<barrow> /bˈæɹəʊ̯/ "mountain_NOUN"
 	<bridge> /bɹˈɪʤ/ "bridge_NOUN"
 	<breast> /bɹˈest/ "breast_NOUN"
@@ -167,7 +167,7 @@ CONSONANTS
 	<egg> /ˈeɡ/ "egg_NOUN_NEU"
 	<goat> /ɡˈəʊ̯t/ "goat_NOUN"
 
-/k/ (0.016)
+/k/ (0.015)
 	<thick> /θˈɪk/ "thick_ADJ"
 	<reek> /ɹˈiːk/ "smoke_NOUN"
 	<thank> /θˈæŋk/ "thank_VERB"

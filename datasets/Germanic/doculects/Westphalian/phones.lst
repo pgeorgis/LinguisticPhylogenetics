@@ -9,10 +9,10 @@ VOWELS
 	<Arm> /ˈaɐm/ "arm_NOUN"
 	<Gast> /xˈas/ "guest_NOUN"
 
-/ˈɪ/ (0.027)
+/ˈɪ/ (0.028)
 	<drinken> /drˈɪŋkn̩/ "drink_VERB"
-	<dik> /dˈɪk/ "thick_ADJ"
 	<sitten> /sˈɪtn̩/ "sit_VERB"
+	<singen> /sˈɪŋ/ "sing_VERB"
 
 /ə/ (0.024)
 	<Träöne> /trˈœːnə/ "tear_NOUN_FEM"
@@ -144,9 +144,9 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.091)
+/n/ (0.092)
 	<Been> /bˈeːn/ "bone_NOUN"
-	<Dunner> /dˈʊnɐ/ "thunder_NOUN"
+	<dusend> /dˈuːzn̩d/ "thousand_NUM"
 	<Küken> /kˈyːkn̩/ "chicken_NOUN"
 
 /t/ (0.065)
@@ -154,7 +154,7 @@ CONSONANTS
 	<witt> /wˈɪt/ "white_ADJ"
 	<Tan> /tˈan/ "tooth_NOUN"
 
-/d/ (0.06)
+/d/ (0.059)
 	<du> /dˈuː/ "thou_PRON"
 	<Maond> /mˈɔːnd/ "moon_NOUN"
 	<Wind> /wˈɪnd/ "wind_NOUN"
@@ -169,27 +169,27 @@ CONSONANTS
 	<danken> /dˈaŋkn̩/ "thank_VERB"
 	<Kaise> /kˈaɪ̯zə/ "cheese_NOUN"
 
-/s/ (0.037)
-	<singen> /sˈɪŋ/ "sing_VERB"
-	<Hus> /hˈʊs/ "house_NOUN"
-	<Sand> /sˈand/ "sand_NOUN"
-
-/f/ (0.037)
+/f/ (0.038)
 	<fraisen> /frˈaɪ̯zn̩/ "freeze_VERB"
+	<Finger> /fˈɪŋɐ/ "finger_NOUN"
 	<flaigen> /flˈaɪ̯ŋ/ "fly_VERB"
-	<Frönd> /frˈønd/ "friend_NOUN"
+
+/s/ (0.036)
+	<Siet> /sˈiːt/ "side_NOUN"
+	<Solt> /sˈɔlt/ "salt_NOUN"
+	<Süster> /sˈʏstɐ/ "sister_NOUN"
 
 /r/ (0.034)
 	<Frönd> /frˈønd/ "friend_NOUN"
 	<gröön> /xrˈøːn/ "green_ADJ"
 	<fri> /frˈiː/ "free_ADJ"
 
-/m/ (0.033)
+/m/ (0.032)
 	<Baum> /bˈaʊ̯m/ "tree_NOUN"
 	<Mensk> /mˈɛnʃk/ "person_NOUN"
 	<Stuorm> /ʃtˈuːə̯m/ "storm_NOUN"
 
-/ʃ/ (0.033)
+/ʃ/ (0.032)
 	<wünsken> /wˈʏnʃkn̩/ "wish_VERB"
 	<düütsk> /dˈyːtʃk/ "Teutonic_ADJ"
 	<slaon> /ʃlˈɔːn/ "slay_VERB"

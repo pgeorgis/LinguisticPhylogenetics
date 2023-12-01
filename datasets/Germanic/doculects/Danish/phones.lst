@@ -1,7 +1,7 @@
 VOWELS
-/ə/ (0.058)
+/ə/ (0.059)
 	<kirke> /kʰˈiɐkə/ "church_NOUN_FEM"
-	<sidde> /sˈeð̞ˠə/ "sit_VERB"
+	<synge> /sˈøŋə/ "sing_VERB"
 	<byde> /b̥ˈyːð̞ˠə/ "bid_VERB"
 
 /ɐ/ (0.036)
@@ -9,27 +9,27 @@ VOWELS
 	<sort> /sˈoɐt/ "black_ADJ"
 	<fire> /fˈiːɐ/ "four_NUM"
 
+/ˈe/ (0.019)
+	<ting> /ʦʰˈeŋˀ/ "thing_NOUN"
+	<mælk> /mˈelˀk/ "milk_NOUN_FEM"
+	<vind> /ʋˈenˀ/ "wind_NOUN"
+
 /ˈeˀ/ (0.019)
+	<en> /ˈeˀn/ "one_NUM"
+	<knæ> /kʰnˈeˀ/ "knee_NOUN"
 	<sne> /snˈeˀ/ "snow_NOUN"
-	<le> /lˈeˀ/ "laugh_VERB"
-	<sten> /stˈeˀn/ "stone_NOUN"
 
 /ˈɛ/ (0.019)
-	<bjerg> /b̥jˈɛɐˀw/ "mountain_NOUN"
-	<hjerte> /jˈɛɐtə/ "heart_NOUN"
-	<salt> /sˈɛlˀt/ "salt_NOUN"
-
-/ˈe/ (0.018)
-	<fisk> /fˈesk/ "fish_NOUN"
-	<drikke> /d̥ʁˈekə/ "drink_VERB"
-	<menneske> /mˈen̩skə/ "person_NOUN"
+	<elleve> /ˈɛlʋə/ "eleven_NUM"
+	<kalv> /kʰˈɛlˀv/ "calf_NOUN"
+	<hellig> /hˈɛli/ "holy_ADJ"
 
 /ˈa/ (0.017)
 	<al> /ˈal/ "all_ADJ"
 	<anden> /ˈanən/ "other_ADJ"
 	<vand> /ʋˈanˀ/ "water_NOUN"
 
-/ˈiˀ/ (0.016)
+/ˈiˀ/ (0.015)
 	<ti> /ʦʰˈiˀ/ "ten_NUM"
 	<bi> /b̥ˈiˀ/ "bee_NOUN"
 	<skid> /skˈiˀð̞ˠ/ "shit_NOUN"
@@ -203,10 +203,10 @@ CONSONANTS
 	<salt> /sˈɛlˀt/ "salt_NOUN"
 	<tysk> /ʦʰˈysk/ "Teutonic_ADJ"
 
-/n/ (0.053)
-	<tusind> /ʦʰˈuˀsn̩/ "thousand_NUM"
-	<nord> /nˈoɐˀ/ "north_NOUN"
-	<søn> /sˈœn/ "son_NOUN"
+/n/ (0.054)
+	<tjørn> /ʨˈœɐˀn/ "thorn_NOUN"
+	<ni> /nˈiˀ/ "nine_NUM"
+	<sne> /snˈeˀ/ "snow_NOUN"
 
 /l/ (0.045)
 	<æble> /ˈeːb̥lə/ "apple_NOUN"
@@ -233,15 +233,15 @@ CONSONANTS
 	<myg> /mˈyɡ̊/ "midge_NOUN"
 	<mus> /mˈuˀs/ "mice_NOUN"
 
-/t/ (0.025)
-	<let> /lˈɛt/ "light_ADJ"
-	<datter> /d̥ˈɛtɐ/ "daughter_NOUN"
-	<blomst> /b̥lˈʌmˀst/ "flower_NOUN"
+/f/ (0.026)
+	<fisk> /fˈesk/ "fish_NOUN"
+	<fødder> /fˈœð̞ˠɐ/ "feet_NOUN"
+	<finde> /fˈenə/ "find_VERB"
 
-/f/ (0.025)
-	<fod> /fˈoˀð̞ˠ/ "foot_NOUN"
-	<flyve> /flˈyːw/ "fly_VERB"
-	<fjer> /fjˈeˀɐ/ "feather_NOUN"
+/t/ (0.024)
+	<pligt> /pʰlˈeɡ̊t/ "plight_NOUN"
+	<magt> /mˈɑɡ̊t/ "might_NOUN"
+	<bryst> /b̥ʁˈœst/ "breast_NOUN"
 
 /j/ (0.023)
 	<fjer> /fjˈeˀɐ/ "feather_NOUN"
@@ -283,7 +283,7 @@ CONSONANTS
 	<tyv> /ʦʰˈyˀw/ "thief_NOUN"
 	<syv> /sˈyˀw/ "seven_NUM"
 
-/kʰ/ (0.016)
+/kʰ/ (0.015)
 	<kirke> /kʰˈiɐkə/ "church_NOUN_FEM"
 	<kød> /kʰˈœð̞ˠ/ "meat_NOUN"
 	<ko> /kʰˈoˀ/ "cow_NOUN"

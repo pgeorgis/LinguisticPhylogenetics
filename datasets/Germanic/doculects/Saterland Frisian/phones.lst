@@ -1,7 +1,7 @@
 VOWELS
 /ə/ (0.092)
 	<drieuwe> /drˈiːwə/ "drive_VERB"
-	<Troone> /trˈoːnə/ "tear_NOUN_FEM"
+	<swimme> /svˈɪmə/ "swim_VERB"
 	<Koolich> /kˈoːləx/ "calf_NOUN"
 
 /ˈoː/ (0.034)
@@ -34,15 +34,15 @@ VOWELS
 	<See> /sˈeː/ "sea_NOUN"
 	<beter> /bˈeːtər/ "better_ADJ"
 
-/ˈi/ (0.017)
-	<wiet> /vˈit/ "white_ADJ"
-	<Ies> /ˈis/ "ice_NOUN"
-	<iek> /ˈik/ "I_PRON"
-
-/ˈiː/ (0.015)
-	<Díert> /dˈiːrt/ "animal_NOUN"
+/ˈiː/ (0.016)
 	<Jíer> /jˈiːr/ "year_NOUN"
-	<Stíern> /stˈiːrn/ "star_NOUN"
+	<fíende> /fˈiːndə/ "find_VERB"
+	<Díert> /dˈiːrt/ "animal_NOUN"
+
+/ˈi/ (0.016)
+	<iek> /ˈik/ "I_PRON"
+	<wiet> /vˈit/ "white_ADJ"
+	<Skiet> /skˈit/ "shit_NOUN"
 
 /ˈɪ/ (0.015)
 	<Ring> /rˈɪŋ/ "ring_NOUN"
@@ -74,7 +74,7 @@ VOWELS
 	<Flaask> /flˈaːsk/ "flesh_NOUN"
 	<Haat> /hˈaːt/ "heart_NOUN"
 
-/ɪ/ (0.006)
+/ɪ/ (0.005)
 	<Bíerig> /bˈiːrɪx/ "mountain_NOUN"
 	<helig> /hˈɛlɪx/ "holy_ADJ"
 	<Köänig> /kˈœːnɪx/ "king_NOUN"
@@ -136,14 +136,14 @@ CONSONANTS
 	<Síes> /sˈiːs/ "cheese_NOUN"
 
 /n/ (0.06)
-	<Noud> /nˈoːu̯t/ "north_NOUN"
-	<tjoon> /tjˈoːn/ "ten_NUM"
-	<Moanske> /mˈɔːnskə/ "person_NOUN"
+	<njúgen> /njˈuːɣən/ "nine_NUM"
+	<Troone> /trˈoːnə/ "tear_NOUN_FEM"
+	<Ougend> /ˈoːu̯ɣənt/ "oven_NOUN"
 
-/d/ (0.054)
+/d/ (0.055)
 	<koold> /kˈoːld/ "cold_ADJ"
 	<Dood> /dˈoːt/ "death_NOUN"
-	<Sound> /sˈoːu̯nd/ "sand_NOUN"
+	<bidde> /bˈɪdə/ "request_VERB"
 
 /l/ (0.053)
 	<Blääd> /blˈɛːd/ "leaf_NOUN_NEU"
@@ -160,17 +160,17 @@ CONSONANTS
 	<Wíend> /vˈiːnd/ "wind_NOUN"
 	<Wurm> /vˈʊrm/ "worm_NOUN"
 
-/j/ (0.028)
-	<tjuk> /tjˈʊk/ "thick_ADJ"
-	<tonkje> /tˈɔŋkjə/ "thank_VERB"
-	<njúgen> /njˈuːɣən/ "nine_NUM"
+/f/ (0.029)
+	<frisk> /frˈɪsk/ "fresh_ADJ"
+	<frjoze> /frjˈoːzə/ "freeze_VERB"
+	<Foulk> /fˈoːu̯lk/ "folk_NOUN"
 
-/f/ (0.028)
-	<ful> /fˈʊl/ "full_ADJ"
-	<Finger> /fˈɪŋər/ "finger_NOUN"
-	<fräi> /frˈɛɪ̯/ "free_ADJ"
+/j/ (0.027)
+	<Jool> /jˈoːl/ "wheel_NOUN"
+	<foulgje> /fˈoːu̯lɣjə/ "follow_VERB"
+	<sjunge> /sjˈʊŋə/ "sing_VERB"
 
-/m/ (0.027)
+/m/ (0.026)
 	<Mon> /mˈɔn/ "man_NOUN"
 	<Íerm> /ˈiːrm/ "arm_NOUN"
 	<Loum> /lˈoːu̯m/ "lamb_NOUN"
@@ -205,7 +205,7 @@ CONSONANTS
 	<drinke> /drˈɪŋkə/ "drink_VERB"
 	<tonkje> /tˈɔŋkjə/ "thank_VERB"
 
-/z/ (0.006)
+/z/ (0.005)
 	<Muze> /mˈuːzə/ "mice_NOUN"
 	<Hoaze> /hˈɔːzə/ "hare_NOUN"
 	<duusend> /dˈuːzənd/ "thousand_NUM"

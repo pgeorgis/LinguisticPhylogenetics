@@ -104,7 +104,7 @@ class PhonCorrelator:
         # Logging
         self.outdir = self.lang1.family.phone_corr_dir
         self.pmi_log_dir, self.surprisal_log_dir = self.log_dirs()
-        self.align_log = defaultdict(lambda:defaultdict(lambda:set()))
+        self.align_log = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         self.logger = logger
         
     def langs(self, l1=None, l2=None):
@@ -1115,16 +1115,17 @@ class PhonCorrelator:
         for alignment in alignments:
             key = f'/{alignment.word1.ipa}/ - /{alignment.word2.ipa}/'
             align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
-            align_log[key].add(align_str)
+            align_log[key][align_str] += 1
     
     def _write_alignments_log(self, alignment_log, log_file):
         sorted_alignment_keys = sorted(alignment_log.keys())
         with open(log_file, 'w') as f:
             for key in sorted_alignment_keys:
                 f.write(f'{key}\n')
-                sorted_alignments = sorted(alignment_log[key])
-                for alignment in sorted_alignments:
-                    f.write(f'{alignment}\n')
+                sorted_alignments = dict_tuplelist(alignment_log[key])
+                for alignment, count in sorted_alignments:
+                    freq = count/sum(alignment_log[key].values())
+                    f.write(f'[{round(freq, 2)}] {alignment}\n')
                 f.write('\n-------------------\n\n')
     
     def _write_phon_corr_report(self, corr, outfile, label, n=5):

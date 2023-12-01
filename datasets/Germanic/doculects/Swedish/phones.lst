@@ -1,7 +1,7 @@
 VOWELS
-/a/ (0.052)
+/a/ (0.053)
 	<dricka> /drˈɪkːa/ "drink_VERB"
-	<stjärna> /ɧˈæːɳa/ "star_NOUN"
+	<sova> /sˈoːva/ "sleep_VERB"
 	<brygga> /brˈʏɡːa/ "bridge_NOUN"
 
 /ˈa/ (0.026)
@@ -9,12 +9,12 @@ VOWELS
 	<svart> /svˈaʈː/ "black_ADJ"
 	<sand> /sˈand/ "sand_NOUN"
 
-/ˈɛ/ (0.025)
+/ˈɛ/ (0.024)
 	<människa> /mˈɛnːɪɧa/ "person_NOUN"
 	<regn> /rˈɛŋn/ "rain_NOUN"
 	<berg> /bˈɛrj/ "mountain_NOUN"
 
-/ɛ/ (0.025)
+/ɛ/ (0.024)
 	<finger> /fˈɪŋːɛr/ "finger_NOUN"
 	<dotter> /dˈɔtːɛr/ "daughter_NOUN"
 	<syster> /sˈʏstɛr/ "sister_NOUN"
@@ -59,10 +59,10 @@ VOWELS
 	<ek> /ˈeːk/ "oak_NOUN_FEM"
 	<helig> /hˈeːlɪɡ/ "holy_ADJ"
 
-/ˈɪ/ (0.013)
-	<simma> /sˈɪmːa/ "swim_VERB"
+/ˈɪ/ (0.015)
+	<sitta> /sˈɪtːa/ "sit_VERB"
 	<kvinna> /kʰvˈɪnːa/ "woman_NOUN"
-	<ting> /tʰˈɪŋː/ "thing_NOUN"
+	<simma> /sˈɪmːa/ "swim_VERB"
 
 /ˈœ/ (0.012)
 	<fötter> /fˈœtːɛr/ "feet_NOUN"
@@ -142,12 +142,12 @@ CONSONANTS
 	<lätt> /lˈɛtː/ "light_ADJ"
 	<salt> /sˈalt/ "salt_NOUN"
 
-/d/ (0.047)
+/d/ (0.046)
 	<bjuda> /bjˈʉːda/ "bid_VERB"
 	<du> /dˈʉː/ "thou_PRON"
 	<blod> /blˈuːd/ "blood_NOUN"
 
-/n/ (0.047)
+/n/ (0.046)
 	<nio> /nˈiːʊ/ "nine_NUM"
 	<sand> /sˈand/ "sand_NOUN"
 	<knä> /kʰnˈɛː/ "knee_NOUN"
@@ -162,17 +162,17 @@ CONSONANTS
 	<get> /jˈeːt/ "goat_NOUN"
 	<sten> /stˈeːn/ "stone_NOUN"
 
-/ɡ/ (0.025)
-	<tjugo> /ɕˈʉːɡʊ/ "twenty_NUM"
-	<gud> /ɡˈʉːd/ "god_NOUN"
-	<grön> /ɡrˈøːn/ "green_ADJ"
-
-/f/ (0.025)
+/f/ (0.026)
 	<frände> /frˈɛndɛ/ "friend_NOUN"
+	<fyr> /fˈyːr/ "fire_NOUN"
 	<följa> /fˈœlja/ "follow_VERB"
-	<fluga> /flˈʉːɡa/ "housefly_NOUN"
 
-/m/ (0.025)
+/ɡ/ (0.024)
+	<uggla> /ˈɵɡla/ "owl_NOUN"
+	<gräs> /ɡrˈɛːs/ "grass_NOUN_NEU"
+	<väg> /vˈɛːɡ/ "way_NOUN"
+
+/m/ (0.024)
 	<mun> /mˈɵnː/ "mouth_NOUN"
 	<mygg> /mˈʏɡː/ "midge_NOUN"
 	<storm> /stˈɔrm/ "storm_NOUN"
@@ -207,15 +207,15 @@ CONSONANTS
 	<kött> /ɕˈœtː/ "meat_NOUN"
 	<bättre> /bˈɛtːrɛ/ "better_ADJ"
 
-/ɧ/ (0.011)
-	<stjärna> /ɧˈæːɳa/ "star_NOUN"
-	<skit> /ɧˈiːt/ "shit_NOUN"
-	<sju> /ɧˈʉː/ "seven_NUM"
+/nː/ (0.011)
+	<kvinna> /kʰvˈɪnːa/ "woman_NOUN"
+	<annan> /ˈanːan/ "other_ADJ"
+	<mun> /mˈɵnː/ "mouth_NOUN"
 
-/nː/ (0.01)
-	<kunna> /kʰˈɵnːa/ "can_VERB"
-	<tunn> /tʰˈɵnː/ "thin_ADJ"
-	<mann> /mˈanː/ "man_NOUN"
+/ɧ/ (0.011)
+	<skön> /ɧˈøːn/ "beautiful_ADJ"
+	<sju> /ɧˈʉː/ "seven_NUM"
+	<skit> /ɧˈiːt/ "shit_NOUN"
 
 /kʰ/ (0.01)
 	<kall> /kʰˈalː/ "cold_ADJ"

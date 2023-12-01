@@ -4,12 +4,12 @@ VOWELS
 	<Eule> /ˈɔʏ̯lə/ "owl_NOUN"
 	<Zunge> /ʦˈʊŋə/ "tongue_NOUN"
 
-/ɐ/ (0.052)
+/ɐ/ (0.051)
 	<schwarz> /ʃvˈaɐʦ/ "black_ADJ"
 	<Finger> /fˈɪŋɐ/ "finger_NOUN"
 	<Korn> /kʰˈɔɐn/ "corn_NOUN"
 
-/ˈa/ (0.037)
+/ˈa/ (0.036)
 	<Wasser> /vˈasɐ/ "water_NOUN"
 	<danken> /dˈaŋkən/ "thank_VERB"
 	<warm> /vˈaɐm/ "warm_ADJ"
@@ -19,9 +19,9 @@ VOWELS
 	<leicht> /lˈaɪ̯çt/ "light_ADJ"
 	<Geist> /ɡˈaɪ̯st/ "ghost_NOUN"
 
-/ˈɪ/ (0.025)
+/ˈɪ/ (0.026)
 	<Kirche> /kʰˈɪɐçə/ "church_NOUN_FEM"
-	<Ring> /ʁˈɪŋ/ "ring_NOUN"
+	<bitten> /bˈɪtn̩/ "request_VERB"
 	<ich> /ˈɪç/ "I_PRON"
 
 /ˈaː/ (0.021)
@@ -109,25 +109,25 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.092)
-	<singen> /zˈɪŋən/ "sing_VERB"
-	<Hundert> /hˈʊndɐt/ "hundred_NUM"
-	<ein> /ˈaɪ̯n/ "one_NUM"
+/n/ (0.094)
+	<sieben> /zˈiːbən/ "seven_NUM"
+	<Horn> /hˈɔɐn/ "horn_NOUN"
+	<Nase> /nˈaːzə/ "nose_NOUN"
 
 /t/ (0.06)
 	<Blatt> /blˈat/ "leaf_NOUN_NEU"
 	<Seite> /zˈaɪ̯tə/ "side_NOUN"
 	<Hund> /hˈʊnt/ "dog_NOUN"
 
-/l/ (0.052)
+/l/ (0.051)
 	<Laub> /lˈaʊ̯p/ "leaf_NOUN"
 	<Eule> /ˈɔʏ̯lə/ "owl_NOUN"
 	<Wal> /vˈaːl/ "whale_NOUN"
 
-/f/ (0.041)
-	<frisch> /fʁˈɪʃ/ "fresh_ADJ"
+/f/ (0.042)
+	<frieren> /fʁˈiːʁən/ "freeze_VERB"
 	<fest> /fˈɛst/ "fast_ADJ"
-	<Ofen> /ˈoːfn̩/ "oven_NOUN"
+	<laufen> /lˈaʊ̯fn̩/ "leap_VERB"
 
 /ʁ/ (0.033)
 	<reich> /ʁˈaɪ̯ç/ "rich_ADJ"
@@ -159,7 +159,7 @@ CONSONANTS
 	<Leber> /lˈeːbɐ/ "liver_NOUN"
 	<Blatt> /blˈat/ "leaf_NOUN_NEU"
 
-/ɡ/ (0.023)
+/ɡ/ (0.022)
 	<sagen> /zˈaːɡən/ "say_VERB"
 	<Gras> /ɡʁˈaːs/ "grass_NOUN_NEU"
 	<Geist> /ɡˈaɪ̯st/ "ghost_NOUN"
@@ -169,15 +169,15 @@ CONSONANTS
 	<Haus> /hˈaʊ̯s/ "house_NOUN"
 	<Herz> /hˈɛɐʦ/ "heart_NOUN"
 
-/z/ (0.02)
-	<Käse> /kʰˈɛːzə/ "cheese_NOUN"
-	<sagen> /zˈaːɡən/ "say_VERB"
-	<See> /zˈeː/ "sea_NOUN"
+/d/ (0.02)
+	<deutsch> /dˈɔʏ̯tʃ/ "Teutonic_ADJ"
+	<finden> /fˈɪndn̩/ "find_VERB"
+	<Hundert> /hˈʊndɐt/ "hundred_NUM"
 
-/d/ (0.019)
-	<dünn> /dˈʏn/ "thin_ADJ"
-	<drei> /dʁˈaɪ̯/ "three_NUM"
-	<Dieb> /dˈiːp/ "thief_NOUN"
+/z/ (0.02)
+	<sitzen> /zˈɪʦən/ "sit_VERB"
+	<Sau> /zˈaʊ̯/ "sow_NOUN"
+	<singen> /zˈɪŋən/ "sing_VERB"
 
 /k/ (0.017)
 	<nackt> /nˈakt/ "naked_ADJ"
@@ -214,7 +214,7 @@ CONSONANTS
 	<Macht> /mˈaxt/ "might_NOUN"
 	<lachen> /lˈaxən/ "laugh_VERB"
 
-/p/ (0.008)
+/p/ (0.007)
 	<Dieb> /dˈiːp/ "thief_NOUN"
 	<Haupt> /hˈaʊ̯pt/ "head_NOUN"
 	<gelb> /ɡˈɛlp/ "yellow_ADJ"

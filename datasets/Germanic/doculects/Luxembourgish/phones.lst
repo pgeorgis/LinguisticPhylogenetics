@@ -1,7 +1,7 @@
 VOWELS
 /ə/ (0.055)
 	<dreiwen> /dʀˈɑɪ̯vən/ "drive_VERB"
-	<Déngen> /dˈeŋən/ "thing_NOUN"
+	<danken> /dˈɑŋkən/ "thank_VERB"
 	<kënnen> /kʰˈənən/ "can_VERB"
 
 /ɐ/ (0.042)
@@ -9,38 +9,38 @@ VOWELS
 	<dier> /dˈiːɐ/ "dry_ADJ"
 	<Wieder> /vˈiə̯dɐ/ "weather_NOUN"
 
-/ˈaː/ (0.038)
+/ˈaː/ (0.037)
 	<Dar> /dˈaːʀ/ "thorn_NOUN"
 	<laachen> /lˈaːχən/ "laugh_VERB"
 	<Laf> /lˈaːf/ "leaf_NOUN"
 
-/ˈəɪ̯/ (0.024)
-	<Fléi> /flˈəɪ̯/ "housefly_NOUN"
-	<Féiss> /fˈəɪ̯s/ "feet_NOUN"
-	<déidlech> /dˈəɪ̯dləɕ/ "deadly_ADJ"
+/ˈɑ/ (0.025)
+	<Wand> /vˈɑnt/ "wind_NOUN"
+	<Salz> /zˈɑlʦ/ "salt_NOUN"
+	<Kapp> /kʰˈɑp/ "head_NOUN"
 
-/ˈɑ/ (0.024)
-	<danken> /dˈɑŋkən/ "thank_VERB"
-	<all> /ˈɑl/ "all_ADJ"
-	<Sand> /zˈɑnt/ "sand_NOUN"
+/ˈəɪ̯/ (0.024)
+	<déidlech> /dˈəɪ̯dləɕ/ "deadly_ADJ"
+	<Schnéi> /ʃnˈəɪ̯/ "snow_NOUN"
+	<Déier> /dˈəɪ̯ɐ/ "animal_NOUN"
 
 /ˈə/ (0.019)
-	<sëtzen> /zˈəʦən/ "sit_VERB"
-	<Mëllech> /mˈələɕ/ "milk_NOUN_FEM"
 	<Sëschter> /zˈəʃtɐ/ "sister_NOUN"
+	<Frënd> /fʀˈənt/ "friend_NOUN"
+	<Mëllech> /mˈələɕ/ "milk_NOUN_FEM"
 
 /ˈeː/ (0.018)
 	<Steen> /ʃtˈeːn/ "stone_NOUN"
+	<Wee> /vˈeː/ "way_NOUN"
 	<Been> /bˈeːn/ "bone_NOUN"
-	<Reen> /ʀˈeːn/ "rain_NOUN"
 
-/ˈo/ (0.015)
+/ˈo/ (0.014)
+	<Woll> /vˈol/ "wool_NOUN_FEM"
 	<Honger> /hˈoŋɐ/ "hunger_NOUN"
 	<voll> /fˈol/ "full_ADJ"
-	<follegen> /fˈoləʑən/ "follow_VERB"
 
 /ˈiː/ (0.012)
-	<mir> /mˈiːɐ/ "we_PRON"
+	<liicht> /lˈiːɕt/ "light_ADJ"
 	<Kierch> /kʰˈiːɐɕ/ "church_NOUN_FEM"
 	<Bierg> /bˈiːɐɕ/ "mountain_NOUN"
 
@@ -137,40 +137,40 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.09)
-	<Gäns> /ɡˈæns/ "goose_NOUN"
-	<Donner> /dˈonɐ/ "thunder_NOUN"
-	<soen> /zˈoːən/ "say_VERB"
+/n/ (0.092)
+	<ginn> /ɡˈin/ "give_VERB"
+	<dausend> /dˈæːʊ̯zənt/ "thousand_NUM"
+	<Sand> /zˈɑnt/ "sand_NOUN"
 
 /l/ (0.057)
 	<Laf> /lˈaːf/ "leaf_NOUN"
 	<Mëllech> /mˈələɕ/ "milk_NOUN_FEM"
 	<giel> /ɡˈiə̯l/ "yellow_ADJ"
 
-/t/ (0.056)
+/t/ (0.055)
 	<Bad> /bˈaːt/ "bath_NOUN_NEU"
 	<riicht> /ʀˈiːɕt/ "right_ADJ"
 	<Blutt> /blˈʊt/ "blood_NOUN"
 
-/f/ (0.046)
-	<fräi> /fʀˈæːɪ̯/ "free_ADJ"
-	<Laf> /lˈaːf/ "leaf_NOUN"
-	<Fësch> /fˈəʃ/ "fish_NOUN"
+/f/ (0.047)
+	<Fuuss> /fˈuːs/ "fox_NOUN"
+	<Fra> /fʀˈaː/ "woman_NOUN"
+	<Fléi> /flˈəɪ̯/ "housefly_NOUN"
 
 /ʀ/ (0.039)
+	<Reen> /ʀˈeːn/ "rain_NOUN"
 	<Dram> /dʀˈaːm/ "dream_NOUN"
 	<gréng> /ɡʀˈeŋ/ "green_ADJ"
-	<drénken> /dʀˈeŋkən/ "drink_VERB"
 
 /d/ (0.036)
+	<deier> /dˈɑɪ̯ɐ/ "dear_ADJ"
 	<däitsch> /dˈæːɪ̯tʃ/ "Teutonic_ADJ"
 	<du> /dˈu/ "thou_PRON"
-	<déidlech> /dˈəɪ̯dləɕ/ "deadly_ADJ"
 
 /ʃ/ (0.036)
+	<Fësch> /fˈəʃ/ "fish_NOUN"
 	<schloen> /ʃlˈoːən/ "slay_VERB"
 	<wënschen> /vˈənʃən/ "wish_VERB"
-	<Schwäin> /ʃwˈæːɪ̯n/ "swine_NOUN"
 
 /s/ (0.033)
 	<Mais> /mˈɑɪ̯s/ "mice_NOUN"
@@ -197,7 +197,7 @@ CONSONANTS
 	<hunn> /hˈun/ "have_VERB"
 	<Häerz> /hˈɛːɐʦ/ "heart_NOUN"
 
-/b/ (0.021)
+/b/ (0.02)
 	<Blumm> /blˈum/ "flower_NOUN"
 	<Bier> /bˈiːɐ/ "bear_NOUN"
 	<Been> /bˈeːn/ "bone_NOUN"
@@ -217,7 +217,7 @@ CONSONANTS
 	<Gras> /ɡʀˈaːs/ "grass_NOUN_NEU"
 	<gutt> /ɡˈʊt/ "good_ADJ"
 
-/ʦ/ (0.015)
+/ʦ/ (0.014)
 	<Zong> /ʦˈɔŋ/ "tongue_NOUN"
 	<Zäit> /ʦˈæɪ̯t/ "time_NOUN"
 	<schwaarz> /ʃwˈaːʦ/ "black_ADJ"

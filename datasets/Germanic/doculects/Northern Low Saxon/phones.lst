@@ -9,17 +9,17 @@ VOWELS
 	<hoch> /hˈaʊ̯x/ "high_ADJ"
 	<Doorn> /dˈaʊ̯ɐn/ "thorn_NOUN"
 
+/ˈɪ/ (0.031)
+	<bidden> /bˈɪdn̩/ "request_VERB"
+	<Ring> /rˈɪŋ/ "ring_NOUN"
+	<Ding> /dˈɪŋ/ "thing_NOUN"
+
 /ˈa/ (0.03)
-	<lang> /lˈaŋ/ "long_ADJ"
-	<Mann> /mˈan/ "man_NOUN"
-	<Slang> /slˈaŋ/ "snake_NOUN"
+	<lachen> /lˈaxn̩/ "laugh_VERB"
+	<Gras> /ɡrˈas/ "grass_NOUN_NEU"
+	<swart> /ʃvˈad/ "black_ADJ"
 
-/ˈɪ/ (0.03)
-	<Minsch> /mˈɪnʃ/ "person_NOUN"
-	<Jitt> /jˈɪt/ "goat_NOUN"
-	<Finger> /fˈɪŋɐ/ "finger_NOUN"
-
-/ˈoː/ (0.028)
+/ˈoː/ (0.027)
 	<slaan> /slˈoːn/ "slay_VERB"
 	<Aap> /ˈoːp/ "ape_NOUN"
 	<Nadel> /nˈoːdl̩/ "needle_NOUN"
@@ -122,35 +122,35 @@ VOWELS
 
 
 CONSONANTS
-/d/ (0.104)
+/d/ (0.103)
 	<witt> /vˈɪd/ "white_ADJ"
 	<bidden> /bˈɪdn̩/ "request_VERB"
 	<Dochter> /dˈɔxdɐ/ "daughter_NOUN"
 
-/n/ (0.088)
-	<dünn> /dˈʏn/ "thin_ADJ"
-	<folgen> /fˈɔlɡn̩/ "follow_VERB"
-	<Honnig> /hˈʏnɪç/ "honey_NOUN"
+/n/ (0.089)
+	<danken> /dˈaŋkn̩/ "thank_VERB"
+	<wünschen> /vˈʏnʃn̩/ "wish_VERB"
+	<flegen> /flˈaɪ̯n/ "fly_VERB"
 
 /l/ (0.06)
+	<Nagel> /nˈoːɡl̩/ "fingernail_NOUN"
 	<oolt> /ˈaʊ̯ld/ "old_ADJ"
 	<lopen> /lˈaʊ̯bm̩/ "leap_VERB"
-	<Loof> /lˈoːf/ "leaf_NOUN"
 
-/f/ (0.041)
-	<Foot> /fˈaʊ̯d/ "foot_NOUN"
-	<Fleeg> /flˈaɪ̯ç/ "housefly_NOUN"
-	<Imm> /ˈiːf/ "bee_NOUN"
+/f/ (0.042)
+	<fief> /fˈiːf/ "five_NUM"
+	<folgen> /fˈɔlɡn̩/ "follow_VERB"
+	<vull> /fˈʊl/ "full_ADJ"
 
 /m/ (0.041)
+	<Arm> /ˈaːm/ "arm_NOUN"
 	<Melk> /mˈɛlɡ/ "milk_NOUN_FEM"
 	<Droom> /drˈaʊ̯m/ "dream_NOUN"
-	<lopen> /lˈaʊ̯bm̩/ "leap_VERB"
 
 /ɡ/ (0.035)
+	<folgen> /fˈɔlɡn̩/ "follow_VERB"
 	<riek> /rˈiːɡ/ "rich_ADJ"
 	<Mügg> /mˈʏɡ/ "midge_NOUN"
-	<Gast> /ɡˈas/ "guest_NOUN"
 
 /r/ (0.033)
 	<Recht> /rˈɛçt/ "right_ADJ"
@@ -172,7 +172,7 @@ CONSONANTS
 	<Huus> /hˈuːs/ "house_NOUN"
 	<Nees> /nˈøːs/ "nose_NOUN"
 
-/ʃ/ (0.028)
+/ʃ/ (0.027)
 	<Stohl> /ʃtˈaʊ̯l/ "stool_NOUN"
 	<Schiet> /ʃˈiːd/ "shit_NOUN"
 	<Swien> /ʃvˈiːn/ "swine_NOUN"

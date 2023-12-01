@@ -24,20 +24,20 @@ VOWELS
 	<dogter> /dˈɔχtər/ "daughter_NOUN"
 	<honger> /ɦˈɔŋər/ "hunger_NOUN"
 
+/ˈə/ (0.023)
+	<sit> /sˈət/ "sit_VERB"
+	<kind> /kˈənt/ "child_NOUN"
+	<dik> /dˈək/ "thick_ADJ"
+
 /ˈɪə̯/ (0.023)
-	<sewe> /sˈɪə̯və/ "seven_NUM"
-	<beer> /bˈɪə̯r/ "bear_NOUN"
-	<steen> /stˈɪə̯n/ "stone_NOUN"
+	<lewer> /ɫˈɪə̯vər/ "liver_NOUN"
+	<weet> /vˈɪə̯t/ "know_VERB"
+	<eet> /ˈɪə̯t/ "eat_VERB"
 
 /ˈi/ (0.023)
-	<vlieg> /fɫˈiχ/ "housefly_NOUN"
-	<hier> /ɦˈir/ "here_ADV"
-	<vlieg> /fɫˈiχ/ "fly_VERB"
-
-/ˈə/ (0.021)
-	<skip> /skˈəp/ "ship_NOUN"
-	<kind> /kˈənt/ "child_NOUN"
-	<wit> /vˈət/ "white_ADJ"
+	<nuut> /nˈit/ "new_ADJ"
+	<dier> /dˈir/ "animal_NOUN"
+	<drie> /drˈi/ "three_NUM"
 
 /ˈəɪ̯/ (0.02)
 	<by> /bˈəɪ̯/ "bee_NOUN"
@@ -112,25 +112,25 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.091)
+/r/ (0.09)
 	<vader> /fˈɑːdər/ "father_NOUN"
 	<noord> /nˈʊə̯rt/ "north_NOUN"
 	<jaar> /jˈɑːr/ "year_NOUN"
 
-/t/ (0.079)
-	<wat> /vˈat/ "what_PRON"
-	<storm> /stˈɔrm/ "storm_NOUN"
-	<tyd> /tˈœi̯t/ "time_NOUN"
+/t/ (0.08)
+	<water> /vˈɑːtər/ "water_NOUN"
+	<stoel> /stˈuɫ/ "stool_NOUN"
+	<tien> /tˈin/ "ten_NUM"
 
 /s/ (0.074)
 	<seun> /sˈɪø̯n/ "son_NOUN"
 	<steen> /stˈɪə̯n/ "stone_NOUN"
 	<neus> /nˈɪø̯s/ "nose_NOUN"
 
-/n/ (0.065)
-	<nael> /nˈɔːɫ/ "fingernail_NOUN"
-	<neus> /nˈɪø̯s/ "nose_NOUN"
-	<tien> /tˈin/ "ten_NUM"
+/n/ (0.066)
+	<vind> /fˈənt/ "find_VERB"
+	<noord> /nˈʊə̯rt/ "north_NOUN"
+	<traan> /trˈɑːn/ "tear_NOUN_FEM"
 
 /χ/ (0.045)
 	<plig> /pɫˈəχ/ "plight_NOUN"
@@ -142,15 +142,15 @@ CONSONANTS
 	<uil> /ˈœɪ̯ɫ/ "owl_NOUN"
 	<melk> /mˈɛɫk/ "milk_NOUN_FEM"
 
+/f/ (0.04)
+	<volg> /fˈɔɫχ/ "follow_VERB"
+	<vol> /fˈɔɫ/ "full_ADJ"
+	<voël> /fˈʊə̯ɫ/ "bird_NOUN_MASC"
+
 /d/ (0.039)
 	<aarde> /ˈɑːrdə/ "earth_NOUN"
-	<dun> /dˈœn/ "thin_ADJ"
-	<duits> /dˈœɪ̯ts/ "Teutonic_ADJ"
-
-/f/ (0.039)
-	<voet> /fˈut/ "foot_NOUN"
-	<kalf> /kˈaɫf/ "calf_NOUN"
-	<vis> /fˈəs/ "fish_NOUN"
+	<dier> /dˈir/ "animal_NOUN"
+	<droom> /drˈʊə̯m/ "dream_VERB"
 
 /k/ (0.038)
 	<skerp> /skˈærp/ "sharp_ADJ"

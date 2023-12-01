@@ -1483,7 +1483,7 @@ Gothic	Gothic			drive_VERB	𐌳𐍂𐌴𐌹𐌱𐌰𐌽	drˈiːβan	d r ˈiː β
 Old Norse	Old Norse			drive_VERB	drífa	drˈiːva	d r ˈiː v a		drive_VERB_1			
 Icelandic	Icelandic			drive_VERB	drífa	d̥rˈiːva	d̥ r ˈiː v a		drive_VERB_1			
 Faroese	Faroese			drive_VERB	dríva	d̥ɹˈʊ̯iːva	d̥ ɹ ˈʊ̯iː v a		drive_VERB_1			
-Nynorsk Norwegian	Nynorsk Norwegian			drive_VERB	driva	dɾˈiːʋa	d ɾ ˈiː ʋ a		drive_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			drive_VERB	driva	dɾˈiːʋɑ	d ɾ ˈiː ʋ ɑ		drive_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			drive_VERB	drive	dɾˈiːʋə	d ɾ ˈiː ʋ ə		drive_VERB_1			
 Danish	Danish			drive_VERB	drive	d̥ʁˈiːw	d̥ ʁ ˈiː w		drive_VERB_1			
 Swedish	Swedish			drive_VERB	driva	drˈiːva	d r ˈiː v a		drive_VERB_1			
@@ -1620,7 +1620,7 @@ American English	American English			I_PRON	I	ˈaɪ̯	ˈaɪ̯		I_PRON_1
 Old English	Old English			I_PRON	iċ	ˈiʧ	ˈi ʧ		I_PRON_1			
 West Frisian	West Frisian			I_PRON	ik	ˈɪk	ˈɪ k		I_PRON_1			
 Saterland Frisian	Saterland Frisian			I_PRON	iek	ˈik	ˈi k		I_PRON_1			
-North Frisian	North Frisian			I_PRON	ik	ˈɪk	ˈɪ k		I_PRON_1			
+North Frisian	North Frisian			I_PRON	ik	ˈik	ˈi k		I_PRON_1			
 Westphalian	Westphalian			I_PRON	ik	ˈɪk	ˈɪ k		I_PRON_1			
 Eastphalian	Eastphalian			I_PRON	eck	ˈɛk	ˈɛ k		I_PRON_1			
 Northern Low Saxon	Northern Low Saxon			I_PRON	ik	ˈɪɡ	ˈɪ ɡ		I_PRON_1			
@@ -1919,6 +1919,39 @@ Swabian	Swabian			finger_NOUN	Fengr	fˈeŋʌ	f ˈe ŋ ʌ		finger_NOUN_1
 Alsatian	Alsatian			finger_NOUN	Finger	fˈiŋəʁ	f ˈi ŋ ə ʁ		finger_NOUN_1			
 Swiss German	Swiss German			finger_NOUN	Finger	fˈiŋər	f ˈi ŋ ə r		finger_NOUN_1			
 Bavarian	Bavarian			finger_NOUN	Finga	fˈiŋa	f ˈi ŋ a		finger_NOUN_1			
+Proto-Germanic	Proto-Germanic			find_VERB	finþaną	ɸˈinθɑnɑ̃	ɸ ˈi n θ ɑ n ɑ̃		find_VERB_1			
+Gothic	Gothic			find_VERB	𐍆𐌹𐌽𐌸𐌰𐌽 	fˈinθan	f ˈi n θ a n		find_VERB_1			
+Old Norse	Old Norse			find_VERB	finna	fˈinna	f ˈi n n a		find_VERB_1			
+Icelandic	Icelandic			find_VERB	finna	fˈɪnna	f ˈɪ n n a		find_VERB_1			
+Faroese	Faroese			find_VERB	finna	fˈɪnna	f ˈɪ n n a		find_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			find_VERB	finna	fˈɪnnɑ	f ˈɪ n n ɑ		find_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			find_VERB	finne	fˈɪnnə	f ˈɪ n n ə		find_VERB_1			
+Danish	Danish			find_VERB	finde	fˈenə	f ˈe n ə		find_VERB_1			
+Swedish	Swedish			find_VERB	finna	fˈɪnna	f ˈɪ n n a		find_VERB_1			
+Scots	Scots			find_VERB	fynd	fˈəi̯nd	f ˈəi̯ n d		find_VERB_1			
+English	English			find_VERB	find	fˈaɪ̯nd	f ˈaɪ̯ n d		find_VERB_1			
+American English	American English			find_VERB	find	fˈaɪ̯nd	f ˈaɪ̯ n d		find_VERB_1			
+Old English	Old English			find_VERB	findan	fˈindɑn	f ˈi n d ɑ n		find_VERB_1			
+West Frisian	West Frisian			find_VERB	fine	fˈiːnə	f ˈiː n ə		find_VERB_1			
+Saterland Frisian	Saterland Frisian			find_VERB	fíende	fˈiːndə	f ˈiː n d ə		find_VERB_1			
+North Frisian	North Frisian			find_VERB	fine	fˈinə	f ˈi n ə		find_VERB_1			
+Westphalian	Westphalian			find_VERB	finnen	fˈɪn̩	f ˈɪ n̩		find_VERB_1			
+Eastphalian	Eastphalian			find_VERB	finnen	fˈɪn̩	f ˈɪ n̩		find_VERB_1			
+Northern Low Saxon	Northern Low Saxon			find_VERB	finnen	fˈɪn̩	f ˈɪ n̩		find_VERB_1			
+East Low German	East Low German			find_VERB	finnen	fˈɪn̩	f ˈɪ n̩		find_VERB_1			
+Dutch	Dutch			find_VERB	vinden	vˈɪndən	v ˈɪ n d ə n		find_VERB_1			
+Afrikaans	Afrikaans			find_VERB	vind	fˈənt	f ˈə n t		find_VERB_1			
+West Flemish	West Flemish			find_VERB	vinden	vˈɪndn̩	v ˈɪ n d n̩		find_VERB_1			
+Limburgish	Limburgish			find_VERB	vinde	vˈɪːndə	v ˈɪː n d ə		find_VERB_1			
+Ripuarian	Ripuarian			find_VERB	fenge	fˈeŋə	f ˈe ŋ ə		find_VERB_1			
+Luxembourgish	Luxembourgish			find_VERB	fannen	fˈɑnən	f ˈɑ n ə n		find_VERB_1			
+Pennsylvania German	Pennsylvania German			find_VERB	finne	fˈɪnə	f ˈɪ n ə		find_VERB_1			
+German	German			find_VERB	finden	fˈɪndn̩	f ˈɪ n d n̩		find_VERB_1			
+Yiddish	Yiddish			find_VERB	געפֿינען	ɡəfˈɪnən	ɡ ə f ˈɪ n ə n		find_VERB_1			
+Swabian	Swabian			find_VERB	finda	fˈɪnda	f ˈɪ n d a		find_VERB_1			
+Alsatian	Alsatian			find_VERB	finde	fˈind̥ə	f ˈi n d̥ ə		find_VERB_1			
+Swiss German	Swiss German			find_VERB	finde	fˈind̥ə	f ˈi n d̥ ə		find_VERB_1			
+Bavarian	Bavarian			find_VERB	findn	fˈind̥n̩	f ˈi n d̥ n̩		find_VERB_1			
 Proto-Germanic	Proto-Germanic			fish_NOUN	fiskaz	ɸˈiskɑz	ɸ ˈi s k ɑ z		fish_NOUN_1			
 Gothic	Gothic			fish_NOUN	𐍆𐌹𐍃𐌺𐍃	fˈisks	f ˈi s k s		fish_NOUN_1			
 Old Norse	Old Norse			fish_NOUN	fiskr	fˈiskr	f ˈi s k r		fish_NOUN_1			
@@ -2279,7 +2312,7 @@ American English	American English			fresh_ADJ	fresh	fɹˈɛʃ	f ɹ ˈɛ ʃ		fres
 Old English	Old English			fresh_ADJ	fersċ	fˈerʃ	f ˈe r ʃ		fresh_ADJ_1			
 West Frisian	West Frisian			fresh_ADJ	farsk	fˈask	f ˈa s k		fresh_ADJ_1			
 Saterland Frisian	Saterland Frisian			fresh_ADJ	frisk	frˈɪsk	f r ˈɪ s k		fresh_ADJ_1			
-North Frisian	North Frisian			fresh_ADJ	frisch	frˈɪʃ	f r ˈɪ ʃ		fresh_ADJ_1			
+North Frisian	North Frisian			fresh_ADJ	frisch	frˈiʃ	f r ˈi ʃ		fresh_ADJ_1			
 Westphalian	Westphalian			fresh_ADJ	frisch	frˈɪʃ	f r ˈɪ ʃ		fresh_ADJ_1			
 Eastphalian	Eastphalian			fresh_ADJ	frisch	frˈɪʃ	f r ˈɪ ʃ		fresh_ADJ_1			
 Northern Low Saxon	Northern Low Saxon			fresh_ADJ	frisch	frˈɪʃ	f r ˈɪ ʃ		fresh_ADJ_1			
@@ -2840,7 +2873,7 @@ Gothic	Gothic			holy_ADJ	𐌷𐌰𐌹𐌻𐌰𐌲𐍃	hˈɛːlaxs	h ˈɛː l a x
 Old Norse	Old Norse			holy_ADJ	heilagr	hˈɛi̯lɑɣr	h ˈɛi̯ l ɑ ɣ r		holy_ADJ_1			
 Icelandic	Icelandic			holy_ADJ	helgur	hˈɛlɡ̊ʏr̥	h ˈɛ l ɡ̊ ʏ r̥		holy_ADJ_1			
 Faroese	Faroese			holy_ADJ	heilagur	hˈai̯lavʊɹ	h ˈai̯ l a v ʊ ɹ		holy_ADJ_1			
-Nynorsk Norwegian	Nynorsk Norwegian			holy_ADJ	heilag	hˈæɪ̯laɡ	h ˈæɪ̯ l a ɡ		holy_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			holy_ADJ	heilag	hˈæɪ̯lɑɡ	h ˈæɪ̯ l ɑ ɡ		holy_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			holy_ADJ	hellig	hˈɛlli	h ˈɛ l l i		holy_ADJ_1			
 Danish	Danish			holy_ADJ	hellig	hˈɛli	h ˈɛ l i		holy_ADJ_1			
 Swedish	Swedish			holy_ADJ	helig	hˈeːlɪɡ	h ˈeː l ɪ ɡ		holy_ADJ_1			
@@ -3376,7 +3409,7 @@ Bokmål Norwegian	Bokmål Norwegian			honey_NOUN	honning	hˈʊnnɪŋ	h ˈʊ n n 
 Danish	Danish			honey_NOUN	honning	hˈʌneŋ	h ˈʌ n e ŋ		honey_NOUN_2			
 Swedish	Swedish			honey_NOUN	honung	hˈoːnɵŋ	h ˈoː n ɵ ŋ		honey_NOUN_2			
 West Frisian	West Frisian			honey_NOUN	huning	hˈynɪŋ	h ˈy n ɪ ŋ		honey_NOUN_2			
-North Frisian	North Frisian			honey_NOUN	hönning	hˈœnɪŋ	h ˈœ n ɪ ŋ		honey_NOUN_2			
+North Frisian	North Frisian			honey_NOUN	hönning	hˈœniŋ	h ˈœ n i ŋ		honey_NOUN_2			
 Dutch	Dutch			honey_NOUN	honing	ɦˈoːnɪŋ	ɦ ˈoː n ɪ ŋ		honey_NOUN_2			
 Afrikaans	Afrikaans			honey_NOUN	heuning	ɦˈɪø̯nəŋ	ɦ ˈɪø̯ n ə ŋ		honey_NOUN_2			
 Limburgish	Limburgish			honey_NOUN	honing	ɦˈoːnɪŋ	ɦ ˈoː n ɪ ŋ		honey_NOUN_2			
@@ -3878,7 +3911,7 @@ English	English			chicken_NOUN	chicken	ʧˈɪkɪn	ʧ ˈɪ k ɪ n		chicken_NOUN_1
 American English	American English			chicken_NOUN	chicken	ʧˈɪkɪn	ʧ ˈɪ k ɪ n		chicken_NOUN_1			
 Old English	Old English			chicken_NOUN	ċicen	ʧˈiken	ʧ ˈi k e n		chicken_NOUN_1			
 Saterland Frisian	Saterland Frisian			chicken_NOUN	Sjuuken	sjˈukən	s j ˈu k ə n		chicken_NOUN_1			
-North Frisian	North Frisian			chicken_NOUN	schückling	ʃˈʏklɪŋ	ʃ ˈʏ k l ɪ ŋ		chicken_NOUN_1			
+North Frisian	North Frisian			chicken_NOUN	schückling	ʃˈʏkliŋ	ʃ ˈʏ k l i ŋ		chicken_NOUN_1			
 Westphalian	Westphalian			chicken_NOUN	Küken	kˈyːkn̩	k ˈyː k n̩		chicken_NOUN_1			
 Eastphalian	Eastphalian			chicken_NOUN	Küken	kˈyːkn̩	k ˈyː k n̩		chicken_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			chicken_NOUN	Küken	kʰˈyːɡn̩	kʰ ˈyː ɡ n̩		chicken_NOUN_1			
@@ -3903,7 +3936,7 @@ American English	American English			knee_NOUN	knee	nˈi	n ˈi		knee_NOUN_1
 Old English	Old English			knee_NOUN	cnēow	knˈeːo̯w	k n ˈeːo̯ w		knee_NOUN_1			
 West Frisian	West Frisian			knee_NOUN	knibbel	knˈɪbəl	k n ˈɪ b ə l		knee_NOUN_1			
 Saterland Frisian	Saterland Frisian			knee_NOUN	Kniebel	knˈibəl	k n ˈi b ə l		knee_NOUN_1			
-North Frisian	North Frisian			knee_NOUN	knäibling	knˈɛi̯blɪŋ	k n ˈɛi̯ b l ɪ ŋ		knee_NOUN_1			
+North Frisian	North Frisian			knee_NOUN	knäibling	knˈɛi̯bliŋ	k n ˈɛi̯ b l i ŋ		knee_NOUN_1			
 Westphalian	Westphalian			knee_NOUN	Knai	knˈaɪ̯	k n ˈaɪ̯		knee_NOUN_1			
 Eastphalian	Eastphalian			knee_NOUN	Knei	knˈɛɪ̯	k n ˈɛɪ̯		knee_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			knee_NOUN	Knee	kʰnˈaɪ̯	kʰ n ˈaɪ̯		knee_NOUN_1			

@@ -1,8 +1,8 @@
 VOWELS
-/ə/ (0.081)
+/ə/ (0.082)
 	<kirke> /çˈɪɾkə/ "church_NOUN_FEM"
-	<vite> /ʋˈiːtə/ "know_VERB"
-	<tåre> /tʰˈoːɾə/ "tear_NOUN"
+	<konge> /kʰˈʊŋə/ "king_NOUN"
+	<svømme> /sʋˈœmːə/ "swim_VERB"
 
 /ˈɑ/ (0.032)
 	<hva> /ʋˈɑ/ "what_PRON"
@@ -14,7 +14,7 @@ VOWELS
 	<stol> /stˈuːl/ "stool_NOUN"
 	<rot> /ɾˈuːt/ "root_NOUN_FEM"
 
-/ˈɛ/ (0.025)
+/ˈɛ/ (0.024)
 	<menneske> /mˈɛnːəskə/ "person_NOUN"
 	<lett> /lˈɛtː/ "light_ADJ"
 	<frende> /fɾˈɛndə/ "friend_NOUN"
@@ -39,10 +39,10 @@ VOWELS
 	<fugl> /fˈʉːl/ "bird_NOUN_MASC"
 	<du> /dˈʉː/ "thou_PRON"
 
-/ˈɪ/ (0.015)
-	<ring> /ɾˈɪŋː/ "ring_NOUN"
-	<fisk> /fˈɪsk/ "fish_NOUN"
+/ˈɪ/ (0.017)
+	<plikt> /pʰlˈɪkt/ "plight_NOUN"
 	<ild> /ˈɪlː/ "fire_NOUN"
+	<finger> /fˈɪŋːəɾ/ "finger_NOUN"
 
 /ˈeː/ (0.015)
 	<se> /sˈeː/ "see_VERB"
@@ -158,25 +158,25 @@ CONSONANTS
 	<varm> /ʋˈɑɾm/ "warm_ADJ"
 	<storm> /stˈɔɾm/ "storm_NOUN"
 
-/b/ (0.026)
-	<berg> /bˈæɾɡ/ "mountain_NOUN"
-	<brygge> /bɾˈʏɡːə/ "bridge_NOUN"
-	<bite> /bˈiːtə/ "bite_VERB"
+/f/ (0.026)
+	<flue> /flˈʉːə/ "housefly_NOUN"
+	<fot> /fˈuːt/ "foot_NOUN"
+	<finne> /fˈɪnːə/ "find_VERB"
 
-/f/ (0.025)
-	<finger> /fˈɪŋːəɾ/ "finger_NOUN"
-	<full> /fˈʉlː/ "full_ADJ"
-	<fisk> /fˈɪsk/ "fish_NOUN"
+/b/ (0.026)
+	<bite> /bˈiːtə/ "bite_VERB"
+	<blome> /blˈuːmə/ "flower_NOUN"
+	<båt> /bˈoːt/ "boat_NOUN"
+
+/nː/ (0.024)
+	<skjønn> /ʃˈœnː/ "beautiful_ADJ"
+	<honning> /hˈʊnːɪŋ/ "honey_NOUN"
+	<land> /lˈɑnː/ "land_NOUN"
 
 /k/ (0.023)
-	<tˈysk> /tʰˈʏsk/ "Teutonic_ADJ"
-	<makt> /mˈɑkt/ "might_NOUN"
-	<melk> /mˈɛlk/ "milk_NOUN_FEM"
-
-/nː/ (0.023)
-	<sand> /sˈɑnː/ "sand_NOUN"
-	<vind> /ʋˈɪnː/ "wind_NOUN"
-	<menneske> /mˈɛnːəskə/ "person_NOUN"
+	<rik> /ɾˈiːk/ "rich_ADJ"
+	<språk> /spɾˈoːk/ "speech_NOUN_FEM"
+	<plikt> /pʰlˈɪkt/ "plight_NOUN"
 
 /h/ (0.023)
 	<honning> /hˈʊnːɪŋ/ "honey_NOUN"

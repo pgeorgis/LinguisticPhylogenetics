@@ -24,7 +24,7 @@ VOWELS
 	<better> /bˈɛtər/ "better_ADJ"
 	<mither> /mˈɪðər/ "mother_NOUN"
 
-/ˈei̯/ (0.026)
+/ˈei̯/ (0.025)
 	<leip> /lˈei̯p/ "leap_VERB"
 	<deir> /dˈei̯r/ "animal_NOUN"
 	<neidil> /nˈei̯dɪl/ "needle_NOUN"
@@ -44,10 +44,10 @@ VOWELS
 	<A> /ˈɑː/ "I_PRON"
 	<twa> /tʰwˈɑː/ "two_NUM"
 
-/ˈəi̯/ (0.015)
+/ˈəi̯/ (0.017)
 	<bite> /bˈəi̯t/ "bite_VERB"
-	<white> /ʍˈəi̯t/ "white_ADJ"
-	<tide> /tʰˈəi̯d/ "time_NOUN"
+	<wey> /wˈəi̯/ "way_NOUN"
+	<swine> /swˈəi̯n/ "swine_NOUN"
 
 /ˈɑ/ (0.014)
 	<bath> /bˈɑθ/ "bath_NOUN_NEU"
@@ -110,27 +110,27 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.095)
+/r/ (0.094)
 	<better> /bˈɛtər/ "better_ADJ"
 	<storm> /stˈɔrm/ "storm_NOUN"
 	<freend> /frˈiːnd/ "friend_NOUN"
 
-/n/ (0.059)
+/n/ (0.06)
+	<nicht> /nˈɪxt/ "night_NOUN_FEM"
 	<nine> /nˈəi̯n/ "nine_NUM"
-	<north> /nˈɔrθ/ "north_NOUN"
-	<wapyn> /wˈɑpəi̯n/ "weapon_NOUN"
+	<twenty> /tʰwˈɛnti/ "twenty_NUM"
+
+/d/ (0.055)
+	<daith> /dˈeθ/ "death_NOUN"
+	<guid> /ɡˈød/ "good_ADJ"
+	<side> /sˈəi̯d/ "side_NOUN"
 
 /s/ (0.055)
-	<ice> /ˈəi̯s/ "ice_NOUN"
 	<sister> /sˈɪstər/ "sister_NOUN"
-	<storm> /stˈɔrm/ "storm_NOUN"
+	<gaist> /ɡˈest/ "ghost_NOUN"
+	<snaw> /snˈɑː/ "snow_NOUN"
 
-/d/ (0.054)
-	<haund> /hˈɑːnd/ "hand_NOUN_FEM"
-	<cauld> /kʰˈɑːld/ "cold_ADJ"
-	<neidil> /nˈei̯dɪl/ "needle_NOUN"
-
-/t/ (0.049)
+/t/ (0.048)
 	<storm> /stˈɔrm/ "storm_NOUN"
 	<eat> /ˈei̯t/ "eat_VERB"
 	<gaist> /ɡˈest/ "ghost_NOUN"
@@ -140,9 +140,9 @@ CONSONANTS
 	<milk> /mˈɪlk/ "milk_NOUN_FEM"
 	<lang> /lˈɑŋ/ "long_ADJ"
 
-/f/ (0.036)
-	<fit> /fˈɪt/ "foot_NOUN"
-	<fle> /flˈɛ/ "housefly_NOUN"
+/f/ (0.037)
+	<follae> /fˈɔle/ "follow_VERB"
+	<fou> /fˈʉ/ "full_ADJ"
 	<foul> /fˈʉl/ "bird_NOUN_MASC"
 
 /w/ (0.028)
@@ -155,12 +155,12 @@ CONSONANTS
 	<hunder> /hˈʌndər/ "hundred_NUM"
 	<hide> /hˈaːɪ̯d/ "skin_NOUN"
 
-/m/ (0.026)
+/m/ (0.025)
 	<mooth> /mˈʉθ/ "mouth_NOUN"
 	<man> /mˈɑn/ "man_NOUN"
 	<wairm> /wˈei̯rm/ "warm_ADJ"
 
-/b/ (0.026)
+/b/ (0.025)
 	<blade> /blˈed/ "leaf_NOUN_NEU"
 	<bate> /bˈet/ "boat_NOUN"
 	<bath> /bˈɑθ/ "bath_NOUN_NEU"

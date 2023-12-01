@@ -1,7 +1,7 @@
 VOWELS
-/ə/ (0.059)
+/ə/ (0.06)
 	<tribe> /tʁˈiːb̥ə/ "drive_VERB"
-	<Donner> /d̥ˈonəʁ/ "thunder_NOUN"
+	<schwimme> /ʃwˈimə/ "swim_VERB"
 	<kenne> /kʰˈenə/ "can_VERB"
 
 /ˈɒ/ (0.037)
@@ -9,10 +9,10 @@ VOWELS
 	<schwàrz> /ʃwˈɒʁʦ/ "black_ADJ"
 	<Mànn> /mˈɒn/ "man_NOUN"
 
-/ˈi/ (0.034)
+/ˈi/ (0.035)
+	<Millich> /mˈiliʃ/ "milk_NOUN_FEM"
 	<Il> /ˈil/ "owl_NOUN"
-	<Ring> /ʁˈiŋ/ "ring_NOUN"
-	<Ding> /d̥ˈiŋ/ "thing_NOUN"
+	<schwimme> /ʃwˈimə/ "swim_VERB"
 
 /ˈiː/ (0.027)
 	<Miis> /mˈiːs/ "mice_NOUN"
@@ -117,15 +117,15 @@ VOWELS
 
 
 CONSONANTS
-/ʁ/ (0.088)
+/ʁ/ (0.087)
 	<Gràs> /ɡ̊ʁˈɒːs/ "grass_NOUN_NEU"
 	<Ring> /ʁˈiŋ/ "ring_NOUN"
 	<diir> /d̥ˈiːʁ/ "dear_ADJ"
 
-/n/ (0.07)
-	<Mond> /mˈoːnd̥/ "moon_NOUN"
-	<Sohn> /sˈoːn/ "son_NOUN"
-	<Wind> /ʋˈind̥/ "wind_NOUN"
+/n/ (0.071)
+	<Männer> /mˈɛnəʁ/ "men_NOUN"
+	<Schnee> /ʃnˈeː/ "snow_NOUN"
+	<uns> /ˈuns/ "us_PRON"
 
 /s/ (0.059)
 	<See> /sˈeː/ "sea_NOUN"
@@ -147,17 +147,17 @@ CONSONANTS
 	<Stüehl> /ʃtˈøːl/ "stool_NOUN"
 	<ditsch> /d̥ˈitʃ/ "Teutonic_ADJ"
 
-/f/ (0.04)
-	<Fuchs> /fˈuks/ "fox_NOUN"
+/f/ (0.041)
+	<vier> /fˈiːʁ/ "four_NUM"
 	<Vöjel> /fˈøɡ̊l̩/ "bird_NOUN_MASC"
-	<Fisch> /fˈiʃ/ "fish_NOUN"
+	<Fiir> /fˈiːʁ/ "fire_NOUN"
 
-/d̥/ (0.036)
-	<Donner> /d̥ˈonəʁ/ "thunder_NOUN"
-	<Ding> /d̥ˈiŋ/ "thing_NOUN"
+/d̥/ (0.037)
+	<drej> /d̥ʁˈei̯/ "three_NUM"
 	<Sànd> /sˈɒnd̥/ "sand_NOUN"
+	<ànder> /ˈɒnd̥əʁ/ "other_ADJ"
 
-/m/ (0.033)
+/m/ (0.032)
 	<Baum> /b̥ˈʊːm/ "tree_NOUN"
 	<Müeter> /mˈøːtəʁ/ "mother_NOUN"
 	<mer> /mˈeːʁ/ "we_PRON"

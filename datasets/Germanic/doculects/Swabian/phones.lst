@@ -1,15 +1,15 @@
 VOWELS
-/a/ (0.04)
+/a/ (0.041)
 	<drogga> /dʁˈɔɡa/ "dry_ADJ"
-	<bidda> /bˈɪda/ "request_VERB"
-	<danga> /dˈaŋɡa/ "thank_VERB"
+	<Rega> /ʁˈeːɡa/ "rain_NOUN"
+	<schwemma> /ʃʋˈema/ "swim_VERB"
 
 /ˈa/ (0.037)
 	<Wassr> /ʋˈasʌ/ "water_NOUN"
 	<warm> /ʋˈaʕm/ "warm_ADJ"
 	<Arm> /ˈaʕm/ "arm_NOUN"
 
-/ʌ/ (0.028)
+/ʌ/ (0.027)
 	<hondrd> /hˈondʌd/ "hundred_NUM"
 	<deier> /dˈəi̯ʌ/ "dear_ADJ"
 	<Schweschdr> /ʃʋˈɛʃdʌ/ "sister_NOUN"
@@ -89,22 +89,22 @@ VOWELS
 	<Dochdr> /dˈɔxdʌ/ "daughter_NOUN"
 	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
 
+/ˈɪ/ (0.007)
+	<winscha> /ʋˈɪnʃa/ "wish_VERB"
+	<dringa> /dʁˈɪŋɡa/ "drink_VERB"
+	<singa> /sˈɪŋa/ "sing_VERB"
+
 /ˈu/ (0.007)
-	<Muddr> /mˈudʌ/ "mother_NOUN"
+	<Fuchs> /fˈuks/ "fox_NOUN"
 	<Bruschd> /bʁˈuʃd/ "breast_NOUN"
-	<Mugg> /mˈuɡ/ "midge_NOUN"
+	<Muddr> /mˈudʌ/ "mother_NOUN"
 
 /ˈiə̯/ (0.007)
 	<fliaga> /flˈiə̯ɡa/ "fly_VERB"
-	<diaf> /dˈiə̯f/ "deep_ADJ"
+	<siaß> /sˈiə̯s/ "sweet_ADJ"
 	<Diab> /dˈiə̯b/ "thief_NOUN"
 
-/ˈɪ/ (0.006)
-	<singa> /sˈɪŋa/ "sing_VERB"
-	<winscha> /ʋˈɪnʃa/ "wish_VERB"
-	<bidda> /bˈɪda/ "request_VERB"
-
-/ˈiː/ (0.006)
+/ˈiː/ (0.005)
 	<fiehla> /fˈiːla/ "feel_VERB"
 	<sieba> /sˈiːba/ "seven_NUM"
 	<friera> /fʁˈiːʁa/ "freeze_VERB"
@@ -147,11 +147,11 @@ VOWELS
 
 CONSONANTS
 /d/ (0.097)
-	<Schduhl> /ʃdˈuːl/ "stool_NOUN"
-	<Haud> /hˈao̯d/ "skin_NOUN"
-	<Weddr> /ʋˈɛdʌ/ "weather_NOUN"
+	<Schdoi> /ʃdˈɔe̯/ "stone_NOUN"
+	<Schweschdr> /ʃʋˈɛʃdʌ/ "sister_NOUN"
+	<Zeid> /ʦˈəi̯d/ "time_NOUN"
 
-/s/ (0.061)
+/s/ (0.06)
 	<beißa> /bˈəi̯sa/ "bite_VERB"
 	<singa> /sˈɪŋa/ "sing_VERB"
 	<Käs> /kʰˈɛːs/ "cheese_NOUN"
@@ -161,20 +161,20 @@ CONSONANTS
 	<geal> /ɡˈeə̯l/ "yellow_ADJ"
 	<Wolf> /ʋˈolf/ "wolf_NOUN"
 
-/ɡ/ (0.05)
+/ɡ/ (0.049)
 	<Berg> /bˈʌɡ/ "mountain_NOUN"
 	<Geischd> /ɡˈae̯ʃd/ "ghost_NOUN"
 	<digg> /dˈiɡ/ "thick_ADJ"
 
-/f/ (0.044)
-	<Fiaß> /fˈiə̯s/ "feet_NOUN"
+/f/ (0.045)
+	<fliaga> /flˈiə̯ɡa/ "fly_VERB"
 	<Aff> /ˈaf/ "ape_NOUN"
-	<scharf> /ʃˈaʕf/ "sharp_ADJ"
+	<femf> /fˈɛmf/ "five_NUM"
 
-/n/ (0.043)
-	<Horn> /hˈɔʕn/ "horn_NOUN"
-	<Nachd> /nˈaxd/ "night_NOUN_FEM"
-	<winscha> /ʋˈɪnʃa/ "wish_VERB"
+/n/ (0.044)
+	<nei> /nˈəi̯/ "new_ADJ"
+	<ons> /ˈons/ "us_PRON"
+	<Donndr> /dˈondʌ/ "thunder_NOUN"
 
 /ʃ/ (0.037)
 	<Schlang> /ʃlˈaŋ/ "snake_NOUN"
@@ -196,7 +196,7 @@ CONSONANTS
 	<Noma> /nˈɔːma/ "name_NOUN"
 	<Boom> /bˈoːm/ "tree_NOUN"
 
-/ʋ/ (0.028)
+/ʋ/ (0.027)
 	<schwarz> /ʃʋˈaʕʦ/ "black_ADJ"
 	<was> /ʋˈas/ "what_PRON"
 	<winscha> /ʋˈɪnʃa/ "wish_VERB"
@@ -211,7 +211,7 @@ CONSONANTS
 	<Arm> /ˈaʕm/ "arm_NOUN"
 	<Hoor> /hˈɔːʕ/ "hair_NOUN"
 
-/ʦ/ (0.017)
+/ʦ/ (0.016)
 	<Zeid> /ʦˈəi̯d/ "time_NOUN"
 	<zwanzg> /ʦʋˈanʦɡ/ "twenty_NUM"
 	<zwelf> /ʦʋˈelf/ "twelve_NUM"

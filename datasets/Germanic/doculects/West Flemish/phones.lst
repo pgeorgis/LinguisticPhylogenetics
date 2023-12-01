@@ -4,7 +4,7 @@ VOWELS
 	<dinne> /dˈɪnə/ "thin_ADJ"
 	<veugel> /vˈøːɦəl/ "bird_NOUN_MASC"
 
-/ˈɑ/ (0.033)
+/ˈɑ/ (0.032)
 	<gras> /ɦɾˈɑs/ "grass_NOUN_NEU"
 	<zwart> /zʋˈɑɾt/ "black_ADJ"
 	<macht> /mˈɑht/ "might_NOUN"
@@ -24,37 +24,37 @@ VOWELS
 	<oap> /ˈɒːp/ "ape_NOUN"
 	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
 
-/ˈuə̯/ (0.018)
+/ˈuə̯/ (0.017)
 	<bloeme> /blˈuə̯mə/ "flower_NOUN"
 	<groene> /ɦɾˈuə̯nə/ "green_ADJ"
 	<bloed> /blˈuə̯t/ "blood_NOUN"
 
+/ˈɪ/ (0.016)
+	<wind> /ʋˈɪnt/ "wind_NOUN"
+	<ring> /ɾˈɪŋk/ "ring_NOUN"
+	<gjitte> /ɦjˈɪtə/ "goat_NOUN"
+
 /ˈæ/ (0.015)
-	<scherp> /ʃhˈæɾp/ "sharp_ADJ"
-	<melk> /mˈæwk/ "milk_NOUN_FEM"
 	<erte> /ˈæɾtə/ "heart_NOUN"
+	<zwemmn> /zʋˈæmn̩/ "swim_VERB"
+	<elve> /ˈælvə/ "eleven_NUM"
 
 /ˈɛː/ (0.015)
-	<stêen> /stˈɛːn/ "stone_NOUN"
-	<eirde> /ˈɛːɾdə/ "earth_NOUN"
 	<eik> /ˈɛːk/ "oak_NOUN_FEM"
+	<beên> /bˈɛːn/ "bone_NOUN"
+	<stêen> /stˈɛːn/ "stone_NOUN"
 
 /ˈeː/ (0.015)
 	<beter> /bˈeːtəɾ/ "better_ADJ"
+	<zeevn> /zˈeːvn̩/ "seven_NUM"
 	<geel> /ɦˈeːl/ "yellow_ADJ"
-	<weer> /ʋˈeːɾ/ "weather_NOUN"
 
 /ˈɔ/ (0.015)
+	<god> /ɦˈɔt/ "god_NOUN"
+	<volk> /vˈɔwk/ "folk_NOUN"
 	<twolve> /tʋˈɔlvə/ "twelve_NUM"
-	<ors> /ˈɔɾs/ "horse_NOUN"
-	<borst> /bˈɔɾst/ "breast_NOUN"
 
-/ˈɪ/ (0.015)
-	<ring> /ɾˈɪŋk/ "ring_NOUN"
-	<gjitte> /ɦjˈɪtə/ "goat_NOUN"
-	<wind> /ʋˈɪnt/ "wind_NOUN"
-
-/ˈu/ (0.014)
+/ˈu/ (0.013)
 	<koud> /kˈut/ "cold_ADJ"
 	<vrouwe> /vɾˈuʋə/ "woman_NOUN"
 	<ounger> /ˈuŋɾ̩/ "hunger_NOUN"
@@ -98,17 +98,17 @@ CONSONANTS
 	<woord> /ʋˈoːɾt/ "word_NOUN"
 	<tyd> /tˈit/ "time_NOUN"
 
-/ɾ/ (0.088)
+/ɾ/ (0.087)
 	<vriend> /vɾˈiə̯nt/ "friend_NOUN"
 	<nôord> /nˈoːɾt/ "north_NOUN"
 	<moedr> /mˈuə̯dɾ̩/ "mother_NOUN"
 
-/n/ (0.084)
-	<oovn> /ˈoːvn̩/ "oven_NOUN"
-	<doorn> /dˈoːɾn/ "thorn_NOUN"
-	<naht> /nˈɑht/ "night_NOUN_FEM"
+/n/ (0.086)
+	<ander> /ˈɑndəɾ/ "other_ADJ"
+	<dinne> /dˈɪnə/ "thin_ADJ"
+	<nieuwe> /nˈiə̯ʋə/ "new_ADJ"
 
-/l/ (0.045)
+/l/ (0.044)
 	<geel> /ɦˈeːl/ "yellow_ADJ"
 	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
 	<bloed> /blˈuə̯t/ "blood_NOUN"
@@ -118,9 +118,9 @@ CONSONANTS
 	<ys> /ˈis/ "ice_NOUN"
 	<snêeuw> /snˈɛːw/ "snow_NOUN"
 
-/v/ (0.042)
-	<volgn> /vˈɔlɦn̩/ "follow_VERB"
-	<vul> /vˈœl/ "full_ADJ"
+/v/ (0.043)
+	<volk> /vˈɔwk/ "folk_NOUN"
+	<vriend> /vɾˈiə̯nt/ "friend_NOUN"
 	<voetn> /vˈuə̯tn̩/ "feet_NOUN"
 
 /k/ (0.034)
@@ -133,10 +133,10 @@ CONSONANTS
 	<neegn> /nˈeːɦn̩/ "nine_NUM"
 	<zegn> /zˈɛɦn̩/ "say_VERB"
 
-/d/ (0.033)
+/d/ (0.034)
 	<voader> /vˈɒːdɾ̩/ "father_NOUN"
 	<dochter> /dˈɔhtɾ̩/ "daughter_NOUN"
-	<zyde> /zˈidə/ "side_NOUN"
+	<ander> /ˈɑndəɾ/ "other_ADJ"
 
 /ʋ/ (0.028)
 	<wuuf> /ʋˈyːf/ "wife_NOUN"

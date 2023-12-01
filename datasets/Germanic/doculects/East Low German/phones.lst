@@ -1,18 +1,18 @@
 VOWELS
-/æ/ (0.047)
+/æ/ (0.046)
 	<Ierd> /ˈiːæ/ "earth_NOUN"
 	<Kirch> /kʰˈiːæç/ "church_NOUN_FEM"
 	<hüren> /hˈyːæn/ "hear_VERB"
 
-/ˈa/ (0.031)
-	<schwart> /ʃwˈat/ "black_ADJ"
-	<Mann> /mˈan/ "man_NOUN"
-	<lang> /lˈaŋk/ "long_ADJ"
+/ˈɪ/ (0.031)
+	<drinken> /drˈɪŋkn̩/ "drink_VERB"
+	<Ring> /rˈɪŋ/ "ring_NOUN"
+	<bidden> /bˈɪɾn̩/ "request_VERB"
 
-/ˈɪ/ (0.03)
-	<Schipp> /ʃˈɪp/ "ship_NOUN"
-	<twintig> /tʰvˈɪntɪç/ "twenty_NUM"
-	<Minsch> /mˈɪnʃ/ "person_NOUN"
+/ˈa/ (0.031)
+	<Mann> /mˈan/ "man_NOUN"
+	<Schlang> /ʃlˈaŋ/ "snake_NOUN"
+	<lachen> /lˈaxn̩/ "laugh_VERB"
 
 /ˈaʊ̯/ (0.028)
 	<Kauh> /kʰˈaʊ̯/ "cow_NOUN"
@@ -39,12 +39,12 @@ VOWELS
 	<Hut> /hˈuːt/ "skin_NOUN"
 	<Huurn> /hˈuːæn/ "horn_NOUN"
 
-/ˈɛ/ (0.016)
+/ˈɛ/ (0.015)
 	<Melk> /mˈɛlk/ "milk_NOUN_FEM"
 	<Eck> /ˈɛk/ "edge_NOUN"
 	<Wech> /vˈɛç/ "way_NOUN"
 
-/ˈʊ/ (0.016)
+/ˈʊ/ (0.015)
 	<Hund> /hˈʊnd/ "dog_NOUN"
 	<Wull> /vˈʊl/ "wool_NOUN_FEM"
 	<uns> /ˈʊns/ "us_PRON"
@@ -116,10 +116,10 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.087)
-	<Stein> /ʃtˈae̯n/ "stone_NOUN"
-	<Trån> /tʰrˈɒːn/ "tear_NOUN_FEM"
-	<in> /ˈɪn/ "in_PREP"
+/n/ (0.088)
+	<Stiern> /ʃtˈiːæn/ "star_NOUN"
+	<Schwien> /ʃwˈiːn/ "swine_NOUN"
+	<hunnert> /hˈʊnæt/ "hundred_NUM"
 
 /t/ (0.062)
 	<weiten> /vˈae̯tn̩/ "know_VERB"
@@ -141,10 +141,10 @@ CONSONANTS
 	<elm> /ˈɛlm/ "eleven_NUM"
 	<Mauder> /mˈaʊ̯ɾæ/ "mother_NOUN"
 
-/f/ (0.039)
-	<Wief> /vˈiːf/ "wife_NOUN"
-	<folgen> /fˈɔlɡn̩/ "follow_VERB"
+/f/ (0.04)
+	<twölf> /tʰvˈœlf/ "twelve_NUM"
 	<flegen> /flˈae̯ŋ/ "fly_VERB"
+	<Fleisch> /flˈae̯ʃ/ "flesh_NOUN"
 
 /r/ (0.032)
 	<Rägen> /rˈɛŋ/ "rain_NOUN"
@@ -166,7 +166,7 @@ CONSONANTS
 	<warm> /vˈaːm/ "warm_ADJ"
 	<Wuurt> /vˈuːæt/ "word_NOUN"
 
-/h/ (0.025)
+/h/ (0.024)
 	<hunnert> /hˈʊnæt/ "hundred_NUM"
 	<Hart> /hˈaːt/ "heart_NOUN"
 	<Hund> /hˈʊnd/ "dog_NOUN"

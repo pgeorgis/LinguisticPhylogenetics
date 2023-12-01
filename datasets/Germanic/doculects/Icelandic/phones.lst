@@ -1,13 +1,13 @@
 VOWELS
-/ʏ/ (0.066)
+/ʏ/ (0.065)
 	<fætur> /fˈaːi̯tʏr̥/ "feet_NOUN"
 	<dagur> /d̥ˈaːɣʏr̥/ "day_NOUN"
 	<léttur> /ljˈɛʰtʏr̥/ "light_ADJ"
 
-/a/ (0.04)
+/a/ (0.041)
 	<drekka> /d̥rˈɛʰka/ "drink_VERB"
-	<síða> /sˈiːða/ "side_NOUN"
-	<manneskja> /mˈanːɛsca/ "person_NOUN"
+	<segja> /sˈɛːi̯ja/ "say_VERB"
+	<ugla> /ˈʏɡ̊la/ "owl_NOUN"
 
 /ˈa/ (0.02)
 	<stjarna> /stjˈartna/ "star_NOUN"
@@ -44,25 +44,25 @@ VOWELS
 	<vegur> /vˈɛːɣʏr̥/ "way_NOUN"
 	<ég> /jˈɛːx/ "I_PRON"
 
+/ˈɪ/ (0.011)
+	<biðja> /b̥ˈɪðja/ "request_VERB"
+	<fiskur> /fˈɪskʏr̥/ "fish_NOUN"
+	<vindur> /vˈɪnd̥ʏr̥/ "wind_NOUN"
+
 /ˈʏ/ (0.011)
-	<hundrað> /hˈʏnd̥rað/ "hundred_NUM"
+	<fugl> /fˈʏɡ̊l̥/ "bird_NOUN_MASC"
+	<ugla> /ˈʏɡ̊la/ "owl_NOUN"
 	<þurr> /θˈʏrː̥/ "dry_ADJ"
-	<ull> /ˈʏtl̥/ "wool_NOUN_FEM"
 
 /ˈɔ/ (0.011)
-	<korn> /kʰˈɔrtn̥/ "corn_NOUN"
+	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
+	<ormur> /ˈɔrmʏr̥/ "worm_NOUN"
 	<kona> /kʰˈɔna/ "woman_NOUN"
-	<norður> /nˈɔrðʏr̥/ "north_NOUN"
-
-/ˈɪ/ (0.01)
-	<þykkur> /θˈɪʰkʏr̥/ "thick_ADJ"
-	<vindur> /vˈɪnd̥ʏr̥/ "wind_NOUN"
-	<fimm> /fˈɪm/ "five_NUM"
 
 /ˈuː/ (0.009)
-	<út> /ˈuːt/ "out_PREP"
 	<lús> /lˈuːs/ "louse_NOUN"
-	<þúsund> /θˈuːsʏnd̥/ "thousand_NUM"
+	<út> /ˈuːt/ "out_PREP"
+	<fljúga> /fljˈuːa/ "fly_VERB"
 
 /ˈɑːu̯/ (0.009)
 	<máni> /mˈɑːu̯nɪ/ "moon_NOUN"
@@ -224,20 +224,20 @@ CONSONANTS
 	<ungur> /ˈuŋɡ̊ʏr̥/ "young_NOUN"
 	<berg> /b̥ˈɛrɡ̊/ "mountain_NOUN"
 
-/m/ (0.023)
+/m/ (0.022)
 	<mig> /mˈɪːx/ "me_PRON"
 	<draumur> /d̥rˈœːy̯mʏr̥/ "dream_NOUN"
 	<varmur> /vˈarmʏr̥/ "warm_ADJ"
 
-/d̥/ (0.022)
+/d̥/ (0.021)
 	<dóttir> /d̥ˈɔu̯ʰtɪr̥/ "daughter_NOUN"
 	<dýr> /d̥ˈiːr̥/ "animal_NOUN"
 	<eldur> /ˈɛld̥ʏr̥/ "fire_NOUN"
 
 /f/ (0.021)
 	<fugl> /fˈʏɡ̊l̥/ "bird_NOUN_MASC"
-	<fimm> /fˈɪm/ "five_NUM"
 	<fiskur> /fˈɪskʏr̥/ "fish_NOUN"
+	<funi> /fˈʏːnɪ/ "fire_NOUN"
 
 /b̥/ (0.021)
 	<bein> /b̥ˈɛːi̯n/ "bone_NOUN"
@@ -294,18 +294,18 @@ CONSONANTS
 	<nótt> /nˈɔu̯ʰt/ "night_NOUN_FEM"
 	<vatn> /vˈaʰtn̥/ "water_NOUN"
 
-/ɟ̊/ (0.008)
-	<syngja> /sˈiɲɟ̊a/ "sing_VERB"
-	<bryggja> /b̥rˈɪɟ̊ɟ̊a/ "bridge_NOUN"
-	<fylgja> /fˈɪlɟ̊a/ "follow_VERB"
-
-/nː/ (0.007)
+/nː/ (0.008)
 	<kunna> /kʰˈʏnːa/ "can_VERB"
-	<annar> /ˈanːar̥/ "other_ADJ"
-	<menn> /mˈɛnː/ "men_NOUN"
+	<finna> /fˈɪnːa/ "find_VERB"
+	<tönn> /tʰˈœnː/ "tooth_NOUN"
+
+/ɟ̊/ (0.008)
+	<geit> /ɟ̊ˈeːi̯t/ "goat_NOUN"
+	<fylgja> /fˈɪlɟ̊a/ "follow_VERB"
+	<bryggja> /b̥rˈɪɟ̊ɟ̊a/ "bridge_NOUN"
 
 /ɣ/ (0.006)
-	<dagur> /d̥ˈaːɣʏr̥/ "day_NOUN"
+	<vegur> /vˈɛːɣʏr̥/ "way_NOUN"
 	<dauðlegur> /d̥ˈœy̯ðlɛːɣʏr̥/ "deadly_ADJ"
 	<fluga> /flˈʏːɣa/ "housefly_NOUN"
 

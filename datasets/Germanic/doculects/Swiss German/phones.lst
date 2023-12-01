@@ -1,17 +1,17 @@
 VOWELS
 /ə/ (0.075)
 	<Chirche> /χˈirχə/ "church_NOUN_FEM"
-	<Naadle> /nˈɒːd̥lə/ "needle_NOUN"
-	<Zunge> /ʦˈuŋə/ "tongue_NOUN"
+	<Naame> /nˈɒːmə/ "name_NOUN"
+	<danke> /d̥ˈaŋkə/ "thank_VERB"
 
 /ˈɒ/ (0.028)
 	<schwarz> /ʃʋˈɒrʦ/ "black_ADJ"
 	<Hang> /hˈɒŋ/ "hand_NOUN_FEM"
 	<acht> /ˈɒχt/ "eight_NUM"
 
-/ˈi/ (0.023)
-	<sitze> /sˈiʦə/ "sit_VERB"
+/ˈi/ (0.024)
 	<singe> /sˈiŋə/ "sing_VERB"
+	<Schiff> /ʃˈif/ "ship_NOUN"
 	<Wind> /ʋˈind̥/ "wind_NOUN"
 
 /ˈæ/ (0.022)
@@ -147,12 +147,12 @@ CONSONANTS
 	<Läbere> /lˈæb̥ərə/ "liver_NOUN"
 	<Ring> /rˈiŋ/ "ring_NOUN"
 
-/t/ (0.058)
+/t/ (0.057)
 	<Schtuel> /ʃtˈuə̯l/ "stool_NOUN"
 	<tüür> /tˈyːr/ "dear_ADJ"
 	<alt> /ˈɒlt/ "old_ADJ"
 
-/l/ (0.052)
+/l/ (0.051)
 	<folge> /fˈolɡ̊ə/ "follow_VERB"
 	<al> /ˈɒl/ "all_ADJ"
 	<Blueme> /b̥lˈuə̯mə/ "flower_NOUN"
@@ -162,45 +162,45 @@ CONSONANTS
 	<Wäg> /ʋˈæɡ̊/ "way_NOUN"
 	<Gott> /ɡ̊ˈot/ "god_NOUN"
 
+/n/ (0.042)
+	<ander> /ˈɒnd̥ər/ "other_ADJ"
+	<Wind> /ʋˈind̥/ "wind_NOUN"
+	<nüün> /nˈyːn/ "nine_NUM"
+
 /χ/ (0.041)
-	<Äiche> /ˈæi̯χə/ "oak_NOUN_FEM"
 	<Macht> /mˈɒχt/ "might_NOUN"
 	<sächs> /sˈæχs/ "six_NUM"
+	<Chönig> /χˈøːniɡ̊/ "king_NOUN"
 
 /s/ (0.041)
-	<Sang> /sˈɒŋ/ "sand_NOUN"
 	<Chääs> /χˈæːs/ "cheese_NOUN"
 	<sitze> /sˈiʦə/ "sit_VERB"
+	<was> /ʋˈɒs/ "what_PRON"
 
-/n/ (0.041)
-	<wünsche> /ʋˈynʃə/ "wish_VERB"
-	<Häne> /hˈænə/ "hen_NOUN"
-	<Chnü> /χnˈyː/ "knee_NOUN"
-
-/f/ (0.04)
-	<Schiff> /ʃˈif/ "ship_NOUN"
-	<Fatter> /fˈɒtːər/ "father_NOUN"
-	<Wolf> /ʋˈolf/ "wolf_NOUN"
+/f/ (0.041)
+	<Finger> /fˈiŋər/ "finger_NOUN"
+	<flüge> /flˈyɡ̊ə/ "fly_VERB"
+	<Schoof> /ʃˈoːf/ "sheep_NOUN"
 
 /ʃ/ (0.032)
+	<schöön> /ʃˈøːn/ "beautiful_ADJ"
+	<schlaa> /ʃlˈɒː/ "slay_VERB"
 	<Schoof> /ʃˈoːf/ "sheep_NOUN"
-	<Sproch> /ʃprˈoːχ/ "speech_NOUN_FEM"
-	<Schnee> /ʃnˈeː/ "snow_NOUN"
 
 /b̥/ (0.031)
+	<Bärg> /b̥ˈærɡ̊/ "mountain_NOUN"
+	<Läbere> /lˈæb̥ərə/ "liver_NOUN"
 	<Bäi> /b̥ˈɛi̯/ "bone_NOUN"
-	<Blatt> /b̥lˈɒt/ "leaf_NOUN_NEU"
-	<triibe> /trˈiːb̥ə/ "drive_VERB"
 
-/d̥/ (0.028)
+/d̥/ (0.029)
 	<ander> /ˈɒnd̥ər/ "other_ADJ"
-	<Land> /lˈɒnd̥/ "land_NOUN"
-	<Naadle> /nˈɒːd̥lə/ "needle_NOUN"
+	<Mond> /mˈond̥/ "moon_NOUN"
+	<norde> /nˈord̥ə/ "north_NOUN"
 
 /m/ (0.028)
 	<Mond> /mˈond̥/ "moon_NOUN"
+	<Muus> /mˈuːs/ "mouse_NOUN_FEM"
 	<Aarm> /ˈɒːrm/ "arm_NOUN"
-	<Mänsch> /mˈænʃ/ "person_NOUN"
 
 /ʋ/ (0.028)
 	<Wind> /ʋˈind̥/ "wind_NOUN"
