@@ -1,0 +1,1609 @@
+Same meaning pairs: 288
+****SAMPLE 1****
+Iteration 1
+	Qualified: 222
+	Disqualified: 238
+	Added: 0
+	Removed: 8
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		estio /iʃtˈiu/ - astati /astˈatɪ/
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+		chorar /ʃuɾˈaɾ/ - chiànciri /cˈanɕɪɾɪ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+
+Iteration 2
+	Qualified: 220
+	Disqualified: 240
+	Added: 1
+		estio /iʃtˈiu/ - astati /astˈatɪ/
+	Removed: 3
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+		ovelha /ɔvˈɐjʎɐ/ - pècura /pˈɛkʊra/
+
+Iteration 3
+	Qualified: 223
+	Disqualified: 237
+	Added: 3
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+	Removed: 0
+
+Iteration 4
+	Qualified: 223
+	Disqualified: 237
+	Added: 1
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Iteration 5
+	Qualified: 224
+	Disqualified: 236
+	Added: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+	Removed: 0
+
+Iteration 6
+	Qualified: 225
+	Disqualified: 235
+	Added: 2
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Iteration 7
+	Qualified: 226
+	Disqualified: 234
+	Added: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+	Removed: 0
+
+Iteration 8
+	Qualified: 226
+	Disqualified: 234
+	Added: 1
+		chorar /ʃuɾˈaɾ/ - chiànciri /cˈanɕɪɾɪ/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Iteration 9
+	Qualified: 227
+	Disqualified: 233
+	Added: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+	Removed: 0
+
+Iteration 10
+	Qualified: 227
+	Disqualified: 233
+	Added: 1
+		ovelha /ɔvˈɐjʎɐ/ - pècura /pˈɛkʊra/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Final qualifying:
+		beber /bɨβˈeɾ/ - bìviri /bˈivɪɾɪ/
+		branco /bɾˈɐ̃ku/ - jancu /jˈaŋkʊ/
+		baixo /bˈajʃu/ - basciu /bˈaʃʃʊ/
+		boi /bˈoj/ - voi /vˈɔɪ/
+		boca /bˈokɐ/ - bucca /bˈukka/
+		boa /bˈoɐ/ - bona /bˈɔna/
+		bom /bˈõ/ - bonu /bˈɔnʊ/
+		bons /bˈõʃ/ - boni /bˈɔnɪ/
+		bem /bˈɐ̃j̃/ - beni /bˈɛnɪ/
+		belo /bˈɛlu/ - beddu /bˈɛɖɖʊ/
+		dar /dˈaɾ/ - dari /dˈarɪ/
+		dedo /dˈeðu/ - jitu /jˈitʊ/
+		dedo /dˈeðu/ - jìditu /jˈiɾitʊ/
+		dona /dˈonɐ/ - donna /dˈɔnna/
+		doze /dˈozɨ/ - dùdici /dˈuɾɪɕɪ/
+		dom /dˈõ/ - donu /dˈonʊ/
+		duas /dˈuɐʃ/ - dui /dˈuɪ/
+		dez /dˈɛʃ/ - deci /dˈɛɕɪ/
+		fazer /fɐzˈeɾ/ - fari /fˈaɾɪ/
+		farinha /fɐɾˈiɲɐ/ - farina /faɾˈina/
+		frio /fɾˈiu/ - friddu /fɾˈiddʊ/
+		fruito /fɾˈujtu/ - fruttu /frˈuttʊ/
+		fada /fˈaðɐ/ - fata /fˈata/
+		falso /fˈaɫsu/ - fausu /fˈawsʊ/
+		fêmea /fˈemjɐ/ - fìmmina /fˈimmɪna/
+		fio /fˈiu/ - filu /fˈilʊ/
+		fíɡado /fˈiɣɐðu/ - fìcatu /fˈikatʊ/
+		filho /fˈiʎu/ - fiɡɡhiu /fˈiɟɟʊ/
+		filha /fˈiʎɐ/ - fiɡɡhia /fˈiɟɟa/
+		foɡo /fˈoɣu/ - focu /fˈɔkʊ/
+		folha /fˈoʎɐ/ - foɡɡhia /fˈɔɟɟa/
+		fumo /fˈumu/ - fumu /fˈumʊ/
+		fome /fˈɔmɨ/ - fami /fˈamɪ/
+		forte /fˈɔɾtɨ/ - forte /fˈɔrtɪ/
+		ferro /fˈɛʁu/ - ferro /fˈɛʐʐʊ/
+		festa /fˈɛʃtɐ/ - festa /fˈɛsta/
+		iɡual /iɣwˈaɫ/ - uɡuali /uɡwˈalɪ/
+		escutar /iʃkutˈaɾ/ - ascutari /askutˈaɾɪ/
+		escrever /iʃkɾɨvˈeɾ/ - scrìviri /skɾˈiviɾɪ/
+		escuro /iʃkˈuɾu/ - scuru /ʃkˈuɾʊ/
+		espada /iʃpˈaðɐ/ - spata /ʃpˈata/
+		espiɡa /iʃpˈiɣɐ/ - spica /ʃpˈika/
+		espinha /iʃpˈiɲɐ/ - spina /ʃpˈina/
+		Espanha /iʃpˈɐɲɐ/ - Spaɡna /ʃpˈaɲɲa/
+		estrela /iʃtɾˈelɐ/ - stidda /ʃtˈiɖɖa/
+		estado /iʃtˈaðu/ - statu /ʃtˈatʊ/
+		estio /iʃtˈiu/ - astati /astˈatɪ/
+		inverno /ĩvˈɛɾnu/ - mmernu /mmˈɛɾnʊ/
+		inverno /ĩvˈɛɾnu/ - nvèrnu /nvˈɛɾnʊ/
+		conhecer /kuɲɨsˈeɾ/ - cunùsciri /kunˈuʃʃɪrɪ/
+		quatro /kwˈatɾu/ - quattru /kwˈaʈʈɽʊ/
+		cavalo /kɐvˈalu/ - cavaddu /kavˈaɖɖʊ/
+		castelo /kɐʃtˈɛlu/ - casteddu /kastˈɛɖɖʊ/
+		cambiar /kɐ̃bjˈaɾ/ - canɡiari /kanʤˈaɾɪ/
+		cabelo /kɐβˈelu/ - capiddu /kapˈiɖɖʊ/
+		cabelo /kɐβˈelu/ - pilu /pˈilʊ/
+		crer /kɾˈeɾ/ - cridiri /kɾˈiɾɪɾɪ/
+		cruz /kɾˈuʃ/ - cruci /kɾˈuɕɪ/
+		caldo /kˈaɫdu/ - càvuru /kˈavʊɾʊ/
+		caldo /kˈaɫdu/ - càudu /kˈawdʊ/
+		carne /kˈaɾnɨ/ - carni /kˈaɾnɪ/
+		cabra /kˈaβɾɐ/ - crapa /kɾˈapa/
+		corpo /kˈoɾpu/ - corpu /kˈɔɾpʊ/
+		cu /kˈu/ - culu /kˈulʊ/
+		cunho /kˈuɲu/ - cuɡnu /kˈuɲɲʊ/
+		canto /kˈɐ̃tu/ - cantu /kˈantʊ/
+		cão /kˈɐ̃w̃/ - cani /kˈanɪ/
+		colo /kˈɔlu/ - coddu /kˈɔɖɖʊ/
+		cor /kˈɔɾ/ - cori /kˈɔɾɪ/
+		leão /ljˈɐ̃w̃/ - liuni /liˈunɪ/
+		laɡo /lˈaɣu/ - lacu /lˈakʊ/
+		láɡrima /lˈaɣɾimɐ/ - làcrima /lˈakɾɪma/
+		livre /lˈivɾɨ/ - lìbbiru /lˈibbɪɾʊ/
+		línɡua /lˈĩɡwɐ/ - linɡua /lˈiŋɡwa/
+		lobo /lˈoβu/ - lupu /lˈupʊ/
+		luta /lˈutɐ/ - lutta /lˈutta/
+		luz /lˈuʃ/ - lumi /lˈumɪ/
+		luz /lˈuʃ/ - luci /lˈuɕɪ/
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		leito /lˈɐjtu/ - lettu /lˈɛttʊ/
+		leite /lˈɐjtɨ/ - latti /lˈattɪ/
+		lenha /lˈɐjɲɐ/ - liɡna /lˈiɲɲa/
+		lã /lˈɐ̃/ - lana /lˈana/
+		lebre /lˈɛβɾɨ/ - lepru /lˈɛpɾʊ/
+		morrer /moʁˈeɾ/ - mòriri /mˈɔrɪrɪ/
+		montanha /mõtˈɐɲɐ/ - muntaɡna /muntˈaɲɲa/
+		mosseɡar /musɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morseɡar /muɾsɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morder /muɾðˈeɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+		maduro /mɐðˈuɾu/ - maturu /matˈurʊ/
+		metade /mɨtˈaðɨ/ - mità /mitˈa/
+		melhor /mɨʎˈɔɾ/ - miɡɡhiuri /miɟɟˈuɾɪ/
+		mar /mˈaɾ/ - mari /mˈaɾɪ/
+		mil /mˈiɫ/ - milli /mˈillɪ/
+		mosca /mˈoʃkɐ/ - musca /mˈuska/
+		muito /mˈũj̃tu/ - multu /mˈultʊ/
+		meio /mˈɐju/ - mezzu /mˈɛʦʦʊ/
+		mão /mˈɐ̃w̃/ - manu /mˈanʊ/
+		mel /mˈɛɫ/ - meli /mˈɛlɪ/
+		me /mˈɨ/ - mi /mˈi/
+		nadar /nɐðˈaɾ/ - natari /natˈarɪ/
+		nariz /nɐɾˈiʃ/ - nasu /nˈazʊ/
+		nascer /nɐʃsˈeɾ/ - nàsciri /nˈaʃʃɪɾɪ/
+		nenhum /nɨɲˈũ/ - nisciunu /niʃʃˈunʊ/
+		neɡro /nˈeɣɾu/ - nìuru /nˈiwɾʊ/
+		nome /nˈomɨ/ - nomi /nˈomɪ/
+		novo /nˈovu/ - novu /nˈɔvʊ/
+		nuvem /nˈuvɐ̃j̃/ - nuvula /nˈuvʊla/
+		nó /nˈɔ/ - nodu /nˈɔɾʊ/
+		nosso /nˈɔsu/ - nostru /nˈɔʃʃɽʊ/
+		nove /nˈɔvɨ/ - novi /nˈɔvɪ/
+		noz /nˈɔʃ/ - nuci /nˈuɕɪ/
+		névoa /nˈɛvwɐ/ - neɡɡhia /nˈeɟɟa/
+		neve /nˈɛvɨ/ - nivi /nˈivɪ/
+		outono /owtˈonu/ - autunnu /awtˈunnʊ/
+		piolho /pjˈoʎu/ - pirocchiu /piɾˈɔccʊ/
+		palavra /pɐlˈavɾɐ/ - paràula /paɾˈawla/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		preço /pɾˈesu/ - prezzu /pɾˈɛʦʦʊ/
+		paço /pˈasu/ - palazzu /palˈaʦʦʊ/
+		paz /pˈaʃ/ - paci /pˈaɕɪ/
+		pelo /pˈelu/ - capiddu /kapˈiɖɖʊ/
+		pelo /pˈelu/ - pilu /pˈilʊ/
+		pena /pˈenɐ/ - pena /pˈena/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		pêsseɡo /pˈesɨɣu/ - pèrsica /pˈɛrsɪka/
+		pôr /pˈoɾ/ - pùniri /pˈunɪɾɪ/
+		pões /pˈõj̃ʃ/ - puni /pˈunɪ/
+		ponto /pˈõtu/ - puntu /pˈuntʊ/
+		ponte /pˈõtɨ/ - ponti /pˈontɪ/
+		peito /pˈɐjtu/ - pettu /pˈɛttʊ/
+		peixe /pˈɐjʃɨ/ - pisci /pˈiʃʃɪ/
+		pão /pˈɐ̃w̃/ - pani /pˈanɪ/
+		pé /pˈɛ/ - pedi /pˈɛɾɪ/
+		pele /pˈɛlɨ/ - peddi /pˈɛɖɖɪ/
+		cidade /siðˈaðɨ/ - cità /ɕitˈa/
+		cinquenta /sĩkwˈẽtɐ/ - cinquanta /ɕiŋkwˈanta/
+		saúde /sɐˈuðɨ/ - saluti /salˈutɪ/
+		saber /sɐβˈeɾ/ - sapiri /sˈapɪɾɪ/
+		cereja /sɨɾˈɐjʒɐ/ - cirasa /ɕiɾˈaza/
+		sal /sˈaɫ/ - sali /sˈalɪ/
+		salsa /sˈaɫsɐ/ - sarsa /sˈarsa/
+		salsa /sˈaɫsɐ/ - sausa /sˈawsa/
+		sábio /sˈaβju/ - sàviu /sˈavjʊ/
+		seco /sˈeku/ - siccu /sˈikkʊ/
+		seca /sˈekɐ/ - sicca /sˈikka/
+		cera /sˈeɾɐ/ - cira /ɕˈiɾa/
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		sobre /sˈoβɾɨ/ - supra /sˈupra/
+		seis /sˈɐjʃ/ - sei /sˈɛj/
+		sã /sˈɐ̃/ - sana /sˈana/
+		santo /sˈɐ̃tu/ - santu /sˈantʊ/
+		sanɡue /sˈɐ̃ɡɨ/ - sanɡu /sˈaŋɡʊ/
+		sete /sˈɛtɨ/ - setti /sˈɛttɪ/
+		céu /sˈɛw/ - celu /ɕˈɛlʊ/
+		três /tɾˈeʃ/ - tri /ʈɽˈi/
+		tempo /tˈẽpu/ - tempu /tˈɛmpʊ/
+		touro /tˈowɾu/ - tàuru /tˈawrʊ/
+		tú /tˈu/ - tu /tˈu/
+		terra /tˈɛʁɐ/ - terra /tˈɛʐʐa/
+		testa /tˈɛʃtɐ/ - testa /tˈɛʃta/
+		vilão /vilˈɐ̃w̃/ - viḍḍanu /viɖɖˈanʊ/
+		voar /vwˈaɾ/ - vulari /vulˈarɪ/
+		vizinho /vɨzˈiɲu/ - vicinu /viɕˈinʊ/
+		verɡonha /vɨɾɣˈoɲɐ/ - viriɡoɡna /viɾiɡˈɔɲɲa/
+		ver /vˈeɾ/ - vìdiri /vˈiɾiɾɪ/
+		verde /vˈeɾðɨ/ - virdi /vˈiɾdɪ/
+		vento /vˈẽtu/ - ventu /vˈɛntʊ/
+		vida /vˈiðɐ/ - vita /vˈita/
+		via /vˈiɐ/ - via /vˈia/
+		vinho /vˈiɲu/ - vinu /vˈinʊ/
+		vir /vˈiɾ/ - vèniri /vˈɛnɪɾɪ/
+		vinte /vˈĩtɨ/ - vinti /vˈintɪ/
+		velho /vˈɐjʎu/ - vecchiu /vˈɛccʊ/
+		vós /vˈɔʃ/ - vui /vˈuj/
+		voz /vˈɔʃ/ - vuci /vˈuɕɪ/
+		verme /vˈɛɾmɨ/ - vemmu /vˈɛmmʊ/
+		aɡulha /ɐɣˈuʎɐ/ - aɡuɡɡhia /aɡˈuɟɟa/
+		ajudar /ɐʒuðˈaɾ/ - ajutari /ajutˈaɾɪ/
+		ovelha /ɔvˈɐjʎɐ/ - pècura /pˈɛkʊra/
+		odor /ɔðˈoɾ/ - oluri /olˈuɾɪ/
+		orelha /ɔɾˈɐjʎɐ/ - auricchia /awɾˈicca/
+		obreiro /ɔβɾˈɐjɾu/ - opiraiu /opiɾˈajʊ/
+		ɡrosso /ɡɾˈosu/ - rossu /ɾˈɔssʊ/
+		ɡrande /ɡɾˈɐ̃dɨ/ - ɡranni /ɡɾˈannɪ/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡranu /ɡrˈanʊ/
+		ɡota /ɡˈotɐ/ - ɡuccia /ɡˈuʧʧa/
+		romão /ʁumˈɐ̃w̃/ - romanu /romˈanʊ/
+		rainha /ʁɐˈiɲɐ/ - riɡɡina /riʤʤˈina/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		rio /ʁˈiu/ - rìu /rˈiʊ/
+		ruivo /ʁˈujvu/ - russu /ʐˈussʊ/
+		rei /ʁˈɐj/ - re /ʐˈe/
+		rei /ʁˈɐj/ - reji /ʐˈejɪ/
+		chorar /ʃuɾˈaɾ/ - chiànciri /cˈanɕɪɾɪ/
+		chaɡa /ʃˈaɣɐ/ - chiaɡa /cˈaɡa/
+		chama /ʃˈɐmɐ/ - ciamma /çˈamma/
+		ɡear /ʒjˈaɾ/ - jilari /jilˈarɪ/
+		joelho /ʒwˈɐjʎu/ - jinocchiu /jɪnˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - ɡinocchiu /ʤinˈɔccʊ/
+		ɡente /ʒˈẽtɨ/ - ɡente /ʤˈɛntɪ/
+		joɡo /ʒˈoɣu/ - jocu /jˈɔkʊ/
+		jovem /ʒˈɔvɐ̃j̃/ - ɡiùvini /ʤˈuvɪnɪ/
+		áɡua /ˈaɣwɐ/ - acqua /ˈakkwa/
+		alva /ˈaɫvɐ/ - alba /ˈalba/
+		árvore /ˈaɾvuɾɨ/ - àrbiru /ˈaɾbɪɾʊ/
+		alho /ˈaʎu/ - aɡɡhia /ˈaɟɟa/
+		ele /ˈelɨ/ - iddu /ˈiɖɖʊ/
+		insua /ˈinswɐ/ - ìsula /ˈizʊla/
+		ilha /ˈiʎɐ/ - ìsula /ˈizʊla/
+		oito /ˈojtu/ - ottu /ˈɔttʊ/
+		osso /ˈosu/ - osso /ˈɔssʊ/
+		ovo /ˈovu/ - ovu /ˈɔvʊ/
+		outro /ˈowtɾu/ - àutru /ˈawʈɽʊ/
+		ouro /ˈowɾu/ - auru /ˈawrʊ/
+		ouro /ˈowɾu/ - oro /ˈɔrʊ/
+		olho /ˈoʎu/ - occhiu /ˈɔccʊ/
+		usso /ˈusu/ - ursu /ˈuɾsʊ/
+		unha /ˈuɲɐ/ - uɡna /ˈuɲɲa/
+		um /ˈũ/ - unu /ˈunʊ/
+		homem /ˈɔmɐ̃j̃/ - omu /ˈɔmʊ/
+		obra /ˈɔβɾɐ/ - òpira /ˈɔpɪɾa/
+		elo /ˈɛlu/ - aneddu /anˈɛɖɖʊ/
+		ela /ˈɛlɐ/ - idda /ˈiɖɖa/
+		erva /ˈɛɾvɐ/ - erva /ˈɛɾva/
+
+Final disqualified:
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 223
+	Disqualified: 237
+	Added: 0
+	Removed: 7
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		dia /dˈiɐ/ - jornu /jˈɔɾnʊ/
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+
+Iteration 2
+	Qualified: 222
+	Disqualified: 238
+	Added: 1
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+	Removed: 2
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Iteration 3
+	Qualified: 221
+	Disqualified: 239
+	Added: 2
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+	Removed: 3
+		rio /ʁˈiu/ - ciumi /çˈumɪ/
+		lã /lˈɐ̃/ - lana /lˈana/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+Iteration 4
+	Qualified: 221
+	Disqualified: 239
+	Added: 2
+		lã /lˈɐ̃/ - lana /lˈana/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+	Removed: 2
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+
+Iteration 5
+	Qualified: 221
+	Disqualified: 239
+	Added: 2
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+	Removed: 2
+		lã /lˈɐ̃/ - lana /lˈana/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+Iteration 6
+	Qualified: 223
+	Disqualified: 237
+	Added: 3
+		lã /lˈɐ̃/ - lana /lˈana/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Iteration 7
+	Qualified: 224
+	Disqualified: 236
+	Added: 2
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+	Removed: 1
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+Iteration 8
+	Qualified: 224
+	Disqualified: 236
+	Added: 1
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Iteration 9
+	Qualified: 225
+	Disqualified: 235
+	Added: 2
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+	Removed: 1
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+Iteration 10
+	Qualified: 225
+	Disqualified: 235
+	Added: 1
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Final qualifying:
+		beber /bɨβˈeɾ/ - bìviri /bˈivɪɾɪ/
+		branco /bɾˈɐ̃ku/ - jancu /jˈaŋkʊ/
+		baixo /bˈajʃu/ - basciu /bˈaʃʃʊ/
+		boi /bˈoj/ - voi /vˈɔɪ/
+		boca /bˈokɐ/ - bucca /bˈukka/
+		boa /bˈoɐ/ - bona /bˈɔna/
+		boas /bˈoɐʃ/ - boni /bˈɔnɪ/
+		bom /bˈõ/ - bonu /bˈɔnʊ/
+		bons /bˈõʃ/ - boni /bˈɔnɪ/
+		banho /bˈɐɲu/ - baɡnu /bˈaɲʊ/
+		bem /bˈɐ̃j̃/ - beni /bˈɛnɪ/
+		belo /bˈɛlu/ - beddu /bˈɛɖɖʊ/
+		bela /bˈɛlɐ/ - bedda /bˈɛɖɖa/
+		dar /dˈaɾ/ - dari /dˈarɪ/
+		dedo /dˈeðu/ - jitu /jˈitʊ/
+		dedo /dˈeðu/ - jìditu /jˈiɾitʊ/
+		dente /dˈẽtɨ/ - denti /dˈɛntɪ/
+		dona /dˈonɐ/ - donna /dˈɔnna/
+		doce /dˈosɨ/ - duci /dˈuɕɪ/
+		doze /dˈozɨ/ - dùdici /dˈuɾɪɕɪ/
+		dom /dˈõ/ - donu /dˈonʊ/
+		fruito /fɾˈujtu/ - fruttu /frˈuttʊ/
+		fada /fˈaðɐ/ - fata /fˈata/
+		falso /fˈaɫsu/ - farsu /fˈarsʊ/
+		fêmea /fˈemjɐ/ - fìmmina /fˈimmɪna/
+		fio /fˈiu/ - filu /fˈilʊ/
+		fíɡado /fˈiɣɐðu/ - fìcatu /fˈikatʊ/
+		filho /fˈiʎu/ - fiɡɡhiu /fˈiɟɟʊ/
+		força /fˈoɾsɐ/ - forza /fˈɔɾʦa/
+		folha /fˈoʎɐ/ - foɡɡhia /fˈɔɟɟa/
+		fumo /fˈumu/ - fumu /fˈumʊ/
+		fome /fˈɔmɨ/ - fami /fˈamɪ/
+		forte /fˈɔɾtɨ/ - forte /fˈɔrtɪ/
+		ferro /fˈɛʁu/ - ferro /fˈɛʐʐʊ/
+		festa /fˈɛʃtɐ/ - festa /fˈɛsta/
+		escutar /iʃkutˈaɾ/ - ascutari /askutˈaɾɪ/
+		escrever /iʃkɾɨvˈeɾ/ - scrìviri /skɾˈiviɾɪ/
+		escuro /iʃkˈuɾu/ - scuru /ʃkˈuɾʊ/
+		espiɡa /iʃpˈiɣɐ/ - spica /ʃpˈika/
+		espinha /iʃpˈiɲɐ/ - spina /ʃpˈina/
+		estrela /iʃtɾˈelɐ/ - stidda /ʃtˈiɖɖa/
+		estado /iʃtˈaðu/ - statu /ʃtˈatʊ/
+		inverno /ĩvˈɛɾnu/ - mmernu /mmˈɛɾnʊ/
+		inverno /ĩvˈɛɾnu/ - nvèrnu /nvˈɛɾnʊ/
+		conhecer /kuɲɨsˈeɾ/ - cunùsciri /kunˈuʃʃɪrɪ/
+		cavalo /kɐvˈalu/ - cavaddu /kavˈaɖɖʊ/
+		castelo /kɐʃtˈɛlu/ - casteddu /kastˈɛɖɖʊ/
+		cambiar /kɐ̃bjˈaɾ/ - canɡiari /kanʤˈaɾɪ/
+		cabelo /kɐβˈelu/ - pilu /pˈilʊ/
+		crer /kɾˈeɾ/ - cridiri /kɾˈiɾɪɾɪ/
+		caldo /kˈaɫdu/ - càvuru /kˈavʊɾʊ/
+		caldo /kˈaɫdu/ - càudu /kˈawdʊ/
+		carne /kˈaɾnɨ/ - carni /kˈaɾnɪ/
+		caro /kˈaɾu/ - caru /kˈaɾʊ/
+		corpo /kˈoɾpu/ - corpu /kˈɔɾpʊ/
+		cu /kˈu/ - culu /kˈulʊ/
+		cunho /kˈuɲu/ - cuɡnu /kˈuɲɲʊ/
+		canto /kˈɐ̃tu/ - cantu /kˈantʊ/
+		colo /kˈɔlu/ - coddu /kˈɔɖɖʊ/
+		que /kˈɨ/ - chi /ci/
+		leão /ljˈɐ̃w̃/ - liuni /liˈunɪ/
+		levar /lɨvˈaɾ/ - livari /livˈarɪ/
+		laɡo /lˈaɣu/ - lacu /lˈakʊ/
+		láɡrima /lˈaɣɾimɐ/ - làcrima /lˈakɾɪma/
+		letra /lˈetɾɐ/ - littira /lˈittɪɾa/
+		ler /lˈeɾ/ - lèjiri /lˈɛjɪrɪ/
+		livre /lˈivɾɨ/ - lìbbiru /lˈibbɪɾʊ/
+		línɡua /lˈĩɡwɐ/ - linɡua /lˈiŋɡwa/
+		lobo /lˈoβu/ - lupu /lˈupʊ/
+		luta /lˈutɐ/ - lutta /lˈutta/
+		lua /lˈuɐ/ - luna /lˈuna/
+		luz /lˈuʃ/ - lumi /lˈumɪ/
+		luz /lˈuʃ/ - luci /lˈuɕɪ/
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		leito /lˈɐjtu/ - lettu /lˈɛttʊ/
+		lenha /lˈɐjɲɐ/ - liɡna /lˈiɲɲa/
+		lã /lˈɐ̃/ - lana /lˈana/
+		loɡo /lˈɔɣu/ - locu /lˈɔkʊ/
+		lebre /lˈɛβɾɨ/ - lepru /lˈɛpɾʊ/
+		montanha /mõtˈɐɲɐ/ - muntaɡna /muntˈaɲɲa/
+		morseɡar /muɾsɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morder /muɾðˈeɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+		metade /mɨtˈaðɨ/ - mità /mitˈa/
+		mar /mˈaɾ/ - mari /mˈaɾɪ/
+		mosca /mˈoʃkɐ/ - musca /mˈuska/
+		muito /mˈũj̃tu/ - multu /mˈultʊ/
+		meio /mˈɐju/ - mezzu /mˈɛʦʦʊ/
+		mão /mˈɐ̃w̃/ - manu /mˈanʊ/
+		morte /mˈɔɾtɨ/ - morti /mˈɔɾtɪ/
+		me /mˈɨ/ - mi /mˈi/
+		nadar /nɐðˈaɾ/ - natari /natˈarɪ/
+		nariz /nɐɾˈiʃ/ - nasu /nˈazʊ/
+		nenhum /nɨɲˈũ/ - nisciunu /niʃʃˈunʊ/
+		neɡro /nˈeɣɾu/ - nìuru /nˈiwɾʊ/
+		noite /nˈojtɨ/ - notti /nˈɔttɪ/
+		nome /nˈomɨ/ - nomi /nˈomɪ/
+		novo /nˈovu/ - novu /nˈɔvʊ/
+		nuvem /nˈuvɐ̃j̃/ - nuvula /nˈuvʊla/
+		nó /nˈɔ/ - nodu /nˈɔɾʊ/
+		nosso /nˈɔsu/ - nostru /nˈɔʃʃɽʊ/
+		nove /nˈɔvɨ/ - novi /nˈɔvɪ/
+		nós /nˈɔʃ/ - nui /nˈuj/
+		noz /nˈɔʃ/ - nuci /nˈuɕɪ/
+		névoa /nˈɛvwɐ/ - neɡɡhia /nˈeɟɟa/
+		neve /nˈɛvɨ/ - nivi /nˈivɪ/
+		outono /owtˈonu/ - autunnu /awtˈunnʊ/
+		piolho /pjˈoʎu/ - pirocchiu /piɾˈɔccʊ/
+		poder /puðˈeɾ/ - putiri /putˈirɪ/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		preço /pɾˈesu/ - prezzu /pɾˈɛʦʦʊ/
+		paço /pˈasu/ - palazzu /palˈaʦʦʊ/
+		paz /pˈaʃ/ - paci /pˈaɕɪ/
+		pelo /pˈelu/ - capiddu /kapˈiɖɖʊ/
+		pelo /pˈelu/ - pilu /pˈilʊ/
+		pena /pˈenɐ/ - pena /pˈena/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		pêsseɡo /pˈesɨɣu/ - pèrsica /pˈɛrsɪka/
+		poio /pˈoju/ - poju /pˈɔjʊ/
+		pôr /pˈoɾ/ - pùniri /pˈunɪɾɪ/
+		pões /pˈõj̃ʃ/ - puni /pˈunɪ/
+		ponte /pˈõtɨ/ - ponti /pˈontɪ/
+		punho /pˈuɲu/ - puɡnu /pˈuɲɲʊ/
+		peito /pˈɐjtu/ - pettu /pˈɛttʊ/
+		peixe /pˈɐjʃɨ/ - pisci /pˈiʃʃɪ/
+		pança /pˈɐ̃sɐ/ - panza /pˈanʦa/
+		pão /pˈɐ̃w̃/ - pani /pˈanɪ/
+		pele /pˈɛlɨ/ - peddi /pˈɛɖɖɪ/
+		pedra /pˈɛðɾɐ/ - petra /pˈɛʈɽa/
+		sentar /sẽtˈaɾ/ - sèdiri /sˈɛdɪrɪ/
+		cidade /siðˈaðɨ/ - cità /ɕitˈa/
+		cinquenta /sĩkwˈẽtɐ/ - cinquanta /ɕiŋkwˈanta/
+		saber /sɐβˈeɾ/ - sapiri /sˈapɪɾɪ/
+		cereja /sɨɾˈɐjʒɐ/ - cirasa /ɕiɾˈaza/
+		sal /sˈaɫ/ - sali /sˈalɪ/
+		salsa /sˈaɫsɐ/ - sarsa /sˈarsa/
+		salsa /sˈaɫsɐ/ - sausa /sˈawsa/
+		sábio /sˈaβju/ - sàviu /sˈavjʊ/
+		seco /sˈeku/ - siccu /sˈikkʊ/
+		seca /sˈekɐ/ - sicca /sˈikka/
+		cera /sˈeɾɐ/ - cira /ɕˈiɾa/
+		cima /sˈimɐ/ - cima /ɕˈima/
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		sobre /sˈoβɾɨ/ - supra /sˈupra/
+		seis /sˈɐjʃ/ - sei /sˈɛj/
+		santo /sˈɐ̃tu/ - santu /sˈantʊ/
+		são /sˈɐ̃w̃/ - sanu /sˈanʊ/
+		sanɡue /sˈɐ̃ɡɨ/ - sanɡu /sˈaŋɡʊ/
+		sete /sˈɛtɨ/ - setti /sˈɛttɪ/
+		céu /sˈɛw/ - celu /ɕˈɛlʊ/
+		três /tɾˈeʃ/ - tri /ʈɽˈi/
+		tempo /tˈẽpu/ - tempu /tˈɛmpʊ/
+		touro /tˈowɾu/ - tàuru /tˈawrʊ/
+		todos /tˈoðuʃ/ - tutti /tˈuttɪ/
+		tú /tˈu/ - tu /tˈu/
+		terra /tˈɛʁɐ/ - terra /tˈɛʐʐa/
+		umbiɡo /ũbˈiɣu/ - viḍḍicu /viɖɖˈikʊ/
+		vilão /vilˈɐ̃w̃/ - viḍḍanu /viɖɖˈanʊ/
+		voar /vwˈaɾ/ - vulari /vulˈarɪ/
+		vizinho /vɨzˈiɲu/ - vicinu /viɕˈinʊ/
+		verɡonha /vɨɾɣˈoɲɐ/ - viriɡoɡna /viɾiɡˈɔɲɲa/
+		verde /vˈeɾðɨ/ - virdi /vˈiɾdɪ/
+		vento /vˈẽtu/ - ventu /vˈɛntʊ/
+		vida /vˈiðɐ/ - vita /vˈita/
+		via /vˈiɐ/ - via /vˈia/
+		vinho /vˈiɲu/ - vinu /vˈinʊ/
+		vir /vˈiɾ/ - vèniri /vˈɛnɪɾɪ/
+		vinte /vˈĩtɨ/ - vinti /vˈintɪ/
+		vós /vˈɔʃ/ - vui /vˈuj/
+		voz /vˈɔʃ/ - vuci /vˈuɕɪ/
+		verme /vˈɛɾmɨ/ - vemmu /vˈɛmmʊ/
+		aɡulha /ɐɣˈuʎɐ/ - aɡuɡɡhia /aɡˈuɟɟa/
+		aranha /ɐɾˈɐɲɐ/ - raɡnu /rˈaɲɲʊ/
+		ajudar /ɐʒuðˈaɾ/ - ajutari /ajutˈaɾɪ/
+		odor /ɔðˈoɾ/ - oluri /olˈuɾɪ/
+		orelha /ɔɾˈɐjʎɐ/ - auricchia /awɾˈicca/
+		obreiro /ɔβɾˈɐjɾu/ - opiraiu /opiɾˈajʊ/
+		ɡrosso /ɡɾˈosu/ - rossu /ɾˈɔssʊ/
+		ɡato /ɡˈatu/ - ɡattu /ɡˈattʊ/
+		ɡota /ɡˈotɐ/ - ɡuccia /ɡˈuʧʧa/
+		romão /ʁumˈɐ̃w̃/ - romanu /romˈanʊ/
+		razão /ʁɐzˈɐ̃w̃/ - raɡiuni /ʐaʤˈunɪ/
+		rainha /ʁɐˈiɲɐ/ - riɡɡina /riʤʤˈina/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		rio /ʁˈiu/ - rìu /rˈiʊ/
+		ruivo /ʁˈujvu/ - russu /ʐˈussʊ/
+		rei /ʁˈɐj/ - reji /ʐˈejɪ/
+		chaɡa /ʃˈaɣɐ/ - chiaɡa /cˈaɡa/
+		chor /ʃˈoɾ/ - ciuri /çˈuɾɪ/
+		chuva /ʃˈuvɐ/ - chiova /cˈɔva/
+		cheio /ʃˈɐju/ - chinu /cˈinʊ/
+		chama /ʃˈɐmɐ/ - ciamma /çˈamma/
+		ɡear /ʒjˈaɾ/ - jilari /jilˈarɪ/
+		joelho /ʒwˈɐjʎu/ - dinocchiu /dinˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - jinocchiu /jɪnˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - ɡinocchiu /ʤinˈɔccʊ/
+		ɡente /ʒˈẽtɨ/ - ɡente /ʤˈɛntɪ/
+		ɡenro /ʒˈẽʁu/ - jènniru /jˈɛnnɪɾʊ/
+		joɡo /ʒˈoɣu/ - jocu /jˈɔkʊ/
+		junho /ʒˈuɲu/ - ɡiuɡnu /ʤˈuɲɲʊ/
+		junto /ʒˈũtu/ - juntu /jˈuntʊ/
+		jovem /ʒˈɔvɐ̃j̃/ - ɡiùvini /ʤˈuvɪnɪ/
+		alma /ˈaɫmɐ/ - arma /ˈaɾma/
+		alva /ˈaɫvɐ/ - alba /ˈalba/
+		árvore /ˈaɾvuɾɨ/ - àrbiru /ˈaɾbɪɾʊ/
+		alho /ˈaʎu/ - aɡɡhia /ˈaɟɟa/
+		eu /ˈew/ - iu /ˈiʊ/
+		insua /ˈinswɐ/ - ìsula /ˈizʊla/
+		ilha /ˈiʎɐ/ - ìsula /ˈizʊla/
+		oito /ˈojtu/ - ottu /ˈɔttʊ/
+		osso /ˈosu/ - osso /ˈɔssʊ/
+		ovo /ˈovu/ - ovu /ˈɔvʊ/
+		ouro /ˈowɾu/ - oro /ˈɔrʊ/
+		olho /ˈoʎu/ - occhiu /ˈɔccʊ/
+		usso /ˈusu/ - ursu /ˈuɾsʊ/
+		unha /ˈuɲɐ/ - uɡna /ˈuɲɲa/
+		um /ˈũ/ - unu /ˈunʊ/
+		ano /ˈɐnu/ - anno /ˈannʊ/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		homem /ˈɔmɐ̃j̃/ - omu /ˈɔmʊ/
+		obra /ˈɔβɾɐ/ - òpira /ˈɔpɪɾa/
+		elo /ˈɛlu/ - aneddu /anˈɛɖɖʊ/
+		ela /ˈɛlɐ/ - idda /ˈiɖɖa/
+		erva /ˈɛɾvɐ/ - erva /ˈɛɾva/
+
+Final disqualified:
+		dia /dˈiɐ/ - jornu /jˈɔɾnʊ/
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+		rio /ʁˈiu/ - ciumi /çˈumɪ/
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 220
+	Disqualified: 240
+	Added: 0
+	Removed: 10
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		um /ˈũ/ - unu /ˈunʊ/
+		dia /dˈiɐ/ - jornu /jˈɔɾnʊ/
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+		rio /ʁˈiu/ - ciumi /çˈumɪ/
+		chorar /ʃuɾˈaɾ/ - chiànciri /cˈanɕɪɾɪ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+
+Iteration 2
+	Qualified: 219
+	Disqualified: 241
+	Added: 1
+		um /ˈũ/ - unu /ˈunʊ/
+	Removed: 2
+		lã /lˈɐ̃/ - lana /lˈana/
+		sã /sˈɐ̃/ - sana /sˈana/
+
+Iteration 3
+	Qualified: 218
+	Disqualified: 242
+	Added: 1
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+	Removed: 2
+		branco /bɾˈɐ̃ku/ - jancu /jˈaŋkʊ/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+Iteration 4
+	Qualified: 222
+	Disqualified: 238
+	Added: 4
+		branco /bɾˈɐ̃ku/ - jancu /jˈaŋkʊ/
+		lã /lˈɐ̃/ - lana /lˈana/
+		sã /sˈɐ̃/ - sana /sˈana/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+	Removed: 0
+
+Iteration 5
+	Qualified: 224
+	Disqualified: 236
+	Added: 2
+		chorar /ʃuɾˈaɾ/ - chiànciri /cˈanɕɪɾɪ/
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+	Removed: 0
+
+Iteration 6
+	Qualified: 222
+	Disqualified: 238
+	Added: 0
+	Removed: 2
+		lã /lˈɐ̃/ - lana /lˈana/
+		sã /sˈɐ̃/ - sana /sˈana/
+
+Iteration 7
+	Qualified: 223
+	Disqualified: 237
+	Added: 2
+		sã /sˈɐ̃/ - sana /sˈana/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+	Removed: 1
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+Iteration 8
+	Qualified: 225
+	Disqualified: 235
+	Added: 2
+		lã /lˈɐ̃/ - lana /lˈana/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+	Removed: 0
+
+Iteration 9
+	Qualified: 226
+	Disqualified: 234
+	Added: 1
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+	Removed: 0
+
+Iteration 10
+	Qualified: 225
+	Disqualified: 235
+	Added: 0
+	Removed: 1
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+Final qualifying:
+		branco /bɾˈɐ̃ku/ - jancu /jˈaŋkʊ/
+		baixo /bˈajʃu/ - basciu /bˈaʃʃʊ/
+		boi /bˈoj/ - voi /vˈɔɪ/
+		boca /bˈokɐ/ - bucca /bˈukka/
+		boa /bˈoɐ/ - bona /bˈɔna/
+		boas /bˈoɐʃ/ - boni /bˈɔnɪ/
+		bom /bˈõ/ - bonu /bˈɔnʊ/
+		bons /bˈõʃ/ - boni /bˈɔnɪ/
+		banho /bˈɐɲu/ - baɡnu /bˈaɲʊ/
+		bem /bˈɐ̃j̃/ - beni /bˈɛnɪ/
+		belo /bˈɛlu/ - beddu /bˈɛɖɖʊ/
+		bela /bˈɛlɐ/ - bedda /bˈɛɖɖa/
+		dar /dˈaɾ/ - dari /dˈarɪ/
+		dedo /dˈeðu/ - jìditu /jˈiɾitʊ/
+		dente /dˈẽtɨ/ - denti /dˈɛntɪ/
+		dona /dˈonɐ/ - donna /dˈɔnna/
+		doce /dˈosɨ/ - duci /dˈuɕɪ/
+		dom /dˈõ/ - donu /dˈonʊ/
+		duas /dˈuɐʃ/ - dui /dˈuɪ/
+		dez /dˈɛʃ/ - deci /dˈɛɕɪ/
+		fazer /fɐzˈeɾ/ - fari /fˈaɾɪ/
+		frio /fɾˈiu/ - friddu /fɾˈiddʊ/
+		fruito /fɾˈujtu/ - fruttu /frˈuttʊ/
+		fada /fˈaðɐ/ - fata /fˈata/
+		falso /fˈaɫsu/ - fausu /fˈawsʊ/
+		fêmea /fˈemjɐ/ - fìmmina /fˈimmɪna/
+		fio /fˈiu/ - filu /fˈilʊ/
+		fíɡado /fˈiɣɐðu/ - fìcatu /fˈikatʊ/
+		filho /fˈiʎu/ - fiɡɡhiu /fˈiɟɟʊ/
+		filha /fˈiʎɐ/ - fiɡɡhia /fˈiɟɟa/
+		foɡo /fˈoɣu/ - focu /fˈɔkʊ/
+		força /fˈoɾsɐ/ - forza /fˈɔɾʦa/
+		folha /fˈoʎɐ/ - foɡɡhia /fˈɔɟɟa/
+		fumo /fˈumu/ - fumu /fˈumʊ/
+		fome /fˈɔmɨ/ - fami /fˈamɪ/
+		forte /fˈɔɾtɨ/ - forte /fˈɔrtɪ/
+		ferro /fˈɛʁu/ - ferro /fˈɛʐʐʊ/
+		festa /fˈɛʃtɐ/ - festa /fˈɛsta/
+		escutar /iʃkutˈaɾ/ - ascutari /askutˈaɾɪ/
+		escrever /iʃkɾɨvˈeɾ/ - scrìviri /skɾˈiviɾɪ/
+		escuro /iʃkˈuɾu/ - scuru /ʃkˈuɾʊ/
+		espiɡa /iʃpˈiɣɐ/ - spica /ʃpˈika/
+		estado /iʃtˈaðu/ - statu /ʃtˈatʊ/
+		estio /iʃtˈiu/ - astati /astˈatɪ/
+		inverno /ĩvˈɛɾnu/ - mmernu /mmˈɛɾnʊ/
+		inverno /ĩvˈɛɾnu/ - nvèrnu /nvˈɛɾnʊ/
+		conhecer /kuɲɨsˈeɾ/ - cunùsciri /kunˈuʃʃɪrɪ/
+		quatro /kwˈatɾu/ - quattru /kwˈaʈʈɽʊ/
+		cavalo /kɐvˈalu/ - cavaddu /kavˈaɖɖʊ/
+		cabelo /kɐβˈelu/ - capiddu /kapˈiɖɖʊ/
+		crer /kɾˈeɾ/ - cridiri /kɾˈiɾɪɾɪ/
+		cruz /kɾˈuʃ/ - cruci /kɾˈuɕɪ/
+		caldo /kˈaɫdu/ - càvuru /kˈavʊɾʊ/
+		caldo /kˈaɫdu/ - càudu /kˈawdʊ/
+		caro /kˈaɾu/ - caru /kˈaɾʊ/
+		cabra /kˈaβɾɐ/ - crapa /kɾˈapa/
+		cu /kˈu/ - culu /kˈulʊ/
+		cunho /kˈuɲu/ - cuɡnu /kˈuɲɲʊ/
+		quem /kˈɐ̃j̃/ - cui /kˈuɪ/
+		canto /kˈɐ̃tu/ - cantu /kˈantʊ/
+		cão /kˈɐ̃w̃/ - cani /kˈanɪ/
+		colo /kˈɔlu/ - coddu /kˈɔɖɖʊ/
+		cor /kˈɔɾ/ - cori /kˈɔɾɪ/
+		que /kˈɨ/ - chi /ci/
+		leão /ljˈɐ̃w̃/ - liuni /liˈunɪ/
+		levar /lɨvˈaɾ/ - livari /livˈarɪ/
+		laɡo /lˈaɣu/ - lacu /lˈakʊ/
+		láɡrima /lˈaɣɾimɐ/ - làcrima /lˈakɾɪma/
+		letra /lˈetɾɐ/ - littira /lˈittɪɾa/
+		ler /lˈeɾ/ - lèjiri /lˈɛjɪrɪ/
+		livre /lˈivɾɨ/ - lìbbiru /lˈibbɪɾʊ/
+		línɡua /lˈĩɡwɐ/ - linɡua /lˈiŋɡwa/
+		lobo /lˈoβu/ - lupu /lˈupʊ/
+		luta /lˈutɐ/ - lutta /lˈutta/
+		lua /lˈuɐ/ - luna /lˈuna/
+		luz /lˈuʃ/ - luci /lˈuɕɪ/
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		leito /lˈɐjtu/ - lettu /lˈɛttʊ/
+		leite /lˈɐjtɨ/ - latti /lˈattɪ/
+		lenha /lˈɐjɲɐ/ - liɡna /lˈiɲɲa/
+		lã /lˈɐ̃/ - lana /lˈana/
+		lebre /lˈɛβɾɨ/ - lepru /lˈɛpɾʊ/
+		montanha /mõtˈɐɲɐ/ - muntaɡna /muntˈaɲɲa/
+		mosseɡar /musɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morseɡar /muɾsɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morder /muɾðˈeɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+		maduro /mɐðˈuɾu/ - maturu /matˈurʊ/
+		metade /mɨtˈaðɨ/ - mità /mitˈa/
+		melhor /mɨʎˈɔɾ/ - miɡɡhiuri /miɟɟˈuɾɪ/
+		mosca /mˈoʃkɐ/ - musca /mˈuska/
+		muito /mˈũj̃tu/ - multu /mˈultʊ/
+		mão /mˈɐ̃w̃/ - manu /mˈanʊ/
+		morte /mˈɔɾtɨ/ - morti /mˈɔɾtɪ/
+		mel /mˈɛɫ/ - meli /mˈɛlɪ/
+		nadar /nɐðˈaɾ/ - natari /natˈarɪ/
+		nascer /nɐʃsˈeɾ/ - nàsciri /nˈaʃʃɪɾɪ/
+		neɡro /nˈeɣɾu/ - nìuru /nˈiwɾʊ/
+		noite /nˈojtɨ/ - notti /nˈɔttɪ/
+		novo /nˈovu/ - novu /nˈɔvʊ/
+		nuvem /nˈuvɐ̃j̃/ - nuvula /nˈuvʊla/
+		nó /nˈɔ/ - nodu /nˈɔɾʊ/
+		nove /nˈɔvɨ/ - novi /nˈɔvɪ/
+		nós /nˈɔʃ/ - nui /nˈuj/
+		noz /nˈɔʃ/ - nuci /nˈuɕɪ/
+		neve /nˈɛvɨ/ - nivi /nˈivɪ/
+		outono /owtˈonu/ - autunnu /awtˈunnʊ/
+		piolho /pjˈoʎu/ - pirocchiu /piɾˈɔccʊ/
+		poder /puðˈeɾ/ - putiri /putˈirɪ/
+		palavra /pɐlˈavɾɐ/ - paràula /paɾˈawla/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		paço /pˈasu/ - palazzu /palˈaʦʦʊ/
+		paz /pˈaʃ/ - paci /pˈaɕɪ/
+		pelo /pˈelu/ - capiddu /kapˈiɖɖʊ/
+		pena /pˈenɐ/ - pena /pˈena/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		pêsseɡo /pˈesɨɣu/ - pèrsica /pˈɛrsɪka/
+		poio /pˈoju/ - poju /pˈɔjʊ/
+		poço /pˈosu/ - puzzo /pˈuʦʦʊ/
+		pouco /pˈowku/ - pocu /pˈɔkʊ/
+		pôr /pˈoɾ/ - pùniri /pˈunɪɾɪ/
+		porco /pˈoɾku/ - porcu /pˈɔrkʊ/
+		pões /pˈõj̃ʃ/ - puni /pˈunɪ/
+		ponto /pˈõtu/ - puntu /pˈuntʊ/
+		punho /pˈuɲu/ - puɡnu /pˈuɲɲʊ/
+		peito /pˈɐjtu/ - pettu /pˈɛttʊ/
+		peixe /pˈɐjʃɨ/ - pisci /pˈiʃʃɪ/
+		pança /pˈɐ̃sɐ/ - panza /pˈanʦa/
+		pão /pˈɐ̃w̃/ - pani /pˈanɪ/
+		pé /pˈɛ/ - pedi /pˈɛɾɪ/
+		pele /pˈɛlɨ/ - peddi /pˈɛɖɖɪ/
+		pedra /pˈɛðɾɐ/ - petra /pˈɛʈɽa/
+		sentar /sẽtˈaɾ/ - sèdiri /sˈɛdɪrɪ/
+		saúde /sɐˈuðɨ/ - saluti /salˈutɪ/
+		saber /sɐβˈeɾ/ - sapiri /sˈapɪɾɪ/
+		cereja /sɨɾˈɐjʒɐ/ - cirasa /ɕiɾˈaza/
+		sal /sˈaɫ/ - sali /sˈalɪ/
+		salsa /sˈaɫsɐ/ - sarsa /sˈarsa/
+		salsa /sˈaɫsɐ/ - sausa /sˈawsa/
+		sabes /sˈaβɨʃ/ - sai /sˈaj/
+		seco /sˈeku/ - siccu /sˈikkʊ/
+		seda /sˈeðɐ/ - sita /sˈita/
+		cera /sˈeɾɐ/ - cira /ɕˈiɾa/
+		cima /sˈimɐ/ - cima /ɕˈima/
+		sã /sˈɐ̃/ - sana /sˈana/
+		santo /sˈɐ̃tu/ - santu /sˈantʊ/
+		são /sˈɐ̃w̃/ - sanu /sˈanʊ/
+		sanɡue /sˈɐ̃ɡɨ/ - sanɡu /sˈaŋɡʊ/
+		sete /sˈɛtɨ/ - setti /sˈɛttɪ/
+		céu /sˈɛw/ - celu /ɕˈɛlʊ/
+		três /tɾˈeʃ/ - tri /ʈɽˈi/
+		tempo /tˈẽpu/ - tempu /tˈɛmpʊ/
+		touro /tˈowɾu/ - tàuru /tˈawrʊ/
+		todo /tˈoðu/ - tuttu /tˈuttʊ/
+		todos /tˈoðuʃ/ - tutti /tˈuttɪ/
+		tú /tˈu/ - tu /tˈu/
+		terra /tˈɛʁɐ/ - terra /tˈɛʐʐa/
+		vilão /vilˈɐ̃w̃/ - viḍḍanu /viɖɖˈanʊ/
+		voar /vwˈaɾ/ - vulari /vulˈarɪ/
+		vizinho /vɨzˈiɲu/ - vicinu /viɕˈinʊ/
+		verɡonha /vɨɾɣˈoɲɐ/ - viriɡoɡna /viɾiɡˈɔɲɲa/
+		vaca /vˈakɐ/ - vacca /vˈakka/
+		verde /vˈeɾðɨ/ - virdi /vˈiɾdɪ/
+		vila /vˈilɐ/ - viḍḍa /vˈiɖɖa/
+		via /vˈiɐ/ - via /vˈia/
+		vinho /vˈiɲu/ - vinu /vˈinʊ/
+		vir /vˈiɾ/ - vèniri /vˈɛnɪɾɪ/
+		velho /vˈɐjʎu/ - vecchiu /vˈɛccʊ/
+		vós /vˈɔʃ/ - vui /vˈuj/
+		voz /vˈɔʃ/ - vuci /vˈuɕɪ/
+		verme /vˈɛɾmɨ/ - vemmu /vˈɛmmʊ/
+		aranha /ɐɾˈɐɲɐ/ - raɡnu /rˈaɲɲʊ/
+		ajudar /ɐʒuðˈaɾ/ - ajutari /ajutˈaɾɪ/
+		odor /ɔðˈoɾ/ - oluri /olˈuɾɪ/
+		orelha /ɔɾˈɐjʎɐ/ - auricchia /awɾˈicca/
+		obreiro /ɔβɾˈɐjɾu/ - opiraiu /opiɾˈajʊ/
+		ɡrande /ɡɾˈɐ̃dɨ/ - ɡranni /ɡɾˈannɪ/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡranu /ɡrˈanʊ/
+		ɡota /ɡˈotɐ/ - ɡuccia /ɡˈuʧʧa/
+		ɡola /ɡˈɔlɐ/ - ɡula /ɡˈula/
+		romão /ʁumˈɐ̃w̃/ - romanu /romˈanʊ/
+		razão /ʁɐzˈɐ̃w̃/ - raɡiuni /ʐaʤˈunɪ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		rio /ʁˈiu/ - rìu /rˈiʊ/
+		roxo /ʁˈoʃu/ - russu /ʐˈussʊ/
+		ruivo /ʁˈujvu/ - russu /ʐˈussʊ/
+		rei /ʁˈɐj/ - re /ʐˈe/
+		rei /ʁˈɐj/ - reji /ʐˈejɪ/
+		chorar /ʃuɾˈaɾ/ - chiànciri /cˈanɕɪɾɪ/
+		chaɡa /ʃˈaɣɐ/ - chiaɡa /cˈaɡa/
+		chor /ʃˈoɾ/ - ciuri /çˈuɾɪ/
+		chuva /ʃˈuvɐ/ - chiova /cˈɔva/
+		chama /ʃˈɐmɐ/ - ciamma /çˈamma/
+		ɡear /ʒjˈaɾ/ - jilari /jilˈarɪ/
+		joelho /ʒwˈɐjʎu/ - dinocchiu /dinˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - jinocchiu /jɪnˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - ɡinocchiu /ʤinˈɔccʊ/
+		ɡente /ʒˈẽtɨ/ - ɡente /ʤˈɛntɪ/
+		ɡenro /ʒˈẽʁu/ - jènniru /jˈɛnnɪɾʊ/
+		joɡo /ʒˈoɣu/ - jocu /jˈɔkʊ/
+		junho /ʒˈuɲu/ - ɡiuɡnu /ʤˈuɲɲʊ/
+		junto /ʒˈũtu/ - juntu /jˈuntʊ/
+		jovem /ʒˈɔvɐ̃j̃/ - ɡiùvini /ʤˈuvɪnɪ/
+		áɡua /ˈaɣwɐ/ - acqua /ˈakkwa/
+		alma /ˈaɫmɐ/ - arma /ˈaɾma/
+		alva /ˈaɫvɐ/ - alba /ˈalba/
+		árvore /ˈaɾvuɾɨ/ - àrbiru /ˈaɾbɪɾʊ/
+		alho /ˈaʎu/ - aɡɡhia /ˈaɟɟa/
+		eu /ˈew/ - iu /ˈiʊ/
+		insua /ˈinswɐ/ - ìsula /ˈizʊla/
+		ilha /ˈiʎɐ/ - ìsula /ˈizʊla/
+		oito /ˈojtu/ - ottu /ˈɔttʊ/
+		osso /ˈosu/ - osso /ˈɔssʊ/
+		ovo /ˈovu/ - ovu /ˈɔvʊ/
+		outro /ˈowtɾu/ - àutru /ˈawʈɽʊ/
+		ouro /ˈowɾu/ - auru /ˈawrʊ/
+		ouro /ˈowɾu/ - oro /ˈɔrʊ/
+		olho /ˈoʎu/ - occhiu /ˈɔccʊ/
+		olhos /ˈoʎuʃ/ - occhi /ˈɔccɪ/
+		usso /ˈusu/ - ursu /ˈuɾsʊ/
+		um /ˈũ/ - unu /ˈunʊ/
+		homem /ˈɔmɐ̃j̃/ - omu /ˈɔmʊ/
+		elo /ˈɛlu/ - aneddu /anˈɛɖɖʊ/
+		ela /ˈɛlɐ/ - idda /ˈiɖɖa/
+		erva /ˈɛɾvɐ/ - erva /ˈɛɾva/
+
+Final disqualified:
+		dia /dˈiɐ/ - jornu /jˈɔɾnʊ/
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+		rio /ʁˈiu/ - ciumi /çˈumɪ/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 221
+	Disqualified: 239
+	Added: 0
+	Removed: 9
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		dia /dˈiɐ/ - jornu /jˈɔɾnʊ/
+		nariz /nɐɾˈiʃ/ - nasu /nˈazʊ/
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+		rio /ʁˈiu/ - ciumi /çˈumɪ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+
+Iteration 2
+	Qualified: 220
+	Disqualified: 240
+	Added: 1
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+	Removed: 2
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		ler /lˈeɾ/ - lèjiri /lˈɛjɪrɪ/
+
+Iteration 3
+	Qualified: 220
+	Disqualified: 240
+	Added: 2
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		ler /lˈeɾ/ - lèjiri /lˈɛjɪrɪ/
+	Removed: 2
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		sã /sˈɐ̃/ - sana /sˈana/
+
+Iteration 4
+	Qualified: 222
+	Disqualified: 238
+	Added: 2
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		sã /sˈɐ̃/ - sana /sˈana/
+	Removed: 0
+
+Iteration 5
+	Qualified: 221
+	Disqualified: 239
+	Added: 1
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+	Removed: 2
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		sã /sˈɐ̃/ - sana /sˈana/
+
+Iteration 6
+	Qualified: 223
+	Disqualified: 237
+	Added: 2
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		sã /sˈɐ̃/ - sana /sˈana/
+	Removed: 0
+
+Iteration 7
+	Qualified: 223
+	Disqualified: 237
+	Added: 1
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+	Removed: 1
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+
+Iteration 8
+	Qualified: 225
+	Disqualified: 235
+	Added: 2
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+	Removed: 0
+
+Iteration 9
+	Qualified: 225
+	Disqualified: 235
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		branco /bɾˈɐ̃ku/ - jancu /jˈaŋkʊ/
+		baixo /bˈajʃu/ - basciu /bˈaʃʃʊ/
+		boca /bˈokɐ/ - bucca /bˈukka/
+		boa /bˈoɐ/ - bona /bˈɔna/
+		boas /bˈoɐʃ/ - boni /bˈɔnɪ/
+		banho /bˈɐɲu/ - baɡnu /bˈaɲʊ/
+		bem /bˈɐ̃j̃/ - beni /bˈɛnɪ/
+		belo /bˈɛlu/ - beddu /bˈɛɖɖʊ/
+		bela /bˈɛlɐ/ - bedda /bˈɛɖɖa/
+		dar /dˈaɾ/ - dari /dˈarɪ/
+		dedo /dˈeðu/ - jitu /jˈitʊ/
+		dedo /dˈeðu/ - jìditu /jˈiɾitʊ/
+		dona /dˈonɐ/ - donna /dˈɔnna/
+		doce /dˈosɨ/ - duci /dˈuɕɪ/
+		doze /dˈozɨ/ - dùdici /dˈuɾɪɕɪ/
+		dom /dˈõ/ - donu /dˈonʊ/
+		duas /dˈuɐʃ/ - dui /dˈuɪ/
+		fazer /fɐzˈeɾ/ - fari /fˈaɾɪ/
+		farinha /fɐɾˈiɲɐ/ - farina /faɾˈina/
+		frio /fɾˈiu/ - friddu /fɾˈiddʊ/
+		fruito /fɾˈujtu/ - fruttu /frˈuttʊ/
+		fada /fˈaðɐ/ - fata /fˈata/
+		falso /fˈaɫsu/ - farsu /fˈarsʊ/
+		falso /fˈaɫsu/ - fausu /fˈawsʊ/
+		fêmea /fˈemjɐ/ - fìmmina /fˈimmɪna/
+		fio /fˈiu/ - filu /fˈilʊ/
+		fíɡado /fˈiɣɐðu/ - fìcatu /fˈikatʊ/
+		filho /fˈiʎu/ - fiɡɡhiu /fˈiɟɟʊ/
+		foɡo /fˈoɣu/ - focu /fˈɔkʊ/
+		força /fˈoɾsɐ/ - forza /fˈɔɾʦa/
+		folha /fˈoʎɐ/ - foɡɡhia /fˈɔɟɟa/
+		fumo /fˈumu/ - fumu /fˈumʊ/
+		fome /fˈɔmɨ/ - fami /fˈamɪ/
+		forte /fˈɔɾtɨ/ - forte /fˈɔrtɪ/
+		ferro /fˈɛʁu/ - ferro /fˈɛʐʐʊ/
+		festa /fˈɛʃtɐ/ - festa /fˈɛsta/
+		iɡual /iɣwˈaɫ/ - uɡuali /uɡwˈalɪ/
+		escutar /iʃkutˈaɾ/ - ascutari /askutˈaɾɪ/
+		escrever /iʃkɾɨvˈeɾ/ - scrìviri /skɾˈiviɾɪ/
+		espada /iʃpˈaðɐ/ - spata /ʃpˈata/
+		espiɡa /iʃpˈiɣɐ/ - spica /ʃpˈika/
+		espinha /iʃpˈiɲɐ/ - spina /ʃpˈina/
+		Espanha /iʃpˈɐɲɐ/ - Spaɡna /ʃpˈaɲɲa/
+		estrela /iʃtɾˈelɐ/ - stidda /ʃtˈiɖɖa/
+		estado /iʃtˈaðu/ - statu /ʃtˈatʊ/
+		estio /iʃtˈiu/ - astati /astˈatɪ/
+		inverno /ĩvˈɛɾnu/ - mmernu /mmˈɛɾnʊ/
+		conhecer /kuɲɨsˈeɾ/ - cunùsciri /kunˈuʃʃɪrɪ/
+		quatro /kwˈatɾu/ - quattru /kwˈaʈʈɽʊ/
+		cavalo /kɐvˈalu/ - cavaddu /kavˈaɖɖʊ/
+		cadeia /kɐðˈɐjɐ/ - catina /katˈina/
+		castelo /kɐʃtˈɛlu/ - casteddu /kastˈɛɖɖʊ/
+		cambiar /kɐ̃bjˈaɾ/ - canɡiari /kanʤˈaɾɪ/
+		cabelo /kɐβˈelu/ - capiddu /kapˈiɖɖʊ/
+		crer /kɾˈeɾ/ - cridiri /kɾˈiɾɪɾɪ/
+		cruz /kɾˈuʃ/ - cruci /kɾˈuɕɪ/
+		carne /kˈaɾnɨ/ - carni /kˈaɾnɪ/
+		caro /kˈaɾu/ - caru /kˈaɾʊ/
+		cabra /kˈaβɾɐ/ - crapa /kɾˈapa/
+		corpo /kˈoɾpu/ - corpu /kˈɔɾpʊ/
+		cu /kˈu/ - culu /kˈulʊ/
+		cunho /kˈuɲu/ - cuɡnu /kˈuɲɲʊ/
+		quem /kˈɐ̃j̃/ - cui /kˈuɪ/
+		cão /kˈɐ̃w̃/ - cani /kˈanɪ/
+		colo /kˈɔlu/ - coddu /kˈɔɖɖʊ/
+		que /kˈɨ/ - chi /ci/
+		leão /ljˈɐ̃w̃/ - liuni /liˈunɪ/
+		levar /lɨvˈaɾ/ - livari /livˈarɪ/
+		laɡo /lˈaɣu/ - lacu /lˈakʊ/
+		ler /lˈeɾ/ - lèjiri /lˈɛjɪrɪ/
+		livre /lˈivɾɨ/ - lìbbiru /lˈibbɪɾʊ/
+		luta /lˈutɐ/ - lutta /lˈutta/
+		lua /lˈuɐ/ - luna /lˈuna/
+		luz /lˈuʃ/ - lumi /lˈumɪ/
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		leito /lˈɐjtu/ - lettu /lˈɛttʊ/
+		leite /lˈɐjtɨ/ - latti /lˈattɪ/
+		lenha /lˈɐjɲɐ/ - liɡnu /lˈiɲɲʊ/
+		loɡo /lˈɔɣu/ - locu /lˈɔkʊ/
+		morrer /moʁˈeɾ/ - mòriri /mˈɔrɪrɪ/
+		montanha /mõtˈɐɲɐ/ - muntaɡna /muntˈaɲɲa/
+		mosseɡar /musɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morseɡar /muɾsɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morder /muɾðˈeɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		matar /mɐtˈaɾ/ - accìdiri /aʧʧˈidɪɾɪ/
+		maduro /mɐðˈuɾu/ - maturu /matˈurʊ/
+		metade /mɨtˈaðɨ/ - mità /mitˈa/
+		melhor /mɨʎˈɔɾ/ - miɡɡhiuri /miɟɟˈuɾɪ/
+		mar /mˈaɾ/ - mari /mˈaɾɪ/
+		mil /mˈiɫ/ - milli /mˈillɪ/
+		mosca /mˈoʃkɐ/ - musca /mˈuska/
+		muito /mˈũj̃tu/ - multu /mˈultʊ/
+		meio /mˈɐju/ - mezzu /mˈɛʦʦʊ/
+		mão /mˈɐ̃w̃/ - manu /mˈanʊ/
+		morte /mˈɔɾtɨ/ - morti /mˈɔɾtɪ/
+		mel /mˈɛɫ/ - meli /mˈɛlɪ/
+		me /mˈɨ/ - mi /mˈi/
+		nadar /nɐðˈaɾ/ - natari /natˈarɪ/
+		nascer /nɐʃsˈeɾ/ - nàsciri /nˈaʃʃɪɾɪ/
+		neɡro /nˈeɣɾu/ - nìuru /nˈiwɾʊ/
+		noite /nˈojtɨ/ - notti /nˈɔttɪ/
+		nome /nˈomɨ/ - nomi /nˈomɪ/
+		novo /nˈovu/ - novu /nˈɔvʊ/
+		nó /nˈɔ/ - nodu /nˈɔɾʊ/
+		nove /nˈɔvɨ/ - novi /nˈɔvɪ/
+		nós /nˈɔʃ/ - nui /nˈuj/
+		noz /nˈɔʃ/ - nuci /nˈuɕɪ/
+		névoa /nˈɛvwɐ/ - neɡɡhia /nˈeɟɟa/
+		neve /nˈɛvɨ/ - nivi /nˈivɪ/
+		outono /owtˈonu/ - autunnu /awtˈunnʊ/
+		poder /puðˈeɾ/ - putiri /putˈirɪ/
+		palavra /pɐlˈavɾɐ/ - paràula /paɾˈawla/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		preço /pɾˈesu/ - prezzu /pɾˈɛʦʦʊ/
+		paz /pˈaʃ/ - paci /pˈaɕɪ/
+		pelo /pˈelu/ - capiddu /kapˈiɖɖʊ/
+		pelo /pˈelu/ - pilu /pˈilʊ/
+		pena /pˈenɐ/ - pena /pˈena/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		poio /pˈoju/ - poju /pˈɔjʊ/
+		poço /pˈosu/ - puzzo /pˈuʦʦʊ/
+		pôr /pˈoɾ/ - pùniri /pˈunɪɾɪ/
+		porco /pˈoɾku/ - porcu /pˈɔrkʊ/
+		pões /pˈõj̃ʃ/ - puni /pˈunɪ/
+		ponto /pˈõtu/ - puntu /pˈuntʊ/
+		ponte /pˈõtɨ/ - ponti /pˈontɪ/
+		punho /pˈuɲu/ - puɡnu /pˈuɲɲʊ/
+		peito /pˈɐjtu/ - pettu /pˈɛttʊ/
+		peixe /pˈɐjʃɨ/ - pisci /pˈiʃʃɪ/
+		pança /pˈɐ̃sɐ/ - panza /pˈanʦa/
+		pé /pˈɛ/ - pedi /pˈɛɾɪ/
+		pele /pˈɛlɨ/ - peddi /pˈɛɖɖɪ/
+		pedra /pˈɛðɾɐ/ - petra /pˈɛʈɽa/
+		sentar /sẽtˈaɾ/ - sèdiri /sˈɛdɪrɪ/
+		cidade /siðˈaðɨ/ - cità /ɕitˈa/
+		cinquenta /sĩkwˈẽtɐ/ - cinquanta /ɕiŋkwˈanta/
+		saúde /sɐˈuðɨ/ - saluti /salˈutɪ/
+		saber /sɐβˈeɾ/ - sapiri /sˈapɪɾɪ/
+		cereja /sɨɾˈɐjʒɐ/ - cirasa /ɕiɾˈaza/
+		sal /sˈaɫ/ - sali /sˈalɪ/
+		salsa /sˈaɫsɐ/ - sausa /sˈawsa/
+		sabes /sˈaβɨʃ/ - sai /sˈaj/
+		seco /sˈeku/ - siccu /sˈikkʊ/
+		seca /sˈekɐ/ - sicca /sˈikka/
+		seda /sˈeðɐ/ - sita /sˈita/
+		cima /sˈimɐ/ - cima /ɕˈima/
+		cinza /sˈĩzɐ/ - cìnniri /ɕˈinnɪɾɪ/
+		seis /sˈɐjʃ/ - sei /sˈɛj/
+		sã /sˈɐ̃/ - sana /sˈana/
+		santo /sˈɐ̃tu/ - santu /sˈantʊ/
+		são /sˈɐ̃w̃/ - sanu /sˈanʊ/
+		sanɡue /sˈɐ̃ɡɨ/ - sanɡu /sˈaŋɡʊ/
+		sete /sˈɛtɨ/ - setti /sˈɛttɪ/
+		céu /sˈɛw/ - celu /ɕˈɛlʊ/
+		tempo /tˈẽpu/ - tempu /tˈɛmpʊ/
+		touro /tˈowɾu/ - tàuru /tˈawrʊ/
+		todo /tˈoðu/ - tuttu /tˈuttʊ/
+		tú /tˈu/ - tu /tˈu/
+		terra /tˈɛʁɐ/ - terra /tˈɛʐʐa/
+		umbiɡo /ũbˈiɣu/ - viḍḍicu /viɖɖˈikʊ/
+		vilão /vilˈɐ̃w̃/ - viḍḍanu /viɖɖˈanʊ/
+		voar /vwˈaɾ/ - vulari /vulˈarɪ/
+		vizinho /vɨzˈiɲu/ - vicinu /viɕˈinʊ/
+		verɡonha /vɨɾɣˈoɲɐ/ - viriɡoɡna /viɾiɡˈɔɲɲa/
+		ver /vˈeɾ/ - vìdiri /vˈiɾiɾɪ/
+		verde /vˈeɾðɨ/ - virdi /vˈiɾdɪ/
+		vento /vˈẽtu/ - ventu /vˈɛntʊ/
+		vila /vˈilɐ/ - viḍḍa /vˈiɖɖa/
+		vida /vˈiðɐ/ - vita /vˈita/
+		via /vˈiɐ/ - via /vˈia/
+		vinho /vˈiɲu/ - vinu /vˈinʊ/
+		vir /vˈiɾ/ - vèniri /vˈɛnɪɾɪ/
+		vinte /vˈĩtɨ/ - vinti /vˈintɪ/
+		velho /vˈɐjʎu/ - vecchiu /vˈɛccʊ/
+		voz /vˈɔʃ/ - vuci /vˈuɕɪ/
+		verme /vˈɛɾmɨ/ - vemmu /vˈɛmmʊ/
+		aɡulha /ɐɣˈuʎɐ/ - aɡuɡɡhia /aɡˈuɟɟa/
+		odor /ɔðˈoɾ/ - oluri /olˈuɾɪ/
+		ɡrosso /ɡɾˈosu/ - rossu /ɾˈɔssʊ/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡranu /ɡrˈanʊ/
+		ɡato /ɡˈatu/ - ɡattu /ɡˈattʊ/
+		ɡota /ɡˈotɐ/ - ɡuccia /ɡˈuʧʧa/
+		romão /ʁumˈɐ̃w̃/ - romanu /romˈanʊ/
+		razão /ʁɐzˈɐ̃w̃/ - raɡiuni /ʐaʤˈunɪ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		rio /ʁˈiu/ - rìu /rˈiʊ/
+		roxo /ʁˈoʃu/ - russu /ʐˈussʊ/
+		ruivo /ʁˈujvu/ - russu /ʐˈussʊ/
+		chaɡa /ʃˈaɣɐ/ - chiaɡa /cˈaɡa/
+		chor /ʃˈoɾ/ - ciuri /çˈuɾɪ/
+		chuva /ʃˈuvɐ/ - chiova /cˈɔva/
+		cheio /ʃˈɐju/ - chinu /cˈinʊ/
+		chama /ʃˈɐmɐ/ - ciamma /çˈamma/
+		ɡear /ʒjˈaɾ/ - jilari /jilˈarɪ/
+		joelho /ʒwˈɐjʎu/ - dinocchiu /dinˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - jinocchiu /jɪnˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - ɡinocchiu /ʤinˈɔccʊ/
+		ɡente /ʒˈẽtɨ/ - ɡente /ʤˈɛntɪ/
+		ɡenro /ʒˈẽʁu/ - jènniru /jˈɛnnɪɾʊ/
+		junho /ʒˈuɲu/ - ɡiuɡnu /ʤˈuɲɲʊ/
+		jovem /ʒˈɔvɐ̃j̃/ - ɡiùvini /ʤˈuvɪnɪ/
+		áɡua /ˈaɣwɐ/ - acqua /ˈakkwa/
+		alma /ˈaɫmɐ/ - arma /ˈaɾma/
+		alva /ˈaɫvɐ/ - alba /ˈalba/
+		árvore /ˈaɾvuɾɨ/ - àrbiru /ˈaɾbɪɾʊ/
+		alho /ˈaʎu/ - aɡɡhia /ˈaɟɟa/
+		ele /ˈelɨ/ - iddu /ˈiɖɖʊ/
+		insua /ˈinswɐ/ - ìsula /ˈizʊla/
+		ilha /ˈiʎɐ/ - ìsula /ˈizʊla/
+		oito /ˈojtu/ - ottu /ˈɔttʊ/
+		osso /ˈosu/ - osso /ˈɔssʊ/
+		ovo /ˈovu/ - ovu /ˈɔvʊ/
+		ouro /ˈowɾu/ - auru /ˈawrʊ/
+		ouro /ˈowɾu/ - oro /ˈɔrʊ/
+		olho /ˈoʎu/ - occhiu /ˈɔccʊ/
+		olhos /ˈoʎuʃ/ - occhi /ˈɔccɪ/
+		usso /ˈusu/ - ursu /ˈuɾsʊ/
+		unha /ˈuɲɐ/ - uɡna /ˈuɲɲa/
+		um /ˈũ/ - unu /ˈunʊ/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		obra /ˈɔβɾɐ/ - òpira /ˈɔpɪɾa/
+		elo /ˈɛlu/ - aneddu /anˈɛɖɖʊ/
+		ela /ˈɛlɐ/ - idda /ˈiɖɖa/
+		erva /ˈɛɾvɐ/ - erva /ˈɛɾva/
+
+Final disqualified:
+		dia /dˈiɐ/ - jornu /jˈɔɾnʊ/
+		nariz /nɐɾˈiʃ/ - nasu /nˈazʊ/
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+		rio /ʁˈiu/ - ciumi /çˈumɪ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 221
+	Disqualified: 239
+	Added: 0
+	Removed: 9
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		ovelha /ɔvˈɐjʎɐ/ - pècura /pˈɛkʊra/
+		estio /iʃtˈiu/ - astati /astˈatɪ/
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+		ler /lˈeɾ/ - lèjiri /lˈɛjɪrɪ/
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+
+Iteration 2
+	Qualified: 224
+	Disqualified: 236
+	Added: 3
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+		ler /lˈeɾ/ - lèjiri /lˈɛjɪrɪ/
+		estio /iʃtˈiu/ - astati /astˈatɪ/
+	Removed: 0
+
+Iteration 3
+	Qualified: 225
+	Disqualified: 235
+	Added: 2
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Iteration 4
+	Qualified: 226
+	Disqualified: 234
+	Added: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+	Removed: 0
+
+Iteration 5
+	Qualified: 226
+	Disqualified: 234
+	Added: 1
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Iteration 6
+	Qualified: 227
+	Disqualified: 233
+	Added: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+	Removed: 0
+
+Iteration 7
+	Qualified: 226
+	Disqualified: 234
+	Added: 0
+	Removed: 1
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+Final qualifying:
+		beber /bɨβˈeɾ/ - bìviri /bˈivɪɾɪ/
+		branco /bɾˈɐ̃ku/ - jancu /jˈaŋkʊ/
+		baixo /bˈajʃu/ - basciu /bˈaʃʃʊ/
+		boca /bˈokɐ/ - bucca /bˈukka/
+		boa /bˈoɐ/ - bona /bˈɔna/
+		boas /bˈoɐʃ/ - boni /bˈɔnɪ/
+		bons /bˈõʃ/ - boni /bˈɔnɪ/
+		banho /bˈɐɲu/ - baɡnu /bˈaɲʊ/
+		belo /bˈɛlu/ - beddu /bˈɛɖɖʊ/
+		bela /bˈɛlɐ/ - bedda /bˈɛɖɖa/
+		dedo /dˈeðu/ - jitu /jˈitʊ/
+		dedo /dˈeðu/ - jìditu /jˈiɾitʊ/
+		dente /dˈẽtɨ/ - denti /dˈɛntɪ/
+		dona /dˈonɐ/ - donna /dˈɔnna/
+		doze /dˈozɨ/ - dùdici /dˈuɾɪɕɪ/
+		dom /dˈõ/ - donu /dˈonʊ/
+		duas /dˈuɐʃ/ - dui /dˈuɪ/
+		dez /dˈɛʃ/ - deci /dˈɛɕɪ/
+		frio /fɾˈiu/ - friddu /fɾˈiddʊ/
+		fruito /fɾˈujtu/ - fruttu /frˈuttʊ/
+		falso /fˈaɫsu/ - fausu /fˈawsʊ/
+		fio /fˈiu/ - filu /fˈilʊ/
+		fíɡado /fˈiɣɐðu/ - fìcatu /fˈikatʊ/
+		filho /fˈiʎu/ - fiɡɡhiu /fˈiɟɟʊ/
+		filha /fˈiʎɐ/ - fiɡɡhia /fˈiɟɟa/
+		fim /fˈĩ/ - fini /fˈinɪ/
+		foɡo /fˈoɣu/ - focu /fˈɔkʊ/
+		força /fˈoɾsɐ/ - forza /fˈɔɾʦa/
+		folha /fˈoʎɐ/ - foɡɡhia /fˈɔɟɟa/
+		fumo /fˈumu/ - fumu /fˈumʊ/
+		fome /fˈɔmɨ/ - fami /fˈamɪ/
+		forte /fˈɔɾtɨ/ - forte /fˈɔrtɪ/
+		ferro /fˈɛʁu/ - ferro /fˈɛʐʐʊ/
+		festa /fˈɛʃtɐ/ - festa /fˈɛsta/
+		iɡual /iɣwˈaɫ/ - uɡuali /uɡwˈalɪ/
+		escutar /iʃkutˈaɾ/ - ascutari /askutˈaɾɪ/
+		escrever /iʃkɾɨvˈeɾ/ - scrìviri /skɾˈiviɾɪ/
+		escuro /iʃkˈuɾu/ - scuru /ʃkˈuɾʊ/
+		espiɡa /iʃpˈiɣɐ/ - spica /ʃpˈika/
+		espinha /iʃpˈiɲɐ/ - spina /ʃpˈina/
+		Espanha /iʃpˈɐɲɐ/ - Spaɡna /ʃpˈaɲɲa/
+		estrela /iʃtɾˈelɐ/ - stidda /ʃtˈiɖɖa/
+		estio /iʃtˈiu/ - astati /astˈatɪ/
+		inverno /ĩvˈɛɾnu/ - nvèrnu /nvˈɛɾnʊ/
+		conhecer /kuɲɨsˈeɾ/ - cunùsciri /kunˈuʃʃɪrɪ/
+		quatro /kwˈatɾu/ - quattru /kwˈaʈʈɽʊ/
+		cavalo /kɐvˈalu/ - cavaddu /kavˈaɖɖʊ/
+		cadeia /kɐðˈɐjɐ/ - catina /katˈina/
+		castelo /kɐʃtˈɛlu/ - casteddu /kastˈɛɖɖʊ/
+		cambiar /kɐ̃bjˈaɾ/ - canɡiari /kanʤˈaɾɪ/
+		cabelo /kɐβˈelu/ - capiddu /kapˈiɖɖʊ/
+		cabelo /kɐβˈelu/ - pilu /pˈilʊ/
+		crer /kɾˈeɾ/ - cridiri /kɾˈiɾɪɾɪ/
+		cruz /kɾˈuʃ/ - cruci /kɾˈuɕɪ/
+		caldo /kˈaɫdu/ - càvuru /kˈavʊɾʊ/
+		carne /kˈaɾnɨ/ - carni /kˈaɾnɪ/
+		caro /kˈaɾu/ - caru /kˈaɾʊ/
+		cabra /kˈaβɾɐ/ - crapa /kɾˈapa/
+		cu /kˈu/ - culu /kˈulʊ/
+		cunho /kˈuɲu/ - cuɡnu /kˈuɲɲʊ/
+		quem /kˈɐ̃j̃/ - cui /kˈuɪ/
+		canto /kˈɐ̃tu/ - cantu /kˈantʊ/
+		cão /kˈɐ̃w̃/ - cani /kˈanɪ/
+		colo /kˈɔlu/ - coddu /kˈɔɖɖʊ/
+		cor /kˈɔɾ/ - cori /kˈɔɾɪ/
+		que /kˈɨ/ - chi /ci/
+		levar /lɨvˈaɾ/ - livari /livˈarɪ/
+		laɡo /lˈaɣu/ - lacu /lˈakʊ/
+		láɡrima /lˈaɣɾimɐ/ - làcrima /lˈakɾɪma/
+		letra /lˈetɾɐ/ - littira /lˈittɪɾa/
+		ler /lˈeɾ/ - lèjiri /lˈɛjɪrɪ/
+		livre /lˈivɾɨ/ - lìbbiru /lˈibbɪɾʊ/
+		línɡua /lˈĩɡwɐ/ - linɡua /lˈiŋɡwa/
+		lobo /lˈoβu/ - lupu /lˈupʊ/
+		luta /lˈutɐ/ - lutta /lˈutta/
+		lua /lˈuɐ/ - luna /lˈuna/
+		luz /lˈuʃ/ - lumi /lˈumɪ/
+		luz /lˈuʃ/ - luci /lˈuɕɪ/
+		lei /lˈɐj/ - liɡɡe /lˈiʤʤɪ/
+		leito /lˈɐjtu/ - lettu /lˈɛttʊ/
+		leite /lˈɐjtɨ/ - latti /lˈattɪ/
+		lenha /lˈɐjɲɐ/ - liɡna /lˈiɲɲa/
+		lenha /lˈɐjɲɐ/ - liɡnu /lˈiɲɲʊ/
+		lã /lˈɐ̃/ - lana /lˈana/
+		lebre /lˈɛβɾɨ/ - lepru /lˈɛpɾʊ/
+		morrer /moʁˈeɾ/ - mòriri /mˈɔrɪrɪ/
+		mosseɡar /musɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morseɡar /muɾsɨɣˈaɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		morder /muɾðˈeɾ/ - muzzicari /muʦʦikˈaɾɪ/
+		maduro /mɐðˈuɾu/ - maturu /matˈurʊ/
+		metade /mɨtˈaðɨ/ - mità /mitˈa/
+		melhor /mɨʎˈɔɾ/ - miɡɡhiuri /miɟɟˈuɾɪ/
+		mar /mˈaɾ/ - mari /mˈaɾɪ/
+		mil /mˈiɫ/ - milli /mˈillɪ/
+		mosca /mˈoʃkɐ/ - musca /mˈuska/
+		muito /mˈũj̃tu/ - multu /mˈultʊ/
+		meio /mˈɐju/ - mezzu /mˈɛʦʦʊ/
+		morte /mˈɔɾtɨ/ - morti /mˈɔɾtɪ/
+		mel /mˈɛɫ/ - meli /mˈɛlɪ/
+		me /mˈɨ/ - mi /mˈi/
+		nascer /nɐʃsˈeɾ/ - nàsciri /nˈaʃʃɪɾɪ/
+		neɡro /nˈeɣɾu/ - nìuru /nˈiwɾʊ/
+		noite /nˈojtɨ/ - notti /nˈɔttɪ/
+		nome /nˈomɨ/ - nomi /nˈomɪ/
+		novo /nˈovu/ - novu /nˈɔvʊ/
+		nuvem /nˈuvɐ̃j̃/ - nuvula /nˈuvʊla/
+		nó /nˈɔ/ - nodu /nˈɔɾʊ/
+		nosso /nˈɔsu/ - nostru /nˈɔʃʃɽʊ/
+		nove /nˈɔvɨ/ - novi /nˈɔvɪ/
+		nós /nˈɔʃ/ - nui /nˈuj/
+		neve /nˈɛvɨ/ - nivi /nˈivɪ/
+		outono /owtˈonu/ - autunnu /awtˈunnʊ/
+		piolho /pjˈoʎu/ - pirocchiu /piɾˈɔccʊ/
+		poder /puðˈeɾ/ - putiri /putˈirɪ/
+		palavra /pɐlˈavɾɐ/ - paràula /paɾˈawla/
+		pequeno /pɨkˈenu/ - nicu /nˈikʊ/
+		preço /pɾˈesu/ - prezzu /pɾˈɛʦʦʊ/
+		paço /pˈasu/ - palazzu /palˈaʦʦʊ/
+		paz /pˈaʃ/ - paci /pˈaɕɪ/
+		pelo /pˈelu/ - pilu /pˈilʊ/
+		pena /pˈenɐ/ - pena /pˈena/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		pena /pˈenɐ/ - pinna /pˈinna/
+		poio /pˈoju/ - poju /pˈɔjʊ/
+		pouco /pˈowku/ - pocu /pˈɔkʊ/
+		pôr /pˈoɾ/ - pùniri /pˈunɪɾɪ/
+		porco /pˈoɾku/ - porcu /pˈɔrkʊ/
+		pões /pˈõj̃ʃ/ - puni /pˈunɪ/
+		ponto /pˈõtu/ - puntu /pˈuntʊ/
+		ponte /pˈõtɨ/ - ponti /pˈontɪ/
+		punho /pˈuɲu/ - puɡnu /pˈuɲɲʊ/
+		pança /pˈɐ̃sɐ/ - panza /pˈanʦa/
+		pão /pˈɐ̃w̃/ - pani /pˈanɪ/
+		pé /pˈɛ/ - pedi /pˈɛɾɪ/
+		pele /pˈɛlɨ/ - peddi /pˈɛɖɖɪ/
+		sentar /sẽtˈaɾ/ - sèdiri /sˈɛdɪrɪ/
+		cidade /siðˈaðɨ/ - cità /ɕitˈa/
+		saber /sɐβˈeɾ/ - sapiri /sˈapɪɾɪ/
+		cereja /sɨɾˈɐjʒɐ/ - cirasa /ɕiɾˈaza/
+		sal /sˈaɫ/ - sali /sˈalɪ/
+		salsa /sˈaɫsɐ/ - sausa /sˈawsa/
+		sábio /sˈaβju/ - sàviu /sˈavjʊ/
+		sabes /sˈaβɨʃ/ - sai /sˈaj/
+		seco /sˈeku/ - siccu /sˈikkʊ/
+		seca /sˈekɐ/ - sicca /sˈikka/
+		seda /sˈeðɐ/ - sita /sˈita/
+		cera /sˈeɾɐ/ - cira /ɕˈiɾa/
+		cima /sˈimɐ/ - cima /ɕˈima/
+		sobre /sˈoβɾɨ/ - supra /sˈupra/
+		seis /sˈɐjʃ/ - sei /sˈɛj/
+		sã /sˈɐ̃/ - sana /sˈana/
+		santo /sˈɐ̃tu/ - santu /sˈantʊ/
+		sanɡue /sˈɐ̃ɡɨ/ - sanɡu /sˈaŋɡʊ/
+		sete /sˈɛtɨ/ - setti /sˈɛttɪ/
+		céu /sˈɛw/ - celu /ɕˈɛlʊ/
+		três /tɾˈeʃ/ - tri /ʈɽˈi/
+		tempo /tˈẽpu/ - tempu /tˈɛmpʊ/
+		todos /tˈoðuʃ/ - tutti /tˈuttɪ/
+		tú /tˈu/ - tu /tˈu/
+		terra /tˈɛʁɐ/ - terra /tˈɛʐʐa/
+		testa /tˈɛʃtɐ/ - testa /tˈɛʃta/
+		umbiɡo /ũbˈiɣu/ - viḍḍicu /viɖɖˈikʊ/
+		vilão /vilˈɐ̃w̃/ - viḍḍanu /viɖɖˈanʊ/
+		voar /vwˈaɾ/ - vulari /vulˈarɪ/
+		verɡonha /vɨɾɣˈoɲɐ/ - viriɡoɡna /viɾiɡˈɔɲɲa/
+		ver /vˈeɾ/ - vìdiri /vˈiɾiɾɪ/
+		verde /vˈeɾðɨ/ - virdi /vˈiɾdɪ/
+		vento /vˈẽtu/ - ventu /vˈɛntʊ/
+		vida /vˈiðɐ/ - vita /vˈita/
+		vinho /vˈiɲu/ - vinu /vˈinʊ/
+		vir /vˈiɾ/ - vèniri /vˈɛnɪɾɪ/
+		vinte /vˈĩtɨ/ - vinti /vˈintɪ/
+		velho /vˈɐjʎu/ - vecchiu /vˈɛccʊ/
+		vós /vˈɔʃ/ - vui /vˈuj/
+		voz /vˈɔʃ/ - vuci /vˈuɕɪ/
+		verme /vˈɛɾmɨ/ - vemmu /vˈɛmmʊ/
+		ajudar /ɐʒuðˈaɾ/ - ajutari /ajutˈaɾɪ/
+		odor /ɔðˈoɾ/ - oluri /olˈuɾɪ/
+		obreiro /ɔβɾˈɐjɾu/ - opiraiu /opiɾˈajʊ/
+		ɡrosso /ɡɾˈosu/ - rossu /ɾˈɔssʊ/
+		ɡrande /ɡɾˈɐ̃dɨ/ - ɡranni /ɡɾˈannɪ/
+		ɡato /ɡˈatu/ - ɡattu /ɡˈattʊ/
+		ɡota /ɡˈotɐ/ - ɡuccia /ɡˈuʧʧa/
+		ɡola /ɡˈɔlɐ/ - ɡula /ɡˈula/
+		romão /ʁumˈɐ̃w̃/ - romanu /romˈanʊ/
+		redondo /ʁɨðˈõdu/ - tunnu /tˈunnʊ/
+		rio /ʁˈiu/ - rìu /rˈiʊ/
+		roxo /ʁˈoʃu/ - russu /ʐˈussʊ/
+		rei /ʁˈɐj/ - re /ʐˈe/
+		chaɡa /ʃˈaɣɐ/ - chiaɡa /cˈaɡa/
+		chor /ʃˈoɾ/ - ciuri /çˈuɾɪ/
+		chuva /ʃˈuvɐ/ - chiova /cˈɔva/
+		cheio /ʃˈɐju/ - chinu /cˈinʊ/
+		chama /ʃˈɐmɐ/ - ciamma /çˈamma/
+		ɡear /ʒjˈaɾ/ - jilari /jilˈarɪ/
+		joelho /ʒwˈɐjʎu/ - dinocchiu /dinˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - jinocchiu /jɪnˈɔccʊ/
+		joelho /ʒwˈɐjʎu/ - ɡinocchiu /ʤinˈɔccʊ/
+		ɡente /ʒˈẽtɨ/ - ɡente /ʤˈɛntɪ/
+		ɡenro /ʒˈẽʁu/ - jènniru /jˈɛnnɪɾʊ/
+		joɡo /ʒˈoɣu/ - jocu /jˈɔkʊ/
+		junho /ʒˈuɲu/ - ɡiuɡnu /ʤˈuɲɲʊ/
+		junto /ʒˈũtu/ - juntu /jˈuntʊ/
+		jovem /ʒˈɔvɐ̃j̃/ - ɡiùvini /ʤˈuvɪnɪ/
+		áɡua /ˈaɣwɐ/ - acqua /ˈakkwa/
+		alma /ˈaɫmɐ/ - arma /ˈaɾma/
+		alva /ˈaɫvɐ/ - alba /ˈalba/
+		árvore /ˈaɾvuɾɨ/ - àrbiru /ˈaɾbɪɾʊ/
+		alho /ˈaʎu/ - aɡɡhia /ˈaɟɟa/
+		ele /ˈelɨ/ - iddu /ˈiɖɖʊ/
+		eu /ˈew/ - iu /ˈiʊ/
+		insua /ˈinswɐ/ - ìsula /ˈizʊla/
+		ilha /ˈiʎɐ/ - ìsula /ˈizʊla/
+		oito /ˈojtu/ - ottu /ˈɔttʊ/
+		osso /ˈosu/ - osso /ˈɔssʊ/
+		outro /ˈowtɾu/ - àutru /ˈawʈɽʊ/
+		ouro /ˈowɾu/ - auru /ˈawrʊ/
+		ouro /ˈowɾu/ - oro /ˈɔrʊ/
+		olho /ˈoʎu/ - occhiu /ˈɔccʊ/
+		olhos /ˈoʎuʃ/ - occhi /ˈɔccɪ/
+		um /ˈũ/ - unu /ˈunʊ/
+		anjo /ˈɐ̃ʒu/ - àncilu /ˈanɕɪlʊ/
+		homem /ˈɔmɐ̃j̃/ - omu /ˈɔmʊ/
+		obra /ˈɔβɾɐ/ - òpira /ˈɔpɪɾa/
+		elo /ˈɛlu/ - aneddu /anˈɛɖɖʊ/
+		ela /ˈɛlɐ/ - idda /ˈiɖɖa/
+
+Final disqualified:
+		pássaro /pˈasɐɾu/ - aceddu /aɕˈɛɖɖʊ/
+		ventre /vˈẽtɾɨ/ - panza /pˈanʦa/
+		ovelha /ɔvˈɐjʎɐ/ - pècura /pˈɛkʊra/
+		juiz /ʒuˈiʃ/ - iùdici /jˈuɾɪɕɪ/
+
+
+-------------------
+

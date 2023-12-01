@@ -1,0 +1,1622 @@
+Same meaning pairs: 243
+****SAMPLE 1****
+Iteration 1
+	Qualified: 171
+	Disqualified: 217
+	Added: 0
+	Removed: 23
+		vară /vˈarə/ - estío /estˈio/
+		alt /ˈalt/ - otro /ˈotɾo/
+		ɡalben /ɡˈalben/ - amarillo /amaɾˈiʝo/
+		foame /fo̯ˈame/ - hambre /ˈambɾe/
+		ucidere /uʧˈidere/ - matar /matˈaɾ/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		sută /sˈutə/ - ciento /θjˈento/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		frate /frˈate/ - hermano /eɾmˈano/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		lumină /lumˈinə/ - luz /lˈuθ/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		ac /ˈak/ - aɡuja /aɣˈuxa/
+		fie /fˈie/ - hija /ˈixa/
+		păr /pˈər/ - cabello /kaβˈeʝo/
+		douăzeci /dowəzˈeʧʲ/ - veinte /bˈejnte/
+		nea /ne̯ˈa/ - nieve /njˈeβe/
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		arină /arˈinə/ - sable /sˈaβle/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		bărbat /bərbˈat/ - hombre /ˈombɾe/
+
+Iteration 2
+	Qualified: 169
+	Disqualified: 219
+	Added: 3
+		foame /fo̯ˈame/ - hambre /ˈambɾe/
+		fie /fˈie/ - hija /ˈixa/
+		nea /ne̯ˈa/ - nieve /njˈeβe/
+	Removed: 5
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		aur /ˈaur/ - oro /ˈoɾo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		inel /inˈel/ - anillo /anˈiʝo/
+
+Iteration 3
+	Qualified: 172
+	Disqualified: 216
+	Added: 4
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		aur /ˈaur/ - oro /ˈoɾo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 1
+		nor /nˈor/ - nube /nˈuβe/
+
+Iteration 4
+	Qualified: 171
+	Disqualified: 217
+	Added: 0
+	Removed: 1
+		nuc /nˈuk/ - nuez /nwˈeθ/
+
+Iteration 5
+	Qualified: 172
+	Disqualified: 216
+	Added: 4
+		nor /nˈor/ - nube /nˈuβe/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 3
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		aur /ˈaur/ - oro /ˈoɾo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+
+Iteration 6
+	Qualified: 173
+	Disqualified: 215
+	Added: 3
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		aur /ˈaur/ - oro /ˈoɾo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+	Removed: 2
+		nor /nˈor/ - nube /nˈuβe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+
+Iteration 7
+	Qualified: 174
+	Disqualified: 214
+	Added: 1
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 0
+
+Iteration 8
+	Qualified: 175
+	Disqualified: 213
+	Added: 3
+		nor /nˈor/ - nube /nˈuβe/
+		frate /frˈate/ - hermano /eɾmˈano/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+	Removed: 2
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+
+Iteration 9
+	Qualified: 175
+	Disqualified: 213
+	Added: 2
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 2
+		nor /nˈor/ - nube /nˈuβe/
+		frate /frˈate/ - hermano /eɾmˈano/
+
+Iteration 10
+	Qualified: 177
+	Disqualified: 211
+	Added: 3
+		nor /nˈor/ - nube /nˈuβe/
+		frate /frˈate/ - hermano /eɾmˈano/
+		bărbat /bərbˈat/ - hombre /ˈombɾe/
+	Removed: 1
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+
+Final qualifying:
+		aflare /aflˈare/ - hallar /aʝˈaɾ/
+		albină /albˈinə/ - abeja /aβˈexa/
+		arină /arˈinə/ - arena /aɾˈena/
+		ascultare /askultˈare/ - escuchar /eskuʧˈaɾ/
+		ajutare /aʒutˈare/ - ayudar /aʝuðˈaɾ/
+		ajut /aʒˈut/ - ayudo /aʝˈuðo/
+		buric /burˈik/ - ombliɡo /omblˈiɣo/
+		bărbat /bərbˈat/ - hombre /ˈombɾe/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bine /bˈine/ - bien /bjˈen/
+		bou /bˈow/ - buey /bwˈej/
+		bună /bˈunə/ - buena /bwˈena/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		doamnă /do̯ˈamnə/ - dueña /dwˈeɲa/
+		dare /dˈare/ - dar /dˈaɾ/
+		dinte /dˈinte/ - diente /djˈente/
+		doi /dˈoj/ - dos /dˈos/
+		dulce /dˈulʧe/ - dulce /dˈulθe/
+		dă /dˈə/ - dona /dˈona/
+		ficat /fikˈat/ - híɡado /ˈiɣaðo/
+		fier /fjˈer/ - hierro /jˈero/
+		foame /fo̯ˈame/ - hambre /ˈambɾe/
+		foarte /fo̯ˈarte/ - fuerte /fwˈeɾte/
+		frumoasă /frumo̯ˈasə/ - hermoso /eɾmˈoso/
+		frumos /frumˈos/ - hermoso /eɾmˈoso/
+		frate /frˈate/ - hermano /eɾmˈano/
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		fac /fˈak/ - haɡo /ˈaɣo/
+		fie /fˈie/ - hija /ˈixa/
+		foc /fˈok/ - fueɡo /fwˈeɣo/
+		fum /fˈum/ - humo /ˈumo/
+		făină /fˈəjnə/ - harina /aɾˈina/
+		ea /je̯ˈa/ - ella /ˈeʝa/
+		iarbă /jˈarbə/ - hierba /jˈeɾβa/
+		iarnă /jˈarnə/ - invierno /imbjˈeɾno/
+		el /jˈel/ - él /ˈel/
+		iepure /jˈepure/ - liebre /ljˈeβɾe/
+		chemare /kemˈare/ - llamar /ɟ͡ʝamˈaɾ/
+		credere /kredˈere/ - creer /kɾeˈeɾ/
+		cruce /krˈuʧe/ - cruz /kɾˈuθ/
+		cunoaștere /kuno̯ˈaʃtere/ - conocer /konoθˈeɾ/
+		cătină /kətˈinə/ - cadena /kaðˈena/
+		căutare /kəwtˈare/ - cazar /kaθˈaɾ/
+		cal /kˈal/ - caballo /kaβˈaʝo/
+		cald /kˈald/ - caldo /kˈaldo/
+		cap /kˈap/ - cabo /kˈaβo/
+		carne /kˈarne/ - carne /kˈaɾne/
+		casă /kˈasə/ - casa /kˈasa/
+		corn /kˈorn/ - cuerno /kwˈeɾno/
+		cur /kˈur/ - culo /kˈulo/
+		câine /kˈɨjne/ - can /kˈan/
+		luare /luˈare/ - llevar /ɟ͡ʝeβˈaɾ/
+		lac /lˈak/ - laɡo /lˈaɣo/
+		lacrimă /lˈakrimə/ - láɡrima /lˈaɣɾima/
+		lapte /lˈapte/ - leche /lˈeʧe/
+		leɡe /lˈeʤe/ - ley /lˈej/
+		limbă /lˈimbə/ - lenɡua /lˈeŋɡwa/
+		literă /lˈiterə/ - letra /lˈetɾa/
+		loc /lˈok/ - lueɡo /lwˈeɣo/
+		lună /lˈunə/ - luna /lˈuna/
+		lup /lˈup/ - lobo /lˈoβo/
+		luptă /lˈuptə/ - lucha /lˈuʧa/
+		lână /lˈɨnə/ - lana /lˈana/
+		miere /mjˈere/ - miel /mjˈel/
+		murire /murˈire/ - morir /moɾˈiɾ/
+		mușcare /muʃkˈare/ - morder /moɾðˈeɾ/
+		mie /mˈie/ - mil /mˈil/
+		mică /mˈikə/ - miɡa /mˈiɣa/
+		muscă /mˈuskə/ - mosca /mˈoska/
+		mă /mˈə/ - me /mˈe/
+		nea /ne̯ˈa/ - nieve /njˈeβe/
+		niciun /niʧʲˈun/ - ninɡuno /niŋɡˈuno/
+		nu /nu/ - no /no/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+		neɡru /nˈeɡru/ - neɡro /nˈeɣɾo/
+		nor /nˈor/ - nube /nˈuβe/
+		nostru /nˈostru/ - nuestro /nwˈestɾo/
+		nouă /nˈowə/ - nueve /nwˈeβe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		nume /nˈume/ - nombre /nˈombɾe/
+		odoare /odo̯ˈare/ - olor /olˈoɾ/
+		piatră /pjˈatrə/ - piedra /pjˈeðɾa/
+		piele /pjˈele/ - piel /pjˈel/
+		piept /pjˈept/ - pecho /pˈeʧo/
+		piersică /pjˈersikə/ - prisco /pɾˈisko/
+		plaɡă /plˈaɡə/ - llaɡa /ɟ͡ʝˈaɣa/
+		poarcă /po̯ˈarkə/ - puerca /pwˈeɾka/
+		putere /putˈere/ - poder /poðˈeɾ/
+		păduche /pədˈuke/ - piojo /pjˈoxo/
+		pântece /pɨntˈeʧe/ - panza /pˈanθa/
+		pană /pˈanə/ - peña /pˈeɲa/
+		pasăre /pˈasəre/ - pájaro /pˈaxaɾo/
+		patru /pˈatru/ - cuatro /kwˈatɾo/
+		pace /pˈaʧe/ - paz /pˈaθ/
+		pește /pˈeʃte/ - pez /pˈeθ/
+		porc /pˈork/ - puerco /pwˈeɾko/
+		pui /pˈuj/ - pones /pˈones/
+		pumn /pˈumn/ - puño /pˈuɲo/
+		punere /pˈunere/ - poner /ponˈeɾ/
+		puț /pˈuʦ/ - pozo /pˈoθo/
+		păr /pˈər/ - pelo /pˈelo/
+		pâine /pˈɨjne/ - pan /pˈan/
+		rațiune /raʦjˈune/ - razón /raθˈon/
+		rumân /rumˈɨn/ - romano /romˈano/
+		rădăcină /rədəʧˈinə/ - raíz /raˈiθ/
+		roib /rˈojb/ - rubio /rˈuβjo/
+		râie /rˈɨje/ - araña /aɾˈaɲa/
+		râu /rˈɨw/ - río /rˈio/
+		seacă /se̯ˈakə/ - seca /sˈeka/
+		scriere /skrˈiere/ - escribir /eskɾiβˈiɾ/
+		scurt /skˈurt/ - corto /kˈoɾto/
+		soare /so̯ˈare/ - sol /sˈol/
+		Spania /spˈanja/ - España /espˈaɲa/
+		spată /spˈatə/ - espada /espˈaða/
+		spic /spˈik/ - espiɡa /espˈiɣa/
+		stea /ste̯ˈa/ - estrella /estɾˈeʝa/
+		stat /stˈat/ - estado /estˈaðo/
+		sămânţă /səmˈɨnʦə/ - semilla /semˈiʝa/
+		sare /sˈare/ - sal /sˈal/
+		sec /sˈek/ - seco /sˈeko/
+		supra /sˈupra/ - sobre /sˈoβɾe/
+		toamnă /to̯ˈamnə/ - otoño /otˈoɲo/
+		tată /tˈatə/ - padre /pˈaðɾe/
+		taur /tˈaur/ - toro /tˈoɾo/
+		timp /tˈimp/ - tiempo /tjˈempo/
+		tot /tˈot/ - todo /tˈoðo/
+		tu /tˈu/ - tú /tˈu/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		venire /venˈire/ - venir /benˈiɾ/
+		vacă /vˈakə/ - vaca /bˈaka/
+		vechi /vˈekʲ/ - viejo /bjˈexo/
+		verde /vˈerde/ - verde /bˈeɾðe/
+		vin /vˈin/ - venɡo /bˈeŋɡo/
+		vin /vˈin/ - vino /bˈino/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		vânt /vˈɨnt/ - viento /bjˈento/
+		zbor /zbˈor/ - vuelo /bwˈelo/
+		zeu /zˈew/ - dios /djˈos/
+		zece /zˈeʧe/ - diez /djˈeθ/
+		zi /zˈi/ - día /dˈia/
+		zic /zˈik/ - diɡo /dˈiɣo/
+		zicere /zˈiʧere/ - decir /deθˈiɾ/
+		ɡrăsime /ɡrəsˈime/ - ɡrasa /ɡɾˈasa/
+		ɡros /ɡrˈos/ - ɡrueso /ɡɾwˈeso/
+		ɡrâu /ɡrˈɨw/ - ɡrano /ɡɾˈano/
+		ɡură /ɡurˈə/ - ɡola /ɡˈola/
+		ɡută /ɡˈutə/ - ɡota /ɡˈota/
+		ședere /ʃedˈere/ - sentar /sentˈaɾ/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		șapte /ʃˈapte/ - siete /sjˈete/
+		șase /ʃˈase/ - seis /sˈejs/
+		joc /ʒˈok/ - jueɡo /xwˈeɣo/
+		jude /ʒˈude/ - juez /xwˈeθ/
+		june /ʒˈune/ - joven /xˈoβen/
+		ɡinere /ʤˈinere/ - yerno /ɟ͡ʝˈeɾno/
+		țară /ʦˈarə/ - tierra /tjˈera/
+		cenușă /ʧenˈuʃə/ - ceniza /θenˈiθa/
+		cetate /ʧetˈate/ - ciudad /θjuðˈað/
+		ceară /ʧe̯ˈarə/ - cera /θˈeɾa/
+		cincizeci /ʧinʧʲzˈeʧʲ/ - cincuenta /θiŋkwˈenta/
+		cireașă /ʧire̯ˈaʃə/ - cereza /θeɾˈeθa/
+		ce /ʧˈe/ - que /kˈe/
+		cer /ʧˈer/ - cielo /θjˈelo/
+		ciumă /ʧˈumə/ - cima /θˈima/
+		ai /ˈaj/ - ajo /ˈaxo/
+		an /ˈan/ - año /ˈaɲo/
+		apă /ˈapə/ - aɡua /ˈaɣwa/
+		arbore /ˈarbore/ - árbol /ˈaɾβol/
+		aur /ˈaur/ - oro /ˈoɾo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		om /ˈom/ - hombre /ˈombɾe/
+		opt /ˈopt/ - ocho /ˈoʧo/
+		os /ˈos/ - hueso /wˈeso/
+		ou /ˈow/ - huevo /wˈeβo/
+		umăr /ˈumər/ - hombro /ˈombɾo/
+		urs /ˈurs/ - oso /ˈoso/
+		unɡhie /ˈuŋɡje/ - uña /ˈuɲa/
+
+Final disqualified:
+		arină /arˈinə/ - sable /sˈaβle/
+		douăzeci /dowəzˈeʧʲ/ - veinte /bˈejnte/
+		inel /inˈel/ - anillo /anˈiʝo/
+		lumină /lumˈinə/ - luz /lˈuθ/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		păr /pˈər/ - cabello /kaβˈeʝo/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		sută /sˈutə/ - ciento /θjˈento/
+		ucidere /uʧˈidere/ - matar /matˈaɾ/
+		vară /vˈarə/ - estío /estˈio/
+		ɡalben /ɡˈalben/ - amarillo /amaɾˈiʝo/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		ac /ˈak/ - aɡuja /aɣˈuxa/
+		alt /ˈalt/ - otro /ˈotɾo/
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 174
+	Disqualified: 214
+	Added: 0
+	Removed: 20
+		vară /vˈarə/ - estío /estˈio/
+		alt /ˈalt/ - otro /ˈotɾo/
+		eu /jˈew/ - yo /ɟ͡ʝˈo/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		sută /sˈutə/ - ciento /θjˈento/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		frate /frˈate/ - hermano /eɾmˈano/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		lumină /lumˈinə/ - luz /lˈuθ/
+		foaie /fo̯ˈaje/ - hoja /ˈoxa/
+		picior /piʧˈor/ - pie /pjˈe/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		ac /ˈak/ - aɡuja /aɣˈuxa/
+		păr /pˈər/ - cabello /kaβˈeʝo/
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		arină /arˈinə/ - sable /sˈaβle/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		alb /ˈalb/ - blanco /blˈaŋko/
+		bărbat /bərbˈat/ - hombre /ˈombɾe/
+
+Iteration 2
+	Qualified: 171
+	Disqualified: 217
+	Added: 1
+		foaie /fo̯ˈaje/ - hoja /ˈoxa/
+	Removed: 4
+		aur /ˈaur/ - oro /ˈoɾo/
+		inel /inˈel/ - anillo /anˈiʝo/
+		opt /ˈopt/ - ocho /ˈoʧo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+
+Iteration 3
+	Qualified: 172
+	Disqualified: 216
+	Added: 3
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		opt /ˈopt/ - ocho /ˈoʧo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 2
+		fiu /fˈiw/ - hijo /ˈixo/
+		nor /nˈor/ - nube /nˈuβe/
+
+Iteration 4
+	Qualified: 173
+	Disqualified: 215
+	Added: 2
+		fiu /fˈiw/ - hijo /ˈixo/
+		picior /piʧˈor/ - pie /pjˈe/
+	Removed: 1
+		opt /ˈopt/ - ocho /ˈoʧo/
+
+Iteration 5
+	Qualified: 173
+	Disqualified: 215
+	Added: 2
+		opt /ˈopt/ - ocho /ˈoʧo/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+	Removed: 2
+		fiu /fˈiw/ - hijo /ˈixo/
+		ou /ˈow/ - huevo /wˈeβo/
+
+Iteration 6
+	Qualified: 177
+	Disqualified: 211
+	Added: 5
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		fiu /fˈiw/ - hijo /ˈixo/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		aur /ˈaur/ - oro /ˈoɾo/
+		ou /ˈow/ - huevo /wˈeβo/
+	Removed: 1
+		opt /ˈopt/ - ocho /ˈoʧo/
+
+Iteration 7
+	Qualified: 177
+	Disqualified: 211
+	Added: 1
+		opt /ˈopt/ - ocho /ˈoʧo/
+	Removed: 1
+		fiu /fˈiw/ - hijo /ˈixo/
+
+Iteration 8
+	Qualified: 177
+	Disqualified: 211
+	Added: 2
+		fiu /fˈiw/ - hijo /ˈixo/
+		nor /nˈor/ - nube /nˈuβe/
+	Removed: 2
+		aur /ˈaur/ - oro /ˈoɾo/
+		opt /ˈopt/ - ocho /ˈoʧo/
+
+Iteration 9
+	Qualified: 178
+	Disqualified: 210
+	Added: 2
+		aur /ˈaur/ - oro /ˈoɾo/
+		opt /ˈopt/ - ocho /ˈoʧo/
+	Removed: 1
+		fiu /fˈiw/ - hijo /ˈixo/
+
+Iteration 10
+	Qualified: 178
+	Disqualified: 210
+	Added: 1
+		fiu /fˈiw/ - hijo /ˈixo/
+	Removed: 1
+		opt /ˈopt/ - ocho /ˈoʧo/
+
+Final qualifying:
+		aflare /aflˈare/ - hallar /aʝˈaɾ/
+		albină /albˈinə/ - abeja /aβˈexa/
+		arină /arˈinə/ - arena /aɾˈena/
+		ascultare /askultˈare/ - escuchar /eskuʧˈaɾ/
+		ajutare /aʒutˈare/ - ayudar /aʝuðˈaɾ/
+		ajut /aʒˈut/ - ayudo /aʝˈuðo/
+		buric /burˈik/ - ombliɡo /omblˈiɣo/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bine /bˈine/ - bien /bjˈen/
+		bou /bˈow/ - buey /bwˈej/
+		bun /bˈun/ - bueno /bwˈeno/
+		bune /bˈune/ - buenas /bwˈenas/
+		bună /bˈunə/ - buena /bwˈena/
+		buni /bˈunʲ/ - buenos /bwˈenos/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		drac /drˈak/ - draɡón /dɾaɣˈon/
+		dare /dˈare/ - dar /dˈaɾ/
+		deɡet /dˈeʤet/ - dedo /dˈeðo/
+		dinte /dˈinte/ - diente /djˈente/
+		doi /dˈoj/ - dos /dˈos/
+		ficat /fikˈat/ - híɡado /ˈiɣaðo/
+		fier /fjˈer/ - hierro /jˈero/
+		foaie /fo̯ˈaje/ - hoja /ˈoxa/
+		frumoasă /frumo̯ˈasə/ - hermoso /eɾmˈoso/
+		frumos /frumˈos/ - hermoso /eɾmˈoso/
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		fac /fˈak/ - haɡo /ˈaɣo/
+		facere /fˈaʧere/ - hacer /aθˈeɾ/
+		fine /fˈine/ - fin /fˈin/
+		fir /fˈir/ - hilo /ˈilo/
+		fiu /fˈiw/ - hijo /ˈixo/
+		foc /fˈok/ - fueɡo /fwˈeɣo/
+		fum /fˈum/ - humo /ˈumo/
+		făină /fˈəjnə/ - harina /aɾˈina/
+		ea /je̯ˈa/ - ella /ˈeʝa/
+		iarbă /jˈarbə/ - hierba /jˈeɾβa/
+		iarnă /jˈarnə/ - invierno /imbjˈeɾno/
+		el /jˈel/ - él /ˈel/
+		iepure /jˈepure/ - liebre /ljˈeβɾe/
+		chemare /kemˈare/ - llamar /ɟ͡ʝamˈaɾ/
+		cruce /krˈuʧe/ - cruz /kɾˈuθ/
+		cunoaștere /kuno̯ˈaʃtere/ - conocer /konoθˈeɾ/
+		cătină /kətˈinə/ - cadena /kaðˈena/
+		căutare /kəwtˈare/ - cazar /kaθˈaɾ/
+		cal /kˈal/ - caballo /kaβˈaʝo/
+		cald /kˈald/ - caldo /kˈaldo/
+		cap /kˈap/ - cabo /kˈaβo/
+		capră /kˈaprə/ - cabra /kˈaβɾa/
+		casă /kˈasə/ - casa /kˈasa/
+		cheie /kˈeje/ - llave /ɟ͡ʝˈaβe/
+		corn /kˈorn/ - cuerno /kwˈeɾno/
+		câine /kˈɨjne/ - can /kˈan/
+		cânt /kˈɨnt/ - canto /kˈanto/
+		luare /luˈare/ - llevar /ɟ͡ʝeβˈaɾ/
+		lac /lˈak/ - laɡo /lˈaɣo/
+		lacrimă /lˈakrimə/ - láɡrima /lˈaɣɾima/
+		limbă /lˈimbə/ - lenɡua /lˈeŋɡwa/
+		loc /lˈok/ - lueɡo /lwˈeɣo/
+		lună /lˈunə/ - luna /lˈuna/
+		lup /lˈup/ - lobo /lˈoβo/
+		luptă /lˈuptə/ - lucha /lˈuʧa/
+		lână /lˈɨnə/ - lana /lˈana/
+		moarte /mo̯ˈarte/ - muerte /mwˈeɾte/
+		murire /murˈire/ - morir /moɾˈiɾ/
+		mare /mˈare/ - mar /mˈaɾ/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+		mie /mˈie/ - mil /mˈil/
+		mică /mˈikə/ - miɡa /mˈiɣa/
+		mult /mˈult/ - mucho /mˈuʧo/
+		muscă /mˈuskə/ - mosca /mˈoska/
+		mă /mˈə/ - me /mˈe/
+		nea /ne̯ˈa/ - nieve /njˈeβe/
+		niciun /niʧʲˈun/ - ninɡuno /niŋɡˈuno/
+		nu /nu/ - no /no/
+		neɡru /nˈeɡru/ - neɡro /nˈeɣɾo/
+		nor /nˈor/ - nube /nˈuβe/
+		nou /nˈow/ - nuevo /nwˈeβo/
+		nouă /nˈowə/ - nueve /nwˈeβe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		nume /nˈume/ - nombre /nˈombɾe/
+		odoare /odo̯ˈare/ - olor /olˈoɾ/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		picior /piʧˈor/ - pie /pjˈe/
+		piatră /pjˈatrə/ - piedra /pjˈeðɾa/
+		piele /pjˈele/ - piel /pjˈel/
+		piept /pjˈept/ - pecho /pˈeʧo/
+		piersică /pjˈersikə/ - prisco /pɾˈisko/
+		ploaie /plo̯ˈaje/ - lluvia /ɟ͡ʝˈuβja/
+		plaɡă /plˈaɡə/ - llaɡa /ɟ͡ʝˈaɣa/
+		plin /plˈin/ - lleno /ɟ͡ʝˈeno/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		poarcă /po̯ˈarkə/ - puerca /pwˈeɾka/
+		păduche /pədˈuke/ - piojo /pjˈoxo/
+		pântece /pɨntˈeʧe/ - panza /pˈanθa/
+		pană /pˈanə/ - peña /pˈeɲa/
+		patru /pˈatru/ - cuatro /kwˈatɾo/
+		pace /pˈaʧe/ - paz /pˈaθ/
+		pește /pˈeʃte/ - pez /pˈeθ/
+		porc /pˈork/ - puerco /pwˈeɾko/
+		pui /pˈuj/ - pones /pˈones/
+		pumn /pˈumn/ - puño /pˈuɲo/
+		punte /pˈunte/ - puente /pwˈente/
+		puț /pˈuʦ/ - pozo /pˈoθo/
+		păr /pˈər/ - pelo /pˈelo/
+		rațiune /raʦjˈune/ - razón /raθˈon/
+		rădăcină /rədəʧˈinə/ - raíz /raˈiθ/
+		roib /rˈojb/ - rojo /rˈoxo/
+		râie /rˈɨje/ - araña /aɾˈaɲa/
+		seacă /se̯ˈakə/ - seca /sˈeka/
+		scoarţă /sko̯ˈarʦə/ - corteza /koɾtˈeθa/
+		soare /so̯ˈare/ - sol /sˈol/
+		Spania /spˈanja/ - España /espˈaɲa/
+		spată /spˈatə/ - espada /espˈaða/
+		spic /spˈik/ - espiɡa /espˈiɣa/
+		stea /ste̯ˈa/ - estrella /estɾˈeʝa/
+		stat /stˈat/ - estado /estˈaðo/
+		sămânţă /səmˈɨnʦə/ - semilla /semˈiʝa/
+		supra /sˈupra/ - sobre /sˈoβɾe/
+		sânɡe /sˈɨnʤe/ - sanɡre /sˈaŋɡɾe/
+		trei /trˈej/ - tres /tɾˈes/
+		tată /tˈatə/ - padre /pˈaðɾe/
+		taur /tˈaur/ - toro /tˈoɾo/
+		tu /tˈu/ - tú /tˈu/
+		ureche /urˈeke/ - oreja /oɾˈexa/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		venire /venˈire/ - venir /benˈiɾ/
+		vacă /vˈakə/ - vaca /bˈaka/
+		verde /vˈerde/ - verde /bˈeɾðe/
+		vin /vˈin/ - venɡo /bˈeŋɡo/
+		vin /vˈin/ - vino /bˈino/
+		vită /vˈitə/ - vida /bˈiða/
+		vânt /vˈɨnt/ - viento /bjˈento/
+		zburare /zburˈare/ - volar /bolˈaɾ/
+		zbor /zbˈor/ - vuelo /bwˈelo/
+		zeu /zˈew/ - dios /djˈos/
+		zece /zˈeʧe/ - diez /djˈeθ/
+		zi /zˈi/ - día /dˈia/
+		zicere /zˈiʧere/ - decir /deθˈiɾ/
+		ɡrăsime /ɡrəsˈime/ - ɡrasa /ɡɾˈasa/
+		ɡros /ɡrˈos/ - ɡrueso /ɡɾwˈeso/
+		ɡrâu /ɡrˈɨw/ - ɡrano /ɡɾˈano/
+		ɡută /ɡˈutə/ - ɡota /ɡˈota/
+		înotare /ɨnotˈare/ - nadar /naðˈaɾ/
+		înɡhețare /ɨŋɡeʦˈare/ - helar /elˈaɾ/
+		ședere /ʃedˈere/ - sentar /sentˈaɾ/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		știre /ʃtˈire/ - saber /saβˈeɾ/
+		șapte /ʃˈapte/ - siete /sjˈete/
+		șase /ʃˈase/ - seis /sˈejs/
+		joc /ʒˈok/ - jueɡo /xwˈeɣo/
+		jude /ʒˈude/ - juez /xwˈeθ/
+		june /ʒˈune/ - joven /xˈoβen/
+		ɡinɡie /ʤinʤˈie/ - encía /enθˈia/
+		ɡinere /ʤˈinere/ - yerno /ɟ͡ʝˈeɾno/
+		ɡintă /ʤˈintə/ - ɡente /xˈente/
+		țară /ʦˈarə/ - tierra /tjˈera/
+		cenușă /ʧenˈuʃə/ - ceniza /θenˈiθa/
+		cetate /ʧetˈate/ - ciudad /θjuðˈað/
+		ceară /ʧe̯ˈarə/ - cera /θˈeɾa/
+		cincizeci /ʧinʧʲzˈeʧʲ/ - cincuenta /θiŋkwˈenta/
+		cireașă /ʧire̯ˈaʃə/ - cereza /θeɾˈeθa/
+		ce /ʧˈe/ - que /kˈe/
+		cer /ʧˈer/ - cielo /θjˈelo/
+		cine /ʧˈine/ - quien /kjˈen/
+		ciumă /ʧˈumə/ - cima /θˈima/
+		ai /ˈaj/ - ajo /ˈaxo/
+		alba /ˈalba/ - alba /ˈalβa/
+		an /ˈan/ - año /ˈaɲo/
+		arbore /ˈarbore/ - árbol /ˈaɾβol/
+		aur /ˈaur/ - oro /ˈoɾo/
+		inimă /ˈinimə/ - alma /ˈalma/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		om /ˈom/ - hombre /ˈombɾe/
+		os /ˈos/ - hueso /wˈeso/
+		ou /ˈow/ - huevo /wˈeβo/
+		umăr /ˈumər/ - hombro /ˈombɾo/
+		unu /ˈunu/ - uno /ˈuno/
+		urs /ˈurs/ - oso /ˈoso/
+
+Final disqualified:
+		arină /arˈinə/ - sable /sˈaβle/
+		bărbat /bərbˈat/ - hombre /ˈombɾe/
+		frate /frˈate/ - hermano /eɾmˈano/
+		inel /inˈel/ - anillo /anˈiʝo/
+		eu /jˈew/ - yo /ɟ͡ʝˈo/
+		lumină /lumˈinə/ - luz /lˈuθ/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		păr /pˈər/ - cabello /kaβˈeʝo/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		sută /sˈutə/ - ciento /θjˈento/
+		vară /vˈarə/ - estío /estˈio/
+		ac /ˈak/ - aɡuja /aɣˈuxa/
+		alb /ˈalb/ - blanco /blˈaŋko/
+		alt /ˈalt/ - otro /ˈotɾo/
+		opt /ˈopt/ - ocho /ˈoʧo/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 171
+	Disqualified: 217
+	Added: 0
+	Removed: 23
+		alt /ˈalt/ - otro /ˈotɾo/
+		ɡalben /ɡˈalben/ - amarillo /amaɾˈiʝo/
+		foame /fo̯ˈame/ - hambre /ˈambɾe/
+		ucidere /uʧˈidere/ - matar /matˈaɾ/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		sută /sˈutə/ - ciento /θjˈento/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		frate /frˈate/ - hermano /eɾmˈano/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		lumină /lumˈinə/ - luz /lˈuθ/
+		picior /piʧˈor/ - pie /pjˈe/
+		ac /ˈak/ - aɡuja /aɣˈuxa/
+		fie /fˈie/ - hija /ˈixa/
+		păr /pˈər/ - cabello /kaβˈeʝo/
+		douăzeci /dowəzˈeʧʲ/ - veinte /bˈejnte/
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		fiu /fˈiw/ - hijo /ˈixo/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		aur /ˈaur/ - oro /ˈoɾo/
+		arină /arˈinə/ - sable /sˈaβle/
+		nucă /nˈukə/ - nuez /nwˈeθ/
+		alb /ˈalb/ - blanco /blˈaŋko/
+
+Iteration 2
+	Qualified: 172
+	Disqualified: 216
+	Added: 3
+		fiu /fˈiw/ - hijo /ˈixo/
+		fie /fˈie/ - hija /ˈixa/
+		foame /fo̯ˈame/ - hambre /ˈambɾe/
+	Removed: 2
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+
+Iteration 3
+	Qualified: 174
+	Disqualified: 214
+	Added: 2
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+	Removed: 0
+
+Iteration 4
+	Qualified: 174
+	Disqualified: 214
+	Added: 1
+		aur /ˈaur/ - oro /ˈoɾo/
+	Removed: 1
+		nuc /nˈuk/ - nuez /nwˈeθ/
+
+Iteration 5
+	Qualified: 172
+	Disqualified: 216
+	Added: 1
+		picior /piʧˈor/ - pie /pjˈe/
+	Removed: 3
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		ou /ˈow/ - huevo /wˈeβo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+
+Iteration 6
+	Qualified: 175
+	Disqualified: 213
+	Added: 4
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		ou /ˈow/ - huevo /wˈeβo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 1
+		aur /ˈaur/ - oro /ˈoɾo/
+
+Iteration 7
+	Qualified: 179
+	Disqualified: 209
+	Added: 4
+		aur /ˈaur/ - oro /ˈoɾo/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		nucă /nˈukə/ - nuez /nwˈeθ/
+	Removed: 0
+
+Iteration 8
+	Qualified: 178
+	Disqualified: 210
+	Added: 0
+	Removed: 1
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+
+Iteration 9
+	Qualified: 179
+	Disqualified: 209
+	Added: 1
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+	Removed: 0
+
+Final qualifying:
+		albină /albˈinə/ - abeja /aβˈexa/
+		arină /arˈinə/ - arena /aɾˈena/
+		ascultare /askultˈare/ - escuchar /eskuʧˈaɾ/
+		ajutare /aʒutˈare/ - ayudar /aʝuðˈaɾ/
+		buric /burˈik/ - ombliɡo /omblˈiɣo/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bine /bˈine/ - bien /bjˈen/
+		bou /bˈow/ - buey /bwˈej/
+		bune /bˈune/ - buenas /bwˈenas/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		drac /drˈak/ - draɡón /dɾaɣˈon/
+		dare /dˈare/ - dar /dˈaɾ/
+		dinte /dˈinte/ - diente /djˈente/
+		doi /dˈoj/ - dos /dˈos/
+		dulce /dˈulʧe/ - dulce /dˈulθe/
+		dă /dˈə/ - dona /dˈona/
+		ficat /fikˈat/ - híɡado /ˈiɣaðo/
+		foame /fo̯ˈame/ - hambre /ˈambɾe/
+		foarte /fo̯ˈarte/ - fuerte /fwˈeɾte/
+		frumoasă /frumo̯ˈasə/ - hermoso /eɾmˈoso/
+		frumos /frumˈos/ - hermoso /eɾmˈoso/
+		frunză /frˈunzə/ - hoja /ˈoxa/
+		fac /fˈak/ - haɡo /ˈaɣo/
+		fie /fˈie/ - hija /ˈixa/
+		fine /fˈine/ - fin /fˈin/
+		fiu /fˈiw/ - hijo /ˈixo/
+		foc /fˈok/ - fueɡo /fwˈeɣo/
+		fum /fˈum/ - humo /ˈumo/
+		făină /fˈəjnə/ - harina /aɾˈina/
+		ea /je̯ˈa/ - ella /ˈeʝa/
+		iarbă /jˈarbə/ - hierba /jˈeɾβa/
+		iarnă /jˈarnə/ - invierno /imbjˈeɾno/
+		el /jˈel/ - él /ˈel/
+		iepure /jˈepure/ - liebre /ljˈeβɾe/
+		credere /kredˈere/ - creer /kɾeˈeɾ/
+		cruce /krˈuʧe/ - cruz /kɾˈuθ/
+		cunoaștere /kuno̯ˈaʃtere/ - conocer /konoθˈeɾ/
+		cătină /kətˈinə/ - cadena /kaðˈena/
+		căutare /kəwtˈare/ - cazar /kaθˈaɾ/
+		cal /kˈal/ - caballo /kaβˈaʝo/
+		cald /kˈald/ - caldo /kˈaldo/
+		cap /kˈap/ - cabo /kˈaβo/
+		capră /kˈaprə/ - cabra /kˈaβɾa/
+		casă /kˈasə/ - casa /kˈasa/
+		corn /kˈorn/ - cuerno /kwˈeɾno/
+		câine /kˈɨjne/ - can /kˈan/
+		cânt /kˈɨnt/ - canto /kˈanto/
+		lac /lˈak/ - laɡo /lˈaɣo/
+		lacrimă /lˈakrimə/ - láɡrima /lˈaɣɾima/
+		lapte /lˈapte/ - leche /lˈeʧe/
+		leɡe /lˈeʤe/ - ley /lˈej/
+		limbă /lˈimbə/ - lenɡua /lˈeŋɡwa/
+		literă /lˈiterə/ - letra /lˈetɾa/
+		loc /lˈok/ - lueɡo /lwˈeɣo/
+		lună /lˈunə/ - luna /lˈuna/
+		lup /lˈup/ - lobo /lˈoβo/
+		luptă /lˈuptə/ - lucha /lˈuʧa/
+		lână /lˈɨnə/ - lana /lˈana/
+		miere /mjˈere/ - miel /mjˈel/
+		moarte /mo̯ˈarte/ - muerte /mwˈeɾte/
+		murire /murˈire/ - morir /moɾˈiɾ/
+		mușcare /muʃkˈare/ - morder /moɾðˈeɾ/
+		mare /mˈare/ - mar /mˈaɾ/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+		mie /mˈie/ - mil /mˈil/
+		mult /mˈult/ - mucho /mˈuʧo/
+		muscă /mˈuskə/ - mosca /mˈoska/
+		mă /mˈə/ - me /mˈe/
+		nea /ne̯ˈa/ - nieve /njˈeβe/
+		noapte /no̯ˈapte/ - noche /nˈoʧe/
+		nu /nu/ - no /no/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+		noj /nˈoj/ - nosotros /nosˈotɾos/
+		nou /nˈow/ - nuevo /nwˈeβo/
+		nouă /nˈowə/ - nueve /nwˈeβe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		nucă /nˈukə/ - nuez /nwˈeθ/
+		nume /nˈume/ - nombre /nˈombɾe/
+		odoare /odo̯ˈare/ - olor /olˈoɾ/
+		picior /piʧˈor/ - pie /pjˈe/
+		piatră /pjˈatrə/ - piedra /pjˈeðɾa/
+		piele /pjˈele/ - piel /pjˈel/
+		piept /pjˈept/ - pecho /pˈeʧo/
+		piersică /pjˈersikə/ - prisco /pɾˈisko/
+		ploaie /plo̯ˈaje/ - lluvia /ɟ͡ʝˈuβja/
+		plaɡă /plˈaɡə/ - llaɡa /ɟ͡ʝˈaɣa/
+		plin /plˈin/ - lleno /ɟ͡ʝˈeno/
+		poarcă /po̯ˈarkə/ - puerca /pwˈeɾka/
+		putere /putˈere/ - poder /poðˈeɾ/
+		pântece /pɨntˈeʧe/ - vientre /bjˈentɾe/
+		pântece /pɨntˈeʧe/ - panza /pˈanθa/
+		pană /pˈanə/ - peña /pˈeɲa/
+		pasăre /pˈasəre/ - pájaro /pˈaxaɾo/
+		patru /pˈatru/ - cuatro /kwˈatɾo/
+		pace /pˈaʧe/ - paz /pˈaθ/
+		pește /pˈeʃte/ - pez /pˈeθ/
+		pui /pˈuj/ - pones /pˈones/
+		pumn /pˈumn/ - puño /pˈuɲo/
+		punere /pˈunere/ - poner /ponˈeɾ/
+		puț /pˈuʦ/ - pozo /pˈoθo/
+		păr /pˈər/ - pelo /pˈelo/
+		pâine /pˈɨjne/ - pan /pˈan/
+		rațiune /raʦjˈune/ - razón /raθˈon/
+		rumân /rumˈɨn/ - romano /romˈano/
+		rădăcină /rədəʧˈinə/ - raíz /raˈiθ/
+		roib /rˈojb/ - rojo /rˈoxo/
+		roib /rˈojb/ - rubio /rˈuβjo/
+		râie /rˈɨje/ - araña /aɾˈaɲa/
+		râu /rˈɨw/ - río /rˈio/
+		seacă /se̯ˈakə/ - seca /sˈeka/
+		scoarţă /sko̯ˈarʦə/ - corteza /koɾtˈeθa/
+		scriere /skrˈiere/ - escribir /eskɾiβˈiɾ/
+		soare /so̯ˈare/ - sol /sˈol/
+		Spania /spˈanja/ - España /espˈaɲa/
+		spic /spˈik/ - espiɡa /espˈiɣa/
+		stea /ste̯ˈa/ - estrella /estɾˈeʝa/
+		stat /stˈat/ - estado /estˈaðo/
+		sămânţă /səmˈɨnʦə/ - semilla /semˈiʝa/
+		săptămână /səptəmˈɨnə/ - semana /semˈana/
+		sec /sˈek/ - seco /sˈeko/
+		sânɡe /sˈɨnʤe/ - sanɡre /sˈaŋɡɾe/
+		trei /trˈej/ - tres /tɾˈes/
+		tată /tˈatə/ - padre /pˈaðɾe/
+		taur /tˈaur/ - toro /tˈoɾo/
+		timp /tˈimp/ - tiempo /tjˈempo/
+		tot /tˈot/ - todo /tˈoðo/
+		toți /tˈoʦʲ/ - todos /tˈoðos/
+		tu /tˈu/ - tú /tˈu/
+		ureche /urˈeke/ - oreja /oɾˈexa/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		venire /venˈire/ - venir /benˈiɾ/
+		vacă /vˈakə/ - vaca /bˈaka/
+		vechi /vˈekʲ/ - viejo /bjˈexo/
+		verde /vˈerde/ - verde /bˈeɾðe/
+		vin /vˈin/ - venɡo /bˈeŋɡo/
+		vită /vˈitə/ - vida /bˈiða/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		zburare /zburˈare/ - volar /bolˈaɾ/
+		zece /zˈeʧe/ - diez /djˈeθ/
+		zic /zˈik/ - diɡo /dˈiɣo/
+		zicere /zˈiʧere/ - decir /deθˈiɾ/
+		ɡrăsime /ɡrəsˈime/ - ɡrasa /ɡɾˈasa/
+		ɡros /ɡrˈos/ - ɡrueso /ɡɾwˈeso/
+		ɡrâu /ɡrˈɨw/ - ɡrano /ɡɾˈano/
+		ɡură /ɡurˈə/ - ɡola /ɡˈola/
+		ɡută /ɡˈutə/ - ɡota /ɡˈota/
+		înotare /ɨnotˈare/ - nadar /naðˈaɾ/
+		înɡhețare /ɨŋɡeʦˈare/ - helar /elˈaɾ/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		șapte /ʃˈapte/ - siete /sjˈete/
+		șase /ʃˈase/ - seis /sˈejs/
+		joc /ʒˈok/ - jueɡo /xwˈeɣo/
+		june /ʒˈune/ - joven /xˈoβen/
+		ɡinɡie /ʤinʤˈie/ - encía /enθˈia/
+		ɡintă /ʤˈintə/ - ɡente /xˈente/
+		țară /ʦˈarə/ - tierra /tjˈera/
+		cenușă /ʧenˈuʃə/ - ceniza /θenˈiθa/
+		cetate /ʧetˈate/ - ciudad /θjuðˈað/
+		ceară /ʧe̯ˈarə/ - cera /θˈeɾa/
+		cincizeci /ʧinʧʲzˈeʧʲ/ - cincuenta /θiŋkwˈenta/
+		cireașă /ʧire̯ˈaʃə/ - cereza /θeɾˈeθa/
+		ce /ʧˈe/ - que /kˈe/
+		cer /ʧˈer/ - cielo /θjˈelo/
+		cine /ʧˈine/ - quien /kjˈen/
+		ai /ˈaj/ - ajo /ˈaxo/
+		alba /ˈalba/ - alba /ˈalβa/
+		an /ˈan/ - año /ˈaɲo/
+		apă /ˈapə/ - aɡua /ˈaɣwa/
+		arbore /ˈarbore/ - árbol /ˈaɾβol/
+		aur /ˈaur/ - oro /ˈoɾo/
+		inimă /ˈinimə/ - alma /ˈalma/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		om /ˈom/ - hombre /ˈombɾe/
+		os /ˈos/ - hueso /wˈeso/
+		ou /ˈow/ - huevo /wˈeβo/
+		umăr /ˈumər/ - hombro /ˈombɾo/
+		urs /ˈurs/ - oso /ˈoso/
+		unɡhie /ˈuŋɡje/ - uña /ˈuɲa/
+
+Final disqualified:
+		arină /arˈinə/ - sable /sˈaβle/
+		douăzeci /dowəzˈeʧʲ/ - veinte /bˈejnte/
+		frate /frˈate/ - hermano /eɾmˈano/
+		lumină /lumˈinə/ - luz /lˈuθ/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		păr /pˈər/ - cabello /kaβˈeʝo/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		sută /sˈutə/ - ciento /θjˈento/
+		ucidere /uʧˈidere/ - matar /matˈaɾ/
+		ɡalben /ɡˈalben/ - amarillo /amaɾˈiʝo/
+		ac /ˈak/ - aɡuja /aɣˈuxa/
+		alb /ˈalb/ - blanco /blˈaŋko/
+		alt /ˈalt/ - otro /ˈotɾo/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 172
+	Disqualified: 216
+	Added: 0
+	Removed: 22
+		alt /ˈalt/ - otro /ˈotɾo/
+		eu /jˈew/ - yo /ɟ͡ʝˈo/
+		piept /pjˈept/ - pecho /pˈeʧo/
+		ɡalben /ɡˈalben/ - amarillo /amaɾˈiʝo/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		sută /sˈutə/ - ciento /θjˈento/
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		jude /ʒˈude/ - juez /xwˈeθ/
+		picior /piʧˈor/ - pie /pjˈe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		ac /ˈak/ - aɡuja /aɣˈuxa/
+		păr /pˈər/ - cabello /kaβˈeʝo/
+		douăzeci /dowəzˈeʧʲ/ - veinte /bˈejnte/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		alb /ˈalb/ - blanco /blˈaŋko/
+		cheie /kˈeje/ - llave /ɟ͡ʝˈaβe/
+		fir /fˈir/ - hilo /ˈilo/
+
+Iteration 2
+	Qualified: 173
+	Disqualified: 215
+	Added: 4
+		jude /ʒˈude/ - juez /xwˈeθ/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		fir /fˈir/ - hilo /ˈilo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 3
+		nor /nˈor/ - nube /nˈuβe/
+		aur /ˈaur/ - oro /ˈoɾo/
+		foaie /fo̯ˈaje/ - hoja /ˈoxa/
+
+Iteration 3
+	Qualified: 173
+	Disqualified: 215
+	Added: 3
+		aur /ˈaur/ - oro /ˈoɾo/
+		piept /pjˈept/ - pecho /pˈeʧo/
+		foaie /fo̯ˈaje/ - hoja /ˈoxa/
+	Removed: 3
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		fir /fˈir/ - hilo /ˈilo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+
+Iteration 4
+	Qualified: 177
+	Disqualified: 211
+	Added: 4
+		nor /nˈor/ - nube /nˈuβe/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		fir /fˈir/ - hilo /ˈilo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 0
+
+Iteration 5
+	Qualified: 174
+	Disqualified: 214
+	Added: 1
+		picior /piʧˈor/ - pie /pjˈe/
+	Removed: 4
+		nor /nˈor/ - nube /nˈuβe/
+		aur /ˈaur/ - oro /ˈoɾo/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		fir /fˈir/ - hilo /ˈilo/
+
+Iteration 6
+	Qualified: 177
+	Disqualified: 211
+	Added: 3
+		aur /ˈaur/ - oro /ˈoɾo/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		fir /fˈir/ - hilo /ˈilo/
+	Removed: 0
+
+Iteration 7
+	Qualified: 178
+	Disqualified: 210
+	Added: 3
+		nor /nˈor/ - nube /nˈuβe/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		cheie /kˈeje/ - llave /ɟ͡ʝˈaβe/
+	Removed: 2
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		fir /fˈir/ - hilo /ˈilo/
+
+Iteration 8
+	Qualified: 179
+	Disqualified: 209
+	Added: 2
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		fir /fˈir/ - hilo /ˈilo/
+	Removed: 1
+		nor /nˈor/ - nube /nˈuβe/
+
+Iteration 9
+	Qualified: 180
+	Disqualified: 208
+	Added: 2
+		nor /nˈor/ - nube /nˈuβe/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+	Removed: 1
+		fir /fˈir/ - hilo /ˈilo/
+
+Iteration 10
+	Qualified: 180
+	Disqualified: 208
+	Added: 1
+		fir /fˈir/ - hilo /ˈilo/
+	Removed: 1
+		nor /nˈor/ - nube /nˈuβe/
+
+Final qualifying:
+		albină /albˈinə/ - abeja /aβˈexa/
+		arină /arˈinə/ - arena /aɾˈena/
+		ascultare /askultˈare/ - escuchar /eskuʧˈaɾ/
+		ajutare /aʒutˈare/ - ayudar /aʝuðˈaɾ/
+		ajut /aʒˈut/ - ayudo /aʝˈuðo/
+		buric /burˈik/ - ombliɡo /omblˈiɣo/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bine /bˈine/ - bien /bjˈen/
+		bou /bˈow/ - buey /bwˈej/
+		bun /bˈun/ - bueno /bwˈeno/
+		bune /bˈune/ - buenas /bwˈenas/
+		bună /bˈunə/ - buena /bwˈena/
+		buni /bˈunʲ/ - buenos /bwˈenos/
+		drac /drˈak/ - draɡón /dɾaɣˈon/
+		dare /dˈare/ - dar /dˈaɾ/
+		deɡet /dˈeʤet/ - dedo /dˈeðo/
+		dinte /dˈinte/ - diente /djˈente/
+		doi /dˈoj/ - dos /dˈos/
+		dulce /dˈulʧe/ - dulce /dˈulθe/
+		dă /dˈə/ - dona /dˈona/
+		ficat /fikˈat/ - híɡado /ˈiɣaðo/
+		fier /fjˈer/ - hierro /jˈero/
+		foaie /fo̯ˈaje/ - hoja /ˈoxa/
+		foarte /fo̯ˈarte/ - fuerte /fwˈeɾte/
+		frumoasă /frumo̯ˈasə/ - hermoso /eɾmˈoso/
+		frumos /frumˈos/ - hermoso /eɾmˈoso/
+		fie /fˈie/ - hija /ˈixa/
+		fir /fˈir/ - hilo /ˈilo/
+		foc /fˈok/ - fueɡo /fwˈeɣo/
+		fum /fˈum/ - humo /ˈumo/
+		inel /inˈel/ - anillo /anˈiʝo/
+		ea /je̯ˈa/ - ella /ˈeʝa/
+		iarbă /jˈarbə/ - hierba /jˈeɾβa/
+		iarnă /jˈarnə/ - invierno /imbjˈeɾno/
+		el /jˈel/ - él /ˈel/
+		iepure /jˈepure/ - liebre /ljˈeβɾe/
+		chemare /kemˈare/ - llamar /ɟ͡ʝamˈaɾ/
+		credere /kredˈere/ - creer /kɾeˈeɾ/
+		cruce /krˈuʧe/ - cruz /kɾˈuθ/
+		cunoaștere /kuno̯ˈaʃtere/ - conocer /konoθˈeɾ/
+		căutare /kəwtˈare/ - cazar /kaθˈaɾ/
+		cald /kˈald/ - caldo /kˈaldo/
+		cap /kˈap/ - cabo /kˈaβo/
+		capră /kˈaprə/ - cabra /kˈaβɾa/
+		carne /kˈarne/ - carne /kˈaɾne/
+		casă /kˈasə/ - casa /kˈasa/
+		cheie /kˈeje/ - llave /ɟ͡ʝˈaβe/
+		cur /kˈur/ - culo /kˈulo/
+		câine /kˈɨjne/ - can /kˈan/
+		cânt /kˈɨnt/ - canto /kˈanto/
+		luare /luˈare/ - llevar /ɟ͡ʝeβˈaɾ/
+		lac /lˈak/ - laɡo /lˈaɣo/
+		lacrimă /lˈakrimə/ - láɡrima /lˈaɣɾima/
+		lemn /lˈemn/ - leño /lˈeɲo/
+		leɡe /lˈeʤe/ - ley /lˈej/
+		limbă /lˈimbə/ - lenɡua /lˈeŋɡwa/
+		literă /lˈiterə/ - letra /lˈetɾa/
+		loc /lˈok/ - lueɡo /lwˈeɣo/
+		lună /lˈunə/ - luna /lˈuna/
+		lup /lˈup/ - lobo /lˈoβo/
+		miere /mjˈere/ - miel /mjˈel/
+		moarte /mo̯ˈarte/ - muerte /mwˈeɾte/
+		murire /murˈire/ - morir /moɾˈiɾ/
+		mare /mˈare/ - mar /mˈaɾ/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+		mie /mˈie/ - mil /mˈil/
+		mult /mˈult/ - mucho /mˈuʧo/
+		muscă /mˈuskə/ - mosca /mˈoska/
+		mă /mˈə/ - me /mˈe/
+		nea /ne̯ˈa/ - nieve /njˈeβe/
+		niciun /niʧʲˈun/ - ninɡuno /niŋɡˈuno/
+		nu /nu/ - no /no/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+		neɡru /nˈeɡru/ - neɡro /nˈeɣɾo/
+		noj /nˈoj/ - nosotros /nosˈotɾos/
+		nostru /nˈostru/ - nuestro /nwˈestɾo/
+		nou /nˈow/ - nuevo /nwˈeβo/
+		nouă /nˈowə/ - nueve /nwˈeβe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		nume /nˈume/ - nombre /nˈombɾe/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		picior /piʧˈor/ - pie /pjˈe/
+		piatră /pjˈatrə/ - piedra /pjˈeðɾa/
+		piele /pjˈele/ - piel /pjˈel/
+		piept /pjˈept/ - pecho /pˈeʧo/
+		piersică /pjˈersikə/ - prisco /pɾˈisko/
+		plaɡă /plˈaɡə/ - llaɡa /ɟ͡ʝˈaɣa/
+		plin /plˈin/ - lleno /ɟ͡ʝˈeno/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		poarcă /po̯ˈarkə/ - puerca /pwˈeɾka/
+		putere /putˈere/ - poder /poðˈeɾ/
+		păduche /pədˈuke/ - piojo /pjˈoxo/
+		pântece /pɨntˈeʧe/ - vientre /bjˈentɾe/
+		pântece /pɨntˈeʧe/ - panza /pˈanθa/
+		pasăre /pˈasəre/ - pájaro /pˈaxaɾo/
+		patru /pˈatru/ - cuatro /kwˈatɾo/
+		pește /pˈeʃte/ - pez /pˈeθ/
+		porc /pˈork/ - puerco /pwˈeɾko/
+		pui /pˈuj/ - pones /pˈones/
+		pumn /pˈumn/ - puño /pˈuɲo/
+		punere /pˈunere/ - poner /ponˈeɾ/
+		păr /pˈər/ - pelo /pˈelo/
+		rumân /rumˈɨn/ - romano /romˈano/
+		roib /rˈojb/ - rojo /rˈoxo/
+		roib /rˈojb/ - rubio /rˈuβjo/
+		râie /rˈɨje/ - araña /aɾˈaɲa/
+		râu /rˈɨw/ - río /rˈio/
+		seacă /se̯ˈakə/ - seca /sˈeka/
+		scriere /skrˈiere/ - escribir /eskɾiβˈiɾ/
+		scurt /skˈurt/ - corto /kˈoɾto/
+		soare /so̯ˈare/ - sol /sˈol/
+		Spania /spˈanja/ - España /espˈaɲa/
+		spată /spˈatə/ - espada /espˈaða/
+		spic /spˈik/ - espiɡa /espˈiɣa/
+		stea /ste̯ˈa/ - estrella /estɾˈeʝa/
+		săptămână /səptəmˈɨnə/ - semana /semˈana/
+		sare /sˈare/ - sal /sˈal/
+		sec /sˈek/ - seco /sˈeko/
+		supra /sˈupra/ - sobre /sˈoβɾe/
+		sânɡe /sˈɨnʤe/ - sanɡre /sˈaŋɡɾe/
+		toamnă /to̯ˈamnə/ - otoño /otˈoɲo/
+		trei /trˈej/ - tres /tɾˈes/
+		tată /tˈatə/ - padre /pˈaðɾe/
+		taur /tˈaur/ - toro /tˈoɾo/
+		tot /tˈot/ - todo /tˈoðo/
+		toți /tˈoʦʲ/ - todos /tˈoðos/
+		tu /tˈu/ - tú /tˈu/
+		ureche /urˈeke/ - oreja /oɾˈexa/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		vecin /veʧˈin/ - vecino /beθˈino/
+		vacă /vˈakə/ - vaca /bˈaka/
+		verde /vˈerde/ - verde /bˈeɾðe/
+		vin /vˈin/ - venɡo /bˈeŋɡo/
+		vită /vˈitə/ - vida /bˈiða/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		vânt /vˈɨnt/ - viento /bjˈento/
+		zburare /zburˈare/ - volar /bolˈaɾ/
+		zbor /zbˈor/ - vuelo /bwˈelo/
+		zeu /zˈew/ - dios /djˈos/
+		zece /zˈeʧe/ - diez /djˈeθ/
+		zic /zˈik/ - diɡo /dˈiɣo/
+		zicere /zˈiʧere/ - decir /deθˈiɾ/
+		ɡrăsime /ɡrəsˈime/ - ɡrasa /ɡɾˈasa/
+		ɡros /ɡrˈos/ - ɡrueso /ɡɾwˈeso/
+		ɡrâu /ɡrˈɨw/ - ɡrano /ɡɾˈano/
+		ɡură /ɡurˈə/ - ɡola /ɡˈola/
+		înotare /ɨnotˈare/ - nadar /naðˈaɾ/
+		ședere /ʃedˈere/ - sentar /sentˈaɾ/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		știre /ʃtˈire/ - saber /saβˈeɾ/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		șapte /ʃˈapte/ - siete /sjˈete/
+		șase /ʃˈase/ - seis /sˈejs/
+		joc /ʒˈok/ - jueɡo /xwˈeɣo/
+		jude /ʒˈude/ - juez /xwˈeθ/
+		june /ʒˈune/ - joven /xˈoβen/
+		ɡinɡie /ʤinʤˈie/ - encía /enθˈia/
+		ɡinere /ʤˈinere/ - yerno /ɟ͡ʝˈeɾno/
+		ɡintă /ʤˈintə/ - ɡente /xˈente/
+		țară /ʦˈarə/ - tierra /tjˈera/
+		cenușă /ʧenˈuʃə/ - ceniza /θenˈiθa/
+		cetate /ʧetˈate/ - ciudad /θjuðˈað/
+		ceară /ʧe̯ˈarə/ - cera /θˈeɾa/
+		cincizeci /ʧinʧʲzˈeʧʲ/ - cincuenta /θiŋkwˈenta/
+		cireașă /ʧire̯ˈaʃə/ - cereza /θeɾˈeθa/
+		ce /ʧˈe/ - que /kˈe/
+		cine /ʧˈine/ - quien /kjˈen/
+		ciumă /ʧˈumə/ - cima /θˈima/
+		ai /ˈaj/ - ajo /ˈaxo/
+		alba /ˈalba/ - alba /ˈalβa/
+		an /ˈan/ - año /ˈaɲo/
+		apă /ˈapə/ - aɡua /ˈaɣwa/
+		arbore /ˈarbore/ - árbol /ˈaɾβol/
+		aur /ˈaur/ - oro /ˈoɾo/
+		os /ˈos/ - hueso /wˈeso/
+		ou /ˈow/ - huevo /wˈeβo/
+		umăr /ˈumər/ - hombro /ˈombɾo/
+		unu /ˈunu/ - uno /ˈuno/
+		urs /ˈurs/ - oso /ˈoso/
+		unɡhie /ˈuŋɡje/ - uña /ˈuɲa/
+
+Final disqualified:
+		douăzeci /dowəzˈeʧʲ/ - veinte /bˈejnte/
+		eu /jˈew/ - yo /ɟ͡ʝˈo/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		nor /nˈor/ - nube /nˈuβe/
+		păr /pˈər/ - cabello /kaβˈeʝo/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		sută /sˈutə/ - ciento /θjˈento/
+		ɡalben /ɡˈalben/ - amarillo /amaɾˈiʝo/
+		ac /ˈak/ - aɡuja /aɣˈuxa/
+		alb /ˈalb/ - blanco /blˈaŋko/
+		alt /ˈalt/ - otro /ˈotɾo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 168
+	Disqualified: 220
+	Added: 0
+	Removed: 26
+		vară /vˈarə/ - estío /estˈio/
+		alt /ˈalt/ - otro /ˈotɾo/
+		eu /jˈew/ - yo /ɟ͡ʝˈo/
+		ɡalben /ɡˈalben/ - amarillo /amaɾˈiʝo/
+		ucidere /uʧˈidere/ - matar /matˈaɾ/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		sută /sˈutə/ - ciento /θjˈento/
+		inimă /ˈinimə/ - alma /ˈalma/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		frate /frˈate/ - hermano /eɾmˈano/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		lumină /lumˈinə/ - luz /lˈuθ/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		ea /je̯ˈa/ - ella /ˈeʝa/
+		fie /fˈie/ - hija /ˈixa/
+		douăzeci /dowəzˈeʧʲ/ - veinte /bˈejnte/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		fiu /fˈiw/ - hijo /ˈixo/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		arină /arˈinə/ - sable /sˈaβle/
+		nucă /nˈukə/ - nuez /nwˈeθ/
+		alb /ˈalb/ - blanco /blˈaŋko/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+		fir /fˈir/ - hilo /ˈilo/
+
+Iteration 2
+	Qualified: 167
+	Disqualified: 221
+	Added: 5
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		inimă /ˈinimə/ - alma /ˈalma/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+		fir /fˈir/ - hilo /ˈilo/
+	Removed: 6
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		nor /nˈor/ - nube /nˈuβe/
+		opt /ˈopt/ - ocho /ˈoʧo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		piept /pjˈept/ - pecho /pˈeʧo/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+
+Iteration 3
+	Qualified: 165
+	Disqualified: 223
+	Added: 4
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		opt /ˈopt/ - ocho /ˈoʧo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		piept /pjˈept/ - pecho /pˈeʧo/
+	Removed: 6
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		inimă /ˈinimə/ - alma /ˈalma/
+		picior /piʧˈor/ - pie /pjˈe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+		fir /fˈir/ - hilo /ˈilo/
+
+Iteration 4
+	Qualified: 172
+	Disqualified: 216
+	Added: 8
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		inimă /ˈinimə/ - alma /ˈalma/
+		picior /piʧˈor/ - pie /pjˈe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		fiu /fˈiw/ - hijo /ˈixo/
+		fie /fˈie/ - hija /ˈixa/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+		fir /fˈir/ - hilo /ˈilo/
+	Removed: 1
+		opt /ˈopt/ - ocho /ˈoʧo/
+
+Iteration 5
+	Qualified: 168
+	Disqualified: 220
+	Added: 1
+		opt /ˈopt/ - ocho /ˈoʧo/
+	Removed: 5
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		fir /fˈir/ - hilo /ˈilo/
+
+Iteration 6
+	Qualified: 173
+	Disqualified: 215
+	Added: 6
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		fir /fˈir/ - hilo /ˈilo/
+	Removed: 1
+		opt /ˈopt/ - ocho /ˈoʧo/
+
+Iteration 7
+	Qualified: 173
+	Disqualified: 215
+	Added: 2
+		opt /ˈopt/ - ocho /ˈoʧo/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+	Removed: 2
+		fir /fˈir/ - hilo /ˈilo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+
+Iteration 8
+	Qualified: 171
+	Disqualified: 217
+	Added: 3
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		fir /fˈir/ - hilo /ˈilo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 5
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		opt /ˈopt/ - ocho /ˈoʧo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+
+Iteration 9
+	Qualified: 174
+	Disqualified: 214
+	Added: 5
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		opt /ˈopt/ - ocho /ˈoʧo/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+	Removed: 2
+		fir /fˈir/ - hilo /ˈilo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+
+Iteration 10
+	Qualified: 175
+	Disqualified: 213
+	Added: 3
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		fir /fˈir/ - hilo /ˈilo/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+	Removed: 2
+		opt /ˈopt/ - ocho /ˈoʧo/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+
+Final qualifying:
+		aflare /aflˈare/ - hallar /aʝˈaɾ/
+		albină /albˈinə/ - abeja /aβˈexa/
+		arină /arˈinə/ - arena /aɾˈena/
+		ascultare /askultˈare/ - escuchar /eskuʧˈaɾ/
+		ajutare /aʒutˈare/ - ayudar /aʝuðˈaɾ/
+		ajut /aʒˈut/ - ayudo /aʝˈuðo/
+		buric /burˈik/ - ombliɡo /omblˈiɣo/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bine /bˈine/ - bien /bjˈen/
+		bou /bˈow/ - buey /bwˈej/
+		bune /bˈune/ - buenas /bwˈenas/
+		bună /bˈunə/ - buena /bwˈena/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		doamnă /do̯ˈamnə/ - dueña /dwˈeɲa/
+		drac /drˈak/ - draɡón /dɾaɣˈon/
+		dare /dˈare/ - dar /dˈaɾ/
+		deɡet /dˈeʤet/ - dedo /dˈeðo/
+		dinte /dˈinte/ - diente /djˈente/
+		ficat /fikˈat/ - híɡado /ˈiɣaðo/
+		fier /fjˈer/ - hierro /jˈero/
+		foaie /fo̯ˈaje/ - hoja /ˈoxa/
+		foame /fo̯ˈame/ - hambre /ˈambɾe/
+		foarte /fo̯ˈarte/ - fuerte /fwˈeɾte/
+		frumoasă /frumo̯ˈasə/ - hermoso /eɾmˈoso/
+		frumos /frumˈos/ - hermoso /eɾmˈoso/
+		fac /fˈak/ - haɡo /ˈaɣo/
+		fie /fˈie/ - hija /ˈixa/
+		fir /fˈir/ - hilo /ˈilo/
+		fiu /fˈiw/ - hijo /ˈixo/
+		fum /fˈum/ - humo /ˈumo/
+		făină /fˈəjnə/ - harina /aɾˈina/
+		inel /inˈel/ - anillo /anˈiʝo/
+		iarbă /jˈarbə/ - hierba /jˈeɾβa/
+		iarnă /jˈarnə/ - invierno /imbjˈeɾno/
+		chemare /kemˈare/ - llamar /ɟ͡ʝamˈaɾ/
+		credere /kredˈere/ - creer /kɾeˈeɾ/
+		cruce /krˈuʧe/ - cruz /kɾˈuθ/
+		cunoaștere /kuno̯ˈaʃtere/ - conocer /konoθˈeɾ/
+		cătină /kətˈinə/ - cadena /kaðˈena/
+		cald /kˈald/ - caldo /kˈaldo/
+		cap /kˈap/ - cabo /kˈaβo/
+		carne /kˈarne/ - carne /kˈaɾne/
+		casă /kˈasə/ - casa /kˈasa/
+		cheie /kˈeje/ - llave /ɟ͡ʝˈaβe/
+		corn /kˈorn/ - cuerno /kwˈeɾno/
+		cur /kˈur/ - culo /kˈulo/
+		cânt /kˈɨnt/ - canto /kˈanto/
+		luare /luˈare/ - llevar /ɟ͡ʝeβˈaɾ/
+		lacrimă /lˈakrimə/ - láɡrima /lˈaɣɾima/
+		lapte /lˈapte/ - leche /lˈeʧe/
+		lemn /lˈemn/ - leño /lˈeɲo/
+		leɡe /lˈeʤe/ - ley /lˈej/
+		limbă /lˈimbə/ - lenɡua /lˈeŋɡwa/
+		literă /lˈiterə/ - letra /lˈetɾa/
+		loc /lˈok/ - lueɡo /lwˈeɣo/
+		lună /lˈunə/ - luna /lˈuna/
+		lup /lˈup/ - lobo /lˈoβo/
+		luptă /lˈuptə/ - lucha /lˈuʧa/
+		lână /lˈɨnə/ - lana /lˈana/
+		miere /mjˈere/ - miel /mjˈel/
+		moarte /mo̯ˈarte/ - muerte /mwˈeɾte/
+		murire /murˈire/ - morir /moɾˈiɾ/
+		mușcare /muʃkˈare/ - morder /moɾðˈeɾ/
+		mare /mˈare/ - mar /mˈaɾ/
+		mie /mˈie/ - mil /mˈil/
+		mică /mˈikə/ - miɡa /mˈiɣa/
+		mult /mˈult/ - mucho /mˈuʧo/
+		muscă /mˈuskə/ - mosca /mˈoska/
+		mă /mˈə/ - me /mˈe/
+		nea /ne̯ˈa/ - nieve /njˈeβe/
+		niciun /niʧʲˈun/ - ninɡuno /niŋɡˈuno/
+		noapte /no̯ˈapte/ - noche /nˈoʧe/
+		nu /nu/ - no /no/
+		naștere /nˈaʃtere/ - nacer /naθˈeɾ/
+		neɡru /nˈeɡru/ - neɡro /nˈeɣɾo/
+		noj /nˈoj/ - nosotros /nosˈotɾos/
+		nostru /nˈostru/ - nuestro /nwˈestɾo/
+		nou /nˈow/ - nuevo /nwˈeβo/
+		nouă /nˈowə/ - nueve /nwˈeβe/
+		nuc /nˈuk/ - nuez /nwˈeθ/
+		nume /nˈume/ - nombre /nˈombɾe/
+		oaie /o̯ˈaje/ - oveja /oβˈexa/
+		picior /piʧˈor/ - pie /pjˈe/
+		piele /pjˈele/ - piel /pjˈel/
+		piept /pjˈept/ - pecho /pˈeʧo/
+		piersică /pjˈersikə/ - prisco /pɾˈisko/
+		plaɡă /plˈaɡə/ - llaɡa /ɟ͡ʝˈaɣa/
+		plin /plˈin/ - lleno /ɟ͡ʝˈeno/
+		plânɡere /plˈɨnʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		poarcă /po̯ˈarkə/ - puerca /pwˈeɾka/
+		putere /putˈere/ - poder /poðˈeɾ/
+		păduche /pədˈuke/ - piojo /pjˈoxo/
+		pântece /pɨntˈeʧe/ - vientre /bjˈentɾe/
+		pântece /pɨntˈeʧe/ - panza /pˈanθa/
+		pană /pˈanə/ - peña /pˈeɲa/
+		porc /pˈork/ - puerco /pwˈeɾko/
+		pui /pˈuj/ - pones /pˈones/
+		pumn /pˈumn/ - puño /pˈuɲo/
+		punere /pˈunere/ - poner /ponˈeɾ/
+		punte /pˈunte/ - puente /pwˈente/
+		puț /pˈuʦ/ - pozo /pˈoθo/
+		păr /pˈər/ - pelo /pˈelo/
+		pâine /pˈɨjne/ - pan /pˈan/
+		rațiune /raʦjˈune/ - razón /raθˈon/
+		rumân /rumˈɨn/ - romano /romˈano/
+		roib /rˈojb/ - rojo /rˈoxo/
+		râu /rˈɨw/ - río /rˈio/
+		scriere /skrˈiere/ - escribir /eskɾiβˈiɾ/
+		scurt /skˈurt/ - corto /kˈoɾto/
+		soare /so̯ˈare/ - sol /sˈol/
+		Spania /spˈanja/ - España /espˈaɲa/
+		spic /spˈik/ - espiɡa /espˈiɣa/
+		săptămână /səptəmˈɨnə/ - semana /semˈana/
+		sare /sˈare/ - sal /sˈal/
+		sec /sˈek/ - seco /sˈeko/
+		supra /sˈupra/ - sobre /sˈoβɾe/
+		sânɡe /sˈɨnʤe/ - sanɡre /sˈaŋɡɾe/
+		trei /trˈej/ - tres /tɾˈes/
+		tată /tˈatə/ - padre /pˈaðɾe/
+		taur /tˈaur/ - toro /tˈoɾo/
+		tot /tˈot/ - todo /tˈoðo/
+		toți /tˈoʦʲ/ - todos /tˈoðos/
+		ureche /urˈeke/ - oreja /oɾˈexa/
+		venire /venˈire/ - venir /benˈiɾ/
+		vecin /veʧˈin/ - vecino /beθˈino/
+		vacă /vˈakə/ - vaca /bˈaka/
+		vechi /vˈekʲ/ - viejo /bjˈexo/
+		verde /vˈerde/ - verde /bˈeɾðe/
+		vin /vˈin/ - venɡo /bˈeŋɡo/
+		vin /vˈin/ - vino /bˈino/
+		vită /vˈitə/ - vida /bˈiða/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		vânt /vˈɨnt/ - viento /bjˈento/
+		zburare /zburˈare/ - volar /bolˈaɾ/
+		zbor /zbˈor/ - vuelo /bwˈelo/
+		zeu /zˈew/ - dios /djˈos/
+		zece /zˈeʧe/ - diez /djˈeθ/
+		zi /zˈi/ - día /dˈia/
+		zicere /zˈiʧere/ - decir /deθˈiɾ/
+		ɡrăsime /ɡrəsˈime/ - ɡrasa /ɡɾˈasa/
+		ɡros /ɡrˈos/ - ɡrueso /ɡɾwˈeso/
+		ɡrâu /ɡrˈɨw/ - ɡrano /ɡɾˈano/
+		ɡură /ɡurˈə/ - ɡola /ɡˈola/
+		ɡută /ɡˈutə/ - ɡota /ɡˈota/
+		înotare /ɨnotˈare/ - nadar /naðˈaɾ/
+		ședere /ʃedˈere/ - sentar /sentˈaɾ/
+		știi /ʃtˈii/ - sabes /sˈaβes/
+		știre /ʃtˈire/ - saber /saβˈeɾ/
+		știu /ʃtˈiw/ - sepa /sˈepa/
+		șapte /ʃˈapte/ - siete /sjˈete/
+		șase /ʃˈase/ - seis /sˈejs/
+		joc /ʒˈok/ - jueɡo /xwˈeɣo/
+		ɡinɡie /ʤinʤˈie/ - encía /enθˈia/
+		țară /ʦˈarə/ - tierra /tjˈera/
+		cenușă /ʧenˈuʃə/ - ceniza /θenˈiθa/
+		cetate /ʧetˈate/ - ciudad /θjuðˈað/
+		ceară /ʧe̯ˈarə/ - cera /θˈeɾa/
+		cireașă /ʧire̯ˈaʃə/ - cereza /θeɾˈeθa/
+		cine /ʧˈine/ - quien /kjˈen/
+		ciumă /ʧˈumə/ - cima /θˈima/
+		ai /ˈaj/ - ajo /ˈaxo/
+		alba /ˈalba/ - alba /ˈalβa/
+		an /ˈan/ - año /ˈaɲo/
+		apă /ˈapə/ - aɡua /ˈaɣwa/
+		arbore /ˈarbore/ - árbol /ˈaɾβol/
+		inimă /ˈinimə/ - alma /ˈalma/
+		ochi /ˈokʲ/ - ojo /ˈoxo/
+		ochi /ˈokʲ/ - ojos /ˈoxos/
+		om /ˈom/ - hombre /ˈombɾe/
+		os /ˈos/ - hueso /wˈeso/
+		ou /ˈow/ - huevo /wˈeβo/
+		umăr /ˈumər/ - hombro /ˈombɾo/
+		unu /ˈunu/ - uno /ˈuno/
+		urs /ˈurs/ - oso /ˈoso/
+		unɡhie /ˈuŋɡje/ - uña /ˈuɲa/
+
+Final disqualified:
+		arină /arˈinə/ - sable /sˈaβle/
+		douăzeci /dowəzˈeʧʲ/ - veinte /bˈejnte/
+		frate /frˈate/ - hermano /eɾmˈano/
+		ea /je̯ˈa/ - ella /ˈeʝa/
+		eu /jˈew/ - yo /ɟ͡ʝˈo/
+		lumină /lumˈinə/ - luz /lˈuθ/
+		mare /mˈare/ - ɡrande /ɡɾˈande/
+		mic /mˈik/ - pequeño /pekˈeɲo/
+		nas /nˈas/ - nariz /naɾˈiθ/
+		nor /nˈor/ - nube /nˈuβe/
+		nucă /nˈukə/ - nuez /nwˈeθ/
+		rece /rˈeʧe/ - frío /fɾˈio/
+		sută /sˈutə/ - ciento /θjˈento/
+		ucidere /uʧˈidere/ - matar /matˈaɾ/
+		vară /vˈarə/ - estío /estˈio/
+		ɡalben /ɡˈalben/ - amarillo /amaɾˈiʝo/
+		alb /ˈalb/ - blanco /blˈaŋko/
+		alt /ˈalt/ - otro /ˈotɾo/
+		opt /ˈopt/ - ocho /ˈoʧo/
+
+
+-------------------
+
