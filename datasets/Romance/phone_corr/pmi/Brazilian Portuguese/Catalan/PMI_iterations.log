@@ -1,0 +1,1664 @@
+Same meaning pairs: 308
+****SAMPLE 1****
+Iteration 1
+	Qualified: 238
+	Disqualified: 254
+	Added: 0
+	Removed: 8
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		pássaro /pˈasɐɾu/ - ocell /usˈeʎ/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		vir /vˈih/ - venir /bənˈi/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+		eu /ˈew/ - jo /ʒˈɔ/
+		ler /lˈeɾ/ - lleɡir /ʎəʒˈi/
+		nós /nˈɔjʃ/ - nosaltres /nuzˈaltɾəs/
+
+Iteration 2
+	Qualified: 236
+	Disqualified: 256
+	Added: 1
+		vir /vˈih/ - venir /bənˈi/
+	Removed: 3
+		ouro /ˈowɾu/ - or /ˈɔr/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+
+Iteration 3
+	Qualified: 238
+	Disqualified: 254
+	Added: 3
+		ouro /ˈowɾu/ - or /ˈɔr/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+	Removed: 1
+		vir /vˈih/ - venir /bənˈi/
+
+Iteration 4
+	Qualified: 238
+	Disqualified: 254
+	Added: 2
+		vir /vˈih/ - venir /bənˈi/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+	Removed: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Iteration 5
+	Qualified: 238
+	Disqualified: 254
+	Added: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+	Removed: 1
+		vir /vˈih/ - venir /bənˈi/
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - abella /əβˈɛʎə/
+		aɡulha /aɡˈuʎɐ/ - aɡulla /əɣˈuʎə/
+		arɡila /aɦʒˈilɐ/ - arɡila /ərʒˈilə/
+		aranha /aɾˈɐ̃j̃ɐ/ - aranya /əɾˈaɲə/
+		ajudar /aʒudˈah/ - ajudar /əʒuðˈa/
+		branco /bɾˈɐ̃ku/ - blanc /blˈaŋ/
+		baixo /bˈajʃu/ - baix /bˈaʃ/
+		bem /bˈẽj̃/ - bé /bˈe/
+		boi /bˈoj/ - bou /bˈɔw/
+		boca /bˈokɐ/ - boca /bˈokə/
+		boas /bˈoɐʃ/ - bones /bˈɔnəs/
+		bom /bˈõ/ - bo /bˈɔ/
+		bons /bˈõʃ/ - bons /bˈɔns/
+		banho /bˈɐ̃j̃u/ - bany /bˈaɲ/
+		belo /bˈɛlu/ - bell /bˈeʎ/
+		dormir /doɦmˈih/ - dormir /durmˈi/
+		draɡão /dɾaɡˈɐ̃w̃/ - draɡó /dɾəɣˈo/
+		draɡão /dɾaɡˈɐ̃w̃/ - drac /dɾˈak/
+		dar /dˈah/ - dar /dˈa/
+		dedo /dˈedu/ - dit /dˈit/
+		dente /dˈẽʧi/ - dent /dˈen/
+		dois /dˈojʃ/ - dos /dˈos/
+		doce /dˈosi/ - dolç /dˈols/
+		duas /dˈuɐʃ/ - dues /dˈuəs/
+		dez /dˈɛjʃ/ - deu /dˈɛw/
+		espinha /eʃpˈĩj̃ɐ/ - espina /əspˈinə/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - Espanya /əspˈaɲə/
+		estrela /eʃtɾˈelɐ/ - estrella /əstɾˈeʎə/
+		estado /eʃtˈadu/ - estat /əstˈat/
+		estio /eʃʧˈiw/ - estiu /əstˈiw/
+		fazer /fazˈeh/ - fer /fˈe/
+		farinha /faɾˈĩj̃ɐ/ - farina /fəɾˈinə/
+		frio /fɾˈiu/ - fred /fɾˈɛt/
+		fruito /fɾˈujtu/ - fruit /fɾˈujt/
+		fada /fˈadɐ/ - fada /fˈaðə/
+		faço /fˈasu/ - faiɡ /fˈaʧ/
+		falso /fˈawsu/ - falso /fˈals/
+		fêmea /fˈẽmeɐ/ - fembra /fˈɛmbrə/
+		fio /fˈiw/ - fil /fˈil/
+		fíɡado /fˈiɡɐdu/ - fetɡe /fˈeʤə/
+		filho /fˈiʎu/ - fill /fˈiʎ/
+		filha /fˈiʎɐ/ - filla /fˈiʎə/
+		fim /fˈĩ/ - fi /fˈi/
+		força /fˈohsɐ/ - força /fˈɔrsə/
+		foɡo /fˈoɡu/ - foc /fˈɔk/
+		folha /fˈoʎɐ/ - fulla /fˈuʎə/
+		fumo /fˈũmu/ - fum /fˈum/
+		forte /fˈɔhʧi/ - fort /fˈɔrt/
+		fome /fˈɔmi/ - fam /fˈam/
+		ferro /fˈɛhu/ - ferro /fˈɛru/
+		festa /fˈɛʃtɐ/ - festa /fˈestə/
+		razão /hazˈɐ̃w̃/ - raó /rəˈo/
+		rainha /haˈĩj̃ɐ/ - reina /rˈejnə/
+		redondo /hedˈõdu/ - rodó /ruðˈo/
+		romão /homˈɐ̃w̃/ - romà /rumˈa/
+		rei /hˈej/ - rei /rˈej/
+		roxo /hˈoʃu/ - roiɡ /rˈɔʧ/
+		iɡual /iɡwˈaw/ - iɡual /iɣwˈal/
+		irmão /iɦmˈɐ̃w̃/ - ɡermà /ʒərmˈa/
+		inverno /ĩvˈɛɦnu/ - hivern /iβˈɛrn/
+		cabelo /kabˈelu/ - pèl /pˈɛl/
+		cadeia /kadˈejɐ/ - cadena /kəðˈɛnə/
+		caçar /kasˈah/ - caçar /kəsˈa/
+		cavalo /kavˈalu/ - cavall /kəβˈaʎ/
+		queimar /kejmˈah/ - cremar /kɾəmˈa/
+		conhecer /kõj̃esˈeh/ - conèixer /kunˈɛʃə/
+		cortiça /kuhʧˈisɐ/ - escorça /əskˈɔrsə/
+		cambiar /kɐ̃bjˈah/ - canviar /kəmbjˈa/
+		cruz /kɾˈujʃ/ - creu /kɾˈɛw/
+		caldo /kˈawdu/ - cald /kˈalt/
+		casa /kˈazɐ/ - casa /kˈazə/
+		carne /kˈaɦni/ - carn /kˈarn/
+		caro /kˈaɾu/ - car /kˈar/
+		quem /kˈẽj̃/ - qui /kˈi/
+		que /kˈi/ - què /kˈɛ/
+		cor /kˈoh/ - color /kulˈo/
+		corpo /kˈohpu/ - cos /kˈɔs/
+		corno /kˈoɦnu/ - corn /kˈɔrn/
+		cu /kˈu/ - cul /kˈul/
+		curto /kˈuhtu/ - curt /kˈuɾt/
+		cão /kˈɐ̃w̃/ - ca /kˈa/
+		cor /kˈɔh/ - cor /kˈɔr/
+		colo /kˈɔlu/ - coll /kˈɔʎ/
+		costa /kˈɔʃtɐ/ - costa /kˈɔstə/
+		levar /levˈah/ - llevar /ʎəβˈa/
+		leão /leˈɐ̃w̃/ - lleó /ʎəˈo/
+		laɡo /lˈaɡu/ - llac /ʎˈak/
+		láɡrima /lˈaɡɾimɐ/ - llàɡrima /ʎˈaɣɾimə/
+		lei /lˈej/ - llei /ʎˈej/
+		leito /lˈejtu/ - llit /ʎˈit/
+		leite /lˈejʧi/ - llet /ʎˈet/
+		letra /lˈetɾɐ/ - lletra /ʎˈetɾə/
+		lenha /lˈẽj̃ɐ/ - llenya /ʎˈeɲə/
+		livre /lˈivɾi/ - lliure /ʎˈiwɾə/
+		línɡua /lˈĩɡwɐ/ - llenɡua /ʎˈɛŋɡwə/
+		lobo /lˈobu/ - llop /ʎˈop/
+		loɡo /lˈoɡu/ - lloc /ʎˈɔk/
+		luz /lˈujʃ/ - llum /ʎˈum/
+		luta /lˈutɐ/ - lluita /ʎˈujtə/
+		lua /lˈuɐ/ - lluna /ʎˈunə/
+		lã /lˈɐ̃/ - llana /ʎˈanə/
+		lebre /lˈɛbɾi/ - llebre /ʎˈeβɾə/
+		metade /metˈaʤi/ - meitat /məjtˈat/
+		melhor /meʎˈɔh/ - millor /miʎˈo/
+		morseɡar /mohseɡˈah/ - mosseɡar /musəɣˈa/
+		morrer /mohˈeh/ - morir /muɾˈi/
+		morder /moɦdˈeh/ - mosseɡar /musəɣˈa/
+		montanha /mõtˈɐ̃j̃ɐ/ - muntanya /muntˈaɲə/
+		matar /mɐtˈah/ - matar /mətˈa/
+		mar /mˈah/ - mar /mˈar/
+		me /mˈi/ - me /mə/
+		mil /mˈiw/ - mil /mˈil/
+		miɡa /mˈiɡɐ/ - mica /mˈikə/
+		mosca /mˈoʃkɐ/ - mosca /mˈoskə/
+		muito /mˈũj̃tu/ - molt /mˈol/
+		mão /mˈɐ̃w̃/ - mà /mˈa/
+		mel /mˈɛw/ - mel /mˈɛl/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+		nariz /naɾˈiʃ/ - nas /nˈas/
+		nenhum /nẽj̃ˈũ/ - ninɡú /niŋɡˈu/
+		não /nɐ̃w̃/ - no /nˈo/
+		neɡro /nˈeɡɾu/ - neɡre /nˈɛɣɾə/
+		noite /nˈojʧi/ - nit /nˈit/
+		novo /nˈovu/ - nou /nˈɔw/
+		nome /nˈõmi/ - nom /nˈɔm/
+		nuvem /nˈuvẽj̃/ - niu /nˈiw/
+		noz /nˈɔjʃ/ - nou /nˈɔw/
+		nosso /nˈɔsu/ - nostre /nˈɔstɾə/
+		nove /nˈɔvi/ - nou /nˈɔw/
+		neve /nˈɛvi/ - neu /nˈew/
+		ovelha /ovˈeʎɐ/ - ovella /uβˈɛʎə/
+		palavra /palˈavɾɐ/ - paraula /pəɾˈawlə/
+		pequeno /pekˈẽnu/ - petit /pətˈit/
+		preço /pɾˈesu/ - preu /pɾˈɛw/
+		paz /pˈajʃ/ - pau /pˈaw/
+		paço /pˈasu/ - palau /pəlˈaw/
+		peito /pˈejtu/ - pit /pˈit/
+		pelo /pˈelu/ - pèl /pˈɛl/
+		pena /pˈenɐ/ - pena /pˈɛnə/
+		pêsseɡo /pˈeseɡu/ - préssec /pɾˈesək/
+		pena /pˈẽnɐ/ - penya /pˈɛɲə/
+		pôr /pˈoh/ - pondre /pˈɔndɾə/
+		poço /pˈosu/ - pou /pˈow/
+		pouco /pˈowku/ - poc /pˈɔk/
+		pões /pˈõj̃ʃ/ - pons /pˈɔns/
+		ponto /pˈõtu/ - punt /pˈun/
+		ponte /pˈõʧi/ - pont /pˈɔn/
+		punho /pˈũj̃u/ - puny /pˈuɲ/
+		pão /pˈɐ̃w̃/ - pa /pˈa/
+		pobre /pˈɔbɾi/ - pobre /pˈɔβɾə/
+		porca /pˈɔhkɐ/ - porca /pˈɔrkə/
+		pé /pˈɛ/ - peu /pˈɛw/
+		pedra /pˈɛdɾɐ/ - pedra /pˈeðɾə/
+		pele /pˈɛli/ - pell /pˈeʎ/
+		saber /sabˈeh/ - saber /səβˈɛ/
+		saúde /saˈuʤi/ - salut /səlˈut/
+		semana /semˈɐ̃nɐ/ - setmana /səmmˈanə/
+		seɡuro /seɡˈuɾu/ - seɡur /səɣˈu/
+		cereja /seɾˈeʒɐ/ - cirera /siɾˈeɾə/
+		cidade /sidˈaʤi/ - ciutat /siwtˈat/
+		cinquenta /sĩkwˈẽtɐ/ - cinquanta /siŋkwˈantə/
+		sabes /sˈabiʃ/ - saps /sˈaps/
+		sábio /sˈabju/ - savi /sˈaβi/
+		saiba /sˈajbɐ/ - sàpiɡa /sˈapiɣə/
+		sal /sˈaw/ - sal /sˈal/
+		salsa /sˈawsɐ/ - salsa /sˈalsə/
+		seda /sˈedɐ/ - seda /sˈɛðə/
+		seis /sˈejʃ/ - sis /sˈis/
+		seco /sˈeku/ - sec /sˈɛk/
+		cera /sˈeɾɐ/ - cera /sˈeɾə/
+		cento /sˈẽtu/ - cent /sˈen/
+		cinza /sˈĩzɐ/ - cendre /sˈɛndɾə/
+		sobre /sˈobɾi/ - sobre /sˈoβɾə/
+		sã /sˈɐ̃/ - sana /sˈanə/
+		santo /sˈɐ̃tu/ - sant /sˈan/
+		são /sˈɐ̃w̃/ - sa /sˈa/
+		sanɡue /sˈɐ̃ɡi/ - sanɡ /sˈaŋ/
+		sol /sˈɔw/ - solell /sulˈɛʎ/
+		sol /sˈɔw/ - sol /sˈɔl/
+		céu /sˈɛw/ - cel /sˈɛl/
+		sete /sˈɛʧi/ - set /sˈɛt/
+		três /tɾˈejʃ/ - tres /tɾˈɛs/
+		todo /tˈodu/ - tot /tˈot/
+		todos /tˈoduʃ/ - tots /tˈots/
+		tú /tˈu/ - tu /tˈu/
+		vilão /vilˈɐ̃w̃/ - vilà /bilˈa/
+		vizinho /vizˈĩj̃u/ - veí /bəˈi/
+		voar /voˈah/ - volar /bulˈa/
+		vaca /vˈakɐ/ - vaca /bˈakə/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		verde /vˈeɦʤi/ - verd /bˈɛrt/
+		velho /vˈeʎu/ - vell /bˈeʎ/
+		venho /vˈẽj̃u/ - vinc /bˈiŋ/
+		vento /vˈẽtu/ - vent /bˈen/
+		vida /vˈidɐ/ - vida /bˈiðə/
+		vila /vˈilɐ/ - vila /bˈilə/
+		vinte /vˈĩʧi/ - vin /bˈin/
+		voo /vˈou/ - vol /bˈɔl/
+		voz /vˈɔjʃ/ - veu /bˈɛw/
+		verme /vˈɛɦmi/ - verm /bˈɛrm/
+		ɡraxa /ɡɾˈaʃɐ/ - ɡras /ɡrˈas/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡra /ɡɾˈa/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡran /ɡɾˈan/
+		ɡato /ɡˈatu/ - ɡat /ɡˈat/
+		ɡota /ɡˈotɐ/ - ɡota /ɡˈotə/
+		ɡola /ɡˈɔlɐ/ - ɡola /ɡˈolə/
+		chamar /ʃamˈah/ - clamar /kləmˈa/
+		chorar /ʃoɾˈah/ - plànyer /plˈaɲə/
+		chaɡa /ʃˈaɡɐ/ - plaɡa /plˈaɣə/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		chuva /ʃˈuvɐ/ - pluja /plˈuʒə/
+		chama /ʃˈɐ̃mɐ/ - flama /flˈamə/
+		ɡear /ʒeˈah/ - ɡlaçar /ɡləsˈa/
+		ɡear /ʒeˈah/ - ɡelar /ʒəlˈa/
+		joelho /ʒuˈeʎu/ - ɡenoll /ʒənˈoʎ/
+		ɡente /ʒˈẽʧi/ - ɡent /ʒˈen/
+		junho /ʒˈũj̃u/ - juny /ʒˈuɲ/
+		junto /ʒˈũtu/ - junt /ʒˈun/
+		jovem /ʒˈɔvẽj̃/ - jove /ʒˈoβə/
+		ʤia /ʤˈiɐ/ - dia /dˈiə/
+		ʤiɡo /ʤˈiɡu/ - dic /dˈik/
+		alva /ˈawvɐ/ - alba /ˈalβə/
+		áɡua /ˈaɡwɐ/ - aiɡua /ˈajɣwə/
+		árvore /ˈaɦvoɾi/ - arbre /ˈaβɾə/
+		ilha /ˈiʎɐ/ - illa /ˈiʎə/
+		oito /ˈojtu/ - vuit /bˈujt/
+		osso /ˈosu/ - os /ˈɔs/
+		ovo /ˈovu/ - ou /ˈɔw/
+		outro /ˈowtɾu/ - altre /ˈaltɾə/
+		ouro /ˈowɾu/ - or /ˈɔr/
+		olho /ˈoʎu/ - ull /ˈuʎ/
+		homem /ˈõmẽj̃/ - home /ˈɔmə/
+		usso /ˈusu/ - ós /ˈos/
+		ano /ˈɐ̃nu/ - any /ˈaɲ/
+		obra /ˈɔbɾɐ/ - obra /ˈɔβɾə/
+		elo /ˈɛlu/ - anell /ənˈeʎ/
+		ela /ˈɛlɐ/ - ella /ˈeʎə/
+		erva /ˈɛɦvɐ/ - herba /ˈerβə/
+
+Final disqualified:
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		ler /lˈeɾ/ - lleɡir /ʎəʒˈi/
+		nós /nˈɔjʃ/ - nosaltres /nuzˈaltɾəs/
+		pássaro /pˈasɐɾu/ - ocell /usˈeʎ/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+		vir /vˈih/ - venir /bənˈi/
+		eu /ˈew/ - jo /ʒˈɔ/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 234
+	Disqualified: 258
+	Added: 0
+	Removed: 12
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		pássaro /pˈasɐɾu/ - ocell /usˈeʎ/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		chor /ʃˈoh/ - flor /flˈɔ/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		chorar /ʃoɾˈah/ - plànyer /plˈaɲə/
+		vós /vˈɔjʃ/ - vosaltres /buzˈaltɾəs/
+		cabelo /kabˈelu/ - pèl /pˈɛl/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+		ovo /ˈovu/ - ou /ˈɔw/
+		eu /ˈew/ - jo /ʒˈɔ/
+
+Iteration 2
+	Qualified: 235
+	Disqualified: 257
+	Added: 3
+		ovo /ˈovu/ - ou /ˈɔw/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+	Removed: 2
+		vir /vˈih/ - venir /bənˈi/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+
+Iteration 3
+	Qualified: 235
+	Disqualified: 257
+	Added: 1
+		vir /vˈih/ - venir /bənˈi/
+	Removed: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+
+Iteration 4
+	Qualified: 235
+	Disqualified: 257
+	Added: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+	Removed: 1
+		vir /vˈih/ - venir /bənˈi/
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - abella /əβˈɛʎə/
+		aɡulha /aɡˈuʎɐ/ - aɡulla /əɣˈuʎə/
+		arɡila /aɦʒˈilɐ/ - arɡila /ərʒˈilə/
+		aranha /aɾˈɐ̃j̃ɐ/ - aranya /əɾˈaɲə/
+		ajudar /aʒudˈah/ - ajudar /əʒuðˈa/
+		ajudo /aʒˈudu/ - ajudo /əʒˈuðu/
+		branco /bɾˈɐ̃ku/ - blanc /blˈaŋ/
+		baixo /bˈajʃu/ - baix /bˈaʃ/
+		bem /bˈẽj̃/ - bé /bˈe/
+		boi /bˈoj/ - bou /bˈɔw/
+		boca /bˈokɐ/ - boca /bˈokə/
+		boa /bˈoɐ/ - bona /bˈɔnə/
+		boas /bˈoɐʃ/ - bones /bˈɔnəs/
+		bom /bˈõ/ - bo /bˈɔ/
+		bons /bˈõʃ/ - bons /bˈɔns/
+		banho /bˈɐ̃j̃u/ - bany /bˈaɲ/
+		belo /bˈɛlu/ - bell /bˈeʎ/
+		bela /bˈɛlɐ/ - bella /bˈeʎə/
+		dormir /doɦmˈih/ - dormir /durmˈi/
+		draɡão /dɾaɡˈɐ̃w̃/ - draɡó /dɾəɣˈo/
+		dar /dˈah/ - dar /dˈa/
+		dente /dˈẽʧi/ - dent /dˈen/
+		dois /dˈojʃ/ - dos /dˈos/
+		doce /dˈosi/ - dolç /dˈols/
+		doze /dˈozi/ - dotze /dˈodzə/
+		dom /dˈõ/ - do /dˈo/
+		dona /dˈõnɐ/ - dona /dˈɔnə/
+		duas /dˈuɐʃ/ - dues /dˈuəs/
+		dez /dˈɛjʃ/ - deu /dˈɛw/
+		escutar /eskutˈah/ - escoltar /əskultˈa/
+		escrever /eskɾevˈeh/ - escriure /əskɾˈiwɾə/
+		espinha /eʃpˈĩj̃ɐ/ - espina /əspˈinə/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - Espanya /əspˈaɲə/
+		estrela /eʃtɾˈelɐ/ - estrella /əstɾˈeʎə/
+		estio /eʃʧˈiw/ - estiu /əstˈiw/
+		fazer /fazˈeh/ - fer /fˈe/
+		farinha /faɾˈĩj̃ɐ/ - farina /fəɾˈinə/
+		fruito /fɾˈujtu/ - fruit /fɾˈujt/
+		fada /fˈadɐ/ - fada /fˈaðə/
+		faço /fˈasu/ - faiɡ /fˈaʧ/
+		falso /fˈawsu/ - falso /fˈals/
+		fíɡado /fˈiɡɐdu/ - fetɡe /fˈeʤə/
+		filho /fˈiʎu/ - fill /fˈiʎ/
+		filha /fˈiʎɐ/ - filla /fˈiʎə/
+		fino /fˈĩnu/ - fin /fˈi/
+		força /fˈohsɐ/ - força /fˈɔrsə/
+		foɡo /fˈoɡu/ - foc /fˈɔk/
+		folha /fˈoʎɐ/ - fulla /fˈuʎə/
+		fome /fˈɔmi/ - fam /fˈam/
+		ferro /fˈɛhu/ - ferro /fˈɛru/
+		razão /hazˈɐ̃w̃/ - raó /rəˈo/
+		redondo /hedˈõdu/ - rodó /ruðˈo/
+		romão /homˈɐ̃w̃/ - romà /rumˈa/
+		rei /hˈej/ - rei /rˈej/
+		roxo /hˈoʃu/ - roiɡ /rˈɔʧ/
+		iɡual /iɡwˈaw/ - iɡual /iɣwˈal/
+		inverno /ĩvˈɛɦnu/ - hivern /iβˈɛrn/
+		cadeia /kadˈejɐ/ - cadena /kəðˈɛnə/
+		caçar /kasˈah/ - caçar /kəsˈa/
+		cavalo /kavˈalu/ - cavall /kəβˈaʎ/
+		castelo /kaʃtˈɛlu/ - castell /kəstˈeʎ/
+		queimar /kejmˈah/ - cremar /kɾəmˈa/
+		conhecer /kõj̃esˈeh/ - conèixer /kunˈɛʃə/
+		cortiça /kuhʧˈisɐ/ - escorça /əskˈɔrsə/
+		quatro /kwˈatɾu/ - quatre /kwˈatɾə/
+		cambiar /kɐ̃bjˈah/ - canviar /kəmbjˈa/
+		crer /kɾˈeh/ - creure /kɾˈɛwɾə/
+		cruz /kɾˈujʃ/ - creu /kɾˈɛw/
+		cabra /kˈabɾɐ/ - cabra /kˈaβɾə/
+		caldo /kˈawdu/ - cald /kˈalt/
+		casa /kˈazɐ/ - casa /kˈazə/
+		carne /kˈaɦni/ - carn /kˈarn/
+		caro /kˈaɾu/ - car /kˈar/
+		quem /kˈẽj̃/ - qui /kˈi/
+		que /kˈi/ - què /kˈɛ/
+		corpo /kˈohpu/ - cos /kˈɔs/
+		corno /kˈoɦnu/ - corn /kˈɔrn/
+		cu /kˈu/ - cul /kˈul/
+		curto /kˈuhtu/ - curt /kˈuɾt/
+		canto /kˈɐ̃tu/ - cant /kˈan/
+		cão /kˈɐ̃w̃/ - ca /kˈa/
+		cor /kˈɔh/ - cor /kˈɔr/
+		colo /kˈɔlu/ - coll /kˈɔʎ/
+		costa /kˈɔʃtɐ/ - costa /kˈɔstə/
+		leão /leˈɐ̃w̃/ - lleó /ʎəˈo/
+		láɡrima /lˈaɡɾimɐ/ - llàɡrima /ʎˈaɣɾimə/
+		lei /lˈej/ - llei /ʎˈej/
+		letra /lˈetɾɐ/ - lletra /ʎˈetɾə/
+		lenha /lˈẽj̃ɐ/ - llenya /ʎˈeɲə/
+		livre /lˈivɾi/ - lliure /ʎˈiwɾə/
+		línɡua /lˈĩɡwɐ/ - llenɡua /ʎˈɛŋɡwə/
+		loɡo /lˈoɡu/ - lloc /ʎˈɔk/
+		luz /lˈujʃ/ - llum /ʎˈum/
+		luta /lˈutɐ/ - lluita /ʎˈujtə/
+		lã /lˈɐ̃/ - llana /ʎˈanə/
+		lebre /lˈɛbɾi/ - llebre /ʎˈeβɾə/
+		metade /metˈaʤi/ - meitat /məjtˈat/
+		melhor /meʎˈɔh/ - millor /miʎˈo/
+		morseɡar /mohseɡˈah/ - mosseɡar /musəɣˈa/
+		morrer /mohˈeh/ - morir /muɾˈi/
+		morder /moɦdˈeh/ - mosseɡar /musəɣˈa/
+		montanha /mõtˈɐ̃j̃ɐ/ - muntanya /muntˈaɲə/
+		matar /mɐtˈah/ - matar /mətˈa/
+		meio /mˈeju/ - miɡ /mˈiʧ/
+		mil /mˈiw/ - mil /mˈil/
+		miɡa /mˈiɡɐ/ - mica /mˈikə/
+		mosca /mˈoʃkɐ/ - mosca /mˈoskə/
+		muito /mˈũj̃tu/ - molt /mˈol/
+		mão /mˈɐ̃w̃/ - mà /mˈa/
+		morte /mˈɔhʧi/ - mort /mˈɔrt/
+		mel /mˈɛw/ - mel /mˈɛl/
+		nariz /naɾˈiʃ/ - nas /nˈas/
+		nenhum /nẽj̃ˈũ/ - ninɡú /niŋɡˈu/
+		não /nɐ̃w̃/ - no /nˈo/
+		noite /nˈojʧi/ - nit /nˈit/
+		novo /nˈovu/ - nou /nˈɔw/
+		nome /nˈõmi/ - nom /nˈɔm/
+		noz /nˈɔjʃ/ - nou /nˈɔw/
+		nosso /nˈɔsu/ - nostre /nˈɔstɾə/
+		nove /nˈɔvi/ - nou /nˈɔw/
+		neve /nˈɛvi/ - neu /nˈew/
+		ovelha /ovˈeʎɐ/ - ovella /uβˈɛʎə/
+		orelha /oɾˈeʎɐ/ - orella /uɾˈɛʎə/
+		piolho /piˈoʎu/ - poll /pˈoʎ/
+		poder /podˈeh/ - poder /puðˈɛ/
+		preço /pɾˈesu/ - preu /pɾˈɛw/
+		paz /pˈajʃ/ - pau /pˈaw/
+		paço /pˈasu/ - palau /pəlˈaw/
+		peito /pˈejtu/ - pit /pˈit/
+		pelo /pˈelu/ - cabell /kəβˈɛʎ/
+		pelo /pˈelu/ - pèl /pˈɛl/
+		pena /pˈenɐ/ - pena /pˈɛnə/
+		pena /pˈẽnɐ/ - ploma /plˈomə/
+		pena /pˈẽnɐ/ - penya /pˈɛɲə/
+		pôr /pˈoh/ - pondre /pˈɔndɾə/
+		porco /pˈohku/ - porc /pˈɔrk/
+		poço /pˈosu/ - pou /pˈow/
+		pouco /pˈowku/ - poc /pˈɔk/
+		pões /pˈõj̃ʃ/ - pons /pˈɔns/
+		ponto /pˈõtu/ - punt /pˈun/
+		ponte /pˈõʧi/ - pont /pˈɔn/
+		pobre /pˈɔbɾi/ - pobre /pˈɔβɾə/
+		porca /pˈɔhkɐ/ - porca /pˈɔrkə/
+		pedra /pˈɛdɾɐ/ - pedra /pˈeðɾə/
+		pele /pˈɛli/ - pell /pˈeʎ/
+		saber /sabˈeh/ - saber /səβˈɛ/
+		semana /semˈɐ̃nɐ/ - setmana /səmmˈanə/
+		seɡuro /seɡˈuɾu/ - seɡur /səɣˈu/
+		cidade /sidˈaʤi/ - ciutat /siwtˈat/
+		cinquenta /sĩkwˈẽtɐ/ - cinquanta /siŋkwˈantə/
+		sabes /sˈabiʃ/ - saps /sˈaps/
+		sábio /sˈabju/ - savi /sˈaβi/
+		saiba /sˈajbɐ/ - sàpiɡa /sˈapiɣə/
+		sal /sˈaw/ - sal /sˈal/
+		salsa /sˈawsɐ/ - salsa /sˈalsə/
+		seda /sˈedɐ/ - seda /sˈɛðə/
+		seco /sˈeku/ - sec /sˈɛk/
+		seca /sˈekɐ/ - seca /sˈɛkə/
+		cera /sˈeɾɐ/ - cera /sˈeɾə/
+		cento /sˈẽtu/ - cent /sˈen/
+		cinza /sˈĩzɐ/ - cendre /sˈɛndɾə/
+		sobre /sˈobɾi/ - sobre /sˈoβɾə/
+		sã /sˈɐ̃/ - sana /sˈanə/
+		santo /sˈɐ̃tu/ - sant /sˈan/
+		sanɡue /sˈɐ̃ɡi/ - sanɡ /sˈaŋ/
+		sol /sˈɔw/ - solell /sulˈɛʎ/
+		sol /sˈɔw/ - sol /sˈɔl/
+		céu /sˈɛw/ - cel /sˈɛl/
+		sete /sˈɛʧi/ - set /sˈɛt/
+		três /tɾˈejʃ/ - tres /tɾˈɛs/
+		tempo /tˈẽpu/ - temps /tˈems/
+		todo /tˈodu/ - tot /tˈot/
+		todos /tˈoduʃ/ - tots /tˈots/
+		tú /tˈu/ - tu /tˈu/
+		terra /tˈɛhɐ/ - terra /tˈɛrə/
+		testa /tˈɛʃtɐ/ - testa /tˈestə/
+		verɡonha /veɦɡˈõj̃ɐ/ - verɡonya /bərɡˈoɲə/
+		vilão /vilˈɐ̃w̃/ - vilà /bilˈa/
+		vizinho /vizˈĩj̃u/ - veí /bəˈi/
+		voar /voˈah/ - volar /bulˈa/
+		vaca /vˈakɐ/ - vaca /bˈakə/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		verde /vˈeɦʤi/ - verd /bˈɛrt/
+		velho /vˈeʎu/ - vell /bˈeʎ/
+		venho /vˈẽj̃u/ - vinc /bˈiŋ/
+		vida /vˈidɐ/ - vida /bˈiðə/
+		vila /vˈilɐ/ - vila /bˈilə/
+		via /vˈiɐ/ - via /bˈiə/
+		vinho /vˈĩj̃u/ - vi /bˈi/
+		vinte /vˈĩʧi/ - vin /bˈin/
+		voz /vˈɔjʃ/ - veu /bˈɛw/
+		verme /vˈɛɦmi/ - verm /bˈɛrm/
+		ɡraxa /ɡɾˈaʃɐ/ - ɡras /ɡrˈas/
+		ɡrosso /ɡɾˈosu/ - ɡros /ɡɾˈɔs/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡra /ɡɾˈa/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡran /ɡɾˈan/
+		ɡato /ɡˈatu/ - ɡat /ɡˈat/
+		ɡoivo /ɡˈojvu/ - ɡoiɡ /ɡˈɔʧ/
+		ɡota /ɡˈotɐ/ - ɡota /ɡˈotə/
+		ɡola /ɡˈɔlɐ/ - ɡola /ɡˈolə/
+		chamar /ʃamˈah/ - clamar /kləmˈa/
+		chorar /ʃoɾˈah/ - plorar /pluɾˈa/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		chuva /ʃˈuvɐ/ - pluja /plˈuʒə/
+		ɡear /ʒeˈah/ - ɡlaçar /ɡləsˈa/
+		ɡear /ʒeˈah/ - ɡelar /ʒəlˈa/
+		ɡenɡiva /ʒẽʒˈivɐ/ - ɡeniva /ʒənˈiβə/
+		joelho /ʒuˈeʎu/ - ɡenoll /ʒənˈoʎ/
+		juiz /ʒuˈiʃ/ - jutɡe /ʒˈuʤə/
+		ɡenro /ʒˈẽhu/ - ɡendre /ʒˈɛndɾə/
+		ɡente /ʒˈẽʧi/ - ɡent /ʒˈen/
+		joɡo /ʒˈoɡu/ - joc /ʒˈɔk/
+		junho /ʒˈũj̃u/ - juny /ʒˈuɲ/
+		junto /ʒˈũtu/ - junt /ʒˈun/
+		jovem /ʒˈɔvẽj̃/ - jove /ʒˈoβə/
+		ʤia /ʤˈiɐ/ - dia /dˈiə/
+		ʤiɡo /ʤˈiɡu/ - dic /dˈik/
+		alva /ˈawvɐ/ - alba /ˈalβə/
+		áɡua /ˈaɡwɐ/ - aiɡua /ˈajɣwə/
+		alho /ˈaʎu/ - all /ˈaʎ/
+		ele /ˈeli/ - ell /ˈeʎ/
+		ínsua /ˈĩswɐ/ - illa /ˈiʎə/
+		ovo /ˈovu/ - ou /ˈɔw/
+		olho /ˈoʎu/ - ull /ˈuʎ/
+		olhos /ˈoʎuʃ/ - ulls /ˈuʎs/
+		homem /ˈõmẽj̃/ - home /ˈɔmə/
+		usso /ˈusu/ - ós /ˈos/
+		um /ˈũ/ - u /ˈu/
+		unha /ˈũj̃ɐ/ - unɡla /ˈuŋɡlə/
+		ano /ˈɐ̃nu/ - any /ˈaɲ/
+		anjo /ˈɐ̃ʒu/ - ànɡel /ˈaɲʒəl/
+		obra /ˈɔbɾɐ/ - obra /ˈɔβɾə/
+		elo /ˈɛlu/ - anell /ənˈeʎ/
+		ela /ˈɛlɐ/ - ella /ˈeʎə/
+		erva /ˈɛɦvɐ/ - herba /ˈerβə/
+
+Final disqualified:
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		cabelo /kabˈelu/ - pèl /pˈɛl/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+		pássaro /pˈasɐɾu/ - ocell /usˈeʎ/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+		vir /vˈih/ - venir /bənˈi/
+		vós /vˈɔjʃ/ - vosaltres /buzˈaltɾəs/
+		chorar /ʃoɾˈah/ - plànyer /plˈaɲə/
+		chor /ʃˈoh/ - flor /flˈɔ/
+		eu /ˈew/ - jo /ʒˈɔ/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 235
+	Disqualified: 257
+	Added: 0
+	Removed: 11
+		odor /odˈoh/ - olor /ulˈo/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		pássaro /pˈasɐɾu/ - ocell /usˈeʎ/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		cor /kˈoh/ - color /kulˈo/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		cabelo /kabˈelu/ - pèl /pˈɛl/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+		eu /ˈew/ - jo /ʒˈɔ/
+		nós /nˈɔjʃ/ - nosaltres /nuzˈaltɾəs/
+
+Iteration 2
+	Qualified: 237
+	Disqualified: 255
+	Added: 3
+		odor /odˈoh/ - olor /ulˈo/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		cor /kˈoh/ - color /kulˈo/
+	Removed: 1
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+
+Iteration 3
+	Qualified: 236
+	Disqualified: 256
+	Added: 1
+		ver /vˈeh/ - veure /bˈɛwɾə/
+	Removed: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		cor /kˈoh/ - color /kulˈo/
+
+Iteration 4
+	Qualified: 238
+	Disqualified: 254
+	Added: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		cor /kˈoh/ - color /kulˈo/
+	Removed: 0
+
+Iteration 5
+	Qualified: 237
+	Disqualified: 255
+	Added: 1
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+	Removed: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		cor /kˈoh/ - color /kulˈo/
+
+Iteration 6
+	Qualified: 239
+	Disqualified: 253
+	Added: 3
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+		cor /kˈoh/ - color /kulˈo/
+	Removed: 1
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Iteration 7
+	Qualified: 240
+	Disqualified: 252
+	Added: 2
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		cabelo /kabˈelu/ - pèl /pˈɛl/
+	Removed: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+
+Iteration 8
+	Qualified: 241
+	Disqualified: 251
+	Added: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		nós /nˈɔjʃ/ - nosaltres /nuzˈaltɾəs/
+	Removed: 1
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Iteration 9
+	Qualified: 241
+	Disqualified: 251
+	Added: 1
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+	Removed: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+
+Iteration 10
+	Qualified: 241
+	Disqualified: 251
+	Added: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+	Removed: 1
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Final qualifying:
+		aɡulha /aɡˈuʎɐ/ - aɡulla /əɣˈuʎə/
+		arɡila /aɦʒˈilɐ/ - arɡila /ərʒˈilə/
+		aranha /aɾˈɐ̃j̃ɐ/ - aranya /əɾˈaɲə/
+		ajudar /aʒudˈah/ - ajudar /əʒuðˈa/
+		ajudo /aʒˈudu/ - ajudo /əʒˈuðu/
+		branco /bɾˈɐ̃ku/ - blanc /blˈaŋ/
+		baixo /bˈajʃu/ - baix /bˈaʃ/
+		bem /bˈẽj̃/ - bé /bˈe/
+		boi /bˈoj/ - bou /bˈɔw/
+		boca /bˈokɐ/ - boca /bˈokə/
+		boa /bˈoɐ/ - bona /bˈɔnə/
+		boas /bˈoɐʃ/ - bones /bˈɔnəs/
+		bons /bˈõʃ/ - bons /bˈɔns/
+		banho /bˈɐ̃j̃u/ - bany /bˈaɲ/
+		belo /bˈɛlu/ - bell /bˈeʎ/
+		bela /bˈɛlɐ/ - bella /bˈeʎə/
+		draɡão /dɾaɡˈɐ̃w̃/ - draɡó /dɾəɣˈo/
+		draɡão /dɾaɡˈɐ̃w̃/ - drac /dɾˈak/
+		dar /dˈah/ - dar /dˈa/
+		dedo /dˈedu/ - dit /dˈit/
+		dente /dˈẽʧi/ - dent /dˈen/
+		dois /dˈojʃ/ - dos /dˈos/
+		doce /dˈosi/ - dolç /dˈols/
+		dom /dˈõ/ - do /dˈo/
+		dona /dˈõnɐ/ - dona /dˈɔnə/
+		duas /dˈuɐʃ/ - dues /dˈuəs/
+		dez /dˈɛjʃ/ - deu /dˈɛw/
+		escutar /eskutˈah/ - escoltar /əskultˈa/
+		escrever /eskɾevˈeh/ - escriure /əskɾˈiwɾə/
+		espiɡa /eʃpˈiɡɐ/ - espiɡa /əspˈiɣə/
+		espinha /eʃpˈĩj̃ɐ/ - espina /əspˈinə/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - Espanya /əspˈaɲə/
+		estrela /eʃtɾˈelɐ/ - estrella /əstɾˈeʎə/
+		estado /eʃtˈadu/ - estat /əstˈat/
+		estio /eʃʧˈiw/ - estiu /əstˈiw/
+		fazer /fazˈeh/ - fer /fˈe/
+		farinha /faɾˈĩj̃ɐ/ - farina /fəɾˈinə/
+		frio /fɾˈiu/ - fred /fɾˈɛt/
+		fada /fˈadɐ/ - fada /fˈaðə/
+		faço /fˈasu/ - faiɡ /fˈaʧ/
+		falso /fˈawsu/ - falso /fˈals/
+		fêmea /fˈẽmeɐ/ - fembra /fˈɛmbrə/
+		fíɡado /fˈiɡɐdu/ - fetɡe /fˈeʤə/
+		filho /fˈiʎu/ - fill /fˈiʎ/
+		filha /fˈiʎɐ/ - filla /fˈiʎə/
+		fim /fˈĩ/ - fi /fˈi/
+		fino /fˈĩnu/ - fin /fˈi/
+		força /fˈohsɐ/ - força /fˈɔrsə/
+		foɡo /fˈoɡu/ - foc /fˈɔk/
+		folha /fˈoʎɐ/ - fulla /fˈuʎə/
+		fumo /fˈũmu/ - fum /fˈum/
+		festa /fˈɛʃtɐ/ - festa /fˈestə/
+		rainha /haˈĩj̃ɐ/ - reina /rˈejnə/
+		redondo /hedˈõdu/ - rodó /ruðˈo/
+		romão /homˈɐ̃w̃/ - romà /rumˈa/
+		rei /hˈej/ - rei /rˈej/
+		roxo /hˈoʃu/ - roiɡ /rˈɔʧ/
+		ruivo /hˈujvu/ - roiɡ /rˈɔʧ/
+		iɡual /iɡwˈaw/ - iɡual /iɣwˈal/
+		irmão /iɦmˈɐ̃w̃/ - ɡermà /ʒərmˈa/
+		inverno /ĩvˈɛɦnu/ - hivern /iβˈɛrn/
+		cabelo /kabˈelu/ - cabell /kəβˈɛʎ/
+		cabelo /kabˈelu/ - pèl /pˈɛl/
+		caçar /kasˈah/ - caçar /kəsˈa/
+		cavalo /kavˈalu/ - cavall /kəβˈaʎ/
+		castelo /kaʃtˈɛlu/ - castell /kəstˈeʎ/
+		conhecer /kõj̃esˈeh/ - conèixer /kunˈɛʃə/
+		cortiça /kuhʧˈisɐ/ - escorça /əskˈɔrsə/
+		quatro /kwˈatɾu/ - quatre /kwˈatɾə/
+		cambiar /kɐ̃bjˈah/ - canviar /kəmbjˈa/
+		crer /kɾˈeh/ - creure /kɾˈɛwɾə/
+		cruz /kɾˈujʃ/ - creu /kɾˈɛw/
+		cabra /kˈabɾɐ/ - cabra /kˈaβɾə/
+		caldo /kˈawdu/ - cald /kˈalt/
+		carne /kˈaɦni/ - carn /kˈarn/
+		caro /kˈaɾu/ - car /kˈar/
+		quem /kˈẽj̃/ - qui /kˈi/
+		cor /kˈoh/ - color /kulˈo/
+		corpo /kˈohpu/ - cos /kˈɔs/
+		corno /kˈoɦnu/ - corn /kˈɔrn/
+		cu /kˈu/ - cul /kˈul/
+		curto /kˈuhtu/ - curt /kˈuɾt/
+		canto /kˈɐ̃tu/ - cant /kˈan/
+		cor /kˈɔh/ - cor /kˈɔr/
+		colo /kˈɔlu/ - coll /kˈɔʎ/
+		costa /kˈɔʃtɐ/ - costa /kˈɔstə/
+		levar /levˈah/ - llevar /ʎəβˈa/
+		leão /leˈɐ̃w̃/ - lleó /ʎəˈo/
+		laɡo /lˈaɡu/ - llac /ʎˈak/
+		láɡrima /lˈaɡɾimɐ/ - llàɡrima /ʎˈaɣɾimə/
+		lei /lˈej/ - llei /ʎˈej/
+		leite /lˈejʧi/ - llet /ʎˈet/
+		letra /lˈetɾɐ/ - lletra /ʎˈetɾə/
+		lenha /lˈẽj̃ɐ/ - llenya /ʎˈeɲə/
+		livre /lˈivɾi/ - lliure /ʎˈiwɾə/
+		línɡua /lˈĩɡwɐ/ - llenɡua /ʎˈɛŋɡwə/
+		lobo /lˈobu/ - llop /ʎˈop/
+		loɡo /lˈoɡu/ - lloc /ʎˈɔk/
+		luz /lˈujʃ/ - llum /ʎˈum/
+		lua /lˈuɐ/ - lluna /ʎˈunə/
+		lã /lˈɐ̃/ - llana /ʎˈanə/
+		lebre /lˈɛbɾi/ - llebre /ʎˈeβɾə/
+		metade /metˈaʤi/ - meitat /məjtˈat/
+		melhor /meʎˈɔh/ - millor /miʎˈo/
+		morseɡar /mohseɡˈah/ - mosseɡar /musəɣˈa/
+		montanha /mõtˈɐ̃j̃ɐ/ - muntanya /muntˈaɲə/
+		matar /mɐtˈah/ - matar /mətˈa/
+		mar /mˈah/ - mar /mˈar/
+		meio /mˈeju/ - miɡ /mˈiʧ/
+		mil /mˈiw/ - mil /mˈil/
+		miɡa /mˈiɡɐ/ - mica /mˈikə/
+		muito /mˈũj̃tu/ - molt /mˈol/
+		mão /mˈɐ̃w̃/ - mà /mˈa/
+		mel /mˈɛw/ - mel /mˈɛl/
+		nadar /nadˈah/ - nedar /nəðˈa/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+		nariz /naɾˈiʃ/ - nas /nˈas/
+		nenhum /nẽj̃ˈũ/ - ninɡú /niŋɡˈu/
+		não /nɐ̃w̃/ - no /nˈo/
+		neɡro /nˈeɡɾu/ - neɡre /nˈɛɣɾə/
+		noite /nˈojʧi/ - nit /nˈit/
+		novo /nˈovu/ - nou /nˈɔw/
+		nome /nˈõmi/ - nom /nˈɔm/
+		nuvem /nˈuvẽj̃/ - niu /nˈiw/
+		nuvem /nˈuvẽj̃/ - núvol /nˈuβul/
+		nós /nˈɔjʃ/ - nosaltres /nuzˈaltɾəs/
+		noz /nˈɔjʃ/ - nou /nˈɔw/
+		nosso /nˈɔsu/ - nostre /nˈɔstɾə/
+		nove /nˈɔvi/ - nou /nˈɔw/
+		obreiro /obɾˈejɾu/ - obrer /ubɾˈe/
+		odor /odˈoh/ - olor /ulˈo/
+		ovelha /ovˈeʎɐ/ - ovella /uβˈɛʎə/
+		orelha /oɾˈeʎɐ/ - orella /uɾˈɛʎə/
+		palavra /palˈavɾɐ/ - paraula /pəɾˈawlə/
+		poder /podˈeh/ - poder /puðˈɛ/
+		peito /pˈejtu/ - pit /pˈit/
+		peixe /pˈejʃi/ - peix /pˈeʃ/
+		pelo /pˈelu/ - cabell /kəβˈɛʎ/
+		pelo /pˈelu/ - pèl /pˈɛl/
+		pena /pˈenɐ/ - pena /pˈɛnə/
+		pêsseɡo /pˈeseɡu/ - préssec /pɾˈesək/
+		pena /pˈẽnɐ/ - ploma /plˈomə/
+		pena /pˈẽnɐ/ - penya /pˈɛɲə/
+		pôr /pˈoh/ - pondre /pˈɔndɾə/
+		porco /pˈohku/ - porc /pˈɔrk/
+		poio /pˈoju/ - puiɡ /pˈuʧ/
+		poço /pˈosu/ - pou /pˈow/
+		pouco /pˈowku/ - poc /pˈɔk/
+		pões /pˈõj̃ʃ/ - pons /pˈɔns/
+		ponto /pˈõtu/ - punt /pˈun/
+		ponte /pˈõʧi/ - pont /pˈɔn/
+		punho /pˈũj̃u/ - puny /pˈuɲ/
+		pão /pˈɐ̃w̃/ - pa /pˈa/
+		porca /pˈɔhkɐ/ - porca /pˈɔrkə/
+		pé /pˈɛ/ - peu /pˈɛw/
+		pedra /pˈɛdɾɐ/ - pedra /pˈeðɾə/
+		pele /pˈɛli/ - pell /pˈeʎ/
+		saúde /saˈuʤi/ - salut /səlˈut/
+		semana /semˈɐ̃nɐ/ - setmana /səmmˈanə/
+		seɡuro /seɡˈuɾu/ - seɡur /səɣˈu/
+		cereja /seɾˈeʒɐ/ - cirera /siɾˈeɾə/
+		cidade /sidˈaʤi/ - ciutat /siwtˈat/
+		cinquenta /sĩkwˈẽtɐ/ - cinquanta /siŋkwˈantə/
+		sabes /sˈabiʃ/ - saps /sˈaps/
+		sábio /sˈabju/ - savi /sˈaβi/
+		saiba /sˈajbɐ/ - sàpiɡa /sˈapiɣə/
+		seda /sˈedɐ/ - seda /sˈɛðə/
+		seco /sˈeku/ - sec /sˈɛk/
+		seca /sˈekɐ/ - seca /sˈɛkə/
+		cera /sˈeɾɐ/ - cera /sˈeɾə/
+		cima /sˈĩmɐ/ - cima /sˈimə/
+		cinza /sˈĩzɐ/ - cendre /sˈɛndɾə/
+		sobre /sˈobɾi/ - sobre /sˈoβɾə/
+		santo /sˈɐ̃tu/ - sant /sˈan/
+		são /sˈɐ̃w̃/ - sa /sˈa/
+		sanɡue /sˈɐ̃ɡi/ - sanɡ /sˈaŋ/
+		sol /sˈɔw/ - solell /sulˈɛʎ/
+		céu /sˈɛw/ - cel /sˈɛl/
+		três /tɾˈejʃ/ - tres /tɾˈɛs/
+		tempo /tˈẽpu/ - temps /tˈems/
+		todo /tˈodu/ - tot /tˈot/
+		touro /tˈowɾu/ - tor /tˈɔr/
+		terra /tˈɛhɐ/ - terra /tˈɛrə/
+		testa /tˈɛʃtɐ/ - testa /tˈestə/
+		verɡonha /veɦɡˈõj̃ɐ/ - verɡonya /bərɡˈoɲə/
+		vilão /vilˈɐ̃w̃/ - vilà /bilˈa/
+		vizinho /vizˈĩj̃u/ - veí /bəˈi/
+		voar /voˈah/ - volar /bulˈa/
+		vaca /vˈakɐ/ - vaca /bˈakə/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		verde /vˈeɦʤi/ - verd /bˈɛrt/
+		velho /vˈeʎu/ - vell /bˈeʎ/
+		venho /vˈẽj̃u/ - vinc /bˈiŋ/
+		vento /vˈẽtu/ - vent /bˈen/
+		vida /vˈidɐ/ - vida /bˈiðə/
+		vir /vˈih/ - venir /bənˈi/
+		vila /vˈilɐ/ - vila /bˈilə/
+		via /vˈiɐ/ - via /bˈiə/
+		vinho /vˈĩj̃u/ - vi /bˈi/
+		voo /vˈou/ - vol /bˈɔl/
+		verme /vˈɛɦmi/ - verm /bˈɛrm/
+		ɡraxa /ɡɾˈaʃɐ/ - ɡras /ɡrˈas/
+		ɡrosso /ɡɾˈosu/ - ɡros /ɡɾˈɔs/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡra /ɡɾˈa/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡran /ɡɾˈan/
+		ɡato /ɡˈatu/ - ɡat /ɡˈat/
+		ɡota /ɡˈotɐ/ - ɡota /ɡˈotə/
+		chamar /ʃamˈah/ - clamar /kləmˈa/
+		chorar /ʃoɾˈah/ - plorar /pluɾˈa/
+		chaɡa /ʃˈaɡɐ/ - plaɡa /plˈaɣə/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		chuva /ʃˈuvɐ/ - pluja /plˈuʒə/
+		ɡenɡiva /ʒẽʒˈivɐ/ - ɡeniva /ʒənˈiβə/
+		joelho /ʒuˈeʎu/ - ɡenoll /ʒənˈoʎ/
+		juiz /ʒuˈiʃ/ - jutɡe /ʒˈuʤə/
+		ɡenro /ʒˈẽhu/ - ɡendre /ʒˈɛndɾə/
+		ɡente /ʒˈẽʧi/ - ɡent /ʒˈen/
+		joɡo /ʒˈoɡu/ - joc /ʒˈɔk/
+		junho /ʒˈũj̃u/ - juny /ʒˈuɲ/
+		junto /ʒˈũtu/ - junt /ʒˈun/
+		jovem /ʒˈɔvẽj̃/ - jove /ʒˈoβə/
+		ʤizer /ʤizˈeh/ - dir /dˈi/
+		ʤia /ʤˈiɐ/ - dia /dˈiə/
+		ʤiɡo /ʤˈiɡu/ - dic /dˈik/
+		alva /ˈawvɐ/ - alba /ˈalβə/
+		áɡua /ˈaɡwɐ/ - aiɡua /ˈajɣwə/
+		árvore /ˈaɦvoɾi/ - arbre /ˈaβɾə/
+		alho /ˈaʎu/ - all /ˈaʎ/
+		ele /ˈeli/ - ell /ˈeʎ/
+		ínsua /ˈĩswɐ/ - illa /ˈiʎə/
+		oito /ˈojtu/ - vuit /bˈujt/
+		osso /ˈosu/ - os /ˈɔs/
+		outro /ˈowtɾu/ - altre /ˈaltɾə/
+		ouro /ˈowɾu/ - or /ˈɔr/
+		olhos /ˈoʎuʃ/ - ulls /ˈuʎs/
+		homem /ˈõmẽj̃/ - home /ˈɔmə/
+		unha /ˈũj̃ɐ/ - unɡla /ˈuŋɡlə/
+		ano /ˈɐ̃nu/ - any /ˈaɲ/
+		anjo /ˈɐ̃ʒu/ - ànɡel /ˈaɲʒəl/
+		obra /ˈɔbɾɐ/ - obra /ˈɔβɾə/
+		elo /ˈɛlu/ - anell /ənˈeʎ/
+
+Final disqualified:
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		pássaro /pˈasɐɾu/ - ocell /usˈeʎ/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+		eu /ˈew/ - jo /ʒˈɔ/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 240
+	Disqualified: 252
+	Added: 0
+	Removed: 6
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		chorar /ʃoɾˈah/ - plànyer /plˈaɲə/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+		ler /lˈeɾ/ - lleɡir /ʎəʒˈi/
+
+Iteration 2
+	Qualified: 237
+	Disqualified: 255
+	Added: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+	Removed: 4
+		chor /ʃˈoh/ - flor /flˈɔ/
+		noite /nˈojʧi/ - nit /nˈit/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+		pequeno /pekˈẽnu/ - petit /pətˈit/
+
+Iteration 3
+	Qualified: 237
+	Disqualified: 255
+	Added: 1
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+	Removed: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+
+Iteration 4
+	Qualified: 240
+	Disqualified: 252
+	Added: 4
+		chor /ʃˈoh/ - flor /flˈɔ/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		ler /lˈeɾ/ - lleɡir /ʎəʒˈi/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+	Removed: 1
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Iteration 5
+	Qualified: 241
+	Disqualified: 251
+	Added: 2
+		noite /nˈojʧi/ - nit /nˈit/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+	Removed: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+
+Iteration 6
+	Qualified: 241
+	Disqualified: 251
+	Added: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		pequeno /pekˈẽnu/ - petit /pətˈit/
+	Removed: 2
+		chor /ʃˈoh/ - flor /flˈɔ/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Iteration 7
+	Qualified: 243
+	Disqualified: 249
+	Added: 3
+		chor /ʃˈoh/ - flor /flˈɔ/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+	Removed: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+
+Iteration 8
+	Qualified: 244
+	Disqualified: 248
+	Added: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+	Removed: 0
+
+Iteration 9
+	Qualified: 243
+	Disqualified: 249
+	Added: 0
+	Removed: 1
+		cheio /ʃˈeju/ - ple /plˈɛ/
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - abella /əβˈɛʎə/
+		arɡila /aɦʒˈilɐ/ - arɡila /ərʒˈilə/
+		aranha /aɾˈɐ̃j̃ɐ/ - aranya /əɾˈaɲə/
+		ajudar /aʒudˈah/ - ajudar /əʒuðˈa/
+		ajudo /aʒˈudu/ - ajudo /əʒˈuðu/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		branco /bɾˈɐ̃ku/ - blanc /blˈaŋ/
+		bem /bˈẽj̃/ - bé /bˈe/
+		boi /bˈoj/ - bou /bˈɔw/
+		boca /bˈokɐ/ - boca /bˈokə/
+		boas /bˈoɐʃ/ - bones /bˈɔnəs/
+		bom /bˈõ/ - bo /bˈɔ/
+		bons /bˈõʃ/ - bons /bˈɔns/
+		banho /bˈɐ̃j̃u/ - bany /bˈaɲ/
+		belo /bˈɛlu/ - bell /bˈeʎ/
+		bela /bˈɛlɐ/ - bella /bˈeʎə/
+		dormir /doɦmˈih/ - dormir /durmˈi/
+		draɡão /dɾaɡˈɐ̃w̃/ - draɡó /dɾəɣˈo/
+		dedo /dˈedu/ - dit /dˈit/
+		deus /dˈewʃ/ - déu /dˈew/
+		dente /dˈẽʧi/ - dent /dˈen/
+		dois /dˈojʃ/ - dos /dˈos/
+		doze /dˈozi/ - dotze /dˈodzə/
+		dom /dˈõ/ - do /dˈo/
+		dona /dˈõnɐ/ - dona /dˈɔnə/
+		duas /dˈuɐʃ/ - dues /dˈuəs/
+		dez /dˈɛjʃ/ - deu /dˈɛw/
+		escutar /eskutˈah/ - escoltar /əskultˈa/
+		escrever /eskɾevˈeh/ - escriure /əskɾˈiwɾə/
+		espiɡa /eʃpˈiɡɐ/ - espiɡa /əspˈiɣə/
+		espinha /eʃpˈĩj̃ɐ/ - espina /əspˈinə/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - Espanya /əspˈaɲə/
+		estrela /eʃtɾˈelɐ/ - estrella /əstɾˈeʎə/
+		estado /eʃtˈadu/ - estat /əstˈat/
+		fazer /fazˈeh/ - fer /fˈe/
+		farinha /faɾˈĩj̃ɐ/ - farina /fəɾˈinə/
+		frio /fɾˈiu/ - fred /fɾˈɛt/
+		fruito /fɾˈujtu/ - fruit /fɾˈujt/
+		fada /fˈadɐ/ - fada /fˈaðə/
+		falso /fˈawsu/ - falso /fˈals/
+		fêmea /fˈẽmeɐ/ - fembra /fˈɛmbrə/
+		fio /fˈiw/ - fil /fˈil/
+		fíɡado /fˈiɡɐdu/ - fetɡe /fˈeʤə/
+		filho /fˈiʎu/ - fill /fˈiʎ/
+		filha /fˈiʎɐ/ - filla /fˈiʎə/
+		fim /fˈĩ/ - fi /fˈi/
+		fino /fˈĩnu/ - fin /fˈi/
+		foɡo /fˈoɡu/ - foc /fˈɔk/
+		folha /fˈoʎɐ/ - fulla /fˈuʎə/
+		fumo /fˈũmu/ - fum /fˈum/
+		forte /fˈɔhʧi/ - fort /fˈɔrt/
+		ferro /fˈɛhu/ - ferro /fˈɛru/
+		festa /fˈɛʃtɐ/ - festa /fˈestə/
+		razão /hazˈɐ̃w̃/ - raó /rəˈo/
+		rainha /haˈĩj̃ɐ/ - reina /rˈejnə/
+		redondo /hedˈõdu/ - rodó /ruðˈo/
+		rei /hˈej/ - rei /rˈej/
+		rio /hˈiu/ - riu /rˈiw/
+		roxo /hˈoʃu/ - roiɡ /rˈɔʧ/
+		ruivo /hˈujvu/ - roiɡ /rˈɔʧ/
+		iɡual /iɡwˈaw/ - iɡual /iɣwˈal/
+		irmão /iɦmˈɐ̃w̃/ - ɡermà /ʒərmˈa/
+		inverno /ĩvˈɛɦnu/ - hivern /iβˈɛrn/
+		cadeia /kadˈejɐ/ - cadena /kəðˈɛnə/
+		caçar /kasˈah/ - caçar /kəsˈa/
+		cavalo /kavˈalu/ - cavall /kəβˈaʎ/
+		queimar /kejmˈah/ - cremar /kɾəmˈa/
+		conhecer /kõj̃esˈeh/ - conèixer /kunˈɛʃə/
+		cortiça /kuhʧˈisɐ/ - escorça /əskˈɔrsə/
+		crer /kɾˈeh/ - creure /kɾˈɛwɾə/
+		cruz /kɾˈujʃ/ - creu /kɾˈɛw/
+		casa /kˈazɐ/ - casa /kˈazə/
+		carne /kˈaɦni/ - carn /kˈarn/
+		caro /kˈaɾu/ - car /kˈar/
+		que /kˈi/ - què /kˈɛ/
+		corpo /kˈohpu/ - cos /kˈɔs/
+		corno /kˈoɦnu/ - corn /kˈɔrn/
+		coxa /kˈoʃɐ/ - cuixa /kˈuʃə/
+		curto /kˈuhtu/ - curt /kˈuɾt/
+		canto /kˈɐ̃tu/ - cant /kˈan/
+		cão /kˈɐ̃w̃/ - ca /kˈa/
+		cor /kˈɔh/ - cor /kˈɔr/
+		colo /kˈɔlu/ - coll /kˈɔʎ/
+		levar /levˈah/ - llevar /ʎəβˈa/
+		leão /leˈɐ̃w̃/ - lleó /ʎəˈo/
+		laɡo /lˈaɡu/ - llac /ʎˈak/
+		lei /lˈej/ - llei /ʎˈej/
+		leito /lˈejtu/ - llit /ʎˈit/
+		leite /lˈejʧi/ - llet /ʎˈet/
+		ler /lˈeɾ/ - lleɡir /ʎəʒˈi/
+		lenha /lˈẽj̃ɐ/ - llenya /ʎˈeɲə/
+		livre /lˈivɾi/ - lliure /ʎˈiwɾə/
+		línɡua /lˈĩɡwɐ/ - llenɡua /ʎˈɛŋɡwə/
+		lobo /lˈobu/ - llop /ʎˈop/
+		loɡo /lˈoɡu/ - lloc /ʎˈɔk/
+		luta /lˈutɐ/ - lluita /ʎˈujtə/
+		lã /lˈɐ̃/ - llana /ʎˈanə/
+		lebre /lˈɛbɾi/ - llebre /ʎˈeβɾə/
+		maduro /madˈuɾu/ - madur /məðˈu/
+		metade /metˈaʤi/ - meitat /məjtˈat/
+		melhor /meʎˈɔh/ - millor /miʎˈo/
+		morseɡar /mohseɡˈah/ - mosseɡar /musəɣˈa/
+		montanha /mõtˈɐ̃j̃ɐ/ - muntanya /muntˈaɲə/
+		matar /mɐtˈah/ - matar /mətˈa/
+		mar /mˈah/ - mar /mˈar/
+		meio /mˈeju/ - miɡ /mˈiʧ/
+		me /mˈi/ - me /mə/
+		miɡa /mˈiɡɐ/ - mica /mˈikə/
+		mosca /mˈoʃkɐ/ - mosca /mˈoskə/
+		muito /mˈũj̃tu/ - molt /mˈol/
+		mão /mˈɐ̃w̃/ - mà /mˈa/
+		morte /mˈɔhʧi/ - mort /mˈɔrt/
+		mel /mˈɛw/ - mel /mˈɛl/
+		nadar /nadˈah/ - nedar /nəðˈa/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+		nariz /naɾˈiʃ/ - nas /nˈas/
+		nenhum /nẽj̃ˈũ/ - ninɡú /niŋɡˈu/
+		não /nɐ̃w̃/ - no /nˈo/
+		neɡro /nˈeɡɾu/ - neɡre /nˈɛɣɾə/
+		noite /nˈojʧi/ - nit /nˈit/
+		nome /nˈõmi/ - nom /nˈɔm/
+		nuvem /nˈuvẽj̃/ - niu /nˈiw/
+		nuvem /nˈuvẽj̃/ - núvol /nˈuβul/
+		nós /nˈɔjʃ/ - nosaltres /nuzˈaltɾəs/
+		noz /nˈɔjʃ/ - nou /nˈɔw/
+		nosso /nˈɔsu/ - nostre /nˈɔstɾə/
+		nove /nˈɔvi/ - nou /nˈɔw/
+		neve /nˈɛvi/ - neu /nˈew/
+		obreiro /obɾˈejɾu/ - obrer /ubɾˈe/
+		odor /odˈoh/ - olor /ulˈo/
+		ovelha /ovˈeʎɐ/ - ovella /uβˈɛʎə/
+		orelha /oɾˈeʎɐ/ - orella /uɾˈɛʎə/
+		palavra /palˈavɾɐ/ - paraula /pəɾˈawlə/
+		pequeno /pekˈẽnu/ - petit /pətˈit/
+		piolho /piˈoʎu/ - poll /pˈoʎ/
+		poder /podˈeh/ - poder /puðˈɛ/
+		paz /pˈajʃ/ - pau /pˈaw/
+		paço /pˈasu/ - palau /pəlˈaw/
+		peito /pˈejtu/ - pit /pˈit/
+		peixe /pˈejʃi/ - peix /pˈeʃ/
+		pelo /pˈelu/ - cabell /kəβˈɛʎ/
+		pelo /pˈelu/ - pèl /pˈɛl/
+		pena /pˈenɐ/ - pena /pˈɛnə/
+		pena /pˈẽnɐ/ - ploma /plˈomə/
+		pena /pˈẽnɐ/ - penya /pˈɛɲə/
+		pôr /pˈoh/ - pondre /pˈɔndɾə/
+		porco /pˈohku/ - porc /pˈɔrk/
+		poio /pˈoju/ - puiɡ /pˈuʧ/
+		pouco /pˈowku/ - poc /pˈɔk/
+		pões /pˈõj̃ʃ/ - pons /pˈɔns/
+		ponto /pˈõtu/ - punt /pˈun/
+		ponte /pˈõʧi/ - pont /pˈɔn/
+		punho /pˈũj̃u/ - puny /pˈuɲ/
+		pobre /pˈɔbɾi/ - pobre /pˈɔβɾə/
+		porca /pˈɔhkɐ/ - porca /pˈɔrkə/
+		pé /pˈɛ/ - peu /pˈɛw/
+		pedra /pˈɛdɾɐ/ - pedra /pˈeðɾə/
+		pele /pˈɛli/ - pell /pˈeʎ/
+		saber /sabˈeh/ - saber /səβˈɛ/
+		semana /semˈɐ̃nɐ/ - setmana /səmmˈanə/
+		seɡuro /seɡˈuɾu/ - seɡur /səɣˈu/
+		cereja /seɾˈeʒɐ/ - cirera /siɾˈeɾə/
+		sentar /sẽtˈah/ - seure /sˈɛwɾə/
+		cidade /sidˈaʤi/ - ciutat /siwtˈat/
+		cinquenta /sĩkwˈẽtɐ/ - cinquanta /siŋkwˈantə/
+		sabes /sˈabiʃ/ - saps /sˈaps/
+		sábio /sˈabju/ - savi /sˈaβi/
+		saiba /sˈajbɐ/ - sàpiɡa /sˈapiɣə/
+		sal /sˈaw/ - sal /sˈal/
+		salsa /sˈawsɐ/ - salsa /sˈalsə/
+		seda /sˈedɐ/ - seda /sˈɛðə/
+		seis /sˈejʃ/ - sis /sˈis/
+		seco /sˈeku/ - sec /sˈɛk/
+		seca /sˈekɐ/ - seca /sˈɛkə/
+		cima /sˈĩmɐ/ - cima /sˈimə/
+		cinza /sˈĩzɐ/ - cendre /sˈɛndɾə/
+		sobre /sˈobɾi/ - sobre /sˈoβɾə/
+		santo /sˈɐ̃tu/ - sant /sˈan/
+		são /sˈɐ̃w̃/ - sa /sˈa/
+		sanɡue /sˈɐ̃ɡi/ - sanɡ /sˈaŋ/
+		sol /sˈɔw/ - solell /sulˈɛʎ/
+		sol /sˈɔw/ - sol /sˈɔl/
+		sete /sˈɛʧi/ - set /sˈɛt/
+		três /tɾˈejʃ/ - tres /tɾˈɛs/
+		tempo /tˈẽpu/ - temps /tˈems/
+		touro /tˈowɾu/ - tor /tˈɔr/
+		tú /tˈu/ - tu /tˈu/
+		terra /tˈɛhɐ/ - terra /tˈɛrə/
+		testa /tˈɛʃtɐ/ - testa /tˈestə/
+		verɡonha /veɦɡˈõj̃ɐ/ - verɡonya /bərɡˈoɲə/
+		vilão /vilˈɐ̃w̃/ - vilà /bilˈa/
+		voar /voˈah/ - volar /bulˈa/
+		vaca /vˈakɐ/ - vaca /bˈakə/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		verde /vˈeɦʤi/ - verd /bˈɛrt/
+		velho /vˈeʎu/ - vell /bˈeʎ/
+		vento /vˈẽtu/ - vent /bˈen/
+		vila /vˈilɐ/ - vila /bˈilə/
+		via /vˈiɐ/ - via /bˈiə/
+		vinho /vˈĩj̃u/ - vi /bˈi/
+		vinte /vˈĩʧi/ - vin /bˈin/
+		vós /vˈɔjʃ/ - vosaltres /buzˈaltɾəs/
+		voz /vˈɔjʃ/ - veu /bˈɛw/
+		verme /vˈɛɦmi/ - verm /bˈɛrm/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡra /ɡɾˈa/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡran /ɡɾˈan/
+		ɡato /ɡˈatu/ - ɡat /ɡˈat/
+		ɡota /ɡˈotɐ/ - ɡota /ɡˈotə/
+		ɡola /ɡˈɔlɐ/ - ɡola /ɡˈolə/
+		chamar /ʃamˈah/ - clamar /kləmˈa/
+		chorar /ʃoɾˈah/ - plorar /pluɾˈa/
+		chaɡa /ʃˈaɡɐ/ - plaɡa /plˈaɣə/
+		chor /ʃˈoh/ - flor /flˈɔ/
+		chuva /ʃˈuvɐ/ - pluja /plˈuʒə/
+		chama /ʃˈɐ̃mɐ/ - flama /flˈamə/
+		ɡear /ʒeˈah/ - ɡlaçar /ɡləsˈa/
+		ɡear /ʒeˈah/ - ɡelar /ʒəlˈa/
+		ɡenɡiva /ʒẽʒˈivɐ/ - ɡeniva /ʒənˈiβə/
+		joelho /ʒuˈeʎu/ - ɡenoll /ʒənˈoʎ/
+		juiz /ʒuˈiʃ/ - jutɡe /ʒˈuʤə/
+		ɡenro /ʒˈẽhu/ - ɡendre /ʒˈɛndɾə/
+		ɡente /ʒˈẽʧi/ - ɡent /ʒˈen/
+		joɡo /ʒˈoɡu/ - joc /ʒˈɔk/
+		junto /ʒˈũtu/ - junt /ʒˈun/
+		jovem /ʒˈɔvẽj̃/ - jove /ʒˈoβə/
+		ʤizer /ʤizˈeh/ - dir /dˈi/
+		ʤia /ʤˈiɐ/ - dia /dˈiə/
+		ʤiɡo /ʤˈiɡu/ - dic /dˈik/
+		alva /ˈawvɐ/ - alba /ˈalβə/
+		áɡua /ˈaɡwɐ/ - aiɡua /ˈajɣwə/
+		alho /ˈaʎu/ - all /ˈaʎ/
+		ele /ˈeli/ - ell /ˈeʎ/
+		ilha /ˈiʎɐ/ - illa /ˈiʎə/
+		ínsua /ˈĩswɐ/ - illa /ˈiʎə/
+		osso /ˈosu/ - os /ˈɔs/
+		outro /ˈowtɾu/ - altre /ˈaltɾə/
+		olho /ˈoʎu/ - ull /ˈuʎ/
+		olhos /ˈoʎuʃ/ - ulls /ˈuʎs/
+		usso /ˈusu/ - ós /ˈos/
+		um /ˈũ/ - u /ˈu/
+		anjo /ˈɐ̃ʒu/ - ànɡel /ˈaɲʒəl/
+		obra /ˈɔbɾɐ/ - obra /ˈɔβɾə/
+		erva /ˈɛɦvɐ/ - herba /ˈerβə/
+
+Final disqualified:
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		chorar /ʃoɾˈah/ - plànyer /plˈaɲə/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 235
+	Disqualified: 257
+	Added: 0
+	Removed: 11
+		ʤizer /ʤizˈeh/ - dir /dˈi/
+		pássaro /pˈasɐɾu/ - ocell /usˈeʎ/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		ɡenro /ʒˈẽhu/ - ɡendre /ʒˈɛndɾə/
+		nariz /naɾˈiʃ/ - nas /nˈas/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		vir /vˈih/ - venir /bənˈi/
+		chorar /ʃoɾˈah/ - plànyer /plˈaɲə/
+		eu /ˈew/ - jo /ʒˈɔ/
+		ler /lˈeɾ/ - lleɡir /ʎəʒˈi/
+
+Iteration 2
+	Qualified: 233
+	Disqualified: 259
+	Added: 3
+		vir /vˈih/ - venir /bənˈi/
+		nariz /naɾˈiʃ/ - nas /nˈas/
+		ɡenro /ʒˈẽhu/ - ɡendre /ʒˈɛndɾə/
+	Removed: 5
+		noite /nˈojʧi/ - nit /nˈit/
+		chor /ʃˈoh/ - flor /flˈɔ/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		corpo /kˈohpu/ - cos /kˈɔs/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+
+Iteration 3
+	Qualified: 235
+	Disqualified: 257
+	Added: 4
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		noite /nˈojʧi/ - nit /nˈit/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		corpo /kˈohpu/ - cos /kˈɔs/
+	Removed: 2
+		vir /vˈih/ - venir /bənˈi/
+		cor /kˈoh/ - color /kulˈo/
+
+Iteration 4
+	Qualified: 236
+	Disqualified: 256
+	Added: 3
+		vir /vˈih/ - venir /bənˈi/
+		ʤizer /ʤizˈeh/ - dir /dˈi/
+		cor /kˈoh/ - color /kulˈo/
+	Removed: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		noite /nˈojʧi/ - nit /nˈit/
+
+Iteration 5
+	Qualified: 238
+	Disqualified: 254
+	Added: 3
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		noite /nˈojʧi/ - nit /nˈit/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+	Removed: 1
+		vir /vˈih/ - venir /bənˈi/
+
+Iteration 6
+	Qualified: 236
+	Disqualified: 256
+	Added: 1
+		vir /vˈih/ - venir /bənˈi/
+	Removed: 3
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		ʤizer /ʤizˈeh/ - dir /dˈi/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Iteration 7
+	Qualified: 240
+	Disqualified: 252
+	Added: 5
+		ʤizer /ʤizˈeh/ - dir /dˈi/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		chor /ʃˈoh/ - flor /flˈɔ/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+	Removed: 1
+		vir /vˈih/ - venir /bənˈi/
+
+Iteration 8
+	Qualified: 240
+	Disqualified: 252
+	Added: 2
+		vir /vˈih/ - venir /bənˈi/
+		ler /lˈeɾ/ - lleɡir /ʎəʒˈi/
+	Removed: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Iteration 9
+	Qualified: 241
+	Disqualified: 251
+	Added: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+	Removed: 1
+		chor /ʃˈoh/ - flor /flˈɔ/
+
+Iteration 10
+	Qualified: 240
+	Disqualified: 252
+	Added: 1
+		chor /ʃˈoh/ - flor /flˈɔ/
+	Removed: 2
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - abella /əβˈɛʎə/
+		aɡulha /aɡˈuʎɐ/ - aɡulla /əɣˈuʎə/
+		arɡila /aɦʒˈilɐ/ - arɡila /ərʒˈilə/
+		ajudar /aʒudˈah/ - ajudar /əʒuðˈa/
+		ajudo /aʒˈudu/ - ajudo /əʒˈuðu/
+		baixo /bˈajʃu/ - baix /bˈaʃ/
+		bem /bˈẽj̃/ - bé /bˈe/
+		boi /bˈoj/ - bou /bˈɔw/
+		boca /bˈokɐ/ - boca /bˈokə/
+		boa /bˈoɐ/ - bona /bˈɔnə/
+		bom /bˈõ/ - bo /bˈɔ/
+		bons /bˈõʃ/ - bons /bˈɔns/
+		banho /bˈɐ̃j̃u/ - bany /bˈaɲ/
+		dormir /doɦmˈih/ - dormir /durmˈi/
+		draɡão /dɾaɡˈɐ̃w̃/ - draɡó /dɾəɣˈo/
+		draɡão /dɾaɡˈɐ̃w̃/ - drac /dɾˈak/
+		dar /dˈah/ - dar /dˈa/
+		deus /dˈewʃ/ - déu /dˈew/
+		dente /dˈẽʧi/ - dent /dˈen/
+		dois /dˈojʃ/ - dos /dˈos/
+		doce /dˈosi/ - dolç /dˈols/
+		dom /dˈõ/ - do /dˈo/
+		duas /dˈuɐʃ/ - dues /dˈuəs/
+		dez /dˈɛjʃ/ - deu /dˈɛw/
+		escutar /eskutˈah/ - escoltar /əskultˈa/
+		escrever /eskɾevˈeh/ - escriure /əskɾˈiwɾə/
+		espada /eʃpˈadɐ/ - espasa /əspˈazə/
+		espiɡa /eʃpˈiɡɐ/ - espiɡa /əspˈiɣə/
+		espinha /eʃpˈĩj̃ɐ/ - espina /əspˈinə/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - Espanya /əspˈaɲə/
+		estado /eʃtˈadu/ - estat /əstˈat/
+		estio /eʃʧˈiw/ - estiu /əstˈiw/
+		fazer /fazˈeh/ - fer /fˈe/
+		farinha /faɾˈĩj̃ɐ/ - farina /fəɾˈinə/
+		frio /fɾˈiu/ - fred /fɾˈɛt/
+		fruito /fɾˈujtu/ - fruit /fɾˈujt/
+		fada /fˈadɐ/ - fada /fˈaðə/
+		fêmea /fˈẽmeɐ/ - fembra /fˈɛmbrə/
+		fíɡado /fˈiɡɐdu/ - fetɡe /fˈeʤə/
+		filho /fˈiʎu/ - fill /fˈiʎ/
+		força /fˈohsɐ/ - força /fˈɔrsə/
+		folha /fˈoʎɐ/ - fulla /fˈuʎə/
+		fumo /fˈũmu/ - fum /fˈum/
+		forte /fˈɔhʧi/ - fort /fˈɔrt/
+		fome /fˈɔmi/ - fam /fˈam/
+		festa /fˈɛʃtɐ/ - festa /fˈestə/
+		razão /hazˈɐ̃w̃/ - raó /rəˈo/
+		rainha /haˈĩj̃ɐ/ - reina /rˈejnə/
+		redondo /hedˈõdu/ - rodó /ruðˈo/
+		rio /hˈiu/ - riu /rˈiw/
+		roxo /hˈoʃu/ - roiɡ /rˈɔʧ/
+		iɡual /iɡwˈaw/ - iɡual /iɣwˈal/
+		irmão /iɦmˈɐ̃w̃/ - ɡermà /ʒərmˈa/
+		inverno /ĩvˈɛɦnu/ - hivern /iβˈɛrn/
+		cadeia /kadˈejɐ/ - cadena /kəðˈɛnə/
+		caçar /kasˈah/ - caçar /kəsˈa/
+		cavalo /kavˈalu/ - cavall /kəβˈaʎ/
+		castelo /kaʃtˈɛlu/ - castell /kəstˈeʎ/
+		conhecer /kõj̃esˈeh/ - conèixer /kunˈɛʃə/
+		cortiça /kuhʧˈisɐ/ - escorça /əskˈɔrsə/
+		quatro /kwˈatɾu/ - quatre /kwˈatɾə/
+		cambiar /kɐ̃bjˈah/ - canviar /kəmbjˈa/
+		crer /kɾˈeh/ - creure /kɾˈɛwɾə/
+		cruz /kɾˈujʃ/ - creu /kɾˈɛw/
+		caldo /kˈawdu/ - cald /kˈalt/
+		casa /kˈazɐ/ - casa /kˈazə/
+		carne /kˈaɦni/ - carn /kˈarn/
+		caro /kˈaɾu/ - car /kˈar/
+		quem /kˈẽj̃/ - qui /kˈi/
+		que /kˈi/ - què /kˈɛ/
+		cor /kˈoh/ - color /kulˈo/
+		corpo /kˈohpu/ - cos /kˈɔs/
+		corno /kˈoɦnu/ - corn /kˈɔrn/
+		coxa /kˈoʃɐ/ - cuixa /kˈuʃə/
+		cu /kˈu/ - cul /kˈul/
+		curto /kˈuhtu/ - curt /kˈuɾt/
+		canto /kˈɐ̃tu/ - cant /kˈan/
+		cão /kˈɐ̃w̃/ - ca /kˈa/
+		cor /kˈɔh/ - cor /kˈɔr/
+		colo /kˈɔlu/ - coll /kˈɔʎ/
+		costa /kˈɔʃtɐ/ - costa /kˈɔstə/
+		levar /levˈah/ - llevar /ʎəβˈa/
+		láɡrima /lˈaɡɾimɐ/ - llàɡrima /ʎˈaɣɾimə/
+		lei /lˈej/ - llei /ʎˈej/
+		leito /lˈejtu/ - llit /ʎˈit/
+		leite /lˈejʧi/ - llet /ʎˈet/
+		ler /lˈeɾ/ - lleɡir /ʎəʒˈi/
+		lenha /lˈẽj̃ɐ/ - llenya /ʎˈeɲə/
+		línɡua /lˈĩɡwɐ/ - llenɡua /ʎˈɛŋɡwə/
+		lobo /lˈobu/ - llop /ʎˈop/
+		loɡo /lˈoɡu/ - lloc /ʎˈɔk/
+		luz /lˈujʃ/ - llum /ʎˈum/
+		luta /lˈutɐ/ - lluita /ʎˈujtə/
+		lua /lˈuɐ/ - lluna /ʎˈunə/
+		lã /lˈɐ̃/ - llana /ʎˈanə/
+		lebre /lˈɛbɾi/ - llebre /ʎˈeβɾə/
+		maduro /madˈuɾu/ - madur /məðˈu/
+		metade /metˈaʤi/ - meitat /məjtˈat/
+		melhor /meʎˈɔh/ - millor /miʎˈo/
+		morseɡar /mohseɡˈah/ - mosseɡar /musəɣˈa/
+		morrer /mohˈeh/ - morir /muɾˈi/
+		morder /moɦdˈeh/ - mosseɡar /musəɣˈa/
+		matar /mɐtˈah/ - matar /mətˈa/
+		mar /mˈah/ - mar /mˈar/
+		meio /mˈeju/ - miɡ /mˈiʧ/
+		me /mˈi/ - me /mə/
+		mil /mˈiw/ - mil /mˈil/
+		miɡa /mˈiɡɐ/ - mica /mˈikə/
+		mosca /mˈoʃkɐ/ - mosca /mˈoskə/
+		muito /mˈũj̃tu/ - molt /mˈol/
+		morte /mˈɔhʧi/ - mort /mˈɔrt/
+		mel /mˈɛw/ - mel /mˈɛl/
+		nadar /nadˈah/ - nedar /nəðˈa/
+		nascer /nasˈeh/ - néixer /nˈeʃə/
+		nariz /naɾˈiʃ/ - nas /nˈas/
+		não /nɐ̃w̃/ - no /nˈo/
+		noite /nˈojʧi/ - nit /nˈit/
+		novo /nˈovu/ - nou /nˈɔw/
+		nome /nˈõmi/ - nom /nˈɔm/
+		nuvem /nˈuvẽj̃/ - niu /nˈiw/
+		nuvem /nˈuvẽj̃/ - núvol /nˈuβul/
+		nós /nˈɔjʃ/ - nosaltres /nuzˈaltɾəs/
+		noz /nˈɔjʃ/ - nou /nˈɔw/
+		nosso /nˈɔsu/ - nostre /nˈɔstɾə/
+		neve /nˈɛvi/ - neu /nˈew/
+		obreiro /obɾˈejɾu/ - obrer /ubɾˈe/
+		odor /odˈoh/ - olor /ulˈo/
+		orelha /oɾˈeʎɐ/ - orella /uɾˈɛʎə/
+		palavra /palˈavɾɐ/ - paraula /pəɾˈawlə/
+		pequeno /pekˈẽnu/ - petit /pətˈit/
+		piolho /piˈoʎu/ - poll /pˈoʎ/
+		poder /podˈeh/ - poder /puðˈɛ/
+		preço /pɾˈesu/ - preu /pɾˈɛw/
+		paz /pˈajʃ/ - pau /pˈaw/
+		paço /pˈasu/ - palau /pəlˈaw/
+		peito /pˈejtu/ - pit /pˈit/
+		peixe /pˈejʃi/ - peix /pˈeʃ/
+		pelo /pˈelu/ - pèl /pˈɛl/
+		pena /pˈenɐ/ - pena /pˈɛnə/
+		pena /pˈẽnɐ/ - ploma /plˈomə/
+		pena /pˈẽnɐ/ - penya /pˈɛɲə/
+		pôr /pˈoh/ - pondre /pˈɔndɾə/
+		porco /pˈohku/ - porc /pˈɔrk/
+		poio /pˈoju/ - puiɡ /pˈuʧ/
+		poço /pˈosu/ - pou /pˈow/
+		pouco /pˈowku/ - poc /pˈɔk/
+		pões /pˈõj̃ʃ/ - pons /pˈɔns/
+		ponte /pˈõʧi/ - pont /pˈɔn/
+		pobre /pˈɔbɾi/ - pobre /pˈɔβɾə/
+		porca /pˈɔhkɐ/ - porca /pˈɔrkə/
+		pedra /pˈɛdɾɐ/ - pedra /pˈeðɾə/
+		pele /pˈɛli/ - pell /pˈeʎ/
+		saber /sabˈeh/ - saber /səβˈɛ/
+		saúde /saˈuʤi/ - salut /səlˈut/
+		semana /semˈɐ̃nɐ/ - setmana /səmmˈanə/
+		seɡuro /seɡˈuɾu/ - seɡur /səɣˈu/
+		cereja /seɾˈeʒɐ/ - cirera /siɾˈeɾə/
+		cidade /sidˈaʤi/ - ciutat /siwtˈat/
+		cinquenta /sĩkwˈẽtɐ/ - cinquanta /siŋkwˈantə/
+		sabes /sˈabiʃ/ - saps /sˈaps/
+		sábio /sˈabju/ - savi /sˈaβi/
+		saiba /sˈajbɐ/ - sàpiɡa /sˈapiɣə/
+		salsa /sˈawsɐ/ - salsa /sˈalsə/
+		seda /sˈedɐ/ - seda /sˈɛðə/
+		seis /sˈejʃ/ - sis /sˈis/
+		seco /sˈeku/ - sec /sˈɛk/
+		seca /sˈekɐ/ - seca /sˈɛkə/
+		cera /sˈeɾɐ/ - cera /sˈeɾə/
+		cento /sˈẽtu/ - cent /sˈen/
+		cima /sˈĩmɐ/ - cima /sˈimə/
+		cinza /sˈĩzɐ/ - cendre /sˈɛndɾə/
+		sobre /sˈobɾi/ - sobre /sˈoβɾə/
+		sã /sˈɐ̃/ - sana /sˈanə/
+		santo /sˈɐ̃tu/ - sant /sˈan/
+		sol /sˈɔw/ - solell /sulˈɛʎ/
+		sol /sˈɔw/ - sol /sˈɔl/
+		sete /sˈɛʧi/ - set /sˈɛt/
+		todo /tˈodu/ - tot /tˈot/
+		touro /tˈowɾu/ - tor /tˈɔr/
+		tú /tˈu/ - tu /tˈu/
+		terra /tˈɛhɐ/ - terra /tˈɛrə/
+		vilão /vilˈɐ̃w̃/ - vilà /bilˈa/
+		vizinho /vizˈĩj̃u/ - veí /bəˈi/
+		voar /voˈah/ - volar /bulˈa/
+		vaca /vˈakɐ/ - vaca /bˈakə/
+		ver /vˈeh/ - veure /bˈɛwɾə/
+		velho /vˈeʎu/ - vell /bˈeʎ/
+		venho /vˈẽj̃u/ - vinc /bˈiŋ/
+		vento /vˈẽtu/ - vent /bˈen/
+		vida /vˈidɐ/ - vida /bˈiðə/
+		vir /vˈih/ - venir /bənˈi/
+		vila /vˈilɐ/ - vila /bˈilə/
+		vinho /vˈĩj̃u/ - vi /bˈi/
+		voo /vˈou/ - vol /bˈɔl/
+		vós /vˈɔjʃ/ - vosaltres /buzˈaltɾəs/
+		voz /vˈɔjʃ/ - veu /bˈɛw/
+		verme /vˈɛɦmi/ - verm /bˈɛrm/
+		ɡraxa /ɡɾˈaʃɐ/ - ɡras /ɡrˈas/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡran /ɡɾˈan/
+		ɡato /ɡˈatu/ - ɡat /ɡˈat/
+		ɡoivo /ɡˈojvu/ - ɡoiɡ /ɡˈɔʧ/
+		ɡota /ɡˈotɐ/ - ɡota /ɡˈotə/
+		chamar /ʃamˈah/ - clamar /kləmˈa/
+		chorar /ʃoɾˈah/ - plorar /pluɾˈa/
+		chaɡa /ʃˈaɡɐ/ - plaɡa /plˈaɣə/
+		chor /ʃˈoh/ - flor /flˈɔ/
+		chama /ʃˈɐ̃mɐ/ - flama /flˈamə/
+		ɡear /ʒeˈah/ - ɡlaçar /ɡləsˈa/
+		ɡenɡiva /ʒẽʒˈivɐ/ - ɡeniva /ʒənˈiβə/
+		joelho /ʒuˈeʎu/ - ɡenoll /ʒənˈoʎ/
+		juiz /ʒuˈiʃ/ - jutɡe /ʒˈuʤə/
+		ɡenro /ʒˈẽhu/ - ɡendre /ʒˈɛndɾə/
+		ɡente /ʒˈẽʧi/ - ɡent /ʒˈen/
+		joɡo /ʒˈoɡu/ - joc /ʒˈɔk/
+		junho /ʒˈũj̃u/ - juny /ʒˈuɲ/
+		junto /ʒˈũtu/ - junt /ʒˈun/
+		ʤizer /ʤizˈeh/ - dir /dˈi/
+		ʤia /ʤˈiɐ/ - dia /dˈiə/
+		ʤiɡo /ʤˈiɡu/ - dic /dˈik/
+		alva /ˈawvɐ/ - alba /ˈalβə/
+		áɡua /ˈaɡwɐ/ - aiɡua /ˈajɣwə/
+		árvore /ˈaɦvoɾi/ - arbre /ˈaβɾə/
+		alho /ˈaʎu/ - all /ˈaʎ/
+		ele /ˈeli/ - ell /ˈeʎ/
+		ilha /ˈiʎɐ/ - illa /ˈiʎə/
+		ínsua /ˈĩswɐ/ - illa /ˈiʎə/
+		osso /ˈosu/ - os /ˈɔs/
+		ovo /ˈovu/ - ou /ˈɔw/
+		outro /ˈowtɾu/ - altre /ˈaltɾə/
+		olho /ˈoʎu/ - ull /ˈuʎ/
+		olhos /ˈoʎuʃ/ - ulls /ˈuʎs/
+		homem /ˈõmẽj̃/ - home /ˈɔmə/
+		usso /ˈusu/ - ós /ˈos/
+		um /ˈũ/ - u /ˈu/
+		ano /ˈɐ̃nu/ - any /ˈaɲ/
+		anjo /ˈɐ̃ʒu/ - ànɡel /ˈaɲʒəl/
+		obra /ˈɔbɾɐ/ - obra /ˈɔβɾə/
+		elo /ˈɛlu/ - anell /ənˈeʎ/
+		ela /ˈɛlɐ/ - ella /ˈeʎə/
+		erva /ˈɛɦvɐ/ - herba /ˈerβə/
+
+Final disqualified:
+		beber /bebˈeh/ - beure /bˈɛwɾə/
+		belo /bˈɛlu/ - formós /fuɾmˈos/
+		pássaro /pˈasɐɾu/ - ocell /usˈeʎ/
+		chorar /ʃoɾˈah/ - plànyer /plˈaɲə/
+		cheio /ʃˈeju/ - ple /plˈɛ/
+		eu /ˈew/ - jo /ʒˈɔ/
+
+
+-------------------
+

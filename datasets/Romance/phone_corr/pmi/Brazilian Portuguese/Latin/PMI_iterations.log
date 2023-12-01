@@ -1,0 +1,2121 @@
+Same meaning pairs: 384
+****SAMPLE 1****
+Iteration 1
+	Qualified: 283
+	Disqualified: 331
+	Added: 0
+	Removed: 24
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		ʤizer /ʤizˈeh/ - dīcere /dˈiːkɛrɛ/
+		ovelha /ovˈeʎɐ/ - pecora /pˈɛkɔra/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		pássaro /pˈasɐɾu/ - avicellum /awɪkˈɛlʲlʲʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsam /foːrmˈoːsãː/
+		ʤia /ʤˈiɐ/ - diurnum /diˈʊrnʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		amarelo /amaɾˈɛlu/ - ɡalbinum /ɡˈaɫbɪnʊ̃ː/
+		ʤizer /ʤizˈeh/ - nārrāre /naːrrˈaːrɛ/
+		pé /pˈɛ/ - petiolum /pɛtiˈolʊ̃ː/
+		ela /ˈɛlɐ/ - ipsam /ˈɪpsãː/
+
+Iteration 2
+	Qualified: 278
+	Disqualified: 336
+	Added: 3
+		ela /ˈɛlɐ/ - ipsam /ˈɪpsãː/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+	Removed: 8
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		ruivo /hˈujvu/ - russum /rˈʊssʊ̃ː/
+		raiz /haˈiʃ/ - rādīcīnam /raːdiːkˈiːnãː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		cinza /sˈĩzɐ/ - cinerem /kˈɪnɛrɛ̃ː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		areia /aɾˈejɐ/ - sabula /sˈabʊɫa/
+
+Iteration 3
+	Qualified: 283
+	Disqualified: 331
+	Added: 5
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		ruivo /hˈujvu/ - russum /rˈʊssʊ̃ː/
+		raiz /haˈiʃ/ - rādīcīnam /raːdiːkˈiːnãː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+	Removed: 0
+
+Iteration 4
+	Qualified: 284
+	Disqualified: 330
+	Added: 3
+		ʤizer /ʤizˈeh/ - dīcere /dˈiːkɛrɛ/
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+	Removed: 2
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+
+Iteration 5
+	Qualified: 285
+	Disqualified: 329
+	Added: 2
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+	Removed: 1
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+
+Iteration 6
+	Qualified: 284
+	Disqualified: 330
+	Added: 1
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+	Removed: 2
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+
+Iteration 7
+	Qualified: 288
+	Disqualified: 326
+	Added: 4
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		cinza /sˈĩzɐ/ - cinerem /kˈɪnɛrɛ̃ː/
+	Removed: 0
+
+Iteration 8
+	Qualified: 290
+	Disqualified: 324
+	Added: 2
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+	Removed: 0
+
+Iteration 9
+	Qualified: 291
+	Disqualified: 323
+	Added: 1
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+	Removed: 0
+
+Iteration 10
+	Qualified: 291
+	Disqualified: 323
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - apiculam /apˈɪkʊɫãː/
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		amarelo /amaɾˈɛlu/ - amārellum /amaːrˈɛlʲlʲʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acūculam /akˈuːkʊɫãː/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		areia /aɾˈejɐ/ - harēnam /harˈeːnãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneam /arˈaːneãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneum /arˈaːneʊ̃ː/
+		achar /aʃˈah/ - afflāre /afflˈaːrɛ/
+		ajudar /aʒudˈah/ - adiūtāre /adiuːtˈaːrɛ/
+		ajudo /aʒˈudu/ - adiūtō /adiˈuːtoː/
+		beber /bebˈeh/ - bibere /bˈɪbɛrɛ/
+		branco /bɾˈɐ̃ku/ - blancum /blˈaŋkʊ̃ː/
+		baixo /bˈajʃu/ - bassum /bˈassʊ̃ː/
+		bem /bˈẽj̃/ - bene /bˈɛnɛ/
+		boi /bˈoj/ - bovem /bˈɔwɛ̃ː/
+		boca /bˈokɐ/ - bucca /bˈʊkkãː/
+		boa /bˈoɐ/ - bonam /bˈɔnãː/
+		boas /bˈoɐʃ/ - bonās /bˈɔnaːs/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+		banho /bˈɐ̃j̃u/ - baneum /bˈaneʊ̃ː/
+		belo /bˈɛlu/ - bellum /bˈɛlʲlʲʊ̃ː/
+		bela /bˈɛlɐ/ - bellam /bˈɛlʲlʲãː/
+		dormir /doɦmˈih/ - dormīre /dɔrmˈiːrɛ/
+		draɡão /dɾaɡˈɐ̃w̃/ - dracō /drˈakoː/
+		dar /dˈah/ - dare /dˈarɛ/
+		dedo /dˈedu/ - diɡitum /dˈɪɡɪtʊ̃ː/
+		dente /dˈẽʧi/ - dentem /dˈɛntɛ̃ː/
+		dois /dˈojʃ/ - duōs /dˈuoːs/
+		doa /dˈoɐ/ - dōnat /dˈoːnat/
+		dom /dˈõ/ - dōnum /dˈoːnʊ̃ː/
+		dona /dˈõnɐ/ - dominam /dˈɔmɪnãː/
+		duas /dˈuɐʃ/ - duae /dˈuae̯/
+		duas /dˈuɐʃ/ - duās /dˈuaːs/
+		escutar /eskutˈah/ - auscultāre /au̯skʊɫtˈaːrɛ/
+		escrever /eskɾevˈeh/ - scrībere /skrˈiːbɛrɛ/
+		escuro /eʃkˈuɾu/ - obscūrum /opskˈuːrʊ̃ː/
+		espada /eʃpˈadɐ/ - spatham /spˈatʰãː/
+		espiɡa /eʃpˈiɡɐ/ - spīcum /spˈiːkʊ̃ː/
+		espinha /eʃpˈĩj̃ɐ/ - spīnam /spˈiːnãː/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - ʜispāniam /hɪspˈaːniãː/
+		estrela /eʃtɾˈelɐ/ - stēllam /stˈeːlʲlʲãː/
+		estado /eʃtˈadu/ - statum /stˈatʊ̃ː/
+		estio /eʃʧˈiw/ - aestātem /ae̯stˈaːtɛ̃ː/
+		estio /eʃʧˈiw/ - aestīvum /ae̯stˈiːwʊ̃ː/
+		fazer /fazˈeh/ - facere /fˈakɛrɛ/
+		fazer /fazˈeh/ - fare /fˈarɛ/
+		farinha /faɾˈĩj̃ɐ/ - farīnam /farˈiːnãː/
+		frio /fɾˈiu/ - frīɡidum /frˈiːɡɪdʊ̃ː/
+		fruito /fɾˈujtu/ - frūctum /frˈuːktʊ̃ː/
+		fada /fˈadɐ/ - fātam /fˈaːtãː/
+		faço /fˈasu/ - faciō /fˈakioː/
+		fêmea /fˈẽmeɐ/ - fēminam /fˈeːmɪnãː/
+		fio /fˈiw/ - filum /fˈiːɫʊ̃ː/
+		fíɡado /fˈiɡɐdu/ - fīcātum /fˈiːkaːtʊ̃ː/
+		filho /fˈiʎu/ - filius /fˈiːlʲiʊs/
+		filha /fˈiʎɐ/ - fīliam /fˈiːlʲiãː/
+		fim /fˈĩ/ - fīnem /fˈiːnɛ̃ː/
+		foɡo /fˈoɡu/ - focum /fˈɔkʊ̃ː/
+		folha /fˈoʎɐ/ - foliam /fˈɔlʲiãː/
+		fumo /fˈũmu/ - fūmātam /fuːmˈaːtãː/
+		forte /fˈɔhʧi/ - fortem /fˈɔrtɛ̃ː/
+		fome /fˈɔmi/ - faminem /fˈaminɛ̃ː/
+		fome /fˈɔmi/ - famem /fˈamɛ̃ː/
+		razão /hazˈɐ̃w̃/ - ratiōnem /ratiˈoːnɛ̃ː/
+		raiz /haˈiʃ/ - rādīcīnam /raːdiːkˈiːnãː/
+		raiz /haˈiʃ/ - rādīcem /raːdˈiːkɛ̃ː/
+		redondo /hedˈõdu/ - rotundum /rɔtˈʊndʊ̃ː/
+		romão /homˈɐ̃w̃/ - rōmānum /roːmˈaːnʊ̃ː/
+		rei /hˈej/ - rēɡem /rˈeːɡɛ̃ː/
+		roxo /hˈoʃu/ - rubeum /rˈʊbeʊ̃ː/
+		roxo /hˈoʃu/ - russum /rˈʊssʊ̃ː/
+		ruivo /hˈujvu/ - rubeum /rˈʊbeʊ̃ː/
+		ruivo /hˈujvu/ - russum /rˈʊssʊ̃ː/
+		iɡual /iɡwˈaw/ - aequālem /ae̯kʷˈaːlɛ̃/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		irmão /iɦmˈɐ̃w̃/ - ɡermānum /ɡɛrmˈaːnʊ̃ː/
+		inverno /ĩvˈɛɦnu/ - hībernum /hiːbˈɛrnʊ̃ː/
+		cabelo /kabˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		cadeia /kadˈejɐ/ - catēnam /katˈeːnãː/
+		caçar /kasˈah/ - captiāre /kaptiˈaːrɛ/
+		cavalo /kavˈalu/ - caballum /kabˈalʲlʲʊ̃ː/
+		castelo /kaʃtˈɛlu/ - castellum /kastˈɛlʲlʲʊ̃ː/
+		conhecer /kõj̃esˈeh/ - coɡnōscere /kɔɡnˈoːskɛrɛ/
+		cortiça /kuhʧˈisɐ/ - corticeam /kɔrtˈɪkɛãː/
+		cortiça /kuhʧˈisɐ/ - corticem /kˈɔrtɪkɛ̃ː/
+		cortiça /kuhʧˈisɐ/ - scorteam /skˈɔrteãː/
+		quatro /kwˈatɾu/ - quattuor /kʷˈattuɔr/
+		cambiar /kɐ̃bjˈah/ - cambiāre /kambiˈaːrɛ/
+		crer /kɾˈeh/ - crēdere /krˈeːdɛrɛ/
+		cruz /kɾˈujʃ/ - crucem /krˈʊkɛ̃ː/
+		cabra /kˈabɾɐ/ - capram /kˈaprãː/
+		caldo /kˈawdu/ - caldum /kˈaɫdʊ̃ː/
+		casa /kˈazɐ/ - casae /kˈasae̯/
+		carne /kˈaɦni/ - carnem /kˈarnɛ̃ː/
+		quem /kˈẽj̃/ - quem /kʷˈɛ̃ː/
+		cor /kˈoh/ - colōrem /koɫˈoːrɛ̃ː/
+		corpo /kˈohpu/ - corpus /kˈɔrpʊs/
+		coisa /kˈojzɐ/ - causam /kˈau̯sãː/
+		corno /kˈoɦnu/ - cornū /kˈɔrnuː/
+		coxa /kˈoʃɐ/ - coxam /kˈɔksãː/
+		cu /kˈu/ - cūlum /kˈuːɫʊ̃ː/
+		curto /kˈuhtu/ - curtum /kˈʊrtʊ̃ː/
+		cunho /kˈũj̃u/ - cuneum /kˈʊneʊ̃ː/
+		canto /kˈɐ̃tu/ - cantum /kˈantʊ̃ː/
+		cão /kˈɐ̃w̃/ - canem /kˈanɛ̃ː/
+		cor /kˈɔh/ - corem /kˈɔrɛ̃ː/
+		costa /kˈɔʃtɐ/ - costam /kˈɔstãː/
+		levar /levˈah/ - levāre /ɫɛwˈaːrɛ/
+		leão /leˈɐ̃w̃/ - leōnem /ɫeˈoːnɛ̃ː/
+		láɡrima /lˈaɡɾimɐ/ - lacrimam /ɫˈakrɪmãː/
+		lei /lˈej/ - lēɡem /lˈeːɡɛ̃/
+		leito /lˈejtu/ - lectum /ɫˈɛktʊ̃ː/
+		letra /lˈetɾɐ/ - litteram /lʲˈɪttɛrãː/
+		ler /lˈeɾ/ - leɡere /ɫˈɛɡɛrɛ/
+		lenha /lˈẽj̃ɐ/ - liɡnam /lˈɪɡnãː/
+		livre /lˈivɾi/ - līberum /lˈibɛrʊ̃ː/
+		linha /lˈĩj̃ɐ/ - līneam /lˈiːneãː/
+		loɡo /lˈoɡu/ - locus /ɫˈɔkʊs/
+		luz /lˈujʃ/ - lūcem /lˈuːkɛ̃ː/
+		luz /lˈujʃ/ - lūmina /ɫˈuːmɪna/
+		luta /lˈutɐ/ - lūctam /ɫˈuːktãː/
+		lua /lˈuɐ/ - lunam /ɫˈuːnãː/
+		lã /lˈɐ̃/ - lānam /ɫˈaːnãː/
+		lebre /lˈɛbɾi/ - leporem /ɫˈɛpɔrɛ̃ː/
+		metade /metˈaʤi/ - medietātem /medietˈaːtɛ̃/
+		melhor /meʎˈɔh/ - meliōrem /mɛlʲiˈoːrɛ̃ː/
+		morseɡar /mohseɡˈah/ - mordēre /mˈɔrdeːrɛ/
+		morrer /mohˈeh/ - morīre /mɔrˈiːrɛ/
+		morder /moɦdˈeh/ - morsicāre /mɔrsɪkˈaːrɛ/
+		morder /moɦdˈeh/ - mordēre /mˈɔrdeːrɛ/
+		montanha /mõtˈɐ̃j̃ɐ/ - montaniam /mɔntˈaniãː/
+		matar /mɐtˈah/ - mactāre /maktˈaːrɛ/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+		mar /mˈah/ - mare /mˈarɛ/
+		meio /mˈeju/ - medium /mˈɛdiʊ̃ː/
+		me /mˈi/ - mē /mˈeː/
+		mil /mˈiw/ - mīlle /mˈiːlʲlʲɛ/
+		miɡa /mˈiɡɐ/ - mīcam /mˈiːkãː/
+		mosca /mˈoʃkɐ/ - muscam /mˈʊskãː/
+		muito /mˈũj̃tu/ - multum /mˈʊɫtʊ̃ː/
+		morte /mˈɔhʧi/ - mortem /mˈɔrtɛ̃ː/
+		nadar /nadˈah/ - natāre /natˈaːrɛ/
+		nariz /naɾˈiʃ/ - nārīcem /naːrˈiːkɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nē ipse ūnum /neː‿ipse‿ˈuːnʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nec ūnum /nɛk‿ˈuːnʊ̃ː/
+		não /nɐ̃w̃/ - nōn /noːn/
+		neɡro /nˈeɡɾu/ - niɡrum /nˈɪɡrʊ̃ː/
+		noite /nˈojʧi/ - noctem /nˈɔktɛ̃ː/
+		novo /nˈovu/ - novum /nˈɔwʊ̃ː/
+		nome /nˈõmi/ - nōmen /nˈoːmɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbem /nˈuːbɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbilam /nˈuːbɪɫãː/
+		nuvem /nˈuvẽj̃/ - nūbilum /nˈuːbɪɫʊ̃ː/
+		nó /nˈɔ/ - nōdum /nˈoːdʊ̃ː/
+		nós /nˈɔjʃ/ - nōs /nˈoːs/
+		noz /nˈɔjʃ/ - nucem /nˈʊkɛ̃ː/
+		nosso /nˈɔsu/ - nostrum /nˈɔstrʊ̃ː/
+		nove /nˈɔvi/ - novem /nˈowɛ̃/
+		neve /nˈɛvi/ - nivem /nˈɪwɛ̃ː/
+		névoa /nˈɛvuɐ/ - nebulam /nˈɛbʊɫãː/
+		odor /odˈoh/ - odōrem /ɔdˈoːrɛ̃ː/
+		odor /odˈoh/ - olōrem /ɔɫˈoːrɛ̃ː/
+		ovelha /ovˈeʎɐ/ - oviculam /owˈɪkʊɫãː/
+		ovelha /ovˈeʎɐ/ - ovem /ˈowɛ̃ː/
+		outono /owtˈõnu/ - autumnam /au̯tˈʊmnãː/
+		outono /owtˈõnu/ - autumnum /au̯tˈʊmnʊ̃ː/
+		orelha /oɾˈeʎɐ/ - auriculam /au̯rˈɪkʊɫãː/
+		palavra /palˈavɾɐ/ - parabolam /parˈabɔɫãː/
+		piolho /piˈoʎu/ - pēduculum /peːdˈukʊɫʊ̃ː/
+		poder /podˈeh/ - pōtēre /poːtˈeːrɛ/
+		proveito /pɾovˈejtu/ - prōfectum /proːfˈɛktʊ̃ː/
+		preço /pɾˈesu/ - pretium /prˈɛtiʊ̃ː/
+		paço /pˈasu/ - palātium /paɫˈatiʊ̃ː/
+		pássaro /pˈasɐɾu/ - passerem /pˈassɛrɛ̃ː/
+		peito /pˈejtu/ - pectum /pˈɛktʊ̃ː/
+		peixe /pˈejʃi/ - piscōnem /pɪskˈoːnɛ̃ː/
+		peixe /pˈejʃi/ - piscem /pˈɪskɛ̃ː/
+		pelo /pˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		pelo /pˈelu/ - pilum /pˈɪɫʊ̃ː/
+		pena /pˈenɐ/ - poenam /pˈoe̯nãː/
+		pêsseɡo /pˈeseɡu/ - persicam /pˈɛrsɪkãː/
+		pena /pˈẽnɐ/ - plūmam /pɫˈuːmãː/
+		pena /pˈẽnɐ/ - pennam /pˈɛnnãː/
+		pena /pˈẽnɐ/ - pinnam /pˈɪnnãː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		porco /pˈohku/ - porcum /pˈɔrkʊ̃ː/
+		poio /pˈoju/ - podium /pˈɔdiʊ̃ː/
+		poço /pˈosu/ - puteum /pˈʊteʊ̃ː/
+		pouco /pˈowku/ - paucum /pˈau̯kʊ̃ː/
+		pões /pˈõj̃ʃ/ - pōnis /pˈoːnɪs/
+		ponto /pˈõtu/ - punctum /pˈʊŋktʊ̃ː/
+		ponte /pˈõʧi/ - pontem /pˈɔntɛ̃ː/
+		punho /pˈũj̃u/ - puɡnum /pˈʊŋnʊ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		pão /pˈɐ̃w̃/ - pānem /pˈaːnɛ̃ː/
+		pobre /pˈɔbɾi/ - pauperem /pˈau̯pɛrɛ̃ː/
+		porca /pˈɔhkɐ/ - porcam /pˈɔrkãː/
+		pé /pˈɛ/ - pedem /pˈɛdɛ̃ː/
+		pedra /pˈɛdɾɐ/ - petram /pˈɛtrãː/
+		saúde /saˈuʤi/ - salūtem /saɫˈuːtɛ̃ː/
+		semente /semˈẽʧi/ - sementem /seːmˈɛntɛ̃ː/
+		semente /semˈẽʧi/ - sēmen /sˈeːmɛ̃ː/
+		semana /semˈɐ̃nɐ/ - septimānam /sɛptɪmˈaːnãː/
+		seɡuro /seɡˈuɾu/ - sēcūrum /seːkˈuːrʊ̃ː/
+		cereja /seɾˈeʒɐ/ - ceresiam /kɛrˈɛsiãː/
+		cidade /sidˈaʤi/ - cīvitātem /kiːwɪtˈaːtɛ̃ː/
+		cinquenta /sĩkwˈẽtɐ/ - quīnquāɡintā /kʷiːŋkʷaːɡˈɪntaː/
+		sabes /sˈabiʃ/ - sapis /sˈapɪs/
+		sábio /sˈabju/ - sapidum /sˈapɪdʊ̃ː/
+		saiba /sˈajbɐ/ - sapiam /sˈapiãː/
+		sal /sˈaw/ - salem /sˈaɫɛ̃ː/
+		salsa /sˈawsɐ/ - salsam /sˈaɫsãː/
+		seco /sˈeku/ - siccum /sˈɪkkʊ̃ː/
+		seca /sˈekɐ/ - siccam /sˈɪkkãː/
+		cera /sˈeɾɐ/ - cēram /kˈeːrãː/
+		cento /sˈẽtu/ - centum /kˈɛntʊ̃ː/
+		cima /sˈĩmɐ/ - cȳmam /kˈyːmãː/
+		cinza /sˈĩzɐ/ - cinerem /kˈɪnɛrɛ̃ː/
+		sobre /sˈobɾi/ - super /sˈʊpɛr/
+		sã /sˈɐ̃/ - sānam /sˈaːnãː/
+		santo /sˈɐ̃tu/ - sānctum /sˈaːŋktʊ̃ː/
+		são /sˈɐ̃w̃/ - sānum /sˈaːnʊ̃ː/
+		sanɡue /sˈɐ̃ɡi/ - sanɡuem /sˈaŋɡʷɛ̃ː/
+		sanɡue /sˈɐ̃ɡi/ - sanɡuinem /sˈaŋɡʷɪnɛ̃ː/
+		sol /sˈɔw/ - sōlem /sˈoːɫɛ̃ː/
+		céu /sˈɛw/ - caelum /kˈae̯ɫʊ̃ː/
+		sete /sˈɛʧi/ - septem /sˈɛptɛ̃/
+		três /tɾˈejʃ/ - trēs /trˈeːs/
+		tempo /tˈẽpu/ - tempus /tˈɛmpʊs/
+		todo /tˈodu/ - tōtum /tˈoːtʊ̃ː/
+		todos /tˈoduʃ/ - tōtōs /tˈoːtoːs/
+		umbiɡo /ũbˈiɡu/ - umbilīcum /ʊmbɪlʲˈiːkʊ̃ː/
+		vilão /vilˈɐ̃w̃/ - vīllānum /wiːlʲlʲˈaːnʊ̃ː/
+		voar /voˈah/ - volāre /wɔɫˈaːrɛ/
+		vaca /vˈakɐ/ - vaccam /wˈakkãː/
+		ver /vˈeh/ - vidēre /wɪdˈeːrɛ/
+		verde /vˈeɦʤi/ - viridem /wˈɪrɪdɛ̃ː/
+		velho /vˈeʎu/ - vetulum /wˈɛtʊɫʊ̃ː/
+		venho /vˈẽj̃u/ - veniō /wˈɛnioː/
+		vento /vˈẽtu/ - ventum /wˈɛntʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		ventre /vˈẽtɾi/ - ventrem /wˈɛntrɛ̃ː/
+		vida /vˈidɐ/ - vītam /wˈiːtãː/
+		vir /vˈih/ - venīre /wɛnˈiːrɛ/
+		via /vˈiɐ/ - viam /wˈiãː/
+		vinho /vˈĩj̃u/ - vīnum /wˈiːnʊ̃ː/
+		vinte /vˈĩʧi/ - vīɡintī /wiːɡˈɪntiː/
+		voz /vˈɔjʃ/ - vōcem /wˈoːkɛ̃ː/
+		verme /vˈɛɦmi/ - vermem /wˈɛrmɛ̃ː/
+		ɡrosso /ɡɾˈosu/ - ɡrossum /ɡrˈɔssʊ̃ː/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡrānum /ɡrˈaːnʊ̃ː/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡrandem /ɡrˈandɛ̃ː/
+		ɡato /ɡˈatu/ - cattum /kˈattʊ̃ː/
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+		ɡota /ɡˈotɐ/ - ɡuttam /ɡˈʊttãː/
+		ɡola /ɡˈɔlɐ/ - ɡulam /ɡˈʊɫãː/
+		chorar /ʃoɾˈah/ - plōrāre /pɫoːrˈaːrɛ/
+		chave /ʃˈavi/ - clāvem /klˈaːwɛ̃ː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		ɡenɡiva /ʒẽʒˈivɐ/ - ɡinɡīvam /ɡɪŋɡˈiːwãː/
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		ɡenro /ʒˈẽhu/ - ɡenerum /ɡˈɛnɛrʊ̃ː/
+		junho /ʒˈũj̃u/ - iūnium /jˈuːniʊ̃ː/
+		junto /ʒˈũtu/ - iūnctum /jˈuːŋktʊ̃ː/
+		ʤizer /ʤizˈeh/ - dīcere /dˈiːkɛrɛ/
+		ʤizer /ʤizˈeh/ - dīre /dˈiːrɛ/
+		ʤia /ʤˈiɐ/ - diem /dˈiɛ̃ː/
+		ʤiɡo /ʤˈiɡu/ - dīcō /dˈiːkoː/
+		alma /ˈawmɐ/ - animam /ˈanɪmãː/
+		alva /ˈawvɐ/ - albam /ˈaɫbãː/
+		áɡua /ˈaɡwɐ/ - aquam /ˈakʷãː/
+		árvore /ˈaɦvoɾi/ - arborem /ˈarbɔrɛ̃ː/
+		alho /ˈaʎu/ - ālium /ˈaːlʲiʊ̃ː/
+		ele /ˈeli/ - ille /ˈɪlʲlʲɛ/
+		eu /ˈew/ - eɡō /ˈɛɡoː/
+		ínsua /ˈĩswɐ/ - īnsulam /ˈĩːsʊɫãː/
+		ouro /ˈowɾu/ - aurum /ˈau̯rʊ̃ː/
+		olho /ˈoʎu/ - oculum /ˈɔkʊɫʊ̃ː/
+		ombro /ˈõbɾu/ - humerum /hˈʊmɛrʊ̃ː/
+		homem /ˈõmẽj̃/ - homō /hˈɔmoː/
+		homem /ˈõmẽj̃/ - hominem /hˈɔmɪnɛ̃ː/
+		anjo /ˈɐ̃ʒu/ - anɡelum /ˈaŋɡɛɫʊ̃ː/
+		elo /ˈɛlu/ - ānellum /aːnˈɛlʲlʲʊ̃ː/
+		ela /ˈɛlɐ/ - illam /ˈɪlʲlʲãː/
+		ela /ˈɛlɐ/ - ipsam /ˈɪpsãː/
+		erva /ˈɛɦvɐ/ - herbam /hˈɛrbãː/
+
+Final disqualified:
+		amarelo /amaɾˈɛlu/ - ɡalbinum /ɡˈaɫbɪnʊ̃ː/
+		areia /aɾˈejɐ/ - sabula /sˈabʊɫa/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsam /foːrmˈoːsãː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		ovelha /ovˈeʎɐ/ - pecora /pˈɛkɔra/
+		pássaro /pˈasɐɾu/ - avicellum /awɪkˈɛlʲlʲʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		pé /pˈɛ/ - petiolum /pɛtiˈolʊ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		ʤizer /ʤizˈeh/ - nārrāre /naːrrˈaːrɛ/
+		ʤia /ʤˈiɐ/ - diurnum /diˈʊrnʊ̃ː/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 279
+	Disqualified: 335
+	Added: 0
+	Removed: 28
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		ler /lˈeɾ/ - leɡere /ɫˈɛɡɛrɛ/
+		ovelha /ovˈeʎɐ/ - pecora /pˈɛkɔra/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		rio /hˈiu/ - flūmen /fɫˈuːmɛ̃ː/
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		raiz /haˈiʃ/ - rādīcīnam /raːdiːkˈiːnãː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		amarelo /amaɾˈɛlu/ - ɡalbinum /ɡˈaɫbɪnʊ̃ː/
+		estio /eʃʧˈiw/ - vēram /wˈeːrãː/
+		ʤizer /ʤizˈeh/ - nārrāre /naːrrˈaːrɛ/
+		matar /mɐtˈah/ - occīdere /ɔkkˈiːdɛrɛ/
+		pé /pˈɛ/ - petiolum /pɛtiˈolʊ̃ː/
+		ela /ˈɛlɐ/ - ipsam /ˈɪpsãː/
+
+Iteration 2
+	Qualified: 279
+	Disqualified: 335
+	Added: 3
+		ler /lˈeɾ/ - leɡere /ɫˈɛɡɛrɛ/
+		raiz /haˈiʃ/ - rādīcīnam /raːdiːkˈiːnãː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+	Removed: 3
+		areia /aɾˈejɐ/ - sabula /sˈabʊɫa/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+
+Iteration 3
+	Qualified: 281
+	Disqualified: 333
+	Added: 3
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		ela /ˈɛlɐ/ - ipsam /ˈɪpsãː/
+	Removed: 1
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+
+Iteration 4
+	Qualified: 283
+	Disqualified: 331
+	Added: 4
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+	Removed: 2
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+
+Iteration 5
+	Qualified: 285
+	Disqualified: 329
+	Added: 3
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+	Removed: 1
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+
+Iteration 6
+	Qualified: 286
+	Disqualified: 328
+	Added: 2
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+	Removed: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+
+Iteration 7
+	Qualified: 287
+	Disqualified: 327
+	Added: 2
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+	Removed: 1
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+
+Iteration 8
+	Qualified: 288
+	Disqualified: 326
+	Added: 2
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+	Removed: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+
+Iteration 9
+	Qualified: 288
+	Disqualified: 326
+	Added: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+	Removed: 1
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+
+Iteration 10
+	Qualified: 289
+	Disqualified: 325
+	Added: 2
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+	Removed: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - apiculam /apˈɪkʊɫãː/
+		amarelo /amaɾˈɛlu/ - amārellum /amaːrˈɛlʲlʲʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acūculam /akˈuːkʊɫãː/
+		areia /aɾˈejɐ/ - harēnam /harˈeːnãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneam /arˈaːneãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneum /arˈaːneʊ̃ː/
+		achar /aʃˈah/ - afflāre /afflˈaːrɛ/
+		ajudar /aʒudˈah/ - adiūtāre /adiuːtˈaːrɛ/
+		ajudo /aʒˈudu/ - adiūtō /adiˈuːtoː/
+		beber /bebˈeh/ - bibere /bˈɪbɛrɛ/
+		branco /bɾˈɐ̃ku/ - blancum /blˈaŋkʊ̃ː/
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		baixo /bˈajʃu/ - bassum /bˈassʊ̃ː/
+		bem /bˈẽj̃/ - bene /bˈɛnɛ/
+		boca /bˈokɐ/ - bucca /bˈʊkkãː/
+		boas /bˈoɐʃ/ - bonās /bˈɔnaːs/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+		bons /bˈõʃ/ - bonōs /bˈɔnoːs/
+		banho /bˈɐ̃j̃u/ - baneum /bˈaneʊ̃ː/
+		belo /bˈɛlu/ - bellum /bˈɛlʲlʲʊ̃ː/
+		bela /bˈɛlɐ/ - bellam /bˈɛlʲlʲãː/
+		dormir /doɦmˈih/ - dormīre /dɔrmˈiːrɛ/
+		draɡão /dɾaɡˈɐ̃w̃/ - dracō /drˈakoː/
+		dar /dˈah/ - dare /dˈarɛ/
+		dedo /dˈedu/ - diɡitum /dˈɪɡɪtʊ̃ː/
+		deus /dˈewʃ/ - deus /dˈeʊs/
+		dente /dˈẽʧi/ - dentem /dˈɛntɛ̃ː/
+		dois /dˈojʃ/ - duōs /dˈuoːs/
+		doce /dˈosi/ - dulcem /dˈʊɫkɛ̃ː/
+		doze /dˈozi/ - duodecim /duˈɔdɛkɪ̃/
+		dom /dˈõ/ - dōnum /dˈoːnʊ̃ː/
+		dona /dˈõnɐ/ - dominam /dˈɔmɪnãː/
+		duas /dˈuɐʃ/ - duae /dˈuae̯/
+		duas /dˈuɐʃ/ - duās /dˈuaːs/
+		escutar /eskutˈah/ - auscultāre /au̯skʊɫtˈaːrɛ/
+		escrever /eskɾevˈeh/ - scrībere /skrˈiːbɛrɛ/
+		espiɡa /eʃpˈiɡɐ/ - spīcam /spˈiːkãː/
+		espinha /eʃpˈĩj̃ɐ/ - spīnam /spˈiːnãː/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - ʜispāniam /hɪspˈaːniãː/
+		estrela /eʃtɾˈelɐ/ - stēllam /stˈeːlʲlʲãː/
+		estado /eʃtˈadu/ - statum /stˈatʊ̃ː/
+		estio /eʃʧˈiw/ - aestīvum /ae̯stˈiːwʊ̃ː/
+		falar /falˈah/ - fābulāre /faːbʊɫˈaːrɛ/
+		fazer /fazˈeh/ - fare /fˈarɛ/
+		farinha /faɾˈĩj̃ɐ/ - farīnam /farˈiːnãː/
+		frio /fɾˈiu/ - frīɡidum /frˈiːɡɪdʊ̃ː/
+		fruito /fɾˈujtu/ - frūctum /frˈuːktʊ̃ː/
+		fada /fˈadɐ/ - fātam /fˈaːtãː/
+		faço /fˈasu/ - faciō /fˈakioː/
+		falso /fˈawsu/ - falsum /fˈaɫsʊ̃ː/
+		fíɡado /fˈiɡɐdu/ - fīcātum /fˈiːkaːtʊ̃ː/
+		filho /fˈiʎu/ - filium /fˈiːlʲiʊ̃ː/
+		fim /fˈĩ/ - fīnem /fˈiːnɛ̃ː/
+		folha /fˈoʎɐ/ - foliam /fˈɔlʲiãː/
+		fumo /fˈũmu/ - fūmātam /fuːmˈaːtãː/
+		fumo /fˈũmu/ - fūmum /fˈuːmʊ̃ː/
+		forte /fˈɔhʧi/ - fortem /fˈɔrtɛ̃ː/
+		fome /fˈɔmi/ - faminem /fˈaminɛ̃ː/
+		fome /fˈɔmi/ - famem /fˈamɛ̃ː/
+		ferro /fˈɛhu/ - ferrum /fˈɛrrʊ̃ː/
+		festa /fˈɛʃtɐ/ - festam /fˈɛstãː/
+		razão /hazˈɐ̃w̃/ - ratiōnem /ratiˈoːnɛ̃ː/
+		raiz /haˈiʃ/ - rādīcīnam /raːdiːkˈiːnãː/
+		raiz /haˈiʃ/ - rādīcem /raːdˈiːkɛ̃ː/
+		rainha /haˈĩj̃ɐ/ - rēɡīnam /reːɡˈiːnãː/
+		redondo /hedˈõdu/ - rotundum /rɔtˈʊndʊ̃ː/
+		rei /hˈej/ - rēɡem /rˈeːɡɛ̃ː/
+		rio /hˈiu/ - rīvum /rˈiːwʊ̃ː/
+		ruivo /hˈujvu/ - rubeum /rˈʊbeʊ̃ː/
+		ruivo /hˈujvu/ - russum /rˈʊssʊ̃ː/
+		iɡual /iɡwˈaw/ - aequālem /ae̯kʷˈaːlɛ̃/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		inverno /ĩvˈɛɦnu/ - hībernum /hiːbˈɛrnʊ̃ː/
+		cabelo /kabˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		cabelo /kabˈelu/ - pilum /pˈɪɫʊ̃ː/
+		cadeia /kadˈejɐ/ - catēnam /katˈeːnãː/
+		caçar /kasˈah/ - captiāre /kaptiˈaːrɛ/
+		cavalo /kavˈalu/ - caballum /kabˈalʲlʲʊ̃ː/
+		castelo /kaʃtˈɛlu/ - castellum /kastˈɛlʲlʲʊ̃ː/
+		cortiça /kuhʧˈisɐ/ - corticeam /kɔrtˈɪkɛãː/
+		cortiça /kuhʧˈisɐ/ - corticem /kˈɔrtɪkɛ̃ː/
+		quatro /kwˈatɾu/ - quattuor /kʷˈattuɔr/
+		cambiar /kɐ̃bjˈah/ - cambiāre /kambiˈaːrɛ/
+		cruz /kɾˈujʃ/ - crucem /krˈʊkɛ̃ː/
+		cabra /kˈabɾɐ/ - capram /kˈaprãː/
+		caldo /kˈawdu/ - caldum /kˈaɫdʊ̃ː/
+		casa /kˈazɐ/ - casam /kˈasãː/
+		carne /kˈaɦni/ - carnem /kˈarnɛ̃ː/
+		caro /kˈaɾu/ - cārum /kˈaːrʊ̃ː/
+		quem /kˈẽj̃/ - quem /kʷˈɛ̃ː/
+		que /kˈi/ - quid /kʷˈɪd/
+		corpo /kˈohpu/ - corpus /kˈɔrpʊs/
+		corpo /kˈohpu/ - corpum /kˈɔrpʊ̃ː/
+		coisa /kˈojzɐ/ - causam /kˈau̯sãː/
+		corno /kˈoɦnu/ - cornū /kˈɔrnuː/
+		coxa /kˈoʃɐ/ - coxam /kˈɔksãː/
+		cu /kˈu/ - cūlum /kˈuːɫʊ̃ː/
+		curto /kˈuhtu/ - curtum /kˈʊrtʊ̃ː/
+		cunho /kˈũj̃u/ - cuneum /kˈʊneʊ̃ː/
+		canto /kˈɐ̃tu/ - cantum /kˈantʊ̃ː/
+		cão /kˈɐ̃w̃/ - canem /kˈanɛ̃ː/
+		cor /kˈɔh/ - corem /kˈɔrɛ̃ː/
+		costa /kˈɔʃtɐ/ - costam /kˈɔstãː/
+		levar /levˈah/ - levāre /ɫɛwˈaːrɛ/
+		leão /leˈɐ̃w̃/ - leōnem /ɫeˈoːnɛ̃ː/
+		laɡo /lˈaɡu/ - lacum /lˈakʊ̃ː/
+		láɡrima /lˈaɡɾimɐ/ - lacrimam /ɫˈakrɪmãː/
+		lei /lˈej/ - lēɡem /lˈeːɡɛ̃/
+		leito /lˈejtu/ - lectum /ɫˈɛktʊ̃ː/
+		ler /lˈeɾ/ - leɡere /ɫˈɛɡɛrɛ/
+		lenha /lˈẽj̃ɐ/ - liɡnam /lˈɪɡnãː/
+		lenha /lˈẽj̃ɐ/ - liɡnum /lˈɪɡnʊ̃ː/
+		livre /lˈivɾi/ - līberum /lˈibɛrʊ̃ː/
+		linha /lˈĩj̃ɐ/ - līneam /lˈiːneãː/
+		línɡua /lˈĩɡwɐ/ - linɡuam /lˈɪŋɡʷãː/
+		lobo /lˈobu/ - lupum /ɫˈʊpʊ̃ː/
+		loɡo /lˈoɡu/ - locus /ɫˈɔkʊs/
+		loɡo /lˈoɡu/ - locum /ɫˈɔkʊ̃ː/
+		luz /lˈujʃ/ - lūcem /lˈuːkɛ̃ː/
+		luz /lˈujʃ/ - lūmen /ɫˈuːmɛ̃ː/
+		luz /lˈujʃ/ - lūmina /ɫˈuːmɪna/
+		luta /lˈutɐ/ - lūctam /ɫˈuːktãː/
+		lua /lˈuɐ/ - lunam /ɫˈuːnãː/
+		lã /lˈɐ̃/ - lānam /ɫˈaːnãː/
+		lebre /lˈɛbɾi/ - leporem /ɫˈɛpɔrɛ̃ː/
+		melhor /meʎˈɔh/ - meliōrem /mɛlʲiˈoːrɛ̃ː/
+		morseɡar /mohseɡˈah/ - morsicāre /mɔrsɪkˈaːrɛ/
+		morrer /mohˈeh/ - morīre /mɔrˈiːrɛ/
+		morder /moɦdˈeh/ - morsicāre /mɔrsɪkˈaːrɛ/
+		morder /moɦdˈeh/ - mordēre /mˈɔrdeːrɛ/
+		montanha /mõtˈɐ̃j̃ɐ/ - montaniam /mɔntˈaniãː/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+		mar /mˈah/ - mare /mˈarɛ/
+		meio /mˈeju/ - medium /mˈɛdiʊ̃ː/
+		mil /mˈiw/ - mīlle /mˈiːlʲlʲɛ/
+		miɡa /mˈiɡɐ/ - mīcam /mˈiːkãː/
+		mosca /mˈoʃkɐ/ - muscam /mˈʊskãː/
+		mão /mˈɐ̃w̃/ - manum /mˈanʊ̃ː/
+		morte /mˈɔhʧi/ - mortem /mˈɔrtɛ̃ː/
+		nadar /nadˈah/ - natāre /natˈaːrɛ/
+		nariz /naɾˈiʃ/ - nārīcem /naːrˈiːkɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nē ipse ūnum /neː‿ipse‿ˈuːnʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nec ūnum /nɛk‿ˈuːnʊ̃ː/
+		não /nɐ̃w̃/ - nōn /noːn/
+		neɡro /nˈeɡɾu/ - niɡrum /nˈɪɡrʊ̃ː/
+		novo /nˈovu/ - novum /nˈɔwʊ̃ː/
+		nome /nˈõmi/ - nōmen /nˈoːmɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbem /nˈuːbɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbilam /nˈuːbɪɫãː/
+		nuvem /nˈuvẽj̃/ - nūbilum /nˈuːbɪɫʊ̃ː/
+		nós /nˈɔjʃ/ - nōs /nˈoːs/
+		noz /nˈɔjʃ/ - nucem /nˈʊkɛ̃ː/
+		nosso /nˈɔsu/ - nostrum /nˈɔstrʊ̃ː/
+		nove /nˈɔvi/ - novem /nˈowɛ̃/
+		neve /nˈɛvi/ - nivem /nˈɪwɛ̃ː/
+		névoa /nˈɛvuɐ/ - nebulam /nˈɛbʊɫãː/
+		obreiro /obɾˈejɾu/ - operārium /ɔpɛrˈaːriʊ̃ː/
+		ovelha /ovˈeʎɐ/ - oviculam /owˈɪkʊɫãː/
+		outono /owtˈõnu/ - autumnam /au̯tˈʊmnãː/
+		outono /owtˈõnu/ - autumnum /au̯tˈʊmnʊ̃ː/
+		orelha /oɾˈeʎɐ/ - auriculam /au̯rˈɪkʊɫãː/
+		palavra /palˈavɾɐ/ - parabolam /parˈabɔɫãː/
+		piolho /piˈoʎu/ - pēduculum /peːdˈukʊɫʊ̃ː/
+		poder /podˈeh/ - pōtēre /poːtˈeːrɛ/
+		paço /pˈasu/ - palātium /paɫˈatiʊ̃ː/
+		pássaro /pˈasɐɾu/ - passerem /pˈassɛrɛ̃ː/
+		peito /pˈejtu/ - pectus /pˈɛktʊs/
+		peito /pˈejtu/ - pectum /pˈɛktʊ̃ː/
+		peixe /pˈejʃi/ - piscōnem /pɪskˈoːnɛ̃ː/
+		pelo /pˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		pelo /pˈelu/ - pilum /pˈɪɫʊ̃ː/
+		pêsseɡo /pˈeseɡu/ - persicam /pˈɛrsɪkãː/
+		pena /pˈẽnɐ/ - plūmam /pɫˈuːmãː/
+		pena /pˈẽnɐ/ - pennam /pˈɛnnãː/
+		pena /pˈẽnɐ/ - pinnam /pˈɪnnãː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		porco /pˈohku/ - porcum /pˈɔrkʊ̃ː/
+		poio /pˈoju/ - podium /pˈɔdiʊ̃ː/
+		poço /pˈosu/ - puteum /pˈʊteʊ̃ː/
+		pouco /pˈowku/ - paucum /pˈau̯kʊ̃ː/
+		pões /pˈõj̃ʃ/ - pōnis /pˈoːnɪs/
+		ponte /pˈõʧi/ - pontem /pˈɔntɛ̃ː/
+		punho /pˈũj̃u/ - puɡnum /pˈʊŋnʊ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		pão /pˈɐ̃w̃/ - pānem /pˈaːnɛ̃ː/
+		pobre /pˈɔbɾi/ - pauperem /pˈau̯pɛrɛ̃ː/
+		porca /pˈɔhkɐ/ - porcam /pˈɔrkãː/
+		pé /pˈɛ/ - pedem /pˈɛdɛ̃ː/
+		pedra /pˈɛdɾɐ/ - petram /pˈɛtrãː/
+		saber /sabˈeh/ - sapere /sˈapɛrɛ/
+		saúde /saˈuʤi/ - salūtem /saɫˈuːtɛ̃ː/
+		semente /semˈẽʧi/ - sementem /seːmˈɛntɛ̃ː/
+		semente /semˈẽʧi/ - sēmen /sˈeːmɛ̃ː/
+		semana /semˈɐ̃nɐ/ - septimānam /sɛptɪmˈaːnãː/
+		seɡuro /seɡˈuɾu/ - sēcūrum /seːkˈuːrʊ̃ː/
+		cereja /seɾˈeʒɐ/ - ceresiam /kɛrˈɛsiãː/
+		sentar /sẽtˈah/ - sedēre /sɛdˈeːrɛ/
+		cidade /sidˈaʤi/ - cīvitātem /kiːwɪtˈaːtɛ̃ː/
+		cinquenta /sĩkwˈẽtɐ/ - quīnquāɡintā /kʷiːŋkʷaːɡˈɪntaː/
+		sabes /sˈabiʃ/ - scīs /skˈiːs/
+		sabes /sˈabiʃ/ - sapis /sˈapɪs/
+		sábio /sˈabju/ - sapidum /sˈapɪdʊ̃ː/
+		saiba /sˈajbɐ/ - sciam /skˈiãː/
+		saiba /sˈajbɐ/ - sapiam /sˈapiãː/
+		sal /sˈaw/ - salem /sˈaɫɛ̃ː/
+		salsa /sˈawsɐ/ - salsam /sˈaɫsãː/
+		seda /sˈedɐ/ - sētam /sˈeːtãː/
+		cento /sˈẽtu/ - centum /kˈɛntʊ̃ː/
+		cima /sˈĩmɐ/ - cȳmam /kˈyːmãː/
+		santo /sˈɐ̃tu/ - sānctum /sˈaːŋktʊ̃ː/
+		são /sˈɐ̃w̃/ - sānum /sˈaːnʊ̃ː/
+		sanɡue /sˈɐ̃ɡi/ - sanɡuinem /sˈaŋɡʷɪnɛ̃ː/
+		sol /sˈɔw/ - sōlem /sˈoːɫɛ̃ː/
+		céu /sˈɛw/ - caelum /kˈae̯ɫʊ̃ː/
+		sete /sˈɛʧi/ - septem /sˈɛptɛ̃/
+		três /tɾˈejʃ/ - trēs /trˈeːs/
+		tempo /tˈẽpu/ - tempus /tˈɛmpʊs/
+		todo /tˈodu/ - tōtum /tˈoːtʊ̃ː/
+		tú /tˈu/ - tū /tˈuː/
+		testa /tˈɛʃtɐ/ - testam /tˈɛstãː/
+		umbiɡo /ũbˈiɡu/ - umbilīcum /ʊmbɪlʲˈiːkʊ̃ː/
+		verɡonha /veɦɡˈõj̃ɐ/ - verēkundiam /wɛreːkˈʊndiãː/
+		voar /voˈah/ - volāre /wɔɫˈaːrɛ/
+		vaca /vˈakɐ/ - vaccam /wˈakkãː/
+		ver /vˈeh/ - vidēre /wɪdˈeːrɛ/
+		verde /vˈeɦʤi/ - viridem /wˈɪrɪdɛ̃ː/
+		velho /vˈeʎu/ - vetulus /wˈɛtʊɫʊs/
+		velho /vˈeʎu/ - vetulum /wˈɛtʊɫʊ̃ː/
+		vento /vˈẽtu/ - ventum /wˈɛntʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		ventre /vˈẽtɾi/ - ventrem /wˈɛntrɛ̃ː/
+		vida /vˈidɐ/ - vītam /wˈiːtãː/
+		vir /vˈih/ - venīre /wɛnˈiːrɛ/
+		via /vˈiɐ/ - viam /wˈiãː/
+		vinho /vˈĩj̃u/ - vīnum /wˈiːnʊ̃ː/
+		voz /vˈɔjʃ/ - vōcem /wˈoːkɛ̃ː/
+		vós /vˈɔjʃ/ - vōs /wˈoːs/
+		verme /vˈɛɦmi/ - vermem /wˈɛrmɛ̃ː/
+		ɡraxa /ɡɾˈaʃɐ/ - crassum /krˈassʊ̃ː/
+		ɡrosso /ɡɾˈosu/ - ɡrossum /ɡrˈɔssʊ̃ː/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡrānum /ɡrˈaːnʊ̃ː/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡrandem /ɡrˈandɛ̃ː/
+		ɡato /ɡˈatu/ - cattum /kˈattʊ̃ː/
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+		ɡota /ɡˈotɐ/ - ɡuttam /ɡˈʊttãː/
+		ɡola /ɡˈɔlɐ/ - ɡulam /ɡˈʊɫãː/
+		chamar /ʃamˈah/ - clāmāre /kɫaːmˈaːrɛ/
+		chorar /ʃoɾˈah/ - plōrāre /pɫoːrˈaːrɛ/
+		chaɡa /ʃˈaɡɐ/ - plāɡam /plˈaːɡãː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		chuva /ʃˈuvɐ/ - pluviam /pɫˈʊwiãː/
+		chama /ʃˈɐ̃mɐ/ - flammam /fɫˈammãː/
+		ɡear /ʒeˈah/ - ɡelāre /ɡɛɫˈaːrɛ/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		ɡenɡiva /ʒẽʒˈivɐ/ - ɡinɡīvam /ɡɪŋɡˈiːwãː/
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		ɡenro /ʒˈẽhu/ - ɡenerum /ɡˈɛnɛrʊ̃ː/
+		ɡente /ʒˈẽʧi/ - ɡentem /ɡˈɛntɛ̃ː/
+		joɡo /ʒˈoɡu/ - iocum /jˈɔkʊ̃ː/
+		junto /ʒˈũtu/ - iūnctum /jˈuːŋktʊ̃ː/
+		jovem /ʒˈɔvẽj̃/ - iuvenem /jˈuwɛnɛ̃ː/
+		ʤizer /ʤizˈeh/ - dīre /dˈiːrɛ/
+		ʤiɡo /ʤˈiɡu/ - dīcō /dˈiːkoː/
+		áɡua /ˈaɡwɐ/ - aquam /ˈakʷãː/
+		árvore /ˈaɦvoɾi/ - arborem /ˈarbɔrɛ̃ː/
+		alho /ˈaʎu/ - ālium /ˈaːlʲiʊ̃ː/
+		ele /ˈeli/ - ille /ˈɪlʲlʲɛ/
+		ínsua /ˈĩswɐ/ - īnsulam /ˈĩːsʊɫãː/
+		oito /ˈojtu/ - octō /ˈɔktoː/
+		osso /ˈosu/ - ossum /ˈɔssʊ̃ː/
+		ovo /ˈovu/ - ōvum /ˈoːwʊ̃ː/
+		ouro /ˈowɾu/ - aurum /ˈau̯rʊ̃ː/
+		olho /ˈoʎu/ - oculum /ˈɔkʊɫʊ̃ː/
+		olhos /ˈoʎuʃ/ - oculōs /ˈɔkʊɫoːs/
+		ombro /ˈõbɾu/ - humerum /hˈʊmɛrʊ̃ː/
+		homem /ˈõmẽj̃/ - homō /hˈɔmoː/
+		homem /ˈõmẽj̃/ - hominem /hˈɔmɪnɛ̃ː/
+		usso /ˈusu/ - ursum /ˈʊrsʊ̃ː/
+		um /ˈũ/ - unum /ˈuːnʊ̃ː/
+		unha /ˈũj̃ɐ/ - unɡulam /ˈʊŋɡʊɫãː/
+		ano /ˈɐ̃nu/ - annum /ˈannʊ̃ː/
+		anjo /ˈɐ̃ʒu/ - anɡelum /ˈaŋɡɛɫʊ̃ː/
+		obra /ˈɔbɾɐ/ - operam /ˈɔpɛrãː/
+		elo /ˈɛlu/ - ānellum /aːnˈɛlʲlʲʊ̃ː/
+		ela /ˈɛlɐ/ - illam /ˈɪlʲlʲãː/
+		ela /ˈɛlɐ/ - ipsam /ˈɪpsãː/
+		erva /ˈɛɦvɐ/ - herbam /hˈɛrbãː/
+
+Final disqualified:
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		amarelo /amaɾˈɛlu/ - ɡalbinum /ɡˈaɫbɪnʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		areia /aɾˈejɐ/ - sabula /sˈabʊɫa/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		estio /eʃʧˈiw/ - vēram /wˈeːrãː/
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		rio /hˈiu/ - flūmen /fɫˈuːmɛ̃ː/
+		matar /mɐtˈah/ - occīdere /ɔkkˈiːdɛrɛ/
+		ovelha /ovˈeʎɐ/ - pecora /pˈɛkɔra/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		pé /pˈɛ/ - petiolum /pɛtiˈolʊ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		ʤizer /ʤizˈeh/ - nārrāre /naːrrˈaːrɛ/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 285
+	Disqualified: 329
+	Added: 0
+	Removed: 22
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		rio /hˈiu/ - flūmen /fɫˈuːmɛ̃ː/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		pássaro /pˈasɐɾu/ - avicellum /awɪkˈɛlʲlʲʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		ʤia /ʤˈiɐ/ - diurnum /diˈʊrnʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		amarelo /amaɾˈɛlu/ - ɡalbinum /ɡˈaɫbɪnʊ̃ː/
+		estio /eʃʧˈiw/ - vēram /wˈeːrãː/
+		matar /mɐtˈah/ - occīdere /ɔkkˈiːdɛrɛ/
+		ʤizer /ʤizˈeh/ - nārrāre /naːrrˈaːrɛ/
+
+Iteration 2
+	Qualified: 286
+	Disqualified: 328
+	Added: 3
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+	Removed: 2
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+
+Iteration 3
+	Qualified: 287
+	Disqualified: 327
+	Added: 2
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+	Removed: 1
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+
+Iteration 4
+	Qualified: 290
+	Disqualified: 324
+	Added: 4
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+	Removed: 1
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+
+Iteration 5
+	Qualified: 289
+	Disqualified: 325
+	Added: 1
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+	Removed: 2
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+
+Iteration 6
+	Qualified: 291
+	Disqualified: 323
+	Added: 2
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+	Removed: 0
+
+Iteration 7
+	Qualified: 292
+	Disqualified: 322
+	Added: 1
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+	Removed: 0
+
+Iteration 8
+	Qualified: 292
+	Disqualified: 322
+	Added: 1
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+	Removed: 1
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+
+Iteration 9
+	Qualified: 292
+	Disqualified: 322
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		amarelo /amaɾˈɛlu/ - amārellum /amaːrˈɛlʲlʲʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acūculam /akˈuːkʊɫãː/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		areia /aɾˈejɐ/ - harēnam /harˈeːnãː/
+		areia /aɾˈejɐ/ - sabula /sˈabʊɫa/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneam /arˈaːneãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneum /arˈaːneʊ̃ː/
+		beber /bebˈeh/ - bibere /bˈɪbɛrɛ/
+		branco /bɾˈɐ̃ku/ - blancum /blˈaŋkʊ̃ː/
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		bem /bˈẽj̃/ - bene /bˈɛnɛ/
+		boca /bˈokɐ/ - bucca /bˈʊkkãː/
+		boa /bˈoɐ/ - bonam /bˈɔnãː/
+		boas /bˈoɐʃ/ - bonās /bˈɔnaːs/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+		bons /bˈõʃ/ - bonōs /bˈɔnoːs/
+		banho /bˈɐ̃j̃u/ - baneum /bˈaneʊ̃ː/
+		belo /bˈɛlu/ - bellum /bˈɛlʲlʲʊ̃ː/
+		dormir /doɦmˈih/ - dormīre /dɔrmˈiːrɛ/
+		draɡão /dɾaɡˈɐ̃w̃/ - dracōnem /drakˈoːnɛ̃ː/
+		draɡão /dɾaɡˈɐ̃w̃/ - dracō /drˈakoː/
+		dar /dˈah/ - dare /dˈarɛ/
+		dedo /dˈedu/ - diɡitum /dˈɪɡɪtʊ̃ː/
+		deus /dˈewʃ/ - deus /dˈeʊs/
+		dente /dˈẽʧi/ - dentem /dˈɛntɛ̃ː/
+		doce /dˈosi/ - dulcem /dˈʊɫkɛ̃ː/
+		doze /dˈozi/ - duodecim /duˈɔdɛkɪ̃/
+		duas /dˈuɐʃ/ - duae /dˈuae̯/
+		dez /dˈɛjʃ/ - decem /dˈɛkɛ̃ː/
+		escutar /eskutˈah/ - auscultāre /au̯skʊɫtˈaːrɛ/
+		escrever /eskɾevˈeh/ - scrībere /skrˈiːbɛrɛ/
+		escuro /eʃkˈuɾu/ - obscūrum /opskˈuːrʊ̃ː/
+		espada /eʃpˈadɐ/ - spatham /spˈatʰãː/
+		espiɡa /eʃpˈiɡɐ/ - spīcum /spˈiːkʊ̃ː/
+		espinha /eʃpˈĩj̃ɐ/ - spīnam /spˈiːnãː/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - ʜispāniam /hɪspˈaːniãː/
+		estado /eʃtˈadu/ - statum /stˈatʊ̃ː/
+		estio /eʃʧˈiw/ - aestātem /ae̯stˈaːtɛ̃ː/
+		estio /eʃʧˈiw/ - aestīvum /ae̯stˈiːwʊ̃ː/
+		fazer /fazˈeh/ - facere /fˈakɛrɛ/
+		fazer /fazˈeh/ - fare /fˈarɛ/
+		frio /fɾˈiu/ - frīɡidum /frˈiːɡɪdʊ̃ː/
+		fruito /fɾˈujtu/ - frūctum /frˈuːktʊ̃ː/
+		fada /fˈadɐ/ - fātam /fˈaːtãː/
+		faço /fˈasu/ - faciō /fˈakioː/
+		falso /fˈawsu/ - falsum /fˈaɫsʊ̃ː/
+		fêmea /fˈẽmeɐ/ - fēminam /fˈeːmɪnãː/
+		fio /fˈiw/ - filum /fˈiːɫʊ̃ː/
+		fíɡado /fˈiɡɐdu/ - fīcātum /fˈiːkaːtʊ̃ː/
+		filho /fˈiʎu/ - filium /fˈiːlʲiʊ̃ː/
+		filha /fˈiʎɐ/ - fīliam /fˈiːlʲiãː/
+		fim /fˈĩ/ - fīnem /fˈiːnɛ̃ː/
+		foɡo /fˈoɡu/ - focum /fˈɔkʊ̃ː/
+		folha /fˈoʎɐ/ - frondeam /frˈɔndɛãː/
+		folha /fˈoʎɐ/ - foliam /fˈɔlʲiãː/
+		fumo /fˈũmu/ - fūmātam /fuːmˈaːtãː/
+		fumo /fˈũmu/ - fūmum /fˈuːmʊ̃ː/
+		forte /fˈɔhʧi/ - fortem /fˈɔrtɛ̃ː/
+		fome /fˈɔmi/ - faminem /fˈaminɛ̃ː/
+		fome /fˈɔmi/ - famem /fˈamɛ̃ː/
+		ferro /fˈɛhu/ - ferrum /fˈɛrrʊ̃ː/
+		festa /fˈɛʃtɐ/ - festam /fˈɛstãː/
+		razão /hazˈɐ̃w̃/ - ratiōnem /ratiˈoːnɛ̃ː/
+		raiz /haˈiʃ/ - rādīcīnam /raːdiːkˈiːnãː/
+		raiz /haˈiʃ/ - rādīcem /raːdˈiːkɛ̃ː/
+		redondo /hedˈõdu/ - rotundum /rɔtˈʊndʊ̃ː/
+		romão /homˈɐ̃w̃/ - rōmānum /roːmˈaːnʊ̃ː/
+		rio /hˈiu/ - rīvum /rˈiːwʊ̃ː/
+		roxo /hˈoʃu/ - rubeum /rˈʊbeʊ̃ː/
+		roxo /hˈoʃu/ - russum /rˈʊssʊ̃ː/
+		ruivo /hˈujvu/ - rubeum /rˈʊbeʊ̃ː/
+		ruivo /hˈujvu/ - russum /rˈʊssʊ̃ː/
+		irmão /iɦmˈɐ̃w̃/ - ɡermānum /ɡɛrmˈaːnʊ̃ː/
+		inverno /ĩvˈɛɦnu/ - hībernum /hiːbˈɛrnʊ̃ː/
+		cabelo /kabˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		cabelo /kabˈelu/ - pilum /pˈɪɫʊ̃ː/
+		cadeia /kadˈejɐ/ - catēnam /katˈeːnãː/
+		caçar /kasˈah/ - captiāre /kaptiˈaːrɛ/
+		cavalo /kavˈalu/ - caballum /kabˈalʲlʲʊ̃ː/
+		castelo /kaʃtˈɛlu/ - castellum /kastˈɛlʲlʲʊ̃ː/
+		conhecer /kõj̃esˈeh/ - coɡnōscere /kɔɡnˈoːskɛrɛ/
+		cortiça /kuhʧˈisɐ/ - corticeam /kɔrtˈɪkɛãː/
+		cortiça /kuhʧˈisɐ/ - corticem /kˈɔrtɪkɛ̃ː/
+		cortiça /kuhʧˈisɐ/ - scorteam /skˈɔrteãː/
+		crer /kɾˈeh/ - crēdere /krˈeːdɛrɛ/
+		cruz /kɾˈujʃ/ - crucem /krˈʊkɛ̃ː/
+		caldo /kˈawdu/ - caldum /kˈaɫdʊ̃ː/
+		casa /kˈazɐ/ - casae /kˈasae̯/
+		casa /kˈazɐ/ - casam /kˈasãː/
+		carne /kˈaɦni/ - carnem /kˈarnɛ̃ː/
+		caro /kˈaɾu/ - cārum /kˈaːrʊ̃ː/
+		quem /kˈẽj̃/ - quem /kʷˈɛ̃ː/
+		que /kˈi/ - quid /kʷˈɪd/
+		corpo /kˈohpu/ - corpum /kˈɔrpʊ̃ː/
+		coisa /kˈojzɐ/ - causam /kˈau̯sãː/
+		corno /kˈoɦnu/ - cornū /kˈɔrnuː/
+		coxa /kˈoʃɐ/ - coxam /kˈɔksãː/
+		cu /kˈu/ - cūlum /kˈuːɫʊ̃ː/
+		curto /kˈuhtu/ - curtum /kˈʊrtʊ̃ː/
+		cunho /kˈũj̃u/ - cuneum /kˈʊneʊ̃ː/
+		canto /kˈɐ̃tu/ - cantum /kˈantʊ̃ː/
+		cão /kˈɐ̃w̃/ - canem /kˈanɛ̃ː/
+		cor /kˈɔh/ - corem /kˈɔrɛ̃ː/
+		colo /kˈɔlu/ - collum /kˈɔlʲlʲʊ̃ː/
+		costa /kˈɔʃtɐ/ - costam /kˈɔstãː/
+		levar /levˈah/ - levāre /ɫɛwˈaːrɛ/
+		leão /leˈɐ̃w̃/ - leōnem /ɫeˈoːnɛ̃ː/
+		laɡo /lˈaɡu/ - lacum /lˈakʊ̃ː/
+		láɡrima /lˈaɡɾimɐ/ - lacrimam /ɫˈakrɪmãː/
+		leito /lˈejtu/ - lectum /ɫˈɛktʊ̃ː/
+		letra /lˈetɾɐ/ - litteram /lʲˈɪttɛrãː/
+		ler /lˈeɾ/ - leɡere /ɫˈɛɡɛrɛ/
+		lenha /lˈẽj̃ɐ/ - liɡnam /lˈɪɡnãː/
+		lenha /lˈẽj̃ɐ/ - liɡnum /lˈɪɡnʊ̃ː/
+		livre /lˈivɾi/ - līberum /lˈibɛrʊ̃ː/
+		linha /lˈĩj̃ɐ/ - līneam /lˈiːneãː/
+		línɡua /lˈĩɡwɐ/ - linɡuam /lˈɪŋɡʷãː/
+		lobo /lˈobu/ - lupum /ɫˈʊpʊ̃ː/
+		loɡo /lˈoɡu/ - locus /ɫˈɔkʊs/
+		luz /lˈujʃ/ - lūcem /lˈuːkɛ̃ː/
+		luz /lˈujʃ/ - lūmen /ɫˈuːmɛ̃ː/
+		luta /lˈutɐ/ - lūctam /ɫˈuːktãː/
+		lua /lˈuɐ/ - lunam /ɫˈuːnãː/
+		lã /lˈɐ̃/ - lānam /ɫˈaːnãː/
+		lebre /lˈɛbɾi/ - leporem /ɫˈɛpɔrɛ̃ː/
+		metade /metˈaʤi/ - medietātem /medietˈaːtɛ̃/
+		melhor /meʎˈɔh/ - meliōrem /mɛlʲiˈoːrɛ̃ː/
+		morseɡar /mohseɡˈah/ - morsicāre /mɔrsɪkˈaːrɛ/
+		morseɡar /mohseɡˈah/ - mordēre /mˈɔrdeːrɛ/
+		morrer /mohˈeh/ - morīre /mɔrˈiːrɛ/
+		montanha /mõtˈɐ̃j̃ɐ/ - montaniam /mɔntˈaniãː/
+		matar /mɐtˈah/ - mactāre /maktˈaːrɛ/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+		mar /mˈah/ - mare /mˈarɛ/
+		me /mˈi/ - mē /mˈeː/
+		mil /mˈiw/ - mīlle /mˈiːlʲlʲɛ/
+		miɡa /mˈiɡɐ/ - mīcam /mˈiːkãː/
+		mosca /mˈoʃkɐ/ - muscam /mˈʊskãː/
+		muito /mˈũj̃tu/ - multum /mˈʊɫtʊ̃ː/
+		mão /mˈɐ̃w̃/ - manum /mˈanʊ̃ː/
+		morte /mˈɔhʧi/ - mortem /mˈɔrtɛ̃ː/
+		nariz /naɾˈiʃ/ - nārīcem /naːrˈiːkɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nē ipse ūnum /neː‿ipse‿ˈuːnʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nec ūnum /nɛk‿ˈuːnʊ̃ː/
+		não /nɐ̃w̃/ - nōn /noːn/
+		noite /nˈojʧi/ - noctem /nˈɔktɛ̃ː/
+		novo /nˈovu/ - novum /nˈɔwʊ̃ː/
+		nome /nˈõmi/ - nōmen /nˈoːmɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbem /nˈuːbɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbilam /nˈuːbɪɫãː/
+		nuvem /nˈuvẽj̃/ - nūbilum /nˈuːbɪɫʊ̃ː/
+		nó /nˈɔ/ - nōdum /nˈoːdʊ̃ː/
+		noz /nˈɔjʃ/ - nucem /nˈʊkɛ̃ː/
+		nosso /nˈɔsu/ - nostrum /nˈɔstrʊ̃ː/
+		nove /nˈɔvi/ - novem /nˈowɛ̃/
+		neve /nˈɛvi/ - nivem /nˈɪwɛ̃ː/
+		névoa /nˈɛvuɐ/ - nebulam /nˈɛbʊɫãː/
+		odor /odˈoh/ - odōrem /ɔdˈoːrɛ̃ː/
+		odor /odˈoh/ - olōrem /ɔɫˈoːrɛ̃ː/
+		ovelha /ovˈeʎɐ/ - oviculam /owˈɪkʊɫãː/
+		ovelha /ovˈeʎɐ/ - ovem /ˈowɛ̃ː/
+		outono /owtˈõnu/ - autumnum /au̯tˈʊmnʊ̃ː/
+		palavra /palˈavɾɐ/ - parabolam /parˈabɔɫãː/
+		piolho /piˈoʎu/ - pēduculum /peːdˈukʊɫʊ̃ː/
+		proveito /pɾovˈejtu/ - prōfectum /proːfˈɛktʊ̃ː/
+		preço /pɾˈesu/ - pretium /prˈɛtiʊ̃ː/
+		paz /pˈajʃ/ - pācem /pˈaːkɛ̃ː/
+		paço /pˈasu/ - palātium /paɫˈatiʊ̃ː/
+		pássaro /pˈasɐɾu/ - passerem /pˈassɛrɛ̃ː/
+		peito /pˈejtu/ - pectus /pˈɛktʊs/
+		peixe /pˈejʃi/ - piscōnem /pɪskˈoːnɛ̃ː/
+		peixe /pˈejʃi/ - piscem /pˈɪskɛ̃ː/
+		pelo /pˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		pelo /pˈelu/ - pilum /pˈɪɫʊ̃ː/
+		pêsseɡo /pˈeseɡu/ - persicam /pˈɛrsɪkãː/
+		pêsseɡo /pˈeseɡu/ - persicum /pˈɛrsɪkʊ̃ː/
+		pena /pˈẽnɐ/ - pennam /pˈɛnnãː/
+		pena /pˈẽnɐ/ - pinnam /pˈɪnnãː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		porco /pˈohku/ - porcum /pˈɔrkʊ̃ː/
+		pouco /pˈowku/ - paucum /pˈau̯kʊ̃ː/
+		pões /pˈõj̃ʃ/ - pōnis /pˈoːnɪs/
+		ponto /pˈõtu/ - punctum /pˈʊŋktʊ̃ː/
+		ponte /pˈõʧi/ - pontem /pˈɔntɛ̃ː/
+		punho /pˈũj̃u/ - puɡnum /pˈʊŋnʊ̃ː/
+		pão /pˈɐ̃w̃/ - pānem /pˈaːnɛ̃ː/
+		pobre /pˈɔbɾi/ - pauperem /pˈau̯pɛrɛ̃ː/
+		porca /pˈɔhkɐ/ - porcam /pˈɔrkãː/
+		pé /pˈɛ/ - pedem /pˈɛdɛ̃ː/
+		saber /sabˈeh/ - sapere /sˈapɛrɛ/
+		saúde /saˈuʤi/ - salūtem /saɫˈuːtɛ̃ː/
+		semente /semˈẽʧi/ - sementem /seːmˈɛntɛ̃ː/
+		semente /semˈẽʧi/ - sēmen /sˈeːmɛ̃ː/
+		semana /semˈɐ̃nɐ/ - septimānam /sɛptɪmˈaːnãː/
+		seɡuro /seɡˈuɾu/ - sēcūrum /seːkˈuːrʊ̃ː/
+		cereja /seɾˈeʒɐ/ - ceresiam /kɛrˈɛsiãː/
+		sentar /sẽtˈah/ - sedēre /sɛdˈeːrɛ/
+		cidade /sidˈaʤi/ - cīvitātem /kiːwɪtˈaːtɛ̃ː/
+		sabes /sˈabiʃ/ - scīs /skˈiːs/
+		sábio /sˈabju/ - sapidum /sˈapɪdʊ̃ː/
+		saiba /sˈajbɐ/ - sciam /skˈiãː/
+		saiba /sˈajbɐ/ - sapiam /sˈapiãː/
+		sal /sˈaw/ - salem /sˈaɫɛ̃ː/
+		salsa /sˈawsɐ/ - salsam /sˈaɫsãː/
+		seis /sˈejʃ/ - sex /sˈɛks/
+		seixo /sˈejʃu/ - saksum /sˈaksʊ̃ː/
+		seco /sˈeku/ - siccum /sˈɪkkʊ̃ː/
+		seca /sˈekɐ/ - siccam /sˈɪkkãː/
+		cera /sˈeɾɐ/ - cēram /kˈeːrãː/
+		cento /sˈẽtu/ - centum /kˈɛntʊ̃ː/
+		cima /sˈĩmɐ/ - cȳmam /kˈyːmãː/
+		sobre /sˈobɾi/ - super /sˈʊpɛr/
+		sã /sˈɐ̃/ - sānam /sˈaːnãː/
+		santo /sˈɐ̃tu/ - sānctum /sˈaːŋktʊ̃ː/
+		sanɡue /sˈɐ̃ɡi/ - sanɡuem /sˈaŋɡʷɛ̃ː/
+		sol /sˈɔw/ - sōlem /sˈoːɫɛ̃ː/
+		céu /sˈɛw/ - caelum /kˈae̯ɫʊ̃ː/
+		todo /tˈodu/ - tōtum /tˈoːtʊ̃ː/
+		todos /tˈoduʃ/ - tōtōs /tˈoːtoːs/
+		touro /tˈowɾu/ - taurum /tˈau̯rʊ̃ː/
+		terra /tˈɛhɐ/ - terram /tˈɛrrãː/
+		testa /tˈɛʃtɐ/ - testam /tˈɛstãː/
+		umbiɡo /ũbˈiɡu/ - umbilīcum /ʊmbɪlʲˈiːkʊ̃ː/
+		vilão /vilˈɐ̃w̃/ - vīllānum /wiːlʲlʲˈaːnʊ̃ː/
+		voar /voˈah/ - volāre /wɔɫˈaːrɛ/
+		vaca /vˈakɐ/ - vaccam /wˈakkãː/
+		ver /vˈeh/ - vidēre /wɪdˈeːrɛ/
+		verde /vˈeɦʤi/ - viridem /wˈɪrɪdɛ̃ː/
+		velho /vˈeʎu/ - vetulus /wˈɛtʊɫʊs/
+		velho /vˈeʎu/ - vetulum /wˈɛtʊɫʊ̃ː/
+		venho /vˈẽj̃u/ - veniō /wˈɛnioː/
+		ventre /vˈẽtɾi/ - ventrem /wˈɛntrɛ̃ː/
+		vida /vˈidɐ/ - vītam /wˈiːtãː/
+		vir /vˈih/ - venīre /wɛnˈiːrɛ/
+		vila /vˈilɐ/ - vīllam /wˈiːlʲlʲãː/
+		via /vˈiɐ/ - viam /wˈiãː/
+		vinho /vˈĩj̃u/ - vīnum /wˈiːnʊ̃ː/
+		voz /vˈɔjʃ/ - vōcem /wˈoːkɛ̃ː/
+		vós /vˈɔjʃ/ - vōs /wˈoːs/
+		verme /vˈɛɦmi/ - vermem /wˈɛrmɛ̃ː/
+		ɡraxa /ɡɾˈaʃɐ/ - crassum /krˈassʊ̃ː/
+		ɡrosso /ɡɾˈosu/ - ɡrossum /ɡrˈɔssʊ̃ː/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡrānum /ɡrˈaːnʊ̃ː/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡrandem /ɡrˈandɛ̃ː/
+		ɡota /ɡˈotɐ/ - ɡuttam /ɡˈʊttãː/
+		ɡola /ɡˈɔlɐ/ - ɡulam /ɡˈʊɫãː/
+		chamar /ʃamˈah/ - clāmāre /kɫaːmˈaːrɛ/
+		chorar /ʃoɾˈah/ - plōrāre /pɫoːrˈaːrɛ/
+		chave /ʃˈavi/ - clāvem /klˈaːwɛ̃ː/
+		chaɡa /ʃˈaɡɐ/ - plāɡam /plˈaːɡãː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		chuva /ʃˈuvɐ/ - pluviam /pɫˈʊwiãː/
+		chama /ʃˈɐ̃mɐ/ - flammam /fɫˈammãː/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		ɡenɡiva /ʒẽʒˈivɐ/ - ɡinɡīvam /ɡɪŋɡˈiːwãː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		ɡente /ʒˈẽʧi/ - ɡentem /ɡˈɛntɛ̃ː/
+		joɡo /ʒˈoɡu/ - iocum /jˈɔkʊ̃ː/
+		junho /ʒˈũj̃u/ - iūnium /jˈuːniʊ̃ː/
+		junto /ʒˈũtu/ - iūnctum /jˈuːŋktʊ̃ː/
+		ʤizer /ʤizˈeh/ - dīcere /dˈiːkɛrɛ/
+		ʤizer /ʤizˈeh/ - dīre /dˈiːrɛ/
+		ʤia /ʤˈiɐ/ - diem /dˈiɛ̃ː/
+		ʤiɡo /ʤˈiɡu/ - dīcō /dˈiːkoː/
+		alma /ˈawmɐ/ - animam /ˈanɪmãː/
+		alva /ˈawvɐ/ - albam /ˈaɫbãː/
+		áɡua /ˈaɡwɐ/ - aquam /ˈakʷãː/
+		árvore /ˈaɦvoɾi/ - arborem /ˈarbɔrɛ̃ː/
+		alho /ˈaʎu/ - ālium /ˈaːlʲiʊ̃ː/
+		ele /ˈeli/ - ille /ˈɪlʲlʲɛ/
+		eu /ˈew/ - eɡō /ˈɛɡoː/
+		ilha /ˈiʎɐ/ - īnsulam /ˈĩːsʊɫãː/
+		ínsua /ˈĩswɐ/ - īnsulam /ˈĩːsʊɫãː/
+		oito /ˈojtu/ - octō /ˈɔktoː/
+		ovo /ˈovu/ - ōvum /ˈoːwʊ̃ː/
+		olho /ˈoʎu/ - oculum /ˈɔkʊɫʊ̃ː/
+		olhos /ˈoʎuʃ/ - oculōs /ˈɔkʊɫoːs/
+		ombro /ˈõbɾu/ - humerum /hˈʊmɛrʊ̃ː/
+		homem /ˈõmẽj̃/ - homō /hˈɔmoː/
+		homem /ˈõmẽj̃/ - hominem /hˈɔmɪnɛ̃ː/
+		usso /ˈusu/ - ursum /ˈʊrsʊ̃ː/
+		um /ˈũ/ - unum /ˈuːnʊ̃ː/
+		unha /ˈũj̃ɐ/ - unɡulam /ˈʊŋɡʊɫãː/
+		ano /ˈɐ̃nu/ - annum /ˈannʊ̃ː/
+		anjo /ˈɐ̃ʒu/ - anɡelum /ˈaŋɡɛɫʊ̃ː/
+		obra /ˈɔbɾɐ/ - operam /ˈɔpɛrãː/
+		elo /ˈɛlu/ - ānellum /aːnˈɛlʲlʲʊ̃ː/
+		ela /ˈɛlɐ/ - illam /ˈɪlʲlʲãː/
+		erva /ˈɛɦvɐ/ - herbam /hˈɛrbãː/
+
+Final disqualified:
+		amarelo /amaɾˈɛlu/ - ɡalbinum /ɡˈaɫbɪnʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		estio /eʃʧˈiw/ - vēram /wˈeːrãː/
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		rio /hˈiu/ - flūmen /fɫˈuːmɛ̃ː/
+		matar /mɐtˈah/ - occīdere /ɔkkˈiːdɛrɛ/
+		pássaro /pˈasɐɾu/ - avicellum /awɪkˈɛlʲlʲʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		ʤizer /ʤizˈeh/ - nārrāre /naːrrˈaːrɛ/
+		ʤia /ʤˈiɐ/ - diurnum /diˈʊrnʊ̃ː/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 286
+	Disqualified: 328
+	Added: 0
+	Removed: 21
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		ovelha /ovˈeʎɐ/ - pecora /pˈɛkɔra/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		pássaro /pˈasɐɾu/ - avicellum /awɪkˈɛlʲlʲʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		ʤia /ʤˈiɐ/ - diurnum /diˈʊrnʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		amarelo /amaɾˈɛlu/ - ɡalbinum /ɡˈaɫbɪnʊ̃ː/
+		estio /eʃʧˈiw/ - vēram /wˈeːrãː/
+		matar /mɐtˈah/ - occīdere /ɔkkˈiːdɛrɛ/
+		ʤizer /ʤizˈeh/ - nārrāre /naːrrˈaːrɛ/
+		pé /pˈɛ/ - petiolum /pɛtiˈolʊ̃ː/
+		ela /ˈɛlɐ/ - ipsam /ˈɪpsãː/
+
+Iteration 2
+	Qualified: 284
+	Disqualified: 330
+	Added: 2
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+	Removed: 4
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+
+Iteration 3
+	Qualified: 284
+	Disqualified: 330
+	Added: 1
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+	Removed: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+
+Iteration 4
+	Qualified: 285
+	Disqualified: 329
+	Added: 1
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+	Removed: 0
+
+Iteration 5
+	Qualified: 287
+	Disqualified: 327
+	Added: 2
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+	Removed: 0
+
+Iteration 6
+	Qualified: 289
+	Disqualified: 325
+	Added: 2
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+	Removed: 0
+
+Iteration 7
+	Qualified: 288
+	Disqualified: 326
+	Added: 0
+	Removed: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+
+Iteration 8
+	Qualified: 290
+	Disqualified: 324
+	Added: 2
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+	Removed: 0
+
+Iteration 9
+	Qualified: 289
+	Disqualified: 325
+	Added: 0
+	Removed: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+
+Iteration 10
+	Qualified: 289
+	Disqualified: 325
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - apiculam /apˈɪkʊɫãː/
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acūculam /akˈuːkʊɫãː/
+		aɡulha /aɡˈuʎɐ/ - acum /ˈakʊ̃ː/
+		areia /aɾˈejɐ/ - harēnam /harˈeːnãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneam /arˈaːneãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneum /arˈaːneʊ̃ː/
+		achar /aʃˈah/ - afflāre /afflˈaːrɛ/
+		ajudar /aʒudˈah/ - adiūtāre /adiuːtˈaːrɛ/
+		ajudo /aʒˈudu/ - adiūtō /adiˈuːtoː/
+		beber /bebˈeh/ - bibere /bˈɪbɛrɛ/
+		branco /bɾˈɐ̃ku/ - blancum /blˈaŋkʊ̃ː/
+		baixo /bˈajʃu/ - bassum /bˈassʊ̃ː/
+		boi /bˈoj/ - bovem /bˈɔwɛ̃ː/
+		boca /bˈokɐ/ - bucca /bˈʊkkãː/
+		boa /bˈoɐ/ - bonam /bˈɔnãː/
+		boas /bˈoɐʃ/ - bonās /bˈɔnaːs/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+		banho /bˈɐ̃j̃u/ - baneum /bˈaneʊ̃ː/
+		belo /bˈɛlu/ - bellum /bˈɛlʲlʲʊ̃ː/
+		bela /bˈɛlɐ/ - bellam /bˈɛlʲlʲãː/
+		dormir /doɦmˈih/ - dormīre /dɔrmˈiːrɛ/
+		draɡão /dɾaɡˈɐ̃w̃/ - dracōnem /drakˈoːnɛ̃ː/
+		draɡão /dɾaɡˈɐ̃w̃/ - dracō /drˈakoː/
+		dedo /dˈedu/ - diɡitum /dˈɪɡɪtʊ̃ː/
+		dente /dˈẽʧi/ - dentem /dˈɛntɛ̃ː/
+		doce /dˈosi/ - dulcem /dˈʊɫkɛ̃ː/
+		doze /dˈozi/ - duodecim /duˈɔdɛkɪ̃/
+		doa /dˈoɐ/ - dōnat /dˈoːnat/
+		dom /dˈõ/ - dōnum /dˈoːnʊ̃ː/
+		dona /dˈõnɐ/ - dominam /dˈɔmɪnãː/
+		duas /dˈuɐʃ/ - duae /dˈuae̯/
+		duas /dˈuɐʃ/ - duās /dˈuaːs/
+		dez /dˈɛjʃ/ - decem /dˈɛkɛ̃ː/
+		escutar /eskutˈah/ - auscultāre /au̯skʊɫtˈaːrɛ/
+		escrever /eskɾevˈeh/ - scrībere /skrˈiːbɛrɛ/
+		escuro /eʃkˈuɾu/ - obscūrum /opskˈuːrʊ̃ː/
+		espada /eʃpˈadɐ/ - spatham /spˈatʰãː/
+		espiɡa /eʃpˈiɡɐ/ - spīcum /spˈiːkʊ̃ː/
+		espinha /eʃpˈĩj̃ɐ/ - spīnam /spˈiːnãː/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - ʜispāniam /hɪspˈaːniãː/
+		estrela /eʃtɾˈelɐ/ - stēllam /stˈeːlʲlʲãː/
+		estado /eʃtˈadu/ - statum /stˈatʊ̃ː/
+		estio /eʃʧˈiw/ - aestātem /ae̯stˈaːtɛ̃ː/
+		falar /falˈah/ - fābulāre /faːbʊɫˈaːrɛ/
+		fazer /fazˈeh/ - fare /fˈarɛ/
+		farinha /faɾˈĩj̃ɐ/ - farīnam /farˈiːnãː/
+		frio /fɾˈiu/ - frīɡidum /frˈiːɡɪdʊ̃ː/
+		fruito /fɾˈujtu/ - frūctum /frˈuːktʊ̃ː/
+		fada /fˈadɐ/ - fātam /fˈaːtãː/
+		faço /fˈasu/ - faciō /fˈakioː/
+		fêmea /fˈẽmeɐ/ - fēminam /fˈeːmɪnãː/
+		fíɡado /fˈiɡɐdu/ - fīcātum /fˈiːkaːtʊ̃ː/
+		filha /fˈiʎɐ/ - fīliam /fˈiːlʲiãː/
+		fim /fˈĩ/ - fīnem /fˈiːnɛ̃ː/
+		folha /fˈoʎɐ/ - frondeam /frˈɔndɛãː/
+		folha /fˈoʎɐ/ - foliam /fˈɔlʲiãː/
+		fumo /fˈũmu/ - fūmātam /fuːmˈaːtãː/
+		fumo /fˈũmu/ - fūmum /fˈuːmʊ̃ː/
+		forte /fˈɔhʧi/ - fortem /fˈɔrtɛ̃ː/
+		fome /fˈɔmi/ - faminem /fˈaminɛ̃ː/
+		fome /fˈɔmi/ - famem /fˈamɛ̃ː/
+		ferro /fˈɛhu/ - ferrum /fˈɛrrʊ̃ː/
+		razão /hazˈɐ̃w̃/ - ratiōnem /ratiˈoːnɛ̃ː/
+		raiz /haˈiʃ/ - rādīcem /raːdˈiːkɛ̃ː/
+		redondo /hedˈõdu/ - rotundum /rɔtˈʊndʊ̃ː/
+		romão /homˈɐ̃w̃/ - rōmānum /roːmˈaːnʊ̃ː/
+		rio /hˈiu/ - rīvum /rˈiːwʊ̃ː/
+		ruivo /hˈujvu/ - rubeum /rˈʊbeʊ̃ː/
+		ruivo /hˈujvu/ - russum /rˈʊssʊ̃ː/
+		iɡual /iɡwˈaw/ - aequālem /ae̯kʷˈaːlɛ̃/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		irmão /iɦmˈɐ̃w̃/ - ɡermānum /ɡɛrmˈaːnʊ̃ː/
+		cabelo /kabˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		cabelo /kabˈelu/ - pilum /pˈɪɫʊ̃ː/
+		cadeia /kadˈejɐ/ - catēnam /katˈeːnãː/
+		caçar /kasˈah/ - captiāre /kaptiˈaːrɛ/
+		cavalo /kavˈalu/ - caballum /kabˈalʲlʲʊ̃ː/
+		castelo /kaʃtˈɛlu/ - castellum /kastˈɛlʲlʲʊ̃ː/
+		conhecer /kõj̃esˈeh/ - coɡnōscere /kɔɡnˈoːskɛrɛ/
+		cortiça /kuhʧˈisɐ/ - corticeam /kɔrtˈɪkɛãː/
+		cortiça /kuhʧˈisɐ/ - corticem /kˈɔrtɪkɛ̃ː/
+		cortiça /kuhʧˈisɐ/ - scorteam /skˈɔrteãː/
+		quatro /kwˈatɾu/ - quattuor /kʷˈattuɔr/
+		crer /kɾˈeh/ - crēdere /krˈeːdɛrɛ/
+		cabra /kˈabɾɐ/ - capram /kˈaprãː/
+		caldo /kˈawdu/ - caldum /kˈaɫdʊ̃ː/
+		casa /kˈazɐ/ - casae /kˈasae̯/
+		casa /kˈazɐ/ - casam /kˈasãː/
+		carne /kˈaɦni/ - carnem /kˈarnɛ̃ː/
+		caro /kˈaɾu/ - cārum /kˈaːrʊ̃ː/
+		que /kˈi/ - quid /kʷˈɪd/
+		cor /kˈoh/ - colōrem /koɫˈoːrɛ̃ː/
+		corpo /kˈohpu/ - corpus /kˈɔrpʊs/
+		corpo /kˈohpu/ - corpum /kˈɔrpʊ̃ː/
+		corno /kˈoɦnu/ - cornū /kˈɔrnuː/
+		coxa /kˈoʃɐ/ - coxam /kˈɔksãː/
+		cu /kˈu/ - cūlum /kˈuːɫʊ̃ː/
+		curto /kˈuhtu/ - curtum /kˈʊrtʊ̃ː/
+		cunho /kˈũj̃u/ - cuneum /kˈʊneʊ̃ː/
+		canto /kˈɐ̃tu/ - cantum /kˈantʊ̃ː/
+		cor /kˈɔh/ - corem /kˈɔrɛ̃ː/
+		costa /kˈɔʃtɐ/ - costam /kˈɔstãː/
+		levar /levˈah/ - levāre /ɫɛwˈaːrɛ/
+		leão /leˈɐ̃w̃/ - leōnem /ɫeˈoːnɛ̃ː/
+		laɡo /lˈaɡu/ - lacum /lˈakʊ̃ː/
+		láɡrima /lˈaɡɾimɐ/ - lacrimam /ɫˈakrɪmãː/
+		lei /lˈej/ - lēɡem /lˈeːɡɛ̃/
+		leito /lˈejtu/ - lectum /ɫˈɛktʊ̃ː/
+		leite /lˈejʧi/ - lactem /ɫˈaktɛ̃ː/
+		letra /lˈetɾɐ/ - litteram /lʲˈɪttɛrãː/
+		ler /lˈeɾ/ - leɡere /ɫˈɛɡɛrɛ/
+		lenha /lˈẽj̃ɐ/ - liɡnam /lˈɪɡnãː/
+		lenha /lˈẽj̃ɐ/ - liɡnum /lˈɪɡnʊ̃ː/
+		livre /lˈivɾi/ - līberum /lˈibɛrʊ̃ː/
+		linha /lˈĩj̃ɐ/ - līneam /lˈiːneãː/
+		línɡua /lˈĩɡwɐ/ - linɡuam /lˈɪŋɡʷãː/
+		loɡo /lˈoɡu/ - locus /ɫˈɔkʊs/
+		loɡo /lˈoɡu/ - locum /ɫˈɔkʊ̃ː/
+		luz /lˈujʃ/ - lūmen /ɫˈuːmɛ̃ː/
+		luz /lˈujʃ/ - lūmina /ɫˈuːmɪna/
+		luta /lˈutɐ/ - lūctam /ɫˈuːktãː/
+		lua /lˈuɐ/ - lunam /ɫˈuːnãː/
+		lebre /lˈɛbɾi/ - leporem /ɫˈɛpɔrɛ̃ː/
+		maduro /madˈuɾu/ - mātūrum /maːtˈuːrʊ̃ː/
+		metade /metˈaʤi/ - medietātem /medietˈaːtɛ̃/
+		melhor /meʎˈɔh/ - meliōrem /mɛlʲiˈoːrɛ̃ː/
+		morseɡar /mohseɡˈah/ - morsicāre /mɔrsɪkˈaːrɛ/
+		morseɡar /mohseɡˈah/ - mordēre /mˈɔrdeːrɛ/
+		morrer /mohˈeh/ - morīre /mɔrˈiːrɛ/
+		morder /moɦdˈeh/ - morsicāre /mɔrsɪkˈaːrɛ/
+		montanha /mõtˈɐ̃j̃ɐ/ - montaniam /mɔntˈaniãː/
+		matar /mɐtˈah/ - mactāre /maktˈaːrɛ/
+		mar /mˈah/ - mare /mˈarɛ/
+		me /mˈi/ - mē /mˈeː/
+		mil /mˈiw/ - mīlle /mˈiːlʲlʲɛ/
+		miɡa /mˈiɡɐ/ - mīcam /mˈiːkãː/
+		mosca /mˈoʃkɐ/ - muscam /mˈʊskãː/
+		muito /mˈũj̃tu/ - multum /mˈʊɫtʊ̃ː/
+		mão /mˈɐ̃w̃/ - manum /mˈanʊ̃ː/
+		morte /mˈɔhʧi/ - mortem /mˈɔrtɛ̃ː/
+		nadar /nadˈah/ - natāre /natˈaːrɛ/
+		nariz /naɾˈiʃ/ - nārīcem /naːrˈiːkɛ̃ː/
+		nenhum /nẽj̃ˈũ/ - nē ipse ūnum /neː‿ipse‿ˈuːnʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nec ūnum /nɛk‿ˈuːnʊ̃ː/
+		não /nɐ̃w̃/ - nōn /noːn/
+		neɡro /nˈeɡɾu/ - niɡrum /nˈɪɡrʊ̃ː/
+		noite /nˈojʧi/ - noctem /nˈɔktɛ̃ː/
+		nome /nˈõmi/ - nōmen /nˈoːmɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbem /nˈuːbɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbilum /nˈuːbɪɫʊ̃ː/
+		nó /nˈɔ/ - nōdum /nˈoːdʊ̃ː/
+		nove /nˈɔvi/ - novem /nˈowɛ̃/
+		névoa /nˈɛvuɐ/ - nebulam /nˈɛbʊɫãː/
+		obreiro /obɾˈejɾu/ - operārium /ɔpɛrˈaːriʊ̃ː/
+		odor /odˈoh/ - odōrem /ɔdˈoːrɛ̃ː/
+		odor /odˈoh/ - olōrem /ɔɫˈoːrɛ̃ː/
+		ovelha /ovˈeʎɐ/ - oviculam /owˈɪkʊɫãː/
+		ovelha /ovˈeʎɐ/ - ovem /ˈowɛ̃ː/
+		outono /owtˈõnu/ - autumnam /au̯tˈʊmnãː/
+		orelha /oɾˈeʎɐ/ - auriculam /au̯rˈɪkʊɫãː/
+		poder /podˈeh/ - pōtēre /poːtˈeːrɛ/
+		proveito /pɾovˈejtu/ - prōfectum /proːfˈɛktʊ̃ː/
+		preço /pɾˈesu/ - pretium /prˈɛtiʊ̃ː/
+		paz /pˈajʃ/ - pācem /pˈaːkɛ̃ː/
+		paço /pˈasu/ - palātium /paɫˈatiʊ̃ː/
+		pássaro /pˈasɐɾu/ - passerem /pˈassɛrɛ̃ː/
+		peito /pˈejtu/ - pectus /pˈɛktʊs/
+		peito /pˈejtu/ - pectum /pˈɛktʊ̃ː/
+		peixe /pˈejʃi/ - piscōnem /pɪskˈoːnɛ̃ː/
+		peixe /pˈejʃi/ - piscem /pˈɪskɛ̃ː/
+		pelo /pˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		pelo /pˈelu/ - pilum /pˈɪɫʊ̃ː/
+		pêsseɡo /pˈeseɡu/ - persicam /pˈɛrsɪkãː/
+		pêsseɡo /pˈeseɡu/ - persicum /pˈɛrsɪkʊ̃ː/
+		pena /pˈẽnɐ/ - plūmam /pɫˈuːmãː/
+		pena /pˈẽnɐ/ - pennam /pˈɛnnãː/
+		pena /pˈẽnɐ/ - pinnam /pˈɪnnãː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		porco /pˈohku/ - porcum /pˈɔrkʊ̃ː/
+		poio /pˈoju/ - podium /pˈɔdiʊ̃ː/
+		poço /pˈosu/ - puteum /pˈʊteʊ̃ː/
+		pouco /pˈowku/ - paucum /pˈau̯kʊ̃ː/
+		pões /pˈõj̃ʃ/ - pōnis /pˈoːnɪs/
+		ponto /pˈõtu/ - punctum /pˈʊŋktʊ̃ː/
+		ponte /pˈõʧi/ - pontem /pˈɔntɛ̃ː/
+		pão /pˈɐ̃w̃/ - pānem /pˈaːnɛ̃ː/
+		pobre /pˈɔbɾi/ - pauperem /pˈau̯pɛrɛ̃ː/
+		porca /pˈɔhkɐ/ - porcam /pˈɔrkãː/
+		pé /pˈɛ/ - pedem /pˈɛdɛ̃ː/
+		pedra /pˈɛdɾɐ/ - petram /pˈɛtrãː/
+		saúde /saˈuʤi/ - salūtem /saɫˈuːtɛ̃ː/
+		semente /semˈẽʧi/ - sementem /seːmˈɛntɛ̃ː/
+		semente /semˈẽʧi/ - sēmen /sˈeːmɛ̃ː/
+		seɡuro /seɡˈuɾu/ - sēcūrum /seːkˈuːrʊ̃ː/
+		cereja /seɾˈeʒɐ/ - ceresiam /kɛrˈɛsiãː/
+		cidade /sidˈaʤi/ - cīvitātem /kiːwɪtˈaːtɛ̃ː/
+		cinquenta /sĩkwˈẽtɐ/ - quīnquāɡintā /kʷiːŋkʷaːɡˈɪntaː/
+		sabes /sˈabiʃ/ - sapis /sˈapɪs/
+		sábio /sˈabju/ - sapidum /sˈapɪdʊ̃ː/
+		saiba /sˈajbɐ/ - sciam /skˈiãː/
+		sal /sˈaw/ - salem /sˈaɫɛ̃ː/
+		salsa /sˈawsɐ/ - salsam /sˈaɫsãː/
+		seis /sˈejʃ/ - sex /sˈɛks/
+		seixo /sˈejʃu/ - saksum /sˈaksʊ̃ː/
+		seco /sˈeku/ - siccum /sˈɪkkʊ̃ː/
+		seca /sˈekɐ/ - siccam /sˈɪkkãː/
+		cento /sˈẽtu/ - centum /kˈɛntʊ̃ː/
+		cinza /sˈĩzɐ/ - cinerem /kˈɪnɛrɛ̃ː/
+		sobre /sˈobɾi/ - super /sˈʊpɛr/
+		sã /sˈɐ̃/ - sānam /sˈaːnãː/
+		santo /sˈɐ̃tu/ - sānctum /sˈaːŋktʊ̃ː/
+		são /sˈɐ̃w̃/ - sānum /sˈaːnʊ̃ː/
+		sanɡue /sˈɐ̃ɡi/ - sanɡuinem /sˈaŋɡʷɪnɛ̃ː/
+		sol /sˈɔw/ - sōlem /sˈoːɫɛ̃ː/
+		céu /sˈɛw/ - caelum /kˈae̯ɫʊ̃ː/
+		sete /sˈɛʧi/ - septem /sˈɛptɛ̃/
+		tempo /tˈẽpu/ - tempus /tˈɛmpʊs/
+		todo /tˈodu/ - tōtum /tˈoːtʊ̃ː/
+		todos /tˈoduʃ/ - tōtōs /tˈoːtoːs/
+		touro /tˈowɾu/ - taurum /tˈau̯rʊ̃ː/
+		tú /tˈu/ - tū /tˈuː/
+		terra /tˈɛhɐ/ - terram /tˈɛrrãː/
+		testa /tˈɛʃtɐ/ - testam /tˈɛstãː/
+		umbiɡo /ũbˈiɡu/ - umbilīcum /ʊmbɪlʲˈiːkʊ̃ː/
+		verɡonha /veɦɡˈõj̃ɐ/ - verēkundiam /wɛreːkˈʊndiãː/
+		vilão /vilˈɐ̃w̃/ - vīllānum /wiːlʲlʲˈaːnʊ̃ː/
+		voar /voˈah/ - volāre /wɔɫˈaːrɛ/
+		vaca /vˈakɐ/ - vaccam /wˈakkãː/
+		ver /vˈeh/ - vidēre /wɪdˈeːrɛ/
+		verde /vˈeɦʤi/ - viridem /wˈɪrɪdɛ̃ː/
+		venho /vˈẽj̃u/ - veniō /wˈɛnioː/
+		vento /vˈẽtu/ - ventum /wˈɛntʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		vida /vˈidɐ/ - vītam /wˈiːtãː/
+		vir /vˈih/ - venīre /wɛnˈiːrɛ/
+		vila /vˈilɐ/ - vīllam /wˈiːlʲlʲãː/
+		via /vˈiɐ/ - viam /wˈiãː/
+		voz /vˈɔjʃ/ - vōcem /wˈoːkɛ̃ː/
+		vós /vˈɔjʃ/ - vōs /wˈoːs/
+		verme /vˈɛɦmi/ - vermem /wˈɛrmɛ̃ː/
+		ɡraxa /ɡɾˈaʃɐ/ - crassum /krˈassʊ̃ː/
+		ɡrosso /ɡɾˈosu/ - ɡrossum /ɡrˈɔssʊ̃ː/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡrānum /ɡrˈaːnʊ̃ː/
+		ɡota /ɡˈotɐ/ - ɡuttam /ɡˈʊttãː/
+		ɡola /ɡˈɔlɐ/ - ɡulam /ɡˈʊɫãː/
+		chamar /ʃamˈah/ - clāmāre /kɫaːmˈaːrɛ/
+		chorar /ʃoɾˈah/ - plōrāre /pɫoːrˈaːrɛ/
+		chave /ʃˈavi/ - clāvem /klˈaːwɛ̃ː/
+		chaɡa /ʃˈaɡɐ/ - plāɡam /plˈaːɡãː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+		chuva /ʃˈuvɐ/ - pluviam /pɫˈʊwiãː/
+		chama /ʃˈɐ̃mɐ/ - flammam /fɫˈammãː/
+		ɡear /ʒeˈah/ - ɡelāre /ɡɛɫˈaːrɛ/
+		ɡenɡiva /ʒẽʒˈivɐ/ - ɡinɡīvam /ɡɪŋɡˈiːwãː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		ɡenro /ʒˈẽhu/ - ɡenerum /ɡˈɛnɛrʊ̃ː/
+		ɡente /ʒˈẽʧi/ - ɡentem /ɡˈɛntɛ̃ː/
+		joɡo /ʒˈoɡu/ - iocum /jˈɔkʊ̃ː/
+		junho /ʒˈũj̃u/ - iūnium /jˈuːniʊ̃ː/
+		junto /ʒˈũtu/ - iūnctum /jˈuːŋktʊ̃ː/
+		jovem /ʒˈɔvẽj̃/ - iuvenem /jˈuwɛnɛ̃ː/
+		ʤizer /ʤizˈeh/ - dīre /dˈiːrɛ/
+		ʤia /ʤˈiɐ/ - diem /dˈiɛ̃ː/
+		alma /ˈawmɐ/ - animam /ˈanɪmãː/
+		alva /ˈawvɐ/ - albam /ˈaɫbãː/
+		áɡua /ˈaɡwɐ/ - aquam /ˈakʷãː/
+		árvore /ˈaɦvoɾi/ - arborem /ˈarbɔrɛ̃ː/
+		alho /ˈaʎu/ - ālium /ˈaːlʲiʊ̃ː/
+		ele /ˈeli/ - ille /ˈɪlʲlʲɛ/
+		eu /ˈew/ - eɡō /ˈɛɡoː/
+		ilha /ˈiʎɐ/ - īnsulam /ˈĩːsʊɫãː/
+		ínsua /ˈĩswɐ/ - īnsulam /ˈĩːsʊɫãː/
+		oito /ˈojtu/ - octō /ˈɔktoː/
+		ovo /ˈovu/ - ōvum /ˈoːwʊ̃ː/
+		outro /ˈowtɾu/ - alterum /ˈaɫtɛrʊ̃ː/
+		ouro /ˈowɾu/ - aurum /ˈau̯rʊ̃ː/
+		olho /ˈoʎu/ - oculum /ˈɔkʊɫʊ̃ː/
+		olhos /ˈoʎuʃ/ - oculōs /ˈɔkʊɫoːs/
+		homem /ˈõmẽj̃/ - homō /hˈɔmoː/
+		usso /ˈusu/ - ursum /ˈʊrsʊ̃ː/
+		um /ˈũ/ - unum /ˈuːnʊ̃ː/
+		unha /ˈũj̃ɐ/ - unɡulam /ˈʊŋɡʊɫãː/
+		ano /ˈɐ̃nu/ - annum /ˈannʊ̃ː/
+		anjo /ˈɐ̃ʒu/ - anɡelum /ˈaŋɡɛɫʊ̃ː/
+		obra /ˈɔbɾɐ/ - operam /ˈɔpɛrãː/
+		elo /ˈɛlu/ - ānellum /aːnˈɛlʲlʲʊ̃ː/
+		erva /ˈɛɦvɐ/ - herbam /hˈɛrbãː/
+
+Final disqualified:
+		amarelo /amaɾˈɛlu/ - ɡalbinum /ɡˈaɫbɪnʊ̃ː/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		estio /eʃʧˈiw/ - vēram /wˈeːrãː/
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		matar /mɐtˈah/ - occīdere /ɔkkˈiːdɛrɛ/
+		ovelha /ovˈeʎɐ/ - pecora /pˈɛkɔra/
+		pássaro /pˈasɐɾu/ - avicellum /awɪkˈɛlʲlʲʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		pé /pˈɛ/ - petiolum /pɛtiˈolʊ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		ʤizer /ʤizˈeh/ - nārrāre /naːrrˈaːrɛ/
+		ʤia /ʤˈiɐ/ - diurnum /diˈʊrnʊ̃ː/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+		ela /ˈɛlɐ/ - ipsam /ˈɪpsãː/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 284
+	Disqualified: 330
+	Added: 0
+	Removed: 23
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+		ʤizer /ʤizˈeh/ - dīcere /dˈiːkɛrɛ/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		rio /hˈiu/ - flūmen /fɫˈuːmɛ̃ː/
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		pássaro /pˈasɐɾu/ - avicellum /awɪkˈɛlʲlʲʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsam /foːrmˈoːsãː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		ʤia /ʤˈiɐ/ - diurnum /diˈʊrnʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		pé /pˈɛ/ - petiolum /pɛtiˈolʊ̃ː/
+
+Iteration 2
+	Qualified: 282
+	Disqualified: 332
+	Added: 3
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+	Removed: 5
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		areia /aɾˈejɐ/ - sabula /sˈabʊɫa/
+
+Iteration 3
+	Qualified: 284
+	Disqualified: 330
+	Added: 3
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+	Removed: 1
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+
+Iteration 4
+	Qualified: 286
+	Disqualified: 328
+	Added: 2
+		ʤizer /ʤizˈeh/ - dīcere /dˈiːkɛrɛ/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+	Removed: 0
+
+Iteration 5
+	Qualified: 287
+	Disqualified: 327
+	Added: 1
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+	Removed: 0
+
+Iteration 6
+	Qualified: 290
+	Disqualified: 324
+	Added: 4
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+	Removed: 1
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+
+Iteration 7
+	Qualified: 290
+	Disqualified: 324
+	Added: 1
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+	Removed: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+
+Iteration 8
+	Qualified: 291
+	Disqualified: 323
+	Added: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+	Removed: 0
+
+Iteration 9
+	Qualified: 291
+	Disqualified: 323
+	Added: 1
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+	Removed: 1
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+
+Iteration 10
+	Qualified: 293
+	Disqualified: 321
+	Added: 2
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+	Removed: 0
+
+Final qualifying:
+		abelha /abˈeʎɐ/ - apiculam /apˈɪkʊɫãː/
+		amarelo /amaɾˈɛlu/ - amārellum /amaːrˈɛlʲlʲʊ̃ː/
+		aɡulha /aɡˈuʎɐ/ - acūculam /akˈuːkʊɫãː/
+		areia /aɾˈejɐ/ - harēnam /harˈeːnãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneam /arˈaːneãː/
+		aranha /aɾˈɐ̃j̃ɐ/ - arāneum /arˈaːneʊ̃ː/
+		achar /aʃˈah/ - afflāre /afflˈaːrɛ/
+		ajudar /aʒudˈah/ - adiūtāre /adiuːtˈaːrɛ/
+		beber /bebˈeh/ - bibere /bˈɪbɛrɛ/
+		branco /bɾˈɐ̃ku/ - blancum /blˈaŋkʊ̃ː/
+		branco /bɾˈɐ̃ku/ - album /ˈaɫbʊ̃ː/
+		baixo /bˈajʃu/ - bassum /bˈassʊ̃ː/
+		bem /bˈẽj̃/ - bene /bˈɛnɛ/
+		boca /bˈokɐ/ - bucca /bˈʊkkãː/
+		boa /bˈoɐ/ - bonam /bˈɔnãː/
+		boas /bˈoɐʃ/ - bonās /bˈɔnaːs/
+		bom /bˈõ/ - bonum /bˈɔnʊ̃ː/
+		bons /bˈõʃ/ - bonōs /bˈɔnoːs/
+		belo /bˈɛlu/ - bellum /bˈɛlʲlʲʊ̃ː/
+		bela /bˈɛlɐ/ - bellam /bˈɛlʲlʲãː/
+		dormir /doɦmˈih/ - dormīre /dɔrmˈiːrɛ/
+		dar /dˈah/ - dare /dˈarɛ/
+		deus /dˈewʃ/ - deus /dˈeʊs/
+		dente /dˈẽʧi/ - dentem /dˈɛntɛ̃ː/
+		dois /dˈojʃ/ - duōs /dˈuoːs/
+		doce /dˈosi/ - dulcem /dˈʊɫkɛ̃ː/
+		doa /dˈoɐ/ - dōnat /dˈoːnat/
+		dom /dˈõ/ - dōnum /dˈoːnʊ̃ː/
+		dona /dˈõnɐ/ - dominam /dˈɔmɪnãː/
+		duas /dˈuɐʃ/ - duae /dˈuae̯/
+		duas /dˈuɐʃ/ - duās /dˈuaːs/
+		dez /dˈɛjʃ/ - decem /dˈɛkɛ̃ː/
+		escutar /eskutˈah/ - auscultāre /au̯skʊɫtˈaːrɛ/
+		escrever /eskɾevˈeh/ - scrībere /skrˈiːbɛrɛ/
+		escuro /eʃkˈuɾu/ - obscūrum /opskˈuːrʊ̃ː/
+		espiɡa /eʃpˈiɡɐ/ - spīcam /spˈiːkãː/
+		espiɡa /eʃpˈiɡɐ/ - spīcum /spˈiːkʊ̃ː/
+		espinha /eʃpˈĩj̃ɐ/ - spīnam /spˈiːnãː/
+		Espanha /eʃpˈɐ̃j̃ɐ/ - ʜispāniam /hɪspˈaːniãː/
+		estado /eʃtˈadu/ - statum /stˈatʊ̃ː/
+		estio /eʃʧˈiw/ - aestātem /ae̯stˈaːtɛ̃ː/
+		estio /eʃʧˈiw/ - aestīvum /ae̯stˈiːwʊ̃ː/
+		falar /falˈah/ - fābulāre /faːbʊɫˈaːrɛ/
+		fazer /fazˈeh/ - facere /fˈakɛrɛ/
+		fazer /fazˈeh/ - fare /fˈarɛ/
+		fruito /fɾˈujtu/ - frūctum /frˈuːktʊ̃ː/
+		fada /fˈadɐ/ - fātam /fˈaːtãː/
+		falso /fˈawsu/ - falsum /fˈaɫsʊ̃ː/
+		fio /fˈiw/ - filum /fˈiːɫʊ̃ː/
+		fíɡado /fˈiɡɐdu/ - fīcātum /fˈiːkaːtʊ̃ː/
+		filho /fˈiʎu/ - filius /fˈiːlʲiʊs/
+		filho /fˈiʎu/ - filium /fˈiːlʲiʊ̃ː/
+		filha /fˈiʎɐ/ - fīliam /fˈiːlʲiãː/
+		fim /fˈĩ/ - fīnem /fˈiːnɛ̃ː/
+		foɡo /fˈoɡu/ - focum /fˈɔkʊ̃ː/
+		folha /fˈoʎɐ/ - frondeam /frˈɔndɛãː/
+		folha /fˈoʎɐ/ - foliam /fˈɔlʲiãː/
+		fumo /fˈũmu/ - fūmum /fˈuːmʊ̃ː/
+		forte /fˈɔhʧi/ - fortem /fˈɔrtɛ̃ː/
+		fome /fˈɔmi/ - faminem /fˈaminɛ̃ː/
+		fome /fˈɔmi/ - famem /fˈamɛ̃ː/
+		ferro /fˈɛhu/ - ferrum /fˈɛrrʊ̃ː/
+		festa /fˈɛʃtɐ/ - festam /fˈɛstãː/
+		razão /hazˈɐ̃w̃/ - ratiōnem /ratiˈoːnɛ̃ː/
+		raiz /haˈiʃ/ - rādīcīnam /raːdiːkˈiːnãː/
+		raiz /haˈiʃ/ - rādīcem /raːdˈiːkɛ̃ː/
+		rainha /haˈĩj̃ɐ/ - rēɡīnam /reːɡˈiːnãː/
+		redondo /hedˈõdu/ - rotundum /rɔtˈʊndʊ̃ː/
+		romão /homˈɐ̃w̃/ - rōmānum /roːmˈaːnʊ̃ː/
+		rei /hˈej/ - rēɡem /rˈeːɡɛ̃ː/
+		rio /hˈiu/ - rīvum /rˈiːwʊ̃ː/
+		roxo /hˈoʃu/ - rubeum /rˈʊbeʊ̃ː/
+		roxo /hˈoʃu/ - russum /rˈʊssʊ̃ː/
+		ruivo /hˈujvu/ - rubeum /rˈʊbeʊ̃ː/
+		irmão /iɦmˈɐ̃w̃/ - frātrem /frˈaːtrɛ̃ː/
+		irmão /iɦmˈɐ̃w̃/ - ɡermānum /ɡɛrmˈaːnʊ̃ː/
+		inverno /ĩvˈɛɦnu/ - hībernum /hiːbˈɛrnʊ̃ː/
+		cabelo /kabˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		cabelo /kabˈelu/ - pilum /pˈɪɫʊ̃ː/
+		cadeia /kadˈejɐ/ - catēnam /katˈeːnãː/
+		caçar /kasˈah/ - captiāre /kaptiˈaːrɛ/
+		cavalo /kavˈalu/ - caballum /kabˈalʲlʲʊ̃ː/
+		castelo /kaʃtˈɛlu/ - castellum /kastˈɛlʲlʲʊ̃ː/
+		cortiça /kuhʧˈisɐ/ - corticeam /kɔrtˈɪkɛãː/
+		cortiça /kuhʧˈisɐ/ - corticem /kˈɔrtɪkɛ̃ː/
+		cortiça /kuhʧˈisɐ/ - scorteam /skˈɔrteãː/
+		quatro /kwˈatɾu/ - quattuor /kʷˈattuɔr/
+		cambiar /kɐ̃bjˈah/ - cambiāre /kambiˈaːrɛ/
+		crer /kɾˈeh/ - crēdere /krˈeːdɛrɛ/
+		cruz /kɾˈujʃ/ - crucem /krˈʊkɛ̃ː/
+		caldo /kˈawdu/ - caldum /kˈaɫdʊ̃ː/
+		casa /kˈazɐ/ - casam /kˈasãː/
+		carne /kˈaɦni/ - carnem /kˈarnɛ̃ː/
+		caro /kˈaɾu/ - cārum /kˈaːrʊ̃ː/
+		quem /kˈẽj̃/ - quem /kʷˈɛ̃ː/
+		que /kˈi/ - quid /kʷˈɪd/
+		cor /kˈoh/ - colōrem /koɫˈoːrɛ̃ː/
+		corpo /kˈohpu/ - corpus /kˈɔrpʊs/
+		corpo /kˈohpu/ - corpum /kˈɔrpʊ̃ː/
+		corno /kˈoɦnu/ - cornū /kˈɔrnuː/
+		coxa /kˈoʃɐ/ - coxam /kˈɔksãː/
+		cu /kˈu/ - cūlum /kˈuːɫʊ̃ː/
+		curto /kˈuhtu/ - curtum /kˈʊrtʊ̃ː/
+		canto /kˈɐ̃tu/ - cantum /kˈantʊ̃ː/
+		cão /kˈɐ̃w̃/ - canem /kˈanɛ̃ː/
+		levar /levˈah/ - levāre /ɫɛwˈaːrɛ/
+		leão /leˈɐ̃w̃/ - leōnem /ɫeˈoːnɛ̃ː/
+		láɡrima /lˈaɡɾimɐ/ - lacrimam /ɫˈakrɪmãː/
+		lei /lˈej/ - lēɡem /lˈeːɡɛ̃/
+		leite /lˈejʧi/ - lactem /ɫˈaktɛ̃ː/
+		ler /lˈeɾ/ - leɡere /ɫˈɛɡɛrɛ/
+		lenha /lˈẽj̃ɐ/ - liɡnum /lˈɪɡnʊ̃ː/
+		livre /lˈivɾi/ - līberum /lˈibɛrʊ̃ː/
+		linha /lˈĩj̃ɐ/ - līneam /lˈiːneãː/
+		línɡua /lˈĩɡwɐ/ - linɡuam /lˈɪŋɡʷãː/
+		lobo /lˈobu/ - lupum /ɫˈʊpʊ̃ː/
+		loɡo /lˈoɡu/ - locum /ɫˈɔkʊ̃ː/
+		luz /lˈujʃ/ - lūcem /lˈuːkɛ̃ː/
+		luz /lˈujʃ/ - lūmen /ɫˈuːmɛ̃ː/
+		luz /lˈujʃ/ - lūmina /ɫˈuːmɪna/
+		luta /lˈutɐ/ - lūctam /ɫˈuːktãː/
+		lua /lˈuɐ/ - lunam /ɫˈuːnãː/
+		lã /lˈɐ̃/ - lānam /ɫˈaːnãː/
+		lebre /lˈɛbɾi/ - leporem /ɫˈɛpɔrɛ̃ː/
+		maduro /madˈuɾu/ - mātūrum /maːtˈuːrʊ̃ː/
+		melhor /meʎˈɔh/ - meliōrem /mɛlʲiˈoːrɛ̃ː/
+		morseɡar /mohseɡˈah/ - morsicāre /mɔrsɪkˈaːrɛ/
+		morrer /mohˈeh/ - morīre /mɔrˈiːrɛ/
+		morder /moɦdˈeh/ - mordēre /mˈɔrdeːrɛ/
+		matar /mɐtˈah/ - mactāre /maktˈaːrɛ/
+		matar /mɐtˈah/ - tūtārī /tˈuːtaːriː/
+		mar /mˈah/ - mare /mˈarɛ/
+		meio /mˈeju/ - medium /mˈɛdiʊ̃ː/
+		me /mˈi/ - mē /mˈeː/
+		mil /mˈiw/ - mīlle /mˈiːlʲlʲɛ/
+		miɡa /mˈiɡɐ/ - mīcam /mˈiːkãː/
+		mosca /mˈoʃkɐ/ - muscam /mˈʊskãː/
+		mão /mˈɐ̃w̃/ - manum /mˈanʊ̃ː/
+		morte /mˈɔhʧi/ - mortem /mˈɔrtɛ̃ː/
+		nadar /nadˈah/ - natāre /natˈaːrɛ/
+		nariz /naɾˈiʃ/ - nārīcem /naːrˈiːkɛ̃ː/
+		nariz /naɾˈiʃ/ - nāsum /nˈaːsʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nē ipse ūnum /neː‿ipse‿ˈuːnʊ̃ː/
+		nenhum /nẽj̃ˈũ/ - nec ūnum /nɛk‿ˈuːnʊ̃ː/
+		não /nɐ̃w̃/ - nōn /noːn/
+		neɡro /nˈeɡɾu/ - niɡrum /nˈɪɡrʊ̃ː/
+		noite /nˈojʧi/ - noctem /nˈɔktɛ̃ː/
+		novo /nˈovu/ - novum /nˈɔwʊ̃ː/
+		nome /nˈõmi/ - nōmen /nˈoːmɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbem /nˈuːbɛ̃ː/
+		nuvem /nˈuvẽj̃/ - nūbilam /nˈuːbɪɫãː/
+		nuvem /nˈuvẽj̃/ - nūbilum /nˈuːbɪɫʊ̃ː/
+		nó /nˈɔ/ - nōdum /nˈoːdʊ̃ː/
+		nós /nˈɔjʃ/ - nōs /nˈoːs/
+		noz /nˈɔjʃ/ - nucem /nˈʊkɛ̃ː/
+		nosso /nˈɔsu/ - nostrum /nˈɔstrʊ̃ː/
+		nove /nˈɔvi/ - novem /nˈowɛ̃/
+		neve /nˈɛvi/ - nivem /nˈɪwɛ̃ː/
+		obreiro /obɾˈejɾu/ - operārium /ɔpɛrˈaːriʊ̃ː/
+		odor /odˈoh/ - odōrem /ɔdˈoːrɛ̃ː/
+		odor /odˈoh/ - olōrem /ɔɫˈoːrɛ̃ː/
+		ovelha /ovˈeʎɐ/ - oviculam /owˈɪkʊɫãː/
+		ovelha /ovˈeʎɐ/ - ovem /ˈowɛ̃ː/
+		outono /owtˈõnu/ - autumnam /au̯tˈʊmnãː/
+		outono /owtˈõnu/ - autumnum /au̯tˈʊmnʊ̃ː/
+		palavra /palˈavɾɐ/ - parabolam /parˈabɔɫãː/
+		piolho /piˈoʎu/ - pēduculum /peːdˈukʊɫʊ̃ː/
+		poder /podˈeh/ - pōtēre /poːtˈeːrɛ/
+		proveito /pɾovˈejtu/ - prōfectum /proːfˈɛktʊ̃ː/
+		preço /pɾˈesu/ - pretium /prˈɛtiʊ̃ː/
+		paz /pˈajʃ/ - pācem /pˈaːkɛ̃ː/
+		paço /pˈasu/ - palātium /paɫˈatiʊ̃ː/
+		peito /pˈejtu/ - pectus /pˈɛktʊs/
+		peixe /pˈejʃi/ - piscōnem /pɪskˈoːnɛ̃ː/
+		peixe /pˈejʃi/ - piscem /pˈɪskɛ̃ː/
+		pelo /pˈelu/ - capillum /kapˈɪlʲlʲʊ̃ː/
+		pena /pˈenɐ/ - poenam /pˈoe̯nãː/
+		pêsseɡo /pˈeseɡu/ - persicum /pˈɛrsɪkʊ̃ː/
+		pena /pˈẽnɐ/ - pennam /pˈɛnnãː/
+		pena /pˈẽnɐ/ - pinnam /pˈɪnnãː/
+		pôr /pˈoh/ - pōnere /pˈoːnɛrɛ/
+		porco /pˈohku/ - porcum /pˈɔrkʊ̃ː/
+		poio /pˈoju/ - podium /pˈɔdiʊ̃ː/
+		poço /pˈosu/ - puteum /pˈʊteʊ̃ː/
+		pões /pˈõj̃ʃ/ - pōnis /pˈoːnɪs/
+		ponto /pˈõtu/ - punctum /pˈʊŋktʊ̃ː/
+		punho /pˈũj̃u/ - puɡnum /pˈʊŋnʊ̃ː/
+		pança /pˈɐ̃sɐ/ - panticem /pˈantɪkɛ̃ː/
+		pão /pˈɐ̃w̃/ - pānem /pˈaːnɛ̃ː/
+		pobre /pˈɔbɾi/ - pauperem /pˈau̯pɛrɛ̃ː/
+		porca /pˈɔhkɐ/ - porcam /pˈɔrkãː/
+		pedra /pˈɛdɾɐ/ - petram /pˈɛtrãː/
+		saber /sabˈeh/ - scīre /skˈiːrɛ/
+		saúde /saˈuʤi/ - salūtem /saɫˈuːtɛ̃ː/
+		semente /semˈẽʧi/ - sementem /seːmˈɛntɛ̃ː/
+		semana /semˈɐ̃nɐ/ - septimānam /sɛptɪmˈaːnãː/
+		cereja /seɾˈeʒɐ/ - ceresiam /kɛrˈɛsiãː/
+		sentar /sẽtˈah/ - sedēre /sɛdˈeːrɛ/
+		cidade /sidˈaʤi/ - cīvitātem /kiːwɪtˈaːtɛ̃ː/
+		cinquenta /sĩkwˈẽtɐ/ - quīnquāɡintā /kʷiːŋkʷaːɡˈɪntaː/
+		saiba /sˈajbɐ/ - sciam /skˈiãː/
+		saiba /sˈajbɐ/ - sapiam /sˈapiãː/
+		salsa /sˈawsɐ/ - salsam /sˈaɫsãː/
+		seda /sˈedɐ/ - sētam /sˈeːtãː/
+		seco /sˈeku/ - siccum /sˈɪkkʊ̃ː/
+		seca /sˈekɐ/ - siccam /sˈɪkkãː/
+		cera /sˈeɾɐ/ - cēram /kˈeːrãː/
+		cento /sˈẽtu/ - centum /kˈɛntʊ̃ː/
+		cima /sˈĩmɐ/ - cȳmam /kˈyːmãː/
+		sobre /sˈobɾi/ - super /sˈʊpɛr/
+		sã /sˈɐ̃/ - sānam /sˈaːnãː/
+		santo /sˈɐ̃tu/ - sānctum /sˈaːŋktʊ̃ː/
+		são /sˈɐ̃w̃/ - sānum /sˈaːnʊ̃ː/
+		sanɡue /sˈɐ̃ɡi/ - sanɡuem /sˈaŋɡʷɛ̃ː/
+		sanɡue /sˈɐ̃ɡi/ - sanɡuinem /sˈaŋɡʷɪnɛ̃ː/
+		sol /sˈɔw/ - sōlem /sˈoːɫɛ̃ː/
+		céu /sˈɛw/ - caelum /kˈae̯ɫʊ̃ː/
+		sete /sˈɛʧi/ - septem /sˈɛptɛ̃/
+		três /tɾˈejʃ/ - trēs /trˈeːs/
+		tempo /tˈẽpu/ - tempus /tˈɛmpʊs/
+		todos /tˈoduʃ/ - tōtōs /tˈoːtoːs/
+		touro /tˈowɾu/ - taurum /tˈau̯rʊ̃ː/
+		terra /tˈɛhɐ/ - terram /tˈɛrrãː/
+		testa /tˈɛʃtɐ/ - testam /tˈɛstãː/
+		umbiɡo /ũbˈiɡu/ - umbilīcum /ʊmbɪlʲˈiːkʊ̃ː/
+		verɡonha /veɦɡˈõj̃ɐ/ - verēkundiam /wɛreːkˈʊndiãː/
+		vilão /vilˈɐ̃w̃/ - vīllānum /wiːlʲlʲˈaːnʊ̃ː/
+		voar /voˈah/ - volāre /wɔɫˈaːrɛ/
+		vaca /vˈakɐ/ - vaccam /wˈakkãː/
+		ver /vˈeh/ - vidēre /wɪdˈeːrɛ/
+		velho /vˈeʎu/ - vetulum /wˈɛtʊɫʊ̃ː/
+		vento /vˈẽtu/ - ventum /wˈɛntʊ̃ː/
+		ventre /vˈẽtɾi/ - panticem /pˈantɪkɛ̃ː/
+		ventre /vˈẽtɾi/ - ventrem /wˈɛntrɛ̃ː/
+		vida /vˈidɐ/ - vītam /wˈiːtãː/
+		vir /vˈih/ - venīre /wɛnˈiːrɛ/
+		vila /vˈilɐ/ - vīllam /wˈiːlʲlʲãː/
+		via /vˈiɐ/ - viam /wˈiãː/
+		vinho /vˈĩj̃u/ - vīnum /wˈiːnʊ̃ː/
+		vinte /vˈĩʧi/ - vīɡintī /wiːɡˈɪntiː/
+		voz /vˈɔjʃ/ - vōcem /wˈoːkɛ̃ː/
+		vós /vˈɔjʃ/ - vōs /wˈoːs/
+		verme /vˈɛɦmi/ - vermem /wˈɛrmɛ̃ː/
+		ɡrosso /ɡɾˈosu/ - ɡrossum /ɡrˈɔssʊ̃ː/
+		ɡrão /ɡɾˈɐ̃w̃/ - ɡrānum /ɡrˈaːnʊ̃ː/
+		ɡrande /ɡɾˈɐ̃ʤi/ - ɡrandem /ɡrˈandɛ̃ː/
+		ɡato /ɡˈatu/ - cattum /kˈattʊ̃ː/
+		ɡoivo /ɡˈojvu/ - ɡaudiam /ɡˈau̯diãː/
+		ɡota /ɡˈotɐ/ - ɡuttam /ɡˈʊttãː/
+		ɡola /ɡˈɔlɐ/ - ɡulam /ɡˈʊɫãː/
+		chamar /ʃamˈah/ - clāmāre /kɫaːmˈaːrɛ/
+		chorar /ʃoɾˈah/ - plōrāre /pɫoːrˈaːrɛ/
+		chave /ʃˈavi/ - clāvem /klˈaːwɛ̃ː/
+		chaɡa /ʃˈaɡɐ/ - plāɡam /plˈaːɡãː/
+		cheio /ʃˈeju/ - plēnum /pɫˈeːnʊ̃ː/
+		chor /ʃˈoh/ - flōrem /fɫˈoːrɛ̃ː/
+		chuva /ʃˈuvɐ/ - pluviam /pɫˈʊwiãː/
+		chama /ʃˈɐ̃mɐ/ - flammam /fɫˈammãː/
+		ɡear /ʒeˈah/ - ɡlaciāre /ɡɫakiˈaːrɛ/
+		joelho /ʒuˈeʎu/ - ɡenuculum /ɡɛnˈʊkʊɫʊ̃ː/
+		juiz /ʒuˈiʃ/ - iūdicem /jˈuːdɪkɛ̃ː/
+		ɡenro /ʒˈẽhu/ - ɡenerum /ɡˈɛnɛrʊ̃ː/
+		ɡente /ʒˈẽʧi/ - ɡentem /ɡˈɛntɛ̃ː/
+		junho /ʒˈũj̃u/ - iūnium /jˈuːniʊ̃ː/
+		junto /ʒˈũtu/ - iūnctum /jˈuːŋktʊ̃ː/
+		jovem /ʒˈɔvẽj̃/ - iuvenem /jˈuwɛnɛ̃ː/
+		ʤizer /ʤizˈeh/ - dīcere /dˈiːkɛrɛ/
+		ʤizer /ʤizˈeh/ - dīre /dˈiːrɛ/
+		ʤia /ʤˈiɐ/ - diem /dˈiɛ̃ː/
+		ʤiɡo /ʤˈiɡu/ - dīcō /dˈiːkoː/
+		alma /ˈawmɐ/ - animam /ˈanɪmãː/
+		alva /ˈawvɐ/ - albam /ˈaɫbãː/
+		áɡua /ˈaɡwɐ/ - aquam /ˈakʷãː/
+		árvore /ˈaɦvoɾi/ - arborem /ˈarbɔrɛ̃ː/
+		alho /ˈaʎu/ - ālium /ˈaːlʲiʊ̃ː/
+		ele /ˈeli/ - ille /ˈɪlʲlʲɛ/
+		eu /ˈew/ - eɡō /ˈɛɡoː/
+		ilha /ˈiʎɐ/ - īnsulam /ˈĩːsʊɫãː/
+		ínsua /ˈĩswɐ/ - īnsulam /ˈĩːsʊɫãː/
+		oito /ˈojtu/ - octō /ˈɔktoː/
+		outro /ˈowtɾu/ - alterum /ˈaɫtɛrʊ̃ː/
+		ouro /ˈowɾu/ - aurum /ˈau̯rʊ̃ː/
+		olho /ˈoʎu/ - oculum /ˈɔkʊɫʊ̃ː/
+		homem /ˈõmẽj̃/ - hominem /hˈɔmɪnɛ̃ː/
+		usso /ˈusu/ - ursum /ˈʊrsʊ̃ː/
+		um /ˈũ/ - unum /ˈuːnʊ̃ː/
+		unha /ˈũj̃ɐ/ - unɡulam /ˈʊŋɡʊɫãː/
+		ano /ˈɐ̃nu/ - annum /ˈannʊ̃ː/
+		anjo /ˈɐ̃ʒu/ - anɡelum /ˈaŋɡɛɫʊ̃ː/
+		obra /ˈɔbɾɐ/ - operam /ˈɔpɛrãː/
+		elo /ˈɛlu/ - ānellum /aːnˈɛlʲlʲʊ̃ː/
+		ela /ˈɛlɐ/ - illam /ˈɪlʲlʲãː/
+		erva /ˈɛɦvɐ/ - herbam /hˈɛrbãː/
+
+Final disqualified:
+		abelha /abˈeʎɐ/ - apem /ˈapɛ̃ː/
+		areia /aɾˈejɐ/ - sabula /sˈabʊɫa/
+		areia /aɾˈejɐ/ - sabulum /sˈabʊɫʊ̃ː/
+		belo /bˈɛlu/ - fōrmōsam /foːrmˈoːsãː/
+		belo /bˈɛlu/ - fōrmōsum /foːrmˈoːsʊ̃ː/
+		fio /fˈiw/ - filicellam /filʲikˈɛlʲlʲãː/
+		rio /hˈiu/ - flūmen /fɫˈuːmɛ̃ː/
+		pássaro /pˈasɐɾu/ - avicellum /awɪkˈɛlʲlʲʊ̃ː/
+		pança /pˈɐ̃sɐ/ - ventrem /wˈɛntrɛ̃ː/
+		pé /pˈɛ/ - petiolum /pɛtiˈolʊ̃ː/
+		chorar /ʃoɾˈah/ - planɡēre /pɫˈaŋɡɛrɛ/
+		ʤia /ʤˈiɐ/ - diurnum /diˈʊrnʊ̃ː/
+		ele /ˈeli/ - ipsum /ˈɪpsʊ̃ː/
+		homem /ˈõmẽj̃/ - barbātum /barbˈaːtʊ̃ː/
+
+
+-------------------
+

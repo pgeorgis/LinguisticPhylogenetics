@@ -1,0 +1,1458 @@
+Same meaning pairs: 236
+****SAMPLE 1****
+Iteration 1
+	Qualified: 174
+	Disqualified: 204
+	Added: 0
+	Removed: 15
+		cavél /kavˈel/ - poil /pwal/
+		rè /rˈɛ/ - roi /ʁwa/
+		òt /ˈɔt/ - huit /ɥi/
+		pièɡora /pjˈɛɡora/ - ouaille /waj/
+		vedèl /vedˈɛl/ - veau /vo/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		jutàr /jutˈar/ - aider /ɛde/
+		diéxe /djˈeze/ - dix /di/
+		ava /ˈava/ - abeille /abɛj/
+		dì /dˈi/ - jour /ʒuʁ/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+		rèna /rˈena/ - sable /sabl/
+		élo /ˈelo/ - il /il/
+		neveɡàr /neveɡˈar/ - neiɡer /neʒe/
+		nòt /nˈɔt/ - nuit /nɥi/
+
+Iteration 2
+	Qualified: 168
+	Disqualified: 210
+	Added: 1
+		diéxe /djˈeze/ - dix /di/
+	Removed: 7
+		ànzol /ˈanzol/ - anɡe /ɑ̃ʒ/
+		an /ˈan/ - an /ɑ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		calt /kˈalt/ - chaud /ʃo/
+		diés /djˈes/ - dix /di/
+		oxèl /ozˈɛl/ - oiseau /wazo/
+
+Iteration 3
+	Qualified: 170
+	Disqualified: 208
+	Added: 3
+		oxèl /ozˈɛl/ - oiseau /wazo/
+		diés /djˈes/ - dix /di/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 1
+		diéxe /djˈeze/ - dix /dis/
+
+Iteration 4
+	Qualified: 174
+	Disqualified: 204
+	Added: 5
+		vóvo /vˈovo/ - œuf /œf/
+		calt /kˈalt/ - chaud /ʃo/
+		diéxe /djˈeze/ - dix /dis/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+		élo /ˈelo/ - il /il/
+	Removed: 1
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 5
+	Qualified: 177
+	Disqualified: 201
+	Added: 4
+		cavél /kavˈel/ - poil /pwal/
+		nòt /nˈɔt/ - nuit /nɥi/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 1
+		élo /ˈelo/ - il /il/
+
+Iteration 6
+	Qualified: 177
+	Disqualified: 201
+	Added: 2
+		rè /rˈɛ/ - roi /ʁwa/
+		élo /ˈelo/ - il /il/
+	Removed: 2
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 7
+	Qualified: 178
+	Disqualified: 200
+	Added: 2
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 1
+		élo /ˈelo/ - il /il/
+
+Iteration 8
+	Qualified: 177
+	Disqualified: 201
+	Added: 1
+		élo /ˈelo/ - il /il/
+	Removed: 2
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Final qualifying:
+		anèl /anˈɛl/ - anneau /ano/
+		aɡnèl /aɲˈɛl/ - aɡneau /aɲo/
+		biànk /bjˈaŋk/ - blanc /blɑ̃/
+		bruxàr /bruzˈar/ - brûler /bʁyle/
+		bas /bˈas/ - bas /ba/
+		béver /bˈever/ - boire /bwaʁ/
+		bén /bˈeŋ/ - bien /bjɛ̃/
+		bóca /bˈoka/ - bouche /buʃ/
+		bóna /bˈona/ - bonne /bɔn/
+		bóne /bˈone/ - bonnes /bɔn/
+		bóni /bˈoni/ - bons /bɔ̃/
+		bón /bˈoŋ/ - bon /bɔ̃/
+		diés /djˈes/ - dix /di/
+		diés /djˈes/ - dix /dis/
+		diéxe /djˈeze/ - dix /di/
+		diéxe /djˈeze/ - dix /dis/
+		dént /dˈeŋt/ - dent /dɑ̃/
+		dio /dˈio/ - dieu /djø/
+		dìr /dˈir/ - dire /diʁ/
+		dói /dˈo/ - deux /dø/
+		dódes /dˈodes/ - douze /duz/
+		dó /dˈoj/ - deux /dø/
+		dólzh /dˈolθ/ - doux /du/
+		fiɡà /fiɡˈa/ - foie /fwa/
+		fiàma /fjˈama/ - flamme /flam/
+		fiór /fjˈor/ - fleur /flœʁ/
+		fia /fˈia/ - fille /fij/
+		fil /fˈil/ - ficelle /fisɛl/
+		fin /fˈiŋ/ - fin /fɛ̃/
+		fìn /fˈiŋ/ - fin /fɛ̃/
+		fója /fˈoja/ - feuille /fœj/
+		fóɡo /fˈoɡo/ - feu /fø/
+		fun /fˈuŋ/ - fumée /fyme/
+		fòrt /fˈɔrt/ - fort /fɔʁ/
+		fòrzha /fˈɔrθa/ - force /fɔʁs/
+		fèr /fˈɛr/ - fer /fɛʁ/
+		fèsta /fˈɛsta/ - fête /fɛt/
+		istà /istˈa/ - été /ete/
+		invèrn /iŋvˈɛrn/ - hiver /ivɛʁ/
+		jazhàr /jaθˈar/ - ɡlacer /ɡlase/
+		jazh /jˈaθ/ - ɡlace /ɡlas/
+		józha /jˈoθa/ - ɡoutte /ɡut/
+		cadéna /kadˈena/ - chaîne /ʃɛn/
+		castèl /kastˈɛl/ - château /ʃato/
+		cavàl /kavˈal/ - cheval /ʃəval/
+		cavél /kavˈel/ - poil /pwal/
+		cavél /kavˈel/ - cheveu /ʃəvø/
+		colór /kolˈor/ - couleur /kulœʁ/
+		conóser /konˈoser/ - connaître /kɔnɛtʁ/
+		créder /krˈeder/ - croire /kʁwaʁ/
+		cróxe /krˈoze/ - croix /kʁwa/
+		cuàtro /kwˈatro/ - quatre /katʁ/
+		calt /kˈalt/ - chaud /ʃo/
+		cao /kˈao/ - chef /ʃɛf/
+		caro /kˈaro/ - cher /ʃɛʁ/
+		cavra /kˈavra/ - chèvre /ʃɛvʁ/
+		caxa /kˈaza/ - chez /ʃe/
+		can /kˈaŋ/ - chien /ʃjɛ̃/
+		cànbera /kˈaŋbera/ - chambre /ʃɑ̃bʁ/
+		cóa /kˈoa/ - queue /kø/
+		cólpo /kˈolpo/ - coup /ku/
+		cór /kˈor/ - cœur /kœʁ/
+		curt /kˈurt/ - court /kuʁ/
+		còrno /kˈɔrno/ - corne /kɔʁn/
+		còsa /kˈɔza/ - chose /ʃoz/
+		liévro /ljˈevro/ - lièvre /ljɛvʁ/
+		làɡrema /lˈaɡrema/ - larme /laʁm/
+		lóɡo /lˈoɡo/ - lieu /ljø/
+		luna /lˈuna/ - lune /lyn/
+		lèt /lˈɛt/ - lit /li/
+		lèdher /lˈɛðer/ - lire /liʁ/
+		madùr /madˈur/ - mûr /myʁ/
+		maɡnàr /maɲˈar/ - manɡer /mɑ̃ʒe/
+		morseɡàr /morseɡˈar/ - mordre /mɔʁdʁ/
+		morìr /morˈir/ - mourir /muʁiʁ/
+		montàɡna /moŋtˈaɲa/ - montaɡne /mɔ̃taɲ/
+		mar /mˈar/ - mer /mɛʁ/
+		mare /mˈare/ - mère /mɛʁ/
+		mósca /mˈoska/ - mouche /muʃ/
+		mòrt /mˈɔrt/ - mort /mɔʁ/
+		mèjo /mˈɛjo/ - mieux /mjø/
+		mèjo /mˈɛjo/ - meilleur /mɛjœʁ/
+		mèdho /mˈɛðo/ - mi- /mi/
+		nàser /nˈaser/ - naître /nɛtʁ/
+		nóvo /nˈovo/ - neuf /nœf/
+		nòt /nˈɔt/ - nuit /nɥi/
+		nèola /nˈɛola/ - nue /ny/
+		nèola /nˈɛola/ - nuaɡe /nɥaʒ/
+		oxèl /ozˈɛl/ - oiseau /wazo/
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		piàndher /pjˈaŋðer/ - pleurer /plœʁe/
+		piàndher /pjˈaŋðer/ - plaindre /plɛ̃dʁ/
+		pié /pjˈe/ - pied /pje/
+		piéra /pjˈera/ - pierre /pjɛʁ/
+		pién /pjˈeŋ/ - plein /plɛ̃/
+		pióva /pjˈova/ - pluie /plɥi/
+		podér /podˈer/ - pouvoir /puvwaʁ/
+		pare /pˈare/ - père /pɛʁ/
+		pan /pˈaŋ/ - pain /pɛ̃/
+		pél /pˈel/ - cheveu /ʃəvø/
+		péna /pˈena/ - plume /plym/
+		péna /pˈena/ - peine /pɛn/
+		péna /pˈena/ - penne /pɛn/
+		pés /pˈes/ - poisson /pwasɔ̃/
+		pìzhol /pˈiθol/ - petit /pəti/
+		póre /pˈore/ - pauvre /povʁ/
+		pós /pˈos/ - puits /pɥi/
+		pónt /pˈoŋt/ - pont /pɔ̃/
+		pèl /pˈɛl/ - peau /po/
+		raxón /razˈoŋ/ - raison /ʁɛzɔ̃/
+		romàn /romˈaŋ/ - romain /ʁɔmɛ̃/
+		récia /rˈeʧa/ - oreille /ɔʁɛj/
+		rè /rˈɛ/ - roi /ʁwa/
+		savér /savˈer/ - savoir /savwaʁ/
+		setemana /setemˈana/ - semaine /səmɛn/
+		siɡùr /siɡˈur/ - sûr /syʁ/
+		scoltàr /skoltˈar/ - écouter /ekute/
+		scrìver /skrˈiver/ - écrire /ekʁiʁ/
+		scòrzha /skˈɔrθa/ - écorce /ekɔʁs/
+		spin /spˈin/ - épine /epin/
+		stemàna /stemˈana/ - semaine /səmɛn/
+		stéla /stˈela/ - étoile /etwal/
+		sal /sˈal/ - sel /sɛl/
+		san /sˈaŋ/ - sain /sɛ̃/
+		séda /sˈeda/ - soie /swa/
+		sék /sˈek/ - sec /sɛk/
+		séra /sˈera/ - soir /swaʁ/
+		sól /sˈol/ - soleil /sɔlɛj/
+		sóra /sˈora/ - sur /syʁ/
+		sèt /sˈɛt/ - sept /sɛt/
+		tèsta /tˈɛsta/ - tête /tɛt/
+		vexìn /vezˈiŋ/ - voisin /vwazɛ̃/
+		vaca /vˈaka/ - vache /vaʃ/
+		vérdo /vˈerdo/ - vert /vɛʁ/
+		vént /vˈeŋt/ - vent /vɑ̃/
+		via /vˈia/ - voie /vwa/
+		vin /vˈiŋ/ - vin /vɛ̃/
+		vìnti /vˈiŋti/ - vinɡt /vɛ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		vózhe /vˈoθe/ - voix /vwa/
+		vu /vˈu/ - vous /vu/
+		vèrmo /vˈɛrmo/ - ver /vɛʁ/
+		vècio /vˈɛʧo/ - vieux /vjø/
+		vècio /vˈɛʧo/ - vieil /vjɛj/
+		xolàr /zolˈar/ - voler /vɔle/
+		dhenòcio /ðenˈɔʧo/ - ɡenou /ʒənu/
+		dhal /ðˈal/ - jaune /ʒon/
+		dhént /ðˈeŋt/ - ɡens /ʒɑ̃/
+		dhóven /ðˈoven/ - jeune /ʒœn/
+		dhóɡo /ðˈoɡo/ - jeu /ʒø/
+		dhènero /ðˈɛnero/ - ɡendre /ʒɑ̃dʁ/
+		ɡras /ɡrˈas/ - ɡraisse /ɡʁɛs/
+		ɡran /ɡrˈaŋ/ - ɡraine /ɡʁɛn/
+		ɡrant /ɡrˈaŋt/ - ɡrand /ɡʁɑ̃/
+		ɡròs /ɡrˈɔs/ - ɡros /ɡʁo/
+		ɡat /ɡˈat/ - chat /ʃa/
+		ɡóla /ɡˈola/ - ɡueule /ɡœl/
+		ciamar /ʧamˈar/ - clamer /klame/
+		ài /ˈaj/ - ail /aj/
+		àrbol /ˈarbol/ - arbre /aʁbʁ/
+		àuter /ˈawter/ - autre /otʁ/
+		éla /ˈela/ - elle /ɛl/
+		élo /ˈelo/ - il /il/
+		io /ˈio/ - je /ʒə/
+		ónɡia /ˈoŋʤa/ - onɡle /ɔ̃ɡl/
+		òro /ˈɔro/ - or /ɔʁ/
+		òs /ˈɔs/ - os /ɔs/
+		òn /ˈɔŋ/ - homme /ɔm/
+		òcio /ˈɔʧo/ - œil /œj/
+		çità /θitˈa/ - cité /site/
+		zhincuànta /θiŋkwˈaŋta/ - cinquante /sɛ̃kɑ̃t/
+		zhiélo /θjˈelo/ - ciel /sjɛl/
+		zharéxa /θˈareza/ - cerise /səʁiz/
+		zhéndre /θˈendre/ - cendre /sɑ̃dʁ/
+		zhéra /θˈera/ - cire /siʁ/
+		zhìncue /θˈiŋkwe/ - cinq /sɛ̃k/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+
+Final disqualified:
+		dì /dˈi/ - jour /ʒuʁ/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		jutàr /jutˈar/ - aider /ɛde/
+		neveɡàr /neveɡˈar/ - neiɡer /neʒe/
+		pièɡora /pjˈɛɡora/ - ouaille /waj/
+		rèna /rˈena/ - sable /sabl/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		vedèl /vedˈɛl/ - veau /vo/
+		an /ˈan/ - an /ɑ̃/
+		ànzol /ˈanzol/ - anɡe /ɑ̃ʒ/
+		ava /ˈava/ - abeille /abɛj/
+		òt /ˈɔt/ - huit /ɥi/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 179
+	Disqualified: 199
+	Added: 0
+	Removed: 10
+		rè /rˈɛ/ - roi /ʁwa/
+		òs /ˈɔs/ - os /o/
+		un /ˈun/ - un /ɛ̃/
+		pièɡora /pjˈɛɡora/ - ouaille /waj/
+		vedèl /vedˈɛl/ - veau /vo/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+		dì /dˈi/ - jour /ʒuʁ/
+		rèna /rˈena/ - sable /sabl/
+		neveɡàr /neveɡˈar/ - neiɡer /neʒe/
+
+Iteration 2
+	Qualified: 177
+	Disqualified: 201
+	Added: 1
+		çènto /θˈɛnto/ - cent /sɑ̃/
+	Removed: 3
+		ànzol /ˈanzol/ - anɡe /ɑ̃ʒ/
+		an /ˈan/ - an /ɑ̃/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 3
+	Qualified: 180
+	Disqualified: 198
+	Added: 3
+		òs /ˈɔs/ - os /o/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 0
+
+Iteration 4
+	Qualified: 178
+	Disqualified: 200
+	Added: 1
+		rè /rˈɛ/ - roi /ʁwa/
+	Removed: 3
+		òs /ˈɔs/ - os /o/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 5
+	Qualified: 180
+	Disqualified: 198
+	Added: 2
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 0
+
+Iteration 6
+	Qualified: 180
+	Disqualified: 198
+	Added: 1
+		òs /ˈɔs/ - os /o/
+	Removed: 1
+		vedèl /vedˈɛl/ - veau /vo/
+
+Iteration 7
+	Qualified: 180
+	Disqualified: 198
+	Added: 1
+		vedèl /vedˈɛl/ - veau /vo/
+	Removed: 1
+		òs /ˈɔs/ - os /o/
+
+Final qualifying:
+		anèl /anˈɛl/ - anneau /ano/
+		aɡnèl /aɲˈɛl/ - aɡneau /aɲo/
+		biànk /bjˈaŋk/ - blanc /blɑ̃/
+		bruxàr /bruzˈar/ - brûler /bʁyle/
+		bas /bˈas/ - bas /ba/
+		béver /bˈever/ - boire /bwaʁ/
+		bén /bˈeŋ/ - bien /bjɛ̃/
+		bóca /bˈoka/ - bouche /buʃ/
+		bóna /bˈona/ - bonne /bɔn/
+		bóne /bˈone/ - bonnes /bɔn/
+		bóni /bˈoni/ - bons /bɔ̃/
+		bón /bˈoŋ/ - bon /bɔ̃/
+		bò /bˈɔ/ - bœuf /bœf/
+		bèl /bˈɛl/ - beau /bo/
+		bèla /bˈɛla/ - belle /bɛl/
+		diés /djˈes/ - dix /di/
+		diés /djˈes/ - dix /dis/
+		diéxe /djˈeze/ - dix /di/
+		dormìr /dormˈir/ - dormir /dɔʁmiʁ/
+		draɡón /draɡˈoŋ/ - draɡon /dʁaɡɔ̃/
+		déo /dˈeo/ - doiɡt /dwa/
+		dént /dˈeŋt/ - dent /dɑ̃/
+		dìr /dˈir/ - dire /diʁ/
+		dói /dˈo/ - deux /dø/
+		dódes /dˈodes/ - douze /duz/
+		dódexe /dˈodeze/ - douze /duz/
+		dó /dˈoj/ - deux /dø/
+		farìna /farˈina/ - farine /faʁin/
+		fiɡà /fiɡˈa/ - foie /fwa/
+		fiàma /fjˈama/ - flamme /flam/
+		fiór /fjˈor/ - fleur /flœʁ/
+		fruto /frˈuto/ - fruit /fʁɥi/
+		far /fˈar/ - faire /fɛʁ/
+		fia /fˈia/ - fille /fij/
+		fil /fˈil/ - fil /fil/
+		fil /fˈil/ - ficelle /fisɛl/
+		fin /fˈiŋ/ - fin /fɛ̃/
+		fìn /fˈiŋ/ - fin /fɛ̃/
+		fója /fˈoja/ - feuille /fœj/
+		fóɡo /fˈoɡo/ - feu /fø/
+		fun /fˈuŋ/ - fumée /fyme/
+		fòrt /fˈɔrt/ - fort /fɔʁ/
+		fòrzha /fˈɔrθa/ - force /fɔʁs/
+		fèr /fˈɛr/ - fer /fɛʁ/
+		fèsta /fˈɛsta/ - fête /fɛt/
+		istà /istˈa/ - été /ete/
+		jazhàr /jaθˈar/ - ɡlacer /ɡlase/
+		jazh /jˈaθ/ - ɡlace /ɡlas/
+		józha /jˈoθa/ - ɡoutte /ɡut/
+		castèl /kastˈɛl/ - château /ʃato/
+		cavàl /kavˈal/ - cheval /ʃəval/
+		cavél /kavˈel/ - cheveu /ʃəvø/
+		cazhàr /kaθˈar/ - chasser /ʃase/
+		colór /kolˈor/ - couleur /kulœʁ/
+		conóser /konˈoser/ - connaître /kɔnɛtʁ/
+		créder /krˈeder/ - croire /kʁwaʁ/
+		cróxe /krˈoze/ - croix /kʁwa/
+		cuàtro /kwˈatro/ - quatre /katʁ/
+		calt /kˈalt/ - chaud /ʃo/
+		cao /kˈao/ - chef /ʃɛf/
+		can /kˈaŋ/ - chien /ʃjɛ̃/
+		cóa /kˈoa/ - queue /kø/
+		cólpo /kˈolpo/ - coup /ku/
+		cór /kˈor/ - cœur /kœʁ/
+		curt /kˈurt/ - court /kuʁ/
+		còl /kˈɔl/ - cou /ku/
+		còrno /kˈɔrno/ - corne /kɔʁn/
+		còsa /kˈɔza/ - chose /ʃoz/
+		liévro /ljˈevro/ - lièvre /ljɛvʁ/
+		lana /lˈana/ - laine /lɛn/
+		lat /lˈat/ - lait /lɛ/
+		létara /lˈetara/ - lettre /lɛtʁ/
+		lénɡua /lˈeŋɡwa/ - lanɡue /lɑ̃ɡ/
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		lóɡo /lˈoɡo/ - lieu /ljø/
+		luna /lˈuna/ - lune /lyn/
+		lèdher /lˈɛðer/ - lire /liʁ/
+		madùr /madˈur/ - mûr /myʁ/
+		maɡnàr /maɲˈar/ - manɡer /mɑ̃ʒe/
+		miél /mjˈel/ - miel /mjɛl/
+		morìr /morˈir/ - mourir /muʁiʁ/
+		montàɡna /moŋtˈaɲa/ - montaɡne /mɔ̃taɲ/
+		mar /mˈar/ - mer /mɛʁ/
+		man /mˈaŋ/ - main /mɛ̃/
+		mósca /mˈoska/ - mouche /muʃ/
+		mòrt /mˈɔrt/ - mort /mɔʁ/
+		mèjo /mˈɛjo/ - mieux /mjø/
+		mèjo /mˈɛjo/ - meilleur /mɛjœʁ/
+		mèdho /mˈɛðo/ - mi- /mi/
+		nas /nˈas/ - nez /ne/
+		nàser /nˈaser/ - naître /nɛtʁ/
+		néɡro /nˈeɡro/ - noir /nwaʁ/
+		nóvo /nˈovo/ - neuf /nœf/
+		nòt /nˈɔt/ - nuit /nɥi/
+		nèola /nˈɛola/ - nue /ny/
+		nèola /nˈɛola/ - nuaɡe /nɥaʒ/
+		odór /odˈor/ - odeur /ɔdœʁ/
+		oxèl /ozˈɛl/ - oiseau /wazo/
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		piàndher /pjˈaŋðer/ - plaindre /plɛ̃dʁ/
+		pié /pjˈe/ - pied /pje/
+		piéra /pjˈera/ - pierre /pjɛʁ/
+		pién /pjˈeŋ/ - plein /plɛ̃/
+		pióva /pjˈova/ - pluie /plɥi/
+		podér /podˈer/ - pouvoir /puvwaʁ/
+		pare /pˈare/ - père /pɛʁ/
+		pan /pˈaŋ/ - pain /pɛ̃/
+		pél /pˈel/ - poil /pwal/
+		pél /pˈel/ - cheveu /ʃəvø/
+		péna /pˈena/ - plume /plym/
+		péna /pˈena/ - penne /pɛn/
+		péna /pˈena/ - peine /pɛn/
+		póre /pˈore/ - pauvre /povʁ/
+		pós /pˈos/ - puits /pɥi/
+		raxón /razˈoŋ/ - raison /ʁɛzɔ̃/
+		raìs /raˈis/ - racine /ʁasin/
+		romàn /romˈaŋ/ - romain /ʁɔmɛ̃/
+		récia /rˈeʧa/ - oreille /ɔʁɛj/
+		rós /rˈos/ - rouɡe /ʁuʒ/
+		rè /rˈɛ/ - roi /ʁwa/
+		savér /savˈer/ - savoir /savwaʁ/
+		setemana /setemˈana/ - semaine /səmɛn/
+		siɡùr /siɡˈur/ - sûr /syʁ/
+		scòrzha /skˈɔrθa/ - écorce /ekɔʁs/
+		spin /spˈin/ - épine /epin/
+		stemàna /stemˈana/ - semaine /səmɛn/
+		sal /sˈal/ - sel /sɛl/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		séra /sˈera/ - soir /swaʁ/
+		sól /sˈol/ - soleil /sɔlɛj/
+		sèt /sˈɛt/ - sept /sɛt/
+		ti /tˈi/ - tu /ty/
+		tut /tˈut/ - tout /tu/
+		tèra /tˈɛra/ - terre /tɛʁ/
+		udór /udˈor/ - odeur /ɔdœʁ/
+		vedèl /vedˈɛl/ - veau /vo/
+		vexìn /vezˈiŋ/ - voisin /vwazɛ̃/
+		viàjo /vjˈajo/ - voyaɡe /vwajaʒ/
+		vaca /vˈaka/ - vache /vaʃ/
+		véder /vˈeder/ - voir /vwaʁ/
+		vént /vˈeŋt/ - vent /vɑ̃/
+		véɡner /vˈeɲer/ - venir /vəniʁ/
+		via /vˈia/ - voie /vwa/
+		vin /vˈiŋ/ - vin /vɛ̃/
+		vìnti /vˈiŋti/ - vinɡt /vɛ̃/
+		vózhe /vˈoθe/ - voix /vwa/
+		vu /vˈu/ - vous /vu/
+		vèrmo /vˈɛrmo/ - ver /vɛʁ/
+		vècio /vˈɛʧo/ - vieux /vjø/
+		xolàr /zolˈar/ - voler /vɔle/
+		dhendhìva /ðeŋðˈiva/ - ɡencive /ʒɑ̃siv/
+		dhal /ðˈal/ - jaune /ʒon/
+		dhént /ðˈeŋt/ - ɡens /ʒɑ̃/
+		dhóven /ðˈoven/ - jeune /ʒœn/
+		dhóɡo /ðˈoɡo/ - jeu /ʒø/
+		dhènero /ðˈɛnero/ - ɡendre /ʒɑ̃dʁ/
+		ɡalìvo /ɡalˈivo/ - éɡal /eɡal/
+		ɡras /ɡrˈas/ - ɡraisse /ɡʁɛs/
+		ɡran /ɡrˈaŋ/ - ɡraine /ɡʁɛn/
+		ɡrant /ɡrˈaŋt/ - ɡrand /ɡʁɑ̃/
+		ɡròs /ɡrˈɔs/ - ɡros /ɡʁo/
+		ɡat /ɡˈat/ - chat /ʃa/
+		ɡóla /ɡˈola/ - ɡueule /ɡœl/
+		ài /ˈaj/ - ail /aj/
+		àcua /ˈakwa/ - eau /o/
+		àrbol /ˈarbol/ - arbre /aʁbʁ/
+		ava /ˈava/ - abeille /abɛj/
+		àuter /ˈawter/ - autre /otʁ/
+		ónɡia /ˈoŋʤa/ - onɡle /ɔ̃ɡl/
+		òro /ˈɔro/ - or /ɔʁ/
+		òs /ˈɔs/ - os /ɔs/
+		òn /ˈɔŋ/ - homme /ɔm/
+		òcio /ˈɔʧo/ - œil /œj/
+		çità /θitˈa/ - cité /site/
+		zhincuànta /θiŋkwˈaŋta/ - cinquante /sɛ̃kɑ̃t/
+		zharéxa /θˈareza/ - cerise /səʁiz/
+		zhéra /θˈera/ - cire /siʁ/
+		zhima /θˈima/ - cime /sim/
+		zhìncue /θˈiŋkwe/ - cinq /sɛ̃k/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+
+Final disqualified:
+		dì /dˈi/ - jour /ʒuʁ/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		neveɡàr /neveɡˈar/ - neiɡer /neʒe/
+		pièɡora /pjˈɛɡora/ - ouaille /waj/
+		rèna /rˈena/ - sable /sabl/
+		an /ˈan/ - an /ɑ̃/
+		ànzol /ˈanzol/ - anɡe /ɑ̃ʒ/
+		un /ˈun/ - un /ɛ̃/
+		òs /ˈɔs/ - os /o/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 169
+	Disqualified: 209
+	Added: 0
+	Removed: 20
+		péna /pˈena/ - plume /plym/
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		vedèl /vedˈɛl/ - veau /vo/
+		àcua /ˈakwa/ - eau /o/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		ava /ˈava/ - abeille /abɛj/
+		nòt /nˈɔt/ - nuit /nɥi/
+		un /ˈun/ - un /ɛ̃/
+		pièɡora /pjˈɛɡora/ - ouaille /waj/
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		jutàr /jutˈar/ - aider /ɛde/
+		dì /dˈi/ - jour /ʒuʁ/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+		nèola /nˈɛola/ - nue /ny/
+		rè /rˈɛ/ - roi /ʁwa/
+		òt /ˈɔt/ - huit /ɥi/
+		òs /ˈɔs/ - os /o/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		rèna /rˈena/ - sable /sabl/
+		élo /ˈelo/ - il /il/
+
+Iteration 2
+	Qualified: 167
+	Disqualified: 211
+	Added: 3
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 5
+		ànzol /ˈanzol/ - anɡe /ɑ̃ʒ/
+		an /ˈan/ - an /ɑ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		calt /kˈalt/ - chaud /ʃo/
+		òcio /ˈɔʧo/ - œil /œj/
+
+Iteration 3
+	Qualified: 167
+	Disqualified: 211
+	Added: 2
+		àcua /ˈakwa/ - eau /o/
+		òcio /ˈɔʧo/ - œil /œj/
+	Removed: 2
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 4
+	Qualified: 169
+	Disqualified: 209
+	Added: 2
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 0
+
+Iteration 5
+	Qualified: 171
+	Disqualified: 207
+	Added: 3
+		calt /kˈalt/ - chaud /ʃo/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+		vóvo /vˈovo/ - œuf /œf/
+	Removed: 1
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 6
+	Qualified: 175
+	Disqualified: 203
+	Added: 4
+		élo /ˈelo/ - il /il/
+		nòt /nˈɔt/ - nuit /nɥi/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 0
+
+Iteration 7
+	Qualified: 171
+	Disqualified: 207
+	Added: 0
+	Removed: 4
+		élo /ˈelo/ - il /il/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		vedèl /vedˈɛl/ - veau /vo/
+		vóvo /vˈovo/ - œuf /œf/
+
+Iteration 8
+	Qualified: 176
+	Disqualified: 202
+	Added: 5
+		rè /rˈɛ/ - roi /ʁwa/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		vedèl /vedˈɛl/ - veau /vo/
+		élo /ˈelo/ - il /il/
+	Removed: 0
+
+Iteration 9
+	Qualified: 173
+	Disqualified: 205
+	Added: 0
+	Removed: 3
+		élo /ˈelo/ - il /il/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 10
+	Qualified: 176
+	Disqualified: 202
+	Added: 3
+		élo /ˈelo/ - il /il/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 0
+
+Final qualifying:
+		anèl /anˈɛl/ - anneau /ano/
+		aɡnèl /aɲˈɛl/ - aɡneau /aɲo/
+		biànk /bjˈaŋk/ - blanc /blɑ̃/
+		bruxàr /bruzˈar/ - brûler /bʁyle/
+		bas /bˈas/ - bas /ba/
+		béver /bˈever/ - boire /bwaʁ/
+		bóca /bˈoka/ - bouche /buʃ/
+		bóne /bˈone/ - bonnes /bɔn/
+		bóni /bˈoni/ - bons /bɔ̃/
+		bón /bˈoŋ/ - bon /bɔ̃/
+		bèl /bˈɛl/ - beau /bo/
+		diés /djˈes/ - dix /dis/
+		diéxe /djˈeze/ - dix /di/
+		dormìr /dormˈir/ - dormir /dɔʁmiʁ/
+		draɡón /draɡˈoŋ/ - draɡon /dʁaɡɔ̃/
+		dént /dˈeŋt/ - dent /dɑ̃/
+		dio /dˈio/ - dieu /djø/
+		dìr /dˈir/ - dire /diʁ/
+		dói /dˈo/ - deux /dø/
+		dó /dˈoj/ - deux /dø/
+		dólzh /dˈolθ/ - doux /du/
+		farìna /farˈina/ - farine /faʁin/
+		fiɡà /fiɡˈa/ - foie /fwa/
+		fiàma /fjˈama/ - flamme /flam/
+		fiór /fjˈor/ - fleur /flœʁ/
+		frét /frˈet/ - froid /fʁwa/
+		far /fˈar/ - faire /fɛʁ/
+		fémena /fˈemena/ - femme /fam/
+		fia /fˈia/ - fille /fij/
+		fil /fˈil/ - fil /fil/
+		fil /fˈil/ - ficelle /fisɛl/
+		fin /fˈiŋ/ - fin /fɛ̃/
+		fìn /fˈiŋ/ - fin /fɛ̃/
+		fóɡo /fˈoɡo/ - feu /fø/
+		fun /fˈuŋ/ - fumée /fyme/
+		fòrt /fˈɔrt/ - fort /fɔʁ/
+		fòrzha /fˈɔrθa/ - force /fɔʁs/
+		fèr /fˈɛr/ - fer /fɛʁ/
+		invèrn /iŋvˈɛrn/ - hiver /ivɛʁ/
+		jazhàr /jaθˈar/ - ɡlacer /ɡlase/
+		jazh /jˈaθ/ - ɡlace /ɡlas/
+		józha /jˈoθa/ - ɡoutte /ɡut/
+		cadéna /kadˈena/ - chaîne /ʃɛn/
+		castèl /kastˈɛl/ - château /ʃato/
+		cavàl /kavˈal/ - cheval /ʃəval/
+		cavél /kavˈel/ - cheveu /ʃəvø/
+		colór /kolˈor/ - couleur /kulœʁ/
+		créder /krˈeder/ - croire /kʁwaʁ/
+		crós /krˈos/ - croix /kʁwa/
+		cróxe /krˈoze/ - croix /kʁwa/
+		calt /kˈalt/ - chaud /ʃo/
+		cao /kˈao/ - chef /ʃɛf/
+		caro /kˈaro/ - cher /ʃɛʁ/
+		caxa /kˈaza/ - chez /ʃe/
+		can /kˈaŋ/ - chien /ʃjɛ̃/
+		cànbera /kˈaŋbera/ - chambre /ʃɑ̃bʁ/
+		cóa /kˈoa/ - queue /kø/
+		cólpo /kˈolpo/ - coup /ku/
+		cór /kˈor/ - cœur /kœʁ/
+		cul /kˈul/ - cul /ky/
+		curt /kˈurt/ - court /kuʁ/
+		còl /kˈɔl/ - cou /ku/
+		còrno /kˈɔrno/ - corne /kɔʁn/
+		còsa /kˈɔza/ - chose /ʃoz/
+		liévro /ljˈevro/ - lièvre /ljɛvʁ/
+		lana /lˈana/ - laine /lɛn/
+		lat /lˈat/ - lait /lɛ/
+		làɡrema /lˈaɡrema/ - larme /laʁm/
+		létara /lˈetara/ - lettre /lɛtʁ/
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		luna /lˈuna/ - lune /lyn/
+		lèt /lˈɛt/ - lit /li/
+		madùr /madˈur/ - mûr /myʁ/
+		miél /mjˈel/ - miel /mjɛl/
+		morseɡàr /morseɡˈar/ - mordre /mɔʁdʁ/
+		montàɡna /moŋtˈaɲa/ - montaɡne /mɔ̃taɲ/
+		mare /mˈare/ - mère /mɛʁ/
+		man /mˈaŋ/ - main /mɛ̃/
+		mósca /mˈoska/ - mouche /muʃ/
+		mòrt /mˈɔrt/ - mort /mɔʁ/
+		mèjo /mˈɛjo/ - mieux /mjø/
+		mèdho /mˈɛðo/ - mi- /mi/
+		neveɡàr /neveɡˈar/ - neiɡer /neʒe/
+		nas /nˈas/ - nez /ne/
+		nàser /nˈaser/ - naître /nɛtʁ/
+		néɡro /nˈeɡro/ - noir /nwaʁ/
+		nóvo /nˈovo/ - neuf /nœf/
+		nòt /nˈɔt/ - nuit /nɥi/
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		piàndher /pjˈaŋðer/ - pleurer /plœʁe/
+		piàndher /pjˈaŋðer/ - plaindre /plɛ̃dʁ/
+		pié /pjˈe/ - pied /pje/
+		pióva /pjˈova/ - pluie /plɥi/
+		podér /podˈer/ - pouvoir /puvwaʁ/
+		pare /pˈare/ - père /pɛʁ/
+		pan /pˈaŋ/ - pain /pɛ̃/
+		pél /pˈel/ - poil /pwal/
+		pél /pˈel/ - cheveu /ʃəvø/
+		péna /pˈena/ - penne /pɛn/
+		péna /pˈena/ - peine /pɛn/
+		pés /pˈes/ - poisson /pwasɔ̃/
+		pìzhol /pˈiθol/ - petit /pəti/
+		póre /pˈore/ - pauvre /povʁ/
+		pós /pˈos/ - puits /pɥi/
+		pónt /pˈoŋt/ - pont /pɔ̃/
+		pèl /pˈɛl/ - peau /po/
+		romàn /romˈaŋ/ - romain /ʁɔmɛ̃/
+		récia /rˈeʧa/ - oreille /ɔʁɛj/
+		rós /rˈos/ - rouɡe /ʁuʒ/
+		rè /rˈɛ/ - roi /ʁwa/
+		savér /savˈer/ - savoir /savwaʁ/
+		siɡùr /siɡˈur/ - sûr /syʁ/
+		scoltàr /skoltˈar/ - écouter /ekute/
+		scrìver /skrˈiver/ - écrire /ekʁiʁ/
+		scòrzha /skˈɔrθa/ - écorce /ekɔʁs/
+		spin /spˈin/ - épine /epin/
+		sal /sˈal/ - sel /sɛl/
+		san /sˈaŋ/ - sain /sɛ̃/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		séda /sˈeda/ - soie /swa/
+		sék /sˈek/ - sec /sɛk/
+		séra /sˈera/ - soir /swaʁ/
+		sól /sˈol/ - soleil /sɔlɛj/
+		sóra /sˈora/ - sur /syʁ/
+		sèt /sˈɛt/ - sept /sɛt/
+		ti /tˈi/ - tu /ty/
+		tut /tˈut/ - tout /tu/
+		tèsta /tˈɛsta/ - tête /tɛt/
+		udór /udˈor/ - odeur /ɔdœʁ/
+		vedèl /vedˈɛl/ - veau /vo/
+		vaca /vˈaka/ - vache /vaʃ/
+		véder /vˈeder/ - voir /vwaʁ/
+		vérdo /vˈerdo/ - vert /vɛʁ/
+		vént /vˈeŋt/ - vent /vɑ̃/
+		véɡner /vˈeɲer/ - venir /vəniʁ/
+		via /vˈia/ - voie /vwa/
+		vita /vˈita/ - vie /vi/
+		vin /vˈiŋ/ - vin /vɛ̃/
+		vìnti /vˈiŋti/ - vinɡt /vɛ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		vu /vˈu/ - vous /vu/
+		vèrmo /vˈɛrmo/ - ver /vɛʁ/
+		vècio /vˈɛʧo/ - vieil /vjɛj/
+		xolàr /zolˈar/ - voler /vɔle/
+		dhenòcio /ðenˈɔʧo/ - ɡenou /ʒənu/
+		dhendhìva /ðeŋðˈiva/ - ɡencive /ʒɑ̃siv/
+		dhal /ðˈal/ - jaune /ʒon/
+		dhént /ðˈeŋt/ - ɡens /ʒɑ̃/
+		dhènero /ðˈɛnero/ - ɡendre /ʒɑ̃dʁ/
+		ɡalìvo /ɡalˈivo/ - éɡal /eɡal/
+		ɡras /ɡrˈas/ - ɡraisse /ɡʁɛs/
+		ɡran /ɡrˈaŋ/ - ɡraine /ɡʁɛn/
+		ɡrant /ɡrˈaŋt/ - ɡrand /ɡʁɑ̃/
+		ɡat /ɡˈat/ - chat /ʃa/
+		ɡóla /ɡˈola/ - ɡueule /ɡœl/
+		ciamar /ʧamˈar/ - clamer /klame/
+		àcua /ˈakwa/ - eau /o/
+		àrbol /ˈarbol/ - arbre /aʁbʁ/
+		àuter /ˈawter/ - autre /otʁ/
+		éla /ˈela/ - elle /ɛl/
+		élo /ˈelo/ - il /il/
+		ónɡia /ˈoŋʤa/ - onɡle /ɔ̃ɡl/
+		òca /ˈɔka/ - oie /wa/
+		òro /ˈɔro/ - or /ɔʁ/
+		òs /ˈɔs/ - os /ɔs/
+		òn /ˈɔŋ/ - homme /ɔm/
+		òcio /ˈɔʧo/ - œil /œj/
+		èrba /ˈɛrba/ - herbe /ɛʁb/
+		çità /θitˈa/ - cité /site/
+		zhincuànta /θiŋkwˈaŋta/ - cinquante /sɛ̃kɑ̃t/
+		zhiélo /θjˈelo/ - ciel /sjɛl/
+		zharéxa /θˈareza/ - cerise /səʁiz/
+		zhéra /θˈera/ - cire /siʁ/
+		zhima /θˈima/ - cime /sim/
+		zhìncue /θˈiŋkwe/ - cinq /sɛ̃k/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+
+Final disqualified:
+		dì /dˈi/ - jour /ʒuʁ/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		jutàr /jutˈar/ - aider /ɛde/
+		nèola /nˈɛola/ - nue /ny/
+		pièɡora /pjˈɛɡora/ - ouaille /waj/
+		péna /pˈena/ - plume /plym/
+		rèna /rˈena/ - sable /sabl/
+		an /ˈan/ - an /ɑ̃/
+		ànzol /ˈanzol/ - anɡe /ɑ̃ʒ/
+		ava /ˈava/ - abeille /abɛj/
+		un /ˈun/ - un /ɛ̃/
+		òs /ˈɔs/ - os /o/
+		òt /ˈɔt/ - huit /ɥi/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 177
+	Disqualified: 201
+	Added: 0
+	Removed: 12
+		cavél /kavˈel/ - poil /pwal/
+		òs /ˈɔs/ - os /o/
+		un /ˈun/ - un /ɛ̃/
+		pièɡora /pjˈɛɡora/ - ouaille /waj/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		vedèl /vedˈɛl/ - veau /vo/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+		dì /dˈi/ - jour /ʒuʁ/
+		io /ˈio/ - je /ʒə/
+		rèna /rˈena/ - sable /sabl/
+		élo /ˈelo/ - il /il/
+
+Iteration 2
+	Qualified: 173
+	Disqualified: 205
+	Added: 1
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 5
+		ànzol /ˈanzol/ - anɡe /ɑ̃ʒ/
+		òt /ˈɔt/ - huit /ɥi/
+		an /ˈan/ - an /ɑ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		calt /kˈalt/ - chaud /ʃo/
+
+Iteration 3
+	Qualified: 177
+	Disqualified: 201
+	Added: 5
+		òt /ˈɔt/ - huit /ɥi/
+		òs /ˈɔs/ - os /o/
+		vóvo /vˈovo/ - œuf /œf/
+		calt /kˈalt/ - chaud /ʃo/
+		élo /ˈelo/ - il /il/
+	Removed: 1
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 4
+	Qualified: 177
+	Disqualified: 201
+	Added: 1
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 1
+		òs /ˈɔs/ - os /o/
+
+Iteration 5
+	Qualified: 178
+	Disqualified: 200
+	Added: 1
+		cavél /kavˈel/ - poil /pwal/
+	Removed: 0
+
+Iteration 6
+	Qualified: 179
+	Disqualified: 199
+	Added: 2
+		òs /ˈɔs/ - os /o/
+		vedèl /vedˈɛl/ - veau /vo/
+	Removed: 1
+		òt /ˈɔt/ - huit /ɥi/
+
+Iteration 7
+	Qualified: 178
+	Disqualified: 200
+	Added: 1
+		òt /ˈɔt/ - huit /ɥi/
+	Removed: 2
+		òs /ˈɔs/ - os /o/
+		vedèl /vedˈɛl/ - veau /vo/
+
+Final qualifying:
+		aɡnèl /aɲˈɛl/ - aɡneau /aɲo/
+		biànk /bjˈaŋk/ - blanc /blɑ̃/
+		bas /bˈas/ - bas /ba/
+		béver /bˈever/ - boire /bwaʁ/
+		bén /bˈeŋ/ - bien /bjɛ̃/
+		bóca /bˈoka/ - bouche /buʃ/
+		bóne /bˈone/ - bonnes /bɔn/
+		bóni /bˈoni/ - bons /bɔ̃/
+		bón /bˈoŋ/ - bon /bɔ̃/
+		bò /bˈɔ/ - bœuf /bœf/
+		bèl /bˈɛl/ - beau /bo/
+		bèla /bˈɛla/ - belle /bɛl/
+		diés /djˈes/ - dix /di/
+		diéxe /djˈeze/ - dix /di/
+		dormìr /dormˈir/ - dormir /dɔʁmiʁ/
+		draɡón /draɡˈoŋ/ - draɡon /dʁaɡɔ̃/
+		déo /dˈeo/ - doiɡt /dwa/
+		dént /dˈeŋt/ - dent /dɑ̃/
+		dio /dˈio/ - dieu /djø/
+		dìr /dˈir/ - dire /diʁ/
+		dói /dˈo/ - deux /dø/
+		dódes /dˈodes/ - douze /duz/
+		dódexe /dˈodeze/ - douze /duz/
+		farìna /farˈina/ - farine /faʁin/
+		fiɡà /fiɡˈa/ - foie /fwa/
+		fruto /frˈuto/ - fruit /fʁɥi/
+		far /fˈar/ - faire /fɛʁ/
+		fia /fˈia/ - fille /fij/
+		fil /fˈil/ - ficelle /fisɛl/
+		fìn /fˈiŋ/ - fin /fɛ̃/
+		fója /fˈoja/ - feuille /fœj/
+		fóɡo /fˈoɡo/ - feu /fø/
+		fun /fˈuŋ/ - fumée /fyme/
+		fòrt /fˈɔrt/ - fort /fɔʁ/
+		fòrzha /fˈɔrθa/ - force /fɔʁs/
+		fèr /fˈɛr/ - fer /fɛʁ/
+		fèsta /fˈɛsta/ - fête /fɛt/
+		istà /istˈa/ - été /ete/
+		invèrn /iŋvˈɛrn/ - hiver /ivɛʁ/
+		jazh /jˈaθ/ - ɡlace /ɡlas/
+		cadéna /kadˈena/ - chaîne /ʃɛn/
+		castèl /kastˈɛl/ - château /ʃato/
+		cavàl /kavˈal/ - cheval /ʃəval/
+		cavél /kavˈel/ - poil /pwal/
+		cavél /kavˈel/ - cheveu /ʃəvø/
+		cazhàr /kaθˈar/ - chasser /ʃase/
+		colór /kolˈor/ - couleur /kulœʁ/
+		conóser /konˈoser/ - connaître /kɔnɛtʁ/
+		créder /krˈeder/ - croire /kʁwaʁ/
+		crós /krˈos/ - croix /kʁwa/
+		cuàtro /kwˈatro/ - quatre /katʁ/
+		calt /kˈalt/ - chaud /ʃo/
+		cao /kˈao/ - chef /ʃɛf/
+		caro /kˈaro/ - cher /ʃɛʁ/
+		cavra /kˈavra/ - chèvre /ʃɛvʁ/
+		caxa /kˈaza/ - chez /ʃe/
+		cànbera /kˈaŋbera/ - chambre /ʃɑ̃bʁ/
+		cóa /kˈoa/ - queue /kø/
+		cólpo /kˈolpo/ - coup /ku/
+		cór /kˈor/ - cœur /kœʁ/
+		cul /kˈul/ - cul /ky/
+		curt /kˈurt/ - court /kuʁ/
+		còl /kˈɔl/ - cou /ku/
+		còrno /kˈɔrno/ - corne /kɔʁn/
+		còsa /kˈɔza/ - chose /ʃoz/
+		liévro /ljˈevro/ - lièvre /ljɛvʁ/
+		lana /lˈana/ - laine /lɛn/
+		lat /lˈat/ - lait /lɛ/
+		làɡrema /lˈaɡrema/ - larme /laʁm/
+		létara /lˈetara/ - lettre /lɛtʁ/
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		lóɡo /lˈoɡo/ - lieu /ljø/
+		luna /lˈuna/ - lune /lyn/
+		lèt /lˈɛt/ - lit /li/
+		lèdher /lˈɛðer/ - lire /liʁ/
+		maɡnàr /maɲˈar/ - manɡer /mɑ̃ʒe/
+		morseɡàr /morseɡˈar/ - mordre /mɔʁdʁ/
+		morìr /morˈir/ - mourir /muʁiʁ/
+		montàɡna /moŋtˈaɲa/ - montaɡne /mɔ̃taɲ/
+		mar /mˈar/ - mer /mɛʁ/
+		man /mˈaŋ/ - main /mɛ̃/
+		mósca /mˈoska/ - mouche /muʃ/
+		mèjo /mˈɛjo/ - meilleur /mɛjœʁ/
+		neveɡàr /neveɡˈar/ - neiɡer /neʒe/
+		nas /nˈas/ - nez /ne/
+		nàser /nˈaser/ - naître /nɛtʁ/
+		néɡro /nˈeɡro/ - noir /nwaʁ/
+		nóvo /nˈovo/ - neuf /nœf/
+		nòt /nˈɔt/ - nuit /nɥi/
+		nèola /nˈɛola/ - nue /ny/
+		nèola /nˈɛola/ - nuaɡe /nɥaʒ/
+		odór /odˈor/ - odeur /ɔdœʁ/
+		oxèl /ozˈɛl/ - oiseau /wazo/
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		piàndher /pjˈaŋðer/ - pleurer /plœʁe/
+		piàndher /pjˈaŋðer/ - plaindre /plɛ̃dʁ/
+		pié /pjˈe/ - pied /pje/
+		piéra /pjˈera/ - pierre /pjɛʁ/
+		pióva /pjˈova/ - pluie /plɥi/
+		podér /podˈer/ - pouvoir /puvwaʁ/
+		pare /pˈare/ - père /pɛʁ/
+		pan /pˈaŋ/ - pain /pɛ̃/
+		pél /pˈel/ - cheveu /ʃəvø/
+		péna /pˈena/ - plume /plym/
+		pés /pˈes/ - poisson /pwasɔ̃/
+		pìzhol /pˈiθol/ - petit /pəti/
+		póre /pˈore/ - pauvre /povʁ/
+		pós /pˈos/ - puits /pɥi/
+		pónt /pˈoŋt/ - pont /pɔ̃/
+		pèl /pˈɛl/ - peau /po/
+		raxón /razˈoŋ/ - raison /ʁɛzɔ̃/
+		romàn /romˈaŋ/ - romain /ʁɔmɛ̃/
+		récia /rˈeʧa/ - oreille /ɔʁɛj/
+		rós /rˈos/ - rouɡe /ʁuʒ/
+		setemana /setemˈana/ - semaine /səmɛn/
+		scoltàr /skoltˈar/ - écouter /ekute/
+		scrìver /skrˈiver/ - écrire /ekʁiʁ/
+		scòrzha /skˈɔrθa/ - écorce /ekɔʁs/
+		spin /spˈin/ - épine /epin/
+		stemàna /stemˈana/ - semaine /səmɛn/
+		sal /sˈal/ - sel /sɛl/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		séda /sˈeda/ - soie /swa/
+		sék /sˈek/ - sec /sɛk/
+		sól /sˈol/ - soleil /sɔlɛj/
+		sóra /sˈora/ - sur /syʁ/
+		tut /tˈut/ - tout /tu/
+		tèra /tˈɛra/ - terre /tɛʁ/
+		tèsta /tˈɛsta/ - tête /tɛt/
+		udór /udˈor/ - odeur /ɔdœʁ/
+		vexìn /vezˈiŋ/ - voisin /vwazɛ̃/
+		viàjo /vjˈajo/ - voyaɡe /vwajaʒ/
+		vaca /vˈaka/ - vache /vaʃ/
+		vént /vˈeŋt/ - vent /vɑ̃/
+		véɡner /vˈeɲer/ - venir /vəniʁ/
+		via /vˈia/ - voie /vwa/
+		vita /vˈita/ - vie /vi/
+		vin /vˈiŋ/ - vin /vɛ̃/
+		vìnti /vˈiŋti/ - vinɡt /vɛ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		vózhe /vˈoθe/ - voix /vwa/
+		vu /vˈu/ - vous /vu/
+		vèrmo /vˈɛrmo/ - ver /vɛʁ/
+		vècio /vˈɛʧo/ - vieux /vjø/
+		vècio /vˈɛʧo/ - vieil /vjɛj/
+		xolàr /zolˈar/ - voler /vɔle/
+		dhenòcio /ðenˈɔʧo/ - ɡenou /ʒənu/
+		dhendhìva /ðeŋðˈiva/ - ɡencive /ʒɑ̃siv/
+		dhal /ðˈal/ - jaune /ʒon/
+		dhént /ðˈeŋt/ - ɡens /ʒɑ̃/
+		dhóven /ðˈoven/ - jeune /ʒœn/
+		dhóɡo /ðˈoɡo/ - jeu /ʒø/
+		ɡalìvo /ɡalˈivo/ - éɡal /eɡal/
+		ɡras /ɡrˈas/ - ɡraisse /ɡʁɛs/
+		ɡran /ɡrˈaŋ/ - ɡraine /ɡʁɛn/
+		ɡrant /ɡrˈaŋt/ - ɡrand /ɡʁɑ̃/
+		ɡròs /ɡrˈɔs/ - ɡros /ɡʁo/
+		ɡuxèla /ɡuzˈɛla/ - aiɡuille /ɛɡɥij/
+		ɡat /ɡˈat/ - chat /ʃa/
+		ɡóla /ɡˈola/ - ɡueule /ɡœl/
+		ciamar /ʧamˈar/ - clamer /klame/
+		ài /ˈaj/ - ail /aj/
+		àcua /ˈakwa/ - eau /o/
+		àrbol /ˈarbol/ - arbre /aʁbʁ/
+		ava /ˈava/ - abeille /abɛj/
+		éla /ˈela/ - elle /ɛl/
+		élo /ˈelo/ - il /il/
+		ónɡia /ˈoŋʤa/ - onɡle /ɔ̃ɡl/
+		òca /ˈɔka/ - oie /wa/
+		òro /ˈɔro/ - or /ɔʁ/
+		òs /ˈɔs/ - os /ɔs/
+		òt /ˈɔt/ - huit /ɥi/
+		òn /ˈɔŋ/ - homme /ɔm/
+		èrba /ˈɛrba/ - herbe /ɛʁb/
+		çità /θitˈa/ - cité /site/
+		zharéxa /θˈareza/ - cerise /səʁiz/
+		zhéndre /θˈendre/ - cendre /sɑ̃dʁ/
+		zhima /θˈima/ - cime /sim/
+
+Final disqualified:
+		dì /dˈi/ - jour /ʒuʁ/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		pièɡora /pjˈɛɡora/ - ouaille /waj/
+		rèna /rˈena/ - sable /sabl/
+		vedèl /vedˈɛl/ - veau /vo/
+		an /ˈan/ - an /ɑ̃/
+		ànzol /ˈanzol/ - anɡe /ɑ̃ʒ/
+		io /ˈio/ - je /ʒə/
+		un /ˈun/ - un /ɛ̃/
+		òs /ˈɔs/ - os /o/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 173
+	Disqualified: 205
+	Added: 0
+	Removed: 16
+		cavél /kavˈel/ - poil /pwal/
+		rè /rˈɛ/ - roi /ʁwa/
+		òt /ˈɔt/ - huit /ɥi/
+		an /ˈan/ - an /ɑ̃/
+		òs /ˈɔs/ - os /o/
+		un /ˈun/ - un /ɛ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		vedèl /vedˈɛl/ - veau /vo/
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		jutàr /jutˈar/ - aider /ɛde/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+		io /ˈio/ - je /ʒə/
+		élo /ˈelo/ - il /il/
+		neveɡàr /neveɡˈar/ - neiɡer /neʒe/
+		nòt /nˈɔt/ - nuit /nɥi/
+
+Iteration 2
+	Qualified: 172
+	Disqualified: 206
+	Added: 2
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		òs /ˈɔs/ - os /o/
+	Removed: 3
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		diéxe /djˈeze/ - dix /dis/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 3
+	Qualified: 174
+	Disqualified: 204
+	Added: 3
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		diéxe /djˈeze/ - dix /dis/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 1
+		òs /ˈɔs/ - os /o/
+
+Iteration 4
+	Qualified: 173
+	Disqualified: 205
+	Added: 1
+		çènto /θˈɛnto/ - cent /sɑ̃/
+	Removed: 2
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 5
+	Qualified: 176
+	Disqualified: 202
+	Added: 3
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		òs /ˈɔs/ - os /o/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 0
+
+Iteration 6
+	Qualified: 176
+	Disqualified: 202
+	Added: 3
+		cavél /kavˈel/ - poil /pwal/
+		élo /ˈelo/ - il /il/
+		nòt /nˈɔt/ - nuit /nɥi/
+	Removed: 3
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		òs /ˈɔs/ - os /o/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 7
+	Qualified: 179
+	Disqualified: 199
+	Added: 4
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		òs /ˈɔs/ - os /o/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 1
+		élo /ˈelo/ - il /il/
+
+Iteration 8
+	Qualified: 178
+	Disqualified: 200
+	Added: 2
+		rè /rˈɛ/ - roi /ʁwa/
+		élo /ˈelo/ - il /il/
+	Removed: 3
+		òs /ˈɔs/ - os /o/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+
+Iteration 9
+	Qualified: 180
+	Disqualified: 198
+	Added: 3
+		òs /ˈɔs/ - os /o/
+		vedèl /vedˈɛl/ - veau /vo/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+	Removed: 1
+		élo /ˈelo/ - il /il/
+
+Iteration 10
+	Qualified: 182
+	Disqualified: 196
+	Added: 3
+		élo /ˈelo/ - il /il/
+		io /ˈio/ - je /ʒə/
+		vóvo /vˈovo/ - œuf /œf/
+	Removed: 1
+		òs /ˈɔs/ - os /o/
+
+Final qualifying:
+		anèl /anˈɛl/ - anneau /ano/
+		aɡnèl /aɲˈɛl/ - aɡneau /aɲo/
+		biànk /bjˈaŋk/ - blanc /blɑ̃/
+		bruxàr /bruzˈar/ - brûler /bʁyle/
+		bas /bˈas/ - bas /ba/
+		béver /bˈever/ - boire /bwaʁ/
+		bén /bˈeŋ/ - bien /bjɛ̃/
+		bóca /bˈoka/ - bouche /buʃ/
+		bóne /bˈone/ - bonnes /bɔn/
+		bóni /bˈoni/ - bons /bɔ̃/
+		bón /bˈoŋ/ - bon /bɔ̃/
+		bèl /bˈɛl/ - beau /bo/
+		bèla /bˈɛla/ - belle /bɛl/
+		diés /djˈes/ - dix /dis/
+		diéxe /djˈeze/ - dix /di/
+		diéxe /djˈeze/ - dix /dis/
+		dormìr /dormˈir/ - dormir /dɔʁmiʁ/
+		draɡón /draɡˈoŋ/ - draɡon /dʁaɡɔ̃/
+		déo /dˈeo/ - doiɡt /dwa/
+		dént /dˈeŋt/ - dent /dɑ̃/
+		dói /dˈo/ - deux /dø/
+		dódes /dˈodes/ - douze /duz/
+		dódexe /dˈodeze/ - douze /duz/
+		dó /dˈoj/ - deux /dø/
+		dólzh /dˈolθ/ - doux /du/
+		farìna /farˈina/ - farine /faʁin/
+		fiɡà /fiɡˈa/ - foie /fwa/
+		fiàma /fjˈama/ - flamme /flam/
+		frét /frˈet/ - froid /fʁwa/
+		far /fˈar/ - faire /fɛʁ/
+		fia /fˈia/ - fille /fij/
+		fil /fˈil/ - fil /fil/
+		fìn /fˈiŋ/ - fin /fɛ̃/
+		fin /fˈiŋ/ - fin /fɛ̃/
+		fója /fˈoja/ - feuille /fœj/
+		fóɡo /fˈoɡo/ - feu /fø/
+		fun /fˈuŋ/ - fumée /fyme/
+		fòrt /fˈɔrt/ - fort /fɔʁ/
+		fèsta /fˈɛsta/ - fête /fɛt/
+		istà /istˈa/ - été /ete/
+		invèrn /iŋvˈɛrn/ - hiver /ivɛʁ/
+		jazhàr /jaθˈar/ - ɡlacer /ɡlase/
+		cadéna /kadˈena/ - chaîne /ʃɛn/
+		castèl /kastˈɛl/ - château /ʃato/
+		cavàl /kavˈal/ - cheval /ʃəval/
+		cavél /kavˈel/ - poil /pwal/
+		cavél /kavˈel/ - cheveu /ʃəvø/
+		cazhàr /kaθˈar/ - chasser /ʃase/
+		colór /kolˈor/ - couleur /kulœʁ/
+		conóser /konˈoser/ - connaître /kɔnɛtʁ/
+		crós /krˈos/ - croix /kʁwa/
+		cróxe /krˈoze/ - croix /kʁwa/
+		cuàtro /kwˈatro/ - quatre /katʁ/
+		cao /kˈao/ - chef /ʃɛf/
+		caro /kˈaro/ - cher /ʃɛʁ/
+		cavra /kˈavra/ - chèvre /ʃɛvʁ/
+		caxa /kˈaza/ - chez /ʃe/
+		can /kˈaŋ/ - chien /ʃjɛ̃/
+		cànbera /kˈaŋbera/ - chambre /ʃɑ̃bʁ/
+		cóa /kˈoa/ - queue /kø/
+		cólpo /kˈolpo/ - coup /ku/
+		cór /kˈor/ - cœur /kœʁ/
+		cul /kˈul/ - cul /ky/
+		còrno /kˈɔrno/ - corne /kɔʁn/
+		còsa /kˈɔza/ - chose /ʃoz/
+		liévro /ljˈevro/ - lièvre /ljɛvʁ/
+		lana /lˈana/ - laine /lɛn/
+		lat /lˈat/ - lait /lɛ/
+		làɡrema /lˈaɡrema/ - larme /laʁm/
+		létara /lˈetara/ - lettre /lɛtʁ/
+		lénɡua /lˈeŋɡwa/ - lanɡue /lɑ̃ɡ/
+		lónɡo /lˈoŋɡo/ - lonɡ /lɔ̃/
+		lóɡo /lˈoɡo/ - lieu /ljø/
+		luna /lˈuna/ - lune /lyn/
+		lèdher /lˈɛðer/ - lire /liʁ/
+		madùr /madˈur/ - mûr /myʁ/
+		maɡnàr /maɲˈar/ - manɡer /mɑ̃ʒe/
+		miél /mjˈel/ - miel /mjɛl/
+		morseɡàr /morseɡˈar/ - mordre /mɔʁdʁ/
+		morìr /morˈir/ - mourir /muʁiʁ/
+		mar /mˈar/ - mer /mɛʁ/
+		mare /mˈare/ - mère /mɛʁ/
+		man /mˈaŋ/ - main /mɛ̃/
+		mósca /mˈoska/ - mouche /muʃ/
+		mòrt /mˈɔrt/ - mort /mɔʁ/
+		mèjo /mˈɛjo/ - mieux /mjø/
+		mèjo /mˈɛjo/ - meilleur /mɛjœʁ/
+		nas /nˈas/ - nez /ne/
+		nàser /nˈaser/ - naître /nɛtʁ/
+		néɡro /nˈeɡro/ - noir /nwaʁ/
+		nòt /nˈɔt/ - nuit /nɥi/
+		nèola /nˈɛola/ - nue /ny/
+		nèola /nˈɛola/ - nuaɡe /nɥaʒ/
+		odór /odˈor/ - odeur /ɔdœʁ/
+		oxèl /ozˈɛl/ - oiseau /wazo/
+		pedòcio /pedˈɔʧo/ - pou /pu/
+		piàndher /pjˈaŋðer/ - plaindre /plɛ̃dʁ/
+		pié /pjˈe/ - pied /pje/
+		piéra /pjˈera/ - pierre /pjɛʁ/
+		pién /pjˈeŋ/ - plein /plɛ̃/
+		podér /podˈer/ - pouvoir /puvwaʁ/
+		pan /pˈaŋ/ - pain /pɛ̃/
+		pél /pˈel/ - poil /pwal/
+		pél /pˈel/ - cheveu /ʃəvø/
+		péna /pˈena/ - plume /plym/
+		péna /pˈena/ - peine /pɛn/
+		péna /pˈena/ - penne /pɛn/
+		pés /pˈes/ - poisson /pwasɔ̃/
+		pìzhol /pˈiθol/ - petit /pəti/
+		póre /pˈore/ - pauvre /povʁ/
+		pós /pˈos/ - puits /pɥi/
+		pónt /pˈoŋt/ - pont /pɔ̃/
+		pèl /pˈɛl/ - peau /po/
+		romàn /romˈaŋ/ - romain /ʁɔmɛ̃/
+		récia /rˈeʧa/ - oreille /ɔʁɛj/
+		rè /rˈɛ/ - roi /ʁwa/
+		setemana /setemˈana/ - semaine /səmɛn/
+		scoltàr /skoltˈar/ - écouter /ekute/
+		scrìver /skrˈiver/ - écrire /ekʁiʁ/
+		scòrzha /skˈɔrθa/ - écorce /ekɔʁs/
+		spin /spˈin/ - épine /epin/
+		stemàna /stemˈana/ - semaine /səmɛn/
+		stéla /stˈela/ - étoile /etwal/
+		sal /sˈal/ - sel /sɛl/
+		san /sˈaŋ/ - sain /sɛ̃/
+		sànɡue /sˈaŋɡwe/ - sanɡ /sɑ̃/
+		séda /sˈeda/ - soie /swa/
+		sól /sˈol/ - soleil /sɔlɛj/
+		sèt /sˈɛt/ - sept /sɛt/
+		ti /tˈi/ - tu /ty/
+		tèra /tˈɛra/ - terre /tɛʁ/
+		tèsta /tˈɛsta/ - tête /tɛt/
+		vedèl /vedˈɛl/ - veau /vo/
+		vexìn /vezˈiŋ/ - voisin /vwazɛ̃/
+		viàjo /vjˈajo/ - voyaɡe /vwajaʒ/
+		vaca /vˈaka/ - vache /vaʃ/
+		véder /vˈeder/ - voir /vwaʁ/
+		vérdo /vˈerdo/ - vert /vɛʁ/
+		vént /vˈeŋt/ - vent /vɑ̃/
+		véɡner /vˈeɲer/ - venir /vəniʁ/
+		via /vˈia/ - voie /vwa/
+		vita /vˈita/ - vie /vi/
+		vin /vˈiŋ/ - vin /vɛ̃/
+		vìnti /vˈiŋti/ - vinɡt /vɛ̃/
+		vóvo /vˈovo/ - œuf /œf/
+		vu /vˈu/ - vous /vu/
+		vèrmo /vˈɛrmo/ - ver /vɛʁ/
+		vècio /vˈɛʧo/ - vieux /vjø/
+		vècio /vˈɛʧo/ - vieil /vjɛj/
+		dhenòcio /ðenˈɔʧo/ - ɡenou /ʒənu/
+		dhendhìva /ðeŋðˈiva/ - ɡencive /ʒɑ̃siv/
+		dhal /ðˈal/ - jaune /ʒon/
+		dhént /ðˈeŋt/ - ɡens /ʒɑ̃/
+		dhóven /ðˈoven/ - jeune /ʒœn/
+		dhóɡo /ðˈoɡo/ - jeu /ʒø/
+		dhènero /ðˈɛnero/ - ɡendre /ʒɑ̃dʁ/
+		ɡalìvo /ɡalˈivo/ - éɡal /eɡal/
+		ɡras /ɡrˈas/ - ɡraisse /ɡʁɛs/
+		ɡran /ɡrˈaŋ/ - ɡraine /ɡʁɛn/
+		ɡrant /ɡrˈaŋt/ - ɡrand /ɡʁɑ̃/
+		ɡròs /ɡrˈɔs/ - ɡros /ɡʁo/
+		ɡuxèla /ɡuzˈɛla/ - aiɡuille /ɛɡɥij/
+		ciamar /ʧamˈar/ - clamer /klame/
+		ài /ˈaj/ - ail /aj/
+		àrbol /ˈarbol/ - arbre /aʁbʁ/
+		àuter /ˈawter/ - autre /otʁ/
+		éla /ˈela/ - elle /ɛl/
+		élo /ˈelo/ - il /il/
+		io /ˈio/ - je /ʒə/
+		òca /ˈɔka/ - oie /wa/
+		òs /ˈɔs/ - os /ɔs/
+		òn /ˈɔŋ/ - homme /ɔm/
+		òcio /ˈɔʧo/ - œil /œj/
+		çità /θitˈa/ - cité /site/
+		zhincuànta /θiŋkwˈaŋta/ - cinquante /sɛ̃kɑ̃t/
+		zhiélo /θjˈelo/ - ciel /sjɛl/
+		zharéxa /θˈareza/ - cerise /səʁiz/
+		zhéndre /θˈendre/ - cendre /sɑ̃dʁ/
+		zhéra /θˈera/ - cire /siʁ/
+		zhima /θˈima/ - cime /sim/
+		zhìncue /θˈiŋkwe/ - cinq /sɛ̃k/
+		çènto /θˈɛnto/ - cent /sɑ̃/
+
+Final disqualified:
+		jazhàr /jaθˈar/ - ɡeler /ʒəle/
+		jutàr /jutˈar/ - aider /ɛde/
+		neveɡàr /neveɡˈar/ - neiɡer /neʒe/
+		an /ˈan/ - an /ɑ̃/
+		un /ˈun/ - un /ɛ̃/
+		òs /ˈɔs/ - os /o/
+		òt /ˈɔt/ - huit /ɥi/
+
+
+-------------------
+
