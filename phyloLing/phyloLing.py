@@ -1352,6 +1352,7 @@ class Language:
         doculect_dir = os.path.join(self.family.doculects_dir, self.name)
         os.makedirs(doculect_dir, exist_ok=True)
         random.seed(seed)
+        vowels, consonants, tonemes = map(dict_tuplelist, [self.vowels, self.consonants, self.tonemes])
         with open(os.path.join(doculect_dir, 'phones.lst'), 'w') as f:    
             for group, label in zip([self.vowels,
                                      self.consonants,
