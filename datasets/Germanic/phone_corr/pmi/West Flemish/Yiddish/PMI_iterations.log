@@ -1,0 +1,842 @@
+Same meaning pairs: 179
+****SAMPLE 1****
+Iteration 1
+	Qualified: 141
+	Disqualified: 145
+	Added: 0
+	Removed: 2
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+		egge /ˈɛɦə/ - עק /ˈɛk/
+
+Iteration 2
+	Qualified: 140
+	Disqualified: 146
+	Added: 0
+	Removed: 1
+		zustr /zˈœstɾ̩/ - שוועסטער /ʃvˈɛstəʁ/
+
+Iteration 3
+	Qualified: 140
+	Disqualified: 146
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bloeme /blˈuə̯mə/ - בלום /blˈʊm/
+		bloed /blˈuə̯t/ - בלוט /blˈʊt/
+		bloar /blˈɒːɾ/ - בלאַט /blˈat/
+		brood /bɾˈoːt/ - ברויט /bʀˈɔɪ̯t/
+		broer /bɾˈuə̯ɾ/ - ברודער /bʀˈʊdəʀ/
+		brugge /bɾˈœɦə/ - בריק /bʀˈɪk/
+		beter /bˈeːtəɾ/ - בעסער /bˈɛsəʀ/
+		bitn /bˈitn̩/ - בײַסן /bˈaɪ̯sn̩/
+		bie /bˈiə̯/ - בין /bˈɪn/
+		berg /bˈæɾh/ - באַרג /bˈaʀɡ/
+		borst /bˈɔɾst/ - ברוסט /bʀˈʊst/
+		beên /bˈɛːn/ - ביין /bˈɛɪ̯n/
+		droom /dɾˈoːm/ - טרוים /tʀˈɔɪ̯m/
+		dôod /dˈoːt/ - טויט /tˈɔɪ̯t/
+		doorn /dˈoːɾn/ - דאָרן /dˈɔʀn/
+		duusd /dˈyːst/ - טויזנט /tˈɔɪ̯zn̩d/
+		duuts /dˈyːts/ - דײַטש /dˈaɪ̯tʃ/
+		dundr /dˈœndɾ̩/ - דונער /dˈʊnəʀ/
+		dag /dˈɑh/ - טאָג /tˈɔɡ/
+		dochter /dˈɔhtɾ̩/ - טאָכטער /tˈɔχtəʀ/
+		dinne /dˈɪnə/ - דין /dˈɪn/
+		joar /jˈɒːɾ/ - יאָר /jˈɔʀ/
+		knie /knˈiə̯/ -  /knˈɪ/
+		koning /kˈoːnɪŋ/ - קעניג /kˈɛnɪɡ/
+		koud /kˈut/ - קאַלט /kˈalt/
+		koe /kˈuə̯/ - קו /kˈʊ/
+		kerke /kˈæɾkə/ - קירך /kˈɪʀχ/
+		koas /kˈɒːs/ - קעז /kˈɛz/
+		kop /kˈɔp/ - הויפּט /hˈɔɪ̯pt/
+		kolf /kˈɔwf/ - קאַלב /kˈalb/
+		kind /kˈɪnt/ - קינד /kˈɪnd/
+		lucht /lˈœht/ - ליכט /ʎˈɪχt/
+		lam /lˈɑm/ - לאַם /lˈam/
+		land /lˈɑnt/ - לאַנד /lˈand/
+		lang /lˈɑŋ/ - לאַנג /lˈaŋɡ/
+		mound /mˈunt/ - מויל /mˈɔɪ̯l/
+		moedr /mˈuə̯dɾ̩/ - מוטער /mˈʊtəʀ/
+		melk /mˈæwk/ - מילך /mˈɪlχ/
+		macht /mˈɑht/ - מאַכט /mˈaχt/
+		mins /mˈɪns/ - מענטש /mˈɛnʧ/
+		neegn /nˈeːɦn̩/ - נײַן /nˈaɪ̯n/
+		nieuwe /nˈiə̯ʋə/ - נייַ /nˈaɪ̯/
+		neus /nˈøːs/ - נאָז /nˈɔz/
+		naht /nˈɑht/ - נאַכט /nˈaχt/
+		noagel /nˈɒːɦəl/ - נאָגל /nˈɔɡl̩/
+		plicht /plˈɛht/ - פֿליכט /flˈɪχt/
+		slang /slˈɑŋ/ - שלאַנג /ʃlˈaŋɡ/
+		slaon /slˈɒːn/ - שלאָגן /ʃlˈɔɡŋ̩/
+		sloapn /slˈɒːpn̩/ - שלאָפֿן /ʃlˈɔfn̩/
+		snêeuw /snˈɛːw/ - שניי /ʃnˈɛɪ̯/
+		stoel /stˈuə̯l/ - שטול /ʃtˈʊl/
+		sterre /stˈæɾə/ - שטערן /ʃtˈɛʀən/
+		storm /stˈɔɾm/ - שטורעם /ʃtˈʊʀɛm/
+		twientig /tʋˈiə̯ntəh/ - צוואַנציק /ʦvˈanʦɪk/
+		twolve /tʋˈɔlvə/ - צוועלף /ʦvˈɛlf/
+		twêe /tʋˈɛː/ - צוויי /ʦvˈɛɪ̯/
+		tand /tˈɑnt/ - צאָן /ʦˈɔn/
+		vlees /vlˈeːs/ - פֿלייש /flˈɛɪ̯ʃ/
+		vliege /vlˈiə̯ɦə/ - פֿליג /flˈɪɡ/
+		vry /vɾˈi/ - פֿרײַ /fʀˈaɪ̯/
+		vriend /vɾˈiə̯nt/ - פֿרײַנד /fʀˈaɪ̯nd/
+		vrouwe /vɾˈuʋə/ - פֿרוי /fʀˈɔɪ̯/
+		voeln /vˈuə̯ln̩/ - פילן /fˈɪln̩/
+		voet /vˈuə̯t/ - פֿוס /fˈʊs/
+		voetn /vˈuə̯tn̩/ - פֿיס‎ /fˈɪs/
+		vers /vˈæɾs/ - פֿריש /fʀˈɪʃ/
+		veugel /vˈøːɦəl/ - פֿויגל /fˈɔɪ̯ɡl̩/
+		vul /vˈœl/ - פֿול /fˈʊl/
+		voader /vˈɒːdɾ̩/ - פֿאָטער /fˈɔtəʀ/
+		volgn /vˈɔlɦn̩/ - פֿאָלגן /fˈɔlɡn̩/
+		volk /vˈɔwk/ - פֿאָלק /fˈɔlk/
+		vis /vˈɛs/ - פֿיש /fˈɪʃ/
+		vinger /vˈɪŋɾ̩/ - פֿינגער /fˈɪŋɡəʀ/
+		zwemmn /zʋˈæmn̩/ - שווימען /ʃvˈɪmən/
+		zwoard /zʋˈɒːɾt/ - שווערד /ʃvˈɛʀd/
+		zyde /zˈidə/ - זײַט /zˈaɪ̯t/
+		zien /zˈiə̯n/ - זען /zˈɛn/
+		zout /zˈut/ - זאַלץ /zˈalʦ/
+		zoet /zˈuə̯t/ - זיס /zˈɪs/
+		zand /zˈɑnt/ - זאַמד /zˈamd/
+		zèsse /zˈɛsə/ - זעקס /zˈɛks/
+		zitn /zˈɛtn̩/ - זיצן /zˈɪʦn̩/
+		zegn /zˈɛɦn̩/ - זאָגן /zˈɔɡn̩/
+		zingn /zˈɪŋn̩/ - זינגען /zˈɪŋɡn̩/
+		k /ək/ - איך /ˈɪχ/
+		grôot /ɦɾˈoːt/ - גרויס /ɡʀˈɔɪ̯s/
+		groene /ɦɾˈuə̯nə/ - גרין /ɡʀˈɪn/
+		gras /ɦɾˈɑs/ - גראָז /ɡʀˈɔz/
+		geel /ɦˈeːl/ - געל /ɡˈɛl/
+		heem /ɦˈeːm/ - היים /hˈɛɪ̯m/
+		geevn /ɦˈeːvn̩/ - געבן /ɡˈɛbn̩/
+		goud /ɦˈut/ - גאָלד /ɡˈɔld/
+		goed /ɦˈuə̯t/ - גוט /ɡˈʊt/
+		ganze /ɦˈɑnzə/ - גאַנדז /ɡˈandz/
+		gast /ɦˈɑst/ - גאַסט /ɡˈast/
+		god /ɦˈɔt/ - גאָט /ɡˈɔt/
+		regn /ɾˈeːɦn̩/ - רעגן /ʀˈɛɡn̩/
+		ryk /ɾˈik/ - רײַך /ʀˈaɪ̯χ/
+		rook /ɾˈoːk/ - רויך /ʀˈɔɪ̯χ/
+		rôod /ɾˈoːt/ - רויט /ʀˈɔɪ̯t/
+		recht /ɾˈæht/ - רעכט /ʀˈɛχt/
+		ring /ɾˈɪŋk/ - רינג /ʀˈɪŋɡ/
+		schoon /ʃhˈoːn/ - שיין /ʃˈɛɪ̯n/
+		scherp /ʃhˈæɾp/ - שאַרף /ʃˈaʀf/
+		schoap /ʃhˈɒːp/ - שאָף /ʃˈɔf/
+		weer /ʋˈeːɾ/ - וועטער /vˈɛtəʀ/
+		wuuf /ʋˈyːf/ - ווײַב /vˈaɪ̯b/
+		weg /ʋˈæh/ - וועג /vˈɛɡ/
+		wulle /ʋˈœlə/ - וואָל /vˈɔl/
+		wal /ʋˈɑl/ - וואַל /vˈal/
+		wat /ʋˈɑt/ - וואָס /vˈɔs/
+		warm /ʋˈɑɾm/ - וואַרעם /vˈaʀɛm/
+		woater /ʋˈɒːtɾ̩/ - וואַסער /vˈasəʀ/
+		wit /ʋˈɛt/ - ווײַס /vˈaɪ̯s/
+		wind /ʋˈɪnt/ - ווינט /vˈɪnt/
+		ys /ˈis/ - אײַז /ˈaɪ̯z/
+		oofd /ˈoːft/ - הויפּט /hˈɔɪ̯pt/
+		oovn /ˈoːvn̩/ - אויוון /ˈɔɪ̯vn̩/
+		ooge /ˈoːɦə/ - אויג /ˈɔɪ̯ɡ/
+		oorn /ˈoːɾn/ - האָרן /hˈɔʀn/
+		ôor'n /ˈoːɾn̩/ - הערן /hˈɛʀn/
+		ôore /ˈoːɾə/ - אויער /ˈɔɪ̯əʀ/
+		oud /ˈut/ - אַלט /ˈalt/
+		ounger /ˈuŋɾ̩/ - הונגער /hˈʊŋɡəʀ/
+		uus /ˈyːs/ - הויז /hˈɔɪ̯z/
+		uut /ˈyːt/ - אויס /ˈɔɪ̯s/
+		elve /ˈælvə/ - עלף /ˈɛlf/
+		erte /ˈæɾtə/ - האַרץ /hˈaʀʦ/
+		achte /ˈɑhtə/ - אַכט /ˈaχt/
+		ander /ˈɑndəɾ/ - אַנדער /ˈandəʀ/
+		and /ˈɑnt/ - האַנט /hˈant/
+		appel /ˈɑpəl/ - עפּל /ˈɛpəl/
+		asse /ˈɑsə/ - אַש /ˈaʃ/
+		oap /ˈɒːp/ - אַפֿע /ˈafə/
+		oar /ˈɒːɾ/ - האָר /hˈɔʀ/
+		oarm /ˈɒːɾm/ - אָרעם /ˈɔʀəm/
+		eillig /ˈɛləç/ - הייליק /hˈɛɪ̯lɪk/
+		ei /ˈɛː/ - איי /ˈɛɪ̯/
+		eirde /ˈɛːɾdə/ - ערד /ˈɛʀd/
+		in /ˈɪn/ - אין /ˈɪn/
+
+Final disqualified:
+		zustr /zˈœstɾ̩/ - שוועסטער /ʃvˈɛstəʁ/
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+		egge /ˈɛɦə/ - עק /ˈɛk/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 142
+	Disqualified: 144
+	Added: 0
+	Removed: 1
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+
+Iteration 2
+	Qualified: 142
+	Disqualified: 144
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bloed /blˈuə̯t/ - בלוט /blˈʊt/
+		bloar /blˈɒːɾ/ - בלאַט /blˈat/
+		brood /bɾˈoːt/ - ברויט /bʀˈɔɪ̯t/
+		broer /bɾˈuə̯ɾ/ - ברודער /bʀˈʊdəʀ/
+		brugge /bɾˈœɦə/ - בריק /bʀˈɪk/
+		beter /bˈeːtəɾ/ - בעסער /bˈɛsəʀ/
+		bitn /bˈitn̩/ - בײַסן /bˈaɪ̯sn̩/
+		bie /bˈiə̯/ - בין /bˈɪn/
+		boom /bˈoːm/ - בױם /bˈɔɪ̯m/
+		boek /bˈuə̯k/ - בוך /bˈʊχ/
+		berg /bˈæɾh/ - באַרג /bˈaʀɡ/
+		beên /bˈɛːn/ - ביין /bˈɛɪ̯n/
+		drieje /dɾˈiə̯/ - דרײַ /dʀˈaɪ̯/
+		droog /dɾˈoːh/ - טרוקן /tʁˈʊkn̩/
+		droom /dɾˈoːm/ - טרוים /tʀˈɔɪ̯m/
+		drinkn /dɾˈɪŋkn̩/ - טרינקען /tʀˈɪŋkən/
+		dôod /dˈoːt/ - טויט /tˈɔɪ̯t/
+		doorn /dˈoːɾn/ - דאָרן /dˈɔʀn/
+		duuts /dˈyːts/ - דײַטש /dˈaɪ̯tʃ/
+		dundr /dˈœndɾ̩/ - דונער /dˈʊnəʀ/
+		dochter /dˈɔhtɾ̩/ - טאָכטער /tˈɔχtəʀ/
+		dinne /dˈɪnə/ - דין /dˈɪn/
+		joung /jˈuŋk/ - יונג /jˈʊŋɡ/
+		joar /jˈɒːɾ/ - יאָר /jˈɔʀ/
+		koning /kˈoːnɪŋ/ - קעניג /kˈɛnɪɡ/
+		kerke /kˈæɾkə/ - קירך /kˈɪʀχ/
+		koas /kˈɒːs/ - קעז /kˈɛz/
+		kolf /kˈɔwf/ - קאַלב /kˈalb/
+		kind /kˈɪnt/ - קינד /kˈɪnd/
+		lever /lˈeːvɾ̩/ - לעבער /lˈɛbəʀ/
+		luus /lˈyːs/ - לויז /lˈɔɪ̯z/
+		lucht /lˈœht/ - ליכט /ʎˈɪχt/
+		lachn /lˈɑhn̩/ - לאַכן /lˈaχn̩/
+		lam /lˈɑm/ - לאַם /lˈam/
+		land /lˈɑnt/ - לאַנד /lˈand/
+		lang /lˈɑŋ/ - לאַנג /lˈaŋɡ/
+		mound /mˈunt/ - מויל /mˈɔɪ̯l/
+		moedr /mˈuə̯dɾ̩/ - מוטער /mˈʊtəʀ/
+		melk /mˈæwk/ - מילך /mˈɪlχ/
+		macht /mˈɑht/ - מאַכט /mˈaχt/
+		mins /mˈɪns/ - מענטש /mˈɛnʧ/
+		nieuwe /nˈiə̯ʋə/ - נייַ /nˈaɪ̯/
+		neus /nˈøːs/ - נאָז /nˈɔz/
+		naht /nˈɑht/ - נאַכט /nˈaχt/
+		noagel /nˈɒːɦəl/ - נאָגל /nˈɔɡl̩/
+		plicht /plˈɛht/ - פֿליכט /flˈɪχt/
+		slang /slˈɑŋ/ - שלאַנג /ʃlˈaŋɡ/
+		slaon /slˈɒːn/ - שלאָגן /ʃlˈɔɡŋ̩/
+		sloapn /slˈɒːpn̩/ - שלאָפֿן /ʃlˈɔfn̩/
+		snêeuw /snˈɛːw/ - שניי /ʃnˈɛɪ̯/
+		stoel /stˈuə̯l/ - שטול /ʃtˈʊl/
+		sterre /stˈæɾə/ - שטערן /ʃtˈɛʀən/
+		storm /stˈɔɾm/ - שטורעם /ʃtˈʊʀɛm/
+		stêen /stˈɛːn/ - שטיין /ʃtˈɛɪ̯n/
+		twientig /tʋˈiə̯ntəh/ - צוואַנציק /ʦvˈanʦɪk/
+		twêe /tʋˈɛː/ - צוויי /ʦvˈɛɪ̯/
+		tyd /tˈit/ - צײַט /ʦˈaɪ̯t/
+		tienne /tˈiə̯nə/ - צען /ʦˈɛn/
+		tonge /tˈuŋə/ - צונג /ʦˈʊŋɡ/
+		tand /tˈɑnt/ - צאָן /ʦˈɔn/
+		vlees /vlˈeːs/ - פֿלייש /flˈɛɪ̯ʃ/
+		vry /vɾˈi/ - פֿרײַ /fʀˈaɪ̯/
+		vrouwe /vɾˈuʋə/ - פֿרוי /fʀˈɔɪ̯/
+		viere /vˈiə̯ɾə/ - פֿיר /fˈɪʀ/
+		voeln /vˈuə̯ln̩/ - פילן /fˈɪln̩/
+		voetn /vˈuə̯tn̩/ - פֿיס‎ /fˈɪs/
+		vers /vˈæɾs/ - פֿריש /fʀˈɪʃ/
+		veugel /vˈøːɦəl/ - פֿויגל /fˈɔɪ̯ɡl̩/
+		vul /vˈœl/ - פֿול /fˈʊl/
+		vuve /vˈœvə/ - פֿינף /fˈɪnf/
+		voader /vˈɒːdɾ̩/ - פֿאָטער /fˈɔtəʀ/
+		volgn /vˈɔlɦn̩/ - פֿאָלגן /fˈɔlɡn̩/
+		vos /vˈɔs/ - פֿוקס /fˈʊks/
+		volk /vˈɔwk/ - פֿאָלק /fˈɔlk/
+		vis /vˈɛs/ - פֿיש /fˈɪʃ/
+		vinger /vˈɪŋɾ̩/ - פֿינגער /fˈɪŋɡəʀ/
+		zwemmn /zʋˈæmn̩/ - שווימען /ʃvˈɪmən/
+		zwart /zʋˈɑɾt/ - שוואַרץ /ʃvˈaʀʦ/
+		zwoard /zʋˈɒːɾt/ - שווערד /ʃvˈɛʀd/
+		zeevn /zˈeːvn̩/ - זיבן /zˈɪbn̩/
+		zyde /zˈidə/ - זײַט /zˈaɪ̯t/
+		zien /zˈiə̯n/ - זען /zˈɛn/
+		zout /zˈut/ - זאַלץ /zˈalʦ/
+		zustr /zˈœstɾ̩/ - שוועסטער /ʃvˈɛstəʁ/
+		zand /zˈɑnt/ - זאַמד /zˈamd/
+		zèsse /zˈɛsə/ - זעקס /zˈɛks/
+		zitn /zˈɛtn̩/ - זיצן /zˈɪʦn̩/
+		zegn /zˈɛɦn̩/ - זאָגן /zˈɔɡn̩/
+		zingn /zˈɪŋn̩/ - זינגען /zˈɪŋɡn̩/
+		k /ək/ - איך /ˈɪχ/
+		grôot /ɦɾˈoːt/ - גרויס /ɡʀˈɔɪ̯s/
+		gras /ɦɾˈɑs/ - גראָז /ɡʀˈɔz/
+		geel /ɦˈeːl/ - געל /ɡˈɛl/
+		geevn /ɦˈeːvn̩/ - געבן /ɡˈɛbn̩/
+		goud /ɦˈut/ - גאָלד /ɡˈɔld/
+		ganze /ɦˈɑnzə/ - גאַנדז /ɡˈandz/
+		gast /ɦˈɑst/ - גאַסט /ɡˈast/
+		rôod /ɾˈoːt/ - רויט /ʀˈɔɪ̯t/
+		recht /ɾˈæht/ - רעכט /ʀˈɛχt/
+		ring /ɾˈɪŋk/ - רינג /ʀˈɪŋɡ/
+		schoon /ʃhˈoːn/ - שיין /ʃˈɛɪ̯n/
+		scherp /ʃhˈæɾp/ - שאַרף /ʃˈaʀf/
+		schoap /ʃhˈɒːp/ - שאָף /ʃˈɔf/
+		weer /ʋˈeːɾ/ - וועטער /vˈɛtəʀ/
+		woord /ʋˈoːɾt/ - וואָרט /vˈɔʀt/
+		wuuf /ʋˈyːf/ - ווײַב /vˈaɪ̯b/
+		weg /ʋˈæh/ - וועג /vˈɛɡ/
+		wulle /ʋˈœlə/ - וואָל /vˈɔl/
+		wal /ʋˈɑl/ - וואַל /vˈal/
+		wat /ʋˈɑt/ - וואָס /vˈɔs/
+		warm /ʋˈɑɾm/ - וואַרעם /vˈaʀɛm/
+		woater /ʋˈɒːtɾ̩/ - וואַסער /vˈasəʀ/
+		wit /ʋˈɛt/ - ווײַס /vˈaɪ̯s/
+		wind /ʋˈɪnt/ - ווינט /vˈɪnt/
+		eetn /ˈeːtn̩/ - עסן /ˈɛsn̩/
+		oofd /ˈoːft/ - הויפּט /hˈɔɪ̯pt/
+		oofd /ˈoːft/ - קאָפּ /kˈɔp/
+		oovn /ˈoːvn̩/ - אויוון /ˈɔɪ̯vn̩/
+		oovr /ˈoːvɾ̩/ - איבער /ˈibəʀ/
+		ooge /ˈoːɦə/ - אויג /ˈɔɪ̯ɡ/
+		oorn /ˈoːɾn/ - האָרן /hˈɔʀn/
+		ôor'n /ˈoːɾn̩/ - הערן /hˈɛʀn/
+		ôore /ˈoːɾə/ - אויער /ˈɔɪ̯əʀ/
+		oend /ˈunt/ - הונט /hˈʊnt/
+		oud /ˈut/ - אַלט /ˈalt/
+		ounger /ˈuŋɾ̩/ - הונגער /hˈʊŋɡəʀ/
+		uut /ˈyːt/ - אויס /ˈɔɪ̯s/
+		elve /ˈælvə/ - עלף /ˈɛlf/
+		erte /ˈæɾtə/ - האַרץ /hˈaʀʦ/
+		achte /ˈɑhtə/ - אַכט /ˈaχt/
+		and /ˈɑnt/ - האַנט /hˈant/
+		appel /ˈɑpəl/ - עפּל /ˈɛpəl/
+		asse /ˈɑsə/ - אַש /ˈaʃ/
+		oap /ˈɒːp/ - אַפֿע /ˈafə/
+		hoas /ˈɒːs/ - האָז /hˈɔz/
+		oar /ˈɒːɾ/ - האָר /hˈɔʀ/
+		oarm /ˈɒːɾm/ - אָרעם /ˈɔʀəm/
+		eillig /ˈɛləç/ - הייליק /hˈɛɪ̯lɪk/
+		egge /ˈɛɦə/ - עק /ˈɛk/
+		ei /ˈɛː/ - איי /ˈɛɪ̯/
+		êen /ˈɛːn/ - איין /ˈɛɪ̯n/
+		eirde /ˈɛːɾdə/ - ערד /ˈɛʀd/
+
+Final disqualified:
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 139
+	Disqualified: 147
+	Added: 0
+	Removed: 4
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+		oud /ˈut/ - אַלט /ˈalt/
+		zêem /zˈɛːm/ - האָניק /hˈɔnɪk/
+		egge /ˈɛɦə/ - עק /ˈɛk/
+
+Iteration 2
+	Qualified: 139
+	Disqualified: 147
+	Added: 1
+		oud /ˈut/ - אַלט /ˈalt/
+	Removed: 1
+		nieuwe /nˈiə̯ʋə/ - נייַ /nˈaɪ̯/
+
+Iteration 3
+	Qualified: 139
+	Disqualified: 147
+	Added: 1
+		nieuwe /nˈiə̯ʋə/ - נייַ /nˈaɪ̯/
+	Removed: 1
+		oud /ˈut/ - אַלט /ˈalt/
+
+Final qualifying:
+		bloeme /blˈuə̯mə/ - בלום /blˈʊm/
+		bloar /blˈɒːɾ/ - בלאַט /blˈat/
+		brood /bɾˈoːt/ - ברויט /bʀˈɔɪ̯t/
+		broer /bɾˈuə̯ɾ/ - ברודער /bʀˈʊdəʀ/
+		brugge /bɾˈœɦə/ - בריק /bʀˈɪk/
+		beter /bˈeːtəɾ/ - בעסער /bˈɛsəʀ/
+		bitn /bˈitn̩/ - בײַסן /bˈaɪ̯sn̩/
+		bie /bˈiə̯/ - בין /bˈɪn/
+		boom /bˈoːm/ - בױם /bˈɔɪ̯m/
+		boek /bˈuə̯k/ - בוך /bˈʊχ/
+		berg /bˈæɾh/ - באַרג /bˈaʀɡ/
+		beên /bˈɛːn/ - ביין /bˈɛɪ̯n/
+		droog /dɾˈoːh/ - טרוקן /tʁˈʊkn̩/
+		droom /dɾˈoːm/ - טרוים /tʀˈɔɪ̯m/
+		drinkn /dɾˈɪŋkn̩/ - טרינקען /tʀˈɪŋkən/
+		diere /dˈiə̯ɾə/ - טייַער /tˈaɪ̯əʀ/
+		dôod /dˈoːt/ - טויט /tˈɔɪ̯t/
+		doorn /dˈoːɾn/ - דאָרן /dˈɔʀn/
+		duuts /dˈyːts/ - דײַטש /dˈaɪ̯tʃ/
+		dundr /dˈœndɾ̩/ - דונער /dˈʊnəʀ/
+		dag /dˈɑh/ - טאָג /tˈɔɡ/
+		dinne /dˈɪnə/ - דין /dˈɪn/
+		joar /jˈɒːɾ/ - יאָר /jˈɔʀ/
+		knie /knˈiə̯/ -  /knˈɪ/
+		koud /kˈut/ - קאַלט /kˈalt/
+		koe /kˈuə̯/ - קו /kˈʊ/
+		kerke /kˈæɾkə/ - קירך /kˈɪʀχ/
+		koas /kˈɒːs/ - קעז /kˈɛz/
+		kop /kˈɔp/ - הויפּט /hˈɔɪ̯pt/
+		kop /kˈɔp/ - קאָפּ /kˈɔp/
+		kolf /kˈɔwf/ - קאַלב /kˈalb/
+		kind /kˈɪnt/ - קינד /kˈɪnd/
+		lever /lˈeːvɾ̩/ - לעבער /lˈɛbəʀ/
+		luus /lˈyːs/ - לויז /lˈɔɪ̯z/
+		lucht /lˈœht/ - ליכט /ʎˈɪχt/
+		lachn /lˈɑhn̩/ - לאַכן /lˈaχn̩/
+		lam /lˈɑm/ - לאַם /lˈam/
+		moedr /mˈuə̯dɾ̩/ - מוטער /mˈʊtəʀ/
+		muus /mˈyːs/ - מויז /mˈɔɪ̯z/
+		macht /mˈɑht/ - מאַכט /mˈaχt/
+		mins /mˈɪns/ - מענטש /mˈɛnʧ/
+		neegn /nˈeːɦn̩/ - נײַן /nˈaɪ̯n/
+		nieuwe /nˈiə̯ʋə/ - נייַ /nˈaɪ̯/
+		neus /nˈøːs/ - נאָז /nˈɔz/
+		plicht /plˈɛht/ - פֿליכט /flˈɪχt/
+		slang /slˈɑŋ/ - שלאַנג /ʃlˈaŋɡ/
+		slaon /slˈɒːn/ - שלאָגן /ʃlˈɔɡŋ̩/
+		sloapn /slˈɒːpn̩/ - שלאָפֿן /ʃlˈɔfn̩/
+		stoel /stˈuə̯l/ - שטול /ʃtˈʊl/
+		storm /stˈɔɾm/ - שטורעם /ʃtˈʊʀɛm/
+		twientig /tʋˈiə̯ntəh/ - צוואַנציק /ʦvˈanʦɪk/
+		twolve /tʋˈɔlvə/ - צוועלף /ʦvˈɛlf/
+		twêe /tʋˈɛː/ - צוויי /ʦvˈɛɪ̯/
+		tyd /tˈit/ - צײַט /ʦˈaɪ̯t/
+		tienne /tˈiə̯nə/ - צען /ʦˈɛn/
+		tonge /tˈuŋə/ - צונג /ʦˈʊŋɡ/
+		tand /tˈɑnt/ - צאָן /ʦˈɔn/
+		vlees /vlˈeːs/ - פֿלייש /flˈɛɪ̯ʃ/
+		vliegn /vlˈiə̯ɦn̩/ - פֿליִען /flˈɪən/
+		vliege /vlˈiə̯ɦə/ - פֿליג /flˈɪɡ/
+		vry /vɾˈi/ - פֿרײַ /fʀˈaɪ̯/
+		vrouwe /vɾˈuʋə/ - פֿרוי /fʀˈɔɪ̯/
+		vier /vˈiə̯ɾ/ - פֿײַער /fˈaɪ̯əʀ/
+		viere /vˈiə̯ɾə/ - פֿיר /fˈɪʀ/
+		voet /vˈuə̯t/ - פֿוס /fˈʊs/
+		voetn /vˈuə̯tn̩/ - פֿיס‎ /fˈɪs/
+		vers /vˈæɾs/ - פֿריש /fʀˈɪʃ/
+		veugel /vˈøːɦəl/ - פֿויגל /fˈɔɪ̯ɡl̩/
+		vul /vˈœl/ - פֿול /fˈʊl/
+		vuve /vˈœvə/ - פֿינף /fˈɪnf/
+		voader /vˈɒːdɾ̩/ - פֿאָטער /fˈɔtəʀ/
+		vos /vˈɔs/ - פֿוקס /fˈʊks/
+		volk /vˈɔwk/ - פֿאָלק /fˈɔlk/
+		vis /vˈɛs/ - פֿיש /fˈɪʃ/
+		vinger /vˈɪŋɾ̩/ - פֿינגער /fˈɪŋɡəʀ/
+		zwemmn /zʋˈæmn̩/ - שווימען /ʃvˈɪmən/
+		zwart /zʋˈɑɾt/ - שוואַרץ /ʃvˈaʀʦ/
+		zwoard /zʋˈɒːɾt/ - שווערד /ʃvˈɛʀd/
+		zeevn /zˈeːvn̩/ - זיבן /zˈɪbn̩/
+		zyde /zˈidə/ - זײַט /zˈaɪ̯t/
+		zien /zˈiə̯n/ - זען /zˈɛn/
+		zout /zˈut/ - זאַלץ /zˈalʦ/
+		zoet /zˈuə̯t/ - זיס /zˈɪs/
+		zeune /zˈøːnə/ - זון /zˈʊn/
+		zand /zˈɑnt/ - זאַמד /zˈamd/
+		zitn /zˈɛtn̩/ - זיצן /zˈɪʦn̩/
+		zegn /zˈɛɦn̩/ - זאָגן /zˈɔɡn̩/
+		zingn /zˈɪŋn̩/ - זינגען /zˈɪŋɡn̩/
+		k /ək/ - איך /ˈɪχ/
+		grôot /ɦɾˈoːt/ - גרויס /ɡʀˈɔɪ̯s/
+		groene /ɦɾˈuə̯nə/ - גרין /ɡʀˈɪn/
+		gras /ɦɾˈɑs/ - גראָז /ɡʀˈɔz/
+		geel /ɦˈeːl/ - געל /ɡˈɛl/
+		geevn /ɦˈeːvn̩/ - געבן /ɡˈɛbn̩/
+		goud /ɦˈut/ - גאָלד /ɡˈɔld/
+		goed /ɦˈuə̯t/ - גוט /ɡˈʊt/
+		ganze /ɦˈɑnzə/ - גאַנדז /ɡˈandz/
+		gast /ɦˈɑst/ - גאַסט /ɡˈast/
+		god /ɦˈɔt/ - גאָט /ɡˈɔt/
+		regn /ɾˈeːɦn̩/ - רעגן /ʀˈɛɡn̩/
+		ryk /ɾˈik/ - רײַך /ʀˈaɪ̯χ/
+		rook /ɾˈoːk/ - רויך /ʀˈɔɪ̯χ/
+		recht /ɾˈæht/ - רעכט /ʀˈɛχt/
+		ring /ɾˈɪŋk/ - רינג /ʀˈɪŋɡ/
+		schoon /ʃhˈoːn/ - שיין /ʃˈɛɪ̯n/
+		schoap /ʃhˈɒːp/ - שאָף /ʃˈɔf/
+		weer /ʋˈeːɾ/ - וועטער /vˈɛtəʀ/
+		woord /ʋˈoːɾt/ - וואָרט /vˈɔʀt/
+		wuuf /ʋˈyːf/ - ווײַב /vˈaɪ̯b/
+		weg /ʋˈæh/ - וועג /vˈɛɡ/
+		wulle /ʋˈœlə/ - וואָל /vˈɔl/
+		wal /ʋˈɑl/ - וואַל /vˈal/
+		wat /ʋˈɑt/ - וואָס /vˈɔs/
+		warm /ʋˈɑɾm/ - וואַרעם /vˈaʀɛm/
+		wit /ʋˈɛt/ - ווײַס /vˈaɪ̯s/
+		wind /ʋˈɪnt/ - ווינט /vˈɪnt/
+		ys /ˈis/ - אײַז /ˈaɪ̯z/
+		oofd /ˈoːft/ - הויפּט /hˈɔɪ̯pt/
+		oog /ˈoːh/ - הויך /hˈɔɪ̯χ/
+		oovn /ˈoːvn̩/ - אויוון /ˈɔɪ̯vn̩/
+		oovr /ˈoːvɾ̩/ - איבער /ˈibəʀ/
+		ooge /ˈoːɦə/ - אויג /ˈɔɪ̯ɡ/
+		oorn /ˈoːɾn/ - האָרן /hˈɔʀn/
+		ôor'n /ˈoːɾn̩/ - הערן /hˈɛʀn/
+		ôore /ˈoːɾə/ - אויער /ˈɔɪ̯əʀ/
+		oend /ˈunt/ - הונט /hˈʊnt/
+		uus /ˈyːs/ - הויז /hˈɔɪ̯z/
+		uut /ˈyːt/ - אויס /ˈɔɪ̯s/
+		erte /ˈæɾtə/ - האַרץ /hˈaʀʦ/
+		achte /ˈɑhtə/ - אַכט /ˈaχt/
+		ander /ˈɑndəɾ/ - אַנדער /ˈandəʀ/
+		and /ˈɑnt/ - האַנט /hˈant/
+		appel /ˈɑpəl/ - עפּל /ˈɛpəl/
+		oap /ˈɒːp/ - אַפֿע /ˈafə/
+		oarm /ˈɒːɾm/ - אָרעם /ˈɔʀəm/
+		eillig /ˈɛləç/ - הייליק /hˈɛɪ̯lɪk/
+		ei /ˈɛː/ - איי /ˈɛɪ̯/
+		êen /ˈɛːn/ - איין /ˈɛɪ̯n/
+		eirde /ˈɛːɾdə/ - ערד /ˈɛʀd/
+
+Final disqualified:
+		zêem /zˈɛːm/ - האָניק /hˈɔnɪk/
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+		oud /ˈut/ - אַלט /ˈalt/
+		egge /ˈɛɦə/ - עק /ˈɛk/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 142
+	Disqualified: 144
+	Added: 0
+	Removed: 1
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+
+Iteration 2
+	Qualified: 142
+	Disqualified: 144
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bloeme /blˈuə̯mə/ - בלום /blˈʊm/
+		bloed /blˈuə̯t/ - בלוט /blˈʊt/
+		bloar /blˈɒːɾ/ - בלאַט /blˈat/
+		brood /bɾˈoːt/ - ברויט /bʀˈɔɪ̯t/
+		brugge /bɾˈœɦə/ - בריק /bʀˈɪk/
+		beter /bˈeːtəɾ/ - בעסער /bˈɛsəʀ/
+		bitn /bˈitn̩/ - בײַסן /bˈaɪ̯sn̩/
+		bie /bˈiə̯/ - בין /bˈɪn/
+		boom /bˈoːm/ - בױם /bˈɔɪ̯m/
+		boek /bˈuə̯k/ - בוך /bˈʊχ/
+		borst /bˈɔɾst/ - ברוסט /bʀˈʊst/
+		beên /bˈɛːn/ - ביין /bˈɛɪ̯n/
+		droog /dɾˈoːh/ - טרוקן /tʁˈʊkn̩/
+		droom /dɾˈoːm/ - טרוים /tʀˈɔɪ̯m/
+		drinkn /dɾˈɪŋkn̩/ - טרינקען /tʀˈɪŋkən/
+		diep /dˈiə̯p/ - טיף /tˈɪf/
+		diere /dˈiə̯ɾə/ - טייַער /tˈaɪ̯əʀ/
+		doorn /dˈoːɾn/ - דאָרן /dˈɔʀn/
+		duusd /dˈyːst/ - טויזנט /tˈɔɪ̯zn̩d/
+		duuts /dˈyːts/ - דײַטש /dˈaɪ̯tʃ/
+		dundr /dˈœndɾ̩/ - דונער /dˈʊnəʀ/
+		dag /dˈɑh/ - טאָג /tˈɔɡ/
+		dochter /dˈɔhtɾ̩/ - טאָכטער /tˈɔχtəʀ/
+		dinne /dˈɪnə/ - דין /dˈɪn/
+		joung /jˈuŋk/ - יונג /jˈʊŋɡ/
+		joar /jˈɒːɾ/ - יאָר /jˈɔʀ/
+		knie /knˈiə̯/ -  /knˈɪ/
+		koe /kˈuə̯/ - קו /kˈʊ/
+		koas /kˈɒːs/ - קעז /kˈɛz/
+		kop /kˈɔp/ - הויפּט /hˈɔɪ̯pt/
+		kop /kˈɔp/ - קאָפּ /kˈɔp/
+		kolf /kˈɔwf/ - קאַלב /kˈalb/
+		kind /kˈɪnt/ - קינד /kˈɪnd/
+		luus /lˈyːs/ - לויז /lˈɔɪ̯z/
+		lucht /lˈœht/ - ליכט /ʎˈɪχt/
+		lachn /lˈɑhn̩/ - לאַכן /lˈaχn̩/
+		lam /lˈɑm/ - לאַם /lˈam/
+		land /lˈɑnt/ - לאַנד /lˈand/
+		mound /mˈunt/ - מויל /mˈɔɪ̯l/
+		muus /mˈyːs/ - מויז /mˈɔɪ̯z/
+		macht /mˈɑht/ - מאַכט /mˈaχt/
+		mins /mˈɪns/ - מענטש /mˈɛnʧ/
+		neegn /nˈeːɦn̩/ - נײַן /nˈaɪ̯n/
+		nieuwe /nˈiə̯ʋə/ - נייַ /nˈaɪ̯/
+		neus /nˈøːs/ - נאָז /nˈɔz/
+		naht /nˈɑht/ - נאַכט /nˈaχt/
+		noame /nˈɒːmə/ - נאָמען /nˈɔmɛn/
+		noagel /nˈɒːɦəl/ - נאָגל /nˈɔɡl̩/
+		plicht /plˈɛht/ - פֿליכט /flˈɪχt/
+		slang /slˈɑŋ/ - שלאַנג /ʃlˈaŋɡ/
+		slaon /slˈɒːn/ - שלאָגן /ʃlˈɔɡŋ̩/
+		snêeuw /snˈɛːw/ - שניי /ʃnˈɛɪ̯/
+		stoel /stˈuə̯l/ - שטול /ʃtˈʊl/
+		storm /stˈɔɾm/ - שטורעם /ʃtˈʊʀɛm/
+		stêen /stˈɛːn/ - שטיין /ʃtˈɛɪ̯n/
+		twientig /tʋˈiə̯ntəh/ - צוואַנציק /ʦvˈanʦɪk/
+		twolve /tʋˈɔlvə/ - צוועלף /ʦvˈɛlf/
+		twêe /tʋˈɛː/ - צוויי /ʦvˈɛɪ̯/
+		tyd /tˈit/ - צײַט /ʦˈaɪ̯t/
+		tienne /tˈiə̯nə/ - צען /ʦˈɛn/
+		tonge /tˈuŋə/ - צונג /ʦˈʊŋɡ/
+		tand /tˈɑnt/ - צאָן /ʦˈɔn/
+		vlees /vlˈeːs/ - פֿלייש /flˈɛɪ̯ʃ/
+		vliegn /vlˈiə̯ɦn̩/ - פֿליִען /flˈɪən/
+		vliege /vlˈiə̯ɦə/ - פֿליג /flˈɪɡ/
+		vry /vɾˈi/ - פֿרײַ /fʀˈaɪ̯/
+		vriend /vɾˈiə̯nt/ - פֿרײַנד /fʀˈaɪ̯nd/
+		vriezn /vɾˈiə̯zn̩/ - פֿרירן /fʀˈɪʀn̩/
+		vrouwe /vɾˈuʋə/ - פֿרוי /fʀˈɔɪ̯/
+		vier /vˈiə̯ɾ/ - פֿײַער /fˈaɪ̯əʀ/
+		voet /vˈuə̯t/ - פֿוס /fˈʊs/
+		voetn /vˈuə̯tn̩/ - פֿיס‎ /fˈɪs/
+		vers /vˈæɾs/ - פֿריש /fʀˈɪʃ/
+		veugel /vˈøːɦəl/ - פֿויגל /fˈɔɪ̯ɡl̩/
+		vul /vˈœl/ - פֿול /fˈʊl/
+		vuve /vˈœvə/ - פֿינף /fˈɪnf/
+		volgn /vˈɔlɦn̩/ - פֿאָלגן /fˈɔlɡn̩/
+		volk /vˈɔwk/ - פֿאָלק /fˈɔlk/
+		vis /vˈɛs/ - פֿיש /fˈɪʃ/
+		zwemmn /zʋˈæmn̩/ - שווימען /ʃvˈɪmən/
+		zwart /zʋˈɑɾt/ - שוואַרץ /ʃvˈaʀʦ/
+		zwoard /zʋˈɒːɾt/ - שווערד /ʃvˈɛʀd/
+		zeevn /zˈeːvn̩/ - זיבן /zˈɪbn̩/
+		zyde /zˈidə/ - זײַט /zˈaɪ̯t/
+		zien /zˈiə̯n/ - זען /zˈɛn/
+		zout /zˈut/ - זאַלץ /zˈalʦ/
+		zoet /zˈuə̯t/ - זיס /zˈɪs/
+		zeune /zˈøːnə/ - זון /zˈʊn/
+		zustr /zˈœstɾ̩/ - שוועסטער /ʃvˈɛstəʁ/
+		zand /zˈɑnt/ - זאַמד /zˈamd/
+		zèsse /zˈɛsə/ - זעקס /zˈɛks/
+		zitn /zˈɛtn̩/ - זיצן /zˈɪʦn̩/
+		zegn /zˈɛɦn̩/ - זאָגן /zˈɔɡn̩/
+		zingn /zˈɪŋn̩/ - זינגען /zˈɪŋɡn̩/
+		grôot /ɦɾˈoːt/ - גרויס /ɡʀˈɔɪ̯s/
+		groene /ɦɾˈuə̯nə/ - גרין /ɡʀˈɪn/
+		gras /ɦɾˈɑs/ - גראָז /ɡʀˈɔz/
+		geel /ɦˈeːl/ - געל /ɡˈɛl/
+		geevn /ɦˈeːvn̩/ - געבן /ɡˈɛbn̩/
+		goud /ɦˈut/ - גאָלד /ɡˈɔld/
+		goed /ɦˈuə̯t/ - גוט /ɡˈʊt/
+		ganze /ɦˈɑnzə/ - גאַנדז /ɡˈandz/
+		gast /ɦˈɑst/ - גאַסט /ɡˈast/
+		ryk /ɾˈik/ - רײַך /ʀˈaɪ̯χ/
+		rook /ɾˈoːk/ - רויך /ʀˈɔɪ̯χ/
+		recht /ɾˈæht/ - רעכט /ʀˈɛχt/
+		ring /ɾˈɪŋk/ - רינג /ʀˈɪŋɡ/
+		scherp /ʃhˈæɾp/ - שאַרף /ʃˈaʀf/
+		schoap /ʃhˈɒːp/ - שאָף /ʃˈɔf/
+		weer /ʋˈeːɾ/ - וועטער /vˈɛtəʀ/
+		woord /ʋˈoːɾt/ - וואָרט /vˈɔʀt/
+		wuuf /ʋˈyːf/ - ווײַב /vˈaɪ̯b/
+		wulle /ʋˈœlə/ - וואָל /vˈɔl/
+		wal /ʋˈɑl/ - וואַל /vˈal/
+		wat /ʋˈɑt/ - וואָס /vˈɔs/
+		warm /ʋˈɑɾm/ - וואַרעם /vˈaʀɛm/
+		woater /ʋˈɒːtɾ̩/ - וואַסער /vˈasəʀ/
+		wit /ʋˈɛt/ - ווײַס /vˈaɪ̯s/
+		eetn /ˈeːtn̩/ - עסן /ˈɛsn̩/
+		ys /ˈis/ - אײַז /ˈaɪ̯z/
+		oofd /ˈoːft/ - הויפּט /hˈɔɪ̯pt/
+		oofd /ˈoːft/ - קאָפּ /kˈɔp/
+		oog /ˈoːh/ - הויך /hˈɔɪ̯χ/
+		oovn /ˈoːvn̩/ - אויוון /ˈɔɪ̯vn̩/
+		oovr /ˈoːvɾ̩/ - איבער /ˈibəʀ/
+		ooge /ˈoːɦə/ - אויג /ˈɔɪ̯ɡ/
+		oorn /ˈoːɾn/ - האָרן /hˈɔʀn/
+		ôor'n /ˈoːɾn̩/ - הערן /hˈɛʀn/
+		ôore /ˈoːɾə/ - אויער /ˈɔɪ̯əʀ/
+		ounger /ˈuŋɾ̩/ - הונגער /hˈʊŋɡəʀ/
+		uut /ˈyːt/ - אויס /ˈɔɪ̯s/
+		elve /ˈælvə/ - עלף /ˈɛlf/
+		ander /ˈɑndəɾ/ - אַנדער /ˈandəʀ/
+		and /ˈɑnt/ - האַנט /hˈant/
+		appel /ˈɑpəl/ - עפּל /ˈɛpəl/
+		asse /ˈɑsə/ - אַש /ˈaʃ/
+		oap /ˈɒːp/ - אַפֿע /ˈafə/
+		hoas /ˈɒːs/ - האָז /hˈɔz/
+		oarm /ˈɒːɾm/ - אָרעם /ˈɔʀəm/
+		eillig /ˈɛləç/ - הייליק /hˈɛɪ̯lɪk/
+		eirde /ˈɛːɾdə/ - ערד /ˈɛʀd/
+		in /ˈɪn/ - אין /ˈɪn/
+
+Final disqualified:
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 142
+	Disqualified: 144
+	Added: 0
+	Removed: 1
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+
+Iteration 2
+	Qualified: 142
+	Disqualified: 144
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		bloeme /blˈuə̯mə/ - בלום /blˈʊm/
+		bloed /blˈuə̯t/ - בלוט /blˈʊt/
+		bloar /blˈɒːɾ/ - בלאַט /blˈat/
+		brood /bɾˈoːt/ - ברויט /bʀˈɔɪ̯t/
+		broer /bɾˈuə̯ɾ/ - ברודער /bʀˈʊdəʀ/
+		brugge /bɾˈœɦə/ - בריק /bʀˈɪk/
+		bitn /bˈitn̩/ - בײַסן /bˈaɪ̯sn̩/
+		bie /bˈiə̯/ - בין /bˈɪn/
+		boom /bˈoːm/ - בױם /bˈɔɪ̯m/
+		boek /bˈuə̯k/ - בוך /bˈʊχ/
+		berg /bˈæɾh/ - באַרג /bˈaʀɡ/
+		beên /bˈɛːn/ - ביין /bˈɛɪ̯n/
+		droog /dɾˈoːh/ - טרוקן /tʁˈʊkn̩/
+		droom /dɾˈoːm/ - טרוים /tʀˈɔɪ̯m/
+		diep /dˈiə̯p/ - טיף /tˈɪf/
+		diere /dˈiə̯ɾə/ - טייַער /tˈaɪ̯əʀ/
+		dôod /dˈoːt/ - טויט /tˈɔɪ̯t/
+		duusd /dˈyːst/ - טויזנט /tˈɔɪ̯zn̩d/
+		duuts /dˈyːts/ - דײַטש /dˈaɪ̯tʃ/
+		dag /dˈɑh/ - טאָג /tˈɔɡ/
+		dochter /dˈɔhtɾ̩/ - טאָכטער /tˈɔχtəʀ/
+		joung /jˈuŋk/ - יונג /jˈʊŋɡ/
+		knie /knˈiə̯/ -  /knˈɪ/
+		koning /kˈoːnɪŋ/ - קעניג /kˈɛnɪɡ/
+		koud /kˈut/ - קאַלט /kˈalt/
+		koe /kˈuə̯/ - קו /kˈʊ/
+		kerke /kˈæɾkə/ - קירך /kˈɪʀχ/
+		koas /kˈɒːs/ - קעז /kˈɛz/
+		kop /kˈɔp/ - קאָפּ /kˈɔp/
+		kolf /kˈɔwf/ - קאַלב /kˈalb/
+		kind /kˈɪnt/ - קינד /kˈɪnd/
+		lever /lˈeːvɾ̩/ - לעבער /lˈɛbəʀ/
+		lucht /lˈœht/ - ליכט /ʎˈɪχt/
+		lachn /lˈɑhn̩/ - לאַכן /lˈaχn̩/
+		lam /lˈɑm/ - לאַם /lˈam/
+		land /lˈɑnt/ - לאַנד /lˈand/
+		lang /lˈɑŋ/ - לאַנג /lˈaŋɡ/
+		mound /mˈunt/ - מויל /mˈɔɪ̯l/
+		moedr /mˈuə̯dɾ̩/ - מוטער /mˈʊtəʀ/
+		melk /mˈæwk/ - מילך /mˈɪlχ/
+		macht /mˈɑht/ - מאַכט /mˈaχt/
+		mins /mˈɪns/ - מענטש /mˈɛnʧ/
+		neegn /nˈeːɦn̩/ - נײַן /nˈaɪ̯n/
+		neus /nˈøːs/ - נאָז /nˈɔz/
+		noame /nˈɒːmə/ - נאָמען /nˈɔmɛn/
+		noagel /nˈɒːɦəl/ - נאָגל /nˈɔɡl̩/
+		plicht /plˈɛht/ - פֿליכט /flˈɪχt/
+		slang /slˈɑŋ/ - שלאַנג /ʃlˈaŋɡ/
+		slaon /slˈɒːn/ - שלאָגן /ʃlˈɔɡŋ̩/
+		sloapn /slˈɒːpn̩/ - שלאָפֿן /ʃlˈɔfn̩/
+		snêeuw /snˈɛːw/ - שניי /ʃnˈɛɪ̯/
+		stoel /stˈuə̯l/ - שטול /ʃtˈʊl/
+		sterre /stˈæɾə/ - שטערן /ʃtˈɛʀən/
+		storm /stˈɔɾm/ - שטורעם /ʃtˈʊʀɛm/
+		stêen /stˈɛːn/ - שטיין /ʃtˈɛɪ̯n/
+		twientig /tʋˈiə̯ntəh/ - צוואַנציק /ʦvˈanʦɪk/
+		twêe /tʋˈɛː/ - צוויי /ʦvˈɛɪ̯/
+		tyd /tˈit/ - צײַט /ʦˈaɪ̯t/
+		tand /tˈɑnt/ - צאָן /ʦˈɔn/
+		vlees /vlˈeːs/ - פֿלייש /flˈɛɪ̯ʃ/
+		vliegn /vlˈiə̯ɦn̩/ - פֿליִען /flˈɪən/
+		vliege /vlˈiə̯ɦə/ - פֿליג /flˈɪɡ/
+		vriend /vɾˈiə̯nt/ - פֿרײַנד /fʀˈaɪ̯nd/
+		vriezn /vɾˈiə̯zn̩/ - פֿרירן /fʀˈɪʀn̩/
+		vrouwe /vɾˈuʋə/ - פֿרוי /fʀˈɔɪ̯/
+		vier /vˈiə̯ɾ/ - פֿײַער /fˈaɪ̯əʀ/
+		voeln /vˈuə̯ln̩/ - פילן /fˈɪln̩/
+		voet /vˈuə̯t/ - פֿוס /fˈʊs/
+		voetn /vˈuə̯tn̩/ - פֿיס‎ /fˈɪs/
+		veugel /vˈøːɦəl/ - פֿויגל /fˈɔɪ̯ɡl̩/
+		vul /vˈœl/ - פֿול /fˈʊl/
+		vuve /vˈœvə/ - פֿינף /fˈɪnf/
+		voader /vˈɒːdɾ̩/ - פֿאָטער /fˈɔtəʀ/
+		volgn /vˈɔlɦn̩/ - פֿאָלגן /fˈɔlɡn̩/
+		vos /vˈɔs/ - פֿוקס /fˈʊks/
+		vis /vˈɛs/ - פֿיש /fˈɪʃ/
+		vinger /vˈɪŋɾ̩/ - פֿינגער /fˈɪŋɡəʀ/
+		zwemmn /zʋˈæmn̩/ - שווימען /ʃvˈɪmən/
+		zwart /zʋˈɑɾt/ - שוואַרץ /ʃvˈaʀʦ/
+		zwoard /zʋˈɒːɾt/ - שווערד /ʃvˈɛʀd/
+		zeevn /zˈeːvn̩/ - זיבן /zˈɪbn̩/
+		zyde /zˈidə/ - זײַט /zˈaɪ̯t/
+		zout /zˈut/ - זאַלץ /zˈalʦ/
+		zoet /zˈuə̯t/ - זיס /zˈɪs/
+		zeune /zˈøːnə/ - זון /zˈʊn/
+		zustr /zˈœstɾ̩/ - שוועסטער /ʃvˈɛstəʁ/
+		zand /zˈɑnt/ - זאַמד /zˈamd/
+		zèsse /zˈɛsə/ - זעקס /zˈɛks/
+		zegn /zˈɛɦn̩/ - זאָגן /zˈɔɡn̩/
+		k /ək/ - איך /ˈɪχ/
+		grôot /ɦɾˈoːt/ - גרויס /ɡʀˈɔɪ̯s/
+		gras /ɦɾˈɑs/ - גראָז /ɡʀˈɔz/
+		geel /ɦˈeːl/ - געל /ɡˈɛl/
+		geevn /ɦˈeːvn̩/ - געבן /ɡˈɛbn̩/
+		goud /ɦˈut/ - גאָלד /ɡˈɔld/
+		gast /ɦˈɑst/ - גאַסט /ɡˈast/
+		god /ɦˈɔt/ - גאָט /ɡˈɔt/
+		ryk /ɾˈik/ - רײַך /ʀˈaɪ̯χ/
+		rook /ɾˈoːk/ - רויך /ʀˈɔɪ̯χ/
+		rôod /ɾˈoːt/ - רויט /ʀˈɔɪ̯t/
+		recht /ɾˈæht/ - רעכט /ʀˈɛχt/
+		ring /ɾˈɪŋk/ - רינג /ʀˈɪŋɡ/
+		scherp /ʃhˈæɾp/ - שאַרף /ʃˈaʀf/
+		schoap /ʃhˈɒːp/ - שאָף /ʃˈɔf/
+		weer /ʋˈeːɾ/ - וועטער /vˈɛtəʀ/
+		woord /ʋˈoːɾt/ - וואָרט /vˈɔʀt/
+		wuuf /ʋˈyːf/ - ווײַב /vˈaɪ̯b/
+		weg /ʋˈæh/ - וועג /vˈɛɡ/
+		wulle /ʋˈœlə/ - וואָל /vˈɔl/
+		wal /ʋˈɑl/ - וואַל /vˈal/
+		wat /ʋˈɑt/ - וואָס /vˈɔs/
+		warm /ʋˈɑɾm/ - וואַרעם /vˈaʀɛm/
+		woater /ʋˈɒːtɾ̩/ - וואַסער /vˈasəʀ/
+		wit /ʋˈɛt/ - ווײַס /vˈaɪ̯s/
+		wind /ʋˈɪnt/ - ווינט /vˈɪnt/
+		eetn /ˈeːtn̩/ - עסן /ˈɛsn̩/
+		oofd /ˈoːft/ - הויפּט /hˈɔɪ̯pt/
+		oofd /ˈoːft/ - קאָפּ /kˈɔp/
+		oog /ˈoːh/ - הויך /hˈɔɪ̯χ/
+		oovn /ˈoːvn̩/ - אויוון /ˈɔɪ̯vn̩/
+		oovr /ˈoːvɾ̩/ - איבער /ˈibəʀ/
+		ooge /ˈoːɦə/ - אויג /ˈɔɪ̯ɡ/
+		oorn /ˈoːɾn/ - האָרן /hˈɔʀn/
+		ôor'n /ˈoːɾn̩/ - הערן /hˈɛʀn/
+		ôore /ˈoːɾə/ - אויער /ˈɔɪ̯əʀ/
+		oend /ˈunt/ - הונט /hˈʊnt/
+		oud /ˈut/ - אַלט /ˈalt/
+		ounger /ˈuŋɾ̩/ - הונגער /hˈʊŋɡəʀ/
+		uus /ˈyːs/ - הויז /hˈɔɪ̯z/
+		uut /ˈyːt/ - אויס /ˈɔɪ̯s/
+		elve /ˈælvə/ - עלף /ˈɛlf/
+		erte /ˈæɾtə/ - האַרץ /hˈaʀʦ/
+		achte /ˈɑhtə/ - אַכט /ˈaχt/
+		and /ˈɑnt/ - האַנט /hˈant/
+		asse /ˈɑsə/ - אַש /ˈaʃ/
+		oap /ˈɒːp/ - אַפֿע /ˈafə/
+		hoas /ˈɒːs/ - האָז /hˈɔz/
+		oar /ˈɒːɾ/ - האָר /hˈɔʀ/
+		oarm /ˈɒːɾm/ - אָרעם /ˈɔʀəm/
+		eillig /ˈɛləç/ - הייליק /hˈɛɪ̯lɪk/
+		ei /ˈɛː/ - איי /ˈɛɪ̯/
+		eirde /ˈɛːɾdə/ - ערד /ˈɛʀd/
+
+Final disqualified:
+		wyder /ʋˈidəɾ/ - מיר /mˈɪʀ/
+
+
+-------------------
+
