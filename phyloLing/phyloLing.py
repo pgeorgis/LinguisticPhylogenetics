@@ -1352,16 +1352,17 @@ class Language:
         doculect_dir = os.path.join(self.family.doculects_dir, self.name)
         os.makedirs(doculect_dir, exist_ok=True)
         random.seed(seed)
+        vowels, consonants, tonemes = map(dict_tuplelist, [self.vowels, self.consonants, self.tonemes])
         with open(os.path.join(doculect_dir, 'phones.lst'), 'w') as f:    
-            for group, label in zip([self.vowels,
-                                    self.consonants,
-                                    self.tonemes],
+            for group, label in zip([vowels,
+                                     consonants,
+                                     tonemes],
                                     ['VOWELS',
                                     'CONSONANTS',
                                     'SUPRASEGMENTALS']):
                 if len(group) > 0:
                     f.write(f'{label}\n')
-                    for phone, prob in dict_tuplelist(group):
+                    for phone, prob in group:
                         prob = round(self.phonemes[phone], 3)
                         f.write(f'/{phone}/ ({prob})\n')
                         examples = self.lookup(phone, return_list=True)
@@ -1370,7 +1371,12 @@ class Language:
                             f.write(f'\t<{orth}> /{ipa}/ "{concept}"\n')
                         f.write('\n')    
                     f.write('\n\n')
-
+        for file, group in zip(['vowels.lst', 'consonants.lst', 'tonemes.lst'],
+                               [vowels, consonants, tonemes]):
+            if len(group) > 0:
+                with open(os.path.join(doculect_dir, file), 'w') as f:
+                    for phone, prob in group:
+                        f.write(f'{phone}\n')
 
     def list_ngrams(self, ngram_size, phon_env=False):
         """Returns a dictionary of ngrams of a particular size, with their counts"""
