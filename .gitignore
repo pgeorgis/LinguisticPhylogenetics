@@ -5,6 +5,9 @@ datasets/*/logs
 datasets/*/dist_matrices
 datasets/*/plots
 datasets/*/trees
+datasets/*/phone_corr/pmi/*/*/PMI_iterations.log
+datasets/*/phone_corr/pmi/*/*/phonPMI.tsv
+datasets/*/phone_corr/surprisal/
 datasets/Arabic
 datasets/Celtic
 datasets/Japonic
