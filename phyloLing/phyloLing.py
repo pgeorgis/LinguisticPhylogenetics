@@ -1354,8 +1354,8 @@ class Language:
         random.seed(seed)
         with open(os.path.join(doculect_dir, 'phones.lst'), 'w') as f:    
             for group, label in zip([self.vowels,
-                                    self.consonants,
-                                    self.tonemes],
+                                     self.consonants,
+                                     self.tonemes],
                                     ['VOWELS',
                                     'CONSONANTS',
                                     'SUPRASEGMENTALS']):
@@ -1370,7 +1370,12 @@ class Language:
                             f.write(f'\t<{orth}> /{ipa}/ "{concept}"\n')
                         f.write('\n')    
                     f.write('\n\n')
-
+        for file, phone_list in zip(['vowels.lst', 'consonants.lst', 'tonemes.lst'],
+                               [self.vowels, self.consonants, self.tonemes]):
+            if len(phone_list) > 0:
+                phone_list = '\n'.join(sorted(list(phone_list.keys())))
+                with open(os.path.join(doculect_dir, file), 'w') as f:
+                    f.write(phone_list)
 
     def list_ngrams(self, ngram_size, phon_env=False):
         """Returns a dictionary of ngrams of a particular size, with their counts"""
