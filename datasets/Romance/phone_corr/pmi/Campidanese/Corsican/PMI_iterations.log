@@ -1,0 +1,1366 @@
+Same meaning pairs: 257
+****SAMPLE 1****
+Iteration 1
+	Qualified: 196
+	Disqualified: 216
+	Added: 0
+	Removed: 10
+		dì /dˈi/ - ɡhjornu /ɟˈɔrnu/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+		arríu /arˈiu/ - fiume /fjˈume/
+		nia /nˈia/ - neve /nˈɛve/
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		frúmini /frˈumini/ - riu /rˈiu/
+		ite /ˈite/ - chè /kˈɛ/
+		narrere /nˈarrere/ - dì /dˈi/
+
+Iteration 2
+	Qualified: 194
+	Disqualified: 218
+	Added: 1
+		nia /nˈia/ - neve /nˈɛve/
+	Removed: 3
+		ventri /bˈentri/ - panse /pˈanse/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+
+Iteration 3
+	Qualified: 196
+	Disqualified: 216
+	Added: 2
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+	Removed: 0
+
+Iteration 4
+	Qualified: 197
+	Disqualified: 215
+	Added: 1
+		ventri /bˈentri/ - panse /pˈanse/
+	Removed: 0
+
+Iteration 5
+	Qualified: 199
+	Disqualified: 213
+	Added: 2
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+	Removed: 0
+
+Iteration 6
+	Qualified: 199
+	Disqualified: 213
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		aneddu /anˈeɖɖu/ - anellu /anˈɛllu/
+		arɡidda /arʒˈiɖɖa/ - arzilla /arʣˈilla/
+		aranɡia /arˈanʤa/ - araɡnu /arˈaɲu/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+		arríu /arˈiu/ - riu /rˈiu/
+		ascurtari /askurtˈari/ - ascultà /askultˈa/
+		atóɡnu /atˈoɲɲu/ - autunnu /awtˈunnu/
+		aɡuali /aɡwˈali/ - uɡuale /uɡwˈale/
+		aɡiudare /aʤuðˈare/ - aiutà /ajutˈa/
+		belari /belˈari/ - ɡhjalà /ɟalˈa/
+		benuju /benˈuju/ - ɡhjinochju /ɟinˈɔcu/
+		biteddu /bitˈeɖɖu/ - vitello /vitˈellu/
+		bixinu /biʒˈinu/ - vicinu /viʧˈinu/
+		bolai /bolˈai/ - vulà /vulˈa/
+		bocíere /boʧˈiere/ - uccide /uʧʧˈide/
+		baɡnu /bˈaɲɲu/ - baɡnu /bˈaɲu/
+		bàsciu /bˈaʃʃu/ - bassu /bˈassu/
+		beju /bˈeju/ - vechju /vˈecu/
+		bèni /bˈeni/ - bè /bˈɛ/
+		bènniri /bˈenniri/ - vene /vˈɛne/
+		ventri /bˈentri/ - panse /pˈanse/
+		ventri /bˈentri/ - ventre /vˈɛntre/
+		bentu /bˈentu/ - ventu /vˈɛntu/
+		binti /bˈinti/ - vinti /vˈinti/
+		binu /bˈinu/ - vinu /vˈinu/
+		birdi /bˈirdi/ - verde /vˈerde/
+		bida /bˈiða/ - vita /vˈita/
+		bídere /bˈiðerĕ/ - videre /vidˈɛre/
+		bidda /bˈiɖɖa/ - villa /vˈilla/
+		boi /bˈoj/ - boie /bˈɔje/
+		bonas /bˈonază/ - bone /bˈɔne/
+		bonos /bˈonozŏ/ - boni /bˈɔni/
+		bonu /bˈonu/ - bonu /bˈɔnu/
+		boxi /bˈoʒi/ - voce /vˈɔʧe/
+		buca /bˈuka/ - bocca /bˈɔkka/
+		dormiri /dormˈiri/ - dorme /dˈɔrme/
+		draɡoni /draɣˈoni/ - dracone /drakˈɔne/
+		dai /dˈaj/ - dà /dˈa/
+		dènti /dˈenti/ - dente /dˈɛnte/
+		déu /dˈeu/ - diu /dˈiu/
+		deu /dˈeu/ - eiu /ˈeju/
+		dì /dˈi/ - dì /dˈi/
+		didu /dˈiðu/ - ditu /dˈitu/
+		dòna /dˈona/ - donna /dˈɔnna/
+		farsu /farsu/ - falzu /fˈalʦu/
+		farina /farˈina/ - farina /farˈina/
+		framma /frˈamma/ - fiamma /fjˈamma/
+		fradi /frˈaði/ - fratellu /fratˈellu/
+		fridu /frˈiðu/ - freddu /frˈɛddu/
+		frori /frˈori/ - fiore /fjˈɔre/
+		frúmini /frˈumini/ - fiume /fjˈume/
+		frútu /frˈutu/ - fruttu /frˈuttu/
+		fàere /fˈaere/ - fà /fˈa/
+		fàlsu /fˈalsu/ - falzu /fˈalʦu/
+		fada /fˈaða/ - fata /fˈata/
+		femina /fˈemina/ - femina /fˈɛmina/
+		ferru /fˈerru/ - ferru /fˈɛrru/
+		festa /fˈesta/ - festa /fˈesta/
+		fini /fˈini/ - fine /fˈine/
+		fiza /fˈiʣa/ - fiɡlia /fˈiʎa/
+		fizu /fˈiʣu/ - fiɡliu /fˈiʎu/
+		forti /fˈorti/ - forte /fˈɔrte/
+		fortza /fˈorʦa/ - forza /fˈɔrʦa/
+		foɡu /fˈoɣu/ - focu /fˈɔku/
+		foza /fˈoʣa/ - foɡlia /fˈɔʎa/
+		imbíliɡu /imbˈiliɣu/ - billicu /bˈilliku/
+		iscrivere /iskrˈivere/ - scrive /skrˈive/
+		ɪspaɡna /ispˈaɲɲa/ - Spaɡna /spˈaɲa/
+		ispiɡa /ispˈiɣa/ - spica /spˈika/
+		istadi /istˈaði/ - estate /estˈate/
+		istàdu /istˈaðu/ - statu /ʃtˈatu/
+		ierru /jˈerru/ - invernu /imvˈɛrnu/
+		cassài /kassˈai/ - caccià /kaʧʧˈa/
+		casteddu /kastˈeɖɖu/ - castellu /kastˈellu/
+		cadena /kaðˈena/ - catena /katˈɛna/
+		cabaddu /kaβˈaɖɖu/ - cavallu /kavˈallu/
+		colori /kolˈori/ - culore /kulˈɔre/
+		craba /krˈaβa/ - capra /kˈapra/
+		crèiri /krˈeiri/ - crede /krˈɛde/
+		cruxi /krˈuʒi/ - croce /krˈɔʧe/
+		caldu /kˈaldu/ - caldu /kˈaldu/
+		cani /kˈani/ - cane /kˈane/
+		carri /kˈarri/ - carne /kˈarne/
+		caru /kˈaru/ - caru /kˈaru/
+		chinisa /kˈinisa/ - cenera /ʧˈɛnere/
+		coa /kˈoa/ - coda /kˈɔda/
+		colpu /kˈolpu/ - colpu /kˈɔlpu/
+		colta /kˈolta/ - costa /kˈɔsta/
+		corpus /kˈorpuzŭ/ - corpu /kˈɔrpu/
+		coru /kˈoru/ - core /kˈɔre/
+		cossa /kˈosa/ - coscia /kˈɔʃa/
+		coddu /kˈoɖɖu/ - collu /kˈɔllu/
+		culu /kˈulu/ - culu /kˈulu/
+		curtzu /kˈurʦu/ - cortu /kˈortu/
+		leài /leˈaj/ - levà /levˈa/
+		lana /lˈana/ - lana /lˈana/
+		laɡu /lˈaɣu/ - laɡu /lˈaɡu/
+		lèzere /lˈezere/ - leɡhje /lˈeɟe/
+		leɡe /lˈeʤe/ - leɡhje /lˈɛɟe/
+		linna /lˈinna/ - leɡnu /lˈɛɲu/
+		lítera /lˈitera/ - lettera /lˈettera/
+		linɡua /lˈiŋɡwa/ - linɡua /lˈiŋɡwa/
+		lonɡu /lˈoŋɡu/ - lonɡu /lˈoŋɡu/
+		loɡu /lˈoɣu/ - locu /lˈɔku/
+		luna /lˈuna/ - luna /lˈuna/
+		luɡhe /lˈuɣe/ - lume /lˈume/
+		luɡhe /lˈuɣe/ - luce /lˈuʧe/
+		lubu /lˈuβu/ - lupu /lˈupu/
+		manu /mˈanu/ - manu /mˈanu/
+		mari /mˈari/ - mare /mˈare/
+		mésu /mˈezu/ - mezu /mˈeʣu/
+		mezus /mˈeʣuzŭ/ - meɡliu /mˈeʎu/
+		milli /mˈilli/ - mille /mˈille/
+		morriri /mˈoriri/ - more /mˈɔre/
+		morti /mˈorti/ - morte /mˈɔrte/
+		mòssere /mˈossere/ - morde /mˈɔrde/
+		musca /mˈuska/ - mosca /mˈɔska/
+		nadài /naðˈaj/ - nutà /nutˈa/
+		nàsu /nˈazu/ - nasu /nˈazu/
+		nasciri /nˈaʃʃiri/ - nasce /nˈaʃʃe/
+		nébida /nˈeβiða/ - nebbia /nˈebbja/
+		ni /nˈi/ - neve /nˈɛve/
+		nia /nˈia/ - neve /nˈɛve/
+		niɡru /nˈiɡru/ - nero /nˈɛro/
+		noi /nˈoj/ - nove /nˈɔve/
+		nostru /nˈostru/ - nostro /nˈostro/
+		noti /nˈoti/ - notte /nˈɔtte/
+		nobu /nˈoβu/ - novu /nˈɔvu/
+		nue /nˈue/ - nube /nˈube/
+		nuve /nˈuβe/ - nube /nˈube/
+		orija /orˈija/ - orechja /orˈɛca/
+		paraɡula /parˈaɣula/ - parolla /parˈolla/
+		peraula /perˈawla/ - parolla /parˈolla/
+		prànɡiri /prˈanʤiri/ - pienɡhje /pjˈɛŋɟe/
+		prenu /prˈenu/ - pienu /pjˈɛnu/
+		proja /prˈoja/ - pioɡia /pjˈoʤa/
+		pani /pˈani/ - pane /pˈane/
+		paɡu /pˈaɣu/ - pocu /pˈoku/
+		paxi /pˈaʒi/ - pace /pˈaʧe/
+		pei /pˈei/ - pede /pˈede/
+		pétus /pˈetuzŭ/ - pettu /pˈettu/
+		pedra /pˈeðra/ - petra /pˈetra/
+		pedhi /pˈeɖɖi/ - pelle /pˈelle/
+		pinna /pˈinna/ - piuma /pjˈuma/
+		pisci /pˈiʃʃi/ - pesciu /pˈɛʃʃu/
+		ponti /pˈonti/ - ponte /pˈonte/
+		porcu /pˈorku/ - porcu /pˈɔrku/
+		porri /pˈorri/ - putere /putˈɛre/
+		rena /rˈena/ - rena /rˈɛna/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		scroxu /skrˈoʒu/ - scorza /skˈɔrʦa/
+		spina /spˈina/ - spina /spˈina/
+		sali /sˈali/ - sale /sˈale/
+		santu /sˈantu/ - santu /sˈantu/
+		sanu /sˈanu/ - sanu /sˈanu/
+		sanɡuini /sˈaŋɡwini/ - sanɡue /sˈaŋɡwe/
+		sera /sˈera/ - sera /sˈɛra/
+		sete /sˈete/ - sette /sˈette/
+		ses /sˈezĕ/ - sei /sˈej/
+		seda /sˈeða/ - seta /sˈɛta/
+		soli /sˈoli/ - sole /sˈole/
+		subra /sˈuβra/ - sopra /sˈopra/
+		tràbu /trˈaβu/ - toru /tˈɔru/
+		témpus /tˈempuzŭ/ - tempu /tˈɛmpu/
+		terra /tˈerra/ - terra /tˈɛrra/
+		tottu /tˈottu/ - tuttu /tˈuttu/
+		tundu /tˈundu/ - tondu /tˈondu/
+		ɡrandhe /ɡrˈanɖe/ - ɡrande /ɡrˈande/
+		ɡatu /ɡˈatu/ - ɡhjattu /ɟˈattu/
+		ɡatu /ɡˈatu/ - ɡattu /ɡˈattu/
+		ɡuta /ɡˈuta/ - ɡoccia /ɡˈɔʧʧa/
+		ciamari /ʧamˈari/ - chjamà /camˈa/
+		ceréxia /ʧerˈeʒja/ - chjarasɡia /carˈaʒa/
+		citadi /ʧitˈadi/ - cità /ʧitˈa/
+		ciai /ʧˈaj/ - chjave /cˈave/
+		celu /ʧˈelu/ - celu /ʧˈelu/
+		centu /ʧˈentu/ - centu /ʧˈɛntu/
+		cera /ʧˈera/ - cera /ʧˈɛra/
+		cincu /ʧˈiŋku/ - cinque /ʧˈiŋkwe/
+		àcua /ˈakwa/ - acqua /ˈakkwa/
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		ànɡelu /ˈanʤelu/ - anɡhjulu /ˈaŋɟulu/
+		arbori /ˈarbori/ - arburu /ˈarburu/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+		àteru /ˈateru/ - altru /ˈaltru/
+		erba /ˈerba/ - erba /ˈɛrba/
+		issa /ˈissa/ - ella /ˈɛlla/
+		issu /ˈissu/ - ellu /ˈɛllu/
+		isula /ˈizula/ - isula /ˈizula/
+		ojos /ˈojozŏ/ - ochji /ˈoci/
+		oju /ˈoju/ - ochju /ˈocu/
+		òmini /ˈomini/ - omu /ˈomu/
+		òmini /ˈomini/ - omu /ˈɔmu/
+		oru /ˈoru/ - oro /ˈoru/
+		otu /ˈotu/ - ottu /ˈottu/
+		òbera /ˈoβera/ - opera /ˈɔpera/
+		obu /ˈoβu/ - ovu /ˈovu/
+		ursu /ˈursu/ - orsu /ˈɔrsu/
+		unɡa /ˈuŋɡa/ - unɡhja /ˈuŋɟa/
+
+Final disqualified:
+		arríu /arˈiu/ - fiume /fjˈume/
+		dì /dˈi/ - ɡhjornu /ɟˈɔrnu/
+		frúmini /frˈumini/ - riu /rˈiu/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		narrere /nˈarrere/ - dì /dˈi/
+		ite /ˈite/ - chè /kˈɛ/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 192
+	Disqualified: 220
+	Added: 0
+	Removed: 14
+		dì /dˈi/ - ɡhjornu /ɟˈɔrnu/
+		mòssere /mˈossere/ - mursicà /mursikˈa/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		babbu /bˈabbu/ - patre /pˈatre/
+		rena /rˈena/ - sabbia /sˈabbja/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+		arríu /arˈiu/ - fiume /fjˈume/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		nia /nˈia/ - neve /nˈɛve/
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		bosatrus /bozˈatruzŭ/ - voi /vˈɔj/
+		frúmini /frˈumini/ - riu /rˈiu/
+		narrere /nˈarrere/ - dì /dˈi/
+
+Iteration 2
+	Qualified: 192
+	Disqualified: 220
+	Added: 1
+		nia /nˈia/ - neve /nˈɛve/
+	Removed: 1
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+
+Iteration 3
+	Qualified: 194
+	Disqualified: 218
+	Added: 2
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+	Removed: 0
+
+Iteration 4
+	Qualified: 195
+	Disqualified: 217
+	Added: 1
+		mòssere /mˈossere/ - mursicà /mursikˈa/
+	Removed: 0
+
+Iteration 5
+	Qualified: 195
+	Disqualified: 217
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		aneddu /anˈeɖɖu/ - anellu /anˈɛllu/
+		arɡidda /arʒˈiɖɖa/ - arzilla /arʣˈilla/
+		aranɡia /arˈanʤa/ - araɡnu /arˈaɲu/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+		arríu /arˈiu/ - riu /rˈiu/
+		ascurtari /askurtˈari/ - ascultà /askultˈa/
+		atóɡnu /atˈoɲɲu/ - autunnu /awtˈunnu/
+		aɡuali /aɡwˈali/ - uɡuale /uɡwˈale/
+		aɡiudare /aʤuðˈare/ - aiutà /ajutˈa/
+		belari /belˈari/ - ɡhjalà /ɟalˈa/
+		benuju /benˈuju/ - ɡhjinochju /ɟinˈɔcu/
+		biteddu /bitˈeɖɖu/ - vitello /vitˈellu/
+		bixinu /biʒˈinu/ - vicinu /viʧˈinu/
+		bolai /bolˈai/ - vulà /vulˈa/
+		bocíere /boʧˈiere/ - uccide /uʧʧˈide/
+		baca /bˈaka/ - vacca /vˈakka/
+		baɡnu /bˈaɲɲu/ - baɡnu /bˈaɲu/
+		bàsciu /bˈaʃʃu/ - bassu /bˈassu/
+		bèni /bˈeni/ - bè /bˈɛ/
+		bentu /bˈentu/ - ventu /vˈɛntu/
+		bermi /bˈermi/ - vermu /vˈɛrmu/
+		birdi /bˈirdi/ - verde /vˈerde/
+		bida /bˈiða/ - vita /vˈita/
+		bídere /bˈiðerĕ/ - videre /vidˈɛre/
+		bidda /bˈiɖɖa/ - villa /vˈilla/
+		boi /bˈoj/ - boie /bˈɔje/
+		bona /bˈona/ - bona /bˈɔna/
+		bonu /bˈonu/ - bonu /bˈɔnu/
+		boxi /bˈoʒi/ - voce /vˈoʧe/
+		boxi /bˈoʒi/ - voce /vˈɔʧe/
+		buca /bˈuka/ - bocca /bˈɔkka/
+		dormiri /dormˈiri/ - dorme /dˈɔrme/
+		draɡoni /draɣˈoni/ - dracone /drakˈɔne/
+		dai /dˈaj/ - dà /dˈa/
+		dènti /dˈenti/ - dente /dˈɛnte/
+		déu /dˈeu/ - diu /dˈiu/
+		deu /dˈeu/ - eiu /ˈeju/
+		dexi /dˈeʒi/ - dece /dˈeʧe/
+		dì /dˈi/ - dì /dˈi/
+		didu /dˈiðu/ - ditu /dˈitu/
+		dòna /dˈona/ - donna /dˈɔnna/
+		duas /dˈuază/ - dui /dˈuj/
+		farina /farˈina/ - farina /farˈina/
+		framma /frˈamma/ - fiamma /fjˈamma/
+		fradi /frˈaði/ - fratellu /fratˈellu/
+		fridu /frˈiðu/ - freddu /frˈɛddu/
+		frori /frˈori/ - fiore /fjˈɔre/
+		frútu /frˈutu/ - fruttu /frˈuttu/
+		fàere /fˈaere/ - fà /fˈa/
+		fàlsu /fˈalsu/ - falzu /fˈalʦu/
+		fàmini /fˈamini/ - fame /fˈame/
+		femina /fˈemina/ - femina /fˈɛmina/
+		ferru /fˈerru/ - ferru /fˈɛrru/
+		festa /fˈesta/ - festa /fˈesta/
+		filu /fˈilu/ - filu /fˈilu/
+		fíɡadu /fˈiɣaðu/ - fecatu /fˈɛkatu/
+		fizu /fˈiʣu/ - fiɡliu /fˈiʎu/
+		fortza /fˈorʦa/ - forza /fˈɔrʦa/
+		foɡu /fˈoɣu/ - focu /fˈɔku/
+		foza /fˈoʣa/ - foɡlia /fˈɔʎa/
+		fumu /fˈumu/ - fume /fˈume/
+		imbíliɡu /imbˈiliɣu/ - billicu /bˈilliku/
+		ispàda /ispˈaða/ - spada /spˈada/
+		ispiɡa /ispˈiɣa/ - spica /spˈika/
+		istadi /istˈaði/ - estate /estˈate/
+		istàdu /istˈaðu/ - statu /ʃtˈatu/
+		isteddu /istˈeɖɖu/ - stella /ʃtˈella/
+		ierru /jˈerru/ - invernu /imvˈɛrnu/
+		joɡu /jˈoɣu/ - ɡhjocu /ɟˈoku/
+		cambiari /kambjˈari/ - cambià /kambjˈa/
+		cassài /kassˈai/ - caccià /kaʧʧˈa/
+		casteddu /kastˈeɖɖu/ - castellu /kastˈellu/
+		cadena /kaðˈena/ - catena /katˈɛna/
+		colori /kolˈori/ - culore /kulˈɔre/
+		cruxi /krˈuʒi/ - croce /krˈɔʧe/
+		cuatru /kwˈatru/ - quattru /kwˈattru/
+		caldu /kˈaldu/ - caldu /kˈaldu/
+		cani /kˈani/ - cane /kˈane/
+		carri /kˈarri/ - carne /kˈarne/
+		chinisa /kˈinisa/ - cenera /ʧˈɛnere/
+		coa /kˈoa/ - coda /kˈɔda/
+		colta /kˈolta/ - costa /kˈɔsta/
+		coru /kˈoru/ - core /kˈɔre/
+		cossa /kˈosa/ - coscia /kˈɔʃa/
+		coddu /kˈoɖɖu/ - collu /kˈɔllu/
+		curtzu /kˈurʦu/ - cortu /kˈortu/
+		leài /leˈaj/ - levà /levˈa/
+		leòni /leˈoni/ - lione /liˈone/
+		làcrima /lˈakrima/ - lacrima /lˈakrima/
+		lana /lˈana/ - lana /lˈana/
+		lati /lˈati/ - latte /lˈatte/
+		laɡu /lˈaɣu/ - laɡu /lˈaɡu/
+		lèzere /lˈezere/ - leɡhje /lˈeɟe/
+		leɡe /lˈeʤe/ - leɡhje /lˈɛɟe/
+		linna /lˈinna/ - leɡnu /lˈɛɲu/
+		lítera /lˈitera/ - lettera /lˈettera/
+		linɡua /lˈiŋɡwa/ - linɡua /lˈiŋɡwa/
+		lonɡu /lˈoŋɡu/ - lonɡu /lˈoŋɡu/
+		loɡu /lˈoɣu/ - locu /lˈɔku/
+		luna /lˈuna/ - luna /lˈuna/
+		luɡhe /lˈuɣe/ - lume /lˈume/
+		luɡhe /lˈuɣe/ - luce /lˈuʧe/
+		lubu /lˈuβu/ - lupu /lˈupu/
+		manu /mˈanu/ - manu /mˈanu/
+		mari /mˈari/ - mare /mˈare/
+		me /mˈe/ - mè /mˈɛ/
+		mezus /mˈeʣuzŭ/ - meɡliu /mˈeʎu/
+		milli /mˈilli/ - mille /mˈille/
+		morriri /mˈoriri/ - more /mˈɔre/
+		morti /mˈorti/ - morte /mˈɔrte/
+		mòssere /mˈossere/ - mursicà /mursikˈa/
+		mòssere /mˈossere/ - morde /mˈɔrde/
+		musca /mˈuska/ - mosca /mˈɔska/
+		nadài /naðˈaj/ - nutà /nutˈa/
+		nàsu /nˈazu/ - nasu /nˈazu/
+		nasciri /nˈaʃʃiri/ - nasce /nˈaʃʃe/
+		nébida /nˈeβiða/ - nebbia /nˈebbja/
+		ni /nˈi/ - neve /nˈɛve/
+		nia /nˈia/ - neve /nˈɛve/
+		niɡru /nˈiɡru/ - nero /nˈɛro/
+		noi /nˈoj/ - nove /nˈɔve/
+		nomene /nˈomene/ - nome /nˈɔme/
+		nos /nˈos/ - noi /nˈɔj/
+		nostru /nˈostru/ - nostro /nˈostro/
+		noti /nˈoti/ - notte /nˈɔtte/
+		nobu /nˈoβu/ - novu /nˈɔvu/
+		nue /nˈue/ - nube /nˈube/
+		nue /nˈue/ - nuvulu /nˈuvulu/
+		nuɡi /nˈuʒi/ - noce /nˈɔʧe/
+		nuve /nˈuβe/ - nube /nˈube/
+		nuve /nˈuβe/ - nuvulu /nˈuvulu/
+		paraɡula /parˈaɣula/ - parolla /parˈolla/
+		peraula /perˈawla/ - parolla /parˈolla/
+		prioɡu /priˈoɣu/ - pidochju /pidˈɔcu/
+		prànɡiri /prˈanʤiri/ - pienɡhje /pjˈɛŋɟe/
+		prenu /prˈenu/ - pienu /pjˈɛnu/
+		proja /prˈoja/ - pioɡia /pjˈoʤa/
+		paɡu /pˈaɣu/ - pocu /pˈoku/
+		paxi /pˈaʒi/ - pace /pˈaʧe/
+		pei /pˈei/ - pede /pˈede/
+		pétus /pˈetuzŭ/ - pettu /pˈettu/
+		pedra /pˈeðra/ - petra /pˈetra/
+		pedhi /pˈeɖɖi/ - pelle /pˈelle/
+		pilu /pˈilu/ - capellu /kapˈellu/
+		pinna /pˈinna/ - piuma /pjˈuma/
+		pisci /pˈiʃʃi/ - pesciu /pˈɛʃʃu/
+		ponti /pˈonti/ - ponte /pˈonte/
+		porcu /pˈorku/ - porcu /pˈɔrku/
+		porri /pˈorri/ - putere /putˈɛre/
+		reina /reˈina/ - reɡina /reʤˈina/
+		romanu /romˈanu/ - rumanu /rumˈanu/
+		rena /rˈena/ - rena /rˈɛna/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		scroxu /skrˈoʒu/ - scorza /skˈɔrʦa/
+		spina /spˈina/ - spina /spˈina/
+		sana /sˈana/ - sana /sˈana/
+		santu /sˈantu/ - santu /sˈantu/
+		sanɡuini /sˈaŋɡwini/ - sanɡue /sˈaŋɡwe/
+		sera /sˈera/ - sera /sˈɛra/
+		sete /sˈete/ - sette /sˈette/
+		ses /sˈezĕ/ - sei /sˈej/
+		seda /sˈeða/ - seta /sˈɛta/
+		sica /sˈika/ - secca /sˈɛkka/
+		sicu /sˈiku/ - seccu /sˈɛkku/
+		soli /sˈoli/ - sole /sˈole/
+		témpus /tˈempuzŭ/ - tempu /tˈɛmpu/
+		terra /tˈerra/ - terra /tˈɛrra/
+		tottu /tˈottu/ - tuttu /tˈuttu/
+		tui /tˈui/ - tù /tˈu/
+		tundu /tˈundu/ - tondu /tˈondu/
+		ɡrandhe /ɡrˈanɖe/ - ɡrande /ɡrˈande/
+		ɡatu /ɡˈatu/ - ɡhjattu /ɟˈattu/
+		ɡatu /ɡˈatu/ - ɡattu /ɡˈattu/
+		ɡuta /ɡˈuta/ - ɡoccia /ɡˈɔʧʧa/
+		ciamari /ʧamˈari/ - chjamà /camˈa/
+		citadi /ʧitˈadi/ - cità /ʧitˈa/
+		celu /ʧˈelu/ - celu /ʧˈelu/
+		centu /ʧˈentu/ - centu /ʧˈɛntu/
+		cera /ʧˈera/ - cera /ʧˈɛra/
+		arbori /ˈarbori/ - arburu /ˈarburu/
+		àteru /ˈateru/ - altru /ˈaltru/
+		azu /ˈaʣu/ - aɡliu /ˈaʎu/
+		erba /ˈerba/ - erba /ˈɛrba/
+		issa /ˈissa/ - ella /ˈɛlla/
+		issu /ˈissu/ - ellu /ˈɛllu/
+		isula /ˈizula/ - isula /ˈizula/
+		oju /ˈoju/ - ochju /ˈocu/
+		òmini /ˈomini/ - omu /ˈomu/
+		oru /ˈoru/ - oro /ˈoru/
+		ossu /ˈossu/ - ossu /ˈɔssu/
+		otu /ˈotu/ - ottu /ˈottu/
+		òbera /ˈoβera/ - opera /ˈɔpera/
+		obu /ˈoβu/ - ovu /ˈovu/
+		ursu /ˈursu/ - orsu /ˈɔrsu/
+		unɡa /ˈuŋɡa/ - unɡhja /ˈuŋɟa/
+
+Final disqualified:
+		arríu /arˈiu/ - fiume /fjˈume/
+		bosatrus /bozˈatruzŭ/ - voi /vˈɔj/
+		babbu /bˈabbu/ - patre /pˈatre/
+		dì /dˈi/ - ɡhjornu /ɟˈɔrnu/
+		frúmini /frˈumini/ - riu /rˈiu/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		narrere /nˈarrere/ - dì /dˈi/
+		rena /rˈena/ - sabbia /sˈabbja/
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 197
+	Disqualified: 215
+	Added: 0
+	Removed: 9
+		mòssere /mˈossere/ - mursicà /mursikˈa/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		nue /nˈue/ - nuvulu /nˈuvulu/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		nia /nˈia/ - neve /nˈɛve/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		frúmini /frˈumini/ - riu /rˈiu/
+		ite /ˈite/ - chè /kˈɛ/
+		narrere /nˈarrere/ - dì /dˈi/
+
+Iteration 2
+	Qualified: 198
+	Disqualified: 214
+	Added: 2
+		nue /nˈue/ - nuvulu /nˈuvulu/
+		nia /nˈia/ - neve /nˈɛve/
+	Removed: 1
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+
+Iteration 3
+	Qualified: 200
+	Disqualified: 212
+	Added: 3
+		mòssere /mˈossere/ - mursicà /mursikˈa/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+	Removed: 1
+		nia /nˈia/ - neve /nˈɛve/
+
+Iteration 4
+	Qualified: 200
+	Disqualified: 212
+	Added: 1
+		nia /nˈia/ - neve /nˈɛve/
+	Removed: 1
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+
+Iteration 5
+	Qualified: 200
+	Disqualified: 212
+	Added: 1
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+	Removed: 1
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+
+Iteration 6
+	Qualified: 202
+	Disqualified: 210
+	Added: 2
+		frúmini /frˈumini/ - riu /rˈiu/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+	Removed: 0
+
+Iteration 7
+	Qualified: 202
+	Disqualified: 210
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		arɡidda /arʒˈiɖɖa/ - arzilla /arʣˈilla/
+		aranɡia /arˈanʤa/ - araɡnu /arˈaɲu/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+		arríu /arˈiu/ - riu /rˈiu/
+		ascurtari /askurtˈari/ - ascultà /askultˈa/
+		atóɡnu /atˈoɲɲu/ - autunnu /awtˈunnu/
+		aɡuali /aɡwˈali/ - uɡuale /uɡwˈale/
+		aɡiudare /aʤuðˈare/ - aiutà /ajutˈa/
+		belari /belˈari/ - ɡhjalà /ɟalˈa/
+		benuju /benˈuju/ - ɡhjinochju /ɟinˈɔcu/
+		bixinu /biʒˈinu/ - vicinu /viʧˈinu/
+		bocíere /boʧˈiere/ - uccide /uʧʧˈide/
+		breɡúnɡia /breɣˈunʤa/ - verɡoɡna /verɡˈɔɲa/
+		baca /bˈaka/ - vacca /vˈakka/
+		baɡnu /bˈaɲɲu/ - baɡnu /bˈaɲu/
+		beju /bˈeju/ - vechju /vˈecu/
+		bèni /bˈeni/ - bè /bˈɛ/
+		bènniri /bˈenniri/ - vene /vˈɛne/
+		ventri /bˈentri/ - ventre /vˈɛntre/
+		bentu /bˈentu/ - ventu /vˈɛntu/
+		binu /bˈinu/ - vinu /vˈinu/
+		birdi /bˈirdi/ - verde /vˈerde/
+		bida /bˈiða/ - vita /vˈita/
+		bídere /bˈiðerĕ/ - videre /vidˈɛre/
+		bidda /bˈiɖɖa/ - villa /vˈilla/
+		boi /bˈoj/ - boie /bˈɔje/
+		bonos /bˈonozŏ/ - boni /bˈɔni/
+		bonu /bˈonu/ - bonu /bˈɔnu/
+		boxi /bˈoʒi/ - voce /vˈoʧe/
+		boxi /bˈoʒi/ - voce /vˈɔʧe/
+		buca /bˈuka/ - bocca /bˈɔkka/
+		dormiri /dormˈiri/ - dorme /dˈɔrme/
+		dai /dˈaj/ - dà /dˈa/
+		dènti /dˈenti/ - dente /dˈɛnte/
+		déu /dˈeu/ - diu /dˈiu/
+		deu /dˈeu/ - eiu /ˈeju/
+		dexi /dˈeʒi/ - dece /dˈeʧe/
+		dì /dˈi/ - dì /dˈi/
+		dòna /dˈona/ - donna /dˈɔnna/
+		duas /dˈuază/ - dui /dˈuj/
+		farsu /farsu/ - falzu /fˈalʦu/
+		fradi /frˈaði/ - fratellu /fratˈellu/
+		fridu /frˈiðu/ - freddu /frˈɛddu/
+		frori /frˈori/ - fiore /fjˈɔre/
+		frúmini /frˈumini/ - riu /rˈiu/
+		fàere /fˈaere/ - fà /fˈa/
+		fàmini /fˈamini/ - fame /fˈame/
+		fada /fˈaða/ - fata /fˈata/
+		femina /fˈemina/ - femina /fˈɛmina/
+		festa /fˈesta/ - festa /fˈesta/
+		filu /fˈilu/ - filu /fˈilu/
+		fini /fˈini/ - fine /fˈine/
+		fiza /fˈiʣa/ - fiɡlia /fˈiʎa/
+		fizu /fˈiʣu/ - fiɡliu /fˈiʎu/
+		forti /fˈorti/ - forte /fˈɔrte/
+		fortza /fˈorʦa/ - forza /fˈɔrʦa/
+		foɡu /fˈoɣu/ - focu /fˈɔku/
+		foza /fˈoʣa/ - foɡlia /fˈɔʎa/
+		fumu /fˈumu/ - fume /fˈume/
+		imbíliɡu /imbˈiliɣu/ - billicu /bˈilliku/
+		iscrivere /iskrˈivere/ - scrive /skrˈive/
+		ispàda /ispˈaða/ - spada /spˈada/
+		ɪspaɡna /ispˈaɲɲa/ - Spaɡna /spˈaɲa/
+		ispiɡa /ispˈiɣa/ - spica /spˈika/
+		istadi /istˈaði/ - estate /estˈate/
+		istàdu /istˈaðu/ - statu /ʃtˈatu/
+		isteddu /istˈeɖɖu/ - stella /ʃtˈella/
+		joɡu /jˈoɣu/ - ɡhjocu /ɟˈoku/
+		cambiari /kambjˈari/ - cambià /kambjˈa/
+		cassài /kassˈai/ - caccià /kaʧʧˈa/
+		casteddu /kastˈeɖɖu/ - castellu /kastˈellu/
+		cabaddu /kaβˈaɖɖu/ - cavallu /kavˈallu/
+		craba /krˈaβa/ - capra /kˈapra/
+		crèiri /krˈeiri/ - crede /krˈɛde/
+		cuatru /kwˈatru/ - quattru /kwˈattru/
+		cani /kˈani/ - cane /kˈane/
+		carri /kˈarri/ - carne /kˈarne/
+		caru /kˈaru/ - caru /kˈaru/
+		chinisa /kˈinisa/ - cenera /ʧˈɛnere/
+		colpu /kˈolpu/ - colpu /kˈɔlpu/
+		colta /kˈolta/ - costa /kˈɔsta/
+		corpus /kˈorpuzŭ/ - corpu /kˈɔrpu/
+		coru /kˈoru/ - core /kˈɔre/
+		cossa /kˈosa/ - coscia /kˈɔʃa/
+		coddu /kˈoɖɖu/ - collu /kˈɔllu/
+		culu /kˈulu/ - culu /kˈulu/
+		curtzu /kˈurʦu/ - cortu /kˈortu/
+		leài /leˈaj/ - levà /levˈa/
+		leòni /leˈoni/ - lione /liˈone/
+		lana /lˈana/ - lana /lˈana/
+		lati /lˈati/ - latte /lˈatte/
+		laɡu /lˈaɣu/ - laɡu /lˈaɡu/
+		lèzere /lˈezere/ - leɡhje /lˈeɟe/
+		leɡe /lˈeʤe/ - leɡhje /lˈɛɟe/
+		lítera /lˈitera/ - lettera /lˈettera/
+		loɡu /lˈoɣu/ - locu /lˈɔku/
+		luɡhe /lˈuɣe/ - lume /lˈume/
+		lubu /lˈuβu/ - lupu /lˈupu/
+		manu /mˈanu/ - manu /mˈanu/
+		mari /mˈari/ - mare /mˈare/
+		me /mˈe/ - mè /mˈɛ/
+		mésu /mˈezu/ - mezu /mˈeʣu/
+		mezus /mˈeʣuzŭ/ - meɡliu /mˈeʎu/
+		milli /mˈilli/ - mille /mˈille/
+		morriri /mˈoriri/ - more /mˈɔre/
+		morti /mˈorti/ - morte /mˈɔrte/
+		mòssere /mˈossere/ - mursicà /mursikˈa/
+		mòssere /mˈossere/ - morde /mˈɔrde/
+		musca /mˈuska/ - mosca /mˈɔska/
+		nadài /naðˈaj/ - nutà /nutˈa/
+		nesciúni /neʃʃˈuni/ - nisunu /nizˈunu/
+		nàsu /nˈazu/ - nasu /nˈazu/
+		nasciri /nˈaʃʃiri/ - nasce /nˈaʃʃe/
+		nébida /nˈeβiða/ - nebbia /nˈebbja/
+		ni /nˈi/ - neve /nˈɛve/
+		nia /nˈia/ - neve /nˈɛve/
+		niɡru /nˈiɡru/ - nero /nˈɛro/
+		noi /nˈoj/ - nove /nˈɔve/
+		nomene /nˈomene/ - nome /nˈɔme/
+		nos /nˈos/ - noi /nˈɔj/
+		nostru /nˈostru/ - nostro /nˈostro/
+		nobu /nˈoβu/ - novu /nˈɔvu/
+		nue /nˈue/ - nuvulu /nˈuvulu/
+		nuɡi /nˈuʒi/ - noce /nˈɔʧe/
+		nuve /nˈuβe/ - nube /nˈube/
+		orija /orˈija/ - orechja /orˈɛca/
+		paraɡula /parˈaɣula/ - parolla /parˈolla/
+		prenu /prˈenu/ - pienu /pjˈɛnu/
+		proja /prˈoja/ - pioɡia /pjˈoʤa/
+		pani /pˈani/ - pane /pˈane/
+		paɡu /pˈaɣu/ - pocu /pˈoku/
+		paxi /pˈaʒi/ - pace /pˈaʧe/
+		pei /pˈei/ - pede /pˈede/
+		pétus /pˈetuzŭ/ - pettu /pˈettu/
+		pedra /pˈeðra/ - petra /pˈetra/
+		pedhi /pˈeɖɖi/ - pelle /pˈelle/
+		pilu /pˈilu/ - capellu /kapˈellu/
+		pinna /pˈinna/ - piuma /pjˈuma/
+		pisci /pˈiʃʃi/ - pesciu /pˈɛʃʃu/
+		ponti /pˈonti/ - ponte /pˈonte/
+		porri /pˈorri/ - putere /putˈɛre/
+		putzu /pˈuʦu/ - pozzu /pˈoʦʦu/
+		reina /reˈina/ - reɡina /reʤˈina/
+		romanu /romˈanu/ - rumanu /rumˈanu/
+		rei /rˈe/ - re /rˈɛ/
+		rena /rˈena/ - rena /rˈɛna/
+		seɡuru /seɣˈuru/ - sicuru /sikˈuru/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		scroxu /skrˈoʒu/ - scorza /skˈɔrʦa/
+		spina /spˈina/ - spina /spˈina/
+		sali /sˈali/ - sale /sˈale/
+		sana /sˈana/ - sana /sˈana/
+		santu /sˈantu/ - santu /sˈantu/
+		sanɡuini /sˈaŋɡwini/ - sanɡue /sˈaŋɡwe/
+		sèmini /sˈemene/ - sumenta /sumˈɛnta/
+		sera /sˈera/ - sera /sˈɛra/
+		sete /sˈete/ - sette /sˈette/
+		ses /sˈezĕ/ - sei /sˈej/
+		seda /sˈeða/ - seta /sˈɛta/
+		sica /sˈika/ - secca /sˈɛkka/
+		sicu /sˈiku/ - seccu /sˈɛkku/
+		soli /sˈoli/ - sole /sˈole/
+		subra /sˈuβra/ - sopra /sˈopra/
+		tràbu /trˈaβu/ - toru /tˈɔru/
+		témpus /tˈempuzŭ/ - tempu /tˈɛmpu/
+		terra /tˈerra/ - terra /tˈɛrra/
+		tottu /tˈottu/ - tuttu /tˈuttu/
+		tui /tˈui/ - tù /tˈu/
+		tundu /tˈundu/ - tondu /tˈondu/
+		ɡrandhe /ɡrˈanɖe/ - ɡrande /ɡrˈande/
+		ɡatu /ɡˈatu/ - ɡhjattu /ɟˈattu/
+		ɡatu /ɡˈatu/ - ɡattu /ɡˈattu/
+		ciamari /ʧamˈari/ - chjamà /camˈa/
+		ceréxia /ʧerˈeʒja/ - chjarasɡia /carˈaʒa/
+		ciai /ʧˈaj/ - chjave /cˈave/
+		celu /ʧˈelu/ - celu /ʧˈelu/
+		centu /ʧˈentu/ - centu /ʧˈɛntu/
+		cera /ʧˈera/ - cera /ʧˈɛra/
+		cincu /ʧˈiŋku/ - cinque /ʧˈiŋkwe/
+		àcua /ˈakwa/ - acqua /ˈakkwa/
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		annu /ˈannu/ - annu /ˈannu/
+		ànɡelu /ˈanʤelu/ - anɡhjulu /ˈaŋɟulu/
+		arbori /ˈarbori/ - arburu /ˈarburu/
+		àteru /ˈateru/ - altru /ˈaltru/
+		aɡu /ˈaɣu/ - acu /ˈaku/
+		abi /ˈaβi/ - apa /ˈapa/
+		erba /ˈerba/ - erba /ˈɛrba/
+		issa /ˈissa/ - ella /ˈɛlla/
+		issu /ˈissu/ - ellu /ˈɛllu/
+		isula /ˈizula/ - isula /ˈizula/
+		ojos /ˈojozŏ/ - ochji /ˈoci/
+		oju /ˈoju/ - ochju /ˈocu/
+		òmini /ˈomini/ - omu /ˈomu/
+		òmini /ˈomini/ - omu /ˈɔmu/
+		oru /ˈoru/ - oro /ˈoru/
+		ossu /ˈossu/ - ossu /ˈɔssu/
+		otu /ˈotu/ - ottu /ˈottu/
+		òbera /ˈoβera/ - opera /ˈɔpera/
+		obu /ˈoβu/ - ovu /ˈovu/
+		ursu /ˈursu/ - orsu /ˈɔrsu/
+		unɡa /ˈuŋɡa/ - unɡhja /ˈuŋɟa/
+
+Final disqualified:
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		narrere /nˈarrere/ - dì /dˈi/
+		ite /ˈite/ - chè /kˈɛ/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 193
+	Disqualified: 219
+	Added: 0
+	Removed: 13
+		dì /dˈi/ - ɡhjornu /ɟˈɔrnu/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		rena /rˈena/ - sabbia /sˈabbja/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+		arríu /arˈiu/ - fiume /fjˈume/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		nia /nˈia/ - neve /nˈɛve/
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		bosatrus /bozˈatruzŭ/ - voi /vˈɔj/
+		frúmini /frˈumini/ - riu /rˈiu/
+		ite /ˈite/ - chè /kˈɛ/
+		narrere /nˈarrere/ - dì /dˈi/
+
+Iteration 2
+	Qualified: 193
+	Disqualified: 219
+	Added: 1
+		nia /nˈia/ - neve /nˈɛve/
+	Removed: 1
+		ventri /bˈentri/ - panse /pˈanse/
+
+Iteration 3
+	Qualified: 193
+	Disqualified: 219
+	Added: 1
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+	Removed: 1
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+
+Iteration 4
+	Qualified: 194
+	Disqualified: 218
+	Added: 2
+		ventri /bˈentri/ - panse /pˈanse/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+	Removed: 1
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+
+Iteration 5
+	Qualified: 195
+	Disqualified: 217
+	Added: 1
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+	Removed: 0
+
+Iteration 6
+	Qualified: 197
+	Disqualified: 215
+	Added: 2
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+	Removed: 0
+
+Iteration 7
+	Qualified: 198
+	Disqualified: 214
+	Added: 1
+		frúmini /frˈumini/ - riu /rˈiu/
+	Removed: 0
+
+Iteration 8
+	Qualified: 199
+	Disqualified: 213
+	Added: 1
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+	Removed: 0
+
+Iteration 9
+	Qualified: 198
+	Disqualified: 214
+	Added: 0
+	Removed: 1
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+
+Final qualifying:
+		arɡidda /arʒˈiɖɖa/ - arzilla /arʣˈilla/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+		arríu /arˈiu/ - riu /rˈiu/
+		ascurtari /askurtˈari/ - ascultà /askultˈa/
+		atóɡnu /atˈoɲɲu/ - autunnu /awtˈunnu/
+		aɡiudare /aʤuðˈare/ - aiutà /ajutˈa/
+		belari /belˈari/ - ɡhjalà /ɟalˈa/
+		benuju /benˈuju/ - ɡhjinochju /ɟinˈɔcu/
+		biteddu /bitˈeɖɖu/ - vitello /vitˈellu/
+		bixinu /biʒˈinu/ - vicinu /viʧˈinu/
+		bolai /bolˈai/ - vulà /vulˈa/
+		bocíere /boʧˈiere/ - uccide /uʧʧˈide/
+		breɡúnɡia /breɣˈunʤa/ - verɡoɡna /verɡˈɔɲa/
+		baca /bˈaka/ - vacca /vˈakka/
+		baɡnu /bˈaɲɲu/ - baɡnu /bˈaɲu/
+		bàsciu /bˈaʃʃu/ - bassu /bˈassu/
+		beju /bˈeju/ - vechju /vˈecu/
+		bèni /bˈeni/ - bè /bˈɛ/
+		bènniri /bˈenniri/ - vene /vˈɛne/
+		ventri /bˈentri/ - panse /pˈanse/
+		ventri /bˈentri/ - ventre /vˈɛntre/
+		bentu /bˈentu/ - ventu /vˈɛntu/
+		bermi /bˈermi/ - vermu /vˈɛrmu/
+		binu /bˈinu/ - vinu /vˈinu/
+		birdi /bˈirdi/ - verde /vˈerde/
+		bida /bˈiða/ - vita /vˈita/
+		bídere /bˈiðerĕ/ - videre /vidˈɛre/
+		bonas /bˈonază/ - bone /bˈɔne/
+		bonu /bˈonu/ - bonu /bˈɔnu/
+		boxi /bˈoʒi/ - voce /vˈɔʧe/
+		buca /bˈuka/ - bocca /bˈɔkka/
+		draɡoni /draɣˈoni/ - dracone /drakˈɔne/
+		dai /dˈaj/ - dà /dˈa/
+		dènti /dˈenti/ - dente /dˈɛnte/
+		déu /dˈeu/ - diu /dˈiu/
+		deu /dˈeu/ - eiu /ˈeju/
+		dexi /dˈeʒi/ - dece /dˈeʧe/
+		dì /dˈi/ - dì /dˈi/
+		didu /dˈiðu/ - ditu /dˈitu/
+		dòna /dˈona/ - donna /dˈɔnna/
+		duas /dˈuază/ - dui /dˈuj/
+		farsu /farsu/ - falzu /fˈalʦu/
+		farina /farˈina/ - farina /farˈina/
+		fradi /frˈaði/ - fratellu /fratˈellu/
+		fridu /frˈiðu/ - freddu /frˈɛddu/
+		frori /frˈori/ - fiore /fjˈɔre/
+		frúmini /frˈumini/ - fiume /fjˈume/
+		frúmini /frˈumini/ - riu /rˈiu/
+		frútu /frˈutu/ - fruttu /frˈuttu/
+		fàere /fˈaere/ - fà /fˈa/
+		fàmini /fˈamini/ - fame /fˈame/
+		fada /fˈaða/ - fata /fˈata/
+		ferru /fˈerru/ - ferru /fˈɛrru/
+		festa /fˈesta/ - festa /fˈesta/
+		filu /fˈilu/ - filu /fˈilu/
+		fíɡadu /fˈiɣaðu/ - fecatu /fˈɛkatu/
+		fiza /fˈiʣa/ - fiɡlia /fˈiʎa/
+		fizu /fˈiʣu/ - fiɡliu /fˈiʎu/
+		forti /fˈorti/ - forte /fˈɔrte/
+		fortza /fˈorʦa/ - forza /fˈɔrʦa/
+		foɡu /fˈoɣu/ - focu /fˈɔku/
+		foza /fˈoʣa/ - foɡlia /fˈɔʎa/
+		iscrivere /iskrˈivere/ - scrive /skrˈive/
+		ispàda /ispˈaða/ - spada /spˈada/
+		ispiɡa /ispˈiɣa/ - spica /spˈika/
+		istadi /istˈaði/ - estate /estˈate/
+		isteddu /istˈeɖɖu/ - stella /ʃtˈella/
+		joɡu /jˈoɣu/ - ɡhjocu /ɟˈoku/
+		cambiari /kambjˈari/ - cambià /kambjˈa/
+		casteddu /kastˈeɖɖu/ - castellu /kastˈellu/
+		cadena /kaðˈena/ - catena /katˈɛna/
+		cabaddu /kaβˈaɖɖu/ - cavallu /kavˈallu/
+		crèiri /krˈeiri/ - crede /krˈɛde/
+		cruxi /krˈuʒi/ - croce /krˈɔʧe/
+		cuatru /kwˈatru/ - quattru /kwˈattru/
+		caldu /kˈaldu/ - caldu /kˈaldu/
+		cani /kˈani/ - cane /kˈane/
+		carri /kˈarri/ - carne /kˈarne/
+		caru /kˈaru/ - caru /kˈaru/
+		chinisa /kˈinisa/ - cenera /ʧˈɛnere/
+		coa /kˈoa/ - coda /kˈɔda/
+		colpu /kˈolpu/ - colpu /kˈɔlpu/
+		colta /kˈolta/ - costa /kˈɔsta/
+		corpus /kˈorpuzŭ/ - corpu /kˈɔrpu/
+		coru /kˈoru/ - core /kˈɔre/
+		cossa /kˈosa/ - coscia /kˈɔʃa/
+		coddu /kˈoɖɖu/ - collu /kˈɔllu/
+		culu /kˈulu/ - culu /kˈulu/
+		leài /leˈaj/ - levà /levˈa/
+		leòni /leˈoni/ - lione /liˈone/
+		lana /lˈana/ - lana /lˈana/
+		lati /lˈati/ - latte /lˈatte/
+		laɡu /lˈaɣu/ - laɡu /lˈaɡu/
+		lèzere /lˈezere/ - leɡhje /lˈeɟe/
+		linna /lˈinna/ - leɡnu /lˈɛɲu/
+		linɡua /lˈiŋɡwa/ - linɡua /lˈiŋɡwa/
+		loɡu /lˈoɣu/ - locu /lˈɔku/
+		luna /lˈuna/ - luna /lˈuna/
+		luɡhe /lˈuɣe/ - lume /lˈume/
+		luɡhe /lˈuɣe/ - luce /lˈuʧe/
+		lubu /lˈuβu/ - lupu /lˈupu/
+		manu /mˈanu/ - manu /mˈanu/
+		mari /mˈari/ - mare /mˈare/
+		me /mˈe/ - mè /mˈɛ/
+		meli /mˈeli/ - mele /mˈele/
+		mésu /mˈezu/ - mezu /mˈeʣu/
+		mezus /mˈeʣuzŭ/ - meɡliu /mˈeʎu/
+		milli /mˈilli/ - mille /mˈille/
+		morriri /mˈoriri/ - more /mˈɔre/
+		morti /mˈorti/ - morte /mˈɔrte/
+		mòssere /mˈossere/ - morde /mˈɔrde/
+		musca /mˈuska/ - mosca /mˈɔska/
+		nadài /naðˈaj/ - nutà /nutˈa/
+		nàsu /nˈazu/ - nasu /nˈazu/
+		nasciri /nˈaʃʃiri/ - nasce /nˈaʃʃe/
+		ni /nˈi/ - neve /nˈɛve/
+		nia /nˈia/ - neve /nˈɛve/
+		niɡru /nˈiɡru/ - nero /nˈɛro/
+		noi /nˈoj/ - nove /nˈɔve/
+		nostru /nˈostru/ - nostro /nˈostro/
+		nobu /nˈoβu/ - novu /nˈɔvu/
+		nue /nˈue/ - nube /nˈube/
+		nue /nˈue/ - nuvulu /nˈuvulu/
+		nuve /nˈuβe/ - nube /nˈube/
+		nuve /nˈuβe/ - nuvulu /nˈuvulu/
+		peraula /perˈawla/ - parolla /parˈolla/
+		prioɡu /priˈoɣu/ - pidochju /pidˈɔcu/
+		prànɡiri /prˈanʤiri/ - pienɡhje /pjˈɛŋɟe/
+		prenu /prˈenu/ - pienu /pjˈɛnu/
+		proja /prˈoja/ - pioɡia /pjˈoʤa/
+		pani /pˈani/ - pane /pˈane/
+		paɡu /pˈaɣu/ - pocu /pˈoku/
+		paxi /pˈaʒi/ - pace /pˈaʧe/
+		pei /pˈei/ - pede /pˈede/
+		pétus /pˈetuzŭ/ - pettu /pˈettu/
+		pedhi /pˈeɖɖi/ - pelle /pˈelle/
+		pilu /pˈilu/ - capellu /kapˈellu/
+		pilu /pˈilu/ - pelu /pˈɛlu/
+		pinna /pˈinna/ - piuma /pjˈuma/
+		pisci /pˈiʃʃi/ - pesciu /pˈɛʃʃu/
+		ponti /pˈonti/ - ponte /pˈonte/
+		porri /pˈorri/ - putere /putˈɛre/
+		putzu /pˈuʦu/ - pozzu /pˈoʦʦu/
+		reina /reˈina/ - reɡina /reʤˈina/
+		romanu /romˈanu/ - rumanu /rumˈanu/
+		rei /rˈe/ - re /rˈɛ/
+		seɡuru /seɣˈuru/ - sicuru /sikˈuru/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		scroxu /skrˈoʒu/ - scorza /skˈɔrʦa/
+		santu /sˈantu/ - santu /sˈantu/
+		sanu /sˈanu/ - sanu /sˈanu/
+		sanɡuini /sˈaŋɡwini/ - sanɡue /sˈaŋɡwe/
+		sèmini /sˈemene/ - sumenta /sumˈɛnta/
+		sete /sˈete/ - sette /sˈette/
+		seda /sˈeða/ - seta /sˈɛta/
+		sica /sˈika/ - secca /sˈɛkka/
+		sicu /sˈiku/ - seccu /sˈɛkku/
+		soli /sˈoli/ - sole /sˈole/
+		tràbu /trˈaβu/ - toru /tˈɔru/
+		tres /trˈezĕ/ - trè /trˈɛ/
+		témpus /tˈempuzŭ/ - tempu /tˈɛmpu/
+		terra /tˈerra/ - terra /tˈɛrra/
+		tui /tˈui/ - tù /tˈu/
+		tundu /tˈundu/ - tondu /tˈondu/
+		ɡrandhe /ɡrˈanɖe/ - ɡrande /ɡrˈande/
+		ɡatu /ɡˈatu/ - ɡhjattu /ɟˈattu/
+		ɡatu /ɡˈatu/ - ɡattu /ɡˈattu/
+		ɡuta /ɡˈuta/ - ɡoccia /ɡˈɔʧʧa/
+		ciamari /ʧamˈari/ - chjamà /camˈa/
+		ceréxia /ʧerˈeʒja/ - chjarasɡia /carˈaʒa/
+		citadi /ʧitˈadi/ - cità /ʧitˈa/
+		ciai /ʧˈaj/ - chjave /cˈave/
+		celu /ʧˈelu/ - celu /ʧˈelu/
+		centu /ʧˈentu/ - centu /ʧˈɛntu/
+		cera /ʧˈera/ - cera /ʧˈɛra/
+		cincu /ʧˈiŋku/ - cinque /ʧˈiŋkwe/
+		àcua /ˈakwa/ - acqua /ˈakkwa/
+		alvu /ˈalvu/ - biancu /bjˈaŋku/
+		annu /ˈannu/ - annu /ˈannu/
+		arbori /ˈarbori/ - arburu /ˈarburu/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+		aɡu /ˈaɣu/ - acu /ˈaku/
+		abi /ˈaβi/ - apa /ˈapa/
+		erba /ˈerba/ - erba /ˈɛrba/
+		issa /ˈissa/ - ella /ˈɛlla/
+		issu /ˈissu/ - ellu /ˈɛllu/
+		isula /ˈizula/ - isula /ˈizula/
+		ojos /ˈojozŏ/ - ochji /ˈoci/
+		oju /ˈoju/ - ochju /ˈocu/
+		òmini /ˈomini/ - omu /ˈomu/
+		òmini /ˈomini/ - omu /ˈɔmu/
+		ossu /ˈossu/ - ossu /ˈɔssu/
+		otu /ˈotu/ - ottu /ˈottu/
+		òbera /ˈoβera/ - opera /ˈɔpera/
+		obu /ˈoβu/ - ovu /ˈovu/
+		unu /ˈunu/ - unu /ˈunu/
+		ursu /ˈursu/ - orsu /ˈɔrsu/
+		unɡa /ˈuŋɡa/ - unɡhja /ˈuŋɟa/
+
+Final disqualified:
+		arríu /arˈiu/ - fiume /fjˈume/
+		bosatrus /bozˈatruzŭ/ - voi /vˈɔj/
+		dì /dˈi/ - ɡhjornu /ɟˈɔrnu/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		narrere /nˈarrere/ - dì /dˈi/
+		rena /rˈena/ - sabbia /sˈabbja/
+		ite /ˈite/ - chè /kˈɛ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 196
+	Disqualified: 216
+	Added: 0
+	Removed: 10
+		dì /dˈi/ - ɡhjornu /ɟˈɔrnu/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		babbu /bˈabbu/ - patre /pˈatre/
+		rena /rˈena/ - sabbia /sˈabbja/
+		arríu /arˈiu/ - fiume /fjˈume/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		frúmini /frˈumini/ - riu /rˈiu/
+		ite /ˈite/ - chè /kˈɛ/
+		narrere /nˈarrere/ - dì /dˈi/
+
+Iteration 2
+	Qualified: 194
+	Disqualified: 218
+	Added: 0
+	Removed: 2
+		ventri /bˈentri/ - panse /pˈanse/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+
+Iteration 3
+	Qualified: 197
+	Disqualified: 215
+	Added: 3
+		ventri /bˈentri/ - panse /pˈanse/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+	Removed: 0
+
+Iteration 4
+	Qualified: 196
+	Disqualified: 216
+	Added: 0
+	Removed: 1
+		ventri /bˈentri/ - panse /pˈanse/
+
+Iteration 5
+	Qualified: 197
+	Disqualified: 215
+	Added: 1
+		ventri /bˈentri/ - panse /pˈanse/
+	Removed: 0
+
+Final qualifying:
+		aneddu /anˈeɖɖu/ - anellu /anˈɛllu/
+		arɡidda /arʒˈiɖɖa/ - arzilla /arʣˈilla/
+		aranɡia /arˈanʤa/ - araɡnu /arˈaɲu/
+		aranɡia /arˈanʤa/ - raɡnu /rˈaɲu/
+		arríu /arˈiu/ - riu /rˈiu/
+		ascurtari /askurtˈari/ - ascultà /askultˈa/
+		atóɡnu /atˈoɲɲu/ - autunnu /awtˈunnu/
+		aɡiudare /aʤuðˈare/ - aiutà /ajutˈa/
+		belari /belˈari/ - ɡhjalà /ɟalˈa/
+		benuju /benˈuju/ - ɡhjinochju /ɟinˈɔcu/
+		bixinu /biʒˈinu/ - vicinu /viʧˈinu/
+		bolai /bolˈai/ - vulà /vulˈa/
+		bocíere /boʧˈiere/ - uccide /uʧʧˈide/
+		baca /bˈaka/ - vacca /vˈakka/
+		baɡnu /bˈaɲɲu/ - baɡnu /bˈaɲu/
+		bàsciu /bˈaʃʃu/ - bassu /bˈassu/
+		beju /bˈeju/ - vechju /vˈecu/
+		bèni /bˈeni/ - bè /bˈɛ/
+		bènniri /bˈenniri/ - vene /vˈɛne/
+		ventri /bˈentri/ - panse /pˈanse/
+		ventri /bˈentri/ - ventre /vˈɛntre/
+		bentu /bˈentu/ - ventu /vˈɛntu/
+		bermi /bˈermi/ - vermu /vˈɛrmu/
+		binu /bˈinu/ - vinu /vˈinu/
+		birdi /bˈirdi/ - verde /vˈerde/
+		bida /bˈiða/ - vita /vˈita/
+		bídere /bˈiðerĕ/ - videre /vidˈɛre/
+		bidda /bˈiɖɖa/ - villa /vˈilla/
+		boi /bˈoj/ - boie /bˈɔje/
+		bonas /bˈonază/ - bone /bˈɔne/
+		bonu /bˈonu/ - bonu /bˈɔnu/
+		boxi /bˈoʒi/ - voce /vˈoʧe/
+		buca /bˈuka/ - bocca /bˈɔkka/
+		draɡoni /draɣˈoni/ - dracone /drakˈɔne/
+		dai /dˈaj/ - dà /dˈa/
+		dènti /dˈenti/ - dente /dˈɛnte/
+		déu /dˈeu/ - diu /dˈiu/
+		dì /dˈi/ - dì /dˈi/
+		didu /dˈiðu/ - ditu /dˈitu/
+		dòna /dˈona/ - donna /dˈɔnna/
+		farsu /farsu/ - falzu /fˈalʦu/
+		framma /frˈamma/ - fiamma /fjˈamma/
+		fradi /frˈaði/ - fratellu /fratˈellu/
+		frori /frˈori/ - fiore /fjˈɔre/
+		frúmini /frˈumini/ - fiume /fjˈume/
+		frútu /frˈutu/ - fruttu /frˈuttu/
+		fàere /fˈaere/ - fà /fˈa/
+		fàlsu /fˈalsu/ - falzu /fˈalʦu/
+		fàmini /fˈamini/ - fame /fˈame/
+		fada /fˈaða/ - fata /fˈata/
+		femina /fˈemina/ - femina /fˈɛmina/
+		ferru /fˈerru/ - ferru /fˈɛrru/
+		festa /fˈesta/ - festa /fˈesta/
+		filu /fˈilu/ - filu /fˈilu/
+		fini /fˈini/ - fine /fˈine/
+		fiza /fˈiʣa/ - fiɡlia /fˈiʎa/
+		fizu /fˈiʣu/ - fiɡliu /fˈiʎu/
+		forti /fˈorti/ - forte /fˈɔrte/
+		fortza /fˈorʦa/ - forza /fˈɔrʦa/
+		foɡu /fˈoɣu/ - focu /fˈɔku/
+		foza /fˈoʣa/ - foɡlia /fˈɔʎa/
+		fumu /fˈumu/ - fume /fˈume/
+		imbíliɡu /imbˈiliɣu/ - billicu /bˈilliku/
+		iscrivere /iskrˈivere/ - scrive /skrˈive/
+		ispàda /ispˈaða/ - spada /spˈada/
+		ɪspaɡna /ispˈaɲɲa/ - Spaɡna /spˈaɲa/
+		ispiɡa /ispˈiɣa/ - spica /spˈika/
+		istadi /istˈaði/ - estate /estˈate/
+		istàdu /istˈaðu/ - statu /ʃtˈatu/
+		isteddu /istˈeɖɖu/ - stella /ʃtˈella/
+		ierru /jˈerru/ - invernu /imvˈɛrnu/
+		joɡu /jˈoɣu/ - ɡhjocu /ɟˈoku/
+		cambiari /kambjˈari/ - cambià /kambjˈa/
+		cassài /kassˈai/ - caccià /kaʧʧˈa/
+		casteddu /kastˈeɖɖu/ - castellu /kastˈellu/
+		cadena /kaðˈena/ - catena /katˈɛna/
+		cabaddu /kaβˈaɖɖu/ - cavallu /kavˈallu/
+		colori /kolˈori/ - culore /kulˈɔre/
+		craba /krˈaβa/ - capra /kˈapra/
+		crèiri /krˈeiri/ - crede /krˈɛde/
+		cruxi /krˈuʒi/ - croce /krˈɔʧe/
+		caldu /kˈaldu/ - caldu /kˈaldu/
+		cani /kˈani/ - cane /kˈane/
+		carri /kˈarri/ - carne /kˈarne/
+		caru /kˈaru/ - caru /kˈaru/
+		chinisa /kˈinisa/ - cenera /ʧˈɛnere/
+		coa /kˈoa/ - coda /kˈɔda/
+		colta /kˈolta/ - costa /kˈɔsta/
+		cossa /kˈosa/ - coscia /kˈɔʃa/
+		coddu /kˈoɖɖu/ - collu /kˈɔllu/
+		culu /kˈulu/ - culu /kˈulu/
+		curtzu /kˈurʦu/ - cortu /kˈortu/
+		leài /leˈaj/ - levà /levˈa/
+		leòni /leˈoni/ - lione /liˈone/
+		làcrima /lˈakrima/ - lacrima /lˈakrima/
+		lana /lˈana/ - lana /lˈana/
+		laɡu /lˈaɣu/ - laɡu /lˈaɡu/
+		lèzere /lˈezere/ - leɡhje /lˈeɟe/
+		lonɡu /lˈoŋɡu/ - lonɡu /lˈoŋɡu/
+		loɡu /lˈoɣu/ - locu /lˈɔku/
+		luna /lˈuna/ - luna /lˈuna/
+		luɡhe /lˈuɣe/ - lume /lˈume/
+		luɡhe /lˈuɣe/ - luce /lˈuʧe/
+		lubu /lˈuβu/ - lupu /lˈupu/
+		manu /mˈanu/ - manu /mˈanu/
+		mari /mˈari/ - mare /mˈare/
+		me /mˈe/ - mè /mˈɛ/
+		mésu /mˈezu/ - mezu /mˈeʣu/
+		mezus /mˈeʣuzŭ/ - meɡliu /mˈeʎu/
+		milli /mˈilli/ - mille /mˈille/
+		mòssere /mˈossere/ - morde /mˈɔrde/
+		musca /mˈuska/ - mosca /mˈɔska/
+		nadài /naðˈaj/ - nutà /nutˈa/
+		nesciúni /neʃʃˈuni/ - nisunu /nizˈunu/
+		nasciri /nˈaʃʃiri/ - nasce /nˈaʃʃe/
+		nébida /nˈeβiða/ - nebbia /nˈebbja/
+		ni /nˈi/ - neve /nˈɛve/
+		niɡru /nˈiɡru/ - nero /nˈɛro/
+		noi /nˈoj/ - nove /nˈɔve/
+		nomene /nˈomene/ - nome /nˈɔme/
+		nostru /nˈostru/ - nostro /nˈostro/
+		noti /nˈoti/ - notte /nˈɔtte/
+		nobu /nˈoβu/ - novu /nˈɔvu/
+		orija /orˈija/ - orechja /orˈɛca/
+		paraɡula /parˈaɣula/ - parolla /parˈolla/
+		peraula /perˈawla/ - parolla /parˈolla/
+		prioɡu /priˈoɣu/ - pidochju /pidˈɔcu/
+		prànɡiri /prˈanʤiri/ - pienɡhje /pjˈɛŋɟe/
+		proja /prˈoja/ - pioɡia /pjˈoʤa/
+		pani /pˈani/ - pane /pˈane/
+		paɡu /pˈaɣu/ - pocu /pˈoku/
+		paxi /pˈaʒi/ - pace /pˈaʧe/
+		pei /pˈei/ - pede /pˈede/
+		pétus /pˈetuzŭ/ - pettu /pˈettu/
+		pilu /pˈilu/ - capellu /kapˈellu/
+		pisci /pˈiʃʃi/ - pesciu /pˈɛʃʃu/
+		ponti /pˈonti/ - ponte /pˈonte/
+		porcu /pˈorku/ - porcu /pˈɔrku/
+		porri /pˈorri/ - putere /putˈɛre/
+		putzu /pˈuʦu/ - pozzu /pˈoʦʦu/
+		reina /reˈina/ - reɡina /reʤˈina/
+		romanu /romˈanu/ - rumanu /rumˈanu/
+		rei /rˈe/ - re /rˈɛ/
+		seɡuru /seɣˈuru/ - sicuru /sikˈuru/
+		scroxu /skrˈoʒu/ - curteccia /kurtˈɛʧʧa/
+		scroxu /skrˈoʒu/ - scorza /skˈɔrʦa/
+		spina /spˈina/ - spina /spˈina/
+		sali /sˈali/ - sale /sˈale/
+		sana /sˈana/ - sana /sˈana/
+		santu /sˈantu/ - santu /sˈantu/
+		sanu /sˈanu/ - sanu /sˈanu/
+		sanɡuini /sˈaŋɡwini/ - sanɡue /sˈaŋɡwe/
+		sèmini /sˈemene/ - sumenta /sumˈɛnta/
+		sera /sˈera/ - sera /sˈɛra/
+		sete /sˈete/ - sette /sˈette/
+		ses /sˈezĕ/ - sei /sˈej/
+		seda /sˈeða/ - seta /sˈɛta/
+		sicu /sˈiku/ - seccu /sˈɛkku/
+		subra /sˈuβra/ - sopra /sˈopra/
+		tràbu /trˈaβu/ - toru /tˈɔru/
+		tres /trˈezĕ/ - trè /trˈɛ/
+		témpus /tˈempuzŭ/ - tempu /tˈɛmpu/
+		terra /tˈerra/ - terra /tˈɛrra/
+		tottu /tˈottu/ - tuttu /tˈuttu/
+		tui /tˈui/ - tù /tˈu/
+		tundu /tˈundu/ - tondu /tˈondu/
+		ɡrandhe /ɡrˈanɖe/ - ɡrande /ɡrˈande/
+		ɡatu /ɡˈatu/ - ɡhjattu /ɟˈattu/
+		ɡuta /ɡˈuta/ - ɡoccia /ɡˈɔʧʧa/
+		ciamari /ʧamˈari/ - chjamà /camˈa/
+		citadi /ʧitˈadi/ - cità /ʧitˈa/
+		centu /ʧˈentu/ - centu /ʧˈɛntu/
+		cera /ʧˈera/ - cera /ʧˈɛra/
+		cincu /ʧˈiŋku/ - cinque /ʧˈiŋkwe/
+		àcua /ˈakwa/ - acqua /ˈakkwa/
+		annu /ˈannu/ - annu /ˈannu/
+		ànɡelu /ˈanʤelu/ - anɡhjulu /ˈaŋɟulu/
+		arbori /ˈarbori/ - arburu /ˈarburu/
+		arvu /ˈarvu/ - biancu /bjˈaŋku/
+		àteru /ˈateru/ - altru /ˈaltru/
+		aɡu /ˈaɣu/ - acu /ˈaku/
+		abi /ˈaβi/ - apa /ˈapa/
+		erba /ˈerba/ - erba /ˈɛrba/
+		issa /ˈissa/ - ella /ˈɛlla/
+		issu /ˈissu/ - ellu /ˈɛllu/
+		isula /ˈizula/ - isula /ˈizula/
+		ojos /ˈojozŏ/ - ochji /ˈoci/
+		oju /ˈoju/ - ochju /ˈocu/
+		òmini /ˈomini/ - omu /ˈomu/
+		oru /ˈoru/ - oro /ˈoru/
+		ossu /ˈossu/ - ossu /ˈɔssu/
+		otu /ˈotu/ - ottu /ˈottu/
+		òbera /ˈoβera/ - opera /ˈɔpera/
+		obu /ˈoβu/ - ovu /ˈovu/
+		unu /ˈunu/ - unu /ˈunu/
+		ursu /ˈursu/ - orsu /ˈɔrsu/
+		unɡa /ˈuŋɡa/ - unɡhja /ˈuŋɟa/
+
+Final disqualified:
+		arríu /arˈiu/ - fiume /fjˈume/
+		babbu /bˈabbu/ - patre /pˈatre/
+		dì /dˈi/ - ɡhjornu /ɟˈɔrnu/
+		frúmini /frˈumini/ - riu /rˈiu/
+		ischíri /iskˈiri/ - sapè /sapˈɛ/
+		chisina /kˈisina/ - cenera /ʧˈɛnere/
+		narrere /nˈarrere/ - dì /dˈi/
+		rena /rˈena/ - sabbia /sˈabbja/
+		ite /ˈite/ - chè /kˈɛ/
+
+
+-------------------
+

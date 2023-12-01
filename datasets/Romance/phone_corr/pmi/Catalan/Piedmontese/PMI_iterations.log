@@ -1,0 +1,1336 @@
+Same meaning pairs: 272
+****SAMPLE 1****
+Iteration 1
+	Qualified: 206
+	Disqualified: 230
+	Added: 0
+	Removed: 12
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+		nosaltres /nuzˈaltɾəs/ - noi /nˈuj/
+		no /nˈo/ - nen /nˈɛŋ/
+		cima /sˈimə/ - cò /kˈɔ/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+		vosaltres /buzˈaltɾəs/ - voi /vˈuj/
+		abella /əβˈɛʎə/ - aif /ˈajf/
+		mosseɡar /musəɣˈa/ - morde /mˈɔrde/
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+		riu /rˈiw/ - fium /fjˈym/
+
+Iteration 2
+	Qualified: 206
+	Disqualified: 230
+	Added: 1
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+	Removed: 1
+		veu /bˈɛw/ - vos /vˈus/
+
+Iteration 3
+	Qualified: 207
+	Disqualified: 229
+	Added: 1
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+	Removed: 0
+
+Iteration 4
+	Qualified: 210
+	Disqualified: 226
+	Added: 3
+		no /nˈo/ - nen /nˈɛŋ/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+	Removed: 0
+
+Iteration 5
+	Qualified: 210
+	Disqualified: 226
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		viatɡe /biˈaʤə/ - viaɡi /vjˈaʤi/
+		blanc /blˈaŋ/ - bianc /bjˈaŋk/
+		volar /bulˈa/ - volé /vulˈe/
+		vosaltres /buzˈaltɾəs/ - vojàutri /vujˈawtri/
+		venir /bənˈi/ - ven-e /vˈeŋe/
+		verɡonya /bərɡˈoɲə/ - vërɡòɡna /vərɡˈɔɲa/
+		vedell /bəðˈeʎ/ - vitel /vitˈɛl/
+		veí /bəˈi/ - vzin /vzˈin/
+		vaca /bˈakə/ - vaca /vˈaka/
+		bany /bˈaɲ/ - baɡn /bˈaɲ/
+		bé /bˈe/ - ben /bˈɛn/
+		bell /bˈeʎ/ - bel /bˈɛl/
+		vell /bˈeʎ/ - vej /vˈɛj/
+		boca /bˈokə/ - boca /bˈuka/
+		vuit /bˈujt/ - eut /ˈøt/
+		bo /bˈɔ/ - bon /bˈuŋ/
+		vol /bˈɔl/ - vòl /vˈɔl/
+		bou /bˈɔw/ - beu /bˈø/
+		verm /bˈɛrm/ - verm /vˈɛrm/
+		verd /bˈɛrt/ - verd /vˈɛrd/
+		veure /bˈɛwɾə/ - vëdde /vˈədde/
+		dormir /durmˈi/ - deurme /dˈørme/
+		dar /dˈa/ - dé /dˈe/
+		dent /dˈen/ - dent /dˈɛŋt/
+		déu /dˈew/ - dio /dˈiw/
+		dit /dˈit/ - dil /dˈil/
+		dia /dˈiə/ - di /dˈi/
+		dolç /dˈols/ - doss /dˈus/
+		dues /dˈuəs/ - doe /dˈue/
+		deu /dˈɛw/ - des /dˈes/
+		flor /flˈɔ/ - fior /fjˈur/
+		farina /fəɾˈinə/ - farin-a /farˈiŋa/
+		fred /fɾˈɛt/ - freid /frˈejd/
+		falso /fˈals/ - fàuss /fˈaws/
+		fam /fˈam/ - fam /fˈam/
+		fer /fˈe/ - fé /fˈe/
+		fetɡe /fˈeʤə/ - fedich /fˈedik/
+		fin /fˈi/ - fin /fˈin/
+		fi /fˈi/ - fin /fˈiŋ/
+		filla /fˈiʎə/ - fija /fˈija/
+		fum /fˈum/ - fum /fˈym/
+		fulla /fˈuʎə/ - feuja /fˈøja/
+		foc /fˈɔk/ - feu /fˈø/
+		foc /fˈɔk/ - feuɡh /fˈøɡ/
+		força /fˈɔrsə/ - fòrsa /fˈɔrsa/
+		fort /fˈɔrt/ - fòrt /fˈɔrt/
+		fembra /fˈɛmbrə/ - fomna /fˈɔmna/
+		ferro /fˈɛru/ - fer /fˈɛr/
+		hivern /iβˈɛrn/ - invern /invˈɛrn/
+		color /kulˈo/ - color /kulˈɔr/
+		conèixer /kunˈɛʃə/ - conòsse /kunˈɔse/
+		conèixer /kunˈɛʃə/ - coɡnòsse /kuɲˈɔse/
+		quatre /kwˈatɾə/ - quatr /kwˈatr/
+		castell /kəstˈeʎ/ - castel /kastˈɛl/
+		cavall /kəβˈaʎ/ - caval /kavˈal/
+		cabell /kəβˈɛʎ/ - cavèj /kavˈɛj/
+		cremar /kɾəmˈa/ - brusé /bryzˈe/
+		creu /kɾˈɛw/ - cros /krˈus/
+		creure /kɾˈɛwɾə/ - chërde /kərdˈe/
+		ca /kˈa/ - can /kˈaŋ/
+		car /kˈar/ - car /kˈar/
+		cabra /kˈaβɾə/ - crava /krˈava/
+		qui /kˈi/ - chi /kˈi/
+		cul /kˈul/ - cul /kˈyl/
+		curt /kˈuɾt/ - curt /kˈyrt/
+		cop /kˈɔp/ - colp /kˈulp/
+		cor /kˈɔr/ - cheur /kˈør/
+		corn /kˈɔrn/ - corn /kˈɔrn/
+		cos /kˈɔs/ - còrp /kˈɔrp/
+		costa /kˈɔstə/ - còsta /kˈɔsta/
+		coll /kˈɔʎ/ - col /kˈɔl/
+		què /kˈɛ/ - che /kˈe/
+		millor /miʎˈo/ - mijor /mijˈur/
+		muntanya /muntˈaɲə/ - montaɡna /muŋtˈaɲa/
+		morir /muɾˈi/ - meuire /mˈøjre/
+		matar /mətˈa/ - massé /masˈe/
+		madur /məðˈu/ - madur /madˈyr/
+		menjar /məɲʒˈa/ - manɡé /maŋʤˈe/
+		mà /mˈa/ - man /mˈaŋ/
+		mica /mˈikə/ - mica /mˈika/
+		mil /mˈil/ - mila /mˈila/
+		mosca /mˈoskə/ - mosca /mˈuska/
+		mort /mˈɔrt/ - mòrte /mˈɔrte/
+		mel /mˈɛl/ - mel /mˈɛl/
+		nedar /nəðˈa/ - nué /nuˈe/
+		nedar /nəðˈa/ - noatè /nwatˈɛ/
+		nas /nˈas/ - nas /nˈas/
+		niu /nˈiw/ - nivola /nˈivula/
+		no /nˈo/ - nen /nˈɛŋ/
+		nom /nˈɔm/ - nom /nˈɔm/
+		nostre /nˈɔstɾə/ - nòstr /nˈɔstr/
+		nou /nˈɔw/ - nos /nˈus/
+		nou /nˈɔw/ - neuv /nˈøv/
+		nou /nˈɔw/ - neuv /nˈøv/
+		neɡre /nˈɛɣɾə/ - neir /nˈɛjr/
+		plorar /pluɾˈa/ - pioré /pjurˈe/
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+		plaɡa /plˈaɣə/ - piaɡa /pjˈaɡa/
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+		plànyer /plˈaɲə/ - pianze /pjˈanze/
+		ploma /plˈomə/ - piuma /pjˈyma/
+		pluja /plˈuʒə/ - pieuva /pjˈøva/
+		poder /puðˈɛ/ - podèj /pudˈɛj/
+		palau /pəlˈaw/ - palass /palˈas/
+		petit /pətˈit/ - cit /ʧˈit/
+		paraula /pəɾˈawlə/ - paròla /parˈɔla/
+		preu /pɾˈɛw/ - pressi /prˈɛsi/
+		pa /pˈa/ - pan /pˈan/
+		pau /pˈaw/ - pas /pˈas/
+		pare /pˈaɾə/ - pare /pˈare/
+		peix /pˈeʃ/ - pess /pˈes/
+		pell /pˈeʎ/ - pel /pˈɛl/
+		pit /pˈit/ - pèt /pˈɛt/
+		pou /pˈow/ - poss /pˈus/
+		poll /pˈoʎ/ - poj /pˈuj/
+		puny /pˈuɲ/ - puɡn /pˈuɲ/
+		poc /pˈɔk/ - pòch /pˈɔk/
+		pont /pˈɔn/ - pont /pˈuŋt/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		peu /pˈɛw/ - pé /pˈe/
+		penya /pˈɛɲə/ - piuma /pjˈyma/
+		romà /rumˈa/ - roman /rumˈaŋ/
+		rodó /ruðˈo/ - rotond /rutˈuŋd/
+		raó /rəˈo/ - rason /razˈun/
+		rei /rˈej/ - re /rˈɛ/
+		rei /rˈej/ - rèj /rˈɛj/
+		roiɡ /rˈɔʧ/ - robi /rˈubi/
+		roiɡ /rˈɔʧ/ - ross /rˈus/
+		ciutat /siwtˈat/ - sità /sitˈa/
+		cinquanta /siŋkwˈantə/ - sinquanta /siŋkwˈanta/
+		cirera /siɾˈeɾə/ - seresa /serˈesa/
+		cirera /siɾˈeɾə/ - ceresa /ʧerˈeza/
+		solell /sulˈɛʎ/ - sol /sˈul/
+		salut /səlˈut/ - salute /salˈyte/
+		setmana /səmmˈanə/ - sman-a /smˈaŋa/
+		saber /səβˈɛ/ - savèj /savˈɛj/
+		sal /sˈal/ - sal /sˈal/
+		cinc /sˈiŋ/ - sinch /sˈiŋk/
+		sol /sˈɔl/ - sol /sˈul/
+		sec /sˈɛk/ - sech /sˈɛk/
+		cel /sˈɛl/ - cel /ʧˈel/
+		cendre /sˈɛndɾə/ - sinner /sˈinər/
+		seda /sˈɛðə/ - seda /sˈeda/
+		tres /tɾˈɛs/ - tre /trˈɛ/
+		testa /tˈestə/ - testa /tˈesta/
+		tot /tˈot/ - tut /tˈyt/
+		tu /tˈu/ - ti /tˈi/
+		tor /tˈɔr/ - tòr /tˈɔr/
+		terra /tˈɛrə/ - tèra /tˈɛra/
+		obrer /ubɾˈe/ - ovrié /uvrjˈe/
+		ocell /usˈeʎ/ - osel /uzˈɛl/
+		escoltar /əskultˈa/ - scoté /skutˈe/
+		escorça /əskˈɔrsə/ - scorsa /skˈɔrsa/
+		espasa /əspˈazə/ - spa /spˈa/
+		espina /əspˈinə/ - spin-a /spˈiŋa/
+		espiɡa /əspˈiɣə/ - spi /spˈi/
+		estrella /əstɾˈeʎə/ - steila /stˈejla/
+		aranya /əɾˈaɲə/ - raɡn /rˈaɲ/
+		ajudar /əʒuðˈa/ - aidé /ajdˈe/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+		ɡlaç /ɡlˈas/ - ɡiassa /ʤˈasa/
+		ɡras /ɡrˈas/ - ɡrass /ɡrˈas/
+		ɡuatlla /ɡwˈaʎʎə/ - quaja /kwˈaja/
+		ɡran /ɡɾˈan/ - ɡrand /ɡrˈaŋt/
+		ɡat /ɡˈat/ - ɡat /ɡˈat/
+		ɡota /ɡˈotə/ - ɡossa /ɡˈusa/
+		ɡoiɡ /ɡˈɔʧ/ - ɡiòja /ʤˈɔja/
+		lleó /ʎəˈo/ - lion /ljˈuŋ/
+		llevar /ʎəβˈa/ - levé /levˈe/
+		llac /ʎˈak/ - laɡh /lˈaɡ/
+		llana /ʎˈanə/ - lana /lˈana/
+		llana /ʎˈanə/ - lan-a /lˈaŋa/
+		llàɡrima /ʎˈaɣɾimə/ - lerma /lˈerma/
+		llei /ʎˈej/ - leɡe /lˈeʤe/
+		llet /ʎˈet/ - làit /lˈajt/
+		llenya /ʎˈeɲə/ - lëɡna /lˈəɲa/
+		llebre /ʎˈeβɾə/ - levr /lˈɛvr/
+		llit /ʎˈit/ - let /lˈɛt/
+		lliure /ʎˈiwɾə/ - lìber /lˈiber/
+		llop /ʎˈop/ - luv /lˈyv/
+		lluita /ʎˈujtə/ - lòta /lˈɔta/
+		llum /ʎˈum/ - lus /lˈys/
+		lluna /ʎˈunə/ - lun-a /lˈyŋa/
+		lloc /ʎˈɔk/ - leu /lˈø/
+		lloc /ʎˈɔk/ - leuɡh /lˈøɡ/
+		llenɡua /ʎˈɛŋɡwə/ - lenɡa /lˈɛŋɡa/
+		ɡelar /ʒəlˈa/ - ɡeilé /ʤejlˈe/
+		ɡenoll /ʒənˈoʎ/ - ɡinoj /ʤˈinuj/
+		ɡermà /ʒərmˈa/ - frar /frˈar/
+		ɡent /ʒˈen/ - ɡent /ʤˈɛŋt/
+		juny /ʒˈuɲ/ - ɡiuɡn /ʤˈyɲ/
+		jutɡe /ʒˈuʤə/ - ɡiùdes /ʤˈydes/
+		joc /ʒˈɔk/ - ɡieu /ʤˈø/
+		joc /ʒˈɔk/ - ɡieuɡh /ʤˈøɡ/
+		ɡendre /ʒˈɛndɾə/ - ɡënner /ʤənˈɛr/
+		aiɡua /ˈajɣwə/ - eva /ˈeva/
+		alba /ˈalβə/ - alba /ˈalba/
+		ànɡel /ˈaɲʒəl/ - ànɡel /ˈanʤel/
+		all /ˈaʎ/ - aj /ˈaj/
+		herba /ˈerβə/ - erba /ˈɛrba/
+		illa /ˈiʎə/ - isla /ˈisla/
+		ós /ˈos/ - ors /ˈurs/
+		unɡla /ˈuŋɡlə/ - onɡia /ˈuŋʤa/
+		ull /ˈuʎ/ - euj /ˈøj/
+		oca /ˈɔkə/ - òca /ˈɔka/
+		home /ˈɔmə/ - om /ˈɔm/
+		or /ˈɔr/ - òr /ˈɔr/
+		os /ˈɔs/ - oss /ˈɔs/
+		ou /ˈɔw/ - euv /ˈøv/
+		obra /ˈɔβɾə/ - euvra /ˈøvra/
+
+Final disqualified:
+		vosaltres /buzˈaltɾəs/ - voi /vˈuj/
+		veu /bˈɛw/ - vos /vˈus/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		mosseɡar /musəɣˈa/ - morde /mˈɔrde/
+		nosaltres /nuzˈaltɾəs/ - noi /nˈuj/
+		riu /rˈiw/ - fium /fjˈym/
+		cima /sˈimə/ - cò /kˈɔ/
+		abella /əβˈɛʎə/ - aif /ˈajf/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 208
+	Disqualified: 228
+	Added: 0
+	Removed: 10
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+		nosaltres /nuzˈaltɾəs/ - noi /nˈuj/
+		no /nˈo/ - nen /nˈɛŋ/
+		cima /sˈimə/ - cò /kˈɔ/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+		vosaltres /buzˈaltɾəs/ - voi /vˈuj/
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+		riu /rˈiw/ - fium /fjˈym/
+
+Iteration 2
+	Qualified: 209
+	Disqualified: 227
+	Added: 2
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+	Removed: 1
+		veu /bˈɛw/ - vos /vˈus/
+
+Iteration 3
+	Qualified: 209
+	Disqualified: 227
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		viatɡe /biˈaʤə/ - viaɡi /vjˈaʤi/
+		volar /bulˈa/ - volé /vulˈe/
+		vosaltres /buzˈaltɾəs/ - vojàutri /vujˈawtri/
+		venir /bənˈi/ - ven-e /vˈeŋe/
+		verɡonya /bərɡˈoɲə/ - vërɡòɡna /vərɡˈɔɲa/
+		vedell /bəðˈeʎ/ - vitel /vitˈɛl/
+		veí /bəˈi/ - vzin /vzˈin/
+		bany /bˈaɲ/ - baɡn /bˈaɲ/
+		bé /bˈe/ - ben /bˈɛn/
+		vent /bˈen/ - vent /vˈɛŋt/
+		bell /bˈeʎ/ - bel /bˈɛl/
+		vell /bˈeʎ/ - vej /vˈɛj/
+		vi /bˈi/ - vin /vˈiŋ/
+		vila /bˈilə/ - vila /vˈila/
+		vin /bˈin/ - vint /vˈiŋt/
+		vida /bˈiðə/ - vita /vˈita/
+		via /bˈiə/ - via /vˈia/
+		boca /bˈokə/ - boca /bˈuka/
+		vuit /bˈujt/ - eut /ˈøt/
+		beure /bˈɛwɾə/ - beive /bˈejve/
+		veure /bˈɛwɾə/ - vëdde /vˈədde/
+		dar /dˈa/ - dé /dˈe/
+		dent /dˈen/ - dent /dˈɛŋt/
+		déu /dˈew/ - dio /dˈiw/
+		dit /dˈit/ - dil /dˈil/
+		dotze /dˈodzə/ - dódes /dˈudes/
+		dues /dˈuəs/ - doe /dˈue/
+		dona /dˈɔnə/ - dòna /dˈɔna/
+		deu /dˈɛw/ - des /dˈes/
+		flor /flˈɔ/ - fior /fjˈur/
+		farina /fəɾˈinə/ - farin-a /farˈiŋa/
+		fruit /fɾˈujt/ - frut /frˈyt/
+		fred /fɾˈɛt/ - freid /frˈejd/
+		falso /fˈals/ - fàuss /fˈaws/
+		fam /fˈam/ - fam /fˈam/
+		fer /fˈe/ - fé /fˈe/
+		festa /fˈestə/ - festa /fˈɛsta/
+		fetɡe /fˈeʤə/ - fedich /fˈedik/
+		fi /fˈi/ - fin /fˈiŋ/
+		fum /fˈum/ - fum /fˈym/
+		fulla /fˈuʎə/ - feuja /fˈøja/
+		foc /fˈɔk/ - feu /fˈø/
+		foc /fˈɔk/ - feuɡh /fˈøɡ/
+		força /fˈɔrsə/ - fòrsa /fˈɔrsa/
+		fembra /fˈɛmbrə/ - fomna /fˈɔmna/
+		ferro /fˈɛru/ - fer /fˈɛr/
+		iɡual /iɣwˈal/ - eɡual /eɡwˈal/
+		hivern /iβˈɛrn/ - invern /invˈɛrn/
+		clamar /kləmˈa/ - ciamé /ʧamˈe/
+		conèixer /kunˈɛʃə/ - conòsse /kunˈɔse/
+		conèixer /kunˈɛʃə/ - coɡnòsse /kuɲˈɔse/
+		quatre /kwˈatɾə/ - quatr /kwˈatr/
+		canviar /kəmbjˈa/ - cambié /kambjˈe/
+		cavall /kəβˈaʎ/ - caval /kavˈal/
+		cabell /kəβˈɛʎ/ - cavèj /kavˈɛj/
+		creu /kɾˈɛw/ - cros /krˈus/
+		creure /kɾˈɛwɾə/ - chërde /kərdˈe/
+		ca /kˈa/ - can /kˈaŋ/
+		cald /kˈalt/ - càud /kˈawd/
+		car /kˈar/ - car /kˈar/
+		casa /kˈazə/ - ca /kˈa/
+		cabra /kˈaβɾə/ - crava /krˈava/
+		cul /kˈul/ - cul /kˈyl/
+		cua /kˈuə/ - coa /kˈua/
+		cuixa /kˈuʃə/ - cheussa /kˈøsa/
+		cop /kˈɔp/ - colp /kˈulp/
+		corn /kˈɔrn/ - corn /kˈɔrn/
+		cos /kˈɔs/ - còrp /kˈɔrp/
+		costa /kˈɔstə/ - còsta /kˈɔsta/
+		coll /kˈɔʎ/ - col /kˈɔl/
+		què /kˈɛ/ - che /kˈe/
+		millor /miʎˈo/ - mijor /mijˈur/
+		muntanya /muntˈaɲə/ - montaɡna /muŋtˈaɲa/
+		matar /mətˈa/ - massé /masˈe/
+		madur /məðˈu/ - madur /madˈyr/
+		menjar /məɲʒˈa/ - manɡé /maŋʤˈe/
+		mà /mˈa/ - man /mˈaŋ/
+		mil /mˈil/ - mila /mˈila/
+		mosca /mˈoskə/ - mosca /mˈuska/
+		mort /mˈɔrt/ - mòrte /mˈɔrte/
+		mel /mˈɛl/ - mel /mˈɛl/
+		nedar /nəðˈa/ - nué /nuˈe/
+		nas /nˈas/ - nas /nˈas/
+		neu /nˈew/ - nef /nˈef/
+		néixer /nˈeʃə/ - nasse /nˈase/
+		nit /nˈit/ - neuit /nˈøjt/
+		núvol /nˈuβul/ - nivola /nˈivula/
+		nom /nˈɔm/ - nom /nˈɔm/
+		nostre /nˈɔstɾə/ - nòst /nˈɔst/
+		nostre /nˈɔstɾə/ - nòstr /nˈɔstr/
+		nou /nˈɔw/ - nos /nˈus/
+		nou /nˈɔw/ - neuv /nˈøv/
+		nou /nˈɔw/ - neuv /nˈøv/
+		plorar /pluɾˈa/ - pioré /pjurˈe/
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+		plaɡa /plˈaɣə/ - piaɡa /pjˈaɡa/
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+		plànyer /plˈaɲə/ - pianze /pjˈanze/
+		ploma /plˈomə/ - piuma /pjˈyma/
+		pluja /plˈuʒə/ - pieuva /pjˈøva/
+		ple /plˈɛ/ - pien /pjˈeŋ/
+		poder /puðˈɛ/ - podèj /pudˈɛj/
+		palau /pəlˈaw/ - palass /palˈas/
+		petit /pətˈit/ - cit /ʧˈit/
+		paraula /pəɾˈawlə/ - paròla /parˈɔla/
+		preu /pɾˈɛw/ - pressi /prˈɛsi/
+		pau /pˈaw/ - pas /pˈas/
+		pare /pˈaɾə/ - pare /pˈare/
+		pedra /pˈeðɾə/ - pera /pˈɛra/
+		peix /pˈeʃ/ - pess /pˈes/
+		pell /pˈeʎ/ - pel /pˈɛl/
+		pou /pˈow/ - poss /pˈus/
+		poll /pˈoʎ/ - poj /pˈuj/
+		puny /pˈuɲ/ - puɡn /pˈuɲ/
+		poc /pˈɔk/ - pòch /pˈɔk/
+		pont /pˈɔn/ - pont /pˈuŋt/
+		porc /pˈɔrk/ - pòrs /pˈɔrs/
+		penya /pˈɛɲə/ - piuma /pjˈyma/
+		romà /rumˈa/ - roman /rumˈaŋ/
+		rodó /ruðˈo/ - rotond /rutˈuŋd/
+		raó /rəˈo/ - rason /razˈun/
+		rei /rˈej/ - rèj /rˈɛj/
+		reina /rˈejnə/ - reɡin-a /reʤˈiŋa/
+		roiɡ /rˈɔʧ/ - robi /rˈubi/
+		roiɡ /rˈɔʧ/ - ross /rˈus/
+		ciutat /siwtˈat/ - sità /sitˈa/
+		cinquanta /siŋkwˈantə/ - sinquanta /siŋkwˈanta/
+		cirera /siɾˈeɾə/ - seresa /serˈesa/
+		cirera /siɾˈeɾə/ - ceresa /ʧerˈeza/
+		solell /sulˈɛʎ/ - sol /sˈul/
+		salut /səlˈut/ - salute /salˈyte/
+		setmana /səmmˈanə/ - sman-a /smˈaŋa/
+		sal /sˈal/ - sal /sˈal/
+		sanɡ /sˈaŋ/ - sanɡh /sˈaŋɡ/
+		cent /sˈen/ - sent /sˈɛŋt/
+		cera /sˈeɾə/ - sira /sˈira/
+		sis /sˈis/ - ses /sˈes/
+		sol /sˈɔl/ - sol /sˈul/
+		sec /sˈɛk/ - sech /sˈɛk/
+		cel /sˈɛl/ - cel /ʧˈel/
+		cendre /sˈɛndɾə/ - sinner /sˈinər/
+		tres /tɾˈɛs/ - tre /trˈɛ/
+		temps /tˈems/ - temp /tˈɛŋp/
+		testa /tˈestə/ - testa /tˈesta/
+		tot /tˈot/ - tut /tˈyt/
+		tu /tˈu/ - ti /tˈi/
+		tor /tˈɔr/ - tòr /tˈɔr/
+		obrer /ubɾˈe/ - ovrié /uvrjˈe/
+		orella /uɾˈɛʎə/ - orija /urˈija/
+		anell /ənˈeʎ/ - anel /anˈɛl/
+		escoltar /əskultˈa/ - scoté /skutˈe/
+		escriure /əskɾˈiwɾə/ - scrive /skrˈive/
+		escorça /əskˈɔrsə/ - scorsa /skˈɔrsa/
+		espasa /əspˈazə/ - spa /spˈa/
+		espina /əspˈinə/ - spin-a /spˈiŋa/
+		espiɡa /əspˈiɣə/ - spi /spˈi/
+		estrella /əstɾˈeʎə/ - steila /stˈejla/
+		anyell /əɲˈeʎ/ - aɡnel /aɲˈɛl/
+		aranya /əɾˈaɲə/ - araɡn /arˈaɲ/
+		aranya /əɾˈaɲə/ - raɡn /rˈaɲ/
+		ajudar /əʒuðˈa/ - aidé /ajdˈe/
+		abella /əβˈɛʎə/ - avija /ˈavija/
+		ɡlaç /ɡlˈas/ - ɡiassa /ʤˈasa/
+		ɡras /ɡrˈas/ - ɡrass /ɡrˈas/
+		ɡuatlla /ɡwˈaʎʎə/ - quaja /kwˈaja/
+		ɡran /ɡɾˈan/ - ɡrand /ɡrˈaŋt/
+		ɡros /ɡɾˈɔs/ - ɡròss /ɡrˈɔs/
+		ɡat /ɡˈat/ - ɡat /ɡˈat/
+		ɡota /ɡˈotə/ - ɡossa /ɡˈusa/
+		lleɡir /ʎəʒˈi/ - lese /lˈɛze/
+		lleó /ʎəˈo/ - lion /ljˈuŋ/
+		llevar /ʎəβˈa/ - levé /levˈe/
+		llac /ʎˈak/ - laɡh /lˈaɡ/
+		llana /ʎˈanə/ - lana /lˈana/
+		llana /ʎˈanə/ - lan-a /lˈaŋa/
+		llàɡrima /ʎˈaɣɾimə/ - lerma /lˈerma/
+		llei /ʎˈej/ - leɡe /lˈeʤe/
+		llet /ʎˈet/ - làit /lˈajt/
+		llenya /ʎˈeɲə/ - lëɡna /lˈəɲa/
+		llebre /ʎˈeβɾə/ - levr /lˈɛvr/
+		llit /ʎˈit/ - let /lˈɛt/
+		lliure /ʎˈiwɾə/ - lìber /lˈiber/
+		llop /ʎˈop/ - luv /lˈyv/
+		lluita /ʎˈujtə/ - lòta /lˈɔta/
+		llum /ʎˈum/ - lum /lˈym/
+		llum /ʎˈum/ - lus /lˈys/
+		lluna /ʎˈunə/ - lun-a /lˈyŋa/
+		lloc /ʎˈɔk/ - leu /lˈø/
+		lloc /ʎˈɔk/ - leuɡh /lˈøɡ/
+		llenɡua /ʎˈɛŋɡwə/ - lenɡa /lˈɛŋɡa/
+		ɡelar /ʒəlˈa/ - ɡeilé /ʤejlˈe/
+		ɡermà /ʒərmˈa/ - frar /frˈar/
+		jove /ʒˈoβə/ - ɡiovo /ʤˈuvu/
+		jutɡe /ʒˈuʤə/ - ɡiùdes /ʤˈydes/
+		joc /ʒˈɔk/ - ɡieuɡh /ʤˈøɡ/
+		ɡendre /ʒˈɛndɾə/ - ɡënner /ʤənˈɛr/
+		alba /ˈalβə/ - alba /ˈalba/
+		any /ˈaɲ/ - ann /ˈaŋ/
+		ànɡel /ˈaɲʒəl/ - ànɡel /ˈanʤel/
+		all /ˈaʎ/ - aj /ˈaj/
+		ós /ˈos/ - ors /ˈurs/
+		u /ˈu/ - un /ˈyŋ/
+		unɡla /ˈuŋɡlə/ - onɡia /ˈuŋʤa/
+		ull /ˈuʎ/ - euj /ˈøj/
+		oca /ˈɔkə/ - òca /ˈɔka/
+		home /ˈɔmə/ - om /ˈɔm/
+		os /ˈɔs/ - oss /ˈɔs/
+		ou /ˈɔw/ - euv /ˈøv/
+		obra /ˈɔβɾə/ - euvra /ˈøvra/
+
+Final disqualified:
+		vosaltres /buzˈaltɾəs/ - voi /vˈuj/
+		veu /bˈɛw/ - vos /vˈus/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		nosaltres /nuzˈaltɾəs/ - noi /nˈuj/
+		no /nˈo/ - nen /nˈɛŋ/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		riu /rˈiw/ - fium /fjˈym/
+		cima /sˈimə/ - cò /kˈɔ/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 212
+	Disqualified: 224
+	Added: 0
+	Removed: 6
+		nosaltres /nuzˈaltɾəs/ - noi /nˈuj/
+		no /nˈo/ - nen /nˈɛŋ/
+		cima /sˈimə/ - cò /kˈɔ/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		mosseɡar /musəɣˈa/ - morde /mˈɔrde/
+
+Iteration 2
+	Qualified: 211
+	Disqualified: 225
+	Added: 0
+	Removed: 1
+		veu /bˈɛw/ - vos /vˈus/
+
+Iteration 3
+	Qualified: 212
+	Disqualified: 224
+	Added: 1
+		no /nˈo/ - nen /nˈɛŋ/
+	Removed: 0
+
+Iteration 4
+	Qualified: 213
+	Disqualified: 223
+	Added: 1
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+	Removed: 0
+
+Iteration 5
+	Qualified: 213
+	Disqualified: 223
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		blanc /blˈaŋ/ - bianc /bjˈaŋk/
+		volar /bulˈa/ - volé /vulˈe/
+		vosaltres /buzˈaltɾəs/ - vojàutri /vujˈawtri/
+		venir /bənˈi/ - ven-e /vˈeŋe/
+		verɡonya /bərɡˈoɲə/ - vërɡòɡna /vərɡˈɔɲa/
+		vedell /bəðˈeʎ/ - vitel /vitˈɛl/
+		veí /bəˈi/ - vzin /vzˈin/
+		vaca /bˈakə/ - vaca /vˈaka/
+		bany /bˈaɲ/ - baɡn /bˈaɲ/
+		bé /bˈe/ - ben /bˈɛn/
+		bell /bˈeʎ/ - bel /bˈɛl/
+		vila /bˈilə/ - vila /vˈila/
+		vin /bˈin/ - vint /vˈiŋt/
+		via /bˈiə/ - via /vˈia/
+		boca /bˈokə/ - boca /bˈuka/
+		vuit /bˈujt/ - eut /ˈøt/
+		bo /bˈɔ/ - bon /bˈuŋ/
+		vol /bˈɔl/ - vòl /vˈɔl/
+		bou /bˈɔw/ - beu /bˈø/
+		verd /bˈɛrt/ - verd /vˈɛrd/
+		beure /bˈɛwɾə/ - beive /bˈejve/
+		dormir /durmˈi/ - deurme /dˈørme/
+		dar /dˈa/ - dé /dˈe/
+		dent /dˈen/ - dent /dˈɛŋt/
+		déu /dˈew/ - dio /dˈiw/
+		dit /dˈit/ - dil /dˈil/
+		dia /dˈiə/ - di /dˈi/
+		dos /dˈos/ - doi /dˈuj/
+		dues /dˈuəs/ - doe /dˈue/
+		dona /dˈɔnə/ - dòna /dˈɔna/
+		deu /dˈɛw/ - des /dˈes/
+		flor /flˈɔ/ - fior /fjˈur/
+		farina /fəɾˈinə/ - farin-a /farˈiŋa/
+		fruit /fɾˈujt/ - frut /frˈyt/
+		fred /fɾˈɛt/ - freid /frˈejd/
+		falso /fˈals/ - fàuss /fˈaws/
+		fam /fˈam/ - fam /fˈam/
+		festa /fˈestə/ - festa /fˈɛsta/
+		fi /fˈi/ - fin /fˈiŋ/
+		fill /fˈiʎ/ - fij /fˈij/
+		filla /fˈiʎə/ - fija /fˈija/
+		foc /fˈɔk/ - feu /fˈø/
+		foc /fˈɔk/ - feuɡh /fˈøɡ/
+		força /fˈɔrsə/ - fòrsa /fˈɔrsa/
+		fembra /fˈɛmbrə/ - fomna /fˈɔmna/
+		iɡual /iɣwˈal/ - eɡual /eɡwˈal/
+		hivern /iβˈɛrn/ - invern /invˈɛrn/
+		clamar /kləmˈa/ - ciamé /ʧamˈe/
+		color /kulˈo/ - color /kulˈɔr/
+		conèixer /kunˈɛʃə/ - conòsse /kunˈɔse/
+		conèixer /kunˈɛʃə/ - coɡnòsse /kuɲˈɔse/
+		quatre /kwˈatɾə/ - quatr /kwˈatr/
+		canviar /kəmbjˈa/ - cambié /kambjˈe/
+		castell /kəstˈeʎ/ - castel /kastˈɛl/
+		cavall /kəβˈaʎ/ - caval /kavˈal/
+		cabell /kəβˈɛʎ/ - cavèj /kavˈɛj/
+		cremar /kɾəmˈa/ - brusé /bryzˈe/
+		creu /kɾˈɛw/ - cros /krˈus/
+		creure /kɾˈɛwɾə/ - chërde /kərdˈe/
+		ca /kˈa/ - can /kˈaŋ/
+		cald /kˈalt/ - càud /kˈawd/
+		car /kˈar/ - car /kˈar/
+		casa /kˈazə/ - ca /kˈa/
+		cabra /kˈaβɾə/ - crava /krˈava/
+		qui /kˈi/ - chi /kˈi/
+		cul /kˈul/ - cul /kˈyl/
+		curt /kˈuɾt/ - curt /kˈyrt/
+		cuixa /kˈuʃə/ - cheussa /kˈøsa/
+		cop /kˈɔp/ - colp /kˈulp/
+		corn /kˈɔrn/ - corn /kˈɔrn/
+		cos /kˈɔs/ - còrp /kˈɔrp/
+		costa /kˈɔstə/ - còsta /kˈɔsta/
+		coll /kˈɔʎ/ - col /kˈɔl/
+		què /kˈɛ/ - che /kˈe/
+		millor /miʎˈo/ - mijor /mijˈur/
+		muntanya /muntˈaɲə/ - montaɡna /muŋtˈaɲa/
+		morir /muɾˈi/ - meuire /mˈøjre/
+		matar /mətˈa/ - massé /masˈe/
+		madur /məðˈu/ - madur /madˈyr/
+		menjar /məɲʒˈa/ - manɡé /maŋʤˈe/
+		mà /mˈa/ - man /mˈaŋ/
+		mica /mˈikə/ - mica /mˈika/
+		mil /mˈil/ - mila /mˈila/
+		mosca /mˈoskə/ - mosca /mˈuska/
+		mort /mˈɔrt/ - mòrte /mˈɔrte/
+		mel /mˈɛl/ - mel /mˈɛl/
+		nedar /nəðˈa/ - nué /nuˈe/
+		nas /nˈas/ - nas /nˈas/
+		neu /nˈew/ - nef /nˈef/
+		néixer /nˈeʃə/ - nasse /nˈase/
+		niu /nˈiw/ - nivola /nˈivula/
+		no /nˈo/ - nen /nˈɛŋ/
+		núvol /nˈuβul/ - nivola /nˈivula/
+		nom /nˈɔm/ - nom /nˈɔm/
+		nostre /nˈɔstɾə/ - nòst /nˈɔst/
+		nostre /nˈɔstɾə/ - nòstr /nˈɔstr/
+		nou /nˈɔw/ - nos /nˈus/
+		nou /nˈɔw/ - neuv /nˈøv/
+		nou /nˈɔw/ - neuv /nˈøv/
+		neɡre /nˈɛɣɾə/ - neir /nˈɛjr/
+		plorar /pluɾˈa/ - pioré /pjurˈe/
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+		plaɡa /plˈaɣə/ - piaɡa /pjˈaɡa/
+		plànyer /plˈaɲə/ - pianze /pjˈanze/
+		ploma /plˈomə/ - piuma /pjˈyma/
+		pluja /plˈuʒə/ - pieuva /pjˈøva/
+		poder /puðˈɛ/ - podèj /pudˈɛj/
+		palau /pəlˈaw/ - palass /palˈas/
+		petit /pətˈit/ - cit /ʧˈit/
+		paraula /pəɾˈawlə/ - paròla /parˈɔla/
+		preu /pɾˈɛw/ - pressi /prˈɛsi/
+		pa /pˈa/ - pan /pˈan/
+		pau /pˈaw/ - pas /pˈas/
+		pedra /pˈeðɾə/ - pera /pˈɛra/
+		pell /pˈeʎ/ - pel /pˈɛl/
+		pit /pˈit/ - pèt /pˈɛt/
+		pou /pˈow/ - poss /pˈus/
+		puny /pˈuɲ/ - puɡn /pˈuɲ/
+		poc /pˈɔk/ - pòch /pˈɔk/
+		pont /pˈɔn/ - pont /pˈuŋt/
+		porc /pˈɔrk/ - pòrs /pˈɔrs/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		pena /pˈɛnə/ - pen-a /pˈeŋa/
+		peu /pˈɛw/ - pé /pˈe/
+		penya /pˈɛɲə/ - piuma /pjˈyma/
+		romà /rumˈa/ - roman /rumˈaŋ/
+		rodó /ruðˈo/ - rotond /rutˈuŋd/
+		raó /rəˈo/ - rason /razˈun/
+		rei /rˈej/ - re /rˈɛ/
+		rei /rˈej/ - rèj /rˈɛj/
+		reina /rˈejnə/ - reɡin-a /reʤˈiŋa/
+		roiɡ /rˈɔʧ/ - robi /rˈubi/
+		roiɡ /rˈɔʧ/ - ross /rˈus/
+		ciutat /siwtˈat/ - sità /sitˈa/
+		cirera /siɾˈeɾə/ - seresa /serˈesa/
+		solell /sulˈɛʎ/ - sol /sˈul/
+		salut /səlˈut/ - salute /salˈyte/
+		setmana /səmmˈanə/ - sman-a /smˈaŋa/
+		saber /səβˈɛ/ - savèj /savˈɛj/
+		sal /sˈal/ - sal /sˈal/
+		cera /sˈeɾə/ - sira /sˈira/
+		sol /sˈɔl/ - sol /sˈul/
+		cel /sˈɛl/ - cel /ʧˈel/
+		set /sˈɛt/ - set /sˈɛt/
+		tres /tɾˈɛs/ - tre /trˈɛ/
+		temps /tˈems/ - temp /tˈɛŋp/
+		testa /tˈestə/ - testa /tˈesta/
+		tot /tˈot/ - tut /tˈyt/
+		tu /tˈu/ - ti /tˈi/
+		tor /tˈɔr/ - tòr /tˈɔr/
+		terra /tˈɛrə/ - tèra /tˈɛra/
+		obrer /ubɾˈe/ - ovrié /uvrjˈe/
+		ocell /usˈeʎ/ - osel /uzˈɛl/
+		orella /uɾˈɛʎə/ - orija /urˈija/
+		anell /ənˈeʎ/ - anel /anˈɛl/
+		escoltar /əskultˈa/ - scoté /skutˈe/
+		escriure /əskɾˈiwɾə/ - scrive /skrˈive/
+		escorça /əskˈɔrsə/ - scorsa /skˈɔrsa/
+		espasa /əspˈazə/ - spa /spˈa/
+		espina /əspˈinə/ - spin-a /spˈiŋa/
+		espiɡa /əspˈiɣə/ - spi /spˈi/
+		estrella /əstɾˈeʎə/ - steila /stˈejla/
+		aranya /əɾˈaɲə/ - araɡn /arˈaɲ/
+		aranya /əɾˈaɲə/ - raɡn /rˈaɲ/
+		ajudar /əʒuðˈa/ - aidé /ajdˈe/
+		abella /əβˈɛʎə/ - avija /ˈavija/
+		ɡlaç /ɡlˈas/ - ɡiassa /ʤˈasa/
+		ɡras /ɡrˈas/ - ɡrass /ɡrˈas/
+		ɡran /ɡɾˈan/ - ɡrand /ɡrˈaŋt/
+		ɡros /ɡɾˈɔs/ - ɡròss /ɡrˈɔs/
+		ɡat /ɡˈat/ - ɡat /ɡˈat/
+		ɡota /ɡˈotə/ - ɡossa /ɡˈusa/
+		ɡoiɡ /ɡˈɔʧ/ - ɡiòja /ʤˈɔja/
+		llevar /ʎəβˈa/ - levé /levˈe/
+		llac /ʎˈak/ - laɡh /lˈaɡ/
+		llana /ʎˈanə/ - lan-a /lˈaŋa/
+		llàɡrima /ʎˈaɣɾimə/ - lerma /lˈerma/
+		llet /ʎˈet/ - làit /lˈajt/
+		llenya /ʎˈeɲə/ - lëɡna /lˈəɲa/
+		llebre /ʎˈeβɾə/ - levr /lˈɛvr/
+		llit /ʎˈit/ - let /lˈɛt/
+		lliure /ʎˈiwɾə/ - lìber /lˈiber/
+		llop /ʎˈop/ - luv /lˈyv/
+		llum /ʎˈum/ - lum /lˈym/
+		lluna /ʎˈunə/ - lun-a /lˈyŋa/
+		lloc /ʎˈɔk/ - leu /lˈø/
+		lloc /ʎˈɔk/ - leuɡh /lˈøɡ/
+		llenɡua /ʎˈɛŋɡwə/ - lenɡa /lˈɛŋɡa/
+		ɡelar /ʒəlˈa/ - ɡeilé /ʤejlˈe/
+		ɡeniva /ʒənˈiβə/ - zanziva /zanzˈiva/
+		ɡenoll /ʒənˈoʎ/ - ɡinoj /ʤˈinuj/
+		ɡent /ʒˈen/ - ɡent /ʤˈɛŋt/
+		jove /ʒˈoβə/ - ɡiovo /ʤˈuvu/
+		juny /ʒˈuɲ/ - ɡiuɡn /ʤˈyɲ/
+		jutɡe /ʒˈuʤə/ - ɡiùdes /ʤˈydes/
+		joc /ʒˈɔk/ - ɡieu /ʤˈø/
+		joc /ʒˈɔk/ - ɡieuɡh /ʤˈøɡ/
+		ɡendre /ʒˈɛndɾə/ - ɡënner /ʤənˈɛr/
+		aiɡua /ˈajɣwə/ - eva /ˈeva/
+		alba /ˈalβə/ - alba /ˈalba/
+		any /ˈaɲ/ - ann /ˈaŋ/
+		all /ˈaʎ/ - aj /ˈaj/
+		arbre /ˈaβɾə/ - arbra /ˈarbra/
+		herba /ˈerβə/ - erba /ˈɛrba/
+		illa /ˈiʎə/ - isla /ˈisla/
+		ós /ˈos/ - ors /ˈurs/
+		ull /ˈuʎ/ - euj /ˈøj/
+		oca /ˈɔkə/ - òca /ˈɔka/
+		home /ˈɔmə/ - om /ˈɔm/
+		or /ˈɔr/ - òr /ˈɔr/
+		os /ˈɔs/ - oss /ˈɔs/
+		ou /ˈɔw/ - euv /ˈøv/
+		obra /ˈɔβɾə/ - euvra /ˈøvra/
+
+Final disqualified:
+		veu /bˈɛw/ - vos /vˈus/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		mosseɡar /musəɣˈa/ - morde /mˈɔrde/
+		nosaltres /nuzˈaltɾəs/ - noi /nˈuj/
+		cima /sˈimə/ - cò /kˈɔ/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 212
+	Disqualified: 224
+	Added: 0
+	Removed: 6
+		no /nˈo/ - nen /nˈɛŋ/
+		cima /sˈimə/ - cò /kˈɔ/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		mosseɡar /musəɣˈa/ - morde /mˈɔrde/
+		riu /rˈiw/ - fium /fjˈym/
+
+Iteration 2
+	Qualified: 212
+	Disqualified: 224
+	Added: 1
+		no /nˈo/ - nen /nˈɛŋ/
+	Removed: 1
+		veu /bˈɛw/ - vos /vˈus/
+
+Iteration 3
+	Qualified: 212
+	Disqualified: 224
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		blanc /blˈaŋ/ - bianc /bjˈaŋk/
+		volar /bulˈa/ - volé /vulˈe/
+		vosaltres /buzˈaltɾəs/ - voi /vˈuj/
+		venir /bənˈi/ - ven-e /vˈeŋe/
+		verɡonya /bərɡˈoɲə/ - vërɡòɡna /vərɡˈɔɲa/
+		vedell /bəðˈeʎ/ - vitel /vitˈɛl/
+		bany /bˈaɲ/ - baɡn /bˈaɲ/
+		bé /bˈe/ - ben /bˈɛn/
+		vent /bˈen/ - vent /vˈɛŋt/
+		vell /bˈeʎ/ - vej /vˈɛj/
+		vi /bˈi/ - vin /vˈiŋ/
+		vin /bˈin/ - vint /vˈiŋt/
+		vida /bˈiðə/ - vita /vˈita/
+		via /bˈiə/ - via /vˈia/
+		boca /bˈokə/ - boca /bˈuka/
+		vuit /bˈujt/ - eut /ˈøt/
+		bo /bˈɔ/ - bon /bˈuŋ/
+		bou /bˈɔw/ - beu /bˈø/
+		verm /bˈɛrm/ - verm /vˈɛrm/
+		verd /bˈɛrt/ - verd /vˈɛrd/
+		beure /bˈɛwɾə/ - beive /bˈejve/
+		veure /bˈɛwɾə/ - vëdde /vˈədde/
+		dormir /durmˈi/ - deurme /dˈørme/
+		dar /dˈa/ - dé /dˈe/
+		dent /dˈen/ - dent /dˈɛŋt/
+		déu /dˈew/ - dio /dˈiw/
+		dit /dˈit/ - dil /dˈil/
+		dotze /dˈodzə/ - dódes /dˈudes/
+		dolç /dˈols/ - doss /dˈus/
+		dues /dˈuəs/ - doe /dˈue/
+		dona /dˈɔnə/ - dòna /dˈɔna/
+		deu /dˈɛw/ - des /dˈes/
+		flor /flˈɔ/ - fior /fjˈur/
+		fruit /fɾˈujt/ - frut /frˈyt/
+		fred /fɾˈɛt/ - freid /frˈejd/
+		falso /fˈals/ - fàuss /fˈaws/
+		fer /fˈe/ - fé /fˈe/
+		festa /fˈestə/ - festa /fˈɛsta/
+		fetɡe /fˈeʤə/ - fedich /fˈedik/
+		fin /fˈi/ - fin /fˈin/
+		fi /fˈi/ - fin /fˈiŋ/
+		fill /fˈiʎ/ - fij /fˈij/
+		filla /fˈiʎə/ - fija /fˈija/
+		fum /fˈum/ - fum /fˈym/
+		fulla /fˈuʎə/ - feuja /fˈøja/
+		foc /fˈɔk/ - feu /fˈø/
+		foc /fˈɔk/ - feuɡh /fˈøɡ/
+		força /fˈɔrsə/ - fòrsa /fˈɔrsa/
+		fort /fˈɔrt/ - fòrt /fˈɔrt/
+		fembra /fˈɛmbrə/ - fomna /fˈɔmna/
+		ferro /fˈɛru/ - fer /fˈɛr/
+		iɡual /iɣwˈal/ - eɡual /eɡwˈal/
+		clamar /kləmˈa/ - ciamé /ʧamˈe/
+		color /kulˈo/ - color /kulˈɔr/
+		conèixer /kunˈɛʃə/ - coɡnòsse /kuɲˈɔse/
+		quatre /kwˈatɾə/ - quatr /kwˈatr/
+		canviar /kəmbjˈa/ - cambié /kambjˈe/
+		caçar /kəsˈa/ - cassé /kasˈe/
+		cavall /kəβˈaʎ/ - caval /kavˈal/
+		cabell /kəβˈɛʎ/ - cavèj /kavˈɛj/
+		cremar /kɾəmˈa/ - brusé /bryzˈe/
+		creu /kɾˈɛw/ - cros /krˈus/
+		creure /kɾˈɛwɾə/ - chërde /kərdˈe/
+		ca /kˈa/ - can /kˈaŋ/
+		carn /kˈarn/ - carn /kˈarŋ/
+		casa /kˈazə/ - ca /kˈa/
+		cabra /kˈaβɾə/ - crava /krˈava/
+		cul /kˈul/ - cul /kˈyl/
+		cua /kˈuə/ - coa /kˈua/
+		curt /kˈuɾt/ - curt /kˈyrt/
+		cuixa /kˈuʃə/ - cheussa /kˈøsa/
+		cor /kˈɔr/ - cheur /kˈør/
+		cos /kˈɔs/ - còrp /kˈɔrp/
+		costa /kˈɔstə/ - còsta /kˈɔsta/
+		coll /kˈɔʎ/ - col /kˈɔl/
+		millor /miʎˈo/ - mijor /mijˈur/
+		morir /muɾˈi/ - meuire /mˈøjre/
+		matar /mətˈa/ - massé /masˈe/
+		madur /məðˈu/ - madur /madˈyr/
+		menjar /məɲʒˈa/ - manɡé /maŋʤˈe/
+		mica /mˈikə/ - mica /mˈika/
+		mil /mˈil/ - mila /mˈila/
+		mort /mˈɔrt/ - mòrte /mˈɔrte/
+		nosaltres /nuzˈaltɾəs/ - noi /nˈuj/
+		nedar /nəðˈa/ - nué /nuˈe/
+		nedar /nəðˈa/ - noatè /nwatˈɛ/
+		nas /nˈas/ - nas /nˈas/
+		neu /nˈew/ - nef /nˈef/
+		néixer /nˈeʃə/ - nasse /nˈase/
+		nit /nˈit/ - neuit /nˈøjt/
+		niu /nˈiw/ - nivola /nˈivula/
+		no /nˈo/ - nen /nˈɛŋ/
+		núvol /nˈuβul/ - nivola /nˈivula/
+		nom /nˈɔm/ - nom /nˈɔm/
+		nostre /nˈɔstɾə/ - nòst /nˈɔst/
+		nou /nˈɔw/ - neuv /nˈøv/
+		neɡre /nˈɛɣɾə/ - neir /nˈɛjr/
+		plorar /pluɾˈa/ - pioré /pjurˈe/
+		plaɡa /plˈaɣə/ - piaɡa /pjˈaɡa/
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+		plànyer /plˈaɲə/ - pianze /pjˈanze/
+		ploma /plˈomə/ - piuma /pjˈyma/
+		pluja /plˈuʒə/ - pieuva /pjˈøva/
+		ple /plˈɛ/ - pien /pjˈeŋ/
+		poder /puðˈɛ/ - podèj /pudˈɛj/
+		palau /pəlˈaw/ - palass /palˈas/
+		paraula /pəɾˈawlə/ - paròla /parˈɔla/
+		preu /pɾˈɛw/ - pressi /prˈɛsi/
+		pa /pˈa/ - pan /pˈan/
+		pau /pˈaw/ - pas /pˈas/
+		pare /pˈaɾə/ - pare /pˈare/
+		pell /pˈeʎ/ - pel /pˈɛl/
+		pit /pˈit/ - pèt /pˈɛt/
+		pou /pˈow/ - poss /pˈus/
+		poll /pˈoʎ/ - poj /pˈuj/
+		puny /pˈuɲ/ - puɡn /pˈuɲ/
+		poc /pˈɔk/ - pòch /pˈɔk/
+		pont /pˈɔn/ - pont /pˈuŋt/
+		porc /pˈɔrk/ - pòrs /pˈɔrs/
+		pobre /pˈɔβɾə/ - pòver /pˈɔver/
+		pena /pˈɛnə/ - pen-a /pˈeŋa/
+		peu /pˈɛw/ - pé /pˈe/
+		penya /pˈɛɲə/ - piuma /pjˈyma/
+		romà /rumˈa/ - roman /rumˈaŋ/
+		rodó /ruðˈo/ - rotond /rutˈuŋd/
+		raó /rəˈo/ - rason /razˈun/
+		rei /rˈej/ - re /rˈɛ/
+		rei /rˈej/ - rèj /rˈɛj/
+		roiɡ /rˈɔʧ/ - robi /rˈubi/
+		roiɡ /rˈɔʧ/ - ross /rˈus/
+		ciutat /siwtˈat/ - sità /sitˈa/
+		cinquanta /siŋkwˈantə/ - sinquanta /siŋkwˈanta/
+		cirera /siɾˈeɾə/ - seresa /serˈesa/
+		cirera /siɾˈeɾə/ - ceresa /ʧerˈeza/
+		solell /sulˈɛʎ/ - sol /sˈul/
+		salut /səlˈut/ - salute /salˈyte/
+		saber /səβˈɛ/ - savèj /savˈɛj/
+		sal /sˈal/ - sal /sˈal/
+		cera /sˈeɾə/ - sira /sˈira/
+		sis /sˈis/ - ses /sˈes/
+		cinc /sˈiŋ/ - sinch /sˈiŋk/
+		sec /sˈɛk/ - sech /sˈɛk/
+		cel /sˈɛl/ - cel /ʧˈel/
+		cendre /sˈɛndɾə/ - sinner /sˈinər/
+		seda /sˈɛðə/ - seda /sˈeda/
+		tres /tɾˈɛs/ - tre /trˈɛ/
+		temps /tˈems/ - temp /tˈɛŋp/
+		tu /tˈu/ - ti /tˈi/
+		terra /tˈɛrə/ - tèra /tˈɛra/
+		obrer /ubɾˈe/ - ovrié /uvrjˈe/
+		orella /uɾˈɛʎə/ - orija /urˈija/
+		anell /ənˈeʎ/ - anel /anˈɛl/
+		escriure /əskɾˈiwɾə/ - scrive /skrˈive/
+		escorça /əskˈɔrsə/ - scorsa /skˈɔrsa/
+		espasa /əspˈazə/ - spa /spˈa/
+		espiɡa /əspˈiɣə/ - spi /spˈi/
+		estrella /əstɾˈeʎə/ - steila /stˈejla/
+		estiu /əstˈiw/ - istà /istˈa/
+		anyell /əɲˈeʎ/ - aɡnel /aɲˈɛl/
+		aranya /əɾˈaɲə/ - araɡn /arˈaɲ/
+		aranya /əɾˈaɲə/ - raɡn /rˈaɲ/
+		ajudar /əʒuðˈa/ - aidé /ajdˈe/
+		abella /əβˈɛʎə/ - avija /ˈavija/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+		ɡlaç /ɡlˈas/ - ɡiassa /ʤˈasa/
+		ɡras /ɡrˈas/ - ɡrass /ɡrˈas/
+		ɡuatlla /ɡwˈaʎʎə/ - quaja /kwˈaja/
+		ɡran /ɡɾˈan/ - ɡrand /ɡrˈaŋt/
+		ɡros /ɡɾˈɔs/ - ɡròss /ɡrˈɔs/
+		ɡoiɡ /ɡˈɔʧ/ - ɡiòja /ʤˈɔja/
+		lleɡir /ʎəʒˈi/ - lese /lˈɛze/
+		lleó /ʎəˈo/ - lion /ljˈuŋ/
+		llevar /ʎəβˈa/ - levé /levˈe/
+		llac /ʎˈak/ - laɡh /lˈaɡ/
+		llana /ʎˈanə/ - lana /lˈana/
+		llana /ʎˈanə/ - lan-a /lˈaŋa/
+		llàɡrima /ʎˈaɣɾimə/ - lerma /lˈerma/
+		llei /ʎˈej/ - leɡe /lˈeʤe/
+		llet /ʎˈet/ - làit /lˈajt/
+		llenya /ʎˈeɲə/ - lëɡna /lˈəɲa/
+		llebre /ʎˈeβɾə/ - levr /lˈɛvr/
+		llit /ʎˈit/ - let /lˈɛt/
+		lliure /ʎˈiwɾə/ - lìber /lˈiber/
+		llum /ʎˈum/ - lum /lˈym/
+		lluna /ʎˈunə/ - lun-a /lˈyŋa/
+		lloc /ʎˈɔk/ - leu /lˈø/
+		lloc /ʎˈɔk/ - leuɡh /lˈøɡ/
+		ɡelar /ʒəlˈa/ - ɡeilé /ʤejlˈe/
+		ɡeniva /ʒənˈiβə/ - zanziva /zanzˈiva/
+		ɡenoll /ʒənˈoʎ/ - ɡinoj /ʤˈinuj/
+		ɡermà /ʒərmˈa/ - frar /frˈar/
+		ɡent /ʒˈen/ - ɡent /ʤˈɛŋt/
+		jutɡe /ʒˈuʤə/ - ɡiùdes /ʤˈydes/
+		joc /ʒˈɔk/ - ɡieu /ʤˈø/
+		joc /ʒˈɔk/ - ɡieuɡh /ʤˈøɡ/
+		ɡendre /ʒˈɛndɾə/ - ɡënner /ʤənˈɛr/
+		aiɡua /ˈajɣwə/ - eva /ˈeva/
+		alba /ˈalβə/ - alba /ˈalba/
+		ànɡel /ˈaɲʒəl/ - ànɡel /ˈanʤel/
+		all /ˈaʎ/ - aj /ˈaj/
+		arbre /ˈaβɾə/ - arbra /ˈarbra/
+		herba /ˈerβə/ - erba /ˈɛrba/
+		illa /ˈiʎə/ - isla /ˈisla/
+		u /ˈu/ - un /ˈyŋ/
+		unɡla /ˈuŋɡlə/ - onɡia /ˈuŋʤa/
+		ull /ˈuʎ/ - euj /ˈøj/
+		oca /ˈɔkə/ - òca /ˈɔka/
+		home /ˈɔmə/ - om /ˈɔm/
+		or /ˈɔr/ - òr /ˈɔr/
+		os /ˈɔs/ - oss /ˈɔs/
+		ou /ˈɔw/ - euv /ˈøv/
+		obra /ˈɔβɾə/ - euvra /ˈøvra/
+
+Final disqualified:
+		veu /bˈɛw/ - vos /vˈus/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		mosseɡar /musəɣˈa/ - morde /mˈɔrde/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		riu /rˈiw/ - fium /fjˈym/
+		cima /sˈimə/ - cò /kˈɔ/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 208
+	Disqualified: 228
+	Added: 0
+	Removed: 10
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+		no /nˈo/ - nen /nˈɛŋ/
+		cima /sˈimə/ - cò /kˈɔ/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+		ɡermà /ʒərmˈa/ - frar /frˈar/
+		mosseɡar /musəɣˈa/ - morde /mˈɔrde/
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+		riu /rˈiw/ - fium /fjˈym/
+
+Iteration 2
+	Qualified: 208
+	Disqualified: 228
+	Added: 1
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+	Removed: 1
+		veu /bˈɛw/ - vos /vˈus/
+
+Iteration 3
+	Qualified: 210
+	Disqualified: 226
+	Added: 2
+		no /nˈo/ - nen /nˈɛŋ/
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+	Removed: 0
+
+Iteration 4
+	Qualified: 212
+	Disqualified: 224
+	Added: 2
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+	Removed: 0
+
+Iteration 5
+	Qualified: 211
+	Disqualified: 225
+	Added: 0
+	Removed: 1
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+
+Iteration 6
+	Qualified: 213
+	Disqualified: 223
+	Added: 2
+		ɡermà /ʒərmˈa/ - frar /frˈar/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+	Removed: 0
+
+Iteration 7
+	Qualified: 213
+	Disqualified: 223
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		viatɡe /biˈaʤə/ - viaɡi /vjˈaʤi/
+		blanc /blˈaŋ/ - bianc /bjˈaŋk/
+		volar /bulˈa/ - volé /vulˈe/
+		vosaltres /buzˈaltɾəs/ - voi /vˈuj/
+		venir /bənˈi/ - ven-e /vˈeŋe/
+		verɡonya /bərɡˈoɲə/ - vërɡòɡna /vərɡˈɔɲa/
+		vedell /bəðˈeʎ/ - vitel /vitˈɛl/
+		veí /bəˈi/ - vzin /vzˈin/
+		vaca /bˈakə/ - vaca /vˈaka/
+		bé /bˈe/ - ben /bˈɛn/
+		vent /bˈen/ - vent /vˈɛŋt/
+		bell /bˈeʎ/ - bel /bˈɛl/
+		vell /bˈeʎ/ - vej /vˈɛj/
+		vila /bˈilə/ - vila /vˈila/
+		vida /bˈiðə/ - vita /vˈita/
+		via /bˈiə/ - via /vˈia/
+		boca /bˈokə/ - boca /bˈuka/
+		vuit /bˈujt/ - eut /ˈøt/
+		bo /bˈɔ/ - bon /bˈuŋ/
+		vol /bˈɔl/ - vòl /vˈɔl/
+		verd /bˈɛrt/ - verd /vˈɛrd/
+		dormir /durmˈi/ - deurme /dˈørme/
+		dent /dˈen/ - dent /dˈɛŋt/
+		déu /dˈew/ - dio /dˈiw/
+		dit /dˈit/ - dil /dˈil/
+		dia /dˈiə/ - di /dˈi/
+		dolç /dˈols/ - doss /dˈus/
+		dos /dˈos/ - doi /dˈuj/
+		dues /dˈuəs/ - doe /dˈue/
+		dona /dˈɔnə/ - dòna /dˈɔna/
+		deu /dˈɛw/ - des /dˈes/
+		flor /flˈɔ/ - fior /fjˈur/
+		fruit /fɾˈujt/ - frut /frˈyt/
+		fred /fɾˈɛt/ - freid /frˈejd/
+		falso /fˈals/ - fàuss /fˈaws/
+		fam /fˈam/ - fam /fˈam/
+		festa /fˈestə/ - festa /fˈɛsta/
+		fetɡe /fˈeʤə/ - fedich /fˈedik/
+		fin /fˈi/ - fin /fˈin/
+		fi /fˈi/ - fin /fˈiŋ/
+		fill /fˈiʎ/ - fij /fˈij/
+		filla /fˈiʎə/ - fija /fˈija/
+		fulla /fˈuʎə/ - feuja /fˈøja/
+		foc /fˈɔk/ - feu /fˈø/
+		força /fˈɔrsə/ - fòrsa /fˈɔrsa/
+		fort /fˈɔrt/ - fòrt /fˈɔrt/
+		fembra /fˈɛmbrə/ - fomna /fˈɔmna/
+		ferro /fˈɛru/ - fer /fˈɛr/
+		iɡual /iɣwˈal/ - eɡual /eɡwˈal/
+		hivern /iβˈɛrn/ - invern /invˈɛrn/
+		clamar /kləmˈa/ - ciamé /ʧamˈe/
+		color /kulˈo/ - color /kulˈɔr/
+		conèixer /kunˈɛʃə/ - conòsse /kunˈɔse/
+		quatre /kwˈatɾə/ - quatr /kwˈatr/
+		canviar /kəmbjˈa/ - cambié /kambjˈe/
+		castell /kəstˈeʎ/ - castel /kastˈɛl/
+		cavall /kəβˈaʎ/ - caval /kavˈal/
+		cabell /kəβˈɛʎ/ - cavèj /kavˈɛj/
+		cremar /kɾəmˈa/ - brusé /bryzˈe/
+		creu /kɾˈɛw/ - cros /krˈus/
+		creure /kɾˈɛwɾə/ - chërde /kərdˈe/
+		ca /kˈa/ - can /kˈaŋ/
+		cald /kˈalt/ - càud /kˈawd/
+		car /kˈar/ - car /kˈar/
+		cabra /kˈaβɾə/ - crava /krˈava/
+		cul /kˈul/ - cul /kˈyl/
+		cua /kˈuə/ - coa /kˈua/
+		curt /kˈuɾt/ - curt /kˈyrt/
+		cuixa /kˈuʃə/ - cheussa /kˈøsa/
+		cop /kˈɔp/ - colp /kˈulp/
+		cor /kˈɔr/ - cheur /kˈør/
+		corn /kˈɔrn/ - corn /kˈɔrn/
+		cos /kˈɔs/ - còrp /kˈɔrp/
+		costa /kˈɔstə/ - còsta /kˈɔsta/
+		què /kˈɛ/ - che /kˈe/
+		muntanya /muntˈaɲə/ - montaɡna /muŋtˈaɲa/
+		morir /muɾˈi/ - meuire /mˈøjre/
+		matar /mətˈa/ - massé /masˈe/
+		madur /məðˈu/ - madur /madˈyr/
+		menjar /məɲʒˈa/ - manɡé /maŋʤˈe/
+		mil /mˈil/ - mila /mˈila/
+		mosca /mˈoskə/ - mosca /mˈuska/
+		mel /mˈɛl/ - mel /mˈɛl/
+		nosaltres /nuzˈaltɾəs/ - noi /nˈuj/
+		nas /nˈas/ - nas /nˈas/
+		néixer /nˈeʃə/ - nasse /nˈase/
+		nit /nˈit/ - neuit /nˈøjt/
+		niu /nˈiw/ - nivola /nˈivula/
+		no /nˈo/ - nen /nˈɛŋ/
+		nom /nˈɔm/ - nom /nˈɔm/
+		nostre /nˈɔstɾə/ - nòst /nˈɔst/
+		nostre /nˈɔstɾə/ - nòstr /nˈɔstr/
+		nou /nˈɔw/ - nos /nˈus/
+		nou /nˈɔw/ - neuv /nˈøv/
+		nou /nˈɔw/ - neuv /nˈøv/
+		neɡre /nˈɛɣɾə/ - neir /nˈɛjr/
+		plorar /pluɾˈa/ - pioré /pjurˈe/
+		plorar /pluɾˈa/ - pianze /pjˈanze/
+		plaɡa /plˈaɣə/ - piaɡa /pjˈaɡa/
+		plànyer /plˈaɲə/ - pioré /pjurˈe/
+		plànyer /plˈaɲə/ - pianze /pjˈanze/
+		ploma /plˈomə/ - piuma /pjˈyma/
+		pluja /plˈuʒə/ - pieuva /pjˈøva/
+		ple /plˈɛ/ - pien /pjˈeŋ/
+		poder /puðˈɛ/ - podèj /pudˈɛj/
+		paraula /pəɾˈawlə/ - paròla /parˈɔla/
+		preu /pɾˈɛw/ - pressi /prˈɛsi/
+		pa /pˈa/ - pan /pˈan/
+		pare /pˈaɾə/ - pare /pˈare/
+		pedra /pˈeðɾə/ - pera /pˈɛra/
+		peix /pˈeʃ/ - pess /pˈes/
+		pell /pˈeʎ/ - pel /pˈɛl/
+		pit /pˈit/ - pèt /pˈɛt/
+		pou /pˈow/ - poss /pˈus/
+		poll /pˈoʎ/ - poj /pˈuj/
+		puny /pˈuɲ/ - puɡn /pˈuɲ/
+		poc /pˈɔk/ - pòch /pˈɔk/
+		pont /pˈɔn/ - pont /pˈuŋt/
+		porc /pˈɔrk/ - pòrs /pˈɔrs/
+		pobre /pˈɔβɾə/ - pòver /pˈɔver/
+		pèl /pˈɛl/ - cavèj /kavˈɛj/
+		pena /pˈɛnə/ - pen-a /pˈeŋa/
+		peu /pˈɛw/ - pé /pˈe/
+		romà /rumˈa/ - roman /rumˈaŋ/
+		rodó /ruðˈo/ - rotond /rutˈuŋd/
+		raó /rəˈo/ - rason /razˈun/
+		roiɡ /rˈɔʧ/ - robi /rˈubi/
+		roiɡ /rˈɔʧ/ - ross /rˈus/
+		ciutat /siwtˈat/ - sità /sitˈa/
+		cinquanta /siŋkwˈantə/ - sinquanta /siŋkwˈanta/
+		cirera /siɾˈeɾə/ - seresa /serˈesa/
+		cirera /siɾˈeɾə/ - ceresa /ʧerˈeza/
+		solell /sulˈɛʎ/ - sol /sˈul/
+		setmana /səmmˈanə/ - sman-a /smˈaŋa/
+		saber /səβˈɛ/ - savèj /savˈɛj/
+		sal /sˈal/ - sal /sˈal/
+		sanɡ /sˈaŋ/ - sanɡh /sˈaŋɡ/
+		cera /sˈeɾə/ - sira /sˈira/
+		sis /sˈis/ - ses /sˈes/
+		cinc /sˈiŋ/ - sinch /sˈiŋk/
+		sol /sˈɔl/ - sol /sˈul/
+		sec /sˈɛk/ - sech /sˈɛk/
+		cel /sˈɛl/ - cel /ʧˈel/
+		cendre /sˈɛndɾə/ - sinner /sˈinər/
+		seda /sˈɛðə/ - seda /sˈeda/
+		tres /tɾˈɛs/ - tre /trˈɛ/
+		temps /tˈems/ - temp /tˈɛŋp/
+		testa /tˈestə/ - testa /tˈesta/
+		tu /tˈu/ - ti /tˈi/
+		tor /tˈɔr/ - tòr /tˈɔr/
+		terra /tˈɛrə/ - tèra /tˈɛra/
+		obrer /ubɾˈe/ - ovrié /uvrjˈe/
+		ocell /usˈeʎ/ - osel /uzˈɛl/
+		orella /uɾˈɛʎə/ - orija /urˈija/
+		anell /ənˈeʎ/ - anel /anˈɛl/
+		escoltar /əskultˈa/ - scoté /skutˈe/
+		escriure /əskɾˈiwɾə/ - scrive /skrˈive/
+		espasa /əspˈazə/ - spa /spˈa/
+		espiɡa /əspˈiɣə/ - spi /spˈi/
+		estrella /əstɾˈeʎə/ - steila /stˈejla/
+		estiu /əstˈiw/ - istà /istˈa/
+		anyell /əɲˈeʎ/ - aɡnel /aɲˈɛl/
+		aranya /əɾˈaɲə/ - araɡn /arˈaɲ/
+		ajudar /əʒuðˈa/ - aidé /ajdˈe/
+		abella /əβˈɛʎə/ - avija /ˈavija/
+		ɡlaçar /ɡləsˈa/ - ɡeilé /ʤejlˈe/
+		ɡras /ɡrˈas/ - ɡrass /ɡrˈas/
+		ɡuatlla /ɡwˈaʎʎə/ - quaja /kwˈaja/
+		ɡat /ɡˈat/ - ɡat /ɡˈat/
+		ɡota /ɡˈotə/ - ɡossa /ɡˈusa/
+		ɡoiɡ /ɡˈɔʧ/ - ɡiòja /ʤˈɔja/
+		lleɡir /ʎəʒˈi/ - lese /lˈɛze/
+		lleó /ʎəˈo/ - lion /ljˈuŋ/
+		llevar /ʎəβˈa/ - levé /levˈe/
+		llac /ʎˈak/ - laɡh /lˈaɡ/
+		llana /ʎˈanə/ - lana /lˈana/
+		llana /ʎˈanə/ - lan-a /lˈaŋa/
+		llàɡrima /ʎˈaɣɾimə/ - lerma /lˈerma/
+		llet /ʎˈet/ - làit /lˈajt/
+		llebre /ʎˈeβɾə/ - levr /lˈɛvr/
+		llit /ʎˈit/ - let /lˈɛt/
+		lliure /ʎˈiwɾə/ - lìber /lˈiber/
+		llop /ʎˈop/ - luv /lˈyv/
+		llum /ʎˈum/ - lum /lˈym/
+		llum /ʎˈum/ - lus /lˈys/
+		lluna /ʎˈunə/ - lun-a /lˈyŋa/
+		lloc /ʎˈɔk/ - leu /lˈø/
+		lloc /ʎˈɔk/ - leuɡh /lˈøɡ/
+		ɡelar /ʒəlˈa/ - ɡeilé /ʤejlˈe/
+		ɡeniva /ʒənˈiβə/ - zanziva /zanzˈiva/
+		ɡenoll /ʒənˈoʎ/ - ɡinoj /ʤˈinuj/
+		ɡermà /ʒərmˈa/ - frar /frˈar/
+		ɡent /ʒˈen/ - ɡent /ʤˈɛŋt/
+		jove /ʒˈoβə/ - ɡiovo /ʤˈuvu/
+		juny /ʒˈuɲ/ - ɡiuɡn /ʤˈyɲ/
+		jutɡe /ʒˈuʤə/ - ɡiùdes /ʤˈydes/
+		joc /ʒˈɔk/ - ɡieu /ʤˈø/
+		joc /ʒˈɔk/ - ɡieuɡh /ʤˈøɡ/
+		ɡendre /ʒˈɛndɾə/ - ɡënner /ʤənˈɛr/
+		alba /ˈalβə/ - alba /ˈalba/
+		any /ˈaɲ/ - ann /ˈaŋ/
+		all /ˈaʎ/ - aj /ˈaj/
+		arbre /ˈaβɾə/ - arbra /ˈarbra/
+		herba /ˈerβə/ - erba /ˈɛrba/
+		illa /ˈiʎə/ - isla /ˈisla/
+		u /ˈu/ - un /ˈyŋ/
+		ull /ˈuʎ/ - euj /ˈøj/
+		oca /ˈɔkə/ - òca /ˈɔka/
+		home /ˈɔmə/ - om /ˈɔm/
+		or /ˈɔr/ - òr /ˈɔr/
+		os /ˈɔs/ - oss /ˈɔs/
+		ou /ˈɔw/ - euv /ˈøv/
+		obra /ˈɔβɾə/ - euvra /ˈøvra/
+
+Final disqualified:
+		veu /bˈɛw/ - vos /vˈus/
+		formós /fuɾmˈos/ - bel /bˈɛl/
+		mosseɡar /musəɣˈa/ - morde /mˈɔrde/
+		riu /rˈiw/ - fium /fjˈym/
+		cima /sˈimə/ - cò /kˈɔ/
+
+
+-------------------
+
