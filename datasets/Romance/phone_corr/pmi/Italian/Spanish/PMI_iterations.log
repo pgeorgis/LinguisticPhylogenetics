@@ -1,0 +1,1678 @@
+Same meaning pairs: 315
+****SAMPLE 1****
+Iteration 1
+	Qualified: 231
+	Disqualified: 273
+	Added: 0
+	Removed: 21
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+		uomo /wˈɔmo/ - hombre /ˈombɾe/
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		bello /bˈɛllo/ - hermoso /eɾmˈoso/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		fratello /fratˈɛllo/ - hermano /eɾmˈano/
+		lui /lˈui/ - él /ˈel/
+		naso /nˈazo/ - nariz /naɾˈiθ/
+		fare /fˈare/ - hacer /aθˈeɾ/
+		fiume /fjˈume/ - río /rˈio/
+		eɡli /ˈeʎʎi/ - él /ˈel/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		cenere /ʧˈenere/ - ceniza /θenˈiθa/
+		chi /kˈi/ - quien /kjˈen/
+		io /ˈio/ - yo /ɟ͡ʝˈo/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+
+Iteration 2
+	Qualified: 228
+	Disqualified: 276
+	Added: 1
+		uomo /wˈɔmo/ - hombre /ˈombɾe/
+	Removed: 4
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		dio /dˈio/ - dios /djˈos/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+
+Iteration 3
+	Qualified: 230
+	Disqualified: 274
+	Added: 2
+		dio /dˈio/ - dios /djˈos/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+	Removed: 0
+
+Iteration 4
+	Qualified: 236
+	Disqualified: 268
+	Added: 6
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		chi /kˈi/ - quien /kjˈen/
+		cenere /ʧˈenere/ - ceniza /θenˈiθa/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		porre /pˈorre/ - poner /ponˈeɾ/
+	Removed: 0
+
+Iteration 5
+	Qualified: 234
+	Disqualified: 270
+	Added: 0
+	Removed: 2
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		porre /pˈorre/ - poner /ponˈeɾ/
+
+Iteration 6
+	Qualified: 236
+	Disqualified: 268
+	Added: 2
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		porre /pˈorre/ - poner /ponˈeɾ/
+	Removed: 0
+
+Final qualifying:
+		aiutare /ajutˈare/ - ayudar /aʝuðˈaɾ/
+		aiuto /ajˈuto/ - ayudo /aʝˈuðo/
+		anello /anˈɛllo/ - anillo /anˈiʝo/
+		arɡilla /arʤˈilla/ - arcilla /aɾθˈiʝa/
+		arena /arˈena/ - arena /aɾˈena/
+		ascoltare /askoltˈare/ - escuchar /eskuʧˈaɾ/
+		autunno /awtˈunno/ - otoño /otˈoɲo/
+		bianco /bjˈaŋko/ - blanco /blˈaŋko/
+		bruciare /bruʧˈare/ - quemar /kemˈaɾ/
+		buone /bwˈɔne/ - buenas /bwˈenas/
+		buono /bwˈɔno/ - bueno /bwˈeno/
+		basso /bˈasso/ - bajo /bˈaxo/
+		baɡno /bˈaɲɲo/ - baño /bˈaɲo/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bocca /bˈokka/ - boca /bˈoka/
+		bene /bˈɛne/ - bien /bjˈen/
+		dieci /djˈɛʧi/ - diez /djˈeθ/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		dare /dˈare/ - dar /dˈaɾ/
+		dì /dˈi/ - día /dˈia/
+		dico /dˈiko/ - diɡo /dˈiɣo/
+		dio /dˈio/ - dios /djˈos/
+		dire /dˈire/ - decir /deθˈiɾ/
+		dolce /dˈolʧe/ - dulce /dˈulθe/
+		dona /dˈona/ - dona /dˈona/
+		farina /farˈina/ - harina /aɾˈina/
+		fiamma /fjˈamma/ - llama /ɟ͡ʝˈama/
+		freddo /frˈeddo/ - frío /fɾˈio/
+		fronza /frˈonʣa/ - hoja /ˈoxa/
+		fuoco /fwˈɔko/ - fueɡo /fwˈeɣo/
+		fame /fˈame/ - hambre /ˈambɾe/
+		fata /fˈata/ - hada /ˈaða/
+		faccio /fˈaʧʧo/ - haɡo /ˈaɣo/
+		feɡato /fˈeɡato/ - híɡado /ˈiɣaðo/
+		filo /fˈilo/ - hilo /ˈilo/
+		fine /fˈine/ - fin /fˈin/
+		fiɡlia /fˈiʎʎa/ - hija /ˈixa/
+		fiɡlio /fˈiʎʎo/ - hijo /ˈixo/
+		fumo /fˈumo/ - humo /ˈumo/
+		forza /fˈɔrʦa/ - fuerza /fwˈeɾθa/
+		foɡlia /fˈɔʎʎa/ - hoja /ˈoxa/
+		ferro /fˈɛrro/ - hierro /jˈero/
+		inverno /invˈɛrno/ - invierno /imbjˈeɾno/
+		cambiare /kambjˈare/ - cambiar /kambjˈaɾ/
+		capello /kapˈello/ - pelo /pˈelo/
+		castello /kastˈɛllo/ - castillo /kastˈiʝo/
+		catena /katˈena/ - cadena /kaðˈena/
+		cavallo /kavˈallo/ - caballo /kaβˈaʝo/
+		cacciare /kaʧʧˈare/ - cazar /kaθˈaɾ/
+		chiamare /kjamˈare/ - llamar /ɟ͡ʝamˈaɾ/
+		chiave /kjˈave/ - llave /ɟ͡ʝˈaβe/
+		colore /kolˈore/ - color /kolˈoɾ/
+		conoscere /konˈoʃʃere/ - conocer /konoθˈeɾ/
+		corteccia /kortˈeʧʧa/ - corteza /koɾtˈeθa/
+		credere /krˈedere/ - creer /kɾeˈeɾ/
+		croce /krˈoʧe/ - cruz /kɾˈuθ/
+		quattro /kwˈattro/ - cuatro /kwˈatɾo/
+		caldo /kˈaldo/ - caldo /kˈaldo/
+		cane /kˈane/ - can /kˈan/
+		canto /kˈanto/ - canto /kˈanto/
+		capo /kˈapo/ - cabo /kˈaβo/
+		capra /kˈapra/ - cabra /kˈaβɾa/
+		carne /kˈarne/ - carne /kˈaɾne/
+		caro /kˈaro/ - caro /kˈaɾo/
+		casa /kˈaza/ - casa /kˈasa/
+		che /kˈe/ - que /kˈe/
+		chi /kˈi/ - quien /kjˈen/
+		corto /kˈorto/ - corto /kˈoɾto/
+		culo /kˈulo/ - culo /kˈulo/
+		conio /kˈɔnjo/ - cuño /kˈuɲo/
+		corno /kˈɔrno/ - cuerno /kwˈeɾno/
+		corpo /kˈɔrpo/ - cuerpo /kwˈeɾpo/
+		cosa /kˈɔza/ - cosa /kˈosa/
+		levare /levˈare/ - llevar /ɟ͡ʝeβˈaɾ/
+		leone /leˈone/ - león /leˈon/
+		lacrima /lˈakrima/ - láɡrima /lˈaɣɾima/
+		lana /lˈana/ - lana /lˈana/
+		laɡo /lˈaɡo/ - laɡo /lˈaɣo/
+		leɡna /lˈeɲɲa/ - leño /lˈeɲo/
+		leɡno /lˈeɲɲo/ - leño /lˈeɲo/
+		leɡɡe /lˈeʤʤe/ - ley /lˈej/
+		linɡua /lˈiŋɡwa/ - lenɡua /lˈeŋɡwa/
+		lume /lˈume/ - luz /lˈuθ/
+		luna /lˈuna/ - luna /lˈuna/
+		luce /lˈuʧe/ - luz /lˈuθ/
+		lotta /lˈɔtta/ - lucha /lˈuʧa/
+		lepre /lˈɛpre/ - liebre /ljˈeβɾe/
+		letto /lˈɛtto/ - lecho /lˈeʧo/
+		leɡɡere /lˈɛʤʤere/ - leer /leˈeɾ/
+		maturo /matˈuro/ - maduro /maðˈuɾo/
+		metà /metˈa/ - mitad /mitˈað/
+		miɡliore /miʎʎˈore/ - mejor /mexˈoɾ/
+		miele /mjˈɛle/ - miel /mjˈel/
+		montaɡna /montˈaɲɲa/ - montaña /montˈaɲa/
+		morsicare /morsikˈare/ - morder /moɾðˈeɾ/
+		morire /morˈire/ - morir /moɾˈiɾ/
+		madre /mˈadre/ - madre /mˈaðɾe/
+		mano /mˈano/ - mano /mˈano/
+		mare /mˈare/ - mar /mˈaɾ/
+		me /mˈe/ - me /mˈe/
+		mille /mˈille/ - mil /mˈil/
+		molto /mˈolto/ - mucho /mˈuʧo/
+		mosca /mˈoska/ - mosca /mˈoska/
+		mordere /mˈɔrdere/ - morder /moɾðˈeɾ/
+		morte /mˈɔrte/ - muerte /mwˈeɾte/
+		nessuno /nessˈuno/ - ninɡuno /niŋɡˈuno/
+		non /non/ - no /no/
+		nuovo /nwˈɔvo/ - nuevo /nwˈeβo/
+		nascere /nˈaʃʃere/ - nacer /naθˈeɾ/
+		nebbia /nˈebbja/ - niebla /njˈeβla/
+		neve /nˈeve/ - nieve /njˈeβe/
+		noce /nˈoʧe/ - nuez /nwˈeθ/
+		nuvola /nˈuvola/ - nube /nˈuβe/
+		notte /nˈɔtte/ - noche /nˈoʧe/
+		nove /nˈɔve/ - nueve /nwˈeβe/
+		odore /odˈore/ - olor /olˈoɾ/
+		ombelico /ombelˈiko/ - ombliɡo /omblˈiɣo/
+		operaio /operˈajo/ - obrero /oβɾˈeɾo/
+		parola /parˈɔla/ - palabra /palˈaβɾa/
+		pidocchio /pidˈɔkkjo/ - piojo /pjˈoxo/
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		piaɡa /pjˈaɡa/ - llaɡa /ɟ͡ʝˈaɣa/
+		piuma /pjˈuma/ - peña /pˈeɲa/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		piede /pjˈɛde/ - pie /pjˈe/
+		pieno /pjˈɛno/ - lleno /ɟ͡ʝˈeno/
+		potere /potˈere/ - poder /poðˈeɾ/
+		pelo /pˈelo/ - cabello /kaβˈeʝo/
+		pelo /pˈelo/ - pelo /pˈelo/
+		pena /pˈena/ - pena /pˈena/
+		penna /pˈenna/ - peña /pˈeɲa/
+		pesce /pˈeʃʃe/ - pez /pˈeθ/
+		piccolo /pˈikkolo/ - pequeño /pekˈeɲo/
+		ponte /pˈonte/ - puente /pwˈente/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		punto /pˈunto/ - punto /pˈunto/
+		puɡno /pˈuɲɲo/ - puño /pˈuɲo/
+		poco /pˈɔko/ - poco /pˈoko/
+		porco /pˈɔrko/ - puerco /pwˈeɾko/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		pelle /pˈɛlle/ - piel /pjˈel/
+		pesca /pˈɛska/ - prisco /pɾˈisko/
+		petto /pˈɛtto/ - pecho /pˈeʧo/
+		radice /radˈiʧe/ - raíz /raˈiθ/
+		raɡione /raʤˈone/ - razón /raθˈon/
+		romano /romˈano/ - romano /romˈano/
+		re /rˈe/ - rey /rˈej/
+		rio /rˈio/ - río /rˈio/
+		robbio /rˈobbjo/ - rubio /rˈuβjo/
+		rosso /rˈosso/ - rojo /rˈoxo/
+		rosso /rˈosso/ - rubio /rˈuβjo/
+		salute /salˈute/ - salud /salˈuð/
+		sapere /sapˈere/ - saber /saβˈeɾ/
+		sedere /sedˈere/ - sentar /sentˈaɾ/
+		semente /semˈente/ - semilla /semˈiʝa/
+		settimana /settimˈana/ - semana /semˈana/
+		sicuro /sikˈuro/ - seɡuro /seɣˈuɾo/
+		scrivere /skrˈivere/ - escribir /eskɾiβˈiɾ/
+		scuro /skˈuro/ - escuro /eskˈuɾo/
+		scuro /skˈuro/ - oscuro /oskˈuɾo/
+		scorza /skˈɔrʦa/ - corteza /koɾtˈeθa/
+		Spaɡna /spˈaɲɲa/ - España /espˈaɲa/
+		spina /spˈina/ - espina /espˈina/
+		spiɡa /spˈiɡa/ - espiɡa /espˈiɣa/
+		stato /stˈato/ - estado /estˈaðo/
+		stella /stˈella/ - estrella /estɾˈeʝa/
+		sabbia /sˈabbja/ - sable /sˈaβle/
+		sai /sˈaj/ - sabes /sˈaβes/
+		sale /sˈale/ - sal /sˈal/
+		salsa /sˈalsa/ - salsa /sˈalsa/
+		sana /sˈana/ - sana /sˈana/
+		sano /sˈano/ - sano /sˈano/
+		sappia /sˈappja/ - sepa /sˈepa/
+		savio /sˈavjo/ - sabio /sˈaβjo/
+		secco /sˈekko/ - seco /sˈeko/
+		seta /sˈeta/ - seda /sˈeða/
+		sole /sˈole/ - sol /sˈol/
+		sopra /sˈopra/ - sobre /sˈoβɾe/
+		sette /sˈɛtte/ - siete /sjˈete/
+		tre /trˈe/ - tres /tɾˈes/
+		tondo /tˈondo/ - redondo /reðˈondo/
+		tu /tˈu/ - tú /tˈu/
+		tuto /tˈutto/ - todo /tˈoðo/
+		tempo /tˈɛmpo/ - tiempo /tjˈempo/
+		terra /tˈɛrra/ - tierra /tjˈera/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		venire /venˈire/ - venir /benˈiɾ/
+		verɡoɡna /verɡˈoɲɲa/ - verɡüenza /beɾɣwˈenθa/
+		villano /villˈano/ - villano /biʝˈano/
+		vicino /viʧˈino/ - vecino /beθˈino/
+		volare /volˈare/ - volar /bolˈaɾ/
+		venti /vˈenti/ - veinte /bˈejnte/
+		verde /vˈerde/ - verde /bˈeɾðe/
+		via /vˈia/ - vía /bˈia/
+		villa /vˈilla/ - villa /bˈiʝa/
+		vino /vˈino/ - vino /bˈino/
+		vita /vˈita/ - vida /bˈiða/
+		voce /vˈoʧe/ - voz /bˈoθ/
+		vento /vˈɛnto/ - viento /bjˈento/
+		ventre /vˈɛntre/ - vientre /bjˈentɾe/
+		venɡo /vˈɛŋɡo/ - venɡo /bˈeŋɡo/
+		uomo /wˈɔmo/ - hombre /ˈombɾe/
+		uovo /wˈɔvo/ - huevo /wˈeβo/
+		ɡrano /ɡrˈano/ - ɡrano /ɡɾˈano/
+		ɡrasso /ɡrˈasso/ - ɡrasa /ɡɾˈasa/
+		ɡrosso /ɡrˈɔsso/ - ɡrueso /ɡɾwˈeso/
+		ɡatto /ɡˈatto/ - ɡato /ɡˈato/
+		ɡola /ɡˈola/ - ɡola /ɡˈola/
+		ɡelare /ʤelˈare/ - helar /elˈaɾ/
+		ɡenɡiva /ʤenʤˈiva/ - encía /enθˈia/
+		ɡermano /ʤermˈano/ - hermano /eɾmˈano/
+		ɡiovane /ʤˈovane/ - joven /xˈoβen/
+		ɡiunto /ʤˈunto/ - junto /xˈunto/
+		ɡioco /ʤˈɔko/ - jueɡo /xwˈeɣo/
+		ɡente /ʤˈɛnte/ - ɡente /xˈente/
+		città /ʧittˈa/ - ciudad /θjuðˈað/
+		cinquanta /ʧiŋkwˈanta/ - cincuenta /θiŋkwˈenta/
+		cenere /ʧˈenere/ - ceniza /θenˈiθa/
+		cima /ʧˈima/ - cima /θˈima/
+		cielo /ʧˈɛlo/ - cielo /θjˈelo/
+		cento /ʧˈɛnto/ - ciento /θjˈento/
+		acqua /ˈakkwa/ - aɡua /ˈaɣwa/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+		alma /ˈalma/ - alma /ˈalma/
+		altro /ˈaltro/ - otro /ˈotɾo/
+		anno /ˈanno/ - año /ˈaɲo/
+		isola /ˈizola/ - isla /ˈisla/
+		orso /ˈorso/ - oso /ˈoso/
+		uno /ˈuno/ - uno /ˈuno/
+		oca /ˈɔka/ - oca /ˈoka/
+		occhi /ˈɔkki/ - ojos /ˈoxos/
+		occhio /ˈɔkkjo/ - ojo /ˈoxo/
+		oro /ˈɔro/ - oro /ˈoɾo/
+		osso /ˈɔsso/ - hueso /wˈeso/
+		otto /ˈɔtto/ - ocho /ˈoʧo/
+		erba /ˈɛrba/ - hierba /jˈeɾβa/
+
+Final disqualified:
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		bello /bˈɛllo/ - hermoso /eɾmˈoso/
+		fiume /fjˈume/ - río /rˈio/
+		fratello /fratˈɛllo/ - hermano /eɾmˈano/
+		fare /fˈare/ - hacer /aθˈeɾ/
+		lui /lˈui/ - él /ˈel/
+		naso /nˈazo/ - nariz /naɾˈiθ/
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+		eɡli /ˈeʎʎi/ - él /ˈel/
+		io /ˈio/ - yo /ɟ͡ʝˈo/
+
+
+-------------------
+
+****SAMPLE 2****
+Iteration 1
+	Qualified: 224
+	Disqualified: 280
+	Added: 0
+	Removed: 28
+		bruciare /bruʧˈare/ - quemar /kemˈaɾ/
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+		ɡiorno /ʤˈorno/ - día /dˈia/
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		arena /arˈena/ - sable /sˈaβle/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		ape /ˈape/ - abeja /aβˈexa/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		bello /bˈɛllo/ - hermoso /eɾmˈoso/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		lui /lˈui/ - él /ˈel/
+		naso /nˈazo/ - nariz /naɾˈiθ/
+		fare /fˈare/ - hacer /aθˈeɾ/
+		ventre /vˈɛntre/ - panza /pˈanθa/
+		lei /lˈɛj/ - ella /ˈeʝa/
+		fiume /fjˈume/ - río /rˈio/
+		leɡɡere /lˈɛʤʤere/ - leer /leˈeɾ/
+		occhi /ˈɔkki/ - ojos /ˈoxos/
+		eɡli /ˈeʎʎi/ - él /ˈel/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		chi /kˈi/ - quien /kjˈen/
+		io /ˈio/ - yo /ɟ͡ʝˈo/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+
+Iteration 2
+	Qualified: 222
+	Disqualified: 282
+	Added: 2
+		occhi /ˈɔkki/ - ojos /ˈoxos/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+	Removed: 4
+		dio /dˈio/ - dios /djˈos/
+		nascere /nˈaʃʃere/ - nacer /naθˈeɾ/
+		autunno /awtˈunno/ - otoño /otˈoɲo/
+		faccio /fˈaʧʧo/ - haɡo /ˈaɣo/
+
+Iteration 3
+	Qualified: 225
+	Disqualified: 279
+	Added: 6
+		autunno /awtˈunno/ - otoño /otˈoɲo/
+		faccio /fˈaʧʧo/ - haɡo /ˈaɣo/
+		dio /dˈio/ - dios /djˈos/
+		lei /lˈɛj/ - ella /ˈeʝa/
+		nascere /nˈaʃʃere/ - nacer /naθˈeɾ/
+		leɡɡere /lˈɛʤʤere/ - leer /leˈeɾ/
+	Removed: 3
+		occhi /ˈɔkki/ - ojos /ˈoxos/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+		occhio /ˈɔkkjo/ - ojo /ˈoxo/
+
+Iteration 4
+	Qualified: 227
+	Disqualified: 277
+	Added: 3
+		porre /pˈorre/ - poner /ponˈeɾ/
+		occhio /ˈɔkkjo/ - ojo /ˈoxo/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+	Removed: 1
+		dio /dˈio/ - dios /djˈos/
+
+Iteration 5
+	Qualified: 229
+	Disqualified: 275
+	Added: 3
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		dio /dˈio/ - dios /djˈos/
+	Removed: 1
+		porre /pˈorre/ - poner /ponˈeɾ/
+
+Iteration 6
+	Qualified: 230
+	Disqualified: 274
+	Added: 1
+		chi /kˈi/ - quien /kjˈen/
+	Removed: 0
+
+Iteration 7
+	Qualified: 231
+	Disqualified: 273
+	Added: 1
+		porre /pˈorre/ - poner /ponˈeɾ/
+	Removed: 0
+
+Iteration 8
+	Qualified: 232
+	Disqualified: 272
+	Added: 1
+		occhi /ˈɔkki/ - ojos /ˈoxos/
+	Removed: 0
+
+Iteration 9
+	Qualified: 232
+	Disqualified: 272
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		aiutare /ajutˈare/ - ayudar /aʝuðˈaɾ/
+		aiuto /ajˈuto/ - ayudo /aʝˈuðo/
+		anello /anˈɛllo/ - anillo /anˈiʝo/
+		arɡilla /arʤˈilla/ - arcilla /aɾθˈiʝa/
+		arena /arˈena/ - arena /aɾˈena/
+		ascoltare /askoltˈare/ - escuchar /eskuʧˈaɾ/
+		autunno /awtˈunno/ - otoño /otˈoɲo/
+		bianco /bjˈaŋko/ - blanco /blˈaŋko/
+		buona /bwˈɔna/ - buena /bwˈena/
+		buone /bwˈɔne/ - buenas /bwˈenas/
+		buoni /bwˈɔni/ - buenos /bwˈenos/
+		buono /bwˈɔno/ - bueno /bwˈeno/
+		basso /bˈasso/ - bajo /bˈaxo/
+		baɡno /bˈaɲɲo/ - baño /bˈaɲo/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bocca /bˈokka/ - boca /bˈoka/
+		bue /bˈue/ - buey /bwˈej/
+		bene /bˈɛne/ - bien /bjˈen/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		dì /dˈi/ - día /dˈia/
+		dico /dˈiko/ - diɡo /dˈiɣo/
+		dio /dˈio/ - dios /djˈos/
+		dire /dˈire/ - decir /deθˈiɾ/
+		dito /dˈito/ - dedo /dˈeðo/
+		dodici /dˈodiʧi/ - doce /dˈoθe/
+		dolce /dˈolʧe/ - dulce /dˈulθe/
+		dono /dˈono/ - don /dˈon/
+		donna /dˈɔnna/ - dueña /dwˈeɲa/
+		dente /dˈɛnte/ - diente /djˈente/
+		farina /farˈina/ - harina /aɾˈina/
+		fiamma /fjˈamma/ - llama /ɟ͡ʝˈama/
+		freddo /frˈeddo/ - frío /fɾˈio/
+		fronza /frˈonʣa/ - hoja /ˈoxa/
+		fuoco /fwˈɔko/ - fueɡo /fwˈeɣo/
+		fata /fˈata/ - hada /ˈaða/
+		faccio /fˈaʧʧo/ - haɡo /ˈaɣo/
+		femmina /fˈemmina/ - hembra /ˈembɾa/
+		fine /fˈine/ - fin /fˈin/
+		fiɡlia /fˈiʎʎa/ - hija /ˈixa/
+		fiɡlio /fˈiʎʎo/ - hijo /ˈixo/
+		forte /fˈɔrte/ - fuerte /fwˈeɾte/
+		forza /fˈɔrʦa/ - fuerza /fwˈeɾθa/
+		foɡlia /fˈɔʎʎa/ - hoja /ˈoxa/
+		ferro /fˈɛrro/ - hierro /jˈero/
+		capello /kapˈello/ - cabello /kaβˈeʝo/
+		capello /kapˈello/ - pelo /pˈelo/
+		catena /katˈena/ - cadena /kaðˈena/
+		cavallo /kavˈallo/ - caballo /kaβˈaʝo/
+		cacciare /kaʧʧˈare/ - cazar /kaθˈaɾ/
+		chiamare /kjamˈare/ - llamar /ɟ͡ʝamˈaɾ/
+		chiave /kjˈave/ - llave /ɟ͡ʝˈaβe/
+		colore /kolˈore/ - color /kolˈoɾ/
+		conoscere /konˈoʃʃere/ - conocer /konoθˈeɾ/
+		credere /krˈedere/ - creer /kɾeˈeɾ/
+		quattro /kwˈattro/ - cuatro /kwˈatɾo/
+		cuore /kwˈɔre/ - cor /kˈoɾ/
+		caldo /kˈaldo/ - caldo /kˈaldo/
+		cane /kˈane/ - can /kˈan/
+		canto /kˈanto/ - canto /kˈanto/
+		capo /kˈapo/ - cabo /kˈaβo/
+		capra /kˈapra/ - cabra /kˈaβɾa/
+		carne /kˈarne/ - carne /kˈaɾne/
+		caro /kˈaro/ - caro /kˈaɾo/
+		casa /kˈaza/ - casa /kˈasa/
+		che /kˈe/ - que /kˈe/
+		chi /kˈi/ - quien /kjˈen/
+		corto /kˈorto/ - corto /kˈoɾto/
+		culo /kˈulo/ - culo /kˈulo/
+		collo /kˈɔllo/ - cuello /kwˈeʝo/
+		conio /kˈɔnjo/ - cuño /kˈuɲo/
+		corno /kˈɔrno/ - cuerno /kwˈeɾno/
+		corpo /kˈɔrpo/ - cuerpo /kwˈeɾpo/
+		cosa /kˈɔza/ - cosa /kˈosa/
+		leone /leˈone/ - león /leˈon/
+		luoɡo /lwˈɔɡo/ - lueɡo /lwˈeɣo/
+		lana /lˈana/ - lana /lˈana/
+		latte /lˈatte/ - leche /lˈeʧe/
+		laɡo /lˈaɡo/ - laɡo /lˈaɣo/
+		leɡna /lˈeɲɲa/ - leño /lˈeɲo/
+		leɡno /lˈeɲɲo/ - leño /lˈeɲo/
+		leɡɡe /lˈeʤʤe/ - ley /lˈej/
+		linɡua /lˈiŋɡwa/ - lenɡua /lˈeŋɡwa/
+		lume /lˈume/ - luz /lˈuθ/
+		luna /lˈuna/ - luna /lˈuna/
+		lotta /lˈɔtta/ - lucha /lˈuʧa/
+		lei /lˈɛj/ - ella /ˈeʝa/
+		letto /lˈɛtto/ - lecho /lˈeʧo/
+		leɡɡere /lˈɛʤʤere/ - leer /leˈeɾ/
+		maturo /matˈuro/ - maduro /maðˈuɾo/
+		metà /metˈa/ - mitad /mitˈað/
+		miele /mjˈɛle/ - miel /mjˈel/
+		morsicare /morsikˈare/ - morder /moɾðˈeɾ/
+		morire /morˈire/ - morir /moɾˈiɾ/
+		madre /mˈadre/ - madre /mˈaðɾe/
+		mare /mˈare/ - mar /mˈaɾ/
+		me /mˈe/ - me /mˈe/
+		mille /mˈille/ - mil /mˈil/
+		molto /mˈolto/ - mucho /mˈuʧo/
+		mosca /mˈoska/ - mosca /mˈoska/
+		morte /mˈɔrte/ - muerte /mwˈeɾte/
+		nessuno /nessˈuno/ - ninɡuno /niŋɡˈuno/
+		non /non/ - no /no/
+		nuovo /nwˈɔvo/ - nuevo /nwˈeβo/
+		nascere /nˈaʃʃere/ - nacer /naθˈeɾ/
+		nome /nˈome/ - nombre /nˈombɾe/
+		noce /nˈoʧe/ - nuez /nwˈeθ/
+		nube /nˈube/ - nube /nˈuβe/
+		nuvola /nˈuvola/ - nube /nˈuβe/
+		nostro /nˈɔstro/ - nuestro /nwˈestɾo/
+		notte /nˈɔtte/ - noche /nˈoʧe/
+		nove /nˈɔve/ - nueve /nwˈeβe/
+		odore /odˈore/ - olor /olˈoɾ/
+		ombelico /ombelˈiko/ - ombliɡo /omblˈiɣo/
+		operaio /operˈajo/ - obrero /oβɾˈeɾo/
+		piuma /pjˈuma/ - peña /pˈeɲa/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		piede /pjˈɛde/ - pie /pjˈe/
+		pietra /pjˈɛtra/ - piedra /pjˈeðɾa/
+		padre /pˈadre/ - padre /pˈaðɾe/
+		pane /pˈane/ - pan /pˈan/
+		pancia /pˈanʧa/ - panza /pˈanθa/
+		pace /pˈaʧe/ - paz /pˈaθ/
+		pelo /pˈelo/ - cabello /kaβˈeʝo/
+		pelo /pˈelo/ - pelo /pˈelo/
+		pena /pˈena/ - pena /pˈena/
+		pesce /pˈeʃʃe/ - pez /pˈeθ/
+		piccolo /pˈikkolo/ - pequeño /pekˈeɲo/
+		poni /pˈoni/ - pones /pˈones/
+		ponte /pˈonte/ - puente /pwˈente/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		pozzo /pˈoʦʦo/ - pozo /pˈoθo/
+		punto /pˈunto/ - punto /pˈunto/
+		puɡno /pˈuɲɲo/ - puño /pˈuɲo/
+		poco /pˈɔko/ - poco /pˈoko/
+		porca /pˈɔrka/ - puerca /pwˈeɾka/
+		porco /pˈɔrko/ - puerco /pwˈeɾko/
+		povero /pˈɔvero/ - pobre /pˈoβɾe/
+		poɡɡio /pˈɔʤʤo/ - poyo /pˈoʝo/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		pelle /pˈɛlle/ - piel /pjˈel/
+		pesca /pˈɛska/ - prisco /pɾˈisko/
+		petto /pˈɛtto/ - pecho /pˈeʧo/
+		raɡione /raʤˈone/ - razón /raθˈon/
+		romano /romˈano/ - romano /romˈano/
+		raɡno /rˈaɲɲo/ - araña /aɾˈaɲa/
+		re /rˈe/ - rey /rˈej/
+		rio /rˈio/ - río /rˈio/
+		robbio /rˈobbjo/ - rojo /rˈoxo/
+		robbio /rˈobbjo/ - rubio /rˈuβjo/
+		rosso /rˈosso/ - rubio /rˈuβjo/
+		salute /salˈute/ - salud /salˈuð/
+		sapere /sapˈere/ - saber /saβˈeɾ/
+		sedere /sedˈere/ - sentar /sentˈaɾ/
+		semente /semˈente/ - semilla /semˈiʝa/
+		settimana /settimˈana/ - semana /semˈana/
+		sicuro /sikˈuro/ - seɡuro /seɣˈuɾo/
+		scrivere /skrˈivere/ - escribir /eskɾiβˈiɾ/
+		scuro /skˈuro/ - escuro /eskˈuɾo/
+		scuro /skˈuro/ - oscuro /oskˈuɾo/
+		spada /spˈada/ - espada /espˈaða/
+		spina /spˈina/ - espina /espˈina/
+		spiɡa /spˈiɡa/ - espiɡa /espˈiɣa/
+		stato /stˈato/ - estado /estˈaðo/
+		stella /stˈella/ - estrella /estɾˈeʝa/
+		sai /sˈaj/ - sabes /sˈaβes/
+		salsa /sˈalsa/ - salsa /sˈalsa/
+		santo /sˈanto/ - santo /sˈanto/
+		sappia /sˈappja/ - sepa /sˈepa/
+		sanɡue /sˈaŋɡwe/ - sanɡre /sˈaŋɡɾe/
+		secca /sˈekka/ - seca /sˈeka/
+		secco /sˈekko/ - seco /sˈeko/
+		seta /sˈeta/ - seda /sˈeða/
+		sole /sˈole/ - sol /sˈol/
+		sopra /sˈopra/ - sobre /sˈoβɾe/
+		sei /sˈɛj/ - seis /sˈejs/
+		sette /sˈɛtte/ - siete /sjˈete/
+		tre /trˈe/ - tres /tɾˈes/
+		tondo /tˈondo/ - redondo /reðˈondo/
+		tu /tˈu/ - tú /tˈu/
+		tutti /tˈutti/ - todos /tˈoðos/
+		toro /tˈɔro/ - toro /tˈoɾo/
+		tempo /tˈɛmpo/ - tiempo /tjˈempo/
+		terra /tˈɛrra/ - tierra /tjˈera/
+		uɡuale /uɡwˈale/ - iɡual /iɣwˈal/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		venire /venˈire/ - venir /benˈiɾ/
+		verɡoɡna /verɡˈoɲɲa/ - verɡüenza /beɾɣwˈenθa/
+		villano /villˈano/ - villano /biʝˈano/
+		vicino /viʧˈino/ - vecino /beθˈino/
+		volare /volˈare/ - volar /bolˈaɾ/
+		vacca /vˈakka/ - vaca /bˈaka/
+		verde /vˈerde/ - verde /bˈeɾðe/
+		via /vˈia/ - vía /bˈia/
+		villa /vˈilla/ - villa /bˈiʝa/
+		vino /vˈino/ - vino /bˈino/
+		vita /vˈita/ - vida /bˈiða/
+		voce /vˈoʧe/ - voz /bˈoθ/
+		vecchio /vˈɛkkjo/ - viejo /bjˈexo/
+		vento /vˈɛnto/ - viento /bjˈento/
+		ventre /vˈɛntre/ - vientre /bjˈentɾe/
+		uovo /wˈɔvo/ - huevo /wˈeβo/
+		ɡrande /ɡrˈande/ - ɡrande /ɡɾˈande/
+		ɡrano /ɡrˈano/ - ɡrano /ɡɾˈano/
+		ɡrasso /ɡrˈasso/ - ɡrasa /ɡɾˈasa/
+		ɡrosso /ɡrˈɔsso/ - ɡrueso /ɡɾwˈeso/
+		ɡatto /ɡˈatto/ - ɡato /ɡˈato/
+		ɡola /ɡˈola/ - ɡola /ɡˈola/
+		ɡermano /ʤermˈano/ - hermano /eɾmˈano/
+		ɡiovane /ʤˈovane/ - joven /xˈoβen/
+		ɡiudice /ʤˈudiʧe/ - juez /xwˈeθ/
+		ɡiunto /ʤˈunto/ - junto /xˈunto/
+		ɡioco /ʤˈɔko/ - jueɡo /xwˈeɣo/
+		città /ʧittˈa/ - ciudad /θjuðˈað/
+		cinquanta /ʧiŋkwˈanta/ - cincuenta /θiŋkwˈenta/
+		cera /ʧˈera/ - cera /θˈeɾa/
+		cima /ʧˈima/ - cima /θˈima/
+		cielo /ʧˈɛlo/ - cielo /θjˈelo/
+		acqua /ˈakkwa/ - aɡua /ˈaɣwa/
+		alba /ˈalba/ - alba /ˈalβa/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+		anno /ˈanno/ - año /ˈaɲo/
+		aɡlio /ˈaʎʎo/ - ajo /ˈaxo/
+		isola /ˈizola/ - isla /ˈisla/
+		orso /ˈorso/ - oso /ˈoso/
+		unɡhia /ˈuŋɡja/ - uña /ˈuɲa/
+		oca /ˈɔka/ - oca /ˈoka/
+		occhi /ˈɔkki/ - ojos /ˈoxos/
+		occhio /ˈɔkkjo/ - ojo /ˈoxo/
+		omero /ˈɔmero/ - hombro /ˈombɾo/
+		oro /ˈɔro/ - oro /ˈoɾo/
+		otto /ˈɔtto/ - ocho /ˈoʧo/
+		erba /ˈɛrba/ - hierba /jˈeɾβa/
+
+Final disqualified:
+		arena /arˈena/ - sable /sˈaβle/
+		bruciare /bruʧˈare/ - quemar /kemˈaɾ/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		bello /bˈɛllo/ - hermoso /eɾmˈoso/
+		fiume /fjˈume/ - río /rˈio/
+		fare /fˈare/ - hacer /aθˈeɾ/
+		lui /lˈui/ - él /ˈel/
+		naso /nˈazo/ - nariz /naɾˈiθ/
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		ventre /vˈɛntre/ - panza /pˈanθa/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		ɡiorno /ʤˈorno/ - día /dˈia/
+		ape /ˈape/ - abeja /aβˈexa/
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+		eɡli /ˈeʎʎi/ - él /ˈel/
+		io /ˈio/ - yo /ɟ͡ʝˈo/
+
+
+-------------------
+
+****SAMPLE 3****
+Iteration 1
+	Qualified: 237
+	Disqualified: 267
+	Added: 0
+	Removed: 15
+		arena /arˈena/ - sable /sˈaβle/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		ventre /vˈɛntre/ - panza /pˈanθa/
+		ɡiorno /ʤˈorno/ - día /dˈia/
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		fiume /fjˈume/ - río /rˈio/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		uccidere /uʧʧˈidere/ - matar /matˈaɾ/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		fratello /fratˈɛllo/ - hermano /eɾmˈano/
+		lui /lˈui/ - él /ˈel/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+
+Iteration 2
+	Qualified: 238
+	Disqualified: 266
+	Added: 1
+		porre /pˈorre/ - poner /ponˈeɾ/
+	Removed: 0
+
+Iteration 3
+	Qualified: 237
+	Disqualified: 267
+	Added: 0
+	Removed: 1
+		porre /pˈorre/ - poner /ponˈeɾ/
+
+Final qualifying:
+		aiutare /ajutˈare/ - ayudar /aʝuðˈaɾ/
+		aiuto /ajˈuto/ - ayudo /aʝˈuðo/
+		anello /anˈɛllo/ - anillo /anˈiʝo/
+		arena /arˈena/ - arena /aɾˈena/
+		ascoltare /askoltˈare/ - escuchar /eskuʧˈaɾ/
+		autunno /awtˈunno/ - otoño /otˈoɲo/
+		bianco /bjˈaŋko/ - blanco /blˈaŋko/
+		bruciare /bruʧˈare/ - quemar /kemˈaɾ/
+		buona /bwˈɔna/ - buena /bwˈena/
+		buone /bwˈɔne/ - buenas /bwˈenas/
+		buoni /bwˈɔni/ - buenos /bwˈenos/
+		buono /bwˈɔno/ - bueno /bwˈeno/
+		basso /bˈasso/ - bajo /bˈaxo/
+		baɡno /bˈaɲɲo/ - baño /bˈaɲo/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bocca /bˈokka/ - boca /bˈoka/
+		bue /bˈue/ - buey /bwˈej/
+		bene /bˈɛne/ - bien /bjˈen/
+		dieci /djˈɛʧi/ - diez /djˈeθ/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		draɡone /draɡˈone/ - draɡón /dɾaɣˈon/
+		dare /dˈare/ - dar /dˈaɾ/
+		dì /dˈi/ - día /dˈia/
+		dico /dˈiko/ - diɡo /dˈiɣo/
+		dio /dˈio/ - dios /djˈos/
+		dito /dˈito/ - dedo /dˈeðo/
+		dodici /dˈodiʧi/ - doce /dˈoθe/
+		dolce /dˈolʧe/ - dulce /dˈulθe/
+		dona /dˈona/ - dona /dˈona/
+		dono /dˈono/ - don /dˈon/
+		donna /dˈɔnna/ - dueña /dwˈeɲa/
+		dente /dˈɛnte/ - diente /djˈente/
+		estate /estˈate/ - estío /estˈio/
+		farina /farˈina/ - harina /aɾˈina/
+		fiamma /fjˈamma/ - llama /ɟ͡ʝˈama/
+		freddo /frˈeddo/ - frío /fɾˈio/
+		fronza /frˈonʣa/ - hoja /ˈoxa/
+		fuoco /fwˈɔko/ - fueɡo /fwˈeɣo/
+		fame /fˈame/ - hambre /ˈambɾe/
+		fata /fˈata/ - hada /ˈaða/
+		femmina /fˈemmina/ - hembra /ˈembɾa/
+		feɡato /fˈeɡato/ - híɡado /ˈiɣaðo/
+		fine /fˈine/ - fin /fˈin/
+		fiɡlia /fˈiʎʎa/ - hija /ˈixa/
+		fumo /fˈumo/ - humo /ˈumo/
+		forte /fˈɔrte/ - fuerte /fwˈeɾte/
+		forza /fˈɔrʦa/ - fuerza /fwˈeɾθa/
+		foɡlia /fˈɔʎʎa/ - hoja /ˈoxa/
+		ferro /fˈɛrro/ - hierro /jˈero/
+		inverno /invˈɛrno/ - invierno /imbjˈeɾno/
+		cambiare /kambjˈare/ - cambiar /kambjˈaɾ/
+		castello /kastˈɛllo/ - castillo /kastˈiʝo/
+		catena /katˈena/ - cadena /kaðˈena/
+		cavallo /kavˈallo/ - caballo /kaβˈaʝo/
+		cacciare /kaʧʧˈare/ - cazar /kaθˈaɾ/
+		chiamare /kjamˈare/ - llamar /ɟ͡ʝamˈaɾ/
+		chiave /kjˈave/ - llave /ɟ͡ʝˈaβe/
+		conoscere /konˈoʃʃere/ - conocer /konoθˈeɾ/
+		corteccia /kortˈeʧʧa/ - corteza /koɾtˈeθa/
+		credere /krˈedere/ - creer /kɾeˈeɾ/
+		croce /krˈoʧe/ - cruz /kɾˈuθ/
+		quattro /kwˈattro/ - cuatro /kwˈatɾo/
+		cuore /kwˈɔre/ - cor /kˈoɾ/
+		caldo /kˈaldo/ - caldo /kˈaldo/
+		canto /kˈanto/ - canto /kˈanto/
+		capo /kˈapo/ - cabo /kˈaβo/
+		capra /kˈapra/ - cabra /kˈaβɾa/
+		carne /kˈarne/ - carne /kˈaɾne/
+		caro /kˈaro/ - caro /kˈaɾo/
+		casa /kˈaza/ - casa /kˈasa/
+		che /kˈe/ - que /kˈe/
+		chi /kˈi/ - quien /kjˈen/
+		corto /kˈorto/ - corto /kˈoɾto/
+		culo /kˈulo/ - culo /kˈulo/
+		collo /kˈɔllo/ - cuello /kwˈeʝo/
+		conio /kˈɔnjo/ - cuño /kˈuɲo/
+		corpo /kˈɔrpo/ - cuerpo /kwˈeɾpo/
+		cosa /kˈɔza/ - cosa /kˈosa/
+		levare /levˈare/ - llevar /ɟ͡ʝeβˈaɾ/
+		luoɡo /lwˈɔɡo/ - lueɡo /lwˈeɣo/
+		lana /lˈana/ - lana /lˈana/
+		latte /lˈatte/ - leche /lˈeʧe/
+		laɡo /lˈaɡo/ - laɡo /lˈaɣo/
+		leɡna /lˈeɲɲa/ - leño /lˈeɲo/
+		leɡno /lˈeɲɲo/ - leño /lˈeɲo/
+		leɡɡe /lˈeʤʤe/ - ley /lˈej/
+		linɡua /lˈiŋɡwa/ - lenɡua /lˈeŋɡwa/
+		luna /lˈuna/ - luna /lˈuna/
+		luce /lˈuʧe/ - luz /lˈuθ/
+		lotta /lˈɔtta/ - lucha /lˈuʧa/
+		lei /lˈɛj/ - ella /ˈeʝa/
+		lepre /lˈɛpre/ - liebre /ljˈeβɾe/
+		letto /lˈɛtto/ - lecho /lˈeʧo/
+		maturo /matˈuro/ - maduro /maðˈuɾo/
+		metà /metˈa/ - mitad /mitˈað/
+		miɡliore /miʎʎˈore/ - mejor /mexˈoɾ/
+		miele /mjˈɛle/ - miel /mjˈel/
+		montaɡna /montˈaɲɲa/ - montaña /montˈaɲa/
+		morire /morˈire/ - morir /moɾˈiɾ/
+		mano /mˈano/ - mano /mˈano/
+		mare /mˈare/ - mar /mˈaɾ/
+		me /mˈe/ - me /mˈe/
+		mica /mˈika/ - miɡa /mˈiɣa/
+		molto /mˈolto/ - mucho /mˈuʧo/
+		mosca /mˈoska/ - mosca /mˈoska/
+		morte /mˈɔrte/ - muerte /mwˈeɾte/
+		nessuno /nessˈuno/ - ninɡuno /niŋɡˈuno/
+		non /non/ - no /no/
+		nascere /nˈaʃʃere/ - nacer /naθˈeɾ/
+		nebbia /nˈebbja/ - niebla /njˈeβla/
+		nero /nˈero/ - neɡro /nˈeɣɾo/
+		neve /nˈeve/ - nieve /njˈeβe/
+		nome /nˈome/ - nombre /nˈombɾe/
+		noce /nˈoʧe/ - nuez /nwˈeθ/
+		nostro /nˈɔstro/ - nuestro /nwˈestɾo/
+		nove /nˈɔve/ - nueve /nwˈeβe/
+		odore /odˈore/ - olor /olˈoɾ/
+		ombelico /ombelˈiko/ - ombliɡo /omblˈiɣo/
+		operaio /operˈajo/ - obrero /oβɾˈeɾo/
+		orecchia /orˈekkja/ - oreja /oɾˈexa/
+		parola /parˈɔla/ - palabra /palˈaβɾa/
+		pidocchio /pidˈɔkkjo/ - piojo /pjˈoxo/
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		piaɡa /pjˈaɡa/ - llaɡa /ɟ͡ʝˈaɣa/
+		piuma /pjˈuma/ - peña /pˈeɲa/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		pieno /pjˈɛno/ - lleno /ɟ͡ʝˈeno/
+		pietra /pjˈɛtra/ - piedra /pjˈeðɾa/
+		potere /potˈere/ - poder /poðˈeɾ/
+		padre /pˈadre/ - padre /pˈaðɾe/
+		pane /pˈane/ - pan /pˈan/
+		pace /pˈaʧe/ - paz /pˈaθ/
+		pelo /pˈelo/ - cabello /kaβˈeʝo/
+		pelo /pˈelo/ - pelo /pˈelo/
+		penna /pˈenna/ - peña /pˈeɲa/
+		pesce /pˈeʃʃe/ - pez /pˈeθ/
+		piccolo /pˈikkolo/ - pequeño /pekˈeɲo/
+		poni /pˈoni/ - pones /pˈones/
+		pozzo /pˈoʦʦo/ - pozo /pˈoθo/
+		puɡno /pˈuɲɲo/ - puño /pˈuɲo/
+		porca /pˈɔrka/ - puerca /pwˈeɾka/
+		porco /pˈɔrko/ - puerco /pwˈeɾko/
+		povero /pˈɔvero/ - pobre /pˈoβɾe/
+		poɡɡio /pˈɔʤʤo/ - poyo /pˈoʝo/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		pelle /pˈɛlle/ - piel /pjˈel/
+		pesca /pˈɛska/ - prisco /pɾˈisko/
+		petto /pˈɛtto/ - pecho /pˈeʧo/
+		radice /radˈiʧe/ - raíz /raˈiθ/
+		raɡione /raʤˈone/ - razón /raθˈon/
+		romano /romˈano/ - romano /romˈano/
+		re /rˈe/ - rey /rˈej/
+		rio /rˈio/ - río /rˈio/
+		robbio /rˈobbjo/ - rojo /rˈoxo/
+		robbio /rˈobbjo/ - rubio /rˈuβjo/
+		rosso /rˈosso/ - rojo /rˈoxo/
+		rosso /rˈosso/ - rubio /rˈuβjo/
+		salute /salˈute/ - salud /salˈuð/
+		sapere /sapˈere/ - saber /saβˈeɾ/
+		sedere /sedˈere/ - sentar /sentˈaɾ/
+		semente /semˈente/ - semilla /semˈiʝa/
+		settimana /settimˈana/ - semana /semˈana/
+		sicuro /sikˈuro/ - seɡuro /seɣˈuɾo/
+		scuro /skˈuro/ - oscuro /oskˈuɾo/
+		spada /spˈada/ - espada /espˈaða/
+		Spaɡna /spˈaɲɲa/ - España /espˈaɲa/
+		spina /spˈina/ - espina /espˈina/
+		stato /stˈato/ - estado /estˈaðo/
+		stella /stˈella/ - estrella /estɾˈeʝa/
+		sabbia /sˈabbja/ - sable /sˈaβle/
+		sai /sˈaj/ - sabes /sˈaβes/
+		salsa /sˈalsa/ - salsa /sˈalsa/
+		sana /sˈana/ - sana /sˈana/
+		santo /sˈanto/ - santo /sˈanto/
+		savio /sˈavjo/ - sabio /sˈaβjo/
+		sanɡue /sˈaŋɡwe/ - sanɡre /sˈaŋɡɾe/
+		secca /sˈekka/ - seca /sˈeka/
+		secco /sˈekko/ - seco /sˈeko/
+		seme /sˈeme/ - semilla /semˈiʝa/
+		seta /sˈeta/ - seda /sˈeða/
+		sole /sˈole/ - sol /sˈol/
+		sopra /sˈopra/ - sobre /sˈoβɾe/
+		sei /sˈɛj/ - seis /sˈejs/
+		sette /sˈɛtte/ - siete /sjˈete/
+		tre /trˈe/ - tres /tɾˈes/
+		tutti /tˈutti/ - todos /tˈoðos/
+		toro /tˈɔro/ - toro /tˈoɾo/
+		tempo /tˈɛmpo/ - tiempo /tjˈempo/
+		terra /tˈɛrra/ - tierra /tjˈera/
+		uɡuale /uɡwˈale/ - iɡual /iɣwˈal/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		venire /venˈire/ - venir /benˈiɾ/
+		villano /villˈano/ - villano /biʝˈano/
+		vicino /viʧˈino/ - vecino /beθˈino/
+		volare /volˈare/ - volar /bolˈaɾ/
+		vacca /vˈakka/ - vaca /bˈaka/
+		venti /vˈenti/ - veinte /bˈejnte/
+		verde /vˈerde/ - verde /bˈeɾðe/
+		villa /vˈilla/ - villa /bˈiʝa/
+		vino /vˈino/ - vino /bˈino/
+		vita /vˈita/ - vida /bˈiða/
+		uomo /wˈɔmo/ - hombre /ˈombɾe/
+		uovo /wˈɔvo/ - huevo /wˈeβo/
+		ɡrande /ɡrˈande/ - ɡrande /ɡɾˈande/
+		ɡrano /ɡrˈano/ - ɡrano /ɡɾˈano/
+		ɡrasso /ɡrˈasso/ - ɡrasa /ɡɾˈasa/
+		ɡrosso /ɡrˈɔsso/ - ɡrueso /ɡɾwˈeso/
+		ɡatto /ɡˈatto/ - ɡato /ɡˈato/
+		ɡenɡiva /ʤenʤˈiva/ - encía /enθˈia/
+		ɡermano /ʤermˈano/ - hermano /eɾmˈano/
+		ɡiudice /ʤˈudiʧe/ - juez /xwˈeθ/
+		ɡiunto /ʤˈunto/ - junto /xˈunto/
+		ɡioco /ʤˈɔko/ - jueɡo /xwˈeɣo/
+		ɡenero /ʤˈɛnero/ - yerno /ɟ͡ʝˈeɾno/
+		ɡente /ʤˈɛnte/ - ɡente /xˈente/
+		città /ʧittˈa/ - ciudad /θjuðˈað/
+		cinquanta /ʧiŋkwˈanta/ - cincuenta /θiŋkwˈenta/
+		cenere /ʧˈenere/ - ceniza /θenˈiθa/
+		cielo /ʧˈɛlo/ - cielo /θjˈelo/
+		acqua /ˈakkwa/ - aɡua /ˈaɣwa/
+		alba /ˈalba/ - alba /ˈalβa/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+		alma /ˈalma/ - alma /ˈalma/
+		altro /ˈaltro/ - otro /ˈotɾo/
+		anno /ˈanno/ - año /ˈaɲo/
+		aɡlio /ˈaʎʎo/ - ajo /ˈaxo/
+		eɡli /ˈeʎʎi/ - él /ˈel/
+		isola /ˈizola/ - isla /ˈisla/
+		orso /ˈorso/ - oso /ˈoso/
+		uno /ˈuno/ - uno /ˈuno/
+		unɡhia /ˈuŋɡja/ - uña /ˈuɲa/
+		oca /ˈɔka/ - oca /ˈoka/
+		occhi /ˈɔkki/ - ojos /ˈoxos/
+		occhio /ˈɔkkjo/ - ojo /ˈoxo/
+		oro /ˈɔro/ - oro /ˈoɾo/
+		osso /ˈɔsso/ - hueso /wˈeso/
+		otto /ˈɔtto/ - ocho /ˈoʧo/
+
+Final disqualified:
+		arena /arˈena/ - sable /sˈaβle/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		fiume /fjˈume/ - río /rˈio/
+		fratello /fratˈɛllo/ - hermano /eɾmˈano/
+		lui /lˈui/ - él /ˈel/
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		uccidere /uʧʧˈidere/ - matar /matˈaɾ/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		ventre /vˈɛntre/ - panza /pˈanθa/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		ɡiorno /ʤˈorno/ - día /dˈia/
+
+
+-------------------
+
+****SAMPLE 4****
+Iteration 1
+	Qualified: 229
+	Disqualified: 275
+	Added: 0
+	Removed: 23
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+		ɡiorno /ʤˈorno/ - día /dˈia/
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		arena /arˈena/ - sable /sˈaβle/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		ape /ˈape/ - abeja /aβˈexa/
+		bello /bˈɛllo/ - hermoso /eɾmˈoso/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		fratello /fratˈɛllo/ - hermano /eɾmˈano/
+		lui /lˈui/ - él /ˈel/
+		naso /nˈazo/ - nariz /naɾˈiθ/
+		fare /fˈare/ - hacer /aθˈeɾ/
+		ventre /vˈɛntre/ - panza /pˈanθa/
+		lei /lˈɛj/ - ella /ˈeʝa/
+		fiume /fjˈume/ - río /rˈio/
+		uccidere /uʧʧˈidere/ - matar /matˈaɾ/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+
+Iteration 2
+	Qualified: 230
+	Disqualified: 274
+	Added: 3
+		porre /pˈorre/ - poner /ponˈeɾ/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		lei /lˈɛj/ - ella /ˈeʝa/
+	Removed: 2
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		autunno /awtˈunno/ - otoño /otˈoɲo/
+
+Iteration 3
+	Qualified: 230
+	Disqualified: 274
+	Added: 1
+		autunno /awtˈunno/ - otoño /otˈoɲo/
+	Removed: 1
+		porre /pˈorre/ - poner /ponˈeɾ/
+
+Iteration 4
+	Qualified: 234
+	Disqualified: 270
+	Added: 4
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+	Removed: 0
+
+Iteration 5
+	Qualified: 234
+	Disqualified: 270
+	Added: 1
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+	Removed: 1
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+
+Iteration 6
+	Qualified: 237
+	Disqualified: 267
+	Added: 3
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		lui /lˈui/ - él /ˈel/
+	Removed: 0
+
+Iteration 7
+	Qualified: 238
+	Disqualified: 266
+	Added: 1
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+	Removed: 0
+
+Iteration 8
+	Qualified: 238
+	Disqualified: 266
+	Added: 1
+		uccidere /uʧʧˈidere/ - matar /matˈaɾ/
+	Removed: 1
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+
+Iteration 9
+	Qualified: 238
+	Disqualified: 266
+	Added: 1
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+	Removed: 1
+		uccidere /uʧʧˈidere/ - matar /matˈaɾ/
+
+Final qualifying:
+		aiutare /ajutˈare/ - ayudar /aʝuðˈaɾ/
+		aiuto /ajˈuto/ - ayudo /aʝˈuðo/
+		anello /anˈɛllo/ - anillo /anˈiʝo/
+		arɡilla /arʤˈilla/ - arcilla /aɾθˈiʝa/
+		arena /arˈena/ - arena /aɾˈena/
+		ascoltare /askoltˈare/ - escuchar /eskuʧˈaɾ/
+		autunno /awtˈunno/ - otoño /otˈoɲo/
+		bianco /bjˈaŋko/ - blanco /blˈaŋko/
+		bruciare /bruʧˈare/ - quemar /kemˈaɾ/
+		buona /bwˈɔna/ - buena /bwˈena/
+		buone /bwˈɔne/ - buenas /bwˈenas/
+		buono /bwˈɔno/ - bueno /bwˈeno/
+		basso /bˈasso/ - bajo /bˈaxo/
+		baɡno /bˈaɲɲo/ - baño /bˈaɲo/
+		bere /bˈere/ - beber /beβˈeɾ/
+		bocca /bˈokka/ - boca /bˈoka/
+		bue /bˈue/ - buey /bwˈej/
+		bene /bˈɛne/ - bien /bjˈen/
+		dieci /djˈɛʧi/ - diez /djˈeθ/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		draɡone /draɡˈone/ - draɡón /dɾaɣˈon/
+		dare /dˈare/ - dar /dˈaɾ/
+		dì /dˈi/ - día /dˈia/
+		dico /dˈiko/ - diɡo /dˈiɣo/
+		dire /dˈire/ - decir /deθˈiɾ/
+		dito /dˈito/ - dedo /dˈeðo/
+		dodici /dˈodiʧi/ - doce /dˈoθe/
+		dolce /dˈolʧe/ - dulce /dˈulθe/
+		dona /dˈona/ - dona /dˈona/
+		dono /dˈono/ - don /dˈon/
+		donna /dˈɔnna/ - dueña /dwˈeɲa/
+		estate /estˈate/ - estío /estˈio/
+		farina /farˈina/ - harina /aɾˈina/
+		fiamma /fjˈamma/ - llama /ɟ͡ʝˈama/
+		fronza /frˈonʣa/ - hoja /ˈoxa/
+		fuoco /fwˈɔko/ - fueɡo /fwˈeɣo/
+		fame /fˈame/ - hambre /ˈambɾe/
+		fata /fˈata/ - hada /ˈaða/
+		faccio /fˈaʧʧo/ - haɡo /ˈaɣo/
+		femmina /fˈemmina/ - hembra /ˈembɾa/
+		feɡato /fˈeɡato/ - híɡado /ˈiɣaðo/
+		filo /fˈilo/ - hilo /ˈilo/
+		fine /fˈine/ - fin /fˈin/
+		fiɡlia /fˈiʎʎa/ - hija /ˈixa/
+		fiɡlio /fˈiʎʎo/ - hijo /ˈixo/
+		fumo /fˈumo/ - humo /ˈumo/
+		forte /fˈɔrte/ - fuerte /fwˈeɾte/
+		foɡlia /fˈɔʎʎa/ - hoja /ˈoxa/
+		ferro /fˈɛrro/ - hierro /jˈero/
+		inverno /invˈɛrno/ - invierno /imbjˈeɾno/
+		cambiare /kambjˈare/ - cambiar /kambjˈaɾ/
+		capello /kapˈello/ - cabello /kaβˈeʝo/
+		capello /kapˈello/ - pelo /pˈelo/
+		castello /kastˈɛllo/ - castillo /kastˈiʝo/
+		catena /katˈena/ - cadena /kaðˈena/
+		cacciare /kaʧʧˈare/ - cazar /kaθˈaɾ/
+		chiamare /kjamˈare/ - llamar /ɟ͡ʝamˈaɾ/
+		colore /kolˈore/ - color /kolˈoɾ/
+		conoscere /konˈoʃʃere/ - conocer /konoθˈeɾ/
+		corteccia /kortˈeʧʧa/ - corteza /koɾtˈeθa/
+		credere /krˈedere/ - creer /kɾeˈeɾ/
+		croce /krˈoʧe/ - cruz /kɾˈuθ/
+		quattro /kwˈattro/ - cuatro /kwˈatɾo/
+		canto /kˈanto/ - canto /kˈanto/
+		capo /kˈapo/ - cabo /kˈaβo/
+		carne /kˈarne/ - carne /kˈaɾne/
+		caro /kˈaro/ - caro /kˈaɾo/
+		casa /kˈaza/ - casa /kˈasa/
+		chi /kˈi/ - quien /kjˈen/
+		corto /kˈorto/ - corto /kˈoɾto/
+		culo /kˈulo/ - culo /kˈulo/
+		collo /kˈɔllo/ - cuello /kwˈeʝo/
+		corno /kˈɔrno/ - cuerno /kwˈeɾno/
+		corpo /kˈɔrpo/ - cuerpo /kwˈeɾpo/
+		cosa /kˈɔza/ - cosa /kˈosa/
+		levare /levˈare/ - llevar /ɟ͡ʝeβˈaɾ/
+		leone /leˈone/ - león /leˈon/
+		lacrima /lˈakrima/ - láɡrima /lˈaɣɾima/
+		lana /lˈana/ - lana /lˈana/
+		latte /lˈatte/ - leche /lˈeʧe/
+		lettera /lˈettera/ - letra /lˈetɾa/
+		leɡno /lˈeɲɲo/ - leño /lˈeɲo/
+		leɡɡe /lˈeʤʤe/ - ley /lˈej/
+		linɡua /lˈiŋɡwa/ - lenɡua /lˈeŋɡwa/
+		lui /lˈui/ - él /ˈel/
+		lume /lˈume/ - luz /lˈuθ/
+		luna /lˈuna/ - luna /lˈuna/
+		luce /lˈuʧe/ - luz /lˈuθ/
+		lotta /lˈɔtta/ - lucha /lˈuʧa/
+		lei /lˈɛj/ - ella /ˈeʝa/
+		lepre /lˈɛpre/ - liebre /ljˈeβɾe/
+		letto /lˈɛtto/ - lecho /lˈeʧo/
+		leɡɡere /lˈɛʤʤere/ - leer /leˈeɾ/
+		maturo /matˈuro/ - maduro /maðˈuɾo/
+		metà /metˈa/ - mitad /mitˈað/
+		miɡliore /miʎʎˈore/ - mejor /mexˈoɾ/
+		montaɡna /montˈaɲɲa/ - montaña /montˈaɲa/
+		morsicare /morsikˈare/ - morder /moɾðˈeɾ/
+		morire /morˈire/ - morir /moɾˈiɾ/
+		madre /mˈadre/ - madre /mˈaðɾe/
+		mare /mˈare/ - mar /mˈaɾ/
+		me /mˈe/ - me /mˈe/
+		mica /mˈika/ - miɡa /mˈiɣa/
+		mille /mˈille/ - mil /mˈil/
+		mordere /mˈɔrdere/ - morder /moɾðˈeɾ/
+		nessuno /nessˈuno/ - ninɡuno /niŋɡˈuno/
+		non /non/ - no /no/
+		nuotare /nwotˈare/ - nadar /naðˈaɾ/
+		nuovo /nwˈɔvo/ - nuevo /nwˈeβo/
+		nero /nˈero/ - neɡro /nˈeɣɾo/
+		neve /nˈeve/ - nieve /njˈeβe/
+		noi /nˈoj/ - nosotros /nosˈotɾos/
+		nome /nˈome/ - nombre /nˈombɾe/
+		noce /nˈoʧe/ - nuez /nwˈeθ/
+		nuvola /nˈuvola/ - nube /nˈuβe/
+		nostro /nˈɔstro/ - nuestro /nwˈestɾo/
+		notte /nˈɔtte/ - noche /nˈoʧe/
+		nove /nˈɔve/ - nueve /nwˈeβe/
+		odore /odˈore/ - olor /olˈoɾ/
+		ombelico /ombelˈiko/ - ombliɡo /omblˈiɣo/
+		orecchia /orˈekkja/ - oreja /oɾˈexa/
+		parola /parˈɔla/ - palabra /palˈaβɾa/
+		pidocchio /pidˈɔkkjo/ - piojo /pjˈoxo/
+		pianɡere /pjˈanʤere/ - llorar /ɟ͡ʝoɾˈaɾ/
+		piaɡa /pjˈaɡa/ - llaɡa /ɟ͡ʝˈaɣa/
+		piuma /pjˈuma/ - peña /pˈeɲa/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		piede /pjˈɛde/ - pie /pjˈe/
+		pietra /pjˈɛtra/ - piedra /pjˈeðɾa/
+		potere /potˈere/ - poder /poðˈeɾ/
+		padre /pˈadre/ - padre /pˈaðɾe/
+		pancia /pˈanʧa/ - panza /pˈanθa/
+		pace /pˈaʧe/ - paz /pˈaθ/
+		pelo /pˈelo/ - pelo /pˈelo/
+		pena /pˈena/ - pena /pˈena/
+		penna /pˈenna/ - peña /pˈeɲa/
+		pesce /pˈeʃʃe/ - pez /pˈeθ/
+		piccolo /pˈikkolo/ - pequeño /pekˈeɲo/
+		poni /pˈoni/ - pones /pˈones/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		pozzo /pˈoʦʦo/ - pozo /pˈoθo/
+		punto /pˈunto/ - punto /pˈunto/
+		puɡno /pˈuɲɲo/ - puño /pˈuɲo/
+		porca /pˈɔrka/ - puerca /pwˈeɾka/
+		porco /pˈɔrko/ - puerco /pwˈeɾko/
+		povero /pˈɔvero/ - pobre /pˈoβɾe/
+		poɡɡio /pˈɔʤʤo/ - poyo /pˈoʝo/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		pelle /pˈɛlle/ - piel /pjˈel/
+		pesca /pˈɛska/ - prisco /pɾˈisko/
+		petto /pˈɛtto/ - pecho /pˈeʧo/
+		radice /radˈiʧe/ - raíz /raˈiθ/
+		raɡione /raʤˈone/ - razón /raθˈon/
+		reɡina /reʤˈina/ - reina /rˈejna/
+		rio /rˈio/ - río /rˈio/
+		robbio /rˈobbjo/ - rojo /rˈoxo/
+		robbio /rˈobbjo/ - rubio /rˈuβjo/
+		rosso /rˈosso/ - rojo /rˈoxo/
+		salute /salˈute/ - salud /salˈuð/
+		sapere /sapˈere/ - saber /saβˈeɾ/
+		sedere /sedˈere/ - sentar /sentˈaɾ/
+		settimana /settimˈana/ - semana /semˈana/
+		sicuro /sikˈuro/ - seɡuro /seɣˈuɾo/
+		scrivere /skrˈivere/ - escribir /eskɾiβˈiɾ/
+		scuro /skˈuro/ - escuro /eskˈuɾo/
+		scuro /skˈuro/ - oscuro /oskˈuɾo/
+		scorza /skˈɔrʦa/ - corteza /koɾtˈeθa/
+		spada /spˈada/ - espada /espˈaða/
+		Spaɡna /spˈaɲɲa/ - España /espˈaɲa/
+		spina /spˈina/ - espina /espˈina/
+		stato /stˈato/ - estado /estˈaðo/
+		sabbia /sˈabbja/ - sable /sˈaβle/
+		sai /sˈaj/ - sabes /sˈaβes/
+		salsa /sˈalsa/ - salsa /sˈalsa/
+		sana /sˈana/ - sana /sˈana/
+		sappia /sˈappja/ - sepa /sˈepa/
+		savio /sˈavjo/ - sabio /sˈaβjo/
+		sanɡue /sˈaŋɡwe/ - sanɡre /sˈaŋɡɾe/
+		secco /sˈekko/ - seco /sˈeko/
+		seme /sˈeme/ - semilla /semˈiʝa/
+		seta /sˈeta/ - seda /sˈeða/
+		sole /sˈole/ - sol /sˈol/
+		sopra /sˈopra/ - sobre /sˈoβɾe/
+		sei /sˈɛj/ - seis /sˈejs/
+		tre /trˈe/ - tres /tɾˈes/
+		tondo /tˈondo/ - redondo /reðˈondo/
+		tuto /tˈutto/ - todo /tˈoðo/
+		toro /tˈɔro/ - toro /tˈoɾo/
+		tempo /tˈɛmpo/ - tiempo /tjˈempo/
+		terra /tˈɛrra/ - tierra /tjˈera/
+		uɡuale /uɡwˈale/ - iɡual /iɣwˈal/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		venire /venˈire/ - venir /benˈiɾ/
+		verɡoɡna /verɡˈoɲɲa/ - verɡüenza /beɾɣwˈenθa/
+		villano /villˈano/ - villano /biʝˈano/
+		vicino /viʧˈino/ - vecino /beθˈino/
+		vacca /vˈakka/ - vaca /bˈaka/
+		venti /vˈenti/ - veinte /bˈejnte/
+		villa /vˈilla/ - villa /bˈiʝa/
+		vita /vˈita/ - vida /bˈiða/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		voce /vˈoʧe/ - voz /bˈoθ/
+		vecchio /vˈɛkkjo/ - viejo /bjˈexo/
+		ventre /vˈɛntre/ - vientre /bjˈentɾe/
+		venɡo /vˈɛŋɡo/ - venɡo /bˈeŋɡo/
+		uomo /wˈɔmo/ - hombre /ˈombɾe/
+		uovo /wˈɔvo/ - huevo /wˈeβo/
+		ɡhiacciare /ɡjaʧʧˈare/ - helar /elˈaɾ/
+		ɡrano /ɡrˈano/ - ɡrano /ɡɾˈano/
+		ɡrosso /ɡrˈɔsso/ - ɡrueso /ɡɾwˈeso/
+		ɡola /ɡˈola/ - ɡola /ɡˈola/
+		ɡelare /ʤelˈare/ - helar /elˈaɾ/
+		ɡenɡiva /ʤenʤˈiva/ - encía /enθˈia/
+		ɡermano /ʤermˈano/ - hermano /eɾmˈano/
+		ɡiovane /ʤˈovane/ - joven /xˈoβen/
+		ɡiudice /ʤˈudiʧe/ - juez /xwˈeθ/
+		ɡiunto /ʤˈunto/ - junto /xˈunto/
+		ɡioco /ʤˈɔko/ - jueɡo /xwˈeɣo/
+		ɡenero /ʤˈɛnero/ - yerno /ɟ͡ʝˈeɾno/
+		città /ʧittˈa/ - ciudad /θjuðˈað/
+		cinquanta /ʧiŋkwˈanta/ - cincuenta /θiŋkwˈenta/
+		cenere /ʧˈenere/ - ceniza /θenˈiθa/
+		cera /ʧˈera/ - cera /θˈeɾa/
+		cima /ʧˈima/ - cima /θˈima/
+		cielo /ʧˈɛlo/ - cielo /θjˈelo/
+		alba /ˈalba/ - alba /ˈalβa/
+		albero /ˈalbero/ - árbol /ˈaɾβol/
+		anno /ˈanno/ - año /ˈaɲo/
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+		aɡlio /ˈaʎʎo/ - ajo /ˈaxo/
+		eɡli /ˈeʎʎi/ - él /ˈel/
+		isola /ˈizola/ - isla /ˈisla/
+		uno /ˈuno/ - uno /ˈuno/
+		unɡhia /ˈuŋɡja/ - uña /ˈuɲa/
+		oca /ˈɔka/ - oca /ˈoka/
+		oro /ˈɔro/ - oro /ˈoɾo/
+		otto /ˈɔtto/ - ocho /ˈoʧo/
+		erba /ˈɛrba/ - hierba /jˈeɾβa/
+
+Final disqualified:
+		arena /arˈena/ - sable /sˈaβle/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		bello /bˈɛllo/ - hermoso /eɾmˈoso/
+		fiume /fjˈume/ - río /rˈio/
+		fratello /fratˈɛllo/ - hermano /eɾmˈano/
+		fare /fˈare/ - hacer /aθˈeɾ/
+		naso /nˈazo/ - nariz /naɾˈiθ/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		uccidere /uʧʧˈidere/ - matar /matˈaɾ/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		ventre /vˈɛntre/ - panza /pˈanθa/
+		ɡiorno /ʤˈorno/ - día /dˈia/
+		ape /ˈape/ - abeja /aβˈexa/
+
+
+-------------------
+
+****SAMPLE 5****
+Iteration 1
+	Qualified: 232
+	Disqualified: 272
+	Added: 0
+	Removed: 20
+		bruciare /bruʧˈare/ - quemar /kemˈaɾ/
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+		ɡiorno /ʤˈorno/ - día /dˈia/
+		uomo /wˈɔmo/ - hombre /ˈombɾe/
+		arena /arˈena/ - sable /sˈaβle/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		ape /ˈape/ - abeja /aβˈexa/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		bello /bˈɛllo/ - hermoso /eɾmˈoso/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		fratello /fratˈɛllo/ - hermano /eɾmˈano/
+		naso /nˈazo/ - nariz /naɾˈiθ/
+		fare /fˈare/ - hacer /aθˈeɾ/
+		ventre /vˈɛntre/ - panza /pˈanθa/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		io /ˈio/ - yo /ɟ͡ʝˈo/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+
+Iteration 2
+	Qualified: 234
+	Disqualified: 270
+	Added: 2
+		porre /pˈorre/ - poner /ponˈeɾ/
+		uomo /wˈɔmo/ - hombre /ˈombɾe/
+	Removed: 0
+
+Iteration 3
+	Qualified: 233
+	Disqualified: 271
+	Added: 0
+	Removed: 1
+		porre /pˈorre/ - poner /ponˈeɾ/
+
+Iteration 4
+	Qualified: 235
+	Disqualified: 269
+	Added: 2
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+	Removed: 0
+
+Iteration 5
+	Qualified: 236
+	Disqualified: 268
+	Added: 1
+		porre /pˈorre/ - poner /ponˈeɾ/
+	Removed: 0
+
+Iteration 6
+	Qualified: 236
+	Disqualified: 268
+	Added: 0
+	Removed: 0
+
+Final qualifying:
+		aiutare /ajutˈare/ - ayudar /aʝuðˈaɾ/
+		aiuto /ajˈuto/ - ayudo /aʝˈuðo/
+		anello /anˈɛllo/ - anillo /anˈiʝo/
+		arena /arˈena/ - arena /aɾˈena/
+		ascoltare /askoltˈare/ - escuchar /eskuʧˈaɾ/
+		bianco /bjˈaŋko/ - blanco /blˈaŋko/
+		buona /bwˈɔna/ - buena /bwˈena/
+		buone /bwˈɔne/ - buenas /bwˈenas/
+		buoni /bwˈɔni/ - buenos /bwˈenos/
+		basso /bˈasso/ - bajo /bˈaxo/
+		bocca /bˈokka/ - boca /bˈoka/
+		bene /bˈɛne/ - bien /bjˈen/
+		dieci /djˈɛʧi/ - diez /djˈeθ/
+		dormire /dormˈire/ - dormir /doɾmˈiɾ/
+		dare /dˈare/ - dar /dˈaɾ/
+		dì /dˈi/ - día /dˈia/
+		dico /dˈiko/ - diɡo /dˈiɣo/
+		dio /dˈio/ - dios /djˈos/
+		dito /dˈito/ - dedo /dˈeðo/
+		dolce /dˈolʧe/ - dulce /dˈulθe/
+		dona /dˈona/ - dona /dˈona/
+		dono /dˈono/ - don /dˈon/
+		donna /dˈɔnna/ - dueña /dwˈeɲa/
+		dente /dˈɛnte/ - diente /djˈente/
+		estate /estˈate/ - estío /estˈio/
+		farina /farˈina/ - harina /aɾˈina/
+		fiamma /fjˈamma/ - llama /ɟ͡ʝˈama/
+		freddo /frˈeddo/ - frío /fɾˈio/
+		fronza /frˈonʣa/ - hoja /ˈoxa/
+		fuoco /fwˈɔko/ - fueɡo /fwˈeɣo/
+		fame /fˈame/ - hambre /ˈambɾe/
+		fata /fˈata/ - hada /ˈaða/
+		feɡato /fˈeɡato/ - híɡado /ˈiɣaðo/
+		fine /fˈine/ - fin /fˈin/
+		fiɡlia /fˈiʎʎa/ - hija /ˈixa/
+		forza /fˈɔrʦa/ - fuerza /fwˈeɾθa/
+		ferro /fˈɛrro/ - hierro /jˈero/
+		inverno /invˈɛrno/ - invierno /imbjˈeɾno/
+		cambiare /kambjˈare/ - cambiar /kambjˈaɾ/
+		capello /kapˈello/ - cabello /kaβˈeʝo/
+		castello /kastˈɛllo/ - castillo /kastˈiʝo/
+		catena /katˈena/ - cadena /kaðˈena/
+		cavallo /kavˈallo/ - caballo /kaβˈaʝo/
+		cacciare /kaʧʧˈare/ - cazar /kaθˈaɾ/
+		colore /kolˈore/ - color /kolˈoɾ/
+		conoscere /konˈoʃʃere/ - conocer /konoθˈeɾ/
+		credere /krˈedere/ - creer /kɾeˈeɾ/
+		croce /krˈoʧe/ - cruz /kɾˈuθ/
+		quattro /kwˈattro/ - cuatro /kwˈatɾo/
+		cane /kˈane/ - can /kˈan/
+		canto /kˈanto/ - canto /kˈanto/
+		capo /kˈapo/ - cabo /kˈaβo/
+		capra /kˈapra/ - cabra /kˈaβɾa/
+		carne /kˈarne/ - carne /kˈaɾne/
+		caro /kˈaro/ - caro /kˈaɾo/
+		casa /kˈaza/ - casa /kˈasa/
+		che /kˈe/ - que /kˈe/
+		chi /kˈi/ - quien /kjˈen/
+		corto /kˈorto/ - corto /kˈoɾto/
+		culo /kˈulo/ - culo /kˈulo/
+		conio /kˈɔnjo/ - cuño /kˈuɲo/
+		corno /kˈɔrno/ - cuerno /kwˈeɾno/
+		corpo /kˈɔrpo/ - cuerpo /kwˈeɾpo/
+		cosa /kˈɔza/ - cosa /kˈosa/
+		levare /levˈare/ - llevar /ɟ͡ʝeβˈaɾ/
+		leone /leˈone/ - león /leˈon/
+		luoɡo /lwˈɔɡo/ - lueɡo /lwˈeɣo/
+		lacrima /lˈakrima/ - láɡrima /lˈaɣɾima/
+		lana /lˈana/ - lana /lˈana/
+		latte /lˈatte/ - leche /lˈeʧe/
+		laɡo /lˈaɡo/ - laɡo /lˈaɣo/
+		lettera /lˈettera/ - letra /lˈetɾa/
+		leɡno /lˈeɲɲo/ - leño /lˈeɲo/
+		leɡɡe /lˈeʤʤe/ - ley /lˈej/
+		linɡua /lˈiŋɡwa/ - lenɡua /lˈeŋɡwa/
+		lume /lˈume/ - luz /lˈuθ/
+		lotta /lˈɔtta/ - lucha /lˈuʧa/
+		lei /lˈɛj/ - ella /ˈeʝa/
+		letto /lˈɛtto/ - lecho /lˈeʧo/
+		leɡɡere /lˈɛʤʤere/ - leer /leˈeɾ/
+		maturo /matˈuro/ - maduro /maðˈuɾo/
+		metà /metˈa/ - mitad /mitˈað/
+		miele /mjˈɛle/ - miel /mjˈel/
+		montaɡna /montˈaɲɲa/ - montaña /montˈaɲa/
+		morsicare /morsikˈare/ - morder /moɾðˈeɾ/
+		morire /morˈire/ - morir /moɾˈiɾ/
+		madre /mˈadre/ - madre /mˈaðɾe/
+		mano /mˈano/ - mano /mˈano/
+		mare /mˈare/ - mar /mˈaɾ/
+		mica /mˈika/ - miɡa /mˈiɣa/
+		mille /mˈille/ - mil /mˈil/
+		molto /mˈolto/ - mucho /mˈuʧo/
+		mosca /mˈoska/ - mosca /mˈoska/
+		mordere /mˈɔrdere/ - morder /moɾðˈeɾ/
+		morte /mˈɔrte/ - muerte /mwˈeɾte/
+		non /non/ - no /no/
+		nuotare /nwotˈare/ - nadar /naðˈaɾ/
+		nuovo /nwˈɔvo/ - nuevo /nwˈeβo/
+		nascere /nˈaʃʃere/ - nacer /naθˈeɾ/
+		nebbia /nˈebbja/ - niebla /njˈeβla/
+		nero /nˈero/ - neɡro /nˈeɣɾo/
+		neve /nˈeve/ - nieve /njˈeβe/
+		noce /nˈoʧe/ - nuez /nwˈeθ/
+		nube /nˈube/ - nube /nˈuβe/
+		nuvola /nˈuvola/ - nube /nˈuβe/
+		nostro /nˈɔstro/ - nuestro /nwˈestɾo/
+		notte /nˈɔtte/ - noche /nˈoʧe/
+		nove /nˈɔve/ - nueve /nwˈeβe/
+		ombelico /ombelˈiko/ - ombliɡo /omblˈiɣo/
+		orecchia /orˈekkja/ - oreja /oɾˈexa/
+		parola /parˈɔla/ - palabra /palˈaβɾa/
+		pidocchio /pidˈɔkkjo/ - piojo /pjˈoxo/
+		piaɡa /pjˈaɡa/ - llaɡa /ɟ͡ʝˈaɣa/
+		piuma /pjˈuma/ - peña /pˈeɲa/
+		pioɡɡia /pjˈɔʤʤa/ - lluvia /ɟ͡ʝˈuβja/
+		piede /pjˈɛde/ - pie /pjˈe/
+		pieno /pjˈɛno/ - lleno /ɟ͡ʝˈeno/
+		pietra /pjˈɛtra/ - piedra /pjˈeðɾa/
+		potere /potˈere/ - poder /poðˈeɾ/
+		padre /pˈadre/ - padre /pˈaðɾe/
+		pancia /pˈanʧa/ - panza /pˈanθa/
+		pace /pˈaʧe/ - paz /pˈaθ/
+		pelo /pˈelo/ - cabello /kaβˈeʝo/
+		pelo /pˈelo/ - pelo /pˈelo/
+		pena /pˈena/ - pena /pˈena/
+		penna /pˈenna/ - peña /pˈeɲa/
+		pesce /pˈeʃʃe/ - pez /pˈeθ/
+		piccolo /pˈikkolo/ - pequeño /pekˈeɲo/
+		poni /pˈoni/ - pones /pˈones/
+		ponte /pˈonte/ - puente /pwˈente/
+		porre /pˈorre/ - poner /ponˈeɾ/
+		punto /pˈunto/ - punto /pˈunto/
+		puɡno /pˈuɲɲo/ - puño /pˈuɲo/
+		poco /pˈɔko/ - poco /pˈoko/
+		porca /pˈɔrka/ - puerca /pwˈeɾka/
+		porco /pˈɔrko/ - puerco /pwˈeɾko/
+		povero /pˈɔvero/ - pobre /pˈoβɾe/
+		poɡɡio /pˈɔʤʤo/ - poyo /pˈoʝo/
+		pecora /pˈɛkora/ - oveja /oβˈexa/
+		pelle /pˈɛlle/ - piel /pjˈel/
+		pesca /pˈɛska/ - prisco /pɾˈisko/
+		petto /pˈɛtto/ - pecho /pˈeʧo/
+		radice /radˈiʧe/ - raíz /raˈiθ/
+		raɡione /raʤˈone/ - razón /raθˈon/
+		reɡina /reʤˈina/ - reina /rˈejna/
+		romano /romˈano/ - romano /romˈano/
+		raɡno /rˈaɲɲo/ - araña /aɾˈaɲa/
+		re /rˈe/ - rey /rˈej/
+		robbio /rˈobbjo/ - rojo /rˈoxo/
+		rosso /rˈosso/ - rojo /rˈoxo/
+		rosso /rˈosso/ - rubio /rˈuβjo/
+		salute /salˈute/ - salud /salˈuð/
+		sapere /sapˈere/ - saber /saβˈeɾ/
+		sedere /sedˈere/ - sentar /sentˈaɾ/
+		settimana /settimˈana/ - semana /semˈana/
+		sicuro /sikˈuro/ - seɡuro /seɣˈuɾo/
+		scrivere /skrˈivere/ - escribir /eskɾiβˈiɾ/
+		scuro /skˈuro/ - oscuro /oskˈuɾo/
+		scorza /skˈɔrʦa/ - corteza /koɾtˈeθa/
+		Spaɡna /spˈaɲɲa/ - España /espˈaɲa/
+		spina /spˈina/ - espina /espˈina/
+		spiɡa /spˈiɡa/ - espiɡa /espˈiɣa/
+		stato /stˈato/ - estado /estˈaðo/
+		stella /stˈella/ - estrella /estɾˈeʝa/
+		sabbia /sˈabbja/ - sable /sˈaβle/
+		sai /sˈaj/ - sabes /sˈaβes/
+		sale /sˈale/ - sal /sˈal/
+		sana /sˈana/ - sana /sˈana/
+		sano /sˈano/ - sano /sˈano/
+		sanɡue /sˈaŋɡwe/ - sanɡre /sˈaŋɡɾe/
+		secca /sˈekka/ - seca /sˈeka/
+		sole /sˈole/ - sol /sˈol/
+		sopra /sˈopra/ - sobre /sˈoβɾe/
+		sei /sˈɛj/ - seis /sˈejs/
+		tre /trˈe/ - tres /tɾˈes/
+		tondo /tˈondo/ - redondo /reðˈondo/
+		tutti /tˈutti/ - todos /tˈoðos/
+		tuto /tˈutto/ - todo /tˈoðo/
+		toro /tˈɔro/ - toro /tˈoɾo/
+		tempo /tˈɛmpo/ - tiempo /tjˈempo/
+		terra /tˈɛrra/ - tierra /tjˈera/
+		uɡuale /uɡwˈale/ - iɡual /iɣwˈal/
+		vedere /vedˈere/ - ver /bˈeɾ/
+		venire /venˈire/ - venir /benˈiɾ/
+		verɡoɡna /verɡˈoɲɲa/ - verɡüenza /beɾɣwˈenθa/
+		villano /villˈano/ - villano /biʝˈano/
+		vicino /viʧˈino/ - vecino /beθˈino/
+		volare /volˈare/ - volar /bolˈaɾ/
+		venti /vˈenti/ - veinte /bˈejnte/
+		via /vˈia/ - vía /bˈia/
+		villa /vˈilla/ - villa /bˈiʝa/
+		vino /vˈino/ - vino /bˈino/
+		vita /vˈita/ - vida /bˈiða/
+		voce /vˈoʧe/ - voz /bˈoθ/
+		vecchio /vˈɛkkjo/ - viejo /bjˈexo/
+		ventre /vˈɛntre/ - vientre /bjˈentɾe/
+		venɡo /vˈɛŋɡo/ - venɡo /bˈeŋɡo/
+		uomo /wˈɔmo/ - hombre /ˈombɾe/
+		uovo /wˈɔvo/ - huevo /wˈeβo/
+		ɡrande /ɡrˈande/ - ɡrande /ɡɾˈande/
+		ɡrano /ɡrˈano/ - ɡrano /ɡɾˈano/
+		ɡrasso /ɡrˈasso/ - ɡrasa /ɡɾˈasa/
+		ɡrosso /ɡrˈɔsso/ - ɡrueso /ɡɾwˈeso/
+		ɡatto /ɡˈatto/ - ɡato /ɡˈato/
+		ɡola /ɡˈola/ - ɡola /ɡˈola/
+		ɡelare /ʤelˈare/ - helar /elˈaɾ/
+		ɡenɡiva /ʤenʤˈiva/ - encía /enθˈia/
+		ɡermano /ʤermˈano/ - hermano /eɾmˈano/
+		ɡiovane /ʤˈovane/ - joven /xˈoβen/
+		ɡiudice /ʤˈudiʧe/ - juez /xwˈeθ/
+		ɡiunto /ʤˈunto/ - junto /xˈunto/
+		ɡioco /ʤˈɔko/ - jueɡo /xwˈeɣo/
+		ɡenero /ʤˈɛnero/ - yerno /ɟ͡ʝˈeɾno/
+		ɡente /ʤˈɛnte/ - ɡente /xˈente/
+		cinquanta /ʧiŋkwˈanta/ - cincuenta /θiŋkwˈenta/
+		cenere /ʧˈenere/ - ceniza /θenˈiθa/
+		cima /ʧˈima/ - cima /θˈima/
+		cielo /ʧˈɛlo/ - cielo /θjˈelo/
+		cento /ʧˈɛnto/ - ciento /θjˈento/
+		acqua /ˈakkwa/ - aɡua /ˈaɣwa/
+		alba /ˈalba/ - alba /ˈalβa/
+		alma /ˈalma/ - alma /ˈalma/
+		altro /ˈaltro/ - otro /ˈotɾo/
+		aɡlio /ˈaʎʎo/ - ajo /ˈaxo/
+		eɡli /ˈeʎʎi/ - él /ˈel/
+		isola /ˈizola/ - isla /ˈisla/
+		orso /ˈorso/ - oso /ˈoso/
+		uno /ˈuno/ - uno /ˈuno/
+		unɡhia /ˈuŋɡja/ - uña /ˈuɲa/
+		oca /ˈɔka/ - oca /ˈoka/
+		occhio /ˈɔkkjo/ - ojo /ˈoxo/
+		omero /ˈɔmero/ - hombro /ˈombɾo/
+		oro /ˈɔro/ - oro /ˈoɾo/
+		osso /ˈɔsso/ - hueso /wˈeso/
+		otto /ˈɔtto/ - ocho /ˈoʧo/
+		erba /ˈɛrba/ - hierba /jˈeɾβa/
+
+Final disqualified:
+		arena /arˈena/ - sable /sˈaβle/
+		bruciare /bruʧˈare/ - quemar /kemˈaɾ/
+		babbo /bˈabbo/ - padre /pˈaðɾe/
+		bello /bˈɛllo/ - hermoso /eɾmˈoso/
+		fratello /fratˈɛllo/ - hermano /eɾmˈano/
+		fare /fˈare/ - hacer /aθˈeɾ/
+		naso /nˈazo/ - nariz /naɾˈiθ/
+		pancia /pˈanʧa/ - vientre /bjˈentɾe/
+		sabbia /sˈabbja/ - arena /aɾˈena/
+		uccello /uʧʧˈɛllo/ - pájaro /pˈaxaɾo/
+		voi /vˈoj/ - vosotros /bosˈotɾos/
+		ventre /vˈɛntre/ - panza /pˈanθa/
+		ɡiorno /ʤˈorno/ - día /dˈia/
+		ape /ˈape/ - abeja /aβˈexa/
+		aɡo /ˈaɡo/ - aɡuja /aɣˈuxa/
+		io /ˈio/ - yo /ɟ͡ʝˈo/
+
+
+-------------------
+
