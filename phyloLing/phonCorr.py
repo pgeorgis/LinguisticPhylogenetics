@@ -12,7 +12,7 @@ from phonUtils.segment import _toSegment
 from phonUtils.phonEnv import relative_prev_sonority, relative_post_sonority
 from constants import PHON_ENV_JOIN_CH, START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT
 from utils.sequence import Ngram, flatten_ngram, count_subsequences, pad_sequence
-from utils.information import surprisal, adaptation_surprisal, pointwise_mutual_info, bayes_pmi
+from utils.information import surprisal, adaptation_surprisal, pointwise_mutual_info, bayes_pmi, surprisal_to_prob
 from utils.utils import default_dict, normalize_dict, dict_tuplelist
 
 def sort_wordlist(wordlist):
@@ -960,19 +960,11 @@ class PhonCorrelator:
                                                                                  ngram_size=ngram_size)
         
         # Write the iteration log
+        surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
         if log_iterations and not gold:
-            surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
             self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             log_file = os.path.join(surprisal_ngram_log_dir, f'surprisal_iterations.log')
             self._write_iter_log(iter_logs, log_file)
-            
-            # Write alignments log
-            align_log_file = os.path.join(surprisal_ngram_log_dir, 'surprisal_alignments.log')
-            self._write_alignments_log(self.align_log['surprisal'], align_log_file)
-            
-            # Write phoneme correlation report # TODO might not be needed any longer given new format of surprisal logs
-            phon_corr_report = os.path.join(surprisal_ngram_log_dir, 'surprisal_phon_corr.log')
-            self._write_phon_corr_report(surprisal_results, phon_corr_report, label='Surprisal')
                 
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
@@ -987,6 +979,17 @@ class PhonCorrelator:
             self.lang1.phon_env_surprisal[self.lang2] = phon_env_surprisal
         self.surprisal_dict[ngram_size] = surprisal_results
         self.phon_env_surprisal_dict = phon_env_surprisal
+
+        # Write logs
+        # Alignments log
+        align_log_file = os.path.join(surprisal_ngram_log_dir, 'surprisal_alignments.log')
+        self._write_alignments_log(self.align_log['surprisal'], align_log_file)
+        
+        # Phone correlation report
+        phon_corr_report = os.path.join(surprisal_ngram_log_dir, 'phon_corr.log')
+        self._write_phon_corr_report(surprisal_results, phon_corr_report, type='surprisal')
+        
+        # Surprisal logs
         self.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size)
         self.log_phoneme_surprisal(phon_env=True)
         
@@ -1128,19 +1131,25 @@ class PhonCorrelator:
                     f.write(f'[{round(freq, 2)}] {alignment}\n')
                 f.write('\n-------------------\n\n')
     
-    def _write_phon_corr_report(self, corr, outfile, label, n=5):
+    def _write_phon_corr_report(self, corr, outfile, type, n=5):
         with open(outfile, 'w') as f:
-            f.write(f'{self.lang1.name}\t{self.lang2.name}\t{label}\n')
-            l1_phons = [p for p in corr if p[0] != self.gap_ch]
+            f.write(f'{self.lang1.name}\t{self.lang2.name}\tprobability\n')
+            l1_phons = sorted([p for p in corr if p[0] != self.gap_ch], key=lambda x:Ngram(x).string)
             for p1 in l1_phons:
                 p2_candidates = corr[p1]
                 if len(p2_candidates) > 0:
                     p2_candidates = dict_tuplelist(p2_candidates)[-n:]
                     p2_candidates.reverse()
                     for p2, sur in p2_candidates:
-                        if sur >= self.lang2.phoneme_entropy:
-                            break
-                        line = '\t'.join([' '.join(p1), str(p2), str(round(sur, 3))])
+                        if type == 'surprisal':
+                            if sur >= self.lang2.phoneme_entropy:
+                                break
+                            prob = surprisal_to_prob(sur)
+                        else:
+                            raise ValueError
+                        p1 = Ngram(p1).string
+                        p2 = Ngram(p2).string
+                        line = '\t'.join([p1, p2, str(round(prob, 3))])
                         f.write(f'{line}\n')
 
 
