@@ -1,5 +1,5 @@
 VOWELS
-/ʏ/ (0.065)
+/ʏ/ (0.066)
 	<fætur> /fˈaːi̯tʏr̥/ "feet_NOUN"
 	<dagur> /d̥ˈaːɣʏr̥/ "day_NOUN"
 	<léttur> /ljˈɛʰtʏr̥/ "light_ADJ"
@@ -219,22 +219,22 @@ CONSONANTS
 	<rauður> /rˈœːy̯ðʏr̥/ "red_ADJ"
 	<dauðlegur> /d̥ˈœy̯ðlɛːɣʏr̥/ "deadly_ADJ"
 
-/ɡ̊/ (0.027)
+/ɡ̊/ (0.024)
 	<dvergur> /d̥vˈɛrɡ̊ʏr̥/ "dwarf_NOUN"
-	<ungur> /ˈuŋɡ̊ʏr̥/ "young_NOUN"
-	<berg> /b̥ˈɛrɡ̊/ "mountain_NOUN"
+	<regn> /rˈɛɡ̊n̥/ "rain_NOUN"
+	<gras> /ɡ̊rˈaːs/ "grass_NOUN_NEU"
 
-/m/ (0.022)
-	<mig> /mˈɪːx/ "me_PRON"
+/m/ (0.023)
 	<draumur> /d̥rˈœːy̯mʏr̥/ "dream_NOUN"
 	<varmur> /vˈarmʏr̥/ "warm_ADJ"
+	<dreyma> /d̥rˈeːi̯ma/ "dream_VERB"
 
-/d̥/ (0.021)
+/d̥/ (0.022)
 	<dóttir> /d̥ˈɔu̯ʰtɪr̥/ "daughter_NOUN"
 	<dýr> /d̥ˈiːr̥/ "animal_NOUN"
 	<eldur> /ˈɛld̥ʏr̥/ "fire_NOUN"
 
-/f/ (0.021)
+/f/ (0.022)
 	<fugl> /fˈʏɡ̊l̥/ "bird_NOUN_MASC"
 	<fiskur> /fˈɪskʏr̥/ "fish_NOUN"
 	<funi> /fˈʏːnɪ/ "fire_NOUN"
@@ -299,20 +299,20 @@ CONSONANTS
 	<finna> /fˈɪnːa/ "find_VERB"
 	<tönn> /tʰˈœnː/ "tooth_NOUN"
 
-/ɟ̊/ (0.008)
-	<geit> /ɟ̊ˈeːi̯t/ "goat_NOUN"
-	<fylgja> /fˈɪlɟ̊a/ "follow_VERB"
-	<bryggja> /b̥rˈɪɟ̊ɟ̊a/ "bridge_NOUN"
-
 /ɣ/ (0.006)
-	<vegur> /vˈɛːɣʏr̥/ "way_NOUN"
-	<dauðlegur> /d̥ˈœy̯ðlɛːɣʏr̥/ "deadly_ADJ"
 	<fluga> /flˈʏːɣa/ "housefly_NOUN"
+	<dauðlegur> /d̥ˈœy̯ðlɛːɣʏr̥/ "deadly_ADJ"
+	<dagur> /d̥ˈaːɣʏr̥/ "day_NOUN"
 
 /c/ (0.006)
 	<æskja> /ˈai̯sca/ "wish_VERB"
-	<skítur> /scˈiːtʏr̥/ "shit_NOUN"
+	<nakinn> /nˈaːcɪn/ "naked_ADJ"
 	<skip> /scˈɪːp/ "ship_NOUN"
+
+/ɟ̊/ (0.006)
+	<syngja> /sˈiɲɟ̊a/ "sing_VERB"
+	<gestur> /ɟ̊ˈɛstʏr̥/ "guest_NOUN"
+	<gæs> /ɟ̊ˈaːi̯s/ "goose_NOUN"
 
 /cʰ/ (0.004)
 	<kirkja> /cʰˈɪr̥ca/ "church_NOUN_FEM"
@@ -329,17 +329,24 @@ CONSONANTS
 	<hér> /çˈɛːr̥/ "here_ADV"
 	<hjarta> /çˈar̥ta/ "heart_NOUN"
 
+/ɡ̊ː/ (0.002)
+	<egg> /ˈɛɡ̊ː/ "egg_NOUN_NEU"
+	<egg> /ˈɛɡ̊ː/ "edge_NOUN"
+
 /ʰp/ (0.002)
 	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
 	<epli> /ˈɛʰplɪ/ "apple_NOUN"
 
 /x/ (0.002)
-	<mig> /mˈɪːx/ "me_PRON"
 	<ég> /jˈɛːx/ "I_PRON"
+	<mig> /mˈɪːx/ "me_PRON"
 
 /sː/ (0.002)
-	<hross> /r̥ˈɔsː/ "horse_NOUN"
 	<oss> /ˈɔsː/ "us_PRON"
+	<hross> /r̥ˈɔsː/ "horse_NOUN"
+
+/ɟ̊ː/ (0.001)
+	<bryggja> /b̥rˈɪɟ̊ːa/ "bridge_NOUN"
 
 /ɲ/ (0.001)
 	<syngja> /sˈiɲɟ̊a/ "sing_VERB"

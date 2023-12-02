@@ -1,5 +1,5 @@
 VOWELS
-/ə/ (0.075)
+/ə/ (0.076)
 	<Chirche> /χˈirχə/ "church_NOUN_FEM"
 	<Naame> /nˈɒːmə/ "name_NOUN"
 	<danke> /d̥ˈaŋkə/ "thank_VERB"
@@ -72,7 +72,7 @@ VOWELS
 /ˈe/ (0.007)
 	<Schwert> /ʃʋˈert/ "sword_NOUN"
 	<Zwerg> /ʦʋˈerɡ̊/ "dwarf_NOUN"
-	<Egge> /ˈeɡ̊ɡ̊ə/ "edge_NOUN"
+	<Egge> /ˈeɡ̊ːə/ "edge_NOUN"
 
 /ˈiə̯/ (0.007)
 	<fier> /fˈiə̯r/ "four_NUM"
@@ -147,100 +147,105 @@ CONSONANTS
 	<Läbere> /lˈæb̥ərə/ "liver_NOUN"
 	<Ring> /rˈiŋ/ "ring_NOUN"
 
-/t/ (0.057)
+/t/ (0.058)
 	<Schtuel> /ʃtˈuə̯l/ "stool_NOUN"
 	<tüür> /tˈyːr/ "dear_ADJ"
 	<alt> /ˈɒlt/ "old_ADJ"
 
-/l/ (0.051)
+/l/ (0.052)
 	<folge> /fˈolɡ̊ə/ "follow_VERB"
 	<al> /ˈɒl/ "all_ADJ"
 	<Blueme> /b̥lˈuə̯mə/ "flower_NOUN"
 
-/ɡ̊/ (0.049)
-	<zwenzig> /ʦʋˈenʦiɡ̊/ "twenty_NUM"
-	<Wäg> /ʋˈæɡ̊/ "way_NOUN"
-	<Gott> /ɡ̊ˈot/ "god_NOUN"
-
 /n/ (0.042)
+	<Chnü> /χnˈyː/ "knee_NOUN"
 	<ander> /ˈɒnd̥ər/ "other_ADJ"
 	<Wind> /ʋˈind̥/ "wind_NOUN"
-	<nüün> /nˈyːn/ "nine_NUM"
+
+/ɡ̊/ (0.042)
+	<Honig> /hˈoniɡ̊/ "honey_NOUN"
+	<gsee> /ɡ̊sˈeː/ "see_VERB"
+	<gross> /ɡ̊rˈoːs/ "great_ADJ"
 
 /χ/ (0.041)
-	<Macht> /mˈɒχt/ "might_NOUN"
-	<sächs> /sˈæχs/ "six_NUM"
-	<Chönig> /χˈøːniɡ̊/ "king_NOUN"
+	<Buech> /b̥ˈuə̯χ/ "book_NOUN_FEM"
+	<Nacht> /nˈɒχt/ "night_NOUN_FEM"
+	<Chorn> /χˈorn/ "corn_NOUN"
 
 /s/ (0.041)
-	<Chääs> /χˈæːs/ "cheese_NOUN"
-	<sitze> /sˈiʦə/ "sit_VERB"
-	<was> /ʋˈɒs/ "what_PRON"
+	<Nase> /nˈɒsə/ "nose_NOUN"
+	<Seel> /sˈeːl/ "soul_NOUN"
+	<Gans> /ɡ̊ˈɒns/ "goose_NOUN"
 
 /f/ (0.041)
-	<Finger> /fˈiŋər/ "finger_NOUN"
-	<flüge> /flˈyɡ̊ə/ "fly_VERB"
-	<Schoof> /ʃˈoːf/ "sheep_NOUN"
+	<zwölf> /ʦʋˈølf/ "twelve_NUM"
+	<voll> /fˈol/ "full_ADJ"
+	<Fleisch> /flˈei̯ʃ/ "flesh_NOUN"
 
 /ʃ/ (0.032)
-	<schöön> /ʃˈøːn/ "beautiful_ADJ"
+	<schlaafe> /ʃlˈɒːfə/ "sleep_VERB"
+	<Schiissi> /ʃˈiːsːi/ "shit_NOUN"
 	<schlaa> /ʃlˈɒː/ "slay_VERB"
-	<Schoof> /ʃˈoːf/ "sheep_NOUN"
 
 /b̥/ (0.031)
-	<Bärg> /b̥ˈærɡ̊/ "mountain_NOUN"
-	<Läbere> /lˈæb̥ərə/ "liver_NOUN"
-	<Bäi> /b̥ˈɛi̯/ "bone_NOUN"
+	<Brüeder> /b̥rˈyə̯d̥ər/ "brother_NOUN"
+	<triibe> /trˈiːb̥ə/ "drive_VERB"
+	<Baad> /b̥ˈɒːd̥/ "bath_NOUN_NEU"
 
 /d̥/ (0.029)
-	<ander> /ˈɒnd̥ər/ "other_ADJ"
-	<Mond> /mˈond̥/ "moon_NOUN"
-	<norde> /nˈord̥ə/ "north_NOUN"
+	<danke> /d̥ˈaŋkə/ "thank_VERB"
+	<Dieb> /d̥ˈiə̯b̥/ "thief_NOUN"
+	<Gold> /ɡ̊ˈold̥/ "gold_NOUN_NEU"
 
 /m/ (0.028)
-	<Mond> /mˈond̥/ "moon_NOUN"
-	<Muus> /mˈuːs/ "mouse_NOUN_FEM"
+	<Muu> /mˈuː/ "mouth_NOUN"
+	<Boum> /b̥ˈou̯m/ "tree_NOUN"
 	<Aarm> /ˈɒːrm/ "arm_NOUN"
 
 /ʋ/ (0.028)
-	<Wind> /ʋˈind̥/ "wind_NOUN"
-	<Wolf> /ʋˈolf/ "wolf_NOUN"
-	<Wasser> /ʋˈɒsːər/ "water_NOUN"
+	<zwenzig> /ʦʋˈenʦiɡ̊/ "twenty_NUM"
+	<Wule> /ʋˈulə/ "wool_NOUN_FEM"
+	<Schwert> /ʃʋˈert/ "sword_NOUN"
 
 /h/ (0.024)
-	<Horn> /hˈorn/ "horn_NOUN"
-	<Hung> /hˈuŋ/ "dog_NOUN"
-	<ghööre> /ɡ̊hˈøːrə/ "hear_VERB"
+	<hundert> /hˈund̥ərt/ "hundred_NUM"
+	<Hunger> /hˈuŋɡ̊ər/ "hunger_NOUN"
+	<haa> /hˈɒː/ "have_VERB"
 
 /ŋ/ (0.016)
-	<Zunge> /ʦˈuŋə/ "tongue_NOUN"
-	<Finger> /fˈiŋər/ "finger_NOUN"
+	<trinke> /trˈiŋkə/ "drink_VERB"
 	<singe> /sˈiŋə/ "sing_VERB"
+	<Hunger> /hˈuŋɡ̊ər/ "hunger_NOUN"
 
 /ʦ/ (0.016)
-	<zwölf> /ʦʋˈølf/ "twelve_NUM"
-	<Härz> /hˈæːrʦ/ "heart_NOUN"
+	<schwarz> /ʃʋˈɒrʦ/ "black_ADJ"
+	<zwenzig> /ʦʋˈenʦiɡ̊/ "twenty_NUM"
 	<Zwerg> /ʦʋˈerɡ̊/ "dwarf_NOUN"
 
 /sː/ (0.013)
-	<süess> /sˈyə̯sː/ "sweet_ADJ"
-	<Fuess> /fˈuə̯sː/ "foot_NOUN"
+	<biisse> /b̥ˈiːsːə/ "bite_VERB"
 	<besser> /b̥ˈesːər/ "better_ADJ"
+	<Schiissi> /ʃˈiːsːi/ "shit_NOUN"
 
 /k/ (0.006)
 	<trinke> /trˈiŋkə/ "drink_VERB"
+	<nackt> /nˈɒkt/ "naked_ADJ"
 	<dick> /d̥ˈik/ "thick_ADJ"
-	<danke> /d̥ˈaŋkə/ "thank_VERB"
 
 /p͡f/ (0.005)
-	<scharpf> /ʃˈarp͡f/ "sharp_ADJ"
+	<Pflicht> /p͡flˈiχt/ "plight_NOUN"
 	<Öpfel> /ˈøp͡fəl/ "apple_NOUN"
-	<Chopf> /χˈop͡f/ "head_NOUN"
+	<scharpf> /ʃˈarp͡f/ "sharp_ADJ"
+
+/ɡ̊ː/ (0.004)
+	<Egge> /ˈeɡ̊ːə/ "edge_NOUN"
+	<Mugg> /mˈuɡ̊ː/ "midge_NOUN"
+	<Brugg> /b̥rˈuɡ̊ː/ "bridge_NOUN"
 
 /tː/ (0.004)
 	<Fatter> /fˈɒtːər/ "father_NOUN"
-	<bitte> /b̥ˈitːə/ "request_VERB"
 	<Wätter> /ʋˈætːər/ "weather_NOUN"
+	<bitte> /b̥ˈitːə/ "request_VERB"
 
 /p/ (0.002)
 	<Houpt> /hˈou̯pt/ "head_NOUN"
@@ -251,8 +256,8 @@ CONSONANTS
 	<Aff> /ˈɒfː/ "ape_NOUN"
 
 /j/ (0.002)
-	<Jaar> /jˈɒːr/ "year_NOUN"
 	<jung> /jˈuŋɡ̊/ "young_NOUN"
+	<Jaar> /jˈɒːr/ "year_NOUN"
 
 /ʃː/ (0.001)
 	<Äsche> /ˈæʃːə/ "ash_NOUN"

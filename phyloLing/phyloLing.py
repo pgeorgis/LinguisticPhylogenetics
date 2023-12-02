@@ -24,6 +24,7 @@ from phonUtils.segment import segment_ipa, _toSegment
 from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
 from phonUtils.syllables import syllabify
+from phonUtils.phonTransforms import normalize_geminates
 from phonCorr import PhonCorrelator
 from lingDist import Z_score_dist
 from constants import TRANSCRIPTION_PARAM_DEFAULTS, ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH
@@ -1675,7 +1676,7 @@ class Word:
         
         # Normalize geminate consonants to /Cː/
         if self.get_parameter('normalize_geminates'):
-            ipa_string = re.sub(fr'([{consonants}])\1', r'\1ː', ipa_string)
+            ipa_string = normalize_geminates(ipa_string)
         
         # Level any suprasegmentals to stress annotation
         supraseg_target = self.get_parameter('level_suprasegmentals')
