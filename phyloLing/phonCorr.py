@@ -1132,26 +1132,29 @@ class PhonCorrelator:
                 f.write('\n-------------------\n\n')
     
     def _write_phon_corr_report(self, corr, outfile, type, n=5):
+        lines = []
+        l1_phons = sorted([p for p in corr if p[0] != self.gap_ch], key=lambda x:Ngram(x).string)
+        for p1 in l1_phons:
+            p2_candidates = corr[p1]
+            if len(p2_candidates) > 0:
+                p2_candidates = dict_tuplelist(p2_candidates, reverse=True)[-n:]
+                # Sort by corr value, then by phone string if values are equal
+                p2_candidates.sort(key=lambda x:(x[-1], Ngram(x[0]).string))
+                for p2, score in p2_candidates:
+                    if type == 'surprisal':
+                        if score < self.lang2.phoneme_entropy:
+                            prob = surprisal_to_prob(score) # turn surprisal value into probability
+                            p1 = Ngram(p1).string
+                            p2 = Ngram(p2).string
+                            line = '\t'.join([p1, p2, str(round(prob, 3))])
+                            lines.append(line)
+                    else:
+                        raise NotImplementedError # not implemented for PMI
+        header = '\t'.join([self.lang1.name, self.lang2.name, 'probability'])
+        lines = '\n'.join(lines)
+        content = '\n'.join([header, lines])
         with open(outfile, 'w') as f:
-            f.write(f'{self.lang1.name}\t{self.lang2.name}\tprobability\n')
-            l1_phons = sorted([p for p in corr if p[0] != self.gap_ch], key=lambda x:Ngram(x).string)
-            for p1 in l1_phons:
-                p2_candidates = corr[p1]
-                if len(p2_candidates) > 0:
-                    p2_candidates = dict_tuplelist(p2_candidates)[-n:]
-                    p2_candidates.reverse()
-                    for p2, sur in p2_candidates:
-                        if type == 'surprisal':
-                            if sur >= self.lang2.phoneme_entropy:
-                                break
-                            prob = surprisal_to_prob(sur)
-                        else:
-                            raise ValueError
-                        p1 = Ngram(p1).string
-                        p2 = Ngram(p2).string
-                        line = '\t'.join([p1, p2, str(round(prob, 3))])
-                        f.write(f'{line}\n')
-
+            f.write(f'{content}')
 
 def phon_env_ngrams(phonEnv, exclude=set()):
     """Returns set of phonological environment strings of equal and lower order, 
