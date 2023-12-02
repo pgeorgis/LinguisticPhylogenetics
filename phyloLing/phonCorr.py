@@ -986,7 +986,7 @@ class PhonCorrelator:
         self._write_alignments_log(self.align_log['surprisal'], align_log_file)
         
         # Phone correlation report
-        phon_corr_report = os.path.join(surprisal_ngram_log_dir, 'phon_corr.log')
+        phon_corr_report = os.path.join(surprisal_ngram_log_dir, 'phon_corr.tsv')
         self._write_phon_corr_report(surprisal_results, phon_corr_report, type='surprisal')
         
         # Surprisal logs
