@@ -95,7 +95,8 @@ class PhonCorrelator:
         
         # PMI, ngrams, scored words
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
-        self.surprisal_dict = self.lang2.phoneme_surprisal[self.lang2]
+        self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2]
+        self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2]
         self.total_unigrams = (sum([len(word1.segments) for word1, word2 in self.same_meaning]),
                                sum([len(word2.segments) for word1, word2 in self.same_meaning]))
         self.complex_ngrams = self.lang1.complex_ngrams[self.lang2]
@@ -161,6 +162,7 @@ class PhonCorrelator:
         # Return a tuple of the three word type lists
         return same_meaning, diff_meaning, loanwords
     
+    
     def pad_wordlist(self, wordlist, pad_n=1):
         def _pad(seq):
             return pad_sequence(seq, pad_ch=self.pad_ch, pad_n=pad_n)
@@ -193,6 +195,60 @@ class PhonCorrelator:
             alignment.compact_gaps(complex_ngrams)
         return alignment_list        
 
+    def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
+        # Iterate over all possible/attested ngrams
+        # Only perform calculation for ngrams which have actually been observed/attested to 
+        # in the current dataset or which could have been observed (with gaps)
+        if phon_env:
+            attested = lang.list_ngrams(ngram_size, phon_env=True)
+            phone_contexts = [(seg, env) 
+                              for seg in lang.phon_environments 
+                              for env in lang.phon_environments[seg]]
+            all_ngrams = product(phone_contexts+[f'{self.pad_ch}{END_PAD_CH}', f'{START_PAD_CH}{self.pad_ch}', self.gap_ch], repeat=ngram_size)
+            
+        else:
+            attested = lang.list_ngrams(ngram_size, phon_env=False)
+            all_ngrams = product(list(lang.phonemes.keys())+[f'{self.pad_ch}{END_PAD_CH}', f'{START_PAD_CH}{self.pad_ch}', self.gap_ch], repeat=ngram_size) 
+
+        gappy = set(ngram for ngram in all_ngrams if self.gap_ch in ngram)
+        all_ngrams = gappy.union(attested.keys())
+        all_ngrams = set(Ngram(ngram).ngram for ngram in all_ngrams) # standardize forms
+        return all_ngrams
+
+    def radial_counts(self, wordlist, radius=1, normalize=True):
+        """Checks the number of times that phones occur within a specified 
+        radius of positions in their respective words from one another"""
+        corr_dict = defaultdict(lambda:defaultdict(lambda:0))
+        for word1, word2 in wordlist:
+            segs1, segs2 = word1.segments, word2.segments
+            for i in range(len(segs1)):
+                seg1 = segs1[i]
+                for j in range(max(0, i-radius), min(i+radius+1, len(segs2))):
+                    seg2 = segs2[j]
+                    
+                    # Only count sounds which are compatible as corresponding
+                    if compatible_segments(seg1, seg2):
+                        corr_dict[seg1][seg2] += 1
+                        
+        if normalize:
+            for seg1 in corr_dict:
+                corr_dict[seg1] = normalize_dict(corr_dict[seg1])
+        
+        return corr_dict
+    
+    def joint_probs(self, conditional_counts, l1=None, l2=None):
+        """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
+        l1, l2 = self.langs(l1=l1, l2=l2)
+        joint_prob_dist = defaultdict(lambda:{})
+        for seg1 in conditional_counts:
+            seg1_totals = sum(conditional_counts[seg1].values())
+            for seg2 in conditional_counts[seg1]:
+                cond_prob = conditional_counts[seg1][seg2] / seg1_totals
+                p_ind1 = l1.ngram_probability(Ngram(seg1))
+                joint_prob = cond_prob * p_ind1
+                joint_prob_dist[seg1][seg2] = joint_prob
+        return joint_prob_dist
+    
     def correspondence_probs(self, 
                              alignment_list, 
                              ngram_size=1,
@@ -284,50 +340,6 @@ class PhonCorrelator:
         
         return corr_counts
     
-    def radial_counts(self, wordlist, radius=1, normalize=True):
-        """Checks the number of times that phones occur within a specified 
-        radius of positions in their respective words from one another"""
-        corr_dict = defaultdict(lambda:defaultdict(lambda:0))
-        for word1, word2 in wordlist:
-            segs1, segs2 = word1.segments, word2.segments
-            for i in range(len(segs1)):
-                seg1 = segs1[i]
-                for j in range(max(0, i-radius), min(i+radius+1, len(segs2))):
-                    seg2 = segs2[j]
-                    
-                    # Only count sounds which are compatible as corresponding
-                    if compatible_segments(seg1, seg2):
-                        corr_dict[seg1][seg2] += 1
-                        
-        if normalize:
-            for seg1 in corr_dict:
-                corr_dict[seg1] = normalize_dict(corr_dict[seg1])
-        
-        return corr_dict
-
-    # def default_independent_corr_probs(self, l1=None, l2=None):
-    #     l1, l2 = self.langs(l1=l1, l2=l2)
-    #     independent_probs = {}
-    #     for phoneme1 in l1.phonemes:
-    #         phoneme1_probs = {}
-    #         for phoneme2 in l2.phonemes:
-    #             phoneme1_probs[phoneme2] = l1.phonemes[phoneme1] * l2.phonemes[phoneme2]
-    #         independent_probs[phoneme1] = phoneme1_probs
-    #     return independent_probs
-    
-    def joint_probs(self, conditional_counts, l1=None, l2=None):
-        """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
-        l1, l2 = self.langs(l1=l1, l2=l2)
-        joint_prob_dist = defaultdict(lambda:{})
-        for seg1 in conditional_counts:
-            seg1_totals = sum(conditional_counts[seg1].values())
-            for seg2 in conditional_counts[seg1]:
-                cond_prob = conditional_counts[seg1][seg2] / seg1_totals
-                p_ind1 = l1.ngram_probability(Ngram(seg1))
-                joint_prob = cond_prob * p_ind1
-                joint_prob_dist[seg1][seg2] = joint_prob
-        return joint_prob_dist
-    
     def phoneme_pmi(self, conditional_counts, l1=None, l2=None):
         """
         conditional_probs : nested dictionary of conditional correspondence probabilities in potential cognates
@@ -368,11 +380,11 @@ class PhonCorrelator:
                 assert self.pad_ch in seg2_ngram.string
                 if re.search(rf'{self.pad_ch}{END_PAD_CH}', seg2_ngram.string):
                     #direction = 'END'
-                    counts_seg2 = len([word2 for word1, word2 in self.same_meaning 
+                    counts_seg2 = len([word2 for word1, word2 in self.same_meaning # TODO needs to account for sample, not just all of self.same_meaning
                                 if tuple(word2.segments[-(seg2_ngram.size-1):]) == seg2[:-1]])
                 else:
                     #direction = 'START'
-                    counts_seg2 = len([word2 for word1, word2 in self.same_meaning 
+                    counts_seg2 = len([word2 for word1, word2 in self.same_meaning # TODO needs to account for sample, not just all of self.same_meaning
                                 if tuple(word2.segments[:seg2_ngram.size-1]) == seg2[1:]])
                 p_seg2 = counts_seg2 / len(self.same_meaning)
                 cond_prob = conditional_counts[seg1][seg2] / counts_seg2
@@ -382,11 +394,11 @@ class PhonCorrelator:
                 assert self.pad_ch in seg1_ngram.string
                 if re.search(rf'{self.pad_ch}{END_PAD_CH}', seg1_ngram.string):
                     #direction = 'END'
-                    counts_seg1 = len([word1 for word1, word2 in self.same_meaning 
+                    counts_seg1 = len([word1 for word1, word2 in self.same_meaning # TODO needs to account for sample, not just all of self.same_meaning
                                 if tuple(word1.segments[-(seg1_ngram.size-1):]) == seg1[:-1]])
                 else:
                     #direction = 'START'
-                    counts_seg1 = len([word1 for word1, word2 in self.same_meaning
+                    counts_seg1 = len([word1 for word1, word2 in self.same_meaning # TODO needs to account for sample, not just all of self.same_meaning
                                        if tuple(word1.segments[:seg1_ngram.size-1]) == seg1[1:]])
                 p_seg1 = counts_seg1 / len(self.same_meaning)
                 cond_prob = reverse_cond_counts[seg2][seg1] / counts_seg1
@@ -583,56 +595,6 @@ class PhonCorrelator:
         self.log_phoneme_pmi()
         
         return results
-    
-    def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
-        """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
-        
-        # Take a sample of different-meaning words, by default as large as the same-meaning set
-        if sample_size is None:
-            sample_size = len(self.same_meaning)
-            
-        # Set random seed: may or may not be the default seed attribute of the PhonCorrelator class
-        if not seed:
-            seed = self.seed
-        random.seed(seed)
-
-        diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-        noncognate_scores = []
-        func_key = (eval_func, eval_func.hashable_kwargs)
-        for pair in diff_sample:
-            if pair in self.scored_words[func_key]:
-                noncognate_scores.append(self.scored_words[func_key][pair])
-            else:
-                score = eval_func.eval(pair[0], pair[1])
-                noncognate_scores.append(score)
-                self.scored_words[func_key][pair] = score
-        self.reset_seed()
-        
-        if save:
-            key = (self.lang2, eval_func, sample_size, seed)
-            self.lang1.noncognate_thresholds[key] = noncognate_scores
-        
-        return noncognate_scores
-
-    def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
-        # Iterate over all possible/attested ngrams
-        # Only perform calculation for ngrams which have actually been observed/attested to 
-        # in the current dataset or which could have been observed (with gaps)
-        if phon_env:
-            attested = lang.list_ngrams(ngram_size, phon_env=True)
-            phone_contexts = [(seg, env) 
-                              for seg in lang.phon_environments 
-                              for env in lang.phon_environments[seg]]
-            all_ngrams = product(phone_contexts+[f'{self.pad_ch}{END_PAD_CH}', f'{START_PAD_CH}{self.pad_ch}', self.gap_ch], repeat=ngram_size)
-            
-        else:
-            attested = lang.list_ngrams(ngram_size, phon_env=False)
-            all_ngrams = product(list(lang.phonemes.keys())+[f'{self.pad_ch}{END_PAD_CH}', f'{START_PAD_CH}{self.pad_ch}', self.gap_ch], repeat=ngram_size) 
-
-        gappy = set(ngram for ngram in all_ngrams if self.gap_ch in ngram)
-        all_ngrams = gappy.union(attested.keys())
-        all_ngrams = set(Ngram(ngram).ngram for ngram in all_ngrams) # standardize forms
-        return all_ngrams
     
     def phoneme_surprisal(self, 
                           correspondence_counts, 
@@ -1011,6 +973,36 @@ class PhonCorrelator:
         self.log_phoneme_surprisal(phon_env=True)
         
         return surprisal_results, phon_env_surprisal
+    
+    def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
+        """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
+        
+        # Take a sample of different-meaning words, by default as large as the same-meaning set
+        if sample_size is None:
+            sample_size = len(self.same_meaning)
+            
+        # Set random seed: may or may not be the default seed attribute of the PhonCorrelator class
+        if not seed:
+            seed = self.seed
+        random.seed(seed)
+
+        diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
+        noncognate_scores = []
+        func_key = (eval_func, eval_func.hashable_kwargs)
+        for pair in diff_sample:
+            if pair in self.scored_words[func_key]:
+                noncognate_scores.append(self.scored_words[func_key][pair])
+            else:
+                score = eval_func.eval(pair[0], pair[1])
+                noncognate_scores.append(score)
+                self.scored_words[func_key][pair] = score
+        self.reset_seed()
+        
+        if save:
+            key = (self.lang2, eval_func, sample_size, seed)
+            self.lang1.noncognate_thresholds[key] = noncognate_scores
+        
+        return noncognate_scores
 
     def log_phoneme_pmi(self, outfile=None, threshold=0.0001, sep='\t'):
         # Save calculated PMI values to file
