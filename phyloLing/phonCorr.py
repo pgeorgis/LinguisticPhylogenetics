@@ -106,6 +106,9 @@ class PhonCorrelator:
         self.pmi_log_dir, self.surprisal_log_dir = self.log_dirs()
         self.align_log = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         self.logger = logger
+    
+    def reset_seed(self):
+        random.seed(self.seed)
         
     def langs(self, l1=None, l2=None):
         if l1 is None:
@@ -154,7 +157,7 @@ class PhonCorrelator:
                     same_meaning.append(pair)
             else:
                 diff_meaning.append(pair)
-        
+
         # Return a tuple of the three word type lists
         return same_meaning, diff_meaning, loanwords
     
@@ -431,7 +434,7 @@ class PhonCorrelator:
             self.logger.info(f'Calculating phoneme PMI: {self.lang1.name}-{self.lang2.name}...')
             
         # First step: calculate probability of phones co-occuring within within 
-        # a set radius of positions within their respective words
+        # a set radius of positions within their respective words # TODO shouldn't this be within the sample_n scope?
         synonyms_radius1 = self.radial_counts(self.same_meaning, radius, normalize=False)
         synonyms_radius2 = reverse_corr_dict(synonyms_radius1)
         for d in [synonyms_radius1, synonyms_radius2]:
@@ -449,13 +452,18 @@ class PhonCorrelator:
         sample_size = round(len(self.same_meaning)*sample_size)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         iter_logs = defaultdict(lambda:[])
+        sample_logs = {}
         max_iterations = max(round((max_p-p_threshold)/p_step), 2)
         sample_iterations = {}
         for sample_n in range(samples):
-            random.seed(self.seed+sample_n)
-            synonym_sample = random.sample(self.same_meaning, sample_size)
+            rng = random.Random(self.seed+sample_n)
+            synonym_sample = rng.sample(self.same_meaning, sample_size)
+             # Log sample
+            if log_iterations:
+                sample_log = self._log_sample(synonym_sample, sample_n, seed=self.seed+sample_n)
+                sample_logs[sample_n] = sample_log
             # Take a sample of different-meaning words, as large as the same-meaning set
-            diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
+            diff_sample = rng.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
 
             # At each following iteration N, re-align using the pmi_stepN as an 
             # additional penalty, and then recalculate PMI
@@ -539,6 +547,8 @@ class PhonCorrelator:
             sample_iterations[sample_n] = len(PMI_iterations)-1
             # if self.logger:
             #     self.logger.debug(f'Sample {sample_n+1} converged after {iteration} iterations.')
+            
+            self.reset_seed()
         
         # Average together the PMI estimations from each sample
         if samples > 1:
@@ -551,6 +561,10 @@ class PhonCorrelator:
             self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             log_file = os.path.join(self.pmi_log_dir, f'PMI_iterations.log')
             self._write_iter_log(iter_logs, log_file)
+            
+            # Write sample log
+            sample_log_file = os.path.join(self.pmi_log_dir, 'samples.log')
+            self._write_sample_log(sample_logs, sample_log_file)
             
             # Write alignment log
             align_log_file = os.path.join(self.pmi_log_dir, 'PMI_alignments.log')
@@ -573,14 +587,15 @@ class PhonCorrelator:
     def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
         
+        # Take a sample of different-meaning words, by default as large as the same-meaning set
+        if sample_size is None:
+            sample_size = len(self.same_meaning)
+            
         # Set random seed: may or may not be the default seed attribute of the PhonCorrelator class
         if not seed:
             seed = self.seed
         random.seed(seed)
 
-        # Take a sample of different-meaning words, by default as large as the same-meaning set
-        if sample_size is None:
-            sample_size = len(self.same_meaning)
         diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
         noncognate_scores = []
         func_key = (eval_func, eval_func.hashable_kwargs)
@@ -591,6 +606,7 @@ class PhonCorrelator:
                 score = eval_func.eval(pair[0], pair[1])
                 noncognate_scores.append(score)
                 self.scored_words[func_key][pair] = score
+        self.reset_seed()
         
         if save:
             key = (self.lang2, eval_func, sample_size, seed)
@@ -826,10 +842,10 @@ class PhonCorrelator:
             iter_logs = defaultdict(lambda:[])
             sample_iterations = {}
             for sample_n in range(samples):
-                random.seed(self.seed+sample_n)
-                same_sample = random.sample(self.same_meaning, sample_size)
+                rng = random.Random(self.seed+sample_n)
+                same_sample = rng.sample(self.same_meaning, sample_size)
                 # Take a sample of different-meaning words, as large as the same-meaning set
-                diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
+                diff_sample = rng.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
                 diff_meaning_alignments = self.align_wordlist(diff_sample, added_penalty_dict=self.pmi_dict, complex_ngrams=self.complex_ngrams)
 
                 # Align same-meaning and different meaning word pairs using PMI values: 
@@ -923,6 +939,7 @@ class PhonCorrelator:
                 cognate_alignments = [same_meaning_alignments[i] for i in qualifying_words[iteration]]
                 sample_results[sample_n] = surprisal_iterations[iteration]
                 sample_iterations[sample_n] = iteration
+                self.reset_seed()
             
             # Average together the surprisal estimations from each sample
             if samples > 1:
@@ -1061,6 +1078,26 @@ class PhonCorrelator:
             header = sep.join(['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed'])
             f.write(f'{header}\n{lines}')
 
+    def _log_sample(self, sample, sample_n, seed=None):
+        if seed is None:
+            seed = self.seed
+        sample = sorted(
+            [
+                f'[{word1.concept}] {word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/'
+                for word1, word2 in sample
+            ]
+        )
+        sample_log = f'SAMPLE: {sample_n}\nSEED: {seed}\n'
+        sample_log += '\n'.join(sample)
+        return sample_log
+    
+    def _write_sample_log(self, sample_logs, log_file):
+        log_dir = os.path.abspath(os.path.dirname(log_file))
+        os.makedirs(log_dir, exist_ok=True)
+        content = '\n\n'.join([sample_logs[sample_n] for sample_n in range(len(sample_logs))])
+        with open(log_file, 'w') as f:
+            f.write(content)
+
     def _log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
         iter_log = []
         if method == 'surprisal':
@@ -1126,9 +1163,11 @@ class PhonCorrelator:
             for key in sorted_alignment_keys:
                 f.write(f'{key}\n')
                 sorted_alignments = dict_tuplelist(alignment_log[key])
+                sorted_alignments.sort(key=lambda x:(x[-1], x[0]), reverse=True)
                 for alignment, count in sorted_alignments:
-                    freq = count/sum(alignment_log[key].values())
-                    f.write(f'[{round(freq, 2)}] {alignment}\n')
+                    freq = f'{count}/{sum(alignment_log[key].values())}'#count/sum(alignment_log[key].values())
+                    #f.write(f'[{round(freq, 2)}] {alignment}\n')
+                    f.write(f'[{freq}] {alignment}\n')
                 f.write('\n-------------------\n\n')
     
     def _write_phon_corr_report(self, corr, outfile, type, n=5):
