@@ -11,6 +11,5 @@ def strip_ch(string, to_remove):
 
 def format_as_variable(string):
     variable = unidecode(string)
-    variable = re.sub("[\s'\(\)]", '', variable)
-    variable = re.sub('-', '_', variable)
+    variable = re.sub("[-\s'\(\)]", '', variable)
     return variable

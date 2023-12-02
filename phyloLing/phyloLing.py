@@ -141,7 +141,7 @@ class LexicalDataset:
         
         language_list = sorted(list(language_vocab_data.keys()))
         for lang in language_list:
-            os.makedirs(os.path.join(self.doculects_dir, lang), exist_ok=True)
+            os.makedirs(os.path.join(self.doculects_dir, format_as_variable(lang)), exist_ok=True)
             self.languages[lang] = Language(name = lang, 
                                             lang_id=self.lang_ids[lang],
                                             glottocode=self.glottocodes[lang],
@@ -1190,6 +1190,7 @@ class Language:
         
         # Language data
         self.name = name
+        self.path_name = format_as_variable(name)
         self.lang_id = lang_id
         self.glottocode = glottocode
         self.iso_code = iso_code
@@ -1270,7 +1271,7 @@ class Language:
     
     
     def write_missing_concepts(self):
-        missing_lst = os.path.join(self.family.doculects_dir, self.name, 'missing_concepts.lst')
+        missing_lst = os.path.join(self.family.doculects_dir, self.path_name, 'missing_concepts.lst')
         missing_concepts = '\n'.join(sorted(list(self.family.concepts.keys() - self.vocabulary.keys())))
         with open(missing_lst, 'w') as f:
             f.write(missing_concepts)
@@ -1349,7 +1350,7 @@ class Language:
     
     
     def write_phoneme_inventory(self, n_examples=3, seed=1):
-        doculect_dir = os.path.join(self.family.doculects_dir, self.name)
+        doculect_dir = os.path.join(self.family.doculects_dir, self.path_name)
         os.makedirs(doculect_dir, exist_ok=True)
         random.seed(seed)
         vowels, consonants, tonemes = map(dict_tuplelist, [self.vowels, self.consonants, self.tonemes])
