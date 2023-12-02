@@ -1,9 +1,9 @@
 family:
     name: Romance
-    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Romance/data/romance_data.tsv
+    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/data/romance_data.tsv
     min_amc: 0.7
     exclude: ['Dalmatian', 'Savoyard']
-    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Romance/
+    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/
 
 transcription:
     global:

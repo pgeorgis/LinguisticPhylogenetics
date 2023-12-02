@@ -55,6 +55,7 @@ class LexicalDataset:
         
         # Dataset name and logger
         self.name = name
+        self.path_name = format_as_variable(name)
         if logger:
             self.logger = logger
         else:
@@ -175,7 +176,7 @@ class LexicalDataset:
         """Write cognate set index to .csv file"""
         assert sep != variants_sep
         if output_file is None:
-            output_file = f'{self.directory}{self.name} Vocabulary Index.csv'
+            output_file = os.path.join(self.directory, f'{self.path_name}_vocabulary_index.csv')
         
         if concept_list is None:
             concept_list = sorted(list(self.cognate_sets.keys()))
@@ -290,7 +291,7 @@ class LexicalDataset:
         
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                pmi_file = os.path.join(pmi_dir, lang1.name, lang2.name, 'phonPMI.tsv')
+                pmi_file = os.path.join(pmi_dir, lang1.path_name, lang2.path_name, 'phonPMI.tsv')
                 
                 # Try to load the file of saved PMI values, otherwise calculate PMI first
                 if not os.path.exists(pmi_file):
@@ -391,8 +392,8 @@ class LexicalDataset:
         
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                surprisal_file = os.path.join(surprisal_dir, lang1.name, lang2.name, f'{ngram_size}-gram', 'phonSurprisal.tsv')
-                surprisal_file_phon_env = os.path.join(surprisal_dir, lang1.name, lang2.name, 'phonEnv', 'phonEnvSurprisal.tsv') 
+                surprisal_file = os.path.join(surprisal_dir, lang1.path_name, lang2.path_name, f'{ngram_size}-gram', 'phonSurprisal.tsv')
+                surprisal_file_phon_env = os.path.join(surprisal_dir, lang1.path_name, lang2.path_name, 'phonEnv', 'phonEnvSurprisal.tsv') 
                 
                 # Try to load the file of saved surprisal values, otherwise calculate surprisal first
                 if not os.path.exists(surprisal_file):

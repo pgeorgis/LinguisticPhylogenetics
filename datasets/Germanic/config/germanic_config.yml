@@ -1,9 +1,9 @@
 family:
     name: Germanic
-    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/data/germanic_data.tsv
+    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/datasets/Germanic/data/germanic_data.tsv
     min_amc: 0.65
     exclude: ['Old English', 'Old Norse']
-    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics/Datasets/Germanic/
+    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/datasets/Germanic/
 
 transcription:
     global:
