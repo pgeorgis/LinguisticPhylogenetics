@@ -92,6 +92,7 @@ class PhonCorrelator:
         
         # Prepare wordlists: sort out same/different-meaning words and loanwords
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
+        self.samples = {}
         
         # PMI, ngrams, scored words
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
@@ -162,6 +163,33 @@ class PhonCorrelator:
         # Return a tuple of the three word type lists
         return same_meaning, diff_meaning, loanwords
     
+    def sample_wordlists(self, n_samples, sample_size, start_seed=None, log_samples=True):
+        # Take N samples of same- and different-meaning words
+        if start_seed is None:
+            start_seed = self.seed
+        
+        samples = {}
+        if log_samples:
+            sample_logs = {}
+        for sample_n in range(n_samples):
+            seed_i = start_seed+sample_n
+            rng = random.Random(seed_i)
+            synonym_sample = rng.sample(self.same_meaning, sample_size)
+             # Log sample
+            if log_samples:
+                sample_log = self._log_sample(synonym_sample, sample_n, seed=seed_i)
+                sample_logs[sample_n] = sample_log
+            # Take a sample of different-meaning words, as large as the same-meaning set
+            diff_sample = rng.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
+            samples[sample_n] = (synonym_sample, diff_sample)
+        self.samples.update(samples)
+        
+        # Write sample log
+        if log_samples:
+            sample_log_file = os.path.join(self.outdir, 'samples', self.lang1.path_name, self.lang2.path_name, 'samples.log')
+            self._write_sample_log(sample_logs, sample_log_file)
+        
+        return samples
     
     def pad_wordlist(self, wordlist, pad_n=1):
         def _pad(seq):
@@ -464,18 +492,11 @@ class PhonCorrelator:
         sample_size = round(len(self.same_meaning)*sample_size)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         iter_logs = defaultdict(lambda:[])
-        sample_logs = {}
         max_iterations = max(round((max_p-p_threshold)/p_step), 2)
         sample_iterations = {}
-        for sample_n in range(samples):
-            rng = random.Random(self.seed+sample_n)
-            synonym_sample = rng.sample(self.same_meaning, sample_size)
-             # Log sample
-            if log_iterations:
-                sample_log = self._log_sample(synonym_sample, sample_n, seed=self.seed+sample_n)
-                sample_logs[sample_n] = sample_log
-            # Take a sample of different-meaning words, as large as the same-meaning set
-            diff_sample = rng.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
+        sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=self.seed, log_samples=log_iterations)
+        for sample_n, sample in sample_dict.items():
+            synonym_sample, diff_sample = sample
 
             # At each following iteration N, re-align using the pmi_stepN as an 
             # additional penalty, and then recalculate PMI
@@ -573,10 +594,6 @@ class PhonCorrelator:
             self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             log_file = os.path.join(self.pmi_log_dir, f'PMI_iterations.log')
             self._write_iter_log(iter_logs, log_file)
-            
-            # Write sample log
-            sample_log_file = os.path.join(self.pmi_log_dir, 'samples.log')
-            self._write_sample_log(sample_logs, sample_log_file)
             
             # Write alignment log
             align_log_file = os.path.join(self.pmi_log_dir, 'PMI_alignments.log')
@@ -803,16 +820,14 @@ class PhonCorrelator:
             sample_results = {}
             iter_logs = defaultdict(lambda:[])
             sample_iterations = {}
-            for sample_n in range(samples):
-                rng = random.Random(self.seed+sample_n)
-                same_sample = rng.sample(self.same_meaning, sample_size)
-                # Take a sample of different-meaning words, as large as the same-meaning set
-                diff_sample = rng.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-                diff_meaning_alignments = self.align_wordlist(diff_sample, added_penalty_dict=self.pmi_dict, complex_ngrams=self.complex_ngrams)
+            sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=self.seed, log_samples=log_iterations)
+            for sample_n, sample in sample_dict.items():
+                same_sample, diff_sample = sample
 
                 # Align same-meaning and different meaning word pairs using PMI values: 
                 # the alignments will remain the same throughout iteration
                 same_meaning_alignments = self.align_wordlist(same_sample, added_penalty_dict=self.pmi_dict, complex_ngrams=self.complex_ngrams)
+                diff_meaning_alignments = self.align_wordlist(diff_sample, added_penalty_dict=self.pmi_dict, complex_ngrams=self.complex_ngrams)
 
                 # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
                 # Then test each same-meaning word pair to see if if it meets the qualifying threshold
