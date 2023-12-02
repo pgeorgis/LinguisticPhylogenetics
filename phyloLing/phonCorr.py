@@ -473,20 +473,6 @@ class PhonCorrelator:
         if self.logger:
             self.logger.info(f'Calculating phoneme PMI: {self.lang1.name}-{self.lang2.name}...')
             
-        # First step: calculate probability of phones co-occuring within within 
-        # a set radius of positions within their respective words # TODO shouldn't this be within the sample_n scope?
-        synonyms_radius1 = self.radial_counts(self.same_meaning, radius, normalize=False)
-        synonyms_radius2 = reverse_corr_dict(synonyms_radius1)
-        for d in [synonyms_radius1, synonyms_radius2]:
-            for seg1 in d:
-                d[seg1] = normalize_dict(d[seg1])
-        pmi_step1 = [self.phoneme_pmi(conditional_counts=synonyms_radius1, l1=self.lang1, l2=self.lang2),
-                     self.phoneme_pmi(conditional_counts=synonyms_radius2, l1=self.lang2, l2=self.lang1)]
-        pmi_dict_l1l2, pmi_dict_l2l1 = pmi_step1
-        
-        # Average together the PMI values from each direction
-        pmi_step1 = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
-        
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
         sample_results = {}
         sample_size = round(len(self.same_meaning)*sample_size)
@@ -497,6 +483,20 @@ class PhonCorrelator:
         sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=self.seed, log_samples=log_iterations)
         for sample_n, sample in sample_dict.items():
             synonym_sample, diff_sample = sample
+            
+            # First step: calculate probability of phones co-occuring within within 
+            # a set radius of positions within their respective words
+            synonyms_radius1 = self.radial_counts(synonym_sample, radius, normalize=False)
+            synonyms_radius2 = reverse_corr_dict(synonyms_radius1)
+            for d in [synonyms_radius1, synonyms_radius2]:
+                for seg1 in d:
+                    d[seg1] = normalize_dict(d[seg1])
+            pmi_step1 = [self.phoneme_pmi(conditional_counts=synonyms_radius1, l1=self.lang1, l2=self.lang2),
+                        self.phoneme_pmi(conditional_counts=synonyms_radius2, l1=self.lang2, l2=self.lang1)]
+            pmi_dict_l1l2, pmi_dict_l2l1 = pmi_step1
+            
+            # Average together the PMI values from each direction
+            pmi_step1 = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
 
             # At each following iteration N, re-align using the pmi_stepN as an 
             # additional penalty, and then recalculate PMI
