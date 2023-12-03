@@ -449,12 +449,42 @@ class Alignment:
         return map1, map2
 
     def add_phon_env(self, env_func=get_phon_env):
+        """Adds the phonological environment value of segments to an alignment
+        e.g. 
+        [('m', 'm'), ('j', '-'), ('ɔu̯', 'ɪ'), ('l̥', 'l'), ('k', 'ç')]) 
+        becomes
+        [(('m', '#S<'), 'm'), (('j', '<S<'), '-'), (('ɔu̯', '<S>'), 'ɪ'), (('l̥', '>S>'), 'l'), (('k', '>S#'), 'ç')]
+        """
+        if self.phon_env is True:
+            return self.phon_env_alignment
+        
         self.phon_env = True
-        return add_phon_env(self.alignment,
-                            env_func=env_func, 
-                            gap_ch=self.gap_ch,
-                            pad_ch=self.pad_ch,
-                            segs1=self.seq1)
+        word1_aligned, word2_aligned = tuple(zip(*self.alignment))
+        word1_aligned = list(word1_aligned) # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
+        seq_map = self.seq_map[0]
+        for align_i in seq_map:
+            if seq_map[align_i] is not None:
+                # for complex ngrams, consider only the preceding context of the first component segment and the following context of the last component segment
+                # therefore skip computing phon envs for any segs in between first and last within an alignment position
+                for j, seg_j, in enumerate(list(set(seq_map[align_i][:1]+seq_map[align_i][-1:]))):
+                    phon_env = env_func(self.seq1, seg_j)
+                    target = word1_aligned[align_i]
+                    if isinstance(target, str):
+                        word1_aligned[align_i] = word1_aligned[align_i], phon_env
+                    else:
+                        word1_aligned[align_i] = list(word1_aligned[align_i]) # needed because tuples don't support item assignment
+                        word1_aligned[align_i][j] = word1_aligned[align_i][j], phon_env
+                if len(seq_map[align_i]) > 1:
+                    # Extract only preceding and following contexts from complex ngrams
+                    # e.g. (('s', '#|S|>'), ('k', '>|S|<')) -> (('s', 'k'), '#|S|<')
+                    segs = tuple(pair[0] for pair in word1_aligned[align_i])
+                    pre_env = word1_aligned[align_i][0][-1].split('|')[0]
+                    post_env = word1_aligned[align_i][-1][-1].split('|')[-1]
+                    phon_env = f'{pre_env}|S|{post_env}'
+                    word1_aligned[align_i] = segs, phon_env
+                    
+        # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
+        return list(zip(word1_aligned, word2_aligned))
 
     def reverse(self):
         return ReversedAlignment(self)
@@ -548,41 +578,7 @@ class Gap(AlignedPair):
         seg_aligned_corr_i = abs(gap_aligned_corr_i-1)
         gap_aligned_corr = bigram[gap_aligned_corr_i]
         seg_aligned_corr = bigram[seg_aligned_corr_i]
-        return gap_aligned_corr, seg_aligned_corr  
-
-def add_phon_env(alignment,
-                 env_func=get_phon_env, 
-                 gap_ch=GAP_CH_DEFAULT,
-                 pad_ch=PAD_CH_DEFAULT,
-                 segs1=None):
-    """Adds the phonological environment value of segments to an alignment
-    e.g. 
-    [('m', 'm'), ('j', '-'), ('ɔu̯', 'ɪ'), ('l̥', 'l'), ('k', 'ç')]) 
-    becomes
-    [(('m', '#S<'), 'm'), (('j', '<S<'), '-'), (('ɔu̯', '<S>'), 'ɪ'), (('l̥', '>S>'), 'l'), (('k', '>S#'), 'ç')]
-    """
-    word1_aligned, word2_aligned = tuple(zip(*alignment))
-    word1_aligned = list(word1_aligned) # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
-    if not segs1:
-        segs1 = tuple([seg for seg in word1_aligned if seg != gap_ch and pad_ch not in seg])
-    gap_count1 = 0
-
-    def add_phon_env_i(word_aligned, segs, i, gap_count):
-        if word_aligned[i] == gap_ch or pad_ch in word1_aligned[i]:
-            gap_count += 1
-            # TODO so gaps are skipped?
-        else:
-            seg_index = i - gap_count
-            phonEnv = env_func(segs, seg_index)
-            word_aligned[i] = word_aligned[i], phonEnv
-        
-        return word_aligned, gap_count
-
-    for i, seg in enumerate(word1_aligned):
-        word1_aligned, gap_count1 = add_phon_env_i(word1_aligned, segs1, i, gap_count1)
-
-    # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
-    return list(zip(word1_aligned, word2_aligned))
+        return gap_aligned_corr, seg_aligned_corr
 
 
 def get_alignment_iter(alignment, phon_env=False):
