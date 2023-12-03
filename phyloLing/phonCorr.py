@@ -16,7 +16,7 @@ from utils.information import surprisal, adaptation_surprisal, pointwise_mutual_
 from utils.utils import default_dict, normalize_dict, dict_tuplelist
 
 def sort_wordlist(wordlist):
-    return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa))
+    return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa, x[0].concept, x[1].concept))
 
 def prune_corrs(corr_dict, min_val=2):
     # Prune correspondences below a minimum count/probability threshold 
@@ -91,7 +91,8 @@ class PhonCorrelator:
         self.seed = seed
         
         # Prepare wordlists: sort out same/different-meaning words and loanwords
-        self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists(wordlist)
+        self.wordlist = self.get_concept_list(wordlist)
+        self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists()
         self.samples = {}
         
         # PMI, ngrams, scored words
@@ -125,9 +126,8 @@ class PhonCorrelator:
         os.makedirs(pmi_log_dir, exist_ok=True)
         os.makedirs(surprisal_log_dir, exist_ok=True)
         return pmi_log_dir, surprisal_log_dir
-
-    def prepare_wordlists(self, wordlist):
     
+    def get_concept_list(self, wordlist=None):
         # If no wordlist is provided, by default use all concepts shared by the two languages
         if wordlist is None:
             wordlist = self.lang1.vocabulary.keys() & self.lang2.vocabulary.keys()
@@ -135,14 +135,17 @@ class PhonCorrelator:
         # If a wordlist is provided, use only the concepts shared by both languages
         else:
             wordlist = set(wordlist) & self.lang1.vocabulary.keys() & self.lang2.vocabulary.keys()
-            
+        
+        return wordlist
+
+    def prepare_wordlists(self):
         # Get lexical items in each language belonging to the specified wordlist
-        l1_wordlist = [word for concept in wordlist for word in self.lang1.vocabulary[concept]]
-        l2_wordlist = [word for concept in wordlist for word in self.lang2.vocabulary[concept]]
+        l1_wordlist = [word for concept in self.wordlist for word in self.lang1.vocabulary[concept]]
+        l2_wordlist = [word for concept in self.wordlist for word in self.lang2.vocabulary[concept]]
         
         # Sort the wordlists in order to ensure that random samples of same/different meaning pairs are reproducible
-        l1_wordlist = sorted(l1_wordlist, key=lambda x: x.ipa)
-        l2_wordlist = sorted(l2_wordlist, key=lambda x: x.ipa)
+        l1_wordlist = sorted(l1_wordlist, key=lambda x: (x.ipa, x.concept))
+        l2_wordlist = sorted(l2_wordlist, key=lambda x: (x.ipa, x.concept))
         
         # Get all combinations of L1 and L2 words
         all_wordpairs = product(l1_wordlist, l2_wordlist)
