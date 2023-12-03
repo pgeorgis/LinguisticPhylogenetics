@@ -171,11 +171,19 @@ class PhonCorrelator:
         if start_seed is None:
             start_seed = self.seed
         
-        samples = {}
+        samples = self.samples
+        new_samples = False
         if log_samples:
             sample_logs = {}
         for sample_n in range(n_samples):
             seed_i = start_seed+sample_n
+            
+            # Skip previously saved samples
+            if (seed_i, sample_size) in samples:
+                continue
+            
+            # Draw new samples if not yet done
+            new_samples = True
             rng = random.Random(seed_i)
             synonym_sample = rng.sample(self.same_meaning, sample_size)
              # Log sample
@@ -184,11 +192,14 @@ class PhonCorrelator:
                 sample_logs[sample_n] = sample_log
             # Take a sample of different-meaning words, as large as the same-meaning set
             diff_sample = rng.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-            samples[sample_n] = (synonym_sample, diff_sample)
-        self.samples.update(samples)
+            samples[(seed_i, sample_size)] = (synonym_sample, diff_sample)
         
-        # Write sample log
-        if log_samples:
+        # Update dictionary of samples
+        if new_samples:
+            self.samples.update(samples)
+        
+        # Write sample log (only if new samples were drawn)
+        if log_samples and new_samples:
             sample_log_file = os.path.join(self.outdir, 'samples', self.lang1.path_name, self.lang2.path_name, 'samples.log')
             self._write_sample_log(sample_logs, sample_log_file)
         
@@ -483,8 +494,11 @@ class PhonCorrelator:
         iter_logs = defaultdict(lambda:[])
         max_iterations = max(round((max_p-p_threshold)/p_step), 2)
         sample_iterations = {}
-        sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=self.seed, log_samples=log_iterations)
-        for sample_n, sample in sample_dict.items():
+        start_seed = self.seed
+        sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
+        for key, sample in sample_dict.items():
+            seed_i, sample_size = key
+            sample_n = seed_i - start_seed
             synonym_sample, diff_sample = sample
             
             # First step: calculate probability of phones co-occuring within within 
@@ -823,8 +837,11 @@ class PhonCorrelator:
             sample_results = {}
             iter_logs = defaultdict(lambda:[])
             sample_iterations = {}
-            sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=self.seed, log_samples=log_iterations)
-            for sample_n, sample in sample_dict.items():
+            start_seed = self.seed
+            sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
+            for key, sample in sample_dict.items():
+                seed_i, sample_size = key
+                sample_n = seed_i - start_seed
                 same_sample, diff_sample = sample
 
                 # Align same-meaning and different meaning word pairs using PMI values: 
