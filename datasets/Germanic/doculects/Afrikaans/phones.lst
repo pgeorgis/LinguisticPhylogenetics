@@ -47,7 +47,7 @@ VOWELS
 /ˈɛ/ (0.014)
 	<kerk> /kˈɛrk/ "church_NOUN_FEM"
 	<mens> /mˈɛns/ "person_NOUN"
-	<elf> /ˈɛlf/ "eleven_NUM"
+	<elf> /ˈɛɫf/ "eleven_NUM"
 
 /ˈu/ (0.013)
 	<groen> /χrˈun/ "green_ADJ"
@@ -132,15 +132,15 @@ CONSONANTS
 	<noord> /nˈʊə̯rt/ "north_NOUN"
 	<traan> /trˈɑːn/ "tear_NOUN_FEM"
 
-/χ/ (0.045)
-	<plig> /pɫˈəχ/ "plight_NOUN"
-	<agt> /ˈaχt/ "eight_NUM"
-	<gees> /χˈɪə̯s/ "ghost_NOUN"
+/ɫ/ (0.054)
+	<slaan> /sɫˈɑːn/ "slay_VERB"
+	<aal> /ˈɑːɫ/ "eel_NOUN"
+	<vleis> /fɫˈəɪ̯s/ "flesh_NOUN"
 
-/ɫ/ (0.044)
-	<wol> /vˈɔɫ/ "wool_NOUN_FEM"
-	<uil> /ˈœɪ̯ɫ/ "owl_NOUN"
-	<melk> /mˈɛɫk/ "milk_NOUN_FEM"
+/χ/ (0.045)
+	<twintig> /twˈɪntəχ/ "twenty_NUM"
+	<lig> /ɫˈəχ/ "light_ADJ"
+	<vlieg> /fɫˈiχ/ "housefly_NOUN"
 
 /f/ (0.04)
 	<volg> /fˈɔɫχ/ "follow_VERB"
@@ -187,15 +187,10 @@ CONSONANTS
 	<skip> /skˈəp/ "ship_NOUN"
 	<slaap> /sɫˈɑːp/ "sleep_VERB"
 
-/l/ (0.01)
-	<dodelik> /dˈʊə̯dələk/ "deadly_ADJ"
-	<lag> /lˈaχ/ "laugh_VERB"
-	<slaan> /slˈɑːn/ "slay_VERB"
-
 /w/ (0.009)
-	<twaalf> /twˈɑːlf/ "twelve_NUM"
-	<sneeu> /snˈiw/ "snow_NOUN"
-	<twee> /twˈɪə̯/ "two_NUM"
+	<twintig> /twˈɪntəχ/ "twenty_NUM"
+	<swart> /swˈart/ "black_ADJ"
+	<swaard> /swˈɑːrt/ "sword_NOUN"
 
 /j/ (0.003)
 	<jaar> /jˈɑːr/ "year_NOUN"
