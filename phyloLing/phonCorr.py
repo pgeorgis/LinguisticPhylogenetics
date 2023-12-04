@@ -30,6 +30,28 @@ def prune_corrs(corr_dict, min_val=2):
         del corr_dict[seg1]
     return corr_dict
 
+def prune_oov_surprisal(surprisal_dict, oov_ch='<NON-IPA>'):
+    # Prune correspondences with a surprisal value greater than OOV surprisal
+    pruned = defaultdict(lambda:{})
+    for seg1 in surprisal_dict:
+        # Determine the (potentially smoothed) value for unseen ("out of vocabulary" [OOV]) correspondences
+        # Check using an OOV/non-IPA character
+        oov_val = surprisal_dict[seg1][oov_ch]
+        
+        # Then remove this character from the surprisal dictionary
+        del surprisal_dict[seg1][oov_ch]
+        
+        # Save values which are not equal to (less than) the OOV smoothed value
+        for seg2 in surprisal_dict[seg1]:
+            surprisal_val = surprisal_dict[seg1][seg2]
+            if surprisal_val < oov_val:
+                pruned[seg1][seg2] = surprisal_val
+        
+        # Set as default dict with OOV value as default
+        pruned[seg1] = default_dict(pruned[seg1], l=oov_val)
+        
+    return pruned, oov_val
+
 def average_corrs(corr_dict1, corr_dict2):
     # Average together values from nested dictionaries in opposite directions
     avg_corr = defaultdict(lambda:defaultdict(lambda:0))
@@ -1077,25 +1099,15 @@ class PhonCorrelator:
             surprisal_dict = self.surprisal_dict[ngram_size]
             
         lines = []
+        surprisal_dict, oov_value = prune_oov_surprisal(surprisal_dict)
         for seg1 in surprisal_dict:
-            # Determine the smoothed value for unseen ("out of vocabulary") correspondences
-            # Check using a non-IPA character
-            non_IPA = '<NON-IPA>'
-            oov_smoothed = surprisal_dict[seg1][non_IPA]
-            
-            # Then remove this character from the surprisal dictionary
-            del surprisal_dict[seg1][non_IPA]
-            
-            # Save values which are not equal to (less than) the OOV smoothed value
-            for seg2 in surprisal_dict[seg1]:
-                surprisal_val = surprisal_dict[seg1][seg2]
-                if surprisal_val < oov_smoothed:
+            for seg2 in surprisal_dict:
                     if ngram_size > 1:
                         breakpoint() # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
                     lines.append([ngram2str(seg1, phon_env=phon_env), 
                                   ngram2str(seg2, phon_env=False), # phon_env only on seg1  
-                                  str(surprisal_val), 
-                                  str(oov_smoothed)])
+                                  str(surprisal_dict[seg1][seg2]), 
+                                  str(oov_value)])
         
         # Sort surprisal in ascending order, then by phones
         lines = sorted(lines, key=lambda x:(x[2], x[0], x[1]), reverse=False)
@@ -1197,23 +1209,23 @@ class PhonCorrelator:
                     f.write(f'[{freq}] {alignment}\n')
                 f.write('\n-------------------\n\n')
     
-    def _write_phon_corr_report(self, corr, outfile, type, n=5):
+    def _write_phon_corr_report(self, corr, outfile, type):
         lines = []
-        l1_phons = sorted([p for p in corr if p[0] != self.gap_ch], key=lambda x:Ngram(x).string)
+        corr, oov_value = prune_oov_surprisal(corr)
+        l1_phons = sorted([p for p in corr if self.gap_ch not in p], key=lambda x:Ngram(x).string)
         for p1 in l1_phons:
             p2_candidates = corr[p1]
             if len(p2_candidates) > 0:
-                p2_candidates = dict_tuplelist(p2_candidates, reverse=True)[-n:]
+                p2_candidates = dict_tuplelist(p2_candidates, reverse=True)
                 # Sort by corr value, then by phone string if values are equal
                 p2_candidates.sort(key=lambda x:(x[-1], Ngram(x[0]).string))
                 for p2, score in p2_candidates:
                     if type == 'surprisal':
-                        if score < self.lang2.phoneme_entropy:
-                            prob = surprisal_to_prob(score) # turn surprisal value into probability
-                            p1 = Ngram(p1).string
-                            p2 = Ngram(p2).string
-                            line = '\t'.join([p1, p2, str(round(prob, 3))])
-                            lines.append(line)
+                        prob = surprisal_to_prob(score) # turn surprisal value into probability
+                        p1 = Ngram(p1).string
+                        p2 = Ngram(p2).string
+                        line = '\t'.join([p1, p2, str(round(prob, 3))])
+                        lines.append(line)
                     else:
                         raise NotImplementedError # not implemented for PMI
         header = '\t'.join([self.lang1.name, self.lang2.name, 'probability'])
