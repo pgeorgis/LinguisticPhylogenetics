@@ -1101,7 +1101,7 @@ class PhonCorrelator:
         lines = []
         surprisal_dict, oov_value = prune_oov_surprisal(surprisal_dict)
         for seg1 in surprisal_dict:
-            for seg2 in surprisal_dict:
+            for seg2 in surprisal_dict[seg1]:
                     if ngram_size > 1:
                         breakpoint() # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
                     lines.append([ngram2str(seg1, phon_env=phon_env), 
