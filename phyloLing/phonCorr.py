@@ -1149,11 +1149,11 @@ class PhonCorrelator:
         iter_log.append(f'\tDisqualified: {len(disqualified)}')
         added = set(qualifying) - set(prev_qualifying)
         iter_log.append(f'\tAdded: {len(added)}')
-        for word1, word2 in added:
+        for word1, word2 in sort_wordlist(added):
             iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
         removed = set(disqualified) - set(prev_disqualified)
         iter_log.append(f'\tRemoved: {len(removed)}')
-        for word1, word2 in removed:
+        for word1, word2 in sort_wordlist(removed):
             iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
         
         iter_log = '\n'.join(iter_log)
@@ -1171,10 +1171,10 @@ class PhonCorrelator:
                 f.write(iter_log)
                 final_qualifying, final_disqualified = iter_logs[n][-1]
                 f.write('\n\nFinal qualifying:\n')
-                for word1, word2 in final_qualifying:
+                for word1, word2 in sort_wordlist(final_qualifying):
                     f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
                 f.write('\nFinal disqualified:\n')
-                for word1, word2 in final_disqualified:
+                for word1, word2 in sort_wordlist(final_disqualified):
                     f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
                 f.write('\n\n-------------------\n\n')
     
