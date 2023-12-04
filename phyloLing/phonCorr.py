@@ -1097,8 +1097,8 @@ class PhonCorrelator:
                                   str(surprisal_val), 
                                   str(oov_smoothed)])
         
-        # Sort surprisal in ascending order
-        lines = sorted(lines, key=lambda x:x[2], reverse=False)
+        # Sort surprisal in ascending order, then by phones
+        lines = sorted(lines, key=lambda x:(x[2], x[0], x[1]), reverse=False)
         lines = '\n'.join([sep.join(line) for line in lines])
         
         with open(outfile, 'w') as f:
