@@ -19,7 +19,7 @@ transcription:
 
 pmi:
     refresh: []
-    refresh_all_pmi: true
+    refresh_all_pmi: false
 
 surprisal:
     ngram: 1
