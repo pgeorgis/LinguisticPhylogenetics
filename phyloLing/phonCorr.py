@@ -1209,7 +1209,7 @@ class PhonCorrelator:
                     f.write(f'[{freq}] {alignment}\n')
                 f.write('\n-------------------\n\n')
     
-    def write_phon_corr_report(self, corr, outfile, type):
+    def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):
         lines = []
         corr, oov_value = prune_oov_surprisal(corr)
         l1_phons = sorted([p for p in corr if self.gap_ch not in p], key=lambda x:Ngram(x).string)
@@ -1222,10 +1222,11 @@ class PhonCorrelator:
                 for p2, score in p2_candidates:
                     if type == 'surprisal':
                         prob = surprisal_to_prob(score) # turn surprisal value into probability
-                        p1 = Ngram(p1).string
-                        p2 = Ngram(p2).string
-                        line = '\t'.join([p1, p2, str(round(prob, 3))])
-                        lines.append(line)
+                        if prob >= min_prob:
+                            p1 = Ngram(p1).string
+                            p2 = Ngram(p2).string
+                            line = '\t'.join([p1, p2, str(round(prob, 3))])
+                            lines.append(line)
                     else:
                         raise NotImplementedError # not implemented for PMI
         header = '\t'.join([self.lang1.name, self.lang2.name, 'probability'])
