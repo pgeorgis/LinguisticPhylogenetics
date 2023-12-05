@@ -121,7 +121,6 @@ class LexicalDataset:
         self.load_gold_cognate_sets()
         self.mutual_coverage = self.calculate_mutual_coverage()
 
-        
     def load_data(self, filepath, doculects=None, sep='\t'):
         
         # Load data file
@@ -159,8 +158,7 @@ class LexicalDataset:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
         for lang in language_list:
             self.languages[lang].write_missing_concepts()
-        
-    
+
     def load_gold_cognate_sets(self):
         """Creates dictionary sorted by cognate sets"""
         for lang in self.languages:
@@ -169,7 +167,6 @@ class LexicalDataset:
                 for word in lang.vocabulary[concept]:
                     cognate_class = word.cognate_class
                     self.cognate_sets[cognate_class][lang].add(word)
-    
 
     def write_vocab_index(self, output_file=None,
                           concept_list=None,
@@ -200,8 +197,7 @@ class LexicalDataset:
                     forms.append(variants_sep.join(lang_forms))
                 f.write(sep.join(forms))
                 f.write('\n')
-    
-    
+
     def calculate_mutual_coverage(self, concept_list=None):
         """Calculate the mutual coverage and average mutual coverage (AMC)
         of the dataset on a particular wordlist"""
@@ -231,7 +227,6 @@ class LexicalDataset:
                                                                      if c in self.concepts])
         
         return mutual_coverage, avg_mutual_coverage
-                    
     
     def prune_languages(self, min_amc=0.8, concept_list=None):
         """Prunes the language with the smallest number of transcribed words
@@ -263,12 +258,10 @@ class LexicalDataset:
             prune_log += f'\tAMC increased from {round(original_amc, 2)} to {round(self.mutual_coverage[1], 2)}.'
             if self.logger:
                 self.logger.info(prune_log)
-    
-    
-    def calculate_phoneme_pmi(self, save=True, **kwargs):
+
+    def calculate_phoneme_pmi(self, **kwargs):
         """Calculates phoneme PMI for all language pairs in the dataset and saves
         the results to file"""
-        
         lang_pairs = self.get_doculect_pairs(bidirectional=False)
         # Check whether phoneme PMI has been calculated already for this pair
         # If not, calculate it now
@@ -276,9 +269,6 @@ class LexicalDataset:
             if len(lang1.phoneme_pmi[lang2]) == 0:
                 correlator = lang1.get_phoneme_correlator(lang2)
                 correlator.calc_phoneme_pmi(**kwargs)
-        
-        if save:
-            self.write_phoneme_pmi()
 
     def load_phoneme_pmi(self, pmi_dir=None, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
@@ -311,32 +301,43 @@ class LexicalDataset:
                     if ngram1.size > 1 or ngram2.size > 1:
                         lang1.complex_ngrams[lang2][ngram1].append(ngram2)
                         lang2.complex_ngrams[lang1][ngram2].append(ngram1)
-                    
 
     def write_phoneme_pmi(self, **kwargs):
+        self.logger.info(f'Saving {self.name} phoneme PMI...')
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             # Retrieve the precalculated values
             if len(lang1.phoneme_pmi[lang2]) == 0:
                 self.logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
                 continue
-            
             correlator = lang1.get_phoneme_correlator(lang2)
+            
+            # Skip rewriting PMI for doculect pairs for which PMI was not calculated in this run
+            # This happens when recalculating for specific doculects only and loading others from file
+            if len(correlator.pmi_dict) == 0:
+                continue
+            
             correlator.log_phoneme_pmi(**kwargs)
 
     def write_phoneme_surprisal(self, phon_env=True, ngram_size=1, **kwargs):
+        self.logger.info(f'Saving {self.name} phoneme surprisal...')
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
             
             # Retrieve the precalculated values
             if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
                 self.logger.warning(f'{ngram_size}-gram phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}')
                 continue
-            
             correlator = lang1.get_phoneme_correlator(lang2)
+            
+            # Skip rewriting surprisal for doculect pairs for which surprisal was not calculated in this run
+            # This happens when recalculating for specific doculects only and loading others from file
+            if len(correlator.surprisal_dict) == 0:
+                continue
+            
             correlator.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size, **kwargs)
             if phon_env:
                 correlator.log_phoneme_surprisal(phon_env=True, **kwargs)
 
-    def calculate_phoneme_surprisal(self, ngram_size=1, save=True, **kwargs):
+    def calculate_phoneme_surprisal(self, ngram_size=1, **kwargs):
         """Calculates phoneme surprisal for all language pairs in the dataset and saves
         the results to file"""
         
@@ -349,10 +350,7 @@ class LexicalDataset:
             # If not, calculate it now
             if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
                 correlator = lang1.get_phoneme_correlator(lang2)
-                correlator.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-            
-        if save:
-            self.write_phoneme_surprisal(ngram_size=ngram_size)                        
+                correlator.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs) 
     
     def load_phoneme_surprisal(self, ngram_size=1, surprisal_dir=None, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme surprisal values from file"""        
@@ -423,7 +421,6 @@ class LexicalDataset:
         return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs if lang1 != lang2],
                       key=lambda x:(x[0].name, x[1].name))
 
-    
     def phonetic_diversity(self, ch_to_remove=[]): # TODO
         # diversity_scores = {}
         diversity_scores = defaultdict(lambda:[])
@@ -441,8 +438,7 @@ class LexicalDataset:
             diversity_scores[concept] = mean(diversity_scores[concept])
         
         return mean(diversity_scores.values())
-                    
-        
+
     def cognate_set_dendrogram(self,  # TODO UPDATE THIS FUNCTION
                                cognate_id, 
                                dist_func,
@@ -486,7 +482,6 @@ class LexicalDataset:
                         **kwargs
                         )
 
-
     def cluster_cognates(self, 
                          concept_list,
                          dist_func, 
@@ -519,7 +514,6 @@ class LexicalDataset:
 
         return clustered_cognates
 
-
     def write_cognate_index(self, 
                             clustered_cognates, 
                             output_file,
@@ -551,7 +545,6 @@ class LexicalDataset:
                 f.write(f'{line}\n')
         
         self.logger.info(f'Wrote clustered cognate index to {output_file}')
-
 
     def load_cognate_index(self, index_file, sep='\t', variants_sep='~'):
         assert sep != variants_sep
@@ -586,7 +579,6 @@ class LexicalDataset:
         
         return index
 
-
     def load_clustered_cognates(self, **kwargs):
         cognate_files = glob.glob(f'{self.cognates_dir}/*.cog')
         for cognate_file in cognate_files:
@@ -598,8 +590,7 @@ class LexicalDataset:
             s += ' indices.'
         else:
             s += ' index.'
-        self.logger.info(s)
-                
+        self.logger.info(s)         
     
     def evaluate_clusters(self, clustered_cognates, method='bcubed'):
         """Evaluates B-cubed precision, recall, and F1 of results of automatic  
@@ -659,7 +650,6 @@ class LexicalDataset:
         elif method == 'mcc':
             return mean(mcc_scores.values())
 
-
     def generate_test_code(self, dist_func, cognates=None, exclude=['logger'], **kwargs): # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
         """Creates a unique identifier for the current experiment"""
         
@@ -705,7 +695,6 @@ class LexicalDataset:
         code = re.sub(r'_$', '', code)
                 
         return code
-
 
     def distance_matrix(self, 
                         dist_func,
@@ -785,8 +774,7 @@ class LexicalDataset:
         self.write_distance_matrix(dm, outfile)
 
         return dm
-    
-    
+
     def linkage_matrix(self, 
                        dist_func,
                        cluster_func=None, 
@@ -823,7 +811,6 @@ class LexicalDataset:
             lm = linkage(dists, method, metric)
             return lm    
 
-
     def write_distance_matrix(self, dist_matrix, outfile, ordered_labels=None, float_format="%.5f"):
         """Writes numpy distance matrix object to a TSV with decimals rounded to 5 places by default"""
     
@@ -846,7 +833,6 @@ class LexicalDataset:
         df.insert(0, "Labels", names)
         df.insert(0, " ", [" "] * len(names))
         df.to_csv(outfile, sep='\t', index=False, float_format=float_format)
-
 
     def draw_tree(self, 
                   dist_func,
@@ -915,7 +901,6 @@ class LexicalDataset:
                     f.write(newick_tree)
             
             return newick_tree
-
 
     def plot_languages(self, 
                        dist_func, 
@@ -1007,7 +992,6 @@ class LexicalDataset:
         plt.show()
         plt.close()
 
-
     def draw_network(self, 
                   dist_func, 
                   concept_list=None,                  
@@ -1080,7 +1064,6 @@ class LexicalDataset:
                             clustered_cognates=clustered_concepts,
                             **kwargs)
     
-    
     def examine_cognates(self, language_list=None, concepts=None, cognate_sets=None,
                          min_langs=2):
         if language_list is None:
@@ -1102,8 +1085,7 @@ class LexicalDataset:
                 print(cognate_set)
                 for lang in lang_count:
                     print(f'{lang.name}: {" ~ ".join(self.cognate_sets[cognate_set][lang.name])}')
-                print('\n')
-                
+                print('\n')  
                 
     def remove_languages(self, langs_to_delete):
         """Removes a list of languages from a dataset"""
@@ -1140,7 +1122,6 @@ class LexicalDataset:
                                           if len(self.cognate_sets[cognate_set]) > 0}, 
                                          l=defaultdict(lambda:[]))
 
-    
     def subset(self, new_name, include=None, exclude=None, **kwargs):
         """Creates a subset of the existing dataset, including only select languages"""
         
@@ -1164,10 +1145,8 @@ class LexicalDataset:
         
         return new_dataset
 
-
     def add_language(self, name, data_path, **kwargs):
         self.load_data(data_path, doculects=[name], **kwargs)
-
 
     def __str__(self):
         """Print a summary of the Family object"""
@@ -1247,7 +1226,6 @@ class Language:
         self.lexical_comparison = defaultdict(lambda:defaultdict(lambda:{}))
         self.lexical_comparison['measures'] = set()
 
-
     def create_vocabulary(self):
         for i in self.data:
             entry = self.data[i]
@@ -1271,13 +1249,11 @@ class Language:
                 if loan:
                     self.loanwords[concept].add(word)
     
-    
     def write_missing_concepts(self):
         missing_lst = os.path.join(self.family.doculects_dir, self.path_name, 'missing_concepts.lst')
         missing_concepts = '\n'.join(sorted(list(self.family.concepts.keys() - self.vocabulary.keys())))
         with open(missing_lst, 'w') as f:
-            f.write(missing_concepts)
-                    
+            f.write(missing_concepts)         
 
     def create_phoneme_inventory(self, warn_n=0):
         for concept in self.vocabulary:
@@ -1350,7 +1326,6 @@ class Language:
         else:
             self.prosodic_typology = 'OTHER' # TODO add other prosodic typologies
     
-    
     def write_phoneme_inventory(self, n_examples=3, seed=1):
         doculect_dir = os.path.join(self.family.doculects_dir, self.path_name)
         os.makedirs(doculect_dir, exist_ok=True)
@@ -1414,7 +1389,6 @@ class Language:
             
             else:
                 return self.ngrams[ngram_size]
-        
     
     def lookup(self, segment, field='segments', return_list=False):
         """Prints or returns a list of all word entries containing a given 
@@ -1441,8 +1415,7 @@ class Language:
         else:
             for match in sorted(matches):
                 concept, orthography, transcription = match
-                print(f"<{orthography}> /{transcription}/ '{concept}'")
-                
+                print(f"<{orthography}> /{transcription}/ '{concept}'")    
                 
     def _get_Word(self, ipa, concept=None, orthography=None, transcription_params=None, cognate_class=None, loan=None):
         # Check if the word already exists in the vocabulary
@@ -1465,7 +1438,6 @@ class Language:
                 )
         
         return word    
-    
     
     def calculate_infocontent(self, word):
         # Disambiguation by type of input
@@ -1505,7 +1477,6 @@ class Language:
             info_content[i-2] = (padded[i], -log(trigram_counts/gappy_counts, 2))
         
         return info_content
-    
     
     def self_surprisal(self, word, normalize=False):
         info_content = self.calculate_infocontent(word)
@@ -1550,8 +1521,7 @@ class Language:
         # Bigram probability estimation
         numerator = max((self.bigrams.get(bigram, 0)-delta), 0)
         
-        return (numerator/total_start_p1_counts) + (l_KN*pKN_p1)
-                
+        return (numerator/total_start_p1_counts) + (l_KN*pKN_p1)             
     
     def phone_dendrogram(self, 
                          similarity='weighted_dice', 
@@ -1585,7 +1555,6 @@ class Language:
                                save_directory=save_directory, 
                                **kwargs)
     
-    
     def get_phoneme_correlator(self, lang2, wordlist=None, seed=1):
         key = (lang2, wordlist, seed)
         if key not in self.phoneme_correlators:
@@ -1596,9 +1565,8 @@ class Language:
                                                             pad_ch=self.alignment_params.get('pad_ch', ALIGNMENT_PARAM_DEFAULTS['pad_ch']), 
                                                             seed=seed,
                                                             logger=self.family.logger)
-
-        return self.phoneme_correlators[key]
-    
+        correlator = self.phoneme_correlators[key]
+        return correlator
 
     def write_lexical_comparison(self, lang2, outfile):
         measures = sorted(list(self.lexical_comparison['measures']))
@@ -1609,8 +1577,7 @@ class Language:
                 values = [self.lexical_comparison[lang2][(word1, word2)].get(measure, 'n/a') for measure in measures]
                 values = [str(v) for v in values]
                 line = '\t'.join([word1.ipa, word2.ipa]+values)
-                f.write(f'{line}\n')
-    
+                f.write(f'{line}\n')  
     
     def __str__(self):
         """Print a summary of the language object"""

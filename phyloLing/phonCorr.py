@@ -1234,6 +1234,7 @@ class PhonCorrelator:
         with open(outfile, 'w') as f:
             f.write(f'{content}')
 
+
 def phon_env_ngrams(phonEnv, exclude=set()):
     """Returns set of phonological environment strings of equal and lower order, 
     e.g. ">|S|#" -> ">|S", "S|#", ">|S|#"
