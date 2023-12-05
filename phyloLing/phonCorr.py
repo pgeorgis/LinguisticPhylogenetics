@@ -30,6 +30,28 @@ def prune_corrs(corr_dict, min_val=2):
         del corr_dict[seg1]
     return corr_dict
 
+def prune_oov_surprisal(surprisal_dict, oov_ch='<NON-IPA>'):
+    # Prune correspondences with a surprisal value greater than OOV surprisal
+    pruned = defaultdict(lambda:{})
+    for seg1 in surprisal_dict:
+        # Determine the (potentially smoothed) value for unseen ("out of vocabulary" [OOV]) correspondences
+        # Check using an OOV/non-IPA character
+        oov_val = surprisal_dict[seg1][oov_ch]
+        
+        # Then remove this character from the surprisal dictionary
+        del surprisal_dict[seg1][oov_ch]
+        
+        # Save values which are not equal to (less than) the OOV smoothed value
+        for seg2 in surprisal_dict[seg1]:
+            surprisal_val = surprisal_dict[seg1][seg2]
+            if surprisal_val < oov_val:
+                pruned[seg1][seg2] = surprisal_val
+        
+        # Set as default dict with OOV value as default
+        pruned[seg1] = default_dict(pruned[seg1], l=oov_val)
+        
+    return pruned, oov_val
+
 def average_corrs(corr_dict1, corr_dict2):
     # Average together values from nested dictionaries in opposite directions
     avg_corr = defaultdict(lambda:defaultdict(lambda:0))
@@ -188,7 +210,7 @@ class PhonCorrelator:
             synonym_sample = rng.sample(self.same_meaning, sample_size)
              # Log sample
             if log_samples:
-                sample_log = self._log_sample(synonym_sample, sample_n, seed=seed_i)
+                sample_log = self.log_sample(synonym_sample, sample_n, seed=seed_i)
                 sample_logs[sample_n] = sample_log
             # Take a sample of different-meaning words, as large as the same-meaning set
             diff_sample = rng.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
@@ -201,7 +223,7 @@ class PhonCorrelator:
         # Write sample log (only if new samples were drawn)
         if log_samples and new_samples:
             sample_log_file = os.path.join(self.outdir, 'samples', self.lang1.path_name, self.lang2.path_name, 'samples.log')
-            self._write_sample_log(sample_logs, sample_log_file)
+            self.write_sample_log(sample_logs, sample_log_file)
         
         return samples
     
@@ -581,7 +603,7 @@ class PhonCorrelator:
                 
                 # Log results of this iteration
                 if log_iterations:
-                    iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words)
+                    iter_log = self.log_iteration(iteration, qualifying_words, disqualified_words)
                     iter_logs[sample_n].append(iter_log)
             
             # Log final set of qualifying/disqualified word pairs
@@ -589,7 +611,7 @@ class PhonCorrelator:
                 iter_logs[sample_n].append((qualifying_words[iteration], sort_wordlist(disqualified)))
             
                 # Log final alignments from which PMI was calculated
-                self._log_alignments(qualifying_alignments, self.align_log['PMI'])
+                self.log_alignments(qualifying_alignments, self.align_log['PMI'])
             
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
@@ -610,11 +632,11 @@ class PhonCorrelator:
         if log_iterations:
             self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             log_file = os.path.join(self.pmi_log_dir, f'PMI_iterations.log')
-            self._write_iter_log(iter_logs, log_file)
+            self.write_iter_log(iter_logs, log_file)
             
             # Write alignment log
             align_log_file = os.path.join(self.pmi_log_dir, 'PMI_alignments.log')
-            self._write_alignments_log(self.align_log['PMI'], align_log_file)
+            self.write_alignments_log(self.align_log['PMI'], align_log_file)
 
         if save:
             self.lang1.phoneme_pmi[self.lang2] = results
@@ -922,11 +944,11 @@ class PhonCorrelator:
                         
                     # Log results of this iteration
                     if log_iterations:
-                        iter_log = self._log_iteration(iteration, qualifying_words, disqualified_words, method='surprisal', same_meaning_alignments=same_meaning_alignments)
+                        iter_log = self.log_iteration(iteration, qualifying_words, disqualified_words, method='surprisal', same_meaning_alignments=same_meaning_alignments)
                         iter_logs[sample_n].append(iter_log)
 
                         # Log final alignments from which surprisal was calculated
-                        self._log_alignments(qualifying_alignments, self.align_log['surprisal'])
+                        self.log_alignments(qualifying_alignments, self.align_log['surprisal'])
 
                 # Save final set of qualifying/disqualified word pairs
                 if log_iterations:
@@ -978,7 +1000,7 @@ class PhonCorrelator:
         if log_iterations and not gold:
             self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             log_file = os.path.join(surprisal_ngram_log_dir, f'surprisal_iterations.log')
-            self._write_iter_log(iter_logs, log_file)
+            self.write_iter_log(iter_logs, log_file)
                 
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
@@ -997,11 +1019,11 @@ class PhonCorrelator:
         # Write logs
         # Alignments log
         align_log_file = os.path.join(surprisal_ngram_log_dir, 'surprisal_alignments.log')
-        self._write_alignments_log(self.align_log['surprisal'], align_log_file)
+        self.write_alignments_log(self.align_log['surprisal'], align_log_file)
         
         # Phone correlation report
         phon_corr_report = os.path.join(surprisal_ngram_log_dir, 'phon_corr.tsv')
-        self._write_phon_corr_report(surprisal_results, phon_corr_report, type='surprisal')
+        self.write_phon_corr_report(surprisal_results, phon_corr_report, type='surprisal')
         
         # Surprisal logs
         self.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size)
@@ -1077,35 +1099,25 @@ class PhonCorrelator:
             surprisal_dict = self.surprisal_dict[ngram_size]
             
         lines = []
+        surprisal_dict, oov_value = prune_oov_surprisal(surprisal_dict)
         for seg1 in surprisal_dict:
-            # Determine the smoothed value for unseen ("out of vocabulary") correspondences
-            # Check using a non-IPA character
-            non_IPA = '<NON-IPA>'
-            oov_smoothed = surprisal_dict[seg1][non_IPA]
-            
-            # Then remove this character from the surprisal dictionary
-            del surprisal_dict[seg1][non_IPA]
-            
-            # Save values which are not equal to (less than) the OOV smoothed value
             for seg2 in surprisal_dict[seg1]:
-                surprisal_val = surprisal_dict[seg1][seg2]
-                if surprisal_val < oov_smoothed:
                     if ngram_size > 1:
                         breakpoint() # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
                     lines.append([ngram2str(seg1, phon_env=phon_env), 
                                   ngram2str(seg2, phon_env=False), # phon_env only on seg1  
-                                  str(surprisal_val), 
-                                  str(oov_smoothed)])
+                                  str(surprisal_dict[seg1][seg2]), 
+                                  str(oov_value)])
         
-        # Sort surprisal in ascending order
-        lines = sorted(lines, key=lambda x:x[2], reverse=False)
+        # Sort surprisal in ascending order, then by phones
+        lines = sorted(lines, key=lambda x:(x[2], x[0], x[1]), reverse=False)
         lines = '\n'.join([sep.join(line) for line in lines])
         
         with open(outfile, 'w') as f:
             header = sep.join(['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed'])
             f.write(f'{header}\n{lines}')
 
-    def _log_sample(self, sample, sample_n, seed=None):
+    def log_sample(self, sample, sample_n, seed=None):
         if seed is None:
             seed = self.seed
         sample = sorted(
@@ -1118,14 +1130,14 @@ class PhonCorrelator:
         sample_log += '\n'.join(sample)
         return sample_log
     
-    def _write_sample_log(self, sample_logs, log_file):
+    def write_sample_log(self, sample_logs, log_file):
         log_dir = os.path.abspath(os.path.dirname(log_file))
         os.makedirs(log_dir, exist_ok=True)
         content = '\n\n'.join([sample_logs[sample_n] for sample_n in range(len(sample_logs))])
         with open(log_file, 'w') as f:
             f.write(content)
 
-    def _log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
+    def log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
         iter_log = []
         if method == 'surprisal':
             assert same_meaning_alignments is not None
@@ -1160,7 +1172,7 @@ class PhonCorrelator:
         
         return iter_log
     
-    def _write_iter_log(self, iter_logs, log_file):
+    def write_iter_log(self, iter_logs, log_file):
         log_dir = os.path.abspath(os.path.dirname(log_file))
         os.makedirs(log_dir, exist_ok=True)
         with open(log_file, 'w') as f:
@@ -1178,13 +1190,13 @@ class PhonCorrelator:
                     f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
                 f.write('\n\n-------------------\n\n')
     
-    def _log_alignments(self, alignments, align_log):
+    def log_alignments(self, alignments, align_log):
         for alignment in alignments:
             key = f'/{alignment.word1.ipa}/ - /{alignment.word2.ipa}/'
             align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
             align_log[key][align_str] += 1
     
-    def _write_alignments_log(self, alignment_log, log_file):
+    def write_alignments_log(self, alignment_log, log_file):
         sorted_alignment_keys = sorted(alignment_log.keys())
         with open(log_file, 'w') as f:
             for key in sorted_alignment_keys:
@@ -1197,19 +1209,20 @@ class PhonCorrelator:
                     f.write(f'[{freq}] {alignment}\n')
                 f.write('\n-------------------\n\n')
     
-    def _write_phon_corr_report(self, corr, outfile, type, n=5):
+    def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):
         lines = []
-        l1_phons = sorted([p for p in corr if p[0] != self.gap_ch], key=lambda x:Ngram(x).string)
+        corr, oov_value = prune_oov_surprisal(corr)
+        l1_phons = sorted([p for p in corr if self.gap_ch not in p], key=lambda x:Ngram(x).string)
         for p1 in l1_phons:
             p2_candidates = corr[p1]
             if len(p2_candidates) > 0:
-                p2_candidates = dict_tuplelist(p2_candidates, reverse=True)[-n:]
+                p2_candidates = dict_tuplelist(p2_candidates, reverse=True)
                 # Sort by corr value, then by phone string if values are equal
                 p2_candidates.sort(key=lambda x:(x[-1], Ngram(x[0]).string))
                 for p2, score in p2_candidates:
                     if type == 'surprisal':
-                        if score < self.lang2.phoneme_entropy:
-                            prob = surprisal_to_prob(score) # turn surprisal value into probability
+                        prob = surprisal_to_prob(score) # turn surprisal value into probability
+                        if prob >= min_prob:
                             p1 = Ngram(p1).string
                             p2 = Ngram(p2).string
                             line = '\t'.join([p1, p2, str(round(prob, 3))])
@@ -1221,6 +1234,7 @@ class PhonCorrelator:
         content = '\n'.join([header, lines])
         with open(outfile, 'w') as f:
             f.write(f'{content}')
+
 
 def phon_env_ngrams(phonEnv, exclude=set()):
     """Returns set of phonological environment strings of equal and lower order, 
