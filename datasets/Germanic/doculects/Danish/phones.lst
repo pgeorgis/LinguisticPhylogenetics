@@ -21,7 +21,7 @@ VOWELS
 
 /ˈɛ/ (0.019)
 	<elleve> /ˈɛlʋə/ "eleven_NUM"
-	<kalv> /kʰˈɛlˀv/ "calf_NOUN"
+	<kalv> /kʰˈɛlˀʋ/ "calf_NOUN"
 	<hellig> /hˈɛli/ "holy_ADJ"
 
 /ˈa/ (0.017)
@@ -46,7 +46,7 @@ VOWELS
 
 /ˈɔˀ/ (0.013)
 	<båd> /b̥ˈɔˀð̞ˠ/ "boat_NOUN"
-	<våben> /vˈɔˀb̥m̩/ "weapon_NOUN"
+	<våben> /ʋˈɔˀb̥m̩/ "weapon_NOUN"
 	<år> /ˈɔˀ/ "year_NOUN"
 
 /ˈœˀ/ (0.013)
@@ -101,7 +101,7 @@ VOWELS
 
 /ˈoː/ (0.006)
 	<mor> /mˈoːɐ/ "mother_NOUN"
-	<over> /ˈoːvɐ/ "over_PREP"
+	<over> /ˈoːʋɐ/ "over_PREP"
 	<kone> /kʰˈoːnə/ "woman_NOUN"
 
 /ˈøː/ (0.005)
@@ -238,49 +238,49 @@ CONSONANTS
 	<fødder> /fˈœð̞ˠɐ/ "feet_NOUN"
 	<finde> /fˈenə/ "find_VERB"
 
-/t/ (0.024)
-	<pligt> /pʰlˈeɡ̊t/ "plight_NOUN"
-	<magt> /mˈɑɡ̊t/ "might_NOUN"
-	<bryst> /b̥ʁˈœst/ "breast_NOUN"
-
-/j/ (0.023)
-	<fjer> /fjˈeˀɐ/ "feather_NOUN"
-	<hjul> /jˈuˀl/ "wheel_NOUN"
-	<øje> /ˈʌjə/ "eye_NOUN"
-
-/h/ (0.023)
-	<hundrede> /hˈunɐð̞ˠə/ "hundred_NUM"
-	<hoved> /hˈoːəð̞ˠ/ "head_NOUN"
-	<her> /hˈɛˀɐ/ "here_ADV"
-
-/ʦʰ/ (0.023)
-	<tusind> /ʦʰˈuˀsn̩/ "thousand_NUM"
-	<træ> /ʦʰʁˈeˀ/ "tree_NOUN"
-	<tre> /ʦʰʁˈɛˀ/ "three_NUM"
-
-/ʋ/ (0.022)
-	<ulv> /ˈulˀʋ/ "wolf_NOUN"
-	<kvinde> /kʰʋˈenə/ "woman_NOUN"
+/ʋ/ (0.026)
+	<we> /ʋˈi/ "we_PRON"
+	<vand> /ʋˈanˀ/ "water_NOUN"
 	<elleve> /ˈɛlʋə/ "eleven_NUM"
 
+/t/ (0.024)
+	<blomst> /b̥lˈʌmˀst/ "flower_NOUN"
+	<storm> /stˈɔˀm/ "storm_NOUN"
+	<let> /lˈɛt/ "light_ADJ"
+
+/j/ (0.023)
+	<hjul> /jˈuˀl/ "wheel_NOUN"
+	<fjer> /fjˈeˀɐ/ "feather_NOUN"
+	<bjerg> /b̥jˈɛɐˀw/ "mountain_NOUN"
+
+/h/ (0.023)
+	<her> /hˈɛˀɐ/ "here_ADV"
+	<høj> /hˈʌˀj/ "high_ADJ"
+	<hed> /hˈeˀð̞ˠ/ "hot_ADJ"
+
+/ʦʰ/ (0.023)
+	<tre> /ʦʰʁˈɛˀ/ "three_NUM"
+	<tolv> /ʦʰˈʌlˀ/ "twelve_NUM"
+	<tyve> /ʦʰˈyːw/ "twenty_NUM"
+
 /k/ (0.021)
+	<kirke> /kʰˈiɐkə/ "church_NOUN_FEM"
 	<tysk> /ʦʰˈysk/ "Teutonic_ADJ"
 	<drikke> /d̥ʁˈekə/ "drink_VERB"
-	<frisk> /fʁˈesk/ "fresh_ADJ"
 
 /ɡ̊/ (0.021)
-	<grøn> /ɡ̊ʁˈœˀn/ "green_ADJ"
-	<guld> /ɡ̊ˈulˀ/ "gold_NOUN_NEU"
 	<myg> /mˈyɡ̊/ "midge_NOUN"
+	<gud> /ɡ̊ˈuð̞ˠ/ "god_NOUN"
+	<guld> /ɡ̊ˈulˀ/ "gold_NOUN_NEU"
 
 /d̥/ (0.017)
+	<du> /d̥ˈu/ "thou_PRON"
 	<dødelig> /d̥ˈøːð̞ˠəli/ "deadly_ADJ"
 	<dyr> /d̥ˈyˀɐ/ "dear_ADJ"
-	<datter> /d̥ˈɛtɐ/ "daughter_NOUN"
 
 /w/ (0.017)
+	<drive> /d̥ʁˈiːw/ "drive_VERB"
 	<have> /hˈɛːw/ "have_VERB"
-	<tyv> /ʦʰˈyˀw/ "thief_NOUN"
 	<syv> /sˈyˀw/ "seven_NUM"
 
 /kʰ/ (0.015)
@@ -296,7 +296,7 @@ CONSONANTS
 /lˀ/ (0.013)
 	<salt> /sˈɛlˀt/ "salt_NOUN"
 	<ild> /ˈilˀ/ "fire_NOUN"
-	<kalv> /kʰˈɛlˀv/ "calf_NOUN"
+	<kalv> /kʰˈɛlˀʋ/ "calf_NOUN"
 
 /ŋ/ (0.008)
 	<tunge> /ʦʰˈɔŋə/ "tongue_NOUN"
@@ -313,18 +313,13 @@ CONSONANTS
 	<blomst> /b̥lˈʌmˀst/ "flower_NOUN"
 	<lam> /lˈɑmˀ/ "lamb_NOUN"
 
-/v/ (0.004)
-	<våben> /vˈɔˀb̥m̩/ "weapon_NOUN"
-	<kalv> /kʰˈɛlˀv/ "calf_NOUN"
-	<over> /ˈoːvɐ/ "over_PREP"
-
 /p/ (0.003)
-	<sprog> /spʁˈɔˀw/ "speech_NOUN_FEM"
 	<skarp> /skˈap/ "sharp_ADJ"
+	<sprog> /spʁˈɔˀw/ "speech_NOUN_FEM"
 
 /jˀ/ (0.003)
-	<negl> /nˈɑjˀl/ "fingernail_NOUN"
 	<regn> /ʁˈɑjˀn/ "rain_NOUN"
+	<negl> /nˈɑjˀl/ "fingernail_NOUN"
 
 /wˀ/ (0.003)
 	<navn> /nˈawˀn/ "name_NOUN"

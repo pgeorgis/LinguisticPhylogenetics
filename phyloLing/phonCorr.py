@@ -52,6 +52,48 @@ def prune_oov_surprisal(surprisal_dict, oov_ch='<NON-IPA>'):
         
     return pruned, oov_val
 
+def prune_extraneous_synonyms(wordlist, scores, prefer_small=False):
+    # Resolve synonyms: prune redundant/extraneous 
+    # If a concept has >1 words listed, we may end up with, e.g.
+    # DE <Kopf> - NL <kop>
+    # DE <Haupt> - NL <hoofd>
+    # but also
+    # DE <Kopf> - NL <hoofd>
+    # DE <Haupt> - NL <kop>
+    # If both languages have >1 qualifying words for a concept, only consider the best pairings, i.e. prune the extraneous pairs
+    concept_counts = defaultdict(lambda:0)
+    concept_indices = defaultdict(lambda:[])
+    indices_to_prune = []
+    for q, pair in enumerate(wordlist):
+        word1, word2 = pair
+        concept = word1.concept
+        concept_counts[concept] += 1
+        concept_indices[concept].append(q)
+    for concept, count in concept_counts.items():
+        if count > 1:
+            best_pairings = {}
+            best_pairing_scores = {}
+            for q in concept_indices[concept]:
+                pair = wordlist[q]
+                word1, word2 = pair
+                score = scores[q] # TODO seems like this could benefit from a Wordpair object
+                if prefer_small: # consider a smaller score to be better, e.g. for surprisal
+                    if word1 not in best_pairings or score < best_pairings[word1]:
+                        best_pairings[word1] = q
+                        best_pairing_scores[word1] = score
+                else:
+                    if word1 not in best_pairings or score > best_pairing_scores[word1]:
+                        best_pairings[word1] = q
+                        best_pairing_scores[word1] = score
+            # Now best_pairings contains the best mapping for each concept based on the highest scoring pair
+            for q in concept_indices[concept]:
+                if q not in best_pairings.values():
+                    indices_to_prune.append(q)
+    indices_to_prune.sort(reverse=True)
+    for index in indices_to_prune:
+        del wordlist[index]
+    return wordlist
+
 def average_corrs(corr_dict1, corr_dict2):
     # Average together values from nested dictionaries in opposite directions
     avg_corr = defaultdict(lambda:defaultdict(lambda:0))
@@ -546,11 +588,16 @@ class PhonCorrelator:
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             if cumulative:
                 all_cognate_alignments = []
+            
+            def score_pmi(alignment, pmi_dict): # TODO use more sophisticated pmi_dist from wordDist.py
+                PMI_score = mean([pmi_dict.get(pair[0], {}).get(pair[1], 0) for pair in alignment.alignment])
+                return PMI_score
+            
             #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
             while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0,iteration-5),iteration)]):
             #while (iteration < max_iterations) and (nc_thresholds[iteration-1] not in [nc_thresholds[i] for i in range(max(0,iteration-2),iteration-1)]):
                 iteration += 1
-
+                
                 # Align the qualifying words of the previous step using previous step's PMI
                 cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1], complex_ngrams=self.complex_ngrams)
                 
@@ -575,7 +622,7 @@ class PhonCorrelator:
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
-                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment]))
+                    noncognate_PMI.append(score_pmi(alignment, pmi_dict=PMI_iterations[iteration]))
                 nc_mean = mean(noncognate_PMI)
                 nc_stdev = stdev(noncognate_PMI)
                 
@@ -583,17 +630,21 @@ class PhonCorrelator:
                 # against different-meaning alignments
                 qualifying, disqualified = [], []
                 qualifying_alignments = []
-                for i, item in enumerate(synonym_sample):
-                    alignment = aligned_synonym_sample[i]
-                    PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment])
+                qualified_PMI = []
+                for q, pair in enumerate(synonym_sample):
+                    alignment = aligned_synonym_sample[q]
+                    PMI_score = score_pmi(alignment, pmi_dict=PMI_iterations[iteration])
                     
                     # Proportion of non-cognate word pairs which would have a PMI score at least as low as this word pair
                     pnorm = 1 - norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
                     if pnorm < p_threshold_sample:
-                        qualifying.append(item)
+                        qualifying.append(pair)
                         qualifying_alignments.append(alignment)
+                        qualified_PMI.append(PMI_score)
                     else:
-                        disqualified.append(item)
+                        disqualified.append(pair)
+                        #disqualified_PMI.append(PMI_score)
+                qualifying = prune_extraneous_synonyms(qualifying, qualified_PMI)
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
                     self.logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
@@ -920,8 +971,10 @@ class PhonCorrelator:
                     # against different-meaning alignments
                     qualifying, disqualified = [], []
                     qualifying_alignments = []
-                    for i, item in enumerate(same_sample):
-                        alignment = same_meaning_alignments[i]
+                    qualifying_surprisal = []
+                    qualifying_pairs = []
+                    for q, pair in enumerate(same_sample):
+                        alignment = same_meaning_alignments[q]
                         surprisal_score = adaptation_surprisal(alignment, 
                                                                surprisal_dict=surprisal_iterations[iteration], 
                                                                normalize=True,
@@ -932,11 +985,15 @@ class PhonCorrelator:
                         # Proportion of non-cognate word pairs which would have a surprisal score at least as low as this word pair
                         pnorm = norm.cdf(surprisal_score, loc=mean_nc_score, scale=nc_score_stdev)
                         if pnorm < p_threshold:
-                            qualifying.append(i)
+                            qualifying.append(q)
                             qualifying_alignments.append(alignment)
+                            qualifying_surprisal.append(surprisal_score)
+                            qualifying_pairs.append(pair)
                         else:
-                            disqualified.append(i)
-                            
+                            disqualified.append(q)
+                    qualifying_map = {pair:q for q, pair in zip(qualifying, qualifying_pairs)}
+                    qualifying_pairs = prune_extraneous_synonyms(qualifying_pairs, scores=qualifying_surprisal, prefer_small=True)
+                    qualifying = [qualifying_map[pair] for pair in qualifying_pairs]
                     qualifying_words[iteration] = qualifying
                     if len(qualifying) == 0:
                         self.logger.warning(f'All word pairs were disqualified in surprisal iteration {iteration}')
