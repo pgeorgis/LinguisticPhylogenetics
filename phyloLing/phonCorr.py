@@ -644,7 +644,7 @@ class PhonCorrelator:
                     else:
                         disqualified.append(pair)
                         #disqualified_PMI.append(PMI_score)
-                qualifying_words = prune_extraneous_synonyms(qualifying_words, qualified_PMI)
+                qualifying = prune_extraneous_synonyms(qualifying, qualified_PMI)
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
                     self.logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
