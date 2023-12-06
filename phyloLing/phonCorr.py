@@ -52,7 +52,7 @@ def prune_oov_surprisal(surprisal_dict, oov_ch='<NON-IPA>'):
         
     return pruned, oov_val
 
-def prune_extraneous_synonyms(wordlist, scores):
+def prune_extraneous_synonyms(wordlist, scores, prefer_small=False):
     # Resolve synonyms: prune redundant/extraneous 
     # If a concept has >1 words listed, we may end up with, e.g.
     # DE <Kopf> - NL <kop>
@@ -77,9 +77,14 @@ def prune_extraneous_synonyms(wordlist, scores):
                 pair = wordlist[q]
                 word1, word2 = pair
                 score = scores[q] # TODO seems like this could benefit from a Wordpair object
-                if word1 not in best_pairings or score > best_pairing_scores[word1]:
-                    best_pairings[word1] = q
-                    best_pairing_scores[word1] = score
+                if prefer_small: # consider a smaller score to be better, e.g. for surprisal
+                    if word1 not in best_pairings or score < best_pairings[word1]:
+                        best_pairings[word1] = q
+                        best_pairing_scores[word1] = score
+                else:
+                    if word1 not in best_pairings or score > best_pairing_scores[word1]:
+                        best_pairings[word1] = q
+                        best_pairing_scores[word1] = score
             # Now best_pairings contains the best mapping for each concept based on the highest scoring pair
             for q in concept_indices[concept]:
                 if q not in best_pairings.values():
@@ -966,8 +971,10 @@ class PhonCorrelator:
                     # against different-meaning alignments
                     qualifying, disqualified = [], []
                     qualifying_alignments = []
-                    for i, item in enumerate(same_sample):
-                        alignment = same_meaning_alignments[i]
+                    qualifying_surprisal = []
+                    qualifying_pairs = []
+                    for q, pair in enumerate(same_sample):
+                        alignment = same_meaning_alignments[q]
                         surprisal_score = adaptation_surprisal(alignment, 
                                                                surprisal_dict=surprisal_iterations[iteration], 
                                                                normalize=True,
@@ -978,11 +985,15 @@ class PhonCorrelator:
                         # Proportion of non-cognate word pairs which would have a surprisal score at least as low as this word pair
                         pnorm = norm.cdf(surprisal_score, loc=mean_nc_score, scale=nc_score_stdev)
                         if pnorm < p_threshold:
-                            qualifying.append(i)
+                            qualifying.append(q)
                             qualifying_alignments.append(alignment)
+                            qualifying_surprisal.append(surprisal_score)
+                            qualifying_pairs.append(pair)
                         else:
-                            disqualified.append(i)
-                            
+                            disqualified.append(q)
+                    qualifying_map = {pair:q for q, pair in zip(qualifying, qualifying_pairs)}
+                    qualifying_pairs = prune_extraneous_synonyms(qualifying_pairs, scores=qualifying_surprisal, prefer_small=True)
+                    qualifying = [qualifying_map[pair] for pair in qualifying_pairs]
                     qualifying_words[iteration] = qualifying
                     if len(qualifying) == 0:
                         self.logger.warning(f'All word pairs were disqualified in surprisal iteration {iteration}')
