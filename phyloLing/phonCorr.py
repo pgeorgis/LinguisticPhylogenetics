@@ -52,6 +52,43 @@ def prune_oov_surprisal(surprisal_dict, oov_ch='<NON-IPA>'):
         
     return pruned, oov_val
 
+def prune_extraneous_synonyms(wordlist, scores):
+    # Resolve synonyms: prune redundant/extraneous 
+    # If a concept has >1 words listed, we may end up with, e.g.
+    # DE <Kopf> - NL <kop>
+    # DE <Haupt> - NL <hoofd>
+    # but also
+    # DE <Kopf> - NL <hoofd>
+    # DE <Haupt> - NL <kop>
+    # If both languages have >1 qualifying words for a concept, only consider the best pairings, i.e. prune the extraneous pairs
+    concept_counts = defaultdict(lambda:0)
+    concept_indices = defaultdict(lambda:[])
+    indices_to_prune = []
+    for q, pair in enumerate(wordlist):
+        word1, word2 = pair
+        concept = word1.concept
+        concept_counts[concept] += 1
+        concept_indices[concept].append(q)
+    for concept, count in concept_counts.items():
+        if count > 1:
+            best_pairings = {}
+            best_pairing_scores = {}
+            for q in concept_indices[concept]:
+                pair = wordlist[q]
+                word1, word2 = pair
+                score = scores[q] # TODO seems like this could benefit from a Wordpair object
+                if word1 not in best_pairings or score > best_pairing_scores[word1]:
+                    best_pairings[word1] = q
+                    best_pairing_scores[word1] = score
+            # Now best_pairings contains the best mapping for each concept based on the highest scoring pair
+            for q in concept_indices[concept]:
+                if q not in best_pairings.values():
+                    indices_to_prune.append(q)
+    indices_to_prune.sort(reverse=True)
+    for index in indices_to_prune:
+        del wordlist[index]
+    return wordlist
+
 def average_corrs(corr_dict1, corr_dict2):
     # Average together values from nested dictionaries in opposite directions
     avg_corr = defaultdict(lambda:defaultdict(lambda:0))
@@ -588,7 +625,7 @@ class PhonCorrelator:
                 # against different-meaning alignments
                 qualifying, disqualified = [], []
                 qualifying_alignments = []
-                qualified_PMI, disqualified_PMI = [], []
+                qualified_PMI = []
                 for q, pair in enumerate(synonym_sample):
                     alignment = aligned_synonym_sample[q]
                     PMI_score = score_pmi(alignment, pmi_dict=PMI_iterations[iteration])
@@ -601,43 +638,8 @@ class PhonCorrelator:
                         qualified_PMI.append(PMI_score)
                     else:
                         disqualified.append(pair)
-                        disqualified_PMI.append(PMI_score)
-                
-                # Resolve synonyms: prune redundant/extraneous 
-                # If a concept has >1 words listed, we may end up with, e.g.
-                # DE <Kopf> - NL <kop>
-                # DE <Haupt> - NL <hoofd>
-                # but also
-                # DE <Kopf> - NL <hoofd>
-                # DE <Haupt> - NL <kop>
-                # If both languages have >1 qualifying words for a concept, only consider the best pairings, i.e. prune the extraneous pairs
-                concept_counts = defaultdict(lambda:0)
-                concept_indices = defaultdict(lambda:[])
-                indices_to_prune = []
-                for q, pair in enumerate(qualifying):
-                    word1, word2 = pair
-                    concept = word1.concept
-                    concept_counts[concept] += 1
-                    concept_indices[concept].append(q)
-                for concept, count in concept_counts.items():
-                    if count > 1:
-                        best_pairings = {}
-                        best_pairing_scores = {}
-                        for q in concept_indices[concept]:
-                            pair = qualifying[q]
-                            word1, word2 = pair
-                            score = qualified_PMI[q] # TODO seems like this could benefit from a Wordpair object
-                            if word1 not in best_pairings or score > best_pairing_scores[word1]:
-                                best_pairings[word1] = q
-                                best_pairing_scores[word1] = score
-                        # Now best_pairings contains the best mapping for each concept based on the highest scoring pair
-                        for q in concept_indices[concept]:
-                            if q not in best_pairings.values():
-                                indices_to_prune.append(q)
-                indices_to_prune.sort(reverse=True)
-                for index in indices_to_prune:
-                    del qualifying[index]
-                    
+                        #disqualified_PMI.append(PMI_score)
+                qualifying_words = prune_extraneous_synonyms(qualifying_words, qualified_PMI)
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
                     self.logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
