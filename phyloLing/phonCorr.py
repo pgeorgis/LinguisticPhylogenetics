@@ -546,11 +546,16 @@ class PhonCorrelator:
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             if cumulative:
                 all_cognate_alignments = []
+            
+            def score_pmi(alignment, pmi_dict): # TODO use more sophisticated pmi_dist from wordDist.py
+                PMI_score = mean([pmi_dict.get(pair[0], {}).get(pair[1], 0) for pair in alignment.alignment])
+                return PMI_score
+            
             #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
             while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0,iteration-5),iteration)]):
             #while (iteration < max_iterations) and (nc_thresholds[iteration-1] not in [nc_thresholds[i] for i in range(max(0,iteration-2),iteration-1)]):
                 iteration += 1
-
+                
                 # Align the qualifying words of the previous step using previous step's PMI
                 cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1], complex_ngrams=self.complex_ngrams)
                 
@@ -575,7 +580,7 @@ class PhonCorrelator:
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
-                    noncognate_PMI.append(mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment]))
+                    noncognate_PMI.append(score_pmi(alignment, pmi_dict=PMI_iterations[iteration]))
                 nc_mean = mean(noncognate_PMI)
                 nc_stdev = stdev(noncognate_PMI)
                 
@@ -583,17 +588,56 @@ class PhonCorrelator:
                 # against different-meaning alignments
                 qualifying, disqualified = [], []
                 qualifying_alignments = []
-                for i, item in enumerate(synonym_sample):
-                    alignment = aligned_synonym_sample[i]
-                    PMI_score = mean([PMI_iterations[iteration][pair[0]][pair[1]] for pair in alignment.alignment])
+                qualified_PMI, disqualified_PMI = [], []
+                for q, pair in enumerate(synonym_sample):
+                    alignment = aligned_synonym_sample[q]
+                    PMI_score = score_pmi(alignment, pmi_dict=PMI_iterations[iteration])
                     
                     # Proportion of non-cognate word pairs which would have a PMI score at least as low as this word pair
                     pnorm = 1 - norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
                     if pnorm < p_threshold_sample:
-                        qualifying.append(item)
+                        qualifying.append(pair)
                         qualifying_alignments.append(alignment)
+                        qualified_PMI.append(PMI_score)
                     else:
-                        disqualified.append(item)
+                        disqualified.append(pair)
+                        disqualified_PMI.append(PMI_score)
+                
+                # Resolve synonyms: prune redundant/extraneous 
+                # If a concept has >1 words listed, we may end up with, e.g.
+                # DE <Kopf> - NL <kop>
+                # DE <Haupt> - NL <hoofd>
+                # but also
+                # DE <Kopf> - NL <hoofd>
+                # DE <Haupt> - NL <kop>
+                # If both languages have >1 qualifying words for a concept, only consider the best pairings, i.e. prune the extraneous pairs
+                concept_counts = defaultdict(lambda:0)
+                concept_indices = defaultdict(lambda:[])
+                indices_to_prune = []
+                for q, pair in enumerate(qualifying):
+                    word1, word2 = pair
+                    concept = word1.concept
+                    concept_counts[concept] += 1
+                    concept_indices[concept].append(q)
+                for concept, count in concept_counts.items():
+                    if count > 1:
+                        best_pairings = {}
+                        best_pairing_scores = {}
+                        for q in concept_indices[concept]:
+                            pair = qualifying[q]
+                            word1, word2 = pair
+                            score = qualified_PMI[q] # TODO seems like this could benefit from a Wordpair object
+                            if word1 not in best_pairings or score > best_pairing_scores[word1]:
+                                best_pairings[word1] = q
+                                best_pairing_scores[word1] = score
+                        # Now best_pairings contains the best mapping for each concept based on the highest scoring pair
+                        for q in concept_indices[concept]:
+                            if q not in best_pairings.values():
+                                indices_to_prune.append(q)
+                indices_to_prune.sort(reverse=True)
+                for index in indices_to_prune:
+                    del qualifying[index]
+                    
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
                     self.logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
