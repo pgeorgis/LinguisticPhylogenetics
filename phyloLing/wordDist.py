@@ -425,7 +425,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
     # Pad (need to set as ngram_size=min 2 to yield any padding) 
-    alignment.alignment = alignment.pad(ngram_size=max(2, ngram_size), alignment=alignment.alignment, pad_ch=pad_ch)
+    alignment.pad(ngram_size=max(2, ngram_size), alignment=alignment.alignment, pad_ch=pad_ch)
     # Compact_gaps, then remove uncompacted pad positions as they are irrelevant
     alignment.compact_gaps(lang1.complex_ngrams[lang2])
     alignment.remove_padding()
@@ -543,7 +543,7 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
     # Align the words with PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
     # Pad (ngram_size=1, but need to set as min 2 to yield any padding) 
-    alignment.alignment = alignment.pad(ngram_size=2, alignment=alignment.alignment, pad_ch=pad_ch)
+    alignment.pad(ngram_size=2, alignment=alignment.alignment, pad_ch=pad_ch)
     # Compact_gaps, then remove uncompacted pad positions as they are irrelevant
     alignment.compact_gaps(lang1.complex_ngrams[lang2])
     alignment.remove_padding()

@@ -278,6 +278,9 @@ class PhonCorrelator:
                        wordlist,
                        added_penalty_dict=None,
                        complex_ngrams=None,
+                       ngram_size=1,
+                       pad=True,
+                       pad_ch=PAD_CH_DEFAULT,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
         alignment_list = [
@@ -290,6 +293,14 @@ class PhonCorrelator:
             )
             for word1, word2 in wordlist
         ] # TODO: tuple would be better than list if possible
+        
+        # Add padding before compacting
+        if pad:
+            for alignment in alignment_list:
+                # Pad each alignment in place
+                # ngram_size must be minimum 2 to yield any padding at all
+                alignment.pad(ngram_size=max(2, ngram_size), pad_ch=pad_ch)
+        
         if complex_ngrams:
             compacted_alignments = self.compact_alignments(alignment_list, complex_ngrams)
             return compacted_alignments
@@ -393,12 +404,10 @@ class PhonCorrelator:
             pad_n = 0
             if pad:
                 pad_n = max(1, ngram_size-1)
-                _alignment = alignment.pad(ngram_size, 
-                                        _alignment, 
-                                        pad_ch=self.pad_ch, 
-                                        pad_n=pad_n,
-                )
-                alignment.alignment = _alignment
+                alignment.pad(ngram_size,
+                              alignment=_alignment, 
+                              pad_ch=self.pad_ch, 
+                              pad_n=pad_n)
                 
             for i in range(pad_n, len(_alignment)):
                 ngram = _alignment[i-min(pad_n,ngram_size-1):i+1]
@@ -917,10 +926,21 @@ class PhonCorrelator:
                 sample_n = seed_i - start_seed
                 same_sample, diff_sample = sample
 
-                # Align same-meaning and different meaning word pairs using PMI values: 
+                # Align same-meaning and different meaning word pairs using PMI values
+                # Pad and compact complex ngram correspondences
                 # the alignments will remain the same throughout iteration
-                same_meaning_alignments = self.align_wordlist(same_sample, added_penalty_dict=self.pmi_dict, complex_ngrams=self.complex_ngrams)
-                diff_meaning_alignments = self.align_wordlist(diff_sample, added_penalty_dict=self.pmi_dict, complex_ngrams=self.complex_ngrams)
+                same_meaning_alignments = self.align_wordlist(
+                    same_sample, 
+                    added_penalty_dict=self.pmi_dict, 
+                    complex_ngrams=self.complex_ngrams, 
+                    pad=True
+                )
+                diff_meaning_alignments = self.align_wordlist(
+                    diff_sample, 
+                    added_penalty_dict=self.pmi_dict, 
+                    complex_ngrams=self.complex_ngrams, 
+                    pad=True
+                )
 
                 # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
                 # Then test each same-meaning word pair to see if if it meets the qualifying threshold

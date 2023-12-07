@@ -327,7 +327,8 @@ class Alignment:
             alignment = self.alignment
         if pad_n is None:
             pad_n = max(0, ngram_size-1)
-        return [self.start_boundary()]*pad_n + alignment + [self.end_boundary()]*pad_n
+        self.alignment = [self.start_boundary()]*pad_n + alignment + [self.end_boundary()]*pad_n
+        self.update()
     
     def remove_padding(self):
         start_pad_i = 0
