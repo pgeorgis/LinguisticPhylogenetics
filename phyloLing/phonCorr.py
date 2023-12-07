@@ -52,7 +52,7 @@ def prune_oov_surprisal(surprisal_dict, oov_ch='<NON-IPA>'):
         
     return pruned, oov_val
 
-def prune_extraneous_synonyms(wordlist, scores, prefer_small=False):
+def prune_extraneous_synonyms(wordlist, alignments, scores, prefer_small=False):
     # Resolve synonyms: prune redundant/extraneous 
     # If a concept has >1 words listed, we may end up with, e.g.
     # DE <Kopf> - NL <kop>
@@ -61,38 +61,47 @@ def prune_extraneous_synonyms(wordlist, scores, prefer_small=False):
     # DE <Kopf> - NL <hoofd>
     # DE <Haupt> - NL <kop>
     # If both languages have >1 qualifying words for a concept, only consider the best pairings, i.e. prune the extraneous pairs
-    concept_counts = defaultdict(lambda:0)
-    concept_indices = defaultdict(lambda:[])
-    indices_to_prune = []
+    concept_counts1, concept_counts2 = defaultdict(lambda:0), defaultdict(lambda:0)
+    concept_indices1, concept_indices2 = defaultdict(lambda:[]), defaultdict(lambda:[])
+    indices_to_prune = set()
     for q, pair in enumerate(wordlist):
         word1, word2 = pair
-        concept = word1.concept
-        concept_counts[concept] += 1
-        concept_indices[concept].append(q)
-    for concept, count in concept_counts.items():
-        if count > 1:
-            best_pairings = {}
-            best_pairing_scores = {}
-            for q in concept_indices[concept]:
-                pair = wordlist[q]
-                word1, word2 = pair
-                score = scores[q] # TODO seems like this could benefit from a Wordpair object
-                if prefer_small: # consider a smaller score to be better, e.g. for surprisal
-                    if word1 not in best_pairings or score < best_pairings[word1]:
-                        best_pairings[word1] = q
-                        best_pairing_scores[word1] = score
-                else:
-                    if word1 not in best_pairings or score > best_pairing_scores[word1]:
-                        best_pairings[word1] = q
-                        best_pairing_scores[word1] = score
-            # Now best_pairings contains the best mapping for each concept based on the highest scoring pair
-            for q in concept_indices[concept]:
-                if q not in best_pairings.values():
-                    indices_to_prune.append(q)
-    indices_to_prune.sort(reverse=True)
+        concept1, concept2 = word1.concept, word2.concept
+        concept_counts1[concept1] += 1
+        concept_counts2[concept2] += 1
+        concept_indices1[concept1].append(q)
+        concept_indices2[concept2].append(q)
+        
+    def prune_suboptimal_pairings(concept_counts, concept_indices, wordlist):
+        for concept, count in concept_counts.items():
+            if count > 1:
+                best_pairings = {}
+                best_pairing_scores = {}
+                for q in concept_indices[concept]:
+                    pair = wordlist[q]
+                    word1, word2 = pair
+                    score = scores[q] # TODO seems like this could benefit from a Wordpair object
+                    if prefer_small: # consider a smaller score to be better, e.g. for surprisal
+                        if word1 not in best_pairings or score < best_pairings[word1]:
+                            best_pairings[word1] = q
+                            best_pairing_scores[word1] = score
+                    else:
+                        if word1 not in best_pairings or score > best_pairing_scores[word1]:
+                            best_pairings[word1] = q
+                            best_pairing_scores[word1] = score
+                # Now best_pairings contains the best mapping for each concept based on the best (highest/lowest) scoring pair
+                for q in concept_indices[concept]:
+                    if q not in best_pairings.values():
+                        indices_to_prune.add(q)
+    prune_suboptimal_pairings(concept_counts=concept_counts1, concept_indices=concept_indices1, wordlist=wordlist)
+    reversed_wordlist = [(word2, word1) for word1, word2 in wordlist]
+    prune_suboptimal_pairings(concept_counts=concept_counts2, concept_indices=concept_indices2, wordlist=reversed_wordlist)
+                        
+    indices_to_prune = sorted(list(indices_to_prune), reverse=True)
     for index in indices_to_prune:
         del wordlist[index]
-    return wordlist
+        del alignments[index]
+    return wordlist, alignments
 
 def average_corrs(corr_dict1, corr_dict2):
     # Average together values from nested dictionaries in opposite directions
@@ -442,13 +451,15 @@ class PhonCorrelator:
 
         return corr_counts
 
-    def phon_env_corr_probs(self, alignment_list, counts=False):
-        # TODO currently works only with ngram_size=1 (I think this is fine?)
+    def phon_env_corr_probs(self, alignment_list, counts=False, ngram_size=1):
+        if ngram_size > 1:
+            raise NotImplementedError
+        
         corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         for alignment in alignment_list:
             phon_env_align = alignment.add_phon_env()
-            for seg_weight1, seg2 in phon_env_align:
-                corr_counts[seg_weight1][seg2] += 1
+            for phon_env_seg1, seg2 in phon_env_align:
+                corr_counts[phon_env_seg1][seg2] += 1
         if not counts:
             for seg1 in corr_counts:
                 corr_counts[seg1] = normalize_dict(corr_counts[seg1])
@@ -653,7 +664,11 @@ class PhonCorrelator:
                     else:
                         disqualified.append(pair)
                         #disqualified_PMI.append(PMI_score)
-                qualifying = prune_extraneous_synonyms(qualifying, qualified_PMI)
+                qualifying, qualifying_alignments = prune_extraneous_synonyms(
+                    qualifying, 
+                    qualifying_alignments, 
+                    qualified_PMI
+                )
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
                     self.logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
@@ -746,9 +761,15 @@ class PhonCorrelator:
         # Add in phonological environment correspondences, e.g. ('l', '#S<') (word-initial 'l') with 'ʎ' 
         if phon_env:
             for ngram1 in phon_env_corr_counts:
-                if ngram1 == self.gap_ch:
-                    continue
-                phonEnv = ngram1[-1]
+                if ngram1 == self.gap_ch or self.pad_ch in ngram1:
+                    continue # TODO verify that these should be skipped
+                if any([isinstance(part, tuple) for part in ngram1]):
+                    if re.search(r'.*\|[ST]\|.*', ngram1[-1]):
+                        phonEnv = ngram1[-1] # e.g. # (('s', 'k'), '#|S|<')
+                    else:
+                        phonEnv = ngram1[0][-1] # e.g. (('ə', '<|S|#'), '#>')
+                else:
+                    phonEnv = ngram1[-1] # e.g. ('ˈa', '#|S|>')
                 phonEnv_contexts = phon_env_ngrams(phonEnv, exclude={'|S|'})
                 for context in phonEnv_contexts:
                     ngram1_context = ngram1[:-1] + (context,)
@@ -948,7 +969,6 @@ class PhonCorrelator:
                 surprisal_iterations = {}
                 qualifying_words = default_dict({iteration:list(range(len(same_meaning_alignments)))}, l=[])
                 disqualified_words = defaultdict(lambda:[])
-                align_log = defaultdict(lambda:set())
                 if cumulative:
                     all_cognate_alignments = []
                 while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration-1]):
@@ -1012,7 +1032,12 @@ class PhonCorrelator:
                         else:
                             disqualified.append(q)
                     qualifying_map = {pair:q for q, pair in zip(qualifying, qualifying_pairs)}
-                    qualifying_pairs = prune_extraneous_synonyms(qualifying_pairs, scores=qualifying_surprisal, prefer_small=True)
+                    qualifying_pairs, qualifying_alignments = prune_extraneous_synonyms(
+                        qualifying_pairs, 
+                        qualifying_alignments, 
+                        scores=qualifying_surprisal, 
+                        prefer_small=True
+                    )
                     qualifying = [qualifying_map[pair] for pair in qualifying_pairs]
                     qualifying_words[iteration] = qualifying
                     if len(qualifying) == 0:
@@ -1082,7 +1107,7 @@ class PhonCorrelator:
         # Add phonological environment weights after final iteration
         phon_env_surprisal = self.phoneme_surprisal(
             self.correspondence_probs(cognate_alignments, counts=True, exclude_null=False, compact_null=False), 
-            phon_env_corr_counts=self.phon_env_corr_probs(cognate_alignments, counts=True),
+            phon_env_corr_counts=self.phon_env_corr_probs(cognate_alignments, counts=True, ngram_size=ngram_size),
             ngram_size=ngram_size
             )
         
@@ -1475,11 +1500,11 @@ class NullCompacter:
                     # words starting/ending with the sequence aligned to the opposite-language boundary gap
                     # and then via Bayes theorem, given this probability and the conditional probability, we can get the PMI
                     if re.search(rf'{self.pad_ch}{END_PAD_CH}', gap_seg.string): # ENDING BOUNDARY
-                        larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[-gap_seg.size:]) == larger_ngram.ngram[:-1]])
+                        larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[-(max(1, larger_ngram.size-1)):]) == larger_ngram.ngram[:-1]])
                         larger_ngram_prob = larger_ngram_count / len(opp_seqs)
                         
                     else: # STARTING BOUNDARY
-                        larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[:gap_seg.size]) == larger_ngram.ngram[1:]])
+                        larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[:max(1, larger_ngram.size-1)]) == larger_ngram.ngram[1:]])
                         larger_ngram_prob = larger_ngram_count / len(opp_seqs)
                     
                     cond_count_complex = reversed_compacted_corr_counts[gap_seg.raw][larger_ngram.raw]
@@ -1498,9 +1523,11 @@ class NullCompacter:
                 if self.pad_ch in larger_ngram.string:
                     for unigram in larger_ngram.unigrams():
                         if unigram.ngram not in self.pad_ngrams:
-                            cond_prob_basic = corr_counts[unigram.ngram][self.gap_ngram] / sum(corr_counts[unigram.ngram].values())
-                            if cond_prob_basic > 0:
-                                pmi_basic += max(0, bayes_pmi(cond_prob_basic, gap_seg_prob))
+                            unigram_corr_total = sum(corr_counts[unigram.ngram].values())
+                            if unigram_corr_total > 0:
+                                cond_prob_basic = corr_counts[unigram.ngram][self.gap_ngram] / unigram_corr_total
+                                if cond_prob_basic > 0:
+                                    pmi_basic += max(0, bayes_pmi(cond_prob_basic, gap_seg_prob))
                     
                 else:
                     for seg in larger_ngram.ngram:
