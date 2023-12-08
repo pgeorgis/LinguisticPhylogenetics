@@ -10,7 +10,7 @@ from statistics import mean, stdev
 from phonAlign import Alignment, compatible_segments, visual_align
 from phonUtils.segment import _toSegment
 from phonUtils.phonEnv import relative_prev_sonority, relative_post_sonority
-from constants import PHON_ENV_JOIN_CH, START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT
+from constants import PHON_ENV_JOIN_CH, START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, NON_IPA_CH_DEFAULT
 from utils.sequence import Ngram, flatten_ngram, count_subsequences, pad_sequence
 from utils.information import surprisal, adaptation_surprisal, pointwise_mutual_info, bayes_pmi, surprisal_to_prob
 from utils.utils import default_dict, normalize_dict, dict_tuplelist
@@ -30,16 +30,21 @@ def prune_corrs(corr_dict, min_val=2):
         del corr_dict[seg1]
     return corr_dict
 
-def prune_oov_surprisal(surprisal_dict, oov_ch='<NON-IPA>'):
+def get_oov_val(corr_dict, oov_ch=NON_IPA_CH_DEFAULT):
+    # Determine the (potentially smoothed) value for unseen ("out of vocabulary" [OOV]) correspondences
+    # Check using an OOV/non-IPA character
+    oov_val = corr_dict[oov_ch]
+    
+    # Then remove this character from the surprisal dictionary
+    del corr_dict[oov_ch]
+    
+    return oov_val
+
+def prune_oov_surprisal(surprisal_dict):
     # Prune correspondences with a surprisal value greater than OOV surprisal
     pruned = defaultdict(lambda:{})
     for seg1 in surprisal_dict:
-        # Determine the (potentially smoothed) value for unseen ("out of vocabulary" [OOV]) correspondences
-        # Check using an OOV/non-IPA character
-        oov_val = surprisal_dict[seg1][oov_ch]
-        
-        # Then remove this character from the surprisal dictionary
-        del surprisal_dict[seg1][oov_ch]
+        oov_val = get_oov_val(surprisal_dict[seg1])
         
         # Save values which are not equal to (less than) the OOV smoothed value
         for seg2 in surprisal_dict[seg1]:
@@ -290,6 +295,7 @@ class PhonCorrelator:
                        ngram_size=1,
                        pad=True,
                        pad_ch=PAD_CH_DEFAULT,
+                       #phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
         alignment_list = [
@@ -311,10 +317,14 @@ class PhonCorrelator:
                 alignment.pad(ngram_size=max(2, ngram_size), pad_ch=pad_ch)
         
         if complex_ngrams:
-            compacted_alignments = self.compact_alignments(alignment_list, complex_ngrams)
-            return compacted_alignments
-        else:
-            return alignment_list
+            alignment_list = self.compact_alignments(alignment_list, complex_ngrams)
+        
+        # if phon_env:
+        #     for alignment in alignment_list:
+        #         alignment.phon_env_alignment = alignment.add_phon_env()
+            
+        return alignment_list
+    
     
     def compact_alignments(self, alignment_list, complex_ngrams):
         for alignment in alignment_list:
@@ -910,7 +920,8 @@ class PhonCorrelator:
 
         return smoothed_surprisal
     
-    def calc_phoneme_surprisal(self, radius=1, 
+    def calc_phoneme_surprisal(self, 
+                               radius=1, 
                                max_iterations=10, 
                                p_threshold=0.1,
                                ngram_size=2,
@@ -919,6 +930,7 @@ class PhonCorrelator:
                                samples=5,
                                sample_size=0.8, # TODO make configurable
                                cumulative=False,
+                               phon_env=True,
                                save=True):
         # METHOD
         # 1) Calculate phoneme PMI
@@ -979,11 +991,26 @@ class PhonCorrelator:
                     if cumulative:
                         all_cognate_alignments.extend(cognate_alignments)
                         cognate_alignments = all_cognate_alignments
-                    surprisal_iterations[iteration] = self.phoneme_surprisal(self.correspondence_probs(cognate_alignments,
-                                                                                                       counts=True,
-                                                                                                       exclude_null=False,
-                                                                                                       compact_null=False,
-                                                                                                       ngram_size=ngram_size), 
+                    corr_probs = self.correspondence_probs(
+                        cognate_alignments, 
+                        counts=True, 
+                        exclude_null=False, 
+                        compact_null=False,
+                        ngram_size=ngram_size,
+                    )
+                        
+                    # Optionally use phonological environment
+                    if phon_env:
+                         phon_env_corr_counts = self.phon_env_corr_probs(
+                             cognate_alignments, 
+                             counts=True, 
+                             ngram_size=ngram_size
+                         )
+                    else:
+                        phon_env_corr_counts = None
+                    
+                    surprisal_iterations[iteration] = self.phoneme_surprisal(corr_probs,
+                                                                             phon_env_corr_counts=phon_env_corr_counts, 
                                                                              ngram_size=ngram_size)
 
                     # Retrieve the alignments of different-meaning and disqualified word pairs
@@ -995,6 +1022,7 @@ class PhonCorrelator:
                                                                 normalize=True,
                                                                 ngram_size=ngram_size,
                                                                 pad_ch=self.pad_ch,
+                                                                phon_env=phon_env,
                                                                 ) 
                                             for alignment in noncognate_alignments]
                     mean_nc_score = mean(noncognate_surprisal)
@@ -1020,6 +1048,7 @@ class PhonCorrelator:
                                                                normalize=True,
                                                                ngram_size=ngram_size,
                                                                pad_ch=self.pad_ch,
+                                                               phon_env=phon_env,
                                                                )
                         
                         # Proportion of non-cognate word pairs which would have a surprisal score at least as low as this word pair
@@ -1089,13 +1118,27 @@ class PhonCorrelator:
             same_meaning_alignments = self.align_wordlist(self.same_meaning, added_penalty_dict=self.pmi_dict)
             
             # TODO need to confirm that when the gloss/concept is checked, it considers the possible cognate class ID, e.g. rain_1
-            cognate_alignments = same_meaning_alignments
-            surprisal_results = self.phoneme_surprisal(self.correspondence_probs(same_meaning_alignments,
-                                                                                 counts=True,
-                                                                                 exclude_null=False, 
-                                                                                 compact_null=False, 
-                                                                                 ngram_size=ngram_size), 
-                                                                                 ngram_size=ngram_size)
+            cognate_alignments = same_meaning_alignments            
+            corr_probs = self.correspondence_probs(
+                cognate_alignments, 
+                counts=True, 
+                exclude_null=False, 
+                compact_null=False,
+                ngram_size=ngram_size,
+            )
+            # Optionally use phonological environment
+            if phon_env:
+                    phon_env_corr_counts = self.phon_env_corr_probs(
+                        cognate_alignments, 
+                        counts=True, 
+                        ngram_size=ngram_size
+                    )
+            else:
+                phon_env_corr_counts = None
+                    
+            surprisal_results = self.phoneme_surprisal(corr_probs,
+                                                       phon_env_corr_counts=phon_env_corr_counts, 
+                                                       ngram_size=ngram_size)
         
         # Write the iteration log
         surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
@@ -1104,19 +1147,17 @@ class PhonCorrelator:
             log_file = os.path.join(surprisal_ngram_log_dir, f'surprisal_iterations.log')
             self.write_iter_log(iter_logs, log_file)
                 
-        # Add phonological environment weights after final iteration
-        phon_env_surprisal = self.phoneme_surprisal(
-            self.correspondence_probs(cognate_alignments, counts=True, exclude_null=False, compact_null=False), 
-            phon_env_corr_counts=self.phon_env_corr_probs(cognate_alignments, counts=True, ngram_size=ngram_size),
-            ngram_size=ngram_size
-            )
+        # Get vanilla surprisal (no phon env) from phon_env surprisal by marginalizing over phon_env
+        if phon_env:
+            phon_env_surprisal_results = surprisal_results.copy()
+            surprisal_results = self.marginalize_over_phon_env_surprisal(surprisal_results, ngram_size=ngram_size)
         
         # Return and save the final iteration's surprisal results
         if save:
             self.lang1.phoneme_surprisal[(self.lang2, ngram_size)] = surprisal_results
-            self.lang1.phon_env_surprisal[self.lang2] = phon_env_surprisal
+            self.lang1.phon_env_surprisal[self.lang2] = phon_env_surprisal_results
         self.surprisal_dict[ngram_size] = surprisal_results
-        self.phon_env_surprisal_dict = phon_env_surprisal
+        self.phon_env_surprisal_dict = phon_env_surprisal_results
 
         # Write logs
         # Alignments log
@@ -1130,8 +1171,40 @@ class PhonCorrelator:
         # Surprisal logs
         self.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size)
         self.log_phoneme_surprisal(phon_env=True)
-        
-        return surprisal_results, phon_env_surprisal
+
+        return surprisal_results, phon_env_surprisal_results
+    
+    def marginalize_over_phon_env_surprisal(self, phon_env_surprisal_dict, ngram_size=1):
+        """Converts a phon env surprisal dictionary into a vanilla surprisal dictionary by marginalizing over phon envs"""
+        surprisal_dict = defaultdict(lambda:defaultdict(lambda:0))
+        oov_vals = defaultdict(lambda:[])
+        for phon_env_ngram in phon_env_surprisal_dict:
+            if isinstance(phon_env_ngram, str):
+                assert phon_env_ngram == self.gap_ch or self.pad_ch in phon_env_ngram
+                ngram1 = phon_env_ngram
+            else:
+                try:
+                    ngram1, phon_env = phon_env_ngram
+                except ValueError:
+                    self.logger.warning(phon_env_ngram)
+                    ngram1, phon_env = phon_env_ngram[:-1]
+            count = self.lang1.phon_env_ngrams[ngram_size][phon_env_ngram]
+            oov_val = get_oov_val(phon_env_surprisal_dict[phon_env_ngram])
+            oov_vals[ngram1].append(oov_val)
+            for ngram2, surprisal_val in phon_env_surprisal_dict[phon_env_ngram].items():
+                if surprisal_val >= oov_val:
+                    continue
+                prob = surprisal_to_prob(surprisal_val)
+                count_ngram2 = prob*count
+                if count_ngram2 > 0:
+                    surprisal_dict[ngram1][ngram2] += count_ngram2
+        for ngram1 in surprisal_dict:
+            surprisal_dict[ngram1] = default_dict(normalize_dict(surprisal_dict[ngram1]), l=mean(oov_vals[ngram1]))
+            for ngram2, prob in surprisal_dict[ngram1].items():
+                surprisal_dict[ngram1][ngram2] = surprisal(prob)
+        outer_oov_val = get_oov_val(phon_env_surprisal_dict)
+        surprisal_dict, oov_value = prune_oov_surprisal(default_dict(surprisal_dict, l=outer_oov_val))
+        return surprisal_dict
     
     def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""

@@ -37,7 +37,10 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False
     else:
         length = alignment.length
         if phon_env:
+            if alignment.phon_env_alignment is None:
+                alignment.phon_env_alignment = alignment.add_phon_env()
             alignment = alignment.phon_env_alignment
+            
         else:
             alignment = alignment.alignment
     

@@ -35,3 +35,7 @@ ALIGNMENT_PARAM_DEFAULTS = {
     'gap_ch':GAP_CH_DEFAULT, 
     'pad_ch':PAD_CH_DEFAULT,
 }
+
+# NON-IPA CHARACTER
+# Used for finding OOV values
+NON_IPA_CH_DEFAULT = '<NON-IPA>'
