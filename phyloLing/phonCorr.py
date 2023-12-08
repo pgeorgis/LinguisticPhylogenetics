@@ -1,6 +1,6 @@
 from collections import defaultdict
 from functools import lru_cache
-from itertools import product, combinations
+from itertools import product
 from math import log
 import os
 import random
@@ -1410,42 +1410,6 @@ class PhonCorrelator:
         with open(outfile, 'w') as f:
             f.write(f'{content}')
 
-
-def phon_env_ngrams(phonEnv, exclude=set()):
-    """Returns set of phonological environment strings of equal and lower order, 
-    e.g. ">|S|#" -> ">|S", "S|#", ">|S|#"
-
-    Args:
-        phonEnv (str): Phonological environment string, e.g. ">S#"
-
-    Returns:
-        set: possible equal and lower order phonological environment strings
-    """
-    if re.search(r'.\|S\|.+', phonEnv):
-        prefix, base, suffix = phonEnv.split('|')
-        prefix = prefix.split('_')
-        prefixes = set()
-        for i in range(1, len(prefix)+1):
-            for x in combinations(prefix, i):
-                prefixes.add('_'.join(x))
-        prefixes.add('')
-        suffix = suffix.split('_')
-        suffixes = set()
-        for i in range(1, len(suffix)+1):
-            for x in combinations(suffix, i):
-                suffixes.add('_'.join(x))
-        suffixes.add('')
-        ngrams = set()
-        for prefix in prefixes:
-            for suffix in suffixes:
-                ngrams.add(f'{prefix}|S|{suffix}')
-    else:
-        assert phonEnv == '|T|'
-        ngrams = [phonEnv]
-    
-    if len(exclude) > 0:
-        return [ngram for ngram in ngrams if ngram not in exclude]
-    return ngrams
 
 class NullCompacter:
     def __init__(self, corr_counts, alignments, lang1, lang2, gap_ch, pad_ch, ngram_size=1):
