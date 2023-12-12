@@ -9,7 +9,7 @@ from scipy.stats import norm
 from statistics import mean, stdev
 from phonAlign import Alignment, compatible_segments, visual_align
 from phonUtils.segment import _toSegment
-from phonUtils.phonEnv import relative_prev_sonority, relative_post_sonority
+from phonUtils.phonEnv import relative_prev_sonority, relative_post_sonority, phon_env_ngrams
 from constants import PHON_ENV_JOIN_CH, START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, NON_IPA_CH_DEFAULT
 from utils.sequence import Ngram, flatten_ngram, count_subsequences, pad_sequence
 from utils.information import surprisal, adaptation_surprisal, pointwise_mutual_info, bayes_pmi, surprisal_to_prob
