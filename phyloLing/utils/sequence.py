@@ -1,6 +1,7 @@
 from functools import lru_cache
 from math import factorial
 import re
+from phonUtils.phonEnv import PHON_ENV_REGEX
 from constants import SEG_JOIN_CH, PAD_CH_DEFAULT, START_PAD_CH, END_PAD_CH
 
 class Ngram:
@@ -33,6 +34,40 @@ class Ngram:
     
     def __str__(self):
         return self.string
+
+class PhonEnvNgram(Ngram):
+    def __init__(self, ngram, **kwargs):
+        super().__init__(ngram, **kwargs)
+        self.ngram, self.phon_env = self.separate_phon_env_from_ngram()
+        self.ngram_w_context = (Ngram(self.ngram).undo(), self.phon_env)
+    
+    def separate_phon_env_from_ngram(self):
+        ngram, phon_env = [], []
+        for part in self.ngram:
+            if isinstance(part, str) and PHON_ENV_REGEX.search(part):
+                phon_env.append(part)
+            else:    
+                part_ngram = self.get_ngram(part)
+                for part_i in part_ngram:
+                    if PHON_ENV_REGEX.search(part_i):
+                        phon_env.append(part_i)
+                    else:
+                        ngram.append(part_i)
+                        
+        ngram = self.get_ngram(ngram)
+        phon_env = self.get_ngram(phon_env)
+        # Assert that there is exactly one phon env
+        # Otherwise combine them based on first component's preceding context and last component's following context
+        # e.g. ('<|S|>_N', 'F_>|S|>') -> '<|S|>'
+        if len(phon_env) > 1:
+            pre_env = phon_env[0].split('|')[0]
+            post_env = phon_env[-1].split('|')[-1]
+            phon_env = f'{pre_env}|S|{post_env}'
+        else:
+            assert len(phon_env) == 1
+            phon_env = phon_env[0]
+            
+        return ngram, phon_env
 
 @lru_cache(maxsize=None)
 def count_subsequences(seq_len, subseq_len):

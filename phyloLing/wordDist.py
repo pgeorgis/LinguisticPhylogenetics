@@ -449,6 +449,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                                     phon_env=phon_env,
                                     normalize=False,
                                     pad_ch=lang1.alignment_params['pad_ch'],
+                                    gap_ch=lang1.alignment_params['gap_ch'],
                                     )
     if ngram_size > 1:
         breakpoint() # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts... 
@@ -462,6 +463,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                                     phon_env=phon_env,
                                     normalize=False,
                                     pad_ch=lang2.alignment_params['pad_ch'],
+                                    gap_ch=lang2.alignment_params['gap_ch'],
                                     )
 
     # Calculate self-surprisal values in each direction

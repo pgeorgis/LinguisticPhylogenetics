@@ -1,7 +1,8 @@
 from math import log
+import re
 from statistics import mean
-from constants import PAD_CH_DEFAULT
-from utils.sequence import Ngram
+from constants import PAD_CH_DEFAULT, GAP_CH_DEFAULT
+from utils.sequence import Ngram, PhonEnvNgram
 
 def pointwise_mutual_info(p_joint, p_x, p_y):
     return log(p_joint/(p_x*p_y)) # TODO should it be log base 2?
@@ -19,7 +20,14 @@ def surprisal(p):
 def surprisal_to_prob(s):
     return 2**-s
 
-def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False, normalize=True, pad_ch=PAD_CH_DEFAULT):
+def adaptation_surprisal(alignment, 
+                         surprisal_dict, 
+                         ngram_size=1, 
+                         phon_env=False, 
+                         normalize=True, 
+                         pad_ch=PAD_CH_DEFAULT,
+                         gap_ch=GAP_CH_DEFAULT,
+                         ):
     """Calculates the surprisal of an aligned sequence, given a dictionary of 
     surprisal values for the sequence corresponcences"""
 
@@ -54,7 +62,16 @@ def adaptation_surprisal(alignment, surprisal_dict, ngram_size=1, phon_env=False
         segs = list(zip(*ngram))
         seg1, seg2 = segs
         # Convert to form stored in correspondence dictionaries, whereby unigrams are strings and larger ngrams are tuples
-        seg1 = Ngram(seg1).undo()
+        # Ngrams with phon env context: (ngram, phon_env), e.g. ('v', '#|S|<') or (('<#', 'v'), '#|S|<')
+        ngram1 = Ngram(seg1)
+        if pad_ch in ngram1.ngram[0]:
+            seg1 = ngram1.undo() # e.g. ('#>',)
+            if isinstance(seg1, tuple) and len(seg1) > 2: # e.g. ('<#', 'v', '#|S|<')
+                seg1 = PhonEnvNgram(seg1).ngram_w_context # e.g. ((('<#', 'v'), '#|S|<'),) -> ('<#', 'v', '#|S|<') -> (('<#', 'v'), '#|S|<')
+        elif phon_env and ngram1.string != gap_ch:
+            seg1 = PhonEnvNgram(seg1).ngram_w_context
+        else:
+            seg1 = ngram1.undo()
         seg2 = Ngram(seg2).undo()
         values.append(surprisal_dict[seg1][seg2])
 
