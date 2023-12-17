@@ -17,7 +17,7 @@ VOWELS
 /ə/ (0.024)
 	<Niërse> /nˈɪə̯sə/ "nose_NOUN"
 	<elwe> /ˈɛlvə/ "eleven_NUM"
-	<Brügge> /brˈʏɣə/ "bridge_NOUN"
+	<Brügge> /brˈʏɡə/ "bridge_NOUN"
 
 /ˈaɪ̯/ (0.019)
 	<drai> /drˈaɪ̯/ "three_NUM"
@@ -92,7 +92,7 @@ VOWELS
 /ˈʏ/ (0.007)
 	<Güld> /xˈʏld/ "gold_NOUN_NEU"
 	<drücken> /drˈʏkn̩/ "press_VERB"
-	<Brügge> /brˈʏɣə/ "bridge_NOUN"
+	<Brügge> /brˈʏɡə/ "bridge_NOUN"
 
 /ˈyː/ (0.006)
 	<düer> /dˈyːɐ/ "dear_ADJ"
@@ -161,10 +161,10 @@ CONSONANTS
 	<diärtain> /dˈiɛ̯taɪ̯n/ "thirteen_NUM"
 	<Träöne> /trˈœːnə/ "tear_NOUN_FEM"
 
-/d/ (0.06)
-	<danken> /dˈaŋkn̩/ "thank_VERB"
+/d/ (0.059)
+	<dik> /dˈɪk/ "thick_ADJ"
 	<Land> /lˈand/ "land_NOUN"
-	<diärtain> /dˈiɛ̯taɪ̯n/ "thirteen_NUM"
+	<Däön> /dˈœːn/ "thorn_NOUN"
 
 /l/ (0.055)
 	<fölen> /fˈøːln̩/ "feel_VERB"
@@ -211,19 +211,19 @@ CONSONANTS
 	<Biärg> /bˈɪɛ̯ɐx/ "mountain_NOUN"
 	<Guod> /xˈuːə̯d/ "god_NOUN"
 
-/w/ (0.023)
-	<Wind> /wˈɪnd/ "wind_NOUN"
+/w/ (0.024)
+	<Wief> /wˈiːf/ "wife_NOUN"
 	<wiëten> /wˈiə̯tn̩/ "know_VERB"
-	<Wulf> /wˈʊlf/ "wolf_NOUN"
+	<wünsken> /wˈʏnʃkn̩/ "wish_VERB"
 
 /h/ (0.022)
 	<hillig> /hˈɪlɪç/ "holy_ADJ"
 	<Hiärt> /hˈɪɛ̯t/ "heart_NOUN"
 	<heet> /hˈeːt/ "hot_ADJ"
 
-/v/ (0.02)
-	<Wunner> /vˈʊnɐ/ "wonder_NOUN"
-	<wi> /vˈiː/ "we_PRON"
+/v/ (0.019)
+	<halw> /hˈalv/ "half_NOUN"
+	<Wiäke> /vˈiɛ̯kə/ "week_NOUN"
 	<fiew> /fˈiːv/ "five_NUM"
 
 /ŋ/ (0.016)
@@ -241,20 +241,19 @@ CONSONANTS
 	<twintig> /twˈɪntɪç/ "twenty_NUM"
 	<Lecht> /lˈɛç/ "light_NOUN"
 
-/ɡ/ (0.005)
+/ɡ/ (0.006)
 	<Vuëgel> /fˈuə̯ɡl̩/ "bird_NOUN_MASC"
-	<säggen> /sˈɛɡn̩/ "say_VERB"
-	<Flaige> /flˈaɪ̯ɡə/ "housefly_NOUN"
+	<Brügge> /brˈʏɡə/ "bridge_NOUN"
+	<Nagel> /nˈaːɡl̩/ "fingernail_NOUN"
 
 /z/ (0.004)
-	<dusend> /dˈuːzn̩d/ "thousand_NUM"
 	<Kaise> /kˈaɪ̯zə/ "cheese_NOUN"
+	<dusend> /dˈuːzn̩d/ "thousand_NUM"
 	<fraisen> /frˈaɪ̯zn̩/ "freeze_VERB"
 
-/ɣ/ (0.004)
+/ɣ/ (0.002)
 	<niëgen> /nˈɪə̯ɣn̩/ "nine_NUM"
 	<Auge> /ˈaʊ̯ɣə/ "eye_NOUN"
-	<Brügge> /brˈʏɣə/ "bridge_NOUN"
 
 /j/ (0.002)
 	<Jaor> /jˈɔːɐ/ "year_NOUN"

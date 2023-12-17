@@ -14,9 +14,9 @@ VOWELS
 	<Minsch> /mˈɪnʃ/ "person_NOUN"
 	<bidden> /bˈɪdn̩/ "request_VERB"
 
-/ˈoː/ (0.028)
-	<Traan> /tʰrˈoːn/ "tear_NOUN_FEM"
-	<naakt> /nˈoːkt/ "naked_ADJ"
+/ˈoː/ (0.029)
+	<Spraak> /ʃprˈoːɡ/ "speech_NOUN_FEM"
+	<Maan> /mˈoːn/ "moon_NOUN"
 	<Nagel> /nˈoːɡl̩/ "fingernail_NOUN"
 
 /ˈa/ (0.028)
@@ -29,7 +29,7 @@ VOWELS
 	<scheten> /ʃˈaɪ̯dn̩/ "shoot_VERB"
 	<Deert> /dˈaɪ̯ɐd/ "animal_NOUN"
 
-/ˈiː/ (0.019)
+/ˈiː/ (0.018)
 	<wi> /vˈiː/ "we_PRON"
 	<free> /frˈiː/ "free_ADJ"
 	<Siet> /sˈiːd/ "side_NOUN"
@@ -130,15 +130,15 @@ VOWELS
 
 
 CONSONANTS
-/d/ (0.099)
+/d/ (0.098)
 	<Ding> /dˈɪŋ/ "thing_NOUN"
 	<Dag> /dˈax/ "day_NOUN"
 	<Droom> /drˈaʊ̯m/ "dream_NOUN"
 
-/n/ (0.093)
-	<Doorn> /dˈaʊ̯ɐn/ "thorn_NOUN"
-	<seihn> /zˈaɪ̯n/ "see_VERB"
-	<drücken> /drˈʏɡn̩/ "press_VERB"
+/n/ (0.094)
+	<dörteihn> /dˈœtaɪ̯n/ "thirteen_NUM"
+	<Sand> /zˈand/ "sand_NOUN"
+	<Minsch> /mˈɪnʃ/ "person_NOUN"
 
 /l/ (0.059)
 	<lang> /lˈaŋ/ "long_ADJ"
@@ -150,10 +150,10 @@ CONSONANTS
 	<Vagel> /fˈoːɡl̩/ "bird_NOUN_MASC"
 	<för> /fˈøːɐ/ "for_PREP"
 
-/m/ (0.041)
-	<Minsch> /mˈɪnʃ/ "person_NOUN"
+/m/ (0.042)
+	<Oben> /ˈoːm/ "oven_NOUN"
 	<Lamm> /lˈam/ "lamb_NOUN"
-	<warm> /vˈaːm/ "warm_ADJ"
+	<Boom> /bˈaʊ̯m/ "tree_NOUN"
 
 /ɡ/ (0.038)
 	<goot> /ɡˈuːd/ "good_ADJ"
@@ -180,7 +180,7 @@ CONSONANTS
 	<Sweert> /ʃvˈeːɐd/ "sword_NOUN"
 	<Steen> /ʃtˈaɪ̯n/ "stone_NOUN"
 
-/s/ (0.026)
+/s/ (0.025)
 	<swimmen> /svˈøm/ "swim_VERB"
 	<Bost> /bˈɔs/ "breast_NOUN"
 	<Nees> /nˈøːs/ "nose_NOUN"

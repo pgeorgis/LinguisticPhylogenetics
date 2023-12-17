@@ -1281,8 +1281,8 @@ Old English	Old English			bridge_NOUN	bryċġ	brˈyʤ	b r ˈy ʤ		bridge_NOUN_1
 West Frisian	West Frisian			bridge_NOUN	brêge	brˈɛːɣə	b r ˈɛː ɣ ə		bridge_NOUN_1			
 Saterland Frisian	Saterland Frisian			bridge_NOUN	Brääg	brˈɛːx	b r ˈɛː x		bridge_NOUN_1			
 North Frisian	North Frisian			bridge_NOUN	bru	brˈʊ	b r ˈʊ		bridge_NOUN_1			
-Westphalian	Westphalian			bridge_NOUN	Brügge	brˈʏɣə	b r ˈʏ ɣ ə		bridge_NOUN_1			
-Eastphalian	Eastphalian			bridge_NOUN	Brügge	brˈʏɣə	b r ˈʏ ɣ ə		bridge_NOUN_1			
+Westphalian	Westphalian			bridge_NOUN	Brügge	brˈʏɡə	b r ˈʏ ɡ ə		bridge_NOUN_1			
+Eastphalian	Eastphalian			bridge_NOUN	Brügge	brˈʏɡə	b r ˈʏ ɡ ə		bridge_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			bridge_NOUN	Brüch	brˈʏç	b r ˈʏ ç		bridge_NOUN_1			
 East Low German	East Low German			bridge_NOUN	Brügg	brˈʏç	b r ˈʏ ç		bridge_NOUN_1			
 Dutch	Dutch			bridge_NOUN	brug	bɾˈʏχ	b ɾ ˈʏ χ		bridge_NOUN_1			
@@ -1474,7 +1474,7 @@ North Frisian	North Frisian			dry_ADJ	dröög	drˈøːj	d r ˈøː j		dry_ADJ_1
 Westphalian	Westphalian			dry_ADJ	drüüg	drˈyːç	d r ˈyː ç		dry_ADJ_1			
 Eastphalian	Eastphalian			dry_ADJ	dröge	drˈøːɣə	d r ˈøː ɣ ə		dry_ADJ_1			
 Northern Low Saxon	Northern Low Saxon			dry_ADJ	dröög	drˈɔʏ̯ç	d r ˈɔʏ̯ ç		dry_ADJ_1			
-East Low German	East Low German			dry_ADJ	drööch	drˈøːç	d r ˈøː ç		dry_ADJ_1			
+East Low German	East Low German			dry_ADJ	drööch	drˈɔʏ̯ç	d r ˈɔʏ̯ ç		dry_ADJ_1			
 Dutch	Dutch			dry_ADJ	droog	dɾˈoːχ	d ɾ ˈoː χ		dry_ADJ_1			
 Afrikaans	Afrikaans			dry_ADJ	droog	drˈʊə̯χ	d r ˈʊə̯ χ		dry_ADJ_1			
 West Flemish	West Flemish			dry_ADJ	droog	dɾˈoːh	d ɾ ˈoː h		dry_ADJ_1			
@@ -4936,10 +4936,10 @@ Old English	Old English			moon_NOUN	mōna	mˈoːnɑ	m ˈoː n ɑ		moon_NOUN_1
 West Frisian	West Frisian			moon_NOUN	moanne	mˈoə̯nə	m ˈoə̯ n ə		moon_NOUN_1			
 Saterland Frisian	Saterland Frisian			moon_NOUN	Moune	mˈoːu̯nə	m ˈoːu̯ n ə		moon_NOUN_1			
 North Frisian	North Frisian			moon_NOUN	moune	mˈɔu̯nə	m ˈɔu̯ n ə		moon_NOUN_1			
-Westphalian	Westphalian			moon_NOUN	Maond	mˈɔːnd	m ˈɔː n d		moon_NOUN_1			
+Westphalian	Westphalian			moon_NOUN	Maon	mˈɔːn	m ˈɔː n		moon_NOUN_1			
 Eastphalian	Eastphalian			moon_NOUN	Maan	mˈɒːn	m ˈɒː n		moon_NOUN_1			
-Northern Low Saxon	Northern Low Saxon			moon_NOUN	Maand	mˈoːn	m ˈoː n		moon_NOUN_1			
-East Low German	East Low German			moon_NOUN	Månd	mˈɒːnd	m ˈɒː n d		moon_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			moon_NOUN	Maan	mˈoːn	m ˈoː n		moon_NOUN_1			
+East Low German	East Low German			moon_NOUN	Mån	mˈɒːn	m ˈɒː n		moon_NOUN_1			
 Dutch	Dutch			moon_NOUN	maan	mˈaːn	m ˈaː n		moon_NOUN_1			
 Afrikaans	Afrikaans			moon_NOUN	maan	mˈɑːn	m ˈɑː n		moon_NOUN_1			
 West Flemish	West Flemish			moon_NOUN	moane	mˈɒːnə	m ˈɒː n ə		moon_NOUN_1			
@@ -4970,6 +4970,7 @@ Saterland Frisian	Saterland Frisian			month_NOUN	Mound	mˈoːu̯nd	m ˈoːu̯ n 
 North Frisian	North Frisian			month_NOUN	moune	mˈɔu̯nə	m ˈɔu̯ n ə		month_NOUN_1			
 Westphalian	Westphalian			month_NOUN	Maond	mˈɔːnd	m ˈɔː n d		month_NOUN_1			
 Eastphalian	Eastphalian			month_NOUN	Maand	mˈɒːnd	m ˈɒː n d		month_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			month_NOUN	Maand	mˈoːn	m ˈoː n		month_NOUN_1			
 East Low German	East Low German			month_NOUN	Månd	mˈɒːnd	m ˈɒː n d		month_NOUN_1			
 Dutch	Dutch			month_NOUN	maand	mˈaːnt	m ˈaː n t		month_NOUN_1			
 Afrikaans	Afrikaans			month_NOUN	maand	mˈɑːnt	m ˈɑː n t		month_NOUN_1			
@@ -7660,7 +7661,7 @@ Old English	Old English			we_PRON	wē	wˈeː	w ˈeː		we_PRON_1
 West Frisian	West Frisian			we_PRON	wy	vˈi	v ˈi		we_PRON_1			
 Saterland Frisian	Saterland Frisian			we_PRON	wie	vˈi	v ˈi		we_PRON_1			
 North Frisian	North Frisian			we_PRON	we	vˈeː	v ˈeː		we_PRON_1			
-Westphalian	Westphalian			we_PRON	wi	vˈiː	v ˈiː		we_PRON_1			
+Westphalian	Westphalian			we_PRON	wi	wˈiː	w ˈiː		we_PRON_1			
 Eastphalian	Eastphalian			we_PRON	wi	vˈiː	v ˈiː		we_PRON_1			
 Northern Low Saxon	Northern Low Saxon			we_PRON	wi	vˈiː	v ˈiː		we_PRON_1			
 East Low German	East Low German			we_PRON	wi	vˈiː	v ˈiː		we_PRON_1			
