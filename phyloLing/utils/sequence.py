@@ -59,15 +59,25 @@ class PhonEnvNgram(Ngram):
         # Assert that there is exactly one phon env
         # Otherwise combine them based on first component's preceding context and last component's following context
         # e.g. ('<|S|>_N', 'F_>|S|>') -> '<|S|>'
-        if len(phon_env) > 1:
-            pre_env = phon_env[0].split('|')[0]
-            post_env = phon_env[-1].split('|')[-1]
-            phon_env = f'{pre_env}|S|{post_env}'
-        else:
-            assert len(phon_env) == 1
-            phon_env = phon_env[0]
+        phon_env = self.combine_phon_envs(phon_env)
             
         return ngram, phon_env
+    
+    def combine_phon_envs(self, phon_envs):
+        if len(phon_envs) > 1:
+            if '|T|' in phon_envs:
+                phon_envs = list(phon_envs)
+                phon_envs.remove('|T|')
+                return self.combine_phon_envs(phon_envs)
+            
+            else:
+                pre_env = phon_envs[0].split('|')[0]
+                post_env = phon_envs[-1].split('|')[-1]
+                return f'{pre_env}|S|{post_env}'
+        else:
+            assert len(phon_envs) == 1
+            return phon_envs[0]
+        
 
 @lru_cache(maxsize=None)
 def count_subsequences(seq_len, subseq_len):

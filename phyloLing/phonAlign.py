@@ -460,8 +460,7 @@ class Alignment:
         word1_aligned, word2_aligned = tuple(zip(*self.alignment))
         word1_aligned = list(word1_aligned) # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
         seq_map = self.seq_map[0]
-
-        
+      
         for align_i in seq_map:
             if seq_map[align_i] is not None:
                 # for complex ngrams, consider only the preceding context of the first component segment and the following context of the last component segment
@@ -478,11 +477,12 @@ class Alignment:
                 if len(seq_map[align_i]) > 1:
                     # Extract only preceding and following contexts from complex ngrams
                     # e.g. (('s', '#|S|>'), ('k', '>|S|<')) -> (('s', 'k'), '#|S|<')
-                    segs = tuple(pair[0] for pair in word1_aligned[align_i])
-                    pre_env = word1_aligned[align_i][0][-1].split('|')[0]
-                    post_env = word1_aligned[align_i][-1][-1].split('|')[-1]
-                    phon_env = f'{pre_env}|S|{post_env}'
-                    word1_aligned[align_i] = segs, phon_env
+                    word1_aligned[align_i] = PhonEnvNgram(word1_aligned[align_i]).ngram_w_context
+                    # segs = tuple(pair[0] for pair in word1_aligned[align_i])
+                    # pre_env = word1_aligned[align_i][0][-1].split('|')[0]
+                    # post_env = word1_aligned[align_i][-1][-1].split('|')[-1]
+                    # phon_env = f'{pre_env}|S|{post_env}'
+                    # word1_aligned[align_i] = segs, phon_env
 
         # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
         return list(zip(word1_aligned, word2_aligned))
