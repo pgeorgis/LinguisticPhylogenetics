@@ -1,6 +1,6 @@
 Sicilian	Neapolitan	probability
 a	ə	0.764
-a	a	0.2
+a	a	0.215
 b	v	0.545
 b	b	0.455
 c	k	0.633
@@ -18,8 +18,7 @@ j	j_ə	0.209
 j	ə	0.119
 k	k	0.98
 l	l	0.957
-m	m	0.836
-m	m_j	0.13
+m	m	0.967
 n	n	0.95
 o	o	1.0
 p	p	1.0
@@ -32,8 +31,7 @@ s	s	0.975
 t	t	0.932
 t	t_j	0.068
 u	u	1.0
-v	v	0.881
-v	v_j	0.087
+v	v	0.969
 w	w	0.457
 w	-	0.309
 w	ˈɔ	0.234
