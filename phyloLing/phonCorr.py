@@ -157,6 +157,64 @@ def ngram2str(ngram, phon_env=False):
     else:
         return Ngram(ngram).string
 
+class Wordlist:
+    def __init__(self, word_pairs):
+        self.wordlist_lang1, self.wordlist_lang2 = zip(*word_pairs)
+        self.seqs1, self.seqs2 = self.extract_seqs()
+        self.seq_lens1, self.seq_lens2 = self.seq_lens()
+        self.total_seq_len1, self.total_seq_len2 = self.total_lens()
+        self.ngram_probs1, self.ngram_probs2 = {}, {}
+        
+    def extract_seqs(self):
+        seqs1 = [word.segments for word in self.wordlist_lang1]
+        seqs2 = [word.segments for word in self.wordlist_lang2]
+        return seqs1, seqs2
+    
+    def seq_lens(self):
+        seq_lens1 = [len(seq) for seq in self.seqs1]
+        seq_lens2 = [len(seq) for seq in self.seqs2]
+        return seq_lens1, seq_lens2
+    
+    def total_lens(self):
+        total_seq_len1 = sum(self.seq_lens1)
+        total_seq_len2 = sum(self.seq_lens2)
+        return total_seq_len1, total_seq_len2
+    
+    def ngram_probability(self, ngram, lang=1):
+        # if not isinstance(ngram, [Ngram, PhonEnvNgram]):
+        #     if PHON_ENV_REGEX.search(ngram):
+        #         ngram = PhonEnvNgram(ngram)
+        #     else:
+        #         ngram = Ngram(ngram)
+        assert isinstance(ngram, (Ngram, PhonEnvNgram))
+        
+        if lang == 1:
+            seqs = self.seqs1
+            seq_lens = self.seq_lens1
+            total_seq_len = self.total_seq_len1
+            saved = self.ngram_probs1
+        elif lang == 2:
+            seqs = self.seqs2
+            seq_lens = self.seq_lens2
+            total_seq_len = self.total_seq_len2
+            saved = self.ngram_probs2
+        else:
+            raise ValueError
+        
+        if ngram.ngram in saved:
+            return saved[ngram.ngram]
+        
+        else:
+            count = ngram_count_wordlist(ngram.ngram, seqs)
+            if ngram.size > 1:
+                prob = count / sum([count_subsequences(l, ngram.size) for l in seq_lens])
+            else:
+                prob = count / total_seq_len
+            
+            saved[ngram.ngram] = prob
+            return prob
+
+
 class PhonCorrelator:
     def __init__(self, lang1, lang2, wordlist=None, gap_ch=GAP_CH_DEFAULT, pad_ch=PAD_CH_DEFAULT, seed=1, logger=None):        
         # Set Language objects
@@ -510,13 +568,7 @@ class PhonCorrelator:
         
         # If using a specific wordlist, extract sequences in each language
         if wordlist:
-            wordlist_lang1, wordlist_lang2 = zip(*wordlist)
-            wordlist_lang1 = [word.segments for word in wordlist_lang1]
-            wordlist_lang2 = [word.segments for word in wordlist_lang2]
-            seq_lens1 = [len(seq) for seq in wordlist_lang1]
-            seq_lens2 = [len(seq) for seq in wordlist_lang2]
-            total_seq_len1 = sum(seq_lens1)
-            total_seq_len2 = sum(seq_lens2)
+            wordlist = Wordlist(wordlist)
             
         # Calculate PMI for all phoneme pairs
         pmi_dict = defaultdict(lambda:defaultdict(lambda:0))
@@ -562,17 +614,8 @@ class PhonCorrelator:
                 # which directly reflects shared coverage between l1 and l2.
                 # Else, using lang.ngram_probability will consider all words in the vocabulary
                 if wordlist:
-                    if seg1_ngram.size > 1:
-                        seg1_count = ngram_count_wordlist(seg1_ngram.ngram, wordlist_lang1)
-                        p_ind1 = seg1_count / sum([count_subsequences(l, seg1_ngram.size) for l in seq_lens1])
-                    else:
-                        p_ind1 = ngram_count_wordlist(seg1_ngram.ngram, wordlist_lang1)  / total_seq_len1
-                        
-                    if seg2_ngram.size > 1:
-                        seg2_count = ngram_count_wordlist(seg2_ngram.ngram, wordlist_lang2)
-                        p_ind2 = seg2_count / sum([count_subsequences(l, seg2_ngram.size) for l in seq_lens2])
-                    else:
-                        p_ind2 = ngram_count_wordlist(seg2_ngram.ngram, wordlist_lang2) / total_seq_len2
+                    p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
+                    p_ind2 = wordlist.ngram_probability(seg2_ngram, lang=2)
                     
                     # Because we iterate over all possible phone pairs, when considering only the counts of phones/ngrams
                     # within a specific wordlist, it could occur that the count is zero for a segment in that wordlist.
