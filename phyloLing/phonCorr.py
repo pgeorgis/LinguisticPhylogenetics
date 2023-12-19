@@ -481,7 +481,7 @@ class PhonCorrelator:
         
         return corr_counts
     
-    def phoneme_pmi(self, conditional_counts, l1=None, l2=None):
+    def phoneme_pmi(self, conditional_counts, l1=None, l2=None, wordlist=None):
         """
         conditional_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         """
@@ -507,6 +507,16 @@ class PhonCorrelator:
                 if corr1 not in l1.phonemes or corr2 not in l2.phonemes
             ]
         )
+        
+        # If using a specific wordlist, extract sequences in each language
+        if wordlist:
+            wordlist_lang1, wordlist_lang2 = zip(*wordlist)
+            wordlist_lang1 = [word.segments for word in wordlist_lang1]
+            wordlist_lang2 = [word.segments for word in wordlist_lang2]
+            seq_lens1 = [len(seq) for seq in wordlist_lang1]
+            seq_lens2 = [len(seq) for seq in wordlist_lang2]
+            total_seq_len1 = sum(seq_lens1)
+            total_seq_len2 = sum(seq_lens2)
             
         # Calculate PMI for all phoneme pairs
         pmi_dict = defaultdict(lambda:defaultdict(lambda:0))
@@ -547,8 +557,33 @@ class PhonCorrelator:
             
             # Standard alignment pairs
             else:
-                p_ind1 = l1.ngram_probability(seg1_ngram)
-                p_ind2 = l2.ngram_probability(seg2_ngram)
+                
+                # Calculation below gives a more precise probability specific to a certain subset of words,
+                # which directly reflects shared coverage between l1 and l2.
+                # Else, using lang.ngram_probability will consider all words in the vocabulary
+                if wordlist:
+                    if seg1_ngram.size > 1:
+                        seg1_count = ngram_count_wordlist(seg1_ngram.ngram, wordlist_lang1)
+                        p_ind1 = seg1_count / sum([count_subsequences(l, seg1_ngram.size) for l in seq_lens1])
+                    else:
+                        p_ind1 = ngram_count_wordlist(seg1_ngram.ngram, wordlist_lang1)  / total_seq_len1
+                        
+                    if seg2_ngram.size > 1:
+                        seg2_count = ngram_count_wordlist(seg2_ngram.ngram, wordlist_lang2)
+                        p_ind2 = seg2_count / sum([count_subsequences(l, seg2_ngram.size) for l in seq_lens2])
+                    else:
+                        p_ind2 = ngram_count_wordlist(seg2_ngram.ngram, wordlist_lang2) / total_seq_len2
+                    
+                    # Because we iterate over all possible phone pairs, when considering only the counts of phones/ngrams
+                    # within a specific wordlist, it could occur that the count is zero for a segment in that wordlist.
+                    # In that case, skip PMI calculation for this pair as there is insufficient data.
+                    if p_ind1 == 0 or p_ind2 == 0:
+                        continue
+                        
+                else:
+                    p_ind1 = l1.ngram_probability(seg1_ngram)
+                    p_ind2 = l2.ngram_probability(seg2_ngram)
+                    
                 p_ind = p_ind1 * p_ind2
                 joint_prob = joint_prob_dist.get(seg1, {}).get(seg2, p_ind)
                 pmi_dict[seg1_ngram.undo()][seg2_ngram.undo()] = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
@@ -599,6 +634,7 @@ class PhonCorrelator:
             seed_i, sample_size = key
             sample_n = seed_i - start_seed
             synonym_sample, diff_sample = sample
+            reversed_synonym_sample = [(pair[-1], pair[0]) for pair in synonym_sample]
             
             # First step: calculate probability of phones co-occuring within within 
             # a set radius of positions within their respective words
@@ -607,8 +643,17 @@ class PhonCorrelator:
             for d in [synonyms_radius1, synonyms_radius2]:
                 for seg1 in d:
                     d[seg1] = normalize_dict(d[seg1])
-            pmi_step1 = [self.phoneme_pmi(conditional_counts=synonyms_radius1, l1=self.lang1, l2=self.lang2),
-                        self.phoneme_pmi(conditional_counts=synonyms_radius2, l1=self.lang2, l2=self.lang1)]
+            pmi_step1 = [self.phoneme_pmi(conditional_counts=synonyms_radius1, 
+                                          l1=self.lang1, 
+                                          l2=self.lang2, 
+                                          wordlist=synonym_sample,
+                                          ),
+                        self.phoneme_pmi(conditional_counts=synonyms_radius2, 
+                                         l1=self.lang2, 
+                                         l2=self.lang1,
+                                          wordlist=reversed_synonym_sample,
+                                         )
+                        ]
             pmi_dict_l1l2, pmi_dict_l2l1 = pmi_step1
             
             # Average together the PMI values from each direction
@@ -648,7 +693,8 @@ class PhonCorrelator:
                 cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
                                                     for v in cognate_probs[k]} 
                                             for k in cognate_probs}, l=defaultdict(lambda:0))
-                PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs)# , noncognate_probs)
+                PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs, 
+                                                             wordlist=qualifying_words[iteration-1])
                 
                 # Align all same-meaning word pairs
                 aligned_synonym_sample = self.align_wordlist(synonym_sample, added_penalty_dict=PMI_iterations[iteration], complex_ngrams=self.complex_ngrams)
