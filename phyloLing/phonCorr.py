@@ -428,10 +428,10 @@ class PhonCorrelator:
             pad_n = 0
             if pad:
                 pad_n = max(1, ngram_size-1)
-                alignment.pad(ngram_size,
-                              alignment=_alignment, 
-                              pad_ch=self.pad_ch, 
-                              pad_n=pad_n)
+                _alignment = alignment.pad(ngram_size,
+                                           alignment=_alignment, 
+                                           pad_ch=self.pad_ch, 
+                                           pad_n=pad_n)
                 
             for i in range(pad_n, len(_alignment)):
                 ngram = _alignment[i-min(pad_n,ngram_size-1):i+1]
@@ -634,7 +634,9 @@ class PhonCorrelator:
                 iteration += 1
                 
                 # Align the qualifying words of the previous step using previous step's PMI
-                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], added_penalty_dict=PMI_iterations[iteration-1], complex_ngrams=self.complex_ngrams)
+                cognate_alignments = self.align_wordlist(qualifying_words[iteration-1], 
+                                                         added_penalty_dict=PMI_iterations[iteration-1], 
+                                                         complex_ngrams=self.complex_ngrams)
                 
                 # Add these alignments into running pool of alignments
                 if cumulative:
