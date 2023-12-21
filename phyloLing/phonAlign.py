@@ -276,6 +276,8 @@ class Alignment:
          
         gaps = self.gaps()
         gaps.reverse()
+        merge_ranges = set()
+        merge_candidates = {}
         for gap in gaps:
             slices = gap.bigram_slices()
             # If the gap is in the first position, that means lang1 has a single seg where lang2 has two segs
@@ -292,8 +294,10 @@ class Alignment:
                                     [(gap.gap_ch, gap_aligned_corr), (unigram_corr.string, seg_aligned_corr)],
                                     [(unigram_corr.string, seg_aligned_corr), (gap.gap_ch, gap_aligned_corr)],
                                 ):
-                                    self.merge_align_positions(indices=list(range(start_i,end_i)))
+                                    merge_ranges.add(tuple(range(start_i,end_i)))
+                                    merge_candidates[tuple(range(start_i,end_i))] = (unigram_corr, bigram)
                                     break
+                                break
 
             # If gap is not in first position, this means that lang1 has two segs where lang2 has one seg
             # gap.segment should be part of l1_bigram_segs
@@ -307,8 +311,30 @@ class Alignment:
                                     [(gap_aligned_corr, gap.gap_ch), (seg_aligned_corr, unigram_corr.string)],
                                     [(seg_aligned_corr, unigram_corr.string), (gap_aligned_corr, gap.gap_ch)],
                                 ):
-                                    self.merge_align_positions(indices=list(range(start_i,end_i)))
+                                    merge_ranges.add(tuple(range(start_i,end_i)))
+                                    merge_candidates[tuple(range(start_i,end_i))] = (bigram, unigram_corr)
                                     break
+                                break
+        
+        # Select best merge group(s)
+        if len(merge_ranges) > 1:
+            merge_ranges = sorted(merge_ranges, key=lambda x:(x[0], x[-1]), reverse=True)
+            for i in range(1, len(merge_ranges)):
+                merge_range, next_merge_range = merge_ranges[i-1:i+1]
+                # Check if the merge candidates' index ranges conflict: if so, pick the one with higher PMI
+                if not any([r is None for r in (merge_range, next_merge_range)]) and min(merge_range) <= max(next_merge_range):
+                    merge_range_pmi = complex_ngrams[merge_candidates[tuple(merge_range)][0]][merge_candidates[tuple(merge_range)][-1]]
+                    next_merge_range_pmi = complex_ngrams[merge_candidates[tuple(next_merge_range)][0]][merge_candidates[tuple(next_merge_range)][-1]]
+                    if merge_range_pmi > next_merge_range_pmi:
+                        merge_ranges[i] = None
+                    elif next_merge_range_pmi > merge_range_pmi:
+                        merge_ranges[i-1] = None
+                    else:
+                        raise NotImplementedError # PMI is equal, TBD what to do here
+                    
+        for merge_range in merge_ranges:
+            if merge_range is not None:
+                self.merge_align_positions(indices=list(merge_range))
         
         # Update sequence map and length for compacted alignment
         self.update()

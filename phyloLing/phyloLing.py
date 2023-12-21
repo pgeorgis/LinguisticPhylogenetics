@@ -302,9 +302,9 @@ class LexicalDataset:
                     lang1.phoneme_pmi[lang2][ngram1.undo()][ngram2.undo()] = pmi_value
                     lang2.phoneme_pmi[lang1][ngram2.undo()][ngram1.undo()] = pmi_value
                     if ngram1.size > 1 or ngram2.size > 1:
-                        lang1.complex_ngrams[lang2][ngram1].append(ngram2)
-                        lang2.complex_ngrams[lang1][ngram2].append(ngram1)
-
+                        lang1.complex_ngrams[lang2][ngram1][ngram2] = pmi_value
+                        lang2.complex_ngrams[lang1][ngram2][ngram1] = pmi_value
+                        
     def write_phoneme_pmi(self, **kwargs):
         self.logger.info(f'Saving {self.name} phoneme PMI...')
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
@@ -1222,7 +1222,7 @@ class Language:
         self.phoneme_correlators = {}
         self.phoneme_correspondences = defaultdict(lambda:defaultdict(lambda:0))
         self.phoneme_pmi = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
-        self.complex_ngrams = defaultdict(lambda:defaultdict(lambda:[]))
+        self.complex_ngrams = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:0)))
         self.phoneme_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.phon_env_surprisal = defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:-self.phoneme_entropy)))
         self.noncognate_thresholds = defaultdict(lambda:[])

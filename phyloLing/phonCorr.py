@@ -825,7 +825,7 @@ class PhonCorrelator:
             self.lang1.complex_ngrams[self.lang2] = self.complex_ngrams
             reversed_complex_ngrams = {val:set(key for key in self.complex_ngrams if val in self.complex_ngrams[key]) 
                                        for key in self.complex_ngrams for val in self.complex_ngrams[key]}
-            self.lang2.complex_ngrams[self.lang1] = default_dict(reversed_complex_ngrams, l=[])
+            self.lang2.complex_ngrams[self.lang1] = default_dict(reversed_complex_ngrams, l=defaultdict(lambda:0))
             # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
             
         self.pmi_dict = results
@@ -1527,7 +1527,7 @@ class NullCompacter:
         self.compacted_corr_counts = defaultdict(lambda:defaultdict(lambda:0))
         self.reversed_corr_counts = None
         self.reversed_compacted_corr_counts = None
-        self.valid_corrs = defaultdict(lambda:[])
+        self.valid_corrs = defaultdict(lambda:defaultdict(lambda:0))
         
     def extract_seqs(self):
         seqs1 = [alignment.seq1 for alignment in self.alignments]
@@ -1620,7 +1620,7 @@ class NullCompacter:
                     # Logic: PAD_CH corresponds to either the start or end of an alignment/segmented sequence
                     # Every sequence has exactly one of each, therefore the probability (irrespective whether beginning/end) is just the number of sequences divided by the total number of unigrams
                     gap_seg_prob = len(seqs) / total_seq_len
-                # Calculation below gives a more precise probability specific to this set of alignments,  # TODO add this method with ngram_count_wordlist() in calculation of PMI elsewhere
+                # Calculation below gives a more precise probability specific to this set of alignments,
                 # which directly reflects shared coverage between l1 and l2
                 # Else, using lang.phonemes will consider all words in the vocabulary
                 elif gap_seg.size > 1: # gap seg is also a n>1-ngram
@@ -1684,9 +1684,9 @@ class NullCompacter:
                 # Consider the compacted null alignment to be valid if its PMI is greater than that of the simpler ngram correlations
                 if pmi_complex > pmi_basic:
                     if direction == 'FORWARD':
-                        self.valid_corrs[larger_ngram].append(gap_seg)
+                        self.valid_corrs[larger_ngram][gap_seg] = pmi_complex
                     else: # BACKWARD
-                        self.valid_corrs[gap_seg].append(larger_ngram)
+                        self.valid_corrs[gap_seg][larger_ngram] = pmi_complex
                         
     def select_valid_null_corrs(self):               
         for corr in self.compacted_corr_counts:
