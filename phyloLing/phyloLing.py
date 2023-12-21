@@ -49,6 +49,8 @@ class LexicalDataset:
                  loan_c = 'Loan',
                  glottocode_c='Glottocode',
                  iso_code_c='ISO 639-3',
+                 included_doculects=None,
+                 excluded_doculects=None,
                  transcription_params={'global':TRANSCRIPTION_PARAM_DEFAULTS},
                  alignment_params=ALIGNMENT_PARAM_DEFAULTS,
                  logger=None
@@ -117,11 +119,11 @@ class LexicalDataset:
         self.concepts = defaultdict(lambda:defaultdict(lambda:[]))
         self.cognate_sets = defaultdict(lambda:defaultdict(lambda:set()))
         self.clustered_cognates = defaultdict(lambda:{})
-        self.load_data(self.filepath)
+        self.load_data(self.filepath, included_doculects=included_doculects, excluded_doculects=excluded_doculects)
         self.load_gold_cognate_sets()
         self.mutual_coverage = self.calculate_mutual_coverage()
 
-    def load_data(self, filepath, doculects=None, sep='\t'):
+    def load_data(self, filepath, included_doculects=[], excluded_doculects=None, sep='\t'):
         
         # Load data file
         data = csv2dict(filepath, sep=sep)
@@ -131,7 +133,8 @@ class LexicalDataset:
         language_vocab_data = defaultdict(lambda:defaultdict(lambda:{}))
         for i in data:
             lang = data[i][self.columns['language_name']]
-            if ((doculects is None) or (lang in doculects)):
+            if ((included_doculects == []) or (lang in included_doculects)) \
+                and ((excluded_doculects == []) or (lang not in excluded_doculects)):
                 features = list(data[i].keys())
                 for feature in features:
                     value = data[i][feature]
@@ -1146,7 +1149,7 @@ class LexicalDataset:
         return new_dataset
 
     def add_language(self, name, data_path, **kwargs):
-        self.load_data(data_path, doculects=[name], **kwargs)
+        self.load_data(data_path, included_doculects=[name], **kwargs)
 
     def __str__(self):
         """Print a summary of the Family object"""
@@ -1725,10 +1728,20 @@ def combine_datasets(dataset_list):
     pass
 
 
-def load_family(family, data_file, min_amc=None, concept_list=None, exclude=None, logger=None, **kwargs):
-    family = LexicalDataset(data_file, family, logger=logger, **kwargs)
-    if exclude:
-        family.remove_languages(exclude)
+def load_family(family, 
+                data_file, 
+                min_amc=None, 
+                concept_list=None, 
+                excluded_doculects=None, 
+                included_doculects=None, 
+                logger=None, 
+                **kwargs):
+    family = LexicalDataset(data_file, 
+                            family, 
+                            excluded_doculects=excluded_doculects,
+                            included_doculects=included_doculects,
+                            logger=logger, 
+                            **kwargs)
     if min_amc:
         family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
     # families[family].write_vocab_index() # TODO

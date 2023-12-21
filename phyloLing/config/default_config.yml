@@ -2,6 +2,7 @@ family:
   name:
   # file: path/to/input/file
   min_amc: 0.65 # TODO 0.7?
+  include: []
   exclude: []
   # outdir: path/to/outdir
 
