@@ -1179,11 +1179,10 @@ class PhonCorrelator:
                         iter_log = self.log_iteration(iteration, qualifying_words, disqualified_words, method='surprisal', same_meaning_alignments=same_meaning_alignments)
                         iter_logs[sample_n].append(iter_log)
 
-                        # Log final alignments from which surprisal was calculated
-                        self.log_alignments(qualifying_alignments, self.align_log['surprisal'])
-
-                # Save final set of qualifying/disqualified word pairs
                 if log_iterations:
+                    # Log final alignments from which surprisal was calculated
+                    self.log_alignments(qualifying_alignments, self.align_log['surprisal'])
+                    # Save final set of qualifying/disqualified word pairs
                     iter_logs[sample_n].append(([same_sample[i] for i in qualifying], 
                                                 [same_sample[i] for i in disqualified]))
                     
@@ -1479,8 +1478,7 @@ class PhonCorrelator:
                 sorted_alignments = dict_tuplelist(alignment_log[key])
                 sorted_alignments.sort(key=lambda x:(x[-1], x[0]), reverse=True)
                 for alignment, count in sorted_alignments:
-                    freq = f'{count}/{sum(alignment_log[key].values())}'#count/sum(alignment_log[key].values())
-                    #f.write(f'[{round(freq, 2)}] {alignment}\n')
+                    freq = f'{count}/{sum(alignment_log[key].values())}'
                     f.write(f'[{freq}] {alignment}\n')
                 f.write('\n-------------------\n\n')
     
