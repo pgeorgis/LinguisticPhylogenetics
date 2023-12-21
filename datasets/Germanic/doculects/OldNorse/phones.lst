@@ -174,7 +174,7 @@ CONSONANTS
 /d/ (0.026)
 	<dauðligr> /dˈɒu̯ðliɡr/ "deadly_ADJ"
 	<eldr> /ˈɛldr/ "fire_NOUN"
-	<dauðr> /dˈɒu̯ðr/ "death_NOUN"
+	<djúpr> /djˈuːpr/ "deep_ADJ"
 
 /f/ (0.023)
 	<ljúfr> /ljˈuːfr/ "beloved_ADJ"
@@ -247,7 +247,7 @@ CONSONANTS
 	<átta> /ˈɑːtːa/ "eight_NUM"
 
 /rː/ (0.007)
-	<kærr> /cʰˈɛːrː/ "dear_ADJ"
+	<þurr> /θˈurː/ "dry_ADJ"
 	<marr> /mˈɑrː/ "sea_NOUN"
 	<stórr> /stˈoːrː/ "big_ADJ"
 
@@ -271,25 +271,25 @@ CONSONANTS
 	<geit> /ɟˈɛi̯t/ "goat_NOUN"
 	<fylgja> /fˈylɟa/ "follow_VERB"
 
-/cʰ/ (0.004)
-	<kýr> /cʰˈyːr/ "cow_NOUN"
-	<kjǫt> /cʰjˈɔt/ "meat_NOUN"
-	<kærr> /cʰˈɛːrː/ "dear_ADJ"
-
 /kː/ (0.004)
-	<drekka> /drˈekːɑ/ "drink_VERB"
+	<nǫkkviðr> /nˈɔkːviðr/ "naked_ADJ"
 	<þykkr> /θˈykːr/ "thick_ADJ"
 	<þakka> /θˈɑkːɑ/ "thank_VERB"
 
 /x/ (0.004)
-	<hvél> /xwˈeːl/ "wheel_NOUN"
-	<hvítr> /xwˈiːtr/ "white_ADJ"
 	<hvalr> /xwˈɑlr/ "whale_NOUN"
+	<hvítr> /xwˈiːtr/ "white_ADJ"
+	<hvél> /xwˈeːl/ "wheel_NOUN"
 
 /w/ (0.004)
 	<hvél> /xwˈeːl/ "wheel_NOUN"
 	<hvítr> /xwˈiːtr/ "white_ADJ"
-	<hvat> /xwˈɑt/ "what_PRON"
+	<hvalr> /xwˈɑlr/ "whale_NOUN"
+
+/cʰ/ (0.004)
+	<kærr> /cʰˈɛːrː/ "dear_ADJ"
+	<kjǫt> /cʰjˈɔt/ "meat_NOUN"
+	<kýr> /cʰˈyːr/ "cow_NOUN"
 
 /ɡː/ (0.003)
 	<egg> /ˈɛɡː/ "egg_NOUN_NEU"
