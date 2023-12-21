@@ -1679,8 +1679,10 @@ class NullCompacter:
                             if p_gap_seg_given_seg > 0:
                                 pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
                                 
-                # Consider the compacted null alignment to be valid if its PMI is greater than that of the simpler ngram correlations
-                if pmi_complex > pmi_basic:
+                # Consider the compacted null alignment to be valid if: 
+                # - its PMI > 0
+                # - and its PMI is greater than that of the simpler ngram correlations
+                if pmi_complex > max(pmi_basic, 0):
                     if direction == 'FORWARD':
                         self.valid_corrs[larger_ngram][gap_seg] = pmi_complex
                     else: # BACKWARD
