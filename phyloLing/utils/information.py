@@ -5,11 +5,11 @@ from constants import PAD_CH_DEFAULT, GAP_CH_DEFAULT
 from utils.sequence import Ngram, PhonEnvNgram
 
 def pointwise_mutual_info(p_joint, p_x, p_y):
-    return log(p_joint/(p_x*p_y)) # TODO should it be log base 2?
+    return log(p_joint/(p_x*p_y), 2)
 
-def bayes_pmi(pX_given_Y, pX):  # TODO should it be log base 2?
+def bayes_pmi(pX_given_Y, pX):
     # via Bayes Theorem : pmi = log( p(x,y) / ( p(x) * p(y) ) ) = log( p(x|y) / p(x) )
-    return log(pX_given_Y/pX)
+    return log(pX_given_Y/pX, 2)
 
 def surprisal(p):
     try:
