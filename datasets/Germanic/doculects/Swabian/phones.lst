@@ -19,15 +19,15 @@ VOWELS
 	<Egg> /ˈɛɡ/ "edge_NOUN"
 	<benda> /bˈɛnda/ "bind_VERB"
 
-/ˈao̯/ (0.021)
-	<dausad> /dˈao̯sɐd/ "thousand_NUM"
-	<Daub> /dˈao̯b/ "dove_NOUN"
-	<sauga> /sˈao̯ɡa/ "suck_VERB"
-
 /ˈo/ (0.021)
-	<Woch> /ʋˈox/ "week_NOUN"
-	<Wolf> /ʋˈolf/ "wolf_NOUN"
-	<Zong> /ʦˈoŋ/ "tongue_NOUN"
+	<Wort> /ʋˈoʕt/ "word_NOUN"
+	<Hond> /hˈond/ "dog_NOUN"
+	<Wolle> /ʋˈole/ "wool_NOUN_FEM"
+
+/ˈao̯/ (0.021)
+	<sauer> /sˈao̯ʌ/ "sour_ADJ"
+	<Sau> /sˈao̯/ "sow_NOUN"
+	<Maul> /mˈao̯l/ "mouth_NOUN"
 
 /ˈi/ (0.02)
 	<i> /ˈi/ "I_PRON"
@@ -79,15 +79,15 @@ VOWELS
 	<gäba> /ɡˈɛːba/ "give_VERB"
 	<Fädr> /fˈɛːdʌ/ "feather_NOUN"
 
-/ˈu/ (0.009)
-	<Bruschd> /bʁˈuʃd/ "breast_NOUN"
-	<Mugg> /mˈuɡ/ "midge_NOUN"
-	<Muddr> /mˈudʌ/ "mother_NOUN"
-
 /ˈɔ/ (0.009)
-	<Horn> /hˈɔʕn/ "horn_NOUN"
 	<komma> /kʰˈɔma/ "come_VERB"
-	<Dochdr> /dˈɔxdʌ/ "daughter_NOUN"
+	<Gott> /ɡˈɔt/ "god_NOUN"
+	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
+
+/ˈu/ (0.009)
+	<drugga> /dʁˈuɡa/ "press_VERB"
+	<Bruschd> /bʁˈuʃd/ "breast_NOUN"
+	<Brugg> /bʁˈuɡ/ "bridge_NOUN"
 
 /ˈe/ (0.009)
 	<schwemma> /ʃʋˈema/ "swim_VERB"
@@ -109,42 +109,42 @@ VOWELS
 	<sieba> /sˈiːba/ "seven_NUM"
 	<ihr> /ˈiːʕ/ "ye_PRON"
 
-/e/ (0.004)
-	<Ärde> /ˈɛʕde/ "earth_NOUN"
-	<älle> /ˈɛle/ "all_ADJ"
-	<Wolle> /ʋˈole/ "wool_NOUN_FEM"
-
 /ˈeə̯/ (0.004)
-	<grea> /ɡʁˈeə̯/ "green_ADJ"
 	<zeah> /ʦˈeə̯/ "ten_NUM"
+	<grea> /ɡʁˈeə̯/ "green_ADJ"
 	<geal> /ɡˈeə̯l/ "yellow_ADJ"
+
+/e/ (0.004)
+	<älle> /ˈɛle/ "all_ADJ"
+	<Ärde> /ˈɛʕde/ "earth_NOUN"
+	<Wolle> /ʋˈole/ "wool_NOUN_FEM"
 
 /ˈʌ/ (0.002)
 	<Kirch> /kʰˈʌç/ "church_NOUN_FEM"
 	<Berg> /bˈʌɡ/ "mountain_NOUN"
 
-/ɪ/ (0.002)
-	<Honig> /hˈoːnɪɡ/ "honey_NOUN"
-	<heilig> /hˈae̯lɪɡ/ "holy_ADJ"
-
 /ˈuː/ (0.002)
 	<du> /dˈuː/ "thou_PRON"
 	<Schduhl> /ʃdˈuːl/ "stool_NOUN"
 
+/ɪ/ (0.002)
+	<Honig> /hˈoːnɪɡ/ "honey_NOUN"
+	<heilig> /hˈae̯lɪɡ/ "holy_ADJ"
+
 /ˈɔə̯/ (0.001)
 	<Bloam> /blˈɔə̯m/ "flower_NOUN"
-
-/i/ (0.001)
-	<Keenig> /kʰˈeːniɡ/ "king_NOUN"
 
 /ə/ (0.001)
 	<Seide> /sˈəi̯də/ "side_NOUN"
 
-/eə̯/ (0.001)
-	<dreizeah> /dʁˈae̯ʦeə̯/ "thirteen_NUM"
-
 /ɐ/ (0.001)
 	<dausad> /dˈao̯sɐd/ "thousand_NUM"
+
+/i/ (0.001)
+	<Keenig> /kʰˈeːniɡ/ "king_NOUN"
+
+/eə̯/ (0.001)
+	<dreizeah> /dʁˈae̯ʦeə̯/ "thirteen_NUM"
 
 
 
@@ -199,15 +199,15 @@ CONSONANTS
 	<Arm> /ˈaʕm/ "arm_NOUN"
 	<Mugg> /mˈuɡ/ "midge_NOUN"
 
-/h/ (0.026)
-	<hoiß> /hˈɔe̯s/ "hot_ADJ"
-	<Has> /hˈaːs/ "hare_NOUN"
-	<Haud> /hˈao̯d/ "skin_NOUN"
-
 /ʋ/ (0.026)
-	<winscha> /ʋˈɪnʃa/ "wish_VERB"
-	<zwanzg> /ʦʋˈanʦɡ/ "twenty_NUM"
-	<was> /ʋˈas/ "what_PRON"
+	<Weed> /ʋˈeːd/ "wind_NOUN"
+	<Schwerd> /ʃʋˈɛʕd/ "sword_NOUN"
+	<Wort> /ʋˈoʕt/ "word_NOUN"
+
+/h/ (0.026)
+	<Haus> /hˈao̯s/ "house_NOUN"
+	<Haubd> /hˈao̯bd/ "head_NOUN"
+	<hoim> /hˈɔe̯m/ "home_NOUN"
 
 /ʕ/ (0.022)
 	<Arm> /ˈaʕm/ "arm_NOUN"
@@ -248,17 +248,17 @@ CONSONANTS
 	<Johr> /jˈɔːʕ/ "year_NOUN"
 	<jong> /jˈoŋ/ "young_NOUN"
 
-/b̥/ (0.001)
-	<Schbroch> /ʃb̥ʁˈɔːx/ "speech_NOUN_FEM"
-
-/b̥͡f/ (0.001)
-	<Abfl> /ˈab̥͡fl̩/ "apple_NOUN"
+/p͡f/ (0.001)
+	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
 
 /k/ (0.001)
 	<Fuchs> /fˈuks/ "fox_NOUN"
 
-/p͡f/ (0.001)
-	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
+/b̥͡f/ (0.001)
+	<Abfl> /ˈab̥͡fl̩/ "apple_NOUN"
+
+/b̥/ (0.001)
+	<Schbroch> /ʃb̥ʁˈɔːx/ "speech_NOUN_FEM"
 
 
 

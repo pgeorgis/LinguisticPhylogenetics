@@ -53,25 +53,25 @@ CONSONANTS
 	<trȋ> /triˈː/ "THREE_NUM"
 	<tráva> /traˈːʋa/ "GRASS_NOUN"
 
-/l/ (0.043)
-	<ljȅto> /ljeˈto/ "SUMMER_NOUN"
-	<lȁkat> /laˈkat/ "ELBOW_NOUN"
+/ʋ/ (0.043)
+	<dȑvo> /dr̩ˈʋo/ "TREE_NOUN"
+	<vući> /ʋuˈːʨi/ "DRAG_VERB"
 	<lȁv> /laˈʋ/ "LION_NOUN"
 
-/ʋ/ (0.043)
-	<vòda> /ʋoˈda/ "WATER_NOUN"
-	<zvijȇr> /zʋjeˈːr/ "BEAST_NOUN"
-	<vȏl> /ʋoˈːl/ "OX_NOUN"
-
-/k/ (0.041)
-	<nȍkat> /noˈkat/ "FINGERNAIL_NOUN"
-	<vȗk> /ʋuˈːk/ "WOLF_NOUN"
-	<mlijéko> /mljeˈːko/ "MILK_NOUN"
+/l/ (0.043)
+	<bijȇl> /bjeˈːl/ "WHITE_ADJ"
+	<pčèla> /pʧeˈla/ "BEE_NOUN"
+	<rȁlo> /raˈlo/ "PLOUGH_NOUN"
 
 /s/ (0.041)
-	<mjȅsto> /mjeˈsto/ "PLACE_NOUN"
-	<pijésak> /pjeˈːsak/ "SAND_NOUN"
 	<rȃst> /raˈːst/ "GROWTH_NOUN"
+	<ɡlȃs> /ɡlaˈːs/ "VOICE_NOUN"
+	<stȁr> /staˈr/ "OLD_ADJ"
+
+/k/ (0.041)
+	<čòvjek> /ʧoˈʋjek/ "PERSON_NOUN"
+	<kȍrijēn> /koˈrjeːn/ "ROOT_NOUN"
+	<nȍkat> /noˈkat/ "FINGERNAIL_NOUN"
 
 /j/ (0.038)
 	<mjȅsto> /mjeˈsto/ "PLACE_NOUN"
@@ -143,13 +143,13 @@ CONSONANTS
 	<hȑbat> /xr̩ˈbat/ "SPINE_NOUN"
 	<dȑvo> /dr̩ˈʋo/ "TREE_NOUN"
 
-/ɲ/ (0.003)
-	<kȍnj> /koˈɲ/ "HORSE_NOUN"
-	<òɡanj> /oˈɡaɲ/ "FIRE_NOUN"
-
 /ʨ/ (0.003)
 	<nȏć> /noˈːʨ/ "NIGHT_NOUN"
 	<vući> /ʋuˈːʨi/ "DRAG_VERB"
+
+/ɲ/ (0.003)
+	<kȍnj> /koˈɲ/ "HORSE_NOUN"
+	<òɡanj> /oˈɡaɲ/ "FIRE_NOUN"
 
 /ʃ/ (0.002)
 	<šȇst> /ʃeˈːst/ "SIX_NUM"

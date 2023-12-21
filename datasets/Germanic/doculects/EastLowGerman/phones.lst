@@ -14,15 +14,15 @@ VOWELS
 	<Blatt> /blˈat/ "leaf_NOUN_NEU"
 	<lang> /lˈaŋk/ "long_ADJ"
 
-/ˈae̯/ (0.025)
-	<drei> /drˈae̯/ "three_NUM"
-	<Eik> /ˈae̯k/ "oak_NOUN_FEM"
-	<flegen> /flˈae̯ŋ/ "fly_VERB"
-
 /ˈaʊ̯/ (0.025)
-	<Brot> /brˈaʊ̯t/ "bread_NOUN"
-	<hoch> /hˈaʊ̯x/ "high_ADJ"
-	<Blaut> /blˈaʊ̯t/ "blood_NOUN"
+	<Stauhl> /ʃtˈaʊ̯l/ "stool_NOUN"
+	<gaut> /ɡˈaʊ̯t/ "good_ADJ"
+	<Kauh> /kʰˈaʊ̯/ "cow_NOUN"
+
+/ˈae̯/ (0.025)
+	<deip> /dˈae̯p/ "deep_ADJ"
+	<scheten> /ʃˈae̯tn̩/ "shoot_VERB"
+	<leif> /lˈae̯f/ "beloved_ADJ"
 
 /ˈiː/ (0.023)
 	<riek> /rˈiːk/ "rich_ADJ"
@@ -74,15 +74,15 @@ VOWELS
 	<scharp> /ʃˈaːp/ "sharp_ADJ"
 	<warm> /vˈaːm/ "warm_ADJ"
 
-/ˈoː/ (0.007)
-	<Lof> /lˈoːf/ "leaf_NOUN"
-	<Bor> /bˈoːæ/ "bear_NOUN"
-	<Worm> /vˈoːæm/ "worm_NOUN"
-
 /ˈœː/ (0.007)
-	<Sœhn> /zˈœːn/ "son_NOUN"
+	<œwer> /ˈœːvæ/ "over_PREP"
 	<kœnen> /kʰˈœːn̩/ "can_VERB"
-	<för> /fˈœːæ/ "for_PREP"
+	<sœben> /zˈœːm/ "seven_NUM"
+
+/ˈoː/ (0.007)
+	<Goorn> /ɡˈoːæn/ "yarn_NOUN"
+	<Bor> /bˈoːæ/ "bear_NOUN"
+	<Hor> /hˈoːæ/ "hair_NOUN"
 
 /ˈyː/ (0.006)
 	<düer> /dˈyːæ/ "expensive_ADJ"
@@ -107,11 +107,11 @@ VOWELS
 /ˈɛɪ̯/ (0.001)
 	<Kees> /kʰˈɛɪ̯s/ "cheese_NOUN"
 
-/ˈaɪ̯/ (0.001)
-	<freren> /frˈaɪ̯æn/ "freeze_VERB"
-
 /ˈøː/ (0.001)
 	<König> /kʰˈøːnɪç/ "king_NOUN"
+
+/ˈaɪ̯/ (0.001)
+	<freren> /frˈaɪ̯æn/ "freeze_VERB"
 
 /ae̯/ (0.001)
 	<drütteihn> /drˈʏtae̯n/ "thirteen_NUM"
@@ -164,15 +164,15 @@ CONSONANTS
 	<Blatt> /blˈat/ "leaf_NOUN_NEU"
 	<Bost> /bˈɔst/ "breast_NOUN"
 
-/h/ (0.025)
-	<Hunger> /hˈʊŋæ/ "hunger_NOUN"
-	<haten> /hˈaːtn̩/ "hate_VERB"
-	<Huurn> /hˈuːæn/ "horn_NOUN"
-
 /v/ (0.025)
-	<Wech> /vˈɛç/ "way_NOUN"
-	<weiten> /vˈae̯tn̩/ "know_VERB"
-	<Wåter> /vˈɒːtæ/ "water_NOUN"
+	<Wuurt> /vˈuːæt/ "word_NOUN"
+	<warm> /vˈaːm/ "warm_ADJ"
+	<wünschen> /vˈʏnʃn̩/ "wish_VERB"
+
+/h/ (0.025)
+	<Höft> /hˈœft/ "head_NOUN"
+	<Hund> /hˈʊnd/ "dog_NOUN"
+	<hebben> /hˈɛbm̩/ "have_VERB"
 
 /z/ (0.022)
 	<säut> /zˈɔʏ̯t/ "sweet_ADJ"

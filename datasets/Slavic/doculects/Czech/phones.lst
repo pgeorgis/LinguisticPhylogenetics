@@ -135,20 +135,20 @@ CONSONANTS
 	<štěstí> /ʃcˈɛsciː/ "HAPPINESS_NOUN"
 	<těžký> /cˈɛʃkiː/ "HEAVY_ADJ"
 
-/b/ (0.009)
-	<hřbet> /ɦr̝bˈɛt/ "SPINE_NOUN"
-	<bůh> /bˈuːx/ "GOD_NOUN"
-	<oblak> /ˈoblak/ "CLOUD_NOUN"
-
 /ʦ/ (0.009)
-	<noc> /nˈoʦ/ "NIGHT_NOUN"
 	<slunce> /slˈunʦɛ/ "SUN_NOUN"
+	<měsíc> /mɲˈɛsiːʦ/ "MONTH_NOUN"
 	<vléct> /vlˈɛːʦt/ "DRAG_VERB"
 
 /r̩/ (0.009)
-	<smrt> /smˈr̩t/ "DEATH_NOUN"
-	<srdce> /sˈr̩ʦɛ/ "HEART_NOUN"
 	<tvrdý> /tvˈr̩diː/ "HARD_ADJ"
+	<srdce> /sˈr̩ʦɛ/ "HEART_NOUN"
+	<mrtvý> /mˈr̩tviː/ "DEAD_ADJ"
+
+/b/ (0.009)
+	<ryba> /rˈɪba/ "FISH_NOUN"
+	<hřbet> /ɦr̝bˈɛt/ "SPINE_NOUN"
+	<dobrý> /dˈobriː/ "GOOD_ADJ"
 
 /ʃ/ (0.008)
 	<muž> /mˈuʃ/ "HUSBAND_NOUN"
@@ -175,15 +175,15 @@ CONSONANTS
 	<vlk> /vˈl̩k/ "WOLF_NOUN"
 	<mysl> /mˈɪsl̩/ "THOUGHT_NOUN"
 
-/f/ (0.005)
-	<krev> /krˈɛf/ "BLOOD_NOUN"
-	<lev> /lˈɛf/ "LION_NOUN"
-	<včela> /fʧˈela/ "BEE_NOUN"
-
 /r̝̊/ (0.005)
 	<tři> /tr̝̊ˈɪ/ "THREE_NUM"
 	<křídlo> /kr̝̊ˈiːdlo/ "WING_NOUN"
 	<zvěř> /zvjˈɛr̝̊/ "BEAST_NOUN"
+
+/f/ (0.005)
+	<krev> /krˈɛf/ "BLOOD_NOUN"
+	<lev> /lˈɛf/ "LION_NOUN"
+	<včela> /fʧˈela/ "BEE_NOUN"
 
 /ɟ/ (0.003)
 	<vidět> /vˈɪɟɛt/ "SEE_VERB"

@@ -64,15 +64,15 @@ VOWELS
 	<stool> /stˈuːɫ/ "stool_NOUN"
 	<two> /tʰˈuː/ "two_NUM"
 
-/ɪ/ (0.008)
-	<honey> /hˈɐnɪ/ "honey_NOUN"
-	<deadly> /dˈedlɪ/ "deadly_ADJ"
-	<eleven> /ɪlˈevən/ "eleven_NUM"
-
 /ˈɒ/ (0.008)
+	<long> /lˈɒŋ/ "long_ADJ"
 	<fox> /fˈɒks/ "fox_NOUN"
-	<salt> /sˈɒɫt/ "salt_NOUN"
-	<what> /wˈɒt/ "what_PRON"
+	<god> /ɡˈɒd/ "god_NOUN"
+
+/ɪ/ (0.008)
+	<deadly> /dˈedlɪ/ "deadly_ADJ"
+	<naked> /nˈeɪ̯kɪd/ "naked_ADJ"
+	<twenty> /tʰwˈentɪ/ "twenty_NUM"
 
 /ˈʊ/ (0.007)
 	<good> /ɡˈʊd/ "good_ADJ"
@@ -125,25 +125,25 @@ CONSONANTS
 	<freeze> /fɹˈiːz/ "freeze_VERB"
 	<feather> /fˈeðə/ "feather_NOUN"
 
-/w/ (0.033)
-	<weather> /wˈeðə/ "weather_NOUN"
-	<wind> /wˈɪnd/ "wind_NOUN"
-	<whale> /wˈeɪ̯ɫ/ "whale_NOUN"
-
 /ɹ/ (0.033)
-	<brother> /bɹˈɐðə/ "brother_NOUN"
-	<ring> /ɹˈɪŋ/ "ring_NOUN"
-	<dream> /dɹˈiːm/ "dream_VERB"
+	<great> /ɡɹˈeɪ̯t/ "great_ADJ"
+	<rich> /ɹˈɪʧ/ "rich_ADJ"
+	<hundred> /hˈɐndɹəd/ "hundred_NUM"
 
-/l/ (0.03)
-	<liver> /lˈɪvə/ "liver_NOUN"
-	<laugh> /lˈɑːf/ "laugh_VERB"
-	<land> /lˈænd/ "land_NOUN"
+/w/ (0.033)
+	<one> /wˈɐn/ "one_NUM"
+	<quean> /kʰwˈiːn/ "woman_NOUN"
+	<swim> /swˈɪm/ "swim_VERB"
 
 /m/ (0.03)
-	<moon> /mˈuːn/ "moon_NOUN"
-	<beam> /bˈiːm/ "tree_NOUN"
-	<arm> /ˈɑːm/ "arm_NOUN"
+	<mother> /mˈɐðə/ "mother_NOUN"
+	<might> /mˈaɪ̯t/ "might_NOUN"
+	<midge> /mˈɪʤ/ "midge_NOUN"
+
+/l/ (0.03)
+	<leap> /lˈiːp/ "leap_VERB"
+	<sleep> /slˈiːp/ "sleep_VERB"
+	<bleed> /blˈiːd/ "bleed_VERB"
 
 /ɫ/ (0.028)
 	<old> /ˈəʊ̯ɫd/ "old_ADJ"
@@ -175,25 +175,25 @@ CONSONANTS
 	<guest> /ɡˈest/ "guest_NOUN"
 	<hunger> /hˈɐŋɡə/ "hunger_NOUN"
 
-/p/ (0.014)
-	<help> /hˈeɫp/ "help_VERB"
-	<sheep> /ʃˈiːp/ "sheep_NOUN"
-	<sleep> /slˈiːp/ "sleep_VERB"
-
 /ʃ/ (0.014)
-	<sharp> /ʃˈɑːp/ "sharp_ADJ"
-	<shit> /ʃˈɪt/ "shit_NOUN"
-	<wish> /wˈɪʃ/ "wish_VERB"
+	<flesh> /flˈeʃ/ "flesh_NOUN"
+	<sheep> /ʃˈiːp/ "sheep_NOUN"
+	<ship> /ʃˈɪp/ "ship_NOUN"
 
-/v/ (0.013)
-	<oven> /ˈɐvn̩/ "oven_NOUN"
-	<give> /ɡˈɪv/ "give_VERB"
-	<over> /ˈəʊ̯və/ "over_PREP"
+/p/ (0.014)
+	<sharp> /ʃˈɑːp/ "sharp_ADJ"
+	<speech> /spˈiːʧ/ "speech_NOUN_FEM"
+	<weapon> /wˈepən/ "weapon_NOUN"
 
 /ŋ/ (0.013)
-	<tongue> /tʰˈɐŋ/ "tongue_NOUN"
-	<drink> /dɹˈɪŋk/ "drink_VERB"
-	<sing> /sˈɪŋ/ "sing_VERB"
+	<thank> /θˈæŋk/ "thank_VERB"
+	<long> /lˈɒŋ/ "long_ADJ"
+	<thing> /θˈɪŋ/ "thing_NOUN"
+
+/v/ (0.013)
+	<seven> /sˈevən/ "seven_NUM"
+	<dove> /dˈɐv/ "dove_NOUN"
+	<liver> /lˈɪvə/ "liver_NOUN"
 
 /tʰ/ (0.012)
 	<twenty> /tʰwˈentɪ/ "twenty_NUM"
@@ -220,15 +220,15 @@ CONSONANTS
 	<yarn> /jˈɑːn/ "yarn_NOUN"
 	<young> /jˈɐŋ/ "young_NOUN"
 
-/z/ (0.005)
-	<nose> /nˈəʊ̯z/ "nose_NOUN"
-	<cheese> /ʧˈiːz/ "cheese_NOUN"
-	<freeze> /fɹˈiːz/ "freeze_VERB"
-
 /ʤ/ (0.005)
-	<ridge> /ɹˈɪʤ/ "ridge_NOUN"
 	<midge> /mˈɪʤ/ "midge_NOUN"
 	<bridge> /bɹˈɪʤ/ "bridge_NOUN"
+	<edge> /ˈeʤ/ "edge_NOUN"
+
+/z/ (0.005)
+	<thousand> /θˈaʊ̯zn̩d/ "thousand_NUM"
+	<nose> /nˈəʊ̯z/ "nose_NOUN"
+	<cheese> /ʧˈiːz/ "cheese_NOUN"
 
 /pʰ/ (0.002)
 	<path> /pʰˈɑːθ/ "path_NOUN"

@@ -29,15 +29,15 @@ VOWELS
 	<lumi> /lˈumɪ/ "LIGHT_NOUN"
 	<maturu> /matˈurʊ/ "MATURE_NOUN"
 
-/ˈɔ/ (0.029)
-	<forza> /fˈɔɾʦa/ "STRENGTH_NOUN"
-	<corpu> /kˈɔɾpʊ/ "BODY_NOUN"
-	<novu> /nˈɔvʊ/ "NEW_ADJ"
-
 /ˈɛ/ (0.029)
-	<mezzu> /mˈɛʦːʊ/ "MIDDLE_NOUN"
-	<meli> /mˈɛlɪ/ "HONEY_NOUN"
-	<beni> /bˈɛnɪ/ "WELL (ADV)_ADV"
+	<ventu> /vˈɛntʊ/ "WIND_NOUN"
+	<bedda> /bˈɛɖːa/ "BEAUTIFUL (F)_ADJ"
+	<sei> /sˈɛj/ "SIX_NUM"
+
+/ˈɔ/ (0.029)
+	<cori> /kˈɔɾɪ/ "HEART_NOUN"
+	<boni> /bˈɔnɪ/ "GOOD (M.PL)_ADJ"
+	<viriɡoɡna> /viɾiɡˈɔɲːa/ "SHAME_NOUN"
 
 /i/ (0.02)
 	<livari> /livˈarɪ/ "CARRY_VERB"
@@ -117,15 +117,15 @@ CONSONANTS
 	<lèjiri> /lˈɛjɪrɪ/ "READ_VERB"
 	<pèrsica> /pˈɛrsɪka/ "PEACH_NOUN"
 
-/f/ (0.015)
-	<fumu> /fˈumʊ/ "SMOKE_NOUN"
-	<ferro> /fˈɛʐːʊ/ "IRON_NOUN"
-	<forza> /fˈɔɾʦa/ "STRENGTH_NOUN"
-
 /ɕ/ (0.015)
-	<cìnniri> /ɕˈinːɪɾɪ/ "ASH_NOUN"
-	<cima> /ɕˈima/ "SUMMIT_NOUN"
-	<cincu> /ɕˈiŋkʊ/ "FIVE_NUM"
+	<duci> /dˈuɕɪ/ "SWEET_ADJ"
+	<nuci> /nˈuɕɪ/ "NUT_NOUN"
+	<dùdici> /dˈuɾɪɕɪ/ "TWELVE_NUM"
+
+/f/ (0.015)
+	<fiɡɡhia> /fˈiɟːa/ "DAUGHTER_NOUN"
+	<festa> /fˈɛsta/ "PARTY_NOUN"
+	<focu> /fˈɔkʊ/ "FIRE_NOUN"
 
 /j/ (0.014)
 	<lèjiri> /lˈɛjɪrɪ/ "READ_VERB"
@@ -142,15 +142,15 @@ CONSONANTS
 	<àutru> /ˈawʈɽʊ/ "OTHER_ADJ"
 	<auru> /ˈawrʊ/ "GOLD_NOUN"
 
-/b/ (0.009)
-	<bedda> /bˈɛɖːa/ "BEAUTIFUL (F)_ADJ"
-	<beddu> /bˈɛɖːʊ/ "BEAUTIFUL (M)_ADJ"
-	<bonu> /bˈɔnʊ/ "GOOD (M.SG)_ADJ"
-
 /d/ (0.009)
-	<donna> /dˈɔnːa/ "LADY_NOUN"
-	<dinocchiu> /dinˈɔcːʊ/ "KNEE_NOUN"
-	<sèdiri> /sˈɛdɪrɪ/ "SIT_ADJ"
+	<dari> /dˈarɪ/ "GIVE_VERB"
+	<virdi> /vˈiɾdɪ/ "GREEN_ADJ"
+	<duci> /dˈuɕɪ/ "SWEET_ADJ"
+
+/b/ (0.009)
+	<bona> /bˈɔna/ "GOOD (F.SG)_ADJ"
+	<boni> /bˈɔnɪ/ "GOOD (F.PL)_ADJ"
+	<boni> /bˈɔnɪ/ "GOOD (M.PL)_ADJ"
 
 /ɡ/ (0.008)
 	<linɡua> /lˈiŋɡwa/ "TONGUE_NOUN"
@@ -177,25 +177,25 @@ CONSONANTS
 	<cìnniri> /ɕˈinːɪɾɪ/ "ASH_NOUN"
 	<tunnu> /tˈunːʊ/ "ROUND_ADJ"
 
-/cː/ (0.006)
-	<dinocchiu> /dinˈɔcːʊ/ "KNEE_NOUN"
-	<jinocchiu> /jɪnˈɔcːʊ/ "KNEE_NOUN"
-	<pirocchiu> /piɾˈɔcːʊ/ "LOUSE_NOUN"
-
 /ʃ/ (0.006)
 	<Spaɡna> /ʃpˈaɲːa/ "SPAIN_PROPN"
-	<spata> /ʃpˈata/ "SWORD_NOUN"
 	<spina> /ʃpˈina/ "SPINE_NOUN"
+	<statu> /ʃtˈatʊ/ "STATE_NOUN"
 
-/ɽ/ (0.005)
-	<matri> /mˈaʈɽɪ/ "MOTHER_NOUN"
-	<nostru> /nˈɔʃːɽʊ/ "OUR_ADJ"
-	<tri> /ʈɽˈi/ "THREE_NUM"
+/cː/ (0.006)
+	<dinocchiu> /dinˈɔcːʊ/ "KNEE_NOUN"
+	<vecchiu> /vˈɛcːʊ/ "OLD_ADJ"
+	<jinocchiu> /jɪnˈɔcːʊ/ "KNEE_NOUN"
 
 /ʤ/ (0.005)
-	<ɡente> /ʤˈɛntɪ/ "PEOPLE_NOUN"
 	<ɡinocchiu> /ʤinˈɔcːʊ/ "KNEE_NOUN"
 	<raɡiuni> /ʐaʤˈunɪ/ "REASON_NOUN"
+	<ɡiùvini> /ʤˈuvɪnɪ/ "YOUNG_ADJ"
+
+/ɽ/ (0.005)
+	<àutru> /ˈawʈɽʊ/ "OTHER_ADJ"
+	<matri> /mˈaʈɽɪ/ "MOTHER_NOUN"
+	<nostru> /nˈɔʃːɽʊ/ "OUR_ADJ"
 
 /ʃː/ (0.004)
 	<nisciunu> /niʃːˈunʊ/ "NONE_PRON"
@@ -207,50 +207,50 @@ CONSONANTS
 	<linɡua> /lˈiŋɡwa/ "TONGUE_NOUN"
 	<cinquanta> /ɕiŋkwˈanta/ "FIFTY_NUM"
 
-/ʈ/ (0.004)
-	<tri> /ʈɽˈi/ "THREE_NUM"
-	<matri> /mˈaʈɽɪ/ "MOTHER_NOUN"
-	<petra> /pˈɛʈɽa/ "STONE_NOUN"
-
-/kː/ (0.004)
-	<vacca> /vˈakːa/ "COW_NOUN"
-	<bucca> /bˈukːa/ "MOUTH_NOUN"
-	<sicca> /sˈikːa/ "DRY (F)_ADJ"
-
 /ʦː/ (0.004)
 	<puzzo> /pˈuʦːʊ/ "WELL_NOUN"
 	<mezzu> /mˈɛʦːʊ/ "MIDDLE_NOUN"
-	<palazzu> /palˈaʦːʊ/ "PALACE_NOUN"
+	<prezzu> /pɾˈɛʦːʊ/ "PRICE_NOUN"
+
+/ʈ/ (0.004)
+	<patri> /pˈaʈɽɪ/ "FATHER_NOUN"
+	<petra> /pˈɛʈɽa/ "STONE_NOUN"
+	<matri> /mˈaʈɽɪ/ "MOTHER_NOUN"
+
+/kː/ (0.004)
+	<acqua> /ˈakːwa/ "WATER_NOUN"
+	<sicca> /sˈikːa/ "DRY (F)_ADJ"
+	<siccu> /sˈikːʊ/ "DRY (M)_ADJ"
 
 /c/ (0.004)
 	<chiànciri> /cˈanɕɪɾɪ/ "WEEP_VERB"
 	<chi> /ci/ "WHAT_PRON"
 	<chiaɡa> /cˈaɡa/ "PLAGUE_NOUN"
 
-/mː/ (0.003)
-	<vemmu> /vˈɛmːʊ/ "WORM_NOUN"
-	<mmernu> /mːˈɛɾnʊ/ "WINTER_NOUN"
-	<ciamma> /çˈamːa/ "FLAME_NOUN"
-
 /ʐ/ (0.003)
-	<raɡiuni> /ʐaʤˈunɪ/ "REASON_NOUN"
+	<russu> /ʐˈusːʊ/ "RED_ADJ"
 	<reji> /ʐˈejɪ/ "KING_NOUN"
 	<re> /ʐˈe/ "KING_NOUN"
+
+/mː/ (0.003)
+	<fìmmina> /fˈimːɪna/ "WOMAN_NOUN"
+	<mmernu> /mːˈɛɾnʊ/ "WINTER_NOUN"
+	<ciamma> /çˈamːa/ "FLAME_NOUN"
 
 /ʧː/ (0.002)
 	<ɡuccia> /ɡˈuʧːa/ "DROP_NOUN"
 	<accìdiri> /aʧːˈidɪɾɪ/ "KILL_VERB"
 	<ɡhiacciu> /ɟˈaʧːʊ/ "ICE_NOUN"
 
-/z/ (0.002)
-	<cirasa> /ɕiɾˈaza/ "CHERRY_NOUN"
-	<ìsula> /ˈizʊla/ "ISLAND_NOUN"
-	<nasu> /nˈazʊ/ "NOSE_NOUN"
-
 /ç/ (0.002)
-	<ciumi> /çˈumɪ/ "RIVER_NOUN"
 	<ciamma> /çˈamːa/ "FLAME_NOUN"
 	<ciuri> /çˈuɾɪ/ "FLOWER_NOUN"
+	<ciumi> /çˈumɪ/ "RIVER_NOUN"
+
+/z/ (0.002)
+	<nasu> /nˈazʊ/ "NOSE_NOUN"
+	<cirasa> /ɕiɾˈaza/ "CHERRY_NOUN"
+	<ìsula> /ˈizʊla/ "ISLAND_NOUN"
 
 /sː/ (0.002)
 	<osso> /ˈɔsːʊ/ "BONE_NOUN"
@@ -261,35 +261,35 @@ CONSONANTS
 	<forza> /fˈɔɾʦa/ "STRENGTH_NOUN"
 	<panza> /pˈanʦa/ "BELLY_NOUN"
 
-/ʐː/ (0.001)
-	<ferro> /fˈɛʐːʊ/ "IRON_NOUN"
-	<terra> /tˈɛʐːa/ "EARTH_NOUN"
-
-/lː/ (0.001)
-	<milli> /mˈilːɪ/ "THOUSAND_NUM"
-	<ɡiallu> /ʤˈalːʊ/ "YELLOW_ADJ"
-
 /ʤː/ (0.001)
 	<riɡɡina> /riʤːˈina/ "QUEEN_NOUN"
 	<liɡɡe> /lˈiʤːɪ/ "LAW_NOUN"
 
-/ɟ/ (0.001)
-	<ɡhiacciu> /ɟˈaʧːʊ/ "ICE_NOUN"
+/ʐː/ (0.001)
+	<terra> /tˈɛʐːa/ "EARTH_NOUN"
+	<ferro> /fˈɛʐːʊ/ "IRON_NOUN"
 
-/ɲ/ (0.001)
-	<baɡnu> /bˈaɲʊ/ "BATH_NOUN"
-
-/dː/ (0.001)
-	<friddu> /fɾˈidːʊ/ "COLD_ADJ"
-
-/bː/ (0.001)
-	<lìbbiru> /lˈibːɪɾʊ/ "FREE_ADJ"
+/lː/ (0.001)
+	<ɡiallu> /ʤˈalːʊ/ "YELLOW_ADJ"
+	<milli> /mˈilːɪ/ "THOUSAND_NUM"
 
 /ʧ/ (0.001)
 	<manciàri> /manʧˈaɾɪ/ "EAT_VERB"
 
 /ʈː/ (0.001)
 	<quattru> /kwˈaʈːɽʊ/ "FOUR_NUM"
+
+/ɲ/ (0.001)
+	<baɡnu> /bˈaɲʊ/ "BATH_NOUN"
+
+/ɟ/ (0.001)
+	<ɡhiacciu> /ɟˈaʧːʊ/ "ICE_NOUN"
+
+/dː/ (0.001)
+	<friddu> /fɾˈidːʊ/ "COLD_ADJ"
+
+/bː/ (0.001)
+	<lìbbiru> /lˈibːɪɾʊ/ "FREE_ADJ"
 
 
 

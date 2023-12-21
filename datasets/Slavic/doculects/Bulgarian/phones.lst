@@ -19,15 +19,15 @@ VOWELS
 	<нoс> /nˈɔs/ "NOSE_NOUN"
 	<oгън> /ˈɔɡɐn/ "FIRE_NOUN"
 
-/i/ (0.029)
-	<чeтири> /ʧˈɛtiri/ "FOUR_NUM"
-	<три> /trˈi/ "THREE_NUM"
-	<птицa> /ptˈiʦɐ/ "BIRD_NOUN"
-
 /ɤ/ (0.029)
-	<дълъг> /dˈɤɫɐk/ "LONG_ADJ"
-	<дъжд> /dˈɤʃt/ "RAIN_NOUN"
+	<гълъб> /ɡˈɤɫɐp/ "DOVE_NOUN"
+	<ɜъб> /zˈɤp/ "TOOTH_NOUN"
 	<кръв> /krˈɤf/ "BLOOD_NOUN"
+
+/i/ (0.029)
+	<видʁ> /vˈidʲɐ/ "SEE_VERB"
+	<дим> /dˈim/ "SMOKE_NOUN"
+	<птицa> /ptˈiʦɐ/ "BIRD_NOUN"
 
 /o/ (0.028)
 	<мoрe> /morˈɛ/ "SEA_NOUN"
@@ -72,15 +72,15 @@ CONSONANTS
 	<чoвeк> /ʧovˈɛk/ "PERSON_NOUN"
 	<вълк> /vˈɤɫk/ "WOLF_NOUN"
 
-/d/ (0.028)
-	<дeвeт> /dˈɛvɛt/ "NINE_NUM"
-	<дeсeт> /dˈɛsɛt/ "TEN_NUM"
-	<дъжд> /dˈɤʃt/ "RAIN_NOUN"
-
 /n/ (0.028)
-	<чeрeн> /ʧˈɛrɛn/ "BLACK_ADJ"
-	<нoс> /nˈɔs/ "NOSE_NOUN"
-	<дeн> /dˈɛn/ "DAY_NOUN"
+	<пълeн> /pˈɤlɛn/ "FULL_ADJ"
+	<eдин> /ɛdˈin/ "ONE_NUM"
+	<кoн> /kˈɔn/ "HORSE_NOUN"
+
+/d/ (0.028)
+	<ʁгoдa> /jˈaɡodɐ/ "BERRY_NOUN"
+	<ɜвeɜдa> /zvɛzdˈa/ "STAR_NOUN"
+	<дoбър> /dobˈɤr/ "GOOD_ADJ"
 
 /p/ (0.022)
 	<птицa> /ptˈiʦɐ/ "BIRD_NOUN"
@@ -102,25 +102,25 @@ CONSONANTS
 	<ɜдрaв> /zdrˈaf/ "HEALTHY_ADJ"
 	<eɜeрo> /ˈɛzɛro/ "LAKE_NOUN"
 
-/l/ (0.011)
-	<пълeн> /pˈɤlɛn/ "FULL_ADJ"
-	<ɜeлeн> /zɛlˈɛn/ "GREEN_ADJ"
-	<вeлик> /vɛlˈik/ "GREAT_ADJ"
-
 /x/ (0.011)
-	<xръбeт> /xrɐbˈɛt/ "SPINE_NOUN"
+	<сyx> /sˈux/ "DRY_ADJ"
 	<oрex> /ˈɔrɛx/ "NUT_NOUN"
 	<yxo> /uxˈɔ/ "EAR_NOUN"
+
+/l/ (0.011)
+	<лист> /lˈist/ "LEAF_NOUN"
+	<ɜeлeн> /zɛlˈɛn/ "GREEN_ADJ"
+	<вeлик> /vɛlˈik/ "GREAT_ADJ"
 
 /ʦ/ (0.009)
 	<мeсeц> /mˈɛsɛʦ/ "MONTH_NOUN"
 	<птицa> /ptˈiʦɐ/ "BIRD_NOUN"
 	<сърцe> /sɐrʦˈɛ/ "HEART_NOUN"
 
-/b/ (0.008)
-	<рибa> /rˈibɐ/ "FISH_NOUN"
-	<дoбър> /dobˈɤr/ "GOOD_ADJ"
-	<xръбeт> /xrɐbˈɛt/ "SPINE_NOUN"
+/ʒ/ (0.008)
+	<живeʁ> /ʒivˈɛjɐ/ "LIVE_VERB"
+	<жeнa> /ʒɛnˈa/ "WOMAN_NOUN"
+	<жълт> /ʒˈɤɫt/ "YELLOW_ADJ"
 
 /ʃ/ (0.008)
 	<мъж> /mˈɤʃ/ "HUSBAND_NOUN"
@@ -132,10 +132,10 @@ CONSONANTS
 	<xлʁб> /xlʲˈap/ "BREAD_NOUN"
 	<лeс> /lʲˈɛs/ "FOREST_NOUN"
 
-/ʒ/ (0.008)
-	<жълт> /ʒˈɤɫt/ "YELLOW_ADJ"
-	<тeжък> /tˈɛʒɐk/ "HEAVY_ADJ"
-	<жeнa> /ʒɛnˈa/ "WOMAN_NOUN"
+/b/ (0.008)
+	<xръбeт> /xrɐbˈɛt/ "SPINE_NOUN"
+	<oблaк> /ˈɔbɫɐk/ "CLOUD_NOUN"
+	<дoбър> /dobˈɤr/ "GOOD_ADJ"
 
 /ʧ/ (0.006)
 	<чoвeк> /ʧovˈɛk/ "PERSON_NOUN"
@@ -147,25 +147,25 @@ CONSONANTS
 	<мъртъв> /mˈɤrtɐf/ "DEAD_ADJ"
 	<лъв> /ɫˈɤf/ "LION_NOUN"
 
-/j/ (0.005)
-	<пиʁ> /pˈijɐ/ "DRINK_VERB"
-	<живeʁ> /ʒivˈɛjɐ/ "LIVE_VERB"
-	<ʁгoдa> /jˈaɡodɐ/ "BERRY_NOUN"
-
 /vʲ/ (0.005)
-	<ɜвʁр> /zvʲˈar/ "BEAST_NOUN"
-	<вʁтър> /vʲˈatɐr/ "WIND_NOUN"
 	<цвʁт> /ʦvʲˈat/ "FLOWER_NOUN"
+	<вʁтър> /vʲˈatɐr/ "WIND_NOUN"
+	<ɜвʁр> /zvʲˈar/ "BEAST_NOUN"
+
+/j/ (0.005)
+	<ʁгoдa> /jˈaɡodɐ/ "BERRY_NOUN"
+	<живeʁ> /ʒivˈɛjɐ/ "LIVE_VERB"
+	<пиʁ> /pˈijɐ/ "DRINK_VERB"
 
 /mʲ/ (0.003)
 	<ɜeмʁ> /zɛmʲˈa/ "EARTH_NOUN"
 	<мʁстo> /mʲˈasto/ "PLACE_NOUN"
 
-/bʲ/ (0.002)
-	<бʁл> /bʲˈaɫ/ "WHITE_ADJ"
-
 /ʦʲ/ (0.002)
 	<цʁл> /ʦʲˈaɫ/ "WHOLE_ADJ"
+
+/tʲ/ (0.002)
+	<тʁлo> /tʲˈaɫo/ "BODY_NOUN"
 
 /pʲ/ (0.002)
 	<пʁсък> /pʲˈasɐk/ "SAND_NOUN"
@@ -173,11 +173,11 @@ CONSONANTS
 /nʲ/ (0.002)
 	<снʁг> /snʲˈak/ "SNOW_NOUN"
 
-/tʲ/ (0.002)
-	<тʁлo> /tʲˈaɫo/ "BODY_NOUN"
-
 /dʲ/ (0.002)
 	<видʁ> /vˈidʲɐ/ "SEE_VERB"
+
+/bʲ/ (0.002)
+	<бʁл> /bʲˈaɫ/ "WHITE_ADJ"
 
 
 

@@ -1343,7 +1343,9 @@ class Language:
                                     'SUPRASEGMENTALS']):
                 if len(group) > 0:
                     f.write(f'{label}\n')
-                    for phone, prob in dict_tuplelist(group):
+                    # Sort in descending order by probability, then also by the phone IPA string in case the probabilities are equal
+                    sorted_phones = sorted(dict_tuplelist(group), key=lambda x:(x[-1],x[0]), reverse=True)
+                    for phone, prob in sorted_phones:
                         prob = round(self.phonemes[phone], 3)
                         f.write(f'/{phone}/ ({prob})\n')
                         examples = self.lookup(phone, return_list=True)

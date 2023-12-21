@@ -74,25 +74,25 @@ VOWELS
 	<mîl> /mˈiːl/ "HONEY_NOUN"
 	<sîs> /sˈiːs/ "SIX_NUM"
 
-/ˈeː/ (0.007)
-	<pêl> /pˈeːl/ "HAIR_NOUN"
-	<jê> /jˈeː/ "SHE_PRON"
-	<frêt> /frˈeːt/ "COLD_ADJ"
-
 /ˈoː/ (0.007)
-	<vô> /vˈoː/ "YOU (PL)_PRON"
-	<crôs> /krˈoːs/ "CROSS_NOUN"
-	<miôr> /mjˈoːr/ "BETTER_ADJ"
+	<pôc> /pˈoːk/ "LITTLE_ADJ"
+	<vôs> /vˈoːs/ "VOICE_NOUN"
+	<colôr> /kolˈoːr/ "COLOR_NOUN"
+
+/ˈeː/ (0.007)
+	<trê> /trˈeː/ "THREE_NUM"
+	<dêt> /dˈeːt/ "FINGER_NOUN"
+	<podê> /podˈeː/ "CAN_VERB"
 
 /ˈɛː/ (0.002)
 	<unviêr> /unvjˈɛːr/ "WINTER_NOUN"
 	<fiêr> /fjˈɛːr/ "IRON_NOUN"
 
-/aː/ (0.001)
-	<cuar> /kwaːr/ "HORN_NOUN"
-
 /ˈɔː/ (0.001)
 	<porc> /pˈɔːrk/ "PIG_NOUN"
+
+/aː/ (0.001)
+	<cuar> /kwaːr/ "HORN_NOUN"
 
 
 
@@ -122,40 +122,40 @@ CONSONANTS
 	<curt> /kˈurt/ "SHORT_ADJ"
 	<ɡrant> /ɡrˈant/ "BIG_ADJ"
 
-/j/ (0.03)
-	<piel> /pjˈɛl/ "SKIN_NOUN"
-	<judâ> /judˈaː/ "HELP_VERB"
-	<ploie> /plˈɔje/ "RAIN_NOUN"
-
 /v/ (0.03)
-	<vôs> /vˈoːs/ "VOICE_NOUN"
-	<svol> /zvˈɔl/ "FLIGHT_NOUN"
+	<vier> /vjˈɛr/ "WORM_NOUN"
+	<cjavel> /cavˈel/ "HAIR_NOUN"
+	<vincj> /vˈinc/ "TWENTY_NUM"
+
+/j/ (0.03)
 	<viodi> /vjodi/ "SEE_VERB"
-
-/m/ (0.029)
-	<semence> /semˈɛnʧe/ "SEED_NOUN"
-	<miedi> /mjˈɛdi/ "DOCTOR_NOUN"
-	<mil> /mˈil/ "THOUSAND_NUM"
-
-/k/ (0.029)
-	<clamâ> /klamˈaː/ "CALL_VERB"
-	<drâc> /drˈaːk/ "DRAGON_NOUN"
-	<porc> /pˈɔːrk/ "PIG_NOUN"
-
-/d/ (0.029)
-	<dâ> /dˈaː/ "GIVE_VERB"
-	<pedoli> /pedˈɔli/ "LOUSE_NOUN"
-	<nadâ> /nadˈaː/ "SWIM_VERB"
+	<voi> /vˈɔj/ "EYES_NOUN"
+	<fieste> /fjˈɛste/ "PARTY_NOUN"
 
 /p/ (0.029)
-	<cuarp> /kwˈarp/ "BODY_NOUN"
-	<poç> /pˈoʧ/ "WELL_NOUN"
-	<pet> /pˈɛt/ "BREAST_NOUN"
+	<piore> /pjˈore/ "SHEEP_NOUN"
+	<spi> /spˈi/ "EAR OF GRAIN_NOUN"
+	<spade> /spˈade/ "SWORD_NOUN"
+
+/m/ (0.029)
+	<manɡjâ> /manɟˈaː/ "EAT_VERB"
+	<man> /mˈan/ "HAND_NOUN"
+	<fum> /fˈum/ "SMOKE_NOUN"
+
+/k/ (0.029)
+	<lunc> /lˈuŋk/ "LONG_ADJ"
+	<scrivi> /skrˈivi/ "WRITE_VERB"
+	<coɡnossi> /koɲˈosi/ "BE ACQUAINTED WITH_VERB"
+
+/d/ (0.029)
+	<pedoli> /pedˈɔli/ "LOUSE_NOUN"
+	<dut> /dˈut/ "ALL (SG)_ADJ"
+	<drâc> /drˈaːk/ "DRAGON_NOUN"
 
 /f/ (0.023)
-	<frut> /frˈut/ "FRUIT_NOUN"
 	<fîl> /fˈiːl/ "STRING_NOUN"
 	<flum> /flˈum/ "RIVER_NOUN"
+	<fieste> /fjˈɛste/ "PARTY_NOUN"
 
 /w/ (0.022)
 	<cuaie> /kwˈaje/ "QUAIL_NOUN"

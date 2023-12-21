@@ -54,11 +54,11 @@ VOWELS
 	<נאָמען> /nˈɔmɛn/ "name_NOUN"
 	<וואַרעם> /vˈaʀɛm/ "warm_ADJ"
 
-/a/ (0.001)
-	<מאָנאַט> /mˈɔnat/ "month_NOUN"
-
 /ˈi/ (0.001)
 	<איבער> /ˈibəʀ/ "over_PREP"
+
+/a/ (0.001)
+	<מאָנאַט> /mˈɔnat/ "month_NOUN"
 
 
 
@@ -108,15 +108,15 @@ CONSONANTS
 	<געבן> /ɡˈɛbn̩/ "give_VERB"
 	<ווײַב> /vˈaɪ̯b/ "wife_NOUN"
 
-/m/ (0.029)
-	<שווימען> /ʃvˈɪmən/ "swim_VERB"
-	<לאַם> /lˈam/ "lamb_NOUN"
-	<מענער> /mˈɛnəʀ/ "men_NOUN"
-
 /v/ (0.029)
+	<וואָלף> /vˈɔlf/ "wolf_NOUN"
+	<צוועלף> /ʦvˈɛlf/ "twelve_NUM"
 	<וואַרעם> /vˈaʀɛm/ "warm_ADJ"
-	<ווײַב> /vˈaɪ̯b/ "wife_NOUN"
-	<וואַל> /vˈal/ "whale_NOUN"
+
+/m/ (0.029)
+	<מענער> /mˈɛnəʀ/ "men_NOUN"
+	<מענטש> /mˈɛnʧ/ "person_NOUN"
+	<מויז> /mˈɔɪ̯z/ "mouse_NOUN_FEM"
 
 /k/ (0.028)
 	<האָניק> /hˈɔnɪk/ "honey_NOUN"
@@ -158,13 +158,13 @@ CONSONANTS
 	<הויפּט> /hˈɔɪ̯pt/ "head_NOUN"
 	<שפּראַך> /ʃpʀˈaχ/ "speech_NOUN_FEM"
 
-/j/ (0.002)
-	<יונג> /jˈʊŋɡ/ "young_NOUN"
-	<יאָר> /jˈɔʀ/ "year_NOUN"
-
 /ʧ/ (0.002)
-	<מענטש> /mˈɛnʧ/ "person_NOUN"
 	<ווינטשן> /vˈɪnʧn̩/ "wish_VERB"
+	<מענטש> /mˈɛnʧ/ "person_NOUN"
+
+/j/ (0.002)
+	<יאָר> /jˈɔʀ/ "year_NOUN"
+	<יונג> /jˈʊŋɡ/ "young_NOUN"
 
 /ʎ/ (0.001)
 	<ליכט> /ʎˈɪχt/ "light_NOUN"

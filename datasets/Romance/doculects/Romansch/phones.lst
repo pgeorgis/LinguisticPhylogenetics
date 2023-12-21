@@ -54,35 +54,35 @@ VOWELS
 	<veɡnir> /vəɲˈiːr/ "COME-INF_VERB"
 	<murir> /murˈiːr/ "DIE_VERB"
 
-/ˈeː/ (0.003)
-	<verd> /vˈeːrt/ "GREEN_ADJ"
-	<enviern> /ənvjˈeːrn/ "WINTER_NOUN"
-	<pe> /pˈeː/ "FOOT_NOUN"
-
 /ˈɔː/ (0.003)
 	<mort> /mˈɔːrt/ "DEATH_NOUN"
 	<onn> /ˈɔːn/ "YEAR_NOUN"
-	<portɡ> /pˈɔːrʨ/ "PIG_NOUN"
+	<corp> /kˈɔːrp/ "BODY_NOUN"
+
+/ˈeː/ (0.003)
+	<verd> /vˈeːrt/ "GREEN_ADJ"
+	<enviern> /ənvjˈeːrn/ "WINTER_NOUN"
+	<tɡe> /ʨˈeː/ "WHAT_PRON"
 
 /a/ (0.003)
 	<draɡun> /draɡˈun/ "DRAGON_NOUN"
 	<raschun> /raʃˈun/ "REASON_NOUN"
 	<avieul> /avjˈewl/ "BEE_NOUN"
 
-/o/ (0.003)
-	<roman> /romˈan/ "ROMAN_ADJ"
-	<colur> /kolˈuːr/ "COLOR_NOUN"
-	<odur> /odˈuːr/ "ODOR_NOUN"
+/ˈɛː/ (0.003)
+	<fier> /fjˈɛːr/ "IRON_NOUN"
+	<terra> /tˈɛːrə/ "EARTH_NOUN"
+	<erva> /ˈɛːrvə/ "GRASS_NOUN"
 
 /ˈuː/ (0.003)
 	<colur> /kolˈuːr/ "COLOR_NOUN"
 	<sura> /sˈuːrə/ "ABOVE_PREP"
 	<odur> /odˈuːr/ "ODOR_NOUN"
 
-/ˈɛː/ (0.003)
-	<fier> /fjˈɛːr/ "IRON_NOUN"
-	<terra> /tˈɛːrə/ "EARTH_NOUN"
-	<erva> /ˈɛːrvə/ "GRASS_NOUN"
+/o/ (0.003)
+	<roman> /romˈan/ "ROMAN_ADJ"
+	<colur> /kolˈuːr/ "COLOR_NOUN"
+	<odur> /odˈuːr/ "ODOR_NOUN"
 
 /ˈo/ (0.002)
 	<coissa> /kˈojsə/ "THIGH_NOUN"
@@ -94,11 +94,11 @@ VOWELS
 /ˈoː/ (0.001)
 	<cor> /kˈoːr/ "HEART_NOUN"
 
-/e/ (0.001)
-	<liber> /lˈiber/ "FREE_ADJ"
-
 /eː/ (0.001)
 	<vesair> /veːsˈajr/ "SEE_VERB"
+
+/e/ (0.001)
+	<liber> /lˈiber/ "FREE_ADJ"
 
 
 
@@ -133,15 +133,15 @@ CONSONANTS
 	<chatschar> /ʨəʧˈaːr/ "HUNT_VERB"
 	<chamɡiar> /ʨəmʥˈaːr/ "CHANGE_VERB"
 
-/j/ (0.03)
-	<coissa> /kˈojsə/ "THIGH_NOUN"
-	<bain> /bˈajn/ "WELL (ADV)_ADV"
-	<baiver> /bˈajvər/ "DRINK_VERB"
-
 /v/ (0.03)
-	<erva> /ˈɛːrvə/ "GRASS_NOUN"
-	<vus> /vˈus/ "YOU (PL)_PRON"
-	<ventɡ> /vˈɛnʨ/ "TWENTY_NUM"
+	<vin> /vˈin/ "WINE_NOUN"
+	<scriver> /ʃkrˈivər/ "WRITE_VERB"
+	<vatɡa> /vˈaʨə/ "COW_NOUN"
+
+/j/ (0.03)
+	<ɡieu> /ʥjˈɛw/ "GAME_NOUN"
+	<enviern> /ənvjˈeːrn/ "WINTER_NOUN"
+	<saida> /sˈajdə/ "SILK_NOUN"
 
 /m/ (0.029)
 	<mar> /mˈaːr/ "SEA_NOUN"
@@ -208,15 +208,15 @@ CONSONANTS
 	<puɡn> /pˈuɲ/ "FIST_NOUN"
 	<Spaɡna> /ʃpˈaɲə/ "SPAIN_PROPN"
 
-/ŋ/ (0.004)
-	<anɡhel> /ˈaŋɡəl/ "ANGEL_NOUN"
-	<lunɡ> /lˈuŋ/ "LONG_ADJ"
-	<sanɡ> /sˈaŋ/ "BLOOD_NOUN"
-
 /ʦ/ (0.004)
-	<puoz> /pwˈɔʦ/ "WELL_NOUN"
+	<pèz> /pˈɛʦ/ "BREAST_NOUN"
+	<palaz> /pəlˈaʦ/ "PALACE_NOUN"
 	<mez> /mˈɛʦ/ "MIDDLE_NOUN"
-	<culiez> /kuljˈeʦ/ "NECK_NOUN"
+
+/ŋ/ (0.004)
+	<lieunɡa> /ljˈɛwŋɡə/ "TONGUE_NOUN"
+	<sanɡ> /sˈaŋ/ "BLOOD_NOUN"
+	<tschuncanta> /ʧuŋkˈantə/ "FIFTY_NUM"
 
 /ʒ/ (0.002)
 	<sɡular> /ʒɡulˈar/ "FLY_VERB"

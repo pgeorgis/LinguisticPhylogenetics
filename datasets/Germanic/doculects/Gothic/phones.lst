@@ -112,15 +112,15 @@ CONSONANTS
 	<𐍂𐌹𐌲𐌽> /rˈiɡn/ "rain_NOUN"
 	<𐍅𐌰𐌿𐍂𐌳> /wˈɔrt/ "word_NOUN"
 
-/h/ (0.041)
-	<𐍄𐌰𐌹𐌷𐌿𐌽> /tˈɛhun/ "ten_NUM"
-	<𐌷𐌿𐌽𐌳𐍃> /hˈunds/ "dog_NOUN"
-	<𐌷𐌰𐌿𐍂𐌽> /hˈɔrn/ "horn_NOUN"
-
 /t/ (0.041)
-	<𐌲𐌰𐌹𐍄𐍃> /ɡˈɛːts/ "goat_NOUN"
-	<𐍄𐌿𐌽𐌸𐌿𐍃> /tˈunθus/ "tooth_NOUN"
-	<𐍄𐍅𐌰𐌻𐌹𐍆> /twˈalif/ "twelve_NUM"
+	<𐍄𐍅𐌰𐌹> /twˈɛː/ "two_NUM"
+	<𐌱𐌴𐌹𐍄𐌰𐌽> /bˈiːtan/ "bite_VERB"
+	<𐍃𐌰𐌻𐍄> /sˈalt/ "salt_NOUN"
+
+/h/ (0.041)
+	<𐌷𐌰𐌿𐌱𐌹𐌸> /hˈɔβiθ/ "head_NOUN"
+	<𐍂𐌰𐌹𐌷𐍄𐍃> /rˈɛhts/ "right_ADJ"
+	<𐍃𐌰𐌹𐌷𐍃> /sˈɛhs/ "six_NUM"
 
 /l/ (0.04)
 	<𐌷𐌰𐌹𐌻𐌰𐌲𐍃> /hˈɛːlaxs/ "holy_ADJ"
@@ -152,15 +152,15 @@ CONSONANTS
 	<𐍃𐍅𐌰𐍂𐍄𐍃> /swˈarts/ "black_ADJ"
 	<𐍅𐌰𐌿𐍂𐌼𐍃> /wˈɔrms/ "worm_NOUN"
 
-/d/ (0.023)
-	<𐌱𐌹𐌽𐌳𐌰𐌽> /bˈindan/ "bind_VERB"
-	<𐌳𐍂𐌴𐌹𐌱𐌰𐌽> /drˈiːβan/ "drive_VERB"
-	<𐌷𐌰𐌽𐌳𐌿𐍃> /hˈandus/ "hand_NOUN_FEM"
-
 /m/ (0.023)
-	<𐌻𐌰𐌼𐌱> /lˈamb/ "lamb_NOUN"
-	<𐍅𐌰𐌿𐍂𐌼𐍃> /wˈɔrms/ "worm_NOUN"
-	<𐌼𐌹𐌺> /mˈik/ "me_PRON"
+	<𐌵𐌹𐌼𐌰𐌽> /kʷˈiman/ "come_VERB"
+	<𐌼𐌹𐌻𐌿𐌺𐍃> /mˈiluks/ "milk_NOUN_FEM"
+	<𐌼𐌿𐌽𐌸𐍃> /mˈunθs/ "mouth_NOUN"
+
+/d/ (0.023)
+	<𐌳𐌰𐌿𐌸𐌿𐍃> /dˈɔːθus/ "death_NOUN"
+	<𐍅𐌹𐌽𐌳𐍃> /wˈinds/ "wind_NOUN"
+	<𐌷𐌿𐌽𐌳𐍃> /hˈunds/ "dog_NOUN"
 
 /b/ (0.021)
 	<𐌱𐌰𐌹𐍂𐌰> /bˈɛra/ "bear_NOUN"
@@ -172,15 +172,15 @@ CONSONANTS
 	<𐌾𐌿𐌲𐌲𐍃> /jˈuŋɡs/ "young_NOUN"
 	<𐌽𐌹𐌿𐌾𐌹𐍃> /nˈiu̯jis/ "new_ADJ"
 
-/p/ (0.012)
-	<𐍃𐌻𐌴𐍀𐌰𐌽> /slˈeːpan/ "sleep_VERB"
-	<𐍃𐌺𐌹𐍀> /skˈip/ "ship_NOUN"
-	<𐍅𐌴𐍀𐌽> /wˈeːpn/ "weapon_NOUN"
-
 /ŋ/ (0.012)
+	<𐍄𐌿𐌲𐌲𐍉> /tˈuŋɡoː/ "tongue_NOUN"
 	<𐍃𐌹𐌲𐌲𐍅𐌰𐌽> /sˈiŋɡʷan/ "sing_VERB"
-	<𐌿𐌲𐌺𐌹𐍃> /ˈuŋkis/ "us_PRON"
-	<𐌲𐌰𐌲𐌲𐌰𐌽> /ɡˈaŋɡan/ "go_VERB"
+	<𐌾𐌿𐌲𐌲𐍃> /jˈuŋɡs/ "young_NOUN"
+
+/p/ (0.012)
+	<𐍃𐌺𐌹𐍀> /skˈip/ "ship_NOUN"
+	<𐌹𐌿𐍀> /ˈiu̯p/ "up_ADV"
+	<𐌷𐌹𐌻𐍀𐌰𐌽> /hˈilpan/ "help_VERB"
 
 /β/ (0.008)
 	<𐍃𐌹𐌱𐌿𐌽> /sˈiβun/ "seven_NUM"
@@ -192,28 +192,28 @@ CONSONANTS
 	<𐍆𐌹𐌳𐍅𐍉𐍂> /fˈiðwoːr/ "four_NUM"
 	<𐌸𐌹𐌿𐌳𐌹𐍃𐌺𐍃> /θˈiu̯ðisks/ "Teutonic_ADJ"
 
+/ʍ/ (0.004)
+	<𐍈𐌴𐌹𐍄𐍃> /ʍˈiːts/ "white_ADJ"
+	<𐍃𐌰𐌹𐍈𐌰𐌽> /sˈɛʍan/ "see_VERB"
+	<𐍈𐌰> /ʍˈa/ "what_PRON"
+
+/nː/ (0.004)
+	<𐌺𐌿𐌽𐌽𐌰𐌽> /kˈunːan/ "can_VERB"
+	<𐌼𐌰𐌽𐌽𐌰> /mˈanːa/ "man_NOUN"
+	<𐌼𐌰𐌽𐌽𐌹𐍃𐌺𐍃> /mˈanːisks/ "person_NOUN"
+
 /lː/ (0.004)
 	<𐍅𐌿𐌻𐌻𐌰> /wˈulːa/ "wool_NOUN_FEM"
 	<𐌰𐌻𐌻𐍃> /ˈalːs/ "all_ADJ"
 	<𐍆𐌿𐌻𐌻𐍃> /fˈulːs/ "full_ADJ"
 
-/ʍ/ (0.004)
-	<𐍃𐌰𐌹𐍈𐌰𐌽> /sˈɛʍan/ "see_VERB"
-	<𐍈𐌰> /ʍˈa/ "what_PRON"
-	<𐍈𐌴𐌹𐍄𐍃> /ʍˈiːts/ "white_ADJ"
-
-/nː/ (0.004)
-	<𐌼𐌰𐌽𐌽𐌹𐍃𐌺𐍃> /mˈanːisks/ "person_NOUN"
-	<𐌺𐌿𐌽𐌽𐌰𐌽> /kˈunːan/ "can_VERB"
-	<𐌼𐌰𐌽𐌽𐌰> /mˈanːa/ "man_NOUN"
+/ɣ/ (0.003)
+	<𐍄𐍅𐌰𐌹 𐍄𐌹𐌲𐌾𐌿𐍃> /twˈɛːtˈiɣjus/ "twenty_NUM"
+	<𐌰𐌿𐌲𐍉> /ˈɔːɣoː/ "eye_NOUN"
 
 /z/ (0.003)
 	<𐌱𐌰𐍄𐌹𐌶𐌰> /bˈatiza/ "better_ADJ"
 	<𐌰𐌶𐌲𐍉> /ˈazɡoː/ "ash_NOUN"
-
-/ɣ/ (0.003)
-	<𐍄𐍅𐌰𐌹 𐍄𐌹𐌲𐌾𐌿𐍃> /twˈɛːtˈiɣjus/ "twenty_NUM"
-	<𐌰𐌿𐌲𐍉> /ˈɔːɣoː/ "eye_NOUN"
 
 /x/ (0.003)
 	<𐌳𐌰𐌲𐍃> /dˈaxs/ "day_NOUN"
@@ -223,11 +223,11 @@ CONSONANTS
 	<𐌵𐌹𐌽𐍉> /kʷˈinoː/ "woman_NOUN"
 	<𐌵𐌹𐌼𐌰𐌽> /kʷˈiman/ "come_VERB"
 
-/ɡʷ/ (0.001)
-	<𐍃𐌹𐌲𐌲𐍅𐌰𐌽> /sˈiŋɡʷan/ "sing_VERB"
-
 /ɡːʷ/ (0.001)
 	<𐌿𐌲𐌲𐍅𐌹𐌻𐍉> /ˈuɡːʷiloː/ "owl_NOUN"
+
+/ɡʷ/ (0.001)
+	<𐍃𐌹𐌲𐌲𐍅𐌰𐌽> /sˈiŋɡʷan/ "sing_VERB"
 
 
 

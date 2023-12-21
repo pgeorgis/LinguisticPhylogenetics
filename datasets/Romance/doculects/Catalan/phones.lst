@@ -9,15 +9,15 @@ VOWELS
 	<alba> /ˈalβə/ "DAWN_NOUN"
 	<romà> /rumˈa/ "ROMAN_ADJ"
 
-/ˈi/ (0.034)
-	<dic> /dˈik/ "SAY-1SG_VERB"
-	<sis> /sˈis/ "SIX_NUM"
-	<vin> /bˈin/ "TWENTY_NUM"
-
 /ˈɔ/ (0.034)
-	<home> /ˈɔmə/ "MAN_NOUN"
-	<bones> /bˈɔnəs/ "GOOD (F.PL)_ADJ"
-	<mort> /mˈɔrt/ "DEATH_NOUN"
+	<nou> /nˈɔw/ "NINE_NUM"
+	<nostre> /nˈɔstɾə/ "OUR_ADJ"
+	<fort> /fˈɔrt/ "STRONG_ADJ"
+
+/ˈi/ (0.034)
+	<raïm> /rəˈim/ "RAISIN_NOUN"
+	<cinc> /sˈiŋ/ "FIVE_NUM"
+	<mica> /mˈikə/ "CRUMB_NOUN"
 
 /ˈɛ/ (0.031)
 	<ɡendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
@@ -34,20 +34,20 @@ VOWELS
 	<llum> /ʎˈum/ "LIGHT_NOUN"
 	<juny> /ʒˈuɲ/ "JUNE_PROPN"
 
-/u/ (0.022)
-	<olor> /ulˈo/ "ODOR_NOUN"
-	<mosseɡar> /musəɣˈa/ "BITE_VERB"
-	<volar> /bulˈa/ "FLY_VERB"
-
 /ˈo/ (0.022)
-	<sobre> /sˈoβɾə/ "ABOVE_PREP"
+	<olor> /ulˈo/ "ODOR_NOUN"
+	<ós> /ˈos/ "BEAR_NOUN"
+	<jove> /ʒˈoβə/ "YOUNG_ADJ"
+
+/u/ (0.022)
+	<volar> /bulˈa/ "FLY_VERB"
+	<conèixer> /kunˈɛʃə/ "BE ACQUAINTED WITH_VERB"
 	<rodó> /ruðˈo/ "ROUND_ADJ"
-	<no> /nˈo/ "NOT_ADVERB"
 
 /i/ (0.011)
+	<ninɡú> /niŋɡˈu/ "NONE_PRON"
 	<millor> /miʎˈo/ "BETTER_ADJ"
 	<sàpiɡa> /sˈapiɣə/ "KNOW-SBJ-1SG_VERB"
-	<estudi> /əstˈuði/ "STUDY_NOUN"
 
 
 
@@ -77,15 +77,15 @@ CONSONANTS
 	<nit> /nˈit/ "NIGHT_NOUN"
 	<fruit> /fɾˈujt/ "FRUIT_NOUN"
 
-/l/ (0.038)
-	<cul> /kˈul/ "BUTTOCKS_NOUN"
-	<molt> /mˈol/ "MANY_ADJ"
-	<cel> /sˈɛl/ "SKY_NOUN"
-
 /ʎ/ (0.038)
-	<pell> /pˈeʎ/ "SKIN_NOUN"
-	<vedell> /bəðˈeʎ/ "CALF_NOUN"
-	<ulls> /ˈuʎs/ "EYES_NOUN"
+	<bell> /bˈeʎ/ "BEAUTIFUL (M)_ADJ"
+	<lletra> /ʎˈetɾə/ "LETTER_NOUN"
+	<vell> /bˈeʎ/ "OLD_ADJ"
+
+/l/ (0.038)
+	<ɡola> /ɡˈolə/ "THROAT_NOUN"
+	<color> /kulˈo/ "COLOR_NOUN"
+	<unɡla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
 
 /p/ (0.033)
 	<plorar> /pluɾˈa/ "WEEP_VERB"
@@ -162,20 +162,20 @@ CONSONANTS
 	<sanɡ> /sˈaŋ/ "BLOOD_NOUN"
 	<vinc> /bˈiŋ/ "COME-1SG_VERB"
 
+/ʧ/ (0.004)
+	<roiɡ> /rˈɔʧ/ "RED_ADJ"
+	<ɡoiɡ> /ɡˈɔʧ/ "JOY_NOUN"
+	<puiɡ> /pˈuʧ/ "PODIUM_NOUN"
+
 /ʃ/ (0.004)
 	<cuixa> /kˈuʃə/ "THIGH_NOUN"
-	<néixer> /nˈeʃə/ "BE BORN_VERB"
+	<peix> /pˈeʃ/ "FISH_NOUN"
 	<baix> /bˈaʃ/ "LOW_ADJ"
 
 /z/ (0.004)
-	<vosaltres> /buzˈaltɾəs/ "YOU (PL)_PRON"
 	<dotze> /dˈodzə/ "TWELVE_NUM"
 	<nosaltres> /nuzˈaltɾəs/ "WE_PRON"
-
-/ʧ/ (0.004)
-	<miɡ> /mˈiʧ/ "MIDDLE_NOUN"
-	<puiɡ> /pˈuʧ/ "PODIUM_NOUN"
-	<ɡoiɡ> /ɡˈɔʧ/ "JOY_NOUN"
+	<espasa> /əspˈazə/ "SWORD_NOUN"
 
 /ʤ/ (0.003)
 	<metɡe> /mˈeʤə/ "DOCTOR_NOUN"

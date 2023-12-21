@@ -182,57 +182,60 @@ CONSONANTS
 	<semmana> /semːˈanə/ "WEEK_NOUN"
 	<ciume> /ʃˈumːə/ "RIVER_NOUN"
 
-/nː/ (0.005)
-	<ɡranne> /ɡɾˈanːə/ "BIG_ADJ"
-	<pinna> /pˈinːə/ "FEATHER_NOUN"
-	<anno> /ˈanːə/ "YEAR_NOUN"
-
 /ʎː/ (0.005)
-	<foɡlia> /fˈɔʎːə/ "LEAF_NOUN"
-	<aɡlio> /ˈaʎːə/ "GARLIC_NOUN"
+	<fiɡlia> /fˈiʎːə/ "DAUGHTER_NOUN"
+	<néɡlia> /nˈeʎːə/ "FOG_NOUN"
 	<fiɡlio> /fˈiʎːə/ "SON_NOUN"
 
 /ŋ/ (0.005)
 	<lenɡua> /lˈeŋɡwə/ "TONGUE_NOUN"
-	<sanɡhe> /sˈaŋɡə/ "BLOOD_NOUN"
-	<cinco> /ʃˈiŋkə/ "FIVE_NUM"
+	<luonɡo> /lwˈɔŋɡə/ "LONG_ADJ"
+	<janco> /jˈaŋkə/ "WHITE_ADJ"
 
-/b/ (0.004)
-	<buono> /bwˈɔnə/ "GOOD (M.SG)_ADJ"
-	<buone> /bwˈɔnə/ "GOOD (M.PL)_ADJ"
-	<arba> /ˈaɾba/ "DAWN_NOUN"
+/nː/ (0.005)
+	<tunno> /tˈunːə/ "ROUND_ADJ"
+	<cennere> /ʃˈɛnːəɾə/ "ASH_NOUN"
+	<pinna> /pˈinːə/ "FEATHER_NOUN"
 
 /sː/ (0.004)
-	<éssa> /ˈesːə/ "SHE_PRON"
 	<ɡruosso> /ɡrwˈɔsːə/ "THICK_ADJ"
+	<éssa> /ˈesːə/ "SHE_PRON"
 	<isso> /ˈisːə/ "HE_PRON"
 
-/ʤː/ (0.003)
-	<leɡɡe> /lˈɛʤːə/ "READ_VERB"
-	<viaɡɡio> /vjˈaʤːə/ "JOURNEY_NOUN"
-	<leɡɡe> /lˈeʤːə/ "LAW_NOUN"
+/b/ (0.004)
+	<buone> /bwˈɔnə/ "GOOD (M.PL)_ADJ"
+	<buono> /bwˈɔnə/ "GOOD (M.SG)_ADJ"
+	<arba> /ˈaɾba/ "DAWN_NOUN"
 
 /ʦː/ (0.003)
-	<priezzo> /pɾjˈɛʦːə/ "PRICE_NOUN"
 	<puzzo> /pˈuʦːə/ "WELL_NOUN"
 	<miezzo> /mjˈɛʦːə/ "MIDDLE_NOUN"
+	<palazzo> /palˈaʦːə/ "PALACE_NOUN"
+
+/ʤː/ (0.003)
+	<chioɡɡia> /kjˈɔʤːə/ "RAIN_NOUN"
+	<leɡɡe> /lˈɛʤːə/ "READ_VERB"
+	<viaɡɡio> /vjˈaʤːə/ "JOURNEY_NOUN"
 
 /ʦ/ (0.002)
 	<forza> /fˈɔɾʦə/ "STRENGTH_NOUN"
 	<panza> /pˈanʦə/ "BELLY_NOUN"
 	<scuòrzo> /ʃkwˈɔrʦə/ "BARK_NOUN"
 
-/bː/ (0.001)
-	<lìbbero> /lˈibːəɾə/ "FREE_ADJ"
-	<abbrucià> /abːruʃˈa/ "BURN_VERB"
+/ʧː/ (0.001)
+	<piccirillo> /piʧːˈiɾilːə/ "SMALL_ADJ"
+	<accidere> /aʧːˈidəɾə/ "KILL_VERB"
 
 /rː/ (0.001)
 	<fierro> /fjˈɛrːə/ "IRON_NOUN"
 	<terra> /tˈɛrːə/ "EARTH_NOUN"
 
-/ʧː/ (0.001)
-	<piccirillo> /piʧːˈiɾilːə/ "SMALL_ADJ"
-	<accidere> /aʧːˈidəɾə/ "KILL_VERB"
+/bː/ (0.001)
+	<lìbbero> /lˈibːəɾə/ "FREE_ADJ"
+	<abbrucià> /abːruʃˈa/ "BURN_VERB"
+
+/ʧ/ (0.001)
+	<noce> /nˈoʧə/ "NUT_NOUN"
 
 /ɲ/ (0.001)
 	<aɡniello> /aɲjˈɛlːə/ "LAMB_NOUN"
@@ -242,9 +245,6 @@ CONSONANTS
 
 /dː/ (0.001)
 	<friddo> /fɾˈidːə/ "COLD_ADJ"
-
-/ʧ/ (0.001)
-	<noce> /nˈoʧə/ "NUT_NOUN"
 
 
 

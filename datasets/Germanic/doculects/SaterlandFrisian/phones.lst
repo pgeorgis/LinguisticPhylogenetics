@@ -39,15 +39,15 @@ VOWELS
 	<Brust> /brˈʊst/ "breast_NOUN"
 	<Wurm> /vˈʊrm/ "worm_NOUN"
 
-/ˈeː/ (0.016)
-	<skeen> /skˈeːn/ "beautiful_ADJ"
-	<Snee> /snˈeː/ "snow_NOUN"
-	<Eeke> /ˈeːkə/ "oak_NOUN_FEM"
-
 /ˈi/ (0.016)
 	<iek> /ˈik/ "I_PRON"
-	<wiet> /vˈit/ "white_ADJ"
-	<Kniebel> /knˈibəl/ "knee_NOUN"
+	<Skiet> /skˈit/ "shit_NOUN"
+	<Rien> /rˈin/ "rain_NOUN"
+
+/ˈeː/ (0.016)
+	<skeen> /skˈeːn/ "beautiful_ADJ"
+	<Weder> /vˈeːdər/ "weather_NOUN"
+	<Heem> /hˈeːm/ "home_NOUN"
 
 /ˈɪ/ (0.014)
 	<sitte> /sˈɪtə/ "sit_VERB"
@@ -84,11 +84,6 @@ VOWELS
 	<Köänig> /kˈœːnɪx/ "king_NOUN"
 	<Bíerig> /bˈiːrɪx/ "mountain_NOUN"
 
-/ˈaːi̯/ (0.003)
-	<Wai> /vˈaːi̯/ "way_NOUN"
-	<Nail> /nˈaːi̯l/ "fingernail_NOUN"
-	<Dai> /dˈaːi̯/ "day_NOUN"
-
 /ˈyː/ (0.003)
 	<süük> /sˈyːk/ "sick_ADJ"
 	<Früünd> /frˈyːnd/ "friend_NOUN"
@@ -96,30 +91,35 @@ VOWELS
 
 /ˈu/ (0.003)
 	<Mund> /mˈund/ "mouth_NOUN"
-	<Sjuuken> /sjˈukən/ "chicken_NOUN"
 	<Ku> /kˈu/ "cow_NOUN"
+	<Sjuuken> /sjˈukən/ "chicken_NOUN"
 
-/a/ (0.002)
-	<biada> /bˈiada/ "bid_VERB"
+/ˈaːi̯/ (0.003)
+	<Wai> /vˈaːi̯/ "way_NOUN"
+	<Dai> /dˈaːi̯/ "day_NOUN"
+	<Nail> /nˈaːi̯l/ "fingernail_NOUN"
 
 /ˈaːu̯/ (0.002)
 	<Haud> /hˈaːu̯d/ "head_NOUN"
 	<fjauer> /fjˈaːu̯ər/ "four_NUM"
 
+/a/ (0.002)
+	<biada> /bˈiada/ "bid_VERB"
+
 /ˈɔːɪ̯/ (0.001)
 	<Oai> /ˈɔːɪ̯/ "egg_NOUN_NEU"
-
-/ˈeːu̯/ (0.001)
-	<jeeuwe> /jˈeːu̯və/ "give_VERB"
 
 /ˈœː/ (0.001)
 	<Köänig> /kˈœːnɪx/ "king_NOUN"
 
+/ˈøː/ (0.001)
+	<söögje> /sˈøːɣjə/ "suck_VERB"
+
 /ˈiːu̯/ (0.001)
 	<Líeuwer> /lˈiːu̯vər/ "liver_NOUN"
 
-/ˈøː/ (0.001)
-	<söögje> /sˈøːɣjə/ "suck_VERB"
+/ˈeːu̯/ (0.001)
+	<jeeuwe> /jˈeːu̯və/ "give_VERB"
 
 /i/ (0.001)
 	<trättien> /trˈɛtin/ "thirteen_NUM"

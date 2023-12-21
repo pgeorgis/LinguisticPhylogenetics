@@ -59,20 +59,20 @@ VOWELS
 	<mourdre> /mˈuʁdʁə/ "BITE_VERB"
 	<savu> /savˈu/ "KNOWN_VERB"
 
-/ˈo/ (0.012)
-	<nos> /nˈo/ "WE_PRON"
-	<ɡota> /ɡˈota/ "DROP_NOUN"
-	<homo> /ˈomo/ "MAN_NOUN"
+/ˈɔ̃/ (0.012)
+	<pondre> /pˈɔ̃dʁə/ "PUT_VERB"
+	<bons> /bˈɔ̃/ "GOOD (M.PL)_ADJ"
+	<lonɡ> /lˈɔ̃/ "LONG_ADJ"
 
 /ˈɑ̃/ (0.012)
 	<blanc> /blˈɑ̃/ "WHITE_ADJ"
 	<anjhe> /ˈɑ̃ðə/ "ANGEL_NOUN"
 	<fam> /fˈɑ̃/ "HUNGER_NOUN"
 
-/ˈɔ̃/ (0.012)
-	<bons> /bˈɔ̃/ "GOOD (M.PL)_ADJ"
-	<nom> /nˈɔ̃/ "NAME_NOUN"
-	<rêson> /ʁeːzˈɔ̃/ "REASON_NOUN"
+/ˈo/ (0.012)
+	<ɡota> /ɡˈota/ "DROP_NOUN"
+	<plloɡe> /pʎˈoʒə/ "RAIN_NOUN"
+	<lop> /lˈo/ "WOLF_NOUN"
 
 /ˈø/ (0.01)
 	<förça> /fˈøʁsa/ "STRENGTH_NOUN"
@@ -99,23 +99,19 @@ VOWELS
 	<romen> /ʁɔmˈɛ̃/ "ROMAN_ADJ"
 	<châtél> /ʃɔtˈɛl/ "CASTLE_NOUN"
 
-/eː/ (0.003)
-	<êteila> /eːtˈejla/ "STAR_NOUN"
-	<rêson> /ʁeːzˈɔ̃/ "REASON_NOUN"
-	<mêtiat> /meːtjˈa/ "HALF_NOUN"
-
 /u/ (0.003)
 	<fumiére> /fumjˈɛʁ/ "SMOKE_NOUN"
-	<usél> /uzˈɛl/ "BIRD_NOUN"
 	<color> /kulˈɔʁ/ "COLOR_NOUN"
+	<usél> /uzˈɛl/ "BIRD_NOUN"
+
+/eː/ (0.003)
+	<êteila> /eːtˈejla/ "STAR_NOUN"
+	<mêtiat> /meːtjˈa/ "HALF_NOUN"
+	<rêson> /ʁeːzˈɔ̃/ "REASON_NOUN"
 
 /ˈɛː/ (0.002)
 	<ɡrêna> /ɡʁˈɛːna/ "GRAIN_NOUN"
 	<crêre> /kʁˈɛːʁə/ "BELIEVE_VERB"
-
-/ĩ/ (0.002)
-	<cinquanta> /sĩkwˈɑ̃ta/ "FIFTY_NUM"
-	<chanɡiér> /ʃĩʒjˈɛ/ "CHANGE_VERB"
 
 /ɛ/ (0.002)
 	<resim> /ʁɛzˈĩ/ "RAISIN_NOUN"
@@ -125,17 +121,21 @@ VOWELS
 	<montaɡne> /mɔ̃tˈaɲi/ "MOUNTAIN_NOUN"
 	<pêsson> /pˈeːsɔ̃/ "FISH_NOUN"
 
-/oː/ (0.001)
-	<ôton> /oːtˈɔn/ "AUTUMN_NOUN"
-
-/ɛ̃/ (0.001)
-	<jhensiva> /ðɛ̃sˈiva/ "GUMS_NOUN"
+/ĩ/ (0.002)
+	<cinquanta> /sĩkwˈɑ̃ta/ "FIFTY_NUM"
+	<chanɡiér> /ʃĩʒjˈɛ/ "CHANGE_VERB"
 
 /ˈy/ (0.001)
 	<sus> /sˈy/ "ABOVE_PREP"
 
+/ɛ̃/ (0.001)
+	<jhensiva> /ðɛ̃sˈiva/ "GUMS_NOUN"
+
 /y/ (0.001)
 	<burlar> /byʁlˈaʁ/ "BURN_VERB"
+
+/oː/ (0.001)
+	<ôton> /oːtˈɔn/ "AUTUMN_NOUN"
 
 
 
@@ -180,15 +180,15 @@ CONSONANTS
 	<petiôt> /pətjˈoː/ "SMALL_ADJ"
 	<pondre> /pˈɔ̃dʁə/ "PUT_VERB"
 
-/w/ (0.029)
-	<joueno> /ʒwˈeno/ "YOUNG_ADJ"
-	<vouéx> /vwˈɛʃ/ "VOICE_NOUN"
-	<buef> /bwˈef/ "OX_NOUN"
-
 /ʃ/ (0.029)
-	<chiévra> /ʃjˈɛvʁa/ "GOAT_NOUN"
-	<cheval> /ʃəvˈal/ "HORSE_NOUN"
-	<doux> /dˈuʃ/ "TWO (M)_NUM"
+	<vouéx> /vwˈɛʃ/ "VOICE_NOUN"
+	<chuesa> /ʃwˈeza/ "THING_NOUN"
+	<chêrn> /ʃˈeːʁ/ "MEAT_NOUN"
+
+/w/ (0.029)
+	<ueye> /wˈejə/ "GOOSE_NOUN"
+	<loué> /lwˈɛ/ "LAW_NOUN"
+	<uevra> /wˈevʁa/ "WORK_NOUN"
 
 /f/ (0.028)
 	<fôs> /fˈoː/ "FALSE_ADJ"

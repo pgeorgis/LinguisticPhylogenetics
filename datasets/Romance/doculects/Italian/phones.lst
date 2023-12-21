@@ -29,15 +29,15 @@ VOWELS
 	<prezzo> /prˈɛʦːo/ "PRICE_NOUN"
 	<pietra> /pjˈɛtra/ "STONE_NOUN"
 
-/ˈi/ (0.024)
-	<arɡilla> /arʤˈilːa/ "CLAY_NOUN"
-	<dormire> /dormˈire/ "SLEEP_VERB"
-	<uccidere> /uʧːˈidere/ "KILL_VERB"
-
 /ˈo/ (0.024)
-	<dona> /dˈona/ "GIVE-3SG_VERB"
-	<pozzo> /pˈoʦːo/ "WELL_NOUN"
-	<croce> /krˈoʧe/ "CROSS_NOUN"
+	<sopra> /sˈopra/ "ABOVE_PREP"
+	<verɡoɡna> /verɡˈoɲːa/ "SHAME_NOUN"
+	<molto> /mˈolto/ "MANY_ADJ"
+
+/ˈi/ (0.024)
+	<felice> /felˈiʧe/ "HAPPY_ADJ"
+	<villa> /vˈilːa/ "TOWN_NOUN"
+	<spiɡa> /spˈiɡa/ "EAR OF GRAIN_NOUN"
 
 /ˈe/ (0.024)
 	<re> /rˈe/ "KING_NOUN"
@@ -77,15 +77,15 @@ CONSONANTS
 	<pecora> /pˈɛkora/ "SHEEP_NOUN"
 	<capello> /kapˈelːo/ "HAIR_NOUN"
 
-/l/ (0.035)
-	<lepre> /lˈɛpre/ "HARE_NOUN"
-	<parola> /parˈɔla/ "WORD_NOUN"
-	<letto> /lˈɛtːo/ "BED_NOUN"
-
 /t/ (0.035)
+	<metà> /metˈa/ "HALF_NOUN"
+	<tuto> /tˈutːo/ "ALL (SG)_ADJ"
 	<ascoltare> /askoltˈare/ "LISTEN_VERB"
-	<tempo> /tˈɛmpo/ "TIME_NOUN"
-	<ɡente> /ʤˈɛnte/ "PEOPLE_NOUN"
+
+/l/ (0.035)
+	<linɡua> /lˈiŋɡwa/ "TONGUE_NOUN"
+	<lana> /lˈana/ "WOOL_NOUN"
+	<ombelico> /ombelˈiko/ "NAVEL_NOUN"
 
 /p/ (0.031)
 	<porca> /pˈɔrka/ "SOW_NOUN"
@@ -122,15 +122,15 @@ CONSONANTS
 	<femmina> /fˈemːina/ "WOMAN_NOUN"
 	<freddo> /frˈedːo/ "COLD_ADJ"
 
-/ʤ/ (0.013)
-	<ɡente> /ʤˈɛnte/ "PEOPLE_NOUN"
-	<ɡioco> /ʤˈɔko/ "GAME_NOUN"
-	<ɡiuɡno> /ʤˈuɲːo/ "JUNE_PROPN"
-
 /ʧ/ (0.013)
-	<noce> /nˈoʧe/ "NUT_NOUN"
-	<voce> /vˈoʧe/ "VOICE_NOUN"
-	<croce> /krˈoʧe/ "CROSS_NOUN"
+	<radice> /radˈiʧe/ "ROOT_NOUN"
+	<cinque> /ʧˈiŋkwe/ "FIVE_NUM"
+	<vicino> /viʧˈino/ "NEIGHBOR_NOUN"
+
+/ʤ/ (0.013)
+	<ɡinocchio> /ʤinˈɔkːjo/ "KNEE_NOUN"
+	<ɡiovane> /ʤˈovane/ "YOUNG_ADJ"
+	<manɡiare> /manʤˈare/ "EAT_VERB"
 
 /ɡ/ (0.013)
 	<ɡrano> /ɡrˈano/ "GRAIN_NOUN"
@@ -192,35 +192,35 @@ CONSONANTS
 	<poɡɡio> /pˈɔʤːo/ "PODIUM_NOUN"
 	<leɡɡere> /lˈɛʤːere/ "READ_VERB"
 
-/bː/ (0.002)
-	<babbo> /bˈabːo/ "FATHER_NOUN"
-	<nebbia> /nˈebːja/ "FOG_NOUN"
-	<sabbia> /sˈabːja/ "SAND_NOUN"
+/ʃː/ (0.002)
+	<conoscere> /konˈoʃːere/ "BE ACQUAINTED WITH_VERB"
+	<nascere> /nˈaʃːere/ "BE BORN_VERB"
+	<coscia> /kˈɔʃːa/ "THIGH_NOUN"
 
 /z/ (0.002)
 	<isola> /ˈizola/ "ISLAND_NOUN"
 	<cosa> /kˈɔza/ "THING_NOUN"
 	<casa> /kˈaza/ "HOUSE_NOUN"
 
-/ʃː/ (0.002)
-	<coscia> /kˈɔʃːa/ "THIGH_NOUN"
-	<nascere> /nˈaʃːere/ "BE BORN_VERB"
-	<conoscere> /konˈoʃːere/ "BE ACQUAINTED WITH_VERB"
-
 /nː/ (0.002)
 	<anno> /ˈanːo/ "YEAR_NOUN"
 	<penna> /pˈenːa/ "FEATHER_NOUN"
-	<donna> /dˈɔnːa/ "LADY_NOUN"
+	<autunno> /awtˈunːo/ "AUTUMN_NOUN"
 
-/rː/ (0.002)
-	<ferro> /fˈɛrːo/ "IRON_NOUN"
-	<porre> /pˈorːe/ "PUT_VERB"
-	<terra> /tˈɛrːa/ "EARTH_NOUN"
+/bː/ (0.002)
+	<sabbia> /sˈabːja/ "SAND_NOUN"
+	<nebbia> /nˈebːja/ "FOG_NOUN"
+	<robbio> /rˈobːjo/ "RED_ADJ"
 
 /ʦː/ (0.002)
-	<pozzo> /pˈoʦːo/ "WELL_NOUN"
 	<prezzo> /prˈɛʦːo/ "PRICE_NOUN"
+	<pozzo> /pˈoʦːo/ "WELL_NOUN"
 	<palazzo> /palˈaʦːo/ "PALACE_NOUN"
+
+/rː/ (0.002)
+	<porre> /pˈorːe/ "PUT_VERB"
+	<ferro> /fˈɛrːo/ "IRON_NOUN"
+	<terra> /tˈɛrːa/ "EARTH_NOUN"
 
 /ʦ/ (0.001)
 	<scorza> /skˈɔrʦa/ "BARK_NOUN"
@@ -230,17 +230,17 @@ CONSONANTS
 	<fiamma> /fjˈamːa/ "FLAME_NOUN"
 	<femmina> /fˈemːina/ "WOMAN_NOUN"
 
-/ʣ/ (0.001)
-	<fronza> /frˈonʣa/ "LEAF_NOUN"
-
-/dː/ (0.001)
-	<freddo> /frˈedːo/ "COLD_ADJ"
-
 /ʣː/ (0.001)
 	<mezzo> /mˈɛʣːo/ "MIDDLE_NOUN"
 
+/ʣ/ (0.001)
+	<fronza> /frˈonʣa/ "LEAF_NOUN"
+
 /pː/ (0.001)
 	<sappia> /sˈapːja/ "KNOW-SBJ-1SG_VERB"
+
+/dː/ (0.001)
+	<freddo> /frˈedːo/ "COLD_ADJ"
 
 
 

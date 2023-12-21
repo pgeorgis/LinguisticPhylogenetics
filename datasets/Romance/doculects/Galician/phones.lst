@@ -79,11 +79,11 @@ VOWELS
 	<século> /sˈɛkulʊ/ "CENTURY_NOUN"
 	<axudar> /aʃuðˈaɾ/ "HELP_VERB"
 
-/ɑ/ (0.001)
-	<cambiar> /kɑmbjˈaɾ/ "CHANGE_VERB"
-
 /ɔ/ (0.001)
 	<obreiro> /ɔβɾˈejɾʊ/ "WORKER_NOUN"
+
+/ɑ/ (0.001)
+	<cambiar> /kɑmbjˈaɾ/ "CHANGE_VERB"
 
 
 
@@ -153,15 +153,15 @@ CONSONANTS
 	<fíɡado> /fˈiɣaðʊ/ "LIVER_NOUN"
 	<femia> /fˈemjɐ/ "WOMAN_NOUN"
 
-/ð/ (0.016)
-	<todo> /tˈoðos/ "ALL (PL)_ADJ"
-	<maduro> /maðˈuɾʊ/ "MATURE_NOUN"
-	<todo> /tˈoðʊ/ "ALL (SG)_ADJ"
-
 /ŋ/ (0.016)
-	<man> /mˈɑŋ/ "HAND_NOUN"
-	<ben> /bˈɛŋ/ "WELL (ADV)_ADV"
-	<vilán> /bilˈaŋ/ "VILLAIN_NOUN"
+	<sanɡue> /sˈɑŋɡɪ/ "BLOOD_NOUN"
+	<razón> /raθˈoŋ/ "REASON_NOUN"
+	<pan> /pˈɑŋ/ "BREAD_NOUN"
+
+/ð/ (0.016)
+	<metade> /metˈaðɪ/ "HALF_NOUN"
+	<pedra> /pˈɛðɾɐ/ "STONE_NOUN"
+	<estado> /estˈaðʊ/ "STATE_NOUN"
 
 /ʃ/ (0.015)
 	<roxo> /rˈoʃʊ/ "RED_ADJ"

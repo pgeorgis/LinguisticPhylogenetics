@@ -57,15 +57,15 @@ CONSONANTS
 	<hɫadki> /ɦwˈatkʲi/ "SMOOTH_ADJ"
 	<poɫny> /pˈɔwnɪ/ "FULL_ADJ"
 
-/t/ (0.032)
-	<město> /mʲˈestɔ/ "PLACE_NOUN"
-	<ptašk> /ptˈaʃk/ "BIRD_NOUN"
-	<lěto> /lˈetɔ/ "SUMMER_NOUN"
-
 /ʀ/ (0.032)
-	<ryba> /ʀˈɪba/ "FISH_NOUN"
-	<kral> /kʀˈal/ "KING_NOUN"
-	<jězor> /jˈezɔʀ/ "LAKE_NOUN"
+	<róh> /ʀˈox/ "HORN_NOUN"
+	<čorny> /ʧˈɔʀnɪ/ "BLACK_ADJ"
+	<hora> /ɦˈɔʀa/ "MOUNTAIN_NOUN"
+
+/t/ (0.032)
+	<trawa> /tʀˈaβa/ "GRASS_NOUN"
+	<hɫadki> /ɦwˈatkʲi/ "SMOOTH_ADJ"
+	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
 
 /k/ (0.03)
 	<křidɫo> /kʃˈidwɔ/ "WING_NOUN"
@@ -137,15 +137,15 @@ CONSONANTS
 	<drjewo> /dʀʲˈɛβɔ/ "TREE_NOUN"
 	<rěka> /ʀʲˈeka/ "RIVER_NOUN"
 
-/j/ (0.01)
-	<jahoda> /jˈaɦɔda/ "BERRY_NOUN"
-	<jedyn> /jɛdˈɪn/ "ONE_NUM"
-	<dwaj> /dβˈaj/ "TWO_NUM"
-
 /ɲ/ (0.01)
-	<dźeń> /ʤˈɛɲ/ "DAY_NOUN"
-	<korjeń> /kˈɔʀʲɛɲ/ "ROOT_NOUN"
+	<njewjesta> /ɲɛɥˈɛsta/ "BRIDE_NOUN"
 	<kóń> /kˈoɲ/ "HORSE_NOUN"
+	<sněh> /sɲˈex/ "SNOW_NOUN"
+
+/j/ (0.01)
+	<krej> /kʀˈej/ "BLOOD_NOUN"
+	<jazyk> /jˈazɪk/ "TONGUE_NOUN"
+	<jedyn> /jɛdˈɪn/ "ONE_NUM"
 
 /ʦ/ (0.008)
 	<nóc> /nˈoʦ/ "NIGHT_NOUN"
@@ -167,32 +167,32 @@ CONSONANTS
 	<popjeɫ> /pˈɔpʲɛw/ "ASH_NOUN"
 	<pjeć> /pʲˈeʧ/ "FIVE_NUM"
 
-/b/ (0.005)
-	<ryba> /ʀˈɪba/ "FISH_NOUN"
-	<dobry> /dˈɔbʀɪ/ "GOOD_ADJ"
-	<bóh> /bˈox/ "GOD_NOUN"
-
 /kʲ/ (0.005)
-	<ćežki> /ʧˈɛʃkʲi/ "HEAVY_ADJ"
-	<hɫadki> /ɦwˈatkʲi/ "SMOOTH_ADJ"
 	<wulki> /βˈulkʲi/ "GREAT_ADJ"
+	<hɫadki> /ɦwˈatkʲi/ "SMOOTH_ADJ"
+	<ćežki> /ʧˈɛʃkʲi/ "HEAVY_ADJ"
 
-/bʲ/ (0.003)
-	<běɫy> /bʲˈewɪ/ "WHITE_ADJ"
-	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
+/b/ (0.005)
+	<bóh> /bˈox/ "GOD_NOUN"
+	<dobry> /dˈɔbʀɪ/ "GOOD_ADJ"
+	<ryba> /ʀˈɪba/ "FISH_NOUN"
 
 /xʲ/ (0.003)
-	<suchi> /sˈuxʲi/ "DRY_ADJ"
 	<ćichi> /ʧˈixʲi/ "QUIET_ADJ"
+	<suchi> /sˈuxʲi/ "DRY_ADJ"
 
-/f/ (0.002)
-	<law> /lˈaf/ "LION_NOUN"
+/bʲ/ (0.003)
+	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
+	<běɫy> /bʲˈewɪ/ "WHITE_ADJ"
 
 /rʲ/ (0.002)
 	<worjech> /βˈɔrʲɛx/ "NUT_NOUN"
 
 /r/ (0.002)
 	<strowy> /strˈɔβɪ/ "HEALTHY_ADJ"
+
+/f/ (0.002)
+	<law> /lˈaf/ "LION_NOUN"
 
 
 

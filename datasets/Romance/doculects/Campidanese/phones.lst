@@ -96,15 +96,15 @@ CONSONANTS
 	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
 	<centu> /ʧˈentu/ "HUNDRED_NUM"
 
-/b/ (0.032)
-	<baca> /bˈaka/ "COW_NOUN"
-	<bàsciu> /bˈaʃːu/ "LOW_ADJ"
-	<binti> /bˈinti/ "TWENTY_NUM"
-
 /s/ (0.032)
-	<seda> /sˈeða/ "SILK_NOUN"
+	<sica> /sˈika/ "DRY (F)_ADJ"
+	<festa> /fˈesta/ "PARTY_NOUN"
 	<istàdu> /istˈaðu/ "STATE_NOUN"
-	<fàlsu> /fˈalsu/ "FALSE_ADJ"
+
+/b/ (0.032)
+	<bídere> /bˈiðerĕ/ "SEE_VERB"
+	<binti> /bˈinti/ "TWENTY_NUM"
+	<bonas> /bˈonază/ "GOOD (F.PL)_ADJ"
 
 /p/ (0.023)
 	<prenu> /prˈenu/ "FULL_ADJ"
@@ -126,18 +126,18 @@ CONSONANTS
 	<dai> /dˈaj/ "GIVE_VERB"
 	<noi> /nˈoj/ "NINE_NUM"
 
-/z/ (0.013)
-	<duas> /dˈuază/ "TWO (F)_NUM"
-	<ses> /sˈezĕ/ "SIX_NUM"
-	<pétus> /pˈetuzŭ/ "BREAST_NOUN"
-
 /ɣ/ (0.013)
-	<imbíliɡu> /imbˈiliɣu/ "NAVEL_NOUN"
-	<paraɡula> /parˈaɣula/ "WORD_NOUN"
-	<draɡoni> /draɣˈoni/ "DRAGON_NOUN"
+	<loɡu> /lˈoɣu/ "PLACE_NOUN"
+	<joɡu> /jˈoɣu/ "GAME_NOUN"
+	<breɡúnɡia> /breɣˈunʤa/ "SHAME_NOUN"
+
+/z/ (0.013)
+	<tres> /trˈezĕ/ "THREE_NUM"
+	<corpus> /kˈorpuzŭ/ "BODY_NOUN"
+	<mésu> /mˈezu/ "MIDDLE_NOUN"
 
 /d/ (0.013)
-	<dènti> /dˈenti/ "TOOTH_NOUN"
+	<duos> /dˈuozŏ/ "TWO (M)_NUM"
 	<mandiɡari> /mandiɣˈari/ "EAT_VERB"
 	<dormiri> /dormˈiri/ "SLEEP_VERB"
 
@@ -151,15 +151,15 @@ CONSONANTS
 	<nébida> /nˈeβiða/ "FOG_NOUN"
 	<cabaddu> /kaβˈaɖːu/ "HORSE_NOUN"
 
-/ɡ/ (0.008)
-	<ɡrandhe> /ɡrˈanɖe/ "BIG_ADJ"
-	<ɡhiatzu> /ɡjˈaʦu/ "ICE_NOUN"
-	<linɡua> /lˈiŋɡwa/ "TONGUE_NOUN"
-
 /ʧ/ (0.008)
-	<cincu> /ʧˈiŋku/ "FIVE_NUM"
-	<ciai> /ʧˈaj/ "KEY_NOUN"
-	<citadi> /ʧitˈadi/ "CITY_NOUN"
+	<ciamari> /ʧamˈari/ "CALL_VERB"
+	<bocíere> /boʧˈiere/ "KILL_VERB"
+	<cera> /ʧˈera/ "WAX_NOUN"
+
+/ɡ/ (0.008)
+	<ɡuta> /ɡˈuta/ "DROP_NOUN"
+	<unɡa> /ˈuŋɡa/ "FINGERNAIL_NOUN"
+	<sanɡuini> /sˈaŋɡwini/ "BLOOD_NOUN"
 
 /ʒ/ (0.007)
 	<arɡidda> /arʒˈiɖːa/ "CLAY_NOUN"
@@ -171,15 +171,15 @@ CONSONANTS
 	<bidda> /bˈiɖːa/ "TOWN_NOUN"
 	<isteddu> /istˈeɖːu/ "STAR_NOUN"
 
-/w/ (0.006)
-	<linɡua> /lˈiŋɡwa/ "TONGUE_NOUN"
-	<cincuanta> /ʧiŋkwˈanta/ "FIFTY_NUM"
-	<peraula> /perˈawla/ "WORD_NOUN"
-
 /ŋ/ (0.006)
+	<lonɡu> /lˈoŋɡu/ "LONG_ADJ"
 	<unɡa> /ˈuŋɡa/ "FINGERNAIL_NOUN"
-	<cincu> /ʧˈiŋku/ "FIVE_NUM"
 	<biàncu> /bjˈaŋku/ "WHITE_ADJ"
+
+/w/ (0.006)
+	<cincuanta> /ʧiŋkwˈanta/ "FIFTY_NUM"
+	<cuatru> /kwˈatru/ "FOUR_NUM"
+	<peraula> /perˈawla/ "WORD_NOUN"
 
 /rː/ (0.006)
 	<narrere> /nˈarːere/ "SAY-INF_VERB"
@@ -196,15 +196,15 @@ CONSONANTS
 	<fiza> /fˈiʣa/ "DAUGHTER_NOUN"
 	<azu> /ˈaʣu/ "GARLIC_NOUN"
 
-/nː/ (0.004)
-	<annu> /ˈanːu/ "YEAR_NOUN"
-	<pinna> /pˈinːa/ "FEATHER_NOUN"
-	<linna> /lˈinːa/ "WOOD_NOUN"
-
 /sː/ (0.004)
-	<mòssere> /mˈosːere/ "BITE_VERB"
-	<cassài> /kasːˈai/ "HUNT_VERB"
+	<issa> /ˈisːa/ "SHE_PRON"
 	<ossu> /ˈosːu/ "BONE_NOUN"
+	<cassài> /kasːˈai/ "HUNT_VERB"
+
+/nː/ (0.004)
+	<bènniri> /bˈenːiri/ "COME-INF_VERB"
+	<linna> /lˈinːa/ "WOOD_NOUN"
+	<pinna> /pˈinːa/ "FEATHER_NOUN"
 
 /ʦ/ (0.003)
 	<curtzu> /kˈurʦu/ "SHORT_ADJ"
@@ -235,14 +235,14 @@ CONSONANTS
 	<babbu> /bˈabːu/ "FATHER_NOUN"
 	<líbberu> /lˈibːeru/ "FREE_ADJ"
 
+/ɖ/ (0.001)
+	<ɡrandhe> /ɡrˈanɖe/ "BIG_ADJ"
+
 /tː/ (0.001)
 	<tottu> /tˈotːu/ "ALL (SG)_ADJ"
 
 /mː/ (0.001)
 	<framma> /frˈamːa/ "FLAME_NOUN"
-
-/ɖ/ (0.001)
-	<ɡrandhe> /ɡrˈanɖe/ "BIG_ADJ"
 
 
 

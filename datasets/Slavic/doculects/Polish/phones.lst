@@ -32,15 +32,15 @@ VOWELS
 
 
 CONSONANTS
-/j/ (0.041)
-	<ɡrzbiet> /ɡʐbjˈɛt/ "SPINE_NOUN"
-	<mięso> /mjˈɛw̃sɔ/ "MEAT_NOUN"
+/k/ (0.041)
+	<piasek> /pjˈasɛk/ "SAND_NOUN"
+	<róɡ> /rˈuk/ "HORN_NOUN"
 	<paznokieć> /paznˈɔkjɛʨ/ "FINGERNAIL_NOUN"
 
-/k/ (0.041)
-	<ɡɫadki> /ɡwˈatki/ "SMOOTH_ADJ"
+/j/ (0.041)
+	<ɡwiazda> /ɡvjˈazda/ "STAR_NOUN"
 	<język> /jˈɛw̃zɨk/ "TONGUE_NOUN"
-	<oko> /ˈɔkɔ/ "EYE_NOUN"
+	<ɫokieć> /wˈɔkjɛʨ/ "ELBOW_NOUN"
 
 /w/ (0.033)
 	<ciepɫy> /ʨˈɛpwɨ/ "WARM_ADJ"
@@ -72,9 +72,9 @@ CONSONANTS
 	<miasto> /mjˈastɔ/ "PLACE_NOUN"
 	<ziemia> /ʑˈɛmja/ "EARTH_NOUN"
 
-/d/ (0.023)
-	<radɫo> /rˈadwɔ/ "PLOUGH_NOUN"
-	<drzewo> /dʐˈɛvɔ/ "TREE_NOUN"
+/s/ (0.023)
+	<usta> /ˈusta/ "MOUTH_NOUN"
+	<piasek> /pjˈasɛk/ "SAND_NOUN"
 	<skrzydɫo> /skʂˈɨdwɔ/ "WING_NOUN"
 
 /p/ (0.023)
@@ -82,75 +82,75 @@ CONSONANTS
 	<popióɫ> /pˈɔpjuw/ "ASH_NOUN"
 	<pić> /pˈiʨ/ "DRINK_VERB"
 
-/s/ (0.023)
-	<las> /lˈas/ "FOREST_NOUN"
-	<suchy> /sˈuxɨ/ "DRY_ADJ"
-	<miasto> /mjˈastɔ/ "PLACE_NOUN"
-
 /l/ (0.023)
-	<liść> /lˈiɕʨ/ "LEAF_NOUN"
-	<cielę> /ʨˈɛlɛw̃/ "CALF_NOUN"
-	<mleko> /mlˈɛkɔ/ "MILK_NOUN"
+	<las> /lˈas/ "FOREST_NOUN"
+	<wlec> /vlˈɛʦ/ "DRAG_VERB"
+	<lew> /lˈɛf/ "LION_NOUN"
+
+/d/ (0.023)
+	<siedem> /ɕˈɛdɛm/ "SEVEN_NUM"
+	<chɫodny> /xwˈɔdnɨ/ "COLD_ADJ"
+	<ɡwiazda> /ɡvjˈazda/ "STAR_NOUN"
 
 /ɡ/ (0.022)
 	<noɡa> /nˈɔɡa/ "FOOT_NOUN"
 	<ɡrzbiet> /ɡʐbjˈɛt/ "SPINE_NOUN"
 	<ɡɫupi> /ɡwˈupi/ "STUPID_ADJ"
 
-/n/ (0.019)
-	<miesiąc> /mjˈɛɕɔnʦ/ "MONTH_NOUN"
-	<ɡodzina> /ɡɔʥˈina/ "HOUR_NOUN"
-	<żona> /ʐˈɔna/ "WOMAN_NOUN"
-
 /ɲ/ (0.019)
-	<wziąć> /vʑˈɔɲʨ/ "TAKE_VERB"
-	<pięć> /pjˈɛɲʨ/ "FIVE_NUM"
-	<szczęście> /ʂʈ͡ʂˈɛɲɕʨɛ/ "HAPPINESS_NOUN"
+	<śnieɡ> /ɕɲˈɛk/ "SNOW_NOUN"
+	<dziewięć> /ʥˈɛvjɛɲʨ/ "NINE_NUM"
+	<pąć> /pˈɔɲʨ/ "WAY_NOUN"
+
+/n/ (0.019)
+	<nos> /nˈɔs/ "NOSE_NOUN"
+	<noɡa> /nˈɔɡa/ "FOOT_NOUN"
+	<peɫny> /pˈɛwnɨ/ "FULL_ADJ"
 
 /ɕ/ (0.016)
 	<liść> /lˈiɕʨ/ "LEAF_NOUN"
 	<dziesięć> /ʥˈɛɕɛɲʨ/ "TEN_NUM"
 	<sześć> /ʂˈɛɕʨ/ "SIX_NUM"
 
-/ʂ/ (0.013)
-	<skrzydɫo> /skʂˈɨdwɔ/ "WING_NOUN"
-	<sześć> /ʂˈɛɕʨ/ "SIX_NUM"
-	<mąż> /mˈɔw̃ʂ/ "HUSBAND_NOUN"
-
 /ʐ/ (0.013)
-	<żyć> /ʐˈɨʨ/ "LIVE_VERB"
-	<żona> /ʐˈɔna/ "WOMAN_NOUN"
-	<orzech> /ˈɔʐɛx/ "NUT_NOUN"
+	<żóɫty> /ʐˈuwtɨ/ "YELLOW_ADJ"
+	<drzewo> /dʐˈɛvɔ/ "TREE_NOUN"
+	<morze> /mˈɔʐɛ/ "SEA_NOUN"
 
-/w̃/ (0.01)
-	<wiązać> /vjˈɔw̃zaʨ/ "TIE_VERB"
-	<mięso> /mjˈɛw̃sɔ/ "MEAT_NOUN"
-	<język> /jˈɛw̃zɨk/ "TONGUE_NOUN"
+/ʂ/ (0.013)
+	<zwierz> /zvjˈɛʂ/ "BEAST_NOUN"
+	<trzy> /tʂˈɨ/ "THREE_NUM"
+	<pszczoɫa> /pʂʈ͡ʂˈɔwa/ "BEE_NOUN"
 
 /z/ (0.01)
 	<język> /jˈɛw̃zɨk/ "TONGUE_NOUN"
-	<paznokieć> /paznˈɔkjɛʨ/ "FINGERNAIL_NOUN"
-	<zdrowy> /zdrˈɔvɨ/ "HEALTHY_ADJ"
+	<ɡwiazda> /ɡvjˈazda/ "STAR_NOUN"
+	<ząb> /zˈɔmp/ "TOOTH_NOUN"
 
-/b/ (0.009)
-	<ɡrzbiet> /ɡʐbjˈɛt/ "SPINE_NOUN"
-	<bóɡ> /bˈuk/ "GOD_NOUN"
-	<obɫok> /ˈɔbwɔk/ "CLOUD_NOUN"
+/w̃/ (0.01)
+	<wiązać> /vjˈɔw̃zaʨ/ "TIE_VERB"
+	<ciężki> /ʨˈɛw̃ʂki/ "HEAVY_ADJ"
+	<mąż> /mˈɔw̃ʂ/ "HUSBAND_NOUN"
+
+/ʦ/ (0.009)
+	<sɫońce> /swˈɔɲʦɛ/ "SUN_NOUN"
+	<miesiąc> /mjˈɛɕɔnʦ/ "MONTH_NOUN"
+	<wlec> /vlˈɛʦ/ "DRAG_VERB"
 
 /ʈ͡ʂ/ (0.009)
 	<szczęście> /ʂʈ͡ʂˈɛɲɕʨɛ/ "HAPPINESS_NOUN"
 	<czɫowiek> /ʈ͡ʂwˈɔvjɛk/ "PERSON_NOUN"
 	<pszczoɫa> /pʂʈ͡ʂˈɔwa/ "BEE_NOUN"
 
-/ʦ/ (0.009)
-	<serce> /sˈɛrʦɛ/ "HEART_NOUN"
-	<sɫońce> /swˈɔɲʦɛ/ "SUN_NOUN"
-	<noc> /nˈɔʦ/ "NIGHT_NOUN"
-
 /x/ (0.009)
-	<suchy> /sˈuxɨ/ "DRY_ADJ"
+	<chɫodny> /xwˈɔdnɨ/ "COLD_ADJ"
+	<orzech> /ˈɔʐɛx/ "NUT_NOUN"
 	<ucho> /ˈuxɔ/ "EAR_NOUN"
-	<chleb> /xlˈɛp/ "BREAD_NOUN"
+
+/b/ (0.009)
+	<bóɡ> /bˈuk/ "GOD_NOUN"
+	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
+	<obɫok> /ˈɔbwɔk/ "CLOUD_NOUN"
 
 /ʥ/ (0.007)
 	<widzieć> /vˈiʥɛʨ/ "SEE_VERB"

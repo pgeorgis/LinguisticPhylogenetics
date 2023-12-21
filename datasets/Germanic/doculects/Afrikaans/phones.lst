@@ -29,15 +29,15 @@ VOWELS
 	<dier> /dˈir/ "animal_NOUN"
 	<sneeu> /snˈiw/ "snow_NOUN"
 
-/ˈə/ (0.021)
-	<lig> /ɫˈəχ/ "light_NOUN"
-	<lig> /ɫˈəχ/ "light_ADJ"
-	<vinger> /fˈəŋər/ "finger_NOUN"
-
 /ˈɪə̯/ (0.021)
-	<een> /ˈɪə̯n/ "one_NUM"
-	<beer> /bˈɪə̯r/ "bear_NOUN"
-	<week> /vˈɪə̯k/ "week_NOUN"
+	<lewer> /ɫˈɪə̯vər/ "liver_NOUN"
+	<weet> /vˈɪə̯t/ "know_VERB"
+	<eet> /ˈɪə̯t/ "eat_VERB"
+
+/ˈə/ (0.021)
+	<bid> /bˈət/ "request_VERB"
+	<kind> /kˈənt/ "child_NOUN"
+	<wit> /vˈət/ "white_ADJ"
 
 /ˈəɪ̯/ (0.019)
 	<by> /bˈəɪ̯/ "bee_NOUN"
@@ -74,43 +74,43 @@ VOWELS
 	<berg> /bˈæːrχ/ "mountain_NOUN"
 	<skerp> /skˈæːrp/ "sharp_ADJ"
 
-/ˈyː/ (0.003)
-	<suur> /sˈyːr/ "sour_ADJ"
-	<duur> /dˈyːr/ "expensive_ADJ"
-	<vuur> /fˈyːr/ "fire_NOUN"
-
 /ˈɪø̯/ (0.003)
 	<seun> /sˈɪø̯n/ "son_NOUN"
-	<neus> /nˈɪø̯s/ "nose_NOUN"
 	<heuning> /ɦˈɪø̯nəŋ/ "honey_NOUN"
+	<neus> /nˈɪø̯s/ "nose_NOUN"
 
-/ˈuːi̯/ (0.002)
-	<koei> /kˈuːi̯/ "cow_NOUN"
-	<bloei> /bɫˈuːi̯/ "bleed_VERB"
-
-/ˈɔː/ (0.002)
-	<bors> /bˈɔːrs/ "breast_NOUN"
-	<nael> /nˈɔːɫ/ "fingernail_NOUN"
-
-/ˈɛː/ (0.002)
-	<sê> /sˈɛː/ "say_VERB"
-	<hê> /ɦˈɛː/ "have_VERB"
+/ˈyː/ (0.003)
+	<suur> /sˈyːr/ "sour_ADJ"
+	<vuur> /fˈyːr/ "fire_NOUN"
+	<duur> /dˈyːr/ "expensive_ADJ"
 
 /ˈɪ/ (0.002)
 	<twintig> /twˈɪntəχ/ "twenty_NUM"
 	<skild> /skˈɪɫt/ "shield_NOUN"
 
-/ˈuː/ (0.001)
-	<broer> /brˈuːr/ "brother_NOUN"
+/ˈɛː/ (0.002)
+	<hê> /ɦˈɛː/ "have_VERB"
+	<sê> /sˈɛː/ "say_VERB"
+
+/ˈɔː/ (0.002)
+	<nael> /nˈɔːɫ/ "fingernail_NOUN"
+	<bors> /bˈɔːrs/ "breast_NOUN"
+
+/ˈuːi̯/ (0.002)
+	<koei> /kˈuːi̯/ "cow_NOUN"
+	<bloei> /bɫˈuːi̯/ "bleed_VERB"
+
+/ˈœi̯/ (0.001)
+	<tyd> /tˈœi̯t/ "time_NOUN"
 
 /ˈæ/ (0.001)
 	<ek> /ˈæk/ "I_PRON"
 
+/ˈuː/ (0.001)
+	<broer> /brˈuːr/ "brother_NOUN"
+
 /ˈoːi̯/ (0.001)
 	<rooi> /rˈoːi̯/ "red_ADJ"
-
-/ˈœi̯/ (0.001)
-	<tyd> /tˈœi̯t/ "time_NOUN"
 
 /i/ (0.001)
 	<dertien> /dˈæːrtin/ "thirteen_NUM"

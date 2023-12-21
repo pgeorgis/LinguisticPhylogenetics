@@ -19,25 +19,25 @@ VOWELS
 	<elwe> /ˈɛlvə/ "eleven_NUM"
 	<Brügge> /brˈʏɡə/ "bridge_NOUN"
 
-/ˈaɪ̯/ (0.019)
-	<drai> /drˈaɪ̯/ "three_NUM"
-	<laiw> /lˈaɪ̯v/ "beloved_ADJ"
-	<tain> /tˈaɪ̯n/ "ten_NUM"
-
 /ˈiː/ (0.019)
-	<Swien> /ʃwˈiːn/ "swine_NOUN"
-	<Ies> /ˈiːs/ "ice_NOUN"
-	<riek> /rˈiːk/ "rich_ADJ"
+	<Wief> /wˈiːf/ "wife_NOUN"
+	<Dier> /dˈiːɐ/ "animal_NOUN"
+	<Tiet> /tˈiːt/ "time_NOUN"
 
-/ˈɔː/ (0.017)
-	<Waod> /wˈɔːd/ "word_NOUN"
-	<Jaor> /jˈɔːɐ/ "year_NOUN"
-	<Aor> /ˈɔːɐ/ "ear_NOUN"
+/ˈaɪ̯/ (0.019)
+	<Snai> /ʃnˈaɪ̯/ "snow_NOUN"
+	<flaigen> /flˈaɪ̯ŋ/ "fly_VERB"
+	<Knai> /knˈaɪ̯/ "knee_NOUN"
 
 /ˈʊ/ (0.017)
-	<Wunner> /vˈʊnɐ/ "wonder_NOUN"
-	<Tunge> /tˈʊŋə/ "tongue_NOUN"
-	<Mus> /mˈʊs/ "mouse_NOUN_FEM"
+	<Wulle> /wˈʊlə/ "wool_NOUN_FEM"
+	<jung> /jˈʊŋ/ "young_NOUN"
+	<vul> /fˈʊl/ "full_ADJ"
+
+/ˈɔː/ (0.017)
+	<Spraok> /ʃprˈɔːk/ "speech_NOUN_FEM"
+	<Naodel> /nˈɔːdl̩/ "needle_NOUN"
+	<Maond> /mˈɔːnd/ "month_NOUN"
 
 /ˈɛ/ (0.016)
 	<swemmen> /ʃwˈɛm/ "swim_VERB"
@@ -64,70 +64,70 @@ VOWELS
 	<Duwe> /dˈuːvə/ "dove_NOUN"
 	<Huut> /hˈuːt/ "skin_NOUN"
 
-/ˈoː/ (0.01)
-	<Broer> /brˈoːɐ/ "brother_NOUN"
-	<Moder> /mˈoːdɐ/ "mother_NOUN"
-	<Stool> /ʃtˈoːl/ "stool_NOUN"
-
 /ˈøː/ (0.01)
+	<Fööte> /fˈøːtə/ "feet_NOUN"
+	<söken> /sˈøːkn̩/ "seek_VERB"
 	<sööt> /sˈøːt/ "sweet_ADJ"
-	<för> /fˈøːɐ/ "for_PREP"
-	<blöden> /blˈøːdn̩/ "bleed_VERB"
+
+/ˈoː/ (0.01)
+	<Stool> /ʃtˈoːl/ "stool_NOUN"
+	<Blome> /blˈoːmə/ "flower_NOUN"
+	<Boot> /bˈoːt/ "boat_NOUN"
+
+/ˈʏ/ (0.007)
+	<drücken> /drˈʏkn̩/ "press_VERB"
+	<Güld> /xˈʏld/ "gold_NOUN_NEU"
+	<Süster> /sˈʏstɐ/ "sister_NOUN"
 
 /ˈɔ/ (0.007)
+	<Kop> /kˈɔp/ "head_NOUN"
 	<Fos> /fˈɔs/ "fox_NOUN"
-	<Dochter> /dˈɔxtɐ/ "daughter_NOUN"
-	<olt> /ˈɔlt/ "old_ADJ"
-
-/ˈaː/ (0.007)
-	<Nagel> /nˈaːɡl̩/ "fingernail_NOUN"
-	<Vader> /fˈaːdɐ/ "father_NOUN"
-	<Ape> /ˈaːpə/ "ape_NOUN"
+	<kolt> /kˈɔlt/ "cold_ADJ"
 
 /ˈuːə̯/ (0.007)
 	<Suon> /sˈuːə̯n/ "son_NOUN"
 	<Stuorm> /ʃtˈuːə̯m/ "storm_NOUN"
 	<Buorst> /bˈuːə̯st/ "breast_NOUN"
 
-/ˈʏ/ (0.007)
-	<Güld> /xˈʏld/ "gold_NOUN_NEU"
-	<drücken> /drˈʏkn̩/ "press_VERB"
-	<Brügge> /brˈʏɡə/ "bridge_NOUN"
+/ˈaː/ (0.007)
+	<Baad> /bˈaːd/ "bath_NOUN_NEU"
+	<Vader> /fˈaːdɐ/ "father_NOUN"
+	<Ape> /ˈaːpə/ "ape_NOUN"
 
 /ˈyː/ (0.006)
 	<drüüg> /drˈyːç/ "dry_ADJ"
 	<düer> /dˈyːɐ/ "expensive_ADJ"
 	<Füer> /fˈyːɐ/ "fire_NOUN"
 
-/ˈɛː/ (0.005)
-	<Äer> /ˈɛːɐ/ "earth_NOUN"
-	<Stään> /ʃtˈɛːn/ "star_NOUN"
-	<Gräs> /xrˈɛːs/ "grass_NOUN_NEU"
-
 /ˈɪə̯/ (0.005)
+	<niëgen> /nˈɪə̯ɣn̩/ "nine_NUM"
 	<siëwen> /sˈɪə̯vn̩/ "seven_NUM"
 	<Niërse> /nˈɪə̯sə/ "nose_NOUN"
-	<niëgen> /nˈɪə̯ɣn̩/ "nine_NUM"
+
+/ˈɛː/ (0.005)
+	<Stään> /ʃtˈɛːn/ "star_NOUN"
+	<Gräs> /xrˈɛːs/ "grass_NOUN_NEU"
+	<Äer> /ˈɛːɐ/ "earth_NOUN"
 
 /ˈiɛ̯/ (0.005)
 	<diärtain> /dˈiɛ̯taɪ̯n/ "thirteen_NUM"
 	<twiälw> /tvˈiɛ̯lv/ "twelve_NUM"
 	<iär> /ˈiɛ̯ɐ/ "ye_PRON"
 
-/ˈuə̯/ (0.004)
-	<guët> /xˈuə̯t/ "good_ADJ"
-	<kuëmen> /kˈuə̯mn̩/ "come_VERB"
-	<Vuëgel> /fˈuə̯ɡl̩/ "bird_NOUN_MASC"
-
-/ɪ/ (0.004)
-	<twintig> /twˈɪntɪç/ "twenty_NUM"
-	<hillig> /hˈɪlɪç/ "holy_ADJ"
-	<Hannig> /hˈanɪç/ "honey_NOUN"
-
 /ˈœː/ (0.004)
 	<Däön> /dˈœːn/ "thorn_NOUN"
 	<Träöne> /trˈœːnə/ "tear_NOUN_FEM"
 	<häöern> /hˈœːɐn/ "hear_VERB"
+
+/ˈuə̯/ (0.004)
+	<guët> /xˈuə̯t/ "good_ADJ"
+	<Vuëgel> /fˈuə̯ɡl̩/ "bird_NOUN_MASC"
+	<kuëmen> /kˈuə̯mn̩/ "come_VERB"
+
+/ɪ/ (0.004)
+	<twintig> /twˈɪntɪç/ "twenty_NUM"
+	<Hannig> /hˈanɪç/ "honey_NOUN"
+	<hillig> /hˈɪlɪç/ "holy_ADJ"
 
 /ˈø/ (0.002)
 	<sölwer> /sˈølvɐ/ "self_PRON"
@@ -136,11 +136,11 @@ VOWELS
 /ˈɒː/ (0.001)
 	<Håås> /hˈɒːs/ "hare_NOUN"
 
-/ˈyə̯/ (0.001)
-	<küënen> /kˈyə̯n̩/ "can_VERB"
-
 /ˈyːœ̯/ (0.001)
 	<üöwer> /ˈyːœ̯vɐ/ "over_PREP"
+
+/ˈyə̯/ (0.001)
+	<küënen> /kˈyə̯n̩/ "can_VERB"
 
 /ˈiə̯/ (0.001)
 	<wiëten> /wˈiə̯tn̩/ "know_VERB"
@@ -186,15 +186,15 @@ CONSONANTS
 	<Riängen> /rˈɪɛ̯ŋn̩/ "rain_NOUN"
 	<Frönd> /frˈønd/ "friend_NOUN"
 
-/m/ (0.031)
-	<Uom> /ˈuːə̯m/ "oven_NOUN"
-	<Maond> /mˈɔːnd/ "month_NOUN"
-	<Mus> /mˈʊs/ "mouse_NOUN_FEM"
-
 /ʃ/ (0.031)
-	<scharp> /ʃˈaɐp/ "sharp_ADJ"
-	<Stool> /ʃtˈoːl/ "stool_NOUN"
-	<Snai> /ʃnˈaɪ̯/ "snow_NOUN"
+	<Spraok> /ʃprˈɔːk/ "speech_NOUN_FEM"
+	<Schip> /ʃˈɪp/ "ship_NOUN"
+	<slaon> /ʃlˈɔːn/ "slay_VERB"
+
+/m/ (0.031)
+	<mi> /mˈiː/ "me_PRON"
+	<Stuorm> /ʃtˈuːə̯m/ "storm_NOUN"
+	<Naome> /nˈɔːmə/ "name_NOUN"
 
 /f/ (0.03)
 	<Frönd> /frˈønd/ "friend_NOUN"

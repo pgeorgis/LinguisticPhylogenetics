@@ -85,15 +85,15 @@ CONSONANTS
 	<radɫo> /rˈadwɔ/ "PLOUGH_NOUN"
 	<sedym> /sˈedɨm/ "SEVEN_NUM"
 
-/n/ (0.019)
-	<jaden> /jˈaden/ "ONE_NUM"
-	<chɫodny> /xˈɔdnɨ/ "COLD_ADJ"
-	<nokś> /nˈɔkɕ/ "FINGERNAIL_NOUN"
-
 /v/ (0.019)
 	<dwa> /dvˈa/ "TWO_NUM"
-	<twardy> /tvˈardɨ/ "HARD_ADJ"
 	<marwy> /mˈarvɨ/ "DEAD_ADJ"
+	<wósym> /vˈɛsɨm/ "EIGHT_NUM"
+
+/n/ (0.019)
+	<jaden> /jˈaden/ "ONE_NUM"
+	<poɫny> /pˈɔwnɨ/ "FULL_ADJ"
+	<chɫodny> /xˈɔdnɨ/ "COLD_ADJ"
 
 /ɡ/ (0.018)
 	<ɡóźina> /ɡˈɛʑina/ "HOUR_NOUN"
@@ -110,15 +110,15 @@ CONSONANTS
 	<sɫyńco> /swˈɨɲʦɔ/ "SUN_NOUN"
 	<cɫowjek> /ʦwˈɔvʲek/ "PERSON_NOUN"
 
-/m/ (0.014)
-	<mysl> /mˈɨsl/ "THOUGHT_NOUN"
-	<sedym> /sˈedɨm/ "SEVEN_NUM"
-	<mloko> /mlˈɔkɔ/ "MILK_NOUN"
-
 /z/ (0.014)
-	<zwěrje> /zvʲˈɪrʲe/ "BEAST_NOUN"
-	<jězyk> /jˈɪzɨk/ "TONGUE_NOUN"
-	<zemja> /zˈemʲa/ "EARTH_NOUN"
+	<zub> /zˈup/ "TOOTH_NOUN"
+	<wjezaś> /vʲˈezaɕ/ "TIE_VERB"
+	<ɡwězda> /ɡvʲˈɪzda/ "STAR_NOUN"
+
+/m/ (0.014)
+	<marwy> /mˈarvɨ/ "DEAD_ADJ"
+	<dym> /dˈɨm/ "SMOKE_NOUN"
+	<wósym> /vˈɛsɨm/ "EIGHT_NUM"
 
 /p/ (0.013)
 	<śopɫy> /ɕˈɔpwɨ/ "WARM_ADJ"
@@ -130,10 +130,10 @@ CONSONANTS
 	<wórjech> /vˈɛrʲɛx/ "NUT_NOUN"
 	<kórjeń> /kˈɛrʲɛɲ/ "ROOT_NOUN"
 
-/j/ (0.01)
-	<jězyk> /jˈɪzɨk/ "TONGUE_NOUN"
-	<jazoro> /jˈazɔrɔ/ "LAKE_NOUN"
-	<jaɡoda> /jˈaɡɔda/ "BERRY_NOUN"
+/ʂ/ (0.01)
+	<wětš> /vʲˈɪtʂ/ "WIND_NOUN"
+	<śěžki> /ɕˈɪʂkʲi/ "HEAVY_ADJ"
+	<kšej> /kʂˈej/ "BLOOD_NOUN"
 
 /ɲ/ (0.01)
 	<kóń> /kˈɛɲ/ "HORSE_NOUN"
@@ -145,10 +145,10 @@ CONSONANTS
 	<mě> /mʲˈɪ/ "NAME_NOUN"
 	<mjasec> /mʲˈasɛʦ/ "MONTH_NOUN"
 
-/ʂ/ (0.01)
-	<śěžki> /ɕˈɪʂkʲi/ "HEAVY_ADJ"
-	<muž> /mˈuʂ/ "HUSBAND_NOUN"
-	<kšej> /kʂˈej/ "BLOOD_NOUN"
+/j/ (0.01)
+	<jazoro> /jˈazɔrɔ/ "LAKE_NOUN"
+	<dɫujki> /dwˈujkʲi/ "LONG_ADJ"
+	<jaɡoda> /jˈaɡɔda/ "BERRY_NOUN"
 
 /ʑ/ (0.008)
 	<wiźeś> /vʲˈiʑeɕ/ "SEE_VERB"
@@ -170,15 +170,15 @@ CONSONANTS
 	<kósć> /kˈɛsʨ/ "BONE_NOUN"
 	<dešć> /dˈɛɕʨ/ "RAIN_NOUN"
 
-/kʲ/ (0.006)
-	<śěžki> /ɕˈɪʂkʲi/ "HEAVY_ADJ"
-	<ɡɫadki> /ɡwˈatkʲi/ "SMOOTH_ADJ"
-	<dɫujki> /dwˈujkʲi/ "LONG_ADJ"
-
 /ʐ/ (0.006)
-	<žona> /ʐˈɔna/ "WOMAN_NOUN"
 	<kóža> /kˈɛʐa/ "SKIN_NOUN"
 	<žoɫty> /ʐˈowtɨ/ "YELLOW_ADJ"
+	<žona> /ʐˈɔna/ "WOMAN_NOUN"
+
+/kʲ/ (0.006)
+	<dɫujki> /dwˈujkʲi/ "LONG_ADJ"
+	<śěžki> /ɕˈɪʂkʲi/ "HEAVY_ADJ"
+	<ɡɫadki> /ɡwˈatkʲi/ "SMOOTH_ADJ"
 
 /b/ (0.005)
 	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
@@ -189,9 +189,6 @@ CONSONANTS
 	<kśebjat> /kɕˈebʲat/ "SPINE_NOUN"
 	<běɫy> /bʲˈɪwɨ/ "WHITE_ADJ"
 
-/f/ (0.002)
-	<law> /lˈaf/ "LION_NOUN"
-
 /ɡʲ/ (0.002)
 	<woɡeń> /ˈɔɡʲɛɲ/ "FIRE_NOUN"
 
@@ -200,6 +197,9 @@ CONSONANTS
 
 /nʲ/ (0.002)
 	<sněɡ> /snʲˈɪk/ "SNOW_NOUN"
+
+/f/ (0.002)
+	<law> /lˈaf/ "LION_NOUN"
 
 
 

@@ -97,35 +97,35 @@ CONSONANTS
 	<plume> /plym/ "FEATHER_NOUN"
 	<puy> /pɥi/ "PODIUM_NOUN"
 
-/t/ (0.034)
-	<été> /ete/ "SUMMER_NOUN"
-	<tête> /tɛt/ "SKULL_NOUN"
-	<terre> /tɛʁ/ "EARTH_NOUN"
-
 /v/ (0.034)
-	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
-	<vie> /vi/ "LIFE_NOUN"
-	<vin> /vɛ̃/ "WINE_NOUN"
+	<hiver> /ivɛʁ/ "WINTER_NOUN"
+	<vinɡt> /vɛ̃/ "TWENTY_NUM"
+	<ɡencive> /ʒɑ̃siv/ "GUMS_NOUN"
+
+/t/ (0.034)
+	<lettre> /lɛtʁ/ "LETTER_NOUN"
+	<tuer> /tɥe/ "KILL_VERB"
+	<étude> /etyd/ "STUDY_NOUN"
 
 /w/ (0.033)
 	<étoile> /etwal/ "STAR_NOUN"
 	<point> /pwɛ̃/ "POINT_NOUN"
 	<noir> /nwaʁ/ "BLACK_ADJ"
 
+/m/ (0.029)
+	<semaine> /səmɛn/ "WEEK_NOUN"
+	<mater> /mate/ "KILL_VERB"
+	<fumée> /fyme/ "SMOKE_NOUN"
+
 /k/ (0.029)
-	<qui> /ki/ "WHO_PRON"
-	<quatre> /katʁ/ "FOUR_NUM"
-	<coup> /ku/ "STRIKE_NOUN"
+	<queue> /kø/ "TAIL_NOUN"
+	<obscur> /ɔpskyʁ/ "DARK_ADJ"
+	<caille> /kaj/ "QUAIL_NOUN"
 
 /f/ (0.029)
-	<force> /fɔʁs/ "STRENGTH_NOUN"
-	<flamme> /flam/ "FLAME_NOUN"
 	<fête> /fɛt/ "PARTY_NOUN"
-
-/m/ (0.029)
-	<mer> /mɛʁ/ "SEA_NOUN"
-	<mort> /mɔʁ/ "DEATH_NOUN"
-	<larme> /laʁm/ "TEAR_NOUN"
+	<faire> /fɛʁ/ "DO_VERB"
+	<fil> /fil/ "STRING_NOUN"
 
 /j/ (0.028)
 	<vieux> /vjø/ "OLD_ADJ"

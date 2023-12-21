@@ -49,30 +49,30 @@ VOWELS
 	<bòca> /bˈɔka/ "MOUTH_NOUN"
 	<òcˈ> /ˈɔʧ/ "EYE_NOUN"
 
-/u/ (0.012)
-	<vulèr> /vulˈɛr/ "FLY_VERB"
-	<durmîr> /durmˈiːr/ "SLEEP_VERB"
-	<uṡèl> /uzˈɛl/ "BIRD_NOUN"
-
 /ˈʌu̯/ (0.012)
-	<ɡåula> /ɡˈʌu̯la/ "THROAT_NOUN"
-	<cråuṡ> /krˈʌu̯z/ "CROSS_NOUN"
-	<dåulz> /dˈʌu̯lθ/ "SWEET_ADJ"
+	<såul> /sˈʌu̯l/ "SUN_NOUN"
+	<låuv> /lˈʌu̯v/ "WOLF_NOUN"
+	<såuver> /sˈʌu̯ver/ "ABOVE_PREP"
 
 /ˈuː/ (0.012)
-	<madûr> /madˈuːr/ "MATURE_NOUN"
 	<nûṡ> /nˈuːz/ "NUT_NOUN"
 	<frût> /frˈuːt/ "FRUIT_NOUN"
+	<madûr> /madˈuːr/ "MATURE_NOUN"
 
-/i/ (0.009)
-	<féddiɡ> /fˈediɡ/ "LIVER_NOUN"
-	<żinżéjja> /ðiŋðˈeja/ "GUMS_NOUN"
-	<sévi> /sˈevi/ "WISE_ADJ"
+/u/ (0.012)
+	<ajutèr> /ajutˈɛr/ "HELP_VERB"
+	<scultèr> /skultˈɛr/ "LISTEN_VERB"
+	<culåur> /kulˈʌu̯r/ "COLOR_NOUN"
 
 /ˈʌ/ (0.009)
-	<råss> /rˈʌs/ "RED_ADJ"
-	<leån> /leˈʌŋ/ "LION_NOUN"
-	<draɡån> /draɡˈʌŋ/ "DRAGON_NOUN"
+	<aɡåccia> /aɡˈʌʧa/ "NEEDLE_NOUN"
+	<bån> /bˈʌŋ/ "GOOD (M.SG)_ADJ"
+	<tånnd> /tˈʌŋd/ "ROUND_ADJ"
+
+/i/ (0.009)
+	<invêren> /invˈɛːren/ "WINTER_NOUN"
+	<ɡióddiz> /ʤˈodiθ/ "JUDGE_NOUN"
+	<vidèl> /vidˈɛl/ "CALF_NOUN"
 
 /ˈæ/ (0.007)
 	<dänt> /dˈæŋt/ "TOOTH_NOUN"
@@ -84,15 +84,15 @@ VOWELS
 	<êrba> /ˈɛːrba/ "GRASS_NOUN"
 	<mêl> /mˈɛːl/ "HONEY_NOUN"
 
-/o/ (0.003)
-	<operèri> /operˈɛri/ "WORKER_NOUN"
-	<dio> /dˈio/ "GOD_NOUN"
-	<chèro> /kˈɛro/ "DEAR_ADJ"
-
 /ˈi/ (0.003)
 	<chi> /kˈi/ "WHO_PRON"
 	<fil> /fˈil/ "STRING_NOUN"
 	<dio> /dˈio/ "GOD_NOUN"
+
+/o/ (0.003)
+	<operèri> /operˈɛri/ "WORKER_NOUN"
+	<dio> /dˈio/ "GOD_NOUN"
+	<chèro> /kˈɛro/ "DEAR_ADJ"
 
 
 
@@ -132,15 +132,15 @@ CONSONANTS
 	<radîs> /radˈiːs/ "ROOT_NOUN"
 	<cadäṅna> /kadˈæŋna/ "CHAIN_NOUN"
 
-/n/ (0.034)
-	<ânma> /ˈaːnma/ "SOUL_NOUN"
-	<nuèter> /nwˈɛter/ "WE_PRON"
-	<nóvvla> /nˈovla/ "CLOUD_NOUN"
-
 /v/ (0.034)
-	<chèvra> /kˈɛvra/ "GOAT_NOUN"
-	<låuv> /lˈʌu̯v/ "WOLF_NOUN"
-	<vélla> /vˈela/ "TOWN_NOUN"
+	<våuṡ> /vˈʌu̯z/ "VOICE_NOUN"
+	<sévi> /sˈevi/ "WISE_ADJ"
+	<vâca> /vˈaːka/ "COW_NOUN"
+
+/n/ (0.034)
+	<côren> /kˈɔːren/ "HORN_NOUN"
+	<invêren> /invˈɛːren/ "WINTER_NOUN"
+	<anèl> /anˈɛl/ "RING_NOUN"
 
 /m/ (0.031)
 	<nómm> /nˈom/ "NAME_NOUN"
@@ -157,15 +157,15 @@ CONSONANTS
 	<naiv> /nˈajv/ "SNOW_NOUN"
 	<savair> /savˈajr/ "KNOW_VERB"
 
-/f/ (0.022)
-	<fèsta> /fˈɛsta/ "PARTY_NOUN"
-	<frût> /frˈuːt/ "FRUIT_NOUN"
-	<fómm> /fˈom/ "SMOKE_NOUN"
-
 /ɡ/ (0.022)
-	<méɡɡa> /mˈeɡa/ "CRUMB_NOUN"
-	<lûɡ> /lˈuːɡ/ "PLACE_NOUN"
-	<ɡåzza> /ɡˈʌθa/ "DROP_NOUN"
+	<ṡɡûr> /zɡˈuːr/ "SAFE_ADJ"
+	<lèɡ> /lˈɛɡ/ "LAKE_NOUN"
+	<pêɡra> /pˈɛːɡra/ "SHEEP_NOUN"
+
+/f/ (0.022)
+	<fén> /fˈeŋ/ "END_NOUN"
+	<fójja> /fˈoja/ "LEAF_NOUN"
+	<fèda> /fˈɛda/ "FATE_NOUN"
 
 /θ/ (0.019)
 	<zànnder> /θˈander/ "ASH_NOUN"
@@ -177,15 +177,15 @@ CONSONANTS
 	<bå> /bˈʌ/ "OX_NOUN"
 	<bån> /bˈʌŋ/ "GOOD (M.SG)_ADJ"
 
-/z/ (0.013)
-	<cråuṡ> /krˈʌu̯z/ "CROSS_NOUN"
-	<dîṡ> /dˈiːz/ "TEN_NUM"
-	<nèṡ> /nˈɛz/ "NOSE_NOUN"
-
 /ð/ (0.013)
 	<żnòcˈ> /ðnˈɔʧ/ "KNEE_NOUN"
-	<mèż> /mˈɛð/ "MIDDLE_NOUN"
-	<żóɡɡn> /ðˈoɲ/ "JUNE_PROPN"
+	<lèżer> /lˈɛðer/ "READ_VERB"
+	<żåuven> /ðˈʌu̯ven/ "YOUNG_ADJ"
+
+/z/ (0.013)
+	<lûṡ> /lˈuːz/ "LIGHT_NOUN"
+	<zrîṡa> /θrˈiːza/ "CHERRY_NOUN"
+	<nûṡ> /nˈuːz/ "NUT_NOUN"
 
 /ɲ/ (0.009)
 	<laɡɡn> /lˈaɲ/ "WOOD_NOUN"

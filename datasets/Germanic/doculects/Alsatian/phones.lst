@@ -4,25 +4,25 @@ VOWELS
 	<saawe> /sˈaːvə/ "say_VERB"
 	<winsche> /ʋˈinʃə/ "wish_VERB"
 
-/ˈi/ (0.034)
-	<binde> /b̥ˈind̥ə/ "bind_VERB"
-	<finef> /fˈinef/ "five_NUM"
-	<Kind> /kʰˈind̥/ "child_NOUN"
-
 /ˈɒ/ (0.034)
-	<làng> /lˈɒŋ/ "long_ADJ"
-	<Wàsser> /ʋˈɒsəʁ/ "water_NOUN"
-	<Blàtt> /b̥lˈɒt/ "leaf_NOUN_NEU"
+	<Àpfel> /ˈɒp͡fl̩/ "apple_NOUN"
+	<Gàns> /ɡ̊ˈɒns/ "goose_NOUN"
+	<schwàrz> /ʃwˈɒʁʦ/ "black_ADJ"
 
-/ˈiː/ (0.026)
-	<Sit> /sˈiːt/ "side_NOUN"
-	<Miis> /mˈiːs/ "mice_NOUN"
-	<Fiess> /fˈiːs/ "feet_NOUN"
+/ˈi/ (0.034)
+	<Millich> /mˈiliʃ/ "milk_NOUN_FEM"
+	<Wind> /ʋˈind̥/ "wind_NOUN"
+	<licht> /lˈiʃt/ "light_ADJ"
 
 /ˈu/ (0.026)
-	<Hund> /hˈund̥/ "dog_NOUN"
 	<uns> /ˈuns/ "us_PRON"
-	<Bruscht> /b̥ʁˈuʃt/ "breast_NOUN"
+	<Zung> /ʦˈuŋ/ "tongue_NOUN"
+	<Hunni> /hˈuni/ "honey_NOUN"
+
+/ˈiː/ (0.026)
+	<dief> /d̥ˈiːf/ "deep_ADJ"
+	<Sit> /sˈiːt/ "side_NOUN"
+	<biete> /b̥ˈiːtə/ "bid_VERB"
 
 /ˈoː/ (0.02)
 	<Johr> /jˈoːʁ/ "year_NOUN"
@@ -34,15 +34,15 @@ VOWELS
 	<laufe> /lˈʊːfə/ "leap_VERB"
 	<blüete> /b̥lˈʊːtə/ "bleed_VERB"
 
-/ˈe/ (0.014)
-	<sechs> /sˈeks/ "six_NUM"
-	<Mensch> /mˈenʃ/ "person_NOUN"
-	<fer> /fˈeʁ/ "for_PREP"
-
 /ˈo/ (0.014)
-	<Woll> /ʋˈol/ "wool_NOUN_FEM"
-	<voll> /fˈol/ "full_ADJ"
-	<Ross> /ʁˈos/ "horse_NOUN"
+	<Donner> /d̥ˈonəʁ/ "thunder_NOUN"
+	<Horn> /hˈoʁn/ "horn_NOUN"
+	<Kopf> /kʰˈop͡f/ "head_NOUN"
+
+/ˈe/ (0.014)
+	<zwelf> /ʦʋˈelf/ "twelve_NUM"
+	<kenne> /kʰˈenə/ "can_VERB"
+	<Schweschter> /ʃwˈeʃtəʁ/ "sister_NOUN"
 
 /ˈəi̯/ (0.013)
 	<Bein> /b̥ˈəi̯n/ "bone_NOUN"
@@ -59,15 +59,15 @@ VOWELS
 	<Seel> /sˈeːl/ "soul_NOUN"
 	<Schnee> /ʃnˈeː/ "snow_NOUN"
 
-/i/ (0.011)
-	<Kirich> /kʰˈiːʁiʃ/ "church_NOUN_FEM"
-	<Millich> /mˈiliʃ/ "milk_NOUN_FEM"
-	<heili> /hˈəi̯li/ "holy_ADJ"
-
 /ˈyː/ (0.011)
-	<süür> /sˈyːʁ/ "sour_ADJ"
-	<Müs> /mˈyːs/ "mouse_NOUN_FEM"
+	<Düüb> /d̥ˈyːb̥/ "dove_NOUN"
 	<Mül> /mˈyːl/ "mouth_NOUN"
+	<Hüs> /hˈyːs/ "house_NOUN"
+
+/i/ (0.011)
+	<zwànzig> /ʦʋˈɒnʦiʃ/ "twenty_NUM"
+	<Kinni> /kʰˈini/ "king_NOUN"
+	<Millich> /mˈiliʃ/ "milk_NOUN_FEM"
 
 /ˈæː/ (0.008)
 	<Käs> /kʰˈæːs/ "cheese_NOUN"
@@ -96,26 +96,26 @@ VOWELS
 	<saawe> /sˈaːvə/ "say_VERB"
 	<Naawel> /nˈaːvl̩/ "fingernail_NOUN"
 
+/ˈɔi̯/ (0.001)
+	<Fràui> /fʁˈɔi̯/ "woman_NOUN"
+
 /ˈœ/ (0.001)
 	<Auw> /ˈœʋ/ "eye_NOUN"
 
-/ˈai̯/ (0.001)
-	<traime> /tʁˈai̯mə/ "dream_VERB"
-
-/e/ (0.001)
-	<finef> /fˈinef/ "five_NUM"
-
-/ˈɔi̯/ (0.001)
-	<Fràui> /fʁˈɔi̯/ "woman_NOUN"
+/ˈøi̯/ (0.001)
+	<döisig> /d̥ˈøi̯siʃ/ "thousand_NUM"
 
 /ˈø/ (0.001)
 	<Vöjel> /fˈøɡ̊l̩/ "bird_NOUN_MASC"
 
+/ˈai̯/ (0.001)
+	<traime> /tʁˈai̯mə/ "dream_VERB"
+
 /eː/ (0.001)
 	<drizehn> /d̥ʁˈiʦeːn/ "thirteen_NUM"
 
-/ˈøi̯/ (0.001)
-	<döisig> /d̥ˈøi̯siʃ/ "thousand_NUM"
+/e/ (0.001)
+	<finef> /fˈinef/ "five_NUM"
 
 
 
@@ -180,15 +180,15 @@ CONSONANTS
 	<heiss> /hˈəi̯s/ "hot_ADJ"
 	<heili> /hˈəi̯li/ "holy_ADJ"
 
-/ɡ̊/ (0.016)
-	<güet> /ɡ̊ˈʊːt/ "good_ADJ"
-	<grien> /ɡ̊ʁˈiːn/ "green_ADJ"
-	<gäl> /ɡ̊ˈæːl/ "yellow_ADJ"
-
 /ʦ/ (0.016)
-	<Zàhn> /ʦˈɒːn/ "tooth_NOUN"
-	<drizehn> /d̥ʁˈiʦeːn/ "thirteen_NUM"
-	<zwelf> /ʦʋˈelf/ "twelve_NUM"
+	<Zit> /ʦˈiːt/ "time_NOUN"
+	<zwànzig> /ʦʋˈɒnʦiʃ/ "twenty_NUM"
+	<zwei> /ʦʋˈəi̯/ "two_NUM"
+
+/ɡ̊/ (0.016)
+	<Gràs> /ɡ̊ʁˈɒːs/ "grass_NOUN_NEU"
+	<Gott> /ɡ̊ˈot/ "god_NOUN"
+	<gross> /ɡ̊ʁˈoːs/ "great_ADJ"
 
 /kʰ/ (0.014)
 	<Kopf> /kʰˈop͡f/ "head_NOUN"

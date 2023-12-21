@@ -34,25 +34,25 @@ VOWELS
 	<Siel> /zˈiːl/ "soul_NOUN"
 	<Ies> /ˈiːs/ "ice_NOUN"
 
-/ˈaː/ (0.016)
-	<Has> /hˈaːs/ "hare_NOUN"
-	<Waßer> /ʋˈaːsɐ/ "water_NOUN"
-	<Jras> /jʀˈaːs/ "grass_NOUN_NEU"
-
 /ˈɛː/ (0.016)
-	<Stään> /ʃtˈɛːn/ "star_NOUN"
-	<Bär> /bˈɛːɐ/ "bear_NOUN"
-	<Berch> /bˈɛːɐɕ/ "mountain_NOUN"
+	<Nääl> /nˈɛːl/ "fingernail_NOUN"
+	<Wääch> /ʋˈɛːɕ/ "way_NOUN"
+	<äße> /ˈɛːsə/ "eat_VERB"
+
+/ˈɔ/ (0.016)
+	<Ovve> /ˈɔvə/ "oven_NOUN"
+	<Volk> /fˈɔlk/ "folk_NOUN"
+	<Kopp> /kˈɔp/ "head_NOUN"
 
 /ˈuː/ (0.016)
 	<Brut> /bʀˈuːt/ "bread_NOUN"
 	<suur> /zˈuːɐ/ "sour_ADJ"
 	<Huut> /hˈuːt/ "skin_NOUN"
 
-/ˈɔ/ (0.016)
-	<Storm> /ʃtˈɔɐm/ "storm_NOUN"
-	<Mond> /mˈɔnt/ "mouth_NOUN"
-	<Dochter> /dˈɔxtɐ/ "daughter_NOUN"
+/ˈaː/ (0.016)
+	<sage> /zˈaːɣə/ "say_VERB"
+	<Naach> /nˈaːx/ "night_NOUN_FEM"
+	<Daach> /dˈaːx/ "day_NOUN"
 
 /ˈe/ (0.014)
 	<wesse> /ʋˈesə/ "know_VERB"
@@ -74,15 +74,15 @@ VOWELS
 	<Frönk> /fʀˈœŋk/ "friend_NOUN"
 	<fönnef> /fˈœnəf/ "five_NUM"
 
-/ˈyː/ (0.01)
-	<Füür> /fˈyːɐ/ "fire_NOUN"
-	<ühr> /ˈyːɐ/ "ye_PRON"
-	<Müüs> /mˈyːs/ "mice_NOUN"
-
 /ˈøː/ (0.01)
-	<söß> /zˈøːs/ "sweet_ADJ"
-	<Föß> /fˈøːs/ "feet_NOUN"
-	<drööme> /dʀˈøːmə/ "dream_VERB"
+	<föhle> /fˈøːlə/ "feel_VERB"
+	<drötzeng> /dʀˈøːʦeŋ/ "thirteen_NUM"
+	<söke> /zˈøːkə/ "seek_VERB"
+
+/ˈyː/ (0.01)
+	<Üül> /ˈyːl/ "owl_NOUN"
+	<vür> /fˈyːɐ/ "for_PREP"
+	<schün> /ʃˈyːn/ "beautiful_ADJ"
 
 /ˈaʊ̯/ (0.008)
 	<Sau> /zˈaʊ̯/ "sow_NOUN"
@@ -99,20 +99,20 @@ VOWELS
 	<drei> /dʀˈeɪ̯/ "three_NUM"
 	<Ei> /ˈeɪ̯/ "egg_NOUN_NEU"
 
-/ˈu/ (0.003)
-	<Hunnig> /hˈunəɕ/ "honey_NOUN"
-	<kumme> /kˈumə/ "come_VERB"
-	<Fuss> /fˈus/ "fox_NOUN"
-
-/ɪ/ (0.003)
-	<Meelich> /mˈeːlɪɕ/ "milk_NOUN_FEM"
-	<zwanzig> /ʦʋˈanʦɪɕ/ "twenty_NUM"
-	<Künning> /kˈʏnɪŋ/ "king_NOUN"
-
 /ˈʊ/ (0.003)
 	<Wurm> /ʋˈʊɐm/ "worm_NOUN"
 	<unger> /ˈʊŋɐ/ "under_PREP"
 	<uns> /ˈʊns/ "us_PRON"
+
+/ˈu/ (0.003)
+	<Fuss> /fˈus/ "fox_NOUN"
+	<Hunnig> /hˈunəɕ/ "honey_NOUN"
+	<kumme> /kˈumə/ "come_VERB"
+
+/ɪ/ (0.003)
+	<zwanzig> /ʦʋˈanʦɪɕ/ "twenty_NUM"
+	<Künning> /kˈʏnɪŋ/ "king_NOUN"
+	<Meelich> /mˈeːlɪɕ/ "milk_NOUN_FEM"
 
 /ˈoʊ̯/ (0.002)
 	<Vouel> /fˈoʊ̯əl/ "bird_NOUN_MASC"
@@ -157,15 +157,15 @@ CONSONANTS
 	<Tron> /tʀˈoːn/ "tear_NOUN_FEM"
 	<Blot> /blˈoːt/ "blood_NOUN"
 
-/s/ (0.033)
-	<Jras> /jʀˈaːs/ "grass_NOUN_NEU"
-	<schesse> /ʃˈesə/ "shoot_VERB"
-	<uns> /ˈʊns/ "us_PRON"
-
 /ʀ/ (0.033)
-	<riech> /ʀˈiːɕ/ "rich_ADJ"
-	<rut> /ʀˈuːt/ "red_ADJ"
-	<Jras> /jʀˈaːs/ "grass_NOUN_NEU"
+	<frei> /fʀˈeɪ̯/ "free_ADJ"
+	<Reng> /ʀˈeŋk/ "ring_NOUN"
+	<drei> /dʀˈeɪ̯/ "three_NUM"
+
+/s/ (0.033)
+	<Muus> /mˈuːs/ "mouse_NOUN_FEM"
+	<Müüs> /mˈyːs/ "mice_NOUN"
+	<hasse> /hˈasə/ "hate_VERB"
 
 /m/ (0.031)
 	<Minsch> /mˈɪnʃ/ "person_NOUN"
@@ -187,15 +187,15 @@ CONSONANTS
 	<Wank> /ʋˈaŋk/ "wind_NOUN"
 	<Wedder> /ʋˈɛdɐ/ "weather_NOUN"
 
-/b/ (0.024)
-	<Blatt> /blˈat/ "leaf_NOUN_NEU"
-	<Been> /bˈeːn/ "bone_NOUN"
-	<Bross> /bʀˈos/ "breast_NOUN"
-
 /z/ (0.024)
-	<seech> /zˈeːɕ/ "sick_ADJ"
-	<dausend> /dˈaʊ̯zənt/ "thousand_NUM"
-	<suur> /zˈuːɐ/ "sour_ADJ"
+	<Sau> /zˈaʊ̯/ "sow_NOUN"
+	<Sester> /zˈɛstɐ/ "sister_NOUN"
+	<sechs> /zˈɛks/ "six_NUM"
+
+/b/ (0.024)
+	<blode> /blˈoːdə/ "bleed_VERB"
+	<Boom> /bˈoːm/ "tree_NOUN"
+	<Bloom> /blˈoːm/ "flower_NOUN"
 
 /h/ (0.023)
 	<Honger> /hˈoŋɐ/ "hunger_NOUN"

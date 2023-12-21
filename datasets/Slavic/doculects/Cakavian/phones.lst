@@ -24,15 +24,15 @@ VOWELS
 	<ũsta> /uˈːsta/ "MOUTH_NOUN"
 	<vȗk> /ʋuˈːk/ "WOLF_NOUN"
 
-/aː/ (0.008)
-	<ȍblāk> /oˈblaːk/ "CLOUD_NOUN"
-	<ɡlāvȁ> /ɡlaːʋaˈ/ "HEAD_NOUN"
-	<trāvȁ> /traːʋaˈ/ "GRASS_NOUN"
-
 /iː/ (0.008)
-	<zvīzdȁ> /zʋiːzdaˈ/ "STAR_NOUN"
-	<krīlȍ> /kriːloˈ/ "WING_NOUN"
 	<žīvȉti> /ʒiːʋiˈti/ "LIVE_VERB"
+	<zvīzdȁ> /zʋiːzdaˈ/ "STAR_NOUN"
+	<mlīkȍ> /mliːkoˈ/ "MILK_NOUN"
+
+/aː/ (0.008)
+	<ɡlāvȁ> /ɡlaːʋaˈ/ "HEAD_NOUN"
+	<tȅpā> /teˈpaː/ "WARM_ADJ"
+	<ȍblāk> /oˈblaːk/ "CLOUD_NOUN"
 
 /uː/ (0.004)
 	<ɡȍlūb> /ɡoˈluːp/ "DOVE_NOUN"
@@ -85,40 +85,40 @@ CONSONANTS
 	<zvīzdȁ> /zʋiːzdaˈ/ "STAR_NOUN"
 	<dȍbar> /doˈbar/ "GOOD_ADJ"
 
-/m/ (0.025)
-	<zemlȁ> /zemlaˈ/ "EARTH_NOUN"
-	<mȏre> /moˈːre/ "SEA_NOUN"
-	<mȗž> /muˈːʃ/ "HUSBAND_NOUN"
-
 /p/ (0.025)
-	<hlȉb> /xliˈp/ "BREAD_NOUN"
-	<pȑst> /prˈ̩st/ "FINGER_NOUN"
-	<ɡlȗp> /ɡluˈːp/ "STUPID_ADJ"
+	<pȁs> /paˈs/ "DOG_NOUN"
+	<tȅpā> /teˈpaː/ "WARM_ADJ"
+	<pȉti> /piˈti/ "DRINK_VERB"
+
+/m/ (0.025)
+	<smȑt> /smr̩ˈt/ "DEATH_NOUN"
+	<dĩm> /diˈːm/ "SMOKE_NOUN"
+	<mȇso> /meˈːso/ "MEAT_NOUN"
 
 /ɡ/ (0.023)
-	<ɡlāvȁ> /ɡlaːʋaˈ/ "HEAD_NOUN"
+	<ɡlȃs> /ɡlaˈːs/ "VOICE_NOUN"
 	<ɡorȁ> /ɡoraˈ/ "MOUNTAIN_NOUN"
-	<ȍɡanj> /oˈɡaɲ/ "FIRE_NOUN"
+	<ɡlāvȁ> /ɡlaːʋaˈ/ "HEAD_NOUN"
 
 /z/ (0.02)
-	<jȅzero> /jeˈzero/ "LAKE_NOUN"
 	<zȗb> /zuˈːp/ "TOOTH_NOUN"
-	<jazȉk> /jaziˈk/ "TONGUE_NOUN"
+	<zdrãv> /zdraˈːʋ/ "HEALTHY_ADJ"
+	<zelẽn> /zeleˈːn/ "GREEN_ADJ"
 
 /ʦ/ (0.016)
-	<cȋl> /ʦiˈːl/ "WHOLE_ADJ"
-	<cȋ> /ʦiˈː/ "WHOLE_ADJ"
 	<mȉsēc> /miˈseːʦ/ "MONTH_NOUN"
+	<cȋl> /ʦiˈːl/ "WHOLE_ADJ"
+	<sȑce> /srˈ̩ʦe/ "HEART_NOUN"
+
+/x/ (0.012)
+	<nȍhat> /noˈxat/ "FINGERNAIL_NOUN"
+	<ȕho> /uˈxo/ "EAR_NOUN"
+	<hlȉb> /xliˈp/ "BREAD_NOUN"
 
 /b/ (0.012)
 	<dȍbar> /doˈbar/ "GOOD_ADJ"
-	<bĩ> /biˈː/ "WHITE_ADJ"
-	<ȍblāk> /oˈblaːk/ "CLOUD_NOUN"
-
-/x/ (0.012)
-	<ȕho> /uˈxo/ "EAR_NOUN"
-	<hlȃdan> /xlaˈːdan/ "COLD_ADJ"
-	<orȉh> /oriˈx/ "NUT_NOUN"
+	<rȉba> /riˈba/ "FISH_NOUN"
+	<bĩl> /biˈːl/ "WHITE_ADJ"
 
 /ʒ/ (0.01)
 	<ženȁ> /ʒenaˈ/ "WOMAN_NOUN"

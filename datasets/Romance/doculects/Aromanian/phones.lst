@@ -64,15 +64,15 @@ VOWELS
 	<ɡhine> /ɡˈine/ "WELL (ADV)_ADV"
 	<bune> /bˈune/ "GOOD (F.PL)_ADJ"
 
-/ɨ/ (0.003)
-	<mãcari> /mɨkˈari/ "EAT_VERB"
-	<mãschari> /mɨʃkˈari/ "BITE_VERB"
-	<pãnticã> /pɨntˈikə/ "BELLY_NOUN"
-
 /ˈə/ (0.003)
-	<dzãtsiri> /ʣˈəʦiri/ "SAY-INF_VERB"
-	<dzã> /ʣˈə/ "GOD_NOUN"
 	<ɡurã> /ɡurˈə/ "THROAT_NOUN"
+	<dzãc> /ʣˈək/ "SAY-1SG_VERB"
+	<dzã> /ʣˈə/ "GOD_NOUN"
+
+/ɨ/ (0.003)
+	<cãtushi> /kɨtˈuʃi/ "CAT_NOUN"
+	<pãnticã> /pɨntˈikə/ "BELLY_NOUN"
+	<mãcari> /mɨkˈari/ "EAT_VERB"
 
 /e̯a/ (0.002)
 	<pitreatsiri> /pitre̯aʦiˈiri/ "PARTY_NOUN"
@@ -106,15 +106,15 @@ CONSONANTS
 	<siptãmãnã> /siptəmˈɨnə/ "WEEK_NOUN"
 	<plin> /plˈin/ "FULL_ADJ"
 
-/l/ (0.03)
-	<lunã> /lˈunə/ "MOON_NOUN"
-	<lapti> /lˈapti/ "MILK_NOUN"
-	<lup> /lˈup/ "WOLF_NOUN"
-
 /m/ (0.03)
-	<feaminã> /fe̯ˈaminə/ "WOMAN_NOUN"
-	<fum> /fˈum/ "SMOKE_NOUN"
-	<mãschari> /mɨʃkˈari/ "BITE_VERB"
+	<nume> /nˈumi/ "NAME_NOUN"
+	<numã> /nˈumə/ "NAME_NOUN"
+	<vimtu> /vˈimtu/ "WIND_NOUN"
+
+/l/ (0.03)
+	<lemnu> /lˈemnu/ "WOOD_NOUN"
+	<cheali> /ke̯ˈali/ "SKIN_NOUN"
+	<yitsãl> /jiʦˈɨl/ "CALF_NOUN"
 
 /ʦ/ (0.024)
 	<dzãtsiri> /ʣˈəʦiri/ "SAY-INF_VERB"
@@ -136,30 +136,30 @@ CONSONANTS
 	<da> /dˈa/ "GIVE-3SG_VERB"
 	<dultsi> /dˈulʦi/ "SWEET_ADJ"
 
+/ʎ/ (0.016)
+	<hilj> /çˈiʎ/ "SON_NOUN"
+	<oclji> /ˈokʎi/ "EYES_NOUN"
+	<ljuftã> /ʎˈuftə/ "FIGHT_NOUN"
+
 /b/ (0.016)
 	<ɡalbin> /ɡˈalbin/ "YELLOW_ADJ"
-	<bune> /bˈune/ "GOOD (F.PL)_ADJ"
 	<limbã> /lˈimbə/ "TONGUE_NOUN"
-
-/ʎ/ (0.016)
-	<ljuftã> /ʎˈuftə/ "FIGHT_NOUN"
-	<hilj> /çˈiʎ/ "SON_NOUN"
-	<dzinuclju> /ʣinˈukʎu/ "KNEE_NOUN"
-
-/ʃ/ (0.013)
-	<tsireashã> /ʦire̯ˈaʃə/ "CHERRY_NOUN"
-	<shtii> /ʃtˈii/ "KNOW-2SG_VERB"
-	<shapti> /ʃˈapti/ "SEVEN_NUM"
-
-/f/ (0.013)
-	<aflari> /aflˈari/ "BLOW-FIND_VERB"
-	<fãrinã> /fərˈinə/ "FLOUR_NOUN"
-	<feaminã> /fe̯ˈaminə/ "WOMAN_NOUN"
+	<buni> /bˈuni/ "GOOD (M.PL)_ADJ"
 
 /ʣ/ (0.013)
-	<dzinuclju> /ʣinˈukʎu/ "KNEE_NOUN"
+	<dzãc> /ʣˈək/ "SAY-1SG_VERB"
 	<dosprãdzatsi> /dˈosprəʣaʦi/ "TWELVE_NUM"
-	<dziniri> /ʣˈiniri/ "SON-IN-LAW_NOUN"
+	<dzuã> /ʣˈuə/ "DAY_NOUN"
+
+/ʃ/ (0.013)
+	<shtii> /ʃtˈii/ "KNOW-2SG_VERB"
+	<cinushi> /ʧinˈuʃi/ "ASH_NOUN"
+	<cãtushi> /kɨtˈuʃi/ "CAT_NOUN"
+
+/f/ (0.013)
+	<cãftari> /kəftˈari/ "HUNT_VERB"
+	<fum> /fˈum/ "SMOKE_NOUN"
+	<frut> /frˈut/ "FRUIT_NOUN"
 
 /ɡ/ (0.011)
 	<yinɡhits> /jiŋɡˈiʦ/ "TWENTY_NUM"

@@ -72,15 +72,15 @@ CONSONANTS
 	<neve> /nˈɛve/ "SNOW_NOUN"
 	<vinti> /vˈinti/ "TWENTY_NUM"
 
-/k/ (0.039)
-	<cuɡnu> /kˈuɲu/ "CORNER_NOUN"
-	<cinque> /ʧˈiŋkwe/ "FIVE_NUM"
-	<pesca> /pˈɛska/ "PEACH_NOUN"
-
 /t/ (0.039)
 	<morte> /mˈɔrte/ "DEATH_NOUN"
-	<studiu> /ʃtˈudju/ "STUDY_NOUN"
-	<matre> /mˈatre/ "MOTHER_NOUN"
+	<aiutà> /ajutˈa/ "HELP_VERB"
+	<cantu> /kˈantu/ "SONG_NOUN"
+
+/k/ (0.039)
+	<cuɡnu> /kˈuɲu/ "CORNER_NOUN"
+	<cortu> /kˈortu/ "SHORT_ADJ"
+	<capu> /kˈapu/ "HEAD_NOUN"
 
 /l/ (0.032)
 	<mele> /mˈele/ "HONEY_NOUN"
@@ -122,25 +122,25 @@ CONSONANTS
 	<sabbia> /sˈabːja/ "SAND_NOUN"
 	<aiutà> /ajutˈa/ "HELP_VERB"
 
-/lː/ (0.014)
-	<collu> /kˈɔlːu/ "NECK_NOUN"
-	<anellu> /anˈɛlːu/ "RING_NOUN"
-	<ɡiallu> /ʤˈalːu/ "YELLOW_ADJ"
-
 /ɟ/ (0.014)
-	<ɡhjalà> /ɟalˈa/ "FREEZE_VERB"
-	<ɡhjudice> /ɟˈudiʧe/ "JUDGE_NOUN"
-	<leɡhje> /lˈeɟe/ "READ_VERB"
+	<ɡhjuɡnu> /ɟˈuɲu/ "JUNE_PROPN"
+	<ɡhjinochju> /ɟinˈɔcu/ "KNEE_NOUN"
+	<ɡhjovanu> /ɟˈɔvanu/ "YOUNG_ADJ"
 
-/b/ (0.014)
-	<boni> /bˈɔni/ "GOOD (M.PL)_ADJ"
-	<bellu> /bˈɛlːu/ "BEAUTIFUL (M)_ADJ"
-	<bassu> /bˈasːu/ "LOW_ADJ"
+/lː/ (0.014)
+	<castellu> /kastˈelːu/ "CASTLE_NOUN"
+	<billicu> /bˈilːiku/ "NAVEL_NOUN"
+	<mille> /mˈilːe/ "THOUSAND_NUM"
 
 /ʧ/ (0.014)
-	<dece> /dˈeʧe/ "TEN_NUM"
-	<croce> /krˈɔʧe/ "CROSS_NOUN"
-	<cinque> /ʧˈiŋkwe/ "FIVE_NUM"
+	<noce> /nˈɔʧe/ "NUT_NOUN"
+	<cità> /ʧitˈa/ "CITY_NOUN"
+	<celu> /ʧˈelu/ "SKY_NOUN"
+
+/b/ (0.014)
+	<billicu> /bˈilːiku/ "NAVEL_NOUN"
+	<brusɡià> /bruʒˈa/ "BURN_VERB"
+	<nube> /nˈube/ "CLOUD_NOUN"
 
 /tː/ (0.01)
 	<quattru> /kwˈatːru/ "FOUR_NUM"
@@ -172,15 +172,15 @@ CONSONANTS
 	<autunnu> /awtˈunːu/ "AUTUMN_NOUN"
 	<sanɡue> /sˈaŋɡwe/ "BLOOD_NOUN"
 
-/sː/ (0.004)
-	<sassu> /sˈasːu/ "ROCK_NOUN"
-	<ɡrossu> /ɡrˈɔsːu/ "THICK_ADJ"
-	<ɡrassa> /ɡrˈasːa/ "FAT_NOUN"
-
 /ʎ/ (0.004)
-	<aɡliu> /ˈaʎu/ "GARLIC_NOUN"
 	<foɡlia> /fˈɔʎa/ "LEAF_NOUN"
-	<fiɡlia> /fˈiʎa/ "DAUGHTER_NOUN"
+	<fiɡliu> /fˈiʎu/ "SON_NOUN"
+	<meɡliu> /mˈeʎu/ "BETTER_ADV"
+
+/sː/ (0.004)
+	<rossu> /rˈosːu/ "RED_ADJ"
+	<sassu> /sˈasːu/ "ROCK_NOUN"
+	<bassu> /bˈasːu/ "LOW_ADJ"
 
 /kː/ (0.004)
 	<bocca> /bˈɔkːa/ "MOUTH_NOUN"
@@ -192,35 +192,35 @@ CONSONANTS
 	<curteccia> /kurtˈɛʧːa/ "BARK_NOUN"
 	<ɡoccia> /ɡˈɔʧːa/ "DROP_NOUN"
 
-/z/ (0.003)
-	<cosa> /kˈɔza/ "THING_NOUN"
-	<isula> /ˈizula/ "ISLAND_NOUN"
-	<nisunu> /nizˈunu/ "NONE_PRON"
+/ʤ/ (0.003)
+	<ɡiallu> /ʤˈalːu/ "YELLOW_ADJ"
+	<ɡioia> /ʤˈoja/ "JOY_NOUN"
+	<reɡina> /reʤˈina/ "QUEEN_NOUN"
 
 /ʃ/ (0.003)
 	<coscia> /kˈɔʃa/ "THIGH_NOUN"
 	<stella> /ʃtˈelːa/ "STAR_NOUN"
 	<studiu> /ʃtˈudju/ "STUDY_NOUN"
 
-/ʤ/ (0.003)
-	<ɡinɡhjiva> /ʤiŋɟˈiva/ "GUMS_NOUN"
-	<pioɡia> /pjˈoʤa/ "RAIN_NOUN"
-	<ɡioia> /ʤˈoja/ "JOY_NOUN"
+/z/ (0.003)
+	<casa> /kˈaza/ "HOUSE_NOUN"
+	<nasu> /nˈazu/ "NOSE_NOUN"
+	<isula> /ˈizula/ "ISLAND_NOUN"
 
 /nː/ (0.003)
 	<cunnosce> /kunːˈɔʃe/ "BE ACQUAINTED WITH_VERB"
 	<donna> /dˈɔnːa/ "LADY_NOUN"
 	<annu> /ˈanːu/ "YEAR_NOUN"
 
-/ʦ/ (0.002)
-	<falzu> /fˈalʦu/ "FALSE_ADJ"
-	<forza> /fˈɔrʦa/ "STRENGTH_NOUN"
-	<scorza> /skˈɔrʦa/ "BARK_NOUN"
-
 /ʦː/ (0.002)
 	<prezzu> /prˈeʦːu/ "PRICE_NOUN"
-	<palazzu> /palˈaʦːu/ "PALACE_NOUN"
 	<pozzu> /pˈoʦːu/ "WELL_NOUN"
+	<palazzu> /palˈaʦːu/ "PALACE_NOUN"
+
+/ʦ/ (0.002)
+	<falzu> /fˈalʦu/ "FALSE_ADJ"
+	<scorza> /skˈɔrʦa/ "BARK_NOUN"
+	<forza> /fˈɔrʦa/ "STRENGTH_NOUN"
 
 /ʣ/ (0.001)
 	<mezu> /mˈeʣu/ "MIDDLE_NOUN"

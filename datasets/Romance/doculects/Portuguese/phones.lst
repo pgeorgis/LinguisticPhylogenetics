@@ -44,15 +44,15 @@ VOWELS
 	<unha> /ˈuɲɐ/ "FINGERNAIL_NOUN"
 	<ruivo> /ʁˈujvu/ "RED_ADJ"
 
-/ˈɔ/ (0.016)
-	<cor> /kˈɔɾ/ "HEART_NOUN"
-	<nosso> /nˈɔsu/ "OUR_ADJ"
-	<melhor> /mɨʎˈɔɾ/ "BETTER_ADJ"
-
 /ˈɛ/ (0.016)
+	<século> /sˈɛkulu/ "CENTURY_NOUN"
+	<ferro> /fˈɛʁu/ "IRON_NOUN"
 	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
-	<dez> /dˈɛʃ/ "TEN_NUM"
-	<céu> /sˈɛw/ "SKY_NOUN"
+
+/ˈɔ/ (0.016)
+	<melhor> /mɨʎˈɔɾ/ "BETTER_ADJ"
+	<nós> /nˈɔʃ/ "WE_PRON"
+	<cola> /kˈɔlɐ/ "TAIL_NOUN"
 
 /ˈɐ̃/ (0.016)
 	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
@@ -84,37 +84,37 @@ VOWELS
 	<línɡua> /lˈĩɡwɐ/ "TONGUE_NOUN"
 	<vinte> /vˈĩtɨ/ "TWENTY_NUM"
 
-/ɔ/ (0.003)
-	<orelha> /ɔɾˈɐjʎɐ/ "EAR_NOUN"
-	<odor> /ɔðˈoɾ/ "ODOR_NOUN"
-	<obreiro> /ɔβɾˈɐjɾu/ "WORKER_NOUN"
-
 /ˈũ/ (0.003)
+	<junto> /ʒˈũtu/ "JOINED_ADJ"
 	<muito> /mˈũj̃tu/ "MANY_ADJ"
-	<nenhum> /nɨɲˈũ/ "NONE_PRON"
 	<um> /ˈũ/ "ONE_NUM"
 
-/ĩ/ (0.001)
-	<cinquenta> /sĩkwˈẽtɐ/ "FIFTY_NUM"
-	<inverno> /ĩvˈɛɾnu/ "WINTER_NOUN"
+/ɔ/ (0.003)
+	<odor> /ɔðˈoɾ/ "ODOR_NOUN"
+	<ovelha> /ɔvˈɐjʎɐ/ "SHEEP_NOUN"
+	<obreiro> /ɔβɾˈɐjɾu/ "WORKER_NOUN"
 
-/ẽ/ (0.001)
-	<sentar> /sẽtˈaɾ/ "SIT_ADJ"
-	<ɡenɡiva> /ʒẽʒˈivɐ/ "GUMS_NOUN"
+/ˈɨ/ (0.001)
+	<me> /mˈɨ/ "I_OBL_PRON"
+	<que> /kˈɨ/ "WHAT_PRON"
 
 /o/ (0.001)
 	<morrer> /moʁˈeɾ/ "DIE_VERB"
 	<outono> /owtˈonu/ "AUTUMN_NOUN"
 
-/ˈɨ/ (0.001)
-	<que> /kˈɨ/ "WHAT_PRON"
-	<me> /mˈɨ/ "I_OBL_PRON"
+/ĩ/ (0.001)
+	<inverno> /ĩvˈɛɾnu/ "WINTER_NOUN"
+	<cinquenta> /sĩkwˈẽtɐ/ "FIFTY_NUM"
 
-/õ/ (0.001)
-	<montanha> /mõtˈɐɲɐ/ "MOUNTAIN_NOUN"
+/ẽ/ (0.001)
+	<sentar> /sẽtˈaɾ/ "SIT_ADJ"
+	<ɡenɡiva> /ʒẽʒˈivɐ/ "GUMS_NOUN"
 
 /ũ/ (0.001)
 	<umbiɡo> /ũbˈiɣu/ "NAVEL_NOUN"
+
+/õ/ (0.001)
+	<montanha> /mõtˈɐɲɐ/ "MOUNTAIN_NOUN"
 
 
 
@@ -234,15 +234,15 @@ CONSONANTS
 	<não> /nɐ̃w̃/ "NOT_ADVERB"
 	<romão> /ʁumˈɐ̃w̃/ "ROMAN_ADJ"
 
-/ɡ/ (0.007)
-	<ɡola> /ɡˈɔlɐ/ "THROAT_NOUN"
-	<línɡua> /lˈĩɡwɐ/ "TONGUE_NOUN"
-	<ɡrão> /ɡɾˈɐ̃w̃/ "GRAIN_NOUN"
-
 /ɫ/ (0.007)
-	<alma> /ˈaɫmɐ/ "SOUL_NOUN"
 	<sol> /sˈɔɫ/ "SUN_NOUN"
-	<alva> /ˈaɫvɐ/ "DAWN_NOUN"
+	<mil> /mˈiɫ/ "THOUSAND_NUM"
+	<sal> /sˈaɫ/ "SALT_NOUN"
+
+/ɡ/ (0.007)
+	<ɡolpe> /ɡˈɔɫpɨ/ "STRIKE_NOUN"
+	<ɡola> /ɡˈɔlɐ/ "THROAT_NOUN"
+	<ɡrande> /ɡɾˈɐ̃dɨ/ "BIG_ADJ"
 
 /j̃/ (0.006)
 	<homem> /ˈɔmɐ̃j̃/ "MAN_NOUN"

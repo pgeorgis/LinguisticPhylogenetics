@@ -44,15 +44,15 @@ VOWELS
 	<Liicht> /lˈiːɕt/ "light_NOUN"
 	<Bier> /bˈiːɐ/ "bear_NOUN"
 
-/ˈoː/ (0.011)
-	<Nol> /nˈoːl/ "fingernail_NOUN"
-	<Joer> /jˈoːɐ/ "year_NOUN"
-	<Sprooch> /ʃpʀˈoːχ/ "speech_NOUN_FEM"
-
 /ˈæːɪ̯/ (0.011)
-	<Schwäin> /ʃwˈæːɪ̯n/ "swine_NOUN"
-	<Äis> /ˈæːɪ̯s/ "ice_NOUN"
+	<däitsch> /dˈæːɪ̯tʃ/ "Teutonic_ADJ"
 	<wäiss> /vˈæːɪ̯s/ "white_ADJ"
+	<dräi> /dʀˈæːɪ̯/ "three_NUM"
+
+/ˈoː/ (0.011)
+	<schloen> /ʃlˈoːən/ "slay_VERB"
+	<Nol> /nˈoːl/ "needle_NOUN"
+	<Joer> /jˈoːɐ/ "year_NOUN"
 
 /ˈe/ (0.011)
 	<Bréck> /bʀˈek/ "bridge_NOUN"
@@ -69,15 +69,15 @@ VOWELS
 	<Mais> /mˈɑɪ̯s/ "mice_NOUN"
 	<dreiwen> /dʀˈɑɪ̯vən/ "drive_VERB"
 
-/ˈu/ (0.01)
-	<Blumm> /blˈum/ "flower_NOUN"
-	<Stull> /ʃtˈul/ "stool_NOUN"
-	<Buch> /bˈuχ/ "book_NOUN_FEM"
-
 /ˈæːʊ̯/ (0.01)
-	<Dauf> /dˈæːʊ̯f/ "dove_NOUN"
-	<sauer> /zˈæːʊ̯ɐ/ "sour_ADJ"
+	<Maus> /mˈæːʊ̯s/ "mouse_NOUN_FEM"
 	<Sau> /zˈæːʊ̯/ "sow_NOUN"
+	<Laus> /lˈæːʊ̯s/ "louse_NOUN"
+
+/ˈu/ (0.01)
+	<Vull> /fˈul/ "bird_NOUN_MASC"
+	<Numm> /nˈum/ "name_NOUN"
+	<Stull> /ʃtˈul/ "stool_NOUN"
 
 /ˈi/ (0.009)
 	<fillen> /fˈilən/ "feel_VERB"
@@ -114,23 +114,23 @@ VOWELS
 	<Stuerm> /ʃtˈuːɐm/ "storm_NOUN"
 	<Fuuss> /fˈuːs/ "fox_NOUN"
 
-/ˈæ/ (0.003)
-	<Gäns> /ɡˈæns/ "goose_NOUN"
-	<Männer> /mˈænɐ/ "men_NOUN"
-	<Äsch> /ˈæʃ/ "ash_NOUN"
-
 /ˈɔ/ (0.003)
 	<Mond> /mˈɔnt/ "mouth_NOUN"
-	<honnert> /hˈɔnɐt/ "hundred_NUM"
 	<Zong> /ʦˈɔŋ/ "tongue_NOUN"
+	<honnert> /hˈɔnɐt/ "hundred_NUM"
 
-/e/ (0.002)
-	<dräizéng> /dʀˈæːɪ̯ʦeŋ/ "thirteen_NUM"
-	<Kinnek> /kʰˈinek/ "king_NOUN"
+/ˈæ/ (0.003)
+	<Gäns> /ɡˈæns/ "goose_NOUN"
+	<Äsch> /ˈæʃ/ "ash_NOUN"
+	<Männer> /mˈænɐ/ "men_NOUN"
 
 /ˈæɪ̯/ (0.002)
 	<Zäit> /ʦˈæɪ̯t/ "time_NOUN"
 	<räich> /ʀˈæɪ̯ɕ/ "rich_ADJ"
+
+/e/ (0.002)
+	<dräizéng> /dʀˈæːɪ̯ʦeŋ/ "thirteen_NUM"
+	<Kinnek> /kʰˈinek/ "king_NOUN"
 
 /ˈʊɪ̯/ (0.001)
 	<Duechter> /dˈʊɪ̯ʃtɐ/ "daughter_NOUN"
@@ -208,15 +208,15 @@ CONSONANTS
 	<Sëschter> /zˈəʃtɐ/ "sister_NOUN"
 	<sauer> /zˈæːʊ̯ɐ/ "sour_ADJ"
 
-/ŋ/ (0.016)
-	<zéng> /ʦˈeŋ/ "ten_NUM"
-	<drénken> /dʀˈeŋkən/ "drink_VERB"
-	<dräizéng> /dʀˈæːɪ̯ʦeŋ/ "thirteen_NUM"
-
 /ɡ/ (0.016)
-	<Geess> /ɡˈeːs/ "goat_NOUN"
+	<grouss> /ɡʀˈəʊ̯s/ "great_ADJ"
+	<Geescht> /ɡˈeːʃt/ "ghost_NOUN"
+	<gesinn> /ɡəzˈin/ "see_VERB"
+
+/ŋ/ (0.016)
+	<Honger> /hˈoŋɐ/ "hunger_NOUN"
+	<danken> /dˈɑŋkən/ "thank_VERB"
 	<gréng> /ɡʀˈeŋ/ "green_ADJ"
-	<goen> /ɡˈoːən/ "go_VERB"
 
 /ʦ/ (0.015)
 	<Zong> /ʦˈɔŋ/ "tongue_NOUN"

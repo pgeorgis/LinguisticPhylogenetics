@@ -19,15 +19,15 @@ VOWELS
 	<gaan> /χˈaːn/ "go_VERB"
 	<aal> /ˈaːɫ/ "eel_NOUN"
 
-/ˈeː/ (0.024)
-	<meer> /mˈeːɾ/ "sea_NOUN"
-	<beer> /bˈeːɾ/ "bear_NOUN"
-	<negen> /nˈeːχən/ "nine_NUM"
-
 /ˈɔ/ (0.024)
-	<mond> /mˈɔnt/ "mouth_NOUN"
-	<ons> /ˈɔns/ "us_PRON"
-	<jong> /jˈɔŋ/ "young_NOUN"
+	<donder> /dˈɔndəɾ/ "thunder_NOUN"
+	<borst> /bˈɔɾst/ "breast_NOUN"
+	<honger> /ɦˈɔŋəɾ/ "hunger_NOUN"
+
+/ˈeː/ (0.024)
+	<één> /ˈeːn/ "one_NUM"
+	<steen> /stˈeːn/ "stone_NOUN"
+	<geel> /χˈeːɫ/ "yellow_ADJ"
 
 /ˈɪ/ (0.022)
 	<ik> /ˈɪk/ "I_PRON"
@@ -122,55 +122,55 @@ CONSONANTS
 	<schip> /sχˈɪp/ "ship_NOUN"
 	<schijt> /sχˈɛi̯t/ "shit_NOUN"
 
-/k/ (0.031)
-	<drukken> /dɾˈʏkən/ "press_VERB"
-	<kuiken> /kˈœy̯kən/ "chicken_NOUN"
-	<koe> /kˈu/ "cow_NOUN"
-
 /v/ (0.031)
+	<vijf> /vˈɛi̯f/ "five_NUM"
 	<vriend> /vɾˈint/ "friend_NOUN"
 	<voelen> /vˈuɫən/ "feel_VERB"
-	<oven> /ˈoːvən/ "oven_NOUN"
+
+/k/ (0.031)
+	<volk> /vˈɔɫk/ "folk_NOUN"
+	<drukken> /dɾˈʏkən/ "press_VERB"
+	<koning> /kˈoːnɪŋ/ "king_NOUN"
 
 /m/ (0.028)
-	<naam> /nˈaːm/ "name_NOUN"
-	<maan> /mˈaːn/ "moon_NOUN"
 	<droom> /dɾˈoːm/ "dream_NOUN"
+	<storm> /stˈɔɾm/ "storm_NOUN"
+	<bloem> /bɫˈum/ "flower_NOUN"
 
 /ʋ/ (0.027)
-	<wonder> /ʋˈɔndəɾ/ "wonder_NOUN"
-	<zwaard> /zʋˈaːɾt/ "sword_NOUN"
 	<wal> /ʋˈɑɫ/ "whale_NOUN"
+	<woord> /ʋˈoːɾt/ "word_NOUN"
+	<wij> /ʋˈɛi̯/ "we_PRON"
 
 /z/ (0.025)
-	<zijde> /zˈɛi̯də/ "side_NOUN"
 	<ziek> /zˈik/ "sick_ADJ"
 	<zitten> /zˈɪtən/ "sit_VERB"
-
-/b/ (0.022)
-	<bad> /bˈɑt/ "bath_NOUN_NEU"
-	<broeder> /bɾˈudəɾ/ "brother_NOUN"
-	<beer> /bˈeːɾ/ "bear_NOUN"
+	<zwijn> /zʋˈɛi̯n/ "swine_NOUN"
 
 /ɦ/ (0.022)
-	<hart> /ɦˈɑɾt/ "heart_NOUN"
-	<huid> /ɦˈœy̯t/ "skin_NOUN"
-	<huis> /ɦˈœy̯s/ "house_NOUN"
+	<hond> /ɦˈɔnt/ "dog_NOUN"
+	<heem> /ɦˈeːm/ "home_NOUN"
+	<haar> /ɦˈaːɾ/ "hair_NOUN"
+
+/b/ (0.022)
+	<boot> /bˈoːt/ "boat_NOUN"
+	<boom> /bˈoːm/ "tree_NOUN"
+	<blad> /bɫˈɑt/ "leaf_NOUN_NEU"
 
 /p/ (0.014)
 	<schaap> /sχˈaːp/ "sheep_NOUN"
 	<wapen> /ʋˈaːpən/ "weapon_NOUN"
 	<pad> /pˈɑt/ "path_NOUN"
 
-/f/ (0.012)
-	<twaalf> /tʋˈaːɫəf/ "twelve_NUM"
-	<duif> /dˈœy̯f/ "dove_NOUN"
-	<wijf> /ʋˈɛi̯f/ "wife_NOUN"
-
 /ŋ/ (0.012)
-	<slang> /sɫˈɑŋ/ "snake_NOUN"
-	<honger> /ɦˈɔŋəɾ/ "hunger_NOUN"
-	<drinken> /dɾˈɪŋkən/ "drink_VERB"
+	<ding> /dˈɪŋ/ "thing_NOUN"
+	<honing> /ɦˈoːnɪŋ/ "honey_NOUN"
+	<tong> /tˈɔŋ/ "tongue_NOUN"
+
+/f/ (0.012)
+	<zelf> /zˈɛɫf/ "self_PRON"
+	<elf> /ˈɛɫəf/ "eleven_NUM"
+	<lief> /ɫˈif/ "beloved_ADJ"
 
 /j/ (0.003)
 	<jij> /jˈɛi̯/ "ye_PRON"

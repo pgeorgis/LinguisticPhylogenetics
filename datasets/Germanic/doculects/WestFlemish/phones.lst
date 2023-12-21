@@ -39,35 +39,35 @@ VOWELS
 	<voet> /vˈuə̯t/ "foot_NOUN"
 	<voeln> /vˈuə̯ln̩/ "feel_VERB"
 
-/ˈeː/ (0.016)
-	<weeke> /ʋˈeːkə/ "week_NOUN"
-	<geevn> /ɦˈeːvn̩/ "give_VERB"
-	<teen> /tˈeːn/ "toe_NOUN"
-
 /ˈɔ/ (0.016)
-	<kolf> /kˈɔwf/ "calf_NOUN"
-	<vos> /vˈɔs/ "fox_NOUN"
-	<borst> /bˈɔɾst/ "breast_NOUN"
+	<onder> /ˈɔndəɾ/ "under_PREP"
+	<volk> /vˈɔwk/ "folk_NOUN"
+	<storm> /stˈɔɾm/ "storm_NOUN"
+
+/ˈeː/ (0.016)
+	<eetn> /ˈeːtn̩/ "eat_VERB"
+	<lever> /lˈeːvɾ̩/ "liver_NOUN"
+	<beter> /bˈeːtəɾ/ "better_ADJ"
 
 /ˈɛː/ (0.013)
 	<beên> /bˈɛːn/ "bone_NOUN"
 	<twêe> /tʋˈɛː/ "two_NUM"
 	<snêeuw> /snˈɛːw/ "snow_NOUN"
 
+/ˈyː/ (0.012)
+	<duuts> /dˈyːts/ "Teutonic_ADJ"
+	<uul> /ˈyːl/ "owl_NOUN"
+	<luus> /lˈyːs/ "louse_NOUN"
+
 /ˈu/ (0.012)
-	<koud> /kˈut/ "cold_ADJ"
 	<zout> /zˈut/ "salt_NOUN"
+	<koud> /kˈut/ "cold_ADJ"
 	<ounger> /ˈuŋɾ̩/ "hunger_NOUN"
 
 /ˈi/ (0.012)
-	<zwyn> /zʋˈin/ "swine_NOUN"
-	<bitn> /bˈitn̩/ "bite_VERB"
+	<tyd> /tˈit/ "time_NOUN"
+	<gy> /ɦˈi/ "ye_PRON"
 	<ryk> /ɾˈik/ "rich_ADJ"
-
-/ˈyː/ (0.012)
-	<zuur> /zˈyːɾ/ "sour_ADJ"
-	<wuuf> /ʋˈyːf/ "wife_NOUN"
-	<luus> /lˈyːs/ "louse_NOUN"
 
 /ˈœ/ (0.011)
 	<drukkn> /dɾˈœkn̩/ "press_VERB"
@@ -118,15 +118,15 @@ CONSONANTS
 	<ys> /ˈis/ "ice_NOUN"
 	<snêeuw> /snˈɛːw/ "snow_NOUN"
 
-/k/ (0.037)
-	<kop> /kˈɔp/ "head_NOUN"
-	<ring> /ɾˈɪŋk/ "ring_NOUN"
-	<kind> /kˈɪnt/ "child_NOUN"
-
 /l/ (0.037)
-	<vliege> /vlˈiə̯ɦə/ "housefly_NOUN"
-	<lucht> /lˈœht/ "light_NOUN"
-	<wal> /ʋˈɑl/ "whale_NOUN"
+	<land> /lˈɑnt/ "land_NOUN"
+	<uul> /ˈyːl/ "owl_NOUN"
+	<noagel> /nˈɒːɦəl/ "fingernail_NOUN"
+
+/k/ (0.037)
+	<drinkn> /dɾˈɪŋkn̩/ "drink_VERB"
+	<eik> /ˈɛːk/ "oak_NOUN_FEM"
+	<joung> /jˈuŋk/ "young_NOUN"
 
 /d/ (0.036)
 	<dertienne> /dˈæɾtiə̯nə/ "thirteen_NUM"
@@ -148,35 +148,35 @@ CONSONANTS
 	<twolve> /tʋˈɔwvə/ "twelve_NUM"
 	<wit> /ʋˈɛt/ "white_ADJ"
 
-/h/ (0.024)
-	<recht> /ɾˈæht/ "right_ADJ"
-	<plicht> /plˈɛht/ "plight_NOUN"
-	<schild> /ʃhˈɪwt/ "shield_NOUN"
-
 /m/ (0.024)
-	<oarm> /ˈɒːɾm/ "arm_NOUN"
+	<muus> /mˈyːs/ "mouse_NOUN_FEM"
+	<moedr> /mˈuə̯dɾ̩/ "mother_NOUN"
 	<mins> /mˈɪns/ "person_NOUN"
-	<komn> /kˈoːmn̩/ "come_VERB"
+
+/h/ (0.024)
+	<schoon> /ʃhˈoːn/ "beautiful_ADJ"
+	<schild> /ʃhˈɪwt/ "shield_NOUN"
+	<dochter> /dˈɔhtɾ̩/ "daughter_NOUN"
 
 /b/ (0.019)
 	<borst> /bˈɔɾst/ "breast_NOUN"
 	<broer> /bɾˈuə̯ɾ/ "brother_NOUN"
 	<bloar> /blˈɒːɾ/ "leaf_NOUN_NEU"
 
-/p/ (0.013)
-	<sproake> /spɾˈɒːkə/ "speech_NOUN_FEM"
-	<op> /ˈɔp/ "up_ADV"
-	<scherp> /ʃhˈæɾp/ "sharp_ADJ"
+/ŋ/ (0.013)
+	<tonge> /tˈuŋə/ "tongue_NOUN"
+	<joung> /jˈuŋk/ "young_NOUN"
+	<zingn> /zˈɪŋn̩/ "sing_VERB"
 
 /w/ (0.013)
 	<twolve> /tʋˈɔwvə/ "twelve_NUM"
 	<volk> /vˈɔwk/ "folk_NOUN"
 	<snêeuw> /snˈɛːw/ "snow_NOUN"
 
-/ŋ/ (0.013)
-	<ding> /dˈɪŋk/ "thing_NOUN"
-	<koning> /kˈoːnɪŋ/ "king_NOUN"
-	<drinkn> /dɾˈɪŋkn̩/ "drink_VERB"
+/p/ (0.013)
+	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
+	<kop> /kˈɔp/ "head_NOUN"
+	<oap> /ˈɒːp/ "ape_NOUN"
 
 /f/ (0.01)
 	<oofd> /ˈoːft/ "head_NOUN"

@@ -29,25 +29,25 @@ VOWELS
 	<vizinho> /vizˈĩj̃u/ "NEIGHBOR_NOUN"
 	<ɡente> /ʒˈẽʧi/ "PEOPLE_NOUN"
 
-/a/ (0.021)
-	<aɡulha> /aɡˈuʎɐ/ "NEEDLE_NOUN"
-	<areia> /aɾˈejɐ/ "SAND_NOUN"
-	<nascer> /nasˈeh/ "BE BORN_VERB"
-
 /e/ (0.021)
-	<estrela> /eʃtɾˈelɐ/ "STAR_NOUN"
-	<pêsseɡo> /pˈeseɡu/ "PEACH_NOUN"
-	<espiɡa> /eʃpˈiɡɐ/ "EAR OF GRAIN_NOUN"
+	<pequeno> /pekˈẽnu/ "SMALL_ADJ"
+	<estudo> /eʃtˈudu/ "STUDY_NOUN"
+	<conhecer> /kõj̃esˈeh/ "BE ACQUAINTED WITH_VERB"
 
-/ˈi/ (0.02)
-	<filho> /fˈiʎu/ "SON_NOUN"
-	<estio> /eʃʧˈiw/ "SUMMER_NOUN"
-	<espiɡa> /eʃpˈiɡɐ/ "EAR OF GRAIN_NOUN"
+/a/ (0.021)
+	<razão> /hazˈɐ̃w̃/ "REASON_NOUN"
+	<ajudar> /aʒudˈah/ "HELP_VERB"
+	<fazer> /fazˈeh/ "DO_VERB"
 
 /ˈɐ̃/ (0.02)
-	<razão> /hazˈɐ̃w̃/ "REASON_NOUN"
-	<ɡrande> /ɡɾˈɐ̃ʤi/ "BIG_ADJ"
-	<ano> /ˈɐ̃nu/ "YEAR_NOUN"
+	<aranha> /aɾˈɐ̃j̃ɐ/ "SPIDER_NOUN"
+	<semana> /semˈɐ̃nɐ/ "WEEK_NOUN"
+	<câmara> /kˈɐ̃maɾɐ/ "CHAMBER_NOUN"
+
+/ˈi/ (0.02)
+	<rio> /hˈiu/ "RIVER_NOUN"
+	<vir> /vˈih/ "COME-INF_VERB"
+	<que> /kˈi/ "WHAT_PRON"
 
 /ˈɛ/ (0.016)
 	<ferro> /fˈɛhu/ "IRON_NOUN"
@@ -99,13 +99,13 @@ VOWELS
 	<não> /nɐ̃w̃/ "NOT_ADVERB"
 	<planɡer> /plɐ̃ʒˈeh/ "WEEP_VERB"
 
-/ĩ/ (0.001)
-	<inverno> /ĩvˈɛɦnu/ "WINTER_NOUN"
-	<cinquenta> /sĩkwˈẽtɐ/ "FIFTY_NUM"
-
 /õ/ (0.001)
-	<conhecer> /kõj̃esˈeh/ "BE ACQUAINTED WITH_VERB"
 	<montanha> /mõtˈɐ̃j̃ɐ/ "MOUNTAIN_NOUN"
+	<conhecer> /kõj̃esˈeh/ "BE ACQUAINTED WITH_VERB"
+
+/ĩ/ (0.001)
+	<cinquenta> /sĩkwˈẽtɐ/ "FIFTY_NUM"
+	<inverno> /ĩvˈɛɦnu/ "WINTER_NOUN"
 
 /ũ/ (0.001)
 	<umbiɡo> /ũbˈiɡu/ "NAVEL_NOUN"
@@ -158,15 +158,15 @@ CONSONANTS
 	<proveito> /pɾovˈejtu/ "PROFIT_NOUN"
 	<pobre> /pˈɔbɾi/ "POOR_ADJ"
 
-/j/ (0.026)
-	<três> /tɾˈejʃ/ "THREE_NUM"
-	<peito> /pˈejtu/ "BREAST_NOUN"
-	<coisa> /kˈojzɐ/ "THING_NOUN"
-
 /m/ (0.026)
-	<morseɡar> /mohseɡˈah/ "BITE_VERB"
-	<homem> /ˈõmẽj̃/ "MAN_NOUN"
-	<amarelo> /amaɾˈɛlu/ "YELLOW_ADJ"
+	<cima> /sˈĩmɐ/ "SUMMIT_NOUN"
+	<morder> /moɦdˈeh/ "BITE_VERB"
+	<alma> /ˈawmɐ/ "SOUL_NOUN"
+
+/j/ (0.026)
+	<queimar> /kejmˈah/ "BURN_VERB"
+	<noite> /nˈojʧi/ "NIGHT_NOUN"
+	<vós> /vˈɔjʃ/ "YOU (PL)_PRON"
 
 /d/ (0.025)
 	<pedra> /pˈɛdɾɐ/ "STONE_NOUN"
@@ -213,30 +213,30 @@ CONSONANTS
 	<filho> /fˈiʎu/ "SON_NOUN"
 	<aɡulha> /aɡˈuʎɐ/ "NEEDLE_NOUN"
 
-/ɦ/ (0.008)
-	<dormir> /doɦmˈih/ "SLEEP_VERB"
-	<arɡila> /aɦʒˈilɐ/ "CLAY_NOUN"
-	<verme> /vˈɛɦmi/ "WORM_NOUN"
-
 /ʧ/ (0.008)
 	<forte> /fˈɔhʧi/ "STRONG_ADJ"
-	<leite> /lˈejʧi/ "MILK_NOUN"
-	<semente> /semˈẽʧi/ "SEED_NOUN"
+	<morte> /mˈɔhʧi/ "DEATH_NOUN"
+	<vinte> /vˈĩʧi/ "TWENTY_NUM"
+
+/ɦ/ (0.008)
+	<dormir> /doɦmˈih/ "SLEEP_VERB"
+	<erva> /ˈɛɦvɐ/ "GRASS_NOUN"
+	<carne> /kˈaɦni/ "MEAT_NOUN"
 
 /w̃/ (0.008)
 	<pão> /pˈɐ̃w̃/ "BREAD_NOUN"
 	<leão> /leˈɐ̃w̃/ "LION_NOUN"
 	<mão> /mˈɐ̃w̃/ "HAND_NOUN"
 
-/z/ (0.005)
-	<vizinho> /vizˈĩj̃u/ "NEIGHBOR_NOUN"
-	<razão> /hazˈɐ̃w̃/ "REASON_NOUN"
-	<doze> /dˈozi/ "TWELVE_NUM"
-
 /ʤ/ (0.005)
+	<verde> /vˈeɦʤi/ "GREEN_ADJ"
+	<metade> /metˈaʤi/ "HALF_NOUN"
 	<ʤizer> /ʤizˈeh/ "SAY-INF_VERB"
-	<ʤiɡo> /ʤˈiɡu/ "SAY-1SG_VERB"
-	<ʤia> /ʤˈiɐ/ "DAY_NOUN"
+
+/z/ (0.005)
+	<doze> /dˈozi/ "TWELVE_NUM"
+	<coisa> /kˈojzɐ/ "THING_NOUN"
+	<casa> /kˈazɐ/ "HOUSE_NOUN"
 
 
 

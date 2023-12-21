@@ -24,15 +24,15 @@ VOWELS
 	<oa> /ˈoɐ̯/ "one_NUM"
 	<Oarm> /ˈoɐ̯rm/ "arm_NOUN"
 
-/ɐ/ (0.021)
-	<Schduam> /ʃtˈuɐm/ "storm_NOUN"
-	<Donna> /d̥ˈonɐ/ "thunder_NOUN"
-	<Beag> /b̥ˈɛɐɡ̊/ "mountain_NOUN"
-
 /ˈu/ (0.021)
-	<Brust> /b̥rˈust/ "breast_NOUN"
-	<unta> /ˈunta/ "under_PREP"
-	<Fuchs> /fˈuks/ "fox_NOUN"
+	<du> /d̥ˈu/ "thou_PRON"
+	<Zunga> /ʦˈuŋa/ "tongue_NOUN"
+	<Ruckn> /rˈukn̩/ "ridge_NOUN"
+
+/ɐ/ (0.021)
+	<Bär> /b̥ˈɛɐ/ "bear_NOUN"
+	<wårm> /ʋˈɒɐm/ "warm_ADJ"
+	<vier> /fˈiɐ/ "four_NUM"
 
 /ˈe/ (0.016)
 	<Wetta> /ʋˈeta/ "weather_NOUN"
@@ -54,30 +54,30 @@ VOWELS
 	<laffa> /lˈafa/ "leap_VERB"
 	<Garn> /ɡ̊ˈarn/ "yarn_NOUN"
 
+/ˈɔ/ (0.011)
+	<Tochta> /tˈɔxta/ "daughter_NOUN"
+	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
+	<Nocht> /nˈɔxt/ "night_NOUN_FEM"
+
 /ˈuɐ̯/ (0.011)
-	<bluadn> /b̥lˈuɐ̯d̥n̩/ "bleed_VERB"
-	<Bruada> /b̥rˈuɐ̯d̥a/ "brother_NOUN"
-	<guad> /ɡ̊ˈuɐ̯d̥/ "good_ADJ"
+	<Muada> /mˈuɐ̯d̥a/ "mother_NOUN"
+	<suachn> /sˈuɐ̯xn̩/ "seek_VERB"
+	<Kuah> /kʰˈuɐ̯/ "cow_NOUN"
 
 /ˈoː/ (0.011)
-	<Ofa> /ˈoːfa/ "oven_NOUN"
-	<Schof> /ʃˈoːf/ "sheep_NOUN"
-	<Hos> /hˈoːs/ "hare_NOUN"
-
-/ˈɔ/ (0.011)
-	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
-	<Mond> /mˈɔnd̥/ "moon_NOUN"
-	<Gott> /ɡ̊ˈɔt/ "god_NOUN"
-
-/ˈaː/ (0.01)
-	<Nama> /nˈaːma/ "name_NOUN"
-	<Bam> /b̥ˈaːm/ "tree_NOUN"
-	<af> /ˈaːf/ "up_ADV"
+	<Gros> /ɡ̊rˈoːs/ "grass_NOUN_NEU"
+	<hom> /hˈoːm/ "have_VERB"
+	<Dog> /d̥ˈoːɡ̊/ "day_NOUN"
 
 /ˈeː/ (0.01)
-	<Reng> /rˈeːŋ/ "rain_NOUN"
-	<schee> /ʃˈeː/ "beautiful_ADJ"
 	<Leba> /lˈeːb̥a/ "liver_NOUN"
+	<Zeh> /ʦˈeː/ "toe_NOUN"
+	<eß> /ˈeːs/ "ye_PRON"
+
+/ˈaː/ (0.01)
+	<Pfad> /p͡fˈaːd̥/ "path_NOUN"
+	<Dràm> /d̥rˈaːm/ "dream_NOUN"
+	<Nama> /nˈaːma/ "name_NOUN"
 
 /ˈiɐ̯/ (0.009)
 	<siass> /sˈiɐ̯s/ "sweet_ADJ"
@@ -99,43 +99,43 @@ VOWELS
 	<Jåhr> /jˈɒːɐ/ "year_NOUN"
 	<Språch> /ʃprˈɒːx/ "speech_NOUN_FEM"
 
-/ˈiː/ (0.005)
-	<siebm> /sˈiːm/ "seven_NUM"
-	<friern> /frˈiːrn̩/ "freeze_VERB"
-	<Fiisch> /fˈiːʃ/ "fish_NOUN"
-
-/ˈeɐ̯/ (0.005)
-	<Beane> /b̥ˈeɐ̯nə/ "bee_NOUN"
-	<Bleame> /b̥lˈeɐ̯mə/ "flower_NOUN"
-	<zeah> /ʦˈeɐ̯/ "ten_NUM"
-
 /ˈou̯/ (0.005)
 	<roud> /rˈou̯d̥/ "red_ADJ"
+	<houch> /hˈou̯x/ "high_ADJ"
 	<grous> /ɡ̊rˈou̯s/ "great_ADJ"
-	<Doud> /d̥ˈou̯d̥/ "death_NOUN"
 
-/i/ (0.004)
-	<heilig> /hˈai̯liɡ̊/ "holy_ADJ"
-	<Kini> /kʰˈini/ "king_NOUN"
-	<koid> /kʰˈoid̥/ "cold_ADJ"
+/ˈiː/ (0.005)
+	<biedn> /b̥ˈiːd̥n̩/ "bid_VERB"
+	<Fiisch> /fˈiːʃ/ "fish_NOUN"
+	<siebm> /sˈiːm/ "seven_NUM"
+
+/ˈeɐ̯/ (0.005)
+	<zeah> /ʦˈeɐ̯/ "ten_NUM"
+	<Bleame> /b̥lˈeɐ̯mə/ "flower_NOUN"
+	<Beane> /b̥ˈeɐ̯nə/ "bee_NOUN"
 
 /ˈɛː/ (0.004)
 	<Schnää> /ʃnˈɛː/ "snow_NOUN"
-	<Sä> /sˈɛː/ "sea_NOUN"
 	<Dräne> /d̥rˈɛːnə/ "tear_NOUN_FEM"
+	<Sä> /sˈɛː/ "sea_NOUN"
+
+/i/ (0.004)
+	<heilig> /hˈai̯liɡ̊/ "holy_ADJ"
+	<koid> /kʰˈoid̥/ "cold_ADJ"
+	<Kini> /kʰˈini/ "king_NOUN"
 
 /ˈʏ/ (0.003)
 	<wünschn> /ʋˈʏnʃn̩/ "wish_VERB"
 	<dünn> /d̥ˈʏn/ "thin_ADJ"
-
-/ɪ/ (0.001)
-	<tedlich> /tˈedlɪç/ "deadly_ADJ"
 
 /ˈɑː/ (0.001)
 	<Kààs> /kʰˈɑːs/ "cheese_NOUN"
 
 /ˈy/ (0.001)
 	<üba> /ˈyb̥a/ "over_PREP"
+
+/ɪ/ (0.001)
+	<tedlich> /tˈedlɪç/ "deadly_ADJ"
 
 /eɐ̯/ (0.001)
 	<dreizeah> /d̥rˈai̯ʦeɐ̯/ "thirteen_NUM"
@@ -198,35 +198,35 @@ CONSONANTS
 	<Bladdl> /b̥lˈad̥l̩/ "leaf_NOUN_NEU"
 	<selba> /sˈelb̥a/ "self_PRON"
 
+/ʋ/ (0.025)
+	<zwanzg> /ʦʋˈanʦɡ̊/ "twenty_NUM"
+	<Wind> /ʋˈind̥/ "wind_NOUN"
+	<wås> /ʋˈɒs/ "what_PRON"
+
 /j/ (0.025)
-	<Goid> /ɡ̊ˈojd̥/ "gold_NOUN_NEU"
-	<Woie> /ʋˈojə/ "wool_NOUN_FEM"
+	<Woif> /ʋˈojf/ "wolf_NOUN"
+	<oid> /ˈojd̥/ "old_ADJ"
 	<zwäif> /ʦʋˈɛjf/ "twelve_NUM"
 
 /h/ (0.025)
-	<Heng> /hˈɛŋ/ "honey_NOUN"
 	<hia> /hˈiɐ/ "here_ADV"
-	<heilig> /hˈai̯liɡ̊/ "holy_ADJ"
-
-/ʋ/ (0.025)
-	<Wocha> /ʋˈoxa/ "week_NOUN"
-	<schwoaz> /ʃʋˈoɐ̯ʦ/ "black_ADJ"
-	<wünschn> /ʋˈʏnʃn̩/ "wish_VERB"
+	<Hund> /hˈund̥/ "dog_NOUN"
+	<hoaß> /hˈoɐ̯s/ "hot_ADJ"
 
 /ʦ/ (0.018)
 	<Zunga> /ʦˈuŋa/ "tongue_NOUN"
 	<Zant> /ʦˈant/ "tooth_NOUN"
 	<zwanzg> /ʦʋˈanʦɡ̊/ "twenty_NUM"
 
-/x/ (0.015)
-	<Mocht> /mˈɔxt/ "might_NOUN"
-	<Oach> /ˈoɐ̯x/ "oak_NOUN_FEM"
-	<Raach> /rˈaːx/ "smoke_NOUN"
-
 /ŋ/ (0.015)
-	<dringa> /d̥rˈiŋa/ "drink_VERB"
-	<gengan> /ɡ̊ˈeŋan/ "go_VERB"
-	<fliangn> /flˈiɐ̯ŋn̩/ "fly_VERB"
+	<Reng> /rˈeːŋ/ "rain_NOUN"
+	<song> /sˈoŋ/ "say_VERB"
+	<dankn> /d̥ˈaŋkn̩/ "thank_VERB"
+
+/x/ (0.015)
+	<Buach> /b̥ˈuɐ̯x/ "book_NOUN_FEM"
+	<houch> /hˈou̯x/ "high_ADJ"
+	<acht> /ˈɒxt/ "eight_NUM"
 
 /kʰ/ (0.014)
 	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
