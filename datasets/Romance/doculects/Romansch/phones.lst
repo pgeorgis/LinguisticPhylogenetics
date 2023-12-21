@@ -35,7 +35,7 @@ VOWELS
 	<chavel> /ʨəvˈel/ "HAIR_NOUN"
 
 /ˈaː/ (0.013)
-	<mazzar> /maʦʦˈaːr/ "KILL_VERB"
+	<mazzar> /maʦːˈaːr/ "KILL_VERB"
 	<charn> /ʨˈaːrn/ "MEAT_NOUN"
 	<char> /ʨˈaːr/ "DEAR_ADJ"
 
@@ -208,15 +208,15 @@ CONSONANTS
 	<puɡn> /pˈuɲ/ "FIST_NOUN"
 	<Spaɡna> /ʃpˈaɲə/ "SPAIN_PROPN"
 
-/ʦ/ (0.006)
-	<pèz> /pˈɛʦ/ "BREAST_NOUN"
-	<culiez> /kuljˈeʦ/ "NECK_NOUN"
-	<mez> /mˈɛʦ/ "MIDDLE_NOUN"
-
 /ŋ/ (0.004)
-	<lieunɡa> /ljˈɛwŋɡə/ "TONGUE_NOUN"
+	<anɡhel> /ˈaŋɡəl/ "ANGEL_NOUN"
+	<lunɡ> /lˈuŋ/ "LONG_ADJ"
 	<sanɡ> /sˈaŋ/ "BLOOD_NOUN"
-	<tschuncanta> /ʧuŋkˈantə/ "FIFTY_NUM"
+
+/ʦ/ (0.004)
+	<puoz> /pwˈɔʦ/ "WELL_NOUN"
+	<mez> /mˈɛʦ/ "MIDDLE_NOUN"
+	<culiez> /kuljˈeʦ/ "NECK_NOUN"
 
 /ʒ/ (0.002)
 	<sɡular> /ʒɡulˈar/ "FLY_VERB"
@@ -225,6 +225,9 @@ CONSONANTS
 /z/ (0.002)
 	<seser> /sˈezər/ "SIT_ADJ"
 	<chasa> /ʨˈaːzə/ "HOUSE_NOUN"
+
+/ʦː/ (0.001)
+	<mazzar> /maʦːˈaːr/ "KILL_VERB"
 
 
 

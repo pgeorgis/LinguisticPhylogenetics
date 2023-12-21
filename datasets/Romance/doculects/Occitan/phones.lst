@@ -4,7 +4,7 @@ VOWELS
 	<sal> /sˈal/ "SALT_NOUN"
 	<vosautres> /vuzˈawtɾes/ "YOU (PL)_PRON"
 
-/ɔ/ (0.06)
+/ɔ/ (0.061)
 	<mica> /mˈikɔ/ "CRUMB_NOUN"
 	<casa> /kˈazɔ/ "HOUSE_NOUN"
 	<aurelha> /awɾˈeʎɔ/ "EAR_NOUN"
@@ -24,7 +24,7 @@ VOWELS
 	<dia> /dˈiɔ/ "DAY_NOUN"
 	<espina> /espˈinɔ/ "SPINE_NOUN"
 
-/ˈu/ (0.029)
+/ˈu/ (0.03)
 	<tot> /tˈut/ "ALL (SG)_ADJ"
 	<roɡe> /rˈuʤe/ "RED_ADJ"
 	<pichon> /piʧˈu/ "SMALL_ADJ"
@@ -70,15 +70,15 @@ CONSONANTS
 	<espina> /espˈinɔ/ "SPINE_NOUN"
 	<sol> /sˈul/ "SUN_NOUN"
 
-/l/ (0.063)
+/l/ (0.062)
 	<plen> /plˈe/ "FULL_ADJ"
-	<letra> /lˈetɾɔ/ "LETTER_NOUN"
+	<lum> /lˈym/ "LIGHT_NOUN"
 	<liure> /lˈiwɾe/ "FREE_ADJ"
 
-/n/ (0.047)
+/n/ (0.046)
 	<anma> /ˈanmɔ/ "SOUL_NOUN"
 	<nom> /nˈum/ "NAME_NOUN"
-	<lana> /lˈanɔ/ "WOOL_NOUN"
+	<an> /ˈan/ "YEAR_NOUN"
 
 /k/ (0.042)
 	<seca> /sˈekɔ/ "DRY (F)_ADJ"
@@ -100,15 +100,15 @@ CONSONANTS
 	<plaɡa> /plˈaɣɔ/ "PLAGUE_NOUN"
 	<Espanha> /espˈaɲɔ/ "SPAIN_PROPN"
 
-/m/ (0.029)
-	<roman> /rumˈa/ "ROMAN_ADJ"
-	<cima> /sˈimɔ/ "SUMMIT_NOUN"
-	<mosca> /mˈuskɔ/ "FLY_NOUN"
-
 /r/ (0.027)
-	<pòrc> /pˈɔrk/ "PIG_NOUN"
-	<persèc> /persˈɛk/ "PEACH_NOUN"
-	<pòrca> /pˈɔrkɔ/ "SOW_NOUN"
+	<raiç> /raˈis/ "ROOT_NOUN"
+	<fòrça> /fˈɔrsɔ/ "STRENGTH_NOUN"
+	<verd> /vˈert/ "GREEN_ADJ"
+
+/m/ (0.027)
+	<òme> /ˈɔme/ "MAN_NOUN"
+	<lum> /lˈym/ "LIGHT_NOUN"
+	<anma> /ˈanmɔ/ "SOUL_NOUN"
 
 /w/ (0.025)
 	<escriure> /eskɾˈiwɾe/ "WRITE_VERB"
@@ -130,7 +130,7 @@ CONSONANTS
 	<via> /vˈiɔ/ "ROAD_NOUN"
 	<votz> /vˈuʦ/ "VOICE_NOUN"
 
-/d/ (0.015)
+/d/ (0.016)
 	<disi> /dˈizi/ "SAY-1SG_VERB"
 	<drac> /dɾˈak/ "DRAGON_NOUN"
 	<doç> /dˈus/ "SWEET_ADJ"
@@ -204,6 +204,15 @@ CONSONANTS
 	<viatɡe> /viˈaʤe/ "JOURNEY_NOUN"
 	<ɡenolh> /ʤenˈul/ "KNEE_NOUN"
 	<mètɡe> /mˈɛʤe/ "DOCTOR_NOUN"
+
+/lː/ (0.001)
+	<illa> /ˈilːɔ/ "ISLAND_NOUN"
+
+/nː/ (0.001)
+	<femna> /fˈenːɔ/ "WOMAN_NOUN"
+
+/mː/ (0.001)
+	<setmana> /semːˈanɔ/ "WEEK_NOUN"
 
 
 

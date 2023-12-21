@@ -9,7 +9,7 @@ transcription:
     global:
         ignore_stress: false
         combine_diphthongs: true
-        normalize_geminates: false
+        normalize_geminates: true
 
 pmi:
     refresh: []

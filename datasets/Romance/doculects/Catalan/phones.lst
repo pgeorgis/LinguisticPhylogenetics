@@ -52,7 +52,7 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.063)
+/s/ (0.064)
 	<bones> /bˈɔnəs/ "GOOD (F.PL)_ADJ"
 	<sis> /sˈis/ "SIX_NUM"
 	<escorça> /əskˈɔrsə/ "BARK_NOUN"
@@ -77,25 +77,25 @@ CONSONANTS
 	<nit> /nˈit/ "NIGHT_NOUN"
 	<fruit> /fɾˈujt/ "FRUIT_NOUN"
 
-/ʎ/ (0.039)
-	<bell> /bˈeʎ/ "BEAUTIFUL (M)_ADJ"
-	<lletra> /ʎˈetɾə/ "LETTER_NOUN"
-	<vell> /bˈeʎ/ "OLD_ADJ"
-
 /l/ (0.038)
-	<ɡola> /ɡˈolə/ "THROAT_NOUN"
-	<color> /kulˈo/ "COLOR_NOUN"
-	<unɡla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
+	<cul> /kˈul/ "BUTTOCKS_NOUN"
+	<molt> /mˈol/ "MANY_ADJ"
+	<cel> /sˈɛl/ "SKY_NOUN"
 
-/m/ (0.034)
-	<temps> /tˈems/ "TIME_NOUN"
-	<mel> /mˈɛl/ "HONEY_NOUN"
-	<canviar> /kəmbjˈa/ "CHANGE_VERB"
+/ʎ/ (0.038)
+	<pell> /pˈeʎ/ "SKIN_NOUN"
+	<vedell> /bəðˈeʎ/ "CALF_NOUN"
+	<ulls> /ˈuʎs/ "EYES_NOUN"
 
 /p/ (0.033)
-	<préssec> /pɾˈesək/ "PEACH_NOUN"
-	<petit> /pətˈit/ "SMALL_ADJ"
-	<preu> /pɾˈɛw/ "PRICE_NOUN"
+	<plorar> /pluɾˈa/ "WEEP_VERB"
+	<pena> /pˈɛnə/ "PAIN_NOUN"
+	<penya> /pˈɛɲə/ "FEATHER_NOUN"
+
+/m/ (0.033)
+	<matar> /mətˈa/ "KILL_VERB"
+	<romà> /rumˈa/ "ROMAN_ADJ"
+	<mare> /mˈaɾə/ "MOTHER_NOUN"
 
 /b/ (0.031)
 	<veu> /bˈɛw/ "VOICE_NOUN"
@@ -181,6 +181,12 @@ CONSONANTS
 	<metɡe> /mˈeʤə/ "DOCTOR_NOUN"
 	<viatɡe> /biˈaʤə/ "JOURNEY_NOUN"
 	<fetɡe> /fˈeʤə/ "LIVER_NOUN"
+
+/ʎː/ (0.001)
+	<ɡuatlla> /ɡwˈaʎːə/ "QUAIL_NOUN"
+
+/mː/ (0.001)
+	<setmana> /səmːˈanə/ "WEEK_NOUN"
 
 
 

@@ -115,9 +115,9 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.053)
+/s/ (0.052)
 	<órso> /ˈuːrsu/ "BEAR_NOUN"
-	<ɡròsso> /ɡrˈɔsu/ "THICK_ADJ"
+	<çéia> /sˈeja/ "WAX_NOUN"
 	<sacce> /sˈaʧe/ "KNOW-SBJ-1SG_VERB"
 
 /ŋ/ (0.046)
@@ -130,7 +130,7 @@ CONSONANTS
 	<réixe> /rˈejʒe/ "ROOT_NOUN"
 	<freido> /frˈejdu/ "COLD_ADJ"
 
-/t/ (0.04)
+/t/ (0.041)
 	<çento> /sˈeŋtu/ "HUNDRED_NUM"
 	<sànto> /sˈaŋtu/ "SACRED_ADJ"
 	<trei> /trˈej/ "THREE_NUM"
@@ -160,7 +160,7 @@ CONSONANTS
 	<mêɡio> /mˈeːʤu/ "BETTER_ADV"
 	<anima> /ˈanima/ "SOUL_NOUN"
 
-/n/ (0.026)
+/n/ (0.027)
 	<ötunno> /ɔːtˈynu/ "AUTUMN_NOUN"
 	<nisciun> /niʃˈyŋ/ "NONE_PRON"
 	<neive> /nˈejve/ "SNOW_NOUN"
@@ -227,6 +227,9 @@ CONSONANTS
 
 /ɥ/ (0.001)
 	<nuâ> /nɥˈaː/ "SWIM_VERB"
+
+/sː/ (0.001)
+	<rosso> /rˈusːu/ "RED_ADJ"
 
 
 
