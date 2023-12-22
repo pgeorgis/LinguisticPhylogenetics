@@ -98,7 +98,7 @@ Danish	Danish			plight_NOUN	pligt	pʰlˈeɡ̊t	pʰ l ˈe ɡ̊ t		plight_NOUN_1
 Swedish	Swedish			plight_NOUN	plikt	pʰlˈɪkt	pʰ l ˈɪ k t		plight_NOUN_1			
 Scots	Scots			plight_NOUN	plicht	pʰlˈɪxt	pʰ l ˈɪ x t		plight_NOUN_1			
 English	English			plight_NOUN	plight	pʰlˈaɪ̯t	pʰ l ˈaɪ̯ t		plight_NOUN_1			
-American English	American English			plight_NOUN	plight	pʰlˈaɪ̯t	pʰ l ˈaɪ̯ t		plight_NOUN_1			
+American English	American English			plight_NOUN	plight	pʰlˈʌɪ̯ʔ	pʰ l ˈʌɪ̯ ʔ		plight_NOUN_1			
 Old English	Old English			plight_NOUN	pliht	plˈiçt	p l ˈi ç t		plight_NOUN_1			
 West Frisian	West Frisian			plight_NOUN	plicht	plˈɪχt	p l ˈɪ χ t		plight_NOUN_1			
 Saterland Frisian	Saterland Frisian			plight_NOUN	Plicht	plˈɪxt	p l ˈɪ x t		plight_NOUN_1			
@@ -183,7 +183,7 @@ Danish	Danish			eight_NUM	otte	ˈoːtə	ˈoː t ə		eight_NUM_1
 Swedish	Swedish			eight_NUM	åtta	ˈɔtta	ˈɔ t t a		eight_NUM_1			
 Scots	Scots			eight_NUM	aicht	ˈext	ˈe x t		eight_NUM_1			
 English	English			eight_NUM	eight	ˈeɪ̯t	ˈeɪ̯ t		eight_NUM_1			
-American English	American English			eight_NUM	eight	ˈeɪ̯t	ˈeɪ̯ t		eight_NUM_1			
+American English	American English			eight_NUM	eight	ˈeɪ̯ʔ	ˈeɪ̯ ʔ		eight_NUM_1			
 Old English	Old English			eight_NUM	eahta	ˈæɑ̯xtɑ	ˈæɑ̯ x t ɑ		eight_NUM_1			
 West Frisian	West Frisian			eight_NUM	acht	ˈaχt	ˈa χ t		eight_NUM_1			
 Saterland Frisian	Saterland Frisian			eight_NUM	oachte	ˈɔːxtə	ˈɔː x t ə		eight_NUM_1			
@@ -670,7 +670,7 @@ Danish	Danish			boat_NOUN	båd	b̥ˈɔˀð̞ˠ	b̥ ˈɔˀ ð̞ˠ		boat_NOUN_1
 Swedish	Swedish			boat_NOUN	båt	bˈoːt	b ˈoː t		boat_NOUN_1			
 Scots	Scots			boat_NOUN	bate	bˈet	b ˈe t		boat_NOUN_1			
 English	English			boat_NOUN	boat	bˈəʊ̯t	b ˈəʊ̯ t		boat_NOUN_1			
-American English	American English			boat_NOUN	boat	bˈoʊ̯t	b ˈoʊ̯ t		boat_NOUN_1			
+American English	American English			boat_NOUN	boat	bˈoʊ̯ʔ	b ˈoʊ̯ ʔ		boat_NOUN_1			
 Old English	Old English			boat_NOUN	bāt	bˈɑːt	b ˈɑː t		boat_NOUN_1			
 West Frisian	West Frisian			boat_NOUN	boat	bˈoə̯t	b ˈoə̯ t		boat_NOUN_1			
 Saterland Frisian	Saterland Frisian			boat_NOUN	Boot	bˈoːt	b ˈoː t		boat_NOUN_1			
@@ -703,7 +703,7 @@ Proto-Germanic	Proto-Germanic			better_ADJ	batizô	bˈɑtizɔːː	b ˈɑ t i z �
 Gothic	Gothic			better_ADJ	𐌱𐌰𐍄𐌹𐌶𐌰	bˈatiza	b ˈa t i z a		better_ADJ_1			
 Old Norse	Old Norse			better_ADJ	betri	bˈɛtri	b ˈɛ t r i		better_ADJ_1			
 Icelandic	Icelandic			better_ADJ	betri	b̥ˈɛːtrɪ	b̥ ˈɛː t r ɪ		better_ADJ_1			
-Faroese	Faroese			better_ADJ	betri	b̥ˈeə̯ʰtɹə	b̥ ˈeə̯ ʰt ɹ ə		better_ADJ_1			
+Faroese	Faroese			better_ADJ	betri	b̥ˈeə̯ʰtɹɪ	b̥ ˈeə̯ ʰt ɹ ɪ		better_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			better_ADJ	betre	bˈeːtɾe	b ˈeː t ɾ e		better_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			better_ADJ	bedre	bˈeːdɾə	b ˈeː d ɾ ə		better_ADJ_1			
 Danish	Danish			better_ADJ	bedre	b̥ˈeð̞ˠʁə	b̥ ˈe ð̞ˠ ʁ ə		better_ADJ_1			
@@ -983,7 +983,7 @@ Danish	Danish			bite_VERB	bide	b̥ˈiːð̞ˠə	b̥ ˈiː ð̞ˠ ə		bite_VERB_1
 Swedish	Swedish			bite_VERB	bita	bˈiːta	b ˈiː t a		bite_VERB_1			
 Scots	Scots			bite_VERB	bite	bˈəi̯t	b ˈəi̯ t		bite_VERB_1			
 English	English			bite_VERB	bite	bˈaɪ̯t	b ˈaɪ̯ t		bite_VERB_1			
-American English	American English			bite_VERB	bite	bˈaɪ̯t	b ˈaɪ̯ t		bite_VERB_1			
+American English	American English			bite_VERB	bite	bˈʌɪ̯ʔ	b ˈʌɪ̯ ʔ		bite_VERB_1			
 Old English	Old English			bite_VERB	bītan	bˈiːtɑn	b ˈiː t ɑ n		bite_VERB_1			
 West Frisian	West Frisian			bite_VERB	bite	bˈiːtə	b ˈiː t ə		bite_VERB_1			
 Saterland Frisian	Saterland Frisian			bite_VERB	biete	bˈitə	b ˈi t ə		bite_VERB_1			
@@ -1655,7 +1655,7 @@ Danish	Danish			daughter_NOUN	datter	d̥ˈɛtɐ	d̥ ˈɛ t ɐ		daughter_NOUN_1
 Swedish	Swedish			daughter_NOUN	dotter	dˈɔttɛr	d ˈɔ t t ɛ r		daughter_NOUN_1			
 Scots	Scots			daughter_NOUN	dochter	dˈɔxtər	d ˈɔ x t ə r		daughter_NOUN_1			
 English	English			daughter_NOUN	daughter	dˈɔːtə	d ˈɔː t ə		daughter_NOUN_1			
-American English	American English			daughter_NOUN	daughter	dˈɑtɚ	d ˈɑ t ɚ		daughter_NOUN_1			
+American English	American English			daughter_NOUN	daughter	dˈɑɾɚ	d ˈɑ ɾ ɚ		daughter_NOUN_1			
 Old English	Old English			daughter_NOUN	dohtor	dˈoxtor	d ˈo x t o r		daughter_NOUN_1			
 West Frisian	West Frisian			daughter_NOUN	dochter	dˈɔχtər	d ˈɔ χ t ə r		daughter_NOUN_1			
 Saterland Frisian	Saterland Frisian			daughter_NOUN	Dochter	dˈɔxtər	d ˈɔ x t ə r		daughter_NOUN_1			
@@ -1800,7 +1800,7 @@ Danish	Danish			eat_VERB	æde	ˈɛːð̞ˠə	ˈɛː ð̞ˠ ə		eat_VERB_1
 Swedish	Swedish			eat_VERB	äta	ˈɛːta	ˈɛː t a		eat_VERB_1			
 Scots	Scots			eat_VERB	eat	ˈei̯t	ˈei̯ t		eat_VERB_1			
 English	English			eat_VERB	eat	ˈiːt	ˈiː t		eat_VERB_1			
-American English	American English			eat_VERB	eat	ˈit	ˈi t		eat_VERB_1			
+American English	American English			eat_VERB	eat	ˈiʔ	ˈi ʔ		eat_VERB_1			
 Old English	Old English			eat_VERB	etan	ˈetɑn	ˈe t ɑ n		eat_VERB_1			
 West Frisian	West Frisian			eat_VERB	ite	ˈitə	ˈi t ə		eat_VERB_1			
 Saterland Frisian	Saterland Frisian			eat_VERB	iete	ˈitə	ˈi t ə		eat_VERB_1			
@@ -2230,7 +2230,7 @@ Danish	Danish			feet_NOUN	fødder	fˈœð̞ˠɐ	f ˈœ ð̞ˠ ɐ		feet_NOUN_1
 Swedish	Swedish			feet_NOUN	fötter	fˈœttɛr	f ˈœ t t ɛ r		feet_NOUN_1			
 Scots	Scots			feet_NOUN	fits	fˈɪts	f ˈɪ t s		feet_NOUN_1			
 English	English			feet_NOUN	feet	fˈiːt	f ˈiː t		feet_NOUN_1			
-American English	American English			feet_NOUN	feet	fˈit	f ˈi t		feet_NOUN_1			
+American English	American English			feet_NOUN	feet	fˈiʔ	f ˈi ʔ		feet_NOUN_1			
 Old English	Old English			feet_NOUN	fet	fˈeːt	f ˈeː t		feet_NOUN_1			
 West Frisian	West Frisian			feet_NOUN	fuotten	fˈɵtən	f ˈɵ t ə n		feet_NOUN_1			
 Saterland Frisian	Saterland Frisian			feet_NOUN	Fäite	fˈɛɪ̯tə	f ˈɛɪ̯ t ə		feet_NOUN_1			
@@ -2263,7 +2263,7 @@ Danish	Danish			foot_NOUN	fod	fˈoˀð̞ˠ	f ˈoˀ ð̞ˠ		foot_NOUN_1
 Swedish	Swedish			foot_NOUN	fot	fˈuːt	f ˈuː t		foot_NOUN_1			
 Scots	Scots			foot_NOUN	fit	fˈɪt	f ˈɪ t		foot_NOUN_1			
 English	English			foot_NOUN	foot	fˈʊt	f ˈʊ t		foot_NOUN_1			
-American English	American English			foot_NOUN	foot	fˈʊt	f ˈʊ t		foot_NOUN_1			
+American English	American English			foot_NOUN	foot	fˈʊʔ	f ˈʊ ʔ		foot_NOUN_1			
 Old English	Old English			foot_NOUN	fōt	fˈoːt	f ˈoː t		foot_NOUN_1			
 West Frisian	West Frisian			foot_NOUN	foet	fˈuə̯t	f ˈuə̯ t		foot_NOUN_1			
 Saterland Frisian	Saterland Frisian			foot_NOUN	Fout	fˈoːu̯t	f ˈoːu̯ t		foot_NOUN_1			
@@ -2633,7 +2633,7 @@ Danish	Danish			goat_NOUN	ged	ɡ̊ˈeˀð̞ˠ	ɡ̊ ˈeˀ ð̞ˠ		goat_NOUN_1
 Swedish	Swedish			goat_NOUN	get	jˈeːt	j ˈeː t		goat_NOUN_1			
 Scots	Scots			goat_NOUN	gait	ɡˈet	ɡ ˈe t		goat_NOUN_1			
 English	English			goat_NOUN	goat	ɡˈəʊ̯t	ɡ ˈəʊ̯ t		goat_NOUN_1			
-American English	American English			goat_NOUN	goat	ɡˈoʊ̯t	ɡ ˈoʊ̯ t		goat_NOUN_1			
+American English	American English			goat_NOUN	goat	ɡˈoʊ̯ʔ	ɡ ˈoʊ̯ ʔ		goat_NOUN_1			
 Old English	Old English			goat_NOUN	gāt	ɡˈɑːt	ɡ ˈɑː t		goat_NOUN_1			
 West Frisian	West Frisian			goat_NOUN	geit	ɡˈɛi̯t	ɡ ˈɛi̯ t		goat_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			goat_NOUN	Jitt	jˈɪt	j ˈɪ t		goat_NOUN_1			
@@ -2903,7 +2903,7 @@ Bavarian	Bavarian			grass_NOUN_NEU	Gros	ɡ̊rˈoːs	ɡ̊ r ˈoː s		grass_NOUN_N
 Proto-Germanic	Proto-Germanic			great_ADJ	grautaz	ɣrˈɑu̯tɑz	ɣ r ˈɑu̯ t ɑ z		great_ADJ_1			
 Scots	Scots			great_ADJ	great	ɡrˈei̯t	ɡ r ˈei̯ t		great_ADJ_1			
 English	English			great_ADJ	great	ɡɹˈeɪ̯t	ɡ ɹ ˈeɪ̯ t		great_ADJ_1			
-American English	American English			great_ADJ	great	ɡɹˈeɪ̯t	ɡ ɹ ˈeɪ̯ t		great_ADJ_1			
+American English	American English			great_ADJ	great	ɡɹˈeɪ̯ʔ	ɡ ɹ ˈeɪ̯ ʔ		great_ADJ_1			
 Old English	Old English			great_ADJ	grēat	ɡrˈæːɑ̯t	ɡ r ˈæːɑ̯ t		great_ADJ_1			
 West Frisian	West Frisian			great_ADJ	grut	ɡrˈuːt	ɡ r ˈuː t		great_ADJ_1			
 Saterland Frisian	Saterland Frisian			great_ADJ	groot	ɡrˈoːt	ɡ r ˈoː t		great_ADJ_1			
@@ -3126,7 +3126,7 @@ Danish	Danish			hot_ADJ	hed	hˈeˀð̞ˠ	h ˈeˀ ð̞ˠ		hot_ADJ_1
 Swedish	Swedish			hot_ADJ	het	hˈeːt	h ˈeː t		hot_ADJ_1			
 Scots	Scots			hot_ADJ	hait	hˈet	h ˈe t		hot_ADJ_1			
 English	English			hot_ADJ	hot	hˈɒt	h ˈɒ t		hot_ADJ_1			
-American English	American English			hot_ADJ	hot	hˈɑt	h ˈɑ t		hot_ADJ_1			
+American English	American English			hot_ADJ	hot	hˈɑʔ	h ˈɑ ʔ		hot_ADJ_1			
 Old English	Old English			hot_ADJ	hāt	hˈɑːt	h ˈɑː t		hot_ADJ_1			
 West Frisian	West Frisian			hot_ADJ	hyt	hˈit	h ˈi t		hot_ADJ_1			
 Saterland Frisian	Saterland Frisian			hot_ADJ	heet	hˈeːt	h ˈeː t		hot_ADJ_1			
@@ -3271,7 +3271,7 @@ Danish	Danish			hate_VERB	hade	hˈæːð̞ˠə	h ˈæː ð̞ˠ ə		hate_VERB_1
 Swedish	Swedish			hate_VERB	hata	hˈɑːta	h ˈɑː t a		hate_VERB_1			
 Scots	Scots			hate_VERB	hate	hˈet	h ˈe t		hate_VERB_1			
 English	English			hate_VERB	hate	hˈeɪ̯t	h ˈeɪ̯ t		hate_VERB_1			
-American English	American English			hate_VERB	hate	hˈeɪ̯t	h ˈeɪ̯ t		hate_VERB_1			
+American English	American English			hate_VERB	hate	hˈeɪ̯ʔ	h ˈeɪ̯ ʔ		hate_VERB_1			
 Old English	Old English			hate_VERB	hatian	hˈɑtiɑn	h ˈɑ t i ɑ n		hate_VERB_1			
 West Frisian	West Frisian			hate_VERB	haatsje	hˈaːʦjə	h ˈaː ʦ j ə		hate_VERB_1			
 Saterland Frisian	Saterland Frisian			hate_VERB	hoatje	hˈɔːtjə	h ˈɔː t j ə		hate_VERB_1			
@@ -3486,7 +3486,7 @@ Danish	Danish			heart_NOUN	hjerte	jˈɛɐtə	j ˈɛ ɐ t ə		heart_NOUN_1
 Swedish	Swedish			heart_NOUN	hjärta	jˈæʈʈa	j ˈæ ʈ ʈ a		heart_NOUN_1			
 Scots	Scots			heart_NOUN	hert	hˈɛrt	h ˈɛ r t		heart_NOUN_1			
 English	English			heart_NOUN	heart	hˈɑːt	h ˈɑː t		heart_NOUN_1			
-American English	American English			heart_NOUN	heart	hˈɑɹt	h ˈɑ ɹ t		heart_NOUN_1			
+American English	American English			heart_NOUN	heart	hˈɑɹʔ	h ˈɑ ɹ ʔ		heart_NOUN_1			
 Old English	Old English			heart_NOUN	heorte	hˈeo̯rte	h ˈeo̯ r t e		heart_NOUN_1			
 West Frisian	West Frisian			heart_NOUN	hert	hˈɛːt	h ˈɛː t		heart_NOUN_1			
 Saterland Frisian	Saterland Frisian			heart_NOUN	Haat	hˈaːt	h ˈaː t		heart_NOUN_1			
@@ -3917,7 +3917,7 @@ Danish	Danish			what_PRON	hvad	ʋˈað̞ˠ	ʋ ˈa ð̞ˠ		what_PRON_1
 Swedish	Swedish			what_PRON	vad	vˈɑːd	v ˈɑː d		what_PRON_1			
 Scots	Scots			what_PRON	what	ʍˈɪt	ʍ ˈɪ t		what_PRON_1			
 English	English			what_PRON	what	wˈɒt	w ˈɒ t		what_PRON_1			
-American English	American English			what_PRON	what	wˈʌt	w ˈʌ t		what_PRON_1			
+American English	American English			what_PRON	what	wˈʌʔ	w ˈʌ ʔ		what_PRON_1			
 Old English	Old English			what_PRON	hwæt	ʍˈæt	ʍ ˈæ t		what_PRON_1			
 West Frisian	West Frisian			what_PRON	wat	vˈat	v ˈa t		what_PRON_1			
 Saterland Frisian	Saterland Frisian			what_PRON	wät	vˈɛt	v ˈɛ t		what_PRON_1			
@@ -3970,7 +3970,7 @@ Danish	Danish			white_ADJ	hvid	ʋˈiˀð̞ˠ	ʋ ˈiˀ ð̞ˠ		white_ADJ_1
 Swedish	Swedish			white_ADJ	vit	vˈiːt	v ˈiː t		white_ADJ_1			
 Scots	Scots			white_ADJ	white	ʍˈəi̯t	ʍ ˈəi̯ t		white_ADJ_1			
 English	English			white_ADJ	white	wˈaɪ̯t	w ˈaɪ̯ t		white_ADJ_1			
-American English	American English			white_ADJ	white	wˈaɪ̯t	w ˈaɪ̯ t		white_ADJ_1			
+American English	American English			white_ADJ	white	wˈʌɪ̯ʔ	w ˈʌɪ̯ ʔ		white_ADJ_1			
 Old English	Old English			white_ADJ	hwīt	ʍˈiːt	ʍ ˈiː t		white_ADJ_1			
 West Frisian	West Frisian			white_ADJ	wyt	vˈit	v ˈi t		white_ADJ_1			
 Saterland Frisian	Saterland Frisian			white_ADJ	wiet	vˈit	v ˈi t		white_ADJ_1			
@@ -4035,7 +4035,7 @@ Danish	Danish			ice_NOUN	is	ˈiˀs	ˈiˀ s		ice_NOUN_1
 Swedish	Swedish			ice_NOUN	is	ˈiːs	ˈiː s		ice_NOUN_1			
 Scots	Scots			ice_NOUN	ice	ˈəi̯s	ˈəi̯ s		ice_NOUN_1			
 English	English			ice_NOUN	ice	ˈaɪ̯s	ˈaɪ̯ s		ice_NOUN_1			
-American English	American English			ice_NOUN	ice	ˈaɪ̯s	ˈaɪ̯ s		ice_NOUN_1			
+American English	American English			ice_NOUN	ice	ˈʌɪ̯s	ˈʌɪ̯ s		ice_NOUN_1			
 Old English	Old English			ice_NOUN	īs	ˈiːs	ˈiː s		ice_NOUN_1			
 West Frisian	West Frisian			ice_NOUN	iis	ˈiːs	ˈiː s		ice_NOUN_1			
 Saterland Frisian	Saterland Frisian			ice_NOUN	Ies	ˈis	ˈi s		ice_NOUN_1			
@@ -4647,8 +4647,8 @@ Danish	Danish			light_NOUN	lys	lˈyˀs	l ˈyˀ s		light_NOUN_1
 Swedish	Swedish			light_NOUN	ljus	jˈʉːs	j ˈʉː s		light_NOUN_1			
 Proto-Germanic	Proto-Germanic			light_NOUN	leuhtą	lˈeu̯xtɑ̃	l ˈeu̯ x t ɑ̃		light_NOUN_2			
 Scots	Scots			light_NOUN	licht	lˈɪxt	l ˈɪ x t		light_NOUN_2			
-English	English			light_NOUN	light	ɫˈaɪ̯t	ɫ ˈaɪ̯ t		light_NOUN_2			
-American English	American English			light_NOUN	light	ɫˈaɪ̯t	ɫ ˈaɪ̯ t		light_NOUN_2			
+English	English			light_NOUN	light	lˈaɪ̯t	l ˈaɪ̯ t		light_NOUN_2			
+American English	American English			light_NOUN	light	lˈʌɪ̯ʔ	l ˈʌɪ̯ ʔ		light_NOUN_2			
 Old English	Old English			light_NOUN	lēoht	lˈeːo̯xt	l ˈeːo̯ x t		light_NOUN_2			
 West Frisian	West Frisian			light_NOUN	ljocht	ljˈɔχt	l j ˈɔ χ t		light_NOUN_2			
 Saterland Frisian	Saterland Frisian			light_NOUN	Lucht	lˈʊxt	l ˈʊ x t		light_NOUN_2			
@@ -4707,8 +4707,8 @@ Bokmål Norwegian	Bokmål Norwegian			light_ADJ	lett	lˈɛtt	l ˈɛ t t		light_A
 Danish	Danish			light_ADJ	let	lˈɛt	l ˈɛ t		light_ADJ_1			
 Swedish	Swedish			light_ADJ	lätt	lˈɛtt	l ˈɛ t t		light_ADJ_1			
 Scots	Scots			light_ADJ	licht	lˈɪxt	l ˈɪ x t		light_ADJ_1			
-English	English			light_ADJ	light	ɫˈaɪ̯t	ɫ ˈaɪ̯ t		light_ADJ_1			
-American English	American English			light_ADJ	light	ɫˈaɪ̯t	ɫ ˈaɪ̯ t		light_ADJ_1			
+English	English			light_ADJ	light	lˈaɪ̯t	l ˈaɪ̯ t		light_ADJ_1			
+American English	American English			light_ADJ	light	lˈʌɪ̯ʔ	l ˈʌɪ̯ ʔ		light_ADJ_1			
 Old English	Old English			light_ADJ	lēoht	lˈeːo̯xt	l ˈeːo̯ x t		light_ADJ_1			
 West Frisian	West Frisian			light_ADJ	licht	lˈɪχt	l ˈɪ χ t		light_ADJ_1			
 Saterland Frisian	Saterland Frisian			light_ADJ	licht	lˈɪxt	l ˈɪ x t		light_ADJ_1			
@@ -4768,7 +4768,7 @@ Danish	Danish			might_NOUN	magt	mˈɑɡ̊t	m ˈɑ ɡ̊ t		might_NOUN_1	TRUE	IRRE
 Swedish	Swedish			might_NOUN	makt	mˈakt	m ˈa k t		might_NOUN_1	TRUE	IRREGULAR OR LOAN	
 Scots	Scots			might_NOUN	micht	mˈɪxt	m ˈɪ x t		might_NOUN_1			
 English	English			might_NOUN	might	mˈaɪ̯t	m ˈaɪ̯ t		might_NOUN_1			
-American English	American English			might_NOUN	might	mˈaɪ̯t	m ˈaɪ̯ t		might_NOUN_1			
+American English	American English			might_NOUN	might	mˈʌɪ̯ʔ	m ˈʌɪ̯ ʔ		might_NOUN_1			
 Old English	Old English			might_NOUN	miht	mˈiçt	m ˈi ç t		might_NOUN_1			
 West Frisian	West Frisian			might_NOUN	macht	mˈaχt	m ˈa χ t		might_NOUN_1			
 Saterland Frisian	Saterland Frisian			might_NOUN	Macht	mˈaxt	m ˈa x t		might_NOUN_1			
@@ -5218,7 +5218,7 @@ Danish	Danish			night_NOUN_FEM	nat	nˈɛt	n ˈɛ t		night_NOUN_FEM_1
 Swedish	Swedish			night_NOUN_FEM	natt	nˈatt	n ˈa t t		night_NOUN_FEM_1			
 Scots	Scots			night_NOUN_FEM	nicht	nˈɪxt	n ˈɪ x t		night_NOUN_FEM_1			
 English	English			night_NOUN_FEM	night	nˈaɪ̯t	n ˈaɪ̯ t		night_NOUN_FEM_1			
-American English	American English			night_NOUN_FEM	night	nˈaɪ̯t	n ˈaɪ̯ t		night_NOUN_FEM_1			
+American English	American English			night_NOUN_FEM	night	nˈʌɪ̯ʔ	n ˈʌɪ̯ ʔ		night_NOUN_FEM_1			
 Old English	Old English			night_NOUN_FEM	niht	nˈiçt	n ˈi ç t		night_NOUN_FEM_1			
 West Frisian	West Frisian			night_NOUN_FEM	nacht	nˈaχt	n ˈa χ t		night_NOUN_FEM_1			
 Saterland Frisian	Saterland Frisian			night_NOUN_FEM	Noacht	nˈɔːxt	n ˈɔː x t		night_NOUN_FEM_1			
@@ -5580,7 +5580,7 @@ Danish	Danish			right_ADJ	ret	ʁˈat	ʁ ˈa t		right_ADJ_1
 Swedish	Swedish			right_ADJ	rätt	rˈɛtt	r ˈɛ t t		right_ADJ_1			
 Scots	Scots			right_ADJ	richt	rˈɪxt	r ˈɪ x t		right_ADJ_1			
 English	English			right_ADJ	right	ɹˈaɪ̯t	ɹ ˈaɪ̯ t		right_ADJ_1			
-American English	American English			right_ADJ	right	ɹˈaɪ̯t	ɹ ˈaɪ̯ t		right_ADJ_1			
+American English	American English			right_ADJ	right	ɹˈʌɪ̯ʔ	ɹ ˈʌɪ̯ ʔ		right_ADJ_1			
 Old English	Old English			right_ADJ	riht	rˈiçt	r ˈi ç t		right_ADJ_1			
 West Frisian	West Frisian			right_ADJ	rjocht	rjˈɔχt	r j ˈɔ χ t		right_ADJ_1			
 Saterland Frisian	Saterland Frisian			right_ADJ	riucht	rjˈʊxt	r j ˈʊ x t		right_ADJ_1			
@@ -5735,7 +5735,7 @@ Danish	Danish			salt_NOUN	salt	sˈɛlˀt	s ˈɛ lˀ t		salt_NOUN_1
 Swedish	Swedish			salt_NOUN	salt	sˈalt	s ˈa l t		salt_NOUN_1			
 Scots	Scots			salt_NOUN	saut	sˈɑːt	s ˈɑː t		salt_NOUN_1			
 English	English			salt_NOUN	salt	sˈɒɫt	s ˈɒ ɫ t		salt_NOUN_1			
-American English	American English			salt_NOUN	salt	sˈɑɫt	s ˈɑ ɫ t		salt_NOUN_1			
+American English	American English			salt_NOUN	salt	sˈɑɫʔ	s ˈɑ ɫ ʔ		salt_NOUN_1			
 Old English	Old English			salt_NOUN	sealt	sˈæɑ̯ɫt	s ˈæɑ̯ ɫ t		salt_NOUN_1			
 West Frisian	West Frisian			salt_NOUN	sâlt	sˈɔːt	s ˈɔː t		salt_NOUN_1			
 Saterland Frisian	Saterland Frisian			salt_NOUN	Soalt	sˈɔːlt	s ˈɔː l t		salt_NOUN_1			
@@ -6016,7 +6016,7 @@ Danish	Danish			sit_VERB	sidde	sˈeð̞ˠə	s ˈe ð̞ˠ ə		sit_VERB_1
 Swedish	Swedish			sit_VERB	sitta	sˈɪtta	s ˈɪ t t a		sit_VERB_1			
 Scots	Scots			sit_VERB	sit	sˈɪt	s ˈɪ t		sit_VERB_1			
 English	English			sit_VERB	sit	sˈɪt	s ˈɪ t		sit_VERB_1			
-American English	American English			sit_VERB	sit	sˈɪt	s ˈɪ t		sit_VERB_1			
+American English	American English			sit_VERB	sit	sˈɪʔ	s ˈɪ ʔ		sit_VERB_1			
 Old English	Old English			sit_VERB	sittan	sˈittɑn	s ˈi t t ɑ n		sit_VERB_1			
 West Frisian	West Frisian			sit_VERB	sitte	sˈɪtə	s ˈɪ t ə		sit_VERB_1			
 Saterland Frisian	Saterland Frisian			sit_VERB	sitte	sˈɪtə	s ˈɪ t ə		sit_VERB_1			
@@ -6164,7 +6164,7 @@ Danish	Danish			shoot_VERB	skyde	skˈyːð̞ˠə	s k ˈyː ð̞ˠ ə		shoot_VERB
 Swedish	Swedish			shoot_VERB	skjuta	ɧˈʉːta	ɧ ˈʉː t a		shoot_VERB_1			
 Scots	Scots			shoot_VERB	schuit	ʃˈøt	ʃ ˈø t		shoot_VERB_1			
 English	English			shoot_VERB	shoot	ʃˈuːt	ʃ ˈuː t		shoot_VERB_1			
-American English	American English			shoot_VERB	shoot	ʃˈut	ʃ ˈu t		shoot_VERB_1			
+American English	American English			shoot_VERB	shoot	ʃˈuʔ	ʃ ˈu ʔ		shoot_VERB_1			
 Old English	Old English			shoot_VERB	sċēotan	ʃˈeːo̯tɑn	ʃ ˈeːo̯ t ɑ n		shoot_VERB_1			
 West Frisian	West Frisian			shoot_VERB	sjitte	sjˈɪtə	s j ˈɪ t ə		shoot_VERB_1			
 Saterland Frisian	Saterland Frisian			shoot_VERB	skjote	skjˈoːtə	s k j ˈoː t ə		shoot_VERB_1			
@@ -6227,7 +6227,7 @@ Danish	Danish			shit_NOUN	skid	skˈiˀð̞ˠ	s k ˈiˀ ð̞ˠ		shit_NOUN_1
 Swedish	Swedish			shit_NOUN	skit	ɧˈiːt	ɧ ˈiː t		shit_NOUN_1			
 Scots	Scots			shit_NOUN	shit	ʃˈɪt	ʃ ˈɪ t		shit_NOUN_1			
 English	English			shit_NOUN	shit	ʃˈɪt	ʃ ˈɪ t		shit_NOUN_1			
-American English	American English			shit_NOUN	shit	ʃˈɪt	ʃ ˈɪ t		shit_NOUN_1			
+American English	American English			shit_NOUN	shit	ʃˈɪʔ	ʃ ˈɪ ʔ		shit_NOUN_1			
 Old English	Old English			shit_NOUN	sċīte	ʃˈiːte	ʃ ˈiː t e		shit_NOUN_1			
 West Frisian	West Frisian			shit_NOUN	skyt	skˈit	s k ˈi t		shit_NOUN_1			
 Saterland Frisian	Saterland Frisian			shit_NOUN	Skiete	skˈitə	s k ˈi t ə		shit_NOUN_1			
@@ -6655,7 +6655,7 @@ Danish	Danish			black_ADJ	sort	sˈoɐt	s ˈo ɐ t		black_ADJ_1
 Swedish	Swedish			black_ADJ	svart	svˈaʈʈ	s v ˈa ʈ ʈ		black_ADJ_1			
 Scots	Scots			black_ADJ	swart	swˈɑrt	s w ˈɑ r t		black_ADJ_1			
 English	English			black_ADJ	swart	swˈɔːt	s w ˈɔː t		black_ADJ_1			
-American English	American English			black_ADJ	swart	swˈɔɹt	s w ˈɔ ɹ t		black_ADJ_1			
+American English	American English			black_ADJ	swart	swˈɔɹʔ	s w ˈɔ ɹ ʔ		black_ADJ_1			
 Old English	Old English			black_ADJ	sweart	swˈæɑ̯rt	s w ˈæɑ̯ r t		black_ADJ_1			
 West Frisian	West Frisian			black_ADJ	swart	svˈat	s v ˈa t		black_ADJ_1			
 Saterland Frisian	Saterland Frisian			black_ADJ	swot	svˈɔt	s v ˈɔ t		black_ADJ_1			
@@ -6816,7 +6816,7 @@ Danish	Danish			sweet_ADJ	sød	sˈœˀð̞ˠ	s ˈœˀ ð̞ˠ		sweet_ADJ_1
 Swedish	Swedish			sweet_ADJ	söt	sˈøːt	s ˈøː t		sweet_ADJ_1			
 Scots	Scots			sweet_ADJ	sweet	swˈiːt	s w ˈiː t		sweet_ADJ_1			
 English	English			sweet_ADJ	sweet	swˈiːt	s w ˈiː t		sweet_ADJ_1			
-American English	American English			sweet_ADJ	sweet	swˈit	s w ˈi t		sweet_ADJ_1			
+American English	American English			sweet_ADJ	sweet	swˈiʔ	s w ˈi ʔ		sweet_ADJ_1			
 Old English	Old English			sweet_ADJ	swēte	swˈeːte	s w ˈeː t e		sweet_ADJ_1			
 West Frisian	West Frisian			sweet_ADJ	swiet	svˈiə̯t	s v ˈiə̯ t		sweet_ADJ_1			
 Saterland Frisian	Saterland Frisian			sweet_ADJ	swäit	svˈɛɪ̯t	s v ˈɛɪ̯ t		sweet_ADJ_1			
@@ -7320,7 +7320,7 @@ Danish	Danish			out_PREP	ud	ˈuˀð̞ˠ	ˈuˀ ð̞ˠ		out_PREP_1
 Swedish	Swedish			out_PREP	ut	ˈʉːt	ˈʉː t		out_PREP_1			
 Scots	Scots			out_PREP	out	ˈʉt	ˈʉ t		out_PREP_1			
 English	English			out_PREP	out	ˈaʊ̯t	ˈaʊ̯ t		out_PREP_1			
-American English	American English			out_PREP	out	ˈaʊ̯t	ˈaʊ̯ t		out_PREP_1			
+American English	American English			out_PREP	out	ˈaʊ̯ʔ	ˈaʊ̯ ʔ		out_PREP_1			
 Old English	Old English			out_PREP	ūt	ˈuːt	ˈuː t		out_PREP_1			
 West Frisian	West Frisian			out_PREP	út	ˈyːt	ˈyː t		out_PREP_1			
 Saterland Frisian	Saterland Frisian			out_PREP	uut	ˈuːt	ˈuː t		out_PREP_1			
@@ -7528,7 +7528,7 @@ Swiss German	Swiss German			weapon_NOUN	Waaffe	ʋˈɒːffə	ʋ ˈɒː f f ə		we
 Proto-Germanic	Proto-Germanic			wife_NOUN	wībą	wˈiːβɑ̃	w ˈiː β ɑ̃		wife_NOUN_1			
 Scots	Scots			wife_NOUN	wife	wˈəi̯f	w ˈəi̯ f		wife_NOUN_1			
 English	English			wife_NOUN	wife	wˈaɪ̯f	w ˈaɪ̯ f		wife_NOUN_1			
-American English	American English			wife_NOUN	wife	wˈaɪ̯f	w ˈaɪ̯ f		wife_NOUN_1			
+American English	American English			wife_NOUN	wife	wˈʌɪ̯f	w ˈʌɪ̯ f		wife_NOUN_1			
 Old English	Old English			wife_NOUN	wīf	wˈiːf	w ˈiː f		wife_NOUN_1			
 West Frisian	West Frisian			wife_NOUN	wiif	ʋˈiːf	ʋ ˈiː f		wife_NOUN_1			
 North Frisian	North Frisian			wife_NOUN	wüf	vˈyːf	v ˈyː f		wife_NOUN_1			
@@ -7624,7 +7624,7 @@ Danish	Danish			know_VERB	vide	ʋˈiːð̞ˠə	ʋ ˈiː ð̞ˠ ə		know_VERB_1
 Swedish	Swedish			know_VERB	veta	vˈeːta	v ˈeː t a		know_VERB_1			
 Scots	Scots			know_VERB	wit	wˈɪt	w ˈɪ t		know_VERB_1			
 English	English			know_VERB	wit	wˈɪt	w ˈɪ t		know_VERB_1			
-American English	American English			know_VERB	wit	wˈɪt	w ˈɪ t		know_VERB_1			
+American English	American English			know_VERB	wit	wˈɪʔ	w ˈɪ ʔ		know_VERB_1			
 Old English	Old English			know_VERB	witan	wˈitɑn	w ˈi t ɑ n		know_VERB_1			
 West Frisian	West Frisian			know_VERB	witte	ʋˈɪtə	ʋ ˈɪ t ə		know_VERB_1			
 Saterland Frisian	Saterland Frisian			know_VERB	wíete	vˈiːtə	v ˈiː t ə		know_VERB_1			
