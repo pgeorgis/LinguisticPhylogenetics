@@ -636,8 +636,7 @@ class PhonCorrelator:
     def calc_phoneme_pmi(self, 
                          radius=1, # TODO make configurable
                          p_threshold=0.05,
-                         p_step=0.02,
-                         max_p=0.25,
+                         max_iterations=10,
                          samples=5, # TODO make configurable
                          sample_size=0.8, # TODO make configurable
                          cumulative=False,
@@ -650,10 +649,8 @@ class PhonCorrelator:
             Number of word positions forward and backward to check for initial correspondences. The default is 2.
         p_threshold : float, optional
             p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.05.
-        p_step : float, optional
-            Amount to increment p-value per iteration. The default is 0.02.
-        max_p : float, optional
-            Maximum p-value at which to cap PMI step. The default is 0.25.
+        max_iterations : float, optional
+            Maximum number of iterations. The default is 10.
         samples : int, optional
             Number of random samples to draw. The default is 5.
         cumulative : bool, optional
@@ -675,7 +672,6 @@ class PhonCorrelator:
         sample_size = round(len(self.same_meaning)*sample_size)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         iter_logs = defaultdict(lambda:[])
-        max_iterations = max(round((max_p-p_threshold)/p_step), 2)
         sample_iterations = {}
         start_seed = self.seed
         sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
@@ -712,7 +708,6 @@ class PhonCorrelator:
             # additional penalty, and then recalculate PMI
             iteration = 0
             PMI_iterations = {iteration:pmi_step1}
-            p_threshold_sample = p_threshold
             qualifying_words = default_dict({iteration:sort_wordlist(synonym_sample)}, l=[])
             disqualified_words = default_dict({iteration:diff_sample}, l=[])
             if cumulative:
@@ -769,7 +764,7 @@ class PhonCorrelator:
                     
                     # Proportion of non-cognate word pairs which would have a PMI score at least as low as this word pair
                     pnorm = 1 - norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
-                    if pnorm < p_threshold_sample:
+                    if pnorm < p_threshold:
                         qualifying.append(pair)
                         qualifying_alignments.append(alignment)
                         qualified_PMI.append(PMI_score)
@@ -785,8 +780,6 @@ class PhonCorrelator:
                 if len(qualifying_words[iteration]) == 0:
                     self.logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
                 disqualified_words[iteration] = disqualified + diff_sample
-                if p_threshold_sample+p_step <= max_p:
-                    p_threshold_sample += p_step
                 
                 # Log results of this iteration
                 if log_iterations:
