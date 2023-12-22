@@ -1,197 +1,217 @@
 VOWELS
-/ɔ/ (0.091)
-	<xoлoдний> /xɔɫˈɔdnej/ "COLD_ADJ"
-	<рaлo> /rˈɑɫɔ/ "PLOUGH_NOUN"
-	<жoвтий> /ʒˈɔʍtej/ "YELLOW_ADJ"
+/ɔ/ (0.066)
+	<вyxo> /wˈuxɔ/ "EAR_NOUN"
+	<гoрoд> /ɦˈɔrɔd/ "CITY_NOUN"
+	<ɜдoрoвий> /zdɔrˈɔʋej/ "HEALTHY_ADJ"
 
-/i/ (0.06)
-	<xлiб> /xlʲˈib/ "BREAD_NOUN"
-	<кiнь> /kʲˈinʲ/ "HORSE_NOUN"
-	<лiкoть> /lʲˈikɔtʲ/ "ELBOW_NOUN"
+/ˈi/ (0.057)
+	<нiгoть> /nʲˈiɦɔtʲ/ "FINGERNAIL_NOUN"
+	<вiтeр> /ʋʲˈitɛr/ "WIND_NOUN"
+	<лiтo> /lʲˈitɔ/ "SUMMER_NOUN"
 
-/e/ (0.034)
+/ˈɔ/ (0.045)
+	<дoвгий> /dˈɔʋɦej/ "LONG_ADJ"
+	<мoрe> /mˈɔrɛ/ "SEA_NOUN"
+	<ɜдoрoвий> /zdɔrˈɔʋej/ "HEALTHY_ADJ"
+
+/e/ (0.041)
+	<дoбрий> /dˈɔbrej/ "GOOD_ADJ"
+	<мeртвий> /mˈɛrtʋej/ "DEAD_ADJ"
 	<глaдкий> /ɦɫˈɑdkej/ "SMOOTH_ADJ"
+
+/ˈɑ/ (0.038)
+	<кoрa> /kɔrˈɑ/ "BARK_NOUN"
+	<гoрa> /ɦɔrˈɑ/ "MOUNTAIN_NOUN"
+	<iмˈʁ> /imjˈɑ/ "NAME_NOUN"
+
+/ˈɪ/ (0.034)
+	<ʁɜик> /jɐzˈɪk/ "TONGUE_NOUN"
+	<вoлoкти> /wɔɫɔktˈɪ/ "DRAG_VERB"
 	<видiти> /ʋˈɪdʲite/ "SEE_VERB"
-	<бiлий> /bʲˈiɫej/ "WHITE_ADJ"
 
-/ɪ/ (0.033)
-	<oдин> /ɔdˈɪn/ "ONE_NUM"
-	<твeрдий> /tʋerdˈɪj/ "HARD_ADJ"
-	<рибa> /rˈɪbɐ/ "FISH_NOUN"
+/ɐ/ (0.029)
+	<гoдинa> /ɦɔdˈɪnɐ/ "HOUR_NOUN"
+	<тʁжкий> /tʲɐʒkˈɪj/ "HEAVY_ADJ"
+	<мiсʁць> /mʲˈisʲɐʦʲ/ "MONTH_NOUN"
 
-/ɛ/ (0.031)
-	<дeсʁть> /dˈɛsʲɐtʲ/ "TEN_NUM"
+/ˈɛ/ (0.022)
+	<мeртвий> /mˈɛrtʋej/ "DEAD_ADJ"
+	<ɜeлeний> /zɛɫˈɛnej/ "GREEN_ADJ"
+	<дeнь> /dˈɛnʲ/ "DAY_NOUN"
+
+/ɛ/ (0.016)
 	<тeлʁ> /tɛlʲˈɑ/ "CALF_NOUN"
+	<вiтeр> /ʋʲˈitɛr/ "WIND_NOUN"
 	<мoрe> /mˈɔrɛ/ "SEA_NOUN"
 
-/ɑ/ (0.031)
+/i/ (0.016)
+	<ɜвiɜдa> /zʲʋʲizdˈɑ/ "STAR_NOUN"
+	<пoпiл> /pˈɔpʲiɫ/ "ASH_NOUN"
 	<iмˈʁ> /imjˈɑ/ "NAME_NOUN"
-	<вˈʁɜaти> /ʋjɐzˈɑte/ "TIE_VERB"
-	<кoрa> /kɔrˈɑ/ "BARK_NOUN"
 
-/ɐ/ (0.024)
-	<вˈʁɜaти> /ʋjɐzˈɑte/ "TIE_VERB"
-	<гoдинa> /ɦɔdˈɪnɐ/ "HOUR_NOUN"
-	<стaрий> /stɐrˈɪj/ "OLD_ADJ"
-
-/u/ (0.007)
+/ˈu/ (0.009)
 	<мyж> /mˈuʒ/ "HUSBAND_NOUN"
-	<вyxo> /wˈuxɔ/ "EAR_NOUN"
-	<пyть> /pˈutʲ/ "WAY_NOUN"
+	<ɜyб> /zˈub/ "TOOTH_NOUN"
+	<глyпий> /ɦɫˈupej/ "STUPID_ADJ"
 
-/ʊ/ (0.004)
+/ʊ/ (0.005)
 	<гoлyб> /ɦˈɔɫʊb/ "DOVE_NOUN"
 	<рyкa> /rʊkˈɑ/ "HAND_NOUN"
 	<сyxий> /sʊxˈɪj/ "DRY_ADJ"
 
-/a/ (0.003)
+/ɪ/ (0.005)
+	<вɜʁти> /ʋzʲˈɑtɪ/ "TAKE_VERB"
+	<чoтири> /ʧɔtˈɪrɪ/ "FOUR_NUM"
+	<крилo> /krɪɫˈɔ/ "WING_NOUN"
+
+/ˈa/ (0.003)
 	<бджoлa> /bʤɔɫˈa/ "BEE_NOUN"
 	<iмлa> /imɫˈa/ "FOG_NOUN"
 
 
 
 CONSONANTS
-/r/ (0.04)
-	<рaлo> /rˈɑɫɔ/ "PLOUGH_NOUN"
-	<мeртвий> /mˈɛrtʋej/ "DEAD_ADJ"
-	<рyкa> /rʊkˈɑ/ "HAND_NOUN"
-
-/j/ (0.04)
-	<ʁɜик> /jɐzˈɪk/ "TONGUE_NOUN"
-	<ʁгoдa> /jˈɑɦɔdɐ/ "BERRY_NOUN"
-	<дeвˈʁть> /dˈɛʋjɐtʲ/ "NINE_NUM"
-
-/t/ (0.039)
-	<квiткa> /kʋʲˈitkɐ/ "FLOWER_NOUN"
-	<тeплий> /tˈɛpɫej/ "WARM_ADJ"
-	<жити> /ʒˈɪte/ "LIVE_VERB"
-
-/ɫ/ (0.034)
-	<рaлo> /rˈɑɫɔ/ "PLOUGH_NOUN"
-	<глaдкий> /ɦɫˈɑdkej/ "SMOOTH_ADJ"
-	<вeликий> /ʋeɫˈɪkej/ "GREAT_ADJ"
-
-/k/ (0.034)
-	<кoлiнo> /kɔlʲˈinɔ/ "KNEE_NOUN"
-	<вeликий> /ʋeɫˈɪkej/ "GREAT_ADJ"
-	<вoвк> /wˈɔʍk/ "WOLF_NOUN"
-
-/d/ (0.03)
-	<гoдинa> /ɦɔdˈɪnɐ/ "HOUR_NOUN"
-	<глaдкий> /ɦɫɐdkˈɪj/ "SMOOTH_ADJ"
-	<дoвгий> /dˈɔʋɦej/ "LONG_ADJ"
-
-/ɦ/ (0.027)
-	<ʁгoдa> /jˈɑɦɔdɐ/ "BERRY_NOUN"
-	<гoрix> /ɦɔrʲˈix/ "NUT_NOUN"
-	<нiгoть> /nʲˈiɦɔtʲ/ "FINGERNAIL_NOUN"
-
-/s/ (0.027)
-	<пeрст> /pˈɛrst/ "FINGER_NOUN"
-	<лист> /ɫˈɪst/ "LEAF_NOUN"
-	<пeс> /pˈɛs/ "DOG_NOUN"
-
-/ʋ/ (0.02)
-	<вɜʁти> /ʋzʲˈɑtɪ/ "TAKE_VERB"
+/r/ (0.048)
+	<три> /trˈɪ/ "THREE_NUM"
 	<твeрдий> /tʋerdˈɪj/ "HARD_ADJ"
-	<двa> /dʋˈɑ/ "TWO_NUM"
+	<рибa> /rˈɪbɐ/ "FISH_NOUN"
 
-/m/ (0.019)
-	<дим> /dˈɪm/ "SMOKE_NOUN"
-	<iмˈʁ> /imjˈɑ/ "NAME_NOUN"
-	<мˈʁсo> /mjˈɑsɔ/ "MEAT_NOUN"
+/j/ (0.048)
+	<ʁгoдa> /jˈɑɦɔdɐ/ "BERRY_NOUN"
+	<дoвгий> /dˈɔʋɦej/ "LONG_ADJ"
+	<цiлий> /ʦʲˈiɫej/ "WHOLE_ADJ"
 
-/tʲ/ (0.017)
-	<дeвˈʁть> /dˈɛʋjɐtʲ/ "NINE_NUM"
-	<дeсʁть> /dˈɛsʲɐtʲ/ "TEN_NUM"
-	<лiкoть> /lʲˈikɔtʲ/ "ELBOW_NOUN"
-
-/n/ (0.016)
-	<пoвний> /pˈɔʋnej/ "FULL_ADJ"
-	<жiнкa> /ʒʲˈinkɐ/ "WOMAN_NOUN"
-	<кoлiнo> /kɔlʲˈinɔ/ "KNEE_NOUN"
-
-/lʲ/ (0.016)
-	<сiль> /sʲˈilʲ/ "SALT_NOUN"
-	<кoрoль> /kɔrˈɔlʲ/ "KING_NOUN"
-	<xлiб> /xlʲˈib/ "BREAD_NOUN"
-
-/p/ (0.014)
-	<глyпий> /ɦɫˈupej/ "STUPID_ADJ"
-	<пити> /pˈɪte/ "DRINK_VERB"
-	<пoвний> /pˈɔʋnej/ "FULL_ADJ"
-
-/ʋʲ/ (0.013)
-	<чoлoвiк> /ʧɔɫɔʋʲˈik/ "PERSON_NOUN"
-	<вiсiм> /ʋʲˈisʲim/ "EIGHT_NUM"
-	<ɜвiɜдa> /zʲʋʲizdˈɑ/ "STAR_NOUN"
-
-/z/ (0.011)
-	<вˈʁɜaти> /ʋjɐzˈɑte/ "TIE_VERB"
-	<ɜeмлʁ> /zɛmlʲˈɑ/ "EARTH_NOUN"
-	<oɜeрo> /ˈɔzɛrɔ/ "LAKE_NOUN"
-
-/x/ (0.011)
-	<xлiб> /xlʲˈib/ "BREAD_NOUN"
+/t/ (0.047)
 	<тиxий> /tˈɪxej/ "QUIET_ADJ"
-	<xрeбeт> /xrebˈɛt/ "SPINE_NOUN"
+	<лiтo> /lʲˈitɔ/ "SUMMER_NOUN"
+	<мeртвий> /mˈɛrtʋej/ "DEAD_ADJ"
 
-/w/ (0.011)
+/ɫ/ (0.041)
+	<вoлoкти> /wɔɫɔktˈɪ/ "DRAG_VERB"
+	<тeплий> /tˈɛpɫej/ "WARM_ADJ"
+	<крилo> /krɪɫˈɔ/ "WING_NOUN"
+
+/k/ (0.041)
+	<тʁжкий> /tʲɐʒkˈɪj/ "HEAVY_ADJ"
+	<вoлoкти> /wɔɫɔktˈɪ/ "DRAG_VERB"
+	<кoрoль> /kɔrˈɔlʲ/ "KING_NOUN"
+
+/d/ (0.036)
+	<ɜвiɜдa> /zʲʋʲizdˈɑ/ "STAR_NOUN"
+	<дим> /dˈɪm/ "SMOKE_NOUN"
 	<вoдa> /wɔdˈɑ/ "WATER_NOUN"
-	<вyxo> /wˈuxɔ/ "EAR_NOUN"
-	<вoгoнь> /wɔɦˈɔnʲ/ "FIRE_NOUN"
 
-/nʲ/ (0.011)
-	<дeнь> /dˈɛnʲ/ "DAY_NOUN"
-	<кiнь> /kʲˈinʲ/ "HORSE_NOUN"
+/ɦ/ (0.033)
+	<бiг> /bʲˈiɦ/ "GOD_NOUN"
+	<рiг> /rʲˈiɦ/ "HORN_NOUN"
+	<глyпий> /ɦɫˈupej/ "STUPID_ADJ"
+
+/s/ (0.033)
+	<гoлoс> /ɦˈɔɫɔs/ "VOICE_NOUN"
+	<шiсть> /ʃʲˈistʲ/ "SIX_NUM"
 	<снiг> /snʲˈiɦ/ "SNOW_NOUN"
 
-/b/ (0.011)
-	<бoг> /bˈɔɦ/ "GOD_NOUN"
-	<дoбрий> /dˈɔbrej/ "GOOD_ADJ"
-	<ɜyб> /zˈub/ "TOOTH_NOUN"
+/ʋ/ (0.024)
+	<гoлoвa> /ɦɔɫɔʋˈɑ/ "HEAD_NOUN"
+	<дeвˈʁть> /dˈɛʋjɐtʲ/ "NINE_NUM"
+	<кoрoвa> /kɔrˈɔʋɐ/ "COW_NOUN"
 
-/sʲ/ (0.01)
-	<сiм> /sʲˈim/ "SEVEN_NUM"
-	<мисль> /mˈɪsʲlʲ/ "THOUGHT_NOUN"
+/m/ (0.022)
+	<мoлoкo> /mɔɫɔkˈɔ/ "MILK_NOUN"
+	<вiсiм> /ʋʲˈisʲim/ "EIGHT_NUM"
+	<мˈʁсo> /mjˈɑsɔ/ "MEAT_NOUN"
+
+/tʲ/ (0.021)
+	<щaстʁ> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
+	<дeсʁть> /dˈɛsʲɐtʲ/ "TEN_NUM"
+	<смeрть> /smˈɛrtʲ/ "DEATH_NOUN"
+
+/n/ (0.019)
+	<ɜeлeний> /zɛɫˈɛnej/ "GREEN_ADJ"
+	<oдин> /ɔdˈɪn/ "ONE_NUM"
+	<жiнкa> /ʒʲˈinkɐ/ "WOMAN_NOUN"
+
+/lʲ/ (0.019)
+	<тeлʁ> /tɛlʲˈɑ/ "CALF_NOUN"
+	<кoлiнo> /kɔlʲˈinɔ/ "KNEE_NOUN"
 	<сiль> /sʲˈilʲ/ "SALT_NOUN"
 
-/ʧ/ (0.009)
-	<дoщ> /dˈɔʃʧ/ "RAIN_NOUN"
-	<чoтири> /ʧɔtˈɪrɪ/ "FOUR_NUM"
+/p/ (0.017)
+	<птax> /ptˈɑx/ "BIRD_NOUN"
+	<пeс> /pˈɛs/ "DOG_NOUN"
+	<пoвний> /pˈɔʋnej/ "FULL_ADJ"
+
+/ʋʲ/ (0.016)
+	<вiл> /ʋʲˈiɫ/ "OX_NOUN"
+	<ɜвiɜдa> /zʲʋʲizdˈɑ/ "STAR_NOUN"
+	<вiтeр> /ʋʲˈitɛr/ "WIND_NOUN"
+
+/z/ (0.014)
+	<ɜeмлʁ> /zɛmlʲˈɑ/ "EARTH_NOUN"
+	<oɜeрo> /ˈɔzɛrɔ/ "LAKE_NOUN"
+	<ɜyб> /zˈub/ "TOOTH_NOUN"
+
+/x/ (0.014)
+	<вyxo> /wˈuxɔ/ "EAR_NOUN"
+	<гoрix> /ɦɔrʲˈix/ "NUT_NOUN"
+	<xрeбeт> /xrebˈɛt/ "SPINE_NOUN"
+
+/w/ (0.014)
+	<вoдa> /wɔdˈɑ/ "WATER_NOUN"
+	<дeрeвo> /dˈɛrɛwɔ/ "TREE_NOUN"
+	<вoлoкти> /wɔɫɔktˈɪ/ "DRAG_VERB"
+
+/nʲ/ (0.014)
+	<вoгoнь> /wɔɦˈɔnʲ/ "FIRE_NOUN"
+	<нiч> /nʲˈiʧ/ "NIGHT_NOUN"
+	<нiгoть> /nʲˈiɦɔtʲ/ "FINGERNAIL_NOUN"
+
+/b/ (0.014)
+	<бджoлa> /bʤɔɫˈa/ "BEE_NOUN"
+	<xрeбeт> /xrebˈɛt/ "SPINE_NOUN"
+	<xлiб> /xlʲˈib/ "BREAD_NOUN"
+
+/sʲ/ (0.012)
+	<сiм> /sʲˈim/ "SEVEN_NUM"
+	<мисль> /mˈɪsʲlʲ/ "THOUGHT_NOUN"
+	<щaстʁ> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
+
+/ʧ/ (0.01)
+	<нiч> /nʲˈiʧ/ "NIGHT_NOUN"
 	<чoлoвiк> /ʧɔɫɔʋʲˈik/ "PERSON_NOUN"
+	<щaстʁ> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
 
-/rʲ/ (0.007)
+/rʲ/ (0.009)
 	<кoрiнь> /kˈɔrʲinʲ/ "ROOT_NOUN"
+	<гoрix> /ɦɔrʲˈix/ "NUT_NOUN"
 	<рiг> /rʲˈiɦ/ "HORN_NOUN"
-	<рiст> /rʲˈist/ "GROWTH_NOUN"
 
-/ʒ/ (0.006)
-	<мyж> /mˈuʒ/ "HUSBAND_NOUN"
+/ʒ/ (0.007)
 	<жити> /ʒˈɪte/ "LIVE_VERB"
+	<жoвтий> /ʒˈɔʍtej/ "YELLOW_ADJ"
 	<тʁжкий> /tʲɐʒkˈɪj/ "HEAVY_ADJ"
 
-/ʦ/ (0.004)
+/ʦ/ (0.005)
 	<сeрцe> /sˈɛrʦɛ/ "HEART_NOUN"
-	<сoнцe> /sˈɔnʦɛ/ "SUN_NOUN"
 	<цвiт> /ʦʋʲˈit/ "FLOWER_NOUN"
+	<сoнцe> /sˈɔnʦɛ/ "SUN_NOUN"
 
-/zʲ/ (0.004)
+/zʲ/ (0.005)
 	<ɜвiɜдa> /zʲʋʲizdˈɑ/ "STAR_NOUN"
-	<вɜʁти> /ʋzʲˈɑtɪ/ "TAKE_VERB"
 	<ɜвiр> /zʲʋʲˈir/ "BEAST_NOUN"
+	<вɜʁти> /ʋzʲˈɑtɪ/ "TAKE_VERB"
 
 /ʦʲ/ (0.003)
 	<цiлий> /ʦʲˈiɫej/ "WHOLE_ADJ"
 	<мiсʁць> /mʲˈisʲɐʦʲ/ "MONTH_NOUN"
 
 /ʍ/ (0.003)
-	<вoвк> /wˈɔʍk/ "WOLF_NOUN"
 	<жoвтий> /ʒˈɔʍtej/ "YELLOW_ADJ"
+	<вoвк> /wˈɔʍk/ "WOLF_NOUN"
 
 /ʃ/ (0.003)
-	<щaстʁ> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
 	<дoщ> /dˈɔʃʧ/ "RAIN_NOUN"
+	<щaстʁ> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
 
 /pʲ/ (0.003)
 	<пiсoк> /pʲisˈɔk/ "SAND_NOUN"
@@ -202,32 +222,24 @@ CONSONANTS
 	<мiсʁць> /mʲˈisʲɐʦʲ/ "MONTH_NOUN"
 
 /kʲ/ (0.003)
-	<кiнь> /kʲˈinʲ/ "HORSE_NOUN"
 	<кiсть> /kʲˈistʲ/ "BONE_NOUN"
+	<кiнь> /kʲˈinʲ/ "HORSE_NOUN"
 
 /bʲ/ (0.003)
-	<бiлий> /bʲˈiɫej/ "WHITE_ADJ"
 	<бiг> /bʲˈiɦ/ "GOD_NOUN"
+	<бiлий> /bʲˈiɫej/ "WHITE_ADJ"
 
-/ʤ/ (0.001)
+/ʤ/ (0.002)
 	<бджoлa> /bʤɔɫˈa/ "BEE_NOUN"
 
-/ʒʲ/ (0.001)
+/ʒʲ/ (0.002)
 	<жiнкa> /ʒʲˈinkɐ/ "WOMAN_NOUN"
 
-/ʃʲ/ (0.001)
+/ʃʲ/ (0.002)
 	<шiсть> /ʃʲˈistʲ/ "SIX_NUM"
 
-/dʲ/ (0.001)
+/dʲ/ (0.002)
 	<видiти> /ʋˈɪdʲite/ "SEE_VERB"
-
-
-
-SUPRASEGMENTALS
-/ˈ/ (0.173)
-	<рaлo> /rˈɑɫɔ/ "PLOUGH_NOUN"
-	<пити> /pˈɪte/ "DRINK_VERB"
-	<гoрa> /ɦɔrˈɑ/ "MOUNTAIN_NOUN"
 
 
 

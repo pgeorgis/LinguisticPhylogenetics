@@ -10,8 +10,8 @@ transcription:
         ignore_stress: false
         combine_diphthongs: true
         normalize_geminates: false
-        suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', '̄', 'ˈ']
-        level_suprasegmentals: 'ˈ'
+        #suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', '̄', 'ˈ']
+        #level_suprasegmentals: 'ˈ'
 
 pmi:
     refresh: []

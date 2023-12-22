@@ -1,189 +1,222 @@
 VOWELS
-/ɔ/ (0.083)
+/ˈɔ/ (0.062)
+	<woko> /βˈɔkɔ/ "EYE_NOUN"
 	<pos> /pˈɔs/ "DOG_NOUN"
-	<korjeń> /kˈɔʀʲɛɲ/ "ROOT_NOUN"
-	<čorny> /ʧˈɔʀnɪ/ "BLACK_ADJ"
+	<strowy> /strˈɔβɪ/ "HEALTHY_ADJ"
 
-/a/ (0.052)
-	<noha> /nˈɔɦa/ "FOOT_NOUN"
-	<njewjesta> /ɲɛɥˈɛsta/ "BRIDE_NOUN"
-	<mjaso> /mʲˈasɔ/ "MEAT_NOUN"
-
-/e/ (0.038)
-	<pěsk> /pʲˈesk/ "SAND_NOUN"
+/ˈe/ (0.041)
+	<chlěb> /xlˈep/ "BREAD_NOUN"
+	<sněh> /sɲˈex/ "SNOW_NOUN"
 	<šěsć> /ʃˈesʧ/ "SIX_NUM"
-	<dźesać> /ʤesˈaʧ/ "TEN_NUM"
 
-/ɪ/ (0.037)
-	<jedyn> /jɛdˈɪn/ "ONE_NUM"
-	<dobry> /dˈɔbʀɪ/ "GOOD_ADJ"
-	<ryba> /ʀˈɪba/ "FISH_NOUN"
+/ɔ/ (0.039)
+	<lěto> /lˈetɔ/ "SUMMER_NOUN"
+	<město> /mʲˈestɔ/ "PLACE_NOUN"
+	<woheń> /βɔɦˈɛɲ/ "FIRE_NOUN"
 
-/ɛ/ (0.037)
-	<jedyn> /jɛdˈɪn/ "ONE_NUM"
-	<popjeɫ> /pˈɔpʲɛw/ "ASH_NOUN"
-	<mjeno> /mʲˈɛnɔ/ "NAME_NOUN"
+/a/ (0.037)
+	<kruwa> /kʀˈuβa/ "COW_NOUN"
+	<hwězda> /ɦɥˈezda/ "STAR_NOUN"
+	<pčoɫa> /pʧˈɔwa/ "BEE_NOUN"
 
-/i/ (0.025)
-	<list> /lˈist/ "LEAF_NOUN"
-	<ćichi> /ʧˈixʲi/ "QUIET_ADJ"
-	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
+/ɪ/ (0.033)
+	<jazyk> /jˈazɪk/ "TONGUE_NOUN"
+	<ćopɫy> /ʧˈɔpwɪ/ "WARM_ADJ"
+	<stary> /stˈaʀɪ/ "OLD_ADJ"
 
-/o/ (0.021)
+/ˈɛ/ (0.027)
+	<dešć> /dˈɛʃʧ/ "RAIN_NOUN"
+	<drjewo> /dʀʲˈɛβɔ/ "TREE_NOUN"
+	<njewjesta> /ɲɛɥˈɛsta/ "BRIDE_NOUN"
+
+/ˈa/ (0.027)
+	<wjazać> /ɥˈazaʧ/ "TIE_VERB"
+	<stary> /stˈaʀɪ/ "OLD_ADJ"
+	<kral> /kʀˈal/ "KING_NOUN"
+
+/ˈo/ (0.023)
 	<hɫós> /ɦwˈos/ "VOICE_NOUN"
-	<kósć> /kˈosʧ/ "BONE_NOUN"
-	<lód> /lˈot/ "ICE_NOUN"
+	<bóh> /bˈox/ "GOD_NOUN"
+	<sól> /sˈol/ "SALT_NOUN"
 
-/u/ (0.014)
-	<ruka> /ʀˈuka/ "HAND_NOUN"
-	<wulki> /βˈulkʲi/ "GREAT_ADJ"
-	<puć> /pˈuʧ/ "WAY_NOUN"
+/ˈu/ (0.018)
+	<suchi> /sˈuxʲi/ "DRY_ADJ"
+	<muž> /mˈuʃ/ "HUSBAND_NOUN"
+	<kruwa> /kʀˈuβa/ "COW_NOUN"
+
+/ˈi/ (0.018)
+	<pić> /pʲˈiʧ/ "DRINK_VERB"
+	<křidɫo> /kʃˈidwɔ/ "WING_NOUN"
+	<widźeć> /ɥˈiʤɛʧ/ "SEE_VERB"
+
+/ɛ/ (0.018)
+	<widźeć> /ɥˈiʤɛʧ/ "SEE_VERB"
+	<popjeɫ> /pˈɔpʲɛw/ "ASH_NOUN"
+	<imje> /ˈimʲɛ/ "NAME_NOUN"
+
+/i/ (0.014)
+	<ćichi> /ʧˈixʲi/ "QUIET_ADJ"
+	<štyri> /ʃtˈɪʀʲi/ "FOUR_NUM"
+	<ćežki> /ʧˈɛʃkʲi/ "HEAVY_ADJ"
+
+/ˈɪ/ (0.012)
+	<cyɫy> /ʦˈɪwɪ/ "WHOLE_ADJ"
+	<ryba> /ʀˈɪba/ "FISH_NOUN"
+	<štyri> /ʃtˈɪʀʲi/ "FOUR_NUM"
+
+/e/ (0.006)
+	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
+	<dźesać> /ʤesˈaʧ/ "TEN_NUM"
+	<dźewjeć> /ʤeɥˈɛʧ/ "NINE_NUM"
+
+/o/ (0.002)
+	<wósom> /βosˈɔm/ "EIGHT_NUM"
 
 
 
 CONSONANTS
-/s/ (0.04)
-	<pos> /pˈɔs/ "DOG_NOUN"
-	<list> /lˈist/ "LEAF_NOUN"
-	<kósć> /kˈosʧ/ "BONE_NOUN"
+/s/ (0.049)
+	<lěs> /lˈes/ "FOREST_NOUN"
+	<sɫónco> /swˈonʦɔ/ "SUN_NOUN"
+	<hɫós> /ɦwˈos/ "VOICE_NOUN"
 
-/ʧ/ (0.037)
-	<pčoɫa> /pʧˈɔwa/ "BEE_NOUN"
-	<wjazać> /ɥˈazaʧ/ "TIE_VERB"
-	<widźeć> /ɥˈiʤɛʧ/ "SEE_VERB"
-
-/w/ (0.033)
-	<popjeɫ> /pˈɔpʲɛw/ "ASH_NOUN"
-	<hɫadki> /ɦwˈatkʲi/ "SMOOTH_ADJ"
-	<poɫny> /pˈɔwnɪ/ "FULL_ADJ"
-
-/ʀ/ (0.032)
-	<róh> /ʀˈox/ "HORN_NOUN"
-	<čorny> /ʧˈɔʀnɪ/ "BLACK_ADJ"
-	<hora> /ɦˈɔʀa/ "MOUNTAIN_NOUN"
-
-/t/ (0.032)
-	<trawa> /tʀˈaβa/ "GRASS_NOUN"
-	<hɫadki> /ɦwˈatkʲi/ "SMOOTH_ADJ"
-	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
-
-/k/ (0.03)
-	<křidɫo> /kʃˈidwɔ/ "WING_NOUN"
-	<kóń> /kˈoɲ/ "HORSE_NOUN"
+/ʧ/ (0.045)
 	<čɫowjek> /ʧwˈɔɥɛk/ "PERSON_NOUN"
+	<pjeć> /pʲˈeʧ/ "FIVE_NUM"
+	<pčoɫa> /pʧˈɔwa/ "BEE_NOUN"
 
-/l/ (0.027)
-	<lód> /lˈot/ "ICE_NOUN"
-	<wjelk> /ɥˈelk/ "WOLF_NOUN"
-	<mloko> /mlˈɔkɔ/ "MILK_NOUN"
+/w/ (0.041)
+	<hɫupy> /ɦwˈupɪ/ "STUPID_ADJ"
+	<běɫy> /bʲˈewɪ/ "WHITE_ADJ"
+	<hoɫb> /ɦˈɔwp/ "DOVE_NOUN"
 
-/β/ (0.025)
-	<dwaj> /dβˈaj/ "TWO_NUM"
-	<wósom> /βosˈɔm/ "EIGHT_NUM"
+/ʀ/ (0.039)
+	<smjerć> /smʲˈeʀʧ/ "DEATH_NOUN"
+	<trawa> /tʀˈaβa/ "GRASS_NOUN"
 	<kruwa> /kʀˈuβa/ "COW_NOUN"
 
-/d/ (0.024)
-	<radɫo> /ʀˈadwɔ/ "PLOUGH_NOUN"
-	<woda> /βˈɔda/ "WATER_NOUN"
-	<sydom> /sɪdˈɔm/ "SEVEN_NUM"
+/t/ (0.039)
+	<lód> /lˈot/ "ICE_NOUN"
+	<lěto> /lˈetɔ/ "SUMMER_NOUN"
+	<město> /mʲˈestɔ/ "PLACE_NOUN"
 
-/ɦ/ (0.022)
-	<hɫadki> /ɦwˈatkʲi/ "SMOOTH_ADJ"
-	<hród> /ɦʀˈot/ "CITY_NOUN"
-	<hoɫb> /ɦˈɔwp/ "DOVE_NOUN"
+/k/ (0.037)
+	<jazyk> /jˈazɪk/ "TONGUE_NOUN"
+	<ruka> /ʀˈuka/ "HAND_NOUN"
+	<koleno> /kɔlˈɛnɔ/ "KNEE_NOUN"
 
-/n/ (0.022)
-	<nós> /nˈos/ "NOSE_NOUN"
-	<jedyn> /jɛdˈɪn/ "ONE_NUM"
-	<poɫny> /pˈɔwnɪ/ "FULL_ADJ"
+/l/ (0.033)
+	<koleno> /kɔlˈɛnɔ/ "KNEE_NOUN"
+	<mysl> /mˈɪsl/ "THOUGHT_NOUN"
+	<sól> /sˈol/ "SALT_NOUN"
 
-/p/ (0.019)
-	<pčoɫa> /pʧˈɔwa/ "BEE_NOUN"
-	<hoɫb> /ɦˈɔwp/ "DOVE_NOUN"
-	<hɫupy> /ɦwˈupɪ/ "STUPID_ADJ"
+/β/ (0.031)
+	<woɫ> /βˈɔw/ "OX_NOUN"
+	<hɫowa> /ɦwˈɔβa/ "HEAD_NOUN"
+	<drjewo> /dʀʲˈɛβɔ/ "TREE_NOUN"
 
-/ɥ/ (0.017)
-	<widźeć> /ɥˈiʤɛʧ/ "SEE_VERB"
-	<wjazać> /ɥˈazaʧ/ "TIE_VERB"
+/d/ (0.029)
+	<jahoda> /jˈaɦɔda/ "BERRY_NOUN"
+	<dešć> /dˈɛʃʧ/ "RAIN_NOUN"
 	<twjerdy> /tɥˈeʀdɪ/ "HARD_ADJ"
 
-/x/ (0.016)
+/ɦ/ (0.027)
+	<hwězda> /ɦɥˈezda/ "STAR_NOUN"
+	<hɫupy> /ɦwˈupɪ/ "STUPID_ADJ"
+	<hɫowa> /ɦwˈɔβa/ "HEAD_NOUN"
+
+/n/ (0.027)
+	<hodźina> /ɦˈɔʤina/ "HOUR_NOUN"
+	<nós> /nˈos/ "NOSE_NOUN"
 	<nochć> /nˈɔxʧ/ "FINGERNAIL_NOUN"
-	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
-	<worjech> /βˈɔrʲɛx/ "NUT_NOUN"
 
-/m/ (0.014)
-	<mysl> /mˈɪsl/ "THOUGHT_NOUN"
-	<sydom> /sɪdˈɔm/ "SEVEN_NUM"
-	<mloko> /mlˈɔkɔ/ "MILK_NOUN"
+/p/ (0.023)
+	<hoɫb> /ɦˈɔwp/ "DOVE_NOUN"
+	<hɫupy> /ɦwˈupɪ/ "STUPID_ADJ"
+	<puć> /pˈuʧ/ "WAY_NOUN"
 
-/ʃ/ (0.013)
-	<ptašk> /ptˈaʃk/ "BIRD_NOUN"
-	<muž> /mˈuʃ/ "HUSBAND_NOUN"
-	<štyri> /ʃtˈɪʀʲi/ "FOUR_NUM"
-
-/z/ (0.013)
-	<jazyk> /jˈazɪk/ "TONGUE_NOUN"
-	<jězor> /jˈezɔʀ/ "LAKE_NOUN"
+/ɥ/ (0.021)
+	<njewjesta> /ɲɛɥˈɛsta/ "BRIDE_NOUN"
+	<hwězda> /ɦɥˈezda/ "STAR_NOUN"
 	<wjazać> /ɥˈazaʧ/ "TIE_VERB"
 
-/mʲ/ (0.013)
-	<mjaso> /mʲˈasɔ/ "MEAT_NOUN"
-	<město> /mʲˈestɔ/ "PLACE_NOUN"
-	<imje> /ˈimʲɛ/ "NAME_NOUN"
+/x/ (0.019)
+	<chɫódny> /xwˈodnɪ/ "COLD_ADJ"
+	<wucho> /βˈuxɔ/ "EAR_NOUN"
+	<róh> /ʀˈox/ "HORN_NOUN"
 
-/ʀʲ/ (0.011)
-	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
+/m/ (0.018)
+	<morjo> /mˈɔʀʲɔ/ "SEA_NOUN"
+	<dym> /dˈɪm/ "SMOKE_NOUN"
+	<mysl> /mˈɪsl/ "THOUGHT_NOUN"
+
+/ʃ/ (0.016)
+	<ptašk> /ptˈaʃk/ "BIRD_NOUN"
+	<muž> /mˈuʃ/ "HUSBAND_NOUN"
+	<křidɫo> /kʃˈidwɔ/ "WING_NOUN"
+
+/z/ (0.016)
+	<hwězda> /ɦɥˈezda/ "STAR_NOUN"
+	<wjazać> /ɥˈazaʧ/ "TIE_VERB"
+	<zub> /zˈup/ "TOOTH_NOUN"
+
+/mʲ/ (0.016)
+	<mjeno> /mʲˈɛnɔ/ "NAME_NOUN"
+	<mje> /mʲˈɛ/ "NAME_NOUN"
+	<zemja> /zˈɛmʲa/ "EARTH_NOUN"
+
+/ʀʲ/ (0.014)
+	<štyri> /ʃtˈɪʀʲi/ "FOUR_NUM"
+	<morjo> /mˈɔʀʲɔ/ "SEA_NOUN"
 	<drjewo> /dʀʲˈɛβɔ/ "TREE_NOUN"
-	<rěka> /ʀʲˈeka/ "RIVER_NOUN"
 
-/ɲ/ (0.01)
+/ɲ/ (0.012)
 	<njewjesta> /ɲɛɥˈɛsta/ "BRIDE_NOUN"
-	<kóń> /kˈoɲ/ "HORSE_NOUN"
-	<sněh> /sɲˈex/ "SNOW_NOUN"
-
-/j/ (0.01)
-	<krej> /kʀˈej/ "BLOOD_NOUN"
-	<jazyk> /jˈazɪk/ "TONGUE_NOUN"
-	<jedyn> /jɛdˈɪn/ "ONE_NUM"
-
-/ʦ/ (0.008)
-	<nóc> /nˈoʦ/ "NIGHT_NOUN"
-	<sɫónco> /swˈonʦɔ/ "SUN_NOUN"
-	<cyɫy> /ʦˈɪwɪ/ "WHOLE_ADJ"
-
-/ʤ/ (0.008)
 	<dźeń> /ʤˈɛɲ/ "DAY_NOUN"
-	<widźeć> /ɥˈiʤɛʧ/ "SEE_VERB"
-	<dźesać> /ʤesˈaʧ/ "TEN_NUM"
+	<korjeń> /kˈɔʀʲɛɲ/ "ROOT_NOUN"
 
-/ʒ/ (0.006)
-	<žona> /ʒˈɔna/ "WOMAN_NOUN"
-	<žoɫty> /ʒˈɔwtɪ/ "YELLOW_ADJ"
+/j/ (0.012)
+	<jedyn> /jɛdˈɪn/ "ONE_NUM"
+	<jazyk> /jˈazɪk/ "TONGUE_NOUN"
+	<jězor> /jˈezɔʀ/ "LAKE_NOUN"
+
+/ʦ/ (0.01)
+	<cyɫy> /ʦˈɪwɪ/ "WHOLE_ADJ"
+	<nóc> /nˈoʦ/ "NIGHT_NOUN"
+	<měsac> /mʲˈesaʦ/ "MONTH_NOUN"
+
+/ʤ/ (0.01)
+	<dźewjeć> /ʤeɥˈɛʧ/ "NINE_NUM"
+	<dźeń> /ʤˈɛɲ/ "DAY_NOUN"
+	<hodźina> /ɦˈɔʤina/ "HOUR_NOUN"
+
+/ʒ/ (0.008)
 	<koža> /kˈɔʒa/ "SKIN_NOUN"
+	<žona> /ʒˈɔna/ "WOMAN_NOUN"
+	<žić> /ʒˈiʧ/ "LIVE_VERB"
 
-/pʲ/ (0.006)
-	<pić> /pʲˈiʧ/ "DRINK_VERB"
+/pʲ/ (0.008)
+	<pěsk> /pʲˈesk/ "SAND_NOUN"
 	<popjeɫ> /pˈɔpʲɛw/ "ASH_NOUN"
-	<pjeć> /pʲˈeʧ/ "FIVE_NUM"
+	<pić> /pʲˈiʧ/ "DRINK_VERB"
 
-/kʲ/ (0.005)
+/kʲ/ (0.006)
+	<ćežki> /ʧˈɛʃkʲi/ "HEAVY_ADJ"
 	<wulki> /βˈulkʲi/ "GREAT_ADJ"
 	<hɫadki> /ɦwˈatkʲi/ "SMOOTH_ADJ"
-	<ćežki> /ʧˈɛʃkʲi/ "HEAVY_ADJ"
 
-/b/ (0.005)
+/b/ (0.006)
 	<bóh> /bˈox/ "GOD_NOUN"
 	<dobry> /dˈɔbʀɪ/ "GOOD_ADJ"
 	<ryba> /ʀˈɪba/ "FISH_NOUN"
 
-/xʲ/ (0.003)
+/xʲ/ (0.004)
 	<ćichi> /ʧˈixʲi/ "QUIET_ADJ"
 	<suchi> /sˈuxʲi/ "DRY_ADJ"
 
-/bʲ/ (0.003)
-	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
+/bʲ/ (0.004)
 	<běɫy> /bʲˈewɪ/ "WHITE_ADJ"
+	<chribjet> /xʀʲˈibʲet/ "SPINE_NOUN"
 
 /rʲ/ (0.002)
 	<worjech> /βˈɔrʲɛx/ "NUT_NOUN"
@@ -193,14 +226,6 @@ CONSONANTS
 
 /f/ (0.002)
 	<law> /lˈaf/ "LION_NOUN"
-
-
-
-SUPRASEGMENTALS
-/ˈ/ (0.186)
-	<ćělo> /ʧˈelɔ/ "BODY_NOUN"
-	<doɫhi> /dˈɔwɦɪ/ "LONG_ADJ"
-	<cyɫy> /ʦˈɪwɪ/ "WHOLE_ADJ"
 
 
 
