@@ -1,6 +1,6 @@
 Venetian	Piedmontese	probability
-a	a	0.826
-a	-	0.101
+a	a	0.838
+a	-	0.089
 b	b	1.0
 d	d	0.759
 d	t	0.103
@@ -27,12 +27,13 @@ m	m	0.983
 n	n	0.639
 n	ŋ	0.277
 n	-	0.055
-o	-	0.719
+o	-	0.724
 o	u	0.082
 o	l	0.065
 p	p	0.952
-r	r	0.689
-r	j	0.262
+r	r	0.686
+r	j	0.263
+r	-	0.051
 s	s	0.903
 t	t	0.839
 t	j_t	0.098
