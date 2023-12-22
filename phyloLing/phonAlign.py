@@ -93,7 +93,7 @@ class Alignment:
                  cost_func=AlignmentCost, 
                  added_penalty_dict=None,
                  gap_ch=GAP_CH_DEFAULT,
-                 gop=-0.3, # TODO possibly need to recalibrate **
+                 gop=-0.2, # TODO possibly need to recalibrate ** changed from -0.3 to -0.2 when changing to PMI log base 2, given that those PMI values will be 69% of value of PMI with log base math.e
                  pad_ch=PAD_CH_DEFAULT,
                  n_best=1,
                  phon_env=False,
