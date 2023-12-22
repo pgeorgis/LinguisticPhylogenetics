@@ -648,10 +648,16 @@ class PhonCorrelator:
         ----------
         radius : int, optional
             Number of word positions forward and backward to check for initial correspondences. The default is 2.
-        max_iterations : int, optional
-            Maximum number of iterations. The default is 3.
         p_threshold : float, optional
-            p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.1.
+            p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.05.
+        p_step : float, optional
+            Amount to increment p-value per iteration. The default is 0.02.
+        max_p : float, optional
+            Maximum p-value at which to cap PMI step. The default is 0.25.
+        samples : int, optional
+            Number of random samples to draw. The default is 5.
+        cumulative : bool, optional
+            Whether PMI accumulates over iterations, continuing to consider alignments from earlier iterations. The default is False. 
         log_iterations : bool, optional
             Whether to log the results of each iteration. The default is False.
         save : bool, optional
