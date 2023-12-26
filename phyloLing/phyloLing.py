@@ -1258,7 +1258,7 @@ class Language:
         with open(missing_lst, 'w') as f:
             f.write(missing_concepts)         
 
-    def create_phoneme_inventory(self, warn_n=0):
+    def create_phoneme_inventory(self, warn_n=1):
         for concept in self.vocabulary:
             for word in self.vocabulary[concept]:
                 segments = word.segments
@@ -1297,7 +1297,7 @@ class Language:
         total_tokens = sum(self.phonemes.values())
         for phoneme in self.phonemes:
             count = self.phonemes[phoneme]
-            if count < warn_n:
+            if count <= warn_n:
                 self.family.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
             self.phonemes[phoneme] = count / total_tokens
         
