@@ -18,14 +18,14 @@ transcription:
     #         suprasegmentals: ['ˀ']
 
 pmi:
-    refresh: []
-    refresh_all_pmi: true
+    refresh: ['Scots']
+    refresh_all_pmi: false
 
 surprisal:
     ngram: 1
     phon_env: true 
-    refresh: []
-    refresh_all_surprisal: true
+    refresh: ['Scots']
+    refresh_all_surprisal: false
 
 cluster:
     cognates: none
