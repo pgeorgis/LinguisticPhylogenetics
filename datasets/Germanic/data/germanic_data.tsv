@@ -1,7 +1,7 @@
 ID	Language_ID	Glottocode	ISO 639-3	Parameter_ID	Value	Form	Segments	Source_Form	Cognate_ID	Loan	Comment	Source
 Proto-Germanic	Proto-Germanic			deadly_ADJ	daudalīkaz	dˈɑu̯ðɑliːkɑz	d ˈɑu̯ ð ɑ l iː k ɑ z		deadly_ADJ_1	TRUE	IRREGULAR OR LOAN	
 Old Norse	Old Norse			deadly_ADJ	dauðligr	dˈɒu̯ðliɡr	d ˈɒu̯ ð l i ɡ r		deadly_ADJ_1			
-Icelandic	Icelandic			deadly_ADJ	dauðlegur	d̥ˈœy̯ðlɛːɣʏr̥	d̥ ˈœy̯ ð l ɛː ɣ ʏ r̥		deadly_ADJ_1			
+Icelandic	Icelandic			deadly_ADJ	dauðlegur	d̥ˈœːy̯ðlɛːɣʏr̥	d̥ ˈœːy̯ ð l ɛː ɣ ʏ r̥		deadly_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			deadly_ADJ	dødeleg	dˈøːdeleɡ	d ˈøː d e l e ɡ		deadly_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			deadly_ADJ	dødelig	dˈøːdəli	d ˈøː d ə l i		deadly_ADJ_1			
 Danish	Danish			deadly_ADJ	dødelig	d̥ˈøːð̞ˠəli	d̥ ˈøː ð̞ˠ ə l i		deadly_ADJ_1			
@@ -79,7 +79,7 @@ Eastphalian	Eastphalian			church_NOUN_FEM	Kerke	kˈɛːɐkə	k ˈɛː ɐ k ə		c
 Northern Low Saxon	Northern Low Saxon			church_NOUN_FEM	Kark	kʰˈaːɡ	kʰ ˈaː ɡ		church_NOUN_FEM_1			
 East Low German	East Low German			church_NOUN_FEM	Kirch	kʰˈiːæç	kʰ ˈiː æ ç		church_NOUN_FEM_1			
 Dutch	Dutch			church_NOUN_FEM	kerk	kˈɛɾk	k ˈɛ ɾ k		church_NOUN_FEM_1			
-Afrikaans	Afrikaans			church_NOUN_FEM	kerk	kˈɛrk	k ˈɛ r k		church_NOUN_FEM_1			
+Afrikaans	Afrikaans			church_NOUN_FEM	kerk	kˈærk	k ˈæ r k		church_NOUN_FEM_1			
 West Flemish	West Flemish			church_NOUN_FEM	kerke	kˈæɾkə	k ˈæ ɾ k ə		church_NOUN_FEM_1			
 Limburgish	Limburgish			church_NOUN_FEM	kèrk	kˈɛːʀək	k ˈɛː ʀ ə k		church_NOUN_FEM_1			
 Ripuarian	Ripuarian			church_NOUN_FEM	Kirch	kˈiːɐɕ	k ˈiː ɐ ɕ		church_NOUN_FEM_1			
@@ -138,7 +138,7 @@ Luxembourgish	Luxembourgish			speech_NOUN_FEM	Sprooch	ʃpʀˈoːχ	ʃ p ʀ ˈoː
 Pennsylvania German	Pennsylvania German			speech_NOUN_FEM	Schprooch	ʃpɾˈoːx	ʃ p ɾ ˈoː x		speech_NOUN_FEM_1			
 Yiddish	Yiddish			speech_NOUN_FEM	שפּראַך	ʃpʀˈaχ	ʃ p ʀ ˈa χ		speech_NOUN_FEM_1	TRUE	IRREGULAR OR LOAN	
 German	German			speech_NOUN_FEM	Sprache	ʃpʁˈaːxə	ʃ p ʁ ˈaː x ə		speech_NOUN_FEM_1			
-Swabian	Swabian			speech_NOUN_FEM	Schbroch	ʃb̥ʁˈɔːx	ʃ b̥ ʁ ˈɔː x		speech_NOUN_FEM_1			
+Swabian	Swabian			speech_NOUN_FEM	Schbroch	ʃbʁˈɔːx	ʃ b ʁ ˈɔː x		speech_NOUN_FEM_1			
 Alsatian	Alsatian			speech_NOUN_FEM	Sproch	ʃpʁˈoːx	ʃ p ʁ ˈoː x		speech_NOUN_FEM_1			
 Swiss German	Swiss German			speech_NOUN_FEM	Sproch	ʃprˈoːχ	ʃ p r ˈoː χ		speech_NOUN_FEM_1			
 Bavarian	Bavarian			speech_NOUN_FEM	Språch	ʃprˈɒːx	ʃ p r ˈɒː x		speech_NOUN_FEM_1			
@@ -160,7 +160,7 @@ Eastphalian	Eastphalian			edge_NOUN	Ecke	ˈɛkə	ˈɛ k ə		edge_NOUN_1
 Northern Low Saxon	Northern Low Saxon			edge_NOUN	Eck	ˈɛɡ	ˈɛ ɡ		edge_NOUN_1			
 East Low German	East Low German			edge_NOUN	Eck	ˈɛk	ˈɛ k		edge_NOUN_1			
 Dutch	Dutch			edge_NOUN	eg	ˈɛχ	ˈɛ χ		edge_NOUN_1			
-Afrikaans	Afrikaans			edge_NOUN	eg	ˈɛχ	ˈɛ χ		edge_NOUN_1			
+Afrikaans	Afrikaans			edge_NOUN	eg	ˈæχ	ˈæ χ		edge_NOUN_1			
 West Flemish	West Flemish			edge_NOUN	egge	ˈɛɦə	ˈɛ ɦ ə		edge_NOUN_1			
 Limburgish	Limburgish			edge_NOUN	eeg	ˈeːx	ˈeː x		edge_NOUN_1			
 Ripuarian	Ripuarian			edge_NOUN	Eck	ˈɛk	ˈɛ k		edge_NOUN_1			
@@ -267,7 +267,7 @@ Eastphalian	Eastphalian			eleven_NUM	ölwe	ˈœlvə	ˈœ l v ə		eleven_NUM_1
 Northern Low Saxon	Northern Low Saxon			eleven_NUM	ölven	ˈœːlm	ˈœː l m		eleven_NUM_1			
 East Low German	East Low German			eleven_NUM	elm	ˈɛlm	ˈɛ l m		eleven_NUM_1			
 Dutch	Dutch			eleven_NUM	elf	ˈɛɫəf	ˈɛ ɫ ə f		eleven_NUM_1			
-Afrikaans	Afrikaans			eleven_NUM	elf	ˈɛɫf	ˈɛ ɫ f		eleven_NUM_1			
+Afrikaans	Afrikaans			eleven_NUM	elf	ˈæɫf	ˈæ ɫ f		eleven_NUM_1			
 West Flemish	West Flemish			eleven_NUM	elve	ˈæwvə	ˈæ w v ə		eleven_NUM_1			
 Limburgish	Limburgish			eleven_NUM	èlf	ˈɛləf	ˈɛ l ə f		eleven_NUM_1			
 Ripuarian	Ripuarian			eleven_NUM	ellef	ˈeləf	ˈe l ə f		eleven_NUM_1			
@@ -632,7 +632,7 @@ Proto-Germanic	Proto-Germanic			bone_NOUN	bainą	bˈɑi̯nɑ̃	b ˈɑi̯ n ɑ̃	
 Old Norse	Old Norse			bone_NOUN	bein	bˈɛi̯n	b ˈɛi̯ n		bone_NOUN_1			
 Icelandic	Icelandic			bone_NOUN	bein	b̥ˈɛːi̯n	b̥ ˈɛːi̯ n		bone_NOUN_1			
 Faroese	Faroese			bone_NOUN	bain	b̥ˈai̯n	b̥ ˈai̯ n		bone_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			bone_NOUN	bein	bˈæːɪ̯n	b ˈæːɪ̯ n		bone_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			bone_NOUN	bein	bˈæɪ̯n	b ˈæɪ̯ n		bone_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			bone_NOUN	bein	bˈæɪ̯n	b ˈæɪ̯ n		bone_NOUN_1			
 Danish	Danish			bone_NOUN	ben	b̥ˈeˀn	b̥ ˈeˀ n		bone_NOUN_1			
 Swedish	Swedish			bone_NOUN	ben	bˈeːn	b ˈeː n		bone_NOUN_1			
@@ -848,7 +848,7 @@ East Low German	East Low German			bear_NOUN	Bor	bˈoːæ	b ˈoː æ		bear_NOUN_1
 Dutch	Dutch			bear_NOUN	beer	bˈeːɾ	b ˈeː ɾ		bear_NOUN_1			
 Afrikaans	Afrikaans			bear_NOUN	beer	bˈɪə̯r	b ˈɪə̯ r		bear_NOUN_1			
 Limburgish	Limburgish			bear_NOUN	beer	bˈeːʀ	b ˈeː ʀ		bear_NOUN_1			
-Ripuarian	Ripuarian			bear_NOUN	Bär	bˈɛːɐ	b ˈɛː ɐ		bear_NOUN_1			
+Ripuarian	Ripuarian			bear_NOUN	Beär	bˈɛːɐ	b ˈɛː ɐ		bear_NOUN_1			
 Luxembourgish	Luxembourgish			bear_NOUN	Bier	bˈiːɐ	b ˈiː ɐ		bear_NOUN_1			
 Pennsylvania German	Pennsylvania German			bear_NOUN	Baer	bˈɛːɑ	b ˈɛː ɑ		bear_NOUN_1			
 Yiddish	Yiddish			bear_NOUN	בער	bˈɛʀ	b ˈɛ ʀ		bear_NOUN_1			
@@ -1123,7 +1123,7 @@ Eastphalian	Eastphalian			bleed_VERB	bläuen	blˈɔʏ̯n̩	b l ˈɔʏ̯ n̩		ble
 Northern Low Saxon	Northern Low Saxon			bleed_VERB	blöden	blˈɔʏ̯dn̩	b l ˈɔʏ̯ d n̩		bleed_VERB_1			
 East Low German	East Low German			bleed_VERB	bläuden	blˈɔʏ̯dn̩	b l ˈɔʏ̯ d n̩		bleed_VERB_1			
 Dutch	Dutch			bleed_VERB	bloeden	bɫˈudən	b ɫ ˈu d ə n		bleed_VERB_1			
-Afrikaans	Afrikaans			bleed_VERB	bloei	bɫˈuːi̯	b ɫ ˈuːi̯		bleed_VERB_1			
+Afrikaans	Afrikaans			bleed_VERB	bloei	bɫˈuj	b ɫ ˈu j		bleed_VERB_1			
 Limburgish	Limburgish			bleed_VERB	blooje	blˈʊːjə	b l ˈʊː j ə		bleed_VERB_1			
 Ripuarian	Ripuarian			bleed_VERB	blode	blˈoːdə	b l ˈoː d ə		bleed_VERB_1			
 Luxembourgish	Luxembourgish			bleed_VERB	bludden	blˈudən	b l ˈu d ə n		bleed_VERB_1			
@@ -1254,7 +1254,7 @@ Northern Low Saxon	Northern Low Saxon			brother_NOUN	Broder	brˈaʊ̯dɐ	b r ˈa
 East Low German	East Low German			brother_NOUN	Brauder	brˈaʊ̯ɾæ	b r ˈaʊ̯ ɾ æ		brother_NOUN_1			
 Dutch	Dutch			brother_NOUN	broeder	bɾˈudəɾ	b ɾ ˈu d ə ɾ		brother_NOUN_1			
 Dutch	Dutch			brother_NOUN	broer	bɾˈuɾ	b ɾ ˈu ɾ		brother_NOUN_1			
-Afrikaans	Afrikaans			brother_NOUN	broer	brˈuːr	b r ˈuː r		brother_NOUN_1			
+Afrikaans	Afrikaans			brother_NOUN	broer	brˈur	b r ˈu r		brother_NOUN_1			
 West Flemish	West Flemish			brother_NOUN	broer	bɾˈuə̯ɾ	b ɾ ˈuə̯ ɾ		brother_NOUN_1			
 Limburgish	Limburgish			brother_NOUN	breur	bʀˈøːʀ	b ʀ ˈøː ʀ		brother_NOUN_1			
 Ripuarian	Ripuarian			brother_NOUN	Broder	bʀˈoːdɐ	b ʀ ˈoː d ɐ		brother_NOUN_1			
@@ -1637,7 +1637,7 @@ Afrikaans	Afrikaans			dove_NOUN	duif	dˈœɪ̯f	d ˈœɪ̯ f		dove_NOUN_1
 West Flemish	West Flemish			dove_NOUN	duuve	dˈyːvə	d ˈyː v ə		dove_NOUN_1			
 Limburgish	Limburgish			dove_NOUN	douf	dˈɔu̯f	d ˈɔu̯ f		dove_NOUN_1			
 Ripuarian	Ripuarian			dove_NOUN	Duuv	dˈuːf	d ˈuː f		dove_NOUN_1			
-Luxembourgish	Luxembourgish			dove_NOUN	Dauf	dˈæːʊ̯f	d ˈæːʊ̯ f		dove_NOUN_1			
+Luxembourgish	Luxembourgish			dove_NOUN	Dauf	dˈɑʊ̯f	d ˈɑʊ̯ f		dove_NOUN_1			
 Pennsylvania German	Pennsylvania German			dove_NOUN	Daub	dˈaʊ̯p	d ˈaʊ̯ p		dove_NOUN_1			
 Yiddish	Yiddish			dove_NOUN	טויב	tˈɔɪ̯b	t ˈɔɪ̯ b		dove_NOUN_1			
 German	German			dove_NOUN	Taube	tʰˈaʊ̯bə	tʰ ˈaʊ̯ b ə		dove_NOUN_1			
@@ -1669,7 +1669,7 @@ Afrikaans	Afrikaans			daughter_NOUN	dogter	dˈɔχtər	d ˈɔ χ t ə r		daughte
 West Flemish	West Flemish			daughter_NOUN	dochter	dˈɔhtɾ̩	d ˈɔ h t ɾ̩		daughter_NOUN_1			
 Limburgish	Limburgish			daughter_NOUN	dochter	dˈɔxtəʀ	d ˈɔ x t ə ʀ		daughter_NOUN_1			
 Ripuarian	Ripuarian			daughter_NOUN	Dochter	dˈɔxtɐ	d ˈɔ x t ɐ		daughter_NOUN_1			
-Luxembourgish	Luxembourgish			daughter_NOUN	Duechter	dˈʊɪ̯ʃtɐ	d ˈʊɪ̯ ʃ t ɐ		daughter_NOUN_1			
+Luxembourgish	Luxembourgish			daughter_NOUN	Duechter	dˈuə̯ɕtɐ	d ˈuə̯ ɕ t ɐ		daughter_NOUN_1			
 Pennsylvania German	Pennsylvania German			daughter_NOUN	Dochder	dˈɔxdɑ	d ˈɔ x d ɑ		daughter_NOUN_1			
 Yiddish	Yiddish			daughter_NOUN	טאָכטער	tˈɔχtəʀ	t ˈɔ χ t ə ʀ		daughter_NOUN_1			
 German	German			daughter_NOUN	Tochter	tʰˈɔxtɐ	tʰ ˈɔ x t ɐ		daughter_NOUN_1			
@@ -1692,7 +1692,7 @@ Old English	Old English			dwarf_NOUN	dweorg	dwˈeo̯rɣ	d w ˈeo̯ r ɣ		dwarf_N
 West Frisian	West Frisian			dwarf_NOUN	dwerch	dvˈɛrχ	d v ˈɛ r χ		dwarf_NOUN_1			
 Saterland Frisian	Saterland Frisian			dwarf_NOUN	Dwärch	dvˈɛrx	d v ˈɛ r x		dwarf_NOUN_1			
 Dutch	Dutch			dwarf_NOUN	dwerg	dʋˈɛɾχ	d ʋ ˈɛ ɾ χ		dwarf_NOUN_1			
-Afrikaans	Afrikaans			dwarf_NOUN	dwerg	dvˈɛrχ	d v ˈɛ r χ		dwarf_NOUN_1			
+Afrikaans	Afrikaans			dwarf_NOUN	dwerg	dvˈærχ	d v ˈæ r χ		dwarf_NOUN_1			
 Limburgish	Limburgish			dwarf_NOUN	dwerg	dβˈæːʀəx	d β ˈæː ʀ ə x		dwarf_NOUN_1			
 Ripuarian	Ripuarian			dwarf_NOUN	Zwerg	ʦvˈɛɐk	ʦ v ˈɛ ɐ k		dwarf_NOUN_1			
 Pennsylvania German	Pennsylvania German			dwarf_NOUN	Zwaerich	ʦʋˈɛːɾɪç	ʦ ʋ ˈɛː ɾ ɪ ç		dwarf_NOUN_1			
@@ -2002,7 +2002,7 @@ East Low German	East Low German			finger_NOUN	Finger	fˈɪŋæ	f ˈɪ ŋ æ		fin
 Dutch	Dutch			finger_NOUN	vinger	vˈɪŋəɾ	v ˈɪ ŋ ə ɾ		finger_NOUN_1			
 Afrikaans	Afrikaans			finger_NOUN	vinger	fˈəŋər	f ˈə ŋ ə r		finger_NOUN_1			
 West Flemish	West Flemish			finger_NOUN	vinger	vˈɪŋɾ̩	v ˈɪ ŋ ɾ̩		finger_NOUN_1			
-Limburgish	Limburgish			finger_NOUN	vinger	ˈvɪːŋəʀ	ˈv ɪː ŋ ə ʀ		finger_NOUN_1			
+Limburgish	Limburgish			finger_NOUN	vinger	vˈɪːŋəʀ	v ˈɪː ŋ ə ʀ		finger_NOUN_1			
 Ripuarian	Ripuarian			finger_NOUN	Finger	fˈɪŋɐ	f ˈɪ ŋ ɐ		finger_NOUN_1			
 Luxembourgish	Luxembourgish			finger_NOUN	Fanger	fˈɑŋɐ	f ˈɑ ŋ ɐ		finger_NOUN_1			
 Pennsylvania German	Pennsylvania German			finger_NOUN	Finger	fˈɪŋɑ	f ˈɪ ŋ ɑ		finger_NOUN_1			
@@ -2232,7 +2232,7 @@ Scots	Scots			feet_NOUN	fits	fˈɪts	f ˈɪ t s		feet_NOUN_1
 English	English			feet_NOUN	feet	fˈiːt	f ˈiː t		feet_NOUN_1			
 American English	American English			feet_NOUN	feet	fˈiʔ	f ˈi ʔ		feet_NOUN_1			
 Old English	Old English			feet_NOUN	fet	fˈeːt	f ˈeː t		feet_NOUN_1			
-West Frisian	West Frisian			feet_NOUN	fuotten	fˈɵtən	f ˈɵ t ə n		feet_NOUN_1			
+West Frisian	West Frisian			feet_NOUN	fuotten	fˈu̯otən	f ˈu̯o t ə n		feet_NOUN_1			
 Saterland Frisian	Saterland Frisian			feet_NOUN	Fäite	fˈɛɪ̯tə	f ˈɛɪ̯ t ə		feet_NOUN_1			
 North Frisian	North Frisian			feet_NOUN	fätj	fˈɛtʲ	f ˈɛ tʲ		feet_NOUN_1			
 Westphalian	Westphalian			feet_NOUN	Fööte	fˈøːtə	f ˈøː t ə		feet_NOUN_1			
@@ -2360,7 +2360,7 @@ Swiss German	Swiss German			free_ADJ	frei	frˈei̯	f r ˈei̯		free_ADJ_1
 Bavarian	Bavarian			free_ADJ	frei	frˈai̯	f r ˈai̯		free_ADJ_1			
 Proto-Germanic	Proto-Germanic			friend_NOUN	frijōndz	ɸrˈijɔːndz	ɸ r ˈi j ɔː n d z		friend_NOUN_1			
 Gothic	Gothic			friend_NOUN	𐍆𐍂𐌹𐌾𐍉𐌽𐌳𐍃	frˈijoːnds	f r ˈi j oː n d s		friend_NOUN_1			
-Old Norse	Old Norse			friend_NOUN	frændi	frˈɛndi	f r ˈɛ n d i		friend_NOUN_1			
+Old Norse	Old Norse			friend_NOUN	frændi	frˈɛːndi	f r ˈɛː n d i		friend_NOUN_1			
 Icelandic	Icelandic			friend_NOUN	frændi	frˈai̯nd̥ɪ	f r ˈai̯ n d̥ ɪ		friend_NOUN_1			
 Faroese	Faroese			friend_NOUN	frændi	frˈand̥ɪ	f r ˈa n d̥ ɪ		friend_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			friend_NOUN	frende	fɾˈɛnde	f ɾ ˈɛ n d e		friend_NOUN_1			
@@ -2476,7 +2476,7 @@ Luxembourgish	Luxembourgish			fox_NOUN	Fuuss	fˈuːs	f ˈuː s		fox_NOUN_1
 Pennsylvania German	Pennsylvania German			fox_NOUN	Fuchs	fˈʊks	f ˈʊ k s		fox_NOUN_1			
 Yiddish	Yiddish			fox_NOUN	פֿוקס	fˈʊks	f ˈʊ k s		fox_NOUN_1			
 German	German			fox_NOUN	Fuchs	fˈʊks	f ˈʊ k s		fox_NOUN_1			
-Swabian	Swabian			fox_NOUN	Fuchs	fˈuks	f ˈu k s		fox_NOUN_1			
+Swabian	Swabian			fox_NOUN	Fuchs	fˈuɡs	f ˈu ɡ s		fox_NOUN_1			
 Alsatian	Alsatian			fox_NOUN	Fuchs	fˈuks	f ˈu k s		fox_NOUN_1			
 Swiss German	Swiss German			fox_NOUN	Fuchs	fˈuχs	f ˈu χ s		fox_NOUN_1			
 Bavarian	Bavarian			fox_NOUN	Fuchs	fˈuks	f ˈu k s		fox_NOUN_1			
@@ -3431,7 +3431,7 @@ Eastphalian	Eastphalian			help_VERB	helpen	hˈɛlpn̩	h ˈɛ l p n̩		help_VERB_
 Northern Low Saxon	Northern Low Saxon			help_VERB	helpen	hˈœlbm̩	h ˈœ l b m̩		help_VERB_1			
 East Low German	East Low German			help_VERB	helpen	hˈɛlpn̩	h ˈɛ l p n̩		help_VERB_1			
 Dutch	Dutch			help_VERB	helpen	ɦˈɛɫpən	ɦ ˈɛ ɫ p ə n		help_VERB_1			
-Afrikaans	Afrikaans			help_VERB	help	ɦˈɛɫp	ɦ ˈɛ ɫ p		help_VERB_1			
+Afrikaans	Afrikaans			help_VERB	help	ɦˈæɫp	ɦ ˈæ ɫ p		help_VERB_1			
 West Flemish	West Flemish			help_VERB	elpn	ˈæwpn̩	ˈæ w p n̩		help_VERB_1			
 Limburgish	Limburgish			help_VERB	helpe	ɦˈæːləpə	ɦ ˈæː l ə p ə		help_VERB_1			
 Ripuarian	Ripuarian			help_VERB	helfe	hˈɛlfə	h ˈɛ l f ə		help_VERB_1			
@@ -4382,7 +4382,7 @@ Luxembourgish	Luxembourgish			head_NOUN	Kapp	kʰˈɑp	kʰ ˈɑ p		head_NOUN_2
 Pennsylvania German	Pennsylvania German			head_NOUN	Kopp	kʰˈɔp	kʰ ˈɔ p		head_NOUN_2			
 Yiddish	Yiddish			head_NOUN	קאָפּ	kˈɔp	k ˈɔ p		head_NOUN_2			
 German	German			head_NOUN	Kopf	kʰˈɔp͡f	kʰ ˈɔ p͡f		head_NOUN_2			
-Swabian	Swabian			head_NOUN	Kopf	kʰˈɔp͡f	kʰ ˈɔ p͡f		head_NOUN_2			
+Swabian	Swabian			head_NOUN	Kobbf	kʰˈɔb̥͡f	kʰ ˈɔ b̥͡f		head_NOUN_2			
 Alsatian	Alsatian			head_NOUN	Kopf	kʰˈop͡f	kʰ ˈo p͡f		head_NOUN_2			
 Swiss German	Swiss German			head_NOUN	Chopf	χˈop͡f	χ ˈo p͡f		head_NOUN_2			
 Bavarian	Bavarian			head_NOUN	Kopf	kʰˈɔp͡f	kʰ ˈɔ p͡f		head_NOUN_2			
@@ -4432,7 +4432,7 @@ Eastphalian	Eastphalian			cow_NOUN	Kauh	kˈaʊ̯	k ˈaʊ̯		cow_NOUN_1
 Northern Low Saxon	Northern Low Saxon			cow_NOUN	Kuh	kʰˈaʊ̯	kʰ ˈaʊ̯		cow_NOUN_1			
 East Low German	East Low German			cow_NOUN	Kauh	kʰˈaʊ̯	kʰ ˈaʊ̯		cow_NOUN_1			
 Dutch	Dutch			cow_NOUN	koe	kˈu	k ˈu		cow_NOUN_1			
-Afrikaans	Afrikaans			cow_NOUN	koei	kˈuːi̯	k ˈuːi̯		cow_NOUN_1			
+Afrikaans	Afrikaans			cow_NOUN	koei	kˈuj	k ˈu j		cow_NOUN_1			
 West Flemish	West Flemish			cow_NOUN	koe	kˈuə̯	k ˈuə̯		cow_NOUN_1			
 Limburgish	Limburgish			cow_NOUN	kooj	kˈoːj	k ˈoː j		cow_NOUN_1			
 Ripuarian	Ripuarian			cow_NOUN	Koh	kˈoː	k ˈoː		cow_NOUN_1			
@@ -4484,7 +4484,7 @@ Faroese	Faroese			woman_NOUN	kona	kʰˈoːna	kʰ ˈoː n a		woman_NOUN_2
 Faroese	Faroese			woman_NOUN	kvinna	kʰvˈɪnna	kʰ v ˈɪ n n a		woman_NOUN_2			
 Nynorsk Norwegian	Nynorsk Norwegian			woman_NOUN	kone	kʰˈuːne	kʰ ˈuː n e		woman_NOUN_2			
 Nynorsk Norwegian	Nynorsk Norwegian			woman_NOUN	kvinne	kʰʋˈɪnne	kʰ ʋ ˈɪ n n e		woman_NOUN_2			
-Bokmål Norwegian	Bokmål Norwegian			woman_NOUN	kone	kʰˈuːne	kʰ ˈuː n e		woman_NOUN_2			
+Bokmål Norwegian	Bokmål Norwegian			woman_NOUN	kone	kʰˈuːnə	kʰ ˈuː n ə		woman_NOUN_2			
 Bokmål Norwegian	Bokmål Norwegian			woman_NOUN	kvinne	kʰʋˈɪnnə	kʰ ʋ ˈɪ n n ə		woman_NOUN_2			
 Danish	Danish			woman_NOUN	kvinde	kʰʋˈenə	kʰ ʋ ˈe n ə		woman_NOUN_2			
 Danish	Danish			woman_NOUN	kone	kʰˈoːnə	kʰ ˈoː n ə		woman_NOUN_2			
@@ -4664,7 +4664,7 @@ Limburgish	Limburgish			light_NOUN	leech	lˈeːx	l ˈeː x		light_NOUN_2
 Ripuarian	Ripuarian			light_NOUN	Leech	lˈeːɕ	l ˈeː ɕ		light_NOUN_2			
 Luxembourgish	Luxembourgish			light_NOUN	Liicht	lˈiːɕt	l ˈiː ɕ t		light_NOUN_2			
 Pennsylvania German	Pennsylvania German			light_NOUN	Licht	lˈɪçt	l ˈɪ ç t		light_NOUN_2			
-Yiddish	Yiddish			light_NOUN	ליכט	ʎˈɪχt	ʎ ˈɪ χ t		light_NOUN_2			
+Yiddish	Yiddish			light_NOUN	ליכט	lˈɪχt	l ˈɪ χ t		light_NOUN_2			
 German	German			light_NOUN	Licht	lˈɪçt	l ˈɪ ç t		light_NOUN_2			
 Swabian	Swabian			light_NOUN	Lichd	lˈiçd	l ˈi ç d		light_NOUN_2			
 Alsatian	Alsatian			light_NOUN	Liecht	lˈiːʃt	l ˈiː ʃ t		light_NOUN_2			
@@ -4908,7 +4908,7 @@ Eastphalian	Eastphalian			milk_NOUN_FEM	Melk	mˈɛlk	m ˈɛ l k		milk_NOUN_FEM_1
 Northern Low Saxon	Northern Low Saxon			milk_NOUN_FEM	Melk	mˈɛlɡ	m ˈɛ l ɡ		milk_NOUN_FEM_1			
 East Low German	East Low German			milk_NOUN_FEM	Melk	mˈɛlk	m ˈɛ l k		milk_NOUN_FEM_1			
 Dutch	Dutch			milk_NOUN_FEM	melk	mˈɛɫk	m ˈɛ ɫ k		milk_NOUN_FEM_1			
-Afrikaans	Afrikaans			milk_NOUN_FEM	melk	mˈɛɫk	m ˈɛ ɫ k		milk_NOUN_FEM_1			
+Afrikaans	Afrikaans			milk_NOUN_FEM	melk	mˈæɫk	m ˈæ ɫ k		milk_NOUN_FEM_1			
 West Flemish	West Flemish			milk_NOUN_FEM	melk	mˈæwk	m ˈæ w k		milk_NOUN_FEM_1			
 Limburgish	Limburgish			milk_NOUN_FEM	mèlk	mˈɛːlək	m ˈɛː l ə k		milk_NOUN_FEM_1			
 Ripuarian	Ripuarian			milk_NOUN_FEM	Meelich	mˈeːlɪɕ	m ˈeː l ɪ ɕ		milk_NOUN_FEM_1			
@@ -5418,7 +5418,7 @@ Dutch	Dutch			new_ADJ	nieuw	nˈiw	n ˈi w		new_ADJ_1
 Afrikaans	Afrikaans			new_ADJ	nuut	nˈit	n ˈi t		new_ADJ_1			
 West Flemish	West Flemish			new_ADJ	nieuwe	nˈiə̯ʋə	n ˈiə̯ ʋ ə		new_ADJ_1			
 Limburgish	Limburgish			new_ADJ	nui	nˈœi̯	n ˈœi̯		new_ADJ_1			
-Ripuarian	Ripuarian			new_ADJ	neu	nˈɔʏ̯	n ˈɔʏ̯		new_ADJ_1			
+Ripuarian	Ripuarian			new_ADJ	neu	nˈøʏ̯	n ˈøʏ̯		new_ADJ_1			
 Luxembourgish	Luxembourgish			new_ADJ	nei	nˈɑɪ̯	n ˈɑɪ̯		new_ADJ_1			
 Pennsylvania German	Pennsylvania German			new_ADJ	nei	nˈaɪ̯	n ˈaɪ̯		new_ADJ_1			
 Yiddish	Yiddish			new_ADJ	נייַ	nˈaɪ̯	n ˈaɪ̯		new_ADJ_1			
@@ -5493,7 +5493,7 @@ Eastphalian	Eastphalian			red_ADJ	rot	rˈeo̯t	r ˈeo̯ t		red_ADJ_1
 Northern Low Saxon	Northern Low Saxon			red_ADJ	root	rˈaʊ̯d	r ˈaʊ̯ d		red_ADJ_1			
 East Low German	East Low German			red_ADJ	rot	rˈaʊ̯t	r ˈaʊ̯ t		red_ADJ_1			
 Dutch	Dutch			red_ADJ	rood	ɾˈoːt	ɾ ˈoː t		red_ADJ_1			
-Afrikaans	Afrikaans			red_ADJ	rooi	rˈoːi̯	r ˈoːi̯		red_ADJ_1			
+Afrikaans	Afrikaans			red_ADJ	rooi	rˈoːɪ̯	r ˈoːɪ̯		red_ADJ_1			
 West Flemish	West Flemish			red_ADJ	rôod	ɾˈoːt	ɾ ˈoː t		red_ADJ_1			
 Limburgish	Limburgish			red_ADJ	roed	ʀˈut	ʀ ˈu t		red_ADJ_1			
 Ripuarian	Ripuarian			red_ADJ	rut	ʀˈuːt	ʀ ˈuː t		red_ADJ_1			
@@ -5624,7 +5624,7 @@ Afrikaans	Afrikaans			rich_ADJ	ryk	rˈəɪ̯k	r ˈəɪ̯ k		rich_ADJ_1
 West Flemish	West Flemish			rich_ADJ	ryk	ɾˈik	ɾ ˈi k		rich_ADJ_1			
 Limburgish	Limburgish			rich_ADJ	riek	ʀˈiːk	ʀ ˈiː k		rich_ADJ_1			
 Ripuarian	Ripuarian			rich_ADJ	riech	ʀˈiːɕ	ʀ ˈiː ɕ		rich_ADJ_1			
-Luxembourgish	Luxembourgish			rich_ADJ	räich	ʀˈæɪ̯ɕ	ʀ ˈæɪ̯ ɕ		rich_ADJ_1			
+Luxembourgish	Luxembourgish			rich_ADJ	räich	ʀˈæːɪ̯ɕ	ʀ ˈæːɪ̯ ɕ		rich_ADJ_1			
 Pennsylvania German	Pennsylvania German			rich_ADJ	reich	ɾˈaɪ̯ç	ɾ ˈaɪ̯ ç		rich_ADJ_1			
 Yiddish	Yiddish			rich_ADJ	רײַך	ʀˈaɪ̯χ	ʀ ˈaɪ̯ χ		rich_ADJ_1			
 German	German			rich_ADJ	reich	ʁˈaɪ̯ç	ʁ ˈaɪ̯ ç		rich_ADJ_1			
@@ -5968,7 +5968,7 @@ Luxembourgish	Luxembourgish			side_NOUN	Säit	zˈæːɪ̯t	z ˈæːɪ̯ t		side_
 Pennsylvania German	Pennsylvania German			side_NOUN	Seit	sˈaɪ̯t	s ˈaɪ̯ t		side_NOUN_1			
 Yiddish	Yiddish			side_NOUN	זײַט	zˈaɪ̯t	z ˈaɪ̯ t		side_NOUN_1			
 German	German			side_NOUN	Seite	zˈaɪ̯tə	z ˈaɪ̯ t ə		side_NOUN_1			
-Swabian	Swabian			side_NOUN	Seide	sˈəi̯də	s ˈəi̯ d ə		side_NOUN_1			
+Swabian	Swabian			side_NOUN	Seid	sˈəi̯d	s ˈəi̯ d		side_NOUN_1			
 Alsatian	Alsatian			side_NOUN	Sit	sˈiːt	s ˈiː t		side_NOUN_1			
 Swiss German	Swiss German			side_NOUN	Siite	sˈiːtə	s ˈiː t ə		side_NOUN_1			
 Bavarian	Bavarian			side_NOUN	Seitn	sˈai̯tn̩	s ˈai̯ t n̩		side_NOUN_1			
@@ -6109,7 +6109,7 @@ Nynorsk Norwegian	Nynorsk Norwegian			shield_NOUN	skjold	ʃˈɔll	ʃ ˈɔ l l		s
 Bokmål Norwegian	Bokmål Norwegian			shield_NOUN	skjold	ʃˈɔll	ʃ ˈɔ l l		shield_NOUN_1			
 Danish	Danish			shield_NOUN	skjold	skjˈʌlˀ	s k j ˈʌ lˀ		shield_NOUN_1			
 Swedish	Swedish			shield_NOUN	sköld	ɧˈœld	ɧ ˈœ l d		shield_NOUN_1			
-Scots	Scots			shield_NOUN	scheld	ʃˈɛld	ʃ ˈɛ l d		shield_NOUN_1			
+Scots	Scots			shield_NOUN	scheld	ʃˈɛɫd	ʃ ˈɛ ɫ d		shield_NOUN_1			
 English	English			shield_NOUN	shield	ʃˈiːld	ʃ ˈiː l d		shield_NOUN_1			
 American English	American English			shield_NOUN	shield	ʃˈiɫ̩d	ʃ ˈi ɫ̩ d		shield_NOUN_1			
 Old English	Old English			shield_NOUN	sċield	ʃˈiy̯ɫd	ʃ ˈiy̯ ɫ d		shield_NOUN_1			
@@ -6614,7 +6614,7 @@ Afrikaans	Afrikaans			sour_ADJ	suur	sˈyːr	s ˈyː r		sour_ADJ_1
 West Flemish	West Flemish			sour_ADJ	zuur	zˈyːɾ	z ˈyː ɾ		sour_ADJ_1			
 Limburgish	Limburgish			sour_ADJ	zoer	zˈuːʀ	z ˈuː ʀ		sour_ADJ_1			
 Ripuarian	Ripuarian			sour_ADJ	suur	zˈuːɐ	z ˈuː ɐ		sour_ADJ_1			
-Luxembourgish	Luxembourgish			sour_ADJ	sauer	zˈæːʊ̯ɐ	z ˈæːʊ̯ ɐ		sour_ADJ_1			
+Luxembourgish	Luxembourgish			sour_ADJ	sauer	zˈɑʊ̯ɐ	z ˈɑʊ̯ ɐ		sour_ADJ_1			
 Pennsylvania German	Pennsylvania German			sour_ADJ	sauer	sˈaʊ̯ɑ	s ˈaʊ̯ ɑ		sour_ADJ_1			
 Yiddish	Yiddish			sour_ADJ	זויער	zˈɔɪ̯əʀ	z ˈɔɪ̯ ə ʀ		sour_ADJ_1			
 German	German			sour_ADJ	sauer	zˈaʊ̯ɐ	z ˈaʊ̯ ɐ		sour_ADJ_1			
@@ -6689,8 +6689,8 @@ Proto-Germanic	Proto-Germanic			sword_NOUN	swerdą	swˈerðɑ̃	s w ˈe r ð ɑ�
 Old Norse	Old Norse			sword_NOUN	sverð	svˈerð	s v ˈe r ð		sword_NOUN_1			
 Icelandic	Icelandic			sword_NOUN	sverð	svˈɛrð	s v ˈɛ r ð		sword_NOUN_1			
 Faroese	Faroese			sword_NOUN	svørð	svˈøːɹ	s v ˈøː ɹ		sword_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			sword_NOUN	sverd	sʋˈɛːɾ	s ʋ ˈɛː ɾ		sword_NOUN_1			
-Bokmål Norwegian	Bokmål Norwegian			sword_NOUN	sverd	sʋˈɛːɾ	s ʋ ˈɛː ɾ		sword_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			sword_NOUN	sverd	sʋˈæːɾ	s ʋ ˈæː ɾ		sword_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			sword_NOUN	sverd	sʋˈæːɾ	s ʋ ˈæː ɾ		sword_NOUN_1			
 Danish	Danish			sword_NOUN	sværd	sʋˈɛɐˀ	s ʋ ˈɛ ɐˀ		sword_NOUN_1			
 Swedish	Swedish			sword_NOUN	svärd	svˈæːɖ	s v ˈæː ɖ		sword_NOUN_1			
 English	English			sword_NOUN	sword	sˈɔːd	s ˈɔː d		sword_NOUN_1			
@@ -6951,7 +6951,7 @@ Bavarian	Bavarian			ten_NUM	zeah	ʦˈeɐ̯	ʦ ˈeɐ̯		ten_NUM_1
 Proto-Germanic	Proto-Germanic			time_NOUN	tīdiz	tˈiːðiz	t ˈiː ð i z		time_NOUN_1			
 Old Norse	Old Norse			time_NOUN	tíð	tʰˈiːð	tʰ ˈiː ð		time_NOUN_1			
 Icelandic	Icelandic			time_NOUN	tíð	tʰˈiːð	tʰ ˈiː ð		time_NOUN_1			
-Faroese	Faroese			time_NOUN	tíð	tʰʊ̯ˈiː	tʰ ʊ̯ˈiː		time_NOUN_1			
+Faroese	Faroese			time_NOUN	tíð	tʰˈʊ̯iː	tʰ ˈʊ̯iː		time_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			time_NOUN	tid	tʰˈiː	tʰ ˈiː		time_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			time_NOUN	tid	tʰˈiː	tʰ ˈiː		time_NOUN_1			
 Danish	Danish			time_NOUN	tid	ʦʰˈiˀð̞ˠ	ʦʰ ˈiˀ ð̞ˠ		time_NOUN_1			
@@ -6968,11 +6968,11 @@ Eastphalian	Eastphalian			time_NOUN	Tied	tˈiːd	t ˈiː d		time_NOUN_1
 Northern Low Saxon	Northern Low Saxon			time_NOUN	Tiet	tʰˈiːd	tʰ ˈiː d		time_NOUN_1			
 East Low German	East Low German			time_NOUN	Tiet	tʰˈiːt	tʰ ˈiː t		time_NOUN_1			
 Dutch	Dutch			time_NOUN	tijd	tˈɛi̯t	t ˈɛi̯ t		time_NOUN_1			
-Afrikaans	Afrikaans			time_NOUN	tyd	tˈœi̯t	t ˈœi̯ t		time_NOUN_1			
+Afrikaans	Afrikaans			time_NOUN	tyd	tˈəɪ̯t	t ˈəɪ̯ t		time_NOUN_1			
 West Flemish	West Flemish			time_NOUN	tyd	tˈit	t ˈi t		time_NOUN_1			
 Limburgish	Limburgish			time_NOUN	tied	tˈiːt	t ˈiː t		time_NOUN_1			
 Ripuarian	Ripuarian			time_NOUN	Zeck	ʦˈɛk	ʦ ˈɛ k		time_NOUN_1			
-Luxembourgish	Luxembourgish			time_NOUN	Zäit	ʦˈæɪ̯t	ʦ ˈæɪ̯ t		time_NOUN_1			
+Luxembourgish	Luxembourgish			time_NOUN	Zäit	ʦˈæːɪ̯t	ʦ ˈæːɪ̯ t		time_NOUN_1			
 Pennsylvania German	Pennsylvania German			time_NOUN	Zeit	ʦˈaɪ̯t	ʦ ˈaɪ̯ t		time_NOUN_1			
 Yiddish	Yiddish			time_NOUN	צײַט	ʦˈaɪ̯t	ʦ ˈaɪ̯ t		time_NOUN_1			
 German	German			time_NOUN	Zeit	ʦˈaɪ̯t	ʦ ˈaɪ̯ t		time_NOUN_1			
@@ -7173,7 +7173,7 @@ Swedish	Swedish			over_PREP	över	ˈøːvɛr	ˈøː v ɛ r		over_PREP_2
 Ripuarian	Ripuarian			over_PREP	üvver	ˈʏvɐ	ˈʏ v ɐ		over_PREP_2			
 Luxembourgish	Luxembourgish			over_PREP	iwwer	ˈivɐ	ˈi v ɐ		over_PREP_2			
 Pennsylvania German	Pennsylvania German			over_PREP	iwwer	ˈɪvɑ	ˈɪ v ɑ		over_PREP_2			
-Yiddish	Yiddish			over_PREP	איבער	ˈibəʀ	ˈi b ə ʀ		over_PREP_2			
+Yiddish	Yiddish			over_PREP	איבער	ˈɪbəʀ	ˈɪ b ə ʀ		over_PREP_2			
 German	German			over_PREP	über	ˈyːbɐ	ˈyː b ɐ		over_PREP_2			
 Swabian	Swabian			over_PREP	iber	ˈibʌ	ˈi b ʌ		over_PREP_2			
 Swiss German	Swiss German			over_PREP	über	ˈyb̥ər	ˈy b̥ ə r		over_PREP_2			
@@ -7442,10 +7442,10 @@ Proto-Germanic	Proto-Germanic			weather_NOUN	wedrą	wˈeðrɑ̃	w ˈe ð r ɑ̃	
 Old Norse	Old Norse			weather_NOUN	veðr	vˈeðr	v ˈe ð r		weather_NOUN_1			
 Icelandic	Icelandic			weather_NOUN	veður	vˈɛːðʏr̥	v ˈɛː ð ʏ r̥		weather_NOUN_1			
 Faroese	Faroese			weather_NOUN	veður	vˈeːvʊɹ	v ˈeː v ʊ ɹ		weather_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			weather_NOUN	vêr	vˈɛːɾ	v ˈɛː ɾ		weather_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			weather_NOUN	vêr	vˈæːɾ	v ˈæː ɾ		weather_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			weather_NOUN	vær	ʋˈæːɾ	ʋ ˈæː ɾ		weather_NOUN_1			
 Danish	Danish			weather_NOUN	vejr	ʋˈɛˀɐ	ʋ ˈɛˀ ɐ		weather_NOUN_1			
-Swedish	Swedish			weather_NOUN	väder	vˈɛːder	v ˈɛː d e r		weather_NOUN_1			
+Swedish	Swedish			weather_NOUN	väder	vˈɛːdɛr	v ˈɛː d ɛ r		weather_NOUN_1			
 Scots	Scots			weather_NOUN	wethir	wˈɛðɪr	w ˈɛ ð ɪ r		weather_NOUN_1			
 English	English			weather_NOUN	weather	wˈeðə	w ˈe ð ə		weather_NOUN_1			
 American English	American English			weather_NOUN	weather	wˈɛðɚ	w ˈɛ ð ɚ		weather_NOUN_1			
@@ -7491,7 +7491,7 @@ Eastphalian	Eastphalian			way_NOUN	Weg	vˈɛç	v ˈɛ ç		way_NOUN_1
 Northern Low Saxon	Northern Low Saxon			way_NOUN	Weg	vˈɛç	v ˈɛ ç		way_NOUN_1			
 East Low German	East Low German			way_NOUN	Wech	vˈɛç	v ˈɛ ç		way_NOUN_1			
 Dutch	Dutch			way_NOUN	weg	ʋˈɛχ	ʋ ˈɛ χ		way_NOUN_1			
-Afrikaans	Afrikaans			way_NOUN	weg	vˈɛχ	v ˈɛ χ		way_NOUN_1			
+Afrikaans	Afrikaans			way_NOUN	weg	vˈæχ	v ˈæ χ		way_NOUN_1			
 West Flemish	West Flemish			way_NOUN	weg	ʋˈæh	ʋ ˈæ h		way_NOUN_1			
 Limburgish	Limburgish			way_NOUN	weeg	βˈeːx	β ˈeː x		way_NOUN_1			
 Ripuarian	Ripuarian			way_NOUN	Wääch	ʋˈɛːɕ	ʋ ˈɛː ɕ		way_NOUN_1			
@@ -7629,7 +7629,7 @@ Old English	Old English			know_VERB	witan	wˈitɑn	w ˈi t ɑ n		know_VERB_1
 West Frisian	West Frisian			know_VERB	witte	ʋˈɪtə	ʋ ˈɪ t ə		know_VERB_1			
 Saterland Frisian	Saterland Frisian			know_VERB	wíete	vˈiːtə	v ˈiː t ə		know_VERB_1			
 North Frisian	North Frisian			know_VERB	waase	vˈaːzə	v ˈaː z ə		know_VERB_1			
-Westphalian	Westphalian			know_VERB	wiëten	wˈiə̯tn̩	w ˈiə̯ t n̩		know_VERB_1			
+Westphalian	Westphalian			know_VERB	wiëten	wˈɪə̯tn̩	w ˈɪə̯ t n̩		know_VERB_1			
 Eastphalian	Eastphalian			know_VERB	wetten	vˈɛtn̩	v ˈɛ t n̩		know_VERB_1			
 Northern Low Saxon	Northern Low Saxon			know_VERB	weten	vˈeːdn̩	v ˈeː d n̩		know_VERB_1			
 East Low German	East Low German			know_VERB	weiten	vˈae̯tn̩	v ˈae̯ t n̩		know_VERB_1			
@@ -7734,7 +7734,7 @@ English	English			wool_NOUN_FEM	wool	wˈʊɫ	w ˈʊ ɫ		wool_NOUN_FEM_1
 American English	American English			wool_NOUN_FEM	wool	wˈʊɫ	w ˈʊ ɫ		wool_NOUN_FEM_1			
 Old English	Old English			wool_NOUN_FEM	wull	wˈuɫ	w ˈu ɫ		wool_NOUN_FEM_1			
 West Frisian	West Frisian			wool_NOUN_FEM	wolle	ʋˈɔlə	ʋ ˈɔ l ə		wool_NOUN_FEM_1			
-Saterland Frisian	Saterland Frisian			wool_NOUN_FEM	Wulle	vˈʊɫə	v ˈʊ ɫ ə		wool_NOUN_FEM_1			
+Saterland Frisian	Saterland Frisian			wool_NOUN_FEM	Wulle	vˈʊlə	v ˈʊ l ə		wool_NOUN_FEM_1			
 North Frisian	North Frisian			wool_NOUN_FEM	Ul	ˈʊl	ˈʊ l		wool_NOUN_FEM_1			
 Westphalian	Westphalian			wool_NOUN_FEM	Wulle	wˈʊlə	w ˈʊ l ə		wool_NOUN_FEM_1			
 Eastphalian	Eastphalian			wool_NOUN_FEM	Wulle	vˈʊlə	v ˈʊ l ə		wool_NOUN_FEM_1			
@@ -8014,7 +8014,7 @@ East Low German	East Low German			Teutonic_ADJ	düütsch	dˈyːtʃ	d ˈyː t ʃ	
 Dutch	Dutch			Teutonic_ADJ	duits	dˈœy̯ts	d ˈœy̯ t s		Teutonic_ADJ_1			
 Afrikaans	Afrikaans			Teutonic_ADJ	duits	dˈœɪ̯ts	d ˈœɪ̯ t s		Teutonic_ADJ_1			
 West Flemish	West Flemish			Teutonic_ADJ	duuts	dˈyːts	d ˈyː t s		Teutonic_ADJ_1			
-Limburgish	Limburgish			Teutonic_ADJ	duits	dˈœi̯ʦ	d ˈœi̯ ʦ		Teutonic_ADJ_1			
+Limburgish	Limburgish			Teutonic_ADJ	duits	dˈœi̯ts	d ˈœi̯ t s		Teutonic_ADJ_1			
 Ripuarian	Ripuarian			Teutonic_ADJ	dütsch	dˈʏtʃ	d ˈʏ t ʃ		Teutonic_ADJ_1			
 Luxembourgish	Luxembourgish			Teutonic_ADJ	däitsch	dˈæːɪ̯tʃ	d ˈæːɪ̯ t ʃ		Teutonic_ADJ_1			
 Pennsylvania German	Pennsylvania German			Teutonic_ADJ	deitsch	dˈaɪ̯tʃ	d ˈaɪ̯ t ʃ		Teutonic_ADJ_1			
@@ -8064,7 +8064,7 @@ Faroese	Faroese			three_NUM	trý	tʰɹˈʊ̯iː	tʰ ɹ ˈʊ̯iː		three_NUM_1
 Nynorsk Norwegian	Nynorsk Norwegian			three_NUM	tre	tʰɾˈeː	tʰ ɾ ˈeː		three_NUM_1			
 Bokmål Norwegian	Bokmål Norwegian			three_NUM	tre	tʰɾˈeː	tʰ ɾ ˈeː		three_NUM_1			
 Danish	Danish			three_NUM	tre	ʦʰʁˈɛˀ	ʦʰ ʁ ˈɛˀ		three_NUM_1			
-Swedish	Swedish			three_NUM	tre	trˈeː	t r ˈeː		three_NUM_1			
+Swedish	Swedish			three_NUM	tre	tʰrˈeː	tʰ r ˈeː		three_NUM_1			
 Scots	Scots			three_NUM	three	θrˈiː	θ r ˈiː		three_NUM_1			
 English	English			three_NUM	three	θɹˈiː	θ ɹ ˈiː		three_NUM_1			
 American English	American English			three_NUM	three	θɹˈi	θ ɹ ˈi		three_NUM_1			
@@ -8079,7 +8079,7 @@ East Low German	East Low German			three_NUM	drei	drˈae̯	d r ˈae̯		three_NUM_
 Dutch	Dutch			three_NUM	drie	dɾˈi	d ɾ ˈi		three_NUM_1			
 Afrikaans	Afrikaans			three_NUM	drie	drˈi	d r ˈi		three_NUM_1			
 West Flemish	West Flemish			three_NUM	drieje	dɾˈiə̯	d ɾ ˈiə̯		three_NUM_1			
-Limburgish	Limburgish			three_NUM	drei	dʀˈɛi̯	d ʀ ˈɛi̯		three_NUM_1			
+Limburgish	Limburgish			three_NUM	drei	dʀˈɛːi̯	d ʀ ˈɛːi̯		three_NUM_1			
 Ripuarian	Ripuarian			three_NUM	drei	dʀˈeɪ̯	d ʀ ˈeɪ̯		three_NUM_1			
 Luxembourgish	Luxembourgish			three_NUM	dräi	dʀˈæːɪ̯	d ʀ ˈæːɪ̯		three_NUM_1			
 Pennsylvania German	Pennsylvania German			three_NUM	drei	dɾˈaɪ̯	d ɾ ˈaɪ̯		three_NUM_1			
@@ -8272,11 +8272,11 @@ Afrikaans	Afrikaans			thousand_NUM	duisend	dˈœɪ̯sən	d ˈœɪ̯ s ə n		thou
 West Flemish	West Flemish			thousand_NUM	duusd	dˈyːst	d ˈyː s t		thousand_NUM_1			
 Limburgish	Limburgish			thousand_NUM	doezend	dˈuːzənt	d ˈuː z ə n t		thousand_NUM_1			
 Ripuarian	Ripuarian			thousand_NUM	dausend	dˈaʊ̯zənt	d ˈaʊ̯ z ə n t		thousand_NUM_1			
-Luxembourgish	Luxembourgish			thousand_NUM	dausend	dˈæːʊ̯zənt	d ˈæːʊ̯ z ə n t		thousand_NUM_1			
+Luxembourgish	Luxembourgish			thousand_NUM	dausend	dˈɑʊ̯zənt	d ˈɑʊ̯ z ə n t		thousand_NUM_1			
 Pennsylvania German	Pennsylvania German			thousand_NUM	dausend	dˈaʊ̯sənt	d ˈaʊ̯ s ə n t		thousand_NUM_1			
 Yiddish	Yiddish			thousand_NUM	טויזנט	tˈɔɪ̯zn̩d	t ˈɔɪ̯ z n̩ d		thousand_NUM_1			
 German	German			thousand_NUM	tausend	tʰˈaʊ̯zənt	tʰ ˈaʊ̯ z ə n t		thousand_NUM_1			
-Swabian	Swabian			thousand_NUM	dausad	dˈao̯sɐd	d ˈao̯ s ɐ d		thousand_NUM_1			
+Swabian	Swabian			thousand_NUM	dausad	dˈao̯sad	d ˈao̯ s a d		thousand_NUM_1			
 Alsatian	Alsatian			thousand_NUM	döisig	d̥ˈøi̯siʃ	d̥ ˈøi̯ s i ʃ		thousand_NUM_1			
 Swiss German	Swiss German			thousand_NUM	tuusig	tˈuːsiɡ̊	t ˈuː s i ɡ̊		thousand_NUM_1			
 Bavarian	Bavarian			thousand_NUM	tausnd	tˈau̯sn̩d̥	t ˈau̯ s n̩ d̥		thousand_NUM_1			
@@ -8287,3 +8287,457 @@ Nynorsk Norwegian	Nynorsk Norwegian			dear_ADJ	kjær	ɕˈæːɾ	ɕ ˈæː ɾ		de
 Bokmål Norwegian	Bokmål Norwegian			dear_ADJ	kjær	ɕˈæːɾ	ɕ ˈæː ɾ		dear_ADJ_1			
 Danish	Danish			dear_ADJ	kær	kʰˈɛˀɐ	kʰ ˈɛˀ ɐ		dear_ADJ_1			
 Swedish	Swedish			dear_ADJ	kär	ɕˈæːr	ɕ ˈæː r		dear_ADJ_1			
+Proto-Germanic	Proto-Germanic			nut_NOUN	hnuts	xnˈuts	x n ˈu t s		nut_NOUN_1			
+Old Norse	Old Norse			nut_NOUN	hnot	n̥ˈot	n̥ ˈo t		nut_NOUN_1			
+Icelandic	Icelandic			nut_NOUN	hnot	n̥ˈɔːt	n̥ ˈɔː t		nut_NOUN_1			
+Faroese	Faroese			nut_NOUN	nøt	nˈøːʰt	n ˈøː ʰt		nut_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			nut_NOUN	nøtt	nˈœʰtt	n ˈœ ʰt t		nut_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			nut_NOUN	nøtt	nˈœtt	n ˈœ t t		nut_NOUN_1			
+Danish	Danish			nut_NOUN	nød	nˈœˀð̞ˠ	n ˈœˀ ð̞ˠ		nut_NOUN_1			
+Swedish	Swedish			nut_NOUN	nöt	nˈøːt	n ˈøː t		nut_NOUN_1			
+Scots	Scots			nut_NOUN	nuit	nˈøt	n ˈø t		nut_NOUN_1			
+English	English			nut_NOUN	nut	nˈɐt	n ˈɐ t		nut_NOUN_1			
+American English	American English			nut_NOUN	nut	nˈʌʔ	n ˈʌ ʔ		nut_NOUN_1			
+Old English	Old English			nut_NOUN	hnutu	n̥ˈutu	n̥ ˈu t u		nut_NOUN_1			
+West Frisian	West Frisian			nut_NOUN	nút	nˈyːt	n ˈyː t		nut_NOUN_1			
+Saterland Frisian	Saterland Frisian			nut_NOUN	Núte	nˈuːtə	n ˈuː t ə		nut_NOUN_1			
+North Frisian	North Frisian			nut_NOUN	naas	nˈaːs	n ˈaː s		nut_NOUN_1			
+Westphalian	Westphalian			nut_NOUN	Nuët	nˈuə̯t	n ˈuə̯ t		nut_NOUN_1			
+Eastphalian	Eastphalian			nut_NOUN	Nott	nˈɔt	n ˈɔ t		nut_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			nut_NOUN	Nööt	nˈøːd	n ˈøː d		nut_NOUN_1			
+East Low German	East Low German			nut_NOUN	Nœt	nˈœːt	n ˈœː t		nut_NOUN_1			
+Dutch	Dutch			nut_NOUN	noot	nˈoːt	n ˈoː t		nut_NOUN_1			
+Afrikaans	Afrikaans			nut_NOUN	neut	nˈɪø̯t	n ˈɪø̯ t		nut_NOUN_1			
+West Flemish	West Flemish			nut_NOUN	neut	nˈøːt	n ˈøː t		nut_NOUN_1			
+Limburgish	Limburgish			nut_NOUN	noot	nˈʊːt	n ˈʊː t		nut_NOUN_1			
+Ripuarian	Ripuarian			nut_NOUN	Noss	nˈos	n ˈo s		nut_NOUN_1			
+Luxembourgish	Luxembourgish			nut_NOUN	Noss	nˈos	n ˈo s		nut_NOUN_1			
+Pennsylvania German	Pennsylvania German			nut_NOUN	Nuss	nˈʊs	n ˈʊ s		nut_NOUN_1			
+Yiddish	Yiddish			nut_NOUN	נוס	nˈʊs	n ˈʊ s		nut_NOUN_1			
+German	German			nut_NOUN	Nuss	nˈʊs	n ˈʊ s		nut_NOUN_1			
+Swabian	Swabian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
+Alsatian	Alsatian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
+Swiss German	Swiss German			nut_NOUN	Nuss	nˈuss	n ˈu s s		nut_NOUN_1			
+Bavarian	Bavarian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
+Proto-Germanic	Proto-Germanic			knot_NOUN	knuttô	knˈuttɔːː	k n ˈu t t ɔːː		knot_NOUN_1			
+Old Norse	Old Norse			knot_NOUN	knútr	kʰnˈuːtr	kʰ n ˈuː t r		knot_NOUN_1			
+Icelandic	Icelandic			knot_NOUN	hnútur	n̥ˈuːtʏr̥	n̥ ˈuː t ʏ r̥		knot_NOUN_1			
+Faroese	Faroese			knot_NOUN	knútur	kʰnˈʉːu̯ʰtʊɹ	kʰ n ˈʉːu̯ ʰt ʊ ɹ		knot_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			knot_NOUN	knut	kʰnˈʉːt	kʰ n ˈʉː t		knot_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			knot_NOUN	knute	kʰnˈʉːtə	kʰ n ˈʉː t ə		knot_NOUN_1			
+Danish	Danish			knot_NOUN	knude	kʰnˈuːð̞ˠə	kʰ n ˈuː ð̞ˠ ə		knot_NOUN_1			
+Swedish	Swedish			knot_NOUN	knut	kʰnˈʉːt	kʰ n ˈʉː t		knot_NOUN_1			
+Scots	Scots			knot_NOUN	knot	kʰnˈɔt	kʰ n ˈɔ t		knot_NOUN_1			
+English	English			knot_NOUN	knot	nˈɒt	n ˈɒ t		knot_NOUN_1			
+American English	American English			knot_NOUN	knot	nˈɑʔ	n ˈɑ ʔ		knot_NOUN_1			
+Old English	Old English			knot_NOUN	cnotta	knˈottɑ	k n ˈo t t ɑ		knot_NOUN_1			
+Saterland Frisian	Saterland Frisian			knot_NOUN	Knät	knˈɛt	k n ˈɛ t		knot_NOUN_1			
+North Frisian	North Frisian			knot_NOUN	knoote	knˈɔːtə	k n ˈɔː t ə		knot_NOUN_1			
+Eastphalian	Eastphalian			knot_NOUN	Knutte	knˈʊtə	k n ˈʊ t ə		knot_NOUN_1			
+East Low German	East Low German			knot_NOUN	Knutt	kʰnˈʊt	kʰ n ˈʊ t		knot_NOUN_1			
+Dutch	Dutch			knot_NOUN	knot	knˈɔt	k n ˈɔ t		knot_NOUN_1			
+Limburgish	Limburgish			knot_NOUN	knot	knˈɔt	k n ˈɔ t		knot_NOUN_1			
+German	German			knot_NOUN	Knoten	kʰnˈoːtn̩	kʰ n ˈoː t n̩		knot_NOUN_1			
+Swiss German	Swiss German			knot_NOUN	Chnode	χnˈoːd̥ə	χ n ˈoː d̥ ə		knot_NOUN_1			
+Proto-Germanic	Proto-Germanic			wild_ADJ	wilþijaz	wˈilθijɑz	w ˈi l θ i j ɑ z		wild_ADJ_1			
+Gothic	Gothic			wild_ADJ	𐍅𐌹𐌻𐌸𐌴𐌹𐍃	wˈilθiːs	w ˈi l θ iː s		wild_ADJ_1			
+Old Norse	Old Norse			wild_ADJ	villr	vˈillr	v ˈi l l r		wild_ADJ_1			
+Icelandic	Icelandic			wild_ADJ	villur	vˈɪtl̥ʏr̥	v ˈɪ t l̥ ʏ r̥		wild_ADJ_1			
+Faroese	Faroese			wild_ADJ	villur	vˈɪtl̥ʊɹ	v ˈɪ t l̥ ʊ ɹ		wild_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			wild_ADJ	vill	ʋˈɪll	ʋ ˈɪ l l		wild_ADJ_1			
+Bokmål Norwegian	Bokmål Norwegian			wild_ADJ	vill	ʋˈɪll	ʋ ˈɪ l l		wild_ADJ_1			
+Danish	Danish			wild_ADJ	vild	ʋˈilˀ	ʋ ˈi lˀ		wild_ADJ_1			
+Swedish	Swedish			wild_ADJ	vild	vˈɪld	v ˈɪ l d		wild_ADJ_1			
+Scots	Scots			wild_ADJ	wylde	wˈəi̯ɫd	w ˈəi̯ ɫ d		wild_ADJ_1			
+English	English			wild_ADJ	wild	wˈaɪ̯ɫd	w ˈaɪ̯ ɫ d		wild_ADJ_1			
+American English	American English			wild_ADJ	wild	wˈaɪ̯ɫd	w ˈaɪ̯ ɫ d		wild_ADJ_1			
+Old English	Old English			wild_ADJ	wilde	wˈiɫde	w ˈi ɫ d e		wild_ADJ_1			
+West Frisian	West Frisian			wild_ADJ	wyld	vˈilt	v ˈi l t		wild_ADJ_1			
+Saterland Frisian	Saterland Frisian			wild_ADJ	wíeld	vˈiːld	v ˈiː l d		wild_ADJ_1			
+North Frisian	North Frisian			wild_ADJ	wil	vˈil	v ˈi l		wild_ADJ_1			
+Westphalian	Westphalian			wild_ADJ	wild	vˈɪld	v ˈɪ l d		wild_ADJ_1			
+Eastphalian	Eastphalian			wild_ADJ	wille	vˈɪlə	v ˈɪ l ə		wild_ADJ_1			
+Northern Low Saxon	Northern Low Saxon			wild_ADJ	wild	vˈɪld	v ˈɪ l d		wild_ADJ_1			
+East Low German	East Low German			wild_ADJ	wild	vˈɪld	v ˈɪ l d		wild_ADJ_1			
+Dutch	Dutch			wild_ADJ	wild	ʋˈɪɫt	ʋ ˈɪ ɫ t		wild_ADJ_1			
+Afrikaans	Afrikaans			wild_ADJ	wild	vˈəɫt	v ˈə ɫ t		wild_ADJ_1			
+Limburgish	Limburgish			wild_ADJ	wèlle	βˈɛlə	β ˈɛ l ə		wild_ADJ_1			
+Ripuarian	Ripuarian			wild_ADJ	weld	ʋˈelt	ʋ ˈe l t		wild_ADJ_1			
+Luxembourgish	Luxembourgish			wild_ADJ	wëll	vˈəl	v ˈə l		wild_ADJ_1			
+Pennsylvania German	Pennsylvania German			wild_ADJ	wild	ʋˈɪlt	ʋ ˈɪ l t		wild_ADJ_1			
+Yiddish	Yiddish			wild_ADJ	ווילד	vˈɪld	v ˈɪ l d		wild_ADJ_1			
+German	German			wild_ADJ	wild	vˈɪlt	v ˈɪ l t		wild_ADJ_1			
+Swabian	Swabian			wild_ADJ	wild	ʋˈild	ʋ ˈi l d		wild_ADJ_1			
+Alsatian	Alsatian			wild_ADJ	wild	ʋˈild̥	ʋ ˈi l d̥		wild_ADJ_1			
+Swiss German	Swiss German			wild_ADJ	wild	ʋˈild̥	ʋ ˈi l d̥		wild_ADJ_1			
+Proto-Germanic	Proto-Germanic			shoe_NOUN	skōhaz	skˈɔːxɑz	s k ˈɔː x ɑ z		shoe_NOUN_1			
+Gothic	Gothic			shoe_NOUN	𐍃𐌺𐍉𐌷𐍃	skˈoːhs	s k ˈoː h s		shoe_NOUN_1			
+Old Norse	Old Norse			shoe_NOUN	skór	skˈoːr	s k ˈoː r		shoe_NOUN_1			
+Icelandic	Icelandic			shoe_NOUN	skór	skˈoːu̯r̥	s k ˈoːu̯ r̥		shoe_NOUN_1			
+Faroese	Faroese			shoe_NOUN	skógvur	skˈɛɡ̊vʊɹ	s k ˈɛ ɡ̊ v ʊ ɹ		shoe_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			shoe_NOUN	sko	skˈuː	s k ˈuː		shoe_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			shoe_NOUN	sko	skˈuː	s k ˈuː		shoe_NOUN_1			
+Danish	Danish			shoe_NOUN	sko	skˈoˀ	s k ˈoˀ		shoe_NOUN_1			
+Swedish	Swedish			shoe_NOUN	sko	skˈuː	s k ˈuː		shoe_NOUN_1			
+Scots	Scots			shoe_NOUN	shae	ʃˈeː	ʃ ˈeː		shoe_NOUN_1			
+English	English			shoe_NOUN	shoe	ʃˈuː	ʃ ˈuː		shoe_NOUN_1			
+American English	American English			shoe_NOUN	shoe	ʃˈu	ʃ ˈu		shoe_NOUN_1			
+Old English	Old English			shoe_NOUN	sċōh	ʃˈoːx	ʃ ˈoː x		shoe_NOUN_1			
+West Frisian	West Frisian			shoe_NOUN	skoech	skˈuə̯χ	s k ˈuə̯ χ		shoe_NOUN_1			
+Saterland Frisian	Saterland Frisian			shoe_NOUN	Skou	skˈoːu̯	s k ˈoːu̯		shoe_NOUN_1			
+North Frisian	North Frisian			shoe_NOUN	schöif	ʃˈœi̯f	ʃ ˈœi̯ f		shoe_NOUN_1			
+Westphalian	Westphalian			shoe_NOUN	Scho	ʃˈoː	ʃ ˈoː		shoe_NOUN_1			
+Eastphalian	Eastphalian			shoe_NOUN	Schau	ʃˈaʊ̯	ʃ ˈaʊ̯		shoe_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			shoe_NOUN	Schoh	ʃˈaʊ̯	ʃ ˈaʊ̯		shoe_NOUN_1			
+East Low German	East Low German			shoe_NOUN	Schauh	ʃˈaʊ̯	ʃ ˈaʊ̯		shoe_NOUN_1			
+Dutch	Dutch			shoe_NOUN	schoen	sχˈun	s χ ˈu n		shoe_NOUN_1			
+Afrikaans	Afrikaans			shoe_NOUN	skoen	skˈun	s k ˈu n		shoe_NOUN_1			
+West Flemish	West Flemish			shoe_NOUN	schoe	ʃhˈuə̯	ʃ h ˈuə̯		shoe_NOUN_1			
+Limburgish	Limburgish			shoe_NOUN	sjoon	ʃˈʊːn	ʃ ˈʊː n		shoe_NOUN_1			
+Ripuarian	Ripuarian			shoe_NOUN	Schong	ʃˈoŋ	ʃ ˈo ŋ		shoe_NOUN_1			
+Luxembourgish	Luxembourgish			shoe_NOUN	Schong	ʃˈoŋ	ʃ ˈo ŋ		shoe_NOUN_1			
+Pennsylvania German	Pennsylvania German			shoe_NOUN	Schuh	ʃˈuː	ʃ ˈuː		shoe_NOUN_1			
+Yiddish	Yiddish			shoe_NOUN	שוך	ʃˈʊχ	ʃ ˈʊ χ		shoe_NOUN_1			
+German	German			shoe_NOUN	Schuh	ʃˈuː	ʃ ˈuː		shoe_NOUN_1			
+Swabian	Swabian			shoe_NOUN	Schuah	ʃˈuə̯	ʃ ˈuə̯		shoe_NOUN_1			
+Alsatian	Alsatian			shoe_NOUN	Schüeh	ʃˈʊː	ʃ ˈʊː		shoe_NOUN_1			
+Swiss German	Swiss German			shoe_NOUN	Schue	ʃˈuə̯	ʃ ˈuə̯		shoe_NOUN_1			
+Bavarian	Bavarian			shoe_NOUN	Schuah	ʃˈuɐ̯	ʃ ˈuɐ̯		shoe_NOUN_1			
+Proto-Germanic	Proto-Germanic			tell lies_VERB	leuganą	lˈeu̯ɣɑnɑ̃	l ˈeu̯ ɣ ɑ n ɑ̃		tell lies_VERB_1			
+Gothic	Gothic			tell lies_VERB	𐌻𐌹𐌿𐌲𐌰𐌽	lˈiu̯ɣan	l ˈiu̯ ɣ a n		tell lies_VERB_1			
+Old Norse	Old Norse			tell lies_VERB	ljúga	ljˈuːɣɑ	l j ˈuː ɣ ɑ		tell lies_VERB_1			
+Icelandic	Icelandic			tell lies_VERB	ljúga	ljˈuːa	l j ˈuː a		tell lies_VERB_1			
+Faroese	Faroese			tell lies_VERB	lúgva	lˈɪɡ̊va	l ˈɪ ɡ̊ v a		tell lies_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			tell lies_VERB	ljuga	jˈʉːɡɑ	j ˈʉː ɡ ɑ		tell lies_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			tell lies_VERB	lyve	lˈyːʋə	l ˈyː ʋ ə		tell lies_VERB_1			
+Danish	Danish			tell lies_VERB	lyve	lˈyːw	l ˈyː w		tell lies_VERB_1			
+Swedish	Swedish			tell lies_VERB	ljuga	jˈʉːɡa	j ˈʉː ɡ a		tell lies_VERB_1			
+Scots	Scots			tell lies_VERB	lee	lˈiː	l ˈiː		tell lies_VERB_1			
+English	English			tell lies_VERB	lie	lˈaɪ̯	l ˈaɪ̯		tell lies_VERB_1			
+American English	American English			tell lies_VERB	lie	lˈaɪ̯	l ˈaɪ̯		tell lies_VERB_1			
+Old English	Old English			tell lies_VERB	lēogan	lˈeːo̯ɣɑn	l ˈeːo̯ ɣ ɑ n		tell lies_VERB_1			
+West Frisian	West Frisian			tell lies_VERB	lige	lˈiːɣə	l ˈiː ɣ ə		tell lies_VERB_1			
+Saterland Frisian	Saterland Frisian			tell lies_VERB	ljoge	ljˈoːɣə	l j ˈoː ɣ ə		tell lies_VERB_1			
+North Frisian	North Frisian			tell lies_VERB	jooge	jˈɔːwə	j ˈɔː w ə		tell lies_VERB_1			
+Westphalian	Westphalian			tell lies_VERB	laigen	lˈaɪ̯ɡn̩	l ˈaɪ̯ ɡ n̩		tell lies_VERB_1			
+Eastphalian	Eastphalian			tell lies_VERB	leigen	lˈɛɪ̯ŋ	l ˈɛɪ̯ ŋ		tell lies_VERB_1			
+Northern Low Saxon	Northern Low Saxon			tell lies_VERB	legen	lˈaɪ̯ŋ	l ˈaɪ̯ ŋ		tell lies_VERB_1			
+East Low German	East Low German			tell lies_VERB	leigen	lˈae̯ŋ	l ˈae̯ ŋ		tell lies_VERB_1			
+Dutch	Dutch			tell lies_VERB	liegen	ɫˈiχən	ɫ ˈi χ ə n		tell lies_VERB_1			
+Afrikaans	Afrikaans			tell lies_VERB	lieg	ɫˈiχ	ɫ ˈi χ		tell lies_VERB_1			
+Limburgish	Limburgish			tell lies_VERB	lege	lˈeːɣə	l ˈeː ɣ ə		tell lies_VERB_1			
+Ripuarian	Ripuarian			tell lies_VERB	lüjje	lˈʏjə	l ˈʏ j ə		tell lies_VERB_1			
+Luxembourgish	Luxembourgish			tell lies_VERB	léien	lˈɜɪ̯ən	l ˈɜɪ̯ ə n		tell lies_VERB_1			
+Pennsylvania German	Pennsylvania German			tell lies_VERB	liege	lˈiːɡə	l ˈiː ɡ ə		tell lies_VERB_1			
+Yiddish	Yiddish			tell lies_VERB	לײַגן	lˈaɪ̯ɡn̩	l ˈaɪ̯ ɡ n̩		tell lies_VERB_1			
+German	German			tell lies_VERB	lügen	lˈyːɡn̩	l ˈyː ɡ n̩		tell lies_VERB_1			
+Swabian	Swabian			tell lies_VERB	liaga	lˈiə̯ɡa	l ˈiə̯ ɡ a		tell lies_VERB_1			
+Alsatian	Alsatian			tell lies_VERB	laje	lˈaːjə	l ˈaː j ə		tell lies_VERB_1			
+Swiss German	Swiss German			tell lies_VERB	lüüge	lˈyːɡ̊ə	l ˈyː ɡ̊ ə		tell lies_VERB_1			
+Bavarian	Bavarian			tell lies_VERB	liagn	lˈiɐ̯ɡ̊n̩	l ˈiɐ̯ ɡ̊ n̩		tell lies_VERB_1			
+Proto-Germanic	Proto-Germanic			lie_VERB	ligjaną	lˈiɣjɑnɑ̃	l ˈi ɣ j ɑ n ɑ̃		lie_VERB_1			
+Gothic	Gothic			lie_VERB	𐌻𐌹𐌲𐌰𐌽	lˈiɣan	l ˈi ɣ a n		lie_VERB_1			
+Old Norse	Old Norse			lie_VERB	liggja	lˈiɟɟɑ	l ˈi ɟ ɟ ɑ		lie_VERB_1			
+Icelandic	Icelandic			lie_VERB	liggja	lˈɪɟ̊ɟ̊a	l ˈɪ ɟ̊ ɟ̊ a		lie_VERB_1			
+Faroese	Faroese			lie_VERB	liggja	lˈɪʤ̊ʤ̊a	l ˈɪ ʤ̊ ʤ̊ a		lie_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			lie_VERB	liggja	lˈɪjjɑ	l ˈɪ j j ɑ		lie_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			lie_VERB	ligge	lˈɪɡɡə	l ˈɪ ɡ ɡ ə		lie_VERB_1			
+Danish	Danish			lie_VERB	ligge	lˈeɡ̊ə	l ˈe ɡ̊ ə		lie_VERB_1			
+Swedish	Swedish			lie_VERB	ligga	lˈɪɡɡa	l ˈɪ ɡ ɡ a		lie_VERB_1			
+Scots	Scots			lie_VERB	lie	lˈiː	l ˈiː		lie_VERB_1			
+English	English			lie_VERB	lie	lˈaɪ̯	l ˈaɪ̯		lie_VERB_1			
+American English	American English			lie_VERB	lie	lˈaɪ̯	l ˈaɪ̯		lie_VERB_1			
+Old English	Old English			lie_VERB	liċġan	lˈiʤʤan	l ˈi ʤ ʤ a n		lie_VERB_1			
+West Frisian	West Frisian			lie_VERB	lizze	lˈɪzə	l ˈɪ z ə		lie_VERB_1			
+Saterland Frisian	Saterland Frisian			lie_VERB	läze	lˈɛːzə	l ˈɛː z ə		lie_VERB_1			
+North Frisian	North Frisian			lie_VERB	lade	lˈadə	l ˈa d ə		lie_VERB_1			
+Westphalian	Westphalian			lie_VERB	liggen	lˈɪɡn̩	l ˈɪ ɡ n̩		lie_VERB_1			
+Eastphalian	Eastphalian			lie_VERB	liggen	lˈɪɡn̩	l ˈɪ ɡ n̩		lie_VERB_1			
+Northern Low Saxon	Northern Low Saxon			lie_VERB	liggen	lˈɪŋ	l ˈɪ ŋ		lie_VERB_1			
+East Low German	East Low German			lie_VERB	liggen	lˈɪŋ	l ˈɪ ŋ		lie_VERB_1			
+Dutch	Dutch			lie_VERB	liggen	ɫˈɪχən	ɫ ˈɪ χ ə n		lie_VERB_1			
+Afrikaans	Afrikaans			lie_VERB	lê	ɫˈɛː	ɫ ˈɛː		lie_VERB_1			
+Limburgish	Limburgish			lie_VERB	ligke	lˈɪɡə	l ˈɪ ɡ ə		lie_VERB_1			
+Ripuarian	Ripuarian			lie_VERB	lijje	lˈɪjə	l ˈɪ j ə		lie_VERB_1			
+Luxembourgish	Luxembourgish			lie_VERB	leien	lˈɑɪ̯ən	l ˈɑɪ̯ ə n		lie_VERB_1			
+Pennsylvania German	Pennsylvania German			lie_VERB	leie	lˈaɪ̯ə	l ˈaɪ̯ ə		lie_VERB_1			
+Yiddish	Yiddish			lie_VERB	ליגן	lˈɪɡn̩	l ˈɪ ɡ n̩		lie_VERB_1			
+German	German			lie_VERB	liegen	lˈiːɡn̩	l ˈiː ɡ n̩		lie_VERB_1			
+Swabian	Swabian			lie_VERB	liega	lˈiːɡa	l ˈiː ɡ a		lie_VERB_1			
+Alsatian	Alsatian			lie_VERB	lieje	lˈiːjə	l ˈiː j ə		lie_VERB_1			
+Swiss German	Swiss German			lie_VERB	ligge	lˈiɡ̊ɡ̊ə	l ˈi ɡ̊ ɡ̊ ə		lie_VERB_1			
+Bavarian	Bavarian			lie_VERB	liegn	lˈiːɡ̊n̩	l ˈiː ɡ̊ n̩		lie_VERB_1			
+Proto-Germanic	Proto-Germanic			berry_NOUN	basją	bˈɑsjɑ̃	b ˈɑ s j ɑ̃		berry_NOUN_1			
+Gothic	Gothic			berry_NOUN	𐌱𐌰𐍃𐌹	bˈasi	b ˈa s i		berry_NOUN_1			
+Dutch	Dutch			berry_NOUN	bes	bˈɛs	b ˈɛ s		berry_NOUN_1			
+Afrikaans	Afrikaans			berry_NOUN	bessie	bˈɛsi	b ˈɛ s i		berry_NOUN_1			
+Limburgish	Limburgish			berry_NOUN	bes	bˈæs	b ˈæ s		berry_NOUN_1			
+Proto-Germanic	Proto-Germanic			berry_NOUN	bazją	bˈɑzjɑ̃	b ˈɑ z j ɑ̃		berry_NOUN_2			
+Old Norse	Old Norse			berry_NOUN	ber	bˈer	b ˈe r		berry_NOUN_2			
+Icelandic	Icelandic			berry_NOUN	ber	b̥ˈɛːr̥	b̥ ˈɛː r̥		berry_NOUN_2			
+Faroese	Faroese			berry_NOUN	ber	b̥ˈeːɹ	b̥ ˈeː ɹ		berry_NOUN_2			
+Nynorsk Norwegian	Nynorsk Norwegian			berry_NOUN	bær	bˈæːɾ	b ˈæː ɾ		berry_NOUN_2			
+Bokmål Norwegian	Bokmål Norwegian			berry_NOUN	bær	bˈæːɾ	b ˈæː ɾ		berry_NOUN_2			
+Danish	Danish			berry_NOUN	bær	b̥ˈɛɐ	b̥ ˈɛ ɐ		berry_NOUN_2			
+Swedish	Swedish			berry_NOUN	bär	bˈæːr	b ˈæː r		berry_NOUN_2			
+Scots	Scots			berry_NOUN	berrie	bˈɛri	b ˈɛ r i		berry_NOUN_2			
+English	English			berry_NOUN	berry	bˈɛɹɪ	b ˈɛ ɹ ɪ		berry_NOUN_2			
+American English	American English			berry_NOUN	berry	bˈɛɹi	b ˈɛ ɹ i		berry_NOUN_2			
+Old English	Old English			berry_NOUN	berġe	bˈerje	b ˈe r j e		berry_NOUN_2			
+West Frisian	West Frisian			berry_NOUN	bei	bˈɛi̯	b ˈɛi̯		berry_NOUN_2			
+Saterland Frisian	Saterland Frisian			berry_NOUN	Bäie	bˈɛɪ̯ə	b ˈɛɪ̯ ə		berry_NOUN_2			
+North Frisian	North Frisian			berry_NOUN	bai	bˈai̯	b ˈai̯		berry_NOUN_2			
+Westphalian	Westphalian			berry_NOUN	Biär	bˈiɛ̯ɐ	b ˈiɛ̯ ɐ		berry_NOUN_2			
+Eastphalian	Eastphalian			berry_NOUN	Beere	bˈɛɪ̯rə	b ˈɛɪ̯ r ə		berry_NOUN_2			
+Northern Low Saxon	Northern Low Saxon			berry_NOUN	Beer	bˈaɪ̯ɐ	b ˈaɪ̯ ɐ		berry_NOUN_2			
+East Low German	East Low German			berry_NOUN	Beer	bˈaɪ̯æ	b ˈaɪ̯ æ		berry_NOUN_2			
+Ripuarian	Ripuarian			berry_NOUN	Beer	bˈeːɐ	b ˈeː ɐ		berry_NOUN_2			
+Luxembourgish	Luxembourgish			berry_NOUN	Bier	bˈiːɐ	b ˈiː ɐ		berry_NOUN_2			
+Pennsylvania German	Pennsylvania German			berry_NOUN	Bier	bˈiːɑ	b ˈiː ɑ		berry_NOUN_2			
+German	German			berry_NOUN	Beere	bˈeːʁə	b ˈeː ʁ ə		berry_NOUN_2			
+Swabian	Swabian			berry_NOUN	Beer	bˈeːʌ	b ˈeː ʌ		berry_NOUN_2			
+Alsatian	Alsatian			berry_NOUN	Beer	b̥ˈeːʁ	b̥ ˈeː ʁ		berry_NOUN_2			
+Swiss German	Swiss German			berry_NOUN	Beeri	b̥ˈeːri	b̥ ˈeː r i		berry_NOUN_2			
+Bavarian	Bavarian			berry_NOUN	Beer	b̥ˈeːɐ	b̥ ˈeː ɐ		berry_NOUN_2			
+Proto-Germanic	Proto-Germanic			sweat_NOUN	swaitą	swˈɑi̯tɑ̃	s w ˈɑi̯ t ɑ̃		sweat_NOUN_1			
+Scots	Scots			sweat_NOUN	swait	swˈet	s w ˈe t		sweat_NOUN_1			
+English	English			sweat_NOUN	sweat	swˈet	s w ˈe t		sweat_NOUN_1			
+American English	American English			sweat_NOUN	sweat	swˈɛt	s w ˈɛ t		sweat_NOUN_1			
+Old English	Old English			sweat_NOUN	swāt	swˈɑːt	s w ˈɑː t		sweat_NOUN_1			
+Dutch	Dutch			sweat_NOUN	zweet	zʋˈeːt	z ʋ ˈeː t		sweat_NOUN_1			
+Afrikaans	Afrikaans			sweat_NOUN	sweet	svˈɪə̯t	s v ˈɪə̯ t		sweat_NOUN_1			
+Limburgish	Limburgish			sweat_NOUN	zweit	zβˈɛːt	z β ˈɛː t		sweat_NOUN_1			
+Proto-Germanic	Proto-Germanic			sweat_NOUN	swaitaz	swˈɑi̯tɑz	s w ˈɑi̯ t ɑ z		sweat_NOUN_2			
+Bokmål Norwegian	Bokmål Norwegian			sweat_NOUN	svette	sʋˈɛttə	s ʋ ˈɛ t t ə		sweat_NOUN_2			
+Danish	Danish			sweat_NOUN	sved	sʋˈeˀð̞ˠ	s ʋ ˈeˀ ð̞ˠ		sweat_NOUN_2			
+Swedish	Swedish			sweat_NOUN	svett	svˈɛtt	s v ˈɛ t t		sweat_NOUN_2			
+West Frisian	West Frisian			sweat_NOUN	swit	svˈɪt	s v ˈɪ t		sweat_NOUN_2			
+Saterland Frisian	Saterland Frisian			sweat_NOUN	Sweet	svˈeːt	s v ˈeː t		sweat_NOUN_2			
+North Frisian	North Frisian			sweat_NOUN	swiitj	svˈiːtʲ	s v ˈiː tʲ		sweat_NOUN_2			
+Eastphalian	Eastphalian			sweat_NOUN	Sweet	swˈɛɪ̯t	s w ˈɛɪ̯ t		sweat_NOUN_2			
+Northern Low Saxon	Northern Low Saxon			sweat_NOUN	Sweet	ʃvˈaɪ̯t	ʃ v ˈaɪ̯ t		sweat_NOUN_2			
+East Low German	East Low German			sweat_NOUN	Sweet	ʃwˈae̯t	ʃ w ˈae̯ t		sweat_NOUN_2			
+Ripuarian	Ripuarian			sweat_NOUN	Schweiß	ʃʋˈeɪ̯s	ʃ ʋ ˈeɪ̯ s		sweat_NOUN_2			
+Luxembourgish	Luxembourgish			sweat_NOUN	Schweess	ʃwˈeːs	ʃ w ˈeː s		sweat_NOUN_2			
+Pennsylvania German	Pennsylvania German			sweat_NOUN	Schweess	ʃʋˈeːs	ʃ ʋ ˈeː s		sweat_NOUN_2			
+Yiddish	Yiddish			sweat_NOUN	שווייס	ʃvˈɛɪ̯s	ʃ v ˈɛɪ̯ s		sweat_NOUN_2			
+German	German			sweat_NOUN	Schweiß	ʃvˈaɪ̯s	ʃ v ˈaɪ̯ s		sweat_NOUN_2			
+Swabian	Swabian			sweat_NOUN	Schwoiß	ʃʋˈɔe̯s	ʃ ʋ ˈɔe̯ s		sweat_NOUN_2			
+Swiss German	Swiss German			sweat_NOUN	Schwäiss	ʃʋˈæi̯ss	ʃ ʋ ˈæi̯ s s		sweat_NOUN_2			
+Proto-Germanic	Proto-Germanic			sweat_NOUN	swaitô	swˈɑi̯tɔːː	s w ˈɑi̯ t ɔːː		sweat_NOUN_3			
+Old Norse	Old Norse			sweat_NOUN	sveiti	svˈɛi̯ti	s v ˈɛi̯ t i		sweat_NOUN_3			
+Icelandic	Icelandic			sweat_NOUN	sviti	svˈɪːtɪ	s v ˈɪː t ɪ		sweat_NOUN_3			
+Faroese	Faroese			sweat_NOUN	sveitti	svˈai̯ʰttɪ	s v ˈai̯ ʰt t ɪ		sweat_NOUN_3			
+Nynorsk Norwegian	Nynorsk Norwegian			sweat_NOUN	sveitte	sʋˈæɪ̯ʰtte	s ʋ ˈæɪ̯ ʰt t e		sweat_NOUN_3			
+Proto-Germanic	Proto-Germanic			next_ADJ	nēhwist	nˈɛːxʷist	n ˈɛː xʷ i s t		next_ADJ_1			
+Old Norse	Old Norse			next_ADJ	næstr	nˈɛːstr	n ˈɛː s t r		next_ADJ_1			
+Icelandic	Icelandic			next_ADJ	næstur	nˈai̯stʏr̥	n ˈai̯ s t ʏ r̥		next_ADJ_1			
+Faroese	Faroese			next_ADJ	næstur	nˈastʊɹ	n ˈa s t ʊ ɹ		next_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			next_ADJ	neste	nˈɛste	n ˈɛ s t e		next_ADJ_1			
+Bokmål Norwegian	Bokmål Norwegian			next_ADJ	neste	nˈɛstə	n ˈɛ s t ə		next_ADJ_1			
+Danish	Danish			next_ADJ	næste	nˈɛstə	n ˈɛ s t ə		next_ADJ_1			
+Swedish	Swedish			next_ADJ	nästa	nˈɛsta	n ˈɛ s t a		next_ADJ_1			
+English	English			next_ADJ	next	nˈekst	n ˈe k s t		next_ADJ_1			
+American English	American English			next_ADJ	next	nˈɛkst	n ˈɛ k s t		next_ADJ_1			
+Old English	Old English			next_ADJ	nīehst	nˈiːy̯xst	n ˈiːy̯ x s t		next_ADJ_1			
+West Frisian	West Frisian			next_ADJ	neist	nˈɛi̯st	n ˈɛi̯ s t		next_ADJ_1			
+Saterland Frisian	Saterland Frisian			next_ADJ	naist	nˈaːi̯st	n ˈaːi̯ s t		next_ADJ_1			
+North Frisian	North Frisian			next_ADJ	näist	nˈɛi̯st	n ˈɛi̯ s t		next_ADJ_1			
+Dutch	Dutch			next_ADJ	naast	nˈaːst	n ˈaː s t		next_ADJ_1			
+Afrikaans	Afrikaans			next_ADJ	naast	nˈɑːst	n ˈɑː s t		next_ADJ_1			
+Ripuarian	Ripuarian			next_ADJ	niekste	nˈiːkstə	n ˈiː k s t ə		next_ADJ_1			
+Pennsylvania German	Pennsylvania German			next_ADJ	naegscht	nˈɛːkʃt	n ˈɛː k ʃ t		next_ADJ_1			
+Yiddish	Yiddish			next_ADJ	נעקסט	nˈɛkst	n ˈɛ k s t		next_ADJ_1			
+German	German			next_ADJ	nächste	nˈɛːçstə	n ˈɛː ç s t ə		next_ADJ_1			
+Swabian	Swabian			next_ADJ	näggschd	nˈɛɡʃd	n ˈɛ ɡ ʃ d		next_ADJ_1			
+Swiss German	Swiss German			next_ADJ	nächscht	nˈæχʃt	n ˈæ χ ʃ t		next_ADJ_1			
+Bavarian	Bavarian			next_ADJ	nächst	nˈɛkʃt	n ˈɛ k ʃ t		next_ADJ_1			
+Proto-Germanic	Proto-Germanic			thirst_NOUN	þurstuz	θˈurstuz	θ ˈu r s t u z		thirst_NOUN_1			
+Gothic	Gothic			thirst_NOUN	𐌸𐌰𐌿𐍂𐍃𐍄𐌴𐌹	θˈɔrstiː	θ ˈɔ r s t iː		thirst_NOUN_1			
+Old Norse	Old Norse			thirst_NOUN	þorsti	θˈorsti	θ ˈo r s t i		thirst_NOUN_1			
+Icelandic	Icelandic			thirst_NOUN	þorsti	θˈɔr̥stɪ	θ ˈɔ r̥ s t ɪ		thirst_NOUN_1			
+Faroese	Faroese			thirst_NOUN	tosti	tʰˈɔstɪ	tʰ ˈɔ s t ɪ		thirst_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			thirst_NOUN	tørste	tʰˈœɾstə	tʰ ˈœ ɾ s t ə		thirst_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			thirst_NOUN	tørst	tʰˈœʂʈ	tʰ ˈœ ʂ ʈ		thirst_NOUN_1			
+Danish	Danish			thirst_NOUN	tørst	ʦʰˈœɐst	ʦʰ ˈœ ɐ s t		thirst_NOUN_1			
+Swedish	Swedish			thirst_NOUN	törst	tʰˈœʂʈ	tʰ ˈœ ʂ ʈ		thirst_NOUN_1			
+Scots	Scots			thirst_NOUN	thrist	θrˈɪst	θ r ˈɪ s t		thirst_NOUN_1			
+English	English			thirst_NOUN	thirst	θˈɜːst	θ ˈɜː s t		thirst_NOUN_1			
+American English	American English			thirst_NOUN	thirst	θˈɝst	θ ˈɝ s t		thirst_NOUN_1			
+Old English	Old English			thirst_NOUN	þurst	θˈurst	θ ˈu r s t		thirst_NOUN_1			
+West Frisian	West Frisian			thirst_NOUN	toarst	tˈoə̯st	t ˈoə̯ s t		thirst_NOUN_1			
+Saterland Frisian	Saterland Frisian			thirst_NOUN	Toarst	tˈɔːrst	t ˈɔː r s t		thirst_NOUN_1			
+North Frisian	North Frisian			thirst_NOUN	turst	tˈurst	t ˈu r s t		thirst_NOUN_1			
+Westphalian	Westphalian			thirst_NOUN	Duorst	dˈuːə̯st	d ˈuːə̯ s t		thirst_NOUN_1			
+Eastphalian	Eastphalian			thirst_NOUN	Döst	dˈœst	d ˈœ s t		thirst_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			thirst_NOUN	Döst	dˈœs	d ˈœ s		thirst_NOUN_1			
+East Low German	East Low German			thirst_NOUN	Döst	dˈœst	d ˈœ s t		thirst_NOUN_1			
+Dutch	Dutch			thirst_NOUN	dorst	dˈɔɾst	d ˈɔ ɾ s t		thirst_NOUN_1			
+Afrikaans	Afrikaans			thirst_NOUN	dors	dˈɔrs	d ˈɔ r s		thirst_NOUN_1			
+Limburgish	Limburgish			thirst_NOUN	doors	dˈʊːʀs	d ˈʊː ʀ s		thirst_NOUN_1			
+Ripuarian	Ripuarian			thirst_NOUN	Doosch	dˈoːʃ	d ˈoː ʃ		thirst_NOUN_1			
+Luxembourgish	Luxembourgish			thirst_NOUN	Duuscht	dˈuːʃt	d ˈuː ʃ t		thirst_NOUN_1			
+Pennsylvania German	Pennsylvania German			thirst_NOUN	Darscht	dˈaːʃt	d ˈaː ʃ t		thirst_NOUN_1			
+Yiddish	Yiddish			thirst_NOUN	דאָרשט	dˈɔʀʃt	d ˈɔ ʀ ʃ t		thirst_NOUN_1			
+German	German			thirst_NOUN	Durst	dˈʊɐst	d ˈʊ ɐ s t		thirst_NOUN_1			
+Swabian	Swabian			thirst_NOUN	Durschd	dˈuʕʃt	d ˈu ʕ ʃ t		thirst_NOUN_1			
+Alsatian	Alsatian			thirst_NOUN	Durscht	d̥ˈuʁʃt	d̥ ˈu ʁ ʃ t		thirst_NOUN_1			
+Swiss German	Swiss German			thirst_NOUN	Turscht	d̥ˈurʃt	d̥ ˈu r ʃ t		thirst_NOUN_1			
+Bavarian	Bavarian			thirst_NOUN	Duascht	d̥ˈuɐ̯ʃt	d̥ ˈuɐ̯ ʃ t		thirst_NOUN_1			
+Proto-Germanic	Proto-Germanic			summer_NOUN	sumaraz	sˈumɑrɑz	s ˈu m ɑ r ɑ z		summer_NOUN_1			
+Old Norse	Old Norse			summer_NOUN	sumar	sˈumɑr	s ˈu m ɑ r		summer_NOUN_1			
+Icelandic	Icelandic			summer_NOUN	sumar	sˈʏːmar̥	s ˈʏː m a r̥		summer_NOUN_1			
+Faroese	Faroese			summer_NOUN	summar	sˈʊmmaɹ	s ˈʊ m m a ɹ		summer_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			summer_NOUN	sumar	sˈʊmɑɾ	s ˈʊ m ɑ ɾ		summer_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			summer_NOUN	sommer	sˈɔmməɾ	s ˈɔ m m ə ɾ		summer_NOUN_1			
+Danish	Danish			summer_NOUN	sommer	sˈʌmɐ	s ˈʌ m ɐ		summer_NOUN_1			
+Swedish	Swedish			summer_NOUN	sommar	sˈɔmmar	s ˈɔ m m a r		summer_NOUN_1			
+Scots	Scots			summer_NOUN	simmer	sˈɪmər	s ˈɪ m ə r		summer_NOUN_1			
+English	English			summer_NOUN	summer	sˈɐmə	s ˈɐ m ə		summer_NOUN_1			
+American English	American English			summer_NOUN	summer	sˈʌmɚ	s ˈʌ m ɚ		summer_NOUN_1			
+Old English	Old English			summer_NOUN	sumor	sˈumor	s ˈu m o r		summer_NOUN_1			
+West Frisian	West Frisian			summer_NOUN	simmer	sˈɪmər	s ˈɪ m ə r		summer_NOUN_1			
+Saterland Frisian	Saterland Frisian			summer_NOUN	Súmer	sˈuːmər	s ˈuː m ə r		summer_NOUN_1			
+North Frisian	North Frisian			summer_NOUN	samer	sˈamər	s ˈa m ə r		summer_NOUN_1			
+Westphalian	Westphalian			summer_NOUN	Sommer	zˈʊmɐ	z ˈʊ m ɐ		summer_NOUN_1			
+Eastphalian	Eastphalian			summer_NOUN	Sömmer	zˈœmɐ	z ˈœ m ɐ		summer_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			summer_NOUN	Sommer	zˈʊmɐ	z ˈʊ m ɐ		summer_NOUN_1			
+East Low German	East Low German			summer_NOUN	Sommer	zˈɔmæ	z ˈɔ m æ		summer_NOUN_1			
+Dutch	Dutch			summer_NOUN	zomer	zˈoːməɾ	z ˈoː m ə ɾ		summer_NOUN_1			
+Afrikaans	Afrikaans			summer_NOUN	somer	sˈʊə̯mər	s ˈʊə̯ m ə r		summer_NOUN_1			
+West Flemish	West Flemish			summer_NOUN	zomer	zˈoːməɾ	z ˈoː m ə ɾ		summer_NOUN_1			
+Limburgish	Limburgish			summer_NOUN	zomer	zˈoːməʀ	z ˈoː m ə ʀ		summer_NOUN_1			
+Ripuarian	Ripuarian			summer_NOUN	Sommer	zˈɔmɐ	z ˈɔ m ɐ		summer_NOUN_1			
+Luxembourgish	Luxembourgish			summer_NOUN	Summer	zˈumɐ	z ˈu m ɐ		summer_NOUN_1			
+Pennsylvania German	Pennsylvania German			summer_NOUN	Summer	sˈʊmɑ	s ˈʊ m ɑ		summer_NOUN_1			
+Yiddish	Yiddish			summer_NOUN	זומער	zˈʊməʀ	z ˈʊ m ə ʀ		summer_NOUN_1			
+German	German			summer_NOUN	Sommer	zˈɔmɐ	z ˈɔ m ɐ		summer_NOUN_1			
+Swabian	Swabian			summer_NOUN	Sommr	sˈomʌ	s ˈo m ʌ		summer_NOUN_1			
+Alsatian	Alsatian			summer_NOUN	Summer	sˈuməʁ	s ˈu m ə ʁ		summer_NOUN_1			
+Swiss German	Swiss German			summer_NOUN	Summer	sˈummər	s ˈu m m ə r		summer_NOUN_1			
+Bavarian	Bavarian			summer_NOUN	Summa	sˈuma	s ˈu m a		summer_NOUN_1			
+Proto-Germanic	Proto-Germanic			winter_NOUN	wintruz	wˈintruz	w ˈi n t r u z		winter_NOUN_1			
+Gothic	Gothic			winter_NOUN	𐍅𐌹𐌽𐍄𐍂𐌿𐍃	wˈintrus	w ˈi n t r u s		winter_NOUN_1			
+Old Norse	Old Norse			winter_NOUN	vetr	vˈetr	v ˈe t r		winter_NOUN_1			
+Icelandic	Icelandic			winter_NOUN	vetur	vˈɛːtʏr̥	v ˈɛː t ʏ r̥		winter_NOUN_1			
+Faroese	Faroese			winter_NOUN	vetur	vˈeːʰtʊr	v ˈeː ʰt ʊ r		winter_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			winter_NOUN	vetter	ʋˈɛʰttəɾ	ʋ ˈɛ ʰt t ə ɾ		winter_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			winter_NOUN	vinter	ʋˈɪntəɾ	ʋ ˈɪ n t ə ɾ		winter_NOUN_1			
+Danish	Danish			winter_NOUN	vinter	ʋˈenˀtɐ	ʋ ˈe nˀ t ɐ		winter_NOUN_1			
+Swedish	Swedish			winter_NOUN	vinter	vˈɪntɛr	v ˈɪ n t ɛ r		winter_NOUN_1			
+Scots	Scots			winter_NOUN	winter	wˈɪntər	w ˈɪ n t ə r		winter_NOUN_1			
+English	English			winter_NOUN	winter	wˈɪntə	w ˈɪ n t ə		winter_NOUN_1			
+American English	American English			winter_NOUN	winter	wˈɪntɚ	w ˈɪ n t ɚ		winter_NOUN_1			
+Old English	Old English			winter_NOUN	winter	wˈinter	w ˈi n t e r		winter_NOUN_1			
+West Frisian	West Frisian			winter_NOUN	winter	vˈɪntər	v ˈɪ n t ə r		winter_NOUN_1			
+Saterland Frisian	Saterland Frisian			winter_NOUN	Winter	vˈɪntər	v ˈɪ n t ə r		winter_NOUN_1			
+North Frisian	North Frisian			winter_NOUN	wunter	vˈuntər	v ˈu n t ə r		winter_NOUN_1			
+Westphalian	Westphalian			winter_NOUN	Winter	vˈɪntɐ	v ˈɪ n t ɐ		winter_NOUN_1			
+Eastphalian	Eastphalian			winter_NOUN	Winter	vˈɪntɐ	v ˈɪ n t ɐ		winter_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			winter_NOUN	Winter	vˈɪndɐ	v ˈɪ n d ɐ		winter_NOUN_1			
+East Low German	East Low German			winter_NOUN	Winter	vˈɪntæ	v ˈɪ n t æ		winter_NOUN_1			
+Dutch	Dutch			winter_NOUN	winter	ʋˈɪntəɾ	ʋ ˈɪ n t ə ɾ		winter_NOUN_1			
+Afrikaans	Afrikaans			winter_NOUN	winter	vˈəntər	v ˈə n t ə r		winter_NOUN_1			
+West Flemish	West Flemish			winter_NOUN	winter	ʋˈɪntəɾ	ʋ ˈɪ n t ə ɾ		winter_NOUN_1			
+Limburgish	Limburgish			winter_NOUN	winter	βˈɪːntəʀ	β ˈɪː n t ə ʀ		winter_NOUN_1			
+Ripuarian	Ripuarian			winter_NOUN	Wenkter	ʋˈeŋktɐ	ʋ ˈe ŋ k t ɐ		winter_NOUN_1			
+Luxembourgish	Luxembourgish			winter_NOUN	Wanter	vˈɑntɐ	v ˈɑ n t ɐ		winter_NOUN_1			
+Pennsylvania German	Pennsylvania German			winter_NOUN	Winder	vˈɪndɑ	v ˈɪ n d ɑ		winter_NOUN_1			
+Yiddish	Yiddish			winter_NOUN	ווינטער	vˈɪntəʀ	v ˈɪ n t ə ʀ		winter_NOUN_1			
+German	German			winter_NOUN	Winter	vˈɪntɐ	v ˈɪ n t ɐ		winter_NOUN_1			
+Swabian	Swabian			winter_NOUN	Wendr	ʋˈendʌ	ʋ ˈe n d ʌ		winter_NOUN_1			
+Alsatian	Alsatian			winter_NOUN	Winter	ʋˈintəʁ	ʋ ˈi n t ə ʁ		winter_NOUN_1			
+Swiss German	Swiss German			winter_NOUN	Winter	ʋˈintər	ʋ ˈi n t ə r		winter_NOUN_1			
+Bavarian	Bavarian			winter_NOUN	Winta	ʋˈinta	ʋ ˈi n t a		winter_NOUN_1			
+Proto-Germanic	Proto-Germanic			brew_VERB	brewwaną	brˈewwɑnɑ̃	b r ˈe w w ɑ n ɑ̃		brew_VERB_1			
+Old Norse	Old Norse			brew_VERB	brugga	brˈuɡɡɑ	b r ˈu ɡ ɡ ɑ		brew_VERB_1			
+Icelandic	Icelandic			brew_VERB	brugga	b̥rˈʏɡ̊ɡ̊a	b̥ r ˈʏ ɡ̊ ɡ̊ a		brew_VERB_1			
+Faroese	Faroese			brew_VERB	bryggja	b̥ɹˈɪʤ̊ʤ̊a	b̥ ɹ ˈɪ ʤ̊ ʤ̊ a		brew_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			brew_VERB	bryggja	bɾˈʏjjɑ	b ɾ ˈʏ j j ɑ		brew_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			brew_VERB	brygge	bɾˈʏɡɡə	b ɾ ˈʏ ɡ ɡ ə		brew_VERB_1			
+Danish	Danish			brew_VERB	brygge	b̥ʁˈœɡ̊ə	b̥ ʁ ˈœ ɡ̊ ə		brew_VERB_1			
+Swedish	Swedish			brew_VERB	brygga	brˈʏɡɡa	b r ˈʏ ɡ ɡ a		brew_VERB_1			
+Scots	Scots			brew_VERB	brew	brjˈʉ	b r j ˈʉ		brew_VERB_1			
+English	English			brew_VERB	brew	bɹˈuː	b ɹ ˈuː		brew_VERB_1			
+American English	American English			brew_VERB	brew	bɹˈu	b ɹ ˈu		brew_VERB_1			
+Old English	Old English			brew_VERB	brēowan	brˈeːo̯wɑn	b r ˈeːo̯ w ɑ n		brew_VERB_1			
+West Frisian	West Frisian			brew_VERB	brouwe	brˈɔu̯ə	b r ˈɔu̯ ə		brew_VERB_1			
+Saterland Frisian	Saterland Frisian			brew_VERB	brjoue	brjˈoːu̯ə	b r j ˈoːu̯ ə		brew_VERB_1			
+North Frisian	North Frisian			brew_VERB	broue	brˈɔu̯ə	b r ˈɔu̯ ə		brew_VERB_1			
+Westphalian	Westphalian			brew_VERB	bruen	brˈuːən	b r ˈuː ə n		brew_VERB_1			
+Eastphalian	Eastphalian			brew_VERB	bruen	brˈuːən	b r ˈuː ə n		brew_VERB_1			
+Northern Low Saxon	Northern Low Saxon			brew_VERB	bruen	brˈuːən	b r ˈuː ə n		brew_VERB_1			
+East Low German	East Low German			brew_VERB	brugen	brˈuːɡn̩	b r ˈuː ɡ n̩		brew_VERB_1			
+Dutch	Dutch			brew_VERB	brouwen	bɾˈɑu̯ən	b ɾ ˈɑu̯ ə n		brew_VERB_1			
+Afrikaans	Afrikaans			brew_VERB	brou	brˈœu̯	b r ˈœu̯		brew_VERB_1			
+West Flemish	West Flemish			brew_VERB	brouwn	bɾˈuʋn̩	b ɾ ˈu ʋ n̩		brew_VERB_1			
+Limburgish	Limburgish			brew_VERB	brouwe	bʀˈɔu̯ə	b ʀ ˈɔu̯ ə		brew_VERB_1			
+Ripuarian	Ripuarian			brew_VERB	braue	bʀˈaʊ̯ə	b ʀ ˈaʊ̯ ə		brew_VERB_1			
+Luxembourgish	Luxembourgish			brew_VERB	brauen	bʀˈɑʊ̯ən	b ʀ ˈɑʊ̯ ə n		brew_VERB_1			
+Pennsylvania German	Pennsylvania German			brew_VERB	braue	bɾˈaʊ̯ə	b ɾ ˈaʊ̯ ə		brew_VERB_1			
+German	German			brew_VERB	brauen	bʁˈaʊ̯ən	b ʁ ˈaʊ̯ ə n		brew_VERB_1			
+Proto-Germanic	Proto-Germanic			cat_NOUN	kattuz	kˈɑttuz	k ˈɑ t t u z		cat_NOUN_1			
+Old Norse	Old Norse			cat_NOUN	kǫttr	kʰˈɔttr	kʰ ˈɔ t t r		cat_NOUN_1			
+Icelandic	Icelandic			cat_NOUN	köttur	kʰˈœʰtʏr̥	kʰ ˈœ ʰt ʏ r̥		cat_NOUN_1			
+Faroese	Faroese			cat_NOUN	køttur	kʰˈœʰttʊɹ	kʰ ˈœ ʰt t ʊ ɹ		cat_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			cat_NOUN	katt	kʰˈɑtt	kʰ ˈɑ t t		cat_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			cat_NOUN	katt	kʰˈɑtt	kʰ ˈɑ t t		cat_NOUN_1			
+Danish	Danish			cat_NOUN	kat	kʰˈæt	kʰ ˈæ t		cat_NOUN_1			
+Swedish	Swedish			cat_NOUN	katt	kʰˈatt	kʰ ˈa t t		cat_NOUN_1			
+Scots	Scots			cat_NOUN	cat	kʰˈɑt	kʰ ˈɑ t		cat_NOUN_1			
+English	English			cat_NOUN	cat	kʰˈæt	kʰ ˈæ t		cat_NOUN_1			
+American English	American English			cat_NOUN	cat	kʰˈæʔ	kʰ ˈæ ʔ		cat_NOUN_1			
+Old English	Old English			cat_NOUN	catt	kˈɑtt	k ˈɑ t t		cat_NOUN_1			
+West Frisian	West Frisian			cat_NOUN	kat	kˈat	k ˈa t		cat_NOUN_1			
+Saterland Frisian	Saterland Frisian			cat_NOUN	Kat	kˈat	k ˈa t		cat_NOUN_1			
+North Frisian	North Frisian			cat_NOUN	kåt	kˈɒt	k ˈɒ t		cat_NOUN_1			
+Westphalian	Westphalian			cat_NOUN	Kat	kˈat	k ˈa t		cat_NOUN_1			
+Eastphalian	Eastphalian			cat_NOUN	Katte	kˈatə	k ˈa t ə		cat_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			cat_NOUN	Katt	kʰˈat	kʰ ˈa t		cat_NOUN_1			
+East Low German	East Low German			cat_NOUN	Katt	kʰˈat	kʰ ˈa t		cat_NOUN_1			
+Dutch	Dutch			cat_NOUN	kat	kˈɑt	k ˈɑ t		cat_NOUN_1			
+Afrikaans	Afrikaans			cat_NOUN	kat	kˈat	k ˈa t		cat_NOUN_1			
+West Flemish	West Flemish			cat_NOUN	katte	kˈɑtə	k ˈɑ t ə		cat_NOUN_1			
+Limburgish	Limburgish			cat_NOUN	kat	kˈɑt	k ˈɑ t		cat_NOUN_1			
+Ripuarian	Ripuarian			cat_NOUN	Katz	kˈaʦ	k ˈa ʦ		cat_NOUN_1			
+Luxembourgish	Luxembourgish			cat_NOUN	Kaz	kʰˈaːʦ	kʰ ˈaː ʦ		cat_NOUN_1			
+Pennsylvania German	Pennsylvania German			cat_NOUN	Katz	kʰˈaʦ	kʰ ˈa ʦ		cat_NOUN_1			
+Yiddish	Yiddish			cat_NOUN	קאַץ	kˈaʦ	k ˈa ʦ		cat_NOUN_1			
+German	German			cat_NOUN	Katze	kʰˈaʦə	kʰ ˈa ʦ ə		cat_NOUN_1			
+Swabian	Swabian			cat_NOUN	Kaddz	kʰˈaʣ	kʰ ˈa ʣ		cat_NOUN_1			
+Alsatian	Alsatian			cat_NOUN	Kàtz	kʰˈɒʦ	kʰ ˈɒ ʦ		cat_NOUN_1			
+Swiss German	Swiss German			cat_NOUN	Chatz	χˈɒʦ	χ ˈɒ ʦ		cat_NOUN_1			
+Bavarian	Bavarian			cat_NOUN	Kotz	kʰˈoʦ	kʰ ˈo ʦ		cat_NOUN_1			
+Proto-Germanic	Proto-Germanic			wine_NOUN	wīną	wˈiːnɑ̃	w ˈiː n ɑ̃		wine_NOUN_1			
+Gothic	Gothic			wine_NOUN	𐍅𐌴𐌹𐌽	wˈiːn	w ˈiː n		wine_NOUN_1			
+Old Norse	Old Norse			wine_NOUN	vín	vˈiːn	v ˈiː n		wine_NOUN_1			
+Icelandic	Icelandic			wine_NOUN	vín	vˈiːn	v ˈiː n		wine_NOUN_1			
+Faroese	Faroese			wine_NOUN	vín	vˈʊ̯iːn	v ˈʊ̯iː n		wine_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			wine_NOUN	vin	ʋˈiːn	ʋ ˈiː n		wine_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			wine_NOUN	vin	ʋˈiːn	ʋ ˈiː n		wine_NOUN_1			
+Danish	Danish			wine_NOUN	vin	ʋˈiˀn	ʋ ˈiˀ n		wine_NOUN_1			
+Swedish	Swedish			wine_NOUN	vin	vˈiːn	v ˈiː n		wine_NOUN_1			
+Scots	Scots			wine_NOUN	wyne	wˈəi̯n	w ˈəi̯ n		wine_NOUN_1			
+English	English			wine_NOUN	wine	wˈaɪ̯n	w ˈaɪ̯ n		wine_NOUN_1			
+American English	American English			wine_NOUN	wine	wˈaɪ̯n	w ˈaɪ̯ n		wine_NOUN_1			
+Old English	Old English			wine_NOUN	wīn	wˈiːn	w ˈiː n		wine_NOUN_1			
+West Frisian	West Frisian			wine_NOUN	wyn	vˈin	v ˈi n		wine_NOUN_1			
+Saterland Frisian	Saterland Frisian			wine_NOUN	Wien	vˈin	v ˈi n		wine_NOUN_1			
+North Frisian	North Frisian			wine_NOUN	win	vˈin	v ˈi n		wine_NOUN_1			
+Westphalian	Westphalian			wine_NOUN	Wien	vˈiːn	v ˈiː n		wine_NOUN_1			
+Eastphalian	Eastphalian			wine_NOUN	Wien	vˈiːn	v ˈiː n		wine_NOUN_1			
+Northern Low Saxon	Northern Low Saxon			wine_NOUN	Wien	vˈiːn	v ˈiː n		wine_NOUN_1			
+East Low German	East Low German			wine_NOUN	Wien	vˈiːn	v ˈiː n		wine_NOUN_1			
+Dutch	Dutch			wine_NOUN	wijn	ʋˈɛi̯n	ʋ ˈɛi̯ n		wine_NOUN_1			
+Afrikaans	Afrikaans			wine_NOUN	wyn	vˈəɪ̯n	v ˈəɪ̯ n		wine_NOUN_1			
+West Flemish	West Flemish			wine_NOUN	wyn	ʋˈin	ʋ ˈi n		wine_NOUN_1			
+Limburgish	Limburgish			wine_NOUN	wien	βˈiːn	β ˈiː n		wine_NOUN_1			
+Ripuarian	Ripuarian			wine_NOUN	Weng	ʋˈeŋ	ʋ ˈe ŋ		wine_NOUN_1			
+Luxembourgish	Luxembourgish			wine_NOUN	Wäin	vˈæːɪ̯n	v ˈæːɪ̯ n		wine_NOUN_1			
+Pennsylvania German	Pennsylvania German			wine_NOUN	Wei	ʋˈaɪ̯	ʋ ˈaɪ̯		wine_NOUN_1			
+Yiddish	Yiddish			wine_NOUN	ווײַן	vˈaɪ̯n	v ˈaɪ̯ n		wine_NOUN_1			
+German	German			wine_NOUN	Wein	vˈaɪ̯n	v ˈaɪ̯ n		wine_NOUN_1			
+Swabian	Swabian			wine_NOUN	Wei	ʋˈae̯	ʋ ˈae̯		wine_NOUN_1			
+Alsatian	Alsatian			wine_NOUN	Win	ʋˈin	ʋ ˈi n		wine_NOUN_1			
+Swiss German	Swiss German			wine_NOUN	Wii	ʋˈiː	ʋ ˈiː		wine_NOUN_1			
+Bavarian	Bavarian			wine_NOUN	Wein	ʋˈai̯n	ʋ ˈai̯ n		wine_NOUN_1			
