@@ -1,88 +1,88 @@
 VOWELS
-/ə/ (0.082)
+/ə/ (0.084)
 	<driwe> /drˈiːvə/ "drive_VERB"
-	<duusend> /dˈuːzənd/ "thousand_NUM"
+	<tunke> /tˈʊŋkə/ "thank_VERB"
 	<blädje> /blˈɛdʲə/ "bleed_VERB"
 
-/ˈiː/ (0.033)
-	<hiim> /hˈiːm/ "home_NOUN"
+/ˈiː/ (0.034)
+	<hiire> /hˈiːrə/ "hear_VERB"
 	<biinj> /bˈiːnʲ/ "bone_NOUN"
-	<fiilj> /fˈiːlʲ/ "wheel_NOUN"
-
-/ˈa/ (0.022)
-	<samer> /sˈamər/ "summer_NOUN"
-	<swjard> /svjˈard/ "sword_NOUN"
-	<gjarn> /jˈarn/ "yarn_NOUN"
-
-/ˈʊ/ (0.021)
-	<tuner> /tˈʊnər/ "thunder_NOUN"
-	<lung> /lˈʊŋ/ "long_ADJ"
-	<gunge> /ɡˈʊŋə/ "go_VERB"
+	<trii> /trˈiː/ "three_NUM"
 
 /ˈyː/ (0.021)
-	<rüüdj> /rˈyːdʲ/ "red_ADJ"
-	<büütj> /bˈyːtʲ/ "boat_NOUN"
-	<nüügen> /nˈyːwən/ "nine_NUM"
+	<üülj> /ˈyːlʲ/ "old_ADJ"
+	<üt> /ˈyːt/ "out_PREP"
+	<üs> /ˈyːs/ "us_PRON"
 
-/ˈi/ (0.021)
+/ˈa/ (0.021)
+	<schap> /ʃˈap/ "ship_NOUN"
+	<lade> /lˈadə/ "lie_VERB"
+	<fasch> /fˈaʃ/ "fish_NOUN"
+
+/ˈʊ/ (0.02)
+	<uner> /ˈʊnər/ "under_PREP"
+	<burst> /bˈʊrst/ "breast_NOUN"
+	<tuner> /tˈʊnər/ "thunder_NOUN"
+
+/ˈi/ (0.02)
 	<skitj> /skˈitʲ/ "shit_NOUN"
 	<win> /vˈin/ "wind_NOUN"
 	<ik> /ˈik/ "I_PRON"
 
-/ˈeː/ (0.017)
-	<teen> /tˈeːn/ "thin_ADJ"
-	<neel> /nˈeːl/ "needle_NOUN"
-	<seelew> /sˈeːləv/ "self_PRON"
+/ˈuː/ (0.017)
+	<buum> /bˈuːm/ "tree_NOUN"
+	<huuch> /hˈuːx/ "high_ADJ"
+	<tuur> /tˈuːr/ "tear_NOUN"
 
-/ˈuː/ (0.016)
-	<huulew> /hˈuːləv/ "half_NOUN"
-	<luuf> /lˈuːf/ "leaf_NOUN"
-	<kuulew> /kˈuːləv/ "calf_NOUN"
+/ˈeː/ (0.017)
+	<me> /mˈeː/ "me_PRON"
+	<heewe> /hˈeːvə/ "have_VERB"
+	<teen> /tˈeːn/ "thin_ADJ"
 
 /ˈœ/ (0.015)
-	<wörm> /vˈœrm/ "worm_NOUN"
 	<gölj> /ɡˈœlʲ/ "gold_NOUN_NEU"
 	<blödj> /blˈœdʲ/ "blood_NOUN"
+	<stölj> /stˈœlʲ/ "stool_NOUN"
 
 /ˈɔː/ (0.014)
 	<boor> /bˈɔːr/ "bear_NOUN"
-	<jooge> /jˈɔːwə/ "tell lies_VERB"
 	<noome> /nˈɔːmə/ "name_NOUN"
+	<moon> /mˈɔːn/ "man_NOUN"
 
-/ˈɛi̯/ (0.011)
-	<släipe> /slˈɛi̯pə/ "sleep_VERB"
-	<säis> /sˈɛi̯s/ "cheese_NOUN"
-	<näist> /nˈɛi̯st/ "next_ADJ"
-
-/ˈɒː/ (0.011)
-	<wååben> /vˈɒːbən/ "weapon_NOUN"
-	<fååst> /fˈɒːst/ "fast_ADJ"
-	<hååse> /hˈɒːzə/ "hare_NOUN"
-
-/ˈɒ/ (0.011)
+/ˈɒ/ (0.012)
 	<ål> /ˈɒl/ "all_ADJ"
-	<sålt> /sˈɒlt/ "salt_NOUN"
+	<måcht> /mˈɒxt/ "might_NOUN"
 	<håli> /hˈɒli/ "holy_ADJ"
 
+/ˈɛi̯/ (0.011)
+	<näist> /nˈɛi̯st/ "next_ADJ"
+	<säis> /sˈɛi̯s/ "cheese_NOUN"
+	<släipe> /slˈɛi̯pə/ "sleep_VERB"
+
+/ˈɒː/ (0.011)
+	<fååst> /fˈɒːst/ "fast_ADJ"
+	<hååde> /hˈɒːdə/ "hate_VERB"
+	<wååder> /vˈɒːdər/ "water_NOUN"
+
 /ˈɔu̯/ (0.009)
-	<ouer> /ˈɔu̯ər/ "over_PREP"
 	<tou> /tˈɔu̯/ "two_NUM"
-	<moune> /mˈɔu̯nə/ "moon_NOUN"
+	<moune> /mˈɔu̯nə/ "month_NOUN"
+	<fjouer> /fjˈɔu̯ər/ "four_NUM"
+
+/ˈøː/ (0.009)
+	<ööl> /ˈøːl/ "owl_NOUN"
+	<gööl> /ɡˈøːl/ "yellow_ADJ"
+	<sööge> /sˈøːjə/ "suck_VERB"
 
 /ˈɛː/ (0.008)
-	<näägel> /nˈɛːjəl/ "fingernail_NOUN"
+	<wääder> /vˈɛːdər/ "weather_NOUN"
 	<fääder> /fˈɛːdər/ "feather_NOUN"
-	<ääse> /ˈɛːzə/ "eat_VERB"
+	<bääder> /bˈɛːdər/ "better_ADJ"
 
 /ˈɔ/ (0.008)
-	<horn> /hˈɔrn/ "horn_NOUN"
 	<storm> /stˈɔrm/ "storm_NOUN"
 	<torn> /tˈɔrn/ "thorn_NOUN"
-
-/ˈøː/ (0.008)
-	<sör> /sˈøːr/ "sour_ADJ"
-	<föögel> /fˈøːjəl/ "bird_NOUN_MASC"
-	<ööl> /ˈøːl/ "owl_NOUN"
+	<hors> /hˈɔrs/ "horse_NOUN"
 
 /i/ (0.008)
 	<düüdjlik> /dˈyːdʲlik/ "deadly_ADJ"
@@ -125,67 +125,67 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.08)
+/r/ (0.079)
 	<räng> /rˈɛŋ/ "ring_NOUN"
 	<jöör> /jˈøːr/ "expensive_ADJ"
 	<ouer> /ˈɔu̯ər/ "over_PREP"
 
-/s/ (0.059)
+/s/ (0.057)
 	<slånge> /slˈɒŋə/ "snake_NOUN"
 	<stölj> /stˈœlʲ/ "stool_NOUN"
 	<swätj> /svˈɛtʲ/ "sweet_ADJ"
 
 /n/ (0.057)
-	<duusend> /dˈuːzənd/ "thousand_NUM"
-	<twunti> /tvˈʊnti/ "twenty_NUM"
-	<nai> /nˈai̯/ "new_ADJ"
+	<torn> /tˈɔrn/ "thorn_NOUN"
+	<tiiken> /tˈiːkən/ "token_NOUN"
+	<neel> /nˈeːl/ "needle_NOUN"
 
-/t/ (0.055)
+/t/ (0.056)
 	<kåt> /kˈɒt/ "cat_NOUN"
 	<stiinj> /stˈiːnʲ/ "stone_NOUN"
-	<tuun> /tˈuːn/ "toe_NOUN"
+	<tid> /tˈid/ "time_NOUN"
 
-/l/ (0.052)
+/l/ (0.051)
 	<liwer> /lˈivər/ "liver_NOUN"
 	<kuulew> /kˈuːləv/ "calf_NOUN"
 	<Ulew> /ˈʊləv/ "wolf_NOUN"
 
-/v/ (0.041)
+/v/ (0.04)
 	<liwer> /lˈivər/ "liver_NOUN"
 	<win> /vˈin/ "wind_NOUN"
 	<wååben> /vˈɒːbən/ "weapon_NOUN"
 
-/d/ (0.038)
-	<ouder> /ˈɔu̯dər/ "other_ADJ"
-	<dü> /dˈyː/ "thou_PRON"
+/d/ (0.039)
+	<lade> /lˈadə/ "lie_VERB"
+	<hüd> /hˈyːd/ "skin_NOUN"
 	<båd> /bˈɒd/ "bath_NOUN_NEU"
 
-/k/ (0.029)
-	<knäibling> /knˈɛi̯bliŋ/ "knee_NOUN"
-	<bök> /bˈœk/ "book_NOUN_FEM"
-	<korn> /kˈɔrn/ "corn_NOUN"
+/k/ (0.031)
+	<tiiken> /tˈiːkən/ "token_NOUN"
+	<kuulew> /kˈuːləv/ "calf_NOUN"
+	<moolke> /mˈɔːlkə/ "milk_NOUN_FEM"
 
-/f/ (0.029)
+/f/ (0.028)
 	<ful> /fˈʊl/ "full_ADJ"
 	<fiilj> /fˈiːlʲ/ "wheel_NOUN"
 	<friise> /frˈiːzə/ "freeze_VERB"
 
-/b/ (0.026)
-	<brouder> /brˈɔu̯dər/ "brother_NOUN"
-	<biinj> /bˈiːnʲ/ "bone_NOUN"
-	<knäibling> /knˈɛi̯bliŋ/ "knee_NOUN"
-
 /m/ (0.025)
-	<löm> /lˈœm/ "lamb_NOUN"
-	<noome> /nˈɔːmə/ "name_NOUN"
-	<me> /mˈeː/ "me_PRON"
+	<storm> /stˈɔrm/ "storm_NOUN"
+	<moune> /mˈɔu̯nə/ "month_NOUN"
+	<swume> /svˈʊmə/ "swim_VERB"
 
-/h/ (0.024)
+/b/ (0.025)
+	<bääder> /bˈɛːdər/ "better_ADJ"
+	<broue> /brˈɔu̯ə/ "brew_VERB"
+	<bine> /bˈiːnə/ "bind_VERB"
+
+/h/ (0.023)
 	<hün> /hˈyːn/ "dog_NOUN"
 	<heewe> /hˈeːvə/ "have_VERB"
 	<horn> /hˈɔrn/ "horn_NOUN"
 
-/j/ (0.021)
+/j/ (0.02)
 	<jooge> /jˈɔːwə/ "tell lies_VERB"
 	<fjouer> /fjˈɔu̯ər/ "four_NUM"
 	<bärj> /bˈɛrj/ "mountain_NOUN"
@@ -220,30 +220,30 @@ CONSONANTS
 	<doochter> /dˈɔːxtər/ "daughter_NOUN"
 	<lacht> /lˈaxt/ "light_ADJ"
 
-/nʲ/ (0.007)
-	<stiinj> /stˈiːnʲ/ "stone_NOUN"
-	<önj> /ˈœnʲ/ "in_PREP"
-	<sönj> /sˈœnʲ/ "sand_NOUN"
-
-/dʲ/ (0.007)
+/dʲ/ (0.008)
 	<düüdjlik> /dˈyːdʲlik/ "deadly_ADJ"
-	<blädje> /blˈɛdʲə/ "bleed_VERB"
-	<rüüdj> /rˈyːdʲ/ "red_ADJ"
+	<düüdj> /dˈyːdʲ/ "dead_ADJ"
+	<gödj> /ɡˈœdʲ/ "good_ADJ"
+
+/nʲ/ (0.007)
+	<hönj> /hˈœnʲ/ "hand_NOUN_FEM"
+	<sönj> /sˈœnʲ/ "sand_NOUN"
+	<lönj> /lˈœnʲ/ "land_NOUN"
 
 /z/ (0.006)
 	<hååse> /hˈɒːzə/ "hare_NOUN"
-	<duusend> /dˈuːzənd/ "thousand_NUM"
 	<friise> /frˈiːzə/ "freeze_VERB"
+	<duusend> /dˈuːzənd/ "thousand_NUM"
 
 /lʲ/ (0.006)
-	<üülj> /ˈyːlʲ/ "old_ADJ"
 	<gölj> /ɡˈœlʲ/ "gold_NOUN_NEU"
 	<kölj> /kˈœlʲ/ "cold_ADJ"
+	<fiilj> /fˈiːlʲ/ "wheel_NOUN"
 
 /w/ (0.005)
+	<jooge> /jˈɔːwə/ "tell lies_VERB"
+	<uug> /ˈuːw/ "eye_NOUN"
 	<waag> /vˈaːw/ "week_NOUN"
-	<nüügen> /nˈyːwən/ "nine_NUM"
-	<mag> /mˈaw/ "midge_NOUN"
 
 
 

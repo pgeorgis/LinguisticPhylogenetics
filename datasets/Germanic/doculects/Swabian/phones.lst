@@ -1,10 +1,10 @@
 VOWELS
-/a/ (0.051)
+/a/ (0.052)
 	<essa> /ˈɛsa/ "eat_VERB"
-	<schlofa> /ʃlˈɔːfa/ "sleep_VERB"
+	<schlaga> /ʃlˈaːɡa/ "slay_VERB"
 	<draima> /dʁˈae̯ma/ "dream_VERB"
 
-/ˈa/ (0.035)
+/ˈa/ (0.034)
 	<Vaddr> /fˈadʌ/ "father_NOUN"
 	<schwarz> /ʃʋˈaʕʦ/ "black_ADJ"
 	<Bladd> /blˈad/ "leaf_NOUN_NEU"
@@ -14,49 +14,49 @@ VOWELS
 	<Muddr> /mˈudʌ/ "mother_NOUN"
 	<andr> /ˈandʌ/ "other_ADJ"
 
-/ˈɛ/ (0.022)
-	<näggschd> /nˈɛɡʃd/ "next_ADJ"
+/ˈɛ/ (0.023)
+	<Männr> /mˈɛnʌ/ "men_NOUN"
 	<Egg> /ˈɛɡ/ "edge_NOUN"
 	<benda> /bˈɛnda/ "bind_VERB"
 
-/ˈo/ (0.021)
+/ˈo/ (0.02)
 	<Wolle> /ʋˈole/ "wool_NOUN_FEM"
 	<Hond> /hˈond/ "dog_NOUN"
 	<ons> /ˈons/ "us_PRON"
 
-/ˈi/ (0.02)
-	<sitza> /sˈiʦa/ "sit_VERB"
-	<i> /ˈi/ "I_PRON"
-	<Schild> /ʃˈild/ "shield_NOUN"
-
 /ˈao̯/ (0.02)
+	<Sau> /sˈao̯/ "sow_NOUN"
+	<Daub> /dˈao̯b/ "dove_NOUN"
 	<sauga> /sˈao̯ɡa/ "suck_VERB"
-	<Maus> /mˈao̯s/ "mouse_NOUN_FEM"
-	<Haud> /hˈao̯d/ "skin_NOUN"
+
+/ˈi/ (0.019)
+	<mi> /mˈi/ "me_PRON"
+	<Lichd> /lˈiçd/ "light_NOUN"
+	<Milch> /mˈilç/ "milk_NOUN_FEM"
 
 /ˈəi̯/ (0.016)
-	<weiß> /ʋˈəi̯s/ "white_ADJ"
-	<deier> /dˈəi̯ʌ/ "expensive_ADJ"
-	<Scheiß> /ʃˈəi̯s/ "shit_NOUN"
+	<beißa> /bˈəi̯sa/ "bite_VERB"
+	<Eis> /ˈəi̯s/ "ice_NOUN"
+	<deidsch> /dˈəi̯dʃ/ "Teutonic_ADJ"
 
-/ˈoː/ (0.014)
-	<Brod> /bʁˈoːd/ "bread_NOUN"
-	<Honig> /hˈoːnɪɡ/ "honey_NOUN"
-	<Vogl> /fˈoːɡl̩/ "bird_NOUN_MASC"
-
-/ˈɔe̯/ (0.013)
+/ˈɔe̯/ (0.016)
 	<Boi> /bˈɔe̯/ "bone_NOUN"
-	<zwoi> /ʦʋˈɔe̯/ "two_NUM"
-	<Schdoi> /ʃdˈɔe̯/ "stone_NOUN"
+	<woich> /ʋˈɔe̯ç/ "weak_ADJ"
+	<Schwoiß> /ʃʋˈɔe̯s/ "sweat_NOUN"
 
-/ˈae̯/ (0.013)
-	<draima> /dʁˈae̯ma/ "dream_VERB"
-	<Eil> /ˈae̯l/ "owl_NOUN"
+/ˈoː/ (0.015)
+	<Ofa> /ˈoːfa/ "oven_NOUN"
+	<Vogl> /fˈoːɡl̩/ "bird_NOUN_MASC"
+	<Honig> /hˈoːnɪɡ/ "honey_NOUN"
+
+/ˈae̯/ (0.012)
+	<Wei> /ʋˈae̯/ "wine_NOUN"
 	<heilig> /hˈae̯lɪɡ/ "holy_ADJ"
+	<Eil> /ˈae̯l/ "owl_NOUN"
 
-/ˈaː/ (0.012)
-	<Has> /hˈaːs/ "hare_NOUN"
+/ˈaː/ (0.011)
 	<Bad> /bˈaːd/ "bath_NOUN_NEU"
+	<schlaga> /ʃlˈaːɡa/ "slay_VERB"
 	<Gaas> /ɡˈaːs/ "goose_NOUN"
 
 /ˈuə̯/ (0.01)
@@ -143,54 +143,54 @@ VOWELS
 
 
 CONSONANTS
-/d/ (0.096)
-	<digg> /dˈiɡ/ "thick_ADJ"
-	<benda> /bˈɛnda/ "bind_VERB"
+/d/ (0.099)
 	<Drän> /dʁˈɛːn/ "tear_NOUN_FEM"
+	<benda> /bˈɛnda/ "bind_VERB"
+	<Schduhl> /ʃdˈuːl/ "stool_NOUN"
 
-/s/ (0.06)
+/s/ (0.059)
 	<Käs> /kʰˈɛːs/ "cheese_NOUN"
 	<Maus> /mˈao̯s/ "mouse_NOUN_FEM"
 	<dausad> /dˈao̯sad/ "thousand_NUM"
 
-/l/ (0.056)
+/l/ (0.054)
 	<Schlang> /ʃlˈaŋ/ "snake_NOUN"
 	<schlaga> /ʃlˈaːɡa/ "slay_VERB"
 	<Lichd> /lˈiçd/ "light_NOUN"
 
 /ɡ/ (0.05)
-	<Wäg> /ʋˈɛːɡ/ "way_NOUN"
-	<Fuchs> /fˈuɡs/ "fox_NOUN"
-	<Rega> /ʁˈeːɡa/ "rain_NOUN"
+	<zwanzg> /ʦʋˈanʦɡ/ "twenty_NUM"
+	<folga> /fˈolɡa/ "follow_VERB"
+	<drugga> /dʁˈuɡa/ "press_VERB"
 
 /n/ (0.044)
-	<Monad> /mˈoːnad/ "month_NOUN"
+	<Männr> /mˈɛnʌ/ "men_NOUN"
 	<benda> /bˈɛnda/ "bind_VERB"
-	<Land> /lˈand/ "land_NOUN"
+	<Keenig> /kʰˈeːniɡ/ "king_NOUN"
 
-/f/ (0.042)
+/f/ (0.041)
 	<Frau> /fʁˈao̯/ "woman_NOUN"
 	<fliaga> /flˈiə̯ɡa/ "fly_VERB"
 	<laufa> /lˈao̯fa/ "leap_VERB"
 
-/ʃ/ (0.038)
+/ʃ/ (0.037)
 	<Schnee> /ʃnˈeː/ "snow_NOUN"
 	<Schwerd> /ʃʋˈɛʕd/ "sword_NOUN"
 	<schiaßa> /ʃˈiə̯sa/ "shoot_VERB"
 
-/b/ (0.037)
+/b/ (0.036)
 	<Bad> /bˈaːd/ "bath_NOUN_NEU"
 	<iber> /ˈibʌ/ "over_PREP"
 	<Boi> /bˈɔe̯/ "bone_NOUN"
 
-/ʁ/ (0.034)
+/ʁ/ (0.033)
 	<Ross> /ʁˈos/ "horse_NOUN"
 	<Drän> /dʁˈɛːn/ "tear_NOUN_FEM"
 	<drugga> /dʁˈuɡa/ "press_VERB"
 
 /ʋ/ (0.029)
 	<zwelf> /ʦʋˈelf/ "twelve_NUM"
-	<Woch> /ʋˈox/ "week_NOUN"
+	<Weddr> /ʋˈɛdʌ/ "weather_NOUN"
 	<wissa> /ʋˈisa/ "know_VERB"
 
 /m/ (0.029)
@@ -208,34 +208,34 @@ CONSONANTS
 	<warm> /ʋˈaʕm/ "warm_ADJ"
 	<Schdärn> /ʃdˈɛʕn/ "star_NOUN"
 
-/ʦ/ (0.016)
+/ʦ/ (0.017)
 	<Zeid> /ʦˈəi̯d/ "time_NOUN"
 	<dreizeah> /dʁˈae̯ʦeə̯/ "thirteen_NUM"
 	<schwarz> /ʃʋˈaʕʦ/ "black_ADJ"
 
-/ŋ/ (0.013)
+/ŋ/ (0.012)
 	<danga> /dˈaŋɡa/ "thank_VERB"
 	<jong> /jˈoŋ/ "young_NOUN"
 	<Reng> /ʁˈeŋ/ "ring_NOUN"
 
-/x/ (0.012)
+/x/ (0.011)
 	<suacha> /sˈuə̯xa/ "seek_VERB"
 	<Buach> /bˈuə̯x/ "book_NOUN_FEM"
 	<hauch> /hˈao̯x/ "high_ADJ"
 
-/kʰ/ (0.01)
+/kʰ/ (0.011)
 	<Käs> /kʰˈɛːs/ "cheese_NOUN"
+	<kenna> /kʰˈɛna/ "ken_VERB"
 	<Keenig> /kʰˈeːniɡ/ "king_NOUN"
-	<Kuah> /kʰˈuə̯/ "cow_NOUN"
 
-/ç/ (0.007)
-	<Kirch> /kʰˈʌç/ "church_NOUN_FEM"
+/ç/ (0.009)
+	<leichd> /lˈəi̯çd/ "light_ADJ"
+	<Zoicha> /ʦˈɔe̯ça/ "token_NOUN"
 	<Oich> /ˈɔe̯ç/ "oak_NOUN_FEM"
-	<Lichd> /lˈiçd/ "light_NOUN"
 
 /t/ (0.005)
-	<Gott> /ɡˈɔt/ "god_NOUN"
 	<Durschd> /dˈuʕʃt/ "thirst_NOUN"
+	<Gott> /ɡˈɔt/ "god_NOUN"
 	<Wort> /ʋˈoʕt/ "word_NOUN"
 
 /j/ (0.002)
