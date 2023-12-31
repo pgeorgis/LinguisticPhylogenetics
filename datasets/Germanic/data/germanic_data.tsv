@@ -20,7 +20,7 @@ Limburgish	Limburgish			deadly_ADJ	duujelek	dˈyːjələk	d ˈyː j ə l ə k		d
 Luxembourgish	Luxembourgish			deadly_ADJ	déidlech	dˈɜɪ̯dləɕ	d ˈɜɪ̯ d l ə ɕ		deadly_ADJ_1			
 Pennsylvania German	Pennsylvania German			deadly_ADJ	deedlich	dˈeːdlɪç	d ˈeː d l ɪ ç		deadly_ADJ_1			
 Yiddish	Yiddish			deadly_ADJ		tˈɔɪ̯tləχ	t ˈɔɪ̯ t l ə χ		deadly_ADJ_1			
-German	German			deadly_ADJ	tödlich	tʰˈøːdlɪç	tʰ ˈøː d l ɪ ç		deadly_ADJ_1			
+German	German			deadly_ADJ	tödlich	tʰˈøːtlɪç	tʰ ˈøː t l ɪ ç		deadly_ADJ_1			
 Swiss German	Swiss German			deadly_ADJ	tödlich	tˈøːd̥liχ	t ˈøː d̥ l i χ		deadly_ADJ_1			
 Bavarian	Bavarian			deadly_ADJ	tedlich	tˈedlɪç	t ˈe d l ɪ ç		deadly_ADJ_1			
 Proto-Germanic	Proto-Germanic			bee_NOUN	imbī	ˈimbiː	ˈi m b iː		bee_NOUN_1	TRUE	IRREGULAR OR LOAN	
@@ -462,7 +462,7 @@ Ripuarian	Ripuarian			apple_NOUN	Appel	ˈapəl	ˈa p ə l		apple_NOUN_2
 Luxembourgish	Luxembourgish			apple_NOUN	Apel	ˈaːpəl	ˈaː p ə l		apple_NOUN_2			
 Pennsylvania German	Pennsylvania German			apple_NOUN	Appel	ˈapəl	ˈa p ə l		apple_NOUN_2			
 Yiddish	Yiddish			apple_NOUN	עפּל	ˈɛpəl	ˈɛ p ə l		apple_NOUN_2			
-German	German			apple_NOUN	Apfel	ˈap͡fəl	ˈa p͡f ə l		apple_NOUN_2			
+German	German			apple_NOUN	Apfel	ˈap͡fl̩	ˈa p͡f l̩		apple_NOUN_2			
 Swabian	Swabian			apple_NOUN	Abfl	ˈab̥͡fl̩	ˈa b̥͡f l̩		apple_NOUN_2			
 Alsatian	Alsatian			apple_NOUN	Àpfel	ˈɒp͡fl̩	ˈɒ p͡f l̩		apple_NOUN_2			
 Swiss German	Swiss German			apple_NOUN	Öpfel	ˈøp͡fəl	ˈø p͡f ə l		apple_NOUN_2			
@@ -1031,7 +1031,7 @@ Ripuarian	Ripuarian			bite_VERB	bieße	bˈiːsə	b ˈiː s ə		bite_VERB_1
 Luxembourgish	Luxembourgish			bite_VERB	bäissen	bˈæːɪ̯sən	b ˈæːɪ̯ s ə n		bite_VERB_1			
 Pennsylvania German	Pennsylvania German			bite_VERB	beisse	bˈaɪ̯sə	b ˈaɪ̯ s ə		bite_VERB_1			
 Yiddish	Yiddish			bite_VERB	בײַסן	bˈaɪ̯sn̩	b ˈaɪ̯ s n̩		bite_VERB_1			
-German	German			bite_VERB	beißen	bˈaɪ̯sən	b ˈaɪ̯ s ə n		bite_VERB_1			
+German	German			bite_VERB	beißen	bˈaɪ̯sn̩	b ˈaɪ̯ s n̩		bite_VERB_1			
 Swabian	Swabian			bite_VERB	beißa	bˈəi̯sa	b ˈəi̯ s a		bite_VERB_1			
 Alsatian	Alsatian			bite_VERB	bïsse	b̥ˈiːsə	b̥ ˈiː s ə		bite_VERB_1			
 Swiss German	Swiss German			bite_VERB	biisse	b̥ˈiːssə	b̥ ˈiː s s ə		bite_VERB_1			
@@ -1658,7 +1658,7 @@ Ripuarian	Ripuarian			dream_VERB	drööme	dʀˈøːmə	d ʀ ˈøː m ə		dream_V
 Luxembourgish	Luxembourgish			dream_VERB	dreemen	dʀˈeːmən	d ʀ ˈeː m ə n		dream_VERB_1			
 Pennsylvania German	Pennsylvania German			dream_VERB	draame	dɾˈɔːmə	d ɾ ˈɔː m ə		dream_VERB_1			
 Yiddish	Yiddish			dream_VERB	טרוימען	tʀˈɔɪ̯mən	t ʀ ˈɔɪ̯ m ə n		dream_VERB_1			
-German	German			dream_VERB	träumen	tʰʁˈɔʏ̯mn̩	tʰ ʁ ˈɔʏ̯ m n̩		dream_VERB_1			
+German	German			dream_VERB	träumen	tʰʁˈɔʏ̯mən	tʰ ʁ ˈɔʏ̯ m ə n		dream_VERB_1			
 Swabian	Swabian			dream_VERB	draima	dʁˈae̯ma	d ʁ ˈae̯ m a		dream_VERB_1			
 Alsatian	Alsatian			dream_VERB	traime	tʁˈai̯mə	t ʁ ˈai̯ m ə		dream_VERB_1			
 Swiss German	Swiss German			dream_VERB	tröime	trˈøi̯mə	t r ˈøi̯ m ə		dream_VERB_1			
@@ -1722,7 +1722,7 @@ Ripuarian	Ripuarian			drink_VERB	drenke	dʀˈeŋkə	d ʀ ˈe ŋ k ə		drink_VERB
 Luxembourgish	Luxembourgish			drink_VERB	drénken	dʀˈeŋkən	d ʀ ˈe ŋ k ə n		drink_VERB_1			
 Pennsylvania German	Pennsylvania German			drink_VERB	drinke	dɾˈɪŋkə	d ɾ ˈɪ ŋ k ə		drink_VERB_1			
 Yiddish	Yiddish			drink_VERB	טרינקען	tʀˈɪŋkən	t ʀ ˈɪ ŋ k ə n		drink_VERB_1			
-German	German			drink_VERB	trinken	tʰʁˈɪŋkən	tʰ ʁ ˈɪ ŋ k ə n		drink_VERB_1			
+German	German			drink_VERB	trinken	tʰʁˈɪŋkn̩	tʰ ʁ ˈɪ ŋ k n̩		drink_VERB_1			
 Swabian	Swabian			drink_VERB	dringa	dʁˈɪŋɡa	d ʁ ˈɪ ŋ ɡ a		drink_VERB_1			
 Alsatian	Alsatian			drink_VERB	trinke	tʁˈiŋkə	t ʁ ˈi ŋ k ə		drink_VERB_1			
 Swiss German	Swiss German			drink_VERB	trinke	trˈiŋkə	t r ˈi ŋ k ə		drink_VERB_1			
@@ -1731,7 +1731,7 @@ Proto-Germanic	Proto-Germanic			dry_ADJ	druknaz	drˈuknɑz	d r ˈu k n ɑ z		dry
 Luxembourgish	Luxembourgish			dry_ADJ	dréchen	dʀˈəɕən	d ʀ ˈə ɕ ə n		dry_ADJ_2	TRUE	IRREGULAR OR LOAN	
 Pennsylvania German	Pennsylvania German			dry_ADJ	drucke	dɾˈʊkə	d ɾ ˈʊ k ə		dry_ADJ_2			
 Yiddish	Yiddish			dry_ADJ	טרוקן	tʀˈʊkn̩	t ʀ ˈʊ k n̩		dry_ADJ_2			
-German	German			dry_ADJ	trocken	tʰʁˈɔkən	tʰ ʁ ˈɔ k ə n		dry_ADJ_2			
+German	German			dry_ADJ	trocken	tʰʁˈɔkn̩	tʰ ʁ ˈɔ k n̩		dry_ADJ_2			
 Swabian	Swabian			dry_ADJ	drogga	dʁˈɔɡa	d ʁ ˈɔ ɡ a		dry_ADJ_2			
 Alsatian	Alsatian			dry_ADJ	trucket	tʁˈukət	t ʁ ˈu k ə t		dry_ADJ_2			
 Swiss German	Swiss German			dry_ADJ	troche	trˈoχə	t r ˈo χ ə		dry_ADJ_2			
@@ -1940,7 +1940,7 @@ Ripuarian	Ripuarian			eat_VERB	äße	ˈɛːsə	ˈɛː s ə		eat_VERB_1
 Luxembourgish	Luxembourgish			eat_VERB	iessen	ˈiə̯sən	ˈiə̯ s ə n		eat_VERB_1			
 Pennsylvania German	Pennsylvania German			eat_VERB	esse	ˈɛsə	ˈɛ s ə		eat_VERB_1			
 Yiddish	Yiddish			eat_VERB	עסן	ˈɛsn̩	ˈɛ s n̩		eat_VERB_1			
-German	German			eat_VERB	essen	ˈɛsən	ˈɛ s ə n		eat_VERB_1			
+German	German			eat_VERB	essen	ˈɛsn̩	ˈɛ s n̩		eat_VERB_1			
 Swabian	Swabian			eat_VERB	essa	ˈɛsa	ˈɛ s a		eat_VERB_1			
 Alsatian	Alsatian			eat_VERB	esse	ˈæsə	ˈæ s ə		eat_VERB_1			
 Swiss German	Swiss German			eat_VERB	ässe	ˈæssə	ˈæ s s ə		eat_VERB_1			
@@ -2254,7 +2254,7 @@ Ripuarian	Ripuarian			fly_VERB	fleeje	flˈeːjə	f l ˈeː j ə		fly_VERB_1
 Luxembourgish	Luxembourgish			fly_VERB	fléien	flˈɜɪ̯ən	f l ˈɜɪ̯ ə n		fly_VERB_1			
 Pennsylvania German	Pennsylvania German			fly_VERB	fliege	flˈiːjə	f l ˈiː j ə		fly_VERB_1			
 Yiddish	Yiddish			fly_VERB	פֿליִען	flˈɪən	f l ˈɪ ə n		fly_VERB_1			
-German	German			fly_VERB	fliegen	flˈiːɡən	f l ˈiː ɡ ə n		fly_VERB_1			
+German	German			fly_VERB	fliegen	flˈiːɡn̩	f l ˈiː ɡ n̩		fly_VERB_1			
 Swabian	Swabian			fly_VERB	fliaga	flˈiə̯ɡa	f l ˈiə̯ ɡ a		fly_VERB_1			
 Alsatian	Alsatian			fly_VERB	flieje	flˈiːjə	f l ˈiː j ə		fly_VERB_1			
 Swiss German	Swiss German			fly_VERB	flüge	flˈyɡ̊ə	f l ˈy ɡ̊ ə		fly_VERB_1			
@@ -2307,7 +2307,7 @@ Ripuarian	Ripuarian			feel_VERB	föhle	fˈøːlə	f ˈøː l ə		feel_VERB_1
 Luxembourgish	Luxembourgish			feel_VERB	fillen	fˈilən	f ˈi l ə n		feel_VERB_1			
 Pennsylvania German	Pennsylvania German			feel_VERB	fiehle	fˈiːlə	f ˈiː l ə		feel_VERB_1			
 Yiddish	Yiddish			feel_VERB	פילן	fˈɪln̩	f ˈɪ l n̩		feel_VERB_1			
-German	German			feel_VERB	fühlen	fˈyːlən	f ˈyː l ə n		feel_VERB_1			
+German	German			feel_VERB	fühlen	fˈyːln̩	f ˈyː l n̩		feel_VERB_1			
 Swabian	Swabian			feel_VERB	fiehla	fˈiːla	f ˈiː l a		feel_VERB_1			
 Swiss German	Swiss German			feel_VERB	fühle	fˈyːlə	f ˈyː l ə		feel_VERB_1			
 Bavarian	Bavarian			feel_VERB	fuin	fˈujn	f ˈu j n		feel_VERB_1			
@@ -2623,7 +2623,7 @@ Ripuarian	Ripuarian			follow_VERB	folge	fˈɔlɣə	f ˈɔ l ɣ ə		follow_VERB_1
 Luxembourgish	Luxembourgish			follow_VERB	follegen	fˈoləʑən	f ˈo l ə ʑ ə n		follow_VERB_1			
 Pennsylvania German	Pennsylvania German			follow_VERB	folye	fˈɔljə	f ˈɔ l j ə		follow_VERB_1			
 Yiddish	Yiddish			follow_VERB	פֿאָלגן	fˈɔlɡn̩	f ˈɔ l ɡ n̩		follow_VERB_1			
-German	German			follow_VERB	folgen	fˈɔlɡən	f ˈɔ l ɡ ə n		follow_VERB_1			
+German	German			follow_VERB	folgen	fˈɔlɡn̩	f ˈɔ l ɡ n̩		follow_VERB_1			
 Swabian	Swabian			follow_VERB	folga	fˈolɡa	f ˈo l ɡ a		follow_VERB_1			
 Swiss German	Swiss German			follow_VERB	folge	fˈolɡ̊ə	f ˈo l ɡ̊ ə		follow_VERB_1			
 Bavarian	Bavarian			follow_VERB	foign	fˈojɡ̊n̩	f ˈo j ɡ̊ n̩		follow_VERB_1			
@@ -2922,7 +2922,7 @@ Ripuarian	Ripuarian			give_VERB	jevve	jˈɛvə	j ˈɛ v ə		give_VERB_1
 Luxembourgish	Luxembourgish			give_VERB	ginn	ɡˈin	ɡ ˈi n		give_VERB_1			
 Pennsylvania German	Pennsylvania German			give_VERB	gewwe	ɡˈɛvə	ɡ ˈɛ v ə		give_VERB_1			
 Yiddish	Yiddish			give_VERB	געבן	ɡˈɛbn̩	ɡ ˈɛ b n̩		give_VERB_1			
-German	German			give_VERB	geben	ɡˈeːbən	ɡ ˈeː b ə n		give_VERB_1			
+German	German			give_VERB	geben	ɡˈeːbn̩	ɡ ˈeː b n̩		give_VERB_1			
 Swabian	Swabian			give_VERB	gäba	ɡˈɛːba	ɡ ˈɛː b a		give_VERB_1			
 Alsatian	Alsatian			give_VERB	gänn	ɡ̊ˈæn	ɡ̊ ˈæ n		give_VERB_1			
 Swiss German	Swiss German			give_VERB	gää	ɡ̊ˈæː	ɡ̊ ˈæː		give_VERB_1			
@@ -3658,7 +3658,7 @@ Ripuarian	Ripuarian			laugh_VERB	laache	lˈaːxə	l ˈaː x ə		laugh_VERB_1
 Luxembourgish	Luxembourgish			laugh_VERB	laachen	lˈaːχən	l ˈaː χ ə n		laugh_VERB_1			
 Pennsylvania German	Pennsylvania German			laugh_VERB	lache	lˈaxə	l ˈa x ə		laugh_VERB_1			
 Yiddish	Yiddish			laugh_VERB	לאַכן	lˈaχn̩	l ˈa χ n̩		laugh_VERB_1			
-German	German			laugh_VERB	lachen	lˈaxən	l ˈa x ə n		laugh_VERB_1			
+German	German			laugh_VERB	lachen	lˈaxn̩	l ˈa x n̩		laugh_VERB_1			
 Swabian	Swabian			laugh_VERB	lacha	lˈaxa	l ˈa x a		laugh_VERB_1			
 Alsatian	Alsatian			laugh_VERB	làche	lˈɒxə	l ˈɒ x ə		laugh_VERB_1			
 Swiss German	Swiss German			laugh_VERB	lache	lˈɒχə	l ˈɒ χ ə		laugh_VERB_1			
@@ -4485,7 +4485,7 @@ East Low German	East Low German			chicken_NOUN	Küken	kʰˈyːkn̩	kʰ ˈyː k n
 Dutch	Dutch			chicken_NOUN	kuiken	kˈœy̯kən	k ˈœy̯ k ə n		chicken_NOUN_1			
 West Flemish	West Flemish			chicken_NOUN	kiekn	kˈiə̯kn̩	k ˈiə̯ k n̩		chicken_NOUN_1			
 Limburgish	Limburgish			chicken_NOUN	kuke	kˈyːkə	k ˈyː k ə		chicken_NOUN_1			
-German	German			chicken_NOUN	Küken	kʰˈyːkən	kʰ ˈyː k ə n		chicken_NOUN_1	TRUE	IRREGULAR OR LOAN	
+German	German			chicken_NOUN	Küken	kʰˈyːkn̩	kʰ ˈyː k n̩		chicken_NOUN_1	TRUE	IRREGULAR OR LOAN	
 Swiss German	Swiss German			chicken_NOUN	Chüche	χˈyːχə	χ ˈyː χ ə		chicken_NOUN_1			
 Proto-Germanic	Proto-Germanic			knee_NOUN	knewą	knˈewɑ̃	k n ˈe w ɑ̃		knee_NOUN_1			
 Gothic	Gothic			knee_NOUN	𐌺𐌽𐌹𐌿	knˈiu̯	k n ˈiu̯		knee_NOUN_1			
@@ -5987,7 +5987,7 @@ Ripuarian	Ripuarian			say_VERB	sage	zˈaːɣə	z ˈaː ɣ ə		say_VERB_1
 Luxembourgish	Luxembourgish			say_VERB	soen	zˈoːən	z ˈoː ə n		say_VERB_1			
 Pennsylvania German	Pennsylvania German			say_VERB	saage	sˈɔːɣə	s ˈɔː ɣ ə		say_VERB_1			
 Yiddish	Yiddish			say_VERB	זאָגן	zˈɔɡn̩	z ˈɔ ɡ n̩		say_VERB_1			
-German	German			say_VERB	sagen	zˈaːɡən	z ˈaː ɡ ə n		say_VERB_1			
+German	German			say_VERB	sagen	zˈaːɡn̩	z ˈaː ɡ n̩		say_VERB_1			
 Swabian	Swabian			say_VERB	saga	sˈaːɡa	s ˈaː ɡ a		say_VERB_1			
 Alsatian	Alsatian			say_VERB	saawe	sˈaːvə	s ˈaː v ə		say_VERB_1			
 Swiss German	Swiss German			say_VERB	säge	sˈæɡ̊ə	s ˈæ ɡ̊ ə		say_VERB_1			
@@ -6146,7 +6146,7 @@ Ripuarian	Ripuarian			seven_NUM	sivve	zˈɪvə	z ˈɪ v ə		seven_NUM_1
 Luxembourgish	Luxembourgish			seven_NUM	siwen	zˈiːvən	z ˈiː v ə n		seven_NUM_1			
 Pennsylvania German	Pennsylvania German			seven_NUM	siwwe	sˈɪvə	s ˈɪ v ə		seven_NUM_1			
 Yiddish	Yiddish			seven_NUM	זיבן	zˈɪbn̩	z ˈɪ b n̩		seven_NUM_1			
-German	German			seven_NUM	sieben	zˈiːbən	z ˈiː b ə n		seven_NUM_1			
+German	German			seven_NUM	sieben	zˈiːbn̩	z ˈiː b n̩		seven_NUM_1			
 Swabian	Swabian			seven_NUM	sieba	sˈiːba	s ˈiː b a		seven_NUM_1			
 Alsatian	Alsatian			seven_NUM	siwwe	sˈivə	s ˈi v ə		seven_NUM_1			
 Swiss German	Swiss German			seven_NUM	sibe	sˈib̥ə	s ˈi b̥ ə		seven_NUM_1			
@@ -6362,7 +6362,7 @@ Ripuarian	Ripuarian			sit_VERB	setze	zˈeʦə	z ˈe ʦ ə		sit_VERB_1
 Luxembourgish	Luxembourgish			sit_VERB	sëtzen	zˈəʦən	z ˈə ʦ ə n		sit_VERB_1			
 Pennsylvania German	Pennsylvania German			sit_VERB	sitze	sˈɪʦə	s ˈɪ ʦ ə		sit_VERB_1			
 Yiddish	Yiddish			sit_VERB	זיצן	zˈɪʦn̩	z ˈɪ ʦ n̩		sit_VERB_1			
-German	German			sit_VERB	sitzen	zˈɪʦən	z ˈɪ ʦ ə n		sit_VERB_1			
+German	German			sit_VERB	sitzen	zˈɪʦn̩	z ˈɪ ʦ n̩		sit_VERB_1			
 Swabian	Swabian			sit_VERB	sitza	sˈiʦa	s ˈi ʦ a		sit_VERB_1			
 Alsatian	Alsatian			sit_VERB	setze	sˈeʦə	s ˈe ʦ ə		sit_VERB_1			
 Swiss German	Swiss German			sit_VERB	sitze	sˈiʦə	s ˈi ʦ ə		sit_VERB_1			
@@ -6635,7 +6635,7 @@ Ripuarian	Ripuarian			slay_VERB	schloon	ʃlˈoːn	ʃ l ˈoː n		slay_VERB_1
 Luxembourgish	Luxembourgish			slay_VERB	schloen	ʃlˈoːən	ʃ l ˈoː ə n		slay_VERB_1			
 Pennsylvania German	Pennsylvania German			slay_VERB	schlaage	ʃlˈɔːɣə	ʃ l ˈɔː ɣ ə		slay_VERB_1			
 Yiddish	Yiddish			slay_VERB	שלאָגן	ʃlˈɔɡŋ̩	ʃ l ˈɔ ɡ ŋ̩		slay_VERB_1			
-German	German			slay_VERB	schlagen	ʃlˈaːɡən	ʃ l ˈaː ɡ ə n		slay_VERB_1			
+German	German			slay_VERB	schlagen	ʃlˈaːɡn̩	ʃ l ˈaː ɡ n̩		slay_VERB_1			
 Swabian	Swabian			slay_VERB	schlaga	ʃlˈaːɡa	ʃ l ˈaː ɡ a		slay_VERB_1			
 Swiss German	Swiss German			slay_VERB	schlaa	ʃlˈɒː	ʃ l ˈɒː		slay_VERB_1			
 Bavarian	Bavarian			slay_VERB	schlogn	ʃlˈɔɡ̊n̩	ʃ l ˈɔ ɡ̊ n̩		slay_VERB_1			
@@ -6685,7 +6685,7 @@ Ripuarian	Ripuarian			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB
 Luxembourgish	Luxembourgish			sleep_VERB	schlofen	ʃlˈoːfən	ʃ l ˈoː f ə n		sleep_VERB_1			
 Pennsylvania German	Pennsylvania German			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB_1			
 Yiddish	Yiddish			sleep_VERB	שלאָפֿן	ʃlˈɔfn̩	ʃ l ˈɔ f n̩		sleep_VERB_1			
-German	German			sleep_VERB	schlafen	ʃlˈaːfən	ʃ l ˈaː f ə n		sleep_VERB_1			
+German	German			sleep_VERB	schlafen	ʃlˈaːfn̩	ʃ l ˈaː f n̩		sleep_VERB_1			
 Swabian	Swabian			sleep_VERB	schlofa	ʃlˈɔːfa	ʃ l ˈɔː f a		sleep_VERB_1			
 Alsatian	Alsatian			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB_1			
 Swiss German	Swiss German			sleep_VERB	schlaafe	ʃlˈɒːfə	ʃ l ˈɒː f ə		sleep_VERB_1			
@@ -8224,7 +8224,7 @@ Ripuarian	Ripuarian			know_VERB	wesse	ʋˈesə	ʋ ˈe s ə		know_VERB_1
 Luxembourgish	Luxembourgish			know_VERB	wëssen	vˈəsən	v ˈə s ə n		know_VERB_1			
 Pennsylvania German	Pennsylvania German			know_VERB	wisse	ʋˈɪsə	ʋ ˈɪ s ə		know_VERB_1			
 Yiddish	Yiddish			know_VERB	וויסן	vˈɪsn̩	v ˈɪ s n̩		know_VERB_1			
-German	German			know_VERB	wissen	vˈɪsən	v ˈɪ s ə n		know_VERB_1			
+German	German			know_VERB	wissen	vˈɪsn̩	v ˈɪ s n̩		know_VERB_1			
 Swabian	Swabian			know_VERB	wissa	ʋˈisa	ʋ ˈi s a		know_VERB_1			
 Alsatian	Alsatian			know_VERB	wisse	ʋˈisə	ʋ ˈi s ə		know_VERB_1			
 Swiss German	Swiss German			know_VERB	wüsse	ʋˈyssə	ʋ ˈy s s ə		know_VERB_1			
@@ -8393,7 +8393,7 @@ Ripuarian	Ripuarian			wish_VERB	wünsche	ʋˈʏnʃə	ʋ ˈʏ n ʃ ə		wish_VERB_
 Luxembourgish	Luxembourgish			wish_VERB	wënschen	vˈənʃən	v ˈə n ʃ ə n		wish_VERB_1			
 Pennsylvania German	Pennsylvania German			wish_VERB	winsche	ʋˈɪnʃə	ʋ ˈɪ n ʃ ə		wish_VERB_1			
 Yiddish	Yiddish			wish_VERB	ווינטשן	vˈɪnʧn̩	v ˈɪ n ʧ n̩		wish_VERB_1			
-German	German			wish_VERB	wünschen	vˈʏnʃən	v ˈʏ n ʃ ə n		wish_VERB_1			
+German	German			wish_VERB	wünschen	vˈʏnʃn̩	v ˈʏ n ʃ n̩		wish_VERB_1			
 Swabian	Swabian			wish_VERB	winscha	ʋˈɪnʃa	ʋ ˈɪ n ʃ a		wish_VERB_1			
 Alsatian	Alsatian			wish_VERB	winsche	ʋˈinʃə	ʋ ˈi n ʃ ə		wish_VERB_1			
 Swiss German	Swiss German			wish_VERB	wünsche	ʋˈynʃə	ʋ ˈy n ʃ ə		wish_VERB_1			
@@ -8486,7 +8486,7 @@ Ripuarian	Ripuarian			thank_VERB	danke	dˈaŋkə	d ˈa ŋ k ə		thank_VERB_1
 Luxembourgish	Luxembourgish			thank_VERB	danken	dˈɑŋkən	d ˈɑ ŋ k ə n		thank_VERB_1			
 Pennsylvania German	Pennsylvania German			thank_VERB	danke	dˈaŋkə	d ˈa ŋ k ə		thank_VERB_1			
 Yiddish	Yiddish			thank_VERB	דאַנקען	dˈaŋkən	d ˈa ŋ k ə n		thank_VERB_1			
-German	German			thank_VERB	danken	dˈaŋkən	d ˈa ŋ k ə n		thank_VERB_1			
+German	German			thank_VERB	danken	dˈaŋkn̩	d ˈa ŋ k n̩		thank_VERB_1			
 Swabian	Swabian			thank_VERB	danga	dˈaŋɡa	d ˈa ŋ ɡ a		thank_VERB_1			
 Swiss German	Swiss German			thank_VERB	danke	d̥ˈɒŋkə	d̥ ˈɒ ŋ k ə		thank_VERB_1			
 Bavarian	Bavarian			thank_VERB	dankn	d̥ˈaŋkn̩	d̥ ˈa ŋ k n̩		thank_VERB_1			
@@ -8922,7 +8922,7 @@ Ripuarian	Ripuarian			thousand_NUM	dausend	dˈaʊ̯zənt	d ˈaʊ̯ z ə n t		tho
 Luxembourgish	Luxembourgish			thousand_NUM	dausend	dˈɑʊ̯zənt	d ˈɑʊ̯ z ə n t		thousand_NUM_1			
 Pennsylvania German	Pennsylvania German			thousand_NUM	dausend	dˈaʊ̯sənt	d ˈaʊ̯ s ə n t		thousand_NUM_1			
 Yiddish	Yiddish			thousand_NUM	טויזנט	tˈɔɪ̯zn̩d	t ˈɔɪ̯ z n̩ d		thousand_NUM_1			
-German	German			thousand_NUM	tausend	tʰˈaʊ̯zənt	tʰ ˈaʊ̯ z ə n t		thousand_NUM_1			
+German	German			thousand_NUM	tausend	tʰˈaʊ̯zn̩t	tʰ ˈaʊ̯ z n̩ t		thousand_NUM_1			
 Swabian	Swabian			thousand_NUM	dausad	dˈao̯sad	d ˈao̯ s a d		thousand_NUM_1			
 Alsatian	Alsatian			thousand_NUM	döisig	d̥ˈøi̯siʃ	d̥ ˈøi̯ s i ʃ		thousand_NUM_1			
 Swiss German	Swiss German			thousand_NUM	tuusig	tˈuːsiɡ̊	t ˈuː s i ɡ̊		thousand_NUM_1			
