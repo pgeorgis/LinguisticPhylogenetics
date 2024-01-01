@@ -304,12 +304,12 @@ Afrikaans	Afrikaans			one_NUM	een	ˈɪə̯n	ˈɪə̯ n		one_NUM_1
 West Flemish	West Flemish			one_NUM	êen	ˈɛːn	ˈɛː n		one_NUM_1			
 Limburgish	Limburgish			one_NUM	eine	ˈɛːnə	ˈɛː n ə		one_NUM_1			
 Ripuarian	Ripuarian			one_NUM	een	ˈeːn	ˈeː n		one_NUM_1			
-Luxembourgish	Luxembourgish			one_NUM	eent	ˈeːnt	ˈeː n t		one_NUM_1			
+Luxembourgish	Luxembourgish			one_NUM	een	ˈeːn	ˈeː n		one_NUM_1			
 Pennsylvania German	Pennsylvania German			one_NUM	ee	ˈeː	ˈeː		one_NUM_1			
 Yiddish	Yiddish			one_NUM	איין	ˈɛɪ̯n	ˈɛɪ̯ n		one_NUM_1			
 German	German			one_NUM	ein	ˈaɪ̯n	ˈaɪ̯ n		one_NUM_1			
 Swabian	Swabian			one_NUM	ois	ˈɔe̯s	ˈɔe̯ s		one_NUM_1			
-Swiss German	Swiss German			one_NUM	eis	ˈei̯s	ˈei̯ s		one_NUM_1			
+Swiss German	Swiss German			one_NUM	äi	ˈæi̯	ˈæi̯		one_NUM_1			
 Bavarian	Bavarian			one_NUM	oa	ˈoɐ̯	ˈoɐ̯		one_NUM_1			
 Proto-Germanic	Proto-Germanic			egg_NOUN_NEU	ajją	ˈɑjjɑ̃	ˈɑ j j ɑ̃		egg_NOUN_NEU_1			
 Gothic	Gothic			egg_NOUN_NEU		ˈada	ˈa d a		egg_NOUN_NEU_1			
@@ -341,7 +341,7 @@ Yiddish	Yiddish			egg_NOUN_NEU	איי	ˈɛɪ̯	ˈɛɪ̯		egg_NOUN_NEU_1
 German	German			egg_NOUN_NEU	Ei	ˈaɪ̯	ˈaɪ̯		egg_NOUN_NEU_1			
 Swabian	Swabian			egg_NOUN_NEU	Oi	ˈɔe̯	ˈɔe̯		egg_NOUN_NEU_1			
 Alsatian	Alsatian			egg_NOUN_NEU	Ei	ˈəi̯	ˈəi̯		egg_NOUN_NEU_1			
-Swiss German	Swiss German			egg_NOUN_NEU	Ei	ˈei̯	ˈei̯		egg_NOUN_NEU_1			
+Swiss German	Swiss German			egg_NOUN_NEU	Äi	ˈæi̯	ˈæi̯		egg_NOUN_NEU_1			
 Bavarian	Bavarian			egg_NOUN_NEU	Oa	ˈoɐ̯	ˈoɐ̯		egg_NOUN_NEU_1			
 Proto-Germanic	Proto-Germanic			old_ADJ	aldaz	ˈɑldɑz	ˈɑ l d ɑ z		old_ADJ_1			
 Gothic	Gothic			old_ADJ	𐌰𐌻𐌸𐌴𐌹𐍃	ˈalθiːs	ˈa l θ iː s		old_ADJ_1			
@@ -400,7 +400,7 @@ Yiddish	Yiddish			all_ADJ	אַלע	ˈalə	ˈa l ə		all_ADJ_1
 German	German			all_ADJ	all	ˈal	ˈa l		all_ADJ_1			
 Swabian	Swabian			all_ADJ	älle	ˈɛle	ˈɛ l e		all_ADJ_1			
 Alsatian	Alsatian			all_ADJ	àll	ˈɒl	ˈɒ l		all_ADJ_1			
-Swiss German	Swiss German			all_ADJ	al	ˈɒl	ˈɒ l		all_ADJ_1			
+Swiss German	Swiss German			all_ADJ	all	ˈɒll	ˈɒ l l		all_ADJ_1			
 Bavarian	Bavarian			all_ADJ	oi	ˈoj	ˈo j		all_ADJ_1			
 Proto-Germanic	Proto-Germanic			other_ADJ	anþeraz	ˈɑnθerɑz	ˈɑ n θ e r ɑ z		other_ADJ_1			
 Gothic	Gothic			other_ADJ	𐌰𐌽𐌸𐌰𐍂	ˈanθar	ˈa n θ a r		other_ADJ_1			
@@ -593,7 +593,7 @@ Yiddish	Yiddish			eye_NOUN	אויג	ˈɔɪ̯ɡ	ˈɔɪ̯ ɡ		eye_NOUN_1
 German	German			eye_NOUN	Auge	ˈaʊ̯ɡə	ˈaʊ̯ ɡ ə		eye_NOUN_1			
 Swabian	Swabian			eye_NOUN	Aug	ˈao̯ɡ	ˈao̯ ɡ		eye_NOUN_1			
 Alsatian	Alsatian			eye_NOUN	Auw	ˈœʋ	ˈœ ʋ		eye_NOUN_1			
-Swiss German	Swiss German			eye_NOUN	Oug	ˈou̯ɡ̊	ˈou̯ ɡ̊		eye_NOUN_1			
+Swiss German	Swiss German			eye_NOUN	Aug	ˈau̯ɡ̊	ˈau̯ ɡ̊		eye_NOUN_1			
 Bavarian	Bavarian			eye_NOUN	Aug	ˈau̯ɡ̊	ˈau̯ ɡ̊		eye_NOUN_1			
 Proto-Germanic	Proto-Germanic			ear_NOUN	ausô	ˈɑu̯sɔːː	ˈɑu̯ s ɔːː		ear_NOUN_1			
 Gothic	Gothic			ear_NOUN	𐌰𐌿𐍃𐍉	ˈɔːsoː	ˈɔː s oː		ear_NOUN_1			
@@ -658,7 +658,7 @@ Yiddish	Yiddish			bone_NOUN	ביין	bˈɛɪ̯n	b ˈɛɪ̯ n		bone_NOUN_1
 German	German			bone_NOUN	Bein	bˈaɪ̯n	b ˈaɪ̯ n		bone_NOUN_1			
 Swabian	Swabian			bone_NOUN	Boi	bˈɔe̯	b ˈɔe̯		bone_NOUN_1			
 Alsatian	Alsatian			bone_NOUN	Bein	b̥ˈəi̯n	b̥ ˈəi̯ n		bone_NOUN_1			
-Swiss German	Swiss German			bone_NOUN	Bäi	b̥ˈɛi̯	b̥ ˈɛi̯		bone_NOUN_1			
+Swiss German	Swiss German			bone_NOUN	Bäi	b̥ˈæi̯	b̥ ˈæi̯		bone_NOUN_1			
 Bavarian	Bavarian			bone_NOUN	Boa	b̥ˈoɐ̯	b̥ ˈoɐ̯		bone_NOUN_1			
 Proto-Germanic	Proto-Germanic			boat_NOUN	baitaz	bˈɑi̯tɑz	b ˈɑi̯ t ɑ z		boat_NOUN_1			
 Old Norse	Old Norse			boat_NOUN	bátr	bˈɑːtr	b ˈɑː t r		boat_NOUN_1			
@@ -762,7 +762,7 @@ Yiddish	Yiddish			tree_NOUN	בױם	bˈɔɪ̯m	b ˈɔɪ̯ m		tree_NOUN_1
 German	German			tree_NOUN	Baum	bˈaʊ̯m	b ˈaʊ̯ m		tree_NOUN_1			
 Swabian	Swabian			tree_NOUN	Boom	bˈoːm	b ˈoː m		tree_NOUN_1			
 Alsatian	Alsatian			tree_NOUN	Baum	b̥ˈʊːm	b̥ ˈʊː m		tree_NOUN_1			
-Swiss German	Swiss German			tree_NOUN	Boum	b̥ˈou̯m	b̥ ˈou̯ m		tree_NOUN_1			
+Swiss German	Swiss German			tree_NOUN	Baum	b̥ˈau̯m	b̥ ˈau̯ m		tree_NOUN_1			
 Bavarian	Bavarian			tree_NOUN	Bam	b̥ˈaːm	b̥ ˈaː m		tree_NOUN_1			
 Proto-Germanic	Proto-Germanic			berry_NOUN	bazją	bˈɑzjɑ̃	b ˈɑ z j ɑ̃		berry_NOUN_2			
 Old Norse	Old Norse			berry_NOUN	ber	bˈer	b ˈe r		berry_NOUN_2			
@@ -2225,7 +2225,7 @@ Yiddish	Yiddish			flesh_NOUN	פֿלייש	flˈɛɪ̯ʃ	f l ˈɛɪ̯ ʃ		flesh_NO
 German	German			flesh_NOUN	Fleisch	flˈaɪ̯ʃ	f l ˈaɪ̯ ʃ		flesh_NOUN_1			
 Swabian	Swabian			flesh_NOUN	Floisch	flˈɔe̯ʃ	f l ˈɔe̯ ʃ		flesh_NOUN_1			
 Alsatian	Alsatian			flesh_NOUN	Fleisch	flˈəi̯ʃ	f l ˈəi̯ ʃ		flesh_NOUN_1			
-Swiss German	Swiss German			flesh_NOUN	Fleisch	flˈei̯ʃ	f l ˈei̯ ʃ		flesh_NOUN_1			
+Swiss German	Swiss German			flesh_NOUN	Fläisch	flˈæi̯ʃ	f l ˈæi̯ ʃ		flesh_NOUN_1			
 Bavarian	Bavarian			flesh_NOUN	Fleisch	flˈai̯ʃ	f l ˈai̯ ʃ		flesh_NOUN_1			
 Proto-Germanic	Proto-Germanic			fly_VERB	fleuganą	ɸlˈeu̯ɣɑnɑ̃	ɸ l ˈeu̯ ɣ ɑ n ɑ̃		fly_VERB_1			
 Old Norse	Old Norse			fly_VERB	fljúga	fljˈuːɣɑ	f l j ˈuː ɣ ɑ		fly_VERB_1			
@@ -2309,7 +2309,7 @@ Pennsylvania German	Pennsylvania German			feel_VERB	fiehle	fˈiːlə	f ˈiː l �
 Yiddish	Yiddish			feel_VERB	פילן	fˈɪln̩	f ˈɪ l n̩		feel_VERB_1			
 German	German			feel_VERB	fühlen	fˈyːln̩	f ˈyː l n̩		feel_VERB_1			
 Swabian	Swabian			feel_VERB	fiehla	fˈiːla	f ˈiː l a		feel_VERB_1			
-Swiss German	Swiss German			feel_VERB	fühle	fˈyːlə	f ˈyː l ə		feel_VERB_1			
+Swiss German	Swiss German			feel_VERB	füüle	fˈyːlə	f ˈyː l ə		feel_VERB_1			
 Bavarian	Bavarian			feel_VERB	fuin	fˈujn	f ˈu j n		feel_VERB_1			
 Proto-Germanic	Proto-Germanic			fire_NOUN	fōr	ɸˈɔːr	ɸ ˈɔː r		fire_NOUN_2			
 Gothic	Gothic			fire_NOUN	𐍆𐍉𐌽	fˈoːn	f ˈoː n		fire_NOUN_2			
@@ -2690,7 +2690,7 @@ Yiddish	Yiddish			full_ADJ	פֿול	fˈʊl	f ˈʊ l		full_ADJ_1
 German	German			full_ADJ	voll	fˈɔl	f ˈɔ l		full_ADJ_1			
 Swabian	Swabian			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1			
 Alsatian	Alsatian			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1			
-Swiss German	Swiss German			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1			
+Swiss German	Swiss German			full_ADJ	voll	fˈoll	f ˈo l l		full_ADJ_1			
 Proto-Germanic	Proto-Germanic			for_PREP	furi	ɸˈuri	ɸ ˈu r i		for_PREP_1			
 Gothic	Gothic			for_PREP	𐍆𐌰𐌿𐍂	fˈɔːr	f ˈɔː r		for_PREP_1			
 Old Norse	Old Norse			for_PREP	fyrir	fˈyrir	f ˈy r i r		for_PREP_1			
@@ -2744,7 +2744,7 @@ Pennsylvania German	Pennsylvania German			ghost_NOUN	Geescht	ɡˈeːʃt	ɡ ˈeː
 Yiddish	Yiddish			ghost_NOUN	גײַסט	ɡˈaɪ̯st	ɡ ˈaɪ̯ s t		ghost_NOUN_1	TRUE	IRREGULAR OR LOAN	
 German	German			ghost_NOUN	Geist	ɡˈaɪ̯st	ɡ ˈaɪ̯ s t		ghost_NOUN_1			
 Swabian	Swabian			ghost_NOUN	Geischd	ɡˈae̯ʃd	ɡ ˈae̯ ʃ d		ghost_NOUN_1			
-Swiss German	Swiss German			ghost_NOUN	Gäischt	ɡ̊ˈɛi̯ʃt	ɡ̊ ˈɛi̯ ʃ t		ghost_NOUN_1			
+Swiss German	Swiss German			ghost_NOUN	Gäischt	ɡ̊ˈæi̯ʃt	ɡ̊ ˈæi̯ ʃ t		ghost_NOUN_1			
 Bavarian	Bavarian			ghost_NOUN	Gist	ɡ̊ˈist	ɡ̊ ˈi s t		ghost_NOUN_1			
 Proto-Germanic	Proto-Germanic			goat_NOUN	gaits	ɣˈɑi̯ts	ɣ ˈɑi̯ t s		goat_NOUN_1			
 Gothic	Gothic			goat_NOUN	𐌲𐌰𐌹𐍄𐍃	ɡˈɛːts	ɡ ˈɛː t s		goat_NOUN_1			
@@ -2771,7 +2771,7 @@ Pennsylvania German	Pennsylvania German			goat_NOUN	Geess	ɡˈeːs	ɡ ˈeː s		g
 German	German			goat_NOUN	Geiß	ɡˈaɪ̯s	ɡ ˈaɪ̯ s		goat_NOUN_1			
 Swabian	Swabian			goat_NOUN	Goiß	ɡˈɔe̯s	ɡ ˈɔe̯ s		goat_NOUN_1			
 Alsatian	Alsatian			goat_NOUN	Geiss	ɡ̊ˈəi̯s	ɡ̊ ˈəi̯ s		goat_NOUN_1			
-Swiss German	Swiss German			goat_NOUN	Gäiss	ɡ̊ˈæi̯s	ɡ̊ ˈæi̯ s		goat_NOUN_1			
+Swiss German	Swiss German			goat_NOUN	Gäiss	ɡ̊ˈæi̯ss	ɡ̊ ˈæi̯ s s		goat_NOUN_1			
 Bavarian	Bavarian			goat_NOUN	Goaß	ɡ̊ˈoɐ̯s	ɡ̊ ˈoɐ̯ s		goat_NOUN_1			
 Proto-Germanic	Proto-Germanic			go_VERB	gāną	ɣˈɑːnɑ̃	ɣ ˈɑː n ɑ̃		go_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			go_VERB	gå	ɡˈoː	ɡ ˈoː		go_VERB_1			
@@ -3048,7 +3048,7 @@ Yiddish	Yiddish			great_ADJ	גרויס	ɡʀˈɔɪ̯s	ɡ ʀ ˈɔɪ̯ s		great_ADJ
 German	German			great_ADJ	groß	ɡʁˈoːs	ɡ ʁ ˈoː s		great_ADJ_1			
 Swabian	Swabian			great_ADJ	groß	ɡʁˈoːs	ɡ ʁ ˈoː s		great_ADJ_1			
 Alsatian	Alsatian			great_ADJ	gross	ɡ̊ʁˈoːs	ɡ̊ ʁ ˈoː s		great_ADJ_1			
-Swiss German	Swiss German			great_ADJ	gross	ɡ̊rˈoːs	ɡ̊ r ˈoː s		great_ADJ_1			
+Swiss German	Swiss German			great_ADJ	gross	ɡ̊rˈoːss	ɡ̊ r ˈoː s s		great_ADJ_1			
 Bavarian	Bavarian			great_ADJ	grous	ɡ̊rˈou̯s	ɡ̊ r ˈou̯ s		great_ADJ_1			
 Proto-Germanic	Proto-Germanic			green_ADJ	grōniz	ɣrˈɔːniz	ɣ r ˈɔː n i z		green_ADJ_1			
 Old Norse	Old Norse			green_ADJ	grǿnn	ɡrˈøːnn	ɡ r ˈøː n n		green_ADJ_1			
@@ -3113,7 +3113,7 @@ Yiddish	Yiddish			god_NOUN	גאָט	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1
 German	German			god_NOUN	Gott	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1			
 Swabian	Swabian			god_NOUN	Gott	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1			
 Alsatian	Alsatian			god_NOUN	Gott	ɡ̊ˈot	ɡ̊ ˈo t		god_NOUN_1			
-Swiss German	Swiss German			god_NOUN	Gott	ɡ̊ˈot	ɡ̊ ˈo t		god_NOUN_1			
+Swiss German	Swiss German			god_NOUN	Gott	ɡ̊ˈott	ɡ̊ ˈo t t		god_NOUN_1			
 Bavarian	Bavarian			god_NOUN	Gott	ɡ̊ˈɔt	ɡ̊ ˈɔ t		god_NOUN_1			
 Proto-Germanic	Proto-Germanic			gold_NOUN_NEU	gulþą	ɣˈulθɑ̃	ɣ ˈu l θ ɑ̃		gold_NOUN_NEU_1			
 Gothic	Gothic			gold_NOUN_NEU	𐌲𐌿𐌻𐌸	ɡˈulθ	ɡ ˈu l θ		gold_NOUN_NEU_1			
@@ -3211,7 +3211,7 @@ Yiddish	Yiddish			holy_ADJ	הייליק	hˈɛɪ̯lɪk	h ˈɛɪ̯ l ɪ k		holy_AD
 German	German			holy_ADJ	heilig	hˈaɪ̯lɪç	h ˈaɪ̯ l ɪ ç		holy_ADJ_1			
 Swabian	Swabian			holy_ADJ	heilig	hˈae̯lɪɡ	h ˈae̯ l ɪ ɡ		holy_ADJ_1			
 Alsatian	Alsatian			holy_ADJ	heili	hˈəi̯li	h ˈəi̯ l i		holy_ADJ_1			
-Swiss German	Swiss German			holy_ADJ	häilig	hˈɛi̯liɡ̊	h ˈɛi̯ l i ɡ̊		holy_ADJ_1			
+Swiss German	Swiss German			holy_ADJ	häilig	hˈæi̯liɡ̊	h ˈæi̯ l i ɡ̊		holy_ADJ_1			
 Bavarian	Bavarian			holy_ADJ	heilig	hˈai̯liɡ̊	h ˈai̯ l i ɡ̊		holy_ADJ_1			
 Proto-Germanic	Proto-Germanic			home_NOUN	haimaz	xˈɑi̯mɑz	x ˈɑi̯ m ɑ z		home_NOUN_1			
 Gothic	Gothic			home_NOUN	𐌷𐌰𐌹𐌼𐍃	hˈɛːms	h ˈɛː m s		home_NOUN_1			
@@ -3268,7 +3268,7 @@ Yiddish	Yiddish			hot_ADJ	הייס	hˈɛɪ̯s	h ˈɛɪ̯ s		hot_ADJ_1
 German	German			hot_ADJ	heiß	hˈaɪ̯s	h ˈaɪ̯ s		hot_ADJ_1			
 Swabian	Swabian			hot_ADJ	hoiß	hˈɔe̯s	h ˈɔe̯ s		hot_ADJ_1			
 Alsatian	Alsatian			hot_ADJ	heiss	hˈəi̯s	h ˈəi̯ s		hot_ADJ_1			
-Swiss German	Swiss German			hot_ADJ	häiss	hˈæi̯s	h ˈæi̯ s		hot_ADJ_1			
+Swiss German	Swiss German			hot_ADJ	häiss	hˈæi̯ss	h ˈæi̯ s s		hot_ADJ_1			
 Bavarian	Bavarian			hot_ADJ	hoaß	hˈoɐ̯s	h ˈoɐ̯ s		hot_ADJ_1			
 Proto-Germanic	Proto-Germanic			half_NOUN	halbaz	xˈɑlβɑz	x ˈɑ l β ɑ z		half_NOUN_1			
 Gothic	Gothic			half_NOUN	𐌷𐌰𐌻𐌱𐍃	hˈalbs	h ˈa l b s		half_NOUN_1			
@@ -3410,7 +3410,7 @@ Luxembourgish	Luxembourgish			hate_VERB	haassen	hˈaːsən	h ˈaː s ə n		hate_
 Pennsylvania German	Pennsylvania German			hate_VERB	hasse	hˈasə	h ˈa s ə		hate_VERB_1			
 Yiddish	Yiddish			hate_VERB	האַסן	hˈasn̩	h ˈa s n̩		hate_VERB_1			
 German	German			hate_VERB	hassen	hˈasn̩	h ˈa s n̩		hate_VERB_1			
-Swiss German	Swiss German			hate_VERB	hasse	hˈɒsə	h ˈɒ s ə		hate_VERB_1			
+Swiss German	Swiss German			hate_VERB	hasse	hˈɒssə	h ˈɒ s s ə		hate_VERB_1			
 Proto-Germanic	Proto-Germanic			head_NOUN	haubudą	xˈɑu̯βuðɑ̃	x ˈɑu̯ β u ð ɑ̃		head_NOUN_1			
 Gothic	Gothic			head_NOUN	𐌷𐌰𐌿𐌱𐌹𐌸	hˈɔβiθ	h ˈɔ β i θ		head_NOUN_1			
 Old Norse	Old Norse			head_NOUN	hǫfuð	hˈɔvuð	h ˈɔ v u ð		head_NOUN_1			
@@ -3437,7 +3437,7 @@ Pennsylvania German	Pennsylvania German			head_NOUN	Haapt	hˈɔːpt	h ˈɔː p t
 Yiddish	Yiddish			head_NOUN	הויפּט	hˈɔɪ̯pt	h ˈɔɪ̯ p t		head_NOUN_1			
 German	German			head_NOUN	Haupt	hˈaʊ̯pt	h ˈaʊ̯ p t		head_NOUN_1			
 Swabian	Swabian			head_NOUN	Haubd	hˈao̯bd	h ˈao̯ b d		head_NOUN_1			
-Swiss German	Swiss German			head_NOUN	Houpt	hˈou̯pt	h ˈou̯ p t		head_NOUN_1			
+Swiss German	Swiss German			head_NOUN	Haupt	hˈau̯pt	h ˈau̯ p t		head_NOUN_1			
 Bavarian	Bavarian			head_NOUN	Hapt	hˈaːpt	h ˈaː p t		head_NOUN_1			
 Proto-Germanic	Proto-Germanic			high_ADJ	haugaz	xˈɑu̯ɣɑz	x ˈɑu̯ ɣ ɑ z		high_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			high_ADJ	haug	hˈæʉ̯ɡ	h ˈæʉ̯ ɡ		high_ADJ_1			
@@ -4606,7 +4606,7 @@ Pennsylvania German	Pennsylvania German			can_VERB	kenne	kʰˈɛnə	kʰ ˈɛ n �
 Yiddish	Yiddish			can_VERB	קענען	kˈɛnən	k ˈɛ n ə n		can_VERB_1			
 German	German			can_VERB	können	kʰˈœnən	kʰ ˈœ n ə n		can_VERB_1			
 Alsatian	Alsatian			can_VERB	kenne	kʰˈenə	kʰ ˈe n ə		can_VERB_1			
-Swiss German	Swiss German			can_VERB	chöne	χˈønə	χ ˈø n ə		can_VERB_1			
+Swiss German	Swiss German			can_VERB	chönne	χˈønnə	χ ˈø n n ə		can_VERB_1			
 Proto-Germanic	Proto-Germanic			head_NOUN	kuppaz	kˈuppɑz	k ˈu p p ɑ z		head_NOUN_2			
 Saterland Frisian	Saterland Frisian			head_NOUN	Kop	kˈɔp	k ˈɔ p		head_NOUN_2			
 Westphalian	Westphalian			head_NOUN	Kop	kˈɔp	k ˈɔ p		head_NOUN_2			
@@ -5863,7 +5863,7 @@ Pennsylvania German	Pennsylvania German			smoke_NOUN	Rauch	ɾˈaʊ̯x	ɾ ˈaʊ̯
 Yiddish	Yiddish			smoke_NOUN	רויך	ʀˈɔɪ̯χ	ʀ ˈɔɪ̯ χ		smoke_NOUN_1			
 German	German			smoke_NOUN	Rauch	ʁˈaʊ̯x	ʁ ˈaʊ̯ x		smoke_NOUN_1			
 Alsatian	Alsatian			smoke_NOUN	Rauch	ʁˈʊːʃ	ʁ ˈʊː ʃ		smoke_NOUN_1			
-Swiss German	Swiss German			smoke_NOUN	Rouch	rˈou̯χ	r ˈou̯ χ		smoke_NOUN_1			
+Swiss German	Swiss German			smoke_NOUN	Rauch	rˈau̯χ	r ˈau̯ χ		smoke_NOUN_1			
 Bavarian	Bavarian			smoke_NOUN	Raach	rˈaːx	r ˈaː x		smoke_NOUN_1			
 Proto-Germanic	Proto-Germanic			rain_NOUN	regną	rˈeɣnɑ̃	r ˈe ɣ n ɑ̃		rain_NOUN_1			
 Gothic	Gothic			rain_NOUN	𐍂𐌹𐌲𐌽	rˈiɡn	r ˈi ɡ n		rain_NOUN_1			
@@ -6545,7 +6545,7 @@ Yiddish	Yiddish			ship_NOUN	שיף	ʃˈɪf	ʃ ˈɪ f		ship_NOUN_1
 German	German			ship_NOUN	Schiff	ʃˈɪf	ʃ ˈɪ f		ship_NOUN_1			
 Swabian	Swabian			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
 Alsatian	Alsatian			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
-Swiss German	Swiss German			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
+Swiss German	Swiss German			ship_NOUN	Schiff	ʃˈiff	ʃ ˈi f f		ship_NOUN_1			
 Bavarian	Bavarian			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
 Proto-Germanic	Proto-Germanic			shit_NOUN	skitaz	skˈitɑz	s k ˈi t ɑ z		shit_NOUN_1			
 Old Norse	Old Norse			shit_NOUN	skítr	scˈiːtr	s c ˈiː t r		shit_NOUN_1			
@@ -6786,7 +6786,7 @@ Yiddish	Yiddish			stone_NOUN	שטיין	ʃtˈɛɪ̯n	ʃ t ˈɛɪ̯ n		stone_NOUN
 German	German			stone_NOUN	Stein	ʃtˈaɪ̯n	ʃ t ˈaɪ̯ n		stone_NOUN_1			
 Swabian	Swabian			stone_NOUN	Schdoi	ʃdˈɔe̯	ʃ d ˈɔe̯		stone_NOUN_1			
 Alsatian	Alsatian			stone_NOUN	Stein	ʃtˈəi̯n	ʃ t ˈəi̯ n		stone_NOUN_1			
-Swiss German	Swiss German			stone_NOUN	Schtei	ʃtˈei̯	ʃ t ˈei̯		stone_NOUN_1			
+Swiss German	Swiss German			stone_NOUN	Schtäi	ʃtˈæi̯	ʃ t ˈæi̯		stone_NOUN_1			
 Bavarian	Bavarian			stone_NOUN	Stoa	ʃtˈoɐ̯	ʃ t ˈoɐ̯		stone_NOUN_1			
 Proto-Germanic	Proto-Germanic			star_NOUN	sternǭ	stˈernɔ̃ː	s t ˈe r n ɔ̃ː		star_NOUN_1			
 Gothic	Gothic			star_NOUN	𐍃𐍄𐌰𐌹𐍂𐌽𐍉	stˈɛrnoː	s t ˈɛ r n oː		star_NOUN_1			
@@ -6983,7 +6983,6 @@ German	German			son_NOUN	Sohn	zˈoːn	z ˈoː n		son_NOUN_1
 Swabian	Swabian			son_NOUN	Soh	sˈoː	s ˈoː		son_NOUN_1			
 Alsatian	Alsatian			son_NOUN	Sohn	sˈoːn	s ˈoː n		son_NOUN_1			
 Swiss German	Swiss German			son_NOUN	Soon	sˈoːn	s ˈoː n		son_NOUN_1			
-Bavarian	Bavarian			son_NOUN	Sun	sˈun	s ˈu n		son_NOUN_1			
 Proto-Germanic	Proto-Germanic			sour_ADJ	sūraz	sˈuːrɑz	s ˈuː r ɑ z		sour_ADJ_1			
 Old Norse	Old Norse			sour_ADJ	súrr	sˈuːrr	s ˈuː r r		sour_ADJ_1			
 Icelandic	Icelandic			sour_ADJ	súr	sˈuːr̥	s ˈuː r̥		sour_ADJ_1			
