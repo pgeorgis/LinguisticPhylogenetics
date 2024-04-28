@@ -9,7 +9,7 @@ VOWELS
 	<schwarz> /ʃʋˈaʕʦ/ "black_ADJ"
 	<Bladd> /blˈad/ "leaf_NOUN_NEU"
 
-/ʌ/ (0.031)
+/ʌ/ (0.03)
 	<mir> /mˈiʌ/ "we_PRON"
 	<Muddr> /mˈudʌ/ "mother_NOUN"
 	<andr> /ˈandʌ/ "other_ADJ"
@@ -109,23 +109,24 @@ VOWELS
 	<singa> /sˈɪŋa/ "sing_VERB"
 	<bidda> /bˈɪda/ "request_VERB"
 
+/ˈuː/ (0.003)
+	<Pflug> /p͡flˈuːɡ/ "plough_NOUN"
+	<Schduhl> /ʃdˈuːl/ "stool_NOUN"
+	<du> /dˈuː/ "thou_PRON"
+
 /ˈeə̯/ (0.003)
-	<grea> /ɡʁˈeə̯/ "green_ADJ"
-	<zeah> /ʦˈeə̯/ "ten_NUM"
 	<geal> /ɡˈeə̯l/ "yellow_ADJ"
+	<zeah> /ʦˈeə̯/ "ten_NUM"
+	<grea> /ɡʁˈeə̯/ "green_ADJ"
 
 /e/ (0.003)
 	<Wolle> /ʋˈole/ "wool_NOUN_FEM"
-	<Ärde> /ˈɛʕde/ "earth_NOUN"
 	<älle> /ˈɛle/ "all_ADJ"
+	<Ärde> /ˈɛʕde/ "earth_NOUN"
 
 /ˈʌ/ (0.002)
-	<Kirch> /kʰˈʌç/ "church_NOUN_FEM"
 	<Berg> /bˈʌɡ/ "mountain_NOUN"
-
-/ˈuː/ (0.002)
-	<du> /dˈuː/ "thou_PRON"
-	<Schduhl> /ʃdˈuːl/ "stool_NOUN"
+	<Kirch> /kʰˈʌç/ "church_NOUN_FEM"
 
 /ɪ/ (0.002)
 	<Honig> /hˈoːnɪɡ/ "honey_NOUN"
@@ -153,15 +154,15 @@ CONSONANTS
 	<Maus> /mˈao̯s/ "mouse_NOUN_FEM"
 	<dausad> /dˈao̯sad/ "thousand_NUM"
 
-/l/ (0.054)
-	<Schlang> /ʃlˈaŋ/ "snake_NOUN"
-	<schlaga> /ʃlˈaːɡa/ "slay_VERB"
+/l/ (0.055)
+	<schlofa> /ʃlˈɔːfa/ "sleep_VERB"
+	<Schild> /ʃˈild/ "shield_NOUN"
 	<Lichd> /lˈiçd/ "light_NOUN"
 
-/ɡ/ (0.05)
-	<zwanzg> /ʦʋˈanʦɡ/ "twenty_NUM"
+/ɡ/ (0.051)
+	<digg> /dˈiɡ/ "thick_ADJ"
 	<folga> /fˈolɡa/ "follow_VERB"
-	<drugga> /dʁˈuɡa/ "press_VERB"
+	<Pflug> /p͡flˈuːɡ/ "plough_NOUN"
 
 /n/ (0.044)
 	<Männr> /mˈɛnʌ/ "men_NOUN"
@@ -203,8 +204,8 @@ CONSONANTS
 	<Haubd> /hˈao̯bd/ "head_NOUN"
 	<hoiß> /hˈɔe̯s/ "hot_ADJ"
 
-/ʕ/ (0.022)
-	<Durschd> /dˈuʕʃt/ "thirst_NOUN"
+/ʕ/ (0.021)
+	<Durschd> /dˈuʕʃd/ "thirst_NOUN"
 	<warm> /ʋˈaʕm/ "warm_ADJ"
 	<Schdärn> /ʃdˈɛʕn/ "star_NOUN"
 
@@ -233,8 +234,8 @@ CONSONANTS
 	<Zoicha> /ʦˈɔe̯ça/ "token_NOUN"
 	<Oich> /ˈɔe̯ç/ "oak_NOUN_FEM"
 
-/t/ (0.005)
-	<Durschd> /dˈuʕʃt/ "thirst_NOUN"
+/t/ (0.003)
+	<naggt> /nˈaɡt/ "naked_ADJ"
 	<Gott> /ɡˈɔt/ "god_NOUN"
 	<Wort> /ʋˈoʕt/ "word_NOUN"
 
@@ -248,6 +249,9 @@ CONSONANTS
 
 /ʣ/ (0.001)
 	<Kaddz> /kʰˈaʣ/ "cat_NOUN"
+
+/p͡f/ (0.001)
+	<Pflug> /p͡flˈuːɡ/ "plough_NOUN"
 
 
 

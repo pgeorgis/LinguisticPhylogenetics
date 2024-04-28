@@ -39,22 +39,22 @@ VOWELS
 	<saul> /sˈɑːl/ "soul_NOUN"
 	<hauf> /hˈɑːf/ "half_NOUN"
 
-/ˈəi̯/ (0.015)
-	<tide> /tʰˈəi̯d/ "time_NOUN"
-	<fire> /fˈəi̯ər/ "fire_NOUN"
-	<shite> /ʃˈəi̯t/ "shit_NOUN"
+/ˈu/ (0.016)
+	<pleuch> /pʰlˈux/ "plough_NOUN"
+	<hoond> /hˈund/ "dog_NOUN"
+	<moose> /mˈus/ "mouse_NOUN_FEM"
 
-/ˈu/ (0.015)
-	<foul> /fˈul/ "bird_NOUN_MASC"
-	<wouf> /ˈuf/ "wolf_NOUN"
-	<thoum> /θˈum/ "thumb_NOUN"
+/ˈəi̯/ (0.015)
+	<bite> /bˈəi̯t/ "bite_VERB"
+	<wine> /wˈəi̯n/ "wine_NOUN"
+	<wife> /wˈəi̯f/ "wife_NOUN"
 
 /ˈa/ (0.015)
 	<twal> /tʰwˈal/ "twelve_NUM"
 	<starn> /stˈarn/ "star_NOUN"
 	<bath> /bˈaθ/ "bath_NOUN_NEU"
 
-/ˈʌ/ (0.014)
+/ˈʌ/ (0.013)
 	<thunner> /θˈʌnər/ "thunder_NOUN"
 	<us> /ˈʌs/ "us_PRON"
 	<month> /mˈʌnθ/ "month_NOUN"
@@ -121,12 +121,12 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.09)
+/r/ (0.089)
 	<sister> /sˈɪstər/ "sister_NOUN"
 	<freeze> /frˈiːz/ "freeze_VERB"
 	<ower> /ˈʌu̯ər/ "over_PREP"
 
-/n/ (0.066)
+/n/ (0.065)
 	<nakit> /nˈekət/ "naked_ADJ"
 	<son> /sˈɪn/ "son_NOUN"
 	<freend> /frˈind/ "friend_NOUN"
@@ -146,8 +146,8 @@ CONSONANTS
 	<breid> /brˈed/ "bread_NOUN"
 	<guid> /ɡˈød/ "good_ADJ"
 
-/l/ (0.049)
-	<twal> /tʰwˈal/ "twelve_NUM"
+/l/ (0.05)
+	<lee> /lˈiː/ "tell lies_VERB"
 	<auld> /ˈɑːld/ "old_ADJ"
 	<deidly> /dˈedlɪ/ "deadly_ADJ"
 
@@ -231,34 +231,35 @@ CONSONANTS
 	<wather> /wˈaðər/ "weather_NOUN"
 	<faither> /fˈeːðər/ "father_NOUN"
 
+/x/ (0.005)
+	<pleuch> /pʰlˈux/ "plough_NOUN"
+	<maucht> /mˈɑːxt/ "might_NOUN"
+	<daich> /dˈex/ "dough_NOUN"
+
 /v/ (0.005)
-	<seiven> /sˈeːvən/ "seven_NUM"
+	<five> /fˈaːɪ̯v/ "five_NUM"
 	<liver> /lˈɪvər/ "liver_NOUN"
 	<eleiven> /əlˈeːvn̩/ "eleven_NUM"
 
 /ʍ/ (0.004)
+	<whaul> /ʍˈɑːl/ "whale_NOUN"
 	<wheel> /ʍˈil/ "wheel_NOUN"
 	<what> /ʍˈɪt/ "what_PRON"
-	<white> /ʍˈəi̯t/ "white_ADJ"
 
 /z/ (0.004)
-	<cheese> /ʧˈiːz/ "cheese_NOUN"
+	<thoosand> /θˈuːzənd/ "thousand_NUM"
 	<nose> /nˈoːz/ "nose_NOUN"
-	<freeze> /frˈiːz/ "freeze_VERB"
-
-/x/ (0.004)
-	<maucht> /mˈɑːxt/ "might_NOUN"
-	<lauch> /lˈɑːx/ "laugh_VERB"
-	<dochter> /dˈoxtər/ "daughter_NOUN"
+	<cheese> /ʧˈiːz/ "cheese_NOUN"
 
 /ʧ/ (0.003)
 	<cheese> /ʧˈiːz/ "cheese_NOUN"
 	<rich> /rˈɪʧ/ "rich_ADJ"
 	<chicken> /ʧˈɪkən/ "chicken_NOUN"
 
-/pʰ/ (0.002)
+/pʰ/ (0.003)
 	<peth> /pʰˈɛθ/ "path_NOUN"
 	<plicht> /pʰlˈɪçt/ "plight_NOUN"
+	<pleuch> /pʰlˈux/ "plough_NOUN"
 
 /ʤ/ (0.001)
 	<edge> /ˈɛʤ/ "edge_NOUN"

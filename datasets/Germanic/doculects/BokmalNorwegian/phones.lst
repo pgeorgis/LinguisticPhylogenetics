@@ -14,15 +14,15 @@ VOWELS
 	<lett> /lˈɛtː/ "light_ADJ"
 	<menn> /mˈɛnː/ "men_NOUN"
 
-/ˈʉː/ (0.022)
-	<gul> /ɡˈʉːl/ "yellow_ADJ"
-	<sju> /ʂˈʉː/ "seven_NUM"
-	<flue> /flˈʉːə/ "housefly_NOUN"
+/ˈuː/ (0.023)
+	<kone> /kʰˈuːnə/ "woman_NOUN"
+	<mor> /mˈuːɾ/ "mother_NOUN"
+	<blom> /blˈuːm/ "flower_NOUN"
 
-/ˈuː/ (0.022)
-	<bror> /bɾˈuːɾ/ "brother_NOUN"
-	<sko> /skˈuː/ "shoe_NOUN"
-	<stor> /stˈuːɾ/ "big_ADJ"
+/ˈʉː/ (0.022)
+	<due> /dˈʉːə/ "dove_NOUN"
+	<suge> /sˈʉːɡə/ "suck_VERB"
+	<ljuv> /jˈʉːʋ/ "beloved_ADJ"
 
 /ˈiː/ (0.02)
 	<side> /sˈiːə/ "side_NOUN"
@@ -64,7 +64,7 @@ VOWELS
 	<en> /ˈeːn/ "one_NUM"
 	<tre> /tʰɾˈeː/ "tree_NOUN"
 
-/ˈɑː/ (0.013)
+/ˈɑː/ (0.012)
 	<blad> /blˈɑːd/ "leaf_NOUN_NEU"
 	<dag> /dˈɑːɡ/ "day_NOUN"
 	<hare> /hˈɑːɾə/ "hare_NOUN"
@@ -122,17 +122,17 @@ CONSONANTS
 	<stol> /stˈuːl/ "stool_NOUN"
 	<is> /ˈiːs/ "ice_NOUN"
 
-/l/ (0.042)
+/l/ (0.043)
 	<lys> /lˈyːs/ "light_NOUN"
-	<stol> /stˈuːl/ "stool_NOUN"
+	<sjel> /ʃˈɛl/ "soul_NOUN"
 	<dødelig> /dˈøːdəli/ "deadly_ADJ"
 
-/n/ (0.038)
+/n/ (0.037)
 	<tegn> /tʰˈæɪ̯n/ "token_NOUN"
 	<ønske> /ˈœnskə/ "wish_VERB"
 	<måned> /mˈoːnə/ "month_NOUN"
 
-/ʋ/ (0.037)
+/ʋ/ (0.036)
 	<ovn> /ˈɔʋn/ "oven_NOUN"
 	<ulv> /ˈʉlʋ/ "wolf_NOUN"
 	<vær> /ʋˈæːɾ/ "weather_NOUN"
@@ -182,10 +182,10 @@ CONSONANTS
 	<horn> /hˈuːɳ/ "horn_NOUN"
 	<høre> /hˈøːɾə/ "hear_VERB"
 
-/ɡ/ (0.017)
+/ɡ/ (0.018)
 	<dag> /dˈɑːɡ/ "day_NOUN"
-	<gull> /ɡˈʉlː/ "gold_NOUN_NEU"
 	<ugle> /ˈʉɡlə/ "owl_NOUN"
+	<garn> /ɡˈɑːɳ/ "yarn_NOUN"
 
 /j/ (0.016)
 	<stjerne> /stjˈæːɳə/ "star_NOUN"
@@ -197,12 +197,12 @@ CONSONANTS
 	<kald> /kʰˈɑlː/ "cold_ADJ"
 	<selv> /sˈɛlː/ "self_PRON"
 
-/tː/ (0.013)
+/tː/ (0.012)
 	<rett> /ɾˈɛtː/ "right_ADJ"
 	<føtter> /fˈœtːəɾ/ "feet_NOUN"
 	<natt> /nˈɑtː/ "night_NOUN_FEM"
 
-/kʰ/ (0.013)
+/kʰ/ (0.012)
 	<kalv> /kʰˈɑlʋ/ "calf_NOUN"
 	<konge> /kʰˈʊŋə/ "king_NOUN"
 	<korn> /kʰˈuːɳ/ "corn_NOUN"
@@ -265,14 +265,15 @@ CONSONANTS
 	<oss> /ˈɔsː/ "us_PRON"
 	<gress> /ɡɾˈɛsː/ "grass_NOUN_NEU"
 
+/pʰ/ (0.002)
+	<plikt> /pʰlˈɪkt/ "plight_NOUN"
+	<plog> /pʰlˈuːɡ/ "plough_NOUN"
+
 /ʈː/ (0.001)
 	<hjerte> /jˈɛʈːə/ "heart_NOUN"
 
 /pː/ (0.001)
 	<opp> /ˈɔpː/ "up_ADV"
-
-/pʰ/ (0.001)
-	<plikt> /pʰlˈɪkt/ "plight_NOUN"
 
 
 

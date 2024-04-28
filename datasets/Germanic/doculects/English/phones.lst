@@ -1,10 +1,10 @@
 VOWELS
-/ˈɪ/ (0.042)
+/ˈɪ/ (0.041)
 	<fish> /fˈɪʃ/ "fish_NOUN"
 	<winter> /wˈɪntə/ "winter_NOUN"
 	<drink> /dɹˈɪŋk/ "drink_VERB"
 
-/ˈiː/ (0.041)
+/ˈiː/ (0.04)
 	<leap> /lˈiːp/ "leap_VERB"
 	<eat> /ˈiːt/ "eat_VERB"
 	<beam> /bˈiːm/ "tree_NOUN"
@@ -44,20 +44,20 @@ VOWELS
 	<day> /dˈeɪ̯/ "day_NOUN"
 	<hate> /hˈeɪ̯t/ "hate_VERB"
 
+/ˈaʊ̯/ (0.015)
+	<fowl> /fˈaʊ̯ɫ/ "bird_NOUN_MASC"
+	<thousand> /θˈaʊ̯zn̩d/ "thousand_NUM"
+	<thou> /ðˈaʊ̯/ "thou_PRON"
+
 /ˈɑː/ (0.014)
+	<sharp> /ʃˈɑːp/ "sharp_ADJ"
+	<laugh> /lˈɑːf/ "laugh_VERB"
 	<arm> /ˈɑːm/ "arm_NOUN"
-	<yarn> /jˈɑːn/ "yarn_NOUN"
-	<star> /stˈɑː/ "star_NOUN"
 
 /ˈuː/ (0.014)
+	<root> /ɹˈuːt/ "root_NOUN_FEM"
 	<tooth> /tʰˈuːθ/ "tooth_NOUN"
-	<shoot> /ʃˈuːt/ "shoot_VERB"
-	<brew> /bɹˈuː/ "brew_VERB"
-
-/ˈaʊ̯/ (0.014)
-	<mouth> /mˈaʊ̯θ/ "mouth_NOUN"
-	<sow> /sˈaʊ̯/ "sow_NOUN"
-	<house> /hˈaʊ̯s/ "house_NOUN"
+	<goose> /ɡˈuːs/ "goose_NOUN"
 
 /ˈæ/ (0.013)
 	<lamb> /lˈæm/ "lamb_NOUN"
@@ -135,9 +135,9 @@ CONSONANTS
 	<brother> /bɹˈɐðə/ "brother_NOUN"
 	<free> /fɹˈiː/ "free_ADJ"
 
-/l/ (0.032)
+/l/ (0.033)
 	<light> /lˈaɪ̯t/ "light_ADJ"
-	<lie> /lˈaɪ̯/ "tell lies_VERB"
+	<soul> /sˈəʊ̯l/ "soul_NOUN"
 	<owl> /ˈaʊ̯l̩/ "owl_NOUN"
 
 /m/ (0.03)
@@ -150,12 +150,12 @@ CONSONANTS
 	<half> /hˈɑːf/ "half_NOUN"
 	<holy> /hˈəʊ̯lɪ/ "holy_ADJ"
 
-/ɫ/ (0.025)
+/ɫ/ (0.024)
 	<wolf> /wˈʊɫf/ "wolf_NOUN"
 	<stool> /stˈuːɫ/ "stool_NOUN"
 	<child> /ʧˈaɪ̯ɫd/ "child_NOUN"
 
-/b/ (0.025)
+/b/ (0.024)
 	<bid> /bˈɪd/ "bid_VERB"
 	<bridge> /bɹˈɪʤ/ "bridge_NOUN"
 	<book> /bˈʊk/ "book_NOUN_FEM"
@@ -230,9 +230,10 @@ CONSONANTS
 	<cheese> /ʧˈiːz/ "cheese_NOUN"
 	<freeze> /fɹˈiːz/ "freeze_VERB"
 
-/pʰ/ (0.002)
+/pʰ/ (0.003)
 	<plight> /pʰlˈaɪ̯t/ "plight_NOUN"
 	<path> /pʰˈɑːθ/ "path_NOUN"
+	<plough> /pʰlˈaʊ̯/ "plough_NOUN"
 
 
 

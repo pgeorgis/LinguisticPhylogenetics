@@ -149,6 +149,11 @@ VOWELS
 	<måne> /mˈɔːnə/ "moon_NOUN"
 	<tåre> /ʦʰˈɔːɐ/ "tear_NOUN"
 
+/ˈɒˀ/ (0.003)
+	<får> /fˈɒˀ/ "sheep_NOUN"
+	<hår> /hˈɒˀ/ "hair_NOUN"
+	<plov> /pʰlˈɒˀw/ "plough_NOUN"
+
 /ˈæ/ (0.003)
 	<stjerne> /stjˈæɐnə/ "star_NOUN"
 	<kat> /kʰˈæt/ "cat_NOUN"
@@ -159,12 +164,8 @@ VOWELS
 	<røg> /ʁˈʌˀj/ "smoke_NOUN"
 
 /ˈɒː/ (0.002)
-	<hors> /hˈɒːs/ "horse_NOUN"
 	<sove> /sˈɒːw/ "sleep_VERB"
-
-/ˈɒˀ/ (0.002)
-	<får> /fˈɒˀ/ "sheep_NOUN"
-	<hår> /hˈɒˀ/ "hair_NOUN"
+	<hors> /hˈɒːs/ "horse_NOUN"
 
 /ˈɒ/ (0.002)
 	<tomme> /ʦʰˈɒmə/ "thumb_NOUN"
@@ -208,7 +209,7 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.071)
+/s/ (0.07)
 	<tysk> /ʦʰˈysk/ "Teutonic_ADJ"
 	<slå> /slˈɔˀ/ "slay_VERB"
 	<svømme> /sʋˈœmə/ "swim_VERB"
@@ -223,12 +224,12 @@ CONSONANTS
 	<sved> /sʋˈeˀð̞ˠ/ "sweat_NOUN"
 	<tid> /ʦʰˈiˀð̞ˠ/ "time_NOUN"
 
-/l/ (0.041)
+/l/ (0.042)
 	<flyve> /flˈyːw/ "fly_VERB"
 	<kylling> /kʰˈyleŋ/ "chicken_NOUN"
-	<lyve> /lˈyːw/ "tell lies_VERB"
+	<stol> /stˈoˀl/ "stool_NOUN"
 
-/b̥/ (0.031)
+/b̥/ (0.03)
 	<bjerg> /b̥jˈɛɐˀw/ "mountain_NOUN"
 	<skib> /skˈiˀb̥/ "ship_NOUN"
 	<bede> /b̥ˈeˀ/ "request_VERB"
@@ -288,15 +289,15 @@ CONSONANTS
 	<knæ> /kʰnˈeˀ/ "knee_NOUN"
 	<kold> /kʰˈʌlˀ/ "cold_ADJ"
 
-/d̥/ (0.017)
-	<dværg> /d̥ʋˈæɐˀw/ "dwarf_NOUN"
-	<drive> /d̥ʁˈiːw/ "drive_VERB"
-	<død> /d̥ˈøˀð̞ˠ/ "dead_ADJ"
+/w/ (0.017)
+	<lyve> /lˈyːw/ "tell lies_VERB"
+	<suge> /sˈuːw/ "suck_VERB"
+	<flyve> /flˈyːw/ "fly_VERB"
 
-/w/ (0.016)
-	<have> /hˈɛːw/ "have_VERB"
-	<drive> /d̥ʁˈiːw/ "drive_VERB"
-	<tyve> /ʦʰˈyːw/ "twenty_NUM"
+/d̥/ (0.017)
+	<due> /d̥ˈuːə/ "dove_NOUN"
+	<datter> /d̥ˈɛtɐ/ "daughter_NOUN"
+	<dødelig> /d̥ˈøːð̞ˠəli/ "deadly_ADJ"
 
 /nˀ/ (0.015)
 	<vind> /ʋˈenˀ/ "wind_NOUN"
@@ -337,14 +338,15 @@ CONSONANTS
 	<ovn> /ˈɒwˀn/ "oven_NOUN"
 	<navn> /nˈawˀn/ "name_NOUN"
 
+/pʰ/ (0.002)
+	<pligt> /pʰlˈeɡ̊t/ "plight_NOUN"
+	<plov> /pʰlˈɒˀw/ "plough_NOUN"
+
 /ʨ/ (0.001)
 	<tjørn> /ʨˈœɐˀn/ "thorn_NOUN"
 
 /ɕ/ (0.001)
 	<sjæl> /ɕˈɛˀl/ "soul_NOUN"
-
-/pʰ/ (0.001)
-	<pligt> /pʰlˈeɡ̊t/ "plight_NOUN"
 
 
 

@@ -9,12 +9,12 @@ VOWELS
 	<death> /dˈɛθ/ "death_NOUN"
 	<weapon> /wˈɛpən/ "weapon_NOUN"
 
-/ɚ/ (0.034)
+/ɚ/ (0.033)
 	<weather> /wˈɛðɚ/ "weather_NOUN"
 	<wonder> /wˈʌndɚ/ "wonder_NOUN"
 	<tear> /tʰˈiɚ/ "tear_NOUN"
 
-/ˈɪ/ (0.033)
+/ˈɪ/ (0.032)
 	<thick> /θˈɪk/ "thick_ADJ"
 	<give> /ɡˈɪv/ "give_VERB"
 	<drink> /dɹˈɪŋk/ "drink_VERB"
@@ -49,15 +49,15 @@ VOWELS
 	<ape> /ˈeɪ̯p/ "ape_NOUN"
 	<blade> /blˈeɪ̯d/ "leaf_NOUN_NEU"
 
-/ˈu/ (0.014)
-	<tooth> /tʰˈuθ/ "tooth_NOUN"
-	<goose> /ɡˈus/ "goose_NOUN"
-	<root> /ɹˈut/ "root_NOUN_FEM"
+/ˈaʊ̯/ (0.015)
+	<sour> /sˈaʊ̯ɚ/ "sour_ADJ"
+	<house> /hˈaʊ̯s/ "house_NOUN"
+	<mouth> /mˈaʊ̯θ/ "mouth_NOUN"
 
-/ˈaʊ̯/ (0.014)
-	<thou> /ðˈaʊ̯/ "thou_PRON"
-	<fowl> /fˈaʊ̯ɫ/ "bird_NOUN_MASC"
-	<owl> /ˈaʊ̯l̩/ "owl_NOUN"
+/ˈu/ (0.014)
+	<two> /tʰˈu/ "two_NUM"
+	<brew> /bɹˈu/ "brew_VERB"
+	<shoot> /ʃˈuʔ/ "shoot_VERB"
 
 /ˈɔ/ (0.013)
 	<for> /fˈɔɹ/ "for_PREP"
@@ -111,7 +111,7 @@ CONSONANTS
 	<land> /lˈænd/ "land_NOUN"
 	<friend> /fɹˈɛnd/ "friend_NOUN"
 
-/s/ (0.055)
+/s/ (0.054)
 	<star> /stˈɑɹ/ "star_NOUN"
 	<fast> /fˈæst/ "fast_ADJ"
 	<sleep> /slˈip/ "sleep_VERB"
@@ -136,15 +136,15 @@ CONSONANTS
 	<light> /lˈʌɪ̯ʔ/ "light_NOUN"
 	<cat> /kʰˈæʔ/ "cat_NOUN"
 
-/m/ (0.029)
-	<thumb> /θˈʌm/ "thumb_NOUN"
-	<home> /hˈoʊ̯m/ "home_NOUN"
-	<mother> /mˈʌðɚ/ "mother_NOUN"
+/l/ (0.03)
+	<plough> /pʰlˈaʊ̯/ "plough_NOUN"
+	<bloom> /blˈum/ "flower_NOUN"
+	<lie> /lˈaɪ̯/ "lie_VERB"
 
-/l/ (0.029)
-	<lie> /lˈaɪ̯/ "tell lies_VERB"
-	<laugh> /lˈæf/ "laugh_VERB"
-	<land> /lˈænd/ "land_NOUN"
+/m/ (0.029)
+	<warm> /wˈɔɹm/ "warm_ADJ"
+	<might> /mˈʌɪ̯ʔ/ "might_NOUN"
+	<midge> /mˈɪʤ/ "midge_NOUN"
 
 /ɫ/ (0.026)
 	<self> /sˈɛɫf/ "self_PRON"
@@ -241,7 +241,8 @@ CONSONANTS
 	<better> /bˈɛɾɚ/ "better_ADJ"
 	<water> /wˈɑɾɚ/ "water_NOUN"
 
-/pʰ/ (0.002)
+/pʰ/ (0.003)
+	<plough> /pʰlˈaʊ̯/ "plough_NOUN"
 	<path> /pʰˈæθ/ "path_NOUN"
 	<plight> /pʰlˈʌɪ̯ʔ/ "plight_NOUN"
 

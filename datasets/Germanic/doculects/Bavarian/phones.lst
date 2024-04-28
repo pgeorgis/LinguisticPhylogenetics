@@ -1,10 +1,10 @@
 VOWELS
-/a/ (0.038)
+/a/ (0.037)
 	<Finga> /fˈiŋa/ "finger_NOUN"
 	<dringa> /d̥rˈiŋa/ "drink_VERB"
 	<nackad> /nˈakad̥/ "naked_ADJ"
 
-/ˈi/ (0.031)
+/ˈi/ (0.03)
 	<Kiach> /kʰˈiɐç/ "church_NOUN_FEM"
 	<wissn> /ʋˈisn̩/ "know_VERB"
 	<Wind> /ʋˈind̥/ "wind_NOUN"
@@ -14,12 +14,12 @@ VOWELS
 	<dreizeah> /d̥rˈai̯ʦeɐ̯/ "thirteen_NUM"
 	<Wei> /ʋˈai̯/ "wife_NOUN"
 
-/ˈoɐ̯/ (0.024)
+/ˈoɐ̯/ (0.023)
 	<Hoan> /hˈoɐ̯n/ "horn_NOUN"
 	<Doag> /d̥ˈoɐ̯ɡ̊/ "dough_NOUN"
 	<Boa> /b̥ˈoɐ̯/ "bone_NOUN"
 
-/ˈo/ (0.024)
+/ˈo/ (0.023)
 	<Donna> /d̥ˈonɐ/ "thunder_NOUN"
 	<oi> /ˈoj/ "all_ADJ"
 	<Sond> /sˈond̥/ "sand_NOUN"
@@ -36,23 +36,23 @@ VOWELS
 
 /ˈe/ (0.015)
 	<Herz> /hˈeɐʦ/ "heart_NOUN"
-	<tedlich> /tˈedlɪç/ "deadly_ADJ"
+	<tedlich> /tˈed̥lɪç/ "deadly_ADJ"
 	<Wetta> /ʋˈeta/ "weather_NOUN"
+
+/ˈuɐ̯/ (0.014)
+	<bluadn> /b̥lˈuɐ̯d̥n̩/ "bleed_VERB"
+	<Schuah> /ʃˈuɐ̯/ "shoe_NOUN"
+	<Pfluag> /p͡flˈuɐ̯ɡ̊/ "plough_NOUN"
 
 /ˈau̯/ (0.014)
 	<Aug> /ˈau̯ɡ̊/ "eye_NOUN"
-	<tausnd> /tˈau̯sn̩d̥/ "thousand_NUM"
-	<Sau> /sˈau̯/ "sow_NOUN"
+	<Haud> /hˈau̯d̥/ "skin_NOUN"
+	<Maus> /mˈau̯s/ "mouse_NOUN_FEM"
 
 /ˈɛ/ (0.013)
-	<Bär> /b̥ˈɛɐ/ "bear_NOUN"
 	<nächst> /nˈɛkʃt/ "next_ADJ"
-	<Egg> /ˈɛɡ̊/ "edge_NOUN"
-
-/ˈuɐ̯/ (0.013)
-	<guad> /ɡ̊ˈuɐ̯d̥/ "good_ADJ"
-	<bluadn> /b̥lˈuɐ̯d̥n̩/ "bleed_VERB"
-	<suachn> /sˈuɐ̯xn̩/ "seek_VERB"
+	<Bär> /b̥ˈɛɐ/ "bear_NOUN"
+	<Schwesta> /ʃʋˈɛsta/ "sister_NOUN"
 
 /ˈa/ (0.012)
 	<laffa> /lˈafa/ "leap_VERB"
@@ -135,7 +135,7 @@ VOWELS
 	<üba> /ˈyb̥a/ "over_PREP"
 
 /ɪ/ (0.001)
-	<tedlich> /tˈedlɪç/ "deadly_ADJ"
+	<tedlich> /tˈed̥lɪç/ "deadly_ADJ"
 
 /eɐ̯/ (0.001)
 	<dreizeah> /d̥rˈai̯ʦeɐ̯/ "thirteen_NUM"
@@ -148,17 +148,17 @@ CONSONANTS
 	<Schnää> /ʃnˈɛː/ "snow_NOUN"
 	<Hoan> /hˈoɐ̯n/ "horn_NOUN"
 
-/d̥/ (0.066)
+/d̥/ (0.067)
 	<doud> /d̥ˈou̯d̥/ "dead_ADJ"
-	<nackad> /nˈakad̥/ "naked_ADJ"
-	<Doag> /d̥ˈoɐ̯ɡ̊/ "dough_NOUN"
+	<Muada> /mˈuɐ̯d̥a/ "mother_NOUN"
+	<Hund> /hˈund̥/ "dog_NOUN"
 
-/s/ (0.058)
+/s/ (0.057)
 	<bessa> /b̥ˈɛsa/ "better_ADJ"
 	<Hos> /hˈoːs/ "hare_NOUN"
 	<sitzen> /sˈiʦn̩/ "sit_VERB"
 
-/f/ (0.045)
+/f/ (0.044)
 	<Woif> /ʋˈojf/ "wolf_NOUN"
 	<fliangn> /flˈiɐ̯ŋn̩/ "fly_VERB"
 	<hoifn> /hˈojfn̩/ "help_VERB"
@@ -168,47 +168,47 @@ CONSONANTS
 	<drei> /d̥rˈai̯/ "three_NUM"
 	<Reng> /rˈeːŋ/ "rain_NOUN"
 
-/m/ (0.036)
-	<Mensch> /mˈɛnʃ/ "person_NOUN"
-	<Muada> /mˈuɐ̯d̥a/ "mother_NOUN"
-	<Maul> /mˈau̯l/ "mouth_NOUN"
+/ɡ̊/ (0.036)
+	<Beag> /b̥ˈɛɐɡ̊/ "mountain_NOUN"
+	<heilig> /hˈai̯liɡ̊/ "holy_ADJ"
+	<liegn> /lˈiːɡ̊n̩/ "lie_VERB"
 
-/ɡ̊/ (0.035)
-	<schlogn> /ʃlˈɔɡ̊n̩/ "slay_VERB"
-	<Vogl> /fˈoːɡ̊l̩/ "bird_NOUN_MASC"
-	<Goid> /ɡ̊ˈojd̥/ "gold_NOUN_NEU"
+/m/ (0.036)
+	<mia> /mˈiɐ/ "we_PRON"
+	<siebm> /sˈiːm/ "seven_NUM"
+	<Oarm> /ˈoɐ̯rm/ "arm_NOUN"
 
 /b̥/ (0.035)
+	<Broat> /b̥rˈoɐ̯t/ "bread_NOUN"
 	<bitdn> /b̥ˈid̥n̩/ "request_VERB"
 	<Deb> /d̥ˈeb̥/ "thief_NOUN"
-	<selba> /sˈelb̥a/ "self_PRON"
 
 /t/ (0.032)
 	<unta> /ˈunta/ "under_PREP"
 	<Stoa> /ʃtˈoɐ̯/ "stone_NOUN"
 	<Winta> /ʋˈinta/ "winter_NOUN"
 
-/ʃ/ (0.031)
+/ʃ/ (0.03)
 	<Fleisch> /flˈai̯ʃ/ "flesh_NOUN"
 	<schloffa> /ʃlˈɔfa/ "sleep_VERB"
 	<Duascht> /d̥ˈuɐ̯ʃt/ "thirst_NOUN"
 
+/l/ (0.028)
+	<Maul> /mˈau̯l/ "mouth_NOUN"
+	<fliangn> /flˈiɐ̯ŋn̩/ "fly_VERB"
+	<liegn> /lˈiːɡ̊n̩/ "lie_VERB"
+
 /ʋ/ (0.027)
-	<Wind> /ʋˈind̥/ "wind_NOUN"
-	<zwanzg> /ʦʋˈanʦɡ̊/ "twenty_NUM"
-	<Woi> /ʋˈoj/ "whale_NOUN"
+	<wissn> /ʋˈisn̩/ "know_VERB"
+	<weiß> /ʋˈai̯s/ "white_ADJ"
+	<Wetta> /ʋˈeta/ "weather_NOUN"
 
-/l/ (0.027)
-	<bluadn> /b̥lˈuɐ̯d̥n̩/ "bleed_VERB"
-	<Leba> /lˈeːb̥a/ "liver_NOUN"
-	<Bladdl> /b̥lˈad̥l̩/ "leaf_NOUN_NEU"
-
-/j/ (0.024)
+/j/ (0.023)
 	<gejb> /ɡ̊ˈejb̥/ "yellow_ADJ"
 	<Jåhr> /jˈɒːɐ/ "year_NOUN"
 	<Goid> /ɡ̊ˈojd̥/ "gold_NOUN_NEU"
 
-/h/ (0.024)
+/h/ (0.023)
 	<Hoan> /hˈoɐ̯n/ "horn_NOUN"
 	<heilig> /hˈai̯liɡ̊/ "holy_ADJ"
 	<Heng> /hˈɛŋ/ "honey_NOUN"
@@ -240,20 +240,17 @@ CONSONANTS
 
 /ç/ (0.006)
 	<Zeichn> /ʦˈai̯çn̩/ "token_NOUN"
-	<tedlich> /tˈedlɪç/ "deadly_ADJ"
+	<tedlich> /tˈed̥lɪç/ "deadly_ADJ"
 	<Kiach> /kʰˈiɐç/ "church_NOUN_FEM"
 
-/p͡f/ (0.004)
+/p͡f/ (0.005)
 	<Pfad> /p͡fˈaːd̥/ "path_NOUN"
-	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
 	<Opfe> /ˈop͡fə/ "apple_NOUN"
+	<Pfluag> /p͡flˈuɐ̯ɡ̊/ "plough_NOUN"
 
 /p/ (0.002)
 	<Hapt> /hˈaːpt/ "head_NOUN"
 	<Språch> /ʃprˈɒːx/ "speech_NOUN_FEM"
-
-/d/ (0.001)
-	<tedlich> /tˈedlɪç/ "deadly_ADJ"
 
 
 

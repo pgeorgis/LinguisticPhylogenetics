@@ -34,20 +34,20 @@ VOWELS
 	<menniskja> /mˈɛnːɪʃa/ "person_NOUN"
 	<fyri> /fˈiːɹɪ/ "for_PREP"
 
-/ˈɔ/ (0.017)
+/ˈɔ/ (0.016)
 	<ross> /ɹˈɔsː/ "horse_NOUN"
 	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
 	<hálvur> /hˈɔlvʊr/ "half_NOUN"
 
-/ˈʊ̯iː/ (0.015)
-	<ríkur> /ɹˈʊ̯iːkʊɹ/ "rich_ADJ"
-	<dýr> /d̥ˈʊ̯iːɹ/ "animal_NOUN"
-	<hvítur> /kʰvˈʊ̯iːtʊɹ/ "white_ADJ"
-
-/ˈɛ/ (0.015)
+/ˈɛ/ (0.016)
+	<menn> /mˈɛnː/ "men_NOUN"
 	<drekka> /d̥ɹˈɛʰkːa/ "drink_VERB"
-	<tekn> /tʰˈɛʰkn/ "token_NOUN"
-	<regn> /ɹˈɛɡ̊n̥/ "rain_NOUN"
+	<trettan> /tʰɹˈɛʰtːan/ "thirteen_NUM"
+
+/ˈʊ̯iː/ (0.015)
+	<dýr> /d̥ˈʊ̯iːɹ/ "animal_NOUN"
+	<vín> /vˈʊ̯iːn/ "wine_NOUN"
+	<síða> /sˈʊ̯iːja/ "side_NOUN"
 
 /ˈɔ̯aː/ (0.012)
 	<sláa> /slˈɔ̯aːa/ "slay_VERB"
@@ -96,7 +96,7 @@ VOWELS
 
 /ˈʏ/ (0.004)
 	<tjúkkur> /ʧʰˈʏʰkːʊɹ/ "thick_ADJ"
-	<flúgva> /flˈʏɡ̊fa/ "fly_VERB"
+	<flúgva> /flˈʏɡ̊v̥a/ "fly_VERB"
 	<úlvur> /ˈʏlvʊɹ/ "wolf_NOUN"
 
 /ˈoː/ (0.004)
@@ -131,7 +131,7 @@ VOWELS
 
 
 CONSONANTS
-/ɹ/ (0.132)
+/ɹ/ (0.131)
 	<tjúkkur> /ʧʰˈʏʰkːʊɹ/ "thick_ADJ"
 	<orð> /ˈoːɹ/ "word_NOUN"
 	<dreymur> /d̥ɹˈɛːi̯mʊɹ/ "dream_NOUN"
@@ -141,9 +141,9 @@ CONSONANTS
 	<sál> /sˈɔ̯aːl/ "soul_NOUN"
 	<syngja> /sˈɪɲʤ̊a/ "sing_VERB"
 
-/v/ (0.04)
-	<svørð> /svˈøːɹ/ "sword_NOUN"
-	<vær> /vˈɛːa̯ɹ/ "we_PRON"
+/v/ (0.038)
+	<tjóvur> /ʧʰˈɔːu̯vʊɹ/ "thief_NOUN"
+	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
 	<svartur> /svˈaɹʈʊɹ/ "black_ADJ"
 
 /n/ (0.035)
@@ -151,9 +151,9 @@ CONSONANTS
 	<hundur> /hˈʊnd̥ʊɹ/ "dog_NOUN"
 	<nátt> /nˈɔʰtː/ "night_NOUN_FEM"
 
-/l/ (0.034)
-	<úlvur> /ˈʏlvʊɹ/ "wolf_NOUN"
-	<hjól> /ʧʰˈɔːu̯l/ "wheel_NOUN"
+/l/ (0.035)
+	<hvæl> /kʰvˈɛːa̯l/ "wheel_NOUN"
+	<hvalur> /kʰvˈɛːa̯lʊɹ/ "whale_NOUN"
 	<lús> /lˈʉːu̯s/ "louse_NOUN"
 
 /t/ (0.032)
@@ -161,35 +161,35 @@ CONSONANTS
 	<søtur> /sˈøːtʊɹ/ "sweet_ADJ"
 	<gull> /ɡ̊ˈʊtl̥/ "gold_NOUN_NEU"
 
-/ɡ̊/ (0.028)
+/ɡ̊/ (0.029)
 	<fuglur> /fˈʊɡ̊lʊɹ/ "bird_NOUN_MASC"
 	<góður> /ɡ̊ˈɔːu̯wʊɹ/ "good_ADJ"
 	<grass> /ɡ̊ɹˈɛːa̯s/ "grass_NOUN_NEU"
 
-/f/ (0.023)
-	<flúgva> /flˈʏɡ̊fa/ "fly_VERB"
-	<fyri> /fˈiːɹɪ/ "for_PREP"
-	<fimm> /fˈɪm/ "five_NUM"
-
-/d̥/ (0.022)
-	<hond> /hˈɔnd̥/ "hand_NOUN_FEM"
+/d̥/ (0.021)
+	<drekka> /d̥ɹˈɛʰkːa/ "drink_VERB"
+	<eldur> /ˈɛld̥ʊɹ/ "fire_NOUN"
 	<droyma> /d̥ɹˈɔːi̯ma/ "dream_VERB"
-	<dvørgur> /d̥vˈœɹɡ̊ʊɹ/ "dwarf_NOUN"
 
 /m/ (0.021)
-	<maður> /mˈɛːa̯vʊɹ/ "man_NOUN"
-	<stormur> /stˈɔɹmʊɹ/ "storm_NOUN"
-	<mús> /mˈʉːu̯s/ "mouse_NOUN_FEM"
+	<munn> /mˈʊnː/ "mouth_NOUN"
+	<mýs> /mˈʊ̯iːs/ "mice_NOUN"
+	<mánaður> /mˈɔ̯aːnavʊɹ/ "month_NOUN"
 
 /b̥/ (0.019)
-	<blóma> /b̥lˈɔːu̯ma/ "flower_NOUN"
-	<bað> /b̥ˈɛːa̯/ "bath_NOUN_NEU"
-	<bók> /b̥ˈɔːu̯k/ "book_NOUN_FEM"
+	<bløða> /b̥lˈøːa/ "bleed_VERB"
+	<blað> /b̥lˈɛːa̯/ "leaf_NOUN_NEU"
+	<bróðir> /b̥ɹˈɔːu̯wɪɹ/ "brother_NOUN"
 
 /tʰ/ (0.018)
-	<tunga> /tʰˈʊŋɡ̊a/ "tongue_NOUN"
-	<takka> /tʰˈaʰkːa/ "thank_VERB"
-	<tonn> /tʰˈɔnː/ "tooth_NOUN"
+	<tólv> /tʰˈœlv/ "twelve_NUM"
+	<turrur> /tʰˈʊɹːʊɹ/ "dry_ADJ"
+	<tummi> /tʰˈʊmːɪ/ "thumb_NOUN"
+
+/f/ (0.018)
+	<feskur> /fˈɛskʊɹ/ "fresh_ADJ"
+	<fáur> /fˈɔ̯aːʊɹ/ "few_ADJ"
+	<frændi> /frˈand̥ɪ/ "friend_NOUN"
 
 /h/ (0.017)
 	<hava> /hˈɛːa̯va/ "have_VERB"
@@ -251,66 +251,71 @@ CONSONANTS
 	<kenna> /ʧʰˈɛnːa/ "ken_VERB"
 	<kærur> /ʧʰˈɛːa̯ɹʊɹ/ "dear_ADJ"
 
+/v̥/ (0.007)
+	<dúgva> /d̥ˈɪɡ̊v̥a/ "dove_NOUN"
+	<flúgva> /flˈʏɡ̊v̥a/ "fly_VERB"
+	<súgva> /sˈʏɡ̊v̥a/ "suck_VERB"
+
 /n̥/ (0.007)
+	<knæ> /kʰn̥ˈɛːa̯/ "knee_NOUN"
 	<barn> /b̥ˈatn̥/ "child_NOUN_NEU"
-	<korn> /kʰˈɔtn̥/ "corn_NOUN"
 	<vatn> /vˈaʰtn̥/ "water_NOUN"
 
 /ʤ̊ː/ (0.005)
-	<liggja> /lˈɪʤ̊ːa/ "lie_VERB"
-	<bryggja> /b̥ɹˈɪʤ̊ːa/ "brew_VERB"
 	<bryggja> /b̥ɹˈɪʤ̊ːa/ "bridge_NOUN"
+	<liggja> /lˈɪʤ̊ːa/ "lie_VERB"
+	<tíggju> /tʰˈʊʤ̊ːʊ/ "ten_NUM"
 
 /ʤ̊/ (0.005)
-	<djúpur> /ʤ̊ˈʉːu̯pʊɹ/ "deep_ADJ"
-	<deiggj> /d̥ˈai̯ʤ̊/ "dough_NOUN"
 	<syngja> /sˈɪɲʤ̊a/ "sing_VERB"
+	<deiggj> /d̥ˈai̯ʤ̊/ "dough_NOUN"
+	<geva> /ʤ̊ˈeːva/ "give_VERB"
 
 /p/ (0.004)
+	<skarpur> /skˈaɹpʊɹ/ "sharp_ADJ"
 	<leypa> /lˈɛːi̯pa/ "leap_VERB"
-	<skip> /ʃˈiːp/ "ship_NOUN"
 	<hjálpa> /jˈɔl̥pa/ "help_VERB"
 
 /ʰp/ (0.002)
-	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
 	<epli> /ˈeːʰplɪ/ "apple_NOUN"
 	<apa> /ˈɛːa̯ʰpa/ "ape_NOUN"
+	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
 
 /ʰkː/ (0.002)
 	<takka> /tʰˈaʰkːa/ "thank_VERB"
-	<drekka> /d̥ɹˈɛʰkːa/ "drink_VERB"
 	<tjúkkur> /ʧʰˈʏʰkːʊɹ/ "thick_ADJ"
+	<drekka> /d̥ɹˈɛʰkːa/ "drink_VERB"
 
 /ʧ/ (0.002)
 	<gestur> /ʧˈɛstʊɹ/ "guest_NOUN"
-	<søkja> /sˈøːʧɑ/ "seek_VERB"
 	<kirkja> /ʧʰˈɪɹʧa/ "church_NOUN_FEM"
+	<søkja> /sˈøːʧɑ/ "seek_VERB"
 
 /ɡ̊ː/ (0.002)
-	<egg> /ˈɛɡ̊ː/ "egg_NOUN_NEU"
 	<egg> /ˈɛɡ̊ː/ "edge_NOUN"
+	<egg> /ˈɛɡ̊ː/ "egg_NOUN_NEU"
 	<ryggur> /ɹˈɪɡ̊ːʊɹ/ "ridge_NOUN"
 
 /r/ (0.002)
-	<frændi> /frˈand̥ɪ/ "friend_NOUN"
-	<hálvur> /hˈɔlvʊr/ "half_NOUN"
 	<vetur> /vˈeːʰtʊr/ "winter_NOUN"
+	<hálvur> /hˈɔlvʊr/ "half_NOUN"
+	<frændi> /frˈand̥ɪ/ "friend_NOUN"
 
 /ʰk/ (0.002)
-	<tekn> /tʰˈɛʰkn/ "token_NOUN"
 	<kjúklingur> /ʧʰˈʏʰklɪŋɡ̊ʊɹ/ "chicken_NOUN"
+	<tekn> /tʰˈɛʰkn/ "token_NOUN"
 
 /ʈ/ (0.002)
-	<svartur> /svˈaɹʈʊɹ/ "black_ADJ"
 	<hjarta> /jˈaɹʈa/ "heart_NOUN"
+	<svartur> /svˈaɹʈʊɹ/ "black_ADJ"
 
 /sː/ (0.002)
-	<oss> /ˈɔsː/ "us_PRON"
 	<ross> /ɹˈɔsː/ "horse_NOUN"
+	<oss> /ˈɔsː/ "us_PRON"
 
 /mː/ (0.002)
-	<summar> /sˈʊmːaɹ/ "summer_NOUN"
 	<tummi> /tʰˈʊmːɪ/ "thumb_NOUN"
+	<summar> /sˈʊmːaɹ/ "summer_NOUN"
 
 /ʰʧː/ (0.001)
 	<trykkja> /tʰɹˈɪʰʧːa/ "press_VERB"
@@ -335,6 +340,9 @@ CONSONANTS
 
 /tː/ (0.001)
 	<høvd> /hˈœtː/ "head_NOUN"
+
+/pʰ/ (0.001)
+	<plógv> /pʰlˈɛɡ̊v̥/ "plough_NOUN"
 
 
 

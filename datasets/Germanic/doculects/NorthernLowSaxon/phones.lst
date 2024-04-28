@@ -4,7 +4,7 @@ VOWELS
 	<Winter> /vˈɪndɐ/ "winter_NOUN"
 	<Broder> /brˈaʊ̯dɐ/ "brother_NOUN"
 
-/ˈaʊ̯/ (0.032)
+/ˈaʊ̯/ (0.033)
 	<Dood> /dˈaʊ̯d/ "death_NOUN"
 	<Broot> /brˈaʊ̯d/ "bread_NOUN"
 	<groot> /ɡrˈaʊ̯d/ "great_ADJ"
@@ -136,13 +136,13 @@ CONSONANTS
 	<Winter> /vˈɪndɐ/ "winter_NOUN"
 	<dick> /dˈɪɡ/ "thick_ADJ"
 
-/n/ (0.094)
+/n/ (0.093)
 	<föhlen> /fˈɔʏ̯ln̩/ "feel_VERB"
 	<gahn> /ɡˈoːn/ "go_VERB"
 	<teihn> /tʰˈaɪ̯n/ "ten_NUM"
 
-/l/ (0.058)
-	<geel> /ɡˈeːl/ "yellow_ADJ"
+/l/ (0.059)
+	<Wull> /vˈʊl/ "wool_NOUN_FEM"
 	<lachen> /lˈaxn̩/ "laugh_VERB"
 	<Lamm> /lˈam/ "lamb_NOUN"
 
@@ -186,12 +186,12 @@ CONSONANTS
 	<Süster> /sˈʏstɐ/ "sister_NOUN"
 	<Ies> /ˈiːs/ "ice_NOUN"
 
-/z/ (0.022)
+/z/ (0.021)
 	<Sommer> /zˈʊmɐ/ "summer_NOUN"
 	<Solt> /zˈɔld/ "salt_NOUN"
 	<Söhn> /zˈøːn/ "son_NOUN"
 
-/h/ (0.022)
+/h/ (0.021)
 	<Huus> /hˈuːs/ "house_NOUN"
 	<Haas> /hˈoːs/ "hare_NOUN"
 	<Huut> /hˈuːd/ "skin_NOUN"
@@ -201,7 +201,7 @@ CONSONANTS
 	<singen> /zˈɪŋ/ "sing_VERB"
 	<liggen> /lˈɪŋ/ "lie_VERB"
 
-/ç/ (0.015)
+/ç/ (0.016)
 	<Fleeg> /flˈaɪ̯ç/ "housefly_NOUN"
 	<Brüch> /brˈʏç/ "bridge_NOUN"
 	<König> /kʰˈɔʏ̯nɪç/ "king_NOUN"
@@ -236,12 +236,13 @@ CONSONANTS
 	<naakt> /nˈoːkt/ "naked_ADJ"
 	<süük> /zˈyːk/ "sick_ADJ"
 
+/pʰ/ (0.002)
+	<Padd> /pʰˈat/ "path_NOUN"
+	<Ploog> /pʰlˈaʊ̯ç/ "plough_NOUN"
+
 /p/ (0.002)
 	<Aap> /ˈoːp/ "ape_NOUN"
 	<Spraak> /ʃprˈoːɡ/ "speech_NOUN_FEM"
-
-/pʰ/ (0.001)
-	<Padd> /pʰˈat/ "path_NOUN"
 
 /j/ (0.001)
 	<Jitt> /jˈɪt/ "goat_NOUN"

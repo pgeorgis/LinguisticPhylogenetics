@@ -11,7 +11,7 @@ VOWELS
 
 /ˈa/ (0.035)
 	<Dann> /dˈan/ "thorn_NOUN"
-	<Sand> /sˈant/ "sand_NOUN"
+	<Sand> /sˈand̥/ "sand_NOUN"
 	<danke> /dˈaŋkə/ "thank_VERB"
 
 /ˈɪ/ (0.034)
@@ -35,8 +35,8 @@ VOWELS
 	<Mensch> /mˈɛnʃ/ "person_NOUN"
 
 /ˈɔː/ (0.023)
-	<Laab> /lˈɔːp/ "leaf_NOUN"
-	<Haapt> /hˈɔːpt/ "head_NOUN"
+	<Laab> /lˈɔːb̥/ "leaf_NOUN"
+	<Haapt> /hˈɔːpd̥/ "head_NOUN"
 	<waarm> /ʋˈɔːɑm/ "warm_ADJ"
 
 /ˈʊ/ (0.021)
@@ -47,16 +47,16 @@ VOWELS
 /ˈiː/ (0.018)
 	<Dier> /dˈiːɑ/ "animal_NOUN"
 	<dihr> /dˈiːɑ/ "ye_PRON"
-	<Dieb> /dˈiːp/ "thief_NOUN"
+	<Dieb> /dˈiːb̥/ "thief_NOUN"
 
 /ˈoː/ (0.016)
 	<Schof> /ʃˈoːf/ "sheep_NOUN"
 	<Nodel> /nˈoːdl̩/ "needle_NOUN"
-	<Dod> /dˈoːt/ "death_NOUN"
+	<Dod> /dˈoːd̥/ "death_NOUN"
 
 /ˈaʊ̯/ (0.013)
 	<aus> /ˈaʊ̯s/ "out_PREP"
-	<dausend> /dˈaʊ̯sənt/ "thousand_NUM"
+	<dausend> /dˈaʊ̯sənd̥/ "thousand_NUM"
 	<braue> /bɾˈaʊ̯ə/ "brew_VERB"
 
 /ˈɔ/ (0.012)
@@ -64,15 +64,15 @@ VOWELS
 	<folye> /fˈɔljə/ "follow_VERB"
 	<Kopp> /kʰˈɔp/ "head_NOUN"
 
-/ˈɛː/ (0.011)
-	<naegscht> /nˈɛːkʃt/ "next_ADJ"
-	<Schtaern> /ʃtˈɛːɑn/ "star_NOUN"
-	<daerr> /dˈɛːɑ/ "dry_ADJ"
-
-/ˈuː/ (0.011)
-	<Fuuss> /fˈuːs/ "foot_NOUN"
+/ˈuː/ (0.012)
+	<Blug> /blˈuːɡ̊/ "plough_NOUN"
+	<suche> /sˈuːxə/ "seek_VERB"
 	<Bruder> /bɾˈuːdɑ/ "brother_NOUN"
-	<Schtuhl> /ʃtˈuːl/ "stool_NOUN"
+
+/ˈɛː/ (0.011)
+	<Haerz> /hˈɛːɑʦ/ "heart_NOUN"
+	<daerr> /dˈɛːɑ/ "dry_ADJ"
+	<Schwaert> /ʃʋˈɛːɑd̥/ "sword_NOUN"
 
 /ˈaː/ (0.01)
 	<Darscht> /dˈaːʃt/ "thirst_NOUN"
@@ -93,9 +93,9 @@ VOWELS
 
 
 CONSONANTS
-/l/ (0.056)
-	<kalt> /kʰˈalt/ "cold_ADJ"
-	<Seel> /sˈeːl/ "soul_NOUN"
+/l/ (0.057)
+	<kalt> /kʰˈald̥/ "cold_ADJ"
+	<Schlang> /ʃlˈaŋ/ "snake_NOUN"
 	<helfe> /hˈɛlfə/ "help_VERB"
 
 /n/ (0.055)
@@ -103,116 +103,131 @@ CONSONANTS
 	<Dunner> /dˈʊnɑ/ "thunder_NOUN"
 	<Naas> /nˈɔːs/ "nose_NOUN"
 
-/t/ (0.053)
-	<Monet> /mˈoːnət/ "month_NOUN"
-	<Nadd> /nˈat/ "north_NOUN"
-	<Schtaern> /ʃtˈɛːɑn/ "star_NOUN"
-
 /s/ (0.052)
-	<hasse> /hˈasə/ "hate_VERB"
-	<Maus> /mˈaʊ̯s/ "mouse_NOUN_FEM"
-	<Meis> /mˈaɪ̯s/ "mice_NOUN"
+	<sehne> /sˈeːnə/ "see_VERB"
+	<Seit> /sˈaɪ̯d̥/ "side_NOUN"
+	<siess> /sˈiːs/ "sweet_ADJ"
 
 /d/ (0.046)
-	<dausend> /dˈaʊ̯sənt/ "thousand_NUM"
-	<dinn> /dˈɪn/ "thin_ADJ"
-	<Ding> /dˈɪŋ/ "thing_NOUN"
+	<Daub> /dˈaʊ̯b̥/ "dove_NOUN"
+	<deier> /dˈaɪ̯ɑ/ "expensive_ADJ"
+	<drucke> /dɾˈʊkə/ "dry_ADJ"
 
 /ɾ/ (0.038)
+	<Schtarem> /ʃtˈaːɾəm/ "storm_NOUN"
+	<Draen> /dɾˈɛːn/ "tear_NOUN_FEM"
 	<Rick> /ɾˈɪk/ "ridge_NOUN"
-	<braue> /bɾˈaʊ̯ə/ "brew_VERB"
-	<Schprooch> /ʃpɾˈoːx/ "speech_NOUN_FEM"
 
 /f/ (0.038)
+	<dief> /dˈiːf/ "deep_ADJ"
+	<Schof> /ʃˈoːf/ "sheep_NOUN"
 	<Volk> /fˈɔlk/ "folk_NOUN"
-	<voll> /fˈɔl/ "full_ADJ"
-	<helfe> /hˈɛlfə/ "help_VERB"
 
 /ʃ/ (0.035)
+	<Schtee> /ʃtˈeː/ "stone_NOUN"
+	<Schtuhl> /ʃtˈuːl/ "stool_NOUN"
 	<Mensch> /mˈɛnʃ/ "person_NOUN"
-	<Schprooch> /ʃpɾˈoːx/ "speech_NOUN_FEM"
-	<Fisch> /fˈɪʃ/ "fish_NOUN"
+
+/d̥/ (0.035)
+	<Paad> /pʰˈɔːd̥/ "path_NOUN"
+	<dot> /dˈoːd̥/ "dead_ADJ"
+	<Haut> /hˈaʊ̯d̥/ "skin_NOUN"
 
 /m/ (0.032)
-	<Baam> /bˈɔːm/ "tree_NOUN"
 	<heem> /hˈeːm/ "home_NOUN"
 	<Menner> /mˈɛnɑ/ "men_NOUN"
+	<Summer> /sˈʊmɑ/ "summer_NOUN"
 
 /ʋ/ (0.029)
-	<Woch> /ʋˈɔx/ "week_NOUN"
-	<Woll> /ʋˈɔl/ "wool_NOUN_FEM"
-	<Wasser> /ʋˈasɑ/ "water_NOUN"
+	<waarm> /ʋˈɔːɑm/ "warm_ADJ"
+	<Wedder> /ʋˈɛdɑ/ "weather_NOUN"
+	<winsche> /ʋˈɪnʃə/ "wish_VERB"
 
-/b/ (0.022)
-	<Buch> /bˈuːx/ "book_NOUN_FEM"
+/b/ (0.023)
+	<Baad> /bˈɔːd̥/ "bath_NOUN_NEU"
 	<Brick> /bɾˈɪk/ "bridge_NOUN"
-	<Baad> /bˈɔːt/ "bath_NOUN_NEU"
+	<Baer> /bˈɛːɑ/ "bear_NOUN"
 
 /h/ (0.021)
-	<Harn> /hˈaːn/ "horn_NOUN"
-	<Haar> /hˈɔːɑ/ "hair_NOUN"
 	<Haerz> /hˈɛːɑʦ/ "heart_NOUN"
-
-/k/ (0.02)
-	<Weg> /ʋˈeːk/ "way_NOUN"
-	<dick> /dˈɪk/ "thick_ADJ"
-	<nackich> /nˈakɪç/ "naked_ADJ"
+	<Hunger> /hˈʊŋɑ/ "hunger_NOUN"
+	<hunnert> /hˈʊnɑd̥/ "hundred_NUM"
 
 /ç/ (0.019)
-	<Hunnich> /hˈʊnɪç/ "honey_NOUN"
 	<weech> /ʋˈeːç/ "weak_ADJ"
-	<Zeeche> /ʦˈeːçə/ "token_NOUN"
+	<Eeche> /ˈeːçə/ "oak_NOUN_FEM"
+	<Hunnich> /hˈʊnɪç/ "honey_NOUN"
+
+/t/ (0.018)
+	<Gascht> /ɡˈaʃt/ "guest_NOUN"
+	<Schtarem> /ʃtˈaːɾəm/ "storm_NOUN"
+	<Licht> /lˈɪçt/ "light_NOUN"
 
 /ɡ/ (0.016)
-	<Gans> /ɡˈans/ "goose_NOUN"
 	<Geescht> /ɡˈeːʃt/ "ghost_NOUN"
 	<Gnie> /ɡnˈiː/ "knee_NOUN"
+	<Geess> /ɡˈeːs/ "goat_NOUN"
 
 /ʦ/ (0.015)
-	<Haerz> /hˈɛːɑʦ/ "heart_NOUN"
 	<Zehe> /ʦˈeːə/ "toe_NOUN"
 	<zwansich> /ʦʋˈansɪç/ "twenty_NUM"
+	<zwee> /ʦʋˈeː/ "two_NUM"
+
+/k/ (0.015)
+	<Eck> /ˈɛk/ "edge_NOUN"
+	<Mick> /mˈɪk/ "midge_NOUN"
+	<nackich> /nˈakɪç/ "naked_ADJ"
 
 /kʰ/ (0.013)
-	<Kaes> /kʰˈɛːs/ "cheese_NOUN"
-	<kalt> /kʰˈalt/ "cold_ADJ"
-	<Karn> /kʰˈaːn/ "corn_NOUN"
+	<Kaerich> /kʰˈɛːɾɪç/ "church_NOUN_FEM"
+	<Kuh> /kʰˈuː/ "cow_NOUN"
+	<Keenich> /kʰˈeːnɪç/ "king_NOUN"
 
 /ŋ/ (0.011)
-	<singe> /sˈɪŋə/ "sing_VERB"
-	<Zung> /ʦˈʊŋ/ "tongue_NOUN"
-	<yung> /jˈʊŋ/ "young_NOUN"
+	<danke> /dˈaŋkə/ "thank_VERB"
+	<Ring> /ɾˈɪŋ/ "ring_NOUN"
+	<Ding> /dˈɪŋ/ "thing_NOUN"
 
 /x/ (0.011)
-	<suche> /sˈuːxə/ "seek_VERB"
-	<lache> /lˈaxə/ "laugh_VERB"
-	<Rauch> /ɾˈaʊ̯x/ "smoke_NOUN"
-
-/p/ (0.011)
-	<Dieb> /dˈiːp/ "thief_NOUN"
-	<Appel> /ˈapəl/ "apple_NOUN"
-	<Kopp> /kʰˈɔp/ "head_NOUN"
+	<Schprooch> /ʃpɾˈoːx/ "speech_NOUN_FEM"
+	<Buch> /bˈuːx/ "book_NOUN_FEM"
+	<Nacht> /nˈaxt/ "night_NOUN_FEM"
 
 /v/ (0.008)
 	<hawwe> /hˈavə/ "have_VERB"
 	<iwwer> /ˈɪvɑ/ "over_PREP"
 	<was> /vˈas/ "what_PRON"
 
+/b̥/ (0.007)
+	<Kalb> /kʰˈalb̥/ "calf_NOUN"
+	<halb> /hˈalb̥/ "half_NOUN"
+	<lieb> /lˈiːb̥/ "beloved_ADJ"
+
+/ɡ̊/ (0.006)
+	<Baerig> /bˈɛːɾɪɡ̊/ "mountain_NOUN"
+	<Aag> /ˈɔːɡ̊/ "eye_NOUN"
+	<Deeg> /dˈeːɡ̊/ "dough_NOUN"
+
 /j/ (0.005)
-	<folye> /fˈɔljə/ "follow_VERB"
+	<yung> /jˈʊŋ/ "young_NOUN"
 	<Yaahr> /jˈɔːɑ/ "year_NOUN"
-	<fliege> /flˈiːjə/ "fly_VERB"
+	<folye> /fˈɔljə/ "follow_VERB"
 
 /ɣ/ (0.004)
-	<schlaage> /ʃlˈɔːɣə/ "slay_VERB"
+	<saage> /sˈɔːɣə/ "say_VERB"
 	<Naggel> /nˈaɣl̩/ "fingernail_NOUN"
-	<Voggel> /fˈɔɣl̩/ "bird_NOUN_MASC"
+	<schlaage> /ʃlˈɔːɣə/ "slay_VERB"
+
+/p/ (0.004)
+	<Appel> /ˈapəl/ "apple_NOUN"
+	<Kopp> /kʰˈɔp/ "head_NOUN"
+	<Haapt> /hˈɔːpd̥/ "head_NOUN"
 
 /p͡f/ (0.001)
 	<Pflicht> /p͡flˈɪçt/ "plight_NOUN"
 
 /pʰ/ (0.001)
-	<Paad> /pʰˈɔːt/ "path_NOUN"
+	<Paad> /pʰˈɔːd̥/ "path_NOUN"
 
 
 

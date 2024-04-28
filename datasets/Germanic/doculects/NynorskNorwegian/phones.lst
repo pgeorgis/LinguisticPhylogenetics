@@ -29,15 +29,15 @@ VOWELS
 	<slå> /slˈoː/ "slay_VERB"
 	<båt> /bˈoːt/ "boat_NOUN"
 
-/ˈʉ/ (0.018)
-	<ulv> /ˈʉlʋ/ "wolf_NOUN"
-	<munn> /mˈʉnː/ "mouth_NOUN"
-	<hundrad> /hˈʉndɾɑ/ "hundred_NUM"
+/ˈuː/ (0.019)
+	<sko> /skˈuː/ "shoe_NOUN"
+	<god> /ɡˈuː/ "good_ADJ"
+	<fot> /fˈuːt/ "foot_NOUN"
 
-/ˈuː/ (0.018)
-	<broder> /bɾˈuːdeɾ/ "brother_NOUN"
-	<mor> /mˈuːɾ/ "mother_NOUN"
-	<stor> /stˈuːɾ/ "big_ADJ"
+/ˈʉ/ (0.018)
+	<hund> /hˈʉnd/ "dog_NOUN"
+	<tjukk> /ɕˈʉʰkː/ "thick_ADJ"
+	<fugl> /fˈʉɡl/ "bird_NOUN_MASC"
 
 /ˈiː/ (0.018)
 	<bie> /bˈiːə/ "bee_NOUN"
@@ -130,7 +130,7 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.087)
+/ɾ/ (0.086)
 	<rik> /ɾˈiːk/ "rich_ADJ"
 	<språk> /spɾˈoːk/ "speech_NOUN_FEM"
 	<barn> /bˈɑːɾn/ "child_NOUN_NEU"
@@ -145,7 +145,7 @@ CONSONANTS
 	<ni> /nˈiː/ "nine_NUM"
 	<snø> /snˈøː/ "snow_NOUN"
 
-/l/ (0.041)
+/l/ (0.042)
 	<fugl> /fˈʉɡl/ "bird_NOUN_MASC"
 	<plikt> /pʰlˈɪkt/ "plight_NOUN"
 	<blø> /blˈøː/ "bleed_VERB"
@@ -160,8 +160,8 @@ CONSONANTS
 	<knut> /kʰnˈʉːt/ "knot_NOUN"
 	<betre> /bˈeːtɾe/ "better_ADJ"
 
-/ɡ/ (0.029)
-	<suga> /sˈʉːɡɑ/ "suck_VERB"
+/ɡ/ (0.03)
+	<regn> /ɾˈɛɡn/ "rain_NOUN"
 	<auga> /ˈæʉ̯ɡɑ/ "eye_NOUN"
 	<haug> /hˈæʉ̯ɡ/ "high_ADJ"
 
@@ -271,13 +271,17 @@ CONSONANTS
 	<katt> /kʰˈɑtː/ "cat_NOUN"
 	<tretten> /tʰɾˈɛtːen/ "thirteen_NUM"
 
+/pʰ/ (0.002)
+	<plog> /pʰlˈuːɡ/ "plough_NOUN"
+	<plikt> /pʰlˈɪkt/ "plight_NOUN"
+
 /mː/ (0.002)
-	<tomme> /tʰˈɔmːe/ "thumb_NOUN"
 	<lamb> /lˈɑmː/ "lamb_NOUN"
+	<tomme> /tʰˈɔmːe/ "thumb_NOUN"
 
 /jː/ (0.002)
-	<bryggja> /bɾˈʏjːɑ/ "brew_VERB"
 	<liggja> /lˈɪjːɑ/ "lie_VERB"
+	<bryggja> /bɾˈʏjːɑ/ "brew_VERB"
 
 /ʰpː/ (0.001)
 	<upp> /ˈʉʰpː/ "up_ADV"
@@ -287,9 +291,6 @@ CONSONANTS
 
 /sː/ (0.001)
 	<oss> /ˈɔsː/ "us_PRON"
-
-/pʰ/ (0.001)
-	<plikt> /pʰlˈɪkt/ "plight_NOUN"
 
 
 

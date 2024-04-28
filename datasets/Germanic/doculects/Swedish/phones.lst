@@ -39,20 +39,20 @@ VOWELS
 	<uggla> /ˈɵɡla/ "owl_NOUN"
 	<ugn> /ˈɵŋn/ "oven_NOUN"
 
+/ˈuː/ (0.017)
+	<bror> /brˈuːr/ "brother_NOUN"
+	<mor> /mˈuːr/ "mother_NOUN"
+	<stor> /stˈuːr/ "big_ADJ"
+
 /ˈɪ/ (0.016)
-	<finger> /fˈɪŋːɛr/ "finger_NOUN"
-	<vinter> /vˈɪntɛr/ "winter_NOUN"
-	<frisk> /frˈɪsk/ "fresh_ADJ"
+	<binda> /bˈɪnda/ "bind_VERB"
+	<kvinna> /kʰvˈɪnːa/ "woman_NOUN"
+	<simma> /sˈɪmːa/ "swim_VERB"
 
 /ˈɑː/ (0.016)
 	<jag> /jˈɑːɡ/ "I_PRON"
-	<garn> /ɡˈɑːɳ/ "yarn_NOUN"
 	<vad> /vˈɑːd/ "what_PRON"
-
-/ˈuː/ (0.016)
-	<stor> /stˈuːr/ "big_ADJ"
-	<stol> /stˈuːl/ "stool_NOUN"
-	<jord> /jˈuːɖ/ "earth_NOUN"
+	<nagel> /nˈɑːɡɛl/ "fingernail_NOUN"
 
 /ˈiː/ (0.016)
 	<rik> /rˈiːk/ "rich_ADJ"
@@ -148,12 +148,12 @@ CONSONANTS
 	<månad> /mˈoːnad/ "month_NOUN"
 	<bjuda> /bjˈʉːda/ "bid_VERB"
 
-/l/ (0.046)
+/l/ (0.047)
 	<lus> /lˈʉːs/ "louse_NOUN"
 	<blöda> /blˈøːda/ "bleed_VERB"
 	<fluga> /flˈʉːɡa/ "housefly_NOUN"
 
-/v/ (0.038)
+/v/ (0.037)
 	<kvinna> /kʰvˈɪnːa/ "woman_NOUN"
 	<vek> /vˈeːk/ "weak_ADJ"
 	<löv> /lˈøːv/ "leaf_NOUN"
@@ -163,9 +163,9 @@ CONSONANTS
 	<plikt> /pʰlˈɪkt/ "plight_NOUN"
 	<gäst> /jˈɛst/ "guest_NOUN"
 
-/ɡ/ (0.025)
+/ɡ/ (0.026)
 	<jag> /jˈɑːɡ/ "I_PRON"
-	<gul> /ɡˈʉːl/ "yellow_ADJ"
+	<garn> /ɡˈɑːɳ/ "yarn_NOUN"
 	<nagel> /nˈɑːɡɛl/ "fingernail_NOUN"
 
 /k/ (0.023)
@@ -290,6 +290,10 @@ CONSONANTS
 	<upp> /ˈɵpː/ "up_ADV"
 	<skepp> /ɧˈɛpː/ "ship_NOUN"
 
+/pʰ/ (0.002)
+	<plog> /pʰlˈuːɡ/ "plough_NOUN"
+	<plikt> /pʰlˈɪkt/ "plight_NOUN"
+
 /ʈ/ (0.001)
 	<törst> /tʰˈœʂʈ/ "thirst_NOUN"
 
@@ -298,9 +302,6 @@ CONSONANTS
 
 /ɳː/ (0.001)
 	<törne> /tʰˈœɳːɛ/ "thorn_NOUN"
-
-/pʰ/ (0.001)
-	<plikt> /pʰlˈɪkt/ "plight_NOUN"
 
 /jː/ (0.001)
 	<säga> /sˈɛjːa/ "say_VERB"

@@ -34,45 +34,45 @@ VOWELS
 	<norde> /nˈord̥ə/ "north_NOUN"
 	<Vouk> /fˈowk/ "folk_NOUN"
 
-/ˈyː/ (0.015)
-	<Müüs> /mˈyːs/ "mice_NOUN"
-	<nüün> /nˈyːn/ "nine_NUM"
-	<tüüf> /tˈyːf/ "deep_ADJ"
+/ˈyː/ (0.016)
+	<füüf> /fˈyːf/ "five_NUM"
+	<Flüüge> /flˈyːɡ̊ə/ "housefly_NOUN"
+	<büüte> /b̥ˈyːtə/ "bid_VERB"
 
 /ˈoː/ (0.015)
-	<Ofe> /ˈoːfə/ "oven_NOUN"
-	<choo> /χˈoː/ "come_VERB"
+	<Woort> /ʋˈoːrt/ "word_NOUN"
 	<gross> /ɡ̊rˈoːsː/ "great_ADJ"
+	<Brot> /b̥rˈoːt/ "bread_NOUN"
 
 /ˈæi̯/ (0.013)
 	<Bäi> /b̥ˈæi̯/ "bone_NOUN"
 	<Zäiche> /ʦˈæi̯χə/ "token_NOUN"
-	<Schwäiss> /ʃʋˈæi̯sː/ "sweat_NOUN"
+	<Schtäi> /ʃtˈæi̯/ "stone_NOUN"
 
 /ˈuː/ (0.013)
-	<suuge> /sˈuːɡ̊ə/ "suck_VERB"
 	<suur> /sˈuːr/ "sour_ADJ"
 	<Tuub> /tˈuːb̥/ "dove_NOUN"
+	<us> /ˈuːs/ "out_PREP"
 
 /ˈiː/ (0.012)
-	<Siite> /sˈiːtə/ "side_NOUN"
 	<Wiib> /ʋˈiːb̥/ "wife_NOUN"
 	<riich> /rˈiːχ/ "rich_ADJ"
+	<Siite> /sˈiːtə/ "side_NOUN"
 
-/ˈy/ (0.011)
-	<drücke> /d̥rˈykːə/ "press_VERB"
-	<flüge> /flˈyɡ̊ə/ "fly_VERB"
-	<schwümme> /ʃʋˈymːə/ "swim_VERB"
-
-/ˈuə̯/ (0.01)
-	<Blueme> /b̥lˈuə̯mə/ "flower_NOUN"
+/ˈuə̯/ (0.011)
+	<Bluet> /b̥lˈuə̯t/ "blood_NOUN"
 	<sueche> /sˈuə̯χə/ "seek_VERB"
-	<Schue> /ʃˈuə̯/ "shoe_NOUN"
+	<Blueme> /b̥lˈuə̯mə/ "flower_NOUN"
+
+/ˈy/ (0.01)
+	<schwümme> /ʃʋˈymːə/ "swim_VERB"
+	<wünsche> /ʋˈynʃə/ "wish_VERB"
+	<Fründ> /frˈynd̥/ "friend_NOUN"
 
 /ˈau̯/ (0.008)
-	<Laub> /lˈau̯b̥/ "leaf_NOUN"
-	<Haupt> /hˈau̯pt/ "head_NOUN"
+	<Rauch> /rˈau̯χ/ "smoke_NOUN"
 	<Aug> /ˈau̯ɡ̊/ "eye_NOUN"
+	<Frau> /frˈau̯/ "woman_NOUN"
 
 /i/ (0.008)
 	<Honig> /hˈoniɡ̊/ "honey_NOUN"
@@ -133,7 +133,7 @@ CONSONANTS
 	<scharpf> /ʃˈɒrp͡f/ "sharp_ADJ"
 	<Turscht> /d̥ˈurʃt/ "thirst_NOUN"
 
-/t/ (0.056)
+/t/ (0.055)
 	<Bruscht> /b̥rˈuʃt/ "breast_NOUN"
 	<Turscht> /d̥ˈurʃt/ "thirst_NOUN"
 	<tood> /tˈoːd̥/ "dead_ADJ"
@@ -153,8 +153,8 @@ CONSONANTS
 	<Chönig> /χˈøːniɡ̊/ "king_NOUN"
 	<Zäiche> /ʦˈæi̯χə/ "token_NOUN"
 
-/ɡ̊/ (0.039)
-	<gälb> /ɡ̊ˈælb̥/ "yellow_ADJ"
+/ɡ̊/ (0.04)
+	<Wäg> /ʋˈæɡ̊/ "way_NOUN"
 	<Flüüge> /flˈyːɡ̊ə/ "housefly_NOUN"
 	<Gäischt> /ɡ̊ˈæi̯ʃt/ "ghost_NOUN"
 
@@ -213,20 +213,20 @@ CONSONANTS
 	<singe> /sˈiŋə/ "sing_VERB"
 	<Hang> /hˈɒŋ/ "hand_NOUN_FEM"
 
+/p͡f/ (0.006)
+	<Pflueg> /p͡flˈuə̯ɡ̊/ "plough_NOUN"
+	<Pflicht> /p͡flˈiχt/ "plight_NOUN"
+	<scharpf> /ʃˈɒrp͡f/ "sharp_ADJ"
+
 /k/ (0.006)
-	<danke> /d̥ˈɒŋkə/ "thank_VERB"
+	<känne> /kˈænːə/ "ken_VERB"
 	<nackt> /nˈɒkt/ "naked_ADJ"
 	<dick> /d̥ˈik/ "thick_ADJ"
 
 /ɡ̊ː/ (0.005)
+	<Brugg> /b̥rˈuɡ̊ː/ "bridge_NOUN"
 	<ligge> /lˈiɡ̊ːə/ "lie_VERB"
-	<Mugg> /mˈuɡ̊ː/ "midge_NOUN"
 	<Egge> /ˈeɡ̊ːə/ "edge_NOUN"
-
-/p͡f/ (0.005)
-	<Öpfel> /ˈøp͡fəl/ "apple_NOUN"
-	<Pfaad> /p͡fˈɒːd̥/ "path_NOUN"
-	<Chopf> /χˈop͡f/ "head_NOUN"
 
 /tː/ (0.004)
 	<Fatter> /fˈɒtːər/ "father_NOUN"
