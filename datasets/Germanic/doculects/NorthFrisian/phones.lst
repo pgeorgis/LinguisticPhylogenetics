@@ -35,7 +35,7 @@ VOWELS
 	<tuur> /tˈuːr/ "tear_NOUN"
 
 /ˈeː/ (0.016)
-	<me> /mˈeː/ "me_PRON"
+	<me> /mˈeː/ "me_PRON_DAT"
 	<heewe> /hˈeːvə/ "have_VERB"
 	<teen> /tˈeːn/ "thin_ADJ"
 
@@ -168,11 +168,11 @@ CONSONANTS
 
 /f/ (0.029)
 	<frisch> /frˈiʃ/ "fresh_ADJ"
-	<fätj> /fˈɛtʲ/ "feet_NOUN"
+	<fätj> /fˈɛtʲ/ "feet_NOUN_PL"
 	<fjouer> /fjˈɔu̯ər/ "four_NUM"
 
 /m/ (0.025)
-	<me> /mˈeː/ "me_PRON"
+	<me> /mˈeː/ "me_PRON_DAT"
 	<eerm> /ˈeːrm/ "arm_NOUN"
 	<wörm> /vˈœrm/ "worm_NOUN"
 

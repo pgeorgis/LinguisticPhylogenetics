@@ -9,10 +9,10 @@ VOWELS
 	<𐌺𐌰𐌻𐌱𐍉> /kˈalboː/ "calf_NOUN"
 	<𐌰𐌽𐌸𐌰𐍂> /ˈanθar/ "other_ADJ"
 
-/ˈi/ (0.041)
-	<𐍅𐌹𐌲𐍃> /wˈiɡs/ "way_NOUN"
-	<𐍅𐌹𐌻𐌸𐌴𐌹𐍃> /wˈilθiːs/ "wild_ADJ"
-	<𐍃𐌹𐌲𐌲𐍅𐌰𐌽> /sˈiŋɡʷan/ "sing_VERB"
+/ˈi/ (0.042)
+	<𐍄𐍅𐌰𐌹 𐍄𐌹𐌲𐌾𐌿𐍃> /twˈɛːtˈiɣjus/ "twenty_NUM"
+	<𐍅𐌹𐌺𐍉> /wˈikoː/ "week_NOUN"
+	<𐍃𐌺𐌹𐍀> /skˈip/ "ship_NOUN"
 
 /ˈu/ (0.023)
 	<𐌲𐌿𐌻𐌸> /ɡˈulθ/ "gold_NOUN_NEU"
@@ -98,16 +98,16 @@ VOWELS
 
 CONSONANTS
 /s/ (0.137)
-	<𐍃𐌹𐌿𐌺𐍃> /sˈiu̯ks/ "sick_ADJ"
-	<𐍄𐍅𐌰𐌹 𐍄𐌹𐌲𐌾𐌿𐍃> /twˈɛːtˈiɣjus/ "twenty_NUM"
+	<𐍃𐌺𐍉𐌷𐍃> /skˈoːhs/ "shoe_NOUN"
+	<𐌱𐌰𐌲𐌼𐍃> /bˈaɡms/ "tree_NOUN"
 	<𐍆𐍂𐌹𐌾𐍉𐌽𐌳𐍃> /frˈijoːnds/ "friend_NOUN"
 
-/n/ (0.088)
+/n/ (0.087)
 	<𐌽𐌴𐌸𐌻𐌰> /nˈeːθla/ "needle_NOUN"
 	<𐌼𐌿𐌽𐌸𐍃> /mˈunθs/ "mouth_NOUN"
 	<𐍄𐌿𐌽𐌸𐌿𐍃> /tˈunθus/ "tooth_NOUN"
 
-/r/ (0.052)
+/r/ (0.051)
 	<𐍃𐍅𐌹𐍃𐍄𐌰𐍂> /swˈistar/ "sister_NOUN"
 	<𐍂𐌹𐌲𐌽> /rˈiɡn/ "rain_NOUN"
 	<𐌿𐌽𐌳𐌰𐍂> /ˈundar/ "under_PREP"
@@ -122,7 +122,7 @@ CONSONANTS
 	<𐍃𐌺𐌹𐌻𐌳𐌿𐍃> /skˈildus/ "shield_NOUN"
 	<𐌷𐌹𐌻𐍀𐌰𐌽> /hˈilpan/ "help_VERB"
 
-/h/ (0.04)
+/h/ (0.039)
 	<𐌷𐌴𐍂> /hˈeːr/ "here_ADV"
 	<𐌷𐌿𐌽𐌳> /hˈund/ "hundred_NUM"
 	<𐍄𐌰𐌹𐌷𐌿𐌽> /tˈɛhun/ "ten_NUM"
@@ -134,10 +134,10 @@ CONSONANTS
 
 /k/ (0.029)
 	<𐍅𐌹𐌺𐍉> /wˈikoː/ "week_NOUN"
-	<𐌼𐌹𐌺> /mˈik/ "me_PRON"
+	<𐌼𐌹𐌺> /mˈik/ "me_PRON_ACC"
 	<𐍃𐌺𐌰𐌿𐌽𐍃> /skˈɔːns/ "beautiful_ADJ"
 
-/w/ (0.028)
+/w/ (0.027)
 	<𐍅𐌹𐌺𐍉> /wˈikoː/ "week_NOUN"
 	<𐍅𐌰𐌿𐍂𐌳> /wˈɔrt/ "word_NOUN"
 	<𐍅𐌹𐌽𐌳𐍃> /wˈinds/ "wind_NOUN"
@@ -157,9 +157,9 @@ CONSONANTS
 	<𐌷𐌿𐌽𐌳> /hˈund/ "hundred_NUM"
 	<𐌱𐌹𐌽𐌳𐌰𐌽> /bˈindan/ "bind_VERB"
 
-/m/ (0.022)
-	<𐌼𐌹𐌻𐌿𐌺𐍃> /mˈiluks/ "milk_NOUN_FEM"
-	<𐌼𐌿𐌽𐌸𐍃> /mˈunθs/ "mouth_NOUN"
+/m/ (0.023)
+	<𐌼𐌰𐌽𐍃> /mˈans/ "men_NOUN_PL"
+	<𐌼𐌴𐌽𐌰> /mˈeːna/ "moon_NOUN"
 	<𐌻𐌰𐌼𐌱> /lˈamb/ "lamb_NOUN"
 
 /b/ (0.02)

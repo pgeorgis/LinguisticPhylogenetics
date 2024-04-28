@@ -1,8 +1,8 @@
 VOWELS
 /ɐ/ (0.052)
 	<Tochter> /tʰˈɔxtɐ/ "daughter_NOUN"
-	<Schwester> /ʃvˈɛstɐ/ "sister_NOUN"
-	<Wurm> /vˈʊɐm/ "worm_NOUN"
+	<scharf> /ʃˈaɐf/ "sharp_ADJ"
+	<Wort> /vˈɔɐt/ "word_NOUN"
 
 /ə/ (0.044)
 	<Wolle> /vˈɔlə/ "wool_NOUN_FEM"
@@ -44,7 +44,7 @@ VOWELS
 	<trocken> /tʰʁˈɔkn̩/ "dry_ADJ"
 	<Horn> /hˈɔɐn/ "horn_NOUN"
 
-/ˈiː/ (0.016)
+/ˈiː/ (0.017)
 	<Tier> /tʰˈiːɐ/ "animal_NOUN"
 	<ihr> /ˈiːɐ/ "ye_PRON"
 	<wir> /vˈiːɐ/ "we_PRON"
@@ -81,7 +81,7 @@ VOWELS
 
 /ˈyː/ (0.007)
 	<lügen> /lˈyːɡn̩/ "tell lies_VERB"
-	<Füße> /fˈyːsə/ "feet_NOUN"
+	<Füße> /fˈyːsə/ "feet_NOUN_PL"
 	<Küken> /kʰˈyːkn̩/ "chicken_NOUN"
 
 /ˈɛː/ (0.004)
@@ -91,13 +91,13 @@ VOWELS
 
 /ɪ/ (0.004)
 	<Honig> /hˈoːnɪç/ "honey_NOUN"
-	<tödlich> /tʰˈøːd̥lɪç/ "deadly_ADJ"
+	<tödlich> /tʰˈøːdlɪç/ "deadly_ADJ"
 	<zwanzig> /ʦvˈanʦɪç/ "twenty_NUM"
 
 /ˈøː/ (0.004)
 	<hören> /hˈøːʁən/ "hear_VERB"
 	<König> /kʰˈøːnɪç/ "king_NOUN"
-	<tödlich> /tʰˈøːd̥lɪç/ "deadly_ADJ"
+	<tödlich> /tʰˈøːdlɪç/ "deadly_ADJ"
 
 /ˈœ/ (0.002)
 	<können> /kʰˈœnən/ "can_VERB"
@@ -122,7 +122,7 @@ CONSONANTS
 	<wild> /vˈɪld̥/ "wild_ADJ"
 	<lieb> /lˈiːb̥/ "beloved_ADJ"
 
-/t/ (0.045)
+/t/ (0.044)
 	<alt> /ˈalt/ "old_ADJ"
 	<Gott> /ɡˈɔt/ "god_NOUN"
 	<Wetter> /vˈɛtɐ/ "weather_NOUN"
@@ -147,37 +147,37 @@ CONSONANTS
 	<Wurm> /vˈʊɐm/ "worm_NOUN"
 	<Wind> /vˈɪnd̥/ "wind_NOUN"
 
-/ʃ/ (0.028)
-	<Schiff> /ʃˈɪf/ "ship_NOUN"
-	<Schwester> /ʃvˈɛstɐ/ "sister_NOUN"
-	<Stuhl> /ʃtˈuːl/ "stool_NOUN"
-
 /m/ (0.028)
-	<Arm> /ˈaɐm/ "arm_NOUN"
-	<Monat> /mˈoːnat/ "month_NOUN"
+	<Mensch> /mˈɛnʃ/ "person_NOUN"
+	<Wurm> /vˈʊɐm/ "worm_NOUN"
 	<Imme> /ˈɪmə/ "bee_NOUN"
 
+/ʃ/ (0.028)
+	<Schwester> /ʃvˈɛstɐ/ "sister_NOUN"
+	<Asche> /ˈaʃə/ "ash_NOUN"
+	<Schaf> /ʃˈaːf/ "sheep_NOUN"
+
 /b/ (0.028)
-	<Blut> /blˈuːt/ "blood_NOUN"
 	<haben> /hˈaːbn̩/ "have_VERB"
 	<bitten> /bˈɪtn̩/ "request_VERB"
+	<treiben> /tʰʁˈaɪ̯bn̩/ "drive_VERB"
 
 /ɡ/ (0.023)
-	<Regen> /ʁˈeːɡn̩/ "rain_NOUN"
 	<liegen> /lˈiːɡn̩/ "lie_VERB"
 	<Gans> /ɡˈans/ "goose_NOUN"
+	<sagen> /zˈaːɡn̩/ "say_VERB"
 
 /z/ (0.022)
-	<Sau> /zˈaʊ̯/ "sow_NOUN"
 	<Sand> /zˈand̥/ "sand_NOUN"
 	<sechs> /zˈɛks/ "six_NUM"
+	<See> /zˈeː/ "sea_NOUN"
 
-/d/ (0.021)
-	<Hundert> /hˈʊndɐt/ "hundred_NUM"
+/d/ (0.022)
 	<deutsch> /dˈɔʏ̯tʃ/ "Teutonic_ADJ"
-	<finden> /fˈɪndn̩/ "find_VERB"
+	<Wunder> /vˈʊndɐ/ "wonder_NOUN"
+	<Feder> /fˈeːdɐ/ "feather_NOUN"
 
-/h/ (0.021)
+/h/ (0.02)
 	<Horn> /hˈɔɐn/ "horn_NOUN"
 	<Haupt> /hˈaʊ̯pt/ "head_NOUN"
 	<hier> /hˈiːɐ/ "here_ADV"
@@ -192,15 +192,15 @@ CONSONANTS
 	<dreizehn> /dʁˈaɪ̯ʦeːn/ "thirteen_NUM"
 	<Zeh> /ʦˈeː/ "toe_NOUN"
 
-/d̥/ (0.016)
-	<Wind> /vˈɪnd̥/ "wind_NOUN"
-	<Bad> /bˈaːd̥/ "bath_NOUN_NEU"
-	<Pfad> /p͡fˈaːd̥/ "path_NOUN"
-
 /tʰ/ (0.015)
-	<tausend> /tʰˈaʊ̯zn̩d̥/ "thousand_NUM"
-	<tödlich> /tʰˈøːd̥lɪç/ "deadly_ADJ"
-	<Taube> /tʰˈaʊ̯bə/ "dove_NOUN"
+	<Tier> /tʰˈiːɐ/ "animal_NOUN"
+	<treiben> /tʰʁˈaɪ̯bn̩/ "drive_VERB"
+	<Träne> /tʰʁˈɛːnə/ "tear_NOUN_FEM"
+
+/d̥/ (0.015)
+	<Wind> /vˈɪnd̥/ "wind_NOUN"
+	<Freund> /fʁˈɔʏ̯nd̥/ "friend_NOUN"
+	<Mond> /mˈoːnd̥/ "moon_NOUN"
 
 /kʰ/ (0.014)
 	<Kirche> /kʰˈɪɐçə/ "church_NOUN_FEM"

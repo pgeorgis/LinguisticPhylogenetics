@@ -14,8 +14,8 @@ VOWELS
 	<Ring> /rˈiŋ/ "ring_NOUN"
 	<sibe> /sˈib̥ə/ "seven_NUM"
 
-/ˈæ/ (0.022)
-	<Wätter> /ʋˈætːər/ "weather_NOUN"
+/ˈæ/ (0.023)
+	<Wäg> /ʋˈæɡ̊/ "way_NOUN"
 	<nächscht> /nˈæχʃt/ "next_ADJ"
 	<Häne> /hˈænə/ "hen_NOUN"
 
@@ -89,20 +89,20 @@ VOWELS
 	<Beeri> /b̥ˈeːri/ "berry_NOUN"
 	<See> /sˈeː/ "sea_NOUN"
 
-/ˈe/ (0.006)
-	<zwenzig> /ʦʋˈenʦiɡ̊/ "twenty_NUM"
-	<Egge> /ˈeɡ̊ːə/ "edge_NOUN"
-	<besser> /b̥ˈesːər/ "better_ADJ"
-
 /ˈæː/ (0.005)
 	<Härz> /hˈæːrʦ/ "heart_NOUN"
-	<Rääge> /rˈæːɡ̊ə/ "rain_NOUN"
+	<Chääs> /χˈæːs/ "cheese_NOUN"
 	<zää> /ʦˈæː/ "ten_NUM"
 
 /ˈyə̯/ (0.005)
-	<Brüeder> /b̥rˈyə̯d̥ər/ "brother_NOUN"
-	<Füess> /fˈyə̯sː/ "feet_NOUN"
+	<Füess> /fˈyə̯sː/ "feet_NOUN_PL"
+	<grüen> /ɡ̊rˈyə̯n/ "green_ADJ"
 	<süess> /sˈyə̯sː/ "sweet_ADJ"
+
+/ˈe/ (0.005)
+	<Zwerg> /ʦʋˈerɡ̊/ "dwarf_NOUN"
+	<Egge> /ˈeɡ̊ːə/ "edge_NOUN"
+	<zwenzig> /ʦʋˈenʦiɡ̊/ "twenty_NUM"
 
 /ˈøː/ (0.004)
 	<Chönig> /χˈøːniɡ̊/ "king_NOUN"
@@ -234,7 +234,7 @@ CONSONANTS
 	<bitte> /b̥ˈitːə/ "request_VERB"
 
 /nː/ (0.003)
-	<Männer> /mˈænːər/ "men_NOUN"
+	<Männer> /mˈænːər/ "men_NOUN_PL"
 	<chönne> /χˈønːə/ "can_VERB"
 	<känne> /kˈænːə/ "ken_VERB"
 

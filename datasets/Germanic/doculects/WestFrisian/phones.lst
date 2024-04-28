@@ -29,15 +29,15 @@ VOWELS
 	<namme> /nˈamə/ "name_NOUN"
 	<al> /ˈal/ "all_ADJ"
 
-/ˈɛ/ (0.015)
-	<trije> /trˈɛjə/ "three_NUM"
-	<frij> /frˈɛj/ "free_ADJ"
-	<skerp> /skˈɛrp/ "sharp_ADJ"
+/ˈaː/ (0.016)
+	<waarm> /ʋˈaːrm/ "warm_ADJ"
+	<laam> /lˈaːm/ "lamb_NOUN"
+	<slaan> /slˈaːn/ "slay_VERB"
 
-/ˈaː/ (0.015)
-	<haad> /hˈaːt/ "head_NOUN"
-	<paad> /pˈaːd̥/ "path_NOUN"
-	<apel> /ˈaːpəl/ "apple_NOUN"
+/ˈɛ/ (0.015)
+	<ljeppe> /ljˈɛpə/ "leap_VERB"
+	<nij> /nˈɛj/ "new_ADJ"
+	<better> /bˈɛtər/ "better_ADJ"
 
 /ˈuː/ (0.014)
 	<tûzen> /tˈuːzən/ "thousand_NUM"
@@ -74,20 +74,20 @@ VOWELS
 	<geit> /ɡˈɛi̯t/ "goat_NOUN"
 	<neil> /nˈɛi̯l/ "fingernail_NOUN"
 
-/ˈɔː/ (0.007)
+/ˈɔː/ (0.006)
 	<hân> /hˈɔːn/ "hand_NOUN_FEM"
-	<sân> /sˈɔːn/ "sand_NOUN"
 	<sân> /sˈɔːn/ "seven_NUM"
+	<sâlt> /sˈɔːt/ "salt_NOUN"
 
 /ˈeː/ (0.006)
-	<see> /sˈeː/ "sea_NOUN"
 	<lever> /lˈeːvər/ "liver_NOUN"
 	<heech> /hˈeːχ/ "high_ADJ"
+	<see> /sˈeː/ "sea_NOUN"
 
 /ˈu/ (0.005)
-	<ûnder> /ˈundər/ "under_PREP"
-	<fûgel> /fˈuɣəl/ "bird_NOUN_MASC"
 	<wûnder> /ʋˈundər/ "wonder_NOUN"
+	<fûgel> /fˈuɣəl/ "bird_NOUN_MASC"
+	<ûnder> /ˈundər/ "under_PREP"
 
 /ˈyː/ (0.004)
 	<út> /ˈyːt/ "out_PREP"
@@ -123,7 +123,7 @@ VOWELS
 	<freon> /frˈøə̯n/ "friend_NOUN"
 
 /ˈu̯o/ (0.001)
-	<fuotten> /fˈu̯otən/ "feet_NOUN"
+	<fuotten> /fˈu̯otən/ "feet_NOUN_PL"
 
 
 
@@ -158,9 +158,9 @@ CONSONANTS
 	<ik> /ˈɪk/ "I_PRON"
 	<ko> /kˈoː/ "cow_NOUN"
 
-/j/ (0.034)
+/j/ (0.035)
+	<jimme> /jˈɪmə/ "ye_PRON"
 	<jier> /jˈiə̯r/ "year_NOUN"
-	<jong> /jˈɔŋ/ "young_NOUN"
 	<haatsje> /hˈaːʦjə/ "hate_VERB"
 
 /f/ (0.029)
@@ -198,30 +198,30 @@ CONSONANTS
 	<hillich> /hˈɪləχ/ "holy_ADJ"
 	<nacht> /nˈaχt/ "night_NOUN_FEM"
 
-/d̥/ (0.015)
-	<bloed> /blˈuə̯d̥/ "blood_NOUN"
-	<noard> /nˈoə̯d̥/ "north_NOUN"
-	<swurd> /svˈød̥/ "sword_NOUN"
-
 /v/ (0.014)
+	<swart> /svˈat/ "black_ADJ"
+	<swiet> /svˈiə̯t/ "sweet_ADJ"
 	<lever> /lˈeːvər/ "liver_NOUN"
-	<swyn> /svˈin/ "swine_NOUN"
-	<swimme> /svˈɪmə/ "swim_VERB"
 
 /p/ (0.014)
-	<helpe> /hˈɛlpə/ "help_VERB"
+	<skiep> /skˈiə̯p/ "sheep_NOUN"
 	<skerp> /skˈɛrp/ "sharp_ADJ"
-	<plicht> /plˈɪχt/ "plight_NOUN"
+	<helpe> /hˈɛlpə/ "help_VERB"
+
+/d̥/ (0.014)
+	<paad> /pˈaːd̥/ "path_NOUN"
+	<blêd> /blˈɛːd̥/ "leaf_NOUN_NEU"
+	<noard> /nˈoə̯d̥/ "north_NOUN"
 
 /ŋ/ (0.012)
-	<sjonge> /ɕˈɔŋə/ "sing_VERB"
 	<lang> /lˈaŋ/ "long_ADJ"
 	<ring> /rˈɪŋ/ "ring_NOUN"
+	<jong> /jˈɔŋ/ "young_NOUN"
 
 /ɡ/ (0.011)
-	<goed> /ɡˈuə̯d̥/ "good_ADJ"
 	<geast> /ɡˈɪə̯st/ "ghost_NOUN"
 	<grut> /ɡrˈuːt/ "great_ADJ"
+	<gast> /ɡˈast/ "guest_NOUN"
 
 /ɣ/ (0.008)
 	<ploege> /plˈuə̯ɣə/ "plough_NOUN"

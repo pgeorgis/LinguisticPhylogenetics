@@ -12,7 +12,7 @@ VOWELS
 /ˈɛ/ (0.026)
 	<tretten> /tʰɾˈɛtːən/ "thirteen_NUM"
 	<lett> /lˈɛtː/ "light_ADJ"
-	<menn> /mˈɛnː/ "men_NOUN"
+	<menn> /mˈɛnː/ "men_NOUN_PL"
 
 /ˈuː/ (0.023)
 	<kone> /kʰˈuːnə/ "woman_NOUN"
@@ -169,7 +169,7 @@ CONSONANTS
 
 /m/ (0.023)
 	<munn> /mˈʉnː/ "mouth_NOUN"
-	<meg> /mˈæɪ̯/ "me_PRON"
+	<meg> /mˈæɪ̯/ "me_PRON_ACC"
 	<melk> /mˈɛlk/ "milk_NOUN_FEM"
 
 /f/ (0.022)
@@ -199,7 +199,7 @@ CONSONANTS
 
 /tː/ (0.012)
 	<rett> /ɾˈɛtː/ "right_ADJ"
-	<føtter> /fˈœtːəɾ/ "feet_NOUN"
+	<føtter> /fˈœtːəɾ/ "feet_NOUN_PL"
 	<natt> /nˈɑtː/ "night_NOUN_FEM"
 
 /kʰ/ (0.012)

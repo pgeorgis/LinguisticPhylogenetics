@@ -4,7 +4,7 @@ VOWELS
 	<sehne> /sˈeːnə/ "see_VERB"
 	<winsche> /ʋˈɪnʃə/ "wish_VERB"
 
-/ɑ/ (0.041)
+/ɑ/ (0.042)
 	<Bruder> /bɾˈuːdɑ/ "brother_NOUN"
 	<Haar> /hˈɔːɑ/ "hair_NOUN"
 	<Ohr> /ˈoːɑ/ "ear_NOUN"
@@ -24,15 +24,15 @@ VOWELS
 	<schee> /ʃˈeː/ "beautiful_ADJ"
 	<gehl> /ɡˈeːl/ "yellow_ADJ"
 
-/ˈaɪ̯/ (0.024)
-	<nei> /nˈaɪ̯/ "new_ADJ"
-	<nein> /nˈaɪ̯n/ "nine_NUM"
-	<drei> /dɾˈaɪ̯/ "three_NUM"
+/ˈɛ/ (0.024)
+	<Lewwer> /lˈɛvɑ/ "liver_NOUN"
+	<mer> /mˈɛɑ/ "me_PRON_DAT"
+	<Schweschder> /ʃʋˈɛʃdɑ/ "sister_NOUN"
 
-/ˈɛ/ (0.023)
-	<Esch> /ˈɛʃ/ "ash_NOUN"
-	<Wedder> /ʋˈɛdɑ/ "weather_NOUN"
-	<Mensch> /mˈɛnʃ/ "person_NOUN"
+/ˈaɪ̯/ (0.024)
+	<deitsch> /dˈaɪ̯tʃ/ "Teutonic_ADJ"
+	<Weib> /ʋˈaɪ̯b̥/ "wife_NOUN"
+	<Eil> /ˈaɪ̯l/ "owl_NOUN"
 
 /ˈɔː/ (0.023)
 	<Laab> /lˈɔːb̥/ "leaf_NOUN"
@@ -133,25 +133,25 @@ CONSONANTS
 	<dot> /dˈoːd̥/ "dead_ADJ"
 	<Haut> /hˈaʊ̯d̥/ "skin_NOUN"
 
-/m/ (0.032)
+/m/ (0.033)
+	<Warem> /ʋˈaːɾəm/ "worm_NOUN"
 	<heem> /hˈeːm/ "home_NOUN"
-	<Menner> /mˈɛnɑ/ "men_NOUN"
-	<Summer> /sˈʊmɑ/ "summer_NOUN"
+	<mer> /mˈɛɑ/ "me_PRON_DAT"
 
 /ʋ/ (0.029)
-	<waarm> /ʋˈɔːɑm/ "warm_ADJ"
-	<Wedder> /ʋˈɛdɑ/ "weather_NOUN"
-	<winsche> /ʋˈɪnʃə/ "wish_VERB"
+	<Woch> /ʋˈɔx/ "week_NOUN"
+	<Woll> /ʋˈɔl/ "wool_NOUN_FEM"
+	<Wasser> /ʋˈasɑ/ "water_NOUN"
 
 /b/ (0.023)
-	<Baad> /bˈɔːd̥/ "bath_NOUN_NEU"
+	<Buch> /bˈuːx/ "book_NOUN_FEM"
 	<Brick> /bɾˈɪk/ "bridge_NOUN"
-	<Baer> /bˈɛːɑ/ "bear_NOUN"
+	<Baad> /bˈɔːd̥/ "bath_NOUN_NEU"
 
 /h/ (0.021)
+	<Harn> /hˈaːn/ "horn_NOUN"
+	<Haar> /hˈɔːɑ/ "hair_NOUN"
 	<Haerz> /hˈɛːɑʦ/ "heart_NOUN"
-	<Hunger> /hˈʊŋɑ/ "hunger_NOUN"
-	<hunnert> /hˈʊnɑd̥/ "hundred_NUM"
 
 /ç/ (0.019)
 	<weech> /ʋˈeːç/ "weak_ADJ"

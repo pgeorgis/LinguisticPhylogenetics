@@ -19,9 +19,9 @@ VOWELS
 	<síggja> /sˈʊʤ̊ːa/ "see_VERB"
 	<hundrað> /hˈʊnd̥ɹa/ "hundred_NUM"
 
-/ˈɛːa̯/ (0.018)
+/ˈɛːa̯/ (0.019)
 	<kærur> /ʧʰˈɛːa̯ɹʊɹ/ "dear_ADJ"
-	<marur> /mˈɛːa̯ɹʊɹ/ "sea_NOUN"
+	<rættur> /ɹˈɛːa̯ʰtːʊɹ/ "right_ADJ"
 	<apa> /ˈɛːa̯ʰpa/ "ape_NOUN"
 
 /ˈa/ (0.018)
@@ -40,7 +40,7 @@ VOWELS
 	<hálvur> /hˈɔlvʊr/ "half_NOUN"
 
 /ˈɛ/ (0.016)
-	<menn> /mˈɛnː/ "men_NOUN"
+	<menn> /mˈɛnː/ "men_NOUN_PL"
 	<drekka> /d̥ɹˈɛʰkːa/ "drink_VERB"
 	<trettan> /tʰɹˈɛʰtːan/ "thirteen_NUM"
 
@@ -70,7 +70,7 @@ VOWELS
 	<dvørgur> /d̥vˈœɹɡ̊ʊɹ/ "dwarf_NOUN"
 
 /ˈøː/ (0.01)
-	<føtur> /fˈøːtʊɹ/ "feet_NOUN"
+	<føtur> /fˈøːtʊɹ/ "feet_NOUN_PL"
 	<søtur> /sˈøːtʊɹ/ "sweet_ADJ"
 	<svørð> /svˈøːɹ/ "sword_NOUN"
 
@@ -80,7 +80,7 @@ VOWELS
 	<breyð> /b̥ɹˈɛːi̯/ "bread_NOUN"
 
 /ˈeː/ (0.008)
-	<meg> /mˈeː/ "me_PRON"
+	<meg> /mˈeː/ "me_PRON_ACC"
 	<veður> /vˈeːvʊɹ/ "weather_NOUN"
 	<epli> /ˈeːʰplɪ/ "apple_NOUN"
 
@@ -131,9 +131,9 @@ VOWELS
 
 
 CONSONANTS
-/ɹ/ (0.131)
-	<tjúkkur> /ʧʰˈʏʰkːʊɹ/ "thick_ADJ"
-	<orð> /ˈoːɹ/ "word_NOUN"
+/ɹ/ (0.132)
+	<tár> /tʰˈɔ̯aːɹ/ "tear_NOUN"
+	<undur> /ˈʊnd̥ʊɹ/ "wonder_NOUN"
 	<dreymur> /d̥ɹˈɛːi̯mʊɹ/ "dream_NOUN"
 
 /s/ (0.041)
@@ -166,15 +166,15 @@ CONSONANTS
 	<góður> /ɡ̊ˈɔːu̯wʊɹ/ "good_ADJ"
 	<grass> /ɡ̊ɹˈɛːa̯s/ "grass_NOUN_NEU"
 
-/d̥/ (0.021)
-	<drekka> /d̥ɹˈɛʰkːa/ "drink_VERB"
-	<eldur> /ˈɛld̥ʊɹ/ "fire_NOUN"
-	<droyma> /d̥ɹˈɔːi̯ma/ "dream_VERB"
-
 /m/ (0.021)
-	<munn> /mˈʊnː/ "mouth_NOUN"
 	<mýs> /mˈʊ̯iːs/ "mice_NOUN"
-	<mánaður> /mˈɔ̯aːnavʊɹ/ "month_NOUN"
+	<máni> /mˈɔ̯aːnɪ/ "moon_NOUN"
+	<menn> /mˈɛnː/ "men_NOUN_PL"
+
+/d̥/ (0.021)
+	<hond> /hˈɔnd̥/ "hand_NOUN_FEM"
+	<droyma> /d̥ɹˈɔːi̯ma/ "dream_VERB"
+	<dvørgur> /d̥vˈœɹɡ̊ʊɹ/ "dwarf_NOUN"
 
 /b̥/ (0.019)
 	<bløða> /b̥lˈøːa/ "bleed_VERB"

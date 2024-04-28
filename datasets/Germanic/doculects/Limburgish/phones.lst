@@ -37,7 +37,7 @@ VOWELS
 /ˈi/ (0.012)
 	<twie> /tβˈi/ "two_NUM"
 	<snie> /snˈi/ "snow_NOUN"
-	<miech> /mˈix/ "me_PRON"
+	<miech> /mˈix/ "me_PRON_ACC"
 
 /ˈɪː/ (0.011)
 	<winse> /βˈɪːnsə/ "wish_VERB"
@@ -57,7 +57,7 @@ VOWELS
 /ˈøː/ (0.01)
 	<breur> /bʀˈøːʀ/ "brother_NOUN"
 	<keuning> /kˈøːnɪŋ/ "king_NOUN"
-	<veuj> /vˈøːj/ "feet_NOUN"
+	<veuj> /vˈøːj/ "feet_NOUN_PL"
 
 /ˈuː/ (0.01)
 	<hoed> /ɦˈuːd̥/ "skin_NOUN"
@@ -236,7 +236,7 @@ CONSONANTS
 	<vogel> /vˈoːɣəl/ "bird_NOUN_MASC"
 
 /j/ (0.016)
-	<veuj> /vˈøːj/ "feet_NOUN"
+	<veuj> /vˈøːj/ "feet_NOUN_PL"
 	<duujelek> /dˈyːjələk/ "deadly_ADJ"
 	<gooj> /ɣˈʊːj/ "good_ADJ"
 

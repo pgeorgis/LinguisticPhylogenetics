@@ -9,7 +9,7 @@ VOWELS
 	<kunna> /kʰˈʏnːa/ "can_VERB"
 	<hundrað> /hˈʏnd̥rað/ "hundred_NUM"
 
-/ɪ/ (0.018)
+/ɪ/ (0.017)
 	<nakinn> /nˈaːcɪn/ "naked_ADJ"
 	<yfir> /ˈivɪr̥/ "over_PREP"
 	<þumi> /θˈuːmɪ/ "thumb_NOUN"
@@ -34,7 +34,7 @@ VOWELS
 	<ferskur> /fˈɛr̥skʏr̥/ "fresh_ADJ"
 	<eldur> /ˈɛld̥ʏr̥/ "fire_NOUN"
 
-/ˈuː/ (0.014)
+/ˈuː/ (0.013)
 	<fljúga> /fljˈuːa/ "fly_VERB"
 	<húð> /hˈuːð/ "skin_NOUN"
 	<ljúfur> /ljˈuːvʏr̥/ "beloved_ADJ"
@@ -44,15 +44,15 @@ VOWELS
 	<vindur> /vˈɪnd̥ʏr̥/ "wind_NOUN"
 	<hryggur> /r̥ˈɪɡ̊ːʏr̥/ "ridge_NOUN"
 
-/ˈʏ/ (0.012)
-	<munnur> /mˈʏnːʏr̥/ "mouth_NOUN"
-	<fugl> /fˈʏɡ̊l̥/ "bird_NOUN_MASC"
-	<gull> /ɡ̊ˈʏtl̥/ "gold_NOUN_NEU"
-
-/ˈɛː/ (0.012)
-	<vér> /vjˈɛːr̥/ "we_PRON"
-	<gefa> /ɟ̊ˈɛːva/ "give_VERB"
+/ˈɛː/ (0.013)
+	<ég> /jˈɛːx/ "I_PRON"
+	<vetur> /vˈɛːtʏr̥/ "winter_NOUN"
 	<hné> /n̥jˈɛː/ "knee_NOUN"
+
+/ˈʏ/ (0.012)
+	<þunnur> /θˈʏnːʏr̥/ "thin_ADJ"
+	<hundur> /hˈʏnd̥ʏr̥/ "dog_NOUN"
+	<gull> /ɡ̊ˈʏtl̥/ "gold_NOUN_NEU"
 
 /ˈaː/ (0.011)
 	<mar> /mˈaːr/ "sea_NOUN"
@@ -182,9 +182,9 @@ VOWELS
 
 CONSONANTS
 /r̥/ (0.095)
-	<sýr> /sˈiːr̥/ "sow_NOUN"
-	<hringur> /r̥ˈiŋɡ̊ʏr̥/ "ring_NOUN"
-	<skór> /skˈoːu̯r̥/ "shoe_NOUN"
+	<súr> /sˈuːr̥/ "sour_ADJ"
+	<réttur> /rjˈɛʰtʏr̥/ "right_ADJ"
+	<skítur> /scˈiːtʏr̥/ "shit_NOUN"
 
 /s/ (0.05)
 	<sýr> /sˈiːr̥/ "sow_NOUN"
@@ -217,9 +217,9 @@ CONSONANTS
 	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
 
 /j/ (0.029)
-	<sjúkur> /sjˈuːkʏr̥/ "sick_ADJ"
-	<ljúga> /ljˈuːa/ "tell lies_VERB"
-	<sjór> /sjˈoːu̯r̥/ "sea_NOUN"
+	<sjö> /sjˈœː/ "seven_NUM"
+	<sjúga> /sjˈuːa/ "suck_VERB"
+	<segja> /sˈɛːi̯ja/ "say_VERB"
 
 /ð/ (0.025)
 	<góður> /ɡ̊ˈoːu̯ðʏr̥/ "good_ADJ"
@@ -231,15 +231,15 @@ CONSONANTS
 	<frændi> /frˈai̯nd̥ɪ/ "friend_NOUN"
 	<þúsund> /θˈuːsʏnd̥/ "thousand_NUM"
 
+/m/ (0.022)
+	<munnur> /mˈʏnːʏr̥/ "mouth_NOUN"
+	<mér> /mjˈɛːr̥/ "me_PRON_DAT"
+	<mjólk> /mjˈɔu̯l̥k/ "milk_NOUN_FEM"
+
 /ɡ̊/ (0.021)
 	<hringur> /r̥ˈiŋɡ̊ʏr̥/ "ring_NOUN"
-	<grænn> /ɡ̊rˈai̯tn̥/ "green_ADJ"
-	<kóngur> /kʰˈou̯ŋɡ̊ʏr̥/ "king_NOUN"
-
-/m/ (0.021)
-	<manneskja> /mˈanːɛsca/ "person_NOUN"
-	<armur> /ˈarmʏr̥/ "arm_NOUN"
-	<varmur> /vˈarmʏr̥/ "warm_ADJ"
+	<fugl> /fˈʏɡ̊l̥/ "bird_NOUN_MASC"
+	<ungur> /ˈuŋɡ̊ʏr̥/ "young_NOUN"
 
 /b̥/ (0.02)
 	<bíta> /b̥ˈiːta/ "bite_VERB"
@@ -256,12 +256,12 @@ CONSONANTS
 	<hungur> /hˈuŋɡ̊ʏr̥/ "hunger_NOUN"
 	<hæna> /hˈaːi̯na/ "hen_NOUN"
 
-/l̥/ (0.014)
+/l̥/ (0.013)
 	<fugl> /fˈʏɡ̊l̥/ "bird_NOUN_MASC"
 	<áll> /ˈɑːu̯tl̥/ "eel_NOUN"
 	<ull> /ˈʏtl̥/ "wool_NOUN_FEM"
 
-/k/ (0.014)
+/k/ (0.013)
 	<þýskur> /θˈiskʏr̥/ "Teutonic_ADJ"
 	<sprok> /sprˈɔːk/ "speech_NOUN_FEM"
 	<vika> /vˈɪːka/ "week_NOUN"
@@ -348,7 +348,7 @@ CONSONANTS
 
 /x/ (0.002)
 	<ég> /jˈɛːx/ "I_PRON"
-	<mig> /mˈɪːx/ "me_PRON"
+	<mig> /mˈɪːx/ "me_PRON_ACC"
 	<deig> /d̥ˈɛːi̯x/ "dough_NOUN"
 
 /ɟ̊ː/ (0.002)

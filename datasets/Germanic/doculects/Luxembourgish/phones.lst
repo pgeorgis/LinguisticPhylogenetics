@@ -4,12 +4,12 @@ VOWELS
 	<Norden> /nˈoʀdən/ "north_NOUN"
 	<zwielef> /ʦwˈiə̯ləf/ "twelve_NUM"
 
-/ɐ/ (0.043)
+/ɐ/ (0.044)
 	<Brudder> /bʀˈʊdɐ/ "brother_NOUN"
 	<Hoer> /hˈoːɐ/ "hair_NOUN"
 	<dier> /dˈiːɐ/ "dry_ADJ"
 
-/ˈaː/ (0.035)
+/ˈaː/ (0.034)
 	<Wal> /vˈaːl/ "whale_NOUN"
 	<Bam> /bˈaːm/ "tree_NOUN"
 	<Waasser> /vˈaːsɐ/ "water_NOUN"
@@ -39,15 +39,15 @@ VOWELS
 	<Noss> /nˈos/ "nut_NOUN"
 	<Broscht> /bʀˈoʃt/ "breast_NOUN"
 
-/ˈæːɪ̯/ (0.013)
-	<däitsch> /dˈæːɪ̯tʃ/ "Teutonic_ADJ"
-	<Wäin> /vˈæːɪ̯n/ "wine_NOUN"
-	<Zäit> /ʦˈæːɪ̯t/ "time_NOUN"
-
-/ˈiː/ (0.013)
-	<riicht> /ʀˈiːɕt/ "right_ADJ"
+/ˈiː/ (0.014)
 	<Bier> /bˈiːɐ/ "bear_NOUN"
-	<Liicht> /lˈiːɕt/ "light_NOUN"
+	<dir> /dˈiːɐ/ "ye_PRON"
+	<Mier> /mˈiːɐ/ "sea_NOUN"
+
+/ˈæːɪ̯/ (0.013)
+	<dräizéng> /dʀˈæːɪ̯ʦeŋ/ "thirteen_NUM"
+	<däitsch> /dˈæːɪ̯tʃ/ "Teutonic_ADJ"
+	<Säit> /zˈæːɪ̯t/ "side_NOUN"
 
 /ˈəʊ̯/ (0.011)
 	<rout> /ʀˈəʊ̯d̥/ "red_ADJ"
@@ -121,7 +121,7 @@ VOWELS
 
 /ˈæ/ (0.004)
 	<kennen> /kʰˈænən/ "ken_VERB"
-	<Männer> /mˈænɐ/ "men_NOUN"
+	<Männer> /mˈænɐ/ "men_NOUN_PL"
 	<Gäns> /ɡˈæns/ "goose_NOUN"
 
 /ˈɔ/ (0.003)
@@ -136,7 +136,7 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.097)
+/n/ (0.096)
 	<Mond> /mˈɔnd̥/ "mouth_NOUN"
 	<Sand> /zˈɑnd̥/ "sand_NOUN"
 	<bäissen> /bˈæːɪ̯sən/ "bite_VERB"
@@ -156,12 +156,12 @@ CONSONANTS
 	<dausend> /dˈɑʊ̯zənd̥/ "thousand_NUM"
 	<dreemen> /dʀˈeːmən/ "dream_VERB"
 
-/ʀ/ (0.037)
+/ʀ/ (0.036)
 	<Brout> /bʀˈəʊ̯d̥/ "bread_NOUN"
 	<fréieren> /fʀˈɜɪ̯əʀən/ "freeze_VERB"
 	<Fra> /fʀˈaː/ "woman_NOUN"
 
-/ʃ/ (0.034)
+/ʃ/ (0.033)
 	<Schëff> /ʃˈəf/ "ship_NOUN"
 	<Steen> /ʃtˈeːn/ "stone_NOUN"
 	<Duuscht> /dˈuːʃt/ "thirst_NOUN"
@@ -171,10 +171,10 @@ CONSONANTS
 	<wäiss> /vˈæːɪ̯s/ "white_ADJ"
 	<séiss> /zˈɜɪ̯s/ "sweet_ADJ"
 
-/m/ (0.029)
-	<Numm> /nˈum/ "name_NOUN"
-	<Méck> /mˈek/ "midge_NOUN"
-	<Mount> /mˈəʊ̯nd̥/ "month_NOUN"
+/m/ (0.03)
+	<Mond> /mˈɔnd̥/ "mouth_NOUN"
+	<Mais> /mˈɑɪ̯s/ "mice_NOUN"
+	<Mëllech> /mˈələɕ/ "milk_NOUN_FEM"
 
 /v/ (0.027)
 	<Waasser> /vˈaːsɐ/ "water_NOUN"

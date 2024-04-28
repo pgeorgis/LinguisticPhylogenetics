@@ -26,9 +26,10 @@ leap_VERB
 lie_VERB
 light_ADJ
 man_NOUN
-me_PRON
+me_PRON_ACC
+me_PRON_DAT
 meat_NOUN
-men_NOUN
+men_NOUN_PL
 mice_NOUN
 month_NOUN
 naked_ADJ
