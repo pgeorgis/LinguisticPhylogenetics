@@ -1,0 +1,251 @@
+VOWELS
+/ˈɛ/ (0.05)
+	<teľa> /cˈɛʎa/ "CALF_NOUN"
+	<šesť> /ʃˈɛsc/ "SIX_NUM"
+	<žena> /ʒˈɛna/ "WOMAN_NOUN"
+
+/ˈɔ/ (0.044)
+	<oblak> /ˈɔbɫak/ "CLOUD_NOUN"
+	<boh> /bˈɔx/ "GOD_NOUN"
+	<holub> /ɦˈɔɫup/ "DOVE_NOUN"
+
+/a/ (0.042)
+	<rieka> /rɪ̯ˈɛka/ "RIVER_NOUN"
+	<ústa> /ˈuːsta/ "MOUTH_NOUN"
+	<voda> /ʋˈɔda/ "WATER_NOUN"
+
+/ˈa/ (0.036)
+	<jazero> /jˈazɛrɔ/ "LAKE_NOUN"
+	<rast> /rˈast/ "GROWTH_NOUN"
+	<krava> /krˈaʋa/ "COW_NOUN"
+
+/ɔ/ (0.033)
+	<vietor> /ʋɪ̯ˈɛtɔr/ "WIND_NOUN"
+	<popol> /pˈɔpɔɫ/ "ASH_NOUN"
+	<drevo> /drˈɛʋɔ/ "TREE_NOUN"
+
+/iː/ (0.031)
+	<hladký> /ɦɫˈatkiː/ "SMOOTH_ADJ"
+	<tvrdý> /tʋˈr̩diː/ "HARD_ADJ"
+	<dlhý> /dˈɫ̩ɦiː/ "LONG_ADJ"
+
+/ɛ/ (0.029)
+	<more> /mˈɔrɛ/ "SEA_NOUN"
+	<slnce> /sˈɫ̩nʦɛ/ "SUN_NOUN"
+	<nevesta> /ɲˈɛʋɛsta/ "BRIDE_NOUN"
+
+/ˈi/ (0.019)
+	<dym> /dˈim/ "SMOKE_NOUN"
+	<žiť> /ʒˈic/ "LIVE_VERB"
+	<list> /lˈist/ "LEAF_NOUN"
+
+/ɪ̯ˈɛ/ (0.019)
+	<vietor> /ʋɪ̯ˈɛtɔr/ "WIND_NOUN"
+	<chlieb> /xlɪ̯ˈɛp/ "BREAD_NOUN"
+	<rieka> /rɪ̯ˈɛka/ "RIVER_NOUN"
+
+/i/ (0.013)
+	<čierny> /ʧɪ̯ˈɛrni/ "BLACK_ADJ"
+	<biely> /bɪ̯ˈɛli/ "WHITE_ADJ"
+	<jazyk> /jˈazik/ "TONGUE_NOUN"
+
+/ˈu/ (0.01)
+	<zub> /zˈup/ "TOOTH_NOUN"
+	<suchý> /sˈuxiː/ "DRY_ADJ"
+	<ucho> /ˈuxɔ/ "EAR_NOUN"
+
+/ˈaː/ (0.008)
+	<tráva> /trˈaːʋa/ "GRASS_NOUN"
+	<dážď> /dˈaːʃc/ "RAIN_NOUN"
+	<vták> /ftˈaːk/ "BIRD_NOUN"
+
+/ˈuː/ (0.006)
+	<púť> /pˈuːc/ "WAY_NOUN"
+	<ústa> /ˈuːsta/ "MOUTH_NOUN"
+	<hlúpy> /ɦɫˈuːpi/ "STUPID_ADJ"
+
+/ʊ̯ˈɔ/ (0.006)
+	<kôň> /kʊ̯ˈɔɲ/ "HORSE_NOUN"
+	<kôra> /kʊ̯ˈɔra/ "BARK_NOUN"
+	<vôl> /vʊ̯ˈɔɫ/ "OX_NOUN"
+
+/ˈæ/ (0.004)
+	<päť> /pˈæc/ "FIVE_NUM"
+	<mäso> /mˈæsɔ/ "MEAT_NOUN"
+
+/ɪ̯ˈa/ (0.004)
+	<viazať> /ʋɪ̯ˈazac/ "TIE_VERB"
+	<vziať> /vzɪ̯ˈac/ "TAKE_VERB"
+
+/ɪ̯ɛ/ (0.004)
+	<šťastie> /ʃcˈascɪ̯ɛ/ "HAPPINESS_NOUN"
+	<vidieť> /ʋˈiɟɪ̯ɛc/ "SEE_VERB"
+
+/ˈiː/ (0.002)
+	<krídlo> /krˈiːdɫɔ/ "WING_NOUN"
+
+/ˈe/ (0.002)
+	<veľký> /vˈeʎkiː/ "GREAT_ADJ"
+
+/ɪ̯a/ (0.002)
+	<mesiac> /mˈɛsɪ̯aʦ/ "MONTH_NOUN"
+
+/æ/ (0.002)
+	<deväť> /ɟˈɛʋæc/ "NINE_NUM"
+
+/u/ (0.002)
+	<holub> /ɦˈɔɫup/ "DOVE_NOUN"
+
+/e/ (0.002)
+	<myseľ> /mˈiseʎ/ "THOUGHT_NOUN"
+
+/aː/ (0.002)
+	<chrbát> /xˈr̩baːt/ "SPINE_NOUN"
+
+
+
+CONSONANTS
+/s/ (0.052)
+	<šťastie> /ʃcˈascɪ̯ɛ/ "HAPPINESS_NOUN"
+	<soľ> /sˈɔʎ/ "SALT_NOUN"
+	<nos> /nˈɔs/ "NOSE_NOUN"
+
+/r/ (0.05)
+	<orech> /ˈɔrɛx/ "NUT_NOUN"
+	<roh> /rˈɔx/ "HORN_NOUN"
+	<radlo> /rˈadɫɔ/ "PLOUGH_NOUN"
+
+/k/ (0.048)
+	<vták> /ftˈaːk/ "BIRD_NOUN"
+	<mlieko> /mlɪ̯ˈɛkɔ/ "MILK_NOUN"
+	<oko> /ˈɔkɔ/ "EYE_NOUN"
+
+/t/ (0.042)
+	<list> /lˈist/ "LEAF_NOUN"
+	<ústa> /ˈuːsta/ "MOUTH_NOUN"
+	<žltý> /ʒˈɫ̩tiː/ "YELLOW_ADJ"
+
+/c/ (0.042)
+	<piť> /pˈic/ "DRINK_VERB"
+	<deväť> /ɟˈɛʋæc/ "NINE_NUM"
+	<desať> /ɟˈɛsac/ "TEN_NUM"
+
+/ʋ/ (0.036)
+	<človek> /ʧɫˈɔʋɛk/ "PERSON_NOUN"
+	<nevesta> /ɲˈɛʋɛsta/ "BRIDE_NOUN"
+	<viazať> /ʋɪ̯ˈazac/ "TIE_VERB"
+
+/ɫ/ (0.034)
+	<celý> /ʦˈɛɫiː/ "WHOLE_ADJ"
+	<oblak> /ˈɔbɫak/ "CLOUD_NOUN"
+	<holub> /ɦˈɔɫup/ "DOVE_NOUN"
+
+/m/ (0.029)
+	<mesiac> /mˈɛsɪ̯aʦ/ "MONTH_NOUN"
+	<dym> /dˈim/ "SMOKE_NOUN"
+	<mäso> /mˈæsɔ/ "MEAT_NOUN"
+
+/d/ (0.029)
+	<dlhý> /dˈɫ̩ɦiː/ "LONG_ADJ"
+	<radlo> /rˈadɫɔ/ "PLOUGH_NOUN"
+	<drevo> /drˈɛʋɔ/ "TREE_NOUN"
+
+/ɦ/ (0.027)
+	<jahoda> /jˈaɦɔda/ "BERRY_NOUN"
+	<hodina> /ɦˈɔɟina/ "HOUR_NOUN"
+	<hlas> /ɦɫˈas/ "VOICE_NOUN"
+
+/p/ (0.027)
+	<piť> /pˈic/ "DRINK_VERB"
+	<teplý> /cˈɛpliː/ "WARM_ADJ"
+	<hlúpy> /ɦɫˈuːpi/ "STUPID_ADJ"
+
+/n/ (0.025)
+	<nos> /nˈɔs/ "NOSE_NOUN"
+	<žena> /ʒˈɛna/ "WOMAN_NOUN"
+	<koleno> /kˈɔlɛnɔ/ "KNEE_NOUN"
+
+/x/ (0.021)
+	<chrbát> /xˈr̩baːt/ "SPINE_NOUN"
+	<suchý> /sˈuxiː/ "DRY_ADJ"
+	<sneh> /sɲˈɛx/ "SNOW_NOUN"
+
+/z/ (0.019)
+	<jazyk> /jˈazik/ "TONGUE_NOUN"
+	<zdravý> /zdrˈaviː/ "HEALTHY_ADJ"
+	<zver> /zʋˈɛr/ "BEAST_NOUN"
+
+/l/ (0.019)
+	<koleno> /kˈɔlɛnɔ/ "KNEE_NOUN"
+	<teplý> /cˈɛpliː/ "WARM_ADJ"
+	<biely> /bɪ̯ˈɛli/ "WHITE_ADJ"
+
+/ɲ/ (0.013)
+	<oheň> /ˈɔɦɛɲ/ "FIRE_NOUN"
+	<kôň> /kʊ̯ˈɔɲ/ "HORSE_NOUN"
+	<necht> /ɲˈɛxt/ "FINGERNAIL_NOUN"
+
+/ˈr̩/ (0.011)
+	<srdce> /sˈr̩ʦɛ/ "HEART_NOUN"
+	<prst> /pˈr̩st/ "FINGER_NOUN"
+	<tvrdý> /tʋˈr̩diː/ "HARD_ADJ"
+
+/ʦ/ (0.011)
+	<mesiac> /mˈɛsɪ̯aʦ/ "MONTH_NOUN"
+	<slnce> /sˈɫ̩nʦɛ/ "SUN_NOUN"
+	<vliecť> /ʋɫɪ̯ˈɛʦc/ "DRAG_VERB"
+
+/ʎ/ (0.011)
+	<kráľ> /krˈaːʎ/ "KING_NOUN"
+	<soľ> /sˈɔʎ/ "SALT_NOUN"
+	<veľký> /vˈeʎkiː/ "GREAT_ADJ"
+
+/ʃ/ (0.011)
+	<dážď> /dˈaːʃc/ "RAIN_NOUN"
+	<šesť> /ʃˈɛsc/ "SIX_NUM"
+	<šťastie> /ʃcˈascɪ̯ɛ/ "HAPPINESS_NOUN"
+
+/ɟ/ (0.011)
+	<vidieť> /ʋˈiɟɪ̯ɛc/ "SEE_VERB"
+	<deň> /ɟˈɛɲ/ "DAY_NOUN"
+	<desať> /ɟˈɛsac/ "TEN_NUM"
+
+/v/ (0.011)
+	<zdravý> /zdrˈaviː/ "HEALTHY_ADJ"
+	<vziať> /vzɪ̯ˈac/ "TAKE_VERB"
+	<veľký> /vˈeʎkiː/ "GREAT_ADJ"
+
+/b/ (0.011)
+	<chrbát> /xˈr̩baːt/ "SPINE_NOUN"
+	<dobrý> /dˈɔbriː/ "GOOD_ADJ"
+	<biely> /bɪ̯ˈɛli/ "WHITE_ADJ"
+
+/ˈɫ̩/ (0.01)
+	<slnce> /sˈɫ̩nʦɛ/ "SUN_NOUN"
+	<vlk> /vˈɫ̩k/ "WOLF_NOUN"
+	<dlhý> /dˈɫ̩ɦiː/ "LONG_ADJ"
+
+/ʒ/ (0.008)
+	<žiť> /ʒˈic/ "LIVE_VERB"
+	<žena> /ʒˈɛna/ "WOMAN_NOUN"
+	<koža> /kˈɔʒa/ "SKIN_NOUN"
+
+/j/ (0.008)
+	<jazyk> /jˈazik/ "TONGUE_NOUN"
+	<jeden> /jˈɛdɛn/ "ONE_NUM"
+	<jahoda> /jˈaɦɔda/ "BERRY_NOUN"
+
+/ʧ/ (0.006)
+	<včela> /fʧˈɛɫa/ "BEE_NOUN"
+	<človek> /ʧɫˈɔʋɛk/ "PERSON_NOUN"
+	<čierny> /ʧɪ̯ˈɛrni/ "BLACK_ADJ"
+
+/f/ (0.004)
+	<včela> /fʧˈɛɫa/ "BEE_NOUN"
+	<vták> /ftˈaːk/ "BIRD_NOUN"
+
+/ˈr̩ː/ (0.002)
+	<mŕtvy> /mˈr̩ːtvi/ "DEAD_ADJ"
+
+
+

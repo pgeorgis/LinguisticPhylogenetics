@@ -1,0 +1,42 @@
+family:
+    name: Slavic
+    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/datasets/Slavic/data/slavic_data.tsv
+    min_amc: 0.68
+    exclude: ['Čakavian (Istria)', 'Čakavian (Cres)', 'Čakavian (Burgenland)', 'Kajkavian', 'Lithuanian', 'Latvian']
+    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/datasets/Slavic/
+
+transcription:
+    global:
+        ignore_stress: false
+        combine_diphthongs: true
+        normalize_geminates: false
+        #suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', '̄', 'ˈ']
+        #level_suprasegmentals: 'ˈ'
+
+pmi:
+    refresh: []
+    refresh_all_pmi: true
+
+surprisal:
+    ngram: 1
+    phon_env: true 
+    refresh: []
+    refresh_all_surprisal: true
+
+cluster:
+    cognates: none
+
+evaluation:
+    similarity: gradient
+    method: composite
+    pmi_weight: 1.5
+    surprisal_weight: 2
+    phon_weight: 1
+    n_samples: 10
+    sample_size: 0.8
+    calibrate: true
+    min_similarity: 0
+
+tree:
+    linkage: nj
+    newick: true
