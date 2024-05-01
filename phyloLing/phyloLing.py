@@ -387,8 +387,8 @@ class LexicalDataset:
             # Iterate back through language pairs and phone1 combinations and set OOV values
             for phone1 in oov_vals:
                 oov_val = oov_vals[phone1]
-                surprisal_dict[phone1] = default_dict(surprisal_dict[phone1], l=oov_val)
-            surprisal_dict = default_dict(surprisal_dict, l=defaultdict(lambda:oov_val))
+                surprisal_dict[phone1] = default_dict(surprisal_dict[phone1], lmbda=oov_val)
+            surprisal_dict = default_dict(surprisal_dict, lmbda=defaultdict(lambda:oov_val))
             
             return surprisal_dict
         
@@ -1118,12 +1118,12 @@ class LexicalDataset:
         self.concepts = default_dict({concept:self.concepts[concept] 
                          for concept in self.concepts 
                          if len(self.concepts[concept]) > 0}, 
-                                     l=defaultdict(lambda:[]))
+                                     lmbda=defaultdict(lambda:[]))
         
         self.cognate_sets = default_dict({cognate_set:self.cognate_sets[cognate_set] 
                                           for cognate_set in self.cognate_sets 
                                           if len(self.cognate_sets[cognate_set]) > 0}, 
-                                         l=defaultdict(lambda:[]))
+                                         lmbda=defaultdict(lambda:[]))
 
     def subset(self, new_name, include=None, exclude=None, **kwargs):
         """Creates a subset of the existing dataset, including only select languages"""

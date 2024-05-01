@@ -53,7 +53,7 @@ def prune_oov_surprisal(surprisal_dict):
                 pruned[seg1][seg2] = surprisal_val
         
         # Set as default dict with OOV value as default
-        pruned[seg1] = default_dict(pruned[seg1], l=oov_val)
+        pruned[seg1] = default_dict(pruned[seg1], lmbda=oov_val)
         
     return pruned, oov_val
 
@@ -708,8 +708,8 @@ class PhonCorrelator:
             # additional penalty, and then recalculate PMI
             iteration = 0
             PMI_iterations = {iteration:pmi_step1}
-            qualifying_words = default_dict({iteration:sort_wordlist(synonym_sample)}, l=[])
-            disqualified_words = default_dict({iteration:diff_sample}, l=[])
+            qualifying_words = default_dict({iteration:sort_wordlist(synonym_sample)}, lmbda=[])
+            disqualified_words = default_dict({iteration:diff_sample}, lmbda=[])
             if cumulative:
                 all_cognate_alignments = []
             
@@ -736,7 +736,7 @@ class PhonCorrelator:
                 cognate_probs = self.correspondence_probs(cognate_alignments, exclude_null=True, counts=True)
                 cognate_probs = default_dict({k[0]:{v[0]:cognate_probs[k][v] 
                                                     for v in cognate_probs[k]} 
-                                            for k in cognate_probs}, l=defaultdict(lambda:0))
+                                            for k in cognate_probs}, lmbda=defaultdict(lambda:0))
                 PMI_iterations[iteration] = self.phoneme_pmi(cognate_probs, 
                                                              wordlist=qualifying_words[iteration-1])
                 
@@ -824,7 +824,7 @@ class PhonCorrelator:
             self.lang1.complex_ngrams[self.lang2] = self.complex_ngrams
             reversed_complex_ngrams = {val:set(key for key in self.complex_ngrams if val in self.complex_ngrams[key]) 
                                        for key in self.complex_ngrams for val in self.complex_ngrams[key]}
-            self.lang2.complex_ngrams[self.lang1] = default_dict(reversed_complex_ngrams, l=defaultdict(lambda:0))
+            self.lang2.complex_ngrams[self.lang1] = default_dict(reversed_complex_ngrams, lmbda=defaultdict(lambda:0))
             # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
             
         self.pmi_dict = results
@@ -1001,9 +1001,9 @@ class PhonCorrelator:
             smoothed_oov = self.lang2.phoneme_entropy
             
             if phon_env:
-                smoothed_surprisal[ngram1_w_context] = default_dict(smoothed_surprisal[ngram1_w_context], l=smoothed_oov)
+                smoothed_surprisal[ngram1_w_context] = default_dict(smoothed_surprisal[ngram1_w_context], lmbda=smoothed_oov)
             else:
-                smoothed_surprisal[undone_ngram1] = default_dict(smoothed_surprisal[undone_ngram1], l=smoothed_oov)
+                smoothed_surprisal[undone_ngram1] = default_dict(smoothed_surprisal[undone_ngram1], lmbda=smoothed_oov)
         
             # Prune saved surprisal values which exceed the phoneme entropy of lang2
             if phon_env:
@@ -1077,7 +1077,7 @@ class PhonCorrelator:
                 # Then test each same-meaning word pair to see if if it meets the qualifying threshold
                 iteration = 0
                 surprisal_iterations = {}
-                qualifying_words = default_dict({iteration:list(range(len(same_meaning_alignments)))}, l=[])
+                qualifying_words = default_dict({iteration:list(range(len(same_meaning_alignments)))}, lmbda=[])
                 disqualified_words = defaultdict(lambda:[])
                 if cumulative:
                     all_cognate_alignments = []
@@ -1205,8 +1205,8 @@ class PhonCorrelator:
                     # for sample_n in sample_results:
                     #     # Use non-IPA character <?> to retrieve OOV value from surprisal dict
                     #     oov_values.append(sample_results[sample_n][p1]['?'])
-                    # surprisal_results[p1] = default_dict(surprisal_results[p1], l=mean(oov_values))
-                    surprisal_results[p1] = default_dict(surprisal_results[p1], l=self.lang2.phoneme_entropy)
+                    # surprisal_results[p1] = default_dict(surprisal_results[p1], lmbda=mean(oov_values))
+                    surprisal_results[p1] = default_dict(surprisal_results[p1], lmbda=self.lang2.phoneme_entropy)
                     
             else:
                 surprisal_results = sample_results[0]
@@ -1297,11 +1297,11 @@ class PhonCorrelator:
                 if count_ngram2 > 0:
                     surprisal_dict[ngram1][ngram2] += count_ngram2
         for ngram1 in surprisal_dict:
-            surprisal_dict[ngram1] = default_dict(normalize_dict(surprisal_dict[ngram1]), l=mean(oov_vals[ngram1]))
+            surprisal_dict[ngram1] = default_dict(normalize_dict(surprisal_dict[ngram1]), lmbda=mean(oov_vals[ngram1]))
             for ngram2, prob in surprisal_dict[ngram1].items():
                 surprisal_dict[ngram1][ngram2] = surprisal(prob)
         outer_oov_val = get_oov_val(phon_env_surprisal_dict)
-        surprisal_dict, oov_value = prune_oov_surprisal(default_dict(surprisal_dict, l=outer_oov_val))
+        surprisal_dict, oov_value = prune_oov_surprisal(default_dict(surprisal_dict, lmbda=outer_oov_val))
         return surprisal_dict
     
     def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):

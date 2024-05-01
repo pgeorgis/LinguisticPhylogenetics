@@ -1,3 +1,5 @@
+"""General auxiliary functions."""
+
 from collections import defaultdict
 import datetime
 from networkx import Graph
@@ -6,11 +8,10 @@ from numpy import array, array_split
 from numpy.random import permutation
 import operator
 
-# GENERAL AUXILIARY FUNCTIONS
 
 def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
     """Reads a CSV file into a dictionary"""
-    csv_dict = defaultdict(lambda:defaultdict(lambda:''))
+    csv_dict = defaultdict(lambda: defaultdict(lambda: ''))
     with open(csvfile, 'r', encoding=encoding) as csv_file:
         csv_file = csv_file.readlines()
         columns = [item.strip() for item in csv_file[start].split(sep)]
@@ -30,6 +31,7 @@ def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
                     pass
     return csv_dict
 
+
 def validate_class(objs, classes):
     """Validates that a set of of objects are of the expected classes.
 
@@ -42,16 +44,17 @@ def validate_class(objs, classes):
     """
     for obj in objs:
         if not any(isinstance(obj, cls) for cls in classes):
-            raise TypeError(f"Object {obj} (type = {type(obj)}) is not of the expected classes: {classes}")
+            err = f"Object {obj} (type = {type(obj)}) is not of the expected classes: {classes}"
+            raise TypeError(err)
+
 
 def create_timestamp():
     # Get the current date and time
     current_datetime = datetime.datetime.now()
-
     # Format the date and time as a string
     formatted_datetime = current_datetime.strftime("%Y-%m-%d_%H-%M-%S")
-    
     return formatted_datetime
+
 
 def dict_tuplelist(dic, sort=True, n=1, reverse=True):
     """Returns a list of (key, value) tuples from the dictionary
@@ -61,16 +64,18 @@ def dict_tuplelist(dic, sort=True, n=1, reverse=True):
         d.sort(key=operator.itemgetter(n), reverse=reverse)
     return d
 
-def default_dict(dic, l):
+
+def default_dict(dic, lmbda):
     """Turns an existing dictionary into a default dictionary with default value l"""
-    return defaultdict(lambda: l, dic)
+    return defaultdict(lambda: lmbda, dic)
+
 
 def normalize_dict(dict_, default=False, lmbda=None, return_=True):
     """Normalizes the values of a dictionary"""
     """If default==True, returns a default dictionary with default value lmbda"""
     """If return_==False, modifies the input dictionary without returning anything"""
-    if default==True:
-        normalized = defaultdict(lambda:lmbda)
+    if default is True:
+        normalized = defaultdict(lambda: lmbda)
     else:
         normalized = {}
     total = sum(list(dict_.values()))
@@ -82,10 +87,12 @@ def normalize_dict(dict_, default=False, lmbda=None, return_=True):
     if return_:
         return normalized
 
+
 def chunk_list(lis, n):
     """Splits a list into sublists of length n; if not evenly divisible by n,
     the final sublist contains the remainder"""
     return [lis[i * n:(i + 1) * n] for i in range((len(lis) + n - 1) // n)]
+
 
 def split_list_randomly(lst, n):
     if n <= 0:
@@ -99,34 +106,33 @@ def split_list_randomly(lst, n):
 
     return groups
 
+
 def combine_overlapping_lists(list_of_lists):
     # https://stackoverflow.com/questions/4842613/merge-lists-that-share-common-elements
-    
-    def to_graph(l):
+
+    def to_graph(lis):
         G = Graph()
-        for part in l:
+        for part in lis:
             # each sublist is a bunch of nodes
             G.add_nodes_from(part)
             # it also imlies a number of edges:
             G.add_edges_from(to_edges(part))
         return G
 
-    def to_edges(l):
-        """ 
-            treat `l` as a Graph and returns its edges 
-            to_edges(['a','b','c','d']) -> [(a,b), (b,c),(c,d)]
-        """
-        it = iter(l)
+    def to_edges(graph):
+        """Returns edges tuples of graph:
+        to_edges(['a','b','c','d']) -> [(a,b), (b,c),(c,d)]"""
+        it = iter(graph)
         last = next(it)
-    
         for current in it:
             yield last, current
             last = current
-    
+
     G = to_graph(list_of_lists)
     return list(connected_components(G))
 
-def rescale(val, lis, new_min = 0.0, new_max = 1.0):
+
+def rescale(val, lis, new_min=0, new_max=1):
     """Rescales a value between new_min and new_max according to the values of lis"""
     numerator = new_max - new_min
     old_max, old_min = max(lis), min(lis)
@@ -136,9 +142,9 @@ def rescale(val, lis, new_min = 0.0, new_max = 1.0):
     part3 = new_max
     return part1 * part2 + part3
 
+
 def keywithminval(d):
     """Returns the dictionary key with the lowest value"""
     v = list(d.values())
     k = list(d.keys())
     return k[v.index(min(v))]
-
