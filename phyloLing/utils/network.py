@@ -1,11 +1,12 @@
 from collections import defaultdict
 from math import sqrt
-from numpy import array, amax
-import seaborn as sns
-from sklearn import manifold
 from statistics import mean, stdev
-from matplotlib import pyplot as plt
+
 import networkx as nx
+import seaborn as sns
+from matplotlib import pyplot as plt
+from numpy import amax, array
+from sklearn import manifold
 from utils.distance import distance_matrix
 
 

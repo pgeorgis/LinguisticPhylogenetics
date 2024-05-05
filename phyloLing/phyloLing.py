@@ -1,40 +1,47 @@
-import os, re, copy, glob
+import copy
+import glob
+import logging
+import os
+import random
+import re
 from collections import defaultdict
 from collections.abc import Iterable
 from functools import lru_cache
-from itertools import product, combinations
-from asjp import ipa2asjp
-import bcubed
-import logging
+from itertools import combinations, product
 from math import log, sqrt
-from matplotlib import pyplot as plt
+from statistics import mean
+
+import bcubed
 import numpy as np
 import pandas as pd
-import random
+import seaborn as sns
+from asjp import ipa2asjp
+from constants import (ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH,
+                       TRANSCRIPTION_PARAM_DEFAULTS)
+from lingDist import Z_score_dist
+from matplotlib import pyplot as plt
+from phonCorr import PhonCorrelator
+from phonUtils.initPhoneData import consonants, suprasegmental_diacritics
+from phonUtils.ipaTools import invalid_ch, normalize_ipa_ch, strip_diacritics
+from phonUtils.phonEnv import get_phon_env
+from phonUtils.phonSim import phone_sim
+from phonUtils.phonTransforms import normalize_geminates
+from phonUtils.segment import _toSegment, segment_ipa
+from phonUtils.syllables import syllabify
 from scipy.cluster.hierarchy import dendrogram, linkage
 from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
-import seaborn as sns
-from statistics import mean
 from unidecode import unidecode
-from phonUtils.initPhoneData import consonants, suprasegmental_diacritics
-from phonUtils.ipaTools import normalize_ipa_ch, invalid_ch, strip_diacritics 
-from phonUtils.segment import segment_ipa, _toSegment
-from phonUtils.phonSim import phone_sim
-from phonUtils.phonEnv import get_phon_env
-from phonUtils.syllables import syllabify
-from phonUtils.phonTransforms import normalize_geminates
-from phonCorr import PhonCorrelator
-from lingDist import Z_score_dist
-from constants import TRANSCRIPTION_PARAM_DEFAULTS, ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH
 from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.information import entropy
 from utils.network import dm2coords, newer_network_plot
-from utils.string import strip_ch, format_as_variable
 from utils.sequence import Ngram, flatten_ngram, pad_sequence
-from utils.utils import create_timestamp, default_dict, normalize_dict, dict_tuplelist, csv2dict
+from utils.string import format_as_variable, strip_ch
+from utils.utils import (create_timestamp, csv2dict, default_dict,
+                         dict_tuplelist, normalize_dict)
+
 
 class LexicalDataset: 
     def __init__(self, filepath, name, 

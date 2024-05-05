@@ -1,8 +1,9 @@
-from collections import defaultdict
-from matplotlib import pyplot as plt
 import re
+from collections import defaultdict
+
 import seaborn as sns
-from scipy.cluster.hierarchy import dendrogram, linkage, fcluster, to_tree
+from matplotlib import pyplot as plt
+from scipy.cluster.hierarchy import dendrogram, fcluster, linkage, to_tree
 from scipy.spatial.distance import squareform
 from utils.distance import distance_matrix
 

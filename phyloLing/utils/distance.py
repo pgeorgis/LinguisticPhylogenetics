@@ -1,6 +1,7 @@
-from math import exp, log, sqrt
-from numpy import zeros
 import operator
+from math import exp, log, sqrt
+
+from numpy import zeros
 
 
 # PAIRWISE SIMILARITY / DISTANCE

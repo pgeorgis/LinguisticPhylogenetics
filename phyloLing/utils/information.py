@@ -1,6 +1,7 @@
 from math import log
 from statistics import mean
-from constants import PAD_CH_DEFAULT, GAP_CH_DEFAULT
+
+from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
 from utils.sequence import Ngram, PhonEnvNgram
 
 

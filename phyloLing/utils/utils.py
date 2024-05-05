@@ -1,12 +1,13 @@
 """General auxiliary functions."""
 
-from collections import defaultdict
 import datetime
+import operator
+from collections import defaultdict
+
 from networkx import Graph
 from networkx.algorithms.components.connected import connected_components
 from numpy import array, array_split
 from numpy.random import permutation
-import operator
 
 
 def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):

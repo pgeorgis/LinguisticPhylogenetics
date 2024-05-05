@@ -1,8 +1,9 @@
+import re
 from functools import lru_cache
 from math import factorial
-import re
+
+from constants import END_PAD_CH, PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH
 from phonUtils.phonEnv import PHON_ENV_REGEX
-from constants import SEG_JOIN_CH, PAD_CH_DEFAULT, START_PAD_CH, END_PAD_CH
 
 
 class Ngram:

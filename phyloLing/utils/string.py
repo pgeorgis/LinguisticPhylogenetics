@@ -1,6 +1,7 @@
 """MISC STRING MANIPULATION FUNCTIONS"""
 
 import re
+
 from unidecode import unidecode
 
 

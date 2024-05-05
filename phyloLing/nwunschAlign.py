@@ -25,6 +25,7 @@ Modified by Philip Georgis from:
 """
 from utils.utils import dict_tuplelist
 
+
 def return_alignment(ALIGNMENTS):
     final_alignments = []
     for final_alignment in ALIGNMENTS:
@@ -32,17 +33,17 @@ def return_alignment(ALIGNMENTS):
     return final_alignments
 
 def find_each_path(c_i,c_j,ALN_PATHWAYS,MATRIX,path=''): # Nested function to discover new aln pathways
-    # global ALN_PATHWAYS 
-    i = c_i 
-    j = c_j 
-    if i == 0 and j==0: 
-        ALN_PATHWAYS.append(path) 
-        return 2 
-    dir_t = len(MATRIX[i][j][1]) 
-    while dir_t<=1: 
-        n_dir = MATRIX[i][j][1][0] if (i != 0 and j != 0) else (1 if i == 0 else (3 if j==0 else 0)) 
-        path = path + str(n_dir) 
-        if n_dir == 1: 
+    # global ALN_PATHWAYS
+    i = c_i
+    j = c_j
+    if i == 0 and j==0:
+        ALN_PATHWAYS.append(path)
+        return 2
+    dir_t = len(MATRIX[i][j][1])
+    while dir_t<=1:
+        n_dir = MATRIX[i][j][1][0] if (i != 0 and j != 0) else (1 if i == 0 else (3 if j==0 else 0))
+        path = path + str(n_dir)
+        if n_dir == 1:
             j=j-1
         elif n_dir == 2:
             i=i-1
@@ -88,7 +89,7 @@ def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, GAP_SCORE=-1, GAP_CHARAC
             v_val = MATRIX[i-1][j][0] + GAP_SCORE
             o_val = [h_val, d_val, v_val]
             MATRIX[i][j] = [max(o_val), [i+1 for i,v in enumerate(o_val) if v==max(o_val)]] # h = 1, d = 2, v = 3
-    
+
     # Matrix Evaulation [end]
     OVERALL_SCORE = MATRIX[i][j][0]
     score = OVERALL_SCORE
