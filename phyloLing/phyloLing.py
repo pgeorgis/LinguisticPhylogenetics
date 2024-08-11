@@ -769,7 +769,6 @@ class LexicalDataset:
         # Compute distance matrix over Language objects
         dm = distance_matrix(group=list(self.languages.values()),
                              dist_func=dist_func,
-                             sim=dist_func.sim,
                              clustered_cognates=clustered_concepts,
                              **kwargs)
 
