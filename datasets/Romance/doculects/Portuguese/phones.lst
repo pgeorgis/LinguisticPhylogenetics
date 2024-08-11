@@ -11,8 +11,8 @@ VOWELS
 
 /ˈa/ (0.039)
 	<fada> /fˈaðɐ/ "FATE_NOUN"
-	<ɡato> /ɡˈatu/ "CAT_NOUN"
-	<viaɡem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
+	<gato> /ɡˈatu/ "CAT_NOUN"
+	<viagem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
 
 /ɨ/ (0.037)
 	<doze> /dˈozɨ/ "TWELVE_NUM"
@@ -22,12 +22,12 @@ VOWELS
 /ˈo/ (0.033)
 	<doce> /dˈosɨ/ "SWEET_ADJ"
 	<dona> /dˈonɐ/ "LADY_NOUN"
-	<foɡo> /fˈoɣu/ "FIRE_NOUN"
+	<fogo> /fˈoɣu/ "FIRE_NOUN"
 
 /ˈi/ (0.024)
 	<dia> /dˈiɐ/ "DAY_NOUN"
 	<cima> /sˈimɐ/ "SUMMIT_NOUN"
-	<arɡila> /ɐɾʒˈilɐ/ "CLAY_NOUN"
+	<argila> /ɐɾʒˈilɐ/ "CLAY_NOUN"
 
 /ˈe/ (0.024)
 	<ler> /lˈeɾ/ "READ_VERB"
@@ -40,23 +40,23 @@ VOWELS
 	<peixe> /pˈɐjʃɨ/ "FISH_NOUN"
 
 /ˈu/ (0.017)
-	<tú> /tˈu/ "THOU_PRON"
+	<tú> /tˈu/ "THOU_PRON"
 	<unha> /ˈuɲɐ/ "FINGERNAIL_NOUN"
 	<ruivo> /ʁˈujvu/ "RED_ADJ"
 
 /ˈɛ/ (0.016)
-	<século> /sˈɛkulu/ "CENTURY_NOUN"
+	<século> /sˈɛkulu/ "CENTURY_NOUN"
 	<ferro> /fˈɛʁu/ "IRON_NOUN"
 	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
 
 /ˈɔ/ (0.016)
 	<melhor> /mɨʎˈɔɾ/ "BETTER_ADJ"
-	<nós> /nˈɔʃ/ "WE_PRON"
+	<nós> /nˈɔʃ/ "WE_PRON"
 	<cola> /kˈɔlɐ/ "TAIL_NOUN"
 
 /ˈɐ̃/ (0.016)
 	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
-	<são> /sˈɐ̃w̃/ "HEALTHY (M)_ADJ"
+	<são> /sˈɐ̃w̃/ "HEALTHY (M)_ADJ"
 	<branco> /bɾˈɐ̃ku/ "WHITE_ADJ"
 
 /i/ (0.011)
@@ -66,7 +66,7 @@ VOWELS
 
 /ˈẽ/ (0.006)
 	<ventre> /vˈẽtɾɨ/ "BELLY_NOUN"
-	<ɡente> /ʒˈẽtɨ/ "PEOPLE_NOUN"
+	<gente> /ʒˈẽtɨ/ "PEOPLE_NOUN"
 	<tempo> /tˈẽpu/ "TIME_NOUN"
 
 /ˈõ/ (0.005)
@@ -76,12 +76,12 @@ VOWELS
 
 /ɐ̃/ (0.005)
 	<nuvem> /nˈuvɐ̃j̃/ "CLOUD_NOUN"
-	<viaɡem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
+	<viagem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
 	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
 
 /ˈĩ/ (0.003)
 	<fim> /fˈĩ/ "END_NOUN"
-	<línɡua> /lˈĩɡwɐ/ "TONGUE_NOUN"
+	<língua> /lˈĩɡwɐ/ "TONGUE_NOUN"
 	<vinte> /vˈĩtɨ/ "TWENTY_NUM"
 
 /ˈũ/ (0.003)
@@ -108,10 +108,10 @@ VOWELS
 
 /ẽ/ (0.001)
 	<sentar> /sẽtˈaɾ/ "SIT_ADJ"
-	<ɡenɡiva> /ʒẽʒˈivɐ/ "GUMS_NOUN"
+	<gengiva> /ʒẽʒˈivɐ/ "GUMS_NOUN"
 
 /ũ/ (0.001)
-	<umbiɡo> /ũbˈiɣu/ "NAVEL_NOUN"
+	<umbigo> /ũbˈiɣu/ "NAVEL_NOUN"
 
 /õ/ (0.001)
 	<montanha> /mõtˈɐɲɐ/ "MOUNTAIN_NOUN"
@@ -121,7 +121,7 @@ VOWELS
 CONSONANTS
 /ɾ/ (0.075)
 	<morte> /mˈɔɾtɨ/ "DEATH_NOUN"
-	<planɡer> /plɐ̃ʒˈeɾ/ "WEEP_VERB"
+	<planger> /plɐ̃ʒˈeɾ/ "WEEP_VERB"
 	<escrever> /iʃkɾɨvˈeɾ/ "WRITE_VERB"
 
 /ʃ/ (0.037)
@@ -131,7 +131,7 @@ CONSONANTS
 
 /s/ (0.037)
 	<osso> /ˈosu/ "BONE_NOUN"
-	<saúde> /sɐˈuðɨ/ "HEALTH_NOUN"
+	<saúde> /sɐˈuðɨ/ "HEALTH_NOUN"
 	<santo> /sˈɐ̃tu/ "SACRED_ADJ"
 
 /t/ (0.036)
@@ -150,9 +150,9 @@ CONSONANTS
 	<vila> /vˈilɐ/ "TOWN_NOUN"
 
 /l/ (0.029)
-	<arɡila> /ɐɾʒˈilɐ/ "CLAY_NOUN"
+	<argila> /ɐɾʒˈilɐ/ "CLAY_NOUN"
 	<pelo> /pˈelu/ "HAIR_NOUN"
-	<ɡola> /ɡˈɔlɐ/ "THROAT_NOUN"
+	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
 
 /j/ (0.028)
 	<leite> /lˈɐjtɨ/ "MILK_NOUN"
@@ -160,7 +160,7 @@ CONSONANTS
 	<ruivo> /ʁˈujvu/ "RED_ADJ"
 
 /p/ (0.027)
-	<pássaro> /pˈasɐɾu/ "BIRD_NOUN"
+	<pássaro> /pˈasɐɾu/ "BIRD_NOUN"
 	<porca> /pˈɔɾkɐ/ "SOW_NOUN"
 	<corpo> /kˈoɾpu/ "BODY_NOUN"
 
@@ -171,7 +171,7 @@ CONSONANTS
 
 /n/ (0.02)
 	<pena> /pˈenɐ/ "PAIN_NOUN"
-	<névoa> /nˈɛvwɐ/ "FOG_NOUN"
+	<névoa> /nˈɛvwɐ/ "FOG_NOUN"
 	<nariz> /nɐɾˈiʃ/ "NOSE_NOUN"
 
 /ð/ (0.017)
@@ -181,16 +181,16 @@ CONSONANTS
 
 /f/ (0.016)
 	<filho> /fˈiʎu/ "SON_NOUN"
-	<foɡo> /fˈoɣu/ "FIRE_NOUN"
+	<fogo> /fˈoɣu/ "FIRE_NOUN"
 	<ferro> /fˈɛʁu/ "IRON_NOUN"
 
 /ɣ/ (0.014)
-	<seɡuro> /sɨɣˈuɾu/ "SAFE_ADJ"
-	<umbiɡo> /ũbˈiɣu/ "NAVEL_NOUN"
-	<verɡonha> /vɨɾɣˈoɲɐ/ "SHAME_NOUN"
+	<seguro> /sɨɣˈuɾu/ "SAFE_ADJ"
+	<umbigo> /ũbˈiɣu/ "NAVEL_NOUN"
+	<vergonha> /vɨɾɣˈoɲɐ/ "SHAME_NOUN"
 
 /d/ (0.013)
-	<diɡo> /dˈiɣu/ "SAY-1SG_VERB"
+	<digo> /dˈiɣu/ "SAY-1SG_VERB"
 	<doce> /dˈosɨ/ "SWEET_ADJ"
 	<caldo> /kˈaɫdu/ "HOT_ADJ"
 
@@ -201,7 +201,7 @@ CONSONANTS
 
 /ʒ/ (0.012)
 	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
-	<joɡo> /ʒˈoɣu/ "GAME_NOUN"
+	<jogo> /ʒˈoɣu/ "GAME_NOUN"
 	<junto> /ʒˈũtu/ "JOINED_ADJ"
 
 /w/ (0.011)
@@ -225,14 +225,14 @@ CONSONANTS
 	<saiba> /sˈajβɐ/ "KNOW-SBJ-1SG_VERB"
 
 /ʁ/ (0.009)
-	<razão> /ʁɐzˈɐ̃w̃/ "REASON_NOUN"
+	<razão> /ʁɐzˈɐ̃w̃/ "REASON_NOUN"
 	<roxo> /ʁˈoʃu/ "RED_ADJ"
-	<ɡenro> /ʒˈẽʁu/ "SON-IN-LAW_NOUN"
+	<genro> /ʒˈẽʁu/ "SON-IN-LAW_NOUN"
 
 /w̃/ (0.008)
-	<pão> /pˈɐ̃w̃/ "BREAD_NOUN"
-	<não> /nɐ̃w̃/ "NOT_ADVERB"
-	<romão> /ʁumˈɐ̃w̃/ "ROMAN_ADJ"
+	<pão> /pˈɐ̃w̃/ "BREAD_NOUN"
+	<não> /nɐ̃w̃/ "NOT_ADVERB"
+	<romão> /ʁumˈɐ̃w̃/ "ROMAN_ADJ"
 
 /ɫ/ (0.007)
 	<sol> /sˈɔɫ/ "SUN_NOUN"
@@ -240,14 +240,14 @@ CONSONANTS
 	<sal> /sˈaɫ/ "SALT_NOUN"
 
 /ɡ/ (0.007)
-	<ɡolpe> /ɡˈɔɫpɨ/ "STRIKE_NOUN"
-	<ɡola> /ɡˈɔlɐ/ "THROAT_NOUN"
-	<ɡrande> /ɡɾˈɐ̃dɨ/ "BIG_ADJ"
+	<golpe> /ɡˈɔɫpɨ/ "STRIKE_NOUN"
+	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
+	<grande> /ɡɾˈɐ̃dɨ/ "BIG_ADJ"
 
 /j̃/ (0.006)
 	<homem> /ˈɔmɐ̃j̃/ "MAN_NOUN"
 	<muito> /mˈũj̃tu/ "MANY_ADJ"
-	<mãe> /mˈɐ̃j̃/ "MOTHER_NOUN"
+	<mãe> /mˈɐ̃j̃/ "MOTHER_NOUN"
 
 /z/ (0.005)
 	<casa> /kˈazɐ/ "HOUSE_NOUN"

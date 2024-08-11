@@ -1,13 +1,13 @@
 VOWELS
 /a/ (0.068)
-	<doiɡt> /dwa/ "FINGER_NOUN"
-	<arɡile> /aʁʒil/ "CLAY_NOUN"
-	<voyaɡe> /vwajaʒ/ "JOURNEY_NOUN"
+	<doigt> /dwa/ "FINGER_NOUN"
+	<argile> /aʁʒil/ "CLAY_NOUN"
+	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
 
 /ɛ/ (0.055)
-	<chaîne> /ʃɛn/ "CHAIN_NOUN"
+	<chaîne> /ʃɛn/ "CHAIN_NOUN"
 	<chair> /ʃɛʁ/ "MEAT_NOUN"
-	<verɡoɡne> /vɛʁɡɔɲ/ "SHAME_NOUN"
+	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
 
 /i/ (0.047)
 	<racine> /ʁasin/ "ROOT_NOUN"
@@ -15,9 +15,9 @@ VOWELS
 	<dix> /dis/ "TEN_NUM"
 
 /e/ (0.037)
-	<neiɡer> /neʒe/ "SNOW (VERB)_VERB"
-	<ɡlacer> /ɡlase/ "FREEZE_VERB"
-	<épi> /epi/ "EAR OF GRAIN_NOUN"
+	<neiger> /neʒe/ "SNOW (VERB)_VERB"
+	<glacer> /ɡlase/ "FREEZE_VERB"
+	<épi> /epi/ "EAR OF GRAIN_NOUN"
 
 /ɛ̃/ (0.025)
 	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
@@ -37,11 +37,11 @@ VOWELS
 /o/ (0.021)
 	<pauvre> /povʁ/ "POOR_ADJ"
 	<aube> /ob/ "DAWN_NOUN"
-	<côte> /kot/ "COAST_NOUN"
+	<côte> /kot/ "COAST_NOUN"
 
 /ɑ̃/ (0.019)
 	<blanc> /blɑ̃/ "WHITE_ADJ"
-	<ɡrand> /ɡʁɑ̃/ "BIG_ADJ"
+	<grand> /ɡʁɑ̃/ "BIG_ADJ"
 	<cent> /sɑ̃/ "HUNDRED_NUM"
 
 /ɔ̃/ (0.016)
@@ -52,12 +52,12 @@ VOWELS
 /y/ (0.016)
 	<sur> /syʁ/ "ABOVE_PREP"
 	<ru> /ʁy/ "RIVER_NOUN"
-	<mûr> /myʁ/ "MATURE_NOUN"
+	<mûr> /myʁ/ "MATURE_NOUN"
 
 /œ/ (0.014)
 	<œil> /œj/ "EYE_NOUN"
 	<feuille> /fœj/ "LEAF_NOUN"
-	<ɡueule> /ɡœl/ "THROAT_NOUN"
+	<gueule> /ɡœl/ "THROAT_NOUN"
 
 /ø/ (0.011)
 	<mieux> /mjø/ "BETTER_ADV"
@@ -65,7 +65,7 @@ VOWELS
 	<jeu> /ʒø/ "GAME_NOUN"
 
 /ə/ (0.01)
-	<ɡenou> /ʒənu/ "KNEE_NOUN"
+	<genou> /ʒənu/ "KNEE_NOUN"
 	<que> /kə/ "WHAT_PRON"
 	<petit> /pəti/ "SMALL_ADJ"
 
@@ -74,7 +74,7 @@ VOWELS
 CONSONANTS
 /ʁ/ (0.1)
 	<faire> /fɛʁ/ "DO_VERB"
-	<ɡraine> /ɡʁɛn/ "GRAIN_NOUN"
+	<graine> /ɡʁɛn/ "GRAIN_NOUN"
 	<pierre> /pjɛʁ/ "STONE_NOUN"
 
 /l/ (0.058)
@@ -83,7 +83,7 @@ CONSONANTS
 	<lac> /lak/ "LAKE_NOUN"
 
 /s/ (0.052)
-	<ɡlacer> /ɡlase/ "FREEZE_VERB"
+	<glacer> /ɡlase/ "FREEZE_VERB"
 	<tous> /tus/ "ALL (PL)_ADJ"
 	<occire> /ɔksiʁ/ "KILL_VERB"
 
@@ -93,29 +93,29 @@ CONSONANTS
 	<bonnes> /bɔn/ "GOOD (F.PL)_ADJ"
 
 /p/ (0.035)
-	<pêche> /pɛʃ/ "PEACH_NOUN"
+	<pêche> /pɛʃ/ "PEACH_NOUN"
 	<plume> /plym/ "FEATHER_NOUN"
 	<puy> /pɥi/ "PODIUM_NOUN"
 
 /v/ (0.034)
 	<hiver> /ivɛʁ/ "WINTER_NOUN"
-	<vinɡt> /vɛ̃/ "TWENTY_NUM"
-	<ɡencive> /ʒɑ̃siv/ "GUMS_NOUN"
+	<vingt> /vɛ̃/ "TWENTY_NUM"
+	<gencive> /ʒɑ̃siv/ "GUMS_NOUN"
 
 /t/ (0.034)
 	<lettre> /lɛtʁ/ "LETTER_NOUN"
 	<tuer> /tɥe/ "KILL_VERB"
-	<étude> /etyd/ "STUDY_NOUN"
+	<étude> /etyd/ "STUDY_NOUN"
 
 /w/ (0.033)
-	<étoile> /etwal/ "STAR_NOUN"
+	<étoile> /etwal/ "STAR_NOUN"
 	<point> /pwɛ̃/ "POINT_NOUN"
 	<noir> /nwaʁ/ "BLACK_ADJ"
 
 /m/ (0.029)
 	<semaine> /səmɛn/ "WEEK_NOUN"
 	<mater> /mate/ "KILL_VERB"
-	<fumée> /fyme/ "SMOKE_NOUN"
+	<fumée> /fyme/ "SMOKE_NOUN"
 
 /k/ (0.029)
 	<queue> /kø/ "TAIL_NOUN"
@@ -123,27 +123,27 @@ CONSONANTS
 	<caille> /kaj/ "QUAIL_NOUN"
 
 /f/ (0.029)
-	<fête> /fɛt/ "PARTY_NOUN"
+	<fête> /fɛt/ "PARTY_NOUN"
 	<faire> /fɛʁ/ "DO_VERB"
 	<fil> /fil/ "STRING_NOUN"
 
 /j/ (0.028)
 	<vieux> /vjø/ "OLD_ADJ"
-	<voyaɡe> /vwajaʒ/ "JOURNEY_NOUN"
-	<siècle> /sjɛkl/ "CENTURY_NOUN"
+	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
+	<siècle> /sjɛkl/ "CENTURY_NOUN"
 
 /ʒ/ (0.023)
-	<manɡer> /mɑ̃ʒe/ "EAT_VERB"
-	<ɡentil> /ʒɑ̃ti/ "NICE_ADJ"
+	<manger> /mɑ̃ʒe/ "EAT_VERB"
+	<gentil> /ʒɑ̃ti/ "NICE_ADJ"
 	<joie> /ʒwa/ "JOY_NOUN"
 
 /d/ (0.022)
 	<pondre> /pɔ̃dʁ/ "PUT_VERB"
-	<ɡendre> /ʒɑ̃dʁ/ "SON-IN-LAW_NOUN"
+	<gendre> /ʒɑ̃dʁ/ "SON-IN-LAW_NOUN"
 	<plaindre> /plɛ̃dʁ/ "WEEP_VERB"
 
 /ʃ/ (0.021)
-	<château> /ʃato/ "CASTLE_NOUN"
+	<château> /ʃato/ "CASTLE_NOUN"
 	<chez> /ʃe/ "HOUSE_NOUN"
 	<chat> /ʃa/ "CAT_NOUN"
 
@@ -153,9 +153,9 @@ CONSONANTS
 	<arbre> /aʁbʁ/ "TREE_NOUN"
 
 /ɡ/ (0.013)
-	<aiɡuille> /ɛɡɥij/ "NEEDLE_NOUN"
-	<ɡlacer> /ɡlase/ "FREEZE_VERB"
-	<verɡoɡne> /vɛʁɡɔɲ/ "SHAME_NOUN"
+	<aiguille> /ɛɡɥij/ "NEEDLE_NOUN"
+	<glacer> /ɡlase/ "FREEZE_VERB"
+	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
 
 /ɥ/ (0.01)
 	<fruit> /fʁɥi/ "FRUIT_NOUN"
@@ -168,9 +168,9 @@ CONSONANTS
 	<douze> /duz/ "TWELVE_NUM"
 
 /ɲ/ (0.005)
-	<Espaɡne> /ɛspaɲ/ "SPAIN_PROPN"
-	<araiɡnée> /aʁeɲe/ "SPIDER_NOUN"
-	<liɡne> /liɲ/ "LINE_NOUN"
+	<Espagne> /ɛspaɲ/ "SPAIN_PROPN"
+	<araignée> /aʁeɲe/ "SPIDER_NOUN"
+	<ligne> /liɲ/ "LINE_NOUN"
 
 
 

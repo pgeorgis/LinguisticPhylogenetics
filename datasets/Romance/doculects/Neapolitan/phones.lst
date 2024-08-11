@@ -1,6 +1,6 @@
 VOWELS
 /ə/ (0.201)
-	<oɡna> /ˈoɲːə/ "FINGERNAIL_NOUN"
+	<ogna> /ˈoɲːə/ "FINGERNAIL_NOUN"
 	<catina> /katˈinə/ "CHAIN_NOUN"
 	<littera> /lˈitːəɾə/ "LETTER_NOUN"
 
@@ -27,7 +27,7 @@ VOWELS
 /ˈɛ/ (0.026)
 	<cennere> /ʃˈɛnːəɾə/ "ASH_NOUN"
 	<cielo> /ʃˈɛlə/ "SKY_NOUN"
-	<sapè> /sapˈɛ/ "KNOW_VERB"
+	<sapè> /sapˈɛ/ "KNOW_VERB"
 
 /a/ (0.018)
 	<nata> /natˈa/ "SWIM_VERB"
@@ -36,21 +36,21 @@ VOWELS
 
 /ˈe/ (0.017)
 	<pesce> /pˈeʃːə/ "FISH_NOUN"
-	<fécato> /fˈekatə/ "LIVER_NOUN"
+	<fécato> /fˈekatə/ "LIVER_NOUN"
 	<credere> /krˈeɾəɾə/ "BELIEVE_VERB"
 
 /i/ (0.015)
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
-	<scrìvere> /ʃkɾˈiviɾə/ "WRITE_VERB"
+	<scrìvere> /ʃkɾˈiviɾə/ "WRITE_VERB"
 	<dieci> /djˈɛʃi/ "TEN_NUM"
 
 /ˈo/ (0.013)
 	<cunosce> /kunˈoʃːə/ "BE ACQUAINTED WITH_VERB"
 	<notte> /nˈotːə/ "NIGHT_NOUN"
-	<oɡna> /ˈoɲːə/ "FINGERNAIL_NOUN"
+	<ogna> /ˈoɲːə/ "FINGERNAIL_NOUN"
 
 /u/ (0.011)
-	<murì> /muɾˈi/ "DIE_VERB"
+	<murì> /muɾˈi/ "DIE_VERB"
 	<isula> /ˈisulə/ "ISLAND_NOUN"
 	<cunosce> /kunˈoʃːə/ "BE ACQUAINTED WITH_VERB"
 
@@ -60,7 +60,7 @@ VOWELS
 	<che> /ke/ "WHAT_PRON"
 
 /o/ (0.004)
-	<dormì> /doɾmˈi/ "SLEEP_VERB"
+	<dormì> /doɾmˈi/ "SLEEP_VERB"
 	<quatto> /kwˈatːo/ "FOUR_NUM"
 	<viento> /vjˈɛnto/ "WIND_NOUN"
 
@@ -84,7 +84,7 @@ CONSONANTS
 
 /t/ (0.039)
 	<studio> /ʃtˈudjə/ "STUDY_NOUN"
-	<putè> /putˈɛ/ "CAN_VERB"
+	<putè> /putˈɛ/ "CAN_VERB"
 	<terra> /tˈɛrːə/ "EARTH_NOUN"
 
 /j/ (0.033)
@@ -93,27 +93,27 @@ CONSONANTS
 	<jorno> /jˈornə/ "DAY_NOUN"
 
 /l/ (0.029)
-	<lióne> /liˈonə/ "LION_NOUN"
+	<lióne> /liˈonə/ "LION_NOUN"
 	<sole> /sˈolə/ "SUN_NOUN"
 	<luoco> /lwˈɔkə/ "PLACE_NOUN"
 
 /v/ (0.028)
 	<vino> /vˈinə/ "WINE_NOUN"
-	<viaɡɡio> /vjˈaʤːə/ "JOURNEY_NOUN"
-	<nòve> /nˈɔvə/ "NINE_NUM"
+	<viaggio> /vjˈaʤːə/ "JOURNEY_NOUN"
+	<nòve> /nˈɔvə/ "NINE_NUM"
 
 /p/ (0.028)
-	<sapè> /sapˈɛ/ "KNOW_VERB"
+	<sapè> /sapˈɛ/ "KNOW_VERB"
 	<parola> /paɾˈɔlə/ "WORD_NOUN"
 	<spina> /ʃpˈinə/ "SPINE_NOUN"
 
 /ʃ/ (0.024)
-	<scrìvere> /ʃkɾˈiviɾə/ "WRITE_VERB"
+	<scrìvere> /ʃkɾˈiviɾə/ "WRITE_VERB"
 	<cima> /ʃˈimə/ "SUMMIT_NOUN"
 	<auciello> /awʃˈɛlːə/ "BIRD_NOUN"
 
 /w/ (0.023)
-	<lenɡua> /lˈeŋɡwə/ "TONGUE_NOUN"
+	<lengua> /lˈeŋɡwə/ "TONGUE_NOUN"
 	<buona> /bwˈɔnə/ "GOOD (F.SG)_ADJ"
 	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
 
@@ -124,26 +124,26 @@ CONSONANTS
 
 /m/ (0.017)
 	<maturu> /matˈuɾə/ "MATURE_NOUN"
-	<dormì> /doɾmˈi/ "SLEEP_VERB"
+	<dormì> /doɾmˈi/ "SLEEP_VERB"
 	<tiempo> /tjˈɛmpə/ "TIME_NOUN"
 
 /f/ (0.016)
 	<femmena> /fˈemːənə/ "WOMAN_NOUN"
 	<fierro> /fjˈɛrːə/ "IRON_NOUN"
-	<fà> /fˈa/ "DO_VERB"
+	<fà> /fˈa/ "DO_VERB"
 
 /r/ (0.015)
 	<radeca> /raɾˈekə/ "ROOT_NOUN"
-	<vreòɡna> /vreˈɔɲːə/ "SHAME_NOUN"
-	<abbrucià> /abːruʃˈa/ "BURN_VERB"
+	<vreògna> /vreˈɔɲːə/ "SHAME_NOUN"
+	<abbrucià> /abːruʃˈa/ "BURN_VERB"
 
 /d/ (0.013)
 	<caudo> /kˈawdə/ "HOT_ADJ"
-	<dùrece> /dˈuɾəʃə/ "TWELVE_NUM"
+	<dùrece> /dˈuɾəʃə/ "TWELVE_NUM"
 	<studio> /ʃtˈudjə/ "STUDY_NOUN"
 
 /lː/ (0.011)
-	<aɡniello> /aɲjˈɛlːə/ "LAMB_NOUN"
+	<agniello> /aɲjˈɛlːə/ "LAMB_NOUN"
 	<cuollo> /kwˈɔlːə/ "NECK_NOUN"
 	<piccirillo> /piʧːˈiɾilːə/ "SMALL_ADJ"
 
@@ -153,14 +153,14 @@ CONSONANTS
 	<sette> /sˈɛtːə/ "SEVEN_NUM"
 
 /ɲː/ (0.009)
-	<maɡnà> /məɲːˈa/ "EAT_VERB"
-	<Spaɡna> /spˈaɲːə/ "SPAIN_PROPN"
-	<chiaɡnere> /kjˈaɲːəɾə/ "WEEP_VERB"
+	<magnà> /məɲːˈa/ "EAT_VERB"
+	<Spagna> /spˈaɲːə/ "SPAIN_PROPN"
+	<chiagnere> /kjˈaɲːəɾə/ "WEEP_VERB"
 
 /ɡ/ (0.008)
-	<ɡruosso> /ɡrwˈɔsːə/ "THICK_ADJ"
-	<ɡràno> /ɡɾˈanə/ "GRAIN_NOUN"
-	<ɡatto> /ɡˈatːə/ "CAT_NOUN"
+	<gruosso> /ɡrwˈɔsːə/ "THICK_ADJ"
+	<gràno> /ɡɾˈanə/ "GRAIN_NOUN"
+	<gatto> /ɡˈatːə/ "CAT_NOUN"
 
 /kː/ (0.008)
 	<sicco> /sˈikːə/ "DRY (M)_ADJ"
@@ -168,14 +168,14 @@ CONSONANTS
 	<recchia> /rˈekːjə/ "EAR_NOUN"
 
 /ʤ/ (0.007)
-	<ɡelare> /ʤəlˈaɾə/ "FREEZE_VERB"
-	<ɡiallo> /ʤˈalːə/ "YELLOW_ADJ"
-	<ɡinɡie> /ʤinʤˈiə/ "GUMS_NOUN"
+	<gelare> /ʤəlˈaɾə/ "FREEZE_VERB"
+	<giallo> /ʤˈalːə/ "YELLOW_ADJ"
+	<gingie> /ʤinʤˈiə/ "GUMS_NOUN"
 
 /ʃː/ (0.006)
 	<pesce> /pˈeʃːə/ "FISH_NOUN"
 	<coscia> /kˈɔʃːə/ "THIGH_NOUN"
-	<caccià> /kaʃːˈa/ "HUNT_VERB"
+	<caccià> /kaʃːˈa/ "HUNT_VERB"
 
 /mː/ (0.006)
 	<fummo> /fˈumːə/ "SMOKE_NOUN"
@@ -183,13 +183,13 @@ CONSONANTS
 	<ciume> /ʃˈumːə/ "RIVER_NOUN"
 
 /ʎː/ (0.005)
-	<fiɡlia> /fˈiʎːə/ "DAUGHTER_NOUN"
-	<néɡlia> /nˈeʎːə/ "FOG_NOUN"
-	<fiɡlio> /fˈiʎːə/ "SON_NOUN"
+	<figlia> /fˈiʎːə/ "DAUGHTER_NOUN"
+	<néglia> /nˈeʎːə/ "FOG_NOUN"
+	<figlio> /fˈiʎːə/ "SON_NOUN"
 
 /ŋ/ (0.005)
-	<lenɡua> /lˈeŋɡwə/ "TONGUE_NOUN"
-	<luonɡo> /lwˈɔŋɡə/ "LONG_ADJ"
+	<lengua> /lˈeŋɡwə/ "TONGUE_NOUN"
+	<luongo> /lwˈɔŋɡə/ "LONG_ADJ"
 	<janco> /jˈaŋkə/ "WHITE_ADJ"
 
 /nː/ (0.005)
@@ -198,8 +198,8 @@ CONSONANTS
 	<pinna> /pˈinːə/ "FEATHER_NOUN"
 
 /sː/ (0.004)
-	<ɡruosso> /ɡrwˈɔsːə/ "THICK_ADJ"
-	<éssa> /ˈesːə/ "SHE_PRON"
+	<gruosso> /ɡrwˈɔsːə/ "THICK_ADJ"
+	<éssa> /ˈesːə/ "SHE_PRON"
 	<isso> /ˈisːə/ "HE_PRON"
 
 /b/ (0.004)
@@ -213,14 +213,14 @@ CONSONANTS
 	<palazzo> /palˈaʦːə/ "PALACE_NOUN"
 
 /ʤː/ (0.003)
-	<chioɡɡia> /kjˈɔʤːə/ "RAIN_NOUN"
-	<leɡɡe> /lˈɛʤːə/ "READ_VERB"
-	<viaɡɡio> /vjˈaʤːə/ "JOURNEY_NOUN"
+	<chioggia> /kjˈɔʤːə/ "RAIN_NOUN"
+	<legge> /lˈɛʤːə/ "READ_VERB"
+	<viaggio> /vjˈaʤːə/ "JOURNEY_NOUN"
 
 /ʦ/ (0.002)
 	<forza> /fˈɔɾʦə/ "STRENGTH_NOUN"
 	<panza> /pˈanʦə/ "BELLY_NOUN"
-	<scuòrzo> /ʃkwˈɔrʦə/ "BARK_NOUN"
+	<scuòrzo> /ʃkwˈɔrʦə/ "BARK_NOUN"
 
 /ʧː/ (0.001)
 	<piccirillo> /piʧːˈiɾilːə/ "SMALL_ADJ"
@@ -231,14 +231,14 @@ CONSONANTS
 	<terra> /tˈɛrːə/ "EARTH_NOUN"
 
 /bː/ (0.001)
-	<lìbbero> /lˈibːəɾə/ "FREE_ADJ"
-	<abbrucià> /abːruʃˈa/ "BURN_VERB"
+	<lìbbero> /lˈibːəɾə/ "FREE_ADJ"
+	<abbrucià> /abːruʃˈa/ "BURN_VERB"
 
 /ʧ/ (0.001)
 	<noce> /nˈoʧə/ "NUT_NOUN"
 
 /ɲ/ (0.001)
-	<aɡniello> /aɲjˈɛlːə/ "LAMB_NOUN"
+	<agniello> /aɲjˈɛlːə/ "LAMB_NOUN"
 
 /z/ (0.001)
 	<cosa> /kˈɔzə/ "THING_NOUN"

@@ -17,7 +17,7 @@ VOWELS
 /ˈa/ (0.053)
 	<sabes> /sˈaβes/ "KNOW-2SG_VERB"
 	<llama> /ɟ͡ʝˈama/ "FLAME_NOUN"
-	<ɡato> /ɡˈato/ "CAT_NOUN"
+	<gato> /ɡˈato/ "CAT_NOUN"
 
 /e/ (0.046)
 	<estudio> /estˈuðjo/ "STUDY_NOUN"
@@ -26,23 +26,23 @@ VOWELS
 
 /ˈo/ (0.036)
 	<poco> /pˈoko/ "LITTLE_ADJ"
-	<razón> /raθˈon/ "REASON_NOUN"
+	<razón> /raθˈon/ "REASON_NOUN"
 	<doce> /dˈoθe/ "TWELVE_NUM"
 
 /ˈi/ (0.029)
 	<ceniza> /θenˈiθa/ "ASH_NOUN"
 	<escribir> /eskɾiβˈiɾ/ "WRITE_VERB"
-	<vía> /bˈia/ "ROAD_NOUN"
+	<vía> /bˈia/ "ROAD_NOUN"
 
 /ˈu/ (0.019)
 	<uña> /ˈuɲa/ "FINGERNAIL_NOUN"
 	<lluvia> /ɟ͡ʝˈuβja/ "RAIN_NOUN"
-	<seɡuro> /seɣˈuɾo/ "SAFE_ADJ"
+	<seguro> /seɣˈuɾo/ "SAFE_ADJ"
 
 /i/ (0.005)
-	<ninɡuno> /niŋɡˈuno/ "NONE_PRON"
-	<láɡrima> /lˈaɣɾima/ "TEAR_NOUN"
-	<iɡual> /iɣwˈal/ "EQUAL_ADJ"
+	<ninguno> /niŋɡˈuno/ "NONE_PRON"
+	<lágrima> /lˈaɣɾima/ "TEAR_NOUN"
+	<igual> /iɣwˈal/ "EQUAL_ADJ"
 
 /u/ (0.002)
 	<ayudar> /aʝuðˈaɾ/ "HELP_VERB"
@@ -60,7 +60,7 @@ CONSONANTS
 /n/ (0.053)
 	<conocer> /konoθˈeɾ/ "BE ACQUAINTED WITH_VERB"
 	<nuez> /nwˈeθ/ "NUT_NOUN"
-	<encía> /enθˈia/ "GUMS_NOUN"
+	<encía> /enθˈia/ "GUMS_NOUN"
 
 /s/ (0.042)
 	<sepa> /sˈepa/ "KNOW-SBJ-1SG_VERB"
@@ -79,7 +79,7 @@ CONSONANTS
 
 /t/ (0.029)
 	<cuatro> /kwˈatɾo/ "FOUR_NUM"
-	<ɡentil> /xentˈil/ "NICE_ADJ"
+	<gentil> /xentˈil/ "NICE_ADJ"
 	<nosotros> /nosˈotɾos/ "WE_PRON"
 
 /m/ (0.027)
@@ -114,8 +114,8 @@ CONSONANTS
 
 /w/ (0.021)
 	<cuello> /kwˈeʝo/ "NECK_NOUN"
-	<lenɡua> /lˈeŋɡwa/ "TONGUE_NOUN"
-	<aɡua> /ˈaɣwa/ "WATER_NOUN"
+	<lengua> /lˈeŋɡwa/ "TONGUE_NOUN"
+	<agua> /ˈaɣwa/ "WATER_NOUN"
 
 /ð/ (0.016)
 	<ayudo> /aʝˈuðo/ "HELP-1SG_VERB"
@@ -128,12 +128,12 @@ CONSONANTS
 	<hijo> /ˈixo/ "SON_NOUN"
 
 /ɣ/ (0.013)
-	<aɡuja> /aɣˈuxa/ "NEEDLE_NOUN"
-	<lueɡo> /lwˈeɣo/ "PLACE_NOUN"
-	<espiɡa> /espˈiɣa/ "EAR OF GRAIN_NOUN"
+	<aguja> /aɣˈuxa/ "NEEDLE_NOUN"
+	<luego> /lwˈeɣo/ "PLACE_NOUN"
+	<espiga> /espˈiɣa/ "EAR OF GRAIN_NOUN"
 
 /d/ (0.012)
-	<diɡo> /dˈiɣo/ "SAY-1SG_VERB"
+	<digo> /dˈiɣo/ "SAY-1SG_VERB"
 	<doce> /dˈoθe/ "TWELVE_NUM"
 	<dos> /dˈos/ "TWO (M)_NUM"
 
@@ -148,9 +148,9 @@ CONSONANTS
 	<pequeño> /pekˈeɲo/ "SMALL_ADJ"
 
 /ɡ/ (0.008)
-	<ɡrano> /ɡɾˈano/ "GRAIN_NOUN"
-	<ɡrasa> /ɡɾˈasa/ "FAT_NOUN"
-	<ɡozo> /ɡˈoθo/ "JOY_NOUN"
+	<grano> /ɡɾˈano/ "GRAIN_NOUN"
+	<grasa> /ɡɾˈasa/ "FAT_NOUN"
+	<gozo> /ɡˈoθo/ "JOY_NOUN"
 
 /r/ (0.008)
 	<redondo> /reðˈondo/ "ROUND_ADJ"
@@ -158,7 +158,7 @@ CONSONANTS
 	<rubio> /rˈuβjo/ "RED_ADJ"
 
 /f/ (0.007)
-	<frío> /fɾˈio/ "COLD_ADJ"
+	<frío> /fɾˈio/ "COLD_ADJ"
 	<flor> /flˈoɾ/ "FLOWER_NOUN"
 	<feliz> /felˈiθ/ "HAPPY_ADJ"
 

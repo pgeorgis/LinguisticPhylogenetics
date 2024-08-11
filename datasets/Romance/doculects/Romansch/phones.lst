@@ -1,7 +1,7 @@
 VOWELS
 /ə/ (0.103)
 	<tscharescha> /ʧərˈeʃə/ "CHERRY_NOUN"
-	<plievɡia> /plˈiəvʥə/ "RAIN_NOUN"
+	<plievgia> /plˈiəvʥə/ "RAIN_NOUN"
 	<femna> /fˈemnə/ "WOMAN_NOUN"
 
 /ˈa/ (0.064)
@@ -16,16 +16,16 @@ VOWELS
 
 /ˈi/ (0.036)
 	<scriver> /ʃkrˈivər/ "WRITE_VERB"
-	<raɡisch> /rəʥˈiʃ/ "ROOT_NOUN"
-	<fritɡ> /frˈiʨ/ "FRUIT_NOUN"
+	<ragisch> /rəʥˈiʃ/ "ROOT_NOUN"
+	<fritg> /frˈiʨ/ "FRUIT_NOUN"
 
 /ˈɛ/ (0.033)
-	<pèz> /pˈɛʦ/ "BREAST_NOUN"
+	<pèz> /pˈɛʦ/ "BREAST_NOUN"
 	<schender> /ʃˈɛndər/ "SON-IN-LAW_NOUN"
 	<bella> /bˈɛlə/ "BEAUTIFUL (F)_ADJ"
 
 /ˈɔ/ (0.02)
-	<notɡ> /nˈɔʨ/ "NIGHT_NOUN"
+	<notg> /nˈɔʨ/ "NIGHT_NOUN"
 	<nov> /nˈɔf/ "NINE_NUM"
 	<olma> /ˈɔlmə/ "SOUL_NOUN"
 
@@ -51,7 +51,7 @@ VOWELS
 
 /ˈiː/ (0.004)
 	<milli> /mˈiːli/ "THOUSAND_NUM"
-	<veɡnir> /vəɲˈiːr/ "COME-INF_VERB"
+	<vegnir> /vəɲˈiːr/ "COME-INF_VERB"
 	<murir> /murˈiːr/ "DIE_VERB"
 
 /ˈɔː/ (0.003)
@@ -62,10 +62,10 @@ VOWELS
 /ˈeː/ (0.003)
 	<verd> /vˈeːrt/ "GREEN_ADJ"
 	<enviern> /ənvjˈeːrn/ "WINTER_NOUN"
-	<tɡe> /ʨˈeː/ "WHAT_PRON"
+	<tge> /ʨˈeː/ "WHAT_PRON"
 
 /a/ (0.003)
-	<draɡun> /draɡˈun/ "DRAGON_NOUN"
+	<dragun> /draɡˈun/ "DRAGON_NOUN"
 	<raschun> /raʃˈun/ "REASON_NOUN"
 	<avieul> /avjˈewl/ "BEE_NOUN"
 
@@ -89,7 +89,7 @@ VOWELS
 	<crousch> /krˈowʃ/ "CROSS_NOUN"
 
 /ˈuɔ̯/ (0.001)
-	<verɡuoɡna> /vərɡˈuɔ̯ɲə/ "SHAME_NOUN"
+	<verguogna> /vərɡˈuɔ̯ɲə/ "SHAME_NOUN"
 
 /ˈoː/ (0.001)
 	<cor> /kˈoːr/ "HEART_NOUN"
@@ -104,42 +104,42 @@ VOWELS
 
 CONSONANTS
 /r/ (0.083)
-	<ɡrass> /ɡrˈas/ "FAT_NOUN"
+	<grass> /ɡrˈas/ "FAT_NOUN"
 	<vesair> /veːsˈajr/ "SEE_VERB"
-	<portɡ> /pˈɔːrʨ/ "PIG_NOUN"
+	<portg> /pˈɔːrʨ/ "PIG_NOUN"
 
 /n/ (0.066)
 	<dent> /dˈɛnt/ "TOOTH_NOUN"
-	<reɡina> /rəʥˈinə/ "QUEEN_NOUN"
+	<regina> /rəʥˈinə/ "QUEEN_NOUN"
 	<mellen> /mˈɛlən/ "YELLOW_ADJ"
 
 /l/ (0.052)
-	<ɡula> /ɡˈulə/ "THROAT_NOUN"
+	<gula> /ɡˈulə/ "THROAT_NOUN"
 	<bel> /bˈɛl/ "BEAUTIFUL (M)_ADJ"
 	<lescha> /lˈeʃə/ "LAW_NOUN"
 
 /s/ (0.045)
-	<eɡls> /ˈɛʎs/ "EYES_NOUN"
+	<egls> /ˈɛʎs/ "EYES_NOUN"
 	<dus> /dˈus/ "TWO (M)_NUM"
 	<nas> /nˈas/ "NOSE_NOUN"
 
 /t/ (0.036)
 	<radund> /rədˈunt/ "ROUND_ADJ"
 	<fraid> /frˈajt/ "COLD_ADJ"
-	<muntaɡna> /muntˈaɲə/ "MOUNTAIN_NOUN"
+	<muntagna> /muntˈaɲə/ "MOUNTAIN_NOUN"
 
 /ʨ/ (0.031)
-	<tɡi> /ʨˈi/ "WHO_PRON"
+	<tgi> /ʨˈi/ "WHO_PRON"
 	<chatschar> /ʨəʧˈaːr/ "HUNT_VERB"
-	<chamɡiar> /ʨəmʥˈaːr/ "CHANGE_VERB"
+	<chamgiar> /ʨəmʥˈaːr/ "CHANGE_VERB"
 
 /v/ (0.03)
 	<vin> /vˈin/ "WINE_NOUN"
 	<scriver> /ʃkrˈivər/ "WRITE_VERB"
-	<vatɡa> /vˈaʨə/ "COW_NOUN"
+	<vatga> /vˈaʨə/ "COW_NOUN"
 
 /j/ (0.03)
-	<ɡieu> /ʥjˈɛw/ "GAME_NOUN"
+	<gieu> /ʥjˈɛw/ "GAME_NOUN"
 	<enviern> /ənvjˈeːrn/ "WINTER_NOUN"
 	<saida> /sˈajdə/ "SILK_NOUN"
 
@@ -150,8 +150,8 @@ CONSONANTS
 
 /p/ (0.027)
 	<temp> /tˈɛmp/ "TIME_NOUN"
-	<pèz> /pˈɛʦ/ "BREAST_NOUN"
-	<portɡ> /pˈɔːrʨ/ "PIG_NOUN"
+	<pèz> /pˈɛʦ/ "BREAST_NOUN"
+	<portg> /pˈɔːrʨ/ "PIG_NOUN"
 
 /d/ (0.027)
 	<stadi> /ʃtˈadi/ "STATE_NOUN"
@@ -159,9 +159,9 @@ CONSONANTS
 	<saida> /sˈajdə/ "SILK_NOUN"
 
 /ʃ/ (0.025)
-	<raɡisch> /rəʥˈiʃ/ "ROOT_NOUN"
+	<ragisch> /rəʥˈiʃ/ "ROOT_NOUN"
 	<lescha> /lˈeʃə/ "LAW_NOUN"
-	<Spaɡna> /ʃpˈaɲə/ "SPAIN_PROPN"
+	<Spagna> /ʃpˈaɲə/ "SPAIN_PROPN"
 
 /w/ (0.024)
 	<fieu> /fjˈɛw/ "FIRE_NOUN"
@@ -184,14 +184,14 @@ CONSONANTS
 	<bucca> /bˈukə/ "MOUTH_NOUN"
 
 /ʎ/ (0.014)
-	<ɡuɡlia> /ɡˈuʎə/ "NEEDLE_NOUN"
-	<feɡl> /fˈeʎ/ "LEAF_NOUN"
-	<eɡl> /ˈɛʎ/ "EYE_NOUN"
+	<guglia> /ɡˈuʎə/ "NEEDLE_NOUN"
+	<fegl> /fˈeʎ/ "LEAF_NOUN"
+	<egl> /ˈɛʎ/ "EYE_NOUN"
 
 /ɡ/ (0.013)
-	<ɡuɡlia> /ɡˈuʎə/ "NEEDLE_NOUN"
-	<ɡraun> /ɡrˈawn/ "GRAIN_NOUN"
-	<ɡlatsch> /ɡlˈaʧ/ "ICE_NOUN"
+	<guglia> /ɡˈuʎə/ "NEEDLE_NOUN"
+	<graun> /ɡrˈawn/ "GRAIN_NOUN"
+	<glatsch> /ɡlˈaʧ/ "ICE_NOUN"
 
 /ʧ/ (0.012)
 	<pitschen> /pˈiʧən/ "SMALL_ADJ"
@@ -199,28 +199,28 @@ CONSONANTS
 	<tschient> /ʧˈiənt/ "HUNDRED_NUM"
 
 /ʥ/ (0.009)
-	<raɡisch> /rəʥˈiʃ/ "ROOT_NOUN"
-	<manɡiar> /mənʥˈaːr/ "EAT_VERB"
-	<ɡiuven> /ʥˈuvən/ "YOUNG_ADJ"
+	<ragisch> /rəʥˈiʃ/ "ROOT_NOUN"
+	<mangiar> /mənʥˈaːr/ "EAT_VERB"
+	<giuven> /ʥˈuvən/ "YOUNG_ADJ"
 
 /ɲ/ (0.008)
-	<aroɡn> /ərˈɔɲ/ "SPIDER_NOUN"
-	<puɡn> /pˈuɲ/ "FIST_NOUN"
-	<Spaɡna> /ʃpˈaɲə/ "SPAIN_PROPN"
+	<arogn> /ərˈɔɲ/ "SPIDER_NOUN"
+	<pugn> /pˈuɲ/ "FIST_NOUN"
+	<Spagna> /ʃpˈaɲə/ "SPAIN_PROPN"
 
 /ʦ/ (0.004)
-	<pèz> /pˈɛʦ/ "BREAST_NOUN"
+	<pèz> /pˈɛʦ/ "BREAST_NOUN"
 	<palaz> /pəlˈaʦ/ "PALACE_NOUN"
 	<mez> /mˈɛʦ/ "MIDDLE_NOUN"
 
 /ŋ/ (0.004)
-	<lieunɡa> /ljˈɛwŋɡə/ "TONGUE_NOUN"
-	<sanɡ> /sˈaŋ/ "BLOOD_NOUN"
+	<lieunga> /ljˈɛwŋɡə/ "TONGUE_NOUN"
+	<sang> /sˈaŋ/ "BLOOD_NOUN"
 	<tschuncanta> /ʧuŋkˈantə/ "FIFTY_NUM"
 
 /ʒ/ (0.002)
-	<sɡular> /ʒɡulˈar/ "FLY_VERB"
-	<sɡol> /ʒɡˈɔl/ "FLIGHT_NOUN"
+	<sgular> /ʒɡulˈar/ "FLY_VERB"
+	<sgol> /ʒɡˈɔl/ "FLIGHT_NOUN"
 
 /z/ (0.002)
 	<seser> /sˈezər/ "SIT_ADJ"

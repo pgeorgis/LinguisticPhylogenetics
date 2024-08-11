@@ -1,12 +1,12 @@
 VOWELS
 /a/ (0.081)
-	<manɡé> /maŋʤˈe/ "EAT_VERB"
+	<mangé> /maŋʤˈe/ "EAT_VERB"
 	<cheussa> /kˈøsa/ "THIGH_NOUN"
 	<nivola> /nˈivula/ "CLOUD_NOUN"
 
 /ˈa/ (0.053)
-	<eɡual> /eɡwˈal/ "EQUAL_ADJ"
-	<sanɡh> /sˈaŋɡ/ "BLOOD_NOUN"
+	<egual> /eɡwˈal/ "EQUAL_ADJ"
+	<sangh> /sˈaŋɡ/ "BLOOD_NOUN"
 	<ciav> /ʧˈav/ "KEY_NOUN"
 
 /ˈɛ/ (0.039)
@@ -15,14 +15,14 @@ VOWELS
 	<invern> /invˈɛrn/ "WINTER_NOUN"
 
 /ˈe/ (0.036)
-	<scoté> /skutˈe/ "LISTEN_VERB"
+	<scoté> /skutˈe/ "LISTEN_VERB"
 	<pess> /pˈes/ "FISH_NOUN"
 	<ceresa> /ʧerˈeza/ "CHERRY_NOUN"
 
 /ˈɔ/ (0.032)
-	<ɡròss> /ɡrˈɔs/ "THICK_ADJ"
-	<conòsse> /kunˈɔse/ "BE ACQUAINTED WITH_VERB"
-	<nòstr> /nˈɔstr/ "OUR_ADJ"
+	<gròss> /ɡrˈɔs/ "THICK_ADJ"
+	<cognòsse> /kuɲˈɔse/ "BE ACQUAINTED WITH_VERB"
+	<nòstr> /nˈɔstr/ "OUR_ADJ"
 
 /ˈi/ (0.03)
 	<vila> /vˈila/ "TOWN_NOUN"
@@ -31,12 +31,12 @@ VOWELS
 
 /ˈu/ (0.028)
 	<mosca> /mˈuska/ "FLY_NOUN"
-	<dódes> /dˈudes/ "TWELVE_NUM"
+	<dódes> /dˈudes/ "TWELVE_NUM"
 	<doi> /dˈuj/ "TWO (M)_NUM"
 
 /e/ (0.025)
 	<seresa> /serˈesa/ "CHERRY_NOUN"
-	<leɡe> /lˈeʤe/ "LAW_NOUN"
+	<lege> /lˈeʤe/ "LAW_NOUN"
 	<nasse> /nˈase/ "BE BORN_VERB"
 
 /ˈø/ (0.019)
@@ -45,54 +45,54 @@ VOWELS
 	<cheussa> /kˈøsa/ "THIGH_NOUN"
 
 /u/ (0.016)
-	<conòsse> /kunˈɔse/ "BE ACQUAINTED WITH_VERB"
-	<ɡiovo> /ʤˈuvu/ "YOUNG_ADJ"
+	<cognòsse> /kuɲˈɔse/ "BE ACQUAINTED WITH_VERB"
+	<giovo> /ʤˈuvu/ "YOUNG_ADJ"
 	<rotond> /rutˈuŋd/ "ROUND_ADJ"
 
 /ˈy/ (0.014)
-	<ɡiuɡn> /ʤˈyɲ/ "JUNE_PROPN"
+	<giugn> /ʤˈyɲ/ "JUNE_PROPN"
 	<luv> /lˈyv/ "WOLF_NOUN"
 	<un> /ˈyŋ/ "ONE_NUM"
 
 /i/ (0.011)
 	<avija> /ˈavija/ "BEE_NOUN"
 	<robi> /rˈubi/ "RED_ADJ"
-	<sità> /sitˈa/ "CITY_NOUN"
+	<sità> /sitˈa/ "CITY_NOUN"
 
 /ə/ (0.004)
-	<ɡënner> /ʤənˈɛr/ "SON-IN-LAW_NOUN"
+	<gënner> /ʤənˈɛr/ "SON-IN-LAW_NOUN"
 	<chërde> /kərdˈe/ "BELIEVE_VERB"
 	<sinner> /sˈinər/ "ASH_NOUN"
 
 /ˈə/ (0.002)
-	<lëɡna> /lˈəɲa/ "WOOD_NOUN"
+	<lëgna> /lˈəɲa/ "WOOD_NOUN"
 	<vëdde> /vˈədːe/ "SEE_VERB"
 
 /y/ (0.001)
-	<brusé> /bryzˈe/ "BURN_VERB"
+	<brusé> /bryzˈe/ "BURN_VERB"
 
 
 
 CONSONANTS
 /r/ (0.07)
-	<araɡn> /arˈaɲ/ "SPIDER_NOUN"
+	<aragn> /arˈaɲ/ "SPIDER_NOUN"
 	<fer> /fˈɛr/ "IRON_NOUN"
 	<ors> /ˈurs/ "BEAR_NOUN"
 
 /s/ (0.066)
 	<spin-a> /spˈiŋa/ "SPINE_NOUN"
-	<còsta> /kˈɔsta/ "COAST_NOUN"
+	<còsta> /kˈɔsta/ "COAST_NOUN"
 	<mosca> /mˈuska/ "FLY_NOUN"
 
 /l/ (0.049)
 	<pel> /pˈɛl/ "SKIN_NOUN"
 	<mila> /mˈila/ "THOUSAND_NUM"
-	<lìber> /lˈiber/ "FREE_ADJ"
+	<lìber> /lˈiber/ "FREE_ADJ"
 
 /j/ (0.044)
 	<freid> /frˈejd/ "COLD_ADJ"
 	<voi> /vˈuj/ "YOU (PL)_PRON"
-	<aidé> /ajdˈe/ "HELP_VERB"
+	<aidé> /ajdˈe/ "HELP_VERB"
 
 /t/ (0.042)
 	<testa> /tˈesta/ "SKULL_NOUN"
@@ -105,23 +105,23 @@ CONSONANTS
 	<mosca> /mˈuska/ "FLY_NOUN"
 
 /v/ (0.04)
-	<ovrié> /uvrjˈe/ "WORKER_NOUN"
+	<ovrié> /uvrjˈe/ "WORKER_NOUN"
 	<vos> /vˈus/ "VOICE_NOUN"
 	<eva> /ˈeva/ "WATER_NOUN"
 
 /ŋ/ (0.036)
-	<reɡin-a> /reʤˈiŋa/ "QUEEN_NOUN"
+	<regin-a> /reʤˈiŋa/ "QUEEN_NOUN"
 	<lan-a> /lˈaŋa/ "WOOL_NOUN"
-	<sanɡh> /sˈaŋɡ/ "BLOOD_NOUN"
+	<sangh> /sˈaŋɡ/ "BLOOD_NOUN"
 
 /n/ (0.036)
-	<noatè> /nwatˈɛ/ "SWIM_VERB"
+	<noatè> /nwatˈɛ/ "SWIM_VERB"
 	<vzin> /vzˈin/ "NEIGHBOR_NOUN"
 	<anel> /anˈɛl/ "RING_NOUN"
 
 /p/ (0.03)
 	<colp> /kˈulp/ "STRIKE_NOUN"
-	<pé> /pˈe/ "FOOT_NOUN"
+	<pé> /pˈe/ "FOOT_NOUN"
 	<pel> /pˈɛl/ "SKIN_NOUN"
 
 /m/ (0.028)
@@ -132,17 +132,17 @@ CONSONANTS
 /f/ (0.023)
 	<fin> /fˈin/ "THIN_ADJ"
 	<fij> /fˈij/ "SON_NOUN"
-	<fòrt> /fˈɔrt/ "STRONG_ADJ"
+	<fòrt> /fˈɔrt/ "STRONG_ADJ"
 
 /d/ (0.023)
-	<ɡiùdes> /ʤˈydes/ "JUDGE_NOUN"
-	<podèj> /pudˈɛj/ "CAN_VERB"
+	<giùdes> /ʤˈydes/ "JUDGE_NOUN"
+	<podèj> /pudˈɛj/ "CAN_VERB"
 	<madur> /madˈyr/ "MATURE_NOUN"
 
 /ʤ/ (0.016)
-	<ɡiaun> /ʤˈawŋ/ "YELLOW_ADJ"
-	<ɡeilé> /ʤejlˈe/ "FREEZE_VERB"
-	<ɡieuɡh> /ʤˈøɡ/ "GAME_NOUN"
+	<giaun> /ʤˈawŋ/ "YELLOW_ADJ"
+	<geilé> /ʤejlˈe/ "FREEZE_VERB"
+	<gieugh> /ʤˈøɡ/ "GAME_NOUN"
 
 /b/ (0.015)
 	<bianc> /bjˈaŋk/ "WHITE_ADJ"
@@ -150,24 +150,24 @@ CONSONANTS
 	<beive> /bˈejve/ "DRINK_VERB"
 
 /ɡ/ (0.014)
-	<ɡieuɡh> /ʤˈøɡ/ "GAME_NOUN"
-	<piaɡa> /pjˈaɡa/ "PLAGUE_NOUN"
-	<ɡrand> /ɡrˈaŋt/ "BIG_ADJ"
+	<gieugh> /ʤˈøɡ/ "GAME_NOUN"
+	<piaga> /pjˈaɡa/ "PLAGUE_NOUN"
+	<grand> /ɡrˈaŋt/ "BIG_ADJ"
 
 /ɲ/ (0.009)
-	<araɡn> /arˈaɲ/ "SPIDER_NOUN"
-	<baɡn> /bˈaɲ/ "BATH_NOUN"
-	<aɡnel> /aɲˈɛl/ "LAMB_NOUN"
+	<aragn> /arˈaɲ/ "SPIDER_NOUN"
+	<bagn> /bˈaɲ/ "BATH_NOUN"
+	<agnel> /aɲˈɛl/ "LAMB_NOUN"
 
 /z/ (0.009)
 	<rason> /razˈun/ "REASON_NOUN"
 	<ceresa> /ʧerˈeza/ "CHERRY_NOUN"
-	<brusé> /bryzˈe/ "BURN_VERB"
+	<brusé> /bryzˈe/ "BURN_VERB"
 
 /w/ (0.009)
-	<ɡiaun> /ʤˈawŋ/ "YELLOW_ADJ"
+	<giaun> /ʤˈawŋ/ "YELLOW_ADJ"
 	<quatr> /kwˈatr/ "FOUR_NUM"
-	<eɡual> /eɡwˈal/ "EQUAL_ADJ"
+	<egual> /eɡwˈal/ "EQUAL_ADJ"
 
 /ʧ/ (0.005)
 	<ceresa> /ʧerˈeza/ "CHERRY_NOUN"

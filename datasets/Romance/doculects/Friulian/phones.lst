@@ -15,13 +15,13 @@ VOWELS
 	<vicin> /viʧˈin/ "NEIGHBOR_NOUN"
 
 /ˈaː/ (0.03)
-	<inɡlaçâ> /iŋɡlaʧˈaː/ "FREEZE_VERB"
-	<cjâr> /cˈaːr/ "DEAR_ADJ"
-	<nadâ> /nadˈaː/ "SWIM_VERB"
+	<glaçâ> /ɡlaʧˈaː/ "FREEZE_VERB"
+	<cjâr> /cˈaːr/ "DEAR_ADJ"
+	<nadâ> /nadˈaː/ "SWIM_VERB"
 
 /ˈɛ/ (0.028)
 	<biele> /bjˈɛle/ "BEAUTIFUL (F)_ADJ"
-	<ɡrues> /ɡrwˈɛs/ "THICK_ADJ"
+	<grues> /ɡrwˈɛs/ "THICK_ADJ"
 	<stele> /stˈɛle/ "STAR_NOUN"
 
 /ˈi/ (0.027)
@@ -35,7 +35,7 @@ VOWELS
 	<reson> /rezˈon/ "REASON_NOUN"
 
 /a/ (0.021)
-	<inɡlaçâ> /iŋɡlaʧˈaː/ "FREEZE_VERB"
+	<glaçâ> /ɡlaʧˈaː/ "FREEZE_VERB"
 	<farine> /farˈine/ "FLOUR_NOUN"
 	<anel> /anˈɛl/ "RING_NOUN"
 
@@ -57,36 +57,36 @@ VOWELS
 /o/ (0.012)
 	<roman> /romˈan/ "ROMAN_ADJ"
 	<orele> /orˈɛle/ "EAR_NOUN"
-	<scoltâ> /skoltˈaː/ "LISTEN_VERB"
+	<scoltâ> /skoltˈaː/ "LISTEN_VERB"
 
 /ˈuː/ (0.011)
-	<siɡûr> /siɡˈuːr/ "SAFE_ADJ"
-	<cûl> /kˈuːl/ "BUTTOCKS_NOUN"
-	<madûr> /madˈuːr/ "MATURE_NOUN"
+	<sigûr> /siɡˈuːr/ "SAFE_ADJ"
+	<cûl> /kˈuːl/ "BUTTOCKS_NOUN"
+	<madûr> /madˈuːr/ "MATURE_NOUN"
 
 /u/ (0.01)
-	<murî> /murˈiː/ "DIE_VERB"
-	<durmî> /durmˈiː/ "SLEEP_VERB"
+	<murî> /murˈiː/ "DIE_VERB"
+	<durmî> /durmˈiː/ "SLEEP_VERB"
 	<arbul> /ˈarbul/ "TREE_NOUN"
 
 /ˈiː/ (0.009)
-	<fîl> /fˈiːl/ "STRING_NOUN"
-	<mîl> /mˈiːl/ "HONEY_NOUN"
-	<sîs> /sˈiːs/ "SIX_NUM"
+	<fîl> /fˈiːl/ "STRING_NOUN"
+	<mîl> /mˈiːl/ "HONEY_NOUN"
+	<sîs> /sˈiːs/ "SIX_NUM"
 
 /ˈoː/ (0.007)
-	<pôc> /pˈoːk/ "LITTLE_ADJ"
-	<vôs> /vˈoːs/ "VOICE_NOUN"
-	<colôr> /kolˈoːr/ "COLOR_NOUN"
+	<pôc> /pˈoːk/ "LITTLE_ADJ"
+	<vôs> /vˈoːs/ "VOICE_NOUN"
+	<colôr> /kolˈoːr/ "COLOR_NOUN"
 
 /ˈeː/ (0.007)
-	<trê> /trˈeː/ "THREE_NUM"
-	<dêt> /dˈeːt/ "FINGER_NOUN"
-	<podê> /podˈeː/ "CAN_VERB"
+	<trê> /trˈeː/ "THREE_NUM"
+	<dêt> /dˈeːt/ "FINGER_NOUN"
+	<podê> /podˈeː/ "CAN_VERB"
 
 /ˈɛː/ (0.002)
-	<unviêr> /unvjˈɛːr/ "WINTER_NOUN"
-	<fiêr> /fjˈɛːr/ "IRON_NOUN"
+	<unviêr> /unvjˈɛːr/ "WINTER_NOUN"
+	<fiêr> /fjˈɛːr/ "IRON_NOUN"
 
 /ˈɔː/ (0.001)
 	<porc> /pˈɔːrk/ "PIG_NOUN"
@@ -100,7 +100,7 @@ CONSONANTS
 /l/ (0.065)
 	<falso> /fˈals/ "FALSE_ADJ"
 	<molt> /mˈolt/ "MANY_ADJ"
-	<ɡole> /ɡˈole/ "THROAT_NOUN"
+	<gole> /ɡˈole/ "THROAT_NOUN"
 
 /r/ (0.063)
 	<curt> /kˈurt/ "SHORT_ADJ"
@@ -113,14 +113,14 @@ CONSONANTS
 	<len> /lˈen/ "WOOD_NOUN"
 
 /s/ (0.057)
-	<ɡrues> /ɡrwˈɛs/ "THICK_ADJ"
+	<grues> /ɡrwˈɛs/ "THICK_ADJ"
 	<vualtris> /vwˈaltris/ "YOU (PL)_PRON"
 	<nissun> /nisˈun/ "NONE_PRON"
 
 /t/ (0.048)
 	<vite> /vˈite/ "LIFE_NOUN"
 	<curt> /kˈurt/ "SHORT_ADJ"
-	<ɡrant> /ɡrˈant/ "BIG_ADJ"
+	<grant> /ɡrˈant/ "BIG_ADJ"
 
 /v/ (0.03)
 	<vier> /vjˈɛr/ "WORM_NOUN"
@@ -138,39 +138,39 @@ CONSONANTS
 	<spade> /spˈade/ "SWORD_NOUN"
 
 /m/ (0.029)
-	<manɡjâ> /manɟˈaː/ "EAT_VERB"
+	<mangjâ> /manɟˈaː/ "EAT_VERB"
 	<man> /mˈan/ "HAND_NOUN"
 	<fum> /fˈum/ "SMOKE_NOUN"
 
 /k/ (0.029)
 	<lunc> /lˈuŋk/ "LONG_ADJ"
 	<scrivi> /skrˈivi/ "WRITE_VERB"
-	<coɡnossi> /koɲˈosi/ "BE ACQUAINTED WITH_VERB"
+	<cognossi> /koɲˈosi/ "BE ACQUAINTED WITH_VERB"
 
 /d/ (0.029)
 	<pedoli> /pedˈɔli/ "LOUSE_NOUN"
 	<dut> /dˈut/ "ALL (SG)_ADJ"
-	<drâc> /drˈaːk/ "DRAGON_NOUN"
+	<drâc> /drˈaːk/ "DRAGON_NOUN"
 
 /f/ (0.023)
-	<fîl> /fˈiːl/ "STRING_NOUN"
+	<fîl> /fˈiːl/ "STRING_NOUN"
 	<flum> /flˈum/ "RIVER_NOUN"
 	<fieste> /fjˈɛste/ "PARTY_NOUN"
 
 /w/ (0.022)
 	<cuaie> /kwˈaje/ "QUAIL_NOUN"
 	<buine> /bwˈine/ "GOOD (F.SG)_ADJ"
-	<ɡrues> /ɡrwˈɛs/ "THICK_ADJ"
+	<grues> /ɡrwˈɛs/ "THICK_ADJ"
 
 /c/ (0.02)
-	<cjâr> /cˈaːr/ "DEAR_ADJ"
+	<cjâr> /cˈaːr/ "DEAR_ADJ"
 	<vincj> /vˈinc/ "TWENTY_NUM"
-	<cjaçâ> /caʧˈaː/ "HUNT_VERB"
+	<cjaçâ> /caʧˈaː/ "HUNT_VERB"
 
 /ʧ/ (0.019)
 	<cent> /ʧˈɛnt/ "HUNDRED_NUM"
 	<cinise> /ʧinˈise/ "ASH_NOUN"
-	<ɡlaçâ> /ɡlaʧˈaː/ "FREEZE_VERB"
+	<inglaçâ> /iŋɡlaʧˈaː/ "FREEZE_VERB"
 
 /b/ (0.017)
 	<ben> /bˈɛn/ "WELL (ADV)_ADV"
@@ -178,24 +178,24 @@ CONSONANTS
 	<libar> /lˈibar/ "FREE_ADJ"
 
 /ɡ/ (0.013)
-	<inɡlaçâ> /iŋɡlaʧˈaː/ "FREEZE_VERB"
-	<siɡûr> /siɡˈuːr/ "SAFE_ADJ"
-	<onɡule> /oŋɡulˈe/ "FINGERNAIL_NOUN"
+	<glaçâ> /ɡlaʧˈaː/ "FREEZE_VERB"
+	<sigûr> /siɡˈuːr/ "SAFE_ADJ"
+	<ongule> /oŋɡulˈe/ "FINGERNAIL_NOUN"
 
 /ɲ/ (0.01)
-	<Spaɡne> /spˈaɲe/ "SPAIN_PROPN"
-	<puɡn> /pˈuɲ/ "FIST_NOUN"
-	<ɡnûf> /ɲˈuːf/ "NEW_ADJ"
+	<Spagne> /spˈaɲe/ "SPAIN_PROPN"
+	<pugn> /pˈuɲ/ "FIST_NOUN"
+	<gnûf> /ɲˈuːf/ "NEW_ADJ"
 
 /ŋ/ (0.009)
 	<cinc> /sˈiŋk/ "FIVE_NUM"
-	<lenɡhe> /lˈeŋɡe/ "TONGUE_NOUN"
+	<lenghe> /lˈeŋɡe/ "TONGUE_NOUN"
 	<sanc> /sˈaŋk/ "BLOOD_NOUN"
 
 /ʤ/ (0.008)
 	<zinar> /ʤˈinar/ "SON-IN-LAW_NOUN"
-	<zâl> /ʤˈaːl/ "YELLOW_ADJ"
-	<verɡonze> /verɡˈonʤe/ "SHAME_NOUN"
+	<zâl> /ʤˈaːl/ "YELLOW_ADJ"
+	<vergonze> /verɡˈonʤe/ "SHAME_NOUN"
 
 /z/ (0.006)
 	<isule> /ˈizule/ "ISLAND_NOUN"
@@ -203,8 +203,8 @@ CONSONANTS
 	<reson> /rezˈon/ "REASON_NOUN"
 
 /ɟ/ (0.002)
-	<ɡjat> /ɟˈat/ "CAT_NOUN"
-	<manɡjâ> /manɟˈaː/ "EAT_VERB"
+	<gjat> /ɟˈat/ "CAT_NOUN"
+	<mangjâ> /manɟˈaː/ "EAT_VERB"
 
 
 

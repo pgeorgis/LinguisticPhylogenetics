@@ -1,6 +1,6 @@
 VOWELS
 /u/ (0.077)
-	<século> /sˈɛkulu/ "CENTURY_NOUN"
+	<século> /sˈɛkulu/ "CENTURY_NOUN"
 	<paço> /pˈasu/ "PALACE_NOUN"
 	<obreiro> /obɾˈejɾu/ "WORKER_NOUN"
 
@@ -27,7 +27,7 @@ VOWELS
 /i/ (0.03)
 	<ventre> /vˈẽtɾi/ "BELLY_NOUN"
 	<vizinho> /vizˈĩj̃u/ "NEIGHBOR_NOUN"
-	<ɡente> /ʒˈẽʧi/ "PEOPLE_NOUN"
+	<gente> /ʒˈẽʧi/ "PEOPLE_NOUN"
 
 /e/ (0.021)
 	<pequeno> /pekˈẽnu/ "SMALL_ADJ"
@@ -35,14 +35,14 @@ VOWELS
 	<conhecer> /kõj̃esˈeh/ "BE ACQUAINTED WITH_VERB"
 
 /a/ (0.021)
-	<razão> /hazˈɐ̃w̃/ "REASON_NOUN"
+	<razão> /hazˈɐ̃w̃/ "REASON_NOUN"
 	<ajudar> /aʒudˈah/ "HELP_VERB"
 	<fazer> /fazˈeh/ "DO_VERB"
 
 /ˈɐ̃/ (0.02)
 	<aranha> /aɾˈɐ̃j̃ɐ/ "SPIDER_NOUN"
 	<semana> /semˈɐ̃nɐ/ "WEEK_NOUN"
-	<câmara> /kˈɐ̃maɾɐ/ "CHAMBER_NOUN"
+	<câmara> /kˈɐ̃maɾɐ/ "CHAMBER_NOUN"
 
 /ˈi/ (0.02)
 	<rio> /hˈiu/ "RIVER_NOUN"
@@ -57,7 +57,7 @@ VOWELS
 /ˈɔ/ (0.015)
 	<voz> /vˈɔjʃ/ "VOICE_NOUN"
 	<melhor> /meʎˈɔh/ "BETTER_ADJ"
-	<ɡolpe> /ɡˈɔwpi/ "STRIKE_NOUN"
+	<golpe> /ɡˈɔwpi/ "STRIKE_NOUN"
 
 /ˈu/ (0.014)
 	<fruito> /fɾˈujtu/ "FRUIT_NOUN"
@@ -96,8 +96,8 @@ VOWELS
 
 /ɐ̃/ (0.002)
 	<cambiar> /kɐ̃bjˈah/ "CHANGE_VERB"
-	<não> /nɐ̃w̃/ "NOT_ADVERB"
-	<planɡer> /plɐ̃ʒˈeh/ "WEEP_VERB"
+	<não> /nɐ̃w̃/ "NOT_ADVERB"
+	<planger> /plɐ̃ʒˈeh/ "WEEP_VERB"
 
 /õ/ (0.001)
 	<montanha> /mõtˈɐ̃j̃ɐ/ "MOUNTAIN_NOUN"
@@ -108,20 +108,20 @@ VOWELS
 	<inverno> /ĩvˈɛɦnu/ "WINTER_NOUN"
 
 /ũ/ (0.001)
-	<umbiɡo> /ũbˈiɡu/ "NAVEL_NOUN"
+	<umbigo> /ũbˈiɡu/ "NAVEL_NOUN"
 
 
 
 CONSONANTS
 /h/ (0.041)
-	<razão> /hazˈɐ̃w̃/ "REASON_NOUN"
+	<razão> /hazˈɐ̃w̃/ "REASON_NOUN"
 	<chorar> /ʃoɾˈah/ "WEEP_VERB"
 	<saber> /sabˈeh/ "KNOW_VERB"
 
 /s/ (0.038)
 	<escrever> /eskɾevˈeh/ "WRITE_VERB"
-	<pêsseɡo> /pˈeseɡu/ "PEACH_NOUN"
-	<ínsua> /ˈĩswɐ/ "ISLAND_NOUN"
+	<pêssego> /pˈeseɡu/ "PEACH_NOUN"
+	<ínsua> /ˈĩswɐ/ "ISLAND_NOUN"
 
 /ʃ/ (0.035)
 	<espinha> /eʃpˈĩj̃ɐ/ "SPINE_NOUN"
@@ -129,7 +129,7 @@ CONSONANTS
 	<chuva> /ʃˈuvɐ/ "RAIN_NOUN"
 
 /ɾ/ (0.035)
-	<ɡraxa> /ɡɾˈaʃɐ/ "FAT_NOUN"
+	<graxa> /ɡɾˈaʃɐ/ "FAT_NOUN"
 	<obra> /ˈɔbɾɐ/ "WORK_NOUN"
 	<maduro> /madˈuɾu/ "MATURE_NOUN"
 
@@ -140,18 +140,18 @@ CONSONANTS
 
 /v/ (0.03)
 	<velho> /vˈeʎu/ "OLD_ADJ"
-	<vilão> /vilˈɐ̃w̃/ "VILLAIN_NOUN"
+	<vilão> /vilˈɐ̃w̃/ "VILLAIN_NOUN"
 	<jovem> /ʒˈɔvẽj̃/ "YOUNG_ADJ"
 
 /l/ (0.029)
 	<colo> /kˈɔlu/ "NECK_NOUN"
-	<século> /sˈɛkulu/ "CENTURY_NOUN"
+	<século> /sˈɛkulu/ "CENTURY_NOUN"
 	<pele> /pˈɛli/ "SKIN_NOUN"
 
 /t/ (0.028)
 	<testa> /tˈɛʃtɐ/ "SKULL_NOUN"
 	<touro> /tˈowɾu/ "BULL_NOUN"
-	<ɡota> /ɡˈotɐ/ "DROP_NOUN"
+	<gota> /ɡˈotɐ/ "DROP_NOUN"
 
 /p/ (0.027)
 	<pedra> /pˈɛdɾɐ/ "STONE_NOUN"
@@ -166,7 +166,7 @@ CONSONANTS
 /j/ (0.026)
 	<queimar> /kejmˈah/ "BURN_VERB"
 	<noite> /nˈojʧi/ "NIGHT_NOUN"
-	<vós> /vˈɔjʃ/ "YOU (PL)_PRON"
+	<vós> /vˈɔjʃ/ "YOU (PL)_PRON"
 
 /d/ (0.025)
 	<pedra> /pˈɛdɾɐ/ "STONE_NOUN"
@@ -174,9 +174,9 @@ CONSONANTS
 	<doze> /dˈozi/ "TWELVE_NUM"
 
 /ɡ/ (0.021)
-	<ɡota> /ɡˈotɐ/ "DROP_NOUN"
-	<ɡrande> /ɡɾˈɐ̃ʤi/ "BIG_ADJ"
-	<verɡonha> /veɦɡˈõj̃ɐ/ "SHAME_NOUN"
+	<gota> /ɡˈotɐ/ "DROP_NOUN"
+	<grande> /ɡɾˈɐ̃ʤi/ "BIG_ADJ"
+	<vergonha> /veɦɡˈõj̃ɐ/ "SHAME_NOUN"
 
 /b/ (0.02)
 	<beber> /bebˈeh/ "DRINK_VERB"
@@ -185,7 +185,7 @@ CONSONANTS
 
 /n/ (0.019)
 	<noz> /nˈɔjʃ/ "NUT_NOUN"
-	<nó> /nˈɔ/ "KNOT_NOUN"
+	<nó> /nˈɔ/ "KNOT_NOUN"
 	<noite> /nˈojʧi/ "NIGHT_NOUN"
 
 /j̃/ (0.019)
@@ -195,7 +195,7 @@ CONSONANTS
 
 /w/ (0.018)
 	<alma> /ˈawmɐ/ "SOUL_NOUN"
-	<ínsua> /ˈĩswɐ/ "ISLAND_NOUN"
+	<ínsua> /ˈĩswɐ/ "ISLAND_NOUN"
 	<outro> /ˈowtɾu/ "OTHER_ADJ"
 
 /f/ (0.016)
@@ -206,12 +206,12 @@ CONSONANTS
 /ʒ/ (0.012)
 	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
 	<joelho> /ʒuˈeʎu/ "KNEE_NOUN"
-	<planɡer> /plɐ̃ʒˈeh/ "WEEP_VERB"
+	<planger> /plɐ̃ʒˈeh/ "WEEP_VERB"
 
 /ʎ/ (0.01)
 	<ovelha> /ovˈeʎɐ/ "SHEEP_NOUN"
 	<filho> /fˈiʎu/ "SON_NOUN"
-	<aɡulha> /aɡˈuʎɐ/ "NEEDLE_NOUN"
+	<agulha> /aɡˈuʎɐ/ "NEEDLE_NOUN"
 
 /ʧ/ (0.008)
 	<forte> /fˈɔhʧi/ "STRONG_ADJ"
@@ -224,9 +224,9 @@ CONSONANTS
 	<carne> /kˈaɦni/ "MEAT_NOUN"
 
 /w̃/ (0.008)
-	<pão> /pˈɐ̃w̃/ "BREAD_NOUN"
-	<leão> /leˈɐ̃w̃/ "LION_NOUN"
-	<mão> /mˈɐ̃w̃/ "HAND_NOUN"
+	<pão> /pˈɐ̃w̃/ "BREAD_NOUN"
+	<leão> /leˈɐ̃w̃/ "LION_NOUN"
+	<mão> /mˈɐ̃w̃/ "HAND_NOUN"
 
 /ʤ/ (0.005)
 	<verde> /vˈeɦʤi/ "GREEN_ADJ"

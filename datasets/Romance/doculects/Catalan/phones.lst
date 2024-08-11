@@ -7,7 +7,7 @@ VOWELS
 /ˈa/ (0.067)
 	<all> /ˈaʎ/ "GARLIC_NOUN"
 	<alba> /ˈalβə/ "DAWN_NOUN"
-	<romà> /rumˈa/ "ROMAN_ADJ"
+	<romà> /rumˈa/ "ROMAN_ADJ"
 
 /ˈɔ/ (0.034)
 	<nou> /nˈɔw/ "NINE_NUM"
@@ -20,14 +20,14 @@ VOWELS
 	<mica> /mˈikə/ "CRUMB_NOUN"
 
 /ˈɛ/ (0.031)
-	<ɡendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
-	<conèixer> /kunˈɛʃə/ "BE ACQUAINTED WITH_VERB"
+	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
+	<conèixer> /kunˈɛʃə/ "BE ACQUAINTED WITH_VERB"
 	<preu> /pɾˈɛw/ "PRICE_NOUN"
 
 /ˈe/ (0.031)
 	<anell> /ənˈeʎ/ "RING_NOUN"
 	<vent> /bˈen/ "WIND_NOUN"
-	<néixer> /nˈeʃə/ "BE BORN_VERB"
+	<néixer> /nˈeʃə/ "BE BORN_VERB"
 
 /ˈu/ (0.026)
 	<fum> /fˈum/ "SMOKE_NOUN"
@@ -36,18 +36,18 @@ VOWELS
 
 /ˈo/ (0.022)
 	<olor> /ulˈo/ "ODOR_NOUN"
-	<ós> /ˈos/ "BEAR_NOUN"
+	<ós> /ˈos/ "BEAR_NOUN"
 	<jove> /ʒˈoβə/ "YOUNG_ADJ"
 
 /u/ (0.022)
 	<volar> /bulˈa/ "FLY_VERB"
-	<conèixer> /kunˈɛʃə/ "BE ACQUAINTED WITH_VERB"
-	<rodó> /ruðˈo/ "ROUND_ADJ"
+	<conèixer> /kunˈɛʃə/ "BE ACQUAINTED WITH_VERB"
+	<rodó> /ruðˈo/ "ROUND_ADJ"
 
 /i/ (0.011)
-	<ninɡú> /niŋɡˈu/ "NONE_PRON"
+	<ningú> /niŋɡˈu/ "NONE_PRON"
 	<millor> /miʎˈo/ "BETTER_ADJ"
-	<sàpiɡa> /sˈapiɣə/ "KNOW-SBJ-1SG_VERB"
+	<sàpiga> /sˈapiɣə/ "KNOW-SBJ-1SG_VERB"
 
 
 
@@ -70,7 +70,7 @@ CONSONANTS
 /n/ (0.042)
 	<bons> /bˈɔns/ "GOOD (M.PL)_ADJ"
 	<carn> /kˈarn/ "MEAT_NOUN"
-	<ɡendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
+	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
 
 /t/ (0.041)
 	<cinquanta> /siŋkwˈantə/ "FIFTY_NUM"
@@ -83,18 +83,18 @@ CONSONANTS
 	<vell> /bˈeʎ/ "OLD_ADJ"
 
 /l/ (0.038)
-	<ɡola> /ɡˈolə/ "THROAT_NOUN"
+	<gola> /ɡˈolə/ "THROAT_NOUN"
 	<color> /kulˈo/ "COLOR_NOUN"
-	<unɡla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
+	<ungla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
 
 /p/ (0.033)
-	<plorar> /pluɾˈa/ "WEEP_VERB"
+	<plànyer> /plˈaɲə/ "WEEP_VERB"
 	<pena> /pˈɛnə/ "PAIN_NOUN"
 	<penya> /pˈɛɲə/ "FEATHER_NOUN"
 
 /m/ (0.033)
 	<matar> /mətˈa/ "KILL_VERB"
-	<romà> /rumˈa/ "ROMAN_ADJ"
+	<romà> /rumˈa/ "ROMAN_ADJ"
 	<mare> /mˈaɾə/ "MOTHER_NOUN"
 
 /b/ (0.031)
@@ -119,7 +119,7 @@ CONSONANTS
 
 /d/ (0.016)
 	<dormir> /durmˈi/ "SLEEP_VERB"
-	<ɡendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
+	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
 	<do> /dˈo/ "GIFT_NOUN"
 
 /β/ (0.015)
@@ -128,17 +128,17 @@ CONSONANTS
 	<jove> /ʒˈoβə/ "YOUNG_ADJ"
 
 /ʒ/ (0.014)
-	<arɡila> /ərʒˈilə/ "CLAY_NOUN"
-	<ɡent> /ʒˈen/ "PEOPLE_NOUN"
-	<lleɡir> /ʎəʒˈi/ "READ_VERB"
+	<argila> /ərʒˈilə/ "CLAY_NOUN"
+	<gent> /ʒˈen/ "PEOPLE_NOUN"
+	<llegir> /ʎəʒˈi/ "READ_VERB"
 
 /ɡ/ (0.012)
-	<ɡras> /ɡrˈas/ "FAT_NOUN"
-	<verɡonya> /bərɡˈoɲə/ "SHAME_NOUN"
-	<ɡota> /ɡˈotə/ "DROP_NOUN"
+	<gras> /ɡrˈas/ "FAT_NOUN"
+	<vergonya> /bərɡˈoɲə/ "SHAME_NOUN"
+	<gota> /ɡˈotə/ "DROP_NOUN"
 
 /ɲ/ (0.011)
-	<verɡonya> /bərɡˈoɲə/ "SHAME_NOUN"
+	<vergonya> /bərɡˈoɲə/ "SHAME_NOUN"
 	<anyell> /əɲˈeʎ/ "LAMB_NOUN"
 	<juny> /ʒˈuɲ/ "JUNE_PROPN"
 
@@ -148,9 +148,9 @@ CONSONANTS
 	<vedell> /bəðˈeʎ/ "CALF_NOUN"
 
 /ɣ/ (0.009)
-	<aɡulla> /əɣˈuʎə/ "NEEDLE_NOUN"
-	<mosseɡar> /musəɣˈa/ "BITE_VERB"
-	<espiɡa> /əspˈiɣə/ "EAR OF GRAIN_NOUN"
+	<agulla> /əɣˈuʎə/ "NEEDLE_NOUN"
+	<mossegar> /musəɣˈa/ "BITE_VERB"
+	<espiga> /əspˈiɣə/ "EAR OF GRAIN_NOUN"
 
 /j/ (0.007)
 	<llei> /ʎˈej/ "LAW_NOUN"
@@ -158,14 +158,14 @@ CONSONANTS
 	<vuit> /bˈujt/ "EIGHT_NUM"
 
 /ŋ/ (0.006)
-	<unɡla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
-	<sanɡ> /sˈaŋ/ "BLOOD_NOUN"
+	<ungla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
+	<sang> /sˈaŋ/ "BLOOD_NOUN"
 	<vinc> /bˈiŋ/ "COME-1SG_VERB"
 
 /ʧ/ (0.004)
-	<roiɡ> /rˈɔʧ/ "RED_ADJ"
-	<ɡoiɡ> /ɡˈɔʧ/ "JOY_NOUN"
-	<puiɡ> /pˈuʧ/ "PODIUM_NOUN"
+	<roig> /rˈɔʧ/ "RED_ADJ"
+	<goig> /ɡˈɔʧ/ "JOY_NOUN"
+	<puig> /pˈuʧ/ "PODIUM_NOUN"
 
 /ʃ/ (0.004)
 	<cuixa> /kˈuʃə/ "THIGH_NOUN"
@@ -178,12 +178,12 @@ CONSONANTS
 	<espasa> /əspˈazə/ "SWORD_NOUN"
 
 /ʤ/ (0.003)
-	<metɡe> /mˈeʤə/ "DOCTOR_NOUN"
-	<viatɡe> /biˈaʤə/ "JOURNEY_NOUN"
-	<fetɡe> /fˈeʤə/ "LIVER_NOUN"
+	<metge> /mˈeʤə/ "DOCTOR_NOUN"
+	<viatge> /biˈaʤə/ "JOURNEY_NOUN"
+	<fetge> /fˈeʤə/ "LIVER_NOUN"
 
 /ʎː/ (0.001)
-	<ɡuatlla> /ɡwˈaʎːə/ "QUAIL_NOUN"
+	<guatlla> /ɡwˈaʎːə/ "QUAIL_NOUN"
 
 /mː/ (0.001)
 	<setmana> /səmːˈanə/ "WEEK_NOUN"

@@ -12,7 +12,7 @@ VOWELS
 /a/ (0.069)
 	<spada> /spˈada/ "SWORD_NOUN"
 	<sapere> /sapˈere/ "KNOW_VERB"
-	<foɡlia> /fˈɔʎːa/ "LEAF_NOUN"
+	<foglia> /fˈɔʎːa/ "LEAF_NOUN"
 
 /ˈa/ (0.057)
 	<estate> /estˈate/ "SUMMER_NOUN"
@@ -31,13 +31,13 @@ VOWELS
 
 /ˈo/ (0.024)
 	<sopra> /sˈopra/ "ABOVE_PREP"
-	<verɡoɡna> /verɡˈoɲːa/ "SHAME_NOUN"
+	<vergogna> /verɡˈoɲːa/ "SHAME_NOUN"
 	<molto> /mˈolto/ "MANY_ADJ"
 
 /ˈi/ (0.024)
 	<felice> /felˈiʧe/ "HAPPY_ADJ"
 	<villa> /vˈilːa/ "TOWN_NOUN"
-	<spiɡa> /spˈiɡa/ "EAR OF GRAIN_NOUN"
+	<spiga> /spˈiɡa/ "EAR OF GRAIN_NOUN"
 
 /ˈe/ (0.024)
 	<re> /rˈe/ "KING_NOUN"
@@ -78,12 +78,12 @@ CONSONANTS
 	<capello> /kapˈelːo/ "HAIR_NOUN"
 
 /t/ (0.035)
-	<metà> /metˈa/ "HALF_NOUN"
+	<metà> /metˈa/ "HALF_NOUN"
 	<tuto> /tˈutːo/ "ALL (SG)_ADJ"
 	<ascoltare> /askoltˈare/ "LISTEN_VERB"
 
 /l/ (0.035)
-	<linɡua> /lˈiŋɡwa/ "TONGUE_NOUN"
+	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
 	<lana> /lˈana/ "WOOL_NOUN"
 	<ombelico> /ombelˈiko/ "NAVEL_NOUN"
 
@@ -103,14 +103,14 @@ CONSONANTS
 	<semente> /semˈente/ "SEED_NOUN"
 
 /j/ (0.024)
-	<pioɡɡia> /pjˈɔʤːa/ "RAIN_NOUN"
+	<pioggia> /pjˈɔʤːa/ "RAIN_NOUN"
 	<sei> /sˈɛj/ "SIX_NUM"
-	<ɡhiacciare> /ɡjaʧːˈare/ "FREEZE_VERB"
+	<ghiacciare> /ɡjaʧːˈare/ "FREEZE_VERB"
 
 /v/ (0.022)
 	<vecchio> /vˈɛkːjo/ "OLD_ADJ"
 	<nove> /nˈɔve/ "NINE_NUM"
-	<ɡiovane> /ʤˈovane/ "YOUNG_ADJ"
+	<giovane> /ʤˈovane/ "YOUNG_ADJ"
 
 /d/ (0.021)
 	<coda> /kˈoda/ "TAIL_NOUN"
@@ -118,7 +118,7 @@ CONSONANTS
 	<vedere> /vedˈere/ "SEE_VERB"
 
 /f/ (0.016)
-	<feɡato> /fˈeɡato/ "LIVER_NOUN"
+	<fegato> /fˈeɡato/ "LIVER_NOUN"
 	<femmina> /fˈemːina/ "WOMAN_NOUN"
 	<freddo> /frˈedːo/ "COLD_ADJ"
 
@@ -128,14 +128,14 @@ CONSONANTS
 	<vicino> /viʧˈino/ "NEIGHBOR_NOUN"
 
 /ʤ/ (0.013)
-	<ɡinocchio> /ʤinˈɔkːjo/ "KNEE_NOUN"
-	<ɡiovane> /ʤˈovane/ "YOUNG_ADJ"
-	<manɡiare> /manʤˈare/ "EAT_VERB"
+	<ginocchio> /ʤinˈɔkːjo/ "KNEE_NOUN"
+	<giovane> /ʤˈovane/ "YOUNG_ADJ"
+	<mangiare> /manʤˈare/ "EAT_VERB"
 
 /ɡ/ (0.013)
-	<ɡrano> /ɡrˈano/ "GRAIN_NOUN"
-	<luoɡo> /lwˈɔɡo/ "PLACE_NOUN"
-	<linɡua> /lˈiŋɡwa/ "TONGUE_NOUN"
+	<grano> /ɡrˈano/ "GRAIN_NOUN"
+	<luogo> /lwˈɔɡo/ "PLACE_NOUN"
+	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
 
 /b/ (0.013)
 	<bianco> /bjˈaŋko/ "WHITE_ADJ"
@@ -144,8 +144,8 @@ CONSONANTS
 
 /w/ (0.012)
 	<nuovo> /nwˈɔvo/ "NEW_ADJ"
-	<quaɡlia> /kwˈaʎːa/ "QUAIL_NOUN"
-	<uɡuale> /uɡwˈale/ "EQUAL_ADJ"
+	<quaglia> /kwˈaʎːa/ "QUAIL_NOUN"
+	<uguale> /uɡwˈale/ "EQUAL_ADJ"
 
 /lː/ (0.01)
 	<castello> /kastˈɛlːo/ "CASTLE_NOUN"
@@ -153,7 +153,7 @@ CONSONANTS
 	<pelle> /pˈɛlːe/ "SKIN_NOUN"
 
 /tː/ (0.009)
-	<città> /ʧitːˈa/ "CITY_NOUN"
+	<città> /ʧitːˈa/ "CITY_NOUN"
 	<lotta> /lˈɔtːa/ "FIGHT_NOUN"
 	<latte> /lˈatːe/ "MILK_NOUN"
 
@@ -163,34 +163,34 @@ CONSONANTS
 	<acqua> /ˈakːwa/ "WATER_NOUN"
 
 /ɲː/ (0.006)
-	<montaɡna> /montˈaɲːa/ "MOUNTAIN_NOUN"
-	<Spaɡna> /spˈaɲːa/ "SPAIN_PROPN"
-	<ɡiuɡno> /ʤˈuɲːo/ "JUNE_PROPN"
+	<montagna> /montˈaɲːa/ "MOUNTAIN_NOUN"
+	<Spagna> /spˈaɲːa/ "SPAIN_PROPN"
+	<giugno> /ʤˈuɲːo/ "JUNE_PROPN"
 
 /ʧː/ (0.005)
 	<faccio> /fˈaʧːo/ "DO-1SG_VERB"
-	<ɡhiacciare> /ɡjaʧːˈare/ "FREEZE_VERB"
+	<ghiacciare> /ɡjaʧːˈare/ "FREEZE_VERB"
 	<uccello> /uʧːˈɛlːo/ "BIRD_NOUN"
 
 /ʎː/ (0.005)
-	<miɡliore> /miʎːˈore/ "BETTER_ADJ"
-	<quaɡlia> /kwˈaʎːa/ "QUAIL_NOUN"
-	<meɡlio> /mˈɛʎːo/ "BETTER_ADV"
+	<migliore> /miʎːˈore/ "BETTER_ADJ"
+	<quaglia> /kwˈaʎːa/ "QUAIL_NOUN"
+	<meglio> /mˈɛʎːo/ "BETTER_ADV"
 
 /ŋ/ (0.005)
-	<unɡhia> /ˈuŋɡja/ "FINGERNAIL_NOUN"
+	<unghia> /ˈuŋɡja/ "FINGERNAIL_NOUN"
 	<bianco> /bjˈaŋko/ "WHITE_ADJ"
 	<cinque> /ʧˈiŋkwe/ "FIVE_NUM"
 
 /sː/ (0.004)
 	<basso> /bˈasːo/ "LOW_ADJ"
 	<rosso> /rˈosːo/ "RED_ADJ"
-	<ɡrosso> /ɡrˈɔsːo/ "THICK_ADJ"
+	<grosso> /ɡrˈɔsːo/ "THICK_ADJ"
 
 /ʤː/ (0.003)
-	<pioɡɡia> /pjˈɔʤːa/ "RAIN_NOUN"
-	<poɡɡio> /pˈɔʤːo/ "PODIUM_NOUN"
-	<leɡɡere> /lˈɛʤːere/ "READ_VERB"
+	<pioggia> /pjˈɔʤːa/ "RAIN_NOUN"
+	<poggio> /pˈɔʤːo/ "PODIUM_NOUN"
+	<leggere> /lˈɛʤːere/ "READ_VERB"
 
 /ʃː/ (0.002)
 	<conoscere> /konˈoʃːere/ "BE ACQUAINTED WITH_VERB"
