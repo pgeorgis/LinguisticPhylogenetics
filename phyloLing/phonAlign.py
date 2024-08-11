@@ -1,3 +1,4 @@
+import importlib
 from collections.abc import Iterable
 from math import inf, log
 
@@ -10,8 +11,6 @@ from phonUtils.segment import _toSegment
 from utils.distance import Distance
 from utils.sequence import Ngram, PhonEnvNgram
 from utils.utils import validate_class
-
-import phyloLing  # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
 
 
 def compatible_segments(seg1, seg2):
@@ -155,7 +154,7 @@ class Alignment:
 
     def validate_args(self, seq1, seq2, lang1, lang2, cost_func):
         """Verifies that all input arguments are of the correct types"""
-
+        phyloLing = importlib.import_module('phyloLing')
         validate_class((cost_func,), (Distance,))
         validate_class((seq1,), ((phyloLing.Word, str),))
         validate_class((seq2,), ((phyloLing.Word, str),))
@@ -164,6 +163,7 @@ class Alignment:
                 validate_class((lang,), (phyloLing.Language,))
 
     def prepare_seq(self, seq, lang):
+        phyloLing = importlib.import_module('phyloLing')
         if isinstance(seq, phyloLing.Word):
             word1 = seq
         elif isinstance(seq, str):
