@@ -250,8 +250,8 @@ class PhonCorrelator:
 
         # PMI, ngrams, scored words
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
-        self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2]
-        self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2]
+        self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2.name]
+        self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2.name]
         self.total_unigrams = (sum([len(word1.segments) for word1, word2 in self.same_meaning]),
                                sum([len(word2.segments) for word1, word2 in self.same_meaning]))
         self.complex_ngrams = self.lang1.complex_ngrams[self.lang2]
@@ -1268,8 +1268,8 @@ class PhonCorrelator:
 
         # Return and save the final iteration's surprisal results
         if save:
-            self.lang1.phoneme_surprisal[(self.lang2, ngram_size)] = surprisal_results
-            self.lang1.phon_env_surprisal[self.lang2] = phon_env_surprisal_results
+            self.lang1.phoneme_surprisal[(self.lang2.name, ngram_size)] = surprisal_results
+            self.lang1.phon_env_surprisal[self.lang2.name] = phon_env_surprisal_results
         self.surprisal_dict[ngram_size] = surprisal_results
         self.phon_env_surprisal_dict = phon_env_surprisal_results
 

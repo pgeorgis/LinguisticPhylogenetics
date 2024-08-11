@@ -422,10 +422,10 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
         pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
 
     # Calculate phoneme surprisal if not already done # TODO use helper function
-    if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
+    if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
         correlator1 = lang1.get_phoneme_correlator(lang2)
         correlator1.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-    if len(lang2.phoneme_surprisal[(lang1, ngram_size)]) == 0:
+    if len(lang2.phoneme_surprisal[(lang1.name, ngram_size)]) == 0:
         correlator2 = lang2.get_phoneme_correlator(lang1)
         correlator2.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
 
@@ -445,11 +445,11 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     # Calculate the word-adaptation surprisal in each direction
     # (note: alignment needs to be reversed to run in second direction)
     if phon_env:
-        sur_dict1 = lang1.phon_env_surprisal[lang2]
-        sur_dict2 = lang2.phon_env_surprisal[lang1]
+        sur_dict1 = lang1.phon_env_surprisal[lang2.name]
+        sur_dict2 = lang2.phon_env_surprisal[lang1.name]
     else:
-        sur_dict1 = lang1.phoneme_surprisal[(lang2, ngram_size)]
-        sur_dict2 = lang2.phoneme_surprisal[(lang1, ngram_size)]
+        sur_dict1 = lang1.phoneme_surprisal[(lang2.name, ngram_size)]
+        sur_dict2 = lang2.phoneme_surprisal[(lang1.name, ngram_size)]
     WAS_l1l2 = adaptation_surprisal(alignment,
                                     surprisal_dict=sur_dict1,
                                     ngram_size=ngram_size,

@@ -332,7 +332,7 @@ class LexicalDataset:
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
 
             # Retrieve the precalculated values
-            if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
+            if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
                 self.logger.warning(f'{ngram_size}-gram phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}')
                 continue
             correlator = lang1.get_phoneme_correlator(lang2)
@@ -357,7 +357,7 @@ class LexicalDataset:
         lang_pairs = self.get_doculect_pairs(bidirectional=True)
         for lang1, lang2 in lang_pairs:
             # If not, calculate it now
-            if len(lang1.phoneme_surprisal[(lang2, ngram_size)]) == 0:
+            if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
                 correlator = lang1.get_phoneme_correlator(lang2)
                 correlator.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
 
@@ -411,13 +411,13 @@ class LexicalDataset:
 
                 # Extract and save the surprisal values to phoneme_surprisal attribute of language object
                 loaded_surprisal = extract_surprisal_from_df(surprisal_data, lang2, phon_env=False)
-                lang1.phoneme_surprisal[(lang2, ngram_size)] = loaded_surprisal
+                lang1.phoneme_surprisal[(lang2.name, ngram_size)] = loaded_surprisal
 
                 # Do the same for phonological environment surprisal
                 if os.path.exists(surprisal_file_phon_env):
                     phon_env_surprisal_data = pd.read_csv(surprisal_file_phon_env, sep=sep)
                     loaded_phon_env_surprisal = extract_surprisal_from_df(phon_env_surprisal_data, lang2, phon_env=True)
-                    lang1.phon_env_surprisal[lang2] = loaded_phon_env_surprisal
+                    lang1.phon_env_surprisal[lang2.name] = loaded_phon_env_surprisal
 
                 else:
                     self.logger.warning(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}')
