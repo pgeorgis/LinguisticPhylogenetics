@@ -1,5 +1,6 @@
 asjp==0.0.2
 bcubed==1.5
+isort==5.13.2
 kneed==0.8.1
 matplotlib==3.5.3
 more-itertools==9.0.0
@@ -9,6 +10,7 @@ numpy==1.24.0
 pandas==1.5.2
 pathlib==1.0.1
 PyYAML==6.0.1
+pylama==8.4.1
 scikit-bio>=0.5.7
 scikit-learn>=1.0.2
 scipy>=1.7.3

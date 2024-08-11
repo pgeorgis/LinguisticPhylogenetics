@@ -1,17 +1,21 @@
-from math import log, inf
 from collections.abc import Iterable
+from math import inf, log
+
+from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
+                       PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
 from nwunschAlign import best_alignment
-from phonUtils.segment import _toSegment, consonants
-from phonUtils.phonSim import phone_sim
 from phonUtils.phonEnv import get_phon_env
-import phyloLing # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
-from constants import START_PAD_CH, END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, NULL_CH_DEFAULT, SEG_JOIN_CH
+from phonUtils.phonSim import phone_sim
+from phonUtils.segment import _toSegment
 from utils.distance import Distance
 from utils.sequence import Ngram, PhonEnvNgram
 from utils.utils import validate_class
 
+import phyloLing  # need Language and Word classes from phyloLing.py but cannot import them directly here because it will cause circular imports
+
+
 def compatible_segments(seg1, seg2):
-    """Determines whether a pair of segments are compatible for alignment. 
+    """Determines whether a pair of segments are compatible for alignment.
     Returns True if the two segments are either:
         two consonants
         two vowels
@@ -20,7 +24,7 @@ def compatible_segments(seg1, seg2):
     Else returns False"""
     seg1, seg2 = map(_toSegment, [seg1, seg2])
     phone_class1, phone_class2 = seg1.phone_class, seg2.phone_class
-    
+
     # Tonemes/suprasegmentals can only be aligned with tonemes/suprasegmentals
     if phone_class1 in ('TONEME', 'SUPRASEGMENTAL') and phone_class2 in ('TONEME', 'SUPRASEGMENTAL'):
         return True
@@ -28,17 +32,17 @@ def compatible_segments(seg1, seg2):
         return False
     elif phone_class2 in ('TONEME', 'SUPRASEGMENTAL'):
         return False
-    
+
     # Consonants can always be aligned with consonants and glides
     if phone_class1 == 'CONSONANT' and phone_class2 in ('CONSONANT', 'GLIDE'):
         return True
     elif phone_class2 == 'CONSONANT' and phone_class1 in ('CONSONANT', 'GLIDE'):
         return True
 
-    # Vowels/diphthongs/glides can always be aligned with one another    
+    # Vowels/diphthongs/glides can always be aligned with one another
     elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
         return True
-    
+
     # Sonorant and syllabic consonants can be aligned with vowels/diphthongs
     elif seg1.features['sonorant'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
         return True
@@ -85,21 +89,22 @@ AlignmentCost = Distance(
     name='AlignmentCost'
 )
 
+
 class Alignment:
-    def __init__(self, 
+    def __init__(self,
                  seq1, seq2,
-                 lang1=None, 
+                 lang1=None,
                  lang2=None,
-                 cost_func=AlignmentCost, 
+                 cost_func=AlignmentCost,
                  added_penalty_dict=None,
                  gap_ch=GAP_CH_DEFAULT,
-                 gop=-0.2, # TODO possibly need to recalibrate ** changed from -0.3 to -0.2 when changing to PMI log base 2, given that those PMI values will be 69% of value of PMI with log base math.e
+                 gop=-0.2,  # TODO possibly need to recalibrate ** changed from -0.3 to -0.2 when changing to PMI log base 2, given that those PMI values will be 69% of value of PMI with log base math.e
                  pad_ch=PAD_CH_DEFAULT,
                  n_best=1,
                  phon_env=False,
                  **kwargs
                  ):
-        f"""Produces a pairwise alignment of two phone sequences. 
+        f"""Produces a pairwise alignment of two phone sequences.
 
         Args:
             seq1 (phyloLing.Word or str): first phone sequence
@@ -113,10 +118,10 @@ class Alignment:
             n_best (int, optional): Number of best (least costly) alignments to return. Defaults to 1.
             phon_env (Bool, optional): Adds phonological environment to alignment. Defaults to False.
         """
-        
+
         # Verify that input arguments are of the correct types
         self.validate_args(seq1, seq2, lang1, lang2, cost_func)
-    
+
         # Prepare the input sequences for alignment
         self.seq1, self.word1 = self.prepare_seq(seq1, lang1)
         self.seq2, self.word2 = self.prepare_seq(seq2, lang2)
@@ -137,10 +142,10 @@ class Alignment:
         self.cost = self.n_best[0][-1]
         self.length = len(self.alignment)
         self.original_length = self.length
-        
+
         # Map aligned pairs to respective sequence indices
         self.seq_map = self.map_to_seqs()
-        
+
         # Phonological environment alignment
         self.phon_env = phon_env
         if self.phon_env:
@@ -155,7 +160,7 @@ class Alignment:
         validate_class((seq1,), ((phyloLing.Word, str),))
         validate_class((seq2,), ((phyloLing.Word, str),))
         for lang in (lang1, lang2):
-            if lang: # skip if None
+            if lang:  # skip if None
                 validate_class((lang,), (phyloLing.Language,))
 
     def prepare_seq(self, seq, lang):
@@ -163,14 +168,14 @@ class Alignment:
             word1 = seq
         elif isinstance(seq, str):
             word1 = phyloLing.Word(seq, language=lang)
-        
+
         return word1.segments, word1
 
     def calculate_alignment_costs(self, cost_func):
         """Calculates pairwise alignment costs for phone sequences using a specified cost function.
 
         Args:
-            cost_func (Distance): cost function used for computing pairwise alignment costs 
+            cost_func (Distance): cost function used for computing pairwise alignment costs
 
         Returns:
             dict: dictionary of pairwise alignment costs by sequence indices
@@ -179,7 +184,7 @@ class Alignment:
         for i, seq1_i in enumerate(self.seq1):
             for j, seq2_j in enumerate(self.seq2):
                 cost = cost_func.eval(seq1_i, seq2_j, **self.kwargs)
-                
+
                 # If similarity function, turn into distance and ensure it is negative # TODO add into Distance object
                 if cost_func.sim:
                     if cost > 0:
@@ -196,9 +201,9 @@ class Alignment:
         Wunsch algorithm, with costs determined by phonetic and sonority similarity;
         If not segmented, the words are first segmented before being aligned.
         GOP = -0.7 by default, determined by cross-validation on dataset of gold cognate alignments."""
-        
+
         # Combine base distances from distance function with additional penalties, if specified
-        if self.added_penalty_dict: # TODO this could be a separate class method
+        if self.added_penalty_dict:  # TODO this could be a separate class method
             def added_penalty_dist(seq1, seq2, **kwargs):
                 added_penalty = self.added_penalty_dict[seq1][seq2]
                 base_dist = self.cost_func.eval(seq1, seq2, **kwargs)
@@ -208,23 +213,23 @@ class Alignment:
                     return base_dist + added_penalty
                 else:
                     return min(base_dist, -base_dist) + added_penalty
-            
+
             AddedPenaltyDist = Distance(func=added_penalty_dist, **self.kwargs)
             alignment_costs = self.calculate_alignment_costs(AddedPenaltyDist)
-        
+
         # Otherwise calculate alignment costs for each segment pair using only the base distance function
         else:
             alignment_costs = self.calculate_alignment_costs(self.cost_func)
-        
+
         # Calculate least costly N best alignment(s) using Needleman-Wunsch algorithm
-        best = best_alignment(SEQUENCE_1=self.seq1, 
+        best = best_alignment(SEQUENCE_1=self.seq1,
                               SEQUENCE_2=self.seq2,
-                              SCORES_DICT=alignment_costs, 
+                              SCORES_DICT=alignment_costs,
                               GAP_SCORE=self.gop,
                               N_BEST=n_best)
-        
+
         return alignment_costs, best
-    
+
     def remove_gaps(self, alignment=None):
         """Returns the alignment without gap-aligned positions.
 
@@ -234,7 +239,7 @@ class Alignment:
         if alignment is None:
             alignment = self.alignment
         return [pair for pair in alignment if self.gap_ch not in pair]
-    
+
     def gaps(self):
         """Returns a list of Gap objects in the alignment.
 
@@ -247,7 +252,7 @@ class Alignment:
         indices.sort()
         if new_index is None:
             new_index = indices[0]
-            
+
         to_merge = [(index, self.alignment[index]) for index in indices]
         merged = [[], []]
         for i, pair in to_merge:
@@ -259,9 +264,9 @@ class Alignment:
                 merged[0].append(seg1)
                 merged[1].append(seg2)
         merged = tuple([tuple(item) if len(item) > 1 else item[0] for item in merged])
-        
+
         indices.reverse()
-        #merged_alignment = deepcopy(self.alignment)
+        # merged_alignment = deepcopy(self.alignment)
         for index in indices:
             del self.alignment[index]
         self.alignment.insert(new_index, merged)
@@ -269,11 +274,11 @@ class Alignment:
 
     def compact_gaps(self, complex_ngrams):
         l1_bigrams = [ngram for ngram in complex_ngrams if ngram.size > 1]
-        l2_bigrams = [nested_ngram for ngram in complex_ngrams 
+        l2_bigrams = [nested_ngram for ngram in complex_ngrams
                       for nested_ngram in complex_ngrams[ngram] if nested_ngram.size > 1]
         l1_bigram_segs = set(seg for bigram in l1_bigrams for seg in bigram.ngram)
         l2_bigram_segs = set(seg for bigram in l2_bigrams for seg in bigram.ngram)
-         
+
         gaps = self.gaps()
         gaps.reverse()
         merge_ranges = set()
@@ -282,7 +287,7 @@ class Alignment:
             slices = gap.bigram_slices()
             # If the gap is in the first position, that means lang1 has a single seg where lang2 has two segs
             # gap.segment is the segment this gap is aligned to
-            # gap.segment should be part of l2_bigram_segs 
+            # gap.segment should be part of l2_bigram_segs
             if gap.gap_i == 0 and gap.segment in l2_bigram_segs:
                 for bigram in l2_bigrams:
                     if gap.segment in bigram.ngram:
@@ -294,8 +299,8 @@ class Alignment:
                                     [(gap.gap_ch, gap_aligned_corr), (unigram_corr.string, seg_aligned_corr)],
                                     [(unigram_corr.string, seg_aligned_corr), (gap.gap_ch, gap_aligned_corr)],
                                 ):
-                                    merge_ranges.add(tuple(range(start_i,end_i)))
-                                    merge_candidates[tuple(range(start_i,end_i))] = (unigram_corr, bigram)
+                                    merge_ranges.add(tuple(range(start_i, end_i)))
+                                    merge_candidates[tuple(range(start_i, end_i))] = (unigram_corr, bigram)
                                     break
                                 break
 
@@ -305,22 +310,22 @@ class Alignment:
                 for bigram in l1_bigrams:
                     if gap.segment in bigram.ngram:
                         gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram.ngram)
-                        for unigram_corr in complex_ngrams[bigram]:                   
+                        for unigram_corr in complex_ngrams[bigram]:
                             for start_i, end_i in slices:
                                 if self.alignment[start_i:end_i] in (
                                     [(gap_aligned_corr, gap.gap_ch), (seg_aligned_corr, unigram_corr.string)],
                                     [(seg_aligned_corr, unigram_corr.string), (gap_aligned_corr, gap.gap_ch)],
                                 ):
-                                    merge_ranges.add(tuple(range(start_i,end_i)))
-                                    merge_candidates[tuple(range(start_i,end_i))] = (bigram, unigram_corr)
+                                    merge_ranges.add(tuple(range(start_i, end_i)))
+                                    merge_candidates[tuple(range(start_i, end_i))] = (bigram, unigram_corr)
                                     break
                                 break
-        
+
         # Select best merge group(s)
         if len(merge_ranges) > 1:
-            merge_ranges = sorted(merge_ranges, key=lambda x:(x[0], x[-1]), reverse=True)
+            merge_ranges = sorted(merge_ranges, key=lambda x: (x[0], x[-1]), reverse=True)
             for i in range(1, len(merge_ranges)):
-                merge_range, next_merge_range = merge_ranges[i-1:i+1]
+                merge_range, next_merge_range = merge_ranges[i - 1:i + 1]
                 # Check if the merge candidates' index ranges conflict: if so, pick the one with higher PMI
                 if not any([r is None for r in (merge_range, next_merge_range)]) and min(merge_range) <= max(next_merge_range):
                     merge_range_pmi = complex_ngrams[merge_candidates[tuple(merge_range)][0]][merge_candidates[tuple(merge_range)][-1]]
@@ -328,45 +333,45 @@ class Alignment:
                     if merge_range_pmi > next_merge_range_pmi:
                         merge_ranges[i] = None
                     elif next_merge_range_pmi > merge_range_pmi:
-                        merge_ranges[i-1] = None
+                        merge_ranges[i - 1] = None
                     else:
-                        raise NotImplementedError # PMI is equal, TBD what to do here
-                    
+                        raise NotImplementedError  # PMI is equal, TBD what to do here
+
         for merge_range in merge_ranges:
             if merge_range is not None:
                 self.merge_align_positions(indices=list(merge_range))
-        
+
         # Update sequence map and length for compacted alignment
         self.update()
 
     def start_boundary(self):
         # ('<#', '<#')
         return (f'{START_PAD_CH}{self.pad_ch}', f'{START_PAD_CH}{self.pad_ch}')
-    
+
     def end_boundary(self):
         # ('#>', '#>')
         return (f'{self.pad_ch}{END_PAD_CH}', f'{self.pad_ch}{END_PAD_CH}')
-    
+
     def pad(self, ngram_size, alignment=None, pad_ch=PAD_CH_DEFAULT, pad_n=None):
         self.pad_ch = pad_ch
         if alignment is None:
             alignment = self.alignment
         if pad_n is None:
-            pad_n = max(0, ngram_size-1)
-        self.alignment = [self.start_boundary()]*pad_n + alignment + [self.end_boundary()]*pad_n
+            pad_n = max(0, ngram_size - 1)
+        self.alignment = [self.start_boundary()] * pad_n + alignment + [self.end_boundary()] * pad_n
         self.update()
         return self.alignment
-    
+
     def remove_padding(self):
         start_pad_i = 0
         start_pad = self.start_boundary()
         while self.alignment[start_pad_i] == start_pad:
             start_pad_i += 1
-        end_pad_i = len(self.alignment)-1
+        end_pad_i = len(self.alignment) - 1
         end_pad = self.end_boundary()
         while self.alignment[end_pad_i] == end_pad:
             end_pad_i -= 1
-        self.alignment = self.alignment[start_pad_i:end_pad_i+1]
+        self.alignment = self.alignment[start_pad_i:end_pad_i + 1]
         self.update()
 
     def map_to_seqs(self):
@@ -378,13 +383,13 @@ class Alignment:
         """
         # Update current alignment length, in case it was padded or otherwise modified
         self.length = len(self.alignment)
-        
+
         map1, map2 = {}, {}
         adjust_gap1, adjust_gap2 = 0, 0
         adjust_complex1, adjust_complex2 = 0, 0
         adjust_complex_start = 0
         n_complex = sum([1 for left, right in self.alignment if Ngram(left).size > 1 or Ngram(right).size > 1])
-        for i in range(max(self.length, self.original_length)):            
+        for i in range(max(self.length, self.original_length)):
             # Skip alignment positions containing only boundary padding, e.g. ('<#', '<#')
             if i == 0 and self.alignment[i] == self.start_boundary():
                 adjust_gap1 += 1
@@ -393,33 +398,33 @@ class Alignment:
                 map2[i] = None
                 continue
             # ('#>', '#>')
-            elif i == self.length-1 and self.alignment[i] == self.end_boundary():
+            elif i == self.length - 1 and self.alignment[i] == self.end_boundary():
                 continue
-            
-            seg1_i = i-adjust_gap1+adjust_complex1
-            seg2_i = i-adjust_gap2+adjust_complex2
-            
-            if i >= self.length:     
-                if n_complex > 1 and ((i+1+adjust_complex_start)-self.length) == (n_complex-adjust_complex_start):
+
+            seg1_i = i - adjust_gap1 + adjust_complex1
+            seg2_i = i - adjust_gap2 + adjust_complex2
+
+            if i >= self.length:
+                if n_complex > 1 and ((i + 1 + adjust_complex_start) - self.length) == (n_complex - adjust_complex_start):
                     continue
-                last_index = self.length-1
+                last_index = self.length - 1
                 left, right = self.alignment[last_index]
                 left_ngram, right_ngram = Ngram(left), Ngram(right)
-                      
+
                 if left == self.gap_ch or self.pad_ch in left:
                     pass
                 elif left_ngram.size > 1 and len(map1[last_index]) < left_ngram.size:
                     if self.pad_ch not in left_ngram.ngram[len(map1[last_index])]:
-                        map1[last_index].append(min(seg1_i,map1[last_index][-1]+1))
+                        map1[last_index].append(min(seg1_i, map1[last_index][-1] + 1))
                         adjust_complex1 += 1
-                    
+
                 if right == self.gap_ch or self.pad_ch in right:
                     pass
                 elif right_ngram.size > 1 and len(map2[last_index]) < right_ngram.size:
                     if self.pad_ch not in right_ngram.ngram[len(map2[last_index])]:
-                        map2[last_index].append(min(seg2_i,map2[last_index][-1]+1))
+                        map2[last_index].append(min(seg2_i, map2[last_index][-1] + 1))
                         adjust_complex1 += 1
-                
+
             else:
                 seg1, seg2 = self.alignment[i]
                 if seg1 == self.gap_ch:
@@ -431,12 +436,12 @@ class Alignment:
                 else:
                     map1[i] = []
                     ngram = Ngram(seg1)
-                    if ngram.size > 1 and i < self.length-1:
-                        adjust_complex1 += ngram.size-1
+                    if ngram.size > 1 and i < self.length - 1:
+                        adjust_complex1 += ngram.size - 1
                         adjust_ngram = 0
-                        for n in range(seg1_i, min(seg1_i+ngram.size, len(self.seq1))):
-                            if self.pad_ch not in ngram.ngram[n-seg1_i]:
-                                map1[i].append(n-adjust_ngram)
+                        for n in range(seg1_i, min(seg1_i + ngram.size, len(self.seq1))):
+                            if self.pad_ch not in ngram.ngram[n - seg1_i]:
+                                map1[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap1 += 1
                                 adjust_ngram += 1
@@ -444,8 +449,7 @@ class Alignment:
                                     adjust_complex_start += 1
                     else:
                         map1[i].append(seg1_i)
-                        
-                        
+
                 if seg2 == self.gap_ch:
                     map2[i] = None
                     adjust_gap2 += 1
@@ -455,50 +459,50 @@ class Alignment:
                 else:
                     map2[i] = []
                     ngram = Ngram(seg2)
-                    if ngram.size > 1 and i < self.length-1:
-                        adjust_complex2 += ngram.size-1
+                    if ngram.size > 1 and i < self.length - 1:
+                        adjust_complex2 += ngram.size - 1
                         adjust_ngram = 0
-                        for n in range(seg2_i, min(seg2_i+ngram.size, len(self.seq2))):
-                            if self.pad_ch not in ngram.ngram[n-seg2_i]:
-                                map2[i].append(n-adjust_ngram)
+                        for n in range(seg2_i, min(seg2_i + ngram.size, len(self.seq2))):
+                            if self.pad_ch not in ngram.ngram[n - seg2_i]:
+                                map2[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap2 += 1
                                 adjust_ngram += 1
                                 if i == 0:
                                     adjust_complex_start += 1
-                                
+
                     else:
                         map2[i].append(seg2_i)
-            
+
         # Check that all sequence units were mapped to alignment positions
         assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
         assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
-        
+
         return map1, map2
 
     def add_phon_env(self, env_func=get_phon_env):
         """Adds the phonological environment value of segments to an alignment
-        e.g. 
-        [('m', 'm'), ('j', '-'), ('ɔu̯', 'ɪ'), ('l̥', 'l'), ('k', 'ç')]) 
+        e.g.
+        [('m', 'm'), ('j', '-'), ('ɔu̯', 'ɪ'), ('l̥', 'l'), ('k', 'ç')])
         becomes
         [(('m', '#S<'), 'm'), (('j', '<S<'), '-'), (('ɔu̯', '<S>'), 'ɪ'), (('l̥', '>S>'), 'l'), (('k', '>S#'), 'ç')]
         """
         self.phon_env = True
         word1_aligned, word2_aligned = tuple(zip(*self.alignment))
-        word1_aligned = list(word1_aligned) # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
+        word1_aligned = list(word1_aligned)  # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
         seq_map = self.seq_map[0]
-      
+
         for align_i in seq_map:
             if seq_map[align_i] is not None:
                 # for complex ngrams, consider only the preceding context of the first component segment and the following context of the last component segment
                 # therefore skip computing phon envs for any segs in between first and last within an alignment position
-                for j, seg_j, in enumerate(list(set(seq_map[align_i][:1]+seq_map[align_i][-1:]))):
+                for j, seg_j, in enumerate(list(set(seq_map[align_i][:1] + seq_map[align_i][-1:]))):
                     phon_env = env_func(self.seq1, seg_j)
                     target = word1_aligned[align_i]
                     if isinstance(target, str):
                         word1_aligned[align_i] = word1_aligned[align_i], phon_env
                     else:
-                        word1_aligned[align_i] = list(word1_aligned[align_i]) # needed because tuples don't support item assignment
+                        word1_aligned[align_i] = list(word1_aligned[align_i])  # needed because tuples don't support item assignment
                         word1_aligned[align_i][j] = word1_aligned[align_i][j], phon_env
                         word1_aligned[align_i] = PhonEnvNgram(word1_aligned[align_i]).ngram_w_context
                 if len(seq_map[align_i]) > 1:
@@ -516,11 +520,11 @@ class Alignment:
 
     def reverse(self):
         return ReversedAlignment(self)
-    
+
     def update(self):
         self.seq_map = self.map_to_seqs()
         self.length = len(self.alignment)
-    
+
     def __str__(self):
         return visual_align(self.alignment, gap_ch=self.gap_ch, phon_env=self.phon_env)
 
@@ -547,7 +551,7 @@ class ReversedAlignment(Alignment):
         # Save length and cost of single best alignment
         self.cost = self.n_best[0][-1]
         self.length = len(self.alignment)
-        
+
         # Phonological environment alignment
         self.phon_env = alignment.phon_env
         if self.phon_env:
@@ -555,31 +559,32 @@ class ReversedAlignment(Alignment):
         else:
             self.phon_env_alignment = None
 
+
 class AlignedPair:
     def __init__(self, alignment, index):
         self.alignment = alignment
         self.gap_ch = self.alignment.gap_ch
         self.index = index
         self.pair = self.alignment.alignment[self.index]
-    
+
     def prev_pair(self):
         if self.index > 0:
-            return AlignedPair(self.alignment, self.index-1)
+            return AlignedPair(self.alignment, self.index - 1)
         else:
             return None
-        
+
     def next_pair(self):
         try:
-            return AlignedPair(self.alignment, self.index+1)
+            return AlignedPair(self.alignment, self.index + 1)
         except IndexError:
             return None
-    
+
     def context(self):
         return self.prev_pair(), self.next_pair()
-    
+
     def is_gap(self):
         return self.gap_ch in self.pair
-        
+
 
 class Gap(AlignedPair):
     def __init__(self, alignment, index):
@@ -587,23 +592,23 @@ class Gap(AlignedPair):
         self.gap_i = self.pair.index(self.gap_ch)
         self.seg_i = abs(self.gap_i - 1)
         self.segment = self.pair[self.seg_i]
-    
+
     def bigram_slices(self):
         slices = [
-                # e.g. kt ~ ʧ
-                # ('-', 'k'), ('ʧ', 't') or ('k', '-'), ('t', 'ʧ')
-                (self.index, self.index+2), 
-                # ('ʧ', 'k'), ('-', 't') or ('k', 'ʧ'), ('t', '-')
-                (self.index-1, self.index+1)
+            # e.g. kt ~ ʧ
+            # ('-', 'k'), ('ʧ', 't') or ('k', '-'), ('t', 'ʧ')
+            (self.index, self.index + 2),
+            # ('ʧ', 'k'), ('-', 't') or ('k', 'ʧ'), ('t', '-')
+            (self.index - 1, self.index + 1)
         ]
         return slices
-    
+
     def bigram_aligned_segs(self, bigram):
-        """Given a bigram tuple that the gap forms a larger alignment unit with, 
-        this function identifies the bigram segment aligned to the gap 
+        """Given a bigram tuple that the gap forms a larger alignment unit with,
+        this function identifies the bigram segment aligned to the gap
         and the bigram segment aligned to another segment"""
         gap_aligned_corr_i = bigram.index(self.segment)
-        seg_aligned_corr_i = abs(gap_aligned_corr_i-1)
+        seg_aligned_corr_i = abs(gap_aligned_corr_i - 1)
         gap_aligned_corr = bigram[gap_aligned_corr_i]
         seg_aligned_corr = bigram[seg_aligned_corr_i]
         return gap_aligned_corr, seg_aligned_corr
@@ -617,7 +622,7 @@ def get_alignment_iter(alignment, phon_env=False):
             alignment = alignment.phon_env_alignment
         else:
             alignment = alignment.alignment
-    
+
     return alignment
 
 
@@ -625,7 +630,7 @@ def reverse_alignment(alignment, phon_env=False):
     """Flips the alignment, e.g.:
         reverse_alignment([('s', 's̪'), ('o', 'ɔ'), ('l', 'l'), ('-', 'ɛ'), ('-', 'j')])
         = [('s̪', 's'), ('ɔ', 'o'), ('l', 'l'), ('ɛ', '-'), ('j', '-')]"""
-    
+
     alignment = get_alignment_iter(alignment, phon_env)
 
     # TODO use tuple if possible, see above TODO comments
@@ -641,17 +646,17 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
 
     if isinstance(alignment, Alignment) and gap_ch != alignment.gap_ch:
         raise ValueError(f'Gap character "{gap_ch}" does not match gap character of alignment "{alignment.gap_ch}"')
-    
+
     alignment = get_alignment_iter(alignment, phon_env)
     if phon_env:
-        raise NotImplementedError('TODO needs to be updated for phon_env') # TODO
+        raise NotImplementedError('TODO needs to be updated for phon_env')  # TODO
     a = []
     for pair in alignment:
         pair = list(pair)
         for i, seg in enumerate(pair):
             if isinstance(seg, tuple):
                 pair[i] = SEG_JOIN_CH.join(seg)
-            
+
         seg1, seg2 = pair
         if gap_ch not in pair:
             a.append(f'{seg1}-{seg2}')
@@ -660,7 +665,7 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
                 a.append(f'{null}-{seg2}')
             else:
                 a.append(f'{seg1}-{null}')
-                
+
     return ' / '.join(a)
 
 
