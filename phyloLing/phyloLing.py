@@ -786,13 +786,14 @@ class LexicalDataset:
                        cluster_func=None,
                        concept_list=None,
                        cognates='auto',
-                       method='ward',
+                       linkage_method='ward',
                        metric='euclidean',
                        **kwargs):
 
         # Ensure the linkage method is valid
-        if method not in ('nj', 'average', 'complete', 'single', 'weighted', 'ward'):
-            raise ValueError(f'Error: Unrecognized linkage type "{method}". Accepted values are: "average", "complete", "single", "weighted", "ward", "nj"')
+        valid_linkage = {'nj', 'average', 'complete', 'single', 'weighted', 'ward'}
+        if linkage_method not in valid_linkage:
+            raise ValueError(f'Error: Unrecognized linkage type "{linkage_method}". Accepted values are: {valid_linkage}')
 
         # Create distance matrix
         dm = self.distance_matrix(dist_func=dist_func,
@@ -804,7 +805,7 @@ class LexicalDataset:
         dists = squareform(dm)
 
         # Neighbor Joining linkage
-        if method == 'nj':
+        if linkage_method == 'nj':
             languages = self.languages.values()
             names = [lang.name for lang in languages]
             lang_names = [re.sub(r'\(', '{', lang) for lang in names]
@@ -814,7 +815,7 @@ class LexicalDataset:
 
         # Other linkage methods
         else:
-            lm = linkage(dists, method, metric)
+            lm = linkage(dists, linkage_method, metric)
             return lm
 
     def write_distance_matrix(self, dist_matrix, outfile, ordered_labels=None, float_format="%.5f"):
@@ -845,7 +846,7 @@ class LexicalDataset:
                   concept_list=None,
                   cluster_func=None,
                   cognates='auto',
-                  method='ward',
+                  linkage_method='ward',
                   metric='euclidean',
                   outtree=None,
                   title=None,
@@ -871,12 +872,12 @@ class LexicalDataset:
                                  concept_list=concept_list,
                                  cluster_func=cluster_func,
                                  cognates=cognates,
-                                 method=method,
+                                 linkage_method=linkage_method,
                                  metric=metric,
                                  **kwargs)
 
         # Not possible to plot NJ trees in Python (yet? TBD) # TODO
-        if method != 'nj':
+        if linkage_method != 'nj':
             sns.set(font_scale=1.0)
             if len(group) >= 100:
                 plt.figure(figsize=(20, 20))
@@ -892,7 +893,7 @@ class LexicalDataset:
             plt.show()
 
         if return_newick or outtree:
-            if method == 'nj':
+            if linkage_method == 'nj':
                 newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
             else:
                 newick_tree = linkage2newick(lm, labels)

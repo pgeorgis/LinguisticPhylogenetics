@@ -318,7 +318,7 @@ if __name__ == "__main__":
         cluster_func=clusterDist,
         dist_func=distFunc,
         cognates=cluster_params['cognates'],
-        method=tree_params['linkage'],  # TODO this should be changed within draw_tree() to linkage rather than method
+        linkage_method=tree_params['linkage'],
         title=family.name,
         outtree=outtree,
         return_newick=tree_params['newick'])
