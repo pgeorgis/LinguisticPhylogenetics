@@ -235,7 +235,7 @@ if __name__ == "__main__":
     # Print some summary info about the loaded dataset
     logger.info(f'Loaded {len(family.languages)} doculects.')
     abs_mc, avg_mc = family.calculate_mutual_coverage()
-    if avg_mc <= 0.7:  # TODO should this be hard-coded?
+    if avg_mc <= 0.7:
         logger.warning(f'Average mutual coverage = {round(avg_mc, 2)}. Recommend minimum is 0.7.')
     else:
         logger.info(f'Average mutual coverage is {round(avg_mc, 2)} ({abs_mc}/{len(family.concepts)} concepts in all {len(family.languages)} doculects).')
