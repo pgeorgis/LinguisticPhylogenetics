@@ -12,10 +12,9 @@ from phonUtils.ipaTools import strip_diacritics
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 from utils.distance import Distance, euclidean_dist, sim_to_dist
-from utils.information import \
-    adaptation_surprisal  # surprisal, surprisal_to_prob
+from utils.information import adaptation_surprisal  # surprisal, surprisal_to_prob
 from utils.sequence import Ngram
-from utils.string import strip_ch
+from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
 
 
 def prepare_alignment(word1, word2, **kwargs):
@@ -470,7 +469,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                                     gap_ch=lang1.alignment_params['gap_ch'],
                                     )
     if ngram_size > 1:
-        breakpoint()  # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts...
+        # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts...
         # the way to get around this is:
         # calculate the 2gram, then get the 2gram's phon_env equivalent
         # interpolate the probability/surprisal of the 2gram with that of the phon_env equivalent
@@ -632,17 +631,10 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
 def levenshtein_dist(word1, word2, normalize=True, asjp=True):
     word1 = word1.ipa
     word2 = word2.ipa
-    # TODO create helper function for these fixes
-    fixes = {'ᵐ': 'm',  # bilabial prenasalization diacritic
-             '̈': '',  # central diacritic
-             }
-    for f in fixes:
-        word1 = re.sub(f, fixes[f], word1)
-        word2 = re.sub(f, fixes[f], word2)
 
     if asjp:
-        word1 = strip_ch(ipa2asjp(word1), ["~"])
-        word2 = strip_ch(ipa2asjp(word2), ["~"])
+        word1 = strip_ch(ipa2asjp(preprocess_ipa_for_asjp_conversion(word1)), ["~"])
+        word2 = strip_ch(ipa2asjp(preprocess_ipa_for_asjp_conversion(word2)), ["~"])
 
     LevDist = edit_distance(word1, word2)
     if normalize:

@@ -18,6 +18,15 @@ def format_as_variable(string):
     variable = re.sub(r"[-\s'\(\)]", '', variable)
     return variable
 
+def preprocess_ipa_for_asjp_conversion(ipa_string):
+    fixes = {
+        'ᵐ': 'm',  # bilabial prenasalization diacritic
+        '̈': '',  # central diacritic
+    }
+    for pattern, repl in fixes.items():
+        ipa_string = re.sub(pattern, repl, ipa_string)
+    return ipa_string
+
 
 def asjp_in_ipa(ipa_string):
     """Convert some non-IPA ASJP characters to IPA equivalents. 
