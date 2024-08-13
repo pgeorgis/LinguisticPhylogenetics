@@ -15,7 +15,6 @@ import bcubed
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from asjp import ipa2asjp
 from constants import (ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH,
                        TRANSCRIPTION_PARAM_DEFAULTS)
 from lingDist import Z_score_dist
@@ -38,7 +37,7 @@ from utils.distance import Distance, distance_matrix
 from utils.information import entropy
 from utils.network import dm2coords, newer_network_plot
 from utils.sequence import Ngram, flatten_ngram, pad_sequence
-from utils.string import format_as_variable, strip_ch
+from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict)
 
@@ -1661,31 +1660,13 @@ class Word:
             suprasegs = self.get_parameter('suprasegmentals')
             ipa_string = re.sub(fr'[{suprasegs}]', supraseg_target, ipa_string)
 
-        # Convert to ASJP transcription
+        # Convert to ASJP transcriptions
         if self.get_parameter('asjp'):
-            ipa_string = re.sub('~', '', ipa2asjp(ipa_string))
-
-            # Convert some non-IPA ASJP characters to IPA equivalents # TODO move this mapping external
+            # Convert some non-IPA ASJP characters to IPA equivalents
             # Preserves set of ASJP characters/mapping, but keeps IPA compatibility
-            ipa_string = re.sub('4', 'n̪', ipa_string)
-            ipa_string = re.sub('5', 'ɲ', ipa_string)
-            ipa_string = re.sub('N', 'ŋ', ipa_string)
-            ipa_string = re.sub('L', 'ʎ', ipa_string)
-            ipa_string = re.sub('c', 'ʦ', ipa_string)
-            ipa_string = re.sub('T', 'c', ipa_string)
-            ipa_string = re.sub('g', 'ɡ', ipa_string)
-            ipa_string = re.sub('G', 'ɢ', ipa_string)
-            ipa_string = re.sub('7', 'ʔ', ipa_string)
-            ipa_string = re.sub('C', 'ʧ', ipa_string)
-            ipa_string = re.sub('j', 'ʤ', ipa_string)
-            ipa_string = re.sub('8', 'θ', ipa_string)
-            ipa_string = re.sub('S', 'ʃ', ipa_string)
-            ipa_string = re.sub('Z', 'ʒ', ipa_string)
-            ipa_string = re.sub('X', 'χ', ipa_string)
-            ipa_string = re.sub('y', 'j', ipa_string)
-            ipa_string = re.sub('E', 'ɛ', ipa_string)
-            ipa_string = re.sub('3', 'ə', ipa_string)
-            ipa_string = re.sub(r'\*', '̃', ipa_string)
+            ipa_string = asjp_in_ipa(ipa_string)
+
+            return ipa_string
 
         return ipa_string
 
