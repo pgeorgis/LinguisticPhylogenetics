@@ -409,25 +409,36 @@ def segmental_word_dist(word1,
     return (c_weight * (1 - c_score)) + (v_weight * (1 - v_score)) + (syl_weight * syl_score)
 
 
-def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, pad_ch=PAD_CH_DEFAULT, **kwargs):
-    lang1 = word1.language
-    lang2 = word2.language
-
-    # Check whether phoneme PMI has been calculated for this language pair
-    # Otherwise calculate from scratch # TODO use helper function
-    if len(lang1.phoneme_pmi[lang2]) > 0:
-        pmi_dict = lang1.phoneme_pmi[lang2]
-    else:
-        correlator = lang1.get_phoneme_correlator(lang2)
-        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
-
-    # Calculate phoneme surprisal if not already done # TODO use helper function
+def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
+    """Calculate phoneme surprisal if not already done."""
     if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
         correlator1 = lang1.get_phoneme_correlator(lang2)
         correlator1.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
     if len(lang2.phoneme_surprisal[(lang1.name, ngram_size)]) == 0:
         correlator2 = lang2.get_phoneme_correlator(lang1)
         correlator2.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+
+
+def get_pmi_dict(lang1, lang2, **kwargs):
+    """Calculate phoneme PMI if not already done and return PMI dict."""
+    if len(lang1.phoneme_pmi[lang2]) > 0:
+        pmi_dict = lang1.phoneme_pmi[lang2]
+    else:
+        correlator = lang1.get_phoneme_correlator(lang2)
+        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
+    return pmi_dict
+
+
+def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, pad_ch=PAD_CH_DEFAULT, **kwargs):
+    lang1 = word1.language
+    lang2 = word2.language
+
+    # Check whether phoneme PMI has been calculated for this language pair
+    # Otherwise calculate from scratch
+    pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
+
+    # Calculate phoneme surprisal if not already done
+    get_phoneme_surprisal(lang1, lang2, ngram_size=ngram_size, **kwargs)
 
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
@@ -542,12 +553,8 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
     lang2 = word2.language
 
     # Check whether phoneme PMI has been calculated for this language pair
-    # Otherwise calculate from scratch # TODO create a function or something for this since this requirement appears in multiple places
-    if len(lang1.phoneme_pmi[lang2]) > 0:
-        pmi_dict = lang1.phoneme_pmi[lang2]
-    else:
-        correlator = lang1.get_phoneme_correlator(lang2)
-        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
+    # Otherwise calculate from scratch
+    pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
 
     # Align the words with PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
