@@ -134,18 +134,18 @@ def init_hybrid(function_map, eval_params):
 def init_composite(params):
     eval_params = params['evaluation']
     surprisal_params = params['surprisal']
-    CascadeSim = Distance(
+    CompositeSim = Distance(
         func=composite_sim,
-        name='CascadeSim',
+        name='CompositeSim',
         sim=True,
         pmi_weight=eval_params['pmi_weight'],
         surprisal_weight=eval_params['surprisal_weight'],
         ngram_size=surprisal_params['ngram'],
         phon_env=surprisal_params['phon_env'],
     )
-    CascadeDist = CascadeSim.to_distance('CascadeDist', alpha=0.8)
+    CompositeDist = CompositeSim.to_distance('CompositeDist', alpha=0.8)
 
-    return CascadeDist
+    return CompositeDist
 
 
 def write_lang_dists_to_tsv(dist, outfile):

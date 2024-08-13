@@ -729,4 +729,4 @@ SurprisalDist = Distance(
     name='SurprisalDist',
     cluster_threshold=0.74,  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
-# Note: Hybrid and Cascade distance needs to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
+# Note: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
