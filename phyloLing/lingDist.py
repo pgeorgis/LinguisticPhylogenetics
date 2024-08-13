@@ -4,7 +4,7 @@ from functools import lru_cache
 from statistics import StatisticsError, mean, stdev
 
 from scipy.stats import norm
-from utils.distance import Z_dist, dist_to_sim
+from utils.distance import dist_to_sim
 
 
 # HELPER FUNCTIONS
@@ -241,64 +241,3 @@ def gradient_cognate_sim(lang1,
         logger.debug(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
 
     return score
-
-
-# TODO update or remove Z_score_dist
-def Z_score_dist(lang1,
-                 lang2,
-                 eval_func,
-                 # eval func was tuple (function, {kwarg:value}), now is Distance class object
-                 concept_list=None,
-                 exclude_synonyms=True,
-                 seed=1,
-                 **kwargs):
-    if concept_list is None:
-        concept_list = [concept for concept in lang1.vocabulary
-                        if concept in lang2.vocabulary]
-    else:
-        concept_list = [concept for concept in concept_list
-                        if concept in lang1.vocabulary
-                        if concept in lang2.vocabulary]
-
-    # Generate a dictionary of word form pairs
-    word_forms = {concept: [
-        ((word1.ipa, lang1), (word2.ipa, lang2))
-        for word1 in lang1.vocabulary[concept]
-        for word2 in lang2.vocabulary[concept]]
-        for concept in concept_list
-    }
-
-    # Score the word form pairs according to the specified function
-    scores = {concept: [eval_func.eval(pair[0], pair[1]) for pair in word_forms[concept]]
-              for concept in word_forms}
-
-    # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
-    if len(lang1.noncognate_thresholds[(lang2, eval_func)]) > 0:
-        noncognate_scores = lang1.noncognate_thresholds[(lang2, eval_func)]
-    else:
-        correlator = lang1.get_phoneme_correlator(lang2)
-        noncognate_scores = correlator.noncognate_thresholds(eval_func)
-    nc_len = len(noncognate_scores)
-
-    # Calculate the p-values for the synonymous word pairs against non-synonymous word pairs
-    if eval_func.sim:
-        p_values = {concept: [
-            (len([nc_score for nc_score in noncognate_scores if nc_score >= score]) + 1) / (nc_len + 1)
-            for score in scores[concept]]
-            for concept in scores
-        }
-
-    else:
-        p_values = {concept: [
-            (len([nc_score for nc_score in noncognate_scores if nc_score <= score]) + 1) / (nc_len + 1)
-            for score in scores[concept]]
-            for concept in scores
-        }
-
-    # Exclude synonyms if specified
-    if exclude_synonyms:
-        p_values = [min(p_values[concept]) for concept in p_values]
-    else:
-        p_values = [p for concept in p_values for p in p_values[concept]]
-
-    return Z_dist(p_values)

@@ -17,7 +17,6 @@ import pandas as pd
 import seaborn as sns
 from constants import (ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH,
                        TRANSCRIPTION_PARAM_DEFAULTS)
-from lingDist import Z_score_dist
 from matplotlib import pyplot as plt
 from phonCorr import PhonCorrelator
 from phonUtils.initPhoneData import suprasegmental_diacritics
@@ -727,10 +726,6 @@ class LexicalDataset:
             concept_list = sorted([concept for concept in concept_list
                                    if len(self.concepts[concept]) > 1])
 
-        if dist_func == Z_score_dist:
-            cognates = 'none'
-            raise NotImplementedError  # TODO
-
         # Automatic cognate clustering
         if cognates == 'auto':
             assert cluster_func is not None
@@ -1016,8 +1011,6 @@ class LexicalDataset:
             concept_list = sorted([concept for concept in concept_list
                                    if len(self.concepts[concept]) > 1])
 
-        if dist_func == Z_score_dist:
-            cognates = 'none'
         # Automatic cognate clustering
         if cognates == 'auto':
             assert cluster_func is not None
