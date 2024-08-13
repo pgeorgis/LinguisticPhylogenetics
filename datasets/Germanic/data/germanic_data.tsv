@@ -63,8 +63,8 @@ Bavarian	Bavarian			cheese_NOUN	Kààs	kʰˈɑːs	kʰ ˈɑː s		cheese_NOUN_1
 Proto-Germanic	Proto-Germanic			church_NOUN_FEM	kirikā	kˈirikɑː	k ˈi r i k ɑː		church_NOUN_FEM_1	TRUE	IRREGULAR OR LOAN	
 Icelandic	Icelandic			church_NOUN_FEM	kirkja	cʰˈɪr̥ca	cʰ ˈɪ r̥ c a		church_NOUN_FEM_1			
 Faroese	Faroese			church_NOUN_FEM	kirkja	ʧʰˈɪɹʧa	ʧʰ ˈɪ ɹ ʧ a		church_NOUN_FEM_1			
-Nynorsk Norwegian	Nynorsk Norwegian			church_NOUN_FEM	kyrkja	ɕˈʏɾɕɑ	ɕ ˈʏ ɾ ɕ ɑ		church_NOUN_FEM_1			
-Bokmål Norwegian	Bokmål Norwegian			church_NOUN_FEM	kirke	ɕˈɪɾkə	ɕ ˈɪ ɾ k ə		church_NOUN_FEM_1			
+Nynorsk Norwegian	Nynorsk Norwegian			church_NOUN_FEM	kyrkja	çˈʏɾçɑ	ç ˈʏ ɾ ç ɑ		church_NOUN_FEM_1			
+Bokmål Norwegian	Bokmål Norwegian			church_NOUN_FEM	kirke	çˈɪɾkə	ç ˈɪ ɾ k ə		church_NOUN_FEM_1			
 Danish	Danish			church_NOUN_FEM	kirke	kʰˈiɐkə	kʰ ˈi ɐ k ə		church_NOUN_FEM_1			
 Swedish	Swedish			church_NOUN_FEM	kyrka	ɕˈʏrka	ɕ ˈʏ r k a		church_NOUN_FEM_1			
 Scots	Scots			church_NOUN_FEM	kirk	kˈɪrk	k ˈɪ r k		church_NOUN_FEM_1			
@@ -684,7 +684,7 @@ Afrikaans	Afrikaans			boat_NOUN	boot	bˈʊə̯t	b ˈʊə̯ t		boat_NOUN_1
 Limburgish	Limburgish			boat_NOUN	boot	bˈʊːt	b ˈʊː t		boat_NOUN_1			
 Ripuarian	Ripuarian			boat_NOUN	Boot	bˈoːt	b ˈoː t		boat_NOUN_1			
 Pennsylvania German	Pennsylvania German			boat_NOUN	Boot	bˈoːt	b ˈoː t		boat_NOUN_1			
-German	German			boat_NOUN	Boot	bˈoːt	b ˈoː t		boat_NOUN_1			
+German	German			boat_NOUN	Boot	bˈoːt	b ˈoː t		boat_NOUN_1	TRUE	IRREGULAR OR LOAN	
 Proto-Germanic	Proto-Germanic			child_NOUN_NEU	barną	bˈɑrnɑ̃	b ˈɑ r n ɑ̃		child_NOUN_NEU_1			
 Gothic	Gothic			child_NOUN_NEU	𐌱𐌰𐍂𐌽	bˈarn	b ˈa r n		child_NOUN_NEU_1			
 Old Norse	Old Norse			child_NOUN_NEU	barn	bˈɑrn	b ˈɑ r n		child_NOUN_NEU_1			
@@ -795,8 +795,8 @@ Proto-Germanic	Proto-Germanic			bath_NOUN_NEU	baþą	bˈɑθɑ̃	b ˈɑ θ ɑ̃	
 Old Norse	Old Norse			bath_NOUN_NEU	bað	bˈɑð	b ˈɑ ð		bath_NOUN_NEU_1			
 Icelandic	Icelandic			bath_NOUN_NEU	bað	b̥ˈaːð	b̥ ˈaː ð		bath_NOUN_NEU_1			
 Faroese	Faroese			bath_NOUN_NEU	bað	b̥ˈɛːa̯	b̥ ˈɛːa̯		bath_NOUN_NEU_1			
-Nynorsk Norwegian	Nynorsk Norwegian			bath_NOUN_NEU	bad	bˈɑːd	b ˈɑː d		bath_NOUN_NEU_1			
-Bokmål Norwegian	Bokmål Norwegian			bath_NOUN_NEU	bad	bˈɑːd	b ˈɑː d		bath_NOUN_NEU_1			
+Nynorsk Norwegian	Nynorsk Norwegian			bath_NOUN_NEU	bad	bˈɑː	b ˈɑː		bath_NOUN_NEU_1			
+Bokmål Norwegian	Bokmål Norwegian			bath_NOUN_NEU	bad	bˈɑː	b ˈɑː		bath_NOUN_NEU_1			
 Danish	Danish			bath_NOUN_NEU	bad	b̥ˈað̞ˠ	b̥ ˈa ð̞ˠ		bath_NOUN_NEU_1			
 Swedish	Swedish			bath_NOUN_NEU	bad	bˈɑːd	b ˈɑː d		bath_NOUN_NEU_1			
 Scots	Scots			bath_NOUN_NEU	bath	bˈaθ	b ˈa θ		bath_NOUN_NEU_1			
@@ -1040,8 +1040,8 @@ Proto-Germanic	Proto-Germanic			leaf_NOUN_NEU	bladą	blˈɑðɑ̃	b l ˈɑ ð ɑ
 Old Norse	Old Norse			leaf_NOUN_NEU	blað	blˈɑð	b l ˈɑ ð		leaf_NOUN_NEU_1			
 Icelandic	Icelandic			leaf_NOUN_NEU	blað	b̥lˈaːð	b̥ l ˈaː ð		leaf_NOUN_NEU_1			
 Faroese	Faroese			leaf_NOUN_NEU	blað	b̥lˈɛːa̯	b̥ l ˈɛːa̯		leaf_NOUN_NEU_1			
-Nynorsk Norwegian	Nynorsk Norwegian			leaf_NOUN_NEU	blad	blˈɑːd	b l ˈɑː d		leaf_NOUN_NEU_1			
-Bokmål Norwegian	Bokmål Norwegian			leaf_NOUN_NEU	blad	blˈɑːd	b l ˈɑː d		leaf_NOUN_NEU_1			
+Nynorsk Norwegian	Nynorsk Norwegian			leaf_NOUN_NEU	blad	blˈɑː	b l ˈɑː		leaf_NOUN_NEU_1			
+Bokmål Norwegian	Bokmål Norwegian			leaf_NOUN_NEU	blad	blˈɑː	b l ˈɑː		leaf_NOUN_NEU_1			
 Danish	Danish			leaf_NOUN_NEU	blad	b̥lˈað̞ˠ	b̥ l ˈa ð̞ˠ		leaf_NOUN_NEU_1			
 Swedish	Swedish			leaf_NOUN_NEU	blad	blˈɑːd	b l ˈɑː d		leaf_NOUN_NEU_1			
 Scots	Scots			leaf_NOUN_NEU	blade	blˈed	b l ˈe d		leaf_NOUN_NEU_1			
@@ -1670,7 +1670,7 @@ Icelandic	Icelandic			drive_VERB	drífa	d̥rˈiːva	d̥ r ˈiː v a		drive_VERB_
 Faroese	Faroese			drive_VERB	dríva	d̥ɹˈʊ̯iːva	d̥ ɹ ˈʊ̯iː v a		drive_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			drive_VERB	driva	dɾˈiːʋɑ	d ɾ ˈiː ʋ ɑ		drive_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			drive_VERB	drive	dɾˈiːʋə	d ɾ ˈiː ʋ ə		drive_VERB_1			
-Danish	Danish			drive_VERB	drive	d̥ʁˈiːw	d̥ ʁ ˈiː w		drive_VERB_1			
+Danish	Danish			drive_VERB	drive	d̥ʁˈiːwə	d̥ ʁ ˈiː w ə		drive_VERB_1			
 Swedish	Swedish			drive_VERB	driva	drˈiːva	d r ˈiː v a		drive_VERB_1			
 Scots	Scots			drive_VERB	drive	drˈaɪ̯v	d r ˈaɪ̯ v		drive_VERB_1			
 English	English			drive_VERB	drive	dɹˈaɪ̯v	d ɹ ˈaɪ̯ v		drive_VERB_1			
@@ -2233,7 +2233,7 @@ Icelandic	Icelandic			fly_VERB	fljúga	fljˈuːa	f l j ˈuː a		fly_VERB_1
 Faroese	Faroese			fly_VERB	flúgva	flˈʏɡ̊v̥a	f l ˈʏ ɡ̊ v̥ a		fly_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			fly_VERB	flyga	flˈyːɡɑ	f l ˈyː ɡ ɑ		fly_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			fly_VERB	flyge	flˈyːɡə	f l ˈyː ɡ ə		fly_VERB_1			
-Danish	Danish			fly_VERB	flyve	flˈyːw	f l ˈyː w		fly_VERB_1			
+Danish	Danish			fly_VERB	flyve	flˈyːwə	f l ˈyː w ə		fly_VERB_1			
 Swedish	Swedish			fly_VERB	flyga	flˈyːɡa	f l ˈyː ɡ a		fly_VERB_1			
 Scots	Scots			fly_VERB	flee	flˈiː	f l ˈiː		fly_VERB_1			
 English	English			fly_VERB	fly	flˈaɪ̯	f l ˈaɪ̯		fly_VERB_1			
@@ -2901,7 +2901,7 @@ Icelandic	Icelandic			give_VERB	gefa	ɟ̊ˈɛːva	ɟ̊ ˈɛː v a		give_VERB_1
 Faroese	Faroese			give_VERB	geva	ʤ̊ˈeːva	ʤ̊ ˈeː v a		give_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			give_VERB	gjeva	jˈeːʋɑ	j ˈeː ʋ ɑ		give_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			give_VERB	gi	jˈiː	j ˈiː		give_VERB_1			
-Danish	Danish			give_VERB	give	ɡ̊ˈiˀ	ɡ̊ ˈiˀ		give_VERB_1			
+Danish	Danish			give_VERB	give	ɡ̊ˈiːwə	ɡ̊ ˈiː w ə		give_VERB_1			
 Swedish	Swedish			give_VERB	ge	jˈeː	j ˈeː		give_VERB_1			
 Scots	Scots			give_VERB	gie	ɡˈiː	ɡ ˈiː		give_VERB_1	TRUE	IRREGULAR OR LOAN	
 English	English			give_VERB	give	ɡˈɪv	ɡ ˈɪ v		give_VERB_1	TRUE	IRREGULAR OR LOAN	
@@ -3154,7 +3154,7 @@ Icelandic	Icelandic			have_VERB	hafa	hˈaːva	h ˈaː v a		have_VERB_1
 Faroese	Faroese			have_VERB	hava	hˈɛːa̯va	h ˈɛːa̯ v a		have_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			have_VERB	ha	hˈɑː	h ˈɑː		have_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			have_VERB	ha	hˈɑː	h ˈɑː		have_VERB_1			
-Danish	Danish			have_VERB	have	hˈɛːw	h ˈɛː w		have_VERB_1			
+Danish	Danish			have_VERB	have	hˈɛːwə	h ˈɛː w ə		have_VERB_1			
 Swedish	Swedish			have_VERB	ha	hˈɑː	h ˈɑː		have_VERB_1			
 Scots	Scots			have_VERB	hae	hˈeː	h ˈeː		have_VERB_1			
 English	English			have_VERB	have	hˈæv	h ˈæ v		have_VERB_1			
@@ -3309,7 +3309,7 @@ Old Norse	Old Norse			hand_NOUN_FEM	hǫnd	hˈɔnd	h ˈɔ n d		hand_NOUN_FEM_1
 Icelandic	Icelandic			hand_NOUN_FEM	hönd	hˈœnd̥	h ˈœ n d̥		hand_NOUN_FEM_1			
 Faroese	Faroese			hand_NOUN_FEM	hond	hˈɔnd̥	h ˈɔ n d̥		hand_NOUN_FEM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			hand_NOUN_FEM	hand	hˈɑnn	h ˈɑ n n		hand_NOUN_FEM_1			
-Bokmål Norwegian	Bokmål Norwegian			hand_NOUN_FEM	hand	hˈɑnn	h ˈɑ n n		hand_NOUN_FEM_1			
+Bokmål Norwegian	Bokmål Norwegian			hand_NOUN_FEM	hånd	hˈɔnn	h ˈɔ n n		hand_NOUN_FEM_1			
 Danish	Danish			hand_NOUN_FEM	hånd	hˈʌnˀ	h ˈʌ nˀ		hand_NOUN_FEM_1			
 Swedish	Swedish			hand_NOUN_FEM	hand	hˈand	h ˈa n d		hand_NOUN_FEM_1			
 Scots	Scots			hand_NOUN_FEM	haund	hˈɑːnd	h ˈɑː n d		hand_NOUN_FEM_1			
@@ -3416,7 +3416,7 @@ Gothic	Gothic			head_NOUN	𐌷𐌰𐌿𐌱𐌹𐌸	hˈɔβiθ	h ˈɔ β i θ		he
 Old Norse	Old Norse			head_NOUN	hǫfuð	hˈɔvuð	h ˈɔ v u ð		head_NOUN_1			
 Icelandic	Icelandic			head_NOUN	höfuð	hˈœːvʏð	h ˈœː v ʏ ð		head_NOUN_1			
 Faroese	Faroese			head_NOUN	høvd	hˈœtt	h ˈœ t t		head_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			head_NOUN	hovud	hˈoːʋʉ	h ˈoː ʋ ʉ		head_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			head_NOUN	hovud	hˈuːʋʉ	h ˈuː ʋ ʉ		head_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			head_NOUN	hode	hˈuːdə	h ˈuː d ə		head_NOUN_1			
 Danish	Danish			head_NOUN	hoved	hˈoːəð̞ˠ	h ˈoː ə ð̞ˠ		head_NOUN_1			
 Swedish	Swedish			head_NOUN	huvud	hˈʉːvɵd	h ˈʉː v ɵ d		head_NOUN_1			
@@ -3914,7 +3914,7 @@ Gothic	Gothic			dog_NOUN	𐌷𐌿𐌽𐌳𐍃	hˈunds	h ˈu n d s		dog_NOUN_1
 Old Norse	Old Norse			dog_NOUN	hundr	hˈundr	h ˈu n d r		dog_NOUN_1			
 Icelandic	Icelandic			dog_NOUN	hundur	hˈʏnd̥ʏr̥	h ˈʏ n d̥ ʏ r̥		dog_NOUN_1			
 Faroese	Faroese			dog_NOUN	hundur	hˈʊnd̥ʊɹ	h ˈʊ n d̥ ʊ ɹ		dog_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			dog_NOUN	hund	hˈʉnd	h ˈʉ n d		dog_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			dog_NOUN	hund	hˈʉnn	h ˈʉ n n		dog_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			dog_NOUN	hund	hˈʉnn	h ˈʉ n n		dog_NOUN_1			
 Danish	Danish			dog_NOUN	hund	hˈunˀ	h ˈu nˀ		dog_NOUN_1			
 Swedish	Swedish			dog_NOUN	hund	hˈɵnd	h ˈɵ n d		dog_NOUN_1			
@@ -4383,8 +4383,8 @@ Gothic	Gothic			ken_VERB	𐌺𐌰𐌽𐌽𐌾𐌰𐌽	kˈannjan	k ˈa n n j a n	
 Old Norse	Old Norse			ken_VERB	kenna	cʰˈennɑ	cʰ ˈe n n ɑ		ken_VERB_1			
 Icelandic	Icelandic			ken_VERB	kenna	cʰˈɛnna	cʰ ˈɛ n n a		ken_VERB_1			
 Faroese	Faroese			ken_VERB	kenna	ʧʰˈɛnna	ʧʰ ˈɛ n n a		ken_VERB_1			
-Nynorsk Norwegian	Nynorsk Norwegian			ken_VERB	kjenna	ɕˈɛnnɑ	ɕ ˈɛ n n ɑ		ken_VERB_1			
-Bokmål Norwegian	Bokmål Norwegian			ken_VERB	kjenne	ɕˈɛnnə	ɕ ˈɛ n n ə		ken_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			ken_VERB	kjenna	çˈɛnnɑ	ç ˈɛ n n ɑ		ken_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			ken_VERB	kjenne	çˈɛnnə	ç ˈɛ n n ə		ken_VERB_1			
 Danish	Danish			ken_VERB	kende	kʰˈenə	kʰ ˈe n ə		ken_VERB_1			
 Swedish	Swedish			ken_VERB	känna	ɕˈɛnna	ɕ ˈɛ n n a		ken_VERB_1			
 Scots	Scots			ken_VERB	ken	kʰˈɛn	kʰ ˈɛ n		ken_VERB_1			
@@ -4450,8 +4450,8 @@ Proto-Germanic	Proto-Germanic			meat_NOUN	ketwą	kˈetwɑ̃	k ˈe t w ɑ̃		meat
 Old Norse	Old Norse			meat_NOUN	kjǫt	cʰjˈɔt	cʰ j ˈɔ t		meat_NOUN_1			
 Icelandic	Icelandic			meat_NOUN	kjöt	cʰjˈœt	cʰ j ˈœ t		meat_NOUN_1			
 Faroese	Faroese			meat_NOUN	kjøt	ʧʰˈøːʰt	ʧʰ ˈøː ʰt		meat_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			meat_NOUN	kjøt	ɕˈøːt	ɕ ˈøː t		meat_NOUN_1			
-Bokmål Norwegian	Bokmål Norwegian			meat_NOUN	kjøtt	ɕˈœtt	ɕ ˈœ t t		meat_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			meat_NOUN	kjøt	çˈøːt	ç ˈøː t		meat_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			meat_NOUN	kjøtt	çˈœtt	ç ˈœ t t		meat_NOUN_1			
 Danish	Danish			meat_NOUN	kød	kʰˈœð̞ˠ	kʰ ˈœ ð̞ˠ		meat_NOUN_1			
 Swedish	Swedish			meat_NOUN	kött	ɕˈœtt	ɕ ˈœ t t		meat_NOUN_1			
 Proto-Germanic	Proto-Germanic			child_NOUN	kinþą	kˈinθɑ̃	k ˈi n θ ɑ̃		child_NOUN_2			
@@ -4543,8 +4543,8 @@ Proto-Germanic	Proto-Germanic			chicken_NOUN	kukkilīngaz	kˈukkiliːŋɡaz	k ˈ
 Old Norse	Old Norse			chicken_NOUN	kyklingr	cʰˈykliŋɡr	cʰ ˈy k l i ŋ ɡ r		chicken_NOUN_2			
 Icelandic	Icelandic			chicken_NOUN	kjúklingur	cʰˈuʰkliŋɡ̊ʏr̥	cʰ ˈu ʰk l i ŋ ɡ̊ ʏ r̥		chicken_NOUN_2			
 Faroese	Faroese			chicken_NOUN	kjúklingur	ʧʰˈʏʰklɪŋɡ̊ʊɹ	ʧʰ ˈʏ ʰk l ɪ ŋ ɡ̊ ʊ ɹ		chicken_NOUN_2			
-Nynorsk Norwegian	Nynorsk Norwegian			chicken_NOUN	kjukling	ɕˈʉklɪŋ	ɕ ˈʉ k l ɪ ŋ		chicken_NOUN_2			
-Bokmål Norwegian	Bokmål Norwegian			chicken_NOUN	kylling	ɕˈʏllɪŋ	ɕ ˈʏ l l ɪ ŋ		chicken_NOUN_2			
+Nynorsk Norwegian	Nynorsk Norwegian			chicken_NOUN	kjukling	çˈʉklɪŋ	ç ˈʉ k l ɪ ŋ		chicken_NOUN_2			
+Bokmål Norwegian	Bokmål Norwegian			chicken_NOUN	kylling	çˈʏllɪŋ	ç ˈʏ l l ɪ ŋ		chicken_NOUN_2			
 Danish	Danish			chicken_NOUN	kylling	kʰˈyleŋ	kʰ ˈy l e ŋ		chicken_NOUN_2			
 Swedish	Swedish			chicken_NOUN	kyckling	ɕˈʏkklɪŋ	ɕ ˈʏ k k l ɪ ŋ		chicken_NOUN_2			
 Proto-Germanic	Proto-Germanic			king_NOUN	kuningaz	kˈuniŋɡɑz	k ˈu n i ŋ ɡ ɑ z		king_NOUN_1			
@@ -4767,7 +4767,7 @@ Gothic	Gothic			land_NOUN	𐌻𐌰𐌽𐌳	lˈant	l ˈa n t		land_NOUN_1
 Old Norse	Old Norse			land_NOUN	land	lˈand	l ˈa n d		land_NOUN_1			
 Icelandic	Icelandic			land_NOUN	land	lˈand̥	l ˈa n d̥		land_NOUN_1			
 Faroese	Faroese			land_NOUN	land	lˈand̥	l ˈa n d̥		land_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			land_NOUN	land	lˈɑnd	l ˈɑ n d		land_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			land_NOUN	land	lˈɑnn	l ˈɑ n n		land_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			land_NOUN	land	lˈɑnn	l ˈɑ n n		land_NOUN_1			
 Danish	Danish			land_NOUN	land	lˈanˀ	l ˈa nˀ		land_NOUN_1			
 Swedish	Swedish			land_NOUN	land	lˈand	l ˈa n d		land_NOUN_1			
@@ -4884,7 +4884,7 @@ Icelandic	Icelandic			tell lies_VERB	ljúga	ljˈuːa	l j ˈuː a		tell lies_VERB
 Faroese	Faroese			tell lies_VERB	lúgva	lˈɪɡ̊v̥a	l ˈɪ ɡ̊ v̥ a		tell lies_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			tell lies_VERB	ljuga	jˈʉːɡɑ	j ˈʉː ɡ ɑ		tell lies_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			tell lies_VERB	lyve	lˈyːʋə	l ˈyː ʋ ə		tell lies_VERB_1			
-Danish	Danish			tell lies_VERB	lyve	lˈyːw	l ˈyː w		tell lies_VERB_1			
+Danish	Danish			tell lies_VERB	lyve	lˈyːwə	l ˈyː w ə		tell lies_VERB_1			
 Swedish	Swedish			tell lies_VERB	ljuga	jˈʉːɡa	j ˈʉː ɡ a		tell lies_VERB_1			
 Scots	Scots			tell lies_VERB	lee	lˈiː	l ˈiː		tell lies_VERB_1			
 English	English			tell lies_VERB	lie	lˈaɪ̯	l ˈaɪ̯		tell lies_VERB_1			
@@ -5129,7 +5129,7 @@ Gothic	Gothic			person_NOUN	𐌼𐌰𐌽𐌽𐌹𐍃𐌺𐍃	mˈannisks	m ˈa n 
 Old Norse	Old Norse			person_NOUN	manneskja	mˈannescɑ	m ˈa n n e s c ɑ		person_NOUN_1	TRUE	IRREGULAR OR LOAN	
 Icelandic	Icelandic			person_NOUN	manneskja	mˈannɛsca	m ˈa n n ɛ s c a		person_NOUN_1			
 Faroese	Faroese			person_NOUN	menniskja	mˈɛnnɪʃa	m ˈɛ n n ɪ ʃ a		person_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			person_NOUN	menneske	mˈɛnnɛʃe	m ˈɛ n n ɛ ʃ e		person_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			person_NOUN	menneske	mˈɛnnɛʂe	m ˈɛ n n ɛ ʂ e		person_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			person_NOUN	menneske	mˈɛnnəskə	m ˈɛ n n ə s k ə		person_NOUN_1			
 Danish	Danish			person_NOUN	menneske	mˈen̩skə	m ˈe n̩ s k ə		person_NOUN_1			
 Swedish	Swedish			person_NOUN	människa	mˈɛnnɪɧa	m ˈɛ n n ɪ ɧ a		person_NOUN_1			
@@ -5560,7 +5560,7 @@ Old Norse	Old Norse			naked_ADJ	nǫkkviðr	nˈɔkkviðr	n ˈɔ k k v i ð r		nak
 Old Norse	Old Norse			naked_ADJ	nakinn	nˈɑcinn	n ˈɑ c i n n		naked_ADJ_1			
 Icelandic	Icelandic			naked_ADJ	nakinn	nˈaːcɪn	n ˈaː c ɪ n		naked_ADJ_1			
 Faroese	Faroese			naked_ADJ	nakin	nˈɛːa̯ʰʧɪn	n ˈɛːa̯ ʰʧ ɪ n		naked_ADJ_1			
-Nynorsk Norwegian	Nynorsk Norwegian			naked_ADJ	naken	nˈɑːɕen	n ˈɑː ɕ e n		naked_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			naked_ADJ	naken	nˈɑːçen	n ˈɑː ç e n		naked_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			naked_ADJ	naken	nˈɑːkən	n ˈɑː k ə n		naked_ADJ_1			
 Danish	Danish			naked_ADJ	nøgen	nˈʌjən	n ˈʌ j ə n		naked_ADJ_1			
 Swedish	Swedish			naked_ADJ	naken	nˈɑːkɛn	n ˈɑː k ɛ n		naked_ADJ_1			
@@ -6038,7 +6038,7 @@ Old Norse	Old Norse			soul_NOUN	sál	sˈɑːl	s ˈɑː l		soul_NOUN_1
 Icelandic	Icelandic			soul_NOUN	sál	sˈɑːu̯l	s ˈɑːu̯ l		soul_NOUN_1			
 Faroese	Faroese			soul_NOUN	sál	sˈɔ̯aːl	s ˈɔ̯aː l		soul_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			soul_NOUN	sål	sˈoːl	s ˈoː l		soul_NOUN_1			
-Bokmål Norwegian	Bokmål Norwegian			soul_NOUN	sjel	ʃˈɛl	ʃ ˈɛ l		soul_NOUN_1	TRUE	IRREGULAR OR LOAN	
+Bokmål Norwegian	Bokmål Norwegian			soul_NOUN	sjel	ʂˈɛl	ʂ ˈɛ l		soul_NOUN_1	TRUE	IRREGULAR OR LOAN	
 Danish	Danish			soul_NOUN	sjæl	ɕˈɛˀl	ɕ ˈɛˀ l		soul_NOUN_1	TRUE	IRREGULAR OR LOAN	
 Swedish	Swedish			soul_NOUN	själ	ɧˈɛːl	ɧ ˈɛː l		soul_NOUN_1	TRUE	IRREGULAR OR LOAN	
 Scots	Scots			soul_NOUN	saul	sˈɑːl	s ˈɑː l		soul_NOUN_1			
@@ -6069,7 +6069,7 @@ Old Norse	Old Norse			sea_NOUN	sjór	sjˈoːr	s j ˈoː r		sea_NOUN_2
 Old Norse	Old Norse			sea_NOUN	sær	sˈɛːr	s ˈɛː r		sea_NOUN_2			
 Icelandic	Icelandic			sea_NOUN	sjór	sjˈoːu̯r̥	s j ˈoːu̯ r̥		sea_NOUN_2			
 Faroese	Faroese			sea_NOUN	sjógvur	ʃˈɛɡ̊v̥ʊɹ	ʃ ˈɛ ɡ̊ v̥ ʊ ɹ		sea_NOUN_2			
-Nynorsk Norwegian	Nynorsk Norwegian			sea_NOUN	sjø	ʃˈøː	ʃ ˈøː		sea_NOUN_2			
+Nynorsk Norwegian	Nynorsk Norwegian			sea_NOUN	sjø	ʂˈøː	ʂ ˈøː		sea_NOUN_2			
 Bokmål Norwegian	Bokmål Norwegian			sea_NOUN	sjø	ʂˈøː	ʂ ˈøː		sea_NOUN_2			
 Swedish	Swedish			sea_NOUN	sjö	ɧˈøː	ɧ ˈøː		sea_NOUN_2			
 Scots	Scots			sea_NOUN	sea	sˈiː	s ˈiː		sea_NOUN_2			
@@ -6162,7 +6162,7 @@ Gothic	Gothic			seven_NUM	𐍃𐌹𐌱𐌿𐌽	sˈiβun	s ˈi β u n		seven_NUM_
 Old Norse	Old Norse			seven_NUM	sjau	sjˈɑu̯	s j ˈɑu̯		seven_NUM_1			
 Icelandic	Icelandic			seven_NUM	sjö	sjˈœː	s j ˈœː		seven_NUM_1			
 Faroese	Faroese			seven_NUM	sjey	ʃˈɛːi̯	ʃ ˈɛːi̯		seven_NUM_1			
-Nynorsk Norwegian	Nynorsk Norwegian			seven_NUM	sju	ʃˈʉː	ʃ ˈʉː		seven_NUM_1			
+Nynorsk Norwegian	Nynorsk Norwegian			seven_NUM	sju	ʂˈʉː	ʂ ˈʉː		seven_NUM_1			
 Bokmål Norwegian	Bokmål Norwegian			seven_NUM	sju	ʂˈʉː	ʂ ˈʉː		seven_NUM_1			
 Danish	Danish			seven_NUM	syv	sˈyˀw	s ˈyˀ w		seven_NUM_1			
 Swedish	Swedish			seven_NUM	sju	ɧˈʉː	ɧ ˈʉː		seven_NUM_1			
@@ -6227,7 +6227,7 @@ Gothic	Gothic			see_VERB	𐍃𐌰𐌹𐍈𐌰𐌽	sˈɛʍan	s ˈɛ ʍ a n		see_V
 Old Norse	Old Norse			see_VERB	sjá	sjˈɑː	s j ˈɑː		see_VERB_1			
 Icelandic	Icelandic			see_VERB	sjá	sjˈɑːu̯	s j ˈɑːu̯		see_VERB_1			
 Faroese	Faroese			see_VERB	síggja	sˈʊʤ̊ʤ̊a	s ˈʊ ʤ̊ ʤ̊ a		see_VERB_1			
-Nynorsk Norwegian	Nynorsk Norwegian			see_VERB	sjå	ʃˈoː	ʃ ˈoː		see_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			see_VERB	sjå	ʂˈoː	ʂ ˈoː		see_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			see_VERB	se	sˈeː	s ˈeː		see_VERB_1			
 Danish	Danish			see_VERB	se	sˈeː	s ˈeː		see_VERB_1			
 Swedish	Swedish			see_VERB	se	sˈeː	s ˈeː		see_VERB_1			
@@ -6259,7 +6259,7 @@ Gothic	Gothic			self_PRON	𐍃𐌹𐌻𐌱𐌰	sˈilβa	s ˈi l β a		self_PRON_
 Old Norse	Old Norse			self_PRON	sjalfr	sjˈɑlvr	s j ˈɑ l v r		self_PRON_1			
 Icelandic	Icelandic			self_PRON	sjálfur	sjˈau̯lvʏr̥	s j ˈau̯ l v ʏ r̥		self_PRON_1			
 Faroese	Faroese			self_PRON	sjálvur	ʃˈɔlvʊɹ	ʃ ˈɔ l v ʊ ɹ		self_PRON_1			
-Nynorsk Norwegian	Nynorsk Norwegian			self_PRON	sjølv	ʃˈœlʋ	ʃ ˈœ l ʋ		self_PRON_1			
+Nynorsk Norwegian	Nynorsk Norwegian			self_PRON	sjølv	ʂˈœlʋ	ʂ ˈœ l ʋ		self_PRON_1			
 Bokmål Norwegian	Bokmål Norwegian			self_PRON	selv	sˈɛll	s ˈɛ l l		self_PRON_1			
 Danish	Danish			self_PRON	selv	sˈɛlˀ	s ˈɛ lˀ		self_PRON_1			
 Swedish	Swedish			self_PRON	själv	ɧˈɛlv	ɧ ˈɛ l v		self_PRON_1			
@@ -6291,7 +6291,7 @@ Gothic	Gothic			sick_ADJ	𐍃𐌹𐌿𐌺𐍃	sˈiu̯ks	s ˈiu̯ k s		sick_ADJ_1
 Old Norse	Old Norse			sick_ADJ	sjúkr	sjˈuːkr	s j ˈuː k r		sick_ADJ_1			
 Icelandic	Icelandic			sick_ADJ	sjúkur	sjˈuːkʏr̥	s j ˈuː k ʏ r̥		sick_ADJ_1			
 Faroese	Faroese			sick_ADJ	sjúkur	ʃˈʉːu̯kʊɹ	ʃ ˈʉːu̯ k ʊ ɹ		sick_ADJ_1			
-Nynorsk Norwegian	Nynorsk Norwegian			sick_ADJ	sjuk	ʃˈʉːk	ʃ ˈʉː k		sick_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			sick_ADJ	sjuk	ʂˈʉːk	ʂ ˈʉː k		sick_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			sick_ADJ	syk	sˈyːk	s ˈyː k		sick_ADJ_1			
 Danish	Danish			sick_ADJ	syg	sˈyˀ	s ˈyˀ		sick_ADJ_1			
 Swedish	Swedish			sick_ADJ	sjuk	ɧˈʉːk	ɧ ˈʉː k		sick_ADJ_1			
@@ -6378,7 +6378,7 @@ Gothic	Gothic			sit_VERB	𐍃𐌹𐍄𐌰𐌽	sˈitan	s ˈi t a n		sit_VERB_1
 Old Norse	Old Norse			sit_VERB	sitja	sˈitjɑ	s ˈi t j ɑ		sit_VERB_1			
 Icelandic	Icelandic			sit_VERB	sitja	sˈɪːtja	s ˈɪː t j a		sit_VERB_1			
 Faroese	Faroese			sit_VERB	sita	sˈiːta	s ˈiː t a		sit_VERB_1			
-Nynorsk Norwegian	Nynorsk Norwegian			sit_VERB	sitja	sˈɪɕɕɑ	s ˈɪ ɕ ɕ ɑ		sit_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			sit_VERB	sitja	sˈɪççɑ	s ˈɪ ç ç ɑ		sit_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			sit_VERB	sitte	sˈɪttə	s ˈɪ t t ə		sit_VERB_1			
 Danish	Danish			sit_VERB	sidde	sˈeð̞ˠə	s ˈe ð̞ˠ ə		sit_VERB_1			
 Swedish	Swedish			sit_VERB	sitta	sˈɪtta	s ˈɪ t t a		sit_VERB_1			
@@ -6440,8 +6440,8 @@ Swiss German	Swiss German			sharp_ADJ	scharpf	ʃˈɒrp͡f	ʃ ˈɒ r p͡f		sharp_
 Bavarian	Bavarian			sharp_ADJ	scharf	ʃˈarf	ʃ ˈa r f		sharp_ADJ_1			
 Proto-Germanic	Proto-Germanic			beautiful_ADJ	skauniz	skˈɑu̯niz	s k ˈɑu̯ n i z		beautiful_ADJ_1			
 Gothic	Gothic			beautiful_ADJ	𐍃𐌺𐌰𐌿𐌽𐍃	skˈɔːns	s k ˈɔː n s		beautiful_ADJ_1			
-Nynorsk Norwegian	Nynorsk Norwegian			beautiful_ADJ	skjønn	ʃˈœnn	ʃ ˈœ n n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
-Bokmål Norwegian	Bokmål Norwegian			beautiful_ADJ	skjønn	ʃˈœnn	ʃ ˈœ n n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
+Nynorsk Norwegian	Nynorsk Norwegian			beautiful_ADJ	skjønn	ʂˈœnn	ʂ ˈœ n n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
+Bokmål Norwegian	Bokmål Norwegian			beautiful_ADJ	skjønn	ʂˈœnn	ʂ ˈœ n n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
 Danish	Danish			beautiful_ADJ	skøn	skˈœˀn	s k ˈœˀ n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
 Swedish	Swedish			beautiful_ADJ	skön	ɧˈøːn	ɧ ˈøː n		beautiful_ADJ_1	TRUE	IRREGULAR OR LOAN	
 Scots	Scots			beautiful_ADJ	sheen	ʃˈin	ʃ ˈi n		beautiful_ADJ_1			
@@ -6473,8 +6473,8 @@ Gothic	Gothic			shield_NOUN	𐍃𐌺𐌹𐌻𐌳𐌿𐍃	skˈildus	s k ˈi l d u
 Old Norse	Old Norse			shield_NOUN	skjǫldr	scˈɔldr	s c ˈɔ l d r		shield_NOUN_1			
 Icelandic	Icelandic			shield_NOUN	skjöldur	scˈœld̥ʏr̥	s c ˈœ l d̥ ʏ r̥		shield_NOUN_1			
 Faroese	Faroese			shield_NOUN	skjøldur	ʃˈœld̥ʊɹ	ʃ ˈœ l d̥ ʊ ɹ		shield_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			shield_NOUN	skjold	ʃˈɔll	ʃ ˈɔ l l		shield_NOUN_1			
-Bokmål Norwegian	Bokmål Norwegian			shield_NOUN	skjold	ʃˈɔll	ʃ ˈɔ l l		shield_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			shield_NOUN	skjold	ʂˈɔll	ʂ ˈɔ l l		shield_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			shield_NOUN	skjold	ʂˈɔll	ʂ ˈɔ l l		shield_NOUN_1			
 Danish	Danish			shield_NOUN	skjold	skjˈʌlˀ	s k j ˈʌ lˀ		shield_NOUN_1			
 Swedish	Swedish			shield_NOUN	sköld	ɧˈœld	ɧ ˈœ l d		shield_NOUN_1			
 Scots	Scots			shield_NOUN	shield	ʃˈild	ʃ ˈi l d		shield_NOUN_1			
@@ -6526,8 +6526,9 @@ Proto-Germanic	Proto-Germanic			shoot_VERB	skeutaną	skˈeu̯tɑnɑ̃	s k ˈeu̯
 Old Norse	Old Norse			shoot_VERB	skjóta	scˈoːtɑ	s c ˈoː t ɑ		shoot_VERB_1			
 Icelandic	Icelandic			shoot_VERB	skjóta	scˈoːu̯ta	s c ˈoːu̯ t a		shoot_VERB_1			
 Faroese	Faroese			shoot_VERB	skjóta	ʃˈɔːu̯ta	ʃ ˈɔːu̯ t a		shoot_VERB_1			
-Nynorsk Norwegian	Nynorsk Norwegian			shoot_VERB	skyta	ʃˈyːtɑ	ʃ ˈyː t ɑ		shoot_VERB_1			
-Bokmål Norwegian	Bokmål Norwegian			shoot_VERB	skyte	ʃˈyːtə	ʃ ˈyː t ə		shoot_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			shoot_VERB	skjota	ʂˈuːtɑ	ʂ ˈuː t ɑ		shoot_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			shoot_VERB	skyta	ʂˈyːtɑ	ʂ ˈyː t ɑ		shoot_VERB_1			
+Bokmål Norwegian	Bokmål Norwegian			shoot_VERB	skyte	ʂˈyːtə	ʂ ˈyː t ə		shoot_VERB_1			
 Danish	Danish			shoot_VERB	skyde	skˈyːð̞ˠə	s k ˈyː ð̞ˠ ə		shoot_VERB_1			
 Swedish	Swedish			shoot_VERB	skjuta	ɧˈʉːta	ɧ ˈʉː t a		shoot_VERB_1			
 Scots	Scots			shoot_VERB	shuit	ʃˈøt	ʃ ˈø t		shoot_VERB_1			
@@ -6559,8 +6560,8 @@ Gothic	Gothic			ship_NOUN	𐍃𐌺𐌹𐍀	skˈip	s k ˈi p		ship_NOUN_1
 Old Norse	Old Norse			ship_NOUN	skip	scˈip	s c ˈi p		ship_NOUN_1			
 Icelandic	Icelandic			ship_NOUN	skip	scˈɪːp	s c ˈɪː p		ship_NOUN_1			
 Faroese	Faroese			ship_NOUN	skip	ʃˈiːp	ʃ ˈiː p		ship_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			ship_NOUN	skip	ʃˈiːp	ʃ ˈiː p		ship_NOUN_1			
-Bokmål Norwegian	Bokmål Norwegian			ship_NOUN	skip	ʃˈiːp	ʃ ˈiː p		ship_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			ship_NOUN	skip	ʂˈiːp	ʂ ˈiː p		ship_NOUN_1			
+Bokmål Norwegian	Bokmål Norwegian			ship_NOUN	skip	ʂˈiːp	ʂ ˈiː p		ship_NOUN_1			
 Danish	Danish			ship_NOUN	skib	skˈiˀb̥	s k ˈiˀ b̥		ship_NOUN_1			
 Swedish	Swedish			ship_NOUN	skepp	ɧˈɛpp	ɧ ˈɛ p p		ship_NOUN_1			
 Scots	Scots			ship_NOUN	ship	ʃˈɪp	ʃ ˈɪ p		ship_NOUN_1			
@@ -6590,7 +6591,7 @@ Proto-Germanic	Proto-Germanic			shit_NOUN	skitaz	skˈitɑz	s k ˈi t ɑ z		shit_
 Old Norse	Old Norse			shit_NOUN	skítr	scˈiːtr	s c ˈiː t r		shit_NOUN_1			
 Icelandic	Icelandic			shit_NOUN	skítur	scˈiːtʏr̥	s c ˈiː t ʏ r̥		shit_NOUN_1			
 Faroese	Faroese			shit_NOUN	skítur	ʃˈʊ̯iːtʊɹ	ʃ ˈʊ̯iː t ʊ ɹ		shit_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			shit_NOUN	skit	ʃˈiːt	ʃ ˈiː t		shit_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			shit_NOUN	skit	ʂˈiːt	ʂ ˈiː t		shit_NOUN_1			
 Danish	Danish			shit_NOUN	skid	skˈiˀð̞ˠ	s k ˈiˀ ð̞ˠ		shit_NOUN_1			
 Swedish	Swedish			shit_NOUN	skit	ɧˈiːt	ɧ ˈiː t		shit_NOUN_1			
 Scots	Scots			shit_NOUN	shite	ʃˈəi̯t	ʃ ˈəi̯ t		shit_NOUN_1			
@@ -6767,7 +6768,7 @@ Gothic	Gothic			seek_VERB	𐍃𐍉𐌺𐌾𐌰𐌽	sˈoːkjan	s ˈoː k j a n		s
 Old Norse	Old Norse			seek_VERB	sǿkja	sˈøːcɑ	s ˈøː c ɑ		seek_VERB_1			
 Icelandic	Icelandic			seek_VERB	sækja	sˈaːi̯ca	s ˈaːi̯ c a		seek_VERB_1			
 Faroese	Faroese			seek_VERB	søkja	sˈøːʧɑ	s ˈøː ʧ ɑ		seek_VERB_1			
-Nynorsk Norwegian	Nynorsk Norwegian			seek_VERB	søkja	sˈøːɕɑ	s ˈøː ɕ ɑ		seek_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			seek_VERB	søkja	sˈøːçɑ	s ˈøː ç ɑ		seek_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			seek_VERB	søke	sˈøːkə	s ˈøː k ə		seek_VERB_1			
 Danish	Danish			seek_VERB	søge	sˈøːə	s ˈøː ə		seek_VERB_1			
 Swedish	Swedish			seek_VERB	söka	sˈøːka	s ˈøː k a		seek_VERB_1			
@@ -6832,7 +6833,7 @@ Gothic	Gothic			star_NOUN	𐍃𐍄𐌰𐌹𐍂𐌽𐍉	stˈɛrnoː	s t ˈɛ r n 
 Old Norse	Old Norse			star_NOUN	stjarna	stjˈɑrnɑ	s t j ˈɑ r n ɑ		star_NOUN_1			
 Icelandic	Icelandic			star_NOUN	stjarna	stjˈartna	s t j ˈa r t n a		star_NOUN_1			
 Faroese	Faroese			star_NOUN	stjørna	ʃtjˈœtna	ʃ t j ˈœ t n a		star_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			star_NOUN	stjerne	sɕˈɛnne	s ɕ ˈɛ n n e		star_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			star_NOUN	stjerne	sçˈɛnne	s ç ˈɛ n n e		star_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			star_NOUN	stjerne	stjˈæːɳə	s t j ˈæː ɳ ə		star_NOUN_1			
 Danish	Danish			star_NOUN	stjerne	stjˈæɐnə	s t j ˈæ ɐ n ə		star_NOUN_1			
 Swedish	Swedish			star_NOUN	stjärna	ɧˈæːɳa	ɧ ˈæː ɳ a		star_NOUN_1			
@@ -7145,7 +7146,7 @@ Icelandic	Icelandic			sleep_VERB	sofa	sˈɔːva	s ˈɔː v a		sleep_VERB_2
 Faroese	Faroese			sleep_VERB	sova	sˈoːva	s ˈoː v a		sleep_VERB_2			
 Nynorsk Norwegian	Nynorsk Norwegian			sleep_VERB	sova	sˈoːʋɑ	s ˈoː ʋ ɑ		sleep_VERB_2			
 Bokmål Norwegian	Bokmål Norwegian			sleep_VERB	sove	sˈoːʋə	s ˈoː ʋ ə		sleep_VERB_2			
-Danish	Danish			sleep_VERB	sove	sˈɒːw	s ˈɒː w		sleep_VERB_2			
+Danish	Danish			sleep_VERB	sove	sˈɒːwə	s ˈɒː w ə		sleep_VERB_2			
 Swedish	Swedish			sleep_VERB	sova	sˈoːva	s ˈoː v a		sleep_VERB_2			
 Proto-Germanic	Proto-Germanic			sword_NOUN	swerdą	swˈerðɑ̃	s w ˈe r ð ɑ̃		sword_NOUN_1			
 Old Norse	Old Norse			sword_NOUN	sverð	svˈerð	s v ˈe r ð		sword_NOUN_1			
@@ -7351,7 +7352,7 @@ Gothic	Gothic			token_NOUN	𐍄𐌰𐌹𐌺𐌽𐍃	tˈɛːkns	t ˈɛː k n s		t
 Old Norse	Old Norse			token_NOUN	teikn	tʰˈɛi̯kn	tʰ ˈɛi̯ k n		token_NOUN_1			
 Icelandic	Icelandic			token_NOUN	teikn	tʰˈɛi̯ʰkn̩	tʰ ˈɛi̯ ʰk n̩		token_NOUN_1			
 Faroese	Faroese			token_NOUN	tekn	tʰˈɛʰkn	tʰ ˈɛ ʰk n		token_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			token_NOUN	teikn	tʰˈæɪ̯kn̩	tʰ ˈæɪ̯ k n̩		token_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			token_NOUN	teikn	tʰˈæɪ̯kən	tʰ ˈæɪ̯ k ə n		token_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			token_NOUN	tegn	tʰˈæɪ̯n	tʰ ˈæɪ̯ n		token_NOUN_1			
 Danish	Danish			token_NOUN	tegn	ʦʰˈɑjˀn	ʦʰ ˈɑ jˀ n		token_NOUN_1			
 Swedish	Swedish			token_NOUN	tecken	tʰˈɛkkɛn	tʰ ˈɛ k k ɛ n		token_NOUN_1			
@@ -7475,7 +7476,7 @@ German	German			time_NOUN	Zeit	ʦˈaɪ̯t	ʦ ˈaɪ̯ t		time_NOUN_1
 Swabian	Swabian			time_NOUN	Zeid	ʦˈəi̯d	ʦ ˈəi̯ d		time_NOUN_1			
 Alsatian	Alsatian			time_NOUN	Zit	ʦˈiːt	ʦ ˈiː t		time_NOUN_1			
 Swiss German	Swiss German			time_NOUN	Ziit	ʦˈiːt	ʦ ˈiː t		time_NOUN_1			
-Bavarian	Bavarian			time_NOUN	Zeid	ʦˈai̯t	ʦ ˈai̯ t		time_NOUN_1			
+Bavarian	Bavarian			time_NOUN	Zeid	ʦˈai̯d̥	ʦ ˈai̯ d̥		time_NOUN_1			
 Proto-Germanic	Proto-Germanic			tear_NOUN_FEM	trahnuz	trˈɑxnuz	t r ˈɑ x n u z		tear_NOUN_FEM_1			
 West Frisian	West Frisian			tear_NOUN_FEM	trien	trˈiə̯n	t r ˈiə̯ n		tear_NOUN_FEM_1			
 Saterland Frisian	Saterland Frisian			tear_NOUN_FEM	Troone	trˈoːnə	t r ˈoː n ə		tear_NOUN_FEM_1			
@@ -7580,9 +7581,9 @@ Gothic	Gothic			twenty_NUM	𐍄𐍅𐌰𐌹 𐍄𐌹𐌲𐌾𐌿𐍃	twˈɛːtˈ
 Old Norse	Old Norse			twenty_NUM	tuttugu	tʰˈuttuɣu	tʰ ˈu t t u ɣ u		twenty_NUM_1			
 Icelandic	Icelandic			twenty_NUM	tuttugu	tʰˈuʰtuɣu	tʰ ˈu ʰt u ɣ u		twenty_NUM_1			
 Faroese	Faroese			twenty_NUM	tjúgu	ʧʰˈʉːu̯wʊ	ʧʰ ˈʉːu̯ w ʊ		twenty_NUM_1			
-Nynorsk Norwegian	Nynorsk Norwegian			twenty_NUM	tjue	ɕˈʉːe	ɕ ˈʉː e		twenty_NUM_1			
-Bokmål Norwegian	Bokmål Norwegian			twenty_NUM	tjue	ɕˈʉːə	ɕ ˈʉː ə		twenty_NUM_1			
-Danish	Danish			twenty_NUM	tyve	ʦʰˈyːw	ʦʰ ˈyː w		twenty_NUM_1			
+Nynorsk Norwegian	Nynorsk Norwegian			twenty_NUM	tjue	çˈʉːe	ç ˈʉː e		twenty_NUM_1			
+Bokmål Norwegian	Bokmål Norwegian			twenty_NUM	tjue	çˈʉːə	ç ˈʉː ə		twenty_NUM_1			
+Danish	Danish			twenty_NUM	tyve	ʦʰˈyːwə	ʦʰ ˈyː w ə		twenty_NUM_1			
 Swedish	Swedish			twenty_NUM	tjugo	ɕˈʉːɡʊ	ɕ ˈʉː ɡ ʊ		twenty_NUM_1			
 Scots	Scots			twenty_NUM	twinty	tʰwˈɪnti	tʰ w ˈɪ n t i		twenty_NUM_1			
 English	English			twenty_NUM	twenty	tʰwˈentɪ	tʰ w ˈe n t ɪ		twenty_NUM_1			
@@ -7933,7 +7934,7 @@ Proto-Germanic	Proto-Germanic			water_NOUN	watnō	wˈɑtnɔː	w ˈɑ t n ɔː		w
 Old Norse	Old Norse			water_NOUN	vatn	vˈɑtn	v ˈɑ t n		water_NOUN_1			
 Icelandic	Icelandic			water_NOUN	vatn	vˈaʰtn̥	v ˈa ʰt n̥		water_NOUN_1			
 Faroese	Faroese			water_NOUN	vatn	vˈaʰtn̥	v ˈa ʰt n̥		water_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			water_NOUN	vatn	ʋˈɑtn	ʋ ˈɑ t n		water_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			water_NOUN	vatn	ʋˈɑtən	ʋ ˈɑ t ə n		water_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			water_NOUN	vann	ʋˈɑnn	ʋ ˈɑ n n		water_NOUN_1			
 Danish	Danish			water_NOUN	vand	ʋˈanˀ	ʋ ˈa nˀ		water_NOUN_1			
 Swedish	Swedish			water_NOUN	vatten	vˈattɛn	v ˈa t t ɛ n		water_NOUN_1			
@@ -8032,7 +8033,7 @@ Gothic	Gothic			weapon_NOUN	𐍅𐌴𐍀𐌽	wˈeːpn	w ˈeː p n		weapon_NOUN_1
 Old Norse	Old Norse			weapon_NOUN	vápn	vˈɑːpn̩	v ˈɑː p n̩		weapon_NOUN_1			
 Icelandic	Icelandic			weapon_NOUN	vopn	vˈɔʰpn̩	v ˈɔ ʰp n̩		weapon_NOUN_1			
 Faroese	Faroese			weapon_NOUN	vopn	vˈɔʰpn̩	v ˈɔ ʰp n̩		weapon_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			weapon_NOUN	våpen	ʋˈoːpen	ʋ ˈoː p e n		weapon_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			weapon_NOUN	våpen	ʋˈoːpən	ʋ ˈoː p ə n		weapon_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			weapon_NOUN	våpen	ʋˈoːpən	ʋ ˈoː p ə n		weapon_NOUN_1			
 Danish	Danish			weapon_NOUN	våben	ʋˈɔˀb̥ən	ʋ ˈɔˀ b̥ ə n		weapon_NOUN_1			
 Swedish	Swedish			weapon_NOUN	vapen	vˈɑːpɛn	v ˈɑː p ɛ n		weapon_NOUN_1			
@@ -8409,7 +8410,7 @@ Old Norse	Old Norse			wish_VERB	œskja	ˈøːscɑ	ˈøː s c ɑ		wish_VERB_1
 Old Norse	Old Norse			wish_VERB	ýskja	ˈyːscɑ	ˈyː s c ɑ		wish_VERB_1			
 Icelandic	Icelandic			wish_VERB	æskja	ˈai̯sca	ˈai̯ s c a		wish_VERB_1			
 Faroese	Faroese			wish_VERB	ynskja	ˈɪnʃa	ˈɪ n ʃ a		wish_VERB_1			
-Nynorsk Norwegian	Nynorsk Norwegian			wish_VERB	ynskja	ˈʏnʃɑ	ˈʏ n ʃ ɑ		wish_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			wish_VERB	ynskja	ˈʏnʂɑ	ˈʏ n ʂ ɑ		wish_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			wish_VERB	ønske	ˈœnskə	ˈœ n s k ə		wish_VERB_1			
 Danish	Danish			wish_VERB	ønske	ˈønskə	ˈø n s k ə		wish_VERB_1			
 Swedish	Swedish			wish_VERB	önska	ˈœnska	ˈœ n s k a		wish_VERB_1			
@@ -8532,8 +8533,8 @@ Proto-Germanic	Proto-Germanic			thick_ADJ	þekuz	θˈekuz	θ ˈe k u z		thick_AD
 Old Norse	Old Norse			thick_ADJ	þykkr	θˈykkr	θ ˈy k k r		thick_ADJ_1			
 Icelandic	Icelandic			thick_ADJ	þykkur	θˈɪʰkʏr̥	θ ˈɪ ʰk ʏ r̥		thick_ADJ_1			
 Faroese	Faroese			thick_ADJ	tjúkkur	ʧʰˈʏʰkkʊɹ	ʧʰ ˈʏ ʰk k ʊ ɹ		thick_ADJ_1			
-Nynorsk Norwegian	Nynorsk Norwegian			thick_ADJ	tjukk	ɕˈʉʰkk	ɕ ˈʉ ʰk k		thick_ADJ_1			
-Bokmål Norwegian	Bokmål Norwegian			thick_ADJ	tjukk	ɕˈʉkk	ɕ ˈʉ k k		thick_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			thick_ADJ	tjukk	çˈʉʰkk	ç ˈʉ ʰk k		thick_ADJ_1			
+Bokmål Norwegian	Bokmål Norwegian			thick_ADJ	tjukk	çˈʉkk	ç ˈʉ k k		thick_ADJ_1			
 Danish	Danish			thick_ADJ	tyk	ʦʰˈyk	ʦʰ ˈy k		thick_ADJ_1			
 Swedish	Swedish			thick_ADJ	tjock	ɕˈɔk	ɕ ˈɔ k		thick_ADJ_1			
 Scots	Scots			thick_ADJ	thick	θˈɪk	θ ˈɪ k		thick_ADJ_1			
@@ -8562,7 +8563,8 @@ Gothic	Gothic			thief_NOUN	𐌸𐌹𐌿𐍆𐍃	θˈiu̯fs	θ ˈiu̯ f s		thief_
 Old Norse	Old Norse			thief_NOUN	þjófr	θjˈoːvr	θ j ˈoː v r		thief_NOUN_1			
 Icelandic	Icelandic			thief_NOUN	þjófur	θjˈoːu̯vʏr̥	θ j ˈoːu̯ v ʏ r̥		thief_NOUN_1			
 Faroese	Faroese			thief_NOUN	tjóvur	ʧʰˈɔːu̯vʊɹ	ʧʰ ˈɔːu̯ v ʊ ɹ		thief_NOUN_1			
-Nynorsk Norwegian	Nynorsk Norwegian			thief_NOUN	tjuv	ɕˈʉːʋ	ɕ ˈʉː ʋ		thief_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			thief_NOUN	tjov	çˈuːʋ	ç ˈuː ʋ		thief_NOUN_1			
+Nynorsk Norwegian	Nynorsk Norwegian			thief_NOUN	tjuv	çˈʉːʋ	ç ˈʉː ʋ		thief_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			thief_NOUN	tyv	tʰˈyːʋ	tʰ ˈyː ʋ		thief_NOUN_1			
 Danish	Danish			thief_NOUN	tyv	ʦʰˈyˀw	ʦʰ ˈyˀ w		thief_NOUN_1			
 Swedish	Swedish			thief_NOUN	tjuv	ɕˈʉːv	ɕ ˈʉː v		thief_NOUN_1			
@@ -8715,7 +8717,7 @@ Proto-Germanic	Proto-Germanic			press_VERB	þrukkijaną	θrˈukkijɑnɑ̃	θ r �
 Old Norse	Old Norse			press_VERB	þrykkja	θrˈycca	θ r ˈy c c a		press_VERB_1			
 Icelandic	Icelandic			press_VERB	þrykkja	θrˈɪʰca	θ r ˈɪ ʰc a		press_VERB_1			
 Faroese	Faroese			press_VERB	trykkja	tʰɹˈɪʰʧʧa	tʰ ɹ ˈɪ ʰʧ ʧ a		press_VERB_1			
-Nynorsk Norwegian	Nynorsk Norwegian			press_VERB	trykkja	tʰɾˈʏɕɕɑ	tʰ ɾ ˈʏ ɕ ɕ ɑ		press_VERB_1			
+Nynorsk Norwegian	Nynorsk Norwegian			press_VERB	trykkja	tʰɾˈʏççɑ	tʰ ɾ ˈʏ ç ç ɑ		press_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			press_VERB	trykke	tʰɾˈʏkkə	tʰ ɾ ˈʏ k k ə		press_VERB_1			
 Danish	Danish			press_VERB	trykke	ʦʰʁˈœkə	ʦʰ ʁ ˈœ k ə		press_VERB_1			
 Swedish	Swedish			press_VERB	trycka	tʰrˈʏkka	tʰ r ˈʏ k k a		press_VERB_1			
@@ -8802,6 +8804,9 @@ Alsatian	Alsatian			thumb_NOUN	Düme	d̥ˈyːmə	d̥ ˈyː m ə		thumb_NOUN_1
 Swiss German	Swiss German			thumb_NOUN	Tuume	tˈuːmə	t ˈuː m ə		thumb_NOUN_1			
 Bavarian	Bavarian			thumb_NOUN	Daam	d̥ˈaːm	d̥ ˈaː m		thumb_NOUN_1			
 Proto-Germanic	Proto-Germanic			thin_ADJ	þunniz	θˈunniz	θ ˈu n n i z		thin_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			thin_ADJ	tynn	tʰˈʏnn	tʰ ˈʏ n n		thin_ADJ_1			
+Bokmål Norwegian	Bokmål Norwegian			thin_ADJ	tynn	tʰˈʏnn	tʰ ˈʏ n n		thin_ADJ_1			
+Danish	Danish			thin_ADJ	tynd	ʦʰˈønˀ	ʦʰ ˈø nˀ		thin_ADJ_1			
 Scots	Scots			thin_ADJ	thin	θˈɪn	θ ˈɪ n		thin_ADJ_1			
 English	English			thin_ADJ	thin	θˈɪn	θ ˈɪ n		thin_ADJ_1			
 American English	American English			thin_ADJ	thin	θˈɪn	θ ˈɪ n		thin_ADJ_1			
@@ -8827,9 +8832,6 @@ Proto-Germanic	Proto-Germanic			thin_ADJ	þunnuz	θˈunnuz	θ ˈu n n u z		thin_
 Old Norse	Old Norse			thin_ADJ	þunnr	θˈunnr	θ ˈu n n r		thin_ADJ_2			
 Icelandic	Icelandic			thin_ADJ	þunnur	θˈʏnnʏr̥	θ ˈʏ n n ʏ r̥		thin_ADJ_2			
 Faroese	Faroese			thin_ADJ	tunnur	tʰˈʊnnʊɹ	tʰ ˈʊ n n ʊ ɹ		thin_ADJ_2			
-Nynorsk Norwegian	Nynorsk Norwegian			thin_ADJ	tynn	tʰˈʏnn	tʰ ˈʏ n n		thin_ADJ_2			
-Bokmål Norwegian	Bokmål Norwegian			thin_ADJ	tynn	tʰˈʏnn	tʰ ˈʏ n n		thin_ADJ_2			
-Danish	Danish			thin_ADJ	tynd	ʦʰˈønˀ	ʦʰ ˈø nˀ		thin_ADJ_2			
 Swedish	Swedish			thin_ADJ	tunn	tʰˈɵnn	tʰ ˈɵ n n		thin_ADJ_2			
 Proto-Germanic	Proto-Germanic			thunder_NOUN	þunraz	θˈunrɑz	θ ˈu n r ɑ z		thunder_NOUN_1			
 Scots	Scots			thunder_NOUN	thunner	θˈʌnər	θ ˈʌ n ə r		thunder_NOUN_1			
@@ -8968,7 +8970,7 @@ Bavarian	Bavarian			thousand_NUM	tausnd	tˈau̯sn̩d̥	t ˈau̯ s n̩ d̥		thous
 Old Norse	Old Norse			dear_ADJ	kærr	cʰˈɛːrr	cʰ ˈɛː r r		dear_ADJ_1			
 Icelandic	Icelandic			dear_ADJ	kær	cʰˈaːi̯r̥	cʰ ˈaːi̯ r̥		dear_ADJ_1			
 Faroese	Faroese			dear_ADJ	kærur	ʧʰˈɛːa̯ɹʊɹ	ʧʰ ˈɛːa̯ ɹ ʊ ɹ		dear_ADJ_1			
-Nynorsk Norwegian	Nynorsk Norwegian			dear_ADJ	kjær	ɕˈæːɾ	ɕ ˈæː ɾ		dear_ADJ_1			
-Bokmål Norwegian	Bokmål Norwegian			dear_ADJ	kjær	ɕˈæːɾ	ɕ ˈæː ɾ		dear_ADJ_1			
+Nynorsk Norwegian	Nynorsk Norwegian			dear_ADJ	kjær	çˈæːɾ	ç ˈæː ɾ		dear_ADJ_1			
+Bokmål Norwegian	Bokmål Norwegian			dear_ADJ	kjær	çˈæːɾ	ç ˈæː ɾ		dear_ADJ_1			
 Danish	Danish			dear_ADJ	kær	kʰˈɛˀɐ	kʰ ˈɛˀ ɐ		dear_ADJ_1			
 Swedish	Swedish			dear_ADJ	kär	ɕˈæːr	ɕ ˈæː r		dear_ADJ_1			
