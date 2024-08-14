@@ -1319,13 +1319,15 @@ class Language:
                                        if phone_classes[t] in ('TONEME', 'SUPRASEGMENTAL')},
                                       default=True, lmbda=0)
 
-        # Designate language as tonal if it has tonemes # TODO improve
+        # Designate language as tonal if it has tonemes
         if len(self.tonemes) > 0:
             self.tonal = True
         if set(self.tonemes.keys()) in ({"ˈ"}, {"ˈ", "ˌ"}):
             self.prosodic_typology = 'STRESS'
+        elif len(self.tonemes) > 1:
+            self.prosodic_typology = "TONE/PITCH ACCENT"
         else:
-            self.prosodic_typology = 'OTHER'  # TODO add other prosodic typologies
+            self.prosodic_typology = 'OTHER'
 
     def write_phoneme_inventory(self, n_examples=3, seed=1):
         doculect_dir = os.path.join(self.family.doculects_dir, self.path_name)
