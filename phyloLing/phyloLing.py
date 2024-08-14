@@ -175,13 +175,15 @@ class LexicalDataset:
                     cognate_class = word.cognate_class
                     self.cognate_sets[cognate_class][lang].add(word)
 
-    def write_vocab_index(self, output_file=None,
+    def write_lexical_index(self, 
+                          output_file=None,
                           concept_list=None,
-                          sep='\t', variants_sep='~'):
-        """Write cognate set index to .csv file"""
+                          sep='\t', 
+                          variants_sep='~'):
+        """Write cognate set index to TSV file."""
         assert sep != variants_sep
         if output_file is None:
-            output_file = os.path.join(self.directory, f'{self.path_name}_vocabulary_index.csv')
+            output_file = os.path.join(self.cognates_dir, f'{self.path_name.lower()}_cognate_index.tsv')
 
         if concept_list is None:
             concept_list = sorted(list(self.cognate_sets.keys()))
@@ -192,15 +194,15 @@ class LexicalDataset:
 
         with open(output_file, 'w') as f:
             language_names = sorted([self.languages[lang].name for lang in self.languages])
-            header = '\t'.join(['Gloss'] + language_names)
+            header = sep.join(['Gloss'] + language_names)
             f.write(f'{header}\n')
 
             for cognate_set_id in concept_list:
                 forms = [cognate_set_id]
                 for lang in language_names:
-                    breakpoint()
-                    raise NotImplementedError('Needs to be updated using new Word class and loan attribute (loans marked in parentheses)')  # TODO
-                    lang_forms = self.cognate_sets[cognate_set_id].get(lang, [''])
+                    lang = self.languages[lang]
+                    lang_forms = self.cognate_sets[cognate_set_id].get(lang, [])
+                    lang_forms = [form.ipa if not form.loanword else f"({form.ipa})" for form in lang_forms]
                     forms.append(variants_sep.join(lang_forms))
                 f.write(sep.join(forms))
                 f.write('\n')
@@ -1722,7 +1724,7 @@ def load_family(family,
                             **kwargs)
     if min_amc:
         family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
-    # families[family].write_vocab_index() # TODO
+    family.write_lexical_index()
     language_variables = {format_as_variable(lang): family.languages[lang]
                           for lang in family.languages}
     globals().update(language_variables)
