@@ -1701,8 +1701,16 @@ class Word:
         return self.info_content
 
     def __str__(self):
-        # TODO add this
-        pass
+        syllables = self.get_syllables()
+        syl_tr = ".".join(syllable.syl for i, syllable in syllables.items())
+        form_tr = "/" + syl_tr + "/"
+        if self.orthography and self.orthography != "":
+            form_tr = f"<{self.orthography}> {syl_tr}"
+        if self.concept and self.concept != "":
+            form_tr = f"{form_tr}\n'{self.concept}'"
+        if self.language:
+            form_tr = f"{form_tr} ({self.language.name})"
+        return form_tr
 
 
 # COMBINING DATASETS
