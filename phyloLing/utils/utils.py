@@ -2,6 +2,7 @@
 
 import datetime
 import operator
+import uuid
 from collections import defaultdict
 
 from networkx import Graph
@@ -50,12 +51,35 @@ def validate_class(objs, classes):
 
 
 def create_timestamp():
+    """Create time stamp with current date and time."""
     # Get the current date and time
     current_datetime = datetime.datetime.now()
     # Format the date and time as a string
     formatted_datetime = current_datetime.strftime("%Y-%m-%d_%H-%M-%S")
-    return formatted_datetime
+    return current_datetime, formatted_datetime
 
+
+def calculate_time_interval(datetime1, datetime2):
+    """
+    Calculate the time interval elapsed between two datetime objects.
+
+    Args:
+        datetime1 (datetime): The first datetime object.
+        datetime2 (datetime): The second datetime object.
+
+    Returns:
+        str: The formatted string representing the time interval elapsed between the two datetimes.
+    """
+    time_interval = datetime2 - datetime1
+    total_seconds = int(time_interval.total_seconds())
+    hours, remainder = divmod(total_seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    return f"{hours:02}:{minutes:02}:{seconds:02}"
+
+
+def create_uuid():
+    """Create a random UUID."""
+    return str(uuid.uuid4())
 
 def dict_tuplelist(dic, sort=True, n=1, reverse=True):
     """Returns a list of (key, value) tuples from the dictionary

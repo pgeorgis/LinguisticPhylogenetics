@@ -860,8 +860,8 @@ class LexicalDataset:
         if save_directory is None:
             save_directory = self.plots_dir
         if outtree is None:
-            timestamp = create_timestamp()
-            outtree = os.path.join(self.tree_dir, f'{timestamp}.tre')  # full code is too long as file name
+            _, timestamp = create_timestamp()
+            outtree = os.path.join(self.tree_dir, f'{timestamp}.tre')
 
         lm = self.linkage_matrix(dist_func,
                                  concept_list=concept_list,
