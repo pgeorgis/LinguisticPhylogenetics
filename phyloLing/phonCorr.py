@@ -1391,16 +1391,18 @@ class PhonCorrelator:
         for seg1 in surprisal_dict:
             for seg2 in surprisal_dict[seg1]:
                 if ngram_size > 1:
-                    breakpoint()  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
-                    lines.append([ngram2str(seg1, phon_env=phon_env),
-                                  ngram2str(seg2, phon_env=False),  # phon_env only on seg1
-                                  str(surprisal_dict[seg1][seg2]),
-                                  str(oov_value)])
+                    raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
+                lines.append([
+                    ngram2str(seg1, phon_env=phon_env),
+                    ngram2str(seg2, phon_env=False),  # phon_env only on seg1
+                    str(surprisal_dict[seg1][seg2]),
+                    str(oov_value)
+                    ]
+                )
 
         # Sort surprisal in ascending order, then by phones
         lines = sorted(lines, key=lambda x: (x[2], x[0], x[1]), reverse=False)
         lines = '\n'.join([sep.join(line) for line in lines])
-
         with open(outfile, 'w') as f:
             header = sep.join(['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed'])
             f.write(f'{header}\n{lines}')
@@ -1504,8 +1506,6 @@ class PhonCorrelator:
             p2_candidates = corr[p1]
             if len(p2_candidates) > 0:
                 p2_candidates = dict_tuplelist(p2_candidates, reverse=True)
-                # Sort by corr value, then by phone string if values are equal
-                p2_candidates.sort(key=lambda x: (x[-1], Ngram(x[0]).string))
                 for p2, score in p2_candidates:
                     if type == 'surprisal':
                         prob = surprisal_to_prob(score)  # turn surprisal value into probability
@@ -1516,6 +1516,8 @@ class PhonCorrelator:
                             lines.append(line)
                     else:
                         raise NotImplementedError  # not implemented for PMI
+        # Sort by corr value, then by phone string if values are equal
+        lines.sort(key=lambda x: (x[-1], x[0], x[1]))
         header = '\t'.join([self.lang1.name, self.lang2.name, 'probability'])
         lines = '\n'.join(lines)
         content = '\n'.join([header, lines])

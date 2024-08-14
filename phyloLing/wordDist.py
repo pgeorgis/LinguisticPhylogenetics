@@ -12,10 +12,29 @@ from phonUtils.ipaTools import strip_diacritics
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 from utils.distance import Distance, euclidean_dist, sim_to_dist
-from utils.information import \
-    adaptation_surprisal  # surprisal, surprisal_to_prob
+from utils.information import adaptation_surprisal  # surprisal, surprisal_to_prob
 from utils.sequence import Ngram
-from utils.string import strip_ch
+from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
+
+
+def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
+    """Calculate phoneme surprisal if not already done."""
+    if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
+        correlator1 = lang1.get_phoneme_correlator(lang2)
+        correlator1.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+    if len(lang2.phoneme_surprisal[(lang1.name, ngram_size)]) == 0:
+        correlator2 = lang2.get_phoneme_correlator(lang1)
+        correlator2.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+
+
+def get_pmi_dict(lang1, lang2, **kwargs):
+    """Calculate phoneme PMI if not already done and return PMI dict."""
+    if len(lang1.phoneme_pmi[lang2]) > 0:
+        pmi_dict = lang1.phoneme_pmi[lang2]
+    else:
+        correlator = lang1.get_phoneme_correlator(lang2)
+        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
+    return pmi_dict
 
 
 def prepare_alignment(word1, word2, **kwargs):
@@ -30,18 +49,13 @@ def prepare_alignment(word1, word2, **kwargs):
     Returns:
         Alignment: aligned object of the two words
     """
-
     # If language is specified for both words, incorporate their phoneme PMI for the alignment
     lang1, lang2 = word1.language, word2.language
     if lang1 is not None and lang2 is not None:
 
         # Check whether phoneme PMI has been calculated for this language pair
         # If not, then calculate it; if so, then retrieve it
-        if len(lang1.phoneme_pmi[lang2]) > 0:
-            pmi_dict = lang1.phoneme_pmi[lang2]
-        else:
-            correlator = lang1.get_phoneme_correlator(lang2)
-            pmi_dict = correlator.calc_phoneme_pmi()
+        pmi_dict = get_pmi_dict(lang1, lang2)
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
         alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
@@ -53,23 +67,30 @@ def prepare_alignment(word1, word2, **kwargs):
     return alignment
 
 
+def handle_word_pair_input(input1, input2):
+    """Check if a pair of word inputs or if already aligned word pair; align if not done already."""
+    if isinstance(input1, Alignment):
+        alignment = input1
+        word1 = alignment.word1
+        word2 = alignment.word2
+    else:
+        word1, word2 = input1, input2
+        alignment = prepare_alignment(word1, word2)
+    return word1, word2, alignment
+
+
 def phonetic_dist(word1, word2=None, phone_sim_func=phone_sim, **kwargs):
     """Calculates phonetic distance of an alignment without weighting by
     segment type, position, etc.
 
     Args:
-        word1 (phyloLing.Word): first Word object, or an Alignment object
-        word2 (phyloLing.Word): second Word object, or an Alignment object. Defaults to None.
+        word1 (phyloLing.Word or phonAlign.Alignment): first Word object, or an Alignment object
+        word2 (phyloLing.Word): second Word object. Defaults to None.
         phone_sim_func (phone_sim, optional): Phonetic similarity function. Defaults to phone_sim.
     """
 
-    #  If word2 is not provided, word1 is assumed to be an alignment.""" # TODO this should not be done
-
     # Calculate or retrieve the alignment
-    if word2:
-        alignment = prepare_alignment(word1, word2)
-    else:
-        alignment = word1
+    _, _, alignment = handle_word_pair_input(word1, word2)
 
     # Calculate the phonetic similarity of each aligned segment
     # Gap alignments receive a score of 0
@@ -172,8 +193,8 @@ def phonological_dist(word1,
     No weighting by segment type, position, etc.
 
     Args:
-        word1 (phyloLing.Word): first Word object, or an Alignment object
-        word2 (phyloLing.Word): second Word object, or an Alignment object. Defaults to None. # TODO word2=None is weird, could instead require either two words or a single alignment as input
+        word1 (phyloLing.Word or phonAlign.Alignment): first Word object, or an Alignment object
+        word2 (phyloLing.Word): second Word object. Defaults to None.
         sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
         max_sonority (int, optional): Maximum sonority value. Defaults to 17 as defined in phonUtils.segment submodule.
@@ -188,11 +209,7 @@ def phonological_dist(word1,
     """
 
     # If word2 is None, we assume word1 argument is actually an aligned word pair
-    # Otherwise, align the two words
-    if word2:
-        alignment = prepare_alignment(word1, word2)
-    else:
-        alignment = word1
+    word1, word2, alignment = handle_word_pair_input(word1, word2)
     gap_ch = alignment.gap_ch
     length = alignment.length
     alignment = alignment.alignment
@@ -350,11 +367,7 @@ def segmental_word_dist(word1,
     assert round(sum([c_weight, v_weight, syl_weight]), 1) == 1.0
 
     # If word2 is None, we assume word1 argument is actually an aligned word pair
-    # Otherwise, align the two words # TODO this can be simplified using Word/Alignment classes
-    if word2:
-        alignment = prepare_alignment(word1, word2)
-    else:
-        alignment = word1
+    word1, word2, alignment = handle_word_pair_input(word1, word2)
     length = alignment.length
     alignment = alignment.alignment
 
@@ -414,20 +427,11 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     lang2 = word2.language
 
     # Check whether phoneme PMI has been calculated for this language pair
-    # Otherwise calculate from scratch # TODO use helper function
-    if len(lang1.phoneme_pmi[lang2]) > 0:
-        pmi_dict = lang1.phoneme_pmi[lang2]
-    else:
-        correlator = lang1.get_phoneme_correlator(lang2)
-        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
+    # Otherwise calculate from scratch
+    pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
 
-    # Calculate phoneme surprisal if not already done # TODO use helper function
-    if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
-        correlator1 = lang1.get_phoneme_correlator(lang2)
-        correlator1.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-    if len(lang2.phoneme_surprisal[(lang1.name, ngram_size)]) == 0:
-        correlator2 = lang2.get_phoneme_correlator(lang1)
-        correlator2.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+    # Calculate phoneme surprisal if not already done
+    get_phoneme_surprisal(lang1, lang2, ngram_size=ngram_size, **kwargs)
 
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
@@ -459,7 +463,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                                     gap_ch=lang1.alignment_params['gap_ch'],
                                     )
     if ngram_size > 1:
-        breakpoint()  # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts...
+        # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts...
         # the way to get around this is:
         # calculate the 2gram, then get the 2gram's phon_env equivalent
         # interpolate the probability/surprisal of the 2gram with that of the phon_env equivalent
@@ -542,12 +546,8 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
     lang2 = word2.language
 
     # Check whether phoneme PMI has been calculated for this language pair
-    # Otherwise calculate from scratch # TODO create a function or something for this since this requirement appears in multiple places
-    if len(lang1.phoneme_pmi[lang2]) > 0:
-        pmi_dict = lang1.phoneme_pmi[lang2]
-    else:
-        correlator = lang1.get_phoneme_correlator(lang2)
-        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
+    # Otherwise calculate from scratch
+    pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
 
     # Align the words with PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
@@ -625,17 +625,10 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
 def levenshtein_dist(word1, word2, normalize=True, asjp=True):
     word1 = word1.ipa
     word2 = word2.ipa
-    # TODO create helper function for these fixes
-    fixes = {'ᵐ': 'm',  # bilabial prenasalization diacritic
-             '̈': '',  # central diacritic
-             }
-    for f in fixes:
-        word1 = re.sub(f, fixes[f], word1)
-        word2 = re.sub(f, fixes[f], word2)
 
     if asjp:
-        word1 = strip_ch(ipa2asjp(word1), ["~"])
-        word2 = strip_ch(ipa2asjp(word2), ["~"])
+        word1 = strip_ch(ipa2asjp(preprocess_ipa_for_asjp_conversion(word1)), ["~"])
+        word2 = strip_ch(ipa2asjp(preprocess_ipa_for_asjp_conversion(word2)), ["~"])
 
     LevDist = edit_distance(word1, word2)
     if normalize:
@@ -716,9 +709,9 @@ PhoneticDist = Distance(
 SegmentalDist = Distance(
     func=segmental_word_dist,
     name='SegmentalDist')  # TODO name TBD
-PhonologicalDist = Distance(
-    func=phonological_dist,
-    name='PhonologicalDist',  # TODO name TBD
+PhonDist = Distance(
+    func=phonological_dist, # TODO name TBD
+    name='PhonDist',
     cluster_threshold=0.16  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
 )
 PMIDist = Distance(
@@ -730,4 +723,4 @@ SurprisalDist = Distance(
     name='SurprisalDist',
     cluster_threshold=0.74,  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
-# Note: Hybrid and Cascade distance needs to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
+# Note: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args

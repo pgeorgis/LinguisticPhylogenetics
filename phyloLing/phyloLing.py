@@ -15,10 +15,8 @@ import bcubed
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from asjp import ipa2asjp
 from constants import (ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH,
                        TRANSCRIPTION_PARAM_DEFAULTS)
-from lingDist import Z_score_dist
 from matplotlib import pyplot as plt
 from phonCorr import PhonCorrelator
 from phonUtils.initPhoneData import suprasegmental_diacritics
@@ -38,7 +36,7 @@ from utils.distance import Distance, distance_matrix
 from utils.information import entropy
 from utils.network import dm2coords, newer_network_plot
 from utils.sequence import Ngram, flatten_ngram, pad_sequence
-from utils.string import format_as_variable, strip_ch
+from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict)
 
@@ -177,13 +175,16 @@ class LexicalDataset:
                     cognate_class = word.cognate_class
                     self.cognate_sets[cognate_class][lang].add(word)
 
-    def write_vocab_index(self, output_file=None,
-                          concept_list=None,
-                          sep='\t', variants_sep='~'):
-        """Write cognate set index to .csv file"""
+    def write_lexical_index(self,
+                            output_file=None,
+                            concept_list=None,
+                            sep='\t',
+                            variants_sep='~'
+                            ):
+        """Write cognate set index to TSV file."""
         assert sep != variants_sep
         if output_file is None:
-            output_file = os.path.join(self.directory, f'{self.path_name}_vocabulary_index.csv')
+            output_file = os.path.join(self.cognates_dir, f'{self.path_name.lower()}_cognate_index.tsv')
 
         if concept_list is None:
             concept_list = sorted(list(self.cognate_sets.keys()))
@@ -194,15 +195,15 @@ class LexicalDataset:
 
         with open(output_file, 'w') as f:
             language_names = sorted([self.languages[lang].name for lang in self.languages])
-            header = '\t'.join(['Gloss'] + language_names)
+            header = sep.join(['Gloss'] + language_names)
             f.write(f'{header}\n')
 
             for cognate_set_id in concept_list:
                 forms = [cognate_set_id]
                 for lang in language_names:
-                    breakpoint()
-                    raise NotImplementedError('Needs to be updated using new Word class and loan attribute (loans marked in parentheses)')  # TODO
-                    lang_forms = self.cognate_sets[cognate_set_id].get(lang, [''])
+                    lang = self.languages[lang]
+                    lang_forms = self.cognate_sets[cognate_set_id].get(lang, [])
+                    lang_forms = [form.ipa if not form.loanword else f"({form.ipa})" for form in lang_forms]
                     forms.append(variants_sep.join(lang_forms))
                 f.write(sep.join(forms))
                 f.write('\n')
@@ -429,24 +430,6 @@ class LexicalDataset:
             doculect_pairs = combinations(self.languages.values(), 2)
         return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs if lang1 != lang2],
                       key=lambda x: (x[0].name, x[1].name))
-
-    def phonetic_diversity(self, ch_to_remove=[]):  # TODO
-        # diversity_scores = {}
-        diversity_scores = defaultdict(lambda: [])
-        for cognate_set in self.cognate_sets:
-            concept = cognate_set.split('_')[0]
-            forms = []
-            for lang1 in self.cognate_sets[cognate_set]:
-                forms.extend([strip_ch(w, ch_to_remove.union({'(', ')'})) for w in self.cognate_sets[cognate_set][lang1]])
-            lf = len(forms)
-            if lf > 1:
-                # diversity_scores[cognate_set] = len(set(forms)) / lf
-                diversity_scores[concept].append(len(set(forms)) / lf)
-
-        for concept in diversity_scores:
-            diversity_scores[concept] = mean(diversity_scores[concept])
-
-        return mean(diversity_scores.values())
 
     def cognate_set_dendrogram(self,  # TODO UPDATE THIS FUNCTION
                                cognate_id,
@@ -728,10 +711,6 @@ class LexicalDataset:
             concept_list = sorted([concept for concept in concept_list
                                    if len(self.concepts[concept]) > 1])
 
-        if dist_func == Z_score_dist:
-            cognates = 'none'
-            raise NotImplementedError  # TODO
-
         # Automatic cognate clustering
         if cognates == 'auto':
             assert cluster_func is not None
@@ -755,7 +734,8 @@ class LexicalDataset:
 
         # No separation of cognates/non-cognates:
         # all synonymous words are evaluated irrespective of cognacy
-        # The concept itself is used as a dummy cognate class ID # TODO what happens when the dataset already includes cognate class anotation in the concept names?
+        # The concept itself is used as a dummy cognate class ID
+        # NB: this logic will not work if the base concept ID already encodes cognate class
         elif cognates == 'none':
             clustered_concepts = {concept: {concept: [
                 word for lang in self.concepts[concept]
@@ -787,13 +767,14 @@ class LexicalDataset:
                        cluster_func=None,
                        concept_list=None,
                        cognates='auto',
-                       method='ward',
+                       linkage_method='ward',
                        metric='euclidean',
                        **kwargs):
 
         # Ensure the linkage method is valid
-        if method not in ('nj', 'average', 'complete', 'single', 'weighted', 'ward'):
-            raise ValueError(f'Error: Unrecognized linkage type "{method}". Accepted values are: "average", "complete", "single", "weighted", "ward", "nj"')
+        valid_linkage = {'nj', 'average', 'complete', 'single', 'weighted', 'ward'}
+        if linkage_method not in valid_linkage:
+            raise ValueError(f'Error: Unrecognized linkage type "{linkage_method}". Accepted values are: {valid_linkage}')
 
         # Create distance matrix
         dm = self.distance_matrix(dist_func=dist_func,
@@ -805,7 +786,7 @@ class LexicalDataset:
         dists = squareform(dm)
 
         # Neighbor Joining linkage
-        if method == 'nj':
+        if linkage_method == 'nj':
             languages = self.languages.values()
             names = [lang.name for lang in languages]
             lang_names = [re.sub(r'\(', '{', lang) for lang in names]
@@ -815,7 +796,7 @@ class LexicalDataset:
 
         # Other linkage methods
         else:
-            lm = linkage(dists, method, metric)
+            lm = linkage(dists, linkage_method, metric)
             return lm
 
     def write_distance_matrix(self, dist_matrix, outfile, ordered_labels=None, float_format="%.5f"):
@@ -846,7 +827,7 @@ class LexicalDataset:
                   concept_list=None,
                   cluster_func=None,
                   cognates='auto',
-                  method='ward',
+                  linkage_method='ward',
                   metric='euclidean',
                   outtree=None,
                   title=None,
@@ -865,19 +846,19 @@ class LexicalDataset:
         if save_directory is None:
             save_directory = self.plots_dir
         if outtree is None:
-            timestamp = create_timestamp()
-            outtree = os.path.join(self.tree_dir, f'{timestamp}.tre')  # full code is too long as file name
+            _, timestamp = create_timestamp()
+            outtree = os.path.join(self.tree_dir, f'{timestamp}.tre')
 
         lm = self.linkage_matrix(dist_func,
                                  concept_list=concept_list,
                                  cluster_func=cluster_func,
                                  cognates=cognates,
-                                 method=method,
+                                 linkage_method=linkage_method,
                                  metric=metric,
                                  **kwargs)
 
         # Not possible to plot NJ trees in Python (yet? TBD) # TODO
-        if method != 'nj':
+        if linkage_method != 'nj':
             sns.set(font_scale=1.0)
             if len(group) >= 100:
                 plt.figure(figsize=(20, 20))
@@ -893,7 +874,7 @@ class LexicalDataset:
             plt.show()
 
         if return_newick or outtree:
-            if method == 'nj':
+            if linkage_method == 'nj':
                 newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
             else:
                 newick_tree = linkage2newick(lm, labels)
@@ -1016,8 +997,6 @@ class LexicalDataset:
             concept_list = sorted([concept for concept in concept_list
                                    if len(self.concepts[concept]) > 1])
 
-        if dist_func == Z_score_dist:
-            cognates = 'none'
         # Automatic cognate clustering
         if cognates == 'auto':
             assert cluster_func is not None
@@ -1324,13 +1303,15 @@ class Language:
                                        if phone_classes[t] in ('TONEME', 'SUPRASEGMENTAL')},
                                       default=True, lmbda=0)
 
-        # Designate language as tonal if it has tonemes # TODO improve
+        # Designate language as tonal if it has tonemes
         if len(self.tonemes) > 0:
             self.tonal = True
         if set(self.tonemes.keys()) in ({"ˈ"}, {"ˈ", "ˌ"}):
             self.prosodic_typology = 'STRESS'
+        elif len(self.tonemes) > 1:
+            self.prosodic_typology = "TONE/PITCH ACCENT"
         else:
-            self.prosodic_typology = 'OTHER'  # TODO add other prosodic typologies
+            self.prosodic_typology = 'OTHER'
 
     def write_phoneme_inventory(self, n_examples=3, seed=1):
         doculect_dir = os.path.join(self.family.doculects_dir, self.path_name)
@@ -1661,31 +1642,13 @@ class Word:
             suprasegs = self.get_parameter('suprasegmentals')
             ipa_string = re.sub(fr'[{suprasegs}]', supraseg_target, ipa_string)
 
-        # Convert to ASJP transcription
+        # Convert to ASJP transcriptions
         if self.get_parameter('asjp'):
-            ipa_string = re.sub('~', '', ipa2asjp(ipa_string))
-
-            # Convert some non-IPA ASJP characters to IPA equivalents # TODO move this mapping external
+            # Convert some non-IPA ASJP characters to IPA equivalents
             # Preserves set of ASJP characters/mapping, but keeps IPA compatibility
-            ipa_string = re.sub('4', 'n̪', ipa_string)
-            ipa_string = re.sub('5', 'ɲ', ipa_string)
-            ipa_string = re.sub('N', 'ŋ', ipa_string)
-            ipa_string = re.sub('L', 'ʎ', ipa_string)
-            ipa_string = re.sub('c', 'ʦ', ipa_string)
-            ipa_string = re.sub('T', 'c', ipa_string)
-            ipa_string = re.sub('g', 'ɡ', ipa_string)
-            ipa_string = re.sub('G', 'ɢ', ipa_string)
-            ipa_string = re.sub('7', 'ʔ', ipa_string)
-            ipa_string = re.sub('C', 'ʧ', ipa_string)
-            ipa_string = re.sub('j', 'ʤ', ipa_string)
-            ipa_string = re.sub('8', 'θ', ipa_string)
-            ipa_string = re.sub('S', 'ʃ', ipa_string)
-            ipa_string = re.sub('Z', 'ʒ', ipa_string)
-            ipa_string = re.sub('X', 'χ', ipa_string)
-            ipa_string = re.sub('y', 'j', ipa_string)
-            ipa_string = re.sub('E', 'ɛ', ipa_string)
-            ipa_string = re.sub('3', 'ə', ipa_string)
-            ipa_string = re.sub(r'\*', '̃', ipa_string)
+            ipa_string = asjp_in_ipa(ipa_string)
+
+            return ipa_string
 
         return ipa_string
 
@@ -1721,8 +1684,16 @@ class Word:
         return self.info_content
 
     def __str__(self):
-        # TODO add this
-        pass
+        syllables = self.get_syllables()
+        syl_tr = ".".join(syllable.syl for i, syllable in syllables.items())
+        form_tr = "/" + syl_tr + "/"
+        if self.orthography and self.orthography != "":
+            form_tr = f"<{self.orthography}> {syl_tr}"
+        if self.concept and self.concept != "":
+            form_tr = f"{form_tr}\n'{self.concept}'"
+        if self.language:
+            form_tr = f"{form_tr} ({self.language.name})"
+        return form_tr
 
 
 # COMBINING DATASETS
@@ -1747,7 +1718,7 @@ def load_family(family,
                             **kwargs)
     if min_amc:
         family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
-    # families[family].write_vocab_index() # TODO
+    family.write_lexical_index()
     language_variables = {format_as_variable(lang): family.languages[lang]
                           for lang in family.languages}
     globals().update(language_variables)

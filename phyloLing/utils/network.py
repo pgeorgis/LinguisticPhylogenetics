@@ -7,6 +7,7 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from numpy import amax, array
 from sklearn import manifold
+
 from utils.distance import distance_matrix
 
 

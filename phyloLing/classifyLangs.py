@@ -1,4 +1,5 @@
 import argparse
+import json
 import logging
 import os
 
@@ -6,8 +7,8 @@ import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
 from utils.distance import Distance
-from utils.utils import create_timestamp
-from wordDist import (LevenshteinDist, PhonologicalDist, PMIDist,
+from utils.utils import calculate_time_interval, convert_sets_to_lists, create_timestamp, create_uuid
+from wordDist import (LevenshteinDist, PhonDist, PMIDist,
                       SurprisalDist, composite_sim, hybrid_dist)
 
 from phyloLing import load_family
@@ -39,7 +40,7 @@ valid_params = {
 function_map = {
     'pmi': PMIDist,
     'surprisal': SurprisalDist,
-    'phon': PhonologicalDist,  # TODO name doesn't match (I think phon is fine because it is neutral between phonological and phonetic, could rename Distance as PhonDist)
+    'phon': PhonDist,
     'levenshtein': LevenshteinDist
 }
 
@@ -113,6 +114,10 @@ def validate_params(params, valid_params, logger):
 
     if params['alignment']['gap_ch'] in SPECIAL_JOIN_CHS:
         raise ValueError(f"Invalid gap character. Gap character may not be {invalid_special_ch_str}.")
+    
+    # Add "run_info" and "output" sections
+    params["run_info"] = {}
+    params["output"] = {}
 
 
 def init_hybrid(function_map, eval_params):
@@ -134,18 +139,18 @@ def init_hybrid(function_map, eval_params):
 def init_composite(params):
     eval_params = params['evaluation']
     surprisal_params = params['surprisal']
-    CascadeSim = Distance(
+    CompositeSim = Distance(
         func=composite_sim,
-        name='CascadeSim',
+        name='CompositeSim',
         sim=True,
         pmi_weight=eval_params['pmi_weight'],
         surprisal_weight=eval_params['surprisal_weight'],
         ngram_size=surprisal_params['ngram'],
         phon_env=surprisal_params['phon_env'],
     )
-    CascadeDist = CascadeSim.to_distance('CascadeDist', alpha=0.8)
+    CompositeDist = CompositeSim.to_distance('CompositeDist', alpha=0.8)
 
-    return CascadeDist
+    return CompositeDist
 
 
 def write_lang_dists_to_tsv(dist, outfile):
@@ -164,6 +169,7 @@ if __name__ == "__main__":
     parser.add_argument('config', help='Path to config.yml file')
     parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
     args = parser.parse_args()
+    start_time, start_timestamp = create_timestamp()
 
     # Configure the logger
     logging.basicConfig(level=log_levels[args.loglevel], format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
@@ -183,6 +189,9 @@ if __name__ == "__main__":
                 params[section_name][param_name] = default_params[section_name][param_name]
     # Validate parameters
     validate_params(params, valid_params, logger)
+
+    # Log config param settings
+    logger.info(json.dumps(convert_sets_to_lists(params), indent=4))
 
     # Get shorthand for each parameter section
     family_params = params['family']
@@ -235,7 +244,7 @@ if __name__ == "__main__":
     # Print some summary info about the loaded dataset
     logger.info(f'Loaded {len(family.languages)} doculects.')
     abs_mc, avg_mc = family.calculate_mutual_coverage()
-    if avg_mc <= 0.7:  # TODO should this be hard-coded?
+    if avg_mc <= 0.7:
         logger.warning(f'Average mutual coverage = {round(avg_mc, 2)}. Recommend minimum is 0.7.')
     else:
         logger.info(f'Average mutual coverage is {round(avg_mc, 2)} ({abs_mc}/{len(family.concepts)} concepts in all {len(family.languages)} doculects).')
@@ -303,36 +312,56 @@ if __name__ == "__main__":
             # sample_size=eval_params['sample_size'],
         )
 
-    # Generate test code
-
+    # Generate test code # TODO is this used still?
     code = family.generate_test_code(distFunc, cognates=cluster_params['cognates'], cutoff=cluster_params['cluster_threshold'])
     if eval_params['similarity'] == 'gradient':
         code += family.generate_test_code(evalDist)
-    logger.debug(f'Experiment ID: {code}')
+
+    # Generate experiment ID and outdir
+    exp_id = create_uuid()
+    logger.info(f'Experiment ID: {exp_id}')
+    exp_outdir = os.path.join(family_params["outdir"], "experiments", exp_id)
+    os.makedirs(exp_outdir, exist_ok=True)
+    params["run_info"]["experimentID"] = exp_id
 
     # Generate Newick tree string
     logger.info('Generating phylogenetic tree...')
-    timestamp = create_timestamp()
-    outtree = os.path.join(family_params['outdir'], 'trees', timestamp + '.tre')  # TODO this could still be improved
+    outtree = os.path.join(exp_outdir, "newick.tre")
     tree = family.draw_tree(
         cluster_func=clusterDist,
         dist_func=distFunc,
         cognates=cluster_params['cognates'],
-        method=tree_params['linkage'],  # TODO this should be changed within draw_tree() to linkage rather than method
+        linkage_method=tree_params['linkage'],
         title=family.name,
         outtree=outtree,
         return_newick=tree_params['newick'])
+    params["tree"]["newick"] = tree
     with open(outtree, 'w') as f:
         f.write(tree)
     logger.info(f'Wrote Newick tree to {outtree}')
-    print(tree)
 
-    # if log_scores:
-    write_lang_dists_to_tsv(distFunc, outfile=os.path.join(family.dist_matrix_dir, f'{timestamp}_scored.tsv'))
+    # Write distance matrix TSV
+    out_distmatrix = os.path.join(exp_outdir, f'distance-matrix.tsv')
+    write_lang_dists_to_tsv(distFunc, outfile=out_distmatrix)
+    # Write lexical comparison files
     for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):
-        lex_comp_log_dir = os.path.join(family_params['outdir'], 'distances', lang1.name, lang2.name)
+        dist_outdir = os.path.join(exp_outdir, 'distances')
+        lex_comp_log_dir = os.path.join(dist_outdir, lang1.name, lang2.name)
         os.makedirs(lex_comp_log_dir, exist_ok=True)
         lex_comp_log = os.path.join(lex_comp_log_dir, 'lexical_comparison.tsv')
         lang1.write_lexical_comparison(lang2, lex_comp_log)
+
+    # Add outfiles and final run info to config and dump
+    params["output"]["tree"] = outtree
+    params["output"]["dist_matrix"] = out_distmatrix
+    params["output"]["lexical_comparisons"] = dist_outdir
+    end_time, end_timestamp = create_timestamp()
+    params["run_info"]["start_time"] = start_timestamp
+    params["run_info"]["end_time"] = end_timestamp
+    params["run_info"]["duration"] = calculate_time_interval(start_time, end_time)
+    config_copy = os.path.join(exp_outdir, "config.yml")
+    with open(config_copy, 'w') as f:
+        yaml.dump(convert_sets_to_lists(params), f)
+    logger.info(f"Wrote experiment run config to {config_copy}")
 
     logger.info('Completed successfully.')

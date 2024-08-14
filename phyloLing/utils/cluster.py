@@ -5,6 +5,7 @@ import seaborn as sns
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, fcluster, linkage, to_tree
 from scipy.spatial.distance import squareform
+
 from utils.distance import distance_matrix
 
 
