@@ -1,4 +1,5 @@
 import argparse
+import json
 import logging
 import os
 
@@ -6,7 +7,7 @@ import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
 from utils.distance import Distance
-from utils.utils import create_timestamp
+from utils.utils import convert_sets_to_lists, create_timestamp
 from wordDist import (LevenshteinDist, PhonologicalDist, PMIDist,
                       SurprisalDist, composite_sim, hybrid_dist)
 
@@ -183,6 +184,9 @@ if __name__ == "__main__":
                 params[section_name][param_name] = default_params[section_name][param_name]
     # Validate parameters
     validate_params(params, valid_params, logger)
+
+    # Log config param settings
+    logger.info(json.dumps(convert_sets_to_lists(params), indent=4))    
 
     # Get shorthand for each parameter section
     family_params = params['family']

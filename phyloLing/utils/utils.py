@@ -132,6 +132,16 @@ def combine_overlapping_lists(list_of_lists):
     G = to_graph(list_of_lists)
     return list(connected_components(G))
 
+def convert_sets_to_lists(obj):
+    """Recursively convert list objects to sets."""
+    if isinstance(obj, dict):
+        return {k: convert_sets_to_lists(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [convert_sets_to_lists(i) for i in obj]
+    elif isinstance(obj, set):
+        return list(obj)
+    else:
+        return obj
 
 def rescale(val, lis, new_min=0, new_max=1):
     """Rescales a value between new_min and new_max according to the values of lis"""
