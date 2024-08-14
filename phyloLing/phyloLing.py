@@ -430,24 +430,6 @@ class LexicalDataset:
         return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs if lang1 != lang2],
                       key=lambda x: (x[0].name, x[1].name))
 
-    def phonetic_diversity(self, ch_to_remove=[]):  # TODO
-        # diversity_scores = {}
-        diversity_scores = defaultdict(lambda: [])
-        for cognate_set in self.cognate_sets:
-            concept = cognate_set.split('_')[0]
-            forms = []
-            for lang1 in self.cognate_sets[cognate_set]:
-                forms.extend([strip_ch(w, ch_to_remove.union({'(', ')'})) for w in self.cognate_sets[cognate_set][lang1]])
-            lf = len(forms)
-            if lf > 1:
-                # diversity_scores[cognate_set] = len(set(forms)) / lf
-                diversity_scores[concept].append(len(set(forms)) / lf)
-
-        for concept in diversity_scores:
-            diversity_scores[concept] = mean(diversity_scores[concept])
-
-        return mean(diversity_scores.values())
-
     def cognate_set_dendrogram(self,  # TODO UPDATE THIS FUNCTION
                                cognate_id,
                                dist_func,
