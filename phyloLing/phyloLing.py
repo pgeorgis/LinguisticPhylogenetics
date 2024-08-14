@@ -751,7 +751,8 @@ class LexicalDataset:
 
         # No separation of cognates/non-cognates:
         # all synonymous words are evaluated irrespective of cognacy
-        # The concept itself is used as a dummy cognate class ID # TODO what happens when the dataset already includes cognate class anotation in the concept names?
+        # The concept itself is used as a dummy cognate class ID
+        # NB: this logic will not work if the base concept ID already encodes cognate class
         elif cognates == 'none':
             clustered_concepts = {concept: {concept: [
                 word for lang in self.concepts[concept]
