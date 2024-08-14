@@ -175,11 +175,12 @@ class LexicalDataset:
                     cognate_class = word.cognate_class
                     self.cognate_sets[cognate_class][lang].add(word)
 
-    def write_lexical_index(self, 
-                          output_file=None,
-                          concept_list=None,
-                          sep='\t', 
-                          variants_sep='~'):
+    def write_lexical_index(self,
+                            output_file=None,
+                            concept_list=None,
+                            sep='\t',
+                            variants_sep='~'
+                            ):
         """Write cognate set index to TSV file."""
         assert sep != variants_sep
         if output_file is None:
