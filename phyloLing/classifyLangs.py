@@ -8,7 +8,7 @@ from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
 from utils.distance import Distance
 from utils.utils import convert_sets_to_lists, create_timestamp
-from wordDist import (LevenshteinDist, PhonologicalDist, PMIDist,
+from wordDist import (LevenshteinDist, PhonDist, PMIDist,
                       SurprisalDist, composite_sim, hybrid_dist)
 
 from phyloLing import load_family
@@ -40,7 +40,7 @@ valid_params = {
 function_map = {
     'pmi': PMIDist,
     'surprisal': SurprisalDist,
-    'phon': PhonologicalDist,  # TODO name doesn't match (I think phon is fine because it is neutral between phonological and phonetic, could rename Distance as PhonDist)
+    'phon': PhonDist,
     'levenshtein': LevenshteinDist
 }
 

@@ -709,9 +709,9 @@ PhoneticDist = Distance(
 SegmentalDist = Distance(
     func=segmental_word_dist,
     name='SegmentalDist')  # TODO name TBD
-PhonologicalDist = Distance(
-    func=phonological_dist,
-    name='PhonologicalDist',  # TODO name TBD
+PhonDist = Distance(
+    func=phonological_dist, # TODO name TBD
+    name='PhonDist',
     cluster_threshold=0.16  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
 )
 PMIDist = Distance(
