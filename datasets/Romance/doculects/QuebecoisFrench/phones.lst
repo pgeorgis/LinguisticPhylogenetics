@@ -1,0 +1,229 @@
+VOWELS
+/ɛ/ (0.043)
+	<boire> /bwɛʁ/ "DRINK_VERB"
+	<elle> /ɛl/ "SHE_PRON"
+	<pouvoir> /puvwɛʁ/ "CAN_VERB"
+
+/æɛ̯/ (0.04)
+	<vert> /væɛ̯ʁ/ "GREEN_ADJ"
+	<fais> /fæɛ̯/ "DO-1SG_VERB"
+	<caille> /kæɛ̯j/ "QUAIL_NOUN"
+
+/e/ (0.036)
+	<état> /etɑ/ "STATE_NOUN"
+	<été> /ete/ "SUMMER_NOUN"
+	<neiger> /neʒe/ "SNOW (VERB)_VERB"
+
+/a/ (0.033)
+	<chasser> /ʃase/ "HUNT_VERB"
+	<égal> /eɡal/ "EQUAL_ADJ"
+	<larme> /laʁm/ "TEAR_NOUN"
+
+/i/ (0.031)
+	<cerise> /sœʁiz/ "CHERRY_NOUN"
+	<petit> /pœʦi/ "SMALL_ADJ"
+	<vilain> /vilẽɪ̯̃/ "VILLAIN_NOUN"
+
+/ẽɪ̯̃/ (0.024)
+	<saint> /sẽɪ̯̃/ "SACRED_ADJ"
+	<bien> /bjẽɪ̯̃/ "WELL (ADV)_ADV"
+	<bain> /bẽɪ̯̃/ "BATH_NOUN"
+
+/œ/ (0.019)
+	<petit> /pœʦi/ "SMALL_ADJ"
+	<je> /ʒœ/ "I_PRON"
+	<cheval> /ʃœval/ "HORSE_NOUN"
+
+/u/ (0.019)
+	<loup> /lu/ "WOLF_NOUN"
+	<pouvoir> /puvwɛʁ/ "CAN_VERB"
+	<pou> /pu/ "LOUSE_NOUN"
+
+/ã/ (0.019)
+	<ange> /ãʒ/ "ANGEL_NOUN"
+	<an> /ã/ "YEAR_NOUN"
+	<vent> /vã/ "WIND_NOUN"
+
+/ɪ/ (0.016)
+	<ville> /vɪl/ "TOWN_NOUN"
+	<argile> /aʁʒɪl/ "CLAY_NOUN"
+	<fil> /fɪl/ "STRING_NOUN"
+
+/oʊ̯/ (0.016)
+	<aube> /oʊ̯b/ "DAWN_NOUN"
+	<sauce> /soʊ̯s/ "SAUCE_NOUN"
+	<pauvre> /poʊ̯vʁ/ "POOR_ADJ"
+
+/ɒ̃ʊ̯̃/ (0.016)
+	<pont> /pɒ̃ʊ̯̃/ "BRIDGE_NOUN"
+	<lion> /ljɒ̃ʊ̯̃/ "LION_NOUN"
+	<non> /nɒ̃ʊ̯̃/ "NOT_ADVERB"
+
+/ɔ/ (0.015)
+	<soleil> /sɔlæɛ̯j/ "SUN_NOUN"
+	<bonnes> /bɔn/ "GOOD (F.PL)_ADJ"
+	<bonne> /bɔn/ "GOOD (F.SG)_ADJ"
+
+/y/ (0.012)
+	<nue> /ny/ "CLOUD_NOUN"
+	<salut> /saly/ "HEALTH_NOUN"
+	<tu> /ʦy/ "THOU_PRON"
+
+/øʏ̯/ (0.011)
+	<queue> /køʏ̯/ "TAIL_NOUN"
+	<jeu> /ʒøʏ̯/ "GAME_NOUN"
+	<peu> /pøʏ̯/ "LITTLE_ADJ"
+
+/ɑɔ̯/ (0.01)
+	<oreille> /ɑɔ̯ʁæɛ̯j/ "EAR_NOUN"
+	<écorce> /ekɑɔ̯ʁs/ "BARK_NOUN"
+	<corne> /kɑɔ̯ʁn/ "HORN_NOUN"
+
+/ɑ/ (0.005)
+	<état> /etɑ/ "STATE_NOUN"
+	<château> /ʃɑtoʊ̯/ "CASTLE_NOUN"
+	<âme> /ɑm/ "SOUL_NOUN"
+
+/o/ (0.005)
+	<nôtre> /notʁ/ "OUR_ADJ"
+	<os> /o/ "BONE_NOUN"
+	<chose> /ʃoz/ "THING_NOUN"
+
+/aœ̯/ (0.005)
+	<fleur> /flaœ̯ʁ/ "FLOWER_NOUN"
+	<cœur> /kaœ̯ʁ/ "HEART_NOUN"
+	<odeur> /ɔdaœ̯ʁ/ "ODOR_NOUN"
+
+/ʏ/ (0.004)
+	<lutte> /lʏt/ "FIGHT_NOUN"
+	<étude> /eʦʏd/ "STUDY_NOUN"
+	<lune> /lʏn/ "MOON_NOUN"
+
+/ʊ/ (0.004)
+	<bouche> /bʊʃ/ "MOUTH_NOUN"
+	<mouche> /mʊʃ/ "FLY_NOUN"
+	<goutte> /ɡʊt/ "DROP_NOUN"
+
+/ɛɪ̯/ (0.003)
+	<tête> /tɛɪ̯t/ "SKULL_NOUN"
+	<fête> /fɛɪ̯t/ "PARTY_NOUN"
+	<pêche> /pɛɪ̯ʃ/ "PEACH_NOUN"
+
+/œ̃ʏ̯̃/ (0.001)
+	<un> /œ̃ʏ̯̃/ "ONE_NUM"
+
+
+
+CONSONANTS
+/ʁ/ (0.1)
+	<pleurer> /plœʁe/ "WEEP_VERB"
+	<occire> /ɔksiʁ/ "KILL_VERB"
+	<savoir> /savwɛʁ/ "KNOW_VERB"
+
+/l/ (0.058)
+	<lire> /liʁ/ "READ_VERB"
+	<ongle> /ɒ̃ʊ̯̃ɡl/ "FINGERNAIL_NOUN"
+	<il> /ɪl/ "HE_PRON"
+
+/s/ (0.052)
+	<sable> /sabl/ "SAND_NOUN"
+	<fils> /fɪs/ "SON_NOUN"
+	<soleil> /sɔlæɛ̯j/ "SUN_NOUN"
+
+/n/ (0.036)
+	<neuf> /nœf/ "NINE_NUM"
+	<nuage> /nɥaʒ/ "CLOUD_NOUN"
+	<peine> /pæɛ̯n/ "PAIN_NOUN"
+
+/p/ (0.035)
+	<pierre> /pjæɛ̯ʁ/ "STONE_NOUN"
+	<penne> /pɛn/ "FEATHER_NOUN"
+	<pied> /pje/ "FOOT_NOUN"
+
+/v/ (0.034)
+	<ouvrier> /uvʁije/ "WORKER_NOUN"
+	<vergogne> /væɛ̯ʁɡɔɲ/ "SHAME_NOUN"
+	<voie> /vwɛ/ "ROAD_NOUN"
+
+/w/ (0.033)
+	<seoir> /swɛʁ/ "SIT_ADJ"
+	<oiseau> /wɛzoʊ̯/ "BIRD_NOUN"
+	<asseoir> /aswɛʁ/ "SIT_ADJ"
+
+/m/ (0.029)
+	<mordre> /mɑɔ̯ʁdʁ/ "BITE_VERB"
+	<mi-> /mi/ "MIDDLE_NOUN"
+	<fumée> /fyme/ "SMOKE_NOUN"
+
+/k/ (0.029)
+	<croix> /kʁwɛ/ "CROSS_NOUN"
+	<cinq> /sẽɪ̯̃k/ "FIVE_NUM"
+	<écorce> /ekɑɔ̯ʁs/ "BARK_NOUN"
+
+/f/ (0.029)
+	<farine> /faʁɪn/ "FLOUR_NOUN"
+	<fruit> /fʁɥi/ "FRUIT_NOUN"
+	<fils> /fɪs/ "SON_NOUN"
+
+/t/ (0.028)
+	<mater> /mate/ "KILL_VERB"
+	<goutte> /ɡʊt/ "DROP_NOUN"
+	<été> /ete/ "SUMMER_NOUN"
+
+/j/ (0.028)
+	<lion> /ljɒ̃ʊ̯̃/ "LION_NOUN"
+	<ail> /æɛ̯j/ "GARLIC_NOUN"
+	<lièvre> /ljɛvʁ/ "HARE_NOUN"
+
+/ʒ/ (0.023)
+	<gencive> /ʒãsiv/ "GUMS_NOUN"
+	<sage> /saʒ/ "WISE_ADJ"
+	<gens> /ʒã/ "PEOPLE_NOUN"
+
+/ʃ/ (0.021)
+	<bouche> /bʊʃ/ "MOUTH_NOUN"
+	<château> /ʃɑtoʊ̯/ "CASTLE_NOUN"
+	<chef> /ʃɛf/ "HEAD_NOUN"
+
+/b/ (0.019)
+	<bœuf> /bœf/ "OX_NOUN"
+	<brûler> /bʁyle/ "BURN_VERB"
+	<blanc> /blã/ "WHITE_ADJ"
+
+/d/ (0.017)
+	<deux> /døʏ̯/ "TWO (M)_NUM"
+	<aide> /æɛ̯d/ "HELP-1SG_VERB"
+	<étude> /eʦʏd/ "STUDY_NOUN"
+
+/ɡ/ (0.013)
+	<grand> /ɡʁã/ "BIG_ADJ"
+	<graine> /ɡʁæɛ̯n/ "GRAIN_NOUN"
+	<ongle> /ɒ̃ʊ̯̃ɡl/ "FINGERNAIL_NOUN"
+
+/ɥ/ (0.01)
+	<cuisse> /kɥɪs/ "THIGH_NOUN"
+	<pluie> /plɥi/ "RAIN_NOUN"
+	<juin> /ʒɥẽɪ̯̃/ "JUNE_PROPN"
+
+/z/ (0.006)
+	<raison> /ʁæɛ̯zɒ̃ʊ̯̃/ "REASON_NOUN"
+	<raisin> /ʁæɛ̯zẽɪ̯̃/ "RAISIN_NOUN"
+	<chose> /ʃoz/ "THING_NOUN"
+
+/ʦ/ (0.005)
+	<gentil> /ʒãʦi/ "NICE_ADJ"
+	<petit> /pœʦi/ "SMALL_ADJ"
+	<tu> /ʦy/ "THOU_PRON"
+
+/ɲ/ (0.005)
+	<agneau> /aɲoʊ̯/ "LAMB_NOUN"
+	<Espagne> /ɛspaɲ/ "SPAIN_PROPN"
+	<montagne> /mɒ̃ʊ̯̃taɲ/ "MOUNTAIN_NOUN"
+
+/ʣ/ (0.005)
+	<dix> /ʣi/ "TEN_NUM"
+	<dieu> /ʣjøʏ̯/ "GOD_NOUN"
+	<dix> /ʣɪs/ "TEN_NUM"
+
+
+
