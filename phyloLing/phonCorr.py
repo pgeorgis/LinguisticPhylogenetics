@@ -653,8 +653,8 @@ class PhonCorrelator:
                          radius=1,  # TODO make configurable
                          p_threshold=0.05,
                          max_iterations=10,
-                         samples=5,  # TODO make configurable
-                         sample_size=0.8,  # TODO make configurable
+                         n_samples=5,
+                         sample_size=0.8,
                          cumulative=False,
                          log_iterations=True,
                          save=True):
@@ -690,7 +690,7 @@ class PhonCorrelator:
         iter_logs = defaultdict(lambda: [])
         sample_iterations = {}
         start_seed = self.seed
-        sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
+        sample_dict = self.sample_wordlists(n_samples=n_samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
         for key, sample in sample_dict.items():
             seed_i, sample_size = key
             sample_n = seed_i - start_seed
@@ -818,14 +818,14 @@ class PhonCorrelator:
             self.reset_seed()
 
         # Average together the PMI estimations from each sample
-        if samples > 1:
+        if n_samples > 1:
             results = average_nested_dicts(list(sample_results.values()))
         else:
             results = sample_results[0]
 
         # Write the iteration log
         if log_iterations:
-            self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
+            self.logger.debug(f'{n_samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             log_file = os.path.join(self.pmi_log_dir, 'PMI_iterations.log')
             self.write_iter_log(iter_logs, log_file)
 
@@ -1038,8 +1038,8 @@ class PhonCorrelator:
                                ngram_size=2,
                                gold=False,  # TODO add same with PMI?
                                log_iterations=True,
-                               samples=5,
-                               sample_size=0.8,  # TODO make configurable
+                               n_samples=5,
+                               sample_size=0.8,
                                cumulative=False,
                                phon_env=True,
                                save=True):
@@ -1064,7 +1064,7 @@ class PhonCorrelator:
             iter_logs = defaultdict(lambda: [])
             sample_iterations = {}
             start_seed = self.seed
-            sample_dict = self.sample_wordlists(n_samples=samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
+            sample_dict = self.sample_wordlists(n_samples=n_samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
             for key, sample in sample_dict.items():
                 seed_i, sample_size = key
                 sample_n = seed_i - start_seed
@@ -1206,7 +1206,7 @@ class PhonCorrelator:
                 self.reset_seed()
 
             # Average together the surprisal estimations from each sample
-            if samples > 1:
+            if n_samples > 1:
                 p1_all = set(p for sample_n in sample_results for p in sample_results[sample_n])
                 p2_all = set(p2 for sample_n in sample_results for p1 in sample_results[sample_n] for p2 in sample_results[sample_n][p1])
                 surprisal_results = defaultdict(lambda: defaultdict(lambda: 0))
@@ -1257,7 +1257,7 @@ class PhonCorrelator:
         # Write the iteration log
         surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
         if log_iterations and not gold:
-            self.logger.debug(f'{samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
+            self.logger.debug(f'{n_samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             log_file = os.path.join(surprisal_ngram_log_dir, 'surprisal_iterations.log')
             self.write_iter_log(iter_logs, log_file)
 

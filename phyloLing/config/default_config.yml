@@ -27,10 +27,14 @@ alignment:
   pad_ch: '#'
 
 pmi:
+  n_samples: 5
+  sample_size: 0.8
   refresh: []
   refresh_all_pmi: false
 
 surprisal:
+  n_samples: 5
+  sample_size: 0.8
   ngram: 1
   phon_env: true 
   refresh: []
