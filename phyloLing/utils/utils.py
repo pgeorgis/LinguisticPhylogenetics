@@ -59,6 +59,15 @@ def create_timestamp():
     return current_datetime, formatted_datetime
 
 
+def create_datestamp():
+    """Create a timestamp with the current date in YYYY-MM-DD format."""
+    # Get the current date
+    current_date = datetime.datetime.now().date()
+    # Format the date as a string
+    formatted_date = current_date.strftime("%Y-%m-%d")
+    return formatted_date
+
+
 def calculate_time_interval(datetime1, datetime2):
     """
     Calculate the time interval elapsed between two datetime objects.
