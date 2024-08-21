@@ -8547,3 +8547,330 @@ Catalan	Catalan			YOU (PL)_PRON	vosaltres	buzˈaltɾəs	b u z ˈa l t ɾ ə s		Y
 Spanish	Spanish			YOU (PL)_PRON	vosotros	bosˈotɾos	b o s ˈo t ɾ o s		YOU (PL)_PRON_2			
 Galician	Galician			YOU (PL)_PRON	vosoutros	bosˈowtɾos	b o s ˈo w t ɾ o s		YOU (PL)_PRON_2			
 Aromanian	Aromanian			LION_NOUN	ljundar	ʎundˈar	ʎ u n d ˈa r		LION_NOUN_2	TRUE	IRREGULAR OR LOAN	
+Valencian	Valencian			CLAY_NOUN	argila	arʤˈilɐ	a r ʤ ˈi l ɐ		CLAY_NOUN_1			
+Valencian	Valencian			BURN_VERB	cremar	kɾemˈar	k ɾ e m ˈa r		BURN_VERB_2			
+Valencian	Valencian			STRIKE_NOUN	cop	kˈɒp	k ˈɒ p		STRIKE_NOUN_1			
+Valencian	Valencian			DAY_NOUN	dia	dˈiɐ	d ˈi ɐ		DAY_NOUN_1			
+Valencian	Valencian			I_PRON	jo	ʤˈɒ	ʤ ˈɒ		I_PRON_1			
+Valencian	Valencian			THIN_ADJ	fin	fˈi	f ˈi		THIN_ADJ_1			
+Valencian	Valencian			STRENGTH_NOUN	força	fˈɒrsɞ	f ˈɒ r s ɞ		STRENGTH_NOUN_1			
+Valencian	Valencian			CAT_NOUN	gat	ɡˈat	ɡ ˈa t		CAT_NOUN_1			
+Valencian	Valencian			ICE_NOUN	glaç	ɡlˈas	ɡ l ˈa s		ICE_NOUN_1			
+Valencian	Valencian			FAT_NOUN	greix	ɡɾˈejʃ	ɡ ɾ ˈe j ʃ		FAT_NOUN_1			
+Valencian	Valencian			ISLAND_NOUN	illa	ˈiʎɐ	ˈi ʎ ɐ		ISLAND_NOUN_1			
+Valencian	Valencian			HONEY_NOUN	mel	mˈæl	m ˈæ l		HONEY_NOUN_1			
+Valencian	Valencian			BE BORN_VERB	néixer	nˈeʃer	n ˈe ʃ e r		BE BORN_VERB_1			
+Valencian	Valencian			SNOW_NOUN	neu	nˈew	n ˈe w		SNOW_NOUN_1			
+Valencian	Valencian			NUT_NOUN	nou	nˈɒw	n ˈɒ w		NUT_NOUN_1			
+Valencian	Valencian			QUAIL_NOUN	guatlla	ɡwˈaɫɫɐ	ɡ w ˈa ɫ ɫ ɐ		QUAIL_NOUN_1			
+Valencian	Valencian			SUN_NOUN	solell	sulˈæʎ	s u l ˈæ ʎ		SUN_NOUN_1			
+Valencian	Valencian			ALL (PL)_ADJ	tots	tˈots	t ˈo t s		ALL (PL)_ADJ_2			
+Valencian	Valencian			ALL (SG)_ADJ	tot	tˈot	t ˈo t		ALL (SG)_ADJ_1			
+Valencian	Valencian			BEAR_NOUN	ós	ˈos	ˈo s		BEAR_NOUN_1			
+Valencian	Valencian			NEIGHBOR_NOUN	veí	veˈi	v e ˈi		NEIGHBOR_NOUN_1			
+Valencian	Valencian			SHAME_NOUN	vergonya	verɡˈoɲɞ	v e r ɡ ˈo ɲ ɞ		SHAME_NOUN_1			
+Valencian	Valencian			FLIGHT_NOUN	vol	vˈɒl	v ˈɒ l		FLIGHT_NOUN_2			
+Valencian	Valencian			NEEDLE_NOUN	agulla	aɣˈuʎɐ	a ɣ ˈu ʎ ɐ		NEEDLE_NOUN_1			
+Valencian	Valencian			HELP_VERB	ajudar	aʤuðˈar	a ʤ u ð ˈa r		HELP_VERB_1			
+Valencian	Valencian			HELP-1SG_VERB	ajudo	aʤˈuðu	a ʤ ˈu ð u		HELP-1SG_VERB_1			
+Valencian	Valencian			EQUAL_ADJ	igual	iɣwˈal	i ɣ w ˈa l		EQUAL_ADJ_1			
+Valencian	Valencian			SUMMER_NOUN	estiu	estˈiw	e s t ˈi w		SUMMER_NOUN_2			
+Valencian	Valencian			LAMB_NOUN	anyell	aɲˈeʎ	a ɲ ˈe ʎ		LAMB_NOUN_1			
+Valencian	Valencian			DAWN_NOUN	alba	ˈalβɐ	ˈa l β ɐ		DAWN_NOUN_1			
+Valencian	Valencian			GARLIC_NOUN	all	ˈaʎ	ˈa ʎ		GARLIC_NOUN_1			
+Valencian	Valencian			OTHER_ADJ	altre	ˈaltɾe	ˈa l t ɾ e		OTHER_ADJ_1			
+Valencian	Valencian			RING_NOUN	anell	anˈeʎ	a n ˈe ʎ		RING_NOUN_1			
+Valencian	Valencian			ANGEL_NOUN	àngel	ˈaɲʤel	ˈa ɲ ʤ e l		ANGEL_NOUN_1			
+Valencian	Valencian			SOUL_NOUN	ànima	ˈanimɐ	ˈa n i m ɐ		SOUL_NOUN_1			
+Valencian	Valencian			YEAR_NOUN	any	ˈaɲ	ˈa ɲ		YEAR_NOUN_1			
+Valencian	Valencian			BEE_NOUN	abella	aβˈæʎɜ	a β ˈæ ʎ ɜ		BEE_NOUN_3			
+Valencian	Valencian			WATER_NOUN	aigua	ˈajɣwɐ	ˈa j ɣ w ɐ		WATER_NOUN_1			
+Valencian	Valencian			SPIDER_NOUN	aranya	aɾˈaɲɐ	a ɾ ˈa ɲ ɐ		SPIDER_NOUN_1			
+Valencian	Valencian			TREE_NOUN	arbre	ˈaβɾe	ˈa β ɾ e		TREE_NOUN_1			
+Valencian	Valencian			EAR_NOUN	orella	uɾˈæʎɜ	u ɾ ˈæ ʎ ɜ		EAR_NOUN_1			
+Valencian	Valencian			GOLD_NOUN	or	ˈɒr	ˈɒ r		GOLD_NOUN_1			
+Valencian	Valencian			LISTEN_VERB	escoltar	eskultˈar	e s k u l t ˈa r		LISTEN_VERB_1			
+Valencian	Valencian			GOOSE_NOUN	oca	ˈɒkɞ	ˈɒ k ɞ		GOOSE_NOUN_1			
+Valencian	Valencian			BIRD_NOUN	ocell	usˈeʎ	u s ˈe ʎ		BIRD_NOUN_2			
+Valencian	Valencian			BATH_NOUN	bany	bˈaɲ	b ˈa ɲ		BATH_NOUN_1			
+Valencian	Valencian			LOW_ADJ	baix	bˈaʃ	b ˈa ʃ		LOW_ADJ_2			
+Valencian	Valencian			BEAUTIFUL (F)_ADJ	bella	bˈeʎɜ	b ˈe ʎ ɜ		BEAUTIFUL (F)_ADJ_1			
+Valencian	Valencian			BEAUTIFUL (M)_ADJ	bell	bˈeʎ	b ˈe ʎ		BEAUTIFUL (M)_ADJ_1			
+Valencian	Valencian			WELL (ADV)_ADV	bé	bˈe	b ˈe		WELL (ADV)_ADV_1			
+Valencian	Valencian			DRINK_VERB	beure	bˈæwɾɜ	b ˈæ w ɾ ɜ		DRINK_VERB_1			
+Valencian	Valencian			WHITE_ADJ	blanc	blˈaŋk	b l ˈa ŋ k		WHITE_ADJ_2			
+Valencian	Valencian			GOOD (F.SG)_ADJ	bona	bˈɒnɞ	b ˈɒ n ɞ		GOOD (F.SG)_ADJ_1			
+Valencian	Valencian			GOOD (F.PL)_ADJ	bones	bˈɒnes	b ˈɒ n e s		GOOD (F.PL)_ADJ_2			
+Valencian	Valencian			GOOD (M.PL)_ADJ	bons	bˈɒns	b ˈɒ n s		GOOD (M.PL)_ADJ_2			
+Valencian	Valencian			GOOD (M.SG)_ADJ	bo	bˈɒ	b ˈɒ		GOOD (M.SG)_ADJ_1			
+Valencian	Valencian			OX_NOUN	bou	bˈɒw	b ˈɒ w		OX_NOUN_1			
+Valencian	Valencian			MOUTH_NOUN	boca	bˈokɞ	b ˈo k ɞ		MOUTH_NOUN_1			
+Valencian	Valencian			HORSE_NOUN	cavall	kavˈaʎ	k a v ˈa ʎ		HORSE_NOUN_1			
+Valencian	Valencian			SKY_NOUN	cel	sˈæl	s ˈæ l		SKY_NOUN_1			
+Valencian	Valencian			HOT_ADJ	cald	kˈalt	k ˈa l t		HOT_ADJ_1			
+Valencian	Valencian			CHANGE_VERB	canviar	kamvjˈar	k a m v j ˈa r		CHANGE_VERB_1			
+Valencian	Valencian			CHAMBER_NOUN	cambra	kˈambɾɐ	k ˈa m b ɾ ɐ		CHAMBER_NOUN_1			
+Valencian	Valencian			DOG_NOUN	ca	kˈa	k ˈa		DOG_NOUN_1			
+Valencian	Valencian			SONG_NOUN	cant	kˈant	k ˈa n t		SONG_NOUN_1			
+Valencian	Valencian			HAIR_NOUN	cabell	kaβˈæʎ	k a β ˈæ ʎ		HAIR_NOUN_1			
+Valencian	Valencian			GOAT_NOUN	cabra	kˈaβɾɐ	k ˈa β ɾ ɐ		GOAT_NOUN_1			
+Valencian	Valencian			HUNT_VERB	caçar	kasˈar	k a s ˈa r		HUNT_VERB_1			
+Valencian	Valencian			MEAT_NOUN	carn	kˈarn	k ˈa r n		MEAT_NOUN_1			
+Valencian	Valencian			DEAR_ADJ	car	kˈar	k ˈa r		DEAR_ADJ_1			
+Valencian	Valencian			HOUSE_NOUN	casa	kˈazɐ	k ˈa z ɐ		HOUSE_NOUN_2			
+Valencian	Valencian			CASTLE_NOUN	castell	kastˈeʎ	k a s t ˈe ʎ		CASTLE_NOUN_1			
+Valencian	Valencian			CHAIN_NOUN	cadena	kaðˈænɜ	k a ð ˈæ n ɜ		CHAIN_NOUN_1			
+Valencian	Valencian			HUNDRED_NUM	cent	sˈent	s ˈe n t		HUNDRED_NUM_1			
+Valencian	Valencian			WAX_NOUN	cera	sˈeɾɜ	s ˈe ɾ ɜ		WAX_NOUN_1			
+Valencian	Valencian			CHERRY_NOUN	cirera	siɾˈeɾɜ	s i ɾ ˈe ɾ ɜ		CHERRY_NOUN_1			
+Valencian	Valencian			ASH_NOUN	cendre	sˈændɾɜ	s ˈæ n d ɾ ɜ		ASH_NOUN_3			
+Valencian	Valencian			CITY_NOUN	ciutat	siwtˈat	s i w t ˈa t		CITY_NOUN_1			
+Valencian	Valencian			CALL_VERB	clamar	klamˈar	k l a m ˈa r		CALL_VERB_1			
+Valencian	Valencian			TAIL_NOUN	cua	kˈuɐ	k ˈu ɐ		TAIL_NOUN_1			
+Valencian	Valencian			NECK_NOUN	coll	kˈɒʎ	k ˈɒ ʎ		NECK_NOUN_1			
+Valencian	Valencian			COLOR_NOUN	color	kulˈor	k u l ˈo r		COLOR_NOUN_1			
+Valencian	Valencian			BE ACQUAINTED WITH_VERB	conèixer	kunˈæʃer	k u n ˈæ ʃ e r		BE ACQUAINTED WITH_VERB_2			
+Valencian	Valencian			HEART_NOUN	cor	kˈɒr	k ˈɒ r		HEART_NOUN_1			
+Valencian	Valencian			HORN_NOUN	corn	kˈɒrn	k ˈɒ r n		HORN_NOUN_1			
+Valencian	Valencian			BODY_NOUN	cos	kˈɒs	k ˈɒ s		BODY_NOUN_2			
+Valencian	Valencian			COAST_NOUN	costa	kˈɒstɞ	k ˈɒ s t ɞ		COAST_NOUN_1			
+Valencian	Valencian			THIGH_NOUN	cuixa	kˈuʃɐ	k ˈu ʃ ɐ		THIGH_NOUN_1			
+Valencian	Valencian			FAT_NOUN	gras	ɡrˈas	ɡ r ˈa s		FAT_NOUN_2			
+Valencian	Valencian			BELIEVE_VERB	creure	kɾˈæwɾɜ	k ɾ ˈæ w ɾ ɜ		BELIEVE_VERB_1			
+Valencian	Valencian			CROSS_NOUN	creu	kɾˈæw	k ɾ ˈæ w		CROSS_NOUN_1			
+Valencian	Valencian			BUTTOCKS_NOUN	cul	kˈul	k ˈu l		BUTTOCKS_NOUN_1			
+Valencian	Valencian			SHORT_ADJ	curt	kˈuɾt	k ˈu ɾ t		SHORT_ADJ_1			
+Valencian	Valencian			SUMMIT_NOUN	cima	sˈimɐ	s ˈi m ɐ		SUMMIT_NOUN_1			
+Valencian	Valencian			GIVE_VERB	dar	dˈar	d ˈa r		GIVE_VERB_1			
+Valencian	Valencian			TEN_NUM	deu	dˈæw	d ˈæ w		TEN_NUM_1			
+Valencian	Valencian			TOOTH_NOUN	dent	dˈent	d ˈe n t		TOOTH_NOUN_1			
+Valencian	Valencian			GOD_NOUN	déu	dˈew	d ˈe w		GOD_NOUN_1			
+Valencian	Valencian			SAY-1SG_VERB	dic	dˈik	d ˈi k		SAY-1SG_VERB_1			
+Valencian	Valencian			FINGER_NOUN	dit	dˈit	d ˈi t		FINGER_NOUN_1			
+Valencian	Valencian			SAY-INF_VERB	dir	dˈir	d ˈi r		SAY-INF_VERB_2			
+Valencian	Valencian			LADY_NOUN	dona	dˈɒnɞ	d ˈɒ n ɞ		LADY_NOUN_1			
+Valencian	Valencian			GIFT_NOUN	do	dˈo	d ˈo		GIFT_NOUN_1			
+Valencian	Valencian			SLEEP_VERB	dormir	durmˈir	d u r m ˈi r		SLEEP_VERB_1			
+Valencian	Valencian			DRAGON_NOUN	drac	dɾˈak	d ɾ ˈa k		DRAGON_NOUN_1			
+Valencian	Valencian			DRAGON_NOUN	dragó	dɾaɣˈo	d ɾ a ɣ ˈo		DRAGON_NOUN_2			
+Valencian	Valencian			TWO (F)_NUM	dues	dˈues	d ˈu e s		TWO (F)_NUM_2			
+Valencian	Valencian			SWEET_ADJ	dolç	dˈols	d ˈo l s		SWEET_ADJ_1			
+Valencian	Valencian			TWELVE_NUM	dotze	dˈozɞ	d ˈo z ɞ		TWELVE_NUM_1			
+Valencian	Valencian			TWO (M)_NUM	dos	dˈos	d ˈo s		TWO (M)_NUM_1			
+Valencian	Valencian			DO-1SG_VERB	faig	fˈaʧ	f ˈa ʧ		DO-1SG_VERB_1			
+Valencian	Valencian			FALSE_ADJ	falso	fˈals	f ˈa l s		FALSE_ADJ_1			
+Valencian	Valencian			HUNGER_NOUN	fam	fˈam	f ˈa m		HUNGER_NOUN_1			
+Valencian	Valencian			DO_VERB	fer	fˈer	f ˈe r		DO_VERB_2			
+Valencian	Valencian			FLOUR_NOUN	farina	faɾˈinɐ	f a ɾ ˈi n ɐ		FLOUR_NOUN_1			
+Valencian	Valencian			FATE_NOUN	fada	fˈaðɐ	f ˈa ð ɐ		FATE_NOUN_1			
+Valencian	Valencian			HAPPY_ADJ	feliç	felˈis	f e l ˈi s		HAPPY_ADJ_1			
+Valencian	Valencian			WOMAN_NOUN	fembra	fˈæmbrɜ	f ˈæ m b r ɜ		WOMAN_NOUN_1			
+Valencian	Valencian			IRON_NOUN	ferro	fˈæru	f ˈæ r u		IRON_NOUN_1			
+Valencian	Valencian			PARTY_NOUN	festa	fˈestɜ	f ˈe s t ɜ		PARTY_NOUN_2			
+Valencian	Valencian			LIVER_NOUN	fetge	fˈeʤɜ	f ˈe ʤ ɜ		LIVER_NOUN_1			
+Valencian	Valencian			DAUGHTER_NOUN	filla	fˈiʎɐ	f ˈi ʎ ɐ		DAUGHTER_NOUN_1			
+Valencian	Valencian			SON_NOUN	fill	fˈiʎ	f ˈi ʎ		SON_NOUN_1			
+Valencian	Valencian			STRING_NOUN	fil	fˈil	f ˈi l		STRING_NOUN_2			
+Valencian	Valencian			END_NOUN	fi	fˈi	f ˈi		END_NOUN_1			
+Valencian	Valencian			FLAME_NOUN	flama	flˈamɐ	f l ˈa m ɐ		FLAME_NOUN_1			
+Valencian	Valencian			FLOWER_NOUN	flor	flˈɒr	f l ˈɒ r		FLOWER_NOUN_1			
+Valencian	Valencian			FIRE_NOUN	foc	fˈɒk	f ˈɒ k		FIRE_NOUN_1			
+Valencian	Valencian			LEAF_NOUN	fulla	fˈuʎɐ	f ˈu ʎ ɐ		LEAF_NOUN_1			
+Valencian	Valencian			BEAUTIFUL (M)_ADJ	formós	fuɾmˈos	f u ɾ m ˈo s		BEAUTIFUL (M)_ADJ_3			
+Valencian	Valencian			STRONG_ADJ	fort	fˈɒrt	f ˈɒ r t		STRONG_ADJ_1			
+Valencian	Valencian			COLD_ADJ	fred	fɾˈæt	f ɾ ˈæ t		COLD_ADJ_1			
+Valencian	Valencian			FRUIT_NOUN	fruit	fɾˈujt	f ɾ ˈu j t		FRUIT_NOUN_1			
+Valencian	Valencian			SMOKE_NOUN	fum	fˈum	f ˈu m		SMOKE_NOUN_2			
+Valencian	Valencian			JOY_NOUN	goig	ɡˈɒʧ	ɡ ˈɒ ʧ		JOY_NOUN_1			
+Valencian	Valencian			FREEZE_VERB	gelar	ʤelˈar	ʤ e l ˈa r		FREEZE_VERB_2			
+Valencian	Valencian			SON-IN-LAW_NOUN	gendre	ʤˈændɾɜ	ʤ ˈæ n d ɾ ɜ		SON-IN-LAW_NOUN_1			
+Valencian	Valencian			PEOPLE_NOUN	gent	ʤˈent	ʤ ˈe n t		PEOPLE_NOUN_1			
+Valencian	Valencian			KNEE_NOUN	genoll	ʤenˈoʎ	ʤ e n ˈo ʎ		KNEE_NOUN_1			
+Valencian	Valencian			BROTHER_NOUN	germà	ʤermˈa	ʤ e r m ˈa		BROTHER_NOUN_2			
+Valencian	Valencian			GUMS_NOUN	geniva	ʤenˈivɐ	ʤ e n ˈi v ɐ		GUMS_NOUN_1			
+Valencian	Valencian			FREEZE_VERB	glaçar	ɡlasˈar	ɡ l a s ˈa r		FREEZE_VERB_3			
+Valencian	Valencian			BIG_ADJ	gran	ɡɾˈan	ɡ ɾ ˈa n		BIG_ADJ_1			
+Valencian	Valencian			GRAIN_NOUN	gra	ɡɾˈa	ɡ ɾ ˈa		GRAIN_NOUN_2			
+Valencian	Valencian			THICK_ADJ	gros	ɡɾˈɒs	ɡ ɾ ˈɒ s		THICK_ADJ_1			
+Valencian	Valencian			THROAT_NOUN	gola	ɡˈolɞ	ɡ ˈo l ɞ		THROAT_NOUN_1			
+Valencian	Valencian			DROP_NOUN	gota	ɡˈotɞ	ɡ ˈo t ɞ		DROP_NOUN_1			
+Valencian	Valencian			GRASS_NOUN	herba	ˈerβɜ	ˈe r β ɜ		GRASS_NOUN_1			
+Valencian	Valencian			WINTER_NOUN	hivern	ivˈærn	i v ˈæ r n		WINTER_NOUN_2			
+Valencian	Valencian			SPAIN_PROPN	Espanya	espˈaɲɐ	e s p ˈa ɲ ɐ		SPAIN_PROPN_1			
+Valencian	Valencian			MAN_NOUN	home	ˈɒmɞ	ˈɒ m ɞ		MAN_NOUN_2			
+Valencian	Valencian			SHE_PRON	ella	ˈeʎɜ	ˈe ʎ ɜ		SHE_PRON_2			
+Valencian	Valencian			HE_PRON	ell	ˈeʎ	ˈe ʎ		HE_PRON_2			
+Valencian	Valencian			GAME_NOUN	joc	ʤˈɒk	ʤ ˈɒ k		GAME_NOUN_1			
+Valencian	Valencian			JUDGE_NOUN	jutge	ʤˈuʤe	ʤ ˈu ʤ e		JUDGE_NOUN_1			
+Valencian	Valencian			JOINED_ADJ	junt	ʤˈunt	ʤ ˈu n t		JOINED_ADJ_1			
+Valencian	Valencian			JUNE_PROPN	juny	ʤˈuɲ	ʤ ˈu ɲ		JUNE_PROPN_1			
+Valencian	Valencian			YOUNG_ADJ	jove	ʤˈovɞ	ʤ ˈo v ɞ		YOUNG_ADJ_1			
+Valencian	Valencian			TEAR_NOUN	llàgrima	ʎˈaɣɾimɐ	ʎ ˈa ɣ ɾ i m ɐ		TEAR_NOUN_1			
+Valencian	Valencian			MILK_NOUN	llet	ʎˈet	ʎ ˈe t		MILK_NOUN_1			
+Valencian	Valencian			LAKE_NOUN	llac	ʎˈak	ʎ ˈa k		LAKE_NOUN_1			
+Valencian	Valencian			WOOL_NOUN	llana	ʎˈanɐ	ʎ ˈa n ɐ		WOOL_NOUN_1			
+Valencian	Valencian			BED_NOUN	llit	ʎˈit	ʎ ˈi t		BED_NOUN_1			
+Valencian	Valencian			LAW_NOUN	llei	ʎˈej	ʎ ˈe j		LAW_NOUN_1			
+Valencian	Valencian			READ_VERB	llegir	ʎeʤˈir	ʎ e ʤ ˈi r		READ_VERB_1			
+Valencian	Valencian			LION_NOUN	lleó	ʎeˈo	ʎ e ˈo		LION_NOUN_1			
+Valencian	Valencian			HARE_NOUN	llebre	ʎˈeβɾɜ	ʎ ˈe β ɾ ɜ		HARE_NOUN_1			
+Valencian	Valencian			CARRY_VERB	llevar	ʎevˈar	ʎ e v ˈa r		CARRY_VERB_1			
+Valencian	Valencian			FREE_ADJ	lliure	ʎˈiwɾe	ʎ ˈi w ɾ e		FREE_ADJ_1			
+Valencian	Valencian			WOOD_NOUN	llenya	ʎˈeɲɜ	ʎ ˈe ɲ ɜ		WOOD_NOUN_1			
+Valencian	Valencian			TONGUE_NOUN	llengua	ʎˈæŋɡwɜ	ʎ ˈæ ŋ ɡ w ɜ		TONGUE_NOUN_1			
+Valencian	Valencian			LETTER_NOUN	lletra	ʎˈetɾɜ	ʎ ˈe t ɾ ɜ		LETTER_NOUN_1			
+Valencian	Valencian			PLACE_NOUN	lloc	ʎˈɒk	ʎ ˈɒ k		PLACE_NOUN_1			
+Valencian	Valencian			FIGHT_NOUN	lluita	ʎˈujtɐ	ʎ ˈu j t ɐ		FIGHT_NOUN_1			
+Valencian	Valencian			LIGHT_NOUN	llum	ʎˈum	ʎ ˈu m		LIGHT_NOUN_2			
+Valencian	Valencian			MOON_NOUN	lluna	ʎˈunɐ	ʎ ˈu n ɐ		MOON_NOUN_1			
+Valencian	Valencian			WOLF_NOUN	llop	ʎˈop	ʎ ˈo p		WOLF_NOUN_1			
+Valencian	Valencian			KILL_VERB	matar	matˈar	m a t ˈa r		KILL_VERB_1			
+Valencian	Valencian			EAT_VERB	menjar	meɲʤˈar	m e ɲ ʤ ˈa r		EAT_VERB_1			
+Valencian	Valencian			HAND_NOUN	mà	mˈa	m ˈa		HAND_NOUN_1			
+Valencian	Valencian			SEA_NOUN	mar	mˈar	m ˈa r		SEA_NOUN_1			
+Valencian	Valencian			MOTHER_NOUN	mare	mˈaɾe	m ˈa ɾ e		MOTHER_NOUN_1			
+Valencian	Valencian			MATURE_NOUN	madur	maðˈur	m a ð ˈu r		MATURE_NOUN_1			
+Valencian	Valencian			I_OBL_PRON	me	me	m e		I_OBL_PRON_1			
+Valencian	Valencian			DOCTOR_NOUN	metge	mˈeʤɜ	m ˈe ʤ ɜ		DOCTOR_NOUN_1			
+Valencian	Valencian			HALF_NOUN	mitat	mitˈat	m i t ˈa t		HALF_NOUN_1			
+Valencian	Valencian			MIDDLE_NOUN	mig	mˈiʧ	m ˈi ʧ		MIDDLE_NOUN_1			
+Valencian	Valencian			BETTER_ADJ	millor	miʎˈor	m i ʎ ˈo r		BETTER_ADJ_1			
+Valencian	Valencian			CRUMB_NOUN	mica	mˈikɐ	m ˈi k ɐ		CRUMB_NOUN_1			
+Valencian	Valencian			THOUSAND_NUM	mil	mˈil	m ˈi l		THOUSAND_NUM_1			
+Valencian	Valencian			MOUNTAIN_NOUN	muntanya	muntˈaɲɐ	m u n t ˈa ɲ ɐ		MOUNTAIN_NOUN_1			
+Valencian	Valencian			DIE_VERB	morir	muɾˈir	m u ɾ ˈi r		DIE_VERB_1			
+Valencian	Valencian			BITE_VERB	mossegar	museɣˈar	m u s e ɣ ˈa r		BITE_VERB_2			
+Valencian	Valencian			DEATH_NOUN	mort	mˈɒrt	m ˈɒ r t		DEATH_NOUN_1			
+Valencian	Valencian			MANY_ADJ	molt	mˈolt	m ˈo l t		MANY_ADJ_1			
+Valencian	Valencian			FLY_NOUN	mosca	mˈoskɞ	m ˈo s k ɞ		FLY_NOUN_1			
+Valencian	Valencian			NOSE_NOUN	nas	nˈas	n ˈa s		NOSE_NOUN_2			
+Valencian	Valencian			SWIM_VERB	nedar	neðˈar	n e ð ˈa r		SWIM_VERB_2			
+Valencian	Valencian			NONE_PRON	ningú	niŋɡˈu	n i ŋ ɡ ˈu		NONE_PRON_2			
+Valencian	Valencian			BLACK_ADJ	negre	nˈæɣɾɜ	n ˈæ ɣ ɾ ɜ		BLACK_ADJ_1			
+Valencian	Valencian			NIGHT_NOUN	nit	nˈit	n ˈi t		NIGHT_NOUN_1			
+Valencian	Valencian			NAME_NOUN	nom	nˈɒm	n ˈɒ m		NAME_NOUN_2			
+Valencian	Valencian			NOT_ADVERB	no	nˈo	n ˈo		NOT_ADVERB_1			
+Valencian	Valencian			OUR_ADJ	nostre	nˈɒstɾɞ	n ˈɒ s t ɾ ɞ		OUR_ADJ_1			
+Valencian	Valencian			NINE_NUM	nou	nˈɒw	n ˈɒ w		NINE_NUM_1			
+Valencian	Valencian			NEW_ADJ	nou	nˈɒw	n ˈɒ w		NEW_ADJ_1			
+Valencian	Valencian			CLOUD_NOUN	niu	nˈiw	n ˈi w		CLOUD_NOUN_1			
+Valencian	Valencian			CLOUD_NOUN	núvol	nˈuvul	n ˈu v u l		CLOUD_NOUN_3			
+Valencian	Valencian			DARK_ADJ	obscur	upskˈur	u p s k ˈu r		DARK_ADJ_1			
+Valencian	Valencian			KILL_VERB	occir	uksˈir	u k s ˈi r		KILL_VERB_2			
+Valencian	Valencian			EIGHT_NUM	huit	wˈit	w ˈi t		EIGHT_NUM_1			
+Valencian	Valencian			EYES_NOUN	ulls	ˈuʎs	ˈu ʎ s		EYES_NOUN_1			
+Valencian	Valencian			EYE_NOUN	ull	ˈuʎ	ˈu ʎ		EYE_NOUN_1			
+Valencian	Valencian			ODOR_NOUN	olor	ulˈor	u l ˈo r		ODOR_NOUN_2			
+Valencian	Valencian			WORK_NOUN	obra	ˈɒβɾɞ	ˈɒ β ɾ ɞ		WORK_NOUN_1			
+Valencian	Valencian			WORKER_NOUN	obrer	ubɾˈer	u b ɾ ˈe r		WORKER_NOUN_1			
+Valencian	Valencian			BONE_NOUN	os	ˈɒs	ˈɒ s		BONE_NOUN_1			
+Valencian	Valencian			SHEEP_NOUN	ovella	uvˈæʎɜ	u v ˈæ ʎ ɜ		SHEEP_NOUN_2			
+Valencian	Valencian			EGG_NOUN	ou	ˈɒw	ˈɒ w		EGG_NOUN_1			
+Valencian	Valencian			PEACE_NOUN	pau	pˈaw	p ˈa w		PEACE_NOUN_1			
+Valencian	Valencian			PALACE_NOUN	palau	palˈaw	p a l ˈa w		PALACE_NOUN_1			
+Valencian	Valencian			BREAD_NOUN	pa	pˈa	p ˈa		BREAD_NOUN_1			
+Valencian	Valencian			WORD_NOUN	paraula	paɾˈawlɐ	p a ɾ ˈa w l ɐ		WORD_NOUN_1			
+Valencian	Valencian			FATHER_NOUN	pare	pˈaɾe	p ˈa ɾ e		FATHER_NOUN_2			
+Valencian	Valencian			LITTLE_ADJ	poc	pˈɒk	p ˈɒ k		LITTLE_ADJ_1			
+Valencian	Valencian			POOR_ADJ	pobre	pˈɒβɾɞ	p ˈɒ β ɾ ɞ		POOR_ADJ_1			
+Valencian	Valencian			BREAST_NOUN	pit	pˈit	p ˈi t		BREAST_NOUN_1			
+Valencian	Valencian			FOOT_NOUN	peu	pˈæw	p ˈæ w		FOOT_NOUN_1			
+Valencian	Valencian			LOUSE_NOUN	poll	pˈoʎ	p ˈo ʎ		LOUSE_NOUN_1			
+Valencian	Valencian			SKIN_NOUN	pell	pˈeʎ	p ˈe ʎ		SKIN_NOUN_1			
+Valencian	Valencian			PEACH_NOUN	préssec	pɾˈesek	p ɾ ˈe s e k		PEACH_NOUN_2			
+Valencian	Valencian			STONE_NOUN	pedra	pˈeðɾɜ	p ˈe ð ɾ ɜ		STONE_NOUN_1			
+Valencian	Valencian			HAIR_NOUN	pèl	pˈæl	p ˈæ l		HAIR_NOUN_2			
+Valencian	Valencian			FEATHER_NOUN	penya	pˈæɲɜ	p ˈæ ɲ ɜ		FEATHER_NOUN_2			
+Valencian	Valencian			FISH_NOUN	peix	pˈejʃ	p ˈe j ʃ		FISH_NOUN_1			
+Valencian	Valencian			PLAGUE_NOUN	plaga	plˈaɣɐ	p l ˈa ɣ ɐ		PLAGUE_NOUN_1			
+Valencian	Valencian			WEEP_VERB	plànyer	plˈaɲer	p l ˈa ɲ e r		WEEP_VERB_1			
+Valencian	Valencian			FULL_ADJ	ple	plˈæ	p l ˈæ		FULL_ADJ_1			
+Valencian	Valencian			WEEP_VERB	plorar	pluɾˈar	p l u ɾ ˈa r		WEEP_VERB_2			
+Valencian	Valencian			FEATHER_NOUN	ploma	plˈomɞ	p l ˈo m ɞ		FEATHER_NOUN_3			
+Valencian	Valencian			RAIN_NOUN	pluja	plˈuʤɐ	p l ˈu ʤ ɐ		RAIN_NOUN_1			
+Valencian	Valencian			PODIUM_NOUN	puig	pˈuʧ	p ˈu ʧ		PODIUM_NOUN_1			
+Valencian	Valencian			PAIN_NOUN	pena	pˈænɜ	p ˈæ n ɜ		PAIN_NOUN_1			
+Valencian	Valencian			PUT_VERB	pondre	pˈɒndɾɞ	p ˈɒ n d ɾ ɞ		PUT_VERB_1			
+Valencian	Valencian			PUT-2SG_VERB	pons	pˈɒns	p ˈɒ n s		PUT-2SG_VERB_1			
+Valencian	Valencian			BRIDGE_NOUN	pont	pˈɒnt	p ˈɒ n t		BRIDGE_NOUN_1			
+Valencian	Valencian			SOW_NOUN	porca	pˈɒrkɞ	p ˈɒ r k ɞ		SOW_NOUN_1			
+Valencian	Valencian			PIG_NOUN	porc	pˈɒrk	p ˈɒ r k		PIG_NOUN_1			
+Valencian	Valencian			CAN_VERB	poder	puðˈær	p u ð ˈæ r		CAN_VERB_1			
+Valencian	Valencian			PRICE_NOUN	preu	pɾˈæw	p ɾ ˈæ w		PRICE_NOUN_1			
+Valencian	Valencian			FIST_NOUN	puny	pˈuɲ	p ˈu ɲ		FIST_NOUN_1			
+Valencian	Valencian			POINT_NOUN	punt	pˈunt	p ˈu n t		POINT_NOUN_1			
+Valencian	Valencian			WELL_NOUN	pou	pˈow	p ˈo w		WELL_NOUN_1			
+Valencian	Valencian			FOUR_NUM	quatre	kwˈatɾe	k w ˈa t ɾ e		FOUR_NUM_1			
+Valencian	Valencian			WHO_PRON	qui	kˈi	k ˈi		WHO_PRON_2			
+Valencian	Valencian			WHAT_PRON	què	kˈæ	k ˈæ		WHAT_PRON_1			
+Valencian	Valencian			FIFTY_NUM	cinquanta	siŋkwˈantɐ	s i ŋ k w ˈa n t ɐ		FIFTY_NUM_1			
+Valencian	Valencian			FIVE_NUM	cinc	sˈiŋk	s ˈi ŋ k		FIVE_NUM_1			
+Valencian	Valencian			RAISIN_NOUN	raïm	raˈim	r a ˈi m		RAISIN_NOUN_1			
+Valencian	Valencian			REASON_NOUN	raó	raˈo	r a ˈo		REASON_NOUN_1			
+Valencian	Valencian			KING_NOUN	rei	rˈej	r ˈe j		KING_NOUN_1			
+Valencian	Valencian			QUEEN_NOUN	reina	rˈejnɜ	r ˈe j n ɜ		QUEEN_NOUN_1			
+Valencian	Valencian			RIVER_NOUN	riu	rˈiw	r ˈi w		RIVER_NOUN_2			
+Valencian	Valencian			ROMAN_ADJ	romà	rumˈa	r u m ˈa		ROMAN_ADJ_1			
+Valencian	Valencian			ROUND_ADJ	rodó	ruðˈo	r u ð ˈo		ROUND_ADJ_2			
+Valencian	Valencian			RED_ADJ	roig	rˈɒʧ	r ˈɒ ʧ		RED_ADJ_2			
+Valencian	Valencian			CENTURY_NOUN	segle	sˈeɣlɜ	s ˈe ɣ l ɜ		CENTURY_NOUN_1			
+Valencian	Valencian			SALT_NOUN	sal	sˈal	s ˈa l		SALT_NOUN_1			
+Valencian	Valencian			SAUCE_NOUN	salsa	sˈalsɐ	s ˈa l s ɐ		SAUCE_NOUN_1			
+Valencian	Valencian			HEALTH_NOUN	salut	salˈut	s a l ˈu t		HEALTH_NOUN_1			
+Valencian	Valencian			HEALTHY (F)_ADJ	sana	sˈanɐ	s ˈa n ɐ		HEALTHY (F)_ADJ_1			
+Valencian	Valencian			SACRED_ADJ	sant	sˈant	s ˈa n t		SACRED_ADJ_1			
+Valencian	Valencian			BLOOD_NOUN	sang	sˈaŋk	s ˈa ŋ k		BLOOD_NOUN_1			
+Valencian	Valencian			HEALTHY (M)_ADJ	sa	sˈa	s ˈa		HEALTHY (M)_ADJ_1			
+Valencian	Valencian			KNOW_VERB	saber	saβˈær	s a β ˈæ r		KNOW_VERB_1			
+Valencian	Valencian			KNOW-SBJ-1SG_VERB	sàpiga	sˈapiɣɐ	s ˈa p i ɣ ɐ		KNOW-SBJ-1SG_VERB_1			
+Valencian	Valencian			WISE_ADJ	savi	sˈavi	s ˈa v i		WISE_ADJ_1			
+Valencian	Valencian			KNOW-2SG_VERB	saps	sˈaps	s ˈa p s		KNOW-2SG_VERB_1			
+Valencian	Valencian			KNOWN_VERB	sabut	saβˈut	s a β ˈu t		KNOWN_VERB_1			
+Valencian	Valencian			BARK_NOUN	escorça	eskˈɒrsɞ	e s k ˈɒ r s ɞ		BARK_NOUN_3			
+Valencian	Valencian			WRITE_VERB	escriure	eskɾˈiwɾe	e s k ɾ ˈi w ɾ e		WRITE_VERB_1			
+Valencian	Valencian			SAFE_ADJ	segur	seɣˈur	s e ɣ ˈu r		SAFE_ADJ_1			
+Valencian	Valencian			SIT_ADJ	seure	sˈæwɾɜ	s ˈæ w ɾ ɜ		SIT_ADJ_2			
+Valencian	Valencian			SEVEN_NUM	set	sˈæt	s ˈæ t		SEVEN_NUM_1			
+Valencian	Valencian			WEEK_NOUN	setmana	semmˈanɐ	s e m m ˈa n ɐ		WEEK_NOUN_1			
+Valencian	Valencian			SILK_NOUN	seda	sˈæðɜ	s ˈæ ð ɜ		SILK_NOUN_1			
+Valencian	Valencian			SIX_NUM	sis	sˈis	s ˈi s		SIX_NUM_1			
+Valencian	Valencian			DRY (F)_ADJ	seca	sˈækɜ	s ˈæ k ɜ		DRY (F)_ADJ_1			
+Valencian	Valencian			DRY (M)_ADJ	sec	sˈæk	s ˈæ k		DRY (M)_ADJ_1			
+Valencian	Valencian			SUN_NOUN	sol	sˈɒl	s ˈɒ l		SUN_NOUN_2			
+Valencian	Valencian			SWORD_NOUN	espasa	espˈazɐ	e s p ˈa z ɐ		SWORD_NOUN_1			
+Valencian	Valencian			EAR OF GRAIN_NOUN	espiga	espˈiɣɐ	e s p ˈi ɣ ɐ		EAR OF GRAIN_NOUN_1			
+Valencian	Valencian			SPINE_NOUN	espina	espˈinɐ	e s p ˈi n ɐ		SPINE_NOUN_1			
+Valencian	Valencian			STATE_NOUN	estat	estˈat	e s t ˈa t		STATE_NOUN_1			
+Valencian	Valencian			STAR_NOUN	estrella	estɾˈeʎɜ	e s t ɾ ˈe ʎ ɜ		STAR_NOUN_2			
+Valencian	Valencian			STUDY_NOUN	estudi	estˈuði	e s t ˈu ð i		STUDY_NOUN_1			
+Valencian	Valencian			ABOVE_PREP	sobre	sˈoβɾɞ	s ˈo β ɾ ɞ		ABOVE_PREP_1			
+Valencian	Valencian			BULL_NOUN	tor	tˈɒr	t ˈɒ r		BULL_NOUN_1			
+Valencian	Valencian			TIME_NOUN	temps	tˈems	t ˈe m s		TIME_NOUN_1			
+Valencian	Valencian			EARTH_NOUN	terra	tˈærɜ	t ˈæ r ɜ		EARTH_NOUN_1			
+Valencian	Valencian			SKULL_NOUN	testa	tˈestɜ	t ˈe s t ɜ		SKULL_NOUN_1			
+Valencian	Valencian			THREE_NUM	tres	tɾˈæs	t ɾ ˈæ s		THREE_NUM_1			
+Valencian	Valencian			THOU_PRON	tu	tˈu	t ˈu		THOU_PRON_1			
+Valencian	Valencian			NAVEL_NOUN	llombrígol	ʎumbɾˈiɡul	ʎ u m b ɾ ˈi ɡ u l		NAVEL_NOUN_1			
+Valencian	Valencian			FINGERNAIL_NOUN	ungla	ˈuŋɡlɐ	ˈu ŋ ɡ l ɐ		FINGERNAIL_NOUN_1			
+Valencian	Valencian			ONE_NUM	u	ˈu	ˈu		ONE_NUM_1			
+Valencian	Valencian			COW_NOUN	vaca	vˈakɐ	v ˈa k ɐ		COW_NOUN_1			
+Valencian	Valencian			COME-1SG_VERB	vinc	vˈiŋk	v ˈi ŋ k		COME-1SG_VERB_1			
+Valencian	Valencian			COME-INF_VERB	vindre	vˈindɾe	v ˈi n d ɾ e		COME-INF_VERB_1			
+Valencian	Valencian			WIND_NOUN	vent	vˈent	v ˈe n t		WIND_NOUN_1			
+Valencian	Valencian			WORM_NOUN	verm	vˈærm	v ˈæ r m		WORM_NOUN_1			
+Valencian	Valencian			OLD_ADJ	vell	vˈeʎ	v ˈe ʎ		OLD_ADJ_1			
+Valencian	Valencian			ROAD_NOUN	via	vˈiɐ	v ˈi ɐ		ROAD_NOUN_1			
+Valencian	Valencian			JOURNEY_NOUN	viatge	viˈaʤe	v i ˈa ʤ e		JOURNEY_NOUN_1			
+Valencian	Valencian			SEE_VERB	veure	vˈæwɾɜ	v ˈæ w ɾ ɜ		SEE_VERB_1			
+Valencian	Valencian			TWENTY_NUM	vin	vˈin	v ˈi n		TWENTY_NUM_1			
+Valencian	Valencian			TOWN_NOUN	vila	vˈilɐ	v ˈi l ɐ		TOWN_NOUN_1			
+Valencian	Valencian			VILLAIN_NOUN	vilà	vilˈa	v i l ˈa		VILLAIN_NOUN_1			
+Valencian	Valencian			WINE_NOUN	vi	vˈi	v ˈi		WINE_NOUN_1			
+Valencian	Valencian			GREEN_ADJ	verd	vˈært	v ˈæ r t		GREEN_ADJ_1			
+Valencian	Valencian			LIFE_NOUN	vida	vˈiðɐ	v ˈi ð ɐ		LIFE_NOUN_1			
+Valencian	Valencian			CALF_NOUN	vedell	veðˈeʎ	v e ð ˈe ʎ		CALF_NOUN_1			
+Valencian	Valencian			VOICE_NOUN	veu	vˈæw	v ˈæ w		VOICE_NOUN_1			
+Valencian	Valencian			FLY_VERB	volar	vulˈar	v u l ˈa r		FLY_VERB_1			
+Valencian	Valencian			SMALL_ADJ	petit	petˈit	p e t ˈi t		SMALL_ADJ_4			
+Valencian	Valencian			WE_PRON	nosaltres	nuzˈaltɾes	n u z ˈa l t ɾ e s		WE_PRON_2			
+Valencian	Valencian			YOU (PL)_PRON	vosaltres	vuzˈaltɾes	v u z ˈa l t ɾ e s		YOU (PL)_PRON_2			
