@@ -468,7 +468,7 @@ class PhonCorrelator:
                              alignment_list,
                              ngram_size=1,
                              counts=False,
-                             prune=None,
+                             min_corr=3,
                              exclude_null=True,
                              compact_null=True,
                              pad=True,
@@ -524,15 +524,15 @@ class PhonCorrelator:
                 compacted_alignments,
                 ngram_size=ngram_size,
                 counts=counts,
-                prune=prune,
+                min_corr=min_corr,
                 exclude_null=exclude_null,
                 compact_null=False,
                 pad=False,
             )
             return adjusted_corrs
 
-        if prune:
-            corr_counts = prune_corrs(corr_counts, min_val=prune)
+        if min_corr > 1:
+            corr_counts = prune_corrs(corr_counts, min_val=min_corr)
 
         if not counts:
             for seg1 in corr_counts:
@@ -655,6 +655,7 @@ class PhonCorrelator:
                          max_iterations=10,
                          n_samples=5,
                          sample_size=0.8,
+                         min_corr=3,
                          cumulative=False,
                          log_iterations=True,
                          save=True):
@@ -748,7 +749,12 @@ class PhonCorrelator:
                     cognate_alignments = all_cognate_alignments
 
                 # Calculate correspondence probabilities and PMI values from these alignments
-                cognate_probs = self.correspondence_probs(cognate_alignments, exclude_null=True, counts=True)
+                cognate_probs = self.correspondence_probs(
+                    cognate_alignments,
+                    exclude_null=True,
+                    counts=True,
+                    min_corr=min_corr,
+                )
                 cognate_probs = default_dict({k[0]: {v[0]: cognate_probs[k][v]
                                                      for v in cognate_probs[k]}
                                               for k in cognate_probs}, lmbda=defaultdict(lambda: 0))
@@ -1040,6 +1046,7 @@ class PhonCorrelator:
                                log_iterations=True,
                                n_samples=5,
                                sample_size=0.8,
+                               min_corr=3,
                                cumulative=False,
                                phon_env=True,
                                save=True):
@@ -1107,6 +1114,7 @@ class PhonCorrelator:
                     corr_probs = self.correspondence_probs(
                         cognate_alignments,
                         counts=True,
+                        min_corr=min_corr,
                         exclude_null=False,
                         compact_null=False,
                         ngram_size=ngram_size,
@@ -1236,6 +1244,7 @@ class PhonCorrelator:
             corr_probs = self.correspondence_probs(
                 cognate_alignments,
                 counts=True,
+                min_corr=min_corr,
                 exclude_null=False,
                 compact_null=False,
                 ngram_size=ngram_size,

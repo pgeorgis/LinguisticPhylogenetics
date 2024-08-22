@@ -275,6 +275,7 @@ if __name__ == "__main__":
         family.calculate_phoneme_pmi(
             sample_size=pmi_params['sample_size'],
             n_samples=pmi_params['n_samples'],
+            min_corr=pmi_params['min_corr'],
         )
         family.write_phoneme_pmi()
         if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
@@ -282,6 +283,7 @@ if __name__ == "__main__":
                 ngram_size=surprisal_params['ngram'],
                 sample_size=surprisal_params['sample_size'],
                 n_samples=surprisal_params['n_samples'],
+                min_corr=surprisal_params['min_corr'],
             )
             family.write_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
 
