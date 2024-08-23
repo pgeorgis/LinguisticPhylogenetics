@@ -204,15 +204,16 @@ if __name__ == "__main__":
     tree_params = params['tree']
 
     # Set ngram size used for surprisal
-    if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
+    surprisal_funcs = ('surprisal', 'hybrid', 'composite')
+    if eval_params['method'] in surprisal_funcs or cluster_params['method'] in surprisal_params:
         function_map['surprisal'].set('ngram_size', surprisal_params['ngram'])
         SurprisalDist = function_map['surprisal']
 
         # Initialize hybrid or composite distance/similarity objects
 
-        if eval_params['method'] == 'hybrid':
+        if eval_params['method'] == 'hybrid' or cluster_params['method'] == 'hybrid':
             function_map['hybrid'] = init_hybrid(function_map, eval_params)
-        elif eval_params['method'] == 'composite':
+        if eval_params['method'] == 'composite' or cluster_params['method'] == 'composite':
             function_map['composite'] = init_composite(params)
 
     # Designate cluster function if performing auto cognate clustering
