@@ -6,6 +6,9 @@ family:
   exclude: []
   # outdir: path/to/outdir
 
+experiment:
+  name: 
+
 transcription:
     global:
         asjp: false

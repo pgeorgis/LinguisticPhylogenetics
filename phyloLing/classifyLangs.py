@@ -202,6 +202,7 @@ if __name__ == "__main__":
     cluster_params = params['cluster']
     eval_params = params['evaluation']
     tree_params = params['tree']
+    experiment_params = params['experiment']
 
     # Set ngram size used for surprisal
     surprisal_funcs = ('surprisal', 'hybrid', 'composite')
@@ -328,7 +329,11 @@ if __name__ == "__main__":
         code += family.generate_test_code(evalDist)
 
     # Generate experiment ID and outdir
-    exp_id = create_uuid()
+    exp_name = experiment_params['name']
+    if exp_name is None:
+        exp_id = create_uuid()
+    else:
+        exp_id = os.path.join(exp_name, create_uuid())
     logger.info(f'Experiment ID: {exp_id}')
     exp_outdir = os.path.join(family_params["outdir"], "experiments", create_datestamp(), exp_id)
     os.makedirs(exp_outdir, exist_ok=True)

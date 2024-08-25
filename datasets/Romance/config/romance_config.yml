@@ -5,6 +5,9 @@ family:
     exclude: ['Dalmatian', 'Savoyard']
     outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/
 
+experiment:
+  name: 
+
 transcription:
     global:
         ignore_stress: false
