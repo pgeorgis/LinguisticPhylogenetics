@@ -1616,7 +1616,7 @@ class NullCompacter:
             elif len(alignment) > 1:  # initial with following ngram
                 self.compact_next_ngram(alignment, i, ngram, ngram_i, gap_index)
 
-    def eval_null_corr(self, larger_ngrams, gap_segs, direction):
+    def eval_null_corr(self, larger_ngrams, gap_segs, direction, threshold=0.5):
         # Determine direction
         self.reverse_corr_counts()
         if direction == 'FORWARD':
@@ -1717,7 +1717,7 @@ class NullCompacter:
                 # Consider the compacted null alignment to be valid if:
                 # - its PMI > 0
                 # - and its PMI is greater than that of the simpler ngram correlations
-                if pmi_complex > max(pmi_basic, 0):
+                if pmi_complex >= max(pmi_basic*threshold, 0):
                     if direction == 'FORWARD':
                         self.valid_corrs[larger_ngram][gap_seg] = pmi_complex
                     else:  # BACKWARD
