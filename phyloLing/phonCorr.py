@@ -5,6 +5,7 @@ from collections import defaultdict
 from functools import lru_cache
 from itertools import product
 from statistics import mean, stdev
+from nltk.translate import AlignedSent, IBMModel1
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
                        PAD_CH_DEFAULT, PHON_ENV_JOIN_CH, START_PAD_CH)
@@ -450,6 +451,19 @@ class PhonCorrelator:
                 corr_dict[seg1] = normalize_dict(corr_dict[seg1])
 
         return corr_dict
+    
+    def expectation_max_ibm1(self, sample, iterations=20):
+        """Performs expectation maximization algorithm and fits an IBM translation model 1 to the corpus."""
+        corpus = [
+            AlignedSent(word1.segments, word2.segments)
+            for word1, word2 in sample
+        ]
+        em_ibm1 = IBMModel1(corpus, iterations)
+        translation_table = em_ibm1.translation_table
+        for seg1 in translation_table:
+            translation_table[seg1][self.gap_ch] = translation_table[seg1][None]
+            del translation_table[seg1][None]
+        return translation_table
 
     def joint_probs(self, conditional_counts, l1=None, l2=None):
         """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
@@ -698,19 +712,15 @@ class PhonCorrelator:
             synonym_sample, diff_sample = sample
             reversed_synonym_sample = [(pair[-1], pair[0]) for pair in synonym_sample]
 
-            # First step: calculate probability of phones co-occuring within within
-            # a set radius of positions within their respective words
-            synonyms_radius1 = self.radial_counts(synonym_sample, radius, normalize=False)
-            synonyms_radius2 = reverse_corr_dict(synonyms_radius1)
-            for d in [synonyms_radius1, synonyms_radius2]:
-                for seg1 in d:
-                    d[seg1] = normalize_dict(d[seg1])
-            pmi_step1 = [self.phoneme_pmi(conditional_counts=synonyms_radius1,
+            # First step: perform EM algorithm and fit IMB model 1
+            em_synonyms1 = self.expectation_max_ibm1(synonym_sample)
+            em_synonyms2 = self.expectation_max_ibm1(reversed_synonym_sample)
+            pmi_step1 = [self.phoneme_pmi(conditional_counts=em_synonyms1,
                                           l1=self.lang1,
                                           l2=self.lang2,
                                           wordlist=synonym_sample,
                                           ),
-                         self.phoneme_pmi(conditional_counts=synonyms_radius2,
+                         self.phoneme_pmi(conditional_counts=em_synonyms2,
                                           l1=self.lang2,
                                           l2=self.lang1,
                                           wordlist=reversed_synonym_sample,
