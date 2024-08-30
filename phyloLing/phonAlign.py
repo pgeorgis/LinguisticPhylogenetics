@@ -273,7 +273,7 @@ class Alignment:
         self.length = len(self.alignment)
 
 
-    def compact_gaps(self, complex_ngrams):
+    def compact_gaps(self, complex_ngrams, simple_ngrams):
         # Step 1: Extract bigrams and their aligned segments
         l1_bigrams, l2_bigrams, l1_bigram_segs, l2_bigram_segs = get_bigrams(complex_ngrams)
 
@@ -284,7 +284,7 @@ class Alignment:
         )
 
         # Step 3: Select best merge group(s)
-        merge_ranges = select_best_merge_group(list(merge_ranges), complex_ngrams, merge_candidates)
+        merge_ranges = self.select_best_merge_group(list(merge_ranges), complex_ngrams, simple_ngrams, merge_candidates)
 
         # Step 4: Apply merge operations
         for merge_range in merge_ranges:
@@ -331,8 +331,8 @@ class Alignment:
                         ):
                             merge_ranges.add(tuple(range(start_i, end_i)))
                             merge_candidates[tuple(range(start_i, end_i))] = (unigram_corr, bigram)
-                            break
-                        break
+                        #     break
+                        # break
         return merge_ranges, merge_candidates
 
     def handle_l1_bigram_gaps(self, gap, l1_bigrams, slices, complex_ngrams, merge_ranges, merge_candidates):
@@ -348,9 +348,60 @@ class Alignment:
                         ):
                             merge_ranges.add(tuple(range(start_i, end_i)))
                             merge_candidates[tuple(range(start_i, end_i))] = (bigram, unigram_corr)
-                            break
-                        break
+                        #     break
+                        # break
         return merge_ranges, merge_candidates
+
+    def get_merge_range_pmi(self, merge_range, complex_ngrams, simple_ngrams, merge_candidates):
+        """Calculate the PMI for an alignment if a range of alignment positions are to be merged."""
+        global_pmi = 0
+        for i, position in enumerate(self.alignment):
+            if i not in merge_range:
+                seg1, seg2 = position
+                global_pmi += simple_ngrams[Ngram(seg1).ngram].get(Ngram(seg2).ngram, 0)
+            else:
+                complex_pmi = complex_ngrams[merge_candidates[tuple(merge_range)][0]][merge_candidates[tuple(merge_range)][-1]]
+                global_pmi += complex_pmi
+
+        return global_pmi
+
+    def select_best_merge_group(self, merge_ranges, complex_ngrams, simple_ngrams, merge_candidates):
+        """Select the best merge groups based on PMI and conflicts."""
+        if len(merge_ranges) > 1:
+            merge_ranges = sorted(merge_ranges, key=lambda x: (x[0], x[-1]), reverse=True)
+            i = 0
+            while i < len(merge_ranges) - 1:
+                merge_range = merge_ranges[i]
+                next_merge_range = merge_ranges[i + 1]
+
+                # Check if ranges conflict
+                if merge_range and next_merge_range and min(merge_range) <= max(next_merge_range):
+                    # Resolve conflict and remove the weaker merge range
+                    to_remove = self.resolve_merge_range_conflict(
+                        merge_range, next_merge_range, complex_ngrams, simple_ngrams, merge_candidates
+                    )
+                    if to_remove is not None:
+                        merge_ranges.remove(to_remove)
+                    else:
+                        i += 1
+                else:
+                    i += 1
+
+        return [mr for mr in merge_ranges if mr is not None]
+
+    def resolve_merge_range_conflict(self, merge_range, next_merge_range, complex_ngrams, simple_ngrams, merge_candidates):
+        """Resolve conflict between two merge ranges based on PMI. Return the conflicting range to be removed."""
+        merge_range_pmi = self.get_merge_range_pmi(merge_range, complex_ngrams, simple_ngrams, merge_candidates)
+        next_merge_range_pmi = self.get_merge_range_pmi(next_merge_range, complex_ngrams, simple_ngrams, merge_candidates)
+
+        if merge_range_pmi > next_merge_range_pmi:
+            return next_merge_range  # Remove the next merge range
+        elif next_merge_range_pmi > merge_range_pmi:
+            return merge_range  # Remove the current merge range
+        else:
+            return None
+            # breakpoint()
+            # raise NotImplementedError("PMI is equal, conflict resolution not implemented.")
 
     def start_boundary(self):
         # ('<#', '<#')
@@ -657,46 +708,6 @@ def get_bigrams(complex_ngrams):
     return l1_bigrams, l2_bigrams, l1_bigram_segs, l2_bigram_segs
 
 
-def get_merge_range_pmi(merge_range, complex_ngrams, merge_candidates):
-    """Calculate the PMI for a given merge range."""
-    return complex_ngrams[merge_candidates[tuple(merge_range)][0]][merge_candidates[tuple(merge_range)][-1]]
-
-
-def select_best_merge_group(merge_ranges, complex_ngrams, merge_candidates):
-    """Select the best merge groups based on PMI and conflicts."""
-    if len(merge_ranges) > 1:
-        merge_ranges = sorted(merge_ranges, key=lambda x: (x[0], x[-1]), reverse=True)
-        i = 0
-        while i < len(merge_ranges) - 1:
-            merge_range = merge_ranges[i]
-            next_merge_range = merge_ranges[i + 1]
-
-            # Check if ranges conflict
-            if merge_range and next_merge_range and min(merge_range) <= max(next_merge_range):
-                # Resolve conflict and remove the weaker merge range
-                to_remove = resolve_merge_range_conflict(
-                    merge_range, next_merge_range, complex_ngrams, merge_candidates
-                )
-                merge_ranges.remove(to_remove)
-            else:
-                i += 1
-
-    return [mr for mr in merge_ranges if mr is not None]
-
-
-def resolve_merge_range_conflict(merge_range, next_merge_range, complex_ngrams, merge_candidates):
-    """Resolve conflict between two merge ranges based on PMI. Return the conflicting range to be removed."""
-    merge_range_pmi = get_merge_range_pmi(merge_range, complex_ngrams, merge_candidates)
-    next_merge_range_pmi = get_merge_range_pmi(next_merge_range, complex_ngrams, merge_candidates)
-
-    if merge_range_pmi > next_merge_range_pmi:
-        return next_merge_range  # Remove the next merge range
-    elif next_merge_range_pmi > merge_range_pmi:
-        return merge_range  # Remove the current merge range
-    else:
-        raise NotImplementedError("PMI is equal, conflict resolution not implemented.")
-
-
 def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_env=False):
     """Renders list of aligned segment pairs as an easily interpretable
     alignment string, with <{NULL_CH_DEFAULT}> representing null segments,
@@ -710,12 +721,14 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
     alignment = get_alignment_iter(alignment, phon_env)
     if phon_env:
         raise NotImplementedError('TODO needs to be updated for phon_env')  # TODO
+
     a = []
     for pair in alignment:
         pair = list(pair)
         for i, seg in enumerate(pair):
             if isinstance(seg, tuple):
-                pair[i] = SEG_JOIN_CH.join(seg)
+                flattened_seg = flatten_tuple(seg)
+                pair[i] = SEG_JOIN_CH.join(flattened_seg)
 
         seg1, seg2 = pair
         if gap_ch not in pair:
@@ -734,3 +747,13 @@ def undo_visual_align(visual_alignment, gap_ch=GAP_CH_DEFAULT):
     seg_pairs = visual_alignment.split(' / ')
     seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]
     return seg_pairs
+
+
+def flatten_tuple(nested_tuple):
+    flattened = []
+    for item in nested_tuple:
+        if isinstance(item, tuple):
+            flattened.extend(flatten_tuple(item))
+        else:
+            flattened.append(item)
+    return flattened

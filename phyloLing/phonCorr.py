@@ -394,7 +394,9 @@ class PhonCorrelator:
                 alignment.pad(ngram_size=max(2, ngram_size), pad_ch=pad_ch)
 
         if complex_ngrams:
-            alignment_list = self.compact_alignments(alignment_list, complex_ngrams)
+            alignment_list = self.compact_alignments(
+                alignment_list, complex_ngrams, simple_ngrams=added_penalty_dict
+            )
 
         if pad and remove_padding:
             for alignment in alignment_list:
@@ -406,9 +408,9 @@ class PhonCorrelator:
 
         return alignment_list
 
-    def compact_alignments(self, alignment_list, complex_ngrams):
+    def compact_alignments(self, alignment_list, complex_ngrams, simple_ngrams):
         for alignment in alignment_list:
-            alignment.compact_gaps(complex_ngrams)
+            alignment.compact_gaps(complex_ngrams, simple_ngrams)
         return alignment_list
 
     def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
@@ -533,7 +535,7 @@ class PhonCorrelator:
             # Prune any without at least min_corr occurrences
             null_compacter.prune(min_val=min_corr)
             self.complex_ngrams = null_compacter.select_valid_null_corrs()
-            compacted_alignments = self.compact_alignments(alignment_list, self.complex_ngrams)
+            compacted_alignments = self.compact_alignments(alignment_list, self.complex_ngrams, corr_counts)
             adjusted_corrs = self.correspondence_probs(
                 compacted_alignments,
                 ngram_size=ngram_size,
