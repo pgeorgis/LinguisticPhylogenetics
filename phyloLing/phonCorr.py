@@ -530,8 +530,8 @@ class PhonCorrelator:
 
         if compact_null:
             # complex_ngrams = null_compacter.combine_corrs()
-            # Prune any without at least 2 occurrences
-            null_compacter.prune(min_val=2)
+            # Prune any without at least min_corr occurrences
+            null_compacter.prune(min_val=min_corr)
             self.complex_ngrams = null_compacter.select_valid_null_corrs()
             compacted_alignments = self.compact_alignments(alignment_list, self.complex_ngrams)
             adjusted_corrs = self.correspondence_probs(
@@ -712,7 +712,7 @@ class PhonCorrelator:
             synonym_sample, diff_sample = sample
             reversed_synonym_sample = [(pair[-1], pair[0]) for pair in synonym_sample]
 
-            # First step: perform EM algorithm and fit IMB model 1
+            # First step: perform EM algorithm and fit IBM model 1
             em_synonyms1 = self.expectation_max_ibm1(synonym_sample)
             em_synonyms2 = self.expectation_max_ibm1(reversed_synonym_sample)
             pmi_step1 = [self.phoneme_pmi(conditional_counts=em_synonyms1,
