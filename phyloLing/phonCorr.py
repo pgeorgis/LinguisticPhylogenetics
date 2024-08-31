@@ -669,7 +669,7 @@ class PhonCorrelator:
     def calc_phoneme_pmi(self,
                          radius=1,  # TODO make configurable
                          p_threshold=0.05,
-                         max_iterations=1,
+                         max_iterations=3,
                          n_samples=5,
                          sample_size=0.8,
                          min_corr=3,
@@ -1055,7 +1055,7 @@ class PhonCorrelator:
 
     def calc_phoneme_surprisal(self,
                                radius=1,
-                               max_iterations=1,
+                               max_iterations=3,
                                p_threshold=0.1,
                                ngram_size=2,
                                gold=False,  # TODO add same with PMI?
