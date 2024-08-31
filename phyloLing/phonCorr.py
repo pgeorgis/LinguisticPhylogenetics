@@ -367,7 +367,7 @@ class PhonCorrelator:
     def align_wordlist(self,
                        wordlist,
                        added_penalty_dict=None,
-                       complex_ngrams=None,
+                       complex_ngrams=False,
                        ngram_size=1,
                        pad=True,
                        remove_padding=True,
@@ -395,7 +395,7 @@ class PhonCorrelator:
 
         if complex_ngrams:
             alignment_list = self.compact_alignments(
-                alignment_list, complex_ngrams, simple_ngrams=added_penalty_dict
+                alignment_list, self.complex_ngrams, simple_ngrams=added_penalty_dict
             )
 
         if pad and remove_padding:
@@ -535,6 +535,7 @@ class PhonCorrelator:
             # Prune any without at least min_corr occurrences
             null_compacter.prune(min_val=min_corr)
             self.complex_ngrams = null_compacter.select_valid_null_corrs()
+            #self.logger.info("Reset self.complex_ngrams") # TODO shouldn't be reset, should be passed as arg
             compacted_alignments = self.compact_alignments(alignment_list, self.complex_ngrams, corr_counts)
             adjusted_corrs = self.correspondence_probs(
                 compacted_alignments,
@@ -668,7 +669,7 @@ class PhonCorrelator:
     def calc_phoneme_pmi(self,
                          radius=1,  # TODO make configurable
                          p_threshold=0.05,
-                         max_iterations=10,
+                         max_iterations=1,
                          n_samples=5,
                          sample_size=0.8,
                          min_corr=3,
@@ -747,7 +748,8 @@ class PhonCorrelator:
 
             # while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration - 1]):
             # while (iteration < max_iterations) and (nc_thresholds[iteration - 1] not in [nc_thresholds[i] for i in range(max(0 , iteration - 2), iteration - 1)]):
-            while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0, iteration - 5), iteration)]):
+            #while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0, iteration - 5), iteration)]):
+            while iteration < max_iterations:
                 iteration += 1
 
                 # Align the qualifying words of the previous step using previous step's PMI
@@ -1053,7 +1055,7 @@ class PhonCorrelator:
 
     def calc_phoneme_surprisal(self,
                                radius=1,
-                               max_iterations=10,
+                               max_iterations=1,
                                p_threshold=0.1,
                                ngram_size=2,
                                gold=False,  # TODO add same with PMI?
@@ -1117,7 +1119,8 @@ class PhonCorrelator:
                 disqualified_words = defaultdict(lambda: [])
                 if cumulative:
                     all_cognate_alignments = []
-                while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration - 1]):
+                #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration - 1]):
+                while iteration < max_iterations:
                     iteration += 1
 
                     # Calculate surprisal from the qualifying alignments of the previous iteration
