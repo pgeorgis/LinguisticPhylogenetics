@@ -1,20 +1,20 @@
 VOWELS
-/e/ (0.093)
+/e/ (0.092)
 	<chitade> /kitˈaðe/ "CITY_NOUN"
 	<seguru> /seɣˈuru/ "SAFE_ADJ"
-	<berme> /bˈerme/ "WORM_NOUN"
+	<iscriere> /iskrˈiere/ "WRITE_VERB"
 
-/u/ (0.074)
-	<annu> /ˈanːu/ "YEAR_NOUN"
+/u/ (0.073)
+	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
 	<nigru> /nˈiɡru/ "BLACK_ADJ"
 	<prenu> /prˈenu/ "FULL_ADJ"
 
-/a/ (0.064)
+/a/ (0.065)
 	<guta> /ɡˈuta/ "DROP_NOUN"
 	<fortza> /fˈorʦa/ "STRENGTH_NOUN"
 	<issa> /ˈisːa/ "SHE_PRON"
 
-/ˈa/ (0.056)
+/ˈa/ (0.055)
 	<istade> /istˈaðe/ "SUMMER_NOUN"
 	<agu> /ˈaɣu/ "NEEDLE_NOUN"
 	<framma> /frˈamːa/ "FLAME_NOUN"
@@ -71,7 +71,7 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.086)
+/r/ (0.085)
 	<frútu> /frˈutu/ "FRUIT_NOUN"
 	<oricra> /orˈikra/ "EAR_NOUN"
 	<aranza> /arˈanʣa/ "SPIDER_NOUN"
@@ -81,12 +81,12 @@ CONSONANTS
 	<aranza> /arˈanʣa/ "SPIDER_NOUN"
 	<bighinu> /biɣˈinu/ "NEIGHBOR_NOUN"
 
-/k/ (0.045)
-	<iscriere> /iskrˈiere/ "WRITE_VERB"
+/k/ (0.044)
 	<chisina> /kˈisina/ "ASH_NOUN"
 	<chimbe> /kˈimbe/ "FIVE_NUM"
+	<coa> /kˈoa/ "TAIL_NOUN"
 
-/b/ (0.036)
+/b/ (0.035)
 	<bregunza> /breɣˈunʣa/ "SHAME_NOUN"
 	<boghe> /bˈoɣe/ "VOICE_NOUN"
 	<biteddu> /bitˈeɖːu/ "CALF_NOUN"
@@ -156,30 +156,30 @@ CONSONANTS
 	<isteddu> /istˈeɖːu/ "STAR_NOUN"
 	<bidda> /bˈiɖːa/ "TOWN_NOUN"
 
+/ʣ/ (0.006)
+	<mezus> /mˈeʣuzŭ/ "BETTER_ADV"
+	<foza> /fˈoʣa/ "LEAF_NOUN"
+	<miza> /mˈiʣa/ "THOUSAND_NUM"
+
 /j/ (0.006)
-	<cambiare> /kambjˈare/ "CHANGE_VERB"
-	<judighe> /jˈuðiɣe/ "JUDGE_NOUN"
+	<ischia> /ˈiskja/ "KNOW-SBJ-1SG_VERB"
+	<proja> /prˈoja/ "RAIN_NOUN"
 	<jerru> /jˈerːu/ "WINTER_NOUN"
 
-/ʣ/ (0.005)
-	<azu> /ˈaʣu/ "GARLIC_NOUN"
-	<fizu> /fˈiʣu/ "SON_NOUN"
-	<bregunza> /breɣˈunʣa/ "SHAME_NOUN"
+/sː/ (0.004)
+	<bassu> /bˈasːu/ "LOW_ADJ"
+	<issa> /ˈisːa/ "SHE_PRON"
+	<cassare> /kasːˈare/ "HUNT_VERB"
+
+/rː/ (0.004)
+	<jerru> /jˈerːu/ "WINTER_NOUN"
+	<corru> /kˈorːu/ "HORN_NOUN"
+	<narrere> /nˈarːere/ "SAY-INF_VERB"
 
 /ŋ/ (0.004)
 	<prànghere> /prˈaŋɡere/ "WEEP_VERB"
-	<brancu> /brˈaŋku/ "WHITE_ADJ"
-	<longu> /lˈoŋɡu/ "LONG_ADJ"
-
-/sː/ (0.004)
-	<issa> /ˈisːa/ "SHE_PRON"
-	<ossu> /ˈosːu/ "BONE_NOUN"
-	<bassu> /bˈasːu/ "LOW_ADJ"
-
-/rː/ (0.004)
-	<narrere> /nˈarːere/ "SAY-INF_VERB"
-	<corru> /kˈorːu/ "HORN_NOUN"
-	<terra> /tˈerːa/ "EARTH_NOUN"
+	<ungra> /ˈuŋɡra/ "FINGERNAIL_NOUN"
+	<ànghelu> /ˈaŋɡelu/ "ANGEL_NOUN"
 
 /nː/ (0.004)
 	<pinna> /pˈinːa/ "FEATHER_NOUN"
@@ -206,19 +206,18 @@ CONSONANTS
 	<líveru> /lˈiveru/ "FREE_ADJ"
 	<arvu> /ˈarvu/ "WHITE_ADJ"
 
-/lː/ (0.002)
-	<béllu> /bˈelːu/ "BEAUTIFUL (M)_ADJ"
-	<bélla> /bˈelːa/ "BEAUTIFUL (F)_ADJ"
-	<mille> /mˈilːe/ "THOUSAND_NUM"
-
 /bː/ (0.002)
 	<líbberu> /lˈibːeru/ "FREE_ADJ"
-	<abba> /ˈabːa/ "WATER_NOUN"
 	<babbu> /bˈabːu/ "FATHER_NOUN"
+	<abba> /ˈabːa/ "WATER_NOUN"
 
 /w/ (0.001)
 	<peraula> /perˈawla/ "WORD_NOUN"
 	<aguale> /aɡwˈale/ "EQUAL_ADJ"
+
+/lː/ (0.001)
+	<béllu> /bˈelːu/ "BEAUTIFUL (M)_ADJ"
+	<bélla> /bˈelːa/ "BEAUTIFUL (F)_ADJ"
 
 /ʃː/ (0.001)
 	<nesciúne> /neʃːˈune/ "NONE_PRON"

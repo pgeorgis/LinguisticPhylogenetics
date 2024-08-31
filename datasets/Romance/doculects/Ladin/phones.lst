@@ -4,7 +4,7 @@ VOWELS
 	<coda> /kˈoda/ "TAIL_NOUN"
 	<giamié> /ʥamjˈe/ "CHANGE_VERB"
 
-/ˈɛ/ (0.06)
+/ˈɛ/ (0.061)
 	<agnel> /aɲˈɛl/ "LAMB_NOUN"
 	<uef> /wˈɛf/ "EGG_NOUN"
 	<temp> /tˈɛmp/ "TIME_NOUN"
@@ -24,9 +24,9 @@ VOWELS
 	<legrema> /lˈɛɡrema/ "TEAR_NOUN"
 	<conesce> /konˈeʃe/ "BE ACQUAINTED WITH_VERB"
 
-/ˈo/ (0.028)
-	<dodesc> /dˈodeʃ/ "TWELVE_NUM"
-	<ousc> /ˈowʃ/ "VOICE_NOUN"
+/ˈo/ (0.029)
+	<gola> /ɡˈola/ "THROAT_NOUN"
+	<doi> /dˈoj/ "TWO (M)_NUM"
 	<soura> /sˈowra/ "ABOVE_PREP"
 
 /ˈi/ (0.028)
@@ -34,8 +34,8 @@ VOWELS
 	<regina> /reʥˈina/ "QUEEN_NOUN"
 	<mi> /mˈi/ "I_OBL_PRON"
 
-/ˈɔ/ (0.022)
-	<bo> /bˈɔ/ "OX_NOUN"
+/ˈɔ/ (0.021)
+	<sos> /sˈɔs/ "SAUCE_NOUN"
 	<os> /ˈɔs/ "BONE_NOUN"
 	<bona> /bˈɔna/ "GOOD (F.SG)_ADJ"
 
@@ -62,12 +62,12 @@ VOWELS
 
 
 CONSONANTS
-/l/ (0.066)
+/l/ (0.067)
 	<saulon> /sawlˈon/ "SAND_NOUN"
 	<soredl> /sorˈedl/ "SUN_NOUN"
 	<blanch> /blˈaŋk/ "WHITE_ADJ"
 
-/r/ (0.063)
+/r/ (0.062)
 	<farina> /farˈina/ "FLOUR_NOUN"
 	<cern> /ʨˈɛrn/ "MEAT_NOUN"
 	<gras> /ɡrˈas/ "FAT_NOUN"
@@ -87,7 +87,7 @@ CONSONANTS
 	<bones> /bˈɔnes/ "GOOD (F.PL)_ADJ"
 	<nost> /nˈɔst/ "OUR_ADJ"
 
-/j/ (0.034)
+/j/ (0.035)
 	<giamié> /ʥamjˈe/ "CHANGE_VERB"
 	<savei> /savˈej/ "KNOW_VERB"
 	<seida> /sˈejda/ "SILK_NOUN"
@@ -102,15 +102,15 @@ CONSONANTS
 	<cuer> /kwˈɛr/ "HEART_NOUN"
 	<cuessa> /kwˈɛsa/ "THIGH_NOUN"
 
-/p/ (0.029)
-	<parola> /parˈɔla/ "WORD_NOUN"
-	<Spagna> /ʃpˈaɲa/ "SPAIN_PROPN"
-	<piet> /pjˈɛt/ "BREAST_NOUN"
-
 /m/ (0.029)
-	<temp> /tˈɛmp/ "TIME_NOUN"
-	<me> /mˈe/ "I_OBL_PRON"
+	<femena> /fˈemena/ "WOMAN_NOUN"
 	<mer> /mˈɛr/ "SEA_NOUN"
+	<morde> /mˈɔrde/ "BITE_VERB"
+
+/p/ (0.029)
+	<temp> /tˈɛmp/ "TIME_NOUN"
+	<piedl> /pjˈɛdl/ "LOUSE_NOUN"
+	<Spagna> /ʃpˈaɲa/ "SPAIN_PROPN"
 
 /f/ (0.027)
 	<frut> /frˈut/ "FRUIT_NOUN"
@@ -143,7 +143,7 @@ CONSONANTS
 	<rejon> /reʒˈon/ "REASON_NOUN"
 
 /b/ (0.015)
-	<bocia> /bˈɔʨa/ "MOUTH_NOUN"
+	<bocia> /bˈoʨa/ "MOUTH_NOUN"
 	<bas> /bˈas/ "LOW_ADJ"
 	<bona> /bˈɔna/ "GOOD (F.SG)_ADJ"
 

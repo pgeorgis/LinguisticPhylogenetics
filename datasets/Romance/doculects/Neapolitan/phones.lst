@@ -1,159 +1,159 @@
 VOWELS
 /ə/ (0.201)
-	<ogna> /ˈoɲːə/ "FINGERNAIL_NOUN"
-	<catina> /katˈinə/ "CHAIN_NOUN"
-	<littera> /lˈitːəɾə/ "LETTER_NOUN"
+	<friddo> /fɾˈidːə/ "COLD_ADJ"
+	<vucca> /vˈukːə/ "MOUTH_NOUN"
+	<cima> /ʃˈimə/ "SUMMIT_NOUN"
 
 /ˈa/ (0.06)
+	<abbrucià> /abːruʃˈa/ "BURN_VERB"
+	<crapa> /kɾˈapə/ "GOAT_NOUN"
 	<vacca> /vˈakːə/ "COW_NOUN"
-	<mare> /mˈaɾə/ "SEA_NOUN"
-	<pace> /pˈaʃə/ "PEACE_NOUN"
 
 /ˈi/ (0.033)
-	<dire> /dˈiɾə/ "SAY-INF_VERB"
-	<cira> /ʃˈiɾə/ "WAX_NOUN"
-	<littera> /lˈitːəɾə/ "LETTER_NOUN"
+	<dormì> /doɾmˈi/ "SLEEP_VERB"
+	<rina> /rˈinə/ "SAND_NOUN"
+	<illa> /ˈilːə/ "SHE_PRON"
 
-/ˈu/ (0.033)
+/ˈu/ (0.032)
+	<nuje> /nˈujə/ "WE_PRON"
+	<vucca> /vˈukːə/ "MOUTH_NOUN"
 	<musca> /mˈuskə/ "FLY_NOUN"
-	<culo> /kˈulə/ "BUTTOCKS_NOUN"
-	<ciume> /ʃˈumːə/ "RIVER_NOUN"
 
-/ˈɔ/ (0.028)
+/ˈɔ/ (0.029)
+	<otto> /ˈɔtːə/ "EIGHT_NUM"
+	<vreògna> /vreˈɔɲːə/ "SHAME_NOUN"
 	<cuorpo> /kwˈɔɾpə/ "BODY_NOUN"
-	<cuollo> /kwˈɔlːə/ "NECK_NOUN"
-	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
 
 /ˈɛ/ (0.026)
-	<cennere> /ʃˈɛnːəɾə/ "ASH_NOUN"
+	<aniello> /anjˈɛlːə/ "RING_NOUN"
 	<cielo> /ʃˈɛlə/ "SKY_NOUN"
-	<sapè> /sapˈɛ/ "KNOW_VERB"
+	<cennere> /ʃˈɛnːəɾə/ "ASH_NOUN"
 
 /a/ (0.018)
-	<nata> /natˈa/ "SWIM_VERB"
-	<arba> /ˈaɾba/ "DAWN_NOUN"
-	<palazzo> /palˈaʦːə/ "PALACE_NOUN"
+	<astate> /astˈatə/ "SUMMER_NOUN"
+	<sapè> /sapˈɛ/ "KNOW_VERB"
+	<dragune> /draɡˈunə/ "DRAGON_NOUN"
 
 /ˈe/ (0.017)
+	<re> /rˈe/ "KING_NOUN"
+	<jénero> /jˈenəɾə/ "SON-IN-LAW_NOUN"
 	<pesce> /pˈeʃːə/ "FISH_NOUN"
-	<fécato> /fˈekatə/ "LIVER_NOUN"
-	<credere> /krˈeɾəɾə/ "BELIEVE_VERB"
 
 /i/ (0.015)
+	<lióne> /liˈonə/ "LION_NOUN"
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
-	<scrìvere> /ʃkɾˈiviɾə/ "WRITE_VERB"
-	<dieci> /djˈɛʃi/ "TEN_NUM"
+	<vinti> /vˈinti/ "TWENTY_NUM"
 
 /ˈo/ (0.013)
 	<cunosce> /kunˈoʃːə/ "BE ACQUAINTED WITH_VERB"
+	<gióvene> /ʤˈovənə/ "YOUNG_ADJ"
 	<notte> /nˈotːə/ "NIGHT_NOUN"
-	<ogna> /ˈoɲːə/ "FINGERNAIL_NOUN"
 
-/u/ (0.011)
-	<murì> /muɾˈi/ "DIE_VERB"
+/u/ (0.01)
 	<isula> /ˈisulə/ "ISLAND_NOUN"
-	<cunosce> /kunˈoʃːə/ "BE ACQUAINTED WITH_VERB"
+	<culóre> /kulˈoɾə/ "COLOR_NOUN"
+	<uguàli> /uɡwˈali/ "EQUAL_ADJ"
 
 /e/ (0.006)
-	<perucchjo> /peɾˈukːjə/ "LOUSE_NOUN"
-	<semmana> /semːˈanə/ "WEEK_NOUN"
-	<che> /ke/ "WHAT_PRON"
+	<cerasa> /ʃeɾˈasə/ "CHERRY_NOUN"
+	<vellìculo> /velːˈikulə/ "NAVEL_NOUN"
+	<fame> /fˈame/ "HUNGER_NOUN"
 
 /o/ (0.004)
 	<dormì> /doɾmˈi/ "SLEEP_VERB"
-	<quatto> /kwˈatːo/ "FOUR_NUM"
 	<viento> /vjˈɛnto/ "WIND_NOUN"
+	<romano> /romˈanə/ "ROMAN_ADJ"
 
 
 
 CONSONANTS
-/ɾ/ (0.051)
+/ɾ/ (0.052)
 	<verde> /vˈeɾdə/ "GREEN_ADJ"
+	<dire> /dˈiɾə/ "SAY-INF_VERB"
 	<erva> /ˈɛɾvə/ "GRASS_NOUN"
-	<trei> /tɾˈej/ "THREE_NUM"
 
-/n/ (0.05)
+/n/ (0.051)
+	<vinti> /vˈinti/ "TWENTY_NUM"
 	<notte> /nˈotːə/ "NIGHT_NOUN"
 	<panza> /pˈanʦə/ "BELLY_NOUN"
-	<canto> /kˈantə/ "SONG_NOUN"
 
 /k/ (0.045)
-	<coda> /kˈoɾə/ "TAIL_NOUN"
-	<che> /ke/ "WHAT_PRON"
-	<chiave> /kjˈavə/ "KEY_NOUN"
+	<capillo> /kəpˈilːə/ "HAIR_NOUN"
+	<lacrima> /lˈakɾimə/ "TEAR_NOUN"
+	<janco> /jˈaŋkə/ "WHITE_ADJ"
 
 /t/ (0.039)
-	<studio> /ʃtˈudjə/ "STUDY_NOUN"
+	<curto> /kˈuɾtə/ "SHORT_ADJ"
+	<astate> /astˈatə/ "SUMMER_NOUN"
 	<putè> /putˈɛ/ "CAN_VERB"
-	<terra> /tˈɛrːə/ "EARTH_NOUN"
 
 /j/ (0.033)
-	<nuje> /nˈujə/ "WE_PRON"
+	<uocchio> /wˈɔkːjə/ "EYE_NOUN"
+	<janco> /jˈaŋkə/ "WHITE_ADJ"
 	<fierro> /fjˈɛrːə/ "IRON_NOUN"
-	<jorno> /jˈornə/ "DAY_NOUN"
 
-/l/ (0.029)
-	<lióne> /liˈonə/ "LION_NOUN"
-	<sole> /sˈolə/ "SUN_NOUN"
-	<luoco> /lwˈɔkə/ "PLACE_NOUN"
-
-/v/ (0.028)
+/v/ (0.029)
+	<uovo> /wˈɔvə/ "EGG_NOUN"
+	<vue> /vˈuə/ "OX_NOUN"
 	<vino> /vˈinə/ "WINE_NOUN"
-	<viaggio> /vjˈaʤːə/ "JOURNEY_NOUN"
-	<nòve> /nˈɔvə/ "NINE_NUM"
 
 /p/ (0.028)
-	<sapè> /sapˈɛ/ "KNOW_VERB"
-	<parola> /paɾˈɔlə/ "WORD_NOUN"
-	<spina> /ʃpˈinə/ "SPINE_NOUN"
+	<pella> /pˈɛlːə/ "SKIN_NOUN"
+	<preta> /pɾˈɛtə/ "STONE_NOUN"
+	<pere> /pˈɛɾə/ "FOOT_NOUN"
 
-/ʃ/ (0.024)
-	<scrìvere> /ʃkɾˈiviɾə/ "WRITE_VERB"
-	<cima> /ʃˈimə/ "SUMMIT_NOUN"
+/l/ (0.028)
+	<lióne> /liˈonə/ "LION_NOUN"
+	<luce> /lˈuʃə/ "LIGHT_NOUN"
+	<parola> /paɾˈɔlə/ "WORD_NOUN"
+
+/w/ (0.024)
+	<acqua> /ˈakːwə/ "WATER_NOUN"
+	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
 	<auciello> /awʃˈɛlːə/ "BIRD_NOUN"
 
-/w/ (0.023)
-	<lengua> /lˈeŋɡwə/ "TONGUE_NOUN"
-	<buona> /bwˈɔnə/ "GOOD (F.SG)_ADJ"
-	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
+/ʃ/ (0.023)
+	<judice> /jˈudiʃə/ "JUDGE_NOUN"
+	<scuro> /ʃkˈuɾə/ "DARK_ADJ"
+	<cima> /ʃˈimə/ "SUMMIT_NOUN"
 
 /s/ (0.02)
+	<sole> /sˈolə/ "SUN_NOUN"
 	<isula> /ˈisulə/ "ISLAND_NOUN"
-	<sette> /sˈɛtːə/ "SEVEN_NUM"
-	<cerasa> /ʃeɾˈasə/ "CHERRY_NOUN"
+	<sapè> /sapˈɛ/ "KNOW_VERB"
 
-/m/ (0.017)
+/m/ (0.018)
+	<mille> /mˈilːə/ "THOUSAND_NUM"
+	<magnà> /məɲːˈa/ "EAT_VERB"
 	<maturu> /matˈuɾə/ "MATURE_NOUN"
-	<dormì> /doɾmˈi/ "SLEEP_VERB"
-	<tiempo> /tjˈɛmpə/ "TIME_NOUN"
-
-/f/ (0.016)
-	<femmena> /fˈemːənə/ "WOMAN_NOUN"
-	<fierro> /fjˈɛrːə/ "IRON_NOUN"
-	<fà> /fˈa/ "DO_VERB"
 
 /r/ (0.015)
-	<radeca> /raɾˈekə/ "ROOT_NOUN"
-	<vreògna> /vreˈɔɲːə/ "SHAME_NOUN"
-	<abbrucià> /abːruʃˈa/ "BURN_VERB"
+	<puorca> /pwˈɔrkə/ "SOW_NOUN"
+	<ragiune> /raʤˈunə/ "REASON_NOUN"
+	<credere> /krˈeɾəɾə/ "BELIEVE_VERB"
+
+/f/ (0.015)
+	<festa> /fˈɛstə/ "PARTY_NOUN"
+	<figlio> /fˈiʎːə/ "SON_NOUN"
+	<fine> /fˈinə/ "END_NOUN"
 
 /d/ (0.013)
 	<caudo> /kˈawdə/ "HOT_ADJ"
-	<dùrece> /dˈuɾəʃə/ "TWELVE_NUM"
-	<studio> /ʃtˈudjə/ "STUDY_NOUN"
+	<doce> /dˈoʃə/ "SWEET_ADJ"
+	<duje> /dˈujə/ "TWO (F)_NUM"
 
 /lː/ (0.011)
-	<agniello> /aɲjˈɛlːə/ "LAMB_NOUN"
 	<cuollo> /kwˈɔlːə/ "NECK_NOUN"
 	<piccirillo> /piʧːˈiɾilːə/ "SMALL_ADJ"
+	<biello> /bjˈɛlːə/ "BEAUTIFUL (M)_ADJ"
 
-/tː/ (0.009)
-	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
+/tː/ (0.01)
 	<quatto> /kwˈatːo/ "FOUR_NUM"
-	<sette> /sˈɛtːə/ "SEVEN_NUM"
+	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
+	<gatto> /ɡˈatːə/ "CAT_NOUN"
 
 /ɲː/ (0.009)
-	<magnà> /məɲːˈa/ "EAT_VERB"
+	<ligno> /lˈiɲːə/ "WOOD_NOUN"
 	<Spagna> /spˈaɲːə/ "SPAIN_PROPN"
 	<chiagnere> /kjˈaɲːəɾə/ "WEEP_VERB"
 

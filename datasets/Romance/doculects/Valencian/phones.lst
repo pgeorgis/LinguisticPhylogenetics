@@ -1,18 +1,18 @@
 VOWELS
-/ˈa/ (0.065)
+/ˈa/ (0.066)
 	<faig> /fˈaʧ/ "DO-1SG_VERB"
 	<estat> /estˈat/ "STATE_NOUN"
 	<clamar> /klamˈar/ "CALL_VERB"
 
-/e/ (0.036)
+/e/ (0.035)
 	<bones> /bˈɒnes/ "GOOD (F.PL)_ADJ"
 	<vedell> /veðˈeʎ/ "CALF_NOUN"
-	<vergonya> /verɡˈoɲɞ/ "SHAME_NOUN"
+	<petit> /petˈit/ "SMALL_ADJ"
 
 /ˈi/ (0.034)
-	<riu> /rˈiw/ "RIVER_NOUN"
-	<dic> /dˈik/ "SAY-1SG_VERB"
-	<mil> /mˈil/ "THOUSAND_NUM"
+	<via> /vˈiɐ/ "ROAD_NOUN"
+	<dir> /dˈir/ "SAY-INF_VERB"
+	<vila> /vˈilɐ/ "TOWN_NOUN"
 
 /ˈɒ/ (0.033)
 	<home> /ˈɒmɞ/ "MAN_NOUN"
@@ -24,19 +24,19 @@ VOWELS
 	<argila> /arʤˈilɐ/ "CLAY_NOUN"
 	<agulla> /aɣˈuʎɐ/ "NEEDLE_NOUN"
 
-/ˈe/ (0.031)
-	<reina> /rˈejnɜ/ "QUEEN_NOUN"
-	<bé> /bˈe/ "WELL (ADV)_ADV"
-	<néixer> /nˈeʃer/ "BE BORN_VERB"
-
 /ˈæ/ (0.03)
-	<seda> /sˈæðɜ/ "SILK_NOUN"
-	<verd> /vˈært/ "GREEN_ADJ"
-	<penya> /pˈæɲɜ/ "FEATHER_NOUN"
+	<ovella> /uvˈæʎɜ/ "SHEEP_NOUN"
+	<hivern> /ivˈærn/ "WINTER_NOUN"
+	<cendre> /sˈændɾɜ/ "ASH_NOUN"
 
-/ɜ/ (0.025)
-	<cadena> /kaðˈænɜ/ "CHAIN_NOUN"
-	<reina> /rˈejnɜ/ "QUEEN_NOUN"
+/ˈe/ (0.03)
+	<ella> /ˈeʎɜ/ "SHE_PRON"
+	<anyell> /aɲˈeʎ/ "LAMB_NOUN"
+	<ell> /ˈeʎ/ "HE_PRON"
+
+/ɜ/ (0.024)
+	<cirera> /siɾˈeɾɜ/ "CHERRY_NOUN"
+	<veure> /vˈæwɾɜ/ "SEE_VERB"
 	<bella> /bˈeʎɜ/ "BEAUTIFUL (F)_ADJ"
 
 /ˈu/ (0.024)
@@ -64,25 +64,25 @@ VOWELS
 	<gola> /ɡˈolɞ/ "THROAT_NOUN"
 	<oca> /ˈɒkɞ/ "GOOSE_NOUN"
 
-/i/ (0.011)
+/i/ (0.01)
 	<mitat> /mitˈat/ "HALF_NOUN"
 	<igual> /iɣwˈal/ "EQUAL_ADJ"
-	<estudi> /estˈuði/ "STUDY_NOUN"
+	<llàgrima> /ʎˈaɣɾimɐ/ "TEAR_NOUN"
 
 
 
 CONSONANTS
-/s/ (0.061)
-	<bons> /bˈɒns/ "GOOD (M.PL)_ADJ"
-	<espina> /espˈinɐ/ "SPINE_NOUN"
-	<saps> /sˈaps/ "KNOW-2SG_VERB"
+/s/ (0.06)
+	<sana> /sˈanɐ/ "HEALTHY (F)_ADJ"
+	<estat> /estˈat/ "STATE_NOUN"
+	<sabut> /saβˈut/ "KNOWN_VERB"
 
-/r/ (0.049)
+/r/ (0.05)
 	<néixer> /nˈeʃer/ "BE BORN_VERB"
 	<dir> /dˈir/ "SAY-INF_VERB"
 	<argila> /arʤˈilɐ/ "CLAY_NOUN"
 
-/t/ (0.047)
+/t/ (0.046)
 	<mort> /mˈɒrt/ "DEATH_NOUN"
 	<set> /sˈæt/ "SEVEN_NUM"
 	<estat> /estˈat/ "STATE_NOUN"
@@ -92,32 +92,32 @@ CONSONANTS
 	<obscur> /upskˈur/ "DARK_ADJ"
 	<clamar> /klamˈar/ "CALL_VERB"
 
-/ɾ/ (0.041)
+/ɾ/ (0.042)
 	<plorar> /pluɾˈar/ "WEEP_VERB"
 	<lliure> /ʎˈiwɾe/ "FREE_ADJ"
 	<cera> /sˈeɾɜ/ "WAX_NOUN"
 
-/n/ (0.04)
+/n/ (0.041)
 	<ànima> /ˈanimɐ/ "SOUL_NOUN"
 	<nou> /nˈɒw/ "NUT_NOUN"
 	<nit> /nˈit/ "NIGHT_NOUN"
 
-/ʎ/ (0.036)
+/ʎ/ (0.037)
 	<llombrígol> /ʎumbɾˈiɡul/ "NAVEL_NOUN"
 	<fill> /fˈiʎ/ "SON_NOUN"
 	<ull> /ˈuʎ/ "EYE_NOUN"
 
-/l/ (0.036)
+/l/ (0.035)
+	<salut> /salˈut/ "HEALTH_NOUN"
 	<pèl> /pˈæl/ "HAIR_NOUN"
-	<ple> /plˈæ/ "FULL_ADJ"
-	<sol> /sˈɒl/ "SUN_NOUN"
+	<dolç> /dˈols/ "SWEET_ADJ"
 
 /p/ (0.032)
 	<pell> /pˈeʎ/ "SKIN_NOUN"
 	<petit> /petˈit/ "SMALL_ADJ"
 	<punt> /pˈunt/ "POINT_NOUN"
 
-/m/ (0.031)
+/m/ (0.032)
 	<cima> /sˈimɐ/ "SUMMIT_NOUN"
 	<mossegar> /museɣˈar/ "BITE_VERB"
 	<llombrígol> /ʎumbɾˈiɡul/ "NAVEL_NOUN"
@@ -132,10 +132,10 @@ CONSONANTS
 	<vindre> /vˈindɾe/ "COME-INF_VERB"
 	<cavall> /kavˈaʎ/ "HORSE_NOUN"
 
-/f/ (0.019)
-	<fetge> /fˈeʤɜ/ "LIVER_NOUN"
-	<fil> /fˈil/ "STRING_NOUN"
-	<fin> /fˈi/ "THIN_ADJ"
+/f/ (0.018)
+	<festa> /fˈestɜ/ "PARTY_NOUN"
+	<fort> /fˈɒrt/ "STRONG_ADJ"
+	<fembra> /fˈæmbrɜ/ "WOMAN_NOUN"
 
 /ʤ/ (0.017)
 	<jove> /ʤˈovɞ/ "YOUNG_ADJ"
@@ -147,12 +147,12 @@ CONSONANTS
 	<deu> /dˈæw/ "TEN_NUM"
 	<drac> /dɾˈak/ "DRAGON_NOUN"
 
-/ɡ/ (0.012)
+/ɡ/ (0.013)
 	<ungla> /ˈuŋɡlɐ/ "FINGERNAIL_NOUN"
 	<guatlla> /ɡwˈaɫːɐ/ "QUAIL_NOUN"
 	<llengua> /ʎˈæŋɡwɜ/ "TONGUE_NOUN"
 
-/b/ (0.012)
+/b/ (0.013)
 	<fembra> /fˈæmbrɜ/ "WOMAN_NOUN"
 	<bany> /bˈaɲ/ "BATH_NOUN"
 	<bons> /bˈɒns/ "GOOD (M.PL)_ADJ"
@@ -162,20 +162,20 @@ CONSONANTS
 	<puny> /pˈuɲ/ "FIST_NOUN"
 	<plànyer> /plˈaɲer/ "WEEP_VERB"
 
-/ð/ (0.009)
-	<seda> /sˈæðɜ/ "SILK_NOUN"
-	<nedar> /neðˈar/ "SWIM_VERB"
-	<estudi> /estˈuði/ "STUDY_NOUN"
-
 /β/ (0.009)
-	<llebre> /ʎˈeβɾɜ/ "HARE_NOUN"
+	<pobre> /pˈɒβɾɞ/ "POOR_ADJ"
+	<obra> /ˈɒβɾɞ/ "WORK_NOUN"
 	<arbre> /ˈaβɾe/ "TREE_NOUN"
-	<alba> /ˈalβɐ/ "DAWN_NOUN"
 
-/ɣ/ (0.009)
-	<segle> /sˈeɣlɜ/ "CENTURY_NOUN"
-	<plaga> /plˈaɣɐ/ "PLAGUE_NOUN"
+/ð/ (0.009)
+	<vida> /vˈiðɐ/ "LIFE_NOUN"
+	<pedra> /pˈeðɾɜ/ "STONE_NOUN"
+	<cadena> /kaðˈænɜ/ "CHAIN_NOUN"
+
+/ɣ/ (0.008)
 	<dragó> /dɾaɣˈo/ "DRAGON_NOUN"
+	<segur> /seɣˈur/ "SAFE_ADJ"
+	<espiga> /espˈiɣɐ/ "EAR OF GRAIN_NOUN"
 
 /j/ (0.007)
 	<canviar> /kamvjˈar/ "CHANGE_VERB"

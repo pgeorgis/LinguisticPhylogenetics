@@ -1,40 +1,40 @@
 VOWELS
-/u/ (0.081)
+/u/ (0.08)
 	<fridu> /frˈiðu/ "COLD_ADJ"
-	<àteru> /ˈateru/ "OTHER_ADJ"
-	<ierru> /jˈerːu/ "WINTER_NOUN"
+	<nostru> /nˈostru/ "OUR_ADJ"
+	<paragula> /parˈaɣula/ "WORD_NOUN"
 
 /i/ (0.074)
 	<ponti> /pˈonti/ "BRIDGE_NOUN"
 	<belari> /belˈari/ "FREEZE_VERB"
 	<colori> /kolˈori/ "COLOR_NOUN"
 
-/a/ (0.069)
+/a/ (0.07)
 	<pedra> /pˈeðra/ "STONE_NOUN"
 	<issa> /ˈisːa/ "SHE_PRON"
 	<Ispagna> /ispˈaɲːa/ "SPAIN_PROPN"
 
-/ˈa/ (0.058)
-	<nàsu> /nˈazu/ "NOSE_NOUN"
+/ˈa/ (0.057)
+	<àteru> /ˈateru/ "OTHER_ADJ"
 	<cuatru> /kwˈatru/ "FOUR_NUM"
 	<cambiari> /kambjˈari/ "CHANGE_VERB"
 
-/ˈo/ (0.043)
+/ˈo/ (0.044)
 	<leòni> /leˈoni/ "LION_NOUN"
 	<atógnu> /atˈoɲːu/ "AUTUMN_NOUN"
 	<nos> /nˈos/ "WE_PRON"
 
-/ˈi/ (0.04)
+/ˈi/ (0.041)
 	<ischis> /iskˈis/ "KNOW-2SG_VERB"
 	<lítera> /lˈitera/ "LETTER_NOUN"
 	<nia> /nˈia/ "SNOW_NOUN"
 
-/ˈe/ (0.04)
+/ˈe/ (0.041)
 	<ierru> /jˈerːu/ "WINTER_NOUN"
 	<femina> /fˈemina/ "WOMAN_NOUN"
 	<bélla> /bˈelːa/ "BEAUTIFUL (F)_ADJ"
 
-/e/ (0.032)
+/e/ (0.033)
 	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
 	<leòni> /leˈoni/ "LION_NOUN"
 	<lege> /lˈeʤe/ "LAW_NOUN"
@@ -71,7 +71,7 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.074)
+/r/ (0.075)
 	<arangia> /arˈanʤa/ "SPIDER_NOUN"
 	<framma> /frˈamːa/ "FLAME_NOUN"
 	<coru> /kˈoru/ "HEART_NOUN"
@@ -81,7 +81,7 @@ CONSONANTS
 	<centu> /ʧˈentu/ "HUNDRED_NUM"
 	<spina> /spˈina/ "SPINE_NOUN"
 
-/k/ (0.035)
+/k/ (0.034)
 	<cincu> /ʧˈiŋku/ "FIVE_NUM"
 	<chisina> /kˈisina/ "ASH_NOUN"
 	<cassài> /kasːˈai/ "HUNT_VERB"
@@ -91,7 +91,7 @@ CONSONANTS
 	<peraula> /perˈawla/ "WORD_NOUN"
 	<fàlsu> /fˈalsu/ "FALSE_ADJ"
 
-/t/ (0.032)
+/t/ (0.033)
 	<morti> /mˈorti/ "DEATH_NOUN"
 	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
 	<centu> /ʧˈentu/ "HUNDRED_NUM"
@@ -101,7 +101,7 @@ CONSONANTS
 	<festa> /fˈesta/ "PARTY_NOUN"
 	<istàdu> /istˈaðu/ "STATE_NOUN"
 
-/b/ (0.032)
+/b/ (0.031)
 	<bídere> /bˈiðerĕ/ "SEE_VERB"
 	<binti> /bˈinti/ "TWENTY_NUM"
 	<bonas> /bˈonază/ "GOOD (F.PL)_ADJ"
@@ -121,105 +121,105 @@ CONSONANTS
 	<frúmini> /frˈumini/ "RIVER_NOUN"
 	<fridu> /frˈiðu/ "COLD_ADJ"
 
-/j/ (0.015)
-	<proja> /prˈoja/ "RAIN_NOUN"
-	<dai> /dˈaj/ "GIVE_VERB"
-	<noi> /nˈoj/ "NINE_NUM"
-
-/ɣ/ (0.013)
-	<logu> /lˈoɣu/ "PLACE_NOUN"
-	<jogu> /jˈoɣu/ "GAME_NOUN"
+/ɣ/ (0.014)
 	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
+	<lughe> /lˈuɣe/ "LIGHT_NOUN"
+	<imbíligu> /imbˈiliɣu/ "NAVEL_NOUN"
 
-/z/ (0.013)
-	<tres> /trˈezĕ/ "THREE_NUM"
-	<corpus> /kˈorpuzŭ/ "BODY_NOUN"
-	<mésu> /mˈezu/ "MIDDLE_NOUN"
+/z/ (0.014)
+	<témpus> /tˈempuzŭ/ "TIME_NOUN"
+	<isula> /ˈizula/ "ISLAND_NOUN"
+	<ses> /sˈezĕ/ "SIX_NUM"
 
-/d/ (0.013)
-	<duos> /dˈuozŏ/ "TWO (M)_NUM"
-	<mandigari> /mandiɣˈari/ "EAT_VERB"
-	<dormiri> /dormˈiri/ "SLEEP_VERB"
+/j/ (0.014)
+	<oju> /ˈoju/ "EYE_NOUN"
+	<noi> /nˈoj/ "NINE_NUM"
+	<ciai> /ʧˈaj/ "KEY_NOUN"
+
+/d/ (0.014)
+	<tundu> /tˈundu/ "ROUND_ADJ"
+	<dragoni> /draɣˈoni/ "DRAGON_NOUN"
+	<birdi> /bˈirdi/ "GREEN_ADJ"
 
 /ð/ (0.013)
-	<nébida> /nˈeβiða/ "FOG_NOUN"
-	<fígadu> /fˈiɣaðu/ "LIVER_NOUN"
-	<istadi> /istˈaði/ "SUMMER_NOUN"
+	<fada> /fˈaða/ "FATE_NOUN"
+	<pedra> /pˈeðra/ "STONE_NOUN"
+	<fridu> /frˈiðu/ "COLD_ADJ"
 
 /β/ (0.009)
+	<nobu> /nˈoβu/ "NEW_ADJ"
 	<craba> /krˈaβa/ "GOAT_NOUN"
 	<nébida> /nˈeβiða/ "FOG_NOUN"
-	<cabaddu> /kaβˈaɖːu/ "HORSE_NOUN"
 
 /ʧ/ (0.008)
-	<ciamari> /ʧamˈari/ "CALL_VERB"
 	<bocíere> /boʧˈiere/ "KILL_VERB"
+	<ciamari> /ʧamˈari/ "CALL_VERB"
 	<cera> /ʧˈera/ "WAX_NOUN"
 
-/ɡ/ (0.008)
-	<guta> /ɡˈuta/ "DROP_NOUN"
+/ʒ/ (0.007)
+	<scroxu> /skrˈoʒu/ "BARK_NOUN"
+	<bixinu> /biʒˈinu/ "NEIGHBOR_NOUN"
+	<nugi> /nˈuʒi/ "NUT_NOUN"
+
+/ɡ/ (0.007)
 	<unga> /ˈuŋɡa/ "FINGERNAIL_NOUN"
 	<sanguini> /sˈaŋɡwini/ "BLOOD_NOUN"
-
-/ʒ/ (0.007)
-	<argidda> /arʒˈiɖːa/ "CLAY_NOUN"
-	<cruxi> /krˈuʒi/ "CROSS_NOUN"
-	<scroxu> /skrˈoʒu/ "BARK_NOUN"
+	<nigru> /nˈiɡru/ "BLACK_ADJ"
 
 /ɖː/ (0.007)
-	<cabaddu> /kaβˈaɖːu/ "HORSE_NOUN"
 	<bidda> /bˈiɖːa/ "TOWN_NOUN"
-	<isteddu> /istˈeɖːu/ "STAR_NOUN"
-
-/ŋ/ (0.006)
-	<longu> /lˈoŋɡu/ "LONG_ADJ"
-	<unga> /ˈuŋɡa/ "FINGERNAIL_NOUN"
-	<biàncu> /bjˈaŋku/ "WHITE_ADJ"
+	<cabaddu> /kaβˈaɖːu/ "HORSE_NOUN"
+	<biteddu> /bitˈeɖːu/ "CALF_NOUN"
 
 /w/ (0.006)
-	<cincuanta> /ʧiŋkwˈanta/ "FIFTY_NUM"
-	<cuatru> /kwˈatru/ "FOUR_NUM"
 	<peraula> /perˈawla/ "WORD_NOUN"
+	<aguali> /aɡwˈali/ "EQUAL_ADJ"
+	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
 
 /rː/ (0.006)
-	<narrere> /nˈarːere/ "SAY-INF_VERB"
-	<carri> /kˈarːi/ "MEAT_NOUN"
 	<ierru> /jˈerːu/ "WINTER_NOUN"
+	<carri> /kˈarːi/ "MEAT_NOUN"
+	<terra> /tˈerːa/ "EARTH_NOUN"
 
 /ʤ/ (0.005)
-	<pràngiri> /prˈanʤiri/ "WEEP_VERB"
-	<àngelu> /ˈanʤelu/ "ANGEL_NOUN"
 	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
+	<arangia> /arˈanʤa/ "SPIDER_NOUN"
+	<lege> /lˈeʤe/ "LAW_NOUN"
 
-/ʣ/ (0.004)
+/ʣ/ (0.005)
 	<fizu> /fˈiʣu/ "SON_NOUN"
-	<fiza> /fˈiʣa/ "DAUGHTER_NOUN"
 	<azu> /ˈaʣu/ "GARLIC_NOUN"
+	<foza> /fˈoʣa/ "LEAF_NOUN"
+
+/ŋ/ (0.005)
+	<unga> /ˈuŋɡa/ "FINGERNAIL_NOUN"
+	<longu> /lˈoŋɡu/ "LONG_ADJ"
+	<sanguini> /sˈaŋɡwini/ "BLOOD_NOUN"
 
 /sː/ (0.004)
-	<issa> /ˈisːa/ "SHE_PRON"
-	<ossu> /ˈosːu/ "BONE_NOUN"
 	<cassài> /kasːˈai/ "HUNT_VERB"
+	<ossu> /ˈosːu/ "BONE_NOUN"
+	<issu> /ˈisːu/ "HE_PRON"
 
 /nː/ (0.004)
-	<bènniri> /bˈenːiri/ "COME-INF_VERB"
-	<linna> /lˈinːa/ "WOOD_NOUN"
+	<annu> /ˈanːu/ "YEAR_NOUN"
 	<pinna> /pˈinːa/ "FEATHER_NOUN"
-
-/ʦ/ (0.003)
-	<curtzu> /kˈurʦu/ "SHORT_ADJ"
-	<fortza> /fˈorʦa/ "STRENGTH_NOUN"
-	<putzu> /pˈuʦu/ "WELL_NOUN"
+	<linna> /lˈinːa/ "WOOD_NOUN"
 
 /ʃː/ (0.003)
-	<nesciúni> /neʃːˈuni/ "NONE_PRON"
+	<nasciri> /nˈaʃːiri/ "BE BORN_VERB"
 	<pisci> /pˈiʃːi/ "FISH_NOUN"
 	<bàsciu> /bˈaʃːu/ "LOW_ADJ"
 
 /v/ (0.003)
-	<arvu> /ˈarvu/ "WHITE_ADJ"
-	<líveru> /lˈiveru/ "FREE_ADJ"
 	<alvu> /ˈalvu/ "WHITE_ADJ"
+	<arvu> /ˈarvu/ "WHITE_ADJ"
+	<iscrivere> /iskrˈivere/ "WRITE_VERB"
+
+/ʦ/ (0.002)
+	<fortza> /fˈorʦa/ "STRENGTH_NOUN"
+	<putzu> /pˈuʦu/ "WELL_NOUN"
+	<curtzu> /kˈurʦu/ "SHORT_ADJ"
 
 /ɲː/ (0.002)
 	<bagnu> /bˈaɲːu/ "BATH_NOUN"
@@ -227,9 +227,8 @@ CONSONANTS
 	<Ispagna> /ispˈaɲːa/ "SPAIN_PROPN"
 
 /lː/ (0.002)
-	<milli> /mˈilːi/ "THOUSAND_NUM"
-	<bélla> /bˈelːa/ "BEAUTIFUL (F)_ADJ"
 	<béllu> /bˈelːu/ "BEAUTIFUL (M)_ADJ"
+	<bélla> /bˈelːa/ "BEAUTIFUL (F)_ADJ"
 
 /bː/ (0.002)
 	<babbu> /bˈabːu/ "FATHER_NOUN"

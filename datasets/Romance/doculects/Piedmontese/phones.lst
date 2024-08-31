@@ -31,7 +31,7 @@ VOWELS
 
 /ˈu/ (0.028)
 	<mosca> /mˈuska/ "FLY_NOUN"
-	<dódes> /dˈudes/ "TWELVE_NUM"
+	<dódes> /dˈudez/ "TWELVE_NUM"
 	<doi> /dˈuj/ "TWO (M)_NUM"
 
 /e/ (0.025)
@@ -79,65 +79,70 @@ CONSONANTS
 	<fer> /fˈɛr/ "IRON_NOUN"
 	<ors> /ˈurs/ "BEAR_NOUN"
 
-/s/ (0.066)
-	<spin-a> /spˈiŋa/ "SPINE_NOUN"
-	<còsta> /kˈɔsta/ "COAST_NOUN"
-	<mosca> /mˈuska/ "FLY_NOUN"
+/s/ (0.056)
+	<giassa> /ʤˈasa/ "ICE_NOUN"
+	<cheussa> /kˈøsa/ "THIGH_NOUN"
+	<pòrs> /pˈɔrs/ "PIG_NOUN"
 
 /l/ (0.049)
-	<pel> /pˈɛl/ "SKIN_NOUN"
-	<mila> /mˈila/ "THOUSAND_NUM"
-	<lìber> /lˈiber/ "FREE_ADJ"
+	<cel> /ʧˈel/ "SKY_NOUN"
+	<levé> /levˈe/ "CARRY_VERB"
+	<alba> /ˈalba/ "DAWN_NOUN"
 
 /j/ (0.044)
-	<freid> /frˈejd/ "COLD_ADJ"
-	<voi> /vˈuj/ "YOU (PL)_PRON"
-	<aidé> /ajdˈe/ "HELP_VERB"
+	<steila> /stˈejla/ "STAR_NOUN"
+	<ovrié> /uvrjˈe/ "WORKER_NOUN"
+	<pien> /pjˈeŋ/ "FULL_ADJ"
 
 /t/ (0.042)
+	<castel> /kastˈɛl/ "CASTLE_NOUN"
+	<scoté> /skutˈe/ "LISTEN_VERB"
 	<testa> /tˈesta/ "SKULL_NOUN"
-	<festa> /fˈɛsta/ "PARTY_NOUN"
-	<vint> /vˈiŋt/ "TWENTY_NUM"
 
 /k/ (0.042)
-	<mica> /mˈika/ "CRUMB_NOUN"
-	<quatr> /kwˈatr/ "FOUR_NUM"
-	<mosca> /mˈuska/ "FLY_NOUN"
+	<càud> /kˈawd/ "HOT_ADJ"
+	<fedich> /fˈedik/ "LIVER_NOUN"
+	<cosa> /kˈɔza/ "THING_NOUN"
 
 /v/ (0.04)
-	<ovrié> /uvrjˈe/ "WORKER_NOUN"
-	<vos> /vˈus/ "VOICE_NOUN"
-	<eva> /ˈeva/ "WATER_NOUN"
+	<zanziva> /zanzˈiva/ "GUMS_NOUN"
+	<vita> /vˈita/ "LIFE_NOUN"
+	<savèj> /savˈɛj/ "KNOW_VERB"
 
 /ŋ/ (0.036)
-	<regin-a> /reʤˈiŋa/ "QUEEN_NOUN"
 	<lan-a> /lˈaŋa/ "WOOL_NOUN"
-	<sangh> /sˈaŋɡ/ "BLOOD_NOUN"
+	<dent> /dˈɛŋt/ "TOOTH_NOUN"
+	<vint> /vˈiŋt/ "TWENTY_NUM"
 
 /n/ (0.036)
-	<noatè> /nwatˈɛ/ "SWIM_VERB"
-	<vzin> /vzˈin/ "NEIGHBOR_NOUN"
 	<anel> /anˈɛl/ "RING_NOUN"
+	<fomna> /fˈɔmna/ "WOMAN_NOUN"
+	<conòsse> /kunˈɔse/ "BE ACQUAINTED WITH_VERB"
 
 /p/ (0.03)
-	<colp> /kˈulp/ "STRIKE_NOUN"
-	<pé> /pˈe/ "FOOT_NOUN"
-	<pel> /pˈɛl/ "SKIN_NOUN"
+	<pioré> /pjurˈe/ "WEEP_VERB"
+	<pen-a> /pˈeŋa/ "PAIN_NOUN"
+	<pera> /pˈɛra/ "STONE_NOUN"
 
 /m/ (0.028)
-	<madur> /madˈyr/ "MATURE_NOUN"
-	<sman-a> /smˈaŋa/ "WEEK_NOUN"
-	<smens> /smˈɛns/ "SEED_NOUN"
+	<fam> /fˈam/ "HUNGER_NOUN"
+	<roman> /rumˈaŋ/ "ROMAN_ADJ"
+	<mica> /mˈika/ "CRUMB_NOUN"
 
 /f/ (0.023)
-	<fin> /fˈin/ "THIN_ADJ"
-	<fij> /fˈij/ "SON_NOUN"
-	<fòrt> /fˈɔrt/ "STRONG_ADJ"
+	<fior> /fjˈur/ "FLOWER_NOUN"
+	<festa> /fˈɛsta/ "PARTY_NOUN"
+	<fòrsa> /fˈɔrsa/ "STRENGTH_NOUN"
 
 /d/ (0.023)
-	<giùdes> /ʤˈydes/ "JUDGE_NOUN"
-	<podèj> /pudˈɛj/ "CAN_VERB"
-	<madur> /madˈyr/ "MATURE_NOUN"
+	<doi> /dˈuj/ "TWO (M)_NUM"
+	<dent> /dˈɛŋt/ "TOOTH_NOUN"
+	<doe> /dˈue/ "TWO (F)_NUM"
+
+/z/ (0.019)
+	<lese> /lˈɛze/ "READ_VERB"
+	<ceresa> /ʧerˈeza/ "CHERRY_NOUN"
+	<rais> /rˈajz/ "ROOT_NOUN"
 
 /ʤ/ (0.016)
 	<giaun> /ʤˈawŋ/ "YELLOW_ADJ"
@@ -159,20 +164,15 @@ CONSONANTS
 	<bagn> /bˈaɲ/ "BATH_NOUN"
 	<agnel> /aɲˈɛl/ "LAMB_NOUN"
 
-/z/ (0.009)
-	<rason> /razˈun/ "REASON_NOUN"
-	<ceresa> /ʧerˈeza/ "CHERRY_NOUN"
-	<brusé> /bryzˈe/ "BURN_VERB"
-
 /w/ (0.009)
-	<giaun> /ʤˈawŋ/ "YELLOW_ADJ"
-	<quatr> /kwˈatr/ "FOUR_NUM"
-	<egual> /eɡwˈal/ "EQUAL_ADJ"
+	<vojàutri> /vujˈawtri/ "YOU (PL)_PRON"
+	<quaja> /kwˈaja/ "QUAIL_NOUN"
+	<sinquanta> /siŋkwˈanta/ "FIFTY_NUM"
 
 /ʧ/ (0.005)
 	<ceresa> /ʧerˈeza/ "CHERRY_NOUN"
 	<cit> /ʧˈit/ "SMALL_ADJ"
-	<cel> /ʧˈel/ "SKY_NOUN"
+	<ciamé> /ʧamˈe/ "CALL_VERB"
 
 /dː/ (0.001)
 	<vëdde> /vˈədːe/ "SEE_VERB"

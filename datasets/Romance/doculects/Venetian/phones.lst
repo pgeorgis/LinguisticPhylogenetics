@@ -12,14 +12,14 @@ VOWELS
 /ˈa/ (0.059)
 	<cao> /kˈao/ "HEAD_NOUN"
 	<caro> /kˈaro/ "DEAR_ADJ"
-	<sentàr> /seŋtˈar/ "SIT_ADJ"
+	<sentàr> /seŋtˈar/ "SIT_VERB"
 
-/e/ (0.054)
-	<fòrte> /fˈɔrte/ "STRONG_ADJ"
-	<diéxe> /djˈeze/ "TEN_NUM"
-	<véder> /vˈeder/ "SEE_VERB"
+/e/ (0.053)
+	<dólçe> /dˈolse/ "SWEET_ADJ"
+	<mìe> /mˈie/ "THOUSAND_NUM"
+	<sète> /sˈɛte/ "SEVEN_NUM"
 
-/ˈo/ (0.033)
+/ˈo/ (0.034)
 	<fiór> /fjˈor/ "FLOWER_NOUN"
 	<xórno> /zˈorno/ "DAY_NOUN"
 	<pióva> /pjˈova/ "RAIN_NOUN"
@@ -29,12 +29,12 @@ VOWELS
 	<sénto> /sˈeŋto/ "HUNDRED_NUM"
 	<łétara> /ˈetara/ "LETTER_NOUN"
 
-/ˈi/ (0.028)
-	<vin> /vˈiŋ/ "WINE_NOUN"
+/ˈi/ (0.027)
+	<scrìver> /skrˈiver/ "WRITE_VERB"
 	<nìoƚa> /nˈioɰa/ "CLOUD_NOUN"
-	<fio> /fˈio/ "SON_NOUN"
+	<spina> /spˈina/ "SPINE_NOUN"
 
-/ˈɔ/ (0.026)
+/ˈɔ/ (0.027)
 	<xenòcio> /zenˈɔʧo/ "KNEE_NOUN"
 	<cuòr> /kwˈɔr/ "HEART_NOUN"
 	<paroła> /parˈɔɰa/ "WORD_NOUN"
@@ -67,14 +67,14 @@ CONSONANTS
 	<far> /fˈar/ "DO_VERB"
 	<àlbaro> /ˈalbaro/ "TREE_NOUN"
 
-/s/ (0.052)
-	<stéła> /stˈea/ "STAR_NOUN"
-	<spada> /spˈada/ "SWORD_NOUN"
-	<scrìver> /skrˈiver/ "WRITE_VERB"
+/s/ (0.051)
+	<stado> /stˈado/ "STATE_NOUN"
+	<groso> /ɡrˈɔso/ "THICK_ADJ"
+	<savér> /savˈer/ "KNOW_VERB"
 
 /n/ (0.038)
-	<bóna> /bˈona/ "GOOD (F.SG)_ADJ"
 	<bonìgoƚo> /bonˈiɡoɰo/ "NAVEL_NOUN"
+	<bóna> /bˈona/ "GOOD (F.SG)_ADJ"
 	<nuàr> /nuˈar/ "SWIM_VERB"
 
 /t/ (0.038)
@@ -107,7 +107,7 @@ CONSONANTS
 	<spina> /spˈina/ "SPINE_NOUN"
 	<pién> /pjˈeŋ/ "FULL_ADJ"
 
-/m/ (0.026)
+/m/ (0.027)
 	<mèxo> /mˈɛzo/ "MIDDLE_NOUN"
 	<maùro> /maˈuro/ "MATURE_NOUN"
 	<vèrme> /vˈɛrme/ "WORM_NOUN"
@@ -132,40 +132,40 @@ CONSONANTS
 	<fiór> /fjˈor/ "FLOWER_NOUN"
 	<viaxo> /vjˈazo/ "JOURNEY_NOUN"
 
-/f/ (0.016)
-	<fio> /fˈio/ "SON_NOUN"
+/f/ (0.015)
+	<fòrsa> /fˈɔrsa/ "STRENGTH_NOUN"
 	<fémena> /fˈemena/ "WOMAN_NOUN"
-	<fìn> /fˈiŋ/ "THIN_ADJ"
+	<fòja> /fˈɔja/ "LEAF_NOUN"
 
 /b/ (0.014)
-	<basso> /bˈaso/ "LOW_ADJ"
 	<bruxàr> /bruzˈar/ "BURN_VERB"
 	<bò> /bˈɔ/ "OX_NOUN"
+	<àlbaro> /ˈalbaro/ "TREE_NOUN"
 
-/l/ (0.013)
-	<àlboro> /ˈalboro/ "TREE_NOUN"
-	<caldo> /kˈaldo/ "HOT_ADJ"
-	<scoltàr> /skoltˈar/ "LISTEN_VERB"
+/l/ (0.012)
+	<lión> /ljˈoŋ/ "LION_NOUN"
+	<xentìl> /zeŋtˈil/ "NICE_ADJ"
+	<sal> /sˈal/ "SALT_NOUN"
 
 /ɲ/ (0.008)
-	<Spagna> /spˈaɲa/ "SPAIN_PROPN"
 	<montàgna> /moŋtˈaɲa/ "MOUNTAIN_NOUN"
 	<agnèło> /aɲˈɛo/ "LAMB_NOUN"
+	<vergògna> /verɡˈoɲa/ "SHAME_NOUN"
 
 /w/ (0.007)
-	<quàja> /kwˈaja/ "QUAIL_NOUN"
 	<sàngue> /sˈaŋɡwe/ "BLOOD_NOUN"
+	<quàja> /kwˈaja/ "QUAIL_NOUN"
 	<àcua> /ˈakwa/ "WATER_NOUN"
 
 /ʧ/ (0.006)
-	<ciamar> /ʧamˈar/ "CALL_VERB"
 	<ciave> /ʧˈave/ "KEY_NOUN"
+	<peòcio> /peˈɔʧo/ "LOUSE_NOUN"
 	<xenòcio> /zenˈɔʧo/ "KNEE_NOUN"
 
 /ʤ/ (0.004)
-	<àgio> /ˈaʤo/ "GARLIC_NOUN"
+	<mègio> /mˈɛʤo/ "BETTER_ADV"
 	<giàço> /ʤˈaso/ "ICE_NOUN"
-	<óngia> /ˈoŋʤa/ "FINGERNAIL_NOUN"
+	<àgio> /ˈaʤo/ "GARLIC_NOUN"
 
 
 

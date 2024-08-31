@@ -1,30 +1,30 @@
 VOWELS
-/ˈa/ (0.072)
+/ˈa/ (0.073)
 	<car> /kˈar/ "DEAR_ADJ"
-	<sal> /sˈal/ "SALT_NOUN"
-	<vosautres> /vuzˈawtɾes/ "YOU (PL)_PRON"
+	<sant> /sˈan/ "SACRED_ADJ"
+	<an> /ˈan/ "YEAR_NOUN"
 
 /ɔ/ (0.061)
 	<mica> /mˈikɔ/ "CRUMB_NOUN"
 	<casa> /kˈazɔ/ "HOUSE_NOUN"
 	<aurelha> /awɾˈeʎɔ/ "EAR_NOUN"
 
-/e/ (0.054)
-	<lagrema> /lˈaɣɾemɔ/ "TEAR_NOUN"
-	<estela> /estˈelɔ/ "STAR_NOUN"
-	<estiu> /estˈiw/ "SUMMER_NOUN"
+/e/ (0.053)
+	<dotze> /dˈudze/ "TWELVE_NUM"
+	<estat> /estˈat/ "STATE_NOUN"
+	<espasa> /espˈazɔ/ "SWORD_NOUN"
 
-/ˈɛ/ (0.041)
-	<tèsta> /tˈɛstɔ/ "SKULL_NOUN"
-	<fèrre> /fˈɛre/ "IRON_NOUN"
-	<bèn> /bˈɛn/ "WELL (ADV)_ADV"
+/ˈɛ/ (0.04)
+	<cèl> /sˈɛl/ "SKY_NOUN"
+	<anhèl> /aɲˈɛl/ "LAMB_NOUN"
+	<vent> /vˈɛn/ "WIND_NOUN"
 
 /ˈi/ (0.03)
 	<liure> /lˈiwɾe/ "FREE_ADJ"
 	<dia> /dˈiɔ/ "DAY_NOUN"
 	<espina> /espˈinɔ/ "SPINE_NOUN"
 
-/ˈu/ (0.03)
+/ˈu/ (0.029)
 	<tot> /tˈut/ "ALL (SG)_ADJ"
 	<roge> /rˈuʤe/ "RED_ADJ"
 	<pichon> /piʧˈu/ "SMALL_ADJ"
@@ -54,10 +54,10 @@ VOWELS
 	<dormir> /durmˈi/ "SLEEP_VERB"
 	<escotar> /eskutˈa/ "LISTEN_VERB"
 
-/i/ (0.009)
+/i/ (0.008)
 	<disi> /dˈizi/ "SAY-1SG_VERB"
 	<ciutat> /siwtˈat/ "CITY_NOUN"
-	<estudi> /estˈuði/ "STUDY_NOUN"
+	<vilan> /vilˈa/ "VILLAIN_NOUN"
 
 /y/ (0.001)
 	<ajudar> /aʒyðˈa/ "HELP_VERB"
@@ -68,12 +68,12 @@ CONSONANTS
 /s/ (0.068)
 	<sèt> /sˈɛt/ "SEVEN_NUM"
 	<espina> /espˈinɔ/ "SPINE_NOUN"
-	<sol> /sˈul/ "SUN_NOUN"
+	<solelh> /sulˈɛl/ "SUN_NOUN"
 
 /l/ (0.062)
+	<alh> /ˈal/ "GARLIC_NOUN"
+	<leon> /leˈu/ "LION_NOUN"
 	<plen> /plˈe/ "FULL_ADJ"
-	<lum> /lˈym/ "LIGHT_NOUN"
-	<liure> /lˈiwɾe/ "FREE_ADJ"
 
 /n/ (0.046)
 	<anma> /ˈanmɔ/ "SOUL_NOUN"
@@ -85,40 +85,40 @@ CONSONANTS
 	<creire> /kɾˈejre/ "BELIEVE_VERB"
 	<jòc> /ʒˈɔk/ "GAME_NOUN"
 
-/ɾ/ (0.037)
-	<lagrema> /lˈaɣɾemɔ/ "TEAR_NOUN"
-	<nosautres> /nuzˈawtɾes/ "WE_PRON"
+/ɾ/ (0.038)
+	<pèira> /pˈɛjɾɔ/ "STONE_NOUN"
+	<plorar> /pluɾˈa/ "WEEP_VERB"
 	<cambra> /kˈambɾɔ/ "CHAMBER_NOUN"
 
 /t/ (0.035)
 	<cinquanta> /siŋkˈantɔ/ "FIFTY_NUM"
-	<vosautres> /vuzˈawtɾes/ "YOU (PL)_PRON"
 	<caud> /kˈawt/ "HOT_ADJ"
+	<fred> /fɾˈet/ "COLD_ADJ"
 
 /p/ (0.032)
-	<peis> /pˈejs/ "FISH_NOUN"
 	<plaga> /plˈaɣɔ/ "PLAGUE_NOUN"
 	<Espanha> /espˈaɲɔ/ "SPAIN_PROPN"
+	<pluèja> /plɥˈɛʒɔ/ "RAIN_NOUN"
 
 /r/ (0.027)
-	<raiç> /raˈis/ "ROOT_NOUN"
 	<fòrça> /fˈɔrsɔ/ "STRENGTH_NOUN"
 	<verd> /vˈert/ "GREEN_ADJ"
+	<pòrc> /pˈɔrk/ "PIG_NOUN"
 
 /m/ (0.027)
-	<òme> /ˈɔme/ "MAN_NOUN"
 	<lum> /lˈym/ "LIGHT_NOUN"
 	<anma> /ˈanmɔ/ "SOUL_NOUN"
+	<cima> /sˈimɔ/ "SUMMIT_NOUN"
 
 /w/ (0.025)
-	<escriure> /eskɾˈiwɾe/ "WRITE_VERB"
 	<riu> /rˈiw/ "RIVER_NOUN"
 	<taur> /tˈawr/ "BULL_NOUN"
+	<nosautres> /nuzˈawtɾes/ "WE_PRON"
 
 /j/ (0.022)
-	<rei> /rˈej/ "KING_NOUN"
 	<cerièra> /seɾjˈɛɾɔ/ "CHERRY_NOUN"
 	<sèire> /sˈɛjre/ "SIT_ADJ"
+	<pèira> /pˈɛjɾɔ/ "STONE_NOUN"
 
 /f/ (0.018)
 	<fruch> /frˈyʧ/ "FRUIT_NOUN"
@@ -156,12 +156,12 @@ CONSONANTS
 	<uèlh> /ɥˈɛl/ "EYE_NOUN"
 
 /ɡ/ (0.01)
+	<digun> /diɡˈu/ "NONE_PRON"
+	<glaç> /ɡlˈas/ "ICE_NOUN"
 	<gròs> /ɡɾˈɔs/ "THICK_ADJ"
-	<gaug> /ɡˈawk/ "JOY_NOUN"
-	<lenga> /lˈeŋɡɔ/ "TONGUE_NOUN"
 
-/ð/ (0.009)
-	<estudi> /estˈuði/ "STUDY_NOUN"
+/ð/ (0.008)
+	<nadar> /naðˈa/ "SWIM_VERB"
 	<vida> /vˈiðɔ/ "LIFE_NOUN"
 	<cadena> /kaðˈenɔ/ "CHAIN_NOUN"
 
@@ -175,35 +175,35 @@ CONSONANTS
 	<anhèl> /aɲˈɛl/ "LAMB_NOUN"
 	<plànher> /plˈaɲe/ "WEEP_VERB"
 
+/z/ (0.007)
+	<espasa> /espˈazɔ/ "SWORD_NOUN"
+	<nosautres> /nuzˈawtɾes/ "WE_PRON"
+	<disi> /dˈizi/ "SAY-1SG_VERB"
+
 /ɣ/ (0.007)
 	<segur> /seɣˈy/ "SAFE_ADJ"
 	<lagrema> /lˈaɣɾemɔ/ "TEAR_NOUN"
-	<plaga> /plˈaɣɔ/ "PLAGUE_NOUN"
-
-/z/ (0.007)
-	<vosautres> /vuzˈawtɾes/ "YOU (PL)_PRON"
-	<disi> /dˈizi/ "SAY-1SG_VERB"
-	<dotze> /dˈudze/ "TWELVE_NUM"
+	<dragon> /dɾaɣˈu/ "DRAGON_NOUN"
 
 /ʦ/ (0.006)
-	<prètz> /pɾˈɛʦ/ "PRICE_NOUN"
+	<crotz> /kɾˈuʦ/ "CROSS_NOUN"
+	<patz> /pˈaʦ/ "PEACE_NOUN"
 	<dètz> /dˈɛʦ/ "TEN_NUM"
-	<potz> /pˈuʦ/ "WELL_NOUN"
 
 /ʎ/ (0.006)
-	<abelha> /aβˈeʎɔ/ "BEE_NOUN"
-	<aurelha> /awɾˈeʎɔ/ "EAR_NOUN"
-	<agulha> /aɣˈyʎɔ/ "NEEDLE_NOUN"
+	<filha> /fˈiʎɔ/ "DAUGHTER_NOUN"
+	<fuèlha> /fɥˈɛʎɔ/ "LEAF_NOUN"
+	<calha> /kˈaʎɔ/ "QUAIL_NOUN"
 
 /ŋ/ (0.006)
-	<ongla> /ˈuŋɡlɔ/ "FINGERNAIL_NOUN"
-	<cinc> /sˈiŋk/ "FIVE_NUM"
-	<lenga> /lˈeŋɡɔ/ "TONGUE_NOUN"
+	<ungla> /ˈyŋɡlɔ/ "FINGERNAIL_NOUN"
+	<blanc> /blˈaŋk/ "WHITE_ADJ"
+	<sang> /sˈaŋ/ "BLOOD_NOUN"
 
 /ʤ/ (0.004)
-	<viatge> /viˈaʤe/ "JOURNEY_NOUN"
 	<genolh> /ʤenˈul/ "KNEE_NOUN"
-	<mètge> /mˈɛʤe/ "DOCTOR_NOUN"
+	<jutge> /ʒˈyʤe/ "JUDGE_NOUN"
+	<viatge> /viˈaʤe/ "JOURNEY_NOUN"
 
 /nː/ (0.001)
 	<femna> /fˈenːɔ/ "WOMAN_NOUN"
