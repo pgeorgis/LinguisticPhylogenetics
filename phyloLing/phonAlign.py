@@ -1,4 +1,5 @@
 import importlib
+import logging
 from collections.abc import Iterable
 from math import inf, log
 
@@ -11,6 +12,10 @@ from phonUtils.segment import _toSegment
 from utils.distance import Distance
 from utils.sequence import Ngram, PhonEnvNgram
 from utils.utils import validate_class
+
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 
 def compatible_segments(seg1, seg2):
@@ -399,9 +404,8 @@ class Alignment:
         elif next_merge_range_pmi > merge_range_pmi:
             return merge_range  # Remove the current merge range
         else:
+            #logger.warning("PMI is equal, conflict resolution not implemented.")
             return None
-            # breakpoint()
-            # raise NotImplementedError("PMI is equal, conflict resolution not implemented.")
 
     def start_boundary(self):
         # ('<#', '<#')
