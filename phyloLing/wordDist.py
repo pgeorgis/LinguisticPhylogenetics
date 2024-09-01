@@ -651,7 +651,8 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None) -> float:
     if weights is None:
         weights = [1 / len(funcs) for i in range(len(funcs))]
     else:
-        assert len(weights) == len(funcs)
+        weight_sum = sum(weights)
+        weights = [weight/weight_sum for weight in weights]
     assert round(sum(weights)) == 1.0
     for func, weight in zip(funcs, weights):
         if weight == 0:
