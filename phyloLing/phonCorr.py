@@ -877,17 +877,17 @@ class PhonCorrelator:
                           # attested_only=True,
                           # alpha=0.2 # TODO conduct more formal experiment to select default alpha, or find way to adjust automatically; so far alpha=0.2 is best (at least on Romance)
                           ):
+        # Set phon_env bool
+        phon_env = False
+        if phon_env_corr_counts is not None:
+            phon_env = True
+
         # Interpolation smoothing
         if weights is None:
             # Each ngram estimate will be weighted proportional to its size
             # Weight the estimate from a 2gram twice as much as 1gram, etc.
             weights = [i + 1 for i in range(ngram_size)]
-        if phon_env_corr_counts is not None:
-            phon_env = True
-        else:
-            phon_env = False
         interpolation = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
-
         for i in range(ngram_size, 0, -1):
             for ngram1 in correspondence_counts:
                 for ngram2 in correspondence_counts[ngram1]:
@@ -931,9 +931,9 @@ class PhonCorrelator:
             for complex_ngram in self.complex_ngrams:
                 if complex_ngram.size > 1:
                     if self.pad_ch in complex_ngram.ngram[0]:  # complex ngram alignment with start boundary
-                        ngram_envs = [ngram for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(r'#\|S', ngram[-1])]
+                        ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(r'#\|S', ngram[-1]))
                     elif self.pad_ch in complex_ngram.ngram[-1]:  # complex ngram alignment with end boundary
-                        ngram_envs = [ngram for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(r'S\|#', ngram[-1])]
+                        ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(r'S\|#', ngram[-1]))
                     else:  # other complex ngram alignments
                         # get post environments of first segment and preceding environments of last segment in complex ngram
                         first_seg, last_seg = map(_toSegment, [complex_ngram.ngram[0], complex_ngram.ngram[-1]])
@@ -950,8 +950,7 @@ class PhonCorrelator:
                     complex_envs = set()
                     for ngram_env in ngram_envs:
                         phon_env_ngram = PhonEnvNgram((complex_ngram.ngram, ngram_env))
-                        ngram_with_context = (phon_env_ngram.ngram, phon_env_ngram.phon_env)
-                        complex_envs.add(ngram_with_context)
+                        complex_envs.add(phon_env_ngram.ngram_w_context)
                     all_ngrams_lang1.update(complex_envs)
         else:
             all_ngrams_lang1.update(interpolation[i].keys())
@@ -962,12 +961,12 @@ class PhonCorrelator:
                 continue
 
             if phon_env:
-                if self.pad_ch in ngram1[0]:  # e.g. ('#>',)
-                    continue  # TODO confirm that this should be skipped! but it is causing issues in PhonEnvNgram
-                ngram1_phon_env = PhonEnvNgram(ngram1)
-                ngram1 = ngram1_phon_env.ngram
-                if sum(interpolation['phon_env'][ngram1_phon_env.ngram_w_context].values()) == 0:
-                    continue
+                if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]): # skip adding phon env to e.g. ('#>',)
+                    ngram1_phon_env = PhonEnvNgram(ngram1)
+                    ngram1 = ngram1_phon_env.ngram
+                    if sum(interpolation['phon_env'][ngram1_phon_env.ngram_w_context].values()) == 0:
+                        # TODO verify that these should be skipped
+                        continue
 
             if sum(interpolation[i][ngram1].values()) == 0:
                 continue
@@ -999,17 +998,18 @@ class PhonCorrelator:
 
                 # add interpolation with phon_env surprisal
                 if phon_env:
-                    ngram1_w_context = ngram1_phon_env.ngram_w_context
-                    phonEnv_contexts = phon_env_ngrams(ngram1_phon_env.phon_env, exclude={'|S|'})
-                    for context in phonEnv_contexts:
-                        estimates.append(interpolation['phon_env'][ngram1_w_context].get(ngram2, 0) / sum(interpolation['phon_env'][ngram1_w_context].values()))
-                        # estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0),
-                        #                                     N=sum(interpolation['phon_env'][(ngram1_context,)].values()),
-                        #                                     d = len(self.lang2.phonemes) + 1,
-                        #                                     alpha=alpha)
-                        #                                     )
-                        # Weight each contextual estimate based on the size of the context
-                        ngram_weights.append(get_phonEnv_weight(context))
+                    if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]): # skip computing phon env probabilities with e.g. ('#>',)
+                        ngram1_w_context = ngram1_phon_env.ngram_w_context
+                        phonEnv_contexts = phon_env_ngrams(ngram1_phon_env.phon_env, exclude={'|S|'})
+                        for context in phonEnv_contexts:
+                            estimates.append(interpolation['phon_env'][ngram1_w_context].get(ngram2, 0) / sum(interpolation['phon_env'][ngram1_w_context].values()))
+                            # estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0),
+                            #                                     N=sum(interpolation['phon_env'][(ngram1_context,)].values()),
+                            #                                     d = len(self.lang2.phonemes) + 1,
+                            #                                     alpha=alpha)
+                            #                                     )
+                            # Weight each contextual estimate based on the size of the context
+                            ngram_weights.append(get_phonEnv_weight(context))
 
                 weight_sum = sum(ngram_weights)
                 ngram_weights = [i / weight_sum for i in ngram_weights]
@@ -1138,14 +1138,13 @@ class PhonCorrelator:
                     )
 
                     # Optionally use phonological environment
+                    phon_env_corr_counts = None
                     if phon_env:
                         phon_env_corr_counts = self.phon_env_corr_probs(
                             cognate_alignments,
                             counts=True,
                             ngram_size=ngram_size
                         )
-                    else:
-                        phon_env_corr_counts = None
 
                     surprisal_iterations[iteration] = self.phoneme_surprisal(corr_probs,
                                                                              phon_env_corr_counts=phon_env_corr_counts,
