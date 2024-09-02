@@ -484,7 +484,7 @@ class PhonCorrelator:
                              alignment_list,
                              ngram_size=1,
                              counts=False,
-                             min_corr=3,
+                             min_corr=2,
                              exclude_null=True,
                              compact_null=True,
                              pad=True,
@@ -672,7 +672,7 @@ class PhonCorrelator:
                          max_iterations=3,
                          n_samples=5,
                          sample_size=0.8,
-                         min_corr=3,
+                         min_corr=2,
                          cumulative=False,
                          log_iterations=True,
                          save=True):
@@ -1062,7 +1062,7 @@ class PhonCorrelator:
                                log_iterations=True,
                                n_samples=5,
                                sample_size=0.8,
-                               min_corr=3,
+                               min_corr=2,
                                cumulative=False,
                                phon_env=True,
                                save=True):
