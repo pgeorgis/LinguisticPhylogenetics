@@ -505,6 +505,8 @@ class Alignment:
                         for n in range(seg1_i, min(seg1_i + ngram.size, len(self.seq1))):
                             if self.pad_ch not in ngram.ngram[n - seg1_i]:
                                 map1[i].append(n - adjust_ngram)
+                            elif i == 0 and len(self.seq1) == 1:
+                                map1[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap1 += 1
                                 adjust_ngram += 1
@@ -527,6 +529,8 @@ class Alignment:
                         adjust_ngram = 0
                         for n in range(seg2_i, min(seg2_i + ngram.size, len(self.seq2))):
                             if self.pad_ch not in ngram.ngram[n - seg2_i]:
+                                map2[i].append(n - adjust_ngram)
+                            elif i == 0 and len(self.seq2) == 1:
                                 map2[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap2 += 1
