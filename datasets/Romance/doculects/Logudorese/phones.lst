@@ -4,15 +4,15 @@ VOWELS
 	<seguru> /seɣˈuru/ "SAFE_ADJ"
 	<iscriere> /iskrˈiere/ "WRITE_VERB"
 
-/u/ (0.073)
-	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
+/u/ (0.074)
+	<annu> /ˈanːu/ "YEAR_NOUN"
 	<nigru> /nˈiɡru/ "BLACK_ADJ"
 	<prenu> /prˈenu/ "FULL_ADJ"
 
-/a/ (0.065)
+/a/ (0.066)
 	<guta> /ɡˈuta/ "DROP_NOUN"
-	<fortza> /fˈorʦa/ "STRENGTH_NOUN"
-	<issa> /ˈisːa/ "SHE_PRON"
+	<pedra> /pˈeðra/ "STONE_NOUN"
+	<bregunza> /breɣˈunʣa/ "SHAME_NOUN"
 
 /ˈa/ (0.055)
 	<istade> /istˈaðe/ "SUMMER_NOUN"
@@ -39,10 +39,10 @@ VOWELS
 	<làcrima> /lˈakrima/ "TEAR_NOUN"
 	<priogu> /priˈoɣu/ "LOUSE_NOUN"
 
-/ˈu/ (0.025)
-	<luna> /lˈuna/ "MOON_NOUN"
+/ˈu/ (0.026)
+	<lughe> /lˈuɣe/ "LIGHT_NOUN"
 	<guta> /ɡˈuta/ "DROP_NOUN"
-	<frúmene> /frˈumene/ "RIVER_NOUN"
+	<ruju> /rˈuju/ "RED_ADJ"
 
 /o/ (0.013)
 	<podere> /poðˈere/ "CAN_VERB"
@@ -91,15 +91,15 @@ CONSONANTS
 	<boghe> /bˈoɣe/ "VOICE_NOUN"
 	<biteddu> /bitˈeɖːu/ "CALF_NOUN"
 
-/s/ (0.033)
+/s/ (0.034)
 	<ispiga> /ispˈiɣa/ "EAR OF GRAIN_NOUN"
-	<cossa> /kˈosa/ "THIGH_NOUN"
+	<ispàda> /ispˈaða/ "SWORD_NOUN"
 	<sanu> /sˈanu/ "HEALTHY (M)_ADJ"
 
-/l/ (0.033)
+/l/ (0.034)
 	<fàlsu> /fˈalsu/ "FALSE_ADJ"
-	<lughe> /lˈuɣe/ "LIGHT_NOUN"
-	<filu> /fˈilu/ "STRING_NOUN"
+	<lítera> /lˈitera/ "LETTER_NOUN"
+	<colpu> /kˈolpu/ "STRIKE_NOUN"
 
 /t/ (0.032)
 	<festa> /fˈesta/ "PARTY_NOUN"
@@ -126,10 +126,10 @@ CONSONANTS
 	<fridu> /frˈiðu/ "COLD_ADJ"
 	<foza> /fˈoʣa/ "LEAF_NOUN"
 
-/ð/ (0.014)
+/ð/ (0.015)
 	<nébida> /nˈeβiða/ "FOG_NOUN"
+	<fígadu> /fˈiɣaðu/ "LIVER_NOUN"
 	<bídere> /bˈiðerĕ/ "SEE_VERB"
-	<seda> /sˈeða/ "SILK_NOUN"
 
 /z/ (0.013)
 	<bonos> /bˈonozŏ/ "GOOD (M.PL)_ADJ"

@@ -1,23 +1,23 @@
 VOWELS
 /ˈa/ (0.066)
 	<faig> /fˈaʧ/ "DO-1SG_VERB"
-	<estat> /estˈat/ "STATE_NOUN"
+	<aranya> /aɾˈaɲɐ/ "SPIDER_NOUN"
 	<clamar> /klamˈar/ "CALL_VERB"
 
-/e/ (0.035)
+/e/ (0.034)
 	<bones> /bˈɒnes/ "GOOD (F.PL)_ADJ"
 	<vedell> /veðˈeʎ/ "CALF_NOUN"
 	<petit> /petˈit/ "SMALL_ADJ"
 
-/ˈi/ (0.034)
-	<via> /vˈiɐ/ "ROAD_NOUN"
-	<dir> /dˈir/ "SAY-INF_VERB"
-	<vila> /vˈilɐ/ "TOWN_NOUN"
+/ˈɒ/ (0.034)
+	<nou> /nˈɒw/ "NINE_NUM"
+	<nostre> /nˈɒstɾɞ/ "OUR_ADJ"
+	<fort> /fˈɒrt/ "STRONG_ADJ"
 
-/ˈɒ/ (0.033)
-	<home> /ˈɒmɞ/ "MAN_NOUN"
-	<bones> /bˈɒnes/ "GOOD (F.PL)_ADJ"
-	<mort> /mˈɒrt/ "DEATH_NOUN"
+/ˈi/ (0.034)
+	<nit> /nˈit/ "NIGHT_NOUN"
+	<dit> /dˈit/ "FINGER_NOUN"
+	<mica> /mˈikɐ/ "CRUMB_NOUN"
 
 /ɐ/ (0.032)
 	<Espanya> /espˈaɲɐ/ "SPAIN_PROPN"
@@ -39,7 +39,7 @@ VOWELS
 	<veure> /vˈæwɾɜ/ "SEE_VERB"
 	<bella> /bˈeʎɜ/ "BEAUTIFUL (F)_ADJ"
 
-/ˈu/ (0.024)
+/ˈu/ (0.023)
 	<núvol> /nˈuvul/ "CLOUD_NOUN"
 	<cul> /kˈul/ "BUTTOCKS_NOUN"
 	<pluja> /plˈuʤɐ/ "RAIN_NOUN"
@@ -59,9 +59,9 @@ VOWELS
 	<anell> /anˈeʎ/ "RING_NOUN"
 	<caçar> /kasˈar/ "HUNT_VERB"
 
-/ɞ/ (0.015)
+/ɞ/ (0.016)
 	<porca> /pˈɒrkɞ/ "SOW_NOUN"
-	<gola> /ɡˈolɞ/ "THROAT_NOUN"
+	<cosa> /kˈɒzɞ/ "THING_NOUN"
 	<oca> /ˈɒkɞ/ "GOOSE_NOUN"
 
 /i/ (0.01)
@@ -72,7 +72,7 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.06)
+/s/ (0.059)
 	<sana> /sˈanɐ/ "HEALTHY (F)_ADJ"
 	<estat> /estˈat/ "STATE_NOUN"
 	<sabut> /saβˈut/ "KNOWN_VERB"
@@ -87,8 +87,8 @@ CONSONANTS
 	<set> /sˈæt/ "SEVEN_NUM"
 	<estat> /estˈat/ "STATE_NOUN"
 
-/k/ (0.044)
-	<cuixa> /kˈuʃɐ/ "THIGH_NOUN"
+/k/ (0.045)
+	<cua> /kˈuɐ/ "TAIL_NOUN"
 	<obscur> /upskˈur/ "DARK_ADJ"
 	<clamar> /klamˈar/ "CALL_VERB"
 
@@ -97,7 +97,7 @@ CONSONANTS
 	<lliure> /ʎˈiwɾe/ "FREE_ADJ"
 	<cera> /sˈeɾɜ/ "WAX_NOUN"
 
-/n/ (0.041)
+/n/ (0.04)
 	<ànima> /ˈanimɐ/ "SOUL_NOUN"
 	<nou> /nˈɒw/ "NUT_NOUN"
 	<nit> /nˈit/ "NIGHT_NOUN"
@@ -112,10 +112,10 @@ CONSONANTS
 	<pèl> /pˈæl/ "HAIR_NOUN"
 	<dolç> /dˈols/ "SWEET_ADJ"
 
-/p/ (0.032)
+/p/ (0.033)
+	<pluja> /plˈuʤɐ/ "RAIN_NOUN"
 	<pell> /pˈeʎ/ "SKIN_NOUN"
-	<petit> /petˈit/ "SMALL_ADJ"
-	<punt> /pˈunt/ "POINT_NOUN"
+	<puig> /pˈuʧ/ "PODIUM_NOUN"
 
 /m/ (0.032)
 	<cima> /sˈimɐ/ "SUMMIT_NOUN"
@@ -147,12 +147,12 @@ CONSONANTS
 	<deu> /dˈæw/ "TEN_NUM"
 	<drac> /dɾˈak/ "DRAGON_NOUN"
 
-/ɡ/ (0.013)
+/ɡ/ (0.012)
 	<ungla> /ˈuŋɡlɐ/ "FINGERNAIL_NOUN"
 	<guatlla> /ɡwˈaɫːɐ/ "QUAIL_NOUN"
 	<llengua> /ʎˈæŋɡwɜ/ "TONGUE_NOUN"
 
-/b/ (0.013)
+/b/ (0.012)
 	<fembra> /fˈæmbrɜ/ "WOMAN_NOUN"
 	<bany> /bˈaɲ/ "BATH_NOUN"
 	<bons> /bˈɒns/ "GOOD (M.PL)_ADJ"
@@ -192,15 +192,15 @@ CONSONANTS
 	<baix> /bˈaʃ/ "LOW_ADJ"
 	<cuixa> /kˈuʃɐ/ "THIGH_NOUN"
 
+/z/ (0.004)
+	<dotze> /dˈozɞ/ "TWELVE_NUM"
+	<cosa> /kˈɒzɞ/ "THING_NOUN"
+	<casa> /kˈazɐ/ "HOUSE_NOUN"
+
 /ʧ/ (0.004)
 	<puig> /pˈuʧ/ "PODIUM_NOUN"
+	<goig> /ɡˈɒʧ/ "JOY_NOUN"
 	<mig> /mˈiʧ/ "MIDDLE_NOUN"
-	<roig> /rˈɒʧ/ "RED_ADJ"
-
-/z/ (0.004)
-	<vosaltres> /vuzˈaltɾes/ "YOU (PL)_PRON"
-	<casa> /kˈazɐ/ "HOUSE_NOUN"
-	<espasa> /espˈazɐ/ "SWORD_NOUN"
 
 /ɫː/ (0.001)
 	<guatlla> /ɡwˈaɫːɐ/ "QUAIL_NOUN"

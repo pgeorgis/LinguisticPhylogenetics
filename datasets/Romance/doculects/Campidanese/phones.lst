@@ -1,18 +1,18 @@
 VOWELS
 /u/ (0.08)
 	<fridu> /frˈiðu/ "COLD_ADJ"
-	<nostru> /nˈostru/ "OUR_ADJ"
-	<paragula> /parˈaɣula/ "WORD_NOUN"
+	<àteru> /ˈateru/ "OTHER_ADJ"
+	<lubu> /lˈuβu/ "WOLF_NOUN"
 
 /i/ (0.074)
 	<ponti> /pˈonti/ "BRIDGE_NOUN"
 	<belari> /belˈari/ "FREEZE_VERB"
 	<colori> /kolˈori/ "COLOR_NOUN"
 
-/a/ (0.07)
-	<pedra> /pˈeðra/ "STONE_NOUN"
-	<issa> /ˈisːa/ "SHE_PRON"
-	<Ispagna> /ispˈaɲːa/ "SPAIN_PROPN"
+/a/ (0.071)
+	<spina> /spˈina/ "SPINE_NOUN"
+	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
+	<nia> /nˈia/ "SNOW_NOUN"
 
 /ˈa/ (0.057)
 	<àteru> /ˈateru/ "OTHER_ADJ"
@@ -24,12 +24,12 @@ VOWELS
 	<atógnu> /atˈoɲːu/ "AUTUMN_NOUN"
 	<nos> /nˈos/ "WE_PRON"
 
-/ˈi/ (0.041)
+/ˈi/ (0.04)
 	<ischis> /iskˈis/ "KNOW-2SG_VERB"
 	<lítera> /lˈitera/ "LETTER_NOUN"
 	<nia> /nˈia/ "SNOW_NOUN"
 
-/ˈe/ (0.041)
+/ˈe/ (0.04)
 	<ierru> /jˈerːu/ "WINTER_NOUN"
 	<femina> /fˈemina/ "WOMAN_NOUN"
 	<bélla> /bˈelːa/ "BEAUTIFUL (F)_ADJ"
@@ -39,10 +39,10 @@ VOWELS
 	<leòni> /leˈoni/ "LION_NOUN"
 	<lege> /lˈeʤe/ "LAW_NOUN"
 
-/ˈu/ (0.023)
-	<tundu> /tˈundu/ "ROUND_ADJ"
+/ˈu/ (0.024)
+	<frúmini> /frˈumini/ "RIVER_NOUN"
 	<nue> /nˈue/ "CLOUD_NOUN"
-	<lubu> /lˈuβu/ "WOLF_NOUN"
+	<putzu> /pˈuʦu/ "WELL_NOUN"
 
 /o/ (0.01)
 	<bonos> /bˈonozŏ/ "GOOD (M.PL)_ADJ"
@@ -81,25 +81,25 @@ CONSONANTS
 	<centu> /ʧˈentu/ "HUNDRED_NUM"
 	<spina> /spˈina/ "SPINE_NOUN"
 
-/k/ (0.034)
-	<cincu> /ʧˈiŋku/ "FIVE_NUM"
-	<chisina> /kˈisina/ "ASH_NOUN"
-	<cassài> /kasːˈai/ "HUNT_VERB"
+/l/ (0.034)
+	<lagu> /lˈaɣu/ "LAKE_NOUN"
+	<culu> /kˈulu/ "BUTTOCKS_NOUN"
+	<imbíligu> /imbˈiliɣu/ "NAVEL_NOUN"
 
-/l/ (0.033)
-	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
-	<peraula> /perˈawla/ "WORD_NOUN"
-	<fàlsu> /fˈalsu/ "FALSE_ADJ"
+/k/ (0.034)
+	<curtzu> /kˈurʦu/ "SHORT_ADJ"
+	<chini> /kˈini/ "WHO_PRON"
+	<casteddu> /kastˈeɖːu/ "CASTLE_NOUN"
 
 /t/ (0.033)
 	<morti> /mˈorti/ "DEATH_NOUN"
 	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
 	<centu> /ʧˈentu/ "HUNDRED_NUM"
 
-/s/ (0.032)
+/s/ (0.033)
 	<sica> /sˈika/ "DRY (F)_ADJ"
-	<festa> /fˈesta/ "PARTY_NOUN"
-	<istàdu> /istˈaðu/ "STATE_NOUN"
+	<nostru> /nˈostru/ "OUR_ADJ"
+	<isteddu> /istˈeɖːu/ "STAR_NOUN"
 
 /b/ (0.031)
 	<bídere> /bˈiðerĕ/ "SEE_VERB"
@@ -121,45 +121,45 @@ CONSONANTS
 	<frúmini> /frˈumini/ "RIVER_NOUN"
 	<fridu> /frˈiðu/ "COLD_ADJ"
 
-/ɣ/ (0.014)
+/ɣ/ (0.013)
 	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
 	<lughe> /lˈuɣe/ "LIGHT_NOUN"
 	<imbíligu> /imbˈiliɣu/ "NAVEL_NOUN"
 
-/z/ (0.014)
-	<témpus> /tˈempuzŭ/ "TIME_NOUN"
-	<isula> /ˈizula/ "ISLAND_NOUN"
-	<ses> /sˈezĕ/ "SIX_NUM"
-
-/j/ (0.014)
-	<oju> /ˈoju/ "EYE_NOUN"
-	<noi> /nˈoj/ "NINE_NUM"
-	<ciai> /ʧˈaj/ "KEY_NOUN"
-
-/d/ (0.014)
-	<tundu> /tˈundu/ "ROUND_ADJ"
-	<dragoni> /draɣˈoni/ "DRAGON_NOUN"
-	<birdi> /bˈirdi/ "GREEN_ADJ"
-
 /ð/ (0.013)
-	<fada> /fˈaða/ "FATE_NOUN"
+	<istàdu> /istˈaðu/ "STATE_NOUN"
 	<pedra> /pˈeðra/ "STONE_NOUN"
-	<fridu> /frˈiðu/ "COLD_ADJ"
+	<bídere> /bˈiðerĕ/ "SEE_VERB"
+
+/z/ (0.013)
+	<bonos> /bˈonozŏ/ "GOOD (M.PL)_ADJ"
+	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
+	<nàsu> /nˈazu/ "NOSE_NOUN"
+
+/j/ (0.013)
+	<noi> /nˈoj/ "NINE_NUM"
+	<ceréxia> /ʧerˈeʒja/ "CHERRY_NOUN"
+	<dai> /dˈaj/ "GIVE_VERB"
+
+/d/ (0.013)
+	<duos> /dˈuozŏ/ "TWO (M)_NUM"
+	<mandigari> /mandiɣˈari/ "EAT_VERB"
+	<dormiri> /dormˈiri/ "SLEEP_VERB"
 
 /β/ (0.009)
+	<tràbu> /trˈaβu/ "BULL_NOUN"
 	<nobu> /nˈoβu/ "NEW_ADJ"
 	<craba> /krˈaβa/ "GOAT_NOUN"
-	<nébida> /nˈeβiða/ "FOG_NOUN"
 
 /ʧ/ (0.008)
+	<centu> /ʧˈentu/ "HUNDRED_NUM"
 	<bocíere> /boʧˈiere/ "KILL_VERB"
 	<ciamari> /ʧamˈari/ "CALL_VERB"
-	<cera> /ʧˈera/ "WAX_NOUN"
 
 /ʒ/ (0.007)
+	<dexi> /dˈeʒi/ "TEN_NUM"
 	<scroxu> /skrˈoʒu/ "BARK_NOUN"
-	<bixinu> /biʒˈinu/ "NEIGHBOR_NOUN"
-	<nugi> /nˈuʒi/ "NUT_NOUN"
+	<argidda> /arʒˈiɖːa/ "CLAY_NOUN"
 
 /ɡ/ (0.007)
 	<unga> /ˈuŋɡa/ "FINGERNAIL_NOUN"
