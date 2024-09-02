@@ -538,8 +538,11 @@ class Alignment:
                         map2[i].append(seg2_i)
 
         # Check that all sequence units were mapped to alignment positions
-        assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
-        assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
+        try:
+            assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
+            assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
+        except AssertionError as exc:
+            raise AssertionError(f"Error re-mapping aligned sequences: {self.alignment}") from exc
 
         return map1, map2
 
