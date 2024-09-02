@@ -499,7 +499,7 @@ class Alignment:
                 else:
                     map1[i] = []
                     ngram = Ngram(seg1)
-                    if ngram.size > 1 and i < self.length - 1:
+                    if ngram.size > 1: #and i < self.length - 1:
                         adjust_complex1 += ngram.size - 1
                         adjust_ngram = 0
                         for n in range(seg1_i, min(seg1_i + ngram.size, len(self.seq1))):
@@ -522,7 +522,7 @@ class Alignment:
                 else:
                     map2[i] = []
                     ngram = Ngram(seg2)
-                    if ngram.size > 1 and i < self.length - 1:
+                    if ngram.size > 1: #and i < self.length - 1:
                         adjust_complex2 += ngram.size - 1
                         adjust_ngram = 0
                         for n in range(seg2_i, min(seg2_i + ngram.size, len(self.seq2))):
