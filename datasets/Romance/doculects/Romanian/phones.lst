@@ -31,11 +31,11 @@ VOWELS
 
 /ˈo/ (0.025)
 	<toți> /tˈoʦʲ/ "ALL (PL)_"
-	<voce> /vˈoʧe/ "VOICE_NOUN"
+	<doi> /dˈoj/ "TWO (M)_NUM"
 	<nouă> /nˈowə/ "NINE_NUM"
 
-/u/ (0.018)
-	<sigur> /sˈiɡur/ "SAFE_ADJ"
+/u/ (0.019)
+	<rumân> /rumˈɨn/ "ROMAN_ADJ"
 	<culoare> /kulo̯ˈare/ "COLOR_NOUN"
 	<buric> /burˈik/ "NAVEL_NOUN"
 
@@ -87,8 +87,8 @@ VOWELS
 
 CONSONANTS
 /r/ (0.096)
-	<trei> /trˈej/ "THREE_NUM"
-	<scriere> /skrˈiere/ "WRITE_VERB"
+	<gros> /ɡrˈos/ "THICK_ADJ"
+	<vierme> /vjˈerme/ "WORM_NOUN"
 	<nostru> /nˈostru/ "OUR_ADJ"
 
 /n/ (0.063)
@@ -96,7 +96,7 @@ CONSONANTS
 	<bune> /bˈune/ "GOOD (F.PL)_ADJ"
 	<vecin> /veʧˈin/ "NEIGHBOR_NOUN"
 
-/t/ (0.051)
+/t/ (0.05)
 	<punte> /pˈunte/ "BRIDGE_NOUN"
 	<scurt> /skˈurt/ "SHORT_ADJ"
 	<pește> /pˈeʃte/ "FISH_NOUN"
@@ -171,38 +171,38 @@ CONSONANTS
 	<lege> /lˈeʤe/ "LAW_NOUN"
 	<plângere> /plˈɨnʤere/ "WEEP_VERB"
 
-/ʃ/ (0.009)
+/ʃ/ (0.01)
 	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
-	<șapte> /ʃˈapte/ "SEVEN_NUM"
 	<ședere> /ʃedˈere/ "SIT_ADJ"
+	<roșu> /rˈoʃu/ "RED_ADJ"
 
 /z/ (0.009)
 	<zece> /zˈeʧe/ "TEN_NUM"
+	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
 	<miez> /mjˈez/ "MIDDLE_NOUN"
-	<zbor> /zbˈor/ "FLIGHT_NOUN"
 
 /ʦ/ (0.008)
+	<puț> /pˈuʦ/ "WELL_NOUN"
 	<țară> /ʦˈarə/ "EARTH_NOUN"
-	<țeastă> /ʦe̯ˈastə/ "SKULL_NOUN"
-	<înghețare> /ɨŋɡeʦˈare/ "FREEZE_VERB"
+	<forţă> /fˈorʦə/ "STRENGTH_NOUN"
 
 /ʧʲ/ (0.004)
+	<cinci> /ʧˈinʧʲ/ "FIVE_NUM"
 	<cincizeci> /ʧinʧʲzˈeʧʲ/ "FIFTY_NUM"
-	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
 	<niciun> /niʧʲˈun/ "NONE_PRON"
 
 /ʒ/ (0.004)
-	<jude> /ʒˈude/ "JUDGE_NOUN"
-	<ajutare> /aʒutˈare/ "HELP_VERB"
 	<june> /ʒˈune/ "YOUNG_ADJ"
+	<ajut> /aʒˈut/ "HELP-1SG_VERB"
+	<jude> /ʒˈude/ "JUDGE_NOUN"
 
 /ŋ/ (0.004)
+	<punct> /pˈuŋkt/ "POINT_NOUN"
 	<înghețare> /ɨŋɡeʦˈare/ "FREEZE_VERB"
 	<lung> /lˈuŋɡ/ "LONG_ADJ"
-	<unghie> /ˈuŋɡje/ "FINGERNAIL_NOUN"
 
 /kʲ/ (0.003)
-	<ochi> /ˈokʲ/ "EYES_NOUN"
+	<genunchi> /ʤenˈunkʲ/ "KNEE_NOUN"
 	<ochi> /ˈokʲ/ "EYE_NOUN"
 	<vechi> /vˈekʲ/ "OLD_ADJ"
 

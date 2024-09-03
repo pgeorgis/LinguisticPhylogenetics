@@ -6,6 +6,8 @@ Eastern Lombard	Eastern Lombard			EQUAL_ADJ	gualìv	ɡwalˈif	ɡ w a l ˈi f		EQ
 Ladin	Ladin			EQUAL_ADJ	valif	valˈif	v a l ˈi f		EQUAL_ADJ_1			
 Latin	Latin			BEE_NOUN	alvīnam	aɫwˈiːnãː	a ɫ w ˈiː n ãː		BEE_NOUN_1			
 Romanian	Romanian			BEE_NOUN	albină	albˈinə	a l b ˈi n ə		BEE_NOUN_1			
+Istro-Romanian	Istro-Romanian			BEE_NOUN	albire	albˈire	a l b ˈi r e		BEE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			BEE_NOUN	albină	albˈinə	a l b ˈi n ə		BEE_NOUN_1			
 Aromanian	Aromanian			BEE_NOUN	alghinã	alɡˈinə	a l ɡ ˈi n ə		BEE_NOUN_1			
 Latin	Latin			CLAY_NOUN	argillam	arɡˈiːlʲlʲãː	a r ɡ ˈiː lʲ lʲ ãː		CLAY_NOUN_1			
 Logudorese	Logudorese			CLAY_NOUN	arghidha	arɡˈiɖɖa	a r ɡ ˈi ɖ ɖ a		CLAY_NOUN_1			
@@ -76,6 +78,7 @@ Portuguese	Portuguese			ASH_NOUN	cinza	sˈĩzɐ	s ˈĩ z ɐ		ASH_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			ASH_NOUN	cinza	sˈĩzɐ	s ˈĩ z ɐ		ASH_NOUN_1			
 Latin	Latin			ASH_NOUN	cinusia	kɪnˈusia	k ɪ n ˈu s i a		ASH_NOUN_2			
 Romanian	Romanian			ASH_NOUN	cenușă	ʧenˈuʃə	ʧ e n ˈu ʃ ə		ASH_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			ASH_NOUN	tșănușă	ʧənˈuʃə	ʧ ə n ˈu ʃ ə		ASH_NOUN_2			
 Aromanian	Aromanian			ASH_NOUN	cinushi	ʧinˈuʃi	ʧ i n ˈu ʃ i		ASH_NOUN_2			
 Latin	Latin			STRIKE_NOUN	colpum	kˈɔɫpʊ̃ː	k ˈɔ ɫ p ʊ̃ː		STRIKE_NOUN_1			
 Logudorese	Logudorese			STRIKE_NOUN	colpu	kˈolpu	k ˈo l p u		STRIKE_NOUN_1			
@@ -121,6 +124,8 @@ Portuguese	Portuguese			DAY_NOUN	dia	dˈiɐ	d ˈi ɐ		DAY_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			DAY_NOUN	ʤia	ʤˈiɐ	ʤ ˈi ɐ		DAY_NOUN_1			
 Latin	Latin			I_PRON	eo	ˈɛɔ	ˈɛ ɔ		I_PRON_1			
 Romanian	Romanian			I_PRON	eu	jˈew	j ˈe w		I_PRON_1			
+Istro-Romanian	Istro-Romanian			I_PRON	io	jˈo	j ˈo		I_PRON_1			
+Megleno-Romanian	Megleno-Romanian			I_PRON	io	jˈo	j ˈo		I_PRON_1			
 Aromanian	Aromanian			I_PRON	io	jˈo	j ˈo		I_PRON_1			
 Dalmatian	Dalmatian			I_PRON	ju	jˈu	j ˈu		I_PRON_1			
 Sicilian	Sicilian			I_PRON	iu	ˈiʊ	ˈi ʊ		I_PRON_1			
@@ -334,6 +339,7 @@ Eastern Lombard	Eastern Lombard			WOLF_NOUN	lüf	lˈyf	l ˈy f		WOLF_NOUN_1
 Ladin	Ladin			WOLF_NOUN	louf	lˈowf	l ˈo w f		WOLF_NOUN_1			
 Latin	Latin			HAND_NOUN	mana	mˈana	m ˈa n a		HAND_NOUN_1			
 Romanian	Romanian			HAND_NOUN	mână	mˈɨnə	m ˈɨ n ə		HAND_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			HAND_NOUN	mǫnă	mˈɔnə	m ˈɔ n ə		HAND_NOUN_1			
 Aromanian	Aromanian			HAND_NOUN	mãnã	mˈɨnə	m ˈɨ n ə		HAND_NOUN_1			
 Neapolitan	Neapolitan			HAND_NOUN	mana	mˈanə	m ˈa n ə		HAND_NOUN_1			
 Latin	Latin			HONEY_NOUN	melem	mˈɛlɛ̃ː	m ˈɛ l ɛ̃ː		HONEY_NOUN_1			
@@ -373,6 +379,7 @@ Latin	Latin			YELLOW_ADJ	mellinum	mˈɛlʲlʲinʊ̃ː	m ˈɛ lʲ lʲ i n ʊ̃ː	
 Romansch	Romansch			YELLOW_ADJ	mellen	mˈɛlən	m ˈɛ l ə n		YELLOW_ADJ_1			
 Latin	Latin			SMALL_ADJ	miccum	mˈɪkkʊ̃ː	m ˈɪ k k ʊ̃ː		SMALL_ADJ_1			
 Romanian	Romanian			SMALL_ADJ	mic	mˈik	m ˈi k		SMALL_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			SMALL_ADJ	mic	mˈik	m ˈi k		SMALL_ADJ_1			
 Aromanian	Aromanian			SMALL_ADJ	njic	ɲˈik	ɲ ˈi k		SMALL_ADJ_1			
 Sicilian	Sicilian			SMALL_ADJ	nicu	nˈikʊ	n ˈi k ʊ		SMALL_ADJ_1			
 Latin	Latin			BE BORN_VERB	nascere	nˈaskɛrɛ	n ˈa s k ɛ r ɛ		BE BORN_VERB_1			
@@ -786,6 +793,7 @@ Portuguese	Portuguese			BLOW-FIND_VERB	achar	ɐʃˈaɾ	ɐ ʃ ˈa ɾ		BLOW-FIND_V
 Brazilian Portuguese	Brazilian Portuguese			BLOW-FIND_VERB	achar	aʃˈah	a ʃ ˈa h		BLOW-FIND_VERB_1			
 Latin	Latin			LAMB_NOUN	agnellum	aŋnˈɛlʲlʲʊ̃ː	a ŋ n ˈɛ lʲ lʲ ʊ̃ː		LAMB_NOUN_1			
 Romanian	Romanian			LAMB_NOUN	miel	mjˈel	m j ˈe l		LAMB_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			LAMB_NOUN	mńiel	mɲˈel	m ɲ ˈe l		LAMB_NOUN_1			
 Aromanian	Aromanian			LAMB_NOUN	njel	ɲˈel	ɲ ˈe l		LAMB_NOUN_1			
 Sicilian	Sicilian			LAMB_NOUN	agneddu	aɲɲˈɛɖɖʊ	a ɲ ɲ ˈɛ ɖ ɖ ʊ		LAMB_NOUN_1			
 Neapolitan	Neapolitan			LAMB_NOUN	agniello	aɲjˈɛllə	a ɲ j ˈɛ l l ə		LAMB_NOUN_1			
@@ -837,6 +845,7 @@ Logudorese	Logudorese			WHITE_ADJ	alvu	ˈalvu	ˈa l v u		WHITE_ADJ_1
 Campidanese	Campidanese			WHITE_ADJ	arvu	ˈarvu	ˈa r v u		WHITE_ADJ_1			
 Campidanese	Campidanese			WHITE_ADJ	alvu	ˈalvu	ˈa l v u		WHITE_ADJ_1			
 Romanian	Romanian			WHITE_ADJ	alb	ˈalb	ˈa l b		WHITE_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			WHITE_ADJ	alb	ˈalb	ˈa l b		WHITE_ADJ_1			
 Aromanian	Aromanian			WHITE_ADJ	albu	ˈalbu	ˈa l b u		WHITE_ADJ_1			
 Dalmatian	Dalmatian			WHITE_ADJ	jualb	jwˈalb	j w ˈa l b		WHITE_ADJ_1			
 Romansch	Romansch			WHITE_ADJ	alv	ˈalf	ˈa l f		WHITE_ADJ_1			
@@ -844,6 +853,7 @@ Latin	Latin			GARLIC_NOUN	ālium	ˈaːlʲiʊ̃ː	ˈaː lʲ i ʊ̃ː		GARLIC_NOUN
 Logudorese	Logudorese			GARLIC_NOUN	azu	ˈaʣu	ˈa ʣ u		GARLIC_NOUN_1			
 Campidanese	Campidanese			GARLIC_NOUN	azu	ˈaʣu	ˈa ʣ u		GARLIC_NOUN_1			
 Romanian	Romanian			GARLIC_NOUN	ai	ˈaj	ˈa j		GARLIC_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			GARLIC_NOUN	al’u	ˈaʎu	ˈa ʎ u		GARLIC_NOUN_1			
 Aromanian	Aromanian			GARLIC_NOUN	alj	ˈaʎ	ˈa ʎ		GARLIC_NOUN_1			
 Dalmatian	Dalmatian			GARLIC_NOUN	ail	ˈajl	ˈa j l		GARLIC_NOUN_1			
 Sicilian	Sicilian			GARLIC_NOUN	agghia	ˈaɟɟa	ˈa ɟ ɟ a		GARLIC_NOUN_1			
@@ -876,6 +886,7 @@ Latin	Latin			OTHER_ADJ	alterum	ˈaɫtɛrʊ̃ː	ˈa ɫ t ɛ r ʊ̃ː		OTHER_ADJ_
 Logudorese	Logudorese			OTHER_ADJ	àteru	ˈateru	ˈa t e r u		OTHER_ADJ_1			
 Campidanese	Campidanese			OTHER_ADJ	àteru	ˈateru	ˈa t e r u		OTHER_ADJ_1			
 Romanian	Romanian			OTHER_ADJ	alt	ˈalt	ˈa l t		OTHER_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			OTHER_ADJ	altu	ˈaltu	ˈa l t u		OTHER_ADJ_1			
 Aromanian	Aromanian			OTHER_ADJ	altu	ˈaltu	ˈa l t u		OTHER_ADJ_1			
 Sicilian	Sicilian			OTHER_ADJ	àutru	ˈawʈɽʊ	ˈa w ʈ ɽ ʊ		OTHER_ADJ_1			
 Neapolitan	Neapolitan			OTHER_ADJ	ato	ˈatə	ˈa t ə		OTHER_ADJ_1			
@@ -913,6 +924,7 @@ Latin	Latin			RING_NOUN	ānellum	aːnˈɛlʲlʲʊ̃ː	aː n ˈɛ lʲ lʲ ʊ̃ː	
 Logudorese	Logudorese			RING_NOUN	aneddu	anˈeɖɖu	a n ˈe ɖ ɖ u		RING_NOUN_1			
 Campidanese	Campidanese			RING_NOUN	aneddu	anˈeɖɖu	a n ˈe ɖ ɖ u		RING_NOUN_1			
 Romanian	Romanian			RING_NOUN	inel	inˈel	i n ˈe l		RING_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			RING_NOUN	ninel	ninˈel	n i n ˈe l		RING_NOUN_1			
 Aromanian	Aromanian			RING_NOUN	nel	nˈel	n ˈe l		RING_NOUN_1			
 Dalmatian	Dalmatian			RING_NOUN	anial	anjˈal	a n j ˈa l		RING_NOUN_1			
 Sicilian	Sicilian			RING_NOUN	aneddu	anˈɛɖɖʊ	a n ˈɛ ɖ ɖ ʊ		RING_NOUN_1			
@@ -945,6 +957,7 @@ Latin	Latin			ANGEL_NOUN	angelum	ˈaŋɡɛɫʊ̃ː	ˈa ŋ ɡ ɛ ɫ ʊ̃ː		ANGEL
 Logudorese	Logudorese			ANGEL_NOUN	ànghelu	ˈaŋɡelu	ˈa ŋ ɡ e l u		ANGEL_NOUN_1			
 Campidanese	Campidanese			ANGEL_NOUN	àngelu	ˈanʤelu	ˈa n ʤ e l u		ANGEL_NOUN_1			
 Romanian	Romanian			ANGEL_NOUN	înger	ˈɨnʤer	ˈɨ n ʤ e r		ANGEL_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			ANGEL_NOUN	angiľ	ˈanʤiʎ	ˈa n ʤ i ʎ		ANGEL_NOUN_1			
 Sicilian	Sicilian			ANGEL_NOUN	àncilu	ˈanɕɪlʊ	ˈa n ɕ ɪ l ʊ		ANGEL_NOUN_1			
 Neapolitan	Neapolitan			ANGEL_NOUN	agnelo	ˈaɲɲələ	ˈa ɲ ɲ ə l ə		ANGEL_NOUN_1			
 Corsican	Corsican			ANGEL_NOUN	anghjulu	ˈaŋɟulu	ˈa ŋ ɟ u l u		ANGEL_NOUN_1			
@@ -973,6 +986,7 @@ Portuguese	Portuguese			ANGEL_NOUN	anjo	ˈɐ̃ʒu	ˈɐ̃ ʒ u		ANGEL_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			ANGEL_NOUN	anjo	ˈɐ̃ʒu	ˈɐ̃ ʒ u		ANGEL_NOUN_1			
 Latin	Latin			SOUL_NOUN	animam	ˈanɪmãː	ˈa n ɪ m ãː		SOUL_NOUN_1			
 Romanian	Romanian			SOUL_NOUN	inimă	ˈinimə	ˈi n i m ə		SOUL_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SOUL_NOUN	ińamă	ˈiɲama	ˈi ɲ a m a		SOUL_NOUN_1			
 Aromanian	Aromanian			SOUL_NOUN	inimã	ˈinimə	ˈi n i m ə		SOUL_NOUN_1			
 Dalmatian	Dalmatian			SOUL_NOUN	jamna	jˈamna	j ˈa m n a		SOUL_NOUN_1			
 Sicilian	Sicilian			SOUL_NOUN	arma	ˈaɾma	ˈa ɾ m a		SOUL_NOUN_1			
@@ -1003,6 +1017,7 @@ Latin	Latin			YEAR_NOUN	annum	ˈannʊ̃ː	ˈa n n ʊ̃ː		YEAR_NOUN_1
 Logudorese	Logudorese			YEAR_NOUN	annu	ˈannu	ˈa n n u		YEAR_NOUN_1			
 Campidanese	Campidanese			YEAR_NOUN	annu	ˈannu	ˈa n n u		YEAR_NOUN_1			
 Romanian	Romanian			YEAR_NOUN	an	ˈan	ˈa n		YEAR_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			YEAR_NOUN	an	ˈan	ˈa n		YEAR_NOUN_1			
 Aromanian	Aromanian			YEAR_NOUN	an	ˈan	ˈa n		YEAR_NOUN_1			
 Dalmatian	Dalmatian			YEAR_NOUN	jan	jˈaŋ	j ˈa ŋ		YEAR_NOUN_1			
 Sicilian	Sicilian			YEAR_NOUN	anno	ˈannʊ	ˈa n n ʊ		YEAR_NOUN_1			
@@ -1071,6 +1086,7 @@ Latin	Latin			WATER_NOUN	aquam	ˈakʷãː	ˈa kʷ ãː		WATER_NOUN_1
 Logudorese	Logudorese			WATER_NOUN	abba	ˈabba	ˈa b b a		WATER_NOUN_1			
 Campidanese	Campidanese			WATER_NOUN	àcua	ˈakwa	ˈa k w a		WATER_NOUN_1			
 Romanian	Romanian			WATER_NOUN	apă	ˈapə	ˈa p ə		WATER_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			WATER_NOUN	apu	ˈapu	ˈa p u		WATER_NOUN_1			
 Aromanian	Aromanian			WATER_NOUN	apã	ˈapə	ˈa p ə		WATER_NOUN_1			
 Dalmatian	Dalmatian			WATER_NOUN	jacqua	jˈakwa	j ˈa k w a		WATER_NOUN_1			
 Sicilian	Sicilian			WATER_NOUN	acqua	ˈakkwa	ˈa k k w a		WATER_NOUN_1			
@@ -1139,6 +1155,7 @@ Latin	Latin			TREE_NOUN	arborem	ˈarbɔrɛ̃ː	ˈa r b ɔ r ɛ̃ː		TREE_NOUN_1
 Logudorese	Logudorese			TREE_NOUN	arbore	ˈarbore	ˈa r b o r e		TREE_NOUN_1			
 Campidanese	Campidanese			TREE_NOUN	arbori	ˈarbori	ˈa r b o r i		TREE_NOUN_1			
 Romanian	Romanian			TREE_NOUN	arbore	ˈarbore	ˈa r b o r e		TREE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			TREE_NOUN	arbur	ˈarbur	ˈa r b u r		TREE_NOUN_1			
 Aromanian	Aromanian			TREE_NOUN	arburi	ˈarburi	ˈa r b u r i		TREE_NOUN_1			
 Dalmatian	Dalmatian			TREE_NOUN	juarbol	jwˈarbol	j w ˈa r b o l		TREE_NOUN_1			
 Sicilian	Sicilian			TREE_NOUN	àrbiru	ˈaɾbɪɾʊ	ˈa ɾ b ɪ ɾ ʊ		TREE_NOUN_1			
@@ -1174,6 +1191,7 @@ Latin	Latin			EAR_NOUN	auriculam	au̯rˈɪkʊɫãː	au̯ r ˈɪ k ʊ ɫ ãː		
 Logudorese	Logudorese			EAR_NOUN	oricra	orˈikra	o r ˈi k r a		EAR_NOUN_1			
 Campidanese	Campidanese			EAR_NOUN	orija	orˈija	o r ˈi j a		EAR_NOUN_1			
 Romanian	Romanian			EAR_NOUN	ureche	urˈeke	u r ˈe k e		EAR_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			EAR_NOUN	ureacľă	ure̯ˈakʎə	u r e̯ˈa k ʎ ə		EAR_NOUN_1			
 Aromanian	Aromanian			EAR_NOUN	ureaclji	ure̯ˈakʎi	u r e̯ˈa k ʎ i		EAR_NOUN_1			
 Dalmatian	Dalmatian			EAR_NOUN	oracla	orˈakla	o r ˈa k l a		EAR_NOUN_1			
 Sicilian	Sicilian			EAR_NOUN	auricchia	awɾˈicca	a w ɾ ˈi c c a		EAR_NOUN_1			
@@ -1366,6 +1384,7 @@ Portuguese	Portuguese			BATH_NOUN	banho	bˈɐɲu	b ˈɐ ɲ u		BATH_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			BATH_NOUN	banho	bˈɐ̃j̃u	b ˈɐ̃ j̃ u		BATH_NOUN_1			
 Latin	Latin			MAN_NOUN	barbātum	barbˈaːtʊ̃ː	b a r b ˈaː t ʊ̃ː		MAN_NOUN_1			
 Romanian	Romanian			MAN_NOUN	bărbat	bərbˈat	b ə r b ˈa t		MAN_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			MAN_NOUN	bărbat	bərbˈat	b ə r b ˈa t		MAN_NOUN_1			
 Aromanian	Aromanian			MAN_NOUN	bãrbat	bərbˈat	b ə r b ˈa t		MAN_NOUN_1			
 Latin	Latin			LOW_ADJ	bassum	bˈassʊ̃ː	b ˈa s s ʊ̃ː		LOW_ADJ_2			
 Logudorese	Logudorese			LOW_ADJ	bassu	bˈassu	b ˈa s s u		LOW_ADJ_2			
@@ -1450,6 +1469,8 @@ Latin	Latin			WELL (ADV)_ADV	bene	bˈɛnɛ	b ˈɛ n ɛ		WELL (ADV)_ADV_1
 Logudorese	Logudorese			WELL (ADV)_ADV	bene	bˈene	b ˈe n e		WELL (ADV)_ADV_1			
 Campidanese	Campidanese			WELL (ADV)_ADV	bèni	bˈeni	b ˈe n i		WELL (ADV)_ADV_1			
 Romanian	Romanian			WELL (ADV)_ADV	bine	bˈine	b ˈi n e		WELL (ADV)_ADV_1			
+Istro-Romanian	Istro-Romanian			WELL (ADV)_ADV	bire	bˈire	b ˈi r e		WELL (ADV)_ADV_1			
+Megleno-Romanian	Megleno-Romanian			WELL (ADV)_ADV	bini	bˈini	b ˈi n i		WELL (ADV)_ADV_1			
 Aromanian	Aromanian			WELL (ADV)_ADV	ghini	ɡˈini	ɡ ˈi n i		WELL (ADV)_ADV_1			
 Aromanian	Aromanian			WELL (ADV)_ADV	ghine	ɡˈine	ɡ ˈi n e		WELL (ADV)_ADV_1			
 Sicilian	Sicilian			WELL (ADV)_ADV	beni	bˈɛnɪ	b ˈɛ n ɪ		WELL (ADV)_ADV_1			
@@ -1631,6 +1652,8 @@ Latin	Latin			GOOD (M.SG)_ADJ	bonum	bˈɔnʊ̃ː	b ˈɔ n ʊ̃ː		GOOD (M.SG)_AD
 Logudorese	Logudorese			GOOD (M.SG)_ADJ	bonu	bˈonu	b ˈo n u		GOOD (M.SG)_ADJ_1			
 Campidanese	Campidanese			GOOD (M.SG)_ADJ	bonu	bˈonu	b ˈo n u		GOOD (M.SG)_ADJ_1			
 Romanian	Romanian			GOOD (M.SG)_ADJ	bun	bˈun	b ˈu n		GOOD (M.SG)_ADJ_1			
+Istro-Romanian	Istro-Romanian			GOOD (M.SG)_ADJ	bur	bˈur	b ˈu r		GOOD (M.SG)_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			GOOD (M.SG)_ADJ	bun	bˈun	b ˈu n		GOOD (M.SG)_ADJ_1			
 Aromanian	Aromanian			GOOD (M.SG)_ADJ	bun	bˈun	b ˈu n		GOOD (M.SG)_ADJ_1			
 Dalmatian	Dalmatian			GOOD (M.SG)_ADJ	bun	bˈuŋ	b ˈu ŋ		GOOD (M.SG)_ADJ_1			
 Sicilian	Sicilian			GOOD (M.SG)_ADJ	bonu	bˈɔnʊ	b ˈɔ n ʊ		GOOD (M.SG)_ADJ_1			
@@ -1664,6 +1687,7 @@ Latin	Latin			OX_NOUN	bovem	bˈɔwɛ̃ː	b ˈɔ w ɛ̃ː		OX_NOUN_1
 Logudorese	Logudorese			OX_NOUN	boe	bˈoe	b ˈo e		OX_NOUN_1			
 Campidanese	Campidanese			OX_NOUN	boi	bˈoj	b ˈo j		OX_NOUN_1			
 Romanian	Romanian			OX_NOUN	bou	bˈow	b ˈo w		OX_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			OX_NOUN	bou	bˈow	b ˈo w		OX_NOUN_1			
 Aromanian	Aromanian			OX_NOUN	bou	bˈow	b ˈo w		OX_NOUN_1			
 Dalmatian	Dalmatian			OX_NOUN	bu	bˈu	b ˈu		OX_NOUN_1			
 Sicilian	Sicilian			OX_NOUN	voi	vˈɔɪ	v ˈɔ ɪ		OX_NOUN_1			
@@ -1726,6 +1750,7 @@ Latin	Latin			HORSE_NOUN	caballum	kabˈalʲlʲʊ̃ː	k a b ˈa lʲ lʲ ʊ̃ː		H
 Logudorese	Logudorese			HORSE_NOUN	cabaddu	kaβˈaɖɖu	k a β ˈa ɖ ɖ u		HORSE_NOUN_1			
 Campidanese	Campidanese			HORSE_NOUN	cabaddu	kaβˈaɖɖu	k a β ˈa ɖ ɖ u		HORSE_NOUN_1			
 Romanian	Romanian			HORSE_NOUN	cal	kˈal	k ˈa l		HORSE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			HORSE_NOUN	cal	kˈal	k ˈa l		HORSE_NOUN_1			
 Aromanian	Aromanian			HORSE_NOUN	cal	kˈal	k ˈa l		HORSE_NOUN_1			
 Dalmatian	Dalmatian			HORSE_NOUN	caval	kavˈal	k a v ˈa l		HORSE_NOUN_1			
 Sicilian	Sicilian			HORSE_NOUN	cavaddu	kavˈaɖɖʊ	k a v ˈa ɖ ɖ ʊ		HORSE_NOUN_1			
@@ -1756,6 +1781,7 @@ Latin	Latin			SKY_NOUN	caelum	kˈae̯ɫʊ̃ː	k ˈae̯ ɫ ʊ̃ː		SKY_NOUN_1
 Logudorese	Logudorese			SKY_NOUN	chelu	kˈelu	k ˈe l u		SKY_NOUN_1			
 Campidanese	Campidanese			SKY_NOUN	celu	ʧˈelu	ʧ ˈe l u		SKY_NOUN_1			
 Romanian	Romanian			SKY_NOUN	cer	ʧˈer	ʧ ˈe r		SKY_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SKY_NOUN	tser	ʦˈer	ʦ ˈe r		SKY_NOUN_1			
 Aromanian	Aromanian			SKY_NOUN	tser	ʦˈer	ʦ ˈe r		SKY_NOUN_1			
 Dalmatian	Dalmatian			SKY_NOUN	cil	ʧˈil	ʧ ˈi l		SKY_NOUN_1			
 Sicilian	Sicilian			SKY_NOUN	celu	ɕˈɛlʊ	ɕ ˈɛ l ʊ		SKY_NOUN_1			
@@ -1788,6 +1814,7 @@ Latin	Latin			HOT_ADJ	caldum	kˈaɫdʊ̃ː	k ˈa ɫ d ʊ̃ː		HOT_ADJ_1
 Logudorese	Logudorese			HOT_ADJ	caldu	kˈaldu	k ˈa l d u		HOT_ADJ_1			
 Campidanese	Campidanese			HOT_ADJ	caldu	kˈaldu	k ˈa l d u		HOT_ADJ_1			
 Romanian	Romanian			HOT_ADJ	cald	kˈald	k ˈa l d		HOT_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			HOT_ADJ	cald	kˈald	k ˈa l d		HOT_ADJ_1			
 Aromanian	Aromanian			HOT_ADJ	caldu	kˈaldu	k ˈa l d u		HOT_ADJ_1			
 Dalmatian	Dalmatian			HOT_ADJ	cuold	kwˈɔlt	k w ˈɔ l t		HOT_ADJ_1			
 Sicilian	Sicilian			HOT_ADJ	càudu	kˈawdʊ	k ˈa w d ʊ		HOT_ADJ_1			
@@ -1874,6 +1901,8 @@ Latin	Latin			DOG_NOUN	canem	kˈanɛ̃ː	k ˈa n ɛ̃ː		DOG_NOUN_1
 Logudorese	Logudorese			DOG_NOUN	cane	kˈane	k ˈa n e		DOG_NOUN_1			
 Campidanese	Campidanese			DOG_NOUN	cani	kˈani	k ˈa n i		DOG_NOUN_1			
 Romanian	Romanian			DOG_NOUN	câine	kˈɨjne	k ˈɨ j n e		DOG_NOUN_1			
+Istro-Romanian	Istro-Romanian			DOG_NOUN	căre	kˈəre	k ˈə r e		DOG_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			DOG_NOUN	cǫini	kˈɔjni	k ˈɔ j n i		DOG_NOUN_1			
 Aromanian	Aromanian			DOG_NOUN	cãne	kˈɨne	k ˈɨ n e		DOG_NOUN_1			
 Aromanian	Aromanian			DOG_NOUN	cãni	kˈɨni	k ˈɨ n i		DOG_NOUN_1			
 Dalmatian	Dalmatian			DOG_NOUN	cun	kˈuŋ	k ˈu ŋ		DOG_NOUN_1			
@@ -1907,6 +1936,8 @@ Portuguese	Portuguese			DOG_NOUN	cão	kˈɐ̃w̃	k ˈɐ̃ w̃		DOG_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			DOG_NOUN	cão	kˈɐ̃w̃	k ˈɐ̃ w̃		DOG_NOUN_1			
 Latin	Latin			SONG_NOUN	cantum	kˈantʊ̃ː	k ˈa n t ʊ̃ː		SONG_NOUN_1			
 Romanian	Romanian			SONG_NOUN	cânt	kˈɨnt	k ˈɨ n t		SONG_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SONG_NOUN	cǫnt	kˈɔnt	k ˈɔ n t		SONG_NOUN_1			
+Aromanian	Aromanian			SONG_NOUN	cãntu	kˈɨntu	k ˈɨ n t u		SONG_NOUN_1			
 Sicilian	Sicilian			SONG_NOUN	cantu	kˈantʊ	k ˈa n t ʊ		SONG_NOUN_1			
 Neapolitan	Neapolitan			SONG_NOUN	canto	kˈantə	k ˈa n t ə		SONG_NOUN_1			
 Corsican	Corsican			SONG_NOUN	cantu	kˈantu	k ˈa n t u		SONG_NOUN_1			
@@ -1958,6 +1989,7 @@ Latin	Latin			GOAT_NOUN	capram	kˈaprãː	k ˈa p r ãː		GOAT_NOUN_1
 Logudorese	Logudorese			GOAT_NOUN	craba	krˈaβa	k r ˈa β a		GOAT_NOUN_1			
 Campidanese	Campidanese			GOAT_NOUN	craba	krˈaβa	k r ˈa β a		GOAT_NOUN_1			
 Romanian	Romanian			GOAT_NOUN	capră	kˈaprə	k ˈa p r ə		GOAT_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			GOAT_NOUN	capră	kˈaprə	k ˈa p r ə		GOAT_NOUN_1			
 Aromanian	Aromanian			GOAT_NOUN	caprã	kˈaprə	k ˈa p r ə		GOAT_NOUN_1			
 Sicilian	Sicilian			GOAT_NOUN	crapa	kɾˈapa	k ɾ ˈa p a		GOAT_NOUN_1			
 Neapolitan	Neapolitan			GOAT_NOUN	crapa	kɾˈapə	k ɾ ˈa p ə		GOAT_NOUN_1			
@@ -2016,6 +2048,7 @@ Portuguese	Portuguese			HUNT_VERB	caçar	kɐsˈaɾ	k ɐ s ˈa ɾ		HUNT_VERB_1
 Brazilian Portuguese	Brazilian Portuguese			HUNT_VERB	caçar	kasˈah	k a s ˈa h		HUNT_VERB_1			
 Latin	Latin			HEAD_NOUN	capum	kˈapʊ̃ː	k ˈa p ʊ̃ː		HEAD_NOUN_1			
 Romanian	Romanian			HEAD_NOUN	cap	kˈap	k ˈa p		HEAD_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			HEAD_NOUN	cap	kˈap	k ˈa p		HEAD_NOUN_1			
 Aromanian	Aromanian			HEAD_NOUN	cap	kˈap	k ˈa p		HEAD_NOUN_1			
 Dalmatian	Dalmatian			HEAD_NOUN	cup	kˈup	k ˈu p		HEAD_NOUN_1			
 Sicilian	Sicilian			HEAD_NOUN	capu	kˈapʊ	k ˈa p ʊ		HEAD_NOUN_1			
@@ -2045,6 +2078,7 @@ Latin	Latin			MEAT_NOUN	carnem	kˈarnɛ̃ː	k ˈa r n ɛ̃ː		MEAT_NOUN_1
 Logudorese	Logudorese			MEAT_NOUN	carre	kˈarre	k ˈa r r e		MEAT_NOUN_1			
 Campidanese	Campidanese			MEAT_NOUN	carri	kˈarri	k ˈa r r i		MEAT_NOUN_1			
 Romanian	Romanian			MEAT_NOUN	carne	kˈarne	k ˈa r n e		MEAT_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			MEAT_NOUN	carni	kˈarni	k ˈa r n i		MEAT_NOUN_1			
 Aromanian	Aromanian			MEAT_NOUN	carni	kˈarni	k ˈa r n i		MEAT_NOUN_1			
 Dalmatian	Dalmatian			MEAT_NOUN	cuarne	kwˈarne	k w ˈa r n e		MEAT_NOUN_1			
 Sicilian	Sicilian			MEAT_NOUN	carni	kˈaɾnɪ	k ˈa ɾ n ɪ		MEAT_NOUN_1			
@@ -2108,6 +2142,7 @@ Québécois French	Québécois French			HOUSE_NOUN	chez	ʃe	ʃ e		HOUSE_NOUN_1
 Franco-Provençal	Franco-Provençal			HOUSE_NOUN	chiéz	ʃjˈes	ʃ j ˈe s		HOUSE_NOUN_1			
 Latin	Latin			HOUSE_NOUN	casam	kˈasãː	k ˈa s ãː		HOUSE_NOUN_2			
 Romanian	Romanian			HOUSE_NOUN	casă	kˈasə	k ˈa s ə		HOUSE_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			HOUSE_NOUN	casă	kˈasə	k ˈa s ə		HOUSE_NOUN_2			
 Aromanian	Aromanian			HOUSE_NOUN	casã	kˈasə	k ˈa s ə		HOUSE_NOUN_2			
 Dalmatian	Dalmatian			HOUSE_NOUN	cuosa	kwˈɔsa	k w ˈɔ s a		HOUSE_NOUN_2			
 Neapolitan	Neapolitan			HOUSE_NOUN	casa	kˈasə	k ˈa s ə		HOUSE_NOUN_2			
@@ -2258,6 +2293,7 @@ Latin	Latin			WAX_NOUN	cēram	kˈeːrãː	k ˈeː r ãː		WAX_NOUN_1
 Logudorese	Logudorese			WAX_NOUN	chera	kˈera	k ˈe r a		WAX_NOUN_1			
 Campidanese	Campidanese			WAX_NOUN	cera	ʧˈera	ʧ ˈe r a		WAX_NOUN_1			
 Romanian	Romanian			WAX_NOUN	ceară	ʧe̯ˈarə	ʧ e̯ˈa r ə		WAX_NOUN_1			
+Istro-Romanian	Istro-Romanian			WAX_NOUN	țerę	ʦˈeræ	ʦ ˈe r æ		WAX_NOUN_1			
 Aromanian	Aromanian			WAX_NOUN	tsearã	ʦe̯ˈarə	ʦ e̯ˈa r ə		WAX_NOUN_1			
 Dalmatian	Dalmatian			WAX_NOUN	caira	kˈajra	k ˈa j r a		WAX_NOUN_1			
 Sicilian	Sicilian			WAX_NOUN	cira	ɕˈiɾa	ɕ ˈi ɾ a		WAX_NOUN_1			
@@ -2290,6 +2326,7 @@ Latin	Latin			CHERRY_NOUN	ceresiam	kɛrˈɛsiãː	k ɛ r ˈɛ s i ãː		CHERRY
 Logudorese	Logudorese			CHERRY_NOUN	cheréssia	kerˈesja	k e r ˈe s j a		CHERRY_NOUN_1			
 Campidanese	Campidanese			CHERRY_NOUN	ceréxia	ʧerˈeʒja	ʧ e r ˈe ʒ j a		CHERRY_NOUN_1			
 Romanian	Romanian			CHERRY_NOUN	cireașă	ʧire̯ˈaʃə	ʧ i r e̯ˈa ʃ ə		CHERRY_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			CHERRY_NOUN	cireașcă	ʧire̯ˈaʃkə	ʧ i r e̯ˈa ʃ k ə		CHERRY_NOUN_1			
 Aromanian	Aromanian			CHERRY_NOUN	tsireashã	ʦire̯ˈaʃə	ʦ i r e̯ˈa ʃ ə		CHERRY_NOUN_1			
 Dalmatian	Dalmatian			CHERRY_NOUN	cris	krˈis	k r ˈi s		CHERRY_NOUN_1			
 Sicilian	Sicilian			CHERRY_NOUN	cirasa	ɕiɾˈaza	ɕ i ɾ ˈa z a		CHERRY_NOUN_1			
@@ -2347,6 +2384,7 @@ Latin	Latin			CITY_NOUN	cīvitātem	kiːwɪtˈaːtɛ̃ː	k iː w ɪ t ˈaː t ɛ
 Logudorese	Logudorese			CITY_NOUN	chitade	kitˈaðe	k i t ˈa ð e		CITY_NOUN_1			
 Campidanese	Campidanese			CITY_NOUN	citadi	ʧitˈadi	ʧ i t ˈa d i		CITY_NOUN_1			
 Romanian	Romanian			CITY_NOUN	cetate	ʧetˈate	ʧ e t ˈa t e		CITY_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			CITY_NOUN	țitati	ʦitˈati	ʦ i t ˈa t i		CITY_NOUN_1			
 Aromanian	Aromanian			CITY_NOUN	tsitati	ʦitˈati	ʦ i t ˈa t i		CITY_NOUN_1			
 Dalmatian	Dalmatian			CITY_NOUN	cituot	ʧitwˈot	ʧ i t w ˈo t		CITY_NOUN_1			
 Sicilian	Sicilian			CITY_NOUN	cità	ɕitˈa	ɕ i t ˈa		CITY_NOUN_1			
@@ -2409,6 +2447,7 @@ Latin	Latin			KEY_NOUN	clāvem	klˈaːwɛ̃ː	k l ˈaː w ɛ̃ː		KEY_NOUN_1
 Logudorese	Logudorese			KEY_NOUN	crae	krˈae	k r ˈa e		KEY_NOUN_1			
 Campidanese	Campidanese			KEY_NOUN	ciai	ʧˈaj	ʧ ˈa j		KEY_NOUN_1			
 Romanian	Romanian			KEY_NOUN	cheie	kˈeje	k ˈe j e		KEY_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			KEY_NOUN	cľeili	kʎˈejli	k ʎ ˈe j l i		KEY_NOUN_1			
 Aromanian	Aromanian			KEY_NOUN	cljai	kʎˈaj	k ʎ ˈa j		KEY_NOUN_1			
 Dalmatian	Dalmatian			KEY_NOUN	cluf	klˈuf	k l ˈu f		KEY_NOUN_1			
 Neapolitan	Neapolitan			KEY_NOUN	chiave	kjˈavə	k j ˈa v ə		KEY_NOUN_1			
@@ -2436,6 +2475,8 @@ Latin	Latin			TAIL_NOUN	cōdam	kˈoːdãː	k ˈoː d ãː		TAIL_NOUN_1
 Logudorese	Logudorese			TAIL_NOUN	coa	kˈoa	k ˈo a		TAIL_NOUN_1			
 Campidanese	Campidanese			TAIL_NOUN	coa	kˈoa	k ˈo a		TAIL_NOUN_1			
 Romanian	Romanian			TAIL_NOUN	coadă	ko̯ˈadə	k o̯ˈa d ə		TAIL_NOUN_1			
+Istro-Romanian	Istro-Romanian			TAIL_NOUN	code	kˈode	k ˈo d e		TAIL_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			TAIL_NOUN	coadă	ko̯ˈadə	k o̯ˈa d ə		TAIL_NOUN_1			
 Aromanian	Aromanian			TAIL_NOUN	coadã	ko̯ˈadə	k o̯ˈa d ə		TAIL_NOUN_1			
 Dalmatian	Dalmatian			TAIL_NOUN	cud	kˈud	k ˈu d		TAIL_NOUN_1			
 Dalmatian	Dalmatian			TAIL_NOUN	cuod	kwˈɔd	k w ˈɔ d		TAIL_NOUN_1			
@@ -2594,6 +2635,7 @@ Latin	Latin			HORN_NOUN	cornū	kˈɔrnuː	k ˈɔ r n uː		HORN_NOUN_2
 Logudorese	Logudorese			HORN_NOUN	corru	kˈorru	k ˈo r r u		HORN_NOUN_2			
 Campidanese	Campidanese			HORN_NOUN	corru	kˈorru	k ˈo r r u		HORN_NOUN_2			
 Romanian	Romanian			HORN_NOUN	corn	kˈorn	k ˈo r n		HORN_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			HORN_NOUN	corn	kˈorn	k ˈo r n		HORN_NOUN_2			
 Aromanian	Aromanian			HORN_NOUN	cornu	kˈornu	k ˈo r n u		HORN_NOUN_2			
 Dalmatian	Dalmatian			HORN_NOUN	cuarn	kwˈarŋ	k w ˈa r ŋ		HORN_NOUN_2			
 Neapolitan	Neapolitan			HORN_NOUN	cuorno	kwˈɔɾnə	k w ˈɔ ɾ n ə		HORN_NOUN_2			
@@ -2762,6 +2804,7 @@ Latin	Latin			CROSS_NOUN	crucem	krˈʊkɛ̃ː	k r ˈʊ k ɛ̃ː		CROSS_NOUN_1
 Logudorese	Logudorese			CROSS_NOUN	crughe	krˈuɣe	k r ˈu ɣ e		CROSS_NOUN_1			
 Campidanese	Campidanese			CROSS_NOUN	cruxi	krˈuʒi	k r ˈu ʒ i		CROSS_NOUN_1			
 Romanian	Romanian			CROSS_NOUN	cruce	krˈuʧe	k r ˈu ʧ e		CROSS_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			CROSS_NOUN	crutsă	krˈuʦə	k r ˈu ʦ ə		CROSS_NOUN_1			
 Aromanian	Aromanian			CROSS_NOUN	crutsi	krˈuʦi	k r ˈu ʦ i		CROSS_NOUN_1			
 Dalmatian	Dalmatian			CROSS_NOUN	crauc	krˈawk	k r ˈa w k		CROSS_NOUN_1			
 Sicilian	Sicilian			CROSS_NOUN	cruci	kɾˈuɕɪ	k ɾ ˈu ɕ ɪ		CROSS_NOUN_1			
@@ -2930,6 +2973,8 @@ Latin	Latin			TEN_NUM	decem	dˈɛkɛ̃ː	d ˈɛ k ɛ̃ː		TEN_NUM_1
 Logudorese	Logudorese			TEN_NUM	deghe	dˈeɣe	d ˈe ɣ e		TEN_NUM_1			
 Campidanese	Campidanese			TEN_NUM	dexi	dˈeʒi	d ˈe ʒ i		TEN_NUM_1			
 Romanian	Romanian			TEN_NUM	zece	zˈeʧe	z ˈe ʧ e		TEN_NUM_1			
+Istro-Romanian	Istro-Romanian			TEN_NUM	zece	zˈeʧe	z ˈe ʧ e		TEN_NUM_1			
+Megleno-Romanian	Megleno-Romanian			TEN_NUM	zeți	zˈeʦi	z ˈe ʦ i		TEN_NUM_1			
 Aromanian	Aromanian			TEN_NUM	dzatsi	ʣˈaʦi	ʣ ˈa ʦ i		TEN_NUM_1			
 Dalmatian	Dalmatian			TEN_NUM	dic	dˈik	d ˈi k		TEN_NUM_1			
 Sicilian	Sicilian			TEN_NUM	deci	dˈɛɕɪ	d ˈɛ ɕ ɪ		TEN_NUM_1			
@@ -2965,6 +3010,8 @@ Latin	Latin			TOOTH_NOUN	dentem	dˈɛntɛ̃ː	d ˈɛ n t ɛ̃ː		TOOTH_NOUN_1
 Logudorese	Logudorese			TOOTH_NOUN	dènte	dˈente	d ˈe n t e		TOOTH_NOUN_1			
 Campidanese	Campidanese			TOOTH_NOUN	dènti	dˈenti	d ˈe n t i		TOOTH_NOUN_1			
 Romanian	Romanian			TOOTH_NOUN	dinte	dˈinte	d ˈi n t e		TOOTH_NOUN_1			
+Istro-Romanian	Istro-Romanian			TOOTH_NOUN	dinte	dˈinte	d ˈi n t e		TOOTH_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			TOOTH_NOUN	dinti	dˈinti	d ˈi n t i		TOOTH_NOUN_1			
 Aromanian	Aromanian			TOOTH_NOUN	dinti	dˈinti	d ˈi n t i		TOOTH_NOUN_1			
 Dalmatian	Dalmatian			TOOTH_NOUN	diant	djˈant	d j ˈa n t		TOOTH_NOUN_1			
 Sicilian	Sicilian			TOOTH_NOUN	denti	dˈɛntɪ	d ˈɛ n t ɪ		TOOTH_NOUN_1			
@@ -3057,6 +3104,7 @@ Latin	Latin			DAY_NOUN	diem	dˈiɛ̃ː	d ˈi ɛ̃ː		DAY_NOUN_2
 Logudorese	Logudorese			DAY_NOUN	die	dˈie	d ˈi e		DAY_NOUN_2			
 Campidanese	Campidanese			DAY_NOUN	dì	dˈi	d ˈi		DAY_NOUN_2			
 Romanian	Romanian			DAY_NOUN	zi	zˈi	z ˈi		DAY_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			DAY_NOUN	zuu̯ă	zˈuwə	z ˈu w ə		DAY_NOUN_2			
 Aromanian	Aromanian			DAY_NOUN	dzuã	ʣˈuə	ʣ ˈu ə		DAY_NOUN_2			
 Dalmatian	Dalmatian			DAY_NOUN	dai	dˈaj	d ˈa j		DAY_NOUN_2			
 Corsican	Corsican			DAY_NOUN	dì	dˈi	d ˈi		DAY_NOUN_2			
@@ -3222,6 +3270,7 @@ Portuguese	Portuguese			SLEEP_VERB	dormir	duɾmˈiɾ	d u ɾ m ˈi ɾ		SLEEP_VERB
 Brazilian Portuguese	Brazilian Portuguese			SLEEP_VERB	dormir	doɦmˈih	d o ɦ m ˈi h		SLEEP_VERB_1			
 Latin	Latin			DRAGON_NOUN	dracō	drˈakoː	d r ˈa k oː		DRAGON_NOUN_1			
 Romanian	Romanian			DRAGON_NOUN	drac	drˈak	d r ˈa k		DRAGON_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			DRAGON_NOUN	drac	drˈak	d r ˈa k		DRAGON_NOUN_1			
 Aromanian	Aromanian			DRAGON_NOUN	drac	drˈak	d r ˈa k		DRAGON_NOUN_1			
 Friulian	Friulian			DRAGON_NOUN	drâc	drˈaːk	d r ˈaː k		DRAGON_NOUN_1			
 Occitan	Occitan			DRAGON_NOUN	drac	dɾˈak	d ɾ ˈa k		DRAGON_NOUN_1			
@@ -3258,6 +3307,7 @@ Portuguese	Portuguese			DRAGON_NOUN	dragão	dɾɐɣˈɐ̃w̃	d ɾ ɐ ɣ ˈɐ̃ w
 Brazilian Portuguese	Brazilian Portuguese			DRAGON_NOUN	dragão	dɾaɡˈɐ̃w̃	d ɾ a ɡ ˈɐ̃ w̃		DRAGON_NOUN_2			
 Latin	Latin			TWO (F)_NUM	duae	dˈuae̯	d ˈu ae̯		TWO (F)_NUM_1			
 Romanian	Romanian			TWO (F)_NUM	două	dˈowə	d ˈo w ə		TWO (F)_NUM_1			
+Megleno-Romanian	Megleno-Romanian			TWO (F)_NUM	două	dˈowə	d ˈo w ə		TWO (F)_NUM_1			
 Aromanian	Aromanian			TWO (F)_NUM	doauã	do̯ˈawə	d o̯ˈa w ə		TWO (F)_NUM_1			
 Aromanian	Aromanian			TWO (F)_NUM	dauã	dˈawə	d ˈa w ə		TWO (F)_NUM_1			
 Dalmatian	Dalmatian			TWO (F)_NUM	doje	dˈoje	d ˈo j e		TWO (F)_NUM_1			
@@ -3286,6 +3336,7 @@ Latin	Latin			SWEET_ADJ	dulcem	dˈʊɫkɛ̃ː	d ˈʊ ɫ k ɛ̃ː		SWEET_ADJ_1
 Logudorese	Logudorese			SWEET_ADJ	durche	dˈurke	d ˈu r k e		SWEET_ADJ_1			
 Logudorese	Logudorese			SWEET_ADJ	dulche	dˈulke	d ˈu l k e		SWEET_ADJ_1			
 Romanian	Romanian			SWEET_ADJ	dulce	dˈulʧe	d ˈu l ʧ e		SWEET_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			SWEET_ADJ	dulți	dˈulʦi	d ˈu l ʦ i		SWEET_ADJ_1			
 Aromanian	Aromanian			SWEET_ADJ	dultsi	dˈulʦi	d ˈu l ʦ i		SWEET_ADJ_1			
 Dalmatian	Dalmatian			SWEET_ADJ	dolc	dˈolk	d ˈo l k		SWEET_ADJ_1			
 Sicilian	Sicilian			SWEET_ADJ	duci	dˈuɕɪ	d ˈu ɕ ɪ		SWEET_ADJ_1			
@@ -3350,6 +3401,7 @@ Latin	Latin			TWO (M)_NUM	duōs	dˈuoːs	d ˈu oː s		TWO (M)_NUM_1
 Logudorese	Logudorese			TWO (M)_NUM	duos	dˈuozŏ	d ˈu o z ŏ		TWO (M)_NUM_1			
 Campidanese	Campidanese			TWO (M)_NUM	duos	dˈuozŏ	d ˈu o z ŏ		TWO (M)_NUM_1			
 Romanian	Romanian			TWO (M)_NUM	doi	dˈoj	d ˈo j		TWO (M)_NUM_1			
+Megleno-Romanian	Megleno-Romanian			TWO (M)_NUM	doi	dˈoj	d ˈo j		TWO (M)_NUM_1			
 Aromanian	Aromanian			TWO (M)_NUM	doi	dˈoj	d ˈo j		TWO (M)_NUM_1			
 Dalmatian	Dalmatian			TWO (M)_NUM	doi	dˈoj	d ˈo j		TWO (M)_NUM_1			
 Venetian	Venetian			TWO (M)_NUM	dói	dˈo	d ˈo		TWO (M)_NUM_1			
@@ -3514,6 +3566,7 @@ Latin	Latin			FLOUR_NOUN	farīnam	farˈiːnãː	f a r ˈiː n ãː		FLOUR_NOUN
 Logudorese	Logudorese			FLOUR_NOUN	farina	farˈina	f a r ˈi n a		FLOUR_NOUN_1			
 Campidanese	Campidanese			FLOUR_NOUN	farina	farˈina	f a r ˈi n a		FLOUR_NOUN_1			
 Romanian	Romanian			FLOUR_NOUN	făină	fˈəjnə	f ˈə j n ə		FLOUR_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			FLOUR_NOUN	fărină	fərˈinə	f ə r ˈi n ə		FLOUR_NOUN_1			
 Aromanian	Aromanian			FLOUR_NOUN	fãrinã	fərˈinə	f ə r ˈi n ə		FLOUR_NOUN_1			
 Dalmatian	Dalmatian			FLOUR_NOUN	faraina	farˈajna	f a r ˈa j n a		FLOUR_NOUN_1			
 Sicilian	Sicilian			FLOUR_NOUN	farina	faɾˈina	f a ɾ ˈi n a		FLOUR_NOUN_1			
@@ -3601,6 +3654,7 @@ Latin	Latin			IRON_NOUN	ferrum	fˈɛrrʊ̃ː	f ˈɛ r r ʊ̃ː		IRON_NOUN_1
 Logudorese	Logudorese			IRON_NOUN	ferru	fˈerru	f ˈe r r u		IRON_NOUN_1			
 Campidanese	Campidanese			IRON_NOUN	ferru	fˈerru	f ˈe r r u		IRON_NOUN_1			
 Romanian	Romanian			IRON_NOUN	fier	fjˈer	f j ˈe r		IRON_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			IRON_NOUN	ier	jˈer	j ˈe r		IRON_NOUN_1			
 Aromanian	Aromanian			IRON_NOUN	her	çˈer	ç ˈe r		IRON_NOUN_1			
 Dalmatian	Dalmatian			IRON_NOUN	fiar	fjˈar	f j ˈa r		IRON_NOUN_1			
 Sicilian	Sicilian			IRON_NOUN	ferro	fˈɛʐʐʊ	f ˈɛ ʐ ʐ ʊ		IRON_NOUN_1			
@@ -3696,6 +3750,7 @@ Latin	Latin			DAUGHTER_NOUN	fīliam	fˈiːlʲiãː	f ˈiː lʲ i ãː		DAUGHTE
 Logudorese	Logudorese			DAUGHTER_NOUN	fiza	fˈiʣa	f ˈi ʣ a		DAUGHTER_NOUN_1			
 Campidanese	Campidanese			DAUGHTER_NOUN	fiza	fˈiʣa	f ˈi ʣ a		DAUGHTER_NOUN_1			
 Romanian	Romanian			DAUGHTER_NOUN	fie	fˈie	f ˈi e		DAUGHTER_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			DAUGHTER_NOUN	il'ă	ˈiʎə	ˈi ʎ ə		DAUGHTER_NOUN_1			
 Aromanian	Aromanian			DAUGHTER_NOUN	hilji	çˈiʎi	ç ˈi ʎ i		DAUGHTER_NOUN_1			
 Dalmatian	Dalmatian			DAUGHTER_NOUN	felja	fˈeʎa	f ˈe ʎ a		DAUGHTER_NOUN_1			
 Sicilian	Sicilian			DAUGHTER_NOUN	figghia	fˈiɟɟa	f ˈi ɟ ɟ a		DAUGHTER_NOUN_1			
@@ -3731,6 +3786,7 @@ Latin	Latin			SON_NOUN	filium	fˈiːlʲiʊ̃ː	f ˈiː lʲ i ʊ̃ː		SON_NOUN_1
 Logudorese	Logudorese			SON_NOUN	fizu	fˈiʣu	f ˈi ʣ u		SON_NOUN_1			
 Campidanese	Campidanese			SON_NOUN	fizu	fˈiʣu	f ˈi ʣ u		SON_NOUN_1			
 Romanian	Romanian			SON_NOUN	fiu	fˈiw	f ˈi w		SON_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SON_NOUN	il'u	ˈiʎu	ˈi ʎ u		SON_NOUN_1			
 Aromanian	Aromanian			SON_NOUN	hilj	çˈiʎ	ç ˈi ʎ		SON_NOUN_1			
 Dalmatian	Dalmatian			SON_NOUN	felj	fˈeʎ	f ˈe ʎ		SON_NOUN_1			
 Sicilian	Sicilian			SON_NOUN	figghiu	fˈiɟɟʊ	f ˈi ɟ ɟ ʊ		SON_NOUN_1			
@@ -3850,6 +3906,7 @@ Latin	Latin			FLOWER_NOUN	flōrem	fɫˈoːrɛ̃ː	f ɫ ˈoː r ɛ̃ː		FLOWER_NO
 Logudorese	Logudorese			FLOWER_NOUN	frore	frˈore	f r ˈo r e		FLOWER_NOUN_1			
 Campidanese	Campidanese			FLOWER_NOUN	frori	frˈori	f r ˈo r i		FLOWER_NOUN_1			
 Romanian	Romanian			FLOWER_NOUN	floare	flo̯ˈare	f l o̯ˈa r e		FLOWER_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			FLOWER_NOUN	floari	flo̯ˈari	f l o̯ˈa r i		FLOWER_NOUN_1			
 Aromanian	Aromanian			FLOWER_NOUN	floari	flo̯ˈari	f l o̯ˈa r i		FLOWER_NOUN_1			
 Dalmatian	Dalmatian			FLOWER_NOUN	fiaur	fjˈawr	f j ˈa w r		FLOWER_NOUN_1			
 Sicilian	Sicilian			FLOWER_NOUN	ciuri	çˈuɾɪ	ç ˈu ɾ ɪ		FLOWER_NOUN_1			
@@ -3899,6 +3956,7 @@ Latin	Latin			FIRE_NOUN	focum	fˈɔkʊ̃ː	f ˈɔ k ʊ̃ː		FIRE_NOUN_1
 Logudorese	Logudorese			FIRE_NOUN	fogu	fˈoɣu	f ˈo ɣ u		FIRE_NOUN_1			
 Campidanese	Campidanese			FIRE_NOUN	fogu	fˈoɣu	f ˈo ɣ u		FIRE_NOUN_1			
 Romanian	Romanian			FIRE_NOUN	foc	fˈok	f ˈo k		FIRE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			FIRE_NOUN	foc	fˈok	f ˈo k		FIRE_NOUN_1			
 Aromanian	Aromanian			FIRE_NOUN	foc	fˈok	f ˈo k		FIRE_NOUN_1			
 Dalmatian	Dalmatian			FIRE_NOUN	fuc	fˈuk	f ˈu k		FIRE_NOUN_1			
 Sicilian	Sicilian			FIRE_NOUN	focu	fˈɔkʊ	f ˈɔ k ʊ		FIRE_NOUN_1			
@@ -4009,6 +4067,7 @@ Latin	Latin			BROTHER_NOUN	frātrem	frˈaːtrɛ̃ː	f r ˈaː t r ɛ̃ː		BROTHE
 Logudorese	Logudorese			BROTHER_NOUN	frade	frˈaðe	f r ˈa ð e		BROTHER_NOUN_1			
 Campidanese	Campidanese			BROTHER_NOUN	fradi	frˈaði	f r ˈa ð i		BROTHER_NOUN_1			
 Romanian	Romanian			BROTHER_NOUN	frate	frˈate	f r ˈa t e		BROTHER_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			BROTHER_NOUN	frati	frˈati	f r ˈa t i		BROTHER_NOUN_1			
 Aromanian	Aromanian			BROTHER_NOUN	frati	frˈati	f r ˈa t i		BROTHER_NOUN_1			
 Emilian	Emilian			BROTHER_NOUN	frè	frˈɛ	f r ˈɛ		BROTHER_NOUN_1			
 Ligurian	Ligurian			BROTHER_NOUN	fræ	frˈɛː	f r ˈɛː		BROTHER_NOUN_1			
@@ -4054,6 +4113,7 @@ Portuguese	Portuguese			COLD_ADJ	frio	fɾˈiu	f ɾ ˈi u		COLD_ADJ_1
 Brazilian Portuguese	Brazilian Portuguese			COLD_ADJ	frio	fɾˈiu	f ɾ ˈi u		COLD_ADJ_1			
 Latin	Latin			LEAF_NOUN	frondeam	frˈɔndɛãː	f r ˈɔ n d ɛ ãː		LEAF_NOUN_2			
 Romanian	Romanian			LEAF_NOUN	frunză	frˈunzə	f r ˈu n z ə		LEAF_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			LEAF_NOUN	frunză	frˈunzə	f r ˈu n z ə		LEAF_NOUN_2			
 Aromanian	Aromanian			LEAF_NOUN	frãndzã	frˈɨnʣə	f r ˈɨ n ʣ ə		LEAF_NOUN_2			
 Italian	Italian			LEAF_NOUN	fronza	frˈonʣa	f r ˈo n ʣ a		LEAF_NOUN_2			
 Latin	Latin			FRUIT_NOUN	frūctum	frˈuːktʊ̃ː	f r ˈuː k t ʊ̃ː		FRUIT_NOUN_1			
@@ -4095,6 +4155,7 @@ Latin	Latin			SMOKE_NOUN	fūmum	fˈuːmʊ̃ː	f ˈuː m ʊ̃ː		SMOKE_NOUN_2
 Logudorese	Logudorese			SMOKE_NOUN	fumu	fˈumu	f ˈu m u		SMOKE_NOUN_2			
 Campidanese	Campidanese			SMOKE_NOUN	fumu	fˈumu	f ˈu m u		SMOKE_NOUN_2			
 Romanian	Romanian			SMOKE_NOUN	fum	fˈum	f ˈu m		SMOKE_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			SMOKE_NOUN	fum	fˈum	f ˈu m		SMOKE_NOUN_2			
 Aromanian	Aromanian			SMOKE_NOUN	fum	fˈum	f ˈu m		SMOKE_NOUN_2			
 Sicilian	Sicilian			SMOKE_NOUN	fumu	fˈumʊ	f ˈu m ʊ		SMOKE_NOUN_2			
 Neapolitan	Neapolitan			SMOKE_NOUN	fummo	fˈummə	f ˈu m m ə		SMOKE_NOUN_2			
@@ -4120,6 +4181,7 @@ Portuguese	Portuguese			SMOKE_NOUN	fumo	fˈumu	f ˈu m u		SMOKE_NOUN_2
 Brazilian Portuguese	Brazilian Portuguese			SMOKE_NOUN	fumo	fˈũmu	f ˈũ m u		SMOKE_NOUN_2			
 Latin	Latin			YELLOW_ADJ	galbinum	ɡˈaɫbɪnʊ̃ː	ɡ ˈa ɫ b ɪ n ʊ̃ː		YELLOW_ADJ_3			
 Romanian	Romanian			YELLOW_ADJ	galben	ɡˈalben	ɡ ˈa l b e n		YELLOW_ADJ_3			
+Megleno-Romanian	Megleno-Romanian			YELLOW_ADJ	galbin	ɡˈalbin	ɡ ˈa l b i n		YELLOW_ADJ_3			
 Aromanian	Aromanian			YELLOW_ADJ	galbin	ɡˈalbin	ɡ ˈa l b i n		YELLOW_ADJ_3			
 Dalmatian	Dalmatian			YELLOW_ADJ	zuolno	ʒwˈɔlno	ʒ w ˈɔ l n o		YELLOW_ADJ_3	TRUE		
 Sicilian	Sicilian			YELLOW_ADJ	giallu	ʤˈallʊ	ʤ ˈa l l ʊ		YELLOW_ADJ_3	TRUE		
@@ -4184,6 +4246,7 @@ Brazilian Portuguese	Brazilian Portuguese			FREEZE_VERB	gear	ʒeˈah	ʒ e ˈa h	
 Latin	Latin			SON-IN-LAW_NOUN	generum	ɡˈɛnɛrʊ̃ː	ɡ ˈɛ n ɛ r ʊ̃ː		SON-IN-LAW_NOUN_1			
 Logudorese	Logudorese			SON-IN-LAW_NOUN	ghèneru	ɡˈeneru	ɡ ˈe n e r u		SON-IN-LAW_NOUN_1			
 Romanian	Romanian			SON-IN-LAW_NOUN	ginere	ʤˈinere	ʤ ˈi n e r e		SON-IN-LAW_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SON-IN-LAW_NOUN	ziniri	zˈiniri	z ˈi n i r i		SON-IN-LAW_NOUN_1			
 Aromanian	Aromanian			SON-IN-LAW_NOUN	dziniri	ʣˈiniri	ʣ ˈi n i r i		SON-IN-LAW_NOUN_1			
 Sicilian	Sicilian			SON-IN-LAW_NOUN	jènniru	jˈɛnnɪɾʊ	j ˈɛ n n ɪ ɾ ʊ		SON-IN-LAW_NOUN_1			
 Neapolitan	Neapolitan			SON-IN-LAW_NOUN	jénero	jˈenəɾə	j ˈe n ə ɾ ə		SON-IN-LAW_NOUN_1			
@@ -4251,6 +4314,7 @@ Logudorese	Logudorese			KNEE_NOUN	ghenucru	ɡenˈukru	ɡ e n ˈu k r u		KNEE_NOU
 Logudorese	Logudorese			KNEE_NOUN	benucru	benˈukru	b e n ˈu k r u		KNEE_NOUN_1			
 Campidanese	Campidanese			KNEE_NOUN	benuju	benˈuju	b e n ˈu j u		KNEE_NOUN_1			
 Romanian	Romanian			KNEE_NOUN	genunchi	ʤenˈunkʲ	ʤ e n ˈu n kʲ		KNEE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			KNEE_NOUN	zinucľu	zinˈukʎu	z i n ˈu k ʎ u		KNEE_NOUN_1			
 Aromanian	Aromanian			KNEE_NOUN	dzinuclju	ʣinˈukʎu	ʣ i n ˈu k ʎ u		KNEE_NOUN_1			
 Dalmatian	Dalmatian			KNEE_NOUN	ginuak	ʤinwˈak	ʤ i n w ˈa k		KNEE_NOUN_1			
 Dalmatian	Dalmatian			KNEE_NOUN	ginauk	ʤinˈawk	ʤ i n ˈa w k		KNEE_NOUN_1			
@@ -4323,6 +4387,7 @@ Portuguese	Portuguese			GUMS_NOUN	gengiva	ʒẽʒˈivɐ	ʒ ẽ ʒ ˈi v ɐ		GUMS
 Brazilian Portuguese	Brazilian Portuguese			GUMS_NOUN	gengiva	ʒẽʒˈivɐ	ʒ ẽ ʒ ˈi v ɐ		GUMS_NOUN_1			
 Latin	Latin			ICE_NOUN	glaciam	ɡɫˈakiãː	ɡ ɫ ˈa k i ãː		ICE_NOUN_2			
 Romanian	Romanian			ICE_NOUN	gheață	ɡe̯ˈaʦə	ɡ e̯ˈa ʦ ə		ICE_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			ICE_NOUN	gľets	ɡʎˈeʦ	ɡ ʎ ˈe ʦ		ICE_NOUN_2			
 Aromanian	Aromanian			ICE_NOUN	gljets	ɡʎˈeʦ	ɡ ʎ ˈe ʦ		ICE_NOUN_2			
 Dalmatian	Dalmatian			ICE_NOUN	glaz	ɡlˈaʦ	ɡ l ˈa ʦ		ICE_NOUN_2			
 Ligurian	Ligurian			ICE_NOUN	giassa	ʤˈasa	ʤ ˈa s a		ICE_NOUN_2			
@@ -4378,6 +4443,7 @@ Portuguese	Portuguese			BIG_ADJ	grande	ɡɾˈɐ̃dɨ	ɡ ɾ ˈɐ̃ d ɨ		BIG_ADJ_
 Brazilian Portuguese	Brazilian Portuguese			BIG_ADJ	grande	ɡɾˈɐ̃ʤi	ɡ ɾ ˈɐ̃ ʤ i		BIG_ADJ_1			
 Latin	Latin			GRAIN_NOUN	grānum	ɡrˈaːnʊ̃ː	ɡ r ˈaː n ʊ̃ː		GRAIN_NOUN_2			
 Romanian	Romanian			GRAIN_NOUN	grâu	ɡrˈɨw	ɡ r ˈɨ w		GRAIN_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			GRAIN_NOUN	grǫn	ɡrˈɔn	ɡ r ˈɔ n		GRAIN_NOUN_2			
 Sicilian	Sicilian			GRAIN_NOUN	granu	ɡrˈanʊ	ɡ r ˈa n ʊ		GRAIN_NOUN_2			
 Neapolitan	Neapolitan			GRAIN_NOUN	gràno	ɡɾˈanə	ɡ ɾ ˈa n ə		GRAIN_NOUN_2			
 Italian	Italian			GRAIN_NOUN	grano	ɡrˈano	ɡ r ˈa n o		GRAIN_NOUN_2			
@@ -4399,6 +4465,8 @@ Portuguese	Portuguese			GRAIN_NOUN	grão	ɡɾˈɐ̃w̃	ɡ ɾ ˈɐ̃ w̃		GRAIN_N
 Brazilian Portuguese	Brazilian Portuguese			GRAIN_NOUN	grão	ɡɾˈɐ̃w̃	ɡ ɾ ˈɐ̃ w̃		GRAIN_NOUN_2			
 Latin	Latin			THICK_ADJ	grossum	ɡrˈɔssʊ̃ː	ɡ r ˈɔ s s ʊ̃ː		THICK_ADJ_1			
 Romanian	Romanian			THICK_ADJ	gros	ɡrˈos	ɡ r ˈo s		THICK_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			THICK_ADJ	gros	ɡrˈos	ɡ r ˈo s		THICK_ADJ_1			
+Aromanian	Aromanian			THICK_ADJ	gros	ɡrˈos	ɡ r ˈo s		THICK_ADJ_1			
 Sicilian	Sicilian			THICK_ADJ	rossu	ɾˈɔssʊ	ɾ ˈɔ s s ʊ		THICK_ADJ_1			
 Neapolitan	Neapolitan			THICK_ADJ	gruosso	ɡrwˈɔssə	ɡ r w ˈɔ s s ə		THICK_ADJ_1			
 Corsican	Corsican			THICK_ADJ	grossu	ɡrˈɔssu	ɡ r ˈɔ s s u		THICK_ADJ_1			
@@ -4429,6 +4497,7 @@ Latin	Latin			THROAT_NOUN	gulam	ɡˈʊɫãː	ɡ ˈʊ ɫ ãː		THROAT_NOUN_1
 Logudorese	Logudorese			THROAT_NOUN	bula	bˈula	b ˈu l a		THROAT_NOUN_1			
 Campidanese	Campidanese			THROAT_NOUN	bula	bˈula	b ˈu l a		THROAT_NOUN_1			
 Romanian	Romanian			THROAT_NOUN	gură	ɡˈurə	ɡ ˈu r ə		THROAT_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			THROAT_NOUN	gură	ɡˈurə	ɡ ˈu r ə		THROAT_NOUN_1			
 Aromanian	Aromanian			THROAT_NOUN	gurã	ɡˈurə	ɡ ˈu r ə		THROAT_NOUN_1			
 Sicilian	Sicilian			THROAT_NOUN	gula	ɡˈula	ɡ ˈu l a		THROAT_NOUN_1			
 Italian	Italian			THROAT_NOUN	gola	ɡˈola	ɡ ˈo l a		THROAT_NOUN_1			
@@ -4501,6 +4570,7 @@ Latin	Latin			GRASS_NOUN	herbam	hˈɛrbãː	h ˈɛ r b ãː		GRASS_NOUN_1
 Logudorese	Logudorese			GRASS_NOUN	erba	ˈerba	ˈe r b a		GRASS_NOUN_1			
 Campidanese	Campidanese			GRASS_NOUN	erba	ˈerba	ˈe r b a		GRASS_NOUN_1			
 Romanian	Romanian			GRASS_NOUN	iarbă	jˈarbə	j ˈa r b ə		GRASS_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			GRASS_NOUN	iarbă	jˈarbə	j ˈa r b ə		GRASS_NOUN_1			
 Aromanian	Aromanian			GRASS_NOUN	earbã	e̯ˈarbə	e̯ˈa r b ə		GRASS_NOUN_1			
 Aromanian	Aromanian			GRASS_NOUN	iarbã	jˈarbə	j ˈa r b ə		GRASS_NOUN_1			
 Dalmatian	Dalmatian			GRASS_NOUN	jarba	jˈarba	j ˈa r b a		GRASS_NOUN_1			
@@ -4533,6 +4603,7 @@ Latin	Latin			WINTER_NOUN	hībernum	hiːbˈɛrnʊ̃ː	h iː b ˈɛ r n ʊ̃ː		W
 Logudorese	Logudorese			WINTER_NOUN	jerru	jˈerru	j ˈe r r u		WINTER_NOUN_2			
 Campidanese	Campidanese			WINTER_NOUN	ierru	jˈerru	j ˈe r r u		WINTER_NOUN_2			
 Romanian	Romanian			WINTER_NOUN	iarnă	jˈarnə	j ˈa r n ə		WINTER_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			WINTER_NOUN	iarnă	jˈarnə	j ˈa r n ə		WINTER_NOUN_2			
 Aromanian	Aromanian			WINTER_NOUN	earnã	e̯ˈarnə	e̯ˈa r n ə		WINTER_NOUN_2			
 Aromanian	Aromanian			WINTER_NOUN	iarnã	jˈarnə	j ˈa r n ə		WINTER_NOUN_2			
 French	French			WINTER_NOUN	hiver	ivɛʁ	i v ɛ ʁ		WINTER_NOUN_2			
@@ -4590,6 +4661,7 @@ Portuguese	Portuguese			MAN_NOUN	homem	ˈɔmɐ̃j̃	ˈɔ m ɐ̃ j̃		MAN_NOUN_2
 Brazilian Portuguese	Brazilian Portuguese			MAN_NOUN	homem	ˈõmẽj̃	ˈõ m ẽ j̃		MAN_NOUN_2			
 Latin	Latin			MAN_NOUN	homō	hˈɔmoː	h ˈɔ m oː		MAN_NOUN_3			
 Romanian	Romanian			MAN_NOUN	om	ˈom	ˈo m		MAN_NOUN_3			
+Megleno-Romanian	Megleno-Romanian			MAN_NOUN	u̯om	wˈom	w ˈo m		MAN_NOUN_3			
 Aromanian	Aromanian			MAN_NOUN	om	ˈom	ˈo m		MAN_NOUN_3			
 Sicilian	Sicilian			MAN_NOUN	omu	ˈɔmʊ	ˈɔ m ʊ		MAN_NOUN_3			
 Neapolitan	Neapolitan			MAN_NOUN	ommo	ˈɔmmə	ˈɔ m m ə		MAN_NOUN_3			
@@ -4609,6 +4681,7 @@ Franco-Provençal	Franco-Provençal			MAN_NOUN	homo	ˈomo	ˈo m o		MAN_NOUN_3
 Savoyard	Savoyard			MAN_NOUN	omo	ˈomo	ˈo m o		MAN_NOUN_3			
 Latin	Latin			SHOULDER_NOUN	humerum	hˈʊmɛrʊ̃ː	h ˈʊ m ɛ r ʊ̃ː		SHOULDER_NOUN_1			
 Romanian	Romanian			SHOULDER_NOUN	umăr	ˈumər	ˈu m ə r		SHOULDER_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SHOULDER_NOUN	numir	nˈumir	n ˈu m i r		SHOULDER_NOUN_1			
 Aromanian	Aromanian			SHOULDER_NOUN	umir	ˈumir	ˈu m i r		SHOULDER_NOUN_1			
 Italian	Italian			SHOULDER_NOUN	omero	ˈɔmero	ˈɔ m e r o		SHOULDER_NOUN_1			
 Spanish	Spanish			SHOULDER_NOUN	hombro	ˈombɾo	ˈo m b ɾ o		SHOULDER_NOUN_1			
@@ -4618,6 +4691,7 @@ Portuguese	Portuguese			SHOULDER_NOUN	ombro	ˈõbɾu	ˈõ b ɾ u		SHOULDER_NOU
 Brazilian Portuguese	Brazilian Portuguese			SHOULDER_NOUN	ombro	ˈõbɾu	ˈõ b ɾ u		SHOULDER_NOUN_1			
 Latin	Latin			SHE_PRON	illam	ˈɪlʲlʲãː	ˈɪ lʲ lʲ ãː		SHE_PRON_2			
 Romanian	Romanian			SHE_PRON	ea	je̯ˈa	j e̯ˈa		SHE_PRON_2			
+Megleno-Romanian	Megleno-Romanian			SHE_PRON	ea	e̯ˈa	e̯ˈa		SHE_PRON_2			
 Aromanian	Aromanian			SHE_PRON	ia	je̯ˈa	j e̯ˈa		SHE_PRON_2			
 Aromanian	Aromanian			SHE_PRON	ea	e̯ˈa	e̯ˈa		SHE_PRON_2			
 Dalmatian	Dalmatian			SHE_PRON	jala	jˈala	j ˈa l a		SHE_PRON_2			
@@ -4643,6 +4717,7 @@ Portuguese	Portuguese			SHE_PRON	ela	ˈɛlɐ	ˈɛ l ɐ		SHE_PRON_2
 Brazilian Portuguese	Brazilian Portuguese			SHE_PRON	ela	ˈɛlɐ	ˈɛ l ɐ		SHE_PRON_2			
 Latin	Latin			HE_PRON	ille	ˈɪlʲlʲɛ	ˈɪ lʲ lʲ ɛ		HE_PRON_2			
 Romanian	Romanian			HE_PRON	el	jˈel	j ˈe l		HE_PRON_2			
+Megleno-Romanian	Megleno-Romanian			HE_PRON	ĭel	jˈel	j ˈe l		HE_PRON_2			
 Aromanian	Aromanian			HE_PRON	el	ˈel	ˈe l		HE_PRON_2			
 Dalmatian	Dalmatian			HE_PRON	jal	jˈal	j ˈa l		HE_PRON_2			
 Sicilian	Sicilian			HE_PRON	iddu	ˈiɖɖʊ	ˈi ɖ ɖ ʊ		HE_PRON_2			
@@ -4673,6 +4748,8 @@ Latin	Latin			GAME_NOUN	iocum	jˈɔkʊ̃ː	j ˈɔ k ʊ̃ː		GAME_NOUN_1
 Logudorese	Logudorese			GAME_NOUN	jogu	jˈoɣu	j ˈo ɣ u		GAME_NOUN_1			
 Campidanese	Campidanese			GAME_NOUN	jogu	jˈoɣu	j ˈo ɣ u		GAME_NOUN_1			
 Romanian	Romanian			GAME_NOUN	joc	ʒˈok	ʒ ˈo k		GAME_NOUN_1			
+Istro-Romanian	Istro-Romanian			GAME_NOUN	joc	jˈok	j ˈo k		GAME_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			GAME_NOUN	joc	ʒˈok	ʒ ˈo k		GAME_NOUN_1			
 Aromanian	Aromanian			GAME_NOUN	gioc	ʤˈok	ʤ ˈo k		GAME_NOUN_1			
 Sicilian	Sicilian			GAME_NOUN	jocu	jˈɔkʊ	j ˈɔ k ʊ		GAME_NOUN_1			
 Neapolitan	Neapolitan			GAME_NOUN	juoco	jwˈɔkə	j w ˈɔ k ə		GAME_NOUN_1			
@@ -4780,6 +4857,7 @@ Portuguese	Portuguese			JUNE_PROPN	junho	ʒˈuɲu	ʒ ˈu ɲ u		JUNE_PROPN_1
 Brazilian Portuguese	Brazilian Portuguese			JUNE_PROPN	junho	ʒˈũj̃u	ʒ ˈũ j̃ u		JUNE_PROPN_1			
 Latin	Latin			YOUNG_ADJ	iuvenem	jˈuwɛnɛ̃ː	j ˈu w ɛ n ɛ̃ː		YOUNG_ADJ_1			
 Romanian	Romanian			YOUNG_ADJ	june	ʒˈune	ʒ ˈu n e		YOUNG_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			YOUNG_ADJ	june	ʒˈune	ʒ ˈu n e		YOUNG_ADJ_1			
 Aromanian	Aromanian			YOUNG_ADJ	gioni	ʤˈoni	ʤ ˈo n i		YOUNG_ADJ_1			
 Dalmatian	Dalmatian			YOUNG_ADJ	jaun	jˈawn	j ˈa w n		YOUNG_ADJ_1			
 Sicilian	Sicilian			YOUNG_ADJ	giùvini	ʤˈuvɪnɪ	ʤ ˈu v ɪ n ɪ		YOUNG_ADJ_1			
@@ -4812,6 +4890,7 @@ Latin	Latin			TEAR_NOUN	lacrimam	ɫˈakrɪmãː	ɫ ˈa k r ɪ m ãː		TEAR_NOU
 Logudorese	Logudorese			TEAR_NOUN	làcrima	lˈakrima	l ˈa k r i m a		TEAR_NOUN_1			
 Campidanese	Campidanese			TEAR_NOUN	làcrima	lˈakrima	l ˈa k r i m a		TEAR_NOUN_1			
 Romanian	Romanian			TEAR_NOUN	lacrimă	lˈakrimə	l ˈa k r i m ə		TEAR_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			TEAR_NOUN	lacrimă	lˈakrimə	l ˈa k r i m ə		TEAR_NOUN_1			
 Aromanian	Aromanian			TEAR_NOUN	lacrimã	lˈakrimə	l ˈa k r i m ə		TEAR_NOUN_1			
 Sicilian	Sicilian			TEAR_NOUN	làcrima	lˈakɾɪma	l ˈa k ɾ ɪ m a		TEAR_NOUN_1			
 Neapolitan	Neapolitan			TEAR_NOUN	lacrima	lˈakɾimə	l ˈa k ɾ i m ə		TEAR_NOUN_1			
@@ -4843,6 +4922,7 @@ Latin	Latin			MILK_NOUN	lactem	ɫˈaktɛ̃ː	ɫ ˈa k t ɛ̃ː		MILK_NOUN_1
 Logudorese	Logudorese			MILK_NOUN	late	lˈate	l ˈa t e		MILK_NOUN_1			
 Campidanese	Campidanese			MILK_NOUN	lati	lˈati	l ˈa t i		MILK_NOUN_1			
 Romanian	Romanian			MILK_NOUN	lapte	lˈapte	l ˈa p t e		MILK_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			MILK_NOUN	lapti	lˈapti	l ˈa p t i		MILK_NOUN_1			
 Aromanian	Aromanian			MILK_NOUN	lapti	lˈapti	l ˈa p t i		MILK_NOUN_1			
 Sicilian	Sicilian			MILK_NOUN	latti	lˈattɪ	l ˈa t t ɪ		MILK_NOUN_1			
 Neapolitan	Neapolitan			MILK_NOUN	latte	lˈattə	l ˈa t t ə		MILK_NOUN_1			
@@ -4874,6 +4954,7 @@ Latin	Latin			LAKE_NOUN	lacum	lˈakʊ̃ː	l ˈa k ʊ̃ː		LAKE_NOUN_1
 Logudorese	Logudorese			LAKE_NOUN	lagu	lˈaɣu	l ˈa ɣ u		LAKE_NOUN_1			
 Campidanese	Campidanese			LAKE_NOUN	lagu	lˈaɣu	l ˈa ɣ u		LAKE_NOUN_1			
 Romanian	Romanian			LAKE_NOUN	lac	lˈak	l ˈa k		LAKE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			LAKE_NOUN	lac	lˈak	l ˈa k		LAKE_NOUN_1			
 Aromanian	Aromanian			LAKE_NOUN	lac	lˈak	l ˈa k		LAKE_NOUN_1			
 Dalmatian	Dalmatian			LAKE_NOUN	lac	lˈak	l ˈa k		LAKE_NOUN_1			
 Sicilian	Sicilian			LAKE_NOUN	lacu	lˈakʊ	l ˈa k ʊ		LAKE_NOUN_1			
@@ -4905,6 +4986,7 @@ Latin	Latin			WOOL_NOUN	lānam	ɫˈaːnãː	ɫ ˈaː n ãː		WOOL_NOUN_1
 Logudorese	Logudorese			WOOL_NOUN	lana	lˈana	l ˈa n a		WOOL_NOUN_1			
 Campidanese	Campidanese			WOOL_NOUN	lana	lˈana	l ˈa n a		WOOL_NOUN_1			
 Romanian	Romanian			WOOL_NOUN	lână	lˈɨnə	l ˈɨ n ə		WOOL_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			WOOL_NOUN	lǫnă	lˈɔnə	l ˈɔ n ə		WOOL_NOUN_1			
 Aromanian	Aromanian			WOOL_NOUN	lãnã	lˈɨnə	l ˈɨ n ə		WOOL_NOUN_1			
 Dalmatian	Dalmatian			WOOL_NOUN	luona	lwˈɔna	l w ˈɔ n a		WOOL_NOUN_1			
 Sicilian	Sicilian			WOOL_NOUN	lana	lˈana	l ˈa n a		WOOL_NOUN_1			
@@ -5051,6 +5133,7 @@ Latin	Latin			HARE_NOUN	leporem	ɫˈɛpɔrɛ̃ː	ɫ ˈɛ p ɔ r ɛ̃ː		HARE_NOU
 Logudorese	Logudorese			HARE_NOUN	lèpore	lˈepore	l ˈe p o r e		HARE_NOUN_1			
 Campidanese	Campidanese			HARE_NOUN	lèpori	lˈepori	l ˈe p o r i		HARE_NOUN_1			
 Romanian	Romanian			HARE_NOUN	iepure	jˈepure	j ˈe p u r e		HARE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			HARE_NOUN	l’epuri	ʎˈepuri	ʎ ˈe p u r i		HARE_NOUN_1			
 Aromanian	Aromanian			HARE_NOUN	ljepuri	ʎˈepuri	ʎ ˈe p u r i		HARE_NOUN_1			
 Dalmatian	Dalmatian			HARE_NOUN	lipro	lˈipro	l ˈi p r o		HARE_NOUN_1			
 Sicilian	Sicilian			HARE_NOUN	lepru	lˈɛpɾʊ	l ˈɛ p ɾ ʊ		HARE_NOUN_1			
@@ -5153,6 +5236,7 @@ Portuguese	Portuguese			WOOD_NOUN	lenha	lˈɐjɲɐ	l ˈɐ j ɲ ɐ		WOOD_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			WOOD_NOUN	lenha	lˈẽj̃ɐ	l ˈẽ j̃ ɐ		WOOD_NOUN_1			
 Latin	Latin			WOOD_NOUN	lignum	lˈɪɡnʊ̃ː	l ˈɪ ɡ n ʊ̃ː		WOOD_NOUN_2			
 Romanian	Romanian			WOOD_NOUN	lemn	lˈemn	l ˈe m n		WOOD_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			WOOD_NOUN	lemu	lˈemu	l ˈe m u		WOOD_NOUN_2			
 Aromanian	Aromanian			WOOD_NOUN	lemnu	lˈemnu	l ˈe m n u		WOOD_NOUN_2			
 Dalmatian	Dalmatian			WOOD_NOUN	lanc	lˈaŋk	l ˈa ŋ k		WOOD_NOUN_2			
 Sicilian	Sicilian			WOOD_NOUN	lignu	lˈiɲɲʊ	l ˈi ɲ ɲ ʊ		WOOD_NOUN_2			
@@ -5181,6 +5265,7 @@ Latin	Latin			TONGUE_NOUN	linguam	lˈɪŋɡʷãː	l ˈɪ ŋ ɡʷ ãː		TONGUE_
 Logudorese	Logudorese			TONGUE_NOUN	limba	lˈimba	l ˈi m b a		TONGUE_NOUN_1			
 Campidanese	Campidanese			TONGUE_NOUN	lingua	lˈiŋɡwa	l ˈi ŋ ɡ w a		TONGUE_NOUN_1			
 Romanian	Romanian			TONGUE_NOUN	limbă	lˈimbə	l ˈi m b ə		TONGUE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			TONGUE_NOUN	limbă	lˈimbə	l ˈi m b ə		TONGUE_NOUN_1			
 Aromanian	Aromanian			TONGUE_NOUN	limbã	lˈimbə	l ˈi m b ə		TONGUE_NOUN_1			
 Dalmatian	Dalmatian			TONGUE_NOUN	langa	lˈaŋɡa	l ˈa ŋ ɡ a		TONGUE_NOUN_1			
 Sicilian	Sicilian			TONGUE_NOUN	lingua	lˈiŋɡwa	l ˈi ŋ ɡ w a		TONGUE_NOUN_1			
@@ -5242,6 +5327,7 @@ Latin	Latin			PLACE_NOUN	locum	ɫˈɔkʊ̃ː	ɫ ˈɔ k ʊ̃ː		PLACE_NOUN_1
 Logudorese	Logudorese			PLACE_NOUN	logu	lˈoɣu	l ˈo ɣ u		PLACE_NOUN_1			
 Campidanese	Campidanese			PLACE_NOUN	logu	lˈoɣu	l ˈo ɣ u		PLACE_NOUN_1			
 Romanian	Romanian			PLACE_NOUN	loc	lˈok	l ˈo k		PLACE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			PLACE_NOUN	loc	lˈok	l ˈo k		PLACE_NOUN_1			
 Aromanian	Aromanian			PLACE_NOUN	loc	lˈok	l ˈo k		PLACE_NOUN_1			
 Dalmatian	Dalmatian			PLACE_NOUN	luc	lˈuk	l ˈu k		PLACE_NOUN_1			
 Sicilian	Sicilian			PLACE_NOUN	locu	lˈɔkʊ	l ˈɔ k ʊ		PLACE_NOUN_1			
@@ -5277,6 +5363,7 @@ Latin	Latin			LONG_ADJ	longum	ɫˈɔŋɡʊ̃ː	ɫ ˈɔ ŋ ɡ ʊ̃ː		LONG_ADJ_1
 Logudorese	Logudorese			LONG_ADJ	longu	lˈoŋɡu	l ˈo ŋ ɡ u		LONG_ADJ_1			
 Campidanese	Campidanese			LONG_ADJ	longu	lˈoŋɡu	l ˈo ŋ ɡ u		LONG_ADJ_1			
 Romanian	Romanian			LONG_ADJ	lung	lˈuŋɡ	l ˈu ŋ ɡ		LONG_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			LONG_ADJ	lung	lˈuŋɡ	l ˈu ŋ ɡ		LONG_ADJ_1			
 Aromanian	Aromanian			LONG_ADJ	lungu	lˈuŋɡu	l ˈu ŋ ɡ u		LONG_ADJ_1			
 Dalmatian	Dalmatian			LONG_ADJ	lung	lˈuŋɡ	l ˈu ŋ ɡ		LONG_ADJ_1			
 Sicilian	Sicilian			LONG_ADJ	longu	lˈoŋɡʊ	l ˈo ŋ ɡ ʊ		LONG_ADJ_1			
@@ -5367,6 +5454,7 @@ Latin	Latin			MOON_NOUN	lunam	ɫˈuːnãː	ɫ ˈuː n ãː		MOON_NOUN_1
 Logudorese	Logudorese			MOON_NOUN	luna	lˈuna	l ˈu n a		MOON_NOUN_1			
 Campidanese	Campidanese			MOON_NOUN	luna	lˈuna	l ˈu n a		MOON_NOUN_1			
 Romanian	Romanian			MOON_NOUN	lună	lˈunə	l ˈu n ə		MOON_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			MOON_NOUN	lună	lˈunə	l ˈu n ə		MOON_NOUN_1			
 Aromanian	Aromanian			MOON_NOUN	lunã	lˈunə	l ˈu n ə		MOON_NOUN_1			
 Dalmatian	Dalmatian			MOON_NOUN	loina	lˈojna	l ˈo j n a		MOON_NOUN_1			
 Sicilian	Sicilian			MOON_NOUN	luna	lˈuna	l ˈu n a		MOON_NOUN_1			
@@ -5401,6 +5489,7 @@ Latin	Latin			WOLF_NOUN	lupum	ɫˈʊpʊ̃ː	ɫ ˈʊ p ʊ̃ː		WOLF_NOUN_2
 Logudorese	Logudorese			WOLF_NOUN	lubu	lˈuβu	l ˈu β u		WOLF_NOUN_2			
 Campidanese	Campidanese			WOLF_NOUN	lubu	lˈuβu	l ˈu β u		WOLF_NOUN_2			
 Romanian	Romanian			WOLF_NOUN	lup	lˈup	l ˈu p		WOLF_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			WOLF_NOUN	lup	lˈup	l ˈu p		WOLF_NOUN_2			
 Aromanian	Aromanian			WOLF_NOUN	lup	lˈup	l ˈu p		WOLF_NOUN_2			
 Venetian	Venetian			WOLF_NOUN	łòvo	ɰˈɔvo	ɰ ˈɔ v o		WOLF_NOUN_2			
 Bellunese	Bellunese			WOLF_NOUN	lóf	lˈof	l ˈo f		WOLF_NOUN_2			
@@ -5498,6 +5587,7 @@ Latin	Latin			SEA_NOUN	mare	mˈarɛ	m ˈa r ɛ		SEA_NOUN_1
 Logudorese	Logudorese			SEA_NOUN	mare	mˈare	m ˈa r e		SEA_NOUN_1			
 Campidanese	Campidanese			SEA_NOUN	mari	mˈari	m ˈa r i		SEA_NOUN_1			
 Romanian	Romanian			SEA_NOUN	mare	mˈare	m ˈa r e		SEA_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SEA_NOUN	mari	mˈari	m ˈa r i		SEA_NOUN_1			
 Aromanian	Aromanian			SEA_NOUN	amari	amˈari	a m ˈa r i		SEA_NOUN_1			
 Dalmatian	Dalmatian			SEA_NOUN	mur	mˈur	m ˈu r		SEA_NOUN_1			
 Sicilian	Sicilian			SEA_NOUN	mari	mˈaɾɪ	m ˈa ɾ ɪ		SEA_NOUN_1			
@@ -5642,6 +5732,7 @@ Latin	Latin			MIDDLE_NOUN	medium	mˈɛdiʊ̃ː	m ˈɛ d i ʊ̃ː		MIDDLE_NOUN_1
 Logudorese	Logudorese			MIDDLE_NOUN	mésu	mˈezu	m ˈe z u		MIDDLE_NOUN_1			
 Campidanese	Campidanese			MIDDLE_NOUN	mésu	mˈezu	m ˈe z u		MIDDLE_NOUN_1			
 Romanian	Romanian			MIDDLE_NOUN	miez	mjˈez	m j ˈe z		MIDDLE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			MIDDLE_NOUN	mńez	mɲˈez	m ɲ ˈe z		MIDDLE_NOUN_1			
 Aromanian	Aromanian			MIDDLE_NOUN	njedzu	ɲˈeʣu	ɲ ˈe ʣ u		MIDDLE_NOUN_1			
 Dalmatian	Dalmatian			MIDDLE_NOUN	mesu	mˈezu	m ˈe z u		MIDDLE_NOUN_1			
 Sicilian	Sicilian			MIDDLE_NOUN	mezzu	mˈɛʦʦʊ	m ˈɛ ʦ ʦ ʊ		MIDDLE_NOUN_1			
@@ -5735,6 +5826,7 @@ Latin	Latin			THOUSAND_NUM	mīlle	mˈiːlʲlʲɛ	m ˈiː lʲ lʲ ɛ		THOUSAND_NU
 Logudorese	Logudorese			THOUSAND_NUM	miza	mˈiʣa	m ˈi ʣ a		THOUSAND_NUM_1			
 Campidanese	Campidanese			THOUSAND_NUM	miza	mˈiʣa	m ˈi ʣ a		THOUSAND_NUM_1			
 Romanian	Romanian			THOUSAND_NUM	mie	mˈie	m ˈi e		THOUSAND_NUM_1			
+Megleno-Romanian	Megleno-Romanian			THOUSAND_NUM	mil’ă	mˈiʎə	m ˈi ʎ ə		THOUSAND_NUM_1			
 Aromanian	Aromanian			THOUSAND_NUM	njilje	ɲˈiʎe	ɲ ˈi ʎ e		THOUSAND_NUM_1			
 Dalmatian	Dalmatian			THOUSAND_NUM	mel	mˈel	m ˈe l		THOUSAND_NUM_1			
 Sicilian	Sicilian			THOUSAND_NUM	milli	mˈillɪ	m ˈi l l ɪ		THOUSAND_NUM_1			
@@ -5867,6 +5959,7 @@ Latin	Latin			DEATH_NOUN	mortem	mˈɔrtɛ̃ː	m ˈɔ r t ɛ̃ː		DEATH_NOUN_1
 Logudorese	Logudorese			DEATH_NOUN	morte	mˈorte	m ˈo r t e		DEATH_NOUN_1			
 Campidanese	Campidanese			DEATH_NOUN	morti	mˈorti	m ˈo r t i		DEATH_NOUN_1			
 Romanian	Romanian			DEATH_NOUN	moarte	mo̯ˈarte	m o̯ˈa r t e		DEATH_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			DEATH_NOUN	moarti	mo̯ˈarti	m o̯ˈa r t i		DEATH_NOUN_1			
 Aromanian	Aromanian			DEATH_NOUN	moarti	mo̯ˈarti	m o̯ˈa r t i		DEATH_NOUN_1			
 Dalmatian	Dalmatian			DEATH_NOUN	muart	mwˈart	m w ˈa r t		DEATH_NOUN_1			
 Sicilian	Sicilian			DEATH_NOUN	morti	mˈɔɾtɪ	m ˈɔ ɾ t ɪ		DEATH_NOUN_1			
@@ -5897,6 +5990,7 @@ Portuguese	Portuguese			DEATH_NOUN	morte	mˈɔɾtɨ	m ˈɔ ɾ t ɨ		DEATH_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			DEATH_NOUN	morte	mˈɔhʧi	m ˈɔ h ʧ i		DEATH_NOUN_1			
 Latin	Latin			MANY_ADJ	multum	mˈʊɫtʊ̃ː	m ˈʊ ɫ t ʊ̃ː		MANY_ADJ_1			
 Romanian	Romanian			MANY_ADJ	mult	mˈult	m ˈu l t		MANY_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			MANY_ADJ	mult	mˈult	m ˈu l t		MANY_ADJ_1			
 Aromanian	Aromanian			MANY_ADJ	multsã	mˈulʦə	m ˈu l ʦ ə		MANY_ADJ_1			
 Dalmatian	Dalmatian			MANY_ADJ	mualt	mwˈalt	m w ˈa l t		MANY_ADJ_1			
 Sicilian	Sicilian			MANY_ADJ	multu	mˈultʊ	m ˈu l t ʊ		MANY_ADJ_1			
@@ -5912,6 +6006,8 @@ Latin	Latin			FLY_NOUN	muscam	mˈʊskãː	m ˈʊ s k ãː		FLY_NOUN_1
 Logudorese	Logudorese			FLY_NOUN	musca	mˈuska	m ˈu s k a		FLY_NOUN_1			
 Campidanese	Campidanese			FLY_NOUN	musca	mˈuska	m ˈu s k a		FLY_NOUN_1			
 Romanian	Romanian			FLY_NOUN	muscă	mˈuskə	m ˈu s k ə		FLY_NOUN_1			
+Istro-Romanian	Istro-Romanian			FLY_NOUN	mușke	mˈuʃke	m ˈu ʃ k e		FLY_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			FLY_NOUN	muscă	mˈuskə	m ˈu s k ə		FLY_NOUN_1			
 Aromanian	Aromanian			FLY_NOUN	muscã	mˈuskə	m ˈu s k ə		FLY_NOUN_1			
 Dalmatian	Dalmatian			FLY_NOUN	muasca	mwˈaska	m w ˈa s k a		FLY_NOUN_1			
 Sicilian	Sicilian			FLY_NOUN	musca	mˈuska	m ˈu s k a		FLY_NOUN_1			
@@ -5954,6 +6050,7 @@ Latin	Latin			NOSE_NOUN	nāsum	nˈaːsʊ̃ː	n ˈaː s ʊ̃ː		NOSE_NOUN_2
 Logudorese	Logudorese			NOSE_NOUN	nàsu	nˈazu	n ˈa z u		NOSE_NOUN_2			
 Campidanese	Campidanese			NOSE_NOUN	nàsu	nˈazu	n ˈa z u		NOSE_NOUN_2			
 Romanian	Romanian			NOSE_NOUN	nas	nˈas	n ˈa s		NOSE_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			NOSE_NOUN	nas	nˈas	n ˈa s		NOSE_NOUN_2			
 Dalmatian	Dalmatian			NOSE_NOUN	nuos	nwˈɔs	n w ˈɔ s		NOSE_NOUN_2			
 Sicilian	Sicilian			NOSE_NOUN	nasu	nˈazʊ	n ˈa z ʊ		NOSE_NOUN_2			
 Corsican	Corsican			NOSE_NOUN	nasu	nˈazu	n ˈa z u		NOSE_NOUN_2			
@@ -6040,6 +6137,8 @@ Latin	Latin			BLACK_ADJ	nigrum	nˈɪɡrʊ̃ː	n ˈɪ ɡ r ʊ̃ː		BLACK_ADJ_1
 Logudorese	Logudorese			BLACK_ADJ	nigru	nˈiɡru	n ˈi ɡ r u		BLACK_ADJ_1			
 Campidanese	Campidanese			BLACK_ADJ	nigru	nˈiɡru	n ˈi ɡ r u		BLACK_ADJ_1			
 Romanian	Romanian			BLACK_ADJ	negru	nˈeɡru	n ˈe ɡ r u		BLACK_ADJ_1			
+Istro-Romanian	Istro-Romanian			BLACK_ADJ	negru	nˈeɡru	n ˈe ɡ r u		BLACK_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			BLACK_ADJ	negru	nˈeɡru	n ˈe ɡ r u		BLACK_ADJ_1			
 Aromanian	Aromanian			BLACK_ADJ	negru	nˈeɡru	n ˈe ɡ r u		BLACK_ADJ_1			
 Dalmatian	Dalmatian			BLACK_ADJ	niar	njˈar	n j ˈa r		BLACK_ADJ_1			
 Sicilian	Sicilian			BLACK_ADJ	nìuru	nˈiwɾʊ	n ˈi w ɾ ʊ		BLACK_ADJ_1			
@@ -6075,6 +6174,7 @@ Logudorese	Logudorese			SNOW_NOUN	nie	nˈie	n ˈi e		SNOW_NOUN_2
 Campidanese	Campidanese			SNOW_NOUN	ni	nˈi	n ˈi		SNOW_NOUN_2			
 Campidanese	Campidanese			SNOW_NOUN	nia	nˈia	n ˈi a		SNOW_NOUN_2			
 Romanian	Romanian			SNOW_NOUN	nea	ne̯ˈa	n e̯ˈa		SNOW_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			SNOW_NOUN	neau̯ă	ne̯ˈawə	n e̯ˈa w ə		SNOW_NOUN_2			
 Aromanian	Aromanian			SNOW_NOUN	neauã	ne̯ˈawə	n e̯ˈa w ə		SNOW_NOUN_2			
 Dalmatian	Dalmatian			SNOW_NOUN	naj	nˈaj	n ˈa j		SNOW_NOUN_2			
 Sicilian	Sicilian			SNOW_NOUN	nivi	nˈivɪ	n ˈi v ɪ		SNOW_NOUN_2			
@@ -6102,6 +6202,8 @@ Latin	Latin			NIGHT_NOUN	noctem	nˈɔktɛ̃ː	n ˈɔ k t ɛ̃ː		NIGHT_NOUN_1
 Logudorese	Logudorese			NIGHT_NOUN	note	nˈote	n ˈo t e		NIGHT_NOUN_1			
 Campidanese	Campidanese			NIGHT_NOUN	noti	nˈoti	n ˈo t i		NIGHT_NOUN_1			
 Romanian	Romanian			NIGHT_NOUN	noapte	no̯ˈapte	n o̯ˈa p t e		NIGHT_NOUN_1			
+Istro-Romanian	Istro-Romanian			NIGHT_NOUN	nopte	nˈopte	n ˈo p t e		NIGHT_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			NIGHT_NOUN	noapti	no̯ˈapti	n o̯ˈa p t i		NIGHT_NOUN_1			
 Aromanian	Aromanian			NIGHT_NOUN	noapti	no̯ˈapti	n o̯ˈa p t i		NIGHT_NOUN_1			
 Dalmatian	Dalmatian			NIGHT_NOUN	nuot	nwˈɔt	n w ˈɔ t		NIGHT_NOUN_1			
 Sicilian	Sicilian			NIGHT_NOUN	notti	nˈɔttɪ	n ˈɔ t t ɪ		NIGHT_NOUN_1			
@@ -6145,7 +6247,8 @@ Latin	Latin			NAME_NOUN	nōmen	nˈoːmɛ̃ː	n ˈoː m ɛ̃ː		NAME_NOUN_2
 Logudorese	Logudorese			NAME_NOUN	nomene	nˈomene	n ˈo m e n e		NAME_NOUN_2			
 Campidanese	Campidanese			NAME_NOUN	nomene	nˈomene	n ˈo m e n e		NAME_NOUN_2			
 Romanian	Romanian			NAME_NOUN	nume	nˈume	n ˈu m e		NAME_NOUN_2			
-Aromanian	Aromanian			NAME_NOUN	nume	nˈumi	n ˈu m i		NAME_NOUN_2			
+Istro-Romanian	Istro-Romanian			NAME_NOUN	lume	lˈume	l ˈu m e		NAME_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			NAME_NOUN	numi	nˈumi	n ˈu m i		NAME_NOUN_2			
 Aromanian	Aromanian			NAME_NOUN	numã	nˈumə	n ˈu m ə		NAME_NOUN_2			
 Dalmatian	Dalmatian			NAME_NOUN	naun	nˈawŋ	n ˈa w ŋ		NAME_NOUN_2			
 Dalmatian	Dalmatian			NAME_NOUN	naum	nˈawm	n ˈa w m		NAME_NOUN_2			
@@ -6176,6 +6279,7 @@ Portuguese	Portuguese			NAME_NOUN	nome	nˈomɨ	n ˈo m ɨ		NAME_NOUN_2
 Brazilian Portuguese	Brazilian Portuguese			NAME_NOUN	nome	nˈõmi	n ˈõ m i		NAME_NOUN_2			
 Latin	Latin			NOT_ADVERB	nōn	noːn	n oː n		NOT_ADVERB_1			
 Romanian	Romanian			NOT_ADVERB	nu	nu	n u		NOT_ADVERB_1			
+Megleno-Romanian	Megleno-Romanian			NOT_ADVERB	nu	nu	n u		NOT_ADVERB_1			
 Dalmatian	Dalmatian			NOT_ADVERB	no	no	n o		NOT_ADVERB_1			
 Dalmatian	Dalmatian			NOT_ADVERB	non	noŋ	n o ŋ		NOT_ADVERB_1			
 Corsican	Corsican			NOT_ADVERB	nun	nun	n u n		NOT_ADVERB_1			
@@ -6228,6 +6332,8 @@ Latin	Latin			OUR_ADJ	nostrum	nˈɔstrʊ̃ː	n ˈɔ s t r ʊ̃ː		OUR_ADJ_1
 Logudorese	Logudorese			OUR_ADJ	nostru	nˈostru	n ˈo s t r u		OUR_ADJ_1			
 Campidanese	Campidanese			OUR_ADJ	nostru	nˈostru	n ˈo s t r u		OUR_ADJ_1			
 Romanian	Romanian			OUR_ADJ	nostru	nˈostru	n ˈo s t r u		OUR_ADJ_1			
+Istro-Romanian	Istro-Romanian			OUR_ADJ	nostru	nˈostru	n ˈo s t r u		OUR_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			OUR_ADJ	nostru	nˈostru	n ˈo s t r u		OUR_ADJ_1			
 Aromanian	Aromanian			OUR_ADJ	nostru	nˈostru	n ˈo s t r u		OUR_ADJ_1			
 Dalmatian	Dalmatian			OUR_ADJ	nuester	nwˈester	n w ˈe s t e r		OUR_ADJ_1			
 Sicilian	Sicilian			OUR_ADJ	nostru	nˈɔʃʃɽʊ	n ˈɔ ʃ ʃ ɽ ʊ		OUR_ADJ_1			
@@ -6260,6 +6366,7 @@ Latin	Latin			NINE_NUM	novem	nˈowɛ̃	n ˈo w ɛ̃		NINE_NUM_1
 Logudorese	Logudorese			NINE_NUM	noe	nˈoe	n ˈo e		NINE_NUM_1			
 Campidanese	Campidanese			NINE_NUM	noi	nˈoj	n ˈo j		NINE_NUM_1			
 Romanian	Romanian			NINE_NUM	nouă	nˈowə	n ˈo w ə		NINE_NUM_1			
+Megleno-Romanian	Megleno-Romanian			NINE_NUM	noauă	no̯ˈawə	n o̯ˈa w ə		NINE_NUM_1			
 Aromanian	Aromanian			NINE_NUM	nouã	nˈowə	n ˈo w ə		NINE_NUM_1			
 Dalmatian	Dalmatian			NINE_NUM	nu	nˈu	n ˈu		NINE_NUM_1			
 Sicilian	Sicilian			NINE_NUM	novi	nˈɔvɪ	n ˈɔ v ɪ		NINE_NUM_1			
@@ -6291,6 +6398,7 @@ Latin	Latin			NEW_ADJ	novum	nˈɔwʊ̃ː	n ˈɔ w ʊ̃ː		NEW_ADJ_1
 Logudorese	Logudorese			NEW_ADJ	nobu	nˈoβu	n ˈo β u		NEW_ADJ_1			
 Campidanese	Campidanese			NEW_ADJ	nobu	nˈoβu	n ˈo β u		NEW_ADJ_1			
 Romanian	Romanian			NEW_ADJ	nou	nˈow	n ˈo w		NEW_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			NEW_ADJ	nou	nˈow	n ˈo w		NEW_ADJ_1			
 Aromanian	Aromanian			NEW_ADJ	nau	nˈaw	n ˈa w		NEW_ADJ_1			
 Dalmatian	Dalmatian			NEW_ADJ	nuf	nˈuf	n ˈu f		NEW_ADJ_1			
 Sicilian	Sicilian			NEW_ADJ	novu	nˈɔvʊ	n ˈɔ v ʊ		NEW_ADJ_1			
@@ -6352,6 +6460,7 @@ Eastern Lombard	Eastern Lombard			CLOUD_NOUN	nìola	nˈiola	n ˈi o l a		CLOUD_N
 Gascon	Gascon			CLOUD_NOUN	nubla	nˈyβlɔ	n ˈy β l ɔ		CLOUD_NOUN_2			
 Latin	Latin			CLOUD_NOUN	nūbilum	nˈuːbɪɫʊ̃ː	n ˈuː b ɪ ɫ ʊ̃ː		CLOUD_NOUN_3			
 Romanian	Romanian			CLOUD_NOUN	nor	nˈor	n ˈo r		CLOUD_NOUN_3			
+Megleno-Romanian	Megleno-Romanian			CLOUD_NOUN	nor	nˈor	n ˈo r		CLOUD_NOUN_3			
 Aromanian	Aromanian			CLOUD_NOUN	nior	njˈor	n j ˈo r		CLOUD_NOUN_3			
 Corsican	Corsican			CLOUD_NOUN	nuvulu	nˈuvulu	n ˈu v u l u		CLOUD_NOUN_3			
 Ladin	Ladin			CLOUD_NOUN	niola	nˈiola	n ˈi o l a		CLOUD_NOUN_3			
@@ -6365,6 +6474,7 @@ Logudorese	Logudorese			NUT_NOUN	nughe	nˈuɣe	n ˈu ɣ e		NUT_NOUN_2
 Campidanese	Campidanese			NUT_NOUN	nugi	nˈuʒi	n ˈu ʒ i		NUT_NOUN_2			
 Romanian	Romanian			NUT_NOUN	nuc	nˈuk	n ˈu k		NUT_NOUN_2			
 Romanian	Romanian			NUT_NOUN	nucă	nˈukə	n ˈu k ə		NUT_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			NUT_NOUN	nucă	nˈukə	n ˈu k ə		NUT_NOUN_2			
 Aromanian	Aromanian			NUT_NOUN	nuc	nˈuk	n ˈu k		NUT_NOUN_2			
 Aromanian	Aromanian			NUT_NOUN	nucã	nˈukə	n ˈu k ə		NUT_NOUN_2			
 Dalmatian	Dalmatian			NUT_NOUN	nauc	nˈawk	n ˈa w k		NUT_NOUN_2			
@@ -6425,6 +6535,8 @@ Latin	Latin			EIGHT_NUM	octō	ˈɔktoː	ˈɔ k t oː		EIGHT_NUM_1
 Logudorese	Logudorese			EIGHT_NUM	oto	ˈoto	ˈo t o		EIGHT_NUM_1			
 Campidanese	Campidanese			EIGHT_NUM	otu	ˈotu	ˈo t u		EIGHT_NUM_1			
 Romanian	Romanian			EIGHT_NUM	opt	ˈopt	ˈo p t		EIGHT_NUM_1			
+Istro-Romanian	Istro-Romanian			EIGHT_NUM	opt	ˈopt	ˈo p t		EIGHT_NUM_1			
+Megleno-Romanian	Megleno-Romanian			EIGHT_NUM	u̯opt	wˈopt	w ˈo p t		EIGHT_NUM_1			
 Aromanian	Aromanian			EIGHT_NUM	optu	ˈoptu	ˈo p t u		EIGHT_NUM_1			
 Dalmatian	Dalmatian			EIGHT_NUM	uapto	wˈapto	w ˈa p t o		EIGHT_NUM_1			
 Sicilian	Sicilian			EIGHT_NUM	ottu	ˈɔttʊ	ˈɔ t t ʊ		EIGHT_NUM_1			
@@ -6484,6 +6596,8 @@ Latin	Latin			EYE_NOUN	oculum	ˈɔkʊɫʊ̃ː	ˈɔ k ʊ ɫ ʊ̃ː		EYE_NOUN_1
 Logudorese	Logudorese			EYE_NOUN	ocru	ˈokru	ˈo k r u		EYE_NOUN_1			
 Campidanese	Campidanese			EYE_NOUN	oju	ˈoju	ˈo j u		EYE_NOUN_1			
 Romanian	Romanian			EYE_NOUN	ochi	ˈokʲ	ˈo kʲ		EYE_NOUN_1			
+Istro-Romanian	Istro-Romanian			EYE_NOUN	ocľu	ˈokʎu	ˈo k ʎ u		EYE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			EYE_NOUN	u̯ocľu	wˈokʎu	w ˈo k ʎ u		EYE_NOUN_1			
 Aromanian	Aromanian			EYE_NOUN	oclju	ˈokʎu	ˈo k ʎ u		EYE_NOUN_1			
 Dalmatian	Dalmatian			EYE_NOUN	uaclo	wˈaklo	w ˈa k l o		EYE_NOUN_1			
 Dalmatian	Dalmatian			EYE_NOUN	vaclo	vˈaklo	v ˈa k l o		EYE_NOUN_1			
@@ -6582,6 +6696,7 @@ Latin	Latin			BONE_NOUN	ossum	ˈɔssʊ̃ː	ˈɔ s s ʊ̃ː		BONE_NOUN_1
 Logudorese	Logudorese			BONE_NOUN	ossu	ˈossu	ˈo s s u		BONE_NOUN_1			
 Campidanese	Campidanese			BONE_NOUN	ossu	ˈossu	ˈo s s u		BONE_NOUN_1			
 Romanian	Romanian			BONE_NOUN	os	ˈos	ˈo s		BONE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			BONE_NOUN	u̯os	wˈos	w ˈo s		BONE_NOUN_1			
 Aromanian	Aromanian			BONE_NOUN	os	ˈos	ˈo s		BONE_NOUN_1			
 Dalmatian	Dalmatian			BONE_NOUN	vuas	vwˈas	v w ˈa s		BONE_NOUN_1			
 Sicilian	Sicilian			BONE_NOUN	osso	ˈɔssʊ	ˈɔ s s ʊ		BONE_NOUN_1			
@@ -6719,6 +6834,8 @@ Latin	Latin			BREAD_NOUN	pānem	pˈaːnɛ̃ː	p ˈaː n ɛ̃ː		BREAD_NOUN_1
 Logudorese	Logudorese			BREAD_NOUN	pane	pˈane	p ˈa n e		BREAD_NOUN_1			
 Campidanese	Campidanese			BREAD_NOUN	pani	pˈani	p ˈa n i		BREAD_NOUN_1			
 Romanian	Romanian			BREAD_NOUN	pâine	pˈɨjne	p ˈɨ j n e		BREAD_NOUN_1			
+Istro-Romanian	Istro-Romanian			BREAD_NOUN	păre	pˈəre	p ˈə r e		BREAD_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			BREAD_NOUN	pǫini	pˈɔjni	p ˈɔ j n i		BREAD_NOUN_1			
 Aromanian	Aromanian			BREAD_NOUN	pãni	pˈɨni	p ˈɨ n i		BREAD_NOUN_1			
 Dalmatian	Dalmatian			BREAD_NOUN	pun	pˈun	p ˈu n		BREAD_NOUN_1			
 Sicilian	Sicilian			BREAD_NOUN	pani	pˈanɪ	p ˈa n ɪ		BREAD_NOUN_1			
@@ -6749,6 +6866,7 @@ Portuguese	Portuguese			BREAD_NOUN	pão	pˈɐ̃w̃	p ˈɐ̃ w̃		BREAD_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			BREAD_NOUN	pão	pˈɐ̃w̃	p ˈɐ̃ w̃		BREAD_NOUN_1			
 Latin	Latin			BELLY_NOUN	panticem	pˈantɪkɛ̃ː	p ˈa n t ɪ k ɛ̃ː		BELLY_NOUN_1			
 Romanian	Romanian			BELLY_NOUN	pântece	pɨntˈeʧe	p ɨ n t ˈe ʧ e		BELLY_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			BELLY_NOUN	pǫntiți	pɔntˈiʦi	p ɔ n t ˈi ʦ i		BELLY_NOUN_1			
 Aromanian	Aromanian			BELLY_NOUN	pãnticã	pɨntˈikə	p ɨ n t ˈi k ə		BELLY_NOUN_1			
 Sicilian	Sicilian			BELLY_NOUN	panza	pˈanʦa	p ˈa n ʦ a		BELLY_NOUN_1			
 Neapolitan	Neapolitan			BELLY_NOUN	panza	pˈanʦə	p ˈa n ʦ ə		BELLY_NOUN_1			
@@ -6890,6 +7008,8 @@ Eastern Lombard	Eastern Lombard			SHEEP_NOUN	pégra	pˈeɡra	p ˈe ɡ r a		SHEEP
 Friulian	Friulian			SHEEP_NOUN	piore	pjˈore	p j ˈo r e		SHEEP_NOUN_3			
 Latin	Latin			BREAST_NOUN	pectum	pˈɛktʊ̃ː	p ˈɛ k t ʊ̃ː		BREAST_NOUN_1			
 Romanian	Romanian			BREAST_NOUN	piept	pjˈept	p j ˈe p t		BREAST_NOUN_1			
+Istro-Romanian	Istro-Romanian			BREAST_NOUN	chiept	kjˈept	k j ˈe p t		BREAST_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			BREAST_NOUN	chi̯ept	kʲˈept	kʲ ˈe p t		BREAST_NOUN_1			
 Aromanian	Aromanian			BREAST_NOUN	cheptu	kˈeptu	k ˈe p t u		BREAST_NOUN_1			
 Dalmatian	Dalmatian			BREAST_NOUN	pjat	pjˈat	p j ˈa t		BREAST_NOUN_1			
 Sicilian	Sicilian			BREAST_NOUN	pettu	pˈɛttʊ	p ˈɛ t t ʊ		BREAST_NOUN_1			
@@ -6955,6 +7075,7 @@ Latin	Latin			LOUSE_NOUN	pēduculum	peːdˈukʊɫʊ̃ː	p eː d ˈu k ʊ ɫ ʊ̃
 Logudorese	Logudorese			LOUSE_NOUN	priogu	priˈoɣu	p r i ˈo ɣ u		LOUSE_NOUN_1			
 Campidanese	Campidanese			LOUSE_NOUN	priogu	priˈoɣu	p r i ˈo ɣ u		LOUSE_NOUN_1			
 Romanian	Romanian			LOUSE_NOUN	păduche	pədˈuke	p ə d ˈu k e		LOUSE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			LOUSE_NOUN	piducľu	pidˈukʎu	p i d ˈu k ʎ u		LOUSE_NOUN_1			
 Aromanian	Aromanian			LOUSE_NOUN	piduclju	pidˈukʎu	p i d ˈu k ʎ u		LOUSE_NOUN_1			
 Dalmatian	Dalmatian			LOUSE_NOUN	pedóclo	pedˈoklo	p e d ˈo k l o		LOUSE_NOUN_1			
 Sicilian	Sicilian			LOUSE_NOUN	pirocchiu	piɾˈɔccʊ	p i ɾ ˈɔ c c ʊ		LOUSE_NOUN_1			
@@ -6988,6 +7109,7 @@ Latin	Latin			SKIN_NOUN	pellem	pˈɛlʲlʲɛ̃ː	p ˈɛ lʲ lʲ ɛ̃ː		SKIN_NOU
 Logudorese	Logudorese			SKIN_NOUN	pedhe	pˈeɖɖe	p ˈe ɖ ɖ e		SKIN_NOUN_1			
 Campidanese	Campidanese			SKIN_NOUN	pedhi	pˈeɖɖi	p ˈe ɖ ɖ i		SKIN_NOUN_1			
 Romanian	Romanian			SKIN_NOUN	piele	pjˈele	p j ˈe l e		SKIN_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SKIN_NOUN	chialie	kʲˈalje	kʲ ˈa l j e		SKIN_NOUN_1			
 Aromanian	Aromanian			SKIN_NOUN	cheali	ke̯ˈali	k e̯ˈa l i		SKIN_NOUN_1			
 Dalmatian	Dalmatian			SKIN_NOUN	pial	pjˈal	p j ˈa l		SKIN_NOUN_1			
 Sicilian	Sicilian			SKIN_NOUN	peddi	pˈɛɖɖɪ	p ˈɛ ɖ ɖ ɪ		SKIN_NOUN_1			
@@ -7019,6 +7141,7 @@ Portuguese	Portuguese			SKIN_NOUN	pele	pˈɛlɨ	p ˈɛ l ɨ		SKIN_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			SKIN_NOUN	pele	pˈɛli	p ˈɛ l i		SKIN_NOUN_1			
 Latin	Latin			FEATHER_NOUN	pennam	pˈɛnnãː	p ˈɛ n n ãː		FEATHER_NOUN_1			
 Romanian	Romanian			FEATHER_NOUN	pană	pˈanə	p ˈa n ə		FEATHER_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			FEATHER_NOUN	peană	pe̯ˈanə	p e̯ˈa n ə		FEATHER_NOUN_1			
 Aromanian	Aromanian			FEATHER_NOUN	peanã	pe̯ˈanə	p e̯ˈa n ə		FEATHER_NOUN_1			
 Dalmatian	Dalmatian			FEATHER_NOUN	paina	pˈajna	p ˈa j n a		FEATHER_NOUN_1			
 Sicilian	Sicilian			FEATHER_NOUN	pinna	pˈinna	p ˈi n n a		FEATHER_NOUN_1			
@@ -7050,11 +7173,14 @@ Portuguese	Portuguese			PEACH_NOUN	pêssego	pˈesɨɣu	p ˈe s ɨ ɣ u		PEACH_NO
 Brazilian Portuguese	Brazilian Portuguese			PEACH_NOUN	pêssego	pˈeseɡu	p ˈe s e ɡ u		PEACH_NOUN_2			
 Latin	Latin			FOOT_NOUN	petiolum	pɛtiˈolʊ̃ː	p ɛ t i ˈo l ʊ̃ː		FOOT_NOUN_2			
 Romanian	Romanian			FOOT_NOUN	picior	piʧˈor	p i ʧ ˈo r		FOOT_NOUN_2			
+Istro-Romanian	Istro-Romanian			FOOT_NOUN	picioru	piʧˈoru	p i ʧ ˈo r u		FOOT_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			FOOT_NOUN	picior	piʧˈor	p i ʧ ˈo r		FOOT_NOUN_2			
 Aromanian	Aromanian			FOOT_NOUN	cicior	ʧiʧˈor	ʧ i ʧ ˈo r		FOOT_NOUN_2			
 Latin	Latin			STONE_NOUN	petram	pˈɛtrãː	p ˈɛ t r ãː		STONE_NOUN_1			
 Logudorese	Logudorese			STONE_NOUN	pedra	pˈeðra	p ˈe ð r a		STONE_NOUN_1			
 Campidanese	Campidanese			STONE_NOUN	pedra	pˈeðra	p ˈe ð r a		STONE_NOUN_1			
 Romanian	Romanian			STONE_NOUN	piatră	pjˈatrə	p j ˈa t r ə		STONE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			STONE_NOUN	catră	kˈatrə	k ˈa t r ə		STONE_NOUN_1			
 Aromanian	Aromanian			STONE_NOUN	cheatrã	ke̯ˈatrə	k e̯ˈa t r ə		STONE_NOUN_1			
 Dalmatian	Dalmatian			STONE_NOUN	pitra	pˈitra	p ˈi t r a		STONE_NOUN_1			
 Sicilian	Sicilian			STONE_NOUN	petra	pˈɛʈɽa	p ˈɛ ʈ ɽ a		STONE_NOUN_1			
@@ -7087,6 +7213,7 @@ Latin	Latin			HAIR_NOUN	pilum	pˈɪɫʊ̃ː	p ˈɪ ɫ ʊ̃ː		HAIR_NOUN_2
 Logudorese	Logudorese			HAIR_NOUN	pilu	pˈilu	p ˈi l u		HAIR_NOUN_2			
 Campidanese	Campidanese			HAIR_NOUN	pilu	pˈilu	p ˈi l u		HAIR_NOUN_2			
 Romanian	Romanian			HAIR_NOUN	păr	pˈər	p ˈə r		HAIR_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			HAIR_NOUN	per	pˈer	p ˈe r		HAIR_NOUN_2			
 Aromanian	Aromanian			HAIR_NOUN	per	pˈer	p ˈe r		HAIR_NOUN_2			
 Dalmatian	Dalmatian			HAIR_NOUN	pail	pˈajl	p ˈa j l		HAIR_NOUN_2			
 Sicilian	Sicilian			HAIR_NOUN	pilu	pˈilʊ	p ˈi l ʊ		HAIR_NOUN_2			
@@ -7140,6 +7267,7 @@ Latin	Latin			FISH_NOUN	piscem	pˈɪskɛ̃ː	p ˈɪ s k ɛ̃ː		FISH_NOUN_1
 Logudorese	Logudorese			FISH_NOUN	pische	pˈiske	p ˈi s k e		FISH_NOUN_1			
 Campidanese	Campidanese			FISH_NOUN	pisci	pˈiʃʃi	p ˈi ʃ ʃ i		FISH_NOUN_1			
 Romanian	Romanian			FISH_NOUN	pește	pˈeʃte	p ˈe ʃ t e		FISH_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			FISH_NOUN	pești	pˈeʃti	p ˈe ʃ t i		FISH_NOUN_1			
 Aromanian	Aromanian			FISH_NOUN	peashti	pe̯ˈaʃti	p e̯ˈa ʃ t i		FISH_NOUN_1			
 Dalmatian	Dalmatian			FISH_NOUN	pias	pjˈas	p j ˈa s		FISH_NOUN_1			
 Sicilian	Sicilian			FISH_NOUN	pisci	pˈiʃʃɪ	p ˈi ʃ ʃ ɪ		FISH_NOUN_1			
@@ -7225,6 +7353,7 @@ Latin	Latin			FULL_ADJ	plēnum	pɫˈeːnʊ̃ː	p ɫ ˈeː n ʊ̃ː		FULL_ADJ_1
 Logudorese	Logudorese			FULL_ADJ	prenu	prˈenu	p r ˈe n u		FULL_ADJ_1			
 Campidanese	Campidanese			FULL_ADJ	prenu	prˈenu	p r ˈe n u		FULL_ADJ_1			
 Romanian	Romanian			FULL_ADJ	plin	plˈin	p l ˈi n		FULL_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			FULL_ADJ	plin	plˈin	p l ˈi n		FULL_ADJ_1			
 Aromanian	Aromanian			FULL_ADJ	plin	plˈin	p l ˈi n		FULL_ADJ_1			
 Dalmatian	Dalmatian			FULL_ADJ	plain	plˈajn	p l ˈa j n		FULL_ADJ_1			
 Sicilian	Sicilian			FULL_ADJ	chinu	cˈinʊ	c ˈi n ʊ		FULL_ADJ_1			
@@ -7294,6 +7423,7 @@ Latin	Latin			RAIN_NOUN	pluviam	pɫˈʊwiãː	p ɫ ˈʊ w i ãː		RAIN_NOUN_1
 Logudorese	Logudorese			RAIN_NOUN	proja	prˈoja	p r ˈo j a		RAIN_NOUN_1			
 Campidanese	Campidanese			RAIN_NOUN	proja	prˈoja	p r ˈo j a		RAIN_NOUN_1			
 Romanian	Romanian			RAIN_NOUN	ploaie	plo̯ˈaje	p l o̯ˈa j e		RAIN_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			RAIN_NOUN	ploaiă	plo̯ˈajə	p l o̯ˈa j ə		RAIN_NOUN_1			
 Aromanian	Aromanian			RAIN_NOUN	ploai	plo̯ˈaj	p l o̯ˈa j		RAIN_NOUN_1			
 Dalmatian	Dalmatian			RAIN_NOUN	pluaja	plwˈaja	p l w ˈa j a		RAIN_NOUN_1			
 Dalmatian	Dalmatian			RAIN_NOUN	pluv	pluv	p l u v		RAIN_NOUN_1			
@@ -7622,6 +7752,7 @@ Latin	Latin			FOUR_NUM	quattuor	kʷˈattuɔr	kʷ ˈa t t u ɔ r		FOUR_NUM_1
 Logudorese	Logudorese			FOUR_NUM	bator	bˈatorŏ	b ˈa t o r ŏ		FOUR_NUM_1			
 Campidanese	Campidanese			FOUR_NUM	cuatru	kwˈatru	k w ˈa t r u		FOUR_NUM_1			
 Romanian	Romanian			FOUR_NUM	patru	pˈatru	p ˈa t r u		FOUR_NUM_1			
+Megleno-Romanian	Megleno-Romanian			FOUR_NUM	patru	pˈatru	p ˈa t r u		FOUR_NUM_1			
 Aromanian	Aromanian			FOUR_NUM	patru	pˈatru	p ˈa t r u		FOUR_NUM_1			
 Dalmatian	Dalmatian			FOUR_NUM	quatro	kwˈatro	k w ˈa t r o		FOUR_NUM_1			
 Sicilian	Sicilian			FOUR_NUM	quattru	kwˈaʈʈɽʊ	k w ˈa ʈ ʈ ɽ ʊ		FOUR_NUM_1			
@@ -7686,6 +7817,8 @@ Latin	Latin			WHAT_PRON	quid	kʷˈɪd	kʷ ˈɪ d		WHAT_PRON_1
 Logudorese	Logudorese			WHAT_PRON	ite	ˈite	ˈi t e		WHAT_PRON_1			
 Campidanese	Campidanese			WHAT_PRON	ite	ˈite	ˈi t e		WHAT_PRON_1			
 Romanian	Romanian			WHAT_PRON	ce	ʧˈe	ʧ ˈe		WHAT_PRON_1			
+Istro-Romanian	Istro-Romanian			WHAT_PRON	țe	ʦˈe	ʦ ˈe		WHAT_PRON_1			
+Megleno-Romanian	Megleno-Romanian			WHAT_PRON	ți	ʦˈi	ʦ ˈi		WHAT_PRON_1			
 Aromanian	Aromanian			WHAT_PRON	tsi	ʦˈi	ʦ ˈi		WHAT_PRON_1			
 Dalmatian	Dalmatian			WHAT_PRON	ko	kˈo	k ˈo		WHAT_PRON_1			
 Sicilian	Sicilian			WHAT_PRON	chi	ci	c i		WHAT_PRON_1			
@@ -7749,6 +7882,7 @@ Latin	Latin			FIVE_NUM	quīnque	kʷˈiːŋkʷɛ	kʷ ˈiː ŋ kʷ ɛ		FIVE_NUM_1
 Logudorese	Logudorese			FIVE_NUM	chimbe	kˈimbe	k ˈi m b e		FIVE_NUM_1			
 Campidanese	Campidanese			FIVE_NUM	cincu	ʧˈiŋku	ʧ ˈi ŋ k u		FIVE_NUM_1			
 Romanian	Romanian			FIVE_NUM	cinci	ʧˈinʧʲ	ʧ ˈi n ʧʲ		FIVE_NUM_1			
+Megleno-Romanian	Megleno-Romanian			FIVE_NUM	tsints	ʦˈinʦ	ʦ ˈi n ʦ		FIVE_NUM_1			
 Aromanian	Aromanian			FIVE_NUM	tsintsi	ʦˈinʦi	ʦ ˈi n ʦ i		FIVE_NUM_1			
 Dalmatian	Dalmatian			FIVE_NUM	cenc	ʧˈeŋk	ʧ ˈe ŋ k		FIVE_NUM_1			
 Sicilian	Sicilian			FIVE_NUM	cincu	ɕˈiŋkʊ	ɕ ˈi ŋ k ʊ		FIVE_NUM_1			
@@ -7995,6 +8129,8 @@ Galician	Galician			RED_ADJ	rubio	rˈuβjʊ	r ˈu β j ʊ		RED_ADJ_2
 Portuguese	Portuguese			RED_ADJ	ruivo	ʁˈujvu	ʁ ˈu j v u		RED_ADJ_2			
 Brazilian Portuguese	Brazilian Portuguese			RED_ADJ	ruivo	hˈujvu	h ˈu j v u		RED_ADJ_2			
 Latin	Latin			RED_ADJ	russum	rˈʊssʊ̃ː	r ˈʊ s s ʊ̃ː		RED_ADJ_3			
+Romanian	Romanian			RED_ADJ	roșu	rˈoʃu	r ˈo ʃ u		RED_ADJ_3			
+Megleno-Romanian	Megleno-Romanian			RED_ADJ	roș	rˈoʃ	r ˈo ʃ		RED_ADJ_3			
 Aromanian	Aromanian			RED_ADJ	arosh	arˈoʃ	a r ˈo ʃ		RED_ADJ_3			
 Dalmatian	Dalmatian			RED_ADJ	ros	rˈos	r ˈo s		RED_ADJ_3			
 Sicilian	Sicilian			RED_ADJ	russu	ʐˈussʊ	ʐ ˈu s s ʊ		RED_ADJ_3			
@@ -8047,6 +8183,7 @@ Latin	Latin			SALT_NOUN	salem	sˈaɫɛ̃ː	s ˈa ɫ ɛ̃ː		SALT_NOUN_1
 Logudorese	Logudorese			SALT_NOUN	sale	sˈale	s ˈa l e		SALT_NOUN_1			
 Campidanese	Campidanese			SALT_NOUN	sali	sˈali	s ˈa l i		SALT_NOUN_1			
 Romanian	Romanian			SALT_NOUN	sare	sˈare	s ˈa r e		SALT_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SALT_NOUN	sari	sˈari	s ˈa r i		SALT_NOUN_1			
 Aromanian	Aromanian			SALT_NOUN	sare	sˈare	s ˈa r e		SALT_NOUN_1			
 Dalmatian	Dalmatian			SALT_NOUN	sual	swˈal	s w ˈa l		SALT_NOUN_1			
 Sicilian	Sicilian			SALT_NOUN	sali	sˈalɪ	s ˈa l ɪ		SALT_NOUN_1			
@@ -8178,6 +8315,7 @@ Portuguese	Portuguese			SACRED_ADJ	santo	sˈɐ̃tu	s ˈɐ̃ t u		SACRED_ADJ_1
 Brazilian Portuguese	Brazilian Portuguese			SACRED_ADJ	santo	sˈɐ̃tu	s ˈɐ̃ t u		SACRED_ADJ_1			
 Latin	Latin			BLOOD_NOUN	sanguem	sˈaŋɡʷɛ̃ː	s ˈa ŋ ɡʷ ɛ̃ː		BLOOD_NOUN_1			
 Romanian	Romanian			BLOOD_NOUN	sânge	sˈɨnʤe	s ˈɨ n ʤ e		BLOOD_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			BLOOD_NOUN	sǫnzi	sˈɔnzi	s ˈɔ n z i		BLOOD_NOUN_1			
 Aromanian	Aromanian			BLOOD_NOUN	sãndzi	sˈɨnʤi	s ˈɨ n ʤ i		BLOOD_NOUN_1			
 Dalmatian	Dalmatian			BLOOD_NOUN	suang	swˈaŋɡ	s w ˈa ŋ ɡ		BLOOD_NOUN_1			
 Sicilian	Sicilian			BLOOD_NOUN	sangu	sˈaŋɡʊ	s ˈa ŋ ɡ ʊ		BLOOD_NOUN_1			
@@ -8447,6 +8585,7 @@ Venetian	Venetian			SEED_NOUN	séme	sˈeme	s ˈe m e		SEED_NOUN_1
 Romansch	Romansch			SEED_NOUN	sem	sˈem	s ˈe m		SEED_NOUN_1			
 Latin	Latin			SEED_NOUN	sementem	seːmˈɛntɛ̃ː	s eː m ˈɛ n t ɛ̃ː		SEED_NOUN_2			
 Romanian	Romanian			SEED_NOUN	sămânţă	səmˈɨnʦə	s ə m ˈɨ n ʦ ə		SEED_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			SEED_NOUN	siminţă	simˈinʦə	s i m ˈi n ʦ ə		SEED_NOUN_2			
 Aromanian	Aromanian			SEED_NOUN	simintsã	simˈinʦə	s i m ˈi n ʦ ə		SEED_NOUN_2			
 Dalmatian	Dalmatian			SEED_NOUN	semianz	semjˈanʦ	s e m j ˈa n ʦ		SEED_NOUN_2			
 Corsican	Corsican			SEED_NOUN	sumenta	sumˈɛnta	s u m ˈɛ n t a		SEED_NOUN_2			
@@ -8466,6 +8605,7 @@ Latin	Latin			SEVEN_NUM	septem	sˈɛptɛ̃	s ˈɛ p t ɛ̃		SEVEN_NUM_1
 Logudorese	Logudorese			SEVEN_NUM	sete	sˈete	s ˈe t e		SEVEN_NUM_1			
 Campidanese	Campidanese			SEVEN_NUM	sete	sˈete	s ˈe t e		SEVEN_NUM_1			
 Romanian	Romanian			SEVEN_NUM	șapte	ʃˈapte	ʃ ˈa p t e		SEVEN_NUM_1			
+Megleno-Romanian	Megleno-Romanian			SEVEN_NUM	șapti	ʃˈapti	ʃ ˈa p t i		SEVEN_NUM_1			
 Aromanian	Aromanian			SEVEN_NUM	shapti	ʃˈapti	ʃ ˈa p t i		SEVEN_NUM_1			
 Dalmatian	Dalmatian			SEVEN_NUM	sapto	sˈapto	s ˈa p t o		SEVEN_NUM_1			
 Sicilian	Sicilian			SEVEN_NUM	setti	sˈɛttɪ	s ˈɛ t t ɪ		SEVEN_NUM_1			
@@ -8496,6 +8636,7 @@ Portuguese	Portuguese			SEVEN_NUM	sete	sˈɛtɨ	s ˈɛ t ɨ		SEVEN_NUM_1
 Brazilian Portuguese	Brazilian Portuguese			SEVEN_NUM	sete	sˈɛʧi	s ˈɛ ʧ i		SEVEN_NUM_1			
 Latin	Latin			WEEK_NOUN	septimānam	sɛptɪmˈaːnãː	s ɛ p t ɪ m ˈaː n ãː		WEEK_NOUN_1			
 Romanian	Romanian			WEEK_NOUN	săptămână	səptəmˈɨnə	s ə p t ə m ˈɨ n ə		WEEK_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			WEEK_NOUN	sàptămǫnă	saptəmˈɔnə	s a p t ə m ˈɔ n ə		WEEK_NOUN_1			
 Aromanian	Aromanian			WEEK_NOUN	siptãmãnã	siptəmˈɨnə	s i p t ə m ˈɨ n ə		WEEK_NOUN_1			
 Dalmatian	Dalmatian			WEEK_NOUN	setemúna	setemˈuna	s e t e m ˈu n a		WEEK_NOUN_1			
 Sicilian	Sicilian			WEEK_NOUN	simana	simˈana	s i m ˈa n a		WEEK_NOUN_1	TRUE		
@@ -8529,6 +8670,7 @@ Latin	Latin			EVENING_NOUN	sēram	sˈeːrãː	s ˈeː r ãː		EVENING_NOUN_1
 Logudorese	Logudorese			EVENING_NOUN	sera	sˈera	s ˈe r a		EVENING_NOUN_1			
 Campidanese	Campidanese			EVENING_NOUN	sera	sˈera	s ˈe r a		EVENING_NOUN_1			
 Romanian	Romanian			EVENING_NOUN	seară	se̯ˈarə	s e̯ˈa r ə		EVENING_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			EVENING_NOUN	seară	se̯ˈarə	s e̯ˈa r ə		EVENING_NOUN_1			
 Aromanian	Aromanian			EVENING_NOUN	searã	se̯ˈarə	s e̯ˈa r ə		EVENING_NOUN_1			
 Dalmatian	Dalmatian			EVENING_NOUN	saira	sˈajra	s ˈa j r a		EVENING_NOUN_1			
 Sicilian	Sicilian			EVENING_NOUN	sira	sˈiɾa	s ˈi ɾ a		EVENING_NOUN_1			
@@ -8584,6 +8726,7 @@ Latin	Latin			SIX_NUM	sex	sˈɛks	s ˈɛ k s		SIX_NUM_1
 Logudorese	Logudorese			SIX_NUM	ses	sˈezĕ	s ˈe z ĕ		SIX_NUM_1			
 Campidanese	Campidanese			SIX_NUM	ses	sˈezĕ	s ˈe z ĕ		SIX_NUM_1			
 Romanian	Romanian			SIX_NUM	șase	ʃˈase	ʃ ˈa s e		SIX_NUM_1			
+Megleno-Romanian	Megleno-Romanian			SIX_NUM	șasi	ʃˈasi	ʃ ˈa s i		SIX_NUM_1			
 Aromanian	Aromanian			SIX_NUM	shasi	ʃˈasi	ʃ ˈa s i		SIX_NUM_1			
 Dalmatian	Dalmatian			SIX_NUM	si	sˈi	s ˈi		SIX_NUM_1			
 Sicilian	Sicilian			SIX_NUM	sei	sˈɛj	s ˈɛ j		SIX_NUM_1			
@@ -8646,6 +8789,7 @@ Latin	Latin			DRY (M)_ADJ	siccum	sˈɪkkʊ̃ː	s ˈɪ k k ʊ̃ː		DRY (M)_ADJ_1
 Logudorese	Logudorese			DRY (M)_ADJ	sicu	sˈiku	s ˈi k u		DRY (M)_ADJ_1			
 Campidanese	Campidanese			DRY (M)_ADJ	sicu	sˈiku	s ˈi k u		DRY (M)_ADJ_1			
 Romanian	Romanian			DRY (M)_ADJ	sec	sˈek	s ˈe k		DRY (M)_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			DRY (M)_ADJ	seac	se̯ˈak	s e̯ˈa k		DRY (M)_ADJ_1			
 Aromanian	Aromanian			DRY (M)_ADJ	sec	sˈek	s ˈe k		DRY (M)_ADJ_1			
 Sicilian	Sicilian			DRY (M)_ADJ	siccu	sˈikkʊ	s ˈi k k ʊ		DRY (M)_ADJ_1			
 Neapolitan	Neapolitan			DRY (M)_ADJ	sicco	sˈikkə	s ˈi k k ə		DRY (M)_ADJ_1			
@@ -8679,6 +8823,7 @@ Latin	Latin			SUN_NOUN	sōlem	sˈoːɫɛ̃ː	s ˈoː ɫ ɛ̃ː		SUN_NOUN_2
 Logudorese	Logudorese			SUN_NOUN	sole	sˈole	s ˈo l e		SUN_NOUN_2			
 Campidanese	Campidanese			SUN_NOUN	soli	sˈoli	s ˈo l i		SUN_NOUN_2			
 Romanian	Romanian			SUN_NOUN	soare	so̯ˈare	s o̯ˈa r e		SUN_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			SUN_NOUN	soari	so̯ˈari	s o̯ˈa r i		SUN_NOUN_2			
 Aromanian	Aromanian			SUN_NOUN	soari	so̯ˈari	s o̯ˈa r i		SUN_NOUN_2			
 Dalmatian	Dalmatian			SUN_NOUN	saul	sˈawl	s ˈa w l		SUN_NOUN_2			
 Neapolitan	Neapolitan			SUN_NOUN	sole	sˈolə	s ˈo l ə		SUN_NOUN_2			
@@ -8704,6 +8849,7 @@ Latin	Latin			SWORD_NOUN	spatham	spˈatʰãː	s p ˈa tʰ ãː		SWORD_NOUN_1
 Logudorese	Logudorese			SWORD_NOUN	ispàda	ispˈaða	i s p ˈa ð a		SWORD_NOUN_1			
 Campidanese	Campidanese			SWORD_NOUN	ispàda	ispˈaða	i s p ˈa ð a		SWORD_NOUN_1			
 Romanian	Romanian			SWORD_NOUN	spată	spˈatə	s p ˈa t ə		SWORD_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SWORD_NOUN	spată	spˈatə	s p ˈa t ə		SWORD_NOUN_1			
 Aromanian	Aromanian			SWORD_NOUN	spatã	spˈatə	s p ˈa t ə		SWORD_NOUN_1			
 Dalmatian	Dalmatian			SWORD_NOUN	sputa	spˈuta	s p ˈu t a		SWORD_NOUN_1			
 Sicilian	Sicilian			SWORD_NOUN	spata	ʃpˈata	ʃ p ˈa t a		SWORD_NOUN_1			
@@ -8749,6 +8895,7 @@ Portuguese	Portuguese			EAR OF GRAIN_NOUN	espiga	iʃpˈiɣɐ	i ʃ p ˈi ɣ ɐ		E
 Brazilian Portuguese	Brazilian Portuguese			EAR OF GRAIN_NOUN	espiga	eʃpˈiɡɐ	e ʃ p ˈi ɡ ɐ		EAR OF GRAIN_NOUN_1			
 Latin	Latin			EAR OF GRAIN_NOUN	spīcum	spˈiːkʊ̃ː	s p ˈiː k ʊ̃ː		EAR OF GRAIN_NOUN_2			
 Romanian	Romanian			EAR OF GRAIN_NOUN	spic	spˈik	s p ˈi k		EAR OF GRAIN_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			EAR OF GRAIN_NOUN	spic	spˈik	s p ˈi k		EAR OF GRAIN_NOUN_2			
 Aromanian	Aromanian			EAR OF GRAIN_NOUN	schic	skˈik	s k ˈi k		EAR OF GRAIN_NOUN_2			
 Piedmontese	Piedmontese			EAR OF GRAIN_NOUN	spi	spˈi	s p ˈi		EAR OF GRAIN_NOUN_2			
 Friulian	Friulian			EAR OF GRAIN_NOUN	spi	spˈi	s p ˈi		EAR OF GRAIN_NOUN_2			
@@ -8814,6 +8961,7 @@ Latin	Latin			STAR_NOUN	stēllam	stˈeːlʲlʲãː	s t ˈeː lʲ lʲ ãː		STA
 Logudorese	Logudorese			STAR_NOUN	isteddu	istˈeɖɖu	i s t ˈe ɖ ɖ u		STAR_NOUN_2			
 Campidanese	Campidanese			STAR_NOUN	isteddu	istˈeɖɖu	i s t ˈe ɖ ɖ u		STAR_NOUN_2			
 Romanian	Romanian			STAR_NOUN	stea	ste̯ˈa	s t e̯ˈa		STAR_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			STAR_NOUN	steau̯ă	ste̯ˈawə	s t e̯ˈa w ə		STAR_NOUN_2			
 Aromanian	Aromanian			STAR_NOUN	steauã	ste̯ˈawə	s t e̯ˈa w ə		STAR_NOUN_2			
 Dalmatian	Dalmatian			STAR_NOUN	stalla	stˈalla	s t ˈa l l a		STAR_NOUN_2			
 Sicilian	Sicilian			STAR_NOUN	stidda	ʃtˈiɖɖa	ʃ t ˈi ɖ ɖ a		STAR_NOUN_2			
@@ -8869,6 +9017,7 @@ Portuguese	Portuguese			ABOVE_PREP	sobre	sˈoβɾɨ	s ˈo β ɾ ɨ		ABOVE_PREP_1
 Brazilian Portuguese	Brazilian Portuguese			ABOVE_PREP	sobre	sˈobɾi	s ˈo b ɾ i		ABOVE_PREP_1			
 Latin	Latin			FATHER_NOUN	tatam	tˈatãː	t ˈa t ãː		FATHER_NOUN_3			
 Romanian	Romanian			FATHER_NOUN	tată	tˈatə	t ˈa t ə		FATHER_NOUN_3			
+Megleno-Romanian	Megleno-Romanian			FATHER_NOUN	tată	tˈatə	t ˈa t ə		FATHER_NOUN_3			
 Aromanian	Aromanian			FATHER_NOUN	tatã	tˈatə	t ˈa t ə		FATHER_NOUN_3			
 Latin	Latin			BULL_NOUN	taurum	tˈau̯rʊ̃ː	t ˈau̯ r ʊ̃ː		BULL_NOUN_2			
 Logudorese	Logudorese			BULL_NOUN	tràbu	trˈaβu	t r ˈa β u		BULL_NOUN_2			
@@ -8900,6 +9049,7 @@ Portuguese	Portuguese			BULL_NOUN	touro	tˈowɾu	t ˈo w ɾ u		BULL_NOUN_2
 Brazilian Portuguese	Brazilian Portuguese			BULL_NOUN	touro	tˈowɾu	t ˈo w ɾ u		BULL_NOUN_2			
 Latin	Latin			TIME_NOUN	tempum	tˈɛmpʊ̃ː	t ˈɛ m p ʊ̃ː		TIME_NOUN_1			
 Romanian	Romanian			TIME_NOUN	timp	tˈimp	t ˈi m p		TIME_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			TIME_NOUN	timp	tˈimp	t ˈi m p		TIME_NOUN_1			
 Dalmatian	Dalmatian			TIME_NOUN	tiamp	tjˈamp	t j ˈa m p		TIME_NOUN_1			
 Sicilian	Sicilian			TIME_NOUN	tempu	tˈɛmpʊ	t ˈɛ m p ʊ		TIME_NOUN_1			
 Neapolitan	Neapolitan			TIME_NOUN	tiempo	tjˈɛmpə	t j ˈɛ m p ə		TIME_NOUN_1			
@@ -8933,6 +9083,7 @@ Latin	Latin			EARTH_NOUN	terram	tˈɛrrãː	t ˈɛ r r ãː		EARTH_NOUN_1
 Logudorese	Logudorese			EARTH_NOUN	terra	tˈerra	t ˈe r r a		EARTH_NOUN_1			
 Campidanese	Campidanese			EARTH_NOUN	terra	tˈerra	t ˈe r r a		EARTH_NOUN_1			
 Romanian	Romanian			EARTH_NOUN	țară	ʦˈarə	ʦ ˈa r ə		EARTH_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			EARTH_NOUN	țară	ʦˈarə	ʦ ˈa r ə		EARTH_NOUN_1			
 Aromanian	Aromanian			EARTH_NOUN	tsarã	ʦˈarə	ʦ ˈa r ə		EARTH_NOUN_1			
 Dalmatian	Dalmatian			EARTH_NOUN	tiara	tjˈara	t j ˈa r a		EARTH_NOUN_1			
 Sicilian	Sicilian			EARTH_NOUN	terra	tˈɛʐʐa	t ˈɛ ʐ ʐ a		EARTH_NOUN_1			
@@ -8964,6 +9115,7 @@ Portuguese	Portuguese			EARTH_NOUN	terra	tˈɛʁɐ	t ˈɛ ʁ ɐ		EARTH_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			EARTH_NOUN	terra	tˈɛhɐ	t ˈɛ h ɐ		EARTH_NOUN_1			
 Latin	Latin			SKULL_NOUN	testam	tˈɛstãː	t ˈɛ s t ãː		SKULL_NOUN_1			
 Romanian	Romanian			SKULL_NOUN	țeastă	ʦe̯ˈastə	ʦ e̯ˈa s t ə		SKULL_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			SKULL_NOUN	țost	ʦˈost	ʦ ˈo s t		SKULL_NOUN_1			
 Sicilian	Sicilian			SKULL_NOUN	testa	tˈɛʃta	t ˈɛ ʃ t a		SKULL_NOUN_1			
 Corsican	Corsican			SKULL_NOUN	testa	tˈesta	t ˈe s t a		SKULL_NOUN_1			
 Italian	Italian			SKULL_NOUN	testa	tˈɛsta	t ˈɛ s t a		SKULL_NOUN_1			
@@ -8997,6 +9149,7 @@ Portuguese	Portuguese			ALL (PL)_ADJ	todos	tˈoðuʃ	t ˈo ð u ʃ		ALL (PL)_ADJ
 Brazilian Portuguese	Brazilian Portuguese			ALL (PL)_ADJ	todos	tˈoduʃ	t ˈo d u ʃ		ALL (PL)_ADJ_3			
 Latin	Latin			ALL (SG)_ADJ	tōtum	tˈoːtʊ̃ː	t ˈoː t ʊ̃ː		ALL (SG)_ADJ_2			
 Romanian	Romanian			ALL (SG)_ADJ	tot	tˈot	t ˈo t		ALL (SG)_ADJ_2			
+Megleno-Romanian	Megleno-Romanian			ALL (SG)_ADJ	tot	tˈot	t ˈo t		ALL (SG)_ADJ_2			
 Aromanian	Aromanian			ALL (SG)_ADJ	tut	tˈut	t ˈu t		ALL (SG)_ADJ_2			
 Spanish	Spanish			ALL (SG)_ADJ	todo	tˈoðo	t ˈo ð o		ALL (SG)_ADJ_2			
 Asturian	Asturian			ALL (SG)_ADJ	tou	tˈou	t ˈo u		ALL (SG)_ADJ_2			
@@ -9007,6 +9160,7 @@ Latin	Latin			THREE_NUM	trēs	trˈeːs	t r ˈeː s		THREE_NUM_1
 Logudorese	Logudorese			THREE_NUM	tres	trˈezĕ	t r ˈe z ĕ		THREE_NUM_1			
 Campidanese	Campidanese			THREE_NUM	tres	trˈezĕ	t r ˈe z ĕ		THREE_NUM_1			
 Romanian	Romanian			THREE_NUM	trei	trˈej	t r ˈe j		THREE_NUM_1			
+Megleno-Romanian	Megleno-Romanian			THREE_NUM	trei	trˈej	t r ˈe j		THREE_NUM_1			
 Aromanian	Aromanian			THREE_NUM	trei	trˈej	t r ˈe j		THREE_NUM_1			
 Dalmatian	Dalmatian			THREE_NUM	tra	trˈa	t r ˈa		THREE_NUM_1			
 Sicilian	Sicilian			THREE_NUM	tri	ʈɽˈi	ʈ ɽ ˈi		THREE_NUM_1			
@@ -9039,6 +9193,7 @@ Latin	Latin			THOU_PRON	tū	tˈuː	t ˈuː		THOU_PRON_1
 Logudorese	Logudorese			THOU_PRON	tue	tˈue	t ˈu e		THOU_PRON_1			
 Campidanese	Campidanese			THOU_PRON	tui	tˈui	t ˈu i		THOU_PRON_1			
 Romanian	Romanian			THOU_PRON	tu	tˈu	t ˈu		THOU_PRON_1			
+Megleno-Romanian	Megleno-Romanian			THOU_PRON	tu	tˈu	t ˈu		THOU_PRON_1			
 Aromanian	Aromanian			THOU_PRON	tu	tˈu	t ˈu		THOU_PRON_1			
 Dalmatian	Dalmatian			THOU_PRON	tu	tˈu	t ˈu		THOU_PRON_1			
 Sicilian	Sicilian			THOU_PRON	tu	tˈu	t ˈu		THOU_PRON_1			
@@ -9077,6 +9232,7 @@ Latin	Latin			NAVEL_NOUN	umbilīcum	ʊmbɪlʲˈiːkʊ̃ː	ʊ m b ɪ lʲ ˈiː k 
 Logudorese	Logudorese			NAVEL_NOUN	imbíligu	imbˈiliɣu	i m b ˈi l i ɣ u		NAVEL_NOUN_1			
 Campidanese	Campidanese			NAVEL_NOUN	imbíligu	imbˈiliɣu	i m b ˈi l i ɣ u		NAVEL_NOUN_1			
 Romanian	Romanian			NAVEL_NOUN	buric	burˈik	b u r ˈi k		NAVEL_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			NAVEL_NOUN	buric	burˈik	b u r ˈi k		NAVEL_NOUN_1			
 Aromanian	Aromanian			NAVEL_NOUN	buric	burˈik	b u r ˈi k		NAVEL_NOUN_1			
 Sicilian	Sicilian			NAVEL_NOUN	viḍḍicu	viɖɖˈikʊ	v i ɖ ɖ ˈi k ʊ		NAVEL_NOUN_1			
 Neapolitan	Neapolitan			NAVEL_NOUN	vellìculo	vellˈikulə	v e l l ˈi k u l ə		NAVEL_NOUN_1			
@@ -9102,6 +9258,7 @@ Latin	Latin			FINGERNAIL_NOUN	ungulam	ˈʊŋɡʊɫãː	ˈʊ ŋ ɡ ʊ ɫ ãː		
 Logudorese	Logudorese			FINGERNAIL_NOUN	ungra	ˈuŋɡra	ˈu ŋ ɡ r a		FINGERNAIL_NOUN_1			
 Campidanese	Campidanese			FINGERNAIL_NOUN	unga	ˈuŋɡa	ˈu ŋ ɡ a		FINGERNAIL_NOUN_1			
 Romanian	Romanian			FINGERNAIL_NOUN	unghie	ˈuŋɡje	ˈu ŋ ɡ j e		FINGERNAIL_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			FINGERNAIL_NOUN	ungľă	ˈuŋɡʎə	ˈu ŋ ɡ ʎ ə		FINGERNAIL_NOUN_1			
 Aromanian	Aromanian			FINGERNAIL_NOUN	unglji	ˈuŋɡʎi	ˈu ŋ ɡ ʎ i		FINGERNAIL_NOUN_1			
 Dalmatian	Dalmatian			FINGERNAIL_NOUN	jongla	jˈoŋɡla	j ˈo ŋ ɡ l a		FINGERNAIL_NOUN_1			
 Sicilian	Sicilian			FINGERNAIL_NOUN	ugna	ˈuɲɲa	ˈu ɲ ɲ a		FINGERNAIL_NOUN_1			
@@ -9136,6 +9293,7 @@ Latin	Latin			ONE_NUM	unum	ˈuːnʊ̃ː	ˈuː n ʊ̃ː		ONE_NUM_1
 Logudorese	Logudorese			ONE_NUM	unu	ˈunu	ˈu n u		ONE_NUM_1			
 Campidanese	Campidanese			ONE_NUM	unu	ˈunu	ˈu n u		ONE_NUM_1			
 Romanian	Romanian			ONE_NUM	unu	ˈunu	ˈu n u		ONE_NUM_1			
+Megleno-Romanian	Megleno-Romanian			ONE_NUM	un	ˈun	ˈu n		ONE_NUM_1			
 Aromanian	Aromanian			ONE_NUM	un	ˈun	ˈu n		ONE_NUM_1			
 Dalmatian	Dalmatian			ONE_NUM	join	jˈojn	j ˈo j n		ONE_NUM_1			
 Sicilian	Sicilian			ONE_NUM	unu	ˈunʊ	ˈu n ʊ		ONE_NUM_1			
@@ -9169,6 +9327,8 @@ Latin	Latin			BEAR_NOUN	ursum	ˈʊrsʊ̃ː	ˈʊ r s ʊ̃ː		BEAR_NOUN_2
 Logudorese	Logudorese			BEAR_NOUN	ursu	ˈursu	ˈu r s u		BEAR_NOUN_2			
 Campidanese	Campidanese			BEAR_NOUN	ursu	ˈursu	ˈu r s u		BEAR_NOUN_2			
 Romanian	Romanian			BEAR_NOUN	urs	ˈurs	ˈu r s		BEAR_NOUN_2			
+Istro-Romanian	Istro-Romanian			BEAR_NOUN	urs	ˈurs	ˈu r s		BEAR_NOUN_2			
+Megleno-Romanian	Megleno-Romanian			BEAR_NOUN	urs	ˈurs	ˈu r s		BEAR_NOUN_2			
 Aromanian	Aromanian			BEAR_NOUN	ursu	ˈursu	ˈu r s u		BEAR_NOUN_2			
 Sicilian	Sicilian			BEAR_NOUN	ursu	ˈuɾsʊ	ˈu ɾ s ʊ		BEAR_NOUN_2			
 Neapolitan	Neapolitan			BEAR_NOUN	urso	ˈuɾso	ˈu ɾ s o		BEAR_NOUN_2			
@@ -9191,6 +9351,7 @@ Latin	Latin			COW_NOUN	vaccam	wˈakkãː	w ˈa k k ãː		COW_NOUN_1
 Logudorese	Logudorese			COW_NOUN	baca	bˈaka	b ˈa k a		COW_NOUN_1			
 Campidanese	Campidanese			COW_NOUN	baca	bˈaka	b ˈa k a		COW_NOUN_1			
 Romanian	Romanian			COW_NOUN	vacă	vˈakə	v ˈa k ə		COW_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			COW_NOUN	vacă	vˈakə	v ˈa k ə		COW_NOUN_1			
 Aromanian	Aromanian			COW_NOUN	vacã	vˈakə	v ˈa k ə		COW_NOUN_1			
 Dalmatian	Dalmatian			COW_NOUN	vaca	vˈaka	v ˈa k a		COW_NOUN_1			
 Dalmatian	Dalmatian			COW_NOUN	vacca	vˈakka	v ˈa k k a		COW_NOUN_1			
@@ -9244,6 +9405,7 @@ Latin	Latin			COME-INF_VERB	venīre	wɛnˈiːrɛ	w ɛ n ˈiː r ɛ		COME-INF_VER
 Logudorese	Logudorese			COME-INF_VERB	bènniri	bˈenniri	b ˈe n n i r i		COME-INF_VERB_1			
 Campidanese	Campidanese			COME-INF_VERB	bènniri	bˈenniri	b ˈe n n i r i		COME-INF_VERB_1			
 Romanian	Romanian			COME-INF_VERB	venire	venˈire	v e n ˈi r e		COME-INF_VERB_1			
+Megleno-Romanian	Megleno-Romanian			COME-INF_VERB	viniri	vinˈiri	v i n ˈi r i		COME-INF_VERB_1			
 Aromanian	Aromanian			COME-INF_VERB	yinjiri	jiɲˈiri	j i ɲ ˈi r i		COME-INF_VERB_1			
 Dalmatian	Dalmatian			COME-INF_VERB	vener	venˈer	v e n ˈe r		COME-INF_VERB_1			
 Sicilian	Sicilian			COME-INF_VERB	vèniri	vˈɛnɪɾɪ	v ˈɛ n ɪ ɾ ɪ		COME-INF_VERB_1			
@@ -9301,6 +9463,7 @@ Latin	Latin			WIND_NOUN	ventum	wˈɛntʊ̃ː	w ˈɛ n t ʊ̃ː		WIND_NOUN_1
 Logudorese	Logudorese			WIND_NOUN	bentu	bˈentu	b ˈe n t u		WIND_NOUN_1			
 Campidanese	Campidanese			WIND_NOUN	bentu	bˈentu	b ˈe n t u		WIND_NOUN_1			
 Romanian	Romanian			WIND_NOUN	vânt	vˈɨnt	v ˈɨ n t		WIND_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			WIND_NOUN	vint	vˈint	v ˈi n t		WIND_NOUN_1			
 Aromanian	Aromanian			WIND_NOUN	vimtu	vˈimtu	v ˈi m t u		WIND_NOUN_1			
 Dalmatian	Dalmatian			WIND_NOUN	viant	vjˈant	v j ˈa n t		WIND_NOUN_1			
 Sicilian	Sicilian			WIND_NOUN	ventu	vˈɛntʊ	v ˈɛ n t ʊ		WIND_NOUN_1			
@@ -9342,6 +9505,7 @@ Latin	Latin			WORM_NOUN	vermem	wˈɛrmɛ̃ː	w ˈɛ r m ɛ̃ː		WORM_NOUN_1
 Logudorese	Logudorese			WORM_NOUN	berme	bˈerme	b ˈe r m e		WORM_NOUN_1			
 Campidanese	Campidanese			WORM_NOUN	bermi	bˈermi	b ˈe r m i		WORM_NOUN_1			
 Romanian	Romanian			WORM_NOUN	vierme	vjˈerme	v j ˈe r m e		WORM_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			WORM_NOUN	varmi	vˈarmi	v ˈa r m i		WORM_NOUN_1			
 Aromanian	Aromanian			WORM_NOUN	yermo	jˈermu	j ˈe r m u		WORM_NOUN_1			
 Dalmatian	Dalmatian			WORM_NOUN	viarm	vjˈarm	v j ˈa r m		WORM_NOUN_1			
 Sicilian	Sicilian			WORM_NOUN	vemmu	vˈɛmmʊ	v ˈɛ m m ʊ		WORM_NOUN_1			
@@ -9374,6 +9538,7 @@ Latin	Latin			OLD_ADJ	vetulum	wˈɛtʊɫʊ̃ː	w ˈɛ t ʊ ɫ ʊ̃ː		OLD_ADJ_1
 Logudorese	Logudorese			OLD_ADJ	becru	bˈekru	b ˈe k r u		OLD_ADJ_1			
 Campidanese	Campidanese			OLD_ADJ	beju	bˈeju	b ˈe j u		OLD_ADJ_1			
 Romanian	Romanian			OLD_ADJ	vechi	vˈekʲ	v ˈe kʲ		OLD_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			OLD_ADJ	vecľu	vˈekʎu	v ˈe k ʎ u		OLD_ADJ_1			
 Aromanian	Aromanian			OLD_ADJ	veclju	vˈekʎu	v ˈe k ʎ u		OLD_ADJ_1			
 Dalmatian	Dalmatian			OLD_ADJ	vieclo	vjˈɛklo	v j ˈɛ k l o		OLD_ADJ_1			
 Sicilian	Sicilian			OLD_ADJ	vecchiu	vˈɛccʊ	v ˈɛ c c ʊ		OLD_ADJ_1			
@@ -9570,6 +9735,8 @@ Latin	Latin			WINE_NOUN	vīnum	wˈiːnʊ̃ː	w ˈiː n ʊ̃ː		WINE_NOUN_1
 Logudorese	Logudorese			WINE_NOUN	binu	bˈinu	b ˈi n u		WINE_NOUN_1			
 Campidanese	Campidanese			WINE_NOUN	binu	bˈinu	b ˈi n u		WINE_NOUN_1			
 Romanian	Romanian			WINE_NOUN	vin	vˈin	v ˈi n		WINE_NOUN_1			
+Istro-Romanian	Istro-Romanian			WINE_NOUN	vir	vˈir	v ˈi r		WINE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			WINE_NOUN	vin	vˈin	v ˈi n		WINE_NOUN_1			
 Aromanian	Aromanian			WINE_NOUN	yin	jˈin	j ˈi n		WINE_NOUN_1			
 Dalmatian	Dalmatian			WINE_NOUN	vain	vˈajn	v ˈa j n		WINE_NOUN_1			
 Sicilian	Sicilian			WINE_NOUN	vinu	vˈinʊ	v ˈi n ʊ		WINE_NOUN_1			
@@ -9603,6 +9770,7 @@ Latin	Latin			GREEN_ADJ	viridem	wˈɪrɪdɛ̃ː	w ˈɪ r ɪ d ɛ̃ː		GREEN_ADJ_
 Logudorese	Logudorese			GREEN_ADJ	birde	bˈirde	b ˈi r d e		GREEN_ADJ_1			
 Campidanese	Campidanese			GREEN_ADJ	birdi	bˈirdi	b ˈi r d i		GREEN_ADJ_1			
 Romanian	Romanian			GREEN_ADJ	verde	vˈerde	v ˈe r d e		GREEN_ADJ_1			
+Megleno-Romanian	Megleno-Romanian			GREEN_ADJ	veardi	ve̯ˈardi	v e̯ˈa r d i		GREEN_ADJ_1			
 Aromanian	Aromanian			GREEN_ADJ	veardi	ve̯ˈardi	v e̯ˈa r d i		GREEN_ADJ_1			
 Dalmatian	Dalmatian			GREEN_ADJ	viard	vjˈard	v j ˈa r d		GREEN_ADJ_1			
 Sicilian	Sicilian			GREEN_ADJ	virdi	vˈiɾdɪ	v ˈi ɾ d ɪ		GREEN_ADJ_1			
@@ -9667,6 +9835,7 @@ Latin	Latin			CALF_NOUN	vitellum	wɪtˈɛlʲlʲʊ̃ː	w ɪ t ˈɛ lʲ lʲ ʊ̃ː
 Logudorese	Logudorese			CALF_NOUN	biteddu	bitˈeɖɖu	b i t ˈe ɖ ɖ u		CALF_NOUN_1			
 Campidanese	Campidanese			CALF_NOUN	biteddu	bitˈeɖɖu	b i t ˈe ɖ ɖ u		CALF_NOUN_1			
 Romanian	Romanian			CALF_NOUN	vițel	viʦˈel	v i ʦ ˈe l		CALF_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			CALF_NOUN	vițǫl	viʦˈɔl	v i ʦ ˈɔ l		CALF_NOUN_1			
 Aromanian	Aromanian			CALF_NOUN	yitsãl	jiʦˈɨl	j i ʦ ˈɨ l		CALF_NOUN_1			
 Sicilian	Sicilian			CALF_NOUN	viteddu	vitˈɛɖɖʊ	v i t ˈɛ ɖ ɖ ʊ		CALF_NOUN_1			
 Neapolitan	Neapolitan			CALF_NOUN	vitiello	vitjˈɛllə	v i t j ˈɛ l l ə		CALF_NOUN_1			
@@ -9782,10 +9951,13 @@ Romanian	Romanian			TWENTY_NUM	douăzeci	dowəzˈeʧʲ	d o w ə z ˈe ʧʲ		TWEN
 Romanian	Romanian			FAT_NOUN	grăsime	ɡrəsˈime	ɡ r ə s ˈi m e		FAT_NOUN_3			
 Aromanian	Aromanian			FAT_NOUN	grãsimi	ɡrəsˈimi	ɡ r ə s ˈi m i		FAT_NOUN_3			
 Romanian	Romanian			BIG_ADJ	mare	mˈare	m ˈa r e		BIG_ADJ_2			
+Megleno-Romanian	Megleno-Romanian			BIG_ADJ	mari	mˈari	m ˈa r i		BIG_ADJ_2			
 Aromanian	Aromanian			BIG_ADJ	mari	mˈari	m ˈa r i		BIG_ADJ_2			
 Romanian	Romanian			COLD_ADJ	rece	rˈeʧe	r ˈe ʧ e		COLD_ADJ_2			
+Megleno-Romanian	Megleno-Romanian			COLD_ADJ	rați	rˈaʦi	r ˈa ʦ i		COLD_ADJ_2			
 Aromanian	Aromanian			COLD_ADJ	aratsi	arˈaʦi	a r ˈa ʦ i		COLD_ADJ_2			
 Romanian	Romanian			HUNDRED_NUM	sută	sˈutə	s ˈu t ə		HUNDRED_NUM_2			
+Megleno-Romanian	Megleno-Romanian			HUNDRED_NUM	sută	sˈutə	s ˈu t ə		HUNDRED_NUM_2			
 Aromanian	Aromanian			HUNDRED_NUM	sutã	sˈutə	s ˈu t ə		HUNDRED_NUM_2			
 French	French			BURN_VERB	brûler	bʁyle	b ʁ y l e		BURN_VERB_3			
 Québécois French	Québécois French			BURN_VERB	brûler	bʁyle	b ʁ y l e		BURN_VERB_3			
