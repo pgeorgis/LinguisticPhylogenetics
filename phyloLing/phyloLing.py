@@ -1351,10 +1351,10 @@ class Language:
         """Returns a dictionary of ngrams of a particular size, with their counts"""
 
         # Retrieve pre-calculated ngrams
-        if not phon_env and len(self.ngrams[ngram_size]) > 0:
+        if not phon_env and sum(self.ngrams[ngram_size].values()) > 0:
             return self.ngrams[ngram_size]
 
-        elif phon_env and len(self.phon_env_ngrams[ngram_size]) > 0:
+        elif phon_env and sum(self.phon_env_ngrams[ngram_size].values()) > 0:
             return self.phon_env_ngrams[ngram_size]
 
         else:
@@ -1479,7 +1479,10 @@ class Language:
 
     def ngram_probability(self, ngram):
         ngram = Ngram(ngram)
-        return self.ngrams[ngram.size][ngram.ngram] / sum(self.ngrams[ngram.size].values())
+        if ngram.size not in self.ngrams:
+            self.list_ngrams(ngram.size)
+        prob = self.ngrams[ngram.size][ngram.ngram] / sum(self.ngrams[ngram.size].values())
+        return prob
 
     @lru_cache(maxsize=None)
     def KN_bigram_probability(self, bigram, delta=0.7):
