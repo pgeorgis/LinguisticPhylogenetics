@@ -2,7 +2,7 @@ family:
     name: Romance
     file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/data/romance_data.tsv
     min_amc: 0.7
-    exclude: ['Dalmatian', 'Savoyard']
+    exclude: ['Dalmatian', 'Savoyard', 'Istro-Romanian']
     outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/
 
 experiment:
@@ -15,11 +15,13 @@ transcription:
         normalize_geminates: true
 
 pmi:
+    min_corr: 2
     refresh: []
     refresh_all_pmi: true
 
 surprisal:
     ngram: 1
+    min_corr: 2
     phon_env: true 
     refresh: []
     refresh_all_surprisal: true
@@ -29,9 +31,9 @@ cluster:
 
 evaluation:
     similarity: gradient
-    method: composite
-    pmi_weight: 1.5
-    surprisal_weight: 2
+    method: hybrid
+    pmi_weight: 0
+    surprisal_weight: 3
     phon_weight: 1
     n_samples: 10
     sample_size: 0.8

@@ -1,5 +1,5 @@
 VOWELS
-/a/ (0.059)
+/a/ (0.06)
 	<têra> /tˈɛːða/ "EARTH_NOUN"
 	<féta> /fˈeta/ "PARTY_NOUN"
 	<lenga> /lˈɛ̃ɡa/ "TONGUE_NOUN"
@@ -9,7 +9,7 @@ VOWELS
 	<éga> /ˈeɡa/ "WATER_NOUN"
 	<vél> /vˈel/ "CALF_NOUN"
 
-/ə/ (0.042)
+/ə/ (0.043)
 	<pâre> /pˈaːðə/ "FATHER_NOUN"
 	<frâre> /fʁˈaːðə/ "BROTHER_NOUN"
 	<avolye> /avˈuʎə/ "NEEDLE_NOUN"
@@ -19,9 +19,9 @@ VOWELS
 	<plorar> /ploðˈa/ "WEEP_VERB"
 	<montagne> /mɔ̃tˈaɲi/ "MOUNTAIN_NOUN"
 
-/o/ (0.028)
-	<ârbro> /ˈaːʁbʁo/ "TREE_NOUN"
-	<jorno> /ʒˈɔʁno/ "DAY_NOUN"
+/o/ (0.027)
+	<plorar> /ploðˈa/ "WEEP_VERB"
+	<morir> /moðˈi/ "DIE_VERB"
 	<povêr> /povˈɛːʁ/ "CAN_VERB"
 
 /ˈɛː/ (0.026)
@@ -34,10 +34,10 @@ VOWELS
 	<lire> /lˈiðə/ "READ_VERB"
 	<vila> /vˈila/ "TOWN_NOUN"
 
-/ˈɛ/ (0.02)
+/ˈɛ/ (0.019)
 	<bèla> /bˈɛla/ "BEAUTIFUL (F)_ADJ"
-	<pouèrc> /pwˈɛʁk/ "PIG_NOUN"
-	<chèf> /ʃˈɛf/ "HEAD_NOUN"
+	<sèpt> /sˈɛt/ "SEVEN_NUM"
+	<mè> /mˈɛ/ "I_OBL_PRON"
 
 /ˈoː/ (0.017)
 	<chôd> /ʃˈoː/ "HOT_ADJ"
@@ -149,7 +149,7 @@ VOWELS
 
 
 CONSONANTS
-/ʁ/ (0.069)
+/ʁ/ (0.07)
 	<ôrs> /ˈoːʁs/ "BEAR_NOUN"
 	<fumiére> /fumjˈeʁ/ "SMOKE_NOUN"
 	<ventro> /vˈɛ̃tʁo/ "BELLY_NOUN"
@@ -160,9 +160,9 @@ CONSONANTS
 	<plorar> /ploðˈa/ "WEEP_VERB"
 
 /s/ (0.041)
-	<soluêly> /sɔlwˈɛː/ "SUN_NOUN"
-	<cièl> /sjˈɛl/ "SKY_NOUN"
-	<sâbio> /sˈaːbjo/ "KNOW-SBJ-1SG_VERB"
+	<dóuz> /dˈows/ "SWEET_ADJ"
+	<förça> /fˈøʁsa/ "STRENGTH_NOUN"
+	<savu> /savˈu/ "KNOWN_VERB"
 
 /v/ (0.036)
 	<volar> /vɔlˈa/ "FLY_VERB"
@@ -179,80 +179,80 @@ CONSONANTS
 	<soué> /swˈe/ "SILK_NOUN"
 	<uevra> /wˈevʁa/ "WORK_NOUN"
 
-/j/ (0.03)
-	<viöly> /vjˈøʎ/ "OLD_ADJ"
-	<piérra> /pjˈeða/ "STONE_NOUN"
-	<cllâf> /kjˈaː/ "KEY_NOUN"
-
 /ʃ/ (0.029)
-	<miöx> /mjˈøʃ/ "BETTER_ADV"
-	<six> /sˈiʃ/ "SIX_NUM"
-	<chér> /ʃˈeʁ/ "DEAR_ADJ"
+	<prix> /pʁˈiʃ/ "PRICE_NOUN"
+	<chösa> /ʃˈøza/ "THING_NOUN"
+	<chaciér> /ʃasjˈe/ "HUNT_VERB"
 
 /ð/ (0.029)
-	<jhensiva> /ðɛ̃sˈiva/ "GUMS_NOUN"
-	<plorar> /ploðˈa/ "WEEP_VERB"
-	<cerise> /seðˈizə/ "CHERRY_NOUN"
+	<anjhe> /ˈɑ̃ðə/ "ANGEL_NOUN"
+	<aragne> /aðˈaɲi/ "SPIDER_NOUN"
+	<orelye> /oðˈiʎə/ "EAR_NOUN"
 
 /t/ (0.029)
-	<mêtiat> /mɛːtjˈa/ "HALF_NOUN"
-	<te> /tˈɛ/ "THOU_PRON"
-	<sèt> /sˈɛt/ "DRY (M)_ADJ"
+	<lètra> /lˈɛtʁa/ "LETTER_NOUN"
+	<petiôt> /pətjˈoː/ "SMALL_ADJ"
+	<écotar> /ekotˈa/ "LISTEN_VERB"
 
 /p/ (0.029)
-	<pue> /pwˈe/ "LITTLE_ADJ"
-	<épena> /epˈena/ "SPINE_NOUN"
-	<parola> /paðˈɔla/ "WORD_NOUN"
+	<pioly> /pjˈuʎ/ "LOUSE_NOUN"
+	<piérra> /pjˈeða/ "STONE_NOUN"
+	<povêr> /povˈɛːʁ/ "CAN_VERB"
+
+/j/ (0.029)
+	<ovriér> /ovʁjˈe/ "WORKER_NOUN"
+	<riond> /ʁjˈɔ̃/ "ROUND_ADJ"
+	<myél> /mjˈel/ "HONEY_NOUN"
 
 /f/ (0.027)
-	<förça> /fˈøʁsa/ "STRENGTH_NOUN"
-	<flama> /flˈama/ "FLAME_NOUN"
+	<fam> /fˈɑ̃/ "HUNGER_NOUN"
 	<flör> /flˈøʁ/ "FLOWER_NOUN"
+	<chèf> /ʃˈɛf/ "HEAD_NOUN"
 
 /m/ (0.026)
+	<mile> /mˈil/ "THOUSAND_NUM"
 	<mêtiat> /mɛːtjˈa/ "HALF_NOUN"
-	<mèlyör> /mɛʎˈøʁ/ "BETTER_ADJ"
-	<meur> /mˈøʁ/ "MATURE_NOUN"
+	<myél> /mjˈel/ "HONEY_NOUN"
 
-/k/ (0.023)
-	<pouèrc> /pwˈɛʁk/ "PIG_NOUN"
-	<côp> /kˈoː/ "STRIKE_NOUN"
-	<quatro> /kwˈatʁo/ "FOUR_NUM"
+/k/ (0.022)
+	<cörna> /kˈøʁna/ "HORN_NOUN"
+	<écörce> /ekˈøʁsə/ "BARK_NOUN"
+	<côrt> /kˈoːʁ/ "SHORT_ADJ"
 
 /b/ (0.018)
+	<ârbro> /ˈaːʁbʁo/ "TREE_NOUN"
+	<bon> /bˈɔ̃/ "GOOD (M.SG)_ADJ"
 	<boche> /bˈɔʃi/ "MOUTH_NOUN"
-	<bèla> /bˈɛla/ "BEAUTIFUL (F)_ADJ"
-	<bonnes> /bˈɔnə/ "GOOD (F.PL)_ADJ"
-
-/ʎ/ (0.016)
-	<uèly> /wˈeʎ/ "EYE_NOUN"
-	<fily> /fˈiʎ/ "SON_NOUN"
-	<siècllo> /sjˈɛkʎo/ "CENTURY_NOUN"
 
 /d/ (0.016)
-	<plendre> /plˈɛ̃dʁə/ "WEEP_VERB"
-	<pondre> /pˈɔ̃dʁə/ "PUT_VERB"
-	<mourdre> /mˈuʁdʁə/ "BITE_VERB"
+	<cindre> /sˈĩdʁə/ "ASH_NOUN"
+	<dama> /dˈama/ "LADY_NOUN"
+	<aidar> /ajdˈa/ "HELP_VERB"
+
+/ʎ/ (0.015)
+	<onglle> /ˈɔ̃ɡʎə/ "FINGERNAIL_NOUN"
+	<felye> /fˈeʎə/ "DAUGHTER_NOUN"
+	<avolye> /avˈuʎə/ "NEEDLE_NOUN"
 
 /ɡ/ (0.011)
-	<lenga> /lˈɛ̃ɡa/ "TONGUE_NOUN"
-	<dragon> /dʁaɡˈɔ̃/ "DRAGON_NOUN"
-	<éga> /ˈeɡa/ "WATER_NOUN"
+	<grôs> /ɡʁˈoː/ "THICK_ADJ"
+	<onglle> /ˈɔ̃ɡʎə/ "FINGERNAIL_NOUN"
+	<grant> /ɡʁˈɑ̃/ "BIG_ADJ"
 
 /z/ (0.008)
-	<usél> /uzˈel/ "BIRD_NOUN"
-	<chösa> /ʃˈøza/ "THING_NOUN"
+	<cerise> /seðˈizə/ "CHERRY_NOUN"
 	<doze> /dˈozə/ "TWELVE_NUM"
+	<chuesa> /ʃwˈeza/ "THING_NOUN"
 
 /ʒ/ (0.007)
-	<je> /ʒˈe/ "I_PRON"
-	<jorno> /ʒˈɔʁno/ "DAY_NOUN"
-	<mêjo> /mˈɛːʒo/ "DOCTOR_NOUN"
+	<changiér> /ʃĩʒjˈe/ "CHANGE_VERB"
+	<mangier> /mˈĩʒi/ "EAT_VERB"
+	<plloge> /pʎˈoʒə/ "RAIN_NOUN"
 
 /ɲ/ (0.005)
-	<niol> /ɲˈol/ "CLOUD_NOUN"
-	<vèrgogne> /vɛʁɡˈɔɲə/ "SHAME_NOUN"
+	<legne> /lˈeɲə/ "LINE_NOUN"
 	<agnél> /aɲˈel/ "LAMB_NOUN"
+	<aragne> /aðˈaɲi/ "SPIDER_NOUN"
 
 /ʦ/ (0.001)
 	<puêts> /pwˈɛːʦ/ "WELL_NOUN"

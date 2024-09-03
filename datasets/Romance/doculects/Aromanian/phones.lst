@@ -1,10 +1,10 @@
 VOWELS
-/i/ (0.1)
+/i/ (0.098)
 	<tsitati> /ʦitˈati/ "CITY_NOUN"
-	<cheali> /ke̯ˈali/ "SKIN_NOUN"
+	<durnjiri> /durɲˈiri/ "SLEEP_VERB"
 	<pãni> /pˈɨni/ "BREAD_NOUN"
 
-/ə/ (0.062)
+/ə/ (0.061)
 	<mãtur> /mətˈur/ "MATURE_NOUN"
 	<ljuftã> /ʎˈuftə/ "FIGHT_NOUN"
 	<iarnã> /jˈarnə/ "WINTER_NOUN"
@@ -19,15 +19,15 @@ VOWELS
 	<pitreatsiri> /pitre̯aʦiˈiri/ "PARTY_NOUN"
 	<plin> /plˈin/ "FULL_ADJ"
 
-/ˈu/ (0.036)
+/ˈu/ (0.035)
 	<cãtushi> /kɨtˈuʃi/ "CAT_NOUN"
-	<puniri> /pˈuniri/ "PUT_VERB"
+	<shcurtu> /ʃkˈurtu/ "SHORT_ADJ"
 	<tut> /tˈut/ "ALL (SG)_ADJ"
 
 /u/ (0.035)
 	<lungu> /lˈuŋɡu/ "LONG_ADJ"
 	<buric> /burˈik/ "NAVEL_NOUN"
-	<lemnu> /lˈemnu/ "WOOD_NOUN"
+	<vimtu> /vˈimtu/ "WIND_NOUN"
 
 /e̯ˈa/ (0.023)
 	<tsearã> /ʦe̯ˈarə/ "WAX_NOUN"
@@ -37,7 +37,7 @@ VOWELS
 /ˈo/ (0.022)
 	<nouã> /nˈowə/ "NINE_NUM"
 	<zbor> /zbˈor/ "FLIGHT_NOUN"
-	<voi> /vˈoj/ "YOU (PL)_PRON"
+	<noj> /nˈoj/ "WE_PRON"
 
 /a/ (0.017)
 	<ascultari> /askultˈari/ "LISTEN_VERB"
@@ -54,10 +54,10 @@ VOWELS
 	<soari> /so̯ˈari/ "SUN_NOUN"
 	<oai> /o̯ˈaj/ "SHEEP_NOUN"
 
-/ˈɨ/ (0.013)
-	<cãne> /kˈɨne/ "DOG_NOUN"
+/ˈɨ/ (0.014)
 	<frãndzã> /frˈɨnʣə/ "LEAF_NOUN"
-	<rãnji> /rˈɨɲi/ "SPIDER_NOUN"
+	<lãnã> /lˈɨnə/ "WOOL_NOUN"
+	<arãnji> /arˈɨɲi/ "SPIDER_NOUN"
 
 /e/ (0.005)
 	<cãne> /kˈɨne/ "DOG_NOUN"
@@ -89,16 +89,16 @@ CONSONANTS
 /n/ (0.062)
 	<yin> /jˈin/ "COME-1SG_VERB"
 	<dzindzii> /ʣinʣˈii/ "GUMS_NOUN"
-	<noapti> /no̯ˈapti/ "NIGHT_NOUN"
+	<nouã> /nˈowə/ "NINE_NUM"
 
-/k/ (0.053)
+/k/ (0.054)
 	<cljimari> /kʎimˈari/ "CALL_VERB"
 	<porcu> /pˈorku/ "PIG_NOUN"
 	<mãcari> /mɨkˈari/ "EAT_VERB"
 
 /t/ (0.047)
-	<tu> /tˈu/ "THOU_PRON"
 	<spatã> /spˈatə/ "SWORD_NOUN"
+	<anutari> /anˈutari/ "SWIM_VERB"
 	<mãtur> /mətˈur/ "MATURE_NOUN"
 
 /p/ (0.031)
@@ -106,25 +106,25 @@ CONSONANTS
 	<siptãmãnã> /siptəmˈɨnə/ "WEEK_NOUN"
 	<plin> /plˈin/ "FULL_ADJ"
 
-/m/ (0.03)
-	<numã> /nˈumə/ "NAME_NOUN"
-	<nume> /nˈumi/ "NAME_NOUN"
-	<vimtu> /vˈimtu/ "WIND_NOUN"
-
 /l/ (0.03)
+	<lunã> /lˈunə/ "MOON_NOUN"
+	<lapti> /lˈapti/ "MILK_NOUN"
+	<lup> /lˈup/ "WOLF_NOUN"
+
+/m/ (0.029)
 	<lemnu> /lˈemnu/ "WOOD_NOUN"
-	<cheali> /ke̯ˈali/ "SKIN_NOUN"
-	<yitsãl> /jiʦˈɨl/ "CALF_NOUN"
+	<inimã> /ˈinimə/ "SOUL_NOUN"
+	<mãschari> /mɨʃkˈari/ "BITE_VERB"
+
+/s/ (0.025)
+	<chearsicã> /ke̯ˈarsikə/ "PEACH_NOUN"
+	<schic> /skˈik/ "EAR OF GRAIN_NOUN"
+	<spatã> /spˈatə/ "SWORD_NOUN"
 
 /ʦ/ (0.024)
-	<dzãtsiri> /ʣˈəʦiri/ "SAY-INF_VERB"
-	<tsintsi> /ʦˈinʦi/ "FIVE_NUM"
-	<tsearã> /ʦe̯ˈarə/ "WAX_NOUN"
-
-/s/ (0.024)
-	<dosprãdzatsi> /dˈosprəʣaʦi/ "TWELVE_NUM"
-	<sutã> /sˈutə/ "HUNDRED_NUM"
-	<ascultari> /askultˈari/ "LISTEN_VERB"
+	<tsi> /ʦˈi/ "WHAT_PRON"
+	<yitsin> /jiʦˈin/ "NEIGHBOR_NOUN"
+	<pitreatsiri> /pitre̯aʦiˈiri/ "PARTY_NOUN"
 
 /j/ (0.018)
 	<iarbã> /jˈarbə/ "GRASS_NOUN"
@@ -161,12 +161,12 @@ CONSONANTS
 	<fum> /fˈum/ "SMOKE_NOUN"
 	<frut> /frˈut/ "FRUIT_NOUN"
 
-/ɡ/ (0.011)
-	<yinghits> /jiŋɡˈiʦ/ "TWENTY_NUM"
+/ɡ/ (0.012)
+	<gurã> /ɡˈurə/ "THROAT_NOUN"
 	<galbin> /ɡˈalbin/ "YELLOW_ADJ"
 	<lungu> /lˈuŋɡu/ "LONG_ADJ"
 
-/ɲ/ (0.01)
+/ɲ/ (0.009)
 	<njilje> /ɲˈiʎe/ "THOUSAND_NUM"
 	<njeri> /ɲˈeri/ "HONEY_NOUN"
 	<rãnji> /rˈɨɲi/ "SPIDER_NOUN"

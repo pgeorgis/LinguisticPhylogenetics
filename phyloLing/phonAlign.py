@@ -1,4 +1,5 @@
 import importlib
+import logging
 from collections.abc import Iterable
 from math import inf, log
 
@@ -11,6 +12,10 @@ from phonUtils.segment import _toSegment
 from utils.distance import Distance
 from utils.sequence import Ngram, PhonEnvNgram
 from utils.utils import validate_class
+
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 
 def compatible_segments(seg1, seg2):
@@ -272,77 +277,135 @@ class Alignment:
         self.alignment.insert(new_index, merged)
         self.length = len(self.alignment)
 
-    def compact_gaps(self, complex_ngrams):
-        l1_bigrams = [ngram for ngram in complex_ngrams if ngram.size > 1]
-        l2_bigrams = [nested_ngram for ngram in complex_ngrams
-                      for nested_ngram in complex_ngrams[ngram] if nested_ngram.size > 1]
-        l1_bigram_segs = set(seg for bigram in l1_bigrams for seg in bigram.ngram)
-        l2_bigram_segs = set(seg for bigram in l2_bigrams for seg in bigram.ngram)
 
+    def compact_gaps(self, complex_ngrams, simple_ngrams):
+        # Step 1: Extract bigrams and their aligned segments
+        l1_bigrams, l2_bigrams, l1_bigram_segs, l2_bigram_segs = get_bigrams(complex_ngrams)
+
+        # Step 2: Process gaps and identify merge ranges and candidates
         gaps = self.gaps()
-        gaps.reverse()
+        merge_ranges, merge_candidates = self.process_gaps(
+            gaps, l1_bigrams, l2_bigrams, l1_bigram_segs, l2_bigram_segs, complex_ngrams
+        )
+
+        # Step 3: Select best merge group(s)
+        merge_ranges = self.select_best_merge_group(list(merge_ranges), complex_ngrams, simple_ngrams, merge_candidates)
+
+        # Step 4: Apply merge operations
+        for merge_range in merge_ranges:
+            if merge_range is not None:
+                self.merge_align_positions(indices=list(merge_range))
+
+        # Step 5: Update sequence map and length for compacted alignment
+        self.update()
+
+    def process_gaps(self, gaps, l1_bigrams, l2_bigrams, l1_bigram_segs, l2_bigram_segs, complex_ngrams):
+        """Process gaps and collect merge ranges and candidates."""
         merge_ranges = set()
         merge_candidates = {}
-        for gap in gaps:
+
+        for gap in reversed(gaps):  # Reverse the gaps to process in reverse order
             slices = gap.bigram_slices()
             # If the gap is in the first position, that means lang1 has a single seg where lang2 has two segs
             # gap.segment is the segment this gap is aligned to
             # gap.segment should be part of l2_bigram_segs
             if gap.gap_i == 0 and gap.segment in l2_bigram_segs:
-                for bigram in l2_bigrams:
-                    if gap.segment in bigram.ngram:
-                        gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram.ngram)
-                        unigrams = [uni_corr for uni_corr in complex_ngrams if bigram in complex_ngrams[uni_corr]]
-                        for unigram_corr in unigrams:
-                            for start_i, end_i in slices:
-                                if self.alignment[start_i:end_i] in (
-                                    [(gap.gap_ch, gap_aligned_corr), (unigram_corr.string, seg_aligned_corr)],
-                                    [(unigram_corr.string, seg_aligned_corr), (gap.gap_ch, gap_aligned_corr)],
-                                ):
-                                    merge_ranges.add(tuple(range(start_i, end_i)))
-                                    merge_candidates[tuple(range(start_i, end_i))] = (unigram_corr, bigram)
-                                    break
-                                break
-
+                merge_ranges, merge_candidates = self.handle_l2_bigram_gaps(
+                    gap, l2_bigrams, slices, complex_ngrams, merge_ranges, merge_candidates
+                )
             # If gap is not in first position, this means that lang1 has two segs where lang2 has one seg
             # gap.segment should be part of l1_bigram_segs
             elif gap.gap_i != 0 and gap.segment in l1_bigram_segs:
-                for bigram in l1_bigrams:
-                    if gap.segment in bigram.ngram:
-                        gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram.ngram)
-                        for unigram_corr in complex_ngrams[bigram]:
-                            for start_i, end_i in slices:
-                                if self.alignment[start_i:end_i] in (
-                                    [(gap_aligned_corr, gap.gap_ch), (seg_aligned_corr, unigram_corr.string)],
-                                    [(seg_aligned_corr, unigram_corr.string), (gap_aligned_corr, gap.gap_ch)],
-                                ):
-                                    merge_ranges.add(tuple(range(start_i, end_i)))
-                                    merge_candidates[tuple(range(start_i, end_i))] = (bigram, unigram_corr)
-                                    break
-                                break
+                merge_ranges, merge_candidates = self.handle_l1_bigram_gaps(
+                    gap, l1_bigrams, slices, complex_ngrams, merge_ranges, merge_candidates
+                )
 
-        # Select best merge group(s)
+        return merge_ranges, merge_candidates
+
+    def handle_l2_bigram_gaps(self, gap, l2_bigrams, slices, complex_ngrams, merge_ranges, merge_candidates):
+        """Handle gaps where lang2 has two segments and lang1 has one."""
+        for bigram in l2_bigrams:
+            if gap.segment in bigram.ngram:
+                gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram.ngram)
+                unigrams = [uni_corr for uni_corr in complex_ngrams if bigram in complex_ngrams[uni_corr]]
+                for unigram_corr in unigrams:
+                    for start_i, end_i in slices:
+                        if self.alignment[start_i:end_i] in (
+                            [(gap.gap_ch, gap_aligned_corr), (unigram_corr.string, seg_aligned_corr)],
+                            [(unigram_corr.string, seg_aligned_corr), (gap.gap_ch, gap_aligned_corr)],
+                        ):
+                            merge_ranges.add(tuple(range(start_i, end_i)))
+                            merge_candidates[tuple(range(start_i, end_i))] = (unigram_corr, bigram)
+                        #     break
+                        # break
+        return merge_ranges, merge_candidates
+
+    def handle_l1_bigram_gaps(self, gap, l1_bigrams, slices, complex_ngrams, merge_ranges, merge_candidates):
+        """Handle gaps where lang1 has two segments and lang2 has one."""
+        for bigram in l1_bigrams:
+            if gap.segment in bigram.ngram:
+                gap_aligned_corr, seg_aligned_corr = gap.bigram_aligned_segs(bigram.ngram)
+                for unigram_corr in complex_ngrams[bigram]:
+                    for start_i, end_i in slices:
+                        if self.alignment[start_i:end_i] in (
+                            [(gap_aligned_corr, gap.gap_ch), (seg_aligned_corr, unigram_corr.string)],
+                            [(seg_aligned_corr, unigram_corr.string), (gap_aligned_corr, gap.gap_ch)],
+                        ):
+                            merge_ranges.add(tuple(range(start_i, end_i)))
+                            merge_candidates[tuple(range(start_i, end_i))] = (bigram, unigram_corr)
+                        #     break
+                        # break
+        return merge_ranges, merge_candidates
+
+    def get_merge_range_pmi(self, merge_range, complex_ngrams, simple_ngrams, merge_candidates):
+        """Calculate the PMI for an alignment if a range of alignment positions are to be merged."""
+        global_pmi = 0
+        for i, position in enumerate(self.alignment):
+            if i not in merge_range:
+                seg1, seg2 = position
+                global_pmi += simple_ngrams[Ngram(seg1).ngram].get(Ngram(seg2).ngram, 0)
+            else:
+                complex_pmi = complex_ngrams[merge_candidates[tuple(merge_range)][0]][merge_candidates[tuple(merge_range)][-1]]
+                global_pmi += complex_pmi
+
+        return global_pmi
+
+    def select_best_merge_group(self, merge_ranges, complex_ngrams, simple_ngrams, merge_candidates):
+        """Select the best merge groups based on PMI and conflicts."""
         if len(merge_ranges) > 1:
             merge_ranges = sorted(merge_ranges, key=lambda x: (x[0], x[-1]), reverse=True)
-            for i in range(1, len(merge_ranges)):
-                merge_range, next_merge_range = merge_ranges[i - 1:i + 1]
-                # Check if the merge candidates' index ranges conflict: if so, pick the one with higher PMI
-                if not any([r is None for r in (merge_range, next_merge_range)]) and min(merge_range) <= max(next_merge_range):
-                    merge_range_pmi = complex_ngrams[merge_candidates[tuple(merge_range)][0]][merge_candidates[tuple(merge_range)][-1]]
-                    next_merge_range_pmi = complex_ngrams[merge_candidates[tuple(next_merge_range)][0]][merge_candidates[tuple(next_merge_range)][-1]]
-                    if merge_range_pmi > next_merge_range_pmi:
-                        merge_ranges[i] = None
-                    elif next_merge_range_pmi > merge_range_pmi:
-                        merge_ranges[i - 1] = None
+            i = 0
+            while i < len(merge_ranges) - 1:
+                merge_range = merge_ranges[i]
+                next_merge_range = merge_ranges[i + 1]
+
+                # Check if ranges conflict
+                if merge_range and next_merge_range and min(merge_range) <= max(next_merge_range):
+                    # Resolve conflict and remove the weaker merge range
+                    to_remove = self.resolve_merge_range_conflict(
+                        merge_range, next_merge_range, complex_ngrams, simple_ngrams, merge_candidates
+                    )
+                    if to_remove is not None:
+                        merge_ranges.remove(to_remove)
                     else:
-                        raise NotImplementedError  # PMI is equal, TBD what to do here
+                        i += 1
+                else:
+                    i += 1
 
-        for merge_range in merge_ranges:
-            if merge_range is not None:
-                self.merge_align_positions(indices=list(merge_range))
+        return [mr for mr in merge_ranges if mr is not None]
 
-        # Update sequence map and length for compacted alignment
-        self.update()
+    def resolve_merge_range_conflict(self, merge_range, next_merge_range, complex_ngrams, simple_ngrams, merge_candidates):
+        """Resolve conflict between two merge ranges based on PMI. Return the conflicting range to be removed."""
+        merge_range_pmi = self.get_merge_range_pmi(merge_range, complex_ngrams, simple_ngrams, merge_candidates)
+        next_merge_range_pmi = self.get_merge_range_pmi(next_merge_range, complex_ngrams, simple_ngrams, merge_candidates)
+
+        if merge_range_pmi > next_merge_range_pmi:
+            return next_merge_range  # Remove the next merge range
+        elif next_merge_range_pmi > merge_range_pmi:
+            return merge_range  # Remove the current merge range
+        else:
+            #logger.warning("PMI is equal, conflict resolution not implemented.")
+            return None
 
     def start_boundary(self):
         # ('<#', '<#')
@@ -436,11 +499,13 @@ class Alignment:
                 else:
                     map1[i] = []
                     ngram = Ngram(seg1)
-                    if ngram.size > 1 and i < self.length - 1:
+                    if ngram.size > 1: #and i < self.length - 1:
                         adjust_complex1 += ngram.size - 1
                         adjust_ngram = 0
                         for n in range(seg1_i, min(seg1_i + ngram.size, len(self.seq1))):
                             if self.pad_ch not in ngram.ngram[n - seg1_i]:
+                                map1[i].append(n - adjust_ngram)
+                            elif i == 0 and len(self.seq1) == 1:
                                 map1[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap1 += 1
@@ -459,11 +524,13 @@ class Alignment:
                 else:
                     map2[i] = []
                     ngram = Ngram(seg2)
-                    if ngram.size > 1 and i < self.length - 1:
+                    if ngram.size > 1: #and i < self.length - 1:
                         adjust_complex2 += ngram.size - 1
                         adjust_ngram = 0
                         for n in range(seg2_i, min(seg2_i + ngram.size, len(self.seq2))):
                             if self.pad_ch not in ngram.ngram[n - seg2_i]:
+                                map2[i].append(n - adjust_ngram)
+                            elif i == 0 and len(self.seq2) == 1:
                                 map2[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap2 += 1
@@ -475,8 +542,11 @@ class Alignment:
                         map2[i].append(seg2_i)
 
         # Check that all sequence units were mapped to alignment positions
-        assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
-        assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
+        try:
+            assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
+            assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
+        except AssertionError as exc:
+            raise AssertionError(f"Error re-mapping aligned sequences: {self.alignment}") from exc
 
         return map1, map2
 
@@ -637,6 +707,18 @@ def reverse_alignment(alignment, phon_env=False):
     return [(pair[1], pair[0]) for pair in alignment]
 
 
+def get_bigrams(complex_ngrams):
+    """Extract bigrams and their aligned segments from complex_ngrams."""
+    l1_bigrams = [ngram for ngram in complex_ngrams if ngram.size > 1]
+    l2_bigrams = [nested_ngram for ngram in complex_ngrams
+                  for nested_ngram in complex_ngrams[ngram]
+                  if nested_ngram.size > 1]
+    l1_bigram_segs = set(seg for bigram in l1_bigrams for seg in bigram.ngram)
+    l2_bigram_segs = set(seg for bigram in l2_bigrams for seg in bigram.ngram)
+
+    return l1_bigrams, l2_bigrams, l1_bigram_segs, l2_bigram_segs
+
+
 def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_env=False):
     """Renders list of aligned segment pairs as an easily interpretable
     alignment string, with <{NULL_CH_DEFAULT}> representing null segments,
@@ -650,12 +732,14 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
     alignment = get_alignment_iter(alignment, phon_env)
     if phon_env:
         raise NotImplementedError('TODO needs to be updated for phon_env')  # TODO
+
     a = []
     for pair in alignment:
         pair = list(pair)
         for i, seg in enumerate(pair):
             if isinstance(seg, tuple):
-                pair[i] = SEG_JOIN_CH.join(seg)
+                flattened_seg = flatten_tuple(seg)
+                pair[i] = SEG_JOIN_CH.join(flattened_seg)
 
         seg1, seg2 = pair
         if gap_ch not in pair:
@@ -674,3 +758,13 @@ def undo_visual_align(visual_alignment, gap_ch=GAP_CH_DEFAULT):
     seg_pairs = visual_alignment.split(' / ')
     seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]
     return seg_pairs
+
+
+def flatten_tuple(nested_tuple):
+    flattened = []
+    for item in nested_tuple:
+        if isinstance(item, tuple):
+            flattened.extend(flatten_tuple(item))
+        else:
+            flattened.append(item)
+    return flattened

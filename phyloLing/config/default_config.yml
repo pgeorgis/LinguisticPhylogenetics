@@ -32,14 +32,14 @@ alignment:
 pmi:
   n_samples: 5
   sample_size: 0.8
-  min_corr: 3
+  min_corr: 2
   refresh: []
   refresh_all_pmi: false
 
 surprisal:
   n_samples: 5
   sample_size: 0.8
-  min_corr: 3
+  min_corr: 2
   ngram: 1
   phon_env: true 
   refresh: []

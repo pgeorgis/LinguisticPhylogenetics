@@ -5,6 +5,7 @@ from collections import defaultdict
 from functools import lru_cache
 from itertools import product
 from statistics import mean, stdev
+from nltk.translate import AlignedSent, IBMModel1
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
                        PAD_CH_DEFAULT, PHON_ENV_JOIN_CH, START_PAD_CH)
@@ -366,7 +367,7 @@ class PhonCorrelator:
     def align_wordlist(self,
                        wordlist,
                        added_penalty_dict=None,
-                       complex_ngrams=None,
+                       complex_ngrams=False,
                        ngram_size=1,
                        pad=True,
                        remove_padding=True,
@@ -393,7 +394,9 @@ class PhonCorrelator:
                 alignment.pad(ngram_size=max(2, ngram_size), pad_ch=pad_ch)
 
         if complex_ngrams:
-            alignment_list = self.compact_alignments(alignment_list, complex_ngrams)
+            alignment_list = self.compact_alignments(
+                alignment_list, self.complex_ngrams, simple_ngrams=added_penalty_dict
+            )
 
         if pad and remove_padding:
             for alignment in alignment_list:
@@ -405,9 +408,9 @@ class PhonCorrelator:
 
         return alignment_list
 
-    def compact_alignments(self, alignment_list, complex_ngrams):
+    def compact_alignments(self, alignment_list, complex_ngrams, simple_ngrams):
         for alignment in alignment_list:
-            alignment.compact_gaps(complex_ngrams)
+            alignment.compact_gaps(complex_ngrams, simple_ngrams)
         return alignment_list
 
     def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
@@ -450,6 +453,19 @@ class PhonCorrelator:
                 corr_dict[seg1] = normalize_dict(corr_dict[seg1])
 
         return corr_dict
+    
+    def expectation_max_ibm1(self, sample, iterations=20):
+        """Performs expectation maximization algorithm and fits an IBM translation model 1 to the corpus."""
+        corpus = [
+            AlignedSent(word1.segments, word2.segments)
+            for word1, word2 in sample
+        ]
+        em_ibm1 = IBMModel1(corpus, iterations)
+        translation_table = em_ibm1.translation_table
+        for seg1 in translation_table:
+            translation_table[seg1][self.gap_ch] = translation_table[seg1][None]
+            del translation_table[seg1][None]
+        return translation_table
 
     def joint_probs(self, conditional_counts, l1=None, l2=None):
         """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
@@ -468,7 +484,7 @@ class PhonCorrelator:
                              alignment_list,
                              ngram_size=1,
                              counts=False,
-                             min_corr=3,
+                             min_corr=2,
                              exclude_null=True,
                              compact_null=True,
                              pad=True,
@@ -516,10 +532,11 @@ class PhonCorrelator:
 
         if compact_null:
             # complex_ngrams = null_compacter.combine_corrs()
-            # Prune any without at least 2 occurrences
-            null_compacter.prune(min_val=2)
+            # Prune any without at least min_corr occurrences
+            null_compacter.prune(min_val=min_corr)
             self.complex_ngrams = null_compacter.select_valid_null_corrs()
-            compacted_alignments = self.compact_alignments(alignment_list, self.complex_ngrams)
+            #self.logger.info("Reset self.complex_ngrams") # TODO shouldn't be reset, should be passed as arg
+            compacted_alignments = self.compact_alignments(alignment_list, self.complex_ngrams, corr_counts)
             adjusted_corrs = self.correspondence_probs(
                 compacted_alignments,
                 ngram_size=ngram_size,
@@ -652,10 +669,10 @@ class PhonCorrelator:
     def calc_phoneme_pmi(self,
                          radius=1,  # TODO make configurable
                          p_threshold=0.05,
-                         max_iterations=10,
+                         max_iterations=3,
                          n_samples=5,
                          sample_size=0.8,
-                         min_corr=3,
+                         min_corr=2,
                          cumulative=False,
                          log_iterations=True,
                          save=True):
@@ -698,19 +715,15 @@ class PhonCorrelator:
             synonym_sample, diff_sample = sample
             reversed_synonym_sample = [(pair[-1], pair[0]) for pair in synonym_sample]
 
-            # First step: calculate probability of phones co-occuring within within
-            # a set radius of positions within their respective words
-            synonyms_radius1 = self.radial_counts(synonym_sample, radius, normalize=False)
-            synonyms_radius2 = reverse_corr_dict(synonyms_radius1)
-            for d in [synonyms_radius1, synonyms_radius2]:
-                for seg1 in d:
-                    d[seg1] = normalize_dict(d[seg1])
-            pmi_step1 = [self.phoneme_pmi(conditional_counts=synonyms_radius1,
+            # First step: perform EM algorithm and fit IBM model 1
+            em_synonyms1 = self.expectation_max_ibm1(synonym_sample)
+            em_synonyms2 = self.expectation_max_ibm1(reversed_synonym_sample)
+            pmi_step1 = [self.phoneme_pmi(conditional_counts=em_synonyms1,
                                           l1=self.lang1,
                                           l2=self.lang2,
                                           wordlist=synonym_sample,
                                           ),
-                         self.phoneme_pmi(conditional_counts=synonyms_radius2,
+                         self.phoneme_pmi(conditional_counts=em_synonyms2,
                                           l1=self.lang2,
                                           l2=self.lang1,
                                           wordlist=reversed_synonym_sample,
@@ -735,7 +748,8 @@ class PhonCorrelator:
 
             # while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration - 1]):
             # while (iteration < max_iterations) and (nc_thresholds[iteration - 1] not in [nc_thresholds[i] for i in range(max(0 , iteration - 2), iteration - 1)]):
-            while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0, iteration - 5), iteration)]):
+            #while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0, iteration - 5), iteration)]):
+            while iteration < max_iterations:
                 iteration += 1
 
                 # Align the qualifying words of the previous step using previous step's PMI
@@ -843,9 +857,11 @@ class PhonCorrelator:
             self.lang1.phoneme_pmi[self.lang2] = results
             self.lang2.phoneme_pmi[self.lang1] = reverse_corr_dict(results)
             self.lang1.complex_ngrams[self.lang2] = self.complex_ngrams
-            reversed_complex_ngrams = {val: set(key for key in self.complex_ngrams if val in self.complex_ngrams[key])
-                                       for key in self.complex_ngrams for val in self.complex_ngrams[key]}
-            self.lang2.complex_ngrams[self.lang1] = default_dict(reversed_complex_ngrams, lmbda=defaultdict(lambda: 0))
+            reversed_complex_ngrams = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
+            for corr1 in self.complex_ngrams:
+                for corr2, val in self.complex_ngrams[corr1].items():
+                    reversed_complex_ngrams[corr2][corr1] = val
+            self.lang2.complex_ngrams[self.lang1] = reversed_complex_ngrams
             # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
 
         self.pmi_dict = results
@@ -861,17 +877,17 @@ class PhonCorrelator:
                           # attested_only=True,
                           # alpha=0.2 # TODO conduct more formal experiment to select default alpha, or find way to adjust automatically; so far alpha=0.2 is best (at least on Romance)
                           ):
+        # Set phon_env bool
+        phon_env = False
+        if phon_env_corr_counts is not None:
+            phon_env = True
+
         # Interpolation smoothing
         if weights is None:
             # Each ngram estimate will be weighted proportional to its size
             # Weight the estimate from a 2gram twice as much as 1gram, etc.
             weights = [i + 1 for i in range(ngram_size)]
-        if phon_env_corr_counts is not None:
-            phon_env = True
-        else:
-            phon_env = False
         interpolation = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
-
         for i in range(ngram_size, 0, -1):
             for ngram1 in correspondence_counts:
                 for ngram2 in correspondence_counts[ngram1]:
@@ -915,9 +931,9 @@ class PhonCorrelator:
             for complex_ngram in self.complex_ngrams:
                 if complex_ngram.size > 1:
                     if self.pad_ch in complex_ngram.ngram[0]:  # complex ngram alignment with start boundary
-                        ngram_envs = [ngram for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(r'#\|S', ngram[-1])]
+                        ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(r'#\|S', ngram[-1]))
                     elif self.pad_ch in complex_ngram.ngram[-1]:  # complex ngram alignment with end boundary
-                        ngram_envs = [ngram for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(r'S\|#', ngram[-1])]
+                        ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(r'S\|#', ngram[-1]))
                     else:  # other complex ngram alignments
                         # get post environments of first segment and preceding environments of last segment in complex ngram
                         first_seg, last_seg = map(_toSegment, [complex_ngram.ngram[0], complex_ngram.ngram[-1]])
@@ -934,8 +950,7 @@ class PhonCorrelator:
                     complex_envs = set()
                     for ngram_env in ngram_envs:
                         phon_env_ngram = PhonEnvNgram((complex_ngram.ngram, ngram_env))
-                        ngram_with_context = (phon_env_ngram.ngram, phon_env_ngram.phon_env)
-                        complex_envs.add(ngram_with_context)
+                        complex_envs.add(phon_env_ngram.ngram_w_context)
                     all_ngrams_lang1.update(complex_envs)
         else:
             all_ngrams_lang1.update(interpolation[i].keys())
@@ -946,12 +961,12 @@ class PhonCorrelator:
                 continue
 
             if phon_env:
-                if self.pad_ch in ngram1[0]:  # e.g. ('#>',)
-                    continue  # TODO confirm that this should be skipped! but it is causing issues in PhonEnvNgram
-                ngram1_phon_env = PhonEnvNgram(ngram1)
-                ngram1 = ngram1_phon_env.ngram
-                if sum(interpolation['phon_env'][ngram1_phon_env.ngram_w_context].values()) == 0:
-                    continue
+                if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]): # skip adding phon env to e.g. ('#>',)
+                    ngram1_phon_env = PhonEnvNgram(ngram1)
+                    ngram1 = ngram1_phon_env.ngram
+                    if sum(interpolation['phon_env'][ngram1_phon_env.ngram_w_context].values()) == 0:
+                        # TODO verify that these should be skipped
+                        continue
 
             if sum(interpolation[i][ngram1].values()) == 0:
                 continue
@@ -983,17 +998,18 @@ class PhonCorrelator:
 
                 # add interpolation with phon_env surprisal
                 if phon_env:
-                    ngram1_w_context = ngram1_phon_env.ngram_w_context
-                    phonEnv_contexts = phon_env_ngrams(ngram1_phon_env.phon_env, exclude={'|S|'})
-                    for context in phonEnv_contexts:
-                        estimates.append(interpolation['phon_env'][ngram1_w_context].get(ngram2, 0) / sum(interpolation['phon_env'][ngram1_w_context].values()))
-                        # estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0),
-                        #                                     N=sum(interpolation['phon_env'][(ngram1_context,)].values()),
-                        #                                     d = len(self.lang2.phonemes) + 1,
-                        #                                     alpha=alpha)
-                        #                                     )
-                        # Weight each contextual estimate based on the size of the context
-                        ngram_weights.append(get_phonEnv_weight(context))
+                    if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]): # skip computing phon env probabilities with e.g. ('#>',)
+                        ngram1_w_context = ngram1_phon_env.ngram_w_context
+                        phonEnv_contexts = phon_env_ngrams(ngram1_phon_env.phon_env, exclude={'|S|'})
+                        for context in phonEnv_contexts:
+                            estimates.append(interpolation['phon_env'][ngram1_w_context].get(ngram2, 0) / sum(interpolation['phon_env'][ngram1_w_context].values()))
+                            # estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0),
+                            #                                     N=sum(interpolation['phon_env'][(ngram1_context,)].values()),
+                            #                                     d = len(self.lang2.phonemes) + 1,
+                            #                                     alpha=alpha)
+                            #                                     )
+                            # Weight each contextual estimate based on the size of the context
+                            ngram_weights.append(get_phonEnv_weight(context))
 
                 weight_sum = sum(ngram_weights)
                 ngram_weights = [i / weight_sum for i in ngram_weights]
@@ -1039,14 +1055,14 @@ class PhonCorrelator:
 
     def calc_phoneme_surprisal(self,
                                radius=1,
-                               max_iterations=10,
+                               max_iterations=3,
                                p_threshold=0.1,
                                ngram_size=2,
                                gold=False,  # TODO add same with PMI?
                                log_iterations=True,
                                n_samples=5,
                                sample_size=0.8,
-                               min_corr=3,
+                               min_corr=2,
                                cumulative=False,
                                phon_env=True,
                                save=True):
@@ -1103,7 +1119,8 @@ class PhonCorrelator:
                 disqualified_words = defaultdict(lambda: [])
                 if cumulative:
                     all_cognate_alignments = []
-                while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration - 1]):
+                #while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration - 1]):
+                while iteration < max_iterations:
                     iteration += 1
 
                     # Calculate surprisal from the qualifying alignments of the previous iteration
@@ -1121,14 +1138,13 @@ class PhonCorrelator:
                     )
 
                     # Optionally use phonological environment
+                    phon_env_corr_counts = None
                     if phon_env:
                         phon_env_corr_counts = self.phon_env_corr_probs(
                             cognate_alignments,
                             counts=True,
                             ngram_size=ngram_size
                         )
-                    else:
-                        phon_env_corr_counts = None
 
                     surprisal_iterations[iteration] = self.phoneme_surprisal(corr_probs,
                                                                              phon_env_corr_counts=phon_env_corr_counts,
@@ -1606,7 +1622,7 @@ class NullCompacter:
             elif len(alignment) > 1:  # initial with following ngram
                 self.compact_next_ngram(alignment, i, ngram, ngram_i, gap_index)
 
-    def eval_null_corr(self, larger_ngrams, gap_segs, direction):
+    def eval_null_corr(self, larger_ngrams, gap_segs, direction, threshold=0.5):
         # Determine direction
         self.reverse_corr_counts()
         if direction == 'FORWARD':
@@ -1707,7 +1723,7 @@ class NullCompacter:
                 # Consider the compacted null alignment to be valid if:
                 # - its PMI > 0
                 # - and its PMI is greater than that of the simpler ngram correlations
-                if pmi_complex > max(pmi_basic, 0):
+                if pmi_complex >= max(pmi_basic*threshold, 0):
                     if direction == 'FORWARD':
                         self.valid_corrs[larger_ngram][gap_seg] = pmi_complex
                     else:  # BACKWARD
