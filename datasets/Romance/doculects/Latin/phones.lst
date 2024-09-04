@@ -15,11 +15,11 @@ VOWELS
 	<persicam> /pˈɛrsɪkãː/ "PEACH_NOUN"
 
 /ɛ̃ː/ (0.032)
-	<noctem> /nˈɔktɛ̃ː/ "NIGHT_NOUN"
-	<flōrem> /fɫˈoːrɛ̃ː/ "FLOWER_NOUN"
-	<frātrem> /frˈaːtrɛ̃ː/ "BROTHER_NOUN"
+	<gentīlem> /ɡɛntˈiːlɛ̃ː/ "NICE_ADJ"
+	<piscōnem> /pɪskˈoːnɛ̃ː/ "FISH_NOUN"
+	<pontem> /pˈɔntɛ̃ː/ "BRIDGE_NOUN"
 
-/ˈa/ (0.031)
+/ˈa/ (0.03)
 	<animam> /ˈanɪmãː/ "SOUL_NOUN"
 	<apem> /ˈapɛ̃ː/ "BEE_NOUN"
 	<lactem> /ɫˈaktɛ̃ː/ "MILK_NOUN"
@@ -34,20 +34,20 @@ VOWELS
 	<morsicāre> /mɔrsɪkˈaːrɛ/ "BITE_VERB"
 	<fābulāre> /faːbʊɫˈaːrɛ/ "SPEAK_VERB"
 
-/ˈɔ/ (0.02)
-	<frondeam> /frˈɔndɛãː/ "LEAF_NOUN"
+/ˈɔ/ (0.021)
+	<foliam> /fˈɔlʲiãː/ "LEAF_NOUN"
 	<bonae> /bˈɔnae̯/ "GOOD (F.PL)_ADJ"
-	<grossum> /ɡrˈɔsːʊ̃ː/ "THICK_ADJ"
-
-/i/ (0.019)
-	<ālium> /ˈaːlʲiʊ̃ː/ "GARLIC_NOUN"
-	<verēkundiam> /wɛreːkˈʊndiãː/ "SHAME_NOUN"
-	<ceresiam> /kɛrˈɛsiãː/ "CHERRY_NOUN"
+	<fortem> /fˈɔrtɛ̃ː/ "STRONG_ADJ"
 
 /a/ (0.019)
-	<grāna> /ɡrˈaːna/ "GRAIN_NOUN"
+	<mandūcāre> /manduːkˈaːrɛ/ "EAT_VERB"
+	<palātium> /paɫˈatiʊ̃ː/ "PALACE_NOUN"
+	<afflāre> /afːlˈaːrɛ/ "BLOW-FIND_VERB"
+
+/i/ (0.019)
+	<glaciam> /ɡɫˈakiãː/ "ICE_NOUN"
 	<cinusia> /kɪnˈusia/ "ASH_NOUN"
-	<pecora> /pˈɛkɔra/ "SHEEP_NOUN"
+	<Hispāniam> /hɪspˈaːniãː/ "SPAIN_PROPN"
 
 /ˈiː/ (0.019)
 	<dormīre> /dɔrmˈiːrɛ/ "SLEEP_VERB"
@@ -59,115 +59,115 @@ VOWELS
 	<umbilīcum> /ʊmbɪlʲˈiːkʊ̃ː/ "NAVEL_NOUN"
 	<cinusia> /kɪnˈusia/ "ASH_NOUN"
 
-/ˈoː/ (0.013)
-	<piscōnem> /pɪskˈoːnɛ̃ː/ "FISH_NOUN"
-	<cōdam> /kˈoːdãː/ "TAIL_NOUN"
-	<nōs> /nˈoːs/ "WE_PRON"
+/ˈoː/ (0.014)
+	<vōs> /wˈoːs/ "YOU (PL)_PRON"
+	<ōvum> /ˈoːwʊ̃ː/ "EGG_NOUN"
+	<sōlem> /sˈoːɫɛ̃ː/ "SUN_NOUN"
 
 /ˈʊ/ (0.013)
+	<lupum> /ɫˈʊpʊ̃ː/ "WOLF_NOUN"
 	<multum> /mˈʊɫtʊ̃ː/ "MANY_ADJ"
 	<rotundum> /rɔtˈʊndʊ̃ː/ "ROUND_ADJ"
-	<gulam> /ɡˈʊɫãː/ "THROAT_NOUN"
 
 /ˈɪ/ (0.013)
+	<capillum> /kapˈɪlʲːʊ̃ː/ "HAIR_NOUN"
+	<quid> /kʷˈɪd/ "WHAT_PRON"
 	<ipsum> /ˈɪpsʊ̃ː/ "HE_PRON"
-	<cinisia> /kɪnˈɪsia/ "ASH_NOUN"
-	<sōliculum> /soːɫˈɪkʊɫʊ̃ː/ "SUN_NOUN"
 
-/ʊ/ (0.012)
-	<sōliculum> /soːɫˈɪkʊɫʊ̃ː/ "SUN_NOUN"
-	<acūculam> /akˈuːkʊɫãː/ "NEEDLE_NOUN"
-	<locus> /ɫˈɔkʊs/ "PLACE_NOUN"
+/ʊ/ (0.013)
+	<tempus> /tˈɛmpʊs/ "TIME_NOUN"
+	<apiculam> /apˈɪkʊɫãː/ "BEE_NOUN"
+	<īnsulam> /ˈĩːsʊɫãː/ "ISLAND_NOUN"
 
 /ˈuː/ (0.012)
-	<nūbilum> /nˈuːbɪɫʊ̃ː/ "CLOUD_NOUN"
-	<plūmam> /pɫˈuːmãː/ "FEATHER_NOUN"
+	<fūmum> /fˈuːmʊ̃ː/ "SMOKE_NOUN"
+	<lūmina> /ɫˈuːmɪna/ "LIGHT_NOUN"
 	<acūculam> /akˈuːkʊɫãː/ "NEEDLE_NOUN"
 
 /ɔ/ (0.009)
-	<eo> /ˈɛɔ/ "I_PRON"
 	<morsicāre> /mɔrsɪkˈaːrɛ/ "BITE_VERB"
-	<occīdere> /ɔkːˈiːdɛrɛ/ "KILL_VERB"
+	<exvolāre> /ɛkswɔɫˈaːrɛ/ "FLY_VERB"
+	<eo> /ˈɛɔ/ "I_PRON"
 
 /oː/ (0.009)
+	<fōrmōsum> /foːrmˈoːsʊ̃ː/ "BEAUTIFUL (M)_ADJ"
+	<bonōs> /bˈɔnoːs/ "GOOD (M.PL)_ADJ"
 	<rōmānum> /roːmˈaːnʊ̃ː/ "ROMAN_ADJ"
-	<homō> /hˈɔmoː/ "MAN_NOUN"
-	<plōrāre> /pɫoːrˈaːrɛ/ "WEEP_VERB"
 
 /ˈeː/ (0.008)
+	<stēlam> /stˈeːlãː/ "STAR_NOUN"
+	<trēs> /trˈeːs/ "THREE_NUM"
 	<rēgem> /rˈeːɡɛ̃ː/ "KING_NOUN"
-	<sēmen> /sˈeːmɛ̃ː/ "SEED_NOUN"
-	<cēram> /kˈeːrãː/ "WAX_NOUN"
 
-/aː/ (0.007)
+/aː/ (0.006)
+	<fīcātum> /fˈiːkaːtʊ̃ː/ "LIVER_NOUN"
+	<amārellum> /amaːrˈɛlʲːʊ̃ː/ "YELLOW_ADJ"
 	<rādīcem> /raːdˈiːkɛ̃ː/ "ROOT_NOUN"
-	<pertrāicere> /pɛrtraːjˈikɛrɛ/ "PARTY_NOUN"
-	<ānellum> /aːnˈɛlʲːʊ̃ː/ "RING_NOUN"
 
 /e/ (0.006)
+	<rubeum> /rˈʊbeʊ̃ː/ "RED_ADJ"
+	<russeum> /rˈʊsːeʊ̃ː/ "RED_ADJ"
 	<nē ipse ūnum> /neː‿ipse‿ˈuːnʊ̃ː/ "NONE_PRON"
-	<illei> /ˈɪlʲːei/ "SHE_PRON"
-	<scorteam> /skˈɔrteãː/ "BARK_NOUN"
 
 /iː/ (0.004)
+	<hībernum> /hiːbˈɛrnʊ̃ː/ "WINTER_NOUN"
+	<tōtī> /tˈoːtiː/ "ALL (PL)_"
 	<vīgintī> /wiːɡˈɪntiː/ "TWENTY_NUM"
-	<quīnquāgintā> /kʷiːŋkʷaːɡˈɪntaː/ "FIFTY_NUM"
-	<rādīcīnam> /raːdiːkˈiːnãː/ "ROOT_NOUN"
 
 /eː/ (0.003)
-	<sementem> /seːmˈɛntɛ̃ː/ "SEED_NOUN"
+	<nē ipse ūnum> /neː‿ipse‿ˈuːnʊ̃ː/ "NONE_PRON"
 	<sēcūrum> /seːkˈuːrʊ̃ː/ "SAFE_ADJ"
-	<pēduculum> /peːdˈukʊɫʊ̃ː/ "LOUSE_NOUN"
+	<verēkundiam> /wɛreːkˈʊndiãː/ "SHAME_NOUN"
 
 /ˈau̯/ (0.003)
-	<aurum> /ˈau̯rʊ̃ː/ "GOLD_NOUN"
-	<paucum> /pˈau̯kʊ̃ː/ "LITTLE_ADJ"
-	<causam> /kˈau̯sãː/ "THING_NOUN"
+	<gaudiam> /ɡˈau̯diãː/ "JOY_NOUN"
+	<pauperem> /pˈau̯pɛrɛ̃ː/ "POOR_ADJ"
+	<taurum> /tˈau̯rʊ̃ː/ "BULL_NOUN"
 
 /ae̯/ (0.003)
-	<aequalīvum> /ae̯kʷalʲˈiːwʊ̃/ "EQUAL_ADJ"
-	<casae> /kˈasae̯/ "HOUSE_NOUN"
+	<bonae> /bˈɔnae̯/ "GOOD (F.PL)_ADJ"
 	<aestātem> /ae̯stˈaːtɛ̃ː/ "SUMMER_NOUN"
+	<duae> /dˈuae̯/ "TWO (F)_NUM"
 
 /ˈu/ (0.002)
 	<cinusia> /kɪnˈusia/ "ASH_NOUN"
-	<pēduculum> /peːdˈukʊɫʊ̃ː/ "LOUSE_NOUN"
 	<duās> /dˈuaːs/ "TWO (F)_NUM"
+	<iuvenem> /jˈuwɛnɛ̃ː/ "YOUNG_ADJ"
 
 /ˈi/ (0.002)
-	<isula> /ˈisʊla/ "ISLAND_NOUN"
+	<diem> /dˈiɛ̃ː/ "DAY_NOUN"
+	<pertrāicere> /pɛrtraːjˈikɛrɛ/ "PARTY_NOUN"
 	<sciam> /skˈiãː/ "KNOW-SBJ-1SG_VERB"
-	<dia> /dˈia/ "DAY_NOUN"
 
 /ɛ̃/ (0.002)
+	<lēgem> /lˈeːɡɛ̃/ "LAW_NOUN"
 	<novem> /nˈowɛ̃/ "NINE_NUM"
-	<aequālem> /ae̯kʷˈaːlɛ̃/ "EQUAL_ADJ"
-	<medietātem> /medietˈaːtɛ̃/ "HALF_NOUN"
+	<septem> /sˈɛptɛ̃/ "SEVEN_NUM"
 
 /uː/ (0.002)
-	<fūmātam> /fuːmˈaːtãː/ "SMOKE_NOUN"
-	<cornū> /kˈɔrnuː/ "HORN_NOUN"
 	<mandūcāre> /manduːkˈaːrɛ/ "EAT_VERB"
+	<adiūtāre> /adiuːtˈaːrɛ/ "HELP_VERB"
+	<fūmātam> /fuːmˈaːtãː/ "SMOKE_NOUN"
 
 /au̯/ (0.002)
-	<autumnum> /au̯tˈʊmnʊ̃ː/ "AUTUMN_NOUN"
 	<auriculam> /au̯rˈɪkʊɫãː/ "EAR_NOUN"
-	<autumnam> /au̯tˈʊmnãː/ "AUTUMN_NOUN"
+	<auscultāre> /au̯skʊɫtˈaːrɛ/ "LISTEN_VERB"
+	<autumnum> /au̯tˈʊmnʊ̃ː/ "AUTUMN_NOUN"
 
 /ˈo/ (0.001)
-	<petiolum> /pɛtiˈolʊ̃ː/ "FOOT_NOUN"
 	<ovem> /ˈowɛ̃ː/ "SHEEP_NOUN"
+	<petiolum> /pɛtiˈolʊ̃ː/ "FOOT_NOUN"
 	<novem> /nˈowɛ̃/ "NINE_NUM"
 
 /u/ (0.001)
-	<illui> /ˈɪlʲːuɪ/ "HE_PRON"
 	<duodecim> /duˈɔdɛkɪ̃/ "TWELVE_NUM"
 	<quattuor> /kʷˈatːuɔr/ "FOUR_NUM"
+	<illui> /ˈɪlʲːuɪ/ "HE_PRON"
 
 /o/ (0.001)
-	<obscūrum> /opskˈuːrʊ̃ː/ "DARK_ADJ"
-	<oviculam> /owˈɪkʊɫãː/ "SHEEP_NOUN"
 	<colōrem> /koɫˈoːrɛ̃ː/ "COLOR_NOUN"
+	<oviculam> /owˈɪkʊɫãː/ "SHEEP_NOUN"
+	<obscūrum> /opskˈuːrʊ̃ː/ "DARK_ADJ"
 
 /ˈɛ̃ː/ (0.0)
 	<quem> /kʷˈɛ̃ː/ "WHO_PRON"
@@ -200,129 +200,129 @@ VOWELS
 
 CONSONANTS
 /r/ (0.071)
-	<vidēre> /wɪdˈeːrɛ/ "SEE_VERB"
-	<carnem> /kˈarnɛ̃ː/ "MEAT_NOUN"
-	<rēgīnam> /reːɡˈiːnãː/ "QUEEN_NOUN"
+	<grandem> /ɡrˈandɛ̃ː/ "BIG_ADJ"
+	<mare> /mˈarɛ/ "SEA_NOUN"
+	<nārīcem> /naːrˈiːkɛ̃ː/ "NOSE_NOUN"
 
-/k/ (0.063)
-	<paucum> /pˈau̯kʊ̃ː/ "LITTLE_ADJ"
-	<cinerem> /kˈɪnɛrɛ̃ː/ "ASH_NOUN"
-	<cōdulam> /kˈoːdʊɫãː/ "TAIL_NOUN"
+/k/ (0.064)
+	<cēram> /kˈeːrãː/ "WAX_NOUN"
+	<coxam> /kˈɔksãː/ "THIGH_NOUN"
+	<focum> /fˈɔkʊ̃ː/ "FIRE_NOUN"
 
 /n/ (0.055)
-	<gentem> /ɡˈɛntɛ̃ː/ "PEOPLE_NOUN"
-	<nōs> /nˈoːs/ "WE_PRON"
-	<conōscere> /kɔnˈoːskɛrɛ/ "BE ACQUAINTED WITH_VERB"
+	<iuvenem> /jˈuwɛnɛ̃ː/ "YOUNG_ADJ"
+	<animam> /ˈanɪmãː/ "SOUL_NOUN"
+	<lignam> /lˈɪɡnãː/ "WOOD_NOUN"
 
-/t/ (0.046)
-	<fātam> /fˈaːtãː/ "FATE_NOUN"
-	<fūmātam> /fuːmˈaːtãː/ "SMOKE_NOUN"
-	<castellum> /kastˈɛlʲːʊ̃ː/ "CASTLE_NOUN"
+/t/ (0.045)
+	<viāticum> /wiˈaːtɪkʊ̃ː/ "JOURNEY_NOUN"
+	<barbātum> /barbˈaːtʊ̃ː/ "MAN_NOUN"
+	<iūnctum> /jˈuːŋktʊ̃ː/ "JOINED_ADJ"
 
 /s/ (0.043)
-	<sementem> /seːmˈɛntɛ̃ː/ "SEED_NOUN"
-	<sētam> /sˈeːtãː/ "SILK_NOUN"
-	<siccam> /sˈɪkːãː/ "DRY (F)_ADJ"
+	<super> /sˈʊpɛr/ "ABOVE_PREP"
+	<sabulum> /sˈabʊɫʊ̃ː/ "SAND_NOUN"
+	<salsam> /sˈaɫsãː/ "SAUCE_NOUN"
 
 /ɫ/ (0.033)
-	<auriculam> /au̯rˈɪkʊɫãː/ "EAR_NOUN"
-	<lacrimam> /ɫˈakrɪmãː/ "TEAR_NOUN"
-	<caldum> /kˈaɫdʊ̃ː/ "HOT_ADJ"
+	<galbinum> /ɡˈaɫbɪnʊ̃ː/ "YELLOW_ADJ"
+	<parabolam> /parˈabɔɫãː/ "WORD_NOUN"
+	<pēduculum> /peːdˈukʊɫʊ̃ː/ "LOUSE_NOUN"
 
 /p/ (0.032)
-	<passarum> /pˈasːarʊ̃ː/ "BIRD_NOUN"
-	<pectum> /pˈɛktʊ̃ː/ "BREAST_NOUN"
-	<pectus> /pˈɛktʊs/ "BREAST_NOUN"
+	<pecora> /pˈɛkɔra/ "SHEEP_NOUN"
+	<parabolam> /parˈabɔɫãː/ "WORD_NOUN"
+	<panticem> /pˈantɪkɛ̃ː/ "BELLY_NOUN"
 
 /m/ (0.026)
-	<mīlle> /mˈiːlʲːɛ/ "THOUSAND_NUM"
-	<autumnum> /au̯tˈʊmnʊ̃ː/ "AUTUMN_NOUN"
-	<dominam> /dˈɔmɪnãː/ "LADY_NOUN"
+	<fūmātam> /fuːmˈaːtãː/ "SMOKE_NOUN"
+	<mortem> /mˈɔrtɛ̃ː/ "DEATH_NOUN"
+	<umbilīcum> /ʊmbɪlʲˈiːkʊ̃ː/ "NAVEL_NOUN"
 
 /d/ (0.023)
-	<crēdere> /krˈeːdɛrɛ/ "BELIEVE_VERB"
-	<dentem> /dˈɛntɛ̃ː/ "TOOTH_NOUN"
-	<viridem> /wˈɪrɪdɛ̃ː/ "GREEN_ADJ"
+	<digitum> /dˈɪɡɪtʊ̃ː/ "FINGER_NOUN"
+	<tundum> /tˈʊndʊ̃ː/ "ROUND_ADJ"
+	<dīcere> /dˈiːkɛrɛ/ "SAY-INF_VERB"
 
 /w/ (0.02)
-	<avicam> /ˈawɪkãː/ "GOOSE_NOUN"
-	<gingīvam> /ɡɪŋɡˈiːwãː/ "GUMS_NOUN"
-	<venīre> /wɛnˈiːrɛ/ "COME-INF_VERB"
+	<exvolum> /ɛkswˈɔɫʊ̃ː/ "FLIGHT_NOUN"
+	<cīvitātem> /kiːwɪtˈaːtɛ̃ː/ "CITY_NOUN"
+	<nivicāre> /nɪwɪkˈaːrɛ/ "SNOW (VERB)_VERB"
 
 /ɡ/ (0.017)
-	<lignum> /lˈɪɡnʊ̃ː/ "WOOD_NOUN"
-	<quīnquāgintā> /kʷiːŋkʷaːɡˈɪntaː/ "FIFTY_NUM"
-	<egō> /ˈɛɡoː/ "I_PRON"
+	<inglaciāre> /ɪŋɡɫakjˈaːrɛ/ "FREEZE_VERB"
+	<grandem> /ɡrˈandɛ̃ː/ "BIG_ADJ"
+	<germānum> /ɡɛrmˈaːnʊ̃ː/ "BROTHER_NOUN"
 
 /b/ (0.017)
-	<bonōs> /bˈɔnoːs/ "GOOD (M.PL)_ADJ"
-	<cambiāre> /kambiˈaːrɛ/ "CHANGE_VERB"
-	<babbum> /bˈabːʊ̃ː/ "FATHER_NOUN"
+	<nūbem> /nˈuːbɛ̃ː/ "CLOUD_NOUN"
+	<bellam> /bˈɛlʲːãː/ "BEAUTIFUL (F)_ADJ"
+	<rubeum> /rˈʊbeʊ̃ː/ "RED_ADJ"
 
 /f/ (0.015)
-	<falsum> /fˈaɫsʊ̃ː/ "FALSE_ADJ"
-	<frūctum> /frˈuːktʊ̃ː/ "FRUIT_NOUN"
-	<filum> /fˈiːɫʊ̃ː/ "STRING_NOUN"
+	<fōrmōsam> /foːrmˈoːsãː/ "BEAUTIFUL (M)_ADJ"
+	<famem> /fˈamɛ̃ː/ "HUNGER_NOUN"
+	<flōrem> /fɫˈoːrɛ̃ː/ "FLOWER_NOUN"
 
-/lʲː/ (0.01)
-	<castellum> /kastˈɛlʲːʊ̃ː/ "CASTLE_NOUN"
-	<vīllam> /wˈiːlʲːãː/ "TOWN_NOUN"
-	<capillum> /kapˈɪlʲːʊ̃ː/ "HAIR_NOUN"
+/lʲː/ (0.011)
+	<follem> /fˈɔlʲːɛ̃ː/ "CRAZY_ADJ"
+	<pulliōnem> /pʊlʲːˈoːnɛ̃ː/ "BIRD_NOUN"
+	<mellinum> /mˈɛlʲːinʊ̃ː/ "YELLOW_ADJ"
 
 /l/ (0.008)
-	<lēgem> /lˈeːɡɛ̃/ "LAW_NOUN"
-	<quaclam> /kʷˈaklãː/ "QUAIL_NOUN"
-	<lūcem> /lˈuːkɛ̃ː/ "LIGHT_NOUN"
+	<lignum> /lˈɪɡnʊ̃ː/ "WOOD_NOUN"
+	<melem> /mˈɛlɛ̃ː/ "HONEY_NOUN"
+	<līneam> /lˈiːneãː/ "LINE_NOUN"
 
 /ŋ/ (0.007)
-	<plangēre> /pɫˈaŋɡɛrɛ/ "WEEP_VERB"
-	<blancum> /blˈaŋkʊ̃ː/ "WHITE_ADJ"
-	<sanguem> /sˈaŋɡʷɛ̃ː/ "BLOOD_NOUN"
+	<concha> /kˈɔŋkʰa/ "HEAD_NOUN"
+	<sanguinem> /sˈaŋɡʷɪnɛ̃ː/ "BLOOD_NOUN"
+	<pugnum> /pˈʊŋnʊ̃ː/ "FIST_NOUN"
 
 /kʷ/ (0.005)
-	<aequalīvum> /ae̯kʷalʲˈiːwʊ̃/ "EQUAL_ADJ"
+	<quīnquāgintā> /kʷiːŋkʷaːɡˈɪntaː/ "FIFTY_NUM"
 	<quattuor> /kʷˈatːuɔr/ "FOUR_NUM"
-	<aquam> /ˈakʷãː/ "WATER_NOUN"
+	<quī> /kʷˈiː/ "WHO_PRON"
 
 /sː/ (0.004)
-	<grassam> /ɡrˈasːãː/ "FAT_NOUN"
-	<bassium> /bˈasːiʊ̃ː/ "LOW_ADJ"
-	<ossum> /ˈɔsːʊ̃ː/ "BONE_NOUN"
+	<grossum> /ɡrˈɔsːʊ̃ː/ "THICK_ADJ"
+	<crassum> /krˈasːʊ̃ː/ "FAT_NOUN"
+	<russum> /rˈʊsːʊ̃ː/ "RED_ADJ"
 
 /lʲ/ (0.004)
-	<ālium> /ˈaːlʲiʊ̃ː/ "GARLIC_NOUN"
-	<melius> /mˈɛlʲiʊs/ "BETTER_ADV"
+	<umbilīcum> /ʊmbɪlʲˈiːkʊ̃ː/ "NAVEL_NOUN"
+	<foliam> /fˈɔlʲiãː/ "LEAF_NOUN"
 	<filicellam> /filʲikˈɛlʲːãː/ "STRING_NOUN"
 
 /tː/ (0.004)
-	<litteram> /lʲˈɪtːɛrãː/ "LETTER_NOUN"
-	<cattum> /kˈatːʊ̃ː/ "CAT_NOUN"
-	<gattum> /ɡˈatːʊ̃ː/ "CAT_NOUN"
+	<quattuor> /kʷˈatːuɔr/ "FOUR_NUM"
+	<tōttōs> /tˈoːtːoːs/ "ALL (PL)_ADJ"
+	<tōttī> /tˈoːtːiː/ "ALL (PL)_ADJ"
 
 /j/ (0.003)
-	<pertrāicere> /pɛrtraːjˈikɛrɛ/ "PARTY_NOUN"
-	<iuvenem> /jˈuwɛnɛ̃ː/ "YOUNG_ADJ"
-	<caimāre> /kajmˈaːrɛ/ "BURN_VERB"
+	<iūdicem> /jˈuːdɪkɛ̃ː/ "JUDGE_NOUN"
+	<iūnctum> /jˈuːŋktʊ̃ː/ "JOINED_ADJ"
+	<iocum> /jˈɔkʊ̃ː/ "GAME_NOUN"
 
 /h/ (0.003)
-	<hominem> /hˈɔmɪnɛ̃ː/ "MAN_NOUN"
-	<herbam> /hˈɛrbãː/ "GRASS_NOUN"
 	<harēnam> /harˈeːnãː/ "SAND_NOUN"
+	<hominem> /hˈɔmɪnɛ̃ː/ "MAN_NOUN"
+	<homō> /hˈɔmoː/ "MAN_NOUN"
 
 /kː/ (0.002)
-	<siccam> /sˈɪkːãː/ "DRY (F)_ADJ"
 	<vaccam> /wˈakːãː/ "COW_NOUN"
-	<miccum> /mˈɪkːʊ̃ː/ "SMALL_ADJ"
+	<siccum> /sˈɪkːʊ̃ː/ "DRY (M)_ADJ"
+	<siccam> /sˈɪkːãː/ "DRY (F)_ADJ"
 
 /nː/ (0.002)
 	<annum> /ˈanːʊ̃ː/ "YEAR_NOUN"
+	<pennam> /pˈɛnːãː/ "FEATHER_NOUN"
 	<verecunniam> /wɛrɛkˈʊnːiãː/ "SHAME_NOUN"
-	<pinnam> /pˈɪnːãː/ "FEATHER_NOUN"
 
 /ɡʷ/ (0.001)
-	<linguam> /lˈɪŋɡʷãː/ "TONGUE_NOUN"
 	<sanguem> /sˈaŋɡʷɛ̃ː/ "BLOOD_NOUN"
 	<sanguinem> /sˈaŋɡʷɪnɛ̃ː/ "BLOOD_NOUN"
+	<linguam> /lˈɪŋɡʷãː/ "TONGUE_NOUN"
 
 /rː/ (0.001)
 	<terram> /tˈɛrːãː/ "EARTH_NOUN"
@@ -334,6 +334,9 @@ CONSONANTS
 
 /mː/ (0.0)
 	<flammam> /fɫˈamːãː/ "FLAME_NOUN"
+
+/kʰ/ (0.0)
+	<concha> /kˈɔŋkʰa/ "HEAD_NOUN"
 
 /fː/ (0.0)
 	<afflāre> /afːlˈaːrɛ/ "BLOW-FIND_VERB"

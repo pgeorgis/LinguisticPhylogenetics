@@ -985,6 +985,8 @@ Galician	Galician			ANGEL_NOUN	anxo	ˈanʃʊ	ˈa n ʃ ʊ		ANGEL_NOUN_1
 Portuguese	Portuguese			ANGEL_NOUN	anjo	ˈɐ̃ʒu	ˈɐ̃ ʒ u		ANGEL_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			ANGEL_NOUN	anjo	ˈɐ̃ʒu	ˈɐ̃ ʒ u		ANGEL_NOUN_1			
 Latin	Latin			SOUL_NOUN	animam	ˈanɪmãː	ˈa n ɪ m ãː		SOUL_NOUN_1			
+Logudorese	Logudorese			SOUL_NOUN	ànima	ˈanima	ˈa n i m a		SOUL_NOUN_1			
+Campidanese	Campidanese			SOUL_NOUN	ànima	ˈanima	ˈa n i m a		SOUL_NOUN_1			
 Romanian	Romanian			SOUL_NOUN	inimă	ˈinimə	ˈi n i m ə		SOUL_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			SOUL_NOUN	ińamă	ˈiɲama	ˈi ɲ a m a		SOUL_NOUN_1			
 Aromanian	Aromanian			SOUL_NOUN	inimã	ˈinimə	ˈi n i m ə		SOUL_NOUN_1			
@@ -2445,7 +2447,7 @@ Portuguese	Portuguese			CALL_VERB	chamar	ʃɐmˈaɾ	ʃ ɐ m ˈa ɾ		CALL_VERB_1
 Brazilian Portuguese	Brazilian Portuguese			CALL_VERB	chamar	ʃamˈah	ʃ a m ˈa h		CALL_VERB_1			
 Latin	Latin			KEY_NOUN	clāvem	klˈaːwɛ̃ː	k l ˈaː w ɛ̃ː		KEY_NOUN_1			
 Logudorese	Logudorese			KEY_NOUN	crae	krˈae	k r ˈa e		KEY_NOUN_1			
-Campidanese	Campidanese			KEY_NOUN	ciai	ʧˈaj	ʧ ˈa j		KEY_NOUN_1			
+Campidanese	Campidanese			KEY_NOUN	ciai	ʧˈai	ʧ ˈa i		KEY_NOUN_1			
 Romanian	Romanian			KEY_NOUN	cheie	kˈeje	k ˈe j e		KEY_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			KEY_NOUN	cľeili	kʎˈejli	k ʎ ˈe j l i		KEY_NOUN_1			
 Aromanian	Aromanian			KEY_NOUN	cljai	kʎˈaj	k ʎ ˈa j		KEY_NOUN_1			
@@ -2584,6 +2586,9 @@ Asturian	Asturian			COLOR_NOUN	color	kolˈoɾ	k o l ˈo ɾ		COLOR_NOUN_1
 Galician	Galician			COLOR_NOUN	cor	kˈoɾ	k ˈo ɾ		COLOR_NOUN_1			
 Portuguese	Portuguese			COLOR_NOUN	cor	kˈoɾ	k ˈo ɾ		COLOR_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			COLOR_NOUN	cor	kˈoh	k ˈo h		COLOR_NOUN_1			
+Latin	Latin			HEAD_NOUN	concha	kˈɔŋkʰa	k ˈɔ ŋ kʰ a		HEAD_NOUN_2			
+Logudorese	Logudorese			HEAD_NOUN	conca	kˈoŋka	k ˈo ŋ k a		HEAD_NOUN_2			
+Campidanese	Campidanese			HEAD_NOUN	conca	kˈoŋka	k ˈo ŋ k a		HEAD_NOUN_2			
 Latin	Latin			BE ACQUAINTED WITH_VERB	conōscere	kɔnˈoːskɛrɛ	k ɔ n ˈoː s k ɛ r ɛ		BE ACQUAINTED WITH_VERB_2			
 Romanian	Romanian			BE ACQUAINTED WITH_VERB	cunoaștere	kuno̯ˈaʃtere	k u n o̯ˈa ʃ t e r e		BE ACQUAINTED WITH_VERB_2			
 Aromanian	Aromanian			BE ACQUAINTED WITH_VERB	cunoashtiri	kuno̯ˈaʃtiri	k u n o̯ˈa ʃ t i r i		BE ACQUAINTED WITH_VERB_2			
@@ -2800,6 +2805,11 @@ Asturian	Asturian			BELIEVE_VERB	creyer	kɾeʝˈeɾ	k ɾ e ʝ ˈe ɾ		BELIEVE_VE
 Galician	Galician			BELIEVE_VERB	crer	kɾˈeɾ	k ɾ ˈe ɾ		BELIEVE_VERB_1			
 Portuguese	Portuguese			BELIEVE_VERB	crer	kɾˈeɾ	k ɾ ˈe ɾ		BELIEVE_VERB_1			
 Brazilian Portuguese	Brazilian Portuguese			BELIEVE_VERB	crer	kɾˈeh	k ɾ ˈe h		BELIEVE_VERB_1			
+Latin	Latin			YELLOW_ADJ	crocum	krˈɔkʊ̃ː	k r ˈɔ k ʊ̃ː		YELLOW_ADJ_3			
+Logudorese	Logudorese			YELLOW_ADJ	grogu	ɡɾˈoɣu	ɡ ɾ ˈo ɣ u		YELLOW_ADJ_3			
+Campidanese	Campidanese			YELLOW_ADJ	grogu	ɡɾˈoɣu	ɡ ɾ ˈo ɣ u		YELLOW_ADJ_3			
+Gascon	Gascon			YELLOW_ADJ	groc	ɡɾˈɔk	ɡ ɾ ˈɔ k		YELLOW_ADJ_3			
+Catalan	Catalan			YELLOW_ADJ	groc	ɡɾˈɔk	ɡ ɾ ˈɔ k		YELLOW_ADJ_3			
 Latin	Latin			CROSS_NOUN	crucem	krˈʊkɛ̃ː	k r ˈʊ k ɛ̃ː		CROSS_NOUN_1			
 Logudorese	Logudorese			CROSS_NOUN	crughe	krˈuɣe	k r ˈu ɣ e		CROSS_NOUN_1			
 Campidanese	Campidanese			CROSS_NOUN	cruxi	krˈuʒi	k r ˈu ʒ i		CROSS_NOUN_1			
@@ -2942,7 +2952,7 @@ Portuguese	Portuguese			SUMMIT_NOUN	cima	sˈimɐ	s ˈi m ɐ		SUMMIT_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			SUMMIT_NOUN	cima	sˈĩmɐ	s ˈĩ m ɐ		SUMMIT_NOUN_1			
 Latin	Latin			GIVE_VERB	dare	dˈarɛ	d ˈa r ɛ		GIVE_VERB_1			
 Logudorese	Logudorese			GIVE_VERB	dàe	dˈae	d ˈa e		GIVE_VERB_1			
-Campidanese	Campidanese			GIVE_VERB	dai	dˈaj	d ˈa j		GIVE_VERB_1			
+Campidanese	Campidanese			GIVE_VERB	dai	dˈai	d ˈa i		GIVE_VERB_1			
 Romanian	Romanian			GIVE_VERB	dare	dˈare	d ˈa r e		GIVE_VERB_1			
 Aromanian	Aromanian			GIVE_VERB	dari	dˈari	d ˈa r i		GIVE_VERB_1			
 Dalmatian	Dalmatian			GIVE_VERB	dur	dˈur	d ˈu r		GIVE_VERB_1			
@@ -4179,28 +4189,30 @@ Asturian	Asturian			SMOKE_NOUN	fumu	fˈumu	f ˈu m u		SMOKE_NOUN_2
 Galician	Galician			SMOKE_NOUN	fume	fˈumɪ	f ˈu m ɪ		SMOKE_NOUN_2			
 Portuguese	Portuguese			SMOKE_NOUN	fumo	fˈumu	f ˈu m u		SMOKE_NOUN_2			
 Brazilian Portuguese	Brazilian Portuguese			SMOKE_NOUN	fumo	fˈũmu	f ˈũ m u		SMOKE_NOUN_2			
-Latin	Latin			YELLOW_ADJ	galbinum	ɡˈaɫbɪnʊ̃ː	ɡ ˈa ɫ b ɪ n ʊ̃ː		YELLOW_ADJ_3			
-Romanian	Romanian			YELLOW_ADJ	galben	ɡˈalben	ɡ ˈa l b e n		YELLOW_ADJ_3			
-Megleno-Romanian	Megleno-Romanian			YELLOW_ADJ	galbin	ɡˈalbin	ɡ ˈa l b i n		YELLOW_ADJ_3			
-Aromanian	Aromanian			YELLOW_ADJ	galbin	ɡˈalbin	ɡ ˈa l b i n		YELLOW_ADJ_3			
-Dalmatian	Dalmatian			YELLOW_ADJ	zuolno	ʒwˈɔlno	ʒ w ˈɔ l n o		YELLOW_ADJ_3	TRUE		
-Sicilian	Sicilian			YELLOW_ADJ	giallu	ʤˈallʊ	ʤ ˈa l l ʊ		YELLOW_ADJ_3	TRUE		
-Neapolitan	Neapolitan			YELLOW_ADJ	giallo	ʤˈallə	ʤ ˈa l l ə		YELLOW_ADJ_3	TRUE		
-Corsican	Corsican			YELLOW_ADJ	giallu	ʤˈallu	ʤ ˈa l l u		YELLOW_ADJ_3	TRUE		
-Italian	Italian			YELLOW_ADJ	giallo	ʤˈallo	ʤ ˈa l l o		YELLOW_ADJ_3	TRUE		
-Venetian	Venetian			YELLOW_ADJ	xàło	zˈaɰo	z ˈa ɰ o		YELLOW_ADJ_3	TRUE		
-Bellunese	Bellunese			YELLOW_ADJ	dhal	ðˈal	ð ˈa l		YELLOW_ADJ_3	TRUE		
-Emilian	Emilian			YELLOW_ADJ	żâl	ðˈaːl	ð ˈaː l		YELLOW_ADJ_3	TRUE		
-Ligurian	Ligurian			YELLOW_ADJ	gianu	ʤˈaːnu	ʤ ˈaː n u		YELLOW_ADJ_3	TRUE		
-Piedmontese	Piedmontese			YELLOW_ADJ	giaun	ʤˈawŋ	ʤ ˈa w ŋ		YELLOW_ADJ_3	TRUE		
-Western Lombard	Western Lombard			YELLOW_ADJ	giald	ʤˈaːlt	ʤ ˈaː l t		YELLOW_ADJ_3	TRUE		
-Eastern Lombard	Eastern Lombard			YELLOW_ADJ	zald	zˈalt	z ˈa l t		YELLOW_ADJ_3	TRUE		
-Ladin	Ladin			YELLOW_ADJ	ÿal	ʤˈal	ʤ ˈa l		YELLOW_ADJ_3			
-Friulian	Friulian			YELLOW_ADJ	zâl	ʤˈaːl	ʤ ˈaː l		YELLOW_ADJ_3			
-French	French			YELLOW_ADJ	jaune	ʒon	ʒ o n		YELLOW_ADJ_3			
-Québécois French	Québécois French			YELLOW_ADJ	jaune	ʒoʊ̯n	ʒ oʊ̯ n		YELLOW_ADJ_3			
-Franco-Provençal	Franco-Provençal			YELLOW_ADJ	jhôno	ðˈoːno	ð ˈoː n o		YELLOW_ADJ_3			
-Savoyard	Savoyard			YELLOW_ADJ	zhôno	ðˈono	ð ˈo n o		YELLOW_ADJ_3			
+Latin	Latin			YELLOW_ADJ	galbinum	ɡˈaɫbɪnʊ̃ː	ɡ ˈa ɫ b ɪ n ʊ̃ː		YELLOW_ADJ_4			
+Romanian	Romanian			YELLOW_ADJ	galben	ɡˈalben	ɡ ˈa l b e n		YELLOW_ADJ_4			
+Megleno-Romanian	Megleno-Romanian			YELLOW_ADJ	galbin	ɡˈalbin	ɡ ˈa l b i n		YELLOW_ADJ_4			
+Aromanian	Aromanian			YELLOW_ADJ	galbin	ɡˈalbin	ɡ ˈa l b i n		YELLOW_ADJ_4			
+Dalmatian	Dalmatian			YELLOW_ADJ	zuolno	ʒwˈɔlno	ʒ w ˈɔ l n o		YELLOW_ADJ_4	TRUE		
+Sicilian	Sicilian			YELLOW_ADJ	giallu	ʤˈallʊ	ʤ ˈa l l ʊ		YELLOW_ADJ_4	TRUE		
+Neapolitan	Neapolitan			YELLOW_ADJ	giallo	ʤˈallə	ʤ ˈa l l ə		YELLOW_ADJ_4	TRUE		
+Corsican	Corsican			YELLOW_ADJ	giallu	ʤˈallu	ʤ ˈa l l u		YELLOW_ADJ_4	TRUE		
+Italian	Italian			YELLOW_ADJ	giallo	ʤˈallo	ʤ ˈa l l o		YELLOW_ADJ_4	TRUE		
+Venetian	Venetian			YELLOW_ADJ	xàło	zˈaɰo	z ˈa ɰ o		YELLOW_ADJ_4	TRUE		
+Bellunese	Bellunese			YELLOW_ADJ	dhal	ðˈal	ð ˈa l		YELLOW_ADJ_4	TRUE		
+Emilian	Emilian			YELLOW_ADJ	żâl	ðˈaːl	ð ˈaː l		YELLOW_ADJ_4	TRUE		
+Ligurian	Ligurian			YELLOW_ADJ	gianu	ʤˈaːnu	ʤ ˈaː n u		YELLOW_ADJ_4	TRUE		
+Piedmontese	Piedmontese			YELLOW_ADJ	giaun	ʤˈawŋ	ʤ ˈa w ŋ		YELLOW_ADJ_4	TRUE		
+Western Lombard	Western Lombard			YELLOW_ADJ	giald	ʤˈaːlt	ʤ ˈaː l t		YELLOW_ADJ_4	TRUE		
+Eastern Lombard	Eastern Lombard			YELLOW_ADJ	zald	zˈalt	z ˈa l t		YELLOW_ADJ_4	TRUE		
+Ladin	Ladin			YELLOW_ADJ	ÿal	ʤˈal	ʤ ˈa l		YELLOW_ADJ_4			
+Friulian	Friulian			YELLOW_ADJ	zâl	ʤˈaːl	ʤ ˈaː l		YELLOW_ADJ_4			
+French	French			YELLOW_ADJ	jaune	ʒon	ʒ o n		YELLOW_ADJ_4			
+Québécois French	Québécois French			YELLOW_ADJ	jaune	ʒoʊ̯n	ʒ oʊ̯ n		YELLOW_ADJ_4			
+Franco-Provençal	Franco-Provençal			YELLOW_ADJ	jhôno	ðˈoːno	ð ˈoː n o		YELLOW_ADJ_4			
+Savoyard	Savoyard			YELLOW_ADJ	zhôno	ðˈono	ð ˈo n o		YELLOW_ADJ_4			
+Occitan	Occitan			YELLOW_ADJ	jaune	ʒˈawne	ʒ ˈa w n e		YELLOW_ADJ_4	TRUE		
+Gascon	Gascon			YELLOW_ADJ	jaune	ʒˈawne	ʒ ˈa w n e		YELLOW_ADJ_4	TRUE		
 Latin	Latin			JOY_NOUN	gaudiam	ɡˈau̯diãː	ɡ ˈau̯ d i ãː		JOY_NOUN_1			
 Corsican	Corsican			JOY_NOUN	gioia	ʤˈoja	ʤ ˈo j a		JOY_NOUN_1	TRUE		
 Italian	Italian			JOY_NOUN	gioia	ʤˈɔja	ʤ ˈɔ j a		JOY_NOUN_1	TRUE		
@@ -5161,7 +5173,7 @@ Galician	Galician			HARE_NOUN	lebre	lˈɛβɾɪ	l ˈɛ β ɾ ɪ		HARE_NOUN_1
 Portuguese	Portuguese			HARE_NOUN	lebre	lˈɛβɾɨ	l ˈɛ β ɾ ɨ		HARE_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			HARE_NOUN	lebre	lˈɛbɾi	l ˈɛ b ɾ i		HARE_NOUN_1			
 Latin	Latin			CARRY_VERB	levāre	ɫɛwˈaːrɛ	ɫ ɛ w ˈaː r ɛ		CARRY_VERB_1			
-Logudorese	Logudorese			CARRY_VERB	leare	leˈare	l e ˈa r e		CARRY_VERB_1			
+Logudorese	Logudorese			CARRY_VERB	leàe	leˈae	l e ˈa e		CARRY_VERB_1			
 Campidanese	Campidanese			CARRY_VERB	leài	leˈaj	l e ˈa j		CARRY_VERB_1			
 Romanian	Romanian			CARRY_VERB	luare	luˈare	l u ˈa r e		CARRY_VERB_1			
 Aromanian	Aromanian			CARRY_VERB	loari	lo̯ˈari	l o̯ˈa r i		CARRY_VERB_1			
@@ -6191,6 +6203,8 @@ Friulian	Friulian			SNOW_NOUN	nêf	nˈeːf	n ˈeː f		SNOW_NOUN_2
 Romansch	Romansch			SNOW_NOUN	naiv	nˈajf	n ˈa j f		SNOW_NOUN_2			
 Franco-Provençal	Franco-Provençal			SNOW_NOUN	nêf	nˈɛːf	n ˈɛː f		SNOW_NOUN_2			
 Latin	Latin			SNOW (VERB)_VERB	nivicāre	nɪwɪkˈaːrɛ	n ɪ w ɪ k ˈaː r ɛ		SNOW (VERB)_VERB_1			
+Logudorese	Logudorese			SNOW (VERB)_VERB	niàe	niˈae	n i ˈa e		SNOW (VERB)_VERB_1			
+Campidanese	Campidanese			SNOW (VERB)_VERB	niài	niˈai	n i ˈa i		SNOW (VERB)_VERB_1			
 Sicilian	Sicilian			SNOW (VERB)_VERB	nivicari	nivikˈarɪ	n i v i k ˈa r ɪ		SNOW (VERB)_VERB_1			
 Corsican	Corsican			SNOW (VERB)_VERB	nivicà	nivikˈa	n i v i k ˈa		SNOW (VERB)_VERB_1			
 Italian	Italian			SNOW (VERB)_VERB	nevicare	nevikˈare	n e v i k ˈa r e		SNOW (VERB)_VERB_1			
@@ -7298,6 +7312,8 @@ French	French			FISH_NOUN	poisson	pwasɔ̃	p w a s ɔ̃		FISH_NOUN_2
 Québécois French	Québécois French			FISH_NOUN	poisson	pwɛsɒ̃ʊ̯̃	p w ɛ s ɒ̃ʊ̯̃		FISH_NOUN_2			
 Franco-Provençal	Franco-Provençal			FISH_NOUN	pêsson	pˈɛːsɔ̃	p ˈɛː s ɔ̃		FISH_NOUN_2			
 Latin	Latin			PLAGUE_NOUN	plāgam	plˈaːɡãː	p l ˈaː ɡ ãː		PLAGUE_NOUN_1			
+Logudorese	Logudorese			PLAGUE_NOUN	prae	prˈae	p r ˈa e		PLAGUE_NOUN_1			
+Campidanese	Campidanese			PLAGUE_NOUN	prai	prˈai	p r ˈa i		PLAGUE_NOUN_1			
 Romanian	Romanian			PLAGUE_NOUN	plagă	plˈaɡə	p l ˈa ɡ ə		PLAGUE_NOUN_1			
 Aromanian	Aromanian			PLAGUE_NOUN	pleagã	ple̯ˈaɡə	p l e̯ˈa ɡ ə		PLAGUE_NOUN_1			
 Sicilian	Sicilian			PLAGUE_NOUN	chiaga	cˈaɡa	c ˈa ɡ a		PLAGUE_NOUN_1			
@@ -7692,6 +7708,9 @@ Asturian	Asturian			FIST_NOUN	puñu	pˈuɲu	p ˈu ɲ u		FIST_NOUN_1
 Galician	Galician			FIST_NOUN	puño	pˈuɲʊ	p ˈu ɲ ʊ		FIST_NOUN_1			
 Portuguese	Portuguese			FIST_NOUN	punho	pˈuɲu	p ˈu ɲ u		FIST_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			FIST_NOUN	punho	pˈũj̃u	p ˈũ j̃ u		FIST_NOUN_1			
+Latin	Latin			BIRD_NOUN	pulliōnem	pʊlʲlʲˈoːnɛ̃ː	p ʊ lʲ lʲ ˈoː n ɛ̃ː		BIRD_NOUN_4			
+Logudorese	Logudorese			BIRD_NOUN	puzone	puʣˈone	p u ʣ ˈo n e		BIRD_NOUN_4			
+Campidanese	Campidanese			BIRD_NOUN	pilloni	pillˈoni	p i l l ˈo n i		BIRD_NOUN_4			
 Latin	Latin			POINT_NOUN	punctum	pˈʊŋktʊ̃ː	p ˈʊ ŋ k t ʊ̃ː		POINT_NOUN_1			
 Romanian	Romanian			POINT_NOUN	punct	pˈuŋkt	p ˈu ŋ k t		POINT_NOUN_1	TRUE		
 Sicilian	Sicilian			POINT_NOUN	puntu	pˈuntʊ	p ˈu n t ʊ		POINT_NOUN_1			

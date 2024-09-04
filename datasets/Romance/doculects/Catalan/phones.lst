@@ -9,7 +9,7 @@ VOWELS
 	<alba> /ˈalβə/ "DAWN_NOUN"
 	<guatlla> /ɡwˈaʎːə/ "QUAIL_NOUN"
 
-/ˈɔ/ (0.035)
+/ˈɔ/ (0.036)
 	<nou> /nˈɔw/ "NINE_NUM"
 	<nostre> /nˈɔstɾə/ "OUR_ADJ"
 	<fort> /fˈɔrt/ "STRONG_ADJ"
@@ -55,12 +55,12 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.062)
+/s/ (0.061)
 	<cel> /sˈɛl/ "SKY_NOUN"
 	<escorça> /əskˈɔrsə/ "BARK_NOUN"
 	<tres> /tɾˈɛs/ "THREE_NUM"
 
-/k/ (0.044)
+/k/ (0.045)
 	<creu> /kɾˈɛw/ "CROSS_NOUN"
 	<curt> /kˈuɾt/ "SHORT_ADJ"
 	<oca> /ˈɔkə/ "GOOSE_NOUN"
@@ -135,24 +135,24 @@ CONSONANTS
 	<llegir> /ʎəʒˈi/ "READ_VERB"
 	<menjar> /məɲʒˈa/ "EAT_VERB"
 
-/ɡ/ (0.013)
+/ɡ/ (0.014)
 	<ungla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
-	<guatlla> /ɡwˈaʎːə/ "QUAIL_NOUN"
 	<llengua> /ʎˈɛŋɡwə/ "TONGUE_NOUN"
+	<guatlla> /ɡwˈaʎːə/ "QUAIL_NOUN"
 
 /ɲ/ (0.011)
+	<juny> /ʒˈuɲ/ "JUNE_PROPN"
 	<muntanya> /muntˈaɲə/ "MOUNTAIN_NOUN"
 	<plànyer> /plˈaɲə/ "WEEP_VERB"
-	<àngel> /ˈaɲʒəl/ "ANGEL_NOUN"
 
 /ð/ (0.009)
-	<madur> /məðˈu/ "MATURE_NOUN"
 	<vedell> /bəðˈeʎ/ "CALF_NOUN"
-	<ajudo> /əʒˈuðu/ "HELP-1SG_VERB"
+	<madur> /məðˈu/ "MATURE_NOUN"
+	<nedar> /nəðˈa/ "SWIM_VERB"
 
 /ɣ/ (0.008)
+	<igual> /iɣwˈal/ "EQUAL_ADJ"
 	<llàgrima> /ʎˈaɣɾimə/ "TEAR_NOUN"
-	<aigua> /ˈajɣwə/ "WATER_NOUN"
 	<agulla> /əɣˈuʎə/ "NEEDLE_NOUN"
 
 /j/ (0.007)

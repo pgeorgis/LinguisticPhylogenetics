@@ -2,7 +2,7 @@ VOWELS
 /ˈa/ (0.075)
 	<vaca> /vˈakɔ/ "COW_NOUN"
 	<plaga> /plˈaɣɔ/ "PLAGUE_NOUN"
-	<vosautres> /vuzˈawtɾes/ "YOU (PL)_PRON"
+	<jaune> /ʒˈawne/ "YELLOW_ADJ"
 
 /ɔ/ (0.06)
 	<mica> /mˈikɔ/ "CRUMB_NOUN"
@@ -49,7 +49,7 @@ VOWELS
 	<subre> /sˈyβɾe/ "ABOVE_PREP"
 	<junh> /ʒˈyɲ/ "JUNE_PROPN"
 
-/u/ (0.015)
+/u/ (0.014)
 	<volar> /vulˈa/ "FLY_VERB"
 	<ovelha> /uvˈeʎɔ/ "SHEEP_NOUN"
 	<conéisser> /kunˈejse/ "BE ACQUAINTED WITH_VERB"
@@ -66,7 +66,7 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.065)
+/s/ (0.064)
 	<nas> /nˈas/ "NOSE_NOUN"
 	<bons> /bˈuns/ "GOOD (M.PL)_ADJ"
 	<bonas> /bˈunas/ "GOOD (F.PL)_ADJ"
@@ -83,13 +83,13 @@ CONSONANTS
 
 /n/ (0.043)
 	<un> /ˈyn/ "ONE_NUM"
+	<jaune> /ʒˈawne/ "YELLOW_ADJ"
 	<reina> /rˈejnɔ/ "QUEEN_NOUN"
-	<pònt> /pˈɔn/ "BRIDGE_NOUN"
 
-/ɾ/ (0.041)
+/ɾ/ (0.04)
+	<negre> /nˈeɣɾe/ "BLACK_ADJ"
 	<cerièra> /seɾjˈɛɾɔ/ "CHERRY_NOUN"
 	<pèira> /pˈɛjɾɔ/ "STONE_NOUN"
-	<plorar> /pluɾˈa/ "WEEP_VERB"
 
 /t/ (0.034)
 	<caud> /kˈawt/ "HOT_ADJ"
@@ -111,7 +111,7 @@ CONSONANTS
 	<pòrca> /pˈɔrkɔ/ "SOW_NOUN"
 	<riu> /rˈiw/ "RIVER_NOUN"
 
-/w/ (0.023)
+/w/ (0.024)
 	<ciutat> /siwtˈat/ "CITY_NOUN"
 	<escriure> /eskɾˈiwɾe/ "WRITE_VERB"
 	<gaug> /ɡˈawk/ "JOY_NOUN"
@@ -141,7 +141,7 @@ CONSONANTS
 	<savi> /sˈaβi/ "WISE_ADJ"
 	<auba> /ˈawβɔ/ "DAWN_NOUN"
 
-/ʒ/ (0.013)
+/ʒ/ (0.014)
 	<jòc> /ʒˈɔk/ "GAME_NOUN"
 	<gendre> /ʒˈɛndɾe/ "SON-IN-LAW_NOUN"
 	<genolh> /ʒenˈul/ "KNEE_NOUN"
