@@ -1,7 +1,7 @@
 VOWELS
 /ʊ̃ː/ (0.061)
 	<oculum> /ˈɔkʊɫʊ̃ː/ "EYE_NOUN"
-	<operārium> /ɔpɛrˈaːriʊ̃ː/ "WORKER_NOUN"
+	<lignum> /lˈɪɡnʊ̃ː/ "WOOD_NOUN"
 	<germānum> /ɡɛrmˈaːnʊ̃ː/ "BROTHER_NOUN"
 
 /ɛ/ (0.043)
@@ -35,9 +35,9 @@ VOWELS
 	<Hispāniam> /hɪspˈaːniãː/ "SPAIN_PROPN"
 
 /ˈɔ/ (0.021)
-	<foliam> /fˈɔlʲiãː/ "LEAF_NOUN"
+	<dominam> /dˈɔmɪnãː/ "LADY_NOUN"
 	<bonae> /bˈɔnae̯/ "GOOD (F.PL)_ADJ"
-	<fortem> /fˈɔrtɛ̃ː/ "STRONG_ADJ"
+	<colpum> /kˈɔɫpʊ̃ː/ "STRIKE_NOUN"
 
 /i/ (0.019)
 	<ālium> /ˈaːlʲiʊ̃ː/ "GARLIC_NOUN"
@@ -235,14 +235,14 @@ CONSONANTS
 	<panticem> /pˈantɪkɛ̃ː/ "BELLY_NOUN"
 
 /m/ (0.026)
-	<dominam> /dˈɔmɪnãː/ "LADY_NOUN"
+	<mactāre> /maktˈaːrɛ/ "KILL_VERB"
 	<mana> /mˈana/ "HAND_NOUN"
 	<manum> /mˈanʊ̃ː/ "HAND_NOUN"
 
 /d/ (0.023)
-	<sapidum> /sˈapɪdʊ̃ː/ "WISE_ADJ"
+	<quid> /kʷˈɪd/ "WHAT_PRON"
 	<diem> /dˈiɛ̃ː/ "DAY_NOUN"
-	<duae> /dˈuae̯/ "TWO (F)_NUM"
+	<duodecim> /duˈɔdɛkɪ̃/ "TWELVE_NUM"
 
 /w/ (0.02)
 	<nivicāre> /nɪwɪkˈaːrɛ/ "SNOW (VERB)_VERB"

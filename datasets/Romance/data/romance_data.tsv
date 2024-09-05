@@ -1827,8 +1827,8 @@ Galician	Galician			MOUTH_NOUN	boca	bˈokɐ	b ˈo k ɐ		MOUTH_NOUN_1
 Portuguese	Portuguese			MOUTH_NOUN	boca	bˈokɐ	b ˈo k ɐ		MOUTH_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			MOUTH_NOUN	boca	bˈokɐ	b ˈo k ɐ		MOUTH_NOUN_1			
 Latin	Latin			HORSE_NOUN	caballum	kabˈalʲlʲʊ̃ː	k a b ˈa lʲ lʲ ʊ̃ː		HORSE_NOUN_1			
-Logudorese	Logudorese			HORSE_NOUN	cabaddu	kaβˈaɖɖu	k a β ˈa ɖ ɖ u		HORSE_NOUN_1			
-Campidanese	Campidanese			HORSE_NOUN	cabaddu	kaβˈaɖɖu	k a β ˈa ɖ ɖ u		HORSE_NOUN_1			
+Logudorese	Logudorese			HORSE_NOUN	cadhu	kˈaɖɖu	k ˈa ɖ ɖ u		HORSE_NOUN_1			
+Campidanese	Campidanese			HORSE_NOUN	cadhu	kˈaɖɖu	k ˈa ɖ ɖ u		HORSE_NOUN_1			
 Romanian	Romanian			HORSE_NOUN	cal	kˈal	k ˈa l		HORSE_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			HORSE_NOUN	cal	kˈal	k ˈa l		HORSE_NOUN_1			
 Aromanian	Aromanian			HORSE_NOUN	cal	kˈal	k ˈa l		HORSE_NOUN_1			
@@ -2928,8 +2928,8 @@ Galician	Galician			BELIEVE_VERB	crer	kɾˈeɾ	k ɾ ˈe ɾ		BELIEVE_VERB_1
 Portuguese	Portuguese			BELIEVE_VERB	crer	kɾˈeɾ	k ɾ ˈe ɾ		BELIEVE_VERB_1			
 Brazilian Portuguese	Brazilian Portuguese			BELIEVE_VERB	crer	kɾˈeh	k ɾ ˈe h		BELIEVE_VERB_1			
 Latin	Latin			YELLOW_ADJ	crocum	krˈɔkʊ̃ː	k r ˈɔ k ʊ̃ː		YELLOW_ADJ_3			
-Logudorese	Logudorese			YELLOW_ADJ	grogu	ɡɾˈoɣu	ɡ ɾ ˈo ɣ u		YELLOW_ADJ_3			
-Campidanese	Campidanese			YELLOW_ADJ	grogu	ɡɾˈoɣu	ɡ ɾ ˈo ɣ u		YELLOW_ADJ_3			
+Logudorese	Logudorese			YELLOW_ADJ	grogu	ɡrˈoɣu	ɡ r ˈo ɣ u		YELLOW_ADJ_3			
+Campidanese	Campidanese			YELLOW_ADJ	grogu	ɡrˈoɣu	ɡ r ˈo ɣ u		YELLOW_ADJ_3			
 Gascon	Gascon			YELLOW_ADJ	groc	ɡɾˈɔk	ɡ ɾ ˈɔ k		YELLOW_ADJ_3			
 Catalan	Catalan			YELLOW_ADJ	groc	ɡɾˈɔk	ɡ ɾ ˈɔ k		YELLOW_ADJ_3			
 Valencian	Valencian			YELLOW_ADJ	groc	ɡɾˈɒk	ɡ ɾ ˈɒ k		YELLOW_ADJ_3			
@@ -3356,6 +3356,9 @@ Spanish	Spanish			LADY_NOUN	dueña	dwˈeɲa	d w ˈe ɲ a		LADY_NOUN_1
 Galician	Galician			LADY_NOUN	dona	dˈonɐ	d ˈo n ɐ		LADY_NOUN_1			
 Portuguese	Portuguese			LADY_NOUN	dona	dˈonɐ	d ˈo n ɐ		LADY_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			LADY_NOUN	dona	dˈõnɐ	d ˈõ n ɐ		LADY_NOUN_1			
+Latin	Latin			HOUSE_NOUN	domum	dˈɔmʊ̃ː	d ˈɔ m ʊ̃ː		HOUSE_NOUN_3			
+Logudorese	Logudorese			HOUSE_NOUN	domu	dˈomu	d ˈo m u		HOUSE_NOUN_3			
+Campidanese	Campidanese			HOUSE_NOUN	domu	dˈomu	d ˈo m u		HOUSE_NOUN_3			
 Latin	Latin			GIVE-3SG_VERB	dōnat	dˈoːnat	d ˈoː n a t		GIVE-3SG_VERB_1			
 Romanian	Romanian			GIVE-3SG_VERB	dă	dˈə	d ˈə		GIVE-3SG_VERB_1			
 Aromanian	Aromanian			GIVE-3SG_VERB	da	dˈa	d ˈa		GIVE-3SG_VERB_1			
@@ -3518,6 +3521,7 @@ Portuguese	Portuguese			SWEET_ADJ	doce	dˈosɨ	d ˈo s ɨ		SWEET_ADJ_1
 Brazilian Portuguese	Brazilian Portuguese			SWEET_ADJ	doce	dˈosi	d ˈo s i		SWEET_ADJ_1			
 Latin	Latin			TWELVE_NUM	duodecim	duˈɔdɛkɪ̃	d u ˈɔ d ɛ k ɪ̃		TWELVE_NUM_1			
 Logudorese	Logudorese			TWELVE_NUM	doighi	dˈoiɣi	d ˈo i ɣ i		TWELVE_NUM_1			
+Campidanese	Campidanese			TWELVE_NUM	doixi	dˈoiʒi	d ˈo i ʒ i		TWELVE_NUM_1			
 Romanian	Romanian			TWELVE_NUM	doisprezece	dˈojsprezeʧe	d ˈo j s p r e z e ʧ e		TWELVE_NUM_1		IRREGULAR	
 Aromanian	Aromanian			TWELVE_NUM	dosprãdzatsi	dˈosprəʣaʦi	d ˈo s p r ə ʣ a ʦ i		TWELVE_NUM_1		IRREGULAR	
 Dalmatian	Dalmatian			TWELVE_NUM	dotco	dˈotko	d ˈo t k o		TWELVE_NUM_1			
