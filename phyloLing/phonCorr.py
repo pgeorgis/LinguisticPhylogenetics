@@ -6,6 +6,7 @@ from functools import lru_cache
 from itertools import product
 from statistics import mean, stdev
 from nltk.translate import AlignedSent, IBMModel1
+import numpy as np
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
                        PAD_CH_DEFAULT, PHON_ENV_JOIN_CH, START_PAD_CH)
@@ -329,6 +330,11 @@ class PhonCorrelator:
         new_samples = False
         if log_samples:
             sample_logs = {}
+        
+        # Track how many times each index has been sampled
+        same_meaning_count = np.zeros(len(self.same_meaning))
+        diff_meaning_count = np.zeros(len(self.diff_meaning))
+        diff_n = min(sample_size, len(self.diff_meaning))
         for sample_n in range(n_samples):
             seed_i = start_seed + sample_n
 
@@ -338,15 +344,27 @@ class PhonCorrelator:
 
             # Draw new samples if not yet done
             new_samples = True
+
+            # Initialize random number generator with seed
             rng = random.Random(seed_i)
-            synonym_sample = rng.sample(self.same_meaning, sample_size)
-            # Log sample
+
+            # Take balanced resampling of same-meaning words
+            synonym_sample, same_meaning_count = balance_resample(
+                self.same_meaning, sample_size, same_meaning_count, rng
+            )
+
+            # Take a sample of different-meaning words, as large as the same-meaning set
+            diff_sample, diff_meaning_count = balance_resample(
+                self.diff_meaning, diff_n, diff_meaning_count, rng
+            )
+            
+            # Record samples
+            samples[(seed_i, sample_size)] = (synonym_sample, diff_sample)
+
+            # Log same-meaning sample
             if log_samples:
                 sample_log = self.log_sample(synonym_sample, sample_n, seed=seed_i)
                 sample_logs[sample_n] = sample_log
-            # Take a sample of different-meaning words, as large as the same-meaning set
-            diff_sample = rng.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
-            samples[(seed_i, sample_size)] = (synonym_sample, diff_sample)
 
         # Update dictionary of samples
         if new_samples:
@@ -453,7 +471,7 @@ class PhonCorrelator:
                 corr_dict[seg1] = normalize_dict(corr_dict[seg1])
 
         return corr_dict
-    
+
     def expectation_max_ibm1(self, sample, iterations=20):
         """Performs expectation maximization algorithm and fits an IBM translation model 1 to the corpus."""
         corpus = [
@@ -1766,3 +1784,19 @@ def get_phonEnv_weight(phonEnv):
     weight += len(prefix)
     weight += len(suffix)
     return weight
+
+
+def balance_resample(population, sample_size, sampled_counts, rng):
+    """Resample wordlist taking into account how many times each item has already been sampled."""
+    # Inverse weighting to prefer less-sampled data
+    prob_weights = 1 / (sampled_counts + 1)
+    # Normalize to sum to 1
+    prob_weights /= prob_weights.sum()
+    # Sample with weighted probabilities
+    pop_size = len(population)
+    sample_indices = rng.choices(np.arange(pop_size), weights=prob_weights, k=sample_size)
+    # Update count based on selected indices
+    sampled_counts[sample_indices] += 1
+    # Extract sampled words from selected indices
+    sample = [population[i] for i in sample_indices]
+    return sample, sampled_counts
