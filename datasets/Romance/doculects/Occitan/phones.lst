@@ -1,8 +1,8 @@
 VOWELS
 /ˈa/ (0.075)
 	<vaca> /vˈakɔ/ "COW_NOUN"
-	<plaga> /plˈaɣɔ/ "PLAGUE_NOUN"
-	<jaune> /ʒˈawne/ "YELLOW_ADJ"
+	<patz> /pˈaʦ/ "PEACE_NOUN"
+	<an> /ˈan/ "YEAR_NOUN"
 
 /ɔ/ (0.06)
 	<mica> /mˈikɔ/ "CRUMB_NOUN"
@@ -14,17 +14,17 @@ VOWELS
 	<gendre> /ʒˈɛndɾe/ "SON-IN-LAW_NOUN"
 	<estela> /estˈelɔ/ "STAR_NOUN"
 
-/ˈɛ/ (0.039)
-	<cèl> /sˈɛl/ "SKY_NOUN"
-	<anhèl> /aɲˈɛl/ "LAMB_NOUN"
-	<vent> /vˈɛn/ "WIND_NOUN"
+/ˈɛ/ (0.04)
+	<tèsta> /tˈɛstɔ/ "SKULL_NOUN"
+	<fèrre> /fˈɛre/ "IRON_NOUN"
+	<dent> /dˈɛn/ "TOOTH_NOUN"
 
-/ˈu/ (0.033)
+/ˈu/ (0.032)
 	<bonas> /bˈunas/ "GOOD (F.PL)_ADJ"
 	<crotz> /kɾˈuʦ/ "CROSS_NOUN"
 	<cort> /kˈuɾt/ "SHORT_ADJ"
 
-/ˈi/ (0.03)
+/ˈi/ (0.029)
 	<niu> /nˈiw/ "CLOUD_NOUN"
 	<racina> /rasˈinɔ/ "ROOT_NOUN"
 	<dire> /dˈiɾe/ "SAY-INF_VERB"
@@ -39,7 +39,7 @@ VOWELS
 	<salut> /salˈyt/ "HEALTH_NOUN"
 	<argila> /arʒˈilɔ/ "CLAY_NOUN"
 
-/ˈɔ/ (0.02)
+/ˈɔ/ (0.019)
 	<còr> /kˈɔr/ "HEART_NOUN"
 	<mòrdre> /mˈɔrdɾe/ "BITE_VERB"
 	<luòc> /lɥˈɔk/ "PLACE_NOUN"
@@ -71,40 +71,40 @@ CONSONANTS
 	<bons> /bˈuns/ "GOOD (M.PL)_ADJ"
 	<bonas> /bˈunas/ "GOOD (F.PL)_ADJ"
 
-/l/ (0.062)
-	<pluèja> /plɥˈɛʒɔ/ "RAIN_NOUN"
+/l/ (0.063)
+	<luòc> /lɥˈɔk/ "PLACE_NOUN"
 	<glaç> /ɡlˈas/ "ICE_NOUN"
 	<bèl> /bˈɛl/ "BEAUTIFUL (M)_ADJ"
 
 /k/ (0.046)
-	<cinc> /sˈiŋk/ "FIVE_NUM"
-	<cant> /kˈan/ "SONG_NOUN"
-	<causa> /kˈawzɔ/ "THING_NOUN"
+	<cort> /kˈuɾt/ "SHORT_ADJ"
+	<color> /kulˈu/ "COLOR_NOUN"
+	<espic> /espˈik/ "EAR OF GRAIN_NOUN"
 
 /n/ (0.043)
-	<un> /ˈyn/ "ONE_NUM"
-	<jaune> /ʒˈawne/ "YELLOW_ADJ"
-	<reina> /rˈejnɔ/ "QUEEN_NOUN"
+	<pondre> /pˈundɾe/ "PUT_VERB"
+	<gendre> /ʒˈɛndɾe/ "SON-IN-LAW_NOUN"
+	<nosautres> /nuzˈawtɾes/ "WE_PRON"
 
 /ɾ/ (0.04)
-	<negre> /nˈeɣɾe/ "BLACK_ADJ"
-	<cerièra> /seɾjˈɛɾɔ/ "CHERRY_NOUN"
-	<pèira> /pˈɛjɾɔ/ "STONE_NOUN"
+	<beure> /bˈewɾe/ "DRINK_VERB"
+	<fraire> /fɾˈajɾe/ "BROTHER_NOUN"
+	<nosautres> /nuzˈawtɾes/ "WE_PRON"
 
 /t/ (0.034)
-	<caud> /kˈawt/ "HOT_ADJ"
-	<còsta> /kˈɔstɔ/ "COAST_NOUN"
 	<letra> /lˈetɾɔ/ "LETTER_NOUN"
+	<estat> /estˈat/ "STATE_NOUN"
+	<sèt> /sˈɛt/ "SEVEN_NUM"
 
 /p/ (0.031)
 	<pòrca> /pˈɔrkɔ/ "SOW_NOUN"
-	<pondre> /pˈundɾe/ "PUT_VERB"
 	<paraula> /paɾˈawlɔ/ "WORD_NOUN"
+	<cap> /kˈap/ "HEAD_NOUN"
 
 /m/ (0.028)
-	<pluma> /plˈymɔ/ "FEATHER_NOUN"
 	<me> /me/ "I_OBL_PRON"
 	<fam> /fˈam/ "HUNGER_NOUN"
+	<tèms> /tˈɛms/ "TIME_NOUN"
 
 /r/ (0.027)
 	<dormir> /durmˈi/ "SLEEP_VERB"
@@ -113,7 +113,7 @@ CONSONANTS
 
 /w/ (0.024)
 	<ciutat> /siwtˈat/ "CITY_NOUN"
-	<escriure> /eskɾˈiwɾe/ "WRITE_VERB"
+	<paraula> /paɾˈawlɔ/ "WORD_NOUN"
 	<gaug> /ɡˈawk/ "JOY_NOUN"
 
 /j/ (0.021)
@@ -136,15 +136,15 @@ CONSONANTS
 	<pondre> /pˈundɾe/ "PUT_VERB"
 	<dia> /dˈiɔ/ "DAY_NOUN"
 
-/β/ (0.014)
-	<arbe> /ˈaɾβe/ "TREE_NOUN"
-	<savi> /sˈaβi/ "WISE_ADJ"
-	<auba> /ˈawβɔ/ "DAWN_NOUN"
-
 /ʒ/ (0.014)
-	<jòc> /ʒˈɔk/ "GAME_NOUN"
-	<gendre> /ʒˈɛndɾe/ "SON-IN-LAW_NOUN"
-	<genolh> /ʒenˈul/ "KNEE_NOUN"
+	<gent> /ʒˈɛn/ "PEOPLE_NOUN"
+	<legir> /leʒˈi/ "READ_VERB"
+	<manjar> /manʒˈa/ "EAT_VERB"
+
+/β/ (0.014)
+	<cabra> /kˈaβɾɔ/ "GOAT_NOUN"
+	<savi> /sˈaβi/ "WISE_ADJ"
+	<saber> /saβˈe/ "KNOW_VERB"
 
 /b/ (0.013)
 	<bon> /bˈu/ "GOOD (M.SG)_ADJ"
@@ -181,12 +181,12 @@ CONSONANTS
 	<fada> /fˈaðɔ/ "FATE_NOUN"
 	<vida> /vˈiðɔ/ "LIFE_NOUN"
 
-/ʦ/ (0.007)
+/ʦ/ (0.006)
 	<potz> /pˈuʦ/ "WELL_NOUN"
 	<prètz> /pɾˈɛʦ/ "PRICE_NOUN"
 	<dètz> /dˈɛʦ/ "TEN_NUM"
 
-/ɣ/ (0.007)
+/ɣ/ (0.006)
 	<segur> /seɣˈy/ "SAFE_ADJ"
 	<lagrema> /lˈaɣɾemɔ/ "TEAR_NOUN"
 	<dragon> /dɾaɣˈu/ "DRAGON_NOUN"

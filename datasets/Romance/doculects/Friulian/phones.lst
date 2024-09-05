@@ -15,16 +15,16 @@ VOWELS
 	<altri> /ˈaltri/ "OTHER_ADJ"
 
 /ˈɛ/ (0.03)
-	<vieli> /vjˈɛli/ "OLD_ADJ"
+	<gusiele> /ɡuzjˈɛle/ "NEEDLE_NOUN"
 	<tiere> /tjˈɛre/ "EARTH_NOUN"
 	<pet> /pˈɛt/ "BREAST_NOUN"
 
-/ˈi/ (0.03)
+/ˈi/ (0.029)
 	<timp> /tˈimp/ "TIME_NOUN"
 	<vintri> /vˈintri/ "BELLY_NOUN"
 	<piçul> /pˈiʧul/ "SMALL_ADJ"
 
-/ˈo/ (0.027)
+/ˈo/ (0.026)
 	<dolç> /dˈolʧ/ "SWEET_ADJ"
 	<sore> /sˈore/ "ABOVE_PREP"
 	<code> /kˈode/ "TAIL_NOUN"
@@ -49,15 +49,15 @@ VOWELS
 	<nissun> /nisˈuŋ/ "NONE_PRON"
 	<duts> /dˈuts/ "ALL (PL)_ADJ"
 
+/o/ (0.011)
+	<no> /no/ "NOT_ADVERB"
+	<orele> /orˈɛle/ "EAR_NOUN"
+	<montagne> /montˈaɲe/ "MOUNTAIN_NOUN"
+
 /ˈuː/ (0.01)
+	<lûs> /lˈuːs/ "LIGHT_NOUN"
 	<madûr> /madˈuːr/ "MATURE_NOUN"
 	<fûc> /fˈuːk/ "FIRE_NOUN"
-	<lûs> /lˈuːs/ "LIGHT_NOUN"
-
-/o/ (0.01)
-	<no> /no/ "NOT_ADVERB"
-	<odôr> /odˈoːr/ "ODOR_NOUN"
-	<orele> /orˈɛle/ "EAR_NOUN"
 
 /ˈɔ/ (0.009)
 	<zenoli> /ʤenˈɔli/ "KNEE_NOUN"
@@ -90,93 +90,93 @@ VOWELS
 
 
 CONSONANTS
-/l/ (0.064)
-	<cîl> /ʧˈiːl/ "SKY_NOUN"
+/l/ (0.065)
+	<piel> /pjˈɛl/ "SKIN_NOUN"
+	<voaltris> /voˈaltris/ "YOU (PL)_PRON"
 	<libar> /lˈibar/ "FREE_ADJ"
-	<leç> /lˈeʧ/ "LAW_NOUN"
 
 /r/ (0.063)
+	<vert> /vˈert/ "GREEN_ADJ"
 	<gran> /ɡrˈaŋ/ "GRAIN_NOUN"
 	<cere> /ʧˈere/ "WAX_NOUN"
-	<piore> /pjˈore/ "SHEEP_NOUN"
 
 /s/ (0.053)
+	<noaltris> /noˈaltris/ "WE_PRON"
 	<savi> /sˈavi/ "WISE_ADJ"
 	<stele> /stˈɛle/ "STAR_NOUN"
-	<nassi> /nˈasi/ "BE BORN_VERB"
 
 /t/ (0.052)
-	<lât> /lˈaːt/ "LAKE_NOUN"
-	<gote> /ɡˈote/ "DROP_NOUN"
-	<curt> /kˈurt/ "SHORT_ADJ"
+	<zentîl> /ʤentˈiːl/ "NICE_ADJ"
+	<istât> /istˈaːt/ "SUMMER_NOUN"
+	<autun> /awtˈun/ "AUTUMN_NOUN"
 
 /n/ (0.044)
-	<setemane> /setemˈane/ "WEEK_NOUN"
-	<non> /nˈɔŋ/ "NAME_NOUN"
-	<zentîl> /ʤentˈiːl/ "NICE_ADJ"
+	<no> /no/ "NOT_ADVERB"
+	<buine> /bwˈine/ "GOOD (F.SG)_ADJ"
+	<nadâ> /nadˈaː/ "SWIM_VERB"
 
 /v/ (0.031)
+	<viodi> /vjˈodi/ "SEE_VERB"
+	<vergogne> /verɡˈoɲe/ "SHAME_NOUN"
 	<voli> /vˈɔli/ "EYE_NOUN"
-	<via> /vˈie/ "ROAD_NOUN"
-	<vore> /vˈore/ "WORK_NOUN"
 
 /j/ (0.031)
 	<fiât> /fjˈaːt/ "LIVER_NOUN"
+	<piel> /pjˈɛl/ "SKIN_NOUN"
 	<uciel> /uʧjˈɛl/ "BIRD_NOUN"
-	<plaie> /plˈaje/ "PLAGUE_NOUN"
 
 /m/ (0.03)
+	<roman> /romˈaŋ/ "ROMAN_ADJ"
 	<fum> /fˈum/ "SMOKE_NOUN"
 	<mighe> /mˈiɡe/ "CRUMB_NOUN"
-	<mangjâ> /manɟˈaː/ "EAT_VERB"
 
 /d/ (0.028)
+	<dragon> /draɡˈoŋ/ "DRAGON_NOUN"
 	<dodis> /dˈodis/ "TWELVE_NUM"
 	<sede> /sˈede/ "SILK_NOUN"
-	<dî> /dˈiː/ "SAY-INF_VERB"
 
 /p/ (0.027)
+	<presi> /prˈɛzi/ "PRICE_NOUN"
 	<piere> /pjˈɛre/ "STONE_NOUN"
 	<cuarp> /kwˈarp/ "BODY_NOUN"
-	<spine> /spˈine/ "SPINE_NOUN"
 
 /k/ (0.025)
+	<blanc> /blˈaŋk/ "WHITE_ADJ"
 	<crodi> /krˈodi/ "BELIEVE_VERB"
 	<cuar> /kwˈar/ "HORN_NOUN"
-	<lûk> /lˈuːk/ "PLACE_NOUN"
 
 /f/ (0.025)
+	<fum> /fˈum/ "SMOKE_NOUN"
 	<fûc> /fˈuːk/ "FIRE_NOUN"
 	<femine> /fˈemine/ "WOMAN_NOUN"
-	<frut> /frˈut/ "FRUIT_NOUN"
 
 /ŋ/ (0.024)
+	<lion> /ljˈoŋ/ "LION_NOUN"
 	<sanc> /sˈaŋk/ "BLOOD_NOUN"
 	<man> /mˈaŋ/ "HAND_NOUN"
-	<lion> /ljˈoŋ/ "LION_NOUN"
 
 /w/ (0.021)
-	<diu> /dˈiw/ "GOD_NOUN"
-	<jeur> /jˈɛwr/ "HARE_NOUN"
-	<cuatri> /kwˈatri/ "FOUR_NUM"
+	<cuar> /kwˈar/ "HORN_NOUN"
+	<peraule> /perˈawle/ "WORD_NOUN"
+	<cueste> /kwˈɛste/ "COAST_NOUN"
 
 /ʧ/ (0.019)
-	<cîl> /ʧˈiːl/ "SKY_NOUN"
+	<leç> /lˈeʧ/ "LAW_NOUN"
+	<palaç> /palˈaʧ/ "PALACE_NOUN"
 	<maçâ> /maʧˈaː/ "KILL_VERB"
-	<umbriçon> /umbriʧˈoŋ/ "NAVEL_NOUN"
 
 /c/ (0.017)
-	<moscje> /mˈosce/ "FLY_NOUN"
-	<vincj> /vˈinc/ "TWENTY_NUM"
-	<cjar> /cˈar/ "MEAT_NOUN"
+	<bocje> /bˈoce/ "MOUTH_NOUN"
+	<cjavel> /cavˈel/ "HAIR_NOUN"
+	<cjalt> /cˈalt/ "HOT_ADJ"
 
 /b/ (0.015)
-	<blanc> /blˈaŋk/ "WHITE_ADJ"
+	<buinis> /bwˈinis/ "GOOD (F.PL)_ADJ"
+	<arbul> /ˈarbul/ "TREE_NOUN"
 	<bagn> /bˈaɲ/ "BATH_NOUN"
-	<jerbe> /jˈɛrbe/ "GRASS_NOUN"
 
 /ɡ/ (0.013)
-	<aghe> /ˈaɡe/ "WATER_NOUN"
+	<lagrime> /lˈaɡrime/ "TEAR_NOUN"
 	<gote> /ɡˈote/ "DROP_NOUN"
 	<gran> /ɡrˈaŋ/ "GRAIN_NOUN"
 
@@ -185,10 +185,10 @@ CONSONANTS
 	<montagne> /montˈaɲe/ "MOUNTAIN_NOUN"
 	<vignî> /viɲˈiː/ "COME-INF_VERB"
 
-/ʤ/ (0.008)
-	<zentîl> /ʤentˈiːl/ "NICE_ADJ"
+/ʤ/ (0.009)
+	<zenoli> /ʤenˈɔli/ "KNEE_NOUN"
 	<panze> /pˈanʤe/ "BELLY_NOUN"
-	<zinar> /ʤˈinar/ "SON-IN-LAW_NOUN"
+	<zentîl> /ʤentˈiːl/ "NICE_ADJ"
 
 /z/ (0.008)
 	<cjase> /cˈaze/ "HOUSE_NOUN"

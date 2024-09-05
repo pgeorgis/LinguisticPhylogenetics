@@ -19,15 +19,15 @@ VOWELS
 	<lèngua> /lˈɛŋɡwa/ "TONGUE_NOUN"
 	<rè> /rˈɛ/ "KING_NOUN"
 
-/ˈi/ (0.036)
+/ˈi/ (0.035)
 	<farina> /farˈina/ "FLOUR_NOUN"
 	<biv> /bˈif/ "DRINK_VERB"
 	<edì> /edˈi/ "SEE_VERB"
 
-/ˈe/ (0.029)
+/ˈe/ (0.03)
 	<négher> /nˈeɡer/ "BLACK_ADJ"
-	<fél> /fˈel/ "STRING_NOUN"
-	<méla> /mˈela/ "THOUSAND_NUM"
+	<préda> /prˈeda/ "STONE_NOUN"
+	<dés> /dˈes/ "TEN_NUM"
 
 /ˈø/ (0.021)
 	<növ> /nˈøf/ "NEW_ADJ"
@@ -89,10 +89,10 @@ CONSONANTS
 	<duls> /dˈuls/ "SWEET_ADJ"
 	<sàe> /sˈae/ "WISE_ADJ"
 
-/l/ (0.056)
+/l/ (0.057)
 	<fiöla> /fjˈøla/ "DAUGHTER_NOUN"
 	<salüte> /salˈyte/ "HEALTH_NOUN"
-	<lóngh> /lˈoŋk/ "LONG_ADJ"
+	<scoltà> /skoltˈa/ "LISTEN_VERB"
 
 /k/ (0.049)
 	<castèl> /kastˈɛl/ "CASTLE_NOUN"
@@ -134,10 +134,10 @@ CONSONANTS
 	<quàia> /kwˈaja/ "QUAIL_NOUN"
 	<piöma> /pjˈøma/ "FEATHER_NOUN"
 
-/z/ (0.02)
-	<zenöcc> /zenˈøʧ/ "KNEE_NOUN"
-	<resù> /rezˈu/ "REASON_NOUN"
-	<zald> /zˈalt/ "YELLOW_ADJ"
+/z/ (0.021)
+	<zögn> /zˈøɲ/ "JUNE_PROPN"
+	<lesì> /lezˈi/ "READ_VERB"
+	<pianzì> /pjanzˈi/ "WEEP_VERB"
 
 /ɡ/ (0.019)
 	<góla> /ɡˈola/ "THROAT_NOUN"

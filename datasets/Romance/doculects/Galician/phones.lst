@@ -1,45 +1,45 @@
 VOWELS
-/ʊ/ (0.068)
+/ʊ/ (0.07)
 	<escuro> /eskˈuɾʊ/ "DARK_ADJ"
-	<río> /rˈiʊ/ "RIVER_NOUN"
-	<ano> /ˈanʊ/ "YEAR_NOUN"
+	<roxo> /rˈoʃʊ/ "RED_ADJ"
+	<sabio> /sˈaβjʊ/ "WISE_ADJ"
 
 /ɐ/ (0.059)
 	<cereixa> /θeɾˈejʃɐ/ "CHERRY_NOUN"
 	<cabra> /kˈaβɾɐ/ "GOAT_NOUN"
 	<dia> /dˈiɐ/ "DAY_NOUN"
 
-/ˈa/ (0.05)
+/ˈa/ (0.049)
 	<árbore> /ˈaɾβoɾɪ/ "TREE_NOUN"
 	<falar> /falˈaɾ/ "SPEAK_VERB"
 	<nadar> /naðˈaɾ/ "SWIM_VERB"
 
-/ˈe/ (0.042)
-	<poñer> /poɲˈeɾ/ "PUT_VERB"
-	<verde> /bˈeɾðɪ/ "GREEN_ADJ"
-	<estrela> /estɾˈelɐ/ "STAR_NOUN"
+/ˈe/ (0.044)
+	<ver> /bˈeɾ/ "SEE_VERB"
+	<cabelo> /kaβˈelʊ/ "HAIR_NOUN"
+	<morrer> /morˈeɾ/ "DIE_VERB"
 
 /ˈo/ (0.039)
-	<gota> /ɡˈotɐ/ "DROP_NOUN"
-	<mellor> /meʎˈoɾ/ "BETTER_ADJ"
 	<pouco> /pˈowkʊ/ "LITTLE_ADJ"
+	<todo> /tˈoðos/ "ALL (PL)_ADJ"
+	<pozo> /pˈoθʊ/ "WELL_NOUN"
 
 /ˈi/ (0.026)
-	<cortiza> /koɾtˈiθɐ/ "BARK_NOUN"
 	<digo> /dˈiɣʊ/ "SAY-1SG_VERB"
 	<espiña> /espˈiɲɐ/ "SPINE_NOUN"
+	<cinsa> /θˈinsɐ/ "ASH_NOUN"
 
-/ɪ/ (0.026)
-	<sobre> /sˈoβɾɪ/ "ABOVE_PREP"
+/ɪ/ (0.025)
 	<golpe> /ɡˈɔlpɪ/ "STRIKE_NOUN"
 	<home> /ˈɔmɪ/ "MAN_NOUN"
+	<fame> /fˈamɪ/ "HUNGER_NOUN"
 
-/e/ (0.023)
-	<león> /leˈɔŋ/ "LION_NOUN"
+/e/ (0.022)
 	<cereixa> /θeɾˈejʃɐ/ "CHERRY_NOUN"
 	<seguro> /seɣˈuɾʊ/ "SAFE_ADJ"
+	<fermoso> /feɾmˈoso/ "BEAUTIFUL (M)_ADJ"
 
-/a/ (0.023)
+/a/ (0.022)
 	<nacer> /naθˈeɾ/ "BE BORN_VERB"
 	<nariz> /naɾˈiθ/ "NOSE_NOUN"
 	<fígado> /fˈiɣaðʊ/ "LIVER_NOUN"
@@ -49,29 +49,29 @@ VOWELS
 	<noso> /nˈɔsʊ/ "OUR_ADJ"
 	<cola> /kˈɔlɐ/ "TAIL_NOUN"
 
+/o/ (0.018)
+	<morder> /moɾðˈeɾ/ "BITE_VERB"
+	<cordeiro> /koɾðˈejɾʊ/ "LAMB_NOUN"
+	<nosoutros> /nosˈowtɾos/ "WE_PRON"
+
 /ˈɛ/ (0.017)
-	<herba> /ˈɛɾβɐ/ "GRASS_NOUN"
-	<sete> /sˈɛtɪ/ "SEVEN_NUM"
-	<verme> /bˈɛɾmɪ/ "WORM_NOUN"
+	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
+	<testa> /tˈɛstɐ/ "SKULL_NOUN"
+	<lebre> /lˈɛβɾɪ/ "HARE_NOUN"
 
 /ˈu/ (0.017)
-	<cu> /kˈu/ "BUTTOCKS_NOUN"
-	<ningún> /niŋɡˈuŋ/ "NONE_PRON"
-	<puño> /pˈuɲʊ/ "FIST_NOUN"
-
-/o/ (0.017)
-	<non> /noŋ/ "NOT_ADVERB"
-	<proveito> /pɾoβˈejtʊ/ "PROFIT_NOUN"
-	<romano> /romˈanʊ/ "ROMAN_ADJ"
+	<duas> /dˈuɐs/ "TWO (F)_NUM"
+	<lúa> /lˈuɐ/ "MOON_NOUN"
+	<agulla> /aɣˈuʎɐ/ "NEEDLE_NOUN"
 
 /i/ (0.008)
+	<lágrima> /lˈaɣɾimɐ/ "TEAR_NOUN"
 	<cincuenta> /θiŋkwˈentɐ/ "FIFTY_NUM"
 	<piollo> /piˈoʎʊ/ "LOUSE_NOUN"
-	<escribir> /eskɾiβˈiɾ/ "WRITE_VERB"
 
-/ˈɑ/ (0.008)
-	<branco> /bɾˈɑŋkʊ/ "WHITE_ADJ"
+/ˈɑ/ (0.007)
 	<caro> /kˈɑɾʊ/ "DEAR_ADJ"
+	<branco> /bɾˈɑŋkʊ/ "WHITE_ADJ"
 	<man> /mˈɑŋ/ "HAND_NOUN"
 
 /u/ (0.002)
@@ -88,17 +88,17 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.075)
-	<estrela> /estɾˈelɐ/ "STAR_NOUN"
-	<branco> /bɾˈɑŋkʊ/ "WHITE_ADJ"
-	<voar> /boˈaɾ/ "FLY_VERB"
+/ɾ/ (0.076)
+	<falar> /falˈaɾ/ "SPEAK_VERB"
+	<chorar> /ʧoɾˈaɾ/ "WEEP_VERB"
+	<chor> /ʧˈoɾ/ "FLOWER_NOUN"
 
 /s/ (0.042)
 	<osso> /ˈosʊ/ "BONE_NOUN"
 	<duas> /dˈuɐs/ "TWO (F)_NUM"
 	<sabes> /sˈaβes/ "KNOW-2SG_VERB"
 
-/t/ (0.037)
+/t/ (0.036)
 	<tempo> /tˈempʊ/ "TIME_NOUN"
 	<tres> /tɾˈes/ "THREE_NUM"
 	<punto> /pˈuntʊ/ "POINT_NOUN"
@@ -114,13 +114,13 @@ CONSONANTS
 	<lago> /lˈaɣʊ/ "LAKE_NOUN"
 
 /k/ (0.033)
-	<pequeno> /pekˈenʊ/ "SMALL_ADJ"
-	<carne> /kˈaɾnɪ/ "MEAT_NOUN"
-	<boca> /bˈokɐ/ "MOUTH_NOUN"
+	<coalla> /kwˈaʎɐ/ "QUAIL_NOUN"
+	<escoitar> /eskojtˈaɾ/ "LISTEN_VERB"
+	<pouco> /pˈowkʊ/ "LITTLE_ADJ"
 
 /m/ (0.028)
-	<romano> /romˈanʊ/ "ROMAN_ADJ"
-	<femia> /fˈemjɐ/ "WOMAN_NOUN"
+	<embigo> /embˈiɣʊ/ "NAVEL_NOUN"
+	<inverno> /imbˈɛɾnʊ/ "WINTER_NOUN"
 	<amosegar> /amoseɣˈaɾ/ "BITE_VERB"
 
 /b/ (0.027)
@@ -128,85 +128,85 @@ CONSONANTS
 	<viaxe> /biˈaʃɪ/ "JOURNEY_NOUN"
 	<vergonza> /beɾɣˈonθɐ/ "SHAME_NOUN"
 
-/p/ (0.026)
+/p/ (0.025)
 	<pel> /pˈɛl/ "SKIN_NOUN"
 	<pé> /pˈɛ/ "FOOT_NOUN"
 	<prezo> /pɾˈeθʊ/ "PRICE_NOUN"
 
-/β/ (0.024)
+/β/ (0.023)
 	<choiva> /ʧˈojβɐ/ "RAIN_NOUN"
 	<beber> /beβˈeɾ/ "DRINK_VERB"
 	<sabio> /sˈaβjʊ/ "WISE_ADJ"
 
-/θ/ (0.023)
+/θ/ (0.022)
 	<pozo> /pˈoθʊ/ "WELL_NOUN"
 	<cidade> /θiðˈaðɪ/ "CITY_NOUN"
 	<cinco> /θˈiŋkʊ/ "FIVE_NUM"
 
-/j/ (0.019)
-	<leite> /lˈejtɪ/ "MILK_NOUN"
-	<femia> /fˈemjɐ/ "WOMAN_NOUN"
-	<lei> /lˈej/ "LAW_NOUN"
+/j/ (0.02)
+	<moito> /mˈojtʊ/ "MANY_ADJ"
+	<sabio> /sˈaβjʊ/ "WISE_ADJ"
+	<cordeiro> /koɾðˈejɾʊ/ "LAMB_NOUN"
 
 /ʃ/ (0.016)
-	<xunto> /ʃˈuntʊ/ "JOINED_ADJ"
-	<xeonllo> /ʃeˈonʎʊ/ "KNEE_NOUN"
-	<anxo> /ˈanʃʊ/ "ANGEL_NOUN"
+	<xeo> /ʃˈeʊ/ "ICE_NOUN"
+	<xuño> /ʃˈuɲʊ/ "JUNE_PROPN"
+	<xove> /ʃˈɔvɪ/ "YOUNG_ADJ"
 
 /ŋ/ (0.016)
-	<razón> /raθˈoŋ/ "REASON_NOUN"
+	<sangue> /sˈɑŋɡɪ/ "BLOOD_NOUN"
+	<un> /ˈuŋ/ "ONE_NUM"
 	<pan> /pˈɑŋ/ "BREAD_NOUN"
-	<man> /mˈɑŋ/ "HAND_NOUN"
 
 /ð/ (0.016)
-	<pedra> /pˈɛðɾɐ/ "STONE_NOUN"
+	<metade> /metˈaðɪ/ "HALF_NOUN"
+	<espada> /espˈaðɐ/ "SWORD_NOUN"
 	<estado> /estˈaðʊ/ "STATE_NOUN"
-	<axudar> /aʃuðˈaɾ/ "HELP_VERB"
 
 /f/ (0.016)
+	<forza> /fˈɔɾθɐ/ "STRENGTH_NOUN"
+	<ferro> /fˈɛrʊ/ "IRON_NOUN"
 	<forte> /fˈɔɾtɪ/ "STRONG_ADJ"
-	<fin> /fˈiŋ/ "END_NOUN"
-	<fume> /fˈumɪ/ "SMOKE_NOUN"
 
-/ɣ/ (0.015)
-	<xogo> /ʃˈɔɣʊ/ "GAME_NOUN"
-	<amosegar> /amoseɣˈaɾ/ "BITE_VERB"
-	<fogo> /fˈoɣʊ/ "FIRE_NOUN"
+/ɣ/ (0.014)
+	<igual> /iɣwˈal/ "EQUAL_ADJ"
+	<auga> /ˈawɣa/ "WATER_NOUN"
+	<digo> /dˈiɣʊ/ "SAY-1SG_VERB"
 
 /d/ (0.013)
-	<duas> /dˈuɐs/ "TWO (F)_NUM"
-	<dous> /dˈows/ "TWO (M)_NUM"
 	<caldo> /kˈaldʊ/ "HOT_ADJ"
+	<grande> /ɡrˈandɪ/ "BIG_ADJ"
+	<deus> /dˈews/ "GOD_NOUN"
 
 /ɲ/ (0.012)
+	<leña> /lˈeɲɐ/ "WOOD_NOUN"
+	<xuño> /ʃˈuɲʊ/ "JUNE_PROPN"
 	<vergoña> /beɾɣˈoɲɐ/ "SHAME_NOUN"
-	<viño> /bˈiɲʊ/ "WINE_NOUN"
-	<raíña> /raˈiɲa/ "QUEEN_NOUN"
 
 /w/ (0.012)
+	<vosoutros> /bosˈowtɾos/ "YOU (PL)_PRON"
 	<cousa> /kˈowsɐ/ "THING_NOUN"
-	<auga> /ˈawɣa/ "WATER_NOUN"
-	<nosoutros> /nosˈowtɾos/ "WE_PRON"
+	<dous> /dˈows/ "TWO (M)_NUM"
 
 /ʎ/ (0.01)
-	<ollo> /ˈoʎʊ/ "EYE_NOUN"
-	<piollo> /piˈoʎʊ/ "LOUSE_NOUN"
-	<xeonllo> /ʃeˈonʎʊ/ "KNEE_NOUN"
+	<folla> /fˈoʎɐ/ "LEAF_NOUN"
+	<unlla> /ˈunʎɐ/ "FINGERNAIL_NOUN"
+	<illa> /ˈiʎɐ/ "ISLAND_NOUN"
 
 /r/ (0.01)
-	<roxo> /rˈoʃʊ/ "RED_ADJ"
-	<río> /rˈiʊ/ "RIVER_NOUN"
-	<grande> /ɡrˈandɪ/ "BIG_ADJ"
+	<redondo> /reðˈondʊ/ "ROUND_ADJ"
+	<froito> /frˈojtʊ/ "FRUIT_NOUN"
+	<rubio> /rˈuβjʊ/ "RED_ADJ"
 
 /ɡ/ (0.008)
-	<ningún> /niŋɡˈuŋ/ "NONE_PRON"
+	<golpe> /ɡˈɔlpɪ/ "STRIKE_NOUN"
 	<groso> /ɡɾˈɔsʊ/ "THICK_ADJ"
-	<gato> /ɡˈatʊ/ "CAT_NOUN"
+	<grande> /ɡrˈandɪ/ "BIG_ADJ"
 
 /ʧ/ (0.006)
-	<chorar> /ʧoɾˈaɾ/ "WEEP_VERB"
-	<chor> /ʧˈoɾ/ "FLOWER_NOUN"
-	<choiva> /ʧˈojβɐ/ "RAIN_NOUN"
+	<chaga> /ʧˈaɣɐ/ "PLAGUE_NOUN"
+	<chama> /ʧˈamɐ/ "FLAME_NOUN"
+	<cheo> /ʧˈeʊ/ "FULL_ADJ"
 
 /v/ (0.001)
 	<voo> /vˈoʊ/ "FLIGHT_NOUN"

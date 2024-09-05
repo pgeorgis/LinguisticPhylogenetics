@@ -1,8 +1,8 @@
 VOWELS
 /e/ (0.092)
 	<cheréssia> /kerˈesja/ "CHERRY_NOUN"
-	<leghere> /lˈeɣere/ "READ_VERB"
-	<peraula> /perˈawla/ "WORD_NOUN"
+	<frúmene> /frˈumene/ "RIVER_NOUN"
+	<òbera> /ˈoβera/ "WORK_NOUN"
 
 /u/ (0.074)
 	<paragula> /parˈaɣula/ "WORD_NOUN"
@@ -24,10 +24,10 @@ VOWELS
 	<foza> /fˈoʣa/ "LEAF_NOUN"
 	<atógnu> /atˈoɲːu/ "AUTUMN_NOUN"
 
-/ˈe/ (0.04)
-	<femina> /fˈemina/ "WOMAN_NOUN"
-	<ferru> /fˈerːu/ "IRON_NOUN"
-	<re> /rˈe/ "KING_NOUN"
+/ˈe/ (0.041)
+	<jerru> /jˈerːu/ "WINTER_NOUN"
+	<belu> /bˈelu/ "ICE_NOUN"
+	<deo> /dˈeo/ "I_PRON"
 
 /ˈi/ (0.039)
 	<issa> /ˈisːa/ "SHE_PRON"
@@ -39,10 +39,10 @@ VOWELS
 	<istade> /istˈaðe/ "SUMMER_NOUN"
 	<priogu> /priˈoɣu/ "LOUSE_NOUN"
 
-/ˈu/ (0.026)
-	<lughe> /lˈuɣe/ "LIGHT_NOUN"
+/ˈu/ (0.025)
+	<luna> /lˈuna/ "MOON_NOUN"
 	<guta> /ɡˈuta/ "DROP_NOUN"
-	<ruju> /rˈuju/ "RED_ADJ"
+	<frúmene> /frˈumene/ "RIVER_NOUN"
 
 /o/ (0.013)
 	<podere> /poðˈere/ "CAN_VERB"
@@ -74,34 +74,34 @@ CONSONANTS
 /r/ (0.083)
 	<prenu> /prˈenu/ "FULL_ADJ"
 	<mandhigare> /manɖiɣˈare/ "EAT_VERB"
-	<aranza> /arˈanʣa/ "SPIDER_NOUN"
+	<pedra> /pˈeðra/ "STONE_NOUN"
 
-/n/ (0.054)
+/n/ (0.053)
 	<sanu> /sˈanu/ "HEALTHY (M)_ADJ"
-	<nie> /nˈie/ "SNOW_NOUN"
-	<nomene> /nˈomene/ "NAME_NOUN"
+	<ghèneru> /ɡˈeneru/ "SON-IN-LAW_NOUN"
+	<bighinu> /biɣˈinu/ "NEIGHBOR_NOUN"
 
-/k/ (0.045)
-	<iscriere> /iskrˈiere/ "WRITE_VERB"
+/k/ (0.044)
 	<chisina> /kˈisina/ "ASH_NOUN"
 	<chimbe> /kˈimbe/ "FIVE_NUM"
+	<coa> /kˈoa/ "TAIL_NOUN"
 
-/b/ (0.034)
-	<bregunza> /breɣˈunʣa/ "SHAME_NOUN"
-	<boghe> /bˈoɣe/ "VOICE_NOUN"
+/b/ (0.035)
+	<bídere> /bˈiðerĕ/ "SEE_VERB"
+	<binti> /bˈinti/ "TWENTY_NUM"
 	<biteddu> /bitˈeɖːu/ "CALF_NOUN"
 
+/l/ (0.034)
+	<líbberu> /lˈibːeru/ "FREE_ADJ"
+	<alvu> /ˈalvu/ "WHITE_ADJ"
+	<belu> /bˈelu/ "ICE_NOUN"
+
 /s/ (0.033)
-	<ispiga> /ispˈiɣa/ "EAR OF GRAIN_NOUN"
-	<ispàda> /ispˈaða/ "SWORD_NOUN"
-	<sanu> /sˈanu/ "HEALTHY (M)_ADJ"
+	<casteddu> /kastˈeɖːu/ "CASTLE_NOUN"
+	<ischia> /ˈiskja/ "KNOW-SBJ-1SG_VERB"
+	<sèere> /sˈeere/ "SIT_VERB"
 
-/l/ (0.033)
-	<fàlsu> /fˈalsu/ "FALSE_ADJ"
-	<lítera> /lˈitera/ "LETTER_NOUN"
-	<colpu> /kˈolpu/ "STRIKE_NOUN"
-
-/t/ (0.031)
+/t/ (0.032)
 	<festa> /fˈesta/ "PARTY_NOUN"
 	<istàdu> /istˈaðu/ "STATE_NOUN"
 	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
@@ -141,8 +141,8 @@ CONSONANTS
 	<didu> /dˈiðu/ "FINGER_NOUN"
 	<deo> /dˈeo/ "I_PRON"
 
-/ɡ/ (0.011)
-	<longu> /lˈoŋɡu/ "LONG_ADJ"
+/ɡ/ (0.01)
+	<ghèneru> /ɡˈeneru/ "SON-IN-LAW_NOUN"
 	<ghinghia> /ɡiŋɡˈia/ "GUMS_NOUN"
 	<grandhe> /ɡrˈanɖe/ "BIG_ADJ"
 

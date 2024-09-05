@@ -1,5 +1,5 @@
 VOWELS
-/ə/ (0.131)
+/ə/ (0.129)
 	<espiga> /əspˈiɣə/ "EAR OF GRAIN_NOUN"
 	<setmana> /səmːˈanə/ "WEEK_NOUN"
 	<castell> /kəstˈeʎ/ "CASTLE_NOUN"
@@ -7,22 +7,22 @@ VOWELS
 /ˈa/ (0.068)
 	<all> /ˈaʎ/ "GARLIC_NOUN"
 	<alba> /ˈalβə/ "DAWN_NOUN"
-	<guatlla> /ɡwˈaʎːə/ "QUAIL_NOUN"
+	<plaga> /plˈaɣə/ "PLAGUE_NOUN"
 
-/ˈɔ/ (0.036)
+/ˈɔ/ (0.035)
 	<nou> /nˈɔw/ "NINE_NUM"
 	<nostre> /nˈɔstɾə/ "OUR_ADJ"
 	<fort> /fˈɔrt/ "STRONG_ADJ"
 
 /ˈi/ (0.034)
-	<raïm> /rəˈim/ "RAISIN_NOUN"
+	<profit> /pɾufˈit/ "PROFIT_NOUN"
 	<cinc> /sˈiŋ/ "FIVE_NUM"
 	<mica> /mˈikə/ "CRUMB_NOUN"
 
 /ˈɛ/ (0.031)
-	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
+	<cel> /sˈɛl/ "SKY_NOUN"
 	<conèixer> /kunˈɛʃə/ "BE ACQUAINTED WITH_VERB"
-	<preu> /pɾˈɛw/ "PRICE_NOUN"
+	<pena> /pˈɛnə/ "PAIN_NOUN"
 
 /ˈe/ (0.031)
 	<anell> /ənˈeʎ/ "RING_NOUN"
@@ -35,14 +35,14 @@ VOWELS
 	<juny> /ʒˈuɲ/ "JUNE_PROPN"
 
 /ˈo/ (0.022)
-	<olor> /ulˈo/ "ODOR_NOUN"
+	<no> /nˈo/ "NOT_ADVERB"
 	<ós> /ˈos/ "BEAR_NOUN"
-	<jove> /ʒˈoβə/ "YOUNG_ADJ"
+	<llop> /ʎˈop/ "WOLF_NOUN"
 
 /u/ (0.022)
 	<volar> /bulˈa/ "FLY_VERB"
 	<conèixer> /kunˈɛʃə/ "BE ACQUAINTED WITH_VERB"
-	<rodó> /ruðˈo/ "ROUND_ADJ"
+	<romà> /rumˈa/ "ROMAN_ADJ"
 
 /i/ (0.01)
 	<ànima> /ˈanimə/ "SOUL_NOUN"
@@ -62,15 +62,15 @@ CONSONANTS
 
 /k/ (0.045)
 	<creu> /kɾˈɛw/ "CROSS_NOUN"
-	<curt> /kˈuɾt/ "SHORT_ADJ"
+	<dic> /dˈik/ "SAY-1SG_VERB"
 	<oca> /ˈɔkə/ "GOOSE_NOUN"
 
 /ɾ/ (0.043)
 	<pobre> /pˈɔβɾə/ "POOR_ADJ"
-	<curt> /kˈuɾt/ "SHORT_ADJ"
+	<veure> /bˈɛwɾə/ "SEE_VERB"
 	<beure> /bˈɛwɾə/ "DRINK_VERB"
 
-/n/ (0.042)
+/n/ (0.041)
 	<carn> /kˈarn/ "MEAT_NOUN"
 	<bons> /bˈɔns/ "GOOD (M.PL)_ADJ"
 	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
@@ -83,19 +83,19 @@ CONSONANTS
 /ʎ/ (0.038)
 	<bell> /bˈeʎ/ "BEAUTIFUL (M)_ADJ"
 	<lletra> /ʎˈetɾə/ "LETTER_NOUN"
-	<vell> /bˈeʎ/ "OLD_ADJ"
+	<agulla> /əɣˈuʎə/ "NEEDLE_NOUN"
 
-/l/ (0.036)
-	<vilà> /bilˈa/ "VILLAIN_NOUN"
+/l/ (0.037)
+	<gola> /ɡˈolə/ "THROAT_NOUN"
 	<alba> /ˈalβə/ "DAWN_NOUN"
 	<flama> /flˈamə/ "FLAME_NOUN"
 
 /p/ (0.034)
-	<plorar> /pluɾˈa/ "WEEP_VERB"
+	<espasa> /əspˈazə/ "SWORD_NOUN"
 	<poll> /pˈoʎ/ "LOUSE_NOUN"
 	<penya> /pˈɛɲə/ "FEATHER_NOUN"
 
-/m/ (0.033)
+/m/ (0.032)
 	<matar> /mətˈa/ "KILL_VERB"
 	<romà> /rumˈa/ "ROMAN_ADJ"
 	<mare> /mˈaɾə/ "MOTHER_NOUN"
@@ -105,42 +105,42 @@ CONSONANTS
 	<volar> /bulˈa/ "FLY_VERB"
 	<vida> /bˈiðə/ "LIFE_NOUN"
 
-/r/ (0.026)
+/r/ (0.025)
 	<reina> /rˈejnə/ "QUEEN_NOUN"
 	<hivern> /iβˈɛrn/ "WINTER_NOUN"
 	<fembra> /fˈɛmbrə/ "WOMAN_NOUN"
 
-/w/ (0.024)
-	<deu> /dˈɛw/ "TEN_NUM"
+/w/ (0.025)
+	<estiu> /əstˈiw/ "SUMMER_NOUN"
 	<niu> /nˈiw/ "CLOUD_NOUN"
-	<paraula> /pəɾˈawlə/ "WORD_NOUN"
+	<pou> /pˈow/ "WELL_NOUN"
 
 /f/ (0.019)
 	<fada> /fˈaðə/ "FATE_NOUN"
-	<fin> /fˈi/ "THIN_ADJ"
-	<fruit> /fɾˈujt/ "FRUIT_NOUN"
+	<fort> /fˈɔrt/ "STRONG_ADJ"
+	<fembra> /fˈɛmbrə/ "WOMAN_NOUN"
 
 /d/ (0.016)
+	<dormir> /durmˈi/ "SLEEP_VERB"
 	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
 	<do> /dˈo/ "GIFT_NOUN"
-	<dir> /dˈi/ "SAY-INF_VERB"
 
 /β/ (0.015)
-	<savi> /sˈaβi/ "WISE_ADJ"
 	<sabut> /səβˈut/ "KNOWN_VERB"
-	<llevar> /ʎəβˈa/ "CARRY_VERB"
+	<savi> /sˈaβi/ "WISE_ADJ"
+	<jove> /ʒˈoβə/ "YOUNG_ADJ"
 
-/ʒ/ (0.014)
-	<gent> /ʒˈen/ "PEOPLE_NOUN"
-	<llegir> /ʎəʒˈi/ "READ_VERB"
-	<menjar> /məɲʒˈa/ "EAT_VERB"
+/ʒ/ (0.015)
+	<argila> /ərʒˈilə/ "CLAY_NOUN"
+	<genoll> /ʒənˈoʎ/ "KNEE_NOUN"
+	<pluja> /plˈuʒə/ "RAIN_NOUN"
 
-/ɡ/ (0.014)
+/ɡ/ (0.013)
+	<gras> /ɡrˈas/ "FAT_NOUN"
 	<ungla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
-	<llengua> /ʎˈɛŋɡwə/ "TONGUE_NOUN"
 	<guatlla> /ɡwˈaʎːə/ "QUAIL_NOUN"
 
-/ɲ/ (0.011)
+/ɲ/ (0.01)
 	<juny> /ʒˈuɲ/ "JUNE_PROPN"
 	<muntanya> /muntˈaɲə/ "MOUNTAIN_NOUN"
 	<plànyer> /plˈaɲə/ "WEEP_VERB"
@@ -155,22 +155,22 @@ CONSONANTS
 	<llàgrima> /ʎˈaɣɾimə/ "TEAR_NOUN"
 	<agulla> /əɣˈuʎə/ "NEEDLE_NOUN"
 
+/ŋ/ (0.007)
+	<cinquanta> /siŋkwˈantə/ "FIFTY_NUM"
+	<blanc> /blˈaŋ/ "WHITE_ADJ"
+	<cinc> /sˈiŋ/ "FIVE_NUM"
+
 /j/ (0.007)
-	<lluita> /ʎˈujtə/ "FIGHT_NOUN"
-	<aigua> /ˈajɣwə/ "WATER_NOUN"
-	<meitat> /məjtˈat/ "HALF_NOUN"
+	<fruit> /fɾˈujt/ "FRUIT_NOUN"
+	<canviar> /kəmbjˈa/ "CHANGE_VERB"
+	<llei> /ʎˈej/ "LAW_NOUN"
 
-/ŋ/ (0.006)
-	<ungla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
-	<sang> /sˈaŋ/ "BLOOD_NOUN"
-	<vinc> /bˈiŋ/ "COME-1SG_VERB"
-
-/ʃ/ (0.005)
+/ʃ/ (0.004)
+	<néixer> /nˈeʃə/ "BE BORN_VERB"
 	<baix> /bˈaʃ/ "LOW_ADJ"
 	<cuixa> /kˈuʃə/ "THIGH_NOUN"
-	<néixer> /nˈeʃə/ "BE BORN_VERB"
 
-/z/ (0.005)
+/z/ (0.004)
 	<dotze> /dˈodzə/ "TWELVE_NUM"
 	<nosaltres> /nuzˈaltɾəs/ "WE_PRON"
 	<cosa> /kˈɔza/ "THING_NOUN"

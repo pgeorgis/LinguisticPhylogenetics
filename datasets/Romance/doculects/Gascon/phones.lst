@@ -1,8 +1,8 @@
 VOWELS
-/ˈa/ (0.074)
+/ˈa/ (0.075)
 	<auba> /ˈawβɔ/ "DAWN_NOUN"
-	<sau> /sˈaw/ "SALT_NOUN"
-	<jaune> /ʒˈawne/ "YELLOW_ADJ"
+	<sant> /sˈan/ "SACRED_ADJ"
+	<an> /ˈaŋ/ "YEAR_NOUN"
 
 /ɔ/ (0.057)
 	<còsta> /kˈɔstɔ/ "COAST_NOUN"
@@ -14,7 +14,7 @@ VOWELS
 	<estiu> /estˈiw/ "SUMMER_NOUN"
 	<arbe> /ˈaɾβe/ "TREE_NOUN"
 
-/ˈe/ (0.047)
+/ˈe/ (0.046)
 	<arreina> /arˈejnɔ/ "QUEEN_NOUN"
 	<plen> /plˈeŋ/ "FULL_ADJ"
 	<cueisha> /kwˈejʃɔ/ "THIGH_NOUN"
@@ -24,7 +24,7 @@ VOWELS
 	<argèla> /arʒˈɛlɔ/ "CLAY_NOUN"
 	<arriu> /arˈiw/ "RIVER_NOUN"
 
-/ˈu/ (0.029)
+/ˈu/ (0.028)
 	<tot> /tˈut/ "ALL (SG)_ADJ"
 	<notz> /nˈuʦ/ "NUT_NOUN"
 	<ploja> /plˈuʒɔ/ "RAIN_NOUN"
@@ -34,10 +34,10 @@ VOWELS
 	<espia> /espˈiɔ/ "SPINE_NOUN"
 	<hitge> /hˈiʤe/ "LIVER_NOUN"
 
-/ˈɛ/ (0.026)
+/ˈɛ/ (0.027)
 	<lèbe> /lˈɛβe/ "HARE_NOUN"
 	<castèth> /kastˈɛt/ "CASTLE_NOUN"
-	<prètz> /pɾˈɛʦ/ "PRICE_NOUN"
+	<hèsta> /hˈɛstɔ/ "PARTY_NOUN"
 
 /ˈy/ (0.02)
 	<subre> /sˈyβɾe/ "ABOVE_PREP"
@@ -54,16 +54,16 @@ VOWELS
 	<sorelh> /suɾˈɛʎ/ "SUN_NOUN"
 	<anjo> /ˈanʒu/ "ANGEL_NOUN"
 
-/i/ (0.008)
+/i/ (0.007)
 	<savi> /sˈaβi/ "WISE_ADJ"
 	<hami> /hˈami/ "HUNGER_NOUN"
 	<ivèrn> /iβˈɛr/ "WINTER_NOUN"
 
-/ˈo/ (0.002)
+/ˈo/ (0.001)
 	<só> /sˈo/ "SUN_NOUN"
 	<mórder> /mˈorde/ "BITE_VERB"
 
-/y/ (0.002)
+/y/ (0.001)
 	<ajudar> /aʒyðˈa/ "HELP_VERB"
 	<brutlar> /bɾylːˈa/ "BURN_VERB"
 
@@ -75,27 +75,27 @@ CONSONANTS
 	<sorelh> /suɾˈɛʎ/ "SUN_NOUN"
 	<nòste> /nˈɔste/ "OUR_ADJ"
 
-/t/ (0.05)
+/t/ (0.049)
 	<tot> /tˈut/ "ALL (SG)_ADJ"
 	<salut> /salˈyt/ "HEALTH_NOUN"
 	<tu> /tˈy/ "THOU_PRON"
 
 /k/ (0.047)
-	<blanc> /blˈaŋk/ "WHITE_ADJ"
+	<qué> /kˈe/ "WHAT_PRON"
 	<cavath> /kaβˈat/ "HORSE_NOUN"
-	<qui> /kˈi/ "WHO_PRON"
+	<blanc> /blˈaŋk/ "WHITE_ADJ"
 
-/w/ (0.04)
-	<nèu> /nˈɛw/ "SNOW_NOUN"
+/w/ (0.041)
+	<oelha> /wˈeʎɔ/ "SHEEP_NOUN"
 	<ueu> /wˈew/ "EGG_NOUN"
 	<faus> /fˈaws/ "FALSE_ADJ"
 
 /l/ (0.038)
-	<lenga> /lˈeŋɡɔ/ "TONGUE_NOUN"
-	<lop> /lˈup/ "WOLF_NOUN"
+	<gola> /ɡˈulɔ/ "THROAT_NOUN"
+	<blanc> /blˈaŋk/ "WHITE_ADJ"
 	<isla> /ˈizlɔ/ "ISLAND_NOUN"
 
-/n/ (0.035)
+/n/ (0.034)
 	<pont> /pˈun/ "BRIDGE_NOUN"
 	<montanha> /muntˈaɲɔ/ "MOUNTAIN_NOUN"
 	<jaune> /ʒˈawne/ "YELLOW_ADJ"
@@ -110,12 +110,12 @@ CONSONANTS
 	<viatge> /biˈaʤe/ "JOURNEY_NOUN"
 	<verd> /bˈert/ "GREEN_ADJ"
 
-/p/ (0.029)
+/p/ (0.028)
 	<paraula> /paɾˈawlɔ/ "WORD_NOUN"
 	<còp> /kˈɔp/ "STRIKE_NOUN"
 	<espada> /espˈaðɔ/ "SWORD_NOUN"
 
-/m/ (0.029)
+/m/ (0.028)
 	<mair> /mˈajr/ "MOTHER_NOUN"
 	<vèrmi> /bˈɛrmi/ "WORM_NOUN"
 	<mossegar> /museɣˈa/ "BITE_VERB"
@@ -125,12 +125,12 @@ CONSONANTS
 	<verd> /bˈert/ "GREEN_ADJ"
 	<arroi> /arˈuj/ "RED_ADJ"
 
-/j/ (0.026)
+/j/ (0.025)
 	<arroi> /arˈuj/ "RED_ADJ"
 	<pair> /pˈajr/ "FATHER_NOUN"
 	<vielh> /bjˈeʎ/ "OLD_ADJ"
 
-/ŋ/ (0.023)
+/ŋ/ (0.022)
 	<vesin> /bezˈiŋ/ "NEIGHBOR_NOUN"
 	<an> /ˈaŋ/ "YEAR_NOUN"
 	<lenga> /lˈeŋɡɔ/ "TONGUE_NOUN"
@@ -151,16 +151,16 @@ CONSONANTS
 	<saber> /saβˈe/ "KNOW_VERB"
 
 /ʒ/ (0.013)
-	<jaune> /ʒˈawne/ "YELLOW_ADJ"
+	<gendre> /ʒˈendɾe/ "SON-IN-LAW_NOUN"
 	<anjo> /ˈanʒu/ "ANGEL_NOUN"
-	<jo> /ʒˈɔ/ "I_PRON"
+	<joen> /ʒwˈeŋ/ "YOUNG_ADJ"
 
 /ʎ/ (0.013)
 	<abelha> /aβˈeʎɔ/ "BEE_NOUN"
 	<jolh> /ʒˈuʎ/ "KNEE_NOUN"
 	<pedolh> /peðˈuʎ/ "LOUSE_NOUN"
 
-/ɡ/ (0.011)
+/ɡ/ (0.01)
 	<groc> /ɡɾˈɔk/ "YELLOW_ADJ"
 	<gai> /ɡˈaj/ "JOY_NOUN"
 	<lenga> /lˈeŋɡɔ/ "TONGUE_NOUN"
@@ -168,7 +168,7 @@ CONSONANTS
 /ð/ (0.01)
 	<seda> /sˈeðɔ/ "SILK_NOUN"
 	<pedolh> /peðˈuʎ/ "LOUSE_NOUN"
-	<assèder> /asˈɛðe/ "SIT_ADJ"
+	<assèder> /asˈɛðe/ "SIT_VERB"
 
 /ɲ/ (0.009)
 	<punh> /pˈyɲ/ "FIST_NOUN"
@@ -205,11 +205,11 @@ CONSONANTS
 	<fin> /fˈiŋ/ "END_NOUN"
 	<fòrça> /fˈɔrsɔ/ "STRENGTH_NOUN"
 
-/nː/ (0.002)
+/nː/ (0.001)
 	<hemna> /hˈenːɔ/ "WOMAN_NOUN"
 	<amna> /ˈanːɔ/ "SOUL_NOUN"
 
-/lː/ (0.002)
+/lː/ (0.001)
 	<catla> /kˈalːɔ/ "QUAIL_NOUN"
 	<brutlar> /bɾylːˈa/ "BURN_VERB"
 

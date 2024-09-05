@@ -1,8 +1,8 @@
 VOWELS
-/u/ (0.096)
+/u/ (0.097)
 	<ochju> /ˈocu/ "EYE_NOUN"
 	<toru> /tˈɔru/ "BULL_NOUN"
-	<ghjuntu> /ɟˈuntu/ "JOINED_ADJ"
+	<eiu> /ˈeju/ "I_PRON"
 
 /a/ (0.077)
 	<vacca> /vˈakːa/ "COW_NOUN"
@@ -19,7 +19,7 @@ VOWELS
 	<patre> /pˈatre/ "FATHER_NOUN"
 	<putere> /putˈɛre/ "CAN_VERB"
 
-/ˈɔ/ (0.039)
+/ˈɔ/ (0.038)
 	<bocca> /bˈɔkːa/ "MOUTH_NOUN"
 	<cunnosce> /kunːˈɔʃe/ "BE ACQUAINTED WITH_VERB"
 	<ghjovanu> /ɟˈɔvanu/ "YOUNG_ADJ"
@@ -34,9 +34,9 @@ VOWELS
 	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
 	<regina> /reʤˈina/ "QUEEN_NOUN"
 
-/ˈe/ (0.02)
-	<pelle> /pˈelːe/ "SKIN_NOUN"
-	<celu> /ʧˈelu/ "SKY_NOUN"
+/ˈe/ (0.021)
+	<sei> /sˈej/ "SIX_NUM"
+	<testa> /tˈesta/ "SKULL_NOUN"
 	<nebbia> /nˈebːja/ "FOG_NOUN"
 
 /ˈu/ (0.019)
@@ -82,15 +82,15 @@ CONSONANTS
 	<nivicà> /nivikˈa/ "SNOW (VERB)_VERB"
 	<core> /kˈɔre/ "HEART_NOUN"
 
-/p/ (0.031)
-	<capu> /kˈapu/ "HEAD_NOUN"
-	<apa> /ˈapa/ "BEE_NOUN"
-	<porcu> /pˈɔrku/ "PIG_NOUN"
+/l/ (0.032)
+	<ghjelu> /ɟˈelu/ "ICE_NOUN"
+	<lettu> /lˈetːu/ "BED_NOUN"
+	<ascultà> /askultˈa/ "LISTEN_VERB"
 
-/l/ (0.031)
-	<salsa> /sˈalsa/ "SAUCE_NOUN"
-	<dolcu> /dˈɔlku/ "SWEET_ADJ"
-	<alba> /ˈalba/ "DAWN_NOUN"
+/p/ (0.031)
+	<Spagna> /spˈaɲa/ "SPAIN_PROPN"
+	<pienghje> /pjˈɛŋɟe/ "WEEP_VERB"
+	<ponte> /pˈonte/ "BRIDGE_NOUN"
 
 /s/ (0.028)
 	<sera> /sˈɛra/ "EVENING_NOUN"
@@ -124,8 +124,8 @@ CONSONANTS
 
 /ɟ/ (0.015)
 	<ginghjiva> /ʤiɲɟˈiva/ "GUMS_NOUN"
+	<ghjudice> /ɟˈudiʧe/ "JUDGE_NOUN"
 	<ghjugnu> /ɟˈuɲu/ "JUNE_PROPN"
-	<ghjinochju> /ɟinˈɔcu/ "KNEE_NOUN"
 
 /lː/ (0.015)
 	<giallu> /ʤˈalːu/ "YELLOW_ADJ"

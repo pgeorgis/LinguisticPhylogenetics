@@ -4,10 +4,10 @@ VOWELS
 	<argile> /aʁʒil/ "CLAY_NOUN"
 	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
 
-/ɛ/ (0.054)
+/ɛ/ (0.055)
 	<cher> /ʃɛʁ/ "DEAR_ADJ"
-	<lait> /lɛ/ "MILK_NOUN"
-	<elle> /ɛl/ "SHE_PRON"
+	<chair> /ʃɛʁ/ "MEAT_NOUN"
+	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
 
 /i/ (0.048)
 	<racine> /ʁasin/ "ROOT_NOUN"
@@ -77,12 +77,12 @@ CONSONANTS
 	<faire> /fɛʁ/ "DO_VERB"
 	<graine> /ɡʁɛn/ "GRAIN_NOUN"
 
-/l/ (0.057)
+/l/ (0.058)
 	<voler> /vɔle/ "FLY_VERB"
-	<sable> /sabl/ "SAND_NOUN"
-	<fil> /fil/ "STRING_NOUN"
+	<sel> /sɛl/ "SALT_NOUN"
+	<ficelle> /fisɛl/ "STRING_NOUN"
 
-/s/ (0.052)
+/s/ (0.051)
 	<savoir> /savwaʁ/ "KNOW_VERB"
 	<gencive> /ʒɑ̃siv/ "GUMS_NOUN"
 	<tous> /tus/ "ALL (PL)_ADJ"
@@ -122,7 +122,7 @@ CONSONANTS
 	<fils> /fis/ "SON_NOUN"
 	<force> /fɔʁs/ "STRENGTH_NOUN"
 
-/k/ (0.029)
+/k/ (0.028)
 	<cou> /ku/ "NECK_NOUN"
 	<clamer> /klame/ "CALL_VERB"
 	<sec> /sɛk/ "DRY (M)_ADJ"
@@ -132,45 +132,45 @@ CONSONANTS
 	<ouvrier> /uvʁije/ "WORKER_NOUN"
 	<caille> /kaj/ "QUAIL_NOUN"
 
-/ʒ/ (0.023)
-	<sage> /saʒ/ "WISE_ADJ"
+/ʒ/ (0.024)
 	<jeune> /ʒœn/ "YOUNG_ADJ"
-	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
+	<gendre> /ʒɑ̃dʁ/ "SON-IN-LAW_NOUN"
+	<jaune> /ʒon/ "YELLOW_ADJ"
 
 /ʃ/ (0.021)
+	<cheveu> /ʃəvø/ "HAIR_NOUN"
 	<chaîne> /ʃɛn/ "CHAIN_NOUN"
 	<chaud> /ʃo/ "HOT_ADJ"
-	<chant> /ʃɑ̃/ "SONG_NOUN"
 
 /d/ (0.021)
+	<deux> /dø/ "TWO (M)_NUM"
 	<doux> /du/ "SWEET_ADJ"
 	<doigt> /dwa/ "FINGER_NOUN"
-	<donne> /dɔn/ "GIVE-3SG_VERB"
 
 /b/ (0.019)
+	<chambre> /ʃɑ̃bʁ/ "CHAMBER_NOUN"
 	<bœuf> /bœf/ "OX_NOUN"
 	<herbe> /ɛʁb/ "GRASS_NOUN"
-	<bon> /bɔ̃/ "GOOD (M.SG)_ADJ"
 
 /ɡ/ (0.013)
+	<ongle> /ɔ̃ɡl/ "FINGERNAIL_NOUN"
 	<graine> /ɡʁɛn/ "GRAIN_NOUN"
 	<gros> /ɡʁo/ "THICK_ADJ"
-	<grand> /ɡʁɑ̃/ "BIG_ADJ"
 
 /ɥ/ (0.01)
-	<puy> /pɥi/ "PODIUM_NOUN"
 	<nuage> /nɥaʒ/ "CLOUD_NOUN"
-	<tuer> /tɥe/ "KILL_VERB"
+	<puy> /pɥi/ "PODIUM_NOUN"
+	<puits> /pɥi/ "WELL_NOUN"
 
 /z/ (0.006)
+	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
 	<chose> /ʃoz/ "THING_NOUN"
 	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
-	<douze> /duz/ "TWELVE_NUM"
 
 /ɲ/ (0.006)
 	<Espagne> /ɛspaɲ/ "SPAIN_PROPN"
+	<araignée> /aʁeɲe/ "SPIDER_NOUN"
 	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
-	<ligne> /liɲ/ "LINE_NOUN"
 
 
 

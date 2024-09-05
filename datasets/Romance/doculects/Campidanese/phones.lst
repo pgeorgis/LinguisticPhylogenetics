@@ -1,15 +1,15 @@
 VOWELS
-/u/ (0.079)
+/u/ (0.08)
 	<fridu> /frˈiðu/ "COLD_ADJ"
-	<àteru> /ˈateru/ "OTHER_ADJ"
-	<lubu> /lˈuβu/ "WOLF_NOUN"
+	<unu> /ˈunu/ "ONE_NUM"
+	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
 
 /i/ (0.078)
 	<pani> /pˈani/ "BREAD_NOUN"
 	<pei> /pˈei/ "FOOT_NOUN"
 	<citadi> /ʧitˈadi/ "CITY_NOUN"
 
-/a/ (0.071)
+/a/ (0.07)
 	<Ispagna> /ispˈaɲːa/ "SPAIN_PROPN"
 	<rena> /rˈena/ "SAND_NOUN"
 	<seda> /sˈeða/ "SILK_NOUN"
@@ -24,15 +24,15 @@ VOWELS
 	<atógnu> /atˈoɲːu/ "AUTUMN_NOUN"
 	<grogu> /ɡɾˈoɣu/ "YELLOW_ADJ"
 
-/ˈi/ (0.04)
-	<ischis> /iskˈis/ "KNOW-2SG_VERB"
-	<lítera> /lˈitera/ "LETTER_NOUN"
-	<nia> /nˈia/ "SNOW_NOUN"
-
 /ˈe/ (0.04)
-	<ierru> /jˈerːu/ "WINTER_NOUN"
-	<femina> /fˈemina/ "WOMAN_NOUN"
-	<bélla> /bˈelːa/ "BEAUTIFUL (F)_ADJ"
+	<me> /mˈe/ "I_OBL_PRON"
+	<lege> /lˈeʤe/ "LAW_NOUN"
+	<pedhi> /pˈeɖːi/ "SKIN_NOUN"
+
+/ˈi/ (0.039)
+	<binu> /bˈinu/ "WINE_NOUN"
+	<linna> /lˈinːa/ "WOOD_NOUN"
+	<chinisa> /kˈinisa/ "ASH_NOUN"
 
 /e/ (0.032)
 	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
@@ -71,7 +71,7 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.074)
+/r/ (0.073)
 	<dormiri> /dormˈiri/ "SLEEP_VERB"
 	<framma> /frˈamːa/ "FLAME_NOUN"
 	<coru> /kˈoru/ "HEART_NOUN"
@@ -86,9 +86,9 @@ CONSONANTS
 	<chisina> /kˈisina/ "ASH_NOUN"
 	<caldu> /kˈaldu/ "HOT_ADJ"
 
-/l/ (0.033)
-	<bula> /bˈula/ "THROAT_NOUN"
-	<paragula> /parˈaɣula/ "WORD_NOUN"
+/l/ (0.034)
+	<làcrima> /lˈakrima/ "TEAR_NOUN"
+	<lana> /lˈana/ "WOOL_NOUN"
 	<fàlsu> /fˈalsu/ "FALSE_ADJ"
 
 /t/ (0.032)
@@ -171,25 +171,25 @@ CONSONANTS
 	<bidda> /bˈiɖːa/ "TOWN_NOUN"
 	<isteddu> /istˈeɖːu/ "STAR_NOUN"
 
+/ʤ/ (0.005)
+	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
+	<gelu> /ʤˈelu/ "ICE_NOUN"
+	<pràngiri> /prˈanʤiri/ "WEEP_VERB"
+
 /ŋ/ (0.005)
-	<conca> /kˈoŋka/ "HEAD_NOUN"
 	<unga> /ˈuŋɡa/ "FINGERNAIL_NOUN"
+	<cincu> /ʧˈiŋku/ "FIVE_NUM"
 	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
 
 /w/ (0.005)
-	<cincuanta> /ʧiŋkwˈanta/ "FIFTY_NUM"
-	<cuatru> /kwˈatru/ "FOUR_NUM"
+	<àcua> /ˈakwa/ "WATER_NOUN"
+	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
 	<peraula> /perˈawla/ "WORD_NOUN"
 
 /rː/ (0.005)
 	<narrere> /nˈarːere/ "SAY-INF_VERB"
-	<carri> /kˈarːi/ "MEAT_NOUN"
-	<ierru> /jˈerːu/ "WINTER_NOUN"
-
-/ʤ/ (0.005)
-	<pràngiri> /prˈanʤiri/ "WEEP_VERB"
-	<àngelu> /ˈanʤelu/ "ANGEL_NOUN"
-	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
+	<porri> /pˈorːi/ "CAN_VERB"
+	<ferru> /fˈerːu/ "IRON_NOUN"
 
 /ʣ/ (0.005)
 	<miza> /mˈiʣa/ "THOUSAND_NUM"

@@ -1,10 +1,10 @@
 VOWELS
-/ɛ/ (0.042)
+/ɛ/ (0.043)
 	<sèche> /sɛʃ/ "DRY (F)_ADJ"
-	<soie> /swɛ/ "SILK_NOUN"
+	<elle> /ɛl/ "SHE_PRON"
 	<pouvoir> /puvwɛʁ/ "CAN_VERB"
 
-/æɛ̯/ (0.041)
+/æɛ̯/ (0.04)
 	<vert> /væɛ̯ʁ/ "GREEN_ADJ"
 	<fais> /fæɛ̯/ "DO-1SG_VERB"
 	<caille> /kæɛ̯j/ "QUAIL_NOUN"
@@ -120,12 +120,12 @@ CONSONANTS
 	<occire> /ɔksiʁ/ "KILL_VERB"
 	<savoir> /savwɛʁ/ "KNOW_VERB"
 
-/l/ (0.057)
-	<sel> /sɛl/ "SALT_NOUN"
+/l/ (0.058)
+	<lire> /liʁ/ "READ_VERB"
 	<flamme> /flam/ "FLAME_NOUN"
 	<miel> /mjɛl/ "HONEY_NOUN"
 
-/s/ (0.052)
+/s/ (0.051)
 	<sauce> /soʊ̯s/ "SAUCE_NOUN"
 	<Espagne> /ɛspaɲ/ "SPAIN_PROPN"
 	<dix> /ʣɪs/ "TEN_NUM"
@@ -146,9 +146,9 @@ CONSONANTS
 	<voie> /vwɛ/ "ROAD_NOUN"
 
 /w/ (0.033)
-	<seoir> /swɛʁ/ "SIT_ADJ"
+	<seoir> /swɛʁ/ "SIT_VERB"
 	<oiseau> /wɛzoʊ̯/ "BIRD_NOUN"
-	<asseoir> /aswɛʁ/ "SIT_ADJ"
+	<asseoir> /aswɛʁ/ "SIT_VERB"
 
 /m/ (0.029)
 	<mordre> /mɑɔ̯ʁdʁ/ "BITE_VERB"
@@ -160,12 +160,12 @@ CONSONANTS
 	<fruit> /fʁɥi/ "FRUIT_NOUN"
 	<frère> /fʁæɛ̯ʁ/ "BROTHER_NOUN"
 
-/t/ (0.029)
+/t/ (0.028)
 	<tête> /tɛɪ̯t/ "SKULL_NOUN"
 	<ventre> /vãtʁ/ "BELLY_NOUN"
 	<lettre> /lɛtʁ/ "LETTER_NOUN"
 
-/k/ (0.029)
+/k/ (0.028)
 	<qui> /ki/ "WHO_PRON"
 	<que> /kœ/ "WHAT_PRON"
 	<clé> /kle/ "KEY_NOUN"
@@ -175,10 +175,10 @@ CONSONANTS
 	<moitié> /mwɛʦje/ "HALF_NOUN"
 	<feuille> /fœj/ "LEAF_NOUN"
 
-/ʒ/ (0.023)
-	<voyage> /vwɛjaʒ/ "JOURNEY_NOUN"
-	<rouge> /ʁuʒ/ "RED_ADJ"
-	<juin> /ʒɥẽɪ̯̃/ "JUNE_PROPN"
+/ʒ/ (0.024)
+	<joint> /ʒwẽɪ̯̃/ "JOINED_ADJ"
+	<gens> /ʒã/ "PEOPLE_NOUN"
+	<juge> /ʒyʒ/ "JUDGE_NOUN"
 
 /ʃ/ (0.021)
 	<sèche> /sɛʃ/ "DRY (F)_ADJ"

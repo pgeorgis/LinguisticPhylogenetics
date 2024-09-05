@@ -1,170 +1,170 @@
 VOWELS
-/o/ (0.094)
-	<ocho> /ˈoʧo/ "EIGHT_NUM"
+/o/ (0.096)
+	<huevo> /wˈeβo/ "EGG_NOUN"
 	<hermano> /eɾmˈano/ "BROTHER_NOUN"
-	<gozo> /ɡˈoθo/ "JOY_NOUN"
+	<hierro> /jˈero/ "IRON_NOUN"
 
-/a/ (0.079)
+/a/ (0.078)
 	<cuesta> /kwˈesta/ "COAST_NOUN"
-	<maduro> /maðˈuɾo/ "MATURE_NOUN"
-	<nadar> /naðˈaɾ/ "SWIM_VERB"
+	<hígado> /ˈiɣaðo/ "LIVER_NOUN"
+	<cima> /θˈima/ "SUMMIT_NOUN"
 
-/ˈe/ (0.072)
-	<dueña> /dwˈeɲa/ "LADY_NOUN"
-	<leche> /lˈeʧe/ "MILK_NOUN"
-	<ella> /ˈeʝa/ "SHE_PRON"
+/ˈe/ (0.074)
+	<sepa> /sˈepa/ "KNOW-SBJ-1SG_VERB"
+	<cordero> /koɾðˈeɾo/ "LAMB_NOUN"
+	<arena> /aɾˈena/ "SAND_NOUN"
 
-/ˈa/ (0.054)
+/ˈa/ (0.053)
 	<sabes> /sˈaβes/ "KNOW-2SG_VERB"
 	<llama> /ɟ͡ʝˈama/ "FLAME_NOUN"
 	<gato> /ɡˈato/ "CAT_NOUN"
 
-/e/ (0.045)
+/e/ (0.044)
 	<dulce> /dˈulθe/ "SWEET_ADJ"
 	<hermoso> /eɾmˈoso/ "BEAUTIFUL (M)_ADJ"
 	<semilla> /semˈiʝa/ "SEED_NOUN"
 
-/ˈo/ (0.035)
+/ˈo/ (0.034)
 	<piojo> /pjˈoxo/ "LOUSE_NOUN"
 	<rojo> /rˈoxo/ "RED_ADJ"
 	<dos> /dˈos/ "TWO (M)_NUM"
 
 /ˈi/ (0.028)
 	<ceniza> /θenˈiθa/ "ASH_NOUN"
-	<digo> /dˈiɣo/ "SAY-1SG_VERB"
-	<hígado> /ˈiɣaðo/ "LIVER_NOUN"
+	<amarillo> /amaɾˈiʝo/ "YELLOW_ADJ"
+	<raíz> /raˈiθ/ "ROOT_NOUN"
 
 /ˈu/ (0.019)
+	<uña> /ˈuɲa/ "FINGERNAIL_NOUN"
 	<lluvia> /ɟ͡ʝˈuβja/ "RAIN_NOUN"
 	<seguro> /seɣˈuɾo/ "SAFE_ADJ"
-	<lucha> /lˈuʧa/ "FIGHT_NOUN"
 
 /i/ (0.005)
-	<cincuenta> /θiŋkwˈenta/ "FIFTY_NUM"
-	<mitad> /mitˈað/ "HALF_NOUN"
+	<ninguno> /niŋɡˈuno/ "NONE_PRON"
+	<lágrima> /lˈaɣɾima/ "TEAR_NOUN"
 	<igual> /iɣwˈal/ "EQUAL_ADJ"
 
 /u/ (0.002)
+	<ayudar> /aʝuðˈaɾ/ "HELP_VERB"
 	<ciudad> /θjuðˈað/ "CITY_NOUN"
 	<escuchar> /eskuʧˈaɾ/ "LISTEN_VERB"
-	<ayudar> /aʝuðˈaɾ/ "HELP_VERB"
 
 
 
 CONSONANTS
 /ɾ/ (0.078)
-	<amarillo> /amaɾˈiʝo/ "YELLOW_ADJ"
-	<cabra> /kˈaβɾa/ "GOAT_NOUN"
-	<sentar> /sentˈaɾ/ "SIT_VERB"
+	<nacer> /naθˈeɾ/ "BE BORN_VERB"
+	<decir> /deθˈiɾ/ "SAY-INF_VERB"
+	<nombre> /nˈombɾe/ "NAME_NOUN"
 
-/n/ (0.054)
+/n/ (0.053)
+	<conocer> /konoθˈeɾ/ "BE ACQUAINTED WITH_VERB"
+	<nuez> /nwˈeθ/ "NUT_NOUN"
 	<encía> /enθˈia/ "GUMS_NOUN"
-	<pones> /pˈones/ "PUT-2SG_VERB"
-	<panza> /pˈanθa/ "BELLY_NOUN"
 
-/s/ (0.041)
-	<santo> /sˈanto/ "SACRED_ADJ"
-	<falso> /fˈalso/ "FALSE_ADJ"
-	<sol> /sˈol/ "SUN_NOUN"
+/s/ (0.04)
+	<saber> /saβˈeɾ/ "KNOW_VERB"
+	<estado> /estˈaðo/ "STATE_NOUN"
+	<todos> /tˈoðos/ "ALL (PL)_ADJ"
 
-/l/ (0.037)
-	<luna> /lˈuna/ "MOON_NOUN"
+/l/ (0.038)
 	<olor> /olˈoɾ/ "ODOR_NOUN"
-	<sal> /sˈal/ "SALT_NOUN"
+	<libre> /lˈiβɾe/ "FREE_ADJ"
+	<cola> /kˈola/ "TAIL_NOUN"
 
-/k/ (0.033)
-	<cruz> /kɾˈuθ/ "CROSS_NOUN"
-	<cinco> /θˈiŋko/ "FIVE_NUM"
-	<pequeño> /pekˈeɲo/ "SMALL_ADJ"
+/k/ (0.034)
+	<cabello> /kaβˈeʝo/ "HAIR_NOUN"
+	<cuerno> /kwˈeɾno/ "HORN_NOUN"
+	<cazar> /kaθˈaɾ/ "HUNT_VERB"
 
-/t/ (0.029)
+/t/ (0.028)
 	<cuatro> /kwˈatɾo/ "FOUR_NUM"
-	<siete> /sjˈete/ "SEVEN_NUM"
-	<junto> /xˈunto/ "JOINED_ADJ"
+	<gentil> /xentˈil/ "NICE_ADJ"
+	<viento> /bjˈento/ "WIND_NOUN"
 
 /m/ (0.028)
-	<mejor> /mexˈoɾ/ "BETTER_ADJ"
-	<ombligo> /omblˈiɣo/ "NAVEL_NOUN"
-	<cima> /θˈima/ "SUMMIT_NOUN"
+	<mosca> /mˈoska/ "FLY_NOUN"
+	<racimo> /raθˈimo/ "RAISIN_NOUN"
+	<hambre> /ˈambɾe/ "HUNGER_NOUN"
 
-/b/ (0.028)
-	<hembra> /ˈembɾa/ "WOMAN_NOUN"
-	<vengo> /bˈeŋɡo/ "COME-1SG_VERB"
-	<volar> /bolˈaɾ/ "FLY_VERB"
+/b/ (0.027)
+	<bella> /bˈeʝa/ "BEAUTIFUL (F)_ADJ"
+	<viejo> /bjˈexo/ "OLD_ADJ"
+	<voz> /bˈoθ/ "VOICE_NOUN"
 
-/p/ (0.027)
-	<pozo> /pˈoθo/ "WELL_NOUN"
-	<pena> /pˈena/ "PAIN_NOUN"
-	<espiga> /espˈiɣa/ "EAR OF GRAIN_NOUN"
+/p/ (0.026)
+	<palabra> /palˈaβɾa/ "WORD_NOUN"
+	<poder> /poðˈeɾ/ "CAN_VERB"
+	<pez> /pˈeθ/ "FISH_NOUN"
 
 /θ/ (0.026)
+	<luz> /lˈuθ/ "LIGHT_NOUN"
+	<arcilla> /aɾθˈiʝa/ "CLAY_NOUN"
 	<nuez> /nwˈeθ/ "NUT_NOUN"
-	<cima> /θˈima/ "SUMMIT_NOUN"
-	<raíz> /raˈiθ/ "ROOT_NOUN"
 
 /j/ (0.026)
-	<tiempo> /tjˈempo/ "TIME_NOUN"
+	<diez> /djˈeθ/ "TEN_NUM"
+	<seis> /sˈejs/ "SIX_NUM"
 	<viaje> /bjˈaxe/ "JOURNEY_NOUN"
-	<palacio> /palˈaθjo/ "PALACE_NOUN"
 
 /β/ (0.023)
+	<nueve> /nwˈeβe/ "NINE_NUM"
 	<nuevo> /nwˈeβo/ "NEW_ADJ"
 	<palabra> /palˈaβɾa/ "WORD_NOUN"
-	<obrero> /oβɾˈeɾo/ "WORKER_NOUN"
 
-/w/ (0.022)
-	<puerco> /pwˈeɾko/ "PIG_NOUN"
+/w/ (0.023)
+	<grueso> /ɡɾwˈeso/ "THICK_ADJ"
+	<buey> /bwˈej/ "OX_NOUN"
 	<puente> /pwˈente/ "BRIDGE_NOUN"
-	<fuerte> /fwˈeɾte/ "STRONG_ADJ"
 
-/ð/ (0.016)
+/ð/ (0.018)
+	<cordero> /koɾðˈeɾo/ "LAMB_NOUN"
 	<padre> /pˈaðɾe/ "FATHER_NOUN"
-	<espada> /espˈaða/ "SWORD_NOUN"
-	<ayudo> /aʝˈuðo/ "HELP-1SG_VERB"
+	<estado> /estˈaðo/ "STATE_NOUN"
 
 /x/ (0.016)
+	<joven> /xˈoβen/ "YOUNG_ADJ"
+	<juez> /xwˈeθ/ "JUDGE_NOUN"
 	<junio> /xˈunjo/ "JUNE_PROPN"
-	<rojo> /rˈoxo/ "RED_ADJ"
-	<oreja> /oɾˈexa/ "EAR_NOUN"
-
-/ɣ/ (0.012)
-	<aguja> /aɣˈuxa/ "NEEDLE_NOUN"
-	<lágrima> /lˈaɣɾima/ "TEAR_NOUN"
-	<agua> /ˈaɣwa/ "WATER_NOUN"
-
-/d/ (0.012)
-	<dragón> /dɾaɣˈon/ "DRAGON_NOUN"
-	<dulce> /dˈulθe/ "SWEET_ADJ"
-	<diente> /djˈente/ "TOOTH_NOUN"
 
 /ʝ/ (0.012)
-	<castillo> /kastˈiʝo/ "CASTLE_NOUN"
 	<cabello> /kaβˈeʝo/ "HAIR_NOUN"
-	<semilla> /semˈiʝa/ "SEED_NOUN"
+	<poyo> /pˈoʝo/ "PODIUM_NOUN"
+	<villano> /biʝˈano/ "VILLAIN_NOUN"
+
+/ɣ/ (0.012)
+	<hago> /ˈaɣo/ "DO-1SG_VERB"
+	<seguro> /seɣˈuɾo/ "SAFE_ADJ"
+	<vergüenza> /beɾɣwˈenθa/ "SHAME_NOUN"
+
+/d/ (0.012)
+	<dedo> /dˈeðo/ "FINGER_NOUN"
+	<dona> /dˈona/ "GIVE-3SG_VERB"
+	<diente> /djˈente/ "TOOTH_NOUN"
 
 /ɲ/ (0.009)
+	<año> /ˈaɲo/ "YEAR_NOUN"
+	<dueña> /dwˈeɲa/ "LADY_NOUN"
 	<puño> /pˈuɲo/ "FIST_NOUN"
-	<montaña> /montˈaɲa/ "MOUNTAIN_NOUN"
-	<plañir> /plaɲˈiɾ/ "WEEP_VERB"
 
-/ɡ/ (0.008)
-	<grande> /ɡɾˈande/ "BIG_ADJ"
+/ɡ/ (0.009)
 	<gozo> /ɡˈoθo/ "JOY_NOUN"
-	<lengua> /lˈeŋɡwa/ "TONGUE_NOUN"
+	<grueso> /ɡɾwˈeso/ "THICK_ADJ"
+	<grande> /ɡɾˈande/ "BIG_ADJ"
 
 /r/ (0.008)
-	<racimo> /raθˈimo/ "RAISIN_NOUN"
-	<romano> /romˈano/ "ROMAN_ADJ"
-	<raíz> /raˈiθ/ "ROOT_NOUN"
+	<rojo> /rˈoxo/ "RED_ADJ"
+	<tierra> /tjˈera/ "EARTH_NOUN"
+	<reina> /rˈejna/ "QUEEN_NOUN"
 
-/ɟ͡ʝ/ (0.006)
+/ɟ͡ʝ/ (0.007)
+	<yerno> /ɟ͡ʝˈeɾno/ "SON-IN-LAW_NOUN"
 	<llorar> /ɟ͡ʝoɾˈaɾ/ "WEEP_VERB"
-	<llaga> /ɟ͡ʝˈaɣa/ "PLAGUE_NOUN"
-	<llama> /ɟ͡ʝˈama/ "FLAME_NOUN"
+	<llave> /ɟ͡ʝˈaβe/ "KEY_NOUN"
 
 /f/ (0.006)
 	<falso> /fˈalso/ "FALSE_ADJ"
-	<fuerte> /fwˈeɾte/ "STRONG_ADJ"
+	<fino> /fˈino/ "THIN_ADJ"
 	<fuego> /fwˈeɣo/ "FIRE_NOUN"
 
 /ʧ/ (0.006)
@@ -172,10 +172,10 @@ CONSONANTS
 	<lucha> /lˈuʧa/ "FIGHT_NOUN"
 	<escuchar> /eskuʧˈaɾ/ "LISTEN_VERB"
 
-/ŋ/ (0.005)
-	<cincuenta> /θiŋkwˈenta/ "FIFTY_NUM"
+/ŋ/ (0.006)
 	<blanco> /blˈaŋko/ "WHITE_ADJ"
-	<cinco> /θˈiŋko/ "FIVE_NUM"
+	<cincuenta> /θiŋkwˈenta/ "FIFTY_NUM"
+	<lengua> /lˈeŋɡwa/ "TONGUE_NOUN"
 
 
 

@@ -1,48 +1,48 @@
 VOWELS
-/ˈe/ (0.077)
+/ˈe/ (0.079)
 	<cuesta> /kwˈesta/ "COAST_NOUN"
-	<poner> /ponˈeɾ/ "PUT_VERB"
-	<mariellu> /maɾjˈeʎu/ "YELLOW_ADJ"
+	<xente> /ʃˈente/ "PEOPLE_NOUN"
+	<fema> /fˈema/ "WOMAN_NOUN"
 
-/a/ (0.074)
+/a/ (0.072)
 	<castiellu> /kastjˈeʎu/ "CASTLE_NOUN"
 	<llama> /ʎˈama/ "FLAME_NOUN"
 	<fía> /fˈia/ "DAUGHTER_NOUN"
 
-/u/ (0.07)
-	<nuestru> /nwˈestɾu/ "OUR_ADJ"
-	<añu> /ˈaɲu/ "YEAR_NOUN"
-	<nuevu> /nwˈeβu/ "NEW_ADJ"
+/u/ (0.072)
+	<nun> /nun/ "NOT_ADVERB"
+	<vinu> /bˈinu/ "WINE_NOUN"
+	<munchu> /mˈunʧu/ "MANY_ADJ"
 
-/ˈa/ (0.054)
+/ˈa/ (0.053)
 	<alma> /ˈalma/ "SOUL_NOUN"
 	<baxu> /bˈaʃu/ "LOW_ADJ"
 	<cuatro> /kwˈatɾo/ "FOUR_NUM"
 
-/e/ (0.052)
+/e/ (0.051)
 	<llevar> /ʎeβˈaɾ/ "CARRY_VERB"
 	<fuerte> /fwˈeɾte/ "STRONG_ADJ"
 	<fermosu> /feɾmˈosu/ "BEAUTIFUL (M)_ADJ"
 
 /ˈo/ (0.038)
+	<xoven> /ʃˈoβen/ "YOUNG_ADJ"
 	<pocu> /pˈoku/ "LITTLE_ADJ"
-	<boca> /bˈoka/ "MOUTH_NOUN"
-	<vergoña> /beɾɣˈoɲa/ "SHAME_NOUN"
+	<home> /ˈome/ "MAN_NOUN"
 
-/ˈi/ (0.021)
-	<estivu> /estˈiβu/ "SUMMER_NOUN"
-	<ceniza> /θenˈiθa/ "ASH_NOUN"
+/o/ (0.022)
+	<provechu> /pɾoβˈeʧu/ "PROFIT_NOUN"
+	<llorar> /ʎoɾˈaɾ/ "WEEP_VERB"
+	<toos> /tˈoos/ "ALL (PL)_ADJ"
+
+/ˈi/ (0.02)
 	<espina> /espˈina/ "SPINE_NOUN"
-
-/o/ (0.021)
-	<bonos> /bˈonos/ "GOOD (M.PL)_ADJ"
-	<fago> /fˈaɣo/ "DO-1SG_VERB"
-	<nosotros> /nosˈotɾos/ "WE_PRON"
+	<vecín> /beθˈiŋ/ "NEIGHBOR_NOUN"
+	<fariña> /faɾˈiɲa/ "FLOUR_NOUN"
 
 /ˈu/ (0.018)
+	<fumu> /fˈumu/ "SMOKE_NOUN"
 	<tu> /tˈu/ "THOU_PRON"
 	<uña> /ˈuɲa/ "FINGERNAIL_NOUN"
-	<nengunu> /neŋɡˈunu/ "NONE_PRON"
 
 /i/ (0.006)
 	<cincuenta> /θiŋkwˈenta/ "FIFTY_NUM"
@@ -52,67 +52,67 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.078)
+/ɾ/ (0.079)
 	<conocer> /konoθˈeɾ/ "BE ACQUAINTED WITH_VERB"
 	<nacer> /naθˈeɾ/ "BE BORN_VERB"
-	<falar> /falˈaɾ/ "SPEAK_VERB"
+	<dormir> /doɾmˈiɾ/ "SLEEP_VERB"
 
-/n/ (0.049)
+/n/ (0.048)
 	<ceniza> /θenˈiθa/ "ASH_NOUN"
 	<santu> /sˈantu/ "SACRED_ADJ"
 	<munchu> /mˈunʧu/ "MANY_ADJ"
 
-/s/ (0.041)
+/s/ (0.04)
 	<piescu> /pjˈesku/ "PEACH_NOUN"
 	<cosa> /kˈosa/ "THING_NOUN"
 	<toos> /tˈoos/ "ALL (PL)_ADJ"
 
-/k/ (0.033)
-	<pocu> /pˈoku/ "LITTLE_ADJ"
+/k/ (0.034)
+	<corderu> /koɾðˈeɾu/ "LAMB_NOUN"
 	<escuru> /eskˈuɾu/ "DARK_ADJ"
-	<caballu> /kaβˈaʎu/ "HORSE_NOUN"
-
-/t/ (0.03)
-	<estrella> /estɾˈeʎa/ "STAR_NOUN"
-	<tu> /tˈu/ "THOU_PRON"
-	<cuatro> /kwˈatɾo/ "FOUR_NUM"
-
-/p/ (0.026)
-	<puntu> /pˈuntu/ "POINT_NOUN"
-	<pocu> /pˈoku/ "LITTLE_ADJ"
-	<España> /espˈaɲa/ "SPAIN_PROPN"
-
-/ʎ/ (0.026)
-	<lleón> /ʎeˈoŋ/ "LION_NOUN"
-	<bellu> /bˈeʎu/ "BEAUTIFUL (M)_ADJ"
-	<ella> /ˈeʎa/ "SHE_PRON"
-
-/j/ (0.026)
-	<mariellu> /maɾjˈeʎu/ "YELLOW_ADJ"
-	<dios> /djˈos/ "GOD_NOUN"
-	<rei> /rˈej/ "KING_NOUN"
-
-/b/ (0.026)
-	<boca> /bˈoka/ "MOUTH_NOUN"
-	<beber> /beβˈeɾ/ "DRINK_VERB"
-	<vieyu> /bjˈeʝu/ "OLD_ADJ"
-
-/m/ (0.025)
-	<selmana> /selmˈana/ "WEEK_NOUN"
-	<fumu> /fˈumu/ "SMOKE_NOUN"
-	<mosca> /mˈoska/ "FLY_NOUN"
-
-/β/ (0.023)
-	<provechu> /pɾoβˈeʧu/ "PROFIT_NOUN"
-	<probe> /pɾˈoβe/ "POOR_ADJ"
 	<escribir> /eskɾiβˈiɾ/ "WRITE_VERB"
 
-/l/ (0.023)
-	<blancu> /blˈaŋku/ "WHITE_ADJ"
-	<golpe> /ɡˈolpe/ "STRIKE_NOUN"
-	<color> /kolˈoɾ/ "COLOR_NOUN"
+/t/ (0.03)
+	<cortu> /kˈoɾtu/ "SHORT_ADJ"
+	<estrella> /estɾˈeʎa/ "STAR_NOUN"
+	<tu> /tˈu/ "THOU_PRON"
 
-/θ/ (0.023)
+/ʎ/ (0.026)
+	<llagu> /ʎˈaɣu/ "LAKE_NOUN"
+	<cuellu> /kwˈeʎu/ "NECK_NOUN"
+	<llárima> /ʎˈaɾima/ "TEAR_NOUN"
+
+/p/ (0.026)
+	<paz> /pˈaθ/ "PEACE_NOUN"
+	<cuerpu> /kwˈeɾpu/ "BODY_NOUN"
+	<poner> /ponˈeɾ/ "PUT_VERB"
+
+/m/ (0.026)
+	<fema> /fˈema/ "WOMAN_NOUN"
+	<cámara> /kˈamaɾa/ "CHAMBER_NOUN"
+	<pluma> /plˈuma/ "FEATHER_NOUN"
+
+/j/ (0.026)
+	<piescu> /pjˈesku/ "PEACH_NOUN"
+	<miel> /mjˈel/ "HONEY_NOUN"
+	<aniellu> /anjˈeʎu/ "RING_NOUN"
+
+/b/ (0.025)
+	<vientu> /bjˈentu/ "WIND_NOUN"
+	<hombru> /ˈombɾu/ "SHOULDER_NOUN"
+	<bonos> /bˈonos/ "GOOD (M.PL)_ADJ"
+
+/l/ (0.024)
+	<sal> /sˈal/ "SALT_NOUN"
+	<palaciu> /palˈaθju/ "PALACE_NOUN"
+	<árbol> /ˈaɾβol/ "TREE_NOUN"
+
+/β/ (0.023)
+	<xoven> /ʃˈoβen/ "YOUNG_ADJ"
+	<árbol> /ˈaɾβol/ "TREE_NOUN"
+	<llevar> /ʎeβˈaɾ/ "CARRY_VERB"
+
+/θ/ (0.022)
 	<nuez> /nwˈeθ/ "NUT_NOUN"
 	<cincuenta> /θiŋkwˈenta/ "FIFTY_NUM"
 	<fuerza> /fwˈeɾθa/ "STRENGTH_NOUN"
@@ -122,14 +122,14 @@ CONSONANTS
 	<xuegu> /ʃwˈeɣu/ "GAME_NOUN"
 	<cuer> /kwˈeɾ/ "HEART_NOUN"
 
-/f/ (0.018)
+/f/ (0.017)
 	<fuerza> /fwˈeɾθa/ "STRENGTH_NOUN"
 	<facer> /faθˈeɾ/ "DO_VERB"
 	<flor> /flˈoɾ/ "FLOWER_NOUN"
 
-/ð/ (0.013)
-	<espada> /espˈaða/ "SWORD_NOUN"
-	<fégadu> /fˈeɣaðu/ "LIVER_NOUN"
+/ð/ (0.014)
+	<piedra> /pjˈeðɾa/ "STONE_NOUN"
+	<vida> /bˈiða/ "LIFE_NOUN"
 	<cadena> /kaðˈena/ "CHAIN_NOUN"
 
 /ʝ/ (0.012)
@@ -137,45 +137,45 @@ CONSONANTS
 	<meyor> /meʝˈoɾ/ "BETTER_ADJ"
 	<pioyu> /pjˈoʝu/ "LOUSE_NOUN"
 
-/d/ (0.011)
-	<dar> /dˈaɾ/ "GIVE_VERB"
-	<redondu> /reðˈondu/ "ROUND_ADJ"
-	<diente> /djˈente/ "TOOTH_NOUN"
-
 /ʃ/ (0.011)
-	<xuntu> /ʃˈuntu/ "JOINED_ADJ"
 	<enxiva> /enʃˈiβa/ "GUMS_NOUN"
 	<viaxe> /bjˈaʃe/ "JOURNEY_NOUN"
-
-/ɣ/ (0.011)
-	<seguru> /seɣˈuɾu/ "SAFE_ADJ"
-	<negru> /nˈeɣɾu/ "BLACK_ADJ"
-	<llagu> /ʎˈaɣu/ "LAKE_NOUN"
+	<roxu> /rˈoʃu/ "RED_ADJ"
 
 /ŋ/ (0.011)
-	<sangre> /sˈaŋɡɾe/ "BLOOD_NOUN"
-	<fin> /fˈiŋ/ "END_NOUN"
 	<llingua> /ʎˈiŋɡwa/ "TONGUE_NOUN"
+	<cincuenta> /θiŋkwˈenta/ "FIFTY_NUM"
+	<lleón> /ʎeˈoŋ/ "LION_NOUN"
+
+/d/ (0.011)
+	<grande> /ɡɾˈande/ "BIG_ADJ"
+	<caldu> /kˈaldu/ "HOT_ADJ"
+	<dos> /dˈos/ "TWO (M)_NUM"
+
+/ɣ/ (0.01)
+	<espiga> /espˈiɣa/ "EAR OF GRAIN_NOUN"
+	<seguru> /seɣˈuɾu/ "SAFE_ADJ"
+	<embeligru> /embelˈiɣɾu/ "NAVEL_NOUN"
 
 /ɡ/ (0.01)
+	<llongu> /ʎˈoŋɡu/ "LONG_ADJ"
 	<llingua> /ʎˈiŋɡwa/ "TONGUE_NOUN"
-	<nengunu> /neŋɡˈunu/ "NONE_PRON"
-	<gruesu> /ɡɾwˈesu/ "THICK_ADJ"
+	<güeyus> /ɡwˈeʝus/ "EYES_NOUN"
 
-/ɲ/ (0.009)
-	<araña> /aɾˈaɲa/ "SPIDER_NOUN"
-	<vergoña> /beɾɣˈoɲa/ "SHAME_NOUN"
+/ɲ/ (0.008)
+	<lleña> /ʎˈeɲa/ "WOOD_NOUN"
 	<peña> /pˈeɲa/ "FEATHER_NOUN"
+	<añu> /ˈaɲu/ "YEAR_NOUN"
 
 /r/ (0.008)
-	<tierra> /tjˈera/ "EARTH_NOUN"
 	<ríu> /rˈiu/ "RIVER_NOUN"
 	<fierru> /fjˈeru/ "IRON_NOUN"
+	<páxaru> /pˈaʃaru/ "BIRD_NOUN"
 
 /ʧ/ (0.006)
-	<pechu> /pˈeʧu/ "BREAST_NOUN"
+	<escuchar> /eskuʧˈaɾ/ "LISTEN_VERB"
+	<munchu> /mˈunʧu/ "MANY_ADJ"
 	<nueche> /nwˈeʧe/ "NIGHT_NOUN"
-	<ocho> /ˈoʧo/ "EIGHT_NUM"
 
 /ɟ͡ʝ/ (0.001)
 	<yerba> /ɟ͡ʝˈeɾβa/ "GRASS_NOUN"

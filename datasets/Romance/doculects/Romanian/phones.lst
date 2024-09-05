@@ -24,10 +24,10 @@ VOWELS
 	<punct> /pˈuŋkt/ "POINT_NOUN"
 	<cenușă> /ʧenˈuʃə/ "ASH_NOUN"
 
-/ˈe/ (0.032)
-	<lege> /lˈeʤe/ "LAW_NOUN"
-	<vechi> /vˈekʲ/ "OLD_ADJ"
-	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
+/ˈe/ (0.033)
+	<miel> /mjˈel/ "LAMB_NOUN"
+	<miez> /mjˈez/ "MIDDLE_NOUN"
+	<trei> /trˈej/ "THREE_NUM"
 
 /ˈo/ (0.025)
 	<toți> /tˈoʦʲ/ "ALL (PL)_"
@@ -86,12 +86,12 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.096)
-	<gros> /ɡrˈos/ "THICK_ADJ"
-	<vierme> /vjˈerme/ "WORM_NOUN"
-	<nostru> /nˈostru/ "OUR_ADJ"
+/r/ (0.097)
+	<lacrimă> /lˈakrimə/ "TEAR_NOUN"
+	<operă> /ˈoperə/ "WORK_NOUN"
+	<odoare> /odo̯ˈare/ "ODOR_NOUN"
 
-/n/ (0.063)
+/n/ (0.062)
 	<nor> /nˈor/ "CLOUD_NOUN"
 	<bune> /bˈune/ "GOOD (F.PL)_ADJ"
 	<vecin> /veʧˈin/ "NEIGHBOR_NOUN"
@@ -101,7 +101,7 @@ CONSONANTS
 	<scurt> /skˈurt/ "SHORT_ADJ"
 	<pește> /pˈeʃte/ "FISH_NOUN"
 
-/k/ (0.044)
+/k/ (0.043)
 	<loc> /lˈok/ "PLACE_NOUN"
 	<porc> /pˈork/ "PIG_NOUN"
 	<casă> /kˈasə/ "HOUSE_NOUN"
@@ -156,24 +156,24 @@ CONSONANTS
 	<vin> /vˈin/ "COME-1SG_VERB"
 	<vin> /vˈin/ "WINE_NOUN"
 
+/ʤ/ (0.011)
+	<argilă> /arʤˈilə/ "CLAY_NOUN"
+	<lege> /lˈeʤe/ "LAW_NOUN"
+	<rege> /rˈeʤe/ "KING_NOUN"
+
 /ɡ/ (0.011)
-	<egal> /eɡˈal/ "EQUAL_ADJ"
-	<lung> /lˈuŋɡ/ "LONG_ADJ"
-	<grâu> /ɡrˈɨw/ "GRAIN_NOUN"
+	<înghețare> /ɨŋɡeʦˈare/ "FREEZE_VERB"
+	<gheață> /ɡe̯ˈaʦə/ "ICE_NOUN"
+	<gros> /ɡrˈos/ "THICK_ADJ"
 
 /w/ (0.011)
-	<știu> /ʃtˈiw/ "KNOW-SBJ-1SG_VERB"
+	<ou> /ˈow/ "EGG_NOUN"
 	<nou> /nˈow/ "NEW_ADJ"
-	<fiu> /fˈiw/ "SON_NOUN"
-
-/ʤ/ (0.01)
-	<înger> /ˈɨnʤer/ "ANGEL_NOUN"
-	<lege> /lˈeʤe/ "LAW_NOUN"
-	<plângere> /plˈɨnʤere/ "WEEP_VERB"
+	<două> /dˈowə/ "TWO (F)_NUM"
 
 /ʃ/ (0.01)
 	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
-	<ședere> /ʃedˈere/ "SIT_ADJ"
+	<ședere> /ʃedˈere/ "SIT_VERB"
 	<roșu> /rˈoʃu/ "RED_ADJ"
 
 /z/ (0.009)

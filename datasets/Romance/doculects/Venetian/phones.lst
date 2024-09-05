@@ -1,8 +1,8 @@
 VOWELS
 /o/ (0.093)
 	<cuło> /kˈuɰo/ "BUTTOCKS_NOUN"
-	<basso> /bˈaso/ "LOW_ADJ"
-	<fio> /fˈio/ "SON_NOUN"
+	<peòcio> /peˈɔʧo/ "LOUSE_NOUN"
+	<xènaro> /zˈɛnaro/ "SON-IN-LAW_NOUN"
 
 /a/ (0.079)
 	<łana> /ɰˈana/ "WOOL_NOUN"
@@ -19,7 +19,7 @@ VOWELS
 	<mìe> /mˈie/ "THOUSAND_NUM"
 	<sète> /sˈɛte/ "SEVEN_NUM"
 
-/ˈo/ (0.034)
+/ˈo/ (0.033)
 	<fiór> /fjˈor/ "FLOWER_NOUN"
 	<xórno> /zˈorno/ "DAY_NOUN"
 	<pióva> /pjˈova/ "RAIN_NOUN"
@@ -34,14 +34,14 @@ VOWELS
 	<nìoƚa> /nˈioɰa/ "CLOUD_NOUN"
 	<spina> /spˈina/ "SPINE_NOUN"
 
-/ˈɔ/ (0.027)
+/ˈɔ/ (0.026)
 	<xenòcio> /zenˈɔʧo/ "KNEE_NOUN"
 	<cuòr> /kwˈɔr/ "HEART_NOUN"
 	<paroła> /parˈɔɰa/ "WORD_NOUN"
 
-/ˈɛ/ (0.024)
+/ˈɛ/ (0.025)
 	<pèto> /pˈɛto/ "BREAST_NOUN"
-	<xènte> /zˈɛŋte/ "PEOPLE_NOUN"
+	<pèrsego> /pˈɛrseɡo/ "PEACH_NOUN"
 	<bèło> /bˈɛo/ "BEAUTIFUL (M)_ADJ"
 
 /ˈu/ (0.017)
@@ -87,15 +87,15 @@ CONSONANTS
 	<conóser> /konˈoser/ "BE ACQUAINTED WITH_VERB"
 	<cuòr> /kwˈɔr/ "HEART_NOUN"
 
-/ŋ/ (0.031)
-	<łengua> /ˈeŋɡwa/ "TONGUE_NOUN"
-	<vénto> /vˈeŋto/ "WIND_NOUN"
-	<can> /kˈaŋ/ "DOG_NOUN"
-
-/z/ (0.031)
-	<xógo> /zˈoɡo/ "GAME_NOUN"
+/z/ (0.032)
+	<xènaro> /zˈɛnaro/ "SON-IN-LAW_NOUN"
 	<piànxer> /pjˈaŋzer/ "WEEP_VERB"
-	<xùdexe> /zˈudeze/ "JUDGE_NOUN"
+	<xórno> /zˈorno/ "DAY_NOUN"
+
+/ŋ/ (0.031)
+	<sìncue> /sˈiŋkwe/ "FIVE_NUM"
+	<biànco> /bjˈaŋko/ "WHITE_ADJ"
+	<sénto> /sˈeŋto/ "HUNDRED_NUM"
 
 /v/ (0.03)
 	<guałivo> /ɡwaˈivo/ "EQUAL_ADJ"
@@ -107,7 +107,7 @@ CONSONANTS
 	<spina> /spˈina/ "SPINE_NOUN"
 	<pién> /pjˈeŋ/ "FULL_ADJ"
 
-/m/ (0.027)
+/m/ (0.026)
 	<mèxo> /mˈɛzo/ "MIDDLE_NOUN"
 	<maùro> /maˈuro/ "MATURE_NOUN"
 	<vèrme> /vˈɛrme/ "WORM_NOUN"
@@ -122,10 +122,10 @@ CONSONANTS
 	<mèdego> /mˈɛdeɡo/ "DOCTOR_NOUN"
 	<stado> /stˈado/ "STATE_NOUN"
 
-/ɰ/ (0.021)
-	<góła> /ɡˈoɰa/ "THROAT_NOUN"
+/ɰ/ (0.022)
+	<łàgrema> /ɰˈaɡrema/ "TEAR_NOUN"
+	<ixoła> /ˈizoɰa/ "ISLAND_NOUN"
 	<łago> /ɰˈaɡo/ "LAKE_NOUN"
-	<łume> /ɰˈume/ "LIGHT_NOUN"
 
 /j/ (0.021)
 	<piègora> /pjˈɛɡora/ "SHEEP_NOUN"

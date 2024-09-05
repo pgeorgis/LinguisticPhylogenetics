@@ -44,7 +44,7 @@ VOWELS
 	<scrîver> /skrˈiːver/ "WRITE_VERB"
 	<zîra> /θˈiːra/ "WAX_NOUN"
 
-/ˈɔ/ (0.014)
+/ˈɔ/ (0.013)
 	<bòca> /bˈɔka/ "MOUTH_NOUN"
 	<òm> /ˈɔm/ "MAN_NOUN"
 	<òs> /ˈɔs/ "BONE_NOUN"
@@ -81,7 +81,7 @@ VOWELS
 
 /ˈɛː/ (0.005)
 	<pêgra> /pˈɛːɡra/ "SHEEP_NOUN"
-	<êrba> /ˈɛːrba/ "GRASS_NOUN"
+	<mêl> /mˈɛːl/ "HONEY_NOUN"
 	<stê> /stˈɛː/ "STATE_NOUN"
 
 /ˈi/ (0.003)
@@ -96,15 +96,15 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.089)
+/r/ (0.088)
 	<frût> /frˈuːt/ "FRUIT_NOUN"
+	<scrîver> /skrˈiːver/ "WRITE_VERB"
 	<vèrem> /vˈɛrem/ "WORM_NOUN"
-	<ôvra> /ˈɔːvra/ "WORK_NOUN"
 
-/l/ (0.051)
-	<palâz> /palˈaːθ/ "PALACE_NOUN"
-	<scultèr> /skultˈɛr/ "LISTEN_VERB"
-	<laggna> /lˈaɲa/ "WOOD_NOUN"
+/l/ (0.052)
+	<còl> /kˈɔl/ "NECK_NOUN"
+	<leån> /leˈʌŋ/ "LION_NOUN"
+	<laggn> /lˈaɲ/ "WOOD_NOUN"
 
 /t/ (0.046)
 	<trî> /trˈiː/ "THREE_NUM"
@@ -141,7 +141,7 @@ CONSONANTS
 	<nó> /nˈo/ "WE_PRON"
 	<nóvvla> /nˈovla/ "CLOUD_NOUN"
 
-/m/ (0.032)
+/m/ (0.031)
 	<fiàma> /fjˈama/ "FLAME_NOUN"
 	<stmèna> /stmˈɛna/ "WEEK_NOUN"
 	<rumàn> /rumˈaŋ/ "ROMAN_ADJ"
@@ -156,7 +156,7 @@ CONSONANTS
 	<ajutèr> /ajutˈɛr/ "HELP_VERB"
 	<méi> /mˈej/ "BETTER_ADV"
 
-/ɡ/ (0.023)
+/ɡ/ (0.022)
 	<fûg> /fˈuːɡ/ "FIRE_NOUN"
 	<gròs> /ɡrˈɔs/ "THICK_ADJ"
 	<vargåggna> /varɡˈʌɲa/ "SHAME_NOUN"
@@ -177,11 +177,11 @@ CONSONANTS
 	<bå> /bˈʌ/ "OX_NOUN"
 
 /ð/ (0.014)
-	<żòja> /ðˈɔja/ "JOY_NOUN"
-	<żänt> /ðˈæŋt/ "PEOPLE_NOUN"
+	<żêl> /ðˈɛːl/ "ICE_NOUN"
+	<mèż> /mˈɛð/ "MIDDLE_NOUN"
 	<żâl> /ðˈaːl/ "YELLOW_ADJ"
 
-/z/ (0.014)
+/z/ (0.013)
 	<bruṡèr> /bruzˈɛr/ "BURN_VERB"
 	<îṡla> /ˈiːzla/ "ISLAND_NOUN"
 	<vṡén> /vzˈeŋ/ "NEIGHBOR_NOUN"
@@ -201,10 +201,13 @@ CONSONANTS
 	<âcua> /ˈaːkwa/ "WATER_NOUN"
 	<quâter> /kwˈaːter/ "FOUR_NUM"
 
-/ʤ/ (0.005)
+/ʤ/ (0.004)
 	<dâgg'> /dˈaːʤ/ "TWELVE_NUM"
 	<giazèr> /ʤaθˈɛr/ "FREEZE_VERB"
 	<gióddiz> /ʤˈodiθ/ "JUDGE_NOUN"
+
+/ˈr/ (0.001)
+	<êrba> /ˈrba/ "GRASS_NOUN"
 
 
 

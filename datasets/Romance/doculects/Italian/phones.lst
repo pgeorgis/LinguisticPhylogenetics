@@ -1,7 +1,7 @@
 VOWELS
-/o/ (0.091)
+/o/ (0.092)
 	<secco> /sˈekːo/ "DRY (M)_ADJ"
-	<inverno> /invˈɛrno/ "WINTER_NOUN"
+	<vino> /vˈino/ "WINE_NOUN"
 	<fratello> /fratˈɛlːo/ "BROTHER_NOUN"
 
 /e/ (0.081)
@@ -24,10 +24,10 @@ VOWELS
 	<collo> /kˈɔlːo/ "NECK_NOUN"
 	<mordere> /mˈɔrdere/ "BITE_VERB"
 
-/ˈɛ/ (0.026)
-	<pesca> /pˈɛska/ "PEACH_NOUN"
-	<leggere> /lˈɛʤːere/ "READ_VERB"
-	<dieci> /djˈɛʧi/ "TEN_NUM"
+/ˈɛ/ (0.027)
+	<festa> /fˈɛsta/ "PARTY_NOUN"
+	<prezzo> /prˈɛʦːo/ "PRICE_NOUN"
+	<pietra> /pjˈɛtra/ "STONE_NOUN"
 
 /ˈo/ (0.024)
 	<sopra> /sˈopra/ "ABOVE_PREP"
@@ -62,12 +62,12 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.072)
+/r/ (0.071)
 	<sapere> /sapˈere/ "KNOW_VERB"
 	<odore> /odˈore/ "ODOR_NOUN"
 	<scuro> /skˈuro/ "DARK_ADJ"
 
-/n/ (0.055)
+/n/ (0.054)
 	<luna> /lˈuna/ "MOON_NOUN"
 	<buoni> /bwˈɔni/ "GOOD (M.PL)_ADJ"
 	<inverno> /invˈɛrno/ "WINTER_NOUN"
@@ -82,85 +82,85 @@ CONSONANTS
 	<tuto> /tˈutːo/ "ALL (SG)_ADJ"
 	<ascoltare> /askoltˈare/ "LISTEN_VERB"
 
-/l/ (0.034)
-	<lupo> /lˈupo/ "WOLF_NOUN"
-	<altro> /ˈaltro/ "OTHER_ADJ"
-	<lei> /lˈɛj/ "SHE_PRON"
+/l/ (0.035)
+	<albero> /ˈalbero/ "TREE_NOUN"
+	<parola> /parˈɔla/ "WORD_NOUN"
+	<gentile> /ʤentˈile/ "NICE_ADJ"
 
 /p/ (0.032)
+	<porca> /pˈɔrka/ "SOW_NOUN"
 	<ponte> /pˈonte/ "BRIDGE_NOUN"
 	<piuma> /pjˈuma/ "FEATHER_NOUN"
-	<piccolo> /pˈikːolo/ "SMALL_ADJ"
 
 /s/ (0.029)
+	<stella> /stˈelːa/ "STAR_NOUN"
 	<savio> /sˈavjo/ "WISE_ADJ"
 	<sappia> /sˈapːja/ "KNOW-SBJ-1SG_VERB"
-	<scuro> /skˈuro/ "DARK_ADJ"
 
 /m/ (0.025)
+	<cambiare> /kambjˈare/ "CHANGE_VERB"
 	<uomo> /wˈɔmo/ "MAN_NOUN"
 	<semente> /semˈente/ "SEED_NOUN"
-	<ombelico> /ombelˈiko/ "NAVEL_NOUN"
 
 /j/ (0.024)
+	<pioggia> /pjˈɔʤːa/ "RAIN_NOUN"
 	<sei> /sˈɛj/ "SIX_NUM"
 	<ghiacciare> /ɡjaʧːˈare/ "FREEZE_VERB"
-	<gioia> /ʤˈɔja/ "JOY_NOUN"
 
 /v/ (0.022)
+	<vecchio> /vˈɛkːjo/ "OLD_ADJ"
 	<nove> /nˈɔve/ "NINE_NUM"
 	<giovane> /ʤˈovane/ "YOUNG_ADJ"
-	<vino> /vˈino/ "WINE_NOUN"
 
 /d/ (0.021)
+	<dieci> /djˈɛʧi/ "TEN_NUM"
 	<dente> /dˈɛnte/ "TOOTH_NOUN"
 	<vedere> /vedˈere/ "SEE_VERB"
-	<mordere> /mˈɔrdere/ "BITE_VERB"
 
 /f/ (0.016)
+	<festa> /fˈɛsta/ "PARTY_NOUN"
+	<freddo> /frˈedːo/ "COLD_ADJ"
 	<foglia> /fˈɔʎːa/ "LEAF_NOUN"
-	<fata> /fˈata/ "FATE_NOUN"
-	<filo> /fˈilo/ "STRING_NOUN"
 
-/ʤ/ (0.013)
+/ʤ/ (0.014)
+	<gioco> /ʤˈɔko/ "GAME_NOUN"
+	<giudice> /ʤˈudiʧe/ "JUDGE_NOUN"
 	<giugno> /ʤˈuɲːo/ "JUNE_PROPN"
-	<ginocchio> /ʤinˈɔkːjo/ "KNEE_NOUN"
-	<giovane> /ʤˈovane/ "YOUNG_ADJ"
 
 /ɡ/ (0.013)
+	<gola> /ɡˈola/ "THROAT_NOUN"
 	<goccia> /ɡˈoʧːa/ "DROP_NOUN"
 	<grano> /ɡrˈano/ "GRAIN_NOUN"
-	<luogo> /lwˈɔɡo/ "PLACE_NOUN"
 
 /ʧ/ (0.013)
+	<dolce> /dˈolʧe/ "SWEET_ADJ"
 	<cera> /ʧˈera/ "WAX_NOUN"
 	<vicino> /viʧˈino/ "NEIGHBOR_NOUN"
-	<bruciare> /bruʧˈare/ "BURN_VERB"
 
 /b/ (0.013)
+	<bello> /bˈɛlːo/ "BEAUTIFUL (M)_ADJ"
 	<erba> /ˈɛrba/ "GRASS_NOUN"
 	<bianco> /bjˈaŋko/ "WHITE_ADJ"
-	<bocca> /bˈokːa/ "MOUTH_NOUN"
 
 /w/ (0.012)
+	<quaglia> /kwˈaʎːa/ "QUAIL_NOUN"
 	<uguale> /uɡwˈale/ "EQUAL_ADJ"
 	<fuoco> /fwˈɔko/ "FIRE_NOUN"
-	<quaglia> /kwˈaʎːa/ "QUAIL_NOUN"
 
 /lː/ (0.011)
+	<villano> /vilːˈano/ "VILLAIN_NOUN"
 	<pelle> /pˈɛlːe/ "SKIN_NOUN"
 	<anello> /anˈɛlːo/ "RING_NOUN"
-	<villa> /vˈilːa/ "TOWN_NOUN"
 
 /tː/ (0.009)
+	<lotta> /lˈɔtːa/ "FIGHT_NOUN"
 	<latte> /lˈatːe/ "MILK_NOUN"
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
-	<lotta> /lˈɔtːa/ "FIGHT_NOUN"
 
 /kː/ (0.007)
+	<pidocchio> /pidˈɔkːjo/ "LOUSE_NOUN"
 	<vacca> /vˈakːa/ "COW_NOUN"
 	<occhi> /ˈɔkːi/ "EYES_NOUN"
-	<vecchio> /vˈɛkːjo/ "OLD_ADJ"
 
 /ɲː/ (0.006)
 	<legno> /lˈeɲːo/ "WOOD_NOUN"
