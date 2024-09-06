@@ -2,9 +2,11 @@ import random
 from collections import defaultdict
 from functools import lru_cache
 from statistics import StatisticsError, mean, stdev
+import numpy as np
 
 from scipy.stats import norm
 from utils.distance import dist_to_sim
+from utils.utils import balanced_resample
 
 
 # HELPER FUNCTIONS
@@ -138,8 +140,9 @@ def gradient_cognate_sim(lang1,
                          sample_size=0.8,
                          logger=None):
 
-    # Set random seed
+    # Set random seed and initialize random number generator
     random.seed(seed)
+    rng = random.Random(seed)
 
     # Get list of shared concepts between the two languages
     shared_concepts = get_shared_concepts(lang1, lang2, clustered_cognates)
@@ -148,16 +151,24 @@ def gradient_cognate_sim(lang1,
     # Take N samples of the available concepts of size K
     # Calculate the cognate sim for each sample, then average together
     group_scores = {}
+    group_counts = np.zeros(len(shared_concepts))
     if n_samples > 1:
         # Set default sample size to 80% of shared concepts
         sample_n = round(sample_size * len(shared_concepts))
         # Create N samples of size K
-        concept_groups = {n: set(random.sample(shared_concepts, k=sample_n)) for n in range(n_samples)}
+        concept_groups = {}
+        for n in range(n_samples):
+            # Take balanced resampling of same-meaning words
+            concept_group, group_counts = balanced_resample(
+                shared_concepts, sample_n, group_counts, rng
+            )
+            concept_groups[n] = set(concept_group)
 
         # Ensure that every shared concept is in at least one of the groups
         # If not, add to smallest (if equal sizes then add to one at random)
+        sampled_concepts = set(c for n in concept_groups for c in concept_groups[n])
         for concept in shared_concepts:
-            if concept not in concept_groups.values():
+            if concept not in sampled_concepts:
                 smallest_group = min(concept_groups.keys(), key=lambda x: len(concept_groups[x]))
                 concept_groups[smallest_group].add(concept)
     else:

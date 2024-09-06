@@ -7,6 +7,7 @@ from collections import defaultdict
 
 from networkx import Graph
 from networkx.algorithms.components.connected import connected_components
+import numpy as np
 from numpy import array, array_split
 from numpy.random import permutation
 
@@ -192,3 +193,19 @@ def keywithminval(d):
     v = list(d.values())
     k = list(d.keys())
     return k[v.index(min(v))]
+
+
+def balanced_resample(population, sample_size, sampled_counts, rng):
+    """Resample wordlist taking into account how many times each item has already been sampled."""
+    # Inverse weighting to prefer less-sampled data
+    prob_weights = 1 / (sampled_counts + 1)
+    # Normalize to sum to 1
+    prob_weights /= prob_weights.sum()
+    # Sample with weighted probabilities
+    pop_size = len(population)
+    sample_indices = rng.choices(np.arange(pop_size), weights=prob_weights, k=sample_size)
+    # Update count based on selected indices
+    sampled_counts[sample_indices] += 1
+    # Extract sampled words from selected indices
+    sample = [population[i] for i in sample_indices]
+    return sample, sampled_counts

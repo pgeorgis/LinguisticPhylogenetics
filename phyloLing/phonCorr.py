@@ -20,7 +20,7 @@ from utils.information import (adaptation_surprisal, bayes_pmi,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
                             flatten_ngram, pad_sequence)
-from utils.utils import default_dict, dict_tuplelist, normalize_dict
+from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample
 
 
 def sort_wordlist(wordlist):
@@ -349,12 +349,12 @@ class PhonCorrelator:
             rng = random.Random(seed_i)
 
             # Take balanced resampling of same-meaning words
-            synonym_sample, same_meaning_count = balance_resample(
+            synonym_sample, same_meaning_count = balanced_resample(
                 self.same_meaning, sample_size, same_meaning_count, rng
             )
 
             # Take a sample of different-meaning words, as large as the same-meaning set
-            diff_sample, diff_meaning_count = balance_resample(
+            diff_sample, diff_meaning_count = balanced_resample(
                 self.diff_meaning, diff_n, diff_meaning_count, rng
             )
             
@@ -1784,19 +1784,3 @@ def get_phonEnv_weight(phonEnv):
     weight += len(prefix)
     weight += len(suffix)
     return weight
-
-
-def balance_resample(population, sample_size, sampled_counts, rng):
-    """Resample wordlist taking into account how many times each item has already been sampled."""
-    # Inverse weighting to prefer less-sampled data
-    prob_weights = 1 / (sampled_counts + 1)
-    # Normalize to sum to 1
-    prob_weights /= prob_weights.sum()
-    # Sample with weighted probabilities
-    pop_size = len(population)
-    sample_indices = rng.choices(np.arange(pop_size), weights=prob_weights, k=sample_size)
-    # Update count based on selected indices
-    sampled_counts[sample_indices] += 1
-    # Extract sampled words from selected indices
-    sample = [population[i] for i in sample_indices]
-    return sample, sampled_counts
