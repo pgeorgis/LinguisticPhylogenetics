@@ -1,20 +1,20 @@
 VOWELS
-/ˈa/ (0.075)
+/ˈa/ (0.076)
 	<vaca> /vˈakɔ/ "COW_NOUN"
 	<patz> /pˈaʦ/ "PEACE_NOUN"
-	<an> /ˈan/ "YEAR_NOUN"
+	<paraula> /paɾˈawlɔ/ "WORD_NOUN"
 
-/ɔ/ (0.06)
+/ɔ/ (0.059)
 	<mica> /mˈikɔ/ "CRUMB_NOUN"
 	<illa> /ˈilːɔ/ "ISLAND_NOUN"
 	<aurelha> /awɾˈeʎɔ/ "EAR_NOUN"
 
 /e/ (0.054)
-	<espasa> /espˈazɔ/ "SWORD_NOUN"
-	<gendre> /ʤˈɛndɾe/ "SON-IN-LAW_NOUN"
-	<estela> /estˈelɔ/ "STAR_NOUN"
+	<estiu> /estˈiw/ "SUMMER_NOUN"
+	<petit> /petˈit/ "SMALL_ADJ"
+	<espina> /espˈinɔ/ "SPINE_NOUN"
 
-/ˈɛ/ (0.04)
+/ˈɛ/ (0.039)
 	<tèsta> /tˈɛstɔ/ "SKULL_NOUN"
 	<fèrre> /fˈɛre/ "IRON_NOUN"
 	<dent> /dˈɛn/ "TOOTH_NOUN"
@@ -44,7 +44,7 @@ VOWELS
 	<mòrdre> /mˈɔrdɾe/ "BITE_VERB"
 	<luòc> /lɥˈɔk/ "PLACE_NOUN"
 
-/ˈy/ (0.017)
+/ˈy/ (0.016)
 	<luna> /lˈynɔ/ "MOON_NOUN"
 	<subre> /sˈyβɾe/ "ABOVE_PREP"
 	<junh> /ʤˈyɲ/ "JUNE_PROPN"
@@ -76,8 +76,8 @@ CONSONANTS
 	<glaç> /ɡlˈas/ "ICE_NOUN"
 	<bèl> /bˈɛl/ "BEAUTIFUL (M)_ADJ"
 
-/k/ (0.046)
-	<cort> /kˈuɾt/ "SHORT_ADJ"
+/k/ (0.047)
+	<cercar> /serkˈa/ "SEARCH_VERB"
 	<color> /kulˈu/ "COLOR_NOUN"
 	<espic> /espˈik/ "EAR OF GRAIN_NOUN"
 
@@ -107,8 +107,8 @@ CONSONANTS
 	<tèms> /tˈɛms/ "TIME_NOUN"
 
 /r/ (0.027)
+	<sèire> /sˈɛjre/ "SIT_VERB"
 	<dormir> /durmˈi/ "SLEEP_VERB"
-	<pòrca> /pˈɔrkɔ/ "SOW_NOUN"
 	<riu> /rˈiw/ "RIVER_NOUN"
 
 /w/ (0.024)
@@ -136,7 +136,7 @@ CONSONANTS
 	<femna> /fˈenːɔ/ "WOMAN_NOUN"
 	<flor> /flˈu/ "FLOWER_NOUN"
 
-/d/ (0.017)
+/d/ (0.016)
 	<dia> /dˈiɔ/ "DAY_NOUN"
 	<dormir> /durmˈi/ "SLEEP_VERB"
 	<dos> /dˈus/ "TWO (M)_NUM"

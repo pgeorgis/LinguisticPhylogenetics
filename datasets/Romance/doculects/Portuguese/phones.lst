@@ -14,8 +14,8 @@ VOWELS
 	<gato> /ɡˈatu/ "CAT_NOUN"
 	<viagem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
 
-/ɨ/ (0.036)
-	<vinte> /vˈĩtɨ/ "TWENTY_NUM"
+/ɨ/ (0.037)
+	<doze> /dˈozɨ/ "TWELVE_NUM"
 	<noite> /nˈojtɨ/ "NIGHT_NOUN"
 	<nenhum> /nɨɲˈũ/ "NONE_PRON"
 
@@ -29,7 +29,7 @@ VOWELS
 	<estrela> /iʃtɾˈelɐ/ "STAR_NOUN"
 	<nascer> /nɐʃsˈeɾ/ "BE BORN_VERB"
 
-/ˈi/ (0.024)
+/ˈi/ (0.023)
 	<digo> /dˈiɣu/ "SAY-1SG_VERB"
 	<espinha> /iʃpˈiɲɐ/ "SPINE_NOUN"
 	<cortiça> /kuɾtˈisɐ/ "BARK_NOUN"
@@ -119,28 +119,28 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.077)
+/ɾ/ (0.078)
 	<morte> /mˈɔɾtɨ/ "DEATH_NOUN"
-	<cera> /sˈeɾɐ/ "WAX_NOUN"
-	<obra> /ˈɔβɾɐ/ "WORK_NOUN"
+	<árvore> /ˈaɾvuɾɨ/ "TREE_NOUN"
+	<obreiro> /ɔβɾˈɐjɾu/ "WORKER_NOUN"
 
-/s/ (0.036)
+/s/ (0.037)
 	<insua> /ˈinswɐ/ "ISLAND_NOUN"
 	<sabes> /sˈaβɨʃ/ "KNOW-2SG_VERB"
-	<seis> /sˈɐjʃ/ "SIX_NUM"
+	<sentar> /sẽtˈaɾ/ "SIT_VERB"
 
-/ʃ/ (0.036)
+/ʃ/ (0.035)
 	<peixe> /pˈɐjʃɨ/ "FISH_NOUN"
 	<escutar> /iʃkutˈaɾ/ "LISTEN_VERB"
 	<seis> /sˈɐjʃ/ "SIX_NUM"
 
-/t/ (0.036)
+/t/ (0.035)
 	<forte> /fˈɔɾtɨ/ "STRONG_ADJ"
 	<dente> /dˈẽtɨ/ "TOOTH_NOUN"
 	<estado> /iʃtˈaðu/ "STATE_NOUN"
 
-/k/ (0.034)
-	<que> /kˈɨ/ "WHAT_PRON"
+/k/ (0.035)
+	<coisa> /kˈojzɐ/ "THING_NOUN"
 	<mosca> /mˈoʃkɐ/ "FLY_NOUN"
 	<cu> /kˈu/ "BUTTOCKS_NOUN"
 

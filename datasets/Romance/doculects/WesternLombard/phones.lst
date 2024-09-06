@@ -7,7 +7,7 @@ VOWELS
 /ˈa/ (0.059)
 	<levà> /leʋˈa/ "CARRY_VERB"
 	<ciav> /ʧˈaf/ "KEY_NOUN"
-	<larma> /lˈarma/ "TEAR_NOUN"
+	<nudà> /nudˈa/ "SWIM_VERB"
 
 /ˈɛ/ (0.031)
 	<fer> /fˈɛr/ "IRON_NOUN"
@@ -19,9 +19,9 @@ VOWELS
 	<légna> /lˈeɲa/ "WOOD_NOUN"
 	<peil> /pˈejl/ "HAIR_NOUN"
 
-/e/ (0.023)
+/e/ (0.024)
 	<levà> /leʋˈa/ "CARRY_VERB"
-	<vedè> /ʋedˈɛ/ "SEE_VERB"
+	<cercà> /ʧerkˈa/ "SEARCH_VERB"
 	<ànjel> /ˈanjel/ "ANGEL_NOUN"
 
 /ˈɔ/ (0.022)
@@ -34,7 +34,7 @@ VOWELS
 	<vita> /ʋˈita/ "LIFE_NOUN"
 	<isla> /ˈisla/ "ISLAND_NOUN"
 
-/ˈu/ (0.02)
+/ˈu/ (0.019)
 	<mosca> /mˈuska/ "FLY_NOUN"
 	<colp> /kˈulp/ "STRIKE_NOUN"
 	<sora> /sˈura/ "ABOVE_PREP"
@@ -74,7 +74,7 @@ VOWELS
 	<culuur> /kylˈyːr/ "COLOR_NOUN"
 	<lüüs> /lˈyːs/ "LIGHT_NOUN"
 
-/i/ (0.007)
+/i/ (0.006)
 	<ginögg> /ʤinˈøʧ/ "KNEE_NOUN"
 	<cireiscia> /ʧirˈejʃa/ "CHERRY_NOUN"
 	<visign> /ʋizˈiɲ/ "NEIGHBOR_NOUN"
@@ -150,10 +150,10 @@ VOWELS
 CONSONANTS
 /r/ (0.071)
 	<mare> /mˈare/ "MOTHER_NOUN"
-	<durmì> /durmˈi/ "SLEEP_VERB"
+	<cürt> /kˈyːrt/ "SHORT_ADJ"
 	<seira> /sˈejra/ "EVENING_NOUN"
 
-/l/ (0.059)
+/l/ (0.058)
 	<fals> /fˈals/ "FALSE_ADJ"
 	<alter> /ˈalter/ "OTHER_ADJ"
 	<peil> /pˈejl/ "HAIR_NOUN"
@@ -163,7 +163,7 @@ CONSONANTS
 	<pess> /pˈes/ "FISH_NOUN"
 	<sabia> /sˈabja/ "SAND_NOUN"
 
-/k/ (0.051)
+/k/ (0.052)
 	<buca> /bˈuka/ "MOUTH_NOUN"
 	<fögh> /fˈøːk/ "FIRE_NOUN"
 	<caval> /kaʋˈal/ "HORSE_NOUN"
@@ -173,12 +173,12 @@ CONSONANTS
 	<nòst> /nˈɔst/ "OUR_ADJ"
 	<vint> /ʋˈĩːt/ "TWENTY_NUM"
 
-/n/ (0.034)
+/n/ (0.033)
 	<dona> /dˈona/ "LADY_NOUN"
 	<nomm> /nˈom/ "NAME_NOUN"
 	<fomna> /fˈɔmna/ "WOMAN_NOUN"
 
-/f/ (0.033)
+/f/ (0.032)
 	<fals> /fˈals/ "FALSE_ADJ"
 	<festa> /fˈɛsta/ "PARTY_NOUN"
 	<föia> /fˈøja/ "LEAF_NOUN"
@@ -203,15 +203,15 @@ CONSONANTS
 	<vedè> /ʋedˈɛ/ "SEE_VERB"
 	<düü> /dˈyː/ "TWO (M)_NUM"
 
-/j/ (0.025)
-	<sabia> /sˈabja/ "SAND_NOUN"
-	<fiùu> /fjˈyː/ "FLOWER_NOUN"
-	<föia> /fˈøja/ "LEAF_NOUN"
+/ʧ/ (0.025)
+	<vecc> /ʋˈeʧ/ "OLD_ADJ"
+	<öcc> /ˈøʧ/ "EIGHT_NUM"
+	<ginögg> /ʤinˈøʧ/ "KNEE_NOUN"
 
-/ʧ/ (0.024)
-	<ulcell> /ulʧˈɛl/ "BIRD_NOUN"
-	<lacc> /lˈaʧ/ "MILK_NOUN"
-	<viag> /ʋjˈaʧ/ "JOURNEY_NOUN"
+/j/ (0.025)
+	<mèj> /mˈɛj/ "BETTER_ADV"
+	<pioeuva> /pjˈøʋa/ "RAIN_NOUN"
+	<aidà> /ajdˈa/ "HELP_VERB"
 
 /b/ (0.018)
 	<bev> /bˈeːf/ "DRINK_VERB"

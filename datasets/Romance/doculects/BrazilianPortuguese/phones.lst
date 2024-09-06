@@ -9,9 +9,9 @@ VOWELS
 	<cabra> /kˈabɾɐ/ "GOAT_NOUN"
 	<ʤia> /ʤˈiɐ/ "DAY_NOUN"
 
-/ˈa/ (0.038)
+/ˈa/ (0.039)
 	<chave> /ʃˈavi/ "KEY_NOUN"
-	<estado> /eʃtˈadu/ "STATE_NOUN"
+	<falar> /falˈah/ "SPEAK_VERB"
 	<casa> /kˈazɐ/ "HOUSE_NOUN"
 
 /ˈe/ (0.037)
@@ -34,22 +34,22 @@ VOWELS
 	<areia> /aɾˈejɐ/ "SAND_NOUN"
 	<nascer> /nasˈeh/ "BE BORN_VERB"
 
-/ˈɐ̃/ (0.02)
-	<Espanha> /eʃpˈɐ̃j̃ɐ/ "SPAIN_PROPN"
-	<são> /sˈɐ̃w̃/ "HEALTHY (M)_ADJ"
-	<cão> /kˈɐ̃w̃/ "DOG_NOUN"
-
 /e/ (0.02)
-	<estio> /eʃʧˈiw/ "SUMMER_NOUN"
+	<estrela> /eʃtɾˈelɐ/ "STAR_NOUN"
+	<redondo> /hedˈõdu/ "ROUND_ADJ"
+	<espiga> /eʃpˈiɡɐ/ "EAR OF GRAIN_NOUN"
+
+/ˈɐ̃/ (0.02)
+	<aranha> /aɾˈɐ̃j̃ɐ/ "SPIDER_NOUN"
 	<semana> /semˈɐ̃nɐ/ "WEEK_NOUN"
-	<beber> /bebˈeh/ "DRINK_VERB"
+	<câmara> /kˈɐ̃maɾɐ/ "CHAMBER_NOUN"
 
 /ˈi/ (0.019)
 	<via> /vˈiɐ/ "ROAD_NOUN"
 	<vir> /vˈih/ "COME-INF_VERB"
 	<ilha> /ˈiʎɐ/ "ISLAND_NOUN"
 
-/ˈɛ/ (0.016)
+/ˈɛ/ (0.015)
 	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
 	<inverno> /ĩvˈɛɦnu/ "WINTER_NOUN"
 	<neve> /nˈɛvi/ "SNOW_NOUN"
@@ -113,35 +113,35 @@ VOWELS
 
 
 CONSONANTS
-/h/ (0.042)
+/h/ (0.043)
 	<rainha> /haˈĩj̃ɐ/ "QUEEN_NOUN"
-	<nadar> /nadˈah/ "SWIM_VERB"
+	<forte> /fˈɔhʧi/ "STRONG_ADJ"
 	<rei> /hˈej/ "KING_NOUN"
 
-/s/ (0.037)
+/s/ (0.038)
+	<escrever> /eskɾevˈeh/ "WRITE_VERB"
 	<preço> /pɾˈesu/ "PRICE_NOUN"
 	<sabes> /sˈabiʃ/ "KNOW-2SG_VERB"
-	<salsa> /sˈawsɐ/ "SAUCE_NOUN"
 
 /ɾ/ (0.035)
+	<estrela> /eʃtɾˈelɐ/ "STAR_NOUN"
 	<ventre> /vˈẽtɾi/ "BELLY_NOUN"
 	<preço> /pɾˈesu/ "PRICE_NOUN"
-	<graxa> /ɡɾˈaʃɐ/ "FAT_NOUN"
 
-/k/ (0.034)
-	<que> /kˈi/ "WHAT_PRON"
-	<cabra> /kˈabɾɐ/ "GOAT_NOUN"
-	<cabelo> /kabˈelu/ "HAIR_NOUN"
+/k/ (0.035)
+	<escuro> /eʃkˈuɾu/ "DARK_ADJ"
+	<coisa> /kˈojzɐ/ "THING_NOUN"
+	<escrever> /eskɾevˈeh/ "WRITE_VERB"
 
 /ʃ/ (0.034)
+	<festa> /fˈɛʃtɐ/ "PARTY_NOUN"
+	<paz> /pˈajʃ/ "PEACE_NOUN"
 	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
-	<chama> /ʃˈɐ̃mɐ/ "FLAME_NOUN"
-	<nariz> /naɾˈiʃ/ "NOSE_NOUN"
 
 /v/ (0.03)
+	<livre> /lˈivɾi/ "FREE_ADJ"
+	<velho> /vˈeʎu/ "OLD_ADJ"
 	<vilão> /vilˈɐ̃w̃/ "VILLAIN_NOUN"
-	<jovem> /ʒˈɔvẽj̃/ "YOUNG_ADJ"
-	<vós> /vˈɔjʃ/ "YOU (PL)_PRON"
 
 /l/ (0.029)
 	<colo> /kˈɔlu/ "NECK_NOUN"
@@ -198,7 +198,7 @@ CONSONANTS
 	<ouro> /ˈowɾu/ "GOLD_NOUN"
 	<estio> /eʃʧˈiw/ "SUMMER_NOUN"
 
-/f/ (0.016)
+/f/ (0.015)
 	<falar> /falˈah/ "SPEAK_VERB"
 	<fio> /fˈiw/ "STRING_NOUN"
 	<frio> /fɾˈiu/ "COLD_ADJ"

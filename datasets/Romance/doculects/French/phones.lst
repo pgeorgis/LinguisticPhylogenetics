@@ -4,18 +4,18 @@ VOWELS
 	<argile> /aʁʒil/ "CLAY_NOUN"
 	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
 
-/ɛ/ (0.055)
+/ɛ/ (0.056)
 	<cher> /ʃɛʁ/ "DEAR_ADJ"
 	<chair> /ʃɛʁ/ "MEAT_NOUN"
-	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
+	<sept> /sɛt/ "SEVEN_NUM"
 
 /i/ (0.048)
 	<racine> /ʁasin/ "ROOT_NOUN"
 	<dire> /diʁ/ "SAY-INF_VERB"
 	<dix> /dis/ "TEN_NUM"
 
-/e/ (0.036)
-	<neiger> /neʒe/ "SNOW (VERB)_VERB"
+/e/ (0.037)
+	<fumée> /fyme/ "SMOKE_NOUN"
 	<glacer> /ɡlase/ "FREEZE_VERB"
 	<épi> /epi/ "EAR OF GRAIN_NOUN"
 
@@ -72,7 +72,7 @@ VOWELS
 
 
 CONSONANTS
-/ʁ/ (0.1)
+/ʁ/ (0.101)
 	<rouge> /ʁuʒ/ "RED_ADJ"
 	<faire> /fɛʁ/ "DO_VERB"
 	<graine> /ɡʁɛn/ "GRAIN_NOUN"
@@ -127,7 +127,7 @@ CONSONANTS
 	<clamer> /klame/ "CALL_VERB"
 	<sec> /sɛk/ "DRY (M)_ADJ"
 
-/j/ (0.028)
+/j/ (0.027)
 	<lion> /ljɔ̃/ "LION_NOUN"
 	<ouvrier> /uvʁije/ "WORKER_NOUN"
 	<caille> /kaj/ "QUAIL_NOUN"
@@ -137,7 +137,7 @@ CONSONANTS
 	<gendre> /ʒɑ̃dʁ/ "SON-IN-LAW_NOUN"
 	<jaune> /ʒon/ "YELLOW_ADJ"
 
-/ʃ/ (0.021)
+/ʃ/ (0.023)
 	<cheveu> /ʃəvø/ "HAIR_NOUN"
 	<chaîne> /ʃɛn/ "CHAIN_NOUN"
 	<chaud> /ʃo/ "HOT_ADJ"
@@ -167,7 +167,7 @@ CONSONANTS
 	<chose> /ʃoz/ "THING_NOUN"
 	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
 
-/ɲ/ (0.006)
+/ɲ/ (0.005)
 	<Espagne> /ɛspaɲ/ "SPAIN_PROPN"
 	<araignée> /aʁeɲe/ "SPIDER_NOUN"
 	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"

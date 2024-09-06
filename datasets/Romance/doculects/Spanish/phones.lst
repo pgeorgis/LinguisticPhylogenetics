@@ -1,5 +1,5 @@
 VOWELS
-/o/ (0.096)
+/o/ (0.095)
 	<huevo> /wˈeβo/ "EGG_NOUN"
 	<hermano> /eɾmˈano/ "BROTHER_NOUN"
 	<hierro> /jˈero/ "IRON_NOUN"
@@ -20,9 +20,9 @@ VOWELS
 	<gato> /ɡˈato/ "CAT_NOUN"
 
 /e/ (0.044)
-	<dulce> /dˈulθe/ "SWEET_ADJ"
+	<estío> /estˈio/ "SUMMER_NOUN"
 	<hermoso> /eɾmˈoso/ "BEAUTIFUL (M)_ADJ"
-	<semilla> /semˈiʝa/ "SEED_NOUN"
+	<cercar> /θeɾkˈaɾ/ "SEARCH_VERB"
 
 /ˈo/ (0.034)
 	<piojo> /pjˈoxo/ "LOUSE_NOUN"
@@ -52,12 +52,12 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.078)
+/ɾ/ (0.079)
 	<nacer> /naθˈeɾ/ "BE BORN_VERB"
 	<decir> /deθˈiɾ/ "SAY-INF_VERB"
 	<nombre> /nˈombɾe/ "NAME_NOUN"
 
-/n/ (0.053)
+/n/ (0.052)
 	<conocer> /konoθˈeɾ/ "BE ACQUAINTED WITH_VERB"
 	<nuez> /nwˈeθ/ "NUT_NOUN"
 	<encía> /enθˈia/ "GUMS_NOUN"
@@ -67,12 +67,12 @@ CONSONANTS
 	<estado> /estˈaðo/ "STATE_NOUN"
 	<todos> /tˈoðos/ "ALL (PL)_ADJ"
 
-/l/ (0.038)
+/l/ (0.037)
 	<olor> /olˈoɾ/ "ODOR_NOUN"
 	<libre> /lˈiβɾe/ "FREE_ADJ"
 	<cola> /kˈola/ "TAIL_NOUN"
 
-/k/ (0.034)
+/k/ (0.035)
 	<cabello> /kaβˈeʝo/ "HAIR_NOUN"
 	<cuerno> /kwˈeɾno/ "HORN_NOUN"
 	<cazar> /kaθˈaɾ/ "HUNT_VERB"
@@ -92,32 +92,32 @@ CONSONANTS
 	<viejo> /bjˈexo/ "OLD_ADJ"
 	<voz> /bˈoθ/ "VOICE_NOUN"
 
-/p/ (0.026)
-	<palabra> /palˈaβɾa/ "WORD_NOUN"
-	<poder> /poðˈeɾ/ "CAN_VERB"
-	<pez> /pˈeθ/ "FISH_NOUN"
-
 /θ/ (0.026)
+	<ciudad> /θjuðˈað/ "CITY_NOUN"
+	<pez> /pˈeθ/ "FISH_NOUN"
 	<luz> /lˈuθ/ "LIGHT_NOUN"
-	<arcilla> /aɾθˈiʝa/ "CLAY_NOUN"
-	<nuez> /nwˈeθ/ "NUT_NOUN"
+
+/p/ (0.026)
+	<espiga> /espˈiɣa/ "EAR OF GRAIN_NOUN"
+	<prisco> /pɾˈisko/ "PEACH_NOUN"
+	<puerca> /pwˈeɾka/ "SOW_NOUN"
 
 /j/ (0.026)
-	<diez> /djˈeθ/ "TEN_NUM"
 	<seis> /sˈejs/ "SIX_NUM"
+	<diez> /djˈeθ/ "TEN_NUM"
 	<viaje> /bjˈaxe/ "JOURNEY_NOUN"
 
-/β/ (0.023)
+/β/ (0.022)
 	<nueve> /nwˈeβe/ "NINE_NUM"
 	<nuevo> /nwˈeβo/ "NEW_ADJ"
 	<palabra> /palˈaβɾa/ "WORD_NOUN"
 
-/w/ (0.023)
+/w/ (0.022)
 	<grueso> /ɡɾwˈeso/ "THICK_ADJ"
 	<buey> /bwˈej/ "OX_NOUN"
 	<puente> /pwˈente/ "BRIDGE_NOUN"
 
-/ð/ (0.018)
+/ð/ (0.017)
 	<cordero> /koɾðˈeɾo/ "LAMB_NOUN"
 	<padre> /pˈaðɾe/ "FATHER_NOUN"
 	<estado> /estˈaðo/ "STATE_NOUN"

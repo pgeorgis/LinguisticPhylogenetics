@@ -1,8 +1,8 @@
 VOWELS
-/e/ (0.095)
+/e/ (0.096)
 	<luare> /luˈare/ "CARRY_VERB"
 	<ploaie> /plo̯ˈaje/ "RAIN_NOUN"
-	<galben> /ɡˈalben/ "YELLOW_ADJ"
+	<scriere> /skrˈiere/ "WRITE_VERB"
 
 /ə/ (0.061)
 	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
@@ -10,11 +10,11 @@ VOWELS
 	<țară> /ʦˈarə/ "EARTH_NOUN"
 
 /ˈa/ (0.05)
-	<an> /ˈan/ "YEAR_NOUN"
-	<lacrimă> /lˈakrimə/ "TEAR_NOUN"
-	<alb> /ˈalb/ "WHITE_ADJ"
+	<parabolă> /parˈabolə/ "WORD_NOUN"
+	<spată> /spˈatə/ "SWORD_NOUN"
+	<apă> /ˈapə/ "WATER_NOUN"
 
-/ˈi/ (0.037)
+/ˈi/ (0.036)
 	<timp> /tˈimp/ "TIME_NOUN"
 	<buric> /burˈik/ "NAVEL_NOUN"
 	<liber> /lˈiber/ "FREE_ADJ"
@@ -86,9 +86,9 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.097)
-	<lacrimă> /lˈakrimə/ "TEAR_NOUN"
-	<operă> /ˈoperə/ "WORK_NOUN"
+/r/ (0.098)
+	<înotare> /ɨnotˈare/ "SWIM_VERB"
+	<parabolă> /parˈabolə/ "WORD_NOUN"
 	<odoare> /odo̯ˈare/ "ODOR_NOUN"
 
 /n/ (0.062)
@@ -101,14 +101,14 @@ CONSONANTS
 	<scurt> /skˈurt/ "SHORT_ADJ"
 	<pește> /pˈeʃte/ "FISH_NOUN"
 
-/k/ (0.043)
+/k/ (0.044)
+	<scriere> /skrˈiere/ "WRITE_VERB"
 	<loc> /lˈok/ "PLACE_NOUN"
 	<porc> /pˈork/ "PIG_NOUN"
-	<casă> /kˈasə/ "HOUSE_NOUN"
 
-/p/ (0.04)
-	<piersică> /pjˈersikə/ "PEACH_NOUN"
+/p/ (0.039)
 	<pui> /pˈuj/ "PUT-2SG_VERB"
+	<piersică> /pjˈersikə/ "PEACH_NOUN"
 	<timp> /tˈimp/ "TIME_NOUN"
 
 /l/ (0.035)
@@ -131,9 +131,9 @@ CONSONANTS
 	<foaie> /fo̯ˈaje/ "LEAF_NOUN"
 	<Spania> /spˈanja/ "SPAIN_PROPN"
 
-/ʧ/ (0.019)
+/ʧ/ (0.02)
 	<pace> /pˈaʧe/ "PEACE_NOUN"
-	<voce> /vˈoʧe/ "VOICE_NOUN"
+	<doisprezece> /dˈojsprezeʧe/ "TWELVE_NUM"
 	<cruce> /krˈuʧe/ "CROSS_NOUN"
 
 /f/ (0.019)

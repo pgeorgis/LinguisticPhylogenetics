@@ -1,5 +1,5 @@
 VOWELS
-/u/ (0.097)
+/u/ (0.096)
 	<ochju> /ˈocu/ "EYE_NOUN"
 	<toru> /tˈɔru/ "BULL_NOUN"
 	<eiu> /ˈeju/ "I_PRON"
@@ -12,7 +12,7 @@ VOWELS
 /ˈa/ (0.062)
 	<matre> /mˈatre/ "MOTHER_NOUN"
 	<nasu> /nˈazu/ "NOSE_NOUN"
-	<arburu> /ˈarburu/ "TREE_NOUN"
+	<lacrima> /lˈakrima/ "TEAR_NOUN"
 
 /e/ (0.06)
 	<matre> /mˈatre/ "MOTHER_NOUN"
@@ -34,7 +34,7 @@ VOWELS
 	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
 	<regina> /reʤˈina/ "QUEEN_NOUN"
 
-/ˈe/ (0.021)
+/ˈe/ (0.02)
 	<sei> /sˈej/ "SIX_NUM"
 	<testa> /tˈesta/ "SKULL_NOUN"
 	<nebbia> /nˈebːja/ "FOG_NOUN"
@@ -47,7 +47,7 @@ VOWELS
 /i/ (0.019)
 	<ghjinochju> /ɟinˈɔcu/ "KNEE_NOUN"
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
-	<lacrima> /lˈakrima/ "TEAR_NOUN"
+	<nivicà> /nivikˈa/ "SNOW (VERB)_VERB"
 
 /ˈo/ (0.018)
 	<pone> /pˈone/ "PUT-2SG_VERB"
@@ -62,9 +62,9 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.058)
+/r/ (0.059)
 	<scorza> /skˈɔrʦa/ "BARK_NOUN"
-	<pecura> /pˈekura/ "SHEEP_NOUN"
+	<vergogna> /verɡˈɔɲa/ "SHAME_NOUN"
 	<orechja> /orˈɛca/ "EAR_NOUN"
 
 /n/ (0.054)
@@ -72,15 +72,15 @@ CONSONANTS
 	<neve> /nˈɛve/ "SNOW_NOUN"
 	<vinti> /vˈinti/ "TWENTY_NUM"
 
+/k/ (0.04)
+	<croce> /krˈɔʧe/ "CROSS_NOUN"
+	<mosca> /mˈɔska/ "FLY_NOUN"
+	<porcu> /pˈɔrku/ "PIG_NOUN"
+
 /t/ (0.039)
 	<morte> /mˈɔrte/ "DEATH_NOUN"
-	<aiutà> /ajutˈa/ "HELP_VERB"
-	<cantu> /kˈantu/ "SONG_NOUN"
-
-/k/ (0.039)
-	<croce> /krˈɔʧe/ "CROSS_NOUN"
-	<nivicà> /nivikˈa/ "SNOW (VERB)_VERB"
-	<core> /kˈɔre/ "HEART_NOUN"
+	<estate> /estˈate/ "SUMMER_NOUN"
+	<matre> /mˈatre/ "MOTHER_NOUN"
 
 /l/ (0.032)
 	<ghjelu> /ɟˈelu/ "ICE_NOUN"
@@ -132,15 +132,15 @@ CONSONANTS
 	<castellu> /kastˈelːu/ "CASTLE_NOUN"
 	<billicu> /bˈilːiku/ "NAVEL_NOUN"
 
-/b/ (0.014)
-	<boie> /bˈɔje/ "OX_NOUN"
-	<boni> /bˈɔni/ "GOOD (M.PL)_ADJ"
-	<bellu> /bˈɛlːu/ "BEAUTIFUL (M)_ADJ"
-
-/ʧ/ (0.013)
-	<cima> /ʧˈima/ "SUMMIT_NOUN"
+/ʧ/ (0.014)
 	<dodeci> /dˈɔdeʧi/ "TWELVE_NUM"
-	<croce> /krˈɔʧe/ "CROSS_NOUN"
+	<pace> /pˈaʧe/ "PEACE_NOUN"
+	<cità> /ʧitˈa/ "CITY_NOUN"
+
+/b/ (0.014)
+	<bassu> /bˈasːu/ "LOW_ADJ"
+	<billicu> /bˈilːiku/ "NAVEL_NOUN"
+	<brusgià> /bruʒˈa/ "BURN_VERB"
 
 /tː/ (0.01)
 	<notte> /nˈɔtːe/ "NIGHT_NOUN"

@@ -1,5 +1,5 @@
 VOWELS
-/o/ (0.081)
+/o/ (0.08)
 	<color> /kolˈoɾ/ "COLOR_NOUN"
 	<denguno> /deŋɡˈuno/ "NONE_PRON"
 	<vino> /bˈino/ "WINE_NOUN"
@@ -14,14 +14,14 @@ VOWELS
 	<fredo> /fɾˈeðo/ "COLD_ADJ"
 	<nuez> /nwˈeθ/ "NUT_NOUN"
 
-/ˈa/ (0.059)
+/ˈa/ (0.06)
 	<naso> /nˈaso/ "NOSE_NOUN"
 	<paz> /pˈaθ/ "PEACE_NOUN"
-	<sabio> /sˈaβjo/ "WISE_ADJ"
+	<blanco> /blˈaŋko/ "WHITE_ADJ"
 
 /e/ (0.038)
 	<hombre> /ˈombɾe/ "MAN_NOUN"
-	<doze> /dˈoθe/ "TWELVE_NUM"
+	<espada> /espˈaða/ "SWORD_NOUN"
 	<chelar> /ʧelˈaɾ/ "FREEZE_VERB"
 
 /ˈo/ (0.025)
@@ -52,10 +52,10 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.073)
+/ɾ/ (0.074)
 	<naixer> /najʃˈeɾ/ "BE BORN_VERB"
 	<creyer> /kɾeʝˈeɾ/ "BELIEVE_VERB"
-	<estrela> /estɾˈela/ "STAR_NOUN"
+	<araina> /aɾˈajna/ "SPIDER_NOUN"
 
 /n/ (0.054)
 	<dien> /djˈen/ "TOOTH_NOUN"
@@ -77,10 +77,10 @@ CONSONANTS
 	<viello> /bjˈeʎo/ "OLD_ADJ"
 	<reina> /rˈejna/ "QUEEN_NOUN"
 
-/k/ (0.034)
+/k/ (0.035)
 	<cruz> /kɾˈuθ/ "CROSS_NOUN"
 	<cuatro> /kwˈatɾo/ "FOUR_NUM"
-	<puerca> /pwˈeɾka/ "SOW_NOUN"
+	<canto> /kˈanto/ "SONG_NOUN"
 
 /t/ (0.034)
 	<piet> /pjˈet/ "FOOT_NOUN"
@@ -110,35 +110,35 @@ CONSONANTS
 /θ/ (0.019)
 	<chuez> /ʧwˈeθ/ "JUDGE_NOUN"
 	<dezir> /deθˈiɾ/ "SAY-INF_VERB"
-	<paz> /pˈaθ/ "PEACE_NOUN"
+	<puzo> /pˈuθo/ "WELL_NOUN"
 
 /β/ (0.019)
+	<proveito> /pɾoβˈejto/ "PROFIT_NOUN"
 	<choven> /ʧˈoβen/ "YOUNG_ADJ"
 	<plevia> /plˈeβja/ "RAIN_NOUN"
-	<caballo> /kaβˈaʎo/ "HORSE_NOUN"
 
-/ʎ/ (0.018)
+/ʎ/ (0.017)
+	<chenullo> /ʧenˈuʎo/ "KNEE_NOUN"
 	<gualla> /ɡwˈaʎa/ "QUAIL_NOUN"
 	<millor> /miʎˈoɾ/ "BETTER_ADJ"
-	<cuello> /kwˈeʎo/ "NECK_NOUN"
 
 /f/ (0.017)
+	<figado> /fiɣˈaðo/ "LIVER_NOUN"
 	<fuego> /fwˈeɣo/ "FIRE_NOUN"
 	<fino> /fˈino/ "THIN_ADJ"
-	<fambre> /fˈambɾe/ "HUNGER_NOUN"
 
 /ð/ (0.013)
+	<pedullo> /peðˈuʎo/ "LOUSE_NOUN"
 	<radiz> /raðˈiθ/ "ROOT_NOUN"
 	<fada> /fˈaða/ "FATE_NOUN"
-	<figado> /fiɣˈaðo/ "LIVER_NOUN"
 
 /ʧ/ (0.011)
 	<chuez> /ʧwˈeθ/ "JUDGE_NOUN"
-	<chirmán> /ʧiɾmˈan/ "BROTHER_NOUN"
-	<cheniva> /ʧenˈiβa/ "GUMS_NOUN"
+	<choven> /ʧˈoβen/ "YOUNG_ADJ"
+	<pancha> /pˈanʧa/ "BELLY_NOUN"
 
 /d/ (0.011)
-	<dos> /dˈos/ "TWO (M)_NUM"
+	<dien> /djˈen/ "TOOTH_NOUN"
 	<don> /dˈon/ "GIFT_NOUN"
 	<dulze> /dˈulθe/ "SWEET_ADJ"
 

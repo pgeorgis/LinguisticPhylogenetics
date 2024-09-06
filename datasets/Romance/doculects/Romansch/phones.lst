@@ -1,10 +1,10 @@
 VOWELS
-/ə/ (0.098)
+/ə/ (0.097)
 	<tscharescha> /ʧərˈeːʃə/ "CHERRY_NOUN"
 	<leger> /lˈɛːʥər/ "READ_VERB"
 	<mellen> /mˈɛlən/ "YELLOW_ADJ"
 
-/ˈa/ (0.057)
+/ˈa/ (0.056)
 	<pudair> /pudˈajr/ "CAN_VERB"
 	<saun> /sˈawn/ "HEALTHY (M)_ADJ"
 	<fatsch> /fˈaʧ/ "DO-1SG_VERB"
@@ -19,15 +19,15 @@ VOWELS
 	<lieur> /ljˈɛwr/ "HARE_NOUN"
 	<dent> /dˈɛnt/ "TOOTH_NOUN"
 
-/ˈiː/ (0.021)
-	<farina> /fərˈiːnə/ "FLOUR_NOUN"
-	<murir> /murˈiːr/ "DIE_VERB"
-	<di> /dˈiː/ "SAY-1SG_VERB"
-
 /ˈaː/ (0.021)
-	<brischar> /briʃˈaːr/ "BURN_VERB"
-	<viadi> /vjˈaːdi/ "JOURNEY_NOUN"
-	<mazzar> /maʦˈaːr/ "KILL_VERB"
+	<sgular> /ʒɡulˈaːr/ "FLY_VERB"
+	<char> /ʨˈaːr/ "DEAR_ADJ"
+	<muntagna> /muntˈaːɲə/ "MOUNTAIN_NOUN"
+
+/ˈiː/ (0.021)
+	<vegnir> /vəɲˈiːr/ "COME-INF_VERB"
+	<regina> /reʥˈiːnə/ "QUEEN_NOUN"
+	<via> /vˈiːə/ "ROAD_NOUN"
 
 /ˈɔ/ (0.015)
 	<scorsa> /ʃkˈɔrsə/ "BARK_NOUN"
@@ -74,14 +74,14 @@ VOWELS
 	<lescha> /lˈeːʃə/ "LAW_NOUN"
 	<tscharescha> /ʧərˈeːʃə/ "CHERRY_NOUN"
 
+/e/ (0.005)
+	<tschertgar> /ʧerʨˈaːr/ "SEARCH_VERB"
+	<regina> /reʥˈiːnə/ "QUEEN_NOUN"
+	<meglier> /meʎˈeːr/ "BETTER_ADJ"
+
 /ˈiə̯/ (0.004)
 	<diesch> /dˈiə̯ʃ/ "TEN_NUM"
-	<tschiel> /ʧˈiə̯l/ "SKY_NOUN"
 	<tschient> /ʧˈiə̯nt/ "HUNDRED_NUM"
-
-/e/ (0.004)
-	<vesair> /vezˈajr/ "SEE_VERB"
-	<meglier> /meʎˈeːr/ "BETTER_ADJ"
 	<enviern> /envˈiə̯rn/ "WINTER_NOUN"
 
 /ˈo/ (0.003)
@@ -105,8 +105,8 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.085)
-	<mar> /mˈaːr/ "SEA_NOUN"
+/r/ (0.086)
+	<tschertgar> /ʧerʨˈaːr/ "SEARCH_VERB"
 	<nascher> /nˈaʃər/ "BE BORN_VERB"
 	<odur> /odˈuːr/ "ODOR_NOUN"
 
@@ -115,7 +115,7 @@ CONSONANTS
 	<roman> /romˈan/ "ROMAN_ADJ"
 	<sontg> /sˈɔnʨ/ "SACRED_ADJ"
 
-/l/ (0.051)
+/l/ (0.05)
 	<ella> /ˈelə/ "SHE_PRON"
 	<sgol> /ʒɡˈɔl/ "FLIGHT_NOUN"
 	<chaval> /ʨəvˈal/ "HORSE_NOUN"
@@ -130,8 +130,8 @@ CONSONANTS
 	<punt> /pˈunt/ "BRIDGE_NOUN"
 	<curt> /kˈurt/ "SHORT_ADJ"
 
-/ʨ/ (0.031)
-	<chaussa> /ʨˈawsə/ "THING_NOUN"
+/ʨ/ (0.032)
+	<chant> /ʨˈant/ "SONG_NOUN"
 	<vatga> /vˈaʨə/ "COW_NOUN"
 	<sitga> /sˈiʨə/ "DRY (F)_ADJ"
 
@@ -190,15 +190,15 @@ CONSONANTS
 	<glisch> /ʎˈiʃ/ "LIGHT_NOUN"
 	<vegl> /vˈɛʎ/ "OLD_ADJ"
 
-/ɡ/ (0.013)
-	<graun> /ɡrˈawn/ "GRAIN_NOUN"
-	<gut> /ɡˈut/ "DROP_NOUN"
-	<sgol> /ʒɡˈɔl/ "FLIGHT_NOUN"
+/ʧ/ (0.013)
+	<glatsch> /ɡlˈaʧ/ "ICE_NOUN"
+	<fatsch> /fˈaʧ/ "DO-1SG_VERB"
+	<tschient> /ʧˈiə̯nt/ "HUNDRED_NUM"
 
-/ʧ/ (0.012)
-	<tschendra> /ʧˈɛndrə/ "ASH_NOUN"
-	<chatschar> /ʨəʧˈaːr/ "HUNT_VERB"
-	<tschintg> /ʧˈinʨ/ "FIVE_NUM"
+/ɡ/ (0.013)
+	<anghel> /ˈaŋɡəl/ "ANGEL_NOUN"
+	<sgular> /ʒɡulˈaːr/ "FLY_VERB"
+	<ungla> /ˈuŋɡlə/ "FINGERNAIL_NOUN"
 
 /ʥ/ (0.009)
 	<segir> /səʥˈiːr/ "SAFE_ADJ"

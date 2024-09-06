@@ -1,10 +1,10 @@
 VOWELS
-/ə/ (0.129)
+/ə/ (0.13)
 	<espiga> /əspˈiɣə/ "EAR OF GRAIN_NOUN"
-	<setmana> /səmːˈanə/ "WEEK_NOUN"
+	<cera> /sˈeɾə/ "WAX_NOUN"
 	<castell> /kəstˈeʎ/ "CASTLE_NOUN"
 
-/ˈa/ (0.068)
+/ˈa/ (0.069)
 	<all> /ˈaʎ/ "GARLIC_NOUN"
 	<alba> /ˈalβə/ "DAWN_NOUN"
 	<plaga> /plˈaɣə/ "PLAGUE_NOUN"
@@ -56,9 +56,9 @@ VOWELS
 
 CONSONANTS
 /s/ (0.061)
-	<cel> /sˈɛl/ "SKY_NOUN"
+	<testa> /tˈestə/ "SKULL_NOUN"
 	<escorça> /əskˈɔrsə/ "BARK_NOUN"
-	<tres> /tɾˈɛs/ "THREE_NUM"
+	<gros> /ɡɾˈɔs/ "THICK_ADJ"
 
 /k/ (0.045)
 	<creu> /kɾˈɛw/ "CROSS_NOUN"
@@ -105,10 +105,10 @@ CONSONANTS
 	<volar> /bulˈa/ "FLY_VERB"
 	<vida> /bˈiðə/ "LIFE_NOUN"
 
-/r/ (0.025)
+/r/ (0.026)
 	<reina> /rˈejnə/ "QUEEN_NOUN"
+	<fort> /fˈɔrt/ "STRONG_ADJ"
 	<hivern> /iβˈɛrn/ "WINTER_NOUN"
-	<fembra> /fˈɛmbrə/ "WOMAN_NOUN"
 
 /w/ (0.025)
 	<estiu> /əstˈiw/ "SUMMER_NOUN"

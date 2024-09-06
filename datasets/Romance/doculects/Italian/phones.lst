@@ -1,21 +1,21 @@
 VOWELS
-/o/ (0.092)
+/o/ (0.091)
 	<secco> /sˈekːo/ "DRY (M)_ADJ"
 	<vino> /vˈino/ "WINE_NOUN"
 	<fratello> /fratˈɛlːo/ "BROTHER_NOUN"
 
-/e/ (0.081)
+/e/ (0.082)
 	<fine> /fˈine/ "END_NOUN"
 	<bruciare> /bruʧˈare/ "BURN_VERB"
 	<leone> /leˈone/ "LION_NOUN"
 
-/a/ (0.07)
+/a/ (0.069)
 	<spada> /spˈada/ "SWORD_NOUN"
 	<sapere> /sapˈere/ "KNOW_VERB"
 	<foglia> /fˈɔʎːa/ "LEAF_NOUN"
 
-/ˈa/ (0.057)
-	<estate> /estˈate/ "SUMMER_NOUN"
+/ˈa/ (0.058)
+	<stato> /stˈato/ "STATE_NOUN"
 	<casa> /kˈaza/ "HOUSE_NOUN"
 	<fata> /fˈata/ "FATE_NOUN"
 
@@ -62,7 +62,7 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.071)
+/r/ (0.072)
 	<sapere> /sapˈere/ "KNOW_VERB"
 	<odore> /odˈore/ "ODOR_NOUN"
 	<scuro> /skˈuro/ "DARK_ADJ"
@@ -74,20 +74,20 @@ CONSONANTS
 
 /k/ (0.036)
 	<conio> /kˈɔnjo/ "CORNER_NOUN"
-	<corto> /kˈorto/ "SHORT_ADJ"
+	<pecora> /pˈɛkora/ "SHEEP_NOUN"
 	<capo> /kˈapo/ "HEAD_NOUN"
 
-/t/ (0.035)
+/t/ (0.034)
 	<metà> /metˈa/ "HALF_NOUN"
 	<tuto> /tˈutːo/ "ALL (SG)_ADJ"
 	<ascoltare> /askoltˈare/ "LISTEN_VERB"
 
-/l/ (0.035)
+/l/ (0.034)
 	<albero> /ˈalbero/ "TREE_NOUN"
 	<parola> /parˈɔla/ "WORD_NOUN"
 	<gentile> /ʤentˈile/ "NICE_ADJ"
 
-/p/ (0.032)
+/p/ (0.031)
 	<porca> /pˈɔrka/ "SOW_NOUN"
 	<ponte> /pˈonte/ "BRIDGE_NOUN"
 	<piuma> /pjˈuma/ "FEATHER_NOUN"
@@ -127,27 +127,27 @@ CONSONANTS
 	<giudice> /ʤˈudiʧe/ "JUDGE_NOUN"
 	<giugno> /ʤˈuɲːo/ "JUNE_PROPN"
 
-/ɡ/ (0.013)
-	<gola> /ɡˈola/ "THROAT_NOUN"
-	<goccia> /ɡˈoʧːa/ "DROP_NOUN"
-	<grano> /ɡrˈano/ "GRAIN_NOUN"
-
 /ʧ/ (0.013)
-	<dolce> /dˈolʧe/ "SWEET_ADJ"
-	<cera> /ʧˈera/ "WAX_NOUN"
+	<voce> /vˈoʧe/ "VOICE_NOUN"
+	<croce> /krˈoʧe/ "CROSS_NOUN"
 	<vicino> /viʧˈino/ "NEIGHBOR_NOUN"
 
+/ɡ/ (0.013)
+	<luogo> /lwˈɔɡo/ "PLACE_NOUN"
+	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
+	<gola> /ɡˈola/ "THROAT_NOUN"
+
 /b/ (0.013)
+	<buona> /bwˈɔna/ "GOOD (F.SG)_ADJ"
 	<bello> /bˈɛlːo/ "BEAUTIFUL (M)_ADJ"
 	<erba> /ˈɛrba/ "GRASS_NOUN"
-	<bianco> /bjˈaŋko/ "WHITE_ADJ"
 
 /w/ (0.012)
 	<quaglia> /kwˈaʎːa/ "QUAIL_NOUN"
 	<uguale> /uɡwˈale/ "EQUAL_ADJ"
 	<fuoco> /fwˈɔko/ "FIRE_NOUN"
 
-/lː/ (0.011)
+/lː/ (0.01)
 	<villano> /vilːˈano/ "VILLAIN_NOUN"
 	<pelle> /pˈɛlːe/ "SKIN_NOUN"
 	<anello> /anˈɛlːo/ "RING_NOUN"

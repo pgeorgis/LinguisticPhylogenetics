@@ -7,7 +7,7 @@ VOWELS
 /ɛ/ (0.043)
 	<volāre> /wɔɫˈaːrɛ/ "FLY_VERB"
 	<caimāre> /kajmˈaːrɛ/ "BURN_VERB"
-	<verecunniam> /wɛrɛkˈʊnːiãː/ "SHAME_NOUN"
+	<vidēre> /wɪdˈeːrɛ/ "SEE_VERB"
 
 /ãː/ (0.043)
 	<linguam> /lˈɪŋɡʷãː/ "TONGUE_NOUN"
@@ -29,10 +29,10 @@ VOWELS
 	<ānellum> /aːnˈɛlʲːʊ̃ː/ "RING_NOUN"
 	<filicellam> /filʲikˈɛlʲːãː/ "STRING_NOUN"
 
-/ˈaː/ (0.022)
-	<natāre> /natˈaːrɛ/ "SWIM_VERB"
+/ˈaː/ (0.023)
+	<aestātem> /ae̯stˈaːtɛ̃ː/ "SUMMER_NOUN"
 	<morsicāre> /mɔrsɪkˈaːrɛ/ "BITE_VERB"
-	<Hispāniam> /hɪspˈaːniãː/ "SPAIN_PROPN"
+	<nivicāre> /nɪwɪkˈaːrɛ/ "SNOW (VERB)_VERB"
 
 /ˈɔ/ (0.021)
 	<dominam> /dˈɔmɪnãː/ "LADY_NOUN"
@@ -54,7 +54,7 @@ VOWELS
 	<alvīnam> /aɫwˈiːnãː/ "BEE_NOUN"
 	<gentīlem> /ɡɛntˈiːlɛ̃ː/ "NICE_ADJ"
 
-/ɪ/ (0.016)
+/ɪ/ (0.017)
 	<digitum> /dˈɪɡɪtʊ̃ː/ "FINGER_NOUN"
 	<umbilīcum> /ʊmbɪlʲˈiːkʊ̃ː/ "NAVEL_NOUN"
 	<cinusia> /kɪnˈusia/ "ASH_NOUN"
@@ -199,14 +199,14 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.071)
+/r/ (0.072)
 	<grandem> /ɡrˈandɛ̃ː/ "BIG_ADJ"
 	<dīcere> /dˈiːkɛrɛ/ "SAY-INF_VERB"
 	<mātūrum> /maːtˈuːrʊ̃ː/ "MATURE_NOUN"
 
 /k/ (0.064)
-	<duodecim> /duˈɔdɛkɪ̃/ "TWELVE_NUM"
-	<lacrimam> /ɫˈakrɪmãː/ "TEAR_NOUN"
+	<causam> /kˈau̯sãː/ "THING_NOUN"
+	<cōdulam> /kˈoːdʊɫãː/ "TAIL_NOUN"
 	<lūctam> /ɫˈuːktãː/ "FIGHT_NOUN"
 
 /n/ (0.054)
@@ -219,7 +219,7 @@ CONSONANTS
 	<multum> /mˈʊɫtʊ̃ː/ "MANY_ADJ"
 	<iūnctum> /jˈuːŋktʊ̃ː/ "JOINED_ADJ"
 
-/s/ (0.043)
+/s/ (0.042)
 	<super> /sˈʊpɛr/ "ABOVE_PREP"
 	<sabulum> /sˈabʊɫʊ̃ː/ "SAND_NOUN"
 	<salsam> /sˈaɫsãː/ "SAUCE_NOUN"

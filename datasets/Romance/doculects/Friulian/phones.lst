@@ -1,7 +1,7 @@
 VOWELS
 /e/ (0.07)
 	<tiere> /tjˈɛre/ "EARTH_NOUN"
-	<lagrime> /lˈaɡrime/ "TEAR_NOUN"
+	<code> /kˈode/ "TAIL_NOUN"
 	<cjariese> /carjˈɛze/ "CHERRY_NOUN"
 
 /ˈa/ (0.052)
@@ -98,7 +98,7 @@ CONSONANTS
 /r/ (0.063)
 	<vert> /vˈert/ "GREEN_ADJ"
 	<gran> /ɡrˈaŋ/ "GRAIN_NOUN"
-	<cere> /ʧˈere/ "WAX_NOUN"
+	<arbul> /ˈarbul/ "TREE_NOUN"
 
 /s/ (0.053)
 	<noaltris> /noˈaltris/ "WE_PRON"
@@ -160,7 +160,7 @@ CONSONANTS
 	<peraule> /perˈawle/ "WORD_NOUN"
 	<cueste> /kwˈɛste/ "COAST_NOUN"
 
-/ʧ/ (0.019)
+/ʧ/ (0.02)
 	<leç> /lˈeʧ/ "LAW_NOUN"
 	<palaç> /palˈaʧ/ "PALACE_NOUN"
 	<maçâ> /maʧˈaː/ "KILL_VERB"

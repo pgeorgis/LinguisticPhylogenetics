@@ -1,20 +1,20 @@
 VOWELS
-/ʊ/ (0.07)
+/ʊ/ (0.069)
 	<escuro> /eskˈuɾʊ/ "DARK_ADJ"
 	<roxo> /rˈoʃʊ/ "RED_ADJ"
 	<sabio> /sˈaβjʊ/ "WISE_ADJ"
 
-/ɐ/ (0.059)
+/ɐ/ (0.058)
 	<cereixa> /θeɾˈejʃɐ/ "CHERRY_NOUN"
 	<cabra> /kˈaβɾɐ/ "GOAT_NOUN"
 	<dia> /dˈiɐ/ "DAY_NOUN"
 
-/ˈa/ (0.049)
-	<árbore> /ˈaɾβoɾɪ/ "TREE_NOUN"
-	<falar> /falˈaɾ/ "SPEAK_VERB"
-	<nadar> /naðˈaɾ/ "SWIM_VERB"
+/ˈa/ (0.05)
+	<lágrima> /lˈaɣɾimɐ/ "TEAR_NOUN"
+	<España> /espˈaɲɐ/ "SPAIN_PROPN"
+	<estado> /estˈaðʊ/ "STATE_NOUN"
 
-/ˈe/ (0.044)
+/ˈe/ (0.043)
 	<ver> /bˈeɾ/ "SEE_VERB"
 	<cabelo> /kaβˈelʊ/ "HAIR_NOUN"
 	<morrer> /morˈeɾ/ "DIE_VERB"
@@ -34,7 +34,7 @@ VOWELS
 	<home> /ˈɔmɪ/ "MAN_NOUN"
 	<fame> /fˈamɪ/ "HUNGER_NOUN"
 
-/e/ (0.022)
+/e/ (0.023)
 	<cereixa> /θeɾˈejʃɐ/ "CHERRY_NOUN"
 	<seguro> /seɣˈuɾʊ/ "SAFE_ADJ"
 	<fermoso> /feɾmˈoso/ "BEAUTIFUL (M)_ADJ"
@@ -88,12 +88,12 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.076)
-	<falar> /falˈaɾ/ "SPEAK_VERB"
-	<chorar> /ʧoɾˈaɾ/ "WEEP_VERB"
+/ɾ/ (0.077)
+	<porca> /pˈɔɾkɐ/ "SOW_NOUN"
+	<cera> /θˈeɾɐ/ "WAX_NOUN"
 	<chor> /ʧˈoɾ/ "FLOWER_NOUN"
 
-/s/ (0.042)
+/s/ (0.041)
 	<osso> /ˈosʊ/ "BONE_NOUN"
 	<duas> /dˈuɐs/ "TWO (F)_NUM"
 	<sabes> /sˈaβes/ "KNOW-2SG_VERB"
@@ -113,7 +113,7 @@ CONSONANTS
 	<lei> /lˈej/ "LAW_NOUN"
 	<lago> /lˈaɣʊ/ "LAKE_NOUN"
 
-/k/ (0.033)
+/k/ (0.034)
 	<coalla> /kwˈaʎɐ/ "QUAIL_NOUN"
 	<escoitar> /eskojtˈaɾ/ "LISTEN_VERB"
 	<pouco> /pˈowkʊ/ "LITTLE_ADJ"
@@ -123,7 +123,7 @@ CONSONANTS
 	<inverno> /imbˈɛɾnʊ/ "WINTER_NOUN"
 	<amosegar> /amoseɣˈaɾ/ "BITE_VERB"
 
-/b/ (0.027)
+/b/ (0.026)
 	<vilán> /bilˈaŋ/ "VILLAIN_NOUN"
 	<viaxe> /biˈaʃɪ/ "JOURNEY_NOUN"
 	<vergonza> /beɾɣˈonθɐ/ "SHAME_NOUN"
@@ -133,15 +133,15 @@ CONSONANTS
 	<pé> /pˈɛ/ "FOOT_NOUN"
 	<prezo> /pɾˈeθʊ/ "PRICE_NOUN"
 
-/β/ (0.023)
-	<choiva> /ʧˈojβɐ/ "RAIN_NOUN"
-	<beber> /beβˈeɾ/ "DRINK_VERB"
-	<sabio> /sˈaβjʊ/ "WISE_ADJ"
+/θ/ (0.024)
+	<dicir> /diθˈiɾ/ "SAY-INF_VERB"
+	<cereixa> /θeɾˈejʃɐ/ "CHERRY_NOUN"
+	<cima> /θˈimɐ/ "SUMMIT_NOUN"
 
-/θ/ (0.022)
-	<pozo> /pˈoθʊ/ "WELL_NOUN"
-	<cidade> /θiðˈaðɪ/ "CITY_NOUN"
-	<cinco> /θˈiŋkʊ/ "FIVE_NUM"
+/β/ (0.023)
+	<obra> /ˈɔβɾɐ/ "WORK_NOUN"
+	<ovo> /ˈɔβʊ/ "EGG_NOUN"
+	<herba> /ˈɛɾβɐ/ "GRASS_NOUN"
 
 /j/ (0.02)
 	<moito> /mˈojtʊ/ "MANY_ADJ"

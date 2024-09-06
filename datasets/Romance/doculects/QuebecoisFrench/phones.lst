@@ -4,15 +4,15 @@ VOWELS
 	<elle> /ɛl/ "SHE_PRON"
 	<pouvoir> /puvwɛʁ/ "CAN_VERB"
 
-/æɛ̯/ (0.04)
+/æɛ̯/ (0.041)
 	<vert> /væɛ̯ʁ/ "GREEN_ADJ"
 	<fais> /fæɛ̯/ "DO-1SG_VERB"
 	<caille> /kæɛ̯j/ "QUAIL_NOUN"
 
-/e/ (0.035)
-	<état> /etɑ/ "STATE_NOUN"
-	<épée> /epe/ "SWORD_NOUN"
-	<neiger> /neʒe/ "SNOW (VERB)_VERB"
+/e/ (0.036)
+	<étoile> /etwɛl/ "STAR_NOUN"
+	<été> /ete/ "SUMMER_NOUN"
+	<fumée> /fyme/ "SMOKE_NOUN"
 
 /a/ (0.033)
 	<chasser> /ʃase/ "HUNT_VERB"
@@ -44,12 +44,12 @@ VOWELS
 	<an> /ã/ "YEAR_NOUN"
 	<vent> /vã/ "WIND_NOUN"
 
-/ɪ/ (0.017)
+/ɪ/ (0.016)
 	<ville> /vɪl/ "TOWN_NOUN"
 	<argile> /aʁʒɪl/ "CLAY_NOUN"
 	<fil> /fɪl/ "STRING_NOUN"
 
-/oʊ̯/ (0.017)
+/oʊ̯/ (0.016)
 	<aube> /oʊ̯b/ "DAWN_NOUN"
 	<sauce> /soʊ̯s/ "SAUCE_NOUN"
 	<pauvre> /poʊ̯vʁ/ "POOR_ADJ"
@@ -115,20 +115,20 @@ VOWELS
 
 
 CONSONANTS
-/ʁ/ (0.1)
-	<pleurer> /plœʁe/ "WEEP_VERB"
+/ʁ/ (0.101)
+	<plaindre> /plẽɪ̯̃dʁ/ "WEEP_VERB"
+	<écrire> /ekʁiʁ/ "WRITE_VERB"
 	<occire> /ɔksiʁ/ "KILL_VERB"
-	<savoir> /savwɛʁ/ "KNOW_VERB"
 
 /l/ (0.058)
+	<glace> /ɡlas/ "ICE_NOUN"
 	<lire> /liʁ/ "READ_VERB"
 	<flamme> /flam/ "FLAME_NOUN"
-	<miel> /mjɛl/ "HONEY_NOUN"
 
 /s/ (0.051)
+	<chasser> /ʃase/ "HUNT_VERB"
 	<sauce> /soʊ̯s/ "SAUCE_NOUN"
 	<Espagne> /ɛspaɲ/ "SPAIN_PROPN"
-	<dix> /ʣɪs/ "TEN_NUM"
 
 /n/ (0.036)
 	<neuf> /nœf/ "NINE_NUM"
@@ -170,7 +170,7 @@ CONSONANTS
 	<que> /kœ/ "WHAT_PRON"
 	<clé> /kle/ "KEY_NOUN"
 
-/j/ (0.028)
+/j/ (0.027)
 	<yeux> /jøʏ̯/ "EYES_NOUN"
 	<moitié> /mwɛʦje/ "HALF_NOUN"
 	<feuille> /fœj/ "LEAF_NOUN"
@@ -180,9 +180,9 @@ CONSONANTS
 	<gens> /ʒã/ "PEOPLE_NOUN"
 	<juge> /ʒyʒ/ "JUDGE_NOUN"
 
-/ʃ/ (0.021)
+/ʃ/ (0.023)
 	<sèche> /sɛʃ/ "DRY (F)_ADJ"
-	<chant> /ʃã/ "SONG_NOUN"
+	<chercher> /ʃæɛ̯ʁʃe/ "SEARCH_VERB"
 	<sache> /saʃ/ "KNOW-SBJ-1SG_VERB"
 
 /b/ (0.019)
@@ -190,7 +190,7 @@ CONSONANTS
 	<bain> /bẽɪ̯̃/ "BATH_NOUN"
 	<herbe> /æɛ̯ʁb/ "GRASS_NOUN"
 
-/d/ (0.017)
+/d/ (0.016)
 	<deux> /døʏ̯/ "TWO (M)_NUM"
 	<don> /dɒ̃ʊ̯̃/ "GIFT_NOUN"
 	<aide> /æɛ̯d/ "HELP-1SG_VERB"
@@ -210,7 +210,7 @@ CONSONANTS
 	<raison> /ʁæɛ̯zɒ̃ʊ̯̃/ "REASON_NOUN"
 	<raisin> /ʁæɛ̯zẽɪ̯̃/ "RAISIN_NOUN"
 
-/ɲ/ (0.006)
+/ɲ/ (0.005)
 	<vergogne> /væɛ̯ʁɡɔɲ/ "SHAME_NOUN"
 	<montagne> /mɒ̃ʊ̯̃taɲ/ "MOUNTAIN_NOUN"
 	<araignée> /aʁæɛ̯ɲe/ "SPIDER_NOUN"

@@ -1,12 +1,12 @@
 VOWELS
-/ə/ (0.201)
+/ə/ (0.2)
 	<ìrito> /ˈiɾitə/ "FINGER_NOUN"
 	<cerasa> /ʃeɾˈasə/ "CHERRY_NOUN"
 	<vita> /vˈitə/ "LIFE_NOUN"
 
-/ˈa/ (0.06)
+/ˈa/ (0.061)
 	<vacca> /vˈakːə/ "COW_NOUN"
-	<mare> /mˈaɾə/ "SEA_NOUN"
+	<cercà> /ʃeɾkˈa/ "SEARCH_VERB"
 	<pace> /pˈaʃə/ "PEACE_NOUN"
 
 /ˈi/ (0.033)
@@ -54,32 +54,32 @@ VOWELS
 	<cunosce> /kunˈoʃːə/ "BE ACQUAINTED WITH_VERB"
 	<pilu> /pˈilu/ "HAIR_NOUN"
 
-/e/ (0.006)
+/e/ (0.007)
 	<perucchjo> /peɾˈukːjə/ "LOUSE_NOUN"
 	<semmana> /semːˈanə/ "WEEK_NOUN"
 	<che> /ke/ "WHAT_PRON"
 
 /o/ (0.004)
-	<dormì> /doɾmˈi/ "SLEEP_VERB"
-	<quatto> /kwˈatːo/ "FOUR_NUM"
 	<viento> /vjˈɛnto/ "WIND_NOUN"
+	<quatto> /kwˈatːo/ "FOUR_NUM"
+	<dormì> /doɾmˈi/ "SLEEP_VERB"
 
 
 
 CONSONANTS
-/ɾ/ (0.051)
+/ɾ/ (0.052)
 	<verde> /vˈeɾdə/ "GREEN_ADJ"
 	<erva> /ˈɛɾvə/ "GRASS_NOUN"
-	<trei> /tɾˈej/ "THREE_NUM"
+	<tre> /tɾˈe/ "THREE_NUM"
 
-/n/ (0.051)
+/n/ (0.05)
 	<notte> /nˈotːə/ "NIGHT_NOUN"
 	<panza> /pˈanʦə/ "BELLY_NOUN"
 	<canto> /kˈantə/ "SONG_NOUN"
 
 /k/ (0.045)
-	<lacrima> /lˈakɾimə/ "TEAR_NOUN"
-	<janco> /jˈaŋkə/ "WHITE_ADJ"
+	<coda> /kˈoɾə/ "TAIL_NOUN"
+	<che> /ke/ "WHAT_PRON"
 	<laco> /lˈakə/ "LAKE_NOUN"
 
 /t/ (0.039)
@@ -107,25 +107,25 @@ CONSONANTS
 	<parola> /paɾˈɔlə/ "WORD_NOUN"
 	<spina> /ʃpˈinə/ "SPINE_NOUN"
 
-/w/ (0.023)
-	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
-	<auciello> /awʃˈɛlːə/ "BIRD_NOUN"
-	<lengua> /lˈeŋɡwə/ "TONGUE_NOUN"
-
 /ʃ/ (0.023)
-	<scuro> /ʃkˈuɾə/ "DARK_ADJ"
-	<cima> /ʃˈimə/ "SUMMIT_NOUN"
-	<spata> /ʃpˈatə/ "SWORD_NOUN"
+	<doce> /dˈoʃə/ "SWEET_ADJ"
+	<auciello> /awʃˈɛlːə/ "BIRD_NOUN"
+	<cira> /ʃˈiɾə/ "WAX_NOUN"
+
+/w/ (0.023)
+	<buona> /bwˈɔnə/ "GOOD (F.SG)_ADJ"
+	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
+	<puorco> /pwˈɔrkə/ "PIG_NOUN"
 
 /s/ (0.02)
-	<isula> /ˈisulə/ "ISLAND_NOUN"
-	<sapè> /sapˈɛ/ "KNOW_VERB"
 	<seta> /sˈetə/ "SILK_NOUN"
+	<sicca> /sˈikːə/ "DRY (F)_ADJ"
+	<casa> /kˈasə/ "HOUSE_NOUN"
 
 /m/ (0.018)
-	<magnà> /məɲːˈa/ "EAT_VERB"
-	<maturu> /matˈuɾə/ "MATURE_NOUN"
 	<dormì> /doɾmˈi/ "SLEEP_VERB"
+	<tiempo> /tjˈɛmpə/ "TIME_NOUN"
+	<mille> /mˈilːə/ "THOUSAND_NUM"
 
 /r/ (0.015)
 	<ragiune> /raʤˈunə/ "REASON_NOUN"

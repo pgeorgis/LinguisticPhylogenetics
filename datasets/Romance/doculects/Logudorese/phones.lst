@@ -1,10 +1,10 @@
 VOWELS
-/e/ (0.091)
+/e/ (0.092)
 	<cheréssia> /kerˈesja/ "CHERRY_NOUN"
 	<frúmene> /frˈumene/ "RIVER_NOUN"
-	<òbera> /ˈoβera/ "WORK_NOUN"
+	<peraula> /perˈawla/ "WORD_NOUN"
 
-/u/ (0.075)
+/u/ (0.074)
 	<lubu> /lˈuβu/ "WOLF_NOUN"
 	<puzone> /puʣˈone/ "BIRD_NOUN"
 	<frútu> /frˈutu/ "FRUIT_NOUN"
@@ -14,8 +14,8 @@ VOWELS
 	<ispina> /ispˈina/ "SPINE_NOUN"
 	<bregunza> /breɣˈunʣa/ "SHAME_NOUN"
 
-/ˈa/ (0.056)
-	<Ispagna> /ispˈaɲːa/ "SPAIN_PROPN"
+/ˈa/ (0.057)
+	<ànima> /ˈanima/ "SOUL_NOUN"
 	<agu> /ˈaɣu/ "NEEDLE_NOUN"
 	<framma> /frˈamːa/ "FLAME_NOUN"
 
@@ -34,9 +34,9 @@ VOWELS
 	<ite> /ˈite/ "WHAT_PRON"
 	<chíe> /kˈie/ "WHO_PRON"
 
-/i/ (0.029)
+/i/ (0.03)
 	<chinisa> /kˈinisa/ "ASH_NOUN"
-	<istade> /istˈaðe/ "SUMMER_NOUN"
+	<istàdu> /istˈaðu/ "STATE_NOUN"
 	<priogu> /priˈoɣu/ "LOUSE_NOUN"
 
 /ˈu/ (0.025)
@@ -71,27 +71,27 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.083)
+/r/ (0.084)
 	<prenu> /prˈenu/ "FULL_ADJ"
 	<mandhigare> /manɖiɣˈare/ "EAT_VERB"
-	<pedra> /pˈeðra/ "STONE_NOUN"
+	<aranza> /arˈanʣa/ "SPIDER_NOUN"
 
 /n/ (0.053)
 	<sanu> /sˈanu/ "HEALTHY (M)_ADJ"
 	<ghèneru> /ɡˈeneru/ "SON-IN-LAW_NOUN"
 	<bighinu> /biɣˈinu/ "NEIGHBOR_NOUN"
 
-/k/ (0.044)
+/k/ (0.045)
+	<iscriere> /iskrˈiere/ "WRITE_VERB"
 	<chisina> /kˈisina/ "ASH_NOUN"
 	<chimbe> /kˈimbe/ "FIVE_NUM"
-	<coa> /kˈoa/ "TAIL_NOUN"
 
 /b/ (0.035)
 	<bídere> /bˈiðerĕ/ "SEE_VERB"
 	<binti> /bˈinti/ "TWENTY_NUM"
 	<biteddu> /bitˈeɖːu/ "CALF_NOUN"
 
-/l/ (0.034)
+/l/ (0.033)
 	<líbberu> /lˈibːeru/ "FREE_ADJ"
 	<alvu> /ˈalvu/ "WHITE_ADJ"
 	<belu> /bˈelu/ "ICE_NOUN"
@@ -106,7 +106,7 @@ CONSONANTS
 	<istàdu> /istˈaðu/ "STATE_NOUN"
 	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
 
-/m/ (0.026)
+/m/ (0.025)
 	<musca> /mˈuska/ "FLY_NOUN"
 	<mésu> /mˈezu/ "MIDDLE_NOUN"
 	<òmine> /ˈomine/ "MAN_NOUN"

@@ -1,18 +1,18 @@
 VOWELS
-/u/ (0.08)
-	<fridu> /frˈiðu/ "COLD_ADJ"
-	<beju> /bˈeju/ "OLD_ADJ"
-	<grogu> /ɡrˈoɣu/ "YELLOW_ADJ"
-
-/i/ (0.079)
+/i/ (0.08)
+	<bènniri> /bˈenːiri/ "COME-INF_VERB"
+	<làcrima> /lˈakrima/ "TEAR_NOUN"
 	<pani> /pˈani/ "BREAD_NOUN"
-	<pei> /pˈei/ "FOOT_NOUN"
-	<citadi> /ʧitˈadi/ "CITY_NOUN"
+
+/u/ (0.08)
+	<líbberu> /lˈibːeru/ "FREE_ADJ"
+	<casteddu> /kastˈeɖːu/ "CASTLE_NOUN"
+	<priogu> /priˈoɣu/ "LOUSE_NOUN"
 
 /a/ (0.069)
-	<arangia> /arˈanʤa/ "SPIDER_NOUN"
 	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
 	<nia> /nˈia/ "SNOW_NOUN"
+	<peraula> /perˈawla/ "WORD_NOUN"
 
 /ˈa/ (0.058)
 	<àteru> /ˈateru/ "OTHER_ADJ"
@@ -34,7 +34,7 @@ VOWELS
 	<linna> /lˈinːa/ "WOOD_NOUN"
 	<chinisa> /kˈinisa/ "ASH_NOUN"
 
-/e/ (0.032)
+/e/ (0.031)
 	<bregúngia> /breɣˈunʤa/ "SHAME_NOUN"
 	<leòni> /leˈoni/ "LION_NOUN"
 	<lege> /lˈeʤe/ "LAW_NOUN"
@@ -72,11 +72,11 @@ VOWELS
 
 CONSONANTS
 /r/ (0.074)
-	<dormiri> /dormˈiri/ "SLEEP_VERB"
+	<curtzu> /kˈurʦu/ "SHORT_ADJ"
 	<framma> /frˈamːa/ "FLAME_NOUN"
 	<coru> /kˈoru/ "HEART_NOUN"
 
-/n/ (0.058)
+/n/ (0.057)
 	<centu> /ʧˈentu/ "HUNDRED_NUM"
 	<sanu> /sˈanu/ "HEALTHY (M)_ADJ"
 	<nia> /nˈia/ "SNOW_NOUN"
@@ -91,12 +91,12 @@ CONSONANTS
 	<lana> /lˈana/ "WOOL_NOUN"
 	<fàlsu> /fˈalsu/ "FALSE_ADJ"
 
-/t/ (0.032)
+/t/ (0.031)
 	<morti> /mˈorti/ "DEATH_NOUN"
 	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
 	<centu> /ʧˈentu/ "HUNDRED_NUM"
 
-/s/ (0.032)
+/s/ (0.031)
 	<sica> /sˈika/ "DRY (F)_ADJ"
 	<nostru> /nˈostru/ "OUR_ADJ"
 	<isteddu> /istˈeɖːu/ "STAR_NOUN"
@@ -141,20 +141,20 @@ CONSONANTS
 	<témpus> /tˈempuzŭ/ "TIME_NOUN"
 	<pétus> /pˈetuzŭ/ "BREAST_NOUN"
 
-/j/ (0.012)
+/j/ (0.011)
 	<ischia> /ˈiskja/ "KNOW-SBJ-1SG_VERB"
 	<nadài> /naðˈaj/ "SWIM_VERB"
 	<jogu> /jˈoɣu/ "GAME_NOUN"
 
-/β/ (0.008)
-	<nébida> /nˈeβiða/ "FOG_NOUN"
-	<nobu> /nˈoβu/ "NEW_ADJ"
-	<subra> /sˈuβra/ "ABOVE_PREP"
-
 /ʧ/ (0.008)
+	<centu> /ʧˈentu/ "HUNDRED_NUM"
 	<bocíere> /boʧˈiere/ "KILL_VERB"
 	<ciamari> /ʧamˈari/ "CALL_VERB"
-	<cincu> /ʧˈiŋku/ "FIVE_NUM"
+
+/β/ (0.008)
+	<nobu> /nˈoβu/ "NEW_ADJ"
+	<subra> /sˈuβra/ "ABOVE_PREP"
+	<obu> /ˈoβu/ "EGG_NOUN"
 
 /ʒ/ (0.008)
 	<boxi> /bˈoʒi/ "VOICE_NOUN"

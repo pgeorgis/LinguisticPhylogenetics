@@ -1,10 +1,10 @@
 VOWELS
-/a/ (0.078)
+/a/ (0.079)
 	<gåzza> /ɡˈʌθa/ "DROP_NOUN"
-	<gåula> /ɡˈʌu̯la/ "THROAT_NOUN"
+	<lègherma> /lˈɛɡerma/ "TEAR_NOUN"
 	<câmra> /kˈaːmra/ "CHAMBER_NOUN"
 
-/ˈɛ/ (0.054)
+/ˈɛ/ (0.055)
 	<fèr> /fˈɛr/ "DO_VERB"
 	<fradèl> /fradˈɛl/ "BROTHER_NOUN"
 	<fèr> /fˈɛr/ "IRON_NOUN"
@@ -96,10 +96,10 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.088)
+/r/ (0.089)
 	<frût> /frˈuːt/ "FRUIT_NOUN"
-	<scrîver> /skrˈiːver/ "WRITE_VERB"
 	<vèrem> /vˈɛrem/ "WORM_NOUN"
+	<ôvra> /ˈɔːvra/ "WORK_NOUN"
 
 /l/ (0.052)
 	<còl> /kˈɔl/ "NECK_NOUN"
@@ -116,15 +116,15 @@ CONSONANTS
 	<dänt> /dˈæŋt/ "TOOTH_NOUN"
 	<sant> /sˈaŋt/ "SACRED_ADJ"
 
-/s/ (0.039)
-	<Spâgna> /spˈaːɲa/ "SPAIN_PROPN"
-	<sèl> /sˈɛl/ "SALT_NOUN"
-	<såul> /sˈʌu̯l/ "SUN_NOUN"
-
 /k/ (0.039)
-	<cràdder> /krˈader/ "BELIEVE_VERB"
-	<pôc> /pˈɔːk/ "LITTLE_ADJ"
-	<sacc> /sˈak/ "DRY (M)_ADJ"
+	<bòca> /bˈɔka/ "MOUTH_NOUN"
+	<côren> /kˈɔːren/ "HORN_NOUN"
+	<cûrt> /kˈuːrt/ "SHORT_ADJ"
+
+/s/ (0.038)
+	<cgnósser> /kɲˈoser/ "BE ACQUAINTED WITH_VERB"
+	<sî> /sˈiː/ "SIX_NUM"
+	<san> /sˈaŋ/ "HEALTHY (M)_ADJ"
 
 /d/ (0.036)
 	<dîr> /dˈiːr/ "SAY-INF_VERB"
@@ -161,15 +161,15 @@ CONSONANTS
 	<gròs> /ɡrˈɔs/ "THICK_ADJ"
 	<vargåggna> /varɡˈʌɲa/ "SHAME_NOUN"
 
-/f/ (0.022)
+/f/ (0.021)
 	<fiómm> /fjˈom/ "RIVER_NOUN"
 	<frût> /frˈuːt/ "FRUIT_NOUN"
 	<fiôl> /fjˈɔːl/ "SON_NOUN"
 
-/θ/ (0.018)
+/θ/ (0.019)
 	<zitè> /θitˈɛ/ "CITY_NOUN"
 	<zîra> /θˈiːra/ "WAX_NOUN"
-	<zîl> /θˈiːl/ "SKY_NOUN"
+	<zarchèr> /θarkˈɛr/ "SEARCH_VERB"
 
 /b/ (0.015)
 	<bôna> /bˈɔːna/ "GOOD (F.SG)_ADJ"

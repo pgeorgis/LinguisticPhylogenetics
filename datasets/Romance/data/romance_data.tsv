@@ -2419,7 +2419,7 @@ Valencian	Valencian			WAX_NOUN	cera	sˈeɾɜ	s ˈe ɾ ɜ		WAX_NOUN_1
 Aragonese	Aragonese			WAX_NOUN	zera	θˈeɾa	θ ˈe ɾ a		WAX_NOUN_1			
 Spanish	Spanish			WAX_NOUN	cera	θˈeɾa	θ ˈe ɾ a		WAX_NOUN_1			
 Asturian	Asturian			WAX_NOUN	cera	θˈeɾa	θ ˈe ɾ a		WAX_NOUN_1			
-Galician	Galician			WAX_NOUN	cera	sˈeɾɐ	s ˈe ɾ ɐ		WAX_NOUN_1			
+Galician	Galician			WAX_NOUN	cera	θˈeɾɐ	θ ˈe ɾ ɐ		WAX_NOUN_1			
 Portuguese	Portuguese			WAX_NOUN	cera	sˈeɾɐ	s ˈe ɾ ɐ		WAX_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			WAX_NOUN	cera	sˈeɾɐ	s ˈe ɾ ɐ		WAX_NOUN_1			
 Latin	Latin			CHERRY_NOUN	ceresiam	kɛrˈɛsiãː	k ɛ r ˈɛ s i ãː		CHERRY_NOUN_1			
@@ -2482,6 +2482,36 @@ Occitan	Occitan			ASH_NOUN	cendre	sˈɛndɾe	s ˈɛ n d ɾ e		ASH_NOUN_3
 Gascon	Gascon			ASH_NOUN	cendre	sˈendɾe	s ˈe n d ɾ e		ASH_NOUN_3			
 Catalan	Catalan			ASH_NOUN	cendre	sˈɛndɾə	s ˈɛ n d ɾ ə		ASH_NOUN_3			
 Valencian	Valencian			ASH_NOUN	cendre	sˈændɾɜ	s ˈæ n d ɾ ɜ		ASH_NOUN_3			
+Latin	Latin			SEARCH_VERB	circāre	kɪrkˈaːrɛ	k ɪ r k ˈaː r ɛ		SEARCH_VERB_1			
+Logudorese	Logudorese			SEARCH_VERB	chircare	kirkˈare	k i r k ˈa r e		SEARCH_VERB_1			
+Campidanese	Campidanese			SEARCH_VERB	chircai	ʧirkˈai	ʧ i r k ˈa i		SEARCH_VERB_1			
+Romanian	Romanian			SEARCH_VERB	cercare	ʧerkˈare	ʧ e r k ˈa r e		SEARCH_VERB_1			
+Sicilian	Sicilian			SEARCH_VERB	cercare	ɕirkˈaɾɪ	ɕ i r k ˈa ɾ ɪ		SEARCH_VERB_1			
+Neapolitan	Neapolitan			SEARCH_VERB	cercà	ʃeɾkˈa	ʃ e ɾ k ˈa		SEARCH_VERB_1			
+Corsican	Corsican			SEARCH_VERB	circà	ʧirkˈa	ʧ i r k ˈa		SEARCH_VERB_1			
+Italian	Italian			SEARCH_VERB	cercare	ʧerkˈare	ʧ e r k ˈa r e		SEARCH_VERB_1			
+Venetian	Venetian			SEARCH_VERB	sercar	serkˈar	s e r k ˈa r		SEARCH_VERB_1			
+Bellunese	Bellunese			SEARCH_VERB	çercar	θerkˈar	θ e r k ˈa r		SEARCH_VERB_1			
+Emilian	Emilian			SEARCH_VERB	zarchèr	θarkˈɛr	θ a r k ˈɛ r		SEARCH_VERB_1			
+Ligurian	Ligurian			SEARCH_VERB	çercâ	serkˈaː	s e r k ˈaː		SEARCH_VERB_1			
+Piedmontese	Piedmontese			SEARCH_VERB	serché	serkˈe	s e r k ˈe		SEARCH_VERB_1			
+Western Lombard	Western Lombard			SEARCH_VERB	cercà	ʧerkˈa	ʧ e r k ˈa		SEARCH_VERB_1			
+Eastern Lombard	Eastern Lombard			SEARCH_VERB	sircà	sirkˈa	s i r k ˈa		SEARCH_VERB_1			
+Friulian	Friulian			SEARCH_VERB	cercjâ	ʧercˈaː	ʧ e r c ˈaː		SEARCH_VERB_1			
+Romansch	Romansch			SEARCH_VERB	tschertgar	ʧerʨˈaːr	ʧ e r ʨ ˈaː r		SEARCH_VERB_1			
+French	French			SEARCH_VERB	chercher	ʃɛʁʃe	ʃ ɛ ʁ ʃ e		SEARCH_VERB_1			
+Québécois French	Québécois French			SEARCH_VERB	chercher	ʃæɛ̯ʁʃe	ʃ æɛ̯ ʁ ʃ e		SEARCH_VERB_1			
+Franco-Provençal	Franco-Provençal			SEARCH_VERB	çhèrçhiér	ʃɛʁʃjˈe	ʃ ɛ ʁ ʃ j ˈe		SEARCH_VERB_1			
+Occitan	Occitan			SEARCH_VERB	cercar	serkˈa	s e r k ˈa		SEARCH_VERB_1			
+Gascon	Gascon			SEARCH_VERB	cercar	serkˈa	s e r k ˈa		SEARCH_VERB_1			
+Catalan	Catalan			SEARCH_VERB	cercar	sərkˈa	s ə r k ˈa		SEARCH_VERB_1			
+Valencian	Valencian			SEARCH_VERB	cercar	serkˈar	s e r k ˈa r		SEARCH_VERB_1			
+Aragonese	Aragonese			SEARCH_VERB	zercar	θeɾkˈaɾ	θ e ɾ k ˈa ɾ		SEARCH_VERB_1			
+Spanish	Spanish			SEARCH_VERB	cercar	θeɾkˈaɾ	θ e ɾ k ˈa ɾ		SEARCH_VERB_1			
+Asturian	Asturian			SEARCH_VERB	cercar	θeɾkˈaɾ	θ e ɾ k ˈa ɾ		SEARCH_VERB_1			
+Galician	Galician			SEARCH_VERB	cercar	θeɾkˈaɾ	θ e ɾ k ˈa ɾ		SEARCH_VERB_1			
+Portuguese	Portuguese			SEARCH_VERB	cercar	sɨɾkˈaɾ	s ɨ ɾ k ˈa ɾ		SEARCH_VERB_1			
+Brazilian Portuguese	Brazilian Portuguese			SEARCH_VERB	cercar	sehkˈah	s e h k ˈa h		SEARCH_VERB_1			
 Latin	Latin			CITY_NOUN	cīvitātem	kiːwɪtˈaːtɛ̃ː	k iː w ɪ t ˈaː t ɛ̃ː		CITY_NOUN_1			
 Logudorese	Logudorese			CITY_NOUN	chitade	kitˈaðe	k i t ˈa ð e		CITY_NOUN_1			
 Campidanese	Campidanese			CITY_NOUN	citadi	ʧitˈadi	ʧ i t ˈa d i		CITY_NOUN_1			

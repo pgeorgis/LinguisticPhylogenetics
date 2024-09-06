@@ -2,7 +2,7 @@ VOWELS
 /ˈa/ (0.075)
 	<auba> /ˈawβɔ/ "DAWN_NOUN"
 	<sant> /sˈan/ "SACRED_ADJ"
-	<an> /ˈaŋ/ "YEAR_NOUN"
+	<paraula> /paɾˈawlɔ/ "WORD_NOUN"
 
 /ɔ/ (0.057)
 	<còsta> /kˈɔstɔ/ "COAST_NOUN"
@@ -10,9 +10,9 @@ VOWELS
 	<seca> /sˈekɔ/ "DRY (F)_ADJ"
 
 /e/ (0.052)
-	<plànher> /plˈaɲe/ "WEEP_VERB"
-	<estiu> /estˈiw/ "SUMMER_NOUN"
-	<arbe> /ˈaɾβe/ "TREE_NOUN"
+	<setmana> /semːˈanɔ/ "WEEK_NOUN"
+	<estat> /estˈat/ "STATE_NOUN"
+	<lagrema> /lˈaɣɾemɔ/ "TEAR_NOUN"
 
 /ˈe/ (0.046)
 	<arreina> /arˈejnɔ/ "QUEEN_NOUN"
@@ -70,9 +70,9 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.056)
+/s/ (0.057)
 	<san> /sˈaŋ/ "HEALTHY (M)_ADJ"
-	<sorelh> /suɾˈɛʎ/ "SUN_NOUN"
+	<estiu> /estˈiw/ "SUMMER_NOUN"
 	<nòste> /nˈɔste/ "OUR_ADJ"
 
 /t/ (0.049)
@@ -80,125 +80,125 @@ CONSONANTS
 	<salut> /salˈyt/ "HEALTH_NOUN"
 	<tu> /tˈy/ "THOU_PRON"
 
-/k/ (0.047)
-	<qué> /kˈe/ "WHAT_PRON"
-	<cavath> /kaβˈat/ "HORSE_NOUN"
-	<blanc> /blˈaŋk/ "WHITE_ADJ"
+/k/ (0.048)
+	<color> /kulˈu/ "COLOR_NOUN"
+	<espic> /espˈik/ "EAR OF GRAIN_NOUN"
+	<casa> /kˈazɔ/ "HOUSE_NOUN"
 
 /w/ (0.041)
-	<oelha> /wˈeʎɔ/ "SHEEP_NOUN"
-	<ueu> /wˈew/ "EGG_NOUN"
-	<faus> /fˈaws/ "FALSE_ADJ"
+	<ueit> /wˈejt/ "EIGHT_NUM"
+	<causa> /kˈawzɔ/ "THING_NOUN"
+	<caud> /kˈawt/ "HOT_ADJ"
 
 /l/ (0.038)
-	<gola> /ɡˈulɔ/ "THROAT_NOUN"
 	<blanc> /blˈaŋk/ "WHITE_ADJ"
-	<isla> /ˈizlɔ/ "ISLAND_NOUN"
+	<plànher> /plˈaɲe/ "WEEP_VERB"
+	<lòc> /lˈɔk/ "PLACE_NOUN"
 
 /n/ (0.034)
-	<pont> /pˈun/ "BRIDGE_NOUN"
-	<montanha> /muntˈaɲɔ/ "MOUNTAIN_NOUN"
-	<jaune> /ʒˈawne/ "YELLOW_ADJ"
+	<non> /nuŋ/ "NOT_ADVERB"
+	<pondre> /pˈundɾe/ "PUT_VERB"
+	<setmana> /semːˈanɔ/ "WEEK_NOUN"
 
 /ɾ/ (0.033)
-	<sorelh> /suɾˈɛʎ/ "SUN_NOUN"
-	<cort> /kˈuɾt/ "SHORT_ADJ"
-	<escríver> /eskɾˈiβe/ "WRITE_VERB"
+	<crotz> /kɾˈuʦ/ "CROSS_NOUN"
+	<liure> /lˈiwɾe/ "FREE_ADJ"
+	<haria> /haɾˈiɔ/ "FLOUR_NOUN"
 
 /b/ (0.029)
-	<vòl> /bˈɔl/ "FLIGHT_NOUN"
-	<viatge> /biˈaʤe/ "JOURNEY_NOUN"
-	<verd> /bˈert/ "GREEN_ADJ"
+	<vèrmi> /bˈɛrmi/ "WORM_NOUN"
+	<vilan> /bilˈaŋ/ "VILLAIN_NOUN"
+	<votz> /bˈuʦ/ "VOICE_NOUN"
 
 /p/ (0.028)
+	<ploja> /plˈuʒɔ/ "RAIN_NOUN"
 	<paraula> /paɾˈawlɔ/ "WORD_NOUN"
-	<còp> /kˈɔp/ "STRIKE_NOUN"
-	<espada> /espˈaðɔ/ "SWORD_NOUN"
+	<pont> /pˈun/ "BRIDGE_NOUN"
 
 /m/ (0.028)
+	<arroman> /arumˈaŋ/ "ROMAN_ADJ"
+	<mosca> /mˈuskɔ/ "FLY_NOUN"
 	<mair> /mˈajr/ "MOTHER_NOUN"
-	<vèrmi> /bˈɛrmi/ "WORM_NOUN"
-	<mossegar> /museɣˈa/ "BITE_VERB"
 
-/r/ (0.026)
-	<vergonha> /berɣˈuɲɔ/ "SHAME_NOUN"
-	<verd> /bˈert/ "GREEN_ADJ"
-	<arroi> /arˈuj/ "RED_ADJ"
+/r/ (0.027)
+	<arriu> /arˈiw/ "RIVER_NOUN"
+	<pair> /pˈajr/ "FATHER_NOUN"
+	<arrasim> /arazˈim/ "RAISIN_NOUN"
 
 /j/ (0.025)
-	<arroi> /arˈuj/ "RED_ADJ"
-	<pair> /pˈajr/ "FATHER_NOUN"
 	<vielh> /bjˈeʎ/ "OLD_ADJ"
+	<pièt> /pjˈɛt/ "BREAST_NOUN"
+	<siès> /sjˈɛs/ "SIX_NUM"
 
 /ŋ/ (0.022)
-	<vesin> /bezˈiŋ/ "NEIGHBOR_NOUN"
-	<an> /ˈaŋ/ "YEAR_NOUN"
-	<lenga> /lˈeŋɡɔ/ "TONGUE_NOUN"
+	<arroman> /arumˈaŋ/ "ROMAN_ADJ"
+	<long> /lˈuŋk/ "LONG_ADJ"
+	<can> /kˈaŋ/ "DOG_NOUN"
 
 /h/ (0.016)
-	<hami> /hˈami/ "HUNGER_NOUN"
-	<hilha> /hˈiʎɔ/ "DAUGHTER_NOUN"
-	<hitge> /hˈiʤe/ "LIVER_NOUN"
+	<huèc> /hwˈɛk/ "FIRE_NOUN"
+	<hum> /hˈym/ "SMOKE_NOUN"
+	<hèr> /hˈɛ/ "IRON_NOUN"
 
 /d/ (0.016)
-	<dent> /dˈen/ "TOOTH_NOUN"
-	<drac> /dɾˈak/ "DRAGON_NOUN"
-	<dit> /dˈit/ "FINGER_NOUN"
+	<dízer> /dˈize/ "SAY-INF_VERB"
+	<dètz> /dˈɛʦ/ "TEN_NUM"
+	<cendre> /sˈendɾe/ "ASH_NOUN"
 
 /β/ (0.015)
-	<savi> /sˈaβi/ "WISE_ADJ"
-	<praube> /pɾˈawβe/ "POOR_ADJ"
-	<saber> /saβˈe/ "KNOW_VERB"
+	<ivèrn> /iβˈɛr/ "WINTER_NOUN"
+	<abelha> /aβˈeʎɔ/ "BEE_NOUN"
+	<lèbe> /lˈɛβe/ "HARE_NOUN"
 
 /ʒ/ (0.013)
-	<gendre> /ʒˈendɾe/ "SON-IN-LAW_NOUN"
-	<anjo> /ˈanʒu/ "ANGEL_NOUN"
-	<joen> /ʒwˈeŋ/ "YOUNG_ADJ"
+	<jolh> /ʒˈuʎ/ "KNEE_NOUN"
+	<jòc> /ʒˈɔk/ "GAME_NOUN"
+	<jaune> /ʒˈawne/ "YELLOW_ADJ"
 
 /ʎ/ (0.013)
-	<abelha> /aβˈeʎɔ/ "BEE_NOUN"
-	<jolh> /ʒˈuʎ/ "KNEE_NOUN"
-	<pedolh> /peðˈuʎ/ "LOUSE_NOUN"
+	<sorelh> /suɾˈɛʎ/ "SUN_NOUN"
+	<uelh> /wˈeʎ/ "EYE_NOUN"
+	<lheit> /ʎˈejt/ "BED_NOUN"
 
 /ɡ/ (0.01)
-	<groc> /ɡɾˈɔk/ "YELLOW_ADJ"
-	<gai> /ɡˈaj/ "JOY_NOUN"
 	<lenga> /lˈeŋɡɔ/ "TONGUE_NOUN"
+	<egau> /eɡˈaw/ "EQUAL_ADJ"
+	<glaç> /ɡlˈas/ "ICE_NOUN"
 
 /ð/ (0.01)
-	<seda> /sˈeðɔ/ "SILK_NOUN"
+	<véder> /bˈeðe/ "SEE_VERB"
+	<cadea> /kaðˈeɔ/ "CHAIN_NOUN"
 	<pedolh> /peðˈuʎ/ "LOUSE_NOUN"
-	<assèder> /asˈɛðe/ "SIT_VERB"
 
 /ɲ/ (0.009)
-	<punh> /pˈyɲ/ "FIST_NOUN"
-	<lenha> /lˈeɲɔ/ "WOOD_NOUN"
 	<Espanha> /espˈaɲɔ/ "SPAIN_PROPN"
+	<linha> /lˈiɲɔ/ "LINE_NOUN"
+	<aranha> /aɾˈaɲɔ/ "SPIDER_NOUN"
 
 /z/ (0.009)
-	<isla> /ˈizlɔ/ "ISLAND_NOUN"
-	<ceriesa> /serjˈezɔ/ "CHERRY_NOUN"
-	<vosautes> /buzˈawtes/ "YOU (PL)_PRON"
+	<arrasim> /arazˈim/ "RAISIN_NOUN"
+	<dízer> /dˈize/ "SAY-INF_VERB"
+	<vesin> /bezˈiŋ/ "NEIGHBOR_NOUN"
 
 /ʦ/ (0.007)
 	<putz> /pˈyʦ/ "WELL_NOUN"
+	<crotz> /kɾˈuʦ/ "CROSS_NOUN"
 	<patz> /pˈaʦ/ "PEACE_NOUN"
-	<votz> /bˈuʦ/ "VOICE_NOUN"
 
 /ɣ/ (0.007)
 	<aiga> /ˈajɣɔ/ "WATER_NOUN"
-	<segur> /seɣˈy/ "SAFE_ADJ"
-	<vergonha> /berɣˈuɲɔ/ "SHAME_NOUN"
+	<dragon> /dɾaɣˈuŋ/ "DRAGON_NOUN"
+	<plaga> /plˈaɣɔ/ "PLAGUE_NOUN"
 
 /ʃ/ (0.005)
+	<cueisha> /kwˈejʃɔ/ "THIGH_NOUN"
 	<baish> /bˈajʃ/ "LOW_ADJ"
-	<grèish> /ɡɾˈɛjʃ/ "FAT_NOUN"
-	<peish> /pˈejʃ/ "FISH_NOUN"
+	<nèisher> /nˈɛjʃe/ "BE BORN_VERB"
 
 /ʤ/ (0.003)
-	<jutge> /ʒˈyʤe/ "JUDGE_NOUN"
 	<hitge> /hˈiʤe/ "LIVER_NOUN"
 	<mètge> /mˈɛʤe/ "DOCTOR_NOUN"
+	<viatge> /biˈaʤe/ "JOURNEY_NOUN"
 
 /f/ (0.002)
 	<faus> /fˈaws/ "FALSE_ADJ"

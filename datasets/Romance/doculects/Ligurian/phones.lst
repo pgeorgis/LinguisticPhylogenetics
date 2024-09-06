@@ -9,12 +9,12 @@ VOWELS
 	<cadeña> /kadˈeŋa/ "CHAIN_NOUN"
 	<sciàmma> /ʃˈama/ "FLAME_NOUN"
 
-/e/ (0.048)
+/e/ (0.049)
 	<libero> /lˈiberu/ "FREE_ADJ"
-	<vèrme> /vˈɛːrme/ "WORM_NOUN"
-	<dénte> /dˈeŋte/ "TOOTH_NOUN"
+	<ciànze> /ʧˈaŋze/ "WEEP_VERB"
+	<mille> /mˈile/ "THOUSAND_NUM"
 
-/ˈa/ (0.032)
+/ˈa/ (0.031)
 	<sàscio> /sˈaʃu/ "ROCK_NOUN"
 	<laña> /lˈaŋa/ "WOOL_NOUN"
 	<giassa> /ʤˈasa/ "ICE_NOUN"
@@ -24,7 +24,7 @@ VOWELS
 	<poéi> /pwˈej/ "CAN_VERB"
 	<trei> /trˈej/ "THREE_NUM"
 
-/ˈaː/ (0.028)
+/ˈaː/ (0.029)
 	<âva> /ˈaːva/ "BEE_NOUN"
 	<pâxe> /pˈaːʒe/ "PEACE_NOUN"
 	<sâ> /sˈaː/ "SALT_NOUN"
@@ -115,9 +115,9 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.051)
+/s/ (0.052)
 	<órso> /ˈuːrsu/ "BEAR_NOUN"
-	<çéia> /sˈeja/ "WAX_NOUN"
+	<gròsso> /ɡrˈɔsu/ "THICK_ADJ"
 	<sacce> /sˈaʧe/ "KNOW-SBJ-1SG_VERB"
 
 /ŋ/ (0.046)
@@ -135,15 +135,15 @@ CONSONANTS
 	<sànto> /sˈaŋtu/ "SACRED_ADJ"
 	<trei> /trˈej/ "THREE_NUM"
 
-/k/ (0.036)
-	<chéuscia> /kˈøʃa/ "THIGH_NOUN"
-	<chi> /kˈi/ "WHO_PRON"
-	<öca> /ˈɔːka/ "GOOSE_NOUN"
+/k/ (0.037)
+	<scrîve> /skrˈiːve/ "WRITE_VERB"
+	<côa> /kˈuːa/ "TAIL_NOUN"
+	<gianco> /ʤˈaŋku/ "WHITE_ADJ"
 
-/v/ (0.032)
+/v/ (0.031)
+	<nêuve> /nˈøːve/ "NINE_NUM"
 	<levâ> /levˈaː/ "CARRY_VERB"
 	<vergheugna> /verɡˈøɲa/ "SHAME_NOUN"
-	<voî> /vwˈiː/ "YOU (PL)_PRON"
 
 /p/ (0.03)
 	<pòrca> /pˈɔːrka/ "SOW_NOUN"
@@ -170,7 +170,7 @@ CONSONANTS
 	<sâvio> /sˈaːvju/ "WISE_ADJ"
 	<meitæ> /mejtˈɛː/ "HALF_NOUN"
 
-/ɡ/ (0.024)
+/ɡ/ (0.023)
 	<grànde> /ɡrˈaŋde/ "BIG_ADJ"
 	<zêugo> /zˈøːɡu/ "GAME_NOUN"
 	<lâgo> /lˈaːɡu/ "LAKE_NOUN"

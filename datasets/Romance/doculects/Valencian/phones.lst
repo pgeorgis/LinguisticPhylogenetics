@@ -1,35 +1,35 @@
 VOWELS
 /ˈa/ (0.066)
 	<faig> /fˈaʧ/ "DO-1SG_VERB"
-	<Espanya> /espˈaɲɐ/ "SPAIN_PROPN"
+	<ànima> /ˈanimɐ/ "SOUL_NOUN"
 	<clamar> /klamˈar/ "CALL_VERB"
 
+/e/ (0.034)
+	<bones> /bˈɒnes/ "GOOD (F.PL)_ADJ"
+	<vedell> /veðˈeʎ/ "CALF_NOUN"
+	<vergonya> /verɡˈoɲɞ/ "SHAME_NOUN"
+
 /ˈɒ/ (0.034)
-	<bo> /bˈɒ/ "GOOD (M.SG)_ADJ"
-	<ou> /ˈɒw/ "EGG_NOUN"
-	<bou> /bˈɒw/ "OX_NOUN"
+	<nou> /nˈɒw/ "NINE_NUM"
+	<nostre> /nˈɒstɾɞ/ "OUR_ADJ"
+	<fort> /fˈɒrt/ "STRONG_ADJ"
 
 /ˈi/ (0.034)
-	<riu> /rˈiw/ "RIVER_NOUN"
-	<dic> /dˈik/ "SAY-1SG_VERB"
-	<mil> /mˈil/ "THOUSAND_NUM"
-
-/e/ (0.034)
-	<mare> /mˈaɾe/ "MOTHER_NOUN"
-	<quatre> /kwˈatɾe/ "FOUR_NUM"
-	<cremar> /kɾemˈar/ "BURN_VERB"
+	<nit> /nˈit/ "NIGHT_NOUN"
+	<dit> /dˈit/ "FINGER_NOUN"
+	<mica> /mˈikɐ/ "CRUMB_NOUN"
 
 /ɐ/ (0.032)
 	<Espanya> /espˈaɲɐ/ "SPAIN_PROPN"
 	<argila> /arʤˈilɐ/ "CLAY_NOUN"
 	<agulla> /aɣˈuʎɐ/ "NEEDLE_NOUN"
 
-/ˈæ/ (0.03)
+/ˈæ/ (0.029)
 	<ovella> /uvˈæʎɜ/ "SHEEP_NOUN"
 	<hivern> /ivˈærn/ "WINTER_NOUN"
 	<cendre> /sˈændɾɜ/ "ASH_NOUN"
 
-/ˈe/ (0.03)
+/ˈe/ (0.029)
 	<ella> /ˈeʎɜ/ "SHE_PRON"
 	<anyell> /aɲˈeʎ/ "LAMB_NOUN"
 	<ell> /ˈeʎ/ "HE_PRON"
@@ -75,12 +75,12 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.058)
-	<estat> /estˈat/ "STATE_NOUN"
+/s/ (0.059)
+	<estrella> /estɾˈeʎɜ/ "STAR_NOUN"
 	<sabut> /saβˈut/ "KNOWN_VERB"
 	<cendre> /sˈændɾɜ/ "ASH_NOUN"
 
-/r/ (0.049)
+/r/ (0.05)
 	<dir> /dˈir/ "SAY-INF_VERB"
 	<argila> /arʤˈilɐ/ "CLAY_NOUN"
 	<volar> /vulˈar/ "FLY_VERB"
@@ -95,7 +95,7 @@ CONSONANTS
 	<cant> /kˈant/ "SONG_NOUN"
 	<muntanya> /muntˈaɲɐ/ "MOUNTAIN_NOUN"
 
-/ɾ/ (0.043)
+/ɾ/ (0.042)
 	<mare> /mˈaɾe/ "MOTHER_NOUN"
 	<pobre> /pˈɒβɾɞ/ "POOR_ADJ"
 	<escriure> /eskɾˈiwɾe/ "WRITE_VERB"
@@ -125,7 +125,7 @@ CONSONANTS
 	<mig> /mˈiʧ/ "MIDDLE_NOUN"
 	<verm> /vˈærm/ "WORM_NOUN"
 
-/w/ (0.025)
+/w/ (0.024)
 	<lliure> /ʎˈiwɾe/ "FREE_ADJ"
 	<veure> /vˈæwɾɜ/ "SEE_VERB"
 	<ou> /ˈɒw/ "EGG_NOUN"

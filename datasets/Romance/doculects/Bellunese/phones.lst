@@ -1,28 +1,28 @@
 VOWELS
-/a/ (0.075)
+/a/ (0.074)
 	<galìvo> /ɡalˈivo/ "EQUAL_ADJ"
 	<stemàna> /stemˈana/ "WEEK_NOUN"
 	<zharéxa> /θˈareza/ "CHERRY_NOUN"
 
-/ˈa/ (0.064)
+/ˈa/ (0.065)
 	<jutàr> /jutˈar/ "HELP_VERB"
 	<can> /kˈaŋ/ "DOG_NOUN"
-	<biànk> /bjˈaŋk/ "WHITE_ADJ"
+	<piàndher> /pjˈaŋðer/ "WEEP_VERB"
 
-/o/ (0.056)
+/o/ (0.055)
 	<zhiélo> /θjˈelo/ "SKY_NOUN"
 	<liévro> /ljˈevro/ "HARE_NOUN"
 	<élo> /ˈelo/ "HE_PRON"
 
-/ˈe/ (0.042)
-	<vént> /vˈeŋt/ "WIND_NOUN"
-	<péna> /pˈena/ "PAIN_NOUN"
-	<pés> /pˈes/ "FISH_NOUN"
+/e/ (0.043)
+	<dhóven> /ðˈoven/ "YOUNG_ADJ"
+	<lèdher> /lˈɛðer/ "READ_VERB"
+	<pare> /pˈare/ "FATHER_NOUN"
 
-/e/ (0.042)
-	<vedèl> /vedˈɛl/ "CALF_NOUN"
-	<diéxe> /djˈeze/ "TEN_NUM"
-	<conóser> /konˈoser/ "BE ACQUAINTED WITH_VERB"
+/ˈe/ (0.042)
+	<végner> /vˈeɲer/ "COME-INF_VERB"
+	<zhiélo> /θjˈelo/ "SKY_NOUN"
+	<créder> /krˈeder/ "BELIEVE_VERB"
 
 /ˈo/ (0.041)
 	<udór> /udˈor/ "ODOR_NOUN"
@@ -44,7 +44,7 @@ VOWELS
 	<mòrt> /mˈɔrt/ "DEATH_NOUN"
 	<pedòcio> /pedˈɔʧo/ "LOUSE_NOUN"
 
-/ˈu/ (0.012)
+/ˈu/ (0.011)
 	<tut> /tˈut/ "ALL (SG)_ADJ"
 	<vu> /vˈu/ "YOU (PL)_PRON"
 	<fun> /fˈuŋ/ "SMOKE_NOUN"
@@ -62,7 +62,7 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.09)
+/r/ (0.092)
 	<rèna> /rˈena/ "SAND_NOUN"
 	<récia> /rˈeʧa/ "EAR_NOUN"
 	<mare> /mˈare/ "MOTHER_NOUN"
@@ -82,22 +82,22 @@ CONSONANTS
 	<scòrzha> /skˈɔrθa/ "BARK_NOUN"
 	<seménzha> /semˈenθa/ "SEED_NOUN"
 
+/k/ (0.038)
+	<cóa> /kˈoa/ "TAIL_NOUN"
+	<cànbera> /kˈaŋbera/ "CHAMBER_NOUN"
+	<scur> /skˈur/ "DARK_ADJ"
+
 /n/ (0.037)
-	<fémena> /fˈemena/ "WOMAN_NOUN"
-	<cadéna> /kadˈena/ "CHAIN_NOUN"
-	<bóna> /bˈona/ "GOOD (F.SG)_ADJ"
+	<nóvo> /nˈovo/ "NEW_ADJ"
+	<nèola> /nˈɛola/ "CLOUD_NOUN"
+	<un> /ˈun/ "ONE_NUM"
 
-/k/ (0.037)
-	<cuàtro> /kwˈatro/ "FOUR_NUM"
-	<colór> /kolˈor/ "COLOR_NOUN"
-	<cavél> /kavˈel/ "HAIR_NOUN"
-
-/ŋ/ (0.036)
+/ŋ/ (0.035)
 	<vént> /vˈeŋt/ "WIND_NOUN"
 	<dént> /dˈeŋt/ "TOOTH_NOUN"
 	<bón> /bˈoŋ/ "GOOD (M.SG)_ADJ"
 
-/v/ (0.033)
+/v/ (0.032)
 	<vècio> /vˈɛʧo/ "OLD_ADJ"
 	<nóvo> /nˈovo/ "NEW_ADJ"
 	<vu> /vˈu/ "YOU (PL)_PRON"
@@ -132,8 +132,8 @@ CONSONANTS
 	<far> /fˈar/ "DO_VERB"
 	<néf> /nˈef/ "SNOW_NOUN"
 
-/θ/ (0.018)
-	<dólzh> /dˈolθ/ "SWEET_ADJ"
+/θ/ (0.019)
+	<zhima> /θˈima/ "SUMMIT_NOUN"
 	<çità> /θitˈa/ "CITY_NOUN"
 	<zhincuànta> /θiŋkwˈaŋta/ "FIFTY_NUM"
 
@@ -147,7 +147,7 @@ CONSONANTS
 	<còsa> /kˈɔza/ "THING_NOUN"
 	<ànzol> /ˈanzol/ "ANGEL_NOUN"
 
-/ð/ (0.011)
+/ð/ (0.01)
 	<piàndher> /pjˈaŋðer/ "WEEP_VERB"
 	<dhógo> /ðˈoɡo/ "GAME_NOUN"
 	<dhént> /ðˈeŋt/ "PEOPLE_NOUN"

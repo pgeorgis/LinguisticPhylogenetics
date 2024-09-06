@@ -4,7 +4,7 @@ VOWELS
 	<anèl> /anˈɛl/ "RING_NOUN"
 	<fèmna> /fˈɛmna/ "WOMAN_NOUN"
 
-/ˈa/ (0.066)
+/ˈa/ (0.067)
 	<zermà> /zermˈa/ "BROTHER_NOUN"
 	<zelà> /zelˈa/ "FREEZE_VERB"
 	<sità> /sitˈa/ "CITY_NOUN"
@@ -34,7 +34,7 @@ VOWELS
 	<föm> /fˈøm/ "SMOKE_NOUN"
 	<töcc> /tˈøʧ/ "ALL (PL)_ADJ"
 
-/ˈo/ (0.021)
+/ˈo/ (0.02)
 	<cósa> /kˈoza/ "THING_NOUN"
 	<óter> /ˈoter/ "OTHER_ADJ"
 	<córen> /kˈoren/ "HORN_NOUN"
@@ -49,7 +49,7 @@ VOWELS
 	<giòia> /ʤˈɔja/ "JOY_NOUN"
 	<scòrsa> /skˈɔrsa/ "BARK_NOUN"
 
-/o/ (0.017)
+/o/ (0.016)
 	<cognòss> /koɲˈɔs/ "BE ACQUAINTED WITH_VERB"
 	<èrbor> /ˈɛrbor/ "TREE_NOUN"
 	<dormì> /dormˈi/ "SLEEP_VERB"
@@ -59,19 +59,19 @@ VOWELS
 	<lüna> /lˈyna/ "MOON_NOUN"
 	<lü> /lˈy/ "HE_PRON"
 
-/i/ (0.008)
-	<anima> /ˈanima/ "SOUL_NOUN"
+/i/ (0.009)
+	<sircà> /sirkˈa/ "SEARCH_VERB"
 	<mïùr> /miˈur/ "BETTER_ADJ"
-	<isì> /izˈi/ "NEIGHBOR_NOUN"
+	<làgrima> /lˈaɡrima/ "TEAR_NOUN"
 
 /ø/ (0.002)
+	<aiötà> /ajøtˈa/ "HELP_VERB"
 	<piöìda> /pjøˈida/ "RAIN_NOUN"
 	<dörmì> /dørmˈi/ "SLEEP_VERB"
-	<aiötà> /ajøtˈa/ "HELP_VERB"
 
 /u/ (0.002)
-	<sgulà> /zɡulˈa/ "FLY_VERB"
 	<culùr> /kulˈur/ "COLOR_NOUN"
+	<sgulà> /zɡulˈa/ "FLY_VERB"
 
 /y/ (0.001)
 	<brüsà> /bryzˈa/ "BURN_VERB"
@@ -80,104 +80,104 @@ VOWELS
 
 CONSONANTS
 /r/ (0.073)
+	<paròla> /parˈɔla/ "WORD_NOUN"
+	<tèra> /tˈɛra/ "EARTH_NOUN"
 	<prése> /prˈeze/ "PRICE_NOUN"
-	<lìber> /lˈiber/ "FREE_ADJ"
-	<scòrsa> /skˈɔrsa/ "BARK_NOUN"
 
 /s/ (0.071)
+	<lüs> /lˈys/ "LIGHT_NOUN"
+	<scòrsa> /skˈɔrsa/ "BARK_NOUN"
 	<sant> /sˈant/ "SACRED_ADJ"
-	<duls> /dˈuls/ "SWEET_ADJ"
-	<sàe> /sˈae/ "WISE_ADJ"
 
 /l/ (0.057)
+	<zald> /zˈalt/ "YELLOW_ADJ"
 	<fiöla> /fjˈøla/ "DAUGHTER_NOUN"
 	<salüte> /salˈyte/ "HEALTH_NOUN"
-	<scoltà> /skoltˈa/ "LISTEN_VERB"
 
 /k/ (0.049)
-	<castèl> /kastˈɛl/ "CASTLE_NOUN"
-	<pòrch> /pˈɔrk/ "PIG_NOUN"
-	<föch> /fˈøk/ "FIRE_NOUN"
+	<póch> /pˈok/ "LITTLE_ADJ"
+	<pèsca> /pˈɛska/ "PEACH_NOUN"
+	<cùa> /kˈua/ "TAIL_NOUN"
 
 /t/ (0.047)
-	<té> /tˈe/ "THOU_PRON"
-	<estàt> /estˈat/ "SUMMER_NOUN"
-	<montagna> /montˈaɲa/ "MOUNTAIN_NOUN"
+	<dit> /dˈit/ "FINGER_NOUN"
+	<potére> /potˈere/ "CAN_VERB"
+	<trè> /trˈɛ/ "THREE_NUM"
 
 /n/ (0.043)
-	<növ> /nˈøf/ "NEW_ADJ"
-	<nas> /nˈas/ "NOSE_NOUN"
-	<lana> /lˈana/ "WOOL_NOUN"
+	<zenöcc> /zenˈøʧ/ "KNEE_NOUN"
+	<nodà> /nodˈa/ "SWIM_VERB"
+	<anima> /ˈanima/ "SOUL_NOUN"
 
 /p/ (0.035)
+	<pìcol> /pˈikol/ "SMALL_ADJ"
+	<pondì> /pondˈi/ "PUT_VERB"
 	<póss> /pˈos/ "WELL_NOUN"
-	<pé> /pˈe/ "FOOT_NOUN"
-	<pas> /pˈas/ "PEACE_NOUN"
 
 /m/ (0.034)
+	<fiama> /fjˈama/ "FLAME_NOUN"
+	<massà> /masˈa/ "KILL_VERB"
 	<mé> /mˈe/ "I_OBL_PRON"
-	<làgrima> /lˈaɡrima/ "TEAR_NOUN"
-	<dormì> /dormˈi/ "SLEEP_VERB"
 
 /d/ (0.028)
+	<dés> /dˈes/ "TEN_NUM"
 	<dét> /dˈet/ "TOOTH_NOUN"
 	<dörmì> /dørmˈi/ "SLEEP_VERB"
-	<crèd> /krˈɛd/ "BELIEVE_VERB"
 
 /f/ (0.026)
+	<fiöla> /fjˈøla/ "DAUGHTER_NOUN"
 	<lüf> /lˈyf/ "WOLF_NOUN"
 	<fèr> /fˈɛr/ "IRON_NOUN"
-	<fiöl> /fjˈøl/ "SON_NOUN"
 
 /j/ (0.023)
-	<meitàt> /mejtˈat/ "HALF_NOUN"
-	<quàia> /kwˈaja/ "QUAIL_NOUN"
-	<piöma> /pjˈøma/ "FEATHER_NOUN"
+	<fiöm> /fjˈøm/ "RIVER_NOUN"
+	<fiöl> /fjˈøl/ "SON_NOUN"
+	<cheèi> /keˈɛj/ "HAIR_NOUN"
 
-/z/ (0.021)
-	<zögn> /zˈøɲ/ "JUNE_PROPN"
-	<lesì> /lezˈi/ "READ_VERB"
-	<pianzì> /pjanzˈi/ "WEEP_VERB"
+/z/ (0.02)
+	<isì> /izˈi/ "NEIGHBOR_NOUN"
+	<cósa> /kˈoza/ "THING_NOUN"
+	<zelà> /zelˈa/ "FREEZE_VERB"
 
 /ɡ/ (0.019)
-	<góla> /ɡˈola/ "THROAT_NOUN"
-	<ègua> /ˈɛɡwa/ "WATER_NOUN"
 	<grà> /ɡrˈa/ "GRAIN_NOUN"
+	<ergògna> /erɡˈɔɲa/ "SHAME_NOUN"
+	<lèngua> /lˈɛŋɡwa/ "TONGUE_NOUN"
 
-/b/ (0.017)
+/b/ (0.016)
+	<bù> /bˈu/ "GOOD (M.SG)_ADJ"
 	<bèl> /bˈɛl/ "BEAUTIFUL (M)_ADJ"
 	<bóca> /bˈoka/ "MOUTH_NOUN"
-	<bö> /bˈø/ "OX_NOUN"
 
 /ʧ/ (0.01)
-	<lècc> /lˈɛʧ/ "BED_NOUN"
-	<ciamà> /ʧamˈa/ "CALL_VERB"
+	<nòcc> /nˈɔʧ/ "NIGHT_NOUN"
 	<piöcc> /pjˈøʧ/ "LOUSE_NOUN"
+	<lècc> /lˈɛʧ/ "BED_NOUN"
 
 /ɲ/ (0.009)
+	<egnì> /eɲˈi/ "COME-INF_VERB"
+	<ergògna> /erɡˈɔɲa/ "SHAME_NOUN"
 	<agnèl> /aɲˈɛl/ "LAMB_NOUN"
-	<zögn> /zˈøɲ/ "JUNE_PROPN"
-	<montagna> /montˈaɲa/ "MOUNTAIN_NOUN"
 
 /ʤ/ (0.008)
-	<àngel> /ˈanʤel/ "ANGEL_NOUN"
+	<giàss> /ʤˈas/ "ICE_NOUN"
 	<lège> /lˈɛʤe/ "LAW_NOUN"
-	<regina> /reʤˈina/ "QUEEN_NOUN"
+	<àngel> /ˈanʤel/ "ANGEL_NOUN"
 
 /ŋ/ (0.006)
-	<lóngh> /lˈoŋk/ "LONG_ADJ"
-	<lèngua> /lˈɛŋɡwa/ "TONGUE_NOUN"
 	<an> /ˈaŋ/ "YEAR_NOUN"
+	<grand> /ɡrˈaŋt/ "BIG_ADJ"
+	<sinquanta> /siŋkwˈanta/ "FIFTY_NUM"
 
-/w/ (0.006)
+/w/ (0.005)
+	<lèngua> /lˈɛŋɡwa/ "TONGUE_NOUN"
 	<quàia> /kwˈaja/ "QUAIL_NOUN"
 	<ègua> /ˈɛɡwa/ "WATER_NOUN"
-	<quàter> /kwˈater/ "FOUR_NUM"
 
 /ʋ/ (0.005)
-	<övra> /ˈøʋra/ "WORK_NOUN"
-	<cavra> /kˈaʋra/ "GOAT_NOUN"
 	<vilà> /ʋilˈa/ "VILLAIN_NOUN"
+	<vìa> /ʋˈia/ "ROAD_NOUN"
+	<cavra> /kˈaʋra/ "GOAT_NOUN"
 
 
 
