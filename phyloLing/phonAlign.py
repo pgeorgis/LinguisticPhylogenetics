@@ -507,6 +507,9 @@ class Alignment:
                                 map1[i].append(n - adjust_ngram)
                             elif i == 0 and len(self.seq1) == 1:
                                 map1[i].append(n - adjust_ngram)
+                            elif i == 1 and len(self.seq1) == 1 and self.alignment[0] == self.start_boundary():
+                                # e.g. [('<#', '<#'), (('<#', 'ɑ'), '<#'), ...] # TODO ensure that this is actually a valid alignment and not a bug
+                                map1[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap1 += 1
                                 adjust_ngram += 1
@@ -531,6 +534,8 @@ class Alignment:
                             if self.pad_ch not in ngram.ngram[n - seg2_i]:
                                 map2[i].append(n - adjust_ngram)
                             elif i == 0 and len(self.seq2) == 1:
+                                map2[i].append(n - adjust_ngram)
+                            elif i == 1 and len(self.seq2) == 1 and self.alignment[0] == self.start_boundary():
                                 map2[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap2 += 1
