@@ -1035,7 +1035,8 @@ class PhonCorrelator:
                 smoothed = sum([estimate * weight for estimate, weight in zip(estimates, ngram_weights)])
                 undone_ngram2 = Ngram(ngram2).undo()  # need to convert to dictionary form, whereby unigrams are strings and larger ngrams are tuples
                 if phon_env:
-                    smoothed_surprisal[ngram1_w_context][undone_ngram2] = surprisal(smoothed)
+                    if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]):  # skip computing phon env probabilities with e.g. ('#>',)
+                        smoothed_surprisal[ngram1_w_context][undone_ngram2] = surprisal(smoothed)
                 else:
                     smoothed_surprisal[undone_ngram1][undone_ngram2] = surprisal(smoothed)
 
@@ -1056,7 +1057,8 @@ class PhonCorrelator:
             smoothed_oov = self.lang2.phoneme_entropy
 
             if phon_env:
-                smoothed_surprisal[ngram1_w_context] = default_dict(smoothed_surprisal[ngram1_w_context], lmbda=smoothed_oov)
+                if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]):  # skip computing phon env probabilities with e.g. ('#>',)
+                    smoothed_surprisal[ngram1_w_context] = default_dict(smoothed_surprisal[ngram1_w_context], lmbda=smoothed_oov)
             else:
                 smoothed_surprisal[undone_ngram1] = default_dict(smoothed_surprisal[undone_ngram1], lmbda=smoothed_oov)
 
