@@ -19,6 +19,7 @@ Ladin	Ladin			CLAY_NOUN	arjila	arʒˈila	a r ʒ ˈi l a		CLAY_NOUN_1
 Friulian	Friulian			CLAY_NOUN	arzile	arʤˈile	a r ʤ ˈi l e		CLAY_NOUN_1			
 French	French			CLAY_NOUN	argile	aʁʒil	a ʁ ʒ i l		CLAY_NOUN_1			
 Québécois French	Québécois French			CLAY_NOUN	argile	aʁʒɪl	a ʁ ʒ ɪ l		CLAY_NOUN_1			
+Walloon	Walloon			CLAY_NOUN	årzeye	ɔːʀzˈɛj	ɔː ʀ z ˈɛ j		CLAY_NOUN_1			
 Occitan	Occitan			CLAY_NOUN	argila	arʤˈilɔ	a r ʤ ˈi l ɔ		CLAY_NOUN_1			
 Gascon	Gascon			CLAY_NOUN	argèla	arʒˈɛlɔ	a r ʒ ˈɛ l ɔ		CLAY_NOUN_1			
 Catalan	Catalan			CLAY_NOUN	argila	ərʒˈilə	ə r ʒ ˈi l ə		CLAY_NOUN_1			
@@ -99,6 +100,7 @@ Eastern Lombard	Eastern Lombard			STRIKE_NOUN	culp	kˈulp	k ˈu l p		STRIKE_NOUN
 Ladin	Ladin			STRIKE_NOUN	colp	kˈolp	k ˈo l p		STRIKE_NOUN_1			
 French	French			STRIKE_NOUN	coup	ku	k u		STRIKE_NOUN_1			
 Québécois French	Québécois French			STRIKE_NOUN	coup	ku	k u		STRIKE_NOUN_1			
+Walloon	Walloon			STRIKE_NOUN	côp	kˈoː	k ˈoː		STRIKE_NOUN_1			
 Franco-Provençal	Franco-Provençal			STRIKE_NOUN	côp	kˈoː	k ˈoː		STRIKE_NOUN_1			
 Occitan	Occitan			STRIKE_NOUN	còp	kˈɔp	k ˈɔ p		STRIKE_NOUN_1			
 Gascon	Gascon			STRIKE_NOUN	còp	kˈɔp	k ˈɔ p		STRIKE_NOUN_1			
@@ -128,6 +130,7 @@ Corsican	Corsican			HORN_NOUN	corna	kˈɔrna	k ˈɔ r n a		HORN_NOUN_1
 Romansch	Romansch			HORN_NOUN	corna	kˈɔːrnə	k ˈɔː r n ə		HORN_NOUN_1			
 French	French			HORN_NOUN	corne	kɔʁn	k ɔ ʁ n		HORN_NOUN_1			
 Québécois French	Québécois French			HORN_NOUN	corne	kɑɔ̯ʁn	k ɑɔ̯ ʁ n		HORN_NOUN_1			
+Walloon	Walloon			HORN_NOUN	coine	kwˈan	k w ˈa n		HORN_NOUN_1			
 Franco-Provençal	Franco-Provençal			HORN_NOUN	cörna	kˈøʁna	k ˈø ʁ n a		HORN_NOUN_1			
 Savoyard	Savoyard			HORN_NOUN	keûrna	kˈøːrna	k ˈøː r n a		HORN_NOUN_1			
 Latin	Latin			DAY_NOUN	dia	dˈia	d ˈi a		DAY_NOUN_1			
@@ -159,6 +162,7 @@ Friulian	Friulian			I_PRON	jo	jˈo	j ˈo		I_PRON_1
 Romansch	Romansch			I_PRON	jau	jˈaw	j ˈa w		I_PRON_1			
 French	French			I_PRON	je	ʒə	ʒ ə		I_PRON_1			
 Québécois French	Québécois French			I_PRON	je	ʒœ	ʒ œ		I_PRON_1			
+Walloon	Walloon			I_PRON	dji	ʤˈi	ʤ ˈi		I_PRON_1			
 Franco-Provençal	Franco-Provençal			I_PRON	je	ʒˈe	ʒ ˈe		I_PRON_1			
 Savoyard	Savoyard			I_PRON	dè	dˈɛ	d ˈɛ		I_PRON_1			
 Occitan	Occitan			I_PRON	ieu	jˈew	j ˈe w		I_PRON_1			
@@ -192,6 +196,7 @@ Friulian	Friulian			THIN_ADJ	fin	fˈiŋ	f ˈi ŋ		THIN_ADJ_1
 Romansch	Romansch			THIN_ADJ	fin	fˈin	f ˈi n		THIN_ADJ_1			
 French	French			THIN_ADJ	fin	fɛ̃	f ɛ̃		THIN_ADJ_1			
 Québécois French	Québécois French			THIN_ADJ	fin	fẽɪ̯̃	f ẽɪ̯̃		THIN_ADJ_1			
+Walloon	Walloon			THIN_ADJ	fén	fˈẽ	f ˈẽ		THIN_ADJ_1			
 Franco-Provençal	Franco-Provençal			THIN_ADJ	fin	fˈĩ	f ˈĩ		THIN_ADJ_1			
 Savoyard	Savoyard			THIN_ADJ	fin	fˈɛ̃	f ˈɛ̃		THIN_ADJ_1			
 Catalan	Catalan			THIN_ADJ	fin	fˈi	f ˈi		THIN_ADJ_1			
@@ -218,6 +223,7 @@ Piedmontese	Piedmontese			STRENGTH_NOUN	fòrsa	fˈɔrsa	f ˈɔ r s a		STRENGTH_N
 Eastern Lombard	Eastern Lombard			STRENGTH_NOUN	fórsa	fˈorsa	f ˈo r s a		STRENGTH_NOUN_1			
 French	French			STRENGTH_NOUN	force	fɔʁs	f ɔ ʁ s		STRENGTH_NOUN_1			
 Québécois French	Québécois French			STRENGTH_NOUN	force	fɑɔ̯ʁs	f ɑɔ̯ ʁ s		STRENGTH_NOUN_1			
+Walloon	Walloon			STRENGTH_NOUN	foice	fwˈas	f w ˈa s		STRENGTH_NOUN_1			
 Franco-Provençal	Franco-Provençal			STRENGTH_NOUN	förça	fˈøʁsa	f ˈø ʁ s a		STRENGTH_NOUN_1			
 Occitan	Occitan			STRENGTH_NOUN	fòrça	fˈɔrsɔ	f ˈɔ r s ɔ		STRENGTH_NOUN_1			
 Gascon	Gascon			STRENGTH_NOUN	fòrça	fˈɔrsɔ	f ˈɔ r s ɔ		STRENGTH_NOUN_1	TRUE		
@@ -275,6 +281,7 @@ Latin	Latin			GRAIN_NOUN	grāna	ɡrˈaːna	ɡ r ˈaː n a		GRAIN_NOUN_1
 Corsican	Corsican			GRAIN_NOUN	grana	ɡrˈana	ɡ r ˈa n a		GRAIN_NOUN_1			
 French	French			GRAIN_NOUN	graine	ɡʁɛn	ɡ ʁ ɛ n		GRAIN_NOUN_1			
 Québécois French	Québécois French			GRAIN_NOUN	graine	ɡʁæɛ̯n	ɡ ʁ æɛ̯ n		GRAIN_NOUN_1			
+Walloon	Walloon			GRAIN_NOUN	grinne	ɡʀˈɛ̃n	ɡ ʀ ˈɛ̃ n		GRAIN_NOUN_1			
 Franco-Provençal	Franco-Provençal			GRAIN_NOUN	grêna	ɡʁˈɛːna	ɡ ʁ ˈɛː n a		GRAIN_NOUN_1			
 Savoyard	Savoyard			GRAIN_NOUN	gran-na	ɡrˈãna	ɡ r ˈã n a		GRAIN_NOUN_1			
 Latin	Latin			FAT_NOUN	grassam	ɡrˈassãː	ɡ r ˈa s s ãː		FAT_NOUN_1			
@@ -282,6 +289,7 @@ Corsican	Corsican			FAT_NOUN	grassa	ɡrˈassa	ɡ r ˈa s s a		FAT_NOUN_1
 Ligurian	Ligurian			FAT_NOUN	grascia	ɡrˈaʃa	ɡ r ˈa ʃ a		FAT_NOUN_1			
 French	French			FAT_NOUN	graisse	ɡʁɛs	ɡ ʁ ɛ s		FAT_NOUN_1			
 Québécois French	Québécois French			FAT_NOUN	graisse	ɡʁæɛ̯s	ɡ ʁ æɛ̯ s		FAT_NOUN_1			
+Walloon	Walloon			FAT_NOUN	cråxhe	kʀˈɔːʃ	k ʀ ˈɔː ʃ		FAT_NOUN_1			
 Franco-Provençal	Franco-Provençal			FAT_NOUN	grésse	ɡʁˈesə	ɡ ʁ ˈe s ə		FAT_NOUN_1			
 Savoyard	Savoyard			FAT_NOUN	gréssa	ɡrˈesa	ɡ r ˈe s a		FAT_NOUN_1			
 Occitan	Occitan			FAT_NOUN	gras	ɡɾˈas	ɡ ɾ ˈa s		FAT_NOUN_1			
@@ -345,6 +353,7 @@ Ladin	Ladin			ISLAND_NOUN	ijola	ˈiʒola	ˈi ʒ o l a		ISLAND_NOUN_1
 Friulian	Friulian			ISLAND_NOUN	isule	ˈizule	ˈi z u l e		ISLAND_NOUN_1			
 French	French			ISLAND_NOUN	île	il	i l		ISLAND_NOUN_1			
 Québécois French	Québécois French			ISLAND_NOUN	île	ɪl	ɪ l		ISLAND_NOUN_1			
+Walloon	Walloon			ISLAND_NOUN	iye	ˈiːj	ˈiː j		ISLAND_NOUN_1			
 Franco-Provençal	Franco-Provençal			ISLAND_NOUN	ila	ˈila	ˈi l a		ISLAND_NOUN_1			
 Occitan	Occitan			ISLAND_NOUN	illa	ˈillɔ	ˈi l l ɔ		ISLAND_NOUN_1			
 Gascon	Gascon			ISLAND_NOUN	isla	ˈizlɔ	ˈi z l ɔ		ISLAND_NOUN_1			
@@ -394,6 +403,7 @@ Friulian	Friulian			HONEY_NOUN	mîl	mˈiːl	m ˈiː l		HONEY_NOUN_1
 Romansch	Romansch			HONEY_NOUN	mel	mˈɛl	m ˈɛ l		HONEY_NOUN_1			
 French	French			HONEY_NOUN	miel	mjɛl	m j ɛ l		HONEY_NOUN_1			
 Québécois French	Québécois French			HONEY_NOUN	miel	mjɛl	m j ɛ l		HONEY_NOUN_1			
+Walloon	Walloon			HONEY_NOUN	miel	mjˈɛl	m j ˈɛ l		HONEY_NOUN_1			
 Franco-Provençal	Franco-Provençal			HONEY_NOUN	myél	mjˈel	m j ˈe l		HONEY_NOUN_1			
 Occitan	Occitan			HONEY_NOUN	mèl	mˈɛl	m ˈɛ l		HONEY_NOUN_1			
 Gascon	Gascon			HONEY_NOUN	mèu	mˈɛw	m ˈɛ w		HONEY_NOUN_1			
@@ -434,6 +444,7 @@ Friulian	Friulian			BE BORN_VERB	nassi	nˈasi	n ˈa s i		BE BORN_VERB_1
 Romansch	Romansch			BE BORN_VERB	nascher	nˈaʃər	n ˈa ʃ ə r		BE BORN_VERB_1			
 French	French			BE BORN_VERB	naître	nɛtʁ	n ɛ t ʁ		BE BORN_VERB_1			
 Québécois French	Québécois French			BE BORN_VERB	naître	næɛ̯tʁ	n æɛ̯ t ʁ		BE BORN_VERB_1			
+Walloon	Walloon			BE BORN_VERB	nexhe	nˈɛʃ	n ˈɛ ʃ		BE BORN_VERB_1			
 Franco-Provençal	Franco-Provençal			BE BORN_VERB	naitre	nˈajtʁə	n ˈa j t ʁ ə		BE BORN_VERB_1			
 Occitan	Occitan			BE BORN_VERB	nàisser	nˈajse	n ˈa j s e		BE BORN_VERB_1			
 Gascon	Gascon			BE BORN_VERB	nèisher	nˈɛjʃe	n ˈɛ j ʃ e		BE BORN_VERB_1			
@@ -510,6 +521,7 @@ Friulian	Friulian			QUAIL_NOUN	cuaie	kwˈaje	k w ˈa j e		QUAIL_NOUN_1
 Romansch	Romansch			QUAIL_NOUN	quaiglia	kwˈajʎə	k w ˈa j ʎ ə		QUAIL_NOUN_1			
 French	French			QUAIL_NOUN	caille	kaj	k a j		QUAIL_NOUN_1			
 Québécois French	Québécois French			QUAIL_NOUN	caille	kæɛ̯j	k æɛ̯ j		QUAIL_NOUN_1			
+Walloon	Walloon			QUAIL_NOUN	cwaye	kwˈaj	k w ˈa j		QUAIL_NOUN_1			
 Occitan	Occitan			QUAIL_NOUN	calha	kˈaʎɔ	k ˈa ʎ ɔ		QUAIL_NOUN_1			
 Gascon	Gascon			QUAIL_NOUN	catla	kˈallɔ	k ˈa l l ɔ		QUAIL_NOUN_1			
 Catalan	Catalan			QUAIL_NOUN	guatlla	ɡwˈaʎʎə	ɡ w ˈa ʎ ʎ ə		QUAIL_NOUN_1			
@@ -539,6 +551,7 @@ Friulian	Friulian			SUN_NOUN	soreli	sorˈeli	s o r ˈe l i		SUN_NOUN_1
 Romansch	Romansch			SUN_NOUN	sulegl	sulˈeʎ	s u l ˈe ʎ		SUN_NOUN_1			
 French	French			SUN_NOUN	soleil	sɔlɛj	s ɔ l ɛ j		SUN_NOUN_1			
 Québécois French	Québécois French			SUN_NOUN	soleil	sɔlæɛ̯j	s ɔ l æɛ̯ j		SUN_NOUN_1			
+Walloon	Walloon			SUN_NOUN	solea	sɔljˈa	s ɔ l j ˈa		SUN_NOUN_1			
 Franco-Provençal	Franco-Provençal			SUN_NOUN	soluêly	sɔlwˈɛː	s ɔ l w ˈɛː		SUN_NOUN_1			
 Savoyard	Savoyard			SUN_NOUN	sèlwà	sɛlwˈa	s ɛ l w ˈa		SUN_NOUN_1			
 Occitan	Occitan			SUN_NOUN	solelh	sulˈɛl	s u l ˈɛ l		SUN_NOUN_1			
@@ -550,11 +563,13 @@ Ladin	Ladin			STAR_NOUN	steila	ʃtˈejla	ʃ t ˈe j l a		STAR_NOUN_1
 Romansch	Romansch			STAR_NOUN	staila	ʃtˈajlə	ʃ t ˈa j l ə		STAR_NOUN_1			
 French	French			STAR_NOUN	étoile	etwal	e t w a l		STAR_NOUN_1			
 Québécois French	Québécois French			STAR_NOUN	étoile	etwɛl	e t w ɛ l		STAR_NOUN_1			
+Walloon	Walloon			STAR_NOUN	stoele	stwˈɛl	s t w ˈɛ l		STAR_NOUN_1			
 Franco-Provençal	Franco-Provençal			STAR_NOUN	étêla	etˈɛːla	e t ˈɛː l a		STAR_NOUN_1			
 Savoyard	Savoyard			STAR_NOUN	étaila	etˈajla	e t ˈa j l a		STAR_NOUN_1			
 Latin	Latin			BULL_NOUN	taurellum	tˈau̯rˈɛlʲlʲʊ̃ː	t ˈau̯ r ˈɛ lʲ lʲ ʊ̃ː		BULL_NOUN_1			
 French	French			BULL_NOUN	taureau	toʁo	t o ʁ o		BULL_NOUN_1			
 Québécois French	Québécois French			BULL_NOUN	taureau	toʊ̯ʁoʊ̯	t oʊ̯ ʁ oʊ̯		BULL_NOUN_1			
+Walloon	Walloon			BULL_NOUN	torea	tɔʀjˈa	t ɔ ʀ j ˈa		BULL_NOUN_1			
 Franco-Provençal	Franco-Provençal			BULL_NOUN	torél	toʁˈel	t o ʁ ˈe l		BULL_NOUN_1			
 Latin	Latin			ALL (PL)_ADJ	tōttī	tˈoːttiː	t ˈoː t t iː		ALL (PL)_ADJ_1			
 Sicilian	Sicilian			ALL (PL)_ADJ	tutti	tˈuttɪ	t ˈu t t ɪ		ALL (PL)_ADJ_1			
@@ -571,6 +586,7 @@ French	French			ALL (PL)_ADJ	tous	tu	t u		ALL (PL)_ADJ_2
 French	French			ALL (PL)_ADJ	tous	tus	t u s		ALL (PL)_ADJ_2			
 Québécois French	Québécois French			ALL (PL)_ADJ	tous	tu	t u		ALL (PL)_ADJ_2			
 Québécois French	Québécois French			ALL (PL)_ADJ	tous	tʊs	t ʊ s		ALL (PL)_ADJ_2			
+Walloon	Walloon			ALL (PL)_ADJ	tos	tˈɔ	t ˈɔ		ALL (PL)_ADJ_2			
 Franco-Provençal	Franco-Provençal			ALL (PL)_ADJ	tôs	tˈoːs	t ˈoː s		ALL (PL)_ADJ_2			
 Occitan	Occitan			ALL (PL)_ADJ	tots	tˈuts	t ˈu t s		ALL (PL)_ADJ_2			
 Gascon	Gascon			ALL (PL)_ADJ	tots	tˈuts	t ˈu t s		ALL (PL)_ADJ_2			
@@ -598,6 +614,7 @@ Friulian	Friulian			ALL (SG)_ADJ	dut	dˈut	d ˈu t		ALL (SG)_ADJ_1
 Romansch	Romansch			ALL (SG)_ADJ	tut	tˈut	t ˈu t		ALL (SG)_ADJ_1			
 French	French			ALL (SG)_ADJ	tout	tu	t u		ALL (SG)_ADJ_1			
 Québécois French	Québécois French			ALL (SG)_ADJ	tout	tu	t u		ALL (SG)_ADJ_1			
+Walloon	Walloon			ALL (SG)_ADJ	tot	tˈɔ	t ˈɔ		ALL (SG)_ADJ_1			
 Franco-Provençal	Franco-Provençal			ALL (SG)_ADJ	tot	tˈo	t ˈo		ALL (SG)_ADJ_1			
 Savoyard	Savoyard			ALL (SG)_ADJ	to	tˈo	t ˈo		ALL (SG)_ADJ_1			
 Occitan	Occitan			ALL (SG)_ADJ	tot	tˈut	t ˈu t		ALL (SG)_ADJ_1			
@@ -643,6 +660,7 @@ Friulian	Friulian			NEIGHBOR_NOUN	vicin	viʧˈiŋ	v i ʧ ˈi ŋ		NEIGHBOR_NOUN_1
 Romansch	Romansch			NEIGHBOR_NOUN	vischin	viʃˈin	v i ʃ ˈi n		NEIGHBOR_NOUN_1			
 French	French			NEIGHBOR_NOUN	voisin	vwazɛ̃	v w a z ɛ̃		NEIGHBOR_NOUN_1			
 Québécois French	Québécois French			NEIGHBOR_NOUN	voisin	vwɛzẽɪ̯̃	v w ɛ z ẽɪ̯̃		NEIGHBOR_NOUN_1			
+Walloon	Walloon			NEIGHBOR_NOUN	vijhén	viʒˈẽ	v i ʒ ˈẽ		NEIGHBOR_NOUN_1			
 Franco-Provençal	Franco-Provençal			NEIGHBOR_NOUN	vesin	vəzˈĩ	v ə z ˈĩ		NEIGHBOR_NOUN_1			
 Occitan	Occitan			NEIGHBOR_NOUN	vesin	vezˈi	v e z ˈi		NEIGHBOR_NOUN_1			
 Gascon	Gascon			NEIGHBOR_NOUN	vesin	bezˈiŋ	b e z ˈi ŋ		NEIGHBOR_NOUN_1			
@@ -668,6 +686,7 @@ Friulian	Friulian			SHAME_NOUN	vergogne	verɡˈoɲe	v e r ɡ ˈo ɲ e		SHAME_NOU
 Romansch	Romansch			SHAME_NOUN	verguogna	vərɡˈuɔ̯ɲə	v ə r ɡ ˈuɔ̯ ɲ ə		SHAME_NOUN_1			
 French	French			SHAME_NOUN	vergogne	vɛʁɡɔɲ	v ɛ ʁ ɡ ɔ ɲ		SHAME_NOUN_1			
 Québécois French	Québécois French			SHAME_NOUN	vergogne	væɛ̯ʁɡɔɲ	v æɛ̯ ʁ ɡ ɔ ɲ		SHAME_NOUN_1			
+Walloon	Walloon			SHAME_NOUN	vergogne	vɛʀɡˈɔɲ	v ɛ ʀ ɡ ˈɔ ɲ		SHAME_NOUN_1			
 Franco-Provençal	Franco-Provençal			SHAME_NOUN	vèrgogne	vɛʁɡˈɔɲə	v ɛ ʁ ɡ ˈɔ ɲ ə		SHAME_NOUN_1			
 Occitan	Occitan			SHAME_NOUN	vergonha	verɣˈuɲɔ	v e r ɣ ˈu ɲ ɔ		SHAME_NOUN_1			
 Gascon	Gascon			SHAME_NOUN	vergonha	berɣˈuɲɔ	b e r ɣ ˈu ɲ ɔ		SHAME_NOUN_1			
@@ -685,6 +704,7 @@ Italian	Italian			FLIGHT_NOUN	volo	vˈolo	v ˈo l o		FLIGHT_NOUN_2
 Piedmontese	Piedmontese			FLIGHT_NOUN	vòl	vˈɔl	v ˈɔ l		FLIGHT_NOUN_2			
 French	French			FLIGHT_NOUN	vol	vɔl	v ɔ l		FLIGHT_NOUN_2		IRREGULAR	
 Québécois French	Québécois French			FLIGHT_NOUN	vol	vɔl	v ɔ l		FLIGHT_NOUN_2		IRREGULAR	
+Walloon	Walloon			FLIGHT_NOUN	vol	vˈɔl	v ˈɔ l		FLIGHT_NOUN_2			
 Occitan	Occitan			FLIGHT_NOUN	vòl	vˈɔl	v ˈɔ l		FLIGHT_NOUN_2			
 Gascon	Gascon			FLIGHT_NOUN	vòl	bˈɔl	b ˈɔ l		FLIGHT_NOUN_2			
 Catalan	Catalan			FLIGHT_NOUN	vol	bˈɔl	b ˈɔ l		FLIGHT_NOUN_2			
@@ -707,6 +727,7 @@ Friulian	Friulian			NEEDLE_NOUN	gusiele	ɡuzjˈɛle	ɡ u z j ˈɛ l e		NEEDLE_NO
 Romansch	Romansch			NEEDLE_NOUN	guglia	ɡˈuːʎə	ɡ ˈuː ʎ ə		NEEDLE_NOUN_1			
 French	French			NEEDLE_NOUN	aiguille	ɛɡɥij	ɛ ɡ ɥ i j		NEEDLE_NOUN_1			
 Québécois French	Québécois French			NEEDLE_NOUN	aiguille	æɛ̯ɡɥɪj	æɛ̯ ɡ ɥ ɪ j		NEEDLE_NOUN_1			
+Walloon	Walloon			NEEDLE_NOUN	aweye	awˈɛj	a w ˈɛ j		NEEDLE_NOUN_1			
 Franco-Provençal	Franco-Provençal			NEEDLE_NOUN	avolye	avˈuʎə	a v ˈu ʎ ə		NEEDLE_NOUN_1			
 Occitan	Occitan			NEEDLE_NOUN	agulha	aɣˈyʎɔ	a ɣ ˈy ʎ ɔ		NEEDLE_NOUN_1			
 Gascon	Gascon			NEEDLE_NOUN	agulha	aɣˈyʎɔ	a ɣ ˈy ʎ ɔ		NEEDLE_NOUN_1			
@@ -748,6 +769,7 @@ Friulian	Friulian			HELP_VERB	judâ	judˈaː	j u d ˈaː		HELP_VERB_1
 Romansch	Romansch			HELP_VERB	gidar	ʥidˈar	ʥ i d ˈa r		HELP_VERB_1			
 French	French			HELP_VERB	aider	ɛde	ɛ d e		HELP_VERB_1			
 Québécois French	Québécois French			HELP_VERB	aider	æɛ̯de	æɛ̯ d e		HELP_VERB_1			
+Walloon	Walloon			HELP_VERB	aidî	ɛːdˈiː	ɛː d ˈiː		HELP_VERB_1			
 Franco-Provençal	Franco-Provençal			HELP_VERB	aidar	ajdˈa	a j d ˈa		HELP_VERB_1			
 Franco-Provençal	Franco-Provençal			HELP_VERB	édar	edˈa	e d ˈa		HELP_VERB_1			
 Occitan	Occitan			HELP_VERB	ajudar	aʤyðˈa	a ʤ y ð ˈa		HELP_VERB_1			
@@ -791,6 +813,7 @@ Eastern Lombard	Eastern Lombard			EQUAL_ADJ	eguàl	eɡwˈal	e ɡ w ˈa l		EQUAL_
 Friulian	Friulian			EQUAL_ADJ	avuâl	avwˈaːl	a v w ˈaː l		EQUAL_ADJ_2			
 French	French			EQUAL_ADJ	égal	eɡal	e ɡ a l		EQUAL_ADJ_2			
 Québécois French	Québécois French			EQUAL_ADJ	égal	eɡal	e ɡ a l		EQUAL_ADJ_2			
+Walloon	Walloon			EQUAL_ADJ	ewal	ɛwˈal	ɛ w ˈa l		EQUAL_ADJ_2			
 Franco-Provençal	Franco-Provençal			EQUAL_ADJ	évouo	ˈevwo	ˈe v w o		EQUAL_ADJ_2			
 Occitan	Occitan			EQUAL_ADJ	egal	eɡˈal	e ɡ ˈa l		EQUAL_ADJ_2			
 Gascon	Gascon			EQUAL_ADJ	egau	eɡˈaw	e ɡ ˈa w		EQUAL_ADJ_2			
@@ -820,6 +843,7 @@ Ladin	Ladin			SUMMER_NOUN	isté	istˈe	i s t ˈe		SUMMER_NOUN_1
 Friulian	Friulian			SUMMER_NOUN	istât	istˈaːt	i s t ˈaː t		SUMMER_NOUN_1			
 French	French			SUMMER_NOUN	été	ete	e t e		SUMMER_NOUN_1			
 Québécois French	Québécois French			SUMMER_NOUN	été	ete	e t e		SUMMER_NOUN_1			
+Walloon	Walloon			SUMMER_NOUN	esté	ɛstˈe	ɛ s t ˈe		SUMMER_NOUN_1			
 Franco-Provençal	Franco-Provençal			SUMMER_NOUN	étât	etˈaː	e t ˈaː		SUMMER_NOUN_1			
 Latin	Latin			SUMMER_NOUN	aestīvum	ae̯stˈiːwʊ̃ː	ae̯ s t ˈiː w ʊ̃ː		SUMMER_NOUN_2			
 Occitan	Occitan			SUMMER_NOUN	estiu	estˈiw	e s t ˈi w		SUMMER_NOUN_2			
@@ -858,6 +882,7 @@ Friulian	Friulian			LAMB_NOUN	agnel	aɲˈɛl	a ɲ ˈɛ l		LAMB_NOUN_2
 Romansch	Romansch			LAMB_NOUN	agnè	əɲˈɛː	ə ɲ ˈɛː		LAMB_NOUN_2			
 French	French			LAMB_NOUN	agneau	aɲo	a ɲ o		LAMB_NOUN_2			
 Québécois French	Québécois French			LAMB_NOUN	agneau	aɲoʊ̯	a ɲ oʊ̯		LAMB_NOUN_2			
+Walloon	Walloon			LAMB_NOUN	agnea	aɲjˈa	a ɲ j ˈa		LAMB_NOUN_2			
 Franco-Provençal	Franco-Provençal			LAMB_NOUN	agnél	aɲˈel	a ɲ ˈe l		LAMB_NOUN_2			
 Occitan	Occitan			LAMB_NOUN	anhèl	aɲˈɛl	a ɲ ˈɛ l		LAMB_NOUN_2			
 Gascon	Gascon			LAMB_NOUN	anhèth	aɲˈɛt	a ɲ ˈɛ t		LAMB_NOUN_2			
@@ -922,6 +947,7 @@ Friulian	Friulian			GARLIC_NOUN	ai	ˈaj	ˈa j		GARLIC_NOUN_1
 Romansch	Romansch			GARLIC_NOUN	agl	ˈaʎ	ˈa ʎ		GARLIC_NOUN_1			
 French	French			GARLIC_NOUN	ail	aj	a j		GARLIC_NOUN_1			
 Québécois French	Québécois French			GARLIC_NOUN	ail	æɛ̯j	æɛ̯ j		GARLIC_NOUN_1			
+Walloon	Walloon			GARLIC_NOUN	a	ˈa	ˈa		GARLIC_NOUN_1			
 Franco-Provençal	Franco-Provençal			GARLIC_NOUN	âly	ˈɑːʎ	ˈɑː ʎ		GARLIC_NOUN_1			
 Occitan	Occitan			GARLIC_NOUN	alh	ˈal	ˈa l		GARLIC_NOUN_1			
 Gascon	Gascon			GARLIC_NOUN	alh	ˈaʎ	ˈa ʎ		GARLIC_NOUN_1			
@@ -955,6 +981,7 @@ Friulian	Friulian			OTHER_ADJ	altri	ˈaltri	ˈa l t r i		OTHER_ADJ_1
 Romansch	Romansch			OTHER_ADJ	auter	ˈawtər	ˈa w t ə r		OTHER_ADJ_1			
 French	French			OTHER_ADJ	autre	otʁ	o t ʁ		OTHER_ADJ_1			
 Québécois French	Québécois French			OTHER_ADJ	autre	oʊ̯tʁ	oʊ̯ t ʁ		OTHER_ADJ_1			
+Walloon	Walloon			OTHER_ADJ	ôte	ˈoːt	ˈoː t		OTHER_ADJ_1			
 Franco-Provençal	Franco-Provençal			OTHER_ADJ	ôtro	ˈoːtʁo	ˈoː t ʁ o		OTHER_ADJ_1			
 Occitan	Occitan			OTHER_ADJ	autre	ˈawtɾe	ˈa w t ɾ e		OTHER_ADJ_1			
 Gascon	Gascon			OTHER_ADJ	aute	ˈawte	ˈa w t e		OTHER_ADJ_1			
@@ -997,6 +1024,7 @@ Friulian	Friulian			RING_NOUN	anel	anˈɛl	a n ˈɛ l		RING_NOUN_1
 Romansch	Romansch			RING_NOUN	anè	ənˈɛː	ə n ˈɛː		RING_NOUN_1			
 French	French			RING_NOUN	anneau	ano	a n o		RING_NOUN_1			
 Québécois French	Québécois French			RING_NOUN	anneau	anoʊ̯	a n oʊ̯		RING_NOUN_1			
+Walloon	Walloon			RING_NOUN	anea	anjˈa	a n j ˈa		RING_NOUN_1			
 Franco-Provençal	Franco-Provençal			RING_NOUN	anél	anˈel	a n ˈe l		RING_NOUN_1			
 Occitan	Occitan			RING_NOUN	anèl	anˈɛl	a n ˈɛ l		RING_NOUN_1			
 Gascon	Gascon			RING_NOUN	anèth	anˈɛt	a n ˈɛ t		RING_NOUN_1			
@@ -1029,6 +1057,7 @@ Friulian	Friulian			ANGEL_NOUN	agnul	ˈaɲul	ˈa ɲ u l		ANGEL_NOUN_1
 Romansch	Romansch			ANGEL_NOUN	anghel	ˈaŋɡəl	ˈa ŋ ɡ ə l		ANGEL_NOUN_1			
 French	French			ANGEL_NOUN	ange	ɑ̃ʒ	ɑ̃ ʒ		ANGEL_NOUN_1			
 Québécois French	Québécois French			ANGEL_NOUN	ange	ãʒ	ã ʒ		ANGEL_NOUN_1			
+Walloon	Walloon			ANGEL_NOUN	andje	ˈɑ̃ʧ	ˈɑ̃ ʧ		ANGEL_NOUN_1			
 Franco-Provençal	Franco-Provençal			ANGEL_NOUN	anjhe	ˈɑ̃ðə	ˈɑ̃ ð ə		ANGEL_NOUN_1			
 Occitan	Occitan			ANGEL_NOUN	àngel	ˈanʤel	ˈa n ʤ e l		ANGEL_NOUN_1			
 Gascon	Gascon			ANGEL_NOUN	anjo	ˈanʒu	ˈa n ʒ u		ANGEL_NOUN_1			
@@ -1061,6 +1090,7 @@ Friulian	Friulian			SOUL_NOUN	anime	ˈanime	ˈa n i m e		SOUL_NOUN_1	TRUE
 Romansch	Romansch			SOUL_NOUN	olma	ˈɔlmə	ˈɔ l m ə		SOUL_NOUN_1			
 French	French			SOUL_NOUN	âme	am	a m		SOUL_NOUN_1			
 Québécois French	Québécois French			SOUL_NOUN	âme	ɑm	ɑ m		SOUL_NOUN_1			
+Walloon	Walloon			SOUL_NOUN	åme	ˈɔːm	ˈɔː m		SOUL_NOUN_1			
 Franco-Provençal	Franco-Provençal			SOUL_NOUN	ârma	ˈɑːma	ˈɑː m a		SOUL_NOUN_1			
 Occitan	Occitan			SOUL_NOUN	anma	ˈanmɔ	ˈa n m ɔ		SOUL_NOUN_1			
 Gascon	Gascon			SOUL_NOUN	amna	ˈannɔ	ˈa n n ɔ		SOUL_NOUN_1			
@@ -1095,6 +1125,7 @@ Friulian	Friulian			YEAR_NOUN	an	ˈaŋ	ˈa ŋ		YEAR_NOUN_1
 Romansch	Romansch			YEAR_NOUN	onn	ˈɔn	ˈɔ n		YEAR_NOUN_1			
 French	French			YEAR_NOUN	an	ɑ̃	ɑ̃		YEAR_NOUN_1			
 Québécois French	Québécois French			YEAR_NOUN	an	ã	ã		YEAR_NOUN_1			
+Walloon	Walloon			YEAR_NOUN	an	ˈɑ̃	ˈɑ̃		YEAR_NOUN_1			
 Franco-Provençal	Franco-Provençal			YEAR_NOUN	an	jˈɑ̃	j ˈɑ̃		YEAR_NOUN_1			
 Savoyard	Savoyard			YEAR_NOUN	an	ˈã	ˈã		YEAR_NOUN_1			
 Occitan	Occitan			YEAR_NOUN	an	ˈan	ˈa n		YEAR_NOUN_1			
@@ -1132,6 +1163,7 @@ Western Lombard	Western Lombard			BEE_NOUN	ava	ˈaʋa	ˈa ʋ a		BEE_NOUN_3
 Romansch	Romansch			BEE_NOUN	avieul	əvjˈewl	ə v j ˈe w l		BEE_NOUN_3			
 French	French			BEE_NOUN	abeille	abɛj	a b ɛ j		BEE_NOUN_3			
 Québécois French	Québécois French			BEE_NOUN	abeille	abæɛ̯j	a b æɛ̯ j		BEE_NOUN_3			
+Walloon	Walloon			BEE_NOUN	awiyî	awijˈiː	a w i j ˈiː		BEE_NOUN_3			
 Franco-Provençal	Franco-Provençal			BEE_NOUN	avelye	avˈeʎə	a v ˈe ʎ ə		BEE_NOUN_3			
 Occitan	Occitan			BEE_NOUN	abelha	aβˈeʎɔ	a β ˈe ʎ ɔ		BEE_NOUN_3			
 Gascon	Gascon			BEE_NOUN	abelha	aβˈeʎɔ	a β ˈe ʎ ɔ		BEE_NOUN_3			
@@ -1166,6 +1198,7 @@ Friulian	Friulian			WATER_NOUN	aghe	ˈaɡe	ˈa ɡ e		WATER_NOUN_1
 Romansch	Romansch			WATER_NOUN	aua	ˈawə	ˈa w ə		WATER_NOUN_1			
 French	French			WATER_NOUN	eau	o	o		WATER_NOUN_1			
 Québécois French	Québécois French			WATER_NOUN	eau	oʊ̯	oʊ̯		WATER_NOUN_1			
+Walloon	Walloon			WATER_NOUN	aiwe	ˈɛːw	ˈɛː w		WATER_NOUN_1			
 Franco-Provençal	Franco-Provençal			WATER_NOUN	éga	ˈeɡa	ˈe ɡ a		WATER_NOUN_1			
 Franco-Provençal	Franco-Provençal			WATER_NOUN	éva	ˈeva	ˈe v a		WATER_NOUN_1			
 Savoyard	Savoyard			WATER_NOUN	éga	ˈeɡa	ˈe ɡ a		WATER_NOUN_1			
@@ -1185,6 +1218,7 @@ Campidanese	Campidanese			SPIDER_NOUN	arangia	arˈanʤa	a r ˈa n ʤ a		SPIDER_N
 Romansch	Romansch			SPIDER_NOUN	arogn	ərˈɔɲ	ə r ˈɔ ɲ		SPIDER_NOUN_1			
 French	French			SPIDER_NOUN	araignée	aʁeɲe	a ʁ e ɲ e		SPIDER_NOUN_1			
 Québécois French	Québécois French			SPIDER_NOUN	araignée	aʁæɛ̯ɲe	a ʁ æɛ̯ ɲ e		SPIDER_NOUN_1			
+Walloon	Walloon			SPIDER_NOUN	araegne	aʀˈɛɲ	a ʀ ˈɛ ɲ		SPIDER_NOUN_1			
 Franco-Provençal	Franco-Provençal			SPIDER_NOUN	aragne	aðˈaɲi	a ð ˈa ɲ i		SPIDER_NOUN_1			
 Occitan	Occitan			SPIDER_NOUN	aranha	aɾˈaɲɔ	a ɾ ˈa ɲ ɔ		SPIDER_NOUN_1			
 Gascon	Gascon			SPIDER_NOUN	aranha	aɾˈaɲɔ	a ɾ ˈa ɲ ɔ		SPIDER_NOUN_1			
@@ -1238,6 +1272,7 @@ Ladin	Ladin			TREE_NOUN	alber	ˈalber	ˈa l b e r		TREE_NOUN_1
 Friulian	Friulian			TREE_NOUN	arbul	ˈarbul	ˈa r b u l		TREE_NOUN_1			
 French	French			TREE_NOUN	arbre	aʁbʁ	a ʁ b ʁ		TREE_NOUN_1			
 Québécois French	Québécois French			TREE_NOUN	arbre	aʁbʁ	a ʁ b ʁ		TREE_NOUN_1			
+Walloon	Walloon			TREE_NOUN	åbe	ˈɔːp	ˈɔː p		TREE_NOUN_1			
 Franco-Provençal	Franco-Provençal			TREE_NOUN	ârbro	ˈaːʁbʁo	ˈaː ʁ b ʁ o		TREE_NOUN_1			
 Savoyard	Savoyard			TREE_NOUN	âbro	ˈaːbro	ˈaː b r o		TREE_NOUN_1			
 Savoyard	Savoyard			TREE_NOUN	ârbro	ˈaːrbro	ˈaː r b r o		TREE_NOUN_1			
@@ -1274,6 +1309,7 @@ Friulian	Friulian			EAR_NOUN	orele	orˈɛle	o r ˈɛ l e		EAR_NOUN_1
 Romansch	Romansch			EAR_NOUN	ureglia	urˈeːʎə	u r ˈeː ʎ ə		EAR_NOUN_1			
 French	French			EAR_NOUN	oreille	ɔʁɛj	ɔ ʁ ɛ j		EAR_NOUN_1			
 Québécois French	Québécois French			EAR_NOUN	oreille	ɑɔ̯ʁæɛ̯j	ɑɔ̯ ʁ æɛ̯ j		EAR_NOUN_1			
+Walloon	Walloon			EAR_NOUN	oraye	ɔʀˈaj	ɔ ʀ ˈa j		EAR_NOUN_1			
 Franco-Provençal	Franco-Provençal			EAR_NOUN	orelye	oðˈiʎə	o ð ˈi ʎ ə		EAR_NOUN_1			
 Savoyard	Savoyard			EAR_NOUN	orlyo	ˈɔrʎo	ˈɔ r ʎ o		EAR_NOUN_1			
 Occitan	Occitan			EAR_NOUN	aurelha	awɾˈeʎɔ	a w ɾ ˈe ʎ ɔ		EAR_NOUN_1			
@@ -1311,6 +1347,7 @@ Friulian	Friulian			GOLD_NOUN	aur	ˈawr	ˈa w r		GOLD_NOUN_1
 Romansch	Romansch			GOLD_NOUN	aur	ˈawr	ˈa w r		GOLD_NOUN_1			
 French	French			GOLD_NOUN	or	ɔʁ	ɔ ʁ		GOLD_NOUN_1			
 Québécois French	Québécois French			GOLD_NOUN	or	ɑɔ̯ʁ	ɑɔ̯ ʁ		GOLD_NOUN_1			
+Walloon	Walloon			GOLD_NOUN	ôr	ˈoːʀ	ˈoː ʀ		GOLD_NOUN_1			
 Franco-Provençal	Franco-Provençal			GOLD_NOUN	ôr	ˈoːʁ	ˈoː ʁ		GOLD_NOUN_1			
 Occitan	Occitan			GOLD_NOUN	aur	ˈawr	ˈa w r		GOLD_NOUN_1			
 Gascon	Gascon			GOLD_NOUN	aur	ˈawr	ˈa w r		GOLD_NOUN_1			
@@ -1340,6 +1377,7 @@ Ladin	Ladin			LISTEN_VERB	scuté	skutˈe	s k u t ˈe		LISTEN_VERB_1
 Friulian	Friulian			LISTEN_VERB	scoltâ	skoltˈaː	s k o l t ˈaː		LISTEN_VERB_1			
 French	French			LISTEN_VERB	écouter	ekute	e k u t e		LISTEN_VERB_1			
 Québécois French	Québécois French			LISTEN_VERB	écouter	ekute	e k u t e		LISTEN_VERB_1			
+Walloon	Walloon			LISTEN_VERB	aschoûter	aʃuːtˈe	a ʃ uː t ˈe		LISTEN_VERB_1			
 Franco-Provençal	Franco-Provençal			LISTEN_VERB	écotar	ekotˈa	e k o t ˈa		LISTEN_VERB_1			
 Occitan	Occitan			LISTEN_VERB	escotar	eskutˈa	e s k u t ˈa		LISTEN_VERB_1			
 Gascon	Gascon			LISTEN_VERB	escotar	eskutˈa	e s k u t ˈa		LISTEN_VERB_1			
@@ -1368,6 +1406,7 @@ Friulian	Friulian			AUTUMN_NOUN	autun	awtˈun	a w t ˈu n		AUTUMN_NOUN_2
 Romansch	Romansch			AUTUMN_NOUN	atun	ətˈun	ə t ˈu n		AUTUMN_NOUN_2			
 French	French			AUTUMN_NOUN	automne	otɔn	o t ɔ n		AUTUMN_NOUN_2	TRUE		
 Québécois French	Québécois French			AUTUMN_NOUN	automne	oʊ̯tɔn	oʊ̯ t ɔ n		AUTUMN_NOUN_2	TRUE		
+Walloon	Walloon			AUTUMN_NOUN	otone	ɔtˈɔn	ɔ t ˈɔ n		AUTUMN_NOUN_2	TRUE		
 Franco-Provençal	Franco-Provençal			AUTUMN_NOUN	ôton	oːtˈɔn	oː t ˈɔ n		AUTUMN_NOUN_2	TRUE		
 Spanish	Spanish			AUTUMN_NOUN	otoño	otˈoɲo	o t ˈo ɲ o		AUTUMN_NOUN_2			
 Asturian	Asturian			AUTUMN_NOUN	otoñu	otˈoɲu	o t ˈo ɲ u		AUTUMN_NOUN_2			
@@ -1392,6 +1431,7 @@ Friulian	Friulian			GOOSE_NOUN	ocje	ˈɔce	ˈɔ c e		GOOSE_NOUN_1
 Romansch	Romansch			GOOSE_NOUN	auca	ˈawkə	ˈa w k ə		GOOSE_NOUN_1			
 French	French			GOOSE_NOUN	oie	wa	w a		GOOSE_NOUN_1			
 Québécois French	Québécois French			GOOSE_NOUN	oie	wɛ	w ɛ		GOOSE_NOUN_1			
+Walloon	Walloon			GOOSE_NOUN	åwe	ˈɔːw	ˈɔː w		GOOSE_NOUN_1			
 Franco-Provençal	Franco-Provençal			GOOSE_NOUN	ueye	wˈejə	w ˈe j ə		GOOSE_NOUN_1			
 Occitan	Occitan			GOOSE_NOUN	auca	ˈawkɔ	ˈa w k ɔ		GOOSE_NOUN_1			
 Gascon	Gascon			GOOSE_NOUN	auca	ˈawkɔ	ˈa w k ɔ		GOOSE_NOUN_1			
@@ -1419,6 +1459,7 @@ Friulian	Friulian			BIRD_NOUN	uciel	uʧjˈɛl	u ʧ j ˈɛ l		BIRD_NOUN_2
 Romansch	Romansch			BIRD_NOUN	utschè	uʧˈɛː	u ʧ ˈɛː		BIRD_NOUN_2			
 French	French			BIRD_NOUN	oiseau	wazo	w a z o		BIRD_NOUN_2			
 Québécois French	Québécois French			BIRD_NOUN	oiseau	wɛzoʊ̯	w ɛ z oʊ̯		BIRD_NOUN_2			
+Walloon	Walloon			BIRD_NOUN	oujhea	uːʒjˈa	uː ʒ j ˈa		BIRD_NOUN_2			
 Franco-Provençal	Franco-Provençal			BIRD_NOUN	usél	uzˈel	u z ˈe l		BIRD_NOUN_2			
 Savoyard	Savoyard			BIRD_NOUN	aijô	ajʒˈo	a j ʒ ˈo		BIRD_NOUN_2			
 Occitan	Occitan			BIRD_NOUN	aucèl	awsˈɛl	a w s ˈɛ l		BIRD_NOUN_2			
@@ -1441,6 +1482,7 @@ Friulian	Friulian			BATH_NOUN	bagn	bˈaɲ	b ˈa ɲ		BATH_NOUN_1
 Romansch	Romansch			BATH_NOUN	bogn	bˈɔɲ	b ˈɔ ɲ		BATH_NOUN_1			
 French	French			BATH_NOUN	bain	bɛ̃	b ɛ̃		BATH_NOUN_1			
 Québécois French	Québécois French			BATH_NOUN	bain	bẽɪ̯̃	b ẽɪ̯̃		BATH_NOUN_1			
+Walloon	Walloon			BATH_NOUN	bagn	bˈaɲ	b ˈa ɲ		BATH_NOUN_1			
 Occitan	Occitan			BATH_NOUN	banh	bˈaɲ	b ˈa ɲ		BATH_NOUN_1			
 Gascon	Gascon			BATH_NOUN	banh	bˈaɲ	b ˈa ɲ		BATH_NOUN_1			
 Catalan	Catalan			BATH_NOUN	bany	bˈaɲ	b ˈa ɲ		BATH_NOUN_1			
@@ -1472,6 +1514,7 @@ Friulian	Friulian			LOW_ADJ	bas	bˈas	b ˈa s		LOW_ADJ_2
 Romansch	Romansch			LOW_ADJ	bass	bˈas	b ˈa s		LOW_ADJ_2			
 French	French			LOW_ADJ	bas	ba	b a		LOW_ADJ_2			
 Québécois French	Québécois French			LOW_ADJ	bas	bɑ	b ɑ		LOW_ADJ_2			
+Walloon	Walloon			LOW_ADJ	bas	bˈa	b ˈa		LOW_ADJ_2			
 Franco-Provençal	Franco-Provençal			LOW_ADJ	bas	bˈa	b ˈa		LOW_ADJ_2			
 Occitan	Occitan			LOW_ADJ	bas	bˈas	b ˈa s		LOW_ADJ_2			
 Gascon	Gascon			LOW_ADJ	baish	bˈajʃ	b ˈa j ʃ		LOW_ADJ_2			
@@ -1494,6 +1537,7 @@ Friulian	Friulian			BEAUTIFUL (F)_ADJ	biele	bjˈɛle	b j ˈɛ l e		BEAUTIFUL (F)
 Romansch	Romansch			BEAUTIFUL (F)_ADJ	bella	bˈɛːlə	b ˈɛː l ə		BEAUTIFUL (F)_ADJ_1			
 French	French			BEAUTIFUL (F)_ADJ	belle	bɛl	b ɛ l		BEAUTIFUL (F)_ADJ_1			
 Québécois French	Québécois French			BEAUTIFUL (F)_ADJ	belle	bɛl	b ɛ l		BEAUTIFUL (F)_ADJ_1			
+Walloon	Walloon			BEAUTIFUL (F)_ADJ	bele	bˈɛl	b ˈɛ l		BEAUTIFUL (F)_ADJ_1			
 Franco-Provençal	Franco-Provençal			BEAUTIFUL (F)_ADJ	bèla	bˈɛla	b ˈɛ l a		BEAUTIFUL (F)_ADJ_1			
 Occitan	Occitan			BEAUTIFUL (F)_ADJ	bèla	bˈɛlɔ	b ˈɛ l ɔ		BEAUTIFUL (F)_ADJ_1			
 Gascon	Gascon			BEAUTIFUL (F)_ADJ	bèra	bˈɛɾɔ	b ˈɛ ɾ ɔ		BEAUTIFUL (F)_ADJ_1			
@@ -1525,6 +1569,7 @@ Friulian	Friulian			BEAUTIFUL (M)_ADJ	biel	bjˈɛl	b j ˈɛ l		BEAUTIFUL (M)_ADJ
 Romansch	Romansch			BEAUTIFUL (M)_ADJ	bel	bˈɛl	b ˈɛ l		BEAUTIFUL (M)_ADJ_1			
 French	French			BEAUTIFUL (M)_ADJ	beau	bo	b o		BEAUTIFUL (M)_ADJ_1			
 Québécois French	Québécois French			BEAUTIFUL (M)_ADJ	beau	boʊ̯	b oʊ̯		BEAUTIFUL (M)_ADJ_1			
+Walloon	Walloon			BEAUTIFUL (M)_ADJ	bea	bjˈa	b j ˈa		BEAUTIFUL (M)_ADJ_1			
 Franco-Provençal	Franco-Provençal			BEAUTIFUL (M)_ADJ	bél	bˈel	b ˈe l		BEAUTIFUL (M)_ADJ_1			
 Occitan	Occitan			BEAUTIFUL (M)_ADJ	bèl	bˈɛl	b ˈɛ l		BEAUTIFUL (M)_ADJ_1			
 Gascon	Gascon			BEAUTIFUL (M)_ADJ	bèth	bˈɛt	b ˈɛ t		BEAUTIFUL (M)_ADJ_1			
@@ -1557,6 +1602,7 @@ Friulian	Friulian			WELL (ADV)_ADV	ben	bˈɛŋ	b ˈɛ ŋ		WELL (ADV)_ADV_1
 Romansch	Romansch			WELL (ADV)_ADV	bain	bˈajn	b ˈa j n		WELL (ADV)_ADV_1			
 French	French			WELL (ADV)_ADV	bien	bjɛ̃	b j ɛ̃		WELL (ADV)_ADV_1			
 Québécois French	Québécois French			WELL (ADV)_ADV	bien	bjẽɪ̯̃	b j ẽɪ̯̃		WELL (ADV)_ADV_1			
+Walloon	Walloon			WELL (ADV)_ADV	bén	bˈẽ	b ˈẽ		WELL (ADV)_ADV_1			
 Franco-Provençal	Franco-Provençal			WELL (ADV)_ADV	ben	bˈɛ̃	b ˈɛ̃		WELL (ADV)_ADV_1			
 Occitan	Occitan			WELL (ADV)_ADV	ben	bˈe	b ˈe		WELL (ADV)_ADV_1			
 Gascon	Gascon			WELL (ADV)_ADV	ben	bˈeŋ	b ˈe ŋ		WELL (ADV)_ADV_1			
@@ -1591,6 +1637,7 @@ Friulian	Friulian			DRINK_VERB	bevi	bˈevi	b ˈe v i		DRINK_VERB_1
 Romansch	Romansch			DRINK_VERB	baiver	bˈajvər	b ˈa j v ə r		DRINK_VERB_1			
 French	French			DRINK_VERB	boire	bwaʁ	b w a ʁ		DRINK_VERB_1			
 Québécois French	Québécois French			DRINK_VERB	boire	bwɛʁ	b w ɛ ʁ		DRINK_VERB_1			
+Walloon	Walloon			DRINK_VERB	boere	bwˈɛːʀ	b w ˈɛː ʀ		DRINK_VERB_1			
 Franco-Provençal	Franco-Provençal			DRINK_VERB	bêre	bˈɛːðə	b ˈɛː ð ə		DRINK_VERB_1			
 Savoyard	Savoyard			DRINK_VERB	baire	bˈajre	b ˈa j r e		DRINK_VERB_1			
 Occitan	Occitan			DRINK_VERB	beure	bˈewɾe	b ˈe w ɾ e		DRINK_VERB_1			
@@ -1620,6 +1667,7 @@ Ladin	Ladin			WHITE_ADJ	blanch	blˈaŋk	b l ˈa ŋ k		WHITE_ADJ_2
 Friulian	Friulian			WHITE_ADJ	blanc	blˈaŋk	b l ˈa ŋ k		WHITE_ADJ_2			
 French	French			WHITE_ADJ	blanc	blɑ̃	b l ɑ̃		WHITE_ADJ_2			
 Québécois French	Québécois French			WHITE_ADJ	blanc	blã	b l ã		WHITE_ADJ_2			
+Walloon	Walloon			WHITE_ADJ	blanc	blˈɑ̃	b l ˈɑ̃		WHITE_ADJ_2			
 Franco-Provençal	Franco-Provençal			WHITE_ADJ	blanc	blˈɑ̃	b l ˈɑ̃		WHITE_ADJ_2			
 Savoyard	Savoyard			WHITE_ADJ	blyan	bʎˈã	b ʎ ˈã		WHITE_ADJ_2			
 Occitan	Occitan			WHITE_ADJ	blanc	blˈaŋk	b l ˈa ŋ k		WHITE_ADJ_2			
@@ -1665,6 +1713,7 @@ Friulian	Friulian			GOOD (F.SG)_ADJ	buine	bwˈine	b w ˈi n e		GOOD (F.SG)_ADJ_1
 Romansch	Romansch			GOOD (F.SG)_ADJ	buna	bˈuːnə	b ˈuː n ə		GOOD (F.SG)_ADJ_1			
 French	French			GOOD (F.SG)_ADJ	bonne	bɔn	b ɔ n		GOOD (F.SG)_ADJ_1			
 Québécois French	Québécois French			GOOD (F.SG)_ADJ	bonne	bɔn	b ɔ n		GOOD (F.SG)_ADJ_1			
+Walloon	Walloon			GOOD (F.SG)_ADJ	boune	bˈuːn	b ˈuː n		GOOD (F.SG)_ADJ_1			
 Franco-Provençal	Franco-Provençal			GOOD (F.SG)_ADJ	bonna	bˈɔna	b ˈɔ n a		GOOD (F.SG)_ADJ_1			
 Occitan	Occitan			GOOD (F.SG)_ADJ	bona	bˈunɔ	b ˈu n ɔ		GOOD (F.SG)_ADJ_1			
 Gascon	Gascon			GOOD (F.SG)_ADJ	bona	bˈunɔ	b ˈu n ɔ		GOOD (F.SG)_ADJ_1			
@@ -1684,6 +1733,7 @@ Friulian	Friulian			GOOD (F.PL)_ADJ	buinis	bwˈinis	b w ˈi n i s		GOOD (F.PL)_A
 Romansch	Romansch			GOOD (F.PL)_ADJ	bunas	bˈuːnəs	b ˈuː n ə s		GOOD (F.PL)_ADJ_2			
 French	French			GOOD (F.PL)_ADJ	bonnes	bɔn	b ɔ n		GOOD (F.PL)_ADJ_2			
 Québécois French	Québécois French			GOOD (F.PL)_ADJ	bonnes	bɔn	b ɔ n		GOOD (F.PL)_ADJ_2			
+Walloon	Walloon			GOOD (F.PL)_ADJ	bounes	bˈuːn	b ˈuː n		GOOD (F.PL)_ADJ_2			
 Franco-Provençal	Franco-Provençal			GOOD (F.PL)_ADJ	bonnes	bˈɔnə	b ˈɔ n ə		GOOD (F.PL)_ADJ_2			
 Occitan	Occitan			GOOD (F.PL)_ADJ	bonas	bˈunas	b ˈu n a s		GOOD (F.PL)_ADJ_2			
 Gascon	Gascon			GOOD (F.PL)_ADJ	bonas	bˈunas	b ˈu n a s		GOOD (F.PL)_ADJ_2			
@@ -1714,6 +1764,7 @@ Friulian	Friulian			GOOD (M.PL)_ADJ	bons	bˈons	b ˈo n s		GOOD (M.PL)_ADJ_2
 Romansch	Romansch			GOOD (M.PL)_ADJ	buns	bˈuns	b ˈu n s		GOOD (M.PL)_ADJ_2			
 French	French			GOOD (M.PL)_ADJ	bons	bɔ̃	b ɔ̃		GOOD (M.PL)_ADJ_2			
 Québécois French	Québécois French			GOOD (M.PL)_ADJ	bons	bɒ̃ʊ̯̃	b ɒ̃ʊ̯̃		GOOD (M.PL)_ADJ_2			
+Walloon	Walloon			GOOD (M.PL)_ADJ	bons	bˈɔ̃	b ˈɔ̃		GOOD (M.PL)_ADJ_2			
 Franco-Provençal	Franco-Provençal			GOOD (M.PL)_ADJ	bons	bˈɔ̃	b ˈɔ̃		GOOD (M.PL)_ADJ_2			
 Occitan	Occitan			GOOD (M.PL)_ADJ	bons	bˈuns	b ˈu n s		GOOD (M.PL)_ADJ_2			
 Gascon	Gascon			GOOD (M.PL)_ADJ	bons	bˈuns	b ˈu n s		GOOD (M.PL)_ADJ_2			
@@ -1749,6 +1800,7 @@ Friulian	Friulian			GOOD (M.SG)_ADJ	bon	bˈoŋ	b ˈo ŋ		GOOD (M.SG)_ADJ_1
 Romansch	Romansch			GOOD (M.SG)_ADJ	bun	bˈun	b ˈu n		GOOD (M.SG)_ADJ_1			
 French	French			GOOD (M.SG)_ADJ	bon	bɔ̃	b ɔ̃		GOOD (M.SG)_ADJ_1			
 Québécois French	Québécois French			GOOD (M.SG)_ADJ	bon	bɒ̃ʊ̯̃	b ɒ̃ʊ̯̃		GOOD (M.SG)_ADJ_1			
+Walloon	Walloon			GOOD (M.SG)_ADJ	bon	bˈɔ̃	b ˈɔ̃		GOOD (M.SG)_ADJ_1			
 Franco-Provençal	Franco-Provençal			GOOD (M.SG)_ADJ	bon	bˈɔ̃	b ˈɔ̃		GOOD (M.SG)_ADJ_1			
 Savoyard	Savoyard			GOOD (M.SG)_ADJ	bon	bˈɔ̃	b ˈɔ̃		GOOD (M.SG)_ADJ_1			
 Occitan	Occitan			GOOD (M.SG)_ADJ	bon	bˈu	b ˈu		GOOD (M.SG)_ADJ_1			
@@ -1784,6 +1836,7 @@ Friulian	Friulian			OX_NOUN	bo	bˈɔ	b ˈɔ		OX_NOUN_1
 Romansch	Romansch			OX_NOUN	bov	bˈɔf	b ˈɔ f		OX_NOUN_1			
 French	French			OX_NOUN	bœuf	bœf	b œ f		OX_NOUN_1			
 Québécois French	Québécois French			OX_NOUN	bœuf	bœf	b œ f		OX_NOUN_1			
+Walloon	Walloon			OX_NOUN	boû	bˈuː	b ˈuː		OX_NOUN_1			
 Franco-Provençal	Franco-Provençal			OX_NOUN	buef	bwˈef	b w ˈe f		OX_NOUN_1			
 Occitan	Occitan			OX_NOUN	buòu	bɥˈɔw	b ɥ ˈɔ w		OX_NOUN_1			
 Gascon	Gascon			OX_NOUN	bueu	bwˈew	b w ˈe w		OX_NOUN_1			
@@ -1815,6 +1868,7 @@ Friulian	Friulian			MOUTH_NOUN	bocje	bˈoce	b ˈo c e		MOUTH_NOUN_1
 Romansch	Romansch			MOUTH_NOUN	bucca	bˈukə	b ˈu k ə		MOUTH_NOUN_1			
 French	French			MOUTH_NOUN	bouche	buʃ	b u ʃ		MOUTH_NOUN_1			
 Québécois French	Québécois French			MOUTH_NOUN	bouche	bʊʃ	b ʊ ʃ		MOUTH_NOUN_1			
+Walloon	Walloon			MOUTH_NOUN	boutche	bˈuʧ	b ˈu ʧ		MOUTH_NOUN_1			
 Franco-Provençal	Franco-Provençal			MOUTH_NOUN	boche	bˈɔʃi	b ˈɔ ʃ i		MOUTH_NOUN_1			
 Occitan	Occitan			MOUTH_NOUN	boca	bˈukɔ	b ˈu k ɔ		MOUTH_NOUN_1			
 Gascon	Gascon			MOUTH_NOUN	boca	bˈukɔ	b ˈu k ɔ		MOUTH_NOUN_1			
@@ -1847,6 +1901,7 @@ Friulian	Friulian			HORSE_NOUN	cjaval	cavˈal	c a v ˈa l		HORSE_NOUN_1
 Romansch	Romansch			HORSE_NOUN	chaval	ʨəvˈal	ʨ ə v ˈa l		HORSE_NOUN_1			
 French	French			HORSE_NOUN	cheval	ʃəval	ʃ ə v a l		HORSE_NOUN_1			
 Québécois French	Québécois French			HORSE_NOUN	cheval	ʃœval	ʃ œ v a l		HORSE_NOUN_1			
+Walloon	Walloon			HORSE_NOUN	tchvå	ʧfˈɔː	ʧ f ˈɔː		HORSE_NOUN_1			
 Franco-Provençal	Franco-Provençal			HORSE_NOUN	cheval	ʃəvˈal	ʃ ə v ˈa l		HORSE_NOUN_1			
 Occitan	Occitan			HORSE_NOUN	caval	kaβˈal	k a β ˈa l		HORSE_NOUN_1			
 Gascon	Gascon			HORSE_NOUN	cavath	kaβˈat	k a β ˈa t		HORSE_NOUN_1			
@@ -1881,6 +1936,7 @@ Friulian	Friulian			SKY_NOUN	cîl	ʧˈiːl	ʧ ˈiː l		SKY_NOUN_1
 Romansch	Romansch			SKY_NOUN	tschiel	ʧˈiə̯l	ʧ ˈiə̯ l		SKY_NOUN_1			
 French	French			SKY_NOUN	ciel	sjɛl	s j ɛ l		SKY_NOUN_1			
 Québécois French	Québécois French			SKY_NOUN	ciel	sjɛl	s j ɛ l		SKY_NOUN_1			
+Walloon	Walloon			SKY_NOUN	cir	sˈiːʀ	s ˈiː ʀ		SKY_NOUN_1			
 Franco-Provençal	Franco-Provençal			SKY_NOUN	cièl	sjˈɛl	s j ˈɛ l		SKY_NOUN_1			
 Occitan	Occitan			SKY_NOUN	cèl	sˈɛl	s ˈɛ l		SKY_NOUN_1			
 Gascon	Gascon			SKY_NOUN	cèu	sˈɛw	s ˈɛ w		SKY_NOUN_1			
@@ -1917,6 +1973,7 @@ Friulian	Friulian			HOT_ADJ	cjalt	cˈalt	c ˈa l t		HOT_ADJ_1
 Romansch	Romansch			HOT_ADJ	chaud	ʨˈawt	ʨ ˈa w t		HOT_ADJ_1			
 French	French			HOT_ADJ	chaud	ʃo	ʃ o		HOT_ADJ_1			
 Québécois French	Québécois French			HOT_ADJ	chaud	ʃoʊ̯	ʃ oʊ̯		HOT_ADJ_1			
+Walloon	Walloon			HOT_ADJ	tchôd	ʧˈoː	ʧ ˈoː		HOT_ADJ_1			
 Franco-Provençal	Franco-Provençal			HOT_ADJ	chôd	ʃˈoː	ʃ ˈoː		HOT_ADJ_1			
 Savoyard	Savoyard			HOT_ADJ	shô	θˈo	θ ˈo		HOT_ADJ_1			
 Occitan	Occitan			HOT_ADJ	caud	kˈawt	k ˈa w t		HOT_ADJ_1			
@@ -1947,6 +2004,7 @@ Friulian	Friulian			CHANGE_VERB	gambiâ	ɡambjˈaː	ɡ a m b j ˈaː		CHANGE_VER
 Romansch	Romansch			CHANGE_VERB	chamgiar	ʨəmʥˈaːr	ʨ ə m ʥ ˈaː r		CHANGE_VERB_1			
 French	French			CHANGE_VERB	changer	ʃɑ̃ʒe	ʃ ɑ̃ ʒ e		CHANGE_VERB_1			
 Québécois French	Québécois French			CHANGE_VERB	changer	ʃãʒe	ʃ ã ʒ e		CHANGE_VERB_1			
+Walloon	Walloon			CHANGE_VERB	candjî	kɑ̃ʤˈiː	k ɑ̃ ʤ ˈiː		CHANGE_VERB_1		IRREGULAR	
 Franco-Provençal	Franco-Provençal			CHANGE_VERB	changiér	ʃĩʒjˈe	ʃ ĩ ʒ j ˈe		CHANGE_VERB_1			
 Occitan	Occitan			CHANGE_VERB	cambiar	kambjˈa	k a m b j ˈa		CHANGE_VERB_1			
 Gascon	Gascon			CHANGE_VERB	cambiar	kambjˈa	k a m b j ˈa		CHANGE_VERB_1			
@@ -1972,6 +2030,7 @@ Friulian	Friulian			CHAMBER_NOUN	cjamare	cˈamare	c ˈa m a r e		CHAMBER_NOUN_1
 Romansch	Romansch			CHAMBER_NOUN	chombra	ʨˈɔmbrə	ʨ ˈɔ m b r ə		CHAMBER_NOUN_1			
 French	French			CHAMBER_NOUN	chambre	ʃɑ̃bʁ	ʃ ɑ̃ b ʁ		CHAMBER_NOUN_1			
 Québécois French	Québécois French			CHAMBER_NOUN	chambre	ʃãbʁ	ʃ ã b ʁ		CHAMBER_NOUN_1			
+Walloon	Walloon			CHAMBER_NOUN	tchambe	ʧˈɑ̃b	ʧ ˈɑ̃ b		CHAMBER_NOUN_1			
 Franco-Provençal	Franco-Provençal			CHAMBER_NOUN	chambra	ʃˈɑ̃bʁa	ʃ ˈɑ̃ b ʁ a		CHAMBER_NOUN_1			
 Occitan	Occitan			CHAMBER_NOUN	cambra	kˈambɾɔ	k ˈa m b ɾ ɔ		CHAMBER_NOUN_1			
 Gascon	Gascon			CHAMBER_NOUN	cambra	kˈambɾɔ	k ˈa m b ɾ ɔ		CHAMBER_NOUN_1			
@@ -2008,6 +2067,7 @@ Friulian	Friulian			DOG_NOUN	cjan	cˈaŋ	c ˈa ŋ		DOG_NOUN_1
 Romansch	Romansch			DOG_NOUN	chaun	ʨˈawn	ʨ ˈa w n		DOG_NOUN_1			
 French	French			DOG_NOUN	chien	ʃjɛ̃	ʃ j ɛ̃		DOG_NOUN_1			
 Québécois French	Québécois French			DOG_NOUN	chien	ʃjẽɪ̯̃	ʃ j ẽɪ̯̃		DOG_NOUN_1			
+Walloon	Walloon			DOG_NOUN	tchén	ʧˈẽ	ʧ ˈẽ		DOG_NOUN_1			
 Franco-Provençal	Franco-Provençal			DOG_NOUN	chin	ʃˈĩ	ʃ ˈĩ		DOG_NOUN_1			
 Savoyard	Savoyard			DOG_NOUN	shin	θɛ̃	θ ɛ̃		DOG_NOUN_1			
 Occitan	Occitan			DOG_NOUN	can	kˈa	k ˈa		DOG_NOUN_1			
@@ -2034,6 +2094,7 @@ Friulian	Friulian			SONG_NOUN	cjant	cˈant	c ˈa n t		SONG_NOUN_1
 Romansch	Romansch			SONG_NOUN	chant	ʨˈant	ʨ ˈa n t		SONG_NOUN_1			
 French	French			SONG_NOUN	chant	ʃɑ̃	ʃ ɑ̃		SONG_NOUN_1			
 Québécois French	Québécois French			SONG_NOUN	chant	ʃã	ʃ ã		SONG_NOUN_1			
+Walloon	Walloon			SONG_NOUN	tchant	ʧˈɑ̃	ʧ ˈɑ̃		SONG_NOUN_1			
 Franco-Provençal	Franco-Provençal			SONG_NOUN	chant	ʃˈɑ̃	ʃ ˈɑ̃		SONG_NOUN_1			
 Occitan	Occitan			SONG_NOUN	cant	kˈan	k ˈa n		SONG_NOUN_1			
 Gascon	Gascon			SONG_NOUN	cant	kˈan	k ˈa n		SONG_NOUN_1			
@@ -2063,6 +2124,7 @@ Friulian	Friulian			HAIR_NOUN	cjavel	cavˈel	c a v ˈe l		HAIR_NOUN_1
 Romansch	Romansch			HAIR_NOUN	chavel	ʨəvˈel	ʨ ə v ˈe l		HAIR_NOUN_1			
 French	French			HAIR_NOUN	cheveu	ʃəvø	ʃ ə v ø		HAIR_NOUN_1			
 Québécois French	Québécois French			HAIR_NOUN	cheveu	ʃœvøʏ̯	ʃ œ v øʏ̯		HAIR_NOUN_1			
+Walloon	Walloon			HAIR_NOUN	tchvea	ʧfjˈa	ʧ f j ˈa		HAIR_NOUN_1			
 Franco-Provençal	Franco-Provençal			HAIR_NOUN	chevél	ʃəvˈel	ʃ ə v ˈe l		HAIR_NOUN_1			
 Savoyard	Savoyard			HAIR_NOUN	cheveû	ʃevˈøː	ʃ e v ˈøː		HAIR_NOUN_1			
 Occitan	Occitan			HAIR_NOUN	cabel	kaβˈɛl	k a β ˈɛ l		HAIR_NOUN_1			
@@ -2096,6 +2158,7 @@ Friulian	Friulian			GOAT_NOUN	cjavre	cˈavre	c ˈa v r e		GOAT_NOUN_1
 Romansch	Romansch			GOAT_NOUN	chaura	ʨˈawrə	ʨ ˈa w r ə		GOAT_NOUN_1			
 French	French			GOAT_NOUN	chèvre	ʃɛvʁ	ʃ ɛ v ʁ		GOAT_NOUN_1			
 Québécois French	Québécois French			GOAT_NOUN	chèvre	ʃɛvʁ	ʃ ɛ v ʁ		GOAT_NOUN_1			
+Walloon	Walloon			GOAT_NOUN	tchive	ʧˈiːf	ʧ ˈiː f		GOAT_NOUN_1			
 Franco-Provençal	Franco-Provençal			GOAT_NOUN	chiévra	ʃjˈevʁa	ʃ j ˈe v ʁ a		GOAT_NOUN_1			
 Occitan	Occitan			GOAT_NOUN	cabra	kˈaβɾɔ	k ˈa β ɾ ɔ		GOAT_NOUN_1			
 Gascon	Gascon			GOAT_NOUN	craba	kɾˈaβɔ	k ɾ ˈa β ɔ		GOAT_NOUN_1			
@@ -2127,6 +2190,7 @@ Friulian	Friulian			HUNT_VERB	cjaçâ	caʧˈaː	c a ʧ ˈaː		HUNT_VERB_1
 Romansch	Romansch			HUNT_VERB	chatschar	ʨəʧˈaːr	ʨ ə ʧ ˈaː r		HUNT_VERB_1			
 French	French			HUNT_VERB	chasser	ʃase	ʃ a s e		HUNT_VERB_1			
 Québécois French	Québécois French			HUNT_VERB	chasser	ʃase	ʃ a s e		HUNT_VERB_1			
+Walloon	Walloon			HUNT_VERB	tchessî	ʧɛsˈiː	ʧ ɛ s ˈiː		HUNT_VERB_1			
 Franco-Provençal	Franco-Provençal			HUNT_VERB	chaciér	ʃasjˈe	ʃ a s j ˈe		HUNT_VERB_1			
 Occitan	Occitan			HUNT_VERB	caçar	kasˈa	k a s ˈa		HUNT_VERB_1			
 Gascon	Gascon			HUNT_VERB	caçar	kasˈa	k a s ˈa		HUNT_VERB_1			
@@ -2158,6 +2222,7 @@ Friulian	Friulian			HEAD_NOUN	cjâf	cˈaːf	c ˈaː f		HEAD_NOUN_1
 Romansch	Romansch			HEAD_NOUN	chau	ʨˈaw	ʨ ˈa w		HEAD_NOUN_1			
 French	French			HEAD_NOUN	chef	ʃɛf	ʃ ɛ f		HEAD_NOUN_1			
 Québécois French	Québécois French			HEAD_NOUN	chef	ʃɛf	ʃ ɛ f		HEAD_NOUN_1			
+Walloon	Walloon			HEAD_NOUN	tchîf	ʧˈiːf	ʧ ˈiː f		HEAD_NOUN_1			
 Franco-Provençal	Franco-Provençal			HEAD_NOUN	chèf	ʃˈɛf	ʃ ˈɛ f		HEAD_NOUN_1			
 Occitan	Occitan			HEAD_NOUN	cap	kˈap	k ˈa p		HEAD_NOUN_1			
 Gascon	Gascon			HEAD_NOUN	cap	kˈap	k ˈa p		HEAD_NOUN_1			
@@ -2188,6 +2253,7 @@ Friulian	Friulian			MEAT_NOUN	cjar	cˈar	c ˈa r		MEAT_NOUN_1
 Romansch	Romansch			MEAT_NOUN	charn	ʨˈaːrn	ʨ ˈaː r n		MEAT_NOUN_1			
 French	French			MEAT_NOUN	chair	ʃɛʁ	ʃ ɛ ʁ		MEAT_NOUN_1			
 Québécois French	Québécois French			MEAT_NOUN	chair	ʃæɛ̯ʁ	ʃ æɛ̯ ʁ		MEAT_NOUN_1			
+Walloon	Walloon			MEAT_NOUN	tchå	ʧˈɔː	ʧ ˈɔː		MEAT_NOUN_1			
 Franco-Provençal	Franco-Provençal			MEAT_NOUN	chêrn	ʃˈɛːʁ	ʃ ˈɛː ʁ		MEAT_NOUN_1			
 Occitan	Occitan			MEAT_NOUN	carn	kˈar	k ˈa r		MEAT_NOUN_1			
 Gascon	Gascon			MEAT_NOUN	carn	kˈar	k ˈa r		MEAT_NOUN_1			
@@ -2219,6 +2285,7 @@ Friulian	Friulian			DEAR_ADJ	cjâr	cˈaːr	c ˈaː r		DEAR_ADJ_1
 Romansch	Romansch			DEAR_ADJ	char	ʨˈaːr	ʨ ˈaː r		DEAR_ADJ_1			
 French	French			DEAR_ADJ	cher	ʃɛʁ	ʃ ɛ ʁ		DEAR_ADJ_1			
 Québécois French	Québécois French			DEAR_ADJ	cher	ʃæɛ̯ʁ	ʃ æɛ̯ ʁ		DEAR_ADJ_1			
+Walloon	Walloon			DEAR_ADJ	tchir	ʧˈiːʀ	ʧ ˈiː ʀ		DEAR_ADJ_1			
 Franco-Provençal	Franco-Provençal			DEAR_ADJ	chér	ʃˈeʁ	ʃ ˈe ʁ		DEAR_ADJ_1			
 Occitan	Occitan			DEAR_ADJ	car	kˈar	k ˈa r		DEAR_ADJ_1			
 Gascon	Gascon			DEAR_ADJ	car	kˈar	k ˈa r		DEAR_ADJ_1			
@@ -2233,6 +2300,7 @@ Brazilian Portuguese	Brazilian Portuguese			DEAR_ADJ	caro	kˈaɾu	k ˈa ɾ u		DE
 Latin	Latin			HOUSE_NOUN	casae	kˈasae̯	k ˈa s ae̯		HOUSE_NOUN_1			
 French	French			HOUSE_NOUN	chez	ʃe	ʃ e		HOUSE_NOUN_1			
 Québécois French	Québécois French			HOUSE_NOUN	chez	ʃe	ʃ e		HOUSE_NOUN_1			
+Walloon	Walloon			HOUSE_NOUN	tcheu	ʧˈøː	ʧ ˈøː		HOUSE_NOUN_1			
 Franco-Provençal	Franco-Provençal			HOUSE_NOUN	chiéz	ʃjˈes	ʃ j ˈe s		HOUSE_NOUN_1			
 Latin	Latin			HOUSE_NOUN	casam	kˈasãː	k ˈa s ãː		HOUSE_NOUN_2			
 Romanian	Romanian			HOUSE_NOUN	casă	kˈasə	k ˈa s ə		HOUSE_NOUN_2			
@@ -2283,6 +2351,7 @@ Friulian	Friulian			CASTLE_NOUN	cjistiel	cistjˈɛl	c i s t j ˈɛ l		CASTLE_NOU
 Romansch	Romansch			CASTLE_NOUN	chastè	ʨəstˈɛː	ʨ ə s t ˈɛː		CASTLE_NOUN_1			
 French	French			CASTLE_NOUN	château	ʃato	ʃ a t o		CASTLE_NOUN_1			
 Québécois French	Québécois French			CASTLE_NOUN	château	ʃɑtoʊ̯	ʃ ɑ t oʊ̯		CASTLE_NOUN_1			
+Walloon	Walloon			CASTLE_NOUN	tschestea	ʧɛstjˈa	ʧ ɛ s t j ˈa		CASTLE_NOUN_1			
 Franco-Provençal	Franco-Provençal			CASTLE_NOUN	châtél	ʃɑːtˈel	ʃ ɑː t ˈe l		CASTLE_NOUN_1			
 Occitan	Occitan			CASTLE_NOUN	castèl	kastˈɛl	k a s t ˈɛ l		CASTLE_NOUN_1			
 Gascon	Gascon			CASTLE_NOUN	castèth	kastˈɛt	k a s t ˈɛ t		CASTLE_NOUN_1			
@@ -2314,6 +2383,7 @@ Friulian	Friulian			CHAIN_NOUN	cjadene	cadˈene	c a d ˈe n e		CHAIN_NOUN_1
 Romansch	Romansch			CHAIN_NOUN	chadaina	ʨədˈajnə	ʨ ə d ˈa j n ə		CHAIN_NOUN_1			
 French	French			CHAIN_NOUN	chaîne	ʃɛn	ʃ ɛ n		CHAIN_NOUN_1			
 Québécois French	Québécois French			CHAIN_NOUN	chaîne	ʃæɛ̯n	ʃ æɛ̯ n		CHAIN_NOUN_1			
+Walloon	Walloon			CHAIN_NOUN	tchinne	ʧˈɛ̃ːn	ʧ ˈɛ̃ː n		CHAIN_NOUN_1			
 Franco-Provençal	Franco-Provençal			CHAIN_NOUN	châne	ʃˈɑːnə	ʃ ˈɑː n ə		CHAIN_NOUN_1			
 Occitan	Occitan			CHAIN_NOUN	cadena	kaðˈenɔ	k a ð ˈe n ɔ		CHAIN_NOUN_1			
 Gascon	Gascon			CHAIN_NOUN	cadea	kaðˈeɔ	k a ð ˈe ɔ		CHAIN_NOUN_1			
@@ -2329,6 +2399,7 @@ Latin	Latin			CAT_NOUN	cattum	kˈattʊ̃ː	k ˈa t t ʊ̃ː		CAT_NOUN_2
 Aromanian	Aromanian			CAT_NOUN	cãtushi	kɨtˈuʃi	k ɨ t ˈu ʃ i		CAT_NOUN_2			
 French	French			CAT_NOUN	chat	ʃa	ʃ a		CAT_NOUN_2			
 Québécois French	Québécois French			CAT_NOUN	chat	ʃɑ	ʃ ɑ		CAT_NOUN_2			
+Walloon	Walloon			CAT_NOUN	tchet	ʧˈɛ	ʧ ˈɛ		CAT_NOUN_2			
 Franco-Provençal	Franco-Provençal			CAT_NOUN	chat	ʃˈa	ʃ ˈa		CAT_NOUN_2			
 Latin	Latin			THING_NOUN	causam	kˈau̯sãː	k ˈau̯ s ãː		THING_NOUN_1			
 Dalmatian	Dalmatian			THING_NOUN	kos	kˈos	k ˈo s		THING_NOUN_1			
@@ -2346,6 +2417,7 @@ Friulian	Friulian			THING_NOUN	cjosse	cˈɔse	c ˈɔ s e		THING_NOUN_1
 Romansch	Romansch			THING_NOUN	chaussa	ʨˈawsə	ʨ ˈa w s ə		THING_NOUN_1			
 French	French			THING_NOUN	chose	ʃoz	ʃ o z		THING_NOUN_1			
 Québécois French	Québécois French			THING_NOUN	chose	ʃoz	ʃ o z		THING_NOUN_1			
+Walloon	Walloon			THING_NOUN	tchôze	ʧˈoːs	ʧ ˈoː s		THING_NOUN_1			
 Franco-Provençal	Franco-Provençal			THING_NOUN	chösa	ʃˈøza	ʃ ˈø z a		THING_NOUN_1			
 Franco-Provençal	Franco-Provençal			THING_NOUN	chuesa	ʃwˈeza	ʃ w ˈe z a		THING_NOUN_1			
 Occitan	Occitan			THING_NOUN	causa	kˈawzɔ	k ˈa w z ɔ		THING_NOUN_1			
@@ -2377,6 +2449,7 @@ Friulian	Friulian			HUNDRED_NUM	cent	ʧˈɛnt	ʧ ˈɛ n t		HUNDRED_NUM_1
 Romansch	Romansch			HUNDRED_NUM	tschient	ʧˈiə̯nt	ʧ ˈiə̯ n t		HUNDRED_NUM_1			
 French	French			HUNDRED_NUM	cent	sɑ̃	s ɑ̃		HUNDRED_NUM_1			
 Québécois French	Québécois French			HUNDRED_NUM	cent	sã	s ã		HUNDRED_NUM_1			
+Walloon	Walloon			HUNDRED_NUM	cint	sˈɛ̃	s ˈɛ̃		HUNDRED_NUM_1			
 Franco-Provençal	Franco-Provençal			HUNDRED_NUM	cent	sˈɛ̃	s ˈɛ̃		HUNDRED_NUM_1			
 Occitan	Occitan			HUNDRED_NUM	cent	sˈɛn	s ˈɛ n		HUNDRED_NUM_1			
 Gascon	Gascon			HUNDRED_NUM	cent	sˈen	s ˈe n		HUNDRED_NUM_1			
@@ -2411,6 +2484,7 @@ Friulian	Friulian			WAX_NOUN	cere	ʧˈere	ʧ ˈe r e		WAX_NOUN_1
 Romansch	Romansch			WAX_NOUN	tschaira	ʧˈajrə	ʧ ˈa j r ə		WAX_NOUN_1			
 French	French			WAX_NOUN	cire	siʁ	s i ʁ		WAX_NOUN_1			
 Québécois French	Québécois French			WAX_NOUN	cire	siʁ	s i ʁ		WAX_NOUN_1			
+Walloon	Walloon			WAX_NOUN	cére	sˈeːʀ	s ˈeː ʀ		WAX_NOUN_1			
 Franco-Provençal	Franco-Provençal			WAX_NOUN	cire	sˈiðə	s ˈi ð ə		WAX_NOUN_1			
 Occitan	Occitan			WAX_NOUN	cera	sˈeɾɔ	s ˈe ɾ ɔ		WAX_NOUN_1			
 Gascon	Gascon			WAX_NOUN	cera	sˈeɾɔ	s ˈe ɾ ɔ		WAX_NOUN_1			
@@ -2447,6 +2521,7 @@ Friulian	Friulian			CHERRY_NOUN	cjariese	carjˈɛze	c a r j ˈɛ z e		CHERRY_NOU
 Romansch	Romansch			CHERRY_NOUN	tscharescha	ʧərˈeːʃə	ʧ ə r ˈeː ʃ ə		CHERRY_NOUN_1			
 French	French			CHERRY_NOUN	cerise	səʁiz	s ə ʁ i z		CHERRY_NOUN_1			
 Québécois French	Québécois French			CHERRY_NOUN	cerise	sœʁiz	s œ ʁ i z		CHERRY_NOUN_1			
+Walloon	Walloon			CHERRY_NOUN	ceréjhe	sɛʀˈeːʃ	s ɛ ʀ ˈeː ʃ		CHERRY_NOUN_1			
 Franco-Provençal	Franco-Provençal			CHERRY_NOUN	cerise	seðˈizə	s e ð ˈi z ə		CHERRY_NOUN_1			
 Occitan	Occitan			CHERRY_NOUN	cerièra	seɾjˈɛɾɔ	s e ɾ j ˈɛ ɾ ɔ		CHERRY_NOUN_1			
 Gascon	Gascon			CHERRY_NOUN	cerisa	seɾˈizɔ	s e ɾ ˈi z ɔ		CHERRY_NOUN_1			
@@ -2476,6 +2551,7 @@ Ladin	Ladin			ASH_NOUN	cender	ʧˈɛnder	ʧ ˈɛ n d e r		ASH_NOUN_3
 Romansch	Romansch			ASH_NOUN	tschendra	ʧˈɛndrə	ʧ ˈɛ n d r ə		ASH_NOUN_3			
 French	French			ASH_NOUN	cendre	sɑ̃dʁ	s ɑ̃ d ʁ		ASH_NOUN_3			
 Québécois French	Québécois French			ASH_NOUN	cendre	sãdʁ	s ã d ʁ		ASH_NOUN_3			
+Walloon	Walloon			ASH_NOUN	cinde	sˈɛ̃t	s ˈɛ̃ t		ASH_NOUN_3			
 Franco-Provençal	Franco-Provençal			ASH_NOUN	cindre	sˈĩdʁə	s ˈĩ d ʁ ə		ASH_NOUN_3			
 Savoyard	Savoyard			ASH_NOUN	findra	fˈɛ̃dra	f ˈɛ̃ d r a		ASH_NOUN_3			
 Occitan	Occitan			ASH_NOUN	cendre	sˈɛndɾe	s ˈɛ n d ɾ e		ASH_NOUN_3			
@@ -2567,6 +2643,7 @@ Friulian	Friulian			CALL_VERB	clamâ	klamˈaː	k l a m ˈaː		CALL_VERB_1
 Romansch	Romansch			CALL_VERB	clamar	kləmˈaːr	k l ə m ˈaː r		CALL_VERB_1			
 French	French			CALL_VERB	clamer	klame	k l a m e		CALL_VERB_1			
 Québécois French	Québécois French			CALL_VERB	clamer	klame	k l a m e		CALL_VERB_1			
+Walloon	Walloon			CALL_VERB	clamer	klamˈe	k l a m ˈe		CALL_VERB_1			
 Franco-Provençal	Franco-Provençal			CALL_VERB	clamar	klamˈaː	k l a m ˈaː		CALL_VERB_1			
 Occitan	Occitan			CALL_VERB	clamar	klamˈa	k l a m ˈa		CALL_VERB_1			
 Gascon	Gascon			CALL_VERB	clamar	klamˈa	k l a m ˈa		CALL_VERB_1			
@@ -2601,6 +2678,7 @@ Friulian	Friulian			KEY_NOUN	clâf	klˈaːf	k l ˈaː f		KEY_NOUN_1
 Romansch	Romansch			KEY_NOUN	clav	klˈaf	k l ˈa f		KEY_NOUN_1			
 French	French			KEY_NOUN	clé	kle	k l e		KEY_NOUN_1		IRREGULAR	
 Québécois French	Québécois French			KEY_NOUN	clé	kle	k l e		KEY_NOUN_1		IRREGULAR	
+Walloon	Walloon			KEY_NOUN	clé	klˈe	k l ˈe		KEY_NOUN_1			
 Franco-Provençal	Franco-Provençal			KEY_NOUN	cllâf	kjˈaː	k j ˈaː		KEY_NOUN_1			
 Occitan	Occitan			KEY_NOUN	clau	klˈaw	k l ˈa w		KEY_NOUN_1			
 Gascon	Gascon			KEY_NOUN	clau	klˈaw	k l ˈa w		KEY_NOUN_1			
@@ -2638,6 +2716,7 @@ Friulian	Friulian			TAIL_NOUN	code	kˈode	k ˈo d e		TAIL_NOUN_1
 Romansch	Romansch			TAIL_NOUN	cua	kˈuːə	k ˈuː ə		TAIL_NOUN_1			
 French	French			TAIL_NOUN	queue	kø	k ø		TAIL_NOUN_1			
 Québécois French	Québécois French			TAIL_NOUN	queue	køʏ̯	k øʏ̯		TAIL_NOUN_1			
+Walloon	Walloon			TAIL_NOUN	cawe	kˈaw	k ˈa w		TAIL_NOUN_1			
 Franco-Provençal	Franco-Provençal			TAIL_NOUN	cua	kˈua	k ˈu a		TAIL_NOUN_1			
 Savoyard	Savoyard			TAIL_NOUN	kava	kˈava	k ˈa v a		TAIL_NOUN_1			
 Occitan	Occitan			TAIL_NOUN	coa	kˈuɔ	k ˈu ɔ		TAIL_NOUN_1			
@@ -2686,6 +2765,7 @@ Friulian	Friulian			NECK_NOUN	cuel	kwˈɛl	k w ˈɛ l		NECK_NOUN_1
 Romansch	Romansch			NECK_NOUN	culiez	kuljˈeʦ	k u l j ˈe ʦ		NECK_NOUN_1		IRREGULAR	
 French	French			NECK_NOUN	cou	ku	k u		NECK_NOUN_1			
 Québécois French	Québécois French			NECK_NOUN	cou	ku	k u		NECK_NOUN_1			
+Walloon	Walloon			NECK_NOUN	cô	kˈoː	k ˈoː		NECK_NOUN_1			
 Franco-Provençal	Franco-Provençal			NECK_NOUN	cou	kˈu	k ˈu		NECK_NOUN_1			
 Savoyard	Savoyard			NECK_NOUN	koû	kˈuː	k ˈuː		NECK_NOUN_1			
 Occitan	Occitan			NECK_NOUN	còl	kˈɔl	k ˈɔ l		NECK_NOUN_1			
@@ -2718,6 +2798,7 @@ Friulian	Friulian			COLOR_NOUN	colôr	kolˈoːr	k o l ˈoː r		COLOR_NOUN_1
 Romansch	Romansch			COLOR_NOUN	colur	kolˈuːr	k o l ˈuː r		COLOR_NOUN_1			
 French	French			COLOR_NOUN	couleur	kulœʁ	k u l œ ʁ		COLOR_NOUN_1			
 Québécois French	Québécois French			COLOR_NOUN	couleur	kulaœ̯ʁ	k u l aœ̯ ʁ		COLOR_NOUN_1			
+Walloon	Walloon			COLOR_NOUN	coleur	kɔlˈøːʀ	k ɔ l ˈøː ʀ		COLOR_NOUN_1			
 Franco-Provençal	Franco-Provençal			COLOR_NOUN	color	kulˈɔʁ	k u l ˈɔ ʁ		COLOR_NOUN_1			
 Occitan	Occitan			COLOR_NOUN	color	kulˈu	k u l ˈu		COLOR_NOUN_1			
 Gascon	Gascon			COLOR_NOUN	color	kulˈu	k u l ˈu		COLOR_NOUN_1			
@@ -2741,6 +2822,7 @@ Ladin	Ladin			BE ACQUAINTED WITH_VERB	conesce	konˈeʃe	k o n ˈe ʃ e		BE ACQUA
 Romansch	Romansch			BE ACQUAINTED WITH_VERB	conuscher	konˈuːʃər	k o n ˈuː ʃ ə r		BE ACQUAINTED WITH_VERB_2			
 French	French			BE ACQUAINTED WITH_VERB	connaître	kɔnɛtʁ	k ɔ n ɛ t ʁ		BE ACQUAINTED WITH_VERB_2			
 Québécois French	Québécois French			BE ACQUAINTED WITH_VERB	connaître	kɔnæɛ̯tʁ	k ɔ n æɛ̯ t ʁ		BE ACQUAINTED WITH_VERB_2			
+Walloon	Walloon			BE ACQUAINTED WITH_VERB	kinoxhe	kinˈɔʃ	k i n ˈɔ ʃ		BE ACQUAINTED WITH_VERB_2			
 Occitan	Occitan			BE ACQUAINTED WITH_VERB	conéisser	kunˈejse	k u n ˈe j s e		BE ACQUAINTED WITH_VERB_2			
 Gascon	Gascon			BE ACQUAINTED WITH_VERB	conéisher	kunˈejʃe	k u n ˈe j ʃ e		BE ACQUAINTED WITH_VERB_2			
 Catalan	Catalan			BE ACQUAINTED WITH_VERB	conèixer	kunˈɛʃə	k u n ˈɛ ʃ ə		BE ACQUAINTED WITH_VERB_2			
@@ -2769,6 +2851,7 @@ Friulian	Friulian			HEART_NOUN	cûr	kˈuːr	k ˈuː r		HEART_NOUN_1
 Romansch	Romansch			HEART_NOUN	cor	kˈɔːr	k ˈɔː r		HEART_NOUN_1			
 French	French			HEART_NOUN	cœur	kœʁ	k œ ʁ		HEART_NOUN_1			
 Québécois French	Québécois French			HEART_NOUN	cœur	kaœ̯ʁ	k aœ̯ ʁ		HEART_NOUN_1			
+Walloon	Walloon			HEART_NOUN	cour	kˈuːʀ	k ˈuː ʀ		HEART_NOUN_1			
 Franco-Provençal	Franco-Provençal			HEART_NOUN	côr	kˈoː	k ˈoː		HEART_NOUN_1			
 Savoyard	Savoyard			HEART_NOUN	keû	køː	k øː		HEART_NOUN_1			
 Occitan	Occitan			HEART_NOUN	còr	kˈɔr	k ˈɔ r		HEART_NOUN_1			
@@ -2839,6 +2922,7 @@ Logudorese	Logudorese			BODY_NOUN	corpus	kˈorpuzŭ	k ˈo r p u z ŭ		BODY_NOU
 Campidanese	Campidanese			BODY_NOUN	corpus	kˈorpuzŭ	k ˈo r p u z ŭ		BODY_NOUN_2			
 French	French			BODY_NOUN	corps	kɔʁ	k ɔ ʁ		BODY_NOUN_2			
 Québécois French	Québécois French			BODY_NOUN	corps	kɑɔ̯ʁ	k ɑɔ̯ ʁ		BODY_NOUN_2			
+Walloon	Walloon			BODY_NOUN	coir	kwˈaʀ	k w ˈa ʀ		BODY_NOUN_2			
 Franco-Provençal	Franco-Provençal			BODY_NOUN	côrps	kˈoːʁ	k ˈoː ʁ		BODY_NOUN_2			
 Occitan	Occitan			BODY_NOUN	còrs	kˈɔs	k ˈɔ s		BODY_NOUN_2			
 Gascon	Gascon			BODY_NOUN	còs	kˈɔs	k ˈɔ s		BODY_NOUN_2			
@@ -2872,6 +2956,7 @@ Friulian	Friulian			COAST_NOUN	cueste	kwˈɛste	k w ˈɛ s t e		COAST_NOUN_1
 Romansch	Romansch			COAST_NOUN	costa	kˈɔstə	k ˈɔ s t ə		COAST_NOUN_1			
 French	French			COAST_NOUN	côte	kot	k o t		COAST_NOUN_1			
 Québécois French	Québécois French			COAST_NOUN	côte	kot	k o t		COAST_NOUN_1			
+Walloon	Walloon			COAST_NOUN	costé	kɔstˈe	k ɔ s t ˈe		COAST_NOUN_1			
 Occitan	Occitan			COAST_NOUN	còsta	kˈɔstɔ	k ˈɔ s t ɔ		COAST_NOUN_1			
 Gascon	Gascon			COAST_NOUN	còsta	kˈɔstɔ	k ˈɔ s t ɔ		COAST_NOUN_1			
 Catalan	Catalan			COAST_NOUN	costa	kˈɔstə	k ˈɔ s t ə		COAST_NOUN_1			
@@ -2900,6 +2985,7 @@ Friulian	Friulian			THIGH_NOUN	cuesse	kwˈɛse	k w ˈɛ s e		THIGH_NOUN_1
 Romansch	Romansch			THIGH_NOUN	coissa	kˈojsə	k ˈo j s ə		THIGH_NOUN_1			
 French	French			THIGH_NOUN	cuisse	kɥis	k ɥ i s		THIGH_NOUN_1			
 Québécois French	Québécois French			THIGH_NOUN	cuisse	kɥɪs	k ɥ ɪ s		THIGH_NOUN_1			
+Walloon	Walloon			THIGH_NOUN	coxhe	kˈɔʃ	k ˈɔ ʃ		THIGH_NOUN_1			
 Franco-Provençal	Franco-Provençal			THIGH_NOUN	cuésse	kwˈesə	k w ˈe s ə		THIGH_NOUN_1			
 Occitan	Occitan			THIGH_NOUN	cuèissa	kɥˈɛjsɔ	k ɥ ˈɛ j s ɔ		THIGH_NOUN_1			
 Gascon	Gascon			THIGH_NOUN	cueisha	kwˈejʃɔ	k w ˈe j ʃ ɔ		THIGH_NOUN_1			
@@ -2946,6 +3032,7 @@ Friulian	Friulian			BELIEVE_VERB	crodi	krˈodi	k r ˈo d i		BELIEVE_VERB_1
 Romansch	Romansch			BELIEVE_VERB	crair	krˈajr	k r ˈa j r		BELIEVE_VERB_1			
 French	French			BELIEVE_VERB	croire	kʁwaʁ	k ʁ w a ʁ		BELIEVE_VERB_1			
 Québécois French	Québécois French			BELIEVE_VERB	croire	kʁwɛʁ	k ʁ w ɛ ʁ		BELIEVE_VERB_1			
+Walloon	Walloon			BELIEVE_VERB	croere	kʀwˈɛːʀ	k ʀ w ˈɛː ʀ		BELIEVE_VERB_1			
 Franco-Provençal	Franco-Provençal			BELIEVE_VERB	crêre	kʁˈɛːðe	k ʁ ˈɛː ð e		BELIEVE_VERB_1			
 Occitan	Occitan			BELIEVE_VERB	creire	kɾˈejre	k ɾ ˈe j r e		BELIEVE_VERB_1			
 Gascon	Gascon			BELIEVE_VERB	créder	kɾˈeðe	k ɾ ˈe ð e		BELIEVE_VERB_1			
@@ -2989,6 +3076,7 @@ Romansch	Romansch			CROSS_NOUN	crusch	krˈuʃ	k r ˈu ʃ		CROSS_NOUN_1
 Romansch	Romansch			CROSS_NOUN	crousch	krˈowʃ	k r ˈo w ʃ		CROSS_NOUN_1			
 French	French			CROSS_NOUN	croix	kʁwa	k ʁ w a		CROSS_NOUN_1			
 Québécois French	Québécois French			CROSS_NOUN	croix	kʁwɛ	k ʁ w ɛ		CROSS_NOUN_1			
+Walloon	Walloon			CROSS_NOUN	croes	kʀwˈɛ	k ʀ w ˈɛ		CROSS_NOUN_1			
 Franco-Provençal	Franco-Provençal			CROSS_NOUN	crouêx	kʁwˈɛːʃ	k ʁ w ˈɛː ʃ		CROSS_NOUN_1			
 Occitan	Occitan			CROSS_NOUN	crotz	kɾˈuʦ	k ɾ ˈu ʦ		CROSS_NOUN_1			
 Gascon	Gascon			CROSS_NOUN	crotz	kɾˈuʦ	k ɾ ˈu ʦ		CROSS_NOUN_1			
@@ -3022,6 +3110,7 @@ Friulian	Friulian			BUTTOCKS_NOUN	cûl	kˈuːl	k ˈuː l		BUTTOCKS_NOUN_1
 Romansch	Romansch			BUTTOCKS_NOUN	tgil	ʨˈil	ʨ ˈi l		BUTTOCKS_NOUN_1			
 French	French			BUTTOCKS_NOUN	cul	ky	k y		BUTTOCKS_NOUN_1			
 Québécois French	Québécois French			BUTTOCKS_NOUN	cul	ky	k y		BUTTOCKS_NOUN_1			
+Walloon	Walloon			BUTTOCKS_NOUN	cou	kˈu	k ˈu		BUTTOCKS_NOUN_1			
 Franco-Provençal	Franco-Provençal			BUTTOCKS_NOUN	cul	kˈul	k ˈu l		BUTTOCKS_NOUN_1			
 Occitan	Occitan			BUTTOCKS_NOUN	cuol	kɥˈul	k ɥ ˈu l		BUTTOCKS_NOUN_1			
 Gascon	Gascon			BUTTOCKS_NOUN	cuu	kˈyw	k ˈy w		BUTTOCKS_NOUN_1			
@@ -3043,6 +3132,7 @@ Eastern Lombard	Eastern Lombard			CORNER_NOUN	cònio	kˈɔnjo	k ˈɔ n j o		CORN
 Friulian	Friulian			CORNER_NOUN	cugn	kˈuɲ	k ˈu ɲ		CORNER_NOUN_1			
 French	French			CORNER_NOUN	coin	kwɛ̃	k w ɛ̃		CORNER_NOUN_1			
 Québécois French	Québécois French			CORNER_NOUN	coin	kwẽɪ̯̃	k w ẽɪ̯̃		CORNER_NOUN_1			
+Walloon	Walloon			CORNER_NOUN	cougn	kˈuɲ	k ˈu ɲ		CORNER_NOUN_1			
 Franco-Provençal	Franco-Provençal			CORNER_NOUN	coen	kwˈɛ̃	k w ˈɛ̃		CORNER_NOUN_1			
 Occitan	Occitan			CORNER_NOUN	cunh	kˈyɲ	k ˈy ɲ		CORNER_NOUN_1			
 Gascon	Gascon			CORNER_NOUN	cunh	kˈyɲ	k ˈy ɲ		CORNER_NOUN_1			
@@ -3072,6 +3162,7 @@ Friulian	Friulian			SHORT_ADJ	curt	kˈurt	k ˈu r t		SHORT_ADJ_1
 Romansch	Romansch			SHORT_ADJ	curt	kˈurt	k ˈu r t		SHORT_ADJ_1			
 French	French			SHORT_ADJ	court	kuʁ	k u ʁ		SHORT_ADJ_1			
 Québécois French	Québécois French			SHORT_ADJ	court	kuʁ	k u ʁ		SHORT_ADJ_1			
+Walloon	Walloon			SHORT_ADJ	court	kˈuːʀ	k ˈuː ʀ		SHORT_ADJ_1			
 Franco-Provençal	Franco-Provençal			SHORT_ADJ	côrt	kˈoːʁ	k ˈoː ʁ		SHORT_ADJ_1			
 Savoyard	Savoyard			SHORT_ADJ	co	kˈo	k ˈo		SHORT_ADJ_1			
 Occitan	Occitan			SHORT_ADJ	cort	kˈuɾt	k ˈu ɾ t		SHORT_ADJ_1			
@@ -3166,6 +3257,7 @@ French	French			TEN_NUM	dix	dis	d i s		TEN_NUM_1
 French	French			TEN_NUM	dix	di	d i		TEN_NUM_1			
 Québécois French	Québécois French			TEN_NUM	dix	ʣɪs	ʣ ɪ s		TEN_NUM_1			
 Québécois French	Québécois French			TEN_NUM	dix	ʣi	ʣ i		TEN_NUM_1			
+Walloon	Walloon			TEN_NUM	dijh	dˈiʃ	d ˈi ʃ		TEN_NUM_1			
 Franco-Provençal	Franco-Provençal			TEN_NUM	diéx	djˈeʃ	d j ˈe ʃ		TEN_NUM_1			
 Occitan	Occitan			TEN_NUM	dètz	dˈɛʦ	d ˈɛ ʦ		TEN_NUM_1			
 Gascon	Gascon			TEN_NUM	dètz	dˈɛʦ	d ˈɛ ʦ		TEN_NUM_1			
@@ -3201,6 +3293,7 @@ Friulian	Friulian			TOOTH_NOUN	dint	dˈint	d ˈi n t		TOOTH_NOUN_1
 Romansch	Romansch			TOOTH_NOUN	dent	dˈɛnt	d ˈɛ n t		TOOTH_NOUN_1			
 French	French			TOOTH_NOUN	dent	dɑ̃	d ɑ̃		TOOTH_NOUN_1			
 Québécois French	Québécois French			TOOTH_NOUN	dent	dã	d ã		TOOTH_NOUN_1			
+Walloon	Walloon			TOOTH_NOUN	dint	dˈɛ̃	d ˈɛ̃		TOOTH_NOUN_1			
 Franco-Provençal	Franco-Provençal			TOOTH_NOUN	dent	dˈɛ̃	d ˈɛ̃		TOOTH_NOUN_1			
 Savoyard	Savoyard			TOOTH_NOUN	din	dˈɛ̃	d ˈɛ̃		TOOTH_NOUN_1			
 Occitan	Occitan			TOOTH_NOUN	dent	dˈɛn	d ˈɛ n		TOOTH_NOUN_1			
@@ -3233,6 +3326,7 @@ Friulian	Friulian			GOD_NOUN	diu	dˈiw	d ˈi w		GOD_NOUN_1
 Romansch	Romansch			GOD_NOUN	dieu	djˈɛw	d j ˈɛ w		GOD_NOUN_1			
 French	French			GOD_NOUN	dieu	djø	d j ø		GOD_NOUN_1			
 Québécois French	Québécois French			GOD_NOUN	dieu	ʣjøʏ̯	ʣ j øʏ̯		GOD_NOUN_1			
+Walloon	Walloon			GOD_NOUN	diu	djˈu	d j ˈu		GOD_NOUN_1			
 Franco-Provençal	Franco-Provençal			GOD_NOUN	diu	dˈiw	d ˈi w		GOD_NOUN_1			
 Occitan	Occitan			GOD_NOUN	dieu	djˈew	d j ˈe w		GOD_NOUN_1			
 Gascon	Gascon			GOD_NOUN	diu	dˈiw	d ˈi w		GOD_NOUN_1			
@@ -3266,6 +3360,7 @@ Friulian	Friulian			SAY-1SG_VERB	dîs	dˈiːs	d ˈiː s		SAY-1SG_VERB_1
 Romansch	Romansch			SAY-1SG_VERB	di	dˈiː	d ˈiː		SAY-1SG_VERB_1			
 French	French			SAY-1SG_VERB	dis	di	d i		SAY-1SG_VERB_1			
 Québécois French	Québécois French			SAY-1SG_VERB	dis	ʣi	ʣ i		SAY-1SG_VERB_1			
+Walloon	Walloon			SAY-1SG_VERB	di	dˈi	d ˈi		SAY-1SG_VERB_1			
 Franco-Provençal	Franco-Provençal			SAY-1SG_VERB	dio	dˈio	d ˈi o		SAY-1SG_VERB_1			
 Occitan	Occitan			SAY-1SG_VERB	disi	dˈizi	d ˈi z i		SAY-1SG_VERB_1			
 Catalan	Catalan			SAY-1SG_VERB	dic	dˈik	d ˈi k		SAY-1SG_VERB_1			
@@ -3314,6 +3409,7 @@ Friulian	Friulian			FINGER_NOUN	dêt	dˈeːt	d ˈeː t		FINGER_NOUN_1
 Romansch	Romansch			FINGER_NOUN	det	dˈɛt	d ˈɛ t		FINGER_NOUN_1			
 French	French			FINGER_NOUN	doigt	dwa	d w a		FINGER_NOUN_1			
 Québécois French	Québécois French			FINGER_NOUN	doigt	dwɛ	d w ɛ		FINGER_NOUN_1			
+Walloon	Walloon			FINGER_NOUN	doet	dwˈɛ	d w ˈɛ		FINGER_NOUN_1			
 Franco-Provençal	Franco-Provençal			FINGER_NOUN	dêgt	dˈɛː	d ˈɛː		FINGER_NOUN_1			
 Occitan	Occitan			FINGER_NOUN	det	dˈet	d ˈe t		FINGER_NOUN_1			
 Gascon	Gascon			FINGER_NOUN	dit	dˈit	d ˈi t		FINGER_NOUN_1			
@@ -3340,6 +3436,7 @@ Friulian	Friulian			SAY-INF_VERB	dî	dˈiː	d ˈiː		SAY-INF_VERB_2
 Romansch	Romansch			SAY-INF_VERB	dir	dˈiːr	d ˈiː r		SAY-INF_VERB_2			
 French	French			SAY-INF_VERB	dire	diʁ	d i ʁ		SAY-INF_VERB_2			
 Québécois French	Québécois French			SAY-INF_VERB	dire	ʣiʁ	ʣ i ʁ		SAY-INF_VERB_2			
+Walloon	Walloon			SAY-INF_VERB	dire	dˈiːʀ	d ˈiː ʀ		SAY-INF_VERB_2			
 Franco-Provençal	Franco-Provençal			SAY-INF_VERB	dére	dˈeðə	d ˈe ð ə		SAY-INF_VERB_2			
 Occitan	Occitan			SAY-INF_VERB	dire	dˈiɾe	d ˈi ɾ e		SAY-INF_VERB_2			
 Catalan	Catalan			SAY-INF_VERB	dir	dˈi	d ˈi		SAY-INF_VERB_2			
@@ -3354,6 +3451,7 @@ Venetian	Venetian			DAY_NOUN	xórno	zˈorno	z ˈo r n o		DAY_NOUN_3
 Ligurian	Ligurian			DAY_NOUN	giorno	ʤˈurnu	ʤ ˈu r n u		DAY_NOUN_3			
 French	French			DAY_NOUN	jour	ʒuʁ	ʒ u ʁ		DAY_NOUN_3			
 Québécois French	Québécois French			DAY_NOUN	jour	ʒuʁ	ʒ u ʁ		DAY_NOUN_3			
+Walloon	Walloon			DAY_NOUN	djoû	ʤˈuː	ʤ ˈuː		DAY_NOUN_3			
 Franco-Provençal	Franco-Provençal			DAY_NOUN	jorno	ʒˈɔʁno	ʒ ˈɔ ʁ n o		DAY_NOUN_3			
 Occitan	Occitan			DAY_NOUN	jorn	ʤˈur	ʤ ˈu r		DAY_NOUN_3			
 Gascon	Gascon			DAY_NOUN	jorn	ʒˈur	ʒ ˈu r		DAY_NOUN_3			
@@ -3377,6 +3475,7 @@ Friulian	Friulian			LADY_NOUN	done	dˈɔne	d ˈɔ n e		LADY_NOUN_1
 Romansch	Romansch			LADY_NOUN	dunna	dˈunə	d ˈu n ə		LADY_NOUN_1			
 French	French			LADY_NOUN	dame	dam	d a m		LADY_NOUN_1			
 Québécois French	Québécois French			LADY_NOUN	dame	dam	d a m		LADY_NOUN_1			
+Walloon	Walloon			LADY_NOUN	dame	dˈam	d ˈa m		LADY_NOUN_1			
 Franco-Provençal	Franco-Provençal			LADY_NOUN	dama	dˈama	d ˈa m a		LADY_NOUN_1			
 Occitan	Occitan			LADY_NOUN	dòna	dˈɔnɔ	d ˈɔ n ɔ		LADY_NOUN_1			
 Gascon	Gascon			LADY_NOUN	dauna	dˈawnɔ	d ˈa w n ɔ		LADY_NOUN_1			
@@ -3407,6 +3506,7 @@ Italian	Italian			GIFT_NOUN	dono	dˈono	d ˈo n o		GIFT_NOUN_1
 Ligurian	Ligurian			GIFT_NOUN	dón	dˈuŋ	d ˈu ŋ		GIFT_NOUN_1			
 French	French			GIFT_NOUN	don	dɔ̃	d ɔ̃		GIFT_NOUN_1			
 Québécois French	Québécois French			GIFT_NOUN	don	dɒ̃ʊ̯̃	d ɒ̃ʊ̯̃		GIFT_NOUN_1			
+Walloon	Walloon			GIFT_NOUN	don	dˈɔ̃	d ˈɔ̃		GIFT_NOUN_1			
 Occitan	Occitan			GIFT_NOUN	don	dˈu	d ˈu		GIFT_NOUN_1			
 Gascon	Gascon			GIFT_NOUN	don	dˈuŋ	d ˈu ŋ		GIFT_NOUN_1			
 Catalan	Catalan			GIFT_NOUN	do	dˈo	d ˈo		GIFT_NOUN_1			
@@ -3437,6 +3537,7 @@ Friulian	Friulian			SLEEP_VERB	durmî	durmˈiː	d u r m ˈiː		SLEEP_VERB_1
 Romansch	Romansch			SLEEP_VERB	durmir	durmˈir	d u r m ˈi r		SLEEP_VERB_1			
 French	French			SLEEP_VERB	dormir	dɔʁmiʁ	d ɔ ʁ m i ʁ		SLEEP_VERB_1			
 Québécois French	Québécois French			SLEEP_VERB	dormir	dɑɔ̯ʁmiʁ	d ɑɔ̯ ʁ m i ʁ		SLEEP_VERB_1			
+Walloon	Walloon			SLEEP_VERB	doirmi	dwaʀmˈi	d w a ʀ m ˈi		SLEEP_VERB_1			
 Franco-Provençal	Franco-Provençal			SLEEP_VERB	dormir	dʁɔmˈi	d ʁ ɔ m ˈi		SLEEP_VERB_1			
 Savoyard	Savoyard			SLEEP_VERB	dromi	dromˈi	d r o m ˈi		SLEEP_VERB_1			
 Occitan	Occitan			SLEEP_VERB	dormir	durmˈi	d u r m ˈi		SLEEP_VERB_1			
@@ -3476,6 +3577,7 @@ Friulian	Friulian			DRAGON_NOUN	dragon	draɡˈoŋ	d r a ɡ ˈo ŋ		DRAGON_NOUN_2
 Romansch	Romansch			DRAGON_NOUN	dragun	drəɡˈun	d r ə ɡ ˈu n		DRAGON_NOUN_2			
 French	French			DRAGON_NOUN	dragon	dʁaɡɔ̃	d ʁ a ɡ ɔ̃		DRAGON_NOUN_2			
 Québécois French	Québécois French			DRAGON_NOUN	dragon	dʁaɡɒ̃ʊ̯̃	d ʁ a ɡ ɒ̃ʊ̯̃		DRAGON_NOUN_2			
+Walloon	Walloon			DRAGON_NOUN	dragon	dʀaɡˈɔ̃	d ʀ a ɡ ˈɔ̃		DRAGON_NOUN_2			
 Franco-Provençal	Franco-Provençal			DRAGON_NOUN	dragon	dʁaɡˈɔ̃	d ʁ a ɡ ˈɔ̃		DRAGON_NOUN_2			
 Occitan	Occitan			DRAGON_NOUN	dragon	dɾaɣˈu	d ɾ a ɣ ˈu		DRAGON_NOUN_2			
 Gascon	Gascon			DRAGON_NOUN	dragon	dɾaɣˈuŋ	d ɾ a ɣ ˈu ŋ		DRAGON_NOUN_2			
@@ -3538,6 +3640,7 @@ Friulian	Friulian			SWEET_ADJ	dolç	dˈolʧ	d ˈo l ʧ		SWEET_ADJ_1
 Romansch	Romansch			SWEET_ADJ	dultsch	dˈulʧ	d ˈu l ʧ		SWEET_ADJ_1			
 French	French			SWEET_ADJ	doux	du	d u		SWEET_ADJ_1			
 Québécois French	Québécois French			SWEET_ADJ	doux	du	d u		SWEET_ADJ_1			
+Walloon	Walloon			SWEET_ADJ	doûs	dˈuː	d ˈuː		SWEET_ADJ_1			
 Franco-Provençal	Franco-Provençal			SWEET_ADJ	dóuz	dˈows	d ˈo w s		SWEET_ADJ_1			
 Occitan	Occitan			SWEET_ADJ	doç	dˈus	d ˈu s		SWEET_ADJ_1			
 Gascon	Gascon			SWEET_ADJ	doç	dˈus	d ˈu s		SWEET_ADJ_1			
@@ -3572,6 +3675,7 @@ Friulian	Friulian			TWELVE_NUM	dodis	dˈodis	d ˈo d i s		TWELVE_NUM_1
 Romansch	Romansch			TWELVE_NUM	dudesch	dˈuːdəʃ	d ˈuː d ə ʃ		TWELVE_NUM_1			
 French	French			TWELVE_NUM	douze	duz	d u z		TWELVE_NUM_1			
 Québécois French	Québécois French			TWELVE_NUM	douze	duz	d u z		TWELVE_NUM_1			
+Walloon	Walloon			TWELVE_NUM	doze	dˈɔs	d ˈɔ s		TWELVE_NUM_1			
 Franco-Provençal	Franco-Provençal			TWELVE_NUM	doze	dˈozə	d ˈo z ə		TWELVE_NUM_1			
 Occitan	Occitan			TWELVE_NUM	dotze	dˈudze	d ˈu d z e		TWELVE_NUM_1			
 Gascon	Gascon			TWELVE_NUM	dotze	dˈudze	d ˈu d z e		TWELVE_NUM_1			
@@ -3603,6 +3707,7 @@ Friulian	Friulian			TWO (M)_NUM	doi	dˈoj	d ˈo j		TWO (M)_NUM_1
 Romansch	Romansch			TWO (M)_NUM	dus	dˈus	d ˈu s		TWO (M)_NUM_1			
 French	French			TWO (M)_NUM	deux	dø	d ø		TWO (M)_NUM_1			
 Québécois French	Québécois French			TWO (M)_NUM	deux	døʏ̯	d øʏ̯		TWO (M)_NUM_1			
+Walloon	Walloon			TWO (M)_NUM	deus	dˈøː	d ˈøː		TWO (M)_NUM_1			
 Franco-Provençal	Franco-Provençal			TWO (M)_NUM	doux	dˈuʃ	d ˈu ʃ		TWO (M)_NUM_1			
 Savoyard	Savoyard			TWO (M)_NUM	dou	dˈu	d ˈu		TWO (M)_NUM_1			
 Occitan	Occitan			TWO (M)_NUM	dos	dˈus	d ˈu s		TWO (M)_NUM_1			
@@ -3658,6 +3763,7 @@ Friulian	Friulian			DO-1SG_VERB	fâs	fˈaːs	f ˈaː s		DO-1SG_VERB_1
 Romansch	Romansch			DO-1SG_VERB	fatsch	fˈaʧ	f ˈa ʧ		DO-1SG_VERB_1			
 French	French			DO-1SG_VERB	fais	fɛ	f ɛ		DO-1SG_VERB_1			
 Québécois French	Québécois French			DO-1SG_VERB	fais	fæɛ̯	f æɛ̯		DO-1SG_VERB_1			
+Walloon	Walloon			DO-1SG_VERB	fwai	fwˈɛ	f w ˈɛ		DO-1SG_VERB_1			
 Franco-Provençal	Franco-Provençal			DO-1SG_VERB	faiso	fˈajzo	f ˈa j z o		DO-1SG_VERB_1			
 Occitan	Occitan			DO-1SG_VERB	fau	fˈaw	f ˈa w		DO-1SG_VERB_1			
 Catalan	Catalan			DO-1SG_VERB	faig	fˈaʧ	f ˈa ʧ		DO-1SG_VERB_1			
@@ -3687,6 +3793,7 @@ Ladin	Ladin			FALSE_ADJ	fauz	fˈawʦ	f ˈa w ʦ		FALSE_ADJ_1
 Friulian	Friulian			FALSE_ADJ	falso	fˈals	f ˈa l s		FALSE_ADJ_1			
 French	French			FALSE_ADJ	faux	fo	f o		FALSE_ADJ_1			
 Québécois French	Québécois French			FALSE_ADJ	faux	foʊ̯	f oʊ̯		FALSE_ADJ_1			
+Walloon	Walloon			FALSE_ADJ	fås	fˈɔː	f ˈɔː		FALSE_ADJ_1			
 Franco-Provençal	Franco-Provençal			FALSE_ADJ	fôs	fˈoː	f ˈoː		FALSE_ADJ_1			
 Occitan	Occitan			FALSE_ADJ	falso	fˈals	f ˈa l s		FALSE_ADJ_1			
 Gascon	Gascon			FALSE_ADJ	faus	fˈaws	f ˈa w s		FALSE_ADJ_1	TRUE		
@@ -3719,6 +3826,7 @@ Friulian	Friulian			HUNGER_NOUN	fam	fˈam	f ˈa m		HUNGER_NOUN_1
 Romansch	Romansch			HUNGER_NOUN	fom	fˈɔm	f ˈɔ m		HUNGER_NOUN_1			
 French	French			HUNGER_NOUN	faim	fɛ̃	f ɛ̃		HUNGER_NOUN_1			
 Québécois French	Québécois French			HUNGER_NOUN	faim	fẽɪ̯̃	f ẽɪ̯̃		HUNGER_NOUN_1			
+Walloon	Walloon			HUNGER_NOUN	fwin	fwˈɛ̃	f w ˈɛ̃		HUNGER_NOUN_1			
 Franco-Provençal	Franco-Provençal			HUNGER_NOUN	fam	fˈɑ̃	f ˈɑ̃		HUNGER_NOUN_1			
 Occitan	Occitan			HUNGER_NOUN	fam	fˈam	f ˈa m		HUNGER_NOUN_1			
 Gascon	Gascon			HUNGER_NOUN	hami	hˈami	h ˈa m i		HUNGER_NOUN_1			
@@ -3751,6 +3859,7 @@ Friulian	Friulian			DO_VERB	fâ	fˈaː	f ˈaː		DO_VERB_2
 Romansch	Romansch			DO_VERB	far	fˈaːr	f ˈaː r		DO_VERB_2			
 French	French			DO_VERB	faire	fɛʁ	f ɛ ʁ		DO_VERB_2			
 Québécois French	Québécois French			DO_VERB	faire	fæɛ̯ʁ	f æɛ̯ ʁ		DO_VERB_2			
+Walloon	Walloon			DO_VERB	fé	fˈe	f ˈe		DO_VERB_2			
 Franco-Provençal	Franco-Provençal			DO_VERB	fâre	fˈaːðə	f ˈaː ð ə		DO_VERB_2			
 Occitan	Occitan			DO_VERB	faire	fˈajɾe	f ˈa j ɾ e		DO_VERB_2			
 Gascon	Gascon			DO_VERB	har	hˈa	h ˈa		DO_VERB_2			
@@ -3780,6 +3889,7 @@ Friulian	Friulian			FLOUR_NOUN	farine	farˈine	f a r ˈi n e		FLOUR_NOUN_1
 Romansch	Romansch			FLOUR_NOUN	farina	fərˈiːnə	f ə r ˈiː n ə		FLOUR_NOUN_1			
 French	French			FLOUR_NOUN	farine	faʁin	f a ʁ i n		FLOUR_NOUN_1			
 Québécois French	Québécois French			FLOUR_NOUN	farine	faʁɪn	f a ʁ ɪ n		FLOUR_NOUN_1			
+Walloon	Walloon			FLOUR_NOUN	farene	faʀˈɛn	f a ʀ ˈɛ n		FLOUR_NOUN_1			
 Franco-Provençal	Franco-Provençal			FLOUR_NOUN	farena	faðˈena	f a ð ˈe n a		FLOUR_NOUN_1			
 Occitan	Occitan			FLOUR_NOUN	farina	faɾˈinɔ	f a ɾ ˈi n ɔ		FLOUR_NOUN_1			
 Gascon	Gascon			FLOUR_NOUN	haria	haɾˈiɔ	h a ɾ ˈi ɔ		FLOUR_NOUN_1			
@@ -3805,6 +3915,7 @@ Ladin	Ladin			FATE_NOUN	fata	fˈata	f ˈa t a		FATE_NOUN_1
 Friulian	Friulian			FATE_NOUN	fade	fˈade	f ˈa d e		FATE_NOUN_1			
 French	French			FATE_NOUN	fée	fe	f e		FATE_NOUN_1			
 Québécois French	Québécois French			FATE_NOUN	fée	fe	f e		FATE_NOUN_1			
+Walloon	Walloon			FATE_NOUN	fêye	fˈɛːj	f ˈɛː j		FATE_NOUN_1			
 Franco-Provençal	Franco-Provençal			FATE_NOUN	faye	fˈajə	f ˈa j ə		FATE_NOUN_1			
 Occitan	Occitan			FATE_NOUN	fada	fˈaðɔ	f ˈa ð ɔ		FATE_NOUN_1			
 Gascon	Gascon			FATE_NOUN	hada	hˈaðɔ	h ˈa ð ɔ		FATE_NOUN_1			
@@ -3836,6 +3947,7 @@ Friulian	Friulian			WOMAN_NOUN	femine	fˈemine	f ˈe m i n e		WOMAN_NOUN_1
 Romansch	Romansch			WOMAN_NOUN	femna	fˈemnə	f ˈe m n ə		WOMAN_NOUN_1			
 French	French			WOMAN_NOUN	femme	fam	f a m		WOMAN_NOUN_1			
 Québécois French	Québécois French			WOMAN_NOUN	femme	fam	f a m		WOMAN_NOUN_1			
+Walloon	Walloon			WOMAN_NOUN	feme	fˈɛm	f ˈɛ m		WOMAN_NOUN_1			
 Franco-Provençal	Franco-Provençal			WOMAN_NOUN	fèna	fˈɛna	f ˈɛ n a		WOMAN_NOUN_1			
 Savoyard	Savoyard			WOMAN_NOUN	fèna	fˈɛna	f ˈɛ n a		WOMAN_NOUN_1			
 Occitan	Occitan			WOMAN_NOUN	femna	fˈennɔ	f ˈe n n ɔ		WOMAN_NOUN_1			
@@ -3872,6 +3984,7 @@ Friulian	Friulian			IRON_NOUN	fier	fjˈɛr	f j ˈɛ r		IRON_NOUN_1
 Romansch	Romansch			IRON_NOUN	fier	fjˈɛːr	f j ˈɛː r		IRON_NOUN_1			
 French	French			IRON_NOUN	fer	fɛʁ	f ɛ ʁ		IRON_NOUN_1			
 Québécois French	Québécois French			IRON_NOUN	fer	fæɛ̯ʁ	f æɛ̯ ʁ		IRON_NOUN_1			
+Walloon	Walloon			IRON_NOUN	fé	fˈe	f ˈe		IRON_NOUN_1			
 Franco-Provençal	Franco-Provençal			IRON_NOUN	fér	fˈeʁ	f ˈe ʁ		IRON_NOUN_1			
 Occitan	Occitan			IRON_NOUN	fèrre	fˈɛre	f ˈɛ r e		IRON_NOUN_1			
 Gascon	Gascon			IRON_NOUN	hèr	hˈɛ	h ˈɛ		IRON_NOUN_1			
@@ -3903,6 +4016,7 @@ Friulian	Friulian			PARTY_NOUN	fieste	fjˈɛste	f j ˈɛ s t e		PARTY_NOUN_2
 Romansch	Romansch			PARTY_NOUN	fiasta	fjˈastə	f j ˈa s t ə		PARTY_NOUN_2			
 French	French			PARTY_NOUN	fête	fɛt	f ɛ t		PARTY_NOUN_2			
 Québécois French	Québécois French			PARTY_NOUN	fête	fɛɪ̯t	f ɛɪ̯ t		PARTY_NOUN_2			
+Walloon	Walloon			PARTY_NOUN	fiesse	fjˈɛs	f j ˈɛ s		PARTY_NOUN_2			
 Franco-Provençal	Franco-Provençal			PARTY_NOUN	féta	fˈeta	f ˈe t a		PARTY_NOUN_2			
 Occitan	Occitan			PARTY_NOUN	fèsta	fˈɛstɔ	f ˈɛ s t ɔ		PARTY_NOUN_2			
 Gascon	Gascon			PARTY_NOUN	hèsta	hˈɛstɔ	h ˈɛ s t ɔ		PARTY_NOUN_2			
@@ -3936,6 +4050,7 @@ Ladin	Ladin			LIVER_NOUN	fié	fjˈe	f j ˈe		LIVER_NOUN_1
 Friulian	Friulian			LIVER_NOUN	fiât	fjˈaːt	f j ˈaː t		LIVER_NOUN_1			
 French	French			LIVER_NOUN	foie	fwa	f w a		LIVER_NOUN_1			
 Québécois French	Québécois French			LIVER_NOUN	foie	fwɛ	f w ɛ		LIVER_NOUN_1			
+Walloon	Walloon			LIVER_NOUN	foete	fwˈɛt	f w ˈɛ t		LIVER_NOUN_1			
 Franco-Provençal	Franco-Provençal			LIVER_NOUN	fèjho	fˈɛðo	f ˈɛ ð o		LIVER_NOUN_1			
 Savoyard	Savoyard			LIVER_NOUN	fèzho	fˈɛðo	f ˈɛ ð o		LIVER_NOUN_1			
 Occitan	Occitan			LIVER_NOUN	fetge	fˈeʤe	f ˈe ʤ e		LIVER_NOUN_1			
@@ -3971,6 +4086,7 @@ Friulian	Friulian			DAUGHTER_NOUN	fie	fˈie	f ˈi e		DAUGHTER_NOUN_1
 Romansch	Romansch			DAUGHTER_NOUN	figlia	fˈiːʎə	f ˈiː ʎ ə		DAUGHTER_NOUN_1			
 French	French			DAUGHTER_NOUN	fille	fij	f i j		DAUGHTER_NOUN_1			
 Québécois French	Québécois French			DAUGHTER_NOUN	fille	fɪj	f ɪ j		DAUGHTER_NOUN_1			
+Walloon	Walloon			DAUGHTER_NOUN	feye	fˈɛj	f ˈɛ j		DAUGHTER_NOUN_1			
 Franco-Provençal	Franco-Provençal			DAUGHTER_NOUN	felye	fˈeʎə	f ˈe ʎ ə		DAUGHTER_NOUN_1			
 Occitan	Occitan			DAUGHTER_NOUN	filha	fˈiʎɔ	f ˈi ʎ ɔ		DAUGHTER_NOUN_1			
 Gascon	Gascon			DAUGHTER_NOUN	hilha	hˈiʎɔ	h ˈi ʎ ɔ		DAUGHTER_NOUN_1			
@@ -4006,6 +4122,7 @@ Eastern Lombard	Eastern Lombard			SON_NOUN	fiöl	fjˈøl	f j ˈø l		SON_NOUN_1
 Ladin	Ladin			SON_NOUN	fi	fˈi	f ˈi		SON_NOUN_1			
 Friulian	Friulian			SON_NOUN	fi	fˈi	f ˈi		SON_NOUN_1			
 Romansch	Romansch			SON_NOUN	figl	fˈiʎ	f ˈi ʎ		SON_NOUN_1			
+Walloon	Walloon			SON_NOUN	fi	fˈi	f ˈi		SON_NOUN_1			
 Franco-Provençal	Franco-Provençal			SON_NOUN	fily	fˈiʎ	f ˈi ʎ		SON_NOUN_1			
 Occitan	Occitan			SON_NOUN	filh	fˈil	f ˈi l		SON_NOUN_1			
 Gascon	Gascon			SON_NOUN	hilh	hˈiʎ	h ˈi ʎ		SON_NOUN_1			
@@ -4039,6 +4156,7 @@ Friulian	Friulian			STRING_NOUN	fîl	fˈiːl	f ˈiː l		STRING_NOUN_2
 Romansch	Romansch			STRING_NOUN	fil	fˈil	f ˈi l		STRING_NOUN_2			
 French	French			STRING_NOUN	fil	fil	f i l		STRING_NOUN_2			
 Québécois French	Québécois French			STRING_NOUN	fil	fɪl	f ɪ l		STRING_NOUN_2			
+Walloon	Walloon			STRING_NOUN	fi	fˈi	f ˈi		STRING_NOUN_2			
 Occitan	Occitan			STRING_NOUN	fil	fˈil	f ˈi l		STRING_NOUN_2			
 Gascon	Gascon			STRING_NOUN	hiu	hˈiw	h ˈi w		STRING_NOUN_2			
 Catalan	Catalan			STRING_NOUN	fil	fˈil	f ˈi l		STRING_NOUN_2			
@@ -4070,6 +4188,7 @@ Friulian	Friulian			END_NOUN	fin	fˈiŋ	f ˈi ŋ		END_NOUN_1
 Romansch	Romansch			END_NOUN	fin	fˈin	f ˈi n		END_NOUN_1			
 French	French			END_NOUN	fin	fɛ̃	f ɛ̃		END_NOUN_1			
 Québécois French	Québécois French			END_NOUN	fin	fẽɪ̯̃	f ẽɪ̯̃		END_NOUN_1			
+Walloon	Walloon			END_NOUN	fén	fˈẽ	f ˈẽ		END_NOUN_1			
 Franco-Provençal	Franco-Provençal			END_NOUN	fin	fˈĩ	f ˈĩ		END_NOUN_1			
 Occitan	Occitan			END_NOUN	fin	fˈi	f ˈi		END_NOUN_1			
 Gascon	Gascon			END_NOUN	fin	fˈiŋ	f ˈi ŋ		END_NOUN_1	TRUE		
@@ -4099,6 +4218,8 @@ Ladin	Ladin			FLAME_NOUN	flama	flˈama	f l ˈa m a		FLAME_NOUN_1
 Friulian	Friulian			FLAME_NOUN	flame	flˈame	f l ˈa m e		FLAME_NOUN_1			
 French	French			FLAME_NOUN	flamme	flam	f l a m		FLAME_NOUN_1			
 Québécois French	Québécois French			FLAME_NOUN	flamme	flam	f l a m		FLAME_NOUN_1			
+Walloon	Walloon			FLAME_NOUN	blame	blˈam	b l ˈa m		FLAME_NOUN_1			
+Walloon	Walloon			FLAME_NOUN	flame	flˈam	f l ˈa m		FLAME_NOUN_1			
 Franco-Provençal	Franco-Provençal			FLAME_NOUN	flama	flˈama	f l ˈa m a		FLAME_NOUN_1			
 Occitan	Occitan			FLAME_NOUN	flamba	flˈambɔ	f l ˈa m b ɔ		FLAME_NOUN_1			
 Gascon	Gascon			FLAME_NOUN	ehlama	ehlˈamɔ	e h l ˈa m ɔ		FLAME_NOUN_1			
@@ -4133,6 +4254,7 @@ Friulian	Friulian			FLOWER_NOUN	flôr	flˈoːr	f l ˈoː r		FLOWER_NOUN_1
 Romansch	Romansch			FLOWER_NOUN	flur	flˈur	f l ˈu r		FLOWER_NOUN_1			
 French	French			FLOWER_NOUN	fleur	flœʁ	f l œ ʁ		FLOWER_NOUN_1			
 Québécois French	Québécois French			FLOWER_NOUN	fleur	flaœ̯ʁ	f l aœ̯ ʁ		FLOWER_NOUN_1			
+Walloon	Walloon			FLOWER_NOUN	fleur	flˈøːʀ	f l ˈøː ʀ		FLOWER_NOUN_1			
 Franco-Provençal	Franco-Provençal			FLOWER_NOUN	flör	flˈøʁ	f l ˈø ʁ		FLOWER_NOUN_1			
 Occitan	Occitan			FLOWER_NOUN	flor	flˈu	f l ˈu		FLOWER_NOUN_1			
 Gascon	Gascon			FLOWER_NOUN	ehlor	ehlˈu	e h l ˈu		FLOWER_NOUN_1			
@@ -4185,6 +4307,7 @@ Friulian	Friulian			FIRE_NOUN	fûc	fˈuːk	f ˈuː k		FIRE_NOUN_1
 Romansch	Romansch			FIRE_NOUN	fieu	fjˈɛw	f j ˈɛ w		FIRE_NOUN_1			
 French	French			FIRE_NOUN	feu	fø	f ø		FIRE_NOUN_1			
 Québécois French	Québécois French			FIRE_NOUN	feu	føʏ̯	f øʏ̯		FIRE_NOUN_1			
+Walloon	Walloon			FIRE_NOUN	feu	fˈøː	f ˈøː		FIRE_NOUN_1			
 Franco-Provençal	Franco-Provençal			FIRE_NOUN	fua	fwˈa	f w ˈa		FIRE_NOUN_1			
 Savoyard	Savoyard			FIRE_NOUN	fwà	fwa	f w a		FIRE_NOUN_1			
 Occitan	Occitan			FIRE_NOUN	fuòc	fɥˈɔk	f ɥ ˈɔ k		FIRE_NOUN_1			
@@ -4218,6 +4341,7 @@ Friulian	Friulian			LEAF_NOUN	fuee	fwˈɛe	f w ˈɛ e		LEAF_NOUN_1
 Romansch	Romansch			LEAF_NOUN	fegl	fˈeʎ	f ˈe ʎ		LEAF_NOUN_1			
 French	French			LEAF_NOUN	feuille	fœj	f œ j		LEAF_NOUN_1			
 Québécois French	Québécois French			LEAF_NOUN	feuille	fœj	f œ j		LEAF_NOUN_1			
+Walloon	Walloon			LEAF_NOUN	foye	fˈɔːj	f ˈɔː j		LEAF_NOUN_1			
 Franco-Provençal	Franco-Provençal			LEAF_NOUN	fôlye	fˈoːʎə	f ˈoː ʎ ə		LEAF_NOUN_1			
 Savoyard	Savoyard			LEAF_NOUN	fôlye	fˈoʎe	f ˈo ʎ e		LEAF_NOUN_1			
 Occitan	Occitan			LEAF_NOUN	fuèlha	fɥˈɛʎɔ	f ɥ ˈɛ ʎ ɔ		LEAF_NOUN_1			
@@ -4234,6 +4358,7 @@ Latin	Latin			CRAZY_ADJ	follem	fˈɔlʲlʲɛ̃ː	f ˈɔ lʲ lʲ ɛ̃ː		CRAZY_AD
 Piedmontese	Piedmontese			CRAZY_ADJ	fòl	fˈɔl	f ˈɔ l		CRAZY_ADJ_1			
 French	French			CRAZY_ADJ	fou	fu	f u		CRAZY_ADJ_1			
 Québécois French	Québécois French			CRAZY_ADJ	fou	fu	f u		CRAZY_ADJ_1			
+Walloon	Walloon			CRAZY_ADJ	fô	fˈoː	f ˈoː		CRAZY_ADJ_1			
 Franco-Provençal	Franco-Provençal			CRAZY_ADJ	foul	fˈul	f ˈu l		CRAZY_ADJ_1			
 Latin	Latin			BEAUTIFUL (M)_ADJ	fōrmōsam	foːrmˈoːsãː	f oː r m ˈoː s ãː		BEAUTIFUL (M)_ADJ_2			
 Romanian	Romanian			BEAUTIFUL (M)_ADJ	frumoasă	frumo̯ˈasə	f r u m o̯ˈa s ə		BEAUTIFUL (M)_ADJ_2			
@@ -4264,6 +4389,7 @@ Ladin	Ladin			STRONG_ADJ	fort	fˈɔrt	f ˈɔ r t		STRONG_ADJ_1
 Friulian	Friulian			STRONG_ADJ	fuart	fwˈart	f w ˈa r t		STRONG_ADJ_1			
 French	French			STRONG_ADJ	fort	fɔʁ	f ɔ ʁ		STRONG_ADJ_1			
 Québécois French	Québécois French			STRONG_ADJ	fort	fɑɔ̯ʁ	f ɑɔ̯ ʁ		STRONG_ADJ_1			
+Walloon	Walloon			STRONG_ADJ	foirt	fwˈaʀ	f w ˈa ʀ		STRONG_ADJ_1			
 Franco-Provençal	Franco-Provençal			STRONG_ADJ	fôrt	fˈoːʁ	f ˈoː ʁ		STRONG_ADJ_1			
 Occitan	Occitan			STRONG_ADJ	fòrt	fˈɔrt	f ˈɔ r t		STRONG_ADJ_1			
 Gascon	Gascon			STRONG_ADJ	hòrt	hˈɔrt	h ˈɔ r t		STRONG_ADJ_1			
@@ -4291,6 +4417,7 @@ Friulian	Friulian			BROTHER_NOUN	fradi	frˈadi	f r ˈa d i		BROTHER_NOUN_1
 Romansch	Romansch			BROTHER_NOUN	frar	frˈar	f r ˈa r		BROTHER_NOUN_1			
 French	French			BROTHER_NOUN	frère	fʁɛʁ	f ʁ ɛ ʁ		BROTHER_NOUN_1			
 Québécois French	Québécois French			BROTHER_NOUN	frère	fʁæɛ̯ʁ	f ʁ æɛ̯ ʁ		BROTHER_NOUN_1			
+Walloon	Walloon			BROTHER_NOUN	fré	fʀˈe	f ʀ ˈe		BROTHER_NOUN_1			
 Franco-Provençal	Franco-Provençal			BROTHER_NOUN	frâre	fʁˈaːðə	f ʁ ˈaː ð ə		BROTHER_NOUN_1			
 Occitan	Occitan			BROTHER_NOUN	fraire	fɾˈajɾe	f ɾ ˈa j ɾ e		BROTHER_NOUN_1			
 Gascon	Gascon			BROTHER_NOUN	hrair	hɾˈajr	h ɾ ˈa j r		BROTHER_NOUN_1			
@@ -4313,6 +4440,7 @@ Friulian	Friulian			COLD_ADJ	frêt	frˈeːt	f r ˈeː t		COLD_ADJ_1
 Romansch	Romansch			COLD_ADJ	fraid	frˈajt	f r ˈa j t		COLD_ADJ_1			
 French	French			COLD_ADJ	froid	fʁwa	f ʁ w a		COLD_ADJ_1			
 Québécois French	Québécois French			COLD_ADJ	froid	fʁwɛ	f ʁ w ɛ		COLD_ADJ_1			
+Walloon	Walloon			COLD_ADJ	froed	fʀwˈɛ	f ʀ w ˈɛ		COLD_ADJ_1			
 Franco-Provençal	Franco-Provençal			COLD_ADJ	frêd	fʁˈɛː	f ʁ ˈɛː		COLD_ADJ_1			
 Savoyard	Savoyard			COLD_ADJ	frai	frˈaj	f r ˈa j		COLD_ADJ_1			
 Occitan	Occitan			COLD_ADJ	fred	fɾˈet	f ɾ ˈe t		COLD_ADJ_1			
@@ -4352,6 +4480,7 @@ Friulian	Friulian			FRUIT_NOUN	frut	frˈut	f r ˈu t		FRUIT_NOUN_1
 Romansch	Romansch			FRUIT_NOUN	fritg	frˈiʨ	f r ˈi ʨ		FRUIT_NOUN_1			
 French	French			FRUIT_NOUN	fruit	fʁɥi	f ʁ ɥ i		FRUIT_NOUN_1			
 Québécois French	Québécois French			FRUIT_NOUN	fruit	fʁɥi	f ʁ ɥ i		FRUIT_NOUN_1			
+Walloon	Walloon			FRUIT_NOUN	frut	fʀˈy	f ʀ ˈy		FRUIT_NOUN_1			
 Franco-Provençal	Franco-Provençal			FRUIT_NOUN	fruit	fʁwˈi	f ʁ w ˈi		FRUIT_NOUN_1			
 Occitan	Occitan			FRUIT_NOUN	fruch	frˈyʧ	f r ˈy ʧ		FRUIT_NOUN_1			
 Gascon	Gascon			FRUIT_NOUN	hrut	hɾˈyt	h ɾ ˈy t		FRUIT_NOUN_1			
@@ -4416,6 +4545,7 @@ Ladin	Ladin			YELLOW_ADJ	ÿal	ʤˈal	ʤ ˈa l		YELLOW_ADJ_4
 Friulian	Friulian			YELLOW_ADJ	zâl	ʤˈaːl	ʤ ˈaː l		YELLOW_ADJ_4			
 French	French			YELLOW_ADJ	jaune	ʒon	ʒ o n		YELLOW_ADJ_4			
 Québécois French	Québécois French			YELLOW_ADJ	jaune	ʒoʊ̯n	ʒ oʊ̯ n		YELLOW_ADJ_4			
+Walloon	Walloon			YELLOW_ADJ	djaene	ʤˈɛn	ʤ ˈɛ n		YELLOW_ADJ_4			
 Franco-Provençal	Franco-Provençal			YELLOW_ADJ	jhôno	ðˈoːno	ð ˈoː n o		YELLOW_ADJ_4			
 Savoyard	Savoyard			YELLOW_ADJ	zhôno	ðˈono	ð ˈo n o		YELLOW_ADJ_4			
 Occitan	Occitan			YELLOW_ADJ	jaune	ʤˈawne	ʤ ˈa w n e		YELLOW_ADJ_4	TRUE		
@@ -4430,6 +4560,7 @@ Piedmontese	Piedmontese			JOY_NOUN	giòja	ʤˈɔja	ʤ ˈɔ j a		JOY_NOUN_1	TRUE
 Eastern Lombard	Eastern Lombard			JOY_NOUN	giòia	ʤˈɔja	ʤ ˈɔ j a		JOY_NOUN_1	TRUE		
 French	French			JOY_NOUN	joie	ʒwa	ʒ w a		JOY_NOUN_1			
 Québécois French	Québécois French			JOY_NOUN	joie	ʒwɛ	ʒ w ɛ		JOY_NOUN_1			
+Walloon	Walloon			JOY_NOUN	djoye	ʤˈɔːj	ʤ ˈɔː j		JOY_NOUN_1			
 Occitan	Occitan			JOY_NOUN	gaug	ɡˈawk	ɡ ˈa w k		JOY_NOUN_1			
 Gascon	Gascon			JOY_NOUN	gai	ɡˈaj	ɡ ˈa j		JOY_NOUN_1			
 Catalan	Catalan			JOY_NOUN	goig	ɡˈɔʧ	ɡ ˈɔ ʧ		JOY_NOUN_1			
@@ -4453,6 +4584,7 @@ Eastern Lombard	Eastern Lombard			FREEZE_VERB	zelà	zelˈa	z e l ˈa		FREEZE_VER
 Romansch	Romansch			FREEZE_VERB	schelar	ʃəlˈaːr	ʃ ə l ˈaː r		FREEZE_VERB_2			
 French	French			FREEZE_VERB	geler	ʒəle	ʒ ə l e		FREEZE_VERB_2			
 Québécois French	Québécois French			FREEZE_VERB	geler	ʒœle	ʒ œ l e		FREEZE_VERB_2			
+Walloon	Walloon			FREEZE_VERB	djaler	ʤalˈe	ʤ a l ˈe		FREEZE_VERB_2			
 Franco-Provençal	Franco-Provençal			FREEZE_VERB	jhelar	ðəlˈa	ð ə l ˈa		FREEZE_VERB_2			
 Occitan	Occitan			FREEZE_VERB	gelar	ʤelˈa	ʤ e l ˈa		FREEZE_VERB_2			
 Gascon	Gascon			FREEZE_VERB	gelar	ʒelˈa	ʒ e l ˈa		FREEZE_VERB_2			
@@ -4540,6 +4672,7 @@ Ladin	Ladin			PEOPLE_NOUN	jent	ʒˈɛnt	ʒ ˈɛ n t		PEOPLE_NOUN_1
 Friulian	Friulian			PEOPLE_NOUN	int	ˈint	ˈi n t		PEOPLE_NOUN_1			
 French	French			PEOPLE_NOUN	gens	ʒɑ̃	ʒ ɑ̃		PEOPLE_NOUN_1			
 Québécois French	Québécois French			PEOPLE_NOUN	gens	ʒã	ʒ ã		PEOPLE_NOUN_1			
+Walloon	Walloon			PEOPLE_NOUN	djint	ʤˈɛ̃	ʤ ˈɛ̃		PEOPLE_NOUN_1			
 Franco-Provençal	Franco-Provençal			PEOPLE_NOUN	jhent	ðˈɛ̃	ð ˈɛ̃		PEOPLE_NOUN_1			
 Occitan	Occitan			PEOPLE_NOUN	gent	ʤˈɛn	ʤ ˈɛ n		PEOPLE_NOUN_1			
 Catalan	Catalan			PEOPLE_NOUN	gent	ʒˈen	ʒ ˈe n		PEOPLE_NOUN_1			
@@ -4586,6 +4719,7 @@ Friulian	Friulian			KNEE_NOUN	zenoli	ʤenˈɔli	ʤ e n ˈɔ l i		KNEE_NOUN_1
 Romansch	Romansch			KNEE_NOUN	schanugl	ʃənˈuʎ	ʃ ə n ˈu ʎ		KNEE_NOUN_1			
 French	French			KNEE_NOUN	genou	ʒənu	ʒ ə n u		KNEE_NOUN_1			
 Québécois French	Québécois French			KNEE_NOUN	genou	ʒœnu	ʒ œ n u		KNEE_NOUN_1			
+Walloon	Walloon			KNEE_NOUN	djno	ɲɲˈɔ	ɲ ɲ ˈɔ		KNEE_NOUN_1			
 Franco-Provençal	Franco-Provençal			KNEE_NOUN	jhenöl	ðənˈøʎ	ð ə n ˈø ʎ		KNEE_NOUN_1			
 Franco-Provençal	Franco-Provençal			KNEE_NOUN	jhenuêl	ðənwˈɛːʎ	ð ə n w ˈɛː ʎ		KNEE_NOUN_1			
 Savoyard	Savoyard			KNEE_NOUN	zhèneu	ðɛnˈœ	ð ɛ n ˈœ		KNEE_NOUN_1			
@@ -4627,6 +4761,8 @@ Ladin	Ladin			GUMS_NOUN	jenjiva	ʒenʒˈiva	ʒ e n ʒ ˈi v a		GUMS_NOUN_1
 Friulian	Friulian			GUMS_NOUN	zenzie	ʤenʤˈie	ʤ e n ʤ ˈi e		GUMS_NOUN_1			
 French	French			GUMS_NOUN	gencive	ʒɑ̃siv	ʒ ɑ̃ s i v		GUMS_NOUN_1			
 Québécois French	Québécois French			GUMS_NOUN	gencive	ʒãsiv	ʒ ã s i v		GUMS_NOUN_1			
+Walloon	Walloon			GUMS_NOUN	djincive	ʤɛ̃sˈiːf	ʤ ɛ̃ s ˈiː f		GUMS_NOUN_1			
+Walloon	Walloon			GUMS_NOUN	djindjive	ʤɛ̃ʤˈiːf	ʤ ɛ̃ ʤ ˈiː f		GUMS_NOUN_1			
 Franco-Provençal	Franco-Provençal			GUMS_NOUN	jhensiva	ðɛ̃sˈiva	ð ɛ̃ s ˈi v a		GUMS_NOUN_1			
 Occitan	Occitan			GUMS_NOUN	geniva	ʤenˈiβɔ	ʤ e n ˈi β ɔ		GUMS_NOUN_1			
 Gascon	Gascon			GUMS_NOUN	anhiva	anhˈiβɔ	a n h ˈi β ɔ		GUMS_NOUN_1			
@@ -4648,6 +4784,7 @@ Piedmontese	Piedmontese			ICE_NOUN	giassa	ʤˈasa	ʤ ˈa s a		ICE_NOUN_3
 Ladin	Ladin			ICE_NOUN	glacia	ɡlˈaʨa	ɡ l ˈa ʨ a		ICE_NOUN_3			
 French	French			ICE_NOUN	glace	ɡlas	ɡ l a s		ICE_NOUN_3			
 Québécois French	Québécois French			ICE_NOUN	glace	ɡlas	ɡ l a s		ICE_NOUN_3			
+Walloon	Walloon			ICE_NOUN	glaece	ɡlˈɛs	ɡ l ˈɛ s		ICE_NOUN_3			
 Franco-Provençal	Franco-Provençal			ICE_NOUN	gllace	ɡʎˈasə	ɡ ʎ ˈa s ə		ICE_NOUN_3			
 Latin	Latin			FREEZE_VERB	glaciāre	ɡɫakiˈaːrɛ	ɡ ɫ a k i ˈaː r ɛ		FREEZE_VERB_3			
 Italian	Italian			FREEZE_VERB	ghiacciare	ɡjaʧʧˈare	ɡ j a ʧ ʧ ˈa r e		FREEZE_VERB_3			
@@ -4684,6 +4821,7 @@ Friulian	Friulian			BIG_ADJ	grant	ɡrˈant	ɡ r ˈa n t		BIG_ADJ_1
 Romansch	Romansch			BIG_ADJ	grond	ɡrˈɔnt	ɡ r ˈɔ n t		BIG_ADJ_1			
 French	French			BIG_ADJ	grand	ɡʁɑ̃	ɡ ʁ ɑ̃		BIG_ADJ_1			
 Québécois French	Québécois French			BIG_ADJ	grand	ɡʁã	ɡ ʁ ã		BIG_ADJ_1			
+Walloon	Walloon			BIG_ADJ	grand	ɡʀˈɑ̃	ɡ ʀ ˈɑ̃		BIG_ADJ_1			
 Franco-Provençal	Franco-Provençal			BIG_ADJ	grant	ɡʁˈɑ̃	ɡ ʁ ˈɑ̃		BIG_ADJ_1			
 Savoyard	Savoyard			BIG_ADJ	gran	ɡrˈã	ɡ r ˈã		BIG_ADJ_1			
 Occitan	Occitan			BIG_ADJ	gran	ɡɾˈa	ɡ ɾ ˈa		BIG_ADJ_1			
@@ -4739,6 +4877,7 @@ Friulian	Friulian			THICK_ADJ	grues	ɡrwˈɛs	ɡ r w ˈɛ s		THICK_ADJ_1
 Romansch	Romansch			THICK_ADJ	gross	ɡrˈɔs	ɡ r ˈɔ s		THICK_ADJ_1			
 French	French			THICK_ADJ	gros	ɡʁo	ɡ ʁ o		THICK_ADJ_1			
 Québécois French	Québécois French			THICK_ADJ	gros	ɡʁo	ɡ ʁ o		THICK_ADJ_1			
+Walloon	Walloon			THICK_ADJ	gros	ɡʀˈɔ	ɡ ʀ ˈɔ		THICK_ADJ_1			
 Franco-Provençal	Franco-Provençal			THICK_ADJ	grôs	ɡʁˈoː	ɡ ʁ ˈoː		THICK_ADJ_1			
 Occitan	Occitan			THICK_ADJ	gròs	ɡɾˈɔs	ɡ ɾ ˈɔ s		THICK_ADJ_1			
 Gascon	Gascon			THICK_ADJ	gròs	ɡɾˈɔs	ɡ ɾ ˈɔ s		THICK_ADJ_1			
@@ -4767,6 +4906,7 @@ Friulian	Friulian			THROAT_NOUN	gole	ɡˈole	ɡ ˈo l e		THROAT_NOUN_1
 Romansch	Romansch			THROAT_NOUN	gula	ɡˈuːlə	ɡ ˈuː l ə		THROAT_NOUN_1			
 French	French			THROAT_NOUN	gueule	ɡœl	ɡ œ l		THROAT_NOUN_1			
 Québécois French	Québécois French			THROAT_NOUN	gueule	ɡœl	ɡ œ l		THROAT_NOUN_1			
+Walloon	Walloon			THROAT_NOUN	gueuye	ɡˈøːj	ɡ ˈøː j		THROAT_NOUN_1			
 Franco-Provençal	Franco-Provençal			THROAT_NOUN	göla	ɡˈøla	ɡ ˈø l a		THROAT_NOUN_1			
 Occitan	Occitan			THROAT_NOUN	gola	ɡˈulɔ	ɡ ˈu l ɔ		THROAT_NOUN_1			
 Gascon	Gascon			THROAT_NOUN	gola	ɡˈulɔ	ɡ ˈu l ɔ		THROAT_NOUN_1			
@@ -4787,6 +4927,7 @@ Friulian	Friulian			DROP_NOUN	gote	ɡˈote	ɡ ˈo t e		DROP_NOUN_1
 Romansch	Romansch			DROP_NOUN	gut	ɡˈut	ɡ ˈu t		DROP_NOUN_1			
 French	French			DROP_NOUN	goutte	ɡut	ɡ u t		DROP_NOUN_1			
 Québécois French	Québécois French			DROP_NOUN	goutte	ɡʊt	ɡ ʊ t		DROP_NOUN_1			
+Walloon	Walloon			DROP_NOUN	gote	ɡˈɔt	ɡ ˈɔ t		DROP_NOUN_1			
 Franco-Provençal	Franco-Provençal			DROP_NOUN	gota	ɡˈota	ɡ ˈo t a		DROP_NOUN_1			
 Occitan	Occitan			DROP_NOUN	gota	ɡˈutɔ	ɡ ˈu t ɔ		DROP_NOUN_1			
 Gascon	Gascon			DROP_NOUN	gota	ɡˈutɔ	ɡ ˈu t ɔ		DROP_NOUN_1			
@@ -4847,6 +4988,7 @@ Friulian	Friulian			GRASS_NOUN	jerbe	jˈɛrbe	j ˈɛ r b e		GRASS_NOUN_1
 Romansch	Romansch			GRASS_NOUN	erva	ˈɛːrvə	ˈɛː r v ə		GRASS_NOUN_1			
 French	French			GRASS_NOUN	herbe	ɛʁb	ɛ ʁ b		GRASS_NOUN_1			
 Québécois French	Québécois French			GRASS_NOUN	herbe	æɛ̯ʁb	æɛ̯ ʁ b		GRASS_NOUN_1			
+Walloon	Walloon			GRASS_NOUN	yebe	jˈɛp	j ˈɛ p		GRASS_NOUN_1			
 Franco-Provençal	Franco-Provençal			GRASS_NOUN	hèrba	ˈɛʁba	ˈɛ ʁ b a		GRASS_NOUN_1			
 Occitan	Occitan			GRASS_NOUN	èrba	ˈɛrβɔ	ˈɛ r β ɔ		GRASS_NOUN_1			
 Gascon	Gascon			GRASS_NOUN	èrba	ˈɛrβɔ	ˈɛ r β ɔ		GRASS_NOUN_1			
@@ -4867,6 +5009,7 @@ Aromanian	Aromanian			WINTER_NOUN	earnã	e̯ˈarnə	e̯ˈa r n ə		WINTER_NOUN_2
 Aromanian	Aromanian			WINTER_NOUN	iarnã	jˈarnə	j ˈa r n ə		WINTER_NOUN_2			
 French	French			WINTER_NOUN	hiver	ivɛʁ	i v ɛ ʁ		WINTER_NOUN_2			
 Québécois French	Québécois French			WINTER_NOUN	hiver	ivæɛ̯ʁ	i v æɛ̯ ʁ		WINTER_NOUN_2			
+Walloon	Walloon			WINTER_NOUN	ivier	ivjˈɛːʀ	i v j ˈɛː ʀ		WINTER_NOUN_2			
 Franco-Provençal	Franco-Provençal			WINTER_NOUN	hivèrn	ivˈɛʁ	i v ˈɛ ʁ		WINTER_NOUN_2			
 Occitan	Occitan			WINTER_NOUN	ivèrn	iβˈɛr	i β ˈɛ r		WINTER_NOUN_2			
 Gascon	Gascon			WINTER_NOUN	ivèrn	iβˈɛr	i β ˈɛ r		WINTER_NOUN_2			
@@ -4893,6 +5036,7 @@ Friulian	Friulian			SPAIN_PROPN	Spagne	spˈaɲe	s p ˈa ɲ e		SPAIN_PROPN_1
 Romansch	Romansch			SPAIN_PROPN	Spagna	ʃpˈaːɲə	ʃ p ˈaː ɲ ə		SPAIN_PROPN_1			
 French	French			SPAIN_PROPN	Espagne	ɛspaɲ	ɛ s p a ɲ		SPAIN_PROPN_1	TRUE		
 Québécois French	Québécois French			SPAIN_PROPN	Espagne	ɛspaɲ	ɛ s p a ɲ		SPAIN_PROPN_1	TRUE		
+Walloon	Walloon			SPAIN_PROPN	Espagne	ɛspˈaɲ	ɛ s p ˈa ɲ		SPAIN_PROPN_1			
 Occitan	Occitan			SPAIN_PROPN	Espanha	espˈaɲɔ	e s p ˈa ɲ ɔ		SPAIN_PROPN_1			
 Gascon	Gascon			SPAIN_PROPN	Espanha	espˈaɲɔ	e s p ˈa ɲ ɔ		SPAIN_PROPN_1			
 Catalan	Catalan			SPAIN_PROPN	Espanya	əspˈaɲə	ə s p ˈa ɲ ə		SPAIN_PROPN_1			
@@ -4911,6 +5055,7 @@ Emilian	Emilian			MAN_NOUN	òmen	ˈɔmen	ˈɔ m e n		MAN_NOUN_2
 Western Lombard	Western Lombard			MAN_NOUN	omm	ˈum	ˈu m		MAN_NOUN_2			
 French	French			MAN_NOUN	homme	ɔm	ɔ m		MAN_NOUN_2			
 Québécois French	Québécois French			MAN_NOUN	homme	ɔm	ɔ m		MAN_NOUN_2			
+Walloon	Walloon			MAN_NOUN	ome	ˈɔm	ˈɔ m		MAN_NOUN_2			
 Occitan	Occitan			MAN_NOUN	òme	ˈɔme	ˈɔ m e		MAN_NOUN_2			
 Gascon	Gascon			MAN_NOUN	òmi	ˈɔmi	ˈɔ m i		MAN_NOUN_2			
 Catalan	Catalan			MAN_NOUN	home	ˈɔmə	ˈɔ m ə		MAN_NOUN_2			
@@ -4995,6 +5140,7 @@ Ladin	Ladin			HE_PRON	el	ˈel	ˈe l		HE_PRON_2
 Romansch	Romansch			HE_PRON	el	ˈel	ˈe l		HE_PRON_2			
 French	French			HE_PRON	il	il	i l		HE_PRON_2			
 Québécois French	Québécois French			HE_PRON	il	ɪl	ɪ l		HE_PRON_2			
+Walloon	Walloon			HE_PRON	i	ˈi	ˈi		HE_PRON_2			
 Franco-Provençal	Franco-Provençal			HE_PRON	i	ˈi	ˈi		HE_PRON_2			
 Occitan	Occitan			HE_PRON	el	ˈel	ˈe l		HE_PRON_2			
 Gascon	Gascon			HE_PRON	eth	ˈet	ˈe t		HE_PRON_2			
@@ -5034,6 +5180,7 @@ Friulian	Friulian			GAME_NOUN	zûc	ʤˈuːk	ʤ ˈuː k		GAME_NOUN_1
 Romansch	Romansch			GAME_NOUN	gieu	ʥjˈɛw	ʥ j ˈɛ w		GAME_NOUN_1			
 French	French			GAME_NOUN	jeu	ʒø	ʒ ø		GAME_NOUN_1			
 Québécois French	Québécois French			GAME_NOUN	jeu	ʒøʏ̯	ʒ øʏ̯		GAME_NOUN_1			
+Walloon	Walloon			GAME_NOUN	djeu	ʤˈøː	ʤ ˈøː		GAME_NOUN_1			
 Franco-Provençal	Franco-Provençal			GAME_NOUN	jhoué	ðwˈe	ð w ˈe		GAME_NOUN_1			
 Occitan	Occitan			GAME_NOUN	jòc	ʤˈɔk	ʤ ˈɔ k		GAME_NOUN_1			
 Gascon	Gascon			GAME_NOUN	jòc	ʒˈɔk	ʒ ˈɔ k		GAME_NOUN_1			
@@ -5070,6 +5217,7 @@ Ladin	Ladin			JUDGE_NOUN	giùdize	ʥˈudiʦe	ʥ ˈu d i ʦ e		JUDGE_NOUN_1
 Friulian	Friulian			JUDGE_NOUN	judiç	jˈudiʧ	j ˈu d i ʧ		JUDGE_NOUN_1			
 French	French			JUDGE_NOUN	juge	ʒyʒ	ʒ y ʒ		JUDGE_NOUN_1			
 Québécois French	Québécois French			JUDGE_NOUN	juge	ʒyʒ	ʒ y ʒ		JUDGE_NOUN_1			
+Walloon	Walloon			JUDGE_NOUN	djudje	ʤˈyʧ	ʤ ˈy ʧ		JUDGE_NOUN_1			
 Franco-Provençal	Franco-Provençal			JUDGE_NOUN	jujho	ʒˈuðo	ʒ ˈu ð o		JUDGE_NOUN_1			
 Occitan	Occitan			JUDGE_NOUN	jutge	ʤˈyʤe	ʤ ˈy ʤ e		JUDGE_NOUN_1			
 Gascon	Gascon			JUDGE_NOUN	jutge	ʒˈyʤe	ʒ ˈy ʤ e		JUDGE_NOUN_1			
@@ -5089,6 +5237,7 @@ Venetian	Venetian			JOINED_ADJ	xonto	zˈoŋto	z ˈo ŋ t o		JOINED_ADJ_1
 Friulian	Friulian			JOINED_ADJ	zonte	ʤˈonte	ʤ ˈo n t e		JOINED_ADJ_1			
 French	French			JOINED_ADJ	joint	ʒwɛ̃	ʒ w ɛ̃		JOINED_ADJ_1			
 Québécois French	Québécois French			JOINED_ADJ	joint	ʒwẽɪ̯̃	ʒ w ẽɪ̯̃		JOINED_ADJ_1			
+Walloon	Walloon			JOINED_ADJ	djont	ʤˈɔ̃	ʤ ˈɔ̃		JOINED_ADJ_1			
 Occitan	Occitan			JOINED_ADJ	junt	ʤˈyn	ʤ ˈy n		JOINED_ADJ_1			
 Gascon	Gascon			JOINED_ADJ	junt	ʒˈyn	ʒ ˈy n		JOINED_ADJ_1			
 Catalan	Catalan			JOINED_ADJ	junt	ʒˈun	ʒ ˈu n		JOINED_ADJ_1			
@@ -5114,6 +5263,7 @@ Ladin	Ladin			JUNE_PROPN	jugn	ʒˈuɲ	ʒ ˈu ɲ		JUNE_PROPN_1
 Friulian	Friulian			JUNE_PROPN	jugn	jˈuɲ	j ˈu ɲ		JUNE_PROPN_1			
 French	French			JUNE_PROPN	juin	ʒɥɛ̃	ʒ ɥ ɛ̃		JUNE_PROPN_1			
 Québécois French	Québécois French			JUNE_PROPN	juin	ʒɥẽɪ̯̃	ʒ ɥ ẽɪ̯̃		JUNE_PROPN_1			
+Walloon	Walloon			JUNE_PROPN	djun	ʤˈœ̃	ʤ ˈœ̃		JUNE_PROPN_1			
 Franco-Provençal	Franco-Provençal			JUNE_PROPN	joen	ʒwˈɛ̃	ʒ w ˈɛ̃		JUNE_PROPN_1			
 Occitan	Occitan			JUNE_PROPN	junh	ʤˈyɲ	ʤ ˈy ɲ		JUNE_PROPN_1			
 Gascon	Gascon			JUNE_PROPN	junh	ʒˈyɲ	ʒ ˈy ɲ		JUNE_PROPN_1			
@@ -5146,6 +5296,7 @@ Friulian	Friulian			YOUNG_ADJ	zovin	ʤˈoviŋ	ʤ ˈo v i ŋ		YOUNG_ADJ_1
 Romansch	Romansch			YOUNG_ADJ	giuven	ʥˈuːvən	ʥ ˈuː v ə n		YOUNG_ADJ_1			
 French	French			YOUNG_ADJ	jeune	ʒœn	ʒ œ n		YOUNG_ADJ_1			
 Québécois French	Québécois French			YOUNG_ADJ	jeune	ʒœn	ʒ œ n		YOUNG_ADJ_1			
+Walloon	Walloon			YOUNG_ADJ	djonne	ʤˈɔ̃n	ʤ ˈɔ̃ n		YOUNG_ADJ_1			
 Franco-Provençal	Franco-Provençal			YOUNG_ADJ	jhouêno	ðwˈɛːno	ð w ˈɛː n o		YOUNG_ADJ_1			
 Occitan	Occitan			YOUNG_ADJ	jove	ʤˈuve	ʤ ˈu v e		YOUNG_ADJ_1			
 Gascon	Gascon			YOUNG_ADJ	joen	ʒwˈeŋ	ʒ w ˈe ŋ		YOUNG_ADJ_1			
@@ -5179,6 +5330,7 @@ Friulian	Friulian			TEAR_NOUN	lagrime	lˈaɡrime	l ˈa ɡ r i m e		TEAR_NOUN_1
 Romansch	Romansch			TEAR_NOUN	larma	lˈaːrmə	l ˈaː r m ə		TEAR_NOUN_1			
 French	French			TEAR_NOUN	larme	laʁm	l a ʁ m		TEAR_NOUN_1			
 Québécois French	Québécois French			TEAR_NOUN	larme	laʁm	l a ʁ m		TEAR_NOUN_1			
+Walloon	Walloon			TEAR_NOUN	låme	lˈɔːm	l ˈɔː m		TEAR_NOUN_1			
 Franco-Provençal	Franco-Provençal			TEAR_NOUN	lârma	lˈɑːʁma	l ˈɑː ʁ m a		TEAR_NOUN_1			
 Occitan	Occitan			TEAR_NOUN	lagrema	lˈaɣɾemɔ	l ˈa ɣ ɾ e m ɔ		TEAR_NOUN_1			
 Gascon	Gascon			TEAR_NOUN	lagrema	lˈaɣɾemɔ	l ˈa ɣ ɾ e m ɔ		TEAR_NOUN_1			
@@ -5212,6 +5364,7 @@ Friulian	Friulian			MILK_NOUN	lat	lˈat	l ˈa t		MILK_NOUN_1
 Romansch	Romansch			MILK_NOUN	latg	lˈaʨ	l ˈa ʨ		MILK_NOUN_1			
 French	French			MILK_NOUN	lait	lɛ	l ɛ		MILK_NOUN_1			
 Québécois French	Québécois French			MILK_NOUN	lait	læɛ̯	l æɛ̯		MILK_NOUN_1			
+Walloon	Walloon			MILK_NOUN	laecea	lɛsjˈa	l ɛ s j ˈa		MILK_NOUN_1		IRREGULAR	
 Franco-Provençal	Franco-Provençal			MILK_NOUN	lat	lˈa	l ˈa		MILK_NOUN_1			
 Occitan	Occitan			MILK_NOUN	lach	lˈaʧ	l ˈa ʧ		MILK_NOUN_1			
 Gascon	Gascon			MILK_NOUN	lèit	lˈɛjt	l ˈɛ j t		MILK_NOUN_1			
@@ -5245,6 +5398,7 @@ Friulian	Friulian			LAKE_NOUN	lât	lˈaːt	l ˈaː t		LAKE_NOUN_1
 Romansch	Romansch			LAKE_NOUN	lag	lˈak	l ˈa k		LAKE_NOUN_1			
 French	French			LAKE_NOUN	lac	lak	l a k		LAKE_NOUN_1	TRUE		
 Québécois French	Québécois French			LAKE_NOUN	lac	lak	l a k		LAKE_NOUN_1	TRUE		
+Walloon	Walloon			LAKE_NOUN	lac	lˈak	l ˈa k		LAKE_NOUN_1			
 Franco-Provençal	Franco-Provençal			LAKE_NOUN	lac	lˈak	l ˈa k		LAKE_NOUN_1			
 Occitan	Occitan			LAKE_NOUN	lac	lˈak	l ˈa k		LAKE_NOUN_1			
 Gascon	Gascon			LAKE_NOUN	lac	lˈak	l ˈa k		LAKE_NOUN_1			
@@ -5278,6 +5432,7 @@ Friulian	Friulian			WOOL_NOUN	lane	lˈane	l ˈa n e		WOOL_NOUN_1
 Romansch	Romansch			WOOL_NOUN	launa	lˈawnə	l ˈa w n ə		WOOL_NOUN_1			
 French	French			WOOL_NOUN	laine	lɛn	l ɛ n		WOOL_NOUN_1			
 Québécois French	Québécois French			WOOL_NOUN	laine	læɛ̯n	l æɛ̯ n		WOOL_NOUN_1			
+Walloon	Walloon			WOOL_NOUN	linne	lˈɛ̃ːn	l ˈɛ̃ː n		WOOL_NOUN_1			
 Franco-Provençal	Franco-Provençal			WOOL_NOUN	lana	lˈana	l ˈa n a		WOOL_NOUN_1			
 Occitan	Occitan			WOOL_NOUN	lana	lˈanɔ	l ˈa n ɔ		WOOL_NOUN_1			
 Gascon	Gascon			WOOL_NOUN	lan	lˈaŋ	l ˈa ŋ		WOOL_NOUN_1			
@@ -5335,6 +5490,7 @@ Friulian	Friulian			LAW_NOUN	leç	lˈeʧ	l ˈe ʧ		LAW_NOUN_1
 Romansch	Romansch			LAW_NOUN	lescha	lˈeːʃə	l ˈeː ʃ ə		LAW_NOUN_1			
 French	French			LAW_NOUN	loi	lwa	l w a		LAW_NOUN_1			
 Québécois French	Québécois French			LAW_NOUN	loi	lwɛ	l w ɛ		LAW_NOUN_1			
+Walloon	Walloon			LAW_NOUN	lwè	lwˈɛ	l w ˈɛ		LAW_NOUN_1			
 Franco-Provençal	Franco-Provençal			LAW_NOUN	loué	lwˈe	l w ˈe		LAW_NOUN_1			
 Occitan	Occitan			LAW_NOUN	lei	lˈej	l ˈe j		LAW_NOUN_1			
 Gascon	Gascon			LAW_NOUN	lei	lˈej	l ˈe j		LAW_NOUN_1			
@@ -5366,6 +5522,7 @@ Friulian	Friulian			READ_VERB	lei	lˈei	l ˈe i		READ_VERB_1
 Romansch	Romansch			READ_VERB	leger	lˈɛːʥər	l ˈɛː ʥ ə r		READ_VERB_1			
 French	French			READ_VERB	lire	liʁ	l i ʁ		READ_VERB_1			
 Québécois French	Québécois French			READ_VERB	lire	liʁ	l i ʁ		READ_VERB_1			
+Walloon	Walloon			READ_VERB	lére	lˈeːʀ	l ˈeː ʀ		READ_VERB_1			
 Franco-Provençal	Franco-Provençal			READ_VERB	lire	lˈiðə	l ˈi ð ə		READ_VERB_1			
 Occitan	Occitan			READ_VERB	legir	leʤˈi	l e ʤ ˈi		READ_VERB_1			
 Gascon	Gascon			READ_VERB	léger	lˈeʒe	l ˈe ʒ e		READ_VERB_1			
@@ -5396,6 +5553,7 @@ Friulian	Friulian			LION_NOUN	lion	ljˈoŋ	l j ˈo ŋ		LION_NOUN_1
 Romansch	Romansch			LION_NOUN	liun	ljˈun	l j ˈu n		LION_NOUN_1			
 French	French			LION_NOUN	lion	ljɔ̃	l j ɔ̃		LION_NOUN_1			
 Québécois French	Québécois French			LION_NOUN	lion	ljɒ̃ʊ̯̃	l j ɒ̃ʊ̯̃		LION_NOUN_1			
+Walloon	Walloon			LION_NOUN	liyon	lijˈɔ̃	l i j ˈɔ̃		LION_NOUN_1			
 Franco-Provençal	Franco-Provençal			LION_NOUN	leyon	lejˈɔ̃	l e j ˈɔ̃		LION_NOUN_1			
 Occitan	Occitan			LION_NOUN	leon	leˈu	l e ˈu		LION_NOUN_1			
 Gascon	Gascon			LION_NOUN	leon	leˈuŋ	l e ˈu ŋ		LION_NOUN_1			
@@ -5428,6 +5586,7 @@ Friulian	Friulian			HARE_NOUN	jeur	jˈɛwr	j ˈɛ w r		HARE_NOUN_1
 Romansch	Romansch			HARE_NOUN	lieur	ljˈɛwr	l j ˈɛ w r		HARE_NOUN_1			
 French	French			HARE_NOUN	lièvre	ljɛvʁ	l j ɛ v ʁ		HARE_NOUN_1			
 Québécois French	Québécois French			HARE_NOUN	lièvre	ljɛvʁ	l j ɛ v ʁ		HARE_NOUN_1			
+Walloon	Walloon			HARE_NOUN	live	lˈiːf	l ˈiː f		HARE_NOUN_1			
 Franco-Provençal	Franco-Provençal			HARE_NOUN	liévra	ljˈevʁa	l j ˈe v ʁ a		HARE_NOUN_1			
 Occitan	Occitan			HARE_NOUN	lèbre	lˈɛβɾe	l ˈɛ β ɾ e		HARE_NOUN_1			
 Gascon	Gascon			HARE_NOUN	lèbe	lˈɛβe	l ˈɛ β e		HARE_NOUN_1			
@@ -5456,6 +5615,7 @@ Eastern Lombard	Eastern Lombard			CARRY_VERB	leà	leˈa	l e ˈa		CARRY_VERB_1
 Friulian	Friulian			CARRY_VERB	jevâ	jevˈaː	j e v ˈaː		CARRY_VERB_1			
 French	French			CARRY_VERB	lever	ləve	l ə v e		CARRY_VERB_1			
 Québécois French	Québécois French			CARRY_VERB	lever	lœve	l œ v e		CARRY_VERB_1			
+Walloon	Walloon			CARRY_VERB	lever	lɛvˈe	l ɛ v ˈe		CARRY_VERB_1			
 Franco-Provençal	Franco-Provençal			CARRY_VERB	lèvar	lɛvˈa	l ɛ v ˈa		CARRY_VERB_1			
 Occitan	Occitan			CARRY_VERB	levar	levˈa	l e v ˈa		CARRY_VERB_1			
 Gascon	Gascon			CARRY_VERB	lhevar	ʎeβˈa	ʎ e β ˈa		CARRY_VERB_1			
@@ -5492,6 +5652,7 @@ Friulian	Friulian			FREE_ADJ	libar	lˈibar	l ˈi b a r		FREE_ADJ_2
 Romansch	Romansch			FREE_ADJ	liber	lˈiːber	l ˈiː b e r		FREE_ADJ_2			
 French	French			FREE_ADJ	livre	livʁ	l i v ʁ		FREE_ADJ_2			
 Québécois French	Québécois French			FREE_ADJ	livre	livʁ	l i v ʁ		FREE_ADJ_2			
+Walloon	Walloon			FREE_ADJ	lîbe	lˈiːp	l ˈiː p		FREE_ADJ_2			
 Franco-Provençal	Franco-Provençal			FREE_ADJ	libro	lˈibʁo	l ˈi b ʁ o		FREE_ADJ_2			
 Occitan	Occitan			FREE_ADJ	liure	lˈiwɾe	l ˈi w ɾ e		FREE_ADJ_2			
 Gascon	Gascon			FREE_ADJ	liure	lˈiwɾe	l ˈi w ɾ e		FREE_ADJ_2			
@@ -5539,6 +5700,7 @@ Spanish	Spanish			WOOD_NOUN	leño	lˈeɲo	l ˈe ɲ o		WOOD_NOUN_2
 Latin	Latin			LINE_NOUN	līneam	lˈiːneãː	l ˈiː n e ãː		LINE_NOUN_1			
 French	French			LINE_NOUN	ligne	liɲ	l i ɲ		LINE_NOUN_1			
 Québécois French	Québécois French			LINE_NOUN	ligne	lɪɲ	l ɪ ɲ		LINE_NOUN_1			
+Walloon	Walloon			LINE_NOUN	legne	lˈɛɲ	l ˈɛ ɲ		LINE_NOUN_1			
 Franco-Provençal	Franco-Provençal			LINE_NOUN	legne	lˈeɲə	l ˈe ɲ ə		LINE_NOUN_1			
 Occitan	Occitan			LINE_NOUN	linha	lˈiɲɔ	l ˈi ɲ ɔ		LINE_NOUN_1			
 Gascon	Gascon			LINE_NOUN	linha	lˈiɲɔ	l ˈi ɲ ɔ		LINE_NOUN_1			
@@ -5568,6 +5730,7 @@ Friulian	Friulian			TONGUE_NOUN	lenghe	lˈeŋɡe	l ˈe ŋ ɡ e		TONGUE_NOUN_1
 Romansch	Romansch			TONGUE_NOUN	lieunga	ljˈɛwŋɡə	l j ˈɛ w ŋ ɡ ə		TONGUE_NOUN_1			
 French	French			TONGUE_NOUN	langue	lɑ̃ɡ	l ɑ̃ ɡ		TONGUE_NOUN_1			
 Québécois French	Québécois French			TONGUE_NOUN	langue	lãɡ	l ã ɡ		TONGUE_NOUN_1			
+Walloon	Walloon			TONGUE_NOUN	linwe	lˈɛ̃w	l ˈɛ̃ w		TONGUE_NOUN_1			
 Franco-Provençal	Franco-Provençal			TONGUE_NOUN	lenga	lˈɛ̃ɡa	l ˈɛ̃ ɡ a		TONGUE_NOUN_1			
 Savoyard	Savoyard			TONGUE_NOUN	lêga	lˈɛɡa	l ˈɛ ɡ a		TONGUE_NOUN_1			
 Occitan	Occitan			TONGUE_NOUN	lenga	lˈeŋɡɔ	l ˈe ŋ ɡ ɔ		TONGUE_NOUN_1			
@@ -5598,6 +5761,7 @@ Ladin	Ladin			LETTER_NOUN	letra	lˈetra	l ˈe t r a		LETTER_NOUN_1
 Friulian	Friulian			LETTER_NOUN	letare	lˈetare	l ˈe t a r e		LETTER_NOUN_1			
 French	French			LETTER_NOUN	lettre	lɛtʁ	l ɛ t ʁ		LETTER_NOUN_1			
 Québécois French	Québécois French			LETTER_NOUN	lettre	lɛtʁ	l ɛ t ʁ		LETTER_NOUN_1			
+Walloon	Walloon			LETTER_NOUN	lete	lˈɛt	l ˈɛ t		LETTER_NOUN_1			
 Franco-Provençal	Franco-Provençal			LETTER_NOUN	lètra	lˈɛtʁa	l ˈɛ t ʁ a		LETTER_NOUN_1			
 Occitan	Occitan			LETTER_NOUN	letra	lˈetɾɔ	l ˈe t ɾ ɔ		LETTER_NOUN_1			
 Gascon	Gascon			LETTER_NOUN	letra	lˈetɾɔ	l ˈe t ɾ ɔ		LETTER_NOUN_1			
@@ -5646,6 +5810,7 @@ Brazilian Portuguese	Brazilian Portuguese			PLACE_NOUN	logo	lˈoɡu	l ˈo ɡ u		
 Latin	Latin			PLACE_NOUN	locus	ɫˈɔkʊs	ɫ ˈɔ k ʊ s		PLACE_NOUN_2			
 French	French			PLACE_NOUN	lieu	ljø	l j ø		PLACE_NOUN_2			
 Québécois French	Québécois French			PLACE_NOUN	lieu	ljøʏ̯	l j øʏ̯		PLACE_NOUN_2			
+Walloon	Walloon			PLACE_NOUN	louwé	luwˈe	l u w ˈe		PLACE_NOUN_2		IRREGULAR	
 Latin	Latin			LONG_ADJ	longum	ɫˈɔŋɡʊ̃ː	ɫ ˈɔ ŋ ɡ ʊ̃ː		LONG_ADJ_1			
 Logudorese	Logudorese			LONG_ADJ	longu	lˈoŋɡu	l ˈo ŋ ɡ u		LONG_ADJ_1			
 Campidanese	Campidanese			LONG_ADJ	longu	lˈoŋɡu	l ˈo ŋ ɡ u		LONG_ADJ_1			
@@ -5670,6 +5835,7 @@ Friulian	Friulian			LONG_ADJ	lunc	lˈuŋk	l ˈu ŋ k		LONG_ADJ_1
 Romansch	Romansch			LONG_ADJ	lung	lˈuŋ	l ˈu ŋ		LONG_ADJ_1			
 French	French			LONG_ADJ	long	lɔ̃	l ɔ̃		LONG_ADJ_1			
 Québécois French	Québécois French			LONG_ADJ	long	lɒ̃ʊ̯̃	l ɒ̃ʊ̯̃		LONG_ADJ_1			
+Walloon	Walloon			LONG_ADJ	lon	lˈɔ̃	l ˈɔ̃		LONG_ADJ_1			
 Franco-Provençal	Franco-Provençal			LONG_ADJ	long	lˈɔ̃	l ˈɔ̃		LONG_ADJ_1			
 Savoyard	Savoyard			LONG_ADJ	lon	lɔ̃	l ɔ̃		LONG_ADJ_1			
 Occitan	Occitan			LONG_ADJ	long	lˈuŋk	l ˈu ŋ k		LONG_ADJ_1			
@@ -5721,6 +5887,7 @@ Eastern Lombard	Eastern Lombard			FIGHT_NOUN	lòta	lˈɔta	l ˈɔ t a		FIGHT_NOU
 Friulian	Friulian			FIGHT_NOUN	lote	lˈote	l ˈo t e		FIGHT_NOUN_1			
 French	French			FIGHT_NOUN	lutte	lyt	l y t		FIGHT_NOUN_1			
 Québécois French	Québécois French			FIGHT_NOUN	lutte	lʏt	l ʏ t		FIGHT_NOUN_1			
+Walloon	Walloon			FIGHT_NOUN	lûte	lˈyːt	l ˈyː t		FIGHT_NOUN_1			
 Occitan	Occitan			FIGHT_NOUN	lucha	lˈyʧɔ	l ˈy ʧ ɔ		FIGHT_NOUN_1			
 Gascon	Gascon			FIGHT_NOUN	luta	lˈytɔ	l ˈy t ɔ		FIGHT_NOUN_1			
 Catalan	Catalan			FIGHT_NOUN	lluita	ʎˈujtə	ʎ ˈu j t ə		FIGHT_NOUN_1			
@@ -5773,6 +5940,7 @@ Friulian	Friulian			MOON_NOUN	lune	lˈune	l ˈu n e		MOON_NOUN_1
 Romansch	Romansch			MOON_NOUN	glina	ʎˈiːnə	ʎ ˈiː n ə		MOON_NOUN_1			
 French	French			MOON_NOUN	lune	lyn	l y n		MOON_NOUN_1			
 Québécois French	Québécois French			MOON_NOUN	lune	lʏn	l ʏ n		MOON_NOUN_1			
+Walloon	Walloon			MOON_NOUN	lune	lˈyn	l ˈy n		MOON_NOUN_1			
 Franco-Provençal	Franco-Provençal			MOON_NOUN	lena	lˈena	l ˈe n a		MOON_NOUN_1			
 Franco-Provençal	Franco-Provençal			MOON_NOUN	luna	lˈuna	l ˈu n a		MOON_NOUN_1			
 Savoyard	Savoyard			MOON_NOUN	lnà	lnˈa	l n ˈa		MOON_NOUN_1			
@@ -5848,6 +6016,7 @@ Friulian	Friulian			EAT_VERB	mangjâ	manɟˈaː	m a n ɟ ˈaː		EAT_VERB_2
 Romansch	Romansch			EAT_VERB	mangiar	mənʥˈaːr	m ə n ʥ ˈaː r		EAT_VERB_2			
 French	French			EAT_VERB	manger	mɑ̃ʒe	m ɑ̃ ʒ e		EAT_VERB_2			
 Québécois French	Québécois French			EAT_VERB	manger	mãʒe	m ã ʒ e		EAT_VERB_2			
+Walloon	Walloon			EAT_VERB	magnî	maɲˈiː	m a ɲ ˈiː		EAT_VERB_2			
 Franco-Provençal	Franco-Provençal			EAT_VERB	mangier	mˈĩʒi	m ˈĩ ʒ i		EAT_VERB_2			
 Savoyard	Savoyard			EAT_VERB	bdjî	bʤiː	b ʤ iː		EAT_VERB_2			
 Occitan	Occitan			EAT_VERB	manjar	manʤˈa	m a n ʤ ˈa		EAT_VERB_2			
@@ -5875,6 +6044,7 @@ Friulian	Friulian			HAND_NOUN	man	mˈaŋ	m ˈa ŋ		HAND_NOUN_2
 Romansch	Romansch			HAND_NOUN	maun	mˈawn	m ˈa w n		HAND_NOUN_2			
 French	French			HAND_NOUN	main	mɛ̃	m ɛ̃		HAND_NOUN_2			
 Québécois French	Québécois French			HAND_NOUN	main	mẽɪ̯̃	m ẽɪ̯̃		HAND_NOUN_2			
+Walloon	Walloon			HAND_NOUN	mwin	mwˈɛ̃	m w ˈɛ̃		HAND_NOUN_2			
 Franco-Provençal	Franco-Provençal			HAND_NOUN	man	mˈɑ̃	m ˈɑ̃		HAND_NOUN_2			
 Savoyard	Savoyard			HAND_NOUN	man	mˈã	m ˈã		HAND_NOUN_2			
 Occitan	Occitan			HAND_NOUN	man	mˈa	m ˈa		HAND_NOUN_2			
@@ -5910,6 +6080,7 @@ Friulian	Friulian			SEA_NOUN	mâr	mˈaːr	m ˈaː r		SEA_NOUN_1
 Romansch	Romansch			SEA_NOUN	mar	mˈaːr	m ˈaː r		SEA_NOUN_1			
 French	French			SEA_NOUN	mer	mɛʁ	m ɛ ʁ		SEA_NOUN_1			
 Québécois French	Québécois French			SEA_NOUN	mer	mæɛ̯ʁ	m æɛ̯ ʁ		SEA_NOUN_1			
+Walloon	Walloon			SEA_NOUN	mer	mˈeʀ	m ˈe ʀ		SEA_NOUN_1			
 Franco-Provençal	Franco-Provençal			SEA_NOUN	mêr	mˈɛːʁ	m ˈɛː ʁ		SEA_NOUN_1			
 Occitan	Occitan			SEA_NOUN	mar	mˈa	m ˈa		SEA_NOUN_1			
 Gascon	Gascon			SEA_NOUN	mar	mˈa	m ˈa		SEA_NOUN_1			
@@ -5936,6 +6107,7 @@ Ladin	Ladin			MOTHER_NOUN	mere	mˈɛre	m ˈɛ r e		MOTHER_NOUN_1
 Friulian	Friulian			MOTHER_NOUN	mari	mˈari	m ˈa r i		MOTHER_NOUN_1			
 French	French			MOTHER_NOUN	mère	mɛʁ	m ɛ ʁ		MOTHER_NOUN_1			
 Québécois French	Québécois French			MOTHER_NOUN	mère	mæɛ̯ʁ	m æɛ̯ ʁ		MOTHER_NOUN_1			
+Walloon	Walloon			MOTHER_NOUN	mere	mˈɛʀ	m ˈɛ ʀ		MOTHER_NOUN_1			
 Franco-Provençal	Franco-Provençal			MOTHER_NOUN	mâre	mˈaːðə	m ˈaː ð ə		MOTHER_NOUN_1			
 Occitan	Occitan			MOTHER_NOUN	maire	mˈajɾe	m ˈa j ɾ e		MOTHER_NOUN_1			
 Gascon	Gascon			MOTHER_NOUN	mair	mˈajr	m ˈa j r		MOTHER_NOUN_1			
@@ -5965,6 +6137,7 @@ Friulian	Friulian			MATURE_NOUN	madûr	madˈuːr	m a d ˈuː r		MATURE_NOUN_1
 Romansch	Romansch			MATURE_NOUN	madir	mədˈiːr	m ə d ˈiː r		MATURE_NOUN_1			
 French	French			MATURE_NOUN	mûr	myʁ	m y ʁ		MATURE_NOUN_1			
 Québécois French	Québécois French			MATURE_NOUN	mûr	myʁ	m y ʁ		MATURE_NOUN_1			
+Walloon	Walloon			MATURE_NOUN	meur	mˈøːʀ	m ˈøː ʀ		MATURE_NOUN_1			
 Franco-Provençal	Franco-Provençal			MATURE_NOUN	meur	mˈøʁ	m ˈø ʁ		MATURE_NOUN_1			
 Occitan	Occitan			MATURE_NOUN	madu	maðˈy	m a ð ˈy		MATURE_NOUN_1			
 Gascon	Gascon			MATURE_NOUN	madur	maðˈy	m a ð ˈy		MATURE_NOUN_1			
@@ -5990,6 +6163,7 @@ Ladin	Ladin			I_OBL_PRON	me	mˈe	m ˈe		I_OBL_PRON_1
 Friulian	Friulian			I_OBL_PRON	mi	mˈi	m ˈi		I_OBL_PRON_1			
 French	French			I_OBL_PRON	moi	mwa	m w a		I_OBL_PRON_1			
 Québécois French	Québécois French			I_OBL_PRON	moi	mwɛ	m w ɛ		I_OBL_PRON_1			
+Walloon	Walloon			I_OBL_PRON	mi	mˈi	m ˈi		I_OBL_PRON_1			
 Franco-Provençal	Franco-Provençal			I_OBL_PRON	mè	mˈɛ	m ˈɛ		I_OBL_PRON_1			
 Occitan	Occitan			I_OBL_PRON	me	me	m e		I_OBL_PRON_1			
 Gascon	Gascon			I_OBL_PRON	me	me	m e		I_OBL_PRON_1			
@@ -6027,6 +6201,7 @@ Friulian	Friulian			HALF_NOUN	mitât	mitˈaːt	m i t ˈaː t		HALF_NOUN_1
 Romansch	Romansch			HALF_NOUN	mited	mitˈet	m i t ˈe t		HALF_NOUN_1			
 French	French			HALF_NOUN	moitié	mwatje	m w a t j e		HALF_NOUN_1			
 Québécois French	Québécois French			HALF_NOUN	moitié	mwɛʦje	m w ɛ ʦ j e		HALF_NOUN_1			
+Walloon	Walloon			HALF_NOUN	mwetî	mwɛtˈiː	m w ɛ t ˈiː		HALF_NOUN_1			
 Franco-Provençal	Franco-Provençal			HALF_NOUN	mêtiat	mɛːtjˈa	m ɛː t j ˈa		HALF_NOUN_1			
 Occitan	Occitan			HALF_NOUN	meitat	mejtˈat	m e j t ˈa t		HALF_NOUN_1			
 Gascon	Gascon			HALF_NOUN	mieitat	mjejtˈat	m j e j t ˈa t		HALF_NOUN_1			
@@ -6085,6 +6260,7 @@ Friulian	Friulian			BETTER_ADJ	miôr	mjˈoːr	m j ˈoː r		BETTER_ADJ_1
 Romansch	Romansch			BETTER_ADJ	meglier	meʎˈeːr	m e ʎ ˈeː r		BETTER_ADJ_1			
 French	French			BETTER_ADJ	meilleur	mɛjœʁ	m ɛ j œ ʁ		BETTER_ADJ_1			
 Québécois French	Québécois French			BETTER_ADJ	meilleur	mæɛ̯jaœ̯ʁ	m æɛ̯ j aœ̯ ʁ		BETTER_ADJ_1			
+Walloon	Walloon			BETTER_ADJ	meyeu	mɛjˈøː	m ɛ j ˈøː		BETTER_ADJ_1			
 Franco-Provençal	Franco-Provençal			BETTER_ADJ	mèlyör	mɛʎˈøʁ	m ɛ ʎ ˈø ʁ		BETTER_ADJ_1			
 Occitan	Occitan			BETTER_ADJ	melhor	meʎˈu	m e ʎ ˈu		BETTER_ADJ_1			
 Gascon	Gascon			BETTER_ADJ	miélher	mjˈeʎe	m j ˈe ʎ e		BETTER_ADJ_1			
@@ -6114,6 +6290,7 @@ Ladin	Ladin			BETTER_ADV	miec	mjˈɛʨ	m j ˈɛ ʨ		BETTER_ADV_1
 Friulian	Friulian			BETTER_ADV	miei	mjˈɛj	m j ˈɛ j		BETTER_ADV_1			
 French	French			BETTER_ADV	mieux	mjø	m j ø		BETTER_ADV_1			
 Québécois French	Québécois French			BETTER_ADV	mieux	mjøʏ̯	m j øʏ̯		BETTER_ADV_1			
+Walloon	Walloon			BETTER_ADV	mî	mˈiː	m ˈiː		BETTER_ADV_1			
 Franco-Provençal	Franco-Provençal			BETTER_ADV	miöx	mjˈøʃ	m j ˈø ʃ		BETTER_ADV_1			
 Gascon	Gascon			BETTER_ADV	mei	mˈej	m ˈe j		BETTER_ADV_1			
 Latin	Latin			CRUMB_NOUN	mīcam	mˈiːkãː	m ˈiː k ãː		CRUMB_NOUN_1			
@@ -6128,6 +6305,7 @@ Eastern Lombard	Eastern Lombard			CRUMB_NOUN	mia	mˈia	m ˈi a		CRUMB_NOUN_1
 Friulian	Friulian			CRUMB_NOUN	mighe	mˈiɡe	m ˈi ɡ e		CRUMB_NOUN_1			
 French	French			CRUMB_NOUN	mie	mi	m i		CRUMB_NOUN_1			
 Québécois French	Québécois French			CRUMB_NOUN	mie	mi	m i		CRUMB_NOUN_1			
+Walloon	Walloon			CRUMB_NOUN	miye	mˈiːj	m ˈiː j		CRUMB_NOUN_1			
 Occitan	Occitan			CRUMB_NOUN	mica	mˈikɔ	m ˈi k ɔ		CRUMB_NOUN_1			
 Gascon	Gascon			CRUMB_NOUN	mica	mˈikɔ	m ˈi k ɔ		CRUMB_NOUN_1			
 Catalan	Catalan			CRUMB_NOUN	mica	mˈikə	m ˈi k ə		CRUMB_NOUN_1			
@@ -6159,6 +6337,7 @@ Friulian	Friulian			THOUSAND_NUM	mil	mˈil	m ˈi l		THOUSAND_NUM_1
 Romansch	Romansch			THOUSAND_NUM	milli	mˈiːli	m ˈiː l i		THOUSAND_NUM_1			
 French	French			THOUSAND_NUM	mille	mil	m i l		THOUSAND_NUM_1			
 Québécois French	Québécois French			THOUSAND_NUM	mille	mɪl	m ɪ l		THOUSAND_NUM_1			
+Walloon	Walloon			THOUSAND_NUM	meye	mˈɛj	m ˈɛ j		THOUSAND_NUM_1			
 Franco-Provençal	Franco-Provençal			THOUSAND_NUM	mile	mˈil	m ˈi l		THOUSAND_NUM_1			
 Occitan	Occitan			THOUSAND_NUM	mil	mˈil	m ˈi l		THOUSAND_NUM_1			
 Gascon	Gascon			THOUSAND_NUM	mil	mˈil	m ˈi l		THOUSAND_NUM_1			
@@ -6186,6 +6365,7 @@ Friulian	Friulian			MOUNTAIN_NOUN	montagne	montˈaɲe	m o n t ˈa ɲ e		MOUNTAIN
 Romansch	Romansch			MOUNTAIN_NOUN	muntagna	muntˈaːɲə	m u n t ˈaː ɲ ə		MOUNTAIN_NOUN_1			
 French	French			MOUNTAIN_NOUN	montagne	mɔ̃taɲ	m ɔ̃ t a ɲ		MOUNTAIN_NOUN_1			
 Québécois French	Québécois French			MOUNTAIN_NOUN	montagne	mɒ̃ʊ̯̃taɲ	m ɒ̃ʊ̯̃ t a ɲ		MOUNTAIN_NOUN_1			
+Walloon	Walloon			MOUNTAIN_NOUN	montagne	mɔ̃tˈaɲ	m ɔ̃ t ˈa ɲ		MOUNTAIN_NOUN_1			
 Franco-Provençal	Franco-Provençal			MOUNTAIN_NOUN	montagne	mɔ̃tˈaɲi	m ɔ̃ t ˈa ɲ i		MOUNTAIN_NOUN_1			
 Savoyard	Savoyard			MOUNTAIN_NOUN	montanye	mɔ̃tˈaɲe	m ɔ̃ t ˈa ɲ e		MOUNTAIN_NOUN_1			
 Occitan	Occitan			MOUNTAIN_NOUN	montanha	muntˈaɲɔ	m u n t ˈa ɲ ɔ		MOUNTAIN_NOUN_1			
@@ -6239,6 +6419,7 @@ Friulian	Friulian			DIE_VERB	murî	murˈiː	m u r ˈiː		DIE_VERB_1
 Romansch	Romansch			DIE_VERB	murir	murˈiːr	m u r ˈiː r		DIE_VERB_1			
 French	French			DIE_VERB	mourir	muʁiʁ	m u ʁ i ʁ		DIE_VERB_1			
 Québécois French	Québécois French			DIE_VERB	mourir	muʁiʁ	m u ʁ i ʁ		DIE_VERB_1			
+Walloon	Walloon			DIE_VERB	mori	mɔʀˈi	m ɔ ʀ ˈi		DIE_VERB_1			
 Franco-Provençal	Franco-Provençal			DIE_VERB	morir	moðˈi	m o ð ˈi		DIE_VERB_1			
 Savoyard	Savoyard			DIE_VERB	mori	morˈi	m o r ˈi		DIE_VERB_1			
 Occitan	Occitan			DIE_VERB	morir	muɾˈi	m u ɾ ˈi		DIE_VERB_1			
@@ -6296,6 +6477,7 @@ Friulian	Friulian			DEATH_NOUN	muart	mwˈart	m w ˈa r t		DEATH_NOUN_1
 Romansch	Romansch			DEATH_NOUN	mort	mˈɔːrt	m ˈɔː r t		DEATH_NOUN_1			
 French	French			DEATH_NOUN	mort	mɔʁ	m ɔ ʁ		DEATH_NOUN_1			
 Québécois French	Québécois French			DEATH_NOUN	mort	mɑɔ̯ʁ	m ɑɔ̯ ʁ		DEATH_NOUN_1			
+Walloon	Walloon			DEATH_NOUN	moirt	mwˈaʀ	m w ˈa ʀ		DEATH_NOUN_1			
 Franco-Provençal	Franco-Provençal			DEATH_NOUN	môrt	mˈoːʁ	m ˈoː ʁ		DEATH_NOUN_1			
 Occitan	Occitan			DEATH_NOUN	mòrt	mˈɔrt	m ˈɔ r t		DEATH_NOUN_1			
 Gascon	Gascon			DEATH_NOUN	mòrt	mˈɔrt	m ˈɔ r t		DEATH_NOUN_1			
@@ -6345,6 +6527,7 @@ Friulian	Friulian			FLY_NOUN	moscje	mˈosce	m ˈo s c e		FLY_NOUN_1
 Romansch	Romansch			FLY_NOUN	mustga	mˈuʃʨə	m ˈu ʃ ʨ ə		FLY_NOUN_1			
 French	French			FLY_NOUN	mouche	muʃ	m u ʃ		FLY_NOUN_1			
 Québécois French	Québécois French			FLY_NOUN	mouche	mʊʃ	m ʊ ʃ		FLY_NOUN_1			
+Walloon	Walloon			FLY_NOUN	moxhe	mˈɔʃ	m ˈɔ ʃ		FLY_NOUN_1			
 Franco-Provençal	Franco-Provençal			FLY_NOUN	mueche	mwˈeʃə	m w ˈe ʃ ə		FLY_NOUN_1			
 Occitan	Occitan			FLY_NOUN	mosca	mˈuskɔ	m ˈu s k ɔ		FLY_NOUN_1			
 Gascon	Gascon			FLY_NOUN	mosca	mˈuskɔ	m ˈu s k ɔ		FLY_NOUN_1			
@@ -6388,6 +6571,7 @@ Friulian	Friulian			NOSE_NOUN	nâs	nˈaːs	n ˈaː s		NOSE_NOUN_2
 Romansch	Romansch			NOSE_NOUN	nas	nˈas	n ˈa s		NOSE_NOUN_2			
 French	French			NOSE_NOUN	nez	ne	n e		NOSE_NOUN_2			
 Québécois French	Québécois French			NOSE_NOUN	nez	ne	n e		NOSE_NOUN_2			
+Walloon	Walloon			NOSE_NOUN	nez	nˈe	n ˈe		NOSE_NOUN_2			
 Franco-Provençal	Franco-Provençal			NOSE_NOUN	nâs	nˈɑː	n ˈɑː		NOSE_NOUN_2			
 Savoyard	Savoyard			NOSE_NOUN	nâ	nˈaː	n ˈaː		NOSE_NOUN_2			
 Occitan	Occitan			NOSE_NOUN	nas	nˈas	n ˈa s		NOSE_NOUN_2			
@@ -6482,6 +6666,7 @@ Friulian	Friulian			BLACK_ADJ	neri	nˈeri	n ˈe r i		BLACK_ADJ_1
 Romansch	Romansch			BLACK_ADJ	nair	nˈajr	n ˈa j r		BLACK_ADJ_1			
 French	French			BLACK_ADJ	noir	nwaʁ	n w a ʁ		BLACK_ADJ_1			
 Québécois French	Québécois French			BLACK_ADJ	noir	nwɛʁ	n w ɛ ʁ		BLACK_ADJ_1			
+Walloon	Walloon			BLACK_ADJ	noer	nwˈɛːʀ	n w ˈɛː ʀ		BLACK_ADJ_1			
 Franco-Provençal	Franco-Provençal			BLACK_ADJ	nêr	nˈɛːʁ	n ˈɛː ʁ		BLACK_ADJ_1			
 Savoyard	Savoyard			BLACK_ADJ	nai	nˈaj	n ˈa j		BLACK_ADJ_1			
 Occitan	Occitan			BLACK_ADJ	negre	nˈeɣɾe	n ˈe ɣ ɾ e		BLACK_ADJ_1			
@@ -6525,6 +6710,7 @@ Venetian	Venetian			SNOW (VERB)_VERB	nevegàr	neveɡˈar	n e v e ɡ ˈa r		SNOW 
 Bellunese	Bellunese			SNOW (VERB)_VERB	nevegàr	neveɡˈar	n e v e ɡ ˈa r		SNOW (VERB)_VERB_1			
 French	French			SNOW (VERB)_VERB	neiger	neʒe	n e ʒ e		SNOW (VERB)_VERB_1			
 Québécois French	Québécois French			SNOW (VERB)_VERB	neiger	neʒe	n e ʒ e		SNOW (VERB)_VERB_1			
+Walloon	Walloon			SNOW (VERB)_VERB	nedjî	nɛʤˈiː	n ɛ ʤ ˈiː		SNOW (VERB)_VERB_1			
 Latin	Latin			NIGHT_NOUN	noctem	nˈɔktɛ̃ː	n ˈɔ k t ɛ̃ː		NIGHT_NOUN_1			
 Logudorese	Logudorese			NIGHT_NOUN	note	nˈote	n ˈo t e		NIGHT_NOUN_1			
 Campidanese	Campidanese			NIGHT_NOUN	noti	nˈoti	n ˈo t i		NIGHT_NOUN_1			
@@ -6550,6 +6736,7 @@ Friulian	Friulian			NIGHT_NOUN	gnot	ɲˈɔt	ɲ ˈɔ t		NIGHT_NOUN_1
 Romansch	Romansch			NIGHT_NOUN	notg	nˈoʨ	n ˈo ʨ		NIGHT_NOUN_1			
 French	French			NIGHT_NOUN	nuit	nɥi	n ɥ i		NIGHT_NOUN_1			
 Québécois French	Québécois French			NIGHT_NOUN	nuit	nɥi	n ɥ i		NIGHT_NOUN_1			
+Walloon	Walloon			NIGHT_NOUN	nute	nˈyt	n ˈy t		NIGHT_NOUN_1			
 Franco-Provençal	Franco-Provençal			NIGHT_NOUN	nuet	nwˈɛ	n w ˈɛ		NIGHT_NOUN_1			
 Occitan	Occitan			NIGHT_NOUN	nuèch	nɥˈɛʧ	n ɥ ˈɛ ʧ		NIGHT_NOUN_1			
 Gascon	Gascon			NIGHT_NOUN	nueit	nwˈejt	n w ˈe j t		NIGHT_NOUN_1			
@@ -6569,6 +6756,7 @@ Emilian	Emilian			KNOT_NOUN	nåud	nˈʌu̯d	n ˈʌu̯ d		KNOT_NOUN_1
 Piedmontese	Piedmontese			KNOT_NOUN	neu	nˈø	n ˈø		KNOT_NOUN_1			
 French	French			KNOT_NOUN	nœud	nø	n ø		KNOT_NOUN_1			
 Québécois French	Québécois French			KNOT_NOUN	nœud	nøʏ̯	n øʏ̯		KNOT_NOUN_1			
+Walloon	Walloon			KNOT_NOUN	neud	nˈøː	n ˈøː		KNOT_NOUN_1			
 Gascon	Gascon			KNOT_NOUN	nod	nˈut	n ˈu t		KNOT_NOUN_1			
 Portuguese	Portuguese			KNOT_NOUN	nó	nˈɔ	n ˈɔ		KNOT_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			KNOT_NOUN	nó	nˈɔ	n ˈɔ		KNOT_NOUN_1			
@@ -6596,6 +6784,7 @@ Friulian	Friulian			NAME_NOUN	non	nˈɔŋ	n ˈɔ ŋ		NAME_NOUN_2
 Romansch	Romansch			NAME_NOUN	num	nˈum	n ˈu m		NAME_NOUN_2			
 French	French			NAME_NOUN	nom	nɔ̃	n ɔ̃		NAME_NOUN_2			
 Québécois French	Québécois French			NAME_NOUN	nom	nɒ̃ʊ̯̃	n ɒ̃ʊ̯̃		NAME_NOUN_2			
+Walloon	Walloon			NAME_NOUN	no	nˈɔ	n ˈɔ		NAME_NOUN_2			
 Franco-Provençal	Franco-Provençal			NAME_NOUN	nom	nˈɔ̃	n ˈɔ̃		NAME_NOUN_2			
 Savoyard	Savoyard			NAME_NOUN	non	nˈɔ̃	n ˈɔ̃		NAME_NOUN_2			
 Occitan	Occitan			NAME_NOUN	nom	nˈum	n ˈu m		NAME_NOUN_2			
@@ -6621,6 +6810,7 @@ Friulian	Friulian			NOT_ADVERB	no	no	n o		NOT_ADVERB_1
 Romansch	Romansch			NOT_ADVERB	na	nˈaː	n ˈaː		NOT_ADVERB_1			
 French	French			NOT_ADVERB	non	nɔ̃	n ɔ̃		NOT_ADVERB_1			
 Québécois French	Québécois French			NOT_ADVERB	non	nɒ̃ʊ̯̃	n ɒ̃ʊ̯̃		NOT_ADVERB_1			
+Walloon	Walloon			NOT_ADVERB	nén	nˈẽ	n ˈẽ		NOT_ADVERB_1			
 Savoyard	Savoyard			NOT_ADVERB	ne	ne	n e		NOT_ADVERB_1			
 Occitan	Occitan			NOT_ADVERB	non	nu	n u		NOT_ADVERB_1			
 Gascon	Gascon			NOT_ADVERB	non	nuŋ	n u ŋ		NOT_ADVERB_1			
@@ -6651,6 +6841,7 @@ Friulian	Friulian			WE_PRON	nô	nˈoː	n ˈoː		WE_PRON_1
 Romansch	Romansch			WE_PRON	nus	nˈus	n ˈu s		WE_PRON_1			
 French	French			WE_PRON	nous	nu	n u		WE_PRON_1			
 Québécois French	Québécois French			WE_PRON	nous	nu	n u		WE_PRON_1			
+Walloon	Walloon			WE_PRON	nos	nˈɔ	n ˈɔ		WE_PRON_1			
 Franco-Provençal	Franco-Provençal			WE_PRON	nos	nˈo	n ˈo		WE_PRON_1			
 Savoyard	Savoyard			WE_PRON	no	nˈo	n ˈo		WE_PRON_1			
 Occitan	Occitan			WE_PRON	nos	nˈus	n ˈu s		WE_PRON_1			
@@ -6683,6 +6874,7 @@ Friulian	Friulian			OUR_ADJ	nestri	nˈestri	n ˈe s t r i		OUR_ADJ_1
 Romansch	Romansch			OUR_ADJ	noss	nˈɔs	n ˈɔ s		OUR_ADJ_1			
 French	French			OUR_ADJ	nôtre	notʁ	n o t ʁ		OUR_ADJ_1			
 Québécois French	Québécois French			OUR_ADJ	nôtre	notʁ	n o t ʁ		OUR_ADJ_1			
+Walloon	Walloon			OUR_ADJ	nosse	nˈɔs	n ˈɔ s		OUR_ADJ_1			
 Franco-Provençal	Franco-Provençal			OUR_ADJ	nôtro	nˈoːtʁo	n ˈoː t ʁ o		OUR_ADJ_1			
 Occitan	Occitan			OUR_ADJ	nòstre	nˈɔstɾe	n ˈɔ s t ɾ e		OUR_ADJ_1			
 Gascon	Gascon			OUR_ADJ	nòste	nˈɔste	n ˈɔ s t e		OUR_ADJ_1			
@@ -6716,6 +6908,7 @@ Friulian	Friulian			NINE_NUM	nûf	nˈuːf	n ˈuː f		NINE_NUM_1
 Romansch	Romansch			NINE_NUM	nov	nˈɔf	n ˈɔ f		NINE_NUM_1			
 French	French			NINE_NUM	neuf	nœf	n œ f		NINE_NUM_1			
 Québécois French	Québécois French			NINE_NUM	neuf	nœf	n œ f		NINE_NUM_1			
+Walloon	Walloon			NINE_NUM	noûf	nˈuːf	n ˈuː f		NINE_NUM_1			
 Franco-Provençal	Franco-Provençal			NINE_NUM	nôf	nˈoːf	n ˈoː f		NINE_NUM_1			
 Occitan	Occitan			NINE_NUM	nòu	nˈɔw	n ˈɔ w		NINE_NUM_1			
 Gascon	Gascon			NINE_NUM	nau	nˈaw	n ˈa w		NINE_NUM_1			
@@ -6750,6 +6943,7 @@ Friulian	Friulian			NEW_ADJ	gnûf	ɲˈuːf	ɲ ˈuː f		NEW_ADJ_1
 Romansch	Romansch			NEW_ADJ	nov	nˈɔf	n ˈɔ f		NEW_ADJ_1			
 French	French			NEW_ADJ	neuf	nœf	n œ f		NEW_ADJ_1			
 Québécois French	Québécois French			NEW_ADJ	neuf	nœf	n œ f		NEW_ADJ_1			
+Walloon	Walloon			NEW_ADJ	noû	nˈuː	n ˈuː		NEW_ADJ_1			
 Franco-Provençal	Franco-Provençal			NEW_ADJ	novo	nˈɔvo	n ˈɔ v o		NEW_ADJ_1			
 Occitan	Occitan			NEW_ADJ	nòu	nˈɔw	n ˈɔ w		NEW_ADJ_1			
 Gascon	Gascon			NEW_ADJ	nau	nˈaw	n ˈa w		NEW_ADJ_1			
@@ -6827,6 +7021,7 @@ Ladin	Ladin			NUT_NOUN	nousc	nˈowʃ	n ˈo w ʃ		NUT_NOUN_2
 Romansch	Romansch			NUT_NOUN	nusch	nˈuʃ	n ˈu ʃ		NUT_NOUN_2			
 French	French			NUT_NOUN	noix	nwa	n w a		NUT_NOUN_2			
 Québécois French	Québécois French			NUT_NOUN	noix	nwɛ	n w ɛ		NUT_NOUN_2			
+Walloon	Walloon			NUT_NOUN	noejhe	nwˈɛʃ	n w ˈɛ ʃ		NUT_NOUN_2			
 Franco-Provençal	Franco-Provençal			NUT_NOUN	noués	nwˈɛ	n w ˈɛ		NUT_NOUN_2			
 Occitan	Occitan			NUT_NOUN	notz	nˈuʦ	n ˈu ʦ		NUT_NOUN_2			
 Gascon	Gascon			NUT_NOUN	notz	nˈuʦ	n ˈu ʦ		NUT_NOUN_2			
@@ -6891,6 +7086,7 @@ Friulian	Friulian			EIGHT_NUM	vot	vˈɔt	v ˈɔ t		EIGHT_NUM_1
 Romansch	Romansch			EIGHT_NUM	otg	ˈoʨ	ˈo ʨ		EIGHT_NUM_1			
 French	French			EIGHT_NUM	huit	ɥi	ɥ i		EIGHT_NUM_1			
 Québécois French	Québécois French			EIGHT_NUM	huit	ɥi	ɥ i		EIGHT_NUM_1			
+Walloon	Walloon			EIGHT_NUM	ût	ˈyːt	ˈyː t		EIGHT_NUM_1			
 Franco-Provençal	Franco-Provençal			EIGHT_NUM	huét	wˈe	w ˈe		EIGHT_NUM_1			
 Occitan	Occitan			EIGHT_NUM	uèch	ɥˈɛʧ	ɥ ˈɛ ʧ		EIGHT_NUM_1			
 Gascon	Gascon			EIGHT_NUM	ueit	wˈejt	w ˈe j t		EIGHT_NUM_1			
@@ -6921,6 +7117,7 @@ Friulian	Friulian			EYES_NOUN	voi	vˈɔi	v ˈɔ i		EYES_NOUN_1
 Romansch	Romansch			EYES_NOUN	egls	ˈɛʎs	ˈɛ ʎ s		EYES_NOUN_1			
 French	French			EYES_NOUN	yeux	jø	j ø		EYES_NOUN_1			
 Québécois French	Québécois French			EYES_NOUN	yeux	jøʏ̯	j øʏ̯		EYES_NOUN_1			
+Walloon	Walloon			EYES_NOUN	ouys	ˈuːj	ˈuː j		EYES_NOUN_1			
 Occitan	Occitan			EYES_NOUN	uèlhs	ɥˈɛls	ɥ ˈɛ l s		EYES_NOUN_1			
 Gascon	Gascon			EYES_NOUN	uelhs	wˈeʎs	w ˈe ʎ s		EYES_NOUN_1			
 Catalan	Catalan			EYES_NOUN	ulls	ˈuʎs	ˈu ʎ s		EYES_NOUN_1			
@@ -6955,6 +7152,7 @@ Friulian	Friulian			EYE_NOUN	voli	vˈɔli	v ˈɔ l i		EYE_NOUN_1
 Romansch	Romansch			EYE_NOUN	egl	ˈɛʎ	ˈɛ ʎ		EYE_NOUN_1			
 French	French			EYE_NOUN	œil	œj	œ j		EYE_NOUN_1			
 Québécois French	Québécois French			EYE_NOUN	œil	œj	œ j		EYE_NOUN_1			
+Walloon	Walloon			EYE_NOUN	ouy	ˈuːj	ˈuː j		EYE_NOUN_1			
 Franco-Provençal	Franco-Provençal			EYE_NOUN	uèly	 wˈeʎ	w ˈe ʎ		EYE_NOUN_1			
 Savoyard	Savoyard			EYE_NOUN	jû	ʒˈyː	ʒ ˈyː		EYE_NOUN_1			
 Occitan	Occitan			EYE_NOUN	uèlh	ɥˈɛl	ɥ ˈɛ l		EYE_NOUN_1			
@@ -6980,6 +7178,7 @@ Friulian	Friulian			ODOR_NOUN	odôr	odˈoːr	o d ˈoː r		ODOR_NOUN_1
 Romansch	Romansch			ODOR_NOUN	odur	odˈuːr	o d ˈuː r		ODOR_NOUN_1			
 French	French			ODOR_NOUN	odeur	ɔdœʁ	ɔ d œ ʁ		ODOR_NOUN_1			
 Québécois French	Québécois French			ODOR_NOUN	odeur	ɔdaœ̯ʁ	ɔ d aœ̯ ʁ		ODOR_NOUN_1			
+Walloon	Walloon			ODOR_NOUN	odeur	ɔdˈøːʀ	ɔ d ˈøː ʀ		ODOR_NOUN_1			
 Portuguese	Portuguese			ODOR_NOUN	odor	ɔðˈoɾ	ɔ ð ˈo ɾ		ODOR_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			ODOR_NOUN	odor	odˈoh	o d ˈo h		ODOR_NOUN_1			
 Latin	Latin			ODOR_NOUN	olōrem	ɔɫˈoːrɛ̃ː	ɔ ɫ ˈoː r ɛ̃ː		ODOR_NOUN_2			
@@ -7006,6 +7205,7 @@ Friulian	Friulian			WORK_NOUN	vore	vˈore	v ˈo r e		WORK_NOUN_1
 Romansch	Romansch			WORK_NOUN	ovra	ˈɔːvrə	ˈɔː v r ə		WORK_NOUN_1			
 French	French			WORK_NOUN	œuvre	œvʁ	œ v ʁ		WORK_NOUN_1			
 Québécois French	Québécois French			WORK_NOUN	œuvre	œvʁ	œ v ʁ		WORK_NOUN_1			
+Walloon	Walloon			WORK_NOUN	oufe	ˈuːf	ˈuː f		WORK_NOUN_1			
 Franco-Provençal	Franco-Provençal			WORK_NOUN	uevra	wˈevʁa	w ˈe v ʁ a		WORK_NOUN_1			
 Occitan	Occitan			WORK_NOUN	òbra	ˈɔβɾɔ	ˈɔ β ɾ ɔ		WORK_NOUN_1			
 Gascon	Gascon			WORK_NOUN	òbra	ˈɔβɾɔ	ˈɔ β ɾ ɔ		WORK_NOUN_1			
@@ -7023,6 +7223,7 @@ Italian	Italian			WORKER_NOUN	operaio	operˈajo	o p e r ˈa j o		WORKER_NOUN_1
 Piedmontese	Piedmontese			WORKER_NOUN	ovrié	uvrjˈe	u v r j ˈe		WORKER_NOUN_1			
 French	French			WORKER_NOUN	ouvrier	uvʁije	u v ʁ i j e		WORKER_NOUN_1			
 Québécois French	Québécois French			WORKER_NOUN	ouvrier	uvʁije	u v ʁ i j e		WORKER_NOUN_1			
+Walloon	Walloon			WORKER_NOUN	ovrî	ɔvʀˈiː	ɔ v ʀ ˈiː		WORKER_NOUN_1			
 Franco-Provençal	Franco-Provençal			WORKER_NOUN	ovriér	ovʁjˈe	o v ʁ j ˈe		WORKER_NOUN_1			
 Occitan	Occitan			WORKER_NOUN	obrièr	uβɾjˈɛ	u β ɾ j ˈɛ		WORKER_NOUN_1			
 Gascon	Gascon			WORKER_NOUN	obrèr	uβɾˈɛ	u β ɾ ˈɛ		WORKER_NOUN_1			
@@ -7059,6 +7260,7 @@ French	French			BONE_NOUN	os	ɔs	ɔ s		BONE_NOUN_1
 French	French			BONE_NOUN	os	o	o		BONE_NOUN_1			
 Québécois French	Québécois French			BONE_NOUN	os	ɔs	ɔ s		BONE_NOUN_1			
 Québécois French	Québécois French			BONE_NOUN	os	o	o		BONE_NOUN_1			
+Walloon	Walloon			BONE_NOUN	oxhea	ɔʃjˈa	ɔ ʃ j ˈa		BONE_NOUN_1			
 Franco-Provençal	Franco-Provençal			BONE_NOUN	ôs	ˈos	ˈo s		BONE_NOUN_1			
 Savoyard	Savoyard			BONE_NOUN	o	ˈɔ	ˈɔ		BONE_NOUN_1			
 Occitan	Occitan			BONE_NOUN	òs	ˈɔs	ˈɔ s		BONE_NOUN_1			
@@ -7109,6 +7311,7 @@ Friulian	Friulian			EGG_NOUN	ûf	ˈuːf	ˈuː f		EGG_NOUN_1
 Romansch	Romansch			EGG_NOUN	ov	ˈɔf	ˈɔ f		EGG_NOUN_1			
 French	French			EGG_NOUN	œuf	œf	œ f		EGG_NOUN_1			
 Québécois French	Québécois French			EGG_NOUN	œuf	œf	œ f		EGG_NOUN_1			
+Walloon	Walloon			EGG_NOUN	oû	ˈuː	ˈuː		EGG_NOUN_1			
 Franco-Provençal	Franco-Provençal			EGG_NOUN	of	ˈof	ˈo f		EGG_NOUN_1			
 Savoyard	Savoyard			EGG_NOUN	wà	wˈa	w ˈa		EGG_NOUN_1			
 Occitan	Occitan			EGG_NOUN	uòu	ɥˈɔw	ɥ ˈɔ w		EGG_NOUN_1			
@@ -7141,6 +7344,7 @@ Friulian	Friulian			PEACE_NOUN	pâs	pˈaːs	p ˈaː s		PEACE_NOUN_1
 Romansch	Romansch			PEACE_NOUN	pasch	pˈaʃ	p ˈa ʃ		PEACE_NOUN_1			
 French	French			PEACE_NOUN	paix	pɛ	p ɛ		PEACE_NOUN_1			
 Québécois French	Québécois French			PEACE_NOUN	paix	pæɛ̯	p æɛ̯		PEACE_NOUN_1			
+Walloon	Walloon			PEACE_NOUN	påye	pˈɔːj	p ˈɔː j		PEACE_NOUN_1			
 Franco-Provençal	Franco-Provençal			PEACE_NOUN	péx	pˈeʃ	p ˈe ʃ		PEACE_NOUN_1			
 Occitan	Occitan			PEACE_NOUN	patz	pˈaʦ	p ˈa ʦ		PEACE_NOUN_1			
 Gascon	Gascon			PEACE_NOUN	patz	pˈaʦ	p ˈa ʦ		PEACE_NOUN_1			
@@ -7168,6 +7372,7 @@ Friulian	Friulian			PALACE_NOUN	palaç	palˈaʧ	p a l ˈa ʧ		PALACE_NOUN_1
 Romansch	Romansch			PALACE_NOUN	palaz	pəlˈaʦ	p ə l ˈa ʦ		PALACE_NOUN_1			
 French	French			PALACE_NOUN	palais	palɛ	p a l ɛ		PALACE_NOUN_1			
 Québécois French	Québécois French			PALACE_NOUN	palais	palæɛ̯	p a l æɛ̯		PALACE_NOUN_1			
+Walloon	Walloon			PALACE_NOUN	palå	palˈɔː	p a l ˈɔː		PALACE_NOUN_1			
 Franco-Provençal	Franco-Provençal			PALACE_NOUN	palés	palˈe	p a l ˈe		PALACE_NOUN_1			
 Occitan	Occitan			PALACE_NOUN	palatz	palˈaʦ	p a l ˈa ʦ		PALACE_NOUN_1			
 Catalan	Catalan			PALACE_NOUN	palau	pəlˈaw	p ə l ˈa w		PALACE_NOUN_1			
@@ -7203,6 +7408,7 @@ Friulian	Friulian			BREAD_NOUN	pan	pˈaŋ	p ˈa ŋ		BREAD_NOUN_1
 Romansch	Romansch			BREAD_NOUN	pawn	pˈawn	p ˈa w n		BREAD_NOUN_1			
 French	French			BREAD_NOUN	pain	pɛ̃	p ɛ̃		BREAD_NOUN_1			
 Québécois French	Québécois French			BREAD_NOUN	pain	pẽɪ̯̃	p ẽɪ̯̃		BREAD_NOUN_1			
+Walloon	Walloon			BREAD_NOUN	pan	pˈɑ̃	p ˈɑ̃		BREAD_NOUN_1			
 Franco-Provençal	Franco-Provençal			BREAD_NOUN	pan	pˈɑ̃	p ˈɑ̃		BREAD_NOUN_1			
 Occitan	Occitan			BREAD_NOUN	pan	pˈa	p ˈa		BREAD_NOUN_1			
 Gascon	Gascon			BREAD_NOUN	pan	pˈaŋ	p ˈa ŋ		BREAD_NOUN_1			
@@ -7256,6 +7462,7 @@ Ladin	Ladin			WORD_NOUN	parola	parˈɔla	p a r ˈɔ l a		WORD_NOUN_1
 Friulian	Friulian			WORD_NOUN	peraule	perˈawle	p e r ˈa w l e		WORD_NOUN_1			
 French	French			WORD_NOUN	parole	paʁɔl	p a ʁ ɔ l		WORD_NOUN_1			
 Québécois French	Québécois French			WORD_NOUN	parole	paʁɔl	p a ʁ ɔ l		WORD_NOUN_1			
+Walloon	Walloon			WORD_NOUN	parole	paʀˈɔl	p a ʀ ˈɔ l		WORD_NOUN_1			
 Franco-Provençal	Franco-Provençal			WORD_NOUN	parola	paðˈɔla	p a ð ˈɔ l a		WORD_NOUN_1			
 Occitan	Occitan			WORD_NOUN	paraula	paɾˈawlɔ	p a ɾ ˈa w l ɔ		WORD_NOUN_1			
 Gascon	Gascon			WORD_NOUN	paraula	paɾˈawlɔ	p a ɾ ˈa w l ɔ		WORD_NOUN_1			
@@ -7286,6 +7493,7 @@ Ladin	Ladin			FATHER_NOUN	pere	pˈɛre	p ˈɛ r e		FATHER_NOUN_2
 Friulian	Friulian			FATHER_NOUN	pari	pˈari	p ˈa r i		FATHER_NOUN_2			
 French	French			FATHER_NOUN	père	pɛʁ	p ɛ ʁ		FATHER_NOUN_2			
 Québécois French	Québécois French			FATHER_NOUN	père	pæɛ̯ʁ	p æɛ̯ ʁ		FATHER_NOUN_2			
+Walloon	Walloon			FATHER_NOUN	pere	pˈɛʀ	p ˈɛ ʀ		FATHER_NOUN_2			
 Franco-Provençal	Franco-Provençal			FATHER_NOUN	pâre	pˈaːðə	p ˈaː ð ə		FATHER_NOUN_2			
 Occitan	Occitan			FATHER_NOUN	paire	pˈajɾe	p ˈa j ɾ e		FATHER_NOUN_2			
 Gascon	Gascon			FATHER_NOUN	pair	pˈajr	p ˈa j r		FATHER_NOUN_2			
@@ -7316,6 +7524,7 @@ Friulian	Friulian			LITTLE_ADJ	pôc	pˈɔːk	p ˈɔː k		LITTLE_ADJ_1
 Romansch	Romansch			LITTLE_ADJ	pauc	pˈawk	p ˈa w k		LITTLE_ADJ_1			
 French	French			LITTLE_ADJ	peu	pø	p ø		LITTLE_ADJ_1			
 Québécois French	Québécois French			LITTLE_ADJ	peu	pøʏ̯	p øʏ̯		LITTLE_ADJ_1			
+Walloon	Walloon			LITTLE_ADJ	pô	pˈoː	p ˈoː		LITTLE_ADJ_1			
 Franco-Provençal	Franco-Provençal			LITTLE_ADJ	pue	pwˈe	p w ˈe		LITTLE_ADJ_1			
 Occitan	Occitan			LITTLE_ADJ	pauc	pˈawk	p ˈa w k		LITTLE_ADJ_1			
 Gascon	Gascon			LITTLE_ADJ	pauc	pˈawk	p ˈa w k		LITTLE_ADJ_1			
@@ -7342,6 +7551,7 @@ Friulian	Friulian			POOR_ADJ	puar	pwˈar	p w ˈa r		POOR_ADJ_1
 Romansch	Romansch			POOR_ADJ	pover	pˈɔːvər	p ˈɔː v ə r		POOR_ADJ_1			
 French	French			POOR_ADJ	pauvre	povʁ	p o v ʁ		POOR_ADJ_1			
 Québécois French	Québécois French			POOR_ADJ	pauvre	poʊ̯vʁ	p oʊ̯ v ʁ		POOR_ADJ_1			
+Walloon	Walloon			POOR_ADJ	pôve	pˈoːf	p ˈoː f		POOR_ADJ_1			
 Franco-Provençal	Franco-Provençal			POOR_ADJ	pouvro	pˈuvʁo	p ˈu v ʁ o		POOR_ADJ_1			
 Occitan	Occitan			POOR_ADJ	paure	pˈawɾe	p ˈa w ɾ e		POOR_ADJ_1			
 Gascon	Gascon			POOR_ADJ	praube	pɾˈawβe	p ɾ ˈa w β e		POOR_ADJ_1			
@@ -7418,6 +7628,7 @@ Friulian	Friulian			FOOT_NOUN	pît	pˈiːt	p ˈiː t		FOOT_NOUN_1
 Romansch	Romansch			FOOT_NOUN	pe	pˈeː	p ˈeː		FOOT_NOUN_1			
 French	French			FOOT_NOUN	pied	pje	p j e		FOOT_NOUN_1			
 Québécois French	Québécois French			FOOT_NOUN	pied	pje	p j e		FOOT_NOUN_1			
+Walloon	Walloon			FOOT_NOUN	pî	pˈiː	p ˈiː		FOOT_NOUN_1			
 Franco-Provençal	Franco-Provençal			FOOT_NOUN	pi	pˈi	p ˈi		FOOT_NOUN_1			
 Savoyard	Savoyard			FOOT_NOUN	pî	piː	p iː		FOOT_NOUN_1			
 Occitan	Occitan			FOOT_NOUN	pè	pˈɛ	p ˈɛ		FOOT_NOUN_1			
@@ -7453,6 +7664,7 @@ Friulian	Friulian			LOUSE_NOUN	pedoli	pedˈɔli	p e d ˈɔ l i		LOUSE_NOUN_1
 Romansch	Romansch			LOUSE_NOUN	plugl	plˈuʎ	p l ˈu ʎ		LOUSE_NOUN_1			
 French	French			LOUSE_NOUN	pou	pu	p u		LOUSE_NOUN_1			
 Québécois French	Québécois French			LOUSE_NOUN	pou	pu	p u		LOUSE_NOUN_1			
+Walloon	Walloon			LOUSE_NOUN	piou	pjˈu	p j ˈu		LOUSE_NOUN_1			
 Franco-Provençal	Franco-Provençal			LOUSE_NOUN	pioly	pjˈuʎ	p j ˈu ʎ		LOUSE_NOUN_1			
 Savoyard	Savoyard			LOUSE_NOUN	pyu	pjˈy	p j ˈy		LOUSE_NOUN_1			
 Occitan	Occitan			LOUSE_NOUN	pesolh	pezˈul	p e z ˈu l		LOUSE_NOUN_1			
@@ -7489,6 +7701,7 @@ Friulian	Friulian			SKIN_NOUN	piel	pjˈɛl	p j ˈɛ l		SKIN_NOUN_1
 Romansch	Romansch			SKIN_NOUN	pel	pˈɛl	p ˈɛ l		SKIN_NOUN_1			
 French	French			SKIN_NOUN	peau	po	p o		SKIN_NOUN_1			
 Québécois French	Québécois French			SKIN_NOUN	peau	poʊ̯	p oʊ̯		SKIN_NOUN_1			
+Walloon	Walloon			SKIN_NOUN	pea	pjˈa	p j ˈa		SKIN_NOUN_1			
 Franco-Provençal	Franco-Provençal			SKIN_NOUN	pél	pˈel	p ˈe l		SKIN_NOUN_1			
 Savoyard	Savoyard			SKIN_NOUN	pé	pˈe	p ˈe		SKIN_NOUN_1			
 Occitan	Occitan			SKIN_NOUN	pèl	pˈɛl	p ˈɛ l		SKIN_NOUN_1			
@@ -7519,6 +7732,7 @@ Eastern Lombard	Eastern Lombard			PEACH_NOUN	pèsca	pˈɛska	p ˈɛ s k a		PEACH
 Ladin	Ladin			PEACH_NOUN	pesçia	pˈɛʃʨa	p ˈɛ ʃ ʨ a		PEACH_NOUN_1			
 French	French			PEACH_NOUN	pêche	pɛʃ	p ɛ ʃ		PEACH_NOUN_1			
 Québécois French	Québécois French			PEACH_NOUN	pêche	pɛɪ̯ʃ	p ɛɪ̯ ʃ		PEACH_NOUN_1			
+Walloon	Walloon			PEACH_NOUN	pexhe	pˈɛʃ	p ˈɛ ʃ		PEACH_NOUN_1			
 Franco-Provençal	Franco-Provençal			PEACH_NOUN	pêrche	pˈɛːʁʃə	p ˈɛː ʁ ʃ ə		PEACH_NOUN_1			
 Latin	Latin			PEACH_NOUN	persicum	pˈɛrsɪkʊ̃ː	p ˈɛ r s ɪ k ʊ̃ː		PEACH_NOUN_2			
 Venetian	Venetian			PEACH_NOUN	pèrsego	pˈɛrseɡo	p ˈɛ r s e ɡ o		PEACH_NOUN_2			
@@ -7560,6 +7774,7 @@ Ladin	Ladin			STONE_NOUN	pera	pˈɛra	p ˈɛ r a		STONE_NOUN_1
 Friulian	Friulian			STONE_NOUN	piere	pjˈɛre	p j ˈɛ r e		STONE_NOUN_1			
 French	French			STONE_NOUN	pierre	pjɛʁ	p j ɛ ʁ		STONE_NOUN_1			
 Québécois French	Québécois French			STONE_NOUN	pierre	pjæɛ̯ʁ	p j æɛ̯ ʁ		STONE_NOUN_1			
+Walloon	Walloon			STONE_NOUN	pire	pˈiːʀ	p ˈiː ʀ		STONE_NOUN_1			
 Franco-Provençal	Franco-Provençal			STONE_NOUN	piérra	pjˈeða	p j ˈe ð a		STONE_NOUN_1			
 Savoyard	Savoyard			STONE_NOUN	pyêro	pjˈɛro	p j ˈɛ r o		STONE_NOUN_1			
 Occitan	Occitan			STONE_NOUN	pèira	pˈɛjɾɔ	p ˈɛ j ɾ ɔ		STONE_NOUN_1			
@@ -7595,6 +7810,7 @@ Friulian	Friulian			HAIR_NOUN	pêl	pˈeːl	p ˈeː l		HAIR_NOUN_2
 Romansch	Romansch			HAIR_NOUN	pail	pˈajl	p ˈa j l		HAIR_NOUN_2			
 French	French			HAIR_NOUN	poil	pwal	p w a l		HAIR_NOUN_2			
 Québécois French	Québécois French			HAIR_NOUN	poil	pwɛl	p w ɛ l		HAIR_NOUN_2			
+Walloon	Walloon			HAIR_NOUN	poy	pˈɔj	p ˈɔ j		HAIR_NOUN_2			
 Franco-Provençal	Franco-Provençal			HAIR_NOUN	pêl	pˈɛːl	p ˈɛː l		HAIR_NOUN_2			
 Occitan	Occitan			HAIR_NOUN	pel	pˈel	p ˈe l		HAIR_NOUN_2			
 Gascon	Gascon			HAIR_NOUN	peu	pˈew	p ˈe w		HAIR_NOUN_2			
@@ -7620,6 +7836,7 @@ Friulian	Friulian			FEATHER_NOUN	pene	pˈene	p ˈe n e		FEATHER_NOUN_2
 Romansch	Romansch			FEATHER_NOUN	penna	pˈenə	p ˈe n ə		FEATHER_NOUN_2			
 French	French			FEATHER_NOUN	penne	pɛn	p ɛ n		FEATHER_NOUN_2			
 Québécois French	Québécois French			FEATHER_NOUN	penne	pɛn	p ɛ n		FEATHER_NOUN_2			
+Walloon	Walloon			FEATHER_NOUN	pene	pˈɛn	p ˈɛ n		FEATHER_NOUN_2			
 Catalan	Catalan			FEATHER_NOUN	penya	pˈɛɲə	p ˈɛ ɲ ə		FEATHER_NOUN_2			
 Valencian	Valencian			FEATHER_NOUN	penya	pˈæɲɜ	p ˈæ ɲ ɜ		FEATHER_NOUN_2			
 Aragonese	Aragonese			FEATHER_NOUN	peña	pˈeɲa	p ˈe ɲ a		FEATHER_NOUN_2			
@@ -7662,6 +7879,7 @@ Brazilian Portuguese	Brazilian Portuguese			FISH_NOUN	peixe	pˈejʃi	p ˈe j ʃ 
 Latin	Latin			FISH_NOUN	piscōnem	pɪskˈoːnɛ̃ː	p ɪ s k ˈoː n ɛ̃ː		FISH_NOUN_2			
 French	French			FISH_NOUN	poisson	pwasɔ̃	p w a s ɔ̃		FISH_NOUN_2			
 Québécois French	Québécois French			FISH_NOUN	poisson	pwɛsɒ̃ʊ̯̃	p w ɛ s ɒ̃ʊ̯̃		FISH_NOUN_2			
+Walloon	Walloon			FISH_NOUN	pexhon	pɛʃˈɔ̃	p ɛ ʃ ˈɔ̃		FISH_NOUN_2			
 Franco-Provençal	Franco-Provençal			FISH_NOUN	pêsson	pˈɛːsɔ̃	p ˈɛː s ɔ̃		FISH_NOUN_2			
 Latin	Latin			PLAGUE_NOUN	plāgam	plˈaːɡãː	p l ˈaː ɡ ãː		PLAGUE_NOUN_1			
 Logudorese	Logudorese			PLAGUE_NOUN	prae	prˈae	p r ˈa e		PLAGUE_NOUN_1			
@@ -7682,6 +7900,7 @@ Friulian	Friulian			PLAGUE_NOUN	plaie	plˈaje	p l ˈa j e		PLAGUE_NOUN_1
 Romansch	Romansch			PLAGUE_NOUN	plaja	plˈaːjə	p l ˈaː j ə		PLAGUE_NOUN_1			
 French	French			PLAGUE_NOUN	plaie	plɛ	p l ɛ		PLAGUE_NOUN_1			
 Québécois French	Québécois French			PLAGUE_NOUN	plaie	plæɛ̯	p l æɛ̯		PLAGUE_NOUN_1			
+Walloon	Walloon			PLAGUE_NOUN	plåye	plˈɔːj	p l ˈɔː j		PLAGUE_NOUN_1			
 Occitan	Occitan			PLAGUE_NOUN	plaga	plˈaɣɔ	p l ˈa ɣ ɔ		PLAGUE_NOUN_1			
 Gascon	Gascon			PLAGUE_NOUN	plaga	plˈaɣɔ	p l ˈa ɣ ɔ		PLAGUE_NOUN_1			
 Catalan	Catalan			PLAGUE_NOUN	plaga	plˈaɣə	p l ˈa ɣ ə		PLAGUE_NOUN_1			
@@ -7710,6 +7929,7 @@ Eastern Lombard	Eastern Lombard			WEEP_VERB	piàns	pjˈans	p j ˈa n s		WEEP_VER
 Eastern Lombard	Eastern Lombard			WEEP_VERB	pianzì	pjanzˈi	p j a n z ˈi		WEEP_VERB_1			
 French	French			WEEP_VERB	plaindre	plɛ̃dʁ	p l ɛ̃ d ʁ		WEEP_VERB_1			
 Québécois French	Québécois French			WEEP_VERB	plaindre	plẽɪ̯̃dʁ	p l ẽɪ̯̃ d ʁ		WEEP_VERB_1			
+Walloon	Walloon			WEEP_VERB	plinde	plˈɛ̃t	p l ˈɛ̃ t		WEEP_VERB_1			
 Franco-Provençal	Franco-Provençal			WEEP_VERB	plendre	plˈɛ̃dʁə	p l ˈɛ̃ d ʁ ə		WEEP_VERB_1			
 Occitan	Occitan			WEEP_VERB	plànher	plˈaɲe	p l ˈa ɲ e		WEEP_VERB_1			
 Gascon	Gascon			WEEP_VERB	plànher	plˈaɲe	p l ˈa ɲ e		WEEP_VERB_1			
@@ -7741,6 +7961,7 @@ Friulian	Friulian			FULL_ADJ	plen	plˈeŋ	p l ˈe ŋ		FULL_ADJ_1
 Romansch	Romansch			FULL_ADJ	plain	plˈajn	p l ˈa j n		FULL_ADJ_1			
 French	French			FULL_ADJ	plein	plɛ̃	p l ɛ̃		FULL_ADJ_1			
 Québécois French	Québécois French			FULL_ADJ	plein	plẽɪ̯̃	p l ẽɪ̯̃		FULL_ADJ_1			
+Walloon	Walloon			FULL_ADJ	plin	plˈɛ̃	p l ˈɛ̃		FULL_ADJ_1			
 Franco-Provençal	Franco-Provençal			FULL_ADJ	plen	plˈɛ̃	p l ˈɛ̃		FULL_ADJ_1			
 Savoyard	Savoyard			FULL_ADJ	plyê	pʎɛː	p ʎ ɛː		FULL_ADJ_1			
 Occitan	Occitan			FULL_ADJ	plen	plˈe	p l ˈe		FULL_ADJ_1			
@@ -7758,6 +7979,7 @@ Istriot	Istriot			WEEP_VERB	piurà	pjurˈa	p j u r ˈa		WEEP_VERB_2
 Piedmontese	Piedmontese			WEEP_VERB	pioré	pjurˈe	p j u r ˈe		WEEP_VERB_2			
 French	French			WEEP_VERB	pleurer	plœʁe	p l œ ʁ e		WEEP_VERB_2			
 Québécois French	Québécois French			WEEP_VERB	pleurer	plœʁe	p l œ ʁ e		WEEP_VERB_2			
+Walloon	Walloon			WEEP_VERB	plorer	plɔʀˈe	p l ɔ ʀ ˈe		WEEP_VERB_2			
 Franco-Provençal	Franco-Provençal			WEEP_VERB	plorar	ploðˈa	p l o ð ˈa		WEEP_VERB_2			
 Occitan	Occitan			WEEP_VERB	plorar	pluɾˈa	p l u ɾ ˈa		WEEP_VERB_2			
 Gascon	Gascon			WEEP_VERB	plorar	pluɾˈa	p l u ɾ ˈa		WEEP_VERB_2			
@@ -7783,6 +8005,7 @@ Friulian	Friulian			FEATHER_NOUN	plume	plˈume	p l ˈu m e		FEATHER_NOUN_3
 Romansch	Romansch			FEATHER_NOUN	plima	plˈiːmə	p l ˈiː m ə		FEATHER_NOUN_3			
 French	French			FEATHER_NOUN	plume	plym	p l y m		FEATHER_NOUN_3			
 Québécois French	Québécois French			FEATHER_NOUN	plume	plʏm	p l ʏ m		FEATHER_NOUN_3			
+Walloon	Walloon			FEATHER_NOUN	plome	plˈɔm	p l ˈɔ m		FEATHER_NOUN_3			
 Franco-Provençal	Franco-Provençal			FEATHER_NOUN	ploma	plˈoma	p l ˈo m a		FEATHER_NOUN_3			
 Savoyard	Savoyard			FEATHER_NOUN	plyonme	pʎˈɔ̃ma	p ʎ ˈɔ̃ m a		FEATHER_NOUN_3			
 Occitan	Occitan			FEATHER_NOUN	pluma	plˈymɔ	p l ˈy m ɔ		FEATHER_NOUN_3			
@@ -7816,6 +8039,7 @@ Friulian	Friulian			RAIN_NOUN	ploie	plˈoje	p l ˈo j e		RAIN_NOUN_1
 Romansch	Romansch			RAIN_NOUN	plievgia	plˈiə̯vʥə	p l ˈiə̯ v ʥ ə		RAIN_NOUN_1			
 French	French			RAIN_NOUN	pluie	plɥi	p l ɥ i		RAIN_NOUN_1			
 Québécois French	Québécois French			RAIN_NOUN	pluie	plɥi	p l ɥ i		RAIN_NOUN_1			
+Walloon	Walloon			RAIN_NOUN	plouve	plˈuːf	p l ˈuː f		RAIN_NOUN_1			
 Franco-Provençal	Franco-Provençal			RAIN_NOUN	plloge	pʎˈoʒə	p ʎ ˈo ʒ ə		RAIN_NOUN_1			
 Savoyard	Savoyard			RAIN_NOUN	plyôzhe	pʎˈoðe	p ʎ ˈo ð e		RAIN_NOUN_1			
 Occitan	Occitan			RAIN_NOUN	pluèja	plɥˈɛʤɔ	p l ɥ ˈɛ ʤ ɔ		RAIN_NOUN_1			
@@ -7857,6 +8081,7 @@ Eastern Lombard	Eastern Lombard			PAIN_NOUN	péna	pˈena	p ˈe n a		PAIN_NOUN_1
 Friulian	Friulian			PAIN_NOUN	pene	pˈene	p ˈe n e		PAIN_NOUN_1			
 French	French			PAIN_NOUN	peine	pɛn	p ɛ n		PAIN_NOUN_1			
 Québécois French	Québécois French			PAIN_NOUN	peine	pæɛ̯n	p æɛ̯ n		PAIN_NOUN_1			
+Walloon	Walloon			PAIN_NOUN	poenne	pwˈɛ̃n	p w ˈɛ̃ n		PAIN_NOUN_1			
 Franco-Provençal	Franco-Provençal			PAIN_NOUN	pêna	pˈɛːna	p ˈɛː n a		PAIN_NOUN_1			
 Occitan	Occitan			PAIN_NOUN	pena	pˈenɔ	p ˈe n ɔ		PAIN_NOUN_1			
 Gascon	Gascon			PAIN_NOUN	pena	pˈenɔ	p ˈe n ɔ		PAIN_NOUN_1			
@@ -7882,6 +8107,7 @@ Eastern Lombard	Eastern Lombard			PUT_VERB	pondì	pondˈi	p o n d ˈi		PUT_VERB_
 Friulian	Friulian			PUT_VERB	poni	pˈoni	p ˈo n i		PUT_VERB_1			
 French	French			PUT_VERB	pondre	pɔ̃dʁ	p ɔ̃ d ʁ		PUT_VERB_1			
 Québécois French	Québécois French			PUT_VERB	pondre	pɒ̃ʊ̯̃dʁ	p ɒ̃ʊ̯̃ d ʁ		PUT_VERB_1			
+Walloon	Walloon			PUT_VERB	ponre	pˈɔ̃ʀ	p ˈɔ̃ ʀ		PUT_VERB_1			
 Franco-Provençal	Franco-Provençal			PUT_VERB	pondre	pˈɔ̃dʁə	p ˈɔ̃ d ʁ ə		PUT_VERB_1			
 Occitan	Occitan			PUT_VERB	pondre	pˈundɾe	p ˈu n d ɾ e		PUT_VERB_1			
 Gascon	Gascon			PUT_VERB	pondre	pˈundɾe	p ˈu n d ɾ e		PUT_VERB_1			
@@ -7927,6 +8153,7 @@ Friulian	Friulian			BRIDGE_NOUN	puint	pwˈint	p w ˈi n t		BRIDGE_NOUN_1
 Romansch	Romansch			BRIDGE_NOUN	punt	pˈunt	p ˈu n t		BRIDGE_NOUN_1			
 French	French			BRIDGE_NOUN	pont	pɔ̃	p ɔ̃		BRIDGE_NOUN_1			
 Québécois French	Québécois French			BRIDGE_NOUN	pont	pɒ̃ʊ̯̃	p ɒ̃ʊ̯̃		BRIDGE_NOUN_1			
+Walloon	Walloon			BRIDGE_NOUN	pont	pˈɔ̃	p ˈɔ̃		BRIDGE_NOUN_1			
 Franco-Provençal	Franco-Provençal			BRIDGE_NOUN	pont	pˈɔ̃	p ˈɔ̃		BRIDGE_NOUN_1			
 Occitan	Occitan			BRIDGE_NOUN	pònt	pˈɔn	p ˈɔ n		BRIDGE_NOUN_1			
 Gascon	Gascon			BRIDGE_NOUN	pont	pˈun	p ˈu n		BRIDGE_NOUN_1			
@@ -8006,6 +8233,7 @@ Friulian	Friulian			CAN_VERB	podê	podˈeː	p o d ˈeː		CAN_VERB_1
 Romansch	Romansch			CAN_VERB	pudair	pudˈajr	p u d ˈa j r		CAN_VERB_1			
 French	French			CAN_VERB	pouvoir	puvwaʁ	p u v w a ʁ		CAN_VERB_1			
 Québécois French	Québécois French			CAN_VERB	pouvoir	puvwɛʁ	p u v w ɛ ʁ		CAN_VERB_1			
+Walloon	Walloon			CAN_VERB	poleur	pɔlˈøːʀ	p ɔ l ˈøː ʀ		CAN_VERB_1			
 Franco-Provençal	Franco-Provençal			CAN_VERB	povêr	povˈɛːʁ	p o v ˈɛː ʁ		CAN_VERB_1			
 Occitan	Occitan			CAN_VERB	poder	puðˈe	p u ð ˈe		CAN_VERB_1			
 Gascon	Gascon			CAN_VERB	póder	pˈuðe	p ˈu ð e		CAN_VERB_1			
@@ -8034,6 +8262,7 @@ Friulian	Friulian			PRICE_NOUN	presi	prˈɛzi	p r ˈɛ z i		PRICE_NOUN_1
 Romansch	Romansch			PRICE_NOUN	predsch	prˈɛʧ	p r ˈɛ ʧ		PRICE_NOUN_1			
 French	French			PRICE_NOUN	prix	pʁi	p ʁ i		PRICE_NOUN_1			
 Québécois French	Québécois French			PRICE_NOUN	prix	pʁi	p ʁ i		PRICE_NOUN_1			
+Walloon	Walloon			PRICE_NOUN	pris	pʀˈi	p ʀ ˈi		PRICE_NOUN_1			
 Franco-Provençal	Franco-Provençal			PRICE_NOUN	prix	pʁˈiʃ	p ʁ ˈi ʃ		PRICE_NOUN_1			
 Occitan	Occitan			PRICE_NOUN	prètz	pɾˈɛʦ	p ɾ ˈɛ ʦ		PRICE_NOUN_1			
 Gascon	Gascon			PRICE_NOUN	prètz	pɾˈɛʦ	p ɾ ˈɛ ʦ		PRICE_NOUN_1			
@@ -8068,6 +8297,7 @@ Friulian	Friulian			FIST_NOUN	pugn	pˈuɲ	p ˈu ɲ		FIST_NOUN_1
 Romansch	Romansch			FIST_NOUN	pugn	pˈuɲ	p ˈu ɲ		FIST_NOUN_1			
 French	French			FIST_NOUN	poing	pwɛ̃	p w ɛ̃		FIST_NOUN_1			
 Québécois French	Québécois French			FIST_NOUN	poing	pwẽɪ̯̃	p w ẽɪ̯̃		FIST_NOUN_1			
+Walloon	Walloon			FIST_NOUN	pougn	pˈuɲ	p ˈu ɲ		FIST_NOUN_1			
 Franco-Provençal	Franco-Provençal			FIST_NOUN	poueng	pwˈɛ̃	p w ˈɛ̃		FIST_NOUN_1			
 Occitan	Occitan			FIST_NOUN	punh	pˈyɲ	p ˈy ɲ		FIST_NOUN_1			
 Gascon	Gascon			FIST_NOUN	punh	pˈyɲ	p ˈy ɲ		FIST_NOUN_1			
@@ -8098,6 +8328,7 @@ Friulian	Friulian			POINT_NOUN	pont	pˈont	p ˈo n t		POINT_NOUN_1
 Romansch	Romansch			POINT_NOUN	puntg	pˈunʨ	p ˈu n ʨ		POINT_NOUN_1			
 French	French			POINT_NOUN	point	pwɛ̃	p w ɛ̃		POINT_NOUN_1			
 Québécois French	Québécois French			POINT_NOUN	point	pwẽɪ̯̃	p w ẽɪ̯̃		POINT_NOUN_1			
+Walloon	Walloon			POINT_NOUN	pont	pˈɔ̃	p ˈɔ̃		POINT_NOUN_1			
 Franco-Provençal	Franco-Provençal			POINT_NOUN	pouent	pwˈɛ̃	p w ˈɛ̃		POINT_NOUN_1			
 Occitan	Occitan			POINT_NOUN	ponch	pˈunʧ	p ˈu n ʧ		POINT_NOUN_1			
 Gascon	Gascon			POINT_NOUN	punt	pˈyn	p ˈy n		POINT_NOUN_1			
@@ -8129,6 +8360,7 @@ Friulian	Friulian			WELL_NOUN	poç	pˈoʧ	p ˈo ʧ		WELL_NOUN_1
 Romansch	Romansch			WELL_NOUN	puoz	pˈuɔ̯ʦ	p ˈuɔ̯ ʦ		WELL_NOUN_1			
 French	French			WELL_NOUN	puits	pɥi	p ɥ i		WELL_NOUN_1			
 Québécois French	Québécois French			WELL_NOUN	puits	pɥi	p ɥ i		WELL_NOUN_1			
+Walloon	Walloon			WELL_NOUN	pousse	pˈus	p ˈu s		WELL_NOUN_1			
 Franco-Provençal	Franco-Provençal			WELL_NOUN	puêts	pwˈɛːʦ	p w ˈɛː ʦ		WELL_NOUN_1			
 Occitan	Occitan			WELL_NOUN	potz	pˈuʦ	p ˈu ʦ		WELL_NOUN_1			
 Gascon	Gascon			WELL_NOUN	putz	pˈyʦ	p ˈy ʦ		WELL_NOUN_1			
@@ -8163,6 +8395,7 @@ Friulian	Friulian			FOUR_NUM	cuatri	kwˈatri	k w ˈa t r i		FOUR_NUM_1
 Romansch	Romansch			FOUR_NUM	quatter	kuˈaːtər	k u ˈaː t ə r		FOUR_NUM_1			
 French	French			FOUR_NUM	quatre	katʁ	k a t ʁ		FOUR_NUM_1			
 Québécois French	Québécois French			FOUR_NUM	quatre	katʁ	k a t ʁ		FOUR_NUM_1			
+Walloon	Walloon			FOUR_NUM	cwate	kwˈat	k w ˈa t		FOUR_NUM_1			
 Franco-Provençal	Franco-Provençal			FOUR_NUM	quatro	kwˈatʁo	k w ˈa t ʁ o		FOUR_NUM_1			
 Occitan	Occitan			FOUR_NUM	quatre	kˈatɾe	k ˈa t ɾ e		FOUR_NUM_1			
 Gascon	Gascon			FOUR_NUM	quate	kwˈate	k w ˈa t e		FOUR_NUM_1			
@@ -8200,6 +8433,7 @@ Friulian	Friulian			WHO_PRON	cui	kwˈi	k w ˈi		WHO_PRON_2
 Romansch	Romansch			WHO_PRON	tgi	ʨˈiː	ʨ ˈiː		WHO_PRON_2			
 French	French			WHO_PRON	qui	ki	k i		WHO_PRON_2			
 Québécois French	Québécois French			WHO_PRON	qui	ki	k i		WHO_PRON_2			
+Walloon	Walloon			WHO_PRON	kî	kˈiː	k ˈiː		WHO_PRON_2			
 Franco-Provençal	Franco-Provençal			WHO_PRON	qui	kˈi	k ˈi		WHO_PRON_2			
 Savoyard	Savoyard			WHO_PRON	kwi	kwˈi	k w ˈi		WHO_PRON_2			
 Occitan	Occitan			WHO_PRON	qui	kˈi	k ˈi		WHO_PRON_2			
@@ -8232,6 +8466,7 @@ French	French			WHAT_PRON	quoi	kwa	k w a		WHAT_PRON_1
 French	French			WHAT_PRON	que	kə	k ə		WHAT_PRON_1			
 Québécois French	Québécois French			WHAT_PRON	quoi	kwɛ	k w ɛ		WHAT_PRON_1			
 Québécois French	Québécois French			WHAT_PRON	que	kœ	k œ		WHAT_PRON_1			
+Walloon	Walloon			WHAT_PRON	cwè	kwˈɛ	k w ˈɛ		WHAT_PRON_1			
 Franco-Provençal	Franco-Provençal			WHAT_PRON	quê	kˈɛː	k ˈɛː		WHAT_PRON_1			
 Savoyard	Savoyard			WHAT_PRON	kai	kˈaj	k ˈa j		WHAT_PRON_1			
 Occitan	Occitan			WHAT_PRON	qué	kˈe	k ˈe		WHAT_PRON_1			
@@ -8263,6 +8498,7 @@ Friulian	Friulian			FIFTY_NUM	cincuante	ʧiŋkwˈante	ʧ i ŋ k w ˈa n t e		FIF
 Romansch	Romansch			FIFTY_NUM	tschuncanta	ʧuŋkˈantə	ʧ u ŋ k ˈa n t ə		FIFTY_NUM_1			
 French	French			FIFTY_NUM	cinquante	sɛ̃kɑ̃t	s ɛ̃ k ɑ̃ t		FIFTY_NUM_1			
 Québécois French	Québécois French			FIFTY_NUM	cinquante	sẽɪ̯̃kãt	s ẽɪ̯̃ k ã t		FIFTY_NUM_1			
+Walloon	Walloon			FIFTY_NUM	céncwante	sẽkwˈɑ̃t	s ẽ k w ˈɑ̃ t		FIFTY_NUM_1			
 Franco-Provençal	Franco-Provençal			FIFTY_NUM	cinquanta	sĩkwˈɑ̃ta	s ĩ k w ˈɑ̃ t a		FIFTY_NUM_1			
 Occitan	Occitan			FIFTY_NUM	cinquanta	siŋkˈantɔ	s i ŋ k ˈa n t ɔ		FIFTY_NUM_1			
 Gascon	Gascon			FIFTY_NUM	cinquanta	siŋkwˈantɔ	s i ŋ k w ˈa n t ɔ		FIFTY_NUM_1			
@@ -8298,6 +8534,7 @@ Friulian	Friulian			FIVE_NUM	cinc	ʧˈiŋk	ʧ ˈi ŋ k		FIVE_NUM_1
 Romansch	Romansch			FIVE_NUM	tschintg	ʧˈinʨ	ʧ ˈi n ʨ		FIVE_NUM_1			
 French	French			FIVE_NUM	cinq	sɛ̃k	s ɛ̃ k		FIVE_NUM_1			
 Québécois French	Québécois French			FIVE_NUM	cinq	sẽɪ̯̃k	s ẽɪ̯̃ k		FIVE_NUM_1			
+Walloon	Walloon			FIVE_NUM	cénk	sˈẽk	s ˈẽ k		FIVE_NUM_1			
 Franco-Provençal	Franco-Provençal			FIVE_NUM	cinq	sˈĩ	s ˈĩ		FIVE_NUM_1			
 Occitan	Occitan			FIVE_NUM	cinc	sˈiŋk	s ˈi ŋ k		FIVE_NUM_1			
 Gascon	Gascon			FIVE_NUM	cinc	sˈiŋk	s ˈi ŋ k		FIVE_NUM_1			
@@ -8312,6 +8549,7 @@ Brazilian Portuguese	Brazilian Portuguese			FIVE_NUM	cinco	sˈĩku	s ˈĩ k u	
 Latin	Latin			RAISIN_NOUN	racīmum	rakˈiːmʊ̃ː	r a k ˈiː m ʊ̃ː		RAISIN_NOUN_1			
 French	French			RAISIN_NOUN	raisin	ʁɛzɛ̃	ʁ ɛ z ɛ̃		RAISIN_NOUN_1			
 Québécois French	Québécois French			RAISIN_NOUN	raisin	ʁæɛ̯zẽɪ̯̃	ʁ æɛ̯ z ẽɪ̯̃		RAISIN_NOUN_1			
+Walloon	Walloon			RAISIN_NOUN	roejhén	ʀwɛʒˈẽ	ʀ w ɛ ʒ ˈẽ		RAISIN_NOUN_1			
 Franco-Provençal	Franco-Provençal			RAISIN_NOUN	resim	ʁɛzˈĩ	ʁ ɛ z ˈĩ		RAISIN_NOUN_1			
 Occitan	Occitan			RAISIN_NOUN	rasim	razˈim	r a z ˈi m		RAISIN_NOUN_1			
 Gascon	Gascon			RAISIN_NOUN	arrasim	arazˈim	a r a z ˈi m		RAISIN_NOUN_1			
@@ -8346,6 +8584,7 @@ Dalmatian	Dalmatian			ROOT_NOUN	radaika	radˈajka	r a d ˈa j k a		ROOT_NOUN_2
 Neapolitan	Neapolitan			ROOT_NOUN	radeca	raɾˈekə	r a ɾ ˈe k ə		ROOT_NOUN_2			
 French	French			ROOT_NOUN	racine	ʁasin	ʁ a s i n		ROOT_NOUN_2			
 Québécois French	Québécois French			ROOT_NOUN	racine	ʁasɪn	ʁ a s ɪ n		ROOT_NOUN_2			
+Walloon	Walloon			ROOT_NOUN	raecene	ʀɛsˈɛn	ʀ ɛ s ˈɛ n		ROOT_NOUN_2			
 Franco-Provençal	Franco-Provençal			ROOT_NOUN	racena	ʁasˈena	ʁ a s ˈe n a		ROOT_NOUN_2			
 Savoyard	Savoyard			ROOT_NOUN	rassina	rasˈina	r a s ˈi n a		ROOT_NOUN_2			
 Occitan	Occitan			ROOT_NOUN	racina	rasˈinɔ	r a s ˈi n ɔ		ROOT_NOUN_2			
@@ -8367,6 +8606,7 @@ Friulian	Friulian			REASON_NOUN	reson	rezˈoŋ	r e z ˈo ŋ		REASON_NOUN_1
 Romansch	Romansch			REASON_NOUN	raschun	raʃˈun	r a ʃ ˈu n		REASON_NOUN_1			
 French	French			REASON_NOUN	raison	ʁɛzɔ̃	ʁ ɛ z ɔ̃		REASON_NOUN_1			
 Québécois French	Québécois French			REASON_NOUN	raison	ʁæɛ̯zɒ̃ʊ̯̃	ʁ æɛ̯ z ɒ̃ʊ̯̃		REASON_NOUN_1			
+Walloon	Walloon			REASON_NOUN	råjhon	ʀɔːʒˈɔ̃	ʀ ɔː ʒ ˈɔ̃		REASON_NOUN_1			
 Franco-Provençal	Franco-Provençal			REASON_NOUN	rêson	ʁɛːzˈɔ̃	ʁ ɛː z ˈɔ̃		REASON_NOUN_1			
 Occitan	Occitan			REASON_NOUN	rason	razˈu	r a z ˈu		REASON_NOUN_1			
 Gascon	Gascon			REASON_NOUN	arrason	arazˈuŋ	a r a z ˈu ŋ		REASON_NOUN_1			
@@ -8400,6 +8640,7 @@ Friulian	Friulian			KING_NOUN	re	rˈe	r ˈe		KING_NOUN_1
 Romansch	Romansch			KING_NOUN	retg	rˈeʨ	r ˈe ʨ		KING_NOUN_1			
 French	French			KING_NOUN	roi	ʁwa	ʁ w a		KING_NOUN_1			
 Québécois French	Québécois French			KING_NOUN	roi	ʁwɛ	ʁ w ɛ		KING_NOUN_1			
+Walloon	Walloon			KING_NOUN	rwè	ʀwˈɛ	ʀ w ˈɛ		KING_NOUN_1			
 Franco-Provençal	Franco-Provençal			KING_NOUN	rê	ʁˈɛː	ʁ ˈɛː		KING_NOUN_1			
 Occitan	Occitan			KING_NOUN	rei	rˈej	r ˈe j		KING_NOUN_1			
 Gascon	Gascon			KING_NOUN	arrei	arˈej	a r ˈe j		KING_NOUN_1			
@@ -8427,6 +8668,7 @@ Friulian	Friulian			QUEEN_NOUN	regjine	reɟˈine	r e ɟ ˈi n e		QUEEN_NOUN_1
 Romansch	Romansch			QUEEN_NOUN	regina	reʥˈiːnə	r e ʥ ˈiː n ə		QUEEN_NOUN_1			
 French	French			QUEEN_NOUN	reine	ʁɛn	ʁ ɛ n		QUEEN_NOUN_1			
 Québécois French	Québécois French			QUEEN_NOUN	reine	ʁæɛ̯n	ʁ æɛ̯ n		QUEEN_NOUN_1			
+Walloon	Walloon			QUEEN_NOUN	rinne	ʀˈɛ̃ːn	ʀ ˈɛ̃ː n		QUEEN_NOUN_1			
 Franco-Provençal	Franco-Provençal			QUEEN_NOUN	rêna	ʁˈɛːna	ʁ ˈɛː n a		QUEEN_NOUN_1			
 Occitan	Occitan			QUEEN_NOUN	reina	rˈejnɔ	r ˈe j n ɔ		QUEEN_NOUN_1			
 Gascon	Gascon			QUEEN_NOUN	arreina	arˈejnɔ	a r ˈe j n ɔ		QUEEN_NOUN_1			
@@ -8505,6 +8747,7 @@ Friulian	Friulian			ROUND_ADJ	taront	tarˈont	t a r ˈo n t		ROUND_ADJ_2
 Romansch	Romansch			ROUND_ADJ	radund	rədˈunt	r ə d ˈu n t		ROUND_ADJ_2			
 French	French			ROUND_ADJ	rond	ʁɔ̃	ʁ ɔ̃		ROUND_ADJ_2			
 Québécois French	Québécois French			ROUND_ADJ	rond	ʁɒ̃ʊ̯̃	ʁ ɒ̃ʊ̯̃		ROUND_ADJ_2			
+Walloon	Walloon			ROUND_ADJ	rond	ʀˈɔ̃	ʀ ˈɔ̃		ROUND_ADJ_2			
 Franco-Provençal	Franco-Provençal			ROUND_ADJ	riond	ʁjˈɔ̃	ʁ j ˈɔ̃		ROUND_ADJ_2			
 Savoyard	Savoyard			ROUND_ADJ	ryon	rjˈɔ̃	r j ˈɔ̃		ROUND_ADJ_2			
 Gascon	Gascon			ROUND_ADJ	arròu	arˈɔw	a r ˈɔ w		ROUND_ADJ_2			
@@ -8523,6 +8766,7 @@ Italian	Italian			RED_ADJ	robbio	rˈobbjo	r ˈo b b j o		RED_ADJ_2
 Piedmontese	Piedmontese			RED_ADJ	robi	rˈubi	r ˈu b i		RED_ADJ_2			
 French	French			RED_ADJ	rouge	ʁuʒ	ʁ u ʒ		RED_ADJ_2			
 Québécois French	Québécois French			RED_ADJ	rouge	ʁuʒ	ʁ u ʒ		RED_ADJ_2			
+Walloon	Walloon			RED_ADJ	rodje	ʀˈɔʧ	ʀ ˈɔ ʧ		RED_ADJ_2			
 Franco-Provençal	Franco-Provençal			RED_ADJ	rox	ʁˈuʃ	ʁ ˈu ʃ		RED_ADJ_2			
 Savoyard	Savoyard			RED_ADJ	rozho	rˈoðo	r ˈo ð o		RED_ADJ_2			
 Occitan	Occitan			RED_ADJ	roge	rˈuʤe	r ˈu ʤ e		RED_ADJ_2			
@@ -8608,6 +8852,7 @@ Friulian	Friulian			SALT_NOUN	sâl	sˈaːl	s ˈaː l		SALT_NOUN_1
 Romansch	Romansch			SALT_NOUN	sal	sˈal	s ˈa l		SALT_NOUN_1			
 French	French			SALT_NOUN	sel	sɛl	s ɛ l		SALT_NOUN_1			
 Québécois French	Québécois French			SALT_NOUN	sel	sɛl	s ɛ l		SALT_NOUN_1			
+Walloon	Walloon			SALT_NOUN	sé	sˈe	s ˈe		SALT_NOUN_1			
 Franco-Provençal	Franco-Provençal			SALT_NOUN	sal	sˈal	s ˈa l		SALT_NOUN_1			
 Savoyard	Savoyard			SALT_NOUN	sâ	sˈaː	s ˈaː		SALT_NOUN_1			
 Occitan	Occitan			SALT_NOUN	sal	sˈal	s ˈa l		SALT_NOUN_1			
@@ -8632,6 +8877,7 @@ Friulian	Friulian			SAUCE_NOUN	salse	sˈalse	s ˈa l s e		SAUCE_NOUN_1
 Romansch	Romansch			SAUCE_NOUN	sosa	sˈɔːsə	s ˈɔː s ə		SAUCE_NOUN_1			
 French	French			SAUCE_NOUN	sauce	sos	s o s		SAUCE_NOUN_1			
 Québécois French	Québécois French			SAUCE_NOUN	sauce	soʊ̯s	s oʊ̯ s		SAUCE_NOUN_1			
+Walloon	Walloon			SAUCE_NOUN	såce	sˈɔːs	s ˈɔː s		SAUCE_NOUN_1			
 Franco-Provençal	Franco-Provençal			SAUCE_NOUN	sôça	sˈoːsa	s ˈoː s a		SAUCE_NOUN_1			
 Occitan	Occitan			SAUCE_NOUN	salsa	sˈalsɔ	s ˈa l s ɔ		SAUCE_NOUN_1			
 Gascon	Gascon			SAUCE_NOUN	saussa	sˈawsɔ	s ˈa w s ɔ		SAUCE_NOUN_1			
@@ -8712,6 +8958,7 @@ Friulian	Friulian			SACRED_ADJ	sant	sˈant	s ˈa n t		SACRED_ADJ_1
 Romansch	Romansch			SACRED_ADJ	sontg	sˈɔnʨ	s ˈɔ n ʨ		SACRED_ADJ_1			
 French	French			SACRED_ADJ	saint	sɛ̃	s ɛ̃		SACRED_ADJ_1			
 Québécois French	Québécois French			SACRED_ADJ	saint	sẽɪ̯̃	s ẽɪ̯̃		SACRED_ADJ_1			
+Walloon	Walloon			SACRED_ADJ	sint	sˈɛ̃	s ˈɛ̃		SACRED_ADJ_1			
 Franco-Provençal	Franco-Provençal			SACRED_ADJ	sant	sˈɑ̃	s ˈɑ̃		SACRED_ADJ_1			
 Occitan	Occitan			SACRED_ADJ	sant	sˈan	s ˈa n		SACRED_ADJ_1			
 Gascon	Gascon			SACRED_ADJ	sant	sˈan	s ˈa n		SACRED_ADJ_1			
@@ -8744,6 +8991,7 @@ Friulian	Friulian			BLOOD_NOUN	sanc	sˈaŋk	s ˈa ŋ k		BLOOD_NOUN_1
 Romansch	Romansch			BLOOD_NOUN	sang	sˈaŋ	s ˈa ŋ		BLOOD_NOUN_1			
 French	French			BLOOD_NOUN	sang	sɑ̃	s ɑ̃		BLOOD_NOUN_1			
 Québécois French	Québécois French			BLOOD_NOUN	sang	sã	s ã		BLOOD_NOUN_1			
+Walloon	Walloon			BLOOD_NOUN	sonk	sˈɔ̃k	s ˈɔ̃ k		BLOOD_NOUN_1			
 Franco-Provençal	Franco-Provençal			BLOOD_NOUN	sang	sˈɑ̃	s ˈɑ̃		BLOOD_NOUN_1			
 Savoyard	Savoyard			BLOOD_NOUN	san	sˈã	s ˈã		BLOOD_NOUN_1			
 Occitan	Occitan			BLOOD_NOUN	sang	sˈaŋk	s ˈa ŋ k		BLOOD_NOUN_1			
@@ -8807,6 +9055,7 @@ Friulian	Friulian			KNOW_VERB	savê	savˈeː	s a v ˈeː		KNOW_VERB_1
 Romansch	Romansch			KNOW_VERB	savair	səvˈajr	s ə v ˈa j r		KNOW_VERB_1			
 French	French			KNOW_VERB	savoir	savwaʁ	s a v w a ʁ		KNOW_VERB_1			
 Québécois French	Québécois French			KNOW_VERB	savoir	savwɛʁ	s a v w ɛ ʁ		KNOW_VERB_1			
+Walloon	Walloon			KNOW_VERB	saveur	savˈøːʀ	s a v ˈøː ʀ		KNOW_VERB_1			
 Franco-Provençal	Franco-Provençal			KNOW_VERB	savêr	savˈɛːʁ	s a v ˈɛː ʁ		KNOW_VERB_1			
 Occitan	Occitan			KNOW_VERB	saber	saβˈe	s a β ˈe		KNOW_VERB_1			
 Gascon	Gascon			KNOW_VERB	saber	saβˈe	s a β ˈe		KNOW_VERB_1			
@@ -8863,6 +9112,7 @@ Friulian	Friulian			KNOW-2SG_VERB	sâs	sˈaːs	s ˈaː s		KNOW-2SG_VERB_1
 Romansch	Romansch			KNOW-2SG_VERB	sas	sˈas	s ˈa s		KNOW-2SG_VERB_1			
 French	French			KNOW-2SG_VERB	sais	sɛ	s ɛ		KNOW-2SG_VERB_1			
 Québécois French	Québécois French			KNOW-2SG_VERB	sais	sæɛ̯	s æɛ̯		KNOW-2SG_VERB_1			
+Walloon	Walloon			KNOW-2SG_VERB	sai	sˈɛ	s ˈɛ		KNOW-2SG_VERB_1			
 Franco-Provençal	Franco-Provençal			KNOW-2SG_VERB	sâs	sˈɑː	s ˈɑː		KNOW-2SG_VERB_1			
 Occitan	Occitan			KNOW-2SG_VERB	sabes	sˈaβes	s ˈa β e s		KNOW-2SG_VERB_1			
 Occitan	Occitan			KNOW-2SG_VERB	sas	sˈas	s ˈa s		KNOW-2SG_VERB_1			
@@ -8914,6 +9164,7 @@ Friulian	Friulian			BARK_NOUN	scuarce	skwˈarʧe	s k w ˈa r ʧ e		BARK_NOUN_3
 Romansch	Romansch			BARK_NOUN	scorsa	ʃkˈɔrsə	ʃ k ˈɔ r s ə		BARK_NOUN_3			
 French	French			BARK_NOUN	écorce	ekɔʁs	e k ɔ ʁ s		BARK_NOUN_3			
 Québécois French	Québécois French			BARK_NOUN	écorce	ekɑɔ̯ʁs	e k ɑɔ̯ ʁ s		BARK_NOUN_3			
+Walloon	Walloon			BARK_NOUN	schoice	ʃwˈas	ʃ w ˈa s		BARK_NOUN_3			
 Franco-Provençal	Franco-Provençal			BARK_NOUN	écörce	ekˈøʁsə	e k ˈø ʁ s ə		BARK_NOUN_3			
 Savoyard	Savoyard			BARK_NOUN	ékeûrsa	ekˈøːrsa	e k ˈøː r s a		BARK_NOUN_3			
 Catalan	Catalan			BARK_NOUN	escorça	əskˈɔrsə	ə s k ˈɔ r s ə		BARK_NOUN_3			
@@ -8940,6 +9191,7 @@ Friulian	Friulian			WRITE_VERB	scrivi	skrˈivi	s k r ˈi v i		WRITE_VERB_1
 Romansch	Romansch			WRITE_VERB	scriver	ʃkrˈiːvər	ʃ k r ˈiː v ə r		WRITE_VERB_1			
 French	French			WRITE_VERB	écrire	ekʁiʁ	e k ʁ i ʁ		WRITE_VERB_1			
 Québécois French	Québécois French			WRITE_VERB	écrire	ekʁiʁ	e k ʁ i ʁ		WRITE_VERB_1			
+Walloon	Walloon			WRITE_VERB	scrire	skʀˈiːʀ	s k ʀ ˈiː ʀ		WRITE_VERB_1			
 Franco-Provençal	Franco-Provençal			WRITE_VERB	écrire	ekʁˈiʁə	e k ʁ ˈi ʁ ə		WRITE_VERB_1			
 Occitan	Occitan			WRITE_VERB	escriure	eskɾˈiwɾe	e s k ɾ ˈi w ɾ e		WRITE_VERB_1			
 Gascon	Gascon			WRITE_VERB	escríver	eskɾˈiβe	e s k ɾ ˈi β e		WRITE_VERB_1			
@@ -8968,6 +9220,7 @@ Friulian	Friulian			SAFE_ADJ	sigûr	siɡˈuːr	s i ɡ ˈuː r		SAFE_ADJ_1
 Romansch	Romansch			SAFE_ADJ	segir	səʥˈiːr	s ə ʥ ˈiː r		SAFE_ADJ_1			
 French	French			SAFE_ADJ	sûr	syʁ	s y ʁ		SAFE_ADJ_1			
 Québécois French	Québécois French			SAFE_ADJ	sûr	syʁ	s y ʁ		SAFE_ADJ_1			
+Walloon	Walloon			SAFE_ADJ	seur	sˈøːʀ	s ˈøː ʀ		SAFE_ADJ_1			
 Occitan	Occitan			SAFE_ADJ	segur	seɣˈy	s e ɣ ˈy		SAFE_ADJ_1			
 Gascon	Gascon			SAFE_ADJ	segur	seɣˈy	s e ɣ ˈy		SAFE_ADJ_1			
 Catalan	Catalan			SAFE_ADJ	segur	səɣˈu	s ə ɣ ˈu		SAFE_ADJ_1			
@@ -8991,6 +9244,7 @@ French	French			SIT_VERB	asseoir	aswaʁ	a s w a ʁ		SIT_VERB_2
 French	French			SIT_VERB	seoir	swaʁ	s w a ʁ		SIT_VERB_2			
 Québécois French	Québécois French			SIT_VERB	asseoir	aswɛʁ	a s w ɛ ʁ		SIT_VERB_2			
 Québécois French	Québécois French			SIT_VERB	seoir	swɛʁ	s w ɛ ʁ		SIT_VERB_2			
+Walloon	Walloon			SIT_VERB	ashir	aʃˈiːʀ	a ʃ ˈiː ʀ		SIT_VERB_2			
 Occitan	Occitan			SIT_VERB	sèire	sˈɛjre	s ˈɛ j r e		SIT_VERB_2			
 Gascon	Gascon			SIT_VERB	assèder	asˈɛðe	a s ˈɛ ð e		SIT_VERB_2			
 Catalan	Catalan			SIT_VERB	seure	sˈɛwɾə	s ˈɛ w ɾ ə		SIT_VERB_2			
@@ -9043,6 +9297,7 @@ Friulian	Friulian			SEVEN_NUM	siet	sjˈɛt	s j ˈɛ t		SEVEN_NUM_1
 Romansch	Romansch			SEVEN_NUM	set	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
 French	French			SEVEN_NUM	sept	sɛt	s ɛ t		SEVEN_NUM_1			
 Québécois French	Québécois French			SEVEN_NUM	sept	sɛt	s ɛ t		SEVEN_NUM_1			
+Walloon	Walloon			SEVEN_NUM	set	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
 Franco-Provençal	Franco-Provençal			SEVEN_NUM	sèpt	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
 Occitan	Occitan			SEVEN_NUM	sèt	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
 Gascon	Gascon			SEVEN_NUM	sèt	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
@@ -9076,6 +9331,7 @@ Ladin	Ladin			WEEK_NOUN	setemana	setemˈana	s e t e m ˈa n a		WEEK_NOUN_1
 Friulian	Friulian			WEEK_NOUN	setemane	setemˈane	s e t e m ˈa n e		WEEK_NOUN_1			
 French	French			WEEK_NOUN	semaine	səmɛn	s ə m ɛ n		WEEK_NOUN_1			
 Québécois French	Québécois French			WEEK_NOUN	semaine	sœmæɛ̯n	s œ m æɛ̯ n		WEEK_NOUN_1			
+Walloon	Walloon			WEEK_NOUN	samwinne	samwˈɛ̃n	s a m w ˈɛ̃ n		WEEK_NOUN_1			
 Franco-Provençal	Franco-Provençal			WEEK_NOUN	semana	səmˈana	s ə m ˈa n a		WEEK_NOUN_1			
 Occitan	Occitan			WEEK_NOUN	setmana	semmˈanɔ	s e m m ˈa n ɔ		WEEK_NOUN_1			
 Gascon	Gascon			WEEK_NOUN	setmana	semmˈanɔ	s e m m ˈa n ɔ		WEEK_NOUN_1			
@@ -9133,6 +9389,7 @@ Friulian	Friulian			SILK_NOUN	sede	sˈede	s ˈe d e		SILK_NOUN_1
 Romansch	Romansch			SILK_NOUN	saida	sˈajdə	s ˈa j d ə		SILK_NOUN_1			
 French	French			SILK_NOUN	soie	swa	s w a		SILK_NOUN_1			
 Québécois French	Québécois French			SILK_NOUN	soie	swɛ	s w ɛ		SILK_NOUN_1			
+Walloon	Walloon			SILK_NOUN	soye	sˈɔːj	s ˈɔː j		SILK_NOUN_1			
 Franco-Provençal	Franco-Provençal			SILK_NOUN	soué	swˈe	s w ˈe		SILK_NOUN_1			
 Occitan	Occitan			SILK_NOUN	seda	sˈeðɔ	s ˈe ð ɔ		SILK_NOUN_1			
 Gascon	Gascon			SILK_NOUN	seda	sˈeðɔ	s ˈe ð ɔ		SILK_NOUN_1			
@@ -9168,6 +9425,7 @@ French	French			SIX_NUM	six	sis	s i s		SIX_NUM_1
 French	French			SIX_NUM	six	si	s i		SIX_NUM_1			
 Québécois French	Québécois French			SIX_NUM	six	sɪs	s ɪ s		SIX_NUM_1			
 Québécois French	Québécois French			SIX_NUM	six	si	s i		SIX_NUM_1			
+Walloon	Walloon			SIX_NUM	shijh	ʃˈiːʃ	ʃ ˈiː ʃ		SIX_NUM_1			
 Franco-Provençal	Franco-Provençal			SIX_NUM	siêx	sjˈɛːʃ	s j ˈɛː ʃ		SIX_NUM_1			
 Franco-Provençal	Franco-Provençal			SIX_NUM	six	sˈiʃ	s ˈi ʃ		SIX_NUM_1			
 Occitan	Occitan			SIX_NUM	sièis	sjˈɛjs	s j ˈɛ j s		SIX_NUM_1			
@@ -9198,6 +9456,7 @@ Romansch	Romansch			DRY (F)_ADJ	sitga	sˈiʨə	s ˈi ʨ ə		DRY (F)_ADJ_1
 Romansch	Romansch			DRY (F)_ADJ	setga	sˈeʨə	s ˈe ʨ ə		DRY (F)_ADJ_1			
 French	French			DRY (F)_ADJ	sèche	sɛʃ	s ɛ ʃ		DRY (F)_ADJ_1			
 Québécois French	Québécois French			DRY (F)_ADJ	sèche	sɛʃ	s ɛ ʃ		DRY (F)_ADJ_1			
+Walloon	Walloon			DRY (F)_ADJ	setche	sˈɛʧ	s ˈɛ ʧ		DRY (F)_ADJ_1			
 Franco-Provençal	Franco-Provençal			DRY (F)_ADJ	sèta	sˈɛta	s ˈɛ t a		DRY (F)_ADJ_1			
 Occitan	Occitan			DRY (F)_ADJ	seca	sˈekɔ	s ˈe k ɔ		DRY (F)_ADJ_1			
 Gascon	Gascon			DRY (F)_ADJ	seca	sˈekɔ	s ˈe k ɔ		DRY (F)_ADJ_1			
@@ -9231,6 +9490,7 @@ Romansch	Romansch			DRY (M)_ADJ	sitg	sˈiʨ	s ˈi ʨ		DRY (M)_ADJ_1
 Romansch	Romansch			DRY (M)_ADJ	setg	sˈeʨ	s ˈe ʨ		DRY (M)_ADJ_1			
 French	French			DRY (M)_ADJ	sec	sɛk	s ɛ k		DRY (M)_ADJ_1			
 Québécois French	Québécois French			DRY (M)_ADJ	sec	sɛk	s ɛ k		DRY (M)_ADJ_1			
+Walloon	Walloon			DRY (M)_ADJ	setch	sˈɛʧ	s ˈɛ ʧ		DRY (M)_ADJ_1			
 Franco-Provençal	Franco-Provençal			DRY (M)_ADJ	sèt	sˈɛt	s ˈɛ t		DRY (M)_ADJ_1			
 Savoyard	Savoyard			DRY (M)_ADJ	sè	sˈɛ	s ˈɛ		DRY (M)_ADJ_1			
 Occitan	Occitan			DRY (M)_ADJ	sec	sˈek	s ˈe k		DRY (M)_ADJ_1			
@@ -9290,6 +9550,7 @@ Friulian	Friulian			SWORD_NOUN	spade	spˈade	s p ˈa d e		SWORD_NOUN_1
 Romansch	Romansch			SWORD_NOUN	spada	ʃpˈaːdə	ʃ p ˈaː d ə		SWORD_NOUN_1			
 French	French			SWORD_NOUN	épée	epe	e p e		SWORD_NOUN_1			
 Québécois French	Québécois French			SWORD_NOUN	épée	epe	e p e		SWORD_NOUN_1			
+Walloon	Walloon			SWORD_NOUN	spêye	spˈɛːj	s p ˈɛː j		SWORD_NOUN_1			
 Occitan	Occitan			SWORD_NOUN	espasa	espˈazɔ	e s p ˈa z ɔ		SWORD_NOUN_1			
 Gascon	Gascon			SWORD_NOUN	espada	espˈaðɔ	e s p ˈa ð ɔ		SWORD_NOUN_1			
 Catalan	Catalan			SWORD_NOUN	espasa	əspˈazə	ə s p ˈa z ə		SWORD_NOUN_1			
@@ -9327,6 +9588,7 @@ Piedmontese	Piedmontese			EAR OF GRAIN_NOUN	spi	spˈi	s p ˈi		EAR OF GRAIN_NOUN
 Friulian	Friulian			EAR OF GRAIN_NOUN	spi	spˈi	s p ˈi		EAR OF GRAIN_NOUN_2			
 French	French			EAR OF GRAIN_NOUN	épi	epi	e p i		EAR OF GRAIN_NOUN_2			
 Québécois French	Québécois French			EAR OF GRAIN_NOUN	épi	epi	e p i		EAR OF GRAIN_NOUN_2			
+Walloon	Walloon			EAR OF GRAIN_NOUN	spi	spˈi	s p ˈi		EAR OF GRAIN_NOUN_2			
 Franco-Provençal	Franco-Provençal			EAR OF GRAIN_NOUN	épya	epjˈa	e p j ˈa		EAR OF GRAIN_NOUN_2			
 Occitan	Occitan			EAR OF GRAIN_NOUN	espic	espˈik	e s p ˈi k		EAR OF GRAIN_NOUN_2			
 Gascon	Gascon			EAR OF GRAIN_NOUN	espic	espˈik	e s p ˈi k		EAR OF GRAIN_NOUN_2			
@@ -9348,6 +9610,7 @@ Friulian	Friulian			SPINE_NOUN	spine	spˈine	s p ˈi n e		SPINE_NOUN_1
 Romansch	Romansch			SPINE_NOUN	spina	ʃpˈiːnə	ʃ p ˈiː n ə		SPINE_NOUN_1			
 French	French			SPINE_NOUN	épine	epin	e p i n		SPINE_NOUN_1			
 Québécois French	Québécois French			SPINE_NOUN	épine	epɪn	e p ɪ n		SPINE_NOUN_1			
+Walloon	Walloon			SPINE_NOUN	spene	spˈɛn	s p ˈɛ n		SPINE_NOUN_1			
 Franco-Provençal	Franco-Provençal			SPINE_NOUN	épena	epˈena	e p ˈe n a		SPINE_NOUN_1			
 Occitan	Occitan			SPINE_NOUN	espina	espˈinɔ	e s p ˈi n ɔ		SPINE_NOUN_1			
 Gascon	Gascon			SPINE_NOUN	espia	espˈiɔ	e s p ˈi ɔ		SPINE_NOUN_1			
@@ -9375,6 +9638,7 @@ Friulian	Friulian			STATE_NOUN	stât	stˈaːt	s t ˈaː t		STATE_NOUN_1
 Romansch	Romansch			STATE_NOUN	stadi	ʃtˈaːdi	ʃ t ˈaː d i		STATE_NOUN_1			
 French	French			STATE_NOUN	état	eta	e t a		STATE_NOUN_1	TRUE		
 Québécois French	Québécois French			STATE_NOUN	état	etɑ	e t ɑ		STATE_NOUN_1	TRUE		
+Walloon	Walloon			STATE_NOUN	estat	ɛstˈa	ɛ s t ˈa		STATE_NOUN_1			
 Occitan	Occitan			STATE_NOUN	estat	estˈat	e s t ˈa t		STATE_NOUN_1			
 Gascon	Gascon			STATE_NOUN	estat	estˈat	e s t ˈa t		STATE_NOUN_1			
 Catalan	Catalan			STATE_NOUN	estat	əstˈat	ə s t ˈa t		STATE_NOUN_1			
@@ -9506,6 +9770,7 @@ Logudorese	Logudorese			TIME_NOUN	témpus	tˈempuzŭ	t ˈe m p u z ŭ		TIME_NO
 Campidanese	Campidanese			TIME_NOUN	témpus	tˈempuzŭ	t ˈe m p u z ŭ		TIME_NOUN_2			
 French	French			TIME_NOUN	temps	tɑ̃	t ɑ̃		TIME_NOUN_2			
 Québécois French	Québécois French			TIME_NOUN	temps	tã	t ã		TIME_NOUN_2			
+Walloon	Walloon			TIME_NOUN	tins	tˈɛ̃	t ˈɛ̃		TIME_NOUN_2			
 Franco-Provençal	Franco-Provençal			TIME_NOUN	temps	tˈɛ̃	t ˈɛ̃		TIME_NOUN_2			
 Occitan	Occitan			TIME_NOUN	tèms	tˈɛms	t ˈɛ m s		TIME_NOUN_2			
 Gascon	Gascon			TIME_NOUN	temps	tˈems	t ˈe m s		TIME_NOUN_2			
@@ -9535,6 +9800,7 @@ Friulian	Friulian			EARTH_NOUN	tiere	tjˈɛre	t j ˈɛ r e		EARTH_NOUN_1
 Romansch	Romansch			EARTH_NOUN	terra	tˈɛːrə	t ˈɛː r ə		EARTH_NOUN_1			
 French	French			EARTH_NOUN	terre	tɛʁ	t ɛ ʁ		EARTH_NOUN_1			
 Québécois French	Québécois French			EARTH_NOUN	terre	tæɛ̯ʁ	t æɛ̯ ʁ		EARTH_NOUN_1			
+Walloon	Walloon			EARTH_NOUN	tere	tˈɛːʀ	t ˈɛː ʀ		EARTH_NOUN_1			
 Franco-Provençal	Franco-Provençal			EARTH_NOUN	têra	tˈɛːða	t ˈɛː ð a		EARTH_NOUN_1			
 Savoyard	Savoyard			EARTH_NOUN	têra	tˈɛra	t ˈɛ r a		EARTH_NOUN_1			
 Occitan	Occitan			EARTH_NOUN	tèrra	tˈɛrɔ	t ˈɛ r ɔ		EARTH_NOUN_1			
@@ -9563,6 +9829,7 @@ Friulian	Friulian			SKULL_NOUN	teste	tˈɛste	t ˈɛ s t e		SKULL_NOUN_1
 Romansch	Romansch			SKULL_NOUN	testa	tˈɛstə	t ˈɛ s t ə		SKULL_NOUN_1			
 French	French			SKULL_NOUN	tête	tɛt	t ɛ t		SKULL_NOUN_1			
 Québécois French	Québécois French			SKULL_NOUN	tête	tɛɪ̯t	t ɛɪ̯ t		SKULL_NOUN_1			
+Walloon	Walloon			SKULL_NOUN	tiesse	tjˈɛs	t j ˈɛ s		SKULL_NOUN_1			
 Franco-Provençal	Franco-Provençal			SKULL_NOUN	téta	tˈeta	t ˈe t a		SKULL_NOUN_1			
 Savoyard	Savoyard			SKULL_NOUN	téta	tˈeta	t ˈe t a		SKULL_NOUN_1			
 Occitan	Occitan			SKULL_NOUN	tèsta	tˈɛstɔ	t ˈɛ s t ɔ		SKULL_NOUN_1			
@@ -9613,6 +9880,7 @@ Friulian	Friulian			THREE_NUM	trê	trˈeː	t r ˈeː		THREE_NUM_1
 Romansch	Romansch			THREE_NUM	trais	trˈajs	t r ˈa j s		THREE_NUM_1			
 French	French			THREE_NUM	trois	tʁwa	t ʁ w a		THREE_NUM_1			
 Québécois French	Québécois French			THREE_NUM	trois	tʁwɛ	t ʁ w ɛ		THREE_NUM_1			
+Walloon	Walloon			THREE_NUM	troes	tʀwˈɛ	t ʀ w ˈɛ		THREE_NUM_1			
 Franco-Provençal	Franco-Provençal			THREE_NUM	três	tʁˈɛː	t ʁ ˈɛː		THREE_NUM_1			
 Occitan	Occitan			THREE_NUM	tres	tɾˈes	t ɾ ˈe s		THREE_NUM_1			
 Gascon	Gascon			THREE_NUM	tres	tɾˈes	t ɾ ˈe s		THREE_NUM_1			
@@ -9663,6 +9931,7 @@ Brazilian Portuguese	Brazilian Portuguese			THOU_PRON	tú	tˈu	t ˈu		THOU_PRON_
 Latin	Latin			KILL_VERB	tūtārī	tˈuːtaːriː	t ˈuː t aː r iː		KILL_VERB_3			
 French	French			KILL_VERB	tuer	tɥe	t ɥ e		KILL_VERB_3			
 Québécois French	Québécois French			KILL_VERB	tuer	ʦɥe	ʦ ɥ e		KILL_VERB_3			
+Walloon	Walloon			KILL_VERB	touwer	tuwˈe	t u w ˈe		KILL_VERB_3			
 Occitan	Occitan			KILL_VERB	tuar	tɥˈa	t ɥ ˈa		KILL_VERB_3			
 Gascon	Gascon			KILL_VERB	tuar	twˈa	t w ˈa		KILL_VERB_3			
 Latin	Latin			NAVEL_NOUN	umbilīcum	ʊmbɪlʲˈiːkʊ̃ː	ʊ m b ɪ lʲ ˈiː k ʊ̃ː		NAVEL_NOUN_1			
@@ -9715,6 +9984,7 @@ Friulian	Friulian			FINGERNAIL_NOUN	ongule	ˈoŋɡule	ˈo ŋ ɡ u l e		FINGERNAI
 Romansch	Romansch			FINGERNAIL_NOUN	ungla	ˈuŋɡlə	ˈu ŋ ɡ l ə		FINGERNAIL_NOUN_1			
 French	French			FINGERNAIL_NOUN	ongle	ɔ̃ɡl	ɔ̃ ɡ l		FINGERNAIL_NOUN_1			
 Québécois French	Québécois French			FINGERNAIL_NOUN	ongle	ɒ̃ʊ̯̃ɡl	ɒ̃ʊ̯̃ ɡ l		FINGERNAIL_NOUN_1			
+Walloon	Walloon			FINGERNAIL_NOUN	ongue	ˈɔ̃k	ˈɔ̃ k		FINGERNAIL_NOUN_1			
 Franco-Provençal	Franco-Provençal			FINGERNAIL_NOUN	onglle	ˈɔ̃ɡʎə	ˈɔ̃ ɡ ʎ ə		FINGERNAIL_NOUN_1			
 Savoyard	Savoyard			FINGERNAIL_NOUN	onglya	ˈɔ̃ɡʎa	ˈɔ̃ ɡ ʎ a		FINGERNAIL_NOUN_1			
 Occitan	Occitan			FINGERNAIL_NOUN	ungla	ˈyŋɡlɔ	ˈy ŋ ɡ l ɔ		FINGERNAIL_NOUN_1			
@@ -9752,6 +10022,7 @@ Friulian	Friulian			ONE_NUM	un	ˈuŋ	ˈu ŋ		ONE_NUM_1
 Romansch	Romansch			ONE_NUM	in	ˈin	ˈi n		ONE_NUM_1			
 French	French			ONE_NUM	un	ɛ̃	ɛ̃		ONE_NUM_1			
 Québécois French	Québécois French			ONE_NUM	un	œ̃ʏ̯̃	œ̃ʏ̯̃		ONE_NUM_1			
+Walloon	Walloon			ONE_NUM	on	ˈɔ̃	ˈɔ̃		ONE_NUM_1			
 Franco-Provençal	Franco-Provençal			ONE_NUM	yon	jˈɔ̃	j ˈɔ̃		ONE_NUM_1			
 Savoyard	Savoyard			ONE_NUM	yon	jˈɔ̃	j ˈɔ̃		ONE_NUM_1			
 Occitan	Occitan			ONE_NUM	un	ˈyn	ˈy n		ONE_NUM_1			
@@ -9786,6 +10057,7 @@ Friulian	Friulian			BEAR_NOUN	ors	ˈors	ˈo r s		BEAR_NOUN_2
 Romansch	Romansch			BEAR_NOUN	urs	ˈuːrs	ˈuː r s		BEAR_NOUN_2			
 French	French			BEAR_NOUN	ours	uʁs	u ʁ s		BEAR_NOUN_2			
 Québécois French	Québécois French			BEAR_NOUN	ours	uʁs	u ʁ s		BEAR_NOUN_2			
+Walloon	Walloon			BEAR_NOUN	oûsse	ˈuːs	ˈuː s		BEAR_NOUN_2			
 Franco-Provençal	Franco-Provençal			BEAR_NOUN	ôrs	ˈoːʁs	ˈoː ʁ s		BEAR_NOUN_2			
 Occitan	Occitan			BEAR_NOUN	ors	ˈurs	ˈu r s		BEAR_NOUN_2			
 Aragonese	Aragonese			BEAR_NOUN	onso	ˈonso	ˈo n s o		BEAR_NOUN_2			
@@ -9815,6 +10087,7 @@ Friulian	Friulian			COW_NOUN	vacje	vˈace	v ˈa c e		COW_NOUN_1
 Romansch	Romansch			COW_NOUN	vatga	vˈaʨə	v ˈa ʨ ə		COW_NOUN_1			
 French	French			COW_NOUN	vache	vaʃ	v a ʃ		COW_NOUN_1			
 Québécois French	Québécois French			COW_NOUN	vache	vaʃ	v a ʃ		COW_NOUN_1			
+Walloon	Walloon			COW_NOUN	vatche	vˈaʧ	v ˈa ʧ		COW_NOUN_1			
 Franco-Provençal	Franco-Provençal			COW_NOUN	vache	vˈaʃi	v ˈa ʃ i		COW_NOUN_1			
 Occitan	Occitan			COW_NOUN	vaca	vˈakɔ	v ˈa k ɔ		COW_NOUN_1			
 Gascon	Gascon			COW_NOUN	vaca	bˈakɔ	b ˈa k ɔ		COW_NOUN_1			
@@ -9836,6 +10109,7 @@ Friulian	Friulian			COME-1SG_VERB	ven	vˈɛŋ	v ˈɛ ŋ		COME-1SG_VERB_1
 Romansch	Romansch			COME-1SG_VERB	vegn	vˈɛɲ	v ˈɛ ɲ		COME-1SG_VERB_1			
 French	French			COME-1SG_VERB	viens	vjɛ̃	v j ɛ̃		COME-1SG_VERB_1			
 Québécois French	Québécois French			COME-1SG_VERB	viens	vjẽɪ̯̃	v j ẽɪ̯̃		COME-1SG_VERB_1			
+Walloon	Walloon			COME-1SG_VERB	vén	vˈẽ	v ˈẽ		COME-1SG_VERB_1			
 Franco-Provençal	Franco-Provençal			COME-1SG_VERB	veno	vˈɛno	v ˈɛ n o		COME-1SG_VERB_1			
 Occitan	Occitan			COME-1SG_VERB	veni	vˈɛni	v ˈɛ n i		COME-1SG_VERB_1			
 Catalan	Catalan			COME-1SG_VERB	vinc	bˈiŋ	b ˈi ŋ		COME-1SG_VERB_1			
@@ -9870,6 +10144,8 @@ Friulian	Friulian			COME-INF_VERB	vignî	viɲˈiː	v i ɲ ˈiː		COME-INF_VERB_1
 Romansch	Romansch			COME-INF_VERB	vegnir	vəɲˈiːr	v ə ɲ ˈiː r		COME-INF_VERB_1			
 French	French			COME-INF_VERB	venir	vəniʁ	v ə n i ʁ		COME-INF_VERB_1			
 Québécois French	Québécois French			COME-INF_VERB	venir	vœniʁ	v œ n i ʁ		COME-INF_VERB_1			
+Walloon	Walloon			COME-INF_VERB	vini	vinˈi	v i n ˈi		COME-INF_VERB_1			
+Walloon	Walloon			COME-INF_VERB	vni	vnˈi	v n ˈi		COME-INF_VERB_1			
 Franco-Provençal	Franco-Provençal			COME-INF_VERB	venir	vənˈi	v ə n ˈi		COME-INF_VERB_1			
 Savoyard	Savoyard			COME-INF_VERB	mnyi	mɲˈi	m ɲ ˈi		COME-INF_VERB_1			
 Occitan	Occitan			COME-INF_VERB	venir	venˈi	v e n ˈi		COME-INF_VERB_1			
@@ -9895,6 +10171,7 @@ Friulian	Friulian			BELLY_NOUN	vintri	vˈintri	v ˈi n t r i		BELLY_NOUN_2
 Romansch	Romansch			BELLY_NOUN	venter	vˈɛntər	v ˈɛ n t ə r		BELLY_NOUN_2			
 French	French			BELLY_NOUN	ventre	vɑ̃tʁ	v ɑ̃ t ʁ		BELLY_NOUN_2			
 Québécois French	Québécois French			BELLY_NOUN	ventre	vãtʁ	v ã t ʁ		BELLY_NOUN_2			
+Walloon	Walloon			BELLY_NOUN	vinte	vˈɛ̃t	v ˈɛ̃ t		BELLY_NOUN_2			
 Franco-Provençal	Franco-Provençal			BELLY_NOUN	ventro	vˈɛ̃tʁo	v ˈɛ̃ t ʁ o		BELLY_NOUN_2			
 Savoyard	Savoyard			BELLY_NOUN	vêtro	vˈɛtro	v ˈɛ t r o		BELLY_NOUN_2			
 Occitan	Occitan			BELLY_NOUN	ventre	vˈɛntɾe	v ˈɛ n t ɾ e		BELLY_NOUN_2			
@@ -9928,6 +10205,7 @@ Friulian	Friulian			WIND_NOUN	vint	vˈint	v ˈi n t		WIND_NOUN_1
 Romansch	Romansch			WIND_NOUN	vent	vˈɛnt	v ˈɛ n t		WIND_NOUN_1			
 French	French			WIND_NOUN	vent	vɑ̃	v ɑ̃		WIND_NOUN_1			
 Québécois French	Québécois French			WIND_NOUN	vent	vã	v ã		WIND_NOUN_1			
+Walloon	Walloon			WIND_NOUN	vint	vˈɛ̃	v ˈɛ̃		WIND_NOUN_1			
 Franco-Provençal	Franco-Provençal			WIND_NOUN	vent	vˈɛ̃	v ˈɛ̃		WIND_NOUN_1			
 Occitan	Occitan			WIND_NOUN	vent	vˈɛn	v ˈɛ n		WIND_NOUN_1			
 Gascon	Gascon			WIND_NOUN	vent	bˈen	b ˈe n		WIND_NOUN_1			
@@ -9970,6 +10248,7 @@ Friulian	Friulian			WORM_NOUN	vier	vjˈɛr	v j ˈɛ r		WORM_NOUN_1
 Romansch	Romansch			WORM_NOUN	verm	vˈɛrm	v ˈɛ r m		WORM_NOUN_1			
 French	French			WORM_NOUN	ver	vɛʁ	v ɛ ʁ		WORM_NOUN_1			
 Québécois French	Québécois French			WORM_NOUN	ver	væɛ̯ʁ	v æɛ̯ ʁ		WORM_NOUN_1			
+Walloon	Walloon			WORM_NOUN	vier	vjˈɛʀ	v j ˈɛ ʀ		WORM_NOUN_1			
 Franco-Provençal	Franco-Provençal			WORM_NOUN	vérm	vˈeʁm	v ˈe ʁ m		WORM_NOUN_1			
 Savoyard	Savoyard			WORM_NOUN	vé	vˈe	v ˈe		WORM_NOUN_1			
 Occitan	Occitan			WORM_NOUN	vèrm	vˈɛrm	v ˈɛ r m		WORM_NOUN_1			
@@ -10005,6 +10284,7 @@ Friulian	Friulian			OLD_ADJ	vieli	vjˈɛli	v j ˈɛ l i		OLD_ADJ_1
 Romansch	Romansch			OLD_ADJ	vegl	vˈɛʎ	v ˈɛ ʎ		OLD_ADJ_1			
 French	French			OLD_ADJ	vieil	vjɛj	v j ɛ j		OLD_ADJ_1			
 Québécois French	Québécois French			OLD_ADJ	vieil	vjæɛ̯j	v j æɛ̯ j		OLD_ADJ_1			
+Walloon	Walloon			OLD_ADJ	vî	vˈiː	v ˈiː		OLD_ADJ_1			
 Franco-Provençal	Franco-Provençal			OLD_ADJ	viöly	vjˈøʎ	v j ˈø ʎ		OLD_ADJ_1			
 Occitan	Occitan			OLD_ADJ	vièlh	vjˈɛl	v j ˈɛ l		OLD_ADJ_1			
 Gascon	Gascon			OLD_ADJ	vielh	bjˈeʎ	b j ˈe ʎ		OLD_ADJ_1			
@@ -10035,6 +10315,7 @@ Friulian	Friulian			ROAD_NOUN	via	vˈie	v ˈi e		ROAD_NOUN_1
 Romansch	Romansch			ROAD_NOUN	via	vˈiːə	v ˈiː ə		ROAD_NOUN_1			
 French	French			ROAD_NOUN	voie	vwa	v w a		ROAD_NOUN_1			
 Québécois French	Québécois French			ROAD_NOUN	voie	vwɛ	v w ɛ		ROAD_NOUN_1			
+Walloon	Walloon			ROAD_NOUN	voye	vˈɔːj	v ˈɔː j		ROAD_NOUN_1			
 Franco-Provençal	Franco-Provençal			ROAD_NOUN	voué	vwˈe	v w ˈe		ROAD_NOUN_1			
 Occitan	Occitan			ROAD_NOUN	via	vˈiɔ	v ˈi ɔ		ROAD_NOUN_1			
 Gascon	Gascon			ROAD_NOUN	via	bˈiɔ	b ˈi ɔ		ROAD_NOUN_1			
@@ -10062,6 +10343,7 @@ Friulian	Friulian			JOURNEY_NOUN	viaç	vjˈaʧ	v j ˈa ʧ		JOURNEY_NOUN_1
 Romansch	Romansch			JOURNEY_NOUN	viadi	vjˈaːdi	v j ˈaː d i		JOURNEY_NOUN_1			
 French	French			JOURNEY_NOUN	voyage	vwajaʒ	v w a j a ʒ		JOURNEY_NOUN_1			
 Québécois French	Québécois French			JOURNEY_NOUN	voyage	vwɛjaʒ	v w ɛ j a ʒ		JOURNEY_NOUN_1			
+Walloon	Walloon			JOURNEY_NOUN	voyaedje	vɔːjˈɛʧ	v ɔː j ˈɛ ʧ		JOURNEY_NOUN_1			
 Franco-Provençal	Franco-Provençal			JOURNEY_NOUN	viâjho	vjˈaːðo	v j ˈaː ð o		JOURNEY_NOUN_1			
 Occitan	Occitan			JOURNEY_NOUN	viatge	viˈaʤe	v i ˈa ʤ e		JOURNEY_NOUN_1			
 Gascon	Gascon			JOURNEY_NOUN	viatge	biˈaʤe	b i ˈa ʤ e		JOURNEY_NOUN_1			
@@ -10096,6 +10378,7 @@ Friulian	Friulian			SEE_VERB	viodi	vjˈodi	v j ˈo d i		SEE_VERB_1
 Romansch	Romansch			SEE_VERB	vesair	vezˈajr	v e z ˈa j r		SEE_VERB_1			
 French	French			SEE_VERB	voir	vwaʁ	v w a ʁ		SEE_VERB_1			
 Québécois French	Québécois French			SEE_VERB	voir	vwɛʁ	v w ɛ ʁ		SEE_VERB_1			
+Walloon	Walloon			SEE_VERB	vey	vˈɛj	v ˈɛ j		SEE_VERB_1			
 Franco-Provençal	Franco-Provençal			SEE_VERB	vêre	vˈɛːðə	v ˈɛː ð ə		SEE_VERB_1			
 Savoyard	Savoyard			SEE_VERB	vi	vˈi	v ˈi		SEE_VERB_1			
 Occitan	Occitan			SEE_VERB	veire	vˈejɾe	v ˈe j ɾ e		SEE_VERB_1			
@@ -10129,6 +10412,7 @@ Friulian	Friulian			TWENTY_NUM	vincj	vˈinc	v ˈi n c		TWENTY_NUM_1
 Romansch	Romansch			TWENTY_NUM	ventg	vˈɛnʨ	v ˈɛ n ʨ		TWENTY_NUM_1			
 French	French			TWENTY_NUM	vingt	vɛ̃	v ɛ̃		TWENTY_NUM_1			
 Québécois French	Québécois French			TWENTY_NUM	vingt	vẽɪ̯̃	v ẽɪ̯̃		TWENTY_NUM_1			
+Walloon	Walloon			TWENTY_NUM	vint	vˈɛ̃	v ˈɛ̃		TWENTY_NUM_1			
 Franco-Provençal	Franco-Provençal			TWENTY_NUM	vengt	vˈɛ̃t	v ˈɛ̃ t		TWENTY_NUM_1			
 Occitan	Occitan			TWENTY_NUM	vint	vˈin	v ˈi n		TWENTY_NUM_1			
 Gascon	Gascon			TWENTY_NUM	vint	bˈin	b ˈi n		TWENTY_NUM_1			
@@ -10157,6 +10441,7 @@ Friulian	Friulian			TOWN_NOUN	vile	vˈile	v ˈi l e		TOWN_NOUN_1
 Romansch	Romansch			TOWN_NOUN	villa	vˈiːlə	v ˈiː l ə		TOWN_NOUN_1			
 French	French			TOWN_NOUN	ville	vil	v i l		TOWN_NOUN_1			
 Québécois French	Québécois French			TOWN_NOUN	ville	vɪl	v ɪ l		TOWN_NOUN_1			
+Walloon	Walloon			TOWN_NOUN	veye	vˈɛj	v ˈɛ j		TOWN_NOUN_1			
 Franco-Provençal	Franco-Provençal			TOWN_NOUN	vila	vˈila	v ˈi l a		TOWN_NOUN_1			
 Occitan	Occitan			TOWN_NOUN	vila	vˈilɔ	v ˈi l ɔ		TOWN_NOUN_1			
 Gascon	Gascon			TOWN_NOUN	vila	bˈilɔ	b ˈi l ɔ		TOWN_NOUN_1			
@@ -10177,6 +10462,7 @@ Eastern Lombard	Eastern Lombard			VILLAIN_NOUN	vilà	ʋilˈa	ʋ i l ˈa		VILLAIN
 Friulian	Friulian			VILLAIN_NOUN	vilan	vilˈan	v i l ˈa n		VILLAIN_NOUN_1			
 French	French			VILLAIN_NOUN	vilain	vilɛ̃	v i l ɛ̃		VILLAIN_NOUN_1			
 Québécois French	Québécois French			VILLAIN_NOUN	vilain	vilẽɪ̯̃	v i l ẽɪ̯̃		VILLAIN_NOUN_1			
+Walloon	Walloon			VILLAIN_NOUN	vilin	vilˈɛ̃	v i l ˈɛ̃		VILLAIN_NOUN_1			
 Occitan	Occitan			VILLAIN_NOUN	vilan	vilˈa	v i l ˈa		VILLAIN_NOUN_1			
 Gascon	Gascon			VILLAIN_NOUN	vilan	bilˈaŋ	b i l ˈa ŋ		VILLAIN_NOUN_1			
 Catalan	Catalan			VILLAIN_NOUN	vilà	bilˈa	b i l ˈa		VILLAIN_NOUN_1			
@@ -10210,6 +10496,7 @@ Friulian	Friulian			WINE_NOUN	vin	vˈiŋ	v ˈi ŋ		WINE_NOUN_1
 Romansch	Romansch			WINE_NOUN	vin	vˈin	v ˈi n		WINE_NOUN_1			
 French	French			WINE_NOUN	vin	vɛ̃	v ɛ̃		WINE_NOUN_1			
 Québécois French	Québécois French			WINE_NOUN	vin	vẽɪ̯̃	v ẽɪ̯̃		WINE_NOUN_1			
+Walloon	Walloon			WINE_NOUN	vén	vˈẽ	v ˈẽ		WINE_NOUN_1			
 Franco-Provençal	Franco-Provençal			WINE_NOUN	vin	vˈĩ	v ˈĩ		WINE_NOUN_1			
 Savoyard	Savoyard			WINE_NOUN	ven	vˈɛː	v ˈɛː		WINE_NOUN_1			
 Occitan	Occitan			WINE_NOUN	vin	vˈi	v ˈi		WINE_NOUN_1			
@@ -10246,6 +10533,7 @@ Friulian	Friulian			GREEN_ADJ	vert	vˈert	v ˈe r t		GREEN_ADJ_1
 Romansch	Romansch			GREEN_ADJ	verd	vˈeːrt	v ˈeː r t		GREEN_ADJ_1			
 French	French			GREEN_ADJ	vert	vɛʁ	v ɛ ʁ		GREEN_ADJ_1			
 Québécois French	Québécois French			GREEN_ADJ	vert	væɛ̯ʁ	v æɛ̯ ʁ		GREEN_ADJ_1			
+Walloon	Walloon			GREEN_ADJ	vert	vˈɛʀ	v ˈɛ ʀ		GREEN_ADJ_1			
 Franco-Provençal	Franco-Provençal			GREEN_ADJ	vèrd	vˈɛʁ	v ˈɛ ʁ		GREEN_ADJ_1			
 Savoyard	Savoyard			GREEN_ADJ	vê	vˈɛ	v ˈɛ		GREEN_ADJ_1			
 Occitan	Occitan			GREEN_ADJ	verd	vˈert	v ˈe r t		GREEN_ADJ_1			
@@ -10279,6 +10567,7 @@ Friulian	Friulian			LIFE_NOUN	vite	vˈite	v ˈi t e		LIFE_NOUN_1
 Romansch	Romansch			LIFE_NOUN	vita	vˈiːtə	v ˈiː t ə		LIFE_NOUN_1			
 French	French			LIFE_NOUN	vie	vi	v i		LIFE_NOUN_1			
 Québécois French	Québécois French			LIFE_NOUN	vie	vi	v i		LIFE_NOUN_1			
+Walloon	Walloon			LIFE_NOUN	veye	vˈɛj	v ˈɛ j		LIFE_NOUN_1			
 Franco-Provençal	Franco-Provençal			LIFE_NOUN	via	vˈia	v ˈi a		LIFE_NOUN_1			
 Occitan	Occitan			LIFE_NOUN	vida	vˈiðɔ	v ˈi ð ɔ		LIFE_NOUN_1			
 Gascon	Gascon			LIFE_NOUN	vita	bˈitɔ	b ˈi t ɔ		LIFE_NOUN_1		IRREGULAR	
@@ -10313,6 +10602,7 @@ Friulian	Friulian			CALF_NOUN	vidiel	vidjˈɛl	v i d j ˈɛ l		CALF_NOUN_1
 Romansch	Romansch			CALF_NOUN	vadè	vədˈɛː	v ə d ˈɛː		CALF_NOUN_1			
 French	French			CALF_NOUN	veau	vo	v o		CALF_NOUN_1			
 Québécois French	Québécois French			CALF_NOUN	veau	voʊ̯	v oʊ̯		CALF_NOUN_1			
+Walloon	Walloon			CALF_NOUN	vea	vjˈa	v j ˈa		CALF_NOUN_1			
 Franco-Provençal	Franco-Provençal			CALF_NOUN	vél	vˈel	v ˈe l		CALF_NOUN_1			
 Occitan	Occitan			CALF_NOUN	vedèl	veðˈɛl	v e ð ˈɛ l		CALF_NOUN_1			
 Gascon	Gascon			CALF_NOUN	vedèth	beðˈɛt	b e ð ˈɛ t		CALF_NOUN_1			
@@ -10343,6 +10633,7 @@ Friulian	Friulian			VOICE_NOUN	vôs	vˈoːs	v ˈoː s		VOICE_NOUN_1
 Romansch	Romansch			VOICE_NOUN	vusch	vˈuʃ	v ˈu ʃ		VOICE_NOUN_1			
 French	French			VOICE_NOUN	voix	vwa	v w a		VOICE_NOUN_1			
 Québécois French	Québécois French			VOICE_NOUN	voix	vwɛ	v w ɛ		VOICE_NOUN_1			
+Walloon	Walloon			VOICE_NOUN	vwès	vwˈɛ	v w ˈɛ		VOICE_NOUN_1			
 Franco-Provençal	Franco-Provençal			VOICE_NOUN	vouéx	vwˈeʃ	v w ˈe ʃ		VOICE_NOUN_1			
 Occitan	Occitan			VOICE_NOUN	votz	vˈuʦ	v ˈu ʦ		VOICE_NOUN_1			
 Gascon	Gascon			VOICE_NOUN	votz	bˈuʦ	b ˈu ʦ		VOICE_NOUN_1			
@@ -10365,6 +10656,7 @@ Emilian	Emilian			FLY_VERB	vulèr	vulˈɛr	v u l ˈɛ r		FLY_VERB_2
 Piedmontese	Piedmontese			FLY_VERB	volé	vulˈe	v u l ˈe		FLY_VERB_2			
 French	French			FLY_VERB	voler	vɔle	v ɔ l e		FLY_VERB_2			
 Québécois French	Québécois French			FLY_VERB	voler	vɔle	v ɔ l e		FLY_VERB_2			
+Walloon	Walloon			FLY_VERB	voler	vɔlˈe	v ɔ l ˈe		FLY_VERB_2			
 Franco-Provençal	Franco-Provençal			FLY_VERB	volar	vɔlˈa	v ɔ l ˈa		FLY_VERB_2			
 Savoyard	Savoyard			FLY_VERB	volâ	volˈaː	v o l ˈaː		FLY_VERB_2			
 Occitan	Occitan			FLY_VERB	volar	vulˈa	v u l ˈa		FLY_VERB_2			
@@ -10397,6 +10689,7 @@ Friulian	Friulian			YOU (PL)_PRON	vô	vˈoː	v ˈoː		YOU (PL)_PRON_1
 Romansch	Romansch			YOU (PL)_PRON	vus	vˈus	v ˈu s		YOU (PL)_PRON_1			
 French	French			YOU (PL)_PRON	vous	vu	v u		YOU (PL)_PRON_1			
 Québécois French	Québécois French			YOU (PL)_PRON	vous	vu	v u		YOU (PL)_PRON_1			
+Walloon	Walloon			YOU (PL)_PRON	vos	vˈɔ	v ˈɔ		YOU (PL)_PRON_1			
 Franco-Provençal	Franco-Provençal			YOU (PL)_PRON	vos	vˈo	v ˈo		YOU (PL)_PRON_1			
 Portuguese	Portuguese			YOU (PL)_PRON	vós	vˈɔʃ	v ˈɔ ʃ		YOU (PL)_PRON_1			
 Brazilian Portuguese	Brazilian Portuguese			YOU (PL)_PRON	vós	vˈɔjʃ	v ˈɔ j ʃ		YOU (PL)_PRON_1			
@@ -10426,6 +10719,7 @@ Megleno-Romanian	Megleno-Romanian			HUNDRED_NUM	sută	sˈutə	s ˈu t ə		HUNDRE
 Aromanian	Aromanian			HUNDRED_NUM	sutã	sˈutə	s ˈu t ə		HUNDRED_NUM_2			
 French	French			BURN_VERB	brûler	bʁyle	b ʁ y l e		BURN_VERB_3			
 Québécois French	Québécois French			BURN_VERB	brûler	bʁyle	b ʁ y l e		BURN_VERB_3			
+Walloon	Walloon			BURN_VERB	broûler	bʀuːlˈe	b ʀ uː l ˈe		BURN_VERB_3			
 Franco-Provençal	Franco-Provençal			BURN_VERB	burlar	byʁlˈaʁ	b y ʁ l ˈa ʁ		BURN_VERB_3			
 Savoyard	Savoyard			BURN_VERB	brûlâ	bryːlˈaː	b r yː l ˈaː		BURN_VERB_3			
 Occitan	Occitan			BURN_VERB	brutlar	bɾyllˈa	b ɾ y l l ˈa		BURN_VERB_3			
@@ -10443,6 +10737,7 @@ Brazilian Portuguese	Brazilian Portuguese			SMALL_ADJ	pequeno	pekˈẽnu	p e k �
 Piedmontese	Piedmontese			SMALL_ADJ	cit	ʧˈit	ʧ ˈi t		SMALL_ADJ_4			
 French	French			SMALL_ADJ	petit	pəti	p ə t i		SMALL_ADJ_4			
 Québécois French	Québécois French			SMALL_ADJ	petit	pœʦi	p œ ʦ i		SMALL_ADJ_4			
+Walloon	Walloon			SMALL_ADJ	ptit	ptˈi	p t ˈi		SMALL_ADJ_4			
 Franco-Provençal	Franco-Provençal			SMALL_ADJ	petiôt	pətjˈoː	p ə t j ˈoː		SMALL_ADJ_4			
 Savoyard	Savoyard			SMALL_ADJ	ptyou	ptjˈu	p t j ˈu		SMALL_ADJ_4			
 Occitan	Occitan			SMALL_ADJ	petit	petˈit	p e t ˈi t		SMALL_ADJ_4			
@@ -10454,6 +10749,7 @@ Venetian	Venetian			WE_PRON	nialtri	niˈaltri	n i ˈa l t r i		WE_PRON_2
 Emilian	Emilian			WE_PRON	nuèter	nwˈɛter	n w ˈɛ t e r		WE_PRON_2			
 Ligurian	Ligurian			WE_PRON	niâtri	njˈaːtri	n j ˈaː t r i		WE_PRON_2			
 Friulian	Friulian			WE_PRON	noaltris	noˈaltris	n o ˈa l t r i s		WE_PRON_2			
+Walloon	Walloon			WE_PRON	nozôtes	nɔzˈoːt	n ɔ z ˈoː t		WE_PRON_2			
 Occitan	Occitan			WE_PRON	nosautres	nuzˈawtɾes	n u z ˈa w t ɾ e s		WE_PRON_2			
 Gascon	Gascon			WE_PRON	nosautes	nuzˈawtes	n u z ˈa w t e s		WE_PRON_2			
 Catalan	Catalan			WE_PRON	nosaltres	nuzˈaltɾəs	n u z ˈa l t ɾ ə s		WE_PRON_2			
@@ -10468,6 +10764,7 @@ Ligurian	Ligurian			YOU (PL)_PRON	viâtri	vjˈaːtri	v j ˈaː t r i		YOU (PL)_P
 Piedmontese	Piedmontese			YOU (PL)_PRON	vojàutri	vujˈawtri	v u j ˈa w t r i		YOU (PL)_PRON_2			
 Eastern Lombard	Eastern Lombard			YOU (PL)_PRON	óter	ˈoter	ˈo t e r		YOU (PL)_PRON_2			
 Friulian	Friulian			YOU (PL)_PRON	voaltris	voˈaltris	v o ˈa l t r i s		YOU (PL)_PRON_2			
+Walloon	Walloon			YOU (PL)_PRON	vozôtes	vɔzˈoːt	v ɔ z ˈoː t		YOU (PL)_PRON_2			
 Occitan	Occitan			YOU (PL)_PRON	vosautres	vuzˈawtɾes	v u z ˈa w t ɾ e s		YOU (PL)_PRON_2			
 Gascon	Gascon			YOU (PL)_PRON	vosautes	buzˈawtes	b u z ˈa w t e s		YOU (PL)_PRON_2			
 Catalan	Catalan			YOU (PL)_PRON	vosaltres	buzˈaltɾəs	b u z ˈa l t ɾ ə s		YOU (PL)_PRON_2			
