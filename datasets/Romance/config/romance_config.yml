@@ -6,7 +6,7 @@ family:
     outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/
 
 experiment:
-  name: 
+  name: "update_lombard"
 
 transcription:
     global:
@@ -16,15 +16,15 @@ transcription:
 
 pmi:
     min_corr: 2
-    refresh: []
-    refresh_all_pmi: true
+    refresh: ['Piedmontese', 'Western Lombard', 'Eastern Lombard']
+    refresh_all_pmi: false
 
 surprisal:
     ngram: 1
     min_corr: 2
     phon_env: true 
-    refresh: []
-    refresh_all_surprisal: true
+    refresh: ['Piedmontese', 'Western Lombard', 'Eastern Lombard']
+    refresh_all_surprisal: false
 
 cluster:
     cognates: none

@@ -1,257 +1,260 @@
 VOWELS
-/a/ (0.081)
-	<piüma> /pjˈyma/ "FEATHER_NOUN"
-	<nigula> /nˈiɡula/ "CLOUD_NOUN"
-	<cascià> /kaʃˈa/ "HUNT_VERB"
+/a/ (0.082)
+	<terra> /tˈɛra/ "EARTH_NOUN"
+	<prea> /prˈeːa/ "STONE_NOUN"
+	<cadena> /kadˈeːna/ "CHAIN_NOUN"
 
-/ˈa/ (0.059)
-	<levà> /leʋˈa/ "CARRY_VERB"
-	<ciav> /ʧˈaf/ "KEY_NOUN"
-	<nudà> /nudˈa/ "SWIM_VERB"
+/ˈa/ (0.036)
+	<crava> /krˈava/ "GOAT_NOUN"
+	<alba> /ˈalba/ "DAWN_NOUN"
+	<sabia> /sˈabja/ "SAND_NOUN"
 
-/ˈɛ/ (0.031)
-	<fer> /fˈɛr/ "IRON_NOUN"
-	<savè> /saʋˈɛ/ "KNOW_VERB"
-	<anell> /anˈɛl/ "RING_NOUN"
+/ˈɛ/ (0.033)
+	<legg> /lˈɛʧ/ "READ_VERB"
+	<vedè> /vedˈɛ/ "SEE_VERB"
+	<vegg> /vˈɛʧ/ "OLD_ADJ"
 
-/ˈe/ (0.028)
-	<legg> /lˈeʧ/ "READ_VERB"
-	<légna> /lˈeɲa/ "WOOD_NOUN"
-	<peil> /pˈejl/ "HAIR_NOUN"
+/e/ (0.029)
+	<mader> /mˈɑːder/ "MOTHER_NOUN"
+	<quater> /kwˈɑːter/ "FOUR_NUM"
+	<violter> /vjˈɔlter/ "YOU (PL)_PRON"
 
-/e/ (0.024)
-	<levà> /leʋˈa/ "CARRY_VERB"
-	<cercà> /ʧerkˈa/ "SEARCH_VERB"
-	<ànjel> /ˈanjel/ "ANGEL_NOUN"
+/ˈɑː/ (0.026)
+	<bagn> /bˈɑːɲ/ "BATH_NOUN"
+	<lana> /lˈɑːna/ "WOOL_NOUN"
+	<spada> /spˈɑːda/ "SWORD_NOUN"
 
-/ˈɔ/ (0.022)
-	<nòs> /nˈɔs/ "OUR_ADJ"
-	<nòst> /nˈɔst/ "OUR_ADJ"
-	<cognoss> /kuɲˈɔs/ "BE ACQUAINTED WITH_VERB"
+/ˈɔ/ (0.019)
+	<nott> /nˈɔt/ "NIGHT_NOUN"
+	<olter> /ˈɔlter/ "OTHER_ADJ"
+	<scorza> /skˈɔrsa/ "BARK_NOUN"
 
-/ˈi/ (0.021)
-	<fi> /fˈi/ "SON_NOUN"
-	<vita> /ʋˈita/ "LIFE_NOUN"
-	<isla> /ˈisla/ "ISLAND_NOUN"
+/ˈyː/ (0.016)
+	<fium> /fjˈyːm/ "RIVER_NOUN"
+	<giudes> /ʤˈyːdes/ "JUDGE_NOUN"
+	<luu> /lˈyː/ "HE_PRON"
 
-/ˈu/ (0.019)
-	<mosca> /mˈuska/ "FLY_NOUN"
-	<colp> /kˈulp/ "STRIKE_NOUN"
-	<sora> /sˈura/ "ABOVE_PREP"
+/ˈeː/ (0.016)
+	<cadena> /kadˈeːna/ "CHAIN_NOUN"
+	<lee> /lˈeː/ "SHE_PRON"
+	<crede> /krˈeːde/ "BELIEVE_VERB"
 
-/u/ (0.014)
-	<cognoss> /kuɲˈɔs/ "BE ACQUAINTED WITH_VERB"
-	<nudà> /nudˈa/ "SWIM_VERB"
-	<sumenza> /sumˈenʦa/ "SEED_NOUN"
+/ˈu/ (0.013)
+	<conoss> /kunˈus/ "BE ACQUAINTED WITH_VERB"
+	<pozz> /pˈus/ "WELL_NOUN"
+	<dodes> /dˈudes/ "TWELVE_NUM"
 
-/ˈy/ (0.013)
-	<guggia> /ɡˈyʤa/ "NEEDLE_NOUN"
-	<tücc> /tˈyʧ/ "ALL (SG)_ADJ"
-	<lüm> /lˈym/ "LIGHT_NOUN"
+/ˈi/ (0.013)
+	<ombrì> /ũbrˈi/ "NAVEL_NOUN"
+	<nivola> /nˈivula/ "CLOUD_NOUN"
+	<mi> /mˈi/ "I_OBL_PRON"
 
-/ˈãː/ (0.013)
-	<piànz’er> /pjˈãːʦer/ "WEEP_VERB"
-	<pan> /pˈãː/ "BREAD_NOUN"
-	<man> /mˈãː/ "HAND_NOUN"
+/u/ (0.013)
+	<roman> /rumˈã/ "ROMAN_ADJ"
+	<nivola> /nˈivula/ "CLOUD_NOUN"
+	<sgolà> /zɡulˈa/ "FLY_VERB"
 
-/ˈũː/ (0.01)
-	<pont> /pˈũːt/ "BRIDGE_NOUN"
-	<bun> /bˈũː/ "GOOD (M.SG)_ADJ"
-	<pont> /pˈũːt/ "POINT_NOUN"
+/ˈuː/ (0.012)
+	<lov> /lˈuːf/ "WOLF_NOUN"
+	<sora> /sˈuːra/ "ABOVE_PREP"
+	<odor> /udˈuːr/ "ODOR_NOUN"
 
-/ˈø/ (0.009)
-	<pioeuva> /pjˈøʋa/ "RAIN_NOUN"
-	<ginögg> /ʤinˈøʧ/ "KNEE_NOUN"
-	<föia> /fˈøja/ "LEAF_NOUN"
+/ˈã/ (0.012)
+	<pan> /pˈã/ "BREAD_NOUN"
+	<san> /sˈã/ "HEALTHY (M)_ADJ"
+	<piang> /pjˈãʧ/ "WEEP_VERB"
 
-/ˈaː/ (0.009)
-	<daa> /dˈaː/ "GIVE_VERB"
-	<faa> /fˈaː/ "FATE_NOUN"
-	<çitâ> /ʦitˈaː/ "CITY_NOUN"
+/ˈøː/ (0.011)
+	<bœf> /bˈøːf/ "OX_NOUN"
+	<jœg> /ʒˈøːk/ "GAME_NOUN"
+	<fœia> /fˈøːja/ "LEAF_NOUN"
 
-/ˈyː/ (0.008)
-	<suu> /sˈyː/ "SUN_NOUN"
-	<culuur> /kylˈyːr/ "COLOR_NOUN"
-	<lüüs> /lˈyːs/ "LIGHT_NOUN"
+/ˈiː/ (0.011)
+	<liber> /lˈiːber/ "FREE_ADJ"
+	<mil> /mˈiːl/ "THOUSAND_NUM"
+	<scriv> /skrˈiːf/ "WRITE_VERB"
 
-/i/ (0.006)
-	<ginögg> /ʤinˈøʧ/ "KNEE_NOUN"
-	<cireiscia> /ʧirˈejʃa/ "CHERRY_NOUN"
-	<visign> /ʋizˈiɲ/ "NEIGHBOR_NOUN"
+/ˈũ/ (0.01)
+	<long> /lˈũk/ "LONG_ADJ"
+	<bon> /bˈũ/ "GOOD (M.PL)_ADJ"
+	<pont> /pˈũt/ "BRIDGE_NOUN"
 
-/ˈøː/ (0.005)
-	<nöf> /nˈøːf/ "NINE_NUM"
-	<öv> /ˈøːf/ "EGG_NOUN"
-	<növ> /nˈøːf/ "NEW_ADJ"
+/i/ (0.01)
+	<pressi> /prˈɛsi/ "PRICE_NOUN"
+	<lagrima> /lˈɑːɡrima/ "TEAR_NOUN"
+	<vitell> /vitˈɛl/ "CALF_NOUN"
 
-/ˈẽː/ (0.005)
-	<lengua> /lˈẽːɡwa/ "TONGUE_NOUN"
-	<scender> /ʃˈẽːdɛr/ "ASH_NOUN"
-	<vent> /ʋˈẽːt/ "WIND_NOUN"
+/ˈẽ/ (0.007)
+	<cent> /ʧˈẽt/ "HUNDRED_NUM"
+	<dent> /dˈẽt/ "TOOTH_NOUN"
+	<ben> /bˈẽ/ "WELL (ADV)_ADV"
 
-/ˈĩː/ (0.004)
-	<vint> /ʋˈĩːt/ "TWENTY_NUM"
-	<vin> /ʋˈĩː/ "WINE_NOUN"
-	<cinch> /ʧˈĩːk/ "FIVE_NUM"
+/ˈe/ (0.007)
+	<somenza> /sumˈensa/ "SEED_NOUN"
+	<pé> /pˈe/ "FOOT_NOUN"
+	<pegora> /pˈeɡura/ "SHEEP_NOUN"
 
-/ˈeː/ (0.003)
-	<verd> /ʋˈeːrt/ "GREEN_ADJ"
-	<bev> /bˈeːf/ "DRINK_VERB"
-	<piee> /pjˈeː/ "FULL_ADJ"
+/ˈĩ/ (0.006)
+	<vexin> /veʒˈĩ/ "NEIGHBOR_NOUN"
+	<vint> /vˈĩt/ "TWENTY_NUM"
+	<fin> /fˈĩ/ "THIN_ADJ"
+
+/ˈœ/ (0.004)
+	<œvra> /ˈœvra/ "WORK_NOUN"
+	<jenœgg> /ʒenˈœʧ/ "KNEE_NOUN"
+	<œgg> /ˈœʧ/ "EYES_NOUN"
+
+/ˈoː/ (0.004)
+	<pooch> /pˈoːk/ "LITTLE_ADJ"
+	<oca> /ˈoːka/ "GOOSE_NOUN"
+	<pover> /pˈoːver/ "POOR_ADJ"
+
+/y/ (0.004)
+	<durmì> /dyrmˈi/ "SLEEP_VERB"
+	<vutà> /vytˈa/ "HELP_VERB"
+	<brusà> /bryzˈa/ "BURN_VERB"
+
+/ˈỹ/ (0.003)
+	<vun> /vˈỹ/ "ONE_NUM"
+	<nissü> /nisˈỹ/ "NONE_PRON"
+	<nun> /nˈỹ/ "WE_PRON"
+
+/ˈy/ (0.003)
+	<frutt> /frˈyt/ "FRUIT_NOUN"
+	<tucc> /tˈyʧ/ "ALL (PL)_ADJ"
+	<curt> /kˈyrt/ "SHORT_ADJ"
 
 /ĩ/ (0.003)
-	<invern> /ĩʋˈɛrn/ "WINTER_NOUN"
-	<giovin> /ʤˈuʋĩ/ "YOUNG_ADJ"
-	<cinquanta> /ʧĩkwˈãːta/ "FIFTY_NUM"
-
-/ã/ (0.003)
-	<giangiva> /ʤãʤˈiʋa/ "GUMS_NOUN"
-	<cambià> /kãbjˈa/ "CHANGE_VERB"
-	<mangià> /mãʤˈa/ "EAT_VERB"
-
-/ˈɛ̃ː/ (0.002)
-	<cent> /ʧˈɛ̃ːt/ "HUNDRED_NUM"
-	<temp> /tˈɛ̃ːp/ "TIME_NOUN"
-
-/ˈuː/ (0.002)
-	<coo> /kˈuː/ "HEAD_NOUN"
-	<gota> /ɡˈuːta/ "DROP_NOUN"
-
-/ˈo/ (0.002)
-	<nomm> /nˈom/ "NAME_NOUN"
-	<dona> /dˈona/ "LADY_NOUN"
+	<invern> /ĩvˈɛrn/ "WINTER_NOUN"
+	<cinquanta> /ʧĩkwˈãta/ "FIFTY_NUM"
+	<inguaa> /ĩɡwˈɑː/ "EQUAL_ADJ"
 
 /ɛ/ (0.002)
-	<scender> /ʃˈẽːdɛr/ "ASH_NOUN"
-	<fidegh> /fˈidɛk/ "LIVER_NOUN"
+	<fidegh> /fˈiːdɛk/ "LIVER_NOUN"
+	<meior> /mɛjˈuːr/ "BETTER_ADJ"
 
-/y/ (0.002)
-	<brüsà> /bryzˈa/ "BURN_VERB"
-	<culuur> /kylˈyːr/ "COLOR_NOUN"
+/ũ/ (0.002)
+	<montagna> /mũtˈɑːɲa/ "MOUNTAIN_NOUN"
+	<ombrì> /ũbrˈi/ "NAVEL_NOUN"
 
 /o/ (0.002)
-	<ascoltà> /askoltˈa/ "LISTEN_VERB"
-	<podè> /podˈɛ/ "CAN_VERB"
+	<arbor> /ˈarbor/ "TREE_NOUN"
+	<anjol> /ˈanʒol/ "ANGEL_NOUN"
 
-/ˈỹː/ (0.001)
-	<vün> /ʋˈỹː/ "ONE_NUM"
-
-/ˈiː/ (0.001)
-	<radis> /radˈiːs/ "ROOT_NOUN"
-
-/ũ/ (0.001)
-	<muntagna> /mũtˈaɲa/ "MOUNTAIN_NOUN"
+/ˈo/ (0.001)
+	<dona> /dˈona/ "LADY_NOUN"
 
 /ẽ/ (0.001)
-	<vèrmen> /ʋˈɛrmẽ/ "WORM_NOUN"
+	<joven> /ʒˈuːẽ/ "YOUNG_ADJ"
+
+/ã/ (0.001)
+	<cambià> /kãbjˈa/ "CHANGE_VERB"
 
 
 
 CONSONANTS
-/r/ (0.071)
-	<mare> /mˈare/ "MOTHER_NOUN"
-	<cürt> /kˈyːrt/ "SHORT_ADJ"
-	<seira> /sˈejra/ "EVENING_NOUN"
+/r/ (0.073)
+	<ferr> /fˈɛr/ "IRON_NOUN"
+	<violter> /vjˈɔlter/ "YOU (PL)_PRON"
+	<œvra> /ˈœvra/ "WORK_NOUN"
 
-/l/ (0.058)
-	<fals> /fˈals/ "FALSE_ADJ"
-	<alter> /ˈalter/ "OTHER_ADJ"
-	<peil> /pˈejl/ "HAIR_NOUN"
+/s/ (0.066)
+	<seda> /sˈeːda/ "SILK_NOUN"
+	<salut> /salˈyːt/ "HEALTH_NOUN"
+	<semana> /semˈana/ "WEEK_NOUN"
 
-/s/ (0.053)
-	<sora> /sˈura/ "ABOVE_PREP"
-	<pess> /pˈes/ "FISH_NOUN"
-	<sabia> /sˈabja/ "SAND_NOUN"
+/l/ (0.057)
+	<legg> /lˈɛʧ/ "LAW_NOUN"
+	<bella> /bˈɛla/ "BEAUTIFUL (F)_ADJ"
+	<gel> /ʤˈɛl/ "ICE_NOUN"
 
-/k/ (0.052)
-	<buca> /bˈuka/ "MOUTH_NOUN"
-	<fögh> /fˈøːk/ "FIRE_NOUN"
-	<caval> /kaʋˈal/ "HORSE_NOUN"
+/k/ (0.048)
+	<caçar> /kasˈa/ "HUNT_VERB"
+	<lac> /lˈɑːk/ "LAKE_NOUN"
+	<car> /kˈɑːr/ "DEAR_ADJ"
 
-/t/ (0.043)
-	<istà> /istˈa/ "SUMMER_NOUN"
-	<nòst> /nˈɔst/ "OUR_ADJ"
-	<vint> /ʋˈĩːt/ "TWENTY_NUM"
-
-/n/ (0.033)
-	<dona> /dˈona/ "LADY_NOUN"
-	<nomm> /nˈom/ "NAME_NOUN"
-	<fomna> /fˈɔmna/ "WOMAN_NOUN"
-
-/f/ (0.032)
-	<fals> /fˈals/ "FALSE_ADJ"
+/t/ (0.047)
+	<vita> /vˈita/ "LIFE_NOUN"
 	<festa> /fˈɛsta/ "PARTY_NOUN"
-	<föia> /fˈøja/ "LEAF_NOUN"
+	<cald> /kˈalt/ "HOT_ADJ"
 
-/m/ (0.031)
-	<roman> /rumˈãː/ "ROMAN_ADJ"
-	<fümm> /fˈym/ "SMOKE_NOUN"
-	<mèj> /mˈɛj/ "BETTER_ADV"
+/n/ (0.037)
+	<invern> /ĩvˈɛrn/ "WINTER_NOUN"
+	<nas> /nˈɑːs/ "NOSE_NOUN"
+	<piscinin> /piʃinˈĩ/ "SMALL_ADJ"
 
-/ʋ/ (0.03)
-	<viag> /ʋjˈaʧ/ "JOURNEY_NOUN"
-	<invern> /ĩʋˈɛrn/ "WINTER_NOUN"
-	<giovin> /ʤˈuʋĩ/ "YOUNG_ADJ"
+/p/ (0.032)
+	<pas> /pˈɑːs/ "PEACE_NOUN"
+	<parolla> /parˈɔla/ "WORD_NOUN"
+	<pança> /pˈãsa/ "BELLY_NOUN"
 
-/p/ (0.029)
-	<paròlla> /parˈɔla/ "WORD_NOUN"
-	<temp> /tˈɛ̃ːp/ "TIME_NOUN"
-	<pont> /pˈũːt/ "POINT_NOUN"
+/m/ (0.03)
+	<somenza> /sumˈensa/ "SEED_NOUN"
+	<vermen> /vˈɛrmen/ "WORM_NOUN"
+	<fiamma> /fjˈama/ "FLAME_NOUN"
 
-/d/ (0.028)
-	<cadena> /kadˈena/ "CHAIN_NOUN"
-	<vedè> /ʋedˈɛ/ "SEE_VERB"
-	<düü> /dˈyː/ "TWO (M)_NUM"
+/f/ (0.03)
+	<fam> /fˈã/ "HUNGER_NOUN"
+	<fil> /fˈiːl/ "STRING_NOUN"
+	<fi> /fˈi/ "DO-1SG_VERB"
 
-/ʧ/ (0.025)
-	<vecc> /ʋˈeʧ/ "OLD_ADJ"
-	<öcc> /ˈøʧ/ "EIGHT_NUM"
-	<ginögg> /ʤinˈøʧ/ "KNEE_NOUN"
+/d/ (0.03)
+	<dodes> /dˈudes/ "TWELVE_NUM"
+	<seda> /sˈeːda/ "SILK_NOUN"
+	<giudes> /ʤˈyːdes/ "JUDGE_NOUN"
 
-/j/ (0.025)
-	<mèj> /mˈɛj/ "BETTER_ADV"
-	<pioeuva> /pjˈøʋa/ "RAIN_NOUN"
-	<aidà> /ajdˈa/ "HELP_VERB"
+/v/ (0.029)
+	<vin> /vˈĩ/ "WINE_NOUN"
+	<violter> /vjˈɔlter/ "YOU (PL)_PRON"
+	<vergògna> /verɡˈɔɲa/ "SHAME_NOUN"
 
-/b/ (0.018)
-	<bev> /bˈeːf/ "DRINK_VERB"
-	<bò> /bˈɔ/ "OX_NOUN"
-	<nèbbia> /nˈɛbja/ "FOG_NOUN"
+/ʧ/ (0.021)
+	<ciav> /ʧˈɑːf/ "KEY_NOUN"
+	<cent> /ʧˈẽt/ "HUNDRED_NUM"
+	<tucc> /tˈyʧ/ "ALL (PL)_ADJ"
 
-/ʤ/ (0.016)
-	<giovin> /ʤˈuʋĩ/ "YOUNG_ADJ"
-	<giangiva> /ʤãʤˈiʋa/ "GUMS_NOUN"
-	<giaz> /ʤˈaʦ/ "ICE_NOUN"
+/j/ (0.02)
+	<fiœl> /fjˈøːl/ "SON_NOUN"
+	<piang> /pjˈãʧ/ "WEEP_VERB"
+	<viag> /vjˈaʧ/ "JOURNEY_NOUN"
 
-/ʦ/ (0.011)
-	<palaz> /palˈaʦ/ "PALACE_NOUN"
-	<panza> /pˈãːʦa/ "BELLY_NOUN"
-	<poz> /pˈuʦ/ "WELL_NOUN"
+/b/ (0.02)
+	<bass> /bˈas/ "LOW_ADJ"
+	<arbor> /ˈarbor/ "TREE_NOUN"
+	<bagn> /bˈɑːɲ/ "BATH_NOUN"
 
-/ɲ/ (0.011)
-	<ragn> /rˈaɲ/ "SPIDER_NOUN"
-	<bagn> /bˈaɲ/ "BATH_NOUN"
-	<giügn> /ʤˈyɲ/ "JUNE_PROPN"
+/ɡ/ (0.018)
+	<sgor> /zɡˈuːr/ "FLIGHT_NOUN"
+	<inguaa> /ĩɡwˈɑː/ "EQUAL_ADJ"
+	<gola> /ɡˈuːla/ "THROAT_NOUN"
 
-/ɡ/ (0.011)
-	<nigula> /nˈiɡula/ "CLOUD_NOUN"
-	<gròs> /ɡrˈɔs/ "THICK_ADJ"
-	<lengua> /lˈẽːɡwa/ "TONGUE_NOUN"
+/ʒ/ (0.011)
+	<rexon> /reʒˈũ/ "REASON_NOUN"
+	<jelà> /ʒelˈa/ "FREEZE_VERB"
+	<meji> /mˈeːʒi/ "BETTER_ADV"
 
-/ʃ/ (0.004)
-	<scender> /ʃˈẽːdɛr/ "ASH_NOUN"
-	<cascià> /kaʃˈa/ "HUNT_VERB"
-	<cireiscia> /ʧirˈejʃa/ "CHERRY_NOUN"
+/ɲ/ (0.009)
+	<ragn> /rˈɑːɲ/ "SPIDER_NOUN"
+	<agnell> /aɲˈɛl/ "LAMB_NOUN"
+	<bagn> /bˈɑːɲ/ "BATH_NOUN"
 
-/z/ (0.004)
-	<brüsà> /bryzˈa/ "BURN_VERB"
-	<reson> /rezˈũː/ "REASON_NOUN"
-	<cusa> /kˈuza/ "THING_NOUN"
+/ʤ/ (0.006)
+	<regina> /reʤˈiːna/ "QUEEN_NOUN"
+	<giudes> /ʤˈyːdes/ "JUDGE_NOUN"
+	<oregia> /urˈeːʤa/ "EAR_NOUN"
+
+/z/ (0.006)
+	<usel> /uzˈɛl/ "BIRD_NOUN"
+	<cosa> /kˈuza/ "THING_NOUN"
+	<sgolà> /zɡulˈa/ "FLY_VERB"
 
 /w/ (0.004)
-	<cinquanta> /ʧĩkwˈãːta/ "FIFTY_NUM"
-	<acqua> /ˈakwa/ "WATER_NOUN"
-	<quàter> /kwˈater/ "FOUR_NUM"
+	<inguaa> /ĩɡwˈɑː/ "EQUAL_ADJ"
+	<quater> /kwˈɑːter/ "FOUR_NUM"
+	<aigua> /ˈajɡwa/ "WATER_NOUN"
+
+/ʃ/ (0.001)
+	<piscinin> /piʃinˈĩ/ "SMALL_ADJ"
 
 
 
