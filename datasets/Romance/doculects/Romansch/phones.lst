@@ -49,40 +49,40 @@ VOWELS
 	<cua> /kˈuːə/ "TAIL_NOUN"
 	<sura> /sˈuːrə/ "ABOVE_PREP"
 
-/u/ (0.01)
-	<quatter> /kuˈaːtər/ "FOUR_NUM"
-	<sulegl> /sulˈeʎ/ "SUN_NOUN"
-	<ureglia> /urˈeːʎə/ "EAR_NOUN"
-
 /ˈɛː/ (0.009)
 	<erva> /ˈɛːrvə/ "GRASS_NOUN"
-	<bella> /bˈɛːlə/ "BEAUTIFUL (F)_ADJ"
-	<agnè> /əɲˈɛː/ "LAMB_NOUN"
+	<chastè> /ʨəstˈɛː/ "CASTLE_NOUN"
+	<anè> /ənˈɛː/ "RING_NOUN"
+
+/u/ (0.009)
+	<utschè> /uʧˈɛː/ "BIRD_NOUN"
+	<durmir> /durmˈir/ "SLEEP_VERB"
+	<ureglia> /urˈeːʎə/ "EAR_NOUN"
 
 /i/ (0.009)
-	<mited> /mitˈet/ "HALF_NOUN"
 	<persic> /pˈɛrsik/ "PEACH_NOUN"
-	<stadi> /ʃtˈaːdi/ "STATE_NOUN"
+	<milli> /mˈiːli/ "THOUSAND_NUM"
+	<mited> /mitˈet/ "HALF_NOUN"
 
 /ˈɔː/ (0.008)
-	<ovra> /ˈɔːvrə/ "WORK_NOUN"
+	<portg> /pˈɔːrʨ/ "PIG_NOUN"
 	<cor> /kˈɔːr/ "HEART_NOUN"
-	<mort> /mˈɔːrt/ "DEATH_NOUN"
+	<ovra> /ˈɔːvrə/ "WORK_NOUN"
 
 /ˈeː/ (0.007)
 	<pe> /pˈeː/ "FOOT_NOUN"
-	<lescha> /lˈeːʃə/ "LAW_NOUN"
-	<tscharescha> /ʧərˈeːʃə/ "CHERRY_NOUN"
+	<seser> /sˈeːzər/ "SIT_VERB"
+	<tge> /ʨˈeː/ "WHAT_PRON"
 
 /e/ (0.005)
-	<tschertgar> /ʧerʨˈaːr/ "SEARCH_VERB"
 	<regina> /reʥˈiːnə/ "QUEEN_NOUN"
 	<meglier> /meʎˈeːr/ "BETTER_ADJ"
+	<tschertgar> /ʧerʨˈaːr/ "SEARCH_VERB"
 
 /ˈiə̯/ (0.004)
-	<diesch> /dˈiə̯ʃ/ "TEN_NUM"
-	<tschient> /ʧˈiə̯nt/ "HUNDRED_NUM"
 	<enviern> /envˈiə̯rn/ "WINTER_NOUN"
+	<tschient> /ʧˈiə̯nt/ "HUNDRED_NUM"
+	<diesch> /dˈiə̯ʃ/ "TEN_NUM"
 
 /ˈo/ (0.003)
 	<notg> /nˈoʨ/ "NIGHT_NOUN"
@@ -165,10 +165,10 @@ CONSONANTS
 	<raschun> /raʃˈun/ "REASON_NOUN"
 	<spia> /ʃpˈiːə/ "EAR OF GRAIN_NOUN"
 
-/w/ (0.023)
-	<maun> /mˈawn/ "HAND_NOUN"
-	<saun> /sˈawn/ "HEALTHY (M)_ADJ"
+/w/ (0.024)
 	<graun> /ɡrˈawn/ "GRAIN_NOUN"
+	<sauna> /sˈawnə/ "HEALTHY (F)_ADJ"
+	<auca> /ˈawkə/ "GOOSE_NOUN"
 
 /f/ (0.023)
 	<fiasta> /fjˈastə/ "PARTY_NOUN"

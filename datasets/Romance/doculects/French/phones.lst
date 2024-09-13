@@ -1,28 +1,28 @@
 VOWELS
-/a/ (0.068)
+/a/ (0.067)
 	<doigt> /dwa/ "FINGER_NOUN"
 	<argile> /aʁʒil/ "CLAY_NOUN"
 	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
 
-/ɛ/ (0.056)
+/ɛ/ (0.055)
 	<cher> /ʃɛʁ/ "DEAR_ADJ"
 	<chair> /ʃɛʁ/ "MEAT_NOUN"
 	<sept> /sɛt/ "SEVEN_NUM"
 
-/i/ (0.048)
+/i/ (0.047)
 	<racine> /ʁasin/ "ROOT_NOUN"
 	<dire> /diʁ/ "SAY-INF_VERB"
 	<dix> /dis/ "TEN_NUM"
 
-/e/ (0.037)
+/e/ (0.036)
 	<fumée> /fyme/ "SMOKE_NOUN"
 	<glacer> /ɡlase/ "FREEZE_VERB"
 	<épi> /epi/ "EAR OF GRAIN_NOUN"
 
 /ɛ̃/ (0.025)
-	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
+	<juin> /ʒɥɛ̃/ "JUNE_PROPN"
 	<bain> /bɛ̃/ "BATH_NOUN"
-	<vin> /vɛ̃/ "WINE_NOUN"
+	<bien> /bjɛ̃/ "WELL (ADV)_ADV"
 
 /ɔ/ (0.025)
 	<or> /ɔʁ/ "GOLD_NOUN"
@@ -39,12 +39,12 @@ VOWELS
 	<aube> /ob/ "DAWN_NOUN"
 	<côte> /kot/ "COAST_NOUN"
 
-/ɑ̃/ (0.019)
-	<blanc> /blɑ̃/ "WHITE_ADJ"
+/ɑ̃/ (0.02)
+	<dent> /dɑ̃/ "TOOTH_NOUN"
 	<grand> /ɡʁɑ̃/ "BIG_ADJ"
 	<cent> /sɑ̃/ "HUNDRED_NUM"
 
-/ɔ̃/ (0.016)
+/ɔ̃/ (0.015)
 	<pont> /pɔ̃/ "BRIDGE_NOUN"
 	<rond> /ʁɔ̃/ "ROUND_ADJ"
 	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
@@ -59,40 +59,40 @@ VOWELS
 	<œil> /œj/ "EYE_NOUN"
 	<feuille> /fœj/ "LEAF_NOUN"
 
-/ø/ (0.011)
-	<deux> /dø/ "TWO (M)_NUM"
-	<mieux> /mjø/ "BETTER_ADV"
-	<vieux> /vjø/ "OLD_ADJ"
+/ə/ (0.011)
+	<que> /kə/ "WHAT_PRON"
+	<lever> /ləve/ "CARRY_VERB"
+	<semance> /səmɑ̃s/ "SEED_NOUN"
 
-/ə/ (0.01)
-	<geler> /ʒəle/ "FREEZE_VERB"
-	<genou> /ʒənu/ "KNEE_NOUN"
-	<semaine> /səmɛn/ "WEEK_NOUN"
+/ø/ (0.011)
+	<jeu> /ʒø/ "GAME_NOUN"
+	<peu> /pø/ "LITTLE_ADJ"
+	<queue> /kø/ "TAIL_NOUN"
 
 
 
 CONSONANTS
 /ʁ/ (0.101)
-	<rouge> /ʁuʒ/ "RED_ADJ"
+	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
 	<faire> /fɛʁ/ "DO_VERB"
-	<graine> /ɡʁɛn/ "GRAIN_NOUN"
+	<grain> /ɡʁɛ̃/ "GRAIN_NOUN"
 
-/l/ (0.058)
+/l/ (0.057)
 	<voler> /vɔle/ "FLY_VERB"
 	<sel> /sɛl/ "SALT_NOUN"
 	<ficelle> /fisɛl/ "STRING_NOUN"
 
-/s/ (0.051)
+/s/ (0.053)
 	<savoir> /savwaʁ/ "KNOW_VERB"
 	<gencive> /ʒɑ̃siv/ "GUMS_NOUN"
 	<tous> /tus/ "ALL (PL)_ADJ"
 
-/n/ (0.036)
+/n/ (0.035)
 	<noix> /nwa/ "NUT_NOUN"
 	<nous> /nu/ "WE_PRON"
 	<nue> /ny/ "CLOUD_NOUN"
 
-/p/ (0.035)
+/p/ (0.034)
 	<plein> /plɛ̃/ "FULL_ADJ"
 	<pêche> /pɛʃ/ "PEACH_NOUN"
 	<plume> /plym/ "FEATHER_NOUN"
@@ -112,10 +112,10 @@ CONSONANTS
 	<été> /ete/ "SUMMER_NOUN"
 	<tu> /ty/ "THOU_PRON"
 
-/m/ (0.029)
-	<fumée> /fyme/ "SMOKE_NOUN"
+/m/ (0.03)
+	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
 	<mordre> /mɔʁdʁ/ "BITE_VERB"
-	<semaine> /səmɛn/ "WEEK_NOUN"
+	<mille> /mil/ "THOUSAND_NUM"
 
 /f/ (0.029)
 	<chef> /ʃɛf/ "HEAD_NOUN"
@@ -143,7 +143,7 @@ CONSONANTS
 	<chaud> /ʃo/ "HOT_ADJ"
 
 /d/ (0.021)
-	<deux> /dø/ "TWO (M)_NUM"
+	<deux> /dø/ "TWO (F)_NUM"
 	<doux> /du/ "SWEET_ADJ"
 	<doigt> /dwa/ "FINGER_NOUN"
 
@@ -152,10 +152,10 @@ CONSONANTS
 	<bœuf> /bœf/ "OX_NOUN"
 	<herbe> /ɛʁb/ "GRASS_NOUN"
 
-/ɡ/ (0.013)
+/ɡ/ (0.014)
 	<ongle> /ɔ̃ɡl/ "FINGERNAIL_NOUN"
-	<graine> /ɡʁɛn/ "GRAIN_NOUN"
-	<gros> /ɡʁo/ "THICK_ADJ"
+	<grain> /ɡʁɛ̃/ "GRAIN_NOUN"
+	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
 
 /ɥ/ (0.01)
 	<nuage> /nɥaʒ/ "CLOUD_NOUN"

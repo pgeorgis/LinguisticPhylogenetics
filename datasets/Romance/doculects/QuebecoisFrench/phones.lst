@@ -9,7 +9,7 @@ VOWELS
 	<fais> /fæɛ̯/ "DO-1SG_VERB"
 	<caille> /kæɛ̯j/ "QUAIL_NOUN"
 
-/e/ (0.036)
+/e/ (0.035)
 	<étoile> /etwɛl/ "STAR_NOUN"
 	<été> /ete/ "SUMMER_NOUN"
 	<fumée> /fyme/ "SMOKE_NOUN"
@@ -24,25 +24,25 @@ VOWELS
 	<petit> /pœʦi/ "SMALL_ADJ"
 	<vilain> /vilẽɪ̯̃/ "VILLAIN_NOUN"
 
-/ẽɪ̯̃/ (0.024)
-	<saint> /sẽɪ̯̃/ "SACRED_ADJ"
-	<bien> /bjẽɪ̯̃/ "WELL (ADV)_ADV"
+/ẽɪ̯̃/ (0.025)
+	<romain> /ʁɔmẽɪ̯̃/ "ROMAN_ADJ"
+	<plaindre> /plẽɪ̯̃dʁ/ "WEEP_VERB"
 	<bain> /bẽɪ̯̃/ "BATH_NOUN"
 
-/œ/ (0.019)
-	<petit> /pœʦi/ "SMALL_ADJ"
+/œ/ (0.02)
+	<semance> /sœmãs/ "SEED_NOUN"
 	<je> /ʒœ/ "I_PRON"
 	<cheval> /ʃœval/ "HORSE_NOUN"
 
-/u/ (0.019)
-	<loup> /lu/ "WOLF_NOUN"
-	<pouvoir> /puvwɛʁ/ "CAN_VERB"
-	<pou> /pu/ "LOUSE_NOUN"
+/ã/ (0.02)
+	<dent> /dã/ "TOOTH_NOUN"
+	<grand> /ɡʁã/ "BIG_ADJ"
+	<cent> /sã/ "HUNDRED_NUM"
 
-/ã/ (0.019)
-	<ange> /ãʒ/ "ANGEL_NOUN"
-	<an> /ã/ "YEAR_NOUN"
-	<vent> /vã/ "WIND_NOUN"
+/u/ (0.019)
+	<tous> /tu/ "ALL (PL)_ADJ"
+	<vous> /vu/ "YOU (PL)_PRON"
+	<ouvrier> /uvʁije/ "WORKER_NOUN"
 
 /ɪ/ (0.016)
 	<ville> /vɪl/ "TOWN_NOUN"
@@ -54,7 +54,7 @@ VOWELS
 	<sauce> /soʊ̯s/ "SAUCE_NOUN"
 	<pauvre> /poʊ̯vʁ/ "POOR_ADJ"
 
-/ɒ̃ʊ̯̃/ (0.016)
+/ɒ̃ʊ̯̃/ (0.015)
 	<pont> /pɒ̃ʊ̯̃/ "BRIDGE_NOUN"
 	<lion> /ljɒ̃ʊ̯̃/ "LION_NOUN"
 	<non> /nɒ̃ʊ̯̃/ "NOT_ADVERB"
@@ -116,44 +116,44 @@ VOWELS
 
 CONSONANTS
 /ʁ/ (0.101)
-	<plaindre> /plẽɪ̯̃dʁ/ "WEEP_VERB"
-	<écrire> /ekʁiʁ/ "WRITE_VERB"
-	<occire> /ɔksiʁ/ "KILL_VERB"
+	<cire> /siʁ/ "WAX_NOUN"
+	<ver> /væɛ̯ʁ/ "WORM_NOUN"
+	<fer> /fæɛ̯ʁ/ "IRON_NOUN"
 
-/l/ (0.058)
+/l/ (0.057)
 	<glace> /ɡlas/ "ICE_NOUN"
 	<lire> /liʁ/ "READ_VERB"
 	<flamme> /flam/ "FLAME_NOUN"
 
-/s/ (0.051)
+/s/ (0.053)
 	<chasser> /ʃase/ "HUNT_VERB"
 	<sauce> /soʊ̯s/ "SAUCE_NOUN"
-	<Espagne> /ɛspaɲ/ "SPAIN_PROPN"
+	<fils> /fɪs/ "SON_NOUN"
 
-/n/ (0.036)
+/n/ (0.035)
 	<neuf> /nœf/ "NINE_NUM"
 	<nuage> /nɥaʒ/ "CLOUD_NOUN"
 	<peine> /pæɛ̯n/ "PAIN_NOUN"
 
-/p/ (0.035)
-	<pierre> /pjæɛ̯ʁ/ "STONE_NOUN"
-	<penne> /pɛn/ "FEATHER_NOUN"
-	<pied> /pje/ "FOOT_NOUN"
-
 /v/ (0.034)
-	<ouvrier> /uvʁije/ "WORKER_NOUN"
-	<vergogne> /væɛ̯ʁɡɔɲ/ "SHAME_NOUN"
-	<voie> /vwɛ/ "ROAD_NOUN"
+	<hiver> /ivæɛ̯ʁ/ "WINTER_NOUN"
+	<vache> /vaʃ/ "COW_NOUN"
+	<chèvre> /ʃɛvʁ/ "GOAT_NOUN"
+
+/p/ (0.034)
+	<plaindre> /plẽɪ̯̃dʁ/ "WEEP_VERB"
+	<ponds> /pɒ̃ʊ̯̃/ "PUT-2SG_VERB"
+	<pauvre> /poʊ̯vʁ/ "POOR_ADJ"
 
 /w/ (0.033)
 	<seoir> /swɛʁ/ "SIT_VERB"
 	<oiseau> /wɛzoʊ̯/ "BIRD_NOUN"
 	<asseoir> /aswɛʁ/ "SIT_VERB"
 
-/m/ (0.029)
+/m/ (0.03)
 	<mordre> /mɑɔ̯ʁdʁ/ "BITE_VERB"
 	<mi-> /mi/ "MIDDLE_NOUN"
-	<fumée> /fyme/ "SMOKE_NOUN"
+	<dormir> /dɑɔ̯ʁmiʁ/ "SLEEP_VERB"
 
 /f/ (0.029)
 	<feu> /føʏ̯/ "FIRE_NOUN"
@@ -191,14 +191,14 @@ CONSONANTS
 	<herbe> /æɛ̯ʁb/ "GRASS_NOUN"
 
 /d/ (0.016)
-	<deux> /døʏ̯/ "TWO (M)_NUM"
+	<deux> /døʏ̯/ "TWO (F)_NUM"
 	<don> /dɒ̃ʊ̯̃/ "GIFT_NOUN"
 	<aide> /æɛ̯d/ "HELP-1SG_VERB"
 
-/ɡ/ (0.013)
+/ɡ/ (0.014)
 	<glacer> /ɡlase/ "FREEZE_VERB"
 	<grand> /ɡʁã/ "BIG_ADJ"
-	<graine> /ɡʁæɛ̯n/ "GRAIN_NOUN"
+	<grain> /ɡʁẽɪ̯̃/ "GRAIN_NOUN"
 
 /ɥ/ (0.01)
 	<aiguille> /æɛ̯ɡɥɪj/ "NEEDLE_NOUN"
