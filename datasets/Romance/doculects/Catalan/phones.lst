@@ -1,10 +1,10 @@
 VOWELS
-/ə/ (0.13)
+/ə/ (0.129)
 	<espiga> /əspˈiɣə/ "EAR OF GRAIN_NOUN"
-	<cera> /sˈeɾə/ "WAX_NOUN"
+	<aigua> /ˈajɣwə/ "WATER_NOUN"
 	<castell> /kəstˈeʎ/ "CASTLE_NOUN"
 
-/ˈa/ (0.069)
+/ˈa/ (0.068)
 	<all> /ˈaʎ/ "GARLIC_NOUN"
 	<alba> /ˈalβə/ "DAWN_NOUN"
 	<plaga> /plˈaɣə/ "PLAGUE_NOUN"
@@ -14,10 +14,10 @@ VOWELS
 	<nostre> /nˈɔstɾə/ "OUR_ADJ"
 	<fort> /fˈɔrt/ "STRONG_ADJ"
 
-/ˈi/ (0.034)
-	<profit> /pɾufˈit/ "PROFIT_NOUN"
-	<cinc> /sˈiŋ/ "FIVE_NUM"
-	<mica> /mˈikə/ "CRUMB_NOUN"
+/ˈi/ (0.035)
+	<nit> /nˈit/ "NIGHT_NOUN"
+	<dit> /dˈit/ "FINGER_NOUN"
+	<tossir> /tusˈi/ "COUGH_VERB"
 
 /ˈɛ/ (0.031)
 	<cel> /sˈɛl/ "SKY_NOUN"
@@ -29,25 +29,25 @@ VOWELS
 	<vent> /bˈen/ "WIND_NOUN"
 	<néixer> /nˈeʃə/ "BE BORN_VERB"
 
-/ˈu/ (0.025)
+/ˈu/ (0.024)
 	<fum> /fˈum/ "SMOKE_NOUN"
 	<llum> /ʎˈum/ "LIGHT_NOUN"
 	<juny> /ʒˈuɲ/ "JUNE_PROPN"
 
-/ˈo/ (0.022)
-	<no> /nˈo/ "NOT_ADVERB"
-	<ós> /ˈos/ "BEAR_NOUN"
-	<llop> /ʎˈop/ "WOLF_NOUN"
+/u/ (0.024)
+	<color> /kulˈo/ "COLOR_NOUN"
+	<profit> /pɾufˈit/ "PROFIT_NOUN"
+	<formós> /fuɾmˈos/ "BEAUTIFUL (M)_ADJ"
 
-/u/ (0.022)
-	<volar> /bulˈa/ "FLY_VERB"
-	<conèixer> /kunˈɛʃə/ "BE ACQUAINTED WITH_VERB"
-	<romà> /rumˈa/ "ROMAN_ADJ"
+/ˈo/ (0.022)
+	<sobre> /sˈoβɾə/ "ABOVE_PREP"
+	<raó> /rəˈo/ "REASON_NOUN"
+	<boca> /bˈokə/ "MOUTH_NOUN"
 
 /i/ (0.01)
-	<ànima> /ˈanimə/ "SOUL_NOUN"
 	<millor> /miʎˈo/ "BETTER_ADJ"
 	<sàpiga> /sˈapiɣə/ "KNOW-SBJ-1SG_VERB"
+	<vilà> /bilˈa/ "VILLAIN_NOUN"
 
 /a/ (0.001)
 	<cosa> /kˈɔza/ "THING_NOUN"
@@ -55,10 +55,10 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.061)
-	<testa> /tˈestə/ "SKULL_NOUN"
+/s/ (0.062)
+	<sis> /sˈis/ "SIX_NUM"
 	<escorça> /əskˈɔrsə/ "BARK_NOUN"
-	<gros> /ɡɾˈɔs/ "THICK_ADJ"
+	<dolç> /dˈols/ "SWEET_ADJ"
 
 /k/ (0.045)
 	<creu> /kɾˈɛw/ "CROSS_NOUN"
@@ -70,57 +70,57 @@ CONSONANTS
 	<veure> /bˈɛwɾə/ "SEE_VERB"
 	<beure> /bˈɛwɾə/ "DRINK_VERB"
 
-/n/ (0.041)
-	<carn> /kˈarn/ "MEAT_NOUN"
-	<bons> /bˈɔns/ "GOOD (M.PL)_ADJ"
-	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
+/t/ (0.041)
+	<salut> /səlˈut/ "HEALTH_NOUN"
+	<vuit> /bˈujt/ "EIGHT_NUM"
+	<estiu> /əstˈiw/ "SUMMER_NOUN"
 
-/t/ (0.04)
-	<cinquanta> /siŋkwˈantə/ "FIFTY_NUM"
-	<nit> /nˈit/ "NIGHT_NOUN"
-	<fruit> /fɾˈujt/ "FRUIT_NOUN"
+/n/ (0.041)
+	<bons> /bˈɔns/ "GOOD (M.PL)_ADJ"
+	<nedar> /nəðˈa/ "SWIM_VERB"
+	<ningú> /niŋɡˈu/ "NONE_PRON"
 
 /ʎ/ (0.038)
+	<ell> /ˈeʎ/ "HE_PRON"
 	<bell> /bˈeʎ/ "BEAUTIFUL (M)_ADJ"
 	<lletra> /ʎˈetɾə/ "LETTER_NOUN"
-	<agulla> /əɣˈuʎə/ "NEEDLE_NOUN"
 
 /l/ (0.037)
+	<cel> /sˈɛl/ "SKY_NOUN"
 	<gola> /ɡˈolə/ "THROAT_NOUN"
 	<alba> /ˈalβə/ "DAWN_NOUN"
-	<flama> /flˈamə/ "FLAME_NOUN"
 
 /p/ (0.034)
+	<peu> /pˈɛw/ "FOOT_NOUN"
 	<espasa> /əspˈazə/ "SWORD_NOUN"
 	<poll> /pˈoʎ/ "LOUSE_NOUN"
-	<penya> /pˈɛɲə/ "FEATHER_NOUN"
 
 /m/ (0.032)
+	<canviar> /kəmbjˈa/ "CHANGE_VERB"
 	<matar> /mətˈa/ "KILL_VERB"
 	<romà> /rumˈa/ "ROMAN_ADJ"
-	<mare> /mˈaɾə/ "MOTHER_NOUN"
 
-/b/ (0.031)
+/b/ (0.03)
+	<veure> /bˈɛwɾə/ "SEE_VERB"
 	<veu> /bˈɛw/ "VOICE_NOUN"
 	<volar> /bulˈa/ "FLY_VERB"
-	<vida> /bˈiðə/ "LIFE_NOUN"
 
 /r/ (0.026)
+	<raïm> /rəˈim/ "RAISIN_NOUN"
 	<reina> /rˈejnə/ "QUEEN_NOUN"
 	<fort> /fˈɔrt/ "STRONG_ADJ"
-	<hivern> /iβˈɛrn/ "WINTER_NOUN"
 
-/w/ (0.025)
+/w/ (0.024)
+	<escriure> /əskɾˈiwɾə/ "WRITE_VERB"
 	<estiu> /əstˈiw/ "SUMMER_NOUN"
 	<niu> /nˈiw/ "CLOUD_NOUN"
-	<pou> /pˈow/ "WELL_NOUN"
 
-/f/ (0.019)
+/f/ (0.02)
+	<fulla> /fˈuʎə/ "LEAF_NOUN"
 	<fada> /fˈaðə/ "FATE_NOUN"
 	<fort> /fˈɔrt/ "STRONG_ADJ"
-	<fembra> /fˈɛmbrə/ "WOMAN_NOUN"
 
-/d/ (0.016)
+/d/ (0.015)
 	<dormir> /durmˈi/ "SLEEP_VERB"
 	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
 	<do> /dˈo/ "GIFT_NOUN"
@@ -145,10 +145,10 @@ CONSONANTS
 	<muntanya> /muntˈaɲə/ "MOUNTAIN_NOUN"
 	<plànyer> /plˈaɲə/ "WEEP_VERB"
 
-/ð/ (0.009)
+/ð/ (0.01)
 	<vedell> /bəðˈeʎ/ "CALF_NOUN"
 	<madur> /məðˈu/ "MATURE_NOUN"
-	<nedar> /nəðˈa/ "SWIM_VERB"
+	<roda> /rˈɔðə/ "WHEEL_NOUN"
 
 /ɣ/ (0.008)
 	<igual> /iɣwˈal/ "EQUAL_ADJ"

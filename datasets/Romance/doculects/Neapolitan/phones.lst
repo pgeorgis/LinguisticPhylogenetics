@@ -4,14 +4,14 @@ VOWELS
 	<cerasa> /ʃeɾˈasə/ "CHERRY_NOUN"
 	<vita> /vˈitə/ "LIFE_NOUN"
 
-/ˈa/ (0.061)
+/ˈa/ (0.06)
 	<vacca> /vˈakːə/ "COW_NOUN"
 	<cercà> /ʃeɾkˈa/ "SEARCH_VERB"
 	<pace> /pˈaʃə/ "PEACE_NOUN"
 
 /ˈi/ (0.033)
 	<illa> /ˈilːə/ "SHE_PRON"
-	<chi> /kˈi/ "WHO_PRON"
+	<cira> /ʃˈiɾə/ "WAX_NOUN"
 	<vita> /vˈitə/ "LIFE_NOUN"
 
 /ˈu/ (0.032)
@@ -29,125 +29,125 @@ VOWELS
 	<preta> /pɾˈɛtə/ "STONE_NOUN"
 	<agniello> /aɲjˈɛlːə/ "LAMB_NOUN"
 
-/a/ (0.018)
-	<nata> /natˈa/ "SWIM_VERB"
+/a/ (0.019)
+	<astate> /astˈatə/ "SUMMER_NOUN"
+	<parola> /paɾˈɔlə/ "WORD_NOUN"
 	<arba> /ˈaɾba/ "DAWN_NOUN"
-	<palazzo> /palˈaʦːə/ "PALACE_NOUN"
 
-/ˈe/ (0.018)
+/ˈe/ (0.017)
+	<neva> /nˈevə/ "SNOW_NOUN"
 	<pesce> /pˈeʃːə/ "FISH_NOUN"
 	<fecheto> /fˈekətə/ "LIVER_NOUN"
-	<credere> /krˈeɾəɾə/ "BELIEVE_VERB"
 
-/i/ (0.015)
+/i/ (0.014)
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
 	<scrìvere> /ʃkɾˈiviɾə/ "WRITE_VERB"
 	<vinti> /vˈinti/ "TWENTY_NUM"
 
 /ˈo/ (0.013)
-	<notte> /nˈotːə/ "NIGHT_NOUN"
-	<ogna> /ˈoɲːə/ "FINGERNAIL_NOUN"
-	<noce> /nˈoʧə/ "NUT_NOUN"
-
-/u/ (0.01)
-	<muntagna> /muntˈaɲːə/ "MOUNTAIN_NOUN"
+	<gióvene> /ʤˈovənə/ "YOUNG_ADJ"
 	<cunosce> /kunˈoʃːə/ "BE ACQUAINTED WITH_VERB"
-	<pilu> /pˈilu/ "HAIR_NOUN"
+	<notte> /nˈotːə/ "NIGHT_NOUN"
 
-/e/ (0.007)
+/u/ (0.012)
+	<uguàli> /uɡwˈali/ "EQUAL_ADJ"
+	<mugliera> /muʎːˈɛɾə/ "WOMAN_WIFE_NOUN"
+	<muntagna> /muntˈaɲːə/ "MOUNTAIN_NOUN"
+
+/e/ (0.006)
+	<cerasa> /ʃeɾˈasə/ "CHERRY_NOUN"
 	<perucchjo> /peɾˈukːjə/ "LOUSE_NOUN"
-	<semmana> /semːˈanə/ "WEEK_NOUN"
-	<che> /ke/ "WHAT_PRON"
+	<vreògna> /vreˈɔɲːə/ "SHAME_NOUN"
 
 /o/ (0.004)
-	<viento> /vjˈɛnto/ "WIND_NOUN"
-	<quatto> /kwˈatːo/ "FOUR_NUM"
 	<dormì> /doɾmˈi/ "SLEEP_VERB"
+	<viento> /vjˈɛnto/ "WIND_NOUN"
+	<romano> /romˈanə/ "ROMAN_ADJ"
 
 
 
 CONSONANTS
-/ɾ/ (0.052)
+/ɾ/ (0.053)
 	<verde> /vˈeɾdə/ "GREEN_ADJ"
+	<dire> /dˈiɾə/ "SAY-INF_VERB"
 	<erva> /ˈɛɾvə/ "GRASS_NOUN"
-	<tre> /tɾˈe/ "THREE_NUM"
 
 /n/ (0.05)
+	<dente> /dˈɛntə/ "TOOTH_NOUN"
 	<notte> /nˈotːə/ "NIGHT_NOUN"
 	<panza> /pˈanʦə/ "BELLY_NOUN"
-	<canto> /kˈantə/ "SONG_NOUN"
 
 /k/ (0.045)
-	<coda> /kˈoɾə/ "TAIL_NOUN"
-	<che> /ke/ "WHAT_PRON"
-	<laco> /lˈakə/ "LAKE_NOUN"
+	<capillo> /kəpˈilːə/ "HAIR_NOUN"
+	<puorca> /pwˈɔrkə/ "SOW_NOUN"
+	<chiagnere> /kjˈaɲːəɾə/ "WEEP_VERB"
 
-/t/ (0.039)
-	<astate> /astˈatə/ "SUMMER_NOUN"
+/t/ (0.04)
+	<curto> /kˈuɾtə/ "SHORT_ADJ"
+	<forte> /fˈɔɾtə/ "STRONG_ADJ"
 	<putè> /putˈɛ/ "CAN_VERB"
-	<terra> /tˈɛrːə/ "EARTH_NOUN"
 
-/j/ (0.034)
+/j/ (0.033)
+	<uocchio> /wˈɔkːjə/ "EYE_NOUN"
 	<nuje> /nˈujə/ "WE_PRON"
 	<jélo> /jˈelə/ "ICE_NOUN"
-	<jorno> /jˈornə/ "DAY_NOUN"
 
-/v/ (0.029)
+/v/ (0.028)
+	<uovo> /wˈɔvə/ "EGG_NOUN"
 	<vue> /vˈuə/ "OX_NOUN"
 	<vino> /vˈinə/ "WINE_NOUN"
-	<arvero> /ˈaɾvəɾə/ "TREE_NOUN"
 
-/l/ (0.029)
+/l/ (0.028)
+	<legge> /lˈɛʤːə/ "READ_VERB"
 	<lacrima> /lˈakɾimə/ "TEAR_NOUN"
 	<salute> /salˈutə/ "HEALTH_NOUN"
-	<luce> /lˈuʃə/ "LIGHT_NOUN"
 
-/p/ (0.028)
+/p/ (0.027)
+	<puoco> /pwˈɔkə/ "LITTLE_ADJ"
 	<sapè> /sapˈɛ/ "KNOW_VERB"
 	<parola> /paɾˈɔlə/ "WORD_NOUN"
-	<spina> /ʃpˈinə/ "SPINE_NOUN"
 
 /ʃ/ (0.023)
+	<scrìvere> /ʃkɾˈiviɾə/ "WRITE_VERB"
 	<doce> /dˈoʃə/ "SWEET_ADJ"
 	<auciello> /awʃˈɛlːə/ "BIRD_NOUN"
-	<cira> /ʃˈiɾə/ "WAX_NOUN"
 
 /w/ (0.023)
+	<lengua> /lˈeŋɡwə/ "TONGUE_NOUN"
 	<buona> /bwˈɔnə/ "GOOD (F.SG)_ADJ"
 	<nuostro> /nwˈɔstɾə/ "OUR_ADJ"
-	<puorco> /pwˈɔrkə/ "PIG_NOUN"
 
 /s/ (0.02)
+	<sapè> /sapˈɛ/ "KNOW_VERB"
 	<seta> /sˈetə/ "SILK_NOUN"
 	<sicca> /sˈikːə/ "DRY (F)_ADJ"
-	<casa> /kˈasə/ "HOUSE_NOUN"
 
 /m/ (0.018)
+	<maturu> /matˈuɾə/ "MATURE_NOUN"
 	<dormì> /doɾmˈi/ "SLEEP_VERB"
 	<tiempo> /tjˈɛmpə/ "TIME_NOUN"
-	<mille> /mˈilːə/ "THOUSAND_NUM"
 
-/r/ (0.015)
+/r/ (0.017)
+	<arvule> /ˈarvulə/ "TREE_NOUN"
 	<ragiune> /raʤˈunə/ "REASON_NOUN"
 	<credere> /krˈeɾəɾə/ "BELIEVE_VERB"
-	<radeca> /raɾˈekə/ "ROOT_NOUN"
 
 /f/ (0.015)
+	<festa> /fˈɛstə/ "PARTY_NOUN"
 	<figlio> /fˈiʎːə/ "SON_NOUN"
 	<fine> /fˈinə/ "END_NOUN"
-	<fuoco> /fwˈɔkə/ "FIRE_NOUN"
 
 /d/ (0.012)
-	<duje> /dˈujə/ "TWO (F)_NUM"
-	<doce> /dˈoʃə/ "SWEET_ADJ"
 	<caudo> /kˈawdə/ "HOT_ADJ"
+	<doce> /dˈoʃə/ "SWEET_ADJ"
+	<duje> /dˈujə/ "TWO (F)_NUM"
 
 /lː/ (0.011)
 	<cuollo> /kwˈɔlːə/ "NECK_NOUN"
 	<piccirillo> /piʧːˈiɾilːə/ "SMALL_ADJ"
 	<biello> /bjˈɛlːə/ "BEAUTIFUL (M)_ADJ"
 
-/tː/ (0.01)
+/tː/ (0.009)
 	<quatto> /kwˈatːo/ "FOUR_NUM"
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
 	<gatto> /ɡˈatːə/ "CAT_NOUN"
@@ -167,25 +167,25 @@ CONSONANTS
 	<vucca> /vˈukːə/ "MOUTH_NOUN"
 	<recchia> /rˈekːjə/ "EAR_NOUN"
 
-/ʤ/ (0.007)
+/ʤ/ (0.006)
 	<gelare> /ʤəlˈaɾə/ "FREEZE_VERB"
 	<giallo> /ʤˈalːə/ "YELLOW_ADJ"
 	<gingie> /ʤinʤˈiə/ "GUMS_NOUN"
 
+/ʎː/ (0.006)
+	<néglia> /nˈeʎːə/ "FOG_NOUN"
+	<mugliera> /muʎːˈɛɾə/ "WOMAN_WIFE_NOUN"
+	<aglio> /ˈaʎːə/ "GARLIC_NOUN"
+
 /ʃː/ (0.006)
-	<pesce> /pˈeʃːə/ "FISH_NOUN"
-	<coscia> /kˈɔʃːə/ "THIGH_NOUN"
+	<jaccio> /jˈaʃːə/ "ICE_NOUN"
+	<nisciuno> /niʃːˈunə/ "NONE_PRON"
 	<caccià> /kaʃːˈa/ "HUNT_VERB"
 
 /mː/ (0.006)
 	<fummo> /fˈumːə/ "SMOKE_NOUN"
-	<semmana> /semːˈanə/ "WEEK_NOUN"
-	<ciume> /ʃˈumːə/ "RIVER_NOUN"
-
-/ʎː/ (0.005)
-	<figlia> /fˈiʎːə/ "DAUGHTER_NOUN"
-	<néglia> /nˈeʎːə/ "FOG_NOUN"
-	<figlio> /fˈiʎːə/ "SON_NOUN"
+	<nomme> /nˈomːə/ "NAME_NOUN"
+	<ommo> /ˈɔmːə/ "MAN_NOUN"
 
 /ŋ/ (0.005)
 	<lengua> /lˈeŋɡwə/ "TONGUE_NOUN"
@@ -242,6 +242,9 @@ CONSONANTS
 
 /z/ (0.001)
 	<cosa> /kˈɔzə/ "THING_NOUN"
+
+/fː/ (0.001)
+	<suffriri> /sufːrˈiɾə/ "SUFFER_VERB"
 
 /dː/ (0.001)
 	<friddo> /fɾˈidːə/ "COLD_ADJ"

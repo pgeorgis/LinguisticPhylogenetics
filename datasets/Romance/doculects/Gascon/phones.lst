@@ -2,37 +2,37 @@ VOWELS
 /ˈa/ (0.075)
 	<auba> /ˈawβɔ/ "DAWN_NOUN"
 	<sant> /sˈan/ "SACRED_ADJ"
-	<paraula> /paɾˈawlɔ/ "WORD_NOUN"
+	<lan> /lˈaŋ/ "WOOL_NOUN"
 
-/ɔ/ (0.057)
+/ɔ/ (0.056)
 	<còsta> /kˈɔstɔ/ "COAST_NOUN"
 	<isla> /ˈizlɔ/ "ISLAND_NOUN"
 	<seca> /sˈekɔ/ "DRY (F)_ADJ"
 
-/e/ (0.052)
+/e/ (0.051)
 	<setmana> /semːˈanɔ/ "WEEK_NOUN"
 	<estat> /estˈat/ "STATE_NOUN"
 	<lagrema> /lˈaɣɾemɔ/ "TEAR_NOUN"
 
-/ˈe/ (0.046)
+/ˈe/ (0.045)
 	<arreina> /arˈejnɔ/ "QUEEN_NOUN"
 	<plen> /plˈeŋ/ "FULL_ADJ"
 	<cueisha> /kwˈejʃɔ/ "THIGH_NOUN"
 
-/a/ (0.032)
+/a/ (0.033)
 	<anhiva> /anhˈiβɔ/ "GUMS_NOUN"
 	<argèla> /arʒˈɛlɔ/ "CLAY_NOUN"
 	<arriu> /arˈiw/ "RIVER_NOUN"
 
-/ˈu/ (0.028)
-	<tot> /tˈut/ "ALL (SG)_ADJ"
-	<notz> /nˈuʦ/ "NUT_NOUN"
-	<ploja> /plˈuʒɔ/ "RAIN_NOUN"
+/ˈi/ (0.029)
+	<tossir> /tusˈi/ "COUGH_VERB"
+	<arraïtz> /araˈiʦ/ "ROOT_NOUN"
+	<petit> /petˈit/ "SMALL_ADJ"
 
-/ˈi/ (0.028)
-	<cerisa> /seɾˈizɔ/ "CHERRY_NOUN"
-	<espia> /espˈiɔ/ "SPINE_NOUN"
-	<hitge> /hˈiʤe/ "LIVER_NOUN"
+/ˈu/ (0.028)
+	<tots> /tˈuts/ "ALL (PL)_ADJ"
+	<arrason> /arazˈuŋ/ "REASON_NOUN"
+	<jolh> /ʒˈuʎ/ "KNEE_NOUN"
 
 /ˈɛ/ (0.027)
 	<lèbe> /lˈɛβe/ "HARE_NOUN"
@@ -47,10 +47,10 @@ VOWELS
 /ˈɔ/ (0.016)
 	<còs> /kˈɔs/ "BODY_NOUN"
 	<pòrc> /pˈɔrk/ "PIG_NOUN"
-	<còr> /kˈɔ/ "HEART_NOUN"
+	<groc> /ɡɾˈɔk/ "YELLOW_ADJ"
 
-/u/ (0.012)
-	<nosautes> /nuzˈawtes/ "WE_PRON"
+/u/ (0.014)
+	<volar> /bulˈa/ "FLY_VERB"
 	<sorelh> /suɾˈɛʎ/ "SUN_NOUN"
 	<anjo> /ˈanʒu/ "ANGEL_NOUN"
 
@@ -71,26 +71,26 @@ VOWELS
 
 CONSONANTS
 /s/ (0.057)
-	<san> /sˈaŋ/ "HEALTHY (M)_ADJ"
-	<estiu> /estˈiw/ "SUMMER_NOUN"
-	<nòste> /nˈɔste/ "OUR_ADJ"
+	<sana> /sˈanɔ/ "HEALTHY (F)_ADJ"
+	<fòrça> /fˈɔrsɔ/ "STRENGTH_NOUN"
+	<nas> /nˈas/ "NOSE_NOUN"
 
-/t/ (0.049)
+/t/ (0.05)
+	<vosautes> /buzˈawtes/ "YOU (PL)_PRON"
 	<tot> /tˈut/ "ALL (SG)_ADJ"
-	<salut> /salˈyt/ "HEALTH_NOUN"
-	<tu> /tˈy/ "THOU_PRON"
+	<mieitat> /mjejtˈat/ "HALF_NOUN"
 
 /k/ (0.048)
 	<color> /kulˈu/ "COLOR_NOUN"
 	<espic> /espˈik/ "EAR OF GRAIN_NOUN"
 	<casa> /kˈazɔ/ "HOUSE_NOUN"
 
-/w/ (0.041)
+/w/ (0.04)
 	<ueit> /wˈejt/ "EIGHT_NUM"
 	<causa> /kˈawzɔ/ "THING_NOUN"
 	<caud> /kˈawt/ "HOT_ADJ"
 
-/l/ (0.038)
+/l/ (0.037)
 	<blanc> /blˈaŋk/ "WHITE_ADJ"
 	<plànher> /plˈaɲe/ "WEEP_VERB"
 	<lòc> /lˈɔk/ "PLACE_NOUN"
@@ -98,27 +98,27 @@ CONSONANTS
 /n/ (0.034)
 	<non> /nuŋ/ "NOT_ADVERB"
 	<pondre> /pˈundɾe/ "PUT_VERB"
-	<setmana> /semːˈanɔ/ "WEEK_NOUN"
+	<vint> /bˈin/ "TWENTY_NUM"
 
 /ɾ/ (0.033)
 	<crotz> /kɾˈuʦ/ "CROSS_NOUN"
 	<liure> /lˈiwɾe/ "FREE_ADJ"
 	<haria> /haɾˈiɔ/ "FLOUR_NOUN"
 
+/m/ (0.029)
+	<molhèr> /muʎˈɛ/ "WOMAN_WIFE_NOUN"
+	<mar> /mˈa/ "SEA_NOUN"
+	<dromir> /dɾumˈi/ "SLEEP_VERB"
+
 /b/ (0.029)
+	<bueu> /bwˈew/ "OX_NOUN"
 	<vèrmi> /bˈɛrmi/ "WORM_NOUN"
-	<vilan> /bilˈaŋ/ "VILLAIN_NOUN"
-	<votz> /bˈuʦ/ "VOICE_NOUN"
+	<bèth> /bˈɛt/ "BEAUTIFUL (M)_ADJ"
 
 /p/ (0.028)
+	<pèira> /pˈɛjɾɔ/ "STONE_NOUN"
+	<pena> /pˈenɔ/ "PAIN_NOUN"
 	<ploja> /plˈuʒɔ/ "RAIN_NOUN"
-	<paraula> /paɾˈawlɔ/ "WORD_NOUN"
-	<pont> /pˈun/ "BRIDGE_NOUN"
-
-/m/ (0.028)
-	<arroman> /arumˈaŋ/ "ROMAN_ADJ"
-	<mosca> /mˈuskɔ/ "FLY_NOUN"
-	<mair> /mˈajr/ "MOTHER_NOUN"
 
 /r/ (0.027)
 	<arriu> /arˈiw/ "RIVER_NOUN"
@@ -135,12 +135,12 @@ CONSONANTS
 	<long> /lˈuŋk/ "LONG_ADJ"
 	<can> /kˈaŋ/ "DOG_NOUN"
 
-/h/ (0.016)
+/h/ (0.015)
 	<huèc> /hwˈɛk/ "FIRE_NOUN"
 	<hum> /hˈym/ "SMOKE_NOUN"
 	<hèr> /hˈɛ/ "IRON_NOUN"
 
-/d/ (0.016)
+/d/ (0.015)
 	<dízer> /dˈize/ "SAY-INF_VERB"
 	<dètz> /dˈɛʦ/ "TEN_NUM"
 	<cendre> /sˈendɾe/ "ASH_NOUN"
@@ -166,22 +166,22 @@ CONSONANTS
 	<glaç> /ɡlˈas/ "ICE_NOUN"
 
 /ð/ (0.01)
+	<arròda> /arˈɔðɔ/ "WHEEL_NOUN"
 	<véder> /bˈeðe/ "SEE_VERB"
 	<cadea> /kaðˈeɔ/ "CHAIN_NOUN"
-	<pedolh> /peðˈuʎ/ "LOUSE_NOUN"
 
 /ɲ/ (0.009)
+	<montanha> /muntˈaɲɔ/ "MOUNTAIN_NOUN"
 	<Espanha> /espˈaɲɔ/ "SPAIN_PROPN"
 	<linha> /lˈiɲɔ/ "LINE_NOUN"
-	<aranha> /aɾˈaɲɔ/ "SPIDER_NOUN"
 
 /z/ (0.009)
+	<dotze> /dˈudze/ "TWELVE_NUM"
 	<arrasim> /arazˈim/ "RAISIN_NOUN"
 	<dízer> /dˈize/ "SAY-INF_VERB"
-	<vesin> /bezˈiŋ/ "NEIGHBOR_NOUN"
 
 /ʦ/ (0.007)
-	<putz> /pˈyʦ/ "WELL_NOUN"
+	<prètz> /pɾˈɛʦ/ "PRICE_NOUN"
 	<crotz> /kɾˈuʦ/ "CROSS_NOUN"
 	<patz> /pˈaʦ/ "PEACE_NOUN"
 
@@ -200,13 +200,13 @@ CONSONANTS
 	<mètge> /mˈɛʤe/ "DOCTOR_NOUN"
 	<viatge> /biˈaʤe/ "JOURNEY_NOUN"
 
-/f/ (0.002)
-	<faus> /fˈaws/ "FALSE_ADJ"
-	<fin> /fˈiŋ/ "END_NOUN"
+/f/ (0.003)
 	<fòrça> /fˈɔrsɔ/ "STRENGTH_NOUN"
+	<sofrir> /sufɾˈi/ "SUFFER_VERB"
+	<fin> /fˈiŋ/ "END_NOUN"
 
 /nː/ (0.001)
-	<hemna> /hˈenːɔ/ "WOMAN_NOUN"
+	<hemna> /hˈenːɔ/ "WOMAN_FEMALE_NOUN"
 	<amna> /ˈanːɔ/ "SOUL_NOUN"
 
 /lː/ (0.001)

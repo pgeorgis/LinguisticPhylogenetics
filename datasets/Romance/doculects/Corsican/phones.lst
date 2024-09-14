@@ -1,30 +1,30 @@
 VOWELS
-/u/ (0.096)
+/u/ (0.095)
 	<ochju> /ˈocu/ "EYE_NOUN"
 	<toru> /tˈɔru/ "BULL_NOUN"
 	<eiu> /ˈeju/ "I_PRON"
 
-/a/ (0.077)
+/a/ (0.078)
 	<vacca> /vˈakːa/ "COW_NOUN"
 	<maturu> /matˈuru/ "MATURE_NOUN"
-	<coda> /kˈɔda/ "TAIL_NOUN"
+	<spada> /spˈada/ "SWORD_NOUN"
 
 /ˈa/ (0.062)
 	<matre> /mˈatre/ "MOTHER_NOUN"
 	<nasu> /nˈazu/ "NOSE_NOUN"
-	<lacrima> /lˈakrima/ "TEAR_NOUN"
+	<spada> /spˈada/ "SWORD_NOUN"
 
-/e/ (0.06)
+/e/ (0.061)
 	<matre> /mˈatre/ "MOTHER_NOUN"
 	<patre> /pˈatre/ "FATHER_NOUN"
 	<putere> /putˈɛre/ "CAN_VERB"
 
-/ˈɔ/ (0.038)
+/ˈɔ/ (0.039)
 	<bocca> /bˈɔkːa/ "MOUTH_NOUN"
 	<cunnosce> /kunːˈɔʃe/ "BE ACQUAINTED WITH_VERB"
-	<ghjovanu> /ɟˈɔvanu/ "YOUNG_ADJ"
+	<opera> /ˈɔpera/ "WORK_NOUN"
 
-/ˈɛ/ (0.036)
+/ˈɛ/ (0.035)
 	<vermu> /vˈɛrmu/ "WORM_NOUN"
 	<mè> /mˈɛ/ "I_OBL_PRON"
 	<agnellu> /aɲˈɛlːu/ "LAMB_NOUN"
@@ -62,27 +62,27 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.059)
+/r/ (0.06)
 	<scorza> /skˈɔrʦa/ "BARK_NOUN"
 	<vergogna> /verɡˈɔɲa/ "SHAME_NOUN"
 	<orechja> /orˈɛca/ "EAR_NOUN"
 
 /n/ (0.054)
 	<anellu> /anˈɛlːu/ "RING_NOUN"
-	<neve> /nˈɛve/ "SNOW_NOUN"
-	<vinti> /vˈinti/ "TWENTY_NUM"
+	<nivicà> /nivikˈa/ "SNOW (VERB)_VERB"
+	<dente> /dˈɛnte/ "TOOTH_NOUN"
+
+/t/ (0.04)
+	<morte> /mˈɔrte/ "DEATH_NOUN"
+	<aiutà> /ajutˈa/ "HELP_VERB"
+	<testa> /tˈesta/ "SKULL_NOUN"
 
 /k/ (0.04)
 	<croce> /krˈɔʧe/ "CROSS_NOUN"
-	<mosca> /mˈɔska/ "FLY_NOUN"
-	<porcu> /pˈɔrku/ "PIG_NOUN"
+	<cortu> /kˈortu/ "SHORT_ADJ"
+	<core> /kˈɔre/ "HEART_NOUN"
 
-/t/ (0.039)
-	<morte> /mˈɔrte/ "DEATH_NOUN"
-	<estate> /estˈate/ "SUMMER_NOUN"
-	<matre> /mˈatre/ "MOTHER_NOUN"
-
-/l/ (0.032)
+/l/ (0.031)
 	<ghjelu> /ɟˈelu/ "ICE_NOUN"
 	<lettu> /lˈetːu/ "BED_NOUN"
 	<ascultà> /askultˈa/ "LISTEN_VERB"
@@ -94,7 +94,7 @@ CONSONANTS
 
 /s/ (0.028)
 	<sera> /sˈɛra/ "EVENING_NOUN"
-	<scrive> /skrˈive/ "WRITE_VERB"
+	<saviu> /sˈavju/ "WISE_ADJ"
 	<nostro> /nˈostro/ "OUR_ADJ"
 
 /m/ (0.027)
@@ -112,7 +112,7 @@ CONSONANTS
 	<radice> /radˈiʧe/ "ROOT_NOUN"
 	<dente> /dˈɛnte/ "TOOTH_NOUN"
 
-/f/ (0.017)
+/f/ (0.016)
 	<fecatu> /fˈɛkatu/ "LIVER_NOUN"
 	<festa> /fˈesta/ "PARTY_NOUN"
 	<fame> /fˈame/ "HUNGER_NOUN"
@@ -127,7 +127,7 @@ CONSONANTS
 	<ghjudice> /ɟˈudiʧe/ "JUDGE_NOUN"
 	<ghjugnu> /ɟˈuɲu/ "JUNE_PROPN"
 
-/lː/ (0.015)
+/lː/ (0.014)
 	<giallu> /ʤˈalːu/ "YELLOW_ADJ"
 	<castellu> /kastˈelːu/ "CASTLE_NOUN"
 	<billicu> /bˈilːiku/ "NAVEL_NOUN"
@@ -147,7 +147,7 @@ CONSONANTS
 	<lettu> /lˈetːu/ "BED_NOUN"
 	<quattru> /kwˈatːru/ "FOUR_NUM"
 
-/ɡ/ (0.009)
+/ɡ/ (0.008)
 	<grana> /ɡrˈana/ "GRAIN_NOUN"
 	<grassa> /ɡrˈasːa/ "FAT_NOUN"
 	<lagu> /lˈaɡu/ "LAKE_NOUN"
@@ -172,9 +172,9 @@ CONSONANTS
 	<autunnu> /awtˈunːu/ "AUTUMN_NOUN"
 	<sangue> /sˈaŋɡwe/ "BLOOD_NOUN"
 
-/ʎ/ (0.004)
+/ʎ/ (0.005)
 	<foglia> /fˈɔʎa/ "LEAF_NOUN"
-	<figliu> /fˈiʎu/ "SON_NOUN"
+	<moglia> /mˈɔʎa/ "WOMAN_WIFE_NOUN"
 	<megliu> /mˈeʎu/ "BETTER_ADV"
 
 /sː/ (0.004)
@@ -244,6 +244,9 @@ CONSONANTS
 
 /mː/ (0.001)
 	<fiamma> /fjˈamːa/ "FLAME_NOUN"
+
+/fː/ (0.001)
+	<soffre> /sˈofːre/ "SUFFER_VERB"
 
 /dː/ (0.001)
 	<freddu> /frˈɛdːu/ "COLD_ADJ"

@@ -1,62 +1,62 @@
 VOWELS
-/a/ (0.081)
+/a/ (0.082)
 	<seca> /sˈɛka/ "DRY (F)_ADJ"
-	<anma> /ˈanma/ "SOUL_NOUN"
-	<ceresa> /ʧerˈeza/ "CHERRY_NOUN"
+	<testa> /tˈesta/ "SKULL_NOUN"
+	<euvra> /ˈøvra/ "WORK_NOUN"
 
-/ˈa/ (0.056)
+/ˈa/ (0.055)
+	<pan> /pˈan/ "BREAD_NOUN"
 	<giassa> /ʤˈasa/ "ICE_NOUN"
 	<can> /kˈaŋ/ "DOG_NOUN"
-	<bianc> /bjˈaŋk/ "WHITE_ADJ"
 
 /ˈɛ/ (0.038)
+	<lese> /lˈɛze/ "READ_VERB"
 	<festa> /fˈɛsta/ "PARTY_NOUN"
 	<pressi> /prˈɛsi/ "PRICE_NOUN"
-	<lenga> /lˈɛŋɡa/ "TONGUE_NOUN"
 
-/ˈe/ (0.034)
+/ˈe/ (0.035)
+	<che> /kˈe/ "WHAT_PRON"
 	<lege> /lˈeʤe/ "LAW_NOUN"
 	<mangé> /maŋʤˈe/ "EAT_VERB"
-	<cambié> /kambjˈe/ "CHANGE_VERB"
 
-/ˈu/ (0.03)
-	<doi> /dˈuj/ "TWO (M)_NUM"
+/ˈu/ (0.031)
+	<gossa> /ɡˈusa/ "DROP_NOUN"
+	<doe> /dˈue/ "TWO (F)_NUM"
 	<ors> /ˈurs/ "BEAR_NOUN"
-	<rotond> /rutˈuŋd/ "ROUND_ADJ"
 
-/ˈi/ (0.029)
-	<fin> /fˈin/ "THIN_ADJ"
+/ˈi/ (0.03)
+	<fij> /fˈij/ "SON_NOUN"
+	<sufrì> /syfrˈi/ "SUFFER_VERB"
 	<sinner> /sˈinər/ "ASH_NOUN"
-	<mila> /mˈila/ "THOUSAND_NUM"
 
 /ˈɔ/ (0.028)
+	<fòrsa> /fˈɔrsa/ "STRENGTH_NOUN"
 	<giòja> /ʤˈɔja/ "JOY_NOUN"
 	<òca> /ˈɔka/ "GOOSE_NOUN"
-	<tòr> /tˈɔr/ "BULL_NOUN"
 
-/e/ (0.024)
-	<pianze> /pjˈanze/ "WEEP_VERB"
-	<meuire> /mˈøjre/ "DIE_VERB"
-	<àngel> /ˈanʤel/ "ANGEL_NOUN"
+/e/ (0.025)
+	<salute> /salˈyte/ "HEALTH_NOUN"
+	<scrive> /skrˈive/ "WRITE_VERB"
+	<nasse> /nˈase/ "BE BORN_VERB"
 
 /ˈø/ (0.018)
+	<neu> /nˈø/ "KNOT_NOUN"
 	<meuire> /mˈøjre/ "DIE_VERB"
 	<cheussa> /kˈøsa/ "THIGH_NOUN"
-	<leugh> /lˈøɡ/ "PLACE_NOUN"
+
+/u/ (0.018)
+	<pioré> /pjurˈe/ "WEEP_VERB"
+	<otogn> /utˈuɲ/ "AUTUMN_NOUN"
+	<amburì> /amburˈi/ "NAVEL_NOUN"
 
 /ˈy/ (0.017)
-	<tut> /tˈyt/ "ALL (SG)_ADJ"
-	<lun-a> /lˈyŋa/ "MOON_NOUN"
 	<salute> /salˈyte/ "HEALTH_NOUN"
-
-/u/ (0.017)
-	<odor> /udˈur/ "ODOR_NOUN"
-	<otogn> /utˈuɲ/ "AUTUMN_NOUN"
-	<nué> /nuˈe/ "SWIM_VERB"
+	<uja> /ˈyja/ "NEEDLE_NOUN"
+	<tut> /tˈyt/ "ALL (SG)_ADJ"
 
 /i/ (0.011)
+	<robi> /rˈubi/ "RED_ADJ"
 	<sità> /sitˈa/ "CITY_NOUN"
-	<invern> /invˈɛrn/ "WINTER_NOUN"
 	<pressi> /prˈɛsi/ "PRICE_NOUN"
 
 /ə/ (0.004)
@@ -68,36 +68,37 @@ VOWELS
 	<vëdde> /vˈədːe/ "SEE_VERB"
 	<lëgna> /lˈəɲa/ "WOOD_NOUN"
 
-/y/ (0.001)
+/y/ (0.002)
+	<sufrì> /syfrˈi/ "SUFFER_VERB"
 	<brusé> /bryzˈe/ "BURN_VERB"
 
 
 
 CONSONANTS
-/r/ (0.068)
-	<corn> /kˈɔrn/ "HORN_NOUN"
+/r/ (0.069)
 	<ors> /ˈurs/ "BEAR_NOUN"
 	<ross> /rˈus/ "RED_ADJ"
+	<gròss> /ɡrˈɔs/ "THICK_ADJ"
 
-/s/ (0.06)
+/s/ (0.061)
 	<còsta> /kˈɔsta/ "COAST_NOUN"
-	<sinch> /sˈiŋk/ "FIVE_NUM"
-	<nòst> /nˈɔst/ "OUR_ADJ"
+	<pess> /pˈes/ "FISH_NOUN"
+	<nsun> /nsˈyŋ/ "NONE_PRON"
 
-/l/ (0.047)
+/l/ (0.046)
 	<levé> /levˈe/ "CARRY_VERB"
 	<sol> /sˈul/ "SUN_NOUN"
 	<salute> /salˈyte/ "HEALTH_NOUN"
 
-/t/ (0.044)
-	<temp> /tˈɛŋp/ "TIME_NOUN"
-	<tre> /trˈɛ/ "THREE_NUM"
-	<rotond> /rutˈuŋd/ "ROUND_ADJ"
+/t/ (0.045)
+	<ti> /tˈi/ "THOU_PRON"
+	<noatè> /nwatˈɛ/ "SWIM_VERB"
+	<pont> /pˈuŋt/ "POINT_NOUN"
 
 /j/ (0.044)
 	<giòja> /ʤˈɔja/ "JOY_NOUN"
 	<lion> /ljˈuŋ/ "LION_NOUN"
-	<vojàutri> /vujˈawtri/ "YOU (PL)_PRON"
+	<voi> /vˈuj/ "YOU (PL)_PRON"
 
 /k/ (0.043)
 	<curt> /kˈyrt/ "SHORT_ADJ"
@@ -106,15 +107,15 @@ CONSONANTS
 
 /ŋ/ (0.04)
 	<san> /sˈaŋ/ "HEALTHY (M)_ADJ"
-	<temp> /tˈɛŋp/ "TIME_NOUN"
+	<spin-a> /spˈiŋa/ "SPINE_NOUN"
 	<regin-a> /reʤˈiŋa/ "QUEEN_NOUN"
 
-/v/ (0.037)
+/v/ (0.036)
 	<vos> /vˈuz/ "VOICE_NOUN"
 	<pieuva> /pjˈøva/ "RAIN_NOUN"
 	<luv> /lˈyv/ "WOLF_NOUN"
 
-/n/ (0.036)
+/n/ (0.035)
 	<conòsse> /kunˈɔse/ "BE ACQUAINTED WITH_VERB"
 	<smens> /smˈɛns/ "SEED_NOUN"
 	<neu> /nˈø/ "KNOT_NOUN"
@@ -139,7 +140,7 @@ CONSONANTS
 	<fé> /fˈe/ "DO_VERB"
 	<feuja> /fˈøja/ "LEAF_NOUN"
 
-/b/ (0.019)
+/b/ (0.018)
 	<bon> /bˈuŋ/ "GOOD (M.SG)_ADJ"
 	<bon> /bˈuŋ/ "GOOD (M.PL)_ADJ"
 	<boca> /bˈuka/ "MOUTH_NOUN"

@@ -30,8 +30,8 @@ Galician	Galician			CLAY_NOUN	arxila	aɾʃˈilɐ	a ɾ ʃ ˈi l ɐ		CLAY_NOUN_1
 Portuguese	Portuguese			CLAY_NOUN	argila	ɐɾʒˈilɐ	ɐ ɾ ʒ ˈi l ɐ		CLAY_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			CLAY_NOUN	argila	aɦʒˈilɐ	a ɦ ʒ ˈi l ɐ		CLAY_NOUN_1			
 Latin	Latin			FATHER_NOUN	babbum	bˈabbʊ̃ː	b ˈa b b ʊ̃ː		FATHER_NOUN_1			
-Logudorese	Logudorese			FATHER_NOUN	babbu	bˈabbu	b ˈa b b u		FATHER_NOUN_1			
-Campidanese	Campidanese			FATHER_NOUN	babbu	bˈabbu	b ˈa b b u		FATHER_NOUN_1			
+Logudorese	Logudorese			FATHER_NOUN	babbu	bˈabu	b ˈa b u		FATHER_NOUN_1			
+Campidanese	Campidanese			FATHER_NOUN	babbu	bˈabu	b ˈa b u		FATHER_NOUN_1			
 Italian	Italian			FATHER_NOUN	babbo	bˈabbo	b ˈa b b o		FATHER_NOUN_1			
 Romansch	Romansch			FATHER_NOUN	bab	bˈap	b ˈa p		FATHER_NOUN_1			
 Latin	Latin			LOW_ADJ	bassium	bˈassiʊ̃ː	b ˈa s s i ʊ̃ː		LOW_ADJ_1			
@@ -375,7 +375,7 @@ Valencian	Valencian			ISLAND_NOUN	illa	ˈiʎɐ	ˈi ʎ ɐ		ISLAND_NOUN_1
 Aragonese	Aragonese			ISLAND_NOUN	isla	ˈizla	ˈi z l a		ISLAND_NOUN_1			
 Spanish	Spanish			ISLAND_NOUN	isla	ˈisla	ˈi s l a		ISLAND_NOUN_1			
 Asturian	Asturian			ISLAND_NOUN	islla	ˈisʎa	ˈi s ʎ a		ISLAND_NOUN_1			
-Galician	Galician			ISLAND_NOUN	illa	ˈiʎɐ	ˈi ʎ ɐ		ISLAND_NOUN_1			
+Galician	Galician			ISLAND_NOUN	illa	ˈiɟɐ	ˈi ɟ ɐ		ISLAND_NOUN_1			
 Portuguese	Portuguese			ISLAND_NOUN	ilha	ˈiʎɐ	ˈi ʎ ɐ		ISLAND_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			ISLAND_NOUN	ilha	ˈiʎɐ	ˈi ʎ ɐ		ISLAND_NOUN_1			
 Latin	Latin			WOLF_NOUN	lūpum	ɫˈuːpʊ̃ː	ɫ ˈuː p ʊ̃ː		WOLF_NOUN_1			
@@ -541,7 +541,7 @@ Gascon	Gascon			QUAIL_NOUN	catla	kˈallɔ	k ˈa l l ɔ		QUAIL_NOUN_1
 Catalan	Catalan			QUAIL_NOUN	guatlla	ɡwˈaʎʎə	ɡ w ˈa ʎ ʎ ə		QUAIL_NOUN_1			
 Valencian	Valencian			QUAIL_NOUN	guatla	ɡwˈaɫɫɐ	ɡ w ˈa ɫ ɫ ɐ		QUAIL_NOUN_1			
 Aragonese	Aragonese			QUAIL_NOUN	gualla	ɡwˈaʎa	ɡ w ˈa ʎ a		QUAIL_NOUN_1			
-Galician	Galician			QUAIL_NOUN	coalla	kwˈaʎɐ	k w ˈa ʎ ɐ		QUAIL_NOUN_1			
+Galician	Galician			QUAIL_NOUN	coalla	kwˈaɟɐ	k w ˈa ɟ ɐ		QUAIL_NOUN_1			
 Latin	Latin			RED_ADJ	russeum	rˈʊsseʊ̃ː	r ˈʊ s s e ʊ̃ː		RED_ADJ_1			
 Aragonese	Aragonese			RED_ADJ	royo	rˈoʝo	r ˈo ʝ o		RED_ADJ_1			
 Spanish	Spanish			RED_ADJ	rojo	rˈoxo	r ˈo x o		RED_ADJ_1			
@@ -572,7 +572,7 @@ Savoyard	Savoyard			SUN_NOUN	sèlwà	sɛlwˈa	s ɛ l w ˈa		SUN_NOUN_1
 Occitan	Occitan			SUN_NOUN	solelh	sulˈɛl	s u l ˈɛ l		SUN_NOUN_1			
 Gascon	Gascon			SUN_NOUN	sorelh	suɾˈɛʎ	s u ɾ ˈɛ ʎ		SUN_NOUN_1			
 Catalan	Catalan			SUN_NOUN	solell	sulˈɛʎ	s u l ˈɛ ʎ		SUN_NOUN_1			
-Valencian	Valencian			SUN_NOUN	solell	sulˈæʎ	s u l ˈæ ʎ		SUN_NOUN_1			
+Valencian	Valencian			SUN_NOUN	solell	solˈæʎ	s o l ˈæ ʎ		SUN_NOUN_1			
 Latin	Latin			STAR_NOUN	stēlam	stˈeːlãː	s t ˈeː l ãː		STAR_NOUN_1			
 Ladin	Ladin			STAR_NOUN	steila	ʃtˈejla	ʃ t ˈe j l a		STAR_NOUN_1			
 Romansch	Romansch			STAR_NOUN	staila	ʃtˈajlə	ʃ t ˈa j l ə		STAR_NOUN_1			
@@ -582,6 +582,35 @@ Québécois French	Québécois French			STAR_NOUN	étoile	etwɛl	e t w ɛ l		STA
 Walloon	Walloon			STAR_NOUN	stoele	stwˈɛl	s t w ˈɛ l		STAR_NOUN_1			
 Franco-Provençal	Franco-Provençal			STAR_NOUN	étêla	etˈɛːla	e t ˈɛː l a		STAR_NOUN_1			
 Savoyard	Savoyard			STAR_NOUN	étaila	etˈajla	e t ˈa j l a		STAR_NOUN_1			
+Latin	Latin			SUFFER_VERB	sufferere	sʊffˈɛrɛrɛ	s ʊ f f ˈɛ r ɛ r ɛ		SUFFER_VERB_1			
+Portuguese	Portuguese			SUFFER_VERB	sofrer	sufɾˈeɾ	s u f ɾ ˈe ɾ		SUFFER_VERB_1			
+Brazilian Portuguese	Brazilian Portuguese			SUFFER_VERB	sofrer	sofɾˈeh	s o f ɾ ˈe h		SUFFER_VERB_1			
+Latin	Latin			SUFFER_VERB	sufferīre	sʊffɛrˈiːrɛ	s ʊ f f ɛ r ˈiː r ɛ		SUFFER_VERB_2			
+Logudorese	Logudorese			SUFFER_VERB	sufríre	sufrˈire	s u f r ˈi r e		SUFFER_VERB_2			
+Campidanese	Campidanese			SUFFER_VERB	sufríri	sufrˈiri	s u f r ˈi r i		SUFFER_VERB_2			
+Romanian	Romanian			SUFFER_VERB	suferire	suferˈire	s u f e r ˈi r e		SUFFER_VERB_2			
+Sicilian	Sicilian			SUFFER_VERB	suffriri	suffrˈirɪ	s u f f r ˈi r ɪ		SUFFER_VERB_2			
+Neapolitan	Neapolitan			SUFFER_VERB	suffriri	suffrˈiɾə	s u f f r ˈi ɾ ə		SUFFER_VERB_2			
+Corsican	Corsican			SUFFER_VERB	soffre	sˈoffre	s ˈo f f r e		SUFFER_VERB_2			
+Italian	Italian			SUFFER_VERB	soffrire	soffrˈire	s o f f r ˈi r e		SUFFER_VERB_2			
+Emilian	Emilian			SUFFER_VERB	sufrîr	sufrˈiːr	s u f r ˈiː r		SUFFER_VERB_2			
+Ligurian	Ligurian			SUFFER_VERB	soffrî	sufrˈiː	s u f r ˈiː		SUFFER_VERB_2			
+Piedmontese	Piedmontese			SUFFER_VERB	sufrì	syfrˈi	s y f r ˈi		SUFFER_VERB_2			
+Western Lombard	Western Lombard			SUFFER_VERB	sufrì	syfrˈi	s y f r ˈi		SUFFER_VERB_2			
+Friulian	Friulian			SUFFER_VERB	sufrî	sufrˈiː	s u f r ˈiː		SUFFER_VERB_2			
+Old French	Old French			SUFFER_VERB	sofrir	sufrˈir	s u f r ˈi r		SUFFER_VERB_2			
+French	French			SUFFER_VERB	souffrir	sufʁiʁ	s u f ʁ i ʁ		SUFFER_VERB_2			
+Québécois French	Québécois French			SUFFER_VERB	souffrir	sufʁiʁ	s u f ʁ i ʁ		SUFFER_VERB_2			
+Walloon	Walloon			SUFFER_VERB	sofri	sɔfʀˈi	s ɔ f ʀ ˈi		SUFFER_VERB_2			
+Franco-Provençal	Franco-Provençal			SUFFER_VERB	sofrir	sofʁˈiʁ	s o f ʁ ˈi ʁ		SUFFER_VERB_2			
+Occitan	Occitan			SUFFER_VERB	sofrir	sufɾˈi	s u f ɾ ˈi		SUFFER_VERB_2			
+Gascon	Gascon			SUFFER_VERB	sofrir	sufɾˈi	s u f ɾ ˈi		SUFFER_VERB_2			
+Catalan	Catalan			SUFFER_VERB	sofrir	sufɾˈi	s u f ɾ ˈi		SUFFER_VERB_2			
+Valencian	Valencian			SUFFER_VERB	sofrir	sofɾˈir	s o f ɾ ˈi r		SUFFER_VERB_2			
+Aragonese	Aragonese			SUFFER_VERB	sofrir	sofɾˈiɾ	s o f ɾ ˈi ɾ		SUFFER_VERB_2			
+Spanish	Spanish			SUFFER_VERB	sufrir	sufɾˈiɾ	s u f ɾ ˈi ɾ		SUFFER_VERB_2			
+Asturian	Asturian			SUFFER_VERB	sufrir	sufɾˈiɾ	s u f ɾ ˈi ɾ		SUFFER_VERB_2			
+Galician	Galician			SUFFER_VERB	sufrir	sufɾˈiɾ	s u f ɾ ˈi ɾ		SUFFER_VERB_2			
 Latin	Latin			BULL_NOUN	taurellum	tˈau̯rˈɛlʲlʲʊ̃ː	t ˈau̯ r ˈɛ lʲ lʲ ʊ̃ː		BULL_NOUN_1			
 Old French	Old French			BULL_NOUN	torel	turˈɛl	t u r ˈɛ l		BULL_NOUN_1			
 French	French			BULL_NOUN	taureau	toʁo	t o ʁ o		BULL_NOUN_1			
@@ -613,8 +642,8 @@ Catalan	Catalan			ALL (PL)_ADJ	tots	tˈots	t ˈo t s		ALL (PL)_ADJ_2
 Valencian	Valencian			ALL (PL)_ADJ	tots	tˈots	t ˈo t s		ALL (PL)_ADJ_2			
 Aragonese	Aragonese			ALL (PL)_ADJ	toz	tˈoθ	t ˈo θ		ALL (PL)_ADJ_2			
 Latin	Latin			ALL (SG)_ADJ	tōttum	tˈoːttʊ̃ː	t ˈoː t t ʊ̃ː		ALL (SG)_ADJ_1			
-Logudorese	Logudorese			ALL (SG)_ADJ	tottu	tˈottu	t ˈo t t u		ALL (SG)_ADJ_1			
-Campidanese	Campidanese			ALL (SG)_ADJ	tottu	tˈottu	t ˈo t t u		ALL (SG)_ADJ_1			
+Logudorese	Logudorese			ALL (SG)_ADJ	tottu	tˈotu	t ˈo t u		ALL (SG)_ADJ_1			
+Campidanese	Campidanese			ALL (SG)_ADJ	tottu	tˈotu	t ˈo t u		ALL (SG)_ADJ_1			
 Dalmatian	Dalmatian			ALL (SG)_ADJ	tot	tˈot	t ˈo t		ALL (SG)_ADJ_1			
 Istriot	Istriot			ALL (SG)_ADJ	doûto	dˈowto	d ˈo w t o		ALL (SG)_ADJ_1			
 Sicilian	Sicilian			ALL (SG)_ADJ	tuttu	tˈuttʊ	t ˈu t t ʊ		ALL (SG)_ADJ_1			
@@ -761,7 +790,7 @@ Valencian	Valencian			NEEDLE_NOUN	agulla	aɣˈuʎɐ	a ɣ ˈu ʎ ɐ		NEEDLE_NOUN_
 Aragonese	Aragonese			NEEDLE_NOUN	agulla	aɣˈuʎa	a ɣ ˈu ʎ a		NEEDLE_NOUN_1			
 Spanish	Spanish			NEEDLE_NOUN	aguja	aɣˈuxa	a ɣ ˈu x a		NEEDLE_NOUN_1			
 Asturian	Asturian			NEEDLE_NOUN	aguya	aɣˈuʝa	a ɣ ˈu ʝ a		NEEDLE_NOUN_1			
-Galician	Galician			NEEDLE_NOUN	agulla	aɣˈuʎɐ	a ɣ ˈu ʎ ɐ		NEEDLE_NOUN_1			
+Galician	Galician			NEEDLE_NOUN	agulla	aɣˈuɟɐ	a ɣ ˈu ɟ ɐ		NEEDLE_NOUN_1			
 Portuguese	Portuguese			NEEDLE_NOUN	agulha	ɐɣˈuʎɐ	ɐ ɣ ˈu ʎ ɐ		NEEDLE_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			NEEDLE_NOUN	agulha	aɡˈuʎɐ	a ɡ ˈu ʎ ɐ		NEEDLE_NOUN_1			
 Latin	Latin			NEEDLE_NOUN	acum	ˈakʊ̃ː	ˈa k ʊ̃ː		NEEDLE_NOUN_2			
@@ -821,7 +850,7 @@ French	French			HELP-1SG_VERB	aide	ɛd	ɛ d		HELP-1SG_VERB_1
 Québécois French	Québécois French			HELP-1SG_VERB	aide	æɛ̯d	æɛ̯ d		HELP-1SG_VERB_1			
 Occitan	Occitan			HELP-1SG_VERB	ajudi	aʤˈyði	a ʤ ˈy ð i		HELP-1SG_VERB_1			
 Catalan	Catalan			HELP-1SG_VERB	ajudo	əʒˈuðu	ə ʒ ˈu ð u		HELP-1SG_VERB_1			
-Valencian	Valencian			HELP-1SG_VERB	ajudo	aʤˈuðu	a ʤ ˈu ð u		HELP-1SG_VERB_1			
+Valencian	Valencian			HELP-1SG_VERB	ajudo	aʤˈuðo	a ʤ ˈu ð o		HELP-1SG_VERB_1			
 Aragonese	Aragonese			HELP-1SG_VERB	aduyo	aðˈuʝo	a ð ˈu ʝ o		HELP-1SG_VERB_1			
 Spanish	Spanish			HELP-1SG_VERB	ayudo	aʝˈuðo	a ʝ ˈu ð o		HELP-1SG_VERB_1			
 Asturian	Asturian			HELP-1SG_VERB	ayudo	aʝˈuðo	a ʝ ˈu ð o		HELP-1SG_VERB_1			
@@ -959,7 +988,7 @@ Dalmatian	Dalmatian			WHITE_ADJ	jualb	jwˈalb	j w ˈa l b		WHITE_ADJ_1
 Romansch	Romansch			WHITE_ADJ	alv	ˈalf	ˈa l f		WHITE_ADJ_1			
 Latin	Latin			GARLIC_NOUN	ālium	ˈaːlʲiʊ̃ː	ˈaː lʲ i ʊ̃ː		GARLIC_NOUN_1			
 Logudorese	Logudorese			GARLIC_NOUN	azu	ˈaʣu	ˈa ʣ u		GARLIC_NOUN_1			
-Campidanese	Campidanese			GARLIC_NOUN	azu	ˈaʣu	ˈa ʣ u		GARLIC_NOUN_1			
+Campidanese	Campidanese			GARLIC_NOUN	allu	ˈallu	ˈa l l u		GARLIC_NOUN_1			
 Romanian	Romanian			GARLIC_NOUN	ai	ˈaj	ˈa j		GARLIC_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			GARLIC_NOUN	al’u	ˈaʎu	ˈa ʎ u		GARLIC_NOUN_1			
 Aromanian	Aromanian			GARLIC_NOUN	alj	ˈaʎ	ˈa ʎ		GARLIC_NOUN_1			
@@ -989,7 +1018,7 @@ Valencian	Valencian			GARLIC_NOUN	all	ˈaʎ	ˈa ʎ		GARLIC_NOUN_1
 Aragonese	Aragonese			GARLIC_NOUN	allo	ˈaʎo	ˈa ʎ o		GARLIC_NOUN_1			
 Spanish	Spanish			GARLIC_NOUN	ajo	ˈaxo	ˈa x o		GARLIC_NOUN_1			
 Asturian	Asturian			GARLIC_NOUN	ayu	ˈaʝu	ˈa ʝ u		GARLIC_NOUN_1			
-Galician	Galician			GARLIC_NOUN	allo	ˈaʎʊ	ˈa ʎ ʊ		GARLIC_NOUN_1			
+Galician	Galician			GARLIC_NOUN	allo	ˈaɟʊ	ˈa ɟ ʊ		GARLIC_NOUN_1			
 Portuguese	Portuguese			GARLIC_NOUN	alho	ˈaʎu	ˈa ʎ u		GARLIC_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			GARLIC_NOUN	alho	ˈaʎu	ˈa ʎ u		GARLIC_NOUN_1			
 Latin	Latin			OTHER_ADJ	alterum	ˈaɫtɛrʊ̃ː	ˈa ɫ t ɛ r ʊ̃ː		OTHER_ADJ_1			
@@ -1212,7 +1241,7 @@ Valencian	Valencian			BEE_NOUN	abella	aβˈæʎɜ	a β ˈæ ʎ ɜ		BEE_NOUN_3
 Aragonese	Aragonese			BEE_NOUN	abella	aβˈeʎa	a β ˈe ʎ a		BEE_NOUN_3			
 Spanish	Spanish			BEE_NOUN	abeja	aβˈexa	a β ˈe x a		BEE_NOUN_3			
 Asturian	Asturian			BEE_NOUN	abeya	aβˈeʝa	a β ˈe ʝ a		BEE_NOUN_3			
-Galician	Galician			BEE_NOUN	avella	aβˈeʎɐ	a β ˈe ʎ ɐ		BEE_NOUN_3			
+Galician	Galician			BEE_NOUN	avella	aβˈeɟɐ	a β ˈe ɟ ɐ		BEE_NOUN_3			
 Portuguese	Portuguese			BEE_NOUN	abelha	ɐβˈɐjʎɐ	ɐ β ˈɐ j ʎ ɐ		BEE_NOUN_3			
 Brazilian Portuguese	Brazilian Portuguese			BEE_NOUN	abelha	abˈeʎɐ	a b ˈe ʎ ɐ		BEE_NOUN_3			
 Latin	Latin			WATER_NOUN	aquam	ˈakʷãː	ˈa kʷ ãː		WATER_NOUN_1			
@@ -1359,11 +1388,11 @@ Savoyard	Savoyard			EAR_NOUN	orlyo	ˈɔrʎo	ˈɔ r ʎ o		EAR_NOUN_1
 Occitan	Occitan			EAR_NOUN	aurelha	awɾˈeʎɔ	a w ɾ ˈe ʎ ɔ		EAR_NOUN_1			
 Gascon	Gascon			EAR_NOUN	aurelha	awɾˈeʎɔ	a w ɾ ˈe ʎ ɔ		EAR_NOUN_1			
 Catalan	Catalan			EAR_NOUN	orella	uɾˈɛʎə	u ɾ ˈɛ ʎ ə		EAR_NOUN_1			
-Valencian	Valencian			EAR_NOUN	orella	uɾˈæʎɜ	u ɾ ˈæ ʎ ɜ		EAR_NOUN_1			
+Valencian	Valencian			EAR_NOUN	orella	oɾˈæʎɜ	o ɾ ˈæ ʎ ɜ		EAR_NOUN_1			
 Aragonese	Aragonese			EAR_NOUN	orella	oɾˈeʎa	o ɾ ˈe ʎ a		EAR_NOUN_1			
 Spanish	Spanish			EAR_NOUN	oreja	oɾˈexa	o ɾ ˈe x a		EAR_NOUN_1			
 Asturian	Asturian			EAR_NOUN	oreya	oɾˈeʝa	o ɾ ˈe ʝ a		EAR_NOUN_1			
-Galician	Galician			EAR_NOUN	orella	oɾˈeʎɐ	o ɾ ˈe ʎ ɐ		EAR_NOUN_1			
+Galician	Galician			EAR_NOUN	orella	oɾˈeɟɐ	o ɾ ˈe ɟ ɐ		EAR_NOUN_1			
 Portuguese	Portuguese			EAR_NOUN	orelha	ɔɾˈɐjʎɐ	ɔ ɾ ˈɐ j ʎ ɐ		EAR_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			EAR_NOUN	orelha	oɾˈeʎɐ	o ɾ ˈe ʎ ɐ		EAR_NOUN_1			
 Latin	Latin			GOLD_NOUN	aurum	ˈau̯rʊ̃ː	ˈau̯ r ʊ̃ː		GOLD_NOUN_1			
@@ -1428,7 +1457,7 @@ Franco-Provençal	Franco-Provençal			LISTEN_VERB	écotar	ekotˈa	e k o t ˈa		L
 Occitan	Occitan			LISTEN_VERB	escotar	eskutˈa	e s k u t ˈa		LISTEN_VERB_1			
 Gascon	Gascon			LISTEN_VERB	escotar	eskutˈa	e s k u t ˈa		LISTEN_VERB_1			
 Catalan	Catalan			LISTEN_VERB	escoltar	əskultˈa	ə s k u l t ˈa		LISTEN_VERB_1			
-Valencian	Valencian			LISTEN_VERB	escoltar	eskultˈar	e s k u l t ˈa r		LISTEN_VERB_1			
+Valencian	Valencian			LISTEN_VERB	escoltar	eskoltˈar	e s k o l t ˈa r		LISTEN_VERB_1			
 Aragonese	Aragonese			LISTEN_VERB	ascuitar	askujtˈaɾ	a s k u j t ˈa ɾ		LISTEN_VERB_1			
 Spanish	Spanish			LISTEN_VERB	escuchar	eskuʧˈaɾ	e s k u ʧ ˈa ɾ		LISTEN_VERB_1			
 Asturian	Asturian			LISTEN_VERB	escuchar	eskuʧˈaɾ	e s k u ʧ ˈa ɾ		LISTEN_VERB_1			
@@ -1439,8 +1468,8 @@ Latin	Latin			AUTUMN_NOUN	autumnam	au̯tˈʊmnãː	au̯ t ˈʊ m n ãː		AUTUM
 Romanian	Romanian			AUTUMN_NOUN	toamnă	to̯ˈamnə	t o̯ˈa m n ə		AUTUMN_NOUN_1			
 Aromanian	Aromanian			AUTUMN_NOUN	toamnã	to̯ˈamnə	t o̯ˈa m n ə		AUTUMN_NOUN_1			
 Latin	Latin			AUTUMN_NOUN	autumnum	au̯tˈʊmnʊ̃ː	au̯ t ˈʊ m n ʊ̃ː		AUTUMN_NOUN_2			
-Logudorese	Logudorese			AUTUMN_NOUN	atógnu	atˈoɲɲu	a t ˈo ɲ ɲ u		AUTUMN_NOUN_2			
-Campidanese	Campidanese			AUTUMN_NOUN	atógnu	atˈoɲɲu	a t ˈo ɲ ɲ u		AUTUMN_NOUN_2			
+Logudorese	Logudorese			AUTUMN_NOUN	atógnu	atˈoɲu	a t ˈo ɲ u		AUTUMN_NOUN_2			
+Campidanese	Campidanese			AUTUMN_NOUN	atógnu	atˈoɲu	a t ˈo ɲ u		AUTUMN_NOUN_2			
 Sicilian	Sicilian			AUTUMN_NOUN	autunnu	awtˈunnʊ	a w t ˈu n n ʊ		AUTUMN_NOUN_2			
 Neapolitan	Neapolitan			AUTUMN_NOUN	autunno	awtˈunnə	a w t ˈu n n ə		AUTUMN_NOUN_2			
 Corsican	Corsican			AUTUMN_NOUN	autunnu	awtˈunnu	a w t ˈu n n u		AUTUMN_NOUN_2			
@@ -1514,10 +1543,10 @@ Savoyard	Savoyard			BIRD_NOUN	aijô	ajʒˈo	a j ʒ ˈo		BIRD_NOUN_2
 Occitan	Occitan			BIRD_NOUN	aucèl	awsˈɛl	a w s ˈɛ l		BIRD_NOUN_2			
 Gascon	Gascon			BIRD_NOUN	ausèth	awsˈɛt	a w s ˈɛ t		BIRD_NOUN_2			
 Catalan	Catalan			BIRD_NOUN	ocell	usˈeʎ	u s ˈe ʎ		BIRD_NOUN_2			
-Valencian	Valencian			BIRD_NOUN	ocell	usˈeʎ	u s ˈe ʎ		BIRD_NOUN_2			
+Valencian	Valencian			BIRD_NOUN	ocell	osˈeʎ	o s ˈe ʎ		BIRD_NOUN_2			
 Latin	Latin			BATH_NOUN	baneum	bˈaneʊ̃ː	b ˈa n e ʊ̃ː		BATH_NOUN_1			
-Logudorese	Logudorese			BATH_NOUN	bagnu	bˈaɲɲu	b ˈa ɲ ɲ u		BATH_NOUN_1			
-Campidanese	Campidanese			BATH_NOUN	bagnu	bˈaɲɲu	b ˈa ɲ ɲ u		BATH_NOUN_1			
+Logudorese	Logudorese			BATH_NOUN	bagnu	bˈaɲu	b ˈa ɲ u		BATH_NOUN_1			
+Campidanese	Campidanese			BATH_NOUN	bagnu	bˈaɲu	b ˈa ɲ u		BATH_NOUN_1			
 Romanian	Romanian			BATH_NOUN	baie	bˈaje	b ˈa j e		BATH_NOUN_1	TRUE		
 Sicilian	Sicilian			BATH_NOUN	bagnu	bˈaɲʊ	b ˈa ɲ ʊ		BATH_NOUN_1			
 Neapolitan	Neapolitan			BATH_NOUN	bagno	vˈaɲɲə	v ˈa ɲ ɲ ə		BATH_NOUN_1			
@@ -1547,7 +1576,7 @@ Romanian	Romanian			MAN_NOUN	bărbat	bərbˈat	b ə r b ˈa t		MAN_NOUN_1
 Megleno-Romanian	Megleno-Romanian			MAN_NOUN	bărbat	bərbˈat	b ə r b ˈa t		MAN_NOUN_1			
 Aromanian	Aromanian			MAN_NOUN	bãrbat	bərbˈat	b ə r b ˈa t		MAN_NOUN_1			
 Latin	Latin			LOW_ADJ	bassum	bˈassʊ̃ː	b ˈa s s ʊ̃ː		LOW_ADJ_2			
-Logudorese	Logudorese			LOW_ADJ	bassu	bˈassu	b ˈa s s u		LOW_ADJ_2			
+Logudorese	Logudorese			LOW_ADJ	bassu	bˈasu	b ˈa s u		LOW_ADJ_2			
 Campidanese	Campidanese			LOW_ADJ	bàsciu	bˈaʃʃu	b ˈa ʃ ʃ u		LOW_ADJ_2			
 Sicilian	Sicilian			LOW_ADJ	basciu	bˈaʃʃʊ	b ˈa ʃ ʃ ʊ		LOW_ADJ_2			
 Corsican	Corsican			LOW_ADJ	bassu	bˈassu	b ˈa s s u		LOW_ADJ_2			
@@ -1572,7 +1601,7 @@ Gascon	Gascon			LOW_ADJ	baish	bˈajʃ	b ˈa j ʃ		LOW_ADJ_2
 Catalan	Catalan			LOW_ADJ	baix	bˈaʃ	b ˈa ʃ		LOW_ADJ_2			
 Valencian	Valencian			LOW_ADJ	baix	bˈaʃ	b ˈa ʃ		LOW_ADJ_2			
 Latin	Latin			BEAUTIFUL (F)_ADJ	bellam	bˈɛlʲlʲãː	b ˈɛ lʲ lʲ ãː		BEAUTIFUL (F)_ADJ_1			
-Logudorese	Logudorese			BEAUTIFUL (F)_ADJ	bélla	bˈella	b ˈe l l a		BEAUTIFUL (F)_ADJ_1	TRUE		
+Logudorese	Logudorese			BEAUTIFUL (F)_ADJ	bélla	bˈela	b ˈe l a		BEAUTIFUL (F)_ADJ_1	TRUE		
 Campidanese	Campidanese			BEAUTIFUL (F)_ADJ	bélla	bˈella	b ˈe l l a		BEAUTIFUL (F)_ADJ_1	TRUE		
 Sicilian	Sicilian			BEAUTIFUL (F)_ADJ	bedda	bˈɛɖɖa	b ˈɛ ɖ ɖ a		BEAUTIFUL (F)_ADJ_1			
 Corsican	Corsican			BEAUTIFUL (F)_ADJ	bella	bˈɛlla	b ˈɛ l l a		BEAUTIFUL (F)_ADJ_1			
@@ -1602,7 +1631,7 @@ Galician	Galician			BEAUTIFUL (F)_ADJ	bela	bˈɛlɐ	b ˈɛ l ɐ		BEAUTIFUL (F)_A
 Portuguese	Portuguese			BEAUTIFUL (F)_ADJ	bela	bˈɛlɐ	b ˈɛ l ɐ		BEAUTIFUL (F)_ADJ_1			
 Brazilian Portuguese	Brazilian Portuguese			BEAUTIFUL (F)_ADJ	bela	bˈɛlɐ	b ˈɛ l ɐ		BEAUTIFUL (F)_ADJ_1			
 Latin	Latin			BEAUTIFUL (M)_ADJ	bellum	bˈɛlʲlʲʊ̃ː	b ˈɛ lʲ lʲ ʊ̃ː		BEAUTIFUL (M)_ADJ_1			
-Logudorese	Logudorese			BEAUTIFUL (M)_ADJ	béllu	bˈellu	b ˈe l l u		BEAUTIFUL (M)_ADJ_1	TRUE		
+Logudorese	Logudorese			BEAUTIFUL (M)_ADJ	béllu	bˈelu	b ˈe l u		BEAUTIFUL (M)_ADJ_1	TRUE		
 Campidanese	Campidanese			BEAUTIFUL (M)_ADJ	béllu	bˈellu	b ˈe l l u		BEAUTIFUL (M)_ADJ_1	TRUE		
 Dalmatian	Dalmatian			BEAUTIFUL (M)_ADJ	bial	bjˈal	b j ˈa l		BEAUTIFUL (M)_ADJ_1			
 Istriot	Istriot			BEAUTIFUL (M)_ADJ	biél	bjˈel	b j ˈe l		BEAUTIFUL (M)_ADJ_1			
@@ -2155,6 +2184,41 @@ Asturian	Asturian			DOG_NOUN	can	kˈaŋ	k ˈa ŋ		DOG_NOUN_1
 Galician	Galician			DOG_NOUN	can	kˈɑŋ	k ˈɑ ŋ		DOG_NOUN_1			
 Portuguese	Portuguese			DOG_NOUN	cão	kˈɐ̃w̃	k ˈɐ̃ w̃		DOG_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			DOG_NOUN	cão	kˈɐ̃w̃	k ˈɐ̃ w̃		DOG_NOUN_1			
+Latin	Latin			SING_VERB	cantāre	kantˈaːrɛ	k a n t ˈaː r ɛ		SING_VERB_1			
+Logudorese	Logudorese			SING_VERB	cantare	kantˈare	k a n t ˈa r e		SING_VERB_1			
+Campidanese	Campidanese			SING_VERB	cantai	kantˈai	k a n t ˈa i		SING_VERB_1			
+Romanian	Romanian			SING_VERB	cântare	kɨntˈare	k ɨ n t ˈa r e		SING_VERB_1			
+Aromanian	Aromanian			SING_VERB	cãntu	kɨntˈari	k ɨ n t ˈa r i		SING_VERB_1			
+Dalmatian	Dalmatian			SING_VERB	cantur	kantˈur	k a n t ˈu r		SING_VERB_1			
+Sicilian	Sicilian			SING_VERB	cantari	kantˈarɪ	k a n t ˈa r ɪ		SING_VERB_1			
+Neapolitan	Neapolitan			SING_VERB	cantare	kantˈaɾə	k a n t ˈa ɾ ə		SING_VERB_1			
+Corsican	Corsican			SING_VERB	cantare	kantˈare	k a n t ˈa r e		SING_VERB_1			
+Italian	Italian			SING_VERB	cantare	kantˈare	k a n t ˈa r e		SING_VERB_1			
+Venetian	Venetian			SING_VERB	cantar	kaŋtˈar	k a ŋ t ˈa r		SING_VERB_1			
+Bellunese	Bellunese			SING_VERB	cantar	kaŋtˈar	k a ŋ t ˈa r		SING_VERB_1			
+Emilian	Emilian			SING_VERB	cantèr	kaŋtˈɛr	k a ŋ t ˈɛ r		SING_VERB_1			
+Ligurian	Ligurian			SING_VERB	cantâ	kaŋtˈaː	k a ŋ t ˈaː		SING_VERB_1			
+Piedmontese	Piedmontese			SING_VERB	canté	kaŋtˈe	k a ŋ t ˈe		SING_VERB_1			
+Western Lombard	Western Lombard			SING_VERB	cantà	kãtˈa	k ã t ˈa		SING_VERB_1			
+Eastern Lombard	Eastern Lombard			SING_VERB	cantà	kantˈa	k a n t ˈa		SING_VERB_1			
+Ladin	Ladin			SING_VERB	cianté	ʨantˈe	ʨ a n t ˈe		SING_VERB_1			
+Friulian	Friulian			SING_VERB	cjantâ	cantˈaː	c a n t ˈaː		SING_VERB_1			
+Romansch	Romansch			SING_VERB	chantar	ʨəntˈaːr	ʨ ə n t ˈaː r		SING_VERB_1			
+Old French	Old French			SING_VERB	chanter	ʧãntˈer	ʧ ã n t ˈe r		SING_VERB_1			
+French	French			SING_VERB	chanter	ʃɑ̃te	ʃ ɑ̃ t e		SING_VERB_1			
+Québécois French	Québécois French			SING_VERB	chanter	ʃãte	ʃ ã t e		SING_VERB_1			
+Walloon	Walloon			SING_VERB	tchanter	ʧɑ̃tˈe	ʧ ɑ̃ t ˈe		SING_VERB_1			
+Franco-Provençal	Franco-Provençal			SING_VERB	çhantar	ʃɑ̃tˈa	ʃ ɑ̃ t ˈa		SING_VERB_1			
+Occitan	Occitan			SING_VERB	cantar	kantˈa	k a n t ˈa		SING_VERB_1			
+Gascon	Gascon			SING_VERB	cantar	kantˈa	k a n t ˈa		SING_VERB_1			
+Catalan	Catalan			SING_VERB	cantar	kəntˈa	k ə n t ˈa		SING_VERB_1			
+Valencian	Valencian			SING_VERB	cantar	kantˈar	k a n t ˈa r		SING_VERB_1			
+Aragonese	Aragonese			SING_VERB	cantar	kantˈaɾ	k a n t ˈa ɾ		SING_VERB_1			
+Spanish	Spanish			SING_VERB	cantar	kantˈaɾ	k a n t ˈa ɾ		SING_VERB_1			
+Asturian	Asturian			SING_VERB	cantar	kantˈaɾ	k a n t ˈa ɾ		SING_VERB_1			
+Galician	Galician			SING_VERB	cantar	kantˈaɾ	k a n t ˈa ɾ		SING_VERB_1			
+Portuguese	Portuguese			SING_VERB	cantar	kɐ̃tˈaɾ	k ɐ̃ t ˈa ɾ		SING_VERB_1			
+Brazilian Portuguese	Brazilian Portuguese			SING_VERB	cantar	kɐ̃tˈah	k ɐ̃ t ˈa h		SING_VERB_1			
 Latin	Latin			SONG_NOUN	cantum	kˈantʊ̃ː	k ˈa n t ʊ̃ː		SONG_NOUN_1			
 Romanian	Romanian			SONG_NOUN	cânt	kˈɨnt	k ˈɨ n t		SONG_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			SONG_NOUN	cǫnt	kˈɔnt	k ˈɔ n t		SONG_NOUN_1			
@@ -2214,7 +2278,7 @@ Galician	Galician			HAIR_NOUN	cabelo	kaβˈelʊ	k a β ˈe l ʊ		HAIR_NOUN_1
 Portuguese	Portuguese			HAIR_NOUN	cabelo	kɐβˈelu	k ɐ β ˈe l u		HAIR_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			HAIR_NOUN	cabelo	kabˈelu	k a b ˈe l u		HAIR_NOUN_1			
 Latin	Latin			GOAT_NOUN	capram	kˈaprãː	k ˈa p r ãː		GOAT_NOUN_1			
-Logudorese	Logudorese			GOAT_NOUN	craba	krˈaβa	k r ˈa β a		GOAT_NOUN_1			
+Logudorese	Logudorese			GOAT_NOUN	càpra	kˈapra	k ˈa p r a		GOAT_NOUN_1			
 Campidanese	Campidanese			GOAT_NOUN	craba	krˈaβa	k r ˈa β a		GOAT_NOUN_1			
 Romanian	Romanian			GOAT_NOUN	capră	kˈaprə	k ˈa p r ə		GOAT_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			GOAT_NOUN	capră	kˈaprə	k ˈa p r ə		GOAT_NOUN_1			
@@ -2250,8 +2314,8 @@ Galician	Galician			GOAT_NOUN	cabra	kˈaβɾɐ	k ˈa β ɾ ɐ		GOAT_NOUN_1
 Portuguese	Portuguese			GOAT_NOUN	cabra	kˈaβɾɐ	k ˈa β ɾ ɐ		GOAT_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			GOAT_NOUN	cabra	kˈabɾɐ	k ˈa b ɾ ɐ		GOAT_NOUN_1			
 Latin	Latin			HUNT_VERB	captiāre	kaptiˈaːrɛ	k a p t i ˈaː r ɛ		HUNT_VERB_1			
-Logudorese	Logudorese			HUNT_VERB	cassare	kassˈare	k a s s ˈa r e		HUNT_VERB_1			
-Campidanese	Campidanese			HUNT_VERB	cassài	kassˈai	k a s s ˈa i		HUNT_VERB_1			
+Logudorese	Logudorese			HUNT_VERB	cassare	kasˈare	k a s ˈa r e		HUNT_VERB_1			
+Campidanese	Campidanese			HUNT_VERB	cassài	kasˈai	k a s ˈa i		HUNT_VERB_1			
 Romanian	Romanian			HUNT_VERB	căutare	kəwtˈare	k ə w t ˈa r e		HUNT_VERB_1			
 Aromanian	Aromanian			HUNT_VERB	cãftari	kəftˈari	k ə f t ˈa r i		HUNT_VERB_1			
 Neapolitan	Neapolitan			HUNT_VERB	caccià	kaʃʃˈa	k a ʃ ʃ ˈa		HUNT_VERB_1			
@@ -2901,7 +2965,7 @@ Franco-Provençal	Franco-Provençal			COLOR_NOUN	color	kulˈɔʁ	k u l ˈɔ ʁ		
 Occitan	Occitan			COLOR_NOUN	color	kulˈu	k u l ˈu		COLOR_NOUN_1			
 Gascon	Gascon			COLOR_NOUN	color	kulˈu	k u l ˈu		COLOR_NOUN_1			
 Catalan	Catalan			COLOR_NOUN	color	kulˈo	k u l ˈo		COLOR_NOUN_1			
-Valencian	Valencian			COLOR_NOUN	color	kulˈor	k u l ˈo r		COLOR_NOUN_1			
+Valencian	Valencian			COLOR_NOUN	color	kolˈor	k o l ˈo r		COLOR_NOUN_1			
 Aragonese	Aragonese			COLOR_NOUN	color	kolˈoɾ	k o l ˈo ɾ		COLOR_NOUN_1			
 Spanish	Spanish			COLOR_NOUN	color	kolˈoɾ	k o l ˈo ɾ		COLOR_NOUN_1			
 Asturian	Asturian			COLOR_NOUN	color	kolˈoɾ	k o l ˈo ɾ		COLOR_NOUN_1			
@@ -2926,7 +2990,7 @@ Walloon	Walloon			BE ACQUAINTED WITH_VERB	kinoxhe	kinˈɔʃ	k i n ˈɔ ʃ		BE AC
 Occitan	Occitan			BE ACQUAINTED WITH_VERB	conéisser	kunˈejse	k u n ˈe j s e		BE ACQUAINTED WITH_VERB_2			
 Gascon	Gascon			BE ACQUAINTED WITH_VERB	conéisher	kunˈejʃe	k u n ˈe j ʃ e		BE ACQUAINTED WITH_VERB_2			
 Catalan	Catalan			BE ACQUAINTED WITH_VERB	conèixer	kunˈɛʃə	k u n ˈɛ ʃ ə		BE ACQUAINTED WITH_VERB_2			
-Valencian	Valencian			BE ACQUAINTED WITH_VERB	conèixer	kunˈæʃer	k u n ˈæ ʃ e r		BE ACQUAINTED WITH_VERB_2			
+Valencian	Valencian			BE ACQUAINTED WITH_VERB	conèixer	konˈæʃer	k o n ˈæ ʃ e r		BE ACQUAINTED WITH_VERB_2			
 Aragonese	Aragonese			BE ACQUAINTED WITH_VERB	conoixer	konojʃˈeɾ	k o n o j ʃ ˈe ɾ		BE ACQUAINTED WITH_VERB_2			
 Spanish	Spanish			BE ACQUAINTED WITH_VERB	conocer	konoθˈeɾ	k o n o θ ˈe ɾ		BE ACQUAINTED WITH_VERB_2			
 Asturian	Asturian			BE ACQUAINTED WITH_VERB	conocer	konoθˈeɾ	k o n o θ ˈe ɾ		BE ACQUAINTED WITH_VERB_2			
@@ -3671,7 +3735,7 @@ Savoyard	Savoyard			SLEEP_VERB	dromi	dromˈi	d r o m ˈi		SLEEP_VERB_1
 Occitan	Occitan			SLEEP_VERB	dormir	durmˈi	d u r m ˈi		SLEEP_VERB_1			
 Gascon	Gascon			SLEEP_VERB	dromir	dɾumˈi	d ɾ u m ˈi		SLEEP_VERB_1			
 Catalan	Catalan			SLEEP_VERB	dormir	durmˈi	d u r m ˈi		SLEEP_VERB_1			
-Valencian	Valencian			SLEEP_VERB	dormir	durmˈir	d u r m ˈi r		SLEEP_VERB_1			
+Valencian	Valencian			SLEEP_VERB	dormir	dormˈir	d o r m ˈi r		SLEEP_VERB_1			
 Aragonese	Aragonese			SLEEP_VERB	dormir	doɾmˈiɾ	d o ɾ m ˈi ɾ		SLEEP_VERB_1			
 Spanish	Spanish			SLEEP_VERB	dormir	doɾmˈiɾ	d o ɾ m ˈi ɾ		SLEEP_VERB_1			
 Asturian	Asturian			SLEEP_VERB	dormir	doɾmˈiɾ	d o ɾ m ˈi ɾ		SLEEP_VERB_1			
@@ -4065,40 +4129,40 @@ Asturian	Asturian			FATE_NOUN	fada	fˈaða	f ˈa ð a		FATE_NOUN_1
 Galician	Galician			FATE_NOUN	fada	fˈaðɐ	f ˈa ð ɐ		FATE_NOUN_1			
 Portuguese	Portuguese			FATE_NOUN	fada	fˈaðɐ	f ˈa ð ɐ		FATE_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			FATE_NOUN	fada	fˈadɐ	f ˈa d ɐ		FATE_NOUN_1			
-Latin	Latin			WOMAN_NOUN	fēminam	fˈeːmɪnãː	f ˈeː m ɪ n ãː		WOMAN_NOUN_1			
-Logudorese	Logudorese			WOMAN_NOUN	femina	fˈemina	f ˈe m i n a		WOMAN_NOUN_1			
-Campidanese	Campidanese			WOMAN_NOUN	femina	fˈemina	f ˈe m i n a		WOMAN_NOUN_1			
-Aromanian	Aromanian			WOMAN_NOUN	feaminã	fe̯ˈaminə	f e̯ˈa m i n ə		WOMAN_NOUN_1			
-Dalmatian	Dalmatian			WOMAN_NOUN	femia	fˈemja	f ˈe m j a		WOMAN_NOUN_1			
-Sicilian	Sicilian			WOMAN_NOUN	fìmmina	fˈimmɪna	f ˈi m m ɪ n a		WOMAN_NOUN_1			
-Neapolitan	Neapolitan			WOMAN_NOUN	femmena	fˈemmənə	f ˈe m m ə n ə		WOMAN_NOUN_1			
-Corsican	Corsican			WOMAN_NOUN	femina	fˈɛmina	f ˈɛ m i n a		WOMAN_NOUN_1			
-Italian	Italian			WOMAN_NOUN	femmina	fˈemmina	f ˈe m m i n a		WOMAN_NOUN_1			
-Venetian	Venetian			WOMAN_NOUN	fémena	fˈemena	f ˈe m e n a		WOMAN_NOUN_1			
-Bellunese	Bellunese			WOMAN_NOUN	fémena	fˈemena	f ˈe m e n a		WOMAN_NOUN_1			
-Ligurian	Ligurian			WOMAN_NOUN	fémmina	fˈemina	f ˈe m i n a		WOMAN_NOUN_1			
-Piedmontese	Piedmontese			WOMAN_NOUN	fomna	fˈɔmna	f ˈɔ m n a		WOMAN_NOUN_1			
-Western Lombard	Western Lombard			WOMAN_NOUN	femena	fˈɛmena	f ˈɛ m e n a		WOMAN_NOUN_1			
-Eastern Lombard	Eastern Lombard			WOMAN_NOUN	fèmna	fˈɛmna	f ˈɛ m n a		WOMAN_NOUN_1			
-Ladin	Ladin			WOMAN_NOUN	femena	fˈemena	f ˈe m e n a		WOMAN_NOUN_1			
-Friulian	Friulian			WOMAN_NOUN	femine	fˈemine	f ˈe m i n e		WOMAN_NOUN_1			
-Romansch	Romansch			WOMAN_NOUN	femna	fˈemnə	f ˈe m n ə		WOMAN_NOUN_1			
-Old French	Old French			WOMAN_NOUN	fame	fˈãmə	f ˈã m ə		WOMAN_NOUN_1			
-French	French			WOMAN_NOUN	femme	fam	f a m		WOMAN_NOUN_1			
-Québécois French	Québécois French			WOMAN_NOUN	femme	fam	f a m		WOMAN_NOUN_1			
-Walloon	Walloon			WOMAN_NOUN	feme	fˈɛm	f ˈɛ m		WOMAN_NOUN_1			
-Franco-Provençal	Franco-Provençal			WOMAN_NOUN	fèna	fˈɛna	f ˈɛ n a		WOMAN_NOUN_1			
-Savoyard	Savoyard			WOMAN_NOUN	fèna	fˈɛna	f ˈɛ n a		WOMAN_NOUN_1			
-Occitan	Occitan			WOMAN_NOUN	femna	fˈennɔ	f ˈe n n ɔ		WOMAN_NOUN_1			
-Gascon	Gascon			WOMAN_NOUN	hemna	hˈennɔ	h ˈe n n ɔ		WOMAN_NOUN_1			
-Catalan	Catalan			WOMAN_NOUN	fembra	fˈɛmbrə	f ˈɛ m b r ə		WOMAN_NOUN_1			
-Valencian	Valencian			WOMAN_NOUN	fembra	fˈæmbrɜ	f ˈæ m b r ɜ		WOMAN_NOUN_1			
-Aragonese	Aragonese			WOMAN_NOUN	fembra	fˈembɾa	f ˈe m b ɾ a		WOMAN_NOUN_1			
-Spanish	Spanish			WOMAN_NOUN	hembra	ˈembɾa	ˈe m b ɾ a		WOMAN_NOUN_1			
-Asturian	Asturian			WOMAN_NOUN	fema	fˈema	f ˈe m a		WOMAN_NOUN_1			
-Galician	Galician			WOMAN_NOUN	femia	fˈemjɐ	f ˈe m j ɐ		WOMAN_NOUN_1			
-Portuguese	Portuguese			WOMAN_NOUN	fêmea	fˈemjɐ	f ˈe m j ɐ		WOMAN_NOUN_1			
-Brazilian Portuguese	Brazilian Portuguese			WOMAN_NOUN	fêmea	fˈẽmeɐ	f ˈẽ m e ɐ		WOMAN_NOUN_1			
+Latin	Latin			WOMAN_FEMALE_NOUN	fēminam	fˈeːmɪnãː	f ˈeː m ɪ n ãː		WOMAN_FEMALE_NOUN_1			
+Logudorese	Logudorese			WOMAN_FEMALE_NOUN	femina	fˈemina	f ˈe m i n a		WOMAN_FEMALE_NOUN_1			
+Campidanese	Campidanese			WOMAN_FEMALE_NOUN	femina	fˈemina	f ˈe m i n a		WOMAN_FEMALE_NOUN_1			
+Aromanian	Aromanian			WOMAN_FEMALE_NOUN	feaminã	fe̯ˈaminə	f e̯ˈa m i n ə		WOMAN_FEMALE_NOUN_1			
+Dalmatian	Dalmatian			WOMAN_FEMALE_NOUN	femia	fˈemja	f ˈe m j a		WOMAN_FEMALE_NOUN_1			
+Sicilian	Sicilian			WOMAN_FEMALE_NOUN	fìmmina	fˈimmɪna	f ˈi m m ɪ n a		WOMAN_FEMALE_NOUN_1			
+Neapolitan	Neapolitan			WOMAN_FEMALE_NOUN	femmena	fˈemmənə	f ˈe m m ə n ə		WOMAN_FEMALE_NOUN_1			
+Corsican	Corsican			WOMAN_FEMALE_NOUN	femina	fˈɛmina	f ˈɛ m i n a		WOMAN_FEMALE_NOUN_1			
+Italian	Italian			WOMAN_FEMALE_NOUN	femmina	fˈemmina	f ˈe m m i n a		WOMAN_FEMALE_NOUN_1			
+Venetian	Venetian			WOMAN_FEMALE_NOUN	fémena	fˈemena	f ˈe m e n a		WOMAN_FEMALE_NOUN_1			
+Bellunese	Bellunese			WOMAN_FEMALE_NOUN	fémena	fˈemena	f ˈe m e n a		WOMAN_FEMALE_NOUN_1			
+Ligurian	Ligurian			WOMAN_FEMALE_NOUN	fémmina	fˈemina	f ˈe m i n a		WOMAN_FEMALE_NOUN_1			
+Piedmontese	Piedmontese			WOMAN_FEMALE_NOUN	fomna	fˈɔmna	f ˈɔ m n a		WOMAN_FEMALE_NOUN_1			
+Western Lombard	Western Lombard			WOMAN_FEMALE_NOUN	femena	fˈɛmena	f ˈɛ m e n a		WOMAN_FEMALE_NOUN_1			
+Eastern Lombard	Eastern Lombard			WOMAN_FEMALE_NOUN	fèmna	fˈɛmna	f ˈɛ m n a		WOMAN_FEMALE_NOUN_1			
+Ladin	Ladin			WOMAN_FEMALE_NOUN	femena	fˈemena	f ˈe m e n a		WOMAN_FEMALE_NOUN_1			
+Friulian	Friulian			WOMAN_FEMALE_NOUN	femine	fˈemine	f ˈe m i n e		WOMAN_FEMALE_NOUN_1			
+Romansch	Romansch			WOMAN_FEMALE_NOUN	femna	fˈemnə	f ˈe m n ə		WOMAN_FEMALE_NOUN_1			
+Old French	Old French			WOMAN_FEMALE_NOUN	fame	fˈãmə	f ˈã m ə		WOMAN_FEMALE_NOUN_1			
+French	French			WOMAN_FEMALE_NOUN	femme	fam	f a m		WOMAN_FEMALE_NOUN_1			
+Québécois French	Québécois French			WOMAN_FEMALE_NOUN	femme	fam	f a m		WOMAN_FEMALE_NOUN_1			
+Walloon	Walloon			WOMAN_FEMALE_NOUN	feme	fˈɛm	f ˈɛ m		WOMAN_FEMALE_NOUN_1			
+Franco-Provençal	Franco-Provençal			WOMAN_FEMALE_NOUN	fèna	fˈɛna	f ˈɛ n a		WOMAN_FEMALE_NOUN_1			
+Savoyard	Savoyard			WOMAN_FEMALE_NOUN	fèna	fˈɛna	f ˈɛ n a		WOMAN_FEMALE_NOUN_1			
+Occitan	Occitan			WOMAN_FEMALE_NOUN	femna	fˈennɔ	f ˈe n n ɔ		WOMAN_FEMALE_NOUN_1			
+Gascon	Gascon			WOMAN_FEMALE_NOUN	hemna	hˈennɔ	h ˈe n n ɔ		WOMAN_FEMALE_NOUN_1			
+Catalan	Catalan			WOMAN_FEMALE_NOUN	fembra	fˈɛmbrə	f ˈɛ m b r ə		WOMAN_FEMALE_NOUN_1			
+Valencian	Valencian			WOMAN_FEMALE_NOUN	fembra	fˈæmbrɜ	f ˈæ m b r ɜ		WOMAN_FEMALE_NOUN_1			
+Aragonese	Aragonese			WOMAN_FEMALE_NOUN	fembra	fˈembɾa	f ˈe m b ɾ a		WOMAN_FEMALE_NOUN_1			
+Spanish	Spanish			WOMAN_FEMALE_NOUN	hembra	ˈembɾa	ˈe m b ɾ a		WOMAN_FEMALE_NOUN_1			
+Asturian	Asturian			WOMAN_FEMALE_NOUN	fema	fˈema	f ˈe m a		WOMAN_FEMALE_NOUN_1			
+Galician	Galician			WOMAN_FEMALE_NOUN	femia	fˈemjɐ	f ˈe m j ɐ		WOMAN_FEMALE_NOUN_1			
+Portuguese	Portuguese			WOMAN_FEMALE_NOUN	fêmea	fˈemjɐ	f ˈe m j ɐ		WOMAN_FEMALE_NOUN_1			
+Brazilian Portuguese	Brazilian Portuguese			WOMAN_FEMALE_NOUN	fêmea	fˈẽmeɐ	f ˈẽ m e ɐ		WOMAN_FEMALE_NOUN_1			
 Latin	Latin			IRON_NOUN	ferrum	fˈɛrrʊ̃ː	f ˈɛ r r ʊ̃ː		IRON_NOUN_1			
 Logudorese	Logudorese			IRON_NOUN	ferru	fˈerru	f ˈe r r u		IRON_NOUN_1			
 Campidanese	Campidanese			IRON_NOUN	ferru	fˈerru	f ˈe r r u		IRON_NOUN_1			
@@ -4129,7 +4193,7 @@ Franco-Provençal	Franco-Provençal			IRON_NOUN	fér	fˈeʁ	f ˈe ʁ		IRON_NOUN_
 Occitan	Occitan			IRON_NOUN	fèrre	fˈɛre	f ˈɛ r e		IRON_NOUN_1			
 Gascon	Gascon			IRON_NOUN	hèr	hˈɛ	h ˈɛ		IRON_NOUN_1			
 Catalan	Catalan			IRON_NOUN	ferro	fˈɛru	f ˈɛ r u		IRON_NOUN_1			
-Valencian	Valencian			IRON_NOUN	ferro	fˈæru	f ˈæ r u		IRON_NOUN_1			
+Valencian	Valencian			IRON_NOUN	ferro	fˈæro	f ˈæ r o		IRON_NOUN_1			
 Aragonese	Aragonese			IRON_NOUN	fierro	fjˈero	f j ˈe r o		IRON_NOUN_1			
 Spanish	Spanish			IRON_NOUN	hierro	jˈero	j ˈe r o		IRON_NOUN_1			
 Asturian	Asturian			IRON_NOUN	fierru	fjˈeru	f j ˈe r u		IRON_NOUN_1			
@@ -4207,7 +4271,7 @@ Portuguese	Portuguese			LIVER_NOUN	fígado	fˈiɣɐðu	f ˈi ɣ ɐ ð u		LIVER_N
 Brazilian Portuguese	Brazilian Portuguese			LIVER_NOUN	fígado	fˈiɡɐdu	f ˈi ɡ ɐ d u		LIVER_NOUN_1			
 Latin	Latin			DAUGHTER_NOUN	fīliam	fˈiːlʲiãː	f ˈiː lʲ i ãː		DAUGHTER_NOUN_1			
 Logudorese	Logudorese			DAUGHTER_NOUN	fiza	fˈiʣa	f ˈi ʣ a		DAUGHTER_NOUN_1			
-Campidanese	Campidanese			DAUGHTER_NOUN	fiza	fˈiʣa	f ˈi ʣ a		DAUGHTER_NOUN_1			
+Campidanese	Campidanese			DAUGHTER_NOUN	filla	fˈilla	f ˈi l l a		DAUGHTER_NOUN_1			
 Romanian	Romanian			DAUGHTER_NOUN	fie	fˈie	f ˈi e		DAUGHTER_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			DAUGHTER_NOUN	il'ă	ˈiʎə	ˈi ʎ ə		DAUGHTER_NOUN_1			
 Aromanian	Aromanian			DAUGHTER_NOUN	hilji	çˈiʎi	ç ˈi ʎ i		DAUGHTER_NOUN_1			
@@ -4238,7 +4302,7 @@ Valencian	Valencian			DAUGHTER_NOUN	filla	fˈiʎɐ	f ˈi ʎ ɐ		DAUGHTER_NOUN_1
 Aragonese	Aragonese			DAUGHTER_NOUN	filla	fˈiʎa	f ˈi ʎ a		DAUGHTER_NOUN_1			
 Spanish	Spanish			DAUGHTER_NOUN	hija	ˈixa	ˈi x a		DAUGHTER_NOUN_1			
 Asturian	Asturian			DAUGHTER_NOUN	fía	fˈia	f ˈi a		DAUGHTER_NOUN_1			
-Galician	Galician			DAUGHTER_NOUN	filla	fˈiʎɐ	f ˈi ʎ ɐ		DAUGHTER_NOUN_1			
+Galician	Galician			DAUGHTER_NOUN	filla	fˈiɟɐ	f ˈi ɟ ɐ		DAUGHTER_NOUN_1			
 Portuguese	Portuguese			DAUGHTER_NOUN	filha	fˈiʎɐ	f ˈi ʎ ɐ		DAUGHTER_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			DAUGHTER_NOUN	filha	fˈiʎɐ	f ˈi ʎ ɐ		DAUGHTER_NOUN_1			
 Latin	Latin			STRING_NOUN	filicellam	filʲikˈɛlʲlʲãː	f i lʲ i k ˈɛ lʲ lʲ ãː		STRING_NOUN_1			
@@ -4246,7 +4310,7 @@ French	French			STRING_NOUN	ficelle	fisɛl	f i s ɛ l		STRING_NOUN_1
 Québécois French	Québécois French			STRING_NOUN	ficelle	fisɛl	f i s ɛ l		STRING_NOUN_1			
 Latin	Latin			SON_NOUN	filium	fˈiːlʲiʊ̃ː	f ˈiː lʲ i ʊ̃ː		SON_NOUN_1			
 Logudorese	Logudorese			SON_NOUN	fizu	fˈiʣu	f ˈi ʣ u		SON_NOUN_1			
-Campidanese	Campidanese			SON_NOUN	fizu	fˈiʣu	f ˈi ʣ u		SON_NOUN_1			
+Campidanese	Campidanese			SON_NOUN	fillu	fˈillu	f ˈi l l u		SON_NOUN_1			
 Romanian	Romanian			SON_NOUN	fiu	fˈiw	f ˈi w		SON_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			SON_NOUN	il'u	ˈiʎu	ˈi ʎ u		SON_NOUN_1			
 Aromanian	Aromanian			SON_NOUN	hilj	çˈiʎ	ç ˈi ʎ		SON_NOUN_1			
@@ -4388,7 +4452,7 @@ Campidanese	Campidanese			FLOWER_NOUN	frori	frˈori	f r ˈo r i		FLOWER_NOUN_1
 Romanian	Romanian			FLOWER_NOUN	floare	flo̯ˈare	f l o̯ˈa r e		FLOWER_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			FLOWER_NOUN	floari	flo̯ˈari	f l o̯ˈa r i		FLOWER_NOUN_1			
 Aromanian	Aromanian			FLOWER_NOUN	floari	flo̯ˈari	f l o̯ˈa r i		FLOWER_NOUN_1			
-Dalmatian	Dalmatian			FLOWER_NOUN	fiaur	fjˈawr	f j ˈa w r		FLOWER_NOUN_1			
+Dalmatian	Dalmatian			FLOWER_NOUN	fiaur	fjˈawr	f j ˈa w r		FLOWER_NOUN_1	TRUE		
 Sicilian	Sicilian			FLOWER_NOUN	ciuri	çˈuɾɪ	ç ˈu ɾ ɪ		FLOWER_NOUN_1			
 Neapolitan	Neapolitan			FLOWER_NOUN	ciore	ʃˈoɾə	ʃ ˈo ɾ ə		FLOWER_NOUN_1			
 Corsican	Corsican			FLOWER_NOUN	fiore	fjˈɔre	f j ˈɔ r e		FLOWER_NOUN_1			
@@ -4476,7 +4540,7 @@ Portuguese	Portuguese			FIRE_NOUN	fogo	fˈoɣu	f ˈo ɣ u		FIRE_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			FIRE_NOUN	fogo	fˈoɡu	f ˈo ɡ u		FIRE_NOUN_1			
 Latin	Latin			LEAF_NOUN	foliam	fˈɔlʲiãː	f ˈɔ lʲ i ãː		LEAF_NOUN_1			
 Logudorese	Logudorese			LEAF_NOUN	foza	fˈoʣa	f ˈo ʣ a		LEAF_NOUN_1			
-Campidanese	Campidanese			LEAF_NOUN	foza	fˈoʣa	f ˈo ʣ a		LEAF_NOUN_1			
+Campidanese	Campidanese			LEAF_NOUN	folla	fˈolla	f ˈo l l a		LEAF_NOUN_1			
 Romanian	Romanian			LEAF_NOUN	foaie	fo̯ˈaje	f o̯ˈa j e		LEAF_NOUN_1			
 Dalmatian	Dalmatian			LEAF_NOUN	fualja	fwˈaʎa	f w ˈa ʎ a		LEAF_NOUN_1			
 Sicilian	Sicilian			LEAF_NOUN	fogghia	fˈɔɟɟa	f ˈɔ ɟ ɟ a		LEAF_NOUN_1			
@@ -4506,7 +4570,7 @@ Valencian	Valencian			LEAF_NOUN	fulla	fˈuʎɐ	f ˈu ʎ ɐ		LEAF_NOUN_1
 Aragonese	Aragonese			LEAF_NOUN	fuella	fwˈeʎa	f w ˈe ʎ a		LEAF_NOUN_1			
 Spanish	Spanish			LEAF_NOUN	hoja	ˈoxa	ˈo x a		LEAF_NOUN_1			
 Asturian	Asturian			LEAF_NOUN	fueya	fwˈeʝa	f w ˈe ʝ a		LEAF_NOUN_1			
-Galician	Galician			LEAF_NOUN	folla	fˈoʎɐ	f ˈo ʎ ɐ		LEAF_NOUN_1			
+Galician	Galician			LEAF_NOUN	folla	fˈoɟɐ	f ˈo ɟ ɐ		LEAF_NOUN_1			
 Portuguese	Portuguese			LEAF_NOUN	folha	fˈoʎɐ	f ˈo ʎ ɐ		LEAF_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			LEAF_NOUN	folha	fˈoʎɐ	f ˈo ʎ ɐ		LEAF_NOUN_1			
 Latin	Latin			CRAZY_ADJ	follem	fˈɔlʲlʲɛ̃ː	f ˈɔ lʲ lʲ ɛ̃ː		CRAZY_ADJ_1			
@@ -4521,7 +4585,7 @@ Romanian	Romanian			BEAUTIFUL (M)_ADJ	frumoasă	frumo̯ˈasə	f r u m o̯ˈa s �
 Latin	Latin			BEAUTIFUL (M)_ADJ	fōrmōsum	foːrmˈoːsʊ̃ː	f oː r m ˈoː s ʊ̃ː		BEAUTIFUL (M)_ADJ_3			
 Romanian	Romanian			BEAUTIFUL (M)_ADJ	frumos	frumˈos	f r u m ˈo s		BEAUTIFUL (M)_ADJ_3			
 Catalan	Catalan			BEAUTIFUL (M)_ADJ	formós	fuɾmˈos	f u ɾ m ˈo s		BEAUTIFUL (M)_ADJ_3			
-Valencian	Valencian			BEAUTIFUL (M)_ADJ	formós	fuɾmˈos	f u ɾ m ˈo s		BEAUTIFUL (M)_ADJ_3			
+Valencian	Valencian			BEAUTIFUL (M)_ADJ	formós	foɾmˈos	f o ɾ m ˈo s		BEAUTIFUL (M)_ADJ_3			
 Spanish	Spanish			BEAUTIFUL (M)_ADJ	hermoso	eɾmˈoso	e ɾ m ˈo s o		BEAUTIFUL (M)_ADJ_3			
 Asturian	Asturian			BEAUTIFUL (M)_ADJ	fermosu	feɾmˈosu	f e ɾ m ˈo s u		BEAUTIFUL (M)_ADJ_3			
 Galician	Galician			BEAUTIFUL (M)_ADJ	fermoso	feɾmˈoso	f e ɾ m ˈo s o		BEAUTIFUL (M)_ADJ_3			
@@ -4762,7 +4826,7 @@ Portuguese	Portuguese			FREEZE_VERB	gear	ʒjˈaɾ	ʒ j ˈa ɾ		FREEZE_VERB_2
 Brazilian Portuguese	Brazilian Portuguese			FREEZE_VERB	gear	ʒeˈah	ʒ e ˈa h		FREEZE_VERB_2			
 Latin	Latin			ICE_NOUN	gelū	ɡˈɛɫuː	ɡ ˈɛ ɫ uː		ICE_NOUN_2			
 Logudorese	Logudorese			ICE_NOUN	belu	bˈelu	b ˈe l u		ICE_NOUN_2			
-Campidanese	Campidanese			ICE_NOUN	gelu	ʤˈelu	ʤ ˈe l u		ICE_NOUN_2			
+Campidanese	Campidanese			ICE_NOUN	belu	bˈelu	b ˈe l u		ICE_NOUN_2			
 Romanian	Romanian			ICE_NOUN	ger	ʤˈer	ʤ ˈe r		ICE_NOUN_2			
 Aromanian	Aromanian			ICE_NOUN	dzer	ʣˈer	ʣ ˈe r		ICE_NOUN_2			
 Sicilian	Sicilian			ICE_NOUN	jelu	jˈelʊ	j ˈe l ʊ		ICE_NOUN_2			
@@ -4789,7 +4853,8 @@ Galician	Galician			ICE_NOUN	xeo	ʃˈeʊ	ʃ ˈe ʊ		ICE_NOUN_2
 Portuguese	Portuguese			ICE_NOUN	gelo	ʒˈelu	ʒ ˈe l u		ICE_NOUN_2	TRUE		
 Brazilian Portuguese	Brazilian Portuguese			ICE_NOUN	gelo	ʒˈelu	ʒ ˈe l u		ICE_NOUN_2	TRUE		
 Latin	Latin			SON-IN-LAW_NOUN	generum	ɡˈɛnɛrʊ̃ː	ɡ ˈɛ n ɛ r ʊ̃ː		SON-IN-LAW_NOUN_1			
-Logudorese	Logudorese			SON-IN-LAW_NOUN	ghèneru	ɡˈeneru	ɡ ˈe n e r u		SON-IN-LAW_NOUN_1			
+Logudorese	Logudorese			SON-IN-LAW_NOUN	benneru	bˈeneru	b ˈe n e r u		SON-IN-LAW_NOUN_1			
+Campidanese	Campidanese			SON-IN-LAW_NOUN	benneru	bˈeneru	b ˈe n e r u		SON-IN-LAW_NOUN_1			
 Romanian	Romanian			SON-IN-LAW_NOUN	ginere	ʤˈinere	ʤ ˈi n e r e		SON-IN-LAW_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			SON-IN-LAW_NOUN	ziniri	zˈiniri	z ˈi n i r i		SON-IN-LAW_NOUN_1			
 Aromanian	Aromanian			SON-IN-LAW_NOUN	dziniri	ʣˈiniri	ʣ ˈi n i r i		SON-IN-LAW_NOUN_1			
@@ -4897,7 +4962,7 @@ Gascon	Gascon			KNEE_NOUN	jolh	ʒˈuʎ	ʒ ˈu ʎ		KNEE_NOUN_1
 Catalan	Catalan			KNEE_NOUN	genoll	ʒənˈoʎ	ʒ ə n ˈo ʎ		KNEE_NOUN_1			
 Valencian	Valencian			KNEE_NOUN	genoll	ʤenˈoʎ	ʤ e n ˈo ʎ		KNEE_NOUN_1			
 Aragonese	Aragonese			KNEE_NOUN	chenullo	ʧenˈuʎo	ʧ e n ˈu ʎ o		KNEE_NOUN_1			
-Galician	Galician			KNEE_NOUN	xeonllo	ʃeˈonʎʊ	ʃ e ˈo n ʎ ʊ		KNEE_NOUN_1			
+Galician	Galician			KNEE_NOUN	xeonllo	ʃeˈonɟʊ	ʃ e ˈo n ɟ ʊ		KNEE_NOUN_1			
 Portuguese	Portuguese			KNEE_NOUN	joelho	ʒwˈɐjʎu	ʒ w ˈɐ j ʎ u		KNEE_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			KNEE_NOUN	joelho	ʒuˈeʎu	ʒ u ˈe ʎ u		KNEE_NOUN_1			
 Latin	Latin			BROTHER_NOUN	germānum	ɡɛrmˈaːnʊ̃ː	ɡ ɛ r m ˈaː n ʊ̃ː		BROTHER_NOUN_2			
@@ -4912,7 +4977,7 @@ Galician	Galician			BROTHER_NOUN	irmán	iɾmˈɑŋ	i ɾ m ˈɑ ŋ		BROTHER_NOUN_
 Portuguese	Portuguese			BROTHER_NOUN	irmão	iɾmˈɐ̃w̃	i ɾ m ˈɐ̃ w̃		BROTHER_NOUN_2			
 Brazilian Portuguese	Brazilian Portuguese			BROTHER_NOUN	irmão	iɦmˈɐ̃w̃	i ɦ m ˈɐ̃ w̃		BROTHER_NOUN_2			
 Latin	Latin			GUMS_NOUN	gingīvam	ɡɪŋɡˈiːwãː	ɡ ɪ ŋ ɡ ˈiː w ãː		GUMS_NOUN_1			
-Logudorese	Logudorese			GUMS_NOUN	ghinghia	ɡiŋɡˈia	ɡ i ŋ ɡ ˈi a		GUMS_NOUN_1			
+Logudorese	Logudorese			GUMS_NOUN	binghia	biŋɡˈia	b i ŋ ɡ ˈi a		GUMS_NOUN_1			
 Romanian	Romanian			GUMS_NOUN	gingie	ʤinʤˈie	ʤ i n ʤ ˈi e		GUMS_NOUN_1			
 Aromanian	Aromanian			GUMS_NOUN	dzindzii	ʣinʣˈii	ʣ i n ʣ ˈi i		GUMS_NOUN_1			
 Neapolitan	Neapolitan			GUMS_NOUN	gingie	ʤinʤˈiə	ʤ i n ʤ ˈi ə		GUMS_NOUN_1			
@@ -5092,8 +5157,6 @@ Galician	Galician			THROAT_NOUN	gola	ɡˈɔlɐ	ɡ ˈɔ l ɐ		THROAT_NOUN_1
 Portuguese	Portuguese			THROAT_NOUN	gola	ɡˈɔlɐ	ɡ ˈɔ l ɐ		THROAT_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			THROAT_NOUN	gola	ɡˈɔlɐ	ɡ ˈɔ l ɐ		THROAT_NOUN_1			
 Latin	Latin			DROP_NOUN	guttam	ɡˈʊttãː	ɡ ˈʊ t t ãː		DROP_NOUN_1			
-Logudorese	Logudorese			DROP_NOUN	guta	ɡˈuta	ɡ ˈu t a		DROP_NOUN_1			
-Campidanese	Campidanese			DROP_NOUN	guta	ɡˈuta	ɡ ˈu t a		DROP_NOUN_1			
 Romanian	Romanian			DROP_NOUN	gută	ɡˈutə	ɡ ˈu t ə		DROP_NOUN_1			
 Western Lombard	Western Lombard			DROP_NOUN	gota	ɡˈuːta	ɡ ˈuː t a		DROP_NOUN_1			
 Eastern Lombard	Eastern Lombard			DROP_NOUN	góta	ɡˈota	ɡ ˈo t a		DROP_NOUN_1			
@@ -5116,6 +5179,8 @@ Galician	Galician			DROP_NOUN	gota	ɡˈotɐ	ɡ ˈo t ɐ		DROP_NOUN_1
 Portuguese	Portuguese			DROP_NOUN	gota	ɡˈotɐ	ɡ ˈo t ɐ		DROP_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			DROP_NOUN	gota	ɡˈotɐ	ɡ ˈo t ɐ		DROP_NOUN_1			
 Latin	Latin			DROP_NOUN	guttiam	ɡˈʊttiãː	ɡ ˈʊ t t i ãː		DROP_NOUN_2			
+Logudorese	Logudorese			DROP_NOUN	butiu	bˈutju	b ˈu t j u		DROP_NOUN_2			
+Campidanese	Campidanese			DROP_NOUN	butiu	bˈutju	b ˈu t j u		DROP_NOUN_2			
 Sicilian	Sicilian			DROP_NOUN	guccia	ɡˈuʧʧa	ɡ ˈu ʧ ʧ a		DROP_NOUN_2			
 Neapolitan	Neapolitan			DROP_NOUN	guccia	ɡˈuʃʃə	ɡ ˈu ʃ ʃ ə		DROP_NOUN_2			
 Corsican	Corsican			DROP_NOUN	goccia	ɡˈɔʧʧa	ɡ ˈɔ ʧ ʧ a		DROP_NOUN_2			
@@ -5155,7 +5220,7 @@ Corsican	Corsican			GRASS_NOUN	erba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1
 Italian	Italian			GRASS_NOUN	erba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
 Venetian	Venetian			GRASS_NOUN	èrba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
 Bellunese	Bellunese			GRASS_NOUN	èrba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
-Emilian	Emilian			GRASS_NOUN	êrba	ˈrba	ˈr b a		GRASS_NOUN_1			
+Emilian	Emilian			GRASS_NOUN	êrba	ˈɛːrba	ˈɛː r b a		GRASS_NOUN_1			
 Piedmontese	Piedmontese			GRASS_NOUN	erba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
 Western Lombard	Western Lombard			GRASS_NOUN	erba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
 Eastern Lombard	Eastern Lombard			GRASS_NOUN	èrba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
@@ -5196,8 +5261,8 @@ Valencian	Valencian			WINTER_NOUN	hivern	ivˈærn	i v ˈæ r n		WINTER_NOUN_2
 Aragonese	Aragonese			WINTER_NOUN	ibierno	iβjˈeɾno	i β j ˈe ɾ n o		WINTER_NOUN_2			
 Asturian	Asturian			WINTER_NOUN	iviernu	iβjˈeɾnu	i β j ˈe ɾ n u		WINTER_NOUN_2			
 Latin	Latin			SPAIN_PROPN	Hispāniam	hɪspˈaːniãː	h ɪ s p ˈaː n i ãː		SPAIN_PROPN_1			
-Logudorese	Logudorese			SPAIN_PROPN	Ispagna	ispˈaɲɲa	i s p ˈa ɲ ɲ a		SPAIN_PROPN_1			
-Campidanese	Campidanese			SPAIN_PROPN	Ispagna	ispˈaɲɲa	i s p ˈa ɲ ɲ a		SPAIN_PROPN_1			
+Logudorese	Logudorese			SPAIN_PROPN	Ispagna	ispˈaɲa	i s p ˈa ɲ a		SPAIN_PROPN_1			
+Campidanese	Campidanese			SPAIN_PROPN	Ispagna	ispˈaɲa	i s p ˈa ɲ a		SPAIN_PROPN_1			
 Romanian	Romanian			SPAIN_PROPN	Spania	spˈanja	s p ˈa n j a		SPAIN_PROPN_1			
 Aromanian	Aromanian			SPAIN_PROPN	Ispania	ispˈanja	i s p ˈa n j a		SPAIN_PROPN_1			
 Sicilian	Sicilian			SPAIN_PROPN	Spagna	ʃpˈaɲɲa	ʃ p ˈa ɲ ɲ a		SPAIN_PROPN_1			
@@ -5375,12 +5440,12 @@ Galician	Galician			GAME_NOUN	xogo	ʃˈɔɣʊ	ʃ ˈɔ ɣ ʊ		GAME_NOUN_1
 Portuguese	Portuguese			GAME_NOUN	jogo	ʒˈoɣu	ʒ ˈo ɣ u		GAME_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			GAME_NOUN	jogo	ʒˈoɡu	ʒ ˈo ɡ u		GAME_NOUN_1			
 Latin	Latin			SHE_PRON	ipsam	ˈɪpsãː	ˈɪ p s ãː		SHE_PRON_3			
-Logudorese	Logudorese			SHE_PRON	issa	ˈissa	ˈi s s a		SHE_PRON_3			
-Campidanese	Campidanese			SHE_PRON	issa	ˈissa	ˈi s s a		SHE_PRON_3			
+Logudorese	Logudorese			SHE_PRON	issa	ˈisa	ˈi s a		SHE_PRON_3			
+Campidanese	Campidanese			SHE_PRON	issa	ˈisa	ˈi s a		SHE_PRON_3			
 Neapolitan	Neapolitan			SHE_PRON	éssa	ˈessə	ˈe s s ə		SHE_PRON_3			
 Latin	Latin			HE_PRON	ipsum	ˈɪpsʊ̃ː	ˈɪ p s ʊ̃ː		HE_PRON_3			
-Logudorese	Logudorese			HE_PRON	issu	ˈissu	ˈi s s u		HE_PRON_3			
-Campidanese	Campidanese			HE_PRON	issu	ˈissu	ˈi s s u		HE_PRON_3			
+Logudorese	Logudorese			HE_PRON	issu	ˈisu	ˈi s u		HE_PRON_3			
+Campidanese	Campidanese			HE_PRON	issu	ˈisu	ˈi s u		HE_PRON_3			
 Neapolitan	Neapolitan			HE_PRON	isso	ˈissə	ˈi s s ə		HE_PRON_3			
 Latin	Latin			JUDGE_NOUN	iūdicem	jˈuːdɪkɛ̃ː	j ˈuː d ɪ k ɛ̃ː		JUDGE_NOUN_1			
 Logudorese	Logudorese			JUDGE_NOUN	judighe	jˈuðiɣe	j ˈu ð i ɣ e		JUDGE_NOUN_1			
@@ -6488,12 +6553,12 @@ Valencian	Valencian			BETTER_ADJ	millor	miʎˈor	m i ʎ ˈo r		BETTER_ADJ_1
 Aragonese	Aragonese			BETTER_ADJ	millor	miʎˈoɾ	m i ʎ ˈo ɾ		BETTER_ADJ_1			
 Spanish	Spanish			BETTER_ADJ	mejor	mexˈoɾ	m e x ˈo ɾ		BETTER_ADJ_1			
 Asturian	Asturian			BETTER_ADJ	meyor	meʝˈoɾ	m e ʝ ˈo ɾ		BETTER_ADJ_1			
-Galician	Galician			BETTER_ADJ	mellor	meʎˈoɾ	m e ʎ ˈo ɾ		BETTER_ADJ_1			
+Galician	Galician			BETTER_ADJ	mellor	meɟˈoɾ	m e ɟ ˈo ɾ		BETTER_ADJ_1			
 Portuguese	Portuguese			BETTER_ADJ	melhor	mɨʎˈɔɾ	m ɨ ʎ ˈɔ ɾ		BETTER_ADJ_1			
 Brazilian Portuguese	Brazilian Portuguese			BETTER_ADJ	melhor	meʎˈɔh	m e ʎ ˈɔ h		BETTER_ADJ_1			
 Latin	Latin			BETTER_ADV	melius	mˈɛlʲiʊs	m ˈɛ lʲ i ʊ s		BETTER_ADV_1			
 Logudorese	Logudorese			BETTER_ADV	mezus	mˈeʣuzŭ	m ˈe ʣ u z ŭ		BETTER_ADV_1			
-Campidanese	Campidanese			BETTER_ADV	mezus	mˈeʣuzŭ	m ˈe ʣ u z ŭ		BETTER_ADV_1			
+Campidanese	Campidanese			BETTER_ADV	mellus	mˈelluzŭ	m ˈe l l u z ŭ		BETTER_ADV_1			
 Sicilian	Sicilian			BETTER_ADV	megghiu	mˈɛɟɟʊ	m ˈɛ ɟ ɟ ʊ		BETTER_ADV_1			
 Neapolitan	Neapolitan			BETTER_ADV	mieglio	mjˈɛʎʎə	m j ˈɛ ʎ ʎ ə		BETTER_ADV_1			
 Corsican	Corsican			BETTER_ADV	megliu	mˈeʎu	m ˈe ʎ u		BETTER_ADV_1			
@@ -6537,7 +6602,7 @@ Portuguese	Portuguese			CRUMB_NOUN	miga	mˈiɣɐ	m ˈi ɣ ɐ		CRUMB_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			CRUMB_NOUN	miga	mˈiɡɐ	m ˈi ɡ ɐ		CRUMB_NOUN_1			
 Latin	Latin			THOUSAND_NUM	mīlle	mˈiːlʲlʲɛ	m ˈiː lʲ lʲ ɛ		THOUSAND_NUM_1			
 Logudorese	Logudorese			THOUSAND_NUM	miza	mˈiʣa	m ˈi ʣ a		THOUSAND_NUM_1			
-Campidanese	Campidanese			THOUSAND_NUM	miza	mˈiʣa	m ˈi ʣ a		THOUSAND_NUM_1			
+Campidanese	Campidanese			THOUSAND_NUM	milli	mˈilli	m ˈi l l i		THOUSAND_NUM_1			
 Romanian	Romanian			THOUSAND_NUM	mie	mˈie	m ˈi e		THOUSAND_NUM_1			
 Megleno-Romanian	Megleno-Romanian			THOUSAND_NUM	mil’ă	mˈiʎə	m ˈi ʎ ə		THOUSAND_NUM_1			
 Aromanian	Aromanian			THOUSAND_NUM	njilje	ɲˈiʎe	ɲ ˈi ʎ e		THOUSAND_NUM_1			
@@ -6651,15 +6716,15 @@ Savoyard	Savoyard			DIE_VERB	mori	morˈi	m o r ˈi		DIE_VERB_1
 Occitan	Occitan			DIE_VERB	morir	muɾˈi	m u ɾ ˈi		DIE_VERB_1			
 Gascon	Gascon			DIE_VERB	morir	muɾˈi	m u ɾ ˈi		DIE_VERB_1			
 Catalan	Catalan			DIE_VERB	morir	muɾˈi	m u ɾ ˈi		DIE_VERB_1			
-Valencian	Valencian			DIE_VERB	morir	muɾˈir	m u ɾ ˈi r		DIE_VERB_1			
+Valencian	Valencian			DIE_VERB	morir	moɾˈir	m o ɾ ˈi r		DIE_VERB_1			
 Spanish	Spanish			DIE_VERB	morir	moɾˈiɾ	m o ɾ ˈi ɾ		DIE_VERB_1			
 Asturian	Asturian			DIE_VERB	morrer	morˈeɾ	m o r ˈe ɾ		DIE_VERB_1			
 Galician	Galician			DIE_VERB	morrer	morˈeɾ	m o r ˈe ɾ		DIE_VERB_1			
 Portuguese	Portuguese			DIE_VERB	morrer	moʁˈeɾ	m o ʁ ˈe ɾ		DIE_VERB_1			
 Brazilian Portuguese	Brazilian Portuguese			DIE_VERB	morrer	mohˈeh	m o h ˈe h		DIE_VERB_1			
 Latin	Latin			BITE_VERB	morsicāre	mɔrsɪkˈaːrɛ	m ɔ r s ɪ k ˈaː r ɛ		BITE_VERB_2			
-Logudorese	Logudorese			BITE_VERB	mòssere	mˈossere	m ˈo s s e r e		BITE_VERB_2			
-Campidanese	Campidanese			BITE_VERB	mòssere	mˈossere	m ˈo s s e r e		BITE_VERB_2			
+Logudorese	Logudorese			BITE_VERB	mòssere	mˈosere	m ˈo s e r e		BITE_VERB_2			
+Campidanese	Campidanese			BITE_VERB	mòssere	mˈosere	m ˈo s e r e		BITE_VERB_2			
 Romanian	Romanian			BITE_VERB	mușcare	muʃkˈare	m u ʃ k ˈa r e		BITE_VERB_2			
 Aromanian	Aromanian			BITE_VERB	mãschari	mɨʃkˈari	m ɨ ʃ k ˈa r i		BITE_VERB_2			
 Dalmatian	Dalmatian			BITE_VERB	morscuor	morskwˈɔr	m o r s k w ˈɔ r		BITE_VERB_2			
@@ -6672,7 +6737,7 @@ Emilian	Emilian			BITE_VERB	muṡghèr	muzɡˈɛr	m u z ɡ ˈɛ r		BITE_VERB_2
 Occitan	Occitan			BITE_VERB	mossegar	museɣˈa	m u s e ɣ ˈa		BITE_VERB_2			
 Gascon	Gascon			BITE_VERB	mossegar	museɣˈa	m u s e ɣ ˈa		BITE_VERB_2			
 Catalan	Catalan			BITE_VERB	mossegar	musəɣˈa	m u s ə ɣ ˈa		BITE_VERB_2			
-Valencian	Valencian			BITE_VERB	mossegar	museɣˈar	m u s e ɣ ˈa r		BITE_VERB_2			
+Valencian	Valencian			BITE_VERB	mossegar	moseɣˈar	m o s e ɣ ˈa r		BITE_VERB_2			
 Aragonese	Aragonese			BITE_VERB	amosegar	amoseɣˈaɾ	a m o s e ɣ ˈa ɾ		BITE_VERB_2			
 Galician	Galician			BITE_VERB	amosegar	amoseɣˈaɾ	a m o s e ɣ ˈa ɾ		BITE_VERB_2			
 Portuguese	Portuguese			BITE_VERB	morsegar	muɾsɨɣˈaɾ	m u ɾ s ɨ ɣ ˈa ɾ		BITE_VERB_2			
@@ -6715,6 +6780,35 @@ Asturian	Asturian			DEATH_NOUN	muerte	mwˈeɾte	m w ˈe ɾ t e		DEATH_NOUN_1
 Galician	Galician			DEATH_NOUN	morte	mˈɔɾtɪ	m ˈɔ ɾ t ɪ		DEATH_NOUN_1			
 Portuguese	Portuguese			DEATH_NOUN	morte	mˈɔɾtɨ	m ˈɔ ɾ t ɨ		DEATH_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			DEATH_NOUN	morte	mˈɔhʧi	m ˈɔ h ʧ i		DEATH_NOUN_1			
+Latin	Latin			WOMAN_WIFE_NOUN	mulierem	mʊlʲiˈɛrɛ̃ː	m ʊ lʲ i ˈɛ r ɛ̃ː		WOMAN_WIFE_NOUN_1			
+Logudorese	Logudorese			WOMAN_WIFE_NOUN	muzere	muʣˈere	m u ʣ ˈe r e		WOMAN_WIFE_NOUN_1			
+Campidanese	Campidanese			WOMAN_WIFE_NOUN	mulleri	mullˈeri	m u l l ˈe r i		WOMAN_WIFE_NOUN_1			
+Romanian	Romanian			WOMAN_WIFE_NOUN	muiere	mujˈere	m u j ˈe r e		WOMAN_WIFE_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			WOMAN_WIFE_NOUN	muľari	muʎˈari	m u ʎ ˈa r i		WOMAN_WIFE_NOUN_1			
+Aromanian	Aromanian			WOMAN_WIFE_NOUN	muljari	muʎˈari	m u ʎ ˈa r i		WOMAN_WIFE_NOUN_1			
+Dalmatian	Dalmatian			WOMAN_WIFE_NOUN	molier	moʎˈer	m o ʎ ˈe r		WOMAN_WIFE_NOUN_1			
+Istriot	Istriot			WOMAN_WIFE_NOUN	muier	mujˈer	m u j ˈe r		WOMAN_WIFE_NOUN_1			
+Sicilian	Sicilian			WOMAN_WIFE_NOUN	mugghieri	muɟɟˈɛrɪ	m u ɟ ɟ ˈɛ r ɪ		WOMAN_WIFE_NOUN_1			
+Neapolitan	Neapolitan			WOMAN_WIFE_NOUN	mugliera	muʎʎˈɛɾə	m u ʎ ʎ ˈɛ ɾ ə		WOMAN_WIFE_NOUN_1			
+Corsican	Corsican			WOMAN_WIFE_NOUN	moglia	mˈɔʎa	m ˈɔ ʎ a		WOMAN_WIFE_NOUN_1			
+Italian	Italian			WOMAN_WIFE_NOUN	moglie	mˈoʎʎe	m ˈo ʎ ʎ e		WOMAN_WIFE_NOUN_1			
+Venetian	Venetian			WOMAN_WIFE_NOUN	mugèr	muʤˈɛr	m u ʤ ˈɛ r		WOMAN_WIFE_NOUN_1			
+Emilian	Emilian			WOMAN_WIFE_NOUN	mujêr	mujˈɛːr	m u j ˈɛː r		WOMAN_WIFE_NOUN_1			
+Ligurian	Ligurian			WOMAN_WIFE_NOUN	moggê	muʤˈeː	m u ʤ ˈeː		WOMAN_WIFE_NOUN_1			
+Piedmontese	Piedmontese			WOMAN_WIFE_NOUN	mojé	mujˈe	m u j ˈe		WOMAN_WIFE_NOUN_1			
+Western Lombard	Western Lombard			WOMAN_WIFE_NOUN	mié	mjˈe	m j ˈe		WOMAN_WIFE_NOUN_1			
+Old French	Old French			WOMAN_WIFE_NOUN	muillier	myʎˈer	m y ʎ ˈe r		WOMAN_WIFE_NOUN_1			
+Franco-Provençal	Franco-Provençal			WOMAN_WIFE_NOUN	mulyer	muʎˈeʁ	m u ʎ ˈe ʁ		WOMAN_WIFE_NOUN_1			
+Occitan	Occitan			WOMAN_WIFE_NOUN	molhèr	muʎˈɛ	m u ʎ ˈɛ		WOMAN_WIFE_NOUN_1			
+Gascon	Gascon			WOMAN_WIFE_NOUN	molhèr	muʎˈɛ	m u ʎ ˈɛ		WOMAN_WIFE_NOUN_1			
+Catalan	Catalan			WOMAN_WIFE_NOUN	muller	muʎˈe	m u ʎ ˈe		WOMAN_WIFE_NOUN_1			
+Valencian	Valencian			WOMAN_WIFE_NOUN	muller	muʎˈer	m u ʎ ˈe r		WOMAN_WIFE_NOUN_1			
+Aragonese	Aragonese			WOMAN_WIFE_NOUN	muller	muʎˈeɾ	m u ʎ ˈe ɾ		WOMAN_WIFE_NOUN_1			
+Spanish	Spanish			WOMAN_WIFE_NOUN	mujer	muxˈeɾ	m u x ˈe ɾ		WOMAN_WIFE_NOUN_1			
+Asturian	Asturian			WOMAN_WIFE_NOUN	muyer	muʝˈeɾ	m u ʝ ˈe ɾ		WOMAN_WIFE_NOUN_1			
+Galician	Galician			WOMAN_WIFE_NOUN	muller	muɟˈɛɾ	m u ɟ ˈɛ ɾ		WOMAN_WIFE_NOUN_1			
+Portuguese	Portuguese			WOMAN_WIFE_NOUN	mulher	muʎˈɛɾ	m u ʎ ˈɛ ɾ		WOMAN_WIFE_NOUN_1			
+Brazilian Portuguese	Brazilian Portuguese			WOMAN_WIFE_NOUN	mulher	muʎˈɛh	m u ʎ ˈɛ h		WOMAN_WIFE_NOUN_1			
 Latin	Latin			MANY_ADJ	multum	mˈʊɫtʊ̃ː	m ˈʊ ɫ t ʊ̃ː		MANY_ADJ_1			
 Romanian	Romanian			MANY_ADJ	mult	mˈult	m ˈu l t		MANY_ADJ_1			
 Megleno-Romanian	Megleno-Romanian			MANY_ADJ	mult	mˈult	m ˈu l t		MANY_ADJ_1			
@@ -7237,7 +7331,7 @@ Friulian	Friulian			CLOUD_NOUN	nûl	nˈuːl	n ˈuː l		CLOUD_NOUN_3
 Franco-Provençal	Franco-Provençal			CLOUD_NOUN	niol	ɲˈol	ɲ ˈo l		CLOUD_NOUN_3			
 Occitan	Occitan			CLOUD_NOUN	nívol	nˈiβul	n ˈi β u l		CLOUD_NOUN_3			
 Catalan	Catalan			CLOUD_NOUN	núvol	nˈuβul	n ˈu β u l		CLOUD_NOUN_3			
-Valencian	Valencian			CLOUD_NOUN	núvol	nˈuvul	n ˈu v u l		CLOUD_NOUN_3			
+Valencian	Valencian			CLOUD_NOUN	núvol	nˈuvol	n ˈu v o l		CLOUD_NOUN_3			
 Latin	Latin			NUT_NOUN	nucem	nˈʊkɛ̃ː	n ˈʊ k ɛ̃ː		NUT_NOUN_2			
 Logudorese	Logudorese			NUT_NOUN	nughe	nˈuɣe	n ˈu ɣ e		NUT_NOUN_2			
 Campidanese	Campidanese			NUT_NOUN	nugi	nˈuʒi	n ˈu ʒ i		NUT_NOUN_2			
@@ -7284,7 +7378,7 @@ Québécois French	Québécois French			DARK_ADJ	obscur	ɔpskyʁ	ɔ p s k y ʁ		
 Occitan	Occitan			DARK_ADJ	escur	eskˈy	e s k ˈy		DARK_ADJ_1			
 Gascon	Gascon			DARK_ADJ	escur	eskˈy	e s k ˈy		DARK_ADJ_1			
 Catalan	Catalan			DARK_ADJ	obscur	upskˈur	u p s k ˈu r		DARK_ADJ_1	TRUE		
-Valencian	Valencian			DARK_ADJ	obscur	upskˈur	u p s k ˈu r		DARK_ADJ_1	TRUE		
+Valencian	Valencian			DARK_ADJ	obscur	opskˈur	o p s k ˈu r		DARK_ADJ_1	TRUE		
 Aragonese	Aragonese			DARK_ADJ	escuro	eskˈuɾo	e s k ˈu ɾ o		DARK_ADJ_1			
 Spanish	Spanish			DARK_ADJ	oscuro	oskˈuɾo	o s k ˈu ɾ o		DARK_ADJ_1			
 Spanish	Spanish			DARK_ADJ	escuro	eskˈuɾo	e s k ˈu ɾ o		DARK_ADJ_1			
@@ -7307,7 +7401,7 @@ Québécois French	Québécois French			KILL_VERB	occire	ɔksiʁ	ɔ k s i ʁ		KI
 Occitan	Occitan			KILL_VERB	aucir	awsˈi	a w s ˈi		KILL_VERB_2			
 Gascon	Gascon			KILL_VERB	aucir	awsˈi	a w s ˈi		KILL_VERB_2			
 Catalan	Catalan			KILL_VERB	occir	uksˈi	u k s ˈi		KILL_VERB_2			
-Valencian	Valencian			KILL_VERB	occir	uksˈir	u k s ˈi r		KILL_VERB_2			
+Valencian	Valencian			KILL_VERB	occir	oksˈir	o k s ˈi r		KILL_VERB_2			
 Latin	Latin			EIGHT_NUM	octō	ˈɔktoː	ˈɔ k t oː		EIGHT_NUM_1			
 Logudorese	Logudorese			EIGHT_NUM	oto	ˈoto	ˈo t o		EIGHT_NUM_1			
 Campidanese	Campidanese			EIGHT_NUM	otu	ˈotu	ˈo t u		EIGHT_NUM_1			
@@ -7413,7 +7507,7 @@ Valencian	Valencian			EYE_NOUN	ull	ˈuʎ	ˈu ʎ		EYE_NOUN_1
 Aragonese	Aragonese			EYE_NOUN	uello	wˈeʎo	w ˈe ʎ o		EYE_NOUN_1			
 Spanish	Spanish			EYE_NOUN	ojo	ˈoxo	ˈo x o		EYE_NOUN_1			
 Asturian	Asturian			EYE_NOUN	güeyu	ɡwˈeʝu	ɡ w ˈe ʝ u		EYE_NOUN_1			
-Galician	Galician			EYE_NOUN	ollo	ˈoʎʊ	ˈo ʎ ʊ		EYE_NOUN_1			
+Galician	Galician			EYE_NOUN	ollo	ˈoɟʊ	ˈo ɟ ʊ		EYE_NOUN_1			
 Portuguese	Portuguese			EYE_NOUN	olho	ˈoʎu	ˈo ʎ u		EYE_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			EYE_NOUN	olho	ˈoʎu	ˈo ʎ u		EYE_NOUN_1			
 Latin	Latin			ODOR_NOUN	odōrem	ɔdˈoːrɛ̃ː	ɔ d ˈoː r ɛ̃ː		ODOR_NOUN_1			
@@ -7439,7 +7533,7 @@ Sicilian	Sicilian			ODOR_NOUN	oluri	olˈuɾɪ	o l ˈu ɾ ɪ		ODOR_NOUN_2
 Occitan	Occitan			ODOR_NOUN	olor	ulˈu	u l ˈu		ODOR_NOUN_2			
 Gascon	Gascon			ODOR_NOUN	aulor	awlˈu	a w l ˈu		ODOR_NOUN_2			
 Catalan	Catalan			ODOR_NOUN	olor	ulˈo	u l ˈo		ODOR_NOUN_2			
-Valencian	Valencian			ODOR_NOUN	olor	ulˈor	u l ˈo r		ODOR_NOUN_2			
+Valencian	Valencian			ODOR_NOUN	olor	olˈor	o l ˈo r		ODOR_NOUN_2			
 Aragonese	Aragonese			ODOR_NOUN	ulor	ulˈoɾ	u l ˈo ɾ		ODOR_NOUN_2			
 Spanish	Spanish			ODOR_NOUN	olor	olˈoɾ	o l ˈo ɾ		ODOR_NOUN_2			
 Asturian	Asturian			ODOR_NOUN	golor	ɡolˈoɾ	ɡ o l ˈo ɾ		ODOR_NOUN_2			
@@ -7484,7 +7578,7 @@ Franco-Provençal	Franco-Provençal			WORKER_NOUN	ovriér	ovʁjˈe	o v ʁ j ˈe	
 Occitan	Occitan			WORKER_NOUN	obrièr	uβɾjˈɛ	u β ɾ j ˈɛ		WORKER_NOUN_1			
 Gascon	Gascon			WORKER_NOUN	obrèr	uβɾˈɛ	u β ɾ ˈɛ		WORKER_NOUN_1			
 Catalan	Catalan			WORKER_NOUN	obrer	ubɾˈe	u b ɾ ˈe		WORKER_NOUN_1			
-Valencian	Valencian			WORKER_NOUN	obrer	ubɾˈer	u b ɾ ˈe r		WORKER_NOUN_1			
+Valencian	Valencian			WORKER_NOUN	obrer	obɾˈer	o b ɾ ˈe r		WORKER_NOUN_1			
 Aragonese	Aragonese			WORKER_NOUN	obrero	oβɾˈeɾo	o β ɾ ˈe ɾ o		WORKER_NOUN_1			
 Spanish	Spanish			WORKER_NOUN	obrero	oβɾˈeɾo	o β ɾ ˈe ɾ o		WORKER_NOUN_1			
 Asturian	Asturian			WORKER_NOUN	obreru	oβɾˈeɾu	o β ɾ ˈe ɾ u		WORKER_NOUN_1			
@@ -7492,8 +7586,8 @@ Galician	Galician			WORKER_NOUN	obreiro	ɔβɾˈejɾʊ	ɔ β ɾ ˈe j ɾ ʊ		WOR
 Portuguese	Portuguese			WORKER_NOUN	obreiro	ɔβɾˈɐjɾu	ɔ β ɾ ˈɐ j ɾ u		WORKER_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			WORKER_NOUN	obreiro	obɾˈejɾu	o b ɾ ˈe j ɾ u		WORKER_NOUN_1			
 Latin	Latin			BONE_NOUN	ossum	ˈɔssʊ̃ː	ˈɔ s s ʊ̃ː		BONE_NOUN_1			
-Logudorese	Logudorese			BONE_NOUN	ossu	ˈossu	ˈo s s u		BONE_NOUN_1			
-Campidanese	Campidanese			BONE_NOUN	ossu	ˈossu	ˈo s s u		BONE_NOUN_1			
+Logudorese	Logudorese			BONE_NOUN	ossu	ˈosu	ˈo s u		BONE_NOUN_1			
+Campidanese	Campidanese			BONE_NOUN	ossu	ˈosu	ˈo s u		BONE_NOUN_1			
 Romanian	Romanian			BONE_NOUN	os	ˈos	ˈo s		BONE_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			BONE_NOUN	u̯os	wˈos	w ˈo s		BONE_NOUN_1			
 Aromanian	Aromanian			BONE_NOUN	os	ˈos	ˈo s		BONE_NOUN_1			
@@ -7540,11 +7634,11 @@ Québécois French	Québécois French			SHEEP_NOUN	ouaille	waj	w a j		SHEEP_NOUN
 Occitan	Occitan			SHEEP_NOUN	ovelha	uvˈeʎɔ	u v ˈe ʎ ɔ		SHEEP_NOUN_2			
 Gascon	Gascon			SHEEP_NOUN	oelha	wˈeʎɔ	w ˈe ʎ ɔ		SHEEP_NOUN_2			
 Catalan	Catalan			SHEEP_NOUN	ovella	uβˈɛʎə	u β ˈɛ ʎ ə		SHEEP_NOUN_2			
-Valencian	Valencian			SHEEP_NOUN	ovella	uvˈæʎɜ	u v ˈæ ʎ ɜ		SHEEP_NOUN_2			
+Valencian	Valencian			SHEEP_NOUN	ovella	ovˈæʎɜ	o v ˈæ ʎ ɜ		SHEEP_NOUN_2			
 Aragonese	Aragonese			SHEEP_NOUN	ovella	oβˈeʎa	o β ˈe ʎ a		SHEEP_NOUN_2			
 Spanish	Spanish			SHEEP_NOUN	oveja	oβˈexa	o β ˈe x a		SHEEP_NOUN_2			
 Asturian	Asturian			SHEEP_NOUN	oveya	oβˈeʝa	o β ˈe ʝ a		SHEEP_NOUN_2			
-Galician	Galician			SHEEP_NOUN	ovella	oβˈeʎɐ	o β ˈe ʎ ɐ		SHEEP_NOUN_2			
+Galician	Galician			SHEEP_NOUN	ovella	oβˈeɟɐ	o β ˈe ɟ ɐ		SHEEP_NOUN_2			
 Portuguese	Portuguese			SHEEP_NOUN	ovelha	ɔvˈɐjʎɐ	ɔ v ˈɐ j ʎ ɐ		SHEEP_NOUN_2			
 Brazilian Portuguese	Brazilian Portuguese			SHEEP_NOUN	ovelha	ovˈeʎɐ	o v ˈe ʎ ɐ		SHEEP_NOUN_2			
 Latin	Latin			EGG_NOUN	ōvum	ˈoːwʊ̃ː	ˈoː w ʊ̃ː		EGG_NOUN_1			
@@ -7617,6 +7711,8 @@ Galician	Galician			PEACE_NOUN	paz	pˈaθ	p ˈa θ		PEACE_NOUN_1
 Portuguese	Portuguese			PEACE_NOUN	paz	pˈaʃ	p ˈa ʃ		PEACE_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			PEACE_NOUN	paz	pˈajʃ	p ˈa j ʃ		PEACE_NOUN_1			
 Latin	Latin			PALACE_NOUN	palātium	paɫˈatiʊ̃ː	p a ɫ ˈa t i ʊ̃ː		PALACE_NOUN_1			
+Logudorese	Logudorese			PALACE_NOUN	palatzu	palˈaʦu	p a l ˈa ʦ u		PALACE_NOUN_1			
+Campidanese	Campidanese			PALACE_NOUN	palatzu	palˈaʦu	p a l ˈa ʦ u		PALACE_NOUN_1			
 Sicilian	Sicilian			PALACE_NOUN	palazzu	palˈaʦʦʊ	p a l ˈa ʦ ʦ ʊ		PALACE_NOUN_1			
 Neapolitan	Neapolitan			PALACE_NOUN	palazzo	palˈaʦʦə	p a l ˈa ʦ ʦ ə		PALACE_NOUN_1			
 Corsican	Corsican			PALACE_NOUN	palazzu	palˈaʦʦu	p a l ˈa ʦ ʦ u		PALACE_NOUN_1			
@@ -7945,7 +8041,7 @@ Valencian	Valencian			LOUSE_NOUN	poll	pˈoʎ	p ˈo ʎ		LOUSE_NOUN_1
 Aragonese	Aragonese			LOUSE_NOUN	pedullo	peðˈuʎo	p e ð ˈu ʎ o		LOUSE_NOUN_1			
 Spanish	Spanish			LOUSE_NOUN	piojo	pjˈoxo	p j ˈo x o		LOUSE_NOUN_1			
 Asturian	Asturian			LOUSE_NOUN	pioyu	pjˈoʝu	p j ˈo ʝ u		LOUSE_NOUN_1			
-Galician	Galician			LOUSE_NOUN	piollo	piˈoʎʊ	p i ˈo ʎ ʊ		LOUSE_NOUN_1			
+Galician	Galician			LOUSE_NOUN	piollo	piˈoɟʊ	p i ˈo ɟ ʊ		LOUSE_NOUN_1			
 Portuguese	Portuguese			LOUSE_NOUN	piolho	pjˈoʎu	p j ˈo ʎ u		LOUSE_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			LOUSE_NOUN	piolho	piˈoʎu	p i ˈo ʎ u		LOUSE_NOUN_1			
 Latin	Latin			SKIN_NOUN	pellem	pˈɛlʲlʲɛ̃ː	p ˈɛ lʲ lʲ ɛ̃ː		SKIN_NOUN_1			
@@ -8028,7 +8124,7 @@ Megleno-Romanian	Megleno-Romanian			FOOT_NOUN	picior	piʧˈor	p i ʧ ˈo r		FOOT
 Aromanian	Aromanian			FOOT_NOUN	cicior	ʧiʧˈor	ʧ i ʧ ˈo r		FOOT_NOUN_2			
 Latin	Latin			STONE_NOUN	petram	pˈɛtrãː	p ˈɛ t r ãː		STONE_NOUN_1			
 Logudorese	Logudorese			STONE_NOUN	pedra	pˈeðra	p ˈe ð r a		STONE_NOUN_1			
-Campidanese	Campidanese			STONE_NOUN	pedra	pˈeðra	p ˈe ð r a		STONE_NOUN_1			
+Campidanese	Campidanese			STONE_NOUN	preda	prˈeða	p r ˈe ð a		STONE_NOUN_1			
 Romanian	Romanian			STONE_NOUN	piatră	pjˈatrə	p j ˈa t r ə		STONE_NOUN_1			
 Megleno-Romanian	Megleno-Romanian			STONE_NOUN	catră	kˈatrə	k ˈa t r ə		STONE_NOUN_1			
 Aromanian	Aromanian			STONE_NOUN	cheatrã	ke̯ˈatrə	k e̯ˈa t r ə		STONE_NOUN_1			
@@ -8196,6 +8292,8 @@ Logudorese	Logudorese			WEEP_VERB	prànghere	prˈaŋɡere	p r ˈa ŋ ɡ e r e		W
 Campidanese	Campidanese			WEEP_VERB	pràngiri	prˈanʤiri	p r ˈa n ʤ i r i		WEEP_VERB_1			
 Romanian	Romanian			WEEP_VERB	plângere	plˈɨnʤere	p l ˈɨ n ʤ e r e		WEEP_VERB_1			
 Aromanian	Aromanian			WEEP_VERB	plãndziri	plˈɨnʣiri	p l ˈɨ n ʣ i r i		WEEP_VERB_1			
+Dalmatian	Dalmatian			WEEP_VERB	plungur	plˈuŋɡur	p l ˈu ŋ ɡ u r		WEEP_VERB_1			
+Dalmatian	Dalmatian			WEEP_VERB	plungro	plˈuŋɡro	p l ˈu ŋ ɡ r o		WEEP_VERB_1			
 Sicilian	Sicilian			WEEP_VERB	chiànciri	cˈanɕɪɾɪ	c ˈa n ɕ ɪ ɾ ɪ		WEEP_VERB_1			
 Neapolitan	Neapolitan			WEEP_VERB	chiagnere	kjˈaɲɲəɾə	k j ˈa ɲ ɲ ə ɾ ə		WEEP_VERB_1			
 Corsican	Corsican			WEEP_VERB	pienghje	pjˈɛŋɟe	p j ˈɛ ŋ ɟ e		WEEP_VERB_1			
@@ -8268,7 +8366,7 @@ Franco-Provençal	Franco-Provençal			WEEP_VERB	plorar	ploðˈa	p l o ð ˈa		WE
 Occitan	Occitan			WEEP_VERB	plorar	pluɾˈa	p l u ɾ ˈa		WEEP_VERB_2			
 Gascon	Gascon			WEEP_VERB	plorar	pluɾˈa	p l u ɾ ˈa		WEEP_VERB_2			
 Catalan	Catalan			WEEP_VERB	plorar	pluɾˈa	p l u ɾ ˈa		WEEP_VERB_2			
-Valencian	Valencian			WEEP_VERB	plorar	pluɾˈar	p l u ɾ ˈa r		WEEP_VERB_2			
+Valencian	Valencian			WEEP_VERB	plorar	ploɾˈar	p l o ɾ ˈa r		WEEP_VERB_2			
 Aragonese	Aragonese			WEEP_VERB	plorar	ploɾˈaɾ	p l o ɾ ˈa ɾ		WEEP_VERB_2			
 Spanish	Spanish			WEEP_VERB	llorar	ɟ͡ʝoɾˈaɾ	ɟ͡ʝ o ɾ ˈa ɾ		WEEP_VERB_2			
 Asturian	Asturian			WEEP_VERB	llorar	ʎoɾˈaɾ	ʎ o ɾ ˈa ɾ		WEEP_VERB_2			
@@ -8532,7 +8630,7 @@ Franco-Provençal	Franco-Provençal			CAN_VERB	povêr	povˈɛːʁ	p o v ˈɛː �
 Occitan	Occitan			CAN_VERB	poder	puðˈe	p u ð ˈe		CAN_VERB_1			
 Gascon	Gascon			CAN_VERB	póder	pˈuðe	p ˈu ð e		CAN_VERB_1			
 Catalan	Catalan			CAN_VERB	poder	puðˈɛ	p u ð ˈɛ		CAN_VERB_1			
-Valencian	Valencian			CAN_VERB	poder	puðˈær	p u ð ˈæ r		CAN_VERB_1			
+Valencian	Valencian			CAN_VERB	poder	poðˈær	p o ð ˈæ r		CAN_VERB_1			
 Aragonese	Aragonese			CAN_VERB	poder	poðˈeɾ	p o ð ˈe ɾ		CAN_VERB_1			
 Spanish	Spanish			CAN_VERB	poder	poðˈeɾ	p o ð ˈe ɾ		CAN_VERB_1			
 Asturian	Asturian			CAN_VERB	poder	poðˈeɾ	p o ð ˈe ɾ		CAN_VERB_1			
@@ -8570,7 +8668,7 @@ Portuguese	Portuguese			PRICE_NOUN	preço	pɾˈesu	p ɾ ˈe s u		PRICE_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			PRICE_NOUN	preço	pɾˈesu	p ɾ ˈe s u		PRICE_NOUN_1			
 Latin	Latin			PROFIT_NOUN	prōfectum	proːfˈɛktʊ̃ː	p r oː f ˈɛ k t ʊ̃ː		PROFIT_NOUN_1			
 Catalan	Catalan			PROFIT_NOUN	profit	pɾufˈit	p ɾ u f ˈi t		PROFIT_NOUN_1			
-Valencian	Valencian			PROFIT_NOUN	profit	pɾufˈit	p ɾ u f ˈi t		PROFIT_NOUN_1			
+Valencian	Valencian			PROFIT_NOUN	profit	pɾofˈit	p ɾ o f ˈi t		PROFIT_NOUN_1			
 Aragonese	Aragonese			PROFIT_NOUN	proveito	pɾoβˈejto	p ɾ o β ˈe j t o		PROFIT_NOUN_1			
 Spanish	Spanish			PROFIT_NOUN	provecho	pɾoβˈeʧo	p ɾ o β ˈe ʧ o		PROFIT_NOUN_1			
 Asturian	Asturian			PROFIT_NOUN	provechu	pɾoβˈeʧu	p ɾ o β ˈe ʧ u		PROFIT_NOUN_1			
@@ -8578,6 +8676,8 @@ Galician	Galician			PROFIT_NOUN	proveito	pɾoβˈejtʊ	p ɾ o β ˈe j t ʊ		PRO
 Portuguese	Portuguese			PROFIT_NOUN	proveito	pɾuvˈɐjtu	p ɾ u v ˈɐ j t u		PROFIT_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			PROFIT_NOUN	proveito	pɾovˈejtu	p ɾ o v ˈe j t u		PROFIT_NOUN_1			
 Latin	Latin			FIST_NOUN	pugnum	pˈʊŋnʊ̃ː	p ˈʊ ŋ n ʊ̃ː		FIST_NOUN_1			
+Logudorese	Logudorese			FIST_NOUN	punzu	pˈunʣu	p ˈu n ʣ u		FIST_NOUN_1			
+Campidanese	Campidanese			FIST_NOUN	pungiu	pˈunʤu	p ˈu n ʤ u		FIST_NOUN_1			
 Romanian	Romanian			FIST_NOUN	pumn	pˈumn	p ˈu m n		FIST_NOUN_1			
 Aromanian	Aromanian			FIST_NOUN	pulmu	pˈulmu	p ˈu l m u		FIST_NOUN_1			
 Sicilian	Sicilian			FIST_NOUN	pugnu	pˈuɲɲʊ	p ˈu ɲ ɲ ʊ		FIST_NOUN_1			
@@ -8964,7 +9064,7 @@ Latin	Latin			QUEEN_NOUN	rēgīnam	reːɡˈiːnãː	r eː ɡ ˈiː n ãː		QUE
 Logudorese	Logudorese			QUEEN_NOUN	reina	reˈina	r e ˈi n a		QUEEN_NOUN_1			
 Campidanese	Campidanese			QUEEN_NOUN	reina	reˈina	r e ˈi n a		QUEEN_NOUN_1			
 Romanian	Romanian			QUEEN_NOUN	regină	reʤˈinə	r e ʤ ˈi n ə		QUEEN_NOUN_1	TRUE		
-Sicilian	Sicilian			QUEEN_NOUN	riggina	riʤʤˈina	r i ʤ ʤ ˈi n a		QUEEN_NOUN_1			
+Sicilian	Sicilian			QUEEN_NOUN	riggina	ʐiʤʤˈina	ʐ i ʤ ʤ ˈi n a		QUEEN_NOUN_1			
 Corsican	Corsican			QUEEN_NOUN	regina	reʤˈina	r e ʤ ˈi n a		QUEEN_NOUN_1			
 Italian	Italian			QUEEN_NOUN	regina	reʤˈina	r e ʤ ˈi n a		QUEEN_NOUN_1			
 Venetian	Venetian			QUEEN_NOUN	rexìna	rezˈina	r e z ˈi n a		QUEEN_NOUN_1			
@@ -8995,7 +9095,7 @@ Logudorese	Logudorese			RIVER_NOUN	arríu	arˈiu	a r ˈi u		RIVER_NOUN_2
 Campidanese	Campidanese			RIVER_NOUN	arríu	arˈiu	a r ˈi u		RIVER_NOUN_2			
 Romanian	Romanian			RIVER_NOUN	râu	rˈɨw	r ˈɨ w		RIVER_NOUN_2			
 Aromanian	Aromanian			RIVER_NOUN	arãu	arˈɨw	a r ˈɨ w		RIVER_NOUN_2			
-Sicilian	Sicilian			RIVER_NOUN	rìu	rˈiʊ	r ˈi ʊ		RIVER_NOUN_2			
+Sicilian	Sicilian			RIVER_NOUN	rìu	ʐˈiʊ	ʐ ˈi ʊ		RIVER_NOUN_2			
 Corsican	Corsican			RIVER_NOUN	riu	rˈiu	r ˈi u		RIVER_NOUN_2			
 Italian	Italian			RIVER_NOUN	rio	rˈio	r ˈi o		RIVER_NOUN_2			
 Eastern Lombard	Eastern Lombard			RIVER_NOUN	rì	rˈi	r ˈi		RIVER_NOUN_2			
@@ -9019,7 +9119,7 @@ Logudorese	Logudorese			ROMAN_ADJ	romanu	romˈanu	r o m ˈa n u		ROMAN_ADJ_1
 Campidanese	Campidanese			ROMAN_ADJ	romanu	romˈanu	r o m ˈa n u		ROMAN_ADJ_1			
 Romanian	Romanian			ROMAN_ADJ	rumân	rumˈɨn	r u m ˈɨ n		ROMAN_ADJ_1			
 Aromanian	Aromanian			ROMAN_ADJ	armãn	armˈɨn	a r m ˈɨ n		ROMAN_ADJ_1			
-Sicilian	Sicilian			ROMAN_ADJ	romanu	romˈanʊ	r o m ˈa n ʊ		ROMAN_ADJ_1			
+Sicilian	Sicilian			ROMAN_ADJ	romanu	ʐomˈanʊ	ʐ o m ˈa n ʊ		ROMAN_ADJ_1			
 Neapolitan	Neapolitan			ROMAN_ADJ	romano	romˈanə	r o m ˈa n ə		ROMAN_ADJ_1			
 Corsican	Corsican			ROMAN_ADJ	rumanu	rumˈanu	r u m ˈa n u		ROMAN_ADJ_1			
 Italian	Italian			ROMAN_ADJ	romano	romˈano	r o m ˈa n o		ROMAN_ADJ_1			
@@ -9040,11 +9140,46 @@ Franco-Provençal	Franco-Provençal			ROMAN_ADJ	romen	ʁɔmˈɛ̃	ʁ ɔ m ˈɛ̃
 Occitan	Occitan			ROMAN_ADJ	roman	rumˈa	r u m ˈa		ROMAN_ADJ_1			
 Gascon	Gascon			ROMAN_ADJ	arroman	arumˈaŋ	a r u m ˈa ŋ		ROMAN_ADJ_1			
 Catalan	Catalan			ROMAN_ADJ	romà	rumˈa	r u m ˈa		ROMAN_ADJ_1			
-Valencian	Valencian			ROMAN_ADJ	romà	rumˈa	r u m ˈa		ROMAN_ADJ_1			
+Valencian	Valencian			ROMAN_ADJ	romà	romˈa	r o m ˈa		ROMAN_ADJ_1			
 Spanish	Spanish			ROMAN_ADJ	romano	romˈano	r o m ˈa n o		ROMAN_ADJ_1			
 Galician	Galician			ROMAN_ADJ	romano	romˈanʊ	r o m ˈa n ʊ		ROMAN_ADJ_1			
 Portuguese	Portuguese			ROMAN_ADJ	romão	ʁumˈɐ̃w̃	ʁ u m ˈɐ̃ w̃		ROMAN_ADJ_1			
 Brazilian Portuguese	Brazilian Portuguese			ROMAN_ADJ	romão	homˈɐ̃w̃	h o m ˈɐ̃ w̃		ROMAN_ADJ_1			
+Latin	Latin			WHEEL_NOUN	rotam	rˈɔtãː	r ˈɔ t ãː		WHEEL_NOUN_1			
+Logudorese	Logudorese			WHEEL_NOUN	roda	rˈoða	r ˈo ð a		WHEEL_NOUN_1			
+Campidanese	Campidanese			WHEEL_NOUN	roda	rˈoða	r ˈo ð a		WHEEL_NOUN_1			
+Romanian	Romanian			WHEEL_NOUN	roată	ro̯ˈatə	r o̯ˈa t ə		WHEEL_NOUN_1			
+Megleno-Romanian	Megleno-Romanian			WHEEL_NOUN	roată	ro̯ˈatə	r o̯ˈa t ə		WHEEL_NOUN_1			
+Aromanian	Aromanian			WHEEL_NOUN	aroatã	aro̯ˈatə	a r o̯ˈa t ə		WHEEL_NOUN_1			
+Istriot	Istriot			WHEEL_NOUN	rùda	rˈuda	r ˈu d a		WHEEL_NOUN_1			
+Sicilian	Sicilian			WHEEL_NOUN	rota	ʐˈɔta	ʐ ˈɔ t a		WHEEL_NOUN_1			
+Neapolitan	Neapolitan			WHEEL_NOUN	ròta	rˈɔtə	r ˈɔ t ə		WHEEL_NOUN_1			
+Corsican	Corsican			WHEEL_NOUN	rota	rˈɔta	r ˈɔ t a		WHEEL_NOUN_1			
+Italian	Italian			WHEEL_NOUN	ruota	rwˈɔta	r w ˈɔ t a		WHEEL_NOUN_1			
+Venetian	Venetian			WHEEL_NOUN	ròda	rˈɔda	r ˈɔ d a		WHEEL_NOUN_1			
+Bellunese	Bellunese			WHEEL_NOUN	ròda	rˈɔda	r ˈɔ d a		WHEEL_NOUN_1			
+Emilian	Emilian			WHEEL_NOUN	rôda	rˈɔːda	r ˈɔː d a		WHEEL_NOUN_1			
+Ligurian	Ligurian			WHEEL_NOUN	reua	rˈøːa	r ˈøː a		WHEEL_NOUN_1			
+Piedmontese	Piedmontese			WHEEL_NOUN	roa	rˈua	r ˈu a		WHEEL_NOUN_1			
+Western Lombard	Western Lombard			WHEEL_NOUN	rœda	rˈøːda	r ˈøː d a		WHEEL_NOUN_1			
+Eastern Lombard	Eastern Lombard			WHEEL_NOUN	röda	rˈøda	r ˈø d a		WHEEL_NOUN_1			
+Ladin	Ladin			WHEEL_NOUN	roda	rˈɔda	r ˈɔ d a		WHEEL_NOUN_1			
+Friulian	Friulian			WHEEL_NOUN	ruede	rwˈɛde	r w ˈɛ d e		WHEEL_NOUN_1			
+Romansch	Romansch			WHEEL_NOUN	roda	rˈɔːdə	r ˈɔː d ə		WHEEL_NOUN_1			
+French	French			WHEEL_NOUN	roue	ʁu	ʁ u		WHEEL_NOUN_1			
+Québécois French	Québécois French			WHEEL_NOUN	roue	ʁu	ʁ u		WHEEL_NOUN_1			
+Walloon	Walloon			WHEEL_NOUN	rowe	ʀˈɔw	ʀ ˈɔ w		WHEEL_NOUN_1			
+Franco-Provençal	Franco-Provençal			WHEEL_NOUN	roua	ʁˈua	ʁ ˈu a		WHEEL_NOUN_1			
+Occitan	Occitan			WHEEL_NOUN	ròda	rˈɔðɔ	r ˈɔ ð ɔ		WHEEL_NOUN_1			
+Gascon	Gascon			WHEEL_NOUN	arròda	arˈɔðɔ	a r ˈɔ ð ɔ		WHEEL_NOUN_1			
+Catalan	Catalan			WHEEL_NOUN	roda	rˈɔðə	r ˈɔ ð ə		WHEEL_NOUN_1			
+Valencian	Valencian			WHEEL_NOUN	roda	rˈɒðɞ	r ˈɒ ð ɞ		WHEEL_NOUN_1			
+Aragonese	Aragonese			WHEEL_NOUN	rueda	rwˈeða	r w ˈe ð a		WHEEL_NOUN_1			
+Spanish	Spanish			WHEEL_NOUN	rueda	rwˈeða	r w ˈe ð a		WHEEL_NOUN_1			
+Asturian	Asturian			WHEEL_NOUN	rueda	rwˈeða	r w ˈe ð a		WHEEL_NOUN_1			
+Galician	Galician			WHEEL_NOUN	roda	rˈɔðɐ	r ˈɔ ð ɐ		WHEEL_NOUN_1			
+Portuguese	Portuguese			WHEEL_NOUN	roda	ʁˈɔðɐ	ʁ ˈɔ ð ɐ		WHEEL_NOUN_1			
+Brazilian Portuguese	Brazilian Portuguese			WHEEL_NOUN	roda	hˈɔdɐ	h ˈɔ d ɐ		WHEEL_NOUN_1			
 Latin	Latin			KNEE_NOUN	rotellam	rɔtˈɛlʲlʲãː	r ɔ t ˈɛ lʲ lʲ ãː		KNEE_NOUN_2			
 Spanish	Spanish			KNEE_NOUN	rodilla	roðˈiʝa	r o ð ˈi ʝ a		KNEE_NOUN_2			
 Latin	Latin			ROUND_ADJ	rotundum	rɔtˈʊndʊ̃ː	r ɔ t ˈʊ n d ʊ̃ː		ROUND_ADJ_2			
@@ -9066,7 +9201,7 @@ Franco-Provençal	Franco-Provençal			ROUND_ADJ	riond	ʁjˈɔ̃	ʁ j ˈɔ̃		ROU
 Savoyard	Savoyard			ROUND_ADJ	ryon	rjˈɔ̃	r j ˈɔ̃		ROUND_ADJ_2			
 Gascon	Gascon			ROUND_ADJ	arròu	arˈɔw	a r ˈɔ w		ROUND_ADJ_2			
 Catalan	Catalan			ROUND_ADJ	rodó	ruðˈo	r u ð ˈo		ROUND_ADJ_2			
-Valencian	Valencian			ROUND_ADJ	rodó	ruðˈo	r u ð ˈo		ROUND_ADJ_2			
+Valencian	Valencian			ROUND_ADJ	rodó	roðˈo	r o ð ˈo		ROUND_ADJ_2			
 Aragonese	Aragonese			ROUND_ADJ	redondo	reðˈondo	r e ð ˈo n d o		ROUND_ADJ_2			
 Spanish	Spanish			ROUND_ADJ	redondo	reðˈondo	r e ð ˈo n d o		ROUND_ADJ_2			
 Asturian	Asturian			ROUND_ADJ	redondu	reðˈondu	r e ð ˈo n d u		ROUND_ADJ_2			
@@ -9244,7 +9379,7 @@ Corsican	Corsican			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1
 Italian	Italian			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
 Ligurian	Ligurian			HEALTHY (F)_ADJ	saña	sˈaŋa	s ˈa ŋ a		HEALTHY (F)_ADJ_1			
 Piedmontese	Piedmontese			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
-Western Lombard	Western Lombard			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
+Western Lombard	Western Lombard			HEALTHY (F)_ADJ	sana	sˈɑːna	s ˈɑː n a		HEALTHY (F)_ADJ_1			
 Eastern Lombard	Eastern Lombard			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
 Ladin	Ladin			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
 Friulian	Friulian			HEALTHY (F)_ADJ	sane	sˈane	s ˈa n e		HEALTHY (F)_ADJ_1			
@@ -10298,6 +10433,37 @@ Asturian	Asturian			THOU_PRON	tu	tˈu	t ˈu		THOU_PRON_1
 Galician	Galician			THOU_PRON	tú	tˈu	t ˈu		THOU_PRON_1			
 Portuguese	Portuguese			THOU_PRON	tú	tˈu	t ˈu		THOU_PRON_1			
 Brazilian Portuguese	Brazilian Portuguese			THOU_PRON	tú	tˈu	t ˈu		THOU_PRON_1			
+Latin	Latin			COUGH_VERB	tussīre	tʊssˈiːrɛ	t ʊ s s ˈiː r ɛ		COUGH_VERB_1			
+Logudorese	Logudorese			COUGH_VERB	tussire	tusˈire	t u s ˈi r e		COUGH_VERB_1			
+Campidanese	Campidanese			COUGH_VERB	tussiri	tusˈiri	t u s ˈi r i		COUGH_VERB_1			
+Romanian	Romanian			COUGH_VERB	tușire	tuʃˈire	t u ʃ ˈi r e		COUGH_VERB_1			
+Aromanian	Aromanian			COUGH_VERB	tushiri	tuʃˈiri	t u ʃ ˈi r i		COUGH_VERB_1			
+Sicilian	Sicilian			COUGH_VERB	tùssiri	tˈussiɾɪ	t ˈu s s i ɾ ɪ		COUGH_VERB_1			
+Italian	Italian			COUGH_VERB	tossire	tossˈire	t o s s ˈi r e		COUGH_VERB_1			
+Venetian	Venetian			COUGH_VERB	tosìr	tosˈir	t o s ˈi r		COUGH_VERB_1			
+Bellunese	Bellunese			COUGH_VERB	tosìr	tosˈir	t o s ˈi r		COUGH_VERB_1			
+Emilian	Emilian			COUGH_VERB	tåsser	tˈʌser	t ˈʌ s e r		COUGH_VERB_1			
+Ligurian	Ligurian			COUGH_VERB	toscî	tuʃˈiː	t u ʃ ˈiː		COUGH_VERB_1			
+Piedmontese	Piedmontese			COUGH_VERB	tosse	tˈuse	t ˈu s e		COUGH_VERB_1			
+Western Lombard	Western Lombard			COUGH_VERB	tossir	tusˈi	t u s ˈi		COUGH_VERB_1			
+Eastern Lombard	Eastern Lombard			COUGH_VERB	tossir	tosˈi	t o s ˈi		COUGH_VERB_1			
+Friulian	Friulian			COUGH_VERB	tossi	tˈosi	t ˈo s i		COUGH_VERB_1			
+Romansch	Romansch			COUGH_VERB	tusser	tusˈeːr	t u s ˈeː r		COUGH_VERB_1			
+Old French	Old French			COUGH_VERB	tossir	tusˈir	t u s ˈi r		COUGH_VERB_1			
+French	French			COUGH_VERB	tousser	tuse	t u s e		COUGH_VERB_1			
+Québécois French	Québécois French			COUGH_VERB	tousser	tuse	t u s e		COUGH_VERB_1			
+Walloon	Walloon			COUGH_VERB	tosser	tɔsˈe	t ɔ s ˈe		COUGH_VERB_1			
+Franco-Provençal	Franco-Provençal			COUGH_VERB	tossiér	tosjˈe	t o s j ˈe		COUGH_VERB_1			
+Occitan	Occitan			COUGH_VERB	tossir	tusˈi	t u s ˈi		COUGH_VERB_1			
+Gascon	Gascon			COUGH_VERB	tossir	tusˈi	t u s ˈi		COUGH_VERB_1			
+Catalan	Catalan			COUGH_VERB	tossir	tusˈi	t u s ˈi		COUGH_VERB_1			
+Valencian	Valencian			COUGH_VERB	tossir	tosˈir	t o s ˈi r		COUGH_VERB_1			
+Aragonese	Aragonese			COUGH_VERB	tusir	tusˈiɾ	t u s ˈi ɾ		COUGH_VERB_1			
+Spanish	Spanish			COUGH_VERB	toser	tosˈeɾ	t o s ˈe ɾ		COUGH_VERB_1			
+Asturian	Asturian			COUGH_VERB	tusir	tusˈiɾ	t u s ˈi ɾ		COUGH_VERB_1			
+Galician	Galician			COUGH_VERB	tusir	tusˈiɾ	t u s ˈi ɾ		COUGH_VERB_1			
+Portuguese	Portuguese			COUGH_VERB	tossir	tusˈiɾ	t u s ˈi ɾ		COUGH_VERB_1			
+Brazilian Portuguese	Brazilian Portuguese			COUGH_VERB	tossir	tosˈih	t o s ˈi h		COUGH_VERB_1			
 Latin	Latin			KILL_VERB	tūtārī	tˈuːtaːriː	t ˈuː t aː r iː		KILL_VERB_3			
 Old French	Old French			KILL_VERB	tuer	tyˈer	t y ˈe r		KILL_VERB_3			
 French	French			KILL_VERB	tuer	tɥe	t ɥ e		KILL_VERB_3			
@@ -10328,7 +10494,7 @@ Québécois French	Québécois French			NAVEL_NOUN	nombril	nɒ̃ʊ̯̃bʁɪl	n �
 Occitan	Occitan			NAVEL_NOUN	embonilh	embunˈil	e m b u n ˈi l		NAVEL_NOUN_1			
 Gascon	Gascon			NAVEL_NOUN	melic	melˈik	m e l ˈi k		NAVEL_NOUN_1			
 Catalan	Catalan			NAVEL_NOUN	llombrígol	ʎumbɾˈiɡul	ʎ u m b ɾ ˈi ɡ u l		NAVEL_NOUN_1		IRREGULAR	
-Valencian	Valencian			NAVEL_NOUN	llombrígol	ʎumbɾˈiɡul	ʎ u m b ɾ ˈi ɡ u l		NAVEL_NOUN_1		IRREGULAR	
+Valencian	Valencian			NAVEL_NOUN	llombrígol	ʎombɾˈiɡol	ʎ o m b ɾ ˈi ɡ o l		NAVEL_NOUN_1		IRREGULAR	
 Aragonese	Aragonese			NAVEL_NOUN	melico	melˈiko	m e l ˈi k o		NAVEL_NOUN_1			
 Spanish	Spanish			NAVEL_NOUN	ombligo	omblˈiɣo	o m b l ˈi ɣ o		NAVEL_NOUN_1			
 Asturian	Asturian			NAVEL_NOUN	embeligru	embelˈiɣɾu	e m b e l ˈi ɣ ɾ u		NAVEL_NOUN_1			
@@ -10369,7 +10535,7 @@ Valencian	Valencian			FINGERNAIL_NOUN	ungla	ˈuŋɡlɐ	ˈu ŋ ɡ l ɐ		FINGERNAI
 Aragonese	Aragonese			FINGERNAIL_NOUN	ungla	ˈuŋɡla	ˈu ŋ ɡ l a		FINGERNAIL_NOUN_1			
 Spanish	Spanish			FINGERNAIL_NOUN	uña	ˈuɲa	ˈu ɲ a		FINGERNAIL_NOUN_1			
 Asturian	Asturian			FINGERNAIL_NOUN	uña	ˈuɲa	ˈu ɲ a		FINGERNAIL_NOUN_1			
-Galician	Galician			FINGERNAIL_NOUN	unlla	ˈunʎɐ	ˈu n ʎ ɐ		FINGERNAIL_NOUN_1			
+Galician	Galician			FINGERNAIL_NOUN	unlla	ˈunɟɐ	ˈu n ɟ ɐ		FINGERNAIL_NOUN_1			
 Galician	Galician			FINGERNAIL_NOUN	uña	ˈuɲɐ	ˈu ɲ ɐ		FINGERNAIL_NOUN_1			
 Portuguese	Portuguese			FINGERNAIL_NOUN	unha	ˈuɲɐ	ˈu ɲ ɐ		FINGERNAIL_NOUN_1			
 Brazilian Portuguese	Brazilian Portuguese			FINGERNAIL_NOUN	unha	ˈũj̃ɐ	ˈũ j̃ ɐ		FINGERNAIL_NOUN_1			
@@ -10677,7 +10843,7 @@ Valencian	Valencian			OLD_ADJ	vell	vˈeʎ	v ˈe ʎ		OLD_ADJ_1
 Aragonese	Aragonese			OLD_ADJ	viello	bjˈeʎo	b j ˈe ʎ o		OLD_ADJ_1			
 Spanish	Spanish			OLD_ADJ	viejo	bjˈexo	b j ˈe x o		OLD_ADJ_1			
 Asturian	Asturian			OLD_ADJ	vieyu	bjˈeʝu	b j ˈe ʝ u		OLD_ADJ_1			
-Galician	Galician			OLD_ADJ	vello	bˈɛʎʊ	b ˈɛ ʎ ʊ		OLD_ADJ_1			
+Galician	Galician			OLD_ADJ	vello	bˈɛɟʊ	b ˈɛ ɟ ʊ		OLD_ADJ_1			
 Portuguese	Portuguese			OLD_ADJ	velho	vˈɐjʎu	v ˈɐ j ʎ u		OLD_ADJ_1			
 Brazilian Portuguese	Brazilian Portuguese			OLD_ADJ	velho	vˈeʎu	v ˈe ʎ u		OLD_ADJ_1			
 Latin	Latin			OLD_ADJ	vetulus	wˈɛtʊɫʊs	w ˈɛ t ʊ ɫ ʊ s		OLD_ADJ_2			
@@ -11059,7 +11225,7 @@ Savoyard	Savoyard			FLY_VERB	volâ	volˈaː	v o l ˈaː		FLY_VERB_2
 Occitan	Occitan			FLY_VERB	volar	vulˈa	v u l ˈa		FLY_VERB_2			
 Gascon	Gascon			FLY_VERB	volar	bulˈa	b u l ˈa		FLY_VERB_2			
 Catalan	Catalan			FLY_VERB	volar	bulˈa	b u l ˈa		FLY_VERB_2			
-Valencian	Valencian			FLY_VERB	volar	vulˈar	v u l ˈa r		FLY_VERB_2			
+Valencian	Valencian			FLY_VERB	volar	volˈar	v o l ˈa r		FLY_VERB_2			
 Aragonese	Aragonese			FLY_VERB	volar	bolˈaɾ	b o l ˈa ɾ		FLY_VERB_2			
 Spanish	Spanish			FLY_VERB	volar	bolˈaɾ	b o l ˈa ɾ		FLY_VERB_2			
 Asturian	Asturian			FLY_VERB	volar	bolˈaɾ	b o l ˈa ɾ		FLY_VERB_2			
@@ -11155,7 +11321,7 @@ Walloon	Walloon			WE_PRON	nozôtes	nɔzˈoːt	n ɔ z ˈoː t		WE_PRON_2
 Occitan	Occitan			WE_PRON	nosautres	nuzˈawtɾes	n u z ˈa w t ɾ e s		WE_PRON_2			
 Gascon	Gascon			WE_PRON	nosautes	nuzˈawtes	n u z ˈa w t e s		WE_PRON_2			
 Catalan	Catalan			WE_PRON	nosaltres	nuzˈaltɾəs	n u z ˈa l t ɾ ə s		WE_PRON_2			
-Valencian	Valencian			WE_PRON	nosaltres	nuzˈaltɾes	n u z ˈa l t ɾ e s		WE_PRON_2			
+Valencian	Valencian			WE_PRON	nosaltres	nozˈaltɾes	n o z ˈa l t ɾ e s		WE_PRON_2			
 Aragonese	Aragonese			WE_PRON	nusatros	nusˈatɾos	n u s ˈa t ɾ o s		WE_PRON_2			
 Spanish	Spanish			WE_PRON	nosotros	nosˈotɾos	n o s ˈo t ɾ o s		WE_PRON_2			
 Asturian	Asturian			WE_PRON	nosotros	nosˈotɾos	n o s ˈo t ɾ o s		WE_PRON_2			
@@ -11171,7 +11337,7 @@ Walloon	Walloon			YOU (PL)_PRON	vozôtes	vɔzˈoːt	v ɔ z ˈoː t		YOU (PL)_PRO
 Occitan	Occitan			YOU (PL)_PRON	vosautres	vuzˈawtɾes	v u z ˈa w t ɾ e s		YOU (PL)_PRON_2			
 Gascon	Gascon			YOU (PL)_PRON	vosautes	buzˈawtes	b u z ˈa w t e s		YOU (PL)_PRON_2			
 Catalan	Catalan			YOU (PL)_PRON	vosaltres	buzˈaltɾəs	b u z ˈa l t ɾ ə s		YOU (PL)_PRON_2			
-Valencian	Valencian			YOU (PL)_PRON	vosaltres	vuzˈaltɾes	v u z ˈa l t ɾ e s		YOU (PL)_PRON_2			
+Valencian	Valencian			YOU (PL)_PRON	vosaltres	vozˈaltɾes	v o z ˈa l t ɾ e s		YOU (PL)_PRON_2			
 Aragonese	Aragonese			YOU (PL)_PRON	vusatros	busˈatɾos	b u s ˈa t ɾ o s		YOU (PL)_PRON_2			
 Spanish	Spanish			YOU (PL)_PRON	vosotros	bosˈotɾos	b o s ˈo t ɾ o s		YOU (PL)_PRON_2			
 Asturian	Asturian			YOU (PL)_PRON	vosotros	bosˈotɾos	b o s ˈo t ɾ o s		YOU (PL)_PRON_2			

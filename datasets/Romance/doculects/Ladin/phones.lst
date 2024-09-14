@@ -1,16 +1,16 @@
 VOWELS
-/a/ (0.079)
+/a/ (0.08)
 	<secia> /sˈeʨa/ "DRY (F)_ADJ"
-	<coda> /kˈoda/ "TAIL_NOUN"
+	<spada> /ʃpˈada/ "SWORD_NOUN"
 	<giamié> /ʥamjˈe/ "CHANGE_VERB"
 
-/ˈɛ/ (0.061)
+/ˈɛ/ (0.06)
 	<agnel> /aɲˈɛl/ "LAMB_NOUN"
 	<uef> /wˈɛf/ "EGG_NOUN"
 	<temp> /tˈɛmp/ "TIME_NOUN"
 
-/ˈe/ (0.048)
-	<te> /tˈe/ "THOU_PRON"
+/ˈe/ (0.049)
+	<nodé> /nodˈe/ "SWIM_VERB"
 	<ciacé> /ʨaʧˈe/ "HUNT_VERB"
 	<ie> /jˈe/ "I_PRON"
 
@@ -24,12 +24,12 @@ VOWELS
 	<legrema> /lˈɛɡrema/ "TEAR_NOUN"
 	<conesce> /konˈeʃe/ "BE ACQUAINTED WITH_VERB"
 
-/ˈo/ (0.029)
+/ˈo/ (0.028)
 	<gola> /ɡˈola/ "THROAT_NOUN"
 	<doi> /dˈoj/ "TWO (M)_NUM"
 	<soura> /sˈowra/ "ABOVE_PREP"
 
-/ˈi/ (0.028)
+/ˈi/ (0.027)
 	<vint> /vˈint/ "TWENTY_NUM"
 	<regina> /reʥˈina/ "QUEEN_NOUN"
 	<mi> /mˈi/ "I_OBL_PRON"
@@ -62,32 +62,32 @@ VOWELS
 
 
 CONSONANTS
-/l/ (0.067)
+/l/ (0.066)
 	<saulon> /sawlˈon/ "SAND_NOUN"
 	<soredl> /sorˈedl/ "SUN_NOUN"
 	<blanch> /blˈaŋk/ "WHITE_ADJ"
 
-/r/ (0.062)
+/r/ (0.063)
 	<farina> /farˈina/ "FLOUR_NOUN"
 	<cern> /ʨˈɛrn/ "MEAT_NOUN"
 	<gras> /ɡrˈas/ "FAT_NOUN"
 
-/n/ (0.062)
-	<nodé> /nodˈe/ "SWIM_VERB"
+/n/ (0.063)
+	<spina> /ʃpˈina/ "SPINE_NOUN"
 	<nuef> /nwˈɛf/ "NEW_ADJ"
 	<nasce> /nˈaʃe/ "BE BORN_VERB"
 
-/t/ (0.042)
+/t/ (0.043)
 	<lat> /lˈat/ "MILK_NOUN"
 	<set> /sˈɛt/ "SEVEN_NUM"
-	<te> /tˈe/ "THOU_PRON"
+	<isté> /istˈe/ "SUMMER_NOUN"
 
 /s/ (0.037)
 	<scur> /skˈur/ "DARK_ADJ"
 	<bones> /bˈɔnes/ "GOOD (F.PL)_ADJ"
 	<nost> /nˈɔst/ "OUR_ADJ"
 
-/j/ (0.035)
+/j/ (0.034)
 	<giamié> /ʥamjˈe/ "CHANGE_VERB"
 	<savei> /savˈej/ "KNOW_VERB"
 	<seida> /sˈejda/ "SILK_NOUN"
@@ -103,11 +103,11 @@ CONSONANTS
 	<cuessa> /kwˈɛsa/ "THIGH_NOUN"
 
 /m/ (0.029)
-	<femena> /fˈemena/ "WOMAN_NOUN"
+	<femena> /fˈemena/ "WOMAN_FEMALE_NOUN"
 	<mer> /mˈɛr/ "SEA_NOUN"
 	<morde> /mˈɔrde/ "BITE_VERB"
 
-/p/ (0.029)
+/p/ (0.028)
 	<temp> /tˈɛmp/ "TIME_NOUN"
 	<piedl> /pjˈɛdl/ "LOUSE_NOUN"
 	<Spagna> /ʃpˈaɲa/ "SPAIN_PROPN"
@@ -127,8 +127,8 @@ CONSONANTS
 	<save> /sˈave/ "WISE_ADJ"
 	<vent> /vˈɛnt/ "WIND_NOUN"
 
-/ʨ/ (0.022)
-	<ciel> /ʨˈel/ "SKY_NOUN"
+/ʨ/ (0.023)
+	<cianté> /ʨantˈe/ "SING_VERB"
 	<moscia> /mˈoʃʨa/ "FLY_NOUN"
 	<ciadeina> /ʨadˈejna/ "CHAIN_NOUN"
 

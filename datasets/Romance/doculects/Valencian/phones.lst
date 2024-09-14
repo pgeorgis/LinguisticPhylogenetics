@@ -1,60 +1,60 @@
 VOWELS
 /ˈa/ (0.066)
 	<faig> /fˈaʧ/ "DO-1SG_VERB"
-	<ànima> /ˈanimɐ/ "SOUL_NOUN"
+	<cant> /kˈant/ "SONG_NOUN"
 	<clamar> /klamˈar/ "CALL_VERB"
 
-/e/ (0.034)
-	<bones> /bˈɒnes/ "GOOD (F.PL)_ADJ"
-	<vedell> /veðˈeʎ/ "CALF_NOUN"
-	<vergonya> /verɡˈoɲɞ/ "SHAME_NOUN"
+/ˈi/ (0.035)
+	<farina> /faɾˈinɐ/ "FLOUR_NOUN"
+	<mica> /mˈikɐ/ "CRUMB_NOUN"
+	<dic> /dˈik/ "SAY-1SG_VERB"
 
 /ˈɒ/ (0.034)
 	<nou> /nˈɒw/ "NINE_NUM"
 	<nostre> /nˈɒstɾɞ/ "OUR_ADJ"
 	<fort> /fˈɒrt/ "STRONG_ADJ"
 
-/ˈi/ (0.034)
-	<nit> /nˈit/ "NIGHT_NOUN"
-	<dit> /dˈit/ "FINGER_NOUN"
-	<mica> /mˈikɐ/ "CRUMB_NOUN"
+/e/ (0.034)
+	<mare> /mˈaɾe/ "MOTHER_NOUN"
+	<quatre> /kwˈatɾe/ "FOUR_NUM"
+	<cremar> /kɾemˈar/ "BURN_VERB"
 
-/ɐ/ (0.032)
+/ɐ/ (0.031)
 	<Espanya> /espˈaɲɐ/ "SPAIN_PROPN"
 	<argila> /arʤˈilɐ/ "CLAY_NOUN"
 	<agulla> /aɣˈuʎɐ/ "NEEDLE_NOUN"
 
+/ˈe/ (0.03)
+	<anell> /anˈeʎ/ "RING_NOUN"
+	<vent> /vˈent/ "WIND_NOUN"
+	<néixer> /nˈeʃer/ "BE BORN_VERB"
+
 /ˈæ/ (0.029)
-	<ovella> /uvˈæʎɜ/ "SHEEP_NOUN"
-	<hivern> /ivˈærn/ "WINTER_NOUN"
-	<cendre> /sˈændɾɜ/ "ASH_NOUN"
+	<seda> /sˈæðɜ/ "SILK_NOUN"
+	<verd> /vˈært/ "GREEN_ADJ"
+	<penya> /pˈæɲɜ/ "FEATHER_NOUN"
 
-/ˈe/ (0.029)
-	<ella> /ˈeʎɜ/ "SHE_PRON"
-	<anyell> /aɲˈeʎ/ "LAMB_NOUN"
-	<ell> /ˈeʎ/ "HE_PRON"
-
-/ɜ/ (0.024)
+/ɜ/ (0.023)
 	<cirera> /siɾˈeɾɜ/ "CHERRY_NOUN"
 	<veure> /vˈæwɾɜ/ "SEE_VERB"
 	<bella> /bˈeʎɜ/ "BEAUTIFUL (F)_ADJ"
 
 /ˈu/ (0.023)
-	<núvol> /nˈuvul/ "CLOUD_NOUN"
+	<núvol> /nˈuvol/ "CLOUD_NOUN"
 	<cul> /kˈul/ "BUTTOCKS_NOUN"
 	<pluja> /plˈuʤɐ/ "RAIN_NOUN"
 
-/ˈo/ (0.022)
-	<rodó> /ruðˈo/ "ROUND_ADJ"
-	<color> /kulˈor/ "COLOR_NOUN"
+/ˈo/ (0.021)
+	<rodó> /roðˈo/ "ROUND_ADJ"
+	<color> /kolˈor/ "COLOR_NOUN"
 	<lleó> /ʎeˈo/ "LION_NOUN"
 
-/u/ (0.022)
-	<dormir> /durmˈir/ "SLEEP_VERB"
-	<conèixer> /kunˈæʃer/ "BE ACQUAINTED WITH_VERB"
-	<muntanya> /muntˈaɲɐ/ "MOUNTAIN_NOUN"
+/o/ (0.021)
+	<sofrir> /sofɾˈir/ "SUFFER_VERB"
+	<conèixer> /konˈæʃer/ "BE ACQUAINTED WITH_VERB"
+	<llombrígol> /ʎombɾˈiɡol/ "NAVEL_NOUN"
 
-/a/ (0.019)
+/a/ (0.02)
 	<farina> /faɾˈinɐ/ "FLOUR_NOUN"
 	<anell> /anˈeʎ/ "RING_NOUN"
 	<caçar> /kasˈar/ "HUNT_VERB"
@@ -69,6 +69,11 @@ VOWELS
 	<igual> /iɣwˈal/ "EQUAL_ADJ"
 	<llàgrima> /ʎˈaɣɾimɐ/ "TEAR_NOUN"
 
+/u/ (0.002)
+	<ajudar> /aʤuðˈar/ "HELP_VERB"
+	<muntanya> /muntˈaɲɐ/ "MOUNTAIN_NOUN"
+	<muller> /muʎˈer/ "WOMAN_WIFE_NOUN"
+
 /ˈɛ/ (0.001)
 	<gel> /ʤˈɛl/ "ICE_NOUN"
 
@@ -76,112 +81,112 @@ VOWELS
 
 CONSONANTS
 /s/ (0.059)
-	<estrella> /estɾˈeʎɜ/ "STAR_NOUN"
-	<sabut> /saβˈut/ "KNOWN_VERB"
-	<cendre> /sˈændɾɜ/ "ASH_NOUN"
+	<seure> /sˈæwɾɜ/ "SIT_VERB"
+	<temps> /tˈems/ "TIME_NOUN"
+	<cirera> /siɾˈeɾɜ/ "CHERRY_NOUN"
 
-/r/ (0.05)
-	<dir> /dˈir/ "SAY-INF_VERB"
-	<argila> /arʤˈilɐ/ "CLAY_NOUN"
-	<volar> /vulˈar/ "FLY_VERB"
+/r/ (0.053)
+	<flor> /flˈɒr/ "FLOWER_NOUN"
+	<occir> /oksˈir/ "KILL_VERB"
+	<obscur> /opskˈur/ "DARK_ADJ"
 
 /k/ (0.047)
-	<cald> /kˈalt/ "HOT_ADJ"
-	<vaca> /vˈakɐ/ "COW_NOUN"
 	<llac> /ʎˈak/ "LAKE_NOUN"
+	<qui> /kˈi/ "WHO_PRON"
+	<curt> /kˈuɾt/ "SHORT_ADJ"
 
-/t/ (0.046)
-	<estrella> /estɾˈeʎɜ/ "STAR_NOUN"
-	<cant> /kˈant/ "SONG_NOUN"
-	<muntanya> /muntˈaɲɐ/ "MOUNTAIN_NOUN"
+/t/ (0.047)
+	<llet> /ʎˈet/ "MILK_NOUN"
+	<tres> /tɾˈæs/ "THREE_NUM"
+	<vosaltres> /vozˈaltɾes/ "YOU (PL)_PRON"
 
 /ɾ/ (0.042)
-	<mare> /mˈaɾe/ "MOTHER_NOUN"
-	<pobre> /pˈɒβɾɞ/ "POOR_ADJ"
-	<escriure> /eskɾˈiwɾe/ "WRITE_VERB"
+	<pedra> /pˈeðɾɜ/ "STONE_NOUN"
+	<morir> /moɾˈir/ "DIE_VERB"
+	<farina> /faɾˈinɐ/ "FLOUR_NOUN"
 
-/n/ (0.04)
-	<neu> /nˈew/ "SNOW_NOUN"
-	<bones> /bˈɒnes/ "GOOD (F.PL)_ADJ"
-	<junt> /ʤˈunt/ "JOINED_ADJ"
+/n/ (0.039)
+	<cent> /sˈent/ "HUNDRED_NUM"
+	<pons> /pˈɒns/ "PUT-2SG_VERB"
+	<no> /nˈo/ "NOT_ADVERB"
 
 /ʎ/ (0.037)
-	<ell> /ˈeʎ/ "HE_PRON"
+	<lluna> /ʎˈunɐ/ "MOON_NOUN"
+	<fulla> /fˈuʎɐ/ "LEAF_NOUN"
 	<lloc> /ʎˈɒk/ "PLACE_NOUN"
-	<llet> /ʎˈet/ "MILK_NOUN"
 
-/l/ (0.036)
-	<pluja> /plˈuʤɐ/ "RAIN_NOUN"
-	<escoltar> /eskultˈar/ "LISTEN_VERB"
-	<sol> /sˈɒl/ "SUN_NOUN"
+/l/ (0.035)
+	<clamar> /klamˈar/ "CALL_VERB"
+	<palau> /palˈaw/ "PALACE_NOUN"
+	<gelar> /ʤelˈar/ "FREEZE_VERB"
 
-/p/ (0.033)
-	<pont> /pˈɒnt/ "BRIDGE_NOUN"
-	<pons> /pˈɒns/ "PUT-2SG_VERB"
-	<saps> /sˈaps/ "KNOW-2SG_VERB"
+/p/ (0.032)
+	<puig> /pˈuʧ/ "PODIUM_NOUN"
+	<punt> /pˈunt/ "POINT_NOUN"
+	<plànyer> /plˈaɲer/ "WEEP_VERB"
 
 /m/ (0.031)
-	<madur> /maðˈur/ "MATURE_NOUN"
-	<mig> /mˈiʧ/ "MIDDLE_NOUN"
-	<verm> /vˈærm/ "WORM_NOUN"
+	<metge> /mˈeʤɜ/ "DOCTOR_NOUN"
+	<molt> /mˈolt/ "MANY_ADJ"
+	<fum> /fˈum/ "SMOKE_NOUN"
 
 /w/ (0.024)
-	<lliure> /ʎˈiwɾe/ "FREE_ADJ"
 	<veure> /vˈæwɾɜ/ "SEE_VERB"
 	<ou> /ˈɒw/ "EGG_NOUN"
+	<llengua> /ʎˈæŋɡwɜ/ "TONGUE_NOUN"
 
 /v/ (0.022)
-	<veí> /veˈi/ "NEIGHBOR_NOUN"
 	<vin> /vˈin/ "TWENTY_NUM"
 	<via> /vˈiɐ/ "ROAD_NOUN"
+	<núvol> /nˈuvol/ "CLOUD_NOUN"
 
 /f/ (0.019)
-	<faig> /fˈaʧ/ "DO-1SG_VERB"
-	<fin> /fˈi/ "THIN_ADJ"
+	<sofrir> /sofɾˈir/ "SUFFER_VERB"
 	<fi> /fˈi/ "END_NOUN"
+	<fetge> /fˈeʤɜ/ "LIVER_NOUN"
 
 /ʤ/ (0.017)
-	<genoll> /ʤenˈoʎ/ "KNEE_NOUN"
 	<junt> /ʤˈunt/ "JOINED_ADJ"
 	<jo> /ʤˈɒ/ "I_PRON"
+	<juny> /ʤˈuɲ/ "JUNE_PROPN"
 
 /d/ (0.015)
-	<dolç> /dˈols/ "SWEET_ADJ"
 	<cendre> /sˈændɾɜ/ "ASH_NOUN"
-	<dos> /dˈos/ "TWO (M)_NUM"
+	<dolç> /dˈols/ "SWEET_ADJ"
+	<vindre> /vˈindɾe/ "COME-INF_VERB"
 
 /ɡ/ (0.013)
-	<gat> /ɡˈat/ "CAT_NOUN"
 	<goig> /ɡˈɒʧ/ "JOY_NOUN"
 	<guatla> /ɡwˈaɫːɐ/ "QUAIL_NOUN"
+	<ungla> /ˈuŋɡlɐ/ "FINGERNAIL_NOUN"
 
 /b/ (0.012)
 	<bones> /bˈɒnes/ "GOOD (F.PL)_ADJ"
-	<obrer> /ubɾˈer/ "WORKER_NOUN"
-	<bo> /bˈɒ/ "GOOD (M.SG)_ADJ"
+	<bons> /bˈɒns/ "GOOD (M.PL)_ADJ"
+	<bany> /bˈaɲ/ "BATH_NOUN"
 
 /ɲ/ (0.01)
+	<llenya> /ʎˈeɲɜ/ "WOOD_NOUN"
 	<penya> /pˈæɲɜ/ "FEATHER_NOUN"
-	<àngel> /ˈaɲʤel/ "ANGEL_NOUN"
-	<any> /ˈaɲ/ "YEAR_NOUN"
-
-/β/ (0.009)
-	<saber> /saβˈær/ "KNOW_VERB"
-	<obra> /ˈɒβɾɞ/ "WORK_NOUN"
-	<cabra> /kˈaβɾɐ/ "GOAT_NOUN"
+	<vergonya> /verɡˈoɲɞ/ "SHAME_NOUN"
 
 /ð/ (0.009)
+	<rodó> /roðˈo/ "ROUND_ADJ"
+	<fada> /fˈaðɐ/ "FATE_NOUN"
 	<vida> /vˈiðɐ/ "LIFE_NOUN"
-	<rodó> /ruðˈo/ "ROUND_ADJ"
-	<ajudar> /aʤuðˈar/ "HELP_VERB"
+
+/β/ (0.008)
+	<saber> /saβˈær/ "KNOW_VERB"
+	<cabell> /kaβˈæʎ/ "HAIR_NOUN"
+	<pobre> /pˈɒβɾɞ/ "POOR_ADJ"
 
 /ɣ/ (0.008)
-	<llàgrima> /ʎˈaɣɾimɐ/ "TEAR_NOUN"
 	<sàpiga> /sˈapiɣɐ/ "KNOW-SBJ-1SG_VERB"
 	<plaga> /plˈaɣɐ/ "PLAGUE_NOUN"
+	<igual> /iɣwˈal/ "EQUAL_ADJ"
 
 /ŋ/ (0.006)
-	<cinc> /sˈiŋk/ "FIVE_NUM"
+	<blanc> /blˈaŋk/ "WHITE_ADJ"
 	<sang> /sˈaŋk/ "BLOOD_NOUN"
 	<ungla> /ˈuŋɡlɐ/ "FINGERNAIL_NOUN"
 

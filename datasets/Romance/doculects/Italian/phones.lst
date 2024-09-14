@@ -1,21 +1,21 @@
 VOWELS
 /o/ (0.091)
-	<secco> /sˈekːo/ "DRY (M)_ADJ"
-	<vino> /vˈino/ "WINE_NOUN"
+	<faccio> /fˈaʧːo/ "DO-1SG_VERB"
+	<bianco> /bjˈaŋko/ "WHITE_ADJ"
 	<fratello> /fratˈɛlːo/ "BROTHER_NOUN"
 
-/e/ (0.082)
-	<fine> /fˈine/ "END_NOUN"
+/e/ (0.083)
+	<mangiare> /manʤˈare/ "EAT_VERB"
 	<bruciare> /bruʧˈare/ "BURN_VERB"
-	<leone> /leˈone/ "LION_NOUN"
+	<lume> /lˈume/ "LIGHT_NOUN"
 
 /a/ (0.069)
-	<spada> /spˈada/ "SWORD_NOUN"
+	<cima> /ʧˈima/ "SUMMIT_NOUN"
 	<sapere> /sapˈere/ "KNOW_VERB"
 	<foglia> /fˈɔʎːa/ "LEAF_NOUN"
 
-/ˈa/ (0.058)
-	<stato> /stˈato/ "STATE_NOUN"
+/ˈa/ (0.057)
+	<ragno> /rˈaɲːo/ "SPIDER_NOUN"
 	<casa> /kˈaza/ "HOUSE_NOUN"
 	<fata> /fˈata/ "FATE_NOUN"
 
@@ -24,7 +24,7 @@ VOWELS
 	<collo> /kˈɔlːo/ "NECK_NOUN"
 	<mordere> /mˈɔrdere/ "BITE_VERB"
 
-/ˈɛ/ (0.027)
+/ˈɛ/ (0.026)
 	<festa> /fˈɛsta/ "PARTY_NOUN"
 	<prezzo> /prˈɛʦːo/ "PRICE_NOUN"
 	<pietra> /pjˈɛtra/ "STONE_NOUN"
@@ -34,22 +34,22 @@ VOWELS
 	<vergogna> /verɡˈoɲːa/ "SHAME_NOUN"
 	<molto> /mˈolto/ "MANY_ADJ"
 
-/ˈe/ (0.024)
-	<nebbia> /nˈebːja/ "FOG_NOUN"
-	<che> /kˈe/ "WHAT_PRON"
-	<freddo> /frˈedːo/ "COLD_ADJ"
+/ˈi/ (0.024)
+	<gengiva> /ʤenʤˈiva/ "GUMS_NOUN"
+	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
+	<morire> /morˈire/ "DIE_VERB"
 
-/ˈi/ (0.023)
-	<gentile> /ʤentˈile/ "NICE_ADJ"
-	<venire> /venˈire/ "COME-INF_VERB"
-	<mille> /mˈilːe/ "THOUSAND_NUM"
+/ˈe/ (0.023)
+	<re> /rˈe/ "KING_NOUN"
+	<corteccia> /kortˈeʧːa/ "BARK_NOUN"
+	<tre> /trˈe/ "THREE_NUM"
 
 /ˈu/ (0.019)
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
 	<uno> /ˈuno/ "ONE_NUM"
 	<lui> /lˈui/ "HE_PRON"
 
-/i/ (0.016)
+/i/ (0.015)
 	<pidocchio> /pidˈɔkːjo/ "LOUSE_NOUN"
 	<settimana> /setːimˈana/ "WEEK_NOUN"
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
@@ -62,25 +62,25 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.072)
-	<sapere> /sapˈere/ "KNOW_VERB"
-	<odore> /odˈore/ "ODOR_NOUN"
-	<scuro> /skˈuro/ "DARK_ADJ"
+/r/ (0.074)
+	<re> /rˈe/ "KING_NOUN"
+	<madre> /mˈadre/ "MOTHER_NOUN"
+	<croce> /krˈoʧe/ "CROSS_NOUN"
 
 /n/ (0.054)
 	<luna> /lˈuna/ "MOON_NOUN"
 	<buoni> /bwˈɔni/ "GOOD (M.PL)_ADJ"
-	<inverno> /invˈɛrno/ "WINTER_NOUN"
+	<vino> /vˈino/ "WINE_NOUN"
 
 /k/ (0.036)
 	<conio> /kˈɔnjo/ "CORNER_NOUN"
 	<pecora> /pˈɛkora/ "SHEEP_NOUN"
 	<capo> /kˈapo/ "HEAD_NOUN"
 
-/t/ (0.034)
-	<metà> /metˈa/ "HALF_NOUN"
+/t/ (0.036)
+	<dito> /dˈito/ "FINGER_NOUN"
 	<tuto> /tˈutːo/ "ALL (SG)_ADJ"
-	<ascoltare> /askoltˈare/ "LISTEN_VERB"
+	<vita> /vˈita/ "LIFE_NOUN"
 
 /l/ (0.034)
 	<albero> /ˈalbero/ "TREE_NOUN"
@@ -94,7 +94,7 @@ CONSONANTS
 
 /s/ (0.029)
 	<stella> /stˈelːa/ "STAR_NOUN"
-	<savio> /sˈavjo/ "WISE_ADJ"
+	<settimana> /setːimˈana/ "WEEK_NOUN"
 	<sappia> /sˈapːja/ "KNOW-SBJ-1SG_VERB"
 
 /m/ (0.025)
@@ -102,7 +102,7 @@ CONSONANTS
 	<uomo> /wˈɔmo/ "MAN_NOUN"
 	<semente> /semˈente/ "SEED_NOUN"
 
-/j/ (0.024)
+/j/ (0.023)
 	<pioggia> /pjˈɔʤːa/ "RAIN_NOUN"
 	<sei> /sˈɛj/ "SIX_NUM"
 	<ghiacciare> /ɡjaʧːˈare/ "FREEZE_VERB"
@@ -117,7 +117,7 @@ CONSONANTS
 	<dente> /dˈɛnte/ "TOOTH_NOUN"
 	<vedere> /vedˈere/ "SEE_VERB"
 
-/f/ (0.016)
+/f/ (0.015)
 	<festa> /fˈɛsta/ "PARTY_NOUN"
 	<freddo> /frˈedːo/ "COLD_ADJ"
 	<foglia> /fˈɔʎːa/ "LEAF_NOUN"
@@ -167,30 +167,30 @@ CONSONANTS
 	<Spagna> /spˈaɲːa/ "SPAIN_PROPN"
 	<giugno> /ʤˈuɲːo/ "JUNE_PROPN"
 
-/ʧː/ (0.005)
-	<faccio> /fˈaʧːo/ "DO-1SG_VERB"
-	<ghiacciare> /ɡjaʧːˈare/ "FREEZE_VERB"
-	<uccello> /uʧːˈɛlːo/ "BIRD_NOUN"
-
 /ʎː/ (0.005)
+	<figlia> /fˈiʎːa/ "DAUGHTER_NOUN"
+	<aglio> /ˈaʎːo/ "GARLIC_NOUN"
 	<migliore> /miʎːˈore/ "BETTER_ADJ"
-	<quaglia> /kwˈaʎːa/ "QUAIL_NOUN"
-	<meglio> /mˈɛʎːo/ "BETTER_ADV"
+
+/ʧː/ (0.005)
+	<goccia> /ɡˈoʧːa/ "DROP_NOUN"
+	<ghiacciare> /ɡjaʧːˈare/ "FREEZE_VERB"
+	<ghiaccio> /ɡjˈaʧːo/ "ICE_NOUN"
 
 /ŋ/ (0.005)
 	<unghia> /ˈuŋɡja/ "FINGERNAIL_NOUN"
 	<bianco> /bjˈaŋko/ "WHITE_ADJ"
 	<cinque> /ʧˈiŋkwe/ "FIVE_NUM"
 
-/sː/ (0.004)
-	<basso> /bˈasːo/ "LOW_ADJ"
+/sː/ (0.005)
 	<rosso> /rˈosːo/ "RED_ADJ"
-	<grosso> /ɡrˈɔsːo/ "THICK_ADJ"
+	<sasso> /sˈasːo/ "ROCK_NOUN"
+	<nessuno> /nesːˈuno/ "NONE_PRON"
 
 /ʤː/ (0.003)
-	<pioggia> /pjˈɔʤːa/ "RAIN_NOUN"
 	<poggio> /pˈɔʤːo/ "PODIUM_NOUN"
-	<leggere> /lˈɛʤːere/ "READ_VERB"
+	<pioggia> /pjˈɔʤːa/ "RAIN_NOUN"
+	<legge> /lˈeʤːe/ "LAW_NOUN"
 
 /ʃː/ (0.002)
 	<conoscere> /konˈoʃːere/ "BE ACQUAINTED WITH_VERB"
@@ -228,7 +228,7 @@ CONSONANTS
 
 /mː/ (0.001)
 	<fiamma> /fjˈamːa/ "FLAME_NOUN"
-	<femmina> /fˈemːina/ "WOMAN_NOUN"
+	<femmina> /fˈemːina/ "WOMAN_FEMALE_NOUN"
 
 /ʣː/ (0.001)
 	<mezzo> /mˈɛʣːo/ "MIDDLE_NOUN"
@@ -238,6 +238,9 @@ CONSONANTS
 
 /pː/ (0.001)
 	<sappia> /sˈapːja/ "KNOW-SBJ-1SG_VERB"
+
+/fː/ (0.001)
+	<soffrire> /sofːrˈire/ "SUFFER_VERB"
 
 /dː/ (0.001)
 	<freddo> /frˈedːo/ "COLD_ADJ"

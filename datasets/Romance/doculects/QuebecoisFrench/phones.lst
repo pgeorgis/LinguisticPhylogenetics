@@ -1,20 +1,20 @@
 VOWELS
-/ɛ/ (0.043)
+/ɛ/ (0.042)
 	<sèche> /sɛʃ/ "DRY (F)_ADJ"
 	<elle> /ɛl/ "SHE_PRON"
 	<pouvoir> /puvwɛʁ/ "CAN_VERB"
 
-/æɛ̯/ (0.041)
+/æɛ̯/ (0.04)
 	<vert> /væɛ̯ʁ/ "GREEN_ADJ"
 	<fais> /fæɛ̯/ "DO-1SG_VERB"
 	<caille> /kæɛ̯j/ "QUAIL_NOUN"
 
-/e/ (0.035)
+/e/ (0.036)
+	<araignée> /aʁæɛ̯ɲe/ "SPIDER_NOUN"
 	<étoile> /etwɛl/ "STAR_NOUN"
-	<été> /ete/ "SUMMER_NOUN"
-	<fumée> /fyme/ "SMOKE_NOUN"
+	<chercher> /ʃæɛ̯ʁʃe/ "SEARCH_VERB"
 
-/a/ (0.033)
+/a/ (0.032)
 	<chasser> /ʃase/ "HUNT_VERB"
 	<égal> /eɡal/ "EQUAL_ADJ"
 	<larme> /laʁm/ "TEAR_NOUN"
@@ -22,27 +22,27 @@ VOWELS
 /i/ (0.031)
 	<cerise> /sœʁiz/ "CHERRY_NOUN"
 	<petit> /pœʦi/ "SMALL_ADJ"
-	<vilain> /vilẽɪ̯̃/ "VILLAIN_NOUN"
+	<dix> /ʣi/ "TEN_NUM"
 
-/ẽɪ̯̃/ (0.025)
+/ẽɪ̯̃/ (0.024)
 	<romain> /ʁɔmẽɪ̯̃/ "ROMAN_ADJ"
 	<plaindre> /plẽɪ̯̃dʁ/ "WEEP_VERB"
 	<bain> /bẽɪ̯̃/ "BATH_NOUN"
 
-/œ/ (0.02)
-	<semance> /sœmãs/ "SEED_NOUN"
-	<je> /ʒœ/ "I_PRON"
-	<cheval> /ʃœval/ "HORSE_NOUN"
-
-/ã/ (0.02)
-	<dent> /dã/ "TOOTH_NOUN"
-	<grand> /ɡʁã/ "BIG_ADJ"
-	<cent> /sã/ "HUNDRED_NUM"
-
-/u/ (0.019)
-	<tous> /tu/ "ALL (PL)_ADJ"
-	<vous> /vu/ "YOU (PL)_PRON"
+/u/ (0.022)
 	<ouvrier> /uvʁije/ "WORKER_NOUN"
+	<court> /kuʁ/ "SHORT_ADJ"
+	<mourir> /muʁiʁ/ "DIE_VERB"
+
+/ã/ (0.021)
+	<manger> /mãʒe/ "EAT_VERB"
+	<langue> /lãɡ/ "TONGUE_NOUN"
+	<grand> /ɡʁã/ "BIG_ADJ"
+
+/œ/ (0.02)
+	<feuille> /fœj/ "LEAF_NOUN"
+	<lever> /lœve/ "CARRY_VERB"
+	<œuvre> /œvʁ/ "WORK_NOUN"
 
 /ɪ/ (0.016)
 	<ville> /vɪl/ "TOWN_NOUN"
@@ -59,7 +59,7 @@ VOWELS
 	<lion> /ljɒ̃ʊ̯̃/ "LION_NOUN"
 	<non> /nɒ̃ʊ̯̃/ "NOT_ADVERB"
 
-/ɔ/ (0.015)
+/ɔ/ (0.014)
 	<soleil> /sɔlæɛ̯j/ "SUN_NOUN"
 	<bonnes> /bɔn/ "GOOD (F.PL)_ADJ"
 	<bonne> /bɔn/ "GOOD (F.SG)_ADJ"
@@ -79,17 +79,17 @@ VOWELS
 	<écorce> /ekɑɔ̯ʁs/ "BARK_NOUN"
 	<corne> /kɑɔ̯ʁn/ "HORN_NOUN"
 
-/ɑ/ (0.005)
+/ɑ/ (0.004)
 	<état> /etɑ/ "STATE_NOUN"
 	<château> /ʃɑtoʊ̯/ "CASTLE_NOUN"
 	<âme> /ɑm/ "SOUL_NOUN"
 
-/o/ (0.005)
+/o/ (0.004)
 	<nôtre> /notʁ/ "OUR_ADJ"
 	<os> /o/ "BONE_NOUN"
 	<chose> /ʃoz/ "THING_NOUN"
 
-/aœ̯/ (0.005)
+/aœ̯/ (0.004)
 	<fleur> /flaœ̯ʁ/ "FLOWER_NOUN"
 	<cœur> /kaœ̯ʁ/ "HEART_NOUN"
 	<odeur> /ɔdaœ̯ʁ/ "ODOR_NOUN"
@@ -115,87 +115,87 @@ VOWELS
 
 
 CONSONANTS
-/ʁ/ (0.101)
-	<cire> /siʁ/ "WAX_NOUN"
-	<ver> /væɛ̯ʁ/ "WORM_NOUN"
+/ʁ/ (0.102)
+	<arbre> /aʁbʁ/ "TREE_NOUN"
+	<ouvrier> /uvʁije/ "WORKER_NOUN"
 	<fer> /fæɛ̯ʁ/ "IRON_NOUN"
 
-/l/ (0.057)
+/l/ (0.056)
 	<glace> /ɡlas/ "ICE_NOUN"
 	<lire> /liʁ/ "READ_VERB"
 	<flamme> /flam/ "FLAME_NOUN"
 
-/s/ (0.053)
-	<chasser> /ʃase/ "HUNT_VERB"
-	<sauce> /soʊ̯s/ "SAUCE_NOUN"
-	<fils> /fɪs/ "SON_NOUN"
+/s/ (0.054)
+	<cent> /sã/ "HUNDRED_NUM"
+	<sable> /sabl/ "SAND_NOUN"
+	<sage> /saʒ/ "WISE_ADJ"
 
 /n/ (0.035)
 	<neuf> /nœf/ "NINE_NUM"
 	<nuage> /nɥaʒ/ "CLOUD_NOUN"
 	<peine> /pæɛ̯n/ "PAIN_NOUN"
 
-/v/ (0.034)
+/v/ (0.033)
 	<hiver> /ivæɛ̯ʁ/ "WINTER_NOUN"
 	<vache> /vaʃ/ "COW_NOUN"
 	<chèvre> /ʃɛvʁ/ "GOAT_NOUN"
 
-/p/ (0.034)
+/p/ (0.033)
 	<plaindre> /plẽɪ̯̃dʁ/ "WEEP_VERB"
 	<ponds> /pɒ̃ʊ̯̃/ "PUT-2SG_VERB"
 	<pauvre> /poʊ̯vʁ/ "POOR_ADJ"
 
-/w/ (0.033)
+/w/ (0.032)
 	<seoir> /swɛʁ/ "SIT_VERB"
 	<oiseau> /wɛzoʊ̯/ "BIRD_NOUN"
 	<asseoir> /aswɛʁ/ "SIT_VERB"
 
+/t/ (0.03)
+	<tout> /tu/ "ALL (SG)_ADJ"
+	<écouter> /ekute/ "LISTEN_VERB"
+	<chanter> /ʃãte/ "SING_VERB"
+
 /m/ (0.03)
-	<mordre> /mɑɔ̯ʁdʁ/ "BITE_VERB"
-	<mi-> /mi/ "MIDDLE_NOUN"
-	<dormir> /dɑɔ̯ʁmiʁ/ "SLEEP_VERB"
+	<mouche> /mʊʃ/ "FLY_NOUN"
+	<femme> /fam/ "WOMAN_FEMALE_NOUN"
+	<moi> /mwɛ/ "I_OBL_PRON"
 
-/f/ (0.029)
-	<feu> /føʏ̯/ "FIRE_NOUN"
-	<fruit> /fʁɥi/ "FRUIT_NOUN"
+/f/ (0.03)
 	<frère> /fʁæɛ̯ʁ/ "BROTHER_NOUN"
-
-/t/ (0.028)
-	<tête> /tɛɪ̯t/ "SKULL_NOUN"
-	<ventre> /vãtʁ/ "BELLY_NOUN"
-	<lettre> /lɛtʁ/ "LETTER_NOUN"
+	<farine> /faʁɪn/ "FLOUR_NOUN"
+	<fruit> /fʁɥi/ "FRUIT_NOUN"
 
 /k/ (0.028)
-	<qui> /ki/ "WHO_PRON"
-	<que> /kœ/ "WHAT_PRON"
-	<clé> /kle/ "KEY_NOUN"
+	<cinquante> /sẽɪ̯̃kãt/ "FIFTY_NUM"
+	<corne> /kɑɔ̯ʁn/ "HORN_NOUN"
+	<sec> /sɛk/ "DRY (M)_ADJ"
 
 /j/ (0.027)
-	<yeux> /jøʏ̯/ "EYES_NOUN"
-	<moitié> /mwɛʦje/ "HALF_NOUN"
-	<feuille> /fœj/ "LEAF_NOUN"
+	<bien> /bjẽɪ̯̃/ "WELL (ADV)_ADV"
+	<aiguille> /æɛ̯ɡɥɪj/ "NEEDLE_NOUN"
+	<dieu> /ʣjøʏ̯/ "GOD_NOUN"
 
-/ʒ/ (0.024)
-	<joint> /ʒwẽɪ̯̃/ "JOINED_ADJ"
-	<gens> /ʒã/ "PEOPLE_NOUN"
+/ʒ/ (0.023)
 	<juge> /ʒyʒ/ "JUDGE_NOUN"
+	<gencive> /ʒãsiv/ "GUMS_NOUN"
+	<gendre> /ʒãdʁ/ "SON-IN-LAW_NOUN"
 
 /ʃ/ (0.023)
-	<sèche> /sɛʃ/ "DRY (F)_ADJ"
-	<chercher> /ʃæɛ̯ʁʃe/ "SEARCH_VERB"
 	<sache> /saʃ/ "KNOW-SBJ-1SG_VERB"
+	<bouche> /bʊʃ/ "MOUTH_NOUN"
+	<chant> /ʃã/ "SONG_NOUN"
 
 /b/ (0.019)
-	<bien> /bjẽɪ̯̃/ "WELL (ADV)_ADV"
 	<bain> /bẽɪ̯̃/ "BATH_NOUN"
 	<herbe> /æɛ̯ʁb/ "GRASS_NOUN"
+	<bœuf> /bœf/ "OX_NOUN"
 
 /d/ (0.016)
-	<deux> /døʏ̯/ "TWO (F)_NUM"
 	<don> /dɒ̃ʊ̯̃/ "GIFT_NOUN"
+	<deux> /døʏ̯/ "TWO (F)_NUM"
 	<aide> /æɛ̯d/ "HELP-1SG_VERB"
 
-/ɡ/ (0.014)
+/ɡ/ (0.013)
 	<glacer> /ɡlase/ "FREEZE_VERB"
 	<grand> /ɡʁã/ "BIG_ADJ"
 	<grain> /ɡʁẽɪ̯̃/ "GRAIN_NOUN"
@@ -215,12 +215,12 @@ CONSONANTS
 	<montagne> /mɒ̃ʊ̯̃taɲ/ "MOUNTAIN_NOUN"
 	<araignée> /aʁæɛ̯ɲe/ "SPIDER_NOUN"
 
-/ʦ/ (0.005)
+/ʦ/ (0.004)
 	<gentil> /ʒãʦi/ "NICE_ADJ"
 	<moitié> /mwɛʦje/ "HALF_NOUN"
 	<tu> /ʦy/ "THOU_PRON"
 
-/ʣ/ (0.005)
+/ʣ/ (0.004)
 	<dix> /ʣɪs/ "TEN_NUM"
 	<dire> /ʣiʁ/ "SAY-INF_VERB"
 	<dis> /ʣi/ "SAY-1SG_VERB"

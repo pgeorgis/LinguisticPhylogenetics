@@ -1,25 +1,25 @@
 VOWELS
-/e/ (0.096)
+/e/ (0.097)
 	<luare> /luˈare/ "CARRY_VERB"
-	<ploaie> /plo̯ˈaje/ "RAIN_NOUN"
-	<scriere> /skrˈiere/ "WRITE_VERB"
+	<regină> /reʤˈinə/ "QUEEN_NOUN"
+	<june> /ʒˈune/ "YOUNG_ADJ"
 
-/ə/ (0.061)
+/ə/ (0.06)
 	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
 	<insulă> /ˈinsulə/ "ISLAND_NOUN"
 	<țară> /ʦˈarə/ "EARTH_NOUN"
 
 /ˈa/ (0.05)
-	<parabolă> /parˈabolə/ "WORD_NOUN"
-	<spată> /spˈatə/ "SWORD_NOUN"
-	<apă> /ˈapə/ "WATER_NOUN"
+	<iarnă> /jˈarnə/ "WINTER_NOUN"
+	<înotare> /ɨnotˈare/ "SWIM_VERB"
+	<arbore> /ˈarbore/ "TREE_NOUN"
 
-/ˈi/ (0.036)
-	<timp> /tˈimp/ "TIME_NOUN"
-	<buric> /burˈik/ "NAVEL_NOUN"
-	<liber> /lˈiber/ "FREE_ADJ"
+/ˈi/ (0.037)
+	<fin> /fˈin/ "THIN_ADJ"
+	<lumină> /lumˈinə/ "LIGHT_NOUN"
+	<cinci> /ʧˈinʧʲ/ "FIVE_NUM"
 
-/ˈu/ (0.035)
+/ˈu/ (0.034)
 	<obscur> /obskˈur/ "DARK_ADJ"
 	<punct> /pˈuŋkt/ "POINT_NOUN"
 	<cenușă> /ʧenˈuʃə/ "ASH_NOUN"
@@ -29,80 +29,80 @@ VOWELS
 	<miez> /mjˈez/ "MIDDLE_NOUN"
 	<trei> /trˈej/ "THREE_NUM"
 
-/ˈo/ (0.025)
+/ˈo/ (0.024)
 	<toți> /tˈoʦʲ/ "ALL (PL)_"
 	<doi> /dˈoj/ "TWO (M)_NUM"
 	<nouă> /nˈowə/ "NINE_NUM"
 
-/u/ (0.019)
-	<rumân> /rumˈɨn/ "ROMAN_ADJ"
+/u/ (0.021)
+	<roșu> /rˈoʃu/ "RED_ADJ"
+	<sigur> /sˈiɡur/ "SAFE_ADJ"
 	<culoare> /kulo̯ˈare/ "COLOR_NOUN"
-	<buric> /burˈik/ "NAVEL_NOUN"
 
-/o̯ˈa/ (0.015)
+/o̯ˈa/ (0.016)
+	<coadă> /ko̯ˈadə/ "TAIL_NOUN"
 	<frumoasă> /frumo̯ˈasə/ "BEAUTIFUL (M)_ADJ"
 	<foaie> /fo̯ˈaje/ "LEAF_NOUN"
-	<toamnă> /to̯ˈamnə/ "AUTUMN_NOUN"
 
 /ˈɨ/ (0.012)
 	<înger> /ˈɨnʤer/ "ANGEL_NOUN"
 	<lână> /lˈɨnə/ "WOOL_NOUN"
-	<cânt> /kˈɨnt/ "SONG_NOUN"
+	<vânt> /vˈɨnt/ "WIND_NOUN"
 
 /a/ (0.01)
+	<arină> /arˈinə/ "SAND_NOUN"
 	<ascultare> /askultˈare/ "LISTEN_VERB"
 	<supra> /sˈupra/ "ABOVE_PREP"
-	<ajut> /aʒˈut/ "HELP-1SG_VERB"
 
 /i/ (0.009)
+	<ficat> /fikˈat/ "LIVER_NOUN"
 	<inimă> /ˈinimə/ "SOUL_NOUN"
 	<picior> /piʧˈor/ "FOOT_NOUN"
-	<ficat> /fikˈat/ "LIVER_NOUN"
 
 /e̯ˈa/ (0.007)
-	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
-	<gheață> /ɡe̯ˈaʦə/ "ICE_NOUN"
 	<nea> /ne̯ˈa/ "SNOW_NOUN"
+	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
+	<ea> /je̯ˈa/ "SHE_PRON"
 
 /o/ (0.005)
+	<odoare> /odo̯ˈare/ "ODOR_NOUN"
 	<înotare> /ɨnotˈare/ "SWIM_VERB"
-	<parabolă> /parˈabolə/ "WORD_NOUN"
-	<arbore> /ˈarbore/ "TREE_NOUN"
+	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
+
+/ɨ/ (0.004)
+	<înotare> /ɨnotˈare/ "SWIM_VERB"
+	<mâncare> /mɨŋkˈare/ "EAT_VERB"
+	<cântare> /kɨntˈare/ "SING_VERB"
 
 /ˈə/ (0.003)
 	<dă> /dˈə/ "GIVE-3SG_VERB"
-	<mă> /mˈə/ "I_OBL_PRON"
+	<păr> /pˈər/ "HAIR_NOUN"
 	<făină> /fˈəjnə/ "FLOUR_NOUN"
 
-/ɨ/ (0.003)
-	<mâncare> /mɨŋkˈare/ "EAT_VERB"
-	<înotare> /ɨnotˈare/ "SWIM_VERB"
-	<înghețare> /ɨŋɡeʦˈare/ "FREEZE_VERB"
-
-/ˈau̯/ (0.002)
-	<taur> /tˈau̯r/ "BULL_NOUN"
+/ˈau̯/ (0.001)
 	<aur> /ˈau̯r/ "GOLD_NOUN"
+	<taur> /tˈau̯r/ "BULL_NOUN"
 
 
 
 CONSONANTS
-/r/ (0.098)
-	<înotare> /ɨnotˈare/ "SWIM_VERB"
-	<parabolă> /parˈabolə/ "WORD_NOUN"
-	<odoare> /odo̯ˈare/ "ODOR_NOUN"
+/r/ (0.1)
+	<plângere> /plˈɨnʤere/ "WEEP_VERB"
+	<scoarţă> /sko̯ˈarʦə/ "BARK_NOUN"
+	<iarbă> /jˈarbə/ "GRASS_NOUN"
 
-/n/ (0.062)
+/n/ (0.061)
+	<noj> /nˈoj/ "WE_PRON"
 	<nor> /nˈor/ "CLOUD_NOUN"
 	<bune> /bˈune/ "GOOD (F.PL)_ADJ"
-	<vecin> /veʧˈin/ "NEIGHBOR_NOUN"
 
-/t/ (0.05)
-	<punte> /pˈunte/ "BRIDGE_NOUN"
-	<scurt> /skˈurt/ "SHORT_ADJ"
-	<pește> /pˈeʃte/ "FISH_NOUN"
+/t/ (0.051)
+	<bărbat> /bərbˈat/ "MAN_NOUN"
+	<tușire> /tuʃˈire/ "COUGH_VERB"
+	<petrecere> /petreʧˈere/ "PARTY_NOUN"
 
 /k/ (0.044)
-	<scriere> /skrˈiere/ "WRITE_VERB"
+	<coapsă> /ko̯ˈapsə/ "THIGH_NOUN"
 	<loc> /lˈok/ "PLACE_NOUN"
 	<porc> /pˈork/ "PIG_NOUN"
 
@@ -111,13 +111,13 @@ CONSONANTS
 	<piersică> /pjˈersikə/ "PEACH_NOUN"
 	<timp> /tˈimp/ "TIME_NOUN"
 
-/l/ (0.035)
+/l/ (0.034)
 	<floare> /flo̯ˈare/ "FLOWER_NOUN"
 	<lac> /lˈak/ "LAKE_NOUN"
 	<insulă> /ˈinsulə/ "ISLAND_NOUN"
 
 /s/ (0.032)
-	<gros> /ɡrˈos/ "THICK_ADJ"
+	<spată> /spˈatə/ "SWORD_NOUN"
 	<țeastă> /ʦe̯ˈastə/ "SKULL_NOUN"
 	<Spania> /spˈanja/ "SPAIN_PROPN"
 
@@ -131,7 +131,7 @@ CONSONANTS
 	<foaie> /fo̯ˈaje/ "LEAF_NOUN"
 	<Spania> /spˈanja/ "SPAIN_PROPN"
 
-/ʧ/ (0.02)
+/ʧ/ (0.019)
 	<pace> /pˈaʧe/ "PEACE_NOUN"
 	<doisprezece> /dˈojsprezeʧe/ "TWELVE_NUM"
 	<cruce> /krˈuʧe/ "CROSS_NOUN"
@@ -156,25 +156,25 @@ CONSONANTS
 	<vin> /vˈin/ "COME-1SG_VERB"
 	<vin> /vˈin/ "WINE_NOUN"
 
-/ʤ/ (0.011)
+/ʤ/ (0.01)
 	<argilă> /arʤˈilə/ "CLAY_NOUN"
 	<lege> /lˈeʤe/ "LAW_NOUN"
 	<rege> /rˈeʤe/ "KING_NOUN"
 
-/ɡ/ (0.011)
-	<înghețare> /ɨŋɡeʦˈare/ "FREEZE_VERB"
-	<gheață> /ɡe̯ˈaʦə/ "ICE_NOUN"
-	<gros> /ɡrˈos/ "THICK_ADJ"
-
-/w/ (0.011)
-	<ou> /ˈow/ "EGG_NOUN"
-	<nou> /nˈow/ "NEW_ADJ"
-	<două> /dˈowə/ "TWO (F)_NUM"
-
 /ʃ/ (0.01)
-	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
-	<ședere> /ʃedˈere/ "SIT_VERB"
-	<roșu> /rˈoʃu/ "RED_ADJ"
+	<tușire> /tuʃˈire/ "COUGH_VERB"
+	<știi> /ʃtˈii/ "KNOW-2SG_VERB"
+	<șapte> /ʃˈapte/ "SEVEN_NUM"
+
+/ɡ/ (0.01)
+	<negru> /nˈeɡru/ "BLACK_ADJ"
+	<gheață> /ɡe̯ˈaʦə/ "ICE_NOUN"
+	<galben> /ɡˈalben/ "YELLOW_ADJ"
+
+/w/ (0.01)
+	<eu> /jˈew/ "I_PRON"
+	<fiu> /fˈiw/ "SON_NOUN"
+	<bou> /bˈow/ "OX_NOUN"
 
 /z/ (0.009)
 	<zece> /zˈeʧe/ "TEN_NUM"

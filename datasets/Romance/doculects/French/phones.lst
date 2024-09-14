@@ -1,5 +1,5 @@
 VOWELS
-/a/ (0.067)
+/a/ (0.066)
 	<doigt> /dwa/ "FINGER_NOUN"
 	<argile> /aʁʒil/ "CLAY_NOUN"
 	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
@@ -12,49 +12,49 @@ VOWELS
 /i/ (0.047)
 	<racine> /ʁasin/ "ROOT_NOUN"
 	<dire> /diʁ/ "SAY-INF_VERB"
-	<dix> /dis/ "TEN_NUM"
+	<dix> /di/ "TEN_NUM"
 
-/e/ (0.036)
-	<fumée> /fyme/ "SMOKE_NOUN"
-	<glacer> /ɡlase/ "FREEZE_VERB"
-	<épi> /epi/ "EAR OF GRAIN_NOUN"
+/e/ (0.038)
+	<chercher> /ʃɛʁʃe/ "SEARCH_VERB"
+	<geler> /ʒəle/ "FREEZE_VERB"
+	<tousser> /tuse/ "COUGH_VERB"
 
 /ɛ̃/ (0.025)
 	<juin> /ʒɥɛ̃/ "JUNE_PROPN"
 	<bain> /bɛ̃/ "BATH_NOUN"
 	<bien> /bjɛ̃/ "WELL (ADV)_ADV"
 
-/ɔ/ (0.025)
-	<or> /ɔʁ/ "GOLD_NOUN"
-	<bonnes> /bɔn/ "GOOD (F.PL)_ADJ"
-	<porc> /pɔʁ/ "PIG_NOUN"
+/u/ (0.025)
+	<genou> /ʒənu/ "KNEE_NOUN"
+	<écouter> /ekute/ "LISTEN_VERB"
+	<coup> /ku/ "STRIKE_NOUN"
 
-/u/ (0.023)
-	<vous> /vu/ "YOU (PL)_PRON"
-	<tous> /tu/ "ALL (PL)_ADJ"
-	<loup> /lu/ "WOLF_NOUN"
+/ɔ/ (0.024)
+	<fort> /fɔʁ/ "STRONG_ADJ"
+	<automne> /otɔn/ "AUTUMN_NOUN"
+	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
+
+/ɑ̃/ (0.021)
+	<chanter> /ʃɑ̃te/ "SING_VERB"
+	<cinquante> /sɛ̃kɑ̃t/ "FIFTY_NUM"
+	<manger> /mɑ̃ʒe/ "EAT_VERB"
 
 /o/ (0.021)
-	<pauvre> /povʁ/ "POOR_ADJ"
-	<aube> /ob/ "DAWN_NOUN"
-	<côte> /kot/ "COAST_NOUN"
-
-/ɑ̃/ (0.02)
-	<dent> /dɑ̃/ "TOOTH_NOUN"
-	<grand> /ɡʁɑ̃/ "BIG_ADJ"
-	<cent> /sɑ̃/ "HUNDRED_NUM"
+	<gros> /ɡʁo/ "THICK_ADJ"
+	<os> /o/ "BONE_NOUN"
+	<chaud> /ʃo/ "HOT_ADJ"
 
 /ɔ̃/ (0.015)
 	<pont> /pɔ̃/ "BRIDGE_NOUN"
 	<rond> /ʁɔ̃/ "ROUND_ADJ"
 	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
 
-/y/ (0.015)
+/y/ (0.014)
 	<sur> /syʁ/ "ABOVE_PREP"
 	<fumée> /fyme/ "SMOKE_NOUN"
 	<lutte> /lyt/ "FIGHT_NOUN"
 
-/œ/ (0.014)
+/œ/ (0.013)
 	<bœuf> /bœf/ "OX_NOUN"
 	<œil> /œj/ "EYE_NOUN"
 	<feuille> /fœj/ "LEAF_NOUN"
@@ -72,19 +72,19 @@ VOWELS
 
 
 CONSONANTS
-/ʁ/ (0.101)
+/ʁ/ (0.102)
 	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
 	<faire> /fɛʁ/ "DO_VERB"
 	<grain> /ɡʁɛ̃/ "GRAIN_NOUN"
 
-/l/ (0.057)
+/l/ (0.056)
 	<voler> /vɔle/ "FLY_VERB"
 	<sel> /sɛl/ "SALT_NOUN"
 	<ficelle> /fisɛl/ "STRING_NOUN"
 
-/s/ (0.053)
-	<savoir> /savwaʁ/ "KNOW_VERB"
-	<gencive> /ʒɑ̃siv/ "GUMS_NOUN"
+/s/ (0.054)
+	<su> /sy/ "KNOWN_VERB"
+	<glacer> /ɡlase/ "FREEZE_VERB"
 	<tous> /tus/ "ALL (PL)_ADJ"
 
 /n/ (0.035)
@@ -92,32 +92,32 @@ CONSONANTS
 	<nous> /nu/ "WE_PRON"
 	<nue> /ny/ "CLOUD_NOUN"
 
+/t/ (0.034)
+	<tousser> /tuse/ "COUGH_VERB"
+	<mater> /mate/ "KILL_VERB"
+	<taureau> /toʁo/ "BULL_NOUN"
+
 /p/ (0.034)
-	<plein> /plɛ̃/ "FULL_ADJ"
-	<pêche> /pɛʃ/ "PEACH_NOUN"
-	<plume> /plym/ "FEATHER_NOUN"
+	<puy> /pɥi/ "PODIUM_NOUN"
+	<pierre> /pjɛʁ/ "STONE_NOUN"
+	<pluie> /plɥi/ "RAIN_NOUN"
 
-/v/ (0.034)
-	<vieux> /vjø/ "OLD_ADJ"
+/v/ (0.033)
 	<hiver> /ivɛʁ/ "WINTER_NOUN"
-	<vingt> /vɛ̃/ "TWENTY_NUM"
+	<gencive> /ʒɑ̃siv/ "GUMS_NOUN"
+	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
 
-/w/ (0.033)
+/w/ (0.032)
+	<joie> /ʒwa/ "JOY_NOUN"
+	<seoir> /swaʁ/ "SIT_VERB"
 	<étoile> /etwal/ "STAR_NOUN"
-	<oie> /wa/ "GOOSE_NOUN"
-	<roi> /ʁwa/ "KING_NOUN"
-
-/t/ (0.033)
-	<tuer> /tɥe/ "KILL_VERB"
-	<été> /ete/ "SUMMER_NOUN"
-	<tu> /ty/ "THOU_PRON"
 
 /m/ (0.03)
 	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
 	<mordre> /mɔʁdʁ/ "BITE_VERB"
 	<mille> /mil/ "THOUSAND_NUM"
 
-/f/ (0.029)
+/f/ (0.03)
 	<chef> /ʃɛf/ "HEAD_NOUN"
 	<fils> /fis/ "SON_NOUN"
 	<force> /fɔʁs/ "STRENGTH_NOUN"
@@ -132,7 +132,7 @@ CONSONANTS
 	<ouvrier> /uvʁije/ "WORKER_NOUN"
 	<caille> /kaj/ "QUAIL_NOUN"
 
-/ʒ/ (0.024)
+/ʒ/ (0.023)
 	<jeune> /ʒœn/ "YOUNG_ADJ"
 	<gendre> /ʒɑ̃dʁ/ "SON-IN-LAW_NOUN"
 	<jaune> /ʒon/ "YELLOW_ADJ"
@@ -152,7 +152,7 @@ CONSONANTS
 	<bœuf> /bœf/ "OX_NOUN"
 	<herbe> /ɛʁb/ "GRASS_NOUN"
 
-/ɡ/ (0.014)
+/ɡ/ (0.013)
 	<ongle> /ɔ̃ɡl/ "FINGERNAIL_NOUN"
 	<grain> /ɡʁɛ̃/ "GRAIN_NOUN"
 	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"

@@ -1,10 +1,10 @@
 VOWELS
 /u/ (0.084)
 	<peito> /pˈɐjtu/ "BREAST_NOUN"
-	<umbigo> /ũbˈiɣu/ "NAVEL_NOUN"
-	<grosso> /ɡɾˈosu/ "THICK_ADJ"
+	<meio> /mˈɐju/ "MIDDLE_NOUN"
+	<sofrer> /sufɾˈeɾ/ "SUFFER_VERB"
 
-/ɐ/ (0.082)
+/ɐ/ (0.081)
 	<duas> /dˈuɐʃ/ "TWO (F)_NUM"
 	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
 	<queimar> /kɐjmˈaɾ/ "BURN_VERB"
@@ -14,12 +14,12 @@ VOWELS
 	<gato> /ɡˈatu/ "CAT_NOUN"
 	<viagem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
 
-/ɨ/ (0.037)
+/ɨ/ (0.036)
 	<doze> /dˈozɨ/ "TWELVE_NUM"
 	<noite> /nˈojtɨ/ "NIGHT_NOUN"
 	<nenhum> /nɨɲˈũ/ "NONE_PRON"
 
-/ˈo/ (0.033)
+/ˈo/ (0.032)
 	<doce> /dˈosɨ/ "SWEET_ADJ"
 	<dona> /dˈonɐ/ "LADY_NOUN"
 	<fogo> /fˈoɣu/ "FIRE_NOUN"
@@ -29,9 +29,9 @@ VOWELS
 	<estrela> /iʃtɾˈelɐ/ "STAR_NOUN"
 	<nascer> /nɐʃsˈeɾ/ "BE BORN_VERB"
 
-/ˈi/ (0.023)
-	<digo> /dˈiɣu/ "SAY-1SG_VERB"
-	<espinha> /iʃpˈiɲɐ/ "SPINE_NOUN"
+/ˈi/ (0.024)
+	<raiz> /ʁɐˈiʃ/ "ROOT_NOUN"
+	<filho> /fˈiʎu/ "SON_NOUN"
 	<cortiça> /kuɾtˈisɐ/ "BARK_NOUN"
 
 /ˈɐ/ (0.02)
@@ -40,24 +40,24 @@ VOWELS
 	<peixe> /pˈɐjʃɨ/ "FISH_NOUN"
 
 /ˈɔ/ (0.016)
-	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
+	<vós> /vˈɔʃ/ "YOU (PL)_PRON"
 	<colo> /kˈɔlu/ "NECK_NOUN"
 	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
 
+/ˈɛ/ (0.016)
+	<terra> /tˈɛʁɐ/ "EARTH_NOUN"
+	<festa> /fˈɛʃtɐ/ "PARTY_NOUN"
+	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
+
 /ˈɐ̃/ (0.016)
-	<sangue> /sˈɐ̃ɡɨ/ "BLOOD_NOUN"
-	<mão> /mˈɐ̃w̃/ "HAND_NOUN"
 	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
+	<bem> /bˈɐ̃j̃/ "WELL (ADV)_ADV"
+	<santo> /sˈɐ̃tu/ "SACRED_ADJ"
 
 /ˈu/ (0.016)
 	<usso> /ˈusu/ "BEAR_NOUN"
-	<curto> /kˈuɾtu/ "SHORT_ADJ"
-	<chuva> /ʃˈuvɐ/ "RAIN_NOUN"
-
-/ˈɛ/ (0.015)
-	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
-	<sete> /sˈɛtɨ/ "SEVEN_NUM"
-	<verme> /vˈɛɾmɨ/ "WORM_NOUN"
+	<junho> /ʒˈuɲu/ "JUNE_PROPN"
+	<fumo> /fˈumu/ "SMOKE_NOUN"
 
 /i/ (0.011)
 	<dizer> /dizˈeɾ/ "SAY-INF_VERB"
@@ -75,9 +75,9 @@ VOWELS
 	<semente> /sɨmˈẽtɨ/ "SEED_NOUN"
 
 /ɐ̃/ (0.005)
-	<nuvem> /nˈuvɐ̃j̃/ "CLOUD_NOUN"
+	<homem> /ˈɔmɐ̃j̃/ "MAN_NOUN"
 	<viagem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
-	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
+	<nuvem> /nˈuvɐ̃j̃/ "CLOUD_NOUN"
 
 /ˈĩ/ (0.003)
 	<fim> /fˈĩ/ "END_NOUN"
@@ -119,28 +119,28 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.078)
-	<morte> /mˈɔɾtɨ/ "DEATH_NOUN"
-	<árvore> /ˈaɾvuɾɨ/ "TREE_NOUN"
-	<obreiro> /ɔβɾˈɐjɾu/ "WORKER_NOUN"
+/ɾ/ (0.08)
+	<caro> /kˈaɾu/ "DEAR_ADJ"
+	<lágrima> /lˈaɣɾimɐ/ "TEAR_NOUN"
+	<branco> /bɾˈɐ̃ku/ "WHITE_ADJ"
 
 /s/ (0.037)
+	<caçar> /kɐsˈaɾ/ "HUNT_VERB"
 	<insua> /ˈinswɐ/ "ISLAND_NOUN"
-	<sabes> /sˈaβɨʃ/ "KNOW-2SG_VERB"
-	<sentar> /sẽtˈaɾ/ "SIT_VERB"
+	<seda> /sˈeðɐ/ "SILK_NOUN"
+
+/t/ (0.036)
+	<costa> /kˈɔʃtɐ/ "COAST_NOUN"
+	<junto> /ʒˈũtu/ "JOINED_ADJ"
+	<proveito> /pɾuvˈɐjtu/ "PROFIT_NOUN"
 
 /ʃ/ (0.035)
-	<peixe> /pˈɐjʃɨ/ "FISH_NOUN"
-	<escutar> /iʃkutˈaɾ/ "LISTEN_VERB"
-	<seis> /sˈɐjʃ/ "SIX_NUM"
-
-/t/ (0.035)
-	<forte> /fˈɔɾtɨ/ "STRONG_ADJ"
-	<dente> /dˈẽtɨ/ "TOOTH_NOUN"
-	<estado> /iʃtˈaðu/ "STATE_NOUN"
+	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
+	<chorar> /ʃuɾˈaɾ/ "WEEP_VERB"
+	<dez> /dˈɛʃ/ "TEN_NUM"
 
 /k/ (0.035)
-	<coisa> /kˈojzɐ/ "THING_NOUN"
+	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
 	<mosca> /mˈoʃkɐ/ "FLY_NOUN"
 	<cu> /kˈu/ "BUTTOCKS_NOUN"
 
@@ -149,25 +149,25 @@ CONSONANTS
 	<escrever> /iʃkɾɨvˈeɾ/ "WRITE_VERB"
 	<vila> /vˈilɐ/ "TOWN_NOUN"
 
-/l/ (0.029)
+/l/ (0.028)
 	<luta> /lˈutɐ/ "FIGHT_NOUN"
 	<lebre> /lˈɛβɾɨ/ "HARE_NOUN"
 	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
 
-/j/ (0.029)
+/j/ (0.028)
 	<meio> /mˈɐju/ "MIDDLE_NOUN"
 	<piolho> /pjˈoʎu/ "LOUSE_NOUN"
 	<proveito> /pɾuvˈɐjtu/ "PROFIT_NOUN"
 
-/p/ (0.027)
-	<pássaro> /pˈasɐɾu/ "BIRD_NOUN"
-	<porca> /pˈɔɾkɐ/ "SOW_NOUN"
-	<corpo> /kˈoɾpu/ "BODY_NOUN"
-
 /m/ (0.027)
-	<matar> /mɐtˈaɾ/ "KILL_VERB"
-	<amarelo> /ɐmɐɾˈɛlu/ "YELLOW_ADJ"
-	<fêmea> /fˈemjɐ/ "WOMAN_NOUN"
+	<morder> /muɾðˈeɾ/ "BITE_VERB"
+	<dormir> /duɾmˈiɾ/ "SLEEP_VERB"
+	<morsegar> /muɾsɨɣˈaɾ/ "BITE_VERB"
+
+/p/ (0.026)
+	<pêssego> /pˈesɨɣu/ "PEACH_NOUN"
+	<palavra> /pɐlˈavɾɐ/ "WORD_NOUN"
+	<planger> /plɐ̃ʒˈeɾ/ "WEEP_VERB"
 
 /n/ (0.019)
 	<noz> /nˈɔʃ/ "NUT_NOUN"
@@ -179,7 +179,7 @@ CONSONANTS
 	<maduro> /mɐðˈuɾu/ "MATURE_NOUN"
 	<dedo> /dˈeðu/ "FINGER_NOUN"
 
-/f/ (0.015)
+/f/ (0.016)
 	<frio> /fɾˈiu/ "COLD_ADJ"
 	<fada> /fˈaðɐ/ "FATE_NOUN"
 	<falar> /fɐlˈaɾ/ "SPEAK_VERB"
@@ -209,15 +209,15 @@ CONSONANTS
 	<quatro> /kwˈatɾu/ "FOUR_NUM"
 	<língua> /lˈĩɡwɐ/ "TONGUE_NOUN"
 
-/b/ (0.011)
-	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
-	<bons> /bˈõʃ/ "GOOD (M.PL)_ADJ"
-	<ombro> /ˈõbɾu/ "SHOULDER_NOUN"
+/ʎ/ (0.011)
+	<melhor> /mɨʎˈɔɾ/ "BETTER_ADJ"
+	<ilha> /ˈiʎɐ/ "ISLAND_NOUN"
+	<ovelha> /ɔvˈɐjʎɐ/ "SHEEP_NOUN"
 
-/ʎ/ (0.01)
-	<olho> /ˈoʎu/ "EYE_NOUN"
-	<folha> /fˈoʎɐ/ "LEAF_NOUN"
-	<joelho> /ʒwˈɐjʎu/ "KNEE_NOUN"
+/b/ (0.011)
+	<umbigo> /ũbˈiɣu/ "NAVEL_NOUN"
+	<baixo> /bˈajʃu/ "LOW_ADJ"
+	<bom> /bˈõ/ "GOOD (M.SG)_ADJ"
 
 /β/ (0.009)
 	<cabra> /kˈaβɾɐ/ "GOAT_NOUN"
