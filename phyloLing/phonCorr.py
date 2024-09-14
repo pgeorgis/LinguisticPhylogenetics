@@ -177,7 +177,8 @@ def ngram2log_format(ngram, phon_env=False):
 
 
 class Wordlist:
-    def __init__(self, word_pairs):
+    def __init__(self, word_pairs, pad_n=1):
+        self.pad_n = pad_n
         self.wordlist_lang1, self.wordlist_lang2 = zip(*word_pairs)
         self.seqs1, self.seqs2 = self.extract_seqs()
         self.seq_lens1, self.seq_lens2 = self.seq_lens()
@@ -187,6 +188,9 @@ class Wordlist:
     def extract_seqs(self):
         seqs1 = [word.segments for word in self.wordlist_lang1]
         seqs2 = [word.segments for word in self.wordlist_lang2]
+        if self.pad_n > 0:
+            seqs1 = [pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=self.pad_n) for seq in seqs1] 
+            seqs2 = [pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=self.pad_n) for seq in seqs2] 
         return seqs1, seqs2
 
     def seq_lens(self):
@@ -199,7 +203,7 @@ class Wordlist:
         total_seq_len2 = sum(self.seq_lens2)
         return total_seq_len1, total_seq_len2
 
-    def ngram_probability(self, ngram, lang=1):
+    def ngram_probability(self, ngram, lang=1, normalize=True):
         # if not isinstance(ngram, [Ngram, PhonEnvNgram]):
         #     if PHON_ENV_REGEX.search(ngram):
         #         ngram = PhonEnvNgram(ngram)
@@ -225,10 +229,13 @@ class Wordlist:
 
         else:
             count = ngram_count_wordlist(ngram.ngram, seqs)
-            if ngram.size > 1:
-                prob = count / sum([count_subsequences(length, ngram.size) for length in seq_lens])
+            if normalize:
+                if ngram.size > 1:
+                    prob = count / sum([count_subsequences(length, ngram.size) for length in seq_lens])
+                else:
+                    prob = count / total_seq_len
             else:
-                prob = count / total_seq_len
+                prob = count
 
             saved[ngram.ngram] = prob
             return prob
@@ -475,7 +482,10 @@ class PhonCorrelator:
     def expectation_max_ibm1(self, sample, iterations=20):
         """Performs expectation maximization algorithm and fits an IBM translation model 1 to the corpus."""
         corpus = [
-            AlignedSent(word1.segments, word2.segments)
+            AlignedSent(
+                pad_sequence(word1.segments, pad_ch=self.pad_ch, pad_n=1),
+                pad_sequence(word2.segments, pad_ch=self.pad_ch, pad_n=1)
+            )
             for word1, word2 in sample
         ]
         em_ibm1 = IBMModel1(corpus, iterations)
@@ -493,7 +503,10 @@ class PhonCorrelator:
             seg1_totals = sum(conditional_counts[seg1].values())
             for seg2 in conditional_counts[seg1]:
                 cond_prob = conditional_counts[seg1][seg2] / seg1_totals
-                p_ind1 = l1.ngram_probability(Ngram(seg1))
+                if self.pad_ch in seg1:
+                    p_ind1 = 1
+                else:
+                    p_ind1 = l1.ngram_probability(seg1)
                 joint_prob = cond_prob * p_ind1
                 joint_prob_dist[seg1][seg2] = joint_prob
         return joint_prob_dist
@@ -629,34 +642,43 @@ class PhonCorrelator:
             # Skip full boundary gap alignments
             if self.pad_ch in seg1 and self.pad_ch in seg2:  # (seg1, seg2) == (self.pad_ch, self.pad_ch)
                 continue
-            # Boundary gap alignments with segments
-            elif self.pad_ch in seg1:
-                assert self.pad_ch in seg2_ngram.string
-                if re.search(rf'{self.pad_ch}{END_PAD_CH}', seg2_ngram.string):
-                    # direction = 'END'
-                    counts_seg2 = len([word2 for word1, word2 in self.same_meaning  # TODO needs to account for sample, not just all of self.same_meaning
-                                       if tuple(word2.segments[-(seg2_ngram.size - 1):]) == seg2[:-1]])
-                else:
-                    # direction = 'START'
-                    counts_seg2 = len([word2 for word1, word2 in self.same_meaning  # TODO needs to account for sample, not just all of self.same_meaning
-                                       if tuple(word2.segments[:seg2_ngram.size - 1]) == seg2[1:]])
-                p_seg2 = counts_seg2 / len(self.same_meaning)
-                cond_prob = conditional_counts[seg1][seg2] / counts_seg2
-                pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg2)
+            # # Boundary gap alignments with segments
+            # elif self.pad_ch in seg1:
+            #     if re.search(rf'{self.pad_ch}{END_PAD_CH}', seg2_ngram.string):
+            #         # direction = 'END'
+            #         # counts_seg2 = len([word2 for word1, word2 in self.same_meaning  # TODO needs to account for sample, not just all of self.same_meaning
+            #         #                    if tuple(word2.segments[-(seg2_ngram.size - 1):]) == seg2[:-1]])
+            #         counts_seg2 = len(
+            #             [
+            #                 word2 for word1, word2 in zip(wordlist.seqs1, wordlist.seqs2)
+            #                 if tuple(word2.segments[-(seg2_ngram.size - 1):]) == seg2[:-1]
+            #             ]
+            #         )
+            #         breakpoint()
+            #     else:
+            #         # direction = 'START'
+            #         counts_seg2 = len([word2 for word1, word2 in self.same_meaning  # TODO needs to account for sample, not just all of self.same_meaning
+            #                            if tuple(word2.segments[:seg2_ngram.size - 1]) == seg2[1:]])
+            #     p_seg2 = counts_seg2 / len(self.same_meaning)
+            #     cond_prob = conditional_counts[seg1][seg2] / counts_seg2
+            #     pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg2)
 
-            elif self.pad_ch in seg2:
-                assert self.pad_ch in seg1_ngram.string
-                if re.search(rf'{self.pad_ch}{END_PAD_CH}', seg1_ngram.string):
-                    # direction = 'END'
-                    counts_seg1 = len([word1 for word1, word2 in self.same_meaning  # TODO needs to account for sample, not just all of self.same_meaning
-                                       if tuple(word1.segments[-(seg1_ngram.size - 1):]) == seg1[:-1]])
-                else:
-                    # direction = 'START'
-                    counts_seg1 = len([word1 for word1, word2 in self.same_meaning  # TODO needs to account for sample, not just all of self.same_meaning
-                                       if tuple(word1.segments[:seg1_ngram.size - 1]) == seg1[1:]])
-                p_seg1 = counts_seg1 / len(self.same_meaning)
-                cond_prob = reverse_cond_counts[seg2][seg1] / counts_seg1
-                pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg1)
+            # elif self.pad_ch in seg2:
+            #     if re.search(rf'{self.pad_ch}{END_PAD_CH}', seg1_ngram.string):
+            #         # direction = 'END'
+            #         # counts_seg1 = len([word1 for word1, word2 in self.same_meaning  # TODO needs to account for sample, not just all of self.same_meaning
+            #         #                    if tuple(word1.segments[-(seg1_ngram.size - 1):]) == seg1[:-1]])
+            #         counts_seg1 = wordlist.ngram_probability(seg1_ngram, lang=1, normalize=False)
+            #         breakpoint()
+            #     else:
+            #         # direction = 'START'
+            #         # counts_seg1 = len([word1 for word1, word2 in self.same_meaning  # TODO needs to account for sample, not just all of self.same_meaning
+            #         #                    if tuple(word1.segments[:seg1_ngram.size - 1]) == seg1[1:]])
+            #         counts_seg1 = wordlist.ngram_probability(seg1_ngram, lang=1, normalize=False)
+
+            #     p_seg1 = counts_seg1 / len(self.same_meaning)
+            #     cond_prob = reverse_cond_counts[seg2][seg1] / counts_seg1
+            #     pmi_dict[seg1][seg2] = bayes_pmi(cond_prob, p_seg1)
 
             # Standard alignment pairs
             else:
@@ -735,7 +757,15 @@ class PhonCorrelator:
 
             # First step: perform EM algorithm and fit IBM model 1
             em_synonyms1 = self.expectation_max_ibm1(synonym_sample)
+            em_synonyms1 = {
+                p: normalize_dict(em_synonyms1[p])
+                for p in em_synonyms1
+            }
             em_synonyms2 = self.expectation_max_ibm1(reversed_synonym_sample)
+            em_synonyms2 = {
+                p: normalize_dict(em_synonyms2[p])
+                for p in em_synonyms2
+            }
             pmi_step1 = [self.phoneme_pmi(conditional_counts=em_synonyms1,
                                           l1=self.lang1,
                                           l2=self.lang2,

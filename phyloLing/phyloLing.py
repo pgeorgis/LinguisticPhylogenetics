@@ -16,7 +16,8 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from constants import (ALIGNMENT_PARAM_DEFAULTS, SEG_JOIN_CH,
-                       TRANSCRIPTION_PARAM_DEFAULTS)
+                       TRANSCRIPTION_PARAM_DEFAULTS, 
+                       END_PAD_CH, START_PAD_CH, PAD_CH_DEFAULT)
 from matplotlib import pyplot as plt
 from phonCorr import PhonCorrelator
 from phonUtils.initPhoneData import suprasegmental_diacritics
@@ -1241,13 +1242,16 @@ class Language:
             f.write(missing_concepts)
 
     def create_phoneme_inventory(self, warn_n=1):
+        pad_ch = self.alignment_params['pad_ch']
         for concept in self.vocabulary:
             for word in self.vocabulary[concept]:
                 segments = word.segments
 
-                # Count phones
+                # Count phones and unigrams
                 for segment in segments:
                     self.phonemes[segment] += 1
+                padded_segments = pad_sequence(segments, pad_ch=pad_ch, pad_n=1)
+                for segment in padded_segments:
                     self.unigrams[Ngram(segment).ngram] += 1
 
                 # Count phonological environments
@@ -1257,7 +1261,6 @@ class Language:
                 #     self.phon_environments[seg] = normalize_dict(self.phon_environments[seg], default=True, lmbda=0)
 
                 # Count trigrams and gappy trigrams
-                pad_ch = self.alignment_params['pad_ch']
                 padded_segments = pad_sequence(segments, pad_ch=pad_ch, pad_n=2)
                 for j in range(1, len(padded_segments) - 1):
                     trigram = (padded_segments[j - 1], padded_segments[j], padded_segments[j + 1])
