@@ -2,7 +2,10 @@ venv/
 __pycache__/
 archive/
 datasets/*/logs
+datasets/*/cognates
 datasets/*/dist_matrices
+datasets/*/distances
+datasets/*/experiments
 datasets/*/plots
 datasets/*/trees
 datasets/*/phone_corr/pmi/*/*/PMI_iterations.log
