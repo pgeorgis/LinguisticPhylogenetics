@@ -2,7 +2,6 @@
 
 import datetime
 import operator
-import uuid
 from collections import defaultdict
 
 from networkx import Graph
@@ -86,10 +85,6 @@ def calculate_time_interval(datetime1, datetime2):
     minutes, seconds = divmod(remainder, 60)
     return f"{hours:02}:{minutes:02}:{seconds:02}"
 
-
-def create_uuid():
-    """Create a random UUID."""
-    return str(uuid.uuid4())
 
 def dict_tuplelist(dic, sort=True, n=1, reverse=True):
     """Returns a list of (key, value) tuples from the dictionary

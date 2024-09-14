@@ -7,9 +7,10 @@ import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
 from utils.distance import Distance
-from utils.utils import calculate_time_interval, convert_sets_to_lists, create_datestamp, create_timestamp, create_uuid
-from wordDist import (LevenshteinDist, PhonDist, PMIDist,
-                      SurprisalDist, composite_sim, hybrid_dist)
+from utils.utils import (calculate_time_interval, convert_sets_to_lists,
+                         create_datestamp, create_timestamp)
+from wordDist import (LevenshteinDist, PhonDist, PMIDist, SurprisalDist,
+                      composite_sim, hybrid_dist)
 
 from phyloLing import load_family
 
@@ -331,9 +332,9 @@ if __name__ == "__main__":
     # Generate experiment ID and outdir
     exp_name = experiment_params['name']
     if exp_name is None:
-        exp_id = create_uuid()
+        exp_id = start_timestamp
     else:
-        exp_id = os.path.join(exp_name, create_uuid())
+        exp_id = os.path.join(exp_name, start_timestamp)
     logger.info(f'Experiment ID: {exp_id}')
     exp_outdir = os.path.join(family_params["outdir"], "experiments", create_datestamp(), exp_id)
     os.makedirs(exp_outdir, exist_ok=True)
