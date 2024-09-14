@@ -9,7 +9,7 @@ from nltk.translate import AlignedSent, IBMModel1
 import numpy as np
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
-                       PAD_CH_DEFAULT, PHON_ENV_JOIN_CH, START_PAD_CH)
+                       PAD_CH_DEFAULT, START_PAD_CH)
 from phonAlign import Alignment, compatible_segments, visual_align
 from phonUtils.phonEnv import (phon_env_ngrams, relative_post_sonority,
                                relative_prev_sonority)
@@ -168,10 +168,10 @@ def ngram_count_wordlist(ngram, seq_list):
     return count
 
 
-def ngram2str(ngram, phon_env=False):
+def ngram2log_format(ngram, phon_env=False):
     if phon_env:
         ngram, phon_env = ngram[:-1], ngram[-1]
-        return PHON_ENV_JOIN_CH.join([Ngram(ngram).string, phon_env])
+        return (Ngram(ngram).string, phon_env)
     else:
         return Ngram(ngram).string
 
@@ -1406,7 +1406,7 @@ class PhonCorrelator:
             for seg2 in self.pmi_dict[seg1]:
                 pmi_val = self.pmi_dict[seg1][seg2]
                 if abs(pmi_val) > threshold:
-                    line = [ngram2str(seg1), ngram2str(seg2), str(pmi_val)]
+                    line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
                     lines.append(line)
         # Sort PMI in descending order
         lines = sorted(lines, key=lambda x: x[-1], reverse=True)
@@ -1437,19 +1437,31 @@ class PhonCorrelator:
             for seg2 in surprisal_dict[seg1]:
                 if ngram_size > 1:
                     raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
+                if phon_env:
+                    seg1_str, phon_env = ngram2log_format(seg1, phon_env=True)
+                else:
+                    seg1_str = ngram2log_format(seg1, phon_env=False)
                 lines.append([
-                    ngram2str(seg1, phon_env=phon_env),
-                    ngram2str(seg2, phon_env=False),  # phon_env only on seg1
+                    seg1_str,
+                    ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
                     str(surprisal_dict[seg1][seg2]),
                     str(oov_value)
                     ]
                 )
+                if phon_env:
+                    lines[-1].insert(1, phon_env)
 
-        # Sort surprisal in ascending order, then by phones
-        lines = sorted(lines, key=lambda x: (x[2], x[0], x[1]), reverse=False)
+        # Sort by phone1 (by phon env if relevant) and then by surprisal in ascending order
+        if phon_env:
+            lines = sorted(lines, key=lambda x: (x[0], x[1], x[3], x[2]), reverse=False)
+        else:
+            lines = sorted(lines, key=lambda x: (x[0], x[2], x[1]), reverse=False)
         lines = '\n'.join([sep.join(line) for line in lines])
         with open(outfile, 'w') as f:
-            header = sep.join(['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed'])
+            header = ['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed']
+            if phon_env:
+                header.insert(1, "PhonEnv")
+            header = sep.join(header)
             f.write(f'{header}\n{lines}')
 
     def log_sample(self, sample, sample_n, seed=None):

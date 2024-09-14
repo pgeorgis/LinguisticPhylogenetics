@@ -15,7 +15,7 @@ import bcubed
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from constants import (ALIGNMENT_PARAM_DEFAULTS, PHON_ENV_JOIN_CH, SEG_JOIN_CH,
+from constants import (ALIGNMENT_PARAM_DEFAULTS, SEG_JOIN_CH,
                        TRANSCRIPTION_PARAM_DEFAULTS)
 from matplotlib import pyplot as plt
 from phonCorr import PhonCorrelator
@@ -382,7 +382,7 @@ class LexicalDataset:
                 ngram1, ngram2 = map(str2ngram, [phone1, phone2])
                 ngram2_dict_form = ngram2.undo()
                 if phon_env:
-                    phone1, env = phone1.split(PHON_ENV_JOIN_CH)
+                    env = row['PhonEnv']
                     ngram1_dict_form = (Ngram(phone1).undo(), env)
                 else:
                     ngram1_dict_form = ngram1.undo()
