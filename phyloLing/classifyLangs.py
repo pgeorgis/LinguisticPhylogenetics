@@ -8,7 +8,7 @@ from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
 from utils.distance import Distance
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
-                         create_datestamp, create_timestamp)
+                         create_datestamp, create_timestamp, get_git_commit_hash)
 from wordDist import (LevenshteinDist, PhonDist, PMIDist, SurprisalDist,
                       composite_sim, hybrid_dist)
 
@@ -190,6 +190,9 @@ if __name__ == "__main__":
                 params[section_name][param_name] = default_params[section_name][param_name]
     # Validate parameters
     validate_params(params, valid_params, logger)
+    
+    # Add git commmit hash to run config
+    params["run_info"]["version"] = get_git_commit_hash()
 
     # Log config param settings
     logger.info(json.dumps(convert_sets_to_lists(params), indent=4))

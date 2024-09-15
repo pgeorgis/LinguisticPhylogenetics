@@ -3,6 +3,7 @@
 import datetime
 import operator
 from collections import defaultdict
+import subprocess
 
 from networkx import Graph
 from networkx.algorithms.components.connected import connected_components
@@ -204,3 +205,12 @@ def balanced_resample(population, sample_size, sampled_counts, rng):
     # Extract sampled words from selected indices
     sample = [population[i] for i in sample_indices]
     return sample, sampled_counts
+
+
+def get_git_commit_hash():
+    """Get latest git commit hash of current repository."""
+    try:
+        commit_hash = subprocess.check_output(['git', 'rev-parse', "--short", 'HEAD']).strip().decode('utf-8')
+        return commit_hash
+    except subprocess.CalledProcessError as e:
+        return None
