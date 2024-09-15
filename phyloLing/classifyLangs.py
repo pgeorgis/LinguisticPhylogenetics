@@ -290,6 +290,7 @@ if __name__ == "__main__":
                 sample_size=surprisal_params['sample_size'],
                 n_samples=surprisal_params['n_samples'],
                 min_corr=surprisal_params['min_corr'],
+                phon_env=surprisal_params['phon_env'],
             )
             family.write_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
 
