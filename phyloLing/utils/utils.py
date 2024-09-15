@@ -197,9 +197,9 @@ def balanced_resample(population, sample_size, sampled_counts, rng):
     prob_weights = 1 / (sampled_counts + 1)
     # Normalize to sum to 1
     prob_weights /= prob_weights.sum()
-    # Sample with weighted probabilities
+    # Sample with weighted probabilities without replacement
     pop_size = len(population)
-    sample_indices = rng.choices(np.arange(pop_size), weights=prob_weights, k=sample_size)
+    sample_indices = rng.choice(np.arange(pop_size), size=sample_size, p=prob_weights, replace=False)
     # Update count based on selected indices
     sampled_counts[sample_indices] += 1
     # Extract sampled words from selected indices

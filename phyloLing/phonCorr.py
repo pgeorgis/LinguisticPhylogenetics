@@ -346,7 +346,7 @@ class PhonCorrelator:
             new_samples = True
 
             # Initialize random number generator with seed
-            rng = random.Random(seed_i)
+            rng = np.random.default_rng(seed_i)
 
             # Take balanced resampling of same-meaning words
             synonym_sample, same_meaning_count = balanced_resample(

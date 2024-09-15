@@ -142,7 +142,7 @@ def gradient_cognate_sim(lang1,
 
     # Set random seed and initialize random number generator
     random.seed(seed)
-    rng = random.Random(seed)
+    rng = np.random.default_rng(seed)
 
     # Get list of shared concepts between the two languages
     shared_concepts = get_shared_concepts(lang1, lang2, clustered_cognates)
