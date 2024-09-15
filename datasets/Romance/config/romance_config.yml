@@ -17,7 +17,7 @@ transcription:
 pmi:
     min_corr: 2
     refresh: []
-    refresh_all_pmi: false
+    refresh_all_pmi: true
 
 surprisal:
     ngram: 1
