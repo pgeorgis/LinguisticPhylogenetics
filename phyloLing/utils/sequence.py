@@ -43,6 +43,7 @@ class PhonEnvNgram(Ngram):
         super().__init__(ngram, **kwargs)
         self.ngram, self.phon_env = self.separate_phon_env_from_ngram()
         self.ngram_w_context = (Ngram(self.ngram).undo(), self.phon_env)
+        self.size = len(self.ngram)
 
     def separate_phon_env_from_ngram(self):
         ngram, phon_env = [], []
