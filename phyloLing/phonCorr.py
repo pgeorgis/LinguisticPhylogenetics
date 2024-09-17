@@ -475,12 +475,26 @@ class PhonCorrelator:
 
         return corr_dict
 
-    def expectation_max_ibm1(self, sample, iterations=20):
+    def expectation_max_ibm1(self, sample, iterations=20, phon_env=False):
         """Performs expectation maximization algorithm and fits an IBM translation model 1 to the corpus."""
-        corpus = [
-            AlignedSent(word1.segments, word2.segments)
-            for word1, word2 in sample
-        ]
+        if phon_env:
+            corpus = [
+                (
+                    pad_sequence(list(zip(word1.segments, word1.phon_env)), pad_ch=self.pad_ch, pad_n=1),
+                    pad_sequence(list(zip(word2.segments, word2.phon_env)), pad_ch=self.pad_ch, pad_n=1)
+                )
+                for word1, word2 in sample
+            ]
+        else:
+            corpus = [
+                (
+                    pad_sequence(word1.segments, pad_ch=self.pad_ch, pad_n=1),
+                    pad_sequence(word2.segments, pad_ch=self.pad_ch, pad_n=1)
+                )
+                for word1, word2 in sample
+            ]
+
+        corpus = [AlignedSent(word1, word2) for word1, word2 in corpus]
         em_ibm1 = IBMModel1(corpus, iterations)
         translation_table = em_ibm1.translation_table
         for seg1 in translation_table:
