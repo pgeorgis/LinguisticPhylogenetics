@@ -254,8 +254,6 @@ class PhonCorrelator:
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
         self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2.name]
         self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2.name]
-        self.total_unigrams = (sum([len(word1.segments) for word1, word2 in self.same_meaning]),
-                               sum([len(word2.segments) for word1, word2 in self.same_meaning]))
         self.complex_ngrams = self.lang1.complex_ngrams[self.lang2]
         self.scored_words = defaultdict(lambda: {})
 
@@ -388,7 +386,7 @@ class PhonCorrelator:
                        complex_ngrams=False,
                        ngram_size=1,
                        pad=True,
-                       remove_padding=True,
+                       remove_uncompacted_padding=True,
                        pad_ch=PAD_CH_DEFAULT,
                        # phon_env=False,
                        **kwargs):
@@ -409,14 +407,19 @@ class PhonCorrelator:
             for alignment in alignment_list:
                 # Pad each alignment in place
                 # ngram_size must be minimum 2 to yield any padding at all
-                alignment.pad(ngram_size=max(2, ngram_size), pad_ch=pad_ch)
+                alignment.pad(
+                    ngram_size=max(2, ngram_size),
+                    pad_ch=pad_ch
+                )
 
         if complex_ngrams:
             alignment_list = self.compact_alignments(
-                alignment_list, self.complex_ngrams, simple_ngrams=added_penalty_dict
+                alignment_list,
+                self.complex_ngrams,
+                simple_ngrams=added_penalty_dict,
             )
 
-        if pad and remove_padding:
+        if pad and remove_uncompacted_padding:
             for alignment in alignment_list:
                 alignment.remove_padding()
 
@@ -771,9 +774,12 @@ class PhonCorrelator:
                 iteration += 1
 
                 # Align the qualifying words of the previous step using previous step's PMI
-                cognate_alignments = self.align_wordlist(qualifying_words[iteration - 1],
-                                                         added_penalty_dict=PMI_iterations[iteration - 1],
-                                                         complex_ngrams=self.complex_ngrams)
+                cognate_alignments = self.align_wordlist(
+                    qualifying_words[iteration - 1],
+                    added_penalty_dict=PMI_iterations[iteration - 1],
+                    complex_ngrams=self.complex_ngrams,
+                    pad=True
+                )
 
                 # Add these alignments into running pool of alignments
                 if cumulative:
@@ -794,10 +800,18 @@ class PhonCorrelator:
                                                              wordlist=qualifying_words[iteration - 1])
 
                 # Align all same-meaning word pairs
-                aligned_synonym_sample = self.align_wordlist(synonym_sample, added_penalty_dict=PMI_iterations[iteration], complex_ngrams=self.complex_ngrams)
+                aligned_synonym_sample = self.align_wordlist(
+                    synonym_sample,
+                    added_penalty_dict=PMI_iterations[iteration],
+                    complex_ngrams=self.complex_ngrams
+                )
                 # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
                 # disqualified_words[iteration-1] already contains both types
-                noncognate_alignments = self.align_wordlist(disqualified_words[iteration - 1], added_penalty_dict=PMI_iterations[iteration], complex_ngrams=self.complex_ngrams)
+                noncognate_alignments = self.align_wordlist(
+                    disqualified_words[iteration - 1],
+                    added_penalty_dict=PMI_iterations[iteration],
+                    complex_ngrams=self.complex_ngrams
+                )
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
@@ -1107,7 +1121,12 @@ class PhonCorrelator:
             iter_logs = defaultdict(lambda: [])
             sample_iterations = {}
             start_seed = self.seed
-            sample_dict = self.sample_wordlists(n_samples=n_samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
+            sample_dict = self.sample_wordlists(
+                n_samples=n_samples,
+                sample_size=sample_size,
+                start_seed=start_seed,
+                log_samples=log_iterations
+            )
             for key, sample in sample_dict.items():
                 seed_i, sample_size = key
                 sample_n = seed_i - start_seed
@@ -1121,14 +1140,14 @@ class PhonCorrelator:
                     added_penalty_dict=self.pmi_dict,
                     complex_ngrams=self.complex_ngrams,
                     pad=True,
-                    remove_padding=True,
+                    remove_uncompacted_padding=True,
                 )
                 diff_meaning_alignments = self.align_wordlist(
                     diff_sample,
                     added_penalty_dict=self.pmi_dict,
                     complex_ngrams=self.complex_ngrams,
                     pad=True,
-                    remove_padding=True,
+                    remove_uncompacted_padding=True,
                 )
 
                 # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
@@ -1273,7 +1292,10 @@ class PhonCorrelator:
         else:  # gold : assumes wordlist is already coded by cognate; skip iteration and calculate surprisal directly
             # Align same-meaning and different meaning word pairs using PMI values:
             # the alignments will remain the same throughout iteration
-            same_meaning_alignments = self.align_wordlist(self.same_meaning, added_penalty_dict=self.pmi_dict)
+            same_meaning_alignments = self.align_wordlist(
+                self.same_meaning,
+                added_penalty_dict=self.pmi_dict
+            )
 
             # TODO need to confirm that when the gloss/concept is checked, it considers the possible cognate class ID, e.g. rain_1
             cognate_alignments = same_meaning_alignments
