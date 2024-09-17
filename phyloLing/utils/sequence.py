@@ -33,21 +33,21 @@ class Ngram:
             return self.string
         else:
             return self.ngram
-    
+
     def is_boundary(self, pad_ch=PAD_CH_DEFAULT):
         """Returns Boolean indicating whether the ngram contains a boundary/pad token."""
         for seg in self.ngram:
             if pad_ch in seg:
                 return True
         return False
-    
+
     def is_gappy(self, gap_ch=GAP_CH_DEFAULT):
         """Returns Boolean indicating whether the ngram contains a gap."""
         for seg in self.ngram:
             if seg == gap_ch:
                 return True
         return False
-    
+
     def remove_gaps(self, gap_ch=GAP_CH_DEFAULT):
         return Ngram(
             [
@@ -134,6 +134,21 @@ def flatten_ngram(nested_ngram):
 def pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=1):
     return [f'{START_PAD_CH}{pad_ch}'] * pad_n + seq + [f'{pad_ch}{END_PAD_CH}'] * pad_n
 
+def generate_ngrams(seq, ngram_size, pad_ch=PAD_CH_DEFAULT):
+    # Ensure ngram_size is less than or equal to the length of the sequence, else pad
+    if ngram_size > len(seq):
+        return generate_ngrams(
+            pad_sequence(
+                seq,
+                pad_ch=pad_ch,
+                pad_n=ngram_size-1,
+            )
+        )
+
+    ngrams = []
+    for i in range(len(seq) - ngram_size + 1):
+        ngrams.append(Ngram(seq[i:i+ngram_size]))
+    return ngrams
 
 # SMOOTHING
 def lidstone_smoothing(x, N, d, alpha=0.3):
