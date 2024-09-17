@@ -134,7 +134,7 @@ def flatten_ngram(nested_ngram):
 def pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=1):
     return [f'{START_PAD_CH}{pad_ch}'] * pad_n + seq + [f'{pad_ch}{END_PAD_CH}'] * pad_n
 
-def generate_ngrams(seq, ngram_size, pad_ch=PAD_CH_DEFAULT):
+def generate_ngrams(seq, ngram_size, pad_ch=PAD_CH_DEFAULT, as_ngram=True):
     # Ensure ngram_size is less than or equal to the length of the sequence, else pad
     if ngram_size > len(seq):
         return generate_ngrams(
@@ -147,7 +147,11 @@ def generate_ngrams(seq, ngram_size, pad_ch=PAD_CH_DEFAULT):
 
     ngrams = []
     for i in range(len(seq) - ngram_size + 1):
-        ngrams.append(Ngram(seq[i:i+ngram_size]))
+        ngram = Ngram(seq[i:i+ngram_size])
+        if as_ngram:
+            ngrams.append(ngram)
+        else:
+            ngrams.append(ngram.undo())
     return ngrams
 
 # SMOOTHING
