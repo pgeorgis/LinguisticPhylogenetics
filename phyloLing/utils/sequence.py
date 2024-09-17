@@ -2,7 +2,7 @@ import re
 from functools import lru_cache
 from math import factorial
 
-from constants import END_PAD_CH, PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH
+from constants import END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH
 from phonUtils.phonEnv import PHON_ENV_REGEX
 
 
@@ -33,6 +33,28 @@ class Ngram:
             return self.string
         else:
             return self.ngram
+    
+    def is_boundary(self, pad_ch=PAD_CH_DEFAULT):
+        """Returns Boolean indicating whether the ngram contains a boundary/pad token."""
+        for seg in self.ngram:
+            if pad_ch in seg:
+                return True
+        return False
+    
+    def is_gappy(self, gap_ch=GAP_CH_DEFAULT):
+        """Returns Boolean indicating whether the ngram contains a gap."""
+        for seg in self.ngram:
+            if seg == gap_ch:
+                return True
+        return False
+    
+    def remove_gaps(self, gap_ch=GAP_CH_DEFAULT):
+        return Ngram(
+            [
+                unigram.ngram for unigram in self.unigrams()
+                if not unigram.is_gappy(gap_ch)
+            ]
+        )
 
     def __str__(self):
         return self.string

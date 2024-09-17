@@ -436,6 +436,9 @@ class Alignment:
             end_pad_i -= 1
         self.alignment = self.alignment[start_pad_i:end_pad_i + 1]
         self.update()
+    
+    def is_padded(self):
+        return Ngram(self.seq1[0]).is_boundary(self.pad_ch)
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices
