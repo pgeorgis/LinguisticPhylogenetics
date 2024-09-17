@@ -19,7 +19,7 @@ from utils.information import (adaptation_surprisal, bayes_pmi,
                                pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
-                            flatten_ngram, pad_sequence)
+                            flatten_ngram, generate_ngrams, pad_sequence)
 from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample
 
 
@@ -461,24 +461,41 @@ class PhonCorrelator:
         all_ngrams = set(Ngram(ngram).ngram for ngram in all_ngrams)  # standardize forms
         return all_ngrams
 
-    def radial_counts(self, wordlist, radius=1, normalize=True):
+    def radial_counts(self,
+                      alignments,
+                      radius=1,
+                      normalize=True,
+                      pad=True,
+                      pad_n=1
+                      ):
         """Checks the number of times that phones occur within a specified
         radius of positions in their respective words from one another"""
         corr_dict = defaultdict(lambda: defaultdict(lambda: 0))
-        for word1, word2 in wordlist:
-            segs1, segs2 = word1.segments, word2.segments
-            for i in range(len(segs1)):
-                seg1 = segs1[i]
-                for j in range(max(0, i - radius), min(i + radius + 1, len(segs2))):
-                    seg2 = segs2[j]
-
-                    # Only count sounds which are compatible as corresponding
-                    if compatible_segments(seg1, seg2):
-                        corr_dict[seg1][seg2] += 1
+        
+        def update_radial_corrs(seq1, seq2, radius, corr_dict):
+            for i in range(len(seq1)):
+                seg1 = seq1[i]
+                for j in range(max(0, i - radius), min(i + radius + 1, len(seq2))):
+                    seg2 = seq2[j]
+                    corr_dict[seg1.undo()][seg2.undo()] += 1
+            return corr_dict
+        
+        for alignment in alignments:
+            segs1, segs2 = zip(*alignment.alignment)
+            if pad:
+                segs1 = pad_sequence(list(segs1), pad_ch=self.pad_ch, pad_n=max(1, pad_n))
+                segs2 = pad_sequence(list(segs2), pad_ch=self.pad_ch, pad_n=max(1, pad_n))
+            for ngram_size_i in (1, 2):
+                ngrams1 = generate_ngrams(segs1, ngram_size=ngram_size_i, pad_ch=self.pad_ch)
+                for ngram_size_j in (1, 2):
+                    ngrams2 = generate_ngrams(segs2, ngram_size=ngram_size_j, pad_ch=self.pad_ch)
+                    corr_dict = update_radial_corrs(ngrams1, ngrams2, radius, corr_dict)
 
         if normalize:
             for seg1 in corr_dict:
                 corr_dict[seg1] = normalize_dict(corr_dict[seg1])
+        breakpoint()
+        # TODO current task: add calculation of each unigram_i with bigram_j within radius, and vice versa
 
         return corr_dict
 
@@ -778,6 +795,14 @@ class PhonCorrelator:
                 if cumulative:
                     all_cognate_alignments.extend(cognate_alignments)
                     cognate_alignments = all_cognate_alignments
+                    
+                # Calculate radial counts from alignments
+                radial_probs = self.radial_counts(
+                    cognate_alignments,
+                    radius=radius,
+                    normalize=True,
+                )
+                breakpoint()
 
                 # Calculate correspondence probabilities and PMI values from these alignments
                 cognate_probs = self.correspondence_probs(
