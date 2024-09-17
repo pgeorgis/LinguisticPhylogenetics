@@ -109,7 +109,7 @@ def flatten_ngram(nested_ngram):
 
 
 def pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=1):
-    return [f'{pad_ch}{START_PAD_CH}'] * pad_n + seq + [f'{END_PAD_CH}{pad_ch}'] * pad_n
+    return [f'{START_PAD_CH}{pad_ch}'] * pad_n + seq + [f'{pad_ch}{END_PAD_CH}'] * pad_n
 
 
 # SMOOTHING
