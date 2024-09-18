@@ -24,6 +24,7 @@ from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_r
 
 
 def fit_em_ibm1(corpus, iterations=20, gap_ch=GAP_CH_DEFAULT):
+    """Performs expectation maximization algorithm and fits an IBM translation model 1 to a corpus."""
     corpus = [AlignedSent(word1, word2) for word1, word2 in corpus]
     em_ibm1 = IBMModel1(corpus, iterations)
     translation_table = em_ibm1.translation_table
@@ -132,11 +133,15 @@ def prune_extraneous_synonyms(wordlist, alignments, scores, prefer_small=False):
 
 
 def average_corrs(corr_dict1, corr_dict2):
-    # Average together values from nested dictionaries in opposite directions
+    """Average together values from nested dictionaries in opposite directions"""
     avg_corr = defaultdict(lambda: defaultdict(lambda: 0))
     for seg1 in corr_dict1:
         for seg2 in corr_dict1[seg1]:
             avg_corr[seg1][seg2] = mean([corr_dict1[seg1][seg2], corr_dict2[seg2][seg1]])
+    for seg2 in corr_dict2:
+        for seg1 in corr_dict2[seg2]:
+            if seg2 not in avg_corr[seg1]:
+                avg_corr[seg1][seg2] = mean([corr_dict1[seg1][seg2], corr_dict2[seg2][seg1]])
     return avg_corr
 
 
@@ -471,33 +476,41 @@ class PhonCorrelator:
         all_ngrams = set(Ngram(ngram).ngram for ngram in all_ngrams)  # standardize forms
         return all_ngrams
 
-    def radial_counts(self, # TODO current task: rename and make this the standard for fitting EM
-                      alignments,
-                      radius=1,
-                      normalize=True,
-                      pad=True,
-                      pad_n=1
-                      ):
-        """Checks the number of times that phones occur within a specified
-        radius of positions in their respective words from one another"""
+    def radial_em(self,
+                  sample,
+                  normalize=True,
+                  pad=True,
+                  pad_n=1,
+                  phon_env=False # TODO add
+                  ):
+        """Fits EM IBM1 models on pairs of unigrams and bigrams and aggregates the translation tables."""
         corr_dict = defaultdict(lambda: defaultdict(lambda: 0))
-
+        
+        # Create "corpora" consisting of words segmented into unigrams or bigrams
         corpora = defaultdict(lambda: [])
         ngram_sizes = (1, 2)
-        for alignment in alignments:
-            segs1, segs2 = zip(*alignment.alignment)
+        for word1, word2 in sample:
+            segs1, segs2 = word1.segments, word2.segments
+            # Optionally add phon env
+            if phon_env:
+                env1, env2 = word1.phon_env, word2.phon_env
+                segs1 = zip(segs1, env1)
+                segs1 = zip(segs2, env2)
+            # Optionally pad
             if pad:
                 segs1 = pad_sequence(list(segs1), pad_ch=self.pad_ch, pad_n=max(1, pad_n))
                 segs2 = pad_sequence(list(segs2), pad_ch=self.pad_ch, pad_n=max(1, pad_n))
             for ngram_size_i in ngram_sizes:
                 ngrams1 = generate_ngrams(segs1, ngram_size=ngram_size_i, pad_ch=self.pad_ch, as_ngram=False)
-                for ngram_size_j in ngram_sizes:
+                for ngram_size_j in ngram_sizes: # TODO no need to recompute ngrams in this loop, can save and retrieve
                     ngrams2 = generate_ngrams(segs2, ngram_size=ngram_size_j, pad_ch=self.pad_ch, as_ngram=False)
                     corpora[(ngram_size_i, ngram_size_j)].append((ngrams1, ngrams2))
+        # Fit EM IBM1 models on each corpus
         em_fit = {
             ngram_i_j: fit_em_ibm1(corpus, gap_ch=self.gap_ch)
             for ngram_i_j, corpus in corpora.items()
         }
+        # Combine model results
         for model in em_fit:
             for key, values in em_fit[model].items():
                 corr_dict[key].update(values)
@@ -507,27 +520,6 @@ class PhonCorrelator:
                 corr_dict[seg1] = normalize_dict(corr_dict[seg1])
 
         return corr_dict
-
-    def expectation_max_ibm1(self, sample, phon_env=False):
-        """Performs expectation maximization algorithm and fits an IBM translation model 1 to the corpus."""
-        if phon_env:
-            corpus = [
-                (
-                    pad_sequence(list(zip(word1.segments, word1.phon_env)), pad_ch=self.pad_ch, pad_n=1),
-                    pad_sequence(list(zip(word2.segments, word2.phon_env)), pad_ch=self.pad_ch, pad_n=1)
-                )
-                for word1, word2 in sample
-            ]
-        else:
-            corpus = [
-                (
-                    pad_sequence(word1.segments, pad_ch=self.pad_ch, pad_n=1),
-                    pad_sequence(word2.segments, pad_ch=self.pad_ch, pad_n=1)
-                )
-                for word1, word2 in sample
-            ]
-
-        return fit_em_ibm1(corpus, gap_ch=self.gap_ch)
 
     def joint_probs(self, conditional_counts, l1=None, l2=None):
         """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
@@ -701,7 +693,6 @@ class PhonCorrelator:
         return pmi_dict
 
     def calc_phoneme_pmi(self,
-                         radius=1,  # TODO make configurable
                          p_threshold=0.05,
                          max_iterations=3,
                          n_samples=5,
@@ -713,8 +704,6 @@ class PhonCorrelator:
         """
         Parameters
         ----------
-        radius : int, optional
-            Number of word positions forward and backward to check for initial correspondences. The default is 2.
         p_threshold : float, optional
             p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.05.
         max_iterations : float, optional
@@ -750,8 +739,8 @@ class PhonCorrelator:
             reversed_synonym_sample = [(pair[-1], pair[0]) for pair in synonym_sample]
 
             # First step: perform EM algorithm and fit IBM model 1
-            em_synonyms1 = self.expectation_max_ibm1(synonym_sample)
-            em_synonyms2 = self.expectation_max_ibm1(reversed_synonym_sample)
+            em_synonyms1 = self.radial_em(synonym_sample)
+            em_synonyms2 = self.radial_em(reversed_synonym_sample)
             pmi_step1 = [self.phoneme_pmi(conditional_counts=em_synonyms1,
                                           l1=self.lang1,
                                           l2=self.lang2,
@@ -798,14 +787,6 @@ class PhonCorrelator:
                 if cumulative:
                     all_cognate_alignments.extend(cognate_alignments)
                     cognate_alignments = all_cognate_alignments
-                    
-                # Calculate radial counts from alignments
-                radial_probs = self.radial_counts(
-                    cognate_alignments,
-                    radius=radius,
-                    normalize=True,
-                )
-                breakpoint()
 
                 # Calculate correspondence probabilities and PMI values from these alignments
                 cognate_probs = self.correspondence_probs(
@@ -1109,7 +1090,6 @@ class PhonCorrelator:
         return smoothed_surprisal
 
     def calc_phoneme_surprisal(self,
-                               radius=1,
                                max_iterations=3,
                                p_threshold=0.1,
                                ngram_size=2,
@@ -1128,9 +1108,10 @@ class PhonCorrelator:
         # Calculate phoneme PMI if not already done, for alignment purposes
 
         if len(self.pmi_dict) == 0:
-            self.pmi_dict = self.calc_phoneme_pmi(radius=radius,
-                                                  max_iterations=max_iterations,
-                                                  p_threshold=p_threshold)
+            self.pmi_dict = self.calc_phoneme_pmi(
+                max_iterations=max_iterations,
+                p_threshold=p_threshold,
+            )
 
         if self.logger:
             self.logger.info(f'Calculating phoneme surprisal: {self.lang1.name}-{self.lang2.name}...')
