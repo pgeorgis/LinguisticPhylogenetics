@@ -34,7 +34,7 @@ from skbio.tree import nj
 from unidecode import unidecode
 from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
 from utils.distance import Distance, distance_matrix
-from utils.information import entropy
+from utils.information import calculate_infocontent_of_word, entropy
 from utils.network import dm2coords, newer_network_plot
 from utils.sequence import Ngram, flatten_ngram, pad_sequence
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
@@ -1179,6 +1179,7 @@ class Language:
         self.bigrams = defaultdict(lambda: 0)
         self.trigrams = defaultdict(lambda: 0)
         self.ngrams = defaultdict(lambda: defaultdict(lambda: 0))
+        self.gappy_bigrams = defaultdict(lambda: 0)
         self.gappy_trigrams = defaultdict(lambda: 0)
         self.phon_environments = defaultdict(lambda: defaultdict(lambda: 0))
         self.phon_env_ngrams = defaultdict(lambda: defaultdict(lambda: 0))
@@ -1273,7 +1274,10 @@ class Language:
                 padded_segments = padded_segments[1:-1]
                 for j in range(1, len(padded_segments)):
                     bigram = (padded_segments[j - 1], padded_segments[j])
-                    self.bigrams[Ngram(bigram).ngram] += 1
+                    bigram_ngram = Ngram(bigram).ngram
+                    self.bigrams[bigram_ngram] += 1
+                    self.gappy_bigrams[('X', bigram_ngram[-1])] += 1
+                    self.gappy_bigrams[(bigram_ngram[0], 'X')] += 1
         self.ngrams[1] = self.unigrams
         self.ngrams[2] = self.bigrams
         self.ngrams[3] = self.trigrams
@@ -1433,9 +1437,11 @@ class Language:
 
         return word
 
-    def calculate_infocontent(self, word):
+    def calculate_infocontent(self, word, as_seq=False, ngram_size=3, **kwargs):
         # Disambiguation by type of input
         if isinstance(word, Word):  # Word object, no further modification needed
+            pass
+        elif as_seq and isinstance(word, (list, tuple)):
             pass
         elif isinstance(word, str) or isinstance(word, list):
             if isinstance(word, str):
@@ -1450,30 +1456,20 @@ class Language:
             raise TypeError
 
         # Return the pre-calculated information content of the word, if possible
-        if word.info_content:
+        if isinstance(word, Word) and word.info_content:
             return word.info_content
 
         # Otherwise calculate it from scratch
         # Pad the segmented word
         pad_ch = self.alignment_params['pad_ch']
-        padded = pad_sequence(word.segments, pad_ch=pad_ch, pad_n=2)
-        info_content = {}
-        for i in range(2, len(padded) - 2):
-            trigram_counts = 0
-            trigram_counts += self.trigrams[(padded[i - 2], padded[i - 1], padded[i])]
-            trigram_counts += self.trigrams[(padded[i - 1], padded[i], padded[i + 1])]
-            trigram_counts += self.trigrams[(padded[i], padded[i + 1], padded[i + 2])]
-            gappy_counts = 0
-            gappy_counts += self.gappy_trigrams[(padded[i - 2], padded[i - 1], 'X')]
-            gappy_counts += self.gappy_trigrams[(padded[i - 1], 'X', padded[i + 1])]
-            gappy_counts += self.gappy_trigrams[('X', padded[i + 1], padded[i + 2])]
-            # TODO : needs smoothing
-            info_content[i - 2] = (padded[i], -log(trigram_counts / gappy_counts, 2))
-
+        sequence = word.segments if not as_seq else word
+        pad_n = ngram_size - 1
+        padded = pad_sequence(sequence, pad_ch=pad_ch, pad_n=pad_n)
+        info_content = calculate_infocontent_of_word(seq=padded, lang=self, ngram_size=ngram_size, **kwargs)
         return info_content
 
-    def self_surprisal(self, word, normalize=False):
-        info_content = self.calculate_infocontent(word)
+    def self_surprisal(self, word, normalize=False, **kwargs):
+        info_content = self.calculate_infocontent(word, **kwargs)
         if normalize:
             return mean(info_content[j][1] for j in info_content)
         else:
