@@ -10,7 +10,7 @@ import numpy as np
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
                        PAD_CH_DEFAULT, START_PAD_CH)
-from phonAlign import Alignment, compatible_segments, visual_align
+from phonAlign import Alignment, AlignedPair, compatible_segments, visual_align
 from phonUtils.phonEnv import (phon_env_ngrams, relative_post_sonority,
                                relative_prev_sonority)
 from phonUtils.segment import _toSegment
@@ -20,7 +20,7 @@ from utils.information import (adaptation_surprisal, bayes_pmi,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
                             flatten_ngram, generate_ngrams, pad_sequence)
-from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample
+from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, top_n_keys
 
 
 def fit_em_ibm1(corpus, iterations=20, gap_ch=GAP_CH_DEFAULT):
@@ -423,6 +423,7 @@ class PhonCorrelator:
             )
             for word1, word2 in wordlist
         ]  # TODO: tuple would be better than list if possible
+        breakpoint()
 
         # Add padding before compacting
         if pad:
@@ -433,13 +434,19 @@ class PhonCorrelator:
                     ngram_size=max(2, ngram_size),
                     pad_ch=pad_ch
                 )
-
-        if complex_ngrams:
-            alignment_list = self.compact_alignments(
-                alignment_list,
-                self.complex_ngrams,
-                simple_ngrams=added_penalty_dict,
-            )
+        
+        for alignment in alignment_list:
+            # TODO Current task: try to compact bigrams and gaps
+            # First check gaps
+            gaps = alignment.gaps()
+            # TODO
+            
+            # Then check other bigrams in PMI dict
+            for i in range(len(alignment.alignment)):
+                pos = AlignedPair(alignment, i, gap_ch=aligment.gap_ch)
+                
+                
+                breakpoint()
 
         if pad and remove_uncompacted_padding:
             for alignment in alignment_list:
@@ -779,9 +786,10 @@ class PhonCorrelator:
                 cognate_alignments = self.align_wordlist(
                     qualifying_words[iteration - 1],
                     added_penalty_dict=PMI_iterations[iteration - 1],
-                    complex_ngrams=self.complex_ngrams,
-                    pad=True
+                    pad=True,
+                    remove_uncompacted_padding=False,
                 )
+                breakpoint()
 
                 # Add these alignments into running pool of alignments
                 if cumulative:

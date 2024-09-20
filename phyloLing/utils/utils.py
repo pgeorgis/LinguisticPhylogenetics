@@ -184,6 +184,22 @@ def rescale(val, lis, new_min=0, new_max=1):
     return part1 * part2 + part3
 
 
+def rescale_dict_values(d, comparison_list=None):
+    # If no comparison list is provided, use the dictionary's values
+    if comparison_list is None:
+        comparison_list = list(d.values())
+
+    min_val = min(comparison_list)
+    max_val = max(comparison_list)
+
+    # Handle the edge case where all values are the same (avoid division by zero)
+    if max_val == min_val:
+        return {k: 0.5 for k in d}
+
+    # Rescale the values between 0 and 1
+    return {k: (v - min_val) / (max_val - min_val) for k, v in d.items()}
+
+
 def keywithminval(d):
     """Returns the dictionary key with the lowest value"""
     v = list(d.values())
@@ -214,3 +230,9 @@ def get_git_commit_hash():
         return commit_hash
     except subprocess.CalledProcessError as e:
         return None
+
+def top_n_keys(d, n=None):
+    if n is None:
+        n = len(d)
+    top_keys = sorted(d, key=d.get, reverse=True)[:n]
+    return top_keys
