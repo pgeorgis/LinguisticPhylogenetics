@@ -14,7 +14,7 @@ from phonUtils.segment import _toSegment
 from utils.distance import Distance
 from utils.information import calculate_infocontent_of_word
 from utils.sequence import Ngram, PhonEnvNgram, generate_ngrams, flatten_ngram, pad_sequence
-from utils.utils import validate_class, rescale_dict_values, default_dict
+from utils.utils import validate_class, rescale_dict_values, default_dict, keywithmaxval
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
@@ -307,33 +307,26 @@ class Alignment:
             GAP_SCORE=-1, # TODO reset self.gop as -1? -1 seems reasonable
             N_BEST=n_best # TODO something could be done with n_best
         )
-        complex_alignment = complex_alignment[0][0]
-        # TODO TBD: maybe this should go after next step, after having decomposed bigrams because there may not be bigram scores for some of these compacted ngrams
-        complex_alignment = self.compact_boundary_gaps(complex_alignment)
-                
-        # TODO next tasks:
-        # 2) iterate through alignment and evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score
-        breakpoint()
-        
-
+        complex_alignment = complex_alignment[0][0]      
+        for i, pos in enumerate(complex_alignment): print(i, pos)
+    
         # Normalize scores between 0 and 1
         # TODO ideally these would be normalized against ALL ngram values of the respective size, not just those in the alignment
         bigram_scores = rescale_dict_values(bigram_scores)
         #bigram1_unigram2_scores = rescale_dict_values(bigram1_unigram2_scores)
         #bigram2_unigram1_scores = rescale_dict_values(bigram2_unigram1_scores)
         unigram_scores = rescale_dict_values(unigram_scores)
-
-        # Iterate through bigram-bigram alignment
-        complex_alignment = []
-        i = 0
-        bigram_alignment = bigram_alignment[0][0]
-        # Drop overlapping bigrams from alignment
-        # For each of two neighboring aligned bigrams, drop the one with the lower score
         bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
-        while i < len(bigram_alignment):
-        #for i, pos in enumerate(bigram_alignment[0][0]):
+
+        # TODO next tasks:
+        # 2) iterate through alignment and evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score
+        # Iterate through initial complex alignment alignment
+        i = 0
+        first_complex_alignment = complex_alignment[:]
+        complex_alignment = []
+        while i < len(first_complex_alignment):
             index = 1 if i == 0.5 else i # see logic for 0.5 below
-            bigram = bigram_alignment[int(index)]
+            bigram = first_complex_alignment[int(index)]
             bigram_score = _get_ngram_score(bigram, bigram_scores, unigram_scores, self.gap_ch, self.gop)
 
             equivalent_unigram_seq = to_unigram_alignment(bigram, fillvalue=self.gap_ch)
@@ -373,8 +366,8 @@ class Alignment:
 
             # Get next bigram score
             next_bigram_score = 0
-            if 0 < i < len(bigram_alignment)-1: # don't look ahead for i=0
-                next_bigram = bigram_alignment[int(i + 1)]
+            if 0 < i < len(first_complex_alignment)-1: # don't look ahead for i=0
+                next_bigram = first_complex_alignment[int(i + 1)]
                 next_bigram_score = _get_ngram_score(next_bigram, bigram_scores, unigram_scores, self.gap_ch, self.gop)
             if next_bigram_score > max(unigram_score, bigram_score, next_bigram_score, bigram1_unigram2_score, bigram2_unigram1_score):
                 breakpoint()
@@ -382,7 +375,7 @@ class Alignment:
             # Determine which alignment type is best
             if unigram_score >= max(bigram_score, next_bigram_score, bigram1_unigram2_score, bigram2_unigram1_score):
                 complex_alignment.extend(equivalent_unigram_seq)
-                if i == len(bigram_alignment)-1:
+                if i == len(first_complex_alignment)-1:
                     # If at penultimate bigram alignment position,
                     # check whether the following bigram's equivalent unigram sequence....?
                     complex_alignment.append("TBD skipped final")
@@ -412,11 +405,20 @@ class Alignment:
                 complex_alignment.append(tuple(bigram))
                 breakpoint()
             elif bigram1_unigram2_score > bigram2_unigram1_score:
-                complex_alignment.append("1-2")
-                breakpoint()
+                # 1-2
+                # complex_alignment.append((bigram[0], bigram[1][keywithmaxval(bigram1_unigram2_score_dict)]))
+                print("Warning: 1-2 skipped in favor of bigram")
+                complex_alignment.append(tuple(bigram))
+                i += 1 
+                
             else:
-                complex_alignment.append("2-1")
-                breakpoint()
+                # 2-1
+                complex_alignment.append((bigram[0][keywithmaxval(bigram2_unigram1_score_dict)], bigram[1]))
+                i += 1
+        
+        # Compact boundary gap alignments
+        complex_alignment = self.compact_boundary_gaps(complex_alignment)
+        for i, pos in enumerate(complex_alignment): print(i, pos)
         breakpoint()
 
         alignment_costs = {
@@ -443,8 +445,8 @@ class Alignment:
                         breakpoint()
                     else:
                         final_complex = [[], []]
-                        final_complex[end_boundary_gap.gap_i].extend(complex_alignment[-1][end_boundary_gap.gap_i])
-                        final_complex[end_boundary_gap.seg_i].extend(complex_alignment[-1][end_boundary_gap.seg_i])
+                        final_complex[end_boundary_gap.gap_i].extend([x for x in Ngram(complex_alignment[-1][end_boundary_gap.gap_i]).ngram if x != self.end_boundary])
+                        final_complex[end_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[-1][end_boundary_gap.seg_i]).ngram if x != self.end_boundary])
                         final_complex[end_boundary_gap.seg_i].append(self.end_boundary_token)
                         complex_alignment[-1] = (tuple(final_complex[0]), tuple(final_complex[-1]))
                 else:

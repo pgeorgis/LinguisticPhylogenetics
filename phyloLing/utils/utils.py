@@ -207,6 +207,13 @@ def keywithminval(d):
     return k[v.index(min(v))]
 
 
+def keywithmaxval(d):
+    """Returns the dictionary key with the maximum value"""
+    v = list(d.values())
+    k = list(d.keys())
+    return k[v.index(max(v))]
+
+
 def balanced_resample(population, sample_size, sampled_counts, rng):
     """Resample wordlist taking into account how many times each item has already been sampled."""
     # Inverse weighting to prefer less-sampled data
