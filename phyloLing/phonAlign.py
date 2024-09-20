@@ -166,6 +166,8 @@ class Alignment:
         self.gap_ch = gap_ch
         self.gop = gop
         self.pad_ch = pad_ch
+        self.start_boundary_token = f'{START_PAD_CH}{self.pad_ch}'
+        self.end_boundary_token = f'{self.pad_ch}{END_PAD_CH}'
         self.cost_func = cost_func
         self.added_penalty_dict = added_penalty_dict
         self.kwargs = kwargs
@@ -245,8 +247,6 @@ class Alignment:
         If not segmented, the words are first segmented before being aligned.
         GOP = -0.7 by default, determined by cross-validation on dataset of gold cognate alignments."""
 
-        logger.warning("Reminder: still need to add padding to alignments")
-
         # Combine base distances from distance function with additional penalties, if specified
         if self.added_penalty_dict:  # TODO this could be a separate class method
             def added_penalty_dist(seq1, seq2, **kwargs):
@@ -304,14 +304,16 @@ class Alignment:
             SEQUENCE_1=complex_ngram_seq1,
             SEQUENCE_2=complex_ngram_seq2,
             SCORES_DICT=alignment_costs,
-            GAP_SCORE=self.gop,
+            GAP_SCORE=-1, # TODO reset self.gop as -1? -1 seems reasonable
             N_BEST=n_best # TODO something could be done with n_best
         )
         complex_alignment = complex_alignment[0][0]
-        breakpoint()
+        # TODO TBD: maybe this should go after next step, after having decomposed bigrams because there may not be bigram scores for some of these compacted ngrams
+        complex_alignment = self.compact_boundary_gaps(complex_alignment)
+                
         # TODO next tasks:
-        # 1) iterate through alignment and evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score
-        
+        # 2) iterate through alignment and evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score
+        breakpoint()
         
 
         # Normalize scores between 0 and 1
@@ -425,6 +427,51 @@ class Alignment:
         }
 
         return alignment_costs, [(complex_alignment, )] # TODO simplify output format
+
+    def compact_boundary_gaps(self, complex_alignment):
+        # Add compacting of boundary gap alignment in situations like:
+        # (('ˈa', '#>'), ('ˈɐ̃', 'w̃')), ('-', '#>') -> (('ˈa', '#>'), ('ˈɐ̃', 'w̃', '#>')) (Catalan/Portuguese)
+        last_ngram = Ngram(complex_alignment[-1])
+        if last_ngram.is_gappy(self.gap_ch) and last_ngram.is_boundary(self.pad_ch):
+            penult_ngram = Ngram(complex_alignment[-2])
+            if penult_ngram.is_boundary(self.pad_ch):
+                if self.end_boundary_token not in complex_alignment[-2]:
+                    # Penultimate ngram is a complex ngram alignment
+                    end_boundary_gap = complex_alignment.pop()
+                    end_boundary_gap = Gap([end_boundary_gap], 0, gap_ch=self.gap_ch)
+                    if penult_ngram.size == 1:
+                        breakpoint()
+                    else:
+                        final_complex = [[], []]
+                        final_complex[end_boundary_gap.gap_i].extend(complex_alignment[-1][end_boundary_gap.gap_i])
+                        final_complex[end_boundary_gap.seg_i].extend(complex_alignment[-1][end_boundary_gap.seg_i])
+                        final_complex[end_boundary_gap.seg_i].append(self.end_boundary_token)
+                        complex_alignment[-1] = (tuple(final_complex[0]), tuple(final_complex[-1]))
+                else:
+                    breakpoint()
+        first_ngram = Ngram(complex_alignment[0])
+        if first_ngram.is_gappy(self.gap_ch) and first_ngram.is_boundary(self.pad_ch):
+            next_ngram = Ngram(complex_alignment[1])
+            if next_ngram.is_boundary(self.pad_ch):
+                if self.start_boundary_token not in complex_alignment[1]:
+                    # Penultimate ngram is a complex ngram alignment
+                    start_boundary_gap = complex_alignment[0]
+                    start_boundary_gap = Gap([start_boundary_gap], 0, gap_ch=self.gap_ch)
+                    if next_ngram.size == 1:
+                        breakpoint()
+                    else:
+                        initial_complex = [[], []]
+                        initial_complex[start_boundary_gap.gap_i].extend(complex_alignment[1][start_boundary_gap.gap_i])
+                        initial_complex[start_boundary_gap.seg_i].extend(complex_alignment[1][start_boundary_gap.seg_i])
+                        initial_complex[start_boundary_gap.seg_i].insert(0, self.start_boundary_token)
+                        complex_alignment[0] = (tuple(initial_complex[0]), tuple(initial_complex[-1]))
+                        
+                else:
+                    pass
+                    
+            
+        
+        return complex_alignment
 
     def remove_gaps(self, alignment=None):
         """Returns the alignment without gap-aligned positions.
@@ -598,13 +645,13 @@ class Alignment:
             #logger.warning("PMI is equal, conflict resolution not implemented.")
             return None
 
-    def start_boundary(self):
+    def start_boundary(self, size=2):
         # ('<#', '<#')
-        return (f'{START_PAD_CH}{self.pad_ch}', f'{START_PAD_CH}{self.pad_ch}')
+        return tuple([start_boundary_token]*size)
 
-    def end_boundary(self):
+    def end_boundary(self, size=2):
         # ('#>', '#>')
-        return (f'{self.pad_ch}{END_PAD_CH}', f'{self.pad_ch}{END_PAD_CH}')
+        return tuple([end_boundary_token]*size)
 
     def pad(self, ngram_size, alignment=None, pad_ch=PAD_CH_DEFAULT, pad_n=None):
         self.pad_ch = pad_ch
@@ -856,8 +903,8 @@ class AlignedPair:
 
 
 class Gap(AlignedPair):
-    def __init__(self, alignment, index):
-        super().__init__(alignment, index)
+    def __init__(self, alignment, index, **kwargs):
+        super().__init__(alignment, index, **kwargs)
         self.gap_i = self.pair.index(self.gap_ch)
         self.seg_i = abs(self.gap_i - 1)
         self.segment = self.pair[self.seg_i]
