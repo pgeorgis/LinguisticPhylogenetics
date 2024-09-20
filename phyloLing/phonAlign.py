@@ -266,17 +266,9 @@ class Alignment:
         else:
             get_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(self.cost_func, seq1=seq1, seq2=seq2)
 
-        # Align unigrams with unigrams
+        # Pad unigram sequences
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
         padded2 = pad_sequence(self.seq2, pad_ch=self.pad_ch, pad_n=1)
-        unigram_scores = get_alignment_costs(padded1, padded2)
-        # unigram_alignment = best_alignment(
-        #     SEQUENCE_1=self.seq1,
-        #     SEQUENCE_2=self.seq2,
-        #     SCORES_DICT=unigram_scores,
-        #     GAP_SCORE=self.gop,
-        #     N_BEST=n_best
-        # )
         
         # Get complex ngram segmentation
         complex_ngram_seq1 = self.word1.complex_segmentation(pad_ch=self.pad_ch)
@@ -285,12 +277,42 @@ class Alignment:
         #Generate bigrams # TODO surely this can be done more efficiently, e.g. within Word class
         bigrams_seq1 = self.word1.getBigrams(pad_ch=self.pad_ch)
         bigrams_seq2 = self.word2.getBigrams(pad_ch=self.pad_ch)
-        breakpoint()
-        # TODO next tasks: 
-        # 1) generate alignment costs between all complex ngram seqs
-        # 2) get complex alignment of complex_ngram_seq*
-        # 3) iterate through alignment and evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score     
+   
         bigram_scores = get_alignment_costs(bigrams_seq1, bigrams_seq2)
+        unigram_scores = get_alignment_costs(padded1, padded2)
+        # unigram_alignment = best_alignment(
+        #     SEQUENCE_1=self.seq1,
+        #     SEQUENCE_2=self.seq2,
+        #     SCORES_DICT=unigram_scores,
+        #     GAP_SCORE=self.gop,
+        #     N_BEST=n_best
+        # )
+        bigram1_unigram2_scores = get_alignment_costs(bigrams_seq1, padded2)
+        bigram2_unigram1_scores = get_alignment_costs(padded1, bigrams_seq2)
+        
+        # Combine alignment costs from bigrams and unigrams
+        combined_costs = {}
+        combined_costs.update(bigram_scores)
+        combined_costs.update(unigram_scores)
+        combined_costs.update(bigram1_unigram2_scores)
+        combined_costs.update(bigram2_unigram1_scores)
+        alignment_costs = {}
+        for i, ngram1 in enumerate(complex_ngram_seq1):
+            for j, ngram2 in enumerate(complex_ngram_seq2):
+                alignment_costs[(i, j)] = combined_costs[(ngram1, ngram2)]
+        complex_alignment = best_alignment(
+            SEQUENCE_1=complex_ngram_seq1,
+            SEQUENCE_2=complex_ngram_seq2,
+            SCORES_DICT=alignment_costs,
+            GAP_SCORE=self.gop,
+            N_BEST=n_best # TODO something could be done with n_best
+        )
+        complex_alignment = complex_alignment[0][0]
+        breakpoint()
+        # TODO next tasks:
+        # 1) iterate through alignment and evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score
+        
+        
 
         # Normalize scores between 0 and 1
         # TODO ideally these would be normalized against ALL ngram values of the respective size, not just those in the alignment
