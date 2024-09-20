@@ -115,7 +115,7 @@ def calculate_infocontent_of_word(seq, lang, ngram_size=3, pad_ch=PAD_CH_DEFAULT
                 gappy_counts += lang.gappy_bigrams.get(('X', seq[i + 1]), 0)
             try:
                 info_content_value = (seq[i], -log(bigram_counts / gappy_counts, 2))
-            except ValueError:
+            except ZeroDivisionError:
                 breakpoint()
             info_content[i] = info_content_value
         else: # ngram_size = 3

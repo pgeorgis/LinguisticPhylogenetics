@@ -79,64 +79,6 @@ def to_unigram_alignment(bigram, fillvalue=GAP_CH_DEFAULT):
         return [bigram] # already a unigram
     return list(zip_longest(*bigram, fillvalue=fillvalue))
 
-def remove_overlapping_bigrams(bigrams,
-                               bigram_scores,
-                               unigram_scores,
-                               lang,
-                               gap_ch=GAP_CH_DEFAULT,
-                               pad_ch=PAD_CH_DEFAULT):
-    """Remove overlapping bigrams from a bigram alignment."""
-    filtered = []
-    # instead of trying to remove overlapping bigrams once alignment has been done, 
-    # which is proving to be very complex
-    # instead remove overlapping bigrams from input sequences, preferring the bigram with the higher
-    # probability in the language / higher PMI of the component segments to each other in the language
-    # this will also in a way pre-select truer n>1gram units
-
-    def bigrams_dont_overlap(prev, bigram_i, side='ANY'):
-        prev_ngram = Ngram(prev)
-        bigram_i_ngram = Ngram(bigram_i)
-        if prev_ngram.size == 2 and bigram_i_ngram.size == 2:
-            if prev[-1] != bigram_i[0]:
-                return True
-            return False
-        elif prev_ngram.size == 1 and bigram_i_ngram.size == 2:
-            if prev_ngram.ngram[0] != bigram_i_ngram.ngram[0]:
-                return True
-            return False
-        else:
-            raise ValueError # TODO handle
-
-    for i, bigram_i in enumerate(bigrams):
-        if i == 0:
-            filtered.append(bigram_i)
-            continue
-
-        prev = filtered[-1]
-        if bigrams_dont_overlap(prev, bigram_i, side='ANY'):
-            raise ValueError # we expect them always to overlap in this schema now
-        else:
-            bigram_i_ngram = Ngram(bigram_i)
-            prev_ngram = Ngram(prev)
-            bigram_i_info = lang.self_surprisal(list(bigram_i_ngram.ngram), as_seq=True, ngram_size=bigram_i_ngram.size)
-            prev_info = lang.self_surprisal(list(prev_ngram.ngram), as_seq=True, ngram_size=prev_ngram.size)
-            bigram_i_score = mean([bigram_i_info[j][-1] for j in bigram_i_info])
-            prev_score = mean([prev_info[j][-1] for j in prev_info])
-
-            if bigram_i_score < prev_score:
-                # Favor bigram_i, revert prev to a unigram including its first half
-                if prev_ngram.size == 1:
-                    # if prev is already a unigram, replace it with the bigram (as they overlap)
-                    filtered[-1] = bigram_i
-                else:
-                    filtered[-1] = Ngram(filtered[-1]).ngram[0]
-                    filtered.append(bigram_i)
-            else:
-                # Favor previous bigram, revert current bigram to a unigram including its second half
-                filtered.append(bigram_i[-1])
-
-    return filtered
-
 
 
 PhonSim = Distance(
@@ -325,7 +267,6 @@ class Alignment:
             get_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(self.cost_func, seq1=seq1, seq2=seq2)
 
         # Align unigrams with unigrams
-        logger.warning("Reminder that seqs still need to be padded!")
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
         padded2 = pad_sequence(self.seq2, pad_ch=self.pad_ch, pad_n=1)
         unigram_scores = get_alignment_costs(padded1, padded2)
@@ -336,30 +277,20 @@ class Alignment:
         #     GAP_SCORE=self.gop,
         #     N_BEST=n_best
         # )
+        
+        # Get complex ngram segmentation
+        complex_ngram_seq1 = self.word1.complex_segmentation(pad_ch=self.pad_ch)
+        complex_ngram_seq2 = self.word2.complex_segmentation(pad_ch=self.pad_ch)
 
         #Generate bigrams # TODO surely this can be done more efficiently, e.g. within Word class
-        bigrams_seq1 = generate_ngrams(padded1, ngram_size=2, pad_ch=self.pad_ch, as_ngram=False)
-        bigrams_seq2 = generate_ngrams(padded2, ngram_size=2, pad_ch=self.pad_ch, as_ngram=False)
-
-        # Align bigrams with bigrams
-        bigram_scores = get_alignment_costs(bigrams_seq1, bigrams_seq2)
-        bigrams_seq1 = remove_overlapping_bigrams(
-            bigrams_seq1,
-            bigram_scores,
-            unigram_scores,
-            lang=self.word1.language,
-            gap_ch=self.gap_ch,
-            pad_ch=self.pad_ch,
-        )
-        bigrams_seq2 = remove_overlapping_bigrams(
-            bigrams_seq2,
-            bigram_scores,
-            unigram_scores,
-            lang=self.word2.language,
-            gap_ch=self.gap_ch,
-            pad_ch=self.pad_ch,
-        )
+        bigrams_seq1 = self.word1.getBigrams(pad_ch=self.pad_ch)
+        bigrams_seq2 = self.word2.getBigrams(pad_ch=self.pad_ch)
         breakpoint()
+        # TODO next tasks: 
+        # 1) generate alignment costs between all complex ngram seqs
+        # 2) get complex alignment of complex_ngram_seq*
+        # 3) iterate through alignment and evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score     
+        bigram_scores = get_alignment_costs(bigrams_seq1, bigrams_seq2)
 
         # Normalize scores between 0 and 1
         # TODO ideally these would be normalized against ALL ngram values of the respective size, not just those in the alignment

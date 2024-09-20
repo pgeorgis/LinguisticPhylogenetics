@@ -36,7 +36,7 @@ from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.information import calculate_infocontent_of_word, entropy
 from utils.network import dm2coords, newer_network_plot
-from utils.sequence import Ngram, flatten_ngram, pad_sequence
+from utils.sequence import Ngram, flatten_ngram, generate_ngrams, pad_sequence, remove_overlapping_bigrams
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict)
@@ -1621,6 +1621,8 @@ class Word:
         self.loanword = loanword
         self.orthography = orthography
         self.segments = self.segment()
+        self.bigrams = None
+        self.complex_segments = None
         self.syllables = None
         self.phon_env = self.getPhonEnv()
         self.info_content = None
@@ -1663,6 +1665,33 @@ class Word:
             preaspiration=self.get_parameter('preaspiration'),
             suprasegmentals=self.get_parameter('suprasegmentals')
         )
+        
+    def getBigrams(self, pad_ch=PAD_CH_DEFAULT):
+        """Generate a list of (overlapping) segment bigrams."""
+        if self.bigrams is not None:
+            return self.bigrams
+
+        padded = pad_sequence(self.segments, pad_ch=pad_ch, pad_n=1)
+        bigrams_seq = generate_ngrams(padded, ngram_size=2, pad_ch=pad_ch, as_ngram=False)
+        self.bigrams = bigrams_seq
+        return bigrams_seq
+    
+    def complex_segmentation(self, pad_ch=PAD_CH_DEFAULT):
+        """Create non-overlapping complex ngram segmentation with ngrams of variable sizes based on self-surprisal."""
+        if self.complex_segments is not None:
+            return self.complex_segmentation
+
+        assert self.language is not None
+        # Generate bigrams
+        bigrams_seq = self.getBigrams(pad_ch=pad_ch)
+        # Remove overlapping bigrams and decompose into unigrams if appropriate
+        complex_ngram_seq = remove_overlapping_bigrams(
+            bigrams_seq,
+            lang=self.language,
+            pad_ch=pad_ch,
+        )
+        self.complex_segments = complex_ngram_seq
+        return complex_ngram_seq
 
     def get_syllables(self, **kwargs):
         self.syllables = syllabify(

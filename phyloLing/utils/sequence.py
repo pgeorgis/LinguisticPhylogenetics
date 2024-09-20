@@ -1,6 +1,7 @@
 import re
 from functools import lru_cache
 from math import factorial
+from statistics import mean
 
 from constants import END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH
 from phonUtils.phonEnv import PHON_ENV_REGEX
@@ -153,6 +154,60 @@ def generate_ngrams(seq, ngram_size, pad_ch=PAD_CH_DEFAULT, as_ngram=True):
         else:
             ngrams.append(ngram.undo())
     return ngrams
+
+def remove_overlapping_bigrams(bigrams, lang, pad_ch=PAD_CH_DEFAULT):
+    """Remove overlapping bigrams from a bigram alignment."""
+    filtered = []
+    # instead of trying to remove overlapping bigrams once alignment has been done, 
+    # which is proving to be very complex
+    # instead remove overlapping bigrams from input sequences, preferring the bigram with the higher
+    # probability in the language / higher PMI of the component segments to each other in the language
+    # this will also in a way pre-select truer n>1gram units
+
+    def bigrams_dont_overlap(prev, bigram_i):
+        prev_ngram = Ngram(prev)
+        bigram_i_ngram = Ngram(bigram_i)
+        if prev_ngram.size == 2 and bigram_i_ngram.size == 2:
+            if prev[-1] != bigram_i[0]:
+                return True
+            return False
+        elif prev_ngram.size == 1 and bigram_i_ngram.size == 2:
+            if prev_ngram.ngram[0] != bigram_i_ngram.ngram[0]:
+                return True
+            return False
+        else:
+            raise ValueError # TODO handle
+
+    for i, bigram_i in enumerate(bigrams):
+        if i == 0:
+            filtered.append(bigram_i)
+            continue
+
+        prev = filtered[-1]
+        if bigrams_dont_overlap(prev, bigram_i):
+            raise ValueError # we expect them always to overlap in this schema now
+        else:
+            bigram_i_ngram = Ngram(bigram_i)
+            prev_ngram = Ngram(prev)
+            bigram_i_info = lang.self_surprisal(list(bigram_i_ngram.ngram), as_seq=True, ngram_size=bigram_i_ngram.size)
+            prev_info = lang.self_surprisal(list(prev_ngram.ngram), as_seq=True, ngram_size=prev_ngram.size)
+            bigram_i_score = mean([bigram_i_info[j][-1] for j in bigram_i_info])
+            prev_score = mean([prev_info[j][-1] for j in prev_info])
+
+            if bigram_i_score < prev_score:
+                # Favor bigram_i, revert prev to a unigram including its first half
+                if prev_ngram.size == 1:
+                    # if prev is already a unigram, replace it with the bigram (as they overlap)
+                    filtered[-1] = bigram_i
+                else:
+                    filtered[-1] = Ngram(filtered[-1]).ngram[0]
+                    filtered.append(bigram_i)
+            else:
+                # Favor previous bigram, revert current bigram to a unigram including its second half
+                filtered.append(bigram_i[-1])
+
+    return filtered
+
 
 # SMOOTHING
 def lidstone_smoothing(x, N, d, alpha=0.3):
