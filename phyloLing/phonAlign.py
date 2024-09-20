@@ -439,7 +439,7 @@ class Alignment:
                     # Penultimate ngram is a complex ngram alignment
                     end_boundary_gap = complex_alignment.pop()
                     end_boundary_gap = Gap([end_boundary_gap], 0, gap_ch=self.gap_ch)
-                    if penult_ngram.size == 1:
+                    if penult_ngram.size == 2:
                         breakpoint()
                     else:
                         final_complex = [[], []]
@@ -457,15 +457,18 @@ class Alignment:
                     # Penultimate ngram is a complex ngram alignment
                     start_boundary_gap = complex_alignment[0]
                     start_boundary_gap = Gap([start_boundary_gap], 0, gap_ch=self.gap_ch)
-                    if next_ngram.size == 1:
+                    initial_complex = [[], []]
+                    if next_ngram.size == 2: # aligned unigram 
                         breakpoint()
+                    elif first_ngram.size == 2: # aligned unigram
+                        initial_complex[start_boundary_gap.gap_i].extend([x for x in complex_alignment[1][start_boundary_gap.gap_i] if x != self.start_boundary])
+                        initial_complex[start_boundary_gap.seg_i].insert(0, self.start_boundary_token)
+                        complex_alignment = [(initial_complex[0][0], tuple(initial_complex[-1]))] + complex_alignment[2:]
                     else:
-                        initial_complex = [[], []]
-                        initial_complex[start_boundary_gap.gap_i].extend(complex_alignment[1][start_boundary_gap.gap_i])
-                        initial_complex[start_boundary_gap.seg_i].extend(complex_alignment[1][start_boundary_gap.seg_i])
+                        initial_complex[start_boundary_gap.gap_i].extend([x for x in complex_alignment[1][start_boundary_gap.gap_i] if x != self.start_boundary])
+                        initial_complex[start_boundary_gap.seg_i].extend([x for x in complex_alignment[0][start_boundary_gap.seg_i] if x != self.start_boundary])
                         initial_complex[start_boundary_gap.seg_i].insert(0, self.start_boundary_token)
                         complex_alignment[0] = (tuple(initial_complex[0]), tuple(initial_complex[-1]))
-                        
                 else:
                     pass
                     
