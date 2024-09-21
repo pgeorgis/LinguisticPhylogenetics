@@ -139,7 +139,7 @@ class Alignment:
                  cost_func=AlignmentCost,
                  added_penalty_dict=None,
                  gap_ch=GAP_CH_DEFAULT,
-                 gop=-0.2,  # TODO possibly need to recalibrate ** changed from -0.3 to -0.2 when changing to PMI log base 2, given that those PMI values will be 69% of value of PMI with log base math.e
+                 gop=-2,  # TODO possibly need to recalibrate ** changed from -0.3 to -0.2 when changing to PMI log base 2, given that those PMI values will be 69% of value of PMI with log base math.e
                  pad_ch=PAD_CH_DEFAULT,
                  n_best=1,
                  phon_env=False,
@@ -306,7 +306,7 @@ class Alignment:
             SEQUENCE_1=complex_ngram_seq1,
             SEQUENCE_2=complex_ngram_seq2,
             SCORES_DICT=alignment_costs,
-            GAP_SCORE=-1, # TODO reset self.gop as -1? -1 seems reasonable
+            GAP_SCORE=self.gop,
             N_BEST=n_best # TODO something could be done with n_best
         )
         complex_alignment = complex_alignment[0][0]      
@@ -338,15 +338,19 @@ class Alignment:
                 i += 1
                 continue
 
-            unigram_score = 0
+            unigram_score = []
             for unigram in equivalent_unigram_seq:
                 if self.gap_ch not in unigram:
-                    unigram_score += unigram_scores[unigram]
+                    unigram_score.append(unigram_scores[unigram])
                 else:
-                    unigram_score += self.gop # TODO this should actually just be whatever the custom cost function returns
+                    unigram_score.append(self.gop) # TODO this should actually just be whatever the custom cost function returns
+            unigram_score = mean(unigram_score)
 
             bigram1_unigram2_score_dict = {}
             for x, unigram in enumerate(to_unigram_alignment(equivalent_unigram_seq)[1]):
+                if isinstance(bigram[0], str): # ('x', ...) shape does not allow calculation of bigram1_unigram2
+                    bigram1_unigram2_score_dict[x] = -inf
+                    break
                 if bigram[0] == self.gap_ch:
                     bigram1_unigram2_score_dict[x] = self.gop # TODO this should actually just be whatever the custom cost function returns
                 elif self.gap_ch not in unigram:
@@ -369,7 +373,7 @@ class Alignment:
             bigram2_unigram1_score = max(bigram2_unigram1_score_dict.values())
 
             # Get next bigram score
-            next_bigram_score = 0
+            next_bigram_score = -inf # Set as negative infinity by default so that if not looking ahead, the next bigram score is never picked
             if 0 < i < len(first_complex_alignment)-1: # don't look ahead for i=0
                 next_bigram = first_complex_alignment[int(i + 1)]
                 if len(to_unigram_alignment(next_bigram)) > 1: # next unit is a unigram not a bigram, disregard
@@ -380,18 +384,8 @@ class Alignment:
             # Determine which alignment type is best
             if unigram_score >= max(bigram_score, next_bigram_score, bigram1_unigram2_score, bigram2_unigram1_score):
                 complex_alignment.extend(equivalent_unigram_seq)
-                if i == len(first_complex_alignment)-1:
-                    # If at penultimate bigram alignment position,
-                    # check whether the following bigram's equivalent unigram sequence....?
-                    complex_alignment.append("TBD skipped final")
-                # elif i == 0:
-                #     # first bigram was always included, so the first two bigrams overlap
-                #     # in case unigram strategy is taken, set i to 0.5
-                #     # and add remaining half of following bigram in 0.5 iteration
-                #     i -= 0.5
                 i += 1
             elif next_bigram_score > max(bigram_score, bigram1_unigram2_score, bigram2_unigram1_score):
-                breakpoint()
                 # Do nothing; skip and evaluate next bigram instead
                 i += 1
             elif bigram_score >= max(bigram1_unigram2_score, bigram2_unigram1_score):
@@ -408,7 +402,7 @@ class Alignment:
                     else:
                         logger.warning("Not implemented")
                 complex_alignment.append(tuple(bigram))
-                breakpoint()
+                i += 1
             elif bigram1_unigram2_score > bigram2_unigram1_score:
                 # 1-2
                 # complex_alignment.append((bigram[0], bigram[1][keywithmaxval(bigram1_unigram2_score_dict)]))
@@ -424,7 +418,12 @@ class Alignment:
         # Compact boundary gap alignments
         complex_alignment = self.compact_boundary_gaps(complex_alignment)
         for i, pos in enumerate(complex_alignment): print(i, pos)
-        breakpoint()
+        # TODO: possibly compact before? or both before and after?
+        # TODO: possibly save unigram, bigram, and complex alignments
+        
+        
+        # then need to look into Warning: 1-2 skipped in favor of bigram
+        # and how to better measure the scores in general, but esp involving gap_ch (instead of gop)
 
         alignment_costs = {
             "2-2": bigram_scores,
@@ -441,45 +440,51 @@ class Alignment:
         last_ngram = Ngram(complex_alignment[-1])
         if last_ngram.is_gappy(self.gap_ch) and last_ngram.is_boundary(self.pad_ch):
             penult_ngram = Ngram(complex_alignment[-2])
+            end_boundary_gap = complex_alignment.pop()
+            end_boundary_gap = Gap([end_boundary_gap], 0, gap_ch=self.gap_ch)
             if penult_ngram.is_boundary(self.pad_ch):
-                if self.end_boundary_token not in complex_alignment[-2]:
-                    # Penultimate ngram is a complex ngram alignment
-                    end_boundary_gap = complex_alignment.pop()
-                    end_boundary_gap = Gap([end_boundary_gap], 0, gap_ch=self.gap_ch)
-                    if penult_ngram.size == 2:
-                        breakpoint()
-                    else:
-                        final_complex = [[], []]
-                        final_complex[end_boundary_gap.gap_i].extend([x for x in Ngram(complex_alignment[-1][end_boundary_gap.gap_i]).ngram if x != self.end_boundary])
-                        final_complex[end_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[-1][end_boundary_gap.seg_i]).ngram if x != self.end_boundary])
-                        final_complex[end_boundary_gap.seg_i].append(self.end_boundary_token)
-                        complex_alignment[-1] = (tuple(final_complex[0]), tuple(final_complex[-1]))
-                else:
-                    breakpoint()
+                final_complex = [[], []]
+                final_complex[end_boundary_gap.gap_i].extend([x for x in Ngram(complex_alignment[-1][end_boundary_gap.gap_i]).ngram if x != self.end_boundary])
+                final_complex[end_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[-1][end_boundary_gap.seg_i]).ngram if x != self.end_boundary])
+                final_complex[end_boundary_gap.seg_i].append(self.end_boundary_token)
+                complex_alignment = complex_alignment[:-1]
+                complex_alignment.append( (Ngram(final_complex[0]).undo(), Ngram(final_complex[-1]).undo()) )
+
+            else:
+                # Iterate backwards to find the index which contains the other boundary token
+                j = 1 # start at 1 because j=0 is already implicitly checked in order to even enter this else block
+                while not Ngram(complex_alignment[-1-j]).is_boundary(self.pad_ch):
+                    j += 1
+                penult_ngram = Ngram(complex_alignment[-1-j])
+                final_complex = [[], []]
+                for k in range(-1-j, 0):
+                    final_complex[end_boundary_gap.gap_i].extend([x for x in Ngram(complex_alignment[k][end_boundary_gap.gap_i]).ngram if x not in (self.gap_ch, self.end_boundary_token)])
+                    final_complex[end_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[k][end_boundary_gap.seg_i]).ngram if x not in (self.gap_ch, self.end_boundary_token)])
+                final_complex[end_boundary_gap.seg_i].extend([x for x in Ngram(end_boundary_gap.pair).ngram if x != self.gap_ch])
+                final_complex[end_boundary_gap.gap_i].append(self.end_boundary_token)
+                complex_alignment = complex_alignment[:-1-j]
+                complex_alignment.append( (tuple(final_complex[0]), Ngram(final_complex[-1]).undo()) )
+
         first_ngram = Ngram(complex_alignment[0])
         if first_ngram.is_gappy(self.gap_ch) and first_ngram.is_boundary(self.pad_ch):
             next_ngram = Ngram(complex_alignment[1])
             if next_ngram.is_boundary(self.pad_ch):
-                if self.start_boundary_token not in complex_alignment[1]:
-                    # Penultimate ngram is a complex ngram alignment
-                    start_boundary_gap = complex_alignment[0]
-                    start_boundary_gap = Gap([start_boundary_gap], 0, gap_ch=self.gap_ch)
-                    initial_complex = [[], []]
-                    if next_ngram.size == 2: # aligned unigram 
-                        breakpoint()
-                    elif first_ngram.size == 2: # aligned unigram
-                        initial_complex[start_boundary_gap.gap_i].extend([x for x in complex_alignment[1][start_boundary_gap.gap_i] if x != self.start_boundary])
-                        initial_complex[start_boundary_gap.seg_i].insert(0, self.start_boundary_token)
-                        complex_alignment = [(initial_complex[0][0], tuple(initial_complex[-1]))] + complex_alignment[2:]
-                    else:
-                        initial_complex[start_boundary_gap.gap_i].extend([x for x in complex_alignment[1][start_boundary_gap.gap_i] if x != self.start_boundary])
-                        initial_complex[start_boundary_gap.seg_i].extend([x for x in complex_alignment[0][start_boundary_gap.seg_i] if x != self.start_boundary])
-                        initial_complex[start_boundary_gap.seg_i].insert(0, self.start_boundary_token)
-                        complex_alignment[0] = (tuple(initial_complex[0]), tuple(initial_complex[-1]))
+                # Penultimate ngram is a complex ngram alignment
+                start_boundary_gap = complex_alignment[0]
+                start_boundary_gap = Gap([start_boundary_gap], 0, gap_ch=self.gap_ch)
+                initial_complex = [[], []]
+                if next_ngram.size == 2 or first_ngram.size == 2: # aligned unigram
+                    initial_complex[start_boundary_gap.gap_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.gap_i]).ngram if x != self.gap_ch])
+                    initial_complex[start_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.seg_i]).ngram if x != self.gap_ch])
+                    initial_complex[start_boundary_gap.seg_i].insert(0, self.start_boundary_token)
+                    complex_alignment = [(Ngram(initial_complex[0]).undo(), Ngram(initial_complex[-1]).undo())] + complex_alignment[2:]
                 else:
-                    pass
-                    
-            
+                    breakpoint()
+                    bp = 4
+                    initial_complex[start_boundary_gap.gap_i].extend([x for x in complex_alignment[1][start_boundary_gap.gap_i] if x != self.gap_ch])
+                    initial_complex[start_boundary_gap.seg_i].extend([x for x in complex_alignment[0][start_boundary_gap.seg_i] if x != self.gap_ch])
+                    initial_complex[start_boundary_gap.seg_i].insert(0, self.start_boundary_token)
+                    complex_alignment[0] = (tuple(initial_complex[0]), tuple(initial_complex[-1]))
         
         return complex_alignment
 
@@ -657,11 +662,11 @@ class Alignment:
 
     def start_boundary(self, size=2):
         # ('<#', '<#')
-        return tuple([start_boundary_token]*size)
+        return tuple([self.start_boundary_token]*size)
 
     def end_boundary(self, size=2):
         # ('#>', '#>')
-        return tuple([end_boundary_token]*size)
+        return tuple([self.end_boundary_token]*size)
 
     def pad(self, ngram_size, alignment=None, pad_ch=PAD_CH_DEFAULT, pad_n=None):
         self.pad_ch = pad_ch
