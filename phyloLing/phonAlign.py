@@ -179,7 +179,6 @@ class Alignment:
 
         # Perform alignment
         self.alignment_costs, self.n_best = self.align(n_best)
-        breakpoint()
         self.alignment = self.n_best[0][0][:]
 
         # Save length and cost of single best alignment
@@ -270,7 +269,7 @@ class Alignment:
         # Otherwise calculate alignment costs for each segment pair using only the base distance function
         else:
             cost_func = self.cost_func
-        get_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(cost_func, seq1=seq1, seq2=seq2)
+        get_ngram_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(cost_func, seq1=seq1, seq2=seq2)
 
         # Pad unigram sequences
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
@@ -285,10 +284,10 @@ class Alignment:
         bigrams_seq2 = self.word2.getBigrams(pad_ch=self.pad_ch)
    
         # Get alignment costs for ngram pairs of each size
-        bigram_scores = get_alignment_costs(bigrams_seq1, bigrams_seq2)
-        unigram_scores = get_alignment_costs(padded1, padded2)
-        bigram1_unigram2_scores = get_alignment_costs(bigrams_seq1, padded2)
-        bigram2_unigram1_scores = get_alignment_costs(padded1, bigrams_seq2)
+        bigram_scores = get_ngram_alignment_costs(bigrams_seq1, bigrams_seq2)
+        unigram_scores = get_ngram_alignment_costs(padded1, padded2)
+        bigram1_unigram2_scores = get_ngram_alignment_costs(bigrams_seq1, padded2)
+        bigram2_unigram1_scores = get_ngram_alignment_costs(padded1, bigrams_seq2)
         
         # Combine alignment costs from bigrams and unigrams
         combined_costs = {}
@@ -296,16 +295,29 @@ class Alignment:
         combined_costs.update(unigram_scores)
         combined_costs.update(bigram1_unigram2_scores)
         combined_costs.update(bigram2_unigram1_scores)
-        alignment_costs = {}
-        for i, ngram1 in enumerate(complex_ngram_seq1):
-            for j, ngram2 in enumerate(complex_ngram_seq2):
-                alignment_costs[(i, j)] = combined_costs[(ngram1, ngram2)]
         
+        def get_alignment_costs(seq1, seq2):
+            alignment_costs = {}
+            for i, ngram1 in enumerate(seq1):
+                for j, ngram2 in enumerate(seq2):
+                    alignment_costs[(i, j)] = combined_costs[(ngram1, ngram2)]
+            return alignment_costs
+        
+        # Compute a unigram alignent (with padding)
+        unigram_alignment_costs = get_alignment_costs(padded1, padded2)
+        unigram_alignment = best_alignment(
+            SEQUENCE_1=padded1,
+            SEQUENCE_2=padded2,
+            SCORES_DICT=unigram_alignment_costs,
+            GAP_SCORE=self.gop,
+            N_BEST=n_best # TODO something could be done with n_best
+        )
         # Compute an optimal complex alignment of complex ngrams
+        complex_alignment_costs = get_alignment_costs(complex_ngram_seq1, complex_ngram_seq2)
         complex_alignment = best_alignment(
             SEQUENCE_1=complex_ngram_seq1,
             SEQUENCE_2=complex_ngram_seq2,
-            SCORES_DICT=alignment_costs,
+            SCORES_DICT=complex_alignment_costs,
             GAP_SCORE=self.gop,
             N_BEST=n_best # TODO something could be done with n_best
         )
@@ -325,6 +337,7 @@ class Alignment:
         i = 0
         first_complex_alignment = complex_alignment[:]
         complex_alignment = []
+        breakpoint()
         while i < len(first_complex_alignment):
             index = 1 if i == 0.5 else i # see logic for 0.5 below
             bigram = first_complex_alignment[int(index)]
