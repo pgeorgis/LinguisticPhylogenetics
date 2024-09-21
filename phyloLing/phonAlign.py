@@ -75,9 +75,14 @@ def _get_ngram_score(bigram, bigram_scores, unigram_scores, gap_ch, gop):
     return score
 
 def to_unigram_alignment(bigram, fillvalue=GAP_CH_DEFAULT):
-    if Ngram(bigram).size == 2: # unigram alignment (x, y) encoded as Ngram object will have size=2
-        return [bigram] # already a unigram
-    return list(zip_longest(*bigram, fillvalue=fillvalue))
+    unigrams = [[], []]
+    for i, pos in enumerate(bigram):
+        if isinstance(pos, str):
+            unigrams[i].append(pos)
+        elif isinstance(pos, tuple):
+            unigrams[i].extend(pos)
+
+    return list(zip_longest(*unigrams, fillvalue=fillvalue))
 
 
 
@@ -241,30 +246,31 @@ class Alignment:
 
         return alignment_costs
 
-    def align(self, n_best=1):
+    def added_penalty_dist(self, seq1, seq2, **kwargs):
+        assert self.added_penalty_dict is not None
+        added_penalty = self.added_penalty_dict[seq1][seq2]
+        base_dist = self.cost_func.eval(seq1, seq2, **kwargs)
+        # If similarity function, turn into distance and ensure it is negative # TODO add into Distance object
+        if self.cost_func.sim:
+            base_dist = -(1 - base_dist)
+            return base_dist + added_penalty
+        else:
+            return min(base_dist, -base_dist) + added_penalty
+
+
+    def align(self, n_best=1): # TODO update description
         """Align segments of word1 with segments of word2 according to Needleman-
         Wunsch algorithm, with costs determined by phonetic and sonority similarity;
         If not segmented, the words are first segmented before being aligned.
-        GOP = -0.7 by default, determined by cross-validation on dataset of gold cognate alignments."""
+        GOP = -1 by default, determined by cross-validation on dataset of gold cognate alignments."""
 
         # Combine base distances from distance function with additional penalties, if specified
-        if self.added_penalty_dict:  # TODO this could be a separate class method
-            def added_penalty_dist(seq1, seq2, **kwargs):
-                added_penalty = self.added_penalty_dict[seq1][seq2]
-                base_dist = self.cost_func.eval(seq1, seq2, **kwargs)
-                # If similarity function, turn into distance and ensure it is negative # TODO add into Distance object
-                if self.cost_func.sim:
-                    base_dist = -(1 - base_dist)
-                    return base_dist + added_penalty
-                else:
-                    return min(base_dist, -base_dist) + added_penalty
-
-            AddedPenaltyDist = Distance(func=added_penalty_dist, **self.kwargs)
-            get_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(AddedPenaltyDist, seq1=seq1, seq2=seq2)
-
+        if self.added_penalty_dict:
+            cost_func = Distance(func=self.added_penalty_dist, **self.kwargs)
         # Otherwise calculate alignment costs for each segment pair using only the base distance function
         else:
-            get_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(self.cost_func, seq1=seq1, seq2=seq2)
+            cost_func = self.cost_func
+        get_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(cost_func, seq1=seq1, seq2=seq2)
 
         # Pad unigram sequences
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
@@ -278,15 +284,9 @@ class Alignment:
         bigrams_seq1 = self.word1.getBigrams(pad_ch=self.pad_ch)
         bigrams_seq2 = self.word2.getBigrams(pad_ch=self.pad_ch)
    
+        # Get alignment costs for ngram pairs of each size
         bigram_scores = get_alignment_costs(bigrams_seq1, bigrams_seq2)
         unigram_scores = get_alignment_costs(padded1, padded2)
-        # unigram_alignment = best_alignment(
-        #     SEQUENCE_1=self.seq1,
-        #     SEQUENCE_2=self.seq2,
-        #     SCORES_DICT=unigram_scores,
-        #     GAP_SCORE=self.gop,
-        #     N_BEST=n_best
-        # )
         bigram1_unigram2_scores = get_alignment_costs(bigrams_seq1, padded2)
         bigram2_unigram1_scores = get_alignment_costs(padded1, bigrams_seq2)
         
@@ -300,6 +300,8 @@ class Alignment:
         for i, ngram1 in enumerate(complex_ngram_seq1):
             for j, ngram2 in enumerate(complex_ngram_seq2):
                 alignment_costs[(i, j)] = combined_costs[(ngram1, ngram2)]
+        
+        # Compute an optimal complex alignment of complex ngrams
         complex_alignment = best_alignment(
             SEQUENCE_1=complex_ngram_seq1,
             SEQUENCE_2=complex_ngram_seq2,
@@ -313,14 +315,13 @@ class Alignment:
         # Normalize scores between 0 and 1
         # TODO ideally these would be normalized against ALL ngram values of the respective size, not just those in the alignment
         bigram_scores = rescale_dict_values(bigram_scores)
-        #bigram1_unigram2_scores = rescale_dict_values(bigram1_unigram2_scores)
-        #bigram2_unigram1_scores = rescale_dict_values(bigram2_unigram1_scores)
+        bigram1_unigram2_scores = rescale_dict_values(bigram1_unigram2_scores)
+        bigram2_unigram1_scores = rescale_dict_values(bigram2_unigram1_scores)
         unigram_scores = rescale_dict_values(unigram_scores)
         bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
 
-        # TODO next tasks:
-        # 2) iterate through alignment and evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score
         # Iterate through initial complex alignment alignment
+        # Evaluate bigrams against constituent unigrams, etc. decompose where the smaller unit has a better score
         i = 0
         first_complex_alignment = complex_alignment[:]
         complex_alignment = []
@@ -345,7 +346,7 @@ class Alignment:
                     unigram_score += self.gop # TODO this should actually just be whatever the custom cost function returns
 
             bigram1_unigram2_score_dict = {}
-            for x, unigram in enumerate(bigram[1]):
+            for x, unigram in enumerate(to_unigram_alignment(equivalent_unigram_seq)[1]):
                 if bigram[0] == self.gap_ch:
                     bigram1_unigram2_score_dict[x] = self.gop # TODO this should actually just be whatever the custom cost function returns
                 elif self.gap_ch not in unigram:
@@ -355,7 +356,10 @@ class Alignment:
             bigram1_unigram2_score = max(bigram1_unigram2_score_dict.values())
 
             bigram2_unigram1_score_dict = {}
-            for x, unigram in enumerate(bigram[0]):
+            for x, unigram in enumerate(to_unigram_alignment(equivalent_unigram_seq)[0]):
+                if isinstance(unigram, str): # ((x, y), z) shape does not allow calculation of bigram2_unigram1
+                    bigram2_unigram1_score_dict[x] = -inf
+                    break
                 if bigram[1] == self.gap_ch:
                     bigram2_unigram1_score_dict[x] = self.gop # TODO this should actually just be whatever the custom cost function returns
                 elif self.gap_ch not in unigram:
@@ -368,7 +372,8 @@ class Alignment:
             next_bigram_score = 0
             if 0 < i < len(first_complex_alignment)-1: # don't look ahead for i=0
                 next_bigram = first_complex_alignment[int(i + 1)]
-                next_bigram_score = _get_ngram_score(next_bigram, bigram_scores, unigram_scores, self.gap_ch, self.gop)
+                if len(to_unigram_alignment(next_bigram)) > 1: # next unit is a unigram not a bigram, disregard
+                    next_bigram_score = _get_ngram_score(next_bigram, bigram_scores, unigram_scores, self.gap_ch, self.gop)
             if next_bigram_score > max(unigram_score, bigram_score, next_bigram_score, bigram1_unigram2_score, bigram2_unigram1_score):
                 breakpoint()
 
@@ -407,7 +412,7 @@ class Alignment:
             elif bigram1_unigram2_score > bigram2_unigram1_score:
                 # 1-2
                 # complex_alignment.append((bigram[0], bigram[1][keywithmaxval(bigram1_unigram2_score_dict)]))
-                print("Warning: 1-2 skipped in favor of bigram")
+                print(f"Warning: 1-2 skipped in favor of bigram {tuple(bigram)}")
                 complex_alignment.append(tuple(bigram))
                 i += 1 
                 
