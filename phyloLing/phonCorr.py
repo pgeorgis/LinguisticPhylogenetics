@@ -5,7 +5,7 @@ from collections import defaultdict
 from functools import lru_cache
 from itertools import product
 from statistics import mean, stdev
-from nltk.translate import AlignedSent, IBMModel1
+from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 import numpy as np
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
@@ -23,14 +23,21 @@ from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
 from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, top_n_keys
 
 
-def fit_em_ibm1(corpus, iterations=20, gap_ch=GAP_CH_DEFAULT):
+def fit_em_ibm(corpus, iterations=20, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
     """Performs expectation maximization algorithm and fits an IBM translation model 1 to a corpus."""
+    if ibm_model == 1:
+        ibm_model = IBMModel1
+    elif ibm_model == 2:
+        ibm_model = IBMModel2
+    else:
+        raise ValueError(f"Invalid IBM model: {ibm_model}")
     corpus = [AlignedSent(word1, word2) for word1, word2 in corpus]
-    em_ibm1 = IBMModel1(corpus, iterations)
-    translation_table = em_ibm1.translation_table
+    em_ibm = ibm_model(corpus, iterations)
+    translation_table = em_ibm.translation_table
     for seg1 in translation_table:
-        translation_table[seg1][gap_ch] = translation_table[seg1][None]
-        del translation_table[seg1][None]
+        translation_table[seg1][gap_ch] = translation_table[seg1].get(None, 0)
+        if None in translation_table[seg1]:
+            del translation_table[seg1][None]
     return translation_table
 
 
@@ -488,7 +495,8 @@ class PhonCorrelator:
                   normalize=True,
                   pad=True,
                   pad_n=1,
-                  phon_env=False # TODO add
+                  phon_env=False, # TODO add
+                  ibm_model=2,
                   ):
         """Fits EM IBM1 models on pairs of unigrams and bigrams and aggregates the translation tables."""
         corr_dict = defaultdict(lambda: defaultdict(lambda: 0))
@@ -514,7 +522,7 @@ class PhonCorrelator:
                     corpora[(ngram_size_i, ngram_size_j)].append((ngrams1, ngrams2))
         # Fit EM IBM1 models on each corpus
         em_fit = {
-            ngram_i_j: fit_em_ibm1(corpus, gap_ch=self.gap_ch)
+            ngram_i_j: fit_em_ibm(corpus, gap_ch=self.gap_ch, ibm_model=ibm_model)
             for ngram_i_j, corpus in corpora.items()
         }
         # Combine model results
