@@ -628,9 +628,10 @@ class Alignment:
                 start_boundary_gap = Gap([start_boundary_gap], 0, gap_ch=self.gap_ch)
                 initial_complex = [[], []]
                 if next_ngram.size == 2 or first_ngram.size == 2: # aligned unigram
-                    initial_complex[start_boundary_gap.gap_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.gap_i]).ngram if x != self.gap_ch])
-                    initial_complex[start_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.seg_i]).ngram if x != self.gap_ch])
-                    initial_complex[start_boundary_gap.seg_i].insert(0, self.start_boundary_token)
+                    initial_complex[start_boundary_gap.gap_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.gap_i]).ngram if x not in (self.gap_ch, self.start_boundary_token)])
+                    initial_complex[start_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.seg_i]).ngram if x not in (self.gap_ch, self.start_boundary_token)])
+                    initial_complex[start_boundary_gap.seg_i].extend([x for x in Ngram(start_boundary_gap.pair).ngram if x != self.gap_ch])
+                    initial_complex[start_boundary_gap.gap_i].insert(0, self.start_boundary_token)
                     complex_alignment = [(Ngram(initial_complex[0]).undo(), Ngram(initial_complex[-1]).undo())] + complex_alignment[2:]
                 else:
                     breakpoint()
