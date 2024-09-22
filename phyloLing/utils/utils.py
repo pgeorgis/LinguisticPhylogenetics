@@ -101,6 +101,14 @@ def default_dict(dic, lmbda):
     return defaultdict(lambda: lmbda, dic)
 
 
+def combine_dicts(*dicts):
+    """Combines a series of dictionaries into a single dictionary."""
+    combined = {}
+    for dic in dicts:
+        combined.update(dic)
+    return combined
+
+
 def normalize_dict(dict_, default=False, lmbda=None, return_=True):
     """Normalizes the values of a dictionary"""
     """If default==True, returns a default dictionary with default value lmbda"""

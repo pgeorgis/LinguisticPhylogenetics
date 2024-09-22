@@ -72,21 +72,30 @@ def find_each_path(c_i, c_j, ALN_PATHWAYS, MATRIX, path=''):  # Nested function 
     return len(ALN_PATHWAYS)
 
 
-def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, GAP_SCORE=-1, GAP_CHARACTER='-', N_BEST=1):
+def best_alignment(SEQUENCE_1, SEQUENCE_2, SCORES_DICT, DEFAULT_GAP_SCORE=-1, GAP_CHARACTER='-', GAP_SCORE_DICT={}, N_BEST=1):
     MATRIX_ROW_N = len(SEQUENCE_1) + 1  # Initiation Matrix Size (Rows)
     MATRIX_COLUMN_N = len(SEQUENCE_2) + 1  # Initiation Matrix Size (Columns)
     ALN_PATHWAYS = []  # Initiating List of Discovered aln Pathways
     MATRIX = [[[[None] for i in range(2)] for i in range(MATRIX_COLUMN_N)] for i in range(MATRIX_ROW_N)]  # Initiating Score Matrix
+
     for i in range(MATRIX_ROW_N):
-        MATRIX[i][0] = [GAP_SCORE * i, []]
+        MATRIX[i][0] = [GAP_SCORE_DICT.get((i - 1, GAP_CHARACTER), DEFAULT_GAP_SCORE) * i, []]
     for j in range(MATRIX_COLUMN_N):
-        MATRIX[0][j] = [GAP_SCORE * j, []]
+        MATRIX[0][j] = [GAP_SCORE_DICT.get((GAP_CHARACTER, j - 1), DEFAULT_GAP_SCORE) * j, []]
+
+    # Main matrix filling loop
     for i in range(1, MATRIX_ROW_N):
         for j in range(1, MATRIX_COLUMN_N):
             score = SCORES_DICT[(i - 1, j - 1)]
-            h_val = MATRIX[i][j - 1][0] + GAP_SCORE
-            d_val = MATRIX[i - 1][j - 1][0] + score
-            v_val = MATRIX[i - 1][j][0] + GAP_SCORE
+
+            # Get dynamic gap scores for horizontal, vertical, and diagonal moves
+            gap_score_h = GAP_SCORE_DICT.get((GAP_CHARACTER, j - 1), DEFAULT_GAP_SCORE)
+            gap_score_v = GAP_SCORE_DICT.get((i - 1, GAP_CHARACTER), DEFAULT_GAP_SCORE)
+
+            h_val = MATRIX[i][j - 1][0] + gap_score_h  # Horizontal gap (sequence 1 aligns with gap)
+            d_val = MATRIX[i - 1][j - 1][0] + score    # Diagonal move (alignment of characters)
+            v_val = MATRIX[i - 1][j][0] + gap_score_v  # Vertical gap (sequence 2 aligns with gap)
+
             o_val = [h_val, d_val, v_val]
             MATRIX[i][j] = [max(o_val), [i + 1 for i, v in enumerate(o_val) if v == max(o_val)]]  # h = 1, d = 2, v = 3
 

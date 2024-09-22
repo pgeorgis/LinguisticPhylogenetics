@@ -131,9 +131,14 @@ def flatten_ngram(nested_ngram):
             flat.append(item)
     return tuple(flat)
 
+def start_token(pad_ch=PAD_CH_DEFAULT):
+    return f'{START_PAD_CH}{pad_ch}'
+
+def end_token(pad_ch=PAD_CH_DEFAULT):
+    return f'{pad_ch}{END_PAD_CH}'
 
 def pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=1):
-    return [f'{START_PAD_CH}{pad_ch}'] * pad_n + seq + [f'{pad_ch}{END_PAD_CH}'] * pad_n
+    return [start_token(pad_ch=pad_ch)] * pad_n + seq + [end_token(pad_ch=pad_ch)] * pad_n
 
 def generate_ngrams(seq, ngram_size, pad_ch=PAD_CH_DEFAULT, as_ngram=True):
     # Ensure ngram_size is less than or equal to the length of the sequence, else pad

@@ -19,7 +19,7 @@ from utils.information import (adaptation_surprisal, bayes_pmi,
                                pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
-                            flatten_ngram, generate_ngrams, pad_sequence)
+                            flatten_ngram, generate_ngrams, pad_sequence, start_token, end_token)
 from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, top_n_keys
 
 
@@ -34,6 +34,7 @@ def fit_em_ibm(corpus, iterations=20, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
     corpus = [AlignedSent(word1, word2) for word1, word2 in corpus]
     em_ibm = ibm_model(corpus, iterations)
     translation_table = em_ibm.translation_table
+    # TODO NB ibm_model also has method self.align_all(corpus) and then alignments will be stored in the AlignedSent.alignment attribute
     for seg1 in translation_table:
         translation_table[seg1][gap_ch] = translation_table[seg1].get(None, 0)
         if None in translation_table[seg1]:
@@ -667,10 +668,32 @@ class PhonCorrelator:
                 if corr1 not in l1.phonemes or corr2 not in l2.phonemes
             ]
         )
+        # Extend with gaps in seq1, not included in joint_prob_dist (but in the seq2 nested dicts and therefore in reverse_cond_counts already)
+        segment_pairs.update([(self.gap_ch, seg1) for seg1 in l1.phonemes])
+        segment_pairs.update([(self.gap_ch, corr1) for corr1 in joint_prob_dist if corr1 not in l1.phonemes])
+        # Extend with gap and pad tokens
+        segment_pairs.update([(self.gap_ch, start_token(self.pad_ch)), (self.gap_ch, end_token(self.pad_ch))])
 
         # If using a specific wordlist, extract sequences in each language
         if wordlist:
             wordlist = Wordlist(wordlist, pad_n=1)
+            
+        # Estimate probability of a gap in each language from conditional counts
+        gap_counts1, gap_counts2 = 0, 0
+        seg_counts1, seg_counts2 = 0, 0
+        for corr1, corr2_dict in conditional_counts.items():
+            for corr2, val in corr2_dict.items():
+                if corr2 == self.gap_ch:
+                    gap_counts2 += 1
+                else:
+                    seg_counts2 += 1
+        for corr2, corr1_dict in reverse_cond_counts.items():
+            if corr2 == self.gap_ch:
+                gap_counts1 += sum(corr1_dict.values())
+            else:
+                seg_counts1 += sum(corr1_dict.values())
+        gap_prob1 = gap_counts1 / (seg_counts1 + gap_counts1)
+        gap_prob2 = gap_counts2 / (seg_counts2 + gap_counts2)
 
         # Calculate PMI for all phoneme pairs
         pmi_dict = defaultdict(lambda: defaultdict(lambda: 0))
@@ -688,8 +711,20 @@ class PhonCorrelator:
                 # which directly reflects shared coverage between l1 and l2.
                 # Else, using lang.ngram_probability will consider all words in the vocabulary
                 if wordlist:
-                    p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
-                    p_ind2 = wordlist.ngram_probability(seg2_ngram, lang=2)
+                    if not seg1_ngram.is_gappy(self.gap_ch):
+                        p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
+                    elif seg1_ngram.size == 1:
+                        p_ind1 = gap_prob1
+                    elif seg1_ngram.size > 1:
+                        gapless_seg1_ngram = seg1_ngram.remove_gaps(self.gap_ch)
+                        p_ind1 = wordlist.ngram_probability(gapless_seg1_ngram, lang=1)
+                    if not seg2_ngram.is_gappy(self.gap_ch):
+                        p_ind2 = wordlist.ngram_probability(seg2_ngram, lang=2)
+                    elif seg2_ngram.size == 1:
+                        p_ind2 = gap_prob2
+                    elif seg1_ngram.size > 1:
+                        gapless_seg2_ngram = seg2_ngram.remove_gaps(self.gap_ch)
+                        p_ind2 = wordlist.ngram_probability(gapless_seg2_ngram, lang=2)
 
                     # Because we iterate over all possible phone pairs, when considering only the counts of phones/ngrams
                     # within a specific wordlist, it could occur that the count is zero for a segment in that wordlist.
@@ -697,9 +732,21 @@ class PhonCorrelator:
                     if p_ind1 == 0 or p_ind2 == 0:
                         continue
 
-                else:
-                    p_ind1 = l1.ngram_probability(seg1_ngram)
-                    p_ind2 = l2.ngram_probability(seg2_ngram)
+                else: # TODO consolidate this block with the above as much as possible
+                    if not seg1_ngram.is_gappy(self.gap_ch):
+                        p_ind1 = l1.ngram_probability(seg1_ngram)
+                    elif seg1_ngram.size == 1:
+                        p_ind1 = gap_prob1
+                    elif seg1_ngram.size > 1:
+                        gapless_seg1_ngram = seg1_ngram.remove_gaps(self.gap_ch)
+                        p_ind1 = l1.ngram_probability(gapless_seg1_ngram)
+                    if not seg2_ngram.is_gappy(self.gap_ch):
+                        p_ind2 = l2.ngram_probability(seg2_ngram)
+                    elif seg2_ngram.size == 1:
+                        p_ind2 = gap_prob2
+                    elif seg1_ngram.size > 1:
+                        gapless_seg2_ngram = seg2_ngram.remove_gaps(self.gap_ch)
+                        p_ind2 = l2.ngram_probability(gapless_seg2_ngram)
 
                 p_ind = p_ind1 * p_ind2
                 joint_prob = joint_prob_dist.get(seg1, {}).get(seg2, p_ind)

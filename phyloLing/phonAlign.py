@@ -14,7 +14,7 @@ from phonUtils.segment import _toSegment
 from utils.distance import Distance
 from utils.information import calculate_infocontent_of_word
 from utils.sequence import Ngram, PhonEnvNgram, generate_ngrams, flatten_ngram, pad_sequence
-from utils.utils import validate_class, rescale_dict_values, default_dict, keywithmaxval
+from utils.utils import validate_class, rescale_dict_values, default_dict, keywithmaxval, combine_dicts
 
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
@@ -220,30 +220,74 @@ def phon_alignment_cost(seg1, seg2, phon_func=phone_sim):
     #elif compatible_segments(seg1, seg2):
     ngram1, ngram2 = map(lambda x: flatten_ngram(Ngram(x).ngram), [seg1, seg2])
     # TODO would be better to somehow recursively align segments and take phon sim of just aligned segs rather than taking mean of all combinations
+    
     ph_sims = []
-    for i in range(len(ngram1)):
-        for j in range(len(ngram2)):
-            try:
-                if not Ngram(seg1).is_boundary() and not Ngram(seg2).is_boundary():
-                    ph_sims.append(phon_func(ngram1[i], ngram2[j]))
-                elif Ngram(seg1).is_boundary() and Ngram(seg2).is_boundary():
-                    ph_sims.append(1)
+    for i, ngram_seg1 in enumerate(ngram1):
+        ngram_seg1 = Ngram(ngram_seg1)
+        for j, ngram_seg2 in enumerate(ngram2):
+            ngram_seg2 = Ngram(ngram_seg2)
+            if ngram_seg1.is_boundary() and not (ngram_seg2.is_boundary() or ngram_seg2.is_gappy()):
+                # seg1 is boundary, seg2 is not boundary or gap
+                if ngram_seg1.size > 1:
+                    # seg1 is complex boundary, seg2 is not boundary or gap
+                    ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
                 else:
-                    ph_sims.append(0)
-            except ValueError:
-                breakpoint()
+                    # seg1 is unigram boundary, seg2 is not boundary or gap
+                    ph_sims.append(0) # TODO would be better to quantify similarity of segment to gap via sonority or features
+            elif ngram_seg1.is_gappy() and not (ngram_seg2.is_boundary() or ngram_seg2.is_gappy()):
+                # seg1 is gap, seg2 is not boundary or gap
+                ph_sims.append(0) # TODO would be better to quantify similarity of segment to gap via sonority or features
+            elif ngram_seg1.is_boundary():
+                # seg1 is boundary, seg2 is a boundary or gap
+                if ngram_seg2.is_gappy():
+                    # seg1 is boundary, seg2 is gap
+                    if ngram_seg1.size > 1:
+                        # seg1 is complex boundary, seg2 is gap
+                        ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
+                    else:
+                        # seg1 is unigram boundary, seg2 is gap
+                        ph_sims.append(1)
+                else:
+                    # seg1 is boundary, seg2 is boundary
+                    if ngram_seg1.size == 1 and ngram_seg2.size == 1:
+                        # both seg1 and seg2 are unigram boundaries
+                        # score = 1 if same direction boundary, else -inf
+                        if ngram1[i] == ngram2[j]:
+                            ph_sims.append(1)
+                        else:
+                            ph_sims.append(-inf)
+                    else:
+                        # at least one of the two is a complex boundary
+                        ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
+            elif ngram_seg1.is_gappy():
+                # seg1 is gap, seg2 is a boundary or gap
+                if ngram_seg2.size > 1:
+                    # seg1 is gap, seg2 is a complex boundary
+                    ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
+                else:
+                    # seg1 is gap, seg2 is unigram boundary
+                    ph_sims.append(1)
+            # seg1 is not boundary or gap
+            elif ngram_seg2.is_boundary():
+                # seg1 is not boundary or gap, seg2 is boundary
+                if ngram_seg2.size > 1:
+                    # seg1 is not boundary or gap, seg2 is complex boundary
+                    ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
+                else:
+                    # seg1 is not boundary or gap, seg2 is unigram boundary
+                    ph_sims.append(0) # TODO would be better to quantify similarity of segment to gap via sonority or features
+            elif ngram_seg2.is_gappy():
+                # seg1 is not boundary or gap, seg2 is gap
+                ph_sims.append(0) # TODO would be better to quantify similarity of segment to gap via sonority or features
+            else:
+                # neither seg1 nor seg2 is a boundary or gap
+                ph_sims.append(phon_func(ngram1[i], ngram2[j]))
+
     ph_sim = mean(ph_sims)
     if ph_sim > 0:
         return log(ph_sim)
     else:
-        return -0.1
-    # else:
-    #     # ph_sim = phon_func(seg1, seg2)
-    #     # if ph_sim > 0:
-    #     #     return log(ph_sim)
-    #     # else:
-    #     #     return -inf
-    #     return -inf
+        return log(0.00001) * len(ph_sims) # currently no segment pairs have a phone_sim score this low, so will always be well below any segment score
 
 
 AlignmentCost = Distance(
@@ -366,6 +410,20 @@ class Alignment:
                 alignment_costs[(seq1_i, seq2_j)] = cost
 
         return alignment_costs
+    
+    def calculate_gap_costs(self, cost_func, seq1=None):
+        if seq1 is None:
+            seq1 = self.seq1
+        # if seq2 is None:
+        #     seq2 = self.seq2
+        gap_costs = {}
+        for i, seq1_i in enumerate(seq1):
+            cost = cost_func.eval(seq1_i, self.gap_ch, **self.kwargs)
+            gap_costs[(seq1_i, self.gap_ch)] = cost
+        # for j, seq2_j in enumerate(seq2):
+        #     cost = cost_func.eval(self.gap_ch, seq2_j, **self.kwargs)
+        #     gap_costs[(self.gap_ch, seq2_j)] = cost
+        return gap_costs
 
     def added_penalty_dist(self, seq1, seq2, **kwargs):
         assert self.added_penalty_dict is not None
@@ -392,6 +450,7 @@ class Alignment:
         else:
             cost_func = self.cost_func
         get_ngram_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(cost_func, seq1=seq1, seq2=seq2)
+        get_gap_costs = lambda seq1, seq2: self.calculate_gap_costs(cost_func, seq1=seq1) # seq2=seq2
 
         # Pad unigram sequences
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
@@ -411,37 +470,65 @@ class Alignment:
         bigram1_unigram2_scores = get_ngram_alignment_costs(bigrams_seq1, padded2)
         bigram2_unigram1_scores = get_ngram_alignment_costs(padded1, bigrams_seq2)
         
-        # Combine alignment costs from bigrams and unigrams
-        combined_costs = {}
-        combined_costs.update(bigram_scores)
-        combined_costs.update(unigram_scores)
-        combined_costs.update(bigram1_unigram2_scores)
-        combined_costs.update(bigram2_unigram1_scores)
+        # Get gap costs for each ngram size pair
+        bigram_gap_costs = get_gap_costs(bigrams_seq1, bigrams_seq2)
+        unigram_gap_costs = get_gap_costs(padded1, padded2)
+        bigram1_gap_costs = get_gap_costs(bigrams_seq1, padded2)
+        bigram2_gap_costs = get_gap_costs(padded1, bigrams_seq2)
         
+        # Combine alignment and gap costs from bigrams and unigrams
+        combined_align_costs = combine_dicts(
+            bigram_scores,
+            unigram_scores,
+            bigram1_unigram2_scores,
+            bigram2_unigram1_scores,
+        )
+        combined_gap_costs = combine_dicts(
+            bigram_gap_costs,
+            unigram_gap_costs,
+            bigram1_gap_costs,
+            bigram2_gap_costs,
+        )
+
         def get_alignment_costs(seq1, seq2):
             alignment_costs = {}
             for i, ngram1 in enumerate(seq1):
                 for j, ngram2 in enumerate(seq2):
-                    alignment_costs[(i, j)] = combined_costs[(ngram1, ngram2)]
+                    alignment_costs[(i, j)] = combined_align_costs[(ngram1, ngram2)]
             return alignment_costs
+        
+        def get_gap_costs(seq1, seq2):
+            gap_costs = {}
+            for i, ngram1 in enumerate(seq1):
+                gap_costs[(i, self.gap_ch)] = combined_gap_costs.get((ngram1, self.gap_ch), self.gop)
+            for j, ngram2 in enumerate(seq2):
+                gap_costs[(self.gap_ch, j)] = combined_gap_costs.get((self.gap_ch, ngram2), self.gop)
+            return gap_costs
+            
         
         # Compute a unigram alignent (with padding)
         unigram_alignment_costs = get_alignment_costs(padded1, padded2)
+        unigram_gap_costs = get_gap_costs(padded1, padded2)
         unigram_alignment = best_alignment(
             SEQUENCE_1=padded1,
             SEQUENCE_2=padded2,
             SCORES_DICT=unigram_alignment_costs,
-            GAP_SCORE=self.gop,
+            GAP_SCORE_DICT=unigram_gap_costs,
+            DEFAULT_GAP_SCORE=self.gop,
+            GAP_CHARACTER=self.gap_ch,
             N_BEST=n_best # TODO something could be done with n_best
         )
         unigram_alignment = unigram_alignment[0][0]      
         # Compute an optimal complex alignment of complex ngrams
         complex_alignment_costs = get_alignment_costs(complex_ngram_seq1, complex_ngram_seq2)
+        complex_gap_costs = get_gap_costs(complex_ngram_seq1, complex_ngram_seq2)
         complex_alignment = best_alignment(
             SEQUENCE_1=complex_ngram_seq1,
             SEQUENCE_2=complex_ngram_seq2,
             SCORES_DICT=complex_alignment_costs,
-            GAP_SCORE=self.gop,
+            GAP_SCORE_DICT=unigram_gap_costs,
+            DEFAULT_GAP_SCORE=self.gop,
+            GAP_CHARACTER=self.gap_ch,
             N_BEST=n_best # TODO something could be done with n_best
         )
         complex_alignment = complex_alignment[0][0]      
@@ -465,12 +552,10 @@ class Alignment:
         print(mismatch_indices)
         breakpoint()
         # TODO current tasks
-        # unigram_complex_alignment_mismatches still doesn't work perfectly
+        # unigram_complex_alignment_mismatches might still not work quite right, TBD
         # 2) Iterate through the indices of mismatches between unigram and complex and evaluate
         # 3) Possibly re-align subsequences that are marked as mismatched
         # leave unigram units which matched between complex and unigram alignments as is
-        # 4) After that, go back and revise gop so that it accepts a function rather than a value
-        # Set this to a get_gap_penalty() function which looks up the correspondence (PMI?) of the ngram with a gap
             
             
         # Iterate through initial complex alignment alignment
