@@ -163,7 +163,7 @@ def generate_ngrams(seq, ngram_size, pad_ch=PAD_CH_DEFAULT, as_ngram=True):
 def remove_overlapping_bigrams(bigrams, lang, pad_ch=PAD_CH_DEFAULT):
     """Remove overlapping bigrams from a bigram alignment."""
     filtered = []
-    # instead of trying to remove overlapping bigrams once alignment has been done, 
+    # instead of trying to remove overlapping bigrams once alignment has been done,
     # which is proving to be very complex
     # instead remove overlapping bigrams from input sequences, preferring the bigram with the higher
     # probability in the language / higher PMI of the component segments to each other in the language
@@ -212,6 +212,29 @@ def remove_overlapping_bigrams(bigrams, lang, pad_ch=PAD_CH_DEFAULT):
                 filtered.append(bigram_i[-1])
 
     return filtered
+
+def find_ranges(lst):
+    """Return a list of adjacent integer ranges, e.g. [0, 3, 4, 5, 6] -> [(0, 1), (3,7)]"""
+    if not lst:  # Handle empty list input
+        return []
+
+    lst = sorted(lst)  # Sort the list to ensure it's in increasing order
+    ranges = []
+    start = lst[0]
+    end = lst[0]
+
+    for num in lst[1:]:
+        if num == end + 1:
+            end = num  # Continue the current range
+        else:
+            ranges.append((start, end + 1))  # Close the current range
+            start = num
+            end = num
+
+    # Append the last range
+    ranges.append((start, end + 1))
+
+    return ranges
 
 
 # SMOOTHING
