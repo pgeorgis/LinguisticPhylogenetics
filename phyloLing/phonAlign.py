@@ -62,14 +62,6 @@ def compatible_segments(seg1, seg2):
     else:
         return False
 
-def _get_ngram_score(ngram, ngram_scores, gap_scores, gap_ch, gop):
-    if ngram[0] == gap_ch:
-        score = gap_scores.get((gap_ch, ngram[-1]), gop)
-    elif ngram[1] == gap_ch:
-        score = gap_scores.get((ngram[0], gap_ch), gop)
-    else:
-        score = ngram_scores[ngram]
-    return score
 
 def to_unigram_alignment(bigram, fillvalue=GAP_CH_DEFAULT):
     unigrams = [[] for _ in range(len(bigram))]
@@ -90,7 +82,7 @@ def unigram_complex_alignment_mismatches(complex_alignment, unigram_alignment, g
 
     def increment_unigram_i(unigram_alignment, unigram_i, complex_ngram, complex_gap_left, complex_gap_right):
         if unigram_i >= len(unigram_alignment)-1:
-            return 0
+            return 0, complex_gap_left, complex_gap_right
         left, right = complex_ngram.pair
         final_unigrams = (Ngram(left).ngram[-1], Ngram(right).ngram[-1])
         gap_i = None
@@ -482,6 +474,14 @@ class Alignment:
             bigram1_unigram2_gap_costs,
             bigram2_unigram1_gap_costs,
         )
+        # Normalize scores between 0 and 1
+        # TODO ideally these would be normalized against ALL ngram values of the respective size, not just those in the alignment
+        # combined_align_costs = rescale_dict_values(combined_align_costs)
+        # combined_gap_costs = rescale_dict_values(
+        #     combined_gap_costs,
+        #     comparison_list=list(combined_gap_costs.values())+[self.gop]
+        # )
+        # bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
 
         def get_alignment_costs(seq1, seq2):
             alignment_costs = {}
@@ -527,15 +527,13 @@ class Alignment:
         )
         complex_alignment = complex_alignment[0][0]
 
-        # Normalize scores between 0 and 1
-        # TODO ideally these would be normalized against ALL ngram values of the respective size, not just those in the alignment
-        # bigram_scores = rescale_dict_values(bigram_scores)
-        # bigram1_unigram2_scores = rescale_dict_values(bigram1_unigram2_scores)
-        # bigram2_unigram1_scores = rescale_dict_values(bigram2_unigram1_scores)
-        # unigram_scores = rescale_dict_values(unigram_scores)
-        # bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
-
         # TODO current tasks
+        # still bug: in compact_boundary_gaps (Romanian-Ligurian)
+        # missing final /u/
+        # (Pdb) complex_alignment
+        # [('-', '<#'), (('<#', 'a'), ('i', 'n')), (('n', 'ˈe'), 'ˈe'), ('l', ('l', '#>')), (('u', '#>'), '-')]
+        # (Pdb) self.compact_boundary_gaps(complex_alignment)
+        # [(('<#', 'a'), ('i', 'n', '<#')), (('n', 'ˈe'), 'ˈe'), (('l', '#>'), ('l', '#>'))]
         # unigram_complex_alignment_mismatches might still not work quite right, TBD
         # 2) Iterate through the indices of mismatches between unigram and complex and evaluate
         # 3) Possibly re-align subsequences that are marked as mismatched
@@ -575,7 +573,6 @@ class Alignment:
                                   gap_costs,
                                   alignment_cost_func,
                                   gap_cost_func,
-                                  recursive=False,
                                   ):
         # Iterate through complex alignment and identify alignments which don't match the unigram alignment
         mismatch_indices = unigram_complex_alignment_mismatches(
@@ -583,8 +580,6 @@ class Alignment:
             unigram_alignment,
             gap_ch=self.gap_ch,
         )
-        if recursive:
-            breakpoint()
         
         complex_alignment_dict = {
             i: complex_ngram
@@ -635,26 +630,24 @@ class Alignment:
         )[0][0]
         compacted_unigram_alignment = self.compact_boundary_gaps(unigram_alignment)
         
+        def score_alignment(alignment):
+            score = 0
+            for ngram in alignment:
+                if Ngram(ngram).is_gappy(self.gap_ch):
+                    score += gap_costs.get(ngram, self.gop)
+                else:
+                    score += align_costs[ngram]
+            return score
+        
         # Check if the realigned unigram subsequence matches the complex ngram converted to a unigarm sequence
         if sorted(compacted_unigram_alignment) == sorted(equivalent_unigram_alignment):
             # If so, check whether the score is better as unigram alignments or as complex_ngram alignment
-            unigram_score = 0
-            for unigram in compacted_unigram_alignment:
-                if Ngram(unigram).is_gappy(self.gap_ch):
-                    unigram_score += gap_costs.get(unigram, self.gop)
-                else:
-                    unigram_score += align_costs[unigram]
-            complex_score = 0
-            for complex_ngram in complex_alignment:
-                if Ngram(complex_ngram).is_gappy(self.gap_ch):
-                    complex_score += gap_costs.get(complex_ngram, self.gop)
-                else:
-                    complex_score += align_costs[complex_ngram]
-            
             # If unigram score is better, return unigram alignment
+            # else return the original complex alignment
+            unigram_score = score_alignment(compacted_unigram_alignment)
+            complex_score = score_alignment(complex_alignment)
             if unigram_score >= complex_score:
                 return compacted_unigram_alignment
-            # else return the original complex alignment
             else:
                 return complex_alignment
         
@@ -668,13 +661,19 @@ class Alignment:
                 gap_costs,
                 alignment_cost_func,
                 gap_cost_func,
-                recursive=True,
             )
         else:
             # Else: Unigram alignment of subsequence differs from complex alignment
             # and has no shared aligned units
+            # Compare unigram vs. complex alignment scores
+            unigram_score = score_alignment(compacted_unigram_alignment)
+            complex_score = score_alignment(complex_alignment)
+            # Simplest solution would be to return the unigram alignment if this is better, else the complex alignment
             breakpoint()
-            bp = "2024-09-22:23:14"
+            if unigram_score >= complex_score:
+                return compacted_unigram_alignment
+            else:
+                return complex_alignment
 
     def compact_boundary_gaps(self, complex_alignment):
         # Add compacting of boundary gap alignment in situations like:
