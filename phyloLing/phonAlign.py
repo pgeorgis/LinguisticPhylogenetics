@@ -62,20 +62,17 @@ def compatible_segments(seg1, seg2):
     else:
         return False
 
-def _get_ngram_score(bigram, bigram_scores, unigram_scores, gap_ch, gop):
-    if bigram[0] == gap_ch:
-        score = gop # TODO this should actually just be whatever the custom cost function returns
-    elif bigram[1] == gap_ch:
-        score = gop # TODO this should actually just be whatever the custom cost function returns
+def _get_ngram_score(ngram, ngram_scores, gap_scores, gap_ch, gop):
+    if ngram[0] == gap_ch:
+        score = gap_scores.get((gap_ch, ngram[-1]), gop)
+    elif ngram[1] == gap_ch:
+        score = gap_scores.get((ngram[0], gap_ch), gop)
     else:
-        if Ngram(bigram).size == 2: # unigram alignment (x, y) encoded as Ngram object will have size=2
-            score = unigram_scores[bigram]
-        else:
-            score = bigram_scores[bigram]
+        score = ngram_scores[ngram]
     return score
 
 def to_unigram_alignment(bigram, fillvalue=GAP_CH_DEFAULT):
-    unigrams = [[], []]
+    unigrams = [[] for _ in range(len(bigram))]
     for i, pos in enumerate(bigram):
         if isinstance(pos, str):
             unigrams[i].append(pos)
@@ -473,8 +470,8 @@ class Alignment:
         # Get gap costs for each ngram size pair
         bigram_gap_costs = get_gap_costs(bigrams_seq1, bigrams_seq2)
         unigram_gap_costs = get_gap_costs(padded1, padded2)
-        bigram1_gap_costs = get_gap_costs(bigrams_seq1, padded2)
-        bigram2_gap_costs = get_gap_costs(padded1, bigrams_seq2)
+        bigram1_unigram2_gap_costs = get_gap_costs(bigrams_seq1, padded2)
+        bigram2_unigram1_gap_costs = get_gap_costs(padded1, bigrams_seq2)
         
         # Combine alignment and gap costs from bigrams and unigrams
         combined_align_costs = combine_dicts(
@@ -486,8 +483,8 @@ class Alignment:
         combined_gap_costs = combine_dicts(
             bigram_gap_costs,
             unigram_gap_costs,
-            bigram1_gap_costs,
-            bigram2_gap_costs,
+            bigram1_unigram2_gap_costs,
+            bigram2_unigram1_gap_costs,
         )
 
         def get_alignment_costs(seq1, seq2):
@@ -508,12 +505,12 @@ class Alignment:
         
         # Compute a unigram alignent (with padding)
         unigram_alignment_costs = get_alignment_costs(padded1, padded2)
-        unigram_gap_costs = get_gap_costs(padded1, padded2)
+        unigram_gap_align_costs = get_gap_costs(padded1, padded2)
         unigram_alignment = best_alignment(
             SEQUENCE_1=padded1,
             SEQUENCE_2=padded2,
             SCORES_DICT=unigram_alignment_costs,
-            GAP_SCORE_DICT=unigram_gap_costs,
+            GAP_SCORE_DICT=unigram_gap_align_costs,
             DEFAULT_GAP_SCORE=self.gop,
             GAP_CHARACTER=self.gap_ch,
             N_BEST=n_best # TODO something could be done with n_best
@@ -535,14 +532,14 @@ class Alignment:
     
         # Normalize scores between 0 and 1
         # TODO ideally these would be normalized against ALL ngram values of the respective size, not just those in the alignment
-        bigram_scores = rescale_dict_values(bigram_scores)
-        bigram1_unigram2_scores = rescale_dict_values(bigram1_unigram2_scores)
-        bigram2_unigram1_scores = rescale_dict_values(bigram2_unigram1_scores)
-        unigram_scores = rescale_dict_values(unigram_scores)
-        bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
+        # bigram_scores = rescale_dict_values(bigram_scores)
+        # bigram1_unigram2_scores = rescale_dict_values(bigram1_unigram2_scores)
+        # bigram2_unigram1_scores = rescale_dict_values(bigram2_unigram1_scores)
+        # unigram_scores = rescale_dict_values(unigram_scores)
+        # bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
 
         # Iterate through complex alignment and identify alignments which don't match the unigram alignment
-        complex_alignment = self.compact_boundary_gaps(complex_alignment)
+        #complex_alignment = self.compact_boundary_gaps(complex_alignment)
         for i, pos in enumerate(complex_alignment): print(i, pos)
         mismatch_indices = unigram_complex_alignment_mismatches(
             complex_alignment,
@@ -550,7 +547,6 @@ class Alignment:
             gap_ch=self.gap_ch,
         )
         print(mismatch_indices)
-        breakpoint()
         # TODO current tasks
         # unigram_complex_alignment_mismatches might still not work quite right, TBD
         # 2) Iterate through the indices of mismatches between unigram and complex and evaluate
@@ -567,7 +563,7 @@ class Alignment:
         while i < len(first_complex_alignment):
             index = 1 if i == 0.5 else i # see logic for 0.5 below
             bigram = first_complex_alignment[int(index)]
-            bigram_score = _get_ngram_score(bigram, bigram_scores, unigram_scores, self.gap_ch, self.gop)
+            bigram_score = _get_ngram_score(bigram, combined_align_costs, combined_gap_costs, self.gap_ch, self.gop)
 
             equivalent_unigram_seq = to_unigram_alignment(bigram, fillvalue=self.gap_ch)
             if len(equivalent_unigram_seq) == 1:
@@ -582,7 +578,7 @@ class Alignment:
                 if self.gap_ch not in unigram:
                     unigram_score.append(unigram_scores[unigram])
                 else:
-                    unigram_score.append(self.gop) # TODO this should actually just be whatever the custom cost function returns
+                    unigram_score.append(unigram_gap_align_costs.get(unigram, self.gop))
             unigram_score = mean(unigram_score)
 
             bigram1_unigram2_score_dict = {}
@@ -591,6 +587,7 @@ class Alignment:
                     bigram1_unigram2_score_dict[x] = -inf
                     break
                 if bigram[0] == self.gap_ch:
+                    breakpoint()
                     bigram1_unigram2_score_dict[x] = self.gop # TODO this should actually just be whatever the custom cost function returns
                 elif self.gap_ch not in unigram:
                     bigram1_unigram2_score_dict[x] = bigram1_unigram2_scores[(bigram[0], unigram)]
@@ -604,10 +601,12 @@ class Alignment:
                     bigram2_unigram1_score_dict[x] = -inf
                     break
                 if bigram[1] == self.gap_ch:
+                    breakpoint()
                     bigram2_unigram1_score_dict[x] = self.gop # TODO this should actually just be whatever the custom cost function returns
                 elif self.gap_ch not in unigram:
                     bigram2_unigram1_score_dict[x] = bigram2_unigram1_scores[(unigram, bigram[1])]
                 else:
+                    breakpoint()
                     bigram2_unigram1_score_dict[x] = self.gop # TODO this should actually just be whatever the custom cost function returns
             bigram2_unigram1_score = max(bigram2_unigram1_score_dict.values())
 
@@ -616,7 +615,7 @@ class Alignment:
             if 0 < i < len(first_complex_alignment)-1: # don't look ahead for i=0
                 next_bigram = first_complex_alignment[int(i + 1)]
                 if len(to_unigram_alignment(next_bigram)) > 1: # next unit is a unigram not a bigram, disregard
-                    next_bigram_score = _get_ngram_score(next_bigram, bigram_scores, unigram_scores, self.gap_ch, self.gop)
+                    next_bigram_score = _get_ngram_score(next_bigram, combined_align_costs, combined_gap_costs, self.gap_ch, self.gop)
             if next_bigram_score > max(unigram_score, bigram_score, next_bigram_score, bigram1_unigram2_score, bigram2_unigram1_score):
                 breakpoint()
 
@@ -659,7 +658,7 @@ class Alignment:
         for i, pos in enumerate(complex_alignment): print(i, pos)
         # TODO: possibly compact before? or both before and after?
         # TODO: possibly save unigram, bigram, and complex alignments
-        
+        breakpoint()
         
         # then need to look into Warning: 1-2 skipped in favor of bigram
         # and how to better measure the scores in general, but esp involving gap_ch (instead of gop)
