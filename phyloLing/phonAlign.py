@@ -91,22 +91,53 @@ def unigram_complex_alignment_mismatches(complex_alignment, unigram_alignment, g
     """Compares a complex ngram alignment with a unigram alignment and returns the indices
     of the complex alignment where the aligned pairs don't match the unigram alignment."""
     
-    def increment_unigram_i(unigram_alignment, unigram_i, complex_ngram):
+    def increment_unigram_i(unigram_alignment, unigram_i, complex_ngram, complex_gap_left, complex_gap_right):
         if unigram_i >= len(unigram_alignment)-1:
             return 0
         left, right = complex_ngram.pair
-        complex_size = max(complex_ngram.shape)
         final_unigrams = (Ngram(left).ngram[-1], Ngram(right).ngram[-1])
+        gap_i = None
+        total_gaps = complex_gap_left + complex_gap_right
+        if complex_ngram.is_gappy:
+            gap = Gap([complex_ngram.pair], 0)
+            gap_i = gap.gap_i
+            total_gaps += 1
+        
         incr_left, incr_right = 0, 0
-        while unigram_alignment[unigram_i+incr_left][0] != final_unigrams[0]:
-            incr_left += 1
-        while unigram_alignment[unigram_i+incr_right][-1] != final_unigrams[-1]:
-            incr_right += 1
-        return max(complex_size, max(incr_left+1, incr_right+1))
-        #return max(complex_size, max(incr_left+1, incr_right+1))
+        if gap_i != 0:
+            while unigram_alignment[unigram_i - complex_gap_left + incr_left][0] != final_unigrams[0]:
+                incr_left += 1
+                if unigram_i - complex_gap_left + incr_left >= len(unigram_alignment):
+                    # final_unigrams[0] not found in unigram alignment search scope, 
+                    # which means that starting index was too high because alignment component is behind current unigram_i
+                    # set incr_left to -1 and stop iteration
+                    incr_left = -1
+                    break
+        else:
+            complex_gap_left += 1
+
+        if gap_i != 1:
+            while unigram_alignment[unigram_i - complex_gap_right + incr_right][-1] != final_unigrams[-1]:
+                incr_right += 1
+                if unigram_i - complex_gap_right + incr_right >= len(unigram_alignment):
+                    # final_unigrams[-1] not found in unigram alignment search scope, 
+                    # which means that starting index was too high because alignment component is behind current unigram_i
+                    # set incr_right to -1 and stop iteration
+                    incr_right = -1
+                    break
+        else:
+            complex_gap_right += 1
+
+        incr_unigram = max(0, max(incr_left - complex_gap_left + 1, incr_right - complex_gap_right + 1))
+        if complex_gap_left == complex_gap_right:
+            complex_gap_left = 0
+            complex_gap_right = 0
+
+        return incr_unigram, complex_gap_left, complex_gap_right
 
     mismatch_indices = []
     unigram_i = 0
+    complex_gap_left, complex_gap_right = 0, 0
     unigram_len = len(unigram_alignment)
     for complex_i, complex_ngram in enumerate(complex_alignment):
         # Skip if unigram indices already reached end
@@ -122,7 +153,7 @@ def unigram_complex_alignment_mismatches(complex_alignment, unigram_alignment, g
             if complex_i == 1:
                 breakpoint()
                 bp = 0
-        
+
         if complex_ngram in unigram_alignment[unigram_i:]:
             # "complex" ngram is just a unigram matching a unigram in the unigram alignment
             if complex_i < len(complex_alignment)-1:
@@ -136,7 +167,13 @@ def unigram_complex_alignment_mismatches(complex_alignment, unigram_alignment, g
                 else:
                     unigram_i += 1
                     if next_unigram_pos.is_gappy and not aligned_ngram.is_gappy:
-                        incr = increment_unigram_i(unigram_alignment, unigram_i, aligned_ngram)
+                        incr, complex_gap_left, complex_gap_right = increment_unigram_i(
+                            unigram_alignment,
+                            unigram_i,
+                            aligned_ngram,
+                            complex_gap_left,
+                            complex_gap_right,
+                        )
                         unigram_i += incr
                         breakpoint()
                         bp = 1.5
@@ -146,26 +183,27 @@ def unigram_complex_alignment_mismatches(complex_alignment, unigram_alignment, g
         else:
             mismatch_indices.append(complex_i)
             if aligned_ngram.is_complex:
-                # complex alignment pair
-                if not aligned_ngram.is_gappy:
-                    left, right = complex_ngram
-                    if Ngram(right).is_gappy():
-                        breakpoint()
-                        bp = 2
-                    
-                    # Increment unigrams_i by max of 2 or an increment indicating 
-                    # the number of positions until all component segments were found in unigram alignment
-                    incr = increment_unigram_i(unigram_alignment, unigram_i, aligned_ngram)
-                    unigram_i += incr
-                    
-                else:
-                    # Complex ngram is gappy
-                    breakpoint()
-                    incr = increment_unigram_i(unigram_alignment, unigram_i, aligned_ngram)
-                    unigram_i += incr
+                # complex alignment pair                   
+                # Increment unigrams_i by max of 2 or an increment indicating 
+                # the number of positions until all component segments were found in unigram alignment
+                incr, complex_gap_left, complex_gap_right = increment_unigram_i(
+                    unigram_alignment,
+                    unigram_i,
+                    aligned_ngram,
+                    complex_gap_left,
+                    complex_gap_right,
+                )
+                unigram_i += incr
+
             else:
                 # unigram alignment pair not in unigrams alignment
-                incr = increment_unigram_i(unigram_alignment, unigram_i, aligned_ngram)
+                incr, complex_gap_left, complex_gap_right = increment_unigram_i(
+                    unigram_alignment,
+                    unigram_i,
+                    aligned_ngram,
+                    complex_gap_left,
+                    complex_gap_right,
+                )
                 unigram_i += incr
     return mismatch_indices
 
@@ -407,7 +445,6 @@ class Alignment:
             N_BEST=n_best # TODO something could be done with n_best
         )
         complex_alignment = complex_alignment[0][0]      
-        for i, pos in enumerate(complex_alignment): print(i, pos)
     
         # Normalize scores between 0 and 1
         # TODO ideally these would be normalized against ALL ngram values of the respective size, not just those in the alignment
@@ -417,14 +454,9 @@ class Alignment:
         unigram_scores = rescale_dict_values(unigram_scores)
         bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
 
-        # TODO current tasks
-        # 1) Iterate through complex alignment and identify alignments which don't match the unigram alignment
-        # unigram_complex_alignment_mismatches still doesn't work perfectly
-        # 2) Iterate through the indices of mismatches between unigram and complex and evaluate
-        # 3) Possibly re-align subsequences that are marked as mismatched
-        # leave unigram units which matched between complex and unigram alignments as is
-        # 4) After that, go back and revise gop so that it accepts a function rather than a value
-        # Set this to a get_gap_penalty() function which looks up the correspondence (PMI?) of the ngram with a gap
+        # Iterate through complex alignment and identify alignments which don't match the unigram alignment
+        complex_alignment = self.compact_boundary_gaps(complex_alignment)
+        for i, pos in enumerate(complex_alignment): print(i, pos)
         mismatch_indices = unigram_complex_alignment_mismatches(
             complex_alignment,
             unigram_alignment,
@@ -432,6 +464,13 @@ class Alignment:
         )
         print(mismatch_indices)
         breakpoint()
+        # TODO current tasks
+        # unigram_complex_alignment_mismatches still doesn't work perfectly
+        # 2) Iterate through the indices of mismatches between unigram and complex and evaluate
+        # 3) Possibly re-align subsequences that are marked as mismatched
+        # leave unigram units which matched between complex and unigram alignments as is
+        # 4) After that, go back and revise gop so that it accepts a function rather than a value
+        # Set this to a get_gap_penalty() function which looks up the correspondence (PMI?) of the ngram with a gap
             
             
         # Iterate through initial complex alignment alignment
