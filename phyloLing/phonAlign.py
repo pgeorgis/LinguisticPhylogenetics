@@ -117,7 +117,6 @@ def align_sequences_with_backtracking(seq1, seq2, align_costs, gap_costs, gap_ch
     
     return final_alignment, score
 
-
 def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score=False):
     # maximize_score : if True, the optimum alignment has a score score
     #                  if False, the optimum alignment has the lowest score (lowest cost)):
@@ -137,7 +136,7 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
         dp[0][j] = dp[0][j-1] + gap_costs.get(gap_tuple, default_gop)
         traceback[0][j] = (0, j-1)
 
-    # Fill the DP table
+    # Fill DP table with lookahead and lookbehind options
     for i in range(1, len(seq1) + 1):
         for j in range(1, len(seq2) + 1):
             options = []
@@ -147,38 +146,56 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
             align_cost = align_costs.get(align_tuple, default_gop)
             options.append((dp[i-1][j-1] + align_cost, (i-1, j-1)))
 
-            # Option 2: Align one-to-many (seq1[i-1] with seq2[j-2:j])
+            # Option 2a: Align one-to-many (lookbehind: seq1[i-1] with seq2[j-2:j])
             if j > 1:
-                align_tuple = (tuple(seq1[i-1:i]), tuple(seq2[j-2:j]))
+                align_tuple = (Ngram(seq1[i-1:i]).undo(), Ngram(seq2[j-2:j]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
                 options.append((dp[i-1][j-2] + align_cost, (i-1, j-2)))
 
-            # Option 3: Align many-to-one (seq1[i-2:i] with seq2[j-1])
+            # Option 2b: Align one-to-many (lookahead: seq1[i-1] with seq2[j-1:j+1])
+            if j < len(seq2):
+                align_tuple = (Ngram(seq1[i-1:i]).undo(), Ngram(seq2[j-1:j+1]).undo())
+                align_cost = align_costs.get(align_tuple, default_gop)
+                options.append((dp[i-1][j+1] + align_cost, (i-1, j+1)))
+
+            # Option 3a: Align many-to-one (lookbehind: seq1[i-2:i] with seq2[j-1])
             if i > 1:
-                align_tuple = (tuple(seq1[i-2:i]), tuple(seq2[j-1:j]))
+                align_tuple = (Ngram(seq1[i-2:i]).undo(), Ngram(seq2[j-1:j]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
                 options.append((dp[i-2][j-1] + align_cost, (i-2, j-1)))
 
-            # Option 4: Align many-to-many (seq1[i-2:i] with seq2[j-2:j])
+            # Option 3b: Align many-to-one (lookahead: seq1[i-2:i] with seq2[j:j+1])
+            if i > 1 and j < len(seq2):
+                align_tuple = (Ngram(seq1[i-2:i]).undo(), Ngram(seq2[j:j+1]).undo())
+                align_cost = align_costs.get(align_tuple, default_gop)
+                options.append((dp[i-2][j+1] + align_cost, (i-2, j+1)))
+
+            # Option 4a: Align many-to-many (lookbehind: seq1[i-2:i] with seq2[j-2:j])
             if i > 1 and j > 1:
-                align_tuple = (tuple(seq1[i-2:i]), tuple(seq2[j-2:j]))
+                align_tuple = (Ngram(seq1[i-2:i]).undo(), Ngram(seq2[j-2:j]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
                 options.append((dp[i-2][j-2] + align_cost, (i-2, j-2)))
 
-            # Option 5: Align one-to-none (delete from seq1)
+            # Option 4b: Align many-to-many (lookahead: seq1[i-2:i] with seq2[j-1:j+1])
+            if i > 1 and j < len(seq2):
+                align_tuple = (Ngram(seq1[i-2:i]).undo(), Ngram(seq2[j-1:j+1]).undo())
+                align_cost = align_costs.get(align_tuple, default_gop)
+                options.append((dp[i-2][j+1] + align_cost, (i-2, j+1)))
+
+            # Option 5: Align one-to-none (deletion from seq1)
             gap_tuple = (seq1[i-1], gap_ch)
             gap_cost = gap_costs.get(gap_tuple, default_gop)
             options.append((dp[i-1][j] + gap_cost, (i-1, j)))
 
-            # Option 6: Align none-to-one (insert into seq2)
+            # Option 6: Align none-to-one (insertion into seq2)
             gap_tuple = (gap_ch, seq2[j-1])
             gap_cost = gap_costs.get(gap_tuple, default_gop)
             options.append((dp[i][j-1] + gap_cost, (i, j-1)))
 
             # Find the optimal option by score/cost
-            if maximize_score: # take option with maximum score
+            if maximize_score:  # Maximize score
                 dp[i][j], traceback[i][j] = max(options, key=lambda x: x[0])
-            else: # minimize cost
+            else:  # Minimize cost
                 dp[i][j], traceback[i][j] = min(options, key=lambda x: x[0])
 
     # Traceback to find the alignment
@@ -188,22 +205,40 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
     align_pathways = []
     while i > 0 or j > 0:
         prev_i, prev_j = traceback[i][j]
-        if prev_i == i - 1 and prev_j == j - 1:  # One-to-one alignment
+        # One-to-one alignment
+        if prev_i == i - 1 and prev_j == j - 1:
             aligned_seq1.append(seq1[i-1])
             aligned_seq2.append(seq2[j-1])
-        elif prev_i == i - 1 and prev_j == j - 2:  # One-to-many alignment
+        # One-to-many (lookbehind)
+        elif prev_i == i - 1 and prev_j == j - 2:
             aligned_seq1.append(seq1[i-1])
             aligned_seq2.append(Ngram(seq2[j-2:j]).undo())
-        elif prev_i == i - 2 and prev_j == j - 1:  # Many-to-one alignment
+        # One-to-many (lookahead)
+        elif prev_i == i - 1 and prev_j == j + 1:
+            aligned_seq1.append(seq1[i-1])
+            aligned_seq2.append(Ngram(seq2[j-1:j+1]).undo())
+        # Many-to-one (lookbehind)
+        elif prev_i == i - 2 and prev_j == j - 1:
             aligned_seq1.append(Ngram(seq1[i-2:i]).undo())
             aligned_seq2.append(seq2[j-1])
-        elif prev_i == i - 2 and prev_j == j - 2:  # Many-to-many alignment
+        # Many-to-one (lookahead)
+        elif prev_i == i - 2 and prev_j == j + 1:
+            aligned_seq1.append(Ngram(seq1[i-2:i]).undo())
+            aligned_seq2.append(Ngram(seq2[j:j+1]).undo())
+        # Many-to-many (lookbehind)
+        elif prev_i == i - 2 and prev_j == j - 2:
             aligned_seq1.append(Ngram(seq1[i-2:i]).undo())
             aligned_seq2.append(Ngram(seq2[j-2:j]).undo())
-        elif prev_i == i - 1:  # One-to-none alignment (deletion)
+        # Many-to-many (lookahead)
+        elif prev_i == i - 2 and prev_j == j + 1:
+            aligned_seq1.append(Ngram(seq1[i-2:i]).undo())
+            aligned_seq2.append(Ngram(seq2[j-1:j+1]).undo())
+        # One-to-none alignment (deletion)
+        elif prev_i == i - 1:
             aligned_seq1.append(seq1[i-1])
             aligned_seq2.append(gap_ch)
-        elif prev_j == j - 1:  # None-to-one alignment (insertion)
+        # None-to-one alignment (insertion)
+        elif prev_j == j - 1:
             aligned_seq1.append(gap_ch)
             aligned_seq2.append(seq2[j-1])
 
@@ -213,7 +248,6 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
     aligned_seq1 = aligned_seq1[::-1]
     aligned_seq2 = aligned_seq2[::-1]
     alignment = list(zip(aligned_seq1, aligned_seq2))
-
     return alignment, dp[len(seq1)][len(seq2)]
 
 
