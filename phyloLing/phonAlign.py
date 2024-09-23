@@ -61,10 +61,10 @@ def align_sequences_with_backtracking(seq1, seq2, align_costs, gap_costs, gap_ch
 
     # Return globally optimized alignment and score (same score for now, could be updated if heuristic improves)
     final_alignment = list(zip(optimized_seq1, optimized_seq2))
-    
+
     # Remove any fully gap alignments
     final_alignment = [pos for pos in final_alignment if pos != (gap_ch, gap_ch)]
-    
+
     return final_alignment, score
 
 
@@ -176,21 +176,46 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
                 align_cost = align_costs.get(align_tuple, default_gop)
                 options.append((dp[i-2][j+1] + align_cost, (i-2, j+1), [i-2, i-1], [j-1, j]))
 
-            # Option 5: Align one-to-none (deletion from seq1)
+            # Option 5a: Align one-to-none (deletion from seq1)
             gap_tuple = (seq1[i-1], gap_ch)
             gap_cost = gap_costs.get(gap_tuple, default_gop)
             options.append((dp[i-1][j] + gap_cost, (i-1, j), [i-1], []))
 
-            # Option 6: Align none-to-one (insertion into seq2)
+            # Option 5b: Align many-to-none (lookbehind: seq1[i-2:i] aligned with gap in seq2)
+            if i > 1:
+                gap_tuple = (Ngram(seq1[i-2:i]).undo(), gap_ch)
+                gap_cost = gap_costs.get(gap_tuple, default_gop)
+                options.append((dp[i-2][j] + gap_cost, (i-2, j), [i-2, i-1], []))  # Track both i-2 and i-1
+
+            # Option 5c: Align many-to-none (lookahead: seq1[i-1:i+1] aligned with gap in seq2)
+            if i < len(seq1):
+                gap_tuple = (Ngram(seq1[i-1:i+1]).undo(), gap_ch)
+                gap_cost = gap_costs.get(gap_tuple, default_gop)
+                options.append((dp[i-1][j] + gap_cost, (i-1, j), [i-1, i], []))  # Track both i-1 and i
+
+            # Option 6a: Align none-to-one (insertion into seq2)
             gap_tuple = (gap_ch, seq2[j-1])
             gap_cost = gap_costs.get(gap_tuple, default_gop)
             options.append((dp[i][j-1] + gap_cost, (i, j-1), [], [j-1]))
+
+            # Option 6b: Align none-to-many (lookbehind: gap in seq1 aligned with seq2[j-2:j])
+            if j > 1:
+                gap_tuple = (gap_ch, Ngram(seq2[j-2:j]).undo())
+                gap_cost = gap_costs.get(gap_tuple, default_gop)
+                options.append((dp[i][j-2] + gap_cost, (i, j-2), [], [j-2, j-1]))  # Track both j-2 and j-1
+
+            # Option 6c: Align none-to-many (lookahead: gap in seq1 aligned with seq2[j-1:j+1])
+            if j < len(seq2):
+                gap_tuple = (gap_ch, Ngram(seq2[j-1:j+1]).undo())
+                gap_cost = gap_costs.get(gap_tuple, default_gop)
+                options.append((dp[i][j-1] + gap_cost, (i, j-1), [], [j-1, j]))  # Track both j-1 and j
+
 
             # Find the best non-conflicting option and its second-best alternative
             best_option, second_best = get_best_non_conflicting_option(options, i, j)
             dp[i][j], (prev_i, prev_j), used_i, used_j = best_option
             traceback[i][j] = (prev_i, prev_j, used_i, used_j)
-            second_best_options[i][j] = second_best            
+            second_best_options[i][j] = second_best
 
             # Mark elements as used
             for idx in used_i:
@@ -205,50 +230,30 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
     align_pathways = []
     while i > 0 or j > 0:
         prev_i, prev_j, used_i, used_j = traceback[i][j]
-        # One-to-one alignment
-        if prev_i == i - 1 and prev_j == j - 1:
-            aligned_seq1.append(seq1[i-1])
-            aligned_seq2.append(seq2[j-1])
-        # One-to-many (lookbehind)
-        elif prev_i == i - 1 and prev_j == j - 2:
-            aligned_seq1.append(seq1[i-1])
-            aligned_seq2.append(Ngram(seq2[j-2:j]).undo())
-        # One-to-many (lookahead)
-        elif prev_i == i - 1 and prev_j == j + 1:
-            aligned_seq1.append(seq1[i-1])
-            aligned_seq2.append(Ngram(seq2[j-1:j+1]).undo())
-        # Many-to-one (lookbehind)
-        elif prev_i == i - 2 and prev_j == j - 1:
-            aligned_seq1.append(Ngram(seq1[i-2:i]).undo())
-            aligned_seq2.append(seq2[j-1])
-        # Many-to-one (lookahead)
-        elif prev_i == i - 2 and prev_j == j + 1:
-            aligned_seq1.append(Ngram(seq1[i-2:i]).undo())
-            aligned_seq2.append(Ngram(seq2[j:j+1]).undo())
-        # Many-to-many (lookbehind)
-        elif prev_i == i - 2 and prev_j == j - 2:
-            aligned_seq1.append(Ngram(seq1[i-2:i]).undo())
-            aligned_seq2.append(Ngram(seq2[j-2:j]).undo())
-        # Many-to-many (lookahead)
-        elif prev_i == i - 2 and prev_j == j + 1:
-            aligned_seq1.append(Ngram(seq1[i-2:i]).undo())
-            aligned_seq2.append(Ngram(seq2[j-1:j+1]).undo())
-        # One-to-none alignment (deletion)
-        elif prev_i == i - 1:
-            aligned_seq1.append(seq1[i-1])
-            aligned_seq2.append(gap_ch)
-        # None-to-one alignment (insertion)
-        elif prev_j == j - 1:
-            aligned_seq1.append(gap_ch)
-            aligned_seq2.append(seq2[j-1])
 
+        # Align characters from seq1 and seq2
+        if used_i and used_j:  # One-to-one, many-to-many, etc.
+            aligned_seq1.append(Ngram([seq1[k] for k in used_i]).undo())
+            aligned_seq2.append(Ngram([seq2[k] for k in used_j]).undo())
+        # One-to-none (deletion) or many-to-none
+        elif used_i and not used_j:
+            aligned_seq1.append(Ngram([seq1[k] for k in used_i]).undo())
+            aligned_seq2.append(gap_ch * len(used_i))  # Align with the gap character
+        # None-to-one (insertion) or none-to-many
+        elif not used_i and used_j:
+            aligned_seq1.append(gap_ch * len(used_j))  # Align with the gap character
+            aligned_seq2.append(Ngram([seq2[k] for k in used_j]).undo())
+
+        # Move to the previous traceback position
         i, j = prev_i, prev_j
 
     # Reverse to get proper alignment order
     aligned_seq1 = aligned_seq1[::-1]
     aligned_seq2 = aligned_seq2[::-1]
     alignment = list(zip(aligned_seq1, aligned_seq2))
+
     return alignment, dp[len(seq1)][len(seq2)]
+
 
 
 def compatible_segments(seg1, seg2):
