@@ -637,10 +637,6 @@ class Alignment:
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
         padded2 = pad_sequence(self.seq2, pad_ch=self.pad_ch, pad_n=1)
 
-        # Get complex ngram segmentation
-        complex_ngram_seq1 = self.word1.complex_segmentation(pad_ch=self.pad_ch)
-        complex_ngram_seq2 = self.word2.complex_segmentation(pad_ch=self.pad_ch)
-
         #Generate bigrams # TODO surely this can be done more efficiently, e.g. within Word class
         bigrams_seq1 = self.word1.getBigrams(pad_ch=self.pad_ch)
         bigrams_seq2 = self.word2.getBigrams(pad_ch=self.pad_ch)
@@ -679,37 +675,7 @@ class Alignment:
         # )
         # bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
 
-        def get_alignment_costs(seq1, seq2):
-            alignment_costs = {}
-            for i, ngram1 in enumerate(seq1):
-                for j, ngram2 in enumerate(seq2):
-                    alignment_costs[(i, j)] = combined_align_costs[(ngram1, ngram2)]
-            return alignment_costs
-
-        def get_gap_costs(seq1, seq2):
-            gap_costs = {}
-            for i, ngram1 in enumerate(seq1):
-                gap_costs[(i, self.gap_ch)] = combined_gap_costs.get((ngram1, self.gap_ch), self.gop)
-            for j, ngram2 in enumerate(seq2):
-                gap_costs[(self.gap_ch, j)] = combined_gap_costs.get((ngram2, self.gap_ch), self.gop)
-                #gap_costs[(self.gap_ch, j)] = combined_gap_costs.get((self.gap_ch, ngram2), self.gop)
-            return gap_costs
-
-
-        # Compute a unigram alignent (with padding)
-        unigram_alignment_costs = get_alignment_costs(padded1, padded2)
-        unigram_gap_align_costs = get_gap_costs(padded1, padded2)
-        unigram_alignment = best_alignment(
-            SEQUENCE_1=padded1,
-            SEQUENCE_2=padded2,
-            SCORES_DICT=unigram_alignment_costs,
-            GAP_SCORE_DICT=unigram_gap_align_costs,
-            DEFAULT_GAP_SCORE=self.gop,
-            GAP_CHARACTER=self.gap_ch,
-            N_BEST=n_best # TODO something could be done with n_best
-        )
-        unigram_alignment = unigram_alignment[0][0]
-        new_alignment = align_sequences_with_backtracking(
+        complex_alignment = align_sequences_with_backtracking(
             seq1=padded1,
             seq2=padded2,
             align_costs=combined_align_costs,
@@ -718,22 +684,8 @@ class Alignment:
             default_gop=self.gop,
             maximize_score=True,
         )
-        new_alignment = self.compact_boundary_gaps(new_alignment[0])
-        print(visual_align(new_alignment))
-        breakpoint()
-        # Compute an optimal complex alignment of complex ngrams
-        complex_alignment_costs = get_alignment_costs(complex_ngram_seq1, complex_ngram_seq2)
-        complex_gap_costs = get_gap_costs(complex_ngram_seq1, complex_ngram_seq2)
-        complex_alignment = best_alignment(
-            SEQUENCE_1=complex_ngram_seq1,
-            SEQUENCE_2=complex_ngram_seq2,
-            SCORES_DICT=complex_alignment_costs,
-            GAP_SCORE_DICT=complex_gap_costs,
-            DEFAULT_GAP_SCORE=self.gop,
-            GAP_CHARACTER=self.gap_ch,
-            N_BEST=n_best # TODO something could be done with n_best
-        )
-        complex_alignment = complex_alignment[0][0]
+        complex_alignment = self.compact_boundary_gaps(complex_alignment[0])
+        print(visual_align(complex_alignment))
 
         # TODO current tasks
         # still bug: in compact_boundary_gaps (Romanian-Ligurian)
@@ -742,28 +694,9 @@ class Alignment:
         # [('-', '<#'), (('<#', 'a'), ('i', 'n')), (('n', 'ˈe'), 'ˈe'), ('l', ('l', '#>')), (('u', '#>'), '-')]
         # (Pdb) self.compact_boundary_gaps(complex_alignment)
         # [(('<#', 'a'), ('i', 'n', '<#')), (('n', 'ˈe'), 'ˈe'), (('l', '#>'), ('l', '#>'))]
-        # unigram_complex_alignment_mismatches might still not work quite right, TBD
-        # 2) Iterate through the indices of mismatches between unigram and complex and evaluate
-        # 3) Possibly re-align subsequences that are marked as mismatched
-        # leave unigram units which matched between complex and unigram alignments as is
-        first_complex_alignment = complex_alignment[:]
-        complex_alignment = self.resolve_complex_alignment(
-            first_complex_alignment,
-            unigram_alignment,
-            combined_align_costs,
-            combined_gap_costs,
-            get_alignment_costs,
-            get_gap_costs,
-        )
-
         # Compact boundary gap alignments
-        complex_alignment = self.compact_boundary_gaps(complex_alignment)
-        for i, pos in enumerate(complex_alignment): print(i, pos)
         # TODO: possibly compact before? or both before and after?
         # TODO: possibly save unigram, bigram, and complex alignments
-
-        # then need to look into Warning: 1-2 skipped in favor of bigram
-        # and how to better measure the scores in general, but esp involving gap_ch (instead of gop)
 
         alignment_costs = {
             "2-2": bigram_scores,
