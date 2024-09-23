@@ -21,6 +21,102 @@ from utils.utils import validate_class, rescale_dict_values, default_dict, keywi
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
+def realign_segment(segment1, segment2, align_costs, gap_costs, gap_ch, default_gop):
+    # A helper function that realigns a small segment using local DP
+    # segment1 and segment2 are subsequences to be re-aligned
+
+    len1, len2 = len(segment1), len(segment2)
+    dp = [[sys.maxsize for _ in range(len2 + 1)] for _ in range(len1 + 1)]
+    traceback = [[None for _ in range(len2 + 1)] for _ in range(len1 + 1)]
+
+    # Base cases for local DP
+    dp[0][0] = 0
+    for i in range(1, len1 + 1):
+        gap_tuple = (segment1[i-1], gap_ch)
+        dp[i][0] = dp[i-1][0] + gap_costs.get(gap_tuple, default_gop)
+        traceback[i][0] = (i-1, 0)
+
+    for j in range(1, len2 + 1):
+        gap_tuple = (gap_ch, segment2[j-1])
+        dp[0][j] = dp[0][j-1] + gap_costs.get(gap_tuple, default_gop)
+        traceback[0][j] = (0, j-1)
+
+    # Fill DP table for local re-alignment
+    for i in range(1, len1 + 1):
+        for j in range(1, len2 + 1):
+            options = []
+
+            # Align unit-to-unit
+            align_tuple = (segment1[i-1], segment2[j-1])
+            align_cost = align_costs.get(align_tuple, default_gop)
+            options.append((dp[i-1][j-1] + align_cost, (i-1, j-1)))
+
+            # Align one-to-none
+            gap_tuple = (segment1[i-1], gap_ch)
+            gap_cost = gap_costs.get(gap_tuple, default_gop)
+            options.append((dp[i-1][j] + gap_cost, (i-1, j)))
+
+            # Align none-to-one
+            gap_tuple = (gap_ch, segment2[j-1])
+            gap_cost = gap_costs.get(gap_tuple, default_gop)
+            options.append((dp[i][j-1] + gap_cost, (i, j-1)))
+
+            dp[i][j], traceback[i][j] = min(options, key=lambda x: x[0])
+
+    # Traceback to get the realigned sequence
+    realigned1 = []
+    realigned2 = []
+    i, j = len1, len2
+    while i > 0 or j > 0:
+        prev_i, prev_j = traceback[i][j]
+        if prev_i == i - 1 and prev_j == j - 1:  # Unit-to-unit alignment
+            realigned1.append(segment1[i-1])
+            realigned2.append(segment2[j-1])
+        elif prev_i == i - 1:  # One-to-none alignment
+            realigned1.append(segment1[i-1])
+            realigned2.append(gap_ch)
+        elif prev_j == j - 1:  # None-to-one alignment
+            realigned1.append(gap_ch)
+            realigned2.append(segment2[j-1])
+        i, j = prev_i, prev_j
+
+    return realigned1[::-1], realigned2[::-1]  # Reverse to get proper order
+
+def align_sequences_with_backtracking(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score=False):
+    # Initial alignment using DP
+    alignment, score = align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score)
+
+    # Global optimization step (backtracking)
+    # We will identify segments in the alignment that seem suboptimal
+    aligned_seq1, aligned_seq2 = zip(*alignment)
+    optimized_seq1 = []
+    optimized_seq2 = []
+
+    i = 0
+    while i < len(aligned_seq1):
+        # Find misaligned segments based on some heuristic
+        j = i
+        while j < len(aligned_seq1) and (aligned_seq1[j] == gap_ch or aligned_seq2[j] == gap_ch):
+            j += 1
+
+        # If we find a segment that contains gaps or suspicious many-to-one/many-to-many alignments, re-align
+        if j > i:
+            realigned1, realigned2 = realign_segment(aligned_seq1[i:j], aligned_seq2[i:j], align_costs, gap_costs, gap_ch, default_gop)
+            optimized_seq1.extend(realigned1)
+            optimized_seq2.extend(realigned2)
+        else:
+            optimized_seq1.append(aligned_seq1[i])
+            optimized_seq2.append(aligned_seq2[i])
+        i = max(i + 1, j)
+
+    # Return globally optimized alignment and score (same score for now, could be updated if heuristic improves)
+    final_alignment = list(zip(optimized_seq1, optimized_seq2))
+    
+    # Remove any fully gap alignments
+    final_alignment = [pos for pos in final_alignment if pos != (gap_ch, gap_ch)]
+    
+    return final_alignment, score
+
 
 def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score=False):
     # maximize_score : if True, the optimum alignment has a score score
@@ -117,6 +213,7 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
     aligned_seq1 = aligned_seq1[::-1]
     aligned_seq2 = aligned_seq2[::-1]
     alignment = list(zip(aligned_seq1, aligned_seq2))
+
     return alignment, dp[len(seq1)][len(seq2)]
 
 
@@ -612,14 +709,17 @@ class Alignment:
             N_BEST=n_best # TODO something could be done with n_best
         )
         unigram_alignment = unigram_alignment[0][0]
-        new_alignment = align_sequences(
+        new_alignment = align_sequences_with_backtracking(
             seq1=padded1,
             seq2=padded2,
             align_costs=combined_align_costs,
             gap_costs=combined_gap_costs,
             gap_ch=self.gap_ch,
             default_gop=self.gop,
+            maximize_score=True,
         )
+        new_alignment = self.compact_boundary_gaps(new_alignment[0])
+        print(visual_align(new_alignment))
         breakpoint()
         # Compute an optimal complex alignment of complex ngrams
         complex_alignment_costs = get_alignment_costs(complex_ngram_seq1, complex_ngram_seq2)
