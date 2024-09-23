@@ -22,7 +22,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(mes
 logger = logging.getLogger(__name__)
 
 
-def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop):
+def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score=False):
+    # maximize_score : if True, the optimum alignment has a score score
+    #                  if False, the optimum alignment has the lowest score (lowest cost)):
     # Initialize DP table with infinity cost
     dp = [[sys.maxsize for _ in range(len(seq2) + 1)] for _ in range(len(seq1) + 1)]
     traceback = [[None for _ in range(len(seq2) + 1)] for _ in range(len(seq1) + 1)]
@@ -77,8 +79,11 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop):
             gap_cost = gap_costs.get(gap_tuple, default_gop)
             options.append((dp[i][j-1] + gap_cost, (i, j-1)))
 
-            # Find the minimum cost (=maximum in this case since costs can be positive or negative) option
-            dp[i][j], traceback[i][j] = max(options, key=lambda x: x[0])
+            # Find the optimal option by score/cost
+            if maximize_score: # take option with maximum score
+                dp[i][j], traceback[i][j] = max(options, key=lambda x: x[0])
+            else: # minimize cost
+                dp[i][j], traceback[i][j] = min(options, key=lambda x: x[0])
 
     # Traceback to find the alignment
     aligned_seq1 = []
