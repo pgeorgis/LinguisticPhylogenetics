@@ -21,66 +21,6 @@ from utils.utils import validate_class, rescale_dict_values, default_dict, keywi
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-def realign_segment(segment1, segment2, align_costs, gap_costs, gap_ch, default_gop):
-    # A helper function that realigns a small segment using local DP
-    # segment1 and segment2 are subsequences to be re-aligned
-
-    len1, len2 = len(segment1), len(segment2)
-    dp = [[sys.maxsize for _ in range(len2 + 1)] for _ in range(len1 + 1)]
-    traceback = [[None for _ in range(len2 + 1)] for _ in range(len1 + 1)]
-
-    # Base cases for local DP
-    dp[0][0] = 0
-    for i in range(1, len1 + 1):
-        gap_tuple = (segment1[i-1], gap_ch)
-        dp[i][0] = dp[i-1][0] + gap_costs.get(gap_tuple, default_gop)
-        traceback[i][0] = (i-1, 0)
-
-    for j in range(1, len2 + 1):
-        gap_tuple = (gap_ch, segment2[j-1])
-        dp[0][j] = dp[0][j-1] + gap_costs.get(gap_tuple, default_gop)
-        traceback[0][j] = (0, j-1)
-
-    # Fill DP table for local re-alignment
-    for i in range(1, len1 + 1):
-        for j in range(1, len2 + 1):
-            options = []
-
-            # Align unit-to-unit
-            align_tuple = (segment1[i-1], segment2[j-1])
-            align_cost = align_costs.get(align_tuple, default_gop)
-            options.append((dp[i-1][j-1] + align_cost, (i-1, j-1)))
-
-            # Align one-to-none
-            gap_tuple = (segment1[i-1], gap_ch)
-            gap_cost = gap_costs.get(gap_tuple, default_gop)
-            options.append((dp[i-1][j] + gap_cost, (i-1, j)))
-
-            # Align none-to-one
-            gap_tuple = (gap_ch, segment2[j-1])
-            gap_cost = gap_costs.get(gap_tuple, default_gop)
-            options.append((dp[i][j-1] + gap_cost, (i, j-1)))
-
-            dp[i][j], traceback[i][j] = min(options, key=lambda x: x[0])
-
-    # Traceback to get the realigned sequence
-    realigned1 = []
-    realigned2 = []
-    i, j = len1, len2
-    while i > 0 or j > 0:
-        prev_i, prev_j = traceback[i][j]
-        if prev_i == i - 1 and prev_j == j - 1:  # Unit-to-unit alignment
-            realigned1.append(segment1[i-1])
-            realigned2.append(segment2[j-1])
-        elif prev_i == i - 1:  # One-to-none alignment
-            realigned1.append(segment1[i-1])
-            realigned2.append(gap_ch)
-        elif prev_j == j - 1:  # None-to-one alignment
-            realigned1.append(gap_ch)
-            realigned2.append(segment2[j-1])
-        i, j = prev_i, prev_j
-
-    return realigned1[::-1], realigned2[::-1]  # Reverse to get proper order
 
 def align_sequences_with_backtracking(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score=False):
     # Initial alignment using DP
@@ -101,7 +41,17 @@ def align_sequences_with_backtracking(seq1, seq2, align_costs, gap_costs, gap_ch
 
         # If we find a segment that contains gaps or suspicious many-to-one/many-to-many alignments, re-align
         if j > i:
-            realigned1, realigned2 = realign_segment(aligned_seq1[i:j], aligned_seq2[i:j], align_costs, gap_costs, gap_ch, default_gop)
+            alignment, score = align_sequences(
+                aligned_seq1[i:j],
+                aligned_seq2[i:j],
+                align_costs,
+                gap_costs,
+                gap_ch,
+                default_gop,
+                maximize_score=maximize_score,
+            )
+            realigned1 = [pos[0] for pos in alignment]
+            realigned2 = [pos[1] for pos in alignment]
             optimized_seq1.extend(realigned1)
             optimized_seq2.extend(realigned2)
         else:
@@ -117,6 +67,7 @@ def align_sequences_with_backtracking(seq1, seq2, align_costs, gap_costs, gap_ch
     
     return final_alignment, score
 
+
 def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score=False):
     # maximize_score : if True, the optimum alignment has a score score
     #                  if False, the optimum alignment has the lowest score (lowest cost)):
@@ -124,19 +75,62 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
     dp = [[sys.maxsize for _ in range(len(seq2) + 1)] for _ in range(len(seq1) + 1)]
     traceback = [[None for _ in range(len(seq2) + 1)] for _ in range(len(seq1) + 1)]
 
-    # Base case: aligning empty sequence to sequence with gap-to-unit costs
+    # Initialize DP table with base case: aligning empty sequence to sequence with gap-to-unit costs
     dp[0][0] = 0
+    traceback[0][0] = (None, None, [], [])  # or some default values
+
     for i in range(1, len(seq1) + 1):
         gap_tuple = (seq1[i-1], gap_ch)
         dp[i][0] = dp[i-1][0] + gap_costs.get(gap_tuple, default_gop)
-        traceback[i][0] = (i-1, 0)
+        traceback[i][0] = (i-1, 0, [i-1], [])
 
     for j in range(1, len(seq2) + 1):
         gap_tuple = (gap_ch, seq2[j-1])
         dp[0][j] = dp[0][j-1] + gap_costs.get(gap_tuple, default_gop)
-        traceback[0][j] = (0, j-1)
+        traceback[0][j] = (0, j-1, [], [j-1])
 
-    # Fill DP table with lookahead and lookbehind options
+    # Store not only the best alignment but also the second-best for conflict resolution
+    used_seq1 = [False] * len(seq1)
+    used_seq2 = [False] * len(seq2)
+    second_best_options = [[None for _ in range(len(seq2) + 1)] for _ in range(len(seq1) + 1)]
+
+    def get_best_non_conflicting_option(options, i, j):
+        """
+        Selects the best option that does not conflict with used_seq1 and used_seq2.
+        If there is a conflict, compare with second-best options.
+        """
+        best_option = None
+        second_best = None
+        for option in options:
+            cost, (prev_i, prev_j), used_i, used_j = option
+
+            # Check for conflicts
+            conflict = any(used_seq1[idx] for idx in used_i) or any(used_seq2[idx] for idx in used_j)
+
+            if not conflict:
+                if not best_option or (maximize_score and cost > best_option[0]) or (not maximize_score and cost < best_option[0]):
+                    second_best = best_option
+                    best_option = option
+                elif not second_best or (maximize_score and cost > second_best[0]) or (not maximize_score and cost < second_best[0]):
+                    second_best = option
+            else:
+                # Conflict exists, try to resolve by considering second-best alignment for conflicting element
+                conflict_score, conflict_traceback, conflict_used_i, conflict_used_j = traceback[prev_i][prev_j]
+                second_best_conflict = second_best_options[prev_i][prev_j]
+
+                if second_best_conflict:
+                    total_score_with_revert = second_best_conflict[0] + cost
+                    if not best_option or (maximize_score and total_score_with_revert > best_option[0]) or (not maximize_score and total_score_with_revert < best_option[0]):
+                        best_option = (total_score_with_revert, (prev_i, prev_j), used_i, used_j)
+                        second_best = option  # The current option becomes the second best
+                else:
+                    # No second best, this becomes the new second best
+                    if not second_best or (maximize_score and cost > second_best[0]) or (not maximize_score and cost < second_best[0]):
+                        second_best = option
+
+        return best_option, second_best
+
+    # Fill DP table with advanced conflict resolution
     for i in range(1, len(seq1) + 1):
         for j in range(1, len(seq2) + 1):
             options = []
@@ -144,59 +138,65 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
             # Option 1: Align unit-to-unit (seq1[i-1] with seq2[j-1])
             align_tuple = (seq1[i-1], seq2[j-1])
             align_cost = align_costs.get(align_tuple, default_gop)
-            options.append((dp[i-1][j-1] + align_cost, (i-1, j-1)))
+            options.append((dp[i-1][j-1] + align_cost, (i-1, j-1), [i-1], [j-1]))
 
             # Option 2a: Align one-to-many (lookbehind: seq1[i-1] with seq2[j-2:j])
             if j > 1:
                 align_tuple = (Ngram(seq1[i-1:i]).undo(), Ngram(seq2[j-2:j]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
-                options.append((dp[i-1][j-2] + align_cost, (i-1, j-2)))
+                options.append((dp[i-1][j-2] + align_cost, (i-1, j-2), [i-1], [j-2, j-1]))
 
             # Option 2b: Align one-to-many (lookahead: seq1[i-1] with seq2[j-1:j+1])
             if j < len(seq2):
                 align_tuple = (Ngram(seq1[i-1:i]).undo(), Ngram(seq2[j-1:j+1]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
-                options.append((dp[i-1][j+1] + align_cost, (i-1, j+1)))
+                options.append((dp[i-1][j+1] + align_cost, (i-1, j+1), [i-1], [j-1, j]))
 
             # Option 3a: Align many-to-one (lookbehind: seq1[i-2:i] with seq2[j-1])
             if i > 1:
                 align_tuple = (Ngram(seq1[i-2:i]).undo(), Ngram(seq2[j-1:j]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
-                options.append((dp[i-2][j-1] + align_cost, (i-2, j-1)))
+                options.append((dp[i-2][j-1] + align_cost, (i-2, j-1), [i-2, i-1], [j-1]))
 
             # Option 3b: Align many-to-one (lookahead: seq1[i-2:i] with seq2[j:j+1])
             if i > 1 and j < len(seq2):
                 align_tuple = (Ngram(seq1[i-2:i]).undo(), Ngram(seq2[j:j+1]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
-                options.append((dp[i-2][j+1] + align_cost, (i-2, j+1)))
+                options.append((dp[i-2][j+1] + align_cost, (i-2, j+1), [i-2, i-1], [j-1, j]))
 
             # Option 4a: Align many-to-many (lookbehind: seq1[i-2:i] with seq2[j-2:j])
             if i > 1 and j > 1:
                 align_tuple = (Ngram(seq1[i-2:i]).undo(), Ngram(seq2[j-2:j]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
-                options.append((dp[i-2][j-2] + align_cost, (i-2, j-2)))
+                options.append((dp[i-2][j-2] + align_cost, (i-2, j-2), [i-2, i-1], [j-2, j-1]))
 
             # Option 4b: Align many-to-many (lookahead: seq1[i-2:i] with seq2[j-1:j+1])
             if i > 1 and j < len(seq2):
                 align_tuple = (Ngram(seq1[i-2:i]).undo(), Ngram(seq2[j-1:j+1]).undo())
                 align_cost = align_costs.get(align_tuple, default_gop)
-                options.append((dp[i-2][j+1] + align_cost, (i-2, j+1)))
+                options.append((dp[i-2][j+1] + align_cost, (i-2, j+1), [i-2, i-1], [j-1, j]))
 
             # Option 5: Align one-to-none (deletion from seq1)
             gap_tuple = (seq1[i-1], gap_ch)
             gap_cost = gap_costs.get(gap_tuple, default_gop)
-            options.append((dp[i-1][j] + gap_cost, (i-1, j)))
+            options.append((dp[i-1][j] + gap_cost, (i-1, j), [i-1], []))
 
             # Option 6: Align none-to-one (insertion into seq2)
             gap_tuple = (gap_ch, seq2[j-1])
             gap_cost = gap_costs.get(gap_tuple, default_gop)
-            options.append((dp[i][j-1] + gap_cost, (i, j-1)))
+            options.append((dp[i][j-1] + gap_cost, (i, j-1), [], [j-1]))
 
-            # Find the optimal option by score/cost
-            if maximize_score:  # Maximize score
-                dp[i][j], traceback[i][j] = max(options, key=lambda x: x[0])
-            else:  # Minimize cost
-                dp[i][j], traceback[i][j] = min(options, key=lambda x: x[0])
+            # Find the best non-conflicting option and its second-best alternative
+            best_option, second_best = get_best_non_conflicting_option(options, i, j)
+            dp[i][j], (prev_i, prev_j), used_i, used_j = best_option
+            traceback[i][j] = (prev_i, prev_j, used_i, used_j)
+            second_best_options[i][j] = second_best            
+
+            # Mark elements as used
+            for idx in used_i:
+                used_seq1[idx] = True
+            for idx in used_j:
+                used_seq2[idx] = True
 
     # Traceback to find the alignment
     aligned_seq1 = []
@@ -204,7 +204,7 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
     i, j = len(seq1), len(seq2)
     align_pathways = []
     while i > 0 or j > 0:
-        prev_i, prev_j = traceback[i][j]
+        prev_i, prev_j, used_i, used_j = traceback[i][j]
         # One-to-one alignment
         if prev_i == i - 1 and prev_j == j - 1:
             aligned_seq1.append(seq1[i-1])
