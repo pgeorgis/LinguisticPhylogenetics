@@ -251,10 +251,10 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
         # One-to-none (deletion) or many-to-none
         elif used_i and not used_j:
             aligned_seq1.append(Ngram([seq1[k] for k in used_i]).undo())
-            aligned_seq2.append(gap_ch * len(used_i))  # Align with the gap character
+            aligned_seq2.append(gap_ch)  # Align with the gap character
         # None-to-one (insertion) or none-to-many
         elif not used_i and used_j:
-            aligned_seq1.append(gap_ch * len(used_j))  # Align with the gap character
+            aligned_seq1.append(gap_ch)  # Align with the gap character
             aligned_seq2.append(Ngram([seq2[k] for k in used_j]).undo())
 
         # Move to the previous traceback position
