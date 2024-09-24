@@ -161,8 +161,9 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
             # TODO CURRENT TASKS
             # simplify adding alignment options to function
             # still need to add some lookaheads, like /pl/ in CA plorar is never compared with /ɟ͡ʝ/ in ES llorar
+            # I think some of the so-called lookaheads here might be spurious
 
-            # Option 1: Align unit-to-unit (seq1[i-1] with seq2[j-1])
+            # Option 1: Align current one-to-one (seq1[i-1] with seq2[j-1])
             add_alignment_option((i-1, i), (j-1, j))
 
             # Option 2a: Align one-to-many (lookbehind: seq1[i-1] with seq2[j-2:j])
@@ -177,17 +178,25 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
             if i > 1:
                 add_alignment_option((i-2, i), (j-1, j))
 
-            # Option 3b: Align many-to-one (lookahead: seq1[i-2:i] with seq2[j:j+1])
-            if i > 1 and j < len(seq2):
-                add_alignment_option((i-2, i), (j, j+1))
+            # Option 3b: Align many-to-one (lookahead: seq1[i-1:i+1] with seq2[j-1])
+            if i < len(seq1):
+                add_alignment_option((i-1, i+1), (j-1, j))
 
-            # Option 4a: Align many-to-many (lookbehind: seq1[i-2:i] with seq2[j-2:j])
+            # Option 4a: Align many-to-many (seq1[i-2:i] with seq2[j-2:j])
             if i > 1 and j > 1:
-                add_alignment_option((i-2, i), (j-2, j))
+                add_alignment_option((i-1, i), (j-2, j))
 
-            # Option 4b: Align many-to-many (lookahead: seq1[i-2:i] with seq2[j-1:j+1])
+            # Option 4b: Align many-to-many (seq1[i-2:i] with seq2[j-1:j+1])
             if i > 1 and j < len(seq2):
                 add_alignment_option((i-2, i), (j-1, j+1))
+
+            # Option 4c: Align many-to-many (seq1[i-1:i+1] with seq2[j-2:j])
+            if i < len(seq1) and j > 1:
+                add_alignment_option((i-1, i+1), (j-2, j))
+
+            # Option 4d: Align many-to-many (seq1[i-1:i+1] with seq2[j-1:j+1])
+            if i > 1 and j < len(seq2):
+                add_alignment_option((i-1, i+1), (j-1, j+1))
 
             # Option 5a: Align one-to-none (deletion from seq1)
             gap_tuple = (seq1[i-1], gap_ch)
@@ -223,6 +232,9 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
                 gap_cost = gap_costs.get(gap_tuple, default_gop)
                 options.append((dp[i][j-1] + gap_cost, (i, j-1), [], [j-1, j]))  # Track both j-1 and j
 
+            if seq2 == ['<#', 'ɟ͡ʝ', 'o', 'ɾ', 'ˈa', 'ɾ', '#>']:
+                if i == 2 and j == 2:
+                    breakpoint()
 
             # Find the best non-conflicting option and its second-best alternative
             best_option, second_best = get_best_non_conflicting_option(options, i, j)
