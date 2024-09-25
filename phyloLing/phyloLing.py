@@ -36,7 +36,7 @@ from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.information import calculate_infocontent_of_word, entropy
 from utils.network import dm2coords, newer_network_plot
-from utils.sequence import Ngram, flatten_ngram, generate_ngrams, pad_sequence, remove_overlapping_bigrams
+from utils.sequence import Ngram, flatten_ngram, generate_ngrams, pad_sequence, remove_overlapping_ngrams
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict)
@@ -1684,10 +1684,17 @@ class Word:
         assert self.language is not None
         # Generate bigrams
         bigrams_seq = self.getBigrams(pad_ch=pad_ch)
+        
         # Remove overlapping bigrams and decompose into unigrams if appropriate
-        complex_ngram_seq = remove_overlapping_bigrams(
+        def get_ngram_self_surprisal(ngram):
+            ngram = Ngram(ngram)
+            ngram_info = self.self_surprisal(list(ngram.ngram), as_seq=True, ngram_size=ngram.size)
+            return mean([ngram_info[j][-1] for j in ngram_info])
+        
+        complex_ngram_seq = remove_overlapping_ngrams(
             bigrams_seq,
-            lang=self.language,
+            ngram_score_func=get_ngram_self_surprisal,
+            maximize_score=False,
             pad_ch=pad_ch,
         )
         self.complex_segments = complex_ngram_seq

@@ -1,6 +1,7 @@
 import importlib
 import logging
 from collections.abc import Iterable
+from collections import defaultdict
 from itertools import zip_longest
 from math import inf, log
 from statistics import mean
@@ -14,7 +15,9 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 from utils.distance import Distance
 from utils.information import calculate_infocontent_of_word
-from utils.sequence import Ngram, PhonEnvNgram, generate_ngrams, flatten_ngram, pad_sequence, find_ranges, start_token, end_token
+from utils.sequence import (Ngram, PhonEnvNgram, generate_ngrams, remove_overlapping_ngrams,
+                            flatten_ngram, pad_sequence, find_ranges, 
+                            start_token, end_token)
 from utils.utils import validate_class, rescale_dict_values, default_dict, keywithmaxval, combine_dicts
 
 
@@ -22,53 +25,14 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(mes
 logger = logging.getLogger(__name__)
 
 
-def align_sequences_with_backtracking(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score=False):
-    # Initial alignment using DP
-    alignment, score = align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score)
-
-    # Global optimization step (backtracking)
-    # We will identify segments in the alignment that seem suboptimal
-    aligned_seq1, aligned_seq2 = zip(*alignment)
-    optimized_seq1 = []
-    optimized_seq2 = []
-
-    i = 0
-    while i < len(aligned_seq1):
-        # Find misaligned segments based on some heuristic
-        j = i
-        while j < len(aligned_seq1) and (aligned_seq1[j] == gap_ch or aligned_seq2[j] == gap_ch):
-            j += 1
-
-        # If we find a segment that contains gaps or suspicious many-to-one/many-to-many alignments, re-align
-        if j > i:
-            alignment, score = align_sequences(
-                aligned_seq1[i:j],
-                aligned_seq2[i:j],
-                align_costs,
-                gap_costs,
-                gap_ch,
-                default_gop,
-                maximize_score=maximize_score,
-            )
-            realigned1 = [pos[0] for pos in alignment]
-            realigned2 = [pos[1] for pos in alignment]
-            optimized_seq1.extend(realigned1)
-            optimized_seq2.extend(realigned2)
-        else:
-            optimized_seq1.append(aligned_seq1[i])
-            optimized_seq2.append(aligned_seq2[i])
-        i = max(i + 1, j)
-
-    # Return globally optimized alignment and score (same score for now, could be updated if heuristic improves)
-    final_alignment = list(zip(optimized_seq1, optimized_seq2))
-
-    # Remove any fully gap alignments
-    final_alignment = [pos for pos in final_alignment if pos != (gap_ch, gap_ch)]
-
-    return final_alignment, score
-
-
-def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, maximize_score=False):
+def align_sequences(seq1, seq2,
+                    align_costs,
+                    gap_costs,
+                    gap_ch,
+                    default_gop,
+                    maximize_score=False,
+                    allow_complex=False,
+                    ):
     # maximize_score : if True, the optimum alignment has a score score
     #                  if False, the optimum alignment has the lowest score (lowest cost)):
     # Initialize DP table with infinity cost
@@ -88,47 +52,9 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
         gap_tuple = (gap_ch, seq2[j-1])
         dp[0][j] = dp[0][j-1] + gap_costs.get(gap_tuple, default_gop)
         traceback[0][j] = (0, j-1, [], [j-1])
-
-    # Store not only the best alignment but also the second-best for conflict resolution
-    used_seq1 = [False] * len(seq1)
-    used_seq2 = [False] * len(seq2)
-    second_best_options = [[None for _ in range(len(seq2) + 1)] for _ in range(len(seq1) + 1)]
-
-    def get_best_non_conflicting_option(options, i, j):
-        """
-        Selects the best option that does not conflict with used_seq1 and used_seq2.
-        If there is a conflict, compare with second-best options.
-        """
-        best_option = None
-        second_best = None
-        for option in options:
-            cost, (prev_i, prev_j), used_i, used_j = option
-
-            # Check for conflicts
-            conflict = any(used_seq1[idx] for idx in used_i) or any(used_seq2[idx] for idx in used_j)
-
-            if not conflict:
-                if not best_option or (maximize_score and cost > best_option[0]) or (not maximize_score and cost < best_option[0]):
-                    second_best = best_option
-                    best_option = option
-                elif not second_best or (maximize_score and cost > second_best[0]) or (not maximize_score and cost < second_best[0]):
-                    second_best = option
-            else:
-                # Conflict exists, try to resolve by considering second-best alignment for conflicting element
-                conflict_score, conflict_traceback, conflict_used_i, conflict_used_j = traceback[prev_i][prev_j]
-                second_best_conflict = second_best_options[prev_i][prev_j]
-
-                if second_best_conflict:
-                    total_score_with_revert = second_best_conflict[0] + cost
-                    if not best_option or (maximize_score and total_score_with_revert > best_option[0]) or (not maximize_score and total_score_with_revert < best_option[0]):
-                        best_option = (total_score_with_revert, (prev_i, prev_j), used_i, used_j)
-                        second_best = option  # The current option becomes the second best
-                else:
-                    # No second best, this becomes the new second best
-                    if not second_best or (maximize_score and cost > second_best[0]) or (not maximize_score and cost < second_best[0]):
-                        second_best = option
-
-        return best_option, second_best
+    
+    # Finalized alignment positions
+    all_aligned_tuples = set()
 
     def add_alignment_option(i_range, j_range):
         """
@@ -144,109 +70,103 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
         align_tuple = (Ngram(seq1[i_start:i_end+1]).undo(), Ngram(seq2[j_start:j_end+1]).undo())
         align_cost = align_costs.get(align_tuple, default_gop)
         align_tuples.append(align_tuple)
-        
+        if (align_tuple, i_start, j_end, j_start, j_end) in all_aligned_tuples:
+            return
+
+        all_aligned_tuples.add((align_tuple, i_start, j_end, j_start, j_end))
+
         # Append the option to the options list
         lookahead = (j_end+1) > j
         if lookahead:
-            options.append((dp[i_start][j_end+1] + align_cost, (i_start, j_end+1), i_range, j_range))
+            options.append((dp[i_start][j_end+1] + align_cost, (i_start, j_end+1), tuple(i_range), tuple(j_range)))
         else:
-            options.append((dp[i_start][j_start] + align_cost, (i_start, j_start), i_range, j_range))
+            options.append((dp[i_start][j_start] + align_cost, (i_start, j_start), tuple(i_range), tuple(j_range)))
 
     # Fill DP table with advanced conflict resolution
     for i in range(1, len(seq1) + 1):
         for j in range(1, len(seq2) + 1):
             options = []
             align_tuples = []
-            
-            # TODO CURRENT TASKS
-            # simplify adding alignment options to function
-            # still need to add some lookaheads, like /pl/ in CA plorar is never compared with /ɟ͡ʝ/ in ES llorar
-            # I think some of the so-called lookaheads here might be spurious
 
             # Option 1: Align current one-to-one (seq1[i-1] with seq2[j-1])
             add_alignment_option((i-1, i), (j-1, j))
 
             # Option 2a: Align one-to-many (lookbehind: seq1[i-1] with seq2[j-2:j])
-            if j > 1:
+            if j > 1 and allow_complex:
                 add_alignment_option((i-1, i), (j-2, j))
 
             # Option 2b: Align one-to-many (lookahead: seq1[i-1] with seq2[j-1:j+1])
-            if j < len(seq2):
+            if j < len(seq2) and allow_complex:
                 add_alignment_option((i-1, i), (j-1, j+1))
 
             # Option 3a: Align many-to-one (lookbehind: seq1[i-2:i] with seq2[j-1])
-            if i > 1:
+            if i > 1 and allow_complex:
                 add_alignment_option((i-2, i), (j-1, j))
 
             # Option 3b: Align many-to-one (lookahead: seq1[i-1:i+1] with seq2[j-1])
-            if i < len(seq1):
+            if i < len(seq1) and allow_complex:
                 add_alignment_option((i-1, i+1), (j-1, j))
 
             # Option 4a: Align many-to-many (seq1[i-2:i] with seq2[j-2:j])
-            if i > 1 and j > 1:
+            if i > 1 and j > 1 and allow_complex:
                 add_alignment_option((i-1, i), (j-2, j))
 
             # Option 4b: Align many-to-many (seq1[i-2:i] with seq2[j-1:j+1])
-            if i > 1 and j < len(seq2):
+            if i > 1 and j < len(seq2) and allow_complex:
                 add_alignment_option((i-2, i), (j-1, j+1))
 
             # Option 4c: Align many-to-many (seq1[i-1:i+1] with seq2[j-2:j])
-            if i < len(seq1) and j > 1:
+            if i < len(seq1) and j > 1 and allow_complex:
                 add_alignment_option((i-1, i+1), (j-2, j))
 
             # Option 4d: Align many-to-many (seq1[i-1:i+1] with seq2[j-1:j+1])
-            if i > 1 and j < len(seq2):
+            if i > 1 and j < len(seq2) and allow_complex:
                 add_alignment_option((i-1, i+1), (j-1, j+1))
 
             # Option 5a: Align one-to-none (deletion from seq1)
             gap_tuple = (seq1[i-1], gap_ch)
             gap_cost = gap_costs.get(gap_tuple, default_gop)
-            options.append((dp[i-1][j] + gap_cost, (i-1, j), [i-1], []))
+            options.append((dp[i-1][j] + gap_cost, (i-1, j), (i-1,), ()))
 
             # Option 5b: Align many-to-none (lookbehind: seq1[i-2:i] aligned with gap in seq2)
-            if i > 1:
+            if i > 1 and allow_complex:
                 gap_tuple = (Ngram(seq1[i-2:i]).undo(), gap_ch)
                 gap_cost = gap_costs.get(gap_tuple, default_gop)
-                options.append((dp[i-2][j] + gap_cost, (i-2, j), [i-2, i-1], []))  # Track both i-2 and i-1
+                options.append((dp[i-2][j] + gap_cost, (i-2, j), (i-2, i-1), ()))  # Track both i-2 and i-1
 
             # Option 5c: Align many-to-none (lookahead: seq1[i-1:i+1] aligned with gap in seq2)
-            if i < len(seq1):
+            if i < len(seq1) and allow_complex:
                 gap_tuple = (Ngram(seq1[i-1:i+1]).undo(), gap_ch)
                 gap_cost = gap_costs.get(gap_tuple, default_gop)
-                options.append((dp[i-1][j] + gap_cost, (i-1, j), [i-1, i], []))  # Track both i-1 and i
+                options.append((dp[i-1][j] + gap_cost, (i-1, j), (i-1, i), ()))  # Track both i-1 and i
 
             # Option 6a: Align none-to-one (insertion into seq2)
             gap_tuple = (gap_ch, seq2[j-1])
             gap_cost = gap_costs.get(gap_tuple, default_gop)
-            options.append((dp[i][j-1] + gap_cost, (i, j-1), [], [j-1]))
+            options.append((dp[i][j-1] + gap_cost, (i, j-1), (), (j-1,)))
 
             # Option 6b: Align none-to-many (lookbehind: gap in seq1 aligned with seq2[j-2:j])
-            if j > 1:
+            if j > 1 and allow_complex:
                 gap_tuple = (gap_ch, Ngram(seq2[j-2:j]).undo())
                 gap_cost = gap_costs.get(gap_tuple, default_gop)
-                options.append((dp[i][j-2] + gap_cost, (i, j-2), [], [j-2, j-1]))  # Track both j-2 and j-1
+                options.append((dp[i][j-2] + gap_cost, (i, j-2), (), (j-2, j-1)))  # Track both j-2 and j-1
 
             # Option 6c: Align none-to-many (lookahead: gap in seq1 aligned with seq2[j-1:j+1])
-            if j < len(seq2):
+            if j < len(seq2) and allow_complex:
                 gap_tuple = (gap_ch, Ngram(seq2[j-1:j+1]).undo())
                 gap_cost = gap_costs.get(gap_tuple, default_gop)
-                options.append((dp[i][j-1] + gap_cost, (i, j-1), [], [j-1, j]))  # Track both j-1 and j
+                options.append((dp[i][j-1] + gap_cost, (i, j-1), (), (j-1, j)))  # Track both j-1 and j
 
-            if seq2 == ['<#', 'ɟ͡ʝ', 'o', 'ɾ', 'ˈa', 'ɾ', '#>']:
-                if i == 2 and j == 2:
-                    breakpoint()
-
+            # Sort options by cost
+            options.sort(key=lambda x: x[0], reverse=maximize_score)
+        
             # Find the best non-conflicting option and its second-best alternative
-            best_option, second_best = get_best_non_conflicting_option(options, i, j)
+            if maximize_score:
+                best_option = max(options, key=lambda x: x[0])
+            else:
+                best_option = min(options, key=lambda x: x[0])
             dp[i][j], (prev_i, prev_j), used_i, used_j = best_option
             traceback[i][j] = (prev_i, prev_j, used_i, used_j)
-            second_best_options[i][j] = second_best
-
-            # Mark elements as used
-            for idx in used_i:
-                used_seq1[idx] = True
-            for idx in used_j:
-                used_seq2[idx] = True
 
     # Traceback to find the alignment
     aligned_seq1 = []
@@ -276,9 +196,24 @@ def align_sequences(seq1, seq2, align_costs, gap_costs, gap_ch, default_gop, max
     aligned_seq1 = aligned_seq1[::-1]
     aligned_seq2 = aligned_seq2[::-1]
     alignment = list(zip(aligned_seq1, aligned_seq2))
+    
+    # Resolve conflicting/overlapping alignments in complex alignments
+    if allow_complex:
+        all_costs = {}
+        all_costs.update(align_costs)
+        all_costs.update(gap_costs)
+        alignment = remove_overlapping_ngrams(
+            alignment,
+            ngram_score_func=lambda x: all_costs.get(x, default_gop),
+            maximize_score=maximize_score,
+            aligned=True,
+        )
+
+        # # Call the conflict resolution function on the alignment
+        # alignment = resolve_conflicts(alignment, seq1, seq2, align_costs, default_gop, gap_ch)
+
 
     return alignment, dp[len(seq1)][len(seq2)]
-
 
 
 def compatible_segments(seg1, seg2):
@@ -737,9 +672,7 @@ class Alignment:
         #     combined_gap_costs,
         #     comparison_list=list(combined_gap_costs.values())+[self.gop]
         # )
-        # bigram_scores = default_dict(bigram_scores, lmbda=self.gop) # TODO this should actually just be whatever the custom cost function returns
-
-        complex_alignment = align_sequences_with_backtracking(
+        complex_alignment, complex_alignment_score = align_sequences(
             seq1=padded1,
             seq2=padded2,
             align_costs=combined_align_costs,
@@ -747,8 +680,27 @@ class Alignment:
             gap_ch=self.gap_ch,
             default_gop=self.gop,
             maximize_score=True,
+            allow_complex=True
         )
-        complex_alignment = self.compact_boundary_gaps(complex_alignment[0])
+        unigram_alignment, unigram_alignment_score = align_sequences(
+            seq1=padded1,
+            seq2=padded2,
+            align_costs=combined_align_costs,
+            gap_costs=combined_gap_costs,
+            gap_ch=self.gap_ch,
+            default_gop=self.gop,
+            maximize_score=True,
+            allow_complex=False
+        )
+        complex_alignment = self.resolve_complex_alignment(
+            complex_alignment,
+            unigram_alignment,
+            combined_align_costs,
+            combined_gap_costs,
+            #alignment_cost_func,
+            #gap_cost_func,
+        )
+        complex_alignment = self.compact_boundary_gaps(complex_alignment)
         print(visual_align(complex_alignment))
 
         # TODO current tasks
@@ -776,8 +728,8 @@ class Alignment:
                                   unigram_alignment,
                                   align_costs,
                                   gap_costs,
-                                  alignment_cost_func,
-                                  gap_cost_func,
+                                  #alignment_cost_func,
+                                  #gap_cost_func,
                                   ):
         # Iterate through complex alignment and identify alignments which don't match the unigram alignment
         mismatch_indices = unigram_complex_alignment_mismatches(
@@ -797,8 +749,8 @@ class Alignment:
                 complex_ngrams,
                 align_costs,
                 gap_costs,
-                alignment_cost_func,
-                gap_cost_func,
+                #alignment_cost_func,
+                #gap_cost_func,
             )
         # Extract complex alignment from resolved complex alignment dict
         complex_alignment_dict = [complex_alignment_dict[i] for i in sorted(list(complex_alignment_dict.keys()))]
@@ -808,8 +760,8 @@ class Alignment:
                                          complex_alignment,
                                          align_costs,
                                          gap_costs,
-                                         alignment_cost_func,
-                                         gap_cost_func,
+                                         #alignment_cost_func,
+                                         #gap_cost_func,
                                          **kwargs,
                                          ):
         # Get the equivalent unigram segment subsequence
@@ -822,17 +774,16 @@ class Alignment:
             equivalent_unigram_alignment.extend(to_unigram_alignment(complex_ngram))
 
         # Recompute unigram alignment of this subsequence only
-        unigram_alignment_costs = alignment_cost_func(unigram_subseq1, unigram_subseq2)
-        unigram_gap_align_costs = gap_cost_func(unigram_subseq1, unigram_subseq2)
-        unigram_alignment = best_alignment(
-            SEQUENCE_1=unigram_subseq1,
-            SEQUENCE_2=unigram_subseq2,
-            SCORES_DICT=unigram_alignment_costs,
-            GAP_SCORE_DICT=unigram_gap_align_costs,
-            DEFAULT_GAP_SCORE=self.gop,
-            GAP_CHARACTER=self.gap_ch,
-            N_BEST=1
-        )[0][0]
+        unigram_alignment, unigram_alignment_cost = align_sequences(
+            seq1=unigram_subseq1,
+            seq2=unigram_subseq2,
+            align_costs=align_costs,
+            gap_costs=gap_costs,
+            gap_ch=self.gap_ch,
+            default_gop=self.gop,
+            maximize_score=True,
+            allow_complex=False
+        )
         compacted_unigram_alignment = self.compact_boundary_gaps(unigram_alignment)
 
         def score_alignment(alignment):
@@ -864,8 +815,8 @@ class Alignment:
                 unigram_alignment,
                 align_costs,
                 gap_costs,
-                alignment_cost_func,
-                gap_cost_func,
+                #alignment_cost_func,
+                #gap_cost_func,
             )
         else:
             # Else: Unigram alignment of subsequence differs from complex alignment
@@ -874,11 +825,12 @@ class Alignment:
             unigram_score = score_alignment(compacted_unigram_alignment)
             complex_score = score_alignment(complex_alignment)
             # Simplest solution would be to return the unigram alignment if this is better, else the complex alignment
-            breakpoint()
-            if unigram_score >= complex_score:
+            if unigram_score > complex_score:
                 return compacted_unigram_alignment
-            else:
+            elif complex_score > unigram_score:
                 return complex_alignment
+            else:
+                breakpoint()
 
     def compact_boundary_gaps(self, complex_alignment):
         # Add compacting of boundary gap alignment in situations like:
