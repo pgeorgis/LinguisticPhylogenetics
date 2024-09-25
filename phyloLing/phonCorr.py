@@ -6,6 +6,7 @@ from functools import lru_cache
 from itertools import product
 from statistics import mean, stdev
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
+from nltk.translate import Alignment as IBMAlignment
 import numpy as np
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
@@ -38,7 +39,7 @@ def fit_em_ibm(corpus, iterations=10, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
         translation_table[seg1][gap_ch] = translation_table[seg1].get(None, 0)
         if None in translation_table[seg1]:
             del translation_table[seg1][None]
-    return translation_table
+    return translation_table, em_ibm
 
 
 def sort_wordlist(wordlist):
@@ -411,6 +412,7 @@ class PhonCorrelator:
 
     def align_wordlist(self,
                        wordlist,
+                       align_model,
                        added_penalty_dict=None,
                        complex_ngrams=False,
                        ngram_size=1,
@@ -420,16 +422,43 @@ class PhonCorrelator:
                        # phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
+        corpus = [
+            AlignedSent(
+                pad_sequence(word1.segments, pad_ch=self.pad_ch, pad_n=1),
+                pad_sequence(word2.segments, pad_ch=self.pad_ch, pad_n=1)
+            )
+            for word1, word2 in wordlist
+        ]
+        align_model.align_all(corpus)
+        # TODO CURRENT TASKS
+        # 2) convert to Alignment objects
+        
+        def postprocess_boundary_alignments(aligned_pair):
+            """Correct alignment of a start boundary with an end boundary."""
+            seq1_len = len(aligned_pair.words)
+            seq2_len = len(aligned_pair.mots)
+            alignment = list(aligned_pair.alignment)
+            if (0, seq2_len-1) in alignment:
+                idx = alignment.index((0, seq2_len-1))
+                alignment[idx] = (0, 0)
+            elif (seq1_len-1, 0) in alignment:
+                idx = alignment.index((seq1_len-1, 0))
+                alignment[idx] = (0, 0)
+            alignment.sort(key=lambda x: (x[0], x[-1]))
+            return alignment
+        
         alignment_list = [
             Alignment(
-                seq1=word1,
-                seq2=word2,
+                seq1=aligned_pair.words,
+                seq2=aligned_pair.mots,
+                alignment=postprocess_boundary_alignments(aligned_pair),
                 added_penalty_dict=added_penalty_dict,
                 gap_ch=self.gap_ch,
                 **kwargs
             )
-            for word1, word2 in wordlist
+            for aligned_pair in corpus
         ]  # TODO: tuple would be better than list if possible
+        breakpoint()
 
         # Add padding before compacting
         if pad:
@@ -483,7 +512,7 @@ class PhonCorrelator:
         all_ngrams = set(Ngram(ngram).ngram for ngram in all_ngrams)  # standardize forms
         return all_ngrams
 
-    def radial_em(self,
+    def radial_em(self, # TODO rename
                   sample,
                   normalize=True,
                   pad=True,
@@ -520,14 +549,15 @@ class PhonCorrelator:
         }
         # Combine model results
         for model in em_fit:
-            for key, values in em_fit[model].items():
+            translation_table, fit_model = em_fit[model]
+            for key, values in translation_table.items():
                 corr_dict[key].update(values)
 
         if normalize:
             for seg1 in corr_dict:
                 corr_dict[seg1] = normalize_dict(corr_dict[seg1])
 
-        return corr_dict
+        return corr_dict, em_fit
 
     def joint_probs(self, conditional_counts, l1=None, l2=None):
         """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
@@ -747,8 +777,8 @@ class PhonCorrelator:
             reversed_synonym_sample = [(pair[-1], pair[0]) for pair in synonym_sample]
 
             # First step: perform EM algorithm and fit IBM model 1
-            em_synonyms1 = self.radial_em(synonym_sample)
-            em_synonyms2 = self.radial_em(reversed_synonym_sample)
+            em_synonyms1, fit_em1 = self.radial_em(synonym_sample)
+            em_synonyms2, fit_em2 = self.radial_em(reversed_synonym_sample)
             pmi_step1 = [self.phoneme_pmi(conditional_counts=em_synonyms1,
                                           l1=self.lang1,
                                           l2=self.lang2,
@@ -788,8 +818,10 @@ class PhonCorrelator:
                     qualifying_words[iteration - 1],
                     added_penalty_dict=PMI_iterations[iteration - 1],
                     complex_ngrams=self.complex_ngrams,
-                    pad=True
+                    pad=True,
+                    align_model=fit_em1[(1, 1)][-1]
                 )
+                # TODO maybe only unigram em ibm is needed
 
                 # Add these alignments into running pool of alignments
                 if cumulative:

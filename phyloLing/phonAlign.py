@@ -1,7 +1,9 @@
 import importlib
 import logging
 from collections.abc import Iterable
+from collections import defaultdict
 from math import inf, log
+from statistics import mean
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
@@ -97,6 +99,7 @@ AlignmentCost = Distance(
 class Alignment:
     def __init__(self,
                  seq1, seq2,
+                 alignment=None,
                  lang1=None,
                  lang2=None,
                  cost_func=AlignmentCost,
@@ -113,6 +116,7 @@ class Alignment:
         Args:
             seq1 (phyloLing.Word or str): first phone sequence
             seq2 (phyloLing.Word or str): second phone sequence
+            alignment (list, optional): list of tuples indicating predetermined alignment
             lang1 (phyloLing.Language, optional): Language of seq1. Defaults to None.
             lang2 (phyloLing.Language, optional): Language of seq2. Defaults to None.
             cost_func (Distance, optional): Cost function used for minimizing overall alignment cost. Defaults to AlignmentPhoneSim.
@@ -127,8 +131,8 @@ class Alignment:
         self.validate_args(seq1, seq2, lang1, lang2, cost_func)
 
         # Prepare the input sequences for alignment
-        self.seq1, self.word1 = self.prepare_seq(seq1, lang1)
-        self.seq2, self.word2 = self.prepare_seq(seq2, lang2)
+        self.seq1 = self.prepare_seq(seq1, lang1)
+        self.seq2 = self.prepare_seq(seq2, lang2)
 
         # Designate alignment parameters
         self.gap_ch = gap_ch
@@ -139,15 +143,21 @@ class Alignment:
         self.kwargs = kwargs
 
         # Perform alignment
-        self.alignment_costs, self.n_best = self.align(n_best)
-        self.alignment = self.n_best[0][0][:]
+        if not alignment:
+            _, self.n_best = self.align(n_best)
+            self.alignment = self.n_best[0][0][:]
+            self.cost = self.n_best[0][-1]
+        else:
+            self.imported_alignment = alignment
+            self.alignment = self.import_alignment(alignment)
+            self.cost = None # TODO evaluate later if needed
 
         # Save length and cost of single best alignment
-        self.cost = self.n_best[0][-1]
         self.length = len(self.alignment)
         self.original_length = self.length
 
         # Map aligned pairs to respective sequence indices
+        self.padded = self.is_padded()
         self.seq_map = self.map_to_seqs()
 
         # Phonological environment alignment
@@ -161,20 +171,115 @@ class Alignment:
         """Verifies that all input arguments are of the correct types"""
         phyloLing = importlib.import_module('phyloLing')
         validate_class((cost_func,), (Distance,))
-        validate_class((seq1,), ((phyloLing.Word, str),))
-        validate_class((seq2,), ((phyloLing.Word, str),))
+        validate_class((seq1,), ((phyloLing.Word, str, list),))
+        validate_class((seq2,), ((phyloLing.Word, str, list),))
         for lang in (lang1, lang2):
             if lang:  # skip if None
                 validate_class((lang,), (phyloLing.Language,))
 
     def prepare_seq(self, seq, lang):
         phyloLing = importlib.import_module('phyloLing')
+        if isinstance(seq, list):
+            return seq
         if isinstance(seq, phyloLing.Word):
-            word1 = seq
+            word = seq
         elif isinstance(seq, str):
-            word1 = phyloLing.Word(seq, language=lang)
-
-        return word1.segments, word1
+            word = phyloLing.Word(seq, language=lang)
+        return word.segments
+    
+    def import_alignment(self, alignment, remove_non_sequential_complex_alignments=True):
+        """Import and pre-specified alignment of seq1 and seq2."""
+        # Initialize alignment dicts
+        aligned_seq1 = defaultdict(lambda:[])
+        aligned_seq2 = defaultdict(lambda:[])
+        
+        # Fill in aligned dicts
+        for idx1, idx2 in alignment:
+            aligned_seq1[idx1].append(idx2)
+            aligned_seq2[idx2].append(idx1)
+        
+        # Add gaps
+        for idx1, _ in enumerate(self.seq1):
+            if idx1 not in aligned_seq1:
+                aligned_seq1[idx1].append(None)
+        for idx2, _ in enumerate(self.seq2):
+            if idx2 not in aligned_seq2:
+                aligned_seq2[idx2].append(None)
+        
+        if remove_non_sequential_complex_alignments:
+            """IBM alignment can produce alignments with units aligned in multiple places, e.g.
+            [(0, 0), (1, 1), (2, 9), (3, 3), (4, 4), (5, 7), (6, 4), (7, 9), (8, 10)]
+            where idx 9 in seq2 is aligned to both idx 2 and idx 7 in seq1
+            
+            Disallow such complex/double alignments if they are not consecutive
+            """
+            for j, i_s in aligned_seq2.items():
+                i_s.sort()
+                if len(i_s) > 1:
+                    i_i = 0
+                    while i_i < len(i_s)-1:
+                        i = i_s[i_i]
+                        i_next = i_s[i_i + 1]
+                        if abs(i - i_next) > 1:
+                            anchor = mean(i_s)
+                            
+                            # Find which of the two is more distant from anchor
+                            more_distant_i = max(i_next, i, key=lambda x: abs(x - anchor))
+                            aligned_seq2[j].remove(more_distant_i)
+                            if len(aligned_seq1[more_distant_i]) > 1:
+                                aligned_seq1[more_distant_i].remove(j)
+                            else:
+                                aligned_seq1[more_distant_i] = [None]
+                        i_i += 1
+        
+        # Alignment
+        aligned_units = []
+        aligned_units1 = set()
+        aligned_units2 = set()
+        last_j = None
+        for i in range(max(len(self.seq1), len(self.seq2))):
+            if i in aligned_seq1:
+                unit1 = self.seq1[i]
+                if i == 0 or (last_j is not None and last_j not in aligned_seq1[i]):
+                    aligned_units.append([[[unit1]], [i]])
+                elif i > 0 and (last_j is not None and last_j in aligned_seq1[i]):
+                    aligned_units[-1][0][0].append(unit1)
+                aligned_units1.add(i)
+            for j in aligned_seq1[i]:
+                if len(aligned_units[-1][0]) == 1:
+                    aligned_units[-1][0].append([])
+                if j is not None:
+                    if last_j != j:
+                        aligned_unit2 = self.seq2[j]
+                        aligned_units[-1][0][-1].append(aligned_unit2)
+                        aligned_units[-1][-1].append(j)
+                        aligned_units2.add(j)
+                        last_j = j
+                else:
+                    aligned_units[-1][0][-1].append(self.gap_ch)
+                    #aligned_units.append((unit1, self.gap_ch, (i, )))
+            if i not in aligned_units1 and i < len(self.seq1):
+                breakpoint()
+        for j in range(len(self.seq2)):
+            if j not in aligned_units2:
+                unit2 = self.seq2[j]
+                aligned_units.append([[[self.gap_ch], [unit2]], [j]])
+        aligned_units.sort(key=lambda x: (mean([min(x[-1]), max(x[-1])]), x[0][0][0], x[0][0][-1]))
+        aligned_units = [(Ngram(unit[0][0]).undo(), Ngram(unit[0][-1]).undo()) for unit in aligned_units]
+        
+        # Move boundary alignments to edges
+        start_boundary = self.start_boundary()
+        end_boundary = self.end_boundary()
+        if start_boundary in aligned_units and aligned_units.index(start_boundary) != 0:
+            aligned_units.remove(start_boundary)
+            aligned_units.insert(0, start_boundary)
+        if end_boundary in aligned_units and aligned_units.index(end_boundary) != len(aligned_units)-1:
+            aligned_units.remove(end_boundary)
+            aligned_units.append(end_boundary)
+        
+        print(visual_align(aligned_units))
+        
+        return aligned_units
 
     def calculate_alignment_costs(self, cost_func):
         """Calculates pairwise alignment costs for phone sequences using a specified cost function.
@@ -423,19 +528,32 @@ class Alignment:
             pad_n = max(0, ngram_size - 1)
         self.alignment = [self.start_boundary()] * pad_n + alignment + [self.end_boundary()] * pad_n
         self.update()
+        self.padded = True
         return self.alignment
 
-    def remove_padding(self):
+    def remove_padding(self, no_update=False):
         start_pad_i = 0
         start_pad = self.start_boundary()
         while self.alignment[start_pad_i] == start_pad:
             start_pad_i += 1
-        end_pad_i = len(self.alignment) - 1
+        align_length = len(self.alignment)
+        end_pad_i = align_length - 1
         end_pad = self.end_boundary()
         while self.alignment[end_pad_i] == end_pad:
             end_pad_i -= 1
         self.alignment = self.alignment[start_pad_i:end_pad_i + 1]
-        self.update()
+        self.padded = False
+        # If the input sequence was padded, also modify self.seq1, and self.seq2
+        if self.is_padded():
+            n_end_pad = align_length - 1 - end_pad_i
+            if n_end_pad > 0:
+                self.seq1 = self.seq1[start_pad_i:-n_end_pad]
+                self.seq2 = self.seq2[start_pad_i:-n_end_pad]
+            else:
+                self.seq1 = self.seq1[start_pad_i:]
+                self.seq2 = self.seq2[start_pad_i:]
+        if not no_update:
+            self.update()
     
     def is_padded(self):
         return Ngram(self.seq1[0]).is_boundary(self.pad_ch)
@@ -447,6 +565,11 @@ class Alignment:
         map1 = {0:0, 1:1, 2:2, 3:3, 4:4}
         map2 = {0:0, 1:1, 2:None, 3:3, 4:None}
         """
+        # Remove extra padding
+        if self.padded:
+            # Set no_update=True to avoid a recursion error, because self.update() also calls this function
+            self.remove_padding(no_update=True)
+        
         # Update current alignment length, in case it was padded or otherwise modified
         self.length = len(self.alignment)
 
@@ -554,6 +677,7 @@ class Alignment:
             assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
             assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
         except AssertionError as exc:
+            breakpoint()
             raise AssertionError(f"Error re-mapping aligned sequences: {self.alignment}") from exc
 
         return map1, map2
@@ -612,8 +736,6 @@ class ReversedAlignment(Alignment):
         validate_class((alignment,), (Alignment,))
         self.seq1 = alignment.seq2
         self.seq2 = alignment.seq1
-        self.word1 = alignment.word2
-        self.word2 = alignment.word1
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.cost_func = alignment.cost_func
