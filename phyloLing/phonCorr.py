@@ -424,14 +424,12 @@ class PhonCorrelator:
         """Returns a list of the aligned segments from the wordlists"""
         corpus = [
             AlignedSent(
-                pad_sequence(word1.segments, pad_ch=self.pad_ch, pad_n=1),
-                pad_sequence(word2.segments, pad_ch=self.pad_ch, pad_n=1)
+                pad_sequence(word1.segments, pad_ch=self.pad_ch, pad_n=1) if pad else word1.segments,
+                pad_sequence(word2.segments, pad_ch=self.pad_ch, pad_n=1) if pad else word2.segments
             )
             for word1, word2 in wordlist
         ]
         align_model.align_all(corpus)
-        # TODO CURRENT TASKS
-        # 2) convert to Alignment objects
         
         def postprocess_boundary_alignments(aligned_pair):
             """Correct alignment of a start boundary with an end boundary."""
@@ -451,7 +449,7 @@ class PhonCorrelator:
             Alignment(
                 seq1=aligned_pair.words,
                 seq2=aligned_pair.mots,
-                alignment=postprocess_boundary_alignments(aligned_pair),
+                alignment=postprocess_boundary_alignments(aligned_pair) if pad else aligned_pair.alignment,
                 added_penalty_dict=added_penalty_dict,
                 gap_ch=self.gap_ch,
                 **kwargs
