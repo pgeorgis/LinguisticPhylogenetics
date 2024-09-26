@@ -195,8 +195,10 @@ class Alignment:
         
         # Fill in aligned dicts
         for idx1, idx2 in alignment:
-            aligned_seq1[idx1].append(idx2)
-            aligned_seq2[idx2].append(idx1)
+            if idx1 is not None:
+                aligned_seq1[idx1].append(idx2)
+            if idx2 is not None:
+                aligned_seq2[idx2].append(idx1)
         
         # Add gaps
         for idx1, _ in enumerate(self.seq1):
@@ -231,7 +233,7 @@ class Alignment:
                             else:
                                 aligned_seq1[more_distant_i] = [None]
                         i_i += 1
-        
+
         # Alignment
         aligned_units = []
         aligned_units1 = set()
@@ -239,11 +241,14 @@ class Alignment:
         last_j = None
         for i in range(max(len(self.seq1), len(self.seq2))):
             if i in aligned_seq1:
+
                 unit1 = self.seq1[i]
                 if i == 0 or (last_j is not None and last_j not in aligned_seq1[i]):
                     aligned_units.append([[[unit1]], [i]])
                 elif i > 0 and (last_j is not None and last_j in aligned_seq1[i]):
                     aligned_units[-1][0][0].append(unit1)
+                elif i > 0 and (last_j is None and last_j in aligned_seq1[i]):
+                    aligned_units.append([[[unit1]], [i]])
                 aligned_units1.add(i)
             for j in aligned_seq1[i]:
                 if len(aligned_units[-1][0]) == 1:
@@ -276,8 +281,6 @@ class Alignment:
         if end_boundary in aligned_units and aligned_units.index(end_boundary) != len(aligned_units)-1:
             aligned_units.remove(end_boundary)
             aligned_units.append(end_boundary)
-        
-        print(visual_align(aligned_units))
         
         return aligned_units
 
@@ -677,7 +680,6 @@ class Alignment:
             assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
             assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
         except AssertionError as exc:
-            breakpoint()
             raise AssertionError(f"Error re-mapping aligned sequences: {self.alignment}") from exc
 
         return map1, map2
