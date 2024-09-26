@@ -138,6 +138,8 @@ class Alignment:
         self.gap_ch = gap_ch
         self.gop = gop
         self.pad_ch = pad_ch
+        self.start_boundary_token = f'{START_PAD_CH}{self.pad_ch}'
+        self.end_boundary_token = f'{self.pad_ch}{END_PAD_CH}'
         self.cost_func = cost_func
         self.added_penalty_dict = added_penalty_dict
         self.kwargs = kwargs
@@ -273,14 +275,16 @@ class Alignment:
         aligned_units = [(Ngram(unit[0][0]).undo(), Ngram(unit[0][-1]).undo()) for unit in aligned_units]
         
         # Move boundary alignments to edges
-        start_boundary = self.start_boundary()
-        end_boundary = self.end_boundary()
-        if start_boundary in aligned_units and aligned_units.index(start_boundary) != 0:
-            aligned_units.remove(start_boundary)
-            aligned_units.insert(0, start_boundary)
-        if end_boundary in aligned_units and aligned_units.index(end_boundary) != len(aligned_units)-1:
-            aligned_units.remove(end_boundary)
-            aligned_units.append(end_boundary)
+        start_boundaries = [self.start_boundary()] + self.start_boundary_gaps()
+        end_boundaries = [self.end_boundary()] + self.end_boundary_gaps()
+        for start_boundary in start_boundaries:
+            if start_boundary in aligned_units and aligned_units.index(start_boundary) != 0:
+                aligned_units.remove(start_boundary)
+                aligned_units.insert(0, start_boundary)
+        for end_boundary in end_boundaries:
+            if end_boundary in aligned_units and aligned_units.index(end_boundary) != len(aligned_units)-1:
+                aligned_units.remove(end_boundary)
+                aligned_units.append(end_boundary)
         
         return aligned_units
 
@@ -515,13 +519,21 @@ class Alignment:
             #logger.warning("PMI is equal, conflict resolution not implemented.")
             return None
 
-    def start_boundary(self):
+    def start_boundary(self, size=2):
         # ('<#', '<#')
-        return (f'{START_PAD_CH}{self.pad_ch}', f'{START_PAD_CH}{self.pad_ch}')
+        return tuple([self.start_boundary_token]*size)
 
-    def end_boundary(self):
+    def end_boundary(self, size=2):
         # ('#>', '#>')
-        return (f'{self.pad_ch}{END_PAD_CH}', f'{self.pad_ch}{END_PAD_CH}')
+        return tuple([self.end_boundary_token]*size)
+    
+    def start_boundary_gaps(self):
+        # ('<#', '-') and ('-', '<#')
+        return [(self.start_boundary_token, self.gap_ch), (self.gap_ch, self.start_boundary_token)]
+
+    def end_boundary_gaps(self):
+        # ('#>', '-') and ('-', '#>')
+        return [(self.end_boundary_token, self.gap_ch), (self.gap_ch, self.end_boundary_token)]
 
     def pad(self, ngram_size, alignment=None, pad_ch=PAD_CH_DEFAULT, pad_n=None):
         self.pad_ch = pad_ch
@@ -535,14 +547,18 @@ class Alignment:
         return self.alignment
 
     def remove_padding(self, no_update=False):
+        """Removes non-complex pad ngrams from beginning and end of alignment.
+        Removes both fully boundary alignments ('<#', '<#') and ('#>', '#>')
+        as well as boundary gap alignments, e.f. ('<#', '-') and ('-', '#>')
+        """
         start_pad_i = 0
-        start_pad = self.start_boundary()
-        while self.alignment[start_pad_i] == start_pad:
+        start_pad = [self.start_boundary()] + self.start_boundary_gaps()
+        while self.alignment[start_pad_i] in start_pad:
             start_pad_i += 1
         align_length = len(self.alignment)
         end_pad_i = align_length - 1
-        end_pad = self.end_boundary()
-        while self.alignment[end_pad_i] == end_pad:
+        end_pad = [self.end_boundary()] + self.end_boundary_gaps()
+        while self.alignment[end_pad_i] in end_pad:
             end_pad_i -= 1
         self.alignment = self.alignment[start_pad_i:end_pad_i + 1]
         self.padded = False
@@ -550,11 +566,11 @@ class Alignment:
         if self.is_padded():
             n_end_pad = align_length - 1 - end_pad_i
             if n_end_pad > 0:
-                self.seq1 = self.seq1[start_pad_i:-n_end_pad]
-                self.seq2 = self.seq2[start_pad_i:-n_end_pad]
+                self.seq1 = self.seq1[min(start_pad_i, 1):-min(n_end_pad, 1)]
+                self.seq2 = self.seq2[min(start_pad_i, 1):-min(n_end_pad, 1)]
             else:
-                self.seq1 = self.seq1[start_pad_i:]
-                self.seq2 = self.seq2[start_pad_i:]
+                self.seq1 = self.seq1[min(start_pad_i, 1):]
+                self.seq2 = self.seq2[min(start_pad_i, 1):]
         if not no_update:
             self.update()
     
