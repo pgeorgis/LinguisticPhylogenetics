@@ -497,13 +497,13 @@ class PhonCorrelator:
                   pad_n=1,
                   phon_env=False, # TODO add
                   ibm_model=2,
+                  ngram_sizes=(1,) # TODO formerly (1, 2)
                   ):
         """Fits EM IBM1 models on pairs of unigrams and bigrams and aggregates the translation tables."""
         corr_dict = defaultdict(lambda: defaultdict(lambda: 0))
         
         # Create "corpora" consisting of words segmented into unigrams or bigrams
         corpora = defaultdict(lambda: [])
-        ngram_sizes = (1, 2)
         for word1, word2 in sample:
             segs1, segs2 = word1.segments, word2.segments
             # Optionally add phon env
@@ -772,7 +772,7 @@ class PhonCorrelator:
             #while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0, iteration - 5), iteration)]):
             while iteration < max_iterations:
                 iteration += 1
-                self.logger.info(f"Starting sample {key}, iteration {iteration}")
+                self.logger.info(f"Starting sample {seed_i}, iteration {iteration}")
                 
                 # First step: perform EM algorithm and fit IBM model 1 on the set of qualifying word pairs
                 # In the first iteration the entire synonym sample is considered 
