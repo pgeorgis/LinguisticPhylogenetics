@@ -4,6 +4,7 @@ from collections.abc import Iterable
 from collections import defaultdict
 from itertools import zip_longest
 from math import inf, log
+import numpy as np
 from statistics import mean
 import sys
 
@@ -23,6 +24,115 @@ from utils.utils import validate_class, rescale_dict_values, default_dict, keywi
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
+
+
+
+def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap_ch=GAP_CH_DEFAULT, maximize_score=False):
+    """
+    Align two sequences with a modified Needleman-Wunsch algorithm, allowing for flexible alignments.
+    
+    Args:
+        seq1: list of elements in sequence 1.
+        seq2: list of elements in sequence 2.
+        align_cost: Dictionary where the keys are tuples of sub-sequences to align, 
+                    and the values are the associated cost.
+                    For example: align_cost[(('A',), ('G', 'C'))] gives the cost of aligning 'A' with 'GC'.
+        gap_cost: Dictionary where the keys are tuples representing gaps and sub-sequences,
+                  and the values are the associated gap cost.
+                  For example: gap_cost[('A', None)] gives the cost of aligning 'A' to a gap.
+                  
+    Returns:
+        alignment_score: The optimal alignment score.
+        aligned_seq1, aligned_seq2: The two aligned sequences (as lists).
+    """
+    n = len(seq1)
+    m = len(seq2)
+    worst_score = -inf if maximize_score else inf
+
+    # Initialize score and traceback matrices
+    dp = np.zeros((n + 1, m + 1))
+    traceback = np.empty((n + 1, m + 1), dtype=object)
+    
+    def seq2ngram(seq):
+        return Ngram(seq).undo()
+    
+    def score_is_better(score1, score2):
+        if maximize_score:
+            if score1 > score2:
+                return True
+            return False
+        return score1 < score2
+    
+    # Fill first row and column with gap penalties
+    for i in range(1, n + 1):
+        dp[i][0] = dp[i-1][0] + gap_cost.get((seq2ngram(seq1[:i]), gap_ch), default_gop)
+        traceback[i][0] = 1  # Indicates seq1 gaps
+    for j in range(1, m + 1):
+        dp[0][j] = dp[0][j-1] + gap_cost.get((gap_ch, seq2ngram(seq2[:j])), default_gop)
+        traceback[0][j] = 2  # Indicates seq2 gaps
+    
+    # Fill the dp matrix
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            best_score = worst_score
+            best_move = None
+            
+            # Align one unit from seq1 to one or more from seq2
+            for k in range(1, i + 1):
+                for l in range(1, j + 1):
+                    cost = align_cost.get((seq2ngram(seq1[i-k:i]), seq2ngram(seq2[j-l:j])), worst_score)
+                    score = dp[i-k][j-l] + cost
+                    if score_is_better(score, best_score):
+                        best_score = score
+                        best_move = (k, l)
+            
+            # Align seq1 to a gap
+            for k in range(1, i + 1):
+                cost = gap_cost.get((seq2ngram(seq1[i-k:i]), gap_ch), worst_score)
+                score = dp[i-k][j] + cost
+                if score_is_better(score, best_score):
+                    best_score = score
+                    best_move = (k, 0)
+            
+            # Align seq2 to a gap
+            for l in range(1, j + 1):
+                cost = gap_cost.get((gap_ch, seq2ngram(seq2[j-l:j])), worst_score)
+                score = dp[i][j-l] + cost
+                if score_is_better(score, best_score):
+                    best_score = score
+                    best_move = (0, l)
+            
+            dp[i][j] = best_score
+            traceback[i][j] = best_move  # Store the move in traceback
+    
+    # Backtrack to find the alignment
+    aligned_seq1, aligned_seq2 = [], []
+    i, j = n, m
+    while i > 0 or j > 0:
+        move = traceback[i][j]
+        if move[0] > 0 and move[1] > 0:
+            # Align subsequences of both seq1 and seq2
+            aligned_seq1.append(seq2ngram(seq1[i-move[0]:i]))
+            aligned_seq2.append(seq2ngram(seq2[j-move[1]:j]))
+            i -= move[0]
+            j -= move[1]
+        elif move[0] > 0:
+            # Align subsequence of seq1 to a gap
+            aligned_seq1.append(seq2ngram(seq1[i-move[0]:i]))
+            aligned_seq2.append(seq2ngram([gap_ch] * move[0]))
+            i -= move[0]
+        else:
+            # Align subsequence of seq2 to a gap
+            aligned_seq1.append(seq2ngram([gap_ch] * move[1]))
+            aligned_seq2.append(seq2ngram(seq2[j-move[1]:j]))
+            j -= move[1]
+    
+    # Reverse the aligned sequences to be in correct order
+    aligned_seq1.reverse()
+    aligned_seq2.reverse()
+    alignment = list(zip(aligned_seq1, aligned_seq2))
+
+    return dp[n][m], alignment
 
 
 def align_sequences(seq1, seq2,
@@ -672,35 +782,16 @@ class Alignment:
         #     combined_gap_costs,
         #     comparison_list=list(combined_gap_costs.values())+[self.gop]
         # )
-        complex_alignment, complex_alignment_score = align_sequences(
-            seq1=padded1,
+        complex_alignment_score, complex_alignment = needleman_wunsch_extended(
+            seq1=padded1, 
             seq2=padded2,
-            align_costs=combined_align_costs,
-            gap_costs=combined_gap_costs,
-            gap_ch=self.gap_ch,
+            align_cost=combined_align_costs,
+            gap_cost=combined_gap_costs,
+            gap_ch=GAP_CH_DEFAULT,
             default_gop=self.gop,
             maximize_score=True,
-            allow_complex=True
         )
-        unigram_alignment, unigram_alignment_score = align_sequences(
-            seq1=padded1,
-            seq2=padded2,
-            align_costs=combined_align_costs,
-            gap_costs=combined_gap_costs,
-            gap_ch=self.gap_ch,
-            default_gop=self.gop,
-            maximize_score=True,
-            allow_complex=False
-        )
-        complex_alignment = self.resolve_complex_alignment(
-            complex_alignment,
-            unigram_alignment,
-            combined_align_costs,
-            combined_gap_costs,
-            #alignment_cost_func,
-            #gap_cost_func,
-        )
-        complex_alignment = self.compact_boundary_gaps(complex_alignment)
+        # complex_alignment = self.compact_boundary_gaps(complex_alignment)
         print(visual_align(complex_alignment))
 
         # TODO current tasks
