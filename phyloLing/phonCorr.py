@@ -274,6 +274,7 @@ class PhonCorrelator:
         self.gap_ch = gap_ch
         self.pad_ch = pad_ch
         self.seed = seed
+        self.align_models = None
 
         # Prepare wordlists: sort out same/different-meaning words and loanwords
         self.wordlist = self.get_concept_list(wordlist)
@@ -413,9 +414,7 @@ class PhonCorrelator:
     def align_wordlist(self,
                        wordlist,
                        align_model,
-                       added_penalty_dict=None,
-                       complex_ngrams=False,
-                       ngram_size=1,
+                       #ngram_size=1, # TODO restore possibility of n>1 alignments
                        pad=True,
                        remove_uncompacted_padding=True,
                        pad_ch=PAD_CH_DEFAULT,
@@ -450,19 +449,11 @@ class PhonCorrelator:
                 seq1=aligned_pair.words,
                 seq2=aligned_pair.mots,
                 alignment=postprocess_boundary_alignments(aligned_pair) if pad else aligned_pair.alignment,
-                added_penalty_dict=added_penalty_dict,
                 gap_ch=self.gap_ch,
                 **kwargs
             )
             for aligned_pair in corpus
         ]
-
-        if complex_ngrams:
-            alignment_list = self.compact_alignments(
-                alignment_list,
-                self.complex_ngrams,
-                simple_ngrams=added_penalty_dict,
-            )
 
         if pad and remove_uncompacted_padding:
             for alignment in alignment_list:
@@ -565,11 +556,11 @@ class PhonCorrelator:
                              counts=False,
                              min_corr=2,
                              exclude_null=True,
-                             compact_null=True,
+                             compact_null=False,  # TODO restore this functionality
                              pad=True,
                              ):
         """Returns a dictionary of conditional phone probabilities, based on a list
-        of Alignment objects.
+        of Alignment objects.s
         counts : Bool; if True, returns raw counts instead of normalized probabilities;
         exclude_null : Bool; if True, does not consider aligned pairs including a null segment"""
 
@@ -761,31 +752,12 @@ class PhonCorrelator:
             seed_i, sample_size = key
             sample_n = seed_i - start_seed
             synonym_sample, diff_sample = sample
-            reversed_synonym_sample = [(pair[-1], pair[0]) for pair in synonym_sample]
             synonym_sample, diff_sample = map(sort_wordlist, [synonym_sample, diff_sample])
-
-            # First step: perform EM algorithm and fit IBM model 1
-            em_synonyms1, fit_em1 = self.radial_em(synonym_sample)
-            em_synonyms2, fit_em2 = self.radial_em(reversed_synonym_sample)
-            pmi_step1 = [self.phoneme_pmi(conditional_counts=em_synonyms1,
-                                          l1=self.lang1,
-                                          l2=self.lang2,
-                                          wordlist=synonym_sample,
-                                          ),
-                         self.phoneme_pmi(conditional_counts=em_synonyms2,
-                                          l1=self.lang2,
-                                          l2=self.lang1,
-                                          wordlist=reversed_synonym_sample,
-                                          )]
-            pmi_dict_l1l2, pmi_dict_l2l1 = pmi_step1
-
-            # Average together the PMI values from each direction
-            pmi_step1 = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
 
             # At each following iteration N, re-align using the pmi_stepN as an
             # additional penalty, and then recalculate PMI
             iteration = 0
-            PMI_iterations = {iteration: pmi_step1}
+            PMI_iterations = {}
             qualifying_words = default_dict({iteration: synonym_sample}, lmbda=[])
             disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
             if cumulative:
@@ -800,19 +772,39 @@ class PhonCorrelator:
             #while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0, iteration - 5), iteration)]):
             while iteration < max_iterations:
                 iteration += 1
+                self.logger.info(f"Starting sample {key}, iteration {iteration}")
                 
-                if iteration > 1:
-                    breakpoint()
+                # First step: perform EM algorithm and fit IBM model 1 on the set of qualifying word pairs
+                # In the first iteration the entire synonym sample is considered 
+                qualifying_sample = qualifying_words[iteration - 1]
+                reversed_qualifying_sample = [(pair[-1], pair[0]) for pair in qualifying_sample]
+                em_synonyms1, fit_em1 = self.radial_em(qualifying_sample)
+                em_synonyms2, fit_em2 = self.radial_em(reversed_qualifying_sample)
+                pmi_step_i = [
+                    self.phoneme_pmi(
+                        conditional_counts=em_synonyms1,
+                        l1=self.lang1,
+                        l2=self.lang2,
+                        wordlist=qualifying_sample,
+                    ),
+                    self.phoneme_pmi(
+                        conditional_counts=em_synonyms2,
+                        l1=self.lang2,
+                        l2=self.lang1,
+                        wordlist=reversed_qualifying_sample,
+                    )
+                ]
 
-                # Align the qualifying words of the previous step using previous step's PMI
+                # Average together the PMI values from each direction
+                pmi_step_i = average_corrs(*pmi_step_i)
+
+                # Align the qualifying words with the current trained alignment model
+                # TODO maybe only unigram em ibm is needed
                 cognate_alignments = self.align_wordlist(
-                    qualifying_words[iteration - 1],
-                    #added_penalty_dict=PMI_iterations[iteration - 1],
-                    complex_ngrams=self.complex_ngrams,
+                    qualifying_sample,
                     pad=True,
                     align_model=fit_em1[(1, 1)][-1]
                 )
-                # TODO maybe only unigram em ibm is needed
 
                 # Add these alignments into running pool of alignments
                 if cumulative:
@@ -825,6 +817,7 @@ class PhonCorrelator:
                     exclude_null=True,
                     counts=True,
                     min_corr=min_corr,
+                    #compact_null=True
                 )
                 cognate_probs = default_dict(
                     {
@@ -838,26 +831,23 @@ class PhonCorrelator:
                 )
                 PMI_iterations[iteration] = self.phoneme_pmi(
                     cognate_probs,
-                    wordlist=qualifying_words[iteration - 1]
+                    wordlist=qualifying_sample
                 )
 
                 # Align all same-meaning word pairs
-                if qualifying_words[iteration - 1] != synonym_sample and not cumulative: # e.g. iteration 1
+                if qualifying_sample != synonym_sample and not cumulative: # e.g. iteration 1
                     aligned_synonym_sample = self.align_wordlist(
                         synonym_sample,
-                        #added_penalty_dict=PMI_iterations[iteration],
-                        complex_ngrams=self.complex_ngrams,
                         pad=True,
                         align_model=fit_em1[(1, 1)][-1]
                     )
                 else:
                     aligned_synonym_sample = cognate_alignments
+
                 # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
                 # disqualified_words[iteration-1] already contains both types
                 noncognate_alignments = self.align_wordlist(
                     disqualified_words[iteration - 1],
-                    #added_penalty_dict=PMI_iterations[iteration],
-                    complex_ngrams=self.complex_ngrams,
                     pad=True,
                     align_model=fit_em1[(1, 1)][-1]
                 )
@@ -946,6 +936,7 @@ class PhonCorrelator:
             # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
 
         self.pmi_dict = results
+        #self.align_models = fit_em1
         self.log_phoneme_pmi()
 
         return results
@@ -1186,15 +1177,11 @@ class PhonCorrelator:
                 # the alignments will remain the same throughout iteration
                 same_meaning_alignments = self.align_wordlist(
                     same_sample,
-                    added_penalty_dict=self.pmi_dict,
-                    complex_ngrams=self.complex_ngrams,
                     pad=True,
                     remove_uncompacted_padding=True,
                 )
                 diff_meaning_alignments = self.align_wordlist(
                     diff_sample,
-                    added_penalty_dict=self.pmi_dict,
-                    complex_ngrams=self.complex_ngrams,
                     pad=True,
                     remove_uncompacted_padding=True,
                 )
@@ -1610,7 +1597,9 @@ class PhonCorrelator:
 
     def log_alignments(self, alignments, align_log):
         for alignment in alignments:
-            key = f'/{alignment.word1.ipa}/ - /{alignment.word2.ipa}/'
+            ipa1 = ''.join(alignment.seq1)
+            ipa2 = ''.join(alignment.seq2)
+            key = f'/{ipa1}/ - /{ipa2}/'
             align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
             align_log[key][align_str] += 1
 
