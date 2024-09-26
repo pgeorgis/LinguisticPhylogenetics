@@ -227,7 +227,7 @@ class Alignment:
                         i = i_s_copy[i_i]
                         i_next = i_s_copy[i_i + 1]
                         if abs(i - i_next) > 1:
-                            anchor = mean(i_s)
+                            anchor = mean(i_s+[j])
                             
                             # Find which of the two is more distant from anchor
                             more_distant_i = max(i_next, i, key=lambda x: abs(x - anchor))
