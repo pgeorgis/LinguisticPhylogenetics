@@ -66,10 +66,10 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
     # Fill first row and column with gap penalties
     for i in range(1, n + 1):
         dp[i][0] = dp[i-1][0] + gap_cost.get((seq2ngram(seq1[:i]), gap_ch), default_gop)
-        traceback[i][0] = 1  # Indicates seq1 gaps
+        traceback[i][0] = (1, 0)  # Indicates seq1 gaps
     for j in range(1, m + 1):
         dp[0][j] = dp[0][j-1] + gap_cost.get((gap_ch, seq2ngram(seq2[:j])), default_gop)
-        traceback[0][j] = 2  # Indicates seq2 gaps
+        traceback[0][j] = (0, 1)  # Indicates seq2 gaps
     
     # Fill the dp matrix
     for i in range(1, n + 1):
@@ -119,11 +119,11 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
         elif move[0] > 0:
             # Align subsequence of seq1 to a gap
             aligned_seq1.append(seq2ngram(seq1[i-move[0]:i]))
-            aligned_seq2.append(seq2ngram([gap_ch] * move[0]))
+            aligned_seq2.append(seq2ngram([gap_ch]))
             i -= move[0]
         else:
             # Align subsequence of seq2 to a gap
-            aligned_seq1.append(seq2ngram([gap_ch] * move[1]))
+            aligned_seq1.append(seq2ngram([gap_ch]))
             aligned_seq2.append(seq2ngram(seq2[j-move[1]:j]))
             j -= move[1]
     
