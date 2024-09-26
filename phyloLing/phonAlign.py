@@ -221,9 +221,11 @@ class Alignment:
                 i_s.sort()
                 if len(i_s) > 1:
                     i_i = 0
-                    while i_i < len(i_s)-1:
-                        i = i_s[i_i]
-                        i_next = i_s[i_i + 1]
+                    i_s_len = len(i_s)
+                    i_s_copy = i_s[:]
+                    while i_i < i_s_len-1:
+                        i = i_s_copy[i_i]
+                        i_next = i_s_copy[i_i + 1]
                         if abs(i - i_next) > 1:
                             anchor = mean(i_s)
                             
