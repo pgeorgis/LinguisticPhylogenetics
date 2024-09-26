@@ -414,6 +414,7 @@ class PhonCorrelator:
                        wordlist,
                        added_penalty_dict=None,  # TODO rename
                        remove_uncompacted_padding=True,
+                       compact=False,
                        # phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
@@ -428,6 +429,10 @@ class PhonCorrelator:
             )
             for word1, word2 in wordlist
         ]
+        
+        # Compact alignments
+        if compact:
+            self.compact_alignments(alignment_list, self.complex_ngrams, added_penalty_dict)
 
         if remove_uncompacted_padding:
             for alignment in alignment_list:
@@ -530,16 +535,12 @@ class PhonCorrelator:
                              min_corr=2,
                              exclude_null=True,
                              compact_null=True,
-                             pad=True,
+                             pad=False,
                              ):
         """Returns a dictionary of conditional phone probabilities, based on a list
         of Alignment objects.
         counts : Bool; if True, returns raw counts instead of normalized probabilities;
         exclude_null : Bool; if True, does not consider aligned pairs including a null segment"""
-
-        # Purpose of padding is to achieve null alignment compacting, so no need to pad if this is not being performed
-        if compact_null is False:
-            pad = False
 
         corr_counts = defaultdict(lambda: defaultdict(lambda: 0))
         if compact_null:
@@ -566,8 +567,8 @@ class PhonCorrelator:
                                            pad_ch=self.pad_ch,
                                            pad_n=pad_n)
 
-            for i in range(pad_n, len(_alignment)):
-                ngram = _alignment[i - min(pad_n, ngram_size - 1):i + 1]
+            for i in range(ngram_size - 1, len(_alignment)):
+                ngram = _alignment[i - (ngram_size - 1):i + 1]
                 seg1, seg2 = list(zip(*ngram))
                 corr_counts[seg1][seg2] += 1
                 if compact_null:
@@ -815,7 +816,8 @@ class PhonCorrelator:
                 qual_prev_sample = qualifying_words[iteration - 1]
                 cognate_alignments = self.align_wordlist(
                     qual_prev_sample,
-                    added_penalty_dict=PMI_iterations[iteration - 1]
+                    added_penalty_dict=PMI_iterations[iteration - 1],
+                    compact=True,
                 )
                 # TODO add null compacting
 
@@ -845,20 +847,19 @@ class PhonCorrelator:
                     cognate_probs,
                     wordlist=qual_prev_sample
                 )
-                breakpoint()
 
                 # Align all same-meaning word pairs
                 aligned_synonym_sample = self.align_wordlist(
                     synonym_sample,
                     added_penalty_dict=PMI_iterations[iteration],
-                    complex_ngrams=self.complex_ngrams
+                    compact=True
                 )
                 # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
                 # disqualified_words[iteration-1] already contains both types
                 noncognate_alignments = self.align_wordlist(
                     disqualified_words[iteration - 1],
                     added_penalty_dict=PMI_iterations[iteration],
-                    complex_ngrams=self.complex_ngrams
+                    compact=True
                 )
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
