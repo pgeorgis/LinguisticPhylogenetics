@@ -1167,6 +1167,14 @@ class Alignment:
     def end_boundary(self, size=2):
         # ('#>', '#>')
         return tuple([self.end_boundary_token]*size)
+    
+    def start_boundary_gaps(self):
+        # ('<#', '-') and ('-', '<#')
+        return [(self.start_boundary_token, self.gap_ch), (self.gap_ch, self.start_boundary_token)]
+
+    def end_boundary_gaps(self):
+        # ('#>', '-') and ('-', '#>')
+        return [(self.end_boundary_token, self.gap_ch), (self.gap_ch, self.end_boundary_token)]
 
     def pad(self, ngram_size, alignment=None, pad_ch=PAD_CH_DEFAULT, pad_n=None):
         self.pad_ch = pad_ch
@@ -1178,17 +1186,33 @@ class Alignment:
         self.update()
         return self.alignment
 
-    def remove_padding(self):
+    def remove_padding(self, no_update=False):
+        """Removes non-complex pad ngrams from beginning and end of alignment.
+        Removes both fully boundary alignments ('<#', '<#') and ('#>', '#>')
+        as well as boundary gap alignments, e.f. ('<#', '-') and ('-', '#>')
+        """
         start_pad_i = 0
-        start_pad = self.start_boundary()
-        while self.alignment[start_pad_i] == start_pad:
+        start_pad = [self.start_boundary()] + self.start_boundary_gaps()
+        while self.alignment[start_pad_i] in start_pad:
             start_pad_i += 1
-        end_pad_i = len(self.alignment) - 1
-        end_pad = self.end_boundary()
-        while self.alignment[end_pad_i] == end_pad:
+        end_pad_i = -1
+        end_pad = [self.end_boundary()] + self.end_boundary_gaps()
+        while self.alignment[end_pad_i] in end_pad:
             end_pad_i -= 1
-        self.alignment = self.alignment[start_pad_i:end_pad_i + 1]
-        self.update()
+        align_length = len(self.alignment)
+        self.alignment = self.alignment[start_pad_i:max(end_pad_i + 1, align_length + 1)]
+        self.padded = False
+        # If the input sequence was padded, also modify self.seq1, and self.seq2
+        if self.is_padded():
+            n_end_pad = align_length - 1 - end_pad_i
+            if n_end_pad > 0:
+                self.seq1 = self.seq1[min(start_pad_i, 1):-min(n_end_pad, 1)]
+                self.seq2 = self.seq2[min(start_pad_i, 1):-min(n_end_pad, 1)]
+            else:
+                self.seq1 = self.seq1[min(start_pad_i, 1):]
+                self.seq2 = self.seq2[min(start_pad_i, 1):]
+        if not no_update:
+            self.update()
 
     def is_padded(self):
         return Ngram(self.seq1[0]).is_boundary(self.pad_ch)
