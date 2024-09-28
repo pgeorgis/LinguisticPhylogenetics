@@ -422,6 +422,8 @@ class PhonCorrelator:
             Alignment(
                 seq1=word1,
                 seq2=word2,
+                lang1=self.lang1,
+                lang2=self.lang2,
                 added_penalty_dict=added_penalty_dict,
                 gap_ch=self.gap_ch,
                 pad_ch=self.pad_ch,
@@ -773,47 +775,11 @@ class PhonCorrelator:
             sample_n = seed_i - start_seed
             synonym_sample, diff_sample = sample
             synonym_sample, diff_sample = map(sort_wordlist, [synonym_sample, diff_sample])
-            reversed_synonym_sample = [(pair[-1], pair[0]) for pair in synonym_sample]
-
-            # First step: perform EM algorithm and fit IBM model 1
-            em_synonyms1 = self.radial_em(synonym_sample)
-            em_synonyms2 = self.radial_em(reversed_synonym_sample)
-            pmi_step1 = [self.phoneme_pmi(conditional_counts=em_synonyms1,
-                                          l1=self.lang1,
-                                          l2=self.lang2,
-                                          wordlist=synonym_sample,
-                                          ),
-                         self.phoneme_pmi(conditional_counts=em_synonyms2,
-                                          l1=self.lang2,
-                                          l2=self.lang1,
-                                          wordlist=reversed_synonym_sample,
-                                          )]
-            pmi_dict_l1l2, pmi_dict_l2l1 = pmi_step1
-
-            # Average together the PMI values from each direction
-            pmi_step1 = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
-            
-            # Normalize the PMI values by ngram size
-            # i.e. make sure that PMI range for unigrams is comparable for range with bigrams, etc.
-            # TODO make this into a function
-            pmi_by_shape = defaultdict(lambda:[])
-            for ngram1 in pmi_step1:
-                ngram1_size = Ngram(ngram1).size
-                for ngram2, score in pmi_step1[ngram1].items():
-                    ngram2_size = Ngram(ngram2).size
-                    shape = (ngram1_size, ngram2_size)
-                    pmi_by_shape[shape].append(score)
-            for ngram1 in pmi_step1:
-                ngram1_size = Ngram(ngram1).size
-                for ngram2, score in pmi_step1[ngram1].items():
-                    ngram2_size = Ngram(ngram2).size
-                    shape = (ngram1_size, ngram2_size)
-                    pmi_step1[ngram1][ngram2] = rescale(score, pmi_by_shape[shape], new_min=-1, new_max=1)
 
             # At each following iteration N, re-align using the pmi_stepN as an
             # additional penalty, and then recalculate PMI
             iteration = 0
-            PMI_iterations = {iteration: pmi_step1}
+            PMI_iterations = {}
             qualifying_words = default_dict({iteration: synonym_sample}, lmbda=[])
             disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
             if cumulative:
@@ -822,31 +788,72 @@ class PhonCorrelator:
             def score_pmi(alignment, pmi_dict):  # TODO use more sophisticated pmi_dist from wordDist.py
                 PMI_score = mean([pmi_dict.get(pair[0], {}).get(pair[1], 0) for pair in alignment.alignment])
                 return PMI_score
-
-            # while (iteration < max_iterations) and (qualifying_words[iteration] != qualifying_words[iteration - 1]):
-            # while (iteration < max_iterations) and (nc_thresholds[iteration - 1] not in [nc_thresholds[i] for i in range(max(0 , iteration - 2), iteration - 1)]):
-            #while (iteration < max_iterations) and (qualifying_words[iteration] not in [qualifying_words[i] for i in range(max(0, iteration - 5), iteration)]):
-            while iteration < max_iterations:
+            
+            while iteration < max_iterations: # TODO or some other convergence criteria
                 iteration += 1
-
-                # Align the qualifying words of the previous step using previous step's PMI
                 qual_prev_sample = qualifying_words[iteration - 1]
+                reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
+
+                # Perform EM algorithm and fit IBM model 1 on ngrams of varying sizes
+                em_synonyms1 = self.radial_em(qual_prev_sample)
+                em_synonyms2 = self.radial_em(reversed_qual_prev_sample)
+                
+                # Calculate initial PMI for all ngram pairs
+                pmi_dict_l1l2, pmi_dict_l2l1 = [
+                    self.phoneme_pmi(
+                        conditional_counts=em_synonyms1,
+                        l1=self.lang1,
+                        l2=self.lang2,
+                        wordlist=qual_prev_sample,
+                    ),
+                    self.phoneme_pmi(
+                        conditional_counts=em_synonyms2,
+                        l1=self.lang2,
+                        l2=self.lang1,
+                        wordlist=reversed_qual_prev_sample,
+                    )
+                ]
+
+                # Average together the PMI values from each direction
+                pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
+                
+                # Normalize the PMI values by ngram size
+                # i.e. make sure that PMI range for unigrams is comparable for range with bigrams, etc.
+                # TODO make this into a function
+                pmi_by_shape = defaultdict(lambda:[])
+                for ngram1 in pmi_step_i:
+                    ngram1_size = Ngram(ngram1).size
+                    for ngram2, score in pmi_step_i[ngram1].items():
+                        ngram2_size = Ngram(ngram2).size
+                        shape = (ngram1_size, ngram2_size)
+                        pmi_by_shape[shape].append(score)
+                for ngram1 in pmi_step_i:
+                    ngram1_size = Ngram(ngram1).size
+                    for ngram2, score in pmi_step_i[ngram1].items():
+                        ngram2_size = Ngram(ngram2).size
+                        shape = (ngram1_size, ngram2_size)
+                        pmi_step_i[ngram1][ngram2] = rescale(score, pmi_by_shape[shape], new_min=-1, new_max=1)
+
+                # Align the qualifying words of the previous step using initial PMI
                 cognate_alignments = self.align_wordlist(
                     qual_prev_sample,
-                    added_penalty_dict=PMI_iterations[iteration - 1],
-                    compact=True,
+                    added_penalty_dict=pmi_step_i,
+                    compact=False, # TODO reenable potentially
                 )
-                # TODO add null compacting
-
-                # Add these alignments into running pool of alignments
+                
+                # Add cognate alignments into running pool of alignments
                 if cumulative:
                     all_cognate_alignments.extend(cognate_alignments)
                     cognate_alignments = all_cognate_alignments
 
-                # Calculate correspondence probabilities and PMI values from these alignments
+                # Recalculate correspondence probabilities and PMI values 
+                # from these alignments alone, i.e. not using radial EM
+                # Reason for recalculating is that using alignments we can be stricter: 
+                # impose minimum corr requirements and only consider actually aligned segments
                 cognate_probs = self.correspondence_probs(
                     cognate_alignments,
-                    exclude_null=True,
+                    #exclude_null=True,
+                    compact_null=False, # TODO consider reenabling potentially
                     counts=True,
                     min_corr=min_corr,
                 )
@@ -865,20 +872,21 @@ class PhonCorrelator:
                     wordlist=qual_prev_sample
                 )
 
-                # Align all same-meaning word pairs
+                # Align all same-meaning word pairs with recalculated PMI
                 aligned_synonym_sample = self.align_wordlist(
                     synonym_sample,
                     added_penalty_dict=PMI_iterations[iteration],
-                    compact=True
+                    compact=False, # TODO reenable potentially
                 )
+
                 # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
                 # disqualified_words[iteration-1] already contains both types
                 noncognate_alignments = self.align_wordlist(
                     disqualified_words[iteration - 1],
                     added_penalty_dict=PMI_iterations[iteration],
-                    compact=True
+                    compact=False, # TODO reenable potentially
                 )
-
+                
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
@@ -1848,6 +1856,9 @@ class NullCompacter:
                         self.valid_corrs[larger_ngram][gap_seg] = pmi_complex
                     else:  # BACKWARD
                         self.valid_corrs[gap_seg][larger_ngram] = pmi_complex
+                    print(f"Valid complex corr: {larger_ngram.ngram} - {gap_seg.ngram}")
+                else:
+                    print(f"Inalid complex corr: {larger_ngram.ngram} - {gap_seg.ngram}")
 
     def select_valid_null_corrs(self):
         for corr in self.compacted_corr_counts:
