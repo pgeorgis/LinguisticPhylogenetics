@@ -20,7 +20,7 @@ from utils.information import (adaptation_surprisal, bayes_pmi,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
                             flatten_ngram, generate_ngrams, pad_sequence, start_token, end_token)
-from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, top_n_keys
+from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, rescale
 
 
 def fit_em_ibm(corpus, iterations=10, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
@@ -792,6 +792,23 @@ class PhonCorrelator:
 
             # Average together the PMI values from each direction
             pmi_step1 = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
+            
+            # Normalize the PMI values by ngram size
+            # i.e. make sure that PMI range for unigrams is comparable for range with bigrams, etc.
+            # TODO make this into a function
+            pmi_by_shape = defaultdict(lambda:[])
+            for ngram1 in pmi_step1:
+                ngram1_size = Ngram(ngram1).size
+                for ngram2, score in pmi_step1[ngram1].items():
+                    ngram2_size = Ngram(ngram2).size
+                    shape = (ngram1_size, ngram2_size)
+                    pmi_by_shape[shape].append(score)
+            for ngram1 in pmi_step1:
+                ngram1_size = Ngram(ngram1).size
+                for ngram2, score in pmi_step1[ngram1].items():
+                    ngram2_size = Ngram(ngram2).size
+                    shape = (ngram1_size, ngram2_size)
+                    pmi_step1[ngram1][ngram2] = rescale(score, pmi_by_shape[shape], new_min=-1, new_max=1)
 
             # At each following iteration N, re-align using the pmi_stepN as an
             # additional penalty, and then recalculate PMI
