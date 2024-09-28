@@ -1621,7 +1621,7 @@ class Word:
         self.loanword = loanword
         self.orthography = orthography
         self.segments = self.segment()
-        self.ngrams = {1: self.segments}
+        self.ngrams = {}
         self.complex_segments = None
         self.syllables = None
         self.phon_env = self.getPhonEnv()
@@ -1670,7 +1670,7 @@ class Word:
         """Get word's segments as ngram sequences of specified size."""
         if size in self.ngrams:
             return self.ngrams[size]
-        padded = pad_sequence(self.segments, pad_ch=pad_ch, pad_n=size-1)
+        padded = pad_sequence(self.segments, pad_ch=pad_ch, pad_n=max(1, size-1))
         ngram_seq = generate_ngrams(padded, ngram_size=size, pad_ch=pad_ch, as_ngram=False)
         self.ngrams[size] = ngram_seq
         return ngram_seq
