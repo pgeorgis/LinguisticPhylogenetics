@@ -286,14 +286,14 @@ class LexicalDataset:
 
         # Designate the default directory to search for if no alternative is provided
         if pmi_dir is None:
-            pmi_dir = os.path.join(self.phone_corr_dir, 'pmi')
+            pmi_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'pmi')
 
         def str2ngram(str, join_ch='_'):
             return Ngram(str, lang=self, seg_sep=join_ch)
 
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                pmi_file = os.path.join(pmi_dir, lang1.path_name, lang2.path_name, 'phonPMI.tsv')
+                pmi_file = os.path.join(pmi_dir, 'phonPMI.tsv')
 
                 # Try to load the file of saved PMI values, otherwise calculate PMI first
                 if not os.path.exists(pmi_file):
@@ -367,7 +367,7 @@ class LexicalDataset:
         """Loads pre-calculated phoneme surprisal values from file"""
         # Designate the default file name to search for if no alternative is provided
         if surprisal_dir is None:
-            surprisal_dir = os.path.join(self.phone_corr_dir, 'surprisal')
+            surprisal_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'surprisal')
 
         def str2ngram(str, join_ch=SEG_JOIN_CH):
             return Ngram(str, lang=self, seg_sep=join_ch)
@@ -402,8 +402,8 @@ class LexicalDataset:
 
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                surprisal_file = os.path.join(surprisal_dir, lang1.path_name, lang2.path_name, f'{ngram_size}-gram', 'phonSurprisal.tsv')
-                surprisal_file_phon_env = os.path.join(surprisal_dir, lang1.path_name, lang2.path_name, 'phonEnv', 'phonEnvSurprisal.tsv')
+                surprisal_file = os.path.join(surprisal_dir, f'{ngram_size}-gram', 'phonSurprisal.tsv')
+                surprisal_file_phon_env = os.path.join(surprisal_dir, 'phonEnv', 'phonEnvSurprisal.tsv')
 
                 # Try to load the file of saved surprisal values, otherwise calculate surprisal first
                 if not os.path.exists(surprisal_file):
