@@ -829,7 +829,15 @@ class PhonCorrelator:
                     for ngram2, score in pmi_step_i[ngram1].items():
                         ngram2_size = Ngram(ngram2).size
                         shape = (ngram1_size, ngram2_size)
-                        pmi_step_i[ngram1][ngram2] = rescale(score, pmi_by_shape[shape], new_min=-1, new_max=1)
+                        # e.g. unigrams: between -1 and 1
+                        # bigrams: between -2 and 2
+                        # gives slight weight to extreme values of higher order ngrams
+                        pmi_step_i[ngram1][ngram2] = rescale(
+                            score,
+                            pmi_by_shape[shape],
+                            new_min=-max(ngram1_size, ngram2_size),
+                            new_max=max(ngram1_size, ngram2_size)
+                        )
 
                 # Align the qualifying words of the previous step using initial PMI
                 cognate_alignments = self.align_wordlist(
