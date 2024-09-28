@@ -489,17 +489,14 @@ class PhonCorrelator:
             segs1, segs2 = word1.segments, word2.segments
             # Optionally add phon env
             if phon_env:
+                raise NotImplementedError
                 env1, env2 = word1.phon_env, word2.phon_env
                 segs1 = zip(segs1, env1)
                 segs1 = zip(segs2, env2)
-            # Optionally pad
-            if pad:
-                segs1 = pad_sequence(list(segs1), pad_ch=self.pad_ch, pad_n=max(1, pad_n))
-                segs2 = pad_sequence(list(segs2), pad_ch=self.pad_ch, pad_n=max(1, pad_n))
             for ngram_size_i in ngram_sizes:
-                ngrams1 = generate_ngrams(segs1, ngram_size=ngram_size_i, pad_ch=self.pad_ch, as_ngram=False)
-                for ngram_size_j in ngram_sizes: # TODO no need to recompute ngrams in this loop, can save and retrieve
-                    ngrams2 = generate_ngrams(segs2, ngram_size=ngram_size_j, pad_ch=self.pad_ch, as_ngram=False)
+                ngrams1 = word1.get_ngrams(size=ngram_size_i, pad_ch=self.pad_ch)
+                for ngram_size_j in ngram_sizes:
+                    ngrams2 = word2.get_ngrams(size=ngram_size_j, pad_ch=self.pad_ch)
                     corpora[(ngram_size_i, ngram_size_j)].append((ngrams1, ngrams2))
         # Fit EM IBM1 models on each corpus
         em_fit = {

@@ -1621,7 +1621,7 @@ class Word:
         self.loanword = loanword
         self.orthography = orthography
         self.segments = self.segment()
-        self.bigrams = None
+        self.ngrams = {1: self.segments}
         self.complex_segments = None
         self.syllables = None
         self.phon_env = self.getPhonEnv()
@@ -1665,16 +1665,15 @@ class Word:
             preaspiration=self.get_parameter('preaspiration'),
             suprasegmentals=self.get_parameter('suprasegmentals')
         )
-        
-    def getBigrams(self, pad_ch=PAD_CH_DEFAULT):
-        """Generate a list of (overlapping) segment bigrams."""
-        if self.bigrams is not None:
-            return self.bigrams
-
-        padded = pad_sequence(self.segments, pad_ch=pad_ch, pad_n=1)
-        bigrams_seq = generate_ngrams(padded, ngram_size=2, pad_ch=pad_ch, as_ngram=False)
-        self.bigrams = bigrams_seq
-        return bigrams_seq
+    
+    def get_ngrams(self, size, pad_ch=PAD_CH_DEFAULT):
+        """Get word's segments as ngram sequences of specified size."""
+        if size in self.ngrams:
+            return self.ngrams[size]
+        padded = pad_sequence(self.segments, pad_ch=pad_ch, pad_n=size-1)
+        ngram_seq = generate_ngrams(padded, ngram_size=size, pad_ch=pad_ch, as_ngram=False)
+        self.ngrams[size] = ngram_seq
+        return ngram_seq
     
     def complex_segmentation(self, pad_ch=PAD_CH_DEFAULT):
         """Create non-overlapping complex ngram segmentation with ngrams of variable sizes based on self-surprisal."""
@@ -1683,7 +1682,7 @@ class Word:
 
         assert self.language is not None
         # Generate bigrams
-        bigrams_seq = self.getBigrams(pad_ch=pad_ch)
+        bigrams_seq = self.get_ngrams(size=2, pad_ch=pad_ch)
         
         # Remove overlapping bigrams and decompose into unigrams if appropriate
         def get_ngram_self_surprisal(ngram):

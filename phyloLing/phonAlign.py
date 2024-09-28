@@ -556,9 +556,9 @@ class Alignment:
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
         padded2 = pad_sequence(self.seq2, pad_ch=self.pad_ch, pad_n=1)
 
-        #Generate bigrams # TODO surely this can be done more efficiently, e.g. within Word class
-        bigrams_seq1 = self.word1.getBigrams(pad_ch=self.pad_ch)
-        bigrams_seq2 = self.word2.getBigrams(pad_ch=self.pad_ch)
+        #Generate bigrams
+        bigrams_seq1 = self.word1.get_ngrams(size=2, pad_ch=self.pad_ch)
+        bigrams_seq2 = self.word2.get_ngrams(size=2, pad_ch=self.pad_ch)
 
         # Get alignment costs for ngram pairs of each size
         bigram_scores = get_ngram_alignment_costs(bigrams_seq1, bigrams_seq2)
