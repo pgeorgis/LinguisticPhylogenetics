@@ -1186,36 +1186,57 @@ class Alignment:
         self.update()
         return self.alignment
 
-    def remove_padding(self, no_update=False):
+    def remove_padding(self):
         """Removes non-complex pad ngrams from beginning and end of alignment.
         Removes both fully boundary alignments ('<#', '<#') and ('#>', '#>')
         as well as boundary gap alignments, e.f. ('<#', '-') and ('-', '#>')
         """
-        start_pad_i = 0
-        start_pad = [self.start_boundary()] + self.start_boundary_gaps()
-        while self.alignment[start_pad_i] in start_pad:
-            start_pad_i += 1
-        end_pad_i = -1
-        end_pad = [self.end_boundary()] + self.end_boundary_gaps()
-        while self.alignment[end_pad_i] in end_pad:
-            end_pad_i -= 1
+        # ('<#', '<#')
+        start_boundary = self.start_boundary()
+        # ('<#', '-') and ('-', '<#')
+        start_boundary_gap_right, start_boundary_gap_left = self.start_boundary_gaps()
+        start_pad_i_left, start_pad_i_right = 0, 0
+        while self.alignment[start_pad_i_left] in (start_boundary, start_boundary_gap_right):
+            start_pad_i_left += 1
+        while self.alignment[start_pad_i_right] in (start_boundary, start_boundary_gap_left):
+            start_pad_i_right += 1
+        start_pad_i = max(start_pad_i_left, start_pad_i_right)
+        end_pad_i_left, end_pad_i_right = -1, -1
+        end_boundary = self.end_boundary()
+        end_boundary_gap_right, end_boundary_gap_left = self.end_boundary_gaps()
+        while self.alignment[end_pad_i_left] in (end_boundary, end_boundary_gap_right):
+            end_pad_i_left -= 1
+        while self.alignment[end_pad_i_right] in (end_boundary, end_boundary_gap_left):
+            end_pad_i_right -= 1
+        end_pad_i = min(end_pad_i_left, end_pad_i_right)
         align_length = len(self.alignment)
-        self.alignment = self.alignment[start_pad_i:max(end_pad_i + 1, align_length + 1)]
+        if end_pad_i > -2:
+            end_pad_i = align_length
+        self.alignment = self.alignment[start_pad_i:end_pad_i + 1]
         self.padded = False
         # If the input sequence was padded, also modify self.seq1, and self.seq2
-        if self.is_padded():
-            n_end_pad = align_length - 1 - end_pad_i
-            if n_end_pad > 0:
-                self.seq1 = self.seq1[min(start_pad_i, 1):-min(n_end_pad, 1)]
-                self.seq2 = self.seq2[min(start_pad_i, 1):-min(n_end_pad, 1)]
+        if self.input_seq_is_padded():
+            if end_pad_i_left < -1:
+                self.seq1 = self.seq1[start_pad_i_left:end_pad_i_left + 1]
             else:
-                self.seq1 = self.seq1[min(start_pad_i, 1):]
-                self.seq2 = self.seq2[min(start_pad_i, 1):]
-        if not no_update:
-            self.update()
+                self.seq1 = self.seq1[start_pad_i_left:]
+            
+            if end_pad_i_right < -1:
+                self.seq2 = self.seq2[start_pad_i_right:end_pad_i_right + 1]
+            else:
+                self.seq2 = self.seq2[start_pad_i_right:]
 
-    def is_padded(self):
-        return Ngram(self.seq1[0]).is_boundary(self.pad_ch)
+    def input_seq_is_padded(self):
+        """Returns True if either input sequence is padded with boundary tokens on either side."""
+        return (
+            Ngram(self.seq1[0]).is_boundary(self.pad_ch)
+            or 
+            Ngram(self.seq2[0]).is_boundary(self.pad_ch)
+            or
+            Ngram(self.seq1[-1]).is_boundary(self.pad_ch)
+            or
+            Ngram(self.seq2[-1]).is_boundary(self.pad_ch)
+        )
 
     def map_to_seqs(self):
         """Maps aligned pair indices to their respective sequence indices
@@ -1232,7 +1253,7 @@ class Alignment:
         adjust_complex1, adjust_complex2 = 0, 0
         adjust_complex_start = 0
         n_complex = sum([1 for left, right in self.alignment if Ngram(left).size > 1 or Ngram(right).size > 1])
-        for i in range(max(self.length, self.original_length)):
+        for i in range(self.length):
             # Skip alignment positions containing only boundary padding, e.g. ('<#', '<#')
             if i == 0 and self.alignment[i] == self.start_boundary():
                 adjust_gap1 += 1
@@ -1282,13 +1303,8 @@ class Alignment:
                     if ngram.size > 1: #and i < self.length - 1:
                         adjust_complex1 += ngram.size - 1
                         adjust_ngram = 0
-                        for n in range(seg1_i, min(seg1_i + ngram.size, len(self.seq1))):
+                        for n in range(seg1_i, min(seg1_i + ngram.size, len(self.seq1) + 1)):
                             if self.pad_ch not in ngram.ngram[n - seg1_i]:
-                                map1[i].append(n - adjust_ngram)
-                            elif i == 0 and len(self.seq1) == 1:
-                                map1[i].append(n - adjust_ngram)
-                            elif i == 1 and len(self.seq1) == 1 and self.alignment[0] == self.start_boundary():
-                                # e.g. [('<#', '<#'), (('<#', 'ɑ'), '<#'), ...] # TODO ensure that this is actually a valid alignment and not a bug
                                 map1[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap1 += 1
@@ -1310,12 +1326,8 @@ class Alignment:
                     if ngram.size > 1: #and i < self.length - 1:
                         adjust_complex2 += ngram.size - 1
                         adjust_ngram = 0
-                        for n in range(seg2_i, min(seg2_i + ngram.size, len(self.seq2))):
+                        for n in range(seg2_i, min(seg2_i + ngram.size, len(self.seq2) + 1)):
                             if self.pad_ch not in ngram.ngram[n - seg2_i]:
-                                map2[i].append(n - adjust_ngram)
-                            elif i == 0 and len(self.seq2) == 1:
-                                map2[i].append(n - adjust_ngram)
-                            elif i == 1 and len(self.seq2) == 1 and self.alignment[0] == self.start_boundary():
                                 map2[i].append(n - adjust_ngram)
                             else:
                                 adjust_gap2 += 1
