@@ -727,7 +727,7 @@ class PhonCorrelator:
 
     def calc_phoneme_pmi(self,
                          p_threshold=0.05,
-                         max_iterations=3,
+                         max_iterations=2,
                          n_samples=5,
                          sample_size=0.8,
                          min_corr=2,
