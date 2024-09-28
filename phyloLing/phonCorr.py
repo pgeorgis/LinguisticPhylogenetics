@@ -276,8 +276,8 @@ class PhonCorrelator:
         return l1, l2
 
     def log_dirs(self):
-        pmi_log_dir = os.path.join(self.outdir, 'pmi', self.lang1.path_name, self.lang2.path_name)
-        surprisal_log_dir = os.path.join(self.outdir, 'surprisal', self.lang1.path_name, self.lang2.path_name)
+        pmi_log_dir = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name, 'pmi')
+        surprisal_log_dir = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name, 'surprisal')
         os.makedirs(pmi_log_dir, exist_ok=True)
         os.makedirs(surprisal_log_dir, exist_ok=True)
         return pmi_log_dir, surprisal_log_dir
