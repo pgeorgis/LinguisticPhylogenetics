@@ -860,16 +860,7 @@ class PhonCorrelator:
                     counts=True,
                     min_corr=min_corr,
                 )
-                cognate_probs = default_dict(
-                    {
-                        k[0]: {
-                            v[0]: cognate_probs[k][v]
-                            for v in cognate_probs[k]
-                        }
-                        for k in cognate_probs
-                    },
-                    lmbda=defaultdict(lambda: 0)
-                )
+                
                 PMI_iterations[iteration] = self.phoneme_pmi(
                     cognate_probs,
                     wordlist=qual_prev_sample
