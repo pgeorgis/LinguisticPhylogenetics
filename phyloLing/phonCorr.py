@@ -23,7 +23,7 @@ from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
 from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, rescale
 
 
-def fit_em_ibm(corpus, iterations=10, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
+def fit_em_ibm(corpus, iterations=5, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
     """Performs expectation maximization algorithm and fits an IBM translation model 1 to a corpus."""
     if ibm_model == 1:
         ibm_model = IBMModel1
@@ -474,8 +474,6 @@ class PhonCorrelator:
     def radial_em(self,
                   sample,
                   normalize=True,
-                  pad=True,
-                  pad_n=1,
                   phon_env=False, # TODO add
                   ibm_model=2,
                   ):
