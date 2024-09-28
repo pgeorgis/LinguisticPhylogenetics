@@ -280,18 +280,15 @@ class LexicalDataset:
                 correlator = lang1.get_phoneme_correlator(lang2)
                 correlator.calc_phoneme_pmi(**kwargs)
 
-    def load_phoneme_pmi(self, pmi_dir=None, excepted=[], sep='\t', **kwargs):
+    def load_phoneme_pmi(self, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
-
-        # Designate the default directory to search for if no alternative is provided
-        if pmi_dir is None:
-            pmi_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'pmi')
 
         def str2ngram(str, join_ch='_'):
             return Ngram(str, lang=self, seg_sep=join_ch)
 
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
+                pmi_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'pmi')
                 pmi_file = os.path.join(pmi_dir, 'phonPMI.tsv')
 
                 # Try to load the file of saved PMI values, otherwise calculate PMI first
@@ -362,11 +359,8 @@ class LexicalDataset:
                 correlator = lang1.get_phoneme_correlator(lang2)
                 correlator.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
 
-    def load_phoneme_surprisal(self, ngram_size=1, surprisal_dir=None, excepted=[], sep='\t', **kwargs):
+    def load_phoneme_surprisal(self, ngram_size=1, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme surprisal values from file"""
-        # Designate the default file name to search for if no alternative is provided
-        if surprisal_dir is None:
-            surprisal_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'surprisal')
 
         def str2ngram(str, join_ch=SEG_JOIN_CH):
             return Ngram(str, lang=self, seg_sep=join_ch)
@@ -401,6 +395,7 @@ class LexicalDataset:
 
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
+                surprisal_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'surprisal')
                 surprisal_file = os.path.join(surprisal_dir, f'{ngram_size}-gram', 'phonSurprisal.tsv')
                 surprisal_file_phon_env = os.path.join(surprisal_dir, 'phonEnv', 'phonEnvSurprisal.tsv')
 

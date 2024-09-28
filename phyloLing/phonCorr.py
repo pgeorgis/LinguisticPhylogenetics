@@ -372,7 +372,7 @@ class PhonCorrelator:
 
         # Write sample log (only if new samples were drawn)
         if log_samples and new_samples:
-            sample_log_file = os.path.join(self.outdir, 'samples', self.lang1.path_name, self.lang2.path_name, 'samples.log')
+            sample_log_file = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name, 'samples.log')
             self.write_sample_log(sample_logs, sample_log_file)
 
         return samples
