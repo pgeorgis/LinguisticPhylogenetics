@@ -401,7 +401,7 @@ class Alignment:
                  cost_func=AlignmentCost,
                  added_penalty_dict=None,
                  gap_ch=GAP_CH_DEFAULT,
-                 gop=-30,  # TODO possibly need to recalibrate ** changed from -0.3 to -0.2 when changing to PMI log base 2, given that those PMI values will be 69% of value of PMI with log base math.e
+                 gop=-10,
                  pad_ch=PAD_CH_DEFAULT,
                  n_best=1,
                  phon_env=False,
@@ -595,7 +595,7 @@ class Alignment:
             maximize_score=True,
         )
         # complex_alignment = self.compact_boundary_gaps(complex_alignment)
-        print(visual_align(complex_alignment))
+        #print(visual_align(complex_alignment))
 
         # TODO current tasks
         # still bug: in compact_boundary_gaps (Romanian-Ligurian)
