@@ -726,8 +726,8 @@ class PhonCorrelator:
         return pmi_dict
 
     def calc_phoneme_pmi(self,
-                         p_threshold=0.05,
-                         max_iterations=2,
+                         p_threshold=0.1,
+                         max_iterations=3,
                          n_samples=5,
                          sample_size=0.8,
                          min_corr=2,
@@ -784,8 +784,9 @@ class PhonCorrelator:
                 PMI_score = mean([pmi_dict.get(pair[0], {}).get(pair[1], 0) for pair in alignment.alignment])
                 return PMI_score
             
-            while iteration < max_iterations: # TODO or some other convergence criteria
+            while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
                 iteration += 1
+                self.logger.info(f"Starting iteration {iteration}")
                 qual_prev_sample = qualifying_words[iteration - 1]
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
