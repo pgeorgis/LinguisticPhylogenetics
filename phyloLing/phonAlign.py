@@ -607,15 +607,11 @@ class Alignment:
         # Compact boundary gap alignments
         # TODO: possibly compact before? or both before and after?
         # TODO: possibly save unigram, bigram, and complex alignments
+        
+        # TODO can this combination be done earlier?
+        combined_align_costs.update(combined_gap_costs)
 
-        alignment_costs = {
-            "2-2": bigram_scores,
-            "2-1": bigram1_unigram2_scores,
-            "1-2": bigram2_unigram1_scores,
-            "1-1": unigram_scores,
-        }
-
-        return alignment_costs, [(complex_alignment, complex_alignment_score)] # TODO simplify output format
+        return combined_align_costs, [(complex_alignment, complex_alignment_score)] # TODO simplify output format
 
     def compact_boundary_gaps(self, complex_alignment):
         # Add compacting of boundary gap alignment in situations like:
