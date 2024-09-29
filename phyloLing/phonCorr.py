@@ -720,7 +720,7 @@ class PhonCorrelator:
     def calc_phoneme_pmi(self,
                          p_threshold=0.1,
                          max_iterations=3,
-                         n_samples=3,
+                         n_samples=1,
                          sample_size=0.8,
                          min_corr=2,
                          cumulative=False,
@@ -756,9 +756,16 @@ class PhonCorrelator:
         iter_logs = defaultdict(lambda: [])
         sample_iterations = {}
         start_seed = self.seed
-        sample_dict = self.sample_wordlists(n_samples=n_samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
+        if n_samples > 1:
+            sample_dict = self.sample_wordlists(n_samples=n_samples, sample_size=sample_size, start_seed=start_seed, log_samples=log_iterations)
+        else:
+            sample_dict = {
+                (start_seed, len(self.same_meaning)): (
+                    self.same_meaning, random.sample(self.diff_meaning, len(self.same_meaning))
+                )
+            }
         for key, sample in sample_dict.items():
-            seed_i, sample_size = key
+            seed_i, _ = key
             sample_n = seed_i - start_seed
             synonym_sample, diff_sample = sample
             synonym_sample, diff_sample = map(sort_wordlist, [synonym_sample, diff_sample])
