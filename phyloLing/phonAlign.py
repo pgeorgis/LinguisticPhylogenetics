@@ -615,7 +615,7 @@ class Alignment:
             "1-1": unigram_scores,
         }
 
-        return alignment_costs, [(complex_alignment, )] # TODO simplify output format
+        return alignment_costs, [(complex_alignment, complex_alignment_score)] # TODO simplify output format
 
     def compact_boundary_gaps(self, complex_alignment):
         # Add compacting of boundary gap alignment in situations like:
