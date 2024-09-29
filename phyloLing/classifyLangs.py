@@ -212,6 +212,7 @@ if __name__ == "__main__":
     surprisal_funcs = ('surprisal', 'hybrid', 'composite')
     if eval_params['method'] in surprisal_funcs or cluster_params['method'] in surprisal_params:
         function_map['surprisal'].set('ngram_size', surprisal_params['ngram'])
+        function_map['surprisal'].set('phon_env', surprisal_params['phon_env'])
         SurprisalDist = function_map['surprisal']
 
         # Initialize hybrid or composite distance/similarity objects
