@@ -10,7 +10,7 @@ from statistics import mean
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
-from nwunschAlign import best_alignment
+from nwunschAlign import best_alignment as needleman_wunsch
 from phonUtils.phonEnv import get_phon_env
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
@@ -444,7 +444,8 @@ class Alignment:
         self.kwargs = kwargs
 
         # Perform alignment
-        self.alignment_costs, self.n_best = self.align(n_best)
+        costs, self.n_best = self.align(n_best)
+        self.align_costs, self.gap_costs = costs
         self.alignment = self.n_best[0][0][:]
 
         # Save length and cost of single best alignment
@@ -607,11 +608,8 @@ class Alignment:
         # Compact boundary gap alignments
         # TODO: possibly compact before? or both before and after?
         # TODO: possibly save unigram, bigram, and complex alignments
-        
-        # TODO can this combination be done earlier?
-        combined_align_costs.update(combined_gap_costs)
 
-        return combined_align_costs, [(complex_alignment, complex_alignment_score)] # TODO simplify output format
+        return (combined_align_costs, combined_gap_costs), [(complex_alignment, complex_alignment_score)] # TODO simplify output format
 
     def compact_boundary_gaps(self, complex_alignment):
         # Add compacting of boundary gap alignment in situations like:
@@ -677,6 +675,28 @@ class Alignment:
                         complex_alignment[0] = (tuple(initial_complex[0]), tuple(initial_complex[-1]))
 
         return complex_alignment
+
+    def get_unigram_alignment(self, complex_alignment):
+        """Simplifies complex ngram alignments to the best unigram alignment."""
+        unigram_alignment = []
+        for pos in complex_alignment:
+            unigrams = to_unigram_alignment(pos)
+            if unigrams != [pos]:
+                unigrams_seq1 = [seg1 for seg1, seg2 in unigrams if seg1 != self.gap_ch]
+                unigrams_seq2 = [seg2 for seg1, seg2 in unigrams if seg2 != self.gap_ch]
+                unigram_pos_alignment, _ = needleman_wunsch(
+                    SEQUENCE_1=unigrams_seq1,
+                    SEQUENCE_2=unigrams_seq2,
+                    SCORES_DICT=self.align_costs,
+                    GAP_SCORE_DICT=self.gap_costs,
+                    GAP_CHARACTER=self.gap_ch,
+                    DEFAULT_GAP_SCORE=self.gop,
+                )[0]
+                unigram_alignment.extend(unigram_pos_alignment)
+            else:
+                unigram_alignment.append(pos)
+        
+        return unigram_alignment
 
     def remove_gaps(self, alignment=None):
         """Returns the alignment without gap-aligned positions.
