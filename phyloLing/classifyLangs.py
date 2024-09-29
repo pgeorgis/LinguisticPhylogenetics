@@ -292,7 +292,10 @@ if __name__ == "__main__":
                 min_corr=surprisal_params['min_corr'],
                 phon_env=surprisal_params['phon_env'],
             )
-            family.write_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
+            family.write_phoneme_surprisal(
+                ngram_size=surprisal_params['ngram'],
+                phon_env=surprisal_params['phon_env'],
+            )
 
     # Auto cognate clustering only
     if cluster_params['cognates'] == 'auto':
