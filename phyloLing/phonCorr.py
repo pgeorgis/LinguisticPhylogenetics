@@ -212,8 +212,8 @@ class Wordlist:
         seqs1 = [word.segments for word in self.wordlist_lang1]
         seqs2 = [word.segments for word in self.wordlist_lang2]
         if self.pad_n > 0:
-            seqs1 = [pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=self.pad_n) for seq in seqs1] 
-            seqs2 = [pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=self.pad_n) for seq in seqs2] 
+            seqs1 = [pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=self.pad_n) for seq in seqs1]
+            seqs2 = [pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=self.pad_n) for seq in seqs2]
         return seqs1, seqs2
 
     def seq_lens(self):
@@ -259,7 +259,7 @@ class Wordlist:
                     prob = count / total_seq_len
             else:
                 prob = count
-        
+
         saved[ngram.ngram] = prob
         return prob
 
@@ -358,7 +358,7 @@ class PhonCorrelator:
         new_samples = False
         if log_samples:
             sample_logs = {}
-        
+
         # Track how many times each index has been sampled
         same_meaning_count = np.zeros(len(self.same_meaning))
         diff_meaning_count = np.zeros(len(self.diff_meaning))
@@ -385,7 +385,7 @@ class PhonCorrelator:
             diff_sample, diff_meaning_count = balanced_resample(
                 self.diff_meaning, diff_n, diff_meaning_count, rng
             )
-            
+
             # Record samples
             samples[(seed_i, sample_size)] = (synonym_sample, diff_sample)
 
@@ -431,7 +431,7 @@ class PhonCorrelator:
             )
             for word1, word2 in wordlist
         ]
-        
+
         # Compact alignments
         if compact:
             self.compact_alignments(alignment_list, self.complex_ngrams, added_penalty_dict)
@@ -479,7 +479,7 @@ class PhonCorrelator:
                   max_ngram_size=2,
                   ):
         """Fits EM IBM models on pairs of ngrams of varying sizes and aggregates the translation tables."""
-        
+
         # Create "corpora" consisting of words segmented into unigrams or bigrams
         corpus = []
         ngram_sizes = list(range(1, max_ngram_size + 1))
@@ -640,7 +640,7 @@ class PhonCorrelator:
         # If using a specific wordlist, extract sequences in each language
         if wordlist:
             wordlist = Wordlist(wordlist, pad_n=1)
-            
+
         # Estimate probability of a gap in each language from conditional counts
         gap_counts1, gap_counts2 = 0, 0
         seg_counts1, seg_counts2 = 0, 0
@@ -720,7 +720,7 @@ class PhonCorrelator:
     def calc_phoneme_pmi(self,
                          p_threshold=0.1,
                          max_iterations=3,
-                         n_samples=1,
+                         n_samples=3,
                          sample_size=0.8,
                          min_corr=2,
                          cumulative=False,
@@ -782,7 +782,7 @@ class PhonCorrelator:
             def score_pmi(alignment, pmi_dict):  # TODO use more sophisticated pmi_dist from wordDist.py
                 PMI_score = mean([pmi_dict.get(pair[0], {}).get(pair[1], 0) for pair in alignment.alignment])
                 return PMI_score
-            
+
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
                 iteration += 1
                 self.logger.info(f"Starting iteration {iteration}")
@@ -792,7 +792,7 @@ class PhonCorrelator:
                 # Perform EM algorithm and fit IBM model 1 on ngrams of varying sizes
                 em_synonyms1 = self.radial_em(qual_prev_sample)
                 em_synonyms2 = self.radial_em(reversed_qual_prev_sample)
-                
+
                 # Calculate initial PMI for all ngram pairs
                 pmi_dict_l1l2, pmi_dict_l2l1 = [
                     self.phoneme_pmi(
@@ -811,7 +811,7 @@ class PhonCorrelator:
 
                 # Average together the PMI values from each direction
                 pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
-                
+
                 # Normalize the PMI values by ngram size
                 # i.e. make sure that PMI range for unigrams is comparable for range with bigrams, etc.
                 # TODO make this into a function
@@ -843,15 +843,15 @@ class PhonCorrelator:
                     added_penalty_dict=pmi_step_i,
                     compact=False, # TODO reenable potentially
                 )
-                
+
                 # Add cognate alignments into running pool of alignments
                 if cumulative:
                     all_cognate_alignments.extend(cognate_alignments)
                     cognate_alignments = all_cognate_alignments
 
-                # Recalculate correspondence probabilities and PMI values 
+                # Recalculate correspondence probabilities and PMI values
                 # from these alignments alone, i.e. not using radial EM
-                # Reason for recalculating is that using alignments we can be stricter: 
+                # Reason for recalculating is that using alignments we can be stricter:
                 # impose minimum corr requirements and only consider actually aligned segments
                 cognate_probs = self.correspondence_probs(
                     cognate_alignments,
@@ -860,7 +860,7 @@ class PhonCorrelator:
                     counts=True,
                     min_corr=min_corr,
                 )
-                
+
                 PMI_iterations[iteration] = self.phoneme_pmi(
                     cognate_probs,
                     wordlist=qual_prev_sample
@@ -880,7 +880,7 @@ class PhonCorrelator:
                     added_penalty_dict=PMI_iterations[iteration],
                     compact=False, # TODO reenable potentially
                 )
-               
+
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
@@ -1206,16 +1206,12 @@ class PhonCorrelator:
                 same_meaning_alignments = self.align_wordlist(
                     same_sample,
                     added_penalty_dict=self.pmi_dict,
-                    complex_ngrams=self.complex_ngrams,
-                    pad=True,
-                    remove_uncompacted_padding=True,
+                    compact=False, # TODO reenable potentially
                 )
                 diff_meaning_alignments = self.align_wordlist(
                     diff_sample,
                     added_penalty_dict=self.pmi_dict,
-                    complex_ngrams=self.complex_ngrams,
-                    pad=True,
-                    remove_uncompacted_padding=True,
+                    compact=False, # TODO reenable potentially
                 )
 
                 # At each iteration, re-calculate surprisal for qualifying and disqualified pairs
@@ -1253,23 +1249,30 @@ class PhonCorrelator:
                             ngram_size=ngram_size
                         )
 
-                    surprisal_iterations[iteration] = self.phoneme_surprisal(corr_probs,
-                                                                             phon_env_corr_counts=phon_env_corr_counts,
-                                                                             ngram_size=ngram_size)
+                    surprisal_iterations[iteration] = self.phoneme_surprisal(
+                        corr_probs,
+                        phon_env_corr_counts=phon_env_corr_counts,
+                        ngram_size=ngram_size
+                    )
 
                     # Retrieve the alignments of different-meaning and disqualified word pairs
                     # and calculate adaptation surprisal for them using new surprisal values
-                    noncognate_alignments = diff_meaning_alignments + [same_meaning_alignments[i]
-                                                                       for i in disqualified_words[iteration - 1]]
-                    noncognate_surprisal = [adaptation_surprisal(alignment,
-                                                                 surprisal_dict=surprisal_iterations[iteration],
-                                                                 normalize=True,
-                                                                 ngram_size=ngram_size,
-                                                                 pad_ch=self.pad_ch,
-                                                                 gap_ch=self.gap_ch,
-                                                                 phon_env=phon_env,
-                                                                 )
-                                            for alignment in noncognate_alignments]
+                    noncognate_alignments = diff_meaning_alignments + [
+                        same_meaning_alignments[i]
+                        for i in disqualified_words[iteration - 1]
+                    ]
+                    noncognate_surprisal = [
+                        adaptation_surprisal(
+                            alignment,
+                            surprisal_dict=surprisal_iterations[iteration],
+                            normalize=True,
+                            ngram_size=ngram_size,
+                            pad_ch=self.pad_ch,
+                            gap_ch=self.gap_ch,
+                            phon_env=phon_env,
+                        )
+                        for alignment in noncognate_alignments
+                    ]
                     mean_nc_score = mean(noncognate_surprisal)
                     nc_score_stdev = stdev(noncognate_surprisal)
 
@@ -1288,14 +1291,15 @@ class PhonCorrelator:
                     qualifying_pairs = []
                     for q, pair in enumerate(same_sample):
                         alignment = same_meaning_alignments[q]
-                        surprisal_score = adaptation_surprisal(alignment,
-                                                               surprisal_dict=surprisal_iterations[iteration],
-                                                               normalize=True,
-                                                               ngram_size=ngram_size,
-                                                               pad_ch=self.pad_ch,
-                                                               gap_ch=self.gap_ch,
-                                                               phon_env=phon_env,
-                                                               )
+                        surprisal_score = adaptation_surprisal(
+                            alignment,
+                            surprisal_dict=surprisal_iterations[iteration],
+                            normalize=True,
+                            ngram_size=ngram_size,
+                            pad_ch=self.pad_ch,
+                            gap_ch=self.gap_ch,
+                            phon_env=phon_env,
+                        )
 
                         # Proportion of non-cognate word pairs which would have a surprisal score at least as low as this word pair
                         pnorm = norm.cdf(surprisal_score, loc=mean_nc_score, scale=nc_score_stdev)
@@ -1306,6 +1310,7 @@ class PhonCorrelator:
                             qualifying_pairs.append(pair)
                         else:
                             disqualified.append(q)
+
                     qualifying_map = {pair: q for q, pair in zip(qualifying, qualifying_pairs)}
                     qualifying_pairs, qualifying_alignments = prune_extraneous_synonyms(
                         qualifying_pairs,
@@ -1335,7 +1340,6 @@ class PhonCorrelator:
                 sample_results[sample_n] = surprisal_iterations[iteration]
                 sample_iterations[sample_n] = iteration
                 self.reset_seed()
-
             # Average together the surprisal estimations from each sample
             if n_samples > 1:
                 p1_all = set(p for sample_n in sample_results for p in sample_results[sample_n])
@@ -1360,6 +1364,7 @@ class PhonCorrelator:
         else:  # gold : assumes wordlist is already coded by cognate; skip iteration and calculate surprisal directly
             # Align same-meaning and different meaning word pairs using PMI values:
             # the alignments will remain the same throughout iteration
+            raise NotImplementedError # TODO adjust this section and combine if possible with non-gold
             same_meaning_alignments = self.align_wordlist(
                 self.same_meaning,
                 added_penalty_dict=self.pmi_dict
@@ -1385,14 +1390,16 @@ class PhonCorrelator:
             else:
                 phon_env_corr_counts = None
 
-            surprisal_results = self.phoneme_surprisal(corr_probs,
-                                                       phon_env_corr_counts=phon_env_corr_counts,
-                                                       ngram_size=ngram_size)
+            surprisal_results = self.phoneme_surprisal(
+                corr_probs,
+                phon_env_corr_counts=phon_env_corr_counts,
+                ngram_size=ngram_size
+            )
 
         # Write the iteration log
         surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
         if log_iterations and not gold:
-            self.logger.debug(f'{n_samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
+            self.logger.info(f'{n_samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
             log_file = os.path.join(surprisal_ngram_log_dir, 'surprisal_iterations.log')
             self.write_iter_log(iter_logs, log_file)
 
@@ -1404,9 +1411,11 @@ class PhonCorrelator:
         # Return and save the final iteration's surprisal results
         if save:
             self.lang1.phoneme_surprisal[(self.lang2.name, ngram_size)] = surprisal_results
-            self.lang1.phon_env_surprisal[self.lang2.name] = phon_env_surprisal_results
+            if phon_env:
+                self.lang1.phon_env_surprisal[self.lang2.name] = phon_env_surprisal_results
         self.surprisal_dict[ngram_size] = surprisal_results
-        self.phon_env_surprisal_dict = phon_env_surprisal_results
+        if phon_env:
+            self.phon_env_surprisal_dict = phon_env_surprisal_results
 
         # Write logs
         # Alignments log
@@ -1419,9 +1428,13 @@ class PhonCorrelator:
 
         # Surprisal logs
         self.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size)
-        self.log_phoneme_surprisal(phon_env=True)
+        if phon_env:
+            self.log_phoneme_surprisal(phon_env=True)
 
-        return surprisal_results, phon_env_surprisal_results
+        if phon_env:
+            return surprisal_results, phon_env_surprisal_results
+        else:
+            return surprisal_results
 
     def marginalize_over_phon_env_surprisal(self, phon_env_surprisal_dict, ngram_size=1):
         """Converts a phon env surprisal dictionary into a vanilla surprisal dictionary by marginalizing over phon envs"""
