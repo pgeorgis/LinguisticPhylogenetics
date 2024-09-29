@@ -476,13 +476,13 @@ class PhonCorrelator:
                   normalize=True,
                   phon_env=False, # TODO add
                   ibm_model=2,
+                  max_ngram_size=2,
                   ):
-        """Fits EM IBM1 models on pairs of unigrams and bigrams and aggregates the translation tables."""
-        corr_dict = defaultdict(lambda: defaultdict(lambda: 0))
+        """Fits EM IBM models on pairs of ngrams of varying sizes and aggregates the translation tables."""
         
         # Create "corpora" consisting of words segmented into unigrams or bigrams
-        corpora = defaultdict(lambda: [])
-        ngram_sizes = (1, 2)
+        corpus = []
+        ngram_sizes = list(range(1, max_ngram_size + 1))
         for word1, word2 in sample:
             segs1, segs2 = word1.segments, word2.segments
             # Optionally add phon env
@@ -495,16 +495,8 @@ class PhonCorrelator:
                 ngrams1 = word1.get_ngrams(size=ngram_size_i, pad_ch=self.pad_ch)
                 for ngram_size_j in ngram_sizes:
                     ngrams2 = word2.get_ngrams(size=ngram_size_j, pad_ch=self.pad_ch)
-                    corpora[(ngram_size_i, ngram_size_j)].append((ngrams1, ngrams2))
-        # Fit EM IBM1 models on each corpus
-        em_fit = {
-            ngram_i_j: fit_em_ibm(corpus, gap_ch=self.gap_ch, ibm_model=ibm_model)
-            for ngram_i_j, corpus in corpora.items()
-        }
-        # Combine model results
-        for model in em_fit:
-            for key, values in em_fit[model].items():
-                corr_dict[key].update(values)
+                    corpus.append((ngrams1, ngrams2))
+        corr_dict = fit_em_ibm(corpus, gap_ch=self.gap_ch, ibm_model=ibm_model)
 
         if normalize:
             for seg1 in corr_dict:
@@ -881,7 +873,7 @@ class PhonCorrelator:
                     added_penalty_dict=PMI_iterations[iteration],
                     compact=False, # TODO reenable potentially
                 )
-                
+               
                 # Score PMI for different meaning words and words disqualified in previous iteration
                 noncognate_PMI = []
                 for alignment in noncognate_alignments:
@@ -946,7 +938,7 @@ class PhonCorrelator:
 
         # Write the iteration log
         if log_iterations:
-            self.logger.debug(f'{n_samples} sample(s) converged after {round(mean(sample_iterations.values()), 1)} iterations on average')
+            self.logger.info(f'{n_samples} sample(s) converged on average after {round(mean(sample_iterations.values()), 1)} iterations')
             log_file = os.path.join(self.pmi_log_dir, 'PMI_iterations.log')
             self.write_iter_log(iter_logs, log_file)
 
