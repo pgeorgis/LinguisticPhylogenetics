@@ -30,7 +30,7 @@ alignment:
   pad_ch: '#'
 
 pmi:
-  n_samples: 5
+  n_samples: 3
   sample_size: 0.8
   min_corr: 2
   refresh: []
