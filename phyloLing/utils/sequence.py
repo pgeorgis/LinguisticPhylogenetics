@@ -57,6 +57,14 @@ class Ngram:
             ]
         )
 
+    def remove_boundaries(self, pad_ch=PAD_CH_DEFAULT):
+        return Ngram(
+            [
+                unigram.ngram for unigram in self.unigrams()
+                if not unigram.is_boundary(pad_ch)
+            ]
+        )
+
     def __str__(self):
         return self.string
 
@@ -176,7 +184,7 @@ def decompose_ngram(ngram):
 
 
 def remove_overlapping_ngrams(ngrams,
-                              ngram_score_func, 
+                              ngram_score_func,
                               pad_ch=PAD_CH_DEFAULT,
                               gap_ch=GAP_CH_DEFAULT,
                               maximize_score=False,
@@ -202,7 +210,7 @@ def remove_overlapping_ngrams(ngrams,
             if prev_ngram.ngram[-1] != bigram_i_ngram.ngram[0]:
                 return True
             return False
-        
+
     # if ngrams == [(('<#', 'b'), ('<#', 'b')), ('b', 'o'), (('u', 'l'), 'l'), (('l', 'ˈa'), 'ˈa'), ('ˈa', 'ɾ'), ('#>', '#>')]:
     #     breakpoint()
 
@@ -248,7 +256,7 @@ def remove_overlapping_ngrams(ngrams,
                                 filtered[-1] = (Ngram(prev_i).undo(), gap_ch)
                             else:
                                 breakpoint()
-                            
+
                     else:
                         filtered[-1] = Ngram(filtered[-1]).ngram[0]
                     filtered.append(bigram_i)
@@ -262,7 +270,7 @@ def remove_overlapping_ngrams(ngrams,
                         else:
                             # Left side of alignment overlaps
                             # e.g. [(('<#', 'b'), ('<#', 'b')), ('b', 'o')]
-                            # add gap on left side 
+                            # add gap on left side
                             # -> [(('<#', 'b'), ('<#', 'b')), ('-', 'o')]
                             if Ngram(bigram_i_i).size == 1:
                                 filtered.append((gap_ch, Ngram(bigram_i_j).undo()))

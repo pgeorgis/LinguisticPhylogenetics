@@ -5,7 +5,7 @@ from statistics import mean
 from asjp import ipa2asjp
 from constants import PAD_CH_DEFAULT
 from nltk import edit_distance
-from phonAlign import Alignment, get_alignment_iter
+from phonAlign import Alignment, get_alignment_iter, to_unigram_alignment
 from phonUtils.initPhoneData import (alveolopalatal, consonants, glides,
                                      nasals, palatal, postalveolar, vowels)
 from phonUtils.ipaTools import strip_diacritics
@@ -211,8 +211,31 @@ def phonological_dist(word1,
     # If word2 is None, we assume word1 argument is actually an aligned word pair
     word1, word2, alignment = handle_word_pair_input(word1, word2)
     gap_ch = alignment.gap_ch
-    length = alignment.length
+    pad_ch = alignment.pad_ch
+    alignment_obj = alignment
     alignment = alignment.alignment
+
+    def _remove_boundaries(segment):
+        """Remove boundaries from complex ngrams and convert simple boundary ngrams to gaps."""
+        ngram = Ngram(segment)
+        if ngram.is_boundary(pad_ch):
+            no_boundary_ngram = ngram.remove_boundaries(pad_ch).undo()
+            if len(no_boundary_ngram) == 0:
+                return gap_ch
+            return no_boundary_ngram
+        return segment
+
+    # Remove boundaries or convert to gaps
+    alignment = [
+        (_remove_boundaries(left), _remove_boundaries(right))
+        for left, right in alignment
+    ]
+    # Remove any resulting (gap_ch, gap_ch) pairs
+    alignment = [pos for pos in alignment if pos != (gap_ch, gap_ch)]
+
+    # Simplify complex ngram alignments to unigrams
+    alignment = alignment_obj.get_unigram_alignment(alignment)
+    length = len(alignment)
 
     # Get list of penalties
     penalties = []
