@@ -75,7 +75,7 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
         for j in range(1, m + 1):
             best_score = worst_score
             best_move = None
-            
+
             # Align one unit from seq1 to one or more from seq2
             for k in range(1, i + 1):
                 for l in range(1, j + 1):
@@ -106,6 +106,7 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
     
     # Backtrack to find the alignment
     aligned_seq1, aligned_seq2 = [], []
+    seq_map1, seq_map2 = defaultdict(lambda:[]), defaultdict(lambda:[])
     i, j = n, m
     while i > 0 or j > 0:
         move = traceback[i][j]
@@ -113,25 +114,38 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
             # Align subsequences of both seq1 and seq2
             aligned_seq1.append(seq2ngram(seq1[i-move[0]:i]))
             aligned_seq2.append(seq2ngram(seq2[j-move[1]:j]))
+            seq_map1[len(seq_map1)].extend([x for x in range(i-move[0], i)])
+            seq_map2[len(seq_map2)].extend([x for x in range(j-move[1], j)])
             i -= move[0]
             j -= move[1]
         elif move[0] > 0:
             # Align subsequence of seq1 to a gap
             aligned_seq1.append(seq2ngram(seq1[i-move[0]:i]))
             aligned_seq2.append(seq2ngram([gap_ch]))
+            seq_map1[len(seq_map1)].extend([x for x in range(i-move[0], i)])
+            seq_map2[len(seq_map2)] = None
             i -= move[0]
         else:
             # Align subsequence of seq2 to a gap
             aligned_seq1.append(seq2ngram([gap_ch]))
             aligned_seq2.append(seq2ngram(seq2[j-move[1]:j]))
+            seq_map1[len(seq_map1)] = None
+            seq_map2[len(seq_map2)].extend([x for x in range(j-move[1], j)])
             j -= move[1]
-    
+        
     # Reverse the aligned sequences to be in correct order
     aligned_seq1.reverse()
     aligned_seq2.reverse()
     alignment = list(zip(aligned_seq1, aligned_seq2))
 
-    return dp[n][m], alignment
+    # Reverse the sequence maps
+    seq_map1, seq_map2 = dict(seq_map1), dict(seq_map2)
+    adj_seqmap1, adj_seqmap2 = {}, {}
+    for i in range(len(alignment)-1, -1, -1):
+        adj_seqmap1[abs(i-(len(alignment)-1))] = seq_map1[i]
+        adj_seqmap2[abs(i-(len(alignment)-1))] = seq_map2[i]
+
+    return dp[n][m], alignment, (adj_seqmap1, adj_seqmap2)
 
 
 def compatible_segments(seg1, seg2):
@@ -454,7 +468,8 @@ class Alignment:
         self.original_length = self.length
 
         # Map aligned pairs to respective sequence indices
-        self.seq_map = self.map_to_seqs()
+        self.seq_map = self.n_best[0][1]
+        self.validate_seq_map(*self.seq_map)
 
         # Phonological environment alignment
         self.phon_env = phon_env
@@ -586,7 +601,7 @@ class Alignment:
             bigram1_unigram2_gap_costs,
             bigram2_unigram1_gap_costs,
         )
-        complex_alignment_score, complex_alignment = needleman_wunsch_extended(
+        complex_alignment_score, complex_alignment, seq_maps = needleman_wunsch_extended(
             seq1=padded1, 
             seq2=padded2,
             align_cost=combined_align_costs,
@@ -609,7 +624,7 @@ class Alignment:
         # TODO: possibly compact before? or both before and after?
         # TODO: possibly save unigram, bigram, and complex alignments
 
-        return (combined_align_costs, combined_gap_costs), [(complex_alignment, complex_alignment_score)] # TODO simplify output format
+        return (combined_align_costs, combined_gap_costs), [(complex_alignment, seq_maps, complex_alignment_score)] # TODO simplify output format
 
     def compact_boundary_gaps(self, complex_alignment):
         # Add compacting of boundary gap alignment in situations like:
@@ -935,6 +950,7 @@ class Alignment:
                 self.seq2 = self.seq2[start_pad_i_right:end_pad_i_right + 1]
             else:
                 self.seq2 = self.seq2[start_pad_i_right:]
+        self.update()
 
     def input_seq_is_padded(self):
         """Returns True if either input sequence is padded with boundary tokens on either side."""
@@ -1049,13 +1065,19 @@ class Alignment:
                         map2[i].append(seg2_i)
 
         # Check that all sequence units were mapped to alignment positions
-        try:
-            assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
-            assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
-        except AssertionError as exc:
-            raise AssertionError(f"Error re-mapping aligned sequences: {self.alignment}") from exc
+        self.validate_seq_map(map1, map2)
 
         return map1, map2
+    
+    def validate_seq_map(self, map1, map2):
+        padded_len1 = len(self.seq1) + 2
+        padded_len2 = len(self.seq2) + 2
+        try:
+            assert sum(len(value) for value in map1.values() if value is not None) in (len(self.seq1), padded_len1)
+            assert sum(len(value) for value in map2.values() if value is not None) in (len(self.seq2), padded_len2)
+        except AssertionError as exc:
+            breakpoint()
+            raise AssertionError(f"Error mapping aligned sequences: {self.alignment}") from exc
 
     def add_phon_env(self, env_func=get_phon_env):
         """Adds the phonological environment value of segments to an alignment
@@ -1119,7 +1141,7 @@ class ReversedAlignment(Alignment):
         self.pad_ch = alignment.pad_ch
         self.added_penalty_dict = alignment.added_penalty_dict
         self.kwargs = alignment.kwargs
-        self.n_best = [(reverse_alignment(alignment_n), cost) for alignment_n, cost in alignment.n_best]
+        self.n_best = [(reverse_alignment(alignment_n), seq_map, cost) for alignment_n, seq_map, cost in alignment.n_best]
         self.alignment = reverse_alignment(alignment.alignment)
 
         # Map aligned pairs to respective sequence indices
@@ -1138,9 +1160,10 @@ class ReversedAlignment(Alignment):
 
 
 class AlignedPair:
-    def __init__(self, alignment, index, gap_ch=GAP_CH_DEFAULT):
+    def __init__(self, alignment, index, gap_ch=GAP_CH_DEFAULT, pad_ch=PAD_CH_DEFAULT):
         self.alignment = alignment
         self.gap_ch = gap_ch
+        self.pad_ch = pad_ch
         self.index = index
         self.pair = self.alignment.alignment[self.index] if isinstance(self.alignment, Alignment) else self.alignment[self.index]
         self.ngrams = [Ngram(pos) for pos in self.pair]
@@ -1165,6 +1188,9 @@ class AlignedPair:
 
     def contains_gap(self):
         return any(ngram.is_gappy(self.gap_ch) for ngram in self.ngrams)
+
+    def contains_boundary(self):
+        return any(ngram.is_boundary(self.pad_ch) for ngram in self.ngrams)
 
     def get_shape(self):
         ngram1, ngram2 = self.ngrams
