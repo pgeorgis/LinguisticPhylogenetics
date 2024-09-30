@@ -49,7 +49,6 @@ def adaptation_surprisal(alignment,
     if isinstance(alignment, list):
         length = len(alignment)
     else:
-        length = alignment.length
         if phon_env:
             if alignment.phon_env_alignment is None:
                 alignment.phon_env_alignment = alignment.add_phon_env()
@@ -57,6 +56,7 @@ def adaptation_surprisal(alignment,
 
         else:
             alignment = alignment.alignment
+        length = len(alignment)
 
     pad_n = ngram_size - 1
     if ngram_size > 1:

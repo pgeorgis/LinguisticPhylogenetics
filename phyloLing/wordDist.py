@@ -458,10 +458,12 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
 
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
+    # NB: padding was for compacting gaps, which is now disabled in favor of complex alignment, which already includes padding, therefore no padding is necessary
     # Pad (need to set as ngram_size=min 2 to yield any padding)
-    alignment.pad(ngram_size=max(2, ngram_size), alignment=alignment.alignment, pad_ch=pad_ch)
+    #alignment.pad(ngram_size=max(2, ngram_size), alignment=alignment.alignment, pad_ch=pad_ch)
     # Compact_gaps, then remove uncompacted pad positions as they are irrelevant
-    alignment.compact_gaps(lang1.complex_ngrams[lang2], pmi_dict)
+    #alignment.compact_gaps(lang1.complex_ngrams[lang2], pmi_dict)
+    # Remove non-complex ngram boundary alignments
     alignment.remove_padding()
     # Add phon env
     if phon_env:
@@ -477,6 +479,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     else:
         sur_dict1 = lang1.phoneme_surprisal[(lang2.name, ngram_size)]
         sur_dict2 = lang2.phoneme_surprisal[(lang1.name, ngram_size)]
+
     WAS_l1l2 = adaptation_surprisal(alignment,
                                     surprisal_dict=sur_dict1,
                                     ngram_size=ngram_size,
@@ -551,8 +554,23 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                 weighted_WAS.append(weighted)
 
         return weighted_WAS
-    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1, normalize_by=lang2.phoneme_entropy, sur_dict=sur_dict1, phon_env=phon_env)
-    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2, normalize_by=lang1.phoneme_entropy, sur_dict=sur_dict2, phon_env=phon_env)
+
+    weighted_WAS_l1l2 = weight_by_self_surprisal(
+        alignment,
+        WAS_l1l2,
+        self_surprisal1,
+        normalize_by=lang2.phoneme_entropy,
+        sur_dict=sur_dict1,
+        phon_env=phon_env
+    )
+    weighted_WAS_l2l1 = weight_by_self_surprisal(
+        rev_alignment,
+        WAS_l2l1,
+        self_surprisal2,
+        normalize_by=lang1.phoneme_entropy,
+        sur_dict=sur_dict2,
+        phon_env=phon_env
+    )
     # Return and save the average of these two values
     if normalize:
         score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
@@ -574,10 +592,11 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
 
     # Align the words with PMI
     alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
+    # NB: padding was for compacting gaps, which is now disabled in favor of complex alignment, which already includes padding, therefore no padding is necessary
     # Pad (ngram_size=1, but need to set as min 2 to yield any padding)
-    alignment.pad(ngram_size=2, alignment=alignment.alignment, pad_ch=pad_ch)
+    #alignment.pad(ngram_size=2, alignment=alignment.alignment, pad_ch=pad_ch)
     # Compact_gaps, then remove uncompacted pad positions as they are irrelevant
-    alignment.compact_gaps(lang1.complex_ngrams[lang2], pmi_dict)
+    #alignment.compact_gaps(lang1.complex_ngrams[lang2], pmi_dict)
     alignment.remove_padding()
 
     # Calculate PMI scores for each aligned pair
