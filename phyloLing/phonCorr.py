@@ -23,7 +23,7 @@ from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
 from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, rescale, segment_ranges
 
 
-def fit_em_ibm(corpus, iterations=5, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
+def fit_em_ibm(corpus, iterations=5, gap_ch=GAP_CH_DEFAULT, ibm_model=2, seed=None):
     """Performs expectation maximization algorithm and fits an IBM translation model 1 to a corpus."""
     if ibm_model == 1:
         ibm_model = IBMModel1
@@ -31,6 +31,12 @@ def fit_em_ibm(corpus, iterations=5, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
         ibm_model = IBMModel2
     else:
         raise ValueError(f"Invalid IBM model: {ibm_model}")
+    
+    # Set random seed
+    if seed is not None:
+        random.seed(seed)
+        np.random.seed(seed)
+    
     corpus = [AlignedSent(word1, word2) for word1, word2 in corpus]
     fit_model = ibm_model(corpus, iterations)
     translation_table = fit_model.translation_table
@@ -551,6 +557,7 @@ class PhonCorrelator:
                   phon_env=False, # TODO add
                   ibm_model=2,
                   max_ngram_size=1,
+                  seed=None,
                   ):
         """Fits EM IBM models on pairs of ngrams of varying sizes and aggregates the translation tables."""
 
@@ -570,7 +577,12 @@ class PhonCorrelator:
                 for ngram_size_j in ngram_sizes:
                     ngrams2 = word2.get_ngrams(size=ngram_size_j, pad_ch=self.pad_ch)
                     corpus.append((ngrams1, ngrams2))
-        corpus, fit_model, translation_table = fit_em_ibm(corpus, gap_ch=self.gap_ch, ibm_model=ibm_model)
+        corpus, fit_model, translation_table = fit_em_ibm(
+            corpus,
+            gap_ch=self.gap_ch,
+            ibm_model=ibm_model,
+            seed=seed
+        )
 
         # Create corr dicts in each direction from aligned segments
         corr_dict_l1l2 = defaultdict(lambda: defaultdict(lambda:0))
@@ -921,7 +933,7 @@ class PhonCorrelator:
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
                 # Perform EM algorithm and fit IBM model 1 on ngrams of varying sizes
-                em_synonyms1, em_synonyms2 = self.radial_em(qual_prev_sample)
+                em_synonyms1, em_synonyms2 = self.radial_em(qual_prev_sample, seed=seed_i)
 
                 # Calculate initial PMI for all ngram pairs
                 pmi_dict_l1l2, pmi_dict_l2l1 = [
@@ -966,7 +978,6 @@ class PhonCorrelator:
                 #             new_min=-max(ngram1_size, ngram2_size),
                 #             new_max=max(ngram1_size, ngram2_size)
                 #         )
-                breakpoint()
 
                 # Align the qualifying words of the previous step using initial PMI
                 cognate_alignments = self.align_wordlist(
