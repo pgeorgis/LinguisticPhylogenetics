@@ -251,3 +251,34 @@ def top_n_keys(d, n=None):
         n = len(d)
     top_keys = sorted(d, key=d.get, reverse=True)[:n]
     return top_keys
+
+
+def segment_ranges(numbers):
+    if not numbers:
+        return []
+
+    segmented = []
+    start = numbers[0]
+    end = numbers[0]
+
+    for i in range(1, len(numbers)):
+        # Check if current number is consecutive
+        if numbers[i] == end + 1:
+            end = numbers[i]
+        else:
+            # Append the range or standalone number
+            if start == end:
+                segmented.append(start)
+            else:
+                segmented.append((start, end))
+            # Start a new range
+            start = numbers[i]
+            end = numbers[i]
+
+    # Append the last range or standalone number
+    if start == end:
+        segmented.append(start)
+    else:
+        segmented.append((start, end))
+
+    return segmented

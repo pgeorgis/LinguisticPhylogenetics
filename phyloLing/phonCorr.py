@@ -20,7 +20,7 @@ from utils.information import (adaptation_surprisal, bayes_pmi,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
                             flatten_ngram, generate_ngrams, pad_sequence, start_token, end_token)
-from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, rescale
+from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, rescale, segment_ranges
 
 
 def fit_em_ibm(corpus, iterations=5, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
@@ -32,14 +32,88 @@ def fit_em_ibm(corpus, iterations=5, gap_ch=GAP_CH_DEFAULT, ibm_model=2):
     else:
         raise ValueError(f"Invalid IBM model: {ibm_model}")
     corpus = [AlignedSent(word1, word2) for word1, word2 in corpus]
-    em_ibm = ibm_model(corpus, iterations)
-    translation_table = em_ibm.translation_table
-    # TODO NB ibm_model also has method self.align_all(corpus) and then alignments will be stored in the AlignedSent.alignment attribute
+    fit_model = ibm_model(corpus, iterations)
+    translation_table = fit_model.translation_table
     for seg1 in translation_table:
         translation_table[seg1][gap_ch] = translation_table[seg1].get(None, 0)
         if None in translation_table[seg1]:
             del translation_table[seg1][None]
-    return translation_table
+    # Align full corpus using the fitted IBM model
+    fit_model.align_all(corpus)
+    
+    # Return aligned corpus, fit_model, translation_table
+    return corpus, fit_model, translation_table
+
+
+def postprocess_ibm_alignment(aligned_pair, remove_non_sequential_complex_alignments=True):
+    # Postprocess start-end boundary alignments
+    alignment = postprocess_boundary_alignments(aligned_pair)
+    seq1 = aligned_pair.words
+    seq2 = aligned_pair.mots
+    
+    # Initialize alignment dicts
+    aligned_seq1 = defaultdict(lambda:[])
+    aligned_seq2 = defaultdict(lambda:[])
+    
+    # Fill in aligned dicts
+    for idx1, idx2 in alignment:
+        if idx1 is not None:
+            aligned_seq1[idx1].append(idx2)
+        if idx2 is not None:
+            aligned_seq2[idx2].append(idx1)
+    
+    # Add gaps
+    for idx1, _ in enumerate(seq1):
+        if idx1 not in aligned_seq1:
+            aligned_seq1[idx1].append(None)
+    for idx2, _ in enumerate(seq2):
+        if idx2 not in aligned_seq2:
+            aligned_seq2[idx2].append(None)
+            
+    if remove_non_sequential_complex_alignments:
+        """IBM alignment can produce alignments with units aligned in multiple places, e.g.
+        [(0, 0), (1, 1), (2, 9), (3, 3), (4, 4), (5, 7), (6, 4), (7, 9), (8, 10)]
+        where idx 9 in seq2 is aligned to both idx 2 and idx 7 in seq1
+        
+        Disallow such complex/double alignments if they are not consecutive
+        """
+        for j, i_s in aligned_seq2.items():
+            i_s.sort()
+            if len(i_s) > 1:
+                i_i = 0
+                i_s_len = len(i_s)
+                i_s_copy = i_s[:]
+                while i_i < i_s_len-1:
+                    i = i_s_copy[i_i]
+                    i_next = i_s_copy[i_i + 1]
+                    if abs(i - i_next) > 1:
+                        anchor = mean(i_s+[j])
+                        
+                        # Find which of the two is more distant from anchor
+                        more_distant_i = max(i_next, i, key=lambda x: abs(x - anchor))
+                        aligned_seq2[j].remove(more_distant_i)
+                        if len(aligned_seq1[more_distant_i]) > 1:
+                            aligned_seq1[more_distant_i].remove(j)
+                        else:
+                            aligned_seq1[more_distant_i] = [None]
+                    i_i += 1
+            
+    return aligned_seq1, aligned_seq2
+
+
+def postprocess_boundary_alignments(aligned_pair):
+    """Correct alignment of a start boundary with an end boundary."""
+    seq1_len = len(aligned_pair.words)
+    seq2_len = len(aligned_pair.mots)
+    alignment = list(aligned_pair.alignment)
+    if (0, seq2_len-1) in alignment:
+        idx = alignment.index((0, seq2_len-1))
+        alignment[idx] = (0, 0)
+    elif (seq1_len-1, 0) in alignment:
+        idx = alignment.index((seq1_len-1, 0))
+        alignment[idx] = (0, 0)
+    alignment.sort(key=lambda x: (x[0], x[-1]))
+    return alignment
 
 
 def sort_wordlist(wordlist):
@@ -476,7 +550,7 @@ class PhonCorrelator:
                   normalize=True,
                   phon_env=False, # TODO add
                   ibm_model=2,
-                  max_ngram_size=2,
+                  max_ngram_size=1,
                   ):
         """Fits EM IBM models on pairs of ngrams of varying sizes and aggregates the translation tables."""
 
@@ -496,13 +570,64 @@ class PhonCorrelator:
                 for ngram_size_j in ngram_sizes:
                     ngrams2 = word2.get_ngrams(size=ngram_size_j, pad_ch=self.pad_ch)
                     corpus.append((ngrams1, ngrams2))
-        corr_dict = fit_em_ibm(corpus, gap_ch=self.gap_ch, ibm_model=ibm_model)
+        corpus, fit_model, translation_table = fit_em_ibm(corpus, gap_ch=self.gap_ch, ibm_model=ibm_model)
 
-        if normalize:
-            for seg1 in corr_dict:
-                corr_dict[seg1] = normalize_dict(corr_dict[seg1])
+        # Create corr dicts in each direction from aligned segments
+        corr_dict_l1l2 = defaultdict(lambda: defaultdict(lambda:0))
+        corr_dict_l2l1 = defaultdict(lambda: defaultdict(lambda:0))
+        for aligned_pair in corpus:
+            aligned_seq1, aligned_seq2 = postprocess_ibm_alignment(aligned_pair)
+            for idx1, seq2corrs in aligned_seq1.items():
+                seg_i = aligned_pair.words[idx1]
+                complex_idx2 = False
+                if None not in seq2corrs:
+                    seq2corrs = segment_ranges(seq2corrs)
+                for idx2 in seq2corrs:
+                    if idx2 is not None:
+                        if isinstance(idx2, tuple):
+                            complex_idx2 = True
+                            start, end = idx2
+                            seg_j = Ngram(aligned_pair.mots[start:end+1]).ngram
+                        else:
+                            seg_j = aligned_pair.mots[idx2]
+                    else:
+                        seg_j = self.gap_ch
+                    corr_dict_l1l2[seg_i][seg_j] += 1
+                    if complex_idx2:
+                        corr_dict_l2l1[seg_j][seg_i] += 1
+                        for seg_j_j in seg_j:
+                            corr_dict_l2l1[seg_j_j][seg_i] -= 1
+            for idx2, seq1corrs in aligned_seq2.items():
+                seg_j = aligned_pair.mots[idx2]
+                complex_idx1 = False
+                if None not in seq1corrs:
+                    seq1corrs = segment_ranges(seq1corrs)
+                for idx1 in seq1corrs:
+                    if idx1 is not None:
+                        if isinstance(idx1, tuple):
+                            complex_idx1 = True
+                            start, end = idx1
+                            seg_i = Ngram(aligned_pair.words[start:end+1]).ngram
+                        else:
+                            seg_i = aligned_pair.words[idx1]
+                    else:
+                        seg_i = self.gap_ch
+                    corr_dict_l2l1[seg_j][seg_i] += 1
+                    if complex_idx1:
+                        corr_dict_l1l2[seg_i][seg_j] += 1
+                        for seg_i_i in seg_i:
+                            corr_dict_l1l2[seg_i_i][seg_j] -= 1
+        
+        # Remove keys with 0 values
+        # (would occur from adjusting complex correspondences in preceding loop)
+        corr_l1l2_to_delete = [seg_i for seg_i, inner_dict in corr_dict_l1l2.items() if sum(inner_dict.values()) == 0]
+        for seg_i in corr_l1l2_to_delete:
+            del corr_dict_l1l2[seg_i]
+        corr_l2l1_to_delete = [seg_j for seg_j, inner_dict in corr_dict_l2l1.items() if sum(inner_dict.values()) == 0]
+        for seg_j in corr_l2l1_to_delete:
+            del corr_dict_l2l1[seg_j]
 
-        return corr_dict
+        return corr_dict_l1l2, corr_dict_l2l1
 
     def joint_probs(self, conditional_counts, l1=None, l2=None):
         """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
@@ -713,8 +838,14 @@ class PhonCorrelator:
 
                 p_ind = p_ind1 * p_ind2
                 joint_prob = joint_prob_dist.get(seg1, {}).get(seg2, p_ind)
-                pmi_dict[seg1_ngram.undo()][seg2_ngram.undo()] = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
-
+                if p_ind1 == 0:
+                    raise ValueError(f"Couldn't calculate independent probability of segment {seg1} in {self.lang1.name}")
+                if p_ind2 == 0:
+                    raise ValueError(f"Couldn't calculate independent probability of segment {seg2} in {self.lang2.name}")
+                # As long as the independent probabilities > 0, skip calculating PMI for segment pairs with 0 joint probability
+                if joint_prob > 0:
+                    pmi_dict[seg1_ngram.undo()][seg2_ngram.undo()] = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
+                
         return pmi_dict
 
     def calc_phoneme_pmi(self,
@@ -790,8 +921,7 @@ class PhonCorrelator:
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
                 # Perform EM algorithm and fit IBM model 1 on ngrams of varying sizes
-                em_synonyms1 = self.radial_em(qual_prev_sample)
-                em_synonyms2 = self.radial_em(reversed_qual_prev_sample)
+                em_synonyms1, em_synonyms2 = self.radial_em(qual_prev_sample)
 
                 # Calculate initial PMI for all ngram pairs
                 pmi_dict_l1l2, pmi_dict_l2l1 = [
@@ -812,30 +942,31 @@ class PhonCorrelator:
                 # Average together the PMI values from each direction
                 pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
 
-                # Normalize the PMI values by ngram size
-                # i.e. make sure that PMI range for unigrams is comparable for range with bigrams, etc.
-                # TODO make this into a function
-                pmi_by_shape = defaultdict(lambda:[])
-                for ngram1 in pmi_step_i:
-                    ngram1_size = Ngram(ngram1).size
-                    for ngram2, score in pmi_step_i[ngram1].items():
-                        ngram2_size = Ngram(ngram2).size
-                        shape = (ngram1_size, ngram2_size)
-                        pmi_by_shape[shape].append(score)
-                for ngram1 in pmi_step_i:
-                    ngram1_size = Ngram(ngram1).size
-                    for ngram2, score in pmi_step_i[ngram1].items():
-                        ngram2_size = Ngram(ngram2).size
-                        shape = (ngram1_size, ngram2_size)
-                        # e.g. unigrams: between -1 and 1
-                        # bigrams: between -2 and 2
-                        # gives slight weight to extreme values of higher order ngrams
-                        pmi_step_i[ngram1][ngram2] = rescale(
-                            score,
-                            pmi_by_shape[shape],
-                            new_min=-max(ngram1_size, ngram2_size),
-                            new_max=max(ngram1_size, ngram2_size)
-                        )
+                # # Normalize the PMI values by ngram size
+                # # i.e. make sure that PMI range for unigrams is comparable for range with bigrams, etc.
+                # # TODO make this into a function
+                # pmi_by_shape = defaultdict(lambda:[])
+                # for ngram1 in pmi_step_i:
+                #     ngram1_size = Ngram(ngram1).size
+                #     for ngram2, score in pmi_step_i[ngram1].items():
+                #         ngram2_size = Ngram(ngram2).size
+                #         shape = (ngram1_size, ngram2_size)
+                #         pmi_by_shape[shape].append(score)
+                # for ngram1 in pmi_step_i:
+                #     ngram1_size = Ngram(ngram1).size
+                #     for ngram2, score in pmi_step_i[ngram1].items():
+                #         ngram2_size = Ngram(ngram2).size
+                #         shape = (ngram1_size, ngram2_size)
+                #         # e.g. unigrams: between -1 and 1
+                #         # bigrams: between -2 and 2
+                #         # gives slight weight to extreme values of higher order ngrams
+                #         pmi_step_i[ngram1][ngram2] = rescale(
+                #             score,
+                #             pmi_by_shape[shape],
+                #             new_min=-max(ngram1_size, ngram2_size),
+                #             new_max=max(ngram1_size, ngram2_size)
+                #         )
+                breakpoint()
 
                 # Align the qualifying words of the previous step using initial PMI
                 cognate_alignments = self.align_wordlist(
