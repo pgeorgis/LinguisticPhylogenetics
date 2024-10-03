@@ -9,7 +9,7 @@ from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 import numpy as np
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
-                       PAD_CH_DEFAULT, START_PAD_CH)
+                       PAD_CH_DEFAULT, START_PAD_CH, SEG_JOIN_CH)
 from phonAlign import Alignment, AlignedPair, compatible_segments, visual_align
 from phonUtils.phonEnv import (phon_env_ngrams, relative_post_sonority,
                                relative_prev_sonority)
@@ -556,7 +556,8 @@ class PhonCorrelator:
                   normalize=True,
                   phon_env=False, # TODO add
                   ibm_model=2,
-                  max_ngram_size=1,
+                  max_ngram_size=2,
+                  min_corr=2,
                   seed=None,
                   ):
         """Fits EM IBM models on pairs of ngrams of varying sizes and aggregates the translation tables."""
@@ -574,8 +575,12 @@ class PhonCorrelator:
                 segs1 = zip(segs2, env2)
             for ngram_size_i in ngram_sizes:
                 ngrams1 = word1.get_ngrams(size=ngram_size_i, pad_ch=self.pad_ch)
+                if ngram_size_i > 1:
+                    ngrams1 = [SEG_JOIN_CH.join(ngram) for ngram in ngrams1]
                 for ngram_size_j in ngram_sizes:
                     ngrams2 = word2.get_ngrams(size=ngram_size_j, pad_ch=self.pad_ch)
+                    if ngram_size_j > 1:
+                        ngrams2 = [SEG_JOIN_CH.join(ngram) for ngram in ngrams2]
                     corpus.append((ngrams1, ngrams2))
         corpus, fit_model, translation_table = fit_em_ibm(
             corpus,
@@ -590,7 +595,7 @@ class PhonCorrelator:
         for aligned_pair in corpus:
             aligned_seq1, aligned_seq2 = postprocess_ibm_alignment(aligned_pair)
             for idx1, seq2corrs in aligned_seq1.items():
-                seg_i = aligned_pair.words[idx1]
+                seg_i = Ngram(aligned_pair.words[idx1]).undo()
                 complex_idx2 = False
                 if None not in seq2corrs:
                     seq2corrs = segment_ranges(seq2corrs)
@@ -599,9 +604,16 @@ class PhonCorrelator:
                         if isinstance(idx2, tuple):
                             complex_idx2 = True
                             start, end = idx2
-                            seg_j = Ngram(aligned_pair.mots[start:end+1]).ngram
+                            seg_j = []
+                            for x in range(start, end + 1):
+                                if x == start or SEG_JOIN_CH not in aligned_pair.mots[x]:
+                                    seg_j.append(Ngram(aligned_pair.mots[x]).undo())
+                                else:
+                                    seg_j.append(Ngram(aligned_pair.mots[x]).undo()[-1])
+                            seg_j = Ngram(seg_j).ngram
+                            #seg_j = Ngram(aligned_pair.mots[start:end+1]).ngram
                         else:
-                            seg_j = aligned_pair.mots[idx2]
+                            seg_j = Ngram(aligned_pair.mots[idx2]).undo()
                     else:
                         seg_j = self.gap_ch
                     corr_dict_l1l2[seg_i][seg_j] += 1
@@ -610,7 +622,7 @@ class PhonCorrelator:
                         for seg_j_j in seg_j:
                             corr_dict_l2l1[seg_j_j][seg_i] -= 1
             for idx2, seq1corrs in aligned_seq2.items():
-                seg_j = aligned_pair.mots[idx2]
+                seg_j = Ngram(aligned_pair.mots[idx2]).undo()
                 complex_idx1 = False
                 if None not in seq1corrs:
                     seq1corrs = segment_ranges(seq1corrs)
@@ -619,9 +631,16 @@ class PhonCorrelator:
                         if isinstance(idx1, tuple):
                             complex_idx1 = True
                             start, end = idx1
-                            seg_i = Ngram(aligned_pair.words[start:end+1]).ngram
+                            seg_i = []
+                            for x in range(start, end + 1):
+                                if x == start or SEG_JOIN_CH not in aligned_pair.words[x]:
+                                    seg_i.append(Ngram(aligned_pair.words[x]).undo())
+                                else:
+                                    seg_i.append(Ngram(aligned_pair.words[x]).undo()[-1])
+                            seg_i = Ngram(seg_i).ngram
+                            #seg_i = Ngram(aligned_pair.words[start:end+1]).ngram
                         else:
-                            seg_i = aligned_pair.words[idx1]
+                            seg_i = Ngram(aligned_pair.words[idx1]).undo()
                     else:
                         seg_i = self.gap_ch
                     corr_dict_l2l1[seg_j][seg_i] += 1
@@ -630,12 +649,16 @@ class PhonCorrelator:
                         for seg_i_i in seg_i:
                             corr_dict_l1l2[seg_i_i][seg_j] -= 1
         
+        # Prune correspondences which occur fewer than min_corr times
+        corr_dict_l1l2 = prune_corrs(corr_dict_l1l2, min_val=min_corr)
+        corr_dict_l2l1 = prune_corrs(corr_dict_l2l1, min_val=min_corr)
+        
         # Remove keys with 0 values
         # (would occur from adjusting complex correspondences in preceding loop)
-        corr_l1l2_to_delete = [seg_i for seg_i, inner_dict in corr_dict_l1l2.items() if sum(inner_dict.values()) == 0]
+        corr_l1l2_to_delete = [seg_i for seg_i, inner_dict in corr_dict_l1l2.items() if sum(inner_dict.values()) < 1]
         for seg_i in corr_l1l2_to_delete:
             del corr_dict_l1l2[seg_i]
-        corr_l2l1_to_delete = [seg_j for seg_j, inner_dict in corr_dict_l2l1.items() if sum(inner_dict.values()) == 0]
+        corr_l2l1_to_delete = [seg_j for seg_j, inner_dict in corr_dict_l2l1.items() if sum(inner_dict.values()) < 1]
         for seg_j in corr_l2l1_to_delete:
             del corr_dict_l2l1[seg_j]
 
@@ -937,7 +960,7 @@ class PhonCorrelator:
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
                 # Perform EM algorithm and fit IBM model 1 on ngrams of varying sizes
-                em_synonyms1, em_synonyms2 = self.radial_em(qual_prev_sample, seed=seed_i)
+                em_synonyms1, em_synonyms2 = self.radial_em(qual_prev_sample, min_corr=min_corr, seed=seed_i)
 
                 # Calculate initial PMI for all ngram pairs
                 pmi_dict_l1l2, pmi_dict_l2l1 = [
