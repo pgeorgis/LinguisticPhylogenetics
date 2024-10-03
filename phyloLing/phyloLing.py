@@ -1682,7 +1682,7 @@ class Word:
         # Remove overlapping bigrams and decompose into unigrams if appropriate
         def get_ngram_self_surprisal(ngram):
             ngram = Ngram(ngram)
-            ngram_info = self.self_surprisal(list(ngram.ngram), as_seq=True, ngram_size=ngram.size)
+            ngram_info = self.language.self_surprisal(list(ngram.ngram), as_seq=True, ngram_size=ngram.size)
             return mean([ngram_info[j][-1] for j in ngram_info])
         
         complex_ngram_seq = remove_overlapping_ngrams(
