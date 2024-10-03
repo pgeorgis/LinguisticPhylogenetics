@@ -434,8 +434,7 @@ class Alignment:
             seq2 (phyloLing.Word or str): second phone sequence
             lang1 (phyloLing.Language, optional): Language of seq1. Defaults to None.
             lang2 (phyloLing.Language, optional): Language of seq2. Defaults to None.
-            cost_func (Distance, optional): Cost function used for minimizing overall alignment cost. Defaults to AlignmentPhoneSim.
-            added_penalty_dict (dict, optional): Dictionary of additional penalties to combine with cost_func. Defaults to None.
+            align_costs (dict): Dictionary of alignment costs or scores.
             gap_ch (str, optional): Gap character. Defaults to '{GAP_CH_DEFAULT}'.
             gop (float, optional): Gap opening penalty. Defaults to -0.7.
             n_best (int, optional): Number of best (least costly) alignments to return. Defaults to 1.
@@ -1035,9 +1034,8 @@ class ReversedAlignment(Alignment):
         self.word2 = alignment.word1
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
-        self.cost_func = alignment.cost_func
         self.pad_ch = alignment.pad_ch
-        self.added_penalty_dict = alignment.added_penalty_dict
+        self.align_costs = alignment.align_costs
         self.kwargs = alignment.kwargs
         self.n_best = [(reverse_alignment(alignment_n), seq_map, cost) for alignment_n, seq_map, cost in alignment.n_best]
         self.alignment = reverse_alignment(alignment.alignment)

@@ -58,7 +58,7 @@ def prepare_alignment(word1, word2, **kwargs):
         pmi_dict = get_pmi_dict(lang1, lang2)
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
-        alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
+        alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
 
     # Perform phonetic alignment without PMI support
     else:
@@ -457,7 +457,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     get_phoneme_surprisal(lang1, lang2, ngram_size=ngram_size, **kwargs)
 
     # Generate alignments in each direction: alignments need to come from PMI
-    alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
+    alignment = Alignment(word1, word2, align_costs=pmi_dict, phon_env=phon_env)
     # NB: padding was for compacting gaps, which is now disabled in favor of complex alignment, which already includes padding, therefore no padding is necessary
     # Pad (need to set as ngram_size=min 2 to yield any padding)
     #alignment.pad(ngram_size=max(2, ngram_size), alignment=alignment.alignment, pad_ch=pad_ch)
@@ -591,7 +591,7 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
     pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
 
     # Align the words with PMI
-    alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
+    alignment = Alignment(word1, word2, align_costs=pmi_dict)
     # NB: padding was for compacting gaps, which is now disabled in favor of complex alignment, which already includes padding, therefore no padding is necessary
     # Pad (ngram_size=1, but need to set as min 2 to yield any padding)
     #alignment.pad(ngram_size=2, alignment=alignment.alignment, pad_ch=pad_ch)
