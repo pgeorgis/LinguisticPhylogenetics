@@ -8,10 +8,7 @@ datasets/*/distances
 datasets/*/experiments
 datasets/*/plots
 datasets/*/trees
-datasets/*/phone_corr/pmi/*/*/PMI_iterations.log
-datasets/*/phone_corr/pmi/*/*/phonPMI.tsv
-datasets/*/phone_corr/surprisal/
-datasets/*/phone_corr/samples/
+datasets/*/phone_corr/
 datasets/Arabic
 datasets/Celtic
 datasets/Japonic
