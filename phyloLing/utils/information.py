@@ -80,7 +80,10 @@ def adaptation_surprisal(alignment,
         #         seg1 = PhonEnvNgram(seg1).ngram_w_context
         # elif phon_env and ngram1.string != gap_ch:
         if phon_env and ngram1.string != gap_ch:
-            seg1 = PhonEnvNgram(seg1).ngram_w_context
+            if ngram1.is_boundary(pad_ch) and ngram1.size == 1:  # e.g. ('#>',)
+                seg1 = ngram1.undo()
+            else:
+                seg1 = PhonEnvNgram(seg1).ngram_w_context
         else:
             seg1 = ngram1.undo()
         seg2 = Ngram(seg2).undo()
