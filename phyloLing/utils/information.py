@@ -72,12 +72,14 @@ def adaptation_surprisal(alignment,
         # Ngrams with phon env context:
         # (ngram, phon_env), e.g. ('v', '#|S|<') or (('<#', 'v'), '#|S|<')
         ngram1 = Ngram(seg1)
-        if pad_ch in ngram1.ngram[0]:
-            seg1 = ngram1.undo()  # e.g. ('#>',)
-            if isinstance(seg1, tuple) and len(seg1) > 2:  # e.g. ('<#', 'v', '#|S|<')
-                # e.g. ((('<#', 'v'), '#|S|<'),) -> ('<#', 'v', '#|S|<') -> (('<#', 'v'), '#|S|<')
-                seg1 = PhonEnvNgram(seg1).ngram_w_context
-        elif phon_env and ngram1.string != gap_ch:
+        # NB: I think handling below is now deprecated/unneeded given recent fixes
+        # if ngram1.is_boundary(pad_ch):
+        #     seg1 = ngram1.undo()  # e.g. ('#>',)
+        #     if isinstance(seg1, tuple) and len(seg1) > 2:  # e.g. ('<#', 'v', '#|S|<')
+        #         # e.g. ((('<#', 'v'), '#|S|<'),) -> ('<#', 'v', '#|S|<') -> (('<#', 'v'), '#|S|<')
+        #         seg1 = PhonEnvNgram(seg1).ngram_w_context
+        # elif phon_env and ngram1.string != gap_ch:
+        if phon_env and ngram1.string != gap_ch:
             seg1 = PhonEnvNgram(seg1).ngram_w_context
         else:
             seg1 = ngram1.undo()
