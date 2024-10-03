@@ -268,13 +268,17 @@ if __name__ == "__main__":
             if cluster_params['cognates'] == 'gold':
                 family.load_phoneme_surprisal(
                     ngram_size=surprisal_params['ngram'],
+                    phon_env=surprisal_params['phon_env'],
                     gold=True,
-                    excepted=surprisal_params['refresh'])
+                    excepted=surprisal_params['refresh'],
+                )
             else:
                 family.load_phoneme_surprisal(
                     ngram_size=surprisal_params['ngram'],
+                    phon_env=surprisal_params['phon_env'],
                     gold=False,
-                    excepted=surprisal_params['refresh'])
+                    excepted=surprisal_params['refresh'],
+                )
 
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
