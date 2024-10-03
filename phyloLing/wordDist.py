@@ -21,19 +21,18 @@ def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
     """Calculate phoneme surprisal if not already done."""
     if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
         correlator1 = lang1.get_phoneme_correlator(lang2)
-        correlator1.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+        correlator1.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
     if len(lang2.phoneme_surprisal[(lang1.name, ngram_size)]) == 0:
         correlator2 = lang2.get_phoneme_correlator(lang1)
-        correlator2.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+        correlator2.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
 
 
 def get_pmi_dict(lang1, lang2, **kwargs):
     """Calculate phoneme PMI if not already done and return PMI dict."""
-    if len(lang1.phoneme_pmi[lang2]) > 0:
-        pmi_dict = lang1.phoneme_pmi[lang2]
-    else:
+    if len(lang1.phoneme_pmi[lang2]) == 0:
         correlator = lang1.get_phoneme_correlator(lang2)
-        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
+        correlator.compute_phone_corrs(**kwargs)
+    pmi_dict = lang1.phoneme_pmi[lang2]
     return pmi_dict
 
 

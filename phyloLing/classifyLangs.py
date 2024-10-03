@@ -139,15 +139,15 @@ def init_hybrid(function_map, eval_params):
 
 def init_composite(params):
     eval_params = params['evaluation']
-    surprisal_params = params['surprisal']
+    phon_corr_params = params['phon_corr']
     CompositeSim = Distance(
         func=composite_sim,
         name='CompositeSim',
         sim=True,
         pmi_weight=eval_params['pmi_weight'],
         surprisal_weight=eval_params['surprisal_weight'],
-        ngram_size=surprisal_params['ngram'],
-        phon_env=surprisal_params['phon_env'],
+        ngram_size=phon_corr_params['ngram'],
+        phon_env=phon_corr_params['phon_env'],
     )
     CompositeDist = CompositeSim.to_distance('CompositeDist', alpha=0.8)
 
@@ -201,8 +201,7 @@ if __name__ == "__main__":
     family_params = params['family']
     transcription_params = params['transcription']
     alignment_params = params['alignment']
-    pmi_params = params['pmi']
-    surprisal_params = params['surprisal']
+    phon_corr_params = params['phon_corr']
     cluster_params = params['cluster']
     eval_params = params['evaluation']
     tree_params = params['tree']
@@ -210,9 +209,9 @@ if __name__ == "__main__":
 
     # Set ngram size used for surprisal
     surprisal_funcs = ('surprisal', 'hybrid', 'composite')
-    if eval_params['method'] in surprisal_funcs or cluster_params['method'] in surprisal_params:
-        function_map['surprisal'].set('ngram_size', surprisal_params['ngram'])
-        function_map['surprisal'].set('phon_env', surprisal_params['phon_env'])
+    if eval_params['method'] in surprisal_funcs or cluster_params['method'] in phon_corr_params:
+        function_map['surprisal'].set('ngram_size', phon_corr_params['ngram'])
+        function_map['surprisal'].set('phon_env', phon_corr_params['phon_env'])
         SurprisalDist = function_map['surprisal']
 
         # Initialize hybrid or composite distance/similarity objects
@@ -256,50 +255,43 @@ if __name__ == "__main__":
     else:
         logger.info(f'Average mutual coverage is {round(avg_mc, 2)} ({abs_mc}/{len(family.concepts)} concepts in all {len(family.languages)} doculects).')
 
-    # Load or calculate phoneme PMI
-    if not pmi_params['refresh_all_pmi']:
+    # Load or calculate phone correspondences
+    if not phon_corr_params['refresh_all']:
         logger.info(f'Loading {family.name} phoneme PMI...')
-        family.load_phoneme_pmi(excepted=pmi_params['refresh'])
+        family.load_phoneme_pmi(excepted=phon_corr_params['refresh'])
 
-    # Load or calculate phoneme surprisal
-    if not surprisal_params['refresh_all_surprisal']:
         if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
             logger.info(f'Loading {family.name} phoneme surprisal...')
             if cluster_params['cognates'] == 'gold':
                 family.load_phoneme_surprisal(
-                    ngram_size=surprisal_params['ngram'],
-                    phon_env=surprisal_params['phon_env'],
+                    ngram_size=phon_corr_params['ngram'],
+                    phon_env=phon_corr_params['phon_env'],
                     gold=True,
-                    excepted=surprisal_params['refresh'],
+                    excepted=phon_corr_params['refresh'],
                 )
             else:
                 family.load_phoneme_surprisal(
-                    ngram_size=surprisal_params['ngram'],
-                    phon_env=surprisal_params['phon_env'],
+                    ngram_size=phon_corr_params['ngram'],
+                    phon_env=phon_corr_params['phon_env'],
                     gold=False,
-                    excepted=surprisal_params['refresh'],
+                    excepted=phon_corr_params['refresh'],
                 )
 
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
-    if pmi_params['refresh_all_pmi'] or surprisal_params['refresh_all_surprisal'] or len(pmi_params['refresh']) or len(surprisal_params['refresh']) > 0:
-        family.calculate_phoneme_pmi(
-            sample_size=pmi_params['sample_size'],
-            n_samples=pmi_params['n_samples'],
-            min_corr=pmi_params['min_corr'],
+    if phon_corr_params['refresh_all'] or len(phon_corr_params['refresh']) > 0:
+        family.calculate_phone_corrs(
+            sample_size=phon_corr_params['sample_size'],
+            n_samples=phon_corr_params['n_samples'],
+            min_corr=phon_corr_params['min_corr'],
+            ngram_size=phon_corr_params['ngram'],
+            phon_env=phon_corr_params['phon_env'],
         )
         family.write_phoneme_pmi()
         if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
-            family.calculate_phoneme_surprisal(
-                ngram_size=surprisal_params['ngram'],
-                sample_size=surprisal_params['sample_size'],
-                n_samples=surprisal_params['n_samples'],
-                min_corr=surprisal_params['min_corr'],
-                phon_env=surprisal_params['phon_env'],
-            )
             family.write_phoneme_surprisal(
-                ngram_size=surprisal_params['ngram'],
-                phon_env=surprisal_params['phon_env'],
+                ngram_size=phon_corr_params['ngram'],
+                phon_env=phon_corr_params['phon_env'],
             )
 
     # Auto cognate clustering only

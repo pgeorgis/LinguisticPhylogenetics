@@ -270,16 +270,16 @@ class LexicalDataset:
             if self.logger:
                 self.logger.info(prune_log)
 
-    def calculate_phoneme_pmi(self, **kwargs):
-        """Calculates phoneme PMI for all language pairs in the dataset and saves
-        the results to file"""
+    def calculate_phone_corrs(self, **kwargs):
+        """Calculates phone correspondence values for all
+        language pairs in the dataset and saves the results to file"""
         lang_pairs = self.get_doculect_pairs(bidirectional=False)
         # Check whether phoneme PMI has been calculated already for this pair
         # If not, calculate it now
         for lang1, lang2 in lang_pairs:
             if len(lang1.phoneme_pmi[lang2]) == 0:
                 correlator = lang1.get_phoneme_correlator(lang2)
-                correlator.calc_phoneme_pmi(**kwargs)
+                correlator.compute_phone_corrs(**kwargs)
 
     def load_phoneme_pmi(self, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
@@ -295,7 +295,7 @@ class LexicalDataset:
                 # Try to load the file of saved PMI values, otherwise calculate PMI first
                 if not os.path.exists(pmi_file):
                     correlator = lang1.get_phoneme_correlator(lang2)
-                    correlator.calc_phoneme_pmi(**kwargs)
+                    correlator.compute_phone_corrs(**kwargs)
                 pmi_data = pd.read_csv(pmi_file, sep=sep)
 
                 # Iterate through the dataframe and save the PMI values to the Language
@@ -345,21 +345,6 @@ class LexicalDataset:
             if phon_env:
                 correlator.log_phoneme_surprisal(phon_env=True, **kwargs)
 
-    def calculate_phoneme_surprisal(self, ngram_size=1, **kwargs):
-        """Calculates phoneme surprisal for all language pairs in the dataset and saves
-        the results to file"""
-
-        # First ensure that phoneme PMI has been calculated and loaded
-        self.load_phoneme_pmi()
-
-        # Check whether phoneme surprisal has been calculated already for this pair
-        lang_pairs = self.get_doculect_pairs(bidirectional=True)
-        for lang1, lang2 in lang_pairs:
-            # If not, calculate it now
-            if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
-                correlator = lang1.get_phoneme_correlator(lang2)
-                correlator.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-
     def load_phoneme_surprisal(self, ngram_size=1, phon_env=False, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme surprisal values from file"""
 
@@ -404,7 +389,7 @@ class LexicalDataset:
                 # Try to load the file of saved surprisal values, otherwise calculate surprisal first
                 if not os.path.exists(surprisal_file):
                     correlator = lang1.get_phoneme_correlator(lang2)
-                    correlator.calc_phoneme_surprisal(ngram_size=ngram_size, phon_env=phon_env, **kwargs)
+                    correlator.compute_phone_corrs(ngram_size=ngram_size, phon_env=phon_env, **kwargs)
                 surprisal_data = pd.read_csv(surprisal_file, sep=sep)
 
                 # Extract and save the surprisal values to phoneme_surprisal attribute of language object
