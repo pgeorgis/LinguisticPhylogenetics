@@ -792,8 +792,11 @@ class PhonCorrelator:
             ]
         )
         # Extend with gaps in seq1, not included in joint_prob_dist (but in the seq2 nested dicts and therefore in reverse_cond_counts already)
-        segment_pairs.update([(self.gap_ch, seg1) for seg1 in l1.phonemes])
-        segment_pairs.update([(self.gap_ch, corr1) for corr1 in joint_prob_dist if corr1 not in l1.phonemes])
+        segment_pairs.update([(self.gap_ch, seg2) for seg2 in l2.phonemes])
+        segment_pairs.update([(self.gap_ch, corr2) 
+                              for corr1 in joint_prob_dist
+                              for corr2 in joint_prob_dist[corr1]
+                              if corr2 not in l2.phonemes])
         # Extend with gap and pad tokens
         segment_pairs.update([(self.gap_ch, start_token(self.pad_ch)), (self.gap_ch, end_token(self.pad_ch))])
 
