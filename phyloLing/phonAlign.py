@@ -75,11 +75,12 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
         for j in range(1, m + 1):
             best_score = worst_score
             best_move = None
-
+            
             # Align one unit from seq1 to one or more from seq2
             for k in range(1, i + 1):
                 for l in range(1, j + 1):
-                    cost = align_cost.get((seq2ngram(seq1[i-k:i]), seq2ngram(seq2[j-l:j])), worst_score)
+                    max_size = max(j-(j-l), i-(i-k), 1)
+                    cost = align_cost.get((seq2ngram(seq1[i-k:i]), seq2ngram(seq2[j-l:j])), default_gop * max_size)
                     score = dp[i-k][j-l] + cost
                     if score_is_better(score, best_score):
                         best_score = score
@@ -87,7 +88,8 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
             
             # Align seq1 to a gap
             for k in range(1, i + 1):
-                cost = gap_cost.get((seq2ngram(seq1[i-k:i]), gap_ch), worst_score)
+                size = max(1, (i-(i-k)))
+                cost = gap_cost.get((seq2ngram(seq1[i-k:i]), gap_ch), default_gop * size)
                 score = dp[i-k][j] + cost
                 if score_is_better(score, best_score):
                     best_score = score
@@ -95,7 +97,8 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
             
             # Align seq2 to a gap
             for l in range(1, j + 1):
-                cost = gap_cost.get((gap_ch, seq2ngram(seq2[j-l:j])), worst_score)
+                size = max(1, (j-(j-l)))
+                cost = gap_cost.get((gap_ch, seq2ngram(seq2[j-l:j])), default_gop * size)
                 score = dp[i][j-l] + cost
                 if score_is_better(score, best_score):
                     best_score = score
