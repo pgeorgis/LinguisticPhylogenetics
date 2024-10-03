@@ -1068,7 +1068,7 @@ class PhonCorrelator:
                 iter_logs[sample_n].append((qualifying_words[iteration], sort_wordlist(disqualified)))
 
                 # Log final alignments from which PMI was calculated
-                self.log_alignments(qualifying_alignments, self.align_log['PMI'])
+                #self.log_alignments(qualifying_alignments, self.align_log['PMI'])
 
             # Return and save the final iteration's PMI results
             results = PMI_iterations[max(PMI_iterations.keys())]
@@ -1082,8 +1082,18 @@ class PhonCorrelator:
         # Average together the PMI estimations from each sample
         if n_samples > 1:
             results = average_nested_dicts(list(sample_results.values()))
+            
+            # If >1 sample, realign using averaged PMI values from all samples
+            final_alignments = self.align_wordlist(
+                self.same_meaning,
+                added_penalty_dict=results,
+                compact=False, # TODO reenable potentially
+            )
+            self.log_alignments(final_alignments, self.align_log['PMI'])
+
         else:
             results = sample_results[0]
+            final_alignments = aligned_synonym_sample
 
         # Write the iteration log
         if log_iterations:
