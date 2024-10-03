@@ -372,6 +372,14 @@ class PhonCorrelator:
         self.pmi_log_dir, self.surprisal_log_dir = self.log_dirs()
         self.align_log = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
         self.logger = logger
+    
+    def get_twin(self):
+        """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
+        return self.lang2.get_phoneme_correlator(
+            lang2=self.lang1,
+            wordlist=tuple(self.wordlist),
+            seed=self.seed
+        )
 
     def reset_seed(self):
         random.seed(self.seed)
@@ -1107,8 +1115,15 @@ class PhonCorrelator:
             min_corr=min_corr,
             ngram_size=ngram_size,
         )
-        breakpoint()
-        # TODO need to compute surprisal in reverse direction too using reversed alignments
+        # Compute surprisal in opposite direction with reversed alignments
+        twin = self.get_twin()
+        reversed_final_alignments = [alignment.reverse() for alignment in final_alignments]
+        twin.compute_phone_surprisal(
+            reversed_final_alignments,
+            phon_env=phon_env,
+            min_corr=min_corr,
+            ngram_size=ngram_size,
+        )
 
         # Write the iteration log
         log_file = os.path.join(self.pmi_log_dir, 'PMI_iterations.log')
