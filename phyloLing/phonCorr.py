@@ -1089,11 +1089,11 @@ class PhonCorrelator:
                 added_penalty_dict=results,
                 compact=False, # TODO reenable potentially
             )
-            self.log_alignments(final_alignments, self.align_log['PMI'])
 
         else:
             results = sample_results[0]
             final_alignments = aligned_synonym_sample
+        self.log_alignments(final_alignments, self.align_log['PMI'])
 
         # Write the iteration log
         if log_iterations:
