@@ -10,7 +10,6 @@ from statistics import mean
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
-from nwunschAlign import best_alignment as needleman_wunsch
 from phonUtils.phonEnv import get_phon_env
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
@@ -24,7 +23,14 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(mes
 logger = logging.getLogger(__name__)
 
 
-def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap_ch=GAP_CH_DEFAULT, maximize_score=False):
+def needleman_wunsch_extended(seq1, seq2, 
+                              align_cost,
+                              gap_cost,
+                              default_gop,
+                              gap_ch=GAP_CH_DEFAULT,
+                              allow_complex=True,
+                              maximize_score=False,
+                              ):
     """
     Align two sequences with a modified Needleman-Wunsch algorithm, allowing for flexible alignments.
     
@@ -41,7 +47,7 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
     Returns:
         alignment_score: The optimal alignment score.
         aligned_seq1, aligned_seq2: The two aligned sequences (as lists).
-    """
+    """ # TODO update documentation
     n = len(seq1)
     m = len(seq2)
     worst_score = -inf if maximize_score else inf
@@ -81,6 +87,8 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
                 ngram_unit1 = seq2ngram(seq1[i-k:i])
                 for l in range(1, j + 1):
                     max_size = max(j-(j-l), i-(i-k), 1)
+                    if max_size > 1 and allow_complex is False:
+                        continue
                     ngram_unit2 = seq2ngram(seq2[j-l:j])
                     cost = align_cost.get(ngram_unit1, {}).get(ngram_unit2, default_gop * max_size)
                     score = dp[i-k][j-l] + cost
@@ -92,6 +100,8 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
             for k in range(1, i + 1):
                 ngram_unit1 = seq2ngram(seq1[i-k:i])
                 size = max(1, (i-(i-k)))
+                if size > 1 and allow_complex is False:
+                    continue
                 cost = gap_cost.get(ngram_unit1, {}).get(gap_ch, default_gop * size)
                 score = dp[i-k][j] + cost
                 if score_is_better(score, best_score):
@@ -102,6 +112,8 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
             for l in range(1, j + 1):
                 ngram_unit2 = seq2ngram(seq2[j-l:j])
                 size = max(1, (j-(j-l)))
+                if size > 1 and allow_complex is False:
+                    continue
                 cost = gap_cost.get(gap_ch, {}).get(ngram_unit2, default_gop * size)
                 score = dp[i][j-l] + cost
                 if score_is_better(score, best_score):
@@ -515,8 +527,9 @@ class Alignment:
             seq2=padded2,
             align_cost=self.align_costs,
             gap_cost=self.align_costs,
-            gap_ch=GAP_CH_DEFAULT,
+            gap_ch=self.gap_ch,
             default_gop=self.gop,
+            allow_complex=True,
             maximize_score=True,
         )
         # complex_alignment = self.compact_boundary_gaps(complex_alignment)
@@ -596,14 +609,16 @@ class Alignment:
             if unigrams != [pos]:
                 unigrams_seq1 = [seg1 for seg1, seg2 in unigrams if seg1 != self.gap_ch]
                 unigrams_seq2 = [seg2 for seg1, seg2 in unigrams if seg2 != self.gap_ch]
-                unigram_pos_alignment, _ = needleman_wunsch(
-                    SEQUENCE_1=unigrams_seq1,
-                    SEQUENCE_2=unigrams_seq2,
-                    SCORES_DICT=self.align_costs,
-                    GAP_SCORE_DICT=self.align_costs,
-                    GAP_CHARACTER=self.gap_ch,
-                    DEFAULT_GAP_SCORE=self.gop,
-                )[0]
+                _, unigram_pos_alignment, _ = needleman_wunsch_extended(
+                    seq1=unigrams_seq1, 
+                    seq2=unigrams_seq2,
+                    align_cost=self.align_costs,
+                    gap_cost=self.align_costs,
+                    gap_ch=self.gap_ch,
+                    default_gop=self.gop,
+                    allow_complex=False,
+                    maximize_score=True,
+                )
                 unigram_alignment.extend(unigram_pos_alignment)
             else:
                 unigram_alignment.append(pos)
