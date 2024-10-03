@@ -492,7 +492,7 @@ class PhonCorrelator:
 
     def align_wordlist(self,
                        wordlist,
-                       added_penalty_dict=None,  # TODO rename
+                       align_costs=None,
                        remove_uncompacted_padding=True,
                        compact=False,
                        # phon_env=False,
@@ -504,7 +504,7 @@ class PhonCorrelator:
                 seq2=word2,
                 lang1=self.lang1,
                 lang2=self.lang2,
-                added_penalty_dict=added_penalty_dict,
+                align_costs=align_costs,
                 gap_ch=self.gap_ch,
                 pad_ch=self.pad_ch,
                 **kwargs
@@ -514,7 +514,7 @@ class PhonCorrelator:
 
         # Compact alignments
         if compact:
-            self.compact_alignments(alignment_list, self.complex_ngrams, added_penalty_dict)
+            self.compact_alignments(alignment_list, self.complex_ngrams, align_costs)
 
         if remove_uncompacted_padding:
             for alignment in alignment_list:
@@ -856,8 +856,12 @@ class PhonCorrelator:
                     raise ValueError(f"Couldn't calculate independent probability of segment {seg2} in {self.lang2.name}")
                 # As long as the independent probabilities > 0, skip calculating PMI for segment pairs with 0 joint probability
                 if joint_prob > 0:
-                    pmi_dict[seg1_ngram.undo()][seg2_ngram.undo()] = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
-                
+                    pmi_val = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
+                    
+                    # Add only non-zero PMI to dictionary
+                    if pmi_val != 0:
+                        pmi_dict[seg1_ngram.undo()][seg2_ngram.undo()] = pmi_val
+        
         return pmi_dict
 
     def calc_phoneme_pmi(self,
@@ -953,7 +957,7 @@ class PhonCorrelator:
 
                 # Average together the PMI values from each direction
                 pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
-
+                
                 # # Normalize the PMI values by ngram size
                 # # i.e. make sure that PMI range for unigrams is comparable for range with bigrams, etc.
                 # # TODO make this into a function
@@ -982,7 +986,7 @@ class PhonCorrelator:
                 # Align the qualifying words of the previous step using initial PMI
                 cognate_alignments = self.align_wordlist(
                     qual_prev_sample,
-                    added_penalty_dict=pmi_step_i,
+                    align_costs=pmi_step_i,
                     compact=False, # TODO reenable potentially
                 )
 
@@ -1007,11 +1011,12 @@ class PhonCorrelator:
                     cognate_probs,
                     wordlist=qual_prev_sample
                 )
+                
 
                 # Align all same-meaning word pairs with recalculated PMI
                 aligned_synonym_sample = self.align_wordlist(
                     synonym_sample,
-                    added_penalty_dict=PMI_iterations[iteration],
+                    align_costs=PMI_iterations[iteration],
                     compact=False, # TODO reenable potentially
                 )
 
@@ -1019,7 +1024,7 @@ class PhonCorrelator:
                 # disqualified_words[iteration-1] already contains both types
                 noncognate_alignments = self.align_wordlist(
                     disqualified_words[iteration - 1],
-                    added_penalty_dict=PMI_iterations[iteration],
+                    align_costs=PMI_iterations[iteration],
                     compact=False, # TODO reenable potentially
                 )
 
@@ -1086,7 +1091,7 @@ class PhonCorrelator:
             # If >1 sample, realign using averaged PMI values from all samples
             final_alignments = self.align_wordlist(
                 self.same_meaning,
-                added_penalty_dict=results,
+                align_costs=results,
                 compact=False, # TODO reenable potentially
             )
 
@@ -1357,12 +1362,12 @@ class PhonCorrelator:
                 # the alignments will remain the same throughout iteration
                 same_meaning_alignments = self.align_wordlist(
                     same_sample,
-                    added_penalty_dict=self.pmi_dict,
+                    align_costs=self.pmi_dict,
                     compact=False, # TODO reenable potentially
                 )
                 diff_meaning_alignments = self.align_wordlist(
                     diff_sample,
-                    added_penalty_dict=self.pmi_dict,
+                    align_costs=self.pmi_dict,
                     compact=False, # TODO reenable potentially
                 )
 
@@ -1519,7 +1524,7 @@ class PhonCorrelator:
             raise NotImplementedError # TODO adjust this section and combine if possible with non-gold
             same_meaning_alignments = self.align_wordlist(
                 self.same_meaning,
-                added_penalty_dict=self.pmi_dict
+                align_costs=self.pmi_dict
             )
 
             # TODO need to confirm that when the gloss/concept is checked, it considers the possible cognate class ID, e.g. rain_1

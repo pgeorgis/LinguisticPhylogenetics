@@ -78,9 +78,11 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
             
             # Align one unit from seq1 to one or more from seq2
             for k in range(1, i + 1):
+                ngram_unit1 = seq2ngram(seq1[i-k:i])
                 for l in range(1, j + 1):
                     max_size = max(j-(j-l), i-(i-k), 1)
-                    cost = align_cost.get((seq2ngram(seq1[i-k:i]), seq2ngram(seq2[j-l:j])), default_gop * max_size)
+                    ngram_unit2 = seq2ngram(seq2[j-l:j])
+                    cost = align_cost.get(ngram_unit1, {}).get(ngram_unit2, default_gop * max_size)
                     score = dp[i-k][j-l] + cost
                     if score_is_better(score, best_score):
                         best_score = score
@@ -88,8 +90,9 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
             
             # Align seq1 to a gap
             for k in range(1, i + 1):
+                ngram_unit1 = seq2ngram(seq1[i-k:i])
                 size = max(1, (i-(i-k)))
-                cost = gap_cost.get((seq2ngram(seq1[i-k:i]), gap_ch), default_gop * size)
+                cost = gap_cost.get(ngram_unit1, {}).get(gap_ch, default_gop * size)
                 score = dp[i-k][j] + cost
                 if score_is_better(score, best_score):
                     best_score = score
@@ -97,8 +100,9 @@ def needleman_wunsch_extended(seq1, seq2, align_cost, gap_cost, default_gop, gap
             
             # Align seq2 to a gap
             for l in range(1, j + 1):
+                ngram_unit2 = seq2ngram(seq2[j-l:j])
                 size = max(1, (j-(j-l)))
-                cost = gap_cost.get((gap_ch, seq2ngram(seq2[j-l:j])), default_gop * size)
+                cost = gap_cost.get(gap_ch, {}).get(ngram_unit2, default_gop * size)
                 score = dp[i][j-l] + cost
                 if score_is_better(score, best_score):
                     best_score = score
@@ -413,10 +417,9 @@ AlignmentCost = Distance(
 class Alignment:
     def __init__(self,
                  seq1, seq2,
+                 align_costs,
                  lang1=None,
                  lang2=None,
-                 cost_func=AlignmentCost,
-                 added_penalty_dict=None,
                  gap_ch=GAP_CH_DEFAULT,
                  gop=-10,
                  pad_ch=PAD_CH_DEFAULT,
@@ -437,10 +440,10 @@ class Alignment:
             gop (float, optional): Gap opening penalty. Defaults to -0.7.
             n_best (int, optional): Number of best (least costly) alignments to return. Defaults to 1.
             phon_env (Bool, optional): Adds phonological environment to alignment. Defaults to False.
-        """
+        """ # TODO need to update this description, long outdated
 
         # Verify that input arguments are of the correct types
-        self.validate_args(seq1, seq2, lang1, lang2, cost_func)
+        self.validate_args(seq1, seq2, lang1, lang2)
 
         # Prepare the input sequences for alignment
         self.seq1, self.word1 = self.prepare_seq(seq1, lang1)
@@ -456,13 +459,11 @@ class Alignment:
         self.pad_ch = pad_ch
         self.start_boundary_token = f'{START_PAD_CH}{self.pad_ch}'
         self.end_boundary_token = f'{self.pad_ch}{END_PAD_CH}'
-        self.cost_func = cost_func
-        self.added_penalty_dict = added_penalty_dict
+        self.align_costs = align_costs
         self.kwargs = kwargs
 
         # Perform alignment
-        costs, self.n_best = self.align(n_best)
-        self.align_costs, self.gap_costs = costs
+        self.n_best = self.align(n_best)
         self.alignment = self.n_best[0][0][:]
 
         # Save length and cost of single best alignment
@@ -481,10 +482,9 @@ class Alignment:
         else:
             self.phon_env_alignment = None
 
-    def validate_args(self, seq1, seq2, lang1, lang2, cost_func):
+    def validate_args(self, seq1, seq2, lang1, lang2):
         """Verifies that all input arguments are of the correct types"""
         phyloLing = importlib.import_module('phyloLing')
-        validate_class((cost_func,), (Distance,))
         validate_class((seq1,), ((phyloLing.Word, str),))
         validate_class((seq2,), ((phyloLing.Word, str),))
         for lang in (lang1, lang2):
@@ -500,119 +500,29 @@ class Alignment:
 
         return word1.segments, word1
 
-    def calculate_alignment_costs(self, cost_func, seq1=None, seq2=None):
-        """Calculates pairwise alignment costs for phone sequences using a specified cost function.
-
-        Args:
-            cost_func (Distance): cost function used for computing pairwise alignment costs
-
-        Returns:
-            dict: dictionary of pairwise alignment costs by sequence indices
-        """
-        if seq1 is None:
-            seq1 = self.seq1
-        if seq2 is None:
-            seq2 = self.seq2
-        alignment_costs = {}
-        for i, seq1_i in enumerate(seq1):
-            for j, seq2_j in enumerate(seq2):
-                cost = cost_func.eval(seq1_i, seq2_j, **self.kwargs)
-
-                # If similarity function, turn into distance and ensure it is negative # TODO add into Distance object
-                if cost_func.sim:
-                    if cost > 0:
-                        cost = log(cost)
-                    else:
-                        cost = -inf
-
-                alignment_costs[(i, j)] = cost
-                alignment_costs[(seq1_i, seq2_j)] = cost
-
-        return alignment_costs
-
-    def calculate_gap_costs(self, cost_func, seq, index):
-        gap_costs = {}
-        if index == 1: # seq1
-            for i, seq1_i in enumerate(seq):
-                cost = cost_func.eval(seq1_i, self.gap_ch, **self.kwargs)
-                gap_costs[(seq1_i, self.gap_ch)] = cost
-        else: # seq2
-            for j, seq2_j in enumerate(seq):
-                cost = cost_func.eval(self.gap_ch, seq2_j, **self.kwargs)
-                gap_costs[(self.gap_ch, seq2_j)] = cost
-        return gap_costs
-
-    def added_penalty_dist(self, seq1, seq2, **kwargs):
-        assert self.added_penalty_dict is not None
-        added_penalty = self.added_penalty_dict[seq1][seq2]
-        base_dist = self.cost_func.eval(seq1, seq2, **kwargs)
-        # If similarity function, turn into distance and ensure it is negative # TODO add into Distance object
-        if self.cost_func.sim:
-            base_dist = -(1 - base_dist)
-            return base_dist + added_penalty
-        else:
-            return min(base_dist, -base_dist) + added_penalty
-
-
-    def align(self, n_best=1, max_ngram_size=3): # TODO update description
+    def align(self, n_best=1): # TODO update description
         """Align segments of word1 with segments of word2 according to Needleman-
         Wunsch algorithm, with costs determined by phonetic and sonority similarity;
         If not segmented, the words are first segmented before being aligned.
         GOP = -1 by default, determined by cross-validation on dataset of gold cognate alignments."""
 
-        # Combine base distances from distance function with additional penalties, if specified
-        if self.added_penalty_dict:
-            cost_func = Distance(func=self.added_penalty_dist, **self.kwargs)
-        # Otherwise calculate alignment costs for each segment pair using only the base distance function
-        else:
-            cost_func = self.cost_func
-        get_ngram_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(cost_func, seq1=seq1, seq2=seq2)
-        get_gap_costs = lambda seq, index: self.calculate_gap_costs(cost_func, seq=seq, index=index)
-
         # Pad unigram sequences
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
         padded2 = pad_sequence(self.seq2, pad_ch=self.pad_ch, pad_n=1)
-        
-        # Generate ngrams up through max_ngram_size
-        all_ngrams_seq1, all_ngrams_seq2 = [padded1], [padded2]
-        for ngram_size in range(2, max_ngram_size + 1):
-            ngrams_seq1 = self.word1.get_ngrams(size=ngram_size, pad_ch=self.pad_ch)
-            ngrams_seq2 = self.word2.get_ngrams(size=ngram_size, pad_ch=self.pad_ch)
-            all_ngrams_seq1.append(ngrams_seq1)
-            all_ngrams_seq2.append(ngrams_seq2)
-        
-        # Get alignment costs for each pair of ngram sizes
-        combined_align_costs = {}
-        for ngrams_seq1 in all_ngrams_seq1:
-            for ngrams_seq2 in all_ngrams_seq2:
-                combined_align_costs.update(
-                    get_ngram_alignment_costs(ngrams_seq1, ngrams_seq2)
-                )
-        
-        # Get gap costs for each ngram size
-        combined_gap_costs = {}
-        for ngrams_seq1 in all_ngrams_seq1:
-            combined_gap_costs.update(
-                get_gap_costs(ngrams_seq1, index=1)
-            )
-        for ngrams_seq2 in all_ngrams_seq2:
-            combined_gap_costs.update(
-                get_gap_costs(ngrams_seq2, index=2)
-            )
 
         # Compute complex alignment using extended Needleman-Wunsch algorithm
         complex_alignment_score, complex_alignment, seq_maps = needleman_wunsch_extended(
             seq1=padded1, 
             seq2=padded2,
-            align_cost=combined_align_costs,
-            gap_cost=combined_gap_costs,
+            align_cost=self.align_costs,
+            gap_cost=self.align_costs,
             gap_ch=GAP_CH_DEFAULT,
             default_gop=self.gop,
             maximize_score=True,
         )
         # complex_alignment = self.compact_boundary_gaps(complex_alignment)
 
-        return (combined_align_costs, combined_gap_costs), [(complex_alignment, seq_maps, complex_alignment_score)] # TODO simplify output format
+        return [(complex_alignment, seq_maps, complex_alignment_score)] # TODO simplify output format
 
     def compact_boundary_gaps(self, complex_alignment):
         # Add compacting of boundary gap alignment in situations like:
@@ -691,7 +601,7 @@ class Alignment:
                     SEQUENCE_1=unigrams_seq1,
                     SEQUENCE_2=unigrams_seq2,
                     SCORES_DICT=self.align_costs,
-                    GAP_SCORE_DICT=self.gap_costs,
+                    GAP_SCORE_DICT=self.align_costs,
                     GAP_CHARACTER=self.gap_ch,
                     DEFAULT_GAP_SCORE=self.gop,
                 )[0]
