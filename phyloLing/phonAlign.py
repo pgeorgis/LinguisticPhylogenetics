@@ -1,23 +1,18 @@
 import importlib
 import logging
-import sys
 from collections import defaultdict
 from collections.abc import Iterable
 from itertools import zip_longest
-from math import inf, log
+from math import inf
 from statistics import mean
 
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
 from phonUtils.phonEnv import get_phon_env
-from phonUtils.phonSim import phone_sim
-from phonUtils.segment import _toSegment
-from utils.distance import Distance
-from utils.information import calculate_infocontent_of_word
 from utils.sequence import (Ngram, PhonEnvNgram, end_token, flatten_ngram,
                             pad_sequence, start_token)
-from utils.utils import combine_dicts, validate_class
+from utils.utils import validate_class
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
@@ -167,48 +162,6 @@ def needleman_wunsch_extended(seq1, seq2,
     return dp[n][m], alignment, (adj_seqmap1, adj_seqmap2)
 
 
-def compatible_segments(seg1, seg2):
-    """Determines whether a pair of segments are compatible for alignment.
-    Returns True if the two segments are either:
-        two consonants
-        two vowels
-        a vowel and a sonorant (nasals, liquids, glides) and/or syllabic consonant
-        two tonemes/suprasegmentals
-    Else returns False"""
-    seg1, seg2 = map(_toSegment, [seg1, seg2])
-    phone_class1, phone_class2 = seg1.phone_class, seg2.phone_class
-
-    # Tonemes/suprasegmentals can only be aligned with tonemes/suprasegmentals
-    if phone_class1 in ('TONEME', 'SUPRASEGMENTAL') and phone_class2 in ('TONEME', 'SUPRASEGMENTAL'):
-        return True
-    elif phone_class1 in ('TONEME', 'SUPRASEGMENTAL'):
-        return False
-    elif phone_class2 in ('TONEME', 'SUPRASEGMENTAL'):
-        return False
-
-    # Consonants can always be aligned with consonants and glides
-    if phone_class1 == 'CONSONANT' and phone_class2 in ('CONSONANT', 'GLIDE'):
-        return True
-    elif phone_class2 == 'CONSONANT' and phone_class1 in ('CONSONANT', 'GLIDE'):
-        return True
-
-    # Vowels/diphthongs/glides can always be aligned with one another
-    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
-        return True
-
-    # Sonorant and syllabic consonants can be aligned with vowels/diphthongs
-    elif seg1.features['sonorant'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
-        return True
-    elif seg1.features['syllabic'] == 1 and phone_class2 in ('VOWEL', 'DIPHTHONG', 'GLIDE'):
-        return True
-    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['sonorant'] == 1:
-        return True
-    elif phone_class1 in ('VOWEL', 'DIPHTHONG', 'GLIDE') and seg2.features['syllabic'] == 1:
-        return True
-    else:
-        return False
-
-
 def to_unigram_alignment(bigram, fillvalue=GAP_CH_DEFAULT):
     unigrams = [[] for _ in range(len(bigram))]
     for i, pos in enumerate(bigram):
@@ -218,212 +171,6 @@ def to_unigram_alignment(bigram, fillvalue=GAP_CH_DEFAULT):
             unigrams[i].extend(pos)
 
     return list(zip_longest(*unigrams, fillvalue=fillvalue))
-
-
-def unigram_complex_alignment_mismatches(complex_alignment, unigram_alignment, gap_ch=GAP_CH_DEFAULT):
-    """Compares a complex ngram alignment with a unigram alignment and returns the indices
-    of the complex alignment where the aligned pairs don't match the unigram alignment."""
-
-    def increment_unigram_i(unigram_alignment, unigram_i, complex_ngram, complex_gap_left, complex_gap_right):
-        if unigram_i >= len(unigram_alignment)-1:
-            return 0, complex_gap_left, complex_gap_right
-        left, right = complex_ngram.pair
-        final_unigrams = (Ngram(left).ngram[-1], Ngram(right).ngram[-1])
-        gap_i = None
-        total_gaps = complex_gap_left + complex_gap_right
-        if complex_ngram.is_gappy:
-            gap = Gap([complex_ngram.pair], 0)
-            gap_i = gap.gap_i
-            total_gaps += 1
-
-
-        incr_left, incr_right = 0, 0
-        if gap_i != 0:
-            while unigram_alignment[unigram_i - complex_gap_left + incr_left][0] != final_unigrams[0]:
-                incr_left += 1
-                if unigram_i - complex_gap_left + incr_left >= len(unigram_alignment):
-                    # final_unigrams[0] not found in unigram alignment search scope,
-                    # which means that starting index was too high because alignment component is behind current unigram_i
-                    # set incr_left to -1 and stop iteration
-                    incr_left = -1
-                    break
-        else:
-            complex_gap_left += 1
-
-        if gap_i != 1:
-            while unigram_alignment[unigram_i - complex_gap_right + incr_right][-1] != final_unigrams[-1]:
-                incr_right += 1
-                if unigram_i - complex_gap_right + incr_right >= len(unigram_alignment):
-                    # final_unigrams[-1] not found in unigram alignment search scope,
-                    # which means that starting index was too high because alignment component is behind current unigram_i
-                    # set incr_right to -1 and stop iteration
-                    incr_right = -1
-                    break
-        else:
-            complex_gap_right += 1
-
-        incr_unigram = max(0, min(incr_left - complex_gap_left + 1, incr_right - complex_gap_right + 1))
-        if complex_gap_left == complex_gap_right:
-            complex_gap_left = 0
-            complex_gap_right = 0
-
-        return incr_unigram, complex_gap_left, complex_gap_right
-
-    mismatch_indices = []
-    unigram_i = 0
-    complex_gap_left, complex_gap_right = 0, 0
-    unigram_len = len(unigram_alignment)
-    for complex_i, complex_ngram in enumerate(complex_alignment):
-        # Skip if unigram indices already reached end
-        # In this case there should only be end boundary alignments left in complex if indices are correctly incremented
-        if unigram_i >= unigram_len:
-            mismatch_indices.append(complex_i)
-            unigram_i += 1
-            continue
-
-        aligned_ngram = AlignedPair(complex_alignment, complex_i)
-        next_unigram_pos = AlignedPair(unigram_alignment, unigram_i)
-        if complex_ngram in unigram_alignment[unigram_i:]:
-            # "complex" ngram is just a unigram matching a unigram in the unigram alignment
-            if complex_i < len(complex_alignment)-1:
-                # if not the final complex alignment position
-                # check that the same unigram doesn't occur later in the unigram alignment
-                if complex_ngram in unigram_alignment[unigram_i+1:]:
-                    # if it does, determine whether the current complex ngram position corresponds with this unigram or the later one
-                    breakpoint()
-                    bp = 1
-                # else accept the current match
-                else:
-                    unigram_i += 1
-                    if next_unigram_pos.is_gappy and not aligned_ngram.is_gappy:
-                        incr, complex_gap_left, complex_gap_right = increment_unigram_i(
-                            unigram_alignment,
-                            unigram_i,
-                            aligned_ngram,
-                            complex_gap_left,
-                            complex_gap_right,
-                        )
-                        unigram_i += incr
-                        breakpoint()
-                        bp = 1.5
-
-            else: # if it is the final complex alignment position, accept the match
-                unigram_i += 1
-        else:
-            mismatch_indices.append(complex_i)
-            if aligned_ngram.is_complex:
-                # complex alignment pair
-                # Increment unigrams_i by max of 2 or an increment indicating
-                # the number of positions until all component segments were found in unigram alignment
-                incr, complex_gap_left, complex_gap_right = increment_unigram_i(
-                    unigram_alignment,
-                    unigram_i,
-                    aligned_ngram,
-                    complex_gap_left,
-                    complex_gap_right,
-                )
-                unigram_i += incr
-
-            else:
-                # unigram alignment pair not in unigrams alignment
-                incr, complex_gap_left, complex_gap_right = increment_unigram_i(
-                    unigram_alignment,
-                    unigram_i,
-                    aligned_ngram,
-                    complex_gap_left,
-                    complex_gap_right,
-                )
-                unigram_i += incr
-    return mismatch_indices
-
-
-PhonSim = Distance(
-    func=phone_sim,
-    sim=True,
-    name='PhonSim'
-)
-
-def phon_alignment_cost(seg1, seg2, phon_func=phone_sim):
-    if seg1 == seg2:
-        return 0
-    #elif compatible_segments(seg1, seg2):
-    ngram1, ngram2 = map(lambda x: flatten_ngram(Ngram(x).ngram), [seg1, seg2])
-    # TODO would be better to somehow recursively align segments and take phon sim of just aligned segs rather than taking mean of all combinations
-
-    ph_sims = []
-    for i, ngram_seg1 in enumerate(ngram1):
-        ngram_seg1 = Ngram(ngram_seg1)
-        for j, ngram_seg2 in enumerate(ngram2):
-            ngram_seg2 = Ngram(ngram_seg2)
-            if ngram_seg1.is_boundary() and not (ngram_seg2.is_boundary() or ngram_seg2.is_gappy()):
-                # seg1 is boundary, seg2 is not boundary or gap
-                if ngram_seg1.size > 1:
-                    # seg1 is complex boundary, seg2 is not boundary or gap
-                    ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
-                else:
-                    # seg1 is unigram boundary, seg2 is not boundary or gap
-                    ph_sims.append(0) # TODO would be better to quantify similarity of segment to gap via sonority or features
-            elif ngram_seg1.is_gappy() and not (ngram_seg2.is_boundary() or ngram_seg2.is_gappy()):
-                # seg1 is gap, seg2 is not boundary or gap
-                ph_sims.append(0) # TODO would be better to quantify similarity of segment to gap via sonority or features
-            elif ngram_seg1.is_boundary():
-                # seg1 is boundary, seg2 is a boundary or gap
-                if ngram_seg2.is_gappy():
-                    # seg1 is boundary, seg2 is gap
-                    if ngram_seg1.size > 1:
-                        # seg1 is complex boundary, seg2 is gap
-                        ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
-                    else:
-                        # seg1 is unigram boundary, seg2 is gap
-                        ph_sims.append(0)
-                else:
-                    # seg1 is boundary, seg2 is boundary
-                    if ngram_seg1.size == 1 and ngram_seg2.size == 1:
-                        # both seg1 and seg2 are unigram boundaries
-                        # score = 1 if same direction boundary, else -inf
-                        if ngram1[i] == ngram2[j]:
-                            ph_sims.append(1)
-                        else:
-                            ph_sims.append(-inf)
-                    else:
-                        # at least one of the two is a complex boundary
-                        ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
-            elif ngram_seg1.is_gappy():
-                # seg1 is gap, seg2 is a boundary or gap
-                if ngram_seg2.size > 1:
-                    # seg1 is gap, seg2 is a complex boundary
-                    ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
-                else:
-                    # seg1 is gap, seg2 is unigram boundary
-                    ph_sims.append(0)
-            # seg1 is not boundary or gap
-            elif ngram_seg2.is_boundary():
-                # seg1 is not boundary or gap, seg2 is boundary
-                if ngram_seg2.size > 1:
-                    # seg1 is not boundary or gap, seg2 is complex boundary
-                    ph_sims.append(phon_alignment_cost(ngram1[i], ngram2[j], phon_func=phon_func))
-                else:
-                    # seg1 is not boundary or gap, seg2 is unigram boundary
-                    ph_sims.append(0) # TODO would be better to quantify similarity of segment to gap via sonority or features
-            elif ngram_seg2.is_gappy():
-                # seg1 is not boundary or gap, seg2 is gap
-                ph_sims.append(0) # TODO would be better to quantify similarity of segment to gap via sonority or features
-            else:
-                # neither seg1 nor seg2 is a boundary or gap
-                ph_sims.append(phon_func(ngram1[i], ngram2[j]))
-
-    ph_sim = mean(ph_sims)
-    if ph_sim > 0:
-        return log(ph_sim)
-    else:
-        return log(0.00001) * len(ph_sims) # currently no segment pairs have a phone_sim score this low, so will always be well below any segment score
-
-
-AlignmentCost = Distance(
-    func=phon_alignment_cost,
-    sim=False,
-    name='AlignmentCost'
-)
 
 
 class Alignment:
