@@ -5,7 +5,7 @@ from statistics import mean
 from asjp import ipa2asjp
 from constants import PAD_CH_DEFAULT
 from nltk import edit_distance
-from phonAlign import Alignment, get_alignment_iter, to_unigram_alignment
+from phonAlign import Alignment, get_alignment_iter
 from phonUtils.initPhoneData import (alveolopalatal, consonants, glides,
                                      nasals, palatal, postalveolar, vowels)
 from phonUtils.ipaTools import strip_diacritics
