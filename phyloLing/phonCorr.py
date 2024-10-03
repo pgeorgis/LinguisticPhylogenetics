@@ -368,8 +368,7 @@ class PhonCorrelator:
         self.scored_words = defaultdict(lambda: {})
 
         # Logging
-        self.outdir = self.lang1.family.phone_corr_dir
-        self.pmi_log_dir, self.surprisal_log_dir = self.log_dirs()
+        self.set_log_dirs()
         self.align_log = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
         self.logger = logger
     
@@ -391,12 +390,10 @@ class PhonCorrelator:
             l2 = self.lang2
         return l1, l2
 
-    def log_dirs(self):
-        pmi_log_dir = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name, 'pmi')
-        surprisal_log_dir = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name, 'surprisal')
-        os.makedirs(pmi_log_dir, exist_ok=True)
-        os.makedirs(surprisal_log_dir, exist_ok=True)
-        return pmi_log_dir, surprisal_log_dir
+    def set_log_dirs(self):
+        self.outdir = self.lang1.family.phone_corr_dir
+        self.phon_corr_dir = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name)
+        os.makedirs(self.phon_corr_dir, exist_ok=True)
 
     def get_concept_list(self, wordlist=None):
         # If no wordlist is provided, by default use all concepts shared by the two languages
@@ -1126,11 +1123,11 @@ class PhonCorrelator:
         )
 
         # Write the iteration log
-        log_file = os.path.join(self.pmi_log_dir, 'PMI_iterations.log')
+        log_file = os.path.join(self.phon_corr_dir, 'iterations.log')
         self.write_iter_log(iter_logs, log_file)
 
         # Write alignment log
-        align_log_file = os.path.join(self.pmi_log_dir, 'PMI_alignments.log')
+        align_log_file = os.path.join(self.phon_corr_dir, 'alignments.log')
         self.write_alignments_log(self.align_log['PMI'], align_log_file)
 
         # Save PMI results
@@ -1393,8 +1390,7 @@ class PhonCorrelator:
             self.phon_env_surprisal_dict = phon_env_surprisal_results
             
         # Write phone correlation report based on surprisal results
-        surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
-        phon_corr_report = os.path.join(surprisal_ngram_log_dir, 'phon_corr.tsv')
+        phon_corr_report = os.path.join(self.phon_corr_dir, 'phon_corr.tsv')
         self.write_phon_corr_report(surprisal_results, phon_corr_report, type='surprisal')
 
         # Write surprisal logs
@@ -1471,7 +1467,7 @@ class PhonCorrelator:
     def log_phoneme_pmi(self, outfile=None, threshold=0.0001, sep='\t'):
         # Save calculated PMI values to file
         if outfile is None:
-            outfile = os.path.join(self.pmi_log_dir, 'phonPMI.tsv')
+            outfile = os.path.join(self.phon_corr_dir, 'phonPMI.tsv')
 
         # Save all segment pairs with non-zero PMI values to file
         # Skip extremely small decimals that are close to zero
@@ -1493,10 +1489,9 @@ class PhonCorrelator:
     def log_phoneme_surprisal(self, outfile=None, sep='\t', phon_env=True, ngram_size=1):
         if outfile is None:
             if phon_env:
-                outfile = os.path.join(self.surprisal_log_dir, 'phonEnv', 'phonEnvSurprisal.tsv')
+                outfile = os.path.join(self.phon_corr_dir, 'phonEnvSurprisal.tsv')
             else:
-                surprisal_ngram_log_dir = os.path.join(self.surprisal_log_dir, f'{ngram_size}-gram')
-                outfile = os.path.join(surprisal_ngram_log_dir, 'phonSurprisal.tsv')
+                outfile = os.path.join(self.phon_corr_dir, 'phonSurprisal.tsv')
         outdir = os.path.abspath(os.path.dirname(outfile))
         os.makedirs(outdir, exist_ok=True)
 

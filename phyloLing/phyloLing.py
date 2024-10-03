@@ -289,8 +289,7 @@ class LexicalDataset:
 
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                pmi_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'pmi')
-                pmi_file = os.path.join(pmi_dir, 'phonPMI.tsv')
+                pmi_file = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'phonPMI.tsv')
 
                 # Try to load the file of saved PMI values, otherwise calculate PMI first
                 if not os.path.exists(pmi_file):
@@ -381,10 +380,10 @@ class LexicalDataset:
 
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                surprisal_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'surprisal')
-                surprisal_file = os.path.join(surprisal_dir, f'{ngram_size}-gram', 'phonSurprisal.tsv')
+                phon_corr_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name)
+                surprisal_file = os.path.join(phon_corr_dir, 'phonSurprisal.tsv')
                 if phon_env:
-                    surprisal_file_phon_env = os.path.join(surprisal_dir, 'phonEnv', 'phonEnvSurprisal.tsv')
+                    surprisal_file_phon_env = os.path.join(phon_corr_dir, 'phonEnvSurprisal.tsv')
 
                 # Try to load the file of saved surprisal values, otherwise calculate surprisal first
                 if not os.path.exists(surprisal_file):
