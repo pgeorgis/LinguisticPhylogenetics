@@ -530,18 +530,16 @@ class Alignment:
 
         return alignment_costs
 
-    def calculate_gap_costs(self, cost_func, seq1=None):
-        if seq1 is None:
-            seq1 = self.seq1
-        # if seq2 is None:
-        #     seq2 = self.seq2
+    def calculate_gap_costs(self, cost_func, seq, index):
         gap_costs = {}
-        for i, seq1_i in enumerate(seq1):
-            cost = cost_func.eval(seq1_i, self.gap_ch, **self.kwargs)
-            gap_costs[(seq1_i, self.gap_ch)] = cost
-        # for j, seq2_j in enumerate(seq2):
-        #     cost = cost_func.eval(self.gap_ch, seq2_j, **self.kwargs)
-        #     gap_costs[(self.gap_ch, seq2_j)] = cost
+        if index == 1: # seq1
+            for i, seq1_i in enumerate(seq):
+                cost = cost_func.eval(seq1_i, self.gap_ch, **self.kwargs)
+                gap_costs[(seq1_i, self.gap_ch)] = cost
+        else: # seq2
+            for j, seq2_j in enumerate(seq):
+                cost = cost_func.eval(self.gap_ch, seq2_j, **self.kwargs)
+                gap_costs[(self.gap_ch, seq2_j)] = cost
         return gap_costs
 
     def added_penalty_dist(self, seq1, seq2, **kwargs):
@@ -556,7 +554,7 @@ class Alignment:
             return min(base_dist, -base_dist) + added_penalty
 
 
-    def align(self, n_best=1): # TODO update description
+    def align(self, n_best=1, max_ngram_size=3): # TODO update description
         """Align segments of word1 with segments of word2 according to Needleman-
         Wunsch algorithm, with costs determined by phonetic and sonority similarity;
         If not segmented, the words are first segmented before being aligned.
@@ -569,41 +567,40 @@ class Alignment:
         else:
             cost_func = self.cost_func
         get_ngram_alignment_costs = lambda seq1, seq2: self.calculate_alignment_costs(cost_func, seq1=seq1, seq2=seq2)
-        get_gap_costs = lambda seq1, seq2: self.calculate_gap_costs(cost_func, seq1=seq1) # seq2=seq2
+        get_gap_costs = lambda seq, index: self.calculate_gap_costs(cost_func, seq=seq, index=index)
 
         # Pad unigram sequences
         padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
         padded2 = pad_sequence(self.seq2, pad_ch=self.pad_ch, pad_n=1)
+        
+        # Generate ngrams up through max_ngram_size
+        all_ngrams_seq1, all_ngrams_seq2 = [padded1], [padded2]
+        for ngram_size in range(2, max_ngram_size + 1):
+            ngrams_seq1 = self.word1.get_ngrams(size=ngram_size, pad_ch=self.pad_ch)
+            ngrams_seq2 = self.word2.get_ngrams(size=ngram_size, pad_ch=self.pad_ch)
+            all_ngrams_seq1.append(ngrams_seq1)
+            all_ngrams_seq2.append(ngrams_seq2)
+        
+        # Get alignment costs for each pair of ngram sizes
+        combined_align_costs = {}
+        for ngrams_seq1 in all_ngrams_seq1:
+            for ngrams_seq2 in all_ngrams_seq2:
+                combined_align_costs.update(
+                    get_ngram_alignment_costs(ngrams_seq1, ngrams_seq2)
+                )
+        
+        # Get gap costs for each ngram size
+        combined_gap_costs = {}
+        for ngrams_seq1 in all_ngrams_seq1:
+            combined_gap_costs.update(
+                get_gap_costs(ngrams_seq1, index=1)
+            )
+        for ngrams_seq2 in all_ngrams_seq2:
+            combined_gap_costs.update(
+                get_gap_costs(ngrams_seq2, index=2)
+            )
 
-        #Generate bigrams
-        bigrams_seq1 = self.word1.get_ngrams(size=2, pad_ch=self.pad_ch)
-        bigrams_seq2 = self.word2.get_ngrams(size=2, pad_ch=self.pad_ch)
-
-        # Get alignment costs for ngram pairs of each size
-        bigram_scores = get_ngram_alignment_costs(bigrams_seq1, bigrams_seq2)
-        unigram_scores = get_ngram_alignment_costs(padded1, padded2)
-        bigram1_unigram2_scores = get_ngram_alignment_costs(bigrams_seq1, padded2)
-        bigram2_unigram1_scores = get_ngram_alignment_costs(padded1, bigrams_seq2)
-
-        # Get gap costs for each ngram size pair
-        bigram_gap_costs = get_gap_costs(bigrams_seq1, bigrams_seq2)
-        unigram_gap_costs = get_gap_costs(padded1, padded2)
-        bigram1_unigram2_gap_costs = get_gap_costs(bigrams_seq1, padded2)
-        bigram2_unigram1_gap_costs = get_gap_costs(padded1, bigrams_seq2)
-
-        # Combine alignment and gap costs from bigrams and unigrams
-        combined_align_costs = combine_dicts(
-            bigram_scores,
-            unigram_scores,
-            bigram1_unigram2_scores,
-            bigram2_unigram1_scores,
-        )
-        combined_gap_costs = combine_dicts(
-            bigram_gap_costs,
-            unigram_gap_costs,
-            bigram1_unigram2_gap_costs,
-            bigram2_unigram1_gap_costs,
-        )
+        # Compute complex alignment using extended Needleman-Wunsch algorithm
         complex_alignment_score, complex_alignment, seq_maps = needleman_wunsch_extended(
             seq1=padded1, 
             seq2=padded2,
@@ -614,18 +611,6 @@ class Alignment:
             maximize_score=True,
         )
         # complex_alignment = self.compact_boundary_gaps(complex_alignment)
-        #print(visual_align(complex_alignment))
-
-        # TODO current tasks
-        # still bug: in compact_boundary_gaps (Romanian-Ligurian)
-        # missing final /u/
-        # (Pdb) complex_alignment
-        # [('-', '<#'), (('<#', 'a'), ('i', 'n')), (('n', 'ˈe'), 'ˈe'), ('l', ('l', '#>')), (('u', '#>'), '-')]
-        # (Pdb) self.compact_boundary_gaps(complex_alignment)
-        # [(('<#', 'a'), ('i', 'n', '<#')), (('n', 'ˈe'), 'ˈe'), (('l', '#>'), ('l', '#>'))]
-        # Compact boundary gap alignments
-        # TODO: possibly compact before? or both before and after?
-        # TODO: possibly save unigram, bigram, and complex alignments
 
         return (combined_align_costs, combined_gap_costs), [(complex_alignment, seq_maps, complex_alignment_score)] # TODO simplify output format
 
