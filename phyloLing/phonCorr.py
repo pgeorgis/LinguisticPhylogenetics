@@ -118,7 +118,7 @@ def postprocess_boundary_alignments(aligned_pair):
     elif (seq1_len-1, 0) in alignment:
         idx = alignment.index((seq1_len-1, 0))
         alignment[idx] = (0, 0)
-    alignment.sort(key=lambda x: (x[0], x[-1]))
+    alignment.sort(key=lambda x: (x[0], -float('inf') if x[-1] is None else x[-1]))
     return alignment
 
 
@@ -955,7 +955,7 @@ class PhonCorrelator:
 
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
                 iteration += 1
-                self.logger.info(f"Starting iteration {iteration}")
+                #self.logger.info(f"Starting iteration {iteration}")
                 qual_prev_sample = qualifying_words[iteration - 1]
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
