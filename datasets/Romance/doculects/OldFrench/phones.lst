@@ -1,0 +1,249 @@
+VOWELS
+/ə/ (0.096)
+	<cinquante> /ʦĩŋkwˈãntə/ "FIFTY_NUM"
+	<coste> /kˈɔstə/ "COAST_NOUN"
+	<vie> /vˈiə/ "LIFE_NOUN"
+
+/ˈɛ/ (0.038)
+	<chier> /ʧjˈɛr/ "DEAR_ADJ"
+	<letre> /lˈɛtrə/ "LETTER_NOUN"
+	<cue> /kwˈɛ/ "TAIL_NOUN"
+
+/ˈɔ/ (0.03)
+	<col> /kˈɔl/ "NECK_NOUN"
+	<nostre> /nˈɔstrə/ "OUR_ADJ"
+	<trois> /trˈɔjs/ "THREE_NUM"
+
+/ˈi/ (0.027)
+	<sis> /sˈis/ "SIX_NUM"
+	<ocire> /ɔʦˈirə/ "KILL_VERB"
+	<fille> /fˈiʎə/ "DAUGHTER_NOUN"
+
+/ˈa/ (0.026)
+	<sause> /sˈawsə/ "SAUCE_NOUN"
+	<vache> /vˈaʧə/ "COW_NOUN"
+	<lait> /lˈajt/ "MILK_NOUN"
+
+/ˈe/ (0.021)
+	<meitié> /mejtjˈe/ "HALF_NOUN"
+	<nés> /nˈes/ "NOSE_NOUN"
+	<esté> /estˈe/ "SUMMER_NOUN"
+
+/ˈã/ (0.018)
+	<lainne> /lˈãjnə/ "WOOL_NOUN"
+	<angle> /ˈãnɡlə/ "ANGEL_NOUN"
+	<blanc> /blˈãŋ/ "WHITE_ADJ"
+
+/ˈũ/ (0.015)
+	<nom> /nˈũm/ "NAME_NOUN"
+	<bone> /bˈũnə/ "GOOD (F.SG)_ADJ"
+	<bones> /bˈũnəs/ "GOOD (F.PL)_ADJ"
+
+/ˈy/ (0.014)
+	<tu> /tˈy/ "THOU_PRON"
+	<uit> /ˈyjt/ "EIGHT_NUM"
+	<aguille> /aɡˈyʎə/ "NEEDLE_NOUN"
+
+/ˈẽ/ (0.013)
+	<cendre> /ʦˈẽndrə/ "ASH_NOUN"
+	<juene> /ʤwˈẽnə/ "YOUNG_ADJ"
+	<legne> /lˈẽɲə/ "WOOD_NOUN"
+
+/ˈu/ (0.012)
+	<toz> /tˈuts/ "ALL (PL)_ADJ"
+	<roge> /rˈuʤə/ "RED_ADJ"
+	<genoil> /ʤənˈuʎ/ "KNEE_NOUN"
+
+/u/ (0.01)
+	<tossir> /tusˈir/ "COUGH_VERB"
+	<aiu> /ˈaju/ "HELP-1SG_VERB"
+	<sofrir> /sufrˈir/ "SUFFER_VERB"
+
+/a/ (0.01)
+	<clamer> /klamˈer/ "CALL_VERB"
+	<aguille> /aɡˈyʎə/ "NEEDLE_NOUN"
+	<dragon> /draɡˈũn/ "DRAGON_NOUN"
+
+/e/ (0.01)
+	<espee> /espˈeə/ "SWORD_NOUN"
+	<areignee> /arejɲˈeə/ "SPIDER_NOUN"
+	<escrivre> /eskrˈivrə/ "WRITE_VERB"
+
+/ˈĩ/ (0.008)
+	<fin> /fˈĩn/ "THIN_ADJ"
+	<voisin> /vɔjzˈĩn/ "NEIGHBOR_NOUN"
+	<raisin> /rajzˈĩn/ "RAISIN_NOUN"
+
+/ˈỹ/ (0.003)
+	<juin> /ʤˈỹjn/ "JUNE_PROPN"
+	<fum> /fˈỹm/ "SMOKE_NOUN"
+	<flum> /flˈỹm/ "RIVER_NOUN"
+
+/ɔ/ (0.003)
+	<oreille> /ɔrˈeʎə/ "EAR_NOUN"
+	<oisel> /ɔjzˈɛl/ "BIRD_NOUN"
+	<oscur> /ɔskˈyr/ "DARK_ADJ"
+
+/ã/ (0.003)
+	<chanter> /ʧãntˈer/ "SING_VERB"
+	<changier> /ʧãnʤjˈer/ "CHANGE_VERB"
+	<anel> /ãnˈɛl/ "RING_NOUN"
+
+/i/ (0.003)
+	<vilain> /vilˈãjn/ "VILLAIN_NOUN"
+	<citet> /ʦitˈeθ/ "CITY_NOUN"
+	<farine> /fˈarinə/ "FLOUR_NOUN"
+
+/ɛ/ (0.002)
+	<vergogne> /vɛrɡˈũɲə/ "SHAME_NOUN"
+	<cerchier> /ʦɛrʧjˈer/ "SEARCH_VERB"
+	<reson> /rɛzˈũn/ "REASON_NOUN"
+
+/y/ (0.002)
+	<tuer> /tyˈer/ "KILL_VERB"
+	<muillier> /myʎˈer/ "WOMAN_WIFE_NOUN"
+	<brusler> /brylˈer/ "BURN_VERB"
+
+/ũ/ (0.002)
+	<nonbril> /nũmbrˈil/ "NAVEL_NOUN"
+	<montaigne> /mũntˈãɲə/ "MOUNTAIN_NOUN"
+	<conoistre> /kũnˈɔjstrə/ "BE ACQUAINTED WITH_VERB"
+
+/o/ (0.002)
+	<voiage> /vojˈaʤə/ "JOURNEY_NOUN"
+	<poisson> /pojsˈũn/ "FISH_NOUN"
+	<royne> /rojˈĩnə/ "QUEEN_NOUN"
+
+/ˈõ/ (0.001)
+	<joint> /ʤˈõjnt/ "JOINED_ADJ"
+	<coin> /kˈõjn/ "CORNER_NOUN"
+
+/ˈo/ (0.001)
+	<chose> /ʧˈozə/ "THING_NOUN"
+
+/ĩ/ (0.001)
+	<cinquante> /ʦĩŋkwˈãntə/ "FIFTY_NUM"
+
+/ẽ/ (0.001)
+	<gentil> /ʤẽntˈil/ "NICE_ADJ"
+
+
+
+CONSONANTS
+/r/ (0.087)
+	<corn> /kˈɔrn/ "HORN_NOUN"
+	<reond> /rəˈũnt/ "ROUND_ADJ"
+	<meür> /məˈyr/ "MATURE_NOUN"
+
+/j/ (0.069)
+	<crois> /krˈɔjs/ "CROSS_NOUN"
+	<uit> /ˈyjt/ "EIGHT_NUM"
+	<pais> /pˈajs/ "PEACE_NOUN"
+
+/n/ (0.061)
+	<non> /nˈũn/ "NOT_ADVERB"
+	<nuit> /nˈyjt/ "NIGHT_NOUN"
+	<anel> /ãnˈɛl/ "RING_NOUN"
+
+/l/ (0.055)
+	<lit> /lˈit/ "BED_NOUN"
+	<ciel> /ʦjˈɛl/ "SKY_NOUN"
+	<oisel> /ɔjzˈɛl/ "BIRD_NOUN"
+
+/s/ (0.052)
+	<pesche> /pˈɛsʧə/ "PEACH_NOUN"
+	<asseoir> /asəˈɔjr/ "SIT_VERB"
+	<bones> /bˈũnəs/ "GOOD (F.PL)_ADJ"
+
+/t/ (0.043)
+	<chat> /ʧˈat/ "CAT_NOUN"
+	<montaigne> /mũntˈãɲə/ "MOUNTAIN_NOUN"
+	<tossir> /tusˈir/ "COUGH_VERB"
+
+/p/ (0.028)
+	<pance> /pˈãnʦə/ "BELLY_NOUN"
+	<plein> /plˈẽjn/ "FULL_ADJ"
+	<colp> /kˈulp/ "STRIKE_NOUN"
+
+/m/ (0.028)
+	<mile> /mˈilə/ "THOUSAND_NUM"
+	<main> /mˈãjn/ "HAND_NOUN"
+	<flum> /flˈỹm/ "RIVER_NOUN"
+
+/f/ (0.026)
+	<fil> /fˈil/ "STRING_NOUN"
+	<foie> /fˈɔjə/ "LIVER_NOUN"
+	<fame> /fˈãmə/ "WOMAN_FEMALE_NOUN"
+
+/v/ (0.025)
+	<veoir> /vəˈɔjr/ "SEE_VERB"
+	<vin> /vˈĩn/ "WINE_NOUN"
+	<vie> /vˈiə/ "LIFE_NOUN"
+
+/k/ (0.022)
+	<escorce> /eskˈɔrʦə/ "BARK_NOUN"
+	<quaille> /kwˈaʎə/ "QUAIL_NOUN"
+	<color> /kulˈur/ "COLOR_NOUN"
+
+/w/ (0.019)
+	<riu> /rˈiw/ "RIVER_NOUN"
+	<uevre> /wˈɛvrə/ "WORK_NOUN"
+	<sause> /sˈawsə/ "SAUCE_NOUN"
+
+/ʧ/ (0.017)
+	<chier> /ʧjˈɛr/ "DEAR_ADJ"
+	<cheval> /ʧəvˈal/ "HORSE_NOUN"
+	<chat> /ʧˈat/ "CAT_NOUN"
+
+/ʦ/ (0.016)
+	<raicine> /rajʦˈĩnə/ "ROOT_NOUN"
+	<cent> /ʦˈẽnt/ "HUNDRED_NUM"
+	<ciel> /ʦjˈɛl/ "SKY_NOUN"
+
+/ʤ/ (0.015)
+	<sage> /sˈaʤə/ "WISE_ADJ"
+	<je> /ʤə/ "I_PRON"
+	<gendre> /ʤˈẽndrə/ "SON-IN-LAW_NOUN"
+
+/b/ (0.014)
+	<boche> /bˈuʧə/ "MOUTH_NOUN"
+	<buef> /bwˈɛf/ "OX_NOUN"
+	<erbe> /ˈɛrbə/ "GRASS_NOUN"
+
+/d/ (0.013)
+	<dormir> /durmˈir/ "SLEEP_VERB"
+	<di> /dˈi/ "SAY-1SG_VERB"
+	<cendre> /ʦˈẽndrə/ "ASH_NOUN"
+
+/ʎ/ (0.01)
+	<viel> /vjˈɛʎ/ "OLD_ADJ"
+	<muillier> /myʎˈer/ "WOMAN_WIFE_NOUN"
+	<quaille> /kwˈaʎə/ "QUAIL_NOUN"
+
+/ɡ/ (0.01)
+	<goule> /ɡˈulə/ "THROAT_NOUN"
+	<aguille> /aɡˈyʎə/ "NEEDLE_NOUN"
+	<gresse> /ɡrˈɛsə/ "FAT_NOUN"
+
+/ɲ/ (0.006)
+	<legne> /lˈẽɲə/ "WOOD_NOUN"
+	<vergogne> /vɛrɡˈũɲə/ "SHAME_NOUN"
+	<poing> /pˈũjɲ/ "FIST_NOUN"
+
+/ŋ/ (0.006)
+	<ongle> /ˈũŋɡlə/ "FINGERNAIL_NOUN"
+	<long> /lˈũŋk/ "LONG_ADJ"
+	<vieng> /vjˈẽŋk/ "COME-1SG_VERB"
+
+/z/ (0.004)
+	<reson> /rɛzˈũn/ "REASON_NOUN"
+	<chose> /ʧˈozə/ "THING_NOUN"
+	<cerise> /ʦərˈizə/ "CHERRY_NOUN"
+
+/θ/ (0.002)
+	<citet> /ʦitˈeθ/ "CITY_NOUN"
+	<salut> /salˈyθ/ "HEALTH_NOUN"
+	<estat> /estˈaθ/ "STATE_NOUN"
+
+
+

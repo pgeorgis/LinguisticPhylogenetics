@@ -1,8 +1,8 @@
 VOWELS
-/u/ (0.08)
-	<freido> /frˈejdu/ "COLD_ADJ"
-	<nòstro> /nˈɔstru/ "OUR_ADJ"
-	<gianu> /ʤˈaːnu/ "YELLOW_ADJ"
+/u/ (0.081)
+	<gatto> /ɡˈatu/ "CAT_NOUN"
+	<vêgio> /vˈeːʤu/ "OLD_ADJ"
+	<légno> /lˈeɲu/ "WOOD_NOUN"
 
 /a/ (0.075)
 	<reua> /rˈøːa/ "WHEEL_NOUN"
@@ -104,66 +104,64 @@ VOWELS
 	<öxéllo> /ɔːʒˈelu/ "BIRD_NOUN"
 	<ötunno> /ɔːtˈynu/ "AUTUMN_NOUN"
 
-/o/ (0.002)
-	<fâso> /fˈaːso/ "FALSE_ADJ"
-	<palàçio> /palˈasjo/ "PALACE_NOUN"
-	<letto> /lˈeto/ "BED_NOUN"
-
 /y/ (0.001)
 	<bruxâ> /bryʒˈaː/ "BURN_VERB"
+
+/o/ (0.001)
+	<palàçio> /palˈasjo/ "PALACE_NOUN"
 
 
 
 CONSONANTS
 /s/ (0.052)
-	<órso> /ˈuːrsu/ "BEAR_NOUN"
-	<spâ> /spˈaː/ "SWORD_NOUN"
-	<sacce> /sˈaʧe/ "KNOW-SBJ-1SG_VERB"
+	<çéia> /sˈeja/ "WAX_NOUN"
+	<settemaña> /setemˈaŋa/ "WEEK_NOUN"
+	<tésta> /tˈesta/ "SKULL_NOUN"
 
 /r/ (0.047)
-	<fòrsa> /fˈɔːrsa/ "STRENGTH_NOUN"
-	<fòrte> /fˈɔːrte/ "STRONG_ADJ"
-	<fruto> /frˈyːtu/ "FRUIT_NOUN"
+	<credde> /krˈede/ "BELIEVE_VERB"
+	<inverno> /iŋvˈɛːrnu/ "WINTER_NOUN"
+	<ombrisallo> /uŋbrisˈalu/ "NAVEL_NOUN"
 
 /ŋ/ (0.046)
-	<saña> /sˈaŋa/ "HEALTHY (F)_ADJ"
-	<gente> /ʤˈɛŋte/ "PEOPLE_NOUN"
-	<ciànze> /ʧˈaŋze/ "WEEP_VERB"
+	<piccin> /piʧˈiŋ/ "SMALL_ADJ"
+	<léngoa> /lˈeŋɡwa/ "TONGUE_NOUN"
+	<çento> /sˈeŋtu/ "HUNDRED_NUM"
 
 /t/ (0.041)
-	<estæ> /estˈɛː/ "SUMMER_NOUN"
-	<vinti> /vˈiŋti/ "TWENTY_NUM"
-	<fòrte> /fˈɔːrte/ "STRONG_ADJ"
+	<vìtta> /vˈita/ "LIFE_NOUN"
+	<stela> /stˈela/ "STAR_NOUN"
+	<còsta> /kˈɔsta/ "COAST_NOUN"
 
 /k/ (0.037)
-	<che> /kˈe/ "WHAT_PRON"
 	<öca> /ˈɔːka/ "GOOSE_NOUN"
-	<castéllo> /kastˈelu/ "CASTLE_NOUN"
+	<còllo> /kˈɔlu/ "NECK_NOUN"
+	<côa> /kˈuːa/ "TAIL_NOUN"
 
 /v/ (0.031)
+	<nêuve> /nˈøːve/ "NINE_NUM"
+	<levâ> /levˈaː/ "CARRY_VERB"
 	<vergheugna> /verɡˈøɲa/ "SHAME_NOUN"
-	<voî> /vwˈiː/ "YOU (PL)_PRON"
-	<villan> /vilˈaŋ/ "VILLAIN_NOUN"
 
 /p/ (0.03)
+	<pòrca> /pˈɔːrka/ "SOW_NOUN"
 	<spîga> /spˈiːɡa/ "EAR OF GRAIN_NOUN"
 	<pùgno> /pˈyɲu/ "FIST_NOUN"
-	<Spàgna> /spˈaɲa/ "SPAIN_PROPN"
 
 /l/ (0.029)
+	<léngoa> /lˈeŋɡwa/ "TONGUE_NOUN"
 	<lêugo> /lˈøːɡu/ "PLACE_NOUN"
 	<còllo> /kˈɔlu/ "NECK_NOUN"
-	<lagrima> /lˈaɡrima/ "TEAR_NOUN"
 
 /m/ (0.027)
+	<çimma> /sˈima/ "SUMMIT_NOUN"
 	<mêgio> /mˈeːʤu/ "BETTER_ADV"
 	<anima> /ˈanima/ "SOUL_NOUN"
-	<mòrde> /mˈɔrde/ "BITE_VERB"
 
 /n/ (0.026)
+	<ötunno> /ɔːtˈynu/ "AUTUMN_NOUN"
 	<nisciun> /niʃˈyŋ/ "NONE_PRON"
 	<neive> /nˈejve/ "SNOW_NOUN"
-	<zenzîa> /zenzˈiːa/ "GUMS_NOUN"
 
 /j/ (0.025)
 	<séia> /sˈeja/ "EVENING_NOUN"
