@@ -20,17 +20,10 @@ transcription:
     #     Danish:
     #         suprasegmentals: ['ˀ']
 
-pmi:
-    min_corr: 2
+phon_corr:
+    phon_env: false
     refresh: []
-    refresh_all_pmi: true
-
-surprisal:
-    ngram: 1
-    min_corr: 2
-    phon_env: true 
-    refresh: []
-    refresh_all_surprisal: true
+    refresh_all: true
 
 cluster:
     cognates: none
