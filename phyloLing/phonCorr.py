@@ -1474,7 +1474,7 @@ class PhonCorrelator:
         lines = []
         for seg1 in self.pmi_dict:
             for seg2 in self.pmi_dict[seg1]:
-                pmi_val = self.pmi_dict[seg1][seg2]
+                pmi_val = round(self.pmi_dict[seg1][seg2], 3)
                 if abs(pmi_val) > threshold:
                     line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
                     lines.append(line)
@@ -1502,6 +1502,7 @@ class PhonCorrelator:
 
         lines = []
         surprisal_dict, oov_value = prune_oov_surprisal(surprisal_dict)
+        oov_value = round(oov_value, 3)
         for seg1 in surprisal_dict:
             for seg2 in surprisal_dict[seg1]:
                 if ngram_size > 1:
@@ -1513,7 +1514,7 @@ class PhonCorrelator:
                 lines.append([
                     seg1_str,
                     ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
-                    str(surprisal_dict[seg1][seg2]),
+                    str(round(surprisal_dict[seg1][seg2], 3)),
                     str(oov_value)
                     ]
                 )
@@ -1626,7 +1627,7 @@ class PhonCorrelator:
 
     def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):
         lines = []
-        corr, oov_value = prune_oov_surprisal(corr)
+        corr, _ = prune_oov_surprisal(corr)
         l1_phons = sorted([p for p in corr if self.gap_ch not in p], key=lambda x: Ngram(x).string)
         for p1 in l1_phons:
             p2_candidates = corr[p1]
