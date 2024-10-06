@@ -1,6 +1,7 @@
 venv/
 __pycache__/
 .idea/
+.cache/pip/
 archive/
 datasets/*/logs
 datasets/*/cognates
