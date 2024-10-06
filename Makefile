@@ -8,7 +8,7 @@ help:
 	@echo "  make classify CONFIG=<path to config.yml> [LOGLEVEL=<desired log level>]"
 
 # Run the setup script to install dependencies, clone submodules, and activate virtual environment
-setup:
+init:
 	./setup.sh
 
 # Run classification with nohup
