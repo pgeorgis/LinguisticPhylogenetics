@@ -2,6 +2,9 @@ stages:
   - prepare
   - classify
 
+variables:
+  GIT_SUBMODULE_STRATEGY: none
+
 default:
   image: python:3.12
   cache:
