@@ -9,10 +9,10 @@ VOWELS
 	<flama> /flˈamɔ/ "FLAME_NOUN"
 	<nadar> /nadˈa/ "SWIM_VERB"
 
-/ə/ (0.045)
-	<semana> /səmˈanɔ/ "WEEK_NOUN"
-	<madure> /mɒdʲˈyʀə/ "MATURE_NOUN"
-	<embonilh> /əmbunˈiʎ/ "NAVEL_NOUN"
+/ə/ (0.046)
+	<dotze> /dˈudzə/ "TWELVE_NUM"
+	<òme> /wˈɔmə/ "MAN_NOUN"
+	<maire> /mˈejʀə/ "MOTHER_NOUN"
 
 /ˈe/ (0.036)
 	<ivern> /ivˈeʀ/ "WINTER_NOUN"
@@ -84,15 +84,15 @@ VOWELS
 	<vesin> /vəʒˈĩŋ/ "NEIGHBOR_NOUN"
 	<rasim> /ʀɒʒˈĩm/ "RAISIN_NOUN"
 
-/e/ (0.006)
-	<degun> /deɡʲˈỹŋ/ "NONE_PRON"
-	<conússer> /kuɲˈyse/ "BE ACQUAINTED WITH_VERB"
-	<nàisser> /nˈejse/ "BE BORN_VERB"
-
 /ˈɔ̃/ (0.005)
 	<rònd> /ʀwˈɔ̃ŋ/ "ROUND_ADJ"
-	<bòns> /bwˈɔ̃ŋ/ "GOOD (M.PL)_ADJ"
 	<pònt> /pwˈɔ̃ŋ/ "BRIDGE_NOUN"
+	<dòn> /dwˈɔ̃ŋ/ "GIFT_NOUN"
+
+/e/ (0.005)
+	<plànjer> /plˈãnʤe/ "WEEP_VERB"
+	<ferre> /fˈeʀe/ "IRON_NOUN"
+	<conússer> /kuɲˈyse/ "BE ACQUAINTED WITH_VERB"
 
 /i/ (0.004)
 	<meitat> /mʲitˈa/ "HALF_NOUN"
@@ -140,9 +140,9 @@ VOWELS
 
 
 CONSONANTS
-/ʀ/ (0.069)
-	<pòrc> /pwˈɔʀk/ "PIG_NOUN"
-	<dormir> /duʀmˈi/ "SLEEP_VERB"
+/ʀ/ (0.07)
+	<maire> /mˈejʀə/ "MOTHER_NOUN"
+	<cort> /kˈuʀ/ "SHORT_ADJ"
 	<creire> /kʀˈɪjʀə/ "BELIEVE_VERB"
 
 /w/ (0.051)
@@ -226,7 +226,7 @@ CONSONANTS
 	<festa> /fˈetɔ/ "PARTY_NOUN"
 
 /v/ (0.014)
-	<ventre> /vˈẽŋtɾe/ "BELLY_NOUN"
+	<ventre> /vˈẽŋtʀə/ "BELLY_NOUN"
 	<verd> /vˈɪʀ/ "GREEN_ADJ"
 	<veire> /vˈɪjʀə/ "SEE_VERB"
 
@@ -277,9 +277,6 @@ CONSONANTS
 /ɡʲ/ (0.002)
 	<degun> /deɡʲˈỹŋ/ "NONE_PRON"
 	<agulha> /ɒɡʲˈyʎɔ/ "NEEDLE_NOUN"
-
-/ɾ/ (0.001)
-	<ventre> /vˈẽŋtɾe/ "BELLY_NOUN"
 
 /ɥ/ (0.001)
 	<tuar> /ʧɥˈa/ "KILL_VERB"

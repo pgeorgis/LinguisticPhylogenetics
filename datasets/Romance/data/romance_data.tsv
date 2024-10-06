@@ -49,6 +49,7 @@ Italian	Italian			BURN_VERB	bruciare	bruʧˈare	b r u ʧ ˈa r e		BURN_VERB_1
 Venetian	Venetian			BURN_VERB	bruxàr	bruzˈar	b r u z ˈa r		BURN_VERB_1			
 Bellunese	Bellunese			BURN_VERB	bruxàr	bruzˈar	b r u z ˈa r		BURN_VERB_1			
 Emilian	Emilian			BURN_VERB	bruṡèr	bruzˈɛr	b r u z ˈɛ r		BURN_VERB_1			
+Romagnol	Romagnol			BURN_VERB	bruşêr	bruzˈeə̯	b r u z ˈeə̯		BURN_VERB_1			
 Ligurian	Ligurian			BURN_VERB	bruxâ	bryʒˈaː	b r y ʒ ˈaː		BURN_VERB_1			
 Piedmontese	Piedmontese			BURN_VERB	brusé	bryzˈe	b r y z ˈe		BURN_VERB_1			
 Western Lombard	Western Lombard			BURN_VERB	brusà	bryzˈa	b r y z ˈa		BURN_VERB_1			
@@ -233,6 +234,7 @@ Italian	Italian			STRENGTH_NOUN	forza	fˈɔrʦa	f ˈɔ r ʦ a		STRENGTH_NOUN_1
 Venetian	Venetian			STRENGTH_NOUN	fòrsa	fˈɔrsa	f ˈɔ r s a		STRENGTH_NOUN_1			
 Bellunese	Bellunese			STRENGTH_NOUN	fòrzha	fˈɔrθa	f ˈɔ r θ a		STRENGTH_NOUN_1			
 Emilian	Emilian			STRENGTH_NOUN	fôrza	fˈɔːrθa	f ˈɔː r θ a		STRENGTH_NOUN_1			
+Romagnol	Romagnol			STRENGTH_NOUN	förza	fˈɔə̯rθɐ	f ˈɔə̯ r θ ɐ		STRENGTH_NOUN_1			
 Ligurian	Ligurian			STRENGTH_NOUN	fòrsa	fˈɔːrsa	f ˈɔː r s a		STRENGTH_NOUN_1			
 Piedmontese	Piedmontese			STRENGTH_NOUN	fòrsa	fˈɔrsa	f ˈɔ r s a		STRENGTH_NOUN_1			
 Western Lombard	Western Lombard			STRENGTH_NOUN	forza	fˈɔrza	f ˈɔ r z a		STRENGTH_NOUN_1			
@@ -264,6 +266,7 @@ Italian	Italian			CAT_NOUN	gatto	ɡˈatto	ɡ ˈa t t o		CAT_NOUN_1
 Venetian	Venetian			CAT_NOUN	gato	ɡˈato	ɡ ˈa t o		CAT_NOUN_1			
 Bellunese	Bellunese			CAT_NOUN	gat	ɡˈat	ɡ ˈa t		CAT_NOUN_1			
 Emilian	Emilian			CAT_NOUN	gât	ɡˈaːt	ɡ ˈaː t		CAT_NOUN_1			
+Romagnol	Romagnol			CAT_NOUN	gat	ɡˈat	ɡ ˈa t		CAT_NOUN_1			
 Ligurian	Ligurian			CAT_NOUN	gatto	ɡˈatu	ɡ ˈa t u		CAT_NOUN_1			
 Piedmontese	Piedmontese			CAT_NOUN	gat	ɡˈat	ɡ ˈa t		CAT_NOUN_1			
 Western Lombard	Western Lombard			CAT_NOUN	gat	ɡˈɑːt	ɡ ˈɑː t		CAT_NOUN_1			
@@ -290,6 +293,7 @@ Italian	Italian			ICE_NOUN	ghiaccio	ɡjˈaʧʧo	ɡ j ˈa ʧ ʧ o		ICE_NOUN_1
 Venetian	Venetian			ICE_NOUN	giàço	ʤˈaso	ʤ ˈa s o		ICE_NOUN_1			
 Bellunese	Bellunese			ICE_NOUN	jazh	jˈaθ	j ˈa θ		ICE_NOUN_1			
 Emilian	Emilian			ICE_NOUN	giâz	ʤˈaːθ	ʤ ˈaː θ		ICE_NOUN_1			
+Romagnol	Romagnol			ICE_NOUN	giāz	ʤˈaːθ	ʤ ˈaː θ		ICE_NOUN_1			
 Western Lombard	Western Lombard			ICE_NOUN	giaç	ʤˈɑːs	ʤ ˈɑː s		ICE_NOUN_1			
 Eastern Lombard	Eastern Lombard			ICE_NOUN	giàss	ʤˈas	ʤ ˈa s		ICE_NOUN_1			
 Romansch	Romansch			ICE_NOUN	glatsch	ɡlˈaʧ	ɡ l ˈa ʧ		ICE_NOUN_1			
@@ -330,12 +334,14 @@ Portuguese	Portuguese			FAT_NOUN	graxa	ɡɾˈaʃɐ	ɡ ɾ ˈa ʃ ɐ		FAT_NOUN_1
 Brazilian Portuguese	Brazilian Portuguese			FAT_NOUN	graxa	ɡɾˈaʃɐ	ɡ ɾ ˈa ʃ ɐ		FAT_NOUN_1			
 Latin	Latin			SHE_PRON	illei	ˈɪlʲlʲei	ˈɪ lʲ lʲ e i		SHE_PRON_1			
 Italian	Italian			SHE_PRON	lei	lˈɛj	l ˈɛ j		SHE_PRON_1			
+Romagnol	Romagnol			SHE_PRON	li	lˈi	l ˈi		SHE_PRON_1			
 Ligurian	Ligurian			SHE_PRON	lê	lˈeː	l ˈeː		SHE_PRON_1			
 Western Lombard	Western Lombard			SHE_PRON	lee	lˈeː	l ˈeː		SHE_PRON_1			
 Franco-Provençal	Franco-Provençal			SHE_PRON	lè	lˈɛ	l ˈɛ		SHE_PRON_1			
 Franco-Provençal	Franco-Provençal			SHE_PRON	lyè	ʎˈɛ	ʎ ˈɛ		SHE_PRON_1			
 Latin	Latin			HE_PRON	illui	ˈɪlʲlʲuɪ	ˈɪ lʲ lʲ u ɪ		HE_PRON_1			
 Italian	Italian			HE_PRON	lui	lˈui	l ˈu i		HE_PRON_1			
+Romagnol	Romagnol			HE_PRON	lo	lˈo	l ˈo		HE_PRON_1			
 Ligurian	Ligurian			HE_PRON	lê	lˈeː	l ˈeː		HE_PRON_1			
 Western Lombard	Western Lombard			HE_PRON	luu	lˈyː	l ˈyː		HE_PRON_1			
 Eastern Lombard	Eastern Lombard			HE_PRON	lü	lˈy	l ˈy		HE_PRON_1			
@@ -354,6 +360,7 @@ Italian	Italian			WINTER_NOUN	inverno	invˈɛrno	i n v ˈɛ r n o		WINTER_NOUN_1
 Venetian	Venetian			WINTER_NOUN	invèrno	iŋvˈɛrno	i ŋ v ˈɛ r n o		WINTER_NOUN_1			
 Bellunese	Bellunese			WINTER_NOUN	invèrn	iŋvˈɛrn	i ŋ v ˈɛ r n		WINTER_NOUN_1			
 Emilian	Emilian			WINTER_NOUN	invêren	invˈɛːren	i n v ˈɛː r e n		WINTER_NOUN_1			
+Romagnol	Romagnol			WINTER_NOUN	invēran	invˈeːrɐn	i n v ˈeː r ɐ n		WINTER_NOUN_1			
 Ligurian	Ligurian			WINTER_NOUN	inverno	iŋvˈɛːrnu	i ŋ v ˈɛː r n u		WINTER_NOUN_1			
 Piedmontese	Piedmontese			WINTER_NOUN	invern	invˈɛrn	i n v ˈɛ r n		WINTER_NOUN_1			
 Western Lombard	Western Lombard			WINTER_NOUN	invern	ĩvˈɛrn	ĩ v ˈɛ r n		WINTER_NOUN_1			
@@ -374,6 +381,7 @@ Corsican	Corsican			ISLAND_NOUN	isula	ˈizula	ˈi z u l a		ISLAND_NOUN_1
 Italian	Italian			ISLAND_NOUN	isola	ˈizola	ˈi z o l a		ISLAND_NOUN_1			
 Venetian	Venetian			ISLAND_NOUN	ixoła	ˈizoɰa	ˈi z o ɰ a		ISLAND_NOUN_1			
 Emilian	Emilian			ISLAND_NOUN	îṡla	ˈiːzla	ˈiː z l a		ISLAND_NOUN_1			
+Romagnol	Romagnol			ISLAND_NOUN	işula	ˈizulɐ	ˈi z u l ɐ		ISLAND_NOUN_1			
 Ligurian	Ligurian			ISLAND_NOUN	isoa	ˈiswa	ˈi s w a		ISLAND_NOUN_1			
 Piedmontese	Piedmontese			ISLAND_NOUN	isla	ˈisla	ˈi s l a		ISLAND_NOUN_1			
 Western Lombard	Western Lombard			ISLAND_NOUN	isola	ˈizula	ˈi z u l a		ISLAND_NOUN_1			
@@ -402,6 +410,7 @@ Sicilian	Sicilian			WOLF_NOUN	lupu	lˈupʊ	l ˈu p ʊ		WOLF_NOUN_1
 Neapolitan	Neapolitan			WOLF_NOUN	lupo	lˈupə	l ˈu p ə		WOLF_NOUN_1			
 Corsican	Corsican			WOLF_NOUN	lupu	lˈupu	l ˈu p u		WOLF_NOUN_1			
 Italian	Italian			WOLF_NOUN	lupo	lˈupo	l ˈu p o		WOLF_NOUN_1			
+Romagnol	Romagnol			WOLF_NOUN	lóp	lˈop	l ˈo p		WOLF_NOUN_1			
 Piedmontese	Piedmontese			WOLF_NOUN	luv	lˈyv	l ˈy v		WOLF_NOUN_1			
 Eastern Lombard	Eastern Lombard			WOLF_NOUN	lüf	lˈyf	l ˈy f		WOLF_NOUN_1			
 Ladin	Ladin			WOLF_NOUN	louf	lˈowf	l ˈo w f		WOLF_NOUN_1			
@@ -425,6 +434,7 @@ Italian	Italian			HONEY_NOUN	miele	mjˈɛle	m j ˈɛ l e		HONEY_NOUN_1
 Venetian	Venetian			HONEY_NOUN	mièl	mjˈɛl	m j ˈɛ l		HONEY_NOUN_1			
 Bellunese	Bellunese			HONEY_NOUN	miél	mjˈel	m j ˈe l		HONEY_NOUN_1			
 Emilian	Emilian			HONEY_NOUN	mêl	mˈɛːl	m ˈɛː l		HONEY_NOUN_1			
+Romagnol	Romagnol			HONEY_NOUN	mēl	mˈeːl	m ˈeː l		HONEY_NOUN_1			
 Ligurian	Ligurian			HONEY_NOUN	amê	amˈeː	a m ˈeː		HONEY_NOUN_1			
 Piedmontese	Piedmontese			HONEY_NOUN	mel	mˈɛl	m ˈɛ l		HONEY_NOUN_1			
 Western Lombard	Western Lombard			HONEY_NOUN	mel	mˈeːl	m ˈeː l		HONEY_NOUN_1			
@@ -468,6 +478,7 @@ Italian	Italian			BE BORN_VERB	nascere	nˈaʃʃere	n ˈa ʃ ʃ e r e		BE BORN_VE
 Venetian	Venetian			BE BORN_VERB	nàser	nˈaser	n ˈa s e r		BE BORN_VERB_1			
 Bellunese	Bellunese			BE BORN_VERB	nàser	nˈaser	n ˈa s e r		BE BORN_VERB_1			
 Emilian	Emilian			BE BORN_VERB	nâser	nˈaːser	n ˈaː s e r		BE BORN_VERB_1			
+Romagnol	Romagnol			BE BORN_VERB	nèsar	nˈɛsar	n ˈɛ s a r		BE BORN_VERB_1			
 Ligurian	Ligurian			BE BORN_VERB	nàsce	nˈaʃe	n ˈa ʃ e		BE BORN_VERB_1			
 Piedmontese	Piedmontese			BE BORN_VERB	nasse	nˈase	n ˈa s e		BE BORN_VERB_1			
 Western Lombard	Western Lombard			BE BORN_VERB	nass	nˈas	n ˈa s		BE BORN_VERB_1			
@@ -551,6 +562,7 @@ Sicilian	Sicilian			QUAIL_NOUN	quagghia	kwˈaɟɟa	k w ˈa ɟ ɟ a		QUAIL_NOUN_1
 Italian	Italian			QUAIL_NOUN	quaglia	kwˈaʎʎa	k w ˈa ʎ ʎ a		QUAIL_NOUN_1			
 Venetian	Venetian			QUAIL_NOUN	quàja	kwˈaja	k w ˈa j a		QUAIL_NOUN_1			
 Emilian	Emilian			QUAIL_NOUN	quâja	kwˈaːja	k w ˈaː j a		QUAIL_NOUN_1			
+Romagnol	Romagnol			QUAIL_NOUN	cvàja	kvˈajɐ	k v ˈa j ɐ		QUAIL_NOUN_1			
 Ligurian	Ligurian			QUAIL_NOUN	quâgia	kwˈaːʤa	k w ˈaː ʤ a		QUAIL_NOUN_1			
 Piedmontese	Piedmontese			QUAIL_NOUN	quaja	kwˈaja	k w ˈa j a		QUAIL_NOUN_1			
 Eastern Lombard	Eastern Lombard			QUAIL_NOUN	quàia	kwˈaja	k w ˈa j a		QUAIL_NOUN_1			
@@ -623,6 +635,7 @@ Neapolitan	Neapolitan			SUFFER_VERB	suffriri	suffrˈiɾə	s u f f r ˈi ɾ ə		S
 Corsican	Corsican			SUFFER_VERB	soffre	sˈoffre	s ˈo f f r e		SUFFER_VERB_2			
 Italian	Italian			SUFFER_VERB	soffrire	soffrˈire	s o f f r ˈi r e		SUFFER_VERB_2			
 Emilian	Emilian			SUFFER_VERB	sufrîr	sufrˈiːr	s u f r ˈiː r		SUFFER_VERB_2			
+Romagnol	Romagnol			SUFFER_VERB	sufrìr	sufrˈi	s u f r ˈi		SUFFER_VERB_2			
 Ligurian	Ligurian			SUFFER_VERB	soffrî	sufrˈiː	s u f r ˈiː		SUFFER_VERB_2			
 Piedmontese	Piedmontese			SUFFER_VERB	sufrì	syfrˈi	s y f r ˈi		SUFFER_VERB_2			
 Western Lombard	Western Lombard			SUFFER_VERB	sufrì	syfrˈi	s y f r ˈi		SUFFER_VERB_2			
@@ -654,6 +667,7 @@ Neapolitan	Neapolitan			ALL (PL)_ADJ	tutti	tˈutti	t ˈu t t i		ALL (PL)_ADJ_1
 Corsican	Corsican			ALL (PL)_ADJ	tutti	tˈutti	t ˈu t t i		ALL (PL)_ADJ_1			
 Italian	Italian			ALL (PL)_ADJ	tutti	tˈutti	t ˈu t t i		ALL (PL)_ADJ_1			
 Venetian	Venetian			ALL (PL)_ADJ	tuti	tˈuti	t ˈu t i		ALL (PL)_ADJ_1			
+Romagnol	Romagnol			ALL (PL)_ADJ	tót	tˈou̯t	t ˈou̯ t		ALL (PL)_ADJ_1			
 Ligurian	Ligurian			ALL (PL)_ADJ	tutti	tˈyti	t ˈy t i		ALL (PL)_ADJ_1			
 Western Lombard	Western Lombard			ALL (PL)_ADJ	tucc	tˈyʧ	t ˈy ʧ		ALL (PL)_ADJ_1			
 Eastern Lombard	Eastern Lombard			ALL (PL)_ADJ	töcc	tˈøʧ	t ˈø ʧ		ALL (PL)_ADJ_1			
@@ -686,6 +700,7 @@ Italian	Italian			ALL (SG)_ADJ	tuto	tˈutto	t ˈu t t o		ALL (SG)_ADJ_1
 Venetian	Venetian			ALL (SG)_ADJ	tuto	tˈuto	t ˈu t o		ALL (SG)_ADJ_1			
 Bellunese	Bellunese			ALL (SG)_ADJ	tut	tˈut	t ˈu t		ALL (SG)_ADJ_1			
 Emilian	Emilian			ALL (SG)_ADJ	tótt	tˈot	t ˈo t		ALL (SG)_ADJ_1			
+Romagnol	Romagnol			ALL (SG)_ADJ	tót	tˈou̯t	t ˈou̯ t		ALL (SG)_ADJ_1			
 Ligurian	Ligurian			ALL (SG)_ADJ	tùtto	tˈytu	t ˈy t u		ALL (SG)_ADJ_1			
 Piedmontese	Piedmontese			ALL (SG)_ADJ	tut	tˈyt	t ˈy t		ALL (SG)_ADJ_1			
 Western Lombard	Western Lombard			ALL (SG)_ADJ	tut	tˈyːt	t ˈyː t		ALL (SG)_ADJ_1			
@@ -712,6 +727,7 @@ Neapolitan	Neapolitan			ROUND_ADJ	tunno	tˈunnə	t ˈu n n ə		ROUND_ADJ_1
 Corsican	Corsican			ROUND_ADJ	tondu	tˈondu	t ˈo n d u		ROUND_ADJ_1			
 Italian	Italian			ROUND_ADJ	tondo	tˈondo	t ˈo n d o		ROUND_ADJ_1			
 Emilian	Emilian			ROUND_ADJ	tånnd	tˈʌŋd	t ˈʌ ŋ d		ROUND_ADJ_1			
+Romagnol	Romagnol			ROUND_ADJ	tónd	tˈou̯nd	t ˈou̯ n d		ROUND_ADJ_1			
 Eastern Lombard	Eastern Lombard			ROUND_ADJ	tónd	tˈont	t ˈo n t		ROUND_ADJ_1			
 Latin	Latin			BEAR_NOUN	ussum	ˈʊssʊ̃ː	ˈʊ s s ʊ̃ː		BEAR_NOUN_1			
 Gascon	Gascon			BEAR_NOUN	os	ˈus	ˈu s		BEAR_NOUN_1			
@@ -766,6 +782,7 @@ Corsican	Corsican			SHAME_NOUN	vergogna	verɡˈɔɲa	v e r ɡ ˈɔ ɲ a		SHAME_N
 Italian	Italian			SHAME_NOUN	vergogna	verɡˈoɲɲa	v e r ɡ ˈo ɲ ɲ a		SHAME_NOUN_1			
 Venetian	Venetian			SHAME_NOUN	vergògna	verɡˈoɲa	v e r ɡ ˈo ɲ a		SHAME_NOUN_1			
 Emilian	Emilian			SHAME_NOUN	vargåggna	varɡˈʌɲa	v a r ɡ ˈʌ ɲ a		SHAME_NOUN_1			
+Romagnol	Romagnol			SHAME_NOUN	vargógna	vɐrɡˈoɲɐ	v ɐ r ɡ ˈo ɲ ɐ		SHAME_NOUN_1			
 Ligurian	Ligurian			SHAME_NOUN	vergheugna	verɡˈøɲa	v e r ɡ ˈø ɲ a		SHAME_NOUN_1			
 Piedmontese	Piedmontese			SHAME_NOUN	vërgògna	vərɡˈɔɲa	v ə r ɡ ˈɔ ɲ a		SHAME_NOUN_1			
 Western Lombard	Western Lombard			SHAME_NOUN	vergògna	verɡˈɔɲa	v e r ɡ ˈɔ ɲ a		SHAME_NOUN_1			
@@ -842,6 +859,7 @@ Dalmatian	Dalmatian			NEEDLE_NOUN	juac	jwˈak	j w ˈa k		NEEDLE_NOUN_2
 Neapolitan	Neapolitan			NEEDLE_NOUN	aco	ˈakə	ˈa k ə		NEEDLE_NOUN_2			
 Corsican	Corsican			NEEDLE_NOUN	acu	ˈaku	ˈa k u		NEEDLE_NOUN_2			
 Italian	Italian			NEEDLE_NOUN	ago	ˈaɡo	ˈa ɡ o		NEEDLE_NOUN_2			
+Romagnol	Romagnol			NEEDLE_NOUN	êg	ˈeə̯ɡ	ˈeə̯ ɡ		NEEDLE_NOUN_2			
 Latin	Latin			HELP_VERB	adiūtāre	adiuːtˈaːrɛ	a d i uː t ˈaː r ɛ		HELP_VERB_1			
 Logudorese	Logudorese			HELP_VERB	azudare	azuðˈare	a z u ð ˈa r e		HELP_VERB_1			
 Campidanese	Campidanese			HELP_VERB	agiudare	aʤuðˈare	a ʤ u ð ˈa r e		HELP_VERB_1			
@@ -854,6 +872,7 @@ Italian	Italian			HELP_VERB	aiutare	ajutˈare	a j u t ˈa r e		HELP_VERB_1
 Venetian	Venetian			HELP_VERB	aidàr	ajdˈar	a j d ˈa r		HELP_VERB_1			
 Bellunese	Bellunese			HELP_VERB	jutàr	jutˈar	j u t ˈa r		HELP_VERB_1			
 Emilian	Emilian			HELP_VERB	ajutèr	ajutˈɛr	a j u t ˈɛ r		HELP_VERB_1			
+Romagnol	Romagnol			HELP_VERB	aidêr	ajdˈeə̯	a j d ˈeə̯		HELP_VERB_1			
 Ligurian	Ligurian			HELP_VERB	aggiuttâ	aʤutˈaː	a ʤ u t ˈaː		HELP_VERB_1			
 Piedmontese	Piedmontese			HELP_VERB	aidé	ajdˈe	a j d ˈe		HELP_VERB_1			
 Western Lombard	Western Lombard			HELP_VERB	vutà	vytˈa	v y t ˈa		HELP_VERB_1			
@@ -907,6 +926,7 @@ Sicilian	Sicilian			EQUAL_ADJ	uguali	uɡwˈalɪ	u ɡ w ˈa l ɪ		EQUAL_ADJ_2
 Neapolitan	Neapolitan			EQUAL_ADJ	uguàli	uɡwˈali	u ɡ w ˈa l i		EQUAL_ADJ_2			
 Corsican	Corsican			EQUAL_ADJ	uguale	uɡwˈale	u ɡ w ˈa l e		EQUAL_ADJ_2			
 Italian	Italian			EQUAL_ADJ	uguale	uɡwˈale	u ɡ w ˈa l e		EQUAL_ADJ_2			
+Romagnol	Romagnol			EQUAL_ADJ	ugvêl	uɡvˈeə̯l	u ɡ v ˈeə̯ l		EQUAL_ADJ_2			
 Piedmontese	Piedmontese			EQUAL_ADJ	egual	eɡwˈal	e ɡ w ˈa l		EQUAL_ADJ_2			
 Western Lombard	Western Lombard			EQUAL_ADJ	inguaa	ĩɡwˈɑː	ĩ ɡ w ˈɑː		EQUAL_ADJ_2			
 Eastern Lombard	Eastern Lombard			EQUAL_ADJ	eguàl	eɡwˈal	e ɡ w ˈa l		EQUAL_ADJ_2			
@@ -980,6 +1000,7 @@ Corsican	Corsican			LAMB_NOUN	agnellu	aɲˈɛllu	a ɲ ˈɛ l l u		LAMB_NOUN_2
 Italian	Italian			LAMB_NOUN	agnello	aɲɲˈɛllo	a ɲ ɲ ˈɛ l l o		LAMB_NOUN_2			
 Venetian	Venetian			LAMB_NOUN	agnèło	aɲˈɛo	a ɲ ˈɛ o		LAMB_NOUN_2			
 Bellunese	Bellunese			LAMB_NOUN	agnèl	aɲˈɛl	a ɲ ˈɛ l		LAMB_NOUN_2			
+Romagnol	Romagnol			LAMB_NOUN	agnël	ɐɲˈɛə̯l	ɐ ɲ ˈɛə̯ l		LAMB_NOUN_2			
 Piedmontese	Piedmontese			LAMB_NOUN	agnel	aɲˈɛl	a ɲ ˈɛ l		LAMB_NOUN_2			
 Western Lombard	Western Lombard			LAMB_NOUN	agnell	aɲˈɛl	a ɲ ˈɛ l		LAMB_NOUN_2			
 Eastern Lombard	Eastern Lombard			LAMB_NOUN	agnèl	aɲˈɛl	a ɲ ˈɛ l		LAMB_NOUN_2			
@@ -1003,6 +1024,7 @@ Sicilian	Sicilian			DAWN_NOUN	alba	ˈalba	ˈa l b a		DAWN_NOUN_1
 Neapolitan	Neapolitan			DAWN_NOUN	arba	ˈaɾba	ˈa ɾ b a		DAWN_NOUN_1			
 Corsican	Corsican			DAWN_NOUN	alba	ˈalba	ˈa l b a		DAWN_NOUN_1			
 Italian	Italian			DAWN_NOUN	alba	ˈalba	ˈa l b a		DAWN_NOUN_1			
+Romagnol	Romagnol			DAWN_NOUN	êlba	ˈeə̯lbɐ	ˈeə̯ l b ɐ		DAWN_NOUN_1			
 Ligurian	Ligurian			DAWN_NOUN	arba	ˈaːrba	ˈaː r b a		DAWN_NOUN_1			
 Piedmontese	Piedmontese			DAWN_NOUN	alba	ˈalba	ˈa l b a		DAWN_NOUN_1			
 Western Lombard	Western Lombard			DAWN_NOUN	alba	ˈalba	ˈa l b a		DAWN_NOUN_1			
@@ -1050,6 +1072,7 @@ Italian	Italian			GARLIC_NOUN	aglio	ˈaʎʎo	ˈa ʎ ʎ o		GARLIC_NOUN_1
 Venetian	Venetian			GARLIC_NOUN	àgio	ˈaʤo	ˈa ʤ o		GARLIC_NOUN_1			
 Bellunese	Bellunese			GARLIC_NOUN	ài	ˈaj	ˈa j		GARLIC_NOUN_1			
 Emilian	Emilian			GARLIC_NOUN	âi	ˈaːj	ˈaː j		GARLIC_NOUN_1			
+Romagnol	Romagnol			GARLIC_NOUN	aj	ˈaj	ˈa j		GARLIC_NOUN_1			
 Ligurian	Ligurian			GARLIC_NOUN	aggio	ˈaʤu	ˈa ʤ u		GARLIC_NOUN_1			
 Piedmontese	Piedmontese			GARLIC_NOUN	aj	ˈaj	ˈa j		GARLIC_NOUN_1			
 Western Lombard	Western Lombard			GARLIC_NOUN	ail	ˈajl	ˈa j l		GARLIC_NOUN_1			
@@ -1086,6 +1109,8 @@ Italian	Italian			OTHER_ADJ	altro	ˈaltro	ˈa l t r o		OTHER_ADJ_1
 Venetian	Venetian			OTHER_ADJ	altro	ˈaltro	ˈa l t r o		OTHER_ADJ_1			
 Bellunese	Bellunese			OTHER_ADJ	àuter	ˈawter	ˈa w t e r		OTHER_ADJ_1			
 Emilian	Emilian			OTHER_ADJ	èter	ˈɛter	ˈɛ t e r		OTHER_ADJ_1			
+Romagnol	Romagnol			OTHER_ADJ	êt	ˈeə̯t	ˈeə̯ t		OTHER_ADJ_1			
+Romagnol	Romagnol			OTHER_ADJ	êtar	ˈeə̯tɐr	ˈeə̯ t ɐ r		OTHER_ADJ_1			
 Ligurian	Ligurian			OTHER_ADJ	âtro	ˈaːtru	ˈaː t r u		OTHER_ADJ_1			
 Piedmontese	Piedmontese			OTHER_ADJ	autër	ˈawtər	ˈa w t ə r		OTHER_ADJ_1			
 Western Lombard	Western Lombard			OTHER_ADJ	olter	ˈɔlter	ˈɔ l t e r		OTHER_ADJ_1			
@@ -1132,6 +1157,7 @@ Italian	Italian			RING_NOUN	anello	anˈɛllo	a n ˈɛ l l o		RING_NOUN_1
 Venetian	Venetian			RING_NOUN	anèło	anˈɛo	a n ˈɛ o		RING_NOUN_1			
 Bellunese	Bellunese			RING_NOUN	anèl	anˈɛl	a n ˈɛ l		RING_NOUN_1			
 Emilian	Emilian			RING_NOUN	anèl	anˈɛl	a n ˈɛ l		RING_NOUN_1			
+Romagnol	Romagnol			RING_NOUN	anël	ɐnˈɛə̯l	ɐ n ˈɛə̯ l		RING_NOUN_1			
 Ligurian	Ligurian			RING_NOUN	anéllo	anˈelu	a n ˈe l u		RING_NOUN_1			
 Piedmontese	Piedmontese			RING_NOUN	anel	anˈɛl	a n ˈɛ l		RING_NOUN_1			
 Western Lombard	Western Lombard			RING_NOUN	anell	anˈɛl	a n ˈɛ l		RING_NOUN_1			
@@ -1168,6 +1194,7 @@ Italian	Italian			ANGEL_NOUN	angelo	ˈanʤelo	ˈa n ʤ e l o		ANGEL_NOUN_1
 Venetian	Venetian			ANGEL_NOUN	ànzoło	ˈanzoɰo	ˈa n z o ɰ o		ANGEL_NOUN_1			
 Bellunese	Bellunese			ANGEL_NOUN	ànzol	ˈanzol	ˈa n z o l		ANGEL_NOUN_1			
 Emilian	Emilian			ANGEL_NOUN	ànżel	ˈanðel	ˈa n ð e l		ANGEL_NOUN_1			
+Romagnol	Romagnol			ANGEL_NOUN	ânẓal	ˈʌ̃nðɐl	ˈʌ̃ n ð ɐ l		ANGEL_NOUN_1			
 Ligurian	Ligurian			ANGEL_NOUN	angeo	ˈanʤju	ˈa n ʤ j u		ANGEL_NOUN_1			
 Piedmontese	Piedmontese			ANGEL_NOUN	àngel	ˈanʤel	ˈa n ʤ e l		ANGEL_NOUN_1			
 Western Lombard	Western Lombard			ANGEL_NOUN	anjol	ˈanʒol	ˈa n ʒ o l		ANGEL_NOUN_1			
@@ -1206,6 +1233,7 @@ Italian	Italian			SOUL_NOUN	alma	ˈalma	ˈa l m a		SOUL_NOUN_1
 Venetian	Venetian			SOUL_NOUN	ànema	ˈanema	ˈa n e m a		SOUL_NOUN_1			
 Bellunese	Bellunese			SOUL_NOUN	ànema	ˈanema	ˈa n e m a		SOUL_NOUN_1			
 Emilian	Emilian			SOUL_NOUN	ânma	ˈaːnma	ˈaː n m a		SOUL_NOUN_1			
+Romagnol	Romagnol			SOUL_NOUN	ânma	ˈʌ̃nmɐ	ˈʌ̃ n m ɐ		SOUL_NOUN_1			
 Ligurian	Ligurian			SOUL_NOUN	anima	ˈanima	ˈa n i m a		SOUL_NOUN_1	TRUE		
 Piedmontese	Piedmontese			SOUL_NOUN	anma	ˈanma	ˈa n m a		SOUL_NOUN_1			
 Western Lombard	Western Lombard			SOUL_NOUN	anema	ˈɑːnema	ˈɑː n e m a		SOUL_NOUN_1			
@@ -1243,6 +1271,7 @@ Italian	Italian			YEAR_NOUN	anno	ˈanno	ˈa n n o		YEAR_NOUN_1
 Venetian	Venetian			YEAR_NOUN	àno	ˈano	ˈa n o		YEAR_NOUN_1			
 Bellunese	Bellunese			YEAR_NOUN	an	ˈan	ˈa n		YEAR_NOUN_1			
 Emilian	Emilian			YEAR_NOUN	ân	ˈaːn	ˈaː n		YEAR_NOUN_1			
+Romagnol	Romagnol			YEAR_NOUN	an	ˈʌ̃	ˈʌ̃		YEAR_NOUN_1			
 Ligurian	Ligurian			YEAR_NOUN	anno	ˈanu	ˈa n u		YEAR_NOUN_1			
 Piedmontese	Piedmontese			YEAR_NOUN	ann	ˈaŋ	ˈa ŋ		YEAR_NOUN_1			
 Western Lombard	Western Lombard			YEAR_NOUN	ann	ˈan	ˈa n		YEAR_NOUN_1			
@@ -1279,6 +1308,7 @@ Italian	Italian			BEE_NOUN	ape	ˈape	ˈa p e		BEE_NOUN_2
 Venetian	Venetian			BEE_NOUN	ava	ˈava	ˈa v a		BEE_NOUN_2			
 Bellunese	Bellunese			BEE_NOUN	ava	ˈava	ˈa v a		BEE_NOUN_2			
 Emilian	Emilian			BEE_NOUN	èv	ˈɛv	ˈɛ v		BEE_NOUN_2			
+Romagnol	Romagnol			BEE_NOUN	eva	ˈɛvɐ	ˈɛ v ɐ		BEE_NOUN_2			
 Ligurian	Ligurian			BEE_NOUN	âva	ˈaːva	ˈaː v a		BEE_NOUN_2			
 Piedmontese	Piedmontese			BEE_NOUN	aif	ˈajf	ˈa j f		BEE_NOUN_2			
 Eastern Lombard	Eastern Lombard			BEE_NOUN	àa	ˈaa	ˈa a		BEE_NOUN_2			
@@ -1321,6 +1351,7 @@ Italian	Italian			WATER_NOUN	acqua	ˈakkwa	ˈa k k w a		WATER_NOUN_1
 Venetian	Venetian			WATER_NOUN	àcua	ˈakwa	ˈa k w a		WATER_NOUN_1			
 Bellunese	Bellunese			WATER_NOUN	àcua	ˈakwa	ˈa k w a		WATER_NOUN_1			
 Emilian	Emilian			WATER_NOUN	âcua	ˈaːkwa	ˈaː k w a		WATER_NOUN_1			
+Romagnol	Romagnol			WATER_NOUN	acva	ˈakvɐ	ˈa k v ɐ		WATER_NOUN_1			
 Ligurian	Ligurian			WATER_NOUN	ægoa	ˈɛːɡwa	ˈɛː ɡ w a		WATER_NOUN_1			
 Piedmontese	Piedmontese			WATER_NOUN	eva	ˈeva	ˈe v a		WATER_NOUN_1			
 Western Lombard	Western Lombard			WATER_NOUN	aigua	ˈajɡwa	ˈa j ɡ w a		WATER_NOUN_1			
@@ -1379,6 +1410,7 @@ Corsican	Corsican			SPIDER_NOUN	ragnu	rˈaɲu	r ˈa ɲ u		SPIDER_NOUN_2
 Italian	Italian			SPIDER_NOUN	ragno	rˈaɲɲo	r ˈa ɲ ɲ o		SPIDER_NOUN_2			
 Venetian	Venetian			SPIDER_NOUN	ragno	rˈaɲo	r ˈa ɲ o		SPIDER_NOUN_2			
 Emilian	Emilian			SPIDER_NOUN	râgn	rˈaːɲ	r ˈaː ɲ		SPIDER_NOUN_2			
+Romagnol	Romagnol			SPIDER_NOUN	râgn	rˈʌ̃ɲ	r ˈʌ̃ ɲ		SPIDER_NOUN_2			
 Ligurian	Ligurian			SPIDER_NOUN	ägno	ˈaːɲu	ˈaː ɲ u		SPIDER_NOUN_2			
 Piedmontese	Piedmontese			SPIDER_NOUN	aragn	arˈaɲ	a r ˈa ɲ		SPIDER_NOUN_2			
 Piedmontese	Piedmontese			SPIDER_NOUN	ragn	rˈaɲ	r ˈa ɲ		SPIDER_NOUN_2			
@@ -1402,6 +1434,7 @@ Venetian	Venetian			TREE_NOUN	àlbaro	ˈalbaro	ˈa l b a r o		TREE_NOUN_1
 Venetian	Venetian			TREE_NOUN	àlboro	ˈalboro	ˈa l b o r o		TREE_NOUN_1			
 Bellunese	Bellunese			TREE_NOUN	àrbol	ˈarbol	ˈa r b o l		TREE_NOUN_1			
 Emilian	Emilian			TREE_NOUN	âlber	ˈaːlber	ˈaː l b e r		TREE_NOUN_1			
+Romagnol	Romagnol			TREE_NOUN	êlbar	ˈeə̯lbɐr	ˈeə̯ l b ɐ r		TREE_NOUN_1			
 Ligurian	Ligurian			TREE_NOUN	èrbo	ˈɛːrbu	ˈɛː r b u		TREE_NOUN_1			
 Piedmontese	Piedmontese			TREE_NOUN	arbra	ˈarbra	ˈa r b r a		TREE_NOUN_1			
 Western Lombard	Western Lombard			TREE_NOUN	arbor	ˈarbor	ˈa r b o r		TREE_NOUN_1			
@@ -1441,6 +1474,7 @@ Italian	Italian			EAR_NOUN	orecchia	orˈekkja	o r ˈe k k j a		EAR_NOUN_1
 Venetian	Venetian			EAR_NOUN	récia	rˈeʧa	r ˈe ʧ a		EAR_NOUN_1			
 Bellunese	Bellunese			EAR_NOUN	récia	rˈeʧa	r ˈe ʧ a		EAR_NOUN_1			
 Emilian	Emilian			EAR_NOUN	uraccia	urˈaʧa	u r ˈa ʧ a		EAR_NOUN_1			
+Romagnol	Romagnol			EAR_NOUN	urècia	urˈɛʧɐ	u r ˈɛ ʧ ɐ		EAR_NOUN_1			
 Ligurian	Ligurian			EAR_NOUN	oegia	wˈeːʤa	w ˈeː ʤ a		EAR_NOUN_1			
 Piedmontese	Piedmontese			EAR_NOUN	orija	urˈija	u r ˈi j a		EAR_NOUN_1			
 Western Lombard	Western Lombard			EAR_NOUN	oregia	urˈeːʤa	u r ˈeː ʤ a		EAR_NOUN_1			
@@ -1482,6 +1516,7 @@ Italian	Italian			GOLD_NOUN	oro	ˈɔro	ˈɔ r o		GOLD_NOUN_1
 Venetian	Venetian			GOLD_NOUN	òro	ˈɔro	ˈɔ r o		GOLD_NOUN_1			
 Bellunese	Bellunese			GOLD_NOUN	òro	ˈɔro	ˈɔ r o		GOLD_NOUN_1			
 Emilian	Emilian			GOLD_NOUN	ôr	ˈɔːr	ˈɔː r		GOLD_NOUN_1			
+Romagnol	Romagnol			GOLD_NOUN	ör	ˈɔə̯r	ˈɔə̯ r		GOLD_NOUN_1			
 Ligurian	Ligurian			GOLD_NOUN	öo	ˈɔːu	ˈɔː u		GOLD_NOUN_1			
 Piedmontese	Piedmontese			GOLD_NOUN	òr	ˈɔr	ˈɔ r		GOLD_NOUN_1			
 Western Lombard	Western Lombard			GOLD_NOUN	or	ˈoːr	ˈoː r		GOLD_NOUN_1			
@@ -1551,6 +1586,7 @@ Corsican	Corsican			AUTUMN_NOUN	autunnu	awtˈunnu	a w t ˈu n n u		AUTUMN_NOUN_2
 Italian	Italian			AUTUMN_NOUN	autunno	awtˈunno	a w t ˈu n n o		AUTUMN_NOUN_2			
 Venetian	Venetian			AUTUMN_NOUN	utùno	utˈuno	u t ˈu n o		AUTUMN_NOUN_2			
 Bellunese	Bellunese			AUTUMN_NOUN	otùno	otˈuno	o t ˈu n o		AUTUMN_NOUN_2			
+Romagnol	Romagnol			AUTUMN_NOUN	autôn	awtˈõũ̯	a w t ˈõũ̯		AUTUMN_NOUN_2			
 Ligurian	Ligurian			AUTUMN_NOUN	ötunno	ɔːtˈynu	ɔː t ˈy n u		AUTUMN_NOUN_2			
 Piedmontese	Piedmontese			AUTUMN_NOUN	otogn	utˈuɲ	u t ˈu ɲ		AUTUMN_NOUN_2			
 Friulian	Friulian			AUTUMN_NOUN	autun	awtˈun	a w t ˈu n		AUTUMN_NOUN_2			
@@ -1573,6 +1609,7 @@ Italian	Italian			GOOSE_NOUN	oca	ˈɔka	ˈɔ k a		GOOSE_NOUN_1
 Venetian	Venetian			GOOSE_NOUN	òca	ˈɔka	ˈɔ k a		GOOSE_NOUN_1			
 Bellunese	Bellunese			GOOSE_NOUN	òca	ˈɔka	ˈɔ k a		GOOSE_NOUN_1			
 Emilian	Emilian			GOOSE_NOUN	ôca	ˈɔːka	ˈɔː k a		GOOSE_NOUN_1			
+Romagnol	Romagnol			GOOSE_NOUN	öca	ˈɔə̯kɐ	ˈɔə̯ k ɐ		GOOSE_NOUN_1			
 Ligurian	Ligurian			GOOSE_NOUN	öca	ˈɔːka	ˈɔː k a		GOOSE_NOUN_1			
 Piedmontese	Piedmontese			GOOSE_NOUN	òca	ˈɔka	ˈɔ k a		GOOSE_NOUN_1			
 Western Lombard	Western Lombard			GOOSE_NOUN	oca	ˈoːka	ˈoː k a		GOOSE_NOUN_1			
@@ -1604,6 +1641,7 @@ Italian	Italian			BIRD_NOUN	uccello	uʧʧˈɛllo	u ʧ ʧ ˈɛ l l o		BIRD_NOUN_2
 Venetian	Venetian			BIRD_NOUN	oxèło	ozˈɛo	o z ˈɛ o		BIRD_NOUN_2			
 Bellunese	Bellunese			BIRD_NOUN	oxèl	ozˈɛl	o z ˈɛ l		BIRD_NOUN_2			
 Emilian	Emilian			BIRD_NOUN	uṡèl	uzˈɛl	u z ˈɛ l		BIRD_NOUN_2			
+Romagnol	Romagnol			BIRD_NOUN	uşël	uzˈɛə̯l	u z ˈɛə̯ l		BIRD_NOUN_2			
 Ligurian	Ligurian			BIRD_NOUN	öxéllo	ɔːʒˈelu	ɔː ʒ ˈe l u		BIRD_NOUN_2			
 Piedmontese	Piedmontese			BIRD_NOUN	osel	uzˈɛl	u z ˈɛ l		BIRD_NOUN_2			
 Western Lombard	Western Lombard			BIRD_NOUN	usel	uzˈɛl	u z ˈɛ l		BIRD_NOUN_2			
@@ -1631,6 +1669,7 @@ Sicilian	Sicilian			BATH_NOUN	bagnu	bˈaɲʊ	b ˈa ɲ ʊ		BATH_NOUN_1
 Neapolitan	Neapolitan			BATH_NOUN	bagno	vˈaɲɲə	v ˈa ɲ ɲ ə		BATH_NOUN_1			
 Corsican	Corsican			BATH_NOUN	bagnu	bˈaɲu	b ˈa ɲ u		BATH_NOUN_1			
 Italian	Italian			BATH_NOUN	bagno	bˈaɲɲo	b ˈa ɲ ɲ o		BATH_NOUN_1			
+Romagnol	Romagnol			BATH_NOUN	bâgn	bˈʌ̃ɲ	b ˈʌ̃ ɲ		BATH_NOUN_1			
 Piedmontese	Piedmontese			BATH_NOUN	bagn	bˈaɲ	b ˈa ɲ		BATH_NOUN_1			
 Western Lombard	Western Lombard			BATH_NOUN	bagn	bˈɑːɲ	b ˈɑː ɲ		BATH_NOUN_1			
 Eastern Lombard	Eastern Lombard			BATH_NOUN	bagn	bˈaɲ	b ˈa ɲ		BATH_NOUN_1			
@@ -1665,6 +1704,7 @@ Italian	Italian			LOW_ADJ	basso	bˈasso	b ˈa s s o		LOW_ADJ_2
 Venetian	Venetian			LOW_ADJ	basso	bˈaso	b ˈa s o		LOW_ADJ_2			
 Bellunese	Bellunese			LOW_ADJ	bas	bˈas	b ˈa s		LOW_ADJ_2			
 Emilian	Emilian			LOW_ADJ	bâs	bˈaːs	b ˈaː s		LOW_ADJ_2			
+Romagnol	Romagnol			LOW_ADJ	bas	bˈas	b ˈa s		LOW_ADJ_2			
 Ligurian	Ligurian			LOW_ADJ	bàsso	bˈasu	b ˈa s u		LOW_ADJ_2			
 Piedmontese	Piedmontese			LOW_ADJ	bass	bˈas	b ˈa s		LOW_ADJ_2			
 Western Lombard	Western Lombard			LOW_ADJ	bass	bˈas	b ˈa s		LOW_ADJ_2			
@@ -1692,6 +1732,7 @@ Italian	Italian			BEAUTIFUL (F)_ADJ	bella	bˈɛlla	b ˈɛ l l a		BEAUTIFUL (F)_A
 Venetian	Venetian			BEAUTIFUL (F)_ADJ	bèła	bˈɛa	b ˈɛ a		BEAUTIFUL (F)_ADJ_1			
 Bellunese	Bellunese			BEAUTIFUL (F)_ADJ	bèla	bˈɛla	b ˈɛ l a		BEAUTIFUL (F)_ADJ_1			
 Emilian	Emilian			BEAUTIFUL (F)_ADJ	bèla	bˈɛla	b ˈɛ l a		BEAUTIFUL (F)_ADJ_1			
+Romagnol	Romagnol			BEAUTIFUL (F)_ADJ	bëla	bˈɛə̯lɐ	b ˈɛə̯ l ɐ		BEAUTIFUL (F)_ADJ_1			
 Ligurian	Ligurian			BEAUTIFUL (F)_ADJ	bèlla	bˈɛla	b ˈɛ l a		BEAUTIFUL (F)_ADJ_1			
 Piedmontese	Piedmontese			BEAUTIFUL (F)_ADJ	bela	bˈɛla	b ˈɛ l a		BEAUTIFUL (F)_ADJ_1			
 Western Lombard	Western Lombard			BEAUTIFUL (F)_ADJ	bella	bˈɛla	b ˈɛ l a		BEAUTIFUL (F)_ADJ_1			
@@ -1727,6 +1768,7 @@ Italian	Italian			BEAUTIFUL (M)_ADJ	bello	bˈɛllo	b ˈɛ l l o		BEAUTIFUL (M)_A
 Venetian	Venetian			BEAUTIFUL (M)_ADJ	bèło	bˈɛo	b ˈɛ o		BEAUTIFUL (M)_ADJ_1			
 Bellunese	Bellunese			BEAUTIFUL (M)_ADJ	bèl	bˈɛl	b ˈɛ l		BEAUTIFUL (M)_ADJ_1			
 Emilian	Emilian			BEAUTIFUL (M)_ADJ	bèl	bˈɛl	b ˈɛ l		BEAUTIFUL (M)_ADJ_1			
+Romagnol	Romagnol			BEAUTIFUL (M)_ADJ	bël	bˈɛə̯l	b ˈɛə̯ l		BEAUTIFUL (M)_ADJ_1			
 Ligurian	Ligurian			BEAUTIFUL (M)_ADJ	bèllo	bˈɛlu	b ˈɛ l u		BEAUTIFUL (M)_ADJ_1			
 Piedmontese	Piedmontese			BEAUTIFUL (M)_ADJ	bel	bˈɛl	b ˈɛ l		BEAUTIFUL (M)_ADJ_1			
 Western Lombard	Western Lombard			BEAUTIFUL (M)_ADJ	bell	bˈɛl	b ˈɛ l		BEAUTIFUL (M)_ADJ_1			
@@ -1764,6 +1806,7 @@ Italian	Italian			WELL (ADV)_ADV	bene	bˈɛne	b ˈɛ n e		WELL (ADV)_ADV_1
 Venetian	Venetian			WELL (ADV)_ADV	bén	bˈeŋ	b ˈe ŋ		WELL (ADV)_ADV_1			
 Bellunese	Bellunese			WELL (ADV)_ADV	bén	bˈeŋ	b ˈe ŋ		WELL (ADV)_ADV_1			
 Emilian	Emilian			WELL (ADV)_ADV	bän	bˈæŋ	b ˈæ ŋ		WELL (ADV)_ADV_1			
+Romagnol	Romagnol			WELL (ADV)_ADV	bèn	bˈɛ̃j̃	b ˈɛ̃ j̃		WELL (ADV)_ADV_1			
 Ligurian	Ligurian			WELL (ADV)_ADV	ben	bˈeŋ	b ˈe ŋ		WELL (ADV)_ADV_1			
 Piedmontese	Piedmontese			WELL (ADV)_ADV	ben	bˈɛn	b ˈɛ n		WELL (ADV)_ADV_1			
 Western Lombard	Western Lombard			WELL (ADV)_ADV	ben	bˈẽ	b ˈẽ		WELL (ADV)_ADV_1			
@@ -1802,6 +1845,7 @@ Italian	Italian			DRINK_VERB	bere	bˈere	b ˈe r e		DRINK_VERB_1
 Venetian	Venetian			DRINK_VERB	béver	bˈever	b ˈe v e r		DRINK_VERB_1			
 Bellunese	Bellunese			DRINK_VERB	béver	bˈever	b ˈe v e r		DRINK_VERB_1			
 Emilian	Emilian			DRINK_VERB	bavver	bˈaver	b ˈa v e r		DRINK_VERB_1			
+Romagnol	Romagnol			DRINK_VERB	bēr	bˈeː	b ˈeː		DRINK_VERB_1			
 Ligurian	Ligurian			DRINK_VERB	béive	bˈejve	b ˈe j v e		DRINK_VERB_1			
 Piedmontese	Piedmontese			DRINK_VERB	beive	bˈejve	b ˈe j v e		DRINK_VERB_1			
 Western Lombard	Western Lombard			DRINK_VERB	bever	bˈeːver	b ˈeː v e r		DRINK_VERB_1			
@@ -1836,6 +1880,7 @@ Italian	Italian			WHITE_ADJ	bianco	bjˈaŋko	b j ˈa ŋ k o		WHITE_ADJ_2
 Venetian	Venetian			WHITE_ADJ	biànco	bjˈaŋko	b j ˈa ŋ k o		WHITE_ADJ_2			
 Bellunese	Bellunese			WHITE_ADJ	biànk	bjˈaŋk	b j ˈa ŋ k		WHITE_ADJ_2			
 Emilian	Emilian			WHITE_ADJ	bianc	bjˈaŋk	b j ˈa ŋ k		WHITE_ADJ_2			
+Romagnol	Romagnol			WHITE_ADJ	biânc	bjˈʌ̃ŋk	b j ˈʌ̃ ŋ k		WHITE_ADJ_2			
 Ligurian	Ligurian			WHITE_ADJ	gianco	ʤˈaŋku	ʤ ˈa ŋ k u		WHITE_ADJ_2			
 Piedmontese	Piedmontese			WHITE_ADJ	bianc	bjˈaŋk	b j ˈa ŋ k		WHITE_ADJ_2			
 Western Lombard	Western Lombard			WHITE_ADJ	bianc	bjˈãk	b j ˈã k		WHITE_ADJ_2			
@@ -1870,6 +1915,7 @@ Corsican	Corsican			GOOD (F.PL)_ADJ	bone	bˈɔne	b ˈɔ n e		GOOD (F.PL)_ADJ_1
 Italian	Italian			GOOD (F.PL)_ADJ	buone	bwˈɔne	b w ˈɔ n e		GOOD (F.PL)_ADJ_1			
 Venetian	Venetian			GOOD (F.PL)_ADJ	bóne	bˈone	b ˈo n e		GOOD (F.PL)_ADJ_1			
 Bellunese	Bellunese			GOOD (F.PL)_ADJ	bóne	bˈone	b ˈo n e		GOOD (F.PL)_ADJ_1			
+Romagnol	Romagnol			GOOD (F.PL)_ADJ	boni	bˈɔni	b ˈɔ n i		GOOD (F.PL)_ADJ_1			
 Ligurian	Ligurian			GOOD (F.PL)_ADJ	boñe	bˈuŋe	b ˈu ŋ e		GOOD (F.PL)_ADJ_1			
 Piedmontese	Piedmontese			GOOD (F.PL)_ADJ	bone	bˈune	b ˈu n e		GOOD (F.PL)_ADJ_1			
 Western Lombard	Western Lombard			GOOD (F.PL)_ADJ	bon	bˈũ	b ˈũ		GOOD (F.PL)_ADJ_1			
@@ -1887,6 +1933,7 @@ Italian	Italian			GOOD (F.SG)_ADJ	buona	bwˈɔna	b w ˈɔ n a		GOOD (F.SG)_ADJ_1
 Venetian	Venetian			GOOD (F.SG)_ADJ	bóna	bˈona	b ˈo n a		GOOD (F.SG)_ADJ_1			
 Bellunese	Bellunese			GOOD (F.SG)_ADJ	bóna	bˈona	b ˈo n a		GOOD (F.SG)_ADJ_1			
 Emilian	Emilian			GOOD (F.SG)_ADJ	bôna	bˈɔːna	b ˈɔː n a		GOOD (F.SG)_ADJ_1			
+Romagnol	Romagnol			GOOD (F.SG)_ADJ	bôna	bˈou̯nɐ	b ˈou̯ n ɐ		GOOD (F.SG)_ADJ_1			
 Ligurian	Ligurian			GOOD (F.SG)_ADJ	boña	bˈuŋa	b ˈu ŋ a		GOOD (F.SG)_ADJ_1			
 Piedmontese	Piedmontese			GOOD (F.SG)_ADJ	bona	bˈuna	b ˈu n a		GOOD (F.SG)_ADJ_1			
 Western Lombard	Western Lombard			GOOD (F.SG)_ADJ	bona	bˈuna	b ˈu n a		GOOD (F.SG)_ADJ_1			
@@ -1943,6 +1990,7 @@ Corsican	Corsican			GOOD (M.PL)_ADJ	boni	bˈɔni	b ˈɔ n i		GOOD (M.PL)_ADJ_1
 Italian	Italian			GOOD (M.PL)_ADJ	buoni	bwˈɔni	b w ˈɔ n i		GOOD (M.PL)_ADJ_1			
 Venetian	Venetian			GOOD (M.PL)_ADJ	bóni	bˈoni	b ˈo n i		GOOD (M.PL)_ADJ_1			
 Bellunese	Bellunese			GOOD (M.PL)_ADJ	bóni	bˈoni	b ˈo n i		GOOD (M.PL)_ADJ_1			
+Romagnol	Romagnol			GOOD (M.PL)_ADJ	bôn	bˈõũ̯	b ˈõũ̯		GOOD (M.PL)_ADJ_1			
 Ligurian	Ligurian			GOOD (M.PL)_ADJ	boin	bˈujŋ	b ˈu j ŋ		GOOD (M.PL)_ADJ_1			
 Piedmontese	Piedmontese			GOOD (M.PL)_ADJ	bon	bˈuŋ	b ˈu ŋ		GOOD (M.PL)_ADJ_1			
 Western Lombard	Western Lombard			GOOD (M.PL)_ADJ	bon	bˈũ	b ˈũ		GOOD (M.PL)_ADJ_1			
@@ -1984,6 +2032,7 @@ Italian	Italian			GOOD (M.SG)_ADJ	buono	bwˈɔno	b w ˈɔ n o		GOOD (M.SG)_ADJ_1
 Venetian	Venetian			GOOD (M.SG)_ADJ	bón	bˈoŋ	b ˈo ŋ		GOOD (M.SG)_ADJ_1			
 Bellunese	Bellunese			GOOD (M.SG)_ADJ	bón	bˈoŋ	b ˈo ŋ		GOOD (M.SG)_ADJ_1			
 Emilian	Emilian			GOOD (M.SG)_ADJ	bån	bˈʌŋ	b ˈʌ ŋ		GOOD (M.SG)_ADJ_1			
+Romagnol	Romagnol			GOOD (M.SG)_ADJ	bôn	bˈõũ̯	b ˈõũ̯		GOOD (M.SG)_ADJ_1			
 Ligurian	Ligurian			GOOD (M.SG)_ADJ	bun	bˈuŋ	b ˈu ŋ		GOOD (M.SG)_ADJ_1			
 Piedmontese	Piedmontese			GOOD (M.SG)_ADJ	bon	bˈuŋ	b ˈu ŋ		GOOD (M.SG)_ADJ_1			
 Western Lombard	Western Lombard			GOOD (M.SG)_ADJ	bun	bˈũ	b ˈũ		GOOD (M.SG)_ADJ_1			
@@ -2023,6 +2072,7 @@ Italian	Italian			OX_NOUN	bue	bˈue	b ˈu e		OX_NOUN_1
 Venetian	Venetian			OX_NOUN	bò	bˈɔ	b ˈɔ		OX_NOUN_1			
 Bellunese	Bellunese			OX_NOUN	bò	bˈɔ	b ˈɔ		OX_NOUN_1			
 Emilian	Emilian			OX_NOUN	bå	bˈʌ	b ˈʌ		OX_NOUN_1			
+Romagnol	Romagnol			OX_NOUN	bo	bˈɔ	b ˈɔ		OX_NOUN_1			
 Ligurian	Ligurian			OX_NOUN	beu	bˈøː	b ˈøː		OX_NOUN_1			
 Piedmontese	Piedmontese			OX_NOUN	beu	bˈø	b ˈø		OX_NOUN_1			
 Western Lombard	Western Lombard			OX_NOUN	bœf	bˈøːf	b ˈøː f		OX_NOUN_1			
@@ -2058,6 +2108,7 @@ Italian	Italian			MOUTH_NOUN	bocca	bˈokka	b ˈo k k a		MOUTH_NOUN_1
 Venetian	Venetian			MOUTH_NOUN	bóca	bˈoka	b ˈo k a		MOUTH_NOUN_1			
 Bellunese	Bellunese			MOUTH_NOUN	bóca	bˈoka	b ˈo k a		MOUTH_NOUN_1			
 Emilian	Emilian			MOUTH_NOUN	bòca	bˈɔka	b ˈɔ k a		MOUTH_NOUN_1			
+Romagnol	Romagnol			MOUTH_NOUN	bóca	bˈokɐ	b ˈo k ɐ		MOUTH_NOUN_1			
 Ligurian	Ligurian			MOUTH_NOUN	bocca	bˈuka	b ˈu k a		MOUTH_NOUN_1			
 Piedmontese	Piedmontese			MOUTH_NOUN	boca	bˈuka	b ˈu k a		MOUTH_NOUN_1			
 Western Lombard	Western Lombard			MOUTH_NOUN	boca	bˈuka	b ˈu k a		MOUTH_NOUN_1			
@@ -2093,6 +2144,7 @@ Corsican	Corsican			HORSE_NOUN	cavallu	kavˈallu	k a v ˈa l l u		HORSE_NOUN_1
 Italian	Italian			HORSE_NOUN	cavallo	kavˈallo	k a v ˈa l l o		HORSE_NOUN_1			
 Venetian	Venetian			HORSE_NOUN	cavàło	kavˈaɰo	k a v ˈa ɰ o		HORSE_NOUN_1			
 Bellunese	Bellunese			HORSE_NOUN	cavàl	kavˈal	k a v ˈa l		HORSE_NOUN_1			
+Romagnol	Romagnol			HORSE_NOUN	cavàl	kɐvˈal	k ɐ v ˈa l		HORSE_NOUN_1			
 Ligurian	Ligurian			HORSE_NOUN	cavallo	kavˈalu	k a v ˈa l u		HORSE_NOUN_1			
 Piedmontese	Piedmontese			HORSE_NOUN	caval	kavˈal	k a v ˈa l		HORSE_NOUN_1			
 Western Lombard	Western Lombard			HORSE_NOUN	cavall	kavˈal	k a v ˈa l		HORSE_NOUN_1			
@@ -2131,6 +2183,7 @@ Italian	Italian			SKY_NOUN	cielo	ʧˈɛlo	ʧ ˈɛ l o		SKY_NOUN_1
 Venetian	Venetian			SKY_NOUN	çiél	sjˈel	s j ˈe l		SKY_NOUN_1			
 Bellunese	Bellunese			SKY_NOUN	zhiélo	θjˈelo	θ j ˈe l o		SKY_NOUN_1			
 Emilian	Emilian			SKY_NOUN	zîl	θˈiːl	θ ˈiː l		SKY_NOUN_1			
+Romagnol	Romagnol			SKY_NOUN	zil	θˈil	θ ˈi l		SKY_NOUN_1			
 Ligurian	Ligurian			SKY_NOUN	çê	sˈeː	s ˈeː		SKY_NOUN_1			
 Piedmontese	Piedmontese			SKY_NOUN	cel	ʧˈel	ʧ ˈe l		SKY_NOUN_1			
 Western Lombard	Western Lombard			SKY_NOUN	ciel	ʧˈel	ʧ ˈe l		SKY_NOUN_1			
@@ -2171,6 +2224,7 @@ Italian	Italian			HOT_ADJ	caldo	kˈaldo	k ˈa l d o		HOT_ADJ_1
 Venetian	Venetian			HOT_ADJ	caldo	kˈaldo	k ˈa l d o		HOT_ADJ_1			
 Bellunese	Bellunese			HOT_ADJ	calt	kˈalt	k ˈa l t		HOT_ADJ_1			
 Emilian	Emilian			HOT_ADJ	chèld	kˈɛld	k ˈɛ l d		HOT_ADJ_1			
+Romagnol	Romagnol			HOT_ADJ	chêld	kˈeə̯ld	k ˈeə̯ l d		HOT_ADJ_1			
 Ligurian	Ligurian			HOT_ADJ	câdo	kˈaːdu	k ˈaː d u		HOT_ADJ_1			
 Piedmontese	Piedmontese			HOT_ADJ	càud	kˈawd	k ˈa w d		HOT_ADJ_1			
 Western Lombard	Western Lombard			HOT_ADJ	cald	kˈalt	k ˈa l t		HOT_ADJ_1			
@@ -2205,6 +2259,7 @@ Corsican	Corsican			CHANGE_VERB	cambià	kambjˈa	k a m b j ˈa		CHANGE_VERB_1
 Italian	Italian			CHANGE_VERB	cambiare	kambjˈare	k a m b j ˈa r e		CHANGE_VERB_1			
 Venetian	Venetian			CHANGE_VERB	canbiar	kaŋbjˈar	k a ŋ b j ˈa r		CHANGE_VERB_1			
 Emilian	Emilian			CHANGE_VERB	canbièr	kaŋbjˈɛr	k a ŋ b j ˈɛ r		CHANGE_VERB_1			
+Romagnol	Romagnol			CHANGE_VERB	cambiêr	kɐmbjˈeə̯	k ɐ m b j ˈeə̯		CHANGE_VERB_1			
 Ligurian	Ligurian			CHANGE_VERB	cangiâ	kaŋʤˈaː	k a ŋ ʤ ˈaː		CHANGE_VERB_1			
 Piedmontese	Piedmontese			CHANGE_VERB	cambié	kambjˈe	k a m b j ˈe		CHANGE_VERB_1			
 Western Lombard	Western Lombard			CHANGE_VERB	cambià	kãbjˈa	k ã b j ˈa		CHANGE_VERB_1			
@@ -2236,6 +2291,7 @@ Italian	Italian			CHAMBER_NOUN	camera	kˈamera	k ˈa m e r a		CHAMBER_NOUN_1
 Venetian	Venetian			CHAMBER_NOUN	càmara	kˈamara	k ˈa m a r a		CHAMBER_NOUN_1			
 Bellunese	Bellunese			CHAMBER_NOUN	cànbera	kˈaŋbera	k ˈa ŋ b e r a		CHAMBER_NOUN_1			
 Emilian	Emilian			CHAMBER_NOUN	câmra	kˈaːmra	k ˈaː m r a		CHAMBER_NOUN_1			
+Romagnol	Romagnol			CHAMBER_NOUN	câmbra	kˈʌ̃mbrɐ	k ˈʌ̃ m b r ɐ		CHAMBER_NOUN_1			
 Ligurian	Ligurian			CHAMBER_NOUN	camia	kˈamja	k ˈa m j a		CHAMBER_NOUN_1			
 Eastern Lombard	Eastern Lombard			CHAMBER_NOUN	càmera	kˈamera	k ˈa m e r a		CHAMBER_NOUN_1			
 Ladin	Ladin			CHAMBER_NOUN	ciamena	ʨˈamena	ʨ ˈa m e n a		CHAMBER_NOUN_1			
@@ -2273,6 +2329,7 @@ Italian	Italian			DOG_NOUN	cane	kˈane	k ˈa n e		DOG_NOUN_1
 Venetian	Venetian			DOG_NOUN	can	kˈaŋ	k ˈa ŋ		DOG_NOUN_1			
 Bellunese	Bellunese			DOG_NOUN	can	kˈaŋ	k ˈa ŋ		DOG_NOUN_1			
 Emilian	Emilian			DOG_NOUN	can	kˈaŋ	k ˈa ŋ		DOG_NOUN_1			
+Romagnol	Romagnol			DOG_NOUN	cân	kˈʌ̃	k ˈʌ̃		DOG_NOUN_1			
 Ligurian	Ligurian			DOG_NOUN	can	kˈaŋ	k ˈa ŋ		DOG_NOUN_1			
 Piedmontese	Piedmontese			DOG_NOUN	can	kˈaŋ	k ˈa ŋ		DOG_NOUN_1			
 Western Lombard	Western Lombard			DOG_NOUN	can	kˈã	k ˈã		DOG_NOUN_1			
@@ -2311,6 +2368,7 @@ Italian	Italian			SING_VERB	cantare	kantˈare	k a n t ˈa r e		SING_VERB_1
 Venetian	Venetian			SING_VERB	cantar	kaŋtˈar	k a ŋ t ˈa r		SING_VERB_1			
 Bellunese	Bellunese			SING_VERB	cantar	kaŋtˈar	k a ŋ t ˈa r		SING_VERB_1			
 Emilian	Emilian			SING_VERB	cantèr	kaŋtˈɛr	k a ŋ t ˈɛ r		SING_VERB_1			
+Romagnol	Romagnol			SING_VERB	cantêr	kɐntˈeə̯	k ɐ n t ˈeə̯		SING_VERB_1			
 Ligurian	Ligurian			SING_VERB	cantâ	kaŋtˈaː	k a ŋ t ˈaː		SING_VERB_1			
 Piedmontese	Piedmontese			SING_VERB	canté	kaŋtˈe	k a ŋ t ˈe		SING_VERB_1			
 Western Lombard	Western Lombard			SING_VERB	cantà	kãtˈa	k ã t ˈa		SING_VERB_1			
@@ -2344,6 +2402,7 @@ Neapolitan	Neapolitan			SONG_NOUN	canto	kˈantə	k ˈa n t ə		SONG_NOUN_1
 Corsican	Corsican			SONG_NOUN	cantu	kˈantu	k ˈa n t u		SONG_NOUN_1			
 Italian	Italian			SONG_NOUN	canto	kˈanto	k ˈa n t o		SONG_NOUN_1			
 Emilian	Emilian			SONG_NOUN	cant	kˈaŋt	k ˈa ŋ t		SONG_NOUN_1			
+Romagnol	Romagnol			SONG_NOUN	cânt	kˈʌ̃nt	k ˈʌ̃ n t		SONG_NOUN_1			
 Ligurian	Ligurian			SONG_NOUN	canto	kˈaŋtu	k ˈa ŋ t u		SONG_NOUN_1			
 Piedmontese	Piedmontese			SONG_NOUN	cant	kˈaŋt	k ˈa ŋ t		SONG_NOUN_1			
 Friulian	Friulian			SONG_NOUN	cjant	cˈant	c ˈa n t		SONG_NOUN_1			
@@ -2373,6 +2432,7 @@ Italian	Italian			HAIR_NOUN	capello	kapˈello	k a p ˈe l l o		HAIR_NOUN_1
 Venetian	Venetian			HAIR_NOUN	cavéło	kavˈeo	k a v ˈe o		HAIR_NOUN_1			
 Bellunese	Bellunese			HAIR_NOUN	cavél	kavˈel	k a v ˈe l		HAIR_NOUN_1			
 Emilian	Emilian			HAIR_NOUN	cavail	kavˈajl	k a v ˈa j l		HAIR_NOUN_1			
+Romagnol	Romagnol			HAIR_NOUN	cavèl	kɐvˈɛl	k ɐ v ˈɛ l		HAIR_NOUN_1			
 Ligurian	Ligurian			HAIR_NOUN	cavéllo	kavˈelu	k a v ˈe l u		HAIR_NOUN_1			
 Piedmontese	Piedmontese			HAIR_NOUN	cavèj	kavˈɛj	k a v ˈɛ j		HAIR_NOUN_1			
 Western Lombard	Western Lombard			HAIR_NOUN	cavell	kavˈɛl	k a v ˈɛ l		HAIR_NOUN_1			
@@ -2410,6 +2470,7 @@ Italian	Italian			GOAT_NOUN	capra	kˈapra	k ˈa p r a		GOAT_NOUN_1
 Venetian	Venetian			GOAT_NOUN	càvara	kˈavara	k ˈa v a r a		GOAT_NOUN_1			
 Bellunese	Bellunese			GOAT_NOUN	cavra	kˈavra	k ˈa v r a		GOAT_NOUN_1			
 Emilian	Emilian			GOAT_NOUN	chèvra	kˈɛvra	k ˈɛ v r a		GOAT_NOUN_1			
+Romagnol	Romagnol			GOAT_NOUN	chêvra	kˈeə̯vrɐ	k ˈeə̯ v r ɐ		GOAT_NOUN_1			
 Ligurian	Ligurian			GOAT_NOUN	crava	krˈaːva	k r ˈaː v a		GOAT_NOUN_1			
 Piedmontese	Piedmontese			GOAT_NOUN	crava	krˈava	k r ˈa v a		GOAT_NOUN_1			
 Western Lombard	Western Lombard			GOAT_NOUN	crava	krˈava	k r ˈa v a		GOAT_NOUN_1			
@@ -2480,6 +2541,7 @@ Italian	Italian			HEAD_NOUN	capo	kˈapo	k ˈa p o		HEAD_NOUN_1
 Venetian	Venetian			HEAD_NOUN	cao	kˈao	k ˈa o		HEAD_NOUN_1			
 Bellunese	Bellunese			HEAD_NOUN	cao	kˈao	k ˈa o		HEAD_NOUN_1			
 Emilian	Emilian			HEAD_NOUN	chèp	kˈɛp	k ˈɛ p		HEAD_NOUN_1			
+Romagnol	Romagnol			HEAD_NOUN	chêv	kˈeə̯v	k ˈeə̯ v		HEAD_NOUN_1			
 Ligurian	Ligurian			HEAD_NOUN	cappo	kˈapu	k ˈa p u		HEAD_NOUN_1			
 Piedmontese	Piedmontese			HEAD_NOUN	cò	kˈɔ	k ˈɔ		HEAD_NOUN_1			
 Western Lombard	Western Lombard			HEAD_NOUN	coo	kˈuː	k ˈuː		HEAD_NOUN_1			
@@ -2513,6 +2575,7 @@ Corsican	Corsican			MEAT_NOUN	carne	kˈarne	k ˈa r n e		MEAT_NOUN_1
 Italian	Italian			MEAT_NOUN	carne	kˈarne	k ˈa r n e		MEAT_NOUN_1			
 Venetian	Venetian			MEAT_NOUN	càrne	kˈarne	k ˈa r n e		MEAT_NOUN_1			
 Emilian	Emilian			MEAT_NOUN	chèren	kˈɛren	k ˈɛ r e n		MEAT_NOUN_1			
+Romagnol	Romagnol			MEAT_NOUN	chêrna	kˈeə̯rnɐ	k ˈeə̯ r n ɐ		MEAT_NOUN_1			
 Ligurian	Ligurian			MEAT_NOUN	carne	kˈaːrne	k ˈaː r n e		MEAT_NOUN_1			
 Piedmontese	Piedmontese			MEAT_NOUN	carn	kˈarŋ	k ˈa r ŋ		MEAT_NOUN_1			
 Western Lombard	Western Lombard			MEAT_NOUN	carn	kˈarn	k ˈa r n		MEAT_NOUN_1			
@@ -2548,6 +2611,7 @@ Italian	Italian			DEAR_ADJ	caro	kˈaro	k ˈa r o		DEAR_ADJ_1
 Venetian	Venetian			DEAR_ADJ	caro	kˈaro	k ˈa r o		DEAR_ADJ_1			
 Bellunese	Bellunese			DEAR_ADJ	caro	kˈaro	k ˈa r o		DEAR_ADJ_1			
 Emilian	Emilian			DEAR_ADJ	chèro	kˈɛro	k ˈɛ r o		DEAR_ADJ_1			
+Romagnol	Romagnol			DEAR_ADJ	chêr	kˈeə̯r	k ˈeə̯ r		DEAR_ADJ_1			
 Ligurian	Ligurian			DEAR_ADJ	câo	kˈaːu	k ˈaː u		DEAR_ADJ_1			
 Piedmontese	Piedmontese			DEAR_ADJ	car	kˈar	k ˈa r		DEAR_ADJ_1			
 Western Lombard	Western Lombard			DEAR_ADJ	car	kˈɑːr	k ˈɑː r		DEAR_ADJ_1			
@@ -2589,6 +2653,7 @@ Italian	Italian			HOUSE_NOUN	casa	kˈaza	k ˈa z a		HOUSE_NOUN_2
 Venetian	Venetian			HOUSE_NOUN	caxa	kˈaza	k ˈa z a		HOUSE_NOUN_2			
 Bellunese	Bellunese			HOUSE_NOUN	caxa	kˈaza	k ˈa z a		HOUSE_NOUN_2			
 Emilian	Emilian			HOUSE_NOUN	cà	kˈa	k ˈa		HOUSE_NOUN_2			
+Romagnol	Romagnol			HOUSE_NOUN	ca	kˈa	k ˈa		HOUSE_NOUN_2			
 Ligurian	Ligurian			HOUSE_NOUN	câza	kˈaːza	k ˈaː z a		HOUSE_NOUN_2			
 Piedmontese	Piedmontese			HOUSE_NOUN	ca	kˈa	k ˈa		HOUSE_NOUN_2			
 Western Lombard	Western Lombard			HOUSE_NOUN	cà	kˈa	k ˈa		HOUSE_NOUN_2			
@@ -2618,6 +2683,7 @@ Italian	Italian			CASTLE_NOUN	castello	kastˈɛllo	k a s t ˈɛ l l o		CASTLE_NO
 Venetian	Venetian			CASTLE_NOUN	castèło	kastˈɛo	k a s t ˈɛ o		CASTLE_NOUN_1			
 Bellunese	Bellunese			CASTLE_NOUN	castèl	kastˈɛl	k a s t ˈɛ l		CASTLE_NOUN_1			
 Emilian	Emilian			CASTLE_NOUN	castèl	kastˈɛl	k a s t ˈɛ l		CASTLE_NOUN_1			
+Romagnol	Romagnol			CASTLE_NOUN	castël	kɐstˈɛə̯l	k ɐ s t ˈɛə̯ l		CASTLE_NOUN_1			
 Ligurian	Ligurian			CASTLE_NOUN	castéllo	kastˈelu	k a s t ˈe l u		CASTLE_NOUN_1			
 Piedmontese	Piedmontese			CASTLE_NOUN	castel	kastˈɛl	k a s t ˈɛ l		CASTLE_NOUN_1			
 Western Lombard	Western Lombard			CASTLE_NOUN	castell	kastˈɛl	k a s t ˈɛ l		CASTLE_NOUN_1			
@@ -2654,6 +2720,7 @@ Italian	Italian			CHAIN_NOUN	catena	katˈena	k a t ˈe n a		CHAIN_NOUN_1
 Venetian	Venetian			CHAIN_NOUN	caéna	kaˈena	k a ˈe n a		CHAIN_NOUN_1			
 Bellunese	Bellunese			CHAIN_NOUN	cadéna	kadˈena	k a d ˈe n a		CHAIN_NOUN_1			
 Emilian	Emilian			CHAIN_NOUN	cadäṅna	kadˈæŋna	k a d ˈæ ŋ n a		CHAIN_NOUN_1			
+Romagnol	Romagnol			CHAIN_NOUN	cadéna	kɐdˈẽnɐ	k ɐ d ˈẽ n ɐ		CHAIN_NOUN_1			
 Ligurian	Ligurian			CHAIN_NOUN	cadeña	kadˈeŋa	k a d ˈe ŋ a		CHAIN_NOUN_1			
 Piedmontese	Piedmontese			CHAIN_NOUN	caden-a	kadˈeŋa	k a d ˈe ŋ a		CHAIN_NOUN_1			
 Western Lombard	Western Lombard			CHAIN_NOUN	cadena	kadˈeːna	k a d ˈeː n a		CHAIN_NOUN_1			
@@ -2728,6 +2795,7 @@ Italian	Italian			HUNDRED_NUM	cento	ʧˈɛnto	ʧ ˈɛ n t o		HUNDRED_NUM_1
 Venetian	Venetian			HUNDRED_NUM	sénto	sˈeŋto	s ˈe ŋ t o		HUNDRED_NUM_1			
 Bellunese	Bellunese			HUNDRED_NUM	çènto	θˈɛnto	θ ˈɛ n t o		HUNDRED_NUM_1			
 Emilian	Emilian			HUNDRED_NUM	zänt	θˈæŋt	θ ˈæ ŋ t		HUNDRED_NUM_1			
+Romagnol	Romagnol			HUNDRED_NUM	zènt	θˈɛnt	θ ˈɛ n t		HUNDRED_NUM_1			
 Ligurian	Ligurian			HUNDRED_NUM	çento	sˈeŋtu	s ˈe ŋ t u		HUNDRED_NUM_1			
 Piedmontese	Piedmontese			HUNDRED_NUM	sent	sˈɛŋt	s ˈɛ ŋ t		HUNDRED_NUM_1			
 Western Lombard	Western Lombard			HUNDRED_NUM	cent	ʧˈẽt	ʧ ˈẽ t		HUNDRED_NUM_1			
@@ -2766,6 +2834,7 @@ Italian	Italian			WAX_NOUN	cera	ʧˈera	ʧ ˈe r a		WAX_NOUN_1
 Venetian	Venetian			WAX_NOUN	sièra	sjˈɛra	s j ˈɛ r a		WAX_NOUN_1			
 Bellunese	Bellunese			WAX_NOUN	zhéra	θˈera	θ ˈe r a		WAX_NOUN_1			
 Emilian	Emilian			WAX_NOUN	zîra	θˈiːra	θ ˈiː r a		WAX_NOUN_1			
+Romagnol	Romagnol			WAX_NOUN	zira	θˈirɐ	θ ˈi r ɐ		WAX_NOUN_1			
 Ligurian	Ligurian			WAX_NOUN	çéia	sˈeja	s ˈe j a		WAX_NOUN_1			
 Piedmontese	Piedmontese			WAX_NOUN	sira	sˈira	s ˈi r a		WAX_NOUN_1			
 Western Lombard	Western Lombard			WAX_NOUN	cera	ʧˈeːra	ʧ ˈeː r a		WAX_NOUN_1			
@@ -2805,6 +2874,7 @@ Venetian	Venetian			CHERRY_NOUN	sariéxa	sarjˈeza	s a r j ˈe z a		CHERRY_NOUN_
 Venetian	Venetian			CHERRY_NOUN	saréxa	sarˈeza	s a r ˈe z a		CHERRY_NOUN_1			
 Bellunese	Bellunese			CHERRY_NOUN	zharéxa	θˈareza	θ ˈa r e z a		CHERRY_NOUN_1			
 Emilian	Emilian			CHERRY_NOUN	zrîṡa	θrˈiːza	θ r ˈiː z a		CHERRY_NOUN_1			
+Romagnol	Romagnol			CHERRY_NOUN	zrişa	θrˈiza	θ r ˈi z a		CHERRY_NOUN_1			
 Ligurian	Ligurian			CHERRY_NOUN	çêxa	sˈeːʒa	s ˈeː ʒ a		CHERRY_NOUN_1			
 Piedmontese	Piedmontese			CHERRY_NOUN	ceresa	ʧerˈeza	ʧ e r ˈe z a		CHERRY_NOUN_1			
 Piedmontese	Piedmontese			CHERRY_NOUN	seresa	serˈesa	s e r ˈe s a		CHERRY_NOUN_1			
@@ -2839,6 +2909,7 @@ Italian	Italian			ASH_NOUN	cenere	ʧˈenere	ʧ ˈe n e r e		ASH_NOUN_3
 Venetian	Venetian			ASH_NOUN	sénare	sˈenare	s ˈe n a r e		ASH_NOUN_3			
 Bellunese	Bellunese			ASH_NOUN	zhéndre	θˈendre	θ ˈe n d r e		ASH_NOUN_3			
 Emilian	Emilian			ASH_NOUN	zànnder	θˈander	θ ˈa n d e r		ASH_NOUN_3			
+Romagnol	Romagnol			ASH_NOUN	zèndra	θˈɛndrɐ	θ ˈɛ n d r ɐ		ASH_NOUN_3			
 Ligurian	Ligurian			ASH_NOUN	çenie	sˈenje	s ˈe n j e		ASH_NOUN_3			
 Piedmontese	Piedmontese			ASH_NOUN	sinner	sˈinər	s ˈi n ə r		ASH_NOUN_3			
 Western Lombard	Western Lombard			ASH_NOUN	cender	ʧˈẽder	ʧ ˈẽ d e r		ASH_NOUN_3			
@@ -2868,6 +2939,7 @@ Italian	Italian			SEARCH_VERB	cercare	ʧerkˈare	ʧ e r k ˈa r e		SEARCH_VERB_1
 Venetian	Venetian			SEARCH_VERB	sercar	serkˈar	s e r k ˈa r		SEARCH_VERB_1			
 Bellunese	Bellunese			SEARCH_VERB	çercar	θerkˈar	θ e r k ˈa r		SEARCH_VERB_1			
 Emilian	Emilian			SEARCH_VERB	zarchèr	θarkˈɛr	θ a r k ˈɛ r		SEARCH_VERB_1			
+Romagnol	Romagnol			SEARCH_VERB	zarchêr	θɐrkˈeə̯	θ ɐ r k ˈeə̯		SEARCH_VERB_1			
 Ligurian	Ligurian			SEARCH_VERB	çercâ	serkˈaː	s e r k ˈaː		SEARCH_VERB_1			
 Piedmontese	Piedmontese			SEARCH_VERB	serché	serkˈe	s e r k ˈe		SEARCH_VERB_1			
 Western Lombard	Western Lombard			SEARCH_VERB	cercar	ʧerkˈɑːr	ʧ e r k ˈɑː r		SEARCH_VERB_1			
@@ -2904,6 +2976,7 @@ Italian	Italian			CITY_NOUN	città	ʧittˈa	ʧ i t t ˈa		CITY_NOUN_1
 Venetian	Venetian			CITY_NOUN	sità	sitˈa	s i t ˈa		CITY_NOUN_1			
 Bellunese	Bellunese			CITY_NOUN	çità	θitˈa	θ i t ˈa		CITY_NOUN_1			
 Emilian	Emilian			CITY_NOUN	zitè	θitˈɛ	θ i t ˈɛ		CITY_NOUN_1			
+Romagnol	Romagnol			CITY_NOUN	zitê	θitˈeə̯	θ i t ˈeə̯		CITY_NOUN_1			
 Ligurian	Ligurian			CITY_NOUN	çittæ	sitˈɛː	s i t ˈɛː		CITY_NOUN_1			
 Piedmontese	Piedmontese			CITY_NOUN	sità	sitˈa	s i t ˈa		CITY_NOUN_1			
 Western Lombard	Western Lombard			CITY_NOUN	cità	ʧitˈa	ʧ i t ˈa		CITY_NOUN_1			
@@ -2939,6 +3012,7 @@ Italian	Italian			CALL_VERB	chiamare	kjamˈare	k j a m ˈa r e		CALL_VERB_1
 Venetian	Venetian			CALL_VERB	ciamar	ʧamˈar	ʧ a m ˈa r		CALL_VERB_1			
 Bellunese	Bellunese			CALL_VERB	ciamar	ʧamˈar	ʧ a m ˈa r		CALL_VERB_1			
 Emilian	Emilian			CALL_VERB	ciamèr	ʧamˈɛr	ʧ a m ˈɛ r		CALL_VERB_1			
+Romagnol	Romagnol			CALL_VERB	ciamêr	ʧɐmˈeə̯	ʧ ɐ m ˈeə̯		CALL_VERB_1			
 Ligurian	Ligurian			CALL_VERB	ciammâ	ʧamˈaː	ʧ a m ˈaː		CALL_VERB_1			
 Piedmontese	Piedmontese			CALL_VERB	ciamé	ʧamˈe	ʧ a m ˈe		CALL_VERB_1			
 Western Lombard	Western Lombard			CALL_VERB	ciamà	ʧamˈa	ʧ a m ˈa		CALL_VERB_1			
@@ -2977,6 +3051,7 @@ Italian	Italian			KEY_NOUN	chiave	kjˈave	k j ˈa v e		KEY_NOUN_1
 Venetian	Venetian			KEY_NOUN	ciave	ʧˈave	ʧ ˈa v e		KEY_NOUN_1			
 Bellunese	Bellunese			KEY_NOUN	ciave	ʧˈave	ʧ ˈa v e		KEY_NOUN_1			
 Emilian	Emilian			KEY_NOUN	cèv	ʧˈɛv	ʧ ˈɛ v		KEY_NOUN_1			
+Romagnol	Romagnol			KEY_NOUN	cêva	ʧˈeə̯vɐ	ʧ ˈeə̯ v ɐ		KEY_NOUN_1			
 Ligurian	Ligurian			KEY_NOUN	ciâve	ʧˈaːve	ʧ ˈaː v e		KEY_NOUN_1			
 Piedmontese	Piedmontese			KEY_NOUN	ciav	ʧˈav	ʧ ˈa v		KEY_NOUN_1			
 Western Lombard	Western Lombard			KEY_NOUN	ciav	ʧˈɑːf	ʧ ˈɑː f		KEY_NOUN_1			
@@ -3016,6 +3091,7 @@ Italian	Italian			TAIL_NOUN	coda	kˈoda	k ˈo d a		TAIL_NOUN_1
 Venetian	Venetian			TAIL_NOUN	cóa	kˈoa	k ˈo a		TAIL_NOUN_1			
 Bellunese	Bellunese			TAIL_NOUN	cóa	kˈoa	k ˈo a		TAIL_NOUN_1			
 Emilian	Emilian			TAIL_NOUN	cô	kˈɔː	k ˈɔː		TAIL_NOUN_1			
+Romagnol	Romagnol			TAIL_NOUN	coda	kˈɔdɐ	k ˈɔ d ɐ		TAIL_NOUN_1			
 Ligurian	Ligurian			TAIL_NOUN	côa	kˈuːa	k ˈuː a		TAIL_NOUN_1			
 Piedmontese	Piedmontese			TAIL_NOUN	coa	kˈua	k ˈu a		TAIL_NOUN_1			
 Western Lombard	Western Lombard			TAIL_NOUN	coa	kˈuːa	k ˈuː a		TAIL_NOUN_1			
@@ -3049,6 +3125,7 @@ Italian	Italian			BE ACQUAINTED WITH_VERB	conoscere	konˈoʃʃere	k o n ˈo ʃ �
 Venetian	Venetian			BE ACQUAINTED WITH_VERB	conóser	konˈoser	k o n ˈo s e r		BE ACQUAINTED WITH_VERB_1			
 Bellunese	Bellunese			BE ACQUAINTED WITH_VERB	conóser	konˈoser	k o n ˈo s e r		BE ACQUAINTED WITH_VERB_1			
 Emilian	Emilian			BE ACQUAINTED WITH_VERB	cgnósser	kɲˈoser	k ɲ ˈo s e r		BE ACQUAINTED WITH_VERB_1			
+Romagnol	Romagnol			BE ACQUAINTED WITH_VERB	cnóşar	knˈozɐr	k n ˈo z ɐ r		BE ACQUAINTED WITH_VERB_1			
 Piedmontese	Piedmontese			BE ACQUAINTED WITH_VERB	cognòsse	kuɲˈɔse	k u ɲ ˈɔ s e		BE ACQUAINTED WITH_VERB_1			
 Eastern Lombard	Eastern Lombard			BE ACQUAINTED WITH_VERB	cognòss	koɲˈɔs	k o ɲ ˈɔ s		BE ACQUAINTED WITH_VERB_1			
 Friulian	Friulian			BE ACQUAINTED WITH_VERB	cognossi	koɲˈosi	k o ɲ ˈo s i		BE ACQUAINTED WITH_VERB_1			
@@ -3067,6 +3144,7 @@ Italian	Italian			NECK_NOUN	collo	kˈɔllo	k ˈɔ l l o		NECK_NOUN_1
 Venetian	Venetian			NECK_NOUN	còło	kˈɔɰo	k ˈɔ ɰ o		NECK_NOUN_1			
 Bellunese	Bellunese			NECK_NOUN	còl	kˈɔl	k ˈɔ l		NECK_NOUN_1			
 Emilian	Emilian			NECK_NOUN	còl	kˈɔl	k ˈɔ l		NECK_NOUN_1			
+Romagnol	Romagnol			NECK_NOUN	còl	kˈɔl	k ˈɔ l		NECK_NOUN_1			
 Ligurian	Ligurian			NECK_NOUN	còllo	kˈɔlu	k ˈɔ l u		NECK_NOUN_1			
 Piedmontese	Piedmontese			NECK_NOUN	col	kˈɔl	k ˈɔ l		NECK_NOUN_1			
 Western Lombard	Western Lombard			NECK_NOUN	coll	kˈɔl	k ˈɔ l		NECK_NOUN_1			
@@ -3103,6 +3181,7 @@ Italian	Italian			COLOR_NOUN	colore	kolˈore	k o l ˈo r e		COLOR_NOUN_1
 Venetian	Venetian			COLOR_NOUN	coƚór	koɰˈor	k o ɰ ˈo r		COLOR_NOUN_1			
 Bellunese	Bellunese			COLOR_NOUN	colór	kolˈor	k o l ˈo r		COLOR_NOUN_1			
 Emilian	Emilian			COLOR_NOUN	culåur	kulˈʌu̯r	k u l ˈʌu̯ r		COLOR_NOUN_1			
+Romagnol	Romagnol			COLOR_NOUN	culôr	kulˈou̯r	k u l ˈou̯ r		COLOR_NOUN_1			
 Ligurian	Ligurian			COLOR_NOUN	cô	kˈuː	k ˈuː		COLOR_NOUN_1			
 Piedmontese	Piedmontese			COLOR_NOUN	color	kulˈɔr	k u l ˈɔ r		COLOR_NOUN_1			
 Western Lombard	Western Lombard			COLOR_NOUN	culur	kylˈyːr	k y l ˈyː r		COLOR_NOUN_1			
@@ -3163,6 +3242,7 @@ Italian	Italian			HEART_NOUN	cuore	kwˈɔre	k w ˈɔ r e		HEART_NOUN_1
 Venetian	Venetian			HEART_NOUN	cuòr	kwˈɔr	k w ˈɔ r		HEART_NOUN_1			
 Bellunese	Bellunese			HEART_NOUN	cór	kˈor	k ˈo r		HEART_NOUN_1			
 Emilian	Emilian			HEART_NOUN	côr	kˈɔːr	k ˈɔː r		HEART_NOUN_1			
+Romagnol	Romagnol			HEART_NOUN	cör	kˈɔə̯r	k ˈɔə̯ r		HEART_NOUN_1			
 Ligurian	Ligurian			HEART_NOUN	cheu	kˈøː	k ˈøː		HEART_NOUN_1			
 Piedmontese	Piedmontese			HEART_NOUN	cheur	kˈør	k ˈø r		HEART_NOUN_1			
 Western Lombard	Western Lombard			HEART_NOUN	cœr	kˈøːr	k ˈøː r		HEART_NOUN_1			
@@ -3201,6 +3281,7 @@ Italian	Italian			HORN_NOUN	corno	kˈɔrno	k ˈɔ r n o		HORN_NOUN_2
 Venetian	Venetian			HORN_NOUN	còrno	kˈɔrno	k ˈɔ r n o		HORN_NOUN_2			
 Bellunese	Bellunese			HORN_NOUN	còrno	kˈɔrno	k ˈɔ r n o		HORN_NOUN_2			
 Emilian	Emilian			HORN_NOUN	côren	kˈɔːren	k ˈɔː r e n		HORN_NOUN_2			
+Romagnol	Romagnol			HORN_NOUN	cöran	kˈɔə̯rɐn	k ˈɔə̯ r ɐ n		HORN_NOUN_2			
 Ligurian	Ligurian			HORN_NOUN	còrno	kˈɔːrnu	k ˈɔː r n u		HORN_NOUN_2			
 Piedmontese	Piedmontese			HORN_NOUN	corn	kˈɔrn	k ˈɔ r n		HORN_NOUN_2			
 Eastern Lombard	Eastern Lombard			HORN_NOUN	córen	kˈoren	k ˈo r e n		HORN_NOUN_2			
@@ -3228,6 +3309,7 @@ Corsican	Corsican			BODY_NOUN	corpu	kˈɔrpu	k ˈɔ r p u		BODY_NOUN_1
 Italian	Italian			BODY_NOUN	corpo	kˈɔrpo	k ˈɔ r p o		BODY_NOUN_1			
 Venetian	Venetian			BODY_NOUN	corpo	kˈɔrpo	k ˈɔ r p o		BODY_NOUN_1			
 Emilian	Emilian			BODY_NOUN	côrp	kˈɔːrp	k ˈɔː r p		BODY_NOUN_1			
+Romagnol	Romagnol			BODY_NOUN	cörp	kˈɔə̯rp	k ˈɔə̯ r p		BODY_NOUN_1			
 Ligurian	Ligurian			BODY_NOUN	còrpo	kˈɔːrpu	k ˈɔː r p u		BODY_NOUN_1			
 Piedmontese	Piedmontese			BODY_NOUN	còrp	kˈɔrp	k ˈɔ r p		BODY_NOUN_1			
 Western Lombard	Western Lombard			BODY_NOUN	corp	kˈɔrp	k ˈɔ r p		BODY_NOUN_1			
@@ -3275,6 +3357,7 @@ Corsican	Corsican			COAST_NOUN	costa	kˈɔsta	k ˈɔ s t a		COAST_NOUN_1
 Italian	Italian			COAST_NOUN	costa	kˈɔsta	k ˈɔ s t a		COAST_NOUN_1			
 Venetian	Venetian			COAST_NOUN	còsta	kˈɔsta	k ˈɔ s t a		COAST_NOUN_1			
 Emilian	Emilian			COAST_NOUN	còsta	kˈɔsta	k ˈɔ s t a		COAST_NOUN_1			
+Romagnol	Romagnol			COAST_NOUN	cósta	kˈostɐ	k ˈo s t ɐ		COAST_NOUN_1			
 Ligurian	Ligurian			COAST_NOUN	còsta	kˈɔsta	k ˈɔ s t a		COAST_NOUN_1			
 Piedmontese	Piedmontese			COAST_NOUN	còsta	kˈɔsta	k ˈɔ s t a		COAST_NOUN_1			
 Western Lombard	Western Lombard			COAST_NOUN	costa	kˈɔsta	k ˈɔ s t a		COAST_NOUN_1			
@@ -3308,6 +3391,7 @@ Neapolitan	Neapolitan			THIGH_NOUN	coscia	kˈɔʃʃə	k ˈɔ ʃ ʃ ə		THIGH_NOU
 Corsican	Corsican			THIGH_NOUN	coscia	kˈɔʃa	k ˈɔ ʃ a		THIGH_NOUN_1			
 Italian	Italian			THIGH_NOUN	coscia	kˈɔʃʃa	k ˈɔ ʃ ʃ a		THIGH_NOUN_1			
 Venetian	Venetian			THIGH_NOUN	còsa	kˈɔza	k ˈɔ z a		THIGH_NOUN_1			
+Romagnol	Romagnol			THIGH_NOUN	còsa	kˈɔsɐ	k ˈɔ s ɐ		THIGH_NOUN_1			
 Ligurian	Ligurian			THIGH_NOUN	chéuscia	kˈøʃa	k ˈø ʃ a		THIGH_NOUN_1			
 Piedmontese	Piedmontese			THIGH_NOUN	cheussa	kˈøsa	k ˈø s a		THIGH_NOUN_1			
 Eastern Lombard	Eastern Lombard			THIGH_NOUN	còssa	kˈɔsa	k ˈɔ s a		THIGH_NOUN_1			
@@ -3335,6 +3419,7 @@ Italian	Italian			FAT_NOUN	grasso	ɡrˈasso	ɡ r ˈa s s o		FAT_NOUN_2
 Venetian	Venetian			FAT_NOUN	gràsso	ɡrˈaso	ɡ r ˈa s o		FAT_NOUN_2			
 Bellunese	Bellunese			FAT_NOUN	gras	ɡrˈas	ɡ r ˈa s		FAT_NOUN_2			
 Emilian	Emilian			FAT_NOUN	grâs	ɡrˈaːs	ɡ r ˈaː s		FAT_NOUN_2			
+Romagnol	Romagnol			FAT_NOUN	gras	ɡrˈas	ɡ r ˈa s		FAT_NOUN_2			
 Ligurian	Ligurian			FAT_NOUN	grasso	ɡrˈasu	ɡ r ˈa s u		FAT_NOUN_2			
 Piedmontese	Piedmontese			FAT_NOUN	grass	ɡrˈas	ɡ r ˈa s		FAT_NOUN_2			
 Western Lombard	Western Lombard			FAT_NOUN	grass	ɡrˈas	ɡ r ˈa s		FAT_NOUN_2			
@@ -3356,6 +3441,7 @@ Italian	Italian			BELIEVE_VERB	credere	krˈedere	k r ˈe d e r e		BELIEVE_VERB_1
 Venetian	Venetian			BELIEVE_VERB	créder	krˈeder	k r ˈe d e r		BELIEVE_VERB_1			
 Bellunese	Bellunese			BELIEVE_VERB	créder	krˈeder	k r ˈe d e r		BELIEVE_VERB_1			
 Emilian	Emilian			BELIEVE_VERB	cràdder	krˈader	k r ˈa d e r		BELIEVE_VERB_1			
+Romagnol	Romagnol			BELIEVE_VERB	crēdar	krˈeːdɐr	k r ˈeː d ɐ r		BELIEVE_VERB_1			
 Ligurian	Ligurian			BELIEVE_VERB	credde	krˈede	k r ˈe d e		BELIEVE_VERB_1			
 Piedmontese	Piedmontese			BELIEVE_VERB	chërde	kərdˈe	k ə r d ˈe		BELIEVE_VERB_1			
 Western Lombard	Western Lombard			BELIEVE_VERB	crede	krˈeːde	k r ˈeː d e		BELIEVE_VERB_1			
@@ -3403,6 +3489,7 @@ Venetian	Venetian			CROSS_NOUN	cróxe	krˈoze	k r ˈo z e		CROSS_NOUN_1
 Bellunese	Bellunese			CROSS_NOUN	cróxe	krˈoze	k r ˈo z e		CROSS_NOUN_1			
 Bellunese	Bellunese			CROSS_NOUN	crós	krˈos	k r ˈo s		CROSS_NOUN_1			
 Emilian	Emilian			CROSS_NOUN	cråuṡ	krˈʌu̯z	k r ˈʌu̯ z		CROSS_NOUN_1			
+Romagnol	Romagnol			CROSS_NOUN	crôş	krˈou̯z	k r ˈou̯ z		CROSS_NOUN_1			
 Ligurian	Ligurian			CROSS_NOUN	crôxe	krˈuːʒe	k r ˈuː ʒ e		CROSS_NOUN_1			
 Piedmontese	Piedmontese			CROSS_NOUN	cros	krˈuz	k r ˈu z		CROSS_NOUN_1			
 Western Lombard	Western Lombard			CROSS_NOUN	cros	krˈuːs	k r ˈuː s		CROSS_NOUN_1			
@@ -3441,6 +3528,7 @@ Italian	Italian			BUTTOCKS_NOUN	culo	kˈulo	k ˈu l o		BUTTOCKS_NOUN_1
 Venetian	Venetian			BUTTOCKS_NOUN	cuło	kˈuɰo	k ˈu ɰ o		BUTTOCKS_NOUN_1			
 Bellunese	Bellunese			BUTTOCKS_NOUN	cul	kˈul	k ˈu l		BUTTOCKS_NOUN_1			
 Emilian	Emilian			BUTTOCKS_NOUN	cûl	kˈuːl	k ˈuː l		BUTTOCKS_NOUN_1			
+Romagnol	Romagnol			BUTTOCKS_NOUN	cul	kˈul	k ˈu l		BUTTOCKS_NOUN_1			
 Ligurian	Ligurian			BUTTOCKS_NOUN	cû	kˈyː	k ˈyː		BUTTOCKS_NOUN_1			
 Piedmontese	Piedmontese			BUTTOCKS_NOUN	cul	kˈyl	k ˈy l		BUTTOCKS_NOUN_1			
 Western Lombard	Western Lombard			BUTTOCKS_NOUN	cul	kˈyːl	k ˈyː l		BUTTOCKS_NOUN_1			
@@ -3498,6 +3586,7 @@ Italian	Italian			SHORT_ADJ	corto	kˈorto	k ˈo r t o		SHORT_ADJ_1
 Venetian	Venetian			SHORT_ADJ	cùrto	kˈurto	k ˈu r t o		SHORT_ADJ_1			
 Bellunese	Bellunese			SHORT_ADJ	curt	kˈurt	k ˈu r t		SHORT_ADJ_1			
 Emilian	Emilian			SHORT_ADJ	cûrt	kˈuːrt	k ˈuː r t		SHORT_ADJ_1			
+Romagnol	Romagnol			SHORT_ADJ	curt	kˈurt	k ˈu r t		SHORT_ADJ_1			
 Ligurian	Ligurian			SHORT_ADJ	curto	kˈyːrtu	k ˈyː r t u		SHORT_ADJ_1			
 Piedmontese	Piedmontese			SHORT_ADJ	curt	kˈyrt	k ˈy r t		SHORT_ADJ_1			
 Western Lombard	Western Lombard			SHORT_ADJ	curt	kˈyrt	k ˈy r t		SHORT_ADJ_1			
@@ -3533,6 +3622,7 @@ Corsican	Corsican			SUMMIT_NOUN	cima	ʧˈima	ʧ ˈi m a		SUMMIT_NOUN_1
 Italian	Italian			SUMMIT_NOUN	cima	ʧˈima	ʧ ˈi m a		SUMMIT_NOUN_1			
 Venetian	Venetian			SUMMIT_NOUN	çima	sˈima	s ˈi m a		SUMMIT_NOUN_1			
 Bellunese	Bellunese			SUMMIT_NOUN	zhima	θˈima	θ ˈi m a		SUMMIT_NOUN_1			
+Romagnol	Romagnol			SUMMIT_NOUN	zima	θˈimɐ	θ ˈi m ɐ		SUMMIT_NOUN_1			
 Ligurian	Ligurian			SUMMIT_NOUN	çimma	sˈima	s ˈi m a		SUMMIT_NOUN_1			
 Piedmontese	Piedmontese			SUMMIT_NOUN	cò	kˈɔ	k ˈɔ		SUMMIT_NOUN_1			
 Eastern Lombard	Eastern Lombard			SUMMIT_NOUN	sima	sˈima	s ˈi m a		SUMMIT_NOUN_1			
@@ -3564,6 +3654,7 @@ Italian	Italian			GIVE_VERB	dare	dˈare	d ˈa r e		GIVE_VERB_1
 Venetian	Venetian			GIVE_VERB	dar	dˈar	d ˈa r		GIVE_VERB_1			
 Bellunese	Bellunese			GIVE_VERB	dar	dˈar	d ˈa r		GIVE_VERB_1			
 Emilian	Emilian			GIVE_VERB	dèr	dˈɛr	d ˈɛ r		GIVE_VERB_1			
+Romagnol	Romagnol			GIVE_VERB	dêr	dˈeə̯	d ˈeə̯		GIVE_VERB_1			
 Ligurian	Ligurian			GIVE_VERB	dâ	dˈaː	d ˈaː		GIVE_VERB_1			
 Piedmontese	Piedmontese			GIVE_VERB	dé	dˈe	d ˈe		GIVE_VERB_1			
 Western Lombard	Western Lombard			GIVE_VERB	daa	dˈɑː	d ˈɑː		GIVE_VERB_1			
@@ -3597,6 +3688,7 @@ Venetian	Venetian			TEN_NUM	diéxe	djˈeze	d j ˈe z e		TEN_NUM_1
 Bellunese	Bellunese			TEN_NUM	diéxe	djˈeze	d j ˈe z e		TEN_NUM_1			
 Bellunese	Bellunese			TEN_NUM	diés	djˈes	d j ˈe s		TEN_NUM_1			
 Emilian	Emilian			TEN_NUM	dîṡ	dˈiːz	d ˈiː z		TEN_NUM_1			
+Romagnol	Romagnol			TEN_NUM	diş	dˈiz	d ˈi z		TEN_NUM_1			
 Ligurian	Ligurian			TEN_NUM	dêxe	dˈeːʒe	d ˈeː ʒ e		TEN_NUM_1			
 Piedmontese	Piedmontese			TEN_NUM	des	dˈez	d ˈe z		TEN_NUM_1			
 Western Lombard	Western Lombard			TEN_NUM	des	dˈeːs	d ˈeː s		TEN_NUM_1			
@@ -3638,6 +3730,7 @@ Italian	Italian			TOOTH_NOUN	dente	dˈɛnte	d ˈɛ n t e		TOOTH_NOUN_1
 Venetian	Venetian			TOOTH_NOUN	dénte	dˈeŋte	d ˈe ŋ t e		TOOTH_NOUN_1			
 Bellunese	Bellunese			TOOTH_NOUN	dént	dˈeŋt	d ˈe ŋ t		TOOTH_NOUN_1			
 Emilian	Emilian			TOOTH_NOUN	dänt	dˈæŋt	d ˈæ ŋ t		TOOTH_NOUN_1			
+Romagnol	Romagnol			TOOTH_NOUN	dént	dˈẽnt	d ˈẽ n t		TOOTH_NOUN_1			
 Ligurian	Ligurian			TOOTH_NOUN	dénte	dˈeŋte	d ˈe ŋ t e		TOOTH_NOUN_1			
 Piedmontese	Piedmontese			TOOTH_NOUN	dent	dˈɛŋt	d ˈɛ ŋ t		TOOTH_NOUN_1			
 Western Lombard	Western Lombard			TOOTH_NOUN	dent	dˈẽt	d ˈẽ t		TOOTH_NOUN_1			
@@ -3675,6 +3768,7 @@ Italian	Italian			GOD_NOUN	dio	dˈio	d ˈi o		GOD_NOUN_1
 Venetian	Venetian			GOD_NOUN	dio	dˈio	d ˈi o		GOD_NOUN_1			
 Bellunese	Bellunese			GOD_NOUN	dio	dˈio	d ˈi o		GOD_NOUN_1			
 Emilian	Emilian			GOD_NOUN	dio	dˈio	d ˈi o		GOD_NOUN_1			
+Romagnol	Romagnol			GOD_NOUN	dio	dˈio	d ˈi o		GOD_NOUN_1			
 Ligurian	Ligurian			GOD_NOUN	dîo	dˈiːu	d ˈiː u		GOD_NOUN_1			
 Piedmontese	Piedmontese			GOD_NOUN	dio	dˈiw	d ˈi w		GOD_NOUN_1			
 Western Lombard	Western Lombard			GOD_NOUN	dé	dˈe	d ˈe		GOD_NOUN_1			
@@ -3716,6 +3810,7 @@ Aromanian	Aromanian			SAY-1SG_VERB	dzãc	ʣˈək	ʣ ˈə k		SAY-1SG_VERB_1
 Dalmatian	Dalmatian			SAY-1SG_VERB	dico	dˈiko	d ˈi k o		SAY-1SG_VERB_1			
 Italian	Italian			SAY-1SG_VERB	dico	dˈiko	d ˈi k o		SAY-1SG_VERB_1			
 Venetian	Venetian			SAY-1SG_VERB	do	dˈo	d ˈo		SAY-1SG_VERB_1			
+Romagnol	Romagnol			SAY-1SG_VERB	deg	dˈɛɡ	d ˈɛ ɡ		SAY-1SG_VERB_1			
 Ligurian	Ligurian			SAY-1SG_VERB	diggo	dˈiɡu	d ˈi ɡ u		SAY-1SG_VERB_1			
 Friulian	Friulian			SAY-1SG_VERB	dîs	dˈiːs	d ˈiː s		SAY-1SG_VERB_1			
 Romansch	Romansch			SAY-1SG_VERB	di	dˈiː	d ˈiː		SAY-1SG_VERB_1			
@@ -3744,6 +3839,7 @@ Italian	Italian			DAY_NOUN	dì	dˈi	d ˈi		DAY_NOUN_2
 Venetian	Venetian			DAY_NOUN	dì	dˈi	d ˈi		DAY_NOUN_2			
 Bellunese	Bellunese			DAY_NOUN	dì	dˈi	d ˈi		DAY_NOUN_2			
 Emilian	Emilian			DAY_NOUN	dé	dˈe	d ˈe		DAY_NOUN_2			
+Romagnol	Romagnol			DAY_NOUN	dè	dˈɛ	d ˈɛ		DAY_NOUN_2			
 Piedmontese	Piedmontese			DAY_NOUN	di	dˈi	d ˈi		DAY_NOUN_2			
 Western Lombard	Western Lombard			DAY_NOUN	dì	dˈi	d ˈi		DAY_NOUN_2			
 Eastern Lombard	Eastern Lombard			DAY_NOUN	dé	dˈe	d ˈe		DAY_NOUN_2			
@@ -3765,6 +3861,7 @@ Italian	Italian			FINGER_NOUN	dito	dˈito	d ˈi t o		FINGER_NOUN_1
 Venetian	Venetian			FINGER_NOUN	déo	dˈeo	d ˈe o		FINGER_NOUN_1			
 Bellunese	Bellunese			FINGER_NOUN	déo	dˈeo	d ˈe o		FINGER_NOUN_1			
 Emilian	Emilian			FINGER_NOUN	dîd	dˈiːd	d ˈiː d		FINGER_NOUN_1			
+Romagnol	Romagnol			FINGER_NOUN	did	dˈid	d ˈi d		FINGER_NOUN_1			
 Ligurian	Ligurian			FINGER_NOUN	dîo	dˈiːu	d ˈiː u		FINGER_NOUN_1			
 Piedmontese	Piedmontese			FINGER_NOUN	dil	dˈil	d ˈi l		FINGER_NOUN_1			
 Western Lombard	Western Lombard			FINGER_NOUN	did	dˈiːt	d ˈiː t		FINGER_NOUN_1			
@@ -3796,6 +3893,7 @@ Italian	Italian			SAY-INF_VERB	dire	dˈire	d ˈi r e		SAY-INF_VERB_2
 Venetian	Venetian			SAY-INF_VERB	dìr	dˈir	d ˈi r		SAY-INF_VERB_2			
 Bellunese	Bellunese			SAY-INF_VERB	dìr	dˈir	d ˈi r		SAY-INF_VERB_2			
 Emilian	Emilian			SAY-INF_VERB	dîr	dˈiːr	d ˈiː r		SAY-INF_VERB_2			
+Romagnol	Romagnol			SAY-INF_VERB	dir	dˈi	d ˈi		SAY-INF_VERB_2			
 Ligurian	Ligurian			SAY-INF_VERB	dî	dˈiː	d ˈiː		SAY-INF_VERB_2			
 Piedmontese	Piedmontese			SAY-INF_VERB	dì	dˈi	d ˈi		SAY-INF_VERB_2			
 Western Lombard	Western Lombard			SAY-INF_VERB	dì	dˈi	d ˈi		SAY-INF_VERB_2			
@@ -3842,6 +3940,7 @@ Corsican	Corsican			LADY_NOUN	donna	dˈɔnna	d ˈɔ n n a		LADY_NOUN_1
 Italian	Italian			LADY_NOUN	donna	dˈɔnna	d ˈɔ n n a		LADY_NOUN_1			
 Venetian	Venetian			LADY_NOUN	dòna	dˈɔna	d ˈɔ n a		LADY_NOUN_1			
 Emilian	Emilian			LADY_NOUN	dòna	dˈɔna	d ˈɔ n a		LADY_NOUN_1			
+Romagnol	Romagnol			LADY_NOUN	dóna	dˈonɐ	d ˈo n ɐ		LADY_NOUN_1			
 Ligurian	Ligurian			LADY_NOUN	dònna	dˈɔna	d ˈɔ n a		LADY_NOUN_1			
 Piedmontese	Piedmontese			LADY_NOUN	dòna	dˈɔna	d ˈɔ n a		LADY_NOUN_1			
 Western Lombard	Western Lombard			LADY_NOUN	dona	dˈona	d ˈo n a		LADY_NOUN_1			
@@ -3882,6 +3981,7 @@ Sicilian	Sicilian			GIFT_NOUN	donu	dˈonʊ	d ˈo n ʊ		GIFT_NOUN_1
 Neapolitan	Neapolitan			GIFT_NOUN	dono	dˈonə	d ˈo n ə		GIFT_NOUN_1			
 Corsican	Corsican			GIFT_NOUN	donu	dˈɔnu	d ˈɔ n u		GIFT_NOUN_1			
 Italian	Italian			GIFT_NOUN	dono	dˈono	d ˈo n o		GIFT_NOUN_1			
+Romagnol	Romagnol			GIFT_NOUN	dôn	dˈõũ̯	d ˈõũ̯		GIFT_NOUN_1			
 Ligurian	Ligurian			GIFT_NOUN	dón	dˈuŋ	d ˈu ŋ		GIFT_NOUN_1			
 Piedmontese	Piedmontese			GIFT_NOUN	don	dˈuŋ	d ˈu ŋ		GIFT_NOUN_1			
 Old French	Old French			GIFT_NOUN	don	dˈũn	d ˈũ n		GIFT_NOUN_1			
@@ -3910,6 +4010,7 @@ Italian	Italian			SLEEP_VERB	dormire	dormˈire	d o r m ˈi r e		SLEEP_VERB_1
 Venetian	Venetian			SLEEP_VERB	dormìr	dormˈir	d o r m ˈi r		SLEEP_VERB_1			
 Bellunese	Bellunese			SLEEP_VERB	dormìr	dormˈir	d o r m ˈi r		SLEEP_VERB_1			
 Emilian	Emilian			SLEEP_VERB	durmîr	durmˈiːr	d u r m ˈiː r		SLEEP_VERB_1			
+Romagnol	Romagnol			SLEEP_VERB	durmir	durmˈi	d u r m ˈi		SLEEP_VERB_1			
 Ligurian	Ligurian			SLEEP_VERB	dormî	durmˈiː	d u r m ˈiː		SLEEP_VERB_1			
 Piedmontese	Piedmontese			SLEEP_VERB	deurme	dˈørme	d ˈø r m e		SLEEP_VERB_1			
 Western Lombard	Western Lombard			SLEEP_VERB	durmì	dyrmˈi	d y r m ˈi		SLEEP_VERB_1			
@@ -3990,6 +4091,7 @@ Neapolitan	Neapolitan			TWO (F)_NUM	duje	dˈujə	d ˈu j ə		TWO (F)_NUM_1
 Corsican	Corsican			TWO (F)_NUM	dui	dˈuj	d ˈu j		TWO (F)_NUM_1			
 Italian	Italian			TWO (F)_NUM	due	dˈue	d ˈu e		TWO (F)_NUM_1			
 Emilian	Emilian			TWO (F)_NUM	dåu	dˈʌu̯	d ˈʌu̯		TWO (F)_NUM_1			
+Romagnol	Romagnol			TWO (F)_NUM	dó	dˈo	d ˈo		TWO (F)_NUM_1			
 Ligurian	Ligurian			TWO (F)_NUM	doe	dˈuːe	d ˈuː e		TWO (F)_NUM_1			
 Piedmontese	Piedmontese			TWO (F)_NUM	doe	dˈue	d ˈu e		TWO (F)_NUM_1			
 Western Lombard	Western Lombard			TWO (F)_NUM	do	dˈu	d ˈu		TWO (F)_NUM_1			
@@ -4030,6 +4132,7 @@ Italian	Italian			SWEET_ADJ	dolce	dˈolʧe	d ˈo l ʧ e		SWEET_ADJ_1
 Venetian	Venetian			SWEET_ADJ	dólçe	dˈolse	d ˈo l s e		SWEET_ADJ_1			
 Bellunese	Bellunese			SWEET_ADJ	dólzh	dˈolθ	d ˈo l θ		SWEET_ADJ_1			
 Emilian	Emilian			SWEET_ADJ	dåulz	dˈʌu̯lθ	d ˈʌu̯ l θ		SWEET_ADJ_1			
+Romagnol	Romagnol			SWEET_ADJ	dôlz	dˈou̯lθ	d ˈou̯ l θ		SWEET_ADJ_1			
 Ligurian	Ligurian			SWEET_ADJ	dôçe	dˈuːse	d ˈuː s e		SWEET_ADJ_1			
 Piedmontese	Piedmontese			SWEET_ADJ	doss	dˈus	d ˈu s		SWEET_ADJ_1			
 Western Lombard	Western Lombard			SWEET_ADJ	dolz	dˈuls	d ˈu l s		SWEET_ADJ_1			
@@ -4102,6 +4205,7 @@ Venetian	Venetian			TWO (M)_NUM	dó	dˈoj	d ˈo j		TWO (M)_NUM_1
 Bellunese	Bellunese			TWO (M)_NUM	dói	dˈo	d ˈo		TWO (M)_NUM_1			
 Bellunese	Bellunese			TWO (M)_NUM	dó	dˈoj	d ˈo j		TWO (M)_NUM_1			
 Emilian	Emilian			TWO (M)_NUM	dû	dˈuː	d ˈuː		TWO (M)_NUM_1			
+Romagnol	Romagnol			TWO (M)_NUM	du	dˈu	d ˈu		TWO (M)_NUM_1			
 Ligurian	Ligurian			TWO (M)_NUM	doî	dwˈiː	d w ˈiː		TWO (M)_NUM_1			
 Piedmontese	Piedmontese			TWO (M)_NUM	doi	dˈuj	d ˈu j		TWO (M)_NUM_1			
 Ladin	Ladin			TWO (M)_NUM	doi	dˈoj	d ˈo j		TWO (M)_NUM_1			
@@ -4157,6 +4261,7 @@ Latin	Latin			DO-1SG_VERB	faciō	fˈakioː	f ˈa k i oː		DO-1SG_VERB_1
 Romanian	Romanian			DO-1SG_VERB	fac	fˈak	f ˈa k		DO-1SG_VERB_1			
 Aromanian	Aromanian			DO-1SG_VERB	fac	fˈak	f ˈa k		DO-1SG_VERB_1			
 Italian	Italian			DO-1SG_VERB	faccio	fˈaʧʧo	f ˈa ʧ ʧ o		DO-1SG_VERB_1			
+Romagnol	Romagnol			DO-1SG_VERB	faẓ	fˈað	f ˈa ð		DO-1SG_VERB_1			
 Ligurian	Ligurian			DO-1SG_VERB	fasso	fˈasu	f ˈa s u		DO-1SG_VERB_1			
 Western Lombard	Western Lombard			DO-1SG_VERB	fi	fˈi	f ˈi		DO-1SG_VERB_1			
 Eastern Lombard	Eastern Lombard			DO-1SG_VERB	fe	fˈe	f ˈe		DO-1SG_VERB_1			
@@ -4188,6 +4293,7 @@ Sicilian	Sicilian			FALSE_ADJ	farsu	fˈarsʊ	f ˈa r s ʊ		FALSE_ADJ_1
 Corsican	Corsican			FALSE_ADJ	falzu	fˈalʦu	f ˈa l ʦ u		FALSE_ADJ_1			
 Italian	Italian			FALSE_ADJ	falso	fˈalso	f ˈa l s o		FALSE_ADJ_1			
 Emilian	Emilian			FALSE_ADJ	fèls	fˈɛls	f ˈɛ l s		FALSE_ADJ_1			
+Romagnol	Romagnol			FALSE_ADJ	fêls	fˈeə̯ls	f ˈeə̯ l s		FALSE_ADJ_1			
 Ligurian	Ligurian			FALSE_ADJ	fâso	fˈaːsu	f ˈaː s u		FALSE_ADJ_1			
 Piedmontese	Piedmontese			FALSE_ADJ	fàuss	fˈaws	f ˈa w s		FALSE_ADJ_1			
 Western Lombard	Western Lombard			FALSE_ADJ	fals	fˈals	f ˈa l s		FALSE_ADJ_1			
@@ -4223,6 +4329,7 @@ Corsican	Corsican			HUNGER_NOUN	fame	fˈame	f ˈa m e		HUNGER_NOUN_1
 Italian	Italian			HUNGER_NOUN	fame	fˈame	f ˈa m e		HUNGER_NOUN_1			
 Venetian	Venetian			HUNGER_NOUN	fan	fˈaŋ	f ˈa ŋ		HUNGER_NOUN_1			
 Emilian	Emilian			HUNGER_NOUN	fâm	fˈaːm	f ˈaː m		HUNGER_NOUN_1			
+Romagnol	Romagnol			HUNGER_NOUN	fâ'	fˈʌ̃	f ˈʌ̃		HUNGER_NOUN_1			
 Ligurian	Ligurian			HUNGER_NOUN	fàmme	fˈame	f ˈa m e		HUNGER_NOUN_1			
 Piedmontese	Piedmontese			HUNGER_NOUN	fam	fˈam	f ˈa m		HUNGER_NOUN_1			
 Western Lombard	Western Lombard			HUNGER_NOUN	fam	fˈã	f ˈã		HUNGER_NOUN_1			
@@ -4259,6 +4366,7 @@ Italian	Italian			DO_VERB	fare	fˈare	f ˈa r e		DO_VERB_2
 Venetian	Venetian			DO_VERB	far	fˈar	f ˈa r		DO_VERB_2			
 Bellunese	Bellunese			DO_VERB	far	fˈar	f ˈa r		DO_VERB_2			
 Emilian	Emilian			DO_VERB	fèr	fˈɛr	f ˈɛ r		DO_VERB_2			
+Romagnol	Romagnol			DO_VERB	fêr	fˈeə̯	f ˈeə̯		DO_VERB_2			
 Ligurian	Ligurian			DO_VERB	fâ	fˈaː	f ˈaː		DO_VERB_2			
 Piedmontese	Piedmontese			DO_VERB	fé	fˈe	f ˈe		DO_VERB_2			
 Western Lombard	Western Lombard			DO_VERB	fà	fˈa	f ˈa		DO_VERB_2			
@@ -4292,6 +4400,7 @@ Italian	Italian			FLOUR_NOUN	farina	farˈina	f a r ˈi n a		FLOUR_NOUN_1
 Venetian	Venetian			FLOUR_NOUN	farina	farˈina	f a r ˈi n a		FLOUR_NOUN_1			
 Bellunese	Bellunese			FLOUR_NOUN	farìna	farˈina	f a r ˈi n a		FLOUR_NOUN_1			
 Emilian	Emilian			FLOUR_NOUN	faréṅna	farˈeŋna	f a r ˈe ŋ n a		FLOUR_NOUN_1			
+Romagnol	Romagnol			FLOUR_NOUN	faréna	fɐrˈẽnɐ	f ɐ r ˈẽ n ɐ		FLOUR_NOUN_1			
 Ligurian	Ligurian			FLOUR_NOUN	fæña	fˈɛŋa	f ˈɛ ŋ a		FLOUR_NOUN_1			
 Piedmontese	Piedmontese			FLOUR_NOUN	farin-a	farˈiŋa	f a r ˈi ŋ a		FLOUR_NOUN_1			
 Western Lombard	Western Lombard			FLOUR_NOUN	farina	farˈiːna	f a r ˈiː n a		FLOUR_NOUN_1			
@@ -4355,6 +4464,7 @@ Corsican	Corsican			WOMAN_FEMALE_NOUN	femina	fˈɛmina	f ˈɛ m i n a		WOMAN_FEM
 Italian	Italian			WOMAN_FEMALE_NOUN	femmina	fˈemmina	f ˈe m m i n a		WOMAN_FEMALE_NOUN_1			
 Venetian	Venetian			WOMAN_FEMALE_NOUN	fémena	fˈemena	f ˈe m e n a		WOMAN_FEMALE_NOUN_1			
 Bellunese	Bellunese			WOMAN_FEMALE_NOUN	fémena	fˈemena	f ˈe m e n a		WOMAN_FEMALE_NOUN_1			
+Romagnol	Romagnol			WOMAN_FEMALE_NOUN	femna	fˈɛmnɐ	f ˈɛ m n ɐ		WOMAN_FEMALE_NOUN_1			
 Ligurian	Ligurian			WOMAN_FEMALE_NOUN	fémmina	fˈemina	f ˈe m i n a		WOMAN_FEMALE_NOUN_1			
 Piedmontese	Piedmontese			WOMAN_FEMALE_NOUN	fomna	fˈɔmna	f ˈɔ m n a		WOMAN_FEMALE_NOUN_1			
 Western Lombard	Western Lombard			WOMAN_FEMALE_NOUN	femena	fˈɛmena	f ˈɛ m e n a		WOMAN_FEMALE_NOUN_1			
@@ -4395,6 +4505,7 @@ Italian	Italian			IRON_NOUN	ferro	fˈɛrro	f ˈɛ r r o		IRON_NOUN_1
 Venetian	Venetian			IRON_NOUN	fèro	fˈɛro	f ˈɛ r o		IRON_NOUN_1			
 Bellunese	Bellunese			IRON_NOUN	fèr	fˈɛr	f ˈɛ r		IRON_NOUN_1			
 Emilian	Emilian			IRON_NOUN	fèr	fˈɛr	f ˈɛ r		IRON_NOUN_1			
+Romagnol	Romagnol			IRON_NOUN	fër	fˈɛə̯r	f ˈɛə̯ r		IRON_NOUN_1			
 Ligurian	Ligurian			IRON_NOUN	færo	fˈɛːru	f ˈɛː r u		IRON_NOUN_1			
 Piedmontese	Piedmontese			IRON_NOUN	fer	fˈɛr	f ˈɛ r		IRON_NOUN_1			
 Western Lombard	Western Lombard			IRON_NOUN	ferr	fˈɛr	f ˈɛ r		IRON_NOUN_1			
@@ -4430,6 +4541,7 @@ Italian	Italian			PARTY_NOUN	festa	fˈɛsta	f ˈɛ s t a		PARTY_NOUN_2
 Venetian	Venetian			PARTY_NOUN	fèsta	fˈɛsta	f ˈɛ s t a		PARTY_NOUN_2			
 Bellunese	Bellunese			PARTY_NOUN	fèsta	fˈɛsta	f ˈɛ s t a		PARTY_NOUN_2			
 Emilian	Emilian			PARTY_NOUN	fèsta	fˈɛsta	f ˈɛ s t a		PARTY_NOUN_2			
+Romagnol	Romagnol			PARTY_NOUN	fësta	fˈɛə̯stɐ	f ˈɛə̯ s t ɐ		PARTY_NOUN_2			
 Ligurian	Ligurian			PARTY_NOUN	fèsta	fˈɛsta	f ˈɛ s t a		PARTY_NOUN_2			
 Piedmontese	Piedmontese			PARTY_NOUN	festa	fˈɛsta	f ˈɛ s t a		PARTY_NOUN_2			
 Western Lombard	Western Lombard			PARTY_NOUN	festa	fˈɛsta	f ˈɛ s t a		PARTY_NOUN_2			
@@ -4468,6 +4580,7 @@ Italian	Italian			LIVER_NOUN	fegato	fˈeɡato	f ˈe ɡ a t o		LIVER_NOUN_1
 Venetian	Venetian			LIVER_NOUN	figà	fiɡˈa	f i ɡ ˈa		LIVER_NOUN_1			
 Bellunese	Bellunese			LIVER_NOUN	figà	fiɡˈa	f i ɡ ˈa		LIVER_NOUN_1			
 Emilian	Emilian			LIVER_NOUN	féddig	fˈediɡ	f ˈe d i ɡ		LIVER_NOUN_1			
+Romagnol	Romagnol			LIVER_NOUN	fēgat	fˈeːɡɐt	f ˈeː ɡ ɐ t		LIVER_NOUN_1			
 Ligurian	Ligurian			LIVER_NOUN	figæto	fiɡˈɛːtu	f i ɡ ˈɛː t u		LIVER_NOUN_1			
 Piedmontese	Piedmontese			LIVER_NOUN	fedich	fˈedik	f ˈe d i k		LIVER_NOUN_1			
 Western Lombard	Western Lombard			LIVER_NOUN	fidegh	fˈiːdɛk	f ˈiː d ɛ k		LIVER_NOUN_1			
@@ -4506,6 +4619,7 @@ Italian	Italian			DAUGHTER_NOUN	figlia	fˈiʎʎa	f ˈi ʎ ʎ a		DAUGHTER_NOUN_1
 Venetian	Venetian			DAUGHTER_NOUN	fia	fˈia	f ˈi a		DAUGHTER_NOUN_1			
 Bellunese	Bellunese			DAUGHTER_NOUN	fia	fˈia	f ˈi a		DAUGHTER_NOUN_1			
 Emilian	Emilian			DAUGHTER_NOUN	fiôla	fjˈɔːla	f j ˈɔː l a		DAUGHTER_NOUN_1			
+Romagnol	Romagnol			DAUGHTER_NOUN	fiöla	fjˈɔə̯lɐ	f j ˈɔə̯ l ɐ		DAUGHTER_NOUN_1			
 Ligurian	Ligurian			DAUGHTER_NOUN	fìggia	fˈiʤa	f ˈi ʤ a		DAUGHTER_NOUN_1			
 Piedmontese	Piedmontese			DAUGHTER_NOUN	fija	fˈija	f ˈi j a		DAUGHTER_NOUN_1			
 Western Lombard	Western Lombard			DAUGHTER_NOUN	fiœl	fjˈøːla	f j ˈøː l a		DAUGHTER_NOUN_1			
@@ -4547,6 +4661,7 @@ Corsican	Corsican			SON_NOUN	figliu	fˈiʎu	f ˈi ʎ u		SON_NOUN_1
 Italian	Italian			SON_NOUN	figlio	fˈiʎʎo	f ˈi ʎ ʎ o		SON_NOUN_1			
 Venetian	Venetian			SON_NOUN	fio	fˈio	f ˈi o		SON_NOUN_1			
 Emilian	Emilian			SON_NOUN	fiôl	fjˈɔːl	f j ˈɔː l		SON_NOUN_1			
+Romagnol	Romagnol			SON_NOUN	fiöl	fjˈɔə̯l	f j ˈɔə̯ l		SON_NOUN_1			
 Ligurian	Ligurian			SON_NOUN	fìggio	fˈiʤu	f ˈi ʤ u		SON_NOUN_1			
 Piedmontese	Piedmontese			SON_NOUN	fij	fˈij	f ˈi j		SON_NOUN_1			
 Western Lombard	Western Lombard			SON_NOUN	fiœl	fjˈøːl	f j ˈøː l		SON_NOUN_1			
@@ -4583,6 +4698,7 @@ Italian	Italian			STRING_NOUN	filo	fˈilo	f ˈi l o		STRING_NOUN_2
 Venetian	Venetian			STRING_NOUN	fiƚo	fˈiɰo	f ˈi ɰ o		STRING_NOUN_2			
 Bellunese	Bellunese			STRING_NOUN	fil	fˈil	f ˈi l		STRING_NOUN_2			
 Emilian	Emilian			STRING_NOUN	fil	fˈil	f ˈi l		STRING_NOUN_2			
+Romagnol	Romagnol			STRING_NOUN	fil	fˈil	f ˈi l		STRING_NOUN_2			
 Ligurian	Ligurian			STRING_NOUN	fî	fˈiː	f ˈiː		STRING_NOUN_2			
 Piedmontese	Piedmontese			STRING_NOUN	fil	fˈil	f ˈi l		STRING_NOUN_2			
 Western Lombard	Western Lombard			STRING_NOUN	fil	fˈiːl	f ˈiː l		STRING_NOUN_2			
@@ -4618,6 +4734,7 @@ Italian	Italian			END_NOUN	fine	fˈine	f ˈi n e		END_NOUN_1
 Venetian	Venetian			END_NOUN	fin	fˈiŋ	f ˈi ŋ		END_NOUN_1			
 Bellunese	Bellunese			END_NOUN	fin	fˈiŋ	f ˈi ŋ		END_NOUN_1			
 Emilian	Emilian			END_NOUN	fén	fˈeŋ	f ˈe ŋ		END_NOUN_1			
+Romagnol	Romagnol			END_NOUN	fén	fˈẽj̃	f ˈẽ j̃		END_NOUN_1			
 Ligurian	Ligurian			END_NOUN	fin	fˈiŋ	f ˈi ŋ		END_NOUN_1			
 Piedmontese	Piedmontese			END_NOUN	fin	fˈiŋ	f ˈi ŋ		END_NOUN_1			
 Western Lombard	Western Lombard			END_NOUN	fin	fˈĩ	f ˈĩ		END_NOUN_1			
@@ -4654,6 +4771,7 @@ Italian	Italian			FLAME_NOUN	fiamma	fjˈamma	f j ˈa m m a		FLAME_NOUN_1
 Venetian	Venetian			FLAME_NOUN	fiàma	fjˈama	f j ˈa m a		FLAME_NOUN_1			
 Bellunese	Bellunese			FLAME_NOUN	fiàma	fjˈama	f j ˈa m a		FLAME_NOUN_1			
 Emilian	Emilian			FLAME_NOUN	fiàma	fjˈama	f j ˈa m a		FLAME_NOUN_1			
+Romagnol	Romagnol			FLAME_NOUN	fiâmba	fjˈʌ̃mbɐ	f j ˈʌ̃ m b ɐ		FLAME_NOUN_1			
 Ligurian	Ligurian			FLAME_NOUN	sciàmma	ʃˈama	ʃ ˈa m a		FLAME_NOUN_1			
 Piedmontese	Piedmontese			FLAME_NOUN	fiama	fjˈama	f j ˈa m a		FLAME_NOUN_1			
 Western Lombard	Western Lombard			FLAME_NOUN	fiamma	fjˈama	f j ˈa m a		FLAME_NOUN_1			
@@ -4692,6 +4810,7 @@ Italian	Italian			FLOWER_NOUN	fiore	fjˈore	f j ˈo r e		FLOWER_NOUN_1
 Venetian	Venetian			FLOWER_NOUN	fiór	fjˈor	f j ˈo r		FLOWER_NOUN_1			
 Bellunese	Bellunese			FLOWER_NOUN	fiór	fjˈor	f j ˈo r		FLOWER_NOUN_1			
 Emilian	Emilian			FLOWER_NOUN	fiåur	fjˈʌu̯r	f j ˈʌu̯ r		FLOWER_NOUN_1			
+Romagnol	Romagnol			FLOWER_NOUN	fiôr	fjˈou̯r	f j ˈou̯ r		FLOWER_NOUN_1			
 Ligurian	Ligurian			FLOWER_NOUN	sciô	ʃˈuː	ʃ ˈuː		FLOWER_NOUN_1			
 Piedmontese	Piedmontese			FLOWER_NOUN	fior	fjˈur	f j ˈu r		FLOWER_NOUN_1			
 Western Lombard	Western Lombard			FLOWER_NOUN	fior	fjˈuːr	f j ˈuː r		FLOWER_NOUN_1			
@@ -4726,6 +4845,7 @@ Corsican	Corsican			RIVER_NOUN	fiume	fjˈume	f j ˈu m e		RIVER_NOUN_1
 Italian	Italian			RIVER_NOUN	fiume	fjˈume	f j ˈu m e		RIVER_NOUN_1			
 Venetian	Venetian			RIVER_NOUN	fiume	fjˈume	f j ˈu m e		RIVER_NOUN_1			
 Emilian	Emilian			RIVER_NOUN	fiómm	fjˈom	f j ˈo m		RIVER_NOUN_1			
+Romagnol	Romagnol			RIVER_NOUN	fiôm	fjˈou̯m	f j ˈou̯ m		RIVER_NOUN_1			
 Ligurian	Ligurian			RIVER_NOUN	sciùmme	ʃˈyme	ʃ ˈy m e		RIVER_NOUN_1			
 Piedmontese	Piedmontese			RIVER_NOUN	fium	fjˈym	f j ˈy m		RIVER_NOUN_1			
 Western Lombard	Western Lombard			RIVER_NOUN	fium	fjˈyːm	f j ˈyː m		RIVER_NOUN_1			
@@ -4748,6 +4868,7 @@ Italian	Italian			FIRE_NOUN	fuoco	fwˈɔko	f w ˈɔ k o		FIRE_NOUN_1
 Venetian	Venetian			FIRE_NOUN	fógo	fˈoɡo	f ˈo ɡ o		FIRE_NOUN_1			
 Bellunese	Bellunese			FIRE_NOUN	fógo	fˈoɡo	f ˈo ɡ o		FIRE_NOUN_1			
 Emilian	Emilian			FIRE_NOUN	fûg	fˈuːɡ	f ˈuː ɡ		FIRE_NOUN_1			
+Romagnol	Romagnol			FIRE_NOUN	fug	fˈuɡ	f ˈu ɡ		FIRE_NOUN_1			
 Ligurian	Ligurian			FIRE_NOUN	fêugo	fˈøːɡu	f ˈøː ɡ u		FIRE_NOUN_1			
 Piedmontese	Piedmontese			FIRE_NOUN	feu	fˈø	f ˈø		FIRE_NOUN_1			
 Piedmontese	Piedmontese			FIRE_NOUN	feugh	fˈøɡ	f ˈø ɡ		FIRE_NOUN_1			
@@ -4786,6 +4907,7 @@ Italian	Italian			LEAF_NOUN	foglia	fˈɔʎʎa	f ˈɔ ʎ ʎ a		LEAF_NOUN_1
 Venetian	Venetian			LEAF_NOUN	fòja	fˈɔja	f ˈɔ j a		LEAF_NOUN_1			
 Bellunese	Bellunese			LEAF_NOUN	fója	fˈoja	f ˈo j a		LEAF_NOUN_1			
 Emilian	Emilian			LEAF_NOUN	fójja	fˈoja	f ˈo j a		LEAF_NOUN_1			
+Romagnol	Romagnol			LEAF_NOUN	fója	fˈojɐ	f ˈo j ɐ		LEAF_NOUN_1			
 Ligurian	Ligurian			LEAF_NOUN	féuggia	fˈøʤa	f ˈø ʤ a		LEAF_NOUN_1			
 Piedmontese	Piedmontese			LEAF_NOUN	feuja	fˈøja	f ˈø j a		LEAF_NOUN_1			
 Western Lombard	Western Lombard			LEAF_NOUN	fœia	fˈøːja	f ˈøː j a		LEAF_NOUN_1			
@@ -4839,6 +4961,7 @@ Italian	Italian			STRONG_ADJ	forte	fˈɔrte	f ˈɔ r t e		STRONG_ADJ_1
 Venetian	Venetian			STRONG_ADJ	fòrte	fˈɔrte	f ˈɔ r t e		STRONG_ADJ_1			
 Bellunese	Bellunese			STRONG_ADJ	fòrt	fˈɔrt	f ˈɔ r t		STRONG_ADJ_1			
 Emilian	Emilian			STRONG_ADJ	fôrt	fˈɔːrt	f ˈɔː r t		STRONG_ADJ_1			
+Romagnol	Romagnol			STRONG_ADJ	fört	fˈɔə̯rt	f ˈɔə̯ r t		STRONG_ADJ_1			
 Ligurian	Ligurian			STRONG_ADJ	fòrte	fˈɔːrte	f ˈɔː r t e		STRONG_ADJ_1			
 Piedmontese	Piedmontese			STRONG_ADJ	fòrt	fˈɔrt	f ˈɔ r t		STRONG_ADJ_1			
 Western Lombard	Western Lombard			STRONG_ADJ	fort	fˈɔrt	f ˈɔ r t		STRONG_ADJ_1			
@@ -4894,6 +5017,7 @@ Italian	Italian			COLD_ADJ	freddo	frˈeddo	f r ˈe d d o		COLD_ADJ_1
 Venetian	Venetian			COLD_ADJ	frédo	frˈedo	f r ˈe d o		COLD_ADJ_1			
 Bellunese	Bellunese			COLD_ADJ	frét	frˈet	f r ˈe t		COLD_ADJ_1			
 Emilian	Emilian			COLD_ADJ	fradd	frˈad	f r ˈa d		COLD_ADJ_1			
+Romagnol	Romagnol			COLD_ADJ	frèd	frˈɛd	f r ˈɛ d		COLD_ADJ_1			
 Ligurian	Ligurian			COLD_ADJ	freido	frˈejdu	f r ˈe j d u		COLD_ADJ_1			
 Piedmontese	Piedmontese			COLD_ADJ	freid	frˈejd	f r ˈe j d		COLD_ADJ_1			
 Western Lombard	Western Lombard			COLD_ADJ	fregg	frˈɛʧ	f r ˈɛ ʧ		COLD_ADJ_1			
@@ -4937,6 +5061,7 @@ Italian	Italian			FRUIT_NOUN	frutto	frˈutto	f r ˈu t t o		FRUIT_NOUN_1
 Venetian	Venetian			FRUIT_NOUN	fruto	frˈuto	f r ˈu t o		FRUIT_NOUN_1			
 Bellunese	Bellunese			FRUIT_NOUN	fruto	frˈuto	f r ˈu t o		FRUIT_NOUN_1			
 Emilian	Emilian			FRUIT_NOUN	frût	frˈuːt	f r ˈuː t		FRUIT_NOUN_1			
+Romagnol	Romagnol			FRUIT_NOUN	frót	frˈot	f r ˈo t		FRUIT_NOUN_1			
 Ligurian	Ligurian			FRUIT_NOUN	fruto	frˈyːtu	f r ˈyː t u		FRUIT_NOUN_1			
 Piedmontese	Piedmontese			FRUIT_NOUN	frut	frˈyt	f r ˈy t		FRUIT_NOUN_1			
 Western Lombard	Western Lombard			FRUIT_NOUN	frutt	frˈyt	f r ˈy t		FRUIT_NOUN_1			
@@ -4978,6 +5103,7 @@ Italian	Italian			SMOKE_NOUN	fumo	fˈumo	f ˈu m o		SMOKE_NOUN_2
 Venetian	Venetian			SMOKE_NOUN	fùmo	fˈumo	f ˈu m o		SMOKE_NOUN_2			
 Bellunese	Bellunese			SMOKE_NOUN	fun	fˈuŋ	f ˈu ŋ		SMOKE_NOUN_2			
 Emilian	Emilian			SMOKE_NOUN	fómm	fˈom	f ˈo m		SMOKE_NOUN_2			
+Romagnol	Romagnol			SMOKE_NOUN	fóm	fˈom	f ˈo m		SMOKE_NOUN_2			
 Ligurian	Ligurian			SMOKE_NOUN	fumme	fˈyme	f ˈy m e		SMOKE_NOUN_2			
 Piedmontese	Piedmontese			SMOKE_NOUN	fum	fˈym	f ˈy m		SMOKE_NOUN_2			
 Western Lombard	Western Lombard			SMOKE_NOUN	fym	fˈyːm	f ˈyː m		SMOKE_NOUN_2			
@@ -5008,6 +5134,7 @@ Italian	Italian			YELLOW_ADJ	giallo	ʤˈallo	ʤ ˈa l l o		YELLOW_ADJ_4	TRUE
 Venetian	Venetian			YELLOW_ADJ	xàło	zˈaɰo	z ˈa ɰ o		YELLOW_ADJ_4	TRUE		
 Bellunese	Bellunese			YELLOW_ADJ	dhal	ðˈal	ð ˈa l		YELLOW_ADJ_4	TRUE		
 Emilian	Emilian			YELLOW_ADJ	żâl	ðˈaːl	ð ˈaː l		YELLOW_ADJ_4	TRUE		
+Romagnol	Romagnol			YELLOW_ADJ	ẓal	ðˈal	ð ˈa l		YELLOW_ADJ_4	TRUE		
 Ligurian	Ligurian			YELLOW_ADJ	gianu	ʤˈaːnu	ʤ ˈaː n u		YELLOW_ADJ_4	TRUE		
 Piedmontese	Piedmontese			YELLOW_ADJ	giaun	ʤˈawŋ	ʤ ˈa w ŋ		YELLOW_ADJ_4	TRUE		
 Western Lombard	Western Lombard			YELLOW_ADJ	jald	ʒˈalt	ʒ ˈa l t		YELLOW_ADJ_4	TRUE		
@@ -5088,6 +5215,7 @@ Corsican	Corsican			ICE_NOUN	ghjelu	ɟˈelu	ɟ ˈe l u		ICE_NOUN_2
 Italian	Italian			ICE_NOUN	gelo	ʤˈɛlo	ʤ ˈɛ l o		ICE_NOUN_2			
 Venetian	Venetian			ICE_NOUN	xèło	zˈɛɰo	z ˈɛ ɰ o		ICE_NOUN_2			
 Emilian	Emilian			ICE_NOUN	żêl	ðˈɛːl	ð ˈɛː l		ICE_NOUN_2			
+Romagnol	Romagnol			ICE_NOUN	gèl	ʤˈɛl	ʤ ˈɛ l		ICE_NOUN_2			
 Ligurian	Ligurian			ICE_NOUN	zeo	zˈeːu	z ˈeː u		ICE_NOUN_2			
 Piedmontese	Piedmontese			ICE_NOUN	gèil	ʤˈɛjl	ʤ ˈɛ j l		ICE_NOUN_2			
 Western Lombard	Western Lombard			ICE_NOUN	gel	ʤˈɛl	ʤ ˈɛ l		ICE_NOUN_2			
@@ -5151,6 +5279,7 @@ Italian	Italian			PEOPLE_NOUN	gente	ʤˈɛnte	ʤ ˈɛ n t e		PEOPLE_NOUN_1
 Venetian	Venetian			PEOPLE_NOUN	xènte	zˈɛŋte	z ˈɛ ŋ t e		PEOPLE_NOUN_1			
 Bellunese	Bellunese			PEOPLE_NOUN	dhént	ðˈeŋt	ð ˈe ŋ t		PEOPLE_NOUN_1			
 Emilian	Emilian			PEOPLE_NOUN	żänt	ðˈæŋt	ð ˈæ ŋ t		PEOPLE_NOUN_1			
+Romagnol	Romagnol			PEOPLE_NOUN	ẓénta	ðˈẽntɐ	ð ˈẽ n t ɐ		PEOPLE_NOUN_1			
 Ligurian	Ligurian			PEOPLE_NOUN	gente	ʤˈɛŋte	ʤ ˈɛ ŋ t e		PEOPLE_NOUN_1	TRUE		
 Piedmontese	Piedmontese			PEOPLE_NOUN	gent	ʤˈɛŋt	ʤ ˈɛ ŋ t		PEOPLE_NOUN_1			
 Eastern Lombard	Eastern Lombard			PEOPLE_NOUN	zét	zˈet	z ˈe t		PEOPLE_NOUN_1			
@@ -5199,6 +5328,7 @@ Italian	Italian			KNEE_NOUN	ginocchio	ʤinˈɔkkjo	ʤ i n ˈɔ k k j o		KNEE_NOU
 Venetian	Venetian			KNEE_NOUN	xenòcio	zenˈɔʧo	z e n ˈɔ ʧ o		KNEE_NOUN_1			
 Bellunese	Bellunese			KNEE_NOUN	dhenòcio	ðenˈɔʧo	ð e n ˈɔ ʧ o		KNEE_NOUN_1			
 Emilian	Emilian			KNEE_NOUN	żnòc'	ðnˈɔʧ	ð n ˈɔ ʧ		KNEE_NOUN_1			
+Romagnol	Romagnol			KNEE_NOUN	ẓnòcc	ðnˈɔʧ	ð n ˈɔ ʧ		KNEE_NOUN_1			
 Ligurian	Ligurian			KNEE_NOUN	zenoggio	zenˈuʤu	z e n ˈu ʤ u		KNEE_NOUN_1			
 Piedmontese	Piedmontese			KNEE_NOUN	ginoj	ʤˈinuj	ʤ ˈi n u j		KNEE_NOUN_1			
 Western Lombard	Western Lombard			KNEE_NOUN	jenœgg	ʒenˈœʧ	ʒ e n ˈœ ʧ		KNEE_NOUN_1			
@@ -5245,6 +5375,7 @@ Italian	Italian			GUMS_NOUN	gengiva	ʤenʤˈiva	ʤ e n ʤ ˈi v a		GUMS_NOUN_1
 Venetian	Venetian			GUMS_NOUN	xenxìva	zeŋzˈiva	z e ŋ z ˈi v a		GUMS_NOUN_1			
 Bellunese	Bellunese			GUMS_NOUN	dhendhìva	ðeŋðˈiva	ð e ŋ ð ˈi v a		GUMS_NOUN_1			
 Emilian	Emilian			GUMS_NOUN	żinżéjja	ðiŋðˈeja	ð i ŋ ð ˈe j a		GUMS_NOUN_1			
+Romagnol	Romagnol			GUMS_NOUN	ẓanẓèja	ðɐnðˈɛjɐ	ð ɐ n ð ˈɛ j ɐ		GUMS_NOUN_1			
 Ligurian	Ligurian			GUMS_NOUN	zenzîa	zenzˈiːa	z e n z ˈiː a		GUMS_NOUN_1			
 Piedmontese	Piedmontese			GUMS_NOUN	zanziva	zanzˈiva	z a n z ˈi v a		GUMS_NOUN_1			
 Eastern Lombard	Eastern Lombard			GUMS_NOUN	zenzìa	zenzˈia	z e n z ˈi a		GUMS_NOUN_1			
@@ -5283,6 +5414,7 @@ Latin	Latin			FREEZE_VERB	glaciāre	ɡɫakiˈaːrɛ	ɡ ɫ a k i ˈaː r ɛ		FREE
 Italian	Italian			FREEZE_VERB	ghiacciare	ɡjaʧʧˈare	ɡ j a ʧ ʧ ˈa r e		FREEZE_VERB_3			
 Bellunese	Bellunese			FREEZE_VERB	jazhàr	jaθˈar	j a θ ˈa r		FREEZE_VERB_3			
 Emilian	Emilian			FREEZE_VERB	giazèr	ʤaθˈɛr	ʤ a θ ˈɛ r		FREEZE_VERB_3			
+Romagnol	Romagnol			FREEZE_VERB	giazêr	ʤaθˈeə̯	ʤ a θ ˈeə̯		FREEZE_VERB_3			
 Eastern Lombard	Eastern Lombard			FREEZE_VERB	giassà	ʤasˈa	ʤ a s ˈa		FREEZE_VERB_3			
 Ladin	Ladin			FREEZE_VERB	glacé	ɡlaʧˈe	ɡ l a ʧ ˈe		FREEZE_VERB_3			
 Friulian	Friulian			FREEZE_VERB	glaçâ	ɡlaʧˈaː	ɡ l a ʧ ˈaː		FREEZE_VERB_3			
@@ -5306,6 +5438,7 @@ Italian	Italian			BIG_ADJ	grande	ɡrˈande	ɡ r ˈa n d e		BIG_ADJ_1
 Venetian	Venetian			BIG_ADJ	grando	ɡrˈaŋdo	ɡ r ˈa ŋ d o		BIG_ADJ_1			
 Bellunese	Bellunese			BIG_ADJ	grant	ɡrˈaŋt	ɡ r ˈa ŋ t		BIG_ADJ_1			
 Emilian	Emilian			BIG_ADJ	grand	ɡrˈaŋd	ɡ r ˈa ŋ d		BIG_ADJ_1			
+Romagnol	Romagnol			BIG_ADJ	grând	ɡrˈʌ̃nd	ɡ r ˈʌ̃ n d		BIG_ADJ_1			
 Ligurian	Ligurian			BIG_ADJ	grànde	ɡrˈaŋde	ɡ r ˈa ŋ d e		BIG_ADJ_1			
 Piedmontese	Piedmontese			BIG_ADJ	grand	ɡrˈaŋt	ɡ r ˈa ŋ t		BIG_ADJ_1			
 Western Lombard	Western Lombard			BIG_ADJ	grand	ɡrˈãt	ɡ r ˈã t		BIG_ADJ_1			
@@ -5340,6 +5473,7 @@ Italian	Italian			GRAIN_NOUN	grano	ɡrˈano	ɡ r ˈa n o		GRAIN_NOUN_2
 Venetian	Venetian			GRAIN_NOUN	gran	ɡrˈaŋ	ɡ r ˈa ŋ		GRAIN_NOUN_2			
 Bellunese	Bellunese			GRAIN_NOUN	gran	ɡrˈaŋ	ɡ r ˈa ŋ		GRAIN_NOUN_2			
 Emilian	Emilian			GRAIN_NOUN	gran	ɡrˈaŋ	ɡ r ˈa ŋ		GRAIN_NOUN_2			
+Romagnol	Romagnol			GRAIN_NOUN	grân	ɡrˈʌ̃	ɡ r ˈʌ̃		GRAIN_NOUN_2			
 Ligurian	Ligurian			GRAIN_NOUN	gran	ɡrˈaŋ	ɡ r ˈa ŋ		GRAIN_NOUN_2			
 Eastern Lombard	Eastern Lombard			GRAIN_NOUN	grà	ɡrˈa	ɡ r ˈa		GRAIN_NOUN_2			
 Friulian	Friulian			GRAIN_NOUN	gran	ɡrˈaŋ	ɡ r ˈa ŋ		GRAIN_NOUN_2			
@@ -5369,6 +5503,7 @@ Italian	Italian			THICK_ADJ	grosso	ɡrˈɔsso	ɡ r ˈɔ s s o		THICK_ADJ_1
 Venetian	Venetian			THICK_ADJ	groso	ɡrˈɔso	ɡ r ˈɔ s o		THICK_ADJ_1			
 Bellunese	Bellunese			THICK_ADJ	gròs	ɡrˈɔs	ɡ r ˈɔ s		THICK_ADJ_1			
 Emilian	Emilian			THICK_ADJ	gròs	ɡrˈɔs	ɡ r ˈɔ s		THICK_ADJ_1			
+Romagnol	Romagnol			THICK_ADJ	gròs	ɡrˈɔs	ɡ r ˈɔ s		THICK_ADJ_1			
 Ligurian	Ligurian			THICK_ADJ	gròsso	ɡrˈɔsu	ɡ r ˈɔ s u		THICK_ADJ_1			
 Piedmontese	Piedmontese			THICK_ADJ	gròss	ɡrˈɔs	ɡ r ˈɔ s		THICK_ADJ_1			
 Western Lombard	Western Lombard			THICK_ADJ	gross	ɡrˈɔs	ɡ r ˈɔ s		THICK_ADJ_1			
@@ -5403,6 +5538,7 @@ Italian	Italian			THROAT_NOUN	gola	ɡˈola	ɡ ˈo l a		THROAT_NOUN_1
 Venetian	Venetian			THROAT_NOUN	góła	ɡˈoɰa	ɡ ˈo ɰ a		THROAT_NOUN_1			
 Bellunese	Bellunese			THROAT_NOUN	góla	ɡˈola	ɡ ˈo l a		THROAT_NOUN_1			
 Emilian	Emilian			THROAT_NOUN	gåula	ɡˈʌu̯la	ɡ ˈʌu̯ l a		THROAT_NOUN_1			
+Romagnol	Romagnol			THROAT_NOUN	gôla	ɡˈou̯lɐ	ɡ ˈou̯ l ɐ		THROAT_NOUN_1			
 Ligurian	Ligurian			THROAT_NOUN	gôa	ɡˈuːa	ɡ ˈuː a		THROAT_NOUN_1			
 Western Lombard	Western Lombard			THROAT_NOUN	gola	ɡˈuːla	ɡ ˈuː l a		THROAT_NOUN_1			
 Eastern Lombard	Eastern Lombard			THROAT_NOUN	góla	ɡˈola	ɡ ˈo l a		THROAT_NOUN_1			
@@ -5458,6 +5594,7 @@ Italian	Italian			DROP_NOUN	goccia	ɡˈoʧʧa	ɡ ˈo ʧ ʧ a		DROP_NOUN_2
 Venetian	Venetian			DROP_NOUN	giósa	ʤˈosa	ʤ ˈo s a		DROP_NOUN_2			
 Bellunese	Bellunese			DROP_NOUN	józha	jˈoθa	j ˈo θ a		DROP_NOUN_2			
 Emilian	Emilian			DROP_NOUN	gåzza	ɡˈʌθa	ɡ ˈʌ θ a		DROP_NOUN_2			
+Romagnol	Romagnol			DROP_NOUN	gózla	ɡˈoθlɐ	ɡ ˈo θ l ɐ		DROP_NOUN_2		IRREGULAR	
 Ligurian	Ligurian			DROP_NOUN	góssa	ɡˈusa	ɡ ˈu s a		DROP_NOUN_2			
 Piedmontese	Piedmontese			DROP_NOUN	gossa	ɡˈusa	ɡ ˈu s a		DROP_NOUN_2			
 Latin	Latin			SAND_NOUN	harēnam	harˈeːnãː	h a r ˈeː n ãː		SAND_NOUN_1			
@@ -5491,6 +5628,7 @@ Italian	Italian			GRASS_NOUN	erba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1
 Venetian	Venetian			GRASS_NOUN	èrba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
 Bellunese	Bellunese			GRASS_NOUN	èrba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
 Emilian	Emilian			GRASS_NOUN	êrba	ˈɛːrba	ˈɛː r b a		GRASS_NOUN_1			
+Romagnol	Romagnol			GRASS_NOUN	erba	ˈɛrbɐ	ˈɛ r b ɐ		GRASS_NOUN_1			
 Piedmontese	Piedmontese			GRASS_NOUN	erba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
 Western Lombard	Western Lombard			GRASS_NOUN	erba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
 Eastern Lombard	Eastern Lombard			GRASS_NOUN	èrba	ˈɛrba	ˈɛ r b a		GRASS_NOUN_1			
@@ -5602,6 +5740,7 @@ Italian	Italian			MAN_NOUN	uomo	wˈɔmo	w ˈɔ m o		MAN_NOUN_3
 Venetian	Venetian			MAN_NOUN	òmo	ˈɔmo	ˈɔ m o		MAN_NOUN_3			
 Bellunese	Bellunese			MAN_NOUN	òn	ˈɔŋ	ˈɔ ŋ		MAN_NOUN_3			
 Emilian	Emilian			MAN_NOUN	òm	ˈɔm	ˈɔ m		MAN_NOUN_3			
+Romagnol	Romagnol			MAN_NOUN	óm	ˈom	ˈo m		MAN_NOUN_3			
 Ligurian	Ligurian			MAN_NOUN	ommo	ˈɔmu	ˈɔ m u		MAN_NOUN_3			
 Piedmontese	Piedmontese			MAN_NOUN	om	ˈɔm	ˈɔ m		MAN_NOUN_3			
 Eastern Lombard	Eastern Lombard			MAN_NOUN	òm	ˈɔm	ˈɔ m		MAN_NOUN_3			
@@ -5698,6 +5837,7 @@ Italian	Italian			GAME_NOUN	gioco	ʤˈɔko	ʤ ˈɔ k o		GAME_NOUN_1
 Venetian	Venetian			GAME_NOUN	xógo	zˈoɡo	z ˈo ɡ o		GAME_NOUN_1			
 Bellunese	Bellunese			GAME_NOUN	dhógo	ðˈoɡo	ð ˈo ɡ o		GAME_NOUN_1			
 Emilian	Emilian			GAME_NOUN	żûg	ðˈuːɡ	ð ˈuː ɡ		GAME_NOUN_1			
+Romagnol	Romagnol			GAME_NOUN	ẓug	ðˈuɡ	ð ˈu ɡ		GAME_NOUN_1			
 Ligurian	Ligurian			GAME_NOUN	zêugo	zˈøːɡu	z ˈøː ɡ u		GAME_NOUN_1			
 Piedmontese	Piedmontese			GAME_NOUN	gieu	ʤˈø	ʤ ˈø		GAME_NOUN_1			
 Piedmontese	Piedmontese			GAME_NOUN	gieugh	ʤˈøɡ	ʤ ˈø ɡ		GAME_NOUN_1			
@@ -5740,6 +5880,7 @@ Corsican	Corsican			JUDGE_NOUN	ghjudice	ɟˈudiʧe	ɟ ˈu d i ʧ e		JUDGE_NOUN_1
 Italian	Italian			JUDGE_NOUN	giudice	ʤˈudiʧe	ʤ ˈu d i ʧ e		JUDGE_NOUN_1			
 Venetian	Venetian			JUDGE_NOUN	xùdexe	zˈudeze	z ˈu d e z e		JUDGE_NOUN_1			
 Emilian	Emilian			JUDGE_NOUN	gióddiz	ʤˈodiθ	ʤ ˈo d i θ		JUDGE_NOUN_1			
+Romagnol	Romagnol			JUDGE_NOUN	giodiz	ʤˈodiθ	ʤ ˈo d i θ		JUDGE_NOUN_1			
 Ligurian	Ligurian			JUDGE_NOUN	giudiçe	ʤˈydise	ʤ ˈy d i s e		JUDGE_NOUN_1			
 Piedmontese	Piedmontese			JUDGE_NOUN	giùdes	ʤˈydez	ʤ ˈy d e z		JUDGE_NOUN_1			
 Western Lombard	Western Lombard			JUDGE_NOUN	giudes	ʤˈyːdes	ʤ ˈyː d e s		JUDGE_NOUN_1			
@@ -5791,6 +5932,7 @@ Corsican	Corsican			JUNE_PROPN	ghjugnu	ɟˈuɲu	ɟ ˈu ɲ u		JUNE_PROPN_1
 Italian	Italian			JUNE_PROPN	giugno	ʤˈuɲɲo	ʤ ˈu ɲ ɲ o		JUNE_PROPN_1			
 Venetian	Venetian			JUNE_PROPN	xugno	zˈuɲo	z ˈu ɲ o		JUNE_PROPN_1			
 Emilian	Emilian			JUNE_PROPN	żóggn	ðˈoɲ	ð ˈo ɲ		JUNE_PROPN_1			
+Romagnol	Romagnol			JUNE_PROPN	ẓógn	ðˈoɲ	ð ˈo ɲ		JUNE_PROPN_1			
 Ligurian	Ligurian			JUNE_PROPN	zugno	zˈyɲu	z ˈy ɲ u		JUNE_PROPN_1			
 Piedmontese	Piedmontese			JUNE_PROPN	giugn	ʤˈyɲ	ʤ ˈy ɲ		JUNE_PROPN_1			
 Western Lombard	Western Lombard			JUNE_PROPN	jugn	ʒˈyːɲ	ʒ ˈyː ɲ		JUNE_PROPN_1			
@@ -5826,6 +5968,7 @@ Italian	Italian			YOUNG_ADJ	giovane	ʤˈovane	ʤ ˈo v a n e		YOUNG_ADJ_1
 Venetian	Venetian			YOUNG_ADJ	xóvene	zˈovene	z ˈo v e n e		YOUNG_ADJ_1			
 Bellunese	Bellunese			YOUNG_ADJ	dhóven	ðˈoven	ð ˈo v e n		YOUNG_ADJ_1			
 Emilian	Emilian			YOUNG_ADJ	żåuven	ðˈʌu̯ven	ð ˈʌu̯ v e n		YOUNG_ADJ_1			
+Romagnol	Romagnol			YOUNG_ADJ	ẓôvan	ðˈou̯vɐn	ð ˈou̯ v ɐ n		YOUNG_ADJ_1			
 Ligurian	Ligurian			YOUNG_ADJ	zoêno	zwˈeːnu	z w ˈeː n u		YOUNG_ADJ_1			
 Piedmontese	Piedmontese			YOUNG_ADJ	giovo	ʤˈuvu	ʤ ˈu v u		YOUNG_ADJ_1			
 Western Lombard	Western Lombard			YOUNG_ADJ	joven	ʒˈuːẽ	ʒ ˈuː ẽ		YOUNG_ADJ_1			
@@ -5898,6 +6041,7 @@ Italian	Italian			MILK_NOUN	latte	lˈatte	l ˈa t t e		MILK_NOUN_1
 Venetian	Venetian			MILK_NOUN	łate	ɰˈate	ɰ ˈa t e		MILK_NOUN_1			
 Bellunese	Bellunese			MILK_NOUN	lat	lˈat	l ˈa t		MILK_NOUN_1			
 Emilian	Emilian			MILK_NOUN	lât	lˈaːt	l ˈaː t		MILK_NOUN_1			
+Romagnol	Romagnol			MILK_NOUN	lat	lˈat	l ˈa t		MILK_NOUN_1			
 Ligurian	Ligurian			MILK_NOUN	læte	lˈɛːte	l ˈɛː t e		MILK_NOUN_1			
 Piedmontese	Piedmontese			MILK_NOUN	làit	lˈajt	l ˈa j t		MILK_NOUN_1			
 Western Lombard	Western Lombard			MILK_NOUN	latt	lˈat	l ˈa t		MILK_NOUN_1			
@@ -5935,6 +6079,7 @@ Corsican	Corsican			LAKE_NOUN	lagu	lˈaɡu	l ˈa ɡ u		LAKE_NOUN_1
 Italian	Italian			LAKE_NOUN	lago	lˈaɡo	l ˈa ɡ o		LAKE_NOUN_1			
 Venetian	Venetian			LAKE_NOUN	łago	ɰˈaɡo	ɰ ˈa ɡ o		LAKE_NOUN_1			
 Emilian	Emilian			LAKE_NOUN	lèg	lˈɛɡ	l ˈɛ ɡ		LAKE_NOUN_1			
+Romagnol	Romagnol			LAKE_NOUN	lêg	lˈeə̯ɡ	l ˈeə̯ ɡ		LAKE_NOUN_1			
 Ligurian	Ligurian			LAKE_NOUN	lâgo	lˈaːɡu	l ˈaː ɡ u		LAKE_NOUN_1			
 Piedmontese	Piedmontese			LAKE_NOUN	lagh	lˈaɡ	l ˈa ɡ		LAKE_NOUN_1			
 Western Lombard	Western Lombard			LAKE_NOUN	lac	lˈɑːk	l ˈɑː k		LAKE_NOUN_1			
@@ -5971,6 +6116,7 @@ Italian	Italian			WOOL_NOUN	lana	lˈana	l ˈa n a		WOOL_NOUN_1
 Venetian	Venetian			WOOL_NOUN	łana	ɰˈana	ɰ ˈa n a		WOOL_NOUN_1			
 Bellunese	Bellunese			WOOL_NOUN	lana	lˈana	l ˈa n a		WOOL_NOUN_1			
 Emilian	Emilian			WOOL_NOUN	lèna	lˈɛna	l ˈɛ n a		WOOL_NOUN_1			
+Romagnol	Romagnol			WOOL_NOUN	lâna	lˈʌ̃nɐ	l ˈʌ̃ n ɐ		WOOL_NOUN_1			
 Ligurian	Ligurian			WOOL_NOUN	laña	lˈaŋa	l ˈa ŋ a		WOOL_NOUN_1			
 Piedmontese	Piedmontese			WOOL_NOUN	lana	lˈana	l ˈa n a		WOOL_NOUN_1			
 Piedmontese	Piedmontese			WOOL_NOUN	lan-a	lˈaŋa	l ˈa ŋ a		WOOL_NOUN_1			
@@ -6005,6 +6151,7 @@ Italian	Italian			BED_NOUN	letto	lˈɛtto	l ˈɛ t t o		BED_NOUN_1
 Venetian	Venetian			BED_NOUN	łèto	ˈɛto	ˈɛ t o		BED_NOUN_1			
 Bellunese	Bellunese			BED_NOUN	lèt	lˈɛt	l ˈɛ t		BED_NOUN_1			
 Emilian	Emilian			BED_NOUN	lèt	lˈɛt	l ˈɛ t		BED_NOUN_1			
+Romagnol	Romagnol			BED_NOUN	lët	lˈɛə̯t	l ˈɛə̯ t		BED_NOUN_1			
 Ligurian	Ligurian			BED_NOUN	letto	lˈetu	l ˈe t u		BED_NOUN_1			
 Piedmontese	Piedmontese			BED_NOUN	let	lˈɛt	l ˈɛ t		BED_NOUN_1			
 Western Lombard	Western Lombard			BED_NOUN	lecc	lˈɛʧ	l ˈɛ ʧ		BED_NOUN_1			
@@ -6038,6 +6185,7 @@ Corsican	Corsican			LAW_NOUN	leghje	lˈɛɟe	l ˈɛ ɟ e		LAW_NOUN_1
 Italian	Italian			LAW_NOUN	legge	lˈeʤʤe	l ˈe ʤ ʤ e		LAW_NOUN_1			
 Venetian	Venetian			LAW_NOUN	łéxe	ˈeze	ˈe z e		LAW_NOUN_1			
 Emilian	Emilian			LAW_NOUN	lażż	lˈað	l ˈa ð		LAW_NOUN_1			
+Romagnol	Romagnol			LAW_NOUN	lèẓ	lˈɛð	l ˈɛ ð		LAW_NOUN_1			
 Ligurian	Ligurian			LAW_NOUN	lézze	lˈeze	l ˈe z e		LAW_NOUN_1			
 Piedmontese	Piedmontese			LAW_NOUN	lege	lˈeʤe	l ˈe ʤ e		LAW_NOUN_1			
 Western Lombard	Western Lombard			LAW_NOUN	legg	lˈɛʧ	l ˈɛ ʧ		LAW_NOUN_1			
@@ -6072,6 +6220,7 @@ Italian	Italian			READ_VERB	leggere	lˈɛʤʤere	l ˈɛ ʤ ʤ e r e		READ_VERB_1
 Venetian	Venetian			READ_VERB	łèzer	ˈɛzer	ˈɛ z e r		READ_VERB_1			
 Bellunese	Bellunese			READ_VERB	lèdher	lˈɛðer	l ˈɛ ð e r		READ_VERB_1			
 Emilian	Emilian			READ_VERB	lèżer	lˈɛðer	l ˈɛ ð e r		READ_VERB_1			
+Romagnol	Romagnol			READ_VERB	lèẓar	lˈɛðɐr	l ˈɛ ð ɐ r		READ_VERB_1			
 Ligurian	Ligurian			READ_VERB	lêze	lˈeːze	l ˈeː z e		READ_VERB_1			
 Piedmontese	Piedmontese			READ_VERB	lese	lˈɛze	l ˈɛ z e		READ_VERB_1			
 Western Lombard	Western Lombard			READ_VERB	legg	lˈɛʧ	l ˈɛ ʧ		READ_VERB_1			
@@ -6106,6 +6255,7 @@ Corsican	Corsican			LION_NOUN	lione	liˈone	l i ˈo n e		LION_NOUN_1
 Italian	Italian			LION_NOUN	leone	leˈone	l e ˈo n e		LION_NOUN_1			
 Venetian	Venetian			LION_NOUN	lión	ljˈoŋ	l j ˈo ŋ		LION_NOUN_1			
 Emilian	Emilian			LION_NOUN	leån	leˈʌŋ	l e ˈʌ ŋ		LION_NOUN_1			
+Romagnol	Romagnol			LION_NOUN	liôn	liˈõũ̯	l i ˈõũ̯		LION_NOUN_1			
 Ligurian	Ligurian			LION_NOUN	lion	ljˈuŋ	l j ˈu ŋ		LION_NOUN_1			
 Piedmontese	Piedmontese			LION_NOUN	lion	ljˈuŋ	l j ˈu ŋ		LION_NOUN_1			
 Western Lombard	Western Lombard			LION_NOUN	leon	leˈũ	l e ˈũ		LION_NOUN_1			
@@ -6142,6 +6292,7 @@ Corsican	Corsican			HARE_NOUN	levra	lˈevra	l ˈe v r a		HARE_NOUN_1	TRUE
 Italian	Italian			HARE_NOUN	lepre	lˈɛpre	l ˈɛ p r e		HARE_NOUN_1			
 Venetian	Venetian			HARE_NOUN	liévro	ljˈevro	l j ˈe v r o		HARE_NOUN_1			
 Bellunese	Bellunese			HARE_NOUN	liévro	ljˈevro	l j ˈe v r o		HARE_NOUN_1			
+Romagnol	Romagnol			HARE_NOUN	lēvra	lˈeːvrɐ	l ˈeː v r ɐ		HARE_NOUN_1			
 Ligurian	Ligurian			HARE_NOUN	lêvre	lˈeːvre	l ˈeː v r e		HARE_NOUN_1			
 Piedmontese	Piedmontese			HARE_NOUN	levr	lˈɛvr	l ˈɛ v r		HARE_NOUN_1			
 Eastern Lombard	Eastern Lombard			HARE_NOUN	légor	lˈeɡor	l ˈe ɡ o r		HARE_NOUN_1			
@@ -6215,6 +6366,7 @@ Neapolitan	Neapolitan			FREE_ADJ	lìbbero	lˈibbəɾə	l ˈi b b ə ɾ ə		FREE_
 Corsican	Corsican			FREE_ADJ	liberu	lˈiberu	l ˈi b e r u		FREE_ADJ_2			
 Italian	Italian			FREE_ADJ	libero	lˈibero	l ˈi b e r o		FREE_ADJ_2			
 Emilian	Emilian			FREE_ADJ	lébber	lˈeber	l ˈe b e r		FREE_ADJ_2			
+Romagnol	Romagnol			FREE_ADJ	lèbar	lˈɛbɐr	l ˈɛ b ɐ r		FREE_ADJ_2			
 Ligurian	Ligurian			FREE_ADJ	libero	lˈiberu	l ˈi b e r u		FREE_ADJ_2			
 Piedmontese	Piedmontese			FREE_ADJ	lìber	lˈiber	l ˈi b e r		FREE_ADJ_2			
 Western Lombard	Western Lombard			FREE_ADJ	liber	lˈiːber	l ˈiː b e r		FREE_ADJ_2			
@@ -6238,6 +6390,7 @@ Sicilian	Sicilian			WOOD_NOUN	ligna	lˈiɲɲa	l ˈi ɲ ɲ a		WOOD_NOUN_1
 Italian	Italian			WOOD_NOUN	legna	lˈeɲɲa	l ˈe ɲ ɲ a		WOOD_NOUN_1			
 Venetian	Venetian			WOOD_NOUN	łegna	ˈeɲa	ˈe ɲ a		WOOD_NOUN_1			
 Emilian	Emilian			WOOD_NOUN	laggna	lˈaɲa	l ˈa ɲ a		WOOD_NOUN_1			
+Romagnol	Romagnol			WOOD_NOUN	legna	lˈɛɲɐ	l ˈɛ ɲ ɐ		WOOD_NOUN_1			
 Piedmontese	Piedmontese			WOOD_NOUN	lëgna	lˈəɲa	l ˈə ɲ a		WOOD_NOUN_1			
 Ladin	Ladin			WOOD_NOUN	legna	lˈeɲa	l ˈe ɲ a		WOOD_NOUN_1			
 Old French	Old French			WOOD_NOUN	legne	lˈẽɲə	l ˈẽ ɲ ə		WOOD_NOUN_1			
@@ -6263,6 +6416,7 @@ Italian	Italian			WOOD_NOUN	legno	lˈeɲɲo	l ˈe ɲ ɲ o		WOOD_NOUN_2
 Venetian	Venetian			WOOD_NOUN	łegno	ˈeɲo	ˈe ɲ o		WOOD_NOUN_2			
 Bellunese	Bellunese			WOOD_NOUN	lén	lˈeŋ	l ˈe ŋ		WOOD_NOUN_2			
 Emilian	Emilian			WOOD_NOUN	laggn	lˈaɲ	l ˈa ɲ		WOOD_NOUN_2			
+Romagnol	Romagnol			WOOD_NOUN	lègn	lˈɛɲ	l ˈɛ ɲ		WOOD_NOUN_2			
 Ligurian	Ligurian			WOOD_NOUN	légno	lˈeɲu	l ˈe ɲ u		WOOD_NOUN_2			
 Western Lombard	Western Lombard			WOOD_NOUN	legn	lˈeːɲ	l ˈeː ɲ		WOOD_NOUN_2			
 Eastern Lombard	Eastern Lombard			WOOD_NOUN	lègn	lˈɛɲ	l ˈɛ ɲ		WOOD_NOUN_2			
@@ -6298,6 +6452,7 @@ Italian	Italian			TONGUE_NOUN	lingua	lˈiŋɡwa	l ˈi ŋ ɡ w a		TONGUE_NOUN_1
 Venetian	Venetian			TONGUE_NOUN	łengua	ˈeŋɡwa	ˈe ŋ ɡ w a		TONGUE_NOUN_1			
 Bellunese	Bellunese			TONGUE_NOUN	léngua	lˈeŋɡwa	l ˈe ŋ ɡ w a		TONGUE_NOUN_1			
 Emilian	Emilian			TONGUE_NOUN	längua	lˈæŋɡwa	l ˈæ ŋ ɡ w a		TONGUE_NOUN_1			
+Romagnol	Romagnol			TONGUE_NOUN	lengva	lˈɛŋɡvɐ	l ˈɛ ŋ ɡ v ɐ		TONGUE_NOUN_1			
 Ligurian	Ligurian			TONGUE_NOUN	léngoa	lˈeŋɡwa	l ˈe ŋ ɡ w a		TONGUE_NOUN_1			
 Piedmontese	Piedmontese			TONGUE_NOUN	lenga	lˈɛŋɡa	l ˈɛ ŋ ɡ a		TONGUE_NOUN_1			
 Western Lombard	Western Lombard			TONGUE_NOUN	lengua	lˈẽɡwa	l ˈẽ ɡ w a		TONGUE_NOUN_1			
@@ -6334,6 +6489,7 @@ Italian	Italian			LETTER_NOUN	lettera	lˈettera	l ˈe t t e r a		LETTER_NOUN_1
 Venetian	Venetian			LETTER_NOUN	łétara	ˈetara	ˈe t a r a		LETTER_NOUN_1			
 Bellunese	Bellunese			LETTER_NOUN	létara	lˈetara	l ˈe t a r a		LETTER_NOUN_1			
 Emilian	Emilian			LETTER_NOUN	léttra	lˈetra	l ˈe t r a		LETTER_NOUN_1			
+Romagnol	Romagnol			LETTER_NOUN	lètra	lˈɛtrɐ	l ˈɛ t r ɐ		LETTER_NOUN_1			
 Ligurian	Ligurian			LETTER_NOUN	léttia	lˈetja	l ˈe t j a		LETTER_NOUN_1			
 Western Lombard	Western Lombard			LETTER_NOUN	letra	lˈetra	l ˈe t r a		LETTER_NOUN_1			
 Eastern Lombard	Eastern Lombard			LETTER_NOUN	lètra	lˈɛtra	l ˈɛ t r a		LETTER_NOUN_1			
@@ -6371,6 +6527,7 @@ Venetian	Venetian			PLACE_NOUN	liógo	jˈoɡo	j ˈo ɡ o		PLACE_NOUN_1
 Venetian	Venetian			PLACE_NOUN	lógo	ɰˈoɡo	ɰ ˈo ɡ o		PLACE_NOUN_1			
 Bellunese	Bellunese			PLACE_NOUN	lógo	lˈoɡo	l ˈo ɡ o		PLACE_NOUN_1			
 Emilian	Emilian			PLACE_NOUN	lûg	lˈuːɡ	l ˈuː ɡ		PLACE_NOUN_1			
+Romagnol	Romagnol			PLACE_NOUN	lug	lˈuɡ	l ˈu ɡ		PLACE_NOUN_1			
 Ligurian	Ligurian			PLACE_NOUN	lêugo	lˈøːɡu	l ˈøː ɡ u		PLACE_NOUN_1			
 Piedmontese	Piedmontese			PLACE_NOUN	leu	lˈø	l ˈø		PLACE_NOUN_1			
 Piedmontese	Piedmontese			PLACE_NOUN	leugh	lˈøɡ	l ˈø ɡ		PLACE_NOUN_1			
@@ -6412,6 +6569,7 @@ Italian	Italian			LONG_ADJ	lungo	lˈuŋɡo	l ˈu ŋ ɡ o		LONG_ADJ_1
 Venetian	Venetian			LONG_ADJ	łóngo	ɰˈoŋɡo	ɰ ˈo ŋ ɡ o		LONG_ADJ_1			
 Bellunese	Bellunese			LONG_ADJ	lóngo	lˈoŋɡo	l ˈo ŋ ɡ o		LONG_ADJ_1			
 Emilian	Emilian			LONG_ADJ	lóng	lˈoŋɡ	l ˈo ŋ ɡ		LONG_ADJ_1			
+Romagnol	Romagnol			LONG_ADJ	lóng	lˈoŋɡ	l ˈo ŋ ɡ		LONG_ADJ_1			
 Ligurian	Ligurian			LONG_ADJ	longo	lˈuŋɡu	l ˈu ŋ ɡ u		LONG_ADJ_1			
 Piedmontese	Piedmontese			LONG_ADJ	longh	lˈuŋɡ	l ˈu ŋ ɡ		LONG_ADJ_1			
 Western Lombard	Western Lombard			LONG_ADJ	long	lˈũk	l ˈũ k		LONG_ADJ_1			
@@ -6448,6 +6606,7 @@ Corsican	Corsican			LIGHT_NOUN	luce	lˈuʧe	l ˈu ʧ e		LIGHT_NOUN_1
 Italian	Italian			LIGHT_NOUN	luce	lˈuʧe	l ˈu ʧ e		LIGHT_NOUN_1			
 Venetian	Venetian			LIGHT_NOUN	łuxe	ɰˈuze	ɰ ˈu z e		LIGHT_NOUN_1			
 Emilian	Emilian			LIGHT_NOUN	lûṡ	lˈuːz	l ˈuː z		LIGHT_NOUN_1			
+Romagnol	Romagnol			LIGHT_NOUN	luş	lˈuz	l ˈu z		LIGHT_NOUN_1			
 Ligurian	Ligurian			LIGHT_NOUN	lûxe	lˈyːʒe	l ˈyː ʒ e		LIGHT_NOUN_1			
 Piedmontese	Piedmontese			LIGHT_NOUN	lus	lˈyz	l ˈy z		LIGHT_NOUN_1			
 Western Lombard	Western Lombard			LIGHT_NOUN	lüx	lˈyːs	l ˈyː s		LIGHT_NOUN_1			
@@ -6472,6 +6631,7 @@ Neapolitan	Neapolitan			FIGHT_NOUN	lutta	lˈuttə	l ˈu t t ə		FIGHT_NOUN_1
 Corsican	Corsican			FIGHT_NOUN	lutta	lˈutta	l ˈu t t a		FIGHT_NOUN_1			
 Italian	Italian			FIGHT_NOUN	lotta	lˈɔtta	l ˈɔ t t a		FIGHT_NOUN_1			
 Venetian	Venetian			FIGHT_NOUN	łota	ɰˈɔta	ɰ ˈɔ t a		FIGHT_NOUN_1			
+Romagnol	Romagnol			FIGHT_NOUN	lòta	lˈɔtɐ	l ˈɔ t ɐ		FIGHT_NOUN_1			
 Ligurian	Ligurian			FIGHT_NOUN	lòtta	lˈɔta	l ˈɔ t a		FIGHT_NOUN_1			
 Piedmontese	Piedmontese			FIGHT_NOUN	lòta	lˈɔta	l ˈɔ t a		FIGHT_NOUN_1			
 Eastern Lombard	Eastern Lombard			FIGHT_NOUN	lòta	lˈɔta	l ˈɔ t a		FIGHT_NOUN_1			
@@ -6497,6 +6657,7 @@ Corsican	Corsican			LIGHT_NOUN	lume	lˈume	l ˈu m e		LIGHT_NOUN_2
 Italian	Italian			LIGHT_NOUN	lume	lˈume	l ˈu m e		LIGHT_NOUN_2			
 Venetian	Venetian			LIGHT_NOUN	łume	ɰˈume	ɰ ˈu m e		LIGHT_NOUN_2			
 Emilian	Emilian			LIGHT_NOUN	lómm	lˈom	l ˈo m		LIGHT_NOUN_2			
+Romagnol	Romagnol			LIGHT_NOUN	lóm	lˈom	l ˈo m		LIGHT_NOUN_2			
 Piedmontese	Piedmontese			LIGHT_NOUN	lum	lˈym	l ˈy m		LIGHT_NOUN_2			
 Eastern Lombard	Eastern Lombard			LIGHT_NOUN	löm	lˈøm	l ˈø m		LIGHT_NOUN_2			
 Ladin	Ladin			LIGHT_NOUN	lum	lˈum	l ˈu m		LIGHT_NOUN_2			
@@ -6525,6 +6686,7 @@ Italian	Italian			MOON_NOUN	luna	lˈuna	l ˈu n a		MOON_NOUN_1
 Venetian	Venetian			MOON_NOUN	łuna	ɰˈuna	ɰ ˈu n a		MOON_NOUN_1			
 Bellunese	Bellunese			MOON_NOUN	luna	lˈuna	l ˈu n a		MOON_NOUN_1			
 Emilian	Emilian			MOON_NOUN	lóṅna	lˈoŋna	l ˈo ŋ n a		MOON_NOUN_1			
+Romagnol	Romagnol			MOON_NOUN	lôna	lˈou̯nɐ	l ˈou̯ n ɐ		MOON_NOUN_1			
 Ligurian	Ligurian			MOON_NOUN	luña	lˈyŋa	l ˈy ŋ a		MOON_NOUN_1			
 Piedmontese	Piedmontese			MOON_NOUN	lun-a	lˈyŋa	l ˈy ŋ a		MOON_NOUN_1			
 Western Lombard	Western Lombard			MOON_NOUN	luna	lˈyːna	l ˈyː n a		MOON_NOUN_1			
@@ -6607,6 +6769,7 @@ Italian	Italian			EAT_VERB	mangiare	manʤˈare	m a n ʤ ˈa r e		EAT_VERB_2	TRUE
 Venetian	Venetian			EAT_VERB	magnàr	maɲˈar	m a ɲ ˈa r		EAT_VERB_2			
 Bellunese	Bellunese			EAT_VERB	magnàr	maɲˈar	m a ɲ ˈa r		EAT_VERB_2			
 Emilian	Emilian			EAT_VERB	magnèr	maɲˈɛr	m a ɲ ˈɛ r		EAT_VERB_2			
+Romagnol	Romagnol			EAT_VERB	magnêr	mɐɲˈeə̯	m ɐ ɲ ˈeə̯		EAT_VERB_2			
 Ligurian	Ligurian			EAT_VERB	mangiâ	maŋʤˈaː	m a ŋ ʤ ˈaː		EAT_VERB_2			
 Piedmontese	Piedmontese			EAT_VERB	mangé	maŋʤˈe	m a ŋ ʤ ˈe		EAT_VERB_2			
 Western Lombard	Western Lombard			EAT_VERB	mangià	manʤˈa	m a n ʤ ˈa		EAT_VERB_2			
@@ -6638,6 +6801,7 @@ Italian	Italian			HAND_NOUN	mano	mˈano	m ˈa n o		HAND_NOUN_2
 Venetian	Venetian			HAND_NOUN	man	mˈaŋ	m ˈa ŋ		HAND_NOUN_2			
 Bellunese	Bellunese			HAND_NOUN	man	mˈaŋ	m ˈa ŋ		HAND_NOUN_2			
 Emilian	Emilian			HAND_NOUN	mân	mˈaːŋ	m ˈaː ŋ		HAND_NOUN_2			
+Romagnol	Romagnol			HAND_NOUN	mân	mˈʌ̃	m ˈʌ̃		HAND_NOUN_2			
 Ligurian	Ligurian			HAND_NOUN	man	mˈaŋ	m ˈa ŋ		HAND_NOUN_2			
 Piedmontese	Piedmontese			HAND_NOUN	man	mˈaŋ	m ˈa ŋ		HAND_NOUN_2			
 Western Lombard	Western Lombard			HAND_NOUN	man	mˈã	m ˈã		HAND_NOUN_2			
@@ -6678,6 +6842,7 @@ Italian	Italian			SEA_NOUN	mare	mˈare	m ˈa r e		SEA_NOUN_1
 Venetian	Venetian			SEA_NOUN	mar	mˈar	m ˈa r		SEA_NOUN_1			
 Bellunese	Bellunese			SEA_NOUN	mar	mˈar	m ˈa r		SEA_NOUN_1			
 Emilian	Emilian			SEA_NOUN	mèr	mˈɛr	m ˈɛ r		SEA_NOUN_1			
+Romagnol	Romagnol			SEA_NOUN	mêr	mˈeə̯r	m ˈeə̯ r		SEA_NOUN_1			
 Ligurian	Ligurian			SEA_NOUN	mâ	mˈaː	m ˈaː		SEA_NOUN_1			
 Western Lombard	Western Lombard			SEA_NOUN	mar	mˈɑːr	m ˈɑː r		SEA_NOUN_1			
 Eastern Lombard	Eastern Lombard			SEA_NOUN	mar	mˈar	m ˈa r		SEA_NOUN_1			
@@ -6709,6 +6874,7 @@ Italian	Italian			MOTHER_NOUN	madre	mˈadre	m ˈa d r e		MOTHER_NOUN_1
 Venetian	Venetian			MOTHER_NOUN	mare	mˈare	m ˈa r e		MOTHER_NOUN_1			
 Bellunese	Bellunese			MOTHER_NOUN	mare	mˈare	m ˈa r e		MOTHER_NOUN_1			
 Emilian	Emilian			MOTHER_NOUN	mèder	mˈɛder	m ˈɛ d e r		MOTHER_NOUN_1			
+Romagnol	Romagnol			MOTHER_NOUN	mêdra	mˈeə̯drɐ	m ˈeə̯ d r ɐ		MOTHER_NOUN_1			
 Ligurian	Ligurian			MOTHER_NOUN	moæ	mwˈɛː	m w ˈɛː		MOTHER_NOUN_1			
 Western Lombard	Western Lombard			MOTHER_NOUN	mader	mˈɑːder	m ˈɑː d e r		MOTHER_NOUN_1			
 Eastern Lombard	Eastern Lombard			MOTHER_NOUN	màder	mˈader	m ˈa d e r		MOTHER_NOUN_1			
@@ -6771,6 +6937,7 @@ Aromanian	Aromanian			I_OBL_PRON	mi	mˈi	m ˈi		I_OBL_PRON_1
 Sicilian	Sicilian			I_OBL_PRON	mi	mˈi	m ˈi		I_OBL_PRON_1			
 Corsican	Corsican			I_OBL_PRON	mè	mˈɛ	m ˈɛ		I_OBL_PRON_1			
 Italian	Italian			I_OBL_PRON	me	mˈe	m ˈe		I_OBL_PRON_1			
+Romagnol	Romagnol			I_OBL_PRON	me	mˈɛ	m ˈɛ		I_OBL_PRON_1			
 Ligurian	Ligurian			I_OBL_PRON	mi	mˈi	m ˈi		I_OBL_PRON_1			
 Western Lombard	Western Lombard			I_OBL_PRON	mi	mˈi	m ˈi		I_OBL_PRON_1			
 Eastern Lombard	Eastern Lombard			I_OBL_PRON	mé	mˈe	m ˈe		I_OBL_PRON_1			
@@ -6817,6 +6984,7 @@ Neapolitan	Neapolitan			HALF_NOUN	metà	mətˈa	m ə t ˈa		HALF_NOUN_1
 Corsican	Corsican			HALF_NOUN	metà	metˈa	m e t ˈa		HALF_NOUN_1			
 Italian	Italian			HALF_NOUN	metà	metˈa	m e t ˈa		HALF_NOUN_1			
 Emilian	Emilian			HALF_NOUN	metè	metˈɛ	m e t ˈɛ		HALF_NOUN_1			
+Romagnol	Romagnol			HALF_NOUN	mitê	mitˈeə̯	m i t ˈeə̯		HALF_NOUN_1			
 Ligurian	Ligurian			HALF_NOUN	meitæ	mejtˈɛː	m e j t ˈɛː		HALF_NOUN_1			
 Western Lombard	Western Lombard			HALF_NOUN	metaa	metˈɑː	m e t ˈɑː		HALF_NOUN_1			
 Eastern Lombard	Eastern Lombard			HALF_NOUN	meitàt	mejtˈat	m e j t ˈa t		HALF_NOUN_1			
@@ -6853,6 +7021,7 @@ Italian	Italian			MIDDLE_NOUN	mezzo	mˈɛʣʣo	m ˈɛ ʣ ʣ o		MIDDLE_NOUN_1
 Venetian	Venetian			MIDDLE_NOUN	mèxo	mˈɛzo	m ˈɛ z o		MIDDLE_NOUN_1			
 Bellunese	Bellunese			MIDDLE_NOUN	mèdho	mˈɛðo	m ˈɛ ð o		MIDDLE_NOUN_1			
 Emilian	Emilian			MIDDLE_NOUN	mèż	mˈɛð	m ˈɛ ð		MIDDLE_NOUN_1			
+Romagnol	Romagnol			MIDDLE_NOUN	mëẓ	mˈɛə̯ð	m ˈɛə̯ ð		MIDDLE_NOUN_1			
 Ligurian	Ligurian			MIDDLE_NOUN	mêzo	mˈeːzu	m ˈeː z u		MIDDLE_NOUN_1			
 Western Lombard	Western Lombard			MIDDLE_NOUN	mezz	mˈɛs	m ˈɛ s		MIDDLE_NOUN_1			
 Eastern Lombard	Eastern Lombard			MIDDLE_NOUN	mès	mˈɛs	m ˈɛ s		MIDDLE_NOUN_1			
@@ -6915,6 +7084,7 @@ Italian	Italian			BETTER_ADV	meglio	mˈɛʎʎo	m ˈɛ ʎ ʎ o		BETTER_ADV_1
 Venetian	Venetian			BETTER_ADV	mègio	mˈɛʤo	m ˈɛ ʤ o		BETTER_ADV_1			
 Bellunese	Bellunese			BETTER_ADV	mèjo	mˈɛjo	m ˈɛ j o		BETTER_ADV_1			
 Emilian	Emilian			BETTER_ADV	méi	mˈej	m ˈe j		BETTER_ADV_1			
+Romagnol	Romagnol			BETTER_ADV	mèj	mˈɛj	m ˈɛ j		BETTER_ADV_1			
 Ligurian	Ligurian			BETTER_ADV	mêgio	mˈeːʤu	m ˈeː ʤ u		BETTER_ADV_1			
 Piedmontese	Piedmontese			BETTER_ADV	mej	mˈej	m ˈe j		BETTER_ADV_1			
 Western Lombard	Western Lombard			BETTER_ADV	meji	mˈeːʒi	m ˈeː ʒ i		BETTER_ADV_1			
@@ -6936,6 +7106,7 @@ Corsican	Corsican			CRUMB_NOUN	micca	mˈikka	m ˈi k k a		CRUMB_NOUN_1
 Italian	Italian			CRUMB_NOUN	mica	mˈika	m ˈi k a		CRUMB_NOUN_1			
 Venetian	Venetian			CRUMB_NOUN	miga	mˈiɡa	m ˈi ɡ a		CRUMB_NOUN_1			
 Emilian	Emilian			CRUMB_NOUN	mégga	mˈeɡa	m ˈe ɡ a		CRUMB_NOUN_1			
+Romagnol	Romagnol			CRUMB_NOUN	miga	mˈiɡɐ	m ˈi ɡ ɐ		CRUMB_NOUN_1			
 Ligurian	Ligurian			CRUMB_NOUN	miga	mˈiːɡa	m ˈiː ɡ a		CRUMB_NOUN_1			
 Piedmontese	Piedmontese			CRUMB_NOUN	mica	mˈika	m ˈi k a		CRUMB_NOUN_1			
 Eastern Lombard	Eastern Lombard			CRUMB_NOUN	mia	mˈia	m ˈi a		CRUMB_NOUN_1			
@@ -6965,6 +7136,7 @@ Corsican	Corsican			THOUSAND_NUM	mille	mˈille	m ˈi l l e		THOUSAND_NUM_1
 Italian	Italian			THOUSAND_NUM	mille	mˈille	m ˈi l l e		THOUSAND_NUM_1			
 Venetian	Venetian			THOUSAND_NUM	mìe	mˈie	m ˈi e		THOUSAND_NUM_1			
 Emilian	Emilian			THOUSAND_NUM	méll	mˈel	m ˈe l		THOUSAND_NUM_1			
+Romagnol	Romagnol			THOUSAND_NUM	mèl	mˈɛl	m ˈɛ l		THOUSAND_NUM_1			
 Ligurian	Ligurian			THOUSAND_NUM	mille	mˈile	m ˈi l e		THOUSAND_NUM_1			
 Piedmontese	Piedmontese			THOUSAND_NUM	mila	mˈila	m ˈi l a		THOUSAND_NUM_1			
 Western Lombard	Western Lombard			THOUSAND_NUM	mil	mˈiːl	m ˈiː l		THOUSAND_NUM_1			
@@ -6999,6 +7171,7 @@ Italian	Italian			MOUNTAIN_NOUN	montagna	montˈaɲɲa	m o n t ˈa ɲ ɲ a		MOUNT
 Venetian	Venetian			MOUNTAIN_NOUN	montàgna	moŋtˈaɲa	m o ŋ t ˈa ɲ a		MOUNTAIN_NOUN_1			
 Bellunese	Bellunese			MOUNTAIN_NOUN	montàgna	moŋtˈaɲa	m o ŋ t ˈa ɲ a		MOUNTAIN_NOUN_1			
 Emilian	Emilian			MOUNTAIN_NOUN	muntâgna	muŋtˈaːɲa	m u ŋ t ˈaː ɲ a		MOUNTAIN_NOUN_1			
+Romagnol	Romagnol			MOUNTAIN_NOUN	muntâgna	muntˈʌ̃ɲɐ	m u n t ˈʌ̃ ɲ ɐ		MOUNTAIN_NOUN_1			
 Ligurian	Ligurian			MOUNTAIN_NOUN	montagna	muŋtˈaɲa	m u ŋ t ˈa ɲ a		MOUNTAIN_NOUN_1			
 Piedmontese	Piedmontese			MOUNTAIN_NOUN	montagna	muŋtˈaɲa	m u ŋ t ˈa ɲ a		MOUNTAIN_NOUN_1			
 Western Lombard	Western Lombard			MOUNTAIN_NOUN	montagna	mũtˈɑːɲa	m ũ t ˈɑː ɲ a		MOUNTAIN_NOUN_1			
@@ -7058,6 +7231,7 @@ Italian	Italian			DIE_VERB	morire	morˈire	m o r ˈi r e		DIE_VERB_1
 Venetian	Venetian			DIE_VERB	morìr	morˈir	m o r ˈi r		DIE_VERB_1			
 Bellunese	Bellunese			DIE_VERB	morìr	morˈir	m o r ˈi r		DIE_VERB_1			
 Emilian	Emilian			DIE_VERB	murîr	murˈiːr	m u r ˈiː r		DIE_VERB_1			
+Romagnol	Romagnol			DIE_VERB	murir	murˈi	m u r ˈi		DIE_VERB_1			
 Ligurian	Ligurian			DIE_VERB	muî	mwˈiː	m w ˈiː		DIE_VERB_1			
 Piedmontese	Piedmontese			DIE_VERB	meuire	mˈøjre	m ˈø j r e		DIE_VERB_1			
 Western Lombard	Western Lombard			DIE_VERB	morì	murˈi	m u r ˈi		DIE_VERB_1			
@@ -7119,6 +7293,7 @@ Italian	Italian			DEATH_NOUN	morte	mˈɔrte	m ˈɔ r t e		DEATH_NOUN_1
 Venetian	Venetian			DEATH_NOUN	mòrte	mˈɔrte	m ˈɔ r t e		DEATH_NOUN_1			
 Bellunese	Bellunese			DEATH_NOUN	mòrt	mˈɔrt	m ˈɔ r t		DEATH_NOUN_1			
 Emilian	Emilian			DEATH_NOUN	môrt	mˈɔːrt	m ˈɔː r t		DEATH_NOUN_1			
+Romagnol	Romagnol			DEATH_NOUN	mörta	mˈɔə̯rtɐ	m ˈɔə̯ r t ɐ		DEATH_NOUN_1			
 Ligurian	Ligurian			DEATH_NOUN	mòrte	mˈɔːrte	m ˈɔː r t e		DEATH_NOUN_1			
 Piedmontese	Piedmontese			DEATH_NOUN	mòrte	mˈɔrte	m ˈɔ r t e		DEATH_NOUN_1			
 Western Lombard	Western Lombard			DEATH_NOUN	mort	mˈɔrt	m ˈɔ r t		DEATH_NOUN_1			
@@ -7156,6 +7331,7 @@ Corsican	Corsican			WOMAN_WIFE_NOUN	moglia	mˈɔʎa	m ˈɔ ʎ a		WOMAN_WIFE_NOUN
 Italian	Italian			WOMAN_WIFE_NOUN	moglie	mˈoʎʎe	m ˈo ʎ ʎ e		WOMAN_WIFE_NOUN_1			
 Venetian	Venetian			WOMAN_WIFE_NOUN	mugèr	muʤˈɛr	m u ʤ ˈɛ r		WOMAN_WIFE_NOUN_1			
 Emilian	Emilian			WOMAN_WIFE_NOUN	mujêr	mujˈɛːr	m u j ˈɛː r		WOMAN_WIFE_NOUN_1			
+Romagnol	Romagnol			WOMAN_WIFE_NOUN	mój	mˈoj	m ˈo j		WOMAN_WIFE_NOUN_1			
 Ligurian	Ligurian			WOMAN_WIFE_NOUN	moggê	muʤˈeː	m u ʤ ˈeː		WOMAN_WIFE_NOUN_1			
 Piedmontese	Piedmontese			WOMAN_WIFE_NOUN	mojé	mujˈe	m u j ˈe		WOMAN_WIFE_NOUN_1			
 Western Lombard	Western Lombard			WOMAN_WIFE_NOUN	mié	mjˈe	m j ˈe		WOMAN_WIFE_NOUN_1			
@@ -7202,6 +7378,7 @@ Italian	Italian			FLY_NOUN	mosca	mˈoska	m ˈo s k a		FLY_NOUN_1
 Venetian	Venetian			FLY_NOUN	mósca	mˈoska	m ˈo s k a		FLY_NOUN_1			
 Bellunese	Bellunese			FLY_NOUN	mósca	mˈoska	m ˈo s k a		FLY_NOUN_1			
 Emilian	Emilian			FLY_NOUN	måssca	mˈʌska	m ˈʌ s k a		FLY_NOUN_1			
+Romagnol	Romagnol			FLY_NOUN	mósca	mˈoskɐ	m ˈo s k ɐ		FLY_NOUN_1			
 Ligurian	Ligurian			FLY_NOUN	mósca	mˈuska	m ˈu s k a		FLY_NOUN_1			
 Piedmontese	Piedmontese			FLY_NOUN	mosca	mˈuska	m ˈu s k a		FLY_NOUN_1			
 Western Lombard	Western Lombard			FLY_NOUN	mosca	mˈuska	m ˈu s k a		FLY_NOUN_1			
@@ -7249,6 +7426,7 @@ Italian	Italian			NOSE_NOUN	naso	nˈazo	n ˈa z o		NOSE_NOUN_2
 Venetian	Venetian			NOSE_NOUN	naxo	nˈazo	n ˈa z o		NOSE_NOUN_2			
 Bellunese	Bellunese			NOSE_NOUN	nas	nˈas	n ˈa s		NOSE_NOUN_2			
 Emilian	Emilian			NOSE_NOUN	nèṡ	nˈɛz	n ˈɛ z		NOSE_NOUN_2			
+Romagnol	Romagnol			NOSE_NOUN	nêş	nˈeə̯z	n ˈeə̯ z		NOSE_NOUN_2			
 Ligurian	Ligurian			NOSE_NOUN	naso	nˈaːzu	n ˈaː z u		NOSE_NOUN_2			
 Piedmontese	Piedmontese			NOSE_NOUN	nas	nˈaz	n ˈa z		NOSE_NOUN_2			
 Western Lombard	Western Lombard			NOSE_NOUN	nas	nˈɑːs	n ˈɑː s		NOSE_NOUN_2			
@@ -7310,6 +7488,7 @@ Corsican	Corsican			FOG_NOUN	nebbia	nˈebbja	n ˈe b b j a		FOG_NOUN_1
 Italian	Italian			FOG_NOUN	nebbia	nˈebbja	n ˈe b b j a		FOG_NOUN_1			
 Venetian	Venetian			FOG_NOUN	nébia	nˈebja	n ˈe b j a		FOG_NOUN_1			
 Emilian	Emilian			FOG_NOUN	nabbia	nˈabja	n ˈa b j a		FOG_NOUN_1			
+Romagnol	Romagnol			FOG_NOUN	nèbia	nˈɛbjɐ	n ˈɛ b j ɐ		FOG_NOUN_1			
 Ligurian	Ligurian			FOG_NOUN	nêgia	nˈeːʤa	n ˈeː ʤ a		FOG_NOUN_1			
 Piedmontese	Piedmontese			FOG_NOUN	nebia	nˈebja	n ˈe b j a		FOG_NOUN_1			
 Western Lombard	Western Lombard			FOG_NOUN	nebia	nˈɛbja	n ˈɛ b j a		FOG_NOUN_1			
@@ -7354,6 +7533,7 @@ Italian	Italian			BLACK_ADJ	nero	nˈero	n ˈe r o		BLACK_ADJ_1
 Venetian	Venetian			BLACK_ADJ	négro	nˈeɡro	n ˈe ɡ r o		BLACK_ADJ_1			
 Bellunese	Bellunese			BLACK_ADJ	négro	nˈeɡro	n ˈe ɡ r o		BLACK_ADJ_1			
 Emilian	Emilian			BLACK_ADJ	naigher	nˈajɡer	n ˈa j ɡ e r		BLACK_ADJ_1			
+Romagnol	Romagnol			BLACK_ADJ	nìgar	nˈiɡɐr	n ˈi ɡ ɐ r		BLACK_ADJ_1			
 Ligurian	Ligurian			BLACK_ADJ	néigro	nˈejɡru	n ˈe j ɡ r u		BLACK_ADJ_1			
 Piedmontese	Piedmontese			BLACK_ADJ	neir	nˈɛjr	n ˈɛ j r		BLACK_ADJ_1			
 Western Lombard	Western Lombard			BLACK_ADJ	neger	nˈeːɡer	n ˈeː ɡ e r		BLACK_ADJ_1			
@@ -7393,6 +7573,7 @@ Neapolitan	Neapolitan			SNOW_NOUN	neva	nˈevə	n ˈe v ə		SNOW_NOUN_2
 Italian	Italian			SNOW_NOUN	neve	nˈeve	n ˈe v e		SNOW_NOUN_2			
 Bellunese	Bellunese			SNOW_NOUN	néf	nˈef	n ˈe f		SNOW_NOUN_2			
 Emilian	Emilian			SNOW_NOUN	naiv	nˈajv	n ˈa j v		SNOW_NOUN_2			
+Romagnol	Romagnol			SNOW_NOUN	nēva	nˈeːvɐ	n ˈeː v ɐ		SNOW_NOUN_2			
 Ligurian	Ligurian			SNOW_NOUN	neive	nˈejve	n ˈe j v e		SNOW_NOUN_2			
 Piedmontese	Piedmontese			SNOW_NOUN	nef	nˈef	n ˈe f		SNOW_NOUN_2			
 Western Lombard	Western Lombard			SNOW_NOUN	nev	nˈeːf	n ˈeː f		SNOW_NOUN_2			
@@ -7429,6 +7610,7 @@ Italian	Italian			NIGHT_NOUN	notte	nˈɔtte	n ˈɔ t t e		NIGHT_NOUN_1
 Venetian	Venetian			NIGHT_NOUN	nòte	nˈɔte	n ˈɔ t e		NIGHT_NOUN_1			
 Bellunese	Bellunese			NIGHT_NOUN	nòt	nˈɔt	n ˈɔ t		NIGHT_NOUN_1			
 Emilian	Emilian			NIGHT_NOUN	nòt	nˈɔt	n ˈɔ t		NIGHT_NOUN_1			
+Romagnol	Romagnol			NIGHT_NOUN	nòta	nˈɔtɐ	n ˈɔ t ɐ		NIGHT_NOUN_1			
 Ligurian	Ligurian			NIGHT_NOUN	néutte	nˈøte	n ˈø t e		NIGHT_NOUN_1			
 Piedmontese	Piedmontese			NIGHT_NOUN	neuit	nˈøjt	n ˈø j t		NIGHT_NOUN_1			
 Western Lombard	Western Lombard			NIGHT_NOUN	nott	nˈɔt	n ˈɔ t		NIGHT_NOUN_1			
@@ -7458,6 +7640,7 @@ Sicilian	Sicilian			KNOT_NOUN	nodu	nˈɔɾʊ	n ˈɔ ɾ ʊ		KNOT_NOUN_1
 Corsican	Corsican			KNOT_NOUN	nodu	nˈɔdu	n ˈɔ d u		KNOT_NOUN_1			
 Italian	Italian			KNOT_NOUN	nodo	nˈɔdo	n ˈɔ d o		KNOT_NOUN_1			
 Emilian	Emilian			KNOT_NOUN	nåud	nˈʌu̯d	n ˈʌu̯ d		KNOT_NOUN_1			
+Romagnol	Romagnol			KNOT_NOUN	nôd	nˈou̯d	n ˈou̯ d		KNOT_NOUN_1			
 Piedmontese	Piedmontese			KNOT_NOUN	neu	nˈø	n ˈø		KNOT_NOUN_1			
 Old French	Old French			KNOT_NOUN	neu	nˈew	n ˈe w		KNOT_NOUN_1			
 French	French			KNOT_NOUN	nœud	nø	n ø		KNOT_NOUN_1			
@@ -7480,6 +7663,7 @@ Corsican	Corsican			NAME_NOUN	nome	nˈɔme	n ˈɔ m e		NAME_NOUN_2
 Italian	Italian			NAME_NOUN	nome	nˈome	n ˈo m e		NAME_NOUN_2			
 Venetian	Venetian			NAME_NOUN	nòme	nˈɔme	n ˈɔ m e		NAME_NOUN_2			
 Emilian	Emilian			NAME_NOUN	nómm	nˈom	n ˈo m		NAME_NOUN_2			
+Romagnol	Romagnol			NAME_NOUN	nóm	nˈom	n ˈo m		NAME_NOUN_2			
 Ligurian	Ligurian			NAME_NOUN	nomme	nˈume	n ˈu m e		NAME_NOUN_2			
 Piedmontese	Piedmontese			NAME_NOUN	nom	nˈɔm	n ˈɔ m		NAME_NOUN_2			
 Western Lombard	Western Lombard			NAME_NOUN	nomm	nˈɔm	n ˈɔ m		NAME_NOUN_2			
@@ -7576,6 +7760,7 @@ Corsican	Corsican			OUR_ADJ	nostro	nˈostro	n ˈo s t r o		OUR_ADJ_1
 Italian	Italian			OUR_ADJ	nostro	nˈɔstro	n ˈɔ s t r o		OUR_ADJ_1			
 Venetian	Venetian			OUR_ADJ	nostro	nˈɔstro	n ˈɔ s t r o		OUR_ADJ_1			
 Emilian	Emilian			OUR_ADJ	nòster	nˈɔster	n ˈɔ s t e r		OUR_ADJ_1			
+Romagnol	Romagnol			OUR_ADJ	nòst	nˈɔst	n ˈɔ s t		OUR_ADJ_1			
 Ligurian	Ligurian			OUR_ADJ	nòstro	nˈɔstru	n ˈɔ s t r u		OUR_ADJ_1			
 Piedmontese	Piedmontese			OUR_ADJ	nòst	nˈɔst	n ˈɔ s t		OUR_ADJ_1			
 Piedmontese	Piedmontese			OUR_ADJ	nòstr	nˈɔstr	n ˈɔ s t r		OUR_ADJ_1			
@@ -7613,6 +7798,7 @@ Corsican	Corsican			NINE_NUM	nove	nˈɔve	n ˈɔ v e		NINE_NUM_1
 Italian	Italian			NINE_NUM	nove	nˈɔve	n ˈɔ v e		NINE_NUM_1			
 Venetian	Venetian			NINE_NUM	nòve	nˈɔve	n ˈɔ v e		NINE_NUM_1			
 Emilian	Emilian			NINE_NUM	nôv	nˈɔːv	n ˈɔː v		NINE_NUM_1			
+Romagnol	Romagnol			NINE_NUM	növ	nˈɔə̯v	n ˈɔə̯ v		NINE_NUM_1			
 Ligurian	Ligurian			NINE_NUM	nêuve	nˈøːve	n ˈøː v e		NINE_NUM_1			
 Piedmontese	Piedmontese			NINE_NUM	neuv	nˈøv	n ˈø v		NINE_NUM_1			
 Western Lombard	Western Lombard			NINE_NUM	nœv	nˈøːf	n ˈøː f		NINE_NUM_1			
@@ -7651,6 +7837,7 @@ Italian	Italian			NEW_ADJ	nuovo	nwˈɔvo	n w ˈɔ v o		NEW_ADJ_1
 Venetian	Venetian			NEW_ADJ	nóvo	nˈovo	n ˈo v o		NEW_ADJ_1			
 Bellunese	Bellunese			NEW_ADJ	nóvo	nˈovo	n ˈo v o		NEW_ADJ_1			
 Emilian	Emilian			NEW_ADJ	nôv	nˈɔːv	n ˈɔː v		NEW_ADJ_1			
+Romagnol	Romagnol			NEW_ADJ	növ	nˈɔə̯v	n ˈɔə̯ v		NEW_ADJ_1			
 Ligurian	Ligurian			NEW_ADJ	nêuvo	nˈøːvu	n ˈøː v u		NEW_ADJ_1			
 Piedmontese	Piedmontese			NEW_ADJ	neuv	nˈøv	n ˈø v		NEW_ADJ_1			
 Western Lombard	Western Lombard			NEW_ADJ	nœv	nˈøːf	n ˈøː f		NEW_ADJ_1			
@@ -7701,6 +7888,7 @@ Italian	Italian			CLOUD_NOUN	nuvola	nˈuvola	n ˈu v o l a		CLOUD_NOUN_2
 Venetian	Venetian			CLOUD_NOUN	nìoƚa	nˈioɰa	n ˈi o ɰ a		CLOUD_NOUN_2			
 Bellunese	Bellunese			CLOUD_NOUN	nèola	nˈɛola	n ˈɛ o l a		CLOUD_NOUN_2			
 Emilian	Emilian			CLOUD_NOUN	nóvvla	nˈovla	n ˈo v l a		CLOUD_NOUN_2			
+Romagnol	Romagnol			CLOUD_NOUN	nùvla	nˈuvlɐ	n ˈu v l ɐ		CLOUD_NOUN_2			
 Ligurian	Ligurian			CLOUD_NOUN	nûvia	nˈyːvja	n ˈyː v j a		CLOUD_NOUN_2			
 Piedmontese	Piedmontese			CLOUD_NOUN	nivola	nˈivula	n ˈi v u l a		CLOUD_NOUN_2			
 Western Lombard	Western Lombard			CLOUD_NOUN	nivola	nˈivula	n ˈi v u l a		CLOUD_NOUN_2			
@@ -7735,6 +7923,7 @@ Corsican	Corsican			NUT_NOUN	noce	nˈɔʧe	n ˈɔ ʧ e		NUT_NOUN_2
 Italian	Italian			NUT_NOUN	noce	nˈoʧe	n ˈo ʧ e		NUT_NOUN_2			
 Venetian	Venetian			NUT_NOUN	nóxa	nˈoza	n ˈo z a		NUT_NOUN_2			
 Emilian	Emilian			NUT_NOUN	nûṡ	nˈuːz	n ˈuː z		NUT_NOUN_2			
+Romagnol	Romagnol			NUT_NOUN	nôşa	nˈou̯zɐ	n ˈou̯ z ɐ		NUT_NOUN_2			
 Ligurian	Ligurian			NUT_NOUN	nôxe	nˈuːʒe	n ˈuː ʒ e		NUT_NOUN_2			
 Piedmontese	Piedmontese			NUT_NOUN	nos	nˈuz	n ˈu z		NUT_NOUN_2			
 Western Lombard	Western Lombard			NUT_NOUN	nôs	nˈuːs	n ˈuː s		NUT_NOUN_2			
@@ -7756,6 +7945,7 @@ Sicilian	Sicilian			DARK_ADJ	scuru	ʃkˈuɾʊ	ʃ k ˈu ɾ ʊ		DARK_ADJ_1
 Neapolitan	Neapolitan			DARK_ADJ	scuro	ʃkˈuɾə	ʃ k ˈu ɾ ə		DARK_ADJ_1			
 Italian	Italian			DARK_ADJ	scuro	skˈuro	s k ˈu r o		DARK_ADJ_1			
 Bellunese	Bellunese			DARK_ADJ	scur	skˈur	s k ˈu r		DARK_ADJ_1			
+Romagnol	Romagnol			DARK_ADJ	scur	skˈur	s k ˈu r		DARK_ADJ_1			
 Ligurian	Ligurian			DARK_ADJ	scuo	skˈyːu	s k ˈyː u		DARK_ADJ_1			
 Piedmontese	Piedmontese			DARK_ADJ	scur	skˈyr	s k ˈy r		DARK_ADJ_1			
 Western Lombard	Western Lombard			DARK_ADJ	scur	skˈyːr	s k ˈyː r		DARK_ADJ_1			
@@ -7808,6 +7998,7 @@ Italian	Italian			EIGHT_NUM	otto	ˈɔtto	ˈɔ t t o		EIGHT_NUM_1
 Venetian	Venetian			EIGHT_NUM	òto	ˈɔto	ˈɔ t o		EIGHT_NUM_1			
 Bellunese	Bellunese			EIGHT_NUM	òt	ˈɔt	ˈɔ t		EIGHT_NUM_1			
 Emilian	Emilian			EIGHT_NUM	òt	ˈɔt	ˈɔ t		EIGHT_NUM_1			
+Romagnol	Romagnol			EIGHT_NUM	ot	ˈɔt	ˈɔ t		EIGHT_NUM_1			
 Ligurian	Ligurian			EIGHT_NUM	éutto	ˈøtu	ˈø t u		EIGHT_NUM_1			
 Piedmontese	Piedmontese			EIGHT_NUM	eut	ˈøt	ˈø t		EIGHT_NUM_1			
 Western Lombard	Western Lombard			EIGHT_NUM	vòt	vˈɔt	v ˈɔ t		EIGHT_NUM_1			
@@ -7844,6 +8035,7 @@ Corsican	Corsican			EYES_NOUN	ochji	ˈoci	ˈo c i		EYES_NOUN_1
 Italian	Italian			EYES_NOUN	occhi	ˈɔkki	ˈɔ k k i		EYES_NOUN_1			
 Venetian	Venetian			EYES_NOUN	òci	ˈɔʧi	ˈɔ ʧ i		EYES_NOUN_1			
 Emilian	Emilian			EYES_NOUN	ûc'	ˈuːʧ	ˈuː ʧ		EYES_NOUN_1			
+Romagnol	Romagnol			EYES_NOUN	ócc	ˈoʧ	ˈo ʧ		EYES_NOUN_1			
 Ligurian	Ligurian			EYES_NOUN	éuggi	ˈøʤi	ˈø ʤ i		EYES_NOUN_1			
 Piedmontese	Piedmontese			EYES_NOUN	euj	ˈøj	ˈø j		EYES_NOUN_1			
 Western Lombard	Western Lombard			EYES_NOUN	œgg	ˈœʧ	ˈœ ʧ		EYES_NOUN_1			
@@ -7880,6 +8072,7 @@ Italian	Italian			EYE_NOUN	occhio	ˈɔkkjo	ˈɔ k k j o		EYE_NOUN_1
 Venetian	Venetian			EYE_NOUN	òcio	ˈɔʧo	ˈɔ ʧ o		EYE_NOUN_1			
 Bellunese	Bellunese			EYE_NOUN	òcio	ˈɔʧo	ˈɔ ʧ o		EYE_NOUN_1			
 Emilian	Emilian			EYE_NOUN	òc'	ˈɔʧ	ˈɔ ʧ		EYE_NOUN_1			
+Romagnol	Romagnol			EYE_NOUN	òcc	ˈɔʧ	ˈɔ ʧ		EYE_NOUN_1			
 Ligurian	Ligurian			EYE_NOUN	éuggio	ˈøʤu	ˈø ʤ u		EYE_NOUN_1			
 Piedmontese	Piedmontese			EYE_NOUN	euj	ˈøj	ˈø j		EYE_NOUN_1			
 Western Lombard	Western Lombard			EYE_NOUN	œgg	ˈœʧ	ˈœ ʧ		EYE_NOUN_1			
@@ -7912,6 +8105,7 @@ Italian	Italian			ODOR_NOUN	odore	odˈore	o d ˈo r e		ODOR_NOUN_1
 Venetian	Venetian			ODOR_NOUN	odór	odˈor	o d ˈo r		ODOR_NOUN_1			
 Bellunese	Bellunese			ODOR_NOUN	odór	odˈor	o d ˈo r		ODOR_NOUN_1			
 Bellunese	Bellunese			ODOR_NOUN	udór	udˈor	u d ˈo r		ODOR_NOUN_1			
+Romagnol	Romagnol			ODOR_NOUN	odôr	odˈou̯r	o d ˈou̯ r		ODOR_NOUN_1			
 Ligurian	Ligurian			ODOR_NOUN	ödô	ɔːdˈuː	ɔː d ˈuː		ODOR_NOUN_1			
 Piedmontese	Piedmontese			ODOR_NOUN	odor	udˈur	u d ˈu r		ODOR_NOUN_1			
 Western Lombard	Western Lombard			ODOR_NOUN	odor	udˈuːr	u d ˈuː r		ODOR_NOUN_1			
@@ -7942,6 +8136,7 @@ Sicilian	Sicilian			WORK_NOUN	òpira	ˈɔpɪɾa	ˈɔ p ɪ ɾ a		WORK_NOUN_1
 Corsican	Corsican			WORK_NOUN	opera	ˈɔpera	ˈɔ p e r a		WORK_NOUN_1			
 Italian	Italian			WORK_NOUN	opera	ˈɔpera	ˈɔ p e r a		WORK_NOUN_1			
 Emilian	Emilian			WORK_NOUN	ôvra	ˈɔːvra	ˈɔː v r a		WORK_NOUN_1			
+Romagnol	Romagnol			WORK_NOUN	övra	ˈɔə̯vrɐ	ˈɔə̯ v r ɐ		WORK_NOUN_1			
 Ligurian	Ligurian			WORK_NOUN	euvia	ˈøːvja	ˈøː v j a		WORK_NOUN_1			
 Piedmontese	Piedmontese			WORK_NOUN	euvra	ˈøvra	ˈø v r a		WORK_NOUN_1			
 Western Lombard	Western Lombard			WORK_NOUN	œvra	ˈœvra	ˈœ v r a		WORK_NOUN_1			
@@ -8000,6 +8195,7 @@ Italian	Italian			BONE_NOUN	osso	ˈɔsso	ˈɔ s s o		BONE_NOUN_1
 Venetian	Venetian			BONE_NOUN	òso	ˈɔso	ˈɔ s o		BONE_NOUN_1			
 Bellunese	Bellunese			BONE_NOUN	òs	ˈɔs	ˈɔ s		BONE_NOUN_1			
 Emilian	Emilian			BONE_NOUN	òs	ˈɔs	ˈɔ s		BONE_NOUN_1			
+Romagnol	Romagnol			BONE_NOUN	òs	ˈɔs	ˈɔ s		BONE_NOUN_1			
 Ligurian	Ligurian			BONE_NOUN	òsso	ˈɔsu	ˈɔ s u		BONE_NOUN_1			
 Piedmontese	Piedmontese			BONE_NOUN	oss	ˈɔs	ˈɔ s		BONE_NOUN_1			
 Western Lombard	Western Lombard			BONE_NOUN	oss	ˈɔs	ˈɔ s		BONE_NOUN_1			
@@ -8058,6 +8254,7 @@ Italian	Italian			EGG_NOUN	uovo	wˈɔvo	w ˈɔ v o		EGG_NOUN_1
 Venetian	Venetian			EGG_NOUN	vóvo	vˈovo	v ˈo v o		EGG_NOUN_1			
 Bellunese	Bellunese			EGG_NOUN	vóvo	vˈovo	v ˈo v o		EGG_NOUN_1			
 Emilian	Emilian			EGG_NOUN	ôv	ˈɔːv	ˈɔː v		EGG_NOUN_1			
+Romagnol	Romagnol			EGG_NOUN	öv	ˈɔə̯v	ˈɔə̯ v		EGG_NOUN_1			
 Ligurian	Ligurian			EGG_NOUN	êuvo	ˈøːvu	ˈøː v u		EGG_NOUN_1			
 Piedmontese	Piedmontese			EGG_NOUN	euv	ˈøv	ˈø v		EGG_NOUN_1			
 Western Lombard	Western Lombard			EGG_NOUN	œv	ˈøːf	ˈøː f		EGG_NOUN_1			
@@ -8094,6 +8291,7 @@ Corsican	Corsican			PEACE_NOUN	pace	pˈaʧe	p ˈa ʧ e		PEACE_NOUN_1
 Italian	Italian			PEACE_NOUN	pace	pˈaʧe	p ˈa ʧ e		PEACE_NOUN_1			
 Venetian	Venetian			PEACE_NOUN	paxe	pˈaze	p ˈa z e		PEACE_NOUN_1			
 Emilian	Emilian			PEACE_NOUN	pèṡ	pˈɛz	p ˈɛ z		PEACE_NOUN_1			
+Romagnol	Romagnol			PEACE_NOUN	pêş	pˈeə̯z	p ˈeə̯ z		PEACE_NOUN_1			
 Ligurian	Ligurian			PEACE_NOUN	pâxe	pˈaːʒe	p ˈaː ʒ e		PEACE_NOUN_1			
 Piedmontese	Piedmontese			PEACE_NOUN	pas	pˈaz	p ˈa z		PEACE_NOUN_1			
 Western Lombard	Western Lombard			PEACE_NOUN	pas	pˈɑːs	p ˈɑː s		PEACE_NOUN_1			
@@ -8127,6 +8325,7 @@ Corsican	Corsican			PALACE_NOUN	palazzu	palˈaʦʦu	p a l ˈa ʦ ʦ u		PALACE_NO
 Italian	Italian			PALACE_NOUN	palazzo	palˈaʦʦo	p a l ˈa ʦ ʦ o		PALACE_NOUN_1			
 Venetian	Venetian			PALACE_NOUN	palàso	palˈazo	p a l ˈa z o		PALACE_NOUN_1			
 Emilian	Emilian			PALACE_NOUN	palâz	palˈaːθ	p a l ˈaː θ		PALACE_NOUN_1			
+Romagnol	Romagnol			PALACE_NOUN	palaz	pɐlˈaθ	p ɐ l ˈa θ		PALACE_NOUN_1			
 Ligurian	Ligurian			PALACE_NOUN	palàçio	palˈasjo	p a l ˈa s j o		PALACE_NOUN_1			
 Piedmontese	Piedmontese			PALACE_NOUN	palass	palˈas	p a l ˈa s		PALACE_NOUN_1			
 Western Lombard	Western Lombard			PALACE_NOUN	palazz	palˈas	p a l ˈa s		PALACE_NOUN_1			
@@ -8166,6 +8365,7 @@ Italian	Italian			BREAD_NOUN	pane	pˈane	p ˈa n e		BREAD_NOUN_1
 Venetian	Venetian			BREAD_NOUN	pan	pˈaŋ	p ˈa ŋ		BREAD_NOUN_1			
 Bellunese	Bellunese			BREAD_NOUN	pan	pˈaŋ	p ˈa ŋ		BREAD_NOUN_1			
 Emilian	Emilian			BREAD_NOUN	pan	pˈaŋ	p ˈa ŋ		BREAD_NOUN_1			
+Romagnol	Romagnol			BREAD_NOUN	pân	pˈʌ̃	p ˈʌ̃		BREAD_NOUN_1			
 Ligurian	Ligurian			BREAD_NOUN	pàn	pˈaŋ	p ˈa ŋ		BREAD_NOUN_1			
 Piedmontese	Piedmontese			BREAD_NOUN	pan	pˈan	p ˈa n		BREAD_NOUN_1			
 Western Lombard	Western Lombard			BREAD_NOUN	pan	pˈã	p ˈã		BREAD_NOUN_1			
@@ -8201,6 +8401,7 @@ Corsican	Corsican			BELLY_NOUN	panse	pˈanse	p ˈa n s e		BELLY_NOUN_1
 Italian	Italian			BELLY_NOUN	pancia	pˈanʧa	p ˈa n ʧ a		BELLY_NOUN_1			
 Venetian	Venetian			BELLY_NOUN	pansa	pˈaŋsa	p ˈa ŋ s a		BELLY_NOUN_1			
 Emilian	Emilian			BELLY_NOUN	panza	pˈaŋθa	p ˈa ŋ θ a		BELLY_NOUN_1			
+Romagnol	Romagnol			BELLY_NOUN	pânza	pˈʌ̃nθɐ	p ˈʌ̃ n θ ɐ		BELLY_NOUN_1			
 Ligurian	Ligurian			BELLY_NOUN	pança	pˈaŋsa	p ˈa ŋ s a		BELLY_NOUN_1			
 Piedmontese	Piedmontese			BELLY_NOUN	pansa	pˈaŋsa	p ˈa ŋ s a		BELLY_NOUN_1			
 Western Lombard	Western Lombard			BELLY_NOUN	pança	pˈãsa	p ˈã s a		BELLY_NOUN_1			
@@ -8225,6 +8426,7 @@ Corsican	Corsican			WORD_NOUN	parolla	parˈolla	p a r ˈo l l a		WORD_NOUN_1
 Italian	Italian			WORD_NOUN	parola	parˈɔla	p a r ˈɔ l a		WORD_NOUN_1			
 Venetian	Venetian			WORD_NOUN	paroła	parˈɔɰa	p a r ˈɔ ɰ a		WORD_NOUN_1			
 Emilian	Emilian			WORD_NOUN	paróla	parˈola	p a r ˈo l a		WORD_NOUN_1			
+Romagnol	Romagnol			WORD_NOUN	paröla	parˈɔə̯lɐ	p a r ˈɔə̯ l ɐ		WORD_NOUN_1			
 Ligurian	Ligurian			WORD_NOUN	pòula	pˈɔwla	p ˈɔ w l a		WORD_NOUN_1			
 Piedmontese	Piedmontese			WORD_NOUN	paròla	parˈɔla	p a r ˈɔ l a		WORD_NOUN_1			
 Western Lombard	Western Lombard			WORD_NOUN	parolla	parˈɔla	p a r ˈɔ l a		WORD_NOUN_1			
@@ -8259,6 +8461,7 @@ Italian	Italian			FATHER_NOUN	padre	pˈadre	p ˈa d r e		FATHER_NOUN_2
 Venetian	Venetian			FATHER_NOUN	pare	pˈare	p ˈa r e		FATHER_NOUN_2			
 Bellunese	Bellunese			FATHER_NOUN	pare	pˈare	p ˈa r e		FATHER_NOUN_2			
 Emilian	Emilian			FATHER_NOUN	pèder	pˈɛder	p ˈɛ d e r		FATHER_NOUN_2			
+Romagnol	Romagnol			FATHER_NOUN	pêdar	pˈeə̯dɐr	p ˈeə̯ d ɐ r		FATHER_NOUN_2			
 Ligurian	Ligurian			FATHER_NOUN	poæ	pwˈɛː	p w ˈɛː		FATHER_NOUN_2			
 Piedmontese	Piedmontese			FATHER_NOUN	pare	pˈare	p ˈa r e		FATHER_NOUN_2			
 Western Lombard	Western Lombard			FATHER_NOUN	pader	pˈɑːder	p ˈɑː d e r		FATHER_NOUN_2			
@@ -8292,6 +8495,7 @@ Corsican	Corsican			LITTLE_ADJ	pocu	pˈoku	p ˈo k u		LITTLE_ADJ_1
 Italian	Italian			LITTLE_ADJ	poco	pˈɔko	p ˈɔ k o		LITTLE_ADJ_1			
 Venetian	Venetian			LITTLE_ADJ	poco	pˈɔko	p ˈɔ k o		LITTLE_ADJ_1			
 Emilian	Emilian			LITTLE_ADJ	pôc	pˈɔːk	p ˈɔː k		LITTLE_ADJ_1			
+Romagnol	Romagnol			LITTLE_ADJ	pöc	pˈɔə̯k	p ˈɔə̯ k		LITTLE_ADJ_1			
 Ligurian	Ligurian			LITTLE_ADJ	pöco	pˈɔːku	p ˈɔː k u		LITTLE_ADJ_1			
 Piedmontese	Piedmontese			LITTLE_ADJ	pòch	pˈɔk	p ˈɔ k		LITTLE_ADJ_1			
 Western Lombard	Western Lombard			LITTLE_ADJ	pooch	pˈoːk	p ˈoː k		LITTLE_ADJ_1			
@@ -8322,6 +8526,8 @@ Corsican	Corsican			POOR_ADJ	poveru	pˈɔveru	p ˈɔ v e r u		POOR_ADJ_1
 Italian	Italian			POOR_ADJ	povero	pˈɔvero	p ˈɔ v e r o		POOR_ADJ_1			
 Venetian	Venetian			POOR_ADJ	poro	pˈɔro	p ˈɔ r o		POOR_ADJ_1			
 Bellunese	Bellunese			POOR_ADJ	póre	pˈore	p ˈo r e		POOR_ADJ_1			
+Romagnol	Romagnol			POOR_ADJ	pör	pˈɔə̯r	p ˈɔə̯ r		POOR_ADJ_1			
+Romagnol	Romagnol			POOR_ADJ	pövar	pˈɔə̯vɐr	p ˈɔə̯ v ɐ r		POOR_ADJ_1			
 Ligurian	Ligurian			POOR_ADJ	pöveo	pˈɔːvju	p ˈɔː v j u		POOR_ADJ_1			
 Piedmontese	Piedmontese			POOR_ADJ	pòver	pˈɔver	p ˈɔ v e r		POOR_ADJ_1			
 Western Lombard	Western Lombard			POOR_ADJ	pover	pˈoːver	p ˈoː v e r		POOR_ADJ_1			
@@ -8353,6 +8559,7 @@ Italian	Italian			SHEEP_NOUN	pecora	pˈɛkora	p ˈɛ k o r a		SHEEP_NOUN_3
 Venetian	Venetian			SHEEP_NOUN	piègora	pjˈɛɡora	p j ˈɛ ɡ o r a		SHEEP_NOUN_3			
 Bellunese	Bellunese			SHEEP_NOUN	piègora	pjˈɛɡora	p j ˈɛ ɡ o r a		SHEEP_NOUN_3			
 Emilian	Emilian			SHEEP_NOUN	pêgra	pˈɛːɡra	p ˈɛː ɡ r a		SHEEP_NOUN_3			
+Romagnol	Romagnol			SHEEP_NOUN	pìgura	pˈiɡurɐ	p ˈi ɡ u r ɐ		SHEEP_NOUN_3			
 Ligurian	Ligurian			SHEEP_NOUN	pêgoa	pˈeːɡwa	p ˈeː ɡ w a		SHEEP_NOUN_3			
 Western Lombard	Western Lombard			SHEEP_NOUN	pegora	pˈeɡura	p ˈe ɡ u r a		SHEEP_NOUN_3			
 Eastern Lombard	Eastern Lombard			SHEEP_NOUN	pégra	pˈeɡra	p ˈe ɡ r a		SHEEP_NOUN_3			
@@ -8370,6 +8577,7 @@ Italian	Italian			BREAST_NOUN	petto	pˈɛtto	p ˈɛ t t o		BREAST_NOUN_1
 Venetian	Venetian			BREAST_NOUN	pèto	pˈɛto	p ˈɛ t o		BREAST_NOUN_1			
 Bellunese	Bellunese			BREAST_NOUN	pèto	pˈɛto	p ˈɛ t o		BREAST_NOUN_1			
 Emilian	Emilian			BREAST_NOUN	pèt	pˈɛt	p ˈɛ t		BREAST_NOUN_1			
+Romagnol	Romagnol			BREAST_NOUN	pët	pˈɛə̯t	p ˈɛə̯ t		BREAST_NOUN_1			
 Ligurian	Ligurian			BREAST_NOUN	péto	pˈeːtu	p ˈeː t u		BREAST_NOUN_1			
 Piedmontese	Piedmontese			BREAST_NOUN	pèt	pˈɛt	p ˈɛ t		BREAST_NOUN_1			
 Western Lombard	Western Lombard			BREAST_NOUN	pecc	pˈɛʧ	p ˈɛ ʧ		BREAST_NOUN_1			
@@ -8405,6 +8613,7 @@ Italian	Italian			FOOT_NOUN	piede	pjˈɛde	p j ˈɛ d e		FOOT_NOUN_1
 Venetian	Venetian			FOOT_NOUN	pìe	pˈie	p ˈi e		FOOT_NOUN_1			
 Bellunese	Bellunese			FOOT_NOUN	pié	pjˈe	p j ˈe		FOOT_NOUN_1			
 Emilian	Emilian			FOOT_NOUN	pà	pˈa	p ˈa		FOOT_NOUN_1			
+Romagnol	Romagnol			FOOT_NOUN	pe	pˈɛ	p ˈɛ		FOOT_NOUN_1			
 Ligurian	Ligurian			FOOT_NOUN	pê	pˈeː	p ˈeː		FOOT_NOUN_1			
 Piedmontese	Piedmontese			FOOT_NOUN	pé	pˈe	p ˈe		FOOT_NOUN_1			
 Western Lombard	Western Lombard			FOOT_NOUN	pé	pˈe	p ˈe		FOOT_NOUN_1			
@@ -8444,6 +8653,7 @@ Italian	Italian			LOUSE_NOUN	pidocchio	pidˈɔkkjo	p i d ˈɔ k k j o		LOUSE_NOU
 Venetian	Venetian			LOUSE_NOUN	peòcio	peˈɔʧo	p e ˈɔ ʧ o		LOUSE_NOUN_1			
 Bellunese	Bellunese			LOUSE_NOUN	pedòcio	pedˈɔʧo	p e d ˈɔ ʧ o		LOUSE_NOUN_1			
 Emilian	Emilian			LOUSE_NOUN	pdòc'	pdˈɔʧ	p d ˈɔ ʧ		LOUSE_NOUN_1			
+Romagnol	Romagnol			LOUSE_NOUN	bdòcc	bdˈɔʧ	b d ˈɔ ʧ		LOUSE_NOUN_1			
 Ligurian	Ligurian			LOUSE_NOUN	pighéuggio	piɡˈøʤu	p i ɡ ˈø ʤ u		LOUSE_NOUN_1			
 Piedmontese	Piedmontese			LOUSE_NOUN	poj	pˈuj	p ˈu j		LOUSE_NOUN_1			
 Western Lombard	Western Lombard			LOUSE_NOUN	pidocc	pidˈɔʧ	p i d ˈɔ ʧ		LOUSE_NOUN_1			
@@ -8484,6 +8694,7 @@ Italian	Italian			SKIN_NOUN	pelle	pˈɛlle	p ˈɛ l l e		SKIN_NOUN_1
 Venetian	Venetian			SKIN_NOUN	pèłe	pˈɛe	p ˈɛ e		SKIN_NOUN_1			
 Bellunese	Bellunese			SKIN_NOUN	pèl	pˈɛl	p ˈɛ l		SKIN_NOUN_1			
 Emilian	Emilian			SKIN_NOUN	pèl	pˈɛl	p ˈɛ l		SKIN_NOUN_1			
+Romagnol	Romagnol			SKIN_NOUN	pëla	pˈɛə̯lɐ	p ˈɛə̯ l ɐ		SKIN_NOUN_1			
 Ligurian	Ligurian			SKIN_NOUN	pelle	pˈele	p ˈe l e		SKIN_NOUN_1			
 Piedmontese	Piedmontese			SKIN_NOUN	pel	pˈɛl	p ˈɛ l		SKIN_NOUN_1			
 Western Lombard	Western Lombard			SKIN_NOUN	pell	pˈɛl	p ˈɛ l		SKIN_NOUN_1			
@@ -8522,6 +8733,7 @@ Aromanian	Aromanian			PEACH_NOUN	chearsicã	ke̯ˈarsikə	k e̯ˈa r s i k ə		P
 Sicilian	Sicilian			PEACH_NOUN	pèrsica	pˈɛrsɪka	p ˈɛ r s ɪ k a		PEACH_NOUN_1			
 Corsican	Corsican			PEACH_NOUN	pesca	pˈɛska	p ˈɛ s k a		PEACH_NOUN_1			
 Italian	Italian			PEACH_NOUN	pesca	pˈɛska	p ˈɛ s k a		PEACH_NOUN_1			
+Romagnol	Romagnol			PEACH_NOUN	pēşga	pˈeːzɡɐ	p ˈeː z ɡ ɐ		PEACH_NOUN_1			
 Ligurian	Ligurian			PEACH_NOUN	pèrsega	pˈɛːrseɡa	p ˈɛː r s e ɡ a		PEACH_NOUN_1			
 Eastern Lombard	Eastern Lombard			PEACH_NOUN	pèsca	pˈɛska	p ˈɛ s k a		PEACH_NOUN_1			
 Ladin	Ladin			PEACH_NOUN	pesçia	pˈɛʃʨa	p ˈɛ ʃ ʨ a		PEACH_NOUN_1			
@@ -8604,6 +8816,7 @@ Italian	Italian			HAIR_NOUN	pelo	pˈelo	p ˈe l o		HAIR_NOUN_2
 Venetian	Venetian			HAIR_NOUN	péło	pˈeo	p ˈe o		HAIR_NOUN_2			
 Bellunese	Bellunese			HAIR_NOUN	pél	pˈel	p ˈe l		HAIR_NOUN_2			
 Emilian	Emilian			HAIR_NOUN	pail	pˈajl	p ˈa j l		HAIR_NOUN_2			
+Romagnol	Romagnol			HAIR_NOUN	pēl	pˈeːl	p ˈeː l		HAIR_NOUN_2			
 Ligurian	Ligurian			HAIR_NOUN	péi	pˈej	p ˈe j		HAIR_NOUN_2			
 Piedmontese	Piedmontese			HAIR_NOUN	pèj	pˈɛj	p ˈɛ j		HAIR_NOUN_2			
 Western Lombard	Western Lombard			HAIR_NOUN	pel	pˈeːl	p ˈeː l		HAIR_NOUN_2			
@@ -8635,6 +8848,7 @@ Sicilian	Sicilian			FEATHER_NOUN	pinna	pˈinna	p ˈi n n a		FEATHER_NOUN_2
 Italian	Italian			FEATHER_NOUN	penna	pˈenna	p ˈe n n a		FEATHER_NOUN_2			
 Venetian	Venetian			FEATHER_NOUN	péna	pˈena	p ˈe n a		FEATHER_NOUN_2			
 Bellunese	Bellunese			FEATHER_NOUN	péna	pˈena	p ˈe n a		FEATHER_NOUN_2			
+Romagnol	Romagnol			FEATHER_NOUN	pèna	pˈɛnɐ	p ˈɛ n ɐ		FEATHER_NOUN_2			
 Ligurian	Ligurian			FEATHER_NOUN	pena	pˈeːna	p ˈeː n a		FEATHER_NOUN_2			
 Eastern Lombard	Eastern Lombard			FEATHER_NOUN	pèna	pˈɛna	p ˈɛ n a		FEATHER_NOUN_2			
 Ladin	Ladin			FEATHER_NOUN	pena	pˈena	p ˈe n a		FEATHER_NOUN_2			
@@ -8666,6 +8880,7 @@ Italian	Italian			FISH_NOUN	pesce	pˈeʃʃe	p ˈe ʃ ʃ e		FISH_NOUN_1
 Venetian	Venetian			FISH_NOUN	pésse	pˈese	p ˈe s e		FISH_NOUN_1			
 Bellunese	Bellunese			FISH_NOUN	pés	pˈes	p ˈe s		FISH_NOUN_1			
 Emilian	Emilian			FISH_NOUN	pass	pˈas	p ˈa s		FISH_NOUN_1			
+Romagnol	Romagnol			FISH_NOUN	pès	pˈɛs	p ˈɛ s		FISH_NOUN_1			
 Ligurian	Ligurian			FISH_NOUN	péscio	pˈeʃu	p ˈe ʃ u		FISH_NOUN_1			
 Piedmontese	Piedmontese			FISH_NOUN	pess	pˈes	p ˈe s		FISH_NOUN_1			
 Western Lombard	Western Lombard			FISH_NOUN	pess	pˈɛs	p ˈɛ s		FISH_NOUN_1			
@@ -8702,6 +8917,7 @@ Corsican	Corsican			PLAGUE_NOUN	piaga	pjˈaɡa	p j ˈa ɡ a		PLAGUE_NOUN_1
 Italian	Italian			PLAGUE_NOUN	piaga	pjˈaɡa	p j ˈa ɡ a		PLAGUE_NOUN_1			
 Venetian	Venetian			PLAGUE_NOUN	piàga	pjˈaɡa	p j ˈa ɡ a		PLAGUE_NOUN_1			
 Emilian	Emilian			PLAGUE_NOUN	pièga	pjˈɛɡa	p j ˈɛ ɡ a		PLAGUE_NOUN_1			
+Romagnol	Romagnol			PLAGUE_NOUN	piêga	pjˈeə̯ɡɐ	p j ˈeə̯ ɡ ɐ		PLAGUE_NOUN_1			
 Ligurian	Ligurian			PLAGUE_NOUN	ciâga	ʧˈaːɡa	ʧ ˈaː ɡ a		PLAGUE_NOUN_1			
 Piedmontese	Piedmontese			PLAGUE_NOUN	piaga	pjˈaɡa	p j ˈa ɡ a		PLAGUE_NOUN_1			
 Western Lombard	Western Lombard			PLAGUE_NOUN	piaga	pjˈɑːɡa	p j ˈɑː ɡ a		PLAGUE_NOUN_1			
@@ -8738,6 +8954,7 @@ Italian	Italian			WEEP_VERB	piangere	pjˈanʤere	p j ˈa n ʤ e r e		WEEP_VERB_1
 Venetian	Venetian			WEEP_VERB	piànxer	pjˈaŋzer	p j ˈa ŋ z e r		WEEP_VERB_1			
 Bellunese	Bellunese			WEEP_VERB	piàndher	pjˈaŋðer	p j ˈa ŋ ð e r		WEEP_VERB_1			
 Emilian	Emilian			WEEP_VERB	piànżer	pjˈaŋðer	p j ˈa ŋ ð e r		WEEP_VERB_1			
+Romagnol	Romagnol			WEEP_VERB	piânẓar	pjˈʌ̃nðɐr	p j ˈʌ̃ n ð ɐ r		WEEP_VERB_1			
 Ligurian	Ligurian			WEEP_VERB	ciànze	ʧˈaŋze	ʧ ˈa ŋ z e		WEEP_VERB_1			
 Piedmontese	Piedmontese			WEEP_VERB	pianze	pjˈanze	p j ˈa n z e		WEEP_VERB_1			
 Western Lombard	Western Lombard			WEEP_VERB	piang	pjˈãʧ	p j ˈã ʧ		WEEP_VERB_1			
@@ -8771,6 +8988,7 @@ Italian	Italian			FULL_ADJ	pieno	pjˈɛno	p j ˈɛ n o		FULL_ADJ_1
 Venetian	Venetian			FULL_ADJ	pién	pjˈeŋ	p j ˈe ŋ		FULL_ADJ_1			
 Bellunese	Bellunese			FULL_ADJ	pién	pjˈeŋ	p j ˈe ŋ		FULL_ADJ_1			
 Emilian	Emilian			FULL_ADJ	pén	pˈeŋ	p ˈe ŋ		FULL_ADJ_1			
+Romagnol	Romagnol			FULL_ADJ	pin	pˈin	p ˈi n		FULL_ADJ_1			
 Ligurian	Ligurian			FULL_ADJ	pin	pˈiŋ	p ˈi ŋ		FULL_ADJ_1			
 Piedmontese	Piedmontese			FULL_ADJ	pien	pjˈeŋ	p j ˈe ŋ		FULL_ADJ_1			
 Western Lombard	Western Lombard			FULL_ADJ	pien	pjˈẽ	p j ˈẽ		FULL_ADJ_1			
@@ -8821,6 +9039,7 @@ Corsican	Corsican			FEATHER_NOUN	piuma	pjˈuma	p j ˈu m a		FEATHER_NOUN_3
 Italian	Italian			FEATHER_NOUN	piuma	pjˈuma	p j ˈu m a		FEATHER_NOUN_3			
 Venetian	Venetian			FEATHER_NOUN	piuma	pjˈuma	p j ˈu m a		FEATHER_NOUN_3			
 Emilian	Emilian			FEATHER_NOUN	piómma	pjˈoma	p j ˈo m a		FEATHER_NOUN_3			
+Romagnol	Romagnol			FEATHER_NOUN	pióma	pjˈomɐ	p j ˈo m ɐ		FEATHER_NOUN_3			
 Ligurian	Ligurian			FEATHER_NOUN	ciùmma	ʧˈyma	ʧ ˈy m a		FEATHER_NOUN_3			
 Piedmontese	Piedmontese			FEATHER_NOUN	piuma	pjˈyma	p j ˈy m a		FEATHER_NOUN_3			
 Western Lombard	Western Lombard			FEATHER_NOUN	piuma	pjˈyːma	p j ˈyː m a		FEATHER_NOUN_3			
@@ -8859,6 +9078,7 @@ Italian	Italian			RAIN_NOUN	pioggia	pjˈɔʤʤa	p j ˈɔ ʤ ʤ a		RAIN_NOUN_1
 Venetian	Venetian			RAIN_NOUN	pióva	pjˈova	p j ˈo v a		RAIN_NOUN_1			
 Bellunese	Bellunese			RAIN_NOUN	pióva	pjˈova	p j ˈo v a		RAIN_NOUN_1			
 Emilian	Emilian			RAIN_NOUN	piôva	pjˈɔːva	p j ˈɔː v a		RAIN_NOUN_1			
+Romagnol	Romagnol			RAIN_NOUN	piùva	pjˈuvɐ	p j ˈu v ɐ		RAIN_NOUN_1			
 Piedmontese	Piedmontese			RAIN_NOUN	pieuva	pjˈøva	p j ˈø v a		RAIN_NOUN_1			
 Western Lombard	Western Lombard			RAIN_NOUN	piœva	pjˈøːva	p j ˈøː v a		RAIN_NOUN_1			
 Eastern Lombard	Eastern Lombard			RAIN_NOUN	piöìda	pjøˈida	p j ø ˈi d a		RAIN_NOUN_1			
@@ -8909,6 +9129,7 @@ Italian	Italian			PAIN_NOUN	pena	pˈena	p ˈe n a		PAIN_NOUN_1
 Venetian	Venetian			PAIN_NOUN	péna	pˈena	p ˈe n a		PAIN_NOUN_1			
 Bellunese	Bellunese			PAIN_NOUN	péna	pˈena	p ˈe n a		PAIN_NOUN_1			
 Emilian	Emilian			PAIN_NOUN	panna	pˈana	p ˈa n a		PAIN_NOUN_1			
+Romagnol	Romagnol			PAIN_NOUN	pèna	pˈɛnɐ	p ˈɛ n ɐ		PAIN_NOUN_1			
 Ligurian	Ligurian			PAIN_NOUN	peña	pˈeŋa	p ˈe ŋ a		PAIN_NOUN_1			
 Piedmontese	Piedmontese			PAIN_NOUN	pen-a	pˈeŋa	p ˈe ŋ a		PAIN_NOUN_1			
 Western Lombard	Western Lombard			PAIN_NOUN	péna	pˈeːna	p ˈeː n a		PAIN_NOUN_1			
@@ -8986,6 +9207,7 @@ Italian	Italian			BRIDGE_NOUN	ponte	pˈonte	p ˈo n t e		BRIDGE_NOUN_1
 Venetian	Venetian			BRIDGE_NOUN	pónte	pˈoŋte	p ˈo ŋ t e		BRIDGE_NOUN_1			
 Bellunese	Bellunese			BRIDGE_NOUN	pónt	pˈoŋt	p ˈo ŋ t		BRIDGE_NOUN_1			
 Emilian	Emilian			BRIDGE_NOUN	pânt	pˈaːŋt	p ˈaː ŋ t		BRIDGE_NOUN_1			
+Romagnol	Romagnol			BRIDGE_NOUN	pônt	pˈou̯nt	p ˈou̯ n t		BRIDGE_NOUN_1			
 Ligurian	Ligurian			BRIDGE_NOUN	pónte	pˈuŋte	p ˈu ŋ t e		BRIDGE_NOUN_1			
 Piedmontese	Piedmontese			BRIDGE_NOUN	pont	pˈuŋt	p ˈu ŋ t		BRIDGE_NOUN_1			
 Western Lombard	Western Lombard			BRIDGE_NOUN	pont	pˈũt	p ˈũ t		BRIDGE_NOUN_1			
@@ -9038,6 +9260,7 @@ Corsican	Corsican			PIG_NOUN	porcu	pˈɔrku	p ˈɔ r k u		PIG_NOUN_1
 Italian	Italian			PIG_NOUN	porco	pˈɔrko	p ˈɔ r k o		PIG_NOUN_1			
 Venetian	Venetian			PIG_NOUN	porco	pˈɔrko	p ˈɔ r k o		PIG_NOUN_1			
 Emilian	Emilian			PIG_NOUN	pórch	pˈork	p ˈo r k		PIG_NOUN_1			
+Romagnol	Romagnol			PIG_NOUN	pörc	pˈɔə̯rk	p ˈɔə̯ r k		PIG_NOUN_1			
 Ligurian	Ligurian			PIG_NOUN	pòrco	pˈɔːrku	p ˈɔː r k u		PIG_NOUN_1			
 Piedmontese	Piedmontese			PIG_NOUN	pòrs	pˈɔrs	p ˈɔ r s		PIG_NOUN_1			
 Eastern Lombard	Eastern Lombard			PIG_NOUN	pòrch	pˈɔrk	p ˈɔ r k		PIG_NOUN_1			
@@ -9072,6 +9295,7 @@ Italian	Italian			CAN_VERB	potere	potˈere	p o t ˈe r e		CAN_VERB_1
 Venetian	Venetian			CAN_VERB	podér	podˈer	p o d ˈe r		CAN_VERB_1			
 Bellunese	Bellunese			CAN_VERB	podér	podˈer	p o d ˈe r		CAN_VERB_1			
 Emilian	Emilian			CAN_VERB	psair	psˈajr	p s ˈa j r		CAN_VERB_1			
+Romagnol	Romagnol			CAN_VERB	putêr	putˈeə̯	p u t ˈeə̯		CAN_VERB_1			
 Ligurian	Ligurian			CAN_VERB	poéi	pwˈej	p w ˈe j		CAN_VERB_1			
 Piedmontese	Piedmontese			CAN_VERB	podèj	pudˈɛj	p u d ˈɛ j		CAN_VERB_1			
 Western Lombard	Western Lombard			CAN_VERB	podè	pudˈɛ	p u d ˈɛ		CAN_VERB_1			
@@ -9103,6 +9327,7 @@ Neapolitan	Neapolitan			PRICE_NOUN	priezzo	pɾjˈɛʦʦə	p ɾ j ˈɛ ʦ ʦ ə		
 Corsican	Corsican			PRICE_NOUN	prezzu	prˈeʦʦu	p r ˈe ʦ ʦ u		PRICE_NOUN_1			
 Italian	Italian			PRICE_NOUN	prezzo	prˈɛʦʦo	p r ˈɛ ʦ ʦ o		PRICE_NOUN_1			
 Venetian	Venetian			PRICE_NOUN	prèço	prˈɛso	p r ˈɛ s o		PRICE_NOUN_1			
+Romagnol	Romagnol			PRICE_NOUN	prëz	prˈɛə̯θ	p r ˈɛə̯ θ		PRICE_NOUN_1			
 Ligurian	Ligurian			PRICE_NOUN	prêxo	prˈeːʒu	p r ˈeː ʒ u		PRICE_NOUN_1			
 Piedmontese	Piedmontese			PRICE_NOUN	pressi	prˈɛsi	p r ˈɛ s i		PRICE_NOUN_1			
 Western Lombard	Western Lombard			PRICE_NOUN	pressi	prˈɛsi	p r ˈɛ s i		PRICE_NOUN_1			
@@ -9145,6 +9370,7 @@ Sicilian	Sicilian			FIST_NOUN	pugnu	pˈuɲɲʊ	p ˈu ɲ ɲ ʊ		FIST_NOUN_1
 Corsican	Corsican			FIST_NOUN	pugnu	pˈuɲu	p ˈu ɲ u		FIST_NOUN_1			
 Italian	Italian			FIST_NOUN	pugno	pˈuɲɲo	p ˈu ɲ ɲ o		FIST_NOUN_1			
 Venetian	Venetian			FIST_NOUN	pugno	pˈuɲo	p ˈu ɲ o		FIST_NOUN_1			
+Romagnol	Romagnol			FIST_NOUN	pógn	pˈoɲ	p ˈo ɲ		FIST_NOUN_1			
 Ligurian	Ligurian			FIST_NOUN	pùgno	pˈyɲu	p ˈy ɲ u		FIST_NOUN_1			
 Piedmontese	Piedmontese			FIST_NOUN	pugn	pˈyɲ	p ˈy ɲ		FIST_NOUN_1			
 Western Lombard	Western Lombard			FIST_NOUN	pugn	pˈyːɲ	p ˈyː ɲ		FIST_NOUN_1			
@@ -9180,6 +9406,7 @@ Corsican	Corsican			POINT_NOUN	puntu	pˈuntu	p ˈu n t u		POINT_NOUN_1
 Italian	Italian			POINT_NOUN	punto	pˈunto	p ˈu n t o		POINT_NOUN_1			
 Venetian	Venetian			POINT_NOUN	ponto	pˈoŋto	p ˈo ŋ t o		POINT_NOUN_1			
 Emilian	Emilian			POINT_NOUN	pónt	pˈoŋt	p ˈo ŋ t		POINT_NOUN_1			
+Romagnol	Romagnol			POINT_NOUN	pônt	pˈou̯nt	p ˈou̯ n t		POINT_NOUN_1			
 Ligurian	Ligurian			POINT_NOUN	pónto	pˈuŋtu	p ˈu ŋ t u		POINT_NOUN_1			
 Piedmontese	Piedmontese			POINT_NOUN	pont	pˈuŋt	p ˈu ŋ t		POINT_NOUN_1			
 Western Lombard	Western Lombard			POINT_NOUN	pont	pˈũt	p ˈũ t		POINT_NOUN_1			
@@ -9215,6 +9442,7 @@ Corsican	Corsican			WELL_NOUN	pozzu	pˈoʦʦu	p ˈo ʦ ʦ u		WELL_NOUN_1
 Italian	Italian			WELL_NOUN	pozzo	pˈoʦʦo	p ˈo ʦ ʦ o		WELL_NOUN_1			
 Venetian	Venetian			WELL_NOUN	póso	pˈoso	p ˈo s o		WELL_NOUN_1			
 Bellunese	Bellunese			WELL_NOUN	pós	pˈos	p ˈo s		WELL_NOUN_1			
+Romagnol	Romagnol			WELL_NOUN	póz	pˈoθ	p ˈo θ		WELL_NOUN_1			
 Ligurian	Ligurian			WELL_NOUN	pósso	pˈusu	p ˈu s u		WELL_NOUN_1			
 Piedmontese	Piedmontese			WELL_NOUN	poss	pˈus	p ˈu s		WELL_NOUN_1			
 Western Lombard	Western Lombard			WELL_NOUN	pozz	pˈus	p ˈu s		WELL_NOUN_1			
@@ -9253,6 +9481,7 @@ Italian	Italian			FOUR_NUM	quattro	kwˈattro	k w ˈa t t r o		FOUR_NUM_1
 Venetian	Venetian			FOUR_NUM	cuàtro	kwˈatro	k w ˈa t r o		FOUR_NUM_1			
 Bellunese	Bellunese			FOUR_NUM	cuàtro	kwˈatro	k w ˈa t r o		FOUR_NUM_1			
 Emilian	Emilian			FOUR_NUM	quâter	kwˈaːter	k w ˈaː t e r		FOUR_NUM_1			
+Romagnol	Romagnol			FOUR_NUM	cvàtar	kvˈatɐr	k v ˈa t ɐ r		FOUR_NUM_1			
 Ligurian	Ligurian			FOUR_NUM	quattro	kwˈatru	k w ˈa t r u		FOUR_NUM_1			
 Piedmontese	Piedmontese			FOUR_NUM	quatr	kwˈatr	k w ˈa t r		FOUR_NUM_1			
 Western Lombard	Western Lombard			FOUR_NUM	quater	kwˈɑːter	k w ˈɑː t e r		FOUR_NUM_1			
@@ -9325,6 +9554,7 @@ Neapolitan	Neapolitan			WHAT_PRON	che	ke	k e		WHAT_PRON_1
 Corsican	Corsican			WHAT_PRON	chè	kˈɛ	k ˈɛ		WHAT_PRON_1			
 Italian	Italian			WHAT_PRON	che	kˈe	k ˈe		WHAT_PRON_1			
 Venetian	Venetian			WHAT_PRON	ché	kˈe	k ˈe		WHAT_PRON_1			
+Romagnol	Romagnol			WHAT_PRON	che	kˈɛ	k ˈɛ		WHAT_PRON_1			
 Ligurian	Ligurian			WHAT_PRON	che	kˈe	k ˈe		WHAT_PRON_1			
 Piedmontese	Piedmontese			WHAT_PRON	che	kˈe	k ˈe		WHAT_PRON_1			
 Western Lombard	Western Lombard			WHAT_PRON	qe	kˈe	k ˈe		WHAT_PRON_1			
@@ -9362,6 +9592,8 @@ Italian	Italian			FIFTY_NUM	cinquanta	ʧiŋkwˈanta	ʧ i ŋ k w ˈa n t a		FIFTY
 Venetian	Venetian			FIFTY_NUM	sincuànta	siŋkwˈaŋta	s i ŋ k w ˈa ŋ t a		FIFTY_NUM_1			
 Bellunese	Bellunese			FIFTY_NUM	zhincuànta	θiŋkwˈaŋta	θ i ŋ k w ˈa ŋ t a		FIFTY_NUM_1			
 Emilian	Emilian			FIFTY_NUM	zincuanta	θiŋkwˈaŋta	θ i ŋ k w ˈa ŋ t a		FIFTY_NUM_1			
+Romagnol	Romagnol			FIFTY_NUM	zincvànta	θiŋkvˈantɐ	θ i ŋ k v ˈa n t ɐ		FIFTY_NUM_1			
+Romagnol	Romagnol			FIFTY_NUM	zincvânta	θiŋkvˈʌ̃ntɐ	θ i ŋ k v ˈʌ̃ n t ɐ		FIFTY_NUM_1			
 Ligurian	Ligurian			FIFTY_NUM	çinquanta	siŋkwˈaŋta	s i ŋ k w ˈa ŋ t a		FIFTY_NUM_1			
 Piedmontese	Piedmontese			FIFTY_NUM	sinquanta	siŋkwˈanta	s i ŋ k w ˈa n t a		FIFTY_NUM_1			
 Western Lombard	Western Lombard			FIFTY_NUM	cinquanta	ʧĩkwˈãta	ʧ ĩ k w ˈã t a		FIFTY_NUM_1			
@@ -9401,6 +9633,7 @@ Italian	Italian			FIVE_NUM	cinque	ʧˈiŋkwe	ʧ ˈi ŋ k w e		FIVE_NUM_1
 Venetian	Venetian			FIVE_NUM	sìncue	sˈiŋkwe	s ˈi ŋ k w e		FIVE_NUM_1			
 Bellunese	Bellunese			FIVE_NUM	zhìncue	θˈiŋkwe	θ ˈi ŋ k w e		FIVE_NUM_1			
 Emilian	Emilian			FIVE_NUM	zénc	θˈeŋk	θ ˈe ŋ k		FIVE_NUM_1			
+Romagnol	Romagnol			FIVE_NUM	zéncv	θˈẽŋkv	θ ˈẽ ŋ k v		FIVE_NUM_1			
 Ligurian	Ligurian			FIVE_NUM	çìnque	sˈiŋkwe	s ˈi ŋ k w e		FIVE_NUM_1			
 Piedmontese	Piedmontese			FIVE_NUM	sinch	sˈiŋk	s ˈi ŋ k		FIVE_NUM_1			
 Western Lombard	Western Lombard			FIVE_NUM	cinch	ʧˈĩk	ʧ ˈĩ k		FIVE_NUM_1			
@@ -9444,6 +9677,7 @@ Italian	Italian			ROOT_NOUN	radice	radˈiʧe	r a d ˈi ʧ e		ROOT_NOUN_1
 Venetian	Venetian			ROOT_NOUN	raìxa	raˈiza	r a ˈi z a		ROOT_NOUN_1			
 Bellunese	Bellunese			ROOT_NOUN	raìs	raˈis	r a ˈi s		ROOT_NOUN_1			
 Emilian	Emilian			ROOT_NOUN	radîs	radˈiːs	r a d ˈiː s		ROOT_NOUN_1			
+Romagnol	Romagnol			ROOT_NOUN	radìşa	rɐdˈizɐ	r ɐ d ˈi z ɐ		ROOT_NOUN_1			
 Ligurian	Ligurian			ROOT_NOUN	réixe	rˈejʒe	r ˈe j ʒ e		ROOT_NOUN_1			
 Piedmontese	Piedmontese			ROOT_NOUN	rais	rˈajz	r ˈa j z		ROOT_NOUN_1			
 Piedmontese	Piedmontese			ROOT_NOUN	radis	radˈiz	r a d ˈi z		ROOT_NOUN_1			
@@ -9483,6 +9717,7 @@ Corsican	Corsican			REASON_NOUN	raghjone	raɟˈone	r a ɟ ˈo n e		REASON_NOUN_1
 Italian	Italian			REASON_NOUN	ragione	raʤˈone	r a ʤ ˈo n e		REASON_NOUN_1			
 Venetian	Venetian			REASON_NOUN	raxón	razˈoŋ	r a z ˈo ŋ		REASON_NOUN_1			
 Bellunese	Bellunese			REASON_NOUN	raxón	razˈoŋ	r a z ˈo ŋ		REASON_NOUN_1			
+Romagnol	Romagnol			REASON_NOUN	raşôn	rɐzˈõũ̯	r ɐ z ˈõũ̯		REASON_NOUN_1			
 Ligurian	Ligurian			REASON_NOUN	raxón	raʒˈuŋ	r a ʒ ˈu ŋ		REASON_NOUN_1			
 Piedmontese	Piedmontese			REASON_NOUN	rason	razˈun	r a z ˈu n		REASON_NOUN_1			
 Western Lombard	Western Lombard			REASON_NOUN	rexon	reʒˈũ	r e ʒ ˈũ		REASON_NOUN_1			
@@ -9519,6 +9754,7 @@ Corsican	Corsican			KING_NOUN	re	rˈɛ	r ˈɛ		KING_NOUN_1
 Italian	Italian			KING_NOUN	re	rˈe	r ˈe		KING_NOUN_1			
 Venetian	Venetian			KING_NOUN	rè	rˈɛ	r ˈɛ		KING_NOUN_1			
 Bellunese	Bellunese			KING_NOUN	rè	rˈɛ	r ˈɛ		KING_NOUN_1			
+Romagnol	Romagnol			KING_NOUN	re	rˈɛ	r ˈɛ		KING_NOUN_1			
 Ligurian	Ligurian			KING_NOUN	re	rˈɛ	r ˈɛ		KING_NOUN_1			
 Piedmontese	Piedmontese			KING_NOUN	re	rˈɛ	r ˈɛ		KING_NOUN_1			
 Piedmontese	Piedmontese			KING_NOUN	rèj	rˈɛj	r ˈɛ j		KING_NOUN_1			
@@ -9552,6 +9788,7 @@ Sicilian	Sicilian			QUEEN_NOUN	riggina	ʐiʤʤˈina	ʐ i ʤ ʤ ˈi n a		QUEEN_NO
 Corsican	Corsican			QUEEN_NOUN	regina	reʤˈina	r e ʤ ˈi n a		QUEEN_NOUN_1			
 Italian	Italian			QUEEN_NOUN	regina	reʤˈina	r e ʤ ˈi n a		QUEEN_NOUN_1			
 Venetian	Venetian			QUEEN_NOUN	rexìna	rezˈina	r e z ˈi n a		QUEEN_NOUN_1			
+Romagnol	Romagnol			QUEEN_NOUN	regìna	reʤˈinɐ	r e ʤ ˈi n ɐ		QUEEN_NOUN_1			
 Ligurian	Ligurian			QUEEN_NOUN	ræña	rˈɛŋa	r ˈɛ ŋ a		QUEEN_NOUN_1			
 Piedmontese	Piedmontese			QUEEN_NOUN	regin-a	reʤˈiŋa	r e ʤ ˈi ŋ a		QUEEN_NOUN_1			
 Western Lombard	Western Lombard			QUEEN_NOUN	regina	reʤˈiːna	r e ʤ ˈiː n a		QUEEN_NOUN_1			
@@ -9612,6 +9849,7 @@ Italian	Italian			ROMAN_ADJ	romano	romˈano	r o m ˈa n o		ROMAN_ADJ_1
 Venetian	Venetian			ROMAN_ADJ	romàn	romˈaŋ	r o m ˈa ŋ		ROMAN_ADJ_1			
 Bellunese	Bellunese			ROMAN_ADJ	romàn	romˈaŋ	r o m ˈa ŋ		ROMAN_ADJ_1			
 Emilian	Emilian			ROMAN_ADJ	rumàn	rumˈaŋ	r u m ˈa ŋ		ROMAN_ADJ_1			
+Romagnol	Romagnol			ROMAN_ADJ	rumân	rumˈʌ̃	r u m ˈʌ̃		ROMAN_ADJ_1			
 Ligurian	Ligurian			ROMAN_ADJ	roman	rumˈaŋ	r u m ˈa ŋ		ROMAN_ADJ_1			
 Piedmontese	Piedmontese			ROMAN_ADJ	roman	rumˈaŋ	r u m ˈa ŋ		ROMAN_ADJ_1			
 Western Lombard	Western Lombard			ROMAN_ADJ	roman	rumˈã	r u m ˈã		ROMAN_ADJ_1			
@@ -9646,6 +9884,7 @@ Italian	Italian			WHEEL_NOUN	ruota	rwˈɔta	r w ˈɔ t a		WHEEL_NOUN_1
 Venetian	Venetian			WHEEL_NOUN	ròda	rˈɔda	r ˈɔ d a		WHEEL_NOUN_1			
 Bellunese	Bellunese			WHEEL_NOUN	ròda	rˈɔda	r ˈɔ d a		WHEEL_NOUN_1			
 Emilian	Emilian			WHEEL_NOUN	rôda	rˈɔːda	r ˈɔː d a		WHEEL_NOUN_1			
+Romagnol	Romagnol			WHEEL_NOUN	röda	rˈɔə̯dɐ	r ˈɔə̯ d ɐ		WHEEL_NOUN_1			
 Ligurian	Ligurian			WHEEL_NOUN	reua	rˈøːa	r ˈøː a		WHEEL_NOUN_1			
 Piedmontese	Piedmontese			WHEEL_NOUN	roa	rˈua	r ˈu a		WHEEL_NOUN_1			
 Western Lombard	Western Lombard			WHEEL_NOUN	rœda	rˈøːda	r ˈøː d a		WHEEL_NOUN_1			
@@ -9733,6 +9972,7 @@ Italian	Italian			RED_ADJ	rosso	rˈosso	r ˈo s s o		RED_ADJ_3
 Venetian	Venetian			RED_ADJ	róso	rˈoso	r ˈo s o		RED_ADJ_3			
 Bellunese	Bellunese			RED_ADJ	rós	rˈos	r ˈo s		RED_ADJ_3			
 Emilian	Emilian			RED_ADJ	råss	rˈʌs	r ˈʌ s		RED_ADJ_3			
+Romagnol	Romagnol			RED_ADJ	rós	rˈos	r ˈo s		RED_ADJ_3			
 Ligurian	Ligurian			RED_ADJ	rosso	rˈussu	r ˈu s s u		RED_ADJ_3			
 Piedmontese	Piedmontese			RED_ADJ	ross	rˈus	r ˈu s		RED_ADJ_3			
 Western Lombard	Western Lombard			RED_ADJ	russ	rˈus	r ˈu s		RED_ADJ_3			
@@ -9756,6 +9996,7 @@ Provençal	Provençal			SAND_NOUN	sabla	sˈablɔ	s ˈa b l ɔ		SAND_NOUN_2
 Lengadocian	Lengadocian			SAND_NOUN	sabla	sˈaβlɔ	s ˈa β l ɔ		SAND_NOUN_2			
 Latin	Latin			SAND_NOUN	sabulum	sˈabʊɫʊ̃ː	s ˈa b ʊ ɫ ʊ̃ː		SAND_NOUN_3			
 Dalmatian	Dalmatian			SAND_NOUN	salbuon	salbwˈoŋ	s a l b w ˈo ŋ		SAND_NOUN_3			
+Romagnol	Romagnol			SAND_NOUN	sabiôn	sɐbjˈõũ̯	s ɐ b j ˈõũ̯		SAND_NOUN_3			
 Ladin	Ladin			SAND_NOUN	saulon	sawlˈon	s a w l ˈo n		SAND_NOUN_3			
 Friulian	Friulian			SAND_NOUN	savalon	savalˈoŋ	s a v a l ˈo ŋ		SAND_NOUN_3			
 Romansch	Romansch			SAND_NOUN	sablun	səblˈun	s ə b l ˈu n		SAND_NOUN_3			
@@ -9769,6 +10010,7 @@ Corsican	Corsican			ROCK_NOUN	sassu	sˈassu	s ˈa s s u		ROCK_NOUN_1
 Italian	Italian			ROCK_NOUN	sasso	sˈasso	s ˈa s s o		ROCK_NOUN_1			
 Venetian	Venetian			ROCK_NOUN	saso	sˈaso	s ˈa s o		ROCK_NOUN_1			
 Bellunese	Bellunese			ROCK_NOUN	sas	sˈas	s ˈa s		ROCK_NOUN_1			
+Romagnol	Romagnol			ROCK_NOUN	sas	sˈas	s ˈa s		ROCK_NOUN_1			
 Ligurian	Ligurian			ROCK_NOUN	sàscio	sˈaʃu	s ˈa ʃ u		ROCK_NOUN_1			
 Western Lombard	Western Lombard			ROCK_NOUN	sass	sˈas	s ˈa s		ROCK_NOUN_1			
 Eastern Lombard	Eastern Lombard			ROCK_NOUN	sass	sˈas	s ˈa s		ROCK_NOUN_1			
@@ -9790,6 +10032,7 @@ Italian	Italian			SALT_NOUN	sale	sˈale	s ˈa l e		SALT_NOUN_1
 Venetian	Venetian			SALT_NOUN	sal	sˈal	s ˈa l		SALT_NOUN_1			
 Bellunese	Bellunese			SALT_NOUN	sal	sˈal	s ˈa l		SALT_NOUN_1			
 Emilian	Emilian			SALT_NOUN	sèl	sˈɛl	s ˈɛ l		SALT_NOUN_1			
+Romagnol	Romagnol			SALT_NOUN	sêl	sˈeə̯l	s ˈeə̯ l		SALT_NOUN_1			
 Ligurian	Ligurian			SALT_NOUN	sâ	sˈaː	s ˈaː		SALT_NOUN_1			
 Piedmontese	Piedmontese			SALT_NOUN	sal	sˈal	s ˈa l		SALT_NOUN_1			
 Western Lombard	Western Lombard			SALT_NOUN	sal	sˈɑːl	s ˈɑː l		SALT_NOUN_1			
@@ -9852,6 +10095,7 @@ Corsican	Corsican			HEALTH_NOUN	salute	salˈute	s a l ˈu t e		HEALTH_NOUN_1
 Italian	Italian			HEALTH_NOUN	salute	salˈute	s a l ˈu t e		HEALTH_NOUN_1			
 Venetian	Venetian			HEALTH_NOUN	sałute	saɰˈute	s a ɰ ˈu t e		HEALTH_NOUN_1			
 Emilian	Emilian			HEALTH_NOUN	salût	salˈuːt	s a l ˈuː t		HEALTH_NOUN_1			
+Romagnol	Romagnol			HEALTH_NOUN	salùta	sɐlˈutɐ	s ɐ l ˈu t ɐ		HEALTH_NOUN_1			
 Ligurian	Ligurian			HEALTH_NOUN	salûte	salˈyːte	s a l ˈyː t e		HEALTH_NOUN_1			
 Piedmontese	Piedmontese			HEALTH_NOUN	salute	salˈyte	s a l ˈy t e		HEALTH_NOUN_1			
 Western Lombard	Western Lombard			HEALTH_NOUN	salut	salˈyːt	s a l ˈyː t		HEALTH_NOUN_1			
@@ -9878,6 +10122,7 @@ Campidanese	Campidanese			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ
 Sicilian	Sicilian			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
 Corsican	Corsican			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
 Italian	Italian			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
+Romagnol	Romagnol			HEALTHY (F)_ADJ	sân	sˈʌ̃nɐ	s ˈʌ̃ n ɐ		HEALTHY (F)_ADJ_1			
 Ligurian	Ligurian			HEALTHY (F)_ADJ	saña	sˈaŋa	s ˈa ŋ a		HEALTHY (F)_ADJ_1			
 Piedmontese	Piedmontese			HEALTHY (F)_ADJ	sana	sˈana	s ˈa n a		HEALTHY (F)_ADJ_1			
 Western Lombard	Western Lombard			HEALTHY (F)_ADJ	sana	sˈɑːna	s ˈɑː n a		HEALTHY (F)_ADJ_1			
@@ -9913,6 +10158,7 @@ Corsican	Corsican			SACRED_ADJ	santu	sˈantu	s ˈa n t u		SACRED_ADJ_1
 Italian	Italian			SACRED_ADJ	santo	sˈanto	s ˈa n t o		SACRED_ADJ_1			
 Venetian	Venetian			SACRED_ADJ	santo	sˈaŋto	s ˈa ŋ t o		SACRED_ADJ_1			
 Emilian	Emilian			SACRED_ADJ	sant	sˈaŋt	s ˈa ŋ t		SACRED_ADJ_1			
+Romagnol	Romagnol			SACRED_ADJ	sânt	sˈʌ̃nt	s ˈʌ̃ n t		SACRED_ADJ_1			
 Ligurian	Ligurian			SACRED_ADJ	sànto	sˈaŋtu	s ˈa ŋ t u		SACRED_ADJ_1			
 Piedmontese	Piedmontese			SACRED_ADJ	sant	sˈaŋt	s ˈa ŋ t		SACRED_ADJ_1			
 Western Lombard	Western Lombard			SACRED_ADJ	sant	sˈãt	s ˈã t		SACRED_ADJ_1			
@@ -9949,6 +10195,7 @@ Italian	Italian			BLOOD_NOUN	sangue	sˈaŋɡwe	s ˈa ŋ ɡ w e		BLOOD_NOUN_1
 Venetian	Venetian			BLOOD_NOUN	sàngue	sˈaŋɡwe	s ˈa ŋ ɡ w e		BLOOD_NOUN_1			
 Bellunese	Bellunese			BLOOD_NOUN	sàngue	sˈaŋɡwe	s ˈa ŋ ɡ w e		BLOOD_NOUN_1			
 Emilian	Emilian			BLOOD_NOUN	sangv	sˈaŋɡv	s ˈa ŋ ɡ v		BLOOD_NOUN_1			
+Romagnol	Romagnol			BLOOD_NOUN	sângv	sˈʌ̃ŋɡv	s ˈʌ̃ ŋ ɡ v		BLOOD_NOUN_1			
 Ligurian	Ligurian			BLOOD_NOUN	sàngoe	sˈaŋɡwe	s ˈa ŋ ɡ w e		BLOOD_NOUN_1			
 Piedmontese	Piedmontese			BLOOD_NOUN	sangh	sˈaŋɡ	s ˈa ŋ ɡ		BLOOD_NOUN_1			
 Western Lombard	Western Lombard			BLOOD_NOUN	sang	sˈãk	s ˈã k		BLOOD_NOUN_1			
@@ -9988,6 +10235,7 @@ Italian	Italian			HEALTHY (M)_ADJ	sano	sˈano	s ˈa n o		HEALTHY (M)_ADJ_1
 Venetian	Venetian			HEALTHY (M)_ADJ	san	sˈaŋ	s ˈa ŋ		HEALTHY (M)_ADJ_1			
 Bellunese	Bellunese			HEALTHY (M)_ADJ	san	sˈaŋ	s ˈa ŋ		HEALTHY (M)_ADJ_1			
 Emilian	Emilian			HEALTHY (M)_ADJ	san	sˈaŋ	s ˈa ŋ		HEALTHY (M)_ADJ_1			
+Romagnol	Romagnol			HEALTHY (M)_ADJ	sân	sˈʌ̃	s ˈʌ̃		HEALTHY (M)_ADJ_1			
 Ligurian	Ligurian			HEALTHY (M)_ADJ	sàn	sˈaŋ	s ˈa ŋ		HEALTHY (M)_ADJ_1			
 Piedmontese	Piedmontese			HEALTHY (M)_ADJ	san	sˈaŋ	s ˈa ŋ		HEALTHY (M)_ADJ_1			
 Western Lombard	Western Lombard			HEALTHY (M)_ADJ	san	sˈã	s ˈã		HEALTHY (M)_ADJ_1			
@@ -10020,6 +10268,7 @@ Italian	Italian			KNOW_VERB	sapere	sapˈere	s a p ˈe r e		KNOW_VERB_1
 Venetian	Venetian			KNOW_VERB	savér	savˈer	s a v ˈe r		KNOW_VERB_1			
 Bellunese	Bellunese			KNOW_VERB	savér	savˈer	s a v ˈe r		KNOW_VERB_1			
 Emilian	Emilian			KNOW_VERB	savair	savˈajr	s a v ˈa j r		KNOW_VERB_1			
+Romagnol	Romagnol			KNOW_VERB	savēr	sɐvˈeː	s ɐ v ˈeː		KNOW_VERB_1			
 Ligurian	Ligurian			KNOW_VERB	savei	savˈej	s a v ˈe j		KNOW_VERB_1			
 Piedmontese	Piedmontese			KNOW_VERB	savèj	savˈɛj	s a v ˈɛ j		KNOW_VERB_1			
 Western Lombard	Western Lombard			KNOW_VERB	savè	savˈɛ	s a v ˈɛ		KNOW_VERB_1			
@@ -10066,6 +10315,7 @@ Corsican	Corsican			WISE_ADJ	saviu	sˈavju	s ˈa v j u		WISE_ADJ_1
 Italian	Italian			WISE_ADJ	savio	sˈavjo	s ˈa v j o		WISE_ADJ_1			
 Venetian	Venetian			WISE_ADJ	sàvio	sˈavjo	s ˈa v j o		WISE_ADJ_1			
 Emilian	Emilian			WISE_ADJ	sévi	sˈevi	s ˈe v i		WISE_ADJ_1			
+Romagnol	Romagnol			WISE_ADJ	sagi	sˈaʤi	s ˈa ʤ i		WISE_ADJ_1	TRUE		
 Ligurian	Ligurian			WISE_ADJ	sâvio	sˈaːvju	s ˈaː v j u		WISE_ADJ_1			
 Ligurian	Ligurian			WISE_ADJ	sâio	sˈaːju	s ˈaː j u		WISE_ADJ_1			
 Western Lombard	Western Lombard			WISE_ADJ	savi	sˈavi	s ˈa v i		WISE_ADJ_1			
@@ -10140,6 +10390,7 @@ Italian	Italian			BARK_NOUN	scorza	skˈɔrʦa	s k ˈɔ r ʦ a		BARK_NOUN_3
 Venetian	Venetian			BARK_NOUN	scòrsa	skˈɔrsa	s k ˈɔ r s a		BARK_NOUN_3			
 Bellunese	Bellunese			BARK_NOUN	scòrzha	skˈɔrθa	s k ˈɔ r θ a		BARK_NOUN_3			
 Emilian	Emilian			BARK_NOUN	scôrza	skˈɔːrθa	s k ˈɔː r θ a		BARK_NOUN_3			
+Romagnol	Romagnol			BARK_NOUN	scörza	skˈɔə̯rθɐ	s k ˈɔə̯ r θ ɐ		BARK_NOUN_3			
 Ligurian	Ligurian			BARK_NOUN	scòrsa	skˈɔːrsa	s k ˈɔː r s a		BARK_NOUN_3			
 Piedmontese	Piedmontese			BARK_NOUN	scorsa	skˈɔrsa	s k ˈɔ r s a		BARK_NOUN_3			
 Western Lombard	Western Lombard			BARK_NOUN	scorza	skˈɔrsa	s k ˈɔ r s a		BARK_NOUN_3			
@@ -10169,6 +10420,7 @@ Italian	Italian			WRITE_VERB	scrivere	skrˈivere	s k r ˈi v e r e		WRITE_VERB_1
 Venetian	Venetian			WRITE_VERB	scrìver	skrˈiver	s k r ˈi v e r		WRITE_VERB_1			
 Bellunese	Bellunese			WRITE_VERB	scrìver	skrˈiver	s k r ˈi v e r		WRITE_VERB_1			
 Emilian	Emilian			WRITE_VERB	scrîver	skrˈiːver	s k r ˈiː v e r		WRITE_VERB_1			
+Romagnol	Romagnol			WRITE_VERB	scrìvar	skrˈivɐr	s k r ˈi v ɐ r		WRITE_VERB_1			
 Ligurian	Ligurian			WRITE_VERB	scrîve	skrˈiːve	s k r ˈiː v e		WRITE_VERB_1			
 Piedmontese	Piedmontese			WRITE_VERB	scrive	skrˈive	s k r ˈi v e		WRITE_VERB_1			
 Western Lombard	Western Lombard			WRITE_VERB	scriv	skrˈiːf	s k r ˈiː f		WRITE_VERB_1			
@@ -10204,6 +10456,7 @@ Italian	Italian			SAFE_ADJ	sicuro	sikˈuro	s i k ˈu r o		SAFE_ADJ_1
 Venetian	Venetian			SAFE_ADJ	segùro	seɡˈuro	s e ɡ ˈu r o		SAFE_ADJ_1			
 Bellunese	Bellunese			SAFE_ADJ	sigùr	siɡˈur	s i ɡ ˈu r		SAFE_ADJ_1			
 Emilian	Emilian			SAFE_ADJ	ṡgûr	zɡˈuːr	z ɡ ˈuː r		SAFE_ADJ_1			
+Romagnol	Romagnol			SAFE_ADJ	sicùr	sikˈur	s i k ˈu r		SAFE_ADJ_1	TRUE		
 Ligurian	Ligurian			SAFE_ADJ	segûo	seɡˈyːu	s e ɡ ˈyː u		SAFE_ADJ_1			
 Piedmontese	Piedmontese			SAFE_ADJ	sicur	sikˈyr	s i k ˈy r		SAFE_ADJ_1		IRREGULAR	
 Western Lombard	Western Lombard			SAFE_ADJ	segur	seɡˈyːr	s e ɡ ˈyː r		SAFE_ADJ_1			
@@ -10262,6 +10515,7 @@ Italian	Italian			SEED_NOUN	semente	semˈente	s e m ˈe n t e		SEED_NOUN_2
 Venetian	Venetian			SEED_NOUN	seménsa	semˈensa	s e m ˈe n s a		SEED_NOUN_2			
 Bellunese	Bellunese			SEED_NOUN	seménzha	semˈenθa	s e m ˈe n θ a		SEED_NOUN_2			
 Emilian	Emilian			SEED_NOUN	smänt	smˈæŋt	s m ˈæ ŋ t		SEED_NOUN_2			
+Romagnol	Romagnol			SEED_NOUN	sménta	smˈẽntɐ	s m ˈẽ n t ɐ		SEED_NOUN_2			
 Ligurian	Ligurian			SEED_NOUN	seménsa	semˈeŋsa	s e m ˈe ŋ s a		SEED_NOUN_2			
 Piedmontese	Piedmontese			SEED_NOUN	smens	smˈɛns	s m ˈɛ n s		SEED_NOUN_2			
 Western Lombard	Western Lombard			SEED_NOUN	somenza	sumˈensa	s u m ˈe n s a		SEED_NOUN_2			
@@ -10290,6 +10544,7 @@ Italian	Italian			SEVEN_NUM	sette	sˈɛtte	s ˈɛ t t e		SEVEN_NUM_1
 Venetian	Venetian			SEVEN_NUM	sète	sˈɛte	s ˈɛ t e		SEVEN_NUM_1			
 Bellunese	Bellunese			SEVEN_NUM	sèt	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
 Emilian	Emilian			SEVEN_NUM	sèt	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
+Romagnol	Romagnol			SEVEN_NUM	sët	sˈɛə̯t	s ˈɛə̯ t		SEVEN_NUM_1			
 Ligurian	Ligurian			SEVEN_NUM	sette	sˈɛte	s ˈɛ t e		SEVEN_NUM_1			
 Piedmontese	Piedmontese			SEVEN_NUM	set	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
 Western Lombard	Western Lombard			SEVEN_NUM	set	sˈɛt	s ˈɛ t		SEVEN_NUM_1			
@@ -10328,6 +10583,7 @@ Venetian	Venetian			WEEK_NOUN	stemàna	stemˈana	s t e m ˈa n a		WEEK_NOUN_1
 Bellunese	Bellunese			WEEK_NOUN	setemana	setemˈana	s e t e m ˈa n a		WEEK_NOUN_1			
 Bellunese	Bellunese			WEEK_NOUN	stemàna	stemˈana	s t e m ˈa n a		WEEK_NOUN_1			
 Emilian	Emilian			WEEK_NOUN	stmèna	stmˈɛna	s t m ˈɛ n a		WEEK_NOUN_1			
+Romagnol	Romagnol			WEEK_NOUN	stmâna	stmˈʌ̃nɐ	s t m ˈʌ̃ n ɐ		WEEK_NOUN_1			
 Ligurian	Ligurian			WEEK_NOUN	settemaña	setemˈaŋa	s e t e m ˈa ŋ a		WEEK_NOUN_1			
 Piedmontese	Piedmontese			WEEK_NOUN	sman-a	smˈaŋa	s m ˈa ŋ a		WEEK_NOUN_1			
 Western Lombard	Western Lombard			WEEK_NOUN	semana	semˈana	s e m ˈa n a		WEEK_NOUN_1			
@@ -10365,6 +10621,7 @@ Italian	Italian			EVENING_NOUN	sera	sˈera	s ˈe r a		EVENING_NOUN_1
 Venetian	Venetian			EVENING_NOUN	séra	sˈera	s ˈe r a		EVENING_NOUN_1			
 Bellunese	Bellunese			EVENING_NOUN	séra	sˈera	s ˈe r a		EVENING_NOUN_1			
 Emilian	Emilian			EVENING_NOUN	sîra	sˈiːra	s ˈiː r a		EVENING_NOUN_1			
+Romagnol	Romagnol			EVENING_NOUN	sēra	sˈeːrɐ	s ˈeː r ɐ		EVENING_NOUN_1			
 Ligurian	Ligurian			EVENING_NOUN	séia	sˈeja	s ˈe j a		EVENING_NOUN_1			
 Piedmontese	Piedmontese			EVENING_NOUN	sèira	sˈɛjra	s ˈɛ j r a		EVENING_NOUN_1			
 Western Lombard	Western Lombard			EVENING_NOUN	sira	sˈiːra	s ˈiː r a		EVENING_NOUN_1			
@@ -10391,6 +10648,7 @@ Italian	Italian			SILK_NOUN	seta	sˈeta	s ˈe t a		SILK_NOUN_1
 Venetian	Venetian			SILK_NOUN	séa	sˈea	s ˈe a		SILK_NOUN_1			
 Bellunese	Bellunese			SILK_NOUN	séda	sˈeda	s ˈe d a		SILK_NOUN_1			
 Emilian	Emilian			SILK_NOUN	saida	sˈajda	s ˈa j d a		SILK_NOUN_1			
+Romagnol	Romagnol			SILK_NOUN	sēda	sˈeːdɐ	s ˈeː d ɐ		SILK_NOUN_1			
 Ligurian	Ligurian			SILK_NOUN	sæa	sˈɛːa	s ˈɛː a		SILK_NOUN_1			
 Piedmontese	Piedmontese			SILK_NOUN	seda	sˈeda	s ˈe d a		SILK_NOUN_1			
 Western Lombard	Western Lombard			SILK_NOUN	seda	sˈeːda	s ˈeː d a		SILK_NOUN_1			
@@ -10428,6 +10686,7 @@ Corsican	Corsican			SIX_NUM	sei	sˈej	s ˈe j		SIX_NUM_1
 Italian	Italian			SIX_NUM	sei	sˈɛj	s ˈɛ j		SIX_NUM_1			
 Venetian	Venetian			SIX_NUM	sìe	sˈie	s ˈi e		SIX_NUM_1			
 Emilian	Emilian			SIX_NUM	sî	sˈiː	s ˈiː		SIX_NUM_1			
+Romagnol	Romagnol			SIX_NUM	si	sˈi	s ˈi		SIX_NUM_1			
 Ligurian	Ligurian			SIX_NUM	sêi	sˈeːj	s ˈeː j		SIX_NUM_1			
 Piedmontese	Piedmontese			SIX_NUM	ses	sˈes	s ˈe s		SIX_NUM_1			
 Western Lombard	Western Lombard			SIX_NUM	sés	sˈeːs	s ˈeː s		SIX_NUM_1			
@@ -10466,6 +10725,7 @@ Neapolitan	Neapolitan			DRY (F)_ADJ	sicca	sˈikkə	s ˈi k k ə		DRY (F)_ADJ_1
 Corsican	Corsican			DRY (F)_ADJ	secca	sˈɛkka	s ˈɛ k k a		DRY (F)_ADJ_1			
 Italian	Italian			DRY (F)_ADJ	secca	sˈekka	s ˈe k k a		DRY (F)_ADJ_1			
 Venetian	Venetian			DRY (F)_ADJ	séca	sˈeka	s ˈe k a		DRY (F)_ADJ_1			
+Romagnol	Romagnol			DRY (F)_ADJ	sèca	sˈɛkɐ	s ˈɛ k ɐ		DRY (F)_ADJ_1			
 Ligurian	Ligurian			DRY (F)_ADJ	sécca	sˈeka	s ˈe k a		DRY (F)_ADJ_1			
 Piedmontese	Piedmontese			DRY (F)_ADJ	seca	sˈɛka	s ˈɛ k a		DRY (F)_ADJ_1			
 Western Lombard	Western Lombard			DRY (F)_ADJ	secca	sˈɛka	s ˈɛ k a		DRY (F)_ADJ_1			
@@ -10502,6 +10762,7 @@ Italian	Italian			DRY (M)_ADJ	secco	sˈekko	s ˈe k k o		DRY (M)_ADJ_1
 Venetian	Venetian			DRY (M)_ADJ	séco	sˈeko	s ˈe k o		DRY (M)_ADJ_1			
 Bellunese	Bellunese			DRY (M)_ADJ	sék	sˈek	s ˈe k		DRY (M)_ADJ_1			
 Emilian	Emilian			DRY (M)_ADJ	sacc	sˈak	s ˈa k		DRY (M)_ADJ_1			
+Romagnol	Romagnol			DRY (M)_ADJ	sec	sˈɛk	s ˈɛ k		DRY (M)_ADJ_1			
 Ligurian	Ligurian			DRY (M)_ADJ	sécco	sˈeku	s ˈe k u		DRY (M)_ADJ_1			
 Piedmontese	Piedmontese			DRY (M)_ADJ	sech	sˈɛk	s ˈɛ k		DRY (M)_ADJ_1			
 Western Lombard	Western Lombard			DRY (M)_ADJ	sech	sˈɛk	s ˈɛ k		DRY (M)_ADJ_1			
@@ -10540,6 +10801,7 @@ Italian	Italian			SUN_NOUN	sole	sˈole	s ˈo l e		SUN_NOUN_2
 Venetian	Venetian			SUN_NOUN	sól	sˈol	s ˈo l		SUN_NOUN_2			
 Bellunese	Bellunese			SUN_NOUN	sól	sˈol	s ˈo l		SUN_NOUN_2			
 Emilian	Emilian			SUN_NOUN	såul	sˈʌu̯l	s ˈʌu̯ l		SUN_NOUN_2			
+Romagnol	Romagnol			SUN_NOUN	sôl	sˈou̯l	s ˈou̯ l		SUN_NOUN_2			
 Ligurian	Ligurian			SUN_NOUN	sô	sˈuː	s ˈuː		SUN_NOUN_2			
 Piedmontese	Piedmontese			SUN_NOUN	sol	sˈul	s ˈu l		SUN_NOUN_2			
 Western Lombard	Western Lombard			SUN_NOUN	sul	sˈyːl	s ˈyː l		SUN_NOUN_2			
@@ -10567,6 +10829,7 @@ Corsican	Corsican			SWORD_NOUN	spada	spˈada	s p ˈa d a		SWORD_NOUN_1
 Italian	Italian			SWORD_NOUN	spada	spˈada	s p ˈa d a		SWORD_NOUN_1			
 Venetian	Venetian			SWORD_NOUN	spada	spˈada	s p ˈa d a		SWORD_NOUN_1			
 Emilian	Emilian			SWORD_NOUN	spèda	spˈɛda	s p ˈɛ d a		SWORD_NOUN_1			
+Romagnol	Romagnol			SWORD_NOUN	spêda	spˈeə̯dɐ	s p ˈeə̯ d ɐ		SWORD_NOUN_1			
 Ligurian	Ligurian			SWORD_NOUN	spâ	spˈaː	s p ˈaː		SWORD_NOUN_1			
 Piedmontese	Piedmontese			SWORD_NOUN	spa	spˈa	s p ˈa		SWORD_NOUN_1			
 Western Lombard	Western Lombard			SWORD_NOUN	spada	spˈɑːda	s p ˈɑː d a		SWORD_NOUN_1			
@@ -10598,6 +10861,7 @@ Sicilian	Sicilian			EAR OF GRAIN_NOUN	spica	ʃpˈika	ʃ p ˈi k a		EAR OF GRAIN_
 Neapolitan	Neapolitan			EAR OF GRAIN_NOUN	spica	ʃpˈikə	ʃ p ˈi k ə		EAR OF GRAIN_NOUN_1			
 Corsican	Corsican			EAR OF GRAIN_NOUN	spica	spˈika	s p ˈi k a		EAR OF GRAIN_NOUN_1			
 Italian	Italian			EAR OF GRAIN_NOUN	spiga	spˈiɡa	s p ˈi ɡ a		EAR OF GRAIN_NOUN_1			
+Romagnol	Romagnol			EAR OF GRAIN_NOUN	spiga	spˈiɡɐ	s p ˈi ɡ ɐ		EAR OF GRAIN_NOUN_1			
 Ligurian	Ligurian			EAR OF GRAIN_NOUN	spîga	spˈiːɡa	s p ˈiː ɡ a		EAR OF GRAIN_NOUN_1			
 Eastern Lombard	Eastern Lombard			EAR OF GRAIN_NOUN	spiga	spˈiɡa	s p ˈi ɡ a		EAR OF GRAIN_NOUN_1			
 Ladin	Ladin			EAR OF GRAIN_NOUN	spia	ʃpˈia	ʃ p ˈi a		EAR OF GRAIN_NOUN_1			
@@ -10636,6 +10900,7 @@ Italian	Italian			SPINE_NOUN	spina	spˈina	s p ˈi n a		SPINE_NOUN_1
 Venetian	Venetian			SPINE_NOUN	spina	spˈina	s p ˈi n a		SPINE_NOUN_1			
 Bellunese	Bellunese			SPINE_NOUN	spin	spˈin	s p ˈi n		SPINE_NOUN_1			
 Emilian	Emilian			SPINE_NOUN	spén	spˈeŋ	s p ˈe ŋ		SPINE_NOUN_1			
+Romagnol	Romagnol			SPINE_NOUN	spéna	spˈẽnɐ	s p ˈẽ n ɐ		SPINE_NOUN_1			
 Ligurian	Ligurian			SPINE_NOUN	spiña	spˈiŋa	s p ˈi ŋ a		SPINE_NOUN_1			
 Piedmontese	Piedmontese			SPINE_NOUN	spin-a	spˈiŋa	s p ˈi ŋ a		SPINE_NOUN_1			
 Western Lombard	Western Lombard			SPINE_NOUN	spina	spˈiːna	s p ˈiː n a		SPINE_NOUN_1			
@@ -10670,6 +10935,7 @@ Corsican	Corsican			STATE_NOUN	statu	ʃtˈatu	ʃ t ˈa t u		STATE_NOUN_1
 Italian	Italian			STATE_NOUN	stato	stˈato	s t ˈa t o		STATE_NOUN_1			
 Venetian	Venetian			STATE_NOUN	stado	stˈado	s t ˈa d o		STATE_NOUN_1			
 Emilian	Emilian			STATE_NOUN	stê	stˈɛː	s t ˈɛː		STATE_NOUN_1			
+Romagnol	Romagnol			STATE_NOUN	stêt	stˈeə̯t	s t ˈeə̯ t		STATE_NOUN_1			
 Piedmontese	Piedmontese			STATE_NOUN	stat	stˈat	s t ˈa t		STATE_NOUN_1			
 Western Lombard	Western Lombard			STATE_NOUN	stat	stˈɑːt	s t ˈɑː t		STATE_NOUN_1			
 Eastern Lombard	Eastern Lombard			STATE_NOUN	stat	stˈat	s t ˈa t		STATE_NOUN_1			
@@ -10705,6 +10971,7 @@ Italian	Italian			STAR_NOUN	stella	stˈella	s t ˈe l l a		STAR_NOUN_2
 Venetian	Venetian			STAR_NOUN	stéła	stˈea	s t ˈe a		STAR_NOUN_2			
 Bellunese	Bellunese			STAR_NOUN	stéla	stˈela	s t ˈe l a		STAR_NOUN_2			
 Emilian	Emilian			STAR_NOUN	strèla	strˈɛla	s t r ˈɛ l a		STAR_NOUN_2			
+Romagnol	Romagnol			STAR_NOUN	stëla	stˈɛə̯lɐ	s t ˈɛə̯ l ɐ		STAR_NOUN_2			
 Ligurian	Ligurian			STAR_NOUN	stela	stˈela	s t ˈe l a		STAR_NOUN_2			
 Piedmontese	Piedmontese			STAR_NOUN	steila	stˈejla	s t ˈe j l a		STAR_NOUN_2			
 Western Lombard	Western Lombard			STAR_NOUN	stella	stˈɛla	s t ˈɛ l a		STAR_NOUN_2			
@@ -10734,6 +11001,7 @@ Italian	Italian			ABOVE_PREP	sopra	sˈopra	s ˈo p r a		ABOVE_PREP_1
 Venetian	Venetian			ABOVE_PREP	sóra	sˈora	s ˈo r a		ABOVE_PREP_1			
 Bellunese	Bellunese			ABOVE_PREP	sóra	sˈora	s ˈo r a		ABOVE_PREP_1			
 Emilian	Emilian			ABOVE_PREP	såuver	sˈʌu̯ver	s ˈʌu̯ v e r		ABOVE_PREP_1			
+Romagnol	Romagnol			ABOVE_PREP	sôra	sˈou̯rɐ	s ˈou̯ r ɐ		ABOVE_PREP_1			
 Ligurian	Ligurian			ABOVE_PREP	sorve	sˈuːrve	s ˈuː r v e		ABOVE_PREP_1			
 Ligurian	Ligurian			ABOVE_PREP	sorvia	sˈuːrvja	s ˈuː r v j a		ABOVE_PREP_1			
 Western Lombard	Western Lombard			ABOVE_PREP	sora	sˈuːra	s ˈuː r a		ABOVE_PREP_1			
@@ -10773,6 +11041,7 @@ Italian	Italian			BULL_NOUN	toro	tˈɔro	t ˈɔ r o		BULL_NOUN_2
 Venetian	Venetian			BULL_NOUN	tòro	tˈɔro	t ˈɔ r o		BULL_NOUN_2			
 Bellunese	Bellunese			BULL_NOUN	tòro	tˈɔro	t ˈɔ r o		BULL_NOUN_2			
 Emilian	Emilian			BULL_NOUN	tôr	tˈɔːr	t ˈɔː r		BULL_NOUN_2			
+Romagnol	Romagnol			BULL_NOUN	tör	tˈɔə̯r	t ˈɔə̯ r		BULL_NOUN_2			
 Ligurian	Ligurian			BULL_NOUN	töo	tˈɔːu	t ˈɔː u		BULL_NOUN_2			
 Piedmontese	Piedmontese			BULL_NOUN	tòr	tˈɔr	t ˈɔ r		BULL_NOUN_2			
 Western Lombard	Western Lombard			BULL_NOUN	tòr	tˈɔr	t ˈɔ r		BULL_NOUN_2			
@@ -10802,6 +11071,7 @@ Corsican	Corsican			TIME_NOUN	tempu	tˈɛmpu	t ˈɛ m p u		TIME_NOUN_1
 Italian	Italian			TIME_NOUN	tempo	tˈɛmpo	t ˈɛ m p o		TIME_NOUN_1			
 Venetian	Venetian			TIME_NOUN	ténpo	tˈeŋpo	t ˈe ŋ p o		TIME_NOUN_1			
 Emilian	Emilian			TIME_NOUN	tänp	tˈæŋp	t ˈæ ŋ p		TIME_NOUN_1			
+Romagnol	Romagnol			TIME_NOUN	témp	tˈẽmp	t ˈẽ m p		TIME_NOUN_1			
 Ligurian	Ligurian			TIME_NOUN	tempo	tˈeŋpu	t ˈe ŋ p u		TIME_NOUN_1			
 Piedmontese	Piedmontese			TIME_NOUN	temp	tˈɛŋp	t ˈɛ ŋ p		TIME_NOUN_1			
 Western Lombard	Western Lombard			TIME_NOUN	temp	tˈẽp	t ˈẽ p		TIME_NOUN_1			
@@ -10844,6 +11114,7 @@ Italian	Italian			EARTH_NOUN	terra	tˈɛrra	t ˈɛ r r a		EARTH_NOUN_1
 Venetian	Venetian			EARTH_NOUN	tèra	tˈɛra	t ˈɛ r a		EARTH_NOUN_1			
 Bellunese	Bellunese			EARTH_NOUN	tèra	tˈɛra	t ˈɛ r a		EARTH_NOUN_1			
 Emilian	Emilian			EARTH_NOUN	tèra	tˈɛra	t ˈɛ r a		EARTH_NOUN_1			
+Romagnol	Romagnol			EARTH_NOUN	tëra	tˈɛə̯rɐ	t ˈɛə̯ r ɐ		EARTH_NOUN_1			
 Ligurian	Ligurian			EARTH_NOUN	tæra	tˈɛːra	t ˈɛː r a		EARTH_NOUN_1			
 Piedmontese	Piedmontese			EARTH_NOUN	tèra	tˈɛra	t ˈɛ r a		EARTH_NOUN_1			
 Western Lombard	Western Lombard			EARTH_NOUN	terra	tˈɛra	t ˈɛ r a		EARTH_NOUN_1			
@@ -10878,6 +11149,7 @@ Italian	Italian			SKULL_NOUN	testa	tˈɛsta	t ˈɛ s t a		SKULL_NOUN_1
 Venetian	Venetian			SKULL_NOUN	tèsta	tˈɛsta	t ˈɛ s t a		SKULL_NOUN_1			
 Bellunese	Bellunese			SKULL_NOUN	tèsta	tˈɛsta	t ˈɛ s t a		SKULL_NOUN_1			
 Emilian	Emilian			SKULL_NOUN	tèsta	tˈɛsta	t ˈɛ s t a		SKULL_NOUN_1			
+Romagnol	Romagnol			SKULL_NOUN	tësta	tˈɛə̯stɐ	t ˈɛə̯ s t ɐ		SKULL_NOUN_1			
 Ligurian	Ligurian			SKULL_NOUN	tésta	tˈesta	t ˈe s t a		SKULL_NOUN_1			
 Piedmontese	Piedmontese			SKULL_NOUN	testa	tˈesta	t ˈe s t a		SKULL_NOUN_1			
 Friulian	Friulian			SKULL_NOUN	teste	tˈɛste	t ˈɛ s t e		SKULL_NOUN_1			
@@ -10929,6 +11201,7 @@ Corsican	Corsican			THREE_NUM	trè	trˈɛ	t r ˈɛ		THREE_NUM_1
 Italian	Italian			THREE_NUM	tre	trˈe	t r ˈe		THREE_NUM_1			
 Venetian	Venetian			THREE_NUM	trè	trˈɛ	t r ˈɛ		THREE_NUM_1			
 Emilian	Emilian			THREE_NUM	trî	trˈiː	t r ˈiː		THREE_NUM_1			
+Romagnol	Romagnol			THREE_NUM	tre	trˈɛ	t r ˈɛ		THREE_NUM_1			
 Ligurian	Ligurian			THREE_NUM	trei	trˈej	t r ˈe j		THREE_NUM_1			
 Piedmontese	Piedmontese			THREE_NUM	tre	trˈɛ	t r ˈɛ		THREE_NUM_1			
 Western Lombard	Western Lombard			THREE_NUM	tri	trˈi	t r ˈi		THREE_NUM_1			
@@ -10968,6 +11241,7 @@ Italian	Italian			THOU_PRON	tu	tˈu	t ˈu		THOU_PRON_1
 Venetian	Venetian			THOU_PRON	ti	tˈi	t ˈi		THOU_PRON_1			
 Bellunese	Bellunese			THOU_PRON	ti	tˈi	t ˈi		THOU_PRON_1			
 Emilian	Emilian			THOU_PRON	té	tˈe	t ˈe		THOU_PRON_1			
+Romagnol	Romagnol			THOU_PRON	te	tˈɛ	t ˈɛ		THOU_PRON_1			
 Ligurian	Ligurian			THOU_PRON	ti	tˈi	t ˈi		THOU_PRON_1			
 Piedmontese	Piedmontese			THOU_PRON	ti	tˈi	t ˈi		THOU_PRON_1			
 Western Lombard	Western Lombard			THOU_PRON	ti	tˈi	t ˈi		THOU_PRON_1			
@@ -11002,6 +11276,7 @@ Italian	Italian			COUGH_VERB	tossire	tossˈire	t o s s ˈi r e		COUGH_VERB_1
 Venetian	Venetian			COUGH_VERB	tosìr	tosˈir	t o s ˈi r		COUGH_VERB_1			
 Bellunese	Bellunese			COUGH_VERB	tosìr	tosˈir	t o s ˈi r		COUGH_VERB_1			
 Emilian	Emilian			COUGH_VERB	tåsser	tˈʌser	t ˈʌ s e r		COUGH_VERB_1			
+Romagnol	Romagnol			COUGH_VERB	tusìr	tusˈi	t u s ˈi		COUGH_VERB_1			
 Ligurian	Ligurian			COUGH_VERB	toscî	tuʃˈiː	t u ʃ ˈiː		COUGH_VERB_1			
 Piedmontese	Piedmontese			COUGH_VERB	tosse	tˈuse	t ˈu s e		COUGH_VERB_1			
 Western Lombard	Western Lombard			COUGH_VERB	tossir	tusˈi	t u s ˈi		COUGH_VERB_1			
@@ -11046,6 +11321,7 @@ Corsican	Corsican			NAVEL_NOUN	billicu	bˈilliku	b ˈi l l i k u		NAVEL_NOUN_1
 Italian	Italian			NAVEL_NOUN	ombelico	ombelˈiko	o m b e l ˈi k o		NAVEL_NOUN_1			
 Venetian	Venetian			NAVEL_NOUN	bonìgoƚo	bonˈiɡoɰo	b o n ˈi ɡ o ɰ o		NAVEL_NOUN_1			
 Bellunese	Bellunese			NAVEL_NOUN	bonìgol	bonˈiɡol	b o n ˈi ɡ o l		NAVEL_NOUN_1			
+Romagnol	Romagnol			NAVEL_NOUN	blìgul	blˈiɡul	b l ˈi ɡ u l		NAVEL_NOUN_1			
 Ligurian	Ligurian			NAVEL_NOUN	ombrisallo	uŋbrisˈalu	u ŋ b r i s ˈa l u		NAVEL_NOUN_1			
 Piedmontese	Piedmontese			NAVEL_NOUN	amburì	amburˈi	a m b u r ˈi		NAVEL_NOUN_1			
 Western Lombard	Western Lombard			NAVEL_NOUN	ombrì	ũbrˈi	ũ b r ˈi		NAVEL_NOUN_1			
@@ -11080,6 +11356,7 @@ Italian	Italian			FINGERNAIL_NOUN	unghia	ˈuŋɡja	ˈu ŋ ɡ j a		FINGERNAIL_NOU
 Venetian	Venetian			FINGERNAIL_NOUN	óngia	ˈoŋʤa	ˈo ŋ ʤ a		FINGERNAIL_NOUN_1			
 Bellunese	Bellunese			FINGERNAIL_NOUN	óngia	ˈoŋʤa	ˈo ŋ ʤ a		FINGERNAIL_NOUN_1			
 Emilian	Emilian			FINGERNAIL_NOUN	ónngia	ˈoŋʤa	ˈo ŋ ʤ a		FINGERNAIL_NOUN_1			
+Romagnol	Romagnol			FINGERNAIL_NOUN	óngia	ˈonʤɐ	ˈo n ʤ ɐ		FINGERNAIL_NOUN_1			
 Ligurian	Ligurian			FINGERNAIL_NOUN	óngia	ˈuŋʤa	ˈu ŋ ʤ a		FINGERNAIL_NOUN_1			
 Piedmontese	Piedmontese			FINGERNAIL_NOUN	ongia	ˈuŋʤa	ˈu ŋ ʤ a		FINGERNAIL_NOUN_1			
 Western Lombard	Western Lombard			FINGERNAIL_NOUN	ongia	ˈũʤa	ˈũ ʤ a		FINGERNAIL_NOUN_1			
@@ -11121,6 +11398,7 @@ Italian	Italian			ONE_NUM	uno	ˈuno	ˈu n o		ONE_NUM_1
 Venetian	Venetian			ONE_NUM	un	ˈun	ˈu n		ONE_NUM_1			
 Bellunese	Bellunese			ONE_NUM	un	ˈun	ˈu n		ONE_NUM_1			
 Emilian	Emilian			ONE_NUM	ón	ˈoŋ	ˈo ŋ		ONE_NUM_1			
+Romagnol	Romagnol			ONE_NUM	ôn	ˈõũ̯	ˈõũ̯		ONE_NUM_1			
 Ligurian	Ligurian			ONE_NUM	un	ˈyŋ	ˈy ŋ		ONE_NUM_1			
 Piedmontese	Piedmontese			ONE_NUM	un	ˈyŋ	ˈy ŋ		ONE_NUM_1			
 Western Lombard	Western Lombard			ONE_NUM	vun	vˈỹ	v ˈỹ		ONE_NUM_1			
@@ -11158,6 +11436,7 @@ Neapolitan	Neapolitan			BEAR_NOUN	urso	ˈuɾso	ˈu ɾ s o		BEAR_NOUN_2
 Corsican	Corsican			BEAR_NOUN	orsu	ˈɔrsu	ˈɔ r s u		BEAR_NOUN_2			
 Italian	Italian			BEAR_NOUN	orso	ˈorso	ˈo r s o		BEAR_NOUN_2			
 Venetian	Venetian			BEAR_NOUN	orso	ˈorso	ˈo r s o		BEAR_NOUN_2			
+Romagnol	Romagnol			BEAR_NOUN	ôrs	ˈou̯rs	ˈou̯ r s		BEAR_NOUN_2			
 Ligurian	Ligurian			BEAR_NOUN	órso	ˈuːrsu	ˈuː r s u		BEAR_NOUN_2			
 Piedmontese	Piedmontese			BEAR_NOUN	ors	ˈurs	ˈu r s		BEAR_NOUN_2			
 Western Lombard	Western Lombard			BEAR_NOUN	ors	ˈurs	ˈu r s		BEAR_NOUN_2			
@@ -11189,6 +11468,7 @@ Italian	Italian			COW_NOUN	vacca	vˈakka	v ˈa k k a		COW_NOUN_1
 Venetian	Venetian			COW_NOUN	vaca	vˈaka	v ˈa k a		COW_NOUN_1			
 Bellunese	Bellunese			COW_NOUN	vaca	vˈaka	v ˈa k a		COW_NOUN_1			
 Emilian	Emilian			COW_NOUN	vâca	vˈaːka	v ˈaː k a		COW_NOUN_1			
+Romagnol	Romagnol			COW_NOUN	vaca	vˈakɐ	v ˈa k ɐ		COW_NOUN_1			
 Ligurian	Ligurian			COW_NOUN	vacca	vˈaka	v ˈa k a		COW_NOUN_1			
 Piedmontese	Piedmontese			COW_NOUN	vaca	vˈaka	v ˈa k a		COW_NOUN_1			
 Western Lombard	Western Lombard			COW_NOUN	vaca	vˈɑːka	v ˈɑː k a		COW_NOUN_1			
@@ -11251,6 +11531,7 @@ Italian	Italian			COME-INF_VERB	venire	venˈire	v e n ˈi r e		COME-INF_VERB_1
 Venetian	Venetian			COME-INF_VERB	vegnìr	veɲˈir	v e ɲ ˈi r		COME-INF_VERB_1			
 Bellunese	Bellunese			COME-INF_VERB	végner	vˈeɲer	v ˈe ɲ e r		COME-INF_VERB_1			
 Emilian	Emilian			COME-INF_VERB	vgnîr	vɲˈiːr	v ɲ ˈiː r		COME-INF_VERB_1			
+Romagnol	Romagnol			COME-INF_VERB	vnìr	vnˈir	v n ˈi r		COME-INF_VERB_1			
 Ligurian	Ligurian			COME-INF_VERB	vegnî	veɲˈiː	v e ɲ ˈiː		COME-INF_VERB_1			
 Piedmontese	Piedmontese			COME-INF_VERB	ven-e	vˈeŋe	v ˈe ŋ e		COME-INF_VERB_1			
 Western Lombard	Western Lombard			COME-INF_VERB	vegnì	veɲˈi	v e ɲ ˈi		COME-INF_VERB_1			
@@ -11294,7 +11575,7 @@ Québécois French	Québécois French			BELLY_NOUN	ventre	vãtʁ	v ã t ʁ		BE
 Walloon	Walloon			BELLY_NOUN	vinte	vˈɛ̃t	v ˈɛ̃ t		BELLY_NOUN_2			
 Franco-Provençal	Franco-Provençal			BELLY_NOUN	ventro	vˈɛ̃tʁo	v ˈɛ̃ t ʁ o		BELLY_NOUN_2			
 Savoyard	Savoyard			BELLY_NOUN	vêtro	vˈɛtro	v ˈɛ t r o		BELLY_NOUN_2			
-Auvergnat	Auvergnat			BELLY_NOUN	ventre	vˈẽŋtɾe	v ˈẽ ŋ t ɾ e		BELLY_NOUN_2			
+Auvergnat	Auvergnat			BELLY_NOUN	ventre	vˈẽŋtʀə	v ˈẽ ŋ t ʀ ə		BELLY_NOUN_2			
 Provençal	Provençal			BELLY_NOUN	ventre	vˈẽŋtɾe	v ˈẽ ŋ t ɾ e		BELLY_NOUN_2			
 Lengadocian	Lengadocian			BELLY_NOUN	ventre	bˈɛntɾe	b ˈɛ n t ɾ e		BELLY_NOUN_2			
 Gascon	Gascon			BELLY_NOUN	vente	bˈente	b ˈe n t e		BELLY_NOUN_2			
@@ -11318,6 +11599,7 @@ Italian	Italian			WIND_NOUN	vento	vˈɛnto	v ˈɛ n t o		WIND_NOUN_1
 Venetian	Venetian			WIND_NOUN	vénto	vˈeŋto	v ˈe ŋ t o		WIND_NOUN_1			
 Bellunese	Bellunese			WIND_NOUN	vént	vˈeŋt	v ˈe ŋ t		WIND_NOUN_1			
 Emilian	Emilian			WIND_NOUN	vânt	vˈaːŋt	v ˈaː ŋ t		WIND_NOUN_1			
+Romagnol	Romagnol			WIND_NOUN	vènt	vˈɛnt	v ˈɛ n t		WIND_NOUN_1			
 Ligurian	Ligurian			WIND_NOUN	vénto	vˈeŋtu	v ˈe ŋ t u		WIND_NOUN_1			
 Piedmontese	Piedmontese			WIND_NOUN	vent	vˈɛŋt	v ˈɛ ŋ t		WIND_NOUN_1			
 Western Lombard	Western Lombard			WIND_NOUN	vent	vˈẽt	v ˈẽ t		WIND_NOUN_1			
@@ -11364,6 +11646,7 @@ Italian	Italian			WORM_NOUN	verme	vˈɛrme	v ˈɛ r m e		WORM_NOUN_1
 Venetian	Venetian			WORM_NOUN	vèrme	vˈɛrme	v ˈɛ r m e		WORM_NOUN_1			
 Bellunese	Bellunese			WORM_NOUN	vèrmo	vˈɛrmo	v ˈɛ r m o		WORM_NOUN_1			
 Emilian	Emilian			WORM_NOUN	vèrem	vˈɛrem	v ˈɛ r e m		WORM_NOUN_1			
+Romagnol	Romagnol			WORM_NOUN	vērman	vˈeːrmɐn	v ˈeː r m ɐ n		WORM_NOUN_1			
 Ligurian	Ligurian			WORM_NOUN	vèrme	vˈɛːrme	v ˈɛː r m e		WORM_NOUN_1			
 Piedmontese	Piedmontese			WORM_NOUN	verm	vˈɛrm	v ˈɛ r m		WORM_NOUN_1			
 Western Lombard	Western Lombard			WORM_NOUN	vermen	vˈɛrmen	v ˈɛ r m e n		WORM_NOUN_1			
@@ -11403,6 +11686,7 @@ Italian	Italian			OLD_ADJ	vecchio	vˈɛkkjo	v ˈɛ k k j o		OLD_ADJ_1
 Venetian	Venetian			OLD_ADJ	vècio	vˈɛʧo	v ˈɛ ʧ o		OLD_ADJ_1			
 Bellunese	Bellunese			OLD_ADJ	vècio	vˈɛʧo	v ˈɛ ʧ o		OLD_ADJ_1			
 Emilian	Emilian			OLD_ADJ	vèc'	vˈɛʧ	v ˈɛ ʧ		OLD_ADJ_1			
+Romagnol	Romagnol			OLD_ADJ	vëcc	vˈɛə̯ʧ	v ˈɛə̯ ʧ		OLD_ADJ_1			
 Ligurian	Ligurian			OLD_ADJ	vêgio	vˈeːʤu	v ˈeː ʤ u		OLD_ADJ_1			
 Piedmontese	Piedmontese			OLD_ADJ	vej	vˈɛj	v ˈɛ j		OLD_ADJ_1			
 Western Lombard	Western Lombard			OLD_ADJ	vegg	vˈɛʧ	v ˈɛ ʧ		OLD_ADJ_1			
@@ -11437,6 +11721,7 @@ Corsican	Corsican			ROAD_NOUN	via	vˈia	v ˈi a		ROAD_NOUN_1
 Italian	Italian			ROAD_NOUN	via	vˈia	v ˈi a		ROAD_NOUN_1			
 Venetian	Venetian			ROAD_NOUN	via	vˈia	v ˈi a		ROAD_NOUN_1			
 Bellunese	Bellunese			ROAD_NOUN	via	vˈia	v ˈi a		ROAD_NOUN_1			
+Romagnol	Romagnol			ROAD_NOUN	vi'	vˈi	v ˈi		ROAD_NOUN_1			
 Ligurian	Ligurian			ROAD_NOUN	vîa	vˈiːa	v ˈiː a		ROAD_NOUN_1			
 Piedmontese	Piedmontese			ROAD_NOUN	via	vˈia	v ˈi a		ROAD_NOUN_1			
 Western Lombard	Western Lombard			ROAD_NOUN	via	vˈiːa	v ˈiː a		ROAD_NOUN_1			
@@ -11467,6 +11752,7 @@ Italian	Italian			JOURNEY_NOUN	viaggio	vjˈaʤʤo	v j ˈa ʤ ʤ o		JOURNEY_NOUN_
 Venetian	Venetian			JOURNEY_NOUN	viaxo	vjˈazo	v j ˈa z o		JOURNEY_NOUN_1			
 Bellunese	Bellunese			JOURNEY_NOUN	viàjo	vjˈajo	v j ˈa j o		JOURNEY_NOUN_1			
 Emilian	Emilian			JOURNEY_NOUN	viâz	vjˈaːθ	v j ˈaː θ		JOURNEY_NOUN_1			
+Romagnol	Romagnol			JOURNEY_NOUN	viàẓ	vjˈað	v j ˈa ð		JOURNEY_NOUN_1			
 Ligurian	Ligurian			JOURNEY_NOUN	viægio	vjˈɛːʤu	v j ˈɛː ʤ u		JOURNEY_NOUN_1			
 Piedmontese	Piedmontese			JOURNEY_NOUN	viagi	vjˈaʤi	v j ˈa ʤ i		JOURNEY_NOUN_1			
 Western Lombard	Western Lombard			JOURNEY_NOUN	viag	vjˈaʧ	v j ˈa ʧ		JOURNEY_NOUN_1			
@@ -11504,6 +11790,7 @@ Italian	Italian			SEE_VERB	vedere	vedˈere	v e d ˈe r e		SEE_VERB_1
 Venetian	Venetian			SEE_VERB	véder	vˈeder	v ˈe d e r		SEE_VERB_1			
 Bellunese	Bellunese			SEE_VERB	véder	vˈeder	v ˈe d e r		SEE_VERB_1			
 Emilian	Emilian			SEE_VERB	vàdder	vˈader	v ˈa d e r		SEE_VERB_1			
+Romagnol	Romagnol			SEE_VERB	vdēr	vdˈej	v d ˈe j		SEE_VERB_1			
 Ligurian	Ligurian			SEE_VERB	vedde	vˈede	v ˈe d e		SEE_VERB_1			
 Piedmontese	Piedmontese			SEE_VERB	vëdde	vˈədde	v ˈə d d e		SEE_VERB_1			
 Western Lombard	Western Lombard			SEE_VERB	vedè	vedˈɛ	v e d ˈɛ		SEE_VERB_1			
@@ -11542,6 +11829,7 @@ Italian	Italian			TWENTY_NUM	venti	vˈenti	v ˈe n t i		TWENTY_NUM_1
 Venetian	Venetian			TWENTY_NUM	vìnti	vˈiŋti	v ˈi ŋ t i		TWENTY_NUM_1			
 Bellunese	Bellunese			TWENTY_NUM	vìnti	vˈiŋti	v ˈi ŋ t i		TWENTY_NUM_1			
 Emilian	Emilian			TWENTY_NUM	vént	vˈeŋt	v ˈe ŋ t		TWENTY_NUM_1			
+Romagnol	Romagnol			TWENTY_NUM	vént	vˈẽnt	v ˈẽ n t		TWENTY_NUM_1			
 Ligurian	Ligurian			TWENTY_NUM	vinti	vˈiŋti	v ˈi ŋ t i		TWENTY_NUM_1			
 Piedmontese	Piedmontese			TWENTY_NUM	vint	vˈiŋt	v ˈi ŋ t		TWENTY_NUM_1			
 Western Lombard	Western Lombard			TWENTY_NUM	vint	vˈĩt	v ˈĩ t		TWENTY_NUM_1			
@@ -11575,6 +11863,7 @@ Corsican	Corsican			TOWN_NOUN	villa	vˈilla	v ˈi l l a		TOWN_NOUN_1
 Italian	Italian			TOWN_NOUN	villa	vˈilla	v ˈi l l a		TOWN_NOUN_1			
 Venetian	Venetian			TOWN_NOUN	vila	vˈila	v ˈi l a		TOWN_NOUN_1			
 Emilian	Emilian			TOWN_NOUN	vélla	vˈela	v ˈe l a		TOWN_NOUN_1			
+Romagnol	Romagnol			TOWN_NOUN	vèla	vˈɛlɐ	v ˈɛ l ɐ		TOWN_NOUN_1			
 Ligurian	Ligurian			TOWN_NOUN	vìlla	vˈila	v ˈi l a		TOWN_NOUN_1			
 Piedmontese	Piedmontese			TOWN_NOUN	vila	vˈila	v ˈi l a		TOWN_NOUN_1			
 Eastern Lombard	Eastern Lombard			TOWN_NOUN	éla	ˈela	ˈe l a		TOWN_NOUN_1			
@@ -11602,6 +11891,7 @@ Sicilian	Sicilian			VILLAIN_NOUN	viḍḍanu	viɖɖˈanʊ	v i ɖ ɖ ˈa n ʊ		VI
 Corsican	Corsican			VILLAIN_NOUN	villanu	villˈanu	v i l l ˈa n u		VILLAIN_NOUN_1			
 Italian	Italian			VILLAIN_NOUN	villano	villˈano	v i l l ˈa n o		VILLAIN_NOUN_1			
 Emilian	Emilian			VILLAIN_NOUN	vilàn	vilˈaŋ	v i l ˈa ŋ		VILLAIN_NOUN_1			
+Romagnol	Romagnol			VILLAIN_NOUN	vilân	vilˈʌ̃	v i l ˈʌ̃		VILLAIN_NOUN_1			
 Ligurian	Ligurian			VILLAIN_NOUN	villan	vilˈaŋ	v i l ˈa ŋ		VILLAIN_NOUN_1			
 Piedmontese	Piedmontese			VILLAIN_NOUN	vilan	vilˈaŋ	v i l ˈa ŋ		VILLAIN_NOUN_1			
 Eastern Lombard	Eastern Lombard			VILLAIN_NOUN	vilà	ʋilˈa	ʋ i l ˈa		VILLAIN_NOUN_1			
@@ -11635,6 +11925,7 @@ Italian	Italian			WINE_NOUN	vino	vˈino	v ˈi n o		WINE_NOUN_1
 Venetian	Venetian			WINE_NOUN	vin	vˈiŋ	v ˈi ŋ		WINE_NOUN_1			
 Bellunese	Bellunese			WINE_NOUN	vin	vˈiŋ	v ˈi ŋ		WINE_NOUN_1			
 Emilian	Emilian			WINE_NOUN	vén	vˈeŋ	v ˈe ŋ		WINE_NOUN_1			
+Romagnol	Romagnol			WINE_NOUN	vén	vˈẽj̃	v ˈẽ j̃		WINE_NOUN_1			
 Ligurian	Ligurian			WINE_NOUN	vin	vˈiŋ	v ˈi ŋ		WINE_NOUN_1			
 Piedmontese	Piedmontese			WINE_NOUN	vin	vˈiŋ	v ˈi ŋ		WINE_NOUN_1			
 Western Lombard	Western Lombard			WINE_NOUN	vin	vˈĩ	v ˈĩ		WINE_NOUN_1			
@@ -11675,6 +11966,7 @@ Italian	Italian			GREEN_ADJ	verde	vˈerde	v ˈe r d e		GREEN_ADJ_1
 Venetian	Venetian			GREEN_ADJ	vérde	vˈerde	v ˈe r d e		GREEN_ADJ_1			
 Bellunese	Bellunese			GREEN_ADJ	vérdo	vˈerdo	v ˈe r d o		GREEN_ADJ_1			
 Emilian	Emilian			GREEN_ADJ	vaird	vˈajrd	v ˈa j r d		GREEN_ADJ_1			
+Romagnol	Romagnol			GREEN_ADJ	vērd	vˈejrd	v ˈe j r d		GREEN_ADJ_1			
 Ligurian	Ligurian			GREEN_ADJ	vèrde	vˈɛːrde	v ˈɛː r d e		GREEN_ADJ_1			
 Piedmontese	Piedmontese			GREEN_ADJ	verd	vˈɛrd	v ˈɛ r d		GREEN_ADJ_1			
 Western Lombard	Western Lombard			GREEN_ADJ	verd	vˈert	v ˈe r t		GREEN_ADJ_1			
@@ -11712,6 +12004,7 @@ Italian	Italian			LIFE_NOUN	vita	vˈita	v ˈi t a		LIFE_NOUN_1
 Venetian	Venetian			LIFE_NOUN	vita	vˈita	v ˈi t a		LIFE_NOUN_1			
 Bellunese	Bellunese			LIFE_NOUN	vita	vˈita	v ˈi t a		LIFE_NOUN_1			
 Emilian	Emilian			LIFE_NOUN	vétta	vˈeta	v ˈe t a		LIFE_NOUN_1			
+Romagnol	Romagnol			LIFE_NOUN	vita	vˈitɐ	v ˈi t ɐ		LIFE_NOUN_1			
 Ligurian	Ligurian			LIFE_NOUN	vìtta	vˈita	v ˈi t a		LIFE_NOUN_1			
 Piedmontese	Piedmontese			LIFE_NOUN	vita	vˈita	v ˈi t a		LIFE_NOUN_1			
 Western Lombard	Western Lombard			LIFE_NOUN	vita	vˈita	v ˈi t a		LIFE_NOUN_1			
@@ -11750,6 +12043,7 @@ Italian	Italian			CALF_NOUN	vitello	vitˈɛllo	v i t ˈɛ l l o		CALF_NOUN_1
 Venetian	Venetian			CALF_NOUN	vedèło	vedˈɛo	v e d ˈɛ o		CALF_NOUN_1			
 Bellunese	Bellunese			CALF_NOUN	vedèl	vedˈɛl	v e d ˈɛ l		CALF_NOUN_1			
 Emilian	Emilian			CALF_NOUN	vidèl	vidˈɛl	v i d ˈɛ l		CALF_NOUN_1			
+Romagnol	Romagnol			CALF_NOUN	vidël	vidˈɛə̯l	v i d ˈɛə̯ l		CALF_NOUN_1			
 Ligurian	Ligurian			CALF_NOUN	vitéllo	vitˈelu	v i t ˈe l u		CALF_NOUN_1			
 Piedmontese	Piedmontese			CALF_NOUN	vitel	vitˈɛl	v i t ˈɛ l		CALF_NOUN_1			
 Western Lombard	Western Lombard			CALF_NOUN	vitell	vitˈɛl	v i t ˈɛ l		CALF_NOUN_1			
@@ -11784,6 +12078,7 @@ Italian	Italian			VOICE_NOUN	voce	vˈoʧe	v ˈo ʧ e		VOICE_NOUN_1
 Venetian	Venetian			VOICE_NOUN	vóxe	vˈoze	v ˈo z e		VOICE_NOUN_1			
 Bellunese	Bellunese			VOICE_NOUN	vózhe	vˈoθe	v ˈo θ e		VOICE_NOUN_1			
 Emilian	Emilian			VOICE_NOUN	våuṡ	vˈʌu̯z	v ˈʌu̯ z		VOICE_NOUN_1			
+Romagnol	Romagnol			VOICE_NOUN	vôş	vˈou̯z	v ˈou̯ z		VOICE_NOUN_1			
 Ligurian	Ligurian			VOICE_NOUN	vôxe	vˈuːʒe	v ˈuː ʒ e		VOICE_NOUN_1			
 Piedmontese	Piedmontese			VOICE_NOUN	vos	vˈuz	v ˈu z		VOICE_NOUN_1			
 Western Lombard	Western Lombard			VOICE_NOUN	vos	vˈus	v ˈu s		VOICE_NOUN_1			
@@ -11816,6 +12111,7 @@ Neapolitan	Neapolitan			FLY_VERB	vulà	vulˈa	v u l ˈa		FLY_VERB_2
 Corsican	Corsican			FLY_VERB	vulà	vulˈa	v u l ˈa		FLY_VERB_2			
 Italian	Italian			FLY_VERB	volare	volˈare	v o l ˈa r e		FLY_VERB_2			
 Emilian	Emilian			FLY_VERB	vulèr	vulˈɛr	v u l ˈɛ r		FLY_VERB_2			
+Romagnol	Romagnol			FLY_VERB	vulêr	vulˈeə̯	v u l ˈeə̯		FLY_VERB_2			
 Piedmontese	Piedmontese			FLY_VERB	volé	vulˈe	v u l ˈe		FLY_VERB_2			
 Old French	Old French			FLY_VERB	voler	vulˈer	v u l ˈe r		FLY_VERB_2			
 French	French			FLY_VERB	voler	vɔle	v ɔ l e		FLY_VERB_2			
@@ -11865,6 +12161,7 @@ Brazilian Portuguese	Brazilian Portuguese			YOU (PL)_PRON	vós	vˈɔjʃ	v ˈɔ j
 Corsican	Corsican			BROTHER_NOUN	fratellu	fratˈellu	f r a t ˈe l l u		BROTHER_NOUN_3			
 Italian	Italian			BROTHER_NOUN	fratello	fratˈɛllo	f r a t ˈɛ l l o		BROTHER_NOUN_3			
 Emilian	Emilian			BROTHER_NOUN	fradèl	fradˈɛl	f r a d ˈɛ l		BROTHER_NOUN_3			
+Romagnol	Romagnol			BROTHER_NOUN	fradël	frɐdˈɛə̯l	f r ɐ d ˈɛə̯ l		BROTHER_NOUN_3			
 Western Lombard	Western Lombard			BROTHER_NOUN	fradel	fradˈɛl	f r a d ˈɛ l		BROTHER_NOUN_3			
 Eastern Lombard	Eastern Lombard			BROTHER_NOUN	fradèl	fradˈɛl	f r a d ˈɛ l		BROTHER_NOUN_3			
 Dalmatian	Dalmatian			SMALL_ADJ	pelo	pˈelo	p ˈe l o		SMALL_ADJ_2			
@@ -11924,6 +12221,8 @@ Valencian	Valencian			SMALL_ADJ	petit	petˈit	p e t ˈi t		SMALL_ADJ_4
 Dalmatian	Dalmatian			WE_PRON	nojiltri	nojˈiltri	n o j ˈi l t r i		WE_PRON_2			
 Venetian	Venetian			WE_PRON	nialtri	niˈaltri	n i ˈa l t r i		WE_PRON_2			
 Emilian	Emilian			WE_PRON	nuèter	nwˈɛter	n w ˈɛ t e r		WE_PRON_2			
+Romagnol	Romagnol			WE_PRON	nujētar	nujˈeːtɐr	n u j ˈeː t ɐ r		WE_PRON_2			
+Romagnol	Romagnol			WE_PRON	nujêtri	nujˈeə̯tri	n u j ˈeə̯ t r i		WE_PRON_2			
 Ligurian	Ligurian			WE_PRON	niâtri	njˈaːtri	n j ˈaː t r i		WE_PRON_2			
 Friulian	Friulian			WE_PRON	noaltris	noˈaltris	n o ˈa l t r i s		WE_PRON_2			
 Walloon	Walloon			WE_PRON	nozôtes	nɔzˈoːt	n ɔ z ˈoː t		WE_PRON_2			
@@ -11940,6 +12239,8 @@ Asturian	Asturian			WE_PRON	nosotros	nosˈotɾos	n o s ˈo t ɾ o s		WE_PRON_2
 Galician	Galician			WE_PRON	nosoutros	nosˈowtɾos	n o s ˈo w t ɾ o s		WE_PRON_2			
 Logudorese	Logudorese			YOU (PL)_PRON	bosatrus	bozˈatruzŭ	b o z ˈa t r u z ŭ		YOU (PL)_PRON_2			
 Campidanese	Campidanese			YOU (PL)_PRON	bosatrus	bozˈatruzŭ	b o z ˈa t r u z ŭ		YOU (PL)_PRON_2			
+Romagnol	Romagnol			YOU (PL)_PRON	vujētar	vujˈeːtɐr	v u j ˈeː t ɐ r		YOU (PL)_PRON_2			
+Romagnol	Romagnol			YOU (PL)_PRON	vujêtri	vujˈeə̯tri	v u j ˈeə̯ t r i		YOU (PL)_PRON_2			
 Ligurian	Ligurian			YOU (PL)_PRON	viâtri	vjˈaːtri	v j ˈaː t r i		YOU (PL)_PRON_2			
 Piedmontese	Piedmontese			YOU (PL)_PRON	vojàutri	vujˈawtri	v u j ˈa w t r i		YOU (PL)_PRON_2			
 Western Lombard	Western Lombard			YOU (PL)_PRON	violter	vjˈɔlter	v j ˈɔ l t e r		YOU (PL)_PRON_2			
