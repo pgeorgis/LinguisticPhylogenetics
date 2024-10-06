@@ -1,9 +1,9 @@
 family:
     name: Slavic
-    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/datasets/Slavic/data/slavic_data.tsv
+    file: datasets/Slavic/data/slavic_data.tsv
     min_amc: 0.68
     exclude: ['Čakavian (Istria)', 'Čakavian (Cres)', 'Čakavian (Burgenland)', 'Kajkavian', 'Lithuanian', 'Latvian']
-    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/datasets/Slavic/
+    outdir: datasets/Slavic/
 
 transcription:
     global:
