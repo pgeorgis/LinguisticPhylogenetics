@@ -236,6 +236,13 @@ if __name__ == "__main__":
     # Load CLDF dataset
     if family_params['min_amc']:
         family_params['min_amc'] = float(family_params['min_amc'])
+    # Set the warn threshold for instances of phone in a doculect to the maximum of the 
+    # threshold set in transcription parameters and the minimum correlation instance value
+    # Ensures that if minimum correlation is set to a higher value,
+    # warnings will be issued about any phones with fewer instances than this
+    transcription_params["global"]["min_phone_instances"] = max(
+        transcription_params["global"]["min_phone_instances"], phon_corr_params['min_corr']
+    )
     family = load_family(family_params['name'],
                          family_params['file'],
                          outdir=family_params['outdir'],

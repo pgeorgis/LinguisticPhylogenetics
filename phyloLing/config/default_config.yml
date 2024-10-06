@@ -19,6 +19,7 @@ transcription:
         suprasegmentals: 
         level_suprasegmentals: 
         ch_to_remove: {' '}
+        min_phone_instances: 2
     # doculects:
     #     French:
     #         ignore_stress: true
