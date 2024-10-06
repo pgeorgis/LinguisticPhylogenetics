@@ -1,5 +1,6 @@
 # Define the default target
 .DEFAULT_GOAL := help
+SHELL := /bin/bash
 
 # Usage help
 help:
