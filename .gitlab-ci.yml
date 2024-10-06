@@ -32,7 +32,7 @@ install_dependencies:
 romance:
   stage: classify
   script:
-    - make classify CONFIG=datasets/Romance/config/romance_config.yml
+    - make classify-romance
   artifacts:
     paths:
       - datasets/Romance/experiments
@@ -40,7 +40,7 @@ romance:
 germanic:
   stage: classify
   script:
-    - make classify CONFIG=datasets/Germanic/config/germanic_config.yml
+    - make classify-germanic
   artifacts:
     paths:
       - datasets/Germanic/experiments
@@ -48,7 +48,7 @@ germanic:
 slavic:
   stage: classify
   script:
-    - make classify CONFIG=datasets/Slavic/config/slavic_config.yml
+    - make classify-slavic
   artifacts:
     paths:
       - datasets/Slavic/experiments
