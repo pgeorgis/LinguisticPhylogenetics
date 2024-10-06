@@ -1,0 +1,42 @@
+stages:
+  - prepare
+  - classify
+
+default:
+  image: python:3.12
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - .venv
+
+install_dependencies:
+  stage: prepare
+  script:
+    - make init
+  cache:
+    policy: push
+
+romance:
+  stage: classify
+  script:
+    - make classify CONFIG=datasets/Romance/config/romance_config.yml
+  artifacts:
+    paths:
+      - datasets/Romance/experiments
+
+germanic:
+  stage: classify
+  script:
+    - make classify CONFIG=datasets/Germanic/config/germanic_config.yml
+  artifacts:
+    paths:
+      - datasets/Germanic/experiments
+
+slavic:
+  stage: classify
+  script:
+    - make classify CONFIG=datasets/Slavic/config/slavic_config.yml
+  artifacts:
+    paths:
+      - datasets/Slavic/experiments
