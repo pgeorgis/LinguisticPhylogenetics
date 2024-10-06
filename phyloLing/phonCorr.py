@@ -5,22 +5,22 @@ from collections import defaultdict
 from functools import lru_cache
 from itertools import product
 from statistics import mean, stdev
-from nltk.translate import AlignedSent, IBMModel1, IBMModel2
-import numpy as np
 
+import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
-                       PAD_CH_DEFAULT, START_PAD_CH, SEG_JOIN_CH)
-from phonAlign import Alignment, AlignedPair, visual_align
+                       PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
+from nltk.translate import AlignedSent, IBMModel1, IBMModel2
+from phonAlign import Alignment, visual_align
 from phonUtils.phonEnv import (phon_env_ngrams, relative_post_sonority,
                                relative_prev_sonority)
 from phonUtils.segment import _toSegment
 from scipy.stats import norm
-from utils.information import (adaptation_surprisal, bayes_pmi,
-                               pointwise_mutual_info, surprisal,
+from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
-from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
-                            flatten_ngram, generate_ngrams, pad_sequence, start_token, end_token)
-from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, rescale, segment_ranges
+from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
+                            pad_sequence, start_token)
+from utils.utils import (balanced_resample, default_dict, dict_tuplelist,
+                         normalize_dict, segment_ranges)
 
 
 def fit_ibm_align_model(corpus: list[tuple],
