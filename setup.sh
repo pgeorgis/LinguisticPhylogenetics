@@ -4,11 +4,12 @@ set -eou pipefail
 # Create the virtual environment:
 python3 -m venv venv
 
-if [ -z "$GITHUB_ACCESS_TOKEN" ] && [ -z "$GITHUB_USER_NAME" ]; then
-    touch "$HOME"/.git-credentials
-    chmod 0600 "$HOME"/.git-credentials
-cat <<EOF >> "$HOME/.git-credentials"
-[credential]
+if declare -p GITHUB_USER_NAME >&/dev/null && declare -p GITHUB_ACCESS_TOKEN >&/dev/null; then
+    CREDENTIALS_FILE="$HOME/.git-credentials"
+    touch "$CREDENTIALS_FILE"
+    chmod 0600 "$CREDENTIALS_FILE"
+cat <<EOF >> "$CREDENTIALS_FILE"
+[credential "https://github.com"]
     username = $GITHUB_USER_NAME
     password = $GITHUB_ACCESS_TOKEN
 EOF
