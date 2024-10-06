@@ -499,7 +499,6 @@ class PhonCorrelator:
                        wordlist,
                        align_costs=None,
                        remove_uncompacted_padding=True,
-                       compact=False,
                        # phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
@@ -517,10 +516,6 @@ class PhonCorrelator:
             for word1, word2 in wordlist
         ]
 
-        # Compact alignments
-        if compact:
-            self.compact_alignments(alignment_list, self.complex_ngrams, align_costs)
-
         if remove_uncompacted_padding:
             for alignment in alignment_list:
                 alignment.remove_padding()
@@ -529,11 +524,6 @@ class PhonCorrelator:
         #     for alignment in alignment_list:
         #         alignment.phon_env_alignment = alignment.add_phon_env()
 
-        return alignment_list
-
-    def compact_alignments(self, alignment_list, complex_ngrams, simple_ngrams):
-        for alignment in alignment_list:
-            alignment.compact_gaps(complex_ngrams, simple_ngrams)
         return alignment_list
 
     def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
@@ -688,7 +678,6 @@ class PhonCorrelator:
                              counts=False,
                              min_corr=2,
                              exclude_null=True,
-                             compact_null=True,
                              pad=False,
                              ):
         """Returns a dictionary of conditional phone probabilities, based on a list
@@ -697,18 +686,8 @@ class PhonCorrelator:
         exclude_null : Bool; if True, does not consider aligned pairs including a null segment"""
 
         corr_counts = defaultdict(lambda: defaultdict(lambda: 0))
-        if compact_null:
-            null_compacter = NullCompacter(corr_counts,
-                                           alignment_list,
-                                           ngram_size=ngram_size,
-                                           gap_ch=self.gap_ch,
-                                           pad_ch=self.pad_ch,
-                                           lang1=self.lang1,
-                                           lang2=self.lang2)
         for alignment in alignment_list:
-            if exclude_null and compact_null:
-                _alignment = alignment.alignment  # do nothing, will get excluded on recursive call when compact_null=False
-            elif exclude_null:
+            if exclude_null:
                 _alignment = alignment.remove_gaps()
             else:
                 _alignment = alignment.alignment
@@ -725,26 +704,6 @@ class PhonCorrelator:
                 ngram = _alignment[i - (ngram_size - 1):i + 1]
                 seg1, seg2 = list(zip(*ngram))
                 corr_counts[seg1][seg2] += 1
-                if compact_null:
-                    null_compacter.compact_null(_alignment, i, ngram)
-
-        if compact_null:
-            # complex_ngrams = null_compacter.combine_corrs()
-            # Prune any without at least min_corr occurrences
-            null_compacter.prune(min_val=min_corr)
-            self.complex_ngrams = null_compacter.select_valid_null_corrs()
-            #self.logger.info("Reset self.complex_ngrams") # TODO shouldn't be reset, should be passed as arg
-            compacted_alignments = self.compact_alignments(alignment_list, self.complex_ngrams, corr_counts)
-            adjusted_corrs = self.correspondence_probs(
-                compacted_alignments,
-                ngram_size=ngram_size,
-                counts=counts,
-                min_corr=min_corr,
-                exclude_null=exclude_null,
-                compact_null=False,
-                pad=False,
-            )
-            return adjusted_corrs
 
         if min_corr > 1:
             corr_counts = prune_corrs(corr_counts, min_val=min_corr)
@@ -1000,8 +959,7 @@ class PhonCorrelator:
                 # Align the qualifying words of the previous step using initial PMI
                 cognate_alignments = self.align_wordlist(
                     qual_prev_sample,
-                    align_costs=pmi_step_i,
-                    compact=False, # TODO reenable potentially
+                    align_costs=pmi_step_i
                 )
 
                 # Add cognate alignments into running pool of alignments
@@ -1016,7 +974,6 @@ class PhonCorrelator:
                 cognate_probs = self.correspondence_probs(
                     cognate_alignments,
                     exclude_null=False,
-                    compact_null=False, # TODO consider reenabling potentially
                     counts=True,
                     min_corr=min_corr,
                 )
@@ -1029,7 +986,6 @@ class PhonCorrelator:
                 aligned_synonym_sample = self.align_wordlist(
                     synonym_sample,
                     align_costs=PMI_iterations[iteration],
-                    compact=False, # TODO reenable potentially
                 )
 
                 # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
@@ -1037,7 +993,6 @@ class PhonCorrelator:
                 noncognate_alignments = self.align_wordlist(
                     disqualified_words[iteration - 1],
                     align_costs=PMI_iterations[iteration],
-                    compact=False, # TODO reenable potentially
                 )
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
@@ -1100,7 +1055,6 @@ class PhonCorrelator:
         final_alignments = self.align_wordlist(
             final_qualifying,
             align_costs=results,
-            compact=False, # TODO reenable potentially
         )
         # Log final alignments
         self.log_alignments(final_alignments, self.align_log['PMI'])
@@ -1354,7 +1308,6 @@ class PhonCorrelator:
             counts=True,
             min_corr=min_corr,
             exclude_null=False,
-            compact_null=False, # TODO consider reenabling potentially
             #ngram_size=ngram_size,
         )
 
@@ -1650,211 +1603,6 @@ class PhonCorrelator:
         content = '\n'.join([header, lines])
         with open(outfile, 'w') as f:
             f.write(f'{content}')
-
-
-class NullCompacter:
-    def __init__(self, corr_counts, alignments, lang1, lang2, gap_ch, pad_ch, ngram_size=1):
-        self.gap_ch = gap_ch
-        self.pad_ch = pad_ch
-        self.gap_ngram = Ngram(self.gap_ch).ngram
-        self.pad_ngrams = (Ngram(f'{self.pad_ch}{END_PAD_CH}').ngram, Ngram(f'{START_PAD_CH}{self.pad_ch}').ngram)
-        self.ngram_size = ngram_size
-        self.corr_counts = corr_counts
-        self.alignments = alignments
-        self.seqs1, self.seqs2 = self.extract_seqs()
-        self.set_seq_lens()
-        self.lang1 = lang1
-        self.lang2 = lang2
-        self.compacted_corr_counts = defaultdict(lambda: defaultdict(lambda: 0))
-        self.reversed_corr_counts = None
-        self.reversed_compacted_corr_counts = None
-        self.valid_corrs = defaultdict(lambda: defaultdict(lambda: 0))
-
-    def extract_seqs(self):
-        seqs1 = [alignment.seq1 for alignment in self.alignments]
-        seqs2 = [alignment.seq2 for alignment in self.alignments]
-        return seqs1, seqs2
-
-    def set_seq_lens(self):
-        self.seqs1_lens = [len(seq) for seq in self.seqs1]
-        self.seqs2_lens = [len(seq) for seq in self.seqs2]
-        self.seqs1_len_total = sum(self.seqs1_lens)
-        self.seqs2_len_total = sum(self.seqs2_lens)
-
-    def reverse_corr_counts(self):
-        if self.reversed_corr_counts is None:
-            self.reversed_corr_counts = reverse_corr_dict(self.corr_counts)
-        if self.reversed_compacted_corr_counts is None:
-            self.reversed_compacted_corr_counts = reverse_corr_dict(self.compacted_corr_counts)
-
-    def compact_next_ngram(self, alignment, i, ngram, ngram_i, gap_index):
-        opposite_index = gap_index - 1
-        next_ngram = alignment[i + 1 - (self.ngram_size - 1):i + 2]
-        if self.gap_ch not in (next_ngram[ngram_i][gap_index], next_ngram[ngram_i][opposite_index]):
-            gap_seg = next_ngram[ngram_i][gap_index]
-            larger_ngram = flatten_ngram((ngram[ngram_i][opposite_index], next_ngram[ngram_i][opposite_index]))
-            if gap_index == 0:
-                self.compacted_corr_counts[gap_seg][larger_ngram] += 1
-            else:  # 1
-                self.compacted_corr_counts[larger_ngram][gap_seg] += 1
-
-    def compact_prev_ngram(self, alignment, i, ngram, ngram_i, gap_index):
-        opposite_index = gap_index - 1
-        prev_ngram = alignment[i - 1 - (self.ngram_size - 1):i]
-        if self.gap_ch not in (prev_ngram[ngram_i][gap_index], prev_ngram[ngram_i][opposite_index]):
-            gap_seg = prev_ngram[ngram_i][gap_index]
-            larger_ngram = flatten_ngram((prev_ngram[ngram_i][opposite_index], ngram[ngram_i][opposite_index]))
-            if gap_index == 0:
-                self.compacted_corr_counts[gap_seg][larger_ngram] += 1
-            else:  # 1
-                self.compacted_corr_counts[larger_ngram][gap_seg] += 1
-
-    def compact_null(self, alignment, i, ngram):
-        if any([self.gap_ch in ngram_i for ngram_i in ngram]):
-            if self.ngram_size > 1:
-                raise NotImplementedError  # unsure if this will work for ngram size > 1
-            else:
-                ngram_i = 0
-            gap_index = ngram[ngram_i].index(self.gap_ch)
-            if i > 0 and i < len(alignment) - 1:  # medial (has preceding and following)
-                self.compact_next_ngram(alignment, i, ngram, ngram_i, gap_index)
-                self.compact_prev_ngram(alignment, i, ngram, ngram_i, gap_index)
-            elif i > 0:  # final (preceding only)
-                self.compact_prev_ngram(alignment, i, ngram, ngram_i, gap_index)
-            elif len(alignment) > 1:  # initial with following ngram
-                self.compact_next_ngram(alignment, i, ngram, ngram_i, gap_index)
-
-    def eval_null_corr(self, larger_ngrams, gap_segs, direction, threshold=0.5):
-        # Determine direction
-        self.reverse_corr_counts()
-        if direction == 'FORWARD':
-            seqs, opp_seqs = self.seqs2, self.seqs1
-            seq_lens, opp_seq_lens = self.seqs2_lens, self.seqs1_lens
-            total_seq_len, opp_total_seq_len = self.seqs2_len_total, self.seqs1_len_total
-            corr_counts = self.corr_counts
-            compacted_corr_counts = self.compacted_corr_counts
-            reversed_compacted_corr_counts = self.reversed_compacted_corr_counts
-        elif direction == 'BACKWARD':
-            seqs, opp_seqs = self.seqs1, self.seqs2
-            seq_lens, opp_seq_lens = self.seqs1_lens, self.seqs2_lens
-            total_seq_len, opp_total_seq_len = self.seqs1_len_total, self.seqs2_len_total
-            corr_counts = self.reversed_corr_counts
-            compacted_corr_counts = self.reversed_compacted_corr_counts
-            reversed_compacted_corr_counts = self.compacted_corr_counts
-        else:
-            raise ValueError
-
-        def gap_pmi(p_seg_given_gap, p_seg):
-            # via Bayes Theorem : pmi = log( p(x,y) / ( p(x) * p(y) ) ) = log( p(x|y) / p(x) )
-            # we can't calculate the probability of a gap, but we can calculate the conditional probability of a segment given a gap
-            # this is just a helper function to clarify what the inputs should be by renaming input args with ref to gap/seg
-            return bayes_pmi(p_seg_given_gap, p_seg)
-
-        for gap_seg in gap_segs:
-            gap_seg = Ngram(gap_seg)
-            for larger_ngram in larger_ngrams:
-                larger_ngram = Ngram(larger_ngram)
-                comp_count = compacted_corr_counts[larger_ngram.raw][gap_seg.raw]
-
-                if self.pad_ch in gap_seg.string:
-                    # Special handling for boundary (start/end seq) gaps, marked with pad_ch, see details below
-                    # Logic: PAD_CH corresponds to either the start or end of an alignment/segmented sequence
-                    # Every sequence has exactly one of each, therefore the probability (irrespective whether beginning/end) is just the number of sequences divided by the total number of unigrams
-                    gap_seg_prob = len(seqs) / total_seq_len
-                # Calculation below gives a more precise probability specific to this set of alignments,
-                # which directly reflects shared coverage between l1 and l2
-                # Else, using lang.phonemes will consider all words in the vocabulary
-                elif gap_seg.size > 1:  # gap seg is also a n>1-ngram
-                    gap_seg_count = ngram_count_wordlist(gap_seg.ngram, seqs)
-                    gap_seg_prob = gap_seg_count / sum([count_subsequences(length, gap_seg.size) for length in seq_lens])
-                else:
-                    gap_seg_prob = ngram_count_wordlist(gap_seg.ngram, seqs) / total_seq_len
-
-                # Estimate PMI of larger/complex ngram correlation
-                if self.pad_ch in larger_ngram.string:
-                    # Logic: PAD_CH corresponds to either the start or end of an alignment/segmented sequence
-                    # Each word by definition has exactly 1 of these, but we are interested in the ones aligned with a particular sequence
-                    # Probability of boundary gaps with complex ngrams can be calculated by counting the number of
-                    # words starting/ending with the sequence aligned to the opposite-language boundary gap
-                    # and then via Bayes theorem, given this probability and the conditional probability, we can get the PMI
-                    if re.search(rf'{self.pad_ch}{END_PAD_CH}', gap_seg.string):  # ENDING BOUNDARY
-                        larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[-(max(1, larger_ngram.size - 1)):]) == larger_ngram.ngram[:-1]])
-                        larger_ngram_prob = larger_ngram_count / len(opp_seqs)
-
-                    else:  # STARTING BOUNDARY
-                        larger_ngram_count = len([seq for seq in opp_seqs if tuple(seq[:max(1, larger_ngram.size - 1)]) == larger_ngram.ngram[1:]])
-                        larger_ngram_prob = larger_ngram_count / len(opp_seqs)
-
-                    cond_count_complex = reversed_compacted_corr_counts[gap_seg.raw][larger_ngram.raw]
-                    cond_prob_complex = cond_count_complex / larger_ngram_count
-                    pmi_complex = bayes_pmi(cond_prob_complex, larger_ngram_prob)
-
-                else:
-                    larger_ngram_count = ngram_count_wordlist(larger_ngram.ngram, opp_seqs)
-                    larger_ngram_prob = larger_ngram_count / sum([count_subsequences(length, larger_ngram.size) for length in opp_seq_lens])
-                    cond_prob_complex = comp_count / larger_ngram_count
-                    joint_prob_complex = cond_prob_complex * larger_ngram_prob
-                    pmi_complex = pointwise_mutual_info(joint_prob_complex, larger_ngram_prob, gap_seg_prob)
-
-                # Estimate PMI of simpler ngram (unigram) correlation
-                pmi_basic = 0
-                if self.pad_ch in larger_ngram.string:
-                    for unigram in larger_ngram.unigrams():
-                        if unigram.ngram not in self.pad_ngrams:
-                            unigram_corr_total = sum(corr_counts[unigram.ngram].values())
-                            if unigram_corr_total > 0:
-                                cond_prob_basic = corr_counts[unigram.ngram][self.gap_ngram] / unigram_corr_total
-                                if cond_prob_basic > 0:
-                                    pmi_basic += max(0, bayes_pmi(cond_prob_basic, gap_seg_prob))
-
-                else:
-                    for seg in larger_ngram.ngram:
-                        seg = Ngram(seg)
-                        seg_prob = ngram_count_wordlist(seg.ngram, opp_seqs) / opp_total_seq_len
-                        count_seg_given_gap = corr_counts[self.gap_ngram].get(seg.ngram, 0)
-                        if count_seg_given_gap > 0:
-                            p_seg_given_gap = count_seg_given_gap / sum(corr_counts[self.gap_ngram].values())
-                            if p_seg_given_gap > 0:
-                                pmi_basic += max(0, gap_pmi(p_seg_given_gap, seg_prob))
-                        count_gap_seg_given_seg = corr_counts[seg.ngram].get(gap_seg.ngram, 0)
-                        if count_gap_seg_given_seg > 0:
-                            p_gap_seg_given_seg = count_gap_seg_given_seg / sum(corr_counts[seg.ngram].values())
-                            if p_gap_seg_given_seg > 0:
-                                pmi_basic += max(0, bayes_pmi(p_gap_seg_given_seg, gap_seg_prob))
-
-                # Consider the compacted null alignment to be valid if:
-                # - its PMI > 0
-                # - and its PMI is greater than that of the simpler ngram correlations
-                if pmi_complex >= max(pmi_basic*threshold, 0):
-                    if direction == 'FORWARD':
-                        self.valid_corrs[larger_ngram][gap_seg] = pmi_complex
-                    else:  # BACKWARD
-                        self.valid_corrs[gap_seg][larger_ngram] = pmi_complex
-                    print(f"Valid complex corr: {larger_ngram.ngram} - {gap_seg.ngram}")
-                else:
-                    print(f"Inalid complex corr: {larger_ngram.ngram} - {gap_seg.ngram}")
-
-    def select_valid_null_corrs(self):
-        for corr in self.compacted_corr_counts:
-            corr_ngram = Ngram(corr, lang=self.lang1)
-            if corr_ngram.size > 1:  # e.g. ('s', 'k')
-                self.eval_null_corr(
-                    larger_ngrams=[corr],
-                    gap_segs=self.compacted_corr_counts[corr],
-                    direction='FORWARD',
-                )
-
-            else:  # str e.g. 'ʃ'
-                self.eval_null_corr(
-                    larger_ngrams=self.compacted_corr_counts[corr],
-                    gap_segs=[corr],
-                    direction='BACKWARD',
-                )
-
-        return self.valid_corrs
-
-    def prune(self, min_val=2):
-        self.compacted_corr_counts = prune_corrs(self.compacted_corr_counts, min_val=min_val)
 
 
 @lru_cache(maxsize=None)
