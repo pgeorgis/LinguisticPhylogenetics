@@ -11,7 +11,7 @@ default:
     key: ${CI_COMMIT_REF_SLUG}
     policy: pull
     paths:
-      - .venv
+      - venv
 
 install_dependencies:
   stage: prepare
@@ -27,7 +27,7 @@ install_dependencies:
       EOF
     - make init
   cache:
-    policy: push
+    policy: pull-push
 
 romance:
   stage: classify
