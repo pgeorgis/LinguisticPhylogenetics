@@ -15,7 +15,10 @@ default:
 
 install_dependencies:
   stage: prepare
+  interruptible: true
   script:
+    - git config --global credential.helper store
+    - git credential approve < <(echo "protocol=https\nhost=github.com\nusername=$GITHUB_USER_NAME\npassword=$GITHUB_ACCESS_TOKEN")
     - make init
   cache:
     policy: push
