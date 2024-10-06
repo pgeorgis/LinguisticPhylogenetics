@@ -23,8 +23,28 @@ from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences,
 from utils.utils import default_dict, dict_tuplelist, normalize_dict, balanced_resample, rescale, segment_ranges
 
 
-def fit_em_ibm(corpus, iterations=5, gap_ch=GAP_CH_DEFAULT, ibm_model=2, seed=None):
-    """Performs expectation maximization algorithm and fits an IBM translation model 1 to a corpus."""
+def fit_ibm_align_model(corpus: list[tuple],
+                        iterations: int=5,
+                        gap_ch: str=GAP_CH_DEFAULT,
+                        ibm_model: int=2,
+                        seed:int =None,
+                        ):
+    """Fits an IBM alignment model on a corpus of word pairs and 
+    returns the aligned corpus, fitted model, and translation table of correspondences.
+
+    Args:
+        corpus (list[tuple]): list of (Word, Word) tuple pairs
+        iterations (int, optional): Number of iterations to run EM algorithm. Defaults to 5.
+        gap_ch (str, optional): Gap character. Defaults to GAP_CH_DEFAULT.
+        ibm_model (int, optional): IBM model. Defaults to 2.
+        seed (int, optional): Random seed. Defaults to None.
+
+    Raises:
+        ValueError: If an invalid IBM model is specified.
+
+    Returns:
+        tuple: (corpus, fit_model, translation_table)
+    """
     if ibm_model == 1:
         ibm_model = IBMModel1
     elif ibm_model == 2:
@@ -577,7 +597,7 @@ class PhonCorrelator:
                     if ngram_size_j > 1:
                         ngrams2 = [SEG_JOIN_CH.join(ngram) for ngram in ngrams2]
                     corpus.append((ngrams1, ngrams2))
-        corpus, fit_model, translation_table = fit_em_ibm(
+        corpus, _, _ = fit_ibm_align_model(
             corpus,
             gap_ch=self.gap_ch,
             ibm_model=ibm_model,
