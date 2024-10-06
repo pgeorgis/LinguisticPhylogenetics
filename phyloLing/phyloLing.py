@@ -8,16 +8,15 @@ from collections import defaultdict
 from collections.abc import Iterable
 from functools import lru_cache
 from itertools import combinations, product
-from math import log, sqrt
+from math import sqrt
 from statistics import mean
 
 import bcubed
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from constants import (ALIGNMENT_PARAM_DEFAULTS, SEG_JOIN_CH,
-                       TRANSCRIPTION_PARAM_DEFAULTS, 
-                       END_PAD_CH, START_PAD_CH, PAD_CH_DEFAULT)
+from constants import (ALIGNMENT_PARAM_DEFAULTS, PAD_CH_DEFAULT, SEG_JOIN_CH,
+                       TRANSCRIPTION_PARAM_DEFAULTS)
 from matplotlib import pyplot as plt
 from phonCorr import PhonCorrelator
 from phonUtils.initPhoneData import suprasegmental_diacritics
@@ -36,7 +35,8 @@ from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.information import calculate_infocontent_of_word, entropy
 from utils.network import dm2coords, newer_network_plot
-from utils.sequence import Ngram, flatten_ngram, generate_ngrams, pad_sequence, remove_overlapping_ngrams
+from utils.sequence import (Ngram, flatten_ngram, generate_ngrams,
+                            pad_sequence, remove_overlapping_ngrams)
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict)
@@ -1222,7 +1222,7 @@ class Language:
         with open(missing_lst, 'w') as f:
             f.write(missing_concepts)
 
-    def create_phoneme_inventory(self, warn_n=1):
+    def create_phoneme_inventory(self):
         pad_ch = self.alignment_params['pad_ch']
         for concept in self.vocabulary:
             for word in self.vocabulary[concept]:
@@ -1266,7 +1266,7 @@ class Language:
         total_tokens = sum(self.phonemes.values())
         for phoneme in self.phonemes:
             count = self.phonemes[phoneme]
-            if count <= warn_n:
+            if count < self.transcription_params["min_phone_instances"]:
                 self.family.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
             self.phonemes[phoneme] = count / total_tokens
 
