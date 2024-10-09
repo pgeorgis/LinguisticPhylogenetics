@@ -222,7 +222,7 @@ class Alignment:
 
         # Perform alignment
         self.n_best = self.align(n_best)
-        self.alignment = self.n_best[0][0][:]
+        self.alignment: list[tuple] = self.n_best[0][0][:]
 
         # Save length and cost of single best alignment
         self.cost = self.n_best[0][-1]

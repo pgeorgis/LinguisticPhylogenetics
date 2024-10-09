@@ -142,12 +142,12 @@ def calculate_infocontent_of_word(seq, lang, ngram_size=3, pad_ch=PAD_CH_DEFAULT
     return info_content
 
 
-def entropy(X):
-    """X should be a dictionary with absolute counts"""
-    total = sum(X.values())
-    E = 0
-    for i in X:
-        p = X[i] / total
+def entropy(x) -> float:
+    """x should be a dictionary with absolute counts"""
+    total = sum(x.values())
+    e: float = 0
+    for i in x:
+        p: float = x[i] / total
         if p > 0:
-            E += p * surprisal(p)
-    return E
+            e += p * surprisal(p)
+    return e
