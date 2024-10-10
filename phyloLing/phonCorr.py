@@ -1637,12 +1637,13 @@ class PhonCorrelator:
                         if prob >= min_prob:
                             p1 = Ngram(p1).string
                             p2 = Ngram(p2).string
-                            line = '\t'.join([p1, p2, str(round(prob, 3))])
+                            line = [p1, p2, str(round(prob, 3))]
                             lines.append(line)
                     else:
                         raise NotImplementedError  # not implemented for PMI
         # Sort by corr value, then by phone string if values are equal
         lines.sort(key=lambda x: (x[-1], x[0], x[1]))
+        lines = ['\t'.join(line) for line in lines]
         header = '\t'.join([self.lang1_name, self.lang2_name, 'probability'])
         lines = '\n'.join(lines)
         content = '\n'.join([header, lines])
