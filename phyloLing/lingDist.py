@@ -5,8 +5,8 @@ from statistics import StatisticsError, mean, stdev
 import numpy as np
 
 from scipy.stats import norm
-from utils.distance import dist_to_sim
-from utils.utils import balanced_resample
+from utils.distance import dist_to_sim, Distance
+from utils.utils import balanced_resample, dict_of_dicts
 
 
 # HELPER FUNCTIONS
@@ -51,7 +51,7 @@ def get_calibration_params(lang1, lang2, eval_func, seed, sample_size):
     Args:
         lang1 (phyloLing.Language): First doculect to compare
         lang2 (phyloLing.Language): Second doculect to compare
-        eval_func (auxFuncs.Distance): Distance to apply to word pairs
+        eval_func (Distance): Distance to apply to word pairs
         seed (int): Random seed
         sample_size (int): Size of random sample
 
@@ -59,7 +59,7 @@ def get_calibration_params(lang1, lang2, eval_func, seed, sample_size):
         tuple: Mean and standard deviation of similarity of random sampling of non-cognate word pairs
     """
     # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
-    key = (lang2, eval_func, sample_size, seed)
+    key: (str, Distance, int, int) = (lang2.name, eval_func, sample_size, seed)
     if len(lang1.noncognate_thresholds[key]) > 0:
         noncognate_scores = lang1.noncognate_thresholds[key]
     else:
@@ -175,7 +175,7 @@ def gradient_cognate_sim(lang1,
         concept_groups = {0: shared_concepts}
 
     # Score all shared concepts in advance, then calculate similarity based on the N samples of concepts
-    scored_pairs = defaultdict(lambda: {})
+    scored_pairs = dict_of_dicts()
     for concept in shared_concepts:
         for cognate_id in clustered_cognates[concept]:
             l1_words = filter_cognates_by_lang(lang1, clustered_cognates[concept][cognate_id])
@@ -193,7 +193,7 @@ def gradient_cognate_sim(lang1,
 
     for n, group in concept_groups.items():
         sims = {}
-        group_size = len(group)
+        group_size: int = len(group)
         for concept in group:
             concept_sims = {}
             l1_wordcount, l2_wordcount = 0, 0

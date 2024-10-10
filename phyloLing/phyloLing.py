@@ -6,10 +6,12 @@ import random
 import re
 from collections import defaultdict
 from collections.abc import Iterable
+from dataclasses import dataclass
 from functools import lru_cache
 from itertools import combinations, product
 from math import sqrt
 from statistics import mean
+from typing import Self
 
 import bcubed
 import numpy as np
@@ -39,7 +41,12 @@ from utils.sequence import (Ngram, flatten_ngram, generate_ngrams,
                             pad_sequence, remove_overlapping_ngrams)
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.utils import (create_timestamp, csv2dict, default_dict,
-                         dict_tuplelist, normalize_dict)
+                         dict_tuplelist, normalize_dict,
+                         dict_of_zeroes,
+                         dict_of_sets,
+                         dict_2_of_zeroes,
+                         dict_3_of_zeroes,
+                         dict_2_of_dicts)
 
 
 class LexicalDataset:
@@ -63,6 +70,7 @@ class LexicalDataset:
                  ):
 
         # Dataset name and logger
+        self.data: dict[int, dict[str, str]] = {}
         self.name = name
         self.path_name = format_as_variable(name)
         if logger:
@@ -109,7 +117,7 @@ class LexicalDataset:
         }
 
         # Information about languages included
-        self.languages = {}
+        self.languages: dict[str, Language] = {}
         self.lang_ids = {}
         self.glottocodes = {}
         self.iso_codes = {}
@@ -136,7 +144,7 @@ class LexicalDataset:
         self.data = data
 
         # Initialize languages
-        language_vocab_data = defaultdict(lambda: defaultdict(lambda: {}))
+        language_vocab_data = dict_2_of_dicts()
         for i in data:
             lang = data[i][self.columns['language_name']]
             if ((included_doculects == []) or (lang in included_doculects)) and ((excluded_doculects == []) or (lang not in excluded_doculects)):
@@ -151,16 +159,24 @@ class LexicalDataset:
         language_list = sorted(list(language_vocab_data.keys()))
         for lang in language_list:
             os.makedirs(os.path.join(self.doculects_dir, format_as_variable(lang)), exist_ok=True)
-            self.languages[lang] = Language(name=lang,
-                                            lang_id=self.lang_ids[lang],
-                                            glottocode=self.glottocodes[lang],
-                                            iso_code=self.iso_codes[lang],
-                                            family=self,
-                                            data=language_vocab_data[lang],
-                                            columns=self.columns,
-                                            transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global']),
-                                            alignment_params=self.alignment_params,
-                                            )
+            self.languages[lang] = Language(
+                name=lang,
+                lang_id=self.lang_ids[lang],
+                glottocode=self.glottocodes[lang],
+                iso_code=self.iso_codes[lang],
+                family=LanguageFamilyData(
+                    name=self.name,
+                    phone_corr_dir=self.phone_corr_dir,
+                    doculects_dir=self.doculects_dir,
+                    language_count=len(self.languages),
+                ),
+                family_concept_keys=self.concepts.keys(),
+                logger=self.logger,
+                data=language_vocab_data[lang],
+                columns=self.columns,
+                transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global']),
+                alignment_params=self.alignment_params,
+            )
             self.logger.info(f'Loaded doculect {lang}.')
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
@@ -303,17 +319,17 @@ class LexicalDataset:
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     pmi_value = row['PMI']
                     ngram1, ngram2 = map(str2ngram, [phone1, phone2])
-                    lang1.phoneme_pmi[lang2][ngram1.undo()][ngram2.undo()] = pmi_value
-                    lang2.phoneme_pmi[lang1][ngram2.undo()][ngram1.undo()] = pmi_value
+                    lang1.phoneme_pmi[lang2.name][ngram1.undo()][ngram2.undo()] = pmi_value
+                    lang2.phoneme_pmi[lang1.name][ngram2.undo()][ngram1.undo()] = pmi_value
                     if ngram1.size > 1 or ngram2.size > 1:
-                        lang1.complex_ngrams[lang2][ngram1][ngram2] = pmi_value
-                        lang2.complex_ngrams[lang1][ngram2][ngram1] = pmi_value
+                        lang1.complex_ngrams[lang2.name][ngram1][ngram2] = pmi_value
+                        lang2.complex_ngrams[lang1.name][ngram2][ngram1] = pmi_value
 
     def write_phoneme_pmi(self, **kwargs):
         self.logger.info(f'Saving {self.name} phoneme PMI...')
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             # Retrieve the precalculated values
-            if len(lang1.phoneme_pmi[lang2]) == 0:
+            if len(lang1.phoneme_pmi[lang2.name]) == 0:
                 self.logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
                 continue
             correlator = lang1.get_phoneme_correlator(lang2)
@@ -330,7 +346,7 @@ class LexicalDataset:
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
 
             # Retrieve the precalculated values
-            if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
+            if len(lang1.phoneme_surprisal[lang2.name][ngram_size]) == 0:
                 self.logger.warning(f'{ngram_size}-gram phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}')
                 continue
             correlator = lang1.get_phoneme_correlator(lang2)
@@ -393,7 +409,7 @@ class LexicalDataset:
 
                 # Extract and save the surprisal values to phoneme_surprisal attribute of language object
                 loaded_surprisal = extract_surprisal_from_df(surprisal_data, lang2, phon_env=False)
-                lang1.phoneme_surprisal[(lang2.name, ngram_size)] = loaded_surprisal
+                lang1.phoneme_surprisal[lang2.name][ngram_size] = loaded_surprisal
 
                 # Do the same for phonological environment surprisal
                 if phon_env and os.path.exists(surprisal_file_phon_env):
@@ -573,10 +589,10 @@ class LexicalDataset:
         ch_to_remove = self.transcription_params['global']['ch_to_remove'].union({'(', ')'})
         for concept in clustered_cognates:
             clusters = {'/'.join([strip_diacritics(unidecode.unidecode(item.split('/')[0])),
-                                  strip_ch(item.split('/')[1], ch_to_remove)]) + '/': set([i]) for i in clustered_cognates[concept]
+                                  strip_ch(item.split('/')[1], ch_to_remove)]) + '/': {i} for i in clustered_cognates[concept]
                         for item in clustered_cognates[concept][i]}
 
-            gold_clusters = {f'{strip_diacritics(unidecode.unidecode(lang))} /{strip_ch(tr, ch_to_remove)}/': set([c])
+            gold_clusters = {f'{strip_diacritics(unidecode.unidecode(lang))} /{strip_ch(tr, ch_to_remove)}/': {c}
                              for c in self.cognate_sets
                              if re.split('[-|_]', c)[0] == concept
                              for lang in self.cognate_sets[c]
@@ -1110,9 +1126,6 @@ class LexicalDataset:
 
         return new_dataset
 
-    def add_language(self, name, data_path, **kwargs):
-        self.load_data(data_path, included_doculects=[name], **kwargs)
-
     def __str__(self):
         """Print a summary of the Family object"""
         s = f'{self.name.upper()}'
@@ -1122,9 +1135,17 @@ class LexicalDataset:
         return s
 
 
+@dataclass
+class LanguageFamilyData:
+    name: str
+    phone_corr_dir: str
+    doculects_dir: str
+    language_count: int
+
+
 class Language:
     def __init__(self,
-                 name,
+                 name: str,
                  data,
                  columns,
                  transcription_params=TRANSCRIPTION_PARAM_DEFAULTS,
@@ -1132,41 +1153,45 @@ class Language:
                  lang_id=None,
                  glottocode=None,
                  iso_code=None,
-                 family=None,
+                 family: LanguageFamilyData=None,
+                 family_concept_keys: Iterable=None,
+                 logger: logging.Logger =None
                  ):
 
         # Language data
-        self.name = name
-        self.path_name = format_as_variable(name)
+        self.missing_family_concepts: list[str] = []
+        self.logger: logging.Logger | None = logger
+        self.name: str = name
+        self.path_name: str = format_as_variable(name)
         self.lang_id = lang_id
         self.glottocode = glottocode
         self.iso_code = iso_code
-        self.family = family
+        self.family: LanguageFamilyData = family
 
         # Attributes for parsing data dictionary (TODO could this be inherited via a subclass?)
         self.data = data
         self.columns = columns
 
         # Phonemic inventory
-        self.phonemes = defaultdict(lambda: 0)
-        self.vowels = defaultdict(lambda: 0)
-        self.consonants = defaultdict(lambda: 0)
-        self.tonemes = defaultdict(lambda: 0)
+        self.phonemes = dict_of_zeroes()
+        self.vowels = dict_of_zeroes()
+        self.consonants = dict_of_zeroes()
+        self.tonemes = dict_of_zeroes()
         self.tonal = False
 
         # Phonological contexts
-        self.unigrams = defaultdict(lambda: 0)
-        self.bigrams = defaultdict(lambda: 0)
-        self.trigrams = defaultdict(lambda: 0)
-        self.ngrams = defaultdict(lambda: defaultdict(lambda: 0))
-        self.gappy_bigrams = defaultdict(lambda: 0)
-        self.gappy_trigrams = defaultdict(lambda: 0)
-        self.phon_environments = defaultdict(lambda: defaultdict(lambda: 0))
-        self.phon_env_ngrams = defaultdict(lambda: defaultdict(lambda: 0))
+        self.unigrams = dict_of_zeroes()
+        self.bigrams = dict_of_zeroes()
+        self.trigrams = dict_of_zeroes()
+        self.ngrams = dict_2_of_zeroes()
+        self.gappy_bigrams = dict_of_zeroes()
+        self.gappy_trigrams = dict_of_zeroes()
+        self.phon_environments = dict_2_of_zeroes()
+        self.phon_env_ngrams = dict_2_of_zeroes()
 
         # Lexical inventory
-        self.vocabulary = defaultdict(lambda: set())
-        self.loanwords = defaultdict(lambda: set())
+        self.vocabulary = dict_of_sets()
+        self.loanwords = dict_of_sets()
 
         # Transcription, segmentation, and alignment parameters
         self.transcription_params = transcription_params
@@ -1177,23 +1202,37 @@ class Language:
         self.alignment_params = alignment_params
 
         # Initialize vocabulary and phoneme inventory
-        self.create_vocabulary()
+        self.create_vocabulary(family_concept_keys)
         self.create_phoneme_inventory()
         self.write_phoneme_inventory()
-        self.phoneme_entropy = entropy(self.phonemes)
+        self.phoneme_entropy: float = entropy(self.phonemes)
 
         # Comparison with other languages
         self.phoneme_correlators = {}
-        self.phoneme_correspondences = defaultdict(lambda: defaultdict(lambda: 0))
-        self.phoneme_pmi = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
-        self.complex_ngrams = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
-        self.phoneme_surprisal = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: -self.phoneme_entropy)))
-        self.phon_env_surprisal = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: -self.phoneme_entropy)))
-        self.noncognate_thresholds = defaultdict(lambda: [])
-        self.lexical_comparison = defaultdict(lambda: defaultdict(lambda: {}))
-        self.lexical_comparison['measures'] = set()
+        self.phoneme_pmi: dict[str, dict] = dict_3_of_zeroes()
+        self.complex_ngrams: dict[str, dict] = dict_3_of_zeroes()
+        self.phoneme_surprisal: dict[str, dict] = self.dict_4_of_negative_phoneme_entropy()
+        self.phon_env_surprisal: dict[str, dict] = self.dict_3_of_negative_phoneme_entropy()
+        self.noncognate_thresholds: dict[(str, Distance, int, int), list] = defaultdict(list)
+        self.lexical_comparison: dict[str, dict | set] = dict_2_of_dicts()
+        self.lexical_comparison_measures = set()
 
-    def create_vocabulary(self):
+    def get_negative_phoneme_entropy(self) -> float:
+        return -self.phoneme_entropy
+
+    def dict_1_of_negative_phoneme_entropy(self) -> dict:
+        return defaultdict(self.get_negative_phoneme_entropy)
+
+    def dict_2_of_negative_phoneme_entropy(self) -> dict:
+        return defaultdict(self.dict_1_of_negative_phoneme_entropy)
+
+    def dict_3_of_negative_phoneme_entropy(self) -> dict:
+        return defaultdict(self.dict_2_of_negative_phoneme_entropy)
+
+    def dict_4_of_negative_phoneme_entropy(self) -> dict:
+        return defaultdict(self.dict_3_of_negative_phoneme_entropy)
+
+    def create_vocabulary(self, family_concept_keys) -> None:
         for i in self.data:
             entry = self.data[i]
             concept = entry[self.columns['concept']]
@@ -1215,10 +1254,11 @@ class Language:
                 # Mark known loanwords
                 if loan:
                     self.loanwords[concept].add(word)
+        self.missing_family_concepts = list(family_concept_keys - self.vocabulary.keys())
 
     def write_missing_concepts(self):
         missing_lst = os.path.join(self.family.doculects_dir, self.path_name, 'missing_concepts.lst')
-        missing_concepts = '\n'.join(sorted(list(self.family.concepts.keys() - self.vocabulary.keys())))
+        missing_concepts = '\n'.join(sorted(self.missing_family_concepts))
         with open(missing_lst, 'w') as f:
             f.write(missing_concepts)
 
@@ -1263,11 +1303,11 @@ class Language:
         self.ngrams[3] = self.trigrams
 
         # Normalize counts
-        total_tokens = sum(self.phonemes.values())
+        total_tokens: int = sum(self.phonemes.values())
         for phoneme in self.phonemes:
             count = self.phonemes[phoneme]
             if count < self.transcription_params["min_phone_instances"]:
-                self.family.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
+                self.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
             self.phonemes[phoneme] = count / total_tokens
 
         # Phone classes
@@ -1277,18 +1317,21 @@ class Language:
         self.vowels = normalize_dict({v: self.phonemes[v]
                                       for v in self.phonemes
                                       if phone_classes[v] in ('VOWEL', 'DIPHTHONG')},
-                                     default=True, lmbda=0)
+                                     default=True,
+                                     should_zero=True)
 
         self.consonants = normalize_dict({c: self.phonemes[c]
                                          for c in self.phonemes
                                          if phone_classes[c] in ('CONSONANT', 'GLIDE')},
-                                         default=True, lmbda=0)
+                                         default=True,
+                                         should_zero=True)
 
         # TODO: rename as self.suprasegmentals, possibly distinguish tonemes from other suprasegmentals
         self.tonemes = normalize_dict({t: self.phonemes[t]
                                        for t in self.phonemes
                                        if phone_classes[t] in ('TONEME', 'SUPRASEGMENTAL')},
-                                      default=True, lmbda=0)
+                                      default=True,
+                                      should_zero=True)
 
         # Designate language as tonal if it has tonemes
         if len(self.tonemes) > 0:
@@ -1528,7 +1571,7 @@ class Language:
                                save_directory=save_directory,
                                **kwargs)
 
-    def get_phoneme_correlator(self, lang2, wordlist=None, seed=1):
+    def get_phoneme_correlator(self, lang2: Self, wordlist=None, seed=1):
         key = (lang2, wordlist, seed)
         if key not in self.phoneme_correlators:
             self.phoneme_correlators[key] = PhonCorrelator(lang1=self,
@@ -1537,17 +1580,17 @@ class Language:
                                                            gap_ch=self.alignment_params.get('gap_ch', ALIGNMENT_PARAM_DEFAULTS['gap_ch']),
                                                            pad_ch=self.alignment_params.get('pad_ch', ALIGNMENT_PARAM_DEFAULTS['pad_ch']),
                                                            seed=seed,
-                                                           logger=self.family.logger)
+                                                           logger=self.logger)
         correlator = self.phoneme_correlators[key]
         return correlator
 
-    def write_lexical_comparison(self, lang2, outfile):
-        measures = sorted(list(self.lexical_comparison['measures']))
+    def write_lexical_comparison(self, lang2: Self, outfile):
+        measures = sorted(list(self.lexical_comparison_measures))
         with open(outfile, 'w') as f:
             header = '\t'.join([self.name, lang2.name] + measures)
             f.write(f'{header}\n')
-            for word1, word2 in self.lexical_comparison[lang2]:
-                values = [self.lexical_comparison[lang2][(word1, word2)].get(measure, 'n/a') for measure in measures]
+            for word1, word2 in self.lexical_comparison[lang2.name]:
+                values = [self.lexical_comparison[lang2.name][(word1, word2)].get(measure, 'n/a') for measure in measures]
                 values = [str(v) for v in values]
                 line = '\t'.join([word1.ipa, word2.ipa] + values)
                 f.write(f'{line}\n')
@@ -1557,7 +1600,7 @@ class Language:
         # TODO improve this
         s = f'{self.name.upper()} [{self.glottocode}][{self.iso_code}]'
         s += f'\nFamily: {self.family.name}'
-        s += f'\nRelatives: {len(self.family.languages)}'
+        s += f'\nRelatives: {self.family.language_count}'
         s += f'\nConsonants: {len(self.consonants)}'
         consonant_inventory = ', '.join([pair[0] for pair in dict_tuplelist(self.consonants)])
         s += f'\n/{consonant_inventory}/'

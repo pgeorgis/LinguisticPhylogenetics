@@ -5,6 +5,7 @@ from collections import defaultdict
 from functools import lru_cache
 from itertools import product
 from statistics import mean, stdev
+from typing import Self
 
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
@@ -19,8 +20,13 @@ from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
                             pad_sequence, start_token)
-from utils.utils import (balanced_resample, default_dict, dict_tuplelist,
-                         normalize_dict, segment_ranges)
+from utils.utils import (default_dict,
+                         dict_tuplelist,
+                         normalize_dict,
+                         balanced_resample,
+                         segment_ranges,
+                         dict_3_of_zeroes,
+                         dict_of_dicts)
 
 
 def fit_ibm_align_model(corpus: list[tuple],
@@ -29,7 +35,7 @@ def fit_ibm_align_model(corpus: list[tuple],
                         ibm_model: int=2,
                         seed:int =None,
                         ):
-    """Fits an IBM alignment model on a corpus of word pairs and 
+    """Fits an IBM alignment model on a corpus of word pairs and
     returns the aligned corpus, fitted model, and translation table of correspondences.
 
     Args:
@@ -365,10 +371,19 @@ class Wordlist:
 
 
 class PhonCorrelator:
-    def __init__(self, lang1, lang2, wordlist=None, gap_ch=GAP_CH_DEFAULT, pad_ch=PAD_CH_DEFAULT, seed=1, logger=None):
+    def __init__(self,
+                 lang1,
+                 lang2,
+                 wordlist=None,
+                 gap_ch=GAP_CH_DEFAULT,
+                 pad_ch=PAD_CH_DEFAULT,
+                 seed=1,
+                 logger=None):
         # Set Language objects
         self.lang1 = lang1
+        self.lang1_name = lang1.name
         self.lang2 = lang2
+        self.lang2_name = lang2.name
 
         # Alignment parameters
         self.gap_ch = gap_ch
@@ -381,18 +396,26 @@ class PhonCorrelator:
         self.samples = {}
 
         # PMI, ngrams, scored words
-        self.pmi_dict = self.lang1.phoneme_pmi[self.lang2]
-        self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2.name]
-        self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2.name]
-        self.complex_ngrams = self.lang1.complex_ngrams[self.lang2]
-        self.scored_words = defaultdict(lambda: {})
+        self.pmi_dict: dict[str, dict[str, float]] = {}
+        self.surprisal_dict: dict[str, dict[str, float]] = {}
+        self.phon_env_surprisal_dict: dict[str, dict[str, float]] = {}
+        self.complex_ngrams: dict[str, dict[str, float]] = {}
+        self.reload_language_pair_data()
+        self.scored_words = dict_of_dicts()
 
         # Logging
         self.set_log_dirs()
-        self.align_log = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
+        self.align_log = dict_3_of_zeroes()
         self.logger = logger
-    
-    def get_twin(self):
+
+    def reload_language_pair_data(self):
+        self.pmi_dict = self.lang1.phoneme_pmi[self.lang2_name]
+        self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2_name]
+        self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2_name]
+        self.complex_ngrams = self.lang1.complex_ngrams[self.lang2_name]
+
+
+    def get_twin(self) -> Self:
         """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
         return self.lang2.get_phoneme_correlator(
             lang2=self.lang1,
@@ -861,9 +884,9 @@ class PhonCorrelator:
                 p_ind = p_ind1 * p_ind2
                 joint_prob = joint_prob_dist.get(seg1, {}).get(seg2, p_ind)
                 if p_ind1 == 0:
-                    raise ValueError(f"Couldn't calculate independent probability of segment {seg1} in {self.lang1.name}")
+                    raise ValueError(f"Couldn't calculate independent probability of segment {seg1} in {self.lang1_name}")
                 if p_ind2 == 0:
-                    raise ValueError(f"Couldn't calculate independent probability of segment {seg2} in {self.lang2.name}")
+                    raise ValueError(f"Couldn't calculate independent probability of segment {seg2} in {self.lang2_name}")
                 # As long as the independent probabilities > 0, skip calculating PMI for segment pairs with 0 joint probability
                 if joint_prob > 0:
                     pmi_val = pointwise_mutual_info(joint_prob, p_ind1, p_ind2)
@@ -903,7 +926,7 @@ class PhonCorrelator:
         """
         # TODO update documentation
         if self.logger:
-            self.logger.info(f'Computing phone correspondences: {self.lang1.name}-{self.lang2.name}...')
+            self.logger.info(f'Computing phone correspondences: {self.lang1_name}-{self.lang2_name}...')
 
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
         sample_results = {}
@@ -934,14 +957,15 @@ class PhonCorrelator:
             # At each following iteration N, re-align using the pmi_stepN as an
             # additional penalty, and then recalculate PMI
             iteration = 0
-            PMI_iterations = {}
+            PMI_iterations: dict[int, dict[str, dict]] = {}
             qualifying_words = default_dict({iteration: synonym_sample}, lmbda=[])
             disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
             if cumulative:
                 all_cognate_alignments = []
 
-            def score_pmi(alignment, pmi_dict):  # TODO use more sophisticated pmi_dist from wordDist.py or word adaptation surprisal or alignment cost measure within Alignment object
-                PMI_score = mean([pmi_dict.get(pair[0], {}).get(pair[1], 0) for pair in alignment.alignment])
+            def score_pmi(alignment: Alignment, pmi_dict: dict[str, dict]):  # TODO use more sophisticated pmi_dist from wordDist.py or word adaptation surprisal or alignment cost measure within Alignment object
+                alignment_tuples = alignment.alignment
+                PMI_score = mean([pmi_dict.get(pair[0], {}).get(pair[1], 0) for pair in alignment_tuples])
                 return PMI_score
 
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
@@ -1105,14 +1129,14 @@ class PhonCorrelator:
         self.write_alignments_log(self.align_log['PMI'], align_log_file)
 
         # Save PMI results
-        self.lang1.phoneme_pmi[self.lang2] = results
-        self.lang2.phoneme_pmi[self.lang1] = reverse_corr_dict(results)
-        self.lang1.complex_ngrams[self.lang2] = self.complex_ngrams
+        self.lang1.phoneme_pmi[self.lang2_name] = results
+        self.lang2.phoneme_pmi[self.lang1_name] = reverse_corr_dict(results)
+        self.lang1.complex_ngrams[self.lang2_name] = self.complex_ngrams
         reversed_complex_ngrams = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
         for corr1 in self.complex_ngrams:
             for corr2, val in self.complex_ngrams[corr1].items():
                 reversed_complex_ngrams[corr2][corr1] = val
-        self.lang2.complex_ngrams[self.lang1] = reversed_complex_ngrams
+        self.lang2.complex_ngrams[self.lang1_name] = reversed_complex_ngrams
         # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
 
         self.pmi_dict = results
@@ -1356,10 +1380,10 @@ class PhonCorrelator:
             )
         
         # Save surprisal results
-        self.lang1.phoneme_surprisal[(self.lang2.name, ngram_size)] = surprisal_results
+        self.lang1.phoneme_surprisal[self.lang2_name][ngram_size] = surprisal_results
         self.surprisal_dict[ngram_size] = surprisal_results
         if phon_env:
-            self.lang1.phon_env_surprisal[self.lang2.name] = phon_env_surprisal_results
+            self.lang1.phon_env_surprisal[self.lang2_name] = phon_env_surprisal_results
             self.phon_env_surprisal_dict = phon_env_surprisal_results
             
         # Write phone correlation report based on surprisal results
@@ -1400,7 +1424,8 @@ class PhonCorrelator:
                 if count_ngram2 > 0:
                     surprisal_dict[ngram1][ngram2] += count_ngram2
         for ngram1 in surprisal_dict:
-            surprisal_dict[ngram1] = default_dict(normalize_dict(surprisal_dict[ngram1]), lmbda=mean(oov_vals[ngram1]))
+            inner_surprisal_dict = normalize_dict(surprisal_dict[ngram1])
+            surprisal_dict[ngram1] = default_dict(inner_surprisal_dict, lmbda=mean(oov_vals[ngram1]))
             for ngram2, prob in surprisal_dict[ngram1].items():
                 surprisal_dict[ngram1][ngram2] = surprisal(prob)
         outer_oov_val = get_oov_val(phon_env_surprisal_dict)
@@ -1432,7 +1457,7 @@ class PhonCorrelator:
         self.reset_seed()
 
         if save:
-            key = (self.lang2, eval_func, sample_size, seed)
+            key = (self.lang2_name, eval_func, sample_size, seed)
             self.lang1.noncognate_thresholds[key] = noncognate_scores
 
         return noncognate_scores
@@ -1618,7 +1643,7 @@ class PhonCorrelator:
                         raise NotImplementedError  # not implemented for PMI
         # Sort by corr value, then by phone string if values are equal
         lines.sort(key=lambda x: (x[-1], x[0], x[1]))
-        header = '\t'.join([self.lang1.name, self.lang2.name, 'probability'])
+        header = '\t'.join([self.lang1_name, self.lang2_name, 'probability'])
         lines = '\n'.join(lines)
         content = '\n'.join([header, lines])
         with open(outfile, 'w') as f:

@@ -12,16 +12,16 @@ from numpy import array, array_split
 from numpy.random import permutation
 
 
-def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
+def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8') -> dict[int, dict[str, str]]:
     """Reads a CSV file into a dictionary"""
-    csv_dict = defaultdict(lambda: defaultdict(lambda: ''))
+    csv_dict: dict[int, dict[str, str]] = dict_2_of_empty_strings()
     with open(csvfile, 'r', encoding=encoding) as csv_file:
         csv_file = csv_file.readlines()
-        columns = [item.strip() for item in csv_file[start].split(sep)]
+        columns: list[str] = [item.strip() for item in csv_file[start].split(sep)]
         if header:
             start += 1
         for i in range(start, len(csv_file)):
-            line = [item.strip() for item in csv_file[i].split(sep)]
+            line: list[str] = [item.strip() for item in csv_file[i].split(sep)]
             for j in range(len(columns)):
                 key = ''
                 if header:
@@ -109,12 +109,15 @@ def combine_dicts(*dicts):
     return combined
 
 
-def normalize_dict(dict_, default=False, lmbda=None, return_=True):
+def normalize_dict(dict_, default=False, should_zero=False, return_=True):
     """Normalizes the values of a dictionary"""
     """If default==True, returns a default dictionary with default value lmbda"""
     """If return_==False, modifies the input dictionary without returning anything"""
     if default is True:
-        normalized = defaultdict(lambda: lmbda)
+        if should_zero:
+            normalized = dict_of_zeroes()
+        else:
+            normalized = defaultdict(None)
     else:
         normalized = {}
     total = sum(list(dict_.values()))
@@ -282,3 +285,70 @@ def segment_ranges(numbers):
         segmented.append((start, end))
 
     return segmented
+
+def zero_object():
+    return 0
+
+def empty_string():
+    return ''
+
+def dict_1_of_empty_strings() -> dict:
+    return defaultdict(empty_string)
+
+def dict_2_of_empty_strings() -> dict:
+    return defaultdict(dict_1_of_empty_strings)
+
+def dict_of_dicts() -> dict:
+    return defaultdict(dict)
+
+def dict_2_of_dicts() -> dict:
+    return defaultdict(dict_of_dicts)
+
+def dict_of_zeroes() -> dict:
+    return defaultdict(zero_object)
+
+def dict_2_of_zeroes() -> dict:
+    return defaultdict(dict_of_zeroes)
+
+def dict_3_of_zeroes() -> dict:
+    return defaultdict(dict_2_of_zeroes)
+
+def dict_of_sets():
+    return defaultdict(set)
+
+def dict_to_defaultdict_2_with_value(d: dict, value):
+    dd = defaultdict(lambda: defaultdict(lambda: value))
+    for k1, v1 in d.items():
+        for k2, v2 in v1.items():
+            dd[k1][k2] = v2
+    return dd
+
+def dict_to_defaultdict_3_with_value(d: dict, value):
+    dd = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: value)))
+    for k1, v1 in d.items():
+        for k2, v2 in v1.items():
+            for k3, v3 in v2.items():
+                dd[k1][k2][k3] = v3
+    return dd
+
+def dict_to_defaultdict_4_with_value(d: dict, value):
+    dd = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: value))))
+    for k1, v1 in d.items():
+        for k2, v2 in v1.items():
+            for k3, v3 in v2.items():
+                for k4, v4 in v3.items():
+                    dd[k1][k2][k3][k4] = v4
+    return dd
+
+def update_default_dict_3(target: dict, source: dict) -> None:
+    for k1, v1 in source.items():
+        for k2, v2 in v1.items():
+            for k3, v3 in v2.items():
+                target[k1][k2][k3] = v3
+
+def update_default_dict_4(target: dict, source: dict) -> None:
+    for k1, v1 in source.items():
+        for k2, v2 in v1.items():
+            for k3, v3 in v2.items():
+                for k4, v4 in v3.items():
+                    target[k1][k2][k3][k4] = v4
