@@ -10,26 +10,26 @@ VOWELS
 	<ʤia> /ʤˈiɐ/ "DAY_NOUN"
 
 /ˈa/ (0.039)
-	<chave> /ʃˈavi/ "KEY_NOUN"
-	<alma> /ˈawmɐ/ "SOUL_NOUN"
-	<casa> /kˈazɐ/ "HOUSE_NOUN"
+	<viagem> /viˈaʒẽj̃/ "JOURNEY_NOUN"
+	<sentar> /sẽtˈah/ "SIT_VERB"
+	<caldo> /kˈawdu/ "HOT_ADJ"
 
 /ˈe/ (0.037)
 	<saber> /sabˈeh/ "KNOW_VERB"
 	<ler> /lˈeɾ/ "READ_VERB"
 	<pelo> /pˈelu/ "HAIR_NOUN"
 
+/i/ (0.031)
+	<metade> /metˈaʤi/ "HALF_NOUN"
+	<irmão> /iɦmˈɐ̃w̃/ "BROTHER_NOUN"
+	<ʤizer> /ʤizˈeh/ "SAY-INF_VERB"
+
 /ˈo/ (0.03)
-	<voo> /vˈou/ "FLIGHT_NOUN"
-	<cor> /kˈoh/ "COLOR_NOUN"
-	<boi> /bˈoj/ "OX_NOUN"
+	<todos> /tˈoduʃ/ "ALL (PL)_ADJ"
+	<pouco> /pˈowku/ "LITTLE_ADJ"
+	<novo> /nˈovu/ "NEW_ADJ"
 
-/i/ (0.03)
-	<ventre> /vˈẽtɾi/ "BELLY_NOUN"
-	<vizinho> /vizˈĩj̃u/ "NEIGHBOR_NOUN"
-	<gente> /ʒˈẽʧi/ "PEOPLE_NOUN"
-
-/a/ (0.021)
+/a/ (0.02)
 	<agulha> /aɡˈuʎɐ/ "NEEDLE_NOUN"
 	<areia> /aɾˈejɐ/ "SAND_NOUN"
 	<nascer> /nasˈeh/ "BE BORN_VERB"
@@ -84,10 +84,10 @@ VOWELS
 	<vinte> /vˈĩʧi/ "TWENTY_NUM"
 	<rainha> /haˈĩj̃ɐ/ "QUEEN_NOUN"
 
-/ˈũ/ (0.006)
+/ˈũ/ (0.007)
 	<junho> /ʒˈũj̃u/ "JUNE_PROPN"
 	<cunho> /kˈũj̃u/ "CORNER_NOUN"
-	<junto> /ʒˈũtu/ "JOINED_ADJ"
+	<muito> /mˈũj̃tu/ "MANY_ADJ"
 
 /ẽ/ (0.005)
 	<jovem> /ʒˈɔvẽj̃/ "YOUNG_ADJ"
@@ -113,7 +113,7 @@ VOWELS
 
 
 CONSONANTS
-/h/ (0.046)
+/h/ (0.045)
 	<porco> /pˈohku/ "PIG_NOUN"
 	<roda> /hˈɔdɐ/ "WHEEL_NOUN"
 	<mulher> /muʎˈɛh/ "WOMAN_WIFE_NOUN"
@@ -139,29 +139,29 @@ CONSONANTS
 	<chama> /ʃˈɐ̃mɐ/ "FLAME_NOUN"
 
 /v/ (0.03)
-	<velho> /vˈeʎu/ "OLD_ADJ"
-	<vilão> /vilˈɐ̃w̃/ "VILLAIN_NOUN"
-	<jovem> /ʒˈɔvẽj̃/ "YOUNG_ADJ"
+	<nove> /nˈɔvi/ "NINE_NUM"
+	<vinte> /vˈĩʧi/ "TWENTY_NUM"
+	<vós> /vˈɔjʃ/ "YOU (PL)_PRON"
+
+/l/ (0.029)
+	<amarelo> /amaɾˈɛlu/ "YELLOW_ADJ"
+	<lua> /lˈuɐ/ "MOON_NOUN"
+	<argila> /aɦʒˈilɐ/ "CLAY_NOUN"
 
 /t/ (0.028)
-	<escutar> /eskutˈah/ "LISTEN_VERB"
-	<peito> /pˈejtu/ "BREAST_NOUN"
 	<ponto> /pˈõtu/ "POINT_NOUN"
+	<cantar> /kɐ̃tˈah/ "SING_VERB"
+	<touro> /tˈowɾu/ "BULL_NOUN"
 
-/l/ (0.028)
-	<amarelo> /amaɾˈɛlu/ "YELLOW_ADJ"
-	<lágrima> /lˈaɡɾimɐ/ "TEAR_NOUN"
-	<luta> /lˈutɐ/ "FIGHT_NOUN"
+/m/ (0.027)
+	<comer> /komˈeh/ "EAT_VERB"
+	<cima> /sˈĩmɐ/ "SUMMIT_NOUN"
+	<montanha> /mõtˈɐ̃j̃ɐ/ "MOUNTAIN_NOUN"
 
 /p/ (0.026)
-	<peixe> /pˈejʃi/ "FISH_NOUN"
-	<pedra> /pˈɛdɾɐ/ "STONE_NOUN"
-	<proveito> /pɾovˈejtu/ "PROFIT_NOUN"
-
-/m/ (0.026)
-	<mãe> /mˈɐ̃j̃/ "MOTHER_NOUN"
-	<alma> /ˈawmɐ/ "SOUL_NOUN"
-	<morder> /moɦdˈeh/ "BITE_VERB"
+	<pobre> /pˈɔbɾi/ "POOR_ADJ"
+	<Espanha> /eʃpˈɐ̃j̃ɐ/ "SPAIN_PROPN"
+	<pássaro> /pˈasɐɾu/ "BIRD_NOUN"
 
 /j/ (0.026)
 	<dez> /dˈɛjʃ/ "TEN_NUM"
@@ -183,12 +183,12 @@ CONSONANTS
 	<obreiro> /obɾˈejɾu/ "WORKER_NOUN"
 	<cabra> /kˈabɾɐ/ "GOAT_NOUN"
 
-/n/ (0.019)
+/n/ (0.018)
 	<noite> /nˈojʧi/ "NIGHT_NOUN"
 	<não> /nɐ̃w̃/ "NOT_ADVERB"
 	<novo> /nˈovu/ "NEW_ADJ"
 
-/j̃/ (0.019)
+/j̃/ (0.018)
 	<jovem> /ʒˈɔvẽj̃/ "YOUNG_ADJ"
 	<rainha> /haˈĩj̃ɐ/ "QUEEN_NOUN"
 	<muito> /mˈũj̃tu/ "MANY_ADJ"

@@ -14,35 +14,35 @@ VOWELS
 	<étoile> /etwɛl/ "STAR_NOUN"
 	<chercher> /ʃæɛ̯ʁʃe/ "SEARCH_VERB"
 
-/a/ (0.032)
-	<chasser> /ʃase/ "HUNT_VERB"
-	<égal> /eɡal/ "EQUAL_ADJ"
-	<larme> /laʁm/ "TEAR_NOUN"
+/i/ (0.032)
+	<mi-> /mi/ "MIDDLE_NOUN"
+	<épi> /epi/ "EAR OF GRAIN_NOUN"
+	<puits> /pɥi/ "WELL_NOUN"
 
-/i/ (0.031)
-	<cerise> /sœʁiz/ "CHERRY_NOUN"
-	<petit> /pœʦi/ "SMALL_ADJ"
-	<dix> /ʣi/ "TEN_NUM"
+/a/ (0.032)
+	<clamer> /klame/ "CALL_VERB"
+	<anneau> /anoʊ̯/ "RING_NOUN"
+	<ouaille> /waj/ "SHEEP_NOUN"
 
 /ẽɪ̯̃/ (0.024)
 	<romain> /ʁɔmẽɪ̯̃/ "ROMAN_ADJ"
 	<plaindre> /plẽɪ̯̃dʁ/ "WEEP_VERB"
 	<bain> /bẽɪ̯̃/ "BATH_NOUN"
 
-/u/ (0.022)
+/u/ (0.021)
 	<ouvrier> /uvʁije/ "WORKER_NOUN"
 	<court> /kuʁ/ "SHORT_ADJ"
 	<mourir> /muʁiʁ/ "DIE_VERB"
 
-/ã/ (0.021)
-	<manger> /mãʒe/ "EAT_VERB"
-	<langue> /lãɡ/ "TONGUE_NOUN"
-	<grand> /ɡʁã/ "BIG_ADJ"
+/œ/ (0.021)
+	<cheval> /ʃœval/ "HORSE_NOUN"
+	<semaine> /sœmæɛ̯n/ "WEEK_NOUN"
+	<œuf> /œf/ "EGG_NOUN"
 
-/œ/ (0.02)
-	<feuille> /fœj/ "LEAF_NOUN"
-	<lever> /lœve/ "CARRY_VERB"
-	<œuvre> /œvʁ/ "WORK_NOUN"
+/ã/ (0.021)
+	<cent> /sã/ "HUNDRED_NUM"
+	<ange> /ãʒ/ "ANGEL_NOUN"
+	<blanc> /blã/ "WHITE_ADJ"
 
 /ɪ/ (0.016)
 	<ville> /vɪl/ "TOWN_NOUN"
@@ -115,9 +115,9 @@ VOWELS
 
 
 CONSONANTS
-/ʁ/ (0.102)
-	<arbre> /aʁbʁ/ "TREE_NOUN"
-	<ouvrier> /uvʁije/ "WORKER_NOUN"
+/ʁ/ (0.103)
+	<trois> /tʁwɛ/ "THREE_NUM"
+	<parole> /paʁɔl/ "WORD_NOUN"
 	<fer> /fæɛ̯ʁ/ "IRON_NOUN"
 
 /l/ (0.056)
@@ -150,17 +150,17 @@ CONSONANTS
 	<oiseau> /wɛzoʊ̯/ "BIRD_NOUN"
 	<asseoir> /aswɛʁ/ "SIT_VERB"
 
-/t/ (0.03)
+/t/ (0.029)
 	<tout> /tu/ "ALL (SG)_ADJ"
 	<écouter> /ekute/ "LISTEN_VERB"
 	<chanter> /ʃãte/ "SING_VERB"
 
-/m/ (0.03)
+/m/ (0.029)
 	<mouche> /mʊʃ/ "FLY_NOUN"
 	<femme> /fam/ "WOMAN_FEMALE_NOUN"
 	<moi> /mwɛ/ "I_OBL_PRON"
 
-/f/ (0.03)
+/f/ (0.029)
 	<frère> /fʁæɛ̯ʁ/ "BROTHER_NOUN"
 	<farine> /faʁɪn/ "FLOUR_NOUN"
 	<fruit> /fʁɥi/ "FRUIT_NOUN"
@@ -185,7 +185,7 @@ CONSONANTS
 	<bouche> /bʊʃ/ "MOUTH_NOUN"
 	<chant> /ʃã/ "SONG_NOUN"
 
-/b/ (0.019)
+/b/ (0.021)
 	<bain> /bẽɪ̯̃/ "BATH_NOUN"
 	<herbe> /æɛ̯ʁb/ "GRASS_NOUN"
 	<bœuf> /bœf/ "OX_NOUN"

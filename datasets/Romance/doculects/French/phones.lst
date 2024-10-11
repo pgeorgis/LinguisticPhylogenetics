@@ -4,17 +4,17 @@ VOWELS
 	<argile> /aʁʒil/ "CLAY_NOUN"
 	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
 
-/ɛ/ (0.055)
+/ɛ/ (0.054)
 	<cher> /ʃɛʁ/ "DEAR_ADJ"
 	<chair> /ʃɛʁ/ "MEAT_NOUN"
 	<sept> /sɛt/ "SEVEN_NUM"
 
-/i/ (0.047)
+/i/ (0.048)
 	<racine> /ʁasin/ "ROOT_NOUN"
 	<dire> /diʁ/ "SAY-INF_VERB"
-	<dix> /di/ "TEN_NUM"
+	<cime> /sim/ "SUMMIT_NOUN"
 
-/e/ (0.038)
+/e/ (0.037)
 	<chercher> /ʃɛʁʃe/ "SEARCH_VERB"
 	<geler> /ʒəle/ "FREEZE_VERB"
 	<tousser> /tuse/ "COUGH_VERB"
@@ -34,12 +34,12 @@ VOWELS
 	<automne> /otɔn/ "AUTUMN_NOUN"
 	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
 
-/ɑ̃/ (0.021)
+/ɑ̃/ (0.02)
 	<chanter> /ʃɑ̃te/ "SING_VERB"
 	<cinquante> /sɛ̃kɑ̃t/ "FIFTY_NUM"
 	<manger> /mɑ̃ʒe/ "EAT_VERB"
 
-/o/ (0.021)
+/o/ (0.02)
 	<gros> /ɡʁo/ "THICK_ADJ"
 	<os> /o/ "BONE_NOUN"
 	<chaud> /ʃo/ "HOT_ADJ"
@@ -59,8 +59,8 @@ VOWELS
 	<œil> /œj/ "EYE_NOUN"
 	<feuille> /fœj/ "LEAF_NOUN"
 
-/ə/ (0.011)
-	<que> /kə/ "WHAT_PRON"
+/ə/ (0.012)
+	<semaine> /səmɛn/ "WEEK_NOUN"
 	<lever> /ləve/ "CARRY_VERB"
 	<semance> /səmɑ̃s/ "SEED_NOUN"
 
@@ -82,7 +82,7 @@ CONSONANTS
 	<sel> /sɛl/ "SALT_NOUN"
 	<ficelle> /fisɛl/ "STRING_NOUN"
 
-/s/ (0.054)
+/s/ (0.053)
 	<su> /sy/ "KNOWN_VERB"
 	<glacer> /ɡlase/ "FREEZE_VERB"
 	<tous> /tus/ "ALL (PL)_ADJ"
@@ -112,12 +112,12 @@ CONSONANTS
 	<seoir> /swaʁ/ "SIT_VERB"
 	<étoile> /etwal/ "STAR_NOUN"
 
-/m/ (0.03)
+/m/ (0.029)
 	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
 	<mordre> /mɔʁdʁ/ "BITE_VERB"
 	<mille> /mil/ "THOUSAND_NUM"
 
-/f/ (0.03)
+/f/ (0.029)
 	<chef> /ʃɛf/ "HEAD_NOUN"
 	<fils> /fis/ "SON_NOUN"
 	<force> /fɔʁs/ "STRENGTH_NOUN"
@@ -142,12 +142,12 @@ CONSONANTS
 	<chaîne> /ʃɛn/ "CHAIN_NOUN"
 	<chaud> /ʃo/ "HOT_ADJ"
 
-/d/ (0.021)
+/d/ (0.02)
 	<deux> /dø/ "TWO (F)_NUM"
 	<doux> /du/ "SWEET_ADJ"
 	<doigt> /dwa/ "FINGER_NOUN"
 
-/b/ (0.019)
+/b/ (0.02)
 	<chambre> /ʃɑ̃bʁ/ "CHAMBER_NOUN"
 	<bœuf> /bœf/ "OX_NOUN"
 	<herbe> /ɛʁb/ "GRASS_NOUN"
