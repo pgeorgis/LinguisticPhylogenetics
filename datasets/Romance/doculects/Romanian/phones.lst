@@ -1,47 +1,47 @@
 VOWELS
-/e/ (0.097)
+/e/ (0.099)
 	<luare> /luˈare/ "CARRY_VERB"
-	<regină> /reʤˈinə/ "QUEEN_NOUN"
-	<june> /ʒˈune/ "YOUNG_ADJ"
+	<punere> /pˈunere/ "PUT_VERB"
+	<scriere> /skrˈiere/ "WRITE_VERB"
 
-/ə/ (0.06)
+/ə/ (0.059)
 	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
 	<insulă> /ˈinsulə/ "ISLAND_NOUN"
 	<țară> /ʦˈarə/ "EARTH_NOUN"
 
-/ˈa/ (0.05)
+/ˈa/ (0.049)
 	<iarnă> /jˈarnə/ "WINTER_NOUN"
 	<înotare> /ɨnotˈare/ "SWIM_VERB"
 	<arbore> /ˈarbore/ "TREE_NOUN"
 
-/ˈi/ (0.037)
-	<fin> /fˈin/ "THIN_ADJ"
-	<lumină> /lumˈinə/ "LIGHT_NOUN"
+/ˈi/ (0.036)
+	<mie> /mˈie/ "THOUSAND_NUM"
+	<buric> /burˈik/ "NAVEL_NOUN"
 	<cinci> /ʧˈinʧʲ/ "FIVE_NUM"
 
-/ˈu/ (0.034)
+/ˈu/ (0.035)
 	<obscur> /obskˈur/ "DARK_ADJ"
-	<punct> /pˈuŋkt/ "POINT_NOUN"
+	<unu> /ˈunu/ "ONE_NUM"
 	<cenușă> /ʧenˈuʃə/ "ASH_NOUN"
 
 /ˈe/ (0.033)
 	<miel> /mjˈel/ "LAMB_NOUN"
 	<miez> /mjˈez/ "MIDDLE_NOUN"
-	<trei> /trˈej/ "THREE_NUM"
+	<zece> /zˈeʧe/ "TEN_NUM"
 
-/ˈo/ (0.024)
-	<toți> /tˈoʦʲ/ "ALL (PL)_"
+/ˈo/ (0.025)
+	<toți> /tˈoʦʲ/ "ALL (PL)_ADJ"
 	<doi> /dˈoj/ "TWO (M)_NUM"
 	<nouă> /nˈowə/ "NINE_NUM"
 
-/u/ (0.021)
-	<roșu> /rˈoʃu/ "RED_ADJ"
-	<sigur> /sˈiɡur/ "SAFE_ADJ"
+/u/ (0.02)
+	<rumân> /rumˈɨn/ "ROMAN_ADJ"
+	<suferire> /suferˈire/ "SUFFER_VERB"
 	<culoare> /kulo̯ˈare/ "COLOR_NOUN"
 
 /o̯ˈa/ (0.016)
 	<coadă> /ko̯ˈadə/ "TAIL_NOUN"
-	<frumoasă> /frumo̯ˈasə/ "BEAUTIFUL (M)_ADJ"
+	<frumoasă> /frumo̯ˈasə/ "BEAUTIFUL (F)_ADJ"
 	<foaie> /fo̯ˈaje/ "LEAF_NOUN"
 
 /ˈɨ/ (0.012)
@@ -49,25 +49,25 @@ VOWELS
 	<lână> /lˈɨnə/ "WOOL_NOUN"
 	<vânt> /vˈɨnt/ "WIND_NOUN"
 
-/a/ (0.01)
-	<arină> /arˈinə/ "SAND_NOUN"
-	<ascultare> /askultˈare/ "LISTEN_VERB"
-	<supra> /sˈupra/ "ABOVE_PREP"
-
 /i/ (0.009)
-	<ficat> /fikˈat/ "LIVER_NOUN"
 	<inimă> /ˈinimə/ "SOUL_NOUN"
-	<picior> /piʧˈor/ "FOOT_NOUN"
+	<piersică> /pjˈersikə/ "PEACH_NOUN"
+	<vițel> /viʦˈel/ "CALF_NOUN"
+
+/a/ (0.009)
+	<ajut> /aʒˈut/ "HELP-1SG_VERB"
+	<arină> /arˈinə/ "SAND_NOUN"
+	<castel> /kastˈel/ "CASTLE_NOUN"
 
 /e̯ˈa/ (0.007)
 	<nea> /ne̯ˈa/ "SNOW_NOUN"
 	<cireașă> /ʧire̯ˈaʃə/ "CHERRY_NOUN"
 	<ea> /je̯ˈa/ "SHE_PRON"
 
-/o/ (0.005)
+/o/ (0.004)
 	<odoare> /odo̯ˈare/ "ODOR_NOUN"
 	<înotare> /ɨnotˈare/ "SWIM_VERB"
-	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
+	<arbore> /ˈarbore/ "TREE_NOUN"
 
 /ɨ/ (0.004)
 	<înotare> /ɨnotˈare/ "SWIM_VERB"
@@ -87,12 +87,12 @@ VOWELS
 
 CONSONANTS
 /r/ (0.1)
-	<plângere> /plˈɨnʤere/ "WEEP_VERB"
+	<ceară> /ʧe̯ˈarə/ "WAX_NOUN"
 	<scoarţă> /sko̯ˈarʦə/ "BARK_NOUN"
 	<iarbă> /jˈarbə/ "GRASS_NOUN"
 
 /n/ (0.061)
-	<noj> /nˈoj/ "WE_PRON"
+	<cine> /ʧˈine/ "WHO_PRON"
 	<nor> /nˈor/ "CLOUD_NOUN"
 	<bune> /bˈune/ "GOOD (F.PL)_ADJ"
 
@@ -101,17 +101,17 @@ CONSONANTS
 	<tușire> /tuʃˈire/ "COUGH_VERB"
 	<petrecere> /petreʧˈere/ "PARTY_NOUN"
 
-/k/ (0.044)
-	<coapsă> /ko̯ˈapsə/ "THIGH_NOUN"
+/k/ (0.045)
+	<lacrimă> /lˈakrimə/ "TEAR_NOUN"
 	<loc> /lˈok/ "PLACE_NOUN"
 	<porc> /pˈork/ "PIG_NOUN"
 
-/p/ (0.039)
+/p/ (0.038)
 	<pui> /pˈuj/ "PUT-2SG_VERB"
 	<piersică> /pjˈersikə/ "PEACH_NOUN"
 	<timp> /tˈimp/ "TIME_NOUN"
 
-/l/ (0.034)
+/l/ (0.033)
 	<floare> /flo̯ˈare/ "FLOWER_NOUN"
 	<lac> /lˈak/ "LAKE_NOUN"
 	<insulă> /ˈinsulə/ "ISLAND_NOUN"
@@ -141,73 +141,73 @@ CONSONANTS
 	<frunză> /frˈunzə/ "LEAF_NOUN"
 	<fir> /fˈir/ "STRING_NOUN"
 
-/d/ (0.018)
-	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
-	<doi> /dˈoj/ "TWO (M)_NUM"
-	<odoare> /odo̯ˈare/ "ODOR_NOUN"
-
-/b/ (0.018)
+/b/ (0.019)
+	<alb> /ˈalb/ "WHITE_ADJ"
+	<bun> /bˈun/ "GOOD (M.SG)_ADJ"
 	<obscur> /obskˈur/ "DARK_ADJ"
-	<buric> /burˈik/ "NAVEL_NOUN"
-	<parabolă> /parˈabolə/ "WORD_NOUN"
+
+/d/ (0.018)
+	<vedere> /vedˈere/ "SEE_VERB"
+	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
+	<dormire> /dormˈire/ "SLEEP_VERB"
 
 /v/ (0.011)
-	<vedere> /vedˈere/ "SEE_VERB"
 	<vin> /vˈin/ "COME-1SG_VERB"
 	<vin> /vˈin/ "WINE_NOUN"
+	<venire> /venˈire/ "COME-INF_VERB"
 
 /ʤ/ (0.01)
-	<argilă> /arʤˈilə/ "CLAY_NOUN"
 	<lege> /lˈeʤe/ "LAW_NOUN"
 	<rege> /rˈeʤe/ "KING_NOUN"
+	<ger> /ʤˈer/ "ICE_NOUN"
 
 /ʃ/ (0.01)
-	<tușire> /tuʃˈire/ "COUGH_VERB"
 	<știi> /ʃtˈii/ "KNOW-2SG_VERB"
 	<șapte> /ʃˈapte/ "SEVEN_NUM"
+	<cenușă> /ʧenˈuʃə/ "ASH_NOUN"
 
 /ɡ/ (0.01)
-	<negru> /nˈeɡru/ "BLACK_ADJ"
 	<gheață> /ɡe̯ˈaʦə/ "ICE_NOUN"
-	<galben> /ɡˈalben/ "YELLOW_ADJ"
+	<negru> /nˈeɡru/ "BLACK_ADJ"
+	<unghie> /ˈuŋɡje/ "FINGERNAIL_NOUN"
 
 /w/ (0.01)
-	<eu> /jˈew/ "I_PRON"
 	<fiu> /fˈiw/ "SON_NOUN"
 	<bou> /bˈow/ "OX_NOUN"
+	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
 
 /z/ (0.009)
 	<zece> /zˈeʧe/ "TEN_NUM"
-	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
 	<miez> /mjˈez/ "MIDDLE_NOUN"
+	<zbor> /zbˈor/ "FLIGHT_NOUN"
 
 /ʦ/ (0.008)
-	<puț> /pˈuʦ/ "WELL_NOUN"
 	<țară> /ʦˈarə/ "EARTH_NOUN"
-	<forţă> /fˈorʦə/ "STRENGTH_NOUN"
+	<țeastă> /ʦe̯ˈastə/ "SKULL_NOUN"
+	<înghețare> /ɨŋɡeʦˈare/ "FREEZE_VERB"
 
 /ʧʲ/ (0.004)
-	<cinci> /ʧˈinʧʲ/ "FIVE_NUM"
 	<cincizeci> /ʧinʧʲzˈeʧʲ/ "FIFTY_NUM"
+	<douăzeci> /dowəzˈeʧʲ/ "TWENTY_NUM"
 	<niciun> /niʧʲˈun/ "NONE_PRON"
 
 /ʒ/ (0.004)
-	<june> /ʒˈune/ "YOUNG_ADJ"
-	<ajut> /aʒˈut/ "HELP-1SG_VERB"
 	<jude> /ʒˈude/ "JUDGE_NOUN"
+	<ajutare> /aʒutˈare/ "HELP_VERB"
+	<june> /ʒˈune/ "YOUNG_ADJ"
 
 /ŋ/ (0.004)
-	<punct> /pˈuŋkt/ "POINT_NOUN"
 	<înghețare> /ɨŋɡeʦˈare/ "FREEZE_VERB"
 	<lung> /lˈuŋɡ/ "LONG_ADJ"
+	<unghie> /ˈuŋɡje/ "FINGERNAIL_NOUN"
 
 /kʲ/ (0.003)
-	<genunchi> /ʤenˈunkʲ/ "KNEE_NOUN"
+	<ochi> /ˈokʲ/ "EYES_NOUN"
 	<ochi> /ˈokʲ/ "EYE_NOUN"
 	<vechi> /vˈekʲ/ "OLD_ADJ"
 
 /ʦʲ/ (0.001)
-	<toți> /tˈoʦʲ/ "ALL (PL)_"
+	<toți> /tˈoʦʲ/ "ALL (PL)_ADJ"
 
 /nʲ/ (0.001)
 	<buni> /bˈunʲ/ "GOOD (M.PL)_ADJ"

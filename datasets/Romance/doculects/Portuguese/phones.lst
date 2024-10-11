@@ -9,15 +9,15 @@ VOWELS
 	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
 	<queimar> /kɐjmˈaɾ/ "BURN_VERB"
 
-/ˈa/ (0.039)
-	<fada> /fˈaðɐ/ "FATE_NOUN"
-	<gato> /ɡˈatu/ "CAT_NOUN"
-	<viagem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
+/ˈa/ (0.04)
+	<falso> /fˈaɫsu/ "FALSE_ADJ"
+	<levar> /lɨvˈaɾ/ "CARRY_VERB"
+	<caçar> /kɐsˈaɾ/ "HUNT_VERB"
 
-/ɨ/ (0.036)
-	<doze> /dˈozɨ/ "TWELVE_NUM"
+/ɨ/ (0.037)
+	<dente> /dˈẽtɨ/ "TOOTH_NOUN"
+	<nome> /nˈomɨ/ "NAME_NOUN"
 	<noite> /nˈojtɨ/ "NIGHT_NOUN"
-	<nenhum> /nɨɲˈũ/ "NONE_PRON"
 
 /ˈo/ (0.032)
 	<doce> /dˈosɨ/ "SWEET_ADJ"
@@ -44,22 +44,22 @@ VOWELS
 	<colo> /kˈɔlu/ "NECK_NOUN"
 	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
 
+/ˈu/ (0.016)
+	<cunho> /kˈuɲu/ "CORNER_NOUN"
+	<saúde> /sɐˈuðɨ/ "HEALTH_NOUN"
+	<usso> /ˈusu/ "BEAR_NOUN"
+
 /ˈɛ/ (0.016)
-	<terra> /tˈɛʁɐ/ "EARTH_NOUN"
-	<festa> /fˈɛʃtɐ/ "PARTY_NOUN"
 	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
+	<inverno> /ĩvˈɛɾnu/ "WINTER_NOUN"
+	<neve> /nˈɛvɨ/ "SNOW_NOUN"
 
 /ˈɐ̃/ (0.016)
 	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
-	<bem> /bˈɐ̃j̃/ "WELL (ADV)_ADV"
-	<santo> /sˈɐ̃tu/ "SACRED_ADJ"
+	<são> /sˈɐ̃w̃/ "HEALTHY (M)_ADJ"
+	<branco> /bɾˈɐ̃ku/ "WHITE_ADJ"
 
-/ˈu/ (0.016)
-	<usso> /ˈusu/ "BEAR_NOUN"
-	<junho> /ʒˈuɲu/ "JUNE_PROPN"
-	<fumo> /fˈumu/ "SMOKE_NOUN"
-
-/i/ (0.011)
+/i/ (0.01)
 	<dizer> /dizˈeɾ/ "SAY-INF_VERB"
 	<escrever> /iʃkɾɨvˈeɾ/ "WRITE_VERB"
 	<estio> /iʃtˈiu/ "SUMMER_NOUN"
@@ -145,23 +145,23 @@ CONSONANTS
 	<cu> /kˈu/ "BUTTOCKS_NOUN"
 
 /v/ (0.03)
-	<ver> /vˈeɾ/ "SEE_VERB"
-	<escrever> /iʃkɾɨvˈeɾ/ "WRITE_VERB"
-	<vila> /vˈilɐ/ "TOWN_NOUN"
+	<via> /vˈiɐ/ "ROAD_NOUN"
+	<verme> /vˈɛɾmɨ/ "WORM_NOUN"
+	<neve> /nˈɛvɨ/ "SNOW_NOUN"
 
-/l/ (0.028)
+/l/ (0.029)
 	<luta> /lˈutɐ/ "FIGHT_NOUN"
 	<lebre> /lˈɛβɾɨ/ "HARE_NOUN"
-	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
+	<lágrima> /lˈaɣɾimɐ/ "TEAR_NOUN"
 
 /j/ (0.028)
 	<meio> /mˈɐju/ "MIDDLE_NOUN"
 	<piolho> /pjˈoʎu/ "LOUSE_NOUN"
 	<proveito> /pɾuvˈɐjtu/ "PROFIT_NOUN"
 
-/m/ (0.027)
+/m/ (0.028)
 	<morder> /muɾðˈeɾ/ "BITE_VERB"
-	<dormir> /duɾmˈiɾ/ "SLEEP_VERB"
+	<semente> /sɨmˈẽtɨ/ "SEED_NOUN"
 	<morsegar> /muɾsɨɣˈaɾ/ "BITE_VERB"
 
 /p/ (0.026)
@@ -194,12 +194,12 @@ CONSONANTS
 	<digo> /dˈiɣu/ "SAY-1SG_VERB"
 	<duas> /dˈuɐʃ/ "TWO (F)_NUM"
 
-/ʒ/ (0.013)
+/ʒ/ (0.012)
 	<gente> /ʒˈẽtɨ/ "PEOPLE_NOUN"
 	<gelo> /ʒˈelu/ "ICE_NOUN"
 	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
 
-/ɲ/ (0.013)
+/ɲ/ (0.012)
 	<rainha> /ʁɐˈiɲɐ/ "QUEEN_NOUN"
 	<espinha> /iʃpˈiɲɐ/ "SPINE_NOUN"
 	<unha> /ˈuɲɐ/ "FINGERNAIL_NOUN"
@@ -209,12 +209,12 @@ CONSONANTS
 	<quatro> /kwˈatɾu/ "FOUR_NUM"
 	<língua> /lˈĩɡwɐ/ "TONGUE_NOUN"
 
-/ʎ/ (0.011)
+/ʎ/ (0.01)
 	<melhor> /mɨʎˈɔɾ/ "BETTER_ADJ"
 	<ilha> /ˈiʎɐ/ "ISLAND_NOUN"
 	<ovelha> /ɔvˈɐjʎɐ/ "SHEEP_NOUN"
 
-/b/ (0.011)
+/b/ (0.01)
 	<umbigo> /ũbˈiɣu/ "NAVEL_NOUN"
 	<baixo> /bˈajʃu/ "LOW_ADJ"
 	<bom> /bˈõ/ "GOOD (M.SG)_ADJ"

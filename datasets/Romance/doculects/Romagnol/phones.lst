@@ -55,8 +55,8 @@ VOWELS
 	<aj> /ˈaj/ "GARLIC_NOUN"
 
 /ˈeː/ (0.013)
-	<savēr> /sɐvˈeː/ "KNOW_VERB"
-	<nujētar> /nujˈeːtɐr/ "WE_PRON"
+	<invēran> /invˈeːrɐn/ "WINTER_NOUN"
+	<nēva> /nˈeːvɐ/ "SNOW_NOUN"
 	<crēdar> /krˈeːdɐr/ "BELIEVE_VERB"
 
 /ˈɔ/ (0.012)
@@ -89,16 +89,15 @@ VOWELS
 	<autôn> /awtˈõũ̯/ "AUTUMN_NOUN"
 	<nèsar> /nˈɛsar/ "BE BORN_VERB"
 
-/ˈe/ (0.002)
-	<vdēr> /vdˈej/ "SEE_VERB"
-	<vērd> /vˈejrd/ "GREEN_ADJ"
-
 /o/ (0.002)
 	<odôr> /odˈou̯r/ "ODOR_NOUN"
 	<dio> /dˈio/ "GOD_NOUN"
 
 /ˈɛ̃/ (0.001)
 	<bèn> /bˈɛ̃j̃/ "WELL (ADV)_ADV"
+
+/ˈe/ (0.001)
+	<vērd> /vˈejrd/ "GREEN_ADJ"
 
 /ˈaː/ (0.001)
 	<giāz> /ʤˈaːθ/ "ICE_NOUN"
@@ -110,34 +109,34 @@ VOWELS
 
 CONSONANTS
 /r/ (0.072)
+	<erba> /ˈɛrbɐ/ "GRASS_NOUN"
 	<nujētar> /nujˈeːtɐr/ "WE_PRON"
 	<curt> /kˈurt/ "SHORT_ADJ"
-	<durmir> /durmˈi/ "SLEEP_VERB"
 
 /l/ (0.056)
+	<paröla> /parˈɔə̯lɐ/ "WORD_NOUN"
 	<stëla> /stˈɛə̯lɐ/ "STAR_NOUN"
 	<uşël> /uzˈɛə̯l/ "BIRD_NOUN"
-	<legna> /lˈɛɲɐ/ "WOOD_NOUN"
 
 /n/ (0.053)
+	<nóm> /nˈom/ "NAME_NOUN"
 	<faréna> /fɐrˈẽnɐ/ "FLOUR_NOUN"
 	<cânt> /kˈʌ̃nt/ "SONG_NOUN"
-	<vént> /vˈẽnt/ "TWENTY_NUM"
 
 /t/ (0.052)
+	<vént> /vˈẽnt/ "TWENTY_NUM"
 	<vita> /vˈitɐ/ "LIFE_NOUN"
 	<fēgat> /fˈeːɡɐt/ "LIVER_NOUN"
-	<tësta> /tˈɛə̯stɐ/ "SKULL_NOUN"
 
 /k/ (0.041)
+	<cânt> /kˈʌ̃nt/ "SONG_NOUN"
 	<vaca> /vˈakɐ/ "COW_NOUN"
 	<chêvra> /kˈeə̯vrɐ/ "GOAT_NOUN"
-	<còl> /kˈɔl/ "NECK_NOUN"
 
 /v/ (0.04)
+	<vént> /vˈẽnt/ "TWENTY_NUM"
 	<scrìvar> /skrˈivɐr/ "WRITE_VERB"
 	<vērman> /vˈeːrmɐn/ "WORM_NOUN"
-	<ẓôvan> /ðˈou̯vɐn/ "YOUNG_ADJ"
 
 /s/ (0.04)
 	<nòst> /nˈɔst/ "OUR_ADJ"
@@ -159,15 +158,15 @@ CONSONANTS
 	<ciamêr> /ʧɐmˈeə̯/ "CALL_VERB"
 	<témp> /tˈẽmp/ "TIME_NOUN"
 
-/j/ (0.023)
-	<cambiêr> /kɐmbjˈeə̯/ "CHANGE_VERB"
-	<ẓanẓèja> /ðɐnðˈɛjɐ/ "GUMS_NOUN"
-	<nujētar> /nujˈeːtɐr/ "WE_PRON"
-
 /ɡ/ (0.022)
-	<piêga> /pjˈeə̯ɡɐ/ "PLAGUE_NOUN"
-	<lug> /lˈuɡ/ "PLACE_NOUN"
-	<lêg> /lˈeə̯ɡ/ "LAKE_NOUN"
+	<nìgar> /nˈiɡɐr/ "BLACK_ADJ"
+	<fug> /fˈuɡ/ "FIRE_NOUN"
+	<pìgura> /pˈiɡurɐ/ "SHEEP_NOUN"
+
+/j/ (0.022)
+	<piânẓar> /pjˈʌ̃nðɐr/ "WEEP_VERB"
+	<fiöl> /fjˈɔə̯l/ "SON_NOUN"
+	<fója> /fˈojɐ/ "LEAF_NOUN"
 
 /f/ (0.021)
 	<förza> /fˈɔə̯rθɐ/ "STRENGTH_NOUN"
