@@ -26,7 +26,7 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.phonTransforms import normalize_geminates
 from phonUtils.segment import _toSegment, segment_ipa
 from phonUtils.syllables import syllabify
-from scipy.cluster.hierarchy import dendrogram, linkage
+from scipy.cluster.hierarchy import linkage
 from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
@@ -37,8 +37,8 @@ from utils.information import calculate_infocontent_of_word, entropy
 from utils.network import dm2coords, newer_network_plot
 from utils.sequence import (Ngram, flatten_ngram, generate_ngrams,
                             pad_sequence, remove_overlapping_ngrams)
-from utils.tree import reroot_tree
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
+from utils.tree import reroot_tree
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict)
 
@@ -1005,29 +1005,6 @@ class LexicalDataset:
                                 save_directory=save_directory,
                                 clustered_cognates=clustered_concepts,
                                 **kwargs)
-
-    def examine_cognates(self, language_list=None, concepts=None, cognate_sets=None,
-                         min_langs=2):
-        if language_list is None:
-            language_list = self.languages.values()
-        else:
-            language_list = [self.languages[lang] for lang in language_list]
-
-        if (concepts is None) and (cognate_sets is None):
-            cognate_sets = sorted(list(self.cognate_sets.keys()))
-
-        elif concepts:
-            cognate_sets = []
-            for concept in concepts:
-                cognate_sets.extend([c for c in self.cognate_sets if '_'.join(c.split('_')[:-1]) == concept])
-
-        for cognate_set in cognate_sets:
-            lang_count = [lang for lang in language_list if lang.name in self.cognate_sets[cognate_set]]
-            if len(lang_count) >= min_langs:
-                print(cognate_set)
-                for lang in lang_count:
-                    print(f'{lang.name}: {" ~ ".join(self.cognate_sets[cognate_set][lang.name])}')
-                print('\n')
 
     def remove_languages(self, langs_to_delete):
         """Removes a list of languages from a dataset"""
