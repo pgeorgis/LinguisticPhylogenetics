@@ -28,7 +28,7 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.phonTransforms import normalize_geminates
 from phonUtils.segment import _toSegment, segment_ipa
 from phonUtils.syllables import syllabify
-from scipy.cluster.hierarchy import dendrogram, linkage
+from scipy.cluster.hierarchy import linkage
 from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
@@ -40,6 +40,7 @@ from utils.network import dm2coords, newer_network_plot
 from utils.sequence import (Ngram, flatten_ngram, generate_ngrams,
                             pad_sequence, remove_overlapping_ngrams)
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
+from utils.tree import reroot_tree
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict,
                          dict_of_sets,
@@ -88,14 +89,12 @@ class LexicalDataset:
         self.cognates_dir = os.path.join(self.directory, 'cognates')
         self.phone_corr_dir = os.path.join(self.directory, 'phone_corr')
         self.doculects_dir = os.path.join(self.directory, 'doculects')
-        self.dist_matrix_dir = os.path.join(self.directory, 'dist_matrices')
         self.tree_dir = os.path.join(self.directory, 'trees')
         for dir in (
             self.plots_dir,
             self.cognates_dir,
             self.phone_corr_dir,
             self.doculects_dir,
-            self.dist_matrix_dir,
             self.tree_dir
         ):
             os.makedirs(dir, exist_ok=True)
@@ -750,11 +749,6 @@ class LexicalDataset:
         # Store computed distance matrix
         self.distance_matrices[code] = dm
 
-        # Write distance matrix file
-        if outfile is None:
-            outfile = os.path.join(self.dist_matrix_dir, f'{code}.tsv')
-        self.write_distance_matrix(dm, outfile)
-
         return dm
 
     def linkage_matrix(self,
@@ -762,7 +756,7 @@ class LexicalDataset:
                        cluster_func=None,
                        concept_list=None,
                        cognates='auto',
-                       linkage_method='ward',
+                       linkage_method='nj',
                        metric='euclidean',
                        **kwargs):
 
@@ -817,29 +811,19 @@ class LexicalDataset:
         df.insert(0, " ", [" "] * len(names))
         df.to_csv(outfile, sep='\t', index=False, float_format=float_format)
 
-    def draw_tree(self,
-                  dist_func,
-                  concept_list=None,
-                  cluster_func=None,
-                  cognates='auto',
-                  linkage_method='ward',
-                  metric='euclidean',
-                  outtree=None,
-                  title=None,
-                  save_directory=None,
-                  return_newick=False,
-                  orientation='left',
-                  p=30,
-                  **kwargs):
+    def generate_tree(self,
+                      dist_func,
+                      concept_list=None,
+                      cluster_func=None,
+                      cognates='auto',
+                      linkage_method='nj',
+                      outtree=None,
+                      root=None,
+                      **kwargs):
 
         group = [self.languages[lang] for lang in self.languages]
         labels = [lang.name for lang in group]
-        code = self.generate_test_code(dist_func, cognates, **kwargs)
 
-        if title is None:
-            title = f'{self.name}'
-        if save_directory is None:
-            save_directory = self.plots_dir
         if outtree is None:
             _, timestamp = create_timestamp()
             outtree = os.path.join(self.tree_dir, f'{timestamp}.tre')
@@ -849,41 +833,27 @@ class LexicalDataset:
                                  cluster_func=cluster_func,
                                  cognates=cognates,
                                  linkage_method=linkage_method,
-                                 metric=metric,
                                  **kwargs)
 
-        # Not possible to plot NJ trees in Python (yet? TBD) # TODO
-        if linkage_method != 'nj':
-            sns.set(font_scale=1.0)
-            if len(group) >= 100:
-                plt.figure(figsize=(20, 20))
-            elif len(group) >= 60:
-                plt.figure(figsize=(10, 10))
-            else:
-                plt.figure(figsize=(10, 8))
+        if linkage_method == 'nj':
+            newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
+        else:
+            newick_tree = linkage2newick(lm, labels)
 
-            dendrogram(lm, p=p, orientation=orientation, labels=labels)
-            if title:
-                plt.title(title, fontsize=30)
-            plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=300)
-            plt.show()
+        # Fix formatting of Newick string
+        newick_tree = re.sub(r'\s', '_', newick_tree)
+        newick_tree = re.sub(r',_', ',', newick_tree)
+        
+        # Optionally root the tree at a specified tip or clade
+        if root:
+            newick_tree = reroot_tree(newick_tree, root)
 
-        if return_newick or outtree:
-            if linkage_method == 'nj':
-                newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
-            else:
-                newick_tree = linkage2newick(lm, labels)
+        # Write tree to file
+        if outtree:
+            with open(outtree, 'w') as f:
+                f.write(newick_tree)
 
-            # Fix formatting of Newick string
-            newick_tree = re.sub(r'\s', '_', newick_tree)
-            newick_tree = re.sub(r',_', ',', newick_tree)
-
-            # Write tree to file
-            if outtree:
-                with open(outtree, 'w') as f:
-                    f.write(newick_tree)
-
-            return newick_tree
+        return newick_tree
 
     def plot_languages(self,
                        dist_func,
@@ -1042,29 +1012,6 @@ class LexicalDataset:
                                 save_directory=save_directory,
                                 clustered_cognates=clustered_concepts,
                                 **kwargs)
-
-    def examine_cognates(self, language_list=None, concepts=None, cognate_sets=None,
-                         min_langs=2):
-        if language_list is None:
-            language_list = self.languages.values()
-        else:
-            language_list = [self.languages[lang] for lang in language_list]
-
-        if (concepts is None) and (cognate_sets is None):
-            cognate_sets = sorted(list(self.cognate_sets.keys()))
-
-        elif concepts:
-            cognate_sets = []
-            for concept in concepts:
-                cognate_sets.extend([c for c in self.cognate_sets if '_'.join(c.split('_')[:-1]) == concept])
-
-        for cognate_set in cognate_sets:
-            lang_count = [lang for lang in language_list if lang.name in self.cognate_sets[cognate_set]]
-            if len(lang_count) >= min_langs:
-                print(cognate_set)
-                for lang in lang_count:
-                    print(f'{lang.name}: {" ~ ".join(self.cognate_sets[cognate_set][lang.name])}')
-                print('\n')
 
     def remove_languages(self, langs_to_delete):
         """Removes a list of languages from a dataset"""

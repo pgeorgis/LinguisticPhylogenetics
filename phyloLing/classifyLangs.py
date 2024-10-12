@@ -354,14 +354,14 @@ if __name__ == "__main__":
     # Generate Newick tree string
     logger.info('Generating phylogenetic tree...')
     outtree = os.path.join(exp_outdir, "newick.tre")
-    tree = family.draw_tree(
+    tree = family.generate_tree(
         cluster_func=clusterDist,
         dist_func=distFunc,
         cognates=cluster_params['cognates'],
         linkage_method=tree_params['linkage'],
-        title=family.name,
         outtree=outtree,
-        return_newick=tree_params['newick'])
+        root=tree_params['root'],
+    )
     params["tree"]["newick"] = tree
     with open(outtree, 'w') as f:
         f.write(tree)

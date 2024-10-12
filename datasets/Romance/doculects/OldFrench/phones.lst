@@ -14,8 +14,8 @@ VOWELS
 	<nostre> /nˈɔstrə/ "OUR_ADJ"
 	<trois> /trˈɔjs/ "THREE_NUM"
 
-/ˈi/ (0.027)
-	<sis> /sˈis/ "SIX_NUM"
+/ˈi/ (0.028)
+	<berbiz> /bərbˈiʦ/ "SHEEP_NOUN"
 	<ocire> /ɔʦˈirə/ "KILL_VERB"
 	<fille> /fˈiʎə/ "DAUGHTER_NOUN"
 
@@ -130,12 +130,12 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.087)
+/r/ (0.088)
 	<corn> /kˈɔrn/ "HORN_NOUN"
 	<reond> /rəˈũnt/ "ROUND_ADJ"
 	<meür> /məˈyr/ "MATURE_NOUN"
 
-/j/ (0.069)
+/j/ (0.068)
 	<crois> /krˈɔjs/ "CROSS_NOUN"
 	<uit> /ˈyjt/ "EIGHT_NUM"
 	<pais> /pˈajs/ "PEACE_NOUN"
@@ -145,7 +145,7 @@ CONSONANTS
 	<nuit> /nˈyjt/ "NIGHT_NOUN"
 	<anel> /ãnˈɛl/ "RING_NOUN"
 
-/l/ (0.055)
+/l/ (0.054)
 	<lit> /lˈit/ "BED_NOUN"
 	<ciel> /ʦjˈɛl/ "SKY_NOUN"
 	<oisel> /ɔjzˈɛl/ "BIRD_NOUN"
@@ -195,20 +195,20 @@ CONSONANTS
 	<cheval> /ʧəvˈal/ "HORSE_NOUN"
 	<chat> /ʧˈat/ "CAT_NOUN"
 
-/ʦ/ (0.016)
+/ʦ/ (0.017)
 	<raicine> /rajʦˈĩnə/ "ROOT_NOUN"
 	<cent> /ʦˈẽnt/ "HUNDRED_NUM"
-	<ciel> /ʦjˈɛl/ "SKY_NOUN"
+	<berbiz> /bərbˈiʦ/ "SHEEP_NOUN"
 
-/ʤ/ (0.015)
-	<sage> /sˈaʤə/ "WISE_ADJ"
-	<je> /ʤə/ "I_PRON"
-	<gendre> /ʤˈẽndrə/ "SON-IN-LAW_NOUN"
+/b/ (0.015)
+	<berbiz> /bərbˈiʦ/ "SHEEP_NOUN"
+	<libre> /lˈibrə/ "FREE_ADJ"
+	<sable> /sˈablə/ "SAND_NOUN"
 
-/b/ (0.014)
-	<boche> /bˈuʧə/ "MOUTH_NOUN"
-	<buef> /bwˈɛf/ "OX_NOUN"
-	<erbe> /ˈɛrbə/ "GRASS_NOUN"
+/ʤ/ (0.014)
+	<gentil> /ʤẽntˈil/ "NICE_ADJ"
+	<roge> /rˈuʤə/ "RED_ADJ"
+	<juin> /ʤˈỹjn/ "JUNE_PROPN"
 
 /d/ (0.013)
 	<dormir> /durmˈir/ "SLEEP_VERB"

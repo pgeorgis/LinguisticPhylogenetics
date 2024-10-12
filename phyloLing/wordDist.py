@@ -696,8 +696,14 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None) -> float:
         # it is as if that dimension is more impactful
         scores.append(score * weight)
 
+        # Record word scores # TODO into Distance class object?
+        if word1.concept == word2.concept:
+            log_word_score(word1, word2, score, key=func.name)
+
     # score = euclidean_dist(scores)
     score = sum(scores)
+    if word1.concept == word2.concept:
+        log_word_score(word1, word2, score, key="HybridDist")
 
     return score
 
