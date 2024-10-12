@@ -749,7 +749,7 @@ class LexicalDataset:
                        cluster_func=None,
                        concept_list=None,
                        cognates='auto',
-                       linkage_method='ward',
+                       linkage_method='nj',
                        metric='euclidean',
                        **kwargs):
 
@@ -804,30 +804,19 @@ class LexicalDataset:
         df.insert(0, " ", [" "] * len(names))
         df.to_csv(outfile, sep='\t', index=False, float_format=float_format)
 
-    def draw_tree(self,
-                  dist_func,
-                  concept_list=None,
-                  cluster_func=None,
-                  cognates='auto',
-                  linkage_method='ward',
-                  metric='euclidean',
-                  outtree=None,
-                  title=None,
-                  save_directory=None,
-                  return_newick=False,
-                  orientation='left',
-                  p=30,
-                  root=None,
-                  **kwargs):
+    def generate_tree(self,
+                      dist_func,
+                      concept_list=None,
+                      cluster_func=None,
+                      cognates='auto',
+                      linkage_method='nj',
+                      outtree=None,
+                      root=None,
+                      **kwargs):
 
         group = [self.languages[lang] for lang in self.languages]
         labels = [lang.name for lang in group]
-        code = self.generate_test_code(dist_func, cognates, **kwargs)
 
-        if title is None:
-            title = f'{self.name}'
-        if save_directory is None:
-            save_directory = self.plots_dir
         if outtree is None:
             _, timestamp = create_timestamp()
             outtree = os.path.join(self.tree_dir, f'{timestamp}.tre')
@@ -837,45 +826,27 @@ class LexicalDataset:
                                  cluster_func=cluster_func,
                                  cognates=cognates,
                                  linkage_method=linkage_method,
-                                 metric=metric,
                                  **kwargs)
 
-        # Not possible to plot NJ trees in Python (yet? TBD) # TODO
-        if linkage_method != 'nj':
-            sns.set(font_scale=1.0)
-            if len(group) >= 100:
-                plt.figure(figsize=(20, 20))
-            elif len(group) >= 60:
-                plt.figure(figsize=(10, 10))
-            else:
-                plt.figure(figsize=(10, 8))
+        if linkage_method == 'nj':
+            newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
+        else:
+            newick_tree = linkage2newick(lm, labels)
 
-            dendrogram(lm, p=p, orientation=orientation, labels=labels)
-            if title:
-                plt.title(title, fontsize=30)
-            plt.savefig(f'{save_directory}{title}.png', bbox_inches='tight', dpi=300)
-            plt.show()
+        # Fix formatting of Newick string
+        newick_tree = re.sub(r'\s', '_', newick_tree)
+        newick_tree = re.sub(r',_', ',', newick_tree)
+        
+        # Optionally root the tree at a specified tip or clade
+        if root:
+            newick_tree = reroot_tree(newick_tree, root)
 
-        if return_newick or outtree:
-            if linkage_method == 'nj':
-                newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
-            else:
-                newick_tree = linkage2newick(lm, labels)
+        # Write tree to file
+        if outtree:
+            with open(outtree, 'w') as f:
+                f.write(newick_tree)
 
-            # Fix formatting of Newick string
-            newick_tree = re.sub(r'\s', '_', newick_tree)
-            newick_tree = re.sub(r',_', ',', newick_tree)
-            
-            # Optionally root the tree at a specified tip or clade
-            if root:
-                newick_tree = reroot_tree(newick_tree, root)
-
-            # Write tree to file
-            if outtree:
-                with open(outtree, 'w') as f:
-                    f.write(newick_tree)
-
-            return newick_tree
+        return newick_tree
 
     def plot_languages(self,
                        dist_func,
