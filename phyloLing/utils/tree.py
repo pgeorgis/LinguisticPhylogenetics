@@ -1,4 +1,5 @@
 from ete3 import Tree
+from utils.utils import csv2dict
 
 def reroot_tree(newick_str: str, outgroup: str | tuple) -> str:
     """
@@ -78,3 +79,52 @@ def flip_clades(newick_str, clade1_tips, clade2_tips, reroot_at=None):
 
     # Return the modified Newick string
     return tree.write(format=1)
+
+
+def build_tree_dict(classification_data: dict, clade_sep=" > ") -> dict:
+    """Builds a nested dictionary tree from classification string associated with each doculect, e.g.
+    'Indo-European > Germanic > West Germanic > Anglo-Frisian > English'
+    """
+    tree = {}
+
+    for doculect, classification in classification_data.items():
+        levels = classification.split(clade_sep)
+        current = tree
+        for level in levels:
+            current = current.setdefault(level, {})
+        current[doculect] = {}  # Add doculect as a leaf
+
+    return tree
+
+
+def treedict_to_newick(tree, final=True):
+    """Recursively converts a dictionary tree structure into Newick format."""
+    if not tree:
+        return ""
+
+    subtrees = []
+    for key, subtree in tree.items():
+        if subtree:
+            subtrees.append(f"({treedict_to_newick(subtree, final=False)}){key}")
+        else:
+            subtrees.append(key)
+
+    if final:
+        return ",".join(subtrees) + ";"
+    return ",".join(subtrees)
+
+
+def classification_to_newick(infile: str,
+                             sep: str=",",
+                             doculect_column: str="Doculect",
+                             classification_column: str="Classification",
+                             **kwargs) -> str:
+    """Loads classification data from a CSV file and generates a corresponding Newick tree string."""
+    data = csv2dict(infile, sep=sep, **kwargs)
+    classification_dict = {
+        row[doculect_column]: row[classification_column]
+        for _, row in data.items()
+    }
+    tree_dict = build_tree_dict(classification_dict)
+    newick_tree = treedict_to_newick(tree_dict)
+    return newick_tree
