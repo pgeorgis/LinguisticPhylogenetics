@@ -1165,18 +1165,6 @@ class Language:
     def get_negative_phoneme_entropy(self) -> float:
         return -self.phoneme_entropy
 
-    def dict_1_of_negative_phoneme_entropy(self) -> dict:
-        return defaultdict(self.get_negative_phoneme_entropy)
-
-    def dict_2_of_negative_phoneme_entropy(self) -> dict:
-        return defaultdict(self.dict_1_of_negative_phoneme_entropy)
-
-    def dict_3_of_negative_phoneme_entropy(self) -> dict:
-        return defaultdict(self.dict_2_of_negative_phoneme_entropy)
-
-    def dict_4_of_negative_phoneme_entropy(self) -> dict:
-        return defaultdict(self.dict_3_of_negative_phoneme_entropy)
-
     def create_vocabulary(self, family_concept_keys) -> None:
         for i in self.data:
             entry = self.data[i]
