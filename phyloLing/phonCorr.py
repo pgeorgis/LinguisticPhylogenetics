@@ -25,8 +25,8 @@ from utils.utils import (default_dict,
                          normalize_dict,
                          balanced_resample,
                          segment_ranges,
-                         dict_3_of_zeroes,
-                         dict_of_dicts)
+                         create_default_dict,
+                         create_default_dict_of_dicts)
 
 
 def fit_ibm_align_model(corpus: list[tuple],
@@ -401,11 +401,11 @@ class PhonCorrelator:
         self.phon_env_surprisal_dict: dict[str, dict[str, float]] = {}
         self.complex_ngrams: dict[str, dict[str, float]] = {}
         self.reload_language_pair_data()
-        self.scored_words = dict_of_dicts()
+        self.scored_words = create_default_dict_of_dicts()
 
         # Logging
         self.set_log_dirs()
-        self.align_log = dict_3_of_zeroes()
+        self.align_log = create_default_dict(3, 0)
         self.logger = logger
 
     def reload_language_pair_data(self):

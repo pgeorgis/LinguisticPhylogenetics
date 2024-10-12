@@ -42,11 +42,9 @@ from utils.sequence import (Ngram, flatten_ngram, generate_ngrams,
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict,
-                         dict_of_zeroes,
                          dict_of_sets,
-                         dict_2_of_zeroes,
-                         dict_3_of_zeroes,
-                         dict_2_of_dicts)
+                         create_default_dict,
+                         create_default_dict_of_dicts)
 
 
 class LexicalDataset:
@@ -144,7 +142,7 @@ class LexicalDataset:
         self.data = data
 
         # Initialize languages
-        language_vocab_data = dict_2_of_dicts()
+        language_vocab_data = create_default_dict_of_dicts(2)
         for i in data:
             lang = data[i][self.columns['language_name']]
             if ((included_doculects == []) or (lang in included_doculects)) and ((excluded_doculects == []) or (lang not in excluded_doculects)):
@@ -293,7 +291,7 @@ class LexicalDataset:
         # Check whether phoneme PMI has been calculated already for this pair
         # If not, calculate it now
         for lang1, lang2 in lang_pairs:
-            if len(lang1.phoneme_pmi[lang2]) == 0:
+            if len(lang1.phoneme_pmi[lang2.name]) == 0:
                 correlator = lang1.get_phoneme_correlator(lang2)
                 correlator.compute_phone_corrs(**kwargs)
 
@@ -1173,21 +1171,21 @@ class Language:
         self.columns = columns
 
         # Phonemic inventory
-        self.phonemes = dict_of_zeroes()
-        self.vowels = dict_of_zeroes()
-        self.consonants = dict_of_zeroes()
-        self.tonemes = dict_of_zeroes()
+        self.phonemes = create_default_dict(1, 0)
+        self.vowels = create_default_dict(1, 0)
+        self.consonants = create_default_dict(1, 0)
+        self.tonemes = create_default_dict(1, 0)
         self.tonal = False
 
         # Phonological contexts
-        self.unigrams = dict_of_zeroes()
-        self.bigrams = dict_of_zeroes()
-        self.trigrams = dict_of_zeroes()
-        self.ngrams = dict_2_of_zeroes()
-        self.gappy_bigrams = dict_of_zeroes()
-        self.gappy_trigrams = dict_of_zeroes()
-        self.phon_environments = dict_2_of_zeroes()
-        self.phon_env_ngrams = dict_2_of_zeroes()
+        self.unigrams = create_default_dict(1, 0)
+        self.bigrams = create_default_dict(1, 0)
+        self.trigrams = create_default_dict(1, 0)
+        self.ngrams = create_default_dict(2, 0)
+        self.gappy_bigrams = create_default_dict(1, 0)
+        self.gappy_trigrams = create_default_dict(1, 0)
+        self.phon_environments = create_default_dict(2, 0)
+        self.phon_env_ngrams = create_default_dict(2, 0)
 
         # Lexical inventory
         self.vocabulary = dict_of_sets()
@@ -1209,12 +1207,12 @@ class Language:
 
         # Comparison with other languages
         self.phoneme_correlators = {}
-        self.phoneme_pmi: dict[str, dict] = dict_3_of_zeroes()
-        self.complex_ngrams: dict[str, dict] = dict_3_of_zeroes()
-        self.phoneme_surprisal: dict[str, dict] = self.dict_4_of_negative_phoneme_entropy()
-        self.phon_env_surprisal: dict[str, dict] = self.dict_3_of_negative_phoneme_entropy()
+        self.phoneme_pmi: dict[str, dict] = create_default_dict(3, 0)
+        self.complex_ngrams: dict[str, dict] = create_default_dict(3, 0)
+        self.phoneme_surprisal: dict[str, dict] = create_default_dict(4, self.get_negative_phoneme_entropy())
+        self.phon_env_surprisal: dict[str, dict] = create_default_dict(3, self.get_negative_phoneme_entropy())
         self.noncognate_thresholds: dict[(str, Distance, int, int), list] = defaultdict(list)
-        self.lexical_comparison: dict[str, dict | set] = dict_2_of_dicts()
+        self.lexical_comparison: dict[str, dict] = create_default_dict_of_dicts(2)
         self.lexical_comparison_measures = set()
 
     def get_negative_phoneme_entropy(self) -> float:

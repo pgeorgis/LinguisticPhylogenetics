@@ -14,7 +14,7 @@ from numpy.random import permutation
 
 def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8') -> dict[int, dict[str, str]]:
     """Reads a CSV file into a dictionary"""
-    csv_dict: dict[int, dict[str, str]] = dict_2_of_empty_strings()
+    csv_dict: dict[int, dict[str, str]] = create_default_dict(2, '')
     with open(csvfile, 'r', encoding=encoding) as csv_file:
         csv_file = csv_file.readlines()
         columns: list[str] = [item.strip() for item in csv_file[start].split(sep)]
@@ -115,7 +115,7 @@ def normalize_dict(dict_, default=False, should_zero=False, return_=True):
     """If return_==False, modifies the input dictionary without returning anything"""
     if default is True:
         if should_zero:
-            normalized = dict_of_zeroes()
+            normalized = create_default_dict(1, 0)
         else:
             normalized = defaultdict(None)
     else:
@@ -286,69 +286,39 @@ def segment_ranges(numbers):
 
     return segmented
 
-def zero_object():
-    return 0
+def create_default_dict(depth: int, value) -> dict:
+    if not isinstance(depth, int):
+        raise TypeError("depth must be an integer")
+    if depth < 1:
+        raise ValueError("depth must be greater than 0")
 
-def empty_string():
-    return ''
+    if not isinstance(value, (int, float, str)):
+        raise TypeError("value must be a primitive type")
 
-def dict_1_of_empty_strings() -> dict:
-    return defaultdict(empty_string)
+    def value_object():
+        return value
 
-def dict_2_of_empty_strings() -> dict:
-    return defaultdict(dict_1_of_empty_strings)
+    if depth == 1:
+        return defaultdict(value_object)
 
-def dict_of_dicts() -> dict:
-    return defaultdict(dict)
+    def nested_default_dict():
+        return create_default_dict(depth - 1, value)
 
-def dict_2_of_dicts() -> dict:
-    return defaultdict(dict_of_dicts)
+    return defaultdict(nested_default_dict)
 
-def dict_of_zeroes() -> dict:
-    return defaultdict(zero_object)
+def create_default_dict_of_dicts(depth: int = 1):
+    if not isinstance(depth, int):
+        raise TypeError("depth must be an integer")
+    if depth < 1:
+        raise ValueError("depth must be greater than 0")
 
-def dict_2_of_zeroes() -> dict:
-    return defaultdict(dict_of_zeroes)
+    if depth == 1:
+        return defaultdict(dict)
 
-def dict_3_of_zeroes() -> dict:
-    return defaultdict(dict_2_of_zeroes)
+    def nested_default_dict():
+        return create_default_dict_of_dicts(depth - 1)
+
+    return defaultdict(nested_default_dict)
 
 def dict_of_sets():
     return defaultdict(set)
-
-def dict_to_defaultdict_2_with_value(d: dict, value):
-    dd = defaultdict(lambda: defaultdict(lambda: value))
-    for k1, v1 in d.items():
-        for k2, v2 in v1.items():
-            dd[k1][k2] = v2
-    return dd
-
-def dict_to_defaultdict_3_with_value(d: dict, value):
-    dd = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: value)))
-    for k1, v1 in d.items():
-        for k2, v2 in v1.items():
-            for k3, v3 in v2.items():
-                dd[k1][k2][k3] = v3
-    return dd
-
-def dict_to_defaultdict_4_with_value(d: dict, value):
-    dd = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: value))))
-    for k1, v1 in d.items():
-        for k2, v2 in v1.items():
-            for k3, v3 in v2.items():
-                for k4, v4 in v3.items():
-                    dd[k1][k2][k3][k4] = v4
-    return dd
-
-def update_default_dict_3(target: dict, source: dict) -> None:
-    for k1, v1 in source.items():
-        for k2, v2 in v1.items():
-            for k3, v3 in v2.items():
-                target[k1][k2][k3] = v3
-
-def update_default_dict_4(target: dict, source: dict) -> None:
-    for k1, v1 in source.items():
-        for k2, v2 in v1.items():
-            for k3, v3 in v2.items():
-                for k4, v4 in v3.items():
-                    target[k1][k2][k3][k4] = v4

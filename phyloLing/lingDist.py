@@ -1,12 +1,11 @@
 import random
-from collections import defaultdict
 from functools import lru_cache
 from statistics import StatisticsError, mean, stdev
 import numpy as np
 
 from scipy.stats import norm
 from utils.distance import dist_to_sim, Distance
-from utils.utils import balanced_resample, dict_of_dicts
+from utils.utils import balanced_resample, create_default_dict_of_dicts
 
 
 # HELPER FUNCTIONS
@@ -175,7 +174,7 @@ def gradient_cognate_sim(lang1,
         concept_groups = {0: shared_concepts}
 
     # Score all shared concepts in advance, then calculate similarity based on the N samples of concepts
-    scored_pairs = dict_of_dicts()
+    scored_pairs = create_default_dict_of_dicts()
     for concept in shared_concepts:
         for cognate_id in clustered_cognates[concept]:
             l1_words = filter_cognates_by_lang(lang1, clustered_cognates[concept][cognate_id])
