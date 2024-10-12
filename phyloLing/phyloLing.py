@@ -83,14 +83,12 @@ class LexicalDataset:
         self.cognates_dir = os.path.join(self.directory, 'cognates')
         self.phone_corr_dir = os.path.join(self.directory, 'phone_corr')
         self.doculects_dir = os.path.join(self.directory, 'doculects')
-        self.dist_matrix_dir = os.path.join(self.directory, 'dist_matrices')
         self.tree_dir = os.path.join(self.directory, 'trees')
         for dir in (
             self.plots_dir,
             self.cognates_dir,
             self.phone_corr_dir,
             self.doculects_dir,
-            self.dist_matrix_dir,
             self.tree_dir
         ):
             os.makedirs(dir, exist_ok=True)
@@ -736,11 +734,6 @@ class LexicalDataset:
 
         # Store computed distance matrix
         self.distance_matrices[code] = dm
-
-        # Write distance matrix file
-        if outfile is None:
-            outfile = os.path.join(self.dist_matrix_dir, f'{code}.tsv')
-        self.write_distance_matrix(dm, outfile)
 
         return dm
 
