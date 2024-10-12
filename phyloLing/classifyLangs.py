@@ -361,7 +361,9 @@ if __name__ == "__main__":
         linkage_method=tree_params['linkage'],
         title=family.name,
         outtree=outtree,
-        return_newick=tree_params['newick'])
+        return_newick=tree_params['newick'],
+        root=tree_params['root'],
+    )
     params["tree"]["newick"] = tree
     with open(outtree, 'w') as f:
         f.write(tree)

@@ -37,6 +37,7 @@ from utils.information import calculate_infocontent_of_word, entropy
 from utils.network import dm2coords, newer_network_plot
 from utils.sequence import (Ngram, flatten_ngram, generate_ngrams,
                             pad_sequence, remove_overlapping_ngrams)
+from utils.tree import reroot_tree
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict)
@@ -816,6 +817,7 @@ class LexicalDataset:
                   return_newick=False,
                   orientation='left',
                   p=30,
+                  root=None,
                   **kwargs):
 
         group = [self.languages[lang] for lang in self.languages]
@@ -863,6 +865,10 @@ class LexicalDataset:
             # Fix formatting of Newick string
             newick_tree = re.sub(r'\s', '_', newick_tree)
             newick_tree = re.sub(r',_', ',', newick_tree)
+            
+            # Optionally root the tree at a specified tip or clade
+            if root:
+                newick_tree = reroot_tree(newick_tree, root)
 
             # Write tree to file
             if outtree:

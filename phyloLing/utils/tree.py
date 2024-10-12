@@ -1,5 +1,36 @@
 from ete3 import Tree
 
+def reroot_tree(newick_str: str, outgroup: str | tuple) -> str:
+    """
+    Reroots the tree at the specified tip or clade outgroup.
+
+    Parameters:
+    newick_str (str): The input Newick tree string.
+    outgroup (str or tuple): A single tip name or a tuple of tip names defining the outgroup clade.
+
+    Returns:
+    str: The Newick string of the rerooted tree.
+    """
+    # Parse the Newick string into a tree
+    tree = Tree(newick_str, format=1)
+
+    # Determine whether we're rerooting at a single tip or a clade
+    if isinstance(outgroup, tuple):
+        # Find the most recent common ancestor of the clade
+        nodes = [tree.search_nodes(name=tip)[0] for tip in outgroup]
+        mrca = tree.get_common_ancestor(nodes)
+        tree.set_outgroup(mrca)
+    else:
+        # Reroot at a single tip
+        target_node = tree.search_nodes(name=outgroup)
+        if target_node:
+            tree.set_outgroup(target_node[0])
+        else:
+            raise ValueError(f"Tip '{outgroup}' not found in the tree")
+
+    return tree.write(format=1)
+
+
 def flip_clades(newick_str, clade1_tips, clade2_tips, reroot_at=None):
     """
     Flips the order of two clades in a Newick string phylogenetic tree.
