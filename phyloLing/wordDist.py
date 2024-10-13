@@ -6,6 +6,7 @@ from asjp import ipa2asjp
 from constants import PAD_CH_DEFAULT
 from nltk import edit_distance
 from phonAlign import Alignment, get_alignment_iter
+from phyloLing import Word
 from phonUtils.initPhoneData import (alveolopalatal, consonants, glides,
                                      nasals, palatal, postalveolar, vowels)
 from phonUtils.ipaTools import strip_diacritics
@@ -16,6 +17,21 @@ from utils.information import adaptation_surprisal  # surprisal, surprisal_to_pr
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
 
+class WordDistance(Distance):
+    def eval(self, x, y, **kwargs):
+        if isinstance(x, Word) and isinstance(y, Word):
+            key = ((x.language.name, x.ipa), (y.language.name, y.ipa), self.hashable_kwargs) 
+            if key in self.measured:
+                return self.measured[key]
+            
+        if (x, y, self.hashable_kwargs) in self.measured:
+            return self.measured[(x, y, self.hashable_kwargs)]
+        else:
+            for arg, val in kwargs.items():
+                self.set(arg, val)
+            result = self.func(x, y, **self.kwargs)
+            self.measured[(x, y, self.hashable_kwargs)] = result
+            return result
 
 def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
     """Calculate phoneme surprisal if not already done."""
@@ -703,7 +719,7 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None) -> float:
     # score = euclidean_dist(scores)
     score = sum(scores)
     if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key="HybridDist")
+        log_word_score(word1, word2, score, key=HYBRID_DIST_KEY)
 
     return score
 
@@ -719,10 +735,10 @@ def composite_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
 
     # Record word scores # TODO into Distance class object?
     if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key='composite')
-        log_word_score(word1, word2, pmi_score, key='PMI')
-        log_word_score(word1, word2, surprisal_score, key='surprisal')
-        log_word_score(word1, word2, phon_score, key='phon')
+        log_word_score(word1, word2, score, key=COMPOSITE_DIST_KEY)
+        log_word_score(word1, word2, pmi_score, key=PMI_DIST_KEY)
+        log_word_score(word1, word2, surprisal_score, key=SURPRISAL_DIST_KEY)
+        log_word_score(word1, word2, phon_score, key=PHONOLOGICAL_DIST_KEY)
 
     return max(0, score)
 
@@ -736,28 +752,36 @@ def log_word_score(word1, word2, score, key):
 
 
 # Initialize distance functions as Distance objects
-LevenshteinDist = Distance(
+LEVENSHTEIN_DIST_KEY = 'LevenshteinDist'
+PHONETIC_DIST_KEY = 'PhoneticDist'
+SEGMENTAL_DIST_KEY = 'SegmentalDist'
+PHONOLOGICAL_DIST_KEY = 'PhonDist'
+PMI_DIST_KEY = 'PMIDist'
+SURPRISAL_DIST_KEY = 'SurprisalDist'
+COMPOSITE_DIST_KEY = 'CompositeDist'
+HYBRID_DIST_KEY = 'HybridDist'
+LevenshteinDist = WordDistance(
     func=levenshtein_dist,
-    name='LevenshteinDist',
+    name=LEVENSHTEIN_DIST_KEY,
     cluster_threshold=0.73)
-PhoneticDist = Distance(
+PhoneticDist = WordDistance(
     func=phonetic_dist,
-    name='PhoneticDist')  # TODO name TBD
-SegmentalDist = Distance(
+    name=PHONETIC_DIST_KEY)  # TODO name TBD
+SegmentalDist = WordDistance(
     func=segmental_word_dist,
-    name='SegmentalDist')  # TODO name TBD
-PhonDist = Distance(
+    name=SEGMENTAL_DIST_KEY)  # TODO name TBD
+PhonDist = WordDistance(
     func=phonological_dist, # TODO name TBD
-    name='PhonDist',
+    name=PHONOLOGICAL_DIST_KEY,
     cluster_threshold=0.16  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
 )
-PMIDist = Distance(
+PMIDist = WordDistance(
     func=pmi_dist,
-    name='PMIDist',
+    name=PMI_DIST_KEY,
     cluster_threshold=0.36)
-SurprisalDist = Distance(
+SurprisalDist = WordDistance(
     func=mutual_surprisal,
-    name='SurprisalDist',
+    name=SURPRISAL_DIST_KEY,
     cluster_threshold=0.74,  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
 # Note: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
