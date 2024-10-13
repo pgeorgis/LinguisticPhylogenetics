@@ -1251,20 +1251,20 @@ class Language:
                                       for v in self.phonemes
                                       if phone_classes[v] in ('VOWEL', 'DIPHTHONG')},
                                      default=True,
-                                     should_zero=True)
+                                     default_value=0)
 
         self.consonants = normalize_dict({c: self.phonemes[c]
                                          for c in self.phonemes
                                          if phone_classes[c] in ('CONSONANT', 'GLIDE')},
                                          default=True,
-                                         should_zero=True)
+                                         default_value=0)
 
         # TODO: rename as self.suprasegmentals, possibly distinguish tonemes from other suprasegmentals
         self.tonemes = normalize_dict({t: self.phonemes[t]
                                        for t in self.phonemes
                                        if phone_classes[t] in ('TONEME', 'SUPRASEGMENTAL')},
                                       default=True,
-                                      should_zero=True)
+                                      default_value=0)
 
         # Designate language as tonal if it has tonemes
         if len(self.tonemes) > 0:

@@ -109,15 +109,12 @@ def combine_dicts(*dicts):
     return combined
 
 
-def normalize_dict(dict_, default=False, should_zero=False, return_=True):
+def normalize_dict(dict_, default=False, default_value=None, return_=True):
     """Normalizes the values of a dictionary"""
     """If default==True, returns a default dictionary with default value lmbda"""
     """If return_==False, modifies the input dictionary without returning anything"""
     if default is True:
-        if should_zero:
-            normalized = create_default_dict(1, 0)
-        else:
-            normalized = defaultdict(None)
+        normalized = create_default_dict(1, default_value)
     else:
         normalized = {}
     total = sum(list(dict_.values()))
@@ -347,13 +344,12 @@ def dict_to_defaultdict_with_value(d: dict, value, depth: int) -> defaultdict:
         dd = defaultdict(lambda: value)
         dd.update(d)
         return dd
-    else:
-        def default_factory():
-            return dict_to_defaultdict_with_value({}, value, depth - 1)
-        dd = defaultdict(default_factory)
-        for key, subdict in d.items():
-            dd[key] = dict_to_defaultdict_with_value(subdict, value, depth - 1)
-        return dd
+    def default_factory():
+        return dict_to_defaultdict_with_value({}, value, depth - 1)
+    dd = defaultdict(default_factory)
+    for key, subdict in d.items():
+        dd[key] = dict_to_defaultdict_with_value(subdict, value, depth - 1)
+    return dd
 
 
 def update_default_dict(target: dict, source: dict, depth: int) -> None:
