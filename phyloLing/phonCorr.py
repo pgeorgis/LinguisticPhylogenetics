@@ -1477,7 +1477,7 @@ class PhonCorrelator:
                     line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
                     lines.append(line)
         # Sort PMI in descending order
-        lines = sorted(lines, key=lambda x: x[-1], reverse=True)
+        lines = sorted(lines, key=lambda x: float(x[-1]), reverse=True)
         lines = '\n'.join([sep.join(line) for line in lines])
 
         with open(outfile, 'w') as f:
@@ -1512,7 +1512,7 @@ class PhonCorrelator:
                 lines.append([
                     seg1_str,
                     ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
-                    str(round(surprisal_dict[seg1][seg2], 3)),
+                    str(abs(round(surprisal_dict[seg1][seg2], 3))),
                     str(oov_value)
                     ]
                 )
@@ -1521,9 +1521,9 @@ class PhonCorrelator:
 
         # Sort by phone1 (by phon env if relevant) and then by surprisal in ascending order
         if phon_env:
-            lines = sorted(lines, key=lambda x: (x[0], x[1], x[3], x[2]), reverse=False)
+            lines = sorted(lines, key=lambda x: (x[0], x[1], float(x[3]), x[2]), reverse=False)
         else:
-            lines = sorted(lines, key=lambda x: (x[0], x[2], x[1]), reverse=False)
+            lines = sorted(lines, key=lambda x: (x[0], float(x[2]), x[1]), reverse=False)
         lines = '\n'.join([sep.join(line) for line in lines])
         with open(outfile, 'w') as f:
             header = ['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed']
@@ -1642,7 +1642,7 @@ class PhonCorrelator:
                     else:
                         raise NotImplementedError  # not implemented for PMI
         # Sort by corr value, then by phone string if values are equal
-        lines.sort(key=lambda x: (x[-1], x[0], x[1]))
+        lines.sort(key=lambda x: (float(x[-1]), x[0], x[1]), reverse=True)
         lines = ['\t'.join(line) for line in lines]
         header = '\t'.join([self.lang1_name, self.lang2_name, 'probability'])
         lines = '\n'.join(lines)
