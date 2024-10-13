@@ -223,17 +223,20 @@ class Alignment:
         # Perform alignment
         self.n_best = self.align(n_best)
         self.alignment = self.n_best[0][0][:]
-        self.alignment = self.compact_boundary_gaps(self.alignment)
-        self.update()
-
-        # Save length and cost of single best alignment
-        self.cost = self.n_best[0][-1]
         self.length = len(self.alignment)
         self.original_length = self.length
+        self.original_alignment = self.alignment[:]
+
+        # Save cost of single best alignment
+        self.cost = self.n_best[0][-1]
 
         # Map aligned pairs to respective sequence indices
         self.seq_map = self.n_best[0][1]
-        self.validate_seq_map(*self.seq_map)
+        self.seq_map = self.validate_seq_map(*self.seq_map)
+
+        # Compact boundary aligned gaps
+        self.alignment = self.compact_boundary_gaps(self.alignment)
+        self.update()
 
         # Phonological environment alignment
         self.phon_env = phon_env
@@ -285,6 +288,23 @@ class Alignment:
         return [(complex_alignment, seq_maps, complex_alignment_score)] # TODO simplify output format
 
     def postprocess_boundary_gaps(self, alignment):
+
+        # ('-', '#>'), ('#>', '-') -> ('#>', '#>')
+        if alignment[-2:] in [
+            [(self.gap_ch, self.end_boundary_token), (self.end_boundary_token, self.gap_ch)],
+            [(self.end_boundary_token, self.gap_ch), (self.gap_ch, self.end_boundary_token)],
+        ]:
+            alignment = alignment[:-2]
+            alignment.append((self.end_boundary_token, self.end_boundary_token))
+
+        # ('-', '<#'), ('<#', '-') -> ('<#', '<#')
+        if alignment[:2] in [
+            [(self.gap_ch, self.start_boundary_token), (self.start_boundary_token, self.gap_ch)],
+            [(self.start_boundary_token, self.gap_ch), (self.gap_ch, self.start_boundary_token)],
+        ]:
+            alignment = alignment[2:]
+            alignment.insert(0, (self.start_boundary_token, self.start_boundary_token))
+
         # Move non-final ('#>', '-') or ('-', '#>') to end of alignment
         if (self.end_boundary_token, self.gap_ch) in alignment:
             if alignment.index((self.end_boundary_token, self.gap_ch)) != len(alignment) - 1:
@@ -304,22 +324,6 @@ class Alignment:
             if alignment.index((self.gap_ch, self.start_boundary_token)) != 0:
                 alignment.remove((self.gap_ch, self.start_boundary_token))
                 alignment.insert(0, (self.gap_ch, self.start_boundary_token))
-
-        # ('-', '#>'), ('#>', '-') -> ('#>', '#>')
-        if alignment[-2:] in [
-            [(self.gap_ch, self.end_boundary_token), (self.end_boundary_token, self.gap_ch)],
-            [(self.end_boundary_token, self.gap_ch), (self.gap_ch, self.end_boundary_token)],
-        ]:
-            alignment = alignment[:-2]
-            alignment.append((self.end_boundary_token, self.end_boundary_token))
-
-        # ('-', '<#'), ('<#', '-') -> ('<#', '<#')
-        if alignment[:2] in [
-            [(self.gap_ch, self.start_boundary_token), (self.start_boundary_token, self.gap_ch)],
-            [(self.start_boundary_token, self.gap_ch), (self.gap_ch, self.start_boundary_token)],
-        ]:
-            alignment = alignment[2:]
-            alignment.insert(0, (self.start_boundary_token, self.start_boundary_token))
 
         # Convert (('-', '#>'), '#>') or ('#>', ('#>', '-')) to ('#>', '#>')
         if alignment[-1] in [
@@ -659,12 +663,35 @@ class Alignment:
     def validate_seq_map(self, map1, map2):
         padded_len1 = len(self.seq1) + 2
         padded_len2 = len(self.seq2) + 2
+        map1_seg_n = sum(len(value) for value in map1.values() if value is not None)
+        map2_seg_n = sum(len(value) for value in map2.values() if value is not None)
+
+        # Adjust the map if it includes indices of padding
+        def adjust_padded_map(padded_map, padded_len):
+            map_new = {}
+            for k, values in padded_map.items():
+                if values is None:
+                    map_new[k] = None
+                else:
+                    filtered = [v-1 for v in values if v not in {0, padded_len-1}]
+                    if len(filtered) > 0:
+                        map_new[k] = filtered
+                    else:
+                        map_new[k] = None
+            return map_new
+
+        if map1_seg_n == padded_len1:
+            map1 = adjust_padded_map(map1, padded_len1)
+        if map2_seg_n == padded_len2:
+            map2 = adjust_padded_map(map2, padded_len2)
+
         try:
-            assert sum(len(value) for value in map1.values() if value is not None) in (len(self.seq1), padded_len1)
-            assert sum(len(value) for value in map2.values() if value is not None) in (len(self.seq2), padded_len2)
+            assert sum(len(value) for value in map1.values() if value is not None) == len(self.seq1)
+            assert sum(len(value) for value in map2.values() if value is not None) == len(self.seq2)
         except AssertionError as exc:
-            breakpoint()
             raise AssertionError(f"Error mapping aligned sequences: {self.alignment}") from exc
+
+        return map1, map2
 
     def add_phon_env(self, env_func=get_phon_env):
         """Adds the phonological environment value of segments to an alignment
@@ -683,6 +710,7 @@ class Alignment:
                 # for complex ngrams, consider only the preceding context of the first component segment and the following context of the last component segment
                 # therefore skip computing phon envs for any segs in between first and last within an alignment position
                 for j, seg_j, in enumerate(list(set(seq_map[align_i][:1] + seq_map[align_i][-1:]))):
+
                     phon_env = env_func(self.seq1, seg_j)
                     target = word1_aligned[align_i]
                     if isinstance(target, str):
