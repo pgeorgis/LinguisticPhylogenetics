@@ -405,7 +405,7 @@ class PhonCorrelator:
 
         # Logging
         self.set_log_dirs()
-        self.align_log = create_default_dict(3, 0)
+        self.align_log = create_default_dict(0, 3)
         self.logger = logger
 
     def reload_language_pair_data(self):

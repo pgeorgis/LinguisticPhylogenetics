@@ -1118,21 +1118,21 @@ class Language:
         self.columns = columns
 
         # Phonemic inventory
-        self.phonemes = create_default_dict(1, 0)
-        self.vowels = create_default_dict(1, 0)
-        self.consonants = create_default_dict(1, 0)
-        self.tonemes = create_default_dict(1, 0)
+        self.phonemes = create_default_dict(0)
+        self.vowels = create_default_dict(0)
+        self.consonants = create_default_dict(0)
+        self.tonemes = create_default_dict(0)
         self.tonal = False
 
         # Phonological contexts
-        self.unigrams = create_default_dict(1, 0)
-        self.bigrams = create_default_dict(1, 0)
-        self.trigrams = create_default_dict(1, 0)
-        self.ngrams = create_default_dict(2, 0)
-        self.gappy_bigrams = create_default_dict(1, 0)
-        self.gappy_trigrams = create_default_dict(1, 0)
-        self.phon_environments = create_default_dict(2, 0)
-        self.phon_env_ngrams = create_default_dict(2, 0)
+        self.unigrams = create_default_dict(0)
+        self.bigrams = create_default_dict(0)
+        self.trigrams = create_default_dict(0)
+        self.ngrams = create_default_dict(0, 2)
+        self.gappy_bigrams = create_default_dict(0)
+        self.gappy_trigrams = create_default_dict(0)
+        self.phon_environments = create_default_dict(0, 2)
+        self.phon_env_ngrams = create_default_dict(0, 2)
 
         # Lexical inventory
         self.vocabulary = dict_of_sets()
@@ -1154,10 +1154,10 @@ class Language:
 
         # Comparison with other languages
         self.phoneme_correlators = {}
-        self.phoneme_pmi: dict[str, dict] = create_default_dict(3, 0)
-        self.complex_ngrams: dict[str, dict] = create_default_dict(3, 0)
-        self.phoneme_surprisal: dict[str, dict] = create_default_dict(4, self.get_negative_phoneme_entropy())
-        self.phon_env_surprisal: dict[str, dict] = create_default_dict(3, self.get_negative_phoneme_entropy())
+        self.phoneme_pmi: dict[str, dict] = create_default_dict(0, 3)
+        self.complex_ngrams: dict[str, dict] = create_default_dict( 0, 3)
+        self.phoneme_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 4)
+        self.phon_env_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 3)
         self.noncognate_thresholds: dict[(str, Distance, int, int), list] = defaultdict(list)
         self.lexical_comparison: dict[str, dict] = create_default_dict_of_dicts(2)
         self.lexical_comparison_measures = set()

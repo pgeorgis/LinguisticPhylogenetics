@@ -14,7 +14,7 @@ from numpy.random import permutation
 
 def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8') -> dict[int, dict[str, str]]:
     """Reads a CSV file into a dictionary"""
-    csv_dict: dict[int, dict[str, str]] = create_default_dict(2, '')
+    csv_dict: dict[int, dict[str, str]] = create_default_dict('', 2)
     with open(csvfile, 'r', encoding=encoding) as csv_file:
         csv_file = csv_file.readlines()
         columns: list[str] = [item.strip() for item in csv_file[start].split(sep)]
@@ -114,7 +114,7 @@ def normalize_dict(dict_, default=False, default_value=None, return_=True):
     """If default==True, returns a default dictionary with default value lmbda"""
     """If return_==False, modifies the input dictionary without returning anything"""
     if default is True:
-        normalized = create_default_dict(1, default_value)
+        normalized = create_default_dict(default_value)
     else:
         normalized = {}
     total = sum(list(dict_.values()))
@@ -297,7 +297,7 @@ class _NestedDefaultDictFactoryForPrimitiveValues:
             return defaultdict(_NestedDefaultDictFactoryForPrimitiveValues(self.depth - 1, self.value))
 
 
-def create_default_dict(depth: int, value):
+def create_default_dict(value: int | float | str, depth: int = 1) -> dict:
     if not isinstance(depth, int):
         raise TypeError("depth must be an integer")
     if depth < 1:
