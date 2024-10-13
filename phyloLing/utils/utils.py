@@ -286,25 +286,44 @@ def segment_ranges(numbers):
 
     return segmented
 
-def create_default_dict(depth: int, value) -> dict:
+class _NestedDefaultDictFactoryForPrimitiveValues:
+    def __init__(self, depth, value):
+        self.depth = depth
+        if not isinstance(value, (int, float, str)):
+            raise TypeError("value must be a primitive type")
+        self.value = value
+
+    def __call__(self):
+        if self.depth == 0:
+            return self.value
+        else:
+            return defaultdict(_NestedDefaultDictFactoryForPrimitiveValues(self.depth - 1, self.value))
+
+
+def create_default_dict(depth: int, value):
     if not isinstance(depth, int):
         raise TypeError("depth must be an integer")
     if depth < 1:
         raise ValueError("depth must be greater than 0")
-
     if not isinstance(value, (int, float, str)):
         raise TypeError("value must be a primitive type")
 
-    def value_object():
-        return value
+    return defaultdict(_NestedDefaultDictFactoryForPrimitiveValues(depth - 1, value))
 
-    if depth == 1:
-        return defaultdict(value_object)
 
-    def nested_default_dict():
-        return create_default_dict(depth - 1, value)
+class _NestedDefaultDictFactoryForValuesWithFactory:
+    def __init__(self, depth, leaf_factory):
+        self.depth = depth
+        if not callable(leaf_factory):
+            raise TypeError("leaf_factory must be a callable")
+        self.leaf_factory = leaf_factory
 
-    return defaultdict(nested_default_dict)
+    def __call__(self):
+        if self.depth == 0:
+            return self.leaf_factory()
+        else:
+            return defaultdict(_NestedDefaultDictFactoryForValuesWithFactory(self.depth - 1, self.leaf_factory))
+
 
 def create_default_dict_of_dicts(depth: int = 1):
     if not isinstance(depth, int):
@@ -312,13 +331,45 @@ def create_default_dict_of_dicts(depth: int = 1):
     if depth < 1:
         raise ValueError("depth must be greater than 0")
 
-    if depth == 1:
-        return defaultdict(dict)
+    return defaultdict(_NestedDefaultDictFactoryForValuesWithFactory(depth - 1, dict))
 
-    def nested_default_dict():
-        return create_default_dict_of_dicts(depth - 1)
-
-    return defaultdict(nested_default_dict)
 
 def dict_of_sets():
     return defaultdict(set)
+
+
+def dict_to_defaultdict_with_value(d: dict, value, depth: int) -> defaultdict:
+    if not isinstance(depth, int):
+        raise TypeError("depth must be an integer")
+    if depth < 1:
+        raise ValueError("depth must be greater than 0")
+    if depth == 1:
+        dd = defaultdict(lambda: value)
+        dd.update(d)
+        return dd
+    else:
+        def default_factory():
+            return dict_to_defaultdict_with_value({}, value, depth - 1)
+        dd = defaultdict(default_factory)
+        for key, subdict in d.items():
+            dd[key] = dict_to_defaultdict_with_value(subdict, value, depth - 1)
+        return dd
+
+
+def update_default_dict(target: dict, source: dict, depth: int) -> None:
+    if not isinstance(depth, int):
+        raise TypeError("depth must be an integer")
+    if depth < 1:
+        raise ValueError("depth must be greater than 0")
+    if depth == 1:
+        target.update(source)
+    else:
+        for key, subdict in source.items():
+            update_default_dict(target[key], subdict, depth - 1)
+
+
+def ddict2dict(d) -> dict:
+    for k, v in d.items():
+        if isinstance(v, dict):
+            d[k] = ddict2dict(v)
+    return dict(d)
