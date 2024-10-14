@@ -202,7 +202,7 @@ def phonological_dist(word1,
                       context_reduction=False,
                       penalty_discount=2,
                       prosodic_env_scaling=True,
-                      total_dist=False,  # TODO confirm that this is the better default; I think averaging is required to normalize for different word lengths
+                      total_dist=False,
                       **kwargs):
     """Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
     No weighting by segment type, position, etc.
@@ -217,7 +217,7 @@ def phonological_dist(word1,
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
         penalty_discount (int, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
         prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
-        total_dist (bool, optional): Computes phonological distance as the sum of all penalties. Defaults to False.
+        total_dist (bool, optional): Computes phonological distance as the sum of all penalties rather than as an average. Defaults to True.
 
     Returns:
         float: phonological distance value
@@ -387,7 +387,8 @@ def phonological_dist(word1,
     else:
         # Euclidean distance of all penalties (= distance per dimension of the word)
         # normalized by square root of number of dimensions
-        word_dist = euclidean_dist(penalties) / sqrt(len(penalties))
+        #word_dist = euclidean_dist(penalties) / sqrt(len(penalties))
+        word_dist = mean(penalties)
 
     return word_dist
 
