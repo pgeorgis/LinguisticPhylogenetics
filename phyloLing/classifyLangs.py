@@ -140,9 +140,9 @@ def init_hybrid(function_map, eval_params):
             eval_params['phon_weight'],
         )
     )
-    HybridSim = HybridDist.to_similarity(name=HYBRID_DIST_KEY.replace('Dist', 'Sim'))  # TODO could be handled better
 
-    return HybridSim
+    return HybridDist
+
 
 
 def init_composite(params):
