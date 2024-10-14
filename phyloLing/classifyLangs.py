@@ -2,14 +2,18 @@ import argparse
 import json
 import logging
 import os
+from collections import defaultdict
 
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
-from utils.distance import Distance
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
-                         create_datestamp, create_timestamp, get_git_commit_hash)
-from wordDist import (LevenshteinDist, PhonDist, PMIDist, SurprisalDist,
+                         create_datestamp, create_timestamp, csv2dict,
+                         get_git_commit_hash)
+from wordDist import (COMPOSITE_DIST_KEY, HYBRID_DIST_KEY,
+                      LEVENSHTEIN_DIST_KEY, PHONOLOGICAL_DIST_KEY,
+                      PMI_DIST_KEY, SURPRISAL_DIST_KEY, LevenshteinDist,
+                      PhonDist, PMIDist, SurprisalDist, WordDistance,
                       composite_sim, hybrid_dist)
 
 from phyloLing import load_family
@@ -37,12 +41,12 @@ valid_params = {
     }
 }
 
-# Mapping of distance method labels to Distance objects
+# Mapping of distance method labels to WordDistance objects
 function_map = {
-    'pmi': PMIDist,
-    'surprisal': SurprisalDist,
-    'phon': PhonDist,
-    'levenshtein': LevenshteinDist
+    PMI_DIST_KEY: PMIDist,
+    SURPRISAL_DIST_KEY: SurprisalDist,
+    PHONOLOGICAL_DIST_KEY: PhonDist,
+    LEVENSHTEIN_DIST_KEY: LevenshteinDist
 }
 
 
@@ -122,17 +126,21 @@ def validate_params(params, valid_params, logger):
 
 
 def init_hybrid(function_map, eval_params):
-    HybridDist = Distance(
+    HybridDist = WordDistance(
         func=hybrid_dist,
         name='HybridDist',
-        funcs=[function_map['pmi'], function_map['surprisal'], function_map['phon']],
+        funcs=[
+            function_map[PMI_DIST_KEY],
+            function_map[SURPRISAL_DIST_KEY],
+            function_map[PHONOLOGICAL_DIST_KEY],
+        ],
         weights=(
             eval_params['pmi_weight'],
             eval_params['surprisal_weight'],
             eval_params['phon_weight'],
         )
     )
-    HybridSim = HybridDist.to_similarity(name='HybridSim')
+    HybridSim = HybridDist.to_similarity(name=HYBRID_DIST_KEY.replace('Dist', 'Sim'))  # TODO could be handled better
 
     return HybridSim
 
@@ -140,9 +148,9 @@ def init_hybrid(function_map, eval_params):
 def init_composite(params):
     eval_params = params['evaluation']
     phon_corr_params = params['phon_corr']
-    CompositeSim = Distance(
+    CompositeSim = WordDistance(
         func=composite_sim,
-        name='CompositeSim',
+        name=COMPOSITE_DIST_KEY.replace('Dist', 'Sim'),  # TODO could be handled better
         sim=True,
         pmi_weight=eval_params['pmi_weight'],
         surprisal_weight=eval_params['surprisal_weight'],
@@ -152,6 +160,33 @@ def init_composite(params):
     CompositeDist = CompositeSim.to_distance('CompositeDist', alpha=0.8)
 
     return CompositeDist
+
+
+def load_precalculated_word_scores(distance_dir, family, dist_keys):
+    doculect_pairs = family.get_doculect_pairs(bidirectional=True)
+    precalculated_word_scores = defaultdict(lambda:{})
+    n_files_found = 0
+    for lang1, lang2 in doculect_pairs:
+        scored_words_file = os.path.join(
+            distance_dir,
+            lang1.path_name,
+            lang2.path_name,
+            "lexical_comparison.tsv"
+        )
+        if os.path.exists(scored_words_file):
+            n_files_found += 1
+            scored_words_data = csv2dict(scored_words_file, sep="\t")
+            for i, entry in scored_words_data.items():
+                lang1_ipa = entry[lang1.name]
+                lang2_ipa = entry[lang2.name]
+                for dist_key in dist_keys:
+                    if dist_key in entry:
+                        score = float(entry[dist_key])
+                        score_key = ((lang1.name, lang1_ipa), (lang2.name, lang2_ipa), function_map[dist_key].hashable_kwargs)
+                        function_map[dist_key].measured[score_key] = score
+                        precalculated_word_scores[dist_key][(lang1.name, lang1_ipa, lang2.name, lang2_ipa)] = score
+    logger.info(f"Loaded pre-calculated word scores for {n_files_found} doculect pairs from {distance_dir}")
+    return precalculated_word_scores
 
 
 def write_lang_dists_to_tsv(dist, outfile):
@@ -210,16 +245,16 @@ if __name__ == "__main__":
     # Set ngram size used for surprisal
     surprisal_funcs = ('surprisal', 'hybrid', 'composite')
     if eval_params['method'] in surprisal_funcs or cluster_params['method'] in phon_corr_params:
-        function_map['surprisal'].set('ngram_size', phon_corr_params['ngram'])
-        function_map['surprisal'].set('phon_env', phon_corr_params['phon_env'])
-        SurprisalDist = function_map['surprisal']
+        function_map[SURPRISAL_DIST_KEY].set('ngram_size', phon_corr_params['ngram'])
+        function_map[SURPRISAL_DIST_KEY].set('phon_env', phon_corr_params['phon_env'])
+        SurprisalDist = function_map[SURPRISAL_DIST_KEY]
 
         # Initialize hybrid or composite distance/similarity objects
 
         if eval_params['method'] == 'hybrid' or cluster_params['method'] == 'hybrid':
-            function_map['hybrid'] = init_hybrid(function_map, eval_params)
+            function_map[HYBRID_DIST_KEY] = init_hybrid(function_map, eval_params)
         if eval_params['method'] == 'composite' or cluster_params['method'] == 'composite':
-            function_map['composite'] = init_composite(params)
+            function_map[COMPOSITE_DIST_KEY] = init_composite(params)
 
     # Designate cluster function if performing auto cognate clustering
 
@@ -231,7 +266,14 @@ if __name__ == "__main__":
         clusterDist = None
 
     # Designate evaluation function
-    evalDist = function_map[eval_params['method']]
+    aux_func_map = {
+        'pmi': PMI_DIST_KEY,
+        'surprisal': SURPRISAL_DIST_KEY,
+        'levenshtein': LEVENSHTEIN_DIST_KEY,
+        'hybrid': HYBRID_DIST_KEY,
+        'composite': COMPOSITE_DIST_KEY,
+    }
+    evalDist = function_map[aux_func_map[eval_params['method']]]
 
     # Load CLDF dataset
     if family_params['min_amc']:
@@ -310,10 +352,19 @@ if __name__ == "__main__":
         cog_id = f"{family.name}_distfunc-{cluster_params['method']}_cutoff-{cluster_params['cluster_threshold']}"
         # TODO cog_id should include weights and any other params for hybrid
 
-    # Create cognate similarity (Distance object) measure according to settings
+    # Load precalculated word scores from specified directory
+    precalculated_word_scores = None
+    if eval_params['precalculated_word_scores']:
+        precalculated_word_scores = load_precalculated_word_scores(
+            distance_dir=eval_params['precalculated_word_scores'],
+            family=family,
+            dist_keys=[PMI_DIST_KEY, SURPRISAL_DIST_KEY, PHONOLOGICAL_DIST_KEY]  # TODO maybe needs to be more customizable
+        )
+    
+    # Create cognate similarity (WordDistance object) measure according to settings
     if eval_params['similarity'] == 'gradient':
         dist_func = gradient_cognate_sim
-        distFunc = Distance(
+        distFunc = WordDistance(
             func=dist_func,
             name='GradientCognateSim',
             sim=True,
@@ -327,7 +378,7 @@ if __name__ == "__main__":
         )
     elif eval_params['similarity'] == 'binary':
         dist_func = binary_cognate_sim
-        distFunc = Distance(
+        distFunc = WordDistance(
             func=dist_func,
             name='BinaryCognateSim',
             sim=True,

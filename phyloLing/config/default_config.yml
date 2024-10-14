@@ -55,6 +55,7 @@ evaluation:
   exclude_synonyms: true
   calibrate: true
   min_similarity: 0
+  precalculated_word_scores: 
 
 tree:
   linkage: nj
