@@ -138,7 +138,8 @@ def init_hybrid(function_map, eval_params):
             eval_params['pmi_weight'],
             eval_params['surprisal_weight'],
             eval_params['phon_weight'],
-        )
+        ),
+        normalize_weights=eval_params['normalize_weights']
     )
 
     return HybridDist

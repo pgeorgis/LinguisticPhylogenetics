@@ -683,23 +683,26 @@ def levenshtein_dist(word1, word2, normalize=True, asjp=True):
     return LevDist
 
 
-def hybrid_dist(word1, word2, funcs: dict, weights=None) -> float:
+def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False) -> float:
     """Calculates a hybrid distance of multiple distance or similarity functions
 
     Args:
         word1 (phyloLing.Word): first Word object
         word2 (phyloLing.Word): second Word object
         funcs (iterable): iterable of Distance class objects
+        weights (list): list of weights (floats)
+        normalize_weights (bool): if True, normalize weights such that they sum to 1.0
     Returns:
         float: hybrid similarity measure
     """
     scores = []
     if weights is None:
+        # Uniform weighting
         weights = [1 / len(funcs) for i in range(len(funcs))]
-    else:
+    elif normalize_weights:
         weight_sum = sum(weights)
         weights = [weight/weight_sum for weight in weights]
-    assert round(sum(weights)) == 1.0
+        assert round(sum(weights)) == 1.0
     for func, weight in zip(funcs, weights):
         if weight == 0:
             continue

@@ -50,6 +50,7 @@ evaluation:
   pmi_weight: 1.5
   surprisal_weight: 2
   phon_weight: 1
+  normalize_weights: false
   n_samples: 10
   sample_size: 0.8
   exclude_synonyms: true
