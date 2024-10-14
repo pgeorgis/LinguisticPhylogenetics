@@ -875,7 +875,7 @@ class PhonCorrelator:
         return pmi_dict
 
     def compute_phone_corrs(self,
-                            max_p_threshold=0.05,
+                            p_threshold=0.1,
                             max_iterations=3,
                             n_samples=3,
                             sample_size=0.8,
@@ -946,12 +946,6 @@ class PhonCorrelator:
 
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
                 iteration += 1
-                # Start with low p-threshold and gradually slightly on each iteration
-                # Logic: immediately eliminate obviously unrelated word pairs,
-                # then gradually fine tune the correspondences by adding next-best word pairs 
-                # Do not exceed max_p_threshold (default = 0.05 = 95% of random word pairs would have worse correlation score)
-                p_threshold = iteration * (max_p_threshold / max_iterations)
-                #self.logger.info(f"Starting iteration {iteration} (p = {p_threshold})")
                 qual_prev_sample = qualifying_words[iteration - 1]
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
