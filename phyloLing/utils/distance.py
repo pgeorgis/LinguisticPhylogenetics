@@ -6,10 +6,11 @@ from numpy import zeros
 
 # PAIRWISE SIMILARITY / DISTANCE
 class Distance:
-    def __init__(self, func, cluster_threshold=0.5, sim=False, name=None, **kwargs):
+    def __init__(self, func, cluster_threshold=0.5, sim=False, name=None, alpha=0.5, **kwargs):
         self.func = func
         self.kwargs = kwargs
         self.sim = sim
+        self.alpha = alpha
         self.cluster_threshold = cluster_threshold
         self.name = name if name else self.func.__name__
         self.measured = {}
@@ -50,7 +51,9 @@ class Distance:
         else:
             return self
 
-    def to_distance(self, name=None, alpha=0.5):
+    def to_distance(self, name=None, alpha=None):
+        if alpha is None:
+            alpha = self.alpha
         if self.sim is False:
             return self
         else:
