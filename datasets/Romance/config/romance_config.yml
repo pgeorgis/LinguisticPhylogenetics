@@ -25,9 +25,9 @@ cluster:
 evaluation:
     similarity: gradient
     method: hybrid
-    pmi_weight: 0.5
-    surprisal_weight: 5
-    phon_weight: 3
+    pmi_weight: 0
+    surprisal_weight: 1
+    phon_weight: 1
     normalize_weights: false
     n_samples: 10
     sample_size: 0.8
