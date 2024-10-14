@@ -176,7 +176,7 @@ def load_precalculated_word_scores(distance_dir, family, dist_keys):
         if os.path.exists(scored_words_file):
             n_files_found += 1
             scored_words_data = csv2dict(scored_words_file, sep="\t")
-            for i, entry in scored_words_data.items():
+            for _, entry in scored_words_data.items():
                 lang1_ipa = entry[lang1.name]
                 lang2_ipa = entry[lang2.name]
                 for dist_key in dist_keys:
@@ -424,7 +424,7 @@ if __name__ == "__main__":
     # Write lexical comparison files
     for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):
         dist_outdir = os.path.join(exp_outdir, 'distances')
-        lex_comp_log_dir = os.path.join(dist_outdir, lang1.name, lang2.name)
+        lex_comp_log_dir = os.path.join(dist_outdir, lang1.path_name, lang2.path_name)
         os.makedirs(lex_comp_log_dir, exist_ok=True)
         lex_comp_log = os.path.join(lex_comp_log_dir, 'lexical_comparison.tsv')
         lang1.write_lexical_comparison(lang2, lex_comp_log)
