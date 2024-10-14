@@ -38,8 +38,8 @@ def flip_clades(newick_str, clade1_tips, clade2_tips, reroot_at=None):
 
     Parameters:
     newick_str (str): The input Newick tree string.
-    clade1_tips (tuple): A tuple of tip names defining the first clade.
-    clade2_tips (tuple): A tuple of tip names defining the second clade.
+    clade1_tips (str or tuple): A single tip name or a tuple of tip names defining the first clade or tip.
+    clade2_tips (str or tuple): A single tip name or a tuple of tip names defining the second clade or tip.
     reroot_at (str, optional): The name of a tip to reroot the tree at before flipping clades. Defaults to None.
 
     Returns:
@@ -56,9 +56,21 @@ def flip_clades(newick_str, clade1_tips, clade2_tips, reroot_at=None):
         else:
             raise ValueError(f"Tip '{reroot_at}' not found in the tree")
 
+    # Determine if each input is a single tip or a clade, and get the corresponding node
     # Find the common ancestor of each clade
-    clade1_node = tree.get_common_ancestor(clade1_tips)
-    clade2_node = tree.get_common_ancestor(clade2_tips)
+    def get_node(tips):
+        if isinstance(tips, str):
+            node = tree.search_nodes(name=tips)
+            if not node:
+                raise ValueError(f"Tip '{tips}' not found in the tree")
+            return node[0]
+        elif isinstance(tips, tuple):
+            return tree.get_common_ancestor(tips)
+        else:
+            raise TypeError("Tips should be a string or a tuple of strings")
+
+    clade1_node = get_node(clade1_tips)
+    clade2_node = get_node(clade2_tips)
 
     # Swap the positions of the two clades
     clade1_parent = clade1_node.up
