@@ -460,7 +460,7 @@ def segmental_word_dist(word1,
     return (c_weight * (1 - c_score)) + (v_weight * (1 - v_score)) + (syl_weight * syl_score)
 
 
-def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, pad_ch=PAD_CH_DEFAULT, **kwargs):
+def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False, pad_ch=PAD_CH_DEFAULT, **kwargs):
     lang1 = word1.language
     lang2 = word2.language
 
