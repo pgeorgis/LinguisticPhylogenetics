@@ -1,5 +1,5 @@
-Doculect,Branch,Group,Classification
-Old Norse,North Germanic,Insular Nordic,North Germanic > Insular Nordic
+Doculect,Branch,Group,Classification,Variety
+Old Norse,North Germanic,Insular Nordic,North Germanic > Insular Nordic,Old West Norse
 Icelandic,North Germanic,Insular Nordic,North Germanic > Insular Nordic
 Faroese,North Germanic,Insular Nordic,North Germanic > Insular Nordic
 Nynorsk Norwegian,North Germanic,Continental Scandinavian,North Germanic > Continental Scandinavian
@@ -13,10 +13,10 @@ American English,West Germanic,Anglo-Frisian,West Germanic > Anglo-Frisian > Ang
 West Frisian,West Germanic,Anglo-Frisian,West Germanic > Anglo-Frisian > Frisian
 Saterland Frisian,West Germanic,Anglo-Frisian,West Germanic > Anglo-Frisian > Frisian
 North Frisian,West Germanic,Anglo-Frisian,West Germanic > Anglo-Frisian > Frisian
-East Low German,West Germanic,Low German,West Germanic > Low German
-Northern Low Saxon,West Germanic,Low German,West Germanic > Low German
-Eastphalian,West Germanic,Low German,West Germanic > Low German
-Westphalian,West Germanic,Low German,West Germanic > Low German
+East Low German,West Germanic,Low German,West Germanic > Low German,Mecklenburgisch-Vorpommersch
+Northern Low Saxon,West Germanic,Low German,West Germanic > Low German,Schleswigisch
+Eastphalian,West Germanic,Low German,West Germanic > Low German,Raum Hannover
+Westphalian,West Germanic,Low German,West Germanic > Low German,Münsterländisch
 Dutch,West Germanic,Low Franconian,West Germanic > Low Franconian
 Afrikaans,West Germanic,Low Franconian,West Germanic > Low Franconian
 West Flemish,West Germanic,Low Franconian,West Germanic > Low Franconian
@@ -24,9 +24,8 @@ Limburgish,West Germanic,Low Franconian,West Germanic > Low Franconian
 Ripuarian,West Germanic,High German,West Germanic > High German > Central German
 Luxembourgish,West Germanic,High German,West Germanic > High German > Central German
 Pennsylvania German,West Germanic,High German,West Germanic > High German > Central German
-German,West Germanic,High German,West Germanic > High German
-Standard German,West Germanic,High German,West Germanic > High German
-Yiddish,West Germanic,High German,West Germanic > High German
+Yiddish,West Germanic,High German,West Germanic > High German > Central German,Litvish (East Yiddish)
+German,West Germanic,High German,West Germanic > High German,Standard German
 Bavarian,West Germanic,High German,West Germanic > High German
 Swabian,West Germanic,High German,West Germanic > High German > Alemannic
 Alsatian,West Germanic,High German,West Germanic > High German > Alemannic
