@@ -35,20 +35,20 @@ class WordDistance(Distance):
 
 def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
     """Calculate phoneme surprisal if not already done."""
-    if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
+    if len(lang1.phoneme_surprisal[lang2.name][ngram_size]) == 0:
         correlator1 = lang1.get_phoneme_correlator(lang2)
         correlator1.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
-    if len(lang2.phoneme_surprisal[(lang1.name, ngram_size)]) == 0:
+    if len(lang2.phoneme_surprisal[lang1.name][ngram_size]) == 0:
         correlator2 = lang2.get_phoneme_correlator(lang1)
         correlator2.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
 
 
 def get_pmi_dict(lang1, lang2, **kwargs):
     """Calculate phoneme PMI if not already done and return PMI dict."""
-    if len(lang1.phoneme_pmi[lang2]) == 0:
+    if len(lang1.phoneme_pmi[lang2.name]) == 0:
         correlator = lang1.get_phoneme_correlator(lang2)
         correlator.compute_phone_corrs(**kwargs)
-    pmi_dict = lang1.phoneme_pmi[lang2]
+    pmi_dict = lang1.phoneme_pmi[lang2.name]
     return pmi_dict
 
 
@@ -487,8 +487,8 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False,
         sur_dict1 = lang1.phon_env_surprisal[lang2.name]
         sur_dict2 = lang2.phon_env_surprisal[lang1.name]
     else:
-        sur_dict1 = lang1.phoneme_surprisal[(lang2.name, ngram_size)]
-        sur_dict2 = lang2.phoneme_surprisal[(lang1.name, ngram_size)]
+        sur_dict1 = lang1.phoneme_surprisal[lang2.name][ngram_size]
+        sur_dict2 = lang2.phoneme_surprisal[lang1.name][ngram_size]
 
     WAS_l1l2 = adaptation_surprisal(alignment,
                                     surprisal_dict=sur_dict1,
@@ -749,10 +749,10 @@ def composite_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
 
 def log_word_score(word1, word2, score, key):
     lang1, lang2 = word1.language, word2.language
-    lang1.lexical_comparison[lang2][(word1, word2)][key] = score
-    lang2.lexical_comparison[lang1][(word2, word1)][key] = score
-    lang1.lexical_comparison['measures'].add(key)
-    lang2.lexical_comparison['measures'].add(key)
+    lang1.lexical_comparison[lang2.name][(word1, word2)][key] = score
+    lang2.lexical_comparison[lang1.name][(word2, word1)][key] = score
+    lang1.lexical_comparison_measures.add(key)
+    lang2.lexical_comparison_measures.add(key)
 
 
 # Initialize distance functions as Distance objects
