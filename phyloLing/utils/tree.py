@@ -1,5 +1,14 @@
 from ete3 import Tree
+import re
 from utils.utils import csv2dict
+
+
+def postprocess_newick(newick_tree):
+    # Fix formatting of Newick string
+    newick_tree = re.sub(r'\s', '_', newick_tree)
+    newick_tree = re.sub(r',_', ',', newick_tree)
+    return newick_tree
+
 
 def reroot_tree(newick_str: str, outgroup: str | tuple) -> str:
     """
@@ -100,9 +109,11 @@ def build_tree_dict(classification_data: dict, clade_sep=" > ") -> dict:
     tree = {}
 
     for doculect, classification in classification_data.items():
+        doculect = postprocess_newick(doculect)
         levels = classification.split(clade_sep)
         current = tree
         for level in levels:
+            level = postprocess_newick(level)
             current = current.setdefault(level, {})
         current[doculect] = {}  # Add doculect as a leaf
 

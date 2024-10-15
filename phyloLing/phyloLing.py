@@ -40,7 +40,7 @@ from utils.network import dm2coords, newer_network_plot
 from utils.sequence import (Ngram, flatten_ngram, generate_ngrams,
                             pad_sequence, remove_overlapping_ngrams)
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
-from utils.tree import reroot_tree
+from utils.tree import postprocess_newick, reroot_tree
 from utils.utils import (create_timestamp, csv2dict, default_dict,
                          dict_tuplelist, normalize_dict,
                          dict_of_sets,
@@ -841,8 +841,7 @@ class LexicalDataset:
             newick_tree = linkage2newick(lm, labels)
 
         # Fix formatting of Newick string
-        newick_tree = re.sub(r'\s', '_', newick_tree)
-        newick_tree = re.sub(r',_', ',', newick_tree)
+        newick_tree = postprocess_newick(newick_tree)
         
         # Optionally root the tree at a specified tip or clade
         if root:
