@@ -417,7 +417,7 @@ if __name__ == "__main__":
     params["tree"]["newick"] = tree
     with open(outtree, 'w') as f:
         f.write(tree)
-    logger.info(f'Wrote Newick tree to {outtree}')
+    logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
 
     # Write distance matrix TSV
     out_distmatrix = os.path.join(exp_outdir, f'distance-matrix.tsv')
@@ -441,6 +441,6 @@ if __name__ == "__main__":
     config_copy = os.path.join(exp_outdir, "config.yml")
     with open(config_copy, 'w') as f:
         yaml.dump(convert_sets_to_lists(params), f)
-    logger.info(f"Wrote experiment run config to {config_copy}")
+    logger.info(f"Wrote experiment run config to {os.path.abspath(config_copy)}")
 
     logger.info('Completed successfully.')
