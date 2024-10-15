@@ -43,3 +43,6 @@ evaluation:
 tree:
     linkage: nj
     root: Proto-Germanic
+    reference: [
+        "datasets/Germanic/trees/ref/reference_001.tre"
+    ]

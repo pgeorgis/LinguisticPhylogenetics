@@ -35,3 +35,6 @@ evaluation:
 tree:
     linkage: nj
     root: Proto-Slavic
+    reference: [
+        "datasets/Slavic/trees/ref/reference_001.tre"
+    ]

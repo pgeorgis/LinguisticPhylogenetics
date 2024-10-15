@@ -37,3 +37,7 @@ evaluation:
 tree:
     linkage: nj
     root: Latin
+    reference: [
+        "datasets/Romance/trees/ref/reference_001.tre",
+        "datasets/Romance/trees/ref/reference_002.tre",
+    ]
