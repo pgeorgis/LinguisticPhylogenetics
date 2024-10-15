@@ -1,9 +1,9 @@
 family:
     name: Romance
-    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/data/romance_data.tsv
+    file: datasets/Romance/data/romance_data.tsv
     min_amc: 0.7
     exclude: ['Dalmatian', 'Istriot', 'Savoyard', 'Istro-Romanian']
-    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/
+    outdir: datasets/Romance/
 
 experiment:
   name: ""

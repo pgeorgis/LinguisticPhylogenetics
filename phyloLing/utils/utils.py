@@ -12,16 +12,16 @@ from numpy import array, array_split
 from numpy.random import permutation
 
 
-def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8'):
+def csv2dict(csvfile, header=True, sep=',', start=0, encoding='utf_8') -> dict[int, dict[str, str]]:
     """Reads a CSV file into a dictionary"""
-    csv_dict = defaultdict(lambda: defaultdict(lambda: ''))
+    csv_dict: dict[int, dict[str, str]] = create_default_dict('', 2)
     with open(csvfile, 'r', encoding=encoding) as csv_file:
         csv_file = csv_file.readlines()
-        columns = [item.strip() for item in csv_file[start].split(sep)]
+        columns: list[str] = [item.strip() for item in csv_file[start].split(sep)]
         if header:
             start += 1
         for i in range(start, len(csv_file)):
-            line = [item.strip() for item in csv_file[i].split(sep)]
+            line: list[str] = [item.strip() for item in csv_file[i].split(sep)]
             for j in range(len(columns)):
                 key = ''
                 if header:
@@ -109,12 +109,12 @@ def combine_dicts(*dicts):
     return combined
 
 
-def normalize_dict(dict_, default=False, lmbda=None, return_=True):
+def normalize_dict(dict_, default=False, default_value=None, return_=True):
     """Normalizes the values of a dictionary"""
     """If default==True, returns a default dictionary with default value lmbda"""
     """If return_==False, modifies the input dictionary without returning anything"""
     if default is True:
-        normalized = defaultdict(lambda: lmbda)
+        normalized = create_default_dict(default_value)
     else:
         normalized = {}
     total = sum(list(dict_.values()))
@@ -282,3 +282,90 @@ def segment_ranges(numbers):
         segmented.append((start, end))
 
     return segmented
+
+class _NestedDefaultDictFactoryForPrimitiveValues:
+    def __init__(self, depth, value):
+        self.depth = depth
+        if not isinstance(value, (int, float, str)):
+            raise TypeError("value must be a primitive type")
+        self.value = value
+
+    def __call__(self):
+        if self.depth == 0:
+            return self.value
+        else:
+            return defaultdict(_NestedDefaultDictFactoryForPrimitiveValues(self.depth - 1, self.value))
+
+
+def create_default_dict(value: int | float | str, depth: int = 1) -> dict:
+    if not isinstance(depth, int):
+        raise TypeError("depth must be an integer")
+    if depth < 1:
+        raise ValueError("depth must be greater than 0")
+    if not isinstance(value, (int, float, str)):
+        raise TypeError("value must be a primitive type")
+
+    return defaultdict(_NestedDefaultDictFactoryForPrimitiveValues(depth - 1, value))
+
+
+class _NestedDefaultDictFactoryForValuesWithFactory:
+    def __init__(self, depth, leaf_factory):
+        self.depth = depth
+        if not callable(leaf_factory):
+            raise TypeError("leaf_factory must be a callable")
+        self.leaf_factory = leaf_factory
+
+    def __call__(self):
+        if self.depth == 0:
+            return self.leaf_factory()
+        else:
+            return defaultdict(_NestedDefaultDictFactoryForValuesWithFactory(self.depth - 1, self.leaf_factory))
+
+
+def create_default_dict_of_dicts(depth: int = 1):
+    if not isinstance(depth, int):
+        raise TypeError("depth must be an integer")
+    if depth < 1:
+        raise ValueError("depth must be greater than 0")
+
+    return defaultdict(_NestedDefaultDictFactoryForValuesWithFactory(depth - 1, dict))
+
+
+def dict_of_sets():
+    return defaultdict(set)
+
+
+def dict_to_defaultdict_with_value(d: dict, value, depth: int) -> defaultdict:
+    if not isinstance(depth, int):
+        raise TypeError("depth must be an integer")
+    if depth < 1:
+        raise ValueError("depth must be greater than 0")
+    if depth == 1:
+        dd = defaultdict(lambda: value)
+        dd.update(d)
+        return dd
+    def default_factory():
+        return dict_to_defaultdict_with_value({}, value, depth - 1)
+    dd = defaultdict(default_factory)
+    for key, subdict in d.items():
+        dd[key] = dict_to_defaultdict_with_value(subdict, value, depth - 1)
+    return dd
+
+
+def update_default_dict(target: dict, source: dict, depth: int) -> None:
+    if not isinstance(depth, int):
+        raise TypeError("depth must be an integer")
+    if depth < 1:
+        raise ValueError("depth must be greater than 0")
+    if depth == 1:
+        target.update(source)
+    else:
+        for key, subdict in source.items():
+            update_default_dict(target[key], subdict, depth - 1)
+
+
+def ddict2dict(d) -> dict:
+    for k, v in d.items():
+        if isinstance(v, dict):
+            d[k] = ddict2dict(v)
+    return dict(d)
