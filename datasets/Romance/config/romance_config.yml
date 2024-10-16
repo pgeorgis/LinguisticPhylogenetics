@@ -1,9 +1,12 @@
 family:
     name: Romance
-    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/data/romance_data.tsv
+    file: datasets/Romance/data/romance_data.tsv
     min_amc: 0.7
-    exclude: ['Dalmatian', 'Savoyard']
-    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/Datasets/Romance/
+    exclude: ['Dalmatian', 'Istriot', 'Savoyard', 'Istro-Romanian']
+    outdir: datasets/Romance/
+
+experiment:
+  name: ""
 
 transcription:
     global:
@@ -11,25 +14,21 @@ transcription:
         combine_diphthongs: true
         normalize_geminates: true
 
-pmi:
+phon_corr:
+    phon_env: false
     refresh: []
-    refresh_all_pmi: true
-
-surprisal:
-    ngram: 1
-    phon_env: true 
-    refresh: []
-    refresh_all_surprisal: true
+    refresh_all: true
 
 cluster:
     cognates: none
 
 evaluation:
     similarity: gradient
-    method: composite
-    pmi_weight: 1.5
-    surprisal_weight: 2
+    method: hybrid
+    pmi_weight: 0
+    surprisal_weight: 1
     phon_weight: 1
+    normalize_weights: false
     n_samples: 10
     sample_size: 0.8
     calibrate: false
@@ -37,4 +36,8 @@ evaluation:
 
 tree:
     linkage: nj
-    newick: true
+    root: Latin
+    reference: [
+        "datasets/Romance/trees/ref/reference_001.tre",
+        "datasets/Romance/trees/ref/reference_002.tre",
+    ]

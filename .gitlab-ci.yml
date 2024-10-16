@@ -1,0 +1,58 @@
+stages:
+  - prepare
+  - classify
+
+variables:
+  GIT_SUBMODULE_STRATEGY: none
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+default:
+  image: python:3.12
+  before_script:
+    - git config --global credential.helper store
+    - |
+      git credential approve <<EOF
+      protocol=https
+      host=github.com
+      username=${GITHUB_USER_NAME}
+      password=${GITHUB_ACCESS_TOKEN}
+      EOF
+  cache: &default_cache
+    key: ${CI_COMMIT_REF_SLUG}
+    policy: pull
+    paths:
+      - $CI_PROJECT_DIR/.cache/pip
+      - $CI_PROJECT_DIR/venv
+
+install_dependencies:
+  stage: prepare
+  interruptible: true
+  script:
+    - make init
+  cache:
+    <<: *default_cache
+    policy: pull-push
+
+romance:
+  stage: classify
+  script:
+    - make classify-romance
+  artifacts:
+    paths:
+      - datasets/Romance/experiments
+
+germanic:
+  stage: classify
+  script:
+    - make classify-germanic
+  artifacts:
+    paths:
+      - datasets/Germanic/experiments
+
+slavic:
+  stage: classify
+  script:
+    - make classify-slavic
+  artifacts:
+    paths:
+      - datasets/Slavic/experiments

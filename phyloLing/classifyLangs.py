@@ -2,14 +2,20 @@ import argparse
 import json
 import logging
 import os
+from collections import defaultdict
 
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
-from utils.distance import Distance
-from utils.utils import calculate_time_interval, convert_sets_to_lists, create_timestamp, create_uuid
-from wordDist import (LevenshteinDist, PhonDist, PMIDist,
-                      SurprisalDist, composite_sim, hybrid_dist)
+from utils.tree import gqd, load_newick_tree
+from utils.utils import (calculate_time_interval, convert_sets_to_lists,
+                         create_datestamp, create_timestamp, csv2dict,
+                         get_git_commit_hash)
+from wordDist import (COMPOSITE_DIST_KEY, HYBRID_DIST_KEY,
+                      LEVENSHTEIN_DIST_KEY, PHONOLOGICAL_DIST_KEY,
+                      PMI_DIST_KEY, SURPRISAL_DIST_KEY, LevenshteinDist,
+                      PhonDist, PMIDist, SurprisalDist, WordDistance,
+                      composite_sim, hybrid_dist)
 
 from phyloLing import load_family
 
@@ -36,12 +42,12 @@ valid_params = {
     }
 }
 
-# Mapping of distance method labels to Distance objects
+# Mapping of distance method labels to WordDistance objects
 function_map = {
-    'pmi': PMIDist,
-    'surprisal': SurprisalDist,
-    'phon': PhonDist,
-    'levenshtein': LevenshteinDist
+    PMI_DIST_KEY: PMIDist,
+    SURPRISAL_DIST_KEY: SurprisalDist,
+    PHONOLOGICAL_DIST_KEY: PhonDist,
+    LEVENSHTEIN_DIST_KEY: LevenshteinDist
 }
 
 
@@ -121,36 +127,68 @@ def validate_params(params, valid_params, logger):
 
 
 def init_hybrid(function_map, eval_params):
-    HybridDist = Distance(
+    HybridDist = WordDistance(
         func=hybrid_dist,
         name='HybridDist',
-        funcs=[function_map['pmi'], function_map['surprisal'], function_map['phon']],
+        funcs=[
+            function_map[PMI_DIST_KEY],
+            function_map[SURPRISAL_DIST_KEY],
+            function_map[PHONOLOGICAL_DIST_KEY],
+        ],
         weights=(
             eval_params['pmi_weight'],
             eval_params['surprisal_weight'],
             eval_params['phon_weight'],
-        )
+        ),
+        normalize_weights=eval_params['normalize_weights']
     )
-    HybridSim = HybridDist.to_similarity(name='HybridSim')
 
-    return HybridSim
+    return HybridDist
+
 
 
 def init_composite(params):
     eval_params = params['evaluation']
-    surprisal_params = params['surprisal']
-    CompositeSim = Distance(
+    phon_corr_params = params['phon_corr']
+    CompositeSim = WordDistance(
         func=composite_sim,
-        name='CompositeSim',
+        name=COMPOSITE_DIST_KEY.replace('Dist', 'Sim'),  # TODO could be handled better
         sim=True,
         pmi_weight=eval_params['pmi_weight'],
         surprisal_weight=eval_params['surprisal_weight'],
-        ngram_size=surprisal_params['ngram'],
-        phon_env=surprisal_params['phon_env'],
+        ngram_size=phon_corr_params['ngram'],
+        phon_env=phon_corr_params['phon_env'],
     )
     CompositeDist = CompositeSim.to_distance('CompositeDist', alpha=0.8)
 
     return CompositeDist
+
+
+def load_precalculated_word_scores(distance_dir, family, dist_keys):
+    doculect_pairs = family.get_doculect_pairs(bidirectional=True)
+    precalculated_word_scores = defaultdict(lambda:{})
+    n_files_found = 0
+    for lang1, lang2 in doculect_pairs:
+        scored_words_file = os.path.join(
+            distance_dir,
+            lang1.path_name,
+            lang2.path_name,
+            "lexical_comparison.tsv"
+        )
+        if os.path.exists(scored_words_file):
+            n_files_found += 1
+            scored_words_data = csv2dict(scored_words_file, sep="\t")
+            for _, entry in scored_words_data.items():
+                lang1_ipa = entry[lang1.name]
+                lang2_ipa = entry[lang2.name]
+                for dist_key in dist_keys:
+                    if dist_key in entry:
+                        score = float(entry[dist_key])
+                        score_key = ((lang1.name, lang1_ipa), (lang2.name, lang2_ipa), function_map[dist_key].hashable_kwargs)
+                        function_map[dist_key].measured[score_key] = score
+                        precalculated_word_scores[dist_key][(lang1.name, lang1_ipa, lang2.name, lang2_ipa)] = score
+    logger.info(f"Loaded pre-calculated word scores for {n_files_found} doculect pairs from {distance_dir}")
+    return precalculated_word_scores
 
 
 def write_lang_dists_to_tsv(dist, outfile):
@@ -189,6 +227,9 @@ if __name__ == "__main__":
                 params[section_name][param_name] = default_params[section_name][param_name]
     # Validate parameters
     validate_params(params, valid_params, logger)
+    
+    # Add git commmit hash to run config
+    params["run_info"]["version"] = get_git_commit_hash()
 
     # Log config param settings
     logger.info(json.dumps(convert_sets_to_lists(params), indent=4))
@@ -197,23 +238,25 @@ if __name__ == "__main__":
     family_params = params['family']
     transcription_params = params['transcription']
     alignment_params = params['alignment']
-    pmi_params = params['pmi']
-    surprisal_params = params['surprisal']
+    phon_corr_params = params['phon_corr']
     cluster_params = params['cluster']
     eval_params = params['evaluation']
     tree_params = params['tree']
+    experiment_params = params['experiment']
 
     # Set ngram size used for surprisal
-    if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
-        function_map['surprisal'].set('ngram_size', surprisal_params['ngram'])
-        SurprisalDist = function_map['surprisal']
+    surprisal_funcs = ('surprisal', 'hybrid', 'composite')
+    if eval_params['method'] in surprisal_funcs or cluster_params['method'] in phon_corr_params:
+        function_map[SURPRISAL_DIST_KEY].set('ngram_size', phon_corr_params['ngram'])
+        function_map[SURPRISAL_DIST_KEY].set('phon_env', phon_corr_params['phon_env'])
+        SurprisalDist = function_map[SURPRISAL_DIST_KEY]
 
         # Initialize hybrid or composite distance/similarity objects
 
-        if eval_params['method'] == 'hybrid':
-            function_map['hybrid'] = init_hybrid(function_map, eval_params)
-        elif eval_params['method'] == 'composite':
-            function_map['composite'] = init_composite(params)
+        if eval_params['method'] == 'hybrid' or cluster_params['method'] == 'hybrid':
+            function_map[HYBRID_DIST_KEY] = init_hybrid(function_map, eval_params)
+        if eval_params['method'] == 'composite' or cluster_params['method'] == 'composite':
+            function_map[COMPOSITE_DIST_KEY] = init_composite(params)
 
     # Designate cluster function if performing auto cognate clustering
 
@@ -225,11 +268,25 @@ if __name__ == "__main__":
         clusterDist = None
 
     # Designate evaluation function
-    evalDist = function_map[eval_params['method']]
+    aux_func_map = {
+        'pmi': PMI_DIST_KEY,
+        'surprisal': SURPRISAL_DIST_KEY,
+        'levenshtein': LEVENSHTEIN_DIST_KEY,
+        'hybrid': HYBRID_DIST_KEY,
+        'composite': COMPOSITE_DIST_KEY,
+    }
+    evalDist = function_map[aux_func_map[eval_params['method']]]
 
     # Load CLDF dataset
     if family_params['min_amc']:
         family_params['min_amc'] = float(family_params['min_amc'])
+    # Set the warn threshold for instances of phone in a doculect to the maximum of the 
+    # threshold set in transcription parameters and the minimum correlation instance value
+    # Ensures that if minimum correlation is set to a higher value,
+    # warnings will be issued about any phones with fewer instances than this
+    transcription_params["global"]["min_phone_instances"] = max(
+        transcription_params["global"]["min_phone_instances"], phon_corr_params['min_corr']
+    )
     family = load_family(family_params['name'],
                          family_params['file'],
                          outdir=family_params['outdir'],
@@ -249,34 +306,44 @@ if __name__ == "__main__":
     else:
         logger.info(f'Average mutual coverage is {round(avg_mc, 2)} ({abs_mc}/{len(family.concepts)} concepts in all {len(family.languages)} doculects).')
 
-    # Load or calculate phoneme PMI
-    if not pmi_params['refresh_all_pmi']:
+    # Load or calculate phone correspondences
+    if not phon_corr_params['refresh_all']:
         logger.info(f'Loading {family.name} phoneme PMI...')
-        family.load_phoneme_pmi(excepted=pmi_params['refresh'])
+        family.load_phoneme_pmi(excepted=phon_corr_params['refresh'])
 
-    # Load or calculate phoneme surprisal
-    if not surprisal_params['refresh_all_surprisal']:
         if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
             logger.info(f'Loading {family.name} phoneme surprisal...')
             if cluster_params['cognates'] == 'gold':
                 family.load_phoneme_surprisal(
-                    ngram_size=surprisal_params['ngram'],
+                    ngram_size=phon_corr_params['ngram'],
+                    phon_env=phon_corr_params['phon_env'],
                     gold=True,
-                    excepted=surprisal_params['refresh'])
+                    excepted=phon_corr_params['refresh'],
+                )
             else:
                 family.load_phoneme_surprisal(
-                    ngram_size=surprisal_params['ngram'],
+                    ngram_size=phon_corr_params['ngram'],
+                    phon_env=phon_corr_params['phon_env'],
                     gold=False,
-                    excepted=surprisal_params['refresh'])
+                    excepted=phon_corr_params['refresh'],
+                )
 
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
-    if pmi_params['refresh_all_pmi'] or surprisal_params['refresh_all_surprisal'] or len(pmi_params['refresh']) or len(surprisal_params['refresh']) > 0:
-        family.calculate_phoneme_pmi()
+    if phon_corr_params['refresh_all'] or len(phon_corr_params['refresh']) > 0:
+        family.calculate_phone_corrs(
+            sample_size=phon_corr_params['sample_size'],
+            n_samples=phon_corr_params['n_samples'],
+            min_corr=phon_corr_params['min_corr'],
+            ngram_size=phon_corr_params['ngram'],
+            phon_env=phon_corr_params['phon_env'],
+        )
         family.write_phoneme_pmi()
         if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
-            family.calculate_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
-            family.write_phoneme_surprisal(ngram_size=surprisal_params['ngram'])
+            family.write_phoneme_surprisal(
+                ngram_size=phon_corr_params['ngram'],
+                phon_env=phon_corr_params['phon_env'],
+            )
 
     # Auto cognate clustering only
     if cluster_params['cognates'] == 'auto':
@@ -287,10 +354,19 @@ if __name__ == "__main__":
         cog_id = f"{family.name}_distfunc-{cluster_params['method']}_cutoff-{cluster_params['cluster_threshold']}"
         # TODO cog_id should include weights and any other params for hybrid
 
-    # Create cognate similarity (Distance object) measure according to settings
+    # Load precalculated word scores from specified directory
+    precalculated_word_scores = None
+    if eval_params['precalculated_word_scores']:
+        precalculated_word_scores = load_precalculated_word_scores(
+            distance_dir=eval_params['precalculated_word_scores'],
+            family=family,
+            dist_keys=[PMI_DIST_KEY, SURPRISAL_DIST_KEY, PHONOLOGICAL_DIST_KEY]  # TODO maybe needs to be more customizable
+        )
+    
+    # Create cognate similarity (WordDistance object) measure according to settings
     if eval_params['similarity'] == 'gradient':
         dist_func = gradient_cognate_sim
-        distFunc = Distance(
+        distFunc = WordDistance(
             func=dist_func,
             name='GradientCognateSim',
             sim=True,
@@ -304,7 +380,7 @@ if __name__ == "__main__":
         )
     elif eval_params['similarity'] == 'binary':
         dist_func = binary_cognate_sim
-        distFunc = Distance(
+        distFunc = WordDistance(
             func=dist_func,
             name='BinaryCognateSim',
             sim=True,
@@ -318,27 +394,46 @@ if __name__ == "__main__":
         code += family.generate_test_code(evalDist)
 
     # Generate experiment ID and outdir
-    exp_id = create_uuid()
+    exp_name = experiment_params['name']
+    if exp_name is None:
+        exp_id = start_timestamp
+    else:
+        exp_id = os.path.join(exp_name, start_timestamp)
     logger.info(f'Experiment ID: {exp_id}')
-    exp_outdir = os.path.join(family_params["outdir"], "experiments", exp_id)
+    exp_outdir = os.path.join(family_params["outdir"], "experiments", create_datestamp(), exp_id)
     os.makedirs(exp_outdir, exist_ok=True)
     params["run_info"]["experimentID"] = exp_id
 
     # Generate Newick tree string
     logger.info('Generating phylogenetic tree...')
     outtree = os.path.join(exp_outdir, "newick.tre")
-    tree = family.draw_tree(
+    tree = family.generate_tree(
         cluster_func=clusterDist,
         dist_func=distFunc,
         cognates=cluster_params['cognates'],
         linkage_method=tree_params['linkage'],
-        title=family.name,
         outtree=outtree,
-        return_newick=tree_params['newick'])
+        root=tree_params['root'],
+    )
     params["tree"]["newick"] = tree
     with open(outtree, 'w') as f:
         f.write(tree)
-    logger.info(f'Wrote Newick tree to {outtree}')
+    logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
+
+    # Optionally evaluate tree wrt to reference tree(s)
+    if tree_params["reference"]:
+        tree_scores = defaultdict(dict)
+        for ref_tree_file in tree_params["reference"]:
+            ref_tree = load_newick_tree(ref_tree_file)
+            gqd_score = gqd(
+                tree,
+                ref_tree,
+                is_rooted=tree_params['root'] is not None
+            )
+            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
+            tree_scores[ref_tree_file]["GQD"] = gqd_score
+            logger.info(f"GQD wrt reference tree {ref_tree_file}: {round(gqd_score, 3)}")
+        params["tree"]["eval"] = tree_scores
 
     # Write distance matrix TSV
     out_distmatrix = os.path.join(exp_outdir, f'distance-matrix.tsv')
@@ -346,7 +441,7 @@ if __name__ == "__main__":
     # Write lexical comparison files
     for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):
         dist_outdir = os.path.join(exp_outdir, 'distances')
-        lex_comp_log_dir = os.path.join(dist_outdir, lang1.name, lang2.name)
+        lex_comp_log_dir = os.path.join(dist_outdir, lang1.path_name, lang2.path_name)
         os.makedirs(lex_comp_log_dir, exist_ok=True)
         lex_comp_log = os.path.join(lex_comp_log_dir, 'lexical_comparison.tsv')
         lang1.write_lexical_comparison(lang2, lex_comp_log)
@@ -362,6 +457,6 @@ if __name__ == "__main__":
     config_copy = os.path.join(exp_outdir, "config.yml")
     with open(config_copy, 'w') as f:
         yaml.dump(convert_sets_to_lists(params), f)
-    logger.info(f"Wrote experiment run config to {config_copy}")
+    logger.info(f"Wrote experiment run config to {os.path.abspath(config_copy)}")
 
     logger.info('Completed successfully.')

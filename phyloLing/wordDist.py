@@ -6,6 +6,7 @@ from asjp import ipa2asjp
 from constants import PAD_CH_DEFAULT
 from nltk import edit_distance
 from phonAlign import Alignment, get_alignment_iter
+from phyloLing import Word
 from phonUtils.initPhoneData import (alveolopalatal, consonants, glides,
                                      nasals, palatal, postalveolar, vowels)
 from phonUtils.ipaTools import strip_diacritics
@@ -16,24 +17,38 @@ from utils.information import adaptation_surprisal  # surprisal, surprisal_to_pr
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
 
+class WordDistance(Distance):
+    def eval(self, x, y, **kwargs):
+        if isinstance(x, Word) and isinstance(y, Word):
+            key = ((x.language.name, x.ipa), (y.language.name, y.ipa), self.hashable_kwargs) 
+            if key in self.measured:
+                return self.measured[key]
+            
+        if (x, y, self.hashable_kwargs) in self.measured:
+            return self.measured[(x, y, self.hashable_kwargs)]
+        else:
+            for arg, val in kwargs.items():
+                self.set(arg, val)
+            result = self.func(x, y, **self.kwargs)
+            self.measured[(x, y, self.hashable_kwargs)] = result
+            return result
 
 def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
     """Calculate phoneme surprisal if not already done."""
-    if len(lang1.phoneme_surprisal[(lang2.name, ngram_size)]) == 0:
+    if len(lang1.phoneme_surprisal[lang2.name][ngram_size]) == 0:
         correlator1 = lang1.get_phoneme_correlator(lang2)
-        correlator1.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
-    if len(lang2.phoneme_surprisal[(lang1.name, ngram_size)]) == 0:
+        correlator1.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
+    if len(lang2.phoneme_surprisal[lang1.name][ngram_size]) == 0:
         correlator2 = lang2.get_phoneme_correlator(lang1)
-        correlator2.calc_phoneme_surprisal(ngram_size=ngram_size, **kwargs)
+        correlator2.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
 
 
 def get_pmi_dict(lang1, lang2, **kwargs):
     """Calculate phoneme PMI if not already done and return PMI dict."""
-    if len(lang1.phoneme_pmi[lang2]) > 0:
-        pmi_dict = lang1.phoneme_pmi[lang2]
-    else:
+    if len(lang1.phoneme_pmi[lang2.name]) == 0:
         correlator = lang1.get_phoneme_correlator(lang2)
-        pmi_dict = correlator.calc_phoneme_pmi(**kwargs)
+        correlator.compute_phone_corrs(**kwargs)
+    pmi_dict = lang1.phoneme_pmi[lang2.name]
     return pmi_dict
 
 
@@ -58,7 +73,7 @@ def prepare_alignment(word1, word2, **kwargs):
         pmi_dict = get_pmi_dict(lang1, lang2)
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
-        alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, **kwargs)
+        alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
 
     # Perform phonetic alignment without PMI support
     else:
@@ -187,7 +202,7 @@ def phonological_dist(word1,
                       context_reduction=False,
                       penalty_discount=2,
                       prosodic_env_scaling=True,
-                      total_dist=False,  # TODO confirm that this is the better default; I think averaging is required to normalize for different word lengths
+                      total_dist=False,
                       **kwargs):
     """Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
     No weighting by segment type, position, etc.
@@ -202,7 +217,7 @@ def phonological_dist(word1,
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
         penalty_discount (int, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
         prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
-        total_dist (bool, optional): Computes phonological distance as the sum of all penalties. Defaults to False.
+        total_dist (bool, optional): Computes phonological distance as the sum of all penalties rather than as an average. Defaults to True.
 
     Returns:
         float: phonological distance value
@@ -211,8 +226,31 @@ def phonological_dist(word1,
     # If word2 is None, we assume word1 argument is actually an aligned word pair
     word1, word2, alignment = handle_word_pair_input(word1, word2)
     gap_ch = alignment.gap_ch
-    length = alignment.length
+    pad_ch = alignment.pad_ch
+    alignment_obj = alignment
     alignment = alignment.alignment
+
+    def _remove_boundaries(segment):
+        """Remove boundaries from complex ngrams and convert simple boundary ngrams to gaps."""
+        ngram = Ngram(segment)
+        if ngram.is_boundary(pad_ch):
+            no_boundary_ngram = ngram.remove_boundaries(pad_ch).undo()
+            if len(no_boundary_ngram) == 0:
+                return gap_ch
+            return no_boundary_ngram
+        return segment
+
+    # Remove boundaries or convert to gaps
+    alignment = [
+        (_remove_boundaries(left), _remove_boundaries(right))
+        for left, right in alignment
+    ]
+    # Remove any resulting (gap_ch, gap_ch) pairs
+    alignment = [pos for pos in alignment if pos != (gap_ch, gap_ch)]
+
+    # Simplify complex ngram alignments to unigrams
+    alignment = alignment_obj.get_unigram_alignment(alignment)
+    length = len(alignment)
 
     # Get list of penalties
     penalties = []
@@ -349,7 +387,8 @@ def phonological_dist(word1,
     else:
         # Euclidean distance of all penalties (= distance per dimension of the word)
         # normalized by square root of number of dimensions
-        word_dist = euclidean_dist(penalties) / sqrt(len(penalties))
+        #word_dist = euclidean_dist(penalties) / sqrt(len(penalties))
+        word_dist = mean(penalties)
 
     return word_dist
 
@@ -422,7 +461,7 @@ def segmental_word_dist(word1,
     return (c_weight * (1 - c_score)) + (v_weight * (1 - v_score)) + (syl_weight * syl_score)
 
 
-def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, pad_ch=PAD_CH_DEFAULT, **kwargs):
+def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False, pad_ch=PAD_CH_DEFAULT, **kwargs):
     lang1 = word1.language
     lang2 = word2.language
 
@@ -434,11 +473,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
     get_phoneme_surprisal(lang1, lang2, ngram_size=ngram_size, **kwargs)
 
     # Generate alignments in each direction: alignments need to come from PMI
-    alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict, phon_env=phon_env)
-    # Pad (need to set as ngram_size=min 2 to yield any padding)
-    alignment.pad(ngram_size=max(2, ngram_size), alignment=alignment.alignment, pad_ch=pad_ch)
-    # Compact_gaps, then remove uncompacted pad positions as they are irrelevant
-    alignment.compact_gaps(lang1.complex_ngrams[lang2])
+    alignment = Alignment(word1, word2, align_costs=pmi_dict, phon_env=phon_env)
     alignment.remove_padding()
     # Add phon env
     if phon_env:
@@ -452,8 +487,9 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
         sur_dict1 = lang1.phon_env_surprisal[lang2.name]
         sur_dict2 = lang2.phon_env_surprisal[lang1.name]
     else:
-        sur_dict1 = lang1.phoneme_surprisal[(lang2.name, ngram_size)]
-        sur_dict2 = lang2.phoneme_surprisal[(lang1.name, ngram_size)]
+        sur_dict1 = lang1.phoneme_surprisal[lang2.name][ngram_size]
+        sur_dict2 = lang2.phoneme_surprisal[lang1.name][ngram_size]
+
     WAS_l1l2 = adaptation_surprisal(alignment,
                                     surprisal_dict=sur_dict1,
                                     ngram_size=ngram_size,
@@ -528,8 +564,23 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=True, 
                 weighted_WAS.append(weighted)
 
         return weighted_WAS
-    weighted_WAS_l1l2 = weight_by_self_surprisal(alignment, WAS_l1l2, self_surprisal1, normalize_by=lang2.phoneme_entropy, sur_dict=sur_dict1, phon_env=phon_env)
-    weighted_WAS_l2l1 = weight_by_self_surprisal(rev_alignment, WAS_l2l1, self_surprisal2, normalize_by=lang1.phoneme_entropy, sur_dict=sur_dict2, phon_env=phon_env)
+
+    weighted_WAS_l1l2 = weight_by_self_surprisal(
+        alignment,
+        WAS_l1l2,
+        self_surprisal1,
+        normalize_by=lang2.phoneme_entropy,
+        sur_dict=sur_dict1,
+        phon_env=phon_env
+    )
+    weighted_WAS_l2l1 = weight_by_self_surprisal(
+        rev_alignment,
+        WAS_l2l1,
+        self_surprisal2,
+        normalize_by=lang1.phoneme_entropy,
+        sur_dict=sur_dict2,
+        phon_env=phon_env
+    )
     # Return and save the average of these two values
     if normalize:
         score = mean([mean(weighted_WAS_l1l2), mean(weighted_WAS_l2l1)])
@@ -550,11 +601,7 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
     pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
 
     # Align the words with PMI
-    alignment = Alignment(word1, word2, added_penalty_dict=pmi_dict)
-    # Pad (ngram_size=1, but need to set as min 2 to yield any padding)
-    alignment.pad(ngram_size=2, alignment=alignment.alignment, pad_ch=pad_ch)
-    # Compact_gaps, then remove uncompacted pad positions as they are irrelevant
-    alignment.compact_gaps(lang1.complex_ngrams[lang2])
+    alignment = Alignment(word1, word2, align_costs=pmi_dict)
     alignment.remove_padding()
 
     # Calculate PMI scores for each aligned pair
@@ -637,22 +684,26 @@ def levenshtein_dist(word1, word2, normalize=True, asjp=True):
     return LevDist
 
 
-def hybrid_dist(word1, word2, funcs: dict, weights=None) -> float:
+def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False) -> float:
     """Calculates a hybrid distance of multiple distance or similarity functions
 
     Args:
         word1 (phyloLing.Word): first Word object
         word2 (phyloLing.Word): second Word object
         funcs (iterable): iterable of Distance class objects
+        weights (list): list of weights (floats)
+        normalize_weights (bool): if True, normalize weights such that they sum to 1.0
     Returns:
         float: hybrid similarity measure
     """
     scores = []
     if weights is None:
+        # Uniform weighting
         weights = [1 / len(funcs) for i in range(len(funcs))]
-    else:
-        assert len(weights) == len(funcs)
-    assert round(sum(weights)) == 1.0
+    elif normalize_weights:
+        weight_sum = sum(weights)
+        weights = [weight/weight_sum for weight in weights]
+        assert round(sum(weights)) == 1.0
     for func, weight in zip(funcs, weights):
         if weight == 0:
             continue
@@ -665,8 +716,14 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None) -> float:
         # it is as if that dimension is more impactful
         scores.append(score * weight)
 
+        # Record word scores # TODO into Distance class object?
+        if word1.concept == word2.concept:
+            log_word_score(word1, word2, score, key=func.name)
+
     # score = euclidean_dist(scores)
     score = sum(scores)
+    if word1.concept == word2.concept:
+        log_word_score(word1, word2, score, key=HYBRID_DIST_KEY)
 
     return score
 
@@ -682,45 +739,53 @@ def composite_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
 
     # Record word scores # TODO into Distance class object?
     if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key='composite')
-        log_word_score(word1, word2, pmi_score, key='PMI')
-        log_word_score(word1, word2, surprisal_score, key='surprisal')
-        log_word_score(word1, word2, phon_score, key='phon')
+        log_word_score(word1, word2, score, key=COMPOSITE_DIST_KEY)
+        log_word_score(word1, word2, pmi_score, key=PMI_DIST_KEY)
+        log_word_score(word1, word2, surprisal_score, key=SURPRISAL_DIST_KEY)
+        log_word_score(word1, word2, phon_score, key=PHONOLOGICAL_DIST_KEY)
 
     return max(0, score)
 
 
 def log_word_score(word1, word2, score, key):
     lang1, lang2 = word1.language, word2.language
-    lang1.lexical_comparison[lang2][(word1, word2)][key] = score
-    lang2.lexical_comparison[lang1][(word2, word1)][key] = score
-    lang1.lexical_comparison['measures'].add(key)
-    lang2.lexical_comparison['measures'].add(key)
+    lang1.lexical_comparison[lang2.name][(word1, word2)][key] = score
+    lang2.lexical_comparison[lang1.name][(word2, word1)][key] = score
+    lang1.lexical_comparison_measures.add(key)
+    lang2.lexical_comparison_measures.add(key)
 
 
 # Initialize distance functions as Distance objects
-LevenshteinDist = Distance(
+LEVENSHTEIN_DIST_KEY = 'LevenshteinDist'
+PHONETIC_DIST_KEY = 'PhoneticDist'
+SEGMENTAL_DIST_KEY = 'SegmentalDist'
+PHONOLOGICAL_DIST_KEY = 'PhonDist'
+PMI_DIST_KEY = 'PMIDist'
+SURPRISAL_DIST_KEY = 'SurprisalDist'
+COMPOSITE_DIST_KEY = 'CompositeDist'
+HYBRID_DIST_KEY = 'HybridDist'
+LevenshteinDist = WordDistance(
     func=levenshtein_dist,
-    name='LevenshteinDist',
+    name=LEVENSHTEIN_DIST_KEY,
     cluster_threshold=0.73)
-PhoneticDist = Distance(
+PhoneticDist = WordDistance(
     func=phonetic_dist,
-    name='PhoneticDist')  # TODO name TBD
-SegmentalDist = Distance(
+    name=PHONETIC_DIST_KEY)  # TODO name TBD
+SegmentalDist = WordDistance(
     func=segmental_word_dist,
-    name='SegmentalDist')  # TODO name TBD
-PhonDist = Distance(
+    name=SEGMENTAL_DIST_KEY)  # TODO name TBD
+PhonDist = WordDistance(
     func=phonological_dist, # TODO name TBD
-    name='PhonDist',
+    name=PHONOLOGICAL_DIST_KEY,
     cluster_threshold=0.16  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
 )
-PMIDist = Distance(
+PMIDist = WordDistance(
     func=pmi_dist,
-    name='PMIDist',
+    name=PMI_DIST_KEY,
     cluster_threshold=0.36)
-SurprisalDist = Distance(
+SurprisalDist = WordDistance(
     func=mutual_surprisal,
-    name='SurprisalDist',
+    name=SURPRISAL_DIST_KEY,
     cluster_threshold=0.74,  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
     ngram_size=1)
 # Note: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args

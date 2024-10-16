@@ -1,83 +1,83 @@
 VOWELS
-/u/ (0.083)
+/u/ (0.084)
 	<peito> /pˈɐjtu/ "BREAST_NOUN"
-	<novo> /nˈovu/ "NEW_ADJ"
-	<tempo> /tˈẽpu/ "TIME_NOUN"
+	<meio> /mˈɐju/ "MIDDLE_NOUN"
+	<sofrer> /sufɾˈeɾ/ "SUFFER_VERB"
 
-/ɐ/ (0.082)
+/ɐ/ (0.081)
 	<duas> /dˈuɐʃ/ "TWO (F)_NUM"
 	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
 	<queimar> /kɐjmˈaɾ/ "BURN_VERB"
 
-/ˈa/ (0.039)
-	<fada> /fˈaðɐ/ "FATE_NOUN"
-	<gato> /ɡˈatu/ "CAT_NOUN"
-	<viagem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
+/ˈa/ (0.04)
+	<falso> /fˈaɫsu/ "FALSE_ADJ"
+	<levar> /lɨvˈaɾ/ "CARRY_VERB"
+	<caçar> /kɐsˈaɾ/ "HUNT_VERB"
 
 /ɨ/ (0.037)
-	<doze> /dˈozɨ/ "TWELVE_NUM"
-	<vizinho> /vɨzˈiɲu/ "NEIGHBOR_NOUN"
-	<nove> /nˈɔvɨ/ "NINE_NUM"
+	<dente> /dˈẽtɨ/ "TOOTH_NOUN"
+	<nome> /nˈomɨ/ "NAME_NOUN"
+	<noite> /nˈojtɨ/ "NIGHT_NOUN"
 
-/ˈo/ (0.033)
+/ˈo/ (0.032)
 	<doce> /dˈosɨ/ "SWEET_ADJ"
 	<dona> /dˈonɐ/ "LADY_NOUN"
 	<fogo> /fˈoɣu/ "FIRE_NOUN"
 
-/ˈi/ (0.024)
-	<dia> /dˈiɐ/ "DAY_NOUN"
-	<cima> /sˈimɐ/ "SUMMIT_NOUN"
-	<argila> /ɐɾʒˈilɐ/ "CLAY_NOUN"
+/ˈe/ (0.025)
+	<morrer> /moʁˈeɾ/ "DIE_VERB"
+	<estrela> /iʃtɾˈelɐ/ "STAR_NOUN"
+	<nascer> /nɐʃsˈeɾ/ "BE BORN_VERB"
 
-/ˈe/ (0.024)
-	<ler> /lˈeɾ/ "READ_VERB"
-	<seda> /sˈeðɐ/ "SILK_NOUN"
-	<conhecer> /kuɲɨsˈeɾ/ "BE ACQUAINTED WITH_VERB"
+/ˈi/ (0.024)
+	<raiz> /ʁɐˈiʃ/ "ROOT_NOUN"
+	<filho> /fˈiʎu/ "SON_NOUN"
+	<cortiça> /kuɾtˈisɐ/ "BARK_NOUN"
 
 /ˈɐ/ (0.02)
-	<seis> /sˈɐjʃ/ "SIX_NUM"
-	<meio> /mˈɐju/ "MIDDLE_NOUN"
+	<ovelha> /ɔvˈɐjʎɐ/ "SHEEP_NOUN"
+	<lei> /lˈɐj/ "LAW_NOUN"
 	<peixe> /pˈɐjʃɨ/ "FISH_NOUN"
 
-/ˈu/ (0.017)
-	<tú> /tˈu/ "THOU_PRON"
-	<unha> /ˈuɲɐ/ "FINGERNAIL_NOUN"
-	<ruivo> /ʁˈujvu/ "RED_ADJ"
+/ˈɔ/ (0.016)
+	<vós> /vˈɔʃ/ "YOU (PL)_PRON"
+	<colo> /kˈɔlu/ "NECK_NOUN"
+	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
+
+/ˈu/ (0.016)
+	<cunho> /kˈuɲu/ "CORNER_NOUN"
+	<saúde> /sɐˈuðɨ/ "HEALTH_NOUN"
+	<usso> /ˈusu/ "BEAR_NOUN"
 
 /ˈɛ/ (0.016)
-	<século> /sˈɛkulu/ "CENTURY_NOUN"
-	<ferro> /fˈɛʁu/ "IRON_NOUN"
 	<bela> /bˈɛlɐ/ "BEAUTIFUL (F)_ADJ"
-
-/ˈɔ/ (0.016)
-	<melhor> /mɨʎˈɔɾ/ "BETTER_ADJ"
-	<nós> /nˈɔʃ/ "WE_PRON"
-	<cola> /kˈɔlɐ/ "TAIL_NOUN"
+	<inverno> /ĩvˈɛɾnu/ "WINTER_NOUN"
+	<neve> /nˈɛvɨ/ "SNOW_NOUN"
 
 /ˈɐ̃/ (0.016)
 	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
 	<são> /sˈɐ̃w̃/ "HEALTHY (M)_ADJ"
 	<branco> /bɾˈɐ̃ku/ "WHITE_ADJ"
 
-/i/ (0.011)
+/i/ (0.01)
 	<dizer> /dizˈeɾ/ "SAY-INF_VERB"
-	<espada> /iʃpˈaðɐ/ "SWORD_NOUN"
-	<estudo> /iʃtˈuðu/ "STUDY_NOUN"
+	<escrever> /iʃkɾɨvˈeɾ/ "WRITE_VERB"
+	<estio> /iʃtˈiu/ "SUMMER_NOUN"
+
+/ˈõ/ (0.006)
+	<ponte> /pˈõtɨ/ "BRIDGE_NOUN"
+	<bom> /bˈõ/ "GOOD (M.SG)_ADJ"
+	<pões> /pˈõj̃ʃ/ "PUT-2SG_VERB"
 
 /ˈẽ/ (0.006)
-	<ventre> /vˈẽtɾɨ/ "BELLY_NOUN"
-	<gente> /ʒˈẽtɨ/ "PEOPLE_NOUN"
-	<tempo> /tˈẽpu/ "TIME_NOUN"
-
-/ˈõ/ (0.005)
-	<ombro> /ˈõbɾu/ "SHOULDER_NOUN"
-	<bom> /bˈõ/ "GOOD (M.SG)_ADJ"
-	<ponto> /pˈõtu/ "POINT_NOUN"
+	<dente> /dˈẽtɨ/ "TOOTH_NOUN"
+	<vento> /vˈẽtu/ "WIND_NOUN"
+	<semente> /sɨmˈẽtɨ/ "SEED_NOUN"
 
 /ɐ̃/ (0.005)
-	<nuvem> /nˈuvɐ̃j̃/ "CLOUD_NOUN"
+	<homem> /ˈɔmɐ̃j̃/ "MAN_NOUN"
 	<viagem> /vjˈaʒɐ̃j̃/ "JOURNEY_NOUN"
-	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
+	<nuvem> /nˈuvɐ̃j̃/ "CLOUD_NOUN"
 
 /ˈĩ/ (0.003)
 	<fim> /fˈĩ/ "END_NOUN"
@@ -107,7 +107,7 @@ VOWELS
 	<cinquenta> /sĩkwˈẽtɐ/ "FIFTY_NUM"
 
 /ẽ/ (0.001)
-	<sentar> /sẽtˈaɾ/ "SIT_ADJ"
+	<sentar> /sẽtˈaɾ/ "SIT_VERB"
 	<gengiva> /ʒẽʒˈivɐ/ "GUMS_NOUN"
 
 /ũ/ (0.001)
@@ -119,130 +119,130 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.075)
-	<morte> /mˈɔɾtɨ/ "DEATH_NOUN"
-	<planger> /plɐ̃ʒˈeɾ/ "WEEP_VERB"
-	<escrever> /iʃkɾɨvˈeɾ/ "WRITE_VERB"
-
-/ʃ/ (0.037)
-	<baixo> /bˈajʃu/ "LOW_ADJ"
-	<nariz> /nɐɾˈiʃ/ "NOSE_NOUN"
-	<estudo> /iʃtˈuðu/ "STUDY_NOUN"
+/ɾ/ (0.08)
+	<caro> /kˈaɾu/ "DEAR_ADJ"
+	<lágrima> /lˈaɣɾimɐ/ "TEAR_NOUN"
+	<branco> /bɾˈɐ̃ku/ "WHITE_ADJ"
 
 /s/ (0.037)
-	<osso> /ˈosu/ "BONE_NOUN"
-	<saúde> /sɐˈuðɨ/ "HEALTH_NOUN"
-	<santo> /sˈɐ̃tu/ "SACRED_ADJ"
+	<caçar> /kɐsˈaɾ/ "HUNT_VERB"
+	<insua> /ˈinswɐ/ "ISLAND_NOUN"
+	<seda> /sˈeðɐ/ "SILK_NOUN"
 
 /t/ (0.036)
-	<forte> /fˈɔɾtɨ/ "STRONG_ADJ"
-	<tempo> /tˈẽpu/ "TIME_NOUN"
-	<estado> /iʃtˈaðu/ "STATE_NOUN"
+	<costa> /kˈɔʃtɐ/ "COAST_NOUN"
+	<junto> /ʒˈũtu/ "JOINED_ADJ"
+	<proveito> /pɾuvˈɐjtu/ "PROFIT_NOUN"
 
-/k/ (0.034)
-	<branco> /bɾˈɐ̃ku/ "WHITE_ADJ"
+/ʃ/ (0.035)
+	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
+	<chorar> /ʃuɾˈaɾ/ "WEEP_VERB"
+	<dez> /dˈɛʃ/ "TEN_NUM"
+
+/k/ (0.035)
+	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
 	<mosca> /mˈoʃkɐ/ "FLY_NOUN"
 	<cu> /kˈu/ "BUTTOCKS_NOUN"
 
 /v/ (0.03)
-	<ver> /vˈeɾ/ "SEE_VERB"
-	<escrever> /iʃkɾɨvˈeɾ/ "WRITE_VERB"
-	<vila> /vˈilɐ/ "TOWN_NOUN"
+	<via> /vˈiɐ/ "ROAD_NOUN"
+	<verme> /vˈɛɾmɨ/ "WORM_NOUN"
+	<neve> /nˈɛvɨ/ "SNOW_NOUN"
 
 /l/ (0.029)
-	<argila> /ɐɾʒˈilɐ/ "CLAY_NOUN"
-	<pelo> /pˈelu/ "HAIR_NOUN"
-	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
+	<luta> /lˈutɐ/ "FIGHT_NOUN"
+	<lebre> /lˈɛβɾɨ/ "HARE_NOUN"
+	<lágrima> /lˈaɣɾimɐ/ "TEAR_NOUN"
 
 /j/ (0.028)
-	<leite> /lˈɐjtɨ/ "MILK_NOUN"
-	<baixo> /bˈajʃu/ "LOW_ADJ"
-	<ruivo> /ʁˈujvu/ "RED_ADJ"
+	<meio> /mˈɐju/ "MIDDLE_NOUN"
+	<piolho> /pjˈoʎu/ "LOUSE_NOUN"
+	<proveito> /pɾuvˈɐjtu/ "PROFIT_NOUN"
 
-/p/ (0.027)
-	<pássaro> /pˈasɐɾu/ "BIRD_NOUN"
-	<porca> /pˈɔɾkɐ/ "SOW_NOUN"
-	<corpo> /kˈoɾpu/ "BODY_NOUN"
+/m/ (0.028)
+	<morder> /muɾðˈeɾ/ "BITE_VERB"
+	<semente> /sɨmˈẽtɨ/ "SEED_NOUN"
+	<morsegar> /muɾsɨɣˈaɾ/ "BITE_VERB"
 
-/m/ (0.026)
-	<muito> /mˈũj̃tu/ "MANY_ADJ"
-	<verme> /vˈɛɾmɨ/ "WORM_NOUN"
-	<nome> /nˈomɨ/ "NAME_NOUN"
+/p/ (0.026)
+	<pêssego> /pˈesɨɣu/ "PEACH_NOUN"
+	<palavra> /pɐlˈavɾɐ/ "WORD_NOUN"
+	<planger> /plɐ̃ʒˈeɾ/ "WEEP_VERB"
 
-/n/ (0.02)
+/n/ (0.019)
+	<noz> /nˈɔʃ/ "NUT_NOUN"
+	<novo> /nˈovu/ "NEW_ADJ"
 	<pena> /pˈenɐ/ "PAIN_NOUN"
-	<névoa> /nˈɛvwɐ/ "FOG_NOUN"
-	<nariz> /nɐɾˈiʃ/ "NOSE_NOUN"
 
 /ð/ (0.017)
+	<cidade> /siðˈaðɨ/ "CITY_NOUN"
+	<maduro> /mɐðˈuɾu/ "MATURE_NOUN"
 	<dedo> /dˈeðu/ "FINGER_NOUN"
-	<todos> /tˈoðuʃ/ "ALL (PL)_ADJ"
-	<fada> /fˈaðɐ/ "FATE_NOUN"
 
 /f/ (0.016)
-	<filho> /fˈiʎu/ "SON_NOUN"
-	<fogo> /fˈoɣu/ "FIRE_NOUN"
-	<ferro> /fˈɛʁu/ "IRON_NOUN"
+	<frio> /fɾˈiu/ "COLD_ADJ"
+	<fada> /fˈaðɐ/ "FATE_NOUN"
+	<falar> /fɐlˈaɾ/ "SPEAK_VERB"
 
 /ɣ/ (0.014)
-	<seguro> /sɨɣˈuɾu/ "SAFE_ADJ"
-	<umbigo> /ũbˈiɣu/ "NAVEL_NOUN"
-	<vergonha> /vɨɾɣˈoɲɐ/ "SHAME_NOUN"
+	<digo> /dˈiɣu/ "SAY-1SG_VERB"
+	<fogo> /fˈoɣu/ "FIRE_NOUN"
+	<agulha> /ɐɣˈuʎɐ/ "NEEDLE_NOUN"
 
 /d/ (0.013)
+	<dente> /dˈẽtɨ/ "TOOTH_NOUN"
 	<digo> /dˈiɣu/ "SAY-1SG_VERB"
-	<doce> /dˈosɨ/ "SWEET_ADJ"
-	<caldo> /kˈaɫdu/ "HOT_ADJ"
-
-/ɲ/ (0.013)
-	<vinho> /vˈiɲu/ "WINE_NOUN"
-	<banho> /bˈɐɲu/ "BATH_NOUN"
-	<rainha> /ʁɐˈiɲɐ/ "QUEEN_NOUN"
+	<duas> /dˈuɐʃ/ "TWO (F)_NUM"
 
 /ʒ/ (0.012)
-	<jovem> /ʒˈɔvɐ̃j̃/ "YOUNG_ADJ"
-	<jogo> /ʒˈoɣu/ "GAME_NOUN"
-	<junto> /ʒˈũtu/ "JOINED_ADJ"
+	<gente> /ʒˈẽtɨ/ "PEOPLE_NOUN"
+	<gelo> /ʒˈelu/ "ICE_NOUN"
+	<anjo> /ˈɐ̃ʒu/ "ANGEL_NOUN"
+
+/ɲ/ (0.012)
+	<rainha> /ʁɐˈiɲɐ/ "QUEEN_NOUN"
+	<espinha> /iʃpˈiɲɐ/ "SPINE_NOUN"
+	<unha> /ˈuɲɐ/ "FINGERNAIL_NOUN"
 
 /w/ (0.011)
+	<água> /ˈaɣwɐ/ "WATER_NOUN"
 	<quatro> /kwˈatɾu/ "FOUR_NUM"
-	<outro> /ˈowtɾu/ "OTHER_ADJ"
-	<outono> /owtˈonu/ "AUTUMN_NOUN"
-
-/b/ (0.011)
-	<branco> /bɾˈɐ̃ku/ "WHITE_ADJ"
-	<ombro> /ˈõbɾu/ "SHOULDER_NOUN"
-	<boas> /bˈoɐʃ/ "GOOD (F.PL)_ADJ"
+	<língua> /lˈĩɡwɐ/ "TONGUE_NOUN"
 
 /ʎ/ (0.01)
-	<folha> /fˈoʎɐ/ "LEAF_NOUN"
-	<joelho> /ʒwˈɐjʎu/ "KNEE_NOUN"
-	<orelha> /ɔɾˈɐjʎɐ/ "EAR_NOUN"
+	<melhor> /mɨʎˈɔɾ/ "BETTER_ADJ"
+	<ilha> /ˈiʎɐ/ "ISLAND_NOUN"
+	<ovelha> /ɔvˈɐjʎɐ/ "SHEEP_NOUN"
+
+/b/ (0.01)
+	<umbigo> /ũbˈiɣu/ "NAVEL_NOUN"
+	<baixo> /bˈajʃu/ "LOW_ADJ"
+	<bom> /bˈõ/ "GOOD (M.SG)_ADJ"
 
 /β/ (0.009)
+	<cabra> /kˈaβɾɐ/ "GOAT_NOUN"
 	<saber> /sɐβˈeɾ/ "KNOW_VERB"
 	<sabes> /sˈaβɨʃ/ "KNOW-2SG_VERB"
-	<saiba> /sˈajβɐ/ "KNOW-SBJ-1SG_VERB"
 
 /ʁ/ (0.009)
+	<ruivo> /ʁˈujvu/ "RED_ADJ"
 	<razão> /ʁɐzˈɐ̃w̃/ "REASON_NOUN"
 	<roxo> /ʁˈoʃu/ "RED_ADJ"
-	<genro> /ʒˈẽʁu/ "SON-IN-LAW_NOUN"
+
+/ɡ/ (0.008)
+	<grão> /ɡɾˈɐ̃w̃/ "GRAIN_NOUN"
+	<grande> /ɡɾˈɐ̃dɨ/ "BIG_ADJ"
+	<golpe> /ɡˈɔɫpɨ/ "STRIKE_NOUN"
 
 /w̃/ (0.008)
-	<pão> /pˈɐ̃w̃/ "BREAD_NOUN"
 	<não> /nɐ̃w̃/ "NOT_ADVERB"
+	<razão> /ʁɐzˈɐ̃w̃/ "REASON_NOUN"
 	<romão> /ʁumˈɐ̃w̃/ "ROMAN_ADJ"
 
 /ɫ/ (0.007)
-	<sol> /sˈɔɫ/ "SUN_NOUN"
-	<mil> /mˈiɫ/ "THOUSAND_NUM"
 	<sal> /sˈaɫ/ "SALT_NOUN"
-
-/ɡ/ (0.007)
-	<golpe> /ɡˈɔɫpɨ/ "STRIKE_NOUN"
-	<gola> /ɡˈɔlɐ/ "THROAT_NOUN"
-	<grande> /ɡɾˈɐ̃dɨ/ "BIG_ADJ"
+	<alma> /ˈaɫmɐ/ "SOUL_NOUN"
+	<alva> /ˈaɫvɐ/ "DAWN_NOUN"
 
 /j̃/ (0.006)
 	<homem> /ˈɔmɐ̃j̃/ "MAN_NOUN"

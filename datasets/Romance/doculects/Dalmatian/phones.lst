@@ -1,58 +1,58 @@
 VOWELS
-/ˈa/ (0.115)
-	<crauc> /krˈawk/ "CROSS_NOUN"
-	<puarc> /pwˈark/ "PIG_NOUN"
-	<vain> /vˈajn/ "WINE_NOUN"
+/ˈa/ (0.113)
+	<morar> /morˈar/ "DIE_VERB"
+	<radaika> /radˈajka/ "ROOT_NOUN"
+	<viarm> /vjˈarm/ "WORM_NOUN"
 
 /a/ (0.062)
-	<setemúna> /setemˈuna/ "WEEK_NOUN"
-	<lanɡa> /lˈaŋɡa/ "TONGUE_NOUN"
+	<inviarna> /invjˈarna/ "WINTER_NOUN"
+	<jacqua> /jˈakwa/ "WATER_NOUN"
 	<cuasta> /kwˈasta/ "COAST_NOUN"
 
-/ˈu/ (0.032)
+/ˈu/ (0.033)
 	<cur> /kˈur/ "HEART_NOUN"
 	<juf> /jˈuf/ "EGG_NOUN"
-	<vu> /vˈu/ "YOU (PL)_PRON"
+	<plungur> /plˈuŋɡur/ "WEEP_VERB"
 
 /o/ (0.029)
-	<notuor> /notwˈɔr/ "SWIM_VERB"
-	<pedóclo> /pedˈoklo/ "LOUSE_NOUN"
+	<dotco> /dˈotko/ "TWELVE_NUM"
 	<jomno> /jˈomno/ "MAN_NOUN"
+	<non> /noŋ/ "NOT_ADVERB"
 
-/ˈo/ (0.024)
-	<doi> /dˈoj/ "TWO (M)_NUM"
+/ˈo/ (0.023)
+	<noj> /nˈoj/ "WE_PRON"
 	<ros> /rˈos/ "RED_ADJ"
-	<pedóclo> /pedˈoklo/ "LOUSE_NOUN"
+	<pedóclo> /pedˈoklo/ "LOUSE_NOUN"
 
-/ˈɔ/ (0.016)
-	<muon> /mwˈɔŋ/ "HAND_NOUN"
-	<dona> /dˈɔna/ "LADY_NOUN"
-	<juopa> /jwˈɔpa/ "BEE_NOUN"
-
-/e/ (0.015)
-	<setemúna> /setemˈuna/ "WEEK_NOUN"
+/e/ (0.016)
+	<levur> /levˈur/ "CARRY_VERB"
 	<nuester> /nwˈester/ "OUR_ADJ"
-	<doje> /dˈoje/ "TWO (F)_NUM"
+	<çenie> /sˈenje/ "ASH_NOUN"
+
+/ˈe/ (0.015)
+	<molier> /moʎˈer/ "WOMAN_WIFE_NOUN"
+	<femia> /fˈemja/ "WOMAN_FEMALE_NOUN"
+	<fecuat> /fˈekwat/ "LIVER_NOUN"
 
 /ˈi/ (0.014)
+	<dicro> /dˈikro/ "SAY-INF_VERB"
 	<pitra> /pˈitra/ "STONE_NOUN"
-	<ci> /ʧˈi/ "WHO_PRON"
 	<cris> /krˈis/ "CHERRY_NOUN"
 
-/ˈe/ (0.013)
-	<venč> /vˈenʧ/ "TWENTY_NUM"
-	<nuester> /nwˈester/ "OUR_ADJ"
-	<cenc> /ʧˈeŋk/ "FIVE_NUM"
+/ˈɔ/ (0.013)
+	<luona> /lwˈɔna/ "WOOL_NOUN"
+	<nuos> /nwˈɔs/ "NOSE_NOUN"
+	<cuosa> /kwˈɔsa/ "HOUSE_NOUN"
 
-/i/ (0.01)
-	<buni> /bˈuni/ "GOOD (M.PL)_ADJ"
+/i/ (0.009)
+	<ginauk> /ʤinˈawk/ "KNEE_NOUN"
 	<uacli> /wˈakli/ "EYES_NOUN"
-	<ɡinuak> /ʤinwˈak/ "KNEE_NOUN"
+	<buni> /bˈuni/ "GOOD (M.PL)_ADJ"
 
-/u/ (0.005)
+/u/ (0.006)
 	<uciul> /uʧˈul/ "BIRD_NOUN"
 	<scrivru> /skrˈivru/ "WRITE_VERB"
-	<favlur> /fˈavlur/ "SPEAK_VERB"
+	<plungur> /plˈuŋɡur/ "WEEP_VERB"
 
 /ˈɛ/ (0.002)
 	<ociel> /oʧˈɛl/ "BIRD_NOUN"
@@ -61,117 +61,114 @@ VOWELS
 
 
 CONSONANTS
-/j/ (0.073)
-	<fiar> /fjˈar/ "IRON_NOUN"
-	<tiamp> /tjˈamp/ "TIME_NOUN"
-	<viantro> /vjˈantro/ "BELLY_NOUN"
+/j/ (0.075)
+	<jal> /jˈal/ "HE_PRON"
+	<jamna> /jˈamna/ "SOUL_NOUN"
+	<juopa> /jwˈɔpa/ "BEE_NOUN"
 
-/k/ (0.072)
-	<lanc> /lˈaŋk/ "WOOD_NOUN"
-	<cup> /kˈup/ "HEAD_NOUN"
-	<cauda> /kˈawda/ "TAIL_NOUN"
+/r/ (0.069)
+	<cur> /kˈur/ "HEART_NOUN"
+	<plungro> /plˈuŋɡro/ "WEEP_VERB"
+	<scrivru> /skrˈivru/ "WRITE_VERB"
 
-/r/ (0.064)
-	<ra> /rˈa/ "KING_NOUN"
-	<nuester> /nwˈester/ "OUR_ADJ"
-	<bar> /bˈar/ "DRINK_VERB"
+/k/ (0.065)
+	<pauc> /pˈawk/ "LITTLE_ADJ"
+	<oracla> /orˈakla/ "EAR_NOUN"
+	<jauca> /jˈawka/ "GOOSE_NOUN"
 
-/w/ (0.063)
-	<cuold> /kwˈɔlt/ "HOT_ADJ"
-	<fiaur> /fjˈawr/ "FLOWER_NOUN"
-	<rasaun> /razˈawn/ "REASON_NOUN"
-
-/n/ (0.06)
-	<buni> /bˈuni/ "GOOD (M.PL)_ADJ"
-	<setemúna> /setemˈuna/ "WEEK_NOUN"
-	<nisun> /nizˈuŋ/ "NONE_PRON"
+/w/ (0.062)
+	<muasca> /mwˈaska/ "FLY_NOUN"
+	<sual> /swˈal/ "SALT_NOUN"
+	<fuart> /fwˈart/ "STRONG_ADJ"
 
 /l/ (0.057)
-	<mil> /mˈil/ "HONEY_NOUN"
+	<luc> /lˈuk/ "PLACE_NOUN"
+	<cuold> /kwˈɔlt/ "HOT_ADJ"
 	<ociel> /oʧˈɛl/ "BIRD_NOUN"
-	<pedóclo> /pedˈoklo/ "LOUSE_NOUN"
 
-/t/ (0.045)
-	<tu> /tˈu/ "THOU_PRON"
-	<nojiltri> /nojˈiltri/ "WE_PRON"
+/n/ (0.052)
+	<nuos> /nwˈɔs/ "NOSE_NOUN"
+	<sentuor> /sentwˈɔr/ "SIT_VERB"
+	<venč> /vˈenʧ/ "TWENTY_NUM"
+
+/t/ (0.047)
 	<cataina> /katˈajna/ "CHAIN_NOUN"
+	<uapto> /wˈapto/ "EIGHT_NUM"
+	<dotco> /dˈotko/ "TWELVE_NUM"
 
 /s/ (0.035)
-	<cuosa> /kwˈɔsa/ "HOUSE_NOUN"
-	<ros> /rˈos/ "RED_ADJ"
-	<spaica> /spˈajka/ "EAR OF GRAIN_NOUN"
+	<fiasta> /fjˈasta/ "PARTY_NOUN"
+	<cuasta> /kwˈasta/ "COAST_NOUN"
+	<sual> /swˈal/ "SALT_NOUN"
 
-/p/ (0.032)
-	<sapto> /sˈapto/ "SEVEN_NUM"
-	<plain> /plˈajn/ "FULL_ADJ"
-	<copsa> /kˈopsa/ "THIGH_NOUN"
+/p/ (0.034)
+	<paraula> /parˈawla/ "WORD_NOUN"
+	<sputa> /spˈuta/ "SWORD_NOUN"
+	<lipro> /lˈipro/ "HARE_NOUN"
+
+/ŋ/ (0.026)
+	<cuarn> /kwˈarŋ/ "HORN_NOUN"
+	<langa> /lˈaŋɡa/ "TONGUE_NOUN"
+	<join> /jˈojŋ/ "ONE_NUM"
 
 /m/ (0.026)
-	<setemúna> /setemˈuna/ "WEEK_NOUN"
-	<tiamp> /tjˈamp/ "TIME_NOUN"
-	<mur> /mˈur/ "SEA_NOUN"
+	<semianz> /semjˈanʦ/ "SEED_NOUN"
+	<mesu> /mˈezu/ "MIDDLE_NOUN"
+	<jamna> /jˈamna/ "SOUL_NOUN"
 
-/v/ (0.025)
-	<pluv> /pluv/ "RAIN_NOUN"
+/d/ (0.023)
+	<dai> /dˈaj/ "DAY_NOUN"
+	<dolc> /dˈolk/ "SWEET_ADJ"
+	<dona> /dˈɔna/ "LADY_NOUN"
+
+/v/ (0.022)
+	<niav> /njˈav/ "SNOW_NOUN"
 	<favlur> /fˈavlur/ "SPEAK_VERB"
-	<viarm> /vjˈarm/ "WORM_NOUN"
-
-/d/ (0.025)
-	<viard> /vjˈard/ "GREEN_ADJ"
-	<radaika> /radˈajka/ "ROOT_NOUN"
-	<cuod> /kwˈɔd/ "TAIL_NOUN"
-
-/ŋ/ (0.018)
-	<blanc> /blˈaŋk/ "WHITE_ADJ"
-	<lanc> /lˈaŋk/ "WOOD_NOUN"
-	<non> /noŋ/ "NOT_ADVERB"
+	<vu> /vˈu/ "YOU (PL)_PRON"
 
 /f/ (0.018)
-	<juf> /jˈuf/ "EGG_NOUN"
-	<favlur> /fˈavlur/ "SPEAK_VERB"
-	<fiar> /fjˈar/ "IRON_NOUN"
-
-/b/ (0.016)
-	<juarbol> /jwˈarbol/ "TREE_NOUN"
-	<buni> /bˈuni/ "GOOD (M.PL)_ADJ"
-	<bu> /bˈu/ "OX_NOUN"
+	<fiaur> /fjˈawr/ "FLOWER_NOUN"
+	<nuf> /nˈuf/ "NEW_ADJ"
+	<fuart> /fwˈart/ "STRONG_ADJ"
 
 /ʧ/ (0.014)
-	<uciul> /uʧˈul/ "BIRD_NOUN"
-	<mančur> /manʧˈur/ "EAT_VERB"
-	<vičain> /viʧˈajn/ "NEIGHBOR_NOUN"
+	<ociel> /oʧˈɛl/ "BIRD_NOUN"
+	<ciant> /ʧˈant/ "HUNDRED_NUM"
+	<cil> /ʧˈil/ "SKY_NOUN"
 
-/ɡ/ (0.006)
-	<lanɡa> /lˈaŋɡa/ "TONGUE_NOUN"
-	<jonɡla> /jˈoŋɡla/ "FINGERNAIL_NOUN"
-	<ɡrund> /ɡrˈund/ "BIG_ADJ"
+/b/ (0.014)
+	<bu> /bˈu/ "OX_NOUN"
+	<bar> /bˈar/ "DRINK_VERB"
+	<bune> /bˈune/ "GOOD (F.PL)_ADJ"
 
-/ʎ/ (0.003)
-	<fualja> /fwˈaʎa/ "LEAF_NOUN"
+/ɡ/ (0.008)
+	<plungro> /plˈuŋɡro/ "WEEP_VERB"
+	<jongla> /jˈoŋɡla/ "FINGERNAIL_NOUN"
+	<glaz> /ɡlˈaʦ/ "ICE_NOUN"
+
+/ʎ/ (0.004)
 	<felja> /fˈeʎa/ "DAUGHTER_NOUN"
-	<felj> /fˈeʎ/ "SON_NOUN"
+	<fualja> /fwˈaʎa/ "LEAF_NOUN"
+	<molier> /moʎˈer/ "WOMAN_WIFE_NOUN"
 
-/z/ (0.003)
-	<rasaun> /razˈawn/ "REASON_NOUN"
+/z/ (0.004)
+	<rasaun> /razˈawŋ/ "REASON_NOUN"
+	<causa> /kˈawza/ "THING_NOUN"
 	<nisun> /nizˈuŋ/ "NONE_PRON"
-	<mesu> /mˈezu/ "MIDDLE_NOUN"
-
-/ʤ/ (0.002)
-	<ɡinuak> /ʤinwˈak/ "KNEE_NOUN"
-	<ɡinauk> /ʤinˈawk/ "KNEE_NOUN"
 
 /ʦ/ (0.002)
+	<glaz> /ɡlˈaʦ/ "ICE_NOUN"
 	<semianz> /semjˈanʦ/ "SEED_NOUN"
-	<ɡlaz> /ɡlˈaʦ/ "ICE_NOUN"
 
-/c/ (0.001)
-	<colaur> /colˈawr/ "COLOR_NOUN"
-
-/ʒ/ (0.001)
-	<zuolno> /ʒwˈɔlno/ "YELLOW_ADJ"
+/ʤ/ (0.002)
+	<ginauk> /ʤinˈawk/ "KNEE_NOUN"
+	<ginuak> /ʤinwˈak/ "KNEE_NOUN"
 
 /ʣ/ (0.001)
 	<ziant> /ʣjˈant/ "PEOPLE_NOUN"
+
+/ʒ/ (0.001)
+	<zuolno> /ʒwˈɔlno/ "YELLOW_ADJ"
 
 
 

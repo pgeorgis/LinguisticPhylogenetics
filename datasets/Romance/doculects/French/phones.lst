@@ -1,176 +1,176 @@
 VOWELS
-/a/ (0.068)
+/a/ (0.066)
 	<doigt> /dwa/ "FINGER_NOUN"
 	<argile> /aʁʒil/ "CLAY_NOUN"
 	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
 
-/ɛ/ (0.055)
-	<chaîne> /ʃɛn/ "CHAIN_NOUN"
+/ɛ/ (0.054)
+	<cher> /ʃɛʁ/ "DEAR_ADJ"
 	<chair> /ʃɛʁ/ "MEAT_NOUN"
-	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
+	<sept> /sɛt/ "SEVEN_NUM"
 
-/i/ (0.047)
+/i/ (0.048)
 	<racine> /ʁasin/ "ROOT_NOUN"
 	<dire> /diʁ/ "SAY-INF_VERB"
-	<dix> /dis/ "TEN_NUM"
+	<cime> /sim/ "SUMMIT_NOUN"
 
 /e/ (0.037)
-	<neiger> /neʒe/ "SNOW (VERB)_VERB"
-	<glacer> /ɡlase/ "FREEZE_VERB"
-	<épi> /epi/ "EAR OF GRAIN_NOUN"
+	<chercher> /ʃɛʁʃe/ "SEARCH_VERB"
+	<geler> /ʒəle/ "FREEZE_VERB"
+	<tousser> /tuse/ "COUGH_VERB"
 
 /ɛ̃/ (0.025)
-	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
+	<juin> /ʒɥɛ̃/ "JUNE_PROPN"
 	<bain> /bɛ̃/ "BATH_NOUN"
-	<vin> /vɛ̃/ "WINE_NOUN"
+	<bien> /bjɛ̃/ "WELL (ADV)_ADV"
 
-/ɔ/ (0.025)
-	<or> /ɔʁ/ "GOLD_NOUN"
-	<bonnes> /bɔn/ "GOOD (F.PL)_ADJ"
-	<porc> /pɔʁ/ "PIG_NOUN"
+/u/ (0.025)
+	<genou> /ʒənu/ "KNEE_NOUN"
+	<écouter> /ekute/ "LISTEN_VERB"
+	<coup> /ku/ "STRIKE_NOUN"
 
-/u/ (0.023)
-	<vous> /vu/ "YOU (PL)_PRON"
-	<tous> /tu/ "ALL (PL)_ADJ"
-	<loup> /lu/ "WOLF_NOUN"
+/ɔ/ (0.024)
+	<fort> /fɔʁ/ "STRONG_ADJ"
+	<automne> /otɔn/ "AUTUMN_NOUN"
+	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
 
-/o/ (0.021)
-	<pauvre> /povʁ/ "POOR_ADJ"
-	<aube> /ob/ "DAWN_NOUN"
-	<côte> /kot/ "COAST_NOUN"
+/ɑ̃/ (0.02)
+	<chanter> /ʃɑ̃te/ "SING_VERB"
+	<cinquante> /sɛ̃kɑ̃t/ "FIFTY_NUM"
+	<manger> /mɑ̃ʒe/ "EAT_VERB"
 
-/ɑ̃/ (0.019)
-	<blanc> /blɑ̃/ "WHITE_ADJ"
-	<grand> /ɡʁɑ̃/ "BIG_ADJ"
-	<cent> /sɑ̃/ "HUNDRED_NUM"
+/o/ (0.02)
+	<gros> /ɡʁo/ "THICK_ADJ"
+	<os> /o/ "BONE_NOUN"
+	<chaud> /ʃo/ "HOT_ADJ"
 
-/ɔ̃/ (0.016)
+/ɔ̃/ (0.015)
 	<pont> /pɔ̃/ "BRIDGE_NOUN"
 	<rond> /ʁɔ̃/ "ROUND_ADJ"
 	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
 
-/y/ (0.016)
+/y/ (0.014)
 	<sur> /syʁ/ "ABOVE_PREP"
-	<ru> /ʁy/ "RIVER_NOUN"
-	<mûr> /myʁ/ "MATURE_NOUN"
+	<fumée> /fyme/ "SMOKE_NOUN"
+	<lutte> /lyt/ "FIGHT_NOUN"
 
-/œ/ (0.014)
+/œ/ (0.013)
+	<bœuf> /bœf/ "OX_NOUN"
 	<œil> /œj/ "EYE_NOUN"
 	<feuille> /fœj/ "LEAF_NOUN"
-	<gueule> /ɡœl/ "THROAT_NOUN"
+
+/ə/ (0.012)
+	<semaine> /səmɛn/ "WEEK_NOUN"
+	<lever> /ləve/ "CARRY_VERB"
+	<semance> /səmɑ̃s/ "SEED_NOUN"
 
 /ø/ (0.011)
-	<mieux> /mjø/ "BETTER_ADV"
-	<vieux> /vjø/ "OLD_ADJ"
 	<jeu> /ʒø/ "GAME_NOUN"
-
-/ə/ (0.01)
-	<genou> /ʒənu/ "KNEE_NOUN"
-	<que> /kə/ "WHAT_PRON"
-	<petit> /pəti/ "SMALL_ADJ"
+	<peu> /pø/ "LITTLE_ADJ"
+	<queue> /kø/ "TAIL_NOUN"
 
 
 
 CONSONANTS
-/ʁ/ (0.1)
+/ʁ/ (0.102)
+	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
 	<faire> /fɛʁ/ "DO_VERB"
-	<graine> /ɡʁɛn/ "GRAIN_NOUN"
-	<pierre> /pjɛʁ/ "STONE_NOUN"
+	<grain> /ɡʁɛ̃/ "GRAIN_NOUN"
 
-/l/ (0.058)
-	<fleur> /flœʁ/ "FLOWER_NOUN"
+/l/ (0.056)
+	<voler> /vɔle/ "FLY_VERB"
+	<sel> /sɛl/ "SALT_NOUN"
 	<ficelle> /fisɛl/ "STRING_NOUN"
-	<lac> /lak/ "LAKE_NOUN"
 
-/s/ (0.052)
+/s/ (0.053)
+	<su> /sy/ "KNOWN_VERB"
 	<glacer> /ɡlase/ "FREEZE_VERB"
 	<tous> /tus/ "ALL (PL)_ADJ"
-	<occire> /ɔksiʁ/ "KILL_VERB"
 
-/n/ (0.036)
+/n/ (0.035)
+	<noix> /nwa/ "NUT_NOUN"
 	<nous> /nu/ "WE_PRON"
 	<nue> /ny/ "CLOUD_NOUN"
-	<bonnes> /bɔn/ "GOOD (F.PL)_ADJ"
-
-/p/ (0.035)
-	<pêche> /pɛʃ/ "PEACH_NOUN"
-	<plume> /plym/ "FEATHER_NOUN"
-	<puy> /pɥi/ "PODIUM_NOUN"
-
-/v/ (0.034)
-	<hiver> /ivɛʁ/ "WINTER_NOUN"
-	<vingt> /vɛ̃/ "TWENTY_NUM"
-	<gencive> /ʒɑ̃siv/ "GUMS_NOUN"
 
 /t/ (0.034)
-	<lettre> /lɛtʁ/ "LETTER_NOUN"
-	<tuer> /tɥe/ "KILL_VERB"
-	<étude> /etyd/ "STUDY_NOUN"
+	<tousser> /tuse/ "COUGH_VERB"
+	<mater> /mate/ "KILL_VERB"
+	<taureau> /toʁo/ "BULL_NOUN"
 
-/w/ (0.033)
+/p/ (0.034)
+	<puy> /pɥi/ "PODIUM_NOUN"
+	<pierre> /pjɛʁ/ "STONE_NOUN"
+	<pluie> /plɥi/ "RAIN_NOUN"
+
+/v/ (0.033)
+	<hiver> /ivɛʁ/ "WINTER_NOUN"
+	<gencive> /ʒɑ̃siv/ "GUMS_NOUN"
+	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
+
+/w/ (0.032)
+	<joie> /ʒwa/ "JOY_NOUN"
+	<seoir> /swaʁ/ "SIT_VERB"
 	<étoile> /etwal/ "STAR_NOUN"
-	<point> /pwɛ̃/ "POINT_NOUN"
-	<noir> /nwaʁ/ "BLACK_ADJ"
 
 /m/ (0.029)
-	<semaine> /səmɛn/ "WEEK_NOUN"
-	<mater> /mate/ "KILL_VERB"
-	<fumée> /fyme/ "SMOKE_NOUN"
-
-/k/ (0.029)
-	<queue> /kø/ "TAIL_NOUN"
-	<obscur> /ɔpskyʁ/ "DARK_ADJ"
-	<caille> /kaj/ "QUAIL_NOUN"
+	<dormir> /dɔʁmiʁ/ "SLEEP_VERB"
+	<mordre> /mɔʁdʁ/ "BITE_VERB"
+	<mille> /mil/ "THOUSAND_NUM"
 
 /f/ (0.029)
-	<fête> /fɛt/ "PARTY_NOUN"
-	<faire> /fɛʁ/ "DO_VERB"
-	<fil> /fil/ "STRING_NOUN"
+	<chef> /ʃɛf/ "HEAD_NOUN"
+	<fils> /fis/ "SON_NOUN"
+	<force> /fɔʁs/ "STRENGTH_NOUN"
 
-/j/ (0.028)
-	<vieux> /vjø/ "OLD_ADJ"
-	<voyage> /vwajaʒ/ "JOURNEY_NOUN"
-	<siècle> /sjɛkl/ "CENTURY_NOUN"
+/k/ (0.028)
+	<cou> /ku/ "NECK_NOUN"
+	<clamer> /klame/ "CALL_VERB"
+	<sec> /sɛk/ "DRY (M)_ADJ"
+
+/j/ (0.027)
+	<lion> /ljɔ̃/ "LION_NOUN"
+	<ouvrier> /uvʁije/ "WORKER_NOUN"
+	<caille> /kaj/ "QUAIL_NOUN"
 
 /ʒ/ (0.023)
-	<manger> /mɑ̃ʒe/ "EAT_VERB"
-	<gentil> /ʒɑ̃ti/ "NICE_ADJ"
-	<joie> /ʒwa/ "JOY_NOUN"
-
-/d/ (0.022)
-	<pondre> /pɔ̃dʁ/ "PUT_VERB"
+	<jeune> /ʒœn/ "YOUNG_ADJ"
 	<gendre> /ʒɑ̃dʁ/ "SON-IN-LAW_NOUN"
-	<plaindre> /plɛ̃dʁ/ "WEEP_VERB"
+	<jaune> /ʒon/ "YELLOW_ADJ"
 
-/ʃ/ (0.021)
-	<château> /ʃato/ "CASTLE_NOUN"
-	<chez> /ʃe/ "HOUSE_NOUN"
-	<chat> /ʃa/ "CAT_NOUN"
+/ʃ/ (0.023)
+	<cheveu> /ʃəvø/ "HAIR_NOUN"
+	<chaîne> /ʃɛn/ "CHAIN_NOUN"
+	<chaud> /ʃo/ "HOT_ADJ"
 
-/b/ (0.019)
-	<bonne> /bɔn/ "GOOD (F.SG)_ADJ"
-	<bien> /bjɛ̃/ "WELL (ADV)_ADV"
-	<arbre> /aʁbʁ/ "TREE_NOUN"
+/d/ (0.02)
+	<deux> /dø/ "TWO (F)_NUM"
+	<doux> /du/ "SWEET_ADJ"
+	<doigt> /dwa/ "FINGER_NOUN"
+
+/b/ (0.02)
+	<chambre> /ʃɑ̃bʁ/ "CHAMBER_NOUN"
+	<bœuf> /bœf/ "OX_NOUN"
+	<herbe> /ɛʁb/ "GRASS_NOUN"
 
 /ɡ/ (0.013)
-	<aiguille> /ɛɡɥij/ "NEEDLE_NOUN"
-	<glacer> /ɡlase/ "FREEZE_VERB"
+	<ongle> /ɔ̃ɡl/ "FINGERNAIL_NOUN"
+	<grain> /ɡʁɛ̃/ "GRAIN_NOUN"
 	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
 
 /ɥ/ (0.01)
-	<fruit> /fʁɥi/ "FRUIT_NOUN"
+	<nuage> /nɥaʒ/ "CLOUD_NOUN"
+	<puy> /pɥi/ "PODIUM_NOUN"
 	<puits> /pɥi/ "WELL_NOUN"
-	<pluie> /plɥi/ "RAIN_NOUN"
 
 /z/ (0.006)
-	<cerise> /səʁiz/ "CHERRY_NOUN"
-	<oiseau> /wazo/ "BIRD_NOUN"
-	<douze> /duz/ "TWELVE_NUM"
+	<voisin> /vwazɛ̃/ "NEIGHBOR_NOUN"
+	<chose> /ʃoz/ "THING_NOUN"
+	<raison> /ʁɛzɔ̃/ "REASON_NOUN"
 
 /ɲ/ (0.005)
 	<Espagne> /ɛspaɲ/ "SPAIN_PROPN"
 	<araignée> /aʁeɲe/ "SPIDER_NOUN"
-	<ligne> /liɲ/ "LINE_NOUN"
+	<vergogne> /vɛʁɡɔɲ/ "SHAME_NOUN"
 
 
 

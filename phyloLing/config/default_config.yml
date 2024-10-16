@@ -6,6 +6,9 @@ family:
   exclude: []
   # outdir: path/to/outdir
 
+experiment:
+  name: 
+
 transcription:
     global:
         asjp: false
@@ -16,6 +19,7 @@ transcription:
         suprasegmentals: 
         level_suprasegmentals: 
         ch_to_remove: {' '}
+        min_phone_instances: 2
     # doculects:
     #     French:
     #         ignore_stress: true
@@ -26,15 +30,14 @@ alignment:
   gap_ch: '-' # alternative null character <∅> looks too similar to IPA character <ø>
   pad_ch: '#'
 
-pmi:
-  refresh: []
-  refresh_all_pmi: false
-
-surprisal:
+phon_corr:
+  n_samples: 3
+  sample_size: 0.8
+  min_corr: 2
   ngram: 1
   phon_env: true 
   refresh: []
-  refresh_all_surprisal: false
+  refresh_all: false
 
 cluster:
   cognates: auto
@@ -47,12 +50,15 @@ evaluation:
   pmi_weight: 1.5
   surprisal_weight: 2
   phon_weight: 1
+  normalize_weights: false
   n_samples: 10
   sample_size: 0.8
   exclude_synonyms: true
   calibrate: true
   min_similarity: 0
+  precalculated_word_scores: 
 
 tree:
   linkage: nj
-  newick: true # TODO change default to true in phyloLing.py
+  root:
+  reference: []

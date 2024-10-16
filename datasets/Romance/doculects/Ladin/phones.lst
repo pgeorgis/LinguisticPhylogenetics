@@ -1,7 +1,7 @@
 VOWELS
-/a/ (0.079)
+/a/ (0.08)
 	<secia> /sˈeʨa/ "DRY (F)_ADJ"
-	<coda> /kˈoda/ "TAIL_NOUN"
+	<spada> /ʃpˈada/ "SWORD_NOUN"
 	<giamié> /ʥamjˈe/ "CHANGE_VERB"
 
 /ˈɛ/ (0.06)
@@ -9,8 +9,8 @@ VOWELS
 	<uef> /wˈɛf/ "EGG_NOUN"
 	<temp> /tˈɛmp/ "TIME_NOUN"
 
-/ˈe/ (0.048)
-	<te> /tˈe/ "THOU_PRON"
+/ˈe/ (0.049)
+	<nodé> /nodˈe/ "SWIM_VERB"
 	<ciacé> /ʨaʧˈe/ "HUNT_VERB"
 	<ie> /jˈe/ "I_PRON"
 
@@ -25,17 +25,17 @@ VOWELS
 	<conesce> /konˈeʃe/ "BE ACQUAINTED WITH_VERB"
 
 /ˈo/ (0.028)
-	<dodesc> /dˈodeʃ/ "TWELVE_NUM"
-	<ousc> /ˈowʃ/ "VOICE_NOUN"
+	<gola> /ɡˈola/ "THROAT_NOUN"
+	<doi> /dˈoj/ "TWO (M)_NUM"
 	<soura> /sˈowra/ "ABOVE_PREP"
 
-/ˈi/ (0.028)
+/ˈi/ (0.027)
 	<vint> /vˈint/ "TWENTY_NUM"
 	<regina> /reʥˈina/ "QUEEN_NOUN"
 	<mi> /mˈi/ "I_OBL_PRON"
 
-/ˈɔ/ (0.022)
-	<bo> /bˈɔ/ "OX_NOUN"
+/ˈɔ/ (0.021)
+	<sos> /sˈɔs/ "SAUCE_NOUN"
 	<os> /ˈɔs/ "BONE_NOUN"
 	<bona> /bˈɔna/ "GOOD (F.SG)_ADJ"
 
@@ -72,15 +72,15 @@ CONSONANTS
 	<cern> /ʨˈɛrn/ "MEAT_NOUN"
 	<gras> /ɡrˈas/ "FAT_NOUN"
 
-/n/ (0.062)
-	<nodé> /nodˈe/ "SWIM_VERB"
+/n/ (0.063)
+	<spina> /ʃpˈina/ "SPINE_NOUN"
 	<nuef> /nwˈɛf/ "NEW_ADJ"
 	<nasce> /nˈaʃe/ "BE BORN_VERB"
 
-/t/ (0.042)
+/t/ (0.043)
 	<lat> /lˈat/ "MILK_NOUN"
 	<set> /sˈɛt/ "SEVEN_NUM"
-	<te> /tˈe/ "THOU_PRON"
+	<isté> /istˈe/ "SUMMER_NOUN"
 
 /s/ (0.037)
 	<scur> /skˈur/ "DARK_ADJ"
@@ -102,15 +102,15 @@ CONSONANTS
 	<cuer> /kwˈɛr/ "HEART_NOUN"
 	<cuessa> /kwˈɛsa/ "THIGH_NOUN"
 
-/p/ (0.029)
-	<parola> /parˈɔla/ "WORD_NOUN"
-	<Spagna> /ʃpˈaɲa/ "SPAIN_PROPN"
-	<piet> /pjˈɛt/ "BREAST_NOUN"
-
 /m/ (0.029)
-	<temp> /tˈɛmp/ "TIME_NOUN"
-	<me> /mˈe/ "I_OBL_PRON"
+	<femena> /fˈemena/ "WOMAN_FEMALE_NOUN"
 	<mer> /mˈɛr/ "SEA_NOUN"
+	<morde> /mˈɔrde/ "BITE_VERB"
+
+/p/ (0.028)
+	<temp> /tˈɛmp/ "TIME_NOUN"
+	<piedl> /pjˈɛdl/ "LOUSE_NOUN"
+	<Spagna> /ʃpˈaɲa/ "SPAIN_PROPN"
 
 /f/ (0.027)
 	<frut> /frˈut/ "FRUIT_NOUN"
@@ -127,8 +127,8 @@ CONSONANTS
 	<save> /sˈave/ "WISE_ADJ"
 	<vent> /vˈɛnt/ "WIND_NOUN"
 
-/ʨ/ (0.022)
-	<ciel> /ʨˈel/ "SKY_NOUN"
+/ʨ/ (0.023)
+	<cianté> /ʨantˈe/ "SING_VERB"
 	<moscia> /mˈoʃʨa/ "FLY_NOUN"
 	<ciadeina> /ʨadˈejna/ "CHAIN_NOUN"
 
@@ -143,7 +143,7 @@ CONSONANTS
 	<rejon> /reʒˈon/ "REASON_NOUN"
 
 /b/ (0.015)
-	<bocia> /bˈɔʨa/ "MOUTH_NOUN"
+	<bocia> /bˈoʨa/ "MOUTH_NOUN"
 	<bas> /bˈas/ "LOW_ADJ"
 	<bona> /bˈɔna/ "GOOD (F.SG)_ADJ"
 

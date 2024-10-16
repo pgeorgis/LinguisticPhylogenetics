@@ -1,9 +1,12 @@
 family:
     name: Germanic
-    file: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/datasets/Germanic/data/germanic_data.tsv
+    file: datasets/Germanic/data/germanic_data.tsv
     min_amc: 0.65
     exclude: ['Old English', 'Old Norse']
-    outdir: /Users/philip.georgis/Documents/Projects/LinguisticPhylogenetics.nosync/datasets/Germanic/
+    outdir: datasets/Germanic/
+
+experiment:
+  name: "update_germanic"
 
 transcription:
     global:
@@ -17,30 +20,29 @@ transcription:
     #     Danish:
     #         suprasegmentals: ['ˀ']
 
-pmi:
+phon_corr:
+    phon_env: false
     refresh: []
-    refresh_all_pmi: true
-
-surprisal:
-    ngram: 1
-    phon_env: true 
-    refresh: []
-    refresh_all_surprisal: true
+    refresh_all: true
 
 cluster:
     cognates: none
 
 evaluation:
     similarity: gradient
-    method: composite
-    pmi_weight: 1.5
+    method: hybrid
+    pmi_weight: 0
     surprisal_weight: 2
-    phon_weight: 1
+    phon_weight: 0.5
+    normalize_weights: false
     n_samples: 10
     sample_size: 0.8
-    calibrate: true
+    calibrate: false
     min_similarity: 0
 
 tree:
     linkage: nj
-    newick: true
+    root: Proto-Germanic
+    reference: [
+        "datasets/Germanic/trees/ref/reference_001.tre"
+    ]
