@@ -164,11 +164,13 @@ def init_composite(params):
     return CompositeDist
 
 
-def load_precalculated_word_scores(distance_dir, family, dist_keys):
+def load_precalculated_word_scores(distance_dir, family, dist_keys, excluded_doculects):
     doculect_pairs = family.get_doculect_pairs(bidirectional=True)
     precalculated_word_scores = defaultdict(lambda:{})
     n_files_found = 0
     for lang1, lang2 in doculect_pairs:
+        if lang1.name in excluded_doculects or lang2.name in excluded_doculects:
+            continue
         scored_words_file = os.path.join(
             distance_dir,
             lang1.path_name,
@@ -360,7 +362,8 @@ if __name__ == "__main__":
         precalculated_word_scores = load_precalculated_word_scores(
             distance_dir=eval_params['precalculated_word_scores'],
             family=family,
-            dist_keys=[PMI_DIST_KEY, SURPRISAL_DIST_KEY, PHONOLOGICAL_DIST_KEY]  # TODO maybe needs to be more customizable
+            dist_keys=[PMI_DIST_KEY, SURPRISAL_DIST_KEY, PHONOLOGICAL_DIST_KEY],  # TODO maybe needs to be more customizable
+            excluded_doculects=phon_corr_params['refresh'],
         )
     
     # Create cognate similarity (WordDistance object) measure according to settings
