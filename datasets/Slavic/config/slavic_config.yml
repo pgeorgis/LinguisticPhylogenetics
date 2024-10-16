@@ -23,7 +23,7 @@ cluster:
 
 evaluation:
     similarity: gradient
-    method: composite
+    method: hybrid
     pmi_weight: 1.5
     surprisal_weight: 2
     phon_weight: 1
