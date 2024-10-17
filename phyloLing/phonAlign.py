@@ -18,31 +18,30 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(mes
 logger = logging.getLogger(__name__)
 
 
-def needleman_wunsch_extended(seq1, seq2,
-                              align_cost,
-                              gap_cost,
-                              default_gop,
-                              gap_ch=GAP_CH_DEFAULT,
-                              allow_complex=True,
-                              maximize_score=False,
+def needleman_wunsch_extended(seq1: list,
+                              seq2: list,
+                              align_cost: dict,
+                              gap_cost: dict,
+                              default_gop: int | float,
+                              gap_ch: str=GAP_CH_DEFAULT,
+                              allow_complex: bool=True,
+                              maximize_score: bool=False,
                               ):
-    """
-    Align two sequences with a modified Needleman-Wunsch algorithm, allowing for flexible alignments.
+    f"""Aligns two sequences with an extended version of the Needleman-Wunsch algorithm, optionally allowing for complex alignments.
 
     Args:
-        seq1: list of elements in sequence 1.
-        seq2: list of elements in sequence 2.
-        align_cost: Dictionary where the keys are tuples of sub-sequences to align,
-                    and the values are the associated cost.
-                    For example: align_cost[(('A',), ('G', 'C'))] gives the cost of aligning 'A' with 'GC'.
-        gap_cost: Dictionary where the keys are tuples representing gaps and sub-sequences,
-                  and the values are the associated gap cost.
-                  For example: gap_cost[('A', None)] gives the cost of aligning 'A' to a gap.
+        seq1 (list): List of units in sequence 1.
+        seq2 (list): List of units in sequence 2.
+        align_cost (dict): Dictionary of alignment costs between units.
+        gap_cost (dict): Dictionary of costs to align a unit with a gap.
+        default_gop (int | float): Default gap opening penalty in case pair is not in gap_cost dictionary.
+        gap_ch (str, optional): Gap character. Defaults to "{GAP_CH_DEFAULT}".
+        allow_complex (bool, optional): Allow complex alignments (one-to-many, many-to-one, many-to-many, etc.). Defaults to True.
+        maximize_score (bool, optional): If True, optimal alignments are computed by maximizing the alignment score; else by minimizing the alignment cost. Defaults to False.
 
     Returns:
-        alignment_score: The optimal alignment score.
-        aligned_seq1, aligned_seq2: The two aligned sequences (as lists).
-    """ # TODO update documentation
+        (cost, alignment, (seq_map1, seq_map2)) (tuple): Tuple containing the alignment cost/score, alignment (list of tuples), and a tuple aligned sequence map dicts.
+    """
     n = len(seq1)
     m = len(seq2)
     worst_score = -inf if maximize_score else inf
