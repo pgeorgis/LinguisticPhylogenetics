@@ -17,6 +17,8 @@ from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
 
 from phyloLing import Word
 
+# Designate maximum sonority as sonority of a toneme
+MAX_SONORITY = _toSegment('˧').sonority
 
 class WordDistance(Distance):
     def eval(self, x, y, **kwargs):
@@ -277,7 +279,6 @@ def phonological_dist(word1,
                       word2=None,
                       sim_func=phone_sim,
                       penalize_sonority=True,
-                      max_sonority=17,  # Highest sonority: suprasegmentals/tonemes = lowest deletion penalty
                       normalize_geminates=True,
                       context_reduction=False,
                       prosodic_env_scaling=True,
@@ -291,7 +292,6 @@ def phonological_dist(word1,
         word2 (phyloLing.Word): second Word object. Defaults to None.
         sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
-        max_sonority (int, optional): Maximum sonority value. Defaults to 17 as defined in phonUtils.segment submodule.
         normalize_geminates (bool, optional): Adjusts deletion penalties when geminates (double consonants) are aligned with long consonants. Defaults to True.
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
         prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
@@ -347,7 +347,7 @@ def phonological_dist(word1,
 
             if penalize_sonority:
                 sonority = deleted_segment.sonority
-                sonority_penalty = 1 - (sonority / (max_sonority + 1))
+                sonority_penalty = 1 - (sonority / (MAX_SONORITY + 1))
                 penalty *= sonority_penalty
 
             # Designate indices of deleted segment and gap
