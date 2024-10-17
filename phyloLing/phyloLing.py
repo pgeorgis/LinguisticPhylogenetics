@@ -167,18 +167,27 @@ class LexicalDataset:
                     doculects_dir=self.doculects_dir,
                     language_count=len(self.languages),
                 ),
-                family_concept_keys=self.concepts.keys(),
-                logger=self.logger,
                 data=language_vocab_data[lang],
                 columns=self.columns,
                 transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global']),
                 alignment_params=self.alignment_params,
+                logger=self.logger,
             )
             self.logger.info(f'Loaded doculect {lang}.')
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
         for lang in language_list:
-            self.languages[lang].write_missing_concepts()
+            self.write_missing_concepts(lang)
+    
+    def write_missing_concepts(self, doculect):
+        """Writes a missing_concepts.lst file indicating which concepts present
+        in the lexical dataset are missing from a particular doculect."""
+        doculect = self.languages[doculect]
+        missing_lst = os.path.join(self.doculects_dir, doculect.path_name, "missing_concepts.lst")
+        missing_concepts = self.concepts.keys() - doculect.vocabulary.keys()
+        missing_concepts = '\n'.join(sorted(missing_concepts))
+        with open(missing_lst, 'w') as f:
+            f.write(missing_concepts)
 
     def load_gold_cognate_sets(self):
         """Creates dictionary sorted by cognate sets"""
@@ -1095,12 +1104,10 @@ class Language:
                  glottocode=None,
                  iso_code=None,
                  family: LanguageFamilyData=None,
-                 family_concept_keys: Iterable=None,
                  logger: logging.Logger =None
                  ):
 
         # Language data
-        self.missing_family_concepts: list[str] = []
         self.logger: logging.Logger | None = logger
         self.name: str = name
         self.path_name: str = format_as_variable(name)
@@ -1143,7 +1150,7 @@ class Language:
         self.alignment_params = alignment_params
 
         # Initialize vocabulary and phoneme inventory
-        self.create_vocabulary(family_concept_keys)
+        self.create_vocabulary()
         self.create_phoneme_inventory()
         self.write_phoneme_inventory()
         self.phoneme_entropy: float = entropy(self.phonemes)
@@ -1160,7 +1167,7 @@ class Language:
     def get_negative_phoneme_entropy(self) -> float:
         return -self.phoneme_entropy
 
-    def create_vocabulary(self, family_concept_keys) -> None:
+    def create_vocabulary(self) -> None:
         for i in self.data:
             entry = self.data[i]
             concept = entry[self.columns['concept']]
@@ -1182,13 +1189,6 @@ class Language:
                 # Mark known loanwords
                 if loan:
                     self.loanwords[concept].add(word)
-        self.missing_family_concepts = list(family_concept_keys - self.vocabulary.keys())
-
-    def write_missing_concepts(self):
-        missing_lst = os.path.join(self.family.doculects_dir, self.path_name, 'missing_concepts.lst')
-        missing_concepts = '\n'.join(sorted(self.missing_family_concepts))
-        with open(missing_lst, 'w') as f:
-            f.write(missing_concepts)
 
     def create_phoneme_inventory(self):
         pad_ch = self.alignment_params['pad_ch']
