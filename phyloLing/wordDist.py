@@ -393,7 +393,6 @@ def phonological_dist(word1,
     return word_dist
 
 
-# TODO name of this function TBD
 def segmental_word_dist(word1,
                         word2=None,
                         c_weight=0.5,
@@ -756,6 +755,7 @@ def log_word_score(word1, word2, score, key):
 
 
 # Initialize distance functions as Distance objects
+# NB: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on config settings
 LEVENSHTEIN_DIST_KEY = 'LevenshteinDist'
 PHONETIC_DIST_KEY = 'PhoneticDist'
 SEGMENTAL_DIST_KEY = 'SegmentalDist'
@@ -764,28 +764,9 @@ PMI_DIST_KEY = 'PMIDist'
 SURPRISAL_DIST_KEY = 'SurprisalDist'
 COMPOSITE_DIST_KEY = 'CompositeDist'
 HYBRID_DIST_KEY = 'HybridDist'
-LevenshteinDist = WordDistance(
-    func=levenshtein_dist,
-    name=LEVENSHTEIN_DIST_KEY,
-    cluster_threshold=0.73)
-PhoneticDist = WordDistance(
-    func=phonetic_dist,
-    name=PHONETIC_DIST_KEY)  # TODO name TBD
-SegmentalDist = WordDistance(
-    func=segmental_word_dist,
-    name=SEGMENTAL_DIST_KEY)  # TODO name TBD
-PhonDist = WordDistance(
-    func=phonological_dist, # TODO name TBD
-    name=PHONOLOGICAL_DIST_KEY,
-    cluster_threshold=0.16  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
-)
-PMIDist = WordDistance(
-    func=pmi_dist,
-    name=PMI_DIST_KEY,
-    cluster_threshold=0.36)
-SurprisalDist = WordDistance(
-    func=mutual_surprisal,
-    name=SURPRISAL_DIST_KEY,
-    cluster_threshold=0.74,  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
-    ngram_size=1)
-# Note: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
+LevenshteinDist = WordDistance(func=levenshtein_dist, name=LEVENSHTEIN_DIST_KEY)
+PhoneticDist = WordDistance(func=phonetic_dist, name=PHONETIC_DIST_KEY)
+SegmentalDist = WordDistance(func=segmental_word_dist, name=SEGMENTAL_DIST_KEY)
+PhonDist = WordDistance(func=phonological_dist, name=PHONOLOGICAL_DIST_KEY)
+PMIDist = WordDistance(func=pmi_dist, name=PMI_DIST_KEY)
+SurprisalDist = WordDistance(func=mutual_surprisal, name=SURPRISAL_DIST_KEY, ngram_size=1)
