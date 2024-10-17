@@ -589,16 +589,15 @@ class PhonCorrelator:
         all_ngrams = set(Ngram(ngram).ngram for ngram in all_ngrams)  # standardize forms
         return all_ngrams
 
-    def radial_em(self,
-                  sample,
-                  normalize=True,
-                  phon_env=False, # TODO add
-                  ibm_model=2,
-                  max_ngram_size=2,
-                  min_corr=2,
-                  seed=None,
-                  ):
-        """Fits EM IBM models on pairs of ngrams of varying sizes and aggregates the translation tables."""
+    def fit_radial_ibm_model(self,
+                             sample,
+                             phon_env=False, # TODO add
+                             ibm_model=2,
+                             max_ngram_size=2,
+                             min_corr=2,
+                             seed=None,
+                             ):
+        """Fits IBM translation models on ngram sequences of varying sizes and aggregates the translation tables."""
 
         # Create "corpora" consisting of words segmented into unigrams or bigrams
         corpus = []
@@ -628,6 +627,7 @@ class PhonCorrelator:
         )
 
         # Create corr dicts in each direction from aligned segments
+        # TODO add new function for this for cleanliness
         corr_dict_l1l2 = defaultdict(lambda: defaultdict(lambda:0))
         corr_dict_l2l1 = defaultdict(lambda: defaultdict(lambda:0))
         for aligned_pair in corpus:
@@ -974,7 +974,7 @@ class PhonCorrelator:
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
                 # Perform EM algorithm and fit IBM model 1 on ngrams of varying sizes
-                em_synonyms1, em_synonyms2 = self.radial_em(
+                em_synonyms1, em_synonyms2 = self.fit_radial_ibm_model(
                     qual_prev_sample,
                     min_corr=min_corr,
                     max_ngram_size=max_ngram_size,
