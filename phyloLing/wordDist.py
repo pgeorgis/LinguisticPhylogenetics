@@ -227,7 +227,7 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, align
     # 2) If the deleted segment is a palatal glide (j, ɥ) or high front vowel (i, ɪ, y, ʏ),
     # and the corresponding preceding/following segment was palatalized
     # or is a palatal, alveolopalatal, or postalveolar consonant
-    elif re.search(r'[jɥiɪyʏ]', deleted_segment.base):
+    elif re.search(r'[jɥ]|([iɪyʏ]̯)', deleted_segment.segment):
         if previous_seg and previous_seg.base in palatal.union(alveolopalatal).union(postalveolar):
             penalty /= penalty_discount
         elif previous_seg and re.search(r'[ʲᶣ]', previous_seg.segment):
@@ -239,7 +239,7 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, align
 
     # 3) If the deleted segment is a high rounded/labial glide
     # and the corresponding preceding/following segment was labialized
-    elif re.search(r'[wʋuʊyʏ]', deleted_segment.base):
+    elif re.search(r'[wʋ]|([uʊyʏ]̯)', deleted_segment.segment):
         if previous_seg and re.search(r'[ʷᶣ]', previous_seg.segment):
             penalty /= penalty_discount
         elif next_seg and re.search(r'[ʷᶣ]', next_seg.segment):
