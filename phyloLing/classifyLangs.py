@@ -11,7 +11,7 @@ from utils.tree import gqd, load_newick_tree
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
                          create_datestamp, create_timestamp, csv2dict,
                          get_git_commit_hash)
-from wordDist import (COMPOSITE_DIST_KEY, HYBRID_DIST_KEY,
+from wordDist import (COMPOSITE_SIM_KEY, HYBRID_DIST_KEY,
                       LEVENSHTEIN_DIST_KEY, PHONOLOGICAL_DIST_KEY,
                       PMI_DIST_KEY, SURPRISAL_DIST_KEY, LevenshteinDist,
                       PhonDist, PMIDist, SurprisalDist, WordDistance,
@@ -152,7 +152,7 @@ def init_composite(params):
     phon_corr_params = params['phon_corr']
     CompositeSim = WordDistance(
         func=composite_sim,
-        name=COMPOSITE_DIST_KEY.replace('Dist', 'Sim'),  # TODO could be handled better
+        name=COMPOSITE_SIM_KEY,
         sim=True,
         pmi_weight=eval_params['pmi_weight'],
         surprisal_weight=eval_params['surprisal_weight'],
@@ -258,7 +258,7 @@ if __name__ == "__main__":
         if eval_params['method'] == 'hybrid' or cluster_params['method'] == 'hybrid':
             function_map[HYBRID_DIST_KEY] = init_hybrid(function_map, eval_params)
         if eval_params['method'] == 'composite' or cluster_params['method'] == 'composite':
-            function_map[COMPOSITE_DIST_KEY] = init_composite(params)
+            function_map[COMPOSITE_SIM_KEY] = init_composite(params)
 
     # Designate cluster function if performing auto cognate clustering
 
@@ -275,7 +275,7 @@ if __name__ == "__main__":
         'surprisal': SURPRISAL_DIST_KEY,
         'levenshtein': LEVENSHTEIN_DIST_KEY,
         'hybrid': HYBRID_DIST_KEY,
-        'composite': COMPOSITE_DIST_KEY,
+        'composite': COMPOSITE_SIM_KEY,
     }
     evalDist = function_map[aux_func_map[eval_params['method']]]
 

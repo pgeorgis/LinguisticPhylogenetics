@@ -762,7 +762,7 @@ SEGMENTAL_DIST_KEY = 'SegmentalDist'
 PHONOLOGICAL_DIST_KEY = 'PhonDist'
 PMI_DIST_KEY = 'PMIDist'
 SURPRISAL_DIST_KEY = 'SurprisalDist'
-COMPOSITE_DIST_KEY = 'CompositeDist'
+COMPOSITE_SIM_KEY = 'CompositeSimilarity'
 HYBRID_DIST_KEY = 'HybridDist'
 LevenshteinDist = WordDistance(func=levenshtein_dist, name=LEVENSHTEIN_DIST_KEY)
 PhoneticDist = WordDistance(func=phonetic_dist, name=PHONETIC_DIST_KEY)
