@@ -312,15 +312,12 @@ class LexicalDataset:
 
                 # Iterate through the dataframe and save the PMI values to the Language
                 # class objects' phoneme_pmi attribute
-                for index, row in pmi_data.iterrows():
+                for _, row in pmi_data.iterrows():
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     pmi_value = row['PMI']
                     ngram1, ngram2 = map(str2ngram, [phone1, phone2])
                     lang1.phoneme_pmi[lang2.name][ngram1.undo()][ngram2.undo()] = pmi_value
                     lang2.phoneme_pmi[lang1.name][ngram2.undo()][ngram1.undo()] = pmi_value
-                    if ngram1.size > 1 or ngram2.size > 1:
-                        lang1.complex_ngrams[lang2.name][ngram1][ngram2] = pmi_value
-                        lang2.complex_ngrams[lang1.name][ngram2][ngram1] = pmi_value
 
     def write_phoneme_pmi(self, **kwargs):
         self.logger.info(f'Saving {self.name} phoneme PMI...')
@@ -1154,7 +1151,6 @@ class Language:
         # Comparison with other languages
         self.phoneme_correlators = {}
         self.phoneme_pmi: dict[str, dict] = create_default_dict(0, 3)
-        self.complex_ngrams: dict[str, dict] = create_default_dict( 0, 3)
         self.phoneme_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 4)
         self.phon_env_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 3)
         self.noncognate_thresholds: dict[(str, Distance, int, int), list] = defaultdict(list)

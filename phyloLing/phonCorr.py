@@ -399,7 +399,6 @@ class PhonCorrelator:
         self.pmi_dict: dict[str, dict[str, float]] = {}
         self.surprisal_dict: dict[str, dict[str, float]] = {}
         self.phon_env_surprisal_dict: dict[str, dict[str, float]] = {}
-        self.complex_ngrams: dict[str, dict[str, float]] = {}
         self.reload_language_pair_data()
         self.scored_words = create_default_dict_of_dicts()
 
@@ -412,8 +411,6 @@ class PhonCorrelator:
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2_name]
         self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2_name]
         self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2_name]
-        self.complex_ngrams = self.lang1.complex_ngrams[self.lang2_name]
-
 
     def get_twin(self) -> Self:
         """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
@@ -1130,12 +1127,6 @@ class PhonCorrelator:
         # Save PMI results
         self.lang1.phoneme_pmi[self.lang2_name] = results
         self.lang2.phoneme_pmi[self.lang1_name] = reverse_corr_dict(results)
-        self.lang1.complex_ngrams[self.lang2_name] = self.complex_ngrams
-        reversed_complex_ngrams = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: 0)))
-        for corr1 in self.complex_ngrams:
-            for corr2, val in self.complex_ngrams[corr1].items():
-                reversed_complex_ngrams[corr2][corr1] = val
-        self.lang2.complex_ngrams[self.lang1_name] = reversed_complex_ngrams
         # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
 
         self.pmi_dict = results
@@ -1202,30 +1193,31 @@ class PhonCorrelator:
         )
         # Add complex ngram corrs to all_ngrams_lang1
         if phon_env:
-            for complex_ngram in self.complex_ngrams:
-                if complex_ngram.size > 1:
-                    if self.pad_ch in complex_ngram.ngram[0]:  # complex ngram alignment with start boundary
-                        ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(r'#\|S', ngram[-1]))
-                    elif self.pad_ch in complex_ngram.ngram[-1]:  # complex ngram alignment with end boundary
-                        ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(r'S\|#', ngram[-1]))
-                    else:  # other complex ngram alignments
-                        # get post environments of first segment and preceding environments of last segment in complex ngram
-                        first_seg, last_seg = map(_toSegment, [complex_ngram.ngram[0], complex_ngram.ngram[-1]])
-                        if complex_ngram.size == 2:
-                            next_seg, penult_seg = last_seg, first_seg
-                        else:
-                            next_seg, penult_seg = map(_toSegment, [complex_ngram.ngram[1], complex_ngram.ngram[-2]])
-                        rel_post_son = relative_post_sonority(first_seg, next_seg)
-                        rel_prev_son = relative_prev_sonority(last_seg, penult_seg)
-                        first_envs = set(ngram[-1].split('|')[0] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(rf'S\|{rel_post_son}', ngram[-1]))
-                        last_envs = set(ngram[-1].split('|')[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(rf'{rel_prev_son}\|S', ngram[-1]))
-                        ngram_envs = set(f'{first_env}|S|{last_env}' for first_env, last_env in product(first_envs, last_envs))
+            # for complex_ngram in self.complex_ngrams:
+            #     if complex_ngram.size > 1:
+            #         if self.pad_ch in complex_ngram.ngram[0]:  # complex ngram alignment with start boundary
+            #             ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(r'#\|S', ngram[-1]))
+            #         elif self.pad_ch in complex_ngram.ngram[-1]:  # complex ngram alignment with end boundary
+            #             ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(r'S\|#', ngram[-1]))
+            #         else:  # other complex ngram alignments
+            #             # get post environments of first segment and preceding environments of last segment in complex ngram
+            #             first_seg, last_seg = map(_toSegment, [complex_ngram.ngram[0], complex_ngram.ngram[-1]])
+            #             if complex_ngram.size == 2:
+            #                 next_seg, penult_seg = last_seg, first_seg
+            #             else:
+            #                 next_seg, penult_seg = map(_toSegment, [complex_ngram.ngram[1], complex_ngram.ngram[-2]])
+            #             rel_post_son = relative_post_sonority(first_seg, next_seg)
+            #             rel_prev_son = relative_prev_sonority(last_seg, penult_seg)
+            #             first_envs = set(ngram[-1].split('|')[0] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(rf'S\|{rel_post_son}', ngram[-1]))
+            #             last_envs = set(ngram[-1].split('|')[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(rf'{rel_prev_son}\|S', ngram[-1]))
+            #             ngram_envs = set(f'{first_env}|S|{last_env}' for first_env, last_env in product(first_envs, last_envs))
 
-                    complex_envs = set()
-                    for ngram_env in ngram_envs:
-                        phon_env_ngram = PhonEnvNgram((complex_ngram.ngram, ngram_env))
-                        complex_envs.add(phon_env_ngram.ngram_w_context)
-                    all_ngrams_lang1.update(complex_envs)
+            #         complex_envs = set()
+            #         for ngram_env in ngram_envs:
+            #             phon_env_ngram = PhonEnvNgram((complex_ngram.ngram, ngram_env))
+            #             complex_envs.add(phon_env_ngram.ngram_w_context)
+            #         all_ngrams_lang1.update(complex_envs)
+            pass
         else:
             all_ngrams_lang1.update(interpolation[i].keys())
 
