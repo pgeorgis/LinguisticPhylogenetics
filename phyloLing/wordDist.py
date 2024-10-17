@@ -277,54 +277,64 @@ def phonological_dist(word1,
 
             # Lessen the penalty if certain phonological conditions are met
             if context_reduction:
-                if i > 0 and alignment[i - 1][gap_index] != gap_ch:
-                    previous_seg = _toSegment(alignment[i - 1][gap_index])
-                    # 1) If the deleted segment is a nasal and the corresponding
-                    # precending segment was (pre)nasalized
-                    if deleted_segment.stripped in nasals:
-                        if previous_seg.features['nasal'] == 1:
-                            penalty /= penalty_discount
+                previous_seg, next_seg = None, None
+                previous_pos =  i > 0 and alignment[i - 1][gap_index] != gap_ch
+                previous_seg = _toSegment(alignment[i - 1][gap_index]) if previous_pos else None
+                next_pos = i < len(alignment) -1 and alignment[i + 1][gap_index] != gap_ch
+                next_seg = _toSegment(alignment[i + 1][gap_index]) if next_pos else None
 
-                    # 2) If the deleted segment is a palatal glide (j, ɥ) or high front vowel (i, ɪ, y, ʏ),
-                    # and the corresponding preceding segment was palatalized
-                    # or is a palatal, alveolopalatal, or postalveolar consonant
-                    elif re.search(r'[jɥiɪyʏ]', deleted_segment.base):
-                        if previous_seg.base in palatal.union(alveolopalatal).union(postalveolar):
-                            penalty /= penalty_discount
-                        elif re.search(r'[ʲᶣ]', previous_seg.segment):
-                            penalty /= penalty_discount
+                # 1) If the deleted segment is a nasal and the corresponding
+                # precending/following segment was (pre)nasal(ized)
+                if deleted_segment.stripped in nasals:
+                    if previous_seg and previous_seg.features['nasal'] == 1:
+                        penalty /= penalty_discount
+                    elif next_seg and next_seg.features['nasal'] == 1:
+                        penalty /= penalty_discount
 
-                    # 3) If the deleted segment is a high rounded/labial glide
-                    # and the corresponding preceding segment was labialized
-                    elif re.search(r'[wʋuʊyʏ]', deleted_segment.base):
-                        if re.search(r'[ʷᶣ]', previous_seg.segment):
-                            penalty /= penalty_discount
+                # 2) If the deleted segment is a palatal glide (j, ɥ) or high front vowel (i, ɪ, y, ʏ),
+                # and the corresponding preceding/following segment was palatalized
+                # or is a palatal, alveolopalatal, or postalveolar consonant
+                elif re.search(r'[jɥiɪyʏ]', deleted_segment.base):
+                    if previous_seg and previous_seg.base in palatal.union(alveolopalatal).union(postalveolar):
+                        penalty /= penalty_discount
+                    elif previous_seg and re.search(r'[ʲᶣ]', previous_seg.segment):
+                        penalty /= penalty_discount
+                    elif next_seg and next_seg.base in palatal.union(alveolopalatal).union(postalveolar): # TODO set this as a constant
+                        penalty /= penalty_discount
+                    elif next_seg and re.search(r'[ʲᶣ]', next_seg.segment):
+                        penalty /= penalty_discount
 
-                    # 4) If the deleted segment is /h, ɦ/ and the corresponding
-                    # preceding segment was aspirated or breathy
-                    elif re.search(r'[hɦ]', deleted_segment.base):
-                        if re.search(r'[ʰʱ̤]', previous_seg.segment):
-                            penalty /= penalty_discount
+                # 3) If the deleted segment is a high rounded/labial glide
+                # and the corresponding preceding/following segment was labialized
+                elif re.search(r'[wʋuʊyʏ]', deleted_segment.base):
+                    if previous_seg and re.search(r'[ʷᶣ]', previous_seg.segment):
+                        penalty /= penalty_discount
+                    elif next_seg and re.search(r'[ʷᶣ]', next_seg.segment):
+                        penalty /= penalty_discount
 
-                        # Or if the following corresponding segment is breathy or pre-aspirated
-                        else:
-                            try:
-                                if re.search(r'[ʰʱ̤]', alignment[i + 1][gap_index]):
-                                    penalty /= penalty_discount
-                            except IndexError:
-                                pass
+                # 4) If the deleted segment is /h, ɦ/ and the corresponding
+                # preceding/following segment was (pre-)aspirated or breathy
+                elif re.search(r'[hɦ]', deleted_segment.base):
+                    if previous_seg and re.search(r'[ʰʱ̤]', previous_seg.segment):
+                        penalty /= penalty_discount
+                    elif next_seg and re.search(r'[ʰʱ̤]', next_seg.segment):
+                        penalty /= penalty_discount
 
-                    # 5) If the deleted segment is a rhotic approximant /ɹ, ɻ/
-                    # and the corresponding preceding segment was rhoticized
-                    elif re.search(r'[ɹɻ]', deleted_segment.base):
-                        if re.search(r'[ɚɝ˞]', previous_seg.segment):
-                            penalty /= penalty_discount
+                # 5) If the deleted segment is a rhotic approximant /ɹ, ɻ/
+                # and the corresponding preceding/following segment was rhoticized
+                elif re.search(r'[ɹɻ]', deleted_segment.base):
+                    if previous_seg and re.search(r'[ɚɝ˞]', previous_seg.segment):
+                        penalty /= penalty_discount
+                    if next_seg and re.search(r'[ɚɝ˞]', next_seg.segment):
+                        penalty /= penalty_discount
 
-                    # 6) If the deleted segment is a glottal stop and the corresponding
-                    # preceding segment was glottalized or creaky
-                    elif deleted_segment.base == 'ʔ':
-                        if re.search(r'[ˀ̰]', previous_seg.segment):
-                            penalty /= penalty_discount
+                # 6) If the deleted segment is a glottal stop and the corresponding
+                # preceding segment was glottalized or creaky
+                elif deleted_segment.base == 'ʔ':
+                    if previous_seg and re.search(r'[ˀ̰]', previous_seg.segment):
+                        penalty /= penalty_discount
+                    elif next_seg and re.search(r'[ˀ̰]', next_seg.segment):
+                        penalty /= penalty_discount
 
             elif normalize_geminates:
                 # 7) If the deleted segment is part of a long/geminate segment transcribed as double (e.g. /tt/ rather than /tː/),
