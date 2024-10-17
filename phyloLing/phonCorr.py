@@ -904,27 +904,26 @@ class PhonCorrelator:
                             sample_size=0.8,
                             min_corr=2,
                             max_ngram_size=2,
-                            ngram_size=1, # dummy variable added temporarily to enable surprisal calculation together
+                            ngram_size=1, # TODO remove: this is a dummy variable added temporarily to enable surprisal calculation together
                             phon_env=False,
                             cumulative=False,
                             ):
+        """Computes phone correspondences between two languages in the form of PMI and surprisal.
+
+        Args:
+            p_threshold (float, optional): Threshold for determining whether aligned word pairs qualify for next iteration of correspondence calculation. \
+                Defaults to 0.1, which corresponds with a 90% chance that aligned word pairs with a given score do NOT belong to the non-cognate distribution.
+            max_iterations (int, optional): Maximum number of iterations. Defaults to 3.
+            n_samples (int, optional): Number of samples to draw. Defaults to 3.
+            sample_size (float, optional): Sample size proportional to shared vocablary size. Defaults to 0.8.
+            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid. Defaults to 2.
+            max_ngram_size (int, optional): Maximum ngram size for radial IBM alignment. Defaults to 2.
+            ngram_size (int, optional): Ngram size for surprisal. Defaults to 1.
+            cumulative (bool, optional): Accumulate correspondence counts over iterations, continuing to consider alignments from earlier iterations. Defaults to False.
+
+        Returns:
+            results (dict): Nested dictionary of PMI correspondences.
         """
-        Parameters
-        ----------
-        p_threshold : float, optional
-            p-value threshold for words to qualify for PMI calculation in the next iteration. The default is 0.05.
-        max_iterations : float, optional
-            Maximum number of iterations. The default is 10.
-        samples : int, optional
-            Number of random samples to draw. The default is 5.
-        cumulative : bool, optional
-            Whether PMI accumulates over iterations, continuing to consider alignments from earlier iterations. The default is False.
-        Returns
-        -------
-        results : collections.defaultdict
-            Nested dictionary of phoneme PMI values.
-        """
-        # TODO update documentation
         if self.logger:
             self.logger.info(f'Computing phone correspondences: {self.lang1_name}-{self.lang2_name}...')
 
@@ -1336,15 +1335,17 @@ class PhonCorrelator:
                                 min_corr=2,
                                 ngram_size=1, # TODO remove if not going to be developed further
                                 ):
-        """Computes phone surprisal based on aligned phone sequences.
+        """Computes phone surprisal from word pair alignments.
 
         Args:
-            alignments (list): list of Alignment objects representing aligned phone sequences 
-            phon_env (bool, optional): Computes surprisal taking phonological environment into account. Defaults to False.
+            alignments (list): List of Alignment objects representing aligned word pairs.
+            phon_env (bool, optional): Use phonological environment. Defaults to False.
+            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid. Defaults to 2.
+            ngram_size (int, optional): Ngram size. Defaults to 1.
 
         Returns:
-            (surprisal_results, phon_env_surprisal_results): tuple containing dictionaries of surprisal results.
-            If phon_env=False, phon_env_surprisal_results will be None.
+            (surprisal_results, phon_env_surprisal_results) (tuple): Tuple with nested dictionaries of surprisal results and optionally phonological environment surprisal results. \
+                If phon_env is False, the latter will be None.
         """
         # Get correspondence probabilities from alignments
         corr_probs = self.correspondence_probs(
