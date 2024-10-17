@@ -6,24 +6,25 @@ from asjp import ipa2asjp
 from constants import PAD_CH_DEFAULT
 from nltk import edit_distance
 from phonAlign import Alignment, Gap, get_alignment_iter
-from phyloLing import Word
-from phonUtils.initPhoneData import (alveolopalatal, consonants, glides,
-                                     nasals, palatal, postalveolar, vowels)
-from phonUtils.ipaTools import strip_diacritics
+from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
+                                     postalveolar)
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
-from utils.distance import Distance, euclidean_dist, sim_to_dist
-from utils.information import adaptation_surprisal  # surprisal, surprisal_to_prob
+from utils.distance import Distance, sim_to_dist
+from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
+
+from phyloLing import Word
+
 
 class WordDistance(Distance):
     def eval(self, x, y, **kwargs):
         if isinstance(x, Word) and isinstance(y, Word):
-            key = ((x.language.name, x.ipa), (y.language.name, y.ipa), self.hashable_kwargs) 
+            key = ((x.language.name, x.ipa), (y.language.name, y.ipa), self.hashable_kwargs)
             if key in self.measured:
                 return self.measured[key]
-            
+
         if (x, y, self.hashable_kwargs) in self.measured:
             return self.measured[(x, y, self.hashable_kwargs)]
         else:
@@ -202,7 +203,6 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, align
         alignment (Alignment): Alignment object.
         i (int): Alignment index.
         penalty_discount (int | float, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
-        
 
     Returns:
         penalty: Reduced deletion penalty.
@@ -268,7 +268,7 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, align
             penalty /= penalty_discount
         elif next_seg and re.search(r'[ˀ̰]', next_seg.segment):
             penalty /= penalty_discount
-    
+
     # TODO add handling with glides and diphthongs, same principle as labialized/palatalized; same sound in 2 vs. in 1 segment transcription
     return penalty
 
@@ -425,73 +425,6 @@ def phonological_dist(word1,
         word_dist = mean(penalties)
 
     return word_dist
-
-
-def segmental_word_dist(word1,
-                        word2=None,
-                        c_weight=0.5,
-                        v_weight=0.3,
-                        syl_weight=0.2):
-    """Calculates the phonetic similarity of an aligned word pair according to
-    weighted average similarity of consonantal segments, vocalic segments, and
-    syllable structure"""
-
-    assert round(sum([c_weight, v_weight, syl_weight]), 1) == 1.0
-
-    # If word2 is None, we assume word1 argument is actually an aligned word pair
-    word1, word2, alignment = handle_word_pair_input(word1, word2)
-    length = alignment.length
-    alignment = alignment.alignment
-
-    # Iterate through pairs of alignment:
-    # Add fully consonant pairs to c_list, fully vowel/glide pairs to v_list
-    # (ignore pairs of matched non-glide consonants with vowels)
-    # and create syllable structure string for each word
-    c_pairs, v_pairs = [], []
-    syl_structure1, syl_structure2 = [], []
-    for pair in alignment:
-        strip_pair = (strip_diacritics(pair[0])[-1], strip_diacritics(pair[1])[-1])
-        if (strip_pair[0] in consonants) and (strip_pair[1] in consonants):
-            c_pairs.append(pair)
-            syl_structure1.append('C')
-            syl_structure2.append('C')
-        elif (strip_pair[0] in vowels + glides) and (strip_pair[1] in vowels + glides):
-            v_pairs.append(pair)
-            syl_structure1.append('V')
-            syl_structure2.append('V')
-        else:
-            if strip_pair[0] in consonants:
-                syl_structure1.append('C')
-            elif strip_pair[0] in vowels:
-                syl_structure1.append('V')
-            if strip_pair[1] in consonants:
-                syl_structure2.append('C')
-            elif strip_pair[1] in vowels:
-                syl_structure2.append('V')
-
-    # Count numbers of consonants and vowels: take the larger count to account
-    # for possibly deleted consonants or vowels
-    N_c = max(syl_structure1.count('C'), syl_structure2.count('C'))
-    N_v = max(syl_structure1.count('V'), syl_structure2.count('V'))
-
-    # Consonant score: mean phonetic similarity of all matched consonantal pairs, divided by number of consonant segments
-    try:
-        c_score = sum([phone_sim(pair[0], pair[1]) for pair in c_pairs]) / N_c
-    except ZeroDivisionError:
-        c_score = 1
-
-    # Vowel score: sum of phonetic similarity of all matched vowel pairs, divided by number of vowel segments
-    try:
-        v_score = sum([phone_sim(pair[0], pair[1]) for pair in v_pairs]) / N_v
-    except ZeroDivisionError:
-        v_score = 1
-
-    # Syllable score: length-normalized Levenshtein distance of syllable structure strings
-    syl_structure1, syl_structure2 = ''.join(syl_structure1), ''.join(syl_structure2)
-    syl_score = edit_distance(syl_structure1, syl_structure2) / length
-
-    # Final score: weighted sum of each component score as distance
-    return (c_weight * (1 - c_score)) + (v_weight * (1 - v_score)) + (syl_weight * syl_score)
 
 
 def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False, pad_ch=PAD_CH_DEFAULT, **kwargs):
@@ -772,7 +705,7 @@ def composite_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
 
     # Record word scores # TODO into Distance class object?
     if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key=COMPOSITE_DIST_KEY)
+        log_word_score(word1, word2, score, key=COMPOSITE_SIM_KEY)
         log_word_score(word1, word2, pmi_score, key=PMI_DIST_KEY)
         log_word_score(word1, word2, surprisal_score, key=SURPRISAL_DIST_KEY)
         log_word_score(word1, word2, phon_score, key=PHONOLOGICAL_DIST_KEY)
@@ -792,7 +725,6 @@ def log_word_score(word1, word2, score, key):
 # NB: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on config settings
 LEVENSHTEIN_DIST_KEY = 'LevenshteinDist'
 PHONETIC_DIST_KEY = 'PhoneticDist'
-SEGMENTAL_DIST_KEY = 'SegmentalDist'
 PHONOLOGICAL_DIST_KEY = 'PhonDist'
 PMI_DIST_KEY = 'PMIDist'
 SURPRISAL_DIST_KEY = 'SurprisalDist'
@@ -800,7 +732,6 @@ COMPOSITE_SIM_KEY = 'CompositeSimilarity'
 HYBRID_DIST_KEY = 'HybridDist'
 LevenshteinDist = WordDistance(func=levenshtein_dist, name=LEVENSHTEIN_DIST_KEY)
 PhoneticDist = WordDistance(func=phonetic_dist, name=PHONETIC_DIST_KEY)
-SegmentalDist = WordDistance(func=segmental_word_dist, name=SEGMENTAL_DIST_KEY)
 PhonDist = WordDistance(func=phonological_dist, name=PHONOLOGICAL_DIST_KEY)
 PMIDist = WordDistance(func=pmi_dist, name=PMI_DIST_KEY)
 SurprisalDist = WordDistance(func=mutual_surprisal, name=SURPRISAL_DIST_KEY, ngram_size=1)
