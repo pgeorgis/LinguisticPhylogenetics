@@ -53,13 +53,11 @@ def needleman_wunsch_extended(seq1: list,
 
     # Fill first row and column with gap penalties
     for i in range(1, n + 1):
-        # TODO: this may be a bug, the expression in the comment is always equal to default_gop
-        default = default_gop # gap_cost.get_value_or_default(seq2ngram(seq1[:i]), gap_ch, default_gop)
+        default = gap_cost.get_value_or_default(seq2ngram(seq1[:i]), gap_ch, default_gop)
         dp[i][0] = dp[i-1][0] + default
         traceback[i][0] = (1, 0)  # Indicates seq1 gaps
     for j in range(1, m + 1):
-        # TODO: this may be a bug, the expression in the comment is always equal to default_gop
-        default = default_gop # gap_cost.get_value_or_default(gap_ch, seq2ngram(seq2[:j]), default_gop)
+        default = gap_cost.get_value_or_default(gap_ch, seq2ngram(seq2[:j]), default_gop)
         dp[0][j] = dp[0][j-1] + default
         traceback[0][j] = (0, 1)  # Indicates seq2 gaps
 
