@@ -51,10 +51,10 @@ def needleman_wunsch_extended(seq1: list,
 
     # Fill first row and column with gap penalties
     for i in range(1, n + 1):
-        dp[i][0] = dp[i-1][0] + gap_cost.get((seq2ngram(seq1[:i]), gap_ch), default_gop)
+        dp[i][0] = dp[i-1][0] + gap_cost.get(seq2ngram(seq1[:i]), {}).get(gap_ch, default_gop)
         traceback[i][0] = (1, 0)  # Indicates seq1 gaps
     for j in range(1, m + 1):
-        dp[0][j] = dp[0][j-1] + gap_cost.get((gap_ch, seq2ngram(seq2[:j])), default_gop)
+        dp[0][j] = dp[0][j-1] + gap_cost.get(gap_ch, {}).get(seq2ngram(seq2[:j]), default_gop)
         traceback[0][j] = (0, 1)  # Indicates seq2 gaps
 
     # Fill the dp matrix
