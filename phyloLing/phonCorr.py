@@ -703,11 +703,66 @@ class PhonCorrelator:
         """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
         l1, l2 = self.langs(l1=l1, l2=l2)
         joint_prob_dist = defaultdict(lambda: {})
+
+        # Aggregate total counts of seg1 and adjust conditional counts
+        # by marginalizing over all unigrams of aligned units
+        agg_seg1_totals = defaultdict(lambda: 0)
+        adj_cond_counts = defaultdict(lambda: defaultdict(lambda: 0))
         for seg1 in conditional_counts:
-            seg1_totals = sum(conditional_counts[seg1].values())
             seg1_ngram = Ngram(seg1)
+
+            # Get the total occurrence of this segment/ngram
+            seg1_totals = sum(conditional_counts[seg1].values())
+
+            # Update count of full higher-order lang1 ngram
+            if seg1_ngram.size > 1:
+                agg_seg1_totals[seg1] += seg1_totals
+
+                # Update correspondence counts of full higher-order lang1 ngram
+                # with full higher-order lang2 ngram and with all lang2 component unigrams
+                for seg2, cond_val in conditional_counts[seg1].items():
+                    seg2_ngram = Ngram(seg2)
+                    # full higher-order lang1 ngram with higher-order lang2 ngram
+                    if seg2_ngram.size > 1:
+                        adj_cond_counts[seg1][seg2] += cond_val
+                    # full higher-order lang1 ngram with lang2 component unigrams
+                    for seg2_j in seg2_ngram.ngram:
+                        adj_cond_counts[seg1][seg2_j] += cond_val
+
+            # Update aggregated counts of all component lang1 unigrams
+            for seg1_i in seg1_ngram.ngram:
+                agg_seg1_totals[seg1_i] += seg1_totals
+
+                # Adjust correspondence counts for each component unigram in lang1
+                # And the full ngram in lang2, as well as component unigrams of lang2 ngram
+                for seg2, cond_val in conditional_counts[seg1].items():
+                    seg2_ngram = Ngram(seg2)
+
+                    # Update the count for the full ngram in seg2
+                    if seg2_ngram.size > 1:
+                        adj_cond_counts[seg1_i][seg2] += cond_val
+
+                    # TODO also ngram sizes between N and 1, e.g. if a trigram, update component bigram counts
+                    # # Update the counts for all lower-order ngrams until unigrams
+                    # for n in range(seg2_ngram.size-1, 1, -1):
+                    #     # Get all possible sub-ngrams of size `n` from `seg2`
+                    #     for sub_ngram in generate_ngrams(seg2_ngram.ngram, ngram_size=n):
+                    #         adj_cond_counts[seg1_i][sub_ngram] += cond_val
+
+                    # Also update for each unigram component of seg2
+                    for seg2_j in seg2_ngram.ngram:
+                        adj_cond_counts[seg1_i][seg2_j] += cond_val
+
+        # Henceforth use the adjusted correspondence count dict
+        conditional_counts = adj_cond_counts
+
+        for seg1 in conditional_counts:
+            seg1_ngram = Ngram(seg1)
+            seg1_totals = agg_seg1_totals[seg1]
             for seg2 in conditional_counts[seg1]:
-                cond_prob = conditional_counts[seg1][seg2] / seg1_totals
+                seg2_ngram = Ngram(seg2)
+                cond_count = conditional_counts[seg1][seg2]
+                cond_prob = cond_count / seg1_totals
                 if wordlist:
                     p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
                 else:
