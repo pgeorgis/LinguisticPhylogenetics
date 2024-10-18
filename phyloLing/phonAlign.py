@@ -5,6 +5,7 @@ from collections.abc import Iterable
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
 from phonUtils.phonEnv import get_phon_env
+from utils import PhonemeMap
 from utils.sequence import (Ngram, PhonEnvNgram, end_token, flatten_ngram,
                             pad_sequence, start_token)
 from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 class Alignment:
     def __init__(self,
                  seq1, seq2,
-                 align_costs,
+                 align_costs: PhonemeMap,
                  lang1=None,
                  lang2=None,
                  gap_ch=GAP_CH_DEFAULT,
@@ -34,7 +35,7 @@ class Alignment:
             seq2 (phyloLing.Word or str): second phone sequence
             lang1 (phyloLing.Language, optional): Language of seq1. Defaults to None.
             lang2 (phyloLing.Language, optional): Language of seq2. Defaults to None.
-            align_costs (dict): Dictionary of alignment costs or scores.
+            align_costs (PhonemeMap): Dictionary of alignment costs or scores.
             gap_ch (str, optional): Gap character. Defaults to '{GAP_CH_DEFAULT}'.
             gop (float, optional): Gap opening penalty. Defaults to -0.7.
             n_best (int, optional): Number of best (least costly) alignments to return. Defaults to 1.
@@ -58,7 +59,7 @@ class Alignment:
         self.pad_ch = pad_ch
         self.start_boundary_token = f'{START_PAD_CH}{self.pad_ch}'
         self.end_boundary_token = f'{self.pad_ch}{END_PAD_CH}'
-        self.align_costs = align_costs
+        self.align_costs: PhonemeMap = align_costs
         self.kwargs = kwargs
 
         # Perform alignment
@@ -594,7 +595,7 @@ class ReversedAlignment(Alignment):
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.pad_ch = alignment.pad_ch
-        self.align_costs = alignment.align_costs
+        self.align_costs: PhonemeMap = alignment.align_costs
         self.kwargs = alignment.kwargs
         self.n_best = [(reverse_alignment(alignment_n), seq_map, cost) for alignment_n, seq_map, cost in alignment.n_best]
         self.alignment = reverse_alignment(alignment.alignment)

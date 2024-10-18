@@ -10,6 +10,8 @@ from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
+
+from utils import PhonemeMap
 from utils.distance import Distance, sim_to_dist
 from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
@@ -46,7 +48,7 @@ def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
         correlator2.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
 
 
-def get_pmi_dict(lang1, lang2, **kwargs):
+def get_pmi_dict(lang1, lang2, **kwargs) -> PhonemeMap:
     """Calculate phoneme PMI if not already done and return PMI dict."""
     if len(lang1.phoneme_pmi[lang2.name]) == 0:
         correlator = lang1.get_phoneme_correlator(lang2)
@@ -73,7 +75,7 @@ def prepare_alignment(word1, word2, **kwargs):
 
         # Check whether phoneme PMI has been calculated for this language pair
         # If not, then calculate it; if so, then retrieve it
-        pmi_dict = get_pmi_dict(lang1, lang2)
+        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2)
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
         alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
@@ -562,7 +564,7 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
 
     # Calculate PMI scores for each aligned pair
     PMI_values = [
-        pmi_dict[Ngram(pair_left).undo()][Ngram(pair_right).undo()]
+        pmi_dict.get_value(Ngram(pair_left).undo(), Ngram(pair_right).undo())
         for pair_left, pair_right in alignment.alignment
     ]
 

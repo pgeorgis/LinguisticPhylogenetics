@@ -5,17 +5,17 @@ from collections import defaultdict
 from functools import lru_cache
 from itertools import product
 from statistics import mean, stdev
-from typing import Self
+from typing import Self, Iterable
 
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 from phonAlign import Alignment, visual_align
-from phonUtils.phonEnv import (phon_env_ngrams, relative_post_sonority,
-                               relative_prev_sonority)
-from phonUtils.segment import _toSegment
+from phonUtils.phonEnv import (phon_env_ngrams)
 from scipy.stats import norm
+
+from utils import PhonemeMap
 from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
@@ -246,40 +246,48 @@ def prune_extraneous_synonyms(wordlist, alignments, scores, prefer_small=False):
     return wordlist, alignments
 
 
-def average_corrs(corr_dict1, corr_dict2):
-    """Average together values from nested dictionaries in opposite directions"""
-    avg_corr = defaultdict(lambda: defaultdict(lambda: 0))
-    for seg1 in corr_dict1:
-        for seg2 in corr_dict1[seg1]:
-            avg_corr[seg1][seg2] = mean([corr_dict1[seg1][seg2], corr_dict2[seg2][seg1]])
-    for seg2 in corr_dict2:
-        for seg1 in corr_dict2[seg2]:
-            if seg2 not in avg_corr[seg1]:
-                avg_corr[seg1][seg2] = mean([corr_dict1[seg1][seg2], corr_dict2[seg2][seg1]])
+def average_corrs(corr_dict1: PhonemeMap, corr_dict2: PhonemeMap) -> PhonemeMap:
+    avg_corr: PhonemeMap = PhonemeMap(0)
+    for (seg1, seg2) in corr_dict1.get_key_pairs():
+        avg_corr.set_value(seg1, seg2, mean([corr_dict1.get_value(seg1, seg2), corr_dict2.get_value(seg2, seg1)]))
+    for (seg2, seg1) in corr_dict2.get_key_pairs():
+        if not avg_corr.has_value(seg1, seg2):
+            avg_corr.set_value(seg1, seg2, mean([corr_dict1.get_value(seg1, seg2), corr_dict2.get_value(seg2, seg1)]))
     return avg_corr
 
 
-def average_nested_dicts(dict_list, default=0):
-    corr1_all = set(corr1 for d in dict_list for corr1 in d)
-    corr2_all = {corr1: set(corr2 for d in dict_list for corr2 in d[corr1]) for corr1 in corr1_all}
-    results = defaultdict(lambda: defaultdict(lambda: 0))
+def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0) -> PhonemeMap:
+    corr1_all = set(corr1 for d in dict_list for corr1 in d.get_primary_keys())
+    corr2_all = {corr1: set(corr2 for d in dict_list for corr2 in d.get_secondary_keys(corr1)) for corr1 in corr1_all}
+    results = PhonemeMap(0)
     for corr1 in corr1_all:
         for corr2 in corr2_all[corr1]:
-            vals = []
+            vals: [float] = []
             for d in dict_list:
-                vals.append(d.get(corr1, {}).get(corr2, default))
+                vals.append(d.get_value_or_default(corr1, corr2, default))
             if len(vals) > 0:
-                results[corr1][corr2] = mean(vals)
+                results.set_value(corr1, corr2, mean(vals))
     return results
 
 
-def reverse_corr_dict(corr_dict):
+def reverse_corr_dict[TPrimaryKey, TSecondaryKey, TValue](
+        corr_dict: dict[TPrimaryKey, dict[TSecondaryKey, TValue]]) -> dict[TSecondaryKey, dict[TPrimaryKey, TValue]]:
+
+    if not isinstance(corr_dict, dict):
+        raise ValueError("corr_dict must be a dictionary")
     reverse = defaultdict(lambda: defaultdict(lambda: 0))
     for seg1 in corr_dict:
         for seg2 in corr_dict[seg1]:
             reverse[seg2][seg1] = corr_dict[seg1][seg2]
     return reverse
 
+def reverse_corr_dict_map(corr_dict: PhonemeMap) -> PhonemeMap:
+    if not isinstance(corr_dict, PhonemeMap):
+        raise ValueError("corr_dict must be a PhonemeMap object")
+    reverse = PhonemeMap(0)
+    for (seg1, seg2) in corr_dict.get_key_pairs():
+        reverse.set_value(seg2, seg1, corr_dict.get_value(seg1, seg2))
+    return reverse
 
 def ngram_count_word(ngram, word):
     count = 0
@@ -396,7 +404,7 @@ class PhonCorrelator:
         self.samples = {}
 
         # PMI, ngrams, scored words
-        self.pmi_dict: dict[str, dict[str, float]] = {}
+        self.pmi_dict: PhonemeMap = PhonemeMap()
         self.surprisal_dict: dict[str, dict[str, float]] = {}
         self.phon_env_surprisal_dict: dict[str, dict[str, float]] = {}
         self.reload_language_pair_data()
@@ -769,7 +777,7 @@ class PhonCorrelator:
 
         return corr_counts
 
-    def phoneme_pmi(self, conditional_counts, l1=None, l2=None, wordlist=None):
+    def phoneme_pmi(self, conditional_counts, l1=None, l2=None, wordlist=None) -> PhonemeMap:
         """
         conditional_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         """
@@ -826,7 +834,7 @@ class PhonCorrelator:
         gap_prob2 = gap_counts2 / (seg_counts2 + gap_counts2)
 
         # Calculate PMI for all phoneme pairs
-        pmi_dict = defaultdict(lambda: defaultdict(lambda: 0))
+        pmi_dict: PhonemeMap = PhonemeMap(0)
         for seg1, seg2 in segment_pairs:
             seg1_ngram = Ngram(seg1)
             seg2_ngram = Ngram(seg2)
@@ -890,7 +898,7 @@ class PhonCorrelator:
                     
                     # Add only non-zero PMI to dictionary
                     if pmi_val != 0:
-                        pmi_dict[seg1_ngram.undo()][seg2_ngram.undo()] = pmi_val
+                        pmi_dict.set_value(seg1_ngram.undo(), seg2_ngram.undo(), pmi_val)
         
         return pmi_dict
 
@@ -925,7 +933,7 @@ class PhonCorrelator:
             self.logger.info(f'Computing phone correspondences: {self.lang1_name}-{self.lang2_name}...')
 
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
-        sample_results = {}
+        sample_results: dict[int, PhonemeMap] = {}
         sample_size = round(len(self.same_meaning) * sample_size)
         # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
         iter_logs = defaultdict(lambda: [])
@@ -953,15 +961,15 @@ class PhonCorrelator:
             # At each following iteration N, re-align using the pmi_stepN as an
             # additional penalty, and then recalculate PMI
             iteration = 0
-            PMI_iterations: dict[int, dict[str, dict]] = {}
+            PMI_iterations: dict[int, PhonemeMap] = {}
             qualifying_words = default_dict({iteration: synonym_sample}, lmbda=[])
             disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
             if cumulative:
                 all_cognate_alignments = []
 
-            def score_pmi(alignment: Alignment, pmi_dict: dict[str, dict]):  # TODO use more sophisticated pmi_dist from wordDist.py or word adaptation surprisal or alignment cost measure within Alignment object
+            def score_pmi(alignment: Alignment, pmi_dict: PhonemeMap):  # TODO use more sophisticated pmi_dist from wordDist.py or word adaptation surprisal or alignment cost measure within Alignment object
                 alignment_tuples = alignment.alignment
-                PMI_score = mean([pmi_dict.get(pair[0], {}).get(pair[1], 0) for pair in alignment_tuples])
+                PMI_score = mean([pmi_dict.get_value_or_default(pair[0], pair[1], 0) for pair in alignment_tuples])
                 return PMI_score
 
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
@@ -1126,7 +1134,7 @@ class PhonCorrelator:
 
         # Save PMI results
         self.lang1.phoneme_pmi[self.lang2_name] = results
-        self.lang2.phoneme_pmi[self.lang1_name] = reverse_corr_dict(results)
+        self.lang2.phoneme_pmi[self.lang1_name] = reverse_corr_dict_map(results)
         # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
 
         self.pmi_dict = results
@@ -1463,9 +1471,9 @@ class PhonCorrelator:
         # Save all segment pairs with non-zero PMI values to file
         # Skip extremely small decimals that are close to zero
         lines = []
-        for seg1 in self.pmi_dict:
-            for seg2 in self.pmi_dict[seg1]:
-                pmi_val = round(self.pmi_dict[seg1][seg2], 3)
+        for seg1 in self.pmi_dict.get_primary_keys():
+            for seg2 in self.pmi_dict.get_secondary_keys(seg1):
+                pmi_val = round(self.pmi_dict.get_value(seg1, seg2), 3)
                 if abs(pmi_val) > threshold:
                     line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
                     lines.append(line)
