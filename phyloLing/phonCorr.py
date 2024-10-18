@@ -973,9 +973,15 @@ class PhonCorrelator:
                 qual_prev_sample = qualifying_words[iteration - 1]
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
-                # Perform EM algorithm and fit IBM model 1 on ngrams of varying sizes
-                em_synonyms1, em_synonyms2 = self.fit_radial_ibm_model(
+                # Fit IBM translation/alignment model on ngrams of varying sizes
+                initial_corr_counts1, _ = self.fit_radial_ibm_model(
                     qual_prev_sample,
+                    min_corr=min_corr,
+                    max_ngram_size=max_ngram_size,
+                    seed=seed_i,
+                )
+                initial_corr_counts2, _ = self.fit_radial_ibm_model(
+                    reversed_qual_prev_sample,
                     min_corr=min_corr,
                     max_ngram_size=max_ngram_size,
                     seed=seed_i,
@@ -984,13 +990,13 @@ class PhonCorrelator:
                 # Calculate initial PMI for all ngram pairs
                 pmi_dict_l1l2, pmi_dict_l2l1 = [
                     self.phoneme_pmi(
-                        conditional_counts=em_synonyms1,
+                        conditional_counts=initial_corr_counts1,
                         l1=self.lang1,
                         l2=self.lang2,
                         wordlist=qual_prev_sample,
                     ),
                     self.phoneme_pmi(
-                        conditional_counts=em_synonyms2,
+                        conditional_counts=initial_corr_counts2,
                         l1=self.lang2,
                         l2=self.lang1,
                         wordlist=reversed_qual_prev_sample,
