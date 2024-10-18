@@ -3,7 +3,7 @@ from math import sqrt
 from statistics import mean
 
 from asjp import ipa2asjp
-from constants import PAD_CH_DEFAULT
+from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
 from nltk import edit_distance
 from phonAlign import Alignment, Gap, get_alignment_iter
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
@@ -196,22 +196,22 @@ def accent_is_shifted(alignment, i, gap_ch):
     return shifted
 
 
-def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, alignment: Alignment, i: int, penalty_discount: int | float = 2):
+def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, alignment: list, i: int, penalty_discount: int | float = 2, gap_ch: str = GAP_CH_DEFAULT):
     """Reduces deletion penalty in certain phonological contexts.
 
     Args:
         penalty (float): Deletion penalty.
         gap (Gap): Gap (AlignedPair) object.
-        alignment (Alignment): Alignment object.
+        alignment (list): List of aligned segments.
         i (int): Alignment index.
         penalty_discount (int | float, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
+        gap_ch (str): Gap character.
 
     Returns:
         penalty: Reduced deletion penalty.
     """
     gap_index = gap.gap_i
     deleted_segment = _toSegment(gap.segment)
-    gap_ch = alignment.gap_ch
     previous_seg, next_seg = None, None
     previous_pos =  i > 0 and alignment[i - 1][gap_index] != gap_ch
     previous_seg = _toSegment(alignment[i - 1][gap_index]) if previous_pos else None
@@ -275,27 +275,24 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, align
     return penalty
 
 
-def phonological_dist(word1,
-                      word2=None,
+def phonological_dist(word1: Word | Alignment,
+                      word2: Word=None,
                       sim_func=phone_sim,
                       penalize_sonority=True,
-                      normalize_geminates=True,
                       context_reduction=False,
                       prosodic_env_scaling=True,
                       total_dist=False,
                       **kwargs):
-    """Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
-    No weighting by segment type, position, etc.
+    f"""Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
 
     Args:
-        word1 (phyloLing.Word or phonAlign.Alignment): first Word object, or an Alignment object
-        word2 (phyloLing.Word): second Word object. Defaults to None.
-        sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
-        penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
-        normalize_geminates (bool, optional): Adjusts deletion penalties when geminates (double consonants) are aligned with long consonants. Defaults to True.
-        context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
-        prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
-        total_dist (bool, optional): Computes phonological distance as the sum of all penalties rather than as an average. Defaults to True.
+        word1 (Word or Alignment): first Word object, or an Alignment object
+        word2 (Word): second Word object. Defaults to None.
+        sim_func (_type_, optional): Phonetic similarity function. Defaults to {sim_func}.
+        penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to {penalize_sonority}.
+        context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to {context_reduction}.
+        prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to {prosodic_env_scaling}.
+        total_dist (bool, optional): Computes phonological distance as the sum of all penalties rather than as an average. Defaults to {total_dist}.
 
     Returns:
         float: phonological distance value
@@ -339,63 +336,56 @@ def phonological_dist(word1,
         # based on the sonority and information content (if available) of the deleted segment
         if gap_ch in pair:
             penalty = 1
-            if seg1 == gap_ch:
-                deleted_segment = _toSegment(seg2)
+            gap = Gap(alignment, i)
+            deleted_segment = _toSegment(gap.segment)
+            deleted_index = gap.seg_i
 
-            else:
-                deleted_segment = _toSegment(seg1)
+            # Stress/accent in different positions should be penalized only once
+            # Check if a later pair includes a deleted suprasegmental/toneme in the opposite alignment position
+            # If so, skip penalizing the current pair altogether
+            if deleted_segment.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
+                if accent_is_shifted(alignment, i, gap_ch):
+                    continue
 
             if penalize_sonority:
                 sonority = deleted_segment.sonority
                 sonority_penalty = 1 - (sonority / (MAX_SONORITY + 1))
                 penalty *= sonority_penalty
 
-            # Designate indices of deleted segment and gap
-            gap = Gap(alignment, i)
-            deleted_index = gap.seg_i
+            # Adjust for geminates vs. long consonants (always performed)
+            # If the deleted segment is part of a long/geminate segment transcribed as double (e.g. /tt/ rather than /tː/),
+            # where at least one part of the geminate has been aligned
+            # Method: check if the preceding or following pair contained the deleted segment at deleted_index, aligned to something other than the gap character
+            # Check following pair
+            double = False
+            if i < length - 1:
+                nxt_pair = alignment[i + 1]
+                if gap_ch not in nxt_pair and nxt_pair[deleted_index] == deleted_segment.segment:
+                    penalty = 0  # eliminate the current penalty altogether
+                    alignment[i + 1] = list(alignment[i + 1])
+                    # Adjust transcription of next segment to include gemination/length
+                    # Penalty for next pair will take it into account
+                    alignment[i + 1][deleted_index] = f'{deleted_segment.segment}ː'
+                    double = True
+
+            # Check preceding pair
+            if i > 0 and not double:
+                prev_pair = alignment[i - 1]
+                if gap_ch not in prev_pair and prev_pair[deleted_index] == deleted_segment.segment:
+                    penalty = 0  # eliminate the current penalty altogether
+                    alignment[i - 1] = list(alignment[i - 1])
+                    # Adjust previous penalty to include the length/gemination
+                    alignment[i - 1][deleted_index] = f'{deleted_segment.segment}ː'
+                    s1, s2 = alignment[i - 1]
+                    penalties[-1] = 1 - sim_func(s1, s2, **kwargs)
+            if penalty == 0:
+                continue
 
             # Lessen the penalty if certain phonological conditions are met
             if context_reduction:
                 penalty = reduce_phon_deletion_penalty_by_phon_context(
-                    penalty, gap, alignment, i
+                    penalty, gap, alignment, i, gap_ch=gap_ch,
                 )
-
-            elif normalize_geminates:
-                # 7) If the deleted segment is part of a long/geminate segment transcribed as double (e.g. /tt/ rather than /tː/),
-                # where at least one part of the geminate has been aligned
-                # Method: check if the preceding or following pair contained the deleted segment at deleted_index, aligned to something other than the gap character
-                # Check following pair
-                double = False
-                try:
-                    nxt_pair = alignment[i + 1]
-                    if gap_ch not in nxt_pair and nxt_pair[deleted_index] == deleted_segment.segment:
-                        penalty = 0  # eliminate the current penalty altogether
-                        alignment[i + 1] = list(alignment[i + 1])
-                        # Adjust transcription of next segment to include gemination/length
-                        # Penalty for next pair will take it into account
-                        alignment[i + 1][deleted_index] = f'{deleted_segment.segment}ː'
-                        double = True
-
-                except IndexError:
-                    pass
-
-                # Check preceding pair
-                if i > 0 and not double:
-                    prev_pair = alignment[i - 1]
-                    if gap_ch not in prev_pair and prev_pair[deleted_index] == deleted_segment.segment:
-                        penalty = 0  # eliminate the current penalty altogether
-                        alignment[i - 1] = list(alignment[i - 1])
-                        # Adjust previous penalty to include the length/gemination
-                        alignment[i - 1][deleted_index] = f'{deleted_segment.segment}ː'
-                        s1, s2 = alignment[i - 1]
-                        penalties[-1] = 1 - sim_func(s1, s2, **kwargs)
-
-                # 8) Stress/accent in different positions should be penalized only once
-                # Check if a later pair includes a deleted suprasegmental/toneme in the opposite alignment position
-                # If so, skip penalizing the current pair altogether
-                if deleted_segment.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
-                    if accent_is_shifted(alignment, i, gap_ch):
-                        continue
 
             # TODO: is this right?
             if prosodic_env_scaling:
