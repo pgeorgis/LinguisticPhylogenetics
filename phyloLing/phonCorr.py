@@ -699,15 +699,19 @@ class PhonCorrelator:
 
         return corr_dict_l1l2, corr_dict_l2l1
 
-    def joint_probs(self, conditional_counts, l1=None, l2=None):
+    def joint_probs(self, conditional_counts, l1=None, l2=None, wordlist=None):
         """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
         l1, l2 = self.langs(l1=l1, l2=l2)
         joint_prob_dist = defaultdict(lambda: {})
         for seg1 in conditional_counts:
             seg1_totals = sum(conditional_counts[seg1].values())
+            seg1_ngram = Ngram(seg1)
             for seg2 in conditional_counts[seg1]:
                 cond_prob = conditional_counts[seg1][seg2] / seg1_totals
-                p_ind1 = l1.ngram_probability(Ngram(seg1))
+                if wordlist:
+                    p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
+                else:
+                    p_ind1 = l1.ngram_probability(seg1_ngram)
                 joint_prob = cond_prob * p_ind1
                 joint_prob_dist[seg1][seg2] = joint_prob
         return joint_prob_dist
@@ -774,8 +778,11 @@ class PhonCorrelator:
         conditional_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         """
         l1, l2 = self.langs(l1=l1, l2=l2)
+        if wordlist:
+            wordlist = Wordlist(wordlist, pad_n=1)
+
         # Convert conditional probabilities to joint probabilities
-        joint_prob_dist = self.joint_probs(conditional_counts, l1=l1, l2=l2)
+        joint_prob_dist = self.joint_probs(conditional_counts, l1=l1, l2=l2, wordlist=wordlist)
         reverse_cond_counts = reverse_corr_dict(conditional_counts)
 
         # Get set of all possible phoneme correspondences
@@ -803,10 +810,6 @@ class PhonCorrelator:
                               if corr2 not in l2.phonemes])
         # Extend with gap and pad tokens
         segment_pairs.update([(self.gap_ch, start_token(self.pad_ch)), (self.gap_ch, end_token(self.pad_ch))])
-
-        # If using a specific wordlist, extract sequences in each language
-        if wordlist:
-            wordlist = Wordlist(wordlist, pad_n=1)
 
         # Estimate probability of a gap in each language from conditional counts
         gap_counts1, gap_counts2 = 0, 0
