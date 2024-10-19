@@ -1,9 +1,42 @@
 from collections import defaultdict
 from itertools import zip_longest
-from math import inf
+from math import inf, log
 import numpy as np
 from constants import GAP_CH_DEFAULT
 from utils.sequence import Ngram
+
+
+def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
+    """Calculates pairwise alignment costs for sequences using a specified cost function.
+
+    Args:
+        seq1 (iterable): First sequence.
+        seq2 (iterable): Second sequence.
+        cost_func (Distance): cost function used for computing pairwise alignment costs.
+        as_indices (bool): Whether to return alignment cost dictionary using indices of aligned positions vs. the aligned units.
+
+    Returns:
+        dict: dictionary of pairwise alignment costs by sequence indices
+    """
+    alignment_costs = {}
+    for i, seq1_i in enumerate(seq1):
+        for j, seq2_j in enumerate(seq2):
+            cost = cost_func.eval(seq1_i, seq2_j, **kwargs)
+
+            # If similarity function, turn into distance and ensure it is negative # TODO add into Distance object
+            if cost_func.sim:
+                if cost > 0:
+                    cost = log(cost)
+                else:
+                    cost = -inf
+
+            if as_indices:
+                alignment_costs[(i, j)] = cost
+            else:
+                alignment_costs[(seq1_i, seq2_j)] = cost
+
+    return alignment_costs
+
 
 def needleman_wunsch_extended(seq1: list,
                               seq2: list,

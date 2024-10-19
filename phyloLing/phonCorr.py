@@ -1,9 +1,9 @@
 import os
 import random
-import re
 from collections import defaultdict
 from functools import lru_cache
 from itertools import product
+from math import inf, log
 from statistics import mean, stdev
 from typing import Self
 
@@ -15,7 +15,10 @@ from phonAlign import Alignment, visual_align
 from phonUtils.phonEnv import (phon_env_ngrams, relative_post_sonority,
                                relative_prev_sonority)
 from phonUtils.segment import _toSegment
+from phonUtils.phonSim import phone_sim
 from scipy.stats import norm
+from utils.alignment import calculate_alignment_costs, needleman_wunsch_extended
+from utils.distance import Distance
 from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
@@ -28,6 +31,13 @@ from utils.utils import (default_dict,
                          create_default_dict,
                          create_default_dict_of_dicts)
 
+# Designate phonetic feature distance
+def phone_dist(x, y, **kwargs):
+    sim = phone_sim(x, y, **kwargs)
+    if sim > 0:
+        return log(sim)
+    return -inf
+PhoneFeatureDist = Distance(phone_dist, name='PhoneFeatureDist')
 
 def fit_ibm_align_model(corpus: list[tuple],
                         iterations: int=5,
@@ -40,10 +50,10 @@ def fit_ibm_align_model(corpus: list[tuple],
 
     Args:
         corpus (list[tuple]): list of (Word, Word) tuple pairs
-        iterations (int, optional): Number of iterations to run EM algorithm. Defaults to 5.
-        gap_ch (str, optional): Gap character. Defaults to GAP_CH_DEFAULT.
-        ibm_model (int, optional): IBM model. Defaults to 2.
-        seed (int, optional): Random seed. Defaults to None.
+        iterations (int, optional): Number of iterations to run EM algorithm.
+        gap_ch (str, optional): Gap character.
+        ibm_model (int, optional): IBM model.
+        seed (int, optional): Random seed.
 
     Raises:
         ValueError: If an invalid IBM model is specified.
@@ -539,9 +549,51 @@ class PhonCorrelator:
                        wordlist,
                        align_costs=None,
                        remove_uncompacted_padding=True,
+                       add_phon_dist=False,
                        # phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
+
+        # Optionally add phone similarity measure between phone pairs to align costs/scores
+        if add_phon_dist:
+            gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
+            for ngram1 in align_costs:
+                ngram1 = Ngram(ngram1)
+                # Remove gaps and boundaries
+                gapless_ngram1 = ngram1.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
+                for ngram2 in align_costs[ngram1.undo()]:
+                    ngram2 = Ngram(ngram2)
+                    gapless_ngram2 = ngram2.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
+
+                    # Skip computing phonetic similarity between gaps/boundaries with each other
+                    if gapless_ngram1.size == 0 and gapless_ngram2.size == 0:
+                        continue
+                    # For full gaps/boundaries with segments, assign cost as GOP * length of segment sequence
+                    elif gapless_ngram1.size == 0 or gapless_ngram2.size == 0:
+                        phon_align_cost = gop * max(gapless_ngram1.size, gapless_ngram2.size)
+                    # Else compute phonetic distance of the two sequences
+                    else:
+                        phon_costs = calculate_alignment_costs(
+                            gapless_ngram1.ngram,
+                            gapless_ngram2.ngram,
+                            cost_func=PhoneFeatureDist,
+                            as_indices=False
+                        )
+                        phon_align_cost, _, _ = needleman_wunsch_extended(
+                            gapless_ngram1.ngram,
+                            gapless_ngram2.ngram,
+                            align_cost=phon_costs,
+                            gap_cost={},
+                            default_gop=gop,
+                            maximize_score=False,
+                            gap_ch=self.gap_ch,
+                            allow_complex=False
+                        )
+                    # Normalize phone cost by sequence length
+                    phon_align_cost /= max(gapless_ngram1.size, gapless_ngram2.size)
+                    # Add phonetic alignment cost to align_costs dict storing PMI values
+                    align_costs[ngram1.undo()][ngram2.undo()] += phon_align_cost
+
         alignment_list = [
             Alignment(
                 seq1=word1,
@@ -969,13 +1021,13 @@ class PhonCorrelator:
         Args:
             p_threshold (float, optional): Threshold for determining whether aligned word pairs qualify for next iteration of correspondence calculation. \
                 Defaults to 0.1, which corresponds with a 90% chance that aligned word pairs with a given score do NOT belong to the non-cognate distribution.
-            max_iterations (int, optional): Maximum number of iterations. Defaults to 3.
-            n_samples (int, optional): Number of samples to draw. Defaults to 3.
-            sample_size (float, optional): Sample size proportional to shared vocablary size. Defaults to 0.8.
-            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid. Defaults to 2.
-            max_ngram_size (int, optional): Maximum ngram size for radial IBM alignment. Defaults to 2.
-            ngram_size (int, optional): Ngram size for surprisal. Defaults to 1.
-            cumulative (bool, optional): Accumulate correspondence counts over iterations, continuing to consider alignments from earlier iterations. Defaults to False.
+            max_iterations (int, optional): Maximum number of iterations.
+            n_samples (int, optional): Number of samples to draw.
+            sample_size (float, optional): Sample size proportional to shared vocablary size.
+            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid.
+            max_ngram_size (int, optional): Maximum ngram size for radial IBM alignment.
+            ngram_size (int, optional): Ngram size for surprisal.
+            cumulative (bool, optional): Accumulate correspondence counts over iterations, continuing to consider alignments from earlier iterations.
 
         Returns:
             results (dict): Nested dictionary of PMI correspondences.
@@ -1396,9 +1448,9 @@ class PhonCorrelator:
 
         Args:
             alignments (list): List of Alignment objects representing aligned word pairs.
-            phon_env (bool, optional): Use phonological environment. Defaults to False.
-            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid. Defaults to 2.
-            ngram_size (int, optional): Ngram size. Defaults to 1.
+            phon_env (bool, optional): Use phonological environment.
+            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid.
+            ngram_size (int, optional): Ngram size.
 
         Returns:
             (surprisal_results, phon_env_surprisal_results) (tuple): Tuple with nested dictionaries of surprisal results and optionally phonological environment surprisal results. \
