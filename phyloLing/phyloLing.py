@@ -698,10 +698,10 @@ class LexicalDataset:
 
         # Try to skip re-calculation of distance matrix by retrieving
         # a previously computed distance matrix by its code
-        code = self.generate_test_code(dist_func, cognates=cognates, **kwargs)
+        #code = self.generate_test_code(dist_func, cognates=cognates, **kwargs)
 
-        if code in self.distance_matrices:
-            return self.distance_matrices[code]
+        # if code in self.distance_matrices:
+        #     return self.distance_matrices[code]
 
         # Use all available concepts by default
         if concept_list is None:
@@ -753,7 +753,7 @@ class LexicalDataset:
                              **kwargs)
 
         # Store computed distance matrix
-        self.distance_matrices[code] = dm
+        #self.distance_matrices[code] = dm
 
         return dm
 

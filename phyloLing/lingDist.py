@@ -247,7 +247,7 @@ def gradient_cognate_sim(lang1,
 
     score = mean(group_scores.values())
 
-    if logger:
-        logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
+    # if logger:
+    #     logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
 
     return score

@@ -4,6 +4,9 @@ import logging
 import os
 from collections import defaultdict
 import shutil
+from scipy.optimize import minimize
+import numpy as np
+from math import inf
 
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
@@ -407,22 +410,67 @@ if __name__ == "__main__":
     exp_outdir = os.path.join(family_params["outdir"], "experiments", create_datestamp(), exp_id)
     os.makedirs(exp_outdir, exist_ok=True)
     params["run_info"]["experimentID"] = exp_id
+    
+    references = tree_params["reference"]
+    def objective(weights):
+        weights = tuple(weights)
+        logger.info(f"Weights: {weights}")
+        distFunc.kwargs['eval_func'].measured = {}
+        distFunc.kwargs['eval_func'].kwargs['weights'] = weights
+        distFunc.kwargs['eval_func'].hashable_kwargs = distFunc.kwargs['eval_func'].get_hashable_kwargs(distFunc.kwargs['eval_func'].kwargs)
+        distFunc.measured = {}
+        distFunc.hashable_kwargs = distFunc.get_hashable_kwargs(distFunc.kwargs)
+        tree = family.generate_tree(
+            cluster_func=clusterDist,
+            dist_func=distFunc,
+            cognates=cluster_params['cognates'],
+            linkage_method=tree_params['linkage'],
+            #outtree=outtree,
+            root=tree_params['root'],
+        )
+        best_score = inf
+        for ref_tree_file in references:
+            ref_tree = load_newick_tree(ref_tree_file)
+            gqd_score = gqd(
+                tree,
+                ref_tree,
+                is_rooted=tree_params['root'] is not None
+            )
+            if gqd_score < best_score:
+                best_score = gqd_score
+        logger.info(f"GQD: {gqd_score}")
+        return best_score
 
-    # Generate Newick tree string
-    logger.info('Generating phylogenetic tree...')
-    outtree = os.path.join(exp_outdir, "newick.tre")
-    tree = family.generate_tree(
-        cluster_func=clusterDist,
-        dist_func=distFunc,
-        cognates=cluster_params['cognates'],
-        linkage_method=tree_params['linkage'],
-        outtree=outtree,
-        root=tree_params['root'],
+    # Initial guess for the weights
+    initial_weights = np.array([1, 1, 1])
+
+    # Bounds for the weights (optional, if you want to restrict the range)
+    bounds = [(0, None) for _ in initial_weights]  # Non-negative weights
+
+    # Minimize the evaluation score by adjusting weights
+    result = minimize(
+        objective,
+        initial_weights,
+        bounds=bounds,
+        # options={
+        #     'eps': 0.5,
+        #     'ftol': 1e-8,  # Function value tolerance
+        # }
+        method='Powell', 
+        options={
+        'xtol': 1e-4,  # Step size tolerance (small changes trigger finer adjustments)
+        'verbose': 3,  # To display detailed output
+        }
     )
-    params["tree"]["newick"] = tree
-    with open(outtree, 'w') as f:
-        f.write(tree)
-    logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
+    breakpoint()
+
+    # # Generate Newick tree string
+    # logger.info('Generating phylogenetic tree...')
+    # outtree = os.path.join(exp_outdir, "newick.tre")
+    # params["tree"]["newick"] = tree
+    # with open(outtree, 'w') as f:
+    #     f.write(tree)
+    # logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
 
     # Optionally evaluate tree wrt to reference tree(s)
     if tree_params["reference"]:
