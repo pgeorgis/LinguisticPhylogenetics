@@ -38,6 +38,7 @@ phon_corr:
   phon_env: true 
   refresh: []
   refresh_all: false
+  copy_to_outdir: true
 
 cluster:
   cognates: auto
