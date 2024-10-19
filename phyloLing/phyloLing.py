@@ -1427,11 +1427,16 @@ class Language:
             # return sum(info_content[j][1] for j in info_content)
             return info_content
 
-    def ngram_probability(self, ngram):
+    def ngram_count(self, ngram):
         ngram = Ngram(ngram)
         if ngram.size not in self.ngrams:
             self.list_ngrams(ngram.size)
-        prob = self.ngrams[ngram.size][ngram.ngram] / sum(self.ngrams[ngram.size].values())
+        count = self.ngrams[ngram.size][ngram.ngram]
+        return count
+
+    def ngram_probability(self, ngram):
+        count = self.ngram_count(ngram)
+        prob = count / sum(self.ngrams[ngram.size].values())
         return prob
 
     @lru_cache(maxsize=None)
