@@ -667,26 +667,6 @@ class Gap(AlignedPair):
         self.seg_i = abs(self.gap_i - 1)
         self.segment = self.pair[self.seg_i]
 
-    def bigram_slices(self):
-        slices = [
-            # e.g. kt ~ ʧ
-            # ('-', 'k'), ('ʧ', 't') or ('k', '-'), ('t', 'ʧ')
-            (self.index, self.index + 2),
-            # ('ʧ', 'k'), ('-', 't') or ('k', 'ʧ'), ('t', '-')
-            (self.index - 1, self.index + 1)
-        ]
-        return slices
-
-    def bigram_aligned_segs(self, bigram):
-        """Given a bigram tuple that the gap forms a larger alignment unit with,
-        this function identifies the bigram segment aligned to the gap
-        and the bigram segment aligned to another segment"""
-        gap_aligned_corr_i = bigram.index(self.segment)
-        seg_aligned_corr_i = abs(gap_aligned_corr_i - 1)
-        gap_aligned_corr = bigram[gap_aligned_corr_i]
-        seg_aligned_corr = bigram[seg_aligned_corr_i]
-        return gap_aligned_corr, seg_aligned_corr
-
 
 def get_alignment_iter(alignment, phon_env=False):
     # Handle class of input alignment: should be either an Alignment object or an iterable
