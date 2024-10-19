@@ -3,27 +3,30 @@ from math import sqrt
 from statistics import mean
 
 from asjp import ipa2asjp
-from constants import PAD_CH_DEFAULT
+from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
 from nltk import edit_distance
-from phonAlign import Alignment, get_alignment_iter
-from phyloLing import Word
-from phonUtils.initPhoneData import (alveolopalatal, consonants, glides,
-                                     nasals, palatal, postalveolar, vowels)
-from phonUtils.ipaTools import strip_diacritics
+from phonAlign import Alignment, Gap, get_alignment_iter
+from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
+                                     postalveolar)
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
-from utils.distance import Distance, euclidean_dist, sim_to_dist
-from utils.information import adaptation_surprisal  # surprisal, surprisal_to_prob
+from utils.distance import Distance, sim_to_dist
+from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
+
+from phyloLing import Word
+
+# Designate maximum sonority as sonority of a toneme
+MAX_SONORITY = _toSegment('˧').sonority
 
 class WordDistance(Distance):
     def eval(self, x, y, **kwargs):
         if isinstance(x, Word) and isinstance(y, Word):
-            key = ((x.language.name, x.ipa), (y.language.name, y.ipa), self.hashable_kwargs) 
+            key = ((x.language.name, x.ipa), (y.language.name, y.ipa), self.hashable_kwargs)
             if key in self.measured:
                 return self.measured[key]
-            
+
         if (x, y, self.hashable_kwargs) in self.measured:
             return self.measured[(x, y, self.hashable_kwargs)]
         else:
@@ -193,31 +196,103 @@ def accent_is_shifted(alignment, i, gap_ch):
     return shifted
 
 
-def phonological_dist(word1,
-                      word2=None,
+def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, alignment: list, i: int, penalty_discount: int | float = 2, gap_ch: str = GAP_CH_DEFAULT):
+    """Reduces deletion penalty in certain phonological contexts.
+
+    Args:
+        penalty (float): Deletion penalty.
+        gap (Gap): Gap (AlignedPair) object.
+        alignment (list): List of aligned segments.
+        i (int): Alignment index.
+        penalty_discount (int | float, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
+        gap_ch (str): Gap character.
+
+    Returns:
+        penalty: Reduced deletion penalty.
+    """
+    gap_index = gap.gap_i
+    deleted_segment = _toSegment(gap.segment)
+    previous_seg, next_seg = None, None
+    previous_pos =  i > 0 and alignment[i - 1][gap_index] != gap_ch
+    previous_seg = _toSegment(alignment[i - 1][gap_index]) if previous_pos else None
+    next_pos = i < len(alignment) -1 and alignment[i + 1][gap_index] != gap_ch
+    next_seg = _toSegment(alignment[i + 1][gap_index]) if next_pos else None
+
+    # 1) If the deleted segment is a nasal and the corresponding
+    # precending/following segment was (pre)nasal(ized)
+    if deleted_segment.stripped in nasals:
+        if previous_seg and previous_seg.features['nasal'] == 1:
+            penalty /= penalty_discount
+        elif next_seg and next_seg.features['nasal'] == 1:
+            penalty /= penalty_discount
+
+    # 2) If the deleted segment is a palatal glide (j, ɥ) or high front vowel (i, ɪ, y, ʏ),
+    # and the corresponding preceding/following segment was palatalized
+    # or is a palatal, alveolopalatal, or postalveolar consonant
+    elif re.search(r'[jɥ]|([iɪyʏ]̯)', deleted_segment.segment):
+        if previous_seg and previous_seg.base in palatal.union(alveolopalatal).union(postalveolar):
+            penalty /= penalty_discount
+        elif previous_seg and re.search(r'[ʲᶣ]', previous_seg.segment):
+            penalty /= penalty_discount
+        elif next_seg and next_seg.base in palatal.union(alveolopalatal).union(postalveolar): # TODO set this as a constant
+            penalty /= penalty_discount
+        elif next_seg and re.search(r'[ʲᶣ]', next_seg.segment):
+            penalty /= penalty_discount
+
+    # 3) If the deleted segment is a high rounded/labial glide
+    # and the corresponding preceding/following segment was labialized
+    elif re.search(r'[wʋ]|([uʊyʏ]̯)', deleted_segment.segment):
+        if previous_seg and re.search(r'[ʷᶣ]', previous_seg.segment):
+            penalty /= penalty_discount
+        elif next_seg and re.search(r'[ʷᶣ]', next_seg.segment):
+            penalty /= penalty_discount
+
+    # 4) If the deleted segment is /h, ɦ/ and the corresponding
+    # preceding/following segment was (pre-)aspirated or breathy
+    elif re.search(r'[hɦ]', deleted_segment.base):
+        if previous_seg and re.search(r'[ʰʱ̤]', previous_seg.segment):
+            penalty /= penalty_discount
+        elif next_seg and re.search(r'[ʰʱ̤]', next_seg.segment):
+            penalty /= penalty_discount
+
+    # 5) If the deleted segment is a rhotic approximant /ɹ, ɻ/
+    # and the corresponding preceding/following segment was rhoticized
+    elif re.search(r'[ɹɻ]', deleted_segment.base):
+        if previous_seg and re.search(r'[ɚɝ˞]', previous_seg.segment):
+            penalty /= penalty_discount
+        if next_seg and re.search(r'[ɚɝ˞]', next_seg.segment):
+            penalty /= penalty_discount
+
+    # 6) If the deleted segment is a glottal stop and the corresponding
+    # preceding segment was glottalized or creaky
+    elif deleted_segment.base == 'ʔ':
+        if previous_seg and re.search(r'[ˀ̰]', previous_seg.segment):
+            penalty /= penalty_discount
+        elif next_seg and re.search(r'[ˀ̰]', next_seg.segment):
+            penalty /= penalty_discount
+
+    # TODO add handling with glides and diphthongs, same principle as labialized/palatalized; same sound in 2 vs. in 1 segment transcription
+    return penalty
+
+
+def phonological_dist(word1: Word | Alignment,
+                      word2: Word=None,
                       sim_func=phone_sim,
                       penalize_sonority=True,
-                      max_sonority=17,  # Highest sonority: suprasegmentals/tonemes = lowest deletion penalty
-                      normalize_geminates=True,
                       context_reduction=False,
-                      penalty_discount=2,
                       prosodic_env_scaling=True,
                       total_dist=False,
                       **kwargs):
-    """Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
-    No weighting by segment type, position, etc.
+    f"""Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
 
     Args:
-        word1 (phyloLing.Word or phonAlign.Alignment): first Word object, or an Alignment object
-        word2 (phyloLing.Word): second Word object. Defaults to None.
-        sim_func (_type_, optional): Phonetic similarity function. Defaults to phone_sim.
-        penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to True.
-        max_sonority (int, optional): Maximum sonority value. Defaults to 17 as defined in phonUtils.segment submodule.
-        normalize_geminates (bool, optional): Adjusts deletion penalties when geminates (double consonants) are aligned with long consonants. Defaults to True.
-        context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to True.
-        penalty_discount (int, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
-        prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to True.
-        total_dist (bool, optional): Computes phonological distance as the sum of all penalties rather than as an average. Defaults to True.
+        word1 (Word or Alignment): first Word object, or an Alignment object
+        word2 (Word): second Word object. Defaults to None.
+        sim_func (_type_, optional): Phonetic similarity function. Defaults to {sim_func}.
+        penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to {penalize_sonority}.
+        context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to {context_reduction}.
+        prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to {prosodic_env_scaling}.
+        total_dist (bool, optional): Computes phonological distance as the sum of all penalties rather than as an average. Defaults to {total_dist}.
 
     Returns:
         float: phonological distance value
@@ -261,107 +336,56 @@ def phonological_dist(word1,
         # based on the sonority and information content (if available) of the deleted segment
         if gap_ch in pair:
             penalty = 1
-            if seg1 == gap_ch:
-                deleted_segment = _toSegment(seg2)
+            gap = Gap(alignment, i)
+            deleted_segment = _toSegment(gap.segment)
+            deleted_index = gap.seg_i
 
-            else:
-                deleted_segment = _toSegment(seg1)
+            # Stress/accent in different positions should be penalized only once
+            # Check if a later pair includes a deleted suprasegmental/toneme in the opposite alignment position
+            # If so, skip penalizing the current pair altogether
+            if deleted_segment.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
+                if accent_is_shifted(alignment, i, gap_ch):
+                    continue
 
             if penalize_sonority:
                 sonority = deleted_segment.sonority
-                sonority_penalty = 1 - (sonority / (max_sonority + 1))
+                sonority_penalty = 1 - (sonority / (MAX_SONORITY + 1))
                 penalty *= sonority_penalty
 
-            deleted_index = pair.index(deleted_segment.segment)
-            gap_index = deleted_index - 1
+            # Adjust for geminates vs. long consonants (always performed)
+            # If the deleted segment is part of a long/geminate segment transcribed as double (e.g. /tt/ rather than /tː/),
+            # where at least one part of the geminate has been aligned
+            # Method: check if the preceding or following pair contained the deleted segment at deleted_index, aligned to something other than the gap character
+            # Check following pair
+            double = False
+            if i < length - 1:
+                nxt_pair = alignment[i + 1]
+                if gap_ch not in nxt_pair and nxt_pair[deleted_index] == deleted_segment.segment:
+                    penalty = 0  # eliminate the current penalty altogether
+                    alignment[i + 1] = list(alignment[i + 1])
+                    # Adjust transcription of next segment to include gemination/length
+                    # Penalty for next pair will take it into account
+                    alignment[i + 1][deleted_index] = f'{deleted_segment.segment}ː'
+                    double = True
+
+            # Check preceding pair
+            if i > 0 and not double:
+                prev_pair = alignment[i - 1]
+                if gap_ch not in prev_pair and prev_pair[deleted_index] == deleted_segment.segment:
+                    penalty = 0  # eliminate the current penalty altogether
+                    alignment[i - 1] = list(alignment[i - 1])
+                    # Adjust previous penalty to include the length/gemination
+                    alignment[i - 1][deleted_index] = f'{deleted_segment.segment}ː'
+                    s1, s2 = alignment[i - 1]
+                    penalties[-1] = 1 - sim_func(s1, s2, **kwargs)
+            if penalty == 0:
+                continue
 
             # Lessen the penalty if certain phonological conditions are met
             if context_reduction:
-                if i > 0 and alignment[i - 1][gap_index] != gap_ch:
-                    previous_seg = _toSegment(alignment[i - 1][gap_index])
-                    # 1) If the deleted segment is a nasal and the corresponding
-                    # precending segment was (pre)nasalized
-                    if deleted_segment.stripped in nasals:
-                        if previous_seg.features['nasal'] == 1:
-                            penalty /= penalty_discount
-
-                    # 2) If the deleted segment is a palatal glide (j, ɥ) or high front vowel (i, ɪ, y, ʏ),
-                    # and the corresponding preceding segment was palatalized
-                    # or is a palatal, alveolopalatal, or postalveolar consonant
-                    elif re.search(r'[jɥiɪyʏ]', deleted_segment.base):
-                        if previous_seg.base in palatal.union(alveolopalatal).union(postalveolar):
-                            penalty /= penalty_discount
-                        elif re.search(r'[ʲᶣ]', previous_seg.segment):
-                            penalty /= penalty_discount
-
-                    # 3) If the deleted segment is a high rounded/labial glide
-                    # and the corresponding preceding segment was labialized
-                    elif re.search(r'[wʋuʊyʏ]', deleted_segment.base):
-                        if re.search(r'[ʷᶣ]', previous_seg.segment):
-                            penalty /= penalty_discount
-
-                    # 4) If the deleted segment is /h, ɦ/ and the corresponding
-                    # preceding segment was aspirated or breathy
-                    elif re.search(r'[hɦ]', deleted_segment.base):
-                        if re.search(r'[ʰʱ̤]', previous_seg.segment):
-                            penalty /= penalty_discount
-
-                        # Or if the following corresponding segment is breathy or pre-aspirated
-                        else:
-                            try:
-                                if re.search(r'[ʰʱ̤]', alignment[i + 1][gap_index]):
-                                    penalty /= penalty_discount
-                            except IndexError:
-                                pass
-
-                    # 5) If the deleted segment is a rhotic approximant /ɹ, ɻ/
-                    # and the corresponding preceding segment was rhoticized
-                    elif re.search(r'[ɹɻ]', deleted_segment.base):
-                        if re.search(r'[ɚɝ˞]', previous_seg.segment):
-                            penalty /= penalty_discount
-
-                    # 6) If the deleted segment is a glottal stop and the corresponding
-                    # preceding segment was glottalized or creaky
-                    elif deleted_segment.base == 'ʔ':
-                        if re.search(r'[ˀ̰]', previous_seg.segment):
-                            penalty /= penalty_discount
-
-            elif normalize_geminates:
-                # 7) If the deleted segment is part of a long/geminate segment transcribed as double (e.g. /tt/ rather than /tː/),
-                # where at least one part of the geminate has been aligned
-                # Method: check if the preceding or following pair contained the deleted segment at deleted_index, aligned to something other than the gap character
-                # Check following pair
-                double = False
-                try:
-                    nxt_pair = alignment[i + 1]
-                    if gap_ch not in nxt_pair and nxt_pair[deleted_index] == deleted_segment.segment:
-                        penalty = 0  # eliminate the current penalty altogether
-                        alignment[i + 1] = list(alignment[i + 1])
-                        # Adjust transcription of next segment to include gemination/length
-                        # Penalty for next pair will take it into account
-                        alignment[i + 1][deleted_index] = f'{deleted_segment.segment}ː'
-                        double = True
-
-                except IndexError:
-                    pass
-
-                # Check preceding pair
-                if i > 0 and not double:
-                    prev_pair = alignment[i - 1]
-                    if gap_ch not in prev_pair and prev_pair[deleted_index] == deleted_segment.segment:
-                        penalty = 0  # eliminate the current penalty altogether
-                        alignment[i - 1] = list(alignment[i - 1])
-                        # Adjust previous penalty to include the length/gemination
-                        alignment[i - 1][deleted_index] = f'{deleted_segment.segment}ː'
-                        s1, s2 = alignment[i - 1]
-                        penalties[-1] = 1 - sim_func(s1, s2, **kwargs)
-
-                # 8) Stress/accent in different positions should be penalized only once
-                # Check if a later pair includes a deleted suprasegmental/toneme in the opposite alignment position
-                # If so, skip penalizing the current pair altogether
-                if deleted_segment.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
-                    if accent_is_shifted(alignment, i, gap_ch):
-                        continue
+                penalty = reduce_phon_deletion_penalty_by_phon_context(
+                    penalty, gap, alignment, i, gap_ch=gap_ch,
+                )
 
             # TODO: is this right?
             if prosodic_env_scaling:
@@ -391,74 +415,6 @@ def phonological_dist(word1,
         word_dist = mean(penalties)
 
     return word_dist
-
-
-# TODO name of this function TBD
-def segmental_word_dist(word1,
-                        word2=None,
-                        c_weight=0.5,
-                        v_weight=0.3,
-                        syl_weight=0.2):
-    """Calculates the phonetic similarity of an aligned word pair according to
-    weighted average similarity of consonantal segments, vocalic segments, and
-    syllable structure"""
-
-    assert round(sum([c_weight, v_weight, syl_weight]), 1) == 1.0
-
-    # If word2 is None, we assume word1 argument is actually an aligned word pair
-    word1, word2, alignment = handle_word_pair_input(word1, word2)
-    length = alignment.length
-    alignment = alignment.alignment
-
-    # Iterate through pairs of alignment:
-    # Add fully consonant pairs to c_list, fully vowel/glide pairs to v_list
-    # (ignore pairs of matched non-glide consonants with vowels)
-    # and create syllable structure string for each word
-    c_pairs, v_pairs = [], []
-    syl_structure1, syl_structure2 = [], []
-    for pair in alignment:
-        strip_pair = (strip_diacritics(pair[0])[-1], strip_diacritics(pair[1])[-1])
-        if (strip_pair[0] in consonants) and (strip_pair[1] in consonants):
-            c_pairs.append(pair)
-            syl_structure1.append('C')
-            syl_structure2.append('C')
-        elif (strip_pair[0] in vowels + glides) and (strip_pair[1] in vowels + glides):
-            v_pairs.append(pair)
-            syl_structure1.append('V')
-            syl_structure2.append('V')
-        else:
-            if strip_pair[0] in consonants:
-                syl_structure1.append('C')
-            elif strip_pair[0] in vowels:
-                syl_structure1.append('V')
-            if strip_pair[1] in consonants:
-                syl_structure2.append('C')
-            elif strip_pair[1] in vowels:
-                syl_structure2.append('V')
-
-    # Count numbers of consonants and vowels: take the larger count to account
-    # for possibly deleted consonants or vowels
-    N_c = max(syl_structure1.count('C'), syl_structure2.count('C'))
-    N_v = max(syl_structure1.count('V'), syl_structure2.count('V'))
-
-    # Consonant score: mean phonetic similarity of all matched consonantal pairs, divided by number of consonant segments
-    try:
-        c_score = sum([phone_sim(pair[0], pair[1]) for pair in c_pairs]) / N_c
-    except ZeroDivisionError:
-        c_score = 1
-
-    # Vowel score: sum of phonetic similarity of all matched vowel pairs, divided by number of vowel segments
-    try:
-        v_score = sum([phone_sim(pair[0], pair[1]) for pair in v_pairs]) / N_v
-    except ZeroDivisionError:
-        v_score = 1
-
-    # Syllable score: length-normalized Levenshtein distance of syllable structure strings
-    syl_structure1, syl_structure2 = ''.join(syl_structure1), ''.join(syl_structure2)
-    syl_score = edit_distance(syl_structure1, syl_structure2) / length
-
-    # Final score: weighted sum of each component score as distance
-    return (c_weight * (1 - c_score)) + (v_weight * (1 - v_score)) + (syl_weight * syl_score)
 
 
 def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False, pad_ch=PAD_CH_DEFAULT, **kwargs):
@@ -739,7 +695,7 @@ def composite_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
 
     # Record word scores # TODO into Distance class object?
     if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key=COMPOSITE_DIST_KEY)
+        log_word_score(word1, word2, score, key=COMPOSITE_SIM_KEY)
         log_word_score(word1, word2, pmi_score, key=PMI_DIST_KEY)
         log_word_score(word1, word2, surprisal_score, key=SURPRISAL_DIST_KEY)
         log_word_score(word1, word2, phon_score, key=PHONOLOGICAL_DIST_KEY)
@@ -756,36 +712,16 @@ def log_word_score(word1, word2, score, key):
 
 
 # Initialize distance functions as Distance objects
+# NB: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on config settings
 LEVENSHTEIN_DIST_KEY = 'LevenshteinDist'
 PHONETIC_DIST_KEY = 'PhoneticDist'
-SEGMENTAL_DIST_KEY = 'SegmentalDist'
 PHONOLOGICAL_DIST_KEY = 'PhonDist'
 PMI_DIST_KEY = 'PMIDist'
 SURPRISAL_DIST_KEY = 'SurprisalDist'
-COMPOSITE_DIST_KEY = 'CompositeDist'
+COMPOSITE_SIM_KEY = 'CompositeSimilarity'
 HYBRID_DIST_KEY = 'HybridDist'
-LevenshteinDist = WordDistance(
-    func=levenshtein_dist,
-    name=LEVENSHTEIN_DIST_KEY,
-    cluster_threshold=0.73)
-PhoneticDist = WordDistance(
-    func=phonetic_dist,
-    name=PHONETIC_DIST_KEY)  # TODO name TBD
-SegmentalDist = WordDistance(
-    func=segmental_word_dist,
-    name=SEGMENTAL_DIST_KEY)  # TODO name TBD
-PhonDist = WordDistance(
-    func=phonological_dist, # TODO name TBD
-    name=PHONOLOGICAL_DIST_KEY,
-    cluster_threshold=0.16  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
-)
-PMIDist = WordDistance(
-    func=pmi_dist,
-    name=PMI_DIST_KEY,
-    cluster_threshold=0.36)
-SurprisalDist = WordDistance(
-    func=mutual_surprisal,
-    name=SURPRISAL_DIST_KEY,
-    cluster_threshold=0.74,  # TODO cluster_threshold needs to be recalibrated; this value was from when it was a similarity function
-    ngram_size=1)
-# Note: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on command line args
+LevenshteinDist = WordDistance(func=levenshtein_dist, name=LEVENSHTEIN_DIST_KEY)
+PhoneticDist = WordDistance(func=phonetic_dist, name=PHONETIC_DIST_KEY)
+PhonDist = WordDistance(func=phonological_dist, name=PHONOLOGICAL_DIST_KEY)
+PMIDist = WordDistance(func=pmi_dist, name=PMI_DIST_KEY)
+SurprisalDist = WordDistance(func=mutual_surprisal, name=SURPRISAL_DIST_KEY, ngram_size=1)

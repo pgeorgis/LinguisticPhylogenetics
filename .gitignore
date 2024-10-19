@@ -3,6 +3,7 @@ __pycache__/
 .idea/
 .cache/pip/
 archive/
+.DS_Store
 datasets/*/logs
 datasets/*/cognates
 datasets/*/dist_matrices

@@ -3,6 +3,7 @@ import json
 import logging
 import os
 from collections import defaultdict
+import shutil
 
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
@@ -11,7 +12,7 @@ from utils.tree import gqd, load_newick_tree
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
                          create_datestamp, create_timestamp, csv2dict,
                          get_git_commit_hash)
-from wordDist import (COMPOSITE_DIST_KEY, HYBRID_DIST_KEY,
+from wordDist import (COMPOSITE_SIM_KEY, HYBRID_DIST_KEY,
                       LEVENSHTEIN_DIST_KEY, PHONOLOGICAL_DIST_KEY,
                       PMI_DIST_KEY, SURPRISAL_DIST_KEY, LevenshteinDist,
                       PhonDist, PMIDist, SurprisalDist, WordDistance,
@@ -152,7 +153,7 @@ def init_composite(params):
     phon_corr_params = params['phon_corr']
     CompositeSim = WordDistance(
         func=composite_sim,
-        name=COMPOSITE_DIST_KEY.replace('Dist', 'Sim'),  # TODO could be handled better
+        name=COMPOSITE_SIM_KEY,
         sim=True,
         pmi_weight=eval_params['pmi_weight'],
         surprisal_weight=eval_params['surprisal_weight'],
@@ -164,11 +165,13 @@ def init_composite(params):
     return CompositeDist
 
 
-def load_precalculated_word_scores(distance_dir, family, dist_keys):
+def load_precalculated_word_scores(distance_dir, family, dist_keys, excluded_doculects):
     doculect_pairs = family.get_doculect_pairs(bidirectional=True)
     precalculated_word_scores = defaultdict(lambda:{})
     n_files_found = 0
     for lang1, lang2 in doculect_pairs:
+        if lang1.name in excluded_doculects or lang2.name in excluded_doculects:
+            continue
         scored_words_file = os.path.join(
             distance_dir,
             lang1.path_name,
@@ -256,7 +259,7 @@ if __name__ == "__main__":
         if eval_params['method'] == 'hybrid' or cluster_params['method'] == 'hybrid':
             function_map[HYBRID_DIST_KEY] = init_hybrid(function_map, eval_params)
         if eval_params['method'] == 'composite' or cluster_params['method'] == 'composite':
-            function_map[COMPOSITE_DIST_KEY] = init_composite(params)
+            function_map[COMPOSITE_SIM_KEY] = init_composite(params)
 
     # Designate cluster function if performing auto cognate clustering
 
@@ -273,7 +276,7 @@ if __name__ == "__main__":
         'surprisal': SURPRISAL_DIST_KEY,
         'levenshtein': LEVENSHTEIN_DIST_KEY,
         'hybrid': HYBRID_DIST_KEY,
-        'composite': COMPOSITE_DIST_KEY,
+        'composite': COMPOSITE_SIM_KEY,
     }
     evalDist = function_map[aux_func_map[eval_params['method']]]
 
@@ -360,7 +363,8 @@ if __name__ == "__main__":
         precalculated_word_scores = load_precalculated_word_scores(
             distance_dir=eval_params['precalculated_word_scores'],
             family=family,
-            dist_keys=[PMI_DIST_KEY, SURPRISAL_DIST_KEY, PHONOLOGICAL_DIST_KEY]  # TODO maybe needs to be more customizable
+            dist_keys=[PMI_DIST_KEY, SURPRISAL_DIST_KEY, PHONOLOGICAL_DIST_KEY],  # TODO maybe needs to be more customizable
+            excluded_doculects=phon_corr_params['refresh'],
         )
     
     # Create cognate similarity (WordDistance object) measure according to settings
@@ -445,6 +449,14 @@ if __name__ == "__main__":
         os.makedirs(lex_comp_log_dir, exist_ok=True)
         lex_comp_log = os.path.join(lex_comp_log_dir, 'lexical_comparison.tsv')
         lang1.write_lexical_comparison(lang2, lex_comp_log)
+
+    # Copy phon corr files to experiment outdir
+    if phon_corr_params["copy_to_outdir"]:
+        shutil.copytree(
+            family.phone_corr_dir,
+            os.path.join(exp_outdir, "phon_corr"),
+            dirs_exist_ok=True
+        )
 
     # Add outfiles and final run info to config and dump
     params["output"]["tree"] = outtree

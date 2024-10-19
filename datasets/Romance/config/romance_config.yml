@@ -26,7 +26,7 @@ evaluation:
     similarity: gradient
     method: hybrid
     pmi_weight: 0
-    surprisal_weight: 1
+    surprisal_weight: 0.5
     phon_weight: 1
     normalize_weights: false
     n_samples: 10
