@@ -442,7 +442,7 @@ if __name__ == "__main__":
         return best_score
 
     # Initial guess for the weights
-    initial_weights = np.array([1, 1, 1])
+    initial_weights = np.array([0, 0, 0])
 
     # Bounds for the weights (optional, if you want to restrict the range)
     bounds = [(0, None) for _ in initial_weights]  # Non-negative weights
@@ -458,8 +458,10 @@ if __name__ == "__main__":
         # }
         method='Powell', 
         options={
-        'xtol': 1e-4,  # Step size tolerance (small changes trigger finer adjustments)
-        'verbose': 3,  # To display detailed output
+            'xtol': 1e-4,   # Tighter step size tolerance (adjust as needed)
+            'ftol': 1e-8,   # Tolerance for stopping when the function value changes insignificantly
+            #'maxiter': 10,
+            'disp': True,   # Display detailed output
         }
     )
     breakpoint()
