@@ -591,6 +591,8 @@ class ReversedAlignment(Alignment):
         self.seq2 = alignment.seq1
         self.word1 = alignment.word2
         self.word2 = alignment.word1
+        self.lang1 = alignment.lang2
+        self.lang2 = alignment.lang1
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.pad_ch = alignment.pad_ch
