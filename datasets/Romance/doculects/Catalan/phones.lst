@@ -100,7 +100,7 @@ CONSONANTS
 	<me> /mə/ "I_OBL_PRON"
 	<raïm> /rəˈim/ "RAISIN_NOUN"
 
-/b/ (0.03)
+/b/ (0.029)
 	<veure> /bˈɛwɾə/ "SEE_VERB"
 	<veu> /bˈɛw/ "VOICE_NOUN"
 	<volar> /bulˈa/ "FLY_VERB"
@@ -120,15 +120,15 @@ CONSONANTS
 	<falso> /fˈals/ "FALSE_ADJ"
 	<fil> /fˈil/ "STRING_NOUN"
 
-/d/ (0.015)
-	<dormir> /durmˈi/ "SLEEP_VERB"
-	<gendre> /ʒˈɛndɾə/ "SON-IN-LAW_NOUN"
-	<do> /dˈo/ "GIFT_NOUN"
-
 /β/ (0.015)
-	<sabut> /səβˈut/ "KNOWN_VERB"
-	<savi> /sˈaβi/ "WISE_ADJ"
-	<jove> /ʒˈoβə/ "YOUNG_ADJ"
+	<saber> /səβˈɛ/ "KNOW_VERB"
+	<pobre> /pˈɔβɾə/ "POOR_ADJ"
+	<cabra> /kˈaβɾə/ "GOAT_NOUN"
+
+/d/ (0.015)
+	<dir> /dˈi/ "SAY-INF_VERB"
+	<dotze> /dˈodzə/ "TWELVE_NUM"
+	<dos> /dˈos/ "TWO (M)_NUM"
 
 /ʒ/ (0.015)
 	<argila> /ərʒˈilə/ "CLAY_NOUN"
