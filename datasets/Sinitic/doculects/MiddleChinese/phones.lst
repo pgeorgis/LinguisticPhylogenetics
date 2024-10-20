@@ -1,0 +1,315 @@
+VOWELS
+/u/ (0.084)
+	<魔> /muɑ˦/ "DEMON_NOUN"
+	<口> /kʰəu˧˥/ "MOUTH_NOUN"
+	<物> /mɨut̚/ "THING_NOUN"
+
+/i/ (0.075)
+	<西> /sei˦/ "WEST_NOUN"
+	<菜> /ʦʰʌi˥˩/ "VEGETABLE_NOUN"
+	<體> /tʰei˧˥/ "BODY_NOUN"
+
+/ɨ/ (0.064)
+	<去> /kʰɨʌ˥˩/ "GO_VERB"
+	<雲> /ɦɨun˦/ "CLOUD_NOUN"
+	<豬> /ʈɨʌ˦/ "PIG_NOUN"
+
+/ɑ/ (0.035)
+	<黃> /ɦwɑŋ˦/ "YELLOW_ADJ"
+	<我> /ŋɑ˧˥/ "I_PRON"
+	<行> /ɦɑŋ˦/ "LINE_NOUN"
+
+/e/ (0.035)
+	<小> /sieu˧˥/ "SMALL_ADJ"
+	<熱> /ȵiet̚/ "HOT_ADJ"
+	<冷> /leŋ˧˥/ "COLD_ADJ"
+
+/ʌ/ (0.024)
+	<魚> /ŋɨʌ˦/ "FISH_NOUN"
+	<菜> /ʦʰʌi˥˩/ "VEGETABLE_NOUN"
+	<災> /ʦʌi˦/ "CALAMITY_NOUN"
+
+/ɪ/ (0.021)
+	<水> /ɕˠiuɪ˧˥/ "WATER_NOUN"
+	<二> /ȵiɪ˥˩/ "TWO_NUM"
+	<新> /siɪn˦/ "NEW_ADJ"
+
+/ɐ/ (0.018)
+	<長> /ʈɨɐŋ˧˥/ "GROW_VERB"
+	<長> /ɖɨɐŋ˦/ "LONG_ADJ"
+	<上> /ʥɨɐŋ˥˩/ "ABOVE_ADP"
+
+/o/ (0.017)
+	<醋> /ʦʰuo˥˩/ "VINEGAR_NOUN"
+	<無> /mɨo˦/ "NON-_PART"
+	<足> /ʦɨok̚/ "FOOT_NOUN"
+
+/ə/ (0.014)
+	<頭> /dəu˦/ "HEAD_NOUN"
+	<國> /kwək̚/ "COUNTRY_NOUN"
+	<猴> /ɦəu˦/ "MONKEY_NOUN"
+
+/ʉ/ (0.012)
+	<飯> /bʉɐn˥˩/ "COOKED RICE_NOUN"
+	<發> /pʉɐt̚/ "SEND_VERB"
+	<月> /ŋʉɐt̚/ "MOON_NOUN"
+
+/a/ (0.011)
+	<快> /kʰˠuai˥˩/ "FAST_ADJ"
+	<家> /kˠa˦/ "HOUSE_NOUN"
+	<茶> /ɖˠa˦/ "TEA_NOUN"
+
+/ɛ/ (0.01)
+	<八> /pˠɛt̚/ "EIGHT_NUM"
+	<川> /ʨʰiuɛn˦/ "RIVER_NOUN"
+	<畫> /ɦˠwɛk̚/ "DRAW_VERB"
+
+/æ/ (0.008)
+	<拍> /pʰˠæk̚/ "HIT_VERB"
+	<冷> /lˠæŋ˧˥/ "COLD_ADJ"
+	<客> /kʰˠæk̚/ "GUEST_NOUN"
+
+
+
+CONSONANTS
+/ŋ/ (0.048)
+	<羊> /iɨɐŋ˦/ "SHEEP_NOUN"
+	<朋> /bəŋ˦/ "FRIEND_NOUN"
+	<行> /ɦɑŋ˦/ "LINE_NOUN"
+
+/n/ (0.044)
+	<晚> /mʉɐn˧˥/ "EVENING_NOUN"
+	<川> /ʨʰiuɛn˦/ "RIVER_NOUN"
+	<南> /nʌm˦/ "SOUTH_NOUN"
+
+/k̚/ (0.025)
+	<六> /lɨuk̚/ "SIX_NUM"
+	<百> /pˠæk̚/ "HUNDRED_NUM"
+	<黑> /hək̚/ "BLACK_ADJ"
+
+/m/ (0.022)
+	<南> /nʌm˦/ "SOUTH_NOUN"
+	<三> /sɑm˦/ "THREE_NUM"
+	<男> /nʌm˦/ "MAN_NOUN"
+
+/ɦ/ (0.017)
+	<回> /ɦuʌi˦/ "RETURN_NOUN"
+	<皇> /ɦwɑŋ˦/ "EMPEROR_NOUN"
+	<園> /ɦʉɐn˦/ "GARDEN_NOUN"
+
+/t̚/ (0.015)
+	<物> /mɨut̚/ "THING_NOUN"
+	<月> /ŋʉɐt̚/ "MOON_NOUN"
+	<八> /pˠɛt̚/ "EIGHT_NUM"
+
+/p/ (0.014)
+	<北> /pək̚/ "NORTH_NOUN"
+	<發> /pʉɐt̚/ "SEND_VERB"
+	<不> /pɨut̚/ "NOT_PART"
+
+/k/ (0.012)
+	<見> /ken˥˩/ "SEE_VERB"
+	<感> /kʌm˧˥/ "FEEL_VERB"
+	<決> /kwet̚/ "DECIDE_VERB"
+
+/w/ (0.011)
+	<皇> /ɦwɑŋ˦/ "EMPEROR_NOUN"
+	<黃> /ɦwɑŋ˦/ "YELLOW_ADJ"
+	<畫> /ɦˠwɛk̚/ "DRAW_VERB"
+
+/ȵ/ (0.01)
+	<二> /ȵiɪ˥˩/ "TWO_NUM"
+	<兒> /ȵie˦/ "SON_NOUN"
+	<人> /ȵiɪn˦/ "PERSON_NOUN"
+
+/l/ (0.01)
+	<老> /lɑu˧˥/ "ELDERLY_ADJ"
+	<冷> /leŋ˧˥/ "COLD_ADJ"
+	<卵> /luɑn˧˥/ "EGG_NOUN"
+
+/kʰ/ (0.01)
+	<苦> /kʰuo˧˥/ "BITTER_ADJ"
+	<口> /kʰəu˧˥/ "MOUTH_NOUN"
+	<去> /kʰɨʌ˥˩/ "GO_VERB"
+
+/s/ (0.008)
+	<雪> /siuɛt̚/ "SNOW_NOUN"
+	<新> /siɪn˦/ "NEW_ADJ"
+	<小> /sieu˧˥/ "SMALL_ADJ"
+
+/h/ (0.008)
+	<許> /hɨʌ˧˥/ "PROMISE_VERB"
+	<好> /hɑu˧˥/ "GOOD_ADJ"
+	<黑> /hək̚/ "BLACK_ADJ"
+
+/d/ (0.008)
+	<頭> /dəu˦/ "HEAD_NOUN"
+	<洞> /duŋ˥˩/ "HOLE_NOUN"
+	<大> /dɑi˥˩/ "BIG_ADJ"
+
+/ʦʰ/ (0.007)
+	<青> /ʦʰeŋ˦/ "BLUE-GREEN_ADJ"
+	<菜> /ʦʰʌi˥˩/ "VEGETABLE_NOUN"
+	<醋> /ʦʰuo˥˩/ "VINEGAR_NOUN"
+
+/ʦ/ (0.007)
+	<作> /ʦuo˥˩/ "MAKE_VERB"
+	<災> /ʦʌi˦/ "CALAMITY_NOUN"
+	<子> /ʦɨ˧˥/ "CHILD_NOUN"
+
+/b/ (0.007)
+	<飯> /bʉɐn˥˩/ "COOKED RICE_NOUN"
+	<父> /bɨo˧˥/ "FATHER_NOUN"
+	<朋> /bəŋ˦/ "FRIEND_NOUN"
+
+/ʨʰ/ (0.006)
+	<車> /ʨʰia˦/ "VEHICLE_NOUN"
+	<春> /ʨʰiuɪn˦/ "SPRING_NOUN"
+	<出> /ʨʰiuit̚/ "EXIT_VERB"
+
+/ʔ/ (0.006)
+	<愛> /ʔʌi˥˩/ "LOVE_VERB"
+	<一> /ʔiɪt̚/ "ONE_NUM"
+	<恩> /ʔən˦/ "KINDNESS_NOUN"
+
+/ʈ/ (0.006)
+	<長> /ʈɨɐŋ˧˥/ "GROW_VERB"
+	<豬> /ʈɨʌ˦/ "PIG_NOUN"
+	<中> /ʈɨuŋ˦/ "MIDDLE_NOUN"
+
+/ɡ/ (0.006)
+	<具> /ɡɨo˥˩/ "TOOL_NOUN"
+	<共> /ɡɨoŋ˥˩/ "PUBLIC_ADJ"
+	<窮> /ɡɨuŋ˦/ "POOR_ADJ"
+
+/ɕ/ (0.006)
+	<手> /ɕɨu˧˥/ "HAND_NOUN"
+	<少> /ɕieu˧˥/ "FEW_ADJ"
+	<詩> /ɕɨ˦/ "POEM_NOUN"
+
+/tʰ/ (0.006)
+	<體> /tʰei˧˥/ "BODY_NOUN"
+	<天> /tʰen˦/ "HEAVEN_NOUN"
+	<聽> /tʰeŋ˦/ "LISTEN_VERB"
+
+/ʥ/ (0.004)
+	<石> /ʥiek̚/ "STONE_NOUN"
+	<上> /ʥɨɐŋ˥˩/ "ABOVE_ADP"
+	<成> /ʥieŋ˦/ "BECOME_VERB"
+
+/ʣ/ (0.004)
+	<字> /ʣɨ˥˩/ "CHARACTER_NOUN"
+	<泉> /ʣiuɛn˦/ "SPRINGWATER_NOUN"
+	<全> /ʣiuɛn˦/ "WHOLE_ADJ"
+
+/mˠ/ (0.004)
+	<馬> /mˠa˧˥/ "HORSE_NOUN"
+	<美> /mˠiɪ˧˥/ "BEAUTY_NOUN"
+	<明> /mˠiæŋ˦/ "BRIGHT_ADJ"
+
+/ʨ/ (0.003)
+	<州> /ʨɨu˦/ "PROVINCE_NOUN"
+	<枝-支> /ʨie˦/ "BRANCH_NOUN"
+
+/ɦˠ/ (0.003)
+	<學> /ɦˠʌk̚/ "STUDY_VERB"
+	<畫> /ɦˠwɛk̚/ "DRAW_VERB"
+
+/ɡˠ/ (0.003)
+	<橋> /ɡˠieu˦/ "BRIDGE_NOUN"
+	<技> /ɡˠie˧˥/ "SKILL_NOUN"
+
+/ɖˠ/ (0.003)
+	<茶> /ɖˠa˦/ "TEA_NOUN"
+	<池> /ɖˠie˦/ "POND_NOUN"
+
+/ɖ/ (0.003)
+	<蟲> /ɖɨuŋ˦/ "INSECT_NOUN"
+	<長> /ɖɨɐŋ˦/ "LONG_ADJ"
+
+/t/ (0.003)
+	<東> /tuŋ˦/ "EAST_NOUN"
+	<多> /tɑ˦/ "MANY_ADJ"
+
+/pˠ/ (0.003)
+	<百> /pˠæk̚/ "HUNDRED_NUM"
+	<八> /pˠɛt̚/ "EIGHT_NUM"
+
+/pʰˠ/ (0.003)
+	<拍> /pʰˠæk̚/ "HIT_VERB"
+	<品> /pʰˠiɪm˧˥/ "ITEM_NOUN"
+
+/kˠ/ (0.003)
+	<金> /kˠiɪm˦/ "GOLD_NOUN"
+	<家> /kˠa˦/ "HOUSE_NOUN"
+
+/kʰˠ/ (0.003)
+	<快> /kʰˠuai˥˩/ "FAST_ADJ"
+	<客> /kʰˠæk̚/ "GUEST_NOUN"
+
+/bˠ/ (0.003)
+	<平> /bˠiæŋ˦/ "EVEN_ADJ"
+	<皮> /bˠie˦/ "SKIN_NOUN"
+
+/ʤ/ (0.001)
+	<事> /ʤɨ˥˩/ "DEED_NOUN"
+
+/ʔˠ/ (0.001)
+	<音> /ʔˠiɪm˦/ "SOUND_NOUN"
+
+/ʑ/ (0.001)
+	<蛇> /ʑia˦/ "SNAKE_NOUN"
+
+/ʈˠ/ (0.001)
+	<桌> /ʈˠʌk̚/ "TABLE_NOUN"
+
+/ʃˠ/ (0.001)
+	<山> /ʃˠɛn˦/ "MOUNTAIN_NOUN"
+
+/ʃ/ (0.001)
+	<色> /ʃɨk̚/ "COLOR_NOUN"
+
+/ɳ/ (0.001)
+	<女> /ɳɨʌ˧˥/ "WOMAN_NOUN"
+
+/ɕˠ/ (0.001)
+	<水> /ɕˠiuɪ˧˥/ "WATER_NOUN"
+
+/ŋˠ/ (0.001)
+	<牙> /ŋˠa˦/ "TOOTH_NOUN"
+
+/sˠ/ (0.001)
+	<死> /sˠiɪ˧˥/ "DIE_VERB"
+
+/p̚/ (0.001)
+	<法> /pɨɐp̚/ "LAW_NOUN"
+
+/pʰ/ (0.001)
+	<普> /pʰuo˧˥/ "COMMON_ADJ"
+
+/lˠ/ (0.001)
+	<冷> /lˠæŋ˧˥/ "COLD_ADJ"
+
+/hˠ/ (0.001)
+	<花> /hˠwa˦/ "FLOWER_NOUN"
+
+
+
+SUPRASEGMENTALS
+/˦/ (0.108)
+	<羊> /iɨɐŋ˦/ "SHEEP_NOUN"
+	<方> /pʉɐŋ˦/ "DIRECTION_NOUN"
+	<枝-支> /ʨie˦/ "BRANCH_NOUN"
+
+/˧˥/ (0.053)
+	<草> /ʦʰɑu˧˥/ "GRASS_NOUN"
+	<我> /ŋɑ˧˥/ "I_PRON"
+	<手> /ɕɨu˧˥/ "HAND_NOUN"
+
+/˥˩/ (0.035)
+	<看> /kʰɑn˥˩/ "LOOK_VERB"
+	<飯> /bʉɐn˥˩/ "COOKED RICE_NOUN"
+	<地> /diɪ˥˩/ "EARTH_NOUN"
+
+
+
