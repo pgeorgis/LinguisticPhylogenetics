@@ -19,6 +19,9 @@ from phyloLing import Word
 
 # Designate maximum sonority as sonority of a toneme
 MAX_SONORITY = _toSegment('˧').sonority
+# Designate maximum prosodic environment strength
+MAX_PROSODIC_ENV_STRENGTH = 7
+
 
 class WordDistance(Distance):
     def eval(self, x, y, **kwargs):
@@ -35,6 +38,7 @@ class WordDistance(Distance):
             result = self.func(x, y, **self.kwargs)
             self.measured[(x, y, self.hashable_kwargs)] = result
             return result
+
 
 def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
     """Calculate phoneme surprisal if not already done."""
@@ -120,39 +124,52 @@ def phonetic_dist(word1, word2=None, phone_sim_func=phone_sim, **kwargs):
     return 1 - mean(phone_sims)
 
 
-def prosodic_environment_weight(segments, i):
-    """Returns the relative prosodic environment weight of a segment within a word, based on List (2012)"""
+def prosodic_environment_strength(segments, i):
+    """Returns the relative prosodic environment strength of a segment within a word, based on List (2012)"""
+
+    # Map of prosodic environment strengths
+    try:
+        assert MAX_PROSODIC_ENV_STRENGTH == 7
+    except AssertionError as exc:
+        raise AssertionError(f"Unexpected value of constant MAX_PROSODIC_ENV_STRENGTH ({MAX_PROSODIC_ENV_STRENGTH})") from exc
+    env_strengths = {
+        "#C": 7,  # word-initial consonant
+        "#V": 6,  # word-initial vowel
+        "<S<": 5, # ascending sonority
+        ">S>": 4, # descending sonority
+        "<S>": 3,  # sonority peak
+        "C#": 2,  # word-final consonant
+        "V#": 1,  # word-final vowel
+        "T": 0,
+    }
+    # TODO: all equal sonority
 
     seg = _toSegment(segments[i])
+    
+    # Minimum strength for tonemes/suprasegmentals
+    if seg.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
+        return env_strengths["T"]
 
     # Word-initial segments
     if i == 0:
         # Word-initial consonants: weight 7
         if seg.phone_class in ('CONSONANT', 'GLIDE'):
-            return 7
+            return env_strengths["#C"]
 
         # Word-initial vowels: weight 6
         elif seg.phone_class in ('VOWEL', 'DIPHTHONG'):
-            return 6
-
-        # Word-initial tonemes # TODO is this valid?
-        else:
-            return 0
+            return env_strengths["#V"]
 
     # Word-final segments
     elif i == len(segments) - 1:
 
         # Word-final consonants: weight 2
         if seg.phone_class in ('CONSONANT', 'GLIDE'):
-            return 2
+            return env_strengths["C#"]
 
         # Word-final vowels: weight 1
         elif seg.phone_class in ('VOWEL', 'DIPHTHONG'):
-            return 1
-
-        # Word-final tonemes: weight 0
-        else:
-            return 0
+            return env_strengths["V#"]
 
     # Word-medial segments
     else:
@@ -164,18 +181,44 @@ def prosodic_environment_weight(segments, i):
 
         # Sonority peak: weight 3
         if prev_sonority <= sonority_i >= next_sonority:
-            return 3
+            return env_strengths["<S>"]
 
         # Descending sonority: weight 4
         elif prev_sonority >= sonority_i >= next_sonority:
-            return 4
+            return env_strengths[">S>"]
 
         # Ascending sonority: weight 5
         else:
-            return 5
+            return env_strengths["<S<"]
 
-        # TODO: what if the sonority is all the same? add tests to ensure that all of these values are correct
-        # TODO: sonority of free-standing vowels (and consonants)?: would assume same as word-initial
+
+def scale_deletion_penalty_by_prosodic_env_strength(penalty: float | int,
+                                           gap: Gap,
+                                           alignment: list[tuple],
+                                           index: int
+                                           ):
+    """Scales a deletion penalty down according to the prosodic environment strength of the segment.
+
+    Args:
+        penalty (float | int): Penalty value.
+        gap (Gap): Aligned Gap object.
+        alignment (list): Aligned list of IPA string tuples.
+        index (int): Alignment position index.
+
+    Returns:
+        (penalty, discount): Tuple of reduced penalty and discount factor.
+    """
+    deleted_index = gap.seg_i
+    deleted_i = sum([1 for j in range(index + 1) if alignment[j][deleted_index] != gap.gap_ch]) - 1
+    segment_list = [
+        pos[deleted_index]
+        for pos in alignment
+        if pos[deleted_index] != gap.gap_ch
+    ]
+    prosodic_env_weight = prosodic_environment_strength(segment_list, deleted_i)
+    discount = sqrt(abs(prosodic_env_weight - MAX_PROSODIC_ENV_STRENGTH) + 1)
+    penalty /= discount
+    return penalty, discount
 
 
 def accent_is_shifted(alignment, i, gap_ch):
@@ -196,7 +239,11 @@ def accent_is_shifted(alignment, i, gap_ch):
     return shifted
 
 
-def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, alignment: list, i: int, penalty_discount: int | float = 2, gap_ch: str = GAP_CH_DEFAULT):
+def reduce_phon_deletion_penalty_by_phon_context(penalty: float,
+                                                 gap: Gap,
+                                                 alignment: list,
+                                                 i: int,
+                                                 penalty_discount: int | float = 2):
     """Reduces deletion penalty in certain phonological contexts.
 
     Args:
@@ -205,11 +252,11 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float, gap: Gap, align
         alignment (list): List of aligned segments.
         i (int): Alignment index.
         penalty_discount (int | float, optional): Value by which deletion penalties are divided if reduction conditions are met. Defaults to 2.
-        gap_ch (str): Gap character.
 
     Returns:
         penalty: Reduced deletion penalty.
     """
+    gap_ch = gap.gap_ch
     gap_index = gap.gap_i
     deleted_segment = _toSegment(gap.segment)
     previous_seg, next_seg = None, None
@@ -280,7 +327,7 @@ def phonological_dist(word1: Word | Alignment,
                       sim_func=phone_sim,
                       penalize_sonority=True,
                       context_reduction=False,
-                      prosodic_env_scaling=True,
+                      env_strength_reduction=True,
                       total_dist=False,
                       **kwargs):
     f"""Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
@@ -291,7 +338,7 @@ def phonological_dist(word1: Word | Alignment,
         sim_func (_type_, optional): Phonetic similarity function. Defaults to {sim_func}.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to {penalize_sonority}.
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to {context_reduction}.
-        prosodic_env_scaling (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to {prosodic_env_scaling}.
+        env_strength_reduction (bool, optional): Reduces deletion penalties according to prosodic environment strength (List, 2012). Defaults to {env_strength_reduction}.
         total_dist (bool, optional): Computes phonological distance as the sum of all penalties rather than as an average. Defaults to {total_dist}.
 
     Returns:
@@ -384,19 +431,14 @@ def phonological_dist(word1: Word | Alignment,
             # Lessen the penalty if certain phonological conditions are met
             if context_reduction:
                 penalty = reduce_phon_deletion_penalty_by_phon_context(
-                    penalty, gap, alignment, i, gap_ch=gap_ch,
+                    penalty, gap, alignment, i
                 )
 
-            # TODO: is this right?
-            if prosodic_env_scaling:
-                # Discount deletion penalty according to prosodic sonority
-                # environment (based on List, 2012)
-                deleted_i = sum([1 for j in range(i + 1) if alignment[j][deleted_index] != gap_ch]) - 1
-                segment_list = [alignment[j][deleted_index]
-                                for j in range(length)
-                                if alignment[j][deleted_index] != gap_ch]
-                prosodic_env_weight = prosodic_environment_weight(segment_list, deleted_i)
-                penalty /= sqrt(abs(prosodic_env_weight - 7) + 1)
+            # Discount deletion penalty according to strength of prosodic environment (based on List, 2012)
+            if env_strength_reduction:
+                penalty, _ = scale_deletion_penalty_by_prosodic_env_strength(
+                    penalty, gap, alignment, i
+                )
 
             # Add the final penalty to penalty list
             penalties.append(penalty)

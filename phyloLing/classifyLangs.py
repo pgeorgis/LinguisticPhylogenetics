@@ -450,11 +450,11 @@ if __name__ == "__main__":
         lex_comp_log = os.path.join(lex_comp_log_dir, 'lexical_comparison.tsv')
         lang1.write_lexical_comparison(lang2, lex_comp_log)
 
-    # Copy phon corr files to experiment outdir
+    # Copy phone corr files to experiment outdir
     if phon_corr_params["copy_to_outdir"]:
         shutil.copytree(
             family.phone_corr_dir,
-            os.path.join(exp_outdir, "phon_corr"),
+            os.path.join(exp_outdir, "phone_corr"),
             dirs_exist_ok=True
         )
 
