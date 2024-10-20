@@ -1,9 +1,9 @@
 import os
 import random
-import re
 from collections import defaultdict
 from functools import lru_cache
 from itertools import product
+from math import inf, log
 from statistics import mean, stdev
 from typing import Self, Iterable
 
@@ -12,10 +12,15 @@ from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 from phonAlign import Alignment, visual_align
-from phonUtils.phonEnv import (phon_env_ngrams)
+from phonUtils.phonEnv import (phon_env_ngrams, relative_post_sonority,
+                               relative_prev_sonority)
+from phonUtils.segment import _toSegment
+from phonUtils.phonSim import phone_sim
 from scipy.stats import norm
 
 from utils import PhonemeMap
+from utils.alignment import calculate_alignment_costs, needleman_wunsch_extended
+from utils.distance import Distance
 from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
@@ -28,6 +33,13 @@ from utils.utils import (default_dict,
                          create_default_dict,
                          create_default_dict_of_dicts)
 
+# Designate phonetic feature distance
+def phone_dist(x, y, **kwargs):
+    sim = phone_sim(x, y, **kwargs)
+    if sim > 0:
+        return log(sim)
+    return -inf
+PhoneFeatureDist = Distance(phone_dist, name='PhoneFeatureDist')
 
 def fit_ibm_align_model(corpus: list[tuple],
                         iterations: int=5,
@@ -40,10 +52,10 @@ def fit_ibm_align_model(corpus: list[tuple],
 
     Args:
         corpus (list[tuple]): list of (Word, Word) tuple pairs
-        iterations (int, optional): Number of iterations to run EM algorithm. Defaults to 5.
-        gap_ch (str, optional): Gap character. Defaults to GAP_CH_DEFAULT.
-        ibm_model (int, optional): IBM model. Defaults to 2.
-        seed (int, optional): Random seed. Defaults to None.
+        iterations (int, optional): Number of iterations to run EM algorithm.
+        gap_ch (str, optional): Gap character.
+        ibm_model (int, optional): IBM model.
+        seed (int, optional): Random seed.
 
     Raises:
         ValueError: If an invalid IBM model is specified.
@@ -547,9 +559,51 @@ class PhonCorrelator:
                        wordlist,
                        align_costs=None,
                        remove_uncompacted_padding=True,
+                       add_phon_dist=False,
                        # phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
+
+        # Optionally add phone similarity measure between phone pairs to align costs/scores
+        if add_phon_dist:
+            gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
+            for ngram1 in align_costs:
+                ngram1 = Ngram(ngram1)
+                # Remove gaps and boundaries
+                gapless_ngram1 = ngram1.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
+                for ngram2 in align_costs[ngram1.undo()]:
+                    ngram2 = Ngram(ngram2)
+                    gapless_ngram2 = ngram2.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
+
+                    # Skip computing phonetic similarity between gaps/boundaries with each other
+                    if gapless_ngram1.size == 0 and gapless_ngram2.size == 0:
+                        continue
+                    # For full gaps/boundaries with segments, assign cost as GOP * length of segment sequence
+                    elif gapless_ngram1.size == 0 or gapless_ngram2.size == 0:
+                        phon_align_cost = gop * max(gapless_ngram1.size, gapless_ngram2.size)
+                    # Else compute phonetic distance of the two sequences
+                    else:
+                        phon_costs = calculate_alignment_costs(
+                            gapless_ngram1.ngram,
+                            gapless_ngram2.ngram,
+                            cost_func=PhoneFeatureDist,
+                            as_indices=False
+                        )
+                        phon_align_cost, _, _ = needleman_wunsch_extended(
+                            gapless_ngram1.ngram,
+                            gapless_ngram2.ngram,
+                            align_cost=phon_costs,
+                            gap_cost={},
+                            default_gop=gop,
+                            maximize_score=False,
+                            gap_ch=self.gap_ch,
+                            allow_complex=False
+                        )
+                    # Normalize phone cost by sequence length
+                    phon_align_cost /= max(gapless_ngram1.size, gapless_ngram2.size)
+                    # Add phonetic alignment cost to align_costs dict storing PMI values
+                    align_costs[ngram1.undo()][ngram2.undo()] += phon_align_cost
+
         alignment_list = [
             Alignment(
                 seq1=word1,
@@ -707,15 +761,74 @@ class PhonCorrelator:
 
         return corr_dict_l1l2, corr_dict_l2l1
 
-    def joint_probs(self, conditional_counts, l1=None, l2=None):
+    def joint_probs(self, conditional_counts, l1=None, l2=None, wordlist=None):
         """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
         l1, l2 = self.langs(l1=l1, l2=l2)
         joint_prob_dist = defaultdict(lambda: {})
+
+        # Aggregate total counts of seg1 and adjust conditional counts
+        # by marginalizing over all unigrams of aligned units
+        agg_seg1_totals = defaultdict(lambda: 0)
+        adj_cond_counts = defaultdict(lambda: defaultdict(lambda: 0))
         for seg1 in conditional_counts:
+            seg1_ngram = Ngram(seg1)
+
+            # Get the total occurrence of this segment/ngram
             seg1_totals = sum(conditional_counts[seg1].values())
+
+            # Update count of full higher-order lang1 ngram
+            if seg1_ngram.size > 1:
+                agg_seg1_totals[seg1] += seg1_totals
+
+                # Update correspondence counts of full higher-order lang1 ngram
+                # with full higher-order lang2 ngram and with all lang2 component unigrams
+                for seg2, cond_val in conditional_counts[seg1].items():
+                    seg2_ngram = Ngram(seg2)
+                    # full higher-order lang1 ngram with higher-order lang2 ngram
+                    if seg2_ngram.size > 1:
+                        adj_cond_counts[seg1][seg2] += cond_val
+                    # full higher-order lang1 ngram with lang2 component unigrams
+                    for seg2_j in seg2_ngram.ngram:
+                        adj_cond_counts[seg1][seg2_j] += cond_val
+
+            # Update aggregated counts of all component lang1 unigrams
+            for seg1_i in seg1_ngram.ngram:
+                agg_seg1_totals[seg1_i] += seg1_totals
+
+                # Adjust correspondence counts for each component unigram in lang1
+                # And the full ngram in lang2, as well as component unigrams of lang2 ngram
+                for seg2, cond_val in conditional_counts[seg1].items():
+                    seg2_ngram = Ngram(seg2)
+
+                    # Update the count for the full ngram in seg2
+                    if seg2_ngram.size > 1:
+                        adj_cond_counts[seg1_i][seg2] += cond_val
+
+                    # TODO also ngram sizes between N and 1, e.g. if a trigram, update component bigram counts
+                    # # Update the counts for all lower-order ngrams until unigrams
+                    # for n in range(seg2_ngram.size-1, 1, -1):
+                    #     # Get all possible sub-ngrams of size `n` from `seg2`
+                    #     for sub_ngram in generate_ngrams(seg2_ngram.ngram, ngram_size=n):
+                    #         adj_cond_counts[seg1_i][sub_ngram] += cond_val
+
+                    # Also update for each unigram component of seg2
+                    for seg2_j in seg2_ngram.ngram:
+                        adj_cond_counts[seg1_i][seg2_j] += cond_val
+
+        # Henceforth use the adjusted correspondence count dict
+        conditional_counts = adj_cond_counts
+
+        for seg1 in conditional_counts:
+            seg1_ngram = Ngram(seg1)
+            seg1_totals = agg_seg1_totals[seg1]
             for seg2 in conditional_counts[seg1]:
-                cond_prob = conditional_counts[seg1][seg2] / seg1_totals
-                p_ind1 = l1.ngram_probability(Ngram(seg1))
+                seg2_ngram = Ngram(seg2)
+                cond_count = conditional_counts[seg1][seg2]
+                cond_prob = cond_count / seg1_totals
+                if wordlist:
+                    p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
+                else:
+                    p_ind1 = l1.ngram_probability(seg1_ngram)
                 joint_prob = cond_prob * p_ind1
                 joint_prob_dist[seg1][seg2] = joint_prob
         return joint_prob_dist
@@ -782,8 +895,11 @@ class PhonCorrelator:
         conditional_probs : nested dictionary of conditional correspondence probabilities in potential cognates
         """
         l1, l2 = self.langs(l1=l1, l2=l2)
+        if wordlist:
+            wordlist = Wordlist(wordlist, pad_n=1)
+
         # Convert conditional probabilities to joint probabilities
-        joint_prob_dist = self.joint_probs(conditional_counts, l1=l1, l2=l2)
+        joint_prob_dist = self.joint_probs(conditional_counts, l1=l1, l2=l2, wordlist=wordlist)
         reverse_cond_counts = reverse_corr_dict(conditional_counts)
 
         # Get set of all possible phoneme correspondences
@@ -811,10 +927,6 @@ class PhonCorrelator:
                               if corr2 not in l2.phonemes])
         # Extend with gap and pad tokens
         segment_pairs.update([(self.gap_ch, start_token(self.pad_ch)), (self.gap_ch, end_token(self.pad_ch))])
-
-        # If using a specific wordlist, extract sequences in each language
-        if wordlist:
-            wordlist = Wordlist(wordlist, pad_n=1)
 
         # Estimate probability of a gap in each language from conditional counts
         gap_counts1, gap_counts2 = 0, 0
@@ -918,13 +1030,13 @@ class PhonCorrelator:
         Args:
             p_threshold (float, optional): Threshold for determining whether aligned word pairs qualify for next iteration of correspondence calculation. \
                 Defaults to 0.1, which corresponds with a 90% chance that aligned word pairs with a given score do NOT belong to the non-cognate distribution.
-            max_iterations (int, optional): Maximum number of iterations. Defaults to 3.
-            n_samples (int, optional): Number of samples to draw. Defaults to 3.
-            sample_size (float, optional): Sample size proportional to shared vocablary size. Defaults to 0.8.
-            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid. Defaults to 2.
-            max_ngram_size (int, optional): Maximum ngram size for radial IBM alignment. Defaults to 2.
-            ngram_size (int, optional): Ngram size for surprisal. Defaults to 1.
-            cumulative (bool, optional): Accumulate correspondence counts over iterations, continuing to consider alignments from earlier iterations. Defaults to False.
+            max_iterations (int, optional): Maximum number of iterations.
+            n_samples (int, optional): Number of samples to draw.
+            sample_size (float, optional): Sample size proportional to shared vocablary size.
+            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid.
+            max_ngram_size (int, optional): Maximum ngram size for radial IBM alignment.
+            ngram_size (int, optional): Ngram size for surprisal.
+            cumulative (bool, optional): Accumulate correspondence counts over iterations, continuing to consider alignments from earlier iterations.
 
         Returns:
             results (dict): Nested dictionary of PMI correspondences.
@@ -977,9 +1089,15 @@ class PhonCorrelator:
                 qual_prev_sample = qualifying_words[iteration - 1]
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
-                # Perform EM algorithm and fit IBM model 1 on ngrams of varying sizes
-                em_synonyms1, em_synonyms2 = self.fit_radial_ibm_model(
+                # Fit IBM translation/alignment model on ngrams of varying sizes
+                initial_corr_counts1, _ = self.fit_radial_ibm_model(
                     qual_prev_sample,
+                    min_corr=min_corr,
+                    max_ngram_size=max_ngram_size,
+                    seed=seed_i,
+                )
+                initial_corr_counts2, _ = self.fit_radial_ibm_model(
+                    reversed_qual_prev_sample,
                     min_corr=min_corr,
                     max_ngram_size=max_ngram_size,
                     seed=seed_i,
@@ -988,13 +1106,13 @@ class PhonCorrelator:
                 # Calculate initial PMI for all ngram pairs
                 pmi_dict_l1l2, pmi_dict_l2l1 = [
                     self.phoneme_pmi(
-                        conditional_counts=em_synonyms1,
+                        conditional_counts=initial_corr_counts1,
                         l1=self.lang1,
                         l2=self.lang2,
                         wordlist=qual_prev_sample,
                     ),
                     self.phoneme_pmi(
-                        conditional_counts=em_synonyms2,
+                        conditional_counts=initial_corr_counts2,
                         l1=self.lang2,
                         l2=self.lang1,
                         wordlist=reversed_qual_prev_sample,
@@ -1339,9 +1457,9 @@ class PhonCorrelator:
 
         Args:
             alignments (list): List of Alignment objects representing aligned word pairs.
-            phon_env (bool, optional): Use phonological environment. Defaults to False.
-            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid. Defaults to 2.
-            ngram_size (int, optional): Ngram size. Defaults to 1.
+            phon_env (bool, optional): Use phonological environment.
+            min_corr (int, optional): Minimum instances of a phone correspondence to be considered valid.
+            ngram_size (int, optional): Ngram size.
 
         Returns:
             (surprisal_results, phon_env_surprisal_results) (tuple): Tuple with nested dictionaries of surprisal results and optionally phonological environment surprisal results. \

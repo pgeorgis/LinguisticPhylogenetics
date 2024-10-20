@@ -58,7 +58,7 @@ def get_calibration_params(lang1, lang2, eval_func, seed, sample_size):
         tuple: Mean and standard deviation of similarity of random sampling of non-cognate word pairs
     """
     # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
-    key: (str, Distance, int, int) = (lang2.name, eval_func, sample_size, seed)
+    key: tuple[str, Distance, int, int] = (lang2.name, eval_func, sample_size, seed)
     if len(lang1.noncognate_thresholds[key]) > 0:
         noncognate_scores = lang1.noncognate_thresholds[key]
     else:
@@ -134,6 +134,7 @@ def gradient_cognate_sim(lang1,
                          calibrate=True,  # TODO rename
                          min_similarity=0,
                          clustered_id=None,  # TODO incorporate or remove
+                         p_threshold=0.01,
                          seed=1,
                          n_samples=50,
                          sample_size=0.8,
@@ -223,6 +224,7 @@ def gradient_cognate_sim(lang1,
 
         # Apply minimum similarity and calibration
         for concept, score in sims.items():
+            sims[concept] = score if score >= min_similarity else 0
 
             # Calibrate score against scores of non-synonymous word pairs
             # pnorm: proportion of values from a normal distribution with
@@ -234,11 +236,11 @@ def gradient_cognate_sim(lang1,
             # The higher this value, the more confident we can be that
             # the given score does not come from that distribution,
             # i.e. that it is truly a cognate
+            # If lower than p-threshold, reset similarity to 0
             if calibrate:
                 pnorm = norm.cdf(score, loc=mean_nc_score, scale=nc_score_stdev)
-                score *= pnorm
-
-            sims[concept] = score if score >= min_similarity else 0
+                if 1 - pnorm > p_threshold:
+                    sims[concept] = 0
 
         group_scores[n] = mean(sims.values())
         # TODO try alternative calculation:

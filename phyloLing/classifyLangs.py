@@ -3,6 +3,7 @@ import json
 import logging
 import os
 from collections import defaultdict
+import shutil
 
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
@@ -448,6 +449,14 @@ if __name__ == "__main__":
         os.makedirs(lex_comp_log_dir, exist_ok=True)
         lex_comp_log = os.path.join(lex_comp_log_dir, 'lexical_comparison.tsv')
         lang1.write_lexical_comparison(lang2, lex_comp_log)
+
+    # Copy phone corr files to experiment outdir
+    if phon_corr_params["copy_to_outdir"]:
+        shutil.copytree(
+            family.phone_corr_dir,
+            os.path.join(exp_outdir, "phone_corr"),
+            dirs_exist_ok=True
+        )
 
     # Add outfiles and final run info to config and dump
     params["output"]["tree"] = outtree
