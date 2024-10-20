@@ -33,4 +33,6 @@ classify-germanic:
 classify-slavic:
 	$(MAKE) classify CONFIG=datasets/Slavic/config/slavic_config.yml
 
-# TODO score against a gold tree
+classify-sinitic:
+	$(MAKE) classify CONFIG=datasets/Sinitic/config/sinitic_config.yml
+
