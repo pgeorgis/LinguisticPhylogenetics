@@ -4,7 +4,6 @@ stages:
 
 variables:
   GIT_SUBMODULE_STRATEGY: none
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
 
 default:
   image: python:3.12

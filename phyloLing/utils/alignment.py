@@ -7,7 +7,7 @@ from utils import PhonemeMap
 from utils.sequence import Ngram
 
 
-def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
+def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs) -> PhonemeMap:
     """Calculates pairwise alignment costs for sequences using a specified cost function.
 
     Args:
@@ -19,7 +19,9 @@ def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
     Returns:
         dict: dictionary of pairwise alignment costs by sequence indices
     """
-    alignment_costs = {}
+
+    # does not need to be necessarily a map with a default value
+    alignment_costs: PhonemeMap = PhonemeMap()
     for i, seq1_i in enumerate(seq1):
         for j, seq2_j in enumerate(seq2):
             cost = cost_func.eval(seq1_i, seq2_j, **kwargs)
@@ -32,9 +34,9 @@ def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
                     cost = -inf
 
             if as_indices:
-                alignment_costs[(i, j)] = cost
+                alignment_costs.set_value(i, j, cost)
             else:
-                alignment_costs[(seq1_i, seq2_j)] = cost
+                alignment_costs.set_value(seq1_i, seq2_j, cost)
 
     return alignment_costs
 

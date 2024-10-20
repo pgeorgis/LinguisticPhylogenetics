@@ -12,9 +12,7 @@ from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 from phonAlign import Alignment, visual_align
-from phonUtils.phonEnv import (phon_env_ngrams, relative_post_sonority,
-                               relative_prev_sonority)
-from phonUtils.segment import _toSegment
+from phonUtils.phonEnv import phon_env_ngrams
 from phonUtils.phonSim import phone_sim
 from scipy.stats import norm
 
@@ -557,7 +555,7 @@ class PhonCorrelator:
 
     def align_wordlist(self,
                        wordlist,
-                       align_costs=None,
+                       align_costs: PhonemeMap = None,
                        remove_uncompacted_padding=True,
                        add_phon_dist=False,
                        # phon_env=False,
@@ -567,11 +565,11 @@ class PhonCorrelator:
         # Optionally add phone similarity measure between phone pairs to align costs/scores
         if add_phon_dist:
             gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
-            for ngram1 in align_costs:
+            for ngram1 in align_costs.get_primary_keys():
                 ngram1 = Ngram(ngram1)
                 # Remove gaps and boundaries
                 gapless_ngram1 = ngram1.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
-                for ngram2 in align_costs[ngram1.undo()]:
+                for ngram2 in align_costs.get_secondary_keys(ngram1.undo()):
                     ngram2 = Ngram(ngram2)
                     gapless_ngram2 = ngram2.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
 
@@ -583,7 +581,7 @@ class PhonCorrelator:
                         phon_align_cost = gop * max(gapless_ngram1.size, gapless_ngram2.size)
                     # Else compute phonetic distance of the two sequences
                     else:
-                        phon_costs = calculate_alignment_costs(
+                        phon_costs: PhonemeMap = calculate_alignment_costs(
                             gapless_ngram1.ngram,
                             gapless_ngram2.ngram,
                             cost_func=PhoneFeatureDist,
@@ -593,7 +591,7 @@ class PhonCorrelator:
                             gapless_ngram1.ngram,
                             gapless_ngram2.ngram,
                             align_cost=phon_costs,
-                            gap_cost={},
+                            gap_cost=PhonemeMap(),
                             default_gop=gop,
                             maximize_score=False,
                             gap_ch=self.gap_ch,
@@ -602,7 +600,8 @@ class PhonCorrelator:
                     # Normalize phone cost by sequence length
                     phon_align_cost /= max(gapless_ngram1.size, gapless_ngram2.size)
                     # Add phonetic alignment cost to align_costs dict storing PMI values
-                    align_costs[ngram1.undo()][ngram2.undo()] += phon_align_cost
+                    old_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
+                    align_costs.set_value(ngram1.undo(), ngram2.undo(), old_align_cost + phon_align_cost)
 
         alignment_list = [
             Alignment(

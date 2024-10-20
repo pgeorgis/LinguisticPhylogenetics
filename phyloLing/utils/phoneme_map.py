@@ -90,7 +90,7 @@ class IntegerPhonemeMap:
     def get_key_pairs(self):
         return self.internal_map.get_key_pairs()
 
-type SomeNumber = int | SomeNumber
+type SomeNumber = int | float
 
 class PhonemeMap:
     def __init__(self, default_value: SomeNumber = 0):
