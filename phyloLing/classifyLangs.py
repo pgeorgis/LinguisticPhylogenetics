@@ -413,11 +413,14 @@ if __name__ == "__main__":
     
     references = tree_params["reference"]
     def objective(weights):
-        weights = tuple(weights)
-        logger.info(f"Weights: {weights}")
-        distFunc.kwargs['eval_func'].measured = {}
-        distFunc.kwargs['eval_func'].kwargs['weights'] = weights
-        distFunc.kwargs['eval_func'].hashable_kwargs = distFunc.kwargs['eval_func'].get_hashable_kwargs(distFunc.kwargs['eval_func'].kwargs)
+        #weights = tuple(weights)
+        #logger.info(f"Weights: {weights}")
+        min_sim = list(weights)[0]
+        logger.info(f"Min similarity: {min_sim}")
+        #distFunc.kwargs['eval_func'].measured = {}
+        #distFunc.kwargs['eval_func'].kwargs['weights'] = weights
+        #distFunc.kwargs['eval_func'].hashable_kwargs = distFunc.kwargs['eval_func'].get_hashable_kwargs(distFunc.kwargs['eval_func'].kwargs)
+        distFunc.kwargs['min_similarity'] = min_sim
         distFunc.measured = {}
         distFunc.hashable_kwargs = distFunc.get_hashable_kwargs(distFunc.kwargs)
         tree = family.generate_tree(
@@ -442,10 +445,10 @@ if __name__ == "__main__":
         return best_score
 
     # Initial guess for the weights
-    initial_weights = np.array([0, 0, 0])
+    initial_weights = np.array([0])
 
     # Bounds for the weights (optional, if you want to restrict the range)
-    bounds = [(0, None) for _ in initial_weights]  # Non-negative weights
+    bounds = [(0, 1.5) for _ in initial_weights]  # Non-negative weights
 
     # Minimize the evaluation score by adjusting weights
     result = minimize(
