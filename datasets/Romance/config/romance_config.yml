@@ -31,7 +31,6 @@ evaluation:
     min_similarity: 0.27
     normalize_weights: false
     calibrate: false
-    min_similarity: 0
 
 tree:
     linkage: nj
