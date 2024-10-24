@@ -20,7 +20,6 @@ def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs) 
         dict: dictionary of pairwise alignment costs by sequence indices
     """
 
-    # does not need to be necessarily a map with a default value
     alignment_costs: PhonemeMap = PhonemeMap()
     for i, seq1_i in enumerate(seq1):
         for j, seq2_j in enumerate(seq2):

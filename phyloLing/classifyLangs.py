@@ -8,7 +8,7 @@ import shutil
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
-from utils.tree import gqd, load_newick_tree
+from utils.tree import calculate_tree_distance, gqd, load_newick_tree
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
                          create_datestamp, create_timestamp, csv2dict,
                          get_git_commit_hash)
@@ -429,14 +429,17 @@ if __name__ == "__main__":
         tree_scores = defaultdict(dict)
         for ref_tree_file in tree_params["reference"]:
             ref_tree = load_newick_tree(ref_tree_file)
+            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
             gqd_score = gqd(
                 tree,
                 ref_tree,
                 is_rooted=tree_params['root'] is not None
             )
-            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
             tree_scores[ref_tree_file]["GQD"] = gqd_score
             logger.info(f"GQD wrt reference tree {ref_tree_file}: {round(gqd_score, 3)}")
+            tree_mutual_info = calculate_tree_distance(tree, ref_tree)
+            tree_scores[ref_tree_file]["TreeDist"] = tree_mutual_info
+            logger.info(f"TreeDist wrt reference tree {ref_tree_file}: {round(tree_mutual_info, 3)}")
         params["tree"]["eval"] = tree_scores
 
     # Write distance matrix TSV
