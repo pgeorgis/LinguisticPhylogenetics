@@ -1,0 +1,33 @@
+family:
+    name: Sinitic
+    file: datasets/Sinitic/data/sinitic_data.tsv
+    min_amc: 0.75
+    exclude: ['Sino-Vietnamese', 'Sino-Japanese', 'Sino-Korean']
+    outdir: datasets/Sinitic/
+
+experiment:
+  name: ""
+
+phon_corr:
+    phon_env: false
+    refresh: []
+    refresh_all: true
+
+cluster:
+    cognates: none
+
+evaluation:
+    similarity: gradient
+    method: hybrid
+    pmi_weight: 0
+    surprisal_weight: 2
+    phon_weight: 1
+    min_similarity: 0.27
+    normalize_weights: false
+    calibrate: false
+
+tree:
+    root: Old_Chinese
+    reference: [
+        "datasets/Sinitic/trees/ref/reference_001.tre"
+    ]

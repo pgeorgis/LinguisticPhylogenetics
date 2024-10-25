@@ -11,7 +11,7 @@ from math import inf
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
-from utils.tree import gqd, load_newick_tree
+from utils.tree import calculate_tree_distance, gqd, load_newick_tree, plot_tree
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
                          create_datestamp, create_timestamp, csv2dict,
                          get_git_commit_hash)
@@ -124,7 +124,7 @@ def validate_params(params, valid_params, logger):
 
     if params['alignment']['gap_ch'] in SPECIAL_JOIN_CHS:
         raise ValueError(f"Invalid gap character. Gap character may not be {invalid_special_ch_str}.")
-    
+
     # Add "run_info" and "output" sections
     params["run_info"] = {}
     params["output"] = {}
@@ -233,7 +233,7 @@ if __name__ == "__main__":
                 params[section_name][param_name] = default_params[section_name][param_name]
     # Validate parameters
     validate_params(params, valid_params, logger)
-    
+
     # Add git commmit hash to run config
     params["run_info"]["version"] = get_git_commit_hash()
 
@@ -286,7 +286,7 @@ if __name__ == "__main__":
     # Load CLDF dataset
     if family_params['min_amc']:
         family_params['min_amc'] = float(family_params['min_amc'])
-    # Set the warn threshold for instances of phone in a doculect to the maximum of the 
+    # Set the warn threshold for instances of phone in a doculect to the maximum of the
     # threshold set in transcription parameters and the minimum correlation instance value
     # Ensures that if minimum correlation is set to a higher value,
     # warnings will be issued about any phones with fewer instances than this
@@ -369,7 +369,7 @@ if __name__ == "__main__":
             dist_keys=[PMI_DIST_KEY, SURPRISAL_DIST_KEY, PHONOLOGICAL_DIST_KEY],  # TODO maybe needs to be more customizable
             excluded_doculects=phon_corr_params['refresh'],
         )
-    
+
     # Create cognate similarity (WordDistance object) measure according to settings
     if eval_params['similarity'] == 'gradient':
         dist_func = gradient_cognate_sim
@@ -477,19 +477,27 @@ if __name__ == "__main__":
     #     f.write(tree)
     # logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
 
+    # Plot the phylogenetic tree
+    out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
+    plot_tree(os.path.abspath(outtree), out_png)
+    logger.info(f'Plotted phylogenetic tree to {out_png}')
+
     # Optionally evaluate tree wrt to reference tree(s)
     if tree_params["reference"]:
         tree_scores = defaultdict(dict)
         for ref_tree_file in tree_params["reference"]:
             ref_tree = load_newick_tree(ref_tree_file)
+            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
             gqd_score = gqd(
                 tree,
                 ref_tree,
                 is_rooted=tree_params['root'] is not None
             )
-            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
             tree_scores[ref_tree_file]["GQD"] = gqd_score
             logger.info(f"GQD wrt reference tree {ref_tree_file}: {round(gqd_score, 3)}")
+            tree_mutual_info = calculate_tree_distance(tree, ref_tree)
+            tree_scores[ref_tree_file]["TreeDist"] = tree_mutual_info
+            logger.info(f"TreeDist wrt reference tree {ref_tree_file}: {round(tree_mutual_info, 3)}")
         params["tree"]["eval"] = tree_scores
 
     # Write distance matrix TSV

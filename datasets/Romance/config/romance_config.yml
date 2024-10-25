@@ -26,13 +26,11 @@ evaluation:
     similarity: gradient
     method: hybrid
     pmi_weight: 0
-    surprisal_weight: 0.5
+    surprisal_weight: 2
     phon_weight: 1
+    min_similarity: 0.27
     normalize_weights: false
-    n_samples: 10
-    sample_size: 0.8
     calibrate: false
-    min_similarity: 0
 
 tree:
     linkage: nj

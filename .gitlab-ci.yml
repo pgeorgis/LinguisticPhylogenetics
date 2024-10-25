@@ -49,6 +49,14 @@ germanic:
     paths:
       - datasets/Germanic/experiments
 
+sinitic:
+  stage: classify
+  script:
+    - make classify-sinitic
+  artifacts:
+    paths:
+      - datasets/Sinitic/experiments
+
 slavic:
   stage: classify
   script:

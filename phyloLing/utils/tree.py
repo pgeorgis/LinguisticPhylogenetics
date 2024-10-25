@@ -1,7 +1,9 @@
 import dendropy
 from ete3 import Tree
 import itertools
+import os
 import re
+import subprocess
 from utils.utils import csv2dict
 
 
@@ -214,47 +216,47 @@ def classification_to_newick(infile: str,
 def prep_trees_for_comparison(tree1, tree2):
     # Initialize a shared TaxonNamespace
     taxon_namespace = dendropy.TaxonNamespace()
-    
+
     # Load trees from Newick strings with the shared TaxonNamespace
     if isinstance(tree1, str):
         tree1 = dendropy.Tree.get(data=tree1, schema="newick", taxon_namespace=taxon_namespace)
     if isinstance(tree2, str):
         tree2 = dendropy.Tree.get(data=tree2, schema="newick", taxon_namespace=taxon_namespace)
-    
+
     # Get list of tips missing from either tree
     missing_tips = set(list_tips(tree1)) - set(list_tips(tree2))
     missing_tips.update(set(list_tips(tree2)) - set(list_tips(tree1)))
-    
+
     # Drop missing tips from each tree
     tree1 = drop_tips(tree1, missing_tips)
     tree2 = drop_tips(tree2, missing_tips)
-    
+
     # Ensure both trees reference the same TaxonNamespace after modifications
     tree1.migrate_taxon_namespace(taxon_namespace)
     tree2.migrate_taxon_namespace(taxon_namespace)
-    
+
     return tree1, tree2
 
 
 def robinson_foulds(tree1, tree2):
     """Computes unweighted Robinson-Foulds distance between two trees (Newick strings)."""
-    
+
     # Preprocess trees to share same taxa and namespace
     tree1, tree2 = prep_trees_for_comparison(tree1, tree2)
 
     # Compute the quartet distance between the trees
     qd = dendropy.calculate.treecompare.symmetric_difference(tree1, tree2)
-    
+
     return qd
 
 
 def list_all_quartets(n_tips):
     """
     Lists all quartets (sets of four taxa) from a set of n_tips.
-    
+
     Parameters:
     n_tips (int): The number of tips (leaves) in the tree.
-    
+
     Returns:
     list: A list of tuples, each containing a unique quartet of four taxa.
     """
@@ -264,25 +266,25 @@ def list_all_quartets(n_tips):
 def quartet_state(tips, tree):
     """
     Determines the state of a quartet in a tree.
-    
+
     Parameters:
     tips (tuple): A tuple of four taxa indices representing the quartet.
     tree (dendropy.Tree): The tree in which to evaluate the quartet state.
-    
+
     Returns:
     int: The quartet state (0 for unresolved, 1-3 for resolved states).
     """
     # Get mrca nodes for each pair of tips
-    mrca12 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[0]].label, 
+    mrca12 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[0]].label,
                                      tree.taxon_namespace[tips[1]].label])
-    mrca34 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[2]].label, 
+    mrca34 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[2]].label,
                                      tree.taxon_namespace[tips[3]].label])
-    
-    mrca13 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[0]].label, 
+
+    mrca13 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[0]].label,
                                      tree.taxon_namespace[tips[2]].label])
-    mrca24 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[1]].label, 
+    mrca24 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[1]].label,
                                      tree.taxon_namespace[tips[3]].label])
-    
+
     # Determine quartet state based on closeness of MRCA pairs
     if mrca12 == mrca34 and mrca12 != mrca13 and mrca12 != mrca24:
         return 1  # A-B | C-D
@@ -297,39 +299,77 @@ def quartet_state(tips, tree):
 def gqd(non_binary_tree, binary_tree, is_rooted=True):
     """
     Calculates the Generalized Quartet Distance (GQD) between two trees.
-    
+
     Parameters:
     non_binary_tree (dendropy.Tree): A non-binary tree object.
     binary_tree (dendropy.Tree): A binary tree object.
-    
+
     Returns:
     float: The generalized quartet distance between the two trees.
     """
     non_binary_tree, binary_tree = prep_trees_for_comparison(non_binary_tree, binary_tree)
-    
+
     # List all quartets for the non-binary tree
     n_tips = len(non_binary_tree.taxon_namespace)
     all_quartets = list_all_quartets(n_tips)
-    
+
     # Set trees to be rooted to avoid warnings
     if is_rooted:
         non_binary_tree.is_rooted = True
         binary_tree.is_rooted = True
-    
+
     # Count resolved quartets and differing quartets
     resolved_count = 0
     differing_count = 0
-    
+
     for quartet in all_quartets:
         nb_state = quartet_state(quartet, non_binary_tree)
         b_state = quartet_state(quartet, binary_tree)
-        
+
         # Only count resolved states in non-binary tree
         if nb_state > 0:
             resolved_count += 1
             if nb_state != b_state:
                 differing_count += 1
-    
+
     # Compute and return the GQD
     gqd = differing_count / resolved_count if resolved_count > 0 else 0
     return gqd
+
+
+def calculate_tree_distance(tree1, tree2):
+    """Calculates mutual information distance between two Newick trees."""
+    if isinstance(tree1, dendropy.Tree):
+        tree1 = tree1.as_string("newick").strip()
+    if isinstance(tree2, dendropy.Tree):
+        tree2 = tree2.as_string("newick").strip()
+    current_directory = os.path.abspath(os.path.dirname(__file__))
+    tree_dist_script = os.path.join(current_directory, "treeDist.R")
+    result = subprocess.run(
+        ["Rscript", tree_dist_script, tree1, tree2],
+        capture_output=True,
+        text=True
+    )
+
+    if result.returncode != 0:
+        raise RuntimeError(f"R script failed with error:\n{result.stdout}\n{result.stderr}")
+
+    result = result.stdout.strip()
+    result = re.search(r"TreeDistance:\s*(\d+\.?\d+)", result)
+    if result:
+        return float(result.group(1))
+    else:
+        raise ValueError("Error parsing TreeDistance result")
+
+
+def plot_tree(newick_path, png_path):
+    """Plots a phylogenetic tree (from file saved as Newick string) to a PNG image file."""
+    current_directory = os.path.abspath(os.path.dirname(__file__))
+    plot_tree_script = os.path.join(current_directory, "plotTree.R")
+    result = subprocess.run(
+        ["Rscript", plot_tree_script, newick_path, png_path],
+        capture_output=True,
+        text=True
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"R script failed with error:\n{result.stdout}\n{result.stderr}")
