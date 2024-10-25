@@ -704,6 +704,7 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
         assert round(sum(weights)) == 1.0
     for func, weight in zip(funcs, weights):
         if weight == 0:
+            scores.append(0)
             continue
         func_sim = func.sim
         score = func.eval(word1, word2)
@@ -719,7 +720,10 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
             log_word_score(word1, word2, score, key=func.name)
 
     # score = euclidean_dist(scores)
-    score = sum(scores)
+    # score = sum(scores)
+    # TODO temp implementation: make more robust by checking that each function is as expected
+    pmi_score, surprisal_score, phon_score = scores
+    score = pmi_score + (surprisal_score * phon_score)
     if word1.concept == word2.concept:
         log_word_score(word1, word2, score, key=HYBRID_DIST_KEY)
 
