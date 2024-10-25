@@ -355,7 +355,7 @@ def calculate_tree_distance(tree1, tree2):
         raise RuntimeError(f"R script failed with error:\n{result.stdout}\n{result.stderr}")
 
     result = result.stdout.strip()
-    result = re.search(r"TreeDistance:\s*(\d+\.?\d+)", result)
+    result = re.search(r"TreeDistance:\s*(\d+(\.?\d+)?)", result)
     if result:
         return float(result.group(1))
     else:
