@@ -413,13 +413,13 @@ if __name__ == "__main__":
     
     references = tree_params["reference"]
     def objective(weights):
-        #weights = tuple(weights)
-        #logger.info(f"Weights: {weights}")
-        min_sim = list(weights)[0]
+        min_sim = list(weights)[-1]
+        weights = tuple(list(weights)[:-1])
+        logger.info(f"Weights: {weights}")
         logger.info(f"Min similarity: {min_sim}")
-        #distFunc.kwargs['eval_func'].measured = {}
-        #distFunc.kwargs['eval_func'].kwargs['weights'] = weights
-        #distFunc.kwargs['eval_func'].hashable_kwargs = distFunc.kwargs['eval_func'].get_hashable_kwargs(distFunc.kwargs['eval_func'].kwargs)
+        distFunc.kwargs['eval_func'].measured = {}
+        distFunc.kwargs['eval_func'].kwargs['weights'] = weights
+        distFunc.kwargs['eval_func'].hashable_kwargs = distFunc.kwargs['eval_func'].get_hashable_kwargs(distFunc.kwargs['eval_func'].kwargs)
         distFunc.kwargs['min_similarity'] = min_sim
         distFunc.measured = {}
         distFunc.hashable_kwargs = distFunc.get_hashable_kwargs(distFunc.kwargs)
@@ -444,27 +444,22 @@ if __name__ == "__main__":
         logger.info(f"GQD: {gqd_score}")
         return best_score
 
-    # Initial guess for the weights
-    initial_weights = np.array([0])
+    # Initial guess for the values
+    initial_vals = np.array([1, 1, 1, 0])
 
     # Bounds for the weights (optional, if you want to restrict the range)
-    bounds = [(0, 1.5) for _ in initial_weights]  # Non-negative weights
+    bounds = [(0, None) for _ in initial_vals]  # Non-negative weights
 
     # Minimize the evaluation score by adjusting weights
     result = minimize(
         objective,
-        initial_weights,
+        initial_vals,
         bounds=bounds,
-        # options={
-        #     'eps': 0.5,
-        #     'ftol': 1e-8,  # Function value tolerance
-        # }
-        method='Powell', 
+        method='Powell',
         options={
-            'xtol': 1e-4,   # Tighter step size tolerance (adjust as needed)
-            'ftol': 1e-8,   # Tolerance for stopping when the function value changes insignificantly
-            #'maxiter': 10,
-            'disp': True,   # Display detailed output
+            'xtol': 1e-1,   # Looser tolerance for parameter changes
+            'ftol': 1e-2,   # Looser tolerance for objective function changes
+            'disp': True,   # Display output
         }
     )
     breakpoint()
