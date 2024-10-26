@@ -50,10 +50,10 @@ evaluation:
   method: hybrid
   n_samples: 10
   sample_size: 0.8
-  pmi_weight: 0
-  surprisal_weight: 2
-  phon_weight: 1
-  min_similarity: 0.27
+  pmi_weight: 0.5
+  surprisal_weight: 5
+  phon_weight: 2
+  min_similarity: 0.6
   normalize_weights: false
   exclude_synonyms: true
   calibrate: false
