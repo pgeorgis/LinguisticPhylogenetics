@@ -16,11 +16,12 @@ variables:
   fallback_keys:
     - commit-cache-${CI_DEFAULT_BRANCH}
   paths:
-    - "$CI_PROJECT_DIR/.cache/pip"
+    - "/root/.cache/pip"
     - "$CI_PROJECT_DIR/venv"
   policy: pull
 
 default:
+  image: ${CI_IMAGE}
   cache:
     <<: *commit-cache
   before_script:
