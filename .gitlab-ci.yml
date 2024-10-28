@@ -20,16 +20,6 @@ variables:
     - "$CI_PROJECT_DIR/venv"
   policy: pull-push
 
-.checkout-submodules: &checkout-submodules
-  - git config --global credential.helper store
-  - |
-    git credential approve <<EOF
-    protocol=https
-    host=github.com
-    username=${GITHUB_USER_NAME}
-    password=${GITHUB_ACCESS_TOKEN}
-    EOF
-
 services:
   - name: ${DIND_IMAGE}
     command: ["--registry-mirror", "https://registry-mirror.mama2.de"]
@@ -38,12 +28,19 @@ default:
   cache:
     <<: *commit-cache
   before_script:
-    <<: *checkout-submodules
+    - git config --global credential.helper store
+    - |
+      git credential approve <<EOF
+      protocol=https
+      host=github.com
+      username=${GITHUB_USER_NAME}
+      password=${GITHUB_ACCESS_TOKEN}
+      EOF
 
 prepare:ci:
   stage: prepare
   image: ${DIND_IMAGE}
-  interruptible: true#
+  interruptible: true
   before_script: []
   script:
     - export CI_MAIN_NAME=${CI_TAG_NAME}:main
@@ -74,7 +71,6 @@ prepare:install_dependencies:
 
 romance:
   stage: classify
-  image: ${CI_IMAGE}
   script:
     - make classify-romance
   artifacts:
@@ -83,7 +79,6 @@ romance:
 
 germanic:
   stage: classify
-  image: ${CI_IMAGE}
   script:
     - make classify-germanic
   artifacts:
@@ -92,7 +87,6 @@ germanic:
 
 sinitic:
   stage: classify
-  image: ${CI_IMAGE}
   script:
     - make classify-sinitic
   artifacts:
@@ -101,7 +95,6 @@ sinitic:
 
 slavic:
   stage: classify
-  image: ${CI_IMAGE}
   script:
     - make classify-slavic
   artifacts:
