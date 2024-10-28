@@ -5,7 +5,7 @@ stages:
 variables:
   GIT_SUBMODULE_STRATEGY: none
   GIT_STRATEGY: fetch
-  CI_TAG_NAME: ${DOCKER_REGISTRY}/phyloLing/ci
+  CI_TAG_NAME: ${DOCKER_REGISTRY}/phyloling/ci
   CI_IMAGE: ${CI_TAG_NAME}:${CI_COMMIT_SHA}
   DIND_IMAGE: docker:27-dind
   DOCKER_HOST: tcp://docker:2375
@@ -59,6 +59,8 @@ prepare:ci:
 
 prepare:install_dependencies:
   stage: prepare
+  needs:
+    - prepare:ci
   interruptible: true
   script:
     - make init
