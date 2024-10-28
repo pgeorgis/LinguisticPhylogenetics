@@ -355,8 +355,21 @@ def calculate_tree_distance(tree1, tree2):
         raise RuntimeError(f"R script failed with error:\n{result.stdout}\n{result.stderr}")
 
     result = result.stdout.strip()
-    result = re.search(r"TreeDistance:\s*(\d+\.?\d+)", result)
+    result = re.search(r"TreeDistance:\s*(\d+(\.?\d+)?)", result)
     if result:
         return float(result.group(1))
     else:
         raise ValueError("Error parsing TreeDistance result")
+
+
+def plot_tree(newick_path, png_path):
+    """Plots a phylogenetic tree (from file saved as Newick string) to a PNG image file."""
+    current_directory = os.path.abspath(os.path.dirname(__file__))
+    plot_tree_script = os.path.join(current_directory, "plotTree.R")
+    result = subprocess.run(
+        ["Rscript", plot_tree_script, newick_path, png_path],
+        capture_output=True,
+        text=True
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"R script failed with error:\n{result.stdout}\n{result.stderr}")

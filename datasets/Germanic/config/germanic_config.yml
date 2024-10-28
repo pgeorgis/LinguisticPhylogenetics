@@ -28,17 +28,8 @@ phon_corr:
 cluster:
     cognates: none
 
-evaluation:
-    similarity: gradient
-    method: hybrid
-    pmi_weight: 0
-    surprisal_weight: 2
-    phon_weight: 0.5
-    normalize_weights: false
-    n_samples: 10
-    sample_size: 0.8
-    calibrate: false
-    min_similarity: 0
+# evaluation:
+#     precalculated_word_scores: 
 
 tree:
     linkage: nj
