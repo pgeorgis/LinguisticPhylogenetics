@@ -4,10 +4,28 @@ stages:
 
 variables:
   GIT_SUBMODULE_STRATEGY: none
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  GIT_STRATEGY: fetch
+  CI_TAG_NAME: ${DOCKER_REGISTRY}/phyloLing/ci
+  CI_IMAGE: ${CI_TAG_NAME}:${CI_COMMIT_SHA}
+  DIND_IMAGE: docker:27-dind
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+
+.commit-cache: &commit-cache
+  key: commit-cache-${CI_COMMIT_REF_SLUG}
+  fallback_keys:
+    - commit-cache-${CI_DEFAULT_BRANCH}
+  paths:
+    - "$CI_PROJECT_DIR/.cache/pip"
+    - "$CI_PROJECT_DIR/venv"
+  policy: pull-push
+
+services:
+  - name: ${DIND_IMAGE}
+    command: ["--registry-mirror", "https://registry-mirror.mama2.de"]
 
 default:
-  image: python:3.12
+  image: ${CI_IMAGE}
   before_script:
     - git config --global credential.helper store
     - |
@@ -17,20 +35,35 @@ default:
       username=${GITHUB_USER_NAME}
       password=${GITHUB_ACCESS_TOKEN}
       EOF
-  cache: &default_cache
-    key: ${CI_COMMIT_REF_SLUG}
-    policy: pull
-    paths:
-      - $CI_PROJECT_DIR/.cache/pip
-      - $CI_PROJECT_DIR/venv
+    - docker login ${DOCKER_REGISTRY} -u ${DOCKER_REGISTRY_USER} -p ${DOCKER_REGISTRY_PASSWORD}
+    - docker login registry-mirror.mama2.de -u ${DOCKER_REGISTRY_MIRROR_USER} -p ${DOCKER_REGISTRY_MIRROR_PASSWORD}
+  cache:
+    <<: *commit-cache
 
-install_dependencies:
+prepare:ci:
+  stage: prepare
+  image: ${DIND_IMAGE}
+  interruptible: true
+  script:
+    - export CI_MAIN_NAME=${CI_TAG_NAME}:main
+    - export CI_BRANCH_NAME=${CI_TAG_NAME}:`echo ${CI_COMMIT_REF_NAME} | tr '/' '-'`
+    - >
+      (docker pull ${CI_IMAGE} && echo "Using commit image")
+      || (docker pull ${CI_BRANCH_NAME} && docker tag ${CI_BRANCH_NAME} ${CI_IMAGE} && echo "Using branch image") 
+      || (docker pull ${CI_MAIN_NAME} && docker tag ${CI_MAIN_NAME} ${CI_IMAGE} && echo "Using main image") 
+      || echo "Using no image and building from scratch"
+    - docker build -f ci.dockerfile -t ${CI_IMAGE} --cache-to type=inline --cache-from ${CI_IMAGE} .
+    - docker tag ${CI_IMAGE} ${CI_BRANCH_NAME}
+    - docker push ${CI_TAG_NAME} --all-tags
+  cache: []
+
+prepare:install_dependencies:
   stage: prepare
   interruptible: true
   script:
     - make init
   cache:
-    <<: *default_cache
+    <<: *commit-cache
     policy: pull-push
 
 romance:
