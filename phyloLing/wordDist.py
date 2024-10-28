@@ -731,25 +731,6 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
     return score
 
 
-def composite_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
-    # pmi_score = pmi_dist(word1, word2, normalize=False, sim2dist=False)
-    pmi_score = pmi_dist(word1, word2, sim2dist=False)
-    # surprisal_score = mutual_surprisal(word1, word2, normalize=False, **kwargs)
-    surprisal_score = mutual_surprisal(word1, word2, **kwargs)
-    phon_score = phonological_dist(word1, word2)
-    # phon_score = phonological_dist(word1, word2, total_dist=True)
-    score = ((pmi_weight * pmi_score) - (surprisal_weight * surprisal_score)) * (1 - phon_score)
-
-    # Record word scores # TODO into Distance class object?
-    if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key=COMPOSITE_SIM_KEY)
-        log_word_score(word1, word2, pmi_score, key=PMI_DIST_KEY)
-        log_word_score(word1, word2, surprisal_score, key=SURPRISAL_DIST_KEY)
-        log_word_score(word1, word2, phon_score, key=PHONOLOGICAL_DIST_KEY)
-
-    return max(0, score)
-
-
 def log_word_score(word1, word2, score, key):
     lang1, lang2 = word1.language, word2.language
     lang1.lexical_comparison[lang2.name][(word1, word2)][key] = score
@@ -759,13 +740,12 @@ def log_word_score(word1, word2, score, key):
 
 
 # Initialize distance functions as Distance objects
-# NB: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on config settings
+# NB: Hybrid distance(s) need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on config settings
 LEVENSHTEIN_DIST_KEY = 'LevenshteinDist'
 PHONETIC_DIST_KEY = 'PhoneticDist'
 PHONOLOGICAL_DIST_KEY = 'PhonDist'
 PMI_DIST_KEY = 'PMIDist'
 SURPRISAL_DIST_KEY = 'SurprisalDist'
-COMPOSITE_SIM_KEY = 'CompositeSimilarity'
 HYBRID_DIST_KEY = 'HybridDist'
 HYBRID_SIM_KEY = 'HybridSimilarity'
 LevenshteinDist = WordDistance(func=levenshtein_dist, name=LEVENSHTEIN_DIST_KEY)
