@@ -35,8 +35,6 @@ default:
       username=${GITHUB_USER_NAME}
       password=${GITHUB_ACCESS_TOKEN}
       EOF
-    - docker login ${DOCKER_REGISTRY} -u ${DOCKER_REGISTRY_USER} -p ${DOCKER_REGISTRY_PASSWORD}
-    - docker login registry-mirror.mama2.de -u ${DOCKER_REGISTRY_MIRROR_USER} -p ${DOCKER_REGISTRY_MIRROR_PASSWORD}
   cache:
     <<: *commit-cache
 
@@ -47,6 +45,8 @@ prepare:ci:
   script:
     - export CI_MAIN_NAME=${CI_TAG_NAME}:main
     - export CI_BRANCH_NAME=${CI_TAG_NAME}:`echo ${CI_COMMIT_REF_NAME} | tr '/' '-'`
+    - docker login ${DOCKER_REGISTRY} -u ${DOCKER_REGISTRY_USER} -p ${DOCKER_REGISTRY_PASSWORD}
+    - docker login registry-mirror.mama2.de -u ${DOCKER_REGISTRY_MIRROR_USER} -p ${DOCKER_REGISTRY_MIRROR_PASSWORD}
     - >
       (docker pull ${CI_IMAGE} && echo "Using commit image")
       || (docker pull ${CI_BRANCH_NAME} && docker tag ${CI_BRANCH_NAME} ${CI_IMAGE} && echo "Using branch image") 
