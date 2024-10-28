@@ -20,10 +20,6 @@ variables:
     - "$CI_PROJECT_DIR/venv"
   policy: pull
 
-services:
-  - name: ${DIND_IMAGE}
-    command: ["--registry-mirror", "https://registry-mirror.mama2.de"]
-
 default:
   cache:
     <<: *commit-cache
@@ -42,6 +38,9 @@ prepare:ci:
   image: ${DIND_IMAGE}
   interruptible: true
   before_script: []
+  services:
+    - name: ${DIND_IMAGE}
+      command: [ "--registry-mirror", "https://registry-mirror.mama2.de" ]
   script:
     - export CI_MAIN_NAME=${CI_TAG_NAME}:main
     - export CI_BRANCH_NAME=${CI_TAG_NAME}:`echo ${CI_COMMIT_REF_NAME} | tr '/' '-'`
