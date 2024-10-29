@@ -16,7 +16,7 @@ variables:
   fallback_keys:
     - commit-cache-${CI_DEFAULT_BRANCH}
   paths:
-    - "/root/.cache/pip"
+    - "$CI_PROJECT_DIR/.cache/pip"
     - "$CI_PROJECT_DIR/venv"
   policy: pull
 
