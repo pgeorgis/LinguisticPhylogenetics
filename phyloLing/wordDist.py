@@ -12,7 +12,7 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 
 from utils import PhonemeMap
-from utils.distance import Distance, sim_to_dist
+from utils.distance import Distance, sim_to_dist, dist_to_sim
 from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
@@ -706,6 +706,7 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
         assert round(sum(weights)) == 1.0
     for func, weight in zip(funcs, weights):
         if weight == 0:
+            scores.append(0)
             continue
         func_sim = func.sim
         score = func.eval(word1, word2)
@@ -721,9 +722,13 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
             log_word_score(word1, word2, score, key=func.name)
 
     # score = euclidean_dist(scores)
-    score = sum(scores)
+    # score = sum(scores)
+    # TODO temp implementation: make more robust by checking that each function is as expected
+    pmi_score, surprisal_score, phon_score = scores
+    score = pmi_score + (surprisal_score * phon_score)
     if word1.concept == word2.concept:
         log_word_score(word1, word2, score, key=HYBRID_DIST_KEY)
+        log_word_score(word1, word2, dist_to_sim(score), key=HYBRID_SIM_KEY)
 
     return score
 
@@ -764,6 +769,7 @@ PMI_DIST_KEY = 'PMIDist'
 SURPRISAL_DIST_KEY = 'SurprisalDist'
 COMPOSITE_SIM_KEY = 'CompositeSimilarity'
 HYBRID_DIST_KEY = 'HybridDist'
+HYBRID_SIM_KEY = 'HybridSimilarity'
 LevenshteinDist = WordDistance(func=levenshtein_dist, name=LEVENSHTEIN_DIST_KEY)
 PhoneticDist = WordDistance(func=phonetic_dist, name=PHONETIC_DIST_KEY)
 PhonDist = WordDistance(func=phonological_dist, name=PHONOLOGICAL_DIST_KEY)
