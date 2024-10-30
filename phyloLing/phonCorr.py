@@ -563,14 +563,14 @@ class PhonCorrelator:
                        wordlist,
                        align_costs=None,
                        remove_uncompacted_padding=True,
-                       add_phon_dist=False,
+                       add_phon_dist=True,
                        # phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
 
         # Optionally add phone similarity measure between phone pairs to align costs/scores
         if add_phon_dist:
-            gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
+            phon_gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
             for ngram1 in align_costs:
                 ngram1 = Ngram(ngram1)
                 # Remove gaps and boundaries
@@ -584,8 +584,11 @@ class PhonCorrelator:
                         continue
                     # For full gaps/boundaries with segments, assign cost as GOP * length of segment sequence
                     elif gapless_ngram1.size == 0 or gapless_ngram2.size == 0:
-                        phon_align_cost = gop * max(gapless_ngram1.size, gapless_ngram2.size)
-                    # Else compute phonetic distance of the two sequences
+                        phon_align_cost = phon_gop * max(gapless_ngram1.size, gapless_ngram2.size)
+                    # Directly compute phonetic distance of two single phones
+                    elif gapless_ngram1.size == 1 and gapless_ngram2.size == 1:
+                        phon_align_cost = PhoneFeatureDist.eval(gapless_ngram1.string, gapless_ngram2.string)
+                    # Else compute phonetic distance of the two aligned ngram sequences
                     else:
                         phon_costs = calculate_alignment_costs(
                             gapless_ngram1.ngram,
@@ -598,13 +601,11 @@ class PhonCorrelator:
                             gapless_ngram2.ngram,
                             align_cost=phon_costs,
                             gap_cost={},
-                            default_gop=gop,
-                            maximize_score=False,
+                            default_gop=phon_gop,
+                            maximize_score=True,
                             gap_ch=self.gap_ch,
                             allow_complex=False
                         )
-                    # Normalize phone cost by sequence length
-                    phon_align_cost /= max(gapless_ngram1.size, gapless_ngram2.size)
                     # Add phonetic alignment cost to align_costs dict storing PMI values
                     align_costs[ngram1.undo()][ngram2.undo()] += phon_align_cost
 
