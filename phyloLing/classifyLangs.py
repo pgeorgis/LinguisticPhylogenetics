@@ -2,24 +2,24 @@ import argparse
 import json
 import logging
 import os
-from collections import defaultdict
 import shutil
 from scipy.optimize import minimize
 import numpy as np
 from math import inf
+from collections import defaultdict
 
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_sim
-from utils.tree import calculate_tree_distance, gqd, load_newick_tree, plot_tree
+from utils.tree import (calculate_tree_distance, gqd, load_newick_tree,
+                        plot_tree)
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
                          create_datestamp, create_timestamp, csv2dict,
                          get_git_commit_hash)
-from wordDist import (COMPOSITE_SIM_KEY, HYBRID_DIST_KEY,
-                      LEVENSHTEIN_DIST_KEY, PHONOLOGICAL_DIST_KEY,
-                      PMI_DIST_KEY, SURPRISAL_DIST_KEY, LevenshteinDist,
-                      PhonDist, PMIDist, SurprisalDist, WordDistance,
-                      composite_sim, hybrid_dist)
+from wordDist import (HYBRID_DIST_KEY, LEVENSHTEIN_DIST_KEY,
+                      PHONOLOGICAL_DIST_KEY, PMI_DIST_KEY, SURPRISAL_DIST_KEY,
+                      LevenshteinDist, PhonDist, PMIDist, SurprisalDist,
+                      WordDistance, hybrid_dist)
 
 from phyloLing import load_family
 
@@ -35,11 +35,11 @@ log_levels = {
 valid_params = {
     'cluster': {
         'cognates': {'auto', 'gold', 'none'},
-        'method': {'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid', 'composite'},
+        'method': {'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid'},
     },
     'evaluation': {
         'similarity': {'gradient', 'binary'},
-        'method': {'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid', 'composite'},
+        'method': {'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid'},
     },
     'tree': {
         'linkage': {'nj', 'average', 'complete', 'ward', 'weighted', 'single'},
@@ -150,24 +150,6 @@ def init_hybrid(function_map, eval_params):
     return HybridDist
 
 
-
-def init_composite(params):
-    eval_params = params['evaluation']
-    phon_corr_params = params['phon_corr']
-    CompositeSim = WordDistance(
-        func=composite_sim,
-        name=COMPOSITE_SIM_KEY,
-        sim=True,
-        pmi_weight=eval_params['pmi_weight'],
-        surprisal_weight=eval_params['surprisal_weight'],
-        ngram_size=phon_corr_params['ngram'],
-        phon_env=phon_corr_params['phon_env'],
-    )
-    CompositeDist = CompositeSim.to_distance('CompositeDist', alpha=0.8)
-
-    return CompositeDist
-
-
 def load_precalculated_word_scores(distance_dir, family, dist_keys, excluded_doculects):
     doculect_pairs = family.get_doculect_pairs(bidirectional=True)
     precalculated_word_scores = defaultdict(lambda:{})
@@ -251,21 +233,17 @@ if __name__ == "__main__":
     experiment_params = params['experiment']
 
     # Set ngram size used for surprisal
-    surprisal_funcs = ('surprisal', 'hybrid', 'composite')
+    surprisal_funcs = ('surprisal', 'hybrid')
     if eval_params['method'] in surprisal_funcs or cluster_params['method'] in phon_corr_params:
         function_map[SURPRISAL_DIST_KEY].set('ngram_size', phon_corr_params['ngram'])
         function_map[SURPRISAL_DIST_KEY].set('phon_env', phon_corr_params['phon_env'])
         SurprisalDist = function_map[SURPRISAL_DIST_KEY]
 
-        # Initialize hybrid or composite distance/similarity objects
-
+        # Initialize hybrid distance object
         if eval_params['method'] == 'hybrid' or cluster_params['method'] == 'hybrid':
             function_map[HYBRID_DIST_KEY] = init_hybrid(function_map, eval_params)
-        if eval_params['method'] == 'composite' or cluster_params['method'] == 'composite':
-            function_map[COMPOSITE_SIM_KEY] = init_composite(params)
 
     # Designate cluster function if performing auto cognate clustering
-
     if cluster_params['cognates'] == 'auto':
         clusterDist = function_map[cluster_params['method']]
         # Set specified cluster threshold # TODO cluster_threshold needs to be recalibrated
@@ -279,7 +257,6 @@ if __name__ == "__main__":
         'surprisal': SURPRISAL_DIST_KEY,
         'levenshtein': LEVENSHTEIN_DIST_KEY,
         'hybrid': HYBRID_DIST_KEY,
-        'composite': COMPOSITE_SIM_KEY,
     }
     evalDist = function_map[aux_func_map[eval_params['method']]]
 
@@ -317,7 +294,7 @@ if __name__ == "__main__":
         logger.info(f'Loading {family.name} phoneme PMI...')
         family.load_phoneme_pmi(excepted=phon_corr_params['refresh'])
 
-        if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
+        if eval_params['method'] in ('surprisal', 'hybrid'):
             logger.info(f'Loading {family.name} phoneme surprisal...')
             if cluster_params['cognates'] == 'gold':
                 family.load_phoneme_surprisal(
@@ -345,7 +322,7 @@ if __name__ == "__main__":
             phon_env=phon_corr_params['phon_env'],
         )
         family.write_phoneme_pmi()
-        if eval_params['method'] in ('surprisal', 'hybrid', 'composite'):
+        if eval_params['method'] in ('surprisal', 'hybrid'):
             family.write_phoneme_surprisal(
                 ngram_size=phon_corr_params['ngram'],
                 phon_env=phon_corr_params['phon_env'],

@@ -204,7 +204,7 @@ def prune_oov_surprisal(surprisal_dict):
     return pruned, oov_val
 
 
-def prune_extraneous_synonyms(wordlist, alignments, scores, prefer_small=False):
+def prune_extraneous_synonyms(wordlist, alignments, scores=None, prefer_small=False):
     # Resolve synonyms: prune redundant/extraneous
     # If a concept has >1 words listed, we may end up with, e.g.
     # DE <Kopf> - NL <kop>
@@ -213,46 +213,60 @@ def prune_extraneous_synonyms(wordlist, alignments, scores, prefer_small=False):
     # DE <Kopf> - NL <hoofd>
     # DE <Haupt> - NL <kop>
     # If both languages have >1 qualifying words for a concept, only consider the best pairings, i.e. prune the extraneous pairs
-    concept_counts1, concept_counts2 = defaultdict(lambda: 0), defaultdict(lambda: 0)
-    concept_indices1, concept_indices2 = defaultdict(lambda: []), defaultdict(lambda: [])
+    if scores is None:
+        scores = [alignment.cost for alignment in alignments]
+    assert len(wordlist) == len(alignments) == len(scores)
+
+    # Count instances of concepts to check for concepts with >1 word pair
+    concept_counts = defaultdict(lambda: 0)
+    concept_indices = defaultdict(lambda: [])
     indices_to_prune = set()
     for q, pair in enumerate(wordlist):
         word1, word2 = pair
-        concept1, concept2 = word1.concept, word2.concept
-        concept_counts1[concept1] += 1
-        concept_counts2[concept2] += 1
-        concept_indices1[concept1].append(q)
-        concept_indices2[concept2].append(q)
+        concept = word1.concept
+        concept_counts[concept] += 1
+        concept_indices[concept].append(q)
 
-    def prune_suboptimal_pairings(concept_counts, concept_indices, wordlist):
-        for concept, count in concept_counts.items():
-            if count > 1:
-                best_pairings = {}
-                best_pairing_scores = {}
-                for q in concept_indices[concept]:
-                    pair = wordlist[q]
-                    word1, word2 = pair
-                    score = scores[q]  # TODO seems like this could benefit from a Wordpair object
-                    if prefer_small:  # consider a smaller score to be better, e.g. for surprisal
-                        if word1 not in best_pairings or score < best_pairings[word1]:
-                            best_pairings[word1] = q
-                            best_pairing_scores[word1] = score
+    # Find optimal mappings for each concept with >1 word pair
+    for concept, count in concept_counts.items():
+        if count > 1:
+            best_pairings = {}
+            best_pairing_scores = {}
+            for index in concept_indices[concept]:
+                word1, word2 = wordlist[index]
+                score = scores[index]  # TODO seems like this could benefit from a Wordpair object
+                if prefer_small:  # consider a smaller score to be better, e.g. for surprisal
+                    if word1 not in best_pairings or score < best_pairing_scores[word1]:
+                        best_pairings[word1] = index
+                        best_pairing_scores[word1] = score
+                else:
+                    if word1 not in best_pairings or score > best_pairing_scores[word1]:
+                        best_pairings[word1] = index
+                        best_pairing_scores[word1] = score
+            # Now best_pairings contains the best mapping for each concept
+            # based on the best (highest/lowest) scoring pair wrt to first language word
+            for index in concept_indices[concept]:
+                if index not in best_pairings.values():
+                    indices_to_prune.add(index)
+
+            # Now check for multiple l1 words mappedåto the same l2 word
+            # Choose only the best of these
+            selected_word2 = [wordlist[index][-1] for index in best_pairings.values()]
+            if len(set(selected_word2)) < len(best_pairings.values()):
+                for word2 in set(selected_word2):
+                    indices = [index for index in best_pairings.values() if wordlist[index][-1] == word2]
+                    if prefer_small:
+                        best_choice = min(indices, key=lambda x: scores[x])
                     else:
-                        if word1 not in best_pairings or score > best_pairing_scores[word1]:
-                            best_pairings[word1] = q
-                            best_pairing_scores[word1] = score
-                # Now best_pairings contains the best mapping for each concept based on the best (highest/lowest) scoring pair
-                for q in concept_indices[concept]:
-                    if q not in best_pairings.values():
-                        indices_to_prune.add(q)
-    prune_suboptimal_pairings(concept_counts=concept_counts1, concept_indices=concept_indices1, wordlist=wordlist)
-    reversed_wordlist = [(word2, word1) for word1, word2 in wordlist]
-    prune_suboptimal_pairings(concept_counts=concept_counts2, concept_indices=concept_indices2, wordlist=reversed_wordlist)
+                        best_choice = max(indices, key=lambda x: scores[x])
+                    indices_to_prune.update([index for index in indices if index != best_choice])
 
+    # Then prune all suboptimal word pair indices
     indices_to_prune = sorted(list(indices_to_prune), reverse=True)
     for index in indices_to_prune:
         del wordlist[index]
         del alignments[index]
+
     return wordlist, alignments
 
 
@@ -549,14 +563,14 @@ class PhonCorrelator:
                        wordlist,
                        align_costs=None,
                        remove_uncompacted_padding=True,
-                       add_phon_dist=False,
+                       add_phon_dist=True,
                        # phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
 
         # Optionally add phone similarity measure between phone pairs to align costs/scores
         if add_phon_dist:
-            gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
+            phon_gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
             for ngram1 in align_costs:
                 ngram1 = Ngram(ngram1)
                 # Remove gaps and boundaries
@@ -570,8 +584,11 @@ class PhonCorrelator:
                         continue
                     # For full gaps/boundaries with segments, assign cost as GOP * length of segment sequence
                     elif gapless_ngram1.size == 0 or gapless_ngram2.size == 0:
-                        phon_align_cost = gop * max(gapless_ngram1.size, gapless_ngram2.size)
-                    # Else compute phonetic distance of the two sequences
+                        phon_align_cost = phon_gop * max(gapless_ngram1.size, gapless_ngram2.size)
+                    # Directly compute phonetic distance of two single phones
+                    elif gapless_ngram1.size == 1 and gapless_ngram2.size == 1:
+                        phon_align_cost = PhoneFeatureDist.eval(gapless_ngram1.string, gapless_ngram2.string)
+                    # Else compute phonetic distance of the two aligned ngram sequences
                     else:
                         phon_costs = calculate_alignment_costs(
                             gapless_ngram1.ngram,
@@ -584,13 +601,11 @@ class PhonCorrelator:
                             gapless_ngram2.ngram,
                             align_cost=phon_costs,
                             gap_cost={},
-                            default_gop=gop,
-                            maximize_score=False,
+                            default_gop=phon_gop,
+                            maximize_score=True,
                             gap_ch=self.gap_ch,
                             allow_complex=False
                         )
-                    # Normalize phone cost by sequence length
-                    phon_align_cost /= max(gapless_ngram1.size, gapless_ngram2.size)
                     # Add phonetic alignment cost to align_costs dict storing PMI values
                     align_costs[ngram1.undo()][ngram2.undo()] += phon_align_cost
 
@@ -1178,9 +1193,10 @@ class PhonCorrelator:
                         disqualified.append(pair)
                         # disqualified_PMI.append(PMI_score)
                 qualifying, qualifying_alignments = prune_extraneous_synonyms(
-                    qualifying,
-                    qualifying_alignments,
-                    qualified_PMI
+                    wordlist=qualifying,
+                    alignments=qualifying_alignments,
+                    scores=qualified_PMI,
+                    prefer_small=False,
                 )
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
@@ -1209,9 +1225,15 @@ class PhonCorrelator:
             results = sample_results[0]
 
         # Realign final qualifying using averaged PMI values from all samples
+        final_qualifying = list(final_qualifying)
         final_alignments = self.align_wordlist(
             final_qualifying,
             align_costs=results,
+        )
+        final_qualifying, final_alignments = prune_extraneous_synonyms(
+            wordlist=final_qualifying,
+            alignments=final_alignments,
+            prefer_small=False
         )
         # Log final alignments
         self.log_alignments(final_alignments, self.align_log['PMI'])
