@@ -7,7 +7,7 @@ from collections import defaultdict
 
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
-from lingDist import binary_cognate_sim, gradient_cognate_sim
+from lingDist import binary_cognate_sim, gradient_cognate_dist
 from utils.tree import (calculate_tree_distance, gqd, load_newick_tree,
                         plot_tree)
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
@@ -346,11 +346,10 @@ if __name__ == "__main__":
 
     # Create cognate similarity (WordDistance object) measure according to settings
     if eval_params['similarity'] == 'gradient':
-        dist_func = gradient_cognate_sim
+        dist_func = gradient_cognate_dist
         distFunc = WordDistance(
             func=dist_func,
-            name='GradientCognateSim',
-            sim=True,
+            name='GradientCognateDist',
             eval_func=evalDist,
             n_samples=eval_params['n_samples'],
             sample_size=eval_params['sample_size'],
