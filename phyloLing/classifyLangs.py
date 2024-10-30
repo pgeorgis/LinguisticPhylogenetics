@@ -3,7 +3,7 @@ import json
 import logging
 import os
 import shutil
-from scipy.optimize import minimize
+from scipy.optimize import minimize, differential_evolution
 import numpy as np
 from math import inf
 from collections import defaultdict
@@ -418,26 +418,42 @@ if __name__ == "__main__":
             )
             if gqd_score < best_score:
                 best_score = gqd_score
-        logger.info(f"GQD: {gqd_score}")
+        logger.info(f"GQD: {gqd_score}\n")
         return best_score
 
     # Initial guess for the values
-    initial_vals = np.array([1, 1, 1, 0])
+    initial_vals = np.array([0.5, 2, 1, 0.25])
 
     # Bounds for the weights (optional, if you want to restrict the range)
-    bounds = [(0, None) for _ in initial_vals]  # Non-negative weights
+    #bounds = [(0, None) for _ in initial_vals]  # Non-negative weights
+    bounds = [(0, 1), (1, 3), (0, 2), (0, 0.75)]
 
     # Minimize the evaluation score by adjusting weights
-    result = minimize(
+    # result = minimize(
+    #     objective,
+    #     initial_vals,
+    #     bounds=bounds,
+    #     method='Powell',
+    #     options={
+    #         'xtol': 1e-1,   # Looser tolerance for parameter changes
+    #         'ftol': 1e-2,   # Looser tolerance for objective function changes
+    #         'disp': True,   # Display output
+    #     }
+    # )
+    result_de = differential_evolution(
         objective,
-        initial_vals,
         bounds=bounds,
-        method='Powell',
-        options={
-            'xtol': 1e-1,   # Looser tolerance for parameter changes
-            'ftol': 1e-2,   # Looser tolerance for objective function changes
-            'disp': True,   # Display output
-        }
+        popsize=15,      # Population size (higher values increase search breadth)
+        maxiter=100,     # Number of iterations
+        mutation=(0.5, 1),  # Mutation factor
+        recombination=0.7   # Crossover probability
+    )
+
+    # Refine using Powell method
+    result_refined = minimize(
+        objective,
+        result_de.x,
+        method='Powell'
     )
     breakpoint()
 
