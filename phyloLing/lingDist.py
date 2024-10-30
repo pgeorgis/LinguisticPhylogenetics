@@ -130,10 +130,9 @@ def gradient_cognate_dist(lang1,
                           lang2,
                           clustered_cognates,
                           eval_func,
-                          exclude_synonyms=True,  # TODO improve exclude_synonyms
-                          calibrate=True,  # TODO rename
+                          exclude_synonyms=True,
+                          calibrate=True,
                           min_similarity=0,
-                          clustered_id=None,  # TODO incorporate or remove
                           p_threshold=0.01,
                           seed=1,
                           n_samples=50,
@@ -243,9 +242,6 @@ def gradient_cognate_dist(lang1,
                     sims[concept] = 0
 
         group_scores[n] = mean(sims.values())
-        # TODO try alternative calculation:
-        # prop_non_zero = sum(1 for score in sims.values() if score > 0) / len(sims)
-        # group_scores[n] = sum(sims.values()) * prop_non_zero
 
     similarity_score = mean(group_scores.values())
     if logger:
