@@ -54,7 +54,7 @@ def reroot_tree(newick_str: str, outgroup: str | tuple) -> str:
 
     Parameters:
     newick_str (str): The input Newick tree string.
-    outgroup (str or tuple): A single tip name or a tuple of tip names defining the outgroup clade.
+    outgroup (str or tuple or list): A single tip name or a tuple/list of tip names defining the outgroup clade.
 
     Returns:
     str: The Newick string of the rerooted tree.
@@ -63,7 +63,7 @@ def reroot_tree(newick_str: str, outgroup: str | tuple) -> str:
     tree = Tree(newick_str, format=1)
 
     # Determine whether we're rerooting at a single tip or a clade
-    if isinstance(outgroup, tuple):
+    if isinstance(outgroup, (tuple, list)):
         # Find the most recent common ancestor of the clade
         nodes = [tree.search_nodes(name=postprocess_newick(tip))[0] for tip in outgroup]
         mrca = tree.get_common_ancestor(nodes)
