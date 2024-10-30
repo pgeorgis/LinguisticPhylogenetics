@@ -237,7 +237,7 @@ def gradient_cognate_sim(lang1,
             # the given score does not come from that distribution,
             # i.e. that it is truly a cognate
             # If lower than p-threshold, reset similarity to 0
-            if calibrate:
+            if calibrate and score > 0:
                 pnorm = norm.cdf(score, loc=mean_nc_score, scale=nc_score_stdev)
                 if 1 - pnorm > p_threshold:
                     sims[concept] = 0
