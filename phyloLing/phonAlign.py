@@ -22,7 +22,7 @@ class Alignment:
                  lang1=None,
                  lang2=None,
                  gap_ch=GAP_CH_DEFAULT,
-                 gop=-10,
+                 gop=-5,
                  pad_ch=PAD_CH_DEFAULT,
                  n_best=1,
                  phon_env=False,
@@ -37,7 +37,7 @@ class Alignment:
             lang2 (phyloLing.Language, optional): Language of seq2. Defaults to None.
             align_costs (PhonemeMap): Dictionary of alignment costs or scores.
             gap_ch (str, optional): Gap character. Defaults to '{GAP_CH_DEFAULT}'.
-            gop (float, optional): Gap opening penalty. Defaults to -0.7.
+            gop (float, optional): Gap opening penalty. Defaults to {gop}.
             n_best (int, optional): Number of best (least costly) alignments to return. Defaults to 1.
             phon_env (Bool, optional): Adds phonological environment to alignment. Defaults to False.
         """ # TODO need to update this description, long outdated
