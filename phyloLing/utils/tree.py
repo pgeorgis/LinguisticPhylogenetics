@@ -25,7 +25,7 @@ def load_newick_tree(file_path, as_string=True):
 
 def postprocess_newick(newick_tree):
     # Fix formatting of Newick string
-    newick_tree = re.sub(r'\s', '_', newick_tree)
+    newick_tree = re.sub(r'\s+', '_', newick_tree)
     newick_tree = re.sub(r',_', ',', newick_tree)
     return newick_tree
 
@@ -54,7 +54,7 @@ def reroot_tree(newick_str: str, outgroup: str | tuple) -> str:
 
     Parameters:
     newick_str (str): The input Newick tree string.
-    outgroup (str or tuple): A single tip name or a tuple of tip names defining the outgroup clade.
+    outgroup (str or tuple or list): A single tip name or a tuple/list of tip names defining the outgroup clade.
 
     Returns:
     str: The Newick string of the rerooted tree.
@@ -63,14 +63,14 @@ def reroot_tree(newick_str: str, outgroup: str | tuple) -> str:
     tree = Tree(newick_str, format=1)
 
     # Determine whether we're rerooting at a single tip or a clade
-    if isinstance(outgroup, tuple):
+    if isinstance(outgroup, (tuple, list)):
         # Find the most recent common ancestor of the clade
-        nodes = [tree.search_nodes(name=tip)[0] for tip in outgroup]
+        nodes = [tree.search_nodes(name=postprocess_newick(tip))[0] for tip in outgroup]
         mrca = tree.get_common_ancestor(nodes)
         tree.set_outgroup(mrca)
     else:
         # Reroot at a single tip
-        target_node = tree.search_nodes(name=outgroup)
+        target_node = tree.search_nodes(name=postprocess_newick(outgroup))
         if target_node:
             tree.set_outgroup(target_node[0])
         else:

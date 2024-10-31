@@ -20,7 +20,7 @@ cluster:
 #     precalculated_word_scores: 
 
 tree:
-    root: Old_Chinese
+    root: Old Chinese
     reference: [
         "datasets/Sinitic/trees/ref/reference_001.tre"
     ]
