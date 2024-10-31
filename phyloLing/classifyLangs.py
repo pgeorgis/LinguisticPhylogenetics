@@ -95,9 +95,10 @@ def validate_params(params, valid_params, logger):
     for transcription_param in TRANSCRIPTION_PARAM_DEFAULTS:
         if transcription_param not in params['transcription']['global']:
             params['transcription']['global'][transcription_param] = TRANSCRIPTION_PARAM_DEFAULTS[transcription_param]
-        # If transcription parameters are specified for individual doculects, ensure all are included
+    params['transcription']['global']['ch_to_remove'] = set(params['transcription']['global']['ch_to_remove'])
 
-        # (copy from global defaults if unspecified)
+    # If transcription parameters are specified for individual doculects, ensure all are included
+    # (copy from global defaults if unspecified)
     if 'doculects' in params['transcription']:
 
         for doculect in params['transcription']['doculects']:

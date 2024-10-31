@@ -2,11 +2,11 @@ family:
     name: Germanic
     file: datasets/Germanic/data/germanic_data.tsv
     min_amc: 0.65
-    exclude: ['Old English', 'Old Norse']
+    exclude: ['Old English', 'Old Norse', 'Mainland North Frisian']
     outdir: datasets/Germanic/
 
 experiment:
-  name: "update_germanic"
+  name: ""
 
 transcription:
     global:
