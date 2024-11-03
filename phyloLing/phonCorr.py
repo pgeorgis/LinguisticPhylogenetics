@@ -1633,8 +1633,8 @@ class PhonCorrelator:
                 if abs(pmi_val) > threshold:
                     line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
                     lines.append(line)
-        # Sort PMI in descending order
-        lines = sorted(lines, key=lambda x: float(x[-1]), reverse=True)
+        # Sort PMI in descending order, then by phone pair
+        lines = sorted(lines, key=lambda line: (float(line[-1]), line[0], line[1]), reverse=True)
         lines = '\n'.join([sep.join(line) for line in lines])
 
         with open(outfile, 'w') as f:
