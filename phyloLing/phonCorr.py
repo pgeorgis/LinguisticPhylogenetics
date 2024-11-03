@@ -204,7 +204,7 @@ def prune_oov_surprisal(surprisal_dict):
     return pruned, oov_val
 
 
-def prune_extraneous_synonyms(wordlist, alignments, scores=None, prefer_small=False):
+def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=True):
     # Resolve synonyms: prune redundant/extraneous
     # If a concept has >1 words listed, we may end up with, e.g.
     # DE <Kopf> - NL <kop>
@@ -216,6 +216,15 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, prefer_small=Fa
     if scores is None:
         scores = [alignment.cost for alignment in alignments]
     assert len(wordlist) == len(alignments) == len(scores)
+
+    def score_is_better(score1, score2):
+        # maximize_score : if True, the optimum alignment has a score score
+        #                  if False, the optimum alignment has the lowest score (lowest cost))
+        if maximize_score:
+            if score1 > score2:
+                return True
+            return False
+        return score1 < score2
 
     # Count instances of concepts to check for concepts with >1 word pair
     concept_counts = defaultdict(lambda: 0)
@@ -235,14 +244,27 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, prefer_small=Fa
             for index in concept_indices[concept]:
                 word1, word2 = wordlist[index]
                 score = scores[index]  # TODO seems like this could benefit from a Wordpair object
-                if prefer_small:  # consider a smaller score to be better, e.g. for surprisal
-                    if word1 not in best_pairings or score < best_pairing_scores[word1]:
+                if word1 not in best_pairings or score_is_better(score, best_pairing_scores[word1]):
+                    best_pairings[word1] = index
+                    best_pairing_scores[word1] = score
+                elif score == best_pairing_scores[word1]:
+                    # In case of tied correspondence-based scores, consider the phonetic distance too
+                    from wordDist import phonological_dist
+                    best_alignment = alignments[best_pairings[word1]]
+                    current_alignment = alignments[index]
+                    phon_dist_best = phonological_dist(best_alignment)
+                    phon_dist_current = phonological_dist(current_alignment)
+                    if maximize_score:
+                        phon_dist_best *= -1
+                        phon_dist_current *= -1
+                    best_score = best_pairing_scores[word1] + phon_dist_best
+                    current_score = score + phon_dist_current
+                    if best_score == current_score:
+                        raise NotImplementedError("Equal base score and phonetic distance; cannot choose best variant pair")
+                    if score_is_better(current_score, best_score):
                         best_pairings[word1] = index
                         best_pairing_scores[word1] = score
-                else:
-                    if word1 not in best_pairings or score > best_pairing_scores[word1]:
-                        best_pairings[word1] = index
-                        best_pairing_scores[word1] = score
+
             # Now best_pairings contains the best mapping for each concept
             # based on the best (highest/lowest) scoring pair wrt to first language word
             for index in concept_indices[concept]:
@@ -255,10 +277,10 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, prefer_small=Fa
             if len(set(selected_word2)) < len(best_pairings.values()):
                 for word2 in set(selected_word2):
                     indices = [index for index in best_pairings.values() if wordlist[index][-1] == word2]
-                    if prefer_small:
-                        best_choice = min(indices, key=lambda x: scores[x])
-                    else:
+                    if maximize_score:
                         best_choice = max(indices, key=lambda x: scores[x])
+                    else:
+                        best_choice = min(indices, key=lambda x: scores[x])
                     indices_to_prune.update([index for index in indices if index != best_choice])
 
     # Then prune all suboptimal word pair indices
@@ -1204,7 +1226,7 @@ class PhonCorrelator:
                     wordlist=qualifying,
                     alignments=qualifying_alignments,
                     scores=qualified_PMI,
-                    prefer_small=False,
+                    maximize_score=True,
                 )
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
@@ -1241,7 +1263,7 @@ class PhonCorrelator:
         final_qualifying, final_alignments = prune_extraneous_synonyms(
             wordlist=final_qualifying,
             alignments=final_alignments,
-            prefer_small=False
+            maximize_score=True
         )
         # Log final alignments
         self.log_alignments(final_alignments, self.align_log['PMI'])
