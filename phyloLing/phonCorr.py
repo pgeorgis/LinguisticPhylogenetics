@@ -229,6 +229,7 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
     # Count instances of concepts to check for concepts with >1 word pair
     concept_counts = defaultdict(lambda: 0)
     concept_indices = defaultdict(lambda: [])
+    tied_indices = defaultdict(lambda: set())
     indices_to_prune = set()
     for q, pair in enumerate(wordlist):
         word1, word2 = pair
@@ -250,7 +251,8 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
                 elif score == best_pairing_scores[word1]:
                     # In case of tied correspondence-based scores, consider the phonetic distance too
                     from wordDist import phonological_dist
-                    best_alignment = alignments[best_pairings[word1]]
+                    best_index = best_pairings[word1]
+                    best_alignment = alignments[best_index]
                     current_alignment = alignments[index]
                     phon_dist_best = phonological_dist(best_alignment)
                     phon_dist_current = phonological_dist(current_alignment)
@@ -260,15 +262,16 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
                     best_score = best_pairing_scores[word1] + phon_dist_best
                     current_score = score + phon_dist_current
                     if best_score == current_score:
-                        raise NotImplementedError("Equal base score and phonetic distance; cannot choose best variant pair")
-                    if score_is_better(current_score, best_score):
+                        # If still no distance between the two pairs, use both as there is no good way to select one
+                        tied_indices[concept].update({index, best_index})
+                    elif score_is_better(current_score, best_score):
                         best_pairings[word1] = index
                         best_pairing_scores[word1] = score
 
             # Now best_pairings contains the best mapping for each concept
             # based on the best (highest/lowest) scoring pair wrt to first language word
             for index in concept_indices[concept]:
-                if index not in best_pairings.values():
+                if index not in best_pairings.values() and index not in tied_indices[concept]:
                     indices_to_prune.add(index)
 
             # Now check for multiple l1 words mappedåto the same l2 word
