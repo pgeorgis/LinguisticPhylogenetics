@@ -126,19 +126,18 @@ def binary_cognate_sim(lang1,
     return similarity
 
 
-def gradient_cognate_sim(lang1,
-                         lang2,
-                         clustered_cognates,
-                         eval_func,
-                         exclude_synonyms=True,  # TODO improve exclude_synonyms
-                         calibrate=True,  # TODO rename
-                         min_similarity=0,
-                         clustered_id=None,  # TODO incorporate or remove
-                         p_threshold=0.01,
-                         seed=1,
-                         n_samples=50,
-                         sample_size=0.8,
-                         logger=None):
+def gradient_cognate_dist(lang1,
+                          lang2,
+                          clustered_cognates,
+                          eval_func,
+                          exclude_synonyms=True,
+                          calibrate=True,
+                          min_similarity=0,
+                          p_threshold=0.01,
+                          seed=1,
+                          n_samples=50,
+                          sample_size=0.8,
+                          logger=None):
 
     # Set random seed and initialize random number generator
     random.seed(seed)
@@ -237,19 +236,16 @@ def gradient_cognate_sim(lang1,
             # the given score does not come from that distribution,
             # i.e. that it is truly a cognate
             # If lower than p-threshold, reset similarity to 0
-            if calibrate:
+            if calibrate and score > 0:
                 pnorm = norm.cdf(score, loc=mean_nc_score, scale=nc_score_stdev)
                 if 1 - pnorm > p_threshold:
                     sims[concept] = 0
 
         group_scores[n] = mean(sims.values())
-        # TODO try alternative calculation:
-        # prop_non_zero = sum(1 for score in sims.values() if score > 0) / len(sims)
-        # group_scores[n] = sum(sims.values()) * prop_non_zero
 
-    score = mean(group_scores.values())
-
+    similarity_score = mean(group_scores.values())
     if logger:
         logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
-
-    return score
+        
+    distance_score = 1 - similarity_score
+    return distance_score

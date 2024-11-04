@@ -18,7 +18,7 @@ def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
     Returns:
         dict: dictionary of pairwise alignment costs by sequence indices
     """
-    alignment_costs = {}
+    alignment_costs = defaultdict(lambda: {})
     for i, seq1_i in enumerate(seq1):
         for j, seq2_j in enumerate(seq2):
             cost = cost_func.eval(seq1_i, seq2_j, **kwargs)
@@ -31,9 +31,9 @@ def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
                     cost = -inf
 
             if as_indices:
-                alignment_costs[(i, j)] = cost
+                alignment_costs[i][j] = cost
             else:
-                alignment_costs[(seq1_i, seq2_j)] = cost
+                alignment_costs[seq1_i][seq2_j] = cost
 
     return alignment_costs
 

@@ -10,7 +10,7 @@ from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
-from utils.distance import Distance, sim_to_dist
+from utils.distance import Distance, sim_to_dist, dist_to_sim
 from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
@@ -704,6 +704,7 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
         assert round(sum(weights)) == 1.0
     for func, weight in zip(funcs, weights):
         if weight == 0:
+            scores.append(0)
             continue
         func_sim = func.sim
         score = func.eval(word1, word2)
@@ -719,30 +720,15 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
             log_word_score(word1, word2, score, key=func.name)
 
     # score = euclidean_dist(scores)
-    score = sum(scores)
+    # score = sum(scores)
+    # TODO temp implementation: make more robust by checking that each function is as expected
+    pmi_score, surprisal_score, phon_score = scores
+    score = pmi_score + (surprisal_score * phon_score)
     if word1.concept == word2.concept:
         log_word_score(word1, word2, score, key=HYBRID_DIST_KEY)
+        log_word_score(word1, word2, dist_to_sim(score), key=HYBRID_SIM_KEY)
 
     return score
-
-
-def composite_sim(word1, word2, pmi_weight=1.5, surprisal_weight=2, **kwargs):
-    # pmi_score = pmi_dist(word1, word2, normalize=False, sim2dist=False)
-    pmi_score = pmi_dist(word1, word2, sim2dist=False)
-    # surprisal_score = mutual_surprisal(word1, word2, normalize=False, **kwargs)
-    surprisal_score = mutual_surprisal(word1, word2, **kwargs)
-    phon_score = phonological_dist(word1, word2)
-    # phon_score = phonological_dist(word1, word2, total_dist=True)
-    score = ((pmi_weight * pmi_score) - (surprisal_weight * surprisal_score)) * (1 - phon_score)
-
-    # Record word scores # TODO into Distance class object?
-    if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key=COMPOSITE_SIM_KEY)
-        log_word_score(word1, word2, pmi_score, key=PMI_DIST_KEY)
-        log_word_score(word1, word2, surprisal_score, key=SURPRISAL_DIST_KEY)
-        log_word_score(word1, word2, phon_score, key=PHONOLOGICAL_DIST_KEY)
-
-    return max(0, score)
 
 
 def log_word_score(word1, word2, score, key):
@@ -754,14 +740,14 @@ def log_word_score(word1, word2, score, key):
 
 
 # Initialize distance functions as Distance objects
-# NB: Hybrid and Composite distances need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on config settings
+# NB: Hybrid distance(s) need to be defined in classifyLangs.py or else we can't set the parameters of the component functions based on config settings
 LEVENSHTEIN_DIST_KEY = 'LevenshteinDist'
 PHONETIC_DIST_KEY = 'PhoneticDist'
 PHONOLOGICAL_DIST_KEY = 'PhonDist'
 PMI_DIST_KEY = 'PMIDist'
 SURPRISAL_DIST_KEY = 'SurprisalDist'
-COMPOSITE_SIM_KEY = 'CompositeSimilarity'
 HYBRID_DIST_KEY = 'HybridDist'
+HYBRID_SIM_KEY = 'HybridSimilarity'
 LevenshteinDist = WordDistance(func=levenshtein_dist, name=LEVENSHTEIN_DIST_KEY)
 PhoneticDist = WordDistance(func=phonetic_dist, name=PHONETIC_DIST_KEY)
 PhonDist = WordDistance(func=phonological_dist, name=PHONOLOGICAL_DIST_KEY)
