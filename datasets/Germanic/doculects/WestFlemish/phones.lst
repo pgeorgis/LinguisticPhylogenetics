@@ -1,8 +1,8 @@
 VOWELS
-/ə/ (0.06)
+/ə/ (0.061)
 	<duuve> /dˈyːvə/ "dove_NOUN"
 	<sproake> /spɾˈɒːkə/ "speech_NOUN_FEM"
-	<vrouwe> /vɾˈuʋə/ "woman_NOUN"
+	<winter> /ʋˈɪntəɾ/ "winter_NOUN"
 
 /ˈoː/ (0.03)
 	<doorn> /dˈoːɾn/ "thorn_NOUN"
@@ -17,9 +17,9 @@ VOWELS
 /ˈiə̯/ (0.025)
 	<zien> /zˈiə̯n/ "see_VERB"
 	<schietn> /ʃhˈiə̯tn̩/ "shoot_VERB"
-	<drieje> /dɾˈiə̯/ "three_NUM"
+	<drieje> /dɾˈiə̯jə/ "three_NUM"
 
-/ˈɒː/ (0.023)
+/ˈɒː/ (0.022)
 	<schoap> /ʃhˈɒːp/ "sheep_NOUN"
 	<oar> /ˈɒːɾ/ "hair_NOUN"
 	<voader> /vˈɒːdɾ̩/ "father_NOUN"
@@ -70,7 +70,7 @@ VOWELS
 	<wyder> /ʋˈidəɾ/ "we_PRON"
 
 /ˈœ/ (0.01)
-	<lucht> /lˈœht/ "light_NOUN"
+	<lucht> /lˈœht/ "light_ADJ"
 	<dundr> /dˈœndɾ̩/ "thunder_NOUN"
 	<wulle> /ʋˈœlə/ "wool_NOUN_FEM"
 
@@ -85,7 +85,7 @@ VOWELS
 	<zeune> /zˈøːnə/ "son_NOUN"
 
 /ɪ/ (0.001)
-	<koning> /kˈoːnɪŋ/ "king_NOUN"
+	<koning> /kˈoːnɪŋɡ̊/ "king_NOUN"
 
 /iə̯/ (0.001)
 	<dertienne> /dˈæɾtiə̯nə/ "thirteen_NUM"
@@ -93,7 +93,7 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.095)
+/n/ (0.094)
 	<dundr> /dˈœndɾ̩/ "thunder_NOUN"
 	<voeln> /vˈuə̯ln̩/ "feel_VERB"
 	<groene> /ɦɾˈuə̯nə/ "green_ADJ"
@@ -123,17 +123,17 @@ CONSONANTS
 	<veugel> /vˈøːɦəl/ "bird_NOUN_MASC"
 	<wulle> /ʋˈœlə/ "wool_NOUN_FEM"
 
-/k/ (0.036)
+/k/ (0.035)
 	<kerke> /kˈæɾkə/ "church_NOUN_FEM"
-	<ring> /ɾˈɪŋk/ "ring_NOUN"
-	<ziek> /zˈiə̯k/ "sick_ADJ"
+	<zoekn> /zˈuə̯kn̩/ "seek_VERB"
+	<rook> /ɾˈoːk/ "smoke_NOUN"
 
-/s/ (0.034)
+/s/ (0.033)
 	<uus> /ˈyːs/ "house_NOUN"
 	<ys> /ˈis/ "ice_NOUN"
-	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
+	<slang> /slˈɑŋ/ "snake_NOUN"
 
-/ɦ/ (0.032)
+/ɦ/ (0.031)
 	<vliegn> /vlˈiə̯ɦn̩/ "fly_VERB"
 	<god> /ɦˈɔd̥/ "god_NOUN"
 	<groene> /ɦɾˈuə̯nə/ "green_ADJ"
@@ -168,7 +168,7 @@ CONSONANTS
 	<schoon> /ʃhˈoːn/ "beautiful_ADJ"
 	<plicht> /plˈɛht/ "plight_NOUN"
 
-/p/ (0.014)
+/p/ (0.013)
 	<oap> /ˈɒːp/ "ape_NOUN"
 	<elpn> /ˈæwpn̩/ "help_VERB"
 	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
@@ -198,16 +198,18 @@ CONSONANTS
 	<schyt> /ʃhˈit/ "shit_NOUN"
 	<schietn> /ʃhˈiə̯tn̩/ "shoot_VERB"
 
-/j/ (0.003)
-	<joar> /jˈɒːɾ/ "year_NOUN"
+/ɡ̊/ (0.004)
 	<joung> /jˈuŋɡ̊/ "young_NOUN"
+	<ring> /ɾˈɪŋɡ̊/ "ring_NOUN"
+	<koning> /kˈoːnɪŋɡ̊/ "king_NOUN"
+
+/j/ (0.004)
+	<joung> /jˈuŋɡ̊/ "young_NOUN"
+	<joar> /jˈɒːɾ/ "year_NOUN"
 	<gjitte> /ɦjˈɪtə/ "goat_NOUN"
 
-/ɡ̊/ (0.002)
-	<joung> /jˈuŋɡ̊/ "young_NOUN"
-	<ding> /dˈɪŋɡ̊/ "thing_NOUN"
-
-/z̥/ (0.002)
+/z̥/ (0.003)
+	<luus> /lˈyːz̥/ "louse_NOUN"
 	<koas> /kˈɒːz̥/ "cheese_NOUN"
 	<hoas> /ˈɒːz̥/ "hare_NOUN"
 
