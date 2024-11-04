@@ -1,7 +1,7 @@
 family:
     name: Germanic
     file: datasets/Germanic/data/germanic_data.tsv
-    exclude: ['Old English', 'Old Norse']
+    exclude: ['Old English', 'Old West Norse', 'East Frisian Low Saxon']
     outdir: datasets/Germanic/
 
 experiment:
