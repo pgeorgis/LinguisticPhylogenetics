@@ -245,7 +245,7 @@ def gradient_cognate_dist(lang1,
 
     similarity_score = mean(group_scores.values())
     if logger:
-        logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
+        logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(similarity_score, 3)}')
         
     distance_score = 1 - similarity_score
     return distance_score
