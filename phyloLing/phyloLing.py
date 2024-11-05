@@ -1582,6 +1582,7 @@ class Word:
         self.syllables = None
         self.phon_env = self.getPhonEnv()
         self.info_content = None
+        self.total_info_content = None
 
     def get_parameter(self, label):
         return self.parameters.get(label, TRANSCRIPTION_PARAM_DEFAULTS[label])
@@ -1669,11 +1670,19 @@ class Word:
             phon_env.append(get_phon_env(self.segments, i))
         return phon_env
 
-    def getInfoContent(self):
+    def getInfoContent(self, total=False):
+        if self.info_content is not None:
+            if total:
+                return self.total_info_content
+            return self.info_content
+
         if self.language is None:
             raise AssertionError('Language must be specified in order to calculate information content.')
 
         self.info_content = self.language.calculate_infocontent(self)
+        self.total_info_content = sum([self.info_content[j][-1] for j in self.info_content])
+        if total:
+            return self.total_info_content
         return self.info_content
 
     def __str__(self):

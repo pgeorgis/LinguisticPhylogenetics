@@ -10,7 +10,7 @@ from collections import defaultdict
 
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
-from lingDist import binary_cognate_sim, gradient_cognate_sim
+from lingDist import binary_cognate_sim, gradient_cognate_dist
 from utils.tree import (calculate_tree_distance, gqd, load_newick_tree,
                         plot_tree)
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
@@ -98,9 +98,10 @@ def validate_params(params, valid_params, logger):
     for transcription_param in TRANSCRIPTION_PARAM_DEFAULTS:
         if transcription_param not in params['transcription']['global']:
             params['transcription']['global'][transcription_param] = TRANSCRIPTION_PARAM_DEFAULTS[transcription_param]
-        # If transcription parameters are specified for individual doculects, ensure all are included
+    params['transcription']['global']['ch_to_remove'] = set(params['transcription']['global']['ch_to_remove'])
 
-        # (copy from global defaults if unspecified)
+    # If transcription parameters are specified for individual doculects, ensure all are included
+    # (copy from global defaults if unspecified)
     if 'doculects' in params['transcription']:
 
         for doculect in params['transcription']['doculects']:
@@ -349,11 +350,10 @@ if __name__ == "__main__":
 
     # Create cognate similarity (WordDistance object) measure according to settings
     if eval_params['similarity'] == 'gradient':
-        dist_func = gradient_cognate_sim
+        dist_func = gradient_cognate_dist
         distFunc = WordDistance(
             func=dist_func,
-            name='GradientCognateSim',
-            sim=True,
+            name='GradientCognateDist',
             eval_func=evalDist,
             n_samples=eval_params['n_samples'],
             sample_size=eval_params['sample_size'],

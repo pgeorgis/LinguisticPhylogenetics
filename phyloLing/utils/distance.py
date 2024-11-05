@@ -125,8 +125,6 @@ def distance_matrix(group, dist_func, scalar=1, **kwargs):
     if not isinstance(dist_func, Distance):
         raise TypeError(f'dist_func expected to be Distance class object, found {type(dist_func)}')
 
-    sim = dist_func.sim
-
     # Initialize nxn distance matrix filled with zeros
     mat = zeros((len(group), len(group)))
 
@@ -136,8 +134,8 @@ def distance_matrix(group, dist_func, scalar=1, **kwargs):
             dist = dist_func.eval(group[i], group[j], **kwargs)
 
             # Convert similarities to distances
-            if sim:
-                dist = 1 - min(1, dist)
+            if dist_func.sim:
+                dist = sim_to_dist(dist, dist_func.alpha)
 
             mat[i][j] = dist
             mat[j][i] = dist

@@ -56,8 +56,8 @@ VOWELS
 
 /ˈœy̯/ (0.012)
 	<huid> /ɦˈœy̯d̥/ "skin_NOUN"
-	<huis> /ɦˈœy̯s/ "house_NOUN"
-	<muis> /mˈœy̯s/ "mouse_NOUN_FEM"
+	<huis> /ɦˈœy̯z̥/ "house_NOUN"
+	<muis> /mˈœy̯z̥/ "mouse_NOUN_FEM"
 
 /ˈʏ/ (0.006)
 	<zuster> /zˈʏstəɾ/ "sister_NOUN"
@@ -79,7 +79,7 @@ VOWELS
 	<koning> /kˈoːnɪŋ/ "king_NOUN"
 
 /ˈøː/ (0.001)
-	<neus> /nˈøːs/ "nose_NOUN"
+	<neus> /nˈøːz̥/ "nose_NOUN"
 
 /i/ (0.001)
 	<dertien> /dˈɛɾtin/ "thirteen_NUM"
@@ -117,10 +117,10 @@ CONSONANTS
 	<ander> /ˈɑndəɾ/ "other_ADJ"
 	<donder> /dˈɔndəɾ/ "thunder_NOUN"
 
-/s/ (0.038)
-	<gras> /χɾˈɑs/ "grass_NOUN_NEU"
-	<naast> /nˈaːst/ "next_ADJ"
-	<muis> /mˈœy̯s/ "mouse_NOUN_FEM"
+/s/ (0.033)
+	<gast> /χˈɑst/ "guest_NOUN"
+	<schild> /sχˈɪɫd̥/ "shield_NOUN"
+	<schaap> /sχˈaːp/ "sheep_NOUN"
 
 /k/ (0.033)
 	<dik> /dˈɪk/ "thick_ADJ"
@@ -177,19 +177,20 @@ CONSONANTS
 	<duif> /dˈœy̯v̥/ "dove_NOUN"
 	<kalf> /kˈɑɫv̥/ "calf_NOUN"
 
+/z̥/ (0.007)
+	<huis> /ɦˈœy̯z̥/ "house_NOUN"
+	<kaas> /kˈaːz̥/ "cheese_NOUN"
+	<gans> /χˈɑnz̥/ "goose_NOUN"
+
 /f/ (0.004)
 	<vijf> /vˈɛi̯f/ "five_NUM"
-	<elf> /ˈɛɫəf/ "eleven_NUM"
+	<wolf> /ʋˈɔɫf/ "wolf_NOUN"
 	<twaalf> /tʋˈaːɫəf/ "twelve_NUM"
 
 /j/ (0.003)
 	<jong> /jˈɔŋ/ "young_NOUN"
-	<jij> /jˈɛi̯/ "ye_PRON"
 	<jaar> /jˈaːɾ/ "year_NOUN"
-
-/z̥/ (0.002)
-	<haas> /ɦˈaːz̥/ "hare_NOUN"
-	<kaas> /kˈaːz̥/ "cheese_NOUN"
+	<jij> /jˈɛi̯/ "ye_PRON"
 
 /w/ (0.002)
 	<sneeuw> /snˈeːw/ "snow_NOUN"
