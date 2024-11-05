@@ -500,12 +500,21 @@ class PhonCorrelator:
         l1_wordlist = [word for concept in self.wordlist for word in self.lang1.vocabulary[concept]]
         l2_wordlist = [word for concept in self.wordlist for word in self.lang2.vocabulary[concept]]
 
+        # Get all unique combinations of L1 and L2 word
         # Sort the wordlists in order to ensure that random samples of same/different meaning pairs are reproducible
-        l1_wordlist = sorted(l1_wordlist, key=lambda x: (x.ipa, x.concept))
-        l2_wordlist = sorted(l2_wordlist, key=lambda x: (x.ipa, x.concept))
-
-        # Get all combinations of L1 and L2 words
-        all_wordpairs = product(l1_wordlist, l2_wordlist)
+        # Sort pairs symmetrically to ensure consistent ordering no matter which language is first
+        # Use info content to sort only as last resort, in case the words' IPA, concept, and orthography are all identical
+        # NB: in theory possible for the info content to be equal too, but this is almost impossible unless the languages are identical
+        all_wordpairs = sorted(
+            product(l1_wordlist, l2_wordlist),
+            key=lambda pair: (
+                min(pair[0].ipa, pair[1].ipa), max(pair[0].ipa, pair[1].ipa),
+                min(pair[0].concept, pair[1].concept), max(pair[0].concept, pair[1].concept),
+                min(pair[0].orthography, pair[1].orthography), max(pair[0].orthography, pair[1].orthography),
+                min(pair[0].getInfoContent(total=True), pair[1].getInfoContent(total=True)),
+                max(pair[0].getInfoContent(total=True), pair[1].getInfoContent(total=True))
+            )
+        )
 
         # Sort out same-meaning from different-meaning word pairs, and loanwords
         same_meaning, diff_meaning, loanwords = [], [], []
