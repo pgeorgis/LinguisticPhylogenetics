@@ -40,7 +40,17 @@ def filter_cognates_by_lang(lang, cluster):
     Returns:
         list: Word objects belonging to the specified Language
     """
-    return list(filter(lambda word: word.language == lang, cluster))
+    # Filter by language and sort
+    filtered_cognates = list(filter(lambda word: word.language == lang, cluster))
+    filtered_cognates.sort(key=lambda word: (
+        word.ipa,
+        word.orthography,
+        word.concept,
+        word.getInfoContent(total=True)
+        )
+    )
+    
+    return filtered_cognates
 
 
 @lru_cache(maxsize=None)
