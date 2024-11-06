@@ -419,6 +419,8 @@ if __name__ == "__main__":
             if gqd_score < best_score:
                 best_score = gqd_score
         logger.info(f"GQD: {gqd_score}\n")
+        if gqd_score < 0.1:
+            logger.info(tree)
         return best_score
 
     # Initial guess for the values
