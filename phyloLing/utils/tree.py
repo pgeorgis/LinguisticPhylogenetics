@@ -263,17 +263,8 @@ def list_all_quartets(n_tips):
     return list(itertools.combinations(range(n_tips), 4))
 
 
-def quartet_state(tips, tree):
-    """
-    Determines the state of a quartet in a tree.
-
-    Parameters:
-    tips (tuple): A tuple of four taxa indices representing the quartet.
-    tree (dendropy.Tree): The tree in which to evaluate the quartet state.
-
-    Returns:
-    int: The quartet state (0 for unresolved, 1-3 for resolved states).
-    """
+def get_quartet_mrcas(tips, tree):
+    """Get the most recent common ancestors of each pair of tips in the tree."""
     # Get mrca nodes for each pair of tips
     mrca12 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[0]].label,
                                      tree.taxon_namespace[tips[1]].label])
@@ -284,6 +275,25 @@ def quartet_state(tips, tree):
                                      tree.taxon_namespace[tips[2]].label])
     mrca24 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[1]].label,
                                      tree.taxon_namespace[tips[3]].label])
+    
+    return mrca12, mrca34, mrca13, mrca24
+
+
+def quartet_state(tips, tree):
+    """
+    Determines the state of a quartet in a tree.
+
+    Parameters:
+    tips (tuple): A tuple of four taxa indices representing the quartet.
+    tree (dendropy.Tree): The tree in which to evaluate the quartet state.
+
+    Returns:
+    int: The quartet state:
+         0 for unresolved,
+         1-3 for resolved pairs,
+         4+i for singleton branch states (where i is the index of the singleton tip).
+    """
+    mrca12, mrca34, mrca13, mrca24 = get_quartet_mrcas(tips, tree)
 
     # Determine quartet state based on closeness of MRCA pairs
     if mrca12 == mrca34 and mrca12 != mrca13 and mrca12 != mrca24:
@@ -292,8 +302,21 @@ def quartet_state(tips, tree):
         return 2  # A-C | B-D
     elif mrca12 == mrca24 and mrca12 != mrca13:
         return 3  # A-D | B-C
-    else:
-        return 0  # Unresolved
+    
+    # Singleton branch cases: A | BCD, B | ACD, etc.
+    # Iterate over each tip as a potential singleton
+    for i, tip_n in enumerate(tips):
+        triplet_clade = [tree.taxon_namespace[t] for t in tips if t != tip_n]
+        triplet_labels = [t.label for t in triplet_clade]
+        mrca_triplet = tree.mrca(taxon_labels=triplet_labels)
+        singleton_label = tree.taxon_namespace[tip_n].label
+        mrca_triplet_leaves = [leaf.label for leaf in mrca_triplet.leaf_nodes()]
+        
+        if singleton_label not in mrca_triplet_leaves:
+            return 4 + i  # Singleton branch pattern, unique to each tip
+
+    # If no clear structure, return unresolved
+    return 0
 
 
 def gqd(non_binary_tree, binary_tree, is_rooted=True):
