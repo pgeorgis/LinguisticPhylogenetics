@@ -389,7 +389,9 @@ if __name__ == "__main__":
     params["run_info"]["experimentID"] = exp_id
     
     references = tree_params["reference"]
+    BEST_YET = inf
     def objective(weights):
+        global BEST_YET
         min_sim = list(weights)[-1]
         weights = tuple(list(weights)[:-1])
         logger.info(f"Weights: {weights}")
@@ -419,9 +421,11 @@ if __name__ == "__main__":
             )
             if gqd_score < best_score:
                 best_score = gqd_score
-        logger.info(f"GQD: {gqd_score}\n")
-        if gqd_score < 0.1:
+        logger.info(f"GQD: {gqd_score}")
+        if gqd_score < BEST_YET:
+            BEST_YET = gqd_score
             logger.info(tree)
+        print("")
         return best_score
 
     # Initial guess for the values
