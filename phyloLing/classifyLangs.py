@@ -414,7 +414,8 @@ if __name__ == "__main__":
             gqd_score = gqd(
                 tree,
                 ref_tree,
-                is_rooted=tree_params['root'] is not None
+                is_rooted=tree_params['root'] is not None,
+                group_size=3,
             )
             if gqd_score < best_score:
                 best_score = gqd_score
@@ -455,6 +456,7 @@ if __name__ == "__main__":
     result_refined = minimize(
         objective,
         result_de.x,
+        bounds=bounds,
         method='Powell'
     )
     breakpoint()
