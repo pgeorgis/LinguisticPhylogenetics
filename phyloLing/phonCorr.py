@@ -229,6 +229,7 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
     # Count instances of concepts to check for concepts with >1 word pair
     concept_counts = defaultdict(lambda: 0)
     concept_indices = defaultdict(lambda: [])
+    tied_indices = defaultdict(lambda: set())
     indices_to_prune = set()
     for q, pair in enumerate(wordlist):
         word1, word2 = pair
@@ -250,7 +251,8 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
                 elif score == best_pairing_scores[word1]:
                     # In case of tied correspondence-based scores, consider the phonetic distance too
                     from wordDist import phonological_dist
-                    best_alignment = alignments[best_pairings[word1]]
+                    best_index = best_pairings[word1]
+                    best_alignment = alignments[best_index]
                     current_alignment = alignments[index]
                     phon_dist_best = phonological_dist(best_alignment)
                     phon_dist_current = phonological_dist(current_alignment)
@@ -260,15 +262,16 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
                     best_score = best_pairing_scores[word1] + phon_dist_best
                     current_score = score + phon_dist_current
                     if best_score == current_score:
-                        raise NotImplementedError("Equal base score and phonetic distance; cannot choose best variant pair")
-                    if score_is_better(current_score, best_score):
+                        # If still no distance between the two pairs, use both as there is no good way to select one
+                        tied_indices[concept].update({index, best_index})
+                    elif score_is_better(current_score, best_score):
                         best_pairings[word1] = index
                         best_pairing_scores[word1] = score
 
             # Now best_pairings contains the best mapping for each concept
             # based on the best (highest/lowest) scoring pair wrt to first language word
             for index in concept_indices[concept]:
-                if index not in best_pairings.values():
+                if index not in best_pairings.values() and index not in tied_indices[concept]:
                     indices_to_prune.add(index)
 
             # Now check for multiple l1 words mappedåto the same l2 word
@@ -505,12 +508,21 @@ class PhonCorrelator:
         l1_wordlist = [word for concept in self.wordlist for word in self.lang1.vocabulary[concept]]
         l2_wordlist = [word for concept in self.wordlist for word in self.lang2.vocabulary[concept]]
 
+        # Get all unique combinations of L1 and L2 word
         # Sort the wordlists in order to ensure that random samples of same/different meaning pairs are reproducible
-        l1_wordlist = sorted(l1_wordlist, key=lambda x: (x.ipa, x.concept))
-        l2_wordlist = sorted(l2_wordlist, key=lambda x: (x.ipa, x.concept))
-
-        # Get all combinations of L1 and L2 words
-        all_wordpairs = product(l1_wordlist, l2_wordlist)
+        # Sort pairs symmetrically to ensure consistent ordering no matter which language is first
+        # Use info content to sort only as last resort, in case the words' IPA, concept, and orthography are all identical
+        # NB: in theory possible for the info content to be equal too, but this is almost impossible unless the languages are identical
+        all_wordpairs = sorted(
+            product(l1_wordlist, l2_wordlist),
+            key=lambda pair: (
+                min(pair[0].ipa, pair[1].ipa), max(pair[0].ipa, pair[1].ipa),
+                min(pair[0].concept, pair[1].concept), max(pair[0].concept, pair[1].concept),
+                min(pair[0].orthography, pair[1].orthography), max(pair[0].orthography, pair[1].orthography),
+                min(pair[0].getInfoContent(total=True), pair[1].getInfoContent(total=True)),
+                max(pair[0].getInfoContent(total=True), pair[1].getInfoContent(total=True))
+            )
+        )
 
         # Sort out same-meaning from different-meaning word pairs, and loanwords
         same_meaning, diff_meaning, loanwords = [], [], []
@@ -1638,8 +1650,8 @@ class PhonCorrelator:
                 if abs(pmi_val) > threshold:
                     line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
                     lines.append(line)
-        # Sort PMI in descending order
-        lines = sorted(lines, key=lambda x: float(x[-1]), reverse=True)
+        # Sort PMI in descending order, then by phone pair
+        lines = sorted(lines, key=lambda line: (float(line[-1]), line[0], line[1]), reverse=True)
         lines = '\n'.join([sep.join(line) for line in lines])
 
         with open(outfile, 'w') as f:

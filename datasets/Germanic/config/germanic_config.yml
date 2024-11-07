@@ -1,8 +1,7 @@
 family:
     name: Germanic
     file: datasets/Germanic/data/germanic_data.tsv
-    min_amc: 0.65
-    exclude: ['Old English', 'Old Norse', 'Mainland North Frisian']
+    exclude: ['Old English', 'Old West Norse', 'East Frisian Low Saxon']
     outdir: datasets/Germanic/
 
 experiment:
@@ -29,7 +28,7 @@ cluster:
     cognates: none
 
 # evaluation:
-#     precalculated_word_scores: 
+#     precalculated_word_scores:
 
 tree:
     linkage: nj

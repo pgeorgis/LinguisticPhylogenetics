@@ -615,8 +615,8 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
         word1, word2 = alignment.word1, alignment.word2
         info_content1 = word1.getInfoContent()
         info_content2 = word2.getInfoContent()
-        total_info1 = sum([info_content1[j][-1] for j in info_content1])
-        total_info2 = sum([info_content2[j][-1] for j in info_content2])
+        total_info1 = word1.total_info_content
+        total_info2 = word2.total_info_content
         seq_map1, seq_map2 = alignment.seq_map
         weighted_PMI = []
         for i, pair in enumerate(alignment.alignment):
