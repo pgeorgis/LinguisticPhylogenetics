@@ -418,18 +418,19 @@ if __name__ == "__main__":
                 ref_tree,
                 is_rooted=tree_params['root'] is not None,
                 group_size=3,
+                weight_by_depth_in_tree=True
             )
             if gqd_score < best_score:
                 best_score = gqd_score
-        logger.info(f"GQD: {gqd_score}")
+        log_msg = f"GQD: {gqd_score}"
         if gqd_score < BEST_YET:
             BEST_YET = gqd_score
-            logger.info(tree)
-        print("")
+            log_msg += f"\n{tree}"
+        logger.info(f"{log_msg}\n")
         return best_score
 
     # Initial guess for the values
-    initial_vals = np.array([0.5, 2, 1, 0.25])
+    initial_vals = np.array([0.95, 2.9, 0.63, 0.62])
 
     # Bounds for the weights (optional, if you want to restrict the range)
     #bounds = [(0, None) for _ in initial_vals]  # Non-negative weights
