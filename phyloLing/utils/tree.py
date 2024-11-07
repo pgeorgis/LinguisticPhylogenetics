@@ -250,76 +250,108 @@ def robinson_foulds(tree1, tree2):
     return qd
 
 
-def list_all_quartets(n_tips):
+def get_tip_groups(n_tips, group_size=2):
     """
-    Lists all quartets (sets of four taxa) from a set of n_tips.
+    Lists all groups of N taxa from a set of n_tips.
 
     Parameters:
     n_tips (int): The number of tips (leaves) in the tree.
+    group_size (int): The number of tips per group.
 
     Returns:
-    list: A list of tuples, each containing a unique quartet of four taxa.
+    list: A list of tuples, each containing a unique group of N taxa.
     """
-    return list(itertools.combinations(range(n_tips), 4))
+    return list(itertools.combinations(range(n_tips), group_size))
 
 
-def get_quartet_mrcas(tips, tree):
-    """Get the most recent common ancestors of each pair of tips in the tree."""
-    # Get mrca nodes for each pair of tips
-    mrca12 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[0]].label,
-                                     tree.taxon_namespace[tips[1]].label])
-    mrca34 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[2]].label,
-                                     tree.taxon_namespace[tips[3]].label])
-
-    mrca13 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[0]].label,
-                                     tree.taxon_namespace[tips[2]].label])
-    mrca24 = tree.mrca(taxon_labels=[tree.taxon_namespace[tips[1]].label,
-                                     tree.taxon_namespace[tips[3]].label])
-    
-    return mrca12, mrca34, mrca13, mrca24
-
-
-def quartet_state(tips, tree):
+def get_mrcas(tips, tree):
     """
-    Determines the state of a quartet in a tree.
+    Get the most recent common ancestors (MRCA) for each pair of tips in the given subset.
 
     Parameters:
-    tips (tuple): A tuple of four taxa indices representing the quartet.
-    tree (dendropy.Tree): The tree in which to evaluate the quartet state.
+    tips (tuple): A tuple of tip indices.
+    tree (dendropy.Tree): The tree to retrieve MRCA information from.
 
     Returns:
-    int: The quartet state:
+    list: A list of MRCA nodes for each pair in the subset.
+    """
+    mrcas = {}
+    for tip1, tip2 in itertools.combinations(tips, 2):
+        mrca = tree.mrca(taxon_labels=[tree.taxon_namespace[tip1].label,
+                                       tree.taxon_namespace[tip2].label])
+        mrcas[(tip1, tip2)] = mrca
+        mrcas[(tip2, tip1)] = mrca
+    return mrcas
+
+
+
+def taxa_subset_state(tips, tree):
+    """
+    Determines the state of a subset of taxa in a tree, generalized for 3 or more tips.
+
+    Parameters:
+    tips (tuple): A tuple of N taxa indices representing the subset.
+    tree (dendropy.Tree): The tree in which to evaluate the subset state.
+
+    Returns:
+    int: The subset state:
          0 for unresolved,
          1-3 for resolved pairs,
          4+i for singleton branch states (where i is the index of the singleton tip).
     """
-    mrca12, mrca34, mrca13, mrca24 = get_quartet_mrcas(tips, tree)
+    n_tips = len(tips)
+    if n_tips < 3:
+        raise ValueError(f"Minimum 3 tips are required, found only {n_tips}")
 
-    # Determine quartet state based on closeness of MRCA pairs
-    if mrca12 == mrca34 and mrca12 != mrca13 and mrca12 != mrca24:
-        return 1  # A-B | C-D
-    elif mrca13 == mrca24 and mrca13 != mrca12:
-        return 2  # A-C | B-D
-    elif mrca12 == mrca24 and mrca12 != mrca13:
-        return 3  # A-D | B-C
-    
-    # Singleton branch cases: A | BCD, B | ACD, etc.
-    # Iterate over each tip as a potential singleton
-    for i, tip_n in enumerate(tips):
-        triplet_clade = [tree.taxon_namespace[t] for t in tips if t != tip_n]
-        triplet_labels = [t.label for t in triplet_clade]
-        mrca_triplet = tree.mrca(taxon_labels=triplet_labels)
-        singleton_label = tree.taxon_namespace[tip_n].label
-        mrca_triplet_leaves = [leaf.label for leaf in mrca_triplet.leaf_nodes()]
-        
-        if singleton_label not in mrca_triplet_leaves:
-            return 4 + i  # Singleton branch pattern, unique to each tip
+    # Get MRCA nodes for each pair of tips
+    mrcas = get_mrcas(tips, tree)
+
+    if n_tips == 3:
+        # Handling the triplet state (3 tips)
+        mrca12 = mrcas[(tips[0], tips[1])]
+        mrca13 = mrcas[(tips[0], tips[2])]
+        mrca13 = mrcas[(tips[0], tips[2])]
+        mrca23 = mrcas[(tips[1], tips[2])]
+        if mrca12 == mrca13 and mrca12 != mrca23:
+            return 1  # A-B | C
+        elif mrca12 == mrca23 and mrca12 != mrca13:
+            return 2  # A-C | B
+        elif mrca13 == mrca23 and mrca13 != mrca12:
+            return 3  # B-C | A
+
+    elif n_tips == 4:
+        # Handling the quartet state (4 tips)
+        mrca12 = mrcas[(tips[0], tips[1])]
+        mrca34 = mrcas[(tips[2], tips[3])]
+        mrca13 = mrcas[(tips[0], tips[2])]
+        mrca24 = mrcas[(tips[1], tips[3])]
+        # Determine quartet state based on closeness of MRCA pairs
+        if mrca12 == mrca34 and mrca12 != mrca13 and mrca12 != mrca24:
+            return 1  # A-B | C-D
+        elif mrca13 == mrca24 and mrca13 != mrca12:
+            return 2  # A-C | B-D
+        elif mrca12 == mrca24 and mrca12 != mrca13:
+            return 3  # A-D | B-C
+
+        # Check for singleton branch states
+        for i, tip_n in enumerate(tips):
+            triplet_clade = [tree.taxon_namespace[t] for t in tips if t != tip_n]
+            triplet_labels = [t.label for t in triplet_clade]
+            mrca_triplet = tree.mrca(taxon_labels=triplet_labels)
+            singleton_label = tree.taxon_namespace[tip_n].label
+            mrca_triplet_leaves = [leaf.label for leaf in mrca_triplet.leaf_nodes()]
+
+            if singleton_label not in mrca_triplet_leaves:
+                return 4 + i  # Singleton branch pattern
+
+    else:
+        raise NotImplementedError("Not supported for >4 tips")
 
     # If no clear structure, return unresolved
     return 0
 
 
-def gqd(non_binary_tree, binary_tree, is_rooted=True):
+def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4):
     """
     Calculates the Generalized Quartet Distance (GQD) between two trees.
 
@@ -332,9 +364,10 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True):
     """
     non_binary_tree, binary_tree = prep_trees_for_comparison(non_binary_tree, binary_tree)
 
-    # List all quartets for the non-binary tree
+    # List all n-tets (cf. "ngram" for "quartet") for the non-binary tree
     n_tips = len(non_binary_tree.taxon_namespace)
-    all_quartets = list_all_quartets(n_tips)
+    all_ntets = get_tip_groups(n_tips, group_size)
+    # TODO I am not convinced that all_quartets actually contains all of them or the correct ones necessarily
 
     # Set trees to be rooted to avoid warnings
     if is_rooted:
@@ -345,9 +378,9 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True):
     resolved_count = 0
     differing_count = 0
 
-    for quartet in all_quartets:
-        nb_state = quartet_state(quartet, non_binary_tree)
-        b_state = quartet_state(quartet, binary_tree)
+    for ntet in all_ntets:
+        b_state = taxa_subset_state(ntet, binary_tree)
+        nb_state = taxa_subset_state(ntet, non_binary_tree)
 
         # Only count resolved states in non-binary tree
         if nb_state > 0:
@@ -358,6 +391,7 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True):
     # Compute and return the GQD
     gqd = differing_count / resolved_count if resolved_count > 0 else 0
     return gqd
+
 
 
 def calculate_tree_distance(tree1, tree2):
