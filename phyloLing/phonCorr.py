@@ -649,8 +649,8 @@ class PhonCorrelator:
                             allow_complex=False
                         )
                     # Add phonetic alignment cost to align_costs dict storing PMI values
-                    old_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
-                    align_costs.set_value(ngram1.undo(), ngram2.undo(), old_align_cost + phon_align_cost)
+                    base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
+                    align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
 
         alignment_list = [
             Alignment(
