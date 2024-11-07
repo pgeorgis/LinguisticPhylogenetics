@@ -333,7 +333,8 @@ def taxa_subset_state(tips, tree):
         elif mrca12 == mrca24 and mrca12 != mrca13:
             return 3  # A-D | B-C
 
-        # Check for singleton branch states
+        # Singleton branch cases: A | BCD, B | ACD, etc.
+        # Iterate over each tip as a potential singleton
         for i, tip_n in enumerate(tips):
             triplet_clade = [tree.taxon_namespace[t] for t in tips if t != tip_n]
             triplet_labels = [t.label for t in triplet_clade]
@@ -367,7 +368,6 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4):
     # List all n-tets (cf. "ngram" for "quartet") for the non-binary tree
     n_tips = len(non_binary_tree.taxon_namespace)
     all_ntets = get_tip_groups(n_tips, group_size)
-    # TODO I am not convinced that all_quartets actually contains all of them or the correct ones necessarily
 
     # Set trees to be rooted to avoid warnings
     if is_rooted:
