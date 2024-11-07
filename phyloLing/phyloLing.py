@@ -1623,13 +1623,17 @@ class Word:
             suprasegmentals=self.get_parameter('suprasegmentals')
         )
     
-    def get_ngrams(self, size, pad_ch=PAD_CH_DEFAULT):
+    def get_ngrams(self, size, pad_ch=PAD_CH_DEFAULT, phon_env=False):
         """Get word's segments as ngram sequences of specified size."""
-        if size in self.ngrams:
-            return self.ngrams[size]
-        padded = pad_sequence(self.segments, pad_ch=pad_ch, pad_n=max(1, size-1))
+        if (size, phon_env) in self.ngrams:
+            return self.ngrams[(size, phon_env)]
+        if phon_env:
+            seq = list(zip(self.segments, self.phon_env))
+        else:
+            seq = self.segments
+        padded = pad_sequence(seq, pad_ch=pad_ch, pad_n=max(1, size-1))
         ngram_seq = generate_ngrams(padded, ngram_size=size, pad_ch=pad_ch, as_ngram=False)
-        self.ngrams[size] = ngram_seq
+        self.ngrams[(size, phon_env)] = ngram_seq
         return ngram_seq
     
     def complex_segmentation(self, pad_ch=PAD_CH_DEFAULT):
