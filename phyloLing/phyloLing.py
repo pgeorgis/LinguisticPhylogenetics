@@ -1122,6 +1122,7 @@ class Language:
 
         # Phonemic inventory
         self.phonemes = create_default_dict(0)
+        self.phoneme_counts = create_default_dict(0)
         self.vowels = create_default_dict(0)
         self.consonants = create_default_dict(0)
         self.tonemes = create_default_dict(0)
@@ -1198,7 +1199,7 @@ class Language:
 
                 # Count phones and unigrams
                 for segment in segments:
-                    self.phonemes[segment] += 1
+                    self.phoneme_counts[segment] += 1
                 padded_segments = pad_sequence(segments, pad_ch=pad_ch, pad_n=1)
                 for segment in padded_segments:
                     self.unigrams[Ngram(segment).ngram] += 1
@@ -1231,9 +1232,9 @@ class Language:
         self.ngrams[3] = self.trigrams
 
         # Normalize counts
-        total_tokens: int = sum(self.phonemes.values())
-        for phoneme in self.phonemes:
-            count = self.phonemes[phoneme]
+        total_tokens: int = sum(self.phoneme_counts.values())
+        for phoneme in self.phoneme_counts:
+            count = self.phoneme_counts[phoneme]
             if count < self.transcription_params["min_phone_instances"]:
                 self.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
             self.phonemes[phoneme] = count / total_tokens

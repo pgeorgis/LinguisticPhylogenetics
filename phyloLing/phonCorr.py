@@ -162,11 +162,15 @@ def sort_wordlist(wordlist):
     return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa, x[0].concept, x[1].concept))
 
 
-def prune_corrs(corr_dict, min_val=2):
+def prune_corrs(corr_dict, min_val=2, exc1=None, exc2=None):
     # Prune correspondences below a minimum count/probability threshold
     for seg1 in corr_dict:
+        if exc1 and seg1 in exc1:
+            continue
         seg2_to_del = [seg2 for seg2 in corr_dict[seg1] if corr_dict[seg1][seg2] < min_val]
         for seg2 in seg2_to_del:
+            if exc2 and seg2 in exc2:
+                continue
             del corr_dict[seg1][seg2]
     # Delete empty seg1 entries
     seg1_to_del = [seg1 for seg1 in corr_dict if len(corr_dict[seg1]) < 1]
@@ -450,6 +454,7 @@ class PhonCorrelator:
         self.phon_env_surprisal_dict: dict[str, dict[str, float]] = {}
         self.reload_language_pair_data()
         self.scored_words = create_default_dict_of_dicts()
+        self.low_coverage_phones = None
 
         # Logging
         self.set_log_dirs()
@@ -786,8 +791,11 @@ class PhonCorrelator:
                             corr_dict_l1l2[seg_i_i][seg_j] -= 1
 
         # Prune correspondences which occur fewer than min_corr times
-        corr_dict_l1l2 = prune_corrs(corr_dict_l1l2, min_val=min_corr)
-        corr_dict_l2l1 = prune_corrs(corr_dict_l2l1, min_val=min_corr)
+        # with the exception of phones which occur fewer than min_corr times in the language overall
+        # TODO maybe should set to just 1 across the board?
+        #exc1, exc2 = self.phones_below_min_corr(min_corr)
+        corr_dict_l1l2 = prune_corrs(corr_dict_l1l2, min_val=min_corr)#, exc1=exc1, exc2=exc2)
+        corr_dict_l2l1 = prune_corrs(corr_dict_l2l1, min_val=min_corr)#, exc1=exc1, exc2=exc2)
 
         # Remove keys with 0 values
         # (would occur from adjusting complex correspondences in preceding loop)
@@ -906,7 +914,8 @@ class PhonCorrelator:
                 corr_counts[seg1][seg2] += 1
 
         if min_corr > 1:
-            corr_counts = prune_corrs(corr_counts, min_val=min_corr)
+            #exc1, exc2 = self.phones_below_min_corr(min_corr)
+            corr_counts = prune_corrs(corr_counts, min_val=min_corr)#, exc1=exc1, exc2=exc2)
 
         if not counts:
             for seg1 in corr_counts:
@@ -1597,6 +1606,23 @@ class PhonCorrelator:
         outer_oov_val = get_oov_val(phon_env_surprisal_dict)
         surprisal_dict, oov_value = prune_oov_surprisal(default_dict(surprisal_dict, lmbda=outer_oov_val))
         return surprisal_dict
+
+    def phones_below_min_corr(self, min_corr):
+        """Return sets of phones in each language with fewer occurrences than required by min_corr value"""
+        if self.low_coverage_phones is None:
+            low_coverage_l1 = set(
+                phone for phone in self.lang1.phoneme_counts
+                if self.lang1.phoneme_counts[phone] < min_corr
+            )
+
+            low_coverage_l2 = set(
+                phone for phone in self.lang2.phoneme_counts
+                if self.lang2.phoneme_counts[phone] < min_corr
+            )
+
+            self.low_coverage_phones = low_coverage_l1, low_coverage_l2
+
+        return self.low_coverage_phones
 
     def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
