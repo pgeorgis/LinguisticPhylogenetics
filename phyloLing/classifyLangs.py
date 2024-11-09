@@ -236,6 +236,17 @@ if __name__ == "__main__":
     tree_params = params['tree']
     experiment_params = params['experiment']
 
+    # Generate experiment ID and outdir
+    exp_name = experiment_params['name']
+    if exp_name is None:
+        exp_id = start_timestamp
+    else:
+        exp_id = os.path.join(exp_name, start_timestamp)
+    logger.info(f'Experiment ID: {exp_id}')
+    exp_outdir = os.path.join(family_params["outdir"], "experiments", create_datestamp(), exp_id)
+    os.makedirs(exp_outdir, exist_ok=True)
+    params["run_info"]["experimentID"] = exp_id
+
     # Set ngram size used for surprisal
     surprisal_funcs = ('surprisal', 'hybrid')
     if eval_params['method'] in surprisal_funcs or cognate_params['cluster_method'] in phon_corr_params:
@@ -329,19 +340,10 @@ if __name__ == "__main__":
 
     # Auto cognate clustering only
     if cognate_params['cluster'] in ('auto', 'gold'):
-        if cognate_params['cluster'] == 'gold':
-            cog_id = 'gold'
-        else: # auto
-            cog_id = family.generate_test_code(
-                clusterDist, # TODO cog_id should include weights and any other params for hybrid
-                cognates=cognate_params['cluster'], # TODO rename and/or remove this param in generate_test_code
-                cutoff=cognate_params['cluster_threshold']
-            )
-
         # Load pre-clustered cognate sets, if specified
         cognate_index_file = cognate_params['cognate_index']
         if cognate_index_file:
-            cognate_index = family.load_cognate_index(cognate_index_file, code=cog_id)
+            cognate_index = family.load_cognate_index(cognate_index_file, code=exp_id)
             logger.info(f"Loaded cognate index from {cognate_index_file}")
 
     # Load precalculated word scores from specified directory
@@ -378,17 +380,6 @@ if __name__ == "__main__":
             # sample_size=eval_params['sample_size'],
         )
 
-    # Generate experiment ID and outdir
-    exp_name = experiment_params['name']
-    if exp_name is None:
-        exp_id = start_timestamp
-    else:
-        exp_id = os.path.join(exp_name, start_timestamp)
-    logger.info(f'Experiment ID: {exp_id}')
-    exp_outdir = os.path.join(family_params["outdir"], "experiments", create_datestamp(), exp_id)
-    os.makedirs(exp_outdir, exist_ok=True)
-    params["run_info"]["experimentID"] = exp_id
-
     # Generate Newick tree string
     logger.info('Generating phylogenetic tree...')
     outtree = os.path.join(exp_outdir, "newick.tre")
@@ -399,11 +390,17 @@ if __name__ == "__main__":
         linkage_method=tree_params['linkage'],
         outtree=outtree,
         root=tree_params['root'],
+        code=exp_id,
     )
     params["tree"]["newick"] = tree
     with open(outtree, 'w') as f:
         f.write(tree)
     logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
+    
+    # Write clustered cognate class index
+    if cognate_params['cluster'] == 'auto':
+        clustered_cognates = family.clustered_cognates[exp_id]
+        family.write_cognate_index(clustered_cognates, os.path.join(exp_outdir, f'cognate_classes.tsv'))
 
     # Plot the phylogenetic tree
     out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))

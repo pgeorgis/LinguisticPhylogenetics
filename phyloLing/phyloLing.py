@@ -491,6 +491,7 @@ class LexicalDataset:
                          concept_list,
                          dist_func,
                          cluster_threshold=None,
+                         code=None,
                          **kwargs):
 
         # TODO make option for instead using k-means clustering given a known/desired number of clusters, as a mutually exclusive parameter with cutoff
@@ -517,11 +518,11 @@ class LexicalDataset:
             clustered_cognates[concept] = clusters
 
         # Create code and store the result
-        code = self.generate_test_code(dist_func, cognates='auto', cluster_threshold=cluster_threshold)
+        if code is None:
+            code = self.generate_test_code(dist_func, cognates='auto', cluster_threshold=cluster_threshold)
         self.clustered_cognates[code] = clustered_cognates
-        self.write_cognate_index(clustered_cognates, os.path.join(self.cognates_dir, f'{code}.tsv'))
 
-        return clustered_cognates
+        return clustered_cognates, code
 
     def write_cognate_index(self,
                             clustered_cognates,
@@ -701,13 +702,12 @@ class LexicalDataset:
                         cluster_func=None,
                         cognates='auto',
                         outfile=None,
+                        code=None,
                         **kwargs):
 
         # Try to skip re-calculation of distance matrix by retrieving
         # a previously computed distance matrix by its code
-        code = self.generate_test_code(dist_func, cognates=cognates, cutoff=dist_func.cluster_threshold, **kwargs)
-
-        if code in self.distance_matrices:
+        if code and code in self.distance_matrices:
             return self.distance_matrices[code]
 
         # Use all available concepts by default
@@ -721,12 +721,11 @@ class LexicalDataset:
         # Automatic cognate clustering
         if cognates == 'auto':
             assert cluster_func is not None
-            cluster_code = self.generate_test_code(cluster_func, cognates='auto')
 
-            if cluster_code in self.clustered_cognates:
-                clustered_concepts = self.clustered_cognates[cluster_code]
+            if code and code in self.clustered_cognates:
+                clustered_concepts = self.clustered_cognates[code]
             else:
-                clustered_concepts = self.cluster_cognates(concept_list, dist_func=cluster_func)
+                clustered_concepts, _ = self.cluster_cognates(concept_list, dist_func=cluster_func, code=code)
 
         # Use gold cognate classes
         elif cognates == 'gold':
@@ -979,7 +978,7 @@ class LexicalDataset:
             if code in self.clustered_cognates:
                 clustered_concepts = self.clustered_cognates[code]
             else:
-                clustered_concepts = self.cluster_cognates(concept_list, dist_func=cluster_func)
+                clustered_concepts, _ = self.cluster_cognates(concept_list, dist_func=cluster_func)
 
         # Use gold cognate classes
         elif cognates == 'gold':
