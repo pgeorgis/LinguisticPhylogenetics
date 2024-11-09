@@ -50,9 +50,9 @@ evaluation:
   method: hybrid
   n_samples: 10
   sample_size: 0.8
-  pmi_weight: 0.87
-  surprisal_weight: 2.75
-  phon_weight: 1.5
+  pmi_weight: 0.9
+  surprisal_weight: 2.65
+  phon_weight: 1.25
   min_similarity: 0.7
   normalize_weights: false
   exclude_synonyms: true
