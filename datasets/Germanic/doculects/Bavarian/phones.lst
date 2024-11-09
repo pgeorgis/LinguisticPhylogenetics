@@ -36,7 +36,7 @@ VOWELS
 
 /ˈe/ (0.015)
 	<Herz> /hˈeɐʦ/ "heart_NOUN"
-	<tedlich> /tˈed̥lɪç/ "deadly_ADJ"
+	<tedlich> /tˈed̥liç/ "deadly_ADJ"
 	<Wetta> /ʋˈeta/ "weather_NOUN"
 
 /ˈuɐ̯/ (0.014)
@@ -127,16 +127,13 @@ VOWELS
 /i/ (0.004)
 	<Kini> /kʰˈini/ "king_NOUN"
 	<heilig> /hˈai̯liɡ̊/ "holy_ADJ"
-	<koid> /kʰˈoid̥/ "cold_ADJ"
+	<tedlich> /tˈed̥liç/ "deadly_ADJ"
 
 /ˈɑː/ (0.001)
 	<Kààs> /kʰˈɑːs/ "cheese_NOUN"
 
 /ˈy/ (0.001)
 	<üba> /ˈyb̥a/ "over_PREP"
-
-/ɪ/ (0.001)
-	<tedlich> /tˈed̥lɪç/ "deadly_ADJ"
 
 /eɐ̯/ (0.001)
 	<dreizeah> /d̥rˈai̯ʦeɐ̯/ "thirteen_NUM"
@@ -145,54 +142,54 @@ VOWELS
 
 CONSONANTS
 /n/ (0.088)
+	<Kind> /kʰˈind̥/ "child_NOUN"
 	<Nuss> /nˈus/ "nut_NOUN"
 	<schlogn> /ʃlˈɔɡ̊n̩/ "slay_VERB"
-	<Hena> /hˈena/ "hen_NOUN"
 
-/d̥/ (0.068)
+/d̥/ (0.067)
+	<Dräne> /d̥rˈɛːnə/ "tear_NOUN_FEM"
 	<doud> /d̥ˈou̯d̥/ "dead_ADJ"
 	<Muada> /mˈuɐ̯d̥a/ "mother_NOUN"
-	<Hund> /hˈund̥/ "dog_NOUN"
 
 /s/ (0.057)
+	<Hàus> /hˈau̯s/ "house_NOUN"
 	<bessa> /b̥ˈɛsa/ "better_ADJ"
 	<Hos> /hˈoːs/ "hare_NOUN"
-	<sitzen> /sˈiʦn̩/ "sit_VERB"
 
 /f/ (0.044)
+	<af> /ˈaːf/ "up_ADV"
 	<Woif> /ʋˈojf/ "wolf_NOUN"
 	<fliangn> /flˈiɐ̯ŋn̩/ "fly_VERB"
-	<hoifn> /hˈojfn̩/ "help_VERB"
 
 /r/ (0.039)
+	<Schwert> /ʃʋˈɛrt/ "sword_NOUN"
 	<scharf> /ʃˈarf/ "sharp_ADJ"
 	<drei> /d̥rˈai̯/ "three_NUM"
-	<Reng> /rˈeːŋ/ "rain_NOUN"
 
 /ɡ̊/ (0.036)
+	<gejb> /ɡ̊ˈejb̥/ "yellow_ADJ"
+	<gebn> /ɡ̊ˈeːm/ "give_VERB"
 	<Beag> /b̥ˈɛɐɡ̊/ "mountain_NOUN"
-	<heilig> /hˈai̯liɡ̊/ "holy_ADJ"
-	<liegn> /lˈiːɡ̊n̩/ "lie_VERB"
 
 /m/ (0.035)
+	<Maus> /mˈau̯s/ "mouse_NOUN_FEM"
+	<Nama> /nˈaːma/ "name_NOUN"
 	<Schduam> /ʃtˈuɐm/ "storm_NOUN"
-	<Oarm> /ˈoɐ̯rm/ "arm_NOUN"
-	<Mocht> /mˈɔxt/ "might_NOUN"
 
 /b̥/ (0.035)
-	<bitdn> /b̥ˈid̥n̩/ "request_VERB"
-	<Deb> /d̥ˈeb̥/ "thief_NOUN"
-	<selba> /sˈelb̥a/ "self_PRON"
+	<Båd> /b̥ˈɒːd̥/ "bath_NOUN_NEU"
+	<Broat> /b̥rˈoɐ̯t/ "bread_NOUN"
+	<bitdn> /b̥ˈitn̩/ "request_VERB"
+
+/t/ (0.032)
+	<unta> /ˈunta/ "under_PREP"
+	<Stean> /ʃtˈeɐn/ "star_NOUN"
+	<Winta> /ʋˈinta/ "winter_NOUN"
 
 /ʃ/ (0.03)
-	<Schwert> /ʃʋˈɛrt/ "sword_NOUN"
+	<Fleisch> /flˈai̯ʃ/ "flesh_NOUN"
 	<schloffa> /ʃlˈɔfa/ "sleep_VERB"
-	<wünschn> /ʋˈʏnʃn̩/ "wish_VERB"
-
-/t/ (0.03)
-	<tedlich> /tˈed̥lɪç/ "deadly_ADJ"
-	<Stoa> /ʃtˈoɐ̯/ "stone_NOUN"
-	<Winta> /ʋˈinta/ "winter_NOUN"
+	<Duascht> /d̥ˈuɐ̯ʃt/ "thirst_NOUN"
 
 /l/ (0.028)
 	<Maul> /mˈau̯l/ "mouth_NOUN"
@@ -204,10 +201,10 @@ CONSONANTS
 	<weiß> /ʋˈai̯s/ "white_ADJ"
 	<Wetta> /ʋˈeta/ "weather_NOUN"
 
-/j/ (0.023)
-	<gejb> /ɡ̊ˈejb̥/ "yellow_ADJ"
+/j/ (0.025)
 	<Jåhr> /jˈɒːɐ/ "year_NOUN"
-	<Goid> /ɡ̊ˈojd̥/ "gold_NOUN_NEU"
+	<Woie> /ʋˈojə/ "wool_NOUN_FEM"
+	<foign> /fˈojɡ̊n̩/ "follow_VERB"
 
 /h/ (0.023)
 	<Hoan> /hˈoɐ̯n/ "horn_NOUN"
@@ -230,7 +227,7 @@ CONSONANTS
 	<Zunga> /ʦˈuŋa/ "tongue_NOUN"
 
 /kʰ/ (0.014)
-	<koid> /kʰˈoid̥/ "cold_ADJ"
+	<koid> /kʰˈojd̥/ "cold_ADJ"
 	<Koan> /kʰˈoɐ̯n/ "corn_NOUN"
 	<Kopf> /kʰˈɔp͡f/ "head_NOUN"
 
@@ -241,7 +238,7 @@ CONSONANTS
 
 /ç/ (0.006)
 	<Zeichn> /ʦˈai̯çn̩/ "token_NOUN"
-	<tedlich> /tˈed̥lɪç/ "deadly_ADJ"
+	<tedlich> /tˈed̥liç/ "deadly_ADJ"
 	<Kiach> /kʰˈiɐç/ "church_NOUN_FEM"
 
 /p͡f/ (0.005)

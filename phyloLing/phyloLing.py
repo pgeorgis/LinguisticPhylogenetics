@@ -1122,6 +1122,7 @@ class Language:
 
         # Phonemic inventory
         self.phonemes = create_default_dict(0)
+        self.phoneme_counts = create_default_dict(0)
         self.vowels = create_default_dict(0)
         self.consonants = create_default_dict(0)
         self.tonemes = create_default_dict(0)
@@ -1198,7 +1199,7 @@ class Language:
 
                 # Count phones and unigrams
                 for segment in segments:
-                    self.phonemes[segment] += 1
+                    self.phoneme_counts[segment] += 1
                 padded_segments = pad_sequence(segments, pad_ch=pad_ch, pad_n=1)
                 for segment in padded_segments:
                     self.unigrams[Ngram(segment).ngram] += 1
@@ -1231,9 +1232,9 @@ class Language:
         self.ngrams[3] = self.trigrams
 
         # Normalize counts
-        total_tokens: int = sum(self.phonemes.values())
-        for phoneme in self.phonemes:
-            count = self.phonemes[phoneme]
+        total_tokens: int = sum(self.phoneme_counts.values())
+        for phoneme in self.phoneme_counts:
+            count = self.phoneme_counts[phoneme]
             if count < self.transcription_params["min_phone_instances"]:
                 self.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
             self.phonemes[phoneme] = count / total_tokens
@@ -1623,13 +1624,17 @@ class Word:
             suprasegmentals=self.get_parameter('suprasegmentals')
         )
     
-    def get_ngrams(self, size, pad_ch=PAD_CH_DEFAULT):
+    def get_ngrams(self, size, pad_ch=PAD_CH_DEFAULT, phon_env=False):
         """Get word's segments as ngram sequences of specified size."""
-        if size in self.ngrams:
-            return self.ngrams[size]
-        padded = pad_sequence(self.segments, pad_ch=pad_ch, pad_n=max(1, size-1))
+        if (size, phon_env) in self.ngrams:
+            return self.ngrams[(size, phon_env)]
+        if phon_env:
+            seq = list(zip(self.segments, self.phon_env))
+        else:
+            seq = self.segments
+        padded = pad_sequence(seq, pad_ch=pad_ch, pad_n=max(1, size-1))
         ngram_seq = generate_ngrams(padded, ngram_size=size, pad_ch=pad_ch, as_ngram=False)
-        self.ngrams[size] = ngram_seq
+        self.ngrams[(size, phon_env)] = ngram_seq
         return ngram_seq
     
     def complex_segmentation(self, pad_ch=PAD_CH_DEFAULT):

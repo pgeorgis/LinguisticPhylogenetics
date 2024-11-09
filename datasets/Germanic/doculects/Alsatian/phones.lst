@@ -61,7 +61,7 @@ VOWELS
 
 /ˈyː/ (0.011)
 	<Düüb> /d̥ˈyːb̥/ "dove_NOUN"
-	<Müs> /mˈyːs/ "mouse_NOUN_FEM"
+	<Müs> /mˈyːz̥/ "mouse_NOUN_FEM"
 	<Hüt> /hˈyːt/ "skin_NOUN"
 
 /i/ (0.01)
@@ -70,14 +70,14 @@ VOWELS
 	<Millich> /mˈiliʃ/ "milk_NOUN_FEM"
 
 /ˈæː/ (0.007)
-	<Käs> /kʰˈæːs/ "cheese_NOUN"
+	<Käs> /kʰˈæːz̥/ "cheese_NOUN"
 	<Räje> /ʁˈæːjə/ "rain_NOUN"
 	<gäl> /ɡ̊ˈæːl/ "yellow_ADJ"
 
 /ˈæ/ (0.007)
 	<Wäj> /ʋˈæj/ "way_NOUN"
 	<gänn> /ɡ̊ˈæn/ "give_VERB"
-	<Läwwer> /lˈævəʁ/ "liver_NOUN"
+	<Läwwer> /lˈæʋəʁ/ "liver_NOUN"
 
 /ˈei̯/ (0.007)
 	<Knej> /ɡ̊nˈei̯/ "knee_NOUN"
@@ -86,8 +86,8 @@ VOWELS
 
 /ˈaː/ (0.004)
 	<laje> /lˈaːjə/ "tell lies_VERB"
-	<Naawel> /nˈaːvl̩/ "fingernail_NOUN"
-	<saawe> /sˈaːvə/ "say_VERB"
+	<Naawel> /nˈaːʋl̩/ "fingernail_NOUN"
+	<saawe> /sˈaːʋə/ "say_VERB"
 
 /ˈɛ/ (0.002)
 	<Männer> /mˈɛnəʁ/ "men_NOUN_PL"
@@ -131,20 +131,20 @@ CONSONANTS
 	<gänn> /ɡ̊ˈæn/ "give_VERB"
 	<Knej> /ɡ̊nˈei̯/ "knee_NOUN"
 
-/s/ (0.054)
-	<Summer> /sˈuməʁ/ "summer_NOUN"
-	<saawe> /sˈaːvə/ "say_VERB"
-	<Füess> /fˈʊːs/ "foot_NOUN"
-
 /l/ (0.054)
-	<Mül> /mˈyːl/ "mouth_NOUN"
-	<Woll> /ʋˈol/ "wool_NOUN_FEM"
-	<Sàlz> /sˈɒlʦ/ "salt_NOUN"
+	<Seel> /sˈeːl/ "soul_NOUN"
+	<gäl> /ɡ̊ˈæːl/ "yellow_ADJ"
+	<Liecht> /lˈiːʃt/ "light_NOUN"
 
 /t/ (0.051)
-	<kàlt> /kʰˈɒlt/ "cold_ADJ"
-	<Traum> /tʁˈʊːm/ "dream_NOUN"
-	<Stüehl> /ʃtˈøːl/ "stool_NOUN"
+	<Bruscht> /b̥ʁˈuʃt/ "breast_NOUN"
+	<Sit> /sˈiːt/ "side_NOUN"
+	<Stein> /ʃtˈəi̯n/ "stone_NOUN"
+
+/s/ (0.046)
+	<Geiss> /ɡ̊ˈəi̯s/ "goat_NOUN"
+	<Ross> /ʁˈos/ "horse_NOUN"
+	<Wàsser> /ʋˈɒsəʁ/ "water_NOUN"
 
 /d̥/ (0.043)
 	<Ding> /d̥ˈiŋ/ "thing_NOUN"
@@ -161,15 +161,15 @@ CONSONANTS
 	<helfe> /hˈælfə/ "help_VERB"
 	<zwelf> /ʦʋˈelf/ "twelve_NUM"
 
-/m/ (0.032)
-	<Summer> /sˈuməʁ/ "summer_NOUN"
-	<Mensch> /mˈenʃ/ "person_NOUN"
-	<Monet> /mˈoːnət/ "month_NOUN"
+/ʋ/ (0.033)
+	<Win> /ʋˈin/ "wine_NOUN"
+	<Wind> /ʋˈind̥/ "wind_NOUN"
+	<Wetter> /ʋˈetəʁ/ "weather_NOUN"
 
-/ʋ/ (0.028)
-	<Woll> /ʋˈol/ "wool_NOUN_FEM"
-	<wàrm> /ʋˈɒːʁm/ "warm_ADJ"
-	<Winter> /ʋˈintəʁ/ "winter_NOUN"
+/m/ (0.032)
+	<schwimme> /ʃwˈimə/ "swim_VERB"
+	<Blüem> /b̥lˈʊːm/ "flower_NOUN"
+	<Mül> /mˈyːl/ "mouth_NOUN"
 
 /b̥/ (0.028)
 	<blüete> /b̥lˈʊːtə/ "bleed_VERB"
@@ -216,10 +216,10 @@ CONSONANTS
 	<jung> /jˈuŋ/ "young_NOUN"
 	<lieje> /lˈiːjə/ "lie_VERB"
 
-/v/ (0.005)
-	<siwwe> /sˈivə/ "seven_NUM"
-	<Läwwer> /lˈævəʁ/ "liver_NOUN"
-	<saawe> /sˈaːvə/ "say_VERB"
+/z̥/ (0.007)
+	<Müs> /mˈyːz̥/ "mouse_NOUN_FEM"
+	<Miis> /mˈiːz̥/ "mice_NOUN"
+	<Nàs> /nˈɒːz̥/ "nose_NOUN"
 
 /w/ (0.004)
 	<Schweschter> /ʃwˈeʃtəʁ/ "sister_NOUN"
@@ -227,8 +227,8 @@ CONSONANTS
 	<schwàrz> /ʃwˈɒʁʦ/ "black_ADJ"
 
 /p͡f/ (0.002)
-	<Kopf> /kʰˈop͡f/ "head_NOUN"
 	<Àpfel> /ˈɒp͡fl̩/ "apple_NOUN"
+	<Kopf> /kʰˈop͡f/ "head_NOUN"
 
 /p/ (0.001)
 	<Sproch> /ʃpʁˈoːx/ "speech_NOUN_FEM"
