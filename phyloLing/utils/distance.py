@@ -6,7 +6,7 @@ from numpy import zeros
 
 # PAIRWISE SIMILARITY / DISTANCE
 class Distance:
-    def __init__(self, func, cluster_threshold=0.5, sim=False, name=None, alpha=0.5, **kwargs):
+    def __init__(self, func, cluster_threshold=None, sim=False, name=None, alpha=0.5, **kwargs):
         self.func = func
         self.kwargs = kwargs
         self.sim = sim
