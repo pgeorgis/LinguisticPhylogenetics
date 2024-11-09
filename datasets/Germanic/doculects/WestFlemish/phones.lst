@@ -27,7 +27,7 @@ VOWELS
 /ˈɪ/ (0.018)
 	<winter> /ʋˈɪntəɾ/ "winter_NOUN"
 	<binden> /bˈɪndn̩/ "bind_VERB"
-	<ding> /dˈɪŋɡ̊/ "thing_NOUN"
+	<ding> /dˈɪŋk/ "thing_NOUN"
 
 /ˈuə̯/ (0.018)
 	<zoekn> /zˈuə̯kn̩/ "seek_VERB"
@@ -36,7 +36,7 @@ VOWELS
 
 /ˈæ/ (0.017)
 	<zwemmn> /zʋˈæmn̩/ "swim_VERB"
-	<weg> /ʋˈæɦ̥/ "way_NOUN"
+	<weg> /ʋˈæh/ "way_NOUN"
 	<kerke> /kˈæɾkə/ "church_NOUN_FEM"
 
 /ˈeː/ (0.017)
@@ -85,7 +85,7 @@ VOWELS
 	<zeune> /zˈøːnə/ "son_NOUN"
 
 /ɪ/ (0.001)
-	<koning> /kˈoːnɪŋɡ̊/ "king_NOUN"
+	<koning> /kˈoːnɪŋk/ "king_NOUN"
 
 /iə̯/ (0.001)
 	<dertienne> /dˈæɾtiə̯nə/ "thirteen_NUM"
@@ -108,110 +108,100 @@ CONSONANTS
 	<twêe> /tʋˈɛː/ "two_NUM"
 	<stoel> /stˈuə̯l/ "stool_NOUN"
 
+/k/ (0.039)
+	<sproake> /spɾˈɒːkə/ "speech_NOUN_FEM"
+	<drinkn> /dɾˈɪŋkn̩/ "drink_VERB"
+	<eik> /ˈɛːk/ "oak_NOUN_FEM"
+
 /v/ (0.038)
-	<lever> /lˈeːvɾ̩/ "liver_NOUN"
+	<viere> /vˈiə̯ɾə/ "four_NUM"
+	<twolve> /tʋˈɔwvə/ "twelve_NUM"
 	<vrouwe> /vɾˈuʋə/ "woman_NOUN"
-	<vlees> /vlˈeːs/ "flesh_NOUN"
 
 /d/ (0.037)
-	<drukkn> /dɾˈœkn̩/ "press_VERB"
-	<ander> /ˈɑndəɾ/ "other_ADJ"
-	<wyder> /ʋˈidəɾ/ "we_PRON"
+	<doorn> /dˈoːɾn/ "thorn_NOUN"
+	<binden> /bˈɪndn̩/ "bind_VERB"
+	<onder> /ˈɔndəɾ/ "under_PREP"
 
 /l/ (0.036)
+	<loof> /lˈoːv̥/ "leaf_NOUN"
 	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
-	<veugel> /vˈøːɦəl/ "bird_NOUN_MASC"
-	<wulle> /ʋˈœlə/ "wool_NOUN_FEM"
-
-/k/ (0.035)
-	<kerke> /kˈæɾkə/ "church_NOUN_FEM"
-	<zoekn> /zˈuə̯kn̩/ "seek_VERB"
-	<rook> /ɾˈoːk/ "smoke_NOUN"
-
-/s/ (0.033)
-	<uus> /ˈyːs/ "house_NOUN"
-	<ys> /ˈis/ "ice_NOUN"
 	<slang> /slˈɑŋ/ "snake_NOUN"
 
 /ɦ/ (0.031)
+	<mugge> /mˈœɦə/ "midge_NOUN"
 	<vliegn> /vlˈiə̯ɦn̩/ "fly_VERB"
 	<god> /ɦˈɔd̥/ "god_NOUN"
-	<groene> /ɦɾˈuə̯nə/ "green_ADJ"
 
 /z/ (0.03)
+	<zèsse> /zˈɛsə/ "six_NUM"
 	<zomer> /zˈoːməɾ/ "summer_NOUN"
 	<zwemmn> /zʋˈæmn̩/ "swim_VERB"
-	<zoogn> /zˈoːɦn̩/ "suck_VERB"
 
 /d̥/ (0.03)
+	<zwoard> /zʋˈɒːɾd̥/ "sword_NOUN"
 	<tyd> /tˈid̥/ "time_NOUN"
 	<goed> /ɦˈuə̯d̥/ "good_ADJ"
-	<brood> /bɾˈoːd̥/ "bread_NOUN"
 
 /ʋ/ (0.028)
+	<nieuwe> /nˈiə̯ʋə/ "new_ADJ"
 	<weeke> /ʋˈeːkə/ "week_NOUN"
 	<winter> /ʋˈɪntəɾ/ "winter_NOUN"
-	<wat> /ʋˈɑt/ "what_PRON"
 
-/m/ (0.025)
-	<bloeme> /blˈuə̯mə/ "flower_NOUN"
-	<zêem> /zˈɛːm/ "honey_NOUN"
-	<storm> /stˈɔɾm/ "storm_NOUN"
+/s/ (0.028)
+	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
+	<vast> /vˈɑst/ "fast_ADJ"
+	<duusd> /dˈyːsd̥/ "thousand_NUM"
 
-/b/ (0.019)
-	<broer> /bɾˈuə̯ɾ/ "brother_NOUN"
-	<brugge> /bɾˈœɦə/ "bridge_NOUN"
-	<boek> /bˈuə̯k/ "book_NOUN_FEM"
-
-/h/ (0.017)
-	<schild> /ʃhˈɪwd̥/ "shield_NOUN"
-	<schoon> /ʃhˈoːn/ "beautiful_ADJ"
+/h/ (0.026)
+	<achte> /ˈɑhtə/ "eight_NUM"
+	<schoap> /ʃhˈɒːp/ "sheep_NOUN"
 	<plicht> /plˈɛht/ "plight_NOUN"
 
+/m/ (0.025)
+	<moedr> /mˈuə̯dɾ̩/ "mother_NOUN"
+	<mins> /mˈɪns/ "person_NOUN"
+	<oarm> /ˈɒːɾm/ "arm_NOUN"
+
+/b/ (0.019)
+	<berg> /bˈæɾh/ "mountain_NOUN"
+	<bie> /bˈiə̯/ "bee_NOUN"
+	<bitn> /bˈitn̩/ "bite_VERB"
+
 /p/ (0.013)
-	<oap> /ˈɒːp/ "ape_NOUN"
-	<elpn> /ˈæwpn̩/ "help_VERB"
+	<op> /ˈɔp/ "up_ADV"
 	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
+	<sproake> /spɾˈɒːkə/ "speech_NOUN_FEM"
 
 /ŋ/ (0.012)
 	<tonge> /tˈuŋə/ "tongue_NOUN"
-	<joung> /jˈuŋɡ̊/ "young_NOUN"
 	<zingn> /zˈɪŋn̩/ "sing_VERB"
+	<ounger> /ˈuŋɾ̩/ "hunger_NOUN"
 
 /w/ (0.012)
-	<twolve> /tʋˈɔwvə/ "twelve_NUM"
 	<volk> /vˈɔwk/ "folk_NOUN"
-	<snêeuw> /snˈɛːw/ "snow_NOUN"
-
-/ɦ̥/ (0.009)
-	<oog> /ˈoːɦ̥/ "high_ADJ"
-	<dag> /dˈɑɦ̥/ "day_NOUN"
-	<deeg> /dˈeːɦ̥/ "dough_NOUN"
+	<schild> /ʃhˈɪwd̥/ "shield_NOUN"
+	<volgn> /vˈɔwɦn̩/ "follow_VERB"
 
 /v̥/ (0.009)
-	<oofd> /ˈoːv̥d̥/ "head_NOUN"
-	<wuuf> /ʋˈyːv̥/ "wife_NOUN"
-	<loof> /lˈoːv̥/ "leaf_NOUN"
+	<lief> /lˈiə̯v̥/ "beloved_ADJ"
+	<dief> /dˈiə̯v̥/ "thief_NOUN"
+	<kolf> /kˈɔwv̥/ "calf_NOUN"
 
 /ʃ/ (0.008)
-	<schoap> /ʃhˈɒːp/ "sheep_NOUN"
 	<schyt> /ʃhˈit/ "shit_NOUN"
 	<schietn> /ʃhˈiə̯tn̩/ "shoot_VERB"
+	<scherp> /ʃhˈæɾp/ "sharp_ADJ"
 
-/ɡ̊/ (0.004)
-	<joung> /jˈuŋɡ̊/ "young_NOUN"
-	<ring> /ɾˈɪŋɡ̊/ "ring_NOUN"
-	<koning> /kˈoːnɪŋɡ̊/ "king_NOUN"
+/z̥/ (0.008)
+	<ys> /ˈiz̥/ "ice_NOUN"
+	<luus> /lˈyːz̥/ "louse_NOUN"
+	<uus> /ˈyːz̥/ "house_NOUN"
 
 /j/ (0.004)
-	<joung> /jˈuŋɡ̊/ "young_NOUN"
 	<joar> /jˈɒːɾ/ "year_NOUN"
-	<gjitte> /ɦjˈɪtə/ "goat_NOUN"
-
-/z̥/ (0.003)
-	<luus> /lˈyːz̥/ "louse_NOUN"
-	<koas> /kˈɒːz̥/ "cheese_NOUN"
-	<hoas> /ˈɒːz̥/ "hare_NOUN"
+	<drieje> /dɾˈiə̯jə/ "three_NUM"
+	<joung> /jˈuŋk/ "young_NOUN"
 
 /ç/ (0.001)
 	<eillig> /ˈɛləç/ "holy_ADJ"

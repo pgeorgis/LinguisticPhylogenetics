@@ -17,7 +17,7 @@ VOWELS
 /ˈaɪ̯/ (0.028)
 	<ein> /ˈaɪ̯n/ "one_NUM"
 	<Schweiß> /ʃvˈaɪ̯s/ "sweat_NOUN"
-	<Eis> /ˈaɪ̯s/ "ice_NOUN"
+	<Eis> /ˈaɪ̯z̥/ "ice_NOUN"
 
 /ˈɪ/ (0.025)
 	<wild> /vˈɪld̥/ "wild_ADJ"
@@ -132,100 +132,100 @@ CONSONANTS
 	<Freund> /fʁˈɔʏ̯nd̥/ "friend_NOUN"
 	<Finger> /fˈɪŋɐ/ "finger_NOUN"
 
-/s/ (0.033)
-	<nächste> /nˈɛːçstə/ "next_ADJ"
-	<was> /vˈas/ "what_PRON"
-	<fest> /fˈɛst/ "fast_ADJ"
-
 /ʁ/ (0.032)
+	<rot> /ʁˈoːt/ "red_ADJ"
+	<Bruder> /bʁˈuːdɐ/ "brother_NOUN"
 	<Rauch> /ʁˈaʊ̯x/ "smoke_NOUN"
-	<dreizehn> /dʁˈaɪ̯ʦeːn/ "thirteen_NUM"
-	<Traum> /tʰʁˈaʊ̯m/ "dream_NOUN"
 
 /v/ (0.03)
+	<Wort> /vˈɔɐt/ "word_NOUN"
+	<Schwein> /ʃvˈaɪ̯n/ "swine_NOUN"
 	<zwanzig> /ʦvˈanʦɪç/ "twenty_NUM"
-	<Wurm> /vˈʊɐm/ "worm_NOUN"
-	<Wind> /vˈɪnd̥/ "wind_NOUN"
+
+/s/ (0.029)
+	<sechs> /zˈɛks/ "six_NUM"
+	<schießen> /ʃˈiːsn̩/ "shoot_VERB"
+	<was> /vˈas/ "what_PRON"
 
 /m/ (0.028)
-	<Mensch> /mˈɛnʃ/ "person_NOUN"
-	<Wurm> /vˈʊɐm/ "worm_NOUN"
 	<Imme> /ˈɪmə/ "bee_NOUN"
+	<warm> /vˈaɐm/ "warm_ADJ"
+	<kommen> /kʰˈɔmən/ "come_VERB"
 
 /ʃ/ (0.028)
-	<Schwester> /ʃvˈɛstɐ/ "sister_NOUN"
-	<Asche> /ˈaʃə/ "ash_NOUN"
 	<Schaf> /ʃˈaːf/ "sheep_NOUN"
+	<Stein> /ʃtˈaɪ̯n/ "stone_NOUN"
+	<Schwein> /ʃvˈaɪ̯n/ "swine_NOUN"
 
 /b/ (0.028)
-	<haben> /hˈaːbn̩/ "have_VERB"
-	<bitten> /bˈɪtn̩/ "request_VERB"
 	<treiben> /tʰʁˈaɪ̯bn̩/ "drive_VERB"
+	<Taube> /tʰˈaʊ̯bə/ "dove_NOUN"
+	<Buch> /bˈuːx/ "book_NOUN_FEM"
 
 /ɡ/ (0.023)
-	<liegen> /lˈiːɡn̩/ "lie_VERB"
-	<Gans> /ɡˈans/ "goose_NOUN"
 	<sagen> /zˈaːɡn̩/ "say_VERB"
+	<Geist> /ɡˈaɪ̯st/ "ghost_NOUN"
+	<Gast> /ɡˈast/ "guest_NOUN"
 
 /z/ (0.022)
-	<Sand> /zˈand̥/ "sand_NOUN"
-	<sechs> /zˈɛks/ "six_NUM"
 	<See> /zˈeː/ "sea_NOUN"
+	<Käse> /kʰˈɛːzə/ "cheese_NOUN"
+	<tausend> /tʰˈaʊ̯zn̩d̥/ "thousand_NUM"
 
 /d/ (0.022)
-	<deutsch> /dˈɔʏ̯tʃ/ "Teutonic_ADJ"
-	<Wunder> /vˈʊndɐ/ "wonder_NOUN"
 	<Feder> /fˈeːdɐ/ "feather_NOUN"
+	<Durst> /dˈʊɐst/ "thirst_NOUN"
+	<finden> /fˈɪndn̩/ "find_VERB"
 
 /h/ (0.02)
-	<Horn> /hˈɔɐn/ "horn_NOUN"
-	<Haupt> /hˈaʊ̯pt/ "head_NOUN"
 	<hier> /hˈiːɐ/ "here_ADV"
+	<Honig> /hˈoːnɪç/ "honey_NOUN"
+	<Henne> /hˈɛnə/ "hen_NOUN"
 
 /ç/ (0.017)
-	<Zeichen> /ʦˈaɪ̯çn̩/ "token_NOUN"
+	<weich> /vˈaɪ̯ç/ "weak_ADJ"
 	<Eiche> /ˈaɪ̯çə/ "oak_NOUN_FEM"
-	<zwanzig> /ʦvˈanʦɪç/ "twenty_NUM"
+	<Recht> /ʁˈɛçt/ "right_ADJ"
 
 /ʦ/ (0.016)
-	<zwölf> /ʦvˈœlf/ "twelve_NUM"
 	<dreizehn> /dʁˈaɪ̯ʦeːn/ "thirteen_NUM"
-	<Zeh> /ʦˈeː/ "toe_NOUN"
+	<schwarz> /ʃvˈaɐʦ/ "black_ADJ"
+	<Zähre> /ʦˈɛːʁə/ "tear_NOUN"
 
 /tʰ/ (0.015)
-	<Tier> /tʰˈiːɐ/ "animal_NOUN"
-	<treiben> /tʰʁˈaɪ̯bn̩/ "drive_VERB"
-	<Träne> /tʰʁˈɛːnə/ "tear_NOUN_FEM"
+	<tausend> /tʰˈaʊ̯zn̩d̥/ "thousand_NUM"
+	<tödlich> /tʰˈøːdlɪç/ "deadly_ADJ"
+	<Taube> /tʰˈaʊ̯bə/ "dove_NOUN"
 
 /d̥/ (0.015)
-	<Wind> /vˈɪnd̥/ "wind_NOUN"
-	<Freund> /fʁˈɔʏ̯nd̥/ "friend_NOUN"
-	<Mond> /mˈoːnd̥/ "moon_NOUN"
+	<Hand> /hˈand̥/ "hand_NOUN_FEM"
+	<Schild> /ʃˈɪld̥/ "shield_NOUN"
+	<Bad> /bˈaːd̥/ "bath_NOUN_NEU"
 
 /kʰ/ (0.014)
-	<Kirche> /kʰˈɪɐçə/ "church_NOUN_FEM"
 	<Knoten> /kʰnˈoːtn̩/ "knot_NOUN"
-	<Kalb> /kʰˈalb̥/ "calf_NOUN"
+	<König> /kʰˈøːnɪç/ "king_NOUN"
+	<Kind> /kʰˈɪnd̥/ "child_NOUN"
 
 /k/ (0.012)
-	<Mücke> /mˈʏkə/ "midge_NOUN"
-	<Volk> /fˈɔlk/ "folk_NOUN"
 	<drücken> /dʁˈʏkn̩/ "press_VERB"
+	<nackt> /nˈakt/ "naked_ADJ"
+	<trocken> /tʰʁˈɔkn̩/ "dry_ADJ"
 
 /ŋ/ (0.01)
 	<Ding> /dˈɪŋ/ "thing_NOUN"
-	<lang> /lˈaŋ/ "long_ADJ"
-	<jung> /jˈʊŋ/ "young_NOUN"
+	<Schlange> /ʃlˈaŋə/ "snake_NOUN"
+	<danken> /dˈaŋkn̩/ "thank_VERB"
 
 /x/ (0.01)
-	<Nacht> /nˈaxt/ "night_NOUN_FEM"
-	<suchen> /zˈuːxn̩/ "seek_VERB"
 	<Macht> /mˈaxt/ "might_NOUN"
+	<Nacht> /nˈaxt/ "night_NOUN_FEM"
+	<Woche> /vˈɔxə/ "week_NOUN"
 
 /b̥/ (0.006)
-	<Laub> /lˈaʊ̯b̥/ "leaf_NOUN"
-	<halb> /hˈalb̥/ "half_NOUN"
 	<lieb> /lˈiːb̥/ "beloved_ADJ"
+	<Dieb> /dˈiːb̥/ "thief_NOUN"
+	<Weib> /vˈaɪ̯b̥/ "wife_NOUN"
 
 /ɡ̊/ (0.005)
 	<Pflug> /p͡flˈuːɡ̊/ "plough_NOUN"
@@ -236,6 +236,11 @@ CONSONANTS
 	<Pflicht> /p͡flˈɪçt/ "plight_NOUN"
 	<Apfel> /ˈap͡fl̩/ "apple_NOUN"
 	<Pflug> /p͡flˈuːɡ̊/ "plough_NOUN"
+
+/z̥/ (0.004)
+	<Eis> /ˈaɪ̯z̥/ "ice_NOUN"
+	<Laus> /lˈaʊ̯z̥/ "louse_NOUN"
+	<Haus> /hˈaʊ̯z̥/ "house_NOUN"
 
 /p/ (0.002)
 	<Haupt> /hˈaʊ̯pt/ "head_NOUN"

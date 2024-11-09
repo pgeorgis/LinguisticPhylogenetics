@@ -21,7 +21,7 @@ VOWELS
 
 /ˈʌ/ (0.027)
 	<suck> /sˈʌk/ "suck_VERB"
-	<blood> /bɫˈʌd/ "blood_NOUN"
+	<blood> /blˈʌd/ "blood_NOUN"
 	<oven> /ˈʌvn̩/ "oven_NOUN"
 
 /ˈaɪ̯/ (0.023)
@@ -42,12 +42,12 @@ VOWELS
 /ˈɑ/ (0.017)
 	<all> /ˈɑɫ/ "all_ADJ"
 	<yarn> /jˈɑɹn/ "yarn_NOUN"
-	<long> /ɫˈɑŋ/ "long_ADJ"
+	<long> /lˈɑŋ/ "long_ADJ"
 
 /ˈeɪ̯/ (0.016)
 	<name> /nˈeɪ̯m/ "name_NOUN"
 	<ape> /ˈeɪ̯p/ "ape_NOUN"
-	<blade> /bɫˈeɪ̯d/ "leaf_NOUN_NEU"
+	<blade> /blˈeɪ̯d/ "leaf_NOUN_NEU"
 
 /ˈaʊ̯/ (0.015)
 	<sour> /sˈaʊ̯ɚ/ "sour_ADJ"
@@ -66,7 +66,7 @@ VOWELS
 
 /ˈʌɪ̯/ (0.01)
 	<white> /wˈʌɪ̯ʔ/ "white_ADJ"
-	<light> /ɫˈʌɪ̯ʔ/ "light_NOUN"
+	<light> /lˈʌɪ̯ʔ/ "light_NOUN"
 	<night> /nˈʌɪ̯ʔ/ "night_NOUN_FEM"
 
 /ˈʊ/ (0.006)
@@ -81,7 +81,7 @@ VOWELS
 
 /ə/ (0.006)
 	<weapon> /wˈɛpən/ "weapon_NOUN"
-	<eleven> /əɫˈɛvən/ "eleven_NUM"
+	<eleven> /əlˈɛvən/ "eleven_NUM"
 	<token> /tʰˈoʊ̯kən/ "token_NOUN"
 
 /i/ (0.006)
@@ -108,76 +108,81 @@ CONSONANTS
 
 /d/ (0.058)
 	<hundred> /hˈʌndɹəd/ "hundred_NUM"
-	<land> /ɫˈænd/ "land_NOUN"
+	<land> /lˈænd/ "land_NOUN"
 	<friend> /fɹˈɛnd/ "friend_NOUN"
 
-/ɫ/ (0.056)
-	<plight> /pʰɫˈʌɪ̯ʔ/ "plight_NOUN"
-	<fowl> /fˈaʊ̯ɫ/ "bird_NOUN_MASC"
-	<liver> /ɫˈɪvɚ/ "liver_NOUN"
-
 /s/ (0.054)
-	<salt> /sˈɑɫʔ/ "salt_NOUN"
-	<sword> /sˈɔɹd/ "sword_NOUN"
-	<sing> /sˈɪŋ/ "sing_VERB"
+	<star> /stˈɑɹ/ "star_NOUN"
+	<fast> /fˈæst/ "fast_ADJ"
+	<sleep> /slˈip/ "sleep_VERB"
 
 /ɹ/ (0.05)
-	<horse> /hˈɔɹs/ "horse_NOUN"
-	<sword> /sˈɔɹd/ "sword_NOUN"
-	<drink> /dɹˈɪŋk/ "drink_VERB"
+	<for> /fˈɔɹ/ "for_PREP"
+	<yarn> /jˈɑɹn/ "yarn_NOUN"
+	<horn> /hˈɔɹn/ "horn_NOUN"
 
 /f/ (0.037)
+	<full> /fˈʊɫ/ "full_ADJ"
+	<fire> /fˈaɪ̯ɚ/ "fire_NOUN"
 	<freeze> /fɹˈiz/ "freeze_VERB"
-	<feather> /fˈɛðɚ/ "feather_NOUN"
-	<fly> /fɫˈaɪ̯/ "housefly_NOUN"
 
 /w/ (0.036)
-	<word> /wˈɝd/ "word_NOUN"
-	<swim> /swˈɪm/ "swim_VERB"
-	<warm> /wˈɔɹm/ "warm_ADJ"
+	<wild> /wˈaɪ̯ɫd/ "wild_ADJ"
+	<sweet> /swˈiʔ/ "sweet_ADJ"
+	<wolf> /wˈʊɫf/ "wolf_NOUN"
 
 /ʔ/ (0.031)
-	<light> /ɫˈʌɪ̯ʔ/ "light_NOUN"
-	<sit> /sˈɪʔ/ "sit_VERB"
-	<hot> /hˈɑʔ/ "hot_ADJ"
+	<plight> /pʰlˈʌɪ̯ʔ/ "plight_NOUN"
+	<light> /lˈʌɪ̯ʔ/ "light_NOUN"
+	<cat> /kʰˈæʔ/ "cat_NOUN"
+
+/ɫ/ (0.031)
+	<whale> /wˈeɪ̯ɫ/ "whale_NOUN"
+	<deadly> /dˈɛdɫi/ "deadly_ADJ"
+	<old> /ˈoʊ̯ɫd/ "old_ADJ"
 
 /m/ (0.029)
+	<warm> /wˈɔɹm/ "warm_ADJ"
+	<might> /mˈʌɪ̯ʔ/ "might_NOUN"
 	<midge> /mˈɪʤ/ "midge_NOUN"
-	<moon> /mˈun/ "moon_NOUN"
-	<swim> /swˈɪm/ "swim_VERB"
+
+/l/ (0.025)
+	<light> /lˈʌɪ̯ʔ/ "light_NOUN"
+	<lie> /lˈaɪ̯/ "tell lies_VERB"
+	<bleed> /blˈid/ "bleed_VERB"
 
 /h/ (0.025)
-	<hound> /hˈaʊ̯nd/ "dog_NOUN"
 	<home> /hˈoʊ̯m/ "home_NOUN"
 	<hair> /hˈɛɚ/ "hair_NOUN"
+	<heart> /hˈɑɹʔ/ "heart_NOUN"
 
 /b/ (0.024)
-	<blood> /bɫˈʌd/ "blood_NOUN"
 	<beam> /bˈim/ "tree_NOUN"
-	<blade> /bɫˈeɪ̯d/ "leaf_NOUN_NEU"
+	<blade> /blˈeɪ̯d/ "leaf_NOUN_NEU"
+	<bloom> /blˈum/ "flower_NOUN"
 
 /θ/ (0.022)
 	<thumb> /θˈʌm/ "thumb_NOUN"
-	<tooth> /tʰˈuθ/ "tooth_NOUN"
 	<thing> /θˈɪŋ/ "thing_NOUN"
+	<north> /nˈɔɹθ/ "north_NOUN"
 
 /k/ (0.02)
 	<milk> /mˈɪɫk/ "milk_NOUN_FEM"
-	<week> /wˈik/ "week_NOUN"
 	<token> /tʰˈoʊ̯kən/ "token_NOUN"
+	<next> /nˈɛkst/ "next_ADJ"
 
 /ɡ/ (0.016)
-	<give> /ɡˈɪv/ "give_VERB"
 	<egg> /ˈɛɡ/ "egg_NOUN_NEU"
 	<green> /ɡɹˈin/ "green_ADJ"
+	<give> /ɡˈɪv/ "give_VERB"
 
 /t/ (0.016)
-	<guest> /ɡˈɛst/ "guest_NOUN"
 	<stone> /stˈoʊ̯n/ "stone_NOUN"
 	<twenty> /tʰwˈɛnti/ "twenty_NUM"
+	<winter> /wˈɪntɚ/ "winter_NOUN"
 
 /ʃ/ (0.014)
-	<flesh> /fɫˈɛʃ/ "flesh_NOUN"
+	<flesh> /flˈɛʃ/ "flesh_NOUN"
 	<sheep> /ʃˈip/ "sheep_NOUN"
 	<ship> /ʃˈɪp/ "ship_NOUN"
 
@@ -188,13 +193,13 @@ CONSONANTS
 
 /ŋ/ (0.012)
 	<thank> /θˈeɪ̯ŋk/ "thank_VERB"
-	<long> /ɫˈɑŋ/ "long_ADJ"
+	<long> /lˈɑŋ/ "long_ADJ"
 	<thing> /θˈɪŋ/ "thing_NOUN"
 
 /v/ (0.012)
 	<seven> /sˈɛvən/ "seven_NUM"
 	<dove> /dˈʌv/ "dove_NOUN"
-	<liver> /ɫˈɪvɚ/ "liver_NOUN"
+	<liver> /lˈɪvɚ/ "liver_NOUN"
 
 /tʰ/ (0.012)
 	<twelve> /tʰwˈɛɫv/ "twelve_NUM"
@@ -237,9 +242,9 @@ CONSONANTS
 	<water> /wˈɑɾɚ/ "water_NOUN"
 
 /pʰ/ (0.003)
-	<plough> /pʰɫˈaʊ̯/ "plough_NOUN"
+	<plough> /pʰlˈaʊ̯/ "plough_NOUN"
 	<path> /pʰˈæθ/ "path_NOUN"
-	<plight> /pʰɫˈʌɪ̯ʔ/ "plight_NOUN"
+	<plight> /pʰlˈʌɪ̯ʔ/ "plight_NOUN"
 
 /tː/ (0.001)
 	<thirteen> /θˈɝtːin/ "thirteen_NUM"
