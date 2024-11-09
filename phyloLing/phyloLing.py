@@ -436,12 +436,15 @@ class LexicalDataset:
                 elif phon_env:
                     self.logger.warning(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}')
 
-    def get_doculect_pairs(self, bidirectional=False):
+    def get_doculect_pairs(self, bidirectional=False, include_self_pairs=True):
         if bidirectional:
             doculect_pairs = product(self.languages.values(), self.languages.values())
         else:
             doculect_pairs = combinations(self.languages.values(), 2)
-        return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs if lang1 != lang2],
+        if include_self_pairs:
+            doculect_pairs = list(doculect_pairs)
+            doculect_pairs.extend([(lang, lang) for lang in self.languages.values()])
+        return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs],
                       key=lambda x: (x[0].name, x[1].name))
 
     def cognate_set_dendrogram(self,  # TODO UPDATE THIS FUNCTION
