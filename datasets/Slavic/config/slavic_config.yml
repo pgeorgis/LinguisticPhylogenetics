@@ -18,9 +18,6 @@ phon_corr:
     refresh: []
     refresh_all: true
 
-cluster:
-    cognates: none
-
 # evaluation:
 #     precalculated_word_scores: 
 

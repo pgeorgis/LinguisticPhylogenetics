@@ -20,18 +20,13 @@ transcription:
     #         suprasegmentals: ['ˀ']
 
 phon_corr:
-    phon_env: false
     refresh: []
     refresh_all: true
-
-cluster:
-    cognates: none
 
 # evaluation:
 #     precalculated_word_scores:
 
 tree:
-    linkage: nj
     root: Proto-Germanic
     reference: [
         "datasets/Germanic/trees/ref/reference_001.tre"

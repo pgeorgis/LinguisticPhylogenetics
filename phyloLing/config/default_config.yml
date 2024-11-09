@@ -35,7 +35,7 @@ phon_corr:
   sample_size: 0.8
   min_corr: 2
   ngram: 1
-  phon_env: true 
+  phon_env: false 
   refresh: []
   refresh_all: false
   copy_to_outdir: true
