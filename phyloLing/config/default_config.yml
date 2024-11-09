@@ -54,7 +54,7 @@ evaluation:
   pmi_weight: 0.9
   surprisal_weight: 2.65
   phon_weight: 1.25
-  min_similarity: 0.7
+  min_similarity: 0
   normalize_weights: false
   exclude_synonyms: true
   calibrate: false
