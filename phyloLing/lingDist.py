@@ -215,7 +215,7 @@ def gradient_cognate_dist(lang1,
 
             for cognate_id in clustered_cognates[concept]:
                 l1_wordcount += len(set(pair[0] for pair in scored_pairs[cognate_id]))
-                l1_wordcount += len(set(pair[1] for pair in scored_pairs[cognate_id]))
+                l2_wordcount += len(set(pair[1] for pair in scored_pairs[cognate_id]))
                 concept_sims.update(scored_pairs[cognate_id])
 
             if len(concept_sims) > 0:
