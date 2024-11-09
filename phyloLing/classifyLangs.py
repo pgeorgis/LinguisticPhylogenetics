@@ -114,7 +114,7 @@ def validate_params(params, valid_params, logger):
             }
 
     # Raise error if binary cognate similarity is used with "none" cognate clustering
-    if params['cluster']['cognates'] == 'none' and params['evaluation']['similarity'] == 'binary':
+    if params['cognates']['cluster'] == 'none' and params['evaluation']['similarity'] == 'binary':
         logger.error('Binary cognate similarity cannot use "none" cognate clustering. Valid options are: [`auto`, `gold`]')
         raise ValueError
 
