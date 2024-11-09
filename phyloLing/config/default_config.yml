@@ -43,7 +43,7 @@ phon_corr:
 cognates:
   cluster: auto
   cluster_method: hybrid
-  cluster_threshold: 0.5
+  cluster_threshold: 
   cognate_index:
 
 evaluation:
