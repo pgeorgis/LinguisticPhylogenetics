@@ -538,7 +538,7 @@ class LexicalDataset:
 
         self.logger.info(f'Wrote clustered cognate index to {output_file}')
 
-    def load_cognate_index(self, index_file, sep='\t', variants_sep='~'):
+    def load_cognate_index(self, index_file, code=None, sep='\t', variants_sep='~'):
         assert sep != variants_sep
         index = defaultdict(lambda: defaultdict(lambda: []))
         with open(index_file, 'r') as f:
@@ -569,20 +569,10 @@ class LexicalDataset:
                             word = lang._get_Word(form_i, concept=concept, cognate_class='_'.join(cognate_id))
                             index[concept][cognate_class].append(word)
 
-        return index
+        if code:
+            self.clustered_cognates[code] = index
 
-    def load_clustered_cognates(self, **kwargs):
-        cognate_files = glob.glob(f'{self.cognates_dir}/*.cog')
-        for cognate_file in cognate_files:
-            code = os.path.splitext(os.path.basename(cognate_file))[0]
-            self.clustered_cognates[code] = self.load_cognate_index(cognate_file, **kwargs)
-        n = len(cognate_files)
-        s = f'Loaded {n} cognate'
-        if n > 1 or n < 1:
-            s += ' indices.'
-        else:
-            s += ' index.'
-        self.logger.info(s)
+        return index
 
     def evaluate_clusters(self, clustered_cognates, method='bcubed'):
         """Evaluates B-cubed precision, recall, and F1 of results of automatic
@@ -698,7 +688,7 @@ class LexicalDataset:
 
         # Try to skip re-calculation of distance matrix by retrieving
         # a previously computed distance matrix by its code
-        code = self.generate_test_code(dist_func, cognates=cognates, **kwargs)
+        code = self.generate_test_code(dist_func, cognates=cognates, cutoff=dist_func.cluster_threshold, **kwargs)
 
         if code in self.distance_matrices:
             return self.distance_matrices[code]
@@ -723,14 +713,17 @@ class LexicalDataset:
 
         # Use gold cognate classes
         elif cognates == 'gold':
-            clustered_concepts = defaultdict(lambda: defaultdict(lambda: []))
-            for concept in concept_list:
-                # TODO there may be a better way to isolate these cognate IDs
-                cognate_ids = [cognate_id for cognate_id in self.cognate_sets if cognate_id.rsplit('_', maxsplit=1)[0] == concept]
-                for cognate_id in cognate_ids:
-                    for lang in self.cognate_sets[cognate_id]:
-                        for word in self.cognate_sets[cognate_id][lang]:
-                            clustered_concepts[concept][cognate_id].append(word)
+            if 'gold' in self.clustered_cognates:
+                clustered_concepts = self.clustered_cognates['gold']
+            else:
+                clustered_concepts = defaultdict(lambda: defaultdict(lambda: []))
+                for concept in concept_list:
+                    # TODO there may be a better way to isolate these cognate IDs
+                    cognate_ids = [cognate_id for cognate_id in self.cognate_sets if cognate_id.rsplit('_', maxsplit=1)[0] == concept]
+                    for cognate_id in cognate_ids:
+                        for lang in self.cognate_sets[cognate_id]:
+                            for word in self.cognate_sets[cognate_id][lang]:
+                                clustered_concepts[concept][cognate_id].append(word)
 
         # No separation of cognates/non-cognates:
         # all synonymous words are evaluated irrespective of cognacy
@@ -829,11 +822,6 @@ class LexicalDataset:
 
         group = [self.languages[lang] for lang in self.languages]
         labels = [lang.name for lang in group]
-
-        if outtree is None:
-            _, timestamp = create_timestamp()
-            outtree = os.path.join(self.tree_dir, f'{timestamp}.tre')
-
         lm = self.linkage_matrix(dist_func,
                                  concept_list=concept_list,
                                  cluster_func=cluster_func,

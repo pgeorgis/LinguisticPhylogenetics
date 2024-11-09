@@ -30,9 +30,9 @@ log_levels = {
 
 # Valid parameter values for certain parameters
 valid_params = {
-    'cluster': {
-        'cognates': {'auto', 'gold', 'none'},
-        'method': {'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid'},
+    'cognates': {
+        'cluster': {'auto', 'gold', 'none'},
+        'cluster_method': {'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid'},
     },
     'evaluation': {
         'similarity': {'gradient', 'binary'},
@@ -50,6 +50,12 @@ function_map = {
     PHONOLOGICAL_DIST_KEY: PhonDist,
     LEVENSHTEIN_DIST_KEY: LevenshteinDist
 }
+aux_func_map = {
+    'pmi': PMI_DIST_KEY,
+    'surprisal': SURPRISAL_DIST_KEY,
+    'levenshtein': LEVENSHTEIN_DIST_KEY,
+    'hybrid': HYBRID_DIST_KEY,
+} # TODO unify these with function_map
 
 
 def load_config(config_path):
@@ -225,37 +231,32 @@ if __name__ == "__main__":
     transcription_params = params['transcription']
     alignment_params = params['alignment']
     phon_corr_params = params['phon_corr']
-    cluster_params = params['cluster']
+    cognate_params = params['cognates']
     eval_params = params['evaluation']
     tree_params = params['tree']
     experiment_params = params['experiment']
 
     # Set ngram size used for surprisal
     surprisal_funcs = ('surprisal', 'hybrid')
-    if eval_params['method'] in surprisal_funcs or cluster_params['method'] in phon_corr_params:
+    if eval_params['method'] in surprisal_funcs or cognate_params['cluster_method'] in phon_corr_params:
         function_map[SURPRISAL_DIST_KEY].set('ngram_size', phon_corr_params['ngram'])
         function_map[SURPRISAL_DIST_KEY].set('phon_env', phon_corr_params['phon_env'])
         SurprisalDist = function_map[SURPRISAL_DIST_KEY]
 
         # Initialize hybrid distance object
-        if eval_params['method'] == 'hybrid' or cluster_params['method'] == 'hybrid':
+        if eval_params['method'] == 'hybrid' or cognate_params['cluster_method'] == 'hybrid':
             function_map[HYBRID_DIST_KEY] = init_hybrid(function_map, eval_params)
 
     # Designate cluster function if performing auto cognate clustering
-    if cluster_params['cognates'] == 'auto':
-        clusterDist = function_map[cluster_params['method']]
-        # Set specified cluster threshold # TODO cluster_threshold needs to be recalibrated
-        clusterDist.cluster_threshold = cluster_params['cluster_threshold']
+    if cognate_params['cluster'] == 'auto':
+        clusterDist = function_map[aux_func_map[cognate_params['cluster_method']]]
+        # Set cluster threshold if specified
+        if cognate_params['cluster_threshold']:
+            clusterDist.cluster_threshold = cognate_params['cluster_threshold']
     else:
         clusterDist = None
 
     # Designate evaluation function
-    aux_func_map = {
-        'pmi': PMI_DIST_KEY,
-        'surprisal': SURPRISAL_DIST_KEY,
-        'levenshtein': LEVENSHTEIN_DIST_KEY,
-        'hybrid': HYBRID_DIST_KEY,
-    }
     evalDist = function_map[aux_func_map[eval_params['method']]]
 
     # Load CLDF dataset
@@ -294,7 +295,7 @@ if __name__ == "__main__":
 
         if eval_params['method'] in ('surprisal', 'hybrid'):
             logger.info(f'Loading {family.name} phoneme surprisal...')
-            if cluster_params['cognates'] == 'gold':
+            if cognate_params['cluster'] == 'gold':
                 family.load_phoneme_surprisal(
                     ngram_size=phon_corr_params['ngram'],
                     phon_env=phon_corr_params['phon_env'],
@@ -327,13 +328,21 @@ if __name__ == "__main__":
             )
 
     # Auto cognate clustering only
-    if cluster_params['cognates'] == 'auto':
-        # Load pre-clustered cognate sets, if available
-        family.load_clustered_cognates()
+    if cognate_params['cluster'] in ('auto', 'gold'):
+        if cognate_params['cluster'] == 'gold':
+            cog_id = 'gold'
+        else: # auto
+            cog_id = family.generate_test_code(
+                clusterDist, # TODO cog_id should include weights and any other params for hybrid
+                cognates=cognate_params['cluster'], # TODO rename and/or remove this param in generate_test_code
+                cutoff=cognate_params['cluster_threshold']
+            )
 
-        # Set cognate cluster ID according to settings
-        cog_id = f"{family.name}_distfunc-{cluster_params['method']}_cutoff-{cluster_params['cluster_threshold']}"
-        # TODO cog_id should include weights and any other params for hybrid
+        # Load pre-clustered cognate sets, if specified
+        cognate_index_file = cognate_params['cognate_index']
+        if cognate_index_file:
+            cognate_index = family.load_cognate_index(cognate_index_file, code=cog_id)
+            logger.info(f"Loaded cognate index from {cognate_index_file}")
 
     # Load precalculated word scores from specified directory
     precalculated_word_scores = None
@@ -369,11 +378,6 @@ if __name__ == "__main__":
             # sample_size=eval_params['sample_size'],
         )
 
-    # Generate test code # TODO is this used still?
-    code = family.generate_test_code(distFunc, cognates=cluster_params['cognates'], cutoff=cluster_params['cluster_threshold'])
-    if eval_params['similarity'] == 'gradient':
-        code += family.generate_test_code(evalDist)
-
     # Generate experiment ID and outdir
     exp_name = experiment_params['name']
     if exp_name is None:
@@ -391,7 +395,7 @@ if __name__ == "__main__":
     tree = family.generate_tree(
         cluster_func=clusterDist,
         dist_func=distFunc,
-        cognates=cluster_params['cognates'],
+        cognates=cognate_params['cluster'],
         linkage_method=tree_params['linkage'],
         outtree=outtree,
         root=tree_params['root'],
