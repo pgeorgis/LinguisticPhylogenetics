@@ -193,6 +193,7 @@ def gradient_cognate_dist(lang1,
     scored_pairs = create_default_dict_of_dicts()
     for concept in shared_concepts:
         for cognate_id in clustered_cognates[concept]:
+            concept_cognate_id = f"{concept}_{cognate_id}"
             l1_words = filter_cognates_by_lang(lang1, clustered_cognates[concept][cognate_id])
             l2_words = filter_cognates_by_lang(lang2, clustered_cognates[concept][cognate_id])
             for l1_word in l1_words:
@@ -204,7 +205,7 @@ def gradient_cognate_dist(lang1,
                         score = dist_to_sim(score)
 
                     # Save in scored_pairs
-                    scored_pairs[cognate_id][(l1_word, l2_word)] = score
+                    scored_pairs[concept_cognate_id][(l1_word, l2_word)] = score
 
     for n, group in concept_groups.items():
         sims = {}
@@ -214,9 +215,10 @@ def gradient_cognate_dist(lang1,
             l1_wordcount, l2_wordcount = 0, 0
 
             for cognate_id in clustered_cognates[concept]:
-                l1_wordcount += len(set(pair[0] for pair in scored_pairs[cognate_id]))
-                l2_wordcount += len(set(pair[1] for pair in scored_pairs[cognate_id]))
-                concept_sims.update(scored_pairs[cognate_id])
+                concept_cognate_id = f"{concept}_{cognate_id}"
+                l1_wordcount += len(set(pair[0] for pair in scored_pairs[concept_cognate_id]))
+                l2_wordcount += len(set(pair[1] for pair in scored_pairs[concept_cognate_id]))
+                concept_sims.update(scored_pairs[concept_cognate_id])
 
             if len(concept_sims) > 0:
                 if exclude_synonyms:

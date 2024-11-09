@@ -310,6 +310,7 @@ class LexicalDataset:
         if doculect_pairs is None:
             doculect_pairs = self.get_doculect_pairs()
         for lang1, lang2 in doculect_pairs:
+            self.logger.info(f"Computing non-cognate thresholds: {lang1.name}-{lang2.name}")
             noncognate_scores = get_noncognate_scores(lang1, lang2, eval_func=eval_func, **kwargs)
             combined_noncognate_scores.extend(noncognate_scores)
         mean_nc_score = mean(noncognate_scores)
@@ -749,9 +750,12 @@ class LexicalDataset:
         # The concept itself is used as a dummy cognate class ID
         # NB: this logic will not work if the base concept ID already encodes cognate class
         elif cognates == 'none':
-            clustered_concepts = {concept: {concept: [
-                word for lang in self.concepts[concept]
-                for word in self.concepts[concept][lang]]} for concept in concept_list}
+            clustered_concepts = {
+                concept: {
+                    1: [word for lang in self.concepts[concept] for word in self.concepts[concept][lang]]
+                }
+                for concept in concept_list
+            }
 
         # Raise error for unrecognized cognate clustering methods
         else:
