@@ -793,9 +793,9 @@ class PhonCorrelator:
         # Prune correspondences which occur fewer than min_corr times
         # with the exception of phones which occur fewer than min_corr times in the language overall
         # TODO maybe should set to just 1 across the board?
-        #exc1, exc2 = self.phones_below_min_corr(min_corr)
-        corr_dict_l1l2 = prune_corrs(corr_dict_l1l2, min_val=min_corr)#, exc1=exc1, exc2=exc2)
-        corr_dict_l2l1 = prune_corrs(corr_dict_l2l1, min_val=min_corr)#, exc1=exc1, exc2=exc2)
+        exc1, exc2 = self.phones_below_min_corr(min_corr)
+        corr_dict_l1l2 = prune_corrs(corr_dict_l1l2, min_val=min_corr, exc1=exc1, exc2=exc2)
+        corr_dict_l2l1 = prune_corrs(corr_dict_l2l1, min_val=min_corr, exc1=exc1, exc2=exc2)
 
         # Remove keys with 0 values
         # (would occur from adjusting complex correspondences in preceding loop)
@@ -914,8 +914,8 @@ class PhonCorrelator:
                 corr_counts[seg1][seg2] += 1
 
         if min_corr > 1:
-            #exc1, exc2 = self.phones_below_min_corr(min_corr)
-            corr_counts = prune_corrs(corr_counts, min_val=min_corr)#, exc1=exc1, exc2=exc2)
+            exc1, exc2 = self.phones_below_min_corr(min_corr)
+            corr_counts = prune_corrs(corr_counts, min_val=min_corr, exc1=exc1, exc2=exc2)
 
         if not counts:
             for seg1 in corr_counts:
