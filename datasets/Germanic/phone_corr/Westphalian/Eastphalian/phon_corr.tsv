@@ -19,7 +19,6 @@ Westphalian	Eastphalian	probability
 ɪ	ɪ	1.0
 ɣ	ɣ	1.0
 ə	ə	1.0
-ɐ	ɐ	1.0
 ŋ	ŋ	1.0
 z_n	z_n	1.0
 z	z	1.0
@@ -40,6 +39,7 @@ h	h	1.0
 f	f	1.0
 d_n	n	1.0
 b	b	1.0
+ɐ	ɐ	0.939
 d	d	0.935
 t	t	0.907
 m	m	0.893
@@ -72,3 +72,4 @@ s	s	0.385
 x	j	0.158
 m	ɐ_m	0.107
 d	t	0.065
+ɐ	r_ə	0.061
