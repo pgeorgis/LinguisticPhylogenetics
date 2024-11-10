@@ -24,23 +24,26 @@ class Alignment:
                  gap_ch=GAP_CH_DEFAULT,
                  gop=-5,
                  pad_ch=PAD_CH_DEFAULT,
-                 n_best=1,
+                 pad_n=1,
+                 allow_complex=True,
                  phon_env=False,
                  **kwargs
                  ):
-        f"""Produces a pairwise alignment of two phone sequences.
+        """Produces a pairwise alignment of two phone sequences.
 
         Args:
-            seq1 (phyloLing.Word or str): first phone sequence
-            seq2 (phyloLing.Word or str): second phone sequence
-            lang1 (phyloLing.Language, optional): Language of seq1. Defaults to None.
-            lang2 (phyloLing.Language, optional): Language of seq2. Defaults to None.
+            seq1 (phyloLing.Word | str): First phone sequence.
+            seq2 (phyloLing.Word | str): Second phone sequence.
             align_costs (PhonemeMap): Dictionary of alignment costs or scores.
-            gap_ch (str, optional): Gap character. Defaults to '{GAP_CH_DEFAULT}'.
-            gop (float, optional): Gap opening penalty. Defaults to {gop}.
-            n_best (int, optional): Number of best (least costly) alignments to return. Defaults to 1.
-            phon_env (Bool, optional): Adds phonological environment to alignment. Defaults to False.
-        """ # TODO need to update this description, long outdated
+            lang1 (phyloLing.Language, optional): Language of seq1.
+            lang2 (phyloLing.Language, optional): Language of seq2.
+            gap_ch (str, optional): Gap character.
+            gop (int, optional): Default gap opening penalty.
+            pad_ch (str, optional): Pad character.
+            pad_n (int, optional): Number of padding units to add to beginning and end of sequences.
+            allow_complex (bool, optional): Allow complex alignments instead of only simple one-to-one alignments.
+            phon_env (bool, optional): Adds phonological environment to alignment.
+        """
 
         # Verify that input arguments are of the correct types
         self.validate_args(seq1, seq2, lang1, lang2)
@@ -62,18 +65,12 @@ class Alignment:
         self.align_costs: PhonemeMap = align_costs
         self.kwargs = kwargs
 
-        # Perform alignment
-        self.n_best = self.align(n_best)
-        self.alignment = self.n_best[0][0][:]
+        # Perform alignment and parse results
+        self.alignment, self.seq_map, self.cost = self.align(
+            allow_complex=allow_complex,
+            pad_n=pad_n,
+        )
         self.length = len(self.alignment)
-        self.original_length = self.length
-        self.original_alignment = self.alignment[:]
-
-        # Save cost of single best alignment
-        self.cost = self.n_best[0][-1]
-
-        # Map aligned pairs to respective sequence indices
-        self.seq_map = self.n_best[0][1]
         self.seq_map = self.validate_seq_map(*self.seq_map)
 
         # Compact boundary aligned gaps
@@ -105,32 +102,36 @@ class Alignment:
 
         return word1.segments, word1
 
-    def align(self, n_best=1): # TODO update description
-        """Align segments of word1 with segments of word2 according to Needleman-
-        Wunsch algorithm, with costs determined by phonetic and sonority similarity;
-        If not segmented, the words are first segmented before being aligned.
-        GOP = -1 by default, determined by cross-validation on dataset of gold cognate alignments."""
+    def align(self, allow_complex=True, pad_n=1):
+        """Align segments of two words word1 with segments of word2 according to an extended Needleman-Wunsch algorithm.
 
-        # Pad unigram sequences
-        padded1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
-        padded2 = pad_sequence(self.seq2, pad_ch=self.pad_ch, pad_n=1)
+        Returns:
+            tuple: alignment, sequence_maps, alignment_score
+        """
 
-        # Compute complex alignment using extended Needleman-Wunsch algorithm
-        complex_alignment_score, complex_alignment, seq_maps = needleman_wunsch_extended(
-            seq1=padded1,
-            seq2=padded2,
+        # Pad sequences
+        if pad_n > 0:
+            seq1 = pad_sequence(self.seq1, pad_ch=self.pad_ch, pad_n=1)
+            seq2 = pad_sequence(self.seq2, pad_ch=self.pad_ch, pad_n=1)
+        else:
+            seq1, seq2 = self.seq1, self.seq2
+
+        # Compute alignment using extended Needleman-Wunsch algorithm
+        alignment_score, alignment, seq_maps = needleman_wunsch_extended(
+            seq1=seq1,
+            seq2=seq2,
             align_cost=self.align_costs,
             gap_cost=self.align_costs,
             gap_ch=self.gap_ch,
             default_gop=self.gop,
-            allow_complex=True,
+            allow_complex=allow_complex,
             maximize_score=True,
         )
 
-        return [(complex_alignment, seq_maps, complex_alignment_score)] # TODO simplify output format
+        return alignment, seq_maps, alignment_score
 
     def postprocess_boundary_gaps(self, alignment):
-
+        """Post-process certain boundary gap alignments."""
         # ('-', '#>'), ('#>', '-') -> ('#>', '#>')
         if alignment[-2:] in [
             [(self.gap_ch, self.end_boundary_token), (self.end_boundary_token, self.gap_ch)],
@@ -599,15 +600,10 @@ class ReversedAlignment(Alignment):
         self.pad_ch = alignment.pad_ch
         self.align_costs: PhonemeMap = alignment.align_costs
         self.kwargs = alignment.kwargs
-        self.n_best = [(reverse_alignment(alignment_n), seq_map, cost) for alignment_n, seq_map, cost in alignment.n_best]
         self.alignment = reverse_alignment(alignment.alignment)
-
-        # Map aligned pairs to respective sequence indices
-        self.seq_map = tuple(reversed(alignment.seq_map))
-
-        # Save length and cost of single best alignment
-        self.cost = self.n_best[0][-1]
+        self.cost = alignment.cost
         self.length = len(self.alignment)
+        self.seq_map = tuple(reversed(alignment.seq_map))
 
         # Phonological environment alignment
         self.phon_env = alignment.phon_env
