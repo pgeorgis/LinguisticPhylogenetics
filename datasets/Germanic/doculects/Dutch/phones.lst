@@ -1,7 +1,7 @@
 VOWELS
 /ə/ (0.072)
 	<drinken> /dɾˈɪŋkən/ "drink_VERB"
-	<twaalf> /tʋˈaːɫəf/ "twelve_NUM"
+	<twaalf> /tʋˈaːɫəv̥/ "twelve_NUM"
 	<brouwen> /bɾˈɑu̯ən/ "brew_VERB"
 
 /ˈɑ/ (0.031)
@@ -16,7 +16,7 @@ VOWELS
 
 /ˈeː/ (0.026)
 	<week> /ʋˈeːk/ "weak_ADJ"
-	<vlees> /vɫˈeːs/ "flesh_NOUN"
+	<vlees> /vɫˈeːz̥/ "flesh_NOUN"
 	<deeg> /dˈeːχ/ "dough_NOUN"
 
 /ˈɔ/ (0.024)
@@ -56,8 +56,8 @@ VOWELS
 
 /ˈœy̯/ (0.012)
 	<huid> /ɦˈœy̯d̥/ "skin_NOUN"
-	<huis> /ɦˈœy̯s/ "house_NOUN"
-	<muis> /mˈœy̯s/ "mouse_NOUN_FEM"
+	<huis> /ɦˈœy̯z̥/ "house_NOUN"
+	<muis> /mˈœy̯z̥/ "mouse_NOUN_FEM"
 
 /ˈʏ/ (0.006)
 	<zuster> /zˈʏstəɾ/ "sister_NOUN"
@@ -79,7 +79,7 @@ VOWELS
 	<koning> /kˈoːnɪŋ/ "king_NOUN"
 
 /ˈøː/ (0.001)
-	<neus> /nˈøːs/ "nose_NOUN"
+	<neus> /nˈøːz̥/ "nose_NOUN"
 
 /i/ (0.001)
 	<dertien> /dˈɛɾtin/ "thirteen_NUM"
@@ -117,15 +117,15 @@ CONSONANTS
 	<ander> /ˈɑndəɾ/ "other_ADJ"
 	<donder> /dˈɔndəɾ/ "thunder_NOUN"
 
-/s/ (0.038)
-	<gras> /χɾˈɑs/ "grass_NOUN_NEU"
-	<naast> /nˈaːst/ "next_ADJ"
-	<muis> /mˈœy̯s/ "mouse_NOUN_FEM"
-
 /k/ (0.033)
-	<dik> /dˈɪk/ "thick_ADJ"
-	<teken> /tˈeːkən/ "token_NOUN"
-	<rijk> /ɾˈɛi̯k/ "rich_ADJ"
+	<koe> /kˈu/ "cow_NOUN"
+	<knie> /knˈi/ "knee_NOUN"
+	<koning> /kˈoːnɪŋ/ "king_NOUN"
+
+/s/ (0.031)
+	<stoel> /stˈuɫ/ "stool_NOUN"
+	<storm> /stˈɔɾm/ "storm_NOUN"
+	<slapen> /sɫˈaːpən/ "sleep_VERB"
 
 /d̥/ (0.03)
 	<brood> /bɾˈoːd̥/ "bread_NOUN"
@@ -172,24 +172,20 @@ CONSONANTS
 	<jong> /jˈɔŋ/ "young_NOUN"
 	<tong> /tˈɔŋ/ "tongue_NOUN"
 
-/v̥/ (0.008)
-	<zelf> /zˈɛɫv̥/ "self_PRON"
+/v̥/ (0.011)
+	<hoofd> /ɦˈoːv̥d̥/ "head_NOUN"
+	<twaalf> /tʋˈaːɫəv̥/ "twelve_NUM"
 	<duif> /dˈœy̯v̥/ "dove_NOUN"
-	<kalf> /kˈɑɫv̥/ "calf_NOUN"
 
-/f/ (0.004)
-	<vijf> /vˈɛi̯f/ "five_NUM"
-	<elf> /ˈɛɫəf/ "eleven_NUM"
-	<twaalf> /tʋˈaːɫəf/ "twelve_NUM"
+/z̥/ (0.009)
+	<gans> /χˈɑnz̥/ "goose_NOUN"
+	<neus> /nˈøːz̥/ "nose_NOUN"
+	<haas> /ɦˈaːz̥/ "hare_NOUN"
 
 /j/ (0.003)
-	<jong> /jˈɔŋ/ "young_NOUN"
 	<jij> /jˈɛi̯/ "ye_PRON"
+	<jong> /jˈɔŋ/ "young_NOUN"
 	<jaar> /jˈaːɾ/ "year_NOUN"
-
-/z̥/ (0.002)
-	<haas> /ɦˈaːz̥/ "hare_NOUN"
-	<kaas> /kˈaːz̥/ "cheese_NOUN"
 
 /w/ (0.002)
 	<sneeuw> /snˈeːw/ "snow_NOUN"

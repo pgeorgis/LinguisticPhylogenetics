@@ -5,29 +5,29 @@ VOWELS
 	<iviernu> /iβjˈeɾnu/ "WINTER_NOUN"
 
 /u/ (0.072)
-	<muyer> /muʝˈeɾ/ "WOMAN_WIFE_NOUN"
-	<blancu> /blˈaŋku/ "WHITE_ADJ"
+	<llobu> /ʎˈoβu/ "WOLF_NOUN"
+	<pozu> /pˈoθu/ "WELL_NOUN"
 	<cuerpu> /kwˈeɾpu/ "BODY_NOUN"
 
-/a/ (0.072)
+/a/ (0.071)
 	<llama> /ʎˈama/ "FLAME_NOUN"
-	<fía> /fˈia/ "DAUGHTER_NOUN"
+	<vaca> /bˈaka/ "COW_NOUN"
 	<razón> /raθˈoŋ/ "REASON_NOUN"
 
-/ˈa/ (0.053)
-	<cercar> /θeɾkˈaɾ/ "SEARCH_VERB"
-	<sentar> /sentˈaɾ/ "SIT_VERB"
-	<baxu> /bˈaʃu/ "LOW_ADJ"
+/ˈa/ (0.054)
+	<sable> /sˈaβle/ "SAND_NOUN"
+	<mar> /mˈaɾ/ "SEA_NOUN"
+	<llagu> /ʎˈaɣu/ "LAKE_NOUN"
 
-/e/ (0.05)
-	<enxiva> /enʃˈiβa/ "GUMS_NOUN"
-	<llevar> /ʎeβˈaɾ/ "CARRY_VERB"
-	<golpe> /ɡˈolpe/ "STRIKE_NOUN"
+/e/ (0.052)
+	<bones> /bˈones/ "GOOD (F.PL)_ADJ"
+	<hermanu> /eɾmˈanu/ "BROTHER_NOUN"
+	<espina> /espˈina/ "SPINE_NOUN"
 
 /ˈo/ (0.037)
 	<toos> /tˈoos/ "ALL (PL)_ADJ"
-	<xoven> /ʃˈoβen/ "YOUNG_ADJ"
-	<pocu> /pˈoku/ "LITTLE_ADJ"
+	<vosotros> /bosˈotɾos/ "YOU (PL)_PRON"
+	<lleón> /ʎeˈoŋ/ "LION_NOUN"
 
 /ˈi/ (0.021)
 	<vida> /bˈiða/ "LIFE_NOUN"
@@ -41,7 +41,7 @@ VOWELS
 
 /ˈu/ (0.018)
 	<lluz> /ʎˈuθ/ "LIGHT_NOUN"
-	<puñu> /pˈuɲu/ "FIST_NOUN"
+	<frutu> /fɾˈutu/ "FRUIT_NOUN"
 	<fumu> /fˈumu/ "SMOKE_NOUN"
 
 /i/ (0.005)
@@ -53,39 +53,39 @@ VOWELS
 
 CONSONANTS
 /ɾ/ (0.082)
-	<flor> /flˈoɾ/ "FLOWER_NOUN"
+	<fariña> /faɾˈiɲa/ "FLOUR_NOUN"
 	<nacer> /naθˈeɾ/ "BE BORN_VERB"
 	<conocer> /konoθˈeɾ/ "BE ACQUAINTED WITH_VERB"
 
-/n/ (0.048)
+/n/ (0.047)
 	<nacer> /naθˈeɾ/ "BE BORN_VERB"
 	<ceniza> /θenˈiθa/ "ASH_NOUN"
 	<santu> /sˈantu/ "SACRED_ADJ"
 
 /s/ (0.041)
-	<sufrir> /sufɾˈiɾ/ "SUFFER_VERB"
-	<güeyus> /ɡwˈeʝus/ "EYES_NOUN"
-	<fiesta> /fjˈesta/ "PARTY_NOUN"
+	<estáu> /estˈau/ "STATE_NOUN"
+	<espiga> /espˈiɣa/ "EAR OF GRAIN_NOUN"
+	<nuestru> /nwˈestɾu/ "OUR_ADJ"
 
-/k/ (0.035)
+/k/ (0.034)
 	<cosa> /kˈosa/ "THING_NOUN"
 	<conocer> /konoθˈeɾ/ "BE ACQUAINTED WITH_VERB"
 	<corderu> /koɾðˈeɾu/ "LAMB_NOUN"
 
-/t/ (0.031)
+/t/ (0.03)
 	<cincuenta> /θiŋkwˈenta/ "FIFTY_NUM"
 	<siete> /sjˈete/ "SEVEN_NUM"
 	<sentar> /sentˈaɾ/ "SIT_VERB"
 
-/m/ (0.026)
-	<fema> /fˈema/ "WOMAN_FEMALE_NOUN"
-	<metad> /metˈað/ "HALF_NOUN"
-	<mediu> /mˈeðju/ "MIDDLE_NOUN"
+/m/ (0.027)
+	<tiempu> /tjˈempu/ "TIME_NOUN"
+	<mosca> /mˈoska/ "FLY_NOUN"
+	<munchu> /mˈunʧu/ "MANY_ADJ"
 
-/ʎ/ (0.025)
+/ʎ/ (0.026)
 	<llagu> /ʎˈaɣu/ "LAKE_NOUN"
-	<llárima> /ʎˈaɾima/ "TEAR_NOUN"
-	<lleón> /ʎeˈoŋ/ "LION_NOUN"
+	<estrella> /estɾˈeʎa/ "STAR_NOUN"
+	<lluz> /ʎˈuθ/ "LIGHT_NOUN"
 
 /p/ (0.025)
 	<cuerpu> /kwˈeɾpu/ "BODY_NOUN"
@@ -97,44 +97,44 @@ CONSONANTS
 	<rei> /rˈej/ "KING_NOUN"
 	<piescu> /pjˈesku/ "PEACH_NOUN"
 
-/b/ (0.025)
+/b/ (0.024)
 	<beber> /beβˈeɾ/ "DRINK_VERB"
 	<vieyu> /bjˈeʝu/ "OLD_ADJ"
 	<vientu> /bjˈentu/ "WIND_NOUN"
 
-/l/ (0.023)
-	<filu> /fˈilu/ "STRING_NOUN"
-	<selmana> /selmˈana/ "WEEK_NOUN"
-	<salú> /salˈu/ "HEALTH_NOUN"
-
-/θ/ (0.022)
-	<cientu> /θjˈentu/ "HUNDRED_NUM"
-	<razón> /raθˈoŋ/ "REASON_NOUN"
-	<voz> /bˈoθ/ "VOICE_NOUN"
-
-/β/ (0.022)
+/β/ (0.023)
+	<iviernu> /iβjˈeɾnu/ "WINTER_NOUN"
 	<escribir> /eskɾiβˈiɾ/ "WRITE_VERB"
-	<xoven> /ʃˈoβen/ "YOUNG_ADJ"
+	<llebre> /ʎˈeβɾe/ "HARE_NOUN"
+
+/l/ (0.023)
+	<sal> /sˈal/ "SALT_NOUN"
+	<palaciu> /palˈaθju/ "PALACE_NOUN"
 	<árbol> /ˈaɾβol/ "TREE_NOUN"
 
+/θ/ (0.022)
+	<doce> /dˈoθe/ "TWELVE_NUM"
+	<pozu> /pˈoθu/ "WELL_NOUN"
+	<palaciu> /palˈaθju/ "PALACE_NOUN"
+
 /w/ (0.022)
+	<llueu> /ʎwˈeu/ "PLACE_NOUN"
 	<cuesta> /kwˈesta/ "COAST_NOUN"
 	<agua> /ˈaɣwa/ "WATER_NOUN"
-	<xuez> /ʃwˈeθ/ "JUDGE_NOUN"
 
 /f/ (0.018)
-	<fuerte> /fwˈeɾte/ "STRONG_ADJ"
-	<fema> /fˈema/ "WOMAN_FEMALE_NOUN"
-	<frutu> /fɾˈutu/ "FRUIT_NOUN"
+	<fin> /fˈiŋ/ "END_NOUN"
+	<filu> /fˈilu/ "STRING_NOUN"
+	<sufrir> /sufɾˈiɾ/ "SUFFER_VERB"
 
 /ð/ (0.014)
+	<fégadu> /fˈeɣaðu/ "LIVER_NOUN"
 	<mediu> /mˈeðju/ "MIDDLE_NOUN"
 	<padre> /pˈaðɾe/ "FATHER_NOUN"
-	<vida> /bˈiða/ "LIFE_NOUN"
 
 /ʝ/ (0.012)
-	<muyer> /muʝˈeɾ/ "WOMAN_WIFE_NOUN"
 	<fueya> /fwˈeʝa/ "LEAF_NOUN"
+	<muyer> /muʝˈeɾ/ "WOMAN_WIFE_NOUN"
 	<creyer> /kɾeʝˈeɾ/ "BELIEVE_VERB"
 
 /ʃ/ (0.011)

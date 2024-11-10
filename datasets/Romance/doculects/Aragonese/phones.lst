@@ -1,5 +1,5 @@
 VOWELS
-/o/ (0.08)
+/o/ (0.079)
 	<color> /kolˈoɾ/ "COLOR_NOUN"
 	<denguno> /deŋɡˈuno/ "NONE_PRON"
 	<blanco> /blˈaŋko/ "WHITE_ADJ"
@@ -9,19 +9,19 @@ VOWELS
 	<augua> /ˈawɣwa/ "WATER_NOUN"
 	<cadena> /kaðˈena/ "CHAIN_NOUN"
 
-/ˈe/ (0.076)
+/ˈe/ (0.075)
 	<chuego> /ʧwˈeɣo/ "GAME_NOUN"
 	<fredo> /fɾˈeðo/ "COLD_ADJ"
 	<nuez> /nwˈeθ/ "NUT_NOUN"
 
-/ˈa/ (0.059)
-	<naso> /nˈaso/ "NOSE_NOUN"
-	<paz> /pˈaθ/ "PEACE_NOUN"
-	<nusatros> /nusˈatɾos/ "WE_PRON"
+/ˈa/ (0.06)
+	<montaña> /montˈaɲa/ "MOUNTAIN_NOUN"
+	<palazio> /palˈaθjo/ "PALACE_NOUN"
+	<plorar> /ploɾˈaɾ/ "WEEP_VERB"
 
 /e/ (0.038)
-	<hombre> /ˈombɾe/ "MAN_NOUN"
-	<espada> /espˈaða/ "SWORD_NOUN"
+	<pedullo> /peðˈuʎo/ "LOUSE_NOUN"
+	<dulze> /dˈulθe/ "SWEET_ADJ"
 	<chelar> /ʧelˈaɾ/ "FREEZE_VERB"
 
 /ˈi/ (0.025)
@@ -34,148 +34,148 @@ VOWELS
 	<royo> /rˈoʝo/ "RED_ADJ"
 	<sobre> /sˈoβɾe/ "ABOVE_PREP"
 
-/ˈu/ (0.02)
-	<punto> /pˈunto/ "POINT_NOUN"
-	<luz> /lˈuθ/ "LIGHT_NOUN"
-	<fruito> /fɾˈujto/ "FRUIT_NOUN"
+/ˈu/ (0.021)
+	<cuixa> /kˈujʃa/ "THIGH_NOUN"
+	<muito> /mˈujto/ "MANY_ADJ"
+	<lumbre> /lˈumbɾe/ "LIGHT_NOUN"
 
 /i/ (0.008)
-	<escribir> /eskɾiβˈiɾ/ "WRITE_VERB"
-	<minchar> /minʧˈaɾ/ "EAT_VERB"
 	<villano> /biʎˈano/ "VILLAIN_NOUN"
+	<chirmán> /ʧiɾmˈan/ "BROTHER_NOUN"
+	<zincuanta> /θiŋkwˈanta/ "FIFTY_NUM"
 
 /u/ (0.005)
-	<tusir> /tusˈiɾ/ "COUGH_VERB"
-	<aduyar> /aðuʝˈaɾ/ "HELP_VERB"
 	<ziudat> /θjuðˈat/ "CITY_NOUN"
+	<vusatros> /busˈatɾos/ "YOU (PL)_PRON"
+	<muller> /muʎˈeɾ/ "WOMAN_WIFE_NOUN"
 
 
 
 CONSONANTS
-/ɾ/ (0.076)
-	<naixer> /najʃˈeɾ/ "BE BORN_VERB"
-	<creyer> /kɾeʝˈeɾ/ "BELIEVE_VERB"
-	<puerca> /pwˈeɾka/ "SOW_NOUN"
+/ɾ/ (0.077)
+	<dormir> /doɾmˈiɾ/ "SLEEP_VERB"
+	<pre> /pɾˈe/ "PRICE_NOUN"
+	<conoixer> /konojʃˈeɾ/ "BE ACQUAINTED WITH_VERB"
 
 /n/ (0.053)
-	<fino> /fˈino/ "THIN_ADJ"
-	<zenisa> /θenˈisa/ "ASH_NOUN"
 	<no> /no/ "NOT_ADVERB"
+	<man> /mˈan/ "HAND_NOUN"
+	<punto> /pˈunto/ "POINT_NOUN"
 
 /l/ (0.043)
-	<clau> /klˈaw/ "KEY_NOUN"
-	<glarima> /ɡlaɾˈima/ "TEAR_NOUN"
 	<clamar> /klamˈaɾ/ "CALL_VERB"
+	<lei> /lˈej/ "LAW_NOUN"
+	<mil> /mˈil/ "THOUSAND_NUM"
 
 /s/ (0.038)
-	<simién> /simjˈen/ "SEED_NOUN"
+	<sal> /sˈal/ "SALT_NOUN"
+	<seda> /sˈeða/ "SILK_NOUN"
 	<mosca> /mˈoska/ "FLY_NOUN"
-	<dos> /dˈos/ "TWO (M)_NUM"
 
 /j/ (0.036)
-	<lei> /lˈej/ "MILK_NOUN"
-	<viello> /bjˈeʎo/ "OLD_ADJ"
-	<reina> /rˈejna/ "QUEEN_NOUN"
+	<viache> /bjˈaʧe/ "JOURNEY_NOUN"
+	<graixa> /ɡɾˈajʃa/ "FAT_NOUN"
+	<nieu> /njˈew/ "SNOW_NOUN"
 
 /k/ (0.035)
 	<cruz> /kɾˈuθ/ "CROSS_NOUN"
-	<cuatro> /kwˈatɾo/ "FOUR_NUM"
-	<cantar> /kantˈaɾ/ "SING_VERB"
+	<cosa> /kˈosa/ "THING_NOUN"
+	<caballo> /kaβˈaʎo/ "HORSE_NOUN"
 
 /t/ (0.034)
-	<luita> /lˈujta/ "FIGHT_NOUN"
-	<nusatros> /nusˈatɾos/ "WE_PRON"
-	<atro> /ˈatɾo/ "OTHER_ADJ"
+	<metat> /metˈat/ "HALF_NOUN"
+	<tot> /tˈot/ "ALL (SG)_ADJ"
+	<maturo> /matˈuɾo/ "MATURE_NOUN"
 
 /w/ (0.031)
-	<cuerno> /kwˈeɾno/ "HORN_NOUN"
-	<ueso> /wˈeso/ "BONE_NOUN"
-	<nueu> /nwˈew/ "NINE_NUM"
+	<uembro> /wˈembɾo/ "SHOULDER_NOUN"
+	<estiu> /estˈiw/ "SUMMER_NOUN"
+	<igual> /iɣwˈal/ "EQUAL_ADJ"
 
 /p/ (0.028)
-	<piedra> /pjˈeðɾa/ "STONE_NOUN"
-	<lupo> /lˈupo/ "WOLF_NOUN"
-	<poder> /poðˈeɾ/ "CAN_VERB"
+	<pex> /pˈeʃ/ "FISH_NOUN"
+	<puzo> /pˈuθo/ "WELL_NOUN"
+	<saper> /sapˈeɾ/ "KNOW_VERB"
 
-/m/ (0.027)
-	<mosca> /mˈoska/ "FLY_NOUN"
-	<amariello> /amaɾjˈeʎo/ "YELLOW_ADJ"
-	<muito> /mˈujto/ "MANY_ADJ"
+/m/ (0.028)
+	<comer> /komˈeɾ/ "EAT_VERB"
+	<maturo> /matˈuɾo/ "MATURE_NOUN"
+	<alma> /ˈalma/ "SOUL_NOUN"
 
 /b/ (0.026)
-	<beber> /beβˈeɾ/ "DRINK_VERB"
-	<nombre> /nˈombɾe/ "NAME_NOUN"
-	<voz> /bˈoθ/ "VOICE_NOUN"
+	<veyer> /beʝˈeɾ/ "SEE_VERB"
+	<villano> /biʎˈano/ "VILLAIN_NOUN"
+	<buenos> /bwˈenos/ "GOOD (M.PL)_ADJ"
 
 /θ/ (0.019)
-	<nuez> /nwˈeθ/ "NUT_NOUN"
-	<razón> /raθˈon/ "REASON_NOUN"
-	<voz> /bˈoθ/ "VOICE_NOUN"
+	<chuez> /ʧwˈeθ/ "JUDGE_NOUN"
+	<dezir> /deθˈiɾ/ "SAY-INF_VERB"
+	<puzo> /pˈuθo/ "WELL_NOUN"
 
 /β/ (0.018)
-	<ibierno> /iβjˈeɾno/ "WINTER_NOUN"
-	<craba> /kɾˈaβa/ "GOAT_NOUN"
-	<cabello> /kaβˈeʎo/ "HAIR_NOUN"
+	<proveito> /pɾoβˈejto/ "PROFIT_NOUN"
+	<choven> /ʧˈoβen/ "YOUNG_ADJ"
+	<plevia> /plˈeβja/ "RAIN_NOUN"
 
 /ʎ/ (0.018)
-	<cabello> /kaβˈeʎo/ "HAIR_NOUN"
+	<chenullo> /ʧenˈuʎo/ "KNEE_NOUN"
 	<gualla> /ɡwˈaʎa/ "QUAIL_NOUN"
-	<cuello> /kwˈeʎo/ "NECK_NOUN"
+	<millor> /miʎˈoɾ/ "BETTER_ADJ"
 
 /f/ (0.017)
-	<fiesta> /fjˈesta/ "PARTY_NOUN"
-	<fambre> /fˈambɾe/ "HUNGER_NOUN"
-	<fillo> /fˈiʎo/ "SON_NOUN"
+	<figado> /fiɣˈaðo/ "LIVER_NOUN"
+	<fuego> /fwˈeɣo/ "FIRE_NOUN"
+	<sofrir> /sofɾˈiɾ/ "SUFFER_VERB"
 
 /ð/ (0.014)
-	<poder> /poðˈeɾ/ "CAN_VERB"
-	<seda> /sˈeða/ "SILK_NOUN"
-	<verde> /bˈeɾðe/ "GREEN_ADJ"
+	<pedullo> /peðˈuʎo/ "LOUSE_NOUN"
+	<radiz> /raðˈiθ/ "ROOT_NOUN"
+	<fada> /fˈaða/ "FATE_NOUN"
 
 /ʧ/ (0.011)
-	<chunio> /ʧˈunjo/ "JUNE_PROPN"
-	<chenullo> /ʧenˈuʎo/ "KNEE_NOUN"
-	<viache> /bjˈaʧe/ "JOURNEY_NOUN"
+	<chuez> /ʧwˈeθ/ "JUDGE_NOUN"
+	<choven> /ʧˈoβen/ "YOUNG_ADJ"
+	<pancha> /pˈanʧa/ "BELLY_NOUN"
 
 /d/ (0.011)
-	<dios> /djˈos/ "GOD_NOUN"
-	<dormir> /doɾmˈiɾ/ "SLEEP_VERB"
-	<redondo> /reðˈondo/ "ROUND_ADJ"
+	<dien> /djˈen/ "TOOTH_NOUN"
+	<don> /dˈon/ "GIFT_NOUN"
+	<dulze> /dˈulθe/ "SWEET_ADJ"
 
-/ɣ/ (0.011)
-	<plaga> /plˈaɣa/ "PLAGUE_NOUN"
-	<negro> /nˈeɣɾo/ "BLACK_ADJ"
-	<chuego> /ʧwˈeɣo/ "GAME_NOUN"
+/ɣ/ (0.01)
+	<igual> /iɣwˈal/ "EQUAL_ADJ"
+	<figado> /fiɣˈaðo/ "LIVER_NOUN"
+	<digo> /dˈiɣo/ "SAY-1SG_VERB"
 
 /ɡ/ (0.01)
-	<denguno> /deŋɡˈuno/ "NONE_PRON"
-	<goyo> /ɡˈoʝo/ "JOY_NOUN"
-	<sangre> /sˈaŋɡɾe/ "BLOOD_NOUN"
+	<ungla> /ˈuŋɡla/ "FINGERNAIL_NOUN"
+	<graixa> /ɡɾˈajʃa/ "FAT_NOUN"
+	<grano> /ɡɾˈano/ "GRAIN_NOUN"
 
 /ʝ/ (0.007)
-	<aduyo> /aðˈuʝo/ "HELP-1SG_VERB"
-	<royo> /rˈoʝo/ "RED_ADJ"
-	<meyo> /mˈeʝo/ "MIDDLE_NOUN"
+	<creyer> /kɾeʝˈeɾ/ "BELIEVE_VERB"
+	<leyer> /leʝˈeɾ/ "READ_VERB"
+	<veyer> /beʝˈeɾ/ "SEE_VERB"
 
-/r/ (0.007)
-	<royo> /rˈoʝo/ "RED_ADJ"
-	<radiz> /raðˈiθ/ "ROOT_NOUN"
-	<tierra> /tjˈera/ "EARTH_NOUN"
-
-/ɲ/ (0.006)
-	<leño> /lˈeɲo/ "WOOD_NOUN"
-	<baño> /bˈaɲo/ "BATH_NOUN"
+/ɲ/ (0.007)
+	<montaña> /montˈaɲa/ "MOUNTAIN_NOUN"
+	<Espanya> /espˈaɲa/ "SPAIN_PROPN"
 	<peña> /pˈeɲa/ "FEATHER_NOUN"
 
+/r/ (0.007)
+	<rei> /rˈej/ "KING_NOUN"
+	<redondo> /reðˈondo/ "ROUND_ADJ"
+	<reina> /rˈejna/ "QUEEN_NOUN"
+
 /ŋ/ (0.006)
-	<denguno> /deŋɡˈuno/ "NONE_PRON"
-	<zincuanta> /θiŋkwˈanta/ "FIFTY_NUM"
-	<viengo> /bjˈeŋɡo/ "COME-1SG_VERB"
+	<sangre> /sˈaŋɡɾe/ "BLOOD_NOUN"
+	<ungla> /ˈuŋɡla/ "FINGERNAIL_NOUN"
+	<zinco> /θˈiŋko/ "FIVE_NUM"
 
 /ʃ/ (0.005)
+	<cuixa> /kˈujʃa/ "THIGH_NOUN"
 	<pex> /pˈeʃ/ "FISH_NOUN"
 	<naixer> /najʃˈeɾ/ "BE BORN_VERB"
-	<conoixer> /konojʃˈeɾ/ "BE ACQUAINTED WITH_VERB"
 
 /z/ (0.001)
 	<isla> /ˈizla/ "ISLAND_NOUN"

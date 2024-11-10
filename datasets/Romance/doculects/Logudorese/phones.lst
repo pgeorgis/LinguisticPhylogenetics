@@ -1,219 +1,217 @@
 VOWELS
-/e/ (0.092)
-	<cheréssia> /kerˈesja/ "CHERRY_NOUN"
-	<leghere> /lˈeɣere/ "READ_VERB"
-	<berme> /bˈerme/ "WORM_NOUN"
+/ɛ/ (0.086)
+	<cambiare> /kambjˈaɾɛ/ "CHANGE_VERB"
+	<rajone> /ɾajˈɔnɛ/ "REASON_NOUN"
+	<operaju> /ɔpɛrˈaju/ "WORKER_NOUN"
 
 /u/ (0.076)
-	<lubu> /lˈuβu/ "WOLF_NOUN"
-	<alvu> /ˈalvu/ "WHITE_ADJ"
-	<puzone> /puʣˈone/ "BIRD_NOUN"
+	<aranzolu> /aɾanʣˈolu/ "SPIDER_NOUN"
+	<chelu> /kˈelu/ "SKY_NOUN"
+	<lettu> /lˈetu/ "BED_NOUN"
 
-/a/ (0.064)
-	<bona> /bˈona/ "GOOD (F.SG)_ADJ"
-	<sica> /sˈika/ "DRY (F)_ADJ"
-	<aranza> /arˈanʣa/ "SPIDER_NOUN"
+/a/ (0.068)
+	<musca> /mˈuska/ "FLY_NOUN"
+	<fiza> /fˈiʣa/ "DAUGHTER_NOUN"
+	<proja> /pɾˈɔja/ "RAIN_NOUN"
 
 /ˈa/ (0.056)
-	<narrere> /nˈarːere/ "SAY-INF_VERB"
-	<cantare> /kantˈare/ "SING_VERB"
-	<agu> /ˈaɣu/ "NEEDLE_NOUN"
+	<àteru> /ˈateɾu/ "OTHER_ADJ"
+	<piae> /pjˈaɛ/ "PLAGUE_NOUN"
+	<noisàteros> /nojzˈatɛɾɔzɔ̆/ "WE_PRON"
 
-/ˈo/ (0.042)
-	<forte> /fˈorte/ "STRONG_ADJ"
-	<obu> /ˈoβu/ "EGG_NOUN"
-	<ossu> /ˈosu/ "BONE_NOUN"
+/ˈi/ (0.036)
+	<isula> /ˈizula/ "ISLAND_NOUN"
+	<miza> /mˈiʣa/ "THOUSAND_NUM"
+	<fìne> /fˈinɛ/ "END_NOUN"
 
-/ˈe/ (0.04)
-	<becru> /bˈekru/ "OLD_ADJ"
-	<béllu> /bˈelu/ "BEAUTIFUL (M)_ADJ"
-	<jerru> /jˈerːu/ "WINTER_NOUN"
+/ˈɔ/ (0.028)
+	<ponte> /pˈɔntɛ/ "BRIDGE_NOUN"
+	<proja> /pɾˈɔja/ "RAIN_NOUN"
+	<iscortza> /iskˈɔɾʦa/ "BARK_NOUN"
 
-/ˈi/ (0.039)
-	<pilu> /pˈilu/ "HAIR_NOUN"
-	<bochíere> /bokˈiere/ "KILL_VERB"
-	<bídere> /bˈiðerĕ/ "SEE_VERB"
+/ˈu/ (0.026)
+	<nesciunu> /neʃˈunu/ "NONE_PRON"
+	<puntu> /pˈuntu/ "POINT_NOUN"
+	<duas> /dˈuază/ "TWO (F)_NUM"
 
-/i/ (0.029)
-	<chinisa> /kˈinisa/ "ASH_NOUN"
-	<istàdu> /istˈaðu/ "STATE_NOUN"
-	<priogu> /priˈoɣu/ "LOUSE_NOUN"
+/i/ (0.026)
+	<chinisu> /kinˈizu/ "ASH_NOUN"
+	<Ispagna> /ispˈaɲa/ "SPAIN_PROPN"
+	<imbìligu> /imbˈiliɣu/ "NAVEL_NOUN"
 
-/ˈu/ (0.025)
-	<lughe> /lˈuɣe/ "LIGHT_NOUN"
-	<butiu> /bˈutju/ "DROP_NOUN"
-	<ruju> /rˈuju/ "RED_ADJ"
+/ˈɛ/ (0.023)
+	<leghe> /lˈɛɣɛ/ "LAW_NOUN"
+	<sera> /sˈɛɾa/ "EVENING_NOUN"
+	<rena> /ɾˈɛna/ "SAND_NOUN"
 
-/o/ (0.013)
-	<podere> /poðˈere/ "CAN_VERB"
-	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
-	<duos> /dˈuozŏ/ "TWO (M)_NUM"
+/ˈo/ (0.015)
+	<tottu> /tˈotu/ "ALL (SG)_ADJ"
+	<póberu> /pˈoβeɾu/ "POOR_ADJ"
+	<nostru> /nˈostɾu/ "OUR_ADJ"
 
-/ŭ/ (0.004)
-	<bosatrus> /bozˈatruzŭ/ "YOU (PL)_PRON"
+/ˈe/ (0.015)
+	<bellu> /bˈelu/ "BEAUTIFUL (M)_ADJ"
+	<mesu> /mˈezu/ "MIDDLE_NOUN"
+	<bentu> /bˈentu/ "WIND_NOUN"
+
+/ɔ/ (0.013)
+	<ojos> /ˈɔjɔzɔ̆/ "EYES_NOUN"
+	<deo> /dˈɛɔ/ "I_PRON"
+	<tottos> /tˈɔtɔzɔ̆/ "ALL (PL)_ADJ"
+
+/e/ (0.007)
+	<àteru> /ˈateɾu/ "OTHER_ADJ"
+	<mesidade> /meziðˈaðɛ/ "HALF_NOUN"
+	<nesciunu> /neʃˈunu/ "NONE_PRON"
+
+/ɔ̆/ (0.006)
+	<noisàteros> /nojzˈatɛɾɔzɔ̆/ "WE_PRON"
+	<bois> /bˈɔjzɔ̆/ "YOU (PL)_PRON"
+	<bonos> /bˈɔnɔzɔ̆/ "GOOD (M.PL)_ADJ"
+
+/o/ (0.004)
+	<orija> /oɾˈija/ "EAR_NOUN"
+	<mossigare> /mosiɣˈaɾɛ/ "BITE_VERB"
+	<noisàteros> /nojzˈatɛɾɔzɔ̆/ "WE_PRON"
+
+/ŭ/ (0.003)
+	<deus> /dˈɛuzŭ/ "GOD_NOUN"
+	<pettus> /pˈetuzŭ/ "BREAST_NOUN"
 	<mezus> /mˈeʣuzŭ/ "BETTER_ADV"
-	<corpus> /kˈorpuzŭ/ "BODY_NOUN"
 
-/ŏ/ (0.003)
-	<bator> /bˈatorŏ/ "FOUR_NUM"
-	<duos> /dˈuozŏ/ "TWO (M)_NUM"
-	<ocros> /ˈokrozŏ/ "EYES_NOUN"
-
-/ĕ/ (0.002)
-	<tres> /trˈezĕ/ "THREE_NUM"
-	<bídere> /bˈiðerĕ/ "SEE_VERB"
-	<ses> /sˈezĕ/ "SIX_NUM"
+/ɛ̆/ (0.001)
+	<tres> /tɾˈɛzɛ̆/ "THREE_NUM"
+	<ses> /sˈɛzɛ̆/ "SIX_NUM"
 
 /ă/ (0.001)
+	<bonas> /bˈɔnază/ "GOOD (F.PL)_ADJ"
 	<duas> /dˈuază/ "TWO (F)_NUM"
-	<bonas> /bˈonază/ "GOOD (F.PL)_ADJ"
 
 
 
 CONSONANTS
-/r/ (0.086)
-	<frútu> /frˈutu/ "FRUIT_NOUN"
-	<oricra> /orˈikra/ "EAR_NOUN"
-	<dormire> /dormˈire/ "SLEEP_VERB"
+/ɾ/ (0.082)
+	<bigru> /bˈiɡɾu/ "CALF_NOUN"
+	<dormire> /doɾmˈiɾɛ/ "SLEEP_VERB"
+	<farina> /faɾˈina/ "FLOUR_NOUN"
 
-/n/ (0.053)
-	<sana> /sˈana/ "HEALTHY (F)_ADJ"
-	<niàe> /niˈae/ "SNOW (VERB)_VERB"
-	<nomene> /nˈomene/ "NAME_NOUN"
+/n/ (0.055)
+	<sementza> /sɛmˈɛnʦa/ "SEED_NOUN"
+	<reghina> /ɾeɣˈina/ "QUEEN_NOUN"
+	<zóvanu> /ʣˈɔβanu/ "YOUNG_ADJ"
 
-/k/ (0.044)
-	<chíe> /kˈie/ "WHO_PRON"
-	<chisina> /kˈisina/ "ASH_NOUN"
-	<chimbe> /kˈimbe/ "FIVE_NUM"
+/k/ (0.038)
+	<cheriasa> /keɾjˈaza/ "CHERRY_NOUN"
+	<caru> /kˈaɾu/ "DEAR_ADJ"
+	<iscuru> /iskˈuɾu/ "DARK_ADJ"
 
-/s/ (0.037)
-	<sèmene> /sˈemini/ "SEED_NOUN"
-	<Ispagna> /ispˈaɲa/ "SPAIN_PROPN"
-	<sambene> /sˈambene/ "BLOOD_NOUN"
+/b/ (0.034)
+	<bia> /bˈia/ "ROAD_NOUN"
+	<bàsciu> /bˈaʃu/ "LOW_ADJ"
+	<bucca> /bˈuka/ "MOUTH_NOUN"
 
-/b/ (0.037)
-	<bíere> /bˈiere/ "DRINK_VERB"
-	<bula> /bˈula/ "THROAT_NOUN"
-	<bene> /bˈene/ "WELL (ADV)_ADV"
+/t/ (0.033)
+	<montagna> /mɔntˈaɲa/ "MOUNTAIN_NOUN"
+	<cantu> /kˈantu/ "SONG_NOUN"
+	<atunzu> /atˈunʣu/ "AUTUMN_NOUN"
 
-/l/ (0.035)
-	<mele> /mˈele/ "HONEY_NOUN"
-	<colore> /kolˈore/ "COLOR_NOUN"
-	<paragula> /parˈaɣula/ "WORD_NOUN"
+/s/ (0.033)
+	<pérsighe> /pˈeɾsiɣɛ/ "PEACH_NOUN"
+	<sera> /sˈɛɾa/ "EVENING_NOUN"
+	<istade> /istˈaðɛ/ "SUMMER_NOUN"
 
-/t/ (0.032)
-	<chentu> /kˈentu/ "HUNDRED_NUM"
-	<cantare> /kantˈare/ "SING_VERB"
-	<nostru> /nˈostru/ "OUR_ADJ"
+/m/ (0.031)
+	<mi> /mˈi/ "I_OBL_PRON"
+	<luma> /lˈuma/ "LIGHT_NOUN"
+	<chima> /kˈima/ "SUMMIT_NOUN"
 
-/m/ (0.025)
-	<limba> /lˈimba/ "TONGUE_NOUN"
-	<musca> /mˈuska/ "FLY_NOUN"
-	<mésu> /mˈezu/ "MIDDLE_NOUN"
+/l/ (0.029)
+	<belare> /bɛlˈaɾɛ/ "FREEZE_VERB"
+	<lìttera> /lˈitɛɾa/ "LETTER_NOUN"
+	<sale> /sˈalɛ/ "SALT_NOUN"
 
-/p/ (0.024)
-	<paghe> /pˈaɣe/ "PEACE_NOUN"
-	<putzu> /pˈuʦu/ "WELL_NOUN"
-	<paragula> /parˈaɣula/ "WORD_NOUN"
+/p/ (0.025)
+	<puntu> /pˈuntu/ "POINT_NOUN"
+	<pòdere> /pˈɔðɛɾɛ/ "CAN_VERB"
+	<pedde> /pˈɛɖːɛ/ "SKIN_NOUN"
 
-/ɣ/ (0.02)
-	<pagu> /pˈaɣu/ "LITTLE_ADJ"
-	<nughe> /nˈuɣe/ "NUT_NOUN"
-	<paragula> /parˈaɣula/ "WORD_NOUN"
+/ɣ/ (0.021)
+	<dóighi> /dˈoiɣi/ "TWELVE_NUM"
+	<mandigare> /mandiɣˈaɾɛ/ "EAT_VERB"
+	<zùighe> /ʣˈuiɣe/ "JUDGE_NOUN"
+
+/z/ (0.018)
+	<nemos> /nˈɛmɔzɔ̆/ "NONE_PRON"
+	<bois> /bˈɔjzɔ̆/ "YOU (PL)_PRON"
+	<bonos> /bˈɔnɔzɔ̆/ "GOOD (M.PL)_ADJ"
 
 /f/ (0.018)
-	<fridu> /frˈiðu/ "COLD_ADJ"
-	<foza> /fˈoʣa/ "LEAF_NOUN"
-	<fada> /fˈaða/ "FATE_NOUN"
+	<framma> /fɾˈama/ "FLAME_NOUN"
+	<fàmene> /fˈamɛnɛ/ "HUNGER_NOUN"
+	<faeddare> /faɛɖːˈaɾɛ/ "SPEAK_VERB"
 
-/ð/ (0.015)
-	<fígadu> /fˈiɣaðu/ "LIVER_NOUN"
-	<bídere> /bˈiðerĕ/ "SEE_VERB"
-	<fada> /fˈaða/ "FATE_NOUN"
+/ð/ (0.014)
+	<frade> /fɾˈaðɛ/ "BROTHER_NOUN"
+	<seda> /sˈɛða/ "SILK_NOUN"
+	<pòdere> /pˈɔðɛɾɛ/ "CAN_VERB"
 
-/d/ (0.013)
-	<dulche> /dˈulke/ "SWEET_ADJ"
-	<duos> /dˈuozŏ/ "TWO (M)_NUM"
-	<didu> /dˈiðu/ "FINGER_NOUN"
+/j/ (0.014)
+	<benuju> /benˈuju/ "KNEE_NOUN"
+	<boisàteros> /bojzˈatɛɾɔzɔ̆/ "YOU (PL)_PRON"
+	<saju> /sˈaju/ "WISE_ADJ"
 
-/z/ (0.012)
-	<duos> /dˈuozŏ/ "TWO (M)_NUM"
-	<ses> /sˈezĕ/ "SIX_NUM"
-	<mésu> /mˈezu/ "MIDDLE_NOUN"
+/ʣ/ (0.012)
+	<muzere> /muʣˈɛɾɛ/ "WOMAN_WIFE_NOUN"
+	<zóvanu> /ʣˈɔβanu/ "YOUNG_ADJ"
+	<foza> /fˈɔʣa/ "LEAF_NOUN"
 
-/ʣ/ (0.008)
-	<puzone> /puʣˈone/ "BIRD_NOUN"
-	<fiza> /fˈiʣa/ "DAUGHTER_NOUN"
-	<aranza> /arˈanʣa/ "SPIDER_NOUN"
+/d/ (0.012)
+	<donu> /dˈonu/ "GIFT_NOUN"
+	<duos> /dˈuɔzɔ̆/ "TWO (M)_NUM"
+	<dente> /dˈɛntɛ/ "TOOTH_NOUN"
 
-/ɡ/ (0.008)
-	<ungra> /ˈuŋɡra/ "FINGERNAIL_NOUN"
-	<aguale> /aɡwˈale/ "EQUAL_ADJ"
-	<binghia> /biŋɡˈia/ "GUMS_NOUN"
-
-/β/ (0.007)
-	<subra> /sˈuβra/ "ABOVE_PREP"
-	<nobu> /nˈoβu/ "NEW_ADJ"
-	<òbera> /ˈoβera/ "WORK_NOUN"
+/ɡ/ (0.007)
+	<grassu> /ɡɾˈasu/ "FAT_NOUN"
+	<ànghelu> /ˈaŋɡelu/ "ANGEL_NOUN"
+	<grogu> /ɡɾˈoɣu/ "YELLOW_ADJ"
 
 /ɖː/ (0.006)
-	<coddu> /kˈoɖːu/ "NECK_NOUN"
-	<pedhe> /pˈeɖːe/ "SKIN_NOUN"
-	<aneddu> /anˈeɖːu/ "RING_NOUN"
+	<isteddu> /istˈeɖːu/ "STAR_NOUN"
+	<bidda> /bˈiɖːa/ "TOWN_NOUN"
+	<caddu> /kˈaɖːu/ "HORSE_NOUN"
 
-/j/ (0.006)
-	<butiu> /bˈutju/ "DROP_NOUN"
-	<jerru> /jˈerːu/ "WINTER_NOUN"
-	<judighe> /jˈuðiɣe/ "JUDGE_NOUN"
+/r/ (0.006)
+	<narrere> /nˈarɛɾɛ/ "SAY-INF_VERB"
+	<preju> /prˈeju/ "PRICE_NOUN"
+	<operaju> /ɔpɛrˈaju/ "WORKER_NOUN"
 
-/ŋ/ (0.004)
-	<ungra> /ˈuŋɡra/ "FINGERNAIL_NOUN"
-	<ànghelu> /ˈaŋɡelu/ "ANGEL_NOUN"
-	<prànghere> /prˈaŋɡere/ "WEEP_VERB"
+/β/ (0.005)
+	<arbu> /ˈaɾβu/ "WHITE_ADJ"
+	<póberu> /pˈoβeɾu/ "POOR_ADJ"
+	<craba> /kɾˈaβa/ "GOAT_NOUN"
 
-/rː/ (0.004)
-	<narrere> /nˈarːere/ "SAY-INF_VERB"
-	<jerru> /jˈerːu/ "WINTER_NOUN"
-	<corru> /kˈorːu/ "HORN_NOUN"
+/ʦ/ (0.005)
+	<iscortza> /iskˈɔɾʦa/ "BARK_NOUN"
+	<catziare> /kaʦjˈaɾɛ/ "HUNT_VERB"
+	<sementza> /sɛmˈɛnʦa/ "SEED_NOUN"
 
-/nː/ (0.004)
+/nː/ (0.005)
+	<bènnere> /bˈɛnːɛɾɛ/ "COME-INF_VERB"
+	<pònnere> /pˈɔnːɛɾɛ/ "PUT_VERB"
 	<linna> /lˈinːa/ "WOOD_NOUN"
-	<pònnere> /pˈonːere/ "PUT_VERB"
-	<annu> /ˈanːu/ "YEAR_NOUN"
 
-/ʦ/ (0.003)
-	<fortza> /fˈorʦa/ "STRENGTH_NOUN"
-	<curtzu> /kˈurʦu/ "SHORT_ADJ"
-	<putzu> /pˈuʦu/ "WELL_NOUN"
+/ŋ/ (0.003)
+	<ungra> /ˈuŋɡɾa/ "FINGERNAIL_NOUN"
+	<longu> /lˈoŋɡu/ "LONG_ADJ"
+	<ànghelu> /ˈaŋɡelu/ "ANGEL_NOUN"
 
-/ɲ/ (0.002)
+/ʃ/ (0.001)
+	<nesciunu> /neʃˈunu/ "NONE_PRON"
+	<bàsciu> /bˈaʃu/ "LOW_ADJ"
+
+/ɲ/ (0.001)
+	<montagna> /mɔntˈaɲa/ "MOUNTAIN_NOUN"
 	<Ispagna> /ispˈaɲa/ "SPAIN_PROPN"
-	<atógnu> /atˈoɲu/ "AUTUMN_NOUN"
-	<bagnu> /bˈaɲu/ "BATH_NOUN"
-
-/ɖ/ (0.002)
-	<tundhu> /tˈunɖu/ "ROUND_ADJ"
-	<grandhe> /ɡrˈanɖe/ "BIG_ADJ"
-	<mandhigare> /manɖiɣˈare/ "EAT_VERB"
-
-/v/ (0.002)
-	<alvu> /ˈalvu/ "WHITE_ADJ"
-	<líveru> /lˈiveru/ "FREE_ADJ"
-	<arvu> /ˈarvu/ "WHITE_ADJ"
-
-/w/ (0.001)
-	<peraula> /perˈawla/ "WORD_NOUN"
-	<aguale> /aɡwˈale/ "EQUAL_ADJ"
-
-/bː/ (0.001)
-	<abba> /ˈabːa/ "WATER_NOUN"
-	<líbberu> /lˈibːeru/ "FREE_ADJ"
-
-/ʃː/ (0.001)
-	<nesciúne> /neʃːˈune/ "NONE_PRON"
-
-/mː/ (0.001)
-	<framma> /frˈamːa/ "FLAME_NOUN"
 
 
 

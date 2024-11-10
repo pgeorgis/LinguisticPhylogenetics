@@ -1,7 +1,7 @@
 VOWELS
 /o/ (0.091)
 	<faccio> /fˈaʧːo/ "DO-1SG_VERB"
-	<bianco> /bjˈaŋko/ "WHITE_ADJ"
+	<pozzo> /pˈoʦːo/ "WELL_NOUN"
 	<fratello> /fratˈɛlːo/ "BROTHER_NOUN"
 
 /e/ (0.083)
@@ -10,7 +10,7 @@ VOWELS
 	<lume> /lˈume/ "LIGHT_NOUN"
 
 /a/ (0.069)
-	<cima> /ʧˈima/ "SUMMIT_NOUN"
+	<forza> /fˈɔrʦa/ "STRENGTH_NOUN"
 	<sapere> /sapˈere/ "KNOW_VERB"
 	<foglia> /fˈɔʎːa/ "LEAF_NOUN"
 
@@ -24,20 +24,20 @@ VOWELS
 	<collo> /kˈɔlːo/ "NECK_NOUN"
 	<mordere> /mˈɔrdere/ "BITE_VERB"
 
-/ˈɛ/ (0.026)
-	<festa> /fˈɛsta/ "PARTY_NOUN"
-	<prezzo> /prˈɛʦːo/ "PRICE_NOUN"
-	<pietra> /pjˈɛtra/ "STONE_NOUN"
-
-/ˈo/ (0.024)
-	<sopra> /sˈopra/ "ABOVE_PREP"
-	<vergogna> /verɡˈoɲːa/ "SHAME_NOUN"
-	<molto> /mˈolto/ "MANY_ADJ"
+/ˈɛ/ (0.027)
+	<vecchio> /vˈɛkːjo/ "OLD_ADJ"
+	<gente> /ʤˈɛnte/ "PEOPLE_NOUN"
+	<cielo> /ʧˈɛlo/ "SKY_NOUN"
 
 /ˈi/ (0.024)
-	<gengiva> /ʤenʤˈiva/ "GUMS_NOUN"
-	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
-	<morire> /morˈire/ "DIE_VERB"
+	<argilla> /arʤˈilːa/ "CLAY_NOUN"
+	<berbice> /berbˈiʧe/ "SHEEP_NOUN"
+	<uccidere> /uʧːˈidere/ "KILL_VERB"
+
+/ˈo/ (0.024)
+	<dona> /dˈona/ "GIVE-3SG_VERB"
+	<pozzo> /pˈoʦːo/ "WELL_NOUN"
+	<croce> /krˈoʧe/ "CROSS_NOUN"
 
 /ˈe/ (0.023)
 	<re> /rˈe/ "KING_NOUN"
@@ -49,9 +49,9 @@ VOWELS
 	<uno> /ˈuno/ "ONE_NUM"
 	<lui> /lˈui/ "HE_PRON"
 
-/i/ (0.015)
-	<pidocchio> /pidˈɔkːjo/ "LOUSE_NOUN"
-	<settimana> /setːimˈana/ "WEEK_NOUN"
+/i/ (0.016)
+	<ginocchio> /ʤinˈɔkːjo/ "KNEE_NOUN"
+	<villano> /vilːˈano/ "VILLAIN_NOUN"
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
 
 /u/ (0.003)
@@ -63,44 +63,44 @@ VOWELS
 
 CONSONANTS
 /r/ (0.074)
+	<scrivere> /skrˈivere/ "WRITE_VERB"
 	<re> /rˈe/ "KING_NOUN"
 	<madre> /mˈadre/ "MOTHER_NOUN"
-	<croce> /krˈoʧe/ "CROSS_NOUN"
 
 /n/ (0.054)
-	<luna> /lˈuna/ "MOON_NOUN"
 	<buoni> /bwˈɔni/ "GOOD (M.PL)_ADJ"
-	<vino> /vˈino/ "WINE_NOUN"
+	<luna> /lˈuna/ "MOON_NOUN"
+	<vento> /vˈɛnto/ "WIND_NOUN"
 
 /k/ (0.036)
-	<conio> /kˈɔnjo/ "CORNER_NOUN"
-	<pecora> /pˈɛkora/ "SHEEP_NOUN"
-	<capo> /kˈapo/ "HEAD_NOUN"
+	<oca> /ˈɔka/ "GOOSE_NOUN"
+	<coscia> /kˈɔʃːa/ "THIGH_NOUN"
+	<chiave> /kjˈave/ "KEY_NOUN"
 
-/t/ (0.036)
-	<dito> /dˈito/ "FINGER_NOUN"
+/t/ (0.035)
 	<tuto> /tˈutːo/ "ALL (SG)_ADJ"
 	<vita> /vˈita/ "LIFE_NOUN"
+	<tre> /trˈe/ "THREE_NUM"
 
-/l/ (0.034)
-	<albero> /ˈalbero/ "TREE_NOUN"
+/l/ (0.033)
 	<parola> /parˈɔla/ "WORD_NOUN"
 	<gentile> /ʤentˈile/ "NICE_ADJ"
+	<salsa> /sˈalsa/ "SAUCE_NOUN"
 
 /p/ (0.031)
-	<porca> /pˈɔrka/ "SOW_NOUN"
 	<ponte> /pˈonte/ "BRIDGE_NOUN"
 	<piuma> /pjˈuma/ "FEATHER_NOUN"
+	<piccolo> /pˈikːolo/ "SMALL_ADJ"
 
 /s/ (0.029)
-	<stella> /stˈelːa/ "STAR_NOUN"
-	<settimana> /setːimˈana/ "WEEK_NOUN"
+	<spada> /spˈada/ "SWORD_NOUN"
 	<sappia> /sˈapːja/ "KNOW-SBJ-1SG_VERB"
+	<scuro> /skˈuro/ "DARK_ADJ"
 
-/m/ (0.025)
-	<cambiare> /kambjˈare/ "CHANGE_VERB"
-	<uomo> /wˈɔmo/ "MAN_NOUN"
-	<semente> /semˈente/ "SEED_NOUN"
+/m/ (0.026)
+	<molto> /mˈolto/ "MANY_ADJ"
+	<verme> /vˈɛrme/ "WORM_NOUN"
+	<seme> /sˈeme/ "SEED_NOUN"
 
 /j/ (0.023)
 	<pioggia> /pjˈɔʤːa/ "RAIN_NOUN"
@@ -113,57 +113,57 @@ CONSONANTS
 	<giovane> /ʤˈovane/ "YOUNG_ADJ"
 
 /d/ (0.021)
+	<coda> /kˈoda/ "TAIL_NOUN"
 	<dieci> /djˈɛʧi/ "TEN_NUM"
-	<dente> /dˈɛnte/ "TOOTH_NOUN"
-	<vedere> /vedˈere/ "SEE_VERB"
+	<dire> /dˈire/ "SAY-INF_VERB"
 
 /f/ (0.015)
 	<festa> /fˈɛsta/ "PARTY_NOUN"
 	<freddo> /frˈedːo/ "COLD_ADJ"
 	<foglia> /fˈɔʎːa/ "LEAF_NOUN"
 
-/ʤ/ (0.014)
-	<gioco> /ʤˈɔko/ "GAME_NOUN"
-	<giudice> /ʤˈudiʧe/ "JUDGE_NOUN"
-	<giugno> /ʤˈuɲːo/ "JUNE_PROPN"
+/ʧ/ (0.014)
+	<cinque> /ʧˈiŋkwe/ "FIVE_NUM"
+	<cera> /ʧˈera/ "WAX_NOUN"
+	<noce> /nˈoʧe/ "NUT_NOUN"
 
-/ʧ/ (0.013)
-	<voce> /vˈoʧe/ "VOICE_NOUN"
-	<croce> /krˈoʧe/ "CROSS_NOUN"
-	<vicino> /viʧˈino/ "NEIGHBOR_NOUN"
+/ʤ/ (0.014)
+	<giugno> /ʤˈuɲːo/ "JUNE_PROPN"
+	<giallo> /ʤˈalːo/ "YELLOW_ADJ"
+	<mangiare> /manʤˈare/ "EAT_VERB"
+
+/b/ (0.014)
+	<buona> /bwˈɔna/ "GOOD (F.SG)_ADJ"
+	<ombelico> /ombelˈiko/ "NAVEL_NOUN"
+	<bianco> /bjˈaŋko/ "WHITE_ADJ"
 
 /ɡ/ (0.013)
-	<luogo> /lwˈɔɡo/ "PLACE_NOUN"
-	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
 	<gola> /ɡˈola/ "THROAT_NOUN"
-
-/b/ (0.013)
-	<buona> /bwˈɔna/ "GOOD (F.SG)_ADJ"
-	<bello> /bˈɛlːo/ "BEAUTIFUL (M)_ADJ"
-	<erba> /ˈɛrba/ "GRASS_NOUN"
+	<grano> /ɡrˈano/ "GRAIN_NOUN"
+	<gatto> /ɡˈatːo/ "CAT_NOUN"
 
 /w/ (0.012)
+	<nuovo> /nwˈɔvo/ "NEW_ADJ"
 	<quaglia> /kwˈaʎːa/ "QUAIL_NOUN"
 	<uguale> /uɡwˈale/ "EQUAL_ADJ"
-	<fuoco> /fwˈɔko/ "FIRE_NOUN"
 
 /lː/ (0.01)
+	<castello> /kastˈɛlːo/ "CASTLE_NOUN"
 	<villano> /vilːˈano/ "VILLAIN_NOUN"
 	<pelle> /pˈɛlːe/ "SKIN_NOUN"
-	<anello> /anˈɛlːo/ "RING_NOUN"
 
-/tː/ (0.009)
+/tː/ (0.008)
+	<città> /ʧitːˈa/ "CITY_NOUN"
 	<lotta> /lˈɔtːa/ "FIGHT_NOUN"
 	<latte> /lˈatːe/ "MILK_NOUN"
-	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
 
 /kː/ (0.007)
-	<pidocchio> /pidˈɔkːjo/ "LOUSE_NOUN"
 	<vacca> /vˈakːa/ "COW_NOUN"
-	<occhi> /ˈɔkːi/ "EYES_NOUN"
+	<pidocchio> /pidˈɔkːjo/ "LOUSE_NOUN"
+	<acqua> /ˈakːwa/ "WATER_NOUN"
 
 /ɲː/ (0.006)
-	<legno> /lˈeɲːo/ "WOOD_NOUN"
+	<montagna> /montˈaɲːa/ "MOUNTAIN_NOUN"
 	<Spagna> /spˈaɲːa/ "SPAIN_PROPN"
 	<giugno> /ʤˈuɲːo/ "JUNE_PROPN"
 
@@ -217,14 +217,15 @@ CONSONANTS
 	<pozzo> /pˈoʦːo/ "WELL_NOUN"
 	<palazzo> /palˈaʦːo/ "PALACE_NOUN"
 
+/ʦ/ (0.002)
+	<forza> /fˈɔrʦa/ "STRENGTH_NOUN"
+	<semenza> /semˈɛnʦa/ "SEED_NOUN"
+	<scorza> /skˈɔrʦa/ "BARK_NOUN"
+
 /rː/ (0.002)
 	<porre> /pˈorːe/ "PUT_VERB"
-	<ferro> /fˈɛrːo/ "IRON_NOUN"
 	<terra> /tˈɛrːa/ "EARTH_NOUN"
-
-/ʦ/ (0.001)
-	<scorza> /skˈɔrʦa/ "BARK_NOUN"
-	<forza> /fˈɔrʦa/ "STRENGTH_NOUN"
+	<ferro> /fˈɛrːo/ "IRON_NOUN"
 
 /mː/ (0.001)
 	<fiamma> /fjˈamːa/ "FLAME_NOUN"

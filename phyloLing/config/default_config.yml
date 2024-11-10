@@ -19,6 +19,7 @@ transcription:
         suprasegmentals: 
         level_suprasegmentals: 
         ch_to_remove: {' '}
+        min_phone_instances: 2
     # doculects:
     #     French:
     #         ignore_stress: true
@@ -29,21 +30,15 @@ alignment:
   gap_ch: '-' # alternative null character <∅> looks too similar to IPA character <ø>
   pad_ch: '#'
 
-pmi:
-  n_samples: 5
-  sample_size: 0.8
-  min_corr: 2
-  refresh: []
-  refresh_all_pmi: false
-
-surprisal:
-  n_samples: 5
+phon_corr:
+  n_samples: 3
   sample_size: 0.8
   min_corr: 2
   ngram: 1
   phon_env: true 
   refresh: []
-  refresh_all_surprisal: false
+  refresh_all: false
+  copy_to_outdir: true
 
 cluster:
   cognates: auto
@@ -52,16 +47,19 @@ cluster:
 
 evaluation:
   similarity: gradient
-  method: composite
-  pmi_weight: 1.5
-  surprisal_weight: 2
-  phon_weight: 1
+  method: hybrid
   n_samples: 10
   sample_size: 0.8
+  pmi_weight: 0.9
+  surprisal_weight: 2.65
+  phon_weight: 1.25
+  min_similarity: 0.7
+  normalize_weights: false
   exclude_synonyms: true
-  calibrate: true
-  min_similarity: 0
+  calibrate: false
+  precalculated_word_scores: 
 
 tree:
   linkage: nj
-  newick: true # TODO change default to true in phyloLing.py
+  root:
+  reference: []

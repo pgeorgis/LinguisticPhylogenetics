@@ -1,5 +1,6 @@
 # Define the default target
 .DEFAULT_GOAL := help
+SHELL := /bin/bash
 
 # Usage help
 help:
@@ -8,19 +9,30 @@ help:
 	@echo "  make classify CONFIG=<path to config.yml> [LOGLEVEL=<desired log level>]"
 
 # Run the setup script to install dependencies, clone submodules, and activate virtual environment
-setup:
+init:
 	./setup.sh
 
 # Run classification with nohup
-classify:
+classify: init
 ifdef CONFIG
 	@source venv/bin/activate && \
 		OUTPUT_LOG_DIR=$$(python3 -c "import yaml, os; config = yaml.safe_load(open('$(CONFIG)', 'r')); print(config.get('family', {}).get('outdir', os.path.dirname(config['family']['file'])))") && \
 		OUTPUT_LOG_PATH=$$OUTPUT_LOG_DIR/logs/classify.log && \
 		mkdir -p $$OUTPUT_LOG_DIR/logs && \
-		nohup python3 phyloLing/classifyLangs.py $(CONFIG) $(if $(LOGLEVEL),--loglevel $(LOGLEVEL)) > $$OUTPUT_LOG_PATH 2>&1 &
+		python3 phyloLing/classifyLangs.py $(CONFIG) $(if $(LOGLEVEL),--loglevel $(LOGLEVEL)) 2>&1|tee $$OUTPUT_LOG_PATH
 else
 	@echo "Error: Please provide a path to config.yml using 'make classify CONFIG=<path> [LOGLEVEL=<desired log level>]'"
 endif
 
-# TODO score against a gold tree
+classify-romance:
+	$(MAKE) classify CONFIG=datasets/Romance/config/romance_config.yml
+
+classify-germanic:
+	$(MAKE) classify CONFIG=datasets/Germanic/config/germanic_config.yml
+
+classify-slavic:
+	$(MAKE) classify CONFIG=datasets/Slavic/config/slavic_config.yml
+
+classify-sinitic:
+	$(MAKE) classify CONFIG=datasets/Sinitic/config/sinitic_config.yml
+

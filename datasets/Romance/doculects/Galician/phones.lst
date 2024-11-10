@@ -1,45 +1,45 @@
 VOWELS
-/ʊ/ (0.068)
+/ʊ/ (0.067)
 	<escuro> /eskˈuɾʊ/ "DARK_ADJ"
 	<roxo> /rˈoʃʊ/ "RED_ADJ"
 	<sabio> /sˈaβjʊ/ "WISE_ADJ"
 
 /ɐ/ (0.058)
-	<cereixa> /θeɾˈejʃɐ/ "CHERRY_NOUN"
-	<cabra> /kˈaβɾɐ/ "GOAT_NOUN"
-	<dia> /dˈiɐ/ "DAY_NOUN"
+	<cadea> /kaðˈeɐ/ "CHAIN_NOUN"
+	<doa> /dˈoɐ/ "GIVE-3SG_VERB"
+	<alba> /ˈalβɐ/ "DAWN_NOUN"
 
-/ˈa/ (0.049)
-	<espada> /espˈaðɐ/ "SWORD_NOUN"
-	<alma> /ˈalmɐ/ "SOUL_NOUN"
-	<araña> /aɾˈaɲɐ/ "SPIDER_NOUN"
+/ˈa/ (0.05)
+	<nadar> /naðˈaɾ/ "SWIM_VERB"
+	<canto> /kˈantʊ/ "SONG_NOUN"
+	<falar> /falˈaɾ/ "SPEAK_VERB"
 
-/ˈe/ (0.043)
+/ˈe/ (0.042)
 	<ver> /bˈeɾ/ "SEE_VERB"
 	<cabelo> /kaβˈelʊ/ "HAIR_NOUN"
 	<morrer> /morˈeɾ/ "DIE_VERB"
 
 /ˈo/ (0.038)
-	<pouco> /pˈowkʊ/ "LITTLE_ADJ"
+	<folla> /fˈoɟɐ/ "LEAF_NOUN"
 	<todo> /tˈoðos/ "ALL (PL)_ADJ"
-	<pozo> /pˈoθʊ/ "WELL_NOUN"
+	<vosoutros> /bosˈowtɾos/ "YOU (PL)_PRON"
 
-/ˈi/ (0.027)
+/ˈi/ (0.026)
 	<raíz> /raˈiθ/ "ROOT_NOUN"
 	<durmir> /duɾmˈiɾ/ "SLEEP_VERB"
 	<viño> /bˈiɲʊ/ "WINE_NOUN"
 
-/ɪ/ (0.025)
+/ɪ/ (0.026)
 	<sobre> /sˈoβɾɪ/ "ABOVE_PREP"
-	<golpe> /ɡˈɔlpɪ/ "STRIKE_NOUN"
-	<home> /ˈɔmɪ/ "MAN_NOUN"
+	<fume> /fˈumɪ/ "SMOKE_NOUN"
+	<chave> /ʧˈaβɪ/ "KEY_NOUN"
 
 /e/ (0.023)
-	<león> /leˈɔŋ/ "LION_NOUN"
-	<cereixa> /θeɾˈejʃɐ/ "CHERRY_NOUN"
-	<seguro> /seɣˈuɾʊ/ "SAFE_ADJ"
+	<sabes> /sˈaβes/ "KNOW-2SG_VERB"
+	<levar> /leβˈaɾ/ "CARRY_VERB"
+	<redondo> /reðˈondʊ/ "ROUND_ADJ"
 
-/a/ (0.023)
+/a/ (0.022)
 	<avella> /aβˈeɟɐ/ "BEE_NOUN"
 	<nacer> /naθˈeɾ/ "BE BORN_VERB"
 	<area> /aɾˈeɐ/ "SAND_NOUN"
@@ -60,8 +60,8 @@ VOWELS
 	<ela> /ˈɛlɐ/ "SHE_PRON"
 
 /ˈu/ (0.017)
-	<agulla> /aɣˈuɟɐ/ "NEEDLE_NOUN"
-	<un> /ˈuŋ/ "ONE_NUM"
+	<lúa> /lˈuɐ/ "MOON_NOUN"
+	<ningún> /niŋɡˈuŋ/ "NONE_PRON"
 	<puño> /pˈuɲʊ/ "FIST_NOUN"
 
 /i/ (0.008)
@@ -89,46 +89,46 @@ VOWELS
 
 CONSONANTS
 /ɾ/ (0.079)
-	<queimar> /kejmˈaɾ/ "BURN_VERB"
-	<cera> /θˈeɾɐ/ "WAX_NOUN"
-	<xear> /ʃeˈaɾ/ "FREEZE_VERB"
+	<touro> /tˈowɾʊ/ "BULL_NOUN"
+	<árbore> /ˈaɾβoɾɪ/ "TREE_NOUN"
+	<lazar> /laθˈaɾ/ "FREEZE_VERB"
 
-/s/ (0.041)
-	<groso> /ɡɾˈɔsʊ/ "THICK_ADJ"
+/s/ (0.042)
+	<vosoutros> /bosˈowtɾos/ "YOU (PL)_PRON"
 	<espada> /espˈaðɐ/ "SWORD_NOUN"
-	<salsa> /sˈalsɐ/ "SAUCE_NOUN"
+	<sol> /sˈol/ "SUN_NOUN"
 
-/t/ (0.037)
-	<leite> /lˈejtɪ/ "MILK_NOUN"
+/t/ (0.036)
 	<xente> /ʃˈentɪ/ "PEOPLE_NOUN"
+	<leite> /lˈejtɪ/ "MILK_NOUN"
 	<vosoutros> /bosˈowtɾos/ "YOU (PL)_PRON"
 
-/n/ (0.035)
+/n/ (0.034)
 	<nadar> /naðˈaɾ/ "SWIM_VERB"
 	<unlla> /ˈunɟɐ/ "FINGERNAIL_NOUN"
 	<dona> /dˈonɐ/ "LADY_NOUN"
 
 /l/ (0.034)
 	<lago> /lˈaɣʊ/ "LAKE_NOUN"
-	<golpe> /ɡˈɔlpɪ/ "STRIKE_NOUN"
-	<salsa> /sˈalsɐ/ "SAUCE_NOUN"
+	<estrela> /estɾˈelɐ/ "STAR_NOUN"
+	<sal> /sˈal/ "SALT_NOUN"
 
 /k/ (0.034)
 	<pouco> /pˈowkʊ/ "LITTLE_ADJ"
 	<cor> /kˈɔɾ/ "HEART_NOUN"
 	<coalla> /kwˈaɟɐ/ "QUAIL_NOUN"
 
-/m/ (0.028)
-	<amosegar> /amoseɣˈaɾ/ "BITE_VERB"
-	<fume> /fˈumɪ/ "SMOKE_NOUN"
-	<man> /mˈɑŋ/ "HAND_NOUN"
+/m/ (0.029)
+	<mellor> /meɟˈoɾ/ "BETTER_ADJ"
+	<ombro> /ˈombɾʊ/ "SHOULDER_NOUN"
+	<metade> /metˈaðɪ/ "HALF_NOUN"
 
 /b/ (0.026)
 	<vergonza> /beɾɣˈonθɐ/ "SHAME_NOUN"
 	<vergoña> /beɾɣˈoɲɐ/ "SHAME_NOUN"
 	<boa> /bˈoɐ/ "GOOD (F.SG)_ADJ"
 
-/p/ (0.025)
+/p/ (0.024)
 	<prezo> /pɾˈeθʊ/ "PRICE_NOUN"
 	<pozo> /pˈoθʊ/ "WELL_NOUN"
 	<ponte> /pˈontɪ/ "BRIDGE_NOUN"
@@ -139,9 +139,9 @@ CONSONANTS
 	<cidade> /θiðˈaðɪ/ "CITY_NOUN"
 
 /β/ (0.023)
-	<herba> /ˈɛɾβɐ/ "GRASS_NOUN"
-	<escribir> /eskɾiβˈiɾ/ "WRITE_VERB"
-	<ovella> /oβˈeɟɐ/ "SHEEP_NOUN"
+	<cabra> /kˈaβɾɐ/ "GOAT_NOUN"
+	<obra> /ˈɔβɾɐ/ "WORK_NOUN"
+	<rubio> /rˈuβjʊ/ "RED_ADJ"
 
 /j/ (0.019)
 	<saiba> /sˈajβɐ/ "KNOW-SBJ-1SG_VERB"
@@ -153,20 +153,20 @@ CONSONANTS
 	<fígado> /fˈiɣaðʊ/ "LIVER_NOUN"
 	<todo> /tˈoðʊ/ "ALL (SG)_ADJ"
 
+/f/ (0.017)
+	<fogo> /fˈoɣʊ/ "FIRE_NOUN"
+	<sufrir> /sufɾˈiɾ/ "SUFFER_VERB"
+	<forza> /fˈɔɾθɐ/ "STRENGTH_NOUN"
+
 /ʃ/ (0.016)
-	<axudo> /aʃˈuðʊ/ "HELP-1SG_VERB"
-	<coxa> /kˈoʃɐ/ "THIGH_NOUN"
-	<xente> /ʃˈentɪ/ "PEOPLE_NOUN"
+	<pexego> /peʃˈeɣʊ/ "PEACH_NOUN"
+	<xunto> /ʃˈuntʊ/ "JOINED_ADJ"
+	<roxo> /rˈoʃʊ/ "RED_ADJ"
 
 /ŋ/ (0.016)
-	<lingua> /lˈiŋɡwɐ/ "TONGUE_NOUN"
-	<longo> /lˈoŋɡʊ/ "LONG_ADJ"
-	<ben> /bˈɛŋ/ "WELL (ADV)_ADV"
-
-/f/ (0.016)
 	<fin> /fˈiŋ/ "END_NOUN"
-	<fume> /fˈumɪ/ "SMOKE_NOUN"
-	<fada> /fˈaðɐ/ "FATE_NOUN"
+	<razón> /raθˈoŋ/ "REASON_NOUN"
+	<cinco> /θˈiŋkʊ/ "FIVE_NUM"
 
 /ɣ/ (0.014)
 	<amosegar> /amoseɣˈaɾ/ "BITE_VERB"

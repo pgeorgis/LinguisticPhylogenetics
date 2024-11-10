@@ -19,7 +19,7 @@ NULL_CH_DEFAULT = '∅'
 # PAD CHARACTER: USED FOR PADDING EDGES OF ALIGNMENTS
 PAD_CH_DEFAULT = '#'
 
-# DEFAULT PARAMETERs
+# DEFAULT PARAMETERS
 TRANSCRIPTION_PARAM_DEFAULTS = {
     'asjp': False,
     'ignore_stress': False,
@@ -29,6 +29,7 @@ TRANSCRIPTION_PARAM_DEFAULTS = {
     'ch_to_remove': {' '},  # TODO add syllabic diacritics here
     'suprasegmentals': None,
     'level_suprasegmentals': None,
+    'min_phone_instances': 2,  # minimum instances of a phone in a doculect to be considered valid, else issue a warning
 }
 
 ALIGNMENT_PARAM_DEFAULTS = {

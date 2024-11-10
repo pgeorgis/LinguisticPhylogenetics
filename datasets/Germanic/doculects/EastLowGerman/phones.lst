@@ -52,7 +52,7 @@ VOWELS
 /ˈʏ/ (0.012)
 	<drütteihn> /drˈʏtae̯n/ "thirteen_NUM"
 	<Brügg> /brˈʏç/ "bridge_NOUN"
-	<Süster> /sˈʏstæ/ "sister_NOUN"
+	<Süster> /zˈʏstæ/ "sister_NOUN"
 
 /ˈɔ/ (0.012)
 	<Sommer> /zˈɔmæ/ "summer_NOUN"
@@ -151,7 +151,7 @@ CONSONANTS
 	<Fründ> /frˈʏnd/ "friend_NOUN"
 
 /r/ (0.031)
-	<gräun> /jrˈɔʏ̯n/ "green_ADJ"
+	<gräun> /ɡrˈɔʏ̯n/ "green_ADJ"
 	<Rok> /rˈaʊ̯k/ "smoke_NOUN"
 	<Brot> /brˈaʊ̯t/ "bread_NOUN"
 
@@ -175,10 +175,10 @@ CONSONANTS
 	<Huurn> /hˈuːæn/ "horn_NOUN"
 	<Höft> /hˈœft/ "head_NOUN"
 
-/z/ (0.021)
+/z/ (0.022)
 	<Solt> /zˈɔlt/ "salt_NOUN"
 	<sülwen> /zˈʏlm/ "self_PRON"
-	<Sommer> /zˈɔmæ/ "summer_NOUN"
+	<sugen> /zˈuːɡn̩/ "suck_VERB"
 
 /k/ (0.021)
 	<weik> /vˈae̯k/ "weak_ADJ"
@@ -190,7 +190,7 @@ CONSONANTS
 	<niech> /nˈiːç/ "new_ADJ"
 	<Wech> /vˈɛç/ "way_NOUN"
 
-/s/ (0.019)
+/s/ (0.018)
 	<söss> /zˈœs/ "six_NUM"
 	<Hus> /hˈuːs/ "house_NOUN"
 	<Lus> /lˈuːs/ "louse_NOUN"
@@ -200,15 +200,15 @@ CONSONANTS
 	<Rägen> /rˈɛŋ/ "rain_NOUN"
 	<danken> /dˈaŋkn̩/ "thank_VERB"
 
-/kʰ/ (0.016)
-	<Knei> /kʰnˈae̯/ "knee_NOUN"
-	<Knutt> /kʰnˈʊt/ "knot_NOUN"
-	<kennen> /kʰˈɛn̩/ "ken_VERB"
-
-/ɡ/ (0.015)
-	<Gaus> /ɡˈaʊ̯s/ "goose_NOUN"
+/ɡ/ (0.016)
 	<sugen> /zˈuːɡn̩/ "suck_VERB"
-	<Någel> /nˈɒːɡl̩/ "fingernail_NOUN"
+	<Goorn> /ɡˈoːæn/ "yarn_NOUN"
+	<gräun> /ɡrˈɔʏ̯n/ "green_ADJ"
+
+/kʰ/ (0.016)
+	<kåmen> /kʰˈɒːm/ "come_VERB"
+	<König> /kʰˈøːnɪç/ "king_NOUN"
+	<Katt> /kʰˈat/ "cat_NOUN"
 
 /p/ (0.012)
 	<Schipp> /ʃˈɪp/ "ship_NOUN"
@@ -230,8 +230,8 @@ CONSONANTS
 	<Fedder> /fˈɛɾæ/ "feather_NOUN"
 	<Vadder> /fˈaɾæ/ "father_NOUN"
 
-/j/ (0.007)
-	<gräun> /jrˈɔʏ̯n/ "green_ADJ"
+/j/ (0.006)
+	<Johr> /jˈoːæ/ "year_NOUN"
 	<Jitt> /jˈɪt/ "goat_NOUN"
 	<Geist> /jˈae̯st/ "ghost_NOUN"
 

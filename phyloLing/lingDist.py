@@ -1,12 +1,11 @@
 import random
-from collections import defaultdict
 from functools import lru_cache
 from statistics import StatisticsError, mean, stdev
 import numpy as np
 
 from scipy.stats import norm
-from utils.distance import dist_to_sim
-from utils.utils import balanced_resample
+from utils.distance import dist_to_sim, Distance
+from utils.utils import balanced_resample, create_default_dict_of_dicts
 
 
 # HELPER FUNCTIONS
@@ -41,7 +40,17 @@ def filter_cognates_by_lang(lang, cluster):
     Returns:
         list: Word objects belonging to the specified Language
     """
-    return list(filter(lambda word: word.language == lang, cluster))
+    # Filter by language and sort
+    filtered_cognates = list(filter(lambda word: word.language == lang, cluster))
+    filtered_cognates.sort(key=lambda word: (
+        word.ipa,
+        word.orthography,
+        word.concept,
+        word.getInfoContent(total=True)
+        )
+    )
+    
+    return filtered_cognates
 
 
 @lru_cache(maxsize=None)
@@ -51,7 +60,7 @@ def get_calibration_params(lang1, lang2, eval_func, seed, sample_size):
     Args:
         lang1 (phyloLing.Language): First doculect to compare
         lang2 (phyloLing.Language): Second doculect to compare
-        eval_func (auxFuncs.Distance): Distance to apply to word pairs
+        eval_func (Distance): Distance to apply to word pairs
         seed (int): Random seed
         sample_size (int): Size of random sample
 
@@ -59,7 +68,7 @@ def get_calibration_params(lang1, lang2, eval_func, seed, sample_size):
         tuple: Mean and standard deviation of similarity of random sampling of non-cognate word pairs
     """
     # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
-    key = (lang2, eval_func, sample_size, seed)
+    key: tuple[str, Distance, int, int] = (lang2.name, eval_func, sample_size, seed)
     if len(lang1.noncognate_thresholds[key]) > 0:
         noncognate_scores = lang1.noncognate_thresholds[key]
     else:
@@ -127,18 +136,18 @@ def binary_cognate_sim(lang1,
     return similarity
 
 
-def gradient_cognate_sim(lang1,
-                         lang2,
-                         clustered_cognates,
-                         eval_func,
-                         exclude_synonyms=True,  # TODO improve exclude_synonyms
-                         calibrate=True,  # TODO rename
-                         min_similarity=0,
-                         clustered_id=None,  # TODO incorporate or remove
-                         seed=1,
-                         n_samples=50,
-                         sample_size=0.8,
-                         logger=None):
+def gradient_cognate_dist(lang1,
+                          lang2,
+                          clustered_cognates,
+                          eval_func,
+                          exclude_synonyms=True,
+                          calibrate=True,
+                          min_similarity=0,
+                          p_threshold=0.01,
+                          seed=1,
+                          n_samples=50,
+                          sample_size=0.8,
+                          logger=None):
 
     # Set random seed and initialize random number generator
     random.seed(seed)
@@ -175,7 +184,7 @@ def gradient_cognate_sim(lang1,
         concept_groups = {0: shared_concepts}
 
     # Score all shared concepts in advance, then calculate similarity based on the N samples of concepts
-    scored_pairs = defaultdict(lambda: {})
+    scored_pairs = create_default_dict_of_dicts()
     for concept in shared_concepts:
         for cognate_id in clustered_cognates[concept]:
             l1_words = filter_cognates_by_lang(lang1, clustered_cognates[concept][cognate_id])
@@ -193,7 +202,7 @@ def gradient_cognate_sim(lang1,
 
     for n, group in concept_groups.items():
         sims = {}
-        group_size = len(group)
+        group_size: int = len(group)
         for concept in group:
             concept_sims = {}
             l1_wordcount, l2_wordcount = 0, 0
@@ -224,6 +233,7 @@ def gradient_cognate_sim(lang1,
 
         # Apply minimum similarity and calibration
         for concept, score in sims.items():
+            sims[concept] = score if score >= min_similarity else 0
 
             # Calibrate score against scores of non-synonymous word pairs
             # pnorm: proportion of values from a normal distribution with
@@ -235,20 +245,17 @@ def gradient_cognate_sim(lang1,
             # The higher this value, the more confident we can be that
             # the given score does not come from that distribution,
             # i.e. that it is truly a cognate
-            if calibrate:
+            # If lower than p-threshold, reset similarity to 0
+            if calibrate and score > 0:
                 pnorm = norm.cdf(score, loc=mean_nc_score, scale=nc_score_stdev)
-                score *= pnorm
-
-            sims[concept] = score if score >= min_similarity else 0
+                if 1 - pnorm > p_threshold:
+                    sims[concept] = 0
 
         group_scores[n] = mean(sims.values())
-        # TODO try alternative calculation:
-        # prop_non_zero = sum(1 for score in sims.values() if score > 0) / len(sims)
-        # group_scores[n] = sum(sims.values()) * prop_non_zero
 
-    score = mean(group_scores.values())
-
+    similarity_score = mean(group_scores.values())
     if logger:
-        logger.debug(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
-
-    return score
+        logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(similarity_score, 3)}')
+        
+    distance_score = 1 - similarity_score
+    return distance_score

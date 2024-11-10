@@ -1,15 +1,15 @@
 VOWELS
-/i/ (0.07)
+/i/ (0.073)
 	<țitati> /ʦitˈati/ "CITY_NOUN"
-	<zeți> /zˈeʦi/ "TEN_NUM"
+	<lacrimă> /lˈakrimə/ "TEAR_NOUN"
 	<pǫini> /pˈɔjni/ "BREAD_NOUN"
 
-/ə/ (0.069)
+/ə/ (0.068)
 	<iarbă> /jˈarbə/ "GRASS_NOUN"
 	<țară> /ʦˈarə/ "EARTH_NOUN"
 	<coadă> /ko̯ˈadə/ "TAIL_NOUN"
 
-/ˈa/ (0.061)
+/ˈa/ (0.06)
 	<catră> /kˈatrə/ "STONE_NOUN"
 	<lacrimă> /lˈakrimə/ "TEAR_NOUN"
 	<mari> /mˈari/ "SEA_NOUN"
@@ -34,7 +34,7 @@ VOWELS
 	<piducľu> /pidˈukʎu/ "LOUSE_NOUN"
 	<patru> /pˈatru/ "FOUR_NUM"
 
-/ˈe/ (0.027)
+/ˈe/ (0.026)
 	<mńez> /mɲˈez/ "MIDDLE_NOUN"
 	<negru> /nˈeɡru/ "BLACK_ADJ"
 	<trei> /trˈej/ "THREE_NUM"
@@ -49,7 +49,7 @@ VOWELS
 	<ea> /e̯ˈa/ "SHE_PRON"
 	<veardi> /ve̯ˈardi/ "GREEN_ADJ"
 
-/o̯ˈa/ (0.013)
+/o̯ˈa/ (0.012)
 	<moarti> /mo̯ˈarti/ "DEATH_NOUN"
 	<ploaiă> /plo̯ˈajə/ "RAIN_NOUN"
 	<floari> /flo̯ˈari/ "FLOWER_NOUN"
@@ -63,6 +63,9 @@ VOWELS
 	<june> /ʒˈune/ "YOUNG_ADJ"
 	<chialie> /kʲˈalje/ "SKIN_NOUN"
 
+/ˈɛ/ (0.002)
+	<birbęți> /birbˈɛʦi/ "SHEEP_NOUN"
+
 /ɔ/ (0.002)
 	<pǫntiți> /pɔntˈiʦi/ "BELLY_NOUN"
 
@@ -70,21 +73,21 @@ VOWELS
 
 CONSONANTS
 /r/ (0.077)
-	<buric> /burˈik/ "NAVEL_NOUN"
 	<capră> /kˈaprə/ "GOAT_NOUN"
 	<mari> /mˈari/ "BIG_ADJ"
+	<frunză> /frˈunzə/ "LEAF_NOUN"
 
-/n/ (0.075)
-	<nas> /nˈas/ "NOSE_NOUN"
+/n/ (0.074)
 	<ziniri> /zˈiniri/ "SON-IN-LAW_NOUN"
 	<vin> /vˈin/ "WINE_NOUN"
+	<pǫini> /pˈɔjni/ "BREAD_NOUN"
 
-/t/ (0.052)
-	<frati> /frˈati/ "BROTHER_NOUN"
+/t/ (0.051)
 	<moarti> /mo̯ˈarti/ "DEATH_NOUN"
 	<steau̯ă> /ste̯ˈawə/ "STAR_NOUN"
+	<tu> /tˈu/ "THOU_PRON"
 
-/k/ (0.05)
+/k/ (0.049)
 	<cľeili> /kʎˈejli/ "KEY_NOUN"
 	<ureacľă> /ure̯ˈakʎə/ "EAR_NOUN"
 	<piducľu> /pidˈukʎu/ "LOUSE_NOUN"
@@ -109,25 +112,25 @@ CONSONANTS
 	<soari> /so̯ˈari/ "SUN_NOUN"
 	<siminţă> /simˈinʦə/ "SEED_NOUN"
 
-/ʦ/ (0.023)
-	<țost> /ʦˈost/ "SKULL_NOUN"
+/ʦ/ (0.025)
+	<birbęți> /birbˈɛʦi/ "SHEEP_NOUN"
+	<zeți> /zˈeʦi/ "TEN_NUM"
 	<pǫntiți> /pɔntˈiʦi/ "BELLY_NOUN"
-	<gľets> /ɡʎˈeʦ/ "ICE_NOUN"
 
 /ʎ/ (0.023)
+	<gľets> /ɡʎˈeʦ/ "ICE_NOUN"
 	<u̯ocľu> /wˈokʎu/ "EYE_NOUN"
 	<vecľu> /vˈekʎu/ "OLD_ADJ"
-	<il'u> /ˈiʎu/ "SON_NOUN"
 
-/j/ (0.019)
-	<cľeili> /kʎˈejli/ "KEY_NOUN"
-	<iarnă> /jˈarnə/ "WINTER_NOUN"
+/b/ (0.022)
+	<birbęți> /birbˈɛʦi/ "SHEEP_NOUN"
+	<galbin> /ɡˈalbin/ "YELLOW_ADJ"
 	<iarbă> /jˈarbə/ "GRASS_NOUN"
 
-/b/ (0.019)
-	<bou> /bˈow/ "OX_NOUN"
-	<bini> /bˈini/ "WELL (ADV)_ADV"
-	<galbin> /ɡˈalbin/ "YELLOW_ADJ"
+/j/ (0.019)
+	<io> /jˈo/ "I_PRON"
+	<chialie> /kʲˈalje/ "SKIN_NOUN"
+	<iarnă> /jˈarnə/ "WINTER_NOUN"
 
 /w/ (0.017)
 	<zuu̯ă> /zˈuwə/ "DAY_NOUN"
@@ -139,12 +142,12 @@ CONSONANTS
 	<cald> /kˈald/ "HOT_ADJ"
 	<dulți> /dˈulʦi/ "SWEET_ADJ"
 
-/ɡ/ (0.013)
+/ɡ/ (0.012)
 	<gură> /ɡˈurə/ "THROAT_NOUN"
 	<grǫn> /ɡrˈɔn/ "GRAIN_NOUN"
 	<gľets> /ɡʎˈeʦ/ "ICE_NOUN"
 
-/v/ (0.013)
+/v/ (0.012)
 	<vițǫl> /viʦˈɔl/ "CALF_NOUN"
 	<veardi> /ve̯ˈardi/ "GREEN_ADJ"
 	<varmi> /vˈarmi/ "WORM_NOUN"

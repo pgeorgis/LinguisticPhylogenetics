@@ -1,10 +1,10 @@
 VOWELS
 /ˈa/ (0.066)
-	<faig> /fˈaʧ/ "DO-1SG_VERB"
-	<cant> /kˈant/ "SONG_NOUN"
-	<clamar> /klamˈar/ "CALL_VERB"
+	<car> /kˈar/ "DEAR_ADJ"
+	<cantar> /kantˈar/ "SING_VERB"
+	<cremar> /kɾemˈar/ "BURN_VERB"
 
-/ˈi/ (0.035)
+/ˈi/ (0.034)
 	<farina> /faɾˈinɐ/ "FLOUR_NOUN"
 	<mica> /mˈikɐ/ "CRUMB_NOUN"
 	<dic> /dˈik/ "SAY-1SG_VERB"
@@ -19,12 +19,12 @@ VOWELS
 	<quatre> /kwˈatɾe/ "FOUR_NUM"
 	<cremar> /kɾemˈar/ "BURN_VERB"
 
-/ɐ/ (0.031)
-	<Espanya> /espˈaɲɐ/ "SPAIN_PROPN"
-	<argila> /arʤˈilɐ/ "CLAY_NOUN"
-	<agulla> /aɣˈuʎɐ/ "NEEDLE_NOUN"
+/ɐ/ (0.032)
+	<ànima> /ˈanimɐ/ "SOUL_NOUN"
+	<cambra> /kˈambɾɐ/ "CHAMBER_NOUN"
+	<muntanya> /muntˈaɲɐ/ "MOUNTAIN_NOUN"
 
-/ˈe/ (0.03)
+/ˈe/ (0.029)
 	<anell> /anˈeʎ/ "RING_NOUN"
 	<vent> /vˈent/ "WIND_NOUN"
 	<néixer> /nˈeʃer/ "BE BORN_VERB"
@@ -39,20 +39,20 @@ VOWELS
 	<veure> /vˈæwɾɜ/ "SEE_VERB"
 	<bella> /bˈeʎɜ/ "BEAUTIFUL (F)_ADJ"
 
-/ˈu/ (0.023)
+/ˈu/ (0.022)
 	<núvol> /nˈuvol/ "CLOUD_NOUN"
 	<cul> /kˈul/ "BUTTOCKS_NOUN"
 	<pluja> /plˈuʤɐ/ "RAIN_NOUN"
 
-/ˈo/ (0.021)
-	<rodó> /roðˈo/ "ROUND_ADJ"
-	<color> /kolˈor/ "COLOR_NOUN"
-	<lleó> /ʎeˈo/ "LION_NOUN"
+/ˈo/ (0.022)
+	<raó> /raˈo/ "REASON_NOUN"
+	<millor> /miʎˈor/ "BETTER_ADJ"
+	<genoll> /ʤenˈoʎ/ "KNEE_NOUN"
 
-/o/ (0.021)
-	<sofrir> /sofɾˈir/ "SUFFER_VERB"
+/o/ (0.022)
+	<dormir> /dormˈir/ "SLEEP_VERB"
 	<conèixer> /konˈæʃer/ "BE ACQUAINTED WITH_VERB"
-	<llombrígol> /ʎombɾˈiɡol/ "NAVEL_NOUN"
+	<escoltar> /eskoltˈar/ "LISTEN_VERB"
 
 /a/ (0.02)
 	<farina> /faɾˈinɐ/ "FLOUR_NOUN"
@@ -95,22 +95,22 @@ CONSONANTS
 	<qui> /kˈi/ "WHO_PRON"
 	<curt> /kˈuɾt/ "SHORT_ADJ"
 
-/t/ (0.047)
+/t/ (0.046)
 	<llet> /ʎˈet/ "MILK_NOUN"
 	<tres> /tɾˈæs/ "THREE_NUM"
 	<vosaltres> /vozˈaltɾes/ "YOU (PL)_PRON"
 
-/ɾ/ (0.042)
-	<pedra> /pˈeðɾɜ/ "STONE_NOUN"
-	<morir> /moɾˈir/ "DIE_VERB"
-	<farina> /faɾˈinɐ/ "FLOUR_NOUN"
+/ɾ/ (0.043)
+	<estrella> /estɾˈeʎɜ/ "STAR_NOUN"
+	<creu> /kɾˈæw/ "CROSS_NOUN"
+	<greix> /ɡɾˈejʃ/ "FAT_NOUN"
 
 /n/ (0.039)
 	<cent> /sˈent/ "HUNDRED_NUM"
 	<pons> /pˈɒns/ "PUT-2SG_VERB"
 	<no> /nˈo/ "NOT_ADVERB"
 
-/ʎ/ (0.037)
+/ʎ/ (0.036)
 	<lluna> /ʎˈunɐ/ "MOON_NOUN"
 	<fulla> /fˈuʎɐ/ "LEAF_NOUN"
 	<lloc> /ʎˈɒk/ "PLACE_NOUN"
@@ -125,25 +125,25 @@ CONSONANTS
 	<punt> /pˈunt/ "POINT_NOUN"
 	<plànyer> /plˈaɲer/ "WEEP_VERB"
 
-/m/ (0.031)
-	<metge> /mˈeʤɜ/ "DOCTOR_NOUN"
-	<molt> /mˈolt/ "MANY_ADJ"
-	<fum> /fˈum/ "SMOKE_NOUN"
+/m/ (0.032)
+	<morir> /moɾˈir/ "DIE_VERB"
+	<llum> /ʎˈum/ "LIGHT_NOUN"
+	<dormir> /dormˈir/ "SLEEP_VERB"
 
-/w/ (0.024)
-	<veure> /vˈæwɾɜ/ "SEE_VERB"
-	<ou> /ˈɒw/ "EGG_NOUN"
-	<llengua> /ʎˈæŋɡwɜ/ "TONGUE_NOUN"
+/w/ (0.025)
+	<riu> /rˈiw/ "RIVER_NOUN"
+	<beure> /bˈæwɾɜ/ "DRINK_VERB"
+	<deu> /dˈæw/ "TEN_NUM"
 
 /v/ (0.022)
 	<vin> /vˈin/ "TWENTY_NUM"
 	<via> /vˈiɐ/ "ROAD_NOUN"
 	<núvol> /nˈuvol/ "CLOUD_NOUN"
 
-/f/ (0.019)
-	<sofrir> /sofɾˈir/ "SUFFER_VERB"
-	<fi> /fˈi/ "END_NOUN"
-	<fetge> /fˈeʤɜ/ "LIVER_NOUN"
+/f/ (0.02)
+	<fort> /fˈɒrt/ "STRONG_ADJ"
+	<fer> /fˈer/ "DO_VERB"
+	<fulla> /fˈuʎɐ/ "LEAF_NOUN"
 
 /ʤ/ (0.017)
 	<junt> /ʤˈunt/ "JOINED_ADJ"
@@ -160,33 +160,33 @@ CONSONANTS
 	<guatla> /ɡwˈaɫːɐ/ "QUAIL_NOUN"
 	<ungla> /ˈuŋɡlɐ/ "FINGERNAIL_NOUN"
 
-/b/ (0.012)
+/b/ (0.011)
 	<bones> /bˈɒnes/ "GOOD (F.PL)_ADJ"
-	<bons> /bˈɒns/ "GOOD (M.PL)_ADJ"
-	<bany> /bˈaɲ/ "BATH_NOUN"
+	<bo> /bˈɒ/ "GOOD (M.SG)_ADJ"
+	<cambra> /kˈambɾɐ/ "CHAMBER_NOUN"
 
 /ɲ/ (0.01)
+	<àngel> /ˈaɲʤel/ "ANGEL_NOUN"
 	<llenya> /ʎˈeɲɜ/ "WOOD_NOUN"
 	<penya> /pˈæɲɜ/ "FEATHER_NOUN"
-	<vergonya> /verɡˈoɲɞ/ "SHAME_NOUN"
+
+/β/ (0.009)
+	<saber> /saβˈær/ "KNOW_VERB"
+	<obra> /ˈɒβɾɞ/ "WORK_NOUN"
+	<cabra> /kˈaβɾɐ/ "GOAT_NOUN"
 
 /ð/ (0.009)
-	<rodó> /roðˈo/ "ROUND_ADJ"
-	<fada> /fˈaðɐ/ "FATE_NOUN"
 	<vida> /vˈiðɐ/ "LIFE_NOUN"
-
-/β/ (0.008)
-	<saber> /saβˈær/ "KNOW_VERB"
-	<cabell> /kaβˈæʎ/ "HAIR_NOUN"
-	<pobre> /pˈɒβɾɞ/ "POOR_ADJ"
+	<rodó> /roðˈo/ "ROUND_ADJ"
+	<ajudar> /aʤuðˈar/ "HELP_VERB"
 
 /ɣ/ (0.008)
+	<llàgrima> /ʎˈaɣɾimɐ/ "TEAR_NOUN"
 	<sàpiga> /sˈapiɣɐ/ "KNOW-SBJ-1SG_VERB"
 	<plaga> /plˈaɣɐ/ "PLAGUE_NOUN"
-	<igual> /iɣwˈal/ "EQUAL_ADJ"
 
 /ŋ/ (0.006)
-	<blanc> /blˈaŋk/ "WHITE_ADJ"
+	<cinc> /sˈiŋk/ "FIVE_NUM"
 	<sang> /sˈaŋk/ "BLOOD_NOUN"
 	<ungla> /ˈuŋɡlɐ/ "FINGERNAIL_NOUN"
 
@@ -195,20 +195,20 @@ CONSONANTS
 	<lluita> /ʎˈujtɐ/ "FIGHT_NOUN"
 	<fruit> /fɾˈujt/ "FRUIT_NOUN"
 
-/ʃ/ (0.004)
-	<baix> /bˈaʃ/ "LOW_ADJ"
-	<néixer> /nˈeʃer/ "BE BORN_VERB"
-	<peix> /pˈejʃ/ "FISH_NOUN"
-
-/z/ (0.004)
-	<casa> /kˈazɐ/ "HOUSE_NOUN"
+/z/ (0.005)
+	<vosaltres> /vozˈaltɾes/ "YOU (PL)_PRON"
 	<dotze> /dˈozɞ/ "TWELVE_NUM"
-	<cosa> /kˈɒzɞ/ "THING_NOUN"
+	<casa> /kˈazɐ/ "HOUSE_NOUN"
+
+/ʃ/ (0.004)
+	<peix> /pˈejʃ/ "FISH_NOUN"
+	<conèixer> /konˈæʃer/ "BE ACQUAINTED WITH_VERB"
+	<cuixa> /kˈuʃɐ/ "THIGH_NOUN"
 
 /ʧ/ (0.004)
-	<roig> /rˈɒʧ/ "RED_ADJ"
-	<goig> /ɡˈɒʧ/ "JOY_NOUN"
 	<mig> /mˈiʧ/ "MIDDLE_NOUN"
+	<goig> /ɡˈɒʧ/ "JOY_NOUN"
+	<roig> /rˈɒʧ/ "RED_ADJ"
 
 /ɫː/ (0.001)
 	<guatla> /ɡwˈaɫːɐ/ "QUAIL_NOUN"

@@ -1,12 +1,12 @@
 VOWELS
-/i/ (0.099)
+/i/ (0.1)
 	<tsitati> /ʦitˈati/ "CITY_NOUN"
-	<shasi> /ʃˈasi/ "SIX_NUM"
-	<gioni> /ʤˈoni/ "YOUNG_ADJ"
+	<cãntu> /kɨntˈari/ "SING_VERB"
+	<scriiri> /skrˈiiri/ "WRITE_VERB"
 
-/ə/ (0.061)
+/ə/ (0.06)
 	<dzuã> /ʣˈuə/ "DAY_NOUN"
-	<mãtur> /mətˈur/ "MATURE_NOUN"
+	<lunã> /lˈunə/ "MOON_NOUN"
 	<ljuftã> /ʎˈuftə/ "FIGHT_NOUN"
 
 /ˈa/ (0.05)
@@ -14,20 +14,20 @@ VOWELS
 	<spatã> /spˈatə/ "SWORD_NOUN"
 	<caldu> /kˈaldu/ "HOT_ADJ"
 
-/ˈi/ (0.04)
-	<durnjiri> /durɲˈiri/ "SLEEP_VERB"
-	<ghini> /ɡˈini/ "WELL (ADV)_ADV"
-	<yitsin> /jiʦˈin/ "NEIGHBOR_NOUN"
-
-/u/ (0.036)
-	<azbuirari> /azbujrˈari/ "FLY_VERB"
-	<puteari> /pute̯ˈari/ "CAN_VERB"
-	<nostru> /nˈostru/ "OUR_ADJ"
+/ˈi/ (0.039)
+	<njic> /ɲˈik/ "SMALL_ADJ"
+	<tsi> /ʦˈi/ "WHAT_PRON"
+	<pitreatsiri> /pitre̯aʦiˈiri/ "PARTY_NOUN"
 
 /ˈu/ (0.035)
-	<tut> /tˈut/ "ALL (SG)_ADJ"
-	<mãtur> /mətˈur/ "MATURE_NOUN"
-	<nuc> /nˈuk/ "NUT_NOUN"
+	<frut> /frˈut/ "FRUIT_NOUN"
+	<cãtushi> /kɨtˈuʃi/ "CAT_NOUN"
+	<puniri> /pˈuniri/ "PUT_VERB"
+
+/u/ (0.035)
+	<ursu> /ˈursu/ "BEAR_NOUN"
+	<lungu> /lˈuŋɡu/ "LONG_ADJ"
+	<buric> /burˈik/ "NAVEL_NOUN"
 
 /e̯ˈa/ (0.023)
 	<cheali> /ke̯ˈali/ "SKIN_NOUN"
@@ -44,7 +44,7 @@ VOWELS
 	<dosprãdzatsi> /dˈosprəʣaʦi/ "TWELVE_NUM"
 	<azbuirari> /azbujrˈari/ "FLY_VERB"
 
-/ˈe/ (0.015)
+/ˈe/ (0.016)
 	<njel> /ɲˈel/ "LAMB_NOUN"
 	<negru> /nˈeɡru/ "BLACK_ADJ"
 	<lemnu> /lˈemnu/ "WOOD_NOUN"
@@ -54,7 +54,7 @@ VOWELS
 	<aroatã> /aro̯ˈatə/ "WHEEL_NOUN"
 	<soari> /so̯ˈari/ "SUN_NOUN"
 
-/ˈɨ/ (0.014)
+/ˈɨ/ (0.013)
 	<frãndzã> /frˈɨnʣə/ "LEAF_NOUN"
 	<lãnã> /lˈɨnə/ "WOOL_NOUN"
 	<arãnji> /arˈɨɲi/ "SPIDER_NOUN"
@@ -81,20 +81,20 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.097)
+/r/ (0.098)
 	<patru> /pˈatru/ "FOUR_NUM"
 	<nashtiri> /nˈaʃtiri/ "BE BORN_VERB"
 	<dzer> /ʣˈer/ "ICE_NOUN"
 
-/n/ (0.062)
-	<galbin> /ɡˈalbin/ "YELLOW_ADJ"
+/n/ (0.061)
+	<gioni> /ʤˈoni/ "YOUNG_ADJ"
 	<yin> /jˈin/ "COME-1SG_VERB"
 	<dzindzii> /ʣinʣˈii/ "GUMS_NOUN"
 
-/k/ (0.053)
+/k/ (0.054)
 	<carni> /kˈarni/ "MEAT_NOUN"
 	<chearsicã> /ke̯ˈarsikə/ "PEACH_NOUN"
-	<poarcã> /po̯ˈarkə/ "SOW_NOUN"
+	<cãntu> /kˈɨntu/ "SONG_NOUN"
 
 /t/ (0.049)
 	<ljuftã> /ʎˈuftə/ "FIGHT_NOUN"
@@ -107,11 +107,11 @@ CONSONANTS
 	<Ispania> /ispˈanja/ "SPAIN_PROPN"
 
 /m/ (0.03)
-	<muljari> /muʎˈari/ "WOMAN_WIFE_NOUN"
+	<feaminã> /fe̯ˈaminə/ "WOMAN_FEMALE_NOUN"
 	<foami> /fo̯ˈami/ "HUNGER_NOUN"
-	<armãn> /armˈɨn/ "ROMAN_ADJ"
+	<numã> /nˈumə/ "NAME_NOUN"
 
-/l/ (0.03)
+/l/ (0.029)
 	<lapti> /lˈapti/ "MILK_NOUN"
 	<lup> /lˈup/ "WOLF_NOUN"
 	<lemnu> /lˈemnu/ "WOOD_NOUN"
@@ -136,74 +136,74 @@ CONSONANTS
 	<dosprãdzatsi> /dˈosprəʣaʦi/ "TWELVE_NUM"
 	<doi> /dˈoj/ "TWO (M)_NUM"
 
-/ʎ/ (0.016)
-	<ureaclji> /ure̯ˈakʎi/ "EAR_NOUN"
-	<piduclju> /pidˈukʎu/ "LOUSE_NOUN"
-	<hilj> /çˈiʎ/ "SON_NOUN"
-
-/b/ (0.015)
+/b/ (0.017)
+	<azbuirari> /azbujrˈari/ "FLY_VERB"
+	<arburi> /ˈarburi/ "TREE_NOUN"
 	<bune> /bˈune/ "GOOD (F.PL)_ADJ"
-	<buni> /bˈuni/ "GOOD (M.PL)_ADJ"
-	<iarbã> /jˈarbə/ "GRASS_NOUN"
 
-/ʣ/ (0.014)
-	<plãndziri> /plˈɨnʣiri/ "WEEP_VERB"
-	<frãndzã> /frˈɨnʣə/ "LEAF_NOUN"
+/ʎ/ (0.016)
+	<ljuftã> /ʎˈuftə/ "FIGHT_NOUN"
+	<hilj> /çˈiʎ/ "SON_NOUN"
 	<dzinuclju> /ʣinˈukʎu/ "KNEE_NOUN"
 
-/ʃ/ (0.014)
-	<shasi> /ʃˈasi/ "SIX_NUM"
-	<arosh> /arˈoʃ/ "RED_ADJ"
+/ʣ/ (0.013)
+	<dzinuclju> /ʣinˈukʎu/ "KNEE_NOUN"
+	<njedzu> /ɲˈeʣu/ "MIDDLE_NOUN"
+	<dzatsi> /ʣˈaʦi/ "TEN_NUM"
+
+/ʃ/ (0.013)
 	<cinushi> /ʧinˈuʃi/ "ASH_NOUN"
+	<peashti> /pe̯ˈaʃti/ "FISH_NOUN"
+	<shasi> /ʃˈasi/ "SIX_NUM"
 
 /f/ (0.013)
-	<fãrinã> /fərˈinə/ "FLOUR_NOUN"
-	<aflari> /aflˈari/ "BLOW-FIND_VERB"
 	<ljuftã> /ʎˈuftə/ "FIGHT_NOUN"
+	<cãftari> /kəftˈari/ "HUNT_VERB"
+	<frut> /frˈut/ "FRUIT_NOUN"
 
 /ɡ/ (0.012)
-	<ghine> /ɡˈine/ "WELL (ADV)_ADV"
 	<gurã> /ɡˈurə/ "THROAT_NOUN"
-	<ghini> /ɡˈini/ "WELL (ADV)_ADV"
+	<galbin> /ɡˈalbin/ "YELLOW_ADJ"
+	<lungu> /lˈuŋɡu/ "LONG_ADJ"
 
-/ɲ/ (0.009)
-	<rãnji> /rˈɨɲi/ "SPIDER_NOUN"
-	<durnjiri> /durɲˈiri/ "SLEEP_VERB"
+/ɲ/ (0.008)
 	<njeri> /ɲˈeri/ "HONEY_NOUN"
+	<njilje> /ɲˈiʎe/ "THOUSAND_NUM"
+	<njel> /ɲˈel/ "LAMB_NOUN"
 
 /w/ (0.008)
-	<nau> /nˈaw/ "NEW_ADJ"
-	<dauã> /dˈawə/ "TWO (F)_NUM"
+	<ou> /ˈow/ "EGG_NOUN"
 	<nouã> /nˈowə/ "NINE_NUM"
+	<dauã> /dˈawə/ "TWO (F)_NUM"
 
 /v/ (0.008)
-	<tavru> /tˈavru/ "BULL_NOUN"
-	<veardi> /ve̯ˈardi/ "GREEN_ADJ"
-	<veclju> /vˈekʎu/ "OLD_ADJ"
+	<vearã> /ve̯ˈarə/ "SUMMER_NOUN"
+	<videari> /vide̯ˈari/ "SEE_VERB"
+	<voi> /vˈoj/ "YOU (PL)_PRON"
 
 /ʤ/ (0.006)
-	<gioni> /ʤˈoni/ "YOUNG_ADJ"
 	<leadzi> /le̯ˈaʤi/ "LAW_NOUN"
-	<gioc> /ʤˈok/ "GAME_NOUN"
+	<agiut> /aʤˈut/ "HELP-1SG_VERB"
+	<agiutari> /aʤutˈari/ "HELP_VERB"
 
 /ç/ (0.004)
-	<hilj> /çˈiʎ/ "SON_NOUN"
 	<hikat> /çˈikat/ "LIVER_NOUN"
-	<hir> /çˈir/ "STRING_NOUN"
+	<hilji> /çˈiʎi/ "DAUGHTER_NOUN"
+	<her> /çˈer/ "IRON_NOUN"
 
 /ʧ/ (0.003)
-	<cicior> /ʧiʧˈor/ "FOOT_NOUN"
 	<ciumã> /ʧˈumə/ "SUMMIT_NOUN"
 	<cinushi> /ʧinˈuʃi/ "ASH_NOUN"
+	<cicior> /ʧiʧˈor/ "FOOT_NOUN"
 
 /ŋ/ (0.003)
+	<yinghits> /jiŋɡˈiʦ/ "TWENTY_NUM"
 	<unglji> /ˈuŋɡʎi/ "FINGERNAIL_NOUN"
 	<ngljitsari> /ŋɡʎˈiʦari/ "FREEZE_VERB"
-	<yinghits> /jiŋɡˈiʦ/ "TWENTY_NUM"
 
 /z/ (0.002)
-	<zbor> /zbˈor/ "FLIGHT_NOUN"
 	<azbuirari> /azbujrˈari/ "FLY_VERB"
+	<zbor> /zbˈor/ "FLIGHT_NOUN"
 
 
 
