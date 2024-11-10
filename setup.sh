@@ -5,7 +5,7 @@ set -eou pipefail
 git submodule update --init --recursive
 
 # Create the virtual environment:
-python3 -m venv venv
+python3.12 -m venv venv || python3 -m venv venv
 
 # Activate virtual environment, install packages
 source venv/bin/activate
