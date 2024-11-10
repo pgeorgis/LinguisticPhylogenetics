@@ -3,10 +3,11 @@ from itertools import zip_longest
 from math import inf, log
 import numpy as np
 from constants import GAP_CH_DEFAULT
+from utils import PhonemeMap
 from utils.sequence import Ngram
 
 
-def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
+def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs) -> PhonemeMap:
     """Calculates pairwise alignment costs for sequences using a specified cost function.
 
     Args:
@@ -18,7 +19,8 @@ def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
     Returns:
         dict: dictionary of pairwise alignment costs by sequence indices
     """
-    alignment_costs = defaultdict(lambda: {})
+
+    alignment_costs: PhonemeMap = PhonemeMap()
     for i, seq1_i in enumerate(seq1):
         for j, seq2_j in enumerate(seq2):
             cost = cost_func.eval(seq1_i, seq2_j, **kwargs)
@@ -31,17 +33,17 @@ def calculate_alignment_costs(seq1, seq2, cost_func, as_indices=True, **kwargs):
                     cost = -inf
 
             if as_indices:
-                alignment_costs[i][j] = cost
+                alignment_costs.set_value(i, j, cost)
             else:
-                alignment_costs[seq1_i][seq2_j] = cost
+                alignment_costs.set_value(seq1_i, seq2_j, cost)
 
     return alignment_costs
 
 
 def needleman_wunsch_extended(seq1: list,
                               seq2: list,
-                              align_cost: dict,
-                              gap_cost: dict,
+                              align_cost: PhonemeMap,
+                              gap_cost: PhonemeMap,
                               default_gop: int | float,
                               gap_ch: str=GAP_CH_DEFAULT,
                               allow_complex: bool=True,
@@ -52,8 +54,8 @@ def needleman_wunsch_extended(seq1: list,
     Args:
         seq1 (list): List of units in sequence 1.
         seq2 (list): List of units in sequence 2.
-        align_cost (dict): Dictionary of alignment costs between units.
-        gap_cost (dict): Dictionary of costs to align a unit with a gap.
+        align_cost (PhonemeMap): Dictionary of alignment costs between units.
+        gap_cost (PhonemeMap): Dictionary of costs to align a unit with a gap.
         default_gop (int | float): Default gap opening penalty in case pair is not in gap_cost dictionary.
         gap_ch (str, optional): Gap character. Defaults to "{GAP_CH_DEFAULT}".
         allow_complex (bool, optional): Allow complex alignments (one-to-many, many-to-one, many-to-many, etc.). Defaults to True.
@@ -84,10 +86,12 @@ def needleman_wunsch_extended(seq1: list,
 
     # Fill first row and column with gap penalties
     for i in range(1, n + 1):
-        dp[i][0] = dp[i-1][0] + gap_cost.get(seq2ngram(seq1[:i]), {}).get(gap_ch, default_gop)
+        default = gap_cost.get_value_or_default(seq2ngram(seq1[:i]), gap_ch, default_gop)
+        dp[i][0] = dp[i-1][0] + default
         traceback[i][0] = (1, 0)  # Indicates seq1 gaps
     for j in range(1, m + 1):
-        dp[0][j] = dp[0][j-1] + gap_cost.get(gap_ch, {}).get(seq2ngram(seq2[:j]), default_gop)
+        default = gap_cost.get_value_or_default(gap_ch, seq2ngram(seq2[:j]), default_gop)
+        dp[0][j] = dp[0][j-1] + default
         traceback[0][j] = (0, 1)  # Indicates seq2 gaps
 
     # Fill the dp matrix
@@ -104,7 +108,7 @@ def needleman_wunsch_extended(seq1: list,
                     if max_size > 1 and allow_complex is False:
                         continue
                     ngram_unit2 = seq2ngram(seq2[j-l:j])
-                    cost = align_cost.get(ngram_unit1, {}).get(ngram_unit2, default_gop * max_size)
+                    cost = align_cost.get_value_or_default(ngram_unit1, ngram_unit2, default_gop * max_size)
                     score = dp[i-k][j-l] + cost
                     if score_is_better(score, best_score):
                         best_score = score
@@ -116,7 +120,7 @@ def needleman_wunsch_extended(seq1: list,
                 size = max(1, (i-(i-k)))
                 if size > 1 and allow_complex is False:
                     continue
-                cost = gap_cost.get(ngram_unit1, {}).get(gap_ch, default_gop * size)
+                cost = gap_cost.get_value_or_default(ngram_unit1, gap_ch, default_gop * size)
                 score = dp[i-k][j] + cost
                 if score_is_better(score, best_score):
                     best_score = score
@@ -128,7 +132,7 @@ def needleman_wunsch_extended(seq1: list,
                 size = max(1, (j-(j-l)))
                 if size > 1 and allow_complex is False:
                     continue
-                cost = gap_cost.get(gap_ch, {}).get(ngram_unit2, default_gop * size)
+                cost = gap_cost.get_value_or_default(gap_ch, ngram_unit2, default_gop * size)
                 score = dp[i][j-l] + cost
                 if score_is_better(score, best_score):
                     best_score = score

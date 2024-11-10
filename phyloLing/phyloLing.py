@@ -34,6 +34,8 @@ from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
 from unidecode import unidecode
+
+from utils import PhonemeMap
 from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.information import calculate_infocontent_of_word, entropy
@@ -339,8 +341,8 @@ class LexicalDataset:
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     pmi_value = row['PMI']
                     ngram1, ngram2 = map(str2ngram, [phone1, phone2])
-                    lang1.phoneme_pmi[lang2.name][ngram1.undo()][ngram2.undo()] = pmi_value
-                    lang2.phoneme_pmi[lang1.name][ngram2.undo()][ngram1.undo()] = pmi_value
+                    lang1.phoneme_pmi[lang2.name].set_value(ngram1.undo(), ngram2.undo(), pmi_value)
+                    lang2.phoneme_pmi[lang1.name].set_value(ngram2.undo(), ngram1.undo(), pmi_value)
 
     def write_phoneme_pmi(self, **kwargs):
         self.logger.info(f'Saving {self.name} phoneme PMI...')
@@ -1169,7 +1171,7 @@ class Language:
 
         # Comparison with other languages
         self.phoneme_correlators = {}
-        self.phoneme_pmi: dict[str, dict] = create_default_dict(0, 3)
+        self.phoneme_pmi: dict[str, PhonemeMap] = defaultdict(PhonemeMap)
         self.phoneme_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 4)
         self.phon_env_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 3)
         self.noncognate_thresholds: dict[(str, Distance, int, int), list] = defaultdict(list)
