@@ -33,6 +33,8 @@ from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
 from unidecode import unidecode
+
+from utils import PhonemeMap
 from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.information import calculate_infocontent_of_word, entropy
@@ -325,8 +327,8 @@ class LexicalDataset:
                     phone1, phone2 = row['Phone1'], row['Phone2']
                     pmi_value = row['PMI']
                     ngram1, ngram2 = map(str2ngram, [phone1, phone2])
-                    lang1.phoneme_pmi[lang2.name][ngram1.undo()][ngram2.undo()] = pmi_value
-                    lang2.phoneme_pmi[lang1.name][ngram2.undo()][ngram1.undo()] = pmi_value
+                    lang1.phoneme_pmi[lang2.name].set_value(ngram1.undo(), ngram2.undo(), pmi_value)
+                    lang2.phoneme_pmi[lang1.name].set_value(ngram2.undo(), ngram1.undo(), pmi_value)
 
     def write_phoneme_pmi(self, **kwargs):
         self.logger.info(f'Saving {self.name} phoneme PMI...')
@@ -1122,6 +1124,7 @@ class Language:
 
         # Phonemic inventory
         self.phonemes = create_default_dict(0)
+        self.phoneme_counts = create_default_dict(0)
         self.vowels = create_default_dict(0)
         self.consonants = create_default_dict(0)
         self.tonemes = create_default_dict(0)
@@ -1157,7 +1160,7 @@ class Language:
 
         # Comparison with other languages
         self.phoneme_correlators = {}
-        self.phoneme_pmi: dict[str, dict] = create_default_dict(0, 3)
+        self.phoneme_pmi: dict[str, PhonemeMap] = defaultdict(PhonemeMap)
         self.phoneme_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 4)
         self.phon_env_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 3)
         self.noncognate_thresholds: dict[(str, Distance, int, int), list] = defaultdict(list)
@@ -1198,7 +1201,7 @@ class Language:
 
                 # Count phones and unigrams
                 for segment in segments:
-                    self.phonemes[segment] += 1
+                    self.phoneme_counts[segment] += 1
                 padded_segments = pad_sequence(segments, pad_ch=pad_ch, pad_n=1)
                 for segment in padded_segments:
                     self.unigrams[Ngram(segment).ngram] += 1
@@ -1231,9 +1234,9 @@ class Language:
         self.ngrams[3] = self.trigrams
 
         # Normalize counts
-        total_tokens: int = sum(self.phonemes.values())
-        for phoneme in self.phonemes:
-            count = self.phonemes[phoneme]
+        total_tokens: int = sum(self.phoneme_counts.values())
+        for phoneme in self.phoneme_counts:
+            count = self.phoneme_counts[phoneme]
             if count < self.transcription_params["min_phone_instances"]:
                 self.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
             self.phonemes[phoneme] = count / total_tokens
@@ -1582,6 +1585,7 @@ class Word:
         self.syllables = None
         self.phon_env = self.getPhonEnv()
         self.info_content = None
+        self.total_info_content = None
 
     def get_parameter(self, label):
         return self.parameters.get(label, TRANSCRIPTION_PARAM_DEFAULTS[label])
@@ -1622,13 +1626,17 @@ class Word:
             suprasegmentals=self.get_parameter('suprasegmentals')
         )
     
-    def get_ngrams(self, size, pad_ch=PAD_CH_DEFAULT):
+    def get_ngrams(self, size, pad_ch=PAD_CH_DEFAULT, phon_env=False):
         """Get word's segments as ngram sequences of specified size."""
-        if size in self.ngrams:
-            return self.ngrams[size]
-        padded = pad_sequence(self.segments, pad_ch=pad_ch, pad_n=max(1, size-1))
+        if (size, phon_env) in self.ngrams:
+            return self.ngrams[(size, phon_env)]
+        if phon_env:
+            seq = list(zip(self.segments, self.phon_env))
+        else:
+            seq = self.segments
+        padded = pad_sequence(seq, pad_ch=pad_ch, pad_n=max(1, size-1))
         ngram_seq = generate_ngrams(padded, ngram_size=size, pad_ch=pad_ch, as_ngram=False)
-        self.ngrams[size] = ngram_seq
+        self.ngrams[(size, phon_env)] = ngram_seq
         return ngram_seq
     
     def complex_segmentation(self, pad_ch=PAD_CH_DEFAULT):
@@ -1669,11 +1677,19 @@ class Word:
             phon_env.append(get_phon_env(self.segments, i))
         return phon_env
 
-    def getInfoContent(self):
+    def getInfoContent(self, total=False):
+        if self.info_content is not None:
+            if total:
+                return self.total_info_content
+            return self.info_content
+
         if self.language is None:
             raise AssertionError('Language must be specified in order to calculate information content.')
 
         self.info_content = self.language.calculate_infocontent(self)
+        self.total_info_content = sum([self.info_content[j][-1] for j in self.info_content])
+        if total:
+            return self.total_info_content
         return self.info_content
 
     def __str__(self):

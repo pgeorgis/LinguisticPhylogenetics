@@ -40,7 +40,17 @@ def filter_cognates_by_lang(lang, cluster):
     Returns:
         list: Word objects belonging to the specified Language
     """
-    return list(filter(lambda word: word.language == lang, cluster))
+    # Filter by language and sort
+    filtered_cognates = list(filter(lambda word: word.language == lang, cluster))
+    filtered_cognates.sort(key=lambda word: (
+        word.ipa,
+        word.orthography,
+        word.concept,
+        word.getInfoContent(total=True)
+        )
+    )
+    
+    return filtered_cognates
 
 
 @lru_cache(maxsize=None)
@@ -245,7 +255,7 @@ def gradient_cognate_dist(lang1,
 
     similarity_score = mean(group_scores.values())
     if logger:
-        logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(score, 3)}')
+        logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(similarity_score, 3)}')
         
     distance_score = 1 - similarity_score
     return distance_score
