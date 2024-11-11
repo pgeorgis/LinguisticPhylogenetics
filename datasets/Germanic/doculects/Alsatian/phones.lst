@@ -141,40 +141,40 @@ CONSONANTS
 	<Sit> /sˈiːt/ "side_NOUN"
 	<Stein> /ʃtˈəi̯n/ "stone_NOUN"
 
-/s/ (0.046)
+/s/ (0.043)
 	<Geiss> /ɡ̊ˈəi̯s/ "goat_NOUN"
-	<Ross> /ʁˈos/ "horse_NOUN"
-	<Wàsser> /ʋˈɒsəʁ/ "water_NOUN"
+	<wisse> /ʋˈisə/ "know_VERB"
+	<Seel> /sˈeːl/ "soul_NOUN"
 
 /d̥/ (0.043)
-	<Ding> /d̥ˈiŋ/ "thing_NOUN"
 	<drucke> /d̥ʁˈukə/ "press_VERB"
 	<Donner> /d̥ˈonəʁ/ "thunder_NOUN"
+	<Bàd> /b̥ˈɒːd̥/ "bath_NOUN_NEU"
 
 /ʃ/ (0.04)
-	<scheen> /ʃˈeːn/ "beautiful_ADJ"
 	<zwànzig> /ʦʋˈɒnʦiʃ/ "twenty_NUM"
 	<schwàrz> /ʃwˈɒʁʦ/ "black_ADJ"
+	<Rauch> /ʁˈʊːʃ/ "smoke_NOUN"
 
 /f/ (0.039)
-	<Fiir> /fˈiːʁ/ "fire_NOUN"
 	<helfe> /hˈælfə/ "help_VERB"
 	<zwelf> /ʦʋˈelf/ "twelve_NUM"
+	<frisch> /fʁˈiʃ/ "fresh_ADJ"
 
 /ʋ/ (0.033)
-	<Win> /ʋˈin/ "wine_NOUN"
 	<Wind> /ʋˈind̥/ "wind_NOUN"
 	<Wetter> /ʋˈetəʁ/ "weather_NOUN"
+	<Winter> /ʋˈintəʁ/ "winter_NOUN"
 
 /m/ (0.032)
-	<schwimme> /ʃwˈimə/ "swim_VERB"
 	<Blüem> /b̥lˈʊːm/ "flower_NOUN"
 	<Mül> /mˈyːl/ "mouth_NOUN"
+	<Mànn> /mˈɒn/ "man_NOUN"
 
 /b̥/ (0.028)
-	<blüete> /b̥lˈʊːtə/ "bleed_VERB"
 	<Bàd> /b̥ˈɒːd̥/ "bath_NOUN_NEU"
 	<bïsse> /b̥ˈiːsə/ "bite_VERB"
+	<tribe> /tʁˈiːb̥ə/ "drive_VERB"
 
 /h/ (0.021)
 	<hoch> /hˈoːx/ "high_ADJ"
@@ -187,7 +187,7 @@ CONSONANTS
 	<zwei> /ʦʋˈəi̯/ "two_NUM"
 
 /ɡ̊/ (0.016)
-	<Gàns> /ɡ̊ˈɒns/ "goose_NOUN"
+	<Gàns> /ɡ̊ˈɒnz̥/ "goose_NOUN"
 	<Geiss> /ɡ̊ˈəi̯s/ "goat_NOUN"
 	<grien> /ɡ̊ʁˈiːn/ "green_ADJ"
 
@@ -201,25 +201,25 @@ CONSONANTS
 	<Zung> /ʦˈuŋ/ "tongue_NOUN"
 	<Hunger> /hˈuŋəʁ/ "hunger_NOUN"
 
+/z̥/ (0.011)
+	<uns> /ˈunz̥/ "us_PRON"
+	<Hüs> /hˈyːz̥/ "house_NOUN"
+	<Nàs> /nˈɒːz̥/ "nose_NOUN"
+
 /k/ (0.011)
-	<sechs> /sˈeks/ "six_NUM"
-	<Eck> /ˈek/ "edge_NOUN"
+	<Bruck> /b̥ʁˈuk/ "bridge_NOUN"
 	<Ruck> /ʁˈuk/ "ridge_NOUN"
+	<drucke> /d̥ʁˈukə/ "press_VERB"
 
 /x/ (0.009)
-	<Doochter> /d̥ˈoːxtəʁ/ "daughter_NOUN"
-	<làche> /lˈɒxə/ "laugh_VERB"
 	<hoch> /hˈoːx/ "high_ADJ"
+	<Nààcht> /nˈɒːxt/ "night_NOUN_FEM"
+	<Sproch> /ʃpʁˈoːx/ "speech_NOUN_FEM"
 
 /j/ (0.009)
-	<Wäj> /ʋˈæj/ "way_NOUN"
-	<jung> /jˈuŋ/ "young_NOUN"
 	<lieje> /lˈiːjə/ "lie_VERB"
-
-/z̥/ (0.007)
-	<Müs> /mˈyːz̥/ "mouse_NOUN_FEM"
-	<Miis> /mˈiːz̥/ "mice_NOUN"
-	<Nàs> /nˈɒːz̥/ "nose_NOUN"
+	<Wäj> /ʋˈæj/ "way_NOUN"
+	<laje> /lˈaːjə/ "tell lies_VERB"
 
 /w/ (0.004)
 	<Schweschter> /ʃwˈeʃtəʁ/ "sister_NOUN"
@@ -227,8 +227,8 @@ CONSONANTS
 	<schwàrz> /ʃwˈɒʁʦ/ "black_ADJ"
 
 /p͡f/ (0.002)
-	<Àpfel> /ˈɒp͡fl̩/ "apple_NOUN"
 	<Kopf> /kʰˈop͡f/ "head_NOUN"
+	<Àpfel> /ˈɒp͡fl̩/ "apple_NOUN"
 
 /p/ (0.001)
 	<Sproch> /ʃpʁˈoːx/ "speech_NOUN_FEM"
