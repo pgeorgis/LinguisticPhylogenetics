@@ -56,7 +56,7 @@ VOWELS
 
 /ˈaː/ (0.014)
 	<sage> /zˈaːɣə/ "say_VERB"
-	<Jras> /jʀˈaːs/ "grass_NOUN_NEU"
+	<Jras> /jʀˈaːz̥/ "grass_NOUN_NEU"
 	<Maach> /mˈaːx/ "might_NOUN"
 
 /ˈɪ/ (0.013)
@@ -101,7 +101,7 @@ VOWELS
 
 /ˈʊ/ (0.003)
 	<Wurm> /ʋˈʊɐm/ "worm_NOUN"
-	<uns> /ˈʊns/ "us_PRON"
+	<uns> /ˈʊnz̥/ "us_PRON"
 	<unger> /ˈʊŋɐ/ "under_PREP"
 
 /ˈu/ (0.003)
@@ -147,58 +147,58 @@ CONSONANTS
 	<Föß> /fˈøːs/ "feet_NOUN_PL"
 	<Fesch> /fˈeʃ/ "fish_NOUN"
 
-/s/ (0.034)
-	<Sester> /zˈɛstɐ/ "sister_NOUN"
-	<uus> /ˈuːs/ "out_PREP"
-	<Waßer> /ʋˈaːsɐ/ "water_NOUN"
-
 /ʀ/ (0.032)
-	<Reng> /ʀˈeŋɡ̊/ "ring_NOUN"
-	<Brut> /bʀˈuːd̥/ "bread_NOUN"
-	<jrön> /jʀˈøːn/ "green_ADJ"
+	<hüre> /hˈyːʀə/ "hear_VERB"
+	<Tron> /tʀˈoːn/ "tear_NOUN_FEM"
+	<Frönk> /fʀˈœŋɡ̊/ "friend_NOUN"
 
 /m/ (0.031)
-	<Imm> /ˈɪm/ "bee_NOUN"
-	<Müüs> /mˈyːs/ "mice_NOUN"
-	<Storm> /ʃtˈɔɐm/ "storm_NOUN"
+	<Maach> /mˈaːx/ "might_NOUN"
+	<Mooder> /mˈoːdɐ/ "mother_NOUN"
+	<Sommer> /zˈɔmɐ/ "summer_NOUN"
 
 /ŋ/ (0.03)
-	<Wenkter> /ʋˈeŋɡ̊tɐ/ "winter_NOUN"
-	<danke> /dˈaŋkə/ "thank_VERB"
-	<Schwing> /ʃʋˈɪŋ/ "swine_NOUN"
+	<binge> /bˈɪŋə/ "bind_VERB"
+	<Schong> /ʃˈoŋ/ "shoe_NOUN"
+	<Kenk> /kˈeŋɡ̊/ "child_NOUN"
 
 /ʋ/ (0.029)
-	<weld> /ʋˈelt/ "wild_ADJ"
-	<weich> /ʋˈeɪ̯ɕ/ "weak_ADJ"
-	<Weng> /ʋˈeŋ/ "wine_NOUN"
+	<wärm> /ʋˈɛɐm/ "warm_ADJ"
+	<wünsche> /ʋˈʏnʃə/ "wish_VERB"
+	<Wurm> /ʋˈʊɐm/ "worm_NOUN"
 
 /ʃ/ (0.029)
-	<Fleesch> /flˈeːʃ/ "flesh_NOUN"
-	<Schnie> /ʃnˈiː/ "snow_NOUN"
-	<schärp> /ʃˈɛːɐp/ "sharp_ADJ"
+	<Steen> /ʃtˈeːn/ "stone_NOUN"
+	<Stään> /ʃtˈɛːn/ "star_NOUN"
+	<schesse> /ʃˈesə/ "shoot_VERB"
 
 /k/ (0.029)
-	<Bröck> /bʀˈœk/ "bridge_NOUN"
-	<sechs> /zˈɛks/ "six_NUM"
-	<Kirch> /kˈiːɐɕ/ "church_NOUN_FEM"
+	<niekste> /nˈiːkstə/ "next_ADJ"
+	<Kenk> /kˈeŋɡ̊/ "child_NOUN"
+	<Künning> /kˈʏnɪŋ/ "king_NOUN"
 
 /b/ (0.025)
-	<Bröck> /bʀˈœk/ "bridge_NOUN"
 	<binge> /bˈɪŋə/ "bind_VERB"
-	<Been> /bˈeːn/ "bone_NOUN"
+	<Badd> /bˈad̥/ "bath_NOUN_NEU"
+	<beede> /bˈeːdə/ "bid_VERB"
 
 /z/ (0.024)
-	<Siel> /zˈiːl/ "soul_NOUN"
-	<Sester> /zˈɛstɐ/ "sister_NOUN"
-	<Sau> /zˈaʊ̯/ "sow_NOUN"
+	<suur> /zˈuːɐ/ "sour_ADJ"
+	<sivve> /zˈɪvə/ "seven_NUM"
+	<Söster> /zˈœstɐ/ "sister_NOUN"
 
 /ɕ/ (0.023)
+	<seech> /zˈeːɕ/ "sick_ADJ"
 	<Berch> /bˈɛːɐɕ/ "mountain_NOUN"
-	<riech> /ʀˈiːɕ/ "rich_ADJ"
-	<Leech> /lˈeːɕ/ "light_NOUN"
+	<zwanzig> /ʦʋˈanʦɪɕ/ "twenty_NUM"
+
+/s/ (0.023)
+	<niekste> /nˈiːkstə/ "next_ADJ"
+	<schesse> /ʃˈesə/ "shoot_VERB"
+	<hasse> /hˈasə/ "hate_VERB"
 
 /h/ (0.021)
-	<Huus> /hˈuːs/ "house_NOUN"
+	<Huus> /hˈuːz̥/ "house_NOUN"
 	<Honger> /hˈoŋɐ/ "hunger_NOUN"
 	<Honk> /hˈoŋɡ̊/ "dog_NOUN"
 
@@ -227,30 +227,35 @@ CONSONANTS
 	<Sigg> /zˈɪɡ̊/ "side_NOUN"
 	<Hank> /hˈaŋɡ̊/ "hand_NOUN_FEM"
 
+/z̥/ (0.011)
+	<Muus> /mˈuːz̥/ "mouse_NOUN_FEM"
+	<Luus> /lˈuːz̥/ "louse_NOUN"
+	<Müüs> /mˈyːz̥/ "mice_NOUN"
+
 /x/ (0.01)
-	<Rouch> /ʀˈoʊ̯x/ "smoke_NOUN"
+	<laache> /lˈaːxə/ "laugh_VERB"
 	<Maach> /mˈaːx/ "might_NOUN"
-	<Naach> /nˈaːx/ "night_NOUN_FEM"
+	<Sprooch> /ʃpʀˈoːx/ "speech_NOUN_FEM"
 
 /p/ (0.009)
+	<Appel> /ˈapəl/ "apple_NOUN"
 	<Plog> /plˈoːɡ̊/ "plough_NOUN"
-	<schärp> /ʃˈɛːɐp/ "sharp_ADJ"
-	<Kopp> /kˈɔp/ "head_NOUN"
+	<helpe> /hˈɛlpə/ "help_VERB"
 
 /v/ (0.008)
 	<drieve> /dʀˈiːvə/ "drive_VERB"
-	<üvver> /ˈʏvɐ/ "over_PREP"
 	<sivve> /zˈɪvə/ "seven_NUM"
+	<jevve> /jˈɛvə/ "give_VERB"
 
 /v̥/ (0.007)
+	<Deev> /dˈeːv̥/ "thief_NOUN"
+	<Kalv> /kˈalv̥/ "calf_NOUN"
 	<Lauv> /lˈaʊ̯v̥/ "leaf_NOUN"
-	<Wiev> /ʋˈiːv̥/ "wife_NOUN"
-	<Duuv> /dˈuːv̥/ "dove_NOUN"
 
 /ɣ/ (0.003)
-	<sage> /zˈaːɣə/ "say_VERB"
-	<folge> /fˈɔlɣə/ "follow_VERB"
 	<sauge> /zˈaʊ̯ɣə/ "suck_VERB"
+	<folge> /fˈɔlɣə/ "follow_VERB"
+	<sage> /zˈaːɣə/ "say_VERB"
 
 
 

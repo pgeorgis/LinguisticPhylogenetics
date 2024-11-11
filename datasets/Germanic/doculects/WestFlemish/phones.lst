@@ -36,7 +36,7 @@ VOWELS
 
 /ˈæ/ (0.017)
 	<zwemmn> /zʋˈæmn̩/ "swim_VERB"
-	<weg> /ʋˈæh/ "way_NOUN"
+	<weg> /ʋˈæɦ̥/ "way_NOUN"
 	<kerke> /kˈæɾkə/ "church_NOUN_FEM"
 
 /ˈeː/ (0.017)
@@ -108,15 +108,15 @@ CONSONANTS
 	<twêe> /tʋˈɛː/ "two_NUM"
 	<stoel> /stˈuə̯l/ "stool_NOUN"
 
-/k/ (0.039)
-	<sproake> /spɾˈɒːkə/ "speech_NOUN_FEM"
+/k/ (0.04)
+	<rook> /ɾˈoːk/ "smoke_NOUN"
+	<joung> /jˈuŋk/ "young_NOUN"
 	<drinkn> /dɾˈɪŋkn̩/ "drink_VERB"
-	<eik> /ˈɛːk/ "oak_NOUN_FEM"
 
 /v/ (0.038)
+	<vos> /vˈɔs/ "fox_NOUN"
 	<viere> /vˈiə̯ɾə/ "four_NUM"
 	<twolve> /tʋˈɔwvə/ "twelve_NUM"
-	<vrouwe> /vɾˈuʋə/ "woman_NOUN"
 
 /d/ (0.037)
 	<doorn> /dˈoːɾn/ "thorn_NOUN"
@@ -128,8 +128,8 @@ CONSONANTS
 	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
 	<slang> /slˈɑŋ/ "snake_NOUN"
 
-/ɦ/ (0.031)
-	<mugge> /mˈœɦə/ "midge_NOUN"
+/ɦ/ (0.03)
+	<neegn> /nˈeːɦn̩/ "nine_NUM"
 	<vliegn> /vlˈiə̯ɦn̩/ "fly_VERB"
 	<god> /ɦˈɔd̥/ "god_NOUN"
 
@@ -153,23 +153,23 @@ CONSONANTS
 	<vast> /vˈɑst/ "fast_ADJ"
 	<duusd> /dˈyːsd̥/ "thousand_NUM"
 
-/h/ (0.026)
-	<achte> /ˈɑhtə/ "eight_NUM"
-	<schoap> /ʃhˈɒːp/ "sheep_NOUN"
-	<plicht> /plˈɛht/ "plight_NOUN"
-
 /m/ (0.025)
-	<moedr> /mˈuə̯dɾ̩/ "mother_NOUN"
-	<mins> /mˈɪns/ "person_NOUN"
-	<oarm> /ˈɒːɾm/ "arm_NOUN"
+	<zêem> /zˈɛːm/ "honey_NOUN"
+	<storm> /stˈɔɾm/ "storm_NOUN"
+	<muus> /mˈyːz̥/ "mouse_NOUN_FEM"
 
 /b/ (0.019)
-	<berg> /bˈæɾh/ "mountain_NOUN"
-	<bie> /bˈiə̯/ "bee_NOUN"
-	<bitn> /bˈitn̩/ "bite_VERB"
+	<brugge> /bɾˈœɦə/ "bridge_NOUN"
+	<berg> /bˈæɾɦ̥/ "mountain_NOUN"
+	<boom> /bˈoːm/ "tree_NOUN"
+
+/h/ (0.017)
+	<schoon> /ʃhˈoːn/ "beautiful_ADJ"
+	<plicht> /plˈɛht/ "plight_NOUN"
+	<schietn> /ʃhˈiə̯tn̩/ "shoot_VERB"
 
 /p/ (0.013)
-	<op> /ˈɔp/ "up_ADV"
+	<elpn> /ˈæwpn̩/ "help_VERB"
 	<sloapn> /slˈɒːpn̩/ "sleep_VERB"
 	<sproake> /spɾˈɒːkə/ "speech_NOUN_FEM"
 
@@ -183,23 +183,28 @@ CONSONANTS
 	<schild> /ʃhˈɪwd̥/ "shield_NOUN"
 	<volgn> /vˈɔwɦn̩/ "follow_VERB"
 
+/ɦ̥/ (0.009)
+	<dag> /dˈɑɦ̥/ "day_NOUN"
+	<twientig> /tʋˈiə̯ntəɦ̥/ "twenty_NUM"
+	<deeg> /dˈeːɦ̥/ "dough_NOUN"
+
 /v̥/ (0.009)
-	<lief> /lˈiə̯v̥/ "beloved_ADJ"
-	<dief> /dˈiə̯v̥/ "thief_NOUN"
-	<kolf> /kˈɔwv̥/ "calf_NOUN"
+	<oofd> /ˈoːv̥d̥/ "head_NOUN"
+	<wuuf> /ʋˈyːv̥/ "wife_NOUN"
+	<loof> /lˈoːv̥/ "leaf_NOUN"
 
 /ʃ/ (0.008)
+	<schoap> /ʃhˈɒːp/ "sheep_NOUN"
 	<schyt> /ʃhˈit/ "shit_NOUN"
 	<schietn> /ʃhˈiə̯tn̩/ "shoot_VERB"
-	<scherp> /ʃhˈæɾp/ "sharp_ADJ"
 
 /z̥/ (0.008)
 	<ys> /ˈiz̥/ "ice_NOUN"
-	<luus> /lˈyːz̥/ "louse_NOUN"
 	<uus> /ˈyːz̥/ "house_NOUN"
+	<luus> /lˈyːz̥/ "louse_NOUN"
 
 /j/ (0.004)
-	<joar> /jˈɒːɾ/ "year_NOUN"
+	<gjitte> /ɦjˈɪtə/ "goat_NOUN"
 	<drieje> /dɾˈiə̯jə/ "three_NUM"
 	<joung> /jˈuŋk/ "young_NOUN"
 
