@@ -23,8 +23,11 @@ phon_corr:
     refresh: []
     refresh_all: true
 
+# cognates:
+#     cluster_threshold: 1.376
+
 # evaluation:
-#     precalculated_word_scores:
+#     precalculated_word_scores: 
 
 tree:
     root: Proto-Germanic
