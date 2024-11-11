@@ -17,9 +17,9 @@ VOWELS
 /ɐ/ (0.025)
 	<Wǫǎmm> /vˈɔɐm/ "worm_NOUN"
 	<Hȁǎtts> /hˈæɐʦ/ "heart_NOUN"
-	<Tswȁǎsch> /tsvˈæɐʒ̥/ "dwarf_NOUN"
+	<Tswȁǎsch> /ʦvˈæɐʒ̥/ "dwarf_NOUN"
 
-/ˈɑː/ (0.02)
+/ˈɑː/ (0.021)
 	<Åål> /ˈɑːl/ "eel_NOUN"
 	<wååm> /vˈɑːm/ "warm_ADJ"
 	<Ååm> /ˈɑːm/ "arm_NOUN"
@@ -54,17 +54,17 @@ VOWELS
 	<Wäddä> /vˈɛd̥æ̆/ "weather_NOUN"
 	<Räscht> /ʀˈɛʃt/ "right_ADJ"
 
-/ˈoː/ (0.012)
+/ˈoː/ (0.013)
 	<Foochl> /fˈoːɣ̥l̩/ "bird_NOUN_MASC"
 	<Knoodě> /knˈoːd̥ə/ "knot_NOUN"
 	<kroos> /kʀˈoːs/ "great_ADJ"
 
-/ˈau̯/ (0.012)
+/ˈau̯/ (0.013)
 	<Haut> /hˈau̯d̥/ "skin_NOUN"
 	<prauě> /pʀˈau̯ə/ "brew_VERB"
 	<Sau> /sˈau̯/ "sow_NOUN"
 
-/ˈai̯/ (0.012)
+/ˈai̯/ (0.013)
 	<frai> /fʀˈai̯/ "free_ADJ"
 	<raisch> /ʀˈai̯ʃ/ "rich_ADJ"
 	<trai> /tʀˈai̯/ "three_NUM"
@@ -96,7 +96,7 @@ VOWELS
 
 /ˈæ/ (0.007)
 	<Schdȁǎnn> /ʃd̥ˈæɐn/ "star_NOUN"
-	<Tswȁǎsch> /tsvˈæɐʒ̥/ "dwarf_NOUN"
+	<Tswȁǎsch> /ʦvˈæɐʒ̥/ "dwarf_NOUN"
 	<Khȁǎsch> /kʰˈæɐʃ/ "church_NOUN_FEM"
 
 /ˈeː/ (0.007)
@@ -155,29 +155,29 @@ VOWELS
 
 
 CONSONANTS
-/d̥/ (0.065)
-	<Phååt> /pʰˈɑːd̥/ "path_NOUN"
-	<Ding> /d̥ˈiŋ/ "thing_NOUN"
+/d̥/ (0.062)
+	<biddě> /b̥ˈid̥ə/ "request_VERB"
+	<duu> /d̥ˈuː/ "thou_PRON"
 	<Diiǎ> /d̥ˈiːɐ/ "animal_NOUN"
 
-/s/ (0.059)
-	<sällwä> /sˈɛlvæ̆/ "self_PRON"
-	<Prusst> /pʀˈust/ "breast_NOUN"
-	<Mois> /mˈoi̯s/ "mice_NOUN"
-
 /n/ (0.057)
-	<Winnt> /vˈind̥/ "wind_NOUN"
-	<dinn> /d̥ˈin/ "thin_ADJ"
-	<Schdȁǎnn> /ʃd̥ˈæɐn/ "star_NOUN"
+	<noiñ> /nˈoĩ̯/ "nine_NUM"
+	<Khinnt> /kʰˈind̥/ "child_NOUN"
+	<Knoodě> /knˈoːd̥ə/ "knot_NOUN"
 
 /l/ (0.057)
+	<tswẹllf> /ʦvˈelf/ "twelve_NUM"
+	<sällwä> /sˈɛlvæ̆/ "self_PRON"
 	<Fluuch> /flˈuːx/ "plough_NOUN"
-	<liiịjě> /lˈiːjə/ "lie_VERB"
-	<schlååvě> /ʃlˈɑːv̥ə/ "sleep_VERB"
 
-/ʃ/ (0.044)
+/s/ (0.056)
+	<Sau> /sˈau̯/ "sow_NOUN"
+	<Sẹẹ> /sˈeː/ "sea_NOUN"
+	<tswannsisch> /ʦvˈansiʃ/ "twenty_NUM"
+
+/ʃ/ (0.042)
 	<hailisch> /hˈai̯liʃ/ "holy_ADJ"
-	<Schdaañ> /ʃd̥ˈãː/ "stone_NOUN"
+	<schwimmě> /ʃvˈimə/ "swim_VERB"
 	<Lischtt> /lˈiʃt/ "light_NOUN"
 
 /f/ (0.04)
@@ -200,45 +200,45 @@ CONSONANTS
 	<misch> /mˈiʃ/ "me_PRON_ACC"
 	<Sommä> /sˈomæ̆/ "summer_NOUN"
 
-/t/ (0.027)
-	<Flischt> /flˈiʃt/ "plight_NOUN"
-	<Räscht> /ʀˈɛʃt/ "right_ADJ"
-	<Wǫǎt> /vˈɔɐt/ "word_NOUN"
+/t/ (0.026)
+	<triggě> /tʀˈiɡ̊ə/ "press_VERB"
+	<Trääně> /tʀˈɛːnə/ "tear_NOUN_FEM"
+	<doitsch> /d̥ˈoi̯tʃ/ "Teutonic_ADJ"
 
 /b̥/ (0.022)
-	<Abbl> /ˈab̥l̩/ "apple_NOUN"
 	<Daup> /d̥ˈau̯b̥/ "dove_NOUN"
 	<biddě> /b̥ˈid̥ə/ "request_VERB"
+	<Bȁȁǎ> /b̥ˈæːɐ/ "berry_NOUN"
 
-/h/ (0.02)
-	<Hånnt> /hˈɑnd̥/ "hand_NOUN_FEM"
+/h/ (0.021)
 	<hunnät> /hˈunæ̆t/ "hundred_NUM"
 	<håwwě> /hˈɑvə/ "have_VERB"
+	<Honig> /hˈoːniʃ/ "honey_NOUN"
 
 /ɡ̊/ (0.017)
-	<guut> /ɡ̊ˈuːd̥/ "good_ADJ"
 	<tringgě> /tʀˈiŋɡ̊ə/ "drink_VERB"
-	<Gånnds> /ɡ̊ˈɑnd̥s/ "goose_NOUN"
+	<Gånnds> /ɡ̊ˈɑnʣ̥/ "goose_NOUN"
+	<Gollt> /ɡ̊ˈold̥/ "gold_NOUN_NEU"
+
+/ʦ/ (0.015)
+	<Tsaañ> /ʦˈãː/ "tooth_NOUN"
+	<Tsung> /ʦˈuŋ/ "tongue_NOUN"
+	<Hȁǎtts> /hˈæɐʦ/ "heart_NOUN"
 
 /kʰ/ (0.015)
-	<Khȁǎsch> /kʰˈæɐʃ/ "church_NOUN_FEM"
-	<Khuu> /kʰˈuː/ "cow_NOUN"
 	<Khǫǎnn> /kʰˈɔɐn/ "corn_NOUN"
-
-/ʦ/ (0.014)
-	<sittsě> /sˈiʦə/ "sit_VERB"
-	<Tsaañ> /ʦˈãː/ "tooth_NOUN"
-	<Tseeñ> /ʦˈẽː/ "toe_NOUN"
+	<khaal> /kʰˈaːl/ "cold_ADJ"
+	<khommě> /kʰˈomə/ "come_VERB"
 
 /k/ (0.014)
-	<Knoodě> /knˈoːd̥ə/ "knot_NOUN"
 	<kriiñ> /kʀˈĩː/ "green_ADJ"
 	<Knii> /knˈiː/ "knee_NOUN"
+	<dikk> /d̥ˈik/ "thick_ADJ"
 
 /x/ (0.011)
-	<Nåchtt> /nˈɑxt/ "night_NOUN_FEM"
 	<Buch> /b̥ˈux/ "book_NOUN_FEM"
-	<Woche> /vˈɔxə/ "week_NOUN"
+	<Schprååch> /ʒ̥pʀˈɑːx/ "speech_NOUN_FEM"
+	<Nåchtt> /nˈɑxt/ "night_NOUN_FEM"
 
 /p/ (0.011)
 	<Khopp> /kʰˈop/ "head_NOUN"
@@ -256,7 +256,7 @@ CONSONANTS
 	<Nååchl> /nˈɑːɣ̥l̩/ "fingernail_NOUN"
 
 /ʒ̥/ (0.007)
-	<Tswȁǎsch> /tsvˈæɐʒ̥/ "dwarf_NOUN"
+	<Tswȁǎsch> /ʦvˈæɐʒ̥/ "dwarf_NOUN"
 	<winnschě> /vˈinʒ̥ə/ "wish_VERB"
 	<lischě> /lˈiʒ̥ə/ "tell lies_VERB"
 
@@ -270,11 +270,16 @@ CONSONANTS
 	<hällvě> /hˈɛlv̥ə/ "help_VERB"
 	<schlååvě> /ʃlˈɑːv̥ə/ "sleep_VERB"
 
+/ʤ̥/ (0.002)
+	<Milldsch> /mˈilʤ̥/ "milk_NOUN_FEM"
+	<Mẹnndsch> /mˈenʤ̥/ "person_NOUN"
+
+/ʣ̥/ (0.002)
+	<Sallds> /sˈalʣ̥/ "salt_NOUN"
+	<Gånnds> /ɡ̊ˈɑnʣ̥/ "goose_NOUN"
+
 /pʰ/ (0.001)
 	<Phååt> /pʰˈɑːd̥/ "path_NOUN"
-
-/d/ (0.001)
-	<dångě> /dˈɑŋɡ̊ə/ "thank_VERB"
 
 
 
