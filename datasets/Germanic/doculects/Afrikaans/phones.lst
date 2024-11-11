@@ -26,7 +26,7 @@ VOWELS
 
 /ˈə/ (0.025)
 	<skild> /skˈəɫd̥/ "shield_NOUN"
-	<twintig> /twˈəntəχ/ "twenty_NUM"
+	<twintig> /tvˈəntəχ/ "twenty_NUM"
 	<bind> /bˈənd̥/ "bind_VERB"
 
 /ˈɪə̯/ (0.023)
@@ -62,7 +62,7 @@ VOWELS
 /ˈɛ/ (0.007)
 	<wens> /vˈɛns/ "wish_VERB"
 	<mens> /mˈɛns/ "person_NOUN"
-	<swem> /swˈɛm/ "swim_VERB"
+	<swem> /svˈɛm/ "swim_VERB"
 
 /ˈœ/ (0.007)
 	<suster> /sˈœstər/ "sister_NOUN"
@@ -153,33 +153,33 @@ CONSONANTS
 	<wolf> /vˈɔɫv̥/ "wolf_NOUN"
 	<vlieg> /v̥ɫˈiχ/ "fly_VERB"
 
+/v/ (0.035)
+	<swart> /svˈart/ "black_ADJ"
+	<twee> /tvˈɪə̯/ "two_NUM"
+	<water> /vˈɑːtər/ "water_NOUN"
+
 /d̥/ (0.035)
-	<bad> /bˈad̥/ "bath_NOUN_NEU"
-	<god> /χˈɔd̥/ "god_NOUN"
-	<goed> /χˈud̥/ "good_ADJ"
+	<sand> /sˈand̥/ "sand_NOUN"
+	<wind> /vˈənd̥/ "wind_NOUN"
+	<oud> /ˈœu̯d̥/ "old_ADJ"
 
 /m/ (0.029)
-	<mag> /mˈaχ/ "might_NOUN"
-	<moeder> /mˈudər/ "mother_NOUN"
+	<wurm> /vˈœrəm/ "worm_NOUN"
+	<mond> /mˈɔnd̥/ "mouth_NOUN"
 	<mug> /mˈœχ/ "midge_NOUN"
 
-/v/ (0.028)
-	<wind> /vˈənd̥/ "wind_NOUN"
-	<week> /vˈɪə̯k/ "week_NOUN"
-	<wiel> /vˈiɫ/ "wheel_NOUN"
-
 /b/ (0.024)
+	<bors> /bˈɔːrs/ "breast_NOUN"
 	<bloei> /bɫˈuj/ "bleed_VERB"
 	<bid> /bˈəd̥/ "request_VERB"
-	<broer> /brˈur/ "brother_NOUN"
 
 /ɦ/ (0.022)
+	<horing> /ɦˈʊə̯rəŋ/ "horn_NOUN"
 	<honderd> /ɦˈɔndərd̥/ "hundred_NUM"
 	<hond> /ɦˈɔnd̥/ "dog_NOUN"
-	<hier> /ɦˈir/ "here_ADV"
 
 /ŋ/ (0.017)
-	<jong> /jˈɔŋ/ "young_NOUN"
+	<ding> /dˈəŋ/ "thing_NOUN"
 	<horing> /ɦˈʊə̯rəŋ/ "horn_NOUN"
 	<ring> /rˈəŋ/ "ring_NOUN"
 
@@ -188,15 +188,13 @@ CONSONANTS
 	<wapen> /vˈɑːpən/ "weapon_NOUN"
 	<aap> /ˈɑːp/ "ape_NOUN"
 
-/w/ (0.008)
-	<twee> /twˈɪə̯/ "two_NUM"
-	<twintig> /twˈəntəχ/ "twenty_NUM"
-	<swem> /swˈɛm/ "swim_VERB"
-
 /j/ (0.006)
-	<jaar> /jˈɑːr/ "year_NOUN"
-	<jong> /jˈɔŋ/ "young_NOUN"
+	<jy> /jˈəɪ̯/ "ye_PRON"
+	<rooi> /rˈoːj/ "red_ADJ"
 	<koei> /kˈuj/ "cow_NOUN"
+
+/w/ (0.001)
+	<sneeu> /snˈiw/ "snow_NOUN"
 
 
 
