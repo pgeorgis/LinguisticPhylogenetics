@@ -18,11 +18,16 @@ phon_corr:
     refresh: []
     refresh_all: true
 
-# cognates:
+cognates:
+   cluster: none
 #     cluster_threshold: 1.334
 
-# evaluation:
-#     precalculated_word_scores: 
+evaluation:
+    pmi_weight: 0.8702209163829631
+    surprisal_weight: 1.5331122864931888
+    phon_weight: 0.8742769332204376
+    min_similarity: 0.7263435171465986
+    # precalculated_word_scores: 
 
 tree:
     root: Proto-Germanic
