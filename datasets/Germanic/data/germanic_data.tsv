@@ -24,7 +24,7 @@ Yiddish	Yiddish			deadly_ADJ		tˈɔɪ̯tɫəχ	t ˈɔɪ̯ t ɫ ə χ		deadly_ADJ
 Standard German	Standard German			deadly_ADJ	tödlich	tʰˈøːdlɪç	tʰ ˈøː d l ɪ ç		deadly_ADJ_1			
 Upper Franconian	Upper Franconian			deadly_ADJ	deedli	d̥ˈeːd̥li	d̥ ˈeː d̥ l i		deadly_ADJ_1			
 Bavarian	Bavarian			deadly_ADJ	dedli	d̥ˈeːd̥li	d̥ ˈeː d̥ l i		deadly_ADJ_1			
-Swiss German	Swiss German			deadly_ADJ	tödlich	tˈøːd̥liχ	t ˈøː d̥ l i χ		deadly_ADJ_1			
+Swiss German	Swiss German			deadly_ADJ	tödlich	tːˈøːd̥liχː	tː ˈøː d̥ l i χː		deadly_ADJ_1			
 Proto-Germanic	Proto-Germanic			bee_NOUN	imbī	ˈimbiː	ˈi m b iː		bee_NOUN_1			
 Saterland Frisian	Saterland Frisian			bee_NOUN	Íeme	ˈiːmə	ˈiː m ə		bee_NOUN_1			
 Insular North Frisian	Insular North Frisian			bee_NOUN	Em	ˈɛm	ˈɛ m		bee_NOUN_1			
@@ -70,7 +70,7 @@ Upper Franconian	Upper Franconian			cheese_NOUN	Kees	ɡ̊ˈeːs	ɡ̊ ˈeː s		ch
 Bavarian	Bavarian			cheese_NOUN	Kààs	kʰˈaːs	kʰ ˈaː s		cheese_NOUN_1			
 Swabian	Swabian			cheese_NOUN	Käs	kʰˈɛːs	kʰ ˈɛː s		cheese_NOUN_1			
 Alsatian	Alsatian			cheese_NOUN	Käs	kʰˈæːz̥	kʰ ˈæː z̥		cheese_NOUN_1			
-Swiss German	Swiss German			cheese_NOUN	Chääs	χˈæːs	χ ˈæː s		cheese_NOUN_1			
+Swiss German	Swiss German			cheese_NOUN	Chääs	ɣ̊ˈæːz̥	ɣ̊ ˈæː z̥		cheese_NOUN_1			
 Proto-Germanic	Proto-Germanic			church_NOUN_FEM	kirikā	kˈirikɑː	k ˈi r i k ɑː		church_NOUN_FEM_1			
 Icelandic	Icelandic			church_NOUN_FEM	kirkja	cʰˈɪr̥ca	cʰ ˈɪ r̥ c a		church_NOUN_FEM_1			
 Faroese	Faroese			church_NOUN_FEM	kirkja	ʧʰˈɪɹʧa	ʧʰ ˈɪ ɹ ʧ a		church_NOUN_FEM_1			
@@ -107,7 +107,7 @@ Upper Franconian	Upper Franconian			church_NOUN_FEM	Kärch	ɡ̊ˈɘç	ɡ̊ ˈɘ 
 Bavarian	Bavarian			church_NOUN_FEM	Kiach	kʰˈiɐç	kʰ ˈi ɐ ç		church_NOUN_FEM_1			
 Swabian	Swabian			church_NOUN_FEM	Kirch	kʰˈʌç	kʰ ˈʌ ç		church_NOUN_FEM_1			
 Alsatian	Alsatian			church_NOUN_FEM	Kirich	kʰˈiːʁiʃ	kʰ ˈiː ʁ i ʃ		church_NOUN_FEM_1			
-Swiss German	Swiss German			church_NOUN_FEM	Chirche	χˈirχə	χ ˈi r χ ə		church_NOUN_FEM_1			
+Swiss German	Swiss German			church_NOUN_FEM	Chirche	ɣ̊ˈirχːə	ɣ̊ ˈi r χː ə		church_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			plight_NOUN	plihti	plˈixti	p l ˈi x t i		plight_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			plight_NOUN	plikt	pʰlˈɪkt	pʰ l ˈɪ k t		plight_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			plight_NOUN	plikt	pʰlˈɪkt	pʰ l ˈɪ k t		plight_NOUN_1			
@@ -131,7 +131,7 @@ Palatine German	Palatine German			plight_NOUN	Flicht	flˈɪʃd̥	f l ˈɪ ʃ d̥
 Hessian	Hessian			plight_NOUN	Flischt	flˈiʃt	f l ˈi ʃ t		plight_NOUN_1			
 Yiddish	Yiddish			plight_NOUN	פֿליכט	fɫˈɪχt	f ɫ ˈɪ χ t		plight_NOUN_1			
 Standard German	Standard German			plight_NOUN	Pflicht	p͡flˈɪçt	p͡f l ˈɪ ç t		plight_NOUN_1			
-Swiss German	Swiss German			plight_NOUN	Pflicht	p͡flˈiχt	p͡f l ˈi χ t		plight_NOUN_1			
+Swiss German	Swiss German			plight_NOUN	Pflicht	p͡flˈiχːtː	p͡f l ˈi χː tː		plight_NOUN_1			
 Proto-Germanic	Proto-Germanic			speech_NOUN_FEM	sprāku	sprˈɑːku	s p r ˈɑː k u		speech_NOUN_FEM_1			
 Icelandic	Icelandic			speech_NOUN_FEM	sprok	sprˈɔːk	s p r ˈɔː k		speech_NOUN_FEM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			speech_NOUN_FEM	språk	spɾˈoːk	s p ɾ ˈoː k		speech_NOUN_FEM_1			
@@ -166,7 +166,7 @@ Upper Franconian	Upper Franconian			speech_NOUN_FEM	Schbrooch	ʃb̥rˈoːx	ʃ b�
 Bavarian	Bavarian			speech_NOUN_FEM	Schbråch	ʃb̥rˈɒːx	ʃ b̥ r ˈɒː x		speech_NOUN_FEM_1			
 Swabian	Swabian			speech_NOUN_FEM	Schbroch	ʃbʁˈɔːx	ʃ b ʁ ˈɔː x		speech_NOUN_FEM_1			
 Alsatian	Alsatian			speech_NOUN_FEM	Sproch	ʃpʁˈoːx	ʃ p ʁ ˈoː x		speech_NOUN_FEM_1			
-Swiss German	Swiss German			speech_NOUN_FEM	Sproch	ʃprˈoːχ	ʃ p r ˈoː χ		speech_NOUN_FEM_1			
+Swiss German	Swiss German			speech_NOUN_FEM	Sproch	ʒ̊pːrˈoːχː	ʒ̊ pː r ˈoː χː		speech_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			edge_NOUN	agjō	ˈɑɣjɔː	ˈɑ ɣ j ɔː		edge_NOUN_1			
 Old West Norse	Old West Norse			edge_NOUN	egg	ˈɛɡɡ	ˈɛ ɡ ɡ		edge_NOUN_1			
 Icelandic	Icelandic			edge_NOUN	egg	ˈɛɡ̊ɡ̊	ˈɛ ɡ̊ ɡ̊		edge_NOUN_1			
@@ -200,7 +200,7 @@ Upper Franconian	Upper Franconian			edge_NOUN	Eck	ˈɛɡ̊	ˈɛ ɡ̊		edge_NOUN_
 Bavarian	Bavarian			edge_NOUN	Egg	ˈeɡ̊	ˈe ɡ̊		edge_NOUN_1			
 Swabian	Swabian			edge_NOUN	Egg	ˈɛɡ	ˈɛ ɡ		edge_NOUN_1			
 Alsatian	Alsatian			edge_NOUN	Eck	ˈek	ˈe k		edge_NOUN_1			
-Swiss German	Swiss German			edge_NOUN	Egge	ˈeɡ̊ɡ̊ə	ˈe ɡ̊ ɡ̊ ə		edge_NOUN_1			
+Swiss German	Swiss German			edge_NOUN	Egge	ˈekːə	ˈe kː ə		edge_NOUN_1			
 Proto-Germanic	Proto-Germanic			eight_NUM	ahtōu	ˈɑxtɔːu̯	ˈɑ x t ɔːu̯		eight_NUM_1			
 Gothic	Gothic			eight_NUM	𐌰𐌷𐍄𐌰𐌿	ˈahtɔː	ˈa h t ɔː		eight_NUM_1			
 Old West Norse	Old West Norse			eight_NUM	átta	ˈɑːtta	ˈɑː t t a		eight_NUM_1			
@@ -239,7 +239,7 @@ Upper Franconian	Upper Franconian			eight_NUM	acht	ˈaxd̥	ˈa x d̥		eight_NUM_
 Bavarian	Bavarian			eight_NUM	achde	ˈɑxd̥ə	ˈɑ x d̥ ə		eight_NUM_1			
 Swabian	Swabian			eight_NUM	achd	ˈaxd	ˈa x d		eight_NUM_1			
 Alsatian	Alsatian			eight_NUM	àcht	ˈɒxt	ˈɒ x t		eight_NUM_1			
-Swiss German	Swiss German			eight_NUM	acht	ˈɒχt	ˈɒ χ t		eight_NUM_1			
+Swiss German	Swiss German			eight_NUM	acht	ˈɒχːtː	ˈɒ χː tː		eight_NUM_1			
 Proto-Germanic	Proto-Germanic			oak_NOUN_FEM	aiks	ˈɑi̯ks	ˈɑi̯ k s		oak_NOUN_FEM_1			
 Old West Norse	Old West Norse			oak_NOUN_FEM	eik	ˈɛi̯k	ˈɛi̯ k		oak_NOUN_FEM_1			
 Icelandic	Icelandic			oak_NOUN_FEM	eik	ˈɛːi̯k	ˈɛːi̯ k		oak_NOUN_FEM_1			
@@ -275,7 +275,7 @@ Upper Franconian	Upper Franconian			oak_NOUN_FEM	Aang	ˈaːŋ	ˈaː ŋ		oak_NOUN
 Bavarian	Bavarian			oak_NOUN_FEM	Oach	ˈoɐ̯x	ˈoɐ̯ x		oak_NOUN_FEM_1			
 Swabian	Swabian			oak_NOUN_FEM	Oich	ˈɔe̯ç	ˈɔe̯ ç		oak_NOUN_FEM_1			
 Alsatian	Alsatian			oak_NOUN_FEM	Eich	ˈəi̯ʃ	ˈəi̯ ʃ		oak_NOUN_FEM_1			
-Swiss German	Swiss German			oak_NOUN_FEM	Äiche	ˈæi̯χə	ˈæi̯ χ ə		oak_NOUN_FEM_1			
+Swiss German	Swiss German			oak_NOUN_FEM	Äiche	ˈæi̯χːə	ˈæi̯ χː ə		oak_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			fire_NOUN	ailidaz	ˈɑi̯liðɑz	ˈɑi̯ l i ð ɑ z		fire_NOUN_1			
 Old West Norse	Old West Norse			fire_NOUN	eldr	ˈɛldr	ˈɛ l d r		fire_NOUN_1			
 Icelandic	Icelandic			fire_NOUN	eldur	ˈɛld̥ʏr̥	ˈɛ l d̥ ʏ r̥		fire_NOUN_1			
@@ -326,7 +326,7 @@ Upper Franconian	Upper Franconian			eleven_NUM	elfa	ˈɛlfa	ˈɛ l f a		eleven_N
 Bavarian	Bavarian			eleven_NUM	äife	ˈejfə	ˈe j f ə		eleven_NUM_1			
 Swabian	Swabian			eleven_NUM	älf	ˈɛlf	ˈɛ l f		eleven_NUM_1			
 Alsatian	Alsatian			eleven_NUM	elef	ˈeːləf	ˈeː l ə f		eleven_NUM_1			
-Swiss German	Swiss German			eleven_NUM	elf	ˈelf	ˈe l f		eleven_NUM_1			
+Swiss German	Swiss German			eleven_NUM	elf	ˈelfː	ˈe l fː		eleven_NUM_1			
 Proto-Germanic	Proto-Germanic			one_NUM	ainaz	ˈɑi̯nɑz	ˈɑi̯ n ɑ z		one_NUM_1			
 Gothic	Gothic			one_NUM	𐌰𐌹𐌽𐍃	ˈɛːns	ˈɛː n s		one_NUM_1			
 Old West Norse	Old West Norse			one_NUM	einn	ˈɛi̯nn	ˈɛi̯ n n		one_NUM_1			
@@ -436,7 +436,7 @@ Upper Franconian	Upper Franconian			old_ADJ	alt	ˈald̥	ˈa l d̥		old_ADJ_1
 Bavarian	Bavarian			old_ADJ	oid	ˈojd̥	ˈo j d̥		old_ADJ_1			
 Swabian	Swabian			old_ADJ	ald	ˈald	ˈa l d		old_ADJ_1			
 Alsatian	Alsatian			old_ADJ	àlt	ˈɒlt	ˈɒ l t		old_ADJ_1			
-Swiss German	Swiss German			old_ADJ	alt	ˈɒlt	ˈɒ l t		old_ADJ_1			
+Swiss German	Swiss German			old_ADJ	alt	ˈɒltː	ˈɒ l tː		old_ADJ_1			
 Proto-Germanic	Proto-Germanic			all_ADJ	allaz	ˈɑllɑz	ˈɑ l l ɑ z		all_ADJ_1			
 Gothic	Gothic			all_ADJ	𐌰𐌻𐌻𐍃	ˈalls	ˈa l l s		all_ADJ_1			
 Old West Norse	Old West Norse			all_ADJ	allr	ˈɑllr	ˈɑ l l r		all_ADJ_1			
@@ -473,7 +473,7 @@ Upper Franconian	Upper Franconian			all_ADJ	all	ˈal	ˈa l		all_ADJ_1
 Bavarian	Bavarian			all_ADJ	oi	ˈoj	ˈo j		all_ADJ_1			
 Swabian	Swabian			all_ADJ	älle	ˈɛle	ˈɛ l e		all_ADJ_1			
 Alsatian	Alsatian			all_ADJ	àll	ˈɒl	ˈɒ l		all_ADJ_1			
-Swiss German	Swiss German			all_ADJ	all	ˈɒll	ˈɒ l l		all_ADJ_1			
+Swiss German	Swiss German			all_ADJ	all	ˈɒl	ˈɒ l		all_ADJ_1			
 Proto-Germanic	Proto-Germanic			other_ADJ	anþeraz	ˈɑnθerɑz	ˈɑ n θ e r ɑ z		other_ADJ_1			
 Gothic	Gothic			other_ADJ	𐌰𐌽𐌸𐌰𐍂	ˈanθar	ˈa n θ a r		other_ADJ_1			
 Old West Norse	Old West Norse			other_ADJ	annarr	ˈɑnnɑrr	ˈɑ n n ɑ r r		other_ADJ_1			
@@ -589,7 +589,7 @@ Upper Franconian	Upper Franconian			ape_NOUN	Aff	ˈaf	ˈa f		ape_NOUN_1
 Bavarian	Bavarian			ape_NOUN	Aff	ˈɑf	ˈɑ f		ape_NOUN_1			
 Swabian	Swabian			ape_NOUN	Aff	ˈaf	ˈa f		ape_NOUN_1			
 Alsatian	Alsatian			ape_NOUN	Àff	ˈɒf	ˈɒ f		ape_NOUN_1			
-Swiss German	Swiss German			ape_NOUN	Aff	ˈɒff	ˈɒ f f		ape_NOUN_1			
+Swiss German	Swiss German			ape_NOUN	Aff	ˈɒfː	ˈɒ fː		ape_NOUN_1			
 Proto-Germanic	Proto-Germanic			arm_NOUN	armaz	ˈɑrmɑz	ˈɑ r m ɑ z		arm_NOUN_1			
 Gothic	Gothic			arm_NOUN	𐌰𐍂𐌼𐍃	ˈarms	ˈa r m s		arm_NOUN_1			
 Old West Norse	Old West Norse			arm_NOUN	armr	ˈɑrmr	ˈɑ r m r		arm_NOUN_1			
@@ -666,7 +666,7 @@ Yiddish	Yiddish			ash_NOUN	אַש	ˈaʃ	ˈa ʃ		ash_NOUN_1
 Standard German	Standard German			ash_NOUN	Asche	ˈaʃə	ˈa ʃ ə		ash_NOUN_1			
 Upper Franconian	Upper Franconian			ash_NOUN	Aschn	ˈaʃn̩	ˈa ʃ n̩		ash_NOUN_1			
 Swabian	Swabian			ash_NOUN	Äsch	ˈɛʃ	ˈɛ ʃ		ash_NOUN_1			
-Swiss German	Swiss German			ash_NOUN	Äsche	ˈæʃʃə	ˈæ ʃ ʃ ə		ash_NOUN_1			
+Swiss German	Swiss German			ash_NOUN	Äsche	ˈæʃːə	ˈæ ʃː ə		ash_NOUN_1			
 Proto-Germanic	Proto-Germanic			eye_NOUN	augô	ˈɑu̯ɣɔːː	ˈɑu̯ ɣ ɔːː		eye_NOUN_1			
 Gothic	Gothic			eye_NOUN	𐌰𐌿𐌲𐍉	ˈɔːɣoː	ˈɔː ɣ oː		eye_NOUN_1			
 Old West Norse	Old West Norse			eye_NOUN	auga	ˈɑu̯ɣɑ	ˈɑu̯ ɣ ɑ		eye_NOUN_1			
@@ -873,7 +873,7 @@ Upper Franconian	Upper Franconian			better_ADJ	besser	b̥ˈɛsɐ	b̥ ˈɛ s ɐ		
 Bavarian	Bavarian			better_ADJ	bessa	b̥ˈesa	b̥ ˈe s a		better_ADJ_1			
 Swabian	Swabian			better_ADJ	bessr	bˈɛsʌ	b ˈɛ s ʌ		better_ADJ_1			
 Alsatian	Alsatian			better_ADJ	besser	b̥ˈesəʁ	b̥ ˈe s ə ʁ		better_ADJ_1			
-Swiss German	Swiss German			better_ADJ	besser	b̥ˈessər	b̥ ˈe s s ə r		better_ADJ_1			
+Swiss German	Swiss German			better_ADJ	besser	b̥ˈesːər	b̥ ˈe sː ə r		better_ADJ_1			
 Proto-Germanic	Proto-Germanic			tree_NOUN	baumaz	bˈɑu̯mɑz	b ˈɑu̯ m ɑ z		tree_NOUN_1			
 Gothic	Gothic			tree_NOUN	𐌱𐌰𐌲𐌼𐍃	bˈaɡms	b ˈa ɡ m s		tree_NOUN_1			
 Old West Norse	Old West Norse			tree_NOUN	baðmr	 bˈɑðmr	b ˈɑ ð m r		tree_NOUN_1			
@@ -1048,7 +1048,7 @@ Upper Franconian	Upper Franconian			bear_NOUN	Bär	b̥ˈɛːɐ	b̥ ˈɛː ɐ		be
 Bavarian	Bavarian			bear_NOUN	Bäa	b̥ˈeɐ	b̥ ˈe ɐ		bear_NOUN_1			
 Swabian	Swabian			bear_NOUN	Bär	bˈɛːʕ	b ˈɛː ʕ		bear_NOUN_1			
 Alsatian	Alsatian			bear_NOUN	Bär	b̥ˈæːʁ	b̥ ˈæː ʁ		bear_NOUN_1			
-Swiss German	Swiss German			bear_NOUN	Bärr	b̥ˈærr	b̥ ˈæ r r		bear_NOUN_1			
+Swiss German	Swiss German			bear_NOUN	Bärr	b̥ˈær	b̥ ˈæ r		bear_NOUN_1			
 Proto-Germanic	Proto-Germanic			bid_VERB	beudaną	bˈeu̯ðɑnɑ̃	b ˈeu̯ ð ɑ n ɑ̃		bid_VERB_1			
 Old West Norse	Old West Norse			bid_VERB	bjóða	bjˈoːðɑ	b j ˈoː ð ɑ		bid_VERB_1			
 Icelandic	Icelandic			bid_VERB	bjóða	b̥jˈoːu̯ða	b̥ j ˈoːu̯ ð a		bid_VERB_1			
@@ -1080,7 +1080,7 @@ Hessian	Hessian			bid_VERB	biidě	b̥ˈiːd̥ə	b̥ ˈiː d̥ ə		bid_VERB_1
 Standard German	Standard German			bid_VERB	bieten	bˈiːtn̩	b ˈiː t n̩		bid_VERB_1			
 Bavarian	Bavarian			bid_VERB	biedn	b̥ˈiːd̥n̩	b̥ ˈiː d̥ n̩		bid_VERB_1			
 Alsatian	Alsatian			bid_VERB	biete	b̥ˈiːtə	b̥ ˈiː t ə		bid_VERB_1			
-Swiss German	Swiss German			bid_VERB	büüte	b̥ˈyːtə	b̥ ˈyː t ə		bid_VERB_1			
+Swiss German	Swiss German			bid_VERB	büüte	b̥ˈyːtːə	b̥ ˈyː tː ə		bid_VERB_1			
 Proto-Germanic	Proto-Germanic			request_VERB	bidjaną	bˈiðjɑnɑ̃	b ˈi ð j ɑ n ɑ̃		request_VERB_1			
 Gothic	Gothic			request_VERB	𐌱𐌹𐌳𐌾𐌰𐌽	bˈiðjan	b ˈi ð j a n		request_VERB_1			
 Old West Norse	Old West Norse			request_VERB	biðja	bˈiðjɑ	b ˈi ð j ɑ		request_VERB_1			
@@ -1114,7 +1114,7 @@ Standard German	Standard German			request_VERB	bitten	bˈɪtn̩	b ˈɪ t n̩		re
 Upper Franconian	Upper Franconian			request_VERB	bittn	b̥ˈɪd̥n̩	b̥ ˈɪ d̥ n̩		request_VERB_1			
 Bavarian	Bavarian			request_VERB	bitdn	b̥ˈid̥n̩	b̥ ˈi d̥ n̩		request_VERB_1			
 Swabian	Swabian			request_VERB	bidda	bˈɪda	b ˈɪ d a		request_VERB_1			
-Swiss German	Swiss German			request_VERB	bitte	b̥ˈittə	b̥ ˈi t t ə		request_VERB_1			
+Swiss German	Swiss German			request_VERB	bitte	b̥ˈitːə	b̥ ˈi tː ə		request_VERB_1			
 Proto-Germanic	Proto-Germanic			bee_NOUN	bijǭ	bˈijɔ̃ː	b ˈi j ɔ̃ː		bee_NOUN_2			
 Old West Norse	Old West Norse			bee_NOUN	bý	bˈyː	b ˈyː		bee_NOUN_2			
 Icelandic	Icelandic			bee_NOUN	bý	b̥ˈiː	b̥ ˈiː		bee_NOUN_2			
@@ -1218,7 +1218,7 @@ Upper Franconian	Upper Franconian			bite_VERB	beißn	b̥ˈaɪ̯sn̩	b̥ ˈaɪ̯ 
 Bavarian	Bavarian			bite_VERB	beissn	b̥ˈai̯sn̩	b̥ ˈai̯ s n̩		bite_VERB_1			
 Swabian	Swabian			bite_VERB	beißa	bˈəi̯sa	b ˈəi̯ s a		bite_VERB_1			
 Alsatian	Alsatian			bite_VERB	bïsse	b̥ˈiːsə	b̥ ˈiː s ə		bite_VERB_1			
-Swiss German	Swiss German			bite_VERB	biisse	b̥ˈiːssə	b̥ ˈiː s s ə		bite_VERB_1			
+Swiss German	Swiss German			bite_VERB	biisse	b̥ˈiːsːə	b̥ ˈiː sː ə		bite_VERB_1			
 Proto-Germanic	Proto-Germanic			leaf_NOUN_NEU	bladą	blˈɑðɑ̃	b l ˈɑ ð ɑ̃		leaf_NOUN_NEU_1			
 Old West Norse	Old West Norse			leaf_NOUN_NEU	blað	blˈɑð	b l ˈɑ ð		leaf_NOUN_NEU_1			
 Icelandic	Icelandic			leaf_NOUN_NEU	blað	b̥lˈaːð	b̥ l ˈaː ð		leaf_NOUN_NEU_1			
@@ -1256,7 +1256,7 @@ Upper Franconian	Upper Franconian			leaf_NOUN_NEU	Blatt	b̥lˈad̥	b̥ l ˈa d̥
 Bavarian	Bavarian			leaf_NOUN_NEU	Bladdl	b̥lˈɑd̥l̩	b̥ l ˈɑ d̥ l̩		leaf_NOUN_NEU_1			
 Swabian	Swabian			leaf_NOUN_NEU	Bladd	blˈad	b l ˈa d		leaf_NOUN_NEU_1			
 Alsatian	Alsatian			leaf_NOUN_NEU	Blàtt	b̥lˈɒt	b̥ l ˈɒ t		leaf_NOUN_NEU_1			
-Swiss German	Swiss German			leaf_NOUN_NEU	Blatt	b̥lˈɒt	b̥ l ˈɒ t		leaf_NOUN_NEU_1			
+Swiss German	Swiss German			leaf_NOUN_NEU	Blatt	b̥lˈɒtː	b̥ l ˈɒ tː		leaf_NOUN_NEU_1			
 Proto-Germanic	Proto-Germanic			flower_NOUN	blōmô	blˈɔːmɔːː	b l ˈɔː m ɔːː		flower_NOUN_1			
 Gothic	Gothic			flower_NOUN	𐌱𐌻𐍉𐌼𐌰	blˈoːma	b l ˈoː m a		flower_NOUN_1			
 Old West Norse	Old West Norse			flower_NOUN	blóm	blˈɔːm	b l ˈɔː m		flower_NOUN_1			
@@ -1333,7 +1333,7 @@ Upper Franconian	Upper Franconian			blood_NOUN	Blut	b̥lˈuːd̥	b̥ l ˈuː d̥
 Bavarian	Bavarian			blood_NOUN	Bluad	b̥lˈuɐ̯d̥	b̥ l ˈuɐ̯ d̥		blood_NOUN_1			
 Swabian	Swabian			blood_NOUN	Bluad	blˈuə̯d	b l ˈuə̯ d		blood_NOUN_1			
 Alsatian	Alsatian			blood_NOUN	Blüet	b̥lˈʊːt	b̥ l ˈʊː t		blood_NOUN_1			
-Swiss German	Swiss German			blood_NOUN	Bluet	b̥lˈuə̯t	b̥ l ˈuə̯ t		blood_NOUN_1			
+Swiss German	Swiss German			blood_NOUN	Bluet	b̥lˈuə̯tː	b̥ l ˈuə̯ tː		blood_NOUN_1			
 Proto-Germanic	Proto-Germanic			bleed_VERB	blōþijaną	blˈɔːθijɑnɑ̃	b l ˈɔː θ i j ɑ n ɑ̃		bleed_VERB_1			
 Old West Norse	Old West Norse			bleed_VERB	blǿða	blˈøːðɑ	b l ˈøː ð ɑ		bleed_VERB_1			
 Icelandic	Icelandic			bleed_VERB	blæða	b̥lˈaːi̯ða	b̥ l ˈaːi̯ ð a		bleed_VERB_1			
@@ -1366,7 +1366,7 @@ Standard German	Standard German			bleed_VERB	bluten	blˈuːtn̩	b l ˈuː t n̩	
 Bavarian	Bavarian			bleed_VERB	bluaddn	b̥lˈuɐ̯d̥n̩	b̥ l ˈuɐ̯ d̥ n̩		bleed_VERB_1			
 Swabian	Swabian			bleed_VERB	bluada	blˈuə̯da	b l ˈuə̯ d a		bleed_VERB_1			
 Alsatian	Alsatian			bleed_VERB	blüete	b̥lˈʊːtə	b̥ l ˈʊː t ə		bleed_VERB_1			
-Swiss German	Swiss German			bleed_VERB	blüete	b̥lˈyə̯tə	b̥ l ˈyə̯ t ə		bleed_VERB_1			
+Swiss German	Swiss German			bleed_VERB	blüete	b̥lˈyə̯tːə	b̥ l ˈyə̯ tː ə		bleed_VERB_1			
 Proto-Germanic	Proto-Germanic			book_NOUN_FEM	bōks	bˈɔːks	b ˈɔː k s		book_NOUN_FEM_1			
 Old West Norse	Old West Norse			book_NOUN_FEM	bók	bˈoːk	b ˈoː k		book_NOUN_FEM_1			
 Icelandic	Icelandic			book_NOUN_FEM	bók	b̥ˈoːu̯k	b̥ ˈoːu̯ k		book_NOUN_FEM_1			
@@ -1404,7 +1404,7 @@ Upper Franconian	Upper Franconian			book_NOUN_FEM	Buch	b̥ˈuːx	b̥ ˈuː x		bo
 Bavarian	Bavarian			book_NOUN_FEM	Buach	b̥ˈuɐ̯x	b̥ ˈuɐ̯ x		book_NOUN_FEM_1			
 Swabian	Swabian			book_NOUN_FEM	Buach	bˈuə̯x	b ˈuə̯ x		book_NOUN_FEM_1			
 Alsatian	Alsatian			book_NOUN_FEM	Büech	b̥ˈʊːʃ	b̥ ˈʊː ʃ		book_NOUN_FEM_1			
-Swiss German	Swiss German			book_NOUN_FEM	Buech	b̥ˈuə̯χ	b̥ ˈuə̯ χ		book_NOUN_FEM_1			
+Swiss German	Swiss German			book_NOUN_FEM	Buech	b̥ˈuə̯χː	b̥ ˈuə̯ χː		book_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			bread_NOUN	braudą	brˈɑu̯ðɑ̃	b r ˈɑu̯ ð ɑ̃		bread_NOUN_1			
 Gothic	Gothic			bread_NOUN	𐌱𐍂𐌰𐌿𐌸	brˈɔθ	b r ˈɔ θ		bread_NOUN_1			
 Old West Norse	Old West Norse			bread_NOUN	brauð	brˈɑu̯ð	b r ˈɑu̯ ð		bread_NOUN_1			
@@ -1443,7 +1443,7 @@ Upper Franconian	Upper Franconian			bread_NOUN	Brut	b̥rˈuːd̥	b̥ r ˈuː d̥
 Bavarian	Bavarian			bread_NOUN	Brod	b̥rˈoːd̥	b̥ r ˈoː d̥		bread_NOUN_1			
 Swabian	Swabian			bread_NOUN	Brod	bʁˈoːd	b ʁ ˈoː d		bread_NOUN_1			
 Alsatian	Alsatian			bread_NOUN	Brot	b̥ʁˈoːt	b̥ ʁ ˈoː t		bread_NOUN_1			
-Swiss German	Swiss German			bread_NOUN	Brot	b̥rˈoːt	b̥ r ˈoː t		bread_NOUN_1			
+Swiss German	Swiss German			bread_NOUN	Brot	b̥rˈoːtː	b̥ r ˈoː tː		bread_NOUN_1			
 Proto-Germanic	Proto-Germanic			breast_NOUN	breustą	brˈeu̯stɑ̃	b r ˈeu̯ s t ɑ̃		breast_NOUN_1			
 Old West Norse	Old West Norse			breast_NOUN	brjóst	brjˈoːst	b r j ˈoː s t		breast_NOUN_1			
 Icelandic	Icelandic			breast_NOUN	brjóst	b̥rjˈoːu̯st	b̥ r j ˈoːu̯ s t		breast_NOUN_1			
@@ -1563,7 +1563,7 @@ Upper Franconian	Upper Franconian			bridge_NOUN	Brick	b̥rˈɪɡ̊	b̥ r ˈɪ ɡ
 Bavarian	Bavarian			bridge_NOUN	Bruggn	b̥rˈuɡ̊n̩	b̥ r ˈu ɡ̊ n̩		bridge_NOUN_1			
 Swabian	Swabian			bridge_NOUN	Brugg	bʁˈuɡ	b ʁ ˈu ɡ		bridge_NOUN_1			
 Alsatian	Alsatian			bridge_NOUN	Bruck	b̥ʁˈuk	b̥ ʁ ˈu k		bridge_NOUN_1			
-Swiss German	Swiss German			bridge_NOUN	Brugg	b̥rˈuɡ̊ɡ̊	b̥ r ˈu ɡ̊ ɡ̊		bridge_NOUN_1			
+Swiss German	Swiss German			bridge_NOUN	Brugg	b̥rˈukː	b̥ r ˈu kː		bridge_NOUN_1			
 Proto-Germanic	Proto-Germanic			breast_NOUN	brusts	brˈusts	b r ˈu s t s		breast_NOUN_2			
 Gothic	Gothic			breast_NOUN	𐌱𐍂𐌿𐍃𐍄𐍃	brˈusts	b r ˈu s t s		breast_NOUN_2			
 West Frisian	West Frisian			breast_NOUN	boarst	bˈoə̯st	b ˈoə̯ s t		breast_NOUN_2			
@@ -1590,7 +1590,7 @@ Upper Franconian	Upper Franconian			breast_NOUN	Bruschd	b̥rˈʊʃd̥	b̥ r ˈʊ
 Bavarian	Bavarian			breast_NOUN	Bruschd	b̥rˈuʃd̥	b̥ r ˈu ʃ d̥		breast_NOUN_2			
 Swabian	Swabian			breast_NOUN	Bruschd	bʁˈuʃd	b ʁ ˈu ʃ d		breast_NOUN_2			
 Alsatian	Alsatian			breast_NOUN	Bruscht	b̥ʁˈuʃt	b̥ ʁ ˈu ʃ t		breast_NOUN_2			
-Swiss German	Swiss German			breast_NOUN	Bruscht	b̥rˈuʃt	b̥ r ˈu ʃ t		breast_NOUN_2			
+Swiss German	Swiss German			breast_NOUN	Bruscht	b̥rˈuʃːtː	b̥ r ˈu ʃː tː		breast_NOUN_2			
 Proto-Germanic	Proto-Germanic			day_NOUN	dagaz	dˈɑɣɑz	d ˈɑ ɣ ɑ z		day_NOUN_1			
 Gothic	Gothic			day_NOUN	𐌳𐌰𐌲𐍃	dˈaxs	d ˈa x s		day_NOUN_1			
 Old West Norse	Old West Norse			day_NOUN	dagr	dˈɑɣr	d ˈɑ ɣ r		day_NOUN_1			
@@ -1629,7 +1629,7 @@ Upper Franconian	Upper Franconian			day_NOUN	Dog	d̥ˈoːɡ̊	d̥ ˈoː ɡ̊		da
 Bavarian	Bavarian			day_NOUN	Dåg	d̥ˈɒːɡ̊	d̥ ˈɒː ɡ̊		day_NOUN_1			
 Swabian	Swabian			day_NOUN	Dag	dˈaːɡ	d ˈaː ɡ		day_NOUN_1			
 Alsatian	Alsatian			day_NOUN	Dàà	d̥ˈɒː	d̥ ˈɒː		day_NOUN_1			
-Swiss German	Swiss German			day_NOUN	Taag	tˈɒːɡ̊	t ˈɒː ɡ̊		day_NOUN_1			
+Swiss German	Swiss German			day_NOUN	Taag	tːˈɒːɡ̊	tː ˈɒː ɡ̊		day_NOUN_1			
 Proto-Germanic	Proto-Germanic			dough_NOUN	daigaz	dˈɑi̯ɣɑz	d ˈɑi̯ ɣ ɑ z		dough_NOUN_1			
 Gothic	Gothic			dough_NOUN	𐌳𐌰𐌹𐌲𐍃	dˈɛːxs	d ˈɛː x s		dough_NOUN_1			
 Old West Norse	Old West Norse			dough_NOUN	deigr	dˈɛi̯ɡr	d ˈɛi̯ ɡ r		dough_NOUN_1			
@@ -1665,7 +1665,7 @@ Upper Franconian	Upper Franconian			dough_NOUN	Daach	d̥ˈaːx	d̥ ˈaː x		doug
 Bavarian	Bavarian			dough_NOUN	Doag	d̥ˈoɐ̯ɡ̊	d̥ ˈoɐ̯ ɡ̊		dough_NOUN_1			
 Swabian	Swabian			dough_NOUN	Doig	dˈɔe̯ɡ	d ˈɔe̯ ɡ		dough_NOUN_1			
 Alsatian	Alsatian			dough_NOUN	Deig	d̥ˈei̯ɡ̊	d̥ ˈei̯ ɡ̊		dough_NOUN_1			
-Swiss German	Swiss German			dough_NOUN	Täigg	tˈæi̯ɡ̊	t ˈæi̯ ɡ̊		dough_NOUN_1			
+Swiss German	Swiss German			dough_NOUN	Täigg	tːˈæi̯ɡ̊	tː ˈæi̯ ɡ̊		dough_NOUN_1			
 Proto-Germanic	Proto-Germanic			dead_ADJ	daudaz	dˈɑu̯ðɑz	d ˈɑu̯ ð ɑ z		dead_ADJ_1			
 Gothic	Gothic			dead_ADJ	𐌳𐌰𐌿𐌸𐍃	dˈɔːθs	d ˈɔː θ s		dead_ADJ_1			
 Old West Norse	Old West Norse			dead_ADJ	dauðr	dˈɑu̯ðr	d ˈɑu̯ ð r		dead_ADJ_1			
@@ -1703,7 +1703,7 @@ Upper Franconian	Upper Franconian			dead_ADJ	duud	d̥ˈuːd̥	d̥ ˈuː d̥		dea
 Bavarian	Bavarian			dead_ADJ	doud	d̥ˈou̯d̥	d̥ ˈou̯ d̥		dead_ADJ_1			
 Swabian	Swabian			dead_ADJ	dod	dˈoːd	d ˈoː d		dead_ADJ_1			
 Alsatian	Alsatian			dead_ADJ	dot	d̥ˈoːt	d̥ ˈoː t		dead_ADJ_1			
-Swiss German	Swiss German			dead_ADJ	tood	tˈoːd̥	t ˈoː d̥		dead_ADJ_1			
+Swiss German	Swiss German			dead_ADJ	tood	tːˈoːd̥	tː ˈoː d̥		dead_ADJ_1			
 Proto-Germanic	Proto-Germanic			death_NOUN	dauþuz	dˈɑu̯θuz	d ˈɑu̯ θ u z		death_NOUN_1			
 Gothic	Gothic			death_NOUN	𐌳𐌰𐌿𐌸𐌿𐍃	dˈɔːθus	d ˈɔː θ u s		death_NOUN_1			
 Old West Norse	Old West Norse			death_NOUN	dauði	dˈɒu̯ði	d ˈɒu̯ ð i		death_NOUN_1			
@@ -1741,7 +1741,7 @@ Upper Franconian	Upper Franconian			death_NOUN	Duud	d̥ˈuːd̥	d̥ ˈuː d̥		d
 Bavarian	Bavarian			death_NOUN	Doud	d̥ˈou̯d̥	d̥ ˈou̯ d̥		death_NOUN_1			
 Swabian	Swabian			death_NOUN	Dod	dˈoːd	d ˈoː d		death_NOUN_1			
 Alsatian	Alsatian			death_NOUN	Dod	d̥ˈoːt	d̥ ˈoː t		death_NOUN_1			
-Swiss German	Swiss German			death_NOUN	Tood	tˈoːd̥	t ˈoː d̥		death_NOUN_1			
+Swiss German	Swiss German			death_NOUN	Tood	tːˈoːd̥	tː ˈoː d̥		death_NOUN_1			
 Proto-Germanic	Proto-Germanic			deep_ADJ	deupaz	dˈeu̯pɑz	d ˈeu̯ p ɑ z		deep_ADJ_1			
 Gothic	Gothic			deep_ADJ	𐌳𐌹𐌿𐍀𐍃	dˈiu̯ps	d ˈiu̯ p s		deep_ADJ_1			
 Old West Norse	Old West Norse			deep_ADJ	djúpr	djˈuːpr	d j ˈuː p r		deep_ADJ_1			
@@ -1780,7 +1780,7 @@ Upper Franconian	Upper Franconian			deep_ADJ	dief	d̥ˈiːf	d̥ ˈiː f		deep_AD
 Bavarian	Bavarian			deep_ADJ	diaf	d̥ˈiɐ̯f	d̥ ˈiɐ̯ f		deep_ADJ_1			
 Swabian	Swabian			deep_ADJ	diaf	dˈiə̯f	d ˈiə̯ f		deep_ADJ_1			
 Alsatian	Alsatian			deep_ADJ	dief	d̥ˈiːf	d̥ ˈiː f		deep_ADJ_1			
-Swiss German	Swiss German			deep_ADJ	tüüf	tˈyːf	t ˈyː f		deep_ADJ_1			
+Swiss German	Swiss German			deep_ADJ	tüüf	tːˈyːfː	tː ˈyː fː		deep_ADJ_1			
 Proto-Germanic	Proto-Germanic			animal_NOUN	deuzą	dˈeu̯zɑ̃	d ˈeu̯ z ɑ̃		animal_NOUN_1			
 Gothic	Gothic			animal_NOUN	𐌳𐌹𐌿𐍃	dˈiu̯s	d ˈiu̯ s		animal_NOUN_1			
 Old West Norse	Old West Norse			animal_NOUN	dýr	dˈyːr	d ˈyː r		animal_NOUN_1			
@@ -1817,7 +1817,7 @@ Standard German	Standard German			animal_NOUN	Tier	tʰˈiːɐ	tʰ ˈiː ɐ		anim
 Upper Franconian	Upper Franconian			animal_NOUN	Dier	d̥ˈiːɐ	d̥ ˈiː ɐ		animal_NOUN_1			
 Bavarian	Bavarian			animal_NOUN	Dia	d̥ˈiɐ̯	d̥ ˈiɐ̯		animal_NOUN_1			
 Swabian	Swabian			animal_NOUN	Dier	dˈiːʕ	d ˈiː ʕ		animal_NOUN_1			
-Swiss German	Swiss German			animal_NOUN	Tier	tˈiə̯r	t ˈiə̯ r		animal_NOUN_1			
+Swiss German	Swiss German			animal_NOUN	Tier	tːˈiə̯r	tː ˈiə̯ r		animal_NOUN_1			
 Proto-Germanic	Proto-Germanic			expensive_ADJ	diurijaz	dˈiu̯rijɑz	d ˈiu̯ r i j ɑ z		expensive_ADJ_1			
 Old West Norse	Old West Norse			expensive_ADJ	dýrr	dˈyːrr	d ˈyː r r		expensive_ADJ_1			
 Icelandic	Icelandic			expensive_ADJ	dýr	d̥ˈiːr̥	d̥ ˈiː r̥		expensive_ADJ_1			
@@ -1856,7 +1856,7 @@ Upper Franconian	Upper Franconian			expensive_ADJ	deier	d̥ˈaɪ̯ɐ	d̥ ˈaɪ̯
 Bavarian	Bavarian			expensive_ADJ	deia	d̥ˈai̯a	d̥ ˈai̯ a		expensive_ADJ_1			
 Swabian	Swabian			expensive_ADJ	deier	dˈəi̯ʌ	d ˈəi̯ ʌ		expensive_ADJ_1			
 Alsatian	Alsatian			expensive_ADJ	diir	d̥ˈiːʁ	d̥ ˈiː ʁ		expensive_ADJ_1			
-Swiss German	Swiss German			expensive_ADJ	tüür	tˈyːr	t ˈyː r		expensive_ADJ_1			
+Swiss German	Swiss German			expensive_ADJ	tüür	tːˈyːr	tː ˈyː r		expensive_ADJ_1			
 Proto-Germanic	Proto-Germanic			dry_ADJ	draugiz	drˈɑu̯ɣiz	d r ˈɑu̯ ɣ i z		dry_ADJ_1			
 Scots	Scots			dry_ADJ	dry	drˈaɪ̯	d r ˈaɪ̯		dry_ADJ_1			
 English	English			dry_ADJ	dry	dɹˈaɪ̯	d ɹ ˈaɪ̯		dry_ADJ_1			
@@ -1913,7 +1913,7 @@ Upper Franconian	Upper Franconian			dream_NOUN	Draam	d̥rˈaːm	d̥ r ˈaː m		d
 Bavarian	Bavarian			dream_NOUN	Dràm	d̥rˈaːm	d̥ r ˈaː m		dream_NOUN_1			
 Swabian	Swabian			dream_NOUN	Draum	dʁˈao̯m	d ʁ ˈao̯ m		dream_NOUN_1			
 Alsatian	Alsatian			dream_NOUN	Traum	tʁˈʊːm	t ʁ ˈʊː m		dream_NOUN_1			
-Swiss German	Swiss German			dream_NOUN	Traum	trˈau̯m	t r ˈau̯ m		dream_NOUN_1			
+Swiss German	Swiss German			dream_NOUN	Traum	tːrˈau̯m	tː r ˈau̯ m		dream_NOUN_1			
 Proto-Germanic	Proto-Germanic			dream_VERB	draumijaną	drˈɑu̯mijɑnɑ̃	d r ˈɑu̯ m i j ɑ n ɑ̃		dream_VERB_1			
 Old West Norse	Old West Norse			dream_VERB	dreyma	drˈøy̯ma	d r ˈøy̯ m a		dream_VERB_1			
 Icelandic	Icelandic			dream_VERB	dreyma	d̥rˈeːi̯ma	d̥ r ˈeːi̯ m a		dream_VERB_1			
@@ -1948,7 +1948,7 @@ Upper Franconian	Upper Franconian			dream_VERB	dräma	d̥rˈɛːma	d̥ r ˈɛː 
 Bavarian	Bavarian			dream_VERB	drama	d̥rˈaːma	d̥ r ˈaː m a		dream_VERB_1			
 Swabian	Swabian			dream_VERB	draima	dʁˈae̯ma	d ʁ ˈae̯ m a		dream_VERB_1			
 Alsatian	Alsatian			dream_VERB	traime	tʁˈai̯mə	t ʁ ˈai̯ m ə		dream_VERB_1			
-Swiss German	Swiss German			dream_VERB	tröime	trˈøi̯mə	t r ˈøi̯ m ə		dream_VERB_1			
+Swiss German	Swiss German			dream_VERB	tröime	tːrˈøi̯mə	tː r ˈøi̯ m ə		dream_VERB_1			
 Proto-Germanic	Proto-Germanic			drive_VERB	drībaną	drˈiːβɑnɑ̃	d r ˈiː β ɑ n ɑ̃		drive_VERB_1			
 Gothic	Gothic			drive_VERB	𐌳𐍂𐌴𐌹𐌱𐌰𐌽	drˈiːβan	d r ˈiː β a n		drive_VERB_1			
 Old West Norse	Old West Norse			drive_VERB	drífa	drˈiːva	d r ˈiː v a		drive_VERB_1			
@@ -1986,7 +1986,7 @@ Upper Franconian	Upper Franconian			drive_VERB	dreim	d̥rˈaɪ̯m	d̥ r ˈaɪ̯ 
 Bavarian	Bavarian			drive_VERB	dreim	d̥rˈai̯m	d̥ r ˈai̯ m		drive_VERB_1			
 Swabian	Swabian			drive_VERB	dreiba	dʁˈəi̯ba	d ʁ ˈəi̯ b a		drive_VERB_1			
 Alsatian	Alsatian			drive_VERB	tribe	tʁˈiːb̥ə	t ʁ ˈiː b̥ ə		drive_VERB_1			
-Swiss German	Swiss German			drive_VERB	triibe	trˈiːb̥ə	t r ˈiː b̥ ə		drive_VERB_1			
+Swiss German	Swiss German			drive_VERB	triibe	tːrˈiːb̥ə	tː r ˈiː b̥ ə		drive_VERB_1			
 Proto-Germanic	Proto-Germanic			drink_VERB	drinkaną	drˈiŋkɑnɑ̃	d r ˈi ŋ k ɑ n ɑ̃		drink_VERB_1			
 Gothic	Gothic			drink_VERB	𐌳𐍂𐌹𐌲𐌺𐌰𐌽	drˈiŋkan	d r ˈi ŋ k a n		drink_VERB_1			
 Old West Norse	Old West Norse			drink_VERB	drekka	drˈekkɑ	d r ˈe k k ɑ		drink_VERB_1			
@@ -2025,7 +2025,7 @@ Upper Franconian	Upper Franconian			drink_VERB	dringn	d̥rˈɪŋɡ̊n̩	d̥ r ˈ
 Bavarian	Bavarian			drink_VERB	dringa	d̥rˈiŋɡ̊a	d̥ r ˈi ŋ ɡ̊ a		drink_VERB_1			
 Swabian	Swabian			drink_VERB	dringa	dʁˈɪŋɡa	d ʁ ˈɪ ŋ ɡ a		drink_VERB_1			
 Alsatian	Alsatian			drink_VERB	trinke	tʁˈiŋkə	t ʁ ˈi ŋ k ə		drink_VERB_1			
-Swiss German	Swiss German			drink_VERB	trinke	trˈiŋkə	t r ˈi ŋ k ə		drink_VERB_1			
+Swiss German	Swiss German			drink_VERB	trinke	tːrˈiŋkːə	tː r ˈi ŋ kː ə		drink_VERB_1			
 Proto-Germanic	Proto-Germanic			dry_ADJ	druknaz	drˈuknɑz	d r ˈu k n ɑ z		dry_ADJ_2			
 Luxembourgish	Luxembourgish			dry_ADJ	dréchen	dʀˈəɕən	d ʀ ˈə ɕ ə n		dry_ADJ_2			
 Pennsylvania German	Pennsylvania German			dry_ADJ	drucke	dɾˈʊkə	d ɾ ˈʊ k ə		dry_ADJ_2			
@@ -2036,7 +2036,7 @@ Standard German	Standard German			dry_ADJ	trocken	tʰʁˈɔkn̩	tʰ ʁ ˈɔ k n�
 Upper Franconian	Upper Franconian			dry_ADJ	drogge	d̥rˈɔɡ̊ə	d̥ r ˈɔ ɡ̊ ə		dry_ADJ_2			
 Swabian	Swabian			dry_ADJ	drogga	dʁˈɔɡa	d ʁ ˈɔ ɡ a		dry_ADJ_2			
 Alsatian	Alsatian			dry_ADJ	trucket	tʁˈukət	t ʁ ˈu k ə t		dry_ADJ_2			
-Swiss German	Swiss German			dry_ADJ	troche	trˈoχə	t r ˈo χ ə		dry_ADJ_2			
+Swiss German	Swiss German			dry_ADJ	troche	tːrˈoχːə	tː r ˈo χː ə		dry_ADJ_2			
 Proto-Germanic	Proto-Germanic			dove_NOUN	dūbǭ	dˈuːβɔ̃ː	d ˈuː β ɔ̃ː		dove_NOUN_1			
 Old West Norse	Old West Norse			dove_NOUN	dúfa	dˈuːvɑ	d ˈuː v ɑ		dove_NOUN_1			
 Icelandic	Icelandic			dove_NOUN	dúfa	d̥ˈuːva	d̥ ˈuː v a		dove_NOUN_1			
@@ -2074,7 +2074,7 @@ Standard German	Standard German			dove_NOUN	Taube	tʰˈaʊ̯bə	tʰ ˈaʊ̯ b ə
 Upper Franconian	Upper Franconian			dove_NOUN	Dauwa	d̥ˈaʊ̯βa	d̥ ˈaʊ̯ β a		dove_NOUN_1			
 Swabian	Swabian			dove_NOUN	Daub	dˈao̯b	d ˈao̯ b		dove_NOUN_1			
 Alsatian	Alsatian			dove_NOUN	Düüb	d̥ˈyːb̥	d̥ ˈyː b̥		dove_NOUN_1			
-Swiss German	Swiss German			dove_NOUN	Tuub	tˈuːb̥	t ˈuː b̥		dove_NOUN_1			
+Swiss German	Swiss German			dove_NOUN	Tuub	tːˈuːb̥	tː ˈuː b̥		dove_NOUN_1			
 Proto-Germanic	Proto-Germanic			daughter_NOUN	duhtēr	dˈuxtɛːr	d ˈu x t ɛː r		daughter_NOUN_1			
 Gothic	Gothic			daughter_NOUN	𐌳𐌰𐌿𐌷𐍄𐌰𐍂	dˈɔːhtar	d ˈɔː h t a r		daughter_NOUN_1			
 Old West Norse	Old West Norse			daughter_NOUN	dóttir	dˈoːttir	d ˈoː t t i r		daughter_NOUN_1			
@@ -2112,7 +2112,7 @@ Upper Franconian	Upper Franconian			daughter_NOUN	Dochder	d̥ˈɔxd̥ɐ	d̥ ˈɔ
 Bavarian	Bavarian			daughter_NOUN	Dochda	d̥ˈoxd̥a	d̥ ˈo x d̥ a		daughter_NOUN_1			
 Swabian	Swabian			daughter_NOUN	Dochdr	dˈɔxdʌ	d ˈɔ x d ʌ		daughter_NOUN_1			
 Alsatian	Alsatian			daughter_NOUN	Doochter	d̥ˈoːxtəʁ	d̥ ˈoː x t ə ʁ		daughter_NOUN_1			
-Swiss German	Swiss German			daughter_NOUN	Tochter	tˈoχtər	t ˈo χ t ə r		daughter_NOUN_1			
+Swiss German	Swiss German			daughter_NOUN	Tochter	tːˈoχːtːər	tː ˈo χː tː ə r		daughter_NOUN_1			
 Proto-Germanic	Proto-Germanic			dwarf_NOUN	dwergaz	dwˈerɣɑz	d w ˈe r ɣ ɑ z		dwarf_NOUN_1			
 Old West Norse	Old West Norse			dwarf_NOUN	dvergr	dvˈerɣr	d v ˈe r ɣ r		dwarf_NOUN_1			
 Icelandic	Icelandic			dwarf_NOUN	dvergur	d̥vˈɛrɡ̊ʏr̥	d̥ v ˈɛ r ɡ̊ ʏ r̥		dwarf_NOUN_1			
@@ -2285,7 +2285,7 @@ Upper Franconian	Upper Franconian			eat_VERB	essen	ˈɛsn̩	ˈɛ s n̩		eat_VERB
 Bavarian	Bavarian			eat_VERB	essn	ˈesn̩	ˈe s n̩		eat_VERB_1			
 Swabian	Swabian			eat_VERB	essa	ˈɛsa	ˈɛ s a		eat_VERB_1			
 Alsatian	Alsatian			eat_VERB	esse	ˈæsə	ˈæ s ə		eat_VERB_1			
-Swiss German	Swiss German			eat_VERB	ässe	ˈæssə	ˈæ s s ə		eat_VERB_1			
+Swiss German	Swiss German			eat_VERB	ässe	ˈæsːə	ˈæ sː ə		eat_VERB_1			
 Proto-Germanic	Proto-Germanic			father_NOUN	fadēr	ɸˈɑðɛːr	ɸ ˈɑ ð ɛː r		father_NOUN_1			
 Gothic	Gothic			father_NOUN	𐍆𐌰𐌳𐌰𐍂	fˈaðar	f ˈa ð a r		father_NOUN_1			
 Old West Norse	Old West Norse			father_NOUN	faðir	fˈɑðir	f ˈɑ ð i r		father_NOUN_1			
@@ -2323,7 +2323,7 @@ Upper Franconian	Upper Franconian			father_NOUN	Vådder	fˈɔɾɐ	f ˈɔ ɾ ɐ		
 Bavarian	Bavarian			father_NOUN	Vådda	fˈɒːd̥a	f ˈɒː d̥ a		father_NOUN_1			
 Swabian	Swabian			father_NOUN	Vaddr	fˈadʌ	f ˈa d ʌ		father_NOUN_1			
 Alsatian	Alsatian			father_NOUN	Vàtter	fˈɒtəʁ	f ˈɒ t ə ʁ		father_NOUN_1			
-Swiss German	Swiss German			father_NOUN	Fatter	fˈɒttər	f ˈɒ t t ə r		father_NOUN_1			
+Swiss German	Swiss German			father_NOUN	Fatter	v̥ˈɒtːər	v̥ ˈɒ tː ə r		father_NOUN_1			
 Proto-Germanic	Proto-Germanic			sheep_NOUN	fahaz	ɸˈɑxɑz	ɸ ˈɑ x ɑ z		sheep_NOUN_1			
 Old West Norse	Old West Norse			sheep_NOUN	fær	fˈɛːr	f ˈɛː r		sheep_NOUN_1			
 Faroese	Faroese			sheep_NOUN	fár	fˈɔ̯aːɹ	f ˈɔ̯aː ɹ		sheep_NOUN_1			
@@ -2398,7 +2398,7 @@ Upper Franconian	Upper Franconian			four_NUM	vier	fˈiːɐ	f ˈiː ɐ		four_NUM_
 Bavarian	Bavarian			four_NUM	viare	fˈiɐ̯rə	f ˈiɐ̯ r ə		four_NUM_1			
 Swabian	Swabian			four_NUM	vier	fˈiʕ	f ˈi ʕ		four_NUM_1			
 Alsatian	Alsatian			four_NUM	vier	fˈiːʁ	f ˈiː ʁ		four_NUM_1			
-Swiss German	Swiss German			four_NUM	fier	fˈiə̯r	f ˈiə̯ r		four_NUM_1			
+Swiss German	Swiss German			four_NUM	fier	v̥ˈiə̯r	v̥ ˈiə̯ r		four_NUM_1			
 Proto-Germanic	Proto-Germanic			feather_NOUN	feþrō	ɸˈeθrɔː	ɸ ˈe θ r ɔː		feather_NOUN_1			
 Old West Norse	Old West Norse			feather_NOUN	fjǫðr	fjˈɔðr	f j ˈɔ ð r		feather_NOUN_1			
 Icelandic	Icelandic			feather_NOUN	fjöður	fjˈœːðʏr̥	f j ˈœː ð ʏ r̥		feather_NOUN_1			
@@ -2434,7 +2434,7 @@ Upper Franconian	Upper Franconian			feather_NOUN	Feder	fˈeːɾɐ	f ˈeː ɾ ɐ	
 Bavarian	Bavarian			feather_NOUN	Feda	fˈeːd̥a	f ˈeː d̥ a		feather_NOUN_1			
 Swabian	Swabian			feather_NOUN	Fädr	fˈɛːdʌ	f ˈɛː d ʌ		feather_NOUN_1			
 Alsatian	Alsatian			feather_NOUN	Fädder	fˈɛd̥əʁ	f ˈɛ d̥ ə ʁ		feather_NOUN_1			
-Swiss German	Swiss German			feather_NOUN	Fädere	fˈæd̥ərə	f ˈæ d̥ ə r ə		feather_NOUN_1			
+Swiss German	Swiss German			feather_NOUN	Fädere	v̥ˈæd̥ərə	v̥ ˈæ d̥ ə r ə		feather_NOUN_1			
 Proto-Germanic	Proto-Germanic			five_NUM	fimf	ɸˈimɸ	ɸ ˈi m ɸ		five_NUM_1			
 Gothic	Gothic			five_NUM	𐍆𐌹𐌼𐍆	fˈimf	f ˈi m f		five_NUM_1			
 Old West Norse	Old West Norse			five_NUM	fimm	fˈimm	f ˈi m m		five_NUM_1			
@@ -2474,7 +2474,7 @@ Upper Franconian	Upper Franconian			five_NUM	fimf	fˈɪmf	f ˈɪ m f		five_NUM_1
 Bavarian	Bavarian			five_NUM	fimf	fˈimf	f ˈi m f		five_NUM_1			
 Swabian	Swabian			five_NUM	femf	fˈɛmf	f ˈɛ m f		five_NUM_1			
 Alsatian	Alsatian			five_NUM	finef	fˈinef	f ˈi n e f		five_NUM_1			
-Swiss German	Swiss German			five_NUM	füüf	fˈyːf	f ˈyː f		five_NUM_1			
+Swiss German	Swiss German			five_NUM	füüf	v̥ˈyːfː	v̥ ˈyː fː		five_NUM_1			
 Proto-Germanic	Proto-Germanic			finger_NOUN	fingraz	ɸˈiŋɡrɑz	ɸ ˈi ŋ ɡ r ɑ z		finger_NOUN_1			
 Gothic	Gothic			finger_NOUN	𐍆𐌹𐌲𐌲𐍂𐍃	fˈiŋɡrs	f ˈi ŋ ɡ r s		finger_NOUN_1			
 Old West Norse	Old West Norse			finger_NOUN	fingr	fˈiŋɡr	f ˈi ŋ ɡ r		finger_NOUN_1			
@@ -2513,7 +2513,7 @@ Upper Franconian	Upper Franconian			finger_NOUN	Finger	fˈɪŋɐ	f ˈɪ ŋ ɐ		f
 Bavarian	Bavarian			finger_NOUN	Finga	fˈiŋa	f ˈi ŋ a		finger_NOUN_1			
 Swabian	Swabian			finger_NOUN	Fengr	fˈeŋʌ	f ˈe ŋ ʌ		finger_NOUN_1			
 Alsatian	Alsatian			finger_NOUN	Finger	fˈiŋəʁ	f ˈi ŋ ə ʁ		finger_NOUN_1			
-Swiss German	Swiss German			finger_NOUN	Finger	fˈiŋər	f ˈi ŋ ə r		finger_NOUN_1			
+Swiss German	Swiss German			finger_NOUN	Finger	v̥ˈiŋər	v̥ ˈi ŋ ə r		finger_NOUN_1			
 Proto-Germanic	Proto-Germanic			find_VERB	finþaną	ɸˈinθɑnɑ̃	ɸ ˈi n θ ɑ n ɑ̃		find_VERB_1			
 Gothic	Gothic			find_VERB	𐍆𐌹𐌽𐌸𐌰𐌽 	fˈinθan	f ˈi n θ a n		find_VERB_1			
 Old West Norse	Old West Norse			find_VERB	finna	fˈinna	f ˈi n n a		find_VERB_1			
@@ -2552,7 +2552,7 @@ Upper Franconian	Upper Franconian			find_VERB	finna	fˈɪna	f ˈɪ n a		find_VER
 Bavarian	Bavarian			find_VERB	findn	fˈind̥n̩	f ˈi n d̥ n̩		find_VERB_1			
 Swabian	Swabian			find_VERB	finda	fˈɪnda	f ˈɪ n d a		find_VERB_1			
 Alsatian	Alsatian			find_VERB	finde	fˈind̥ə	f ˈi n d̥ ə		find_VERB_1			
-Swiss German	Swiss German			find_VERB	finde	fˈind̥ə	f ˈi n d̥ ə		find_VERB_1			
+Swiss German	Swiss German			find_VERB	finde	v̥ˈind̥ə	v̥ ˈi n d̥ ə		find_VERB_1			
 Proto-Germanic	Proto-Germanic			fish_NOUN	fiskaz	ɸˈiskɑz	ɸ ˈi s k ɑ z		fish_NOUN_1			
 Gothic	Gothic			fish_NOUN	𐍆𐌹𐍃𐌺𐍃	fˈisks	f ˈi s k s		fish_NOUN_1			
 Old West Norse	Old West Norse			fish_NOUN	fiskr	fˈiskr	f ˈi s k r		fish_NOUN_1			
@@ -2592,7 +2592,7 @@ Upper Franconian	Upper Franconian			fish_NOUN	Fiisch	fˈiːʃ	f ˈiː ʃ		fish_N
 Bavarian	Bavarian			fish_NOUN	Fiisch	fˈiːʃ	f ˈiː ʃ		fish_NOUN_1			
 Swabian	Swabian			fish_NOUN	Fisch	fˈiʃ	f ˈi ʃ		fish_NOUN_1			
 Alsatian	Alsatian			fish_NOUN	Fisch	fˈiʃ	f ˈi ʃ		fish_NOUN_1			
-Swiss German	Swiss German			fish_NOUN	Fisch	fˈiʃ	f ˈi ʃ		fish_NOUN_1			
+Swiss German	Swiss German			fish_NOUN	Fisch	v̥ˈiʃː	v̥ ˈi ʃː		fish_NOUN_1			
 Proto-Germanic	Proto-Germanic			flesh_NOUN	flaiski	ɸlˈɑi̯ski	ɸ l ˈɑi̯ s k i		flesh_NOUN_1			
 Scots	Scots			flesh_NOUN	flesh	flˈɛʃ	f l ˈɛ ʃ		flesh_NOUN_1			
 English	English			flesh_NOUN	flesh	flˈeʃ	f l ˈe ʃ		flesh_NOUN_1			
@@ -2624,7 +2624,7 @@ Upper Franconian	Upper Franconian			flesh_NOUN	Flasch	flˈaːʃ	f l ˈaː ʃ		fl
 Bavarian	Bavarian			flesh_NOUN	Fleisch	flˈai̯ʃ	f l ˈai̯ ʃ		flesh_NOUN_1			
 Swabian	Swabian			flesh_NOUN	Floisch	flˈɔe̯ʃ	f l ˈɔe̯ ʃ		flesh_NOUN_1			
 Alsatian	Alsatian			flesh_NOUN	Fleisch	flˈəi̯ʃ	f l ˈəi̯ ʃ		flesh_NOUN_1			
-Swiss German	Swiss German			flesh_NOUN	Fläisch	flˈæi̯ʃ	f l ˈæi̯ ʃ		flesh_NOUN_1			
+Swiss German	Swiss German			flesh_NOUN	Fläisch	v̥lˈæi̯ʃː	v̥ l ˈæi̯ ʃː		flesh_NOUN_1			
 Proto-Germanic	Proto-Germanic			fly_VERB	fleuganą	ɸlˈeu̯ɣɑnɑ̃	ɸ l ˈeu̯ ɣ ɑ n ɑ̃		fly_VERB_1			
 Old West Norse	Old West Norse			fly_VERB	fljúga	fljˈuːɣɑ	f l j ˈuː ɣ ɑ		fly_VERB_1			
 Icelandic	Icelandic			fly_VERB	fljúga	fljˈuːa	f l j ˈuː a		fly_VERB_1			
@@ -2661,7 +2661,7 @@ Upper Franconian	Upper Franconian			fly_VERB	fling	flˈiːŋ	f l ˈiː ŋ		fly_V
 Bavarian	Bavarian			fly_VERB	fliang	flˈiɐ̯ŋ	f l ˈiɐ̯ ŋ		fly_VERB_1			
 Swabian	Swabian			fly_VERB	fliaga	flˈiə̯ɡa	f l ˈiə̯ ɡ a		fly_VERB_1			
 Alsatian	Alsatian			fly_VERB	flieje	flˈiːjə	f l ˈiː j ə		fly_VERB_1			
-Swiss German	Swiss German			fly_VERB	flüge	flˈyɡ̊ə	f l ˈy ɡ̊ ə		fly_VERB_1			
+Swiss German	Swiss German			fly_VERB	flüge	v̥lˈyɡ̊ə	v̥ l ˈy ɡ̊ ə		fly_VERB_1			
 Proto-Germanic	Proto-Germanic			housefly_NOUN	fleugǭ	ɸlˈeu̯ɣɔ̃ː	ɸ l ˈeu̯ ɣ ɔ̃ː		housefly_NOUN_1			
 Old West Norse	Old West Norse			housefly_NOUN	fluga	flˈuɣɑ	f l ˈu ɣ ɑ		housefly_NOUN_1			
 Icelandic	Icelandic			housefly_NOUN	fluga	flˈʏːɣa	f l ˈʏː ɣ a		housefly_NOUN_1			
@@ -2692,7 +2692,7 @@ Wymysorys	Wymysorys			housefly_NOUN	fłig	fwˈiɡ̊	f w ˈi ɡ̊		housefly_NOUN_
 Yiddish	Yiddish			housefly_NOUN	פֿליג	fɫˈɪɡ	f ɫ ˈɪ ɡ		housefly_NOUN_1			
 Standard German	Standard German			housefly_NOUN	Fliege	flˈiːɡə	f l ˈiː ɡ ə		housefly_NOUN_1			
 Bavarian	Bavarian			housefly_NOUN	Fliaga	flˈiɐ̯ɡ̊a	f l ˈiɐ̯ ɡ̊ a		housefly_NOUN_1			
-Swiss German	Swiss German			housefly_NOUN	Flüüge	flˈyːɡ̊ə	f l ˈyː ɡ̊ ə		housefly_NOUN_1			
+Swiss German	Swiss German			housefly_NOUN	Flüüge	v̥lˈyːɡ̊ə	v̥ l ˈyː ɡ̊ ə		housefly_NOUN_1			
 Proto-Germanic	Proto-Germanic			feel_VERB	fōlijaną	ɸˈɔːlijɑnɑ̃	ɸ ˈɔː l i j ɑ n ɑ̃		feel_VERB_1			
 Scots	Scots			feel_VERB	feel	fˈil	f ˈi l		feel_VERB_1			
 English	English			feel_VERB	feel	fˈiːɫ	f ˈiː ɫ		feel_VERB_1			
@@ -2721,7 +2721,7 @@ Standard German	Standard German			feel_VERB	fühlen	fˈyːln̩	f ˈyː l n̩		fe
 Upper Franconian	Upper Franconian			feel_VERB	fiehln	fˈiːln̩	f ˈiː l n̩		feel_VERB_1			
 Bavarian	Bavarian			feel_VERB	fuin	fˈujn	f ˈu j n		feel_VERB_1			
 Swabian	Swabian			feel_VERB	fiehla	fˈiːla	f ˈiː l a		feel_VERB_1			
-Swiss German	Swiss German			feel_VERB	füüle	fˈyːlə	f ˈyː l ə		feel_VERB_1			
+Swiss German	Swiss German			feel_VERB	füüle	v̥ˈyːlə	v̥ ˈyː l ə		feel_VERB_1			
 Proto-Germanic	Proto-Germanic			fire_NOUN	fōr	ɸˈɔːr	ɸ ˈɔː r		fire_NOUN_2			
 Gothic	Gothic			fire_NOUN	𐍆𐍉𐌽	fˈoːn	f ˈoː n		fire_NOUN_2			
 Old West Norse	Old West Norse			fire_NOUN	fúrr	fˈuːrr	f ˈuː r r		fire_NOUN_2			
@@ -2760,7 +2760,7 @@ Upper Franconian	Upper Franconian			fire_NOUN	Feier	fˈaɪ̯ɐ	f ˈaɪ̯ ɐ		fir
 Bavarian	Bavarian			fire_NOUN	Faia	fˈai̯a	f ˈai̯ a		fire_NOUN_2			
 Swabian	Swabian			fire_NOUN	Feir	fˈəi̯ʌ	f ˈəi̯ ʌ		fire_NOUN_2			
 Alsatian	Alsatian			fire_NOUN	Fiir	fˈiːʁ	f ˈiː ʁ		fire_NOUN_2			
-Swiss German	Swiss German			fire_NOUN	Füür	fˈyːr	f ˈyː r		fire_NOUN_2			
+Swiss German	Swiss German			fire_NOUN	Füür	v̥ˈyːr	v̥ ˈyː r		fire_NOUN_2			
 Proto-Germanic	Proto-Germanic			feet_NOUN_PL	fōtiz	ɸˈɔːtiz	ɸ ˈɔː t i z		feet_NOUN_PL_1			
 Old West Norse	Old West Norse			feet_NOUN_PL	fǿtr	fˈøːtr	f ˈøː t r		feet_NOUN_PL_1			
 Icelandic	Icelandic			feet_NOUN_PL	fætur	fˈaːi̯tʏr̥	f ˈaːi̯ t ʏ r̥		feet_NOUN_PL_1			
@@ -2797,7 +2797,7 @@ Upper Franconian	Upper Franconian			feet_NOUN_PL	Fieß	fˈiːs	f ˈiː s		feet_N
 Bavarian	Bavarian			feet_NOUN_PL	Fiass	fˈiɐ̯s	f ˈiɐ̯ s		feet_NOUN_PL_1			
 Swabian	Swabian			feet_NOUN_PL	Fiaß	fˈiə̯s	f ˈiə̯ s		feet_NOUN_PL_1			
 Alsatian	Alsatian			feet_NOUN_PL	Fiess	fˈiːs	f ˈiː s		feet_NOUN_PL_1			
-Swiss German	Swiss German			feet_NOUN_PL	Füess	fˈyə̯ss	f ˈyə̯ s s		feet_NOUN_PL_1			
+Swiss German	Swiss German			feet_NOUN_PL	Füess	v̥ˈyə̯sː	v̥ ˈyə̯ sː		feet_NOUN_PL_1			
 Proto-Germanic	Proto-Germanic			foot_NOUN	fōts	ɸˈɔːts	ɸ ˈɔː t s		foot_NOUN_1			
 Gothic	Gothic			foot_NOUN	𐍆𐍉𐍄𐌿𐍃	fˈoːtus	f ˈoː t u s		foot_NOUN_1			
 Old West Norse	Old West Norse			foot_NOUN	fótr	fˈoːtr	f ˈoː t r		foot_NOUN_1			
@@ -2836,7 +2836,7 @@ Upper Franconian	Upper Franconian			foot_NOUN	Fuß	fˈuːs	f ˈuː s		foot_NOUN_
 Bavarian	Bavarian			foot_NOUN	Fuass	fˈuɐ̯s	f ˈuɐ̯ s		foot_NOUN_1			
 Swabian	Swabian			foot_NOUN	Fuaß	fˈuə̯s	f ˈuə̯ s		foot_NOUN_1			
 Alsatian	Alsatian			foot_NOUN	Füess	fˈʊːs	f ˈʊː s		foot_NOUN_1			
-Swiss German	Swiss German			foot_NOUN	Fuess	fˈuə̯ss	f ˈuə̯ s s		foot_NOUN_1			
+Swiss German	Swiss German			foot_NOUN	Fuess	v̥ˈuə̯sː	v̥ ˈuə̯ sː		foot_NOUN_1			
 Proto-Germanic	Proto-Germanic			woman_NOUN	frawjǭ	ɸrˈɑwjɔ̃ː	ɸ r ˈɑ w j ɔ̃ː		woman_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			woman_NOUN	Fru	frˈuː	f r ˈuː		woman_NOUN_1			
 Westphalian	Westphalian			woman_NOUN	Frau	frˈaʊ̯	f r ˈaʊ̯		woman_NOUN_1			
@@ -2858,7 +2858,7 @@ Standard German	Standard German			woman_NOUN	Frau	fʁˈaʊ̯	f ʁ ˈaʊ̯		woman
 Upper Franconian	Upper Franconian			woman_NOUN	Fraa	frˈaː	f r ˈaː		woman_NOUN_1			
 Swabian	Swabian			woman_NOUN	Frau	fʁˈao̯	f ʁ ˈao̯		woman_NOUN_1			
 Alsatian	Alsatian			woman_NOUN	Fràui	fʁˈɔi̯	f ʁ ˈɔi̯		woman_NOUN_1			
-Swiss German	Swiss German			woman_NOUN	Frau	frˈau̯	f r ˈau̯		woman_NOUN_1			
+Swiss German	Swiss German			woman_NOUN	Frau	v̥rˈau̯	v̥ r ˈau̯		woman_NOUN_1			
 Proto-Germanic	Proto-Germanic			freeze_VERB	freusaną	ɸrˈeu̯sɑnɑ̃	ɸ r ˈeu̯ s ɑ n ɑ̃		freeze_VERB_1			
 Old West Norse	Old West Norse			freeze_VERB	frjósa	frjˈoːsɑ	f r j ˈoː s ɑ		freeze_VERB_1			
 Icelandic	Icelandic			freeze_VERB	frjósa	frjˈoːu̯sa	f r j ˈoːu̯ s a		freeze_VERB_1			
@@ -2893,7 +2893,7 @@ Yiddish	Yiddish			freeze_VERB	פֿרירן	fʀˈɪʀn̩	f ʀ ˈɪ ʀ n̩		freeze
 Standard German	Standard German			freeze_VERB	frieren	fʁˈiːʁən	f ʁ ˈiː ʁ ə n		freeze_VERB_1			
 Upper Franconian	Upper Franconian			freeze_VERB	friern	frˈiːɐn	f r ˈiː ɐ n		freeze_VERB_1			
 Swabian	Swabian			freeze_VERB	friera	fʁˈiːʁa	f ʁ ˈiː ʁ a		freeze_VERB_1			
-Swiss German	Swiss German			freeze_VERB	gfrüüre	ɡ̊frˈyːrə	ɡ̊ f r ˈyː r ə		freeze_VERB_1			
+Swiss German	Swiss German			freeze_VERB	gfrüüre	ɡ̊v̥rˈyːrə	ɡ̊ v̥ r ˈyː r ə		freeze_VERB_1			
 Proto-Germanic	Proto-Germanic			free_ADJ	frijaz	ɸrˈijɑz	ɸ r ˈi j ɑ z		free_ADJ_1			
 Gothic	Gothic			free_ADJ	𐍆𐍂𐌴𐌹𐍃	frˈiːs	f r ˈiː s		free_ADJ_1			
 Scots	Scots			free_ADJ	free	frˈiː	f r ˈiː		free_ADJ_1			
@@ -2924,7 +2924,7 @@ Standard German	Standard German			free_ADJ	frei	fʁˈaɪ̯	f ʁ ˈaɪ̯		free_AD
 Upper Franconian	Upper Franconian			free_ADJ	frei	frˈaɪ̯	f r ˈaɪ̯		free_ADJ_1			
 Bavarian	Bavarian			free_ADJ	frei	frˈai̯	f r ˈai̯		free_ADJ_1			
 Alsatian	Alsatian			free_ADJ	frej	fʁˈei̯	f ʁ ˈei̯		free_ADJ_1			
-Swiss German	Swiss German			free_ADJ	frei	frˈei̯	f r ˈei̯		free_ADJ_1			
+Swiss German	Swiss German			free_ADJ	frei	v̥rˈei̯	v̥ r ˈei̯		free_ADJ_1			
 Proto-Germanic	Proto-Germanic			friend_NOUN	frijōndz	ɸrˈijɔːndz	ɸ r ˈi j ɔː n d z		friend_NOUN_1			
 Gothic	Gothic			friend_NOUN	𐍆𐍂𐌹𐌾𐍉𐌽𐌳𐍃	frˈijoːnds	f r ˈi j oː n d s		friend_NOUN_1			
 Old West Norse	Old West Norse			friend_NOUN	frændi	frˈɛːndi	f r ˈɛː n d i		friend_NOUN_1			
@@ -2964,7 +2964,7 @@ Upper Franconian	Upper Franconian			friend_NOUN	Freind	frˈaɪ̯nd̥	f r ˈaɪ̯
 Bavarian	Bavarian			friend_NOUN	Freind	frˈai̯nd̥	f r ˈai̯ n d̥		friend_NOUN_1			
 Swabian	Swabian			friend_NOUN	Freind	fʁˈae̯nd	f ʁ ˈae̯ n d		friend_NOUN_1			
 Alsatian	Alsatian			friend_NOUN	Frind	fʁˈind̥	f ʁ ˈi n d̥		friend_NOUN_1			
-Swiss German	Swiss German			friend_NOUN	Fründ	frˈynd̥	f r ˈy n d̥		friend_NOUN_1			
+Swiss German	Swiss German			friend_NOUN	Fründ	v̥rˈynd̥	v̥ r ˈy n d̥		friend_NOUN_1			
 Proto-Germanic	Proto-Germanic			fresh_ADJ	friskaz	ɸrˈiskɑz	ɸ r ˈi s k ɑ z		fresh_ADJ_1			
 Old West Norse	Old West Norse			fresh_ADJ	ferskr	fˈerskr	f ˈe r s k r		fresh_ADJ_1			
 Icelandic	Icelandic			fresh_ADJ	ferskur	fˈɛr̥skʏr̥	f ˈɛ r̥ s k ʏ r̥		fresh_ADJ_1			
@@ -3003,7 +3003,7 @@ Upper Franconian	Upper Franconian			fresh_ADJ	frisch	frˈɪʃ	f r ˈɪ ʃ		fresh
 Bavarian	Bavarian			fresh_ADJ	frisch	frˈiʃ	f r ˈi ʃ		fresh_ADJ_1			
 Swabian	Swabian			fresh_ADJ	frisch	fʁˈiʃ	f ʁ ˈi ʃ		fresh_ADJ_1			
 Alsatian	Alsatian			fresh_ADJ	frisch	fʁˈiʃ	f ʁ ˈi ʃ		fresh_ADJ_1			
-Swiss German	Swiss German			fresh_ADJ	früsch	frˈyʃ	f r ˈy ʃ		fresh_ADJ_1			
+Swiss German	Swiss German			fresh_ADJ	früsch	v̥rˈyʃː	v̥ r ˈy ʃː		fresh_ADJ_1			
 Proto-Germanic	Proto-Germanic			bird_NOUN_MASC	fuglaz	ɸˈuɣlɑz	ɸ ˈu ɣ l ɑ z		bird_NOUN_MASC_1			
 Gothic	Gothic			bird_NOUN_MASC	𐍆𐌿𐌲𐌻𐍃	fˈuɡls	f ˈu ɡ l s		bird_NOUN_MASC_1			
 Old West Norse	Old West Norse			bird_NOUN_MASC	fogl	fˈoɣl	f ˈo ɣ l		bird_NOUN_MASC_1			
@@ -3043,7 +3043,7 @@ Upper Franconian	Upper Franconian			bird_NOUN_MASC	Vogel	fˈoːçl̩	f ˈoː ç 
 Bavarian	Bavarian			bird_NOUN_MASC	Vogl	fˈoːɡ̊l̩	f ˈoː ɡ̊ l̩		bird_NOUN_MASC_1			
 Swabian	Swabian			bird_NOUN_MASC	Vogl	fˈoːɡl̩	f ˈoː ɡ l̩		bird_NOUN_MASC_1			
 Alsatian	Alsatian			bird_NOUN_MASC	Vöjel	fˈøɡ̊l̩	f ˈø ɡ̊ l̩		bird_NOUN_MASC_1			
-Swiss German	Swiss German			bird_NOUN_MASC	Fogel	fˈoɡ̊l	f ˈo ɡ̊ l		bird_NOUN_MASC_1			
+Swiss German	Swiss German			bird_NOUN_MASC	Fogel	v̥ˈoɡ̊l	v̥ ˈo ɡ̊ l		bird_NOUN_MASC_1			
 Proto-Germanic	Proto-Germanic			fox_NOUN	fuhsaz	ɸˈuxsɑz	ɸ ˈu x s ɑ z		fox_NOUN_1			
 Scots	Scots			fox_NOUN	fox	fˈoks	f ˈo k s		fox_NOUN_1			
 English	English			fox_NOUN	fox	fˈɒks	f ˈɒ k s		fox_NOUN_1			
@@ -3072,7 +3072,7 @@ Upper Franconian	Upper Franconian			fox_NOUN	Fuchs	fˈʊɡ̊s	f ˈʊ ɡ̊ s		fox
 Bavarian	Bavarian			fox_NOUN	Fux	fˈuɡ̊s	f ˈu ɡ̊ s		fox_NOUN_1			
 Swabian	Swabian			fox_NOUN	Fuchs	fˈuɡs	f ˈu ɡ s		fox_NOUN_1			
 Alsatian	Alsatian			fox_NOUN	Fuchs	fˈuks	f ˈu k s		fox_NOUN_1			
-Swiss German	Swiss German			fox_NOUN	Fuchs	fˈuχs	f ˈu χ s		fox_NOUN_1			
+Swiss German	Swiss German			fox_NOUN	Fuchs	v̥ˈuχːsː	v̥ ˈu χː sː		fox_NOUN_1			
 Proto-Germanic	Proto-Germanic			follow_VERB	fulgāną	ɸˈulɣɑːnɑ̃	ɸ ˈu l ɣ ɑː n ɑ̃		follow_VERB_1			
 Scots	Scots			follow_VERB	follae	fˈolə	f ˈo l ə		follow_VERB_1			
 English	English			follow_VERB	follow	fˈɒləʊ̯	f ˈɒ l əʊ̯		follow_VERB_1			
@@ -3100,7 +3100,7 @@ Standard German	Standard German			follow_VERB	folgen	fˈɔlɡn̩	f ˈɔ l ɡ n̩
 Upper Franconian	Upper Franconian			follow_VERB	folng	fˈɔlŋ	f ˈɔ l ŋ		follow_VERB_1			
 Bavarian	Bavarian			follow_VERB	foing	fˈojŋ	f ˈo j ŋ		follow_VERB_1			
 Swabian	Swabian			follow_VERB	folga	fˈolɡa	f ˈo l ɡ a		follow_VERB_1			
-Swiss German	Swiss German			follow_VERB	folge	fˈolɡ̊ə	f ˈo l ɡ̊ ə		follow_VERB_1			
+Swiss German	Swiss German			follow_VERB	folge	v̥ˈolɡ̊ə	v̥ ˈo l ɡ̊ ə		follow_VERB_1			
 Proto-Germanic	Proto-Germanic			follow_VERB	fulgijaną	ɸˈulɣijɑnɑ̃	ɸ ˈu l ɣ i j ɑ n ɑ̃		follow_VERB_2			
 Old West Norse	Old West Norse			follow_VERB	fylgja	fˈylɟa	f ˈy l ɟ a		follow_VERB_2			
 Icelandic	Icelandic			follow_VERB	fylgja	fˈɪlɟ̊a	f ˈɪ l ɟ̊ a		follow_VERB_2			
@@ -3138,7 +3138,7 @@ Yiddish	Yiddish			folk_NOUN	פֿאָלק	fˈɔɫk	f ˈɔ ɫ k		folk_NOUN_1
 Standard German	Standard German			folk_NOUN	Volk	fˈɔlk	f ˈɔ l k		folk_NOUN_1			
 Upper Franconian	Upper Franconian			folk_NOUN	Volk	fˈɔlɡ̊	f ˈɔ l ɡ̊		folk_NOUN_1			
 Bavarian	Bavarian			folk_NOUN	Voigg	fˈojɡ̊	f ˈo j ɡ̊		folk_NOUN_1			
-Swiss German	Swiss German			folk_NOUN	Vouk	fˈowk	f ˈo w k		folk_NOUN_1			
+Swiss German	Swiss German			folk_NOUN	Vouk	v̥ˈowkː	v̥ ˈo w kː		folk_NOUN_1			
 Proto-Germanic	Proto-Germanic			full_ADJ	fullaz	ɸˈullɑz	ɸ ˈu l l ɑ z		full_ADJ_1			
 Gothic	Gothic			full_ADJ	𐍆𐌿𐌻𐌻𐍃	fˈulls	f ˈu l l s		full_ADJ_1			
 Old West Norse	Old West Norse			full_ADJ	fullr	fˈullr	f ˈu l l r		full_ADJ_1			
@@ -3178,7 +3178,7 @@ Upper Franconian	Upper Franconian			full_ADJ	voll	fˈɔl	f ˈɔ l		full_ADJ_1
 Bavarian	Bavarian			full_ADJ	voi	fˈoj	f ˈo j		full_ADJ_1			
 Swabian	Swabian			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1			
 Alsatian	Alsatian			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1			
-Swiss German	Swiss German			full_ADJ	voll	fˈoll	f ˈo l l		full_ADJ_1			
+Swiss German	Swiss German			full_ADJ	voll	v̥ˈol	v̥ ˈo l		full_ADJ_1			
 Proto-Germanic	Proto-Germanic			for_PREP	furi	ɸˈuri	ɸ ˈu r i		for_PREP_1			
 Gothic	Gothic			for_PREP	𐍆𐌰𐌿𐍂	fˈɔːr	f ˈɔː r		for_PREP_1			
 Old West Norse	Old West Norse			for_PREP	fyrir	fˈyrir	f ˈy r i r		for_PREP_1			
@@ -3217,7 +3217,7 @@ Upper Franconian	Upper Franconian			for_PREP	fä	fˈɘ	f ˈɘ		for_PREP_1
 Bavarian	Bavarian			for_PREP	fia	fˈiɐ	f ˈi ɐ		for_PREP_1			
 Swabian	Swabian			for_PREP	fir	fˈiʌ	f ˈi ʌ		for_PREP_1			
 Alsatian	Alsatian			for_PREP	fer	fˈeʁ	f ˈe ʁ		for_PREP_1			
-Swiss German	Swiss German			for_PREP	für	fˈyr	f ˈy r		for_PREP_1			
+Swiss German	Swiss German			for_PREP	für	v̥ˈyr	v̥ ˈy r		for_PREP_1			
 Proto-Germanic	Proto-Germanic			ghost_NOUN	gaistaz	ɣˈɑi̯stɑz	ɣ ˈɑi̯ s t ɑ z		ghost_NOUN_1			
 Scots	Scots			ghost_NOUN	ghaist	ɡˈest	ɡ ˈe s t		ghost_NOUN_1			
 English	English			ghost_NOUN	ghost	ɡˈəʊ̯st	ɡ ˈəʊ̯ s t		ghost_NOUN_1			
@@ -3243,7 +3243,7 @@ Standard German	Standard German			ghost_NOUN	Geist	ɡˈaɪ̯st	ɡ ˈaɪ̯ s t		g
 Upper Franconian	Upper Franconian			ghost_NOUN	Geist	ɡ̊ˈaɪ̯sd̥	ɡ̊ ˈaɪ̯ s d̥		ghost_NOUN_1			
 Bavarian	Bavarian			ghost_NOUN	Geischd	ɡ̊ˈai̯ʃd̥	ɡ̊ ˈai̯ ʃ d̥		ghost_NOUN_1			
 Swabian	Swabian			ghost_NOUN	Geischd	ɡˈae̯ʃd	ɡ ˈae̯ ʃ d		ghost_NOUN_1			
-Swiss German	Swiss German			ghost_NOUN	Gäischt	ɡ̊ˈæi̯ʃt	ɡ̊ ˈæi̯ ʃ t		ghost_NOUN_1			
+Swiss German	Swiss German			ghost_NOUN	Gäischt	ɡ̊ˈæi̯ʃːtː	ɡ̊ ˈæi̯ ʃː tː		ghost_NOUN_1			
 Proto-Germanic	Proto-Germanic			goat_NOUN	gaits	ɣˈɑi̯ts	ɣ ˈɑi̯ t s		goat_NOUN_1			
 Gothic	Gothic			goat_NOUN	𐌲𐌰𐌹𐍄𐍃	ɡˈɛːts	ɡ ˈɛː t s		goat_NOUN_1			
 Old West Norse	Old West Norse			goat_NOUN	geit	ɟˈɛi̯t	ɟ ˈɛi̯ t		goat_NOUN_1			
@@ -3275,7 +3275,7 @@ Upper Franconian	Upper Franconian			goat_NOUN	Gaß	ɡ̊ˈaːs	ɡ̊ ˈaː s		goat
 Bavarian	Bavarian			goat_NOUN	Goaß	ɡ̊ˈoɐ̯s	ɡ̊ ˈoɐ̯ s		goat_NOUN_1			
 Swabian	Swabian			goat_NOUN	Goiß	ɡˈɔe̯s	ɡ ˈɔe̯ s		goat_NOUN_1			
 Alsatian	Alsatian			goat_NOUN	Geiss	ɡ̊ˈəi̯s	ɡ̊ ˈəi̯ s		goat_NOUN_1			
-Swiss German	Swiss German			goat_NOUN	Gäiss	ɡ̊ˈæi̯ss	ɡ̊ ˈæi̯ s s		goat_NOUN_1			
+Swiss German	Swiss German			goat_NOUN	Gäiss	ɡ̊ˈæi̯sː	ɡ̊ ˈæi̯ sː		goat_NOUN_1			
 Proto-Germanic	Proto-Germanic			go_VERB	gāną	ɣˈɑːnɑ̃	ɣ ˈɑː n ɑ̃		go_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			go_VERB	gå	ɡˈoː	ɡ ˈoː		go_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			go_VERB	gå	ɡˈoː	ɡ ˈoː		go_VERB_1			
@@ -3355,7 +3355,7 @@ Upper Franconian	Upper Franconian			goose_NOUN	Gans	ɡ̊ˈans	ɡ̊ ˈa n s		goos
 Bavarian	Bavarian			goose_NOUN	Gans	ɡ̊ˈɑns	ɡ̊ ˈɑ n s		goose_NOUN_1			
 Swabian	Swabian			goose_NOUN	Gaas	ɡˈaːs	ɡ ˈaː s		goose_NOUN_1			
 Alsatian	Alsatian			goose_NOUN	Gàns	ɡ̊ˈɒnz̥	ɡ̊ ˈɒ n z̥		goose_NOUN_1			
-Swiss German	Swiss German			goose_NOUN	Gans	ɡ̊ˈɒns	ɡ̊ ˈɒ n s		goose_NOUN_1			
+Swiss German	Swiss German			goose_NOUN	Gans	ɡ̊ˈɒnz̥	ɡ̊ ˈɒ n z̥		goose_NOUN_1			
 Proto-Germanic	Proto-Germanic			yarn_NOUN	garną	ɣˈɑrnɑ̃	ɣ ˈɑ r n ɑ̃		yarn_NOUN_1			
 Old West Norse	Old West Norse			yarn_NOUN	garn	ɡˈɑrn	ɡ ˈɑ r n		yarn_NOUN_1			
 Icelandic	Icelandic			yarn_NOUN	garn	ɡ̊ˈart͡n̥	ɡ̊ ˈa r t͡n̥		yarn_NOUN_1			
@@ -3415,7 +3415,7 @@ Wymysorys	Wymysorys			guest_NOUN	gost	ɡˈɔst	ɡ ˈɔ s t		guest_NOUN_1
 Yiddish	Yiddish			guest_NOUN	גאַסט	ɡˈast	ɡ ˈa s t		guest_NOUN_1			
 Standard German	Standard German			guest_NOUN	Gast	ɡˈast	ɡ ˈa s t		guest_NOUN_1			
 Swabian	Swabian			guest_NOUN	Gaschd	ɡˈaʃd	ɡ ˈa ʃ d		guest_NOUN_1			
-Swiss German	Swiss German			guest_NOUN	Gascht	ɡ̊ˈɒʃt	ɡ̊ ˈɒ ʃ t		guest_NOUN_1			
+Swiss German	Swiss German			guest_NOUN	Gascht	ɡ̊ˈɒʃːtː	ɡ̊ ˈɒ ʃː tː		guest_NOUN_1			
 Proto-Germanic	Proto-Germanic			give_VERB	gebaną	ɣˈeβɑnɑ̃	ɣ ˈe β ɑ n ɑ̃		give_VERB_1			
 Gothic	Gothic			give_VERB	𐌲𐌹𐌱𐌰𐌽	ɡˈiβan	ɡ ˈi β a n		give_VERB_1			
 Old West Norse	Old West Norse			give_VERB	gefa	ɟˈevɑ	ɟ ˈe v ɑ		give_VERB_1			
@@ -3530,7 +3530,7 @@ Upper Franconian	Upper Franconian			good_ADJ	gud	ɡ̊ˈuːd̥	ɡ̊ ˈuː d̥		go
 Bavarian	Bavarian			good_ADJ	guad	ɡ̊ˈuɐ̯d̥	ɡ̊ ˈuɐ̯ d̥		good_ADJ_1			
 Swabian	Swabian			good_ADJ	guad	ɡˈuə̯d	ɡ ˈuə̯ d		good_ADJ_1			
 Alsatian	Alsatian			good_ADJ	güet	ɡ̊ˈʊːt	ɡ̊ ˈʊː t		good_ADJ_1			
-Swiss German	Swiss German			good_ADJ	guet	ɡ̊ˈuə̯t	ɡ̊ ˈuə̯ t		good_ADJ_1			
+Swiss German	Swiss German			good_ADJ	guet	ɡ̊ˈuə̯tː	ɡ̊ ˈuə̯ tː		good_ADJ_1			
 Proto-Germanic	Proto-Germanic			grass_NOUN_NEU	grasą	ɣrˈɑsɑ̃	ɣ r ˈɑ s ɑ̃		grass_NOUN_NEU_1			
 Old West Norse	Old West Norse			grass_NOUN_NEU	gras	ɡrˈɑs	ɡ r ˈɑ s		grass_NOUN_NEU_1			
 Icelandic	Icelandic			grass_NOUN_NEU	gras	ɡ̊rˈaːs	ɡ̊ r ˈaː s		grass_NOUN_NEU_1			
@@ -3568,7 +3568,7 @@ Upper Franconian	Upper Franconian			grass_NOUN_NEU	Gros	ɡ̊rˈoːs	ɡ̊ r ˈoː
 Bavarian	Bavarian			grass_NOUN_NEU	Grås	ɡ̊rˈɒːs	ɡ̊ r ˈɒː s		grass_NOUN_NEU_1			
 Swabian	Swabian			grass_NOUN_NEU	Gras	ɡʁˈaːs	ɡ ʁ ˈaː s		grass_NOUN_NEU_1			
 Alsatian	Alsatian			grass_NOUN_NEU	Gràs	ɡ̊ʁˈɒːz̥	ɡ̊ ʁ ˈɒː z̥		grass_NOUN_NEU_1			
-Swiss German	Swiss German			grass_NOUN_NEU	Graas	ɡ̊rˈɒːs	ɡ̊ r ˈɒː s		grass_NOUN_NEU_1			
+Swiss German	Swiss German			grass_NOUN_NEU	Graas	ɡ̊rˈɒːsː	ɡ̊ r ˈɒː sː		grass_NOUN_NEU_1			
 Proto-Germanic	Proto-Germanic			great_ADJ	grautaz	ɣrˈɑu̯tɑz	ɣ r ˈɑu̯ t ɑ z		great_ADJ_1			
 Scots	Scots			great_ADJ	great	ɡrˈɛt	ɡ r ˈɛ t		great_ADJ_1			
 English	English			great_ADJ	great	ɡɹˈeɪ̯t	ɡ ɹ ˈeɪ̯ t		great_ADJ_1			
@@ -3601,7 +3601,7 @@ Upper Franconian	Upper Franconian			great_ADJ	gruß	ɡ̊rˈuːs	ɡ̊ r ˈuː s		
 Bavarian	Bavarian			great_ADJ	grous	ɡ̊rˈou̯s	ɡ̊ r ˈou̯ s		great_ADJ_1			
 Swabian	Swabian			great_ADJ	groß	ɡʁˈoːs	ɡ ʁ ˈoː s		great_ADJ_1			
 Alsatian	Alsatian			great_ADJ	gross	ɡ̊ʁˈoːs	ɡ̊ ʁ ˈoː s		great_ADJ_1			
-Swiss German	Swiss German			great_ADJ	gross	ɡ̊rˈoːss	ɡ̊ r ˈoː s s		great_ADJ_1			
+Swiss German	Swiss German			great_ADJ	gross	ɡ̊rˈoːsː	ɡ̊ r ˈoː sː		great_ADJ_1			
 Proto-Germanic	Proto-Germanic			green_ADJ	grōniz	ɣrˈɔːniz	ɣ r ˈɔː n i z		green_ADJ_1			
 Old West Norse	Old West Norse			green_ADJ	grǿnn	ɡrˈøːnn	ɡ r ˈøː n n		green_ADJ_1			
 Icelandic	Icelandic			green_ADJ	grænn	ɡ̊rˈai̯t͡n̥	ɡ̊ r ˈai̯ t͡n̥		green_ADJ_1			
@@ -3680,7 +3680,7 @@ Upper Franconian	Upper Franconian			god_NOUN	Gott	ɡ̊ˈɔd̥	ɡ̊ ˈɔ d̥		god
 Bavarian	Bavarian			god_NOUN	Good	ɡ̊ˈoːd̥	ɡ̊ ˈoː d̥		god_NOUN_1			
 Swabian	Swabian			god_NOUN	Gott	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1			
 Alsatian	Alsatian			god_NOUN	Gott	ɡ̊ˈot	ɡ̊ ˈo t		god_NOUN_1			
-Swiss German	Swiss German			god_NOUN	Gott	ɡ̊ˈott	ɡ̊ ˈo t t		god_NOUN_1			
+Swiss German	Swiss German			god_NOUN	Gott	ɡ̊ˈotː	ɡ̊ ˈo tː		god_NOUN_1			
 Proto-Germanic	Proto-Germanic			gold_NOUN_NEU	gulþą	ɣˈulθɑ̃	ɣ ˈu l θ ɑ̃		gold_NOUN_NEU_1			
 Gothic	Gothic			gold_NOUN_NEU	𐌲𐌿𐌻𐌸	ɡˈulθ	ɡ ˈu l θ		gold_NOUN_NEU_1			
 Old West Norse	Old West Norse			gold_NOUN_NEU	gull	ɡˈull	ɡ ˈu l l		gold_NOUN_NEU_1			
@@ -3860,7 +3860,7 @@ Upper Franconian	Upper Franconian			hot_ADJ	haß	hˈaːs	h ˈaː s		hot_ADJ_1
 Bavarian	Bavarian			hot_ADJ	hoass	hˈoɐ̯s	h ˈoɐ̯ s		hot_ADJ_1			
 Swabian	Swabian			hot_ADJ	hoiß	hˈɔe̯s	h ˈɔe̯ s		hot_ADJ_1			
 Alsatian	Alsatian			hot_ADJ	heiss	hˈəi̯s	h ˈəi̯ s		hot_ADJ_1			
-Swiss German	Swiss German			hot_ADJ	häiss	hˈæi̯ss	h ˈæi̯ s s		hot_ADJ_1			
+Swiss German	Swiss German			hot_ADJ	häiss	hˈæi̯sː	h ˈæi̯ sː		hot_ADJ_1			
 Proto-Germanic	Proto-Germanic			half_NOUN	halbaz	xˈɑlβɑz	x ˈɑ l β ɑ z		half_NOUN_1			
 Gothic	Gothic			half_NOUN	𐌷𐌰𐌻𐌱𐍃	hˈalbs	h ˈa l b s		half_NOUN_1			
 Old West Norse	Old West Norse			half_NOUN	halfr	hˈɑlfr	h ˈɑ l f r		half_NOUN_1			
@@ -3998,7 +3998,7 @@ Standard German	Standard German			hare_NOUN	Hase	hˈaːzə	h ˈaː z ə		hare_NO
 Upper Franconian	Upper Franconian			hare_NOUN	Hoos	hˈoːs	h ˈoː s		hare_NOUN_1			
 Bavarian	Bavarian			hare_NOUN	Hås	hˈɒːs	h ˈɒː s		hare_NOUN_1			
 Swabian	Swabian			hare_NOUN	Has	hˈaːs	h ˈaː s		hare_NOUN_1			
-Swiss German	Swiss German			hare_NOUN	Haas	hˈɒːs	h ˈɒː s		hare_NOUN_1			
+Swiss German	Swiss German			hare_NOUN	Haas	hˈɒːz̥	h ˈɒː z̥		hare_NOUN_1			
 Proto-Germanic	Proto-Germanic			hate_VERB	hatāną	xˈɑtɑːnɑ̃	x ˈɑ t ɑː n ɑ̃		hate_VERB_1			
 Gothic	Gothic			hate_VERB	𐌷𐌰𐍄𐌰𐌽	hˈataːn	h ˈa t aː n		hate_VERB_1			
 Icelandic	Icelandic			hate_VERB	hata	hˈaːta	h ˈaː t a		hate_VERB_1			
@@ -4027,7 +4027,7 @@ Pennsylvania German	Pennsylvania German			hate_VERB	hasse	hˈasə	h ˈa s ə		ha
 Palatine German	Palatine German			hate_VERB	hasse	hˈɑsə	h ˈɑ s ə		hate_VERB_1			
 Yiddish	Yiddish			hate_VERB	האַסן	hˈasn̩	h ˈa s n̩		hate_VERB_1			
 Standard German	Standard German			hate_VERB	hassen	hˈasn̩	h ˈa s n̩		hate_VERB_1			
-Swiss German	Swiss German			hate_VERB	hasse	hˈɒssə	h ˈɒ s s ə		hate_VERB_1			
+Swiss German	Swiss German			hate_VERB	hasse	hˈɒsːə	h ˈɒ sː ə		hate_VERB_1			
 Proto-Germanic	Proto-Germanic			head_NOUN	haubudą	xˈɑu̯βuðɑ̃	x ˈɑu̯ β u ð ɑ̃		head_NOUN_1			
 Gothic	Gothic			head_NOUN	𐌷𐌰𐌿𐌱𐌹𐌸	hˈɔβiθ	h ˈɔ β i θ		head_NOUN_1			
 Old West Norse	Old West Norse			head_NOUN	hǫfuð	hˈɔvuð	h ˈɔ v u ð		head_NOUN_1			
@@ -4060,7 +4060,7 @@ Standard German	Standard German			head_NOUN	Haupt	hˈaʊ̯pt	h ˈaʊ̯ p t		head
 Upper Franconian	Upper Franconian			head_NOUN	Haad	hˈaːd̥	h ˈaː d̥		head_NOUN_1			
 Bavarian	Bavarian			head_NOUN	Hapt	hˈaːb̥d̥	h ˈaː b̥ d̥		head_NOUN_1			
 Swabian	Swabian			head_NOUN	Haubd	hˈao̯bd	h ˈao̯ b d		head_NOUN_1			
-Swiss German	Swiss German			head_NOUN	Haupt	hˈau̯pt	h ˈau̯ p t		head_NOUN_1			
+Swiss German	Swiss German			head_NOUN	Haupt	hˈau̯pːtː	h ˈau̯ pː tː		head_NOUN_1			
 Proto-Germanic	Proto-Germanic			high_ADJ	haugaz	xˈɑu̯ɣɑz	x ˈɑu̯ ɣ ɑ z		high_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			high_ADJ	haug	hˈæʉ̯ɡ	h ˈæʉ̯ ɡ		high_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			high_ADJ	høy	hˈøːj	h ˈøː j		high_ADJ_1			
@@ -4101,7 +4101,7 @@ Upper Franconian	Upper Franconian			high_ADJ	huch	hˈuːx	h ˈuː x		high_ADJ_2
 Bavarian	Bavarian			high_ADJ	houch	hˈou̯x	h ˈou̯ x		high_ADJ_2			
 Swabian	Swabian			high_ADJ	hauch	hˈao̯x	h ˈao̯ x		high_ADJ_2			
 Alsatian	Alsatian			high_ADJ	hoch	hˈoːx	h ˈoː x		high_ADJ_2			
-Swiss German	Swiss German			high_ADJ	hooch	hˈoːχ	h ˈoː χ		high_ADJ_2			
+Swiss German	Swiss German			high_ADJ	hooch	hˈoːχː	h ˈoː χː		high_ADJ_2			
 Proto-Germanic	Proto-Germanic			hear_VERB	hauzijaną	xˈɑu̯zijɑnɑ̃	x ˈɑu̯ z i j ɑ n ɑ̃		hear_VERB_1			
 Gothic	Gothic			hear_VERB	𐌷𐌰𐌿𐍃𐌾𐌰𐌽	hˈɔːsjan	h ˈɔː s j a n		hear_VERB_1			
 Old West Norse	Old West Norse			hear_VERB	heyra	hˈøy̯rɑ	h ˈøy̯ r ɑ		hear_VERB_1			
@@ -4210,7 +4210,7 @@ Upper Franconian	Upper Franconian			help_VERB	helfn	hˈɛlfn̩	h ˈɛ l f n̩		h
 Bavarian	Bavarian			help_VERB	häiffa	hˈejfa	h ˈe j f a		help_VERB_1			
 Swabian	Swabian			help_VERB	helfa	hˈɛlfa	h ˈɛ l f a		help_VERB_1			
 Alsatian	Alsatian			help_VERB	helfe	hˈælfə	h ˈæ l f ə		help_VERB_1			
-Swiss German	Swiss German			help_VERB	hälfe	hˈælfə	h ˈæ l f ə		help_VERB_1			
+Swiss German	Swiss German			help_VERB	hälfe	hˈælfːə	h ˈæ l fː ə		help_VERB_1			
 Proto-Germanic	Proto-Germanic			hair_NOUN	hērą	xˈɛːrɑ̃	x ˈɛː r ɑ̃		hair_NOUN_1			
 Old West Norse	Old West Norse			hair_NOUN	hár	hˈɑːr	h ˈɑː r		hair_NOUN_1			
 Icelandic	Icelandic			hair_NOUN	hár	hˈɑːu̯r̥	h ˈɑːu̯ r̥		hair_NOUN_1			
@@ -4323,7 +4323,7 @@ Upper Franconian	Upper Franconian			laugh_VERB	lachen	lˈaxn̩	l ˈa x n̩		laug
 Bavarian	Bavarian			laugh_VERB	lācha	lˈɒːxa	l ˈɒː x a		laugh_VERB_1			
 Swabian	Swabian			laugh_VERB	lacha	lˈaxa	l ˈa x a		laugh_VERB_1			
 Alsatian	Alsatian			laugh_VERB	làche	lˈɒxə	l ˈɒ x ə		laugh_VERB_1			
-Swiss German	Swiss German			laugh_VERB	lache	lˈɒχə	l ˈɒ χ ə		laugh_VERB_1			
+Swiss German	Swiss German			laugh_VERB	lache	lˈɒχːə	l ˈɒ χː ə		laugh_VERB_1			
 Proto-Germanic	Proto-Germanic			leap_VERB	hlaupaną	xlˈɑu̯pɑnɑ̃	x l ˈɑu̯ p ɑ n ɑ̃		leap_VERB_1			
 Gothic	Gothic			leap_VERB	𐌷𐌻𐌰𐌿𐍀𐌰𐌽	hlˈɔːpan	h l ˈɔː p a n		leap_VERB_1			
 Old West Norse	Old West Norse			leap_VERB	hlaupa	l̥ˈɑu̯pɑ	l̥ ˈɑu̯ p ɑ		leap_VERB_1			
@@ -4361,7 +4361,7 @@ Upper Franconian	Upper Franconian			leap_VERB	lāfn	lˈaːfn̩	l ˈaː f n̩		le
 Bavarian	Bavarian			leap_VERB	laffa	lˈafa	l ˈa f a		leap_VERB_1			
 Swabian	Swabian			leap_VERB	laufa	lˈao̯fa	l ˈao̯ f a		leap_VERB_1			
 Alsatian	Alsatian			leap_VERB	laufe	lˈʊːfə	l ˈʊː f ə		leap_VERB_1			
-Swiss German	Swiss German			leap_VERB	laufe	lˈau̯fə	l ˈau̯ f ə		leap_VERB_1			
+Swiss German	Swiss German			leap_VERB	laufe	lˈau̯fːə	l ˈau̯ fː ə		leap_VERB_1			
 Proto-Germanic	Proto-Germanic			nut_NOUN	hnuts	xnˈuts	x n ˈu t s		nut_NOUN_1			
 Old West Norse	Old West Norse			nut_NOUN	hnot	n̥ˈot	n̥ ˈo t		nut_NOUN_1			
 Icelandic	Icelandic			nut_NOUN	hnot	n̥ˈɔːt	n̥ ˈɔː t		nut_NOUN_1			
@@ -4398,7 +4398,7 @@ Upper Franconian	Upper Franconian			nut_NOUN	Nuss	nˈʊs	n ˈʊ s		nut_NOUN_1
 Bavarian	Bavarian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
 Swabian	Swabian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
 Alsatian	Alsatian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
-Swiss German	Swiss German			nut_NOUN	Nuss	nˈuss	n ˈu s s		nut_NOUN_1			
+Swiss German	Swiss German			nut_NOUN	Nuss	nˈusː	n ˈu sː		nut_NOUN_1			
 Proto-Germanic	Proto-Germanic			hen_NOUN	hōnijǭ	xˈɔːnijɔ̃ː	x ˈɔː n i j ɔ̃ː		hen_NOUN_2			
 Old West Norse	Old West Norse			hen_NOUN	hǿna	hˈøːna	h ˈøː n a		hen_NOUN_2			
 Icelandic	Icelandic			hen_NOUN	hæna	hˈaːi̯na	h ˈaːi̯ n a		hen_NOUN_2			
@@ -4478,7 +4478,7 @@ Standard German	Standard German			ridge_NOUN	Rücken	ʁˈʏkn̩	ʁ ˈʏ k n̩		r
 Upper Franconian	Upper Franconian			ridge_NOUN	Rickn	rˈɪɡ̊n̩	r ˈɪ ɡ̊ n̩		ridge_NOUN_1			
 Bavarian	Bavarian			ridge_NOUN	Rugga	rˈuɡ̊a	r ˈu ɡ̊ a		ridge_NOUN_1			
 Alsatian	Alsatian			ridge_NOUN	Ruck	ʁˈuk	ʁ ˈu k		ridge_NOUN_1			
-Swiss German	Swiss German			ridge_NOUN	Rügge	rˈyɡ̊ɡ̊ə	r ˈy ɡ̊ ɡ̊ ə		ridge_NOUN_1			
+Swiss German	Swiss German			ridge_NOUN	Rügge	rˈykːə	r ˈy kː ə		ridge_NOUN_1			
 Proto-Germanic	Proto-Germanic			horse_NOUN	hrussą	xrˈussɑ̃	x r ˈu s s ɑ̃		horse_NOUN_1			
 Old West Norse	Old West Norse			horse_NOUN	hross	r̥ˈoss	r̥ ˈo s s		horse_NOUN_1			
 Icelandic	Icelandic			horse_NOUN	hross	r̥ˈɔss	r̥ ˈɔ s s		horse_NOUN_1			
@@ -4497,7 +4497,7 @@ West Flemish	West Flemish			horse_NOUN	ors	ˈɔɾs	ˈɔ ɾ s		horse_NOUN_1
 Standard German	Standard German			horse_NOUN	Ross	ʁˈɔs	ʁ ˈɔ s		horse_NOUN_1			
 Swabian	Swabian			horse_NOUN	Ross	ʁˈos	ʁ ˈo s		horse_NOUN_1			
 Alsatian	Alsatian			horse_NOUN	Ross	ʁˈos	ʁ ˈo s		horse_NOUN_1			
-Swiss German	Swiss German			horse_NOUN	Ross	rˈoss	r ˈo s s		horse_NOUN_1			
+Swiss German	Swiss German			horse_NOUN	Ross	rˈosː	r ˈo sː		horse_NOUN_1			
 Proto-Germanic	Proto-Germanic			skin_NOUN	hūdiz	xˈuːðiz	x ˈuː ð i z		skin_NOUN_1			
 Old West Norse	Old West Norse			skin_NOUN	húð	hˈuːð	h ˈuː ð		skin_NOUN_1			
 Icelandic	Icelandic			skin_NOUN	húð	hˈuːð	h ˈuː ð		skin_NOUN_1			
@@ -4532,7 +4532,7 @@ Upper Franconian	Upper Franconian			skin_NOUN	Haud	hˈaʊ̯d̥	h ˈaʊ̯ d̥		sk
 Bavarian	Bavarian			skin_NOUN	Haud	hˈau̯d̥	h ˈau̯ d̥		skin_NOUN_1			
 Swabian	Swabian			skin_NOUN	Haud	hˈao̯d	h ˈao̯ d		skin_NOUN_1			
 Alsatian	Alsatian			skin_NOUN	Hüt	hˈyːt	h ˈyː t		skin_NOUN_1			
-Swiss German	Swiss German			skin_NOUN	Huut	hˈuːt	h ˈuː t		skin_NOUN_1			
+Swiss German	Swiss German			skin_NOUN	Huut	hˈuːtː	h ˈuː tː		skin_NOUN_1			
 Proto-Germanic	Proto-Germanic			honey_NOUN	hunagą	xˈunɑɣɑ̃	x ˈu n ɑ ɣ ɑ̃		honey_NOUN_1			
 Scots	Scots			honey_NOUN	hinnie	hˈɪne	h ˈɪ n e		honey_NOUN_1			
 English	English			honey_NOUN	honey	hˈɐnɪ	h ˈɐ n ɪ		honey_NOUN_1			
@@ -4607,7 +4607,7 @@ Upper Franconian	Upper Franconian			hundred_NUM	hunnert	hˈʊnɐd̥	h ˈʊ n ɐ 
 Bavarian	Bavarian			hundred_NUM	hundad	hˈund̥ad̥	h ˈu n d̥ a d̥		hundred_NUM_1			
 Swabian	Swabian			hundred_NUM	hondrd	hˈondʌd	h ˈo n d ʌ d		hundred_NUM_1			
 Alsatian	Alsatian			hundred_NUM	hundert	hˈund̥əʁt	h ˈu n d̥ ə ʁ t		hundred_NUM_1			
-Swiss German	Swiss German			hundred_NUM	hundert	hˈund̥ərt	h ˈu n d̥ ə r t		hundred_NUM_1			
+Swiss German	Swiss German			hundred_NUM	hundert	hˈund̥ərtː	h ˈu n d̥ ə r tː		hundred_NUM_1			
 Proto-Germanic	Proto-Germanic			dog_NOUN	hundaz	xˈundɑz	x ˈu n d ɑ z		dog_NOUN_1			
 Gothic	Gothic			dog_NOUN	𐌷𐌿𐌽𐌳𐍃	hˈunds	h ˈu n d s		dog_NOUN_1			
 Old West Norse	Old West Norse			dog_NOUN	hundr	hˈundr	h ˈu n d r		dog_NOUN_1			
@@ -4756,7 +4756,7 @@ Upper Franconian	Upper Franconian			house_NOUN	Haus	hˈaʊ̯s	h ˈaʊ̯ s		house
 Bavarian	Bavarian			house_NOUN	Haus	hˈau̯s	h ˈau̯ s		house_NOUN_1			
 Swabian	Swabian			house_NOUN	Haus	hˈao̯s	h ˈao̯ s		house_NOUN_1			
 Alsatian	Alsatian			house_NOUN	Hüs	hˈyːz̥	h ˈyː z̥		house_NOUN_1			
-Swiss German	Swiss German			house_NOUN	Huus	hˈuːs	h ˈuː s		house_NOUN_1			
+Swiss German	Swiss German			house_NOUN	Huus	hˈuːz̥	h ˈuː z̥		house_NOUN_1			
 Proto-Germanic	Proto-Germanic			whale_NOUN	hwalaz	xʷˈɑlɑz	xʷ ˈɑ l ɑ z		whale_NOUN_1			
 Old West Norse	Old West Norse			whale_NOUN	hvalr	xwˈɑlr	x w ˈɑ l r		whale_NOUN_1			
 Icelandic	Icelandic			whale_NOUN	hvalur	kʰvˈaːlʏr̥	kʰ v ˈaː l ʏ r̥		whale_NOUN_1			
@@ -4823,7 +4823,7 @@ Upper Franconian	Upper Franconian			what_PRON	wos	vˈɔs	v ˈɔ s		what_PRON_1
 Bavarian	Bavarian			what_PRON	wås	ʋˈɒːs	ʋ ˈɒː s		what_PRON_1			
 Swabian	Swabian			what_PRON	was	ʋˈas	ʋ ˈa s		what_PRON_1			
 Alsatian	Alsatian			what_PRON	wàs	ʋˈɒs	ʋ ˈɒ s		what_PRON_1			
-Swiss German	Swiss German			what_PRON	was	ʋˈɒs	ʋ ˈɒ s		what_PRON_1			
+Swiss German	Swiss German			what_PRON	was	ʋˈɒsː	ʋ ˈɒ sː		what_PRON_1			
 Proto-Germanic	Proto-Germanic			wheel_NOUN	hwehwlą	xʷˈexʷlɑ̃	xʷ ˈe xʷ l ɑ̃		wheel_NOUN_1			
 Old West Norse	Old West Norse			wheel_NOUN	hvél	xwˈeːl	x w ˈeː l		wheel_NOUN_1			
 Icelandic	Icelandic			wheel_NOUN	hvel	kʰvˈɛːl	kʰ v ˈɛː l		wheel_NOUN_1			
@@ -4884,7 +4884,7 @@ Upper Franconian	Upper Franconian			white_ADJ	weiß	vˈaɪ̯s	v ˈaɪ̯ s		white
 Bavarian	Bavarian			white_ADJ	weiß	ʋˈai̯s	ʋ ˈai̯ s		white_ADJ_1			
 Swabian	Swabian			white_ADJ	weiß	ʋˈəi̯s	ʋ ˈəi̯ s		white_ADJ_1			
 Alsatian	Alsatian			white_ADJ	wïss	ʋˈiːs	ʋ ˈiː s		white_ADJ_1			
-Swiss German	Swiss German			white_ADJ	wiiss	ʋˈiːss	ʋ ˈiː s s		white_ADJ_1			
+Swiss German	Swiss German			white_ADJ	wiiss	ʋˈiːsː	ʋ ˈiː sː		white_ADJ_1			
 Proto-Germanic	Proto-Germanic			in_PREP	in	ˈin	ˈi n		in_PREP_1			
 Gothic	Gothic			in_PREP	𐌹𐌽	ˈin	ˈi n		in_PREP_1			
 Old West Norse	Old West Norse			in_PREP	í	ˈiː	ˈiː		in_PREP_1			
@@ -4959,7 +4959,7 @@ Standard German	Standard German			ice_NOUN	Eis	ˈaɪ̯z̥	ˈaɪ̯ z̥		ice_NOUN_
 Upper Franconian	Upper Franconian			ice_NOUN	Eis	ˈaɪ̯s	ˈaɪ̯ s		ice_NOUN_1			
 Bavarian	Bavarian			ice_NOUN	Eis	ˈai̯s	ˈai̯ s		ice_NOUN_1			
 Swabian	Swabian			ice_NOUN	Eis	ˈəi̯s	ˈəi̯ s		ice_NOUN_1			
-Swiss German	Swiss German			ice_NOUN	Iis	ˈiːs	ˈiː s		ice_NOUN_1			
+Swiss German	Swiss German			ice_NOUN	Iis	ˈiːz̥	ˈiː z̥		ice_NOUN_1			
 Proto-Germanic	Proto-Germanic			year_NOUN	jērą	jˈɛːrɑ̃	j ˈɛː r ɑ̃		year_NOUN_1			
 Gothic	Gothic			year_NOUN	𐌾𐌴𐍂	jˈeːr	j ˈeː r		year_NOUN_1			
 Old West Norse	Old West Norse			year_NOUN	ár	ˈɑːr	ˈɑː r		year_NOUN_1			
@@ -5115,7 +5115,7 @@ Upper Franconian	Upper Franconian			calf_NOUN	Kalb	ɡ̊ˈalb̥	ɡ̊ ˈa l b̥		c
 Bavarian	Bavarian			calf_NOUN	Kaiwe	kʰˈajβə	kʰ ˈa j β ə		calf_NOUN_1			
 Swabian	Swabian			calf_NOUN	Kalb	kʰˈalb	kʰ ˈa l b		calf_NOUN_1			
 Alsatian	Alsatian			calf_NOUN	Kàlb	kʰˈɒlb̥	kʰ ˈɒ l b̥		calf_NOUN_1			
-Swiss German	Swiss German			calf_NOUN	Chalb	χˈɒlb̥	χ ˈɒ l b̥		calf_NOUN_1			
+Swiss German	Swiss German			calf_NOUN	Chalb	ɣ̊ˈɒlb̥	ɣ̊ ˈɒ l b̥		calf_NOUN_1			
 Proto-Germanic	Proto-Germanic			cold_ADJ	kaldaz	kˈɑldɑz	k ˈɑ l d ɑ z		cold_ADJ_1			
 Gothic	Gothic			cold_ADJ	𐌺𐌰𐌻𐌳𐍃	kˈalds	k ˈa l d s		cold_ADJ_1			
 Old West Norse	Old West Norse			cold_ADJ	kaldr	kʰˈɑldr	kʰ ˈɑ l d r		cold_ADJ_1			
@@ -5154,7 +5154,7 @@ Upper Franconian	Upper Franconian			cold_ADJ	kald	ɡ̊ˈald̥	ɡ̊ ˈa l d̥		co
 Bavarian	Bavarian			cold_ADJ	koid	kʰˈojd̥	kʰ ˈo j d̥		cold_ADJ_1			
 Swabian	Swabian			cold_ADJ	kald	kʰˈald	kʰ ˈa l d		cold_ADJ_1			
 Alsatian	Alsatian			cold_ADJ	kàlt	kʰˈɒlt	kʰ ˈɒ l t		cold_ADJ_1			
-Swiss German	Swiss German			cold_ADJ	chalt	χˈɒlt	χ ˈɒ l t		cold_ADJ_1			
+Swiss German	Swiss German			cold_ADJ	chalt	ɣ̊ˈɒltː	ɣ̊ ˈɒ l tː		cold_ADJ_1			
 Proto-Germanic	Proto-Germanic			ken_VERB	kannijaną	kˈɑnnijɑnɑ̃	k ˈɑ n n i j ɑ n ɑ̃		ken_VERB_1			
 Gothic	Gothic			ken_VERB	𐌺𐌰𐌽𐌽𐌾𐌰𐌽	kˈannjan	k ˈa n n j a n		ken_VERB_1			
 Old West Norse	Old West Norse			ken_VERB	kenna	cʰˈennɑ	cʰ ˈe n n ɑ		ken_VERB_1			
@@ -5193,7 +5193,7 @@ Upper Franconian	Upper Franconian			ken_VERB	kenna	ɡ̊ˈɛna	ɡ̊ ˈɛ n a		ken
 Bavarian	Bavarian			ken_VERB	kenna	kʰˈena	kʰ ˈe n a		ken_VERB_1			
 Swabian	Swabian			ken_VERB	kenna	kʰˈɛna	kʰ ˈɛ n a		ken_VERB_1			
 Alsatian	Alsatian			ken_VERB	kenne	kʰˈenə	kʰ ˈe n ə		ken_VERB_1			
-Swiss German	Swiss German			ken_VERB	känne	kˈænnə	k ˈæ n n ə		ken_VERB_1			
+Swiss German	Swiss German			ken_VERB	känne	kːˈænə	kː ˈæ n ə		ken_VERB_1			
 Proto-Germanic	Proto-Germanic			cat_NOUN	kattuz	kˈɑttuz	k ˈɑ t t u z		cat_NOUN_1			
 Old West Norse	Old West Norse			cat_NOUN	kǫttr	kʰˈɔttr	kʰ ˈɔ t t r		cat_NOUN_1			
 Icelandic	Icelandic			cat_NOUN	köttur	kʰˈœʰtʏr̥	kʰ ˈœ ʰt ʏ r̥		cat_NOUN_1			
@@ -5231,7 +5231,7 @@ Upper Franconian	Upper Franconian			cat_NOUN	Katz	ɡ̊ˈaʦ	ɡ̊ ˈa ʦ		cat_NOU
 Bavarian	Bavarian			cat_NOUN	Katz	kʰˈɑʦ	kʰ ˈɑ ʦ		cat_NOUN_1			
 Swabian	Swabian			cat_NOUN	Kaddz	kʰˈaʣ	kʰ ˈa ʣ		cat_NOUN_1			
 Alsatian	Alsatian			cat_NOUN	Kàtz	kʰˈɒʦ	kʰ ˈɒ ʦ		cat_NOUN_1			
-Swiss German	Swiss German			cat_NOUN	Chatz	χˈɒʦ	χ ˈɒ ʦ		cat_NOUN_1			
+Swiss German	Swiss German			cat_NOUN	Chatz	ɣ̊ˈɒʦ	ɣ̊ ˈɒ ʦ		cat_NOUN_1			
 Proto-Germanic	Proto-Germanic			child_NOUN	kelþaz	kˈelθɑz	k ˈe l θ ɑ z		child_NOUN_1			
 English	English			child_NOUN	child	ʧˈaɪ̯ɫd	ʧ ˈaɪ̯ ɫ d		child_NOUN_1			
 American English	American English			child_NOUN	child	ʧˈaɪ̯ɫd	ʧ ˈaɪ̯ ɫ d		child_NOUN_1			
@@ -5265,7 +5265,7 @@ Standard German	Standard German			child_NOUN	Kind	kʰˈɪnd̥	kʰ ˈɪ n d̥		ch
 Upper Franconian	Upper Franconian			child_NOUN	Kind	ɡ̊ˈɪnd̥	ɡ̊ ˈɪ n d̥		child_NOUN_2			
 Bavarian	Bavarian			child_NOUN	Kind	kʰˈind̥	kʰ ˈi n d̥		child_NOUN_2			
 Alsatian	Alsatian			child_NOUN	Kind	kʰˈind̥	kʰ ˈi n d̥		child_NOUN_2			
-Swiss German	Swiss German			child_NOUN	Chind	χˈind̥	χ ˈi n d̥		child_NOUN_2			
+Swiss German	Swiss German			child_NOUN	Chind	ɣ̊ˈind̥	ɣ̊ ˈi n d̥		child_NOUN_2			
 Proto-Germanic	Proto-Germanic			chicken_NOUN	kiukīną	kˈiu̯kiːnɑ̃	k ˈiu̯ k iː n ɑ̃		chicken_NOUN_1			
 Scots	Scots			chicken_NOUN	chicken	ʧˈɪkən	ʧ ˈɪ k ə n		chicken_NOUN_1			
 English	English			chicken_NOUN	chicken	ʧˈɪkɪn	ʧ ˈɪ k ɪ n		chicken_NOUN_1			
@@ -5281,7 +5281,7 @@ Zeelandic	Zeelandic			chicken_NOUN	kie:ken	kˈiːkə	k ˈiː k ə		chicken_NOUN_
 West Flemish	West Flemish			chicken_NOUN	kiekn	kˈiə̯kn̩	k ˈiə̯ k n̩		chicken_NOUN_1			
 Limburgish	Limburgish			chicken_NOUN	kuke	kˈyːkə	k ˈyː k ə		chicken_NOUN_1			
 Standard German	Standard German			chicken_NOUN	Küken	kʰˈyːkn̩	kʰ ˈyː k n̩		chicken_NOUN_1			
-Swiss German	Swiss German			chicken_NOUN	Chüche	χˈyːχə	χ ˈyː χ ə		chicken_NOUN_1			
+Swiss German	Swiss German			chicken_NOUN	Chüche	ɣ̊ˈyːχːə	ɣ̊ ˈyː χː ə		chicken_NOUN_1			
 Proto-Germanic	Proto-Germanic			knee_NOUN	knewą	knˈewɑ̃	k n ˈe w ɑ̃		knee_NOUN_1			
 Gothic	Gothic			knee_NOUN	𐌺𐌽𐌹𐌿	knˈiu̯	k n ˈiu̯		knee_NOUN_1			
 Old West Norse	Old West Norse			knee_NOUN	kné	kʰnˈeː	kʰ n ˈeː		knee_NOUN_1			
@@ -5319,7 +5319,7 @@ Standard German	Standard German			knee_NOUN	Knie	kʰnˈiː	kʰ n ˈiː		knee_NOU
 Upper Franconian	Upper Franconian			knee_NOUN	Knie	ɡ̊nˈiː	ɡ̊ n ˈiː		knee_NOUN_1			
 Bavarian	Bavarian			knee_NOUN	Gnia	ɡ̊nˈiɐ̯	ɡ̊ n ˈiɐ̯		knee_NOUN_1			
 Alsatian	Alsatian			knee_NOUN	Knej	ɡ̊nˈei̯	ɡ̊ n ˈei̯		knee_NOUN_1			
-Swiss German	Swiss German			knee_NOUN	Chnü	χnˈyː	χ n ˈyː		knee_NOUN_1			
+Swiss German	Swiss German			knee_NOUN	Chnü	ɣ̊nˈyː	ɣ̊ n ˈyː		knee_NOUN_1			
 Proto-Germanic	Proto-Germanic			knot_NOUN	knuttô	knˈuttɔːː	k n ˈu t t ɔːː		knot_NOUN_1			
 Old West Norse	Old West Norse			knot_NOUN	knútr	kʰnˈuːtr	kʰ n ˈuː t r		knot_NOUN_1			
 Icelandic	Icelandic			knot_NOUN	hnútur	n̥ˈuːtʏr̥	n̥ ˈuː t ʏ r̥		knot_NOUN_1			
@@ -5342,7 +5342,7 @@ Limburgish	Limburgish			knot_NOUN	knot	knˈɔt	k n ˈɔ t		knot_NOUN_1
 Palatine German	Palatine German			knot_NOUN	Knode	ɡ̊nˈoːrə	ɡ̊ n ˈoː r ə		knot_NOUN_1			
 Hessian	Hessian			knot_NOUN	Knoodě	knˈoːd̥ə	k n ˈoː d̥ ə		knot_NOUN_1			
 Standard German	Standard German			knot_NOUN	Knoten	kʰnˈoːtn̩	kʰ n ˈoː t n̩		knot_NOUN_1			
-Swiss German	Swiss German			knot_NOUN	Chnode	χnˈoːd̥ə	χ n ˈoː d̥ ə		knot_NOUN_1			
+Swiss German	Swiss German			knot_NOUN	Chnode	ɣ̊nˈoːd̥ə	ɣ̊ n ˈoː d̥ ə		knot_NOUN_1			
 Proto-Germanic	Proto-Germanic			chicken_NOUN	kukkilīngaz	kˈukkiliːŋɡaz	k ˈu k k i l iː ŋ ɡ a z		chicken_NOUN_2			
 Old West Norse	Old West Norse			chicken_NOUN	kyklingr	cʰˈykliŋɡr	cʰ ˈy k l i ŋ ɡ r		chicken_NOUN_2			
 Icelandic	Icelandic			chicken_NOUN	kjúklingur	cʰˈuʰkliŋɡ̊ʏr̥	cʰ ˈu ʰk l i ŋ ɡ̊ ʏ r̥		chicken_NOUN_2			
@@ -5386,7 +5386,7 @@ Upper Franconian	Upper Franconian			king_NOUN	Keniç	ɡ̊ˈeːniç	ɡ̊ ˈeː n 
 Bavarian	Bavarian			king_NOUN	Kini	kʰˈini	kʰ ˈi n i		king_NOUN_1			
 Swabian	Swabian			king_NOUN	Keenig	kʰˈeːniɡ	kʰ ˈeː n i ɡ		king_NOUN_1			
 Alsatian	Alsatian			king_NOUN	Kinni	kʰˈini	kʰ ˈi n i		king_NOUN_1			
-Swiss German	Swiss German			king_NOUN	Chönig	χˈøːniɡ̊	χ ˈøː n i ɡ̊		king_NOUN_1			
+Swiss German	Swiss German			king_NOUN	Chönig	ɣ̊ˈøːniɡ̊	ɣ̊ ˈøː n i ɡ̊		king_NOUN_1			
 Proto-Germanic	Proto-Germanic			can_VERB	kunnaną	kˈunnɑnɑ̃	k ˈu n n ɑ n ɑ̃		can_VERB_1			
 Gothic	Gothic			can_VERB	𐌺𐌿𐌽𐌽𐌰𐌽	kˈunnan	k ˈu n n a n		can_VERB_1			
 Old West Norse	Old West Norse			can_VERB	kunna	kʰˈunnɑ	kʰ ˈu n n ɑ		can_VERB_1			
@@ -5423,7 +5423,7 @@ Standard German	Standard German			can_VERB	können	kʰˈœnən	kʰ ˈœ n ə n		
 Upper Franconian	Upper Franconian			can_VERB	kenna	ɡ̊ˈɛna	ɡ̊ ˈɛ n a		can_VERB_1			
 Bavarian	Bavarian			can_VERB	kenna	kʰˈena	kʰ ˈe n a		can_VERB_1			
 Alsatian	Alsatian			can_VERB	kenne	kʰˈenə	kʰ ˈe n ə		can_VERB_1			
-Swiss German	Swiss German			can_VERB	chönne	χˈønnə	χ ˈø n n ə		can_VERB_1			
+Swiss German	Swiss German			can_VERB	chönne	ɣ̊ˈønə	ɣ̊ ˈø n ə		can_VERB_1			
 Proto-Germanic	Proto-Germanic			head_NOUN	kuppaz	kˈuppɑz	k ˈu p p ɑ z		head_NOUN_2			
 Saterland Frisian	Saterland Frisian			head_NOUN	Kop	kˈɔp	k ˈɔ p		head_NOUN_2			
 Northern Low Saxon	Northern Low Saxon			head_NOUN	Kopp	kʰˈɔb	kʰ ˈɔ b		head_NOUN_2			
@@ -5446,7 +5446,7 @@ Upper Franconian	Upper Franconian			head_NOUN	Kopf	ɡ̊ˈɔb̥͡v̥	ɡ̊ ˈɔ b�
 Bavarian	Bavarian			head_NOUN	Kobbf	kʰˈob̥͡v̥	kʰ ˈo b̥͡v̥		head_NOUN_2			
 Swabian	Swabian			head_NOUN	Kobbf	kʰˈɔb̥͡f	kʰ ˈɔ b̥͡f		head_NOUN_2			
 Alsatian	Alsatian			head_NOUN	Kopf	kʰˈop͡f	kʰ ˈo p͡f		head_NOUN_2			
-Swiss German	Swiss German			head_NOUN	Chopf	χˈop͡f	χ ˈo p͡f		head_NOUN_2			
+Swiss German	Swiss German			head_NOUN	Chopf	ɣ̊ˈop͡f	ɣ̊ ˈo p͡f		head_NOUN_2			
 Proto-Germanic	Proto-Germanic			corn_NOUN	kurną	kˈurnɑ̃	k ˈu r n ɑ̃		corn_NOUN_1			
 Gothic	Gothic			corn_NOUN	𐌺𐌰𐌿𐍂𐌽	kˈɔrn	k ˈɔ r n		corn_NOUN_1			
 Old West Norse	Old West Norse			corn_NOUN	korn	kʰˈorn	kʰ ˈo r n		corn_NOUN_1			
@@ -5476,7 +5476,7 @@ Standard German	Standard German			corn_NOUN	Korn	kʰˈɔɐn	kʰ ˈɔ ɐ n		corn_
 Upper Franconian	Upper Franconian			corn_NOUN	Korn	ɡ̊ˈɔɐn	ɡ̊ ˈɔ ɐ n		corn_NOUN_1			
 Bavarian	Bavarian			corn_NOUN	Koan	kʰˈoɐn	kʰ ˈo ɐ n		corn_NOUN_1			
 Alsatian	Alsatian			corn_NOUN	Korn	kʰˈoʁn	kʰ ˈo ʁ n		corn_NOUN_1			
-Swiss German	Swiss German			corn_NOUN	Chorn	χˈorn	χ ˈo r n		corn_NOUN_1			
+Swiss German	Swiss German			corn_NOUN	Chorn	ɣ̊ˈorn	ɣ̊ ˈo r n		corn_NOUN_1			
 Proto-Germanic	Proto-Germanic			cow_NOUN	kūz	kˈuːz	k ˈuː z		cow_NOUN_1			
 Old West Norse	Old West Norse			cow_NOUN	kýr	cʰˈyːr	cʰ ˈyː r		cow_NOUN_1			
 Icelandic	Icelandic			cow_NOUN	kýr	cʰˈiːr̥	cʰ ˈiː r̥		cow_NOUN_1			
@@ -5514,7 +5514,7 @@ Upper Franconian	Upper Franconian			cow_NOUN	Kuh	ɡ̊ˈuː	ɡ̊ ˈuː		cow_NOUN_
 Bavarian	Bavarian			cow_NOUN	Kua	kʰˈuɐ̯	kʰ ˈuɐ̯		cow_NOUN_1			
 Swabian	Swabian			cow_NOUN	Kuah	kʰˈuə̯	kʰ ˈuə̯		cow_NOUN_1			
 Alsatian	Alsatian			cow_NOUN	Küeh	kʰˈʊː	kʰ ˈʊː		cow_NOUN_1			
-Swiss German	Swiss German			cow_NOUN	Chue	χˈuə̯	χ ˈuə̯		cow_NOUN_1			
+Swiss German	Swiss German			cow_NOUN	Chue	ɣ̊ˈuə̯	ɣ̊ ˈuə̯		cow_NOUN_1			
 Proto-Germanic	Proto-Germanic			come_VERB	kwemaną	kʷˈemɑnɑ̃	kʷ ˈe m ɑ n ɑ̃		come_VERB_1			
 Gothic	Gothic			come_VERB	𐌵𐌹𐌼𐌰𐌽	kʷˈiman	kʷ ˈi m a n		come_VERB_1			
 Icelandic	Icelandic			come_VERB	koma	kʰˈɔːma	kʰ ˈɔː m a		come_VERB_1			
@@ -5553,7 +5553,7 @@ Bavarian	Bavarian			come_VERB	kemma	kʰˈema	kʰ ˈe m a		come_VERB_1
 Bavarian	Bavarian			come_VERB	kumma	kʰˈuma	kʰ ˈu m a		come_VERB_1			
 Swabian	Swabian			come_VERB	komma	kʰˈɔma	kʰ ˈɔ m a		come_VERB_1			
 Alsatian	Alsatian			come_VERB	kumme	kʰˈumə	kʰ ˈu m ə		come_VERB_1			
-Swiss German	Swiss German			come_VERB	choo	χˈoː	χ ˈoː		come_VERB_1			
+Swiss German	Swiss German			come_VERB	choo	ɣ̊ˈoː	ɣ̊ ˈoː		come_VERB_1			
 Proto-Germanic	Proto-Germanic			woman_NOUN	kwenǭ	kʷˈenɔ̃ː	kʷ ˈe n ɔ̃ː		woman_NOUN_2			
 Gothic	Gothic			woman_NOUN	𐌵𐌹𐌽𐍉	kʷˈinoː	kʷ ˈi n oː		woman_NOUN_2			
 Old West Norse	Old West Norse			woman_NOUN	kona	kʰˈoːna	kʰ ˈoː n a		woman_NOUN_2			
@@ -5818,7 +5818,7 @@ Upper Franconian	Upper Franconian			light_NOUN	Liecht	lˈiːçd̥	l ˈiː ç d̥
 Bavarian	Bavarian			light_NOUN	Liachd	lˈiɐ̯xd̥	l ˈiɐ̯ x d̥		light_NOUN_2			
 Swabian	Swabian			light_NOUN	Lichd	lˈiçd	l ˈi ç d		light_NOUN_2			
 Alsatian	Alsatian			light_NOUN	Liecht	lˈiːʃt	l ˈiː ʃ t		light_NOUN_2			
-Swiss German	Swiss German			light_NOUN	Liecht	lˈiə̯χt	l ˈiə̯ χ t		light_NOUN_2			
+Swiss German	Swiss German			light_NOUN	Liecht	lˈiə̯χːtː	l ˈiə̯ χː tː		light_NOUN_2			
 Proto-Germanic	Proto-Germanic			liver_NOUN	librō	lˈiβrɔː	l ˈi β r ɔː		liver_NOUN_1			
 Old West Norse	Old West Norse			liver_NOUN	livr	lˈivr	l ˈi v r		liver_NOUN_1			
 Icelandic	Icelandic			liver_NOUN	lifur	lˈɪːvʏr̥	l ˈɪː v ʏ r̥		liver_NOUN_1			
@@ -5890,7 +5890,7 @@ Upper Franconian	Upper Franconian			lie_VERB	lieng	lˈiːŋ	l ˈiː ŋ		lie_VERB
 Bavarian	Bavarian			lie_VERB	ling	lˈiŋ	l ˈi ŋ		lie_VERB_1			
 Swabian	Swabian			lie_VERB	liega	lˈiːɡa	l ˈiː ɡ a		lie_VERB_1			
 Alsatian	Alsatian			lie_VERB	lieje	lˈiːjə	l ˈiː j ə		lie_VERB_1			
-Swiss German	Swiss German			lie_VERB	ligge	lˈiɡ̊ɡ̊ə	l ˈi ɡ̊ ɡ̊ ə		lie_VERB_1			
+Swiss German	Swiss German			lie_VERB	ligge	lˈikːə	l ˈi kː ə		lie_VERB_1			
 Proto-Germanic	Proto-Germanic			light_ADJ	linhtaz	lˈĩːxtɑz	l ˈĩː x t ɑ z		light_ADJ_1			
 Old West Norse	Old West Norse			light_ADJ	léttr	lˈeːttr	l ˈeː t t r		light_ADJ_1			
 Icelandic	Icelandic			light_ADJ	léttur	ljˈɛʰtʏr̥	l j ˈɛ ʰt ʏ r̥		light_ADJ_1			
@@ -5928,7 +5928,7 @@ Upper Franconian	Upper Franconian			light_ADJ	leichd	lˈaɪ̯çd̥	l ˈaɪ̯ ç 
 Bavarian	Bavarian			light_ADJ	loachd	lˈoɐ̯xd̥	l ˈoɐ̯ x d̥		light_ADJ_1			
 Swabian	Swabian			light_ADJ	leichd	lˈəi̯çd	l ˈəi̯ ç d		light_ADJ_1			
 Alsatian	Alsatian			light_ADJ	licht	lˈiʃt	l ˈi ʃ t		light_ADJ_1			
-Swiss German	Swiss German			light_ADJ	liecht	lˈiə̯χt	l ˈiə̯ χ t		light_ADJ_1			
+Swiss German	Swiss German			light_ADJ	liecht	lˈiə̯χːtː	l ˈiə̯ χː tː		light_ADJ_1			
 Proto-Germanic	Proto-Germanic			louse_NOUN	lūs	lˈuːs	l ˈuː s		louse_NOUN_1			
 Old West Norse	Old West Norse			louse_NOUN	lús	lˈuːs	l ˈuː s		louse_NOUN_1			
 Icelandic	Icelandic			louse_NOUN	lús	lˈuːs	l ˈuː s		louse_NOUN_1			
@@ -5964,7 +5964,7 @@ Upper Franconian	Upper Franconian			louse_NOUN	Laus	lˈaʊ̯s	l ˈaʊ̯ s		louse
 Bavarian	Bavarian			louse_NOUN	Laus	lˈau̯s	l ˈau̯ s		louse_NOUN_1			
 Swabian	Swabian			louse_NOUN	Laus	lˈao̯s	l ˈao̯ s		louse_NOUN_1			
 Alsatian	Alsatian			louse_NOUN	Lüüs	lˈyːz̥	l ˈyː z̥		louse_NOUN_1			
-Swiss German	Swiss German			louse_NOUN	Luus	lˈuːs	l ˈuː s		louse_NOUN_1			
+Swiss German	Swiss German			louse_NOUN	Luus	lˈuːz̥	l ˈuː z̥		louse_NOUN_1			
 Proto-Germanic	Proto-Germanic			might_NOUN	mahtiz	mˈɑxtiz	m ˈɑ x t i z		might_NOUN_1			
 Old West Norse	Old West Norse			might_NOUN	máttr	mˈɑːttr	m ˈɑː t t r		might_NOUN_1			
 Icelandic	Icelandic			might_NOUN	máttur	mˈɑu̯ʰtʏr̥	m ˈɑu̯ ʰt ʏ r̥		might_NOUN_1			
@@ -5999,7 +5999,7 @@ Yiddish	Yiddish			might_NOUN	מאַכט	mˈaχt	m ˈa χ t		might_NOUN_1
 Standard German	Standard German			might_NOUN	Macht	mˈaxt	m ˈa x t		might_NOUN_1			
 Upper Franconian	Upper Franconian			might_NOUN	Macht	mˈaxd̥	m ˈa x d̥		might_NOUN_1			
 Bavarian	Bavarian			might_NOUN	Mocht	mˈoxd̥	m ˈo x d̥		might_NOUN_1			
-Swiss German	Swiss German			might_NOUN	Macht	mˈɒχt	m ˈɒ χ t		might_NOUN_1			
+Swiss German	Swiss German			might_NOUN	Macht	mˈɒχːtː	m ˈɒ χː tː		might_NOUN_1			
 Proto-Germanic	Proto-Germanic			man_NOUN	mann-	mˈɑnn	m ˈɑ n n		man_NOUN_1			
 Gothic	Gothic			man_NOUN	𐌼𐌰𐌽𐌽𐌰	mˈanna	m ˈa n n a		man_NOUN_1			
 Old West Norse	Old West Norse			man_NOUN	maðr	mˈaðr	m ˈa ð r		man_NOUN_1			
@@ -6071,7 +6071,7 @@ Standard German	Standard German			person_NOUN	Mensch	mˈɛnʃ	m ˈɛ n ʃ		perso
 Upper Franconian	Upper Franconian			person_NOUN	Mensch	mˈɛnʃ	m ˈɛ n ʃ		person_NOUN_1			
 Bavarian	Bavarian			person_NOUN	Mensch	mˈenʃ	m ˈe n ʃ		person_NOUN_1			
 Alsatian	Alsatian			person_NOUN	Mensch	mˈenʃ	m ˈe n ʃ		person_NOUN_1			
-Swiss German	Swiss German			person_NOUN	Mänsch	mˈænʃ	m ˈæ n ʃ		person_NOUN_1			
+Swiss German	Swiss German			person_NOUN	Mänsch	mˈænʃː	m ˈæ n ʃː		person_NOUN_1			
 Proto-Germanic	Proto-Germanic			men_NOUN_PL	manniz	mˈɑnniz	m ˈɑ n n i z		men_NOUN_PL_1			
 Gothic	Gothic			men_NOUN_PL	𐌼𐌰𐌽𐍃	mˈans	m ˈa n s		men_NOUN_PL_1			
 Old West Norse	Old West Norse			men_NOUN_PL	menn	mˈɛnn	m ˈɛ n n		men_NOUN_PL_1			
@@ -6096,7 +6096,7 @@ Standard German	Standard German			men_NOUN_PL	Männer	mˈɛnɐ	m ˈɛ n ɐ		men_
 Bavarian	Bavarian			men_NOUN_PL	Mānna	mˈɑːna	m ˈɑː n a		men_NOUN_PL_1			
 Swabian	Swabian			men_NOUN_PL	Männr	mˈɛnʌ	m ˈɛ n ʌ		men_NOUN_PL_1			
 Alsatian	Alsatian			men_NOUN_PL	Männer	mˈɛnəʁ	m ˈɛ n ə ʁ		men_NOUN_PL_1			
-Swiss German	Swiss German			men_NOUN_PL	Männer	mˈænnər	m ˈæ n n ə r		men_NOUN_PL_1			
+Swiss German	Swiss German			men_NOUN_PL	Männer	mˈænər	m ˈæ n ə r		men_NOUN_PL_1			
 Proto-Germanic	Proto-Germanic			sea_NOUN	mari	mˈɑri	m ˈɑ r i		sea_NOUN_1			
 Gothic	Gothic			sea_NOUN	𐌼𐌰𐍂𐌴𐌹	mˈariː	m ˈa r iː		sea_NOUN_1			
 Old West Norse	Old West Norse			sea_NOUN	marr	mˈɑrr	m ˈɑ r r		sea_NOUN_1			
@@ -6175,7 +6175,7 @@ Upper Franconian	Upper Franconian			milk_NOUN_FEM	Milch	mˈɪlç	m ˈɪ l ç		mi
 Bavarian	Bavarian			milk_NOUN_FEM	Milli	mˈili	m ˈi l i		milk_NOUN_FEM_1			
 Swabian	Swabian			milk_NOUN_FEM	Milch	mˈilç	m ˈi l ç		milk_NOUN_FEM_1			
 Alsatian	Alsatian			milk_NOUN_FEM	Millich	mˈiliʃ	m ˈi l i ʃ		milk_NOUN_FEM_1			
-Swiss German	Swiss German			milk_NOUN_FEM	Milch	mˈilχ	m ˈi l χ		milk_NOUN_FEM_1			
+Swiss German	Swiss German			milk_NOUN_FEM	Milch	mˈilχː	m ˈi l χː		milk_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			moon_NOUN	mēnô	mˈɛːnɔːː	m ˈɛː n ɔːː		moon_NOUN_1			
 Gothic	Gothic			moon_NOUN	𐌼𐌴𐌽𐌰	mˈeːna	m ˈeː n a		moon_NOUN_1			
 Old West Norse	Old West Norse			moon_NOUN	máni	mˈɑːni	m ˈɑː n i		moon_NOUN_1			
@@ -6251,7 +6251,7 @@ Upper Franconian	Upper Franconian			month_NOUN	Monat	mˈoːnad̥	m ˈoː n a d̥
 Bavarian	Bavarian			month_NOUN	Monat	mˈoːnad̥	m ˈoː n a d̥		month_NOUN_1			
 Swabian	Swabian			month_NOUN	Monad	mˈoːnad	m ˈoː n a d		month_NOUN_1			
 Alsatian	Alsatian			month_NOUN	Monet	mˈoːnət	m ˈoː n ə t		month_NOUN_1			
-Swiss German	Swiss German			month_NOUN	Monet	mˈoːnət	m ˈoː n ə t		month_NOUN_1			
+Swiss German	Swiss German			month_NOUN	Monet	mˈoːnətː	m ˈoː n ə tː		month_NOUN_1			
 Proto-Germanic	Proto-Germanic			me_PRON_DAT	miz	mˈiz	m ˈi z		me_PRON_DAT_1			
 Gothic	Gothic			me_PRON_DAT	𐌼𐌹𐍃	mˈis	m ˈi s		me_PRON_DAT_1			
 Old West Norse	Old West Norse			me_PRON_DAT	mér	mˈeːr	m ˈeː r		me_PRON_DAT_1			
@@ -6317,7 +6317,7 @@ Upper Franconian	Upper Franconian			mother_NOUN	Mudder	mˈʊɾɐ	m ˈʊ ɾ ɐ		m
 Bavarian	Bavarian			mother_NOUN	Muadda	mˈuɐ̯d̥a	m ˈuɐ̯ d̥ a		mother_NOUN_1			
 Swabian	Swabian			mother_NOUN	Muddr	mˈudʌ	m ˈu d ʌ		mother_NOUN_1			
 Alsatian	Alsatian			mother_NOUN	Müeter	mˈøːtəʁ	m ˈøː t ə ʁ		mother_NOUN_1			
-Swiss German	Swiss German			mother_NOUN	Mueter	mˈuə̯tər	m ˈuə̯ t ə r		mother_NOUN_1			
+Swiss German	Swiss German			mother_NOUN	Mueter	mˈuə̯tːər	m ˈuə̯ tː ə r		mother_NOUN_1			
 Proto-Germanic	Proto-Germanic			midge_NOUN	mugjō	mˈuɣjɔː	m ˈu ɣ j ɔː		midge_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			midge_NOUN	mygg	mˈʏɡɡ	m ˈʏ ɡ ɡ		midge_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			midge_NOUN	mygg	mˈʏɡɡ	m ˈʏ ɡ ɡ		midge_NOUN_1			
@@ -6348,7 +6348,7 @@ Upper Franconian	Upper Franconian			midge_NOUN	Muggn	mˈʊɡ̊n̩	m ˈʊ ɡ̊ n�
 Bavarian	Bavarian			midge_NOUN	Mugga	mˈuɡ̊a	m ˈu ɡ̊ a		midge_NOUN_1			
 Swabian	Swabian			midge_NOUN	Mugg	mˈuɡ	m ˈu ɡ		midge_NOUN_1			
 Alsatian	Alsatian			midge_NOUN	Muck	mˈuk	m ˈu k		midge_NOUN_1			
-Swiss German	Swiss German			midge_NOUN	Mugg	mˈuɡ̊ɡ̊	m ˈu ɡ̊ ɡ̊		midge_NOUN_1			
+Swiss German	Swiss German			midge_NOUN	Mugg	mˈukː	m ˈu kː		midge_NOUN_1			
 Proto-Germanic	Proto-Germanic			mouth_NOUN	mūlą	mˈuːlɑ̃	m ˈuː l ɑ̃		mouth_NOUN_1			
 West Frisian	West Frisian			mouth_NOUN	mûle	mˈuːlə	m ˈuː l ə		mouth_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			mouth_NOUN	Muul	mˈuːl	m ˈuː l		mouth_NOUN_1			
@@ -6440,7 +6440,7 @@ Upper Franconian	Upper Franconian			mouse_NOUN_FEM	Maus	mˈaʊ̯s	m ˈaʊ̯ s		m
 Bavarian	Bavarian			mouse_NOUN_FEM	Maus	mˈau̯s	m ˈau̯ s		mouse_NOUN_FEM_1			
 Swabian	Swabian			mouse_NOUN_FEM	Maus	mˈao̯s	m ˈao̯ s		mouse_NOUN_FEM_1			
 Alsatian	Alsatian			mouse_NOUN_FEM	Müs	mˈyːz̥	m ˈyː z̥		mouse_NOUN_FEM_1			
-Swiss German	Swiss German			mouse_NOUN_FEM	Muus	mˈuːs	m ˈuː s		mouse_NOUN_FEM_1			
+Swiss German	Swiss German			mouse_NOUN_FEM	Muus	mˈuːz̥	m ˈuː z̥		mouse_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			mice_NOUN	mūsiz	mˈuːsiz	m ˈuː s i z		mice_NOUN_1			
 Icelandic	Icelandic			mice_NOUN	mýs	mˈiːs	m ˈiː s		mice_NOUN_1			
 Faroese	Faroese			mice_NOUN	mýs	mˈʊ̯iːs	m ˈʊ̯iː s		mice_NOUN_1			
@@ -6471,7 +6471,7 @@ Upper Franconian	Upper Franconian			mice_NOUN	Mais	mˈaɪ̯s	m ˈaɪ̯ s		mice_N
 Bavarian	Bavarian			mice_NOUN	Mais	mˈai̯s	m ˈai̯ s		mice_NOUN_1			
 Swabian	Swabian			mice_NOUN	Meis	mˈae̯s	m ˈae̯ s		mice_NOUN_1			
 Alsatian	Alsatian			mice_NOUN	Miis	mˈiːz̥	m ˈiː z̥		mice_NOUN_1			
-Swiss German	Swiss German			mice_NOUN	Müüs	mˈyːs	m ˈyː s		mice_NOUN_1			
+Swiss German	Swiss German			mice_NOUN	Müüs	mˈyːz̥	m ˈyː z̥		mice_NOUN_1			
 Proto-Germanic	Proto-Germanic			fingernail_NOUN	naglaz	nˈɑɣlɑz	n ˈɑ ɣ l ɑ z		fingernail_NOUN_1			
 Gothic	Gothic			fingernail_NOUN	𐌽𐌰𐌲𐌻𐍃	nˈaɡls	n ˈa ɡ l s		fingernail_NOUN_1			
 Old West Norse	Old West Norse			fingernail_NOUN	nagl	nˈɑɣl	n ˈɑ ɣ l		fingernail_NOUN_1			
@@ -6549,7 +6549,7 @@ Upper Franconian	Upper Franconian			night_NOUN_FEM	Nacht	nˈaxd̥	n ˈa x d̥		n
 Bavarian	Bavarian			night_NOUN_FEM	Nāchd	nˈɑːxd̥	n ˈɑː x d̥		night_NOUN_FEM_1			
 Swabian	Swabian			night_NOUN_FEM	Nachd	nˈaxd	n ˈa x d		night_NOUN_FEM_1			
 Alsatian	Alsatian			night_NOUN_FEM	Nààcht	nˈɒːxt	n ˈɒː x t		night_NOUN_FEM_1			
-Swiss German	Swiss German			night_NOUN_FEM	Nacht	nˈɒχt	n ˈɒ χ t		night_NOUN_FEM_1			
+Swiss German	Swiss German			night_NOUN_FEM	Nacht	nˈɒχːtː	n ˈɒ χː tː		night_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			naked_ADJ	nakwadaz	nˈɑkʷɑðɑz	n ˈɑ kʷ ɑ ð ɑ z		naked_ADJ_1			
 Old West Norse	Old West Norse			naked_ADJ	nǫkkviðr	nˈɔkkviðr	n ˈɔ k k v i ð r		naked_ADJ_1			
 Old West Norse	Old West Norse			naked_ADJ	nakinn	nˈɑcinn	n ˈɑ c i n n		naked_ADJ_1			
@@ -6583,7 +6583,7 @@ Standard German	Standard German			naked_ADJ	nackt	nˈakt	n ˈa k t		naked_ADJ_1
 Upper Franconian	Upper Franconian			naked_ADJ	nagt	nˈaːɡ̊d̥	n ˈaː ɡ̊ d̥		naked_ADJ_1			
 Bavarian	Bavarian			naked_ADJ	nāggad	nˈɑːɡ̊ɑd̥	n ˈɑː ɡ̊ ɑ d̥		naked_ADJ_1			
 Swabian	Swabian			naked_ADJ	naggt	nˈaɡt	n ˈa ɡ t		naked_ADJ_1			
-Swiss German	Swiss German			naked_ADJ	nackt	nˈɒkt	n ˈɒ k t		naked_ADJ_1			
+Swiss German	Swiss German			naked_ADJ	nackt	nˈɒkːtː	n ˈɒ kː tː		naked_ADJ_1			
 Proto-Germanic	Proto-Germanic			name_NOUN	namô	nˈɑmɔːː	n ˈɑ m ɔːː		name_NOUN_1			
 Gothic	Gothic			name_NOUN	𐌽𐌰𐌼𐍉	nˈamoː	n ˈa m oː		name_NOUN_1			
 Old West Norse	Old West Norse			name_NOUN	nafn	nˈɑvn	n ˈɑ v n		name_NOUN_1			
@@ -6659,7 +6659,7 @@ Standard German	Standard German			nose_NOUN	Nase	nˈaːzə	n ˈaː z ə		nose_NO
 Upper Franconian	Upper Franconian			nose_NOUN	Nos	nˈoːs	n ˈoː s		nose_NOUN_1			
 Swabian	Swabian			nose_NOUN	Nos	nˈɔːs	n ˈɔː s		nose_NOUN_1			
 Alsatian	Alsatian			nose_NOUN	Nàs	nˈɒːz̥	n ˈɒː z̥		nose_NOUN_1			
-Swiss German	Swiss German			nose_NOUN	Nase	nˈɒsə	n ˈɒ s ə		nose_NOUN_1			
+Swiss German	Swiss German			nose_NOUN	Nase	nˈɒz̥ə	n ˈɒ z̥ ə		nose_NOUN_1			
 Proto-Germanic	Proto-Germanic			next_ADJ	nēhwist	nˈɛːxʷist	n ˈɛː xʷ i s t		next_ADJ_1			
 Old West Norse	Old West Norse			next_ADJ	næstr	nˈɛːstr	n ˈɛː s t r		next_ADJ_1			
 Icelandic	Icelandic			next_ADJ	næstur	nˈai̯stʏr̥	n ˈai̯ s t ʏ r̥		next_ADJ_1			
@@ -6688,7 +6688,7 @@ Standard German	Standard German			next_ADJ	nächste	nˈɛːçstə	n ˈɛː ç s 
 Upper Franconian	Upper Franconian			next_ADJ	nägst	nˈɛɡ̊sd̥	n ˈɛ ɡ̊ s d̥		next_ADJ_1			
 Bavarian	Bavarian			next_ADJ	nächst	nˈeɡ̊ʃd̥	n ˈe ɡ̊ ʃ d̥		next_ADJ_1			
 Swabian	Swabian			next_ADJ	näggschd	nˈɛɡʃd	n ˈɛ ɡ ʃ d		next_ADJ_1			
-Swiss German	Swiss German			next_ADJ	nächscht	nˈæχʃt	n ˈæ χ ʃ t		next_ADJ_1			
+Swiss German	Swiss German			next_ADJ	nächscht	nˈæχːʃːtː	n ˈæ χː ʃː tː		next_ADJ_1			
 Proto-Germanic	Proto-Germanic			nine_NUM	newun	nˈewun	n ˈe w u n		nine_NUM_1			
 Gothic	Gothic			nine_NUM	𐌽𐌹𐌿𐌽	nˈiu̯n	n ˈiu̯ n		nine_NUM_1			
 Old West Norse	Old West Norse			nine_NUM	níu	nˈiːu	n ˈiː u		nine_NUM_1			
@@ -6927,7 +6927,7 @@ Upper Franconian	Upper Franconian			red_ADJ	rud	rˈuːd̥	r ˈuː d̥		red_ADJ_1
 Bavarian	Bavarian			red_ADJ	roud	rˈou̯d̥	r ˈou̯ d̥		red_ADJ_1			
 Swabian	Swabian			red_ADJ	rod	ʁˈoːd	ʁ ˈoː d		red_ADJ_1			
 Alsatian	Alsatian			red_ADJ	rot	ʁˈoːt	ʁ ˈoː t		red_ADJ_1			
-Swiss German	Swiss German			red_ADJ	root	rˈoːt	r ˈoː t		red_ADJ_1			
+Swiss German	Swiss German			red_ADJ	root	rˈoːtː	r ˈoː tː		red_ADJ_1			
 Proto-Germanic	Proto-Germanic			smoke_NOUN	raukiz	rˈɑu̯kiz	r ˈɑu̯ k i z		smoke_NOUN_1			
 Old West Norse	Old West Norse			smoke_NOUN	reykr	rˈøy̯kr	r ˈøy̯ k r		smoke_NOUN_1			
 Icelandic	Icelandic			smoke_NOUN	reykur	rˈɛːi̯kʏr̥	r ˈɛːi̯ k ʏ r̥		smoke_NOUN_1			
@@ -6964,7 +6964,7 @@ Standard German	Standard German			smoke_NOUN	Rauch	ʁˈaʊ̯x	ʁ ˈaʊ̯ x		smok
 Upper Franconian	Upper Franconian			smoke_NOUN	Raach	rˈaːx	r ˈaː x		smoke_NOUN_1			
 Bavarian	Bavarian			smoke_NOUN	Raach	rˈaːx	r ˈaː x		smoke_NOUN_1			
 Alsatian	Alsatian			smoke_NOUN	Rauch	ʁˈʊːʃ	ʁ ˈʊː ʃ		smoke_NOUN_1			
-Swiss German	Swiss German			smoke_NOUN	Rauch	rˈau̯χ	r ˈau̯ χ		smoke_NOUN_1			
+Swiss German	Swiss German			smoke_NOUN	Rauch	rˈau̯χː	r ˈau̯ χː		smoke_NOUN_1			
 Proto-Germanic	Proto-Germanic			rain_NOUN	regną	rˈeɣnɑ̃	r ˈe ɣ n ɑ̃		rain_NOUN_1			
 Gothic	Gothic			rain_NOUN	𐍂𐌹𐌲𐌽	rˈiɡn	r ˈi ɡ n		rain_NOUN_1			
 Old West Norse	Old West Norse			rain_NOUN	regn	rˈeɣn	r ˈe ɣ n		rain_NOUN_1			
@@ -7038,7 +7038,7 @@ Yiddish	Yiddish			right_ADJ	רעכט	ʀˈɛχt	ʀ ˈɛ χ t		right_ADJ_1
 Standard German	Standard German			right_ADJ	Recht	ʁˈɛçt	ʁ ˈɛ ç t		right_ADJ_1			
 Upper Franconian	Upper Franconian			right_ADJ	Recht	rˈɛçd̥	r ˈɛ ç d̥		right_ADJ_1			
 Swabian	Swabian			right_ADJ	rechd	ʁˈɛxd	ʁ ˈɛ x d		right_ADJ_1			
-Swiss German	Swiss German			right_ADJ	rächt	rˈæχt	r ˈæ χ t		right_ADJ_1			
+Swiss German	Swiss German			right_ADJ	rächt	rˈæχːtː	r ˈæ χː tː		right_ADJ_1			
 Proto-Germanic	Proto-Germanic			rich_ADJ	rīkijaz	rˈiːkijɑz	r ˈiː k i j ɑ z		rich_ADJ_1			
 Gothic	Gothic			rich_ADJ	𐍂𐌴𐌹𐌺𐌴𐌹𐍃	rˈiːkiːs	r ˈiː k iː s		rich_ADJ_1			
 Old West Norse	Old West Norse			rich_ADJ	ríkr	rˈiːkr	r ˈiː k r		rich_ADJ_1			
@@ -7076,7 +7076,7 @@ Standard German	Standard German			rich_ADJ	reich	ʁˈaɪ̯ç	ʁ ˈaɪ̯ ç		rich
 Upper Franconian	Upper Franconian			rich_ADJ	reich	rˈaɪ̯ç	r ˈaɪ̯ ç		rich_ADJ_1			
 Bavarian	Bavarian			rich_ADJ	reich	rˈai̯ç	r ˈai̯ ç		rich_ADJ_1			
 Swabian	Swabian			rich_ADJ	reich	ʁˈəi̯ç	ʁ ˈəi̯ ç		rich_ADJ_1			
-Swiss German	Swiss German			rich_ADJ	riich	rˈiːχ	r ˈiː χ		rich_ADJ_1			
+Swiss German	Swiss German			rich_ADJ	riich	rˈiːχː	r ˈiː χː		rich_ADJ_1			
 Proto-Germanic	Proto-Germanic			say_VERB	sagjaną	sˈɑɣjɑnɑ̃	s ˈɑ ɣ j ɑ n ɑ̃		say_VERB_1			
 Old West Norse	Old West Norse			say_VERB	segja	sˈeʝʝɑ	s ˈe ʝ ʝ ɑ		say_VERB_1			
 Icelandic	Icelandic			say_VERB	segja	sˈɛːi̯ja	s ˈɛːi̯ j a		say_VERB_1			
@@ -7114,7 +7114,7 @@ Upper Franconian	Upper Franconian			say_VERB	song	sˈoːŋ	s ˈoː ŋ		say_VERB_
 Bavarian	Bavarian			say_VERB	sång	sˈɒːŋ	s ˈɒː ŋ		say_VERB_1			
 Swabian	Swabian			say_VERB	saga	sˈaːɡa	s ˈaː ɡ a		say_VERB_1			
 Alsatian	Alsatian			say_VERB	saawe	sˈaːʋə	s ˈaː ʋ ə		say_VERB_1			
-Swiss German	Swiss German			say_VERB	säge	sˈæɡ̊ə	s ˈæ ɡ̊ ə		say_VERB_1			
+Swiss German	Swiss German			say_VERB	säge	z̥ˈæɡ̊ə	z̥ ˈæ ɡ̊ ə		say_VERB_1			
 Proto-Germanic	Proto-Germanic			honey_NOUN	saimaz	sˈɑi̯mɑz	s ˈɑi̯ m ɑ z		honey_NOUN_3			
 West Flemish	West Flemish			honey_NOUN	zêem	zˈɛːm	z ˈɛː m		honey_NOUN_3			
 Proto-Germanic	Proto-Germanic			soul_NOUN	saiwalu	sˈɑi̯wɑlu	s ˈɑi̯ w ɑ l u		soul_NOUN_1			
@@ -7152,7 +7152,7 @@ Standard German	Standard German			soul_NOUN	Seele	zˈeːlə	z ˈeː l ə		soul_N
 Upper Franconian	Upper Franconian			soul_NOUN	Siel	sˈiːl	s ˈiː l		soul_NOUN_1			
 Swabian	Swabian			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1			
 Alsatian	Alsatian			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1			
-Swiss German	Swiss German			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1			
+Swiss German	Swiss German			soul_NOUN	Seel	z̥ˈeːl	z̥ ˈeː l		soul_NOUN_1			
 Proto-Germanic	Proto-Germanic			sea_NOUN	saiwiz	sˈɑi̯wiz	s ˈɑi̯ w i z		sea_NOUN_2			
 Gothic	Gothic			sea_NOUN	𐍃𐌰𐌹𐍅𐍃	sˈɛːws	s ˈɛː w s		sea_NOUN_2			
 Old West Norse	Old West Norse			sea_NOUN	sjór	sjˈoːr	s j ˈoː r		sea_NOUN_2			
@@ -7185,7 +7185,7 @@ Hessian	Hessian			sea_NOUN	Sẹẹ	sˈeː	s ˈeː		sea_NOUN_2
 Standard German	Standard German			sea_NOUN	See	zˈeː	z ˈeː		sea_NOUN_2			
 Bavarian	Bavarian			sea_NOUN	Sä	sˈeː	s ˈeː		sea_NOUN_2			
 Alsatian	Alsatian			sea_NOUN	See	sˈeː	s ˈeː		sea_NOUN_2			
-Swiss German	Swiss German			sea_NOUN	See	sˈeː	s ˈeː		sea_NOUN_2			
+Swiss German	Swiss German			sea_NOUN	See	z̥ˈeː	z̥ ˈeː		sea_NOUN_2			
 Proto-Germanic	Proto-Germanic			salt_NOUN	saltą	sˈɑltɑ̃	s ˈɑ l t ɑ̃		salt_NOUN_1			
 Gothic	Gothic			salt_NOUN	𐍃𐌰𐌻𐍄	sˈalt	s ˈa l t		salt_NOUN_1			
 Old West Norse	Old West Norse			salt_NOUN	salt	sˈɑlt	s ˈɑ l t		salt_NOUN_1			
@@ -7225,7 +7225,7 @@ Upper Franconian	Upper Franconian			salt_NOUN	Salz	sˈalʦ	s ˈa l ʦ		salt_NOUN
 Bavarian	Bavarian			salt_NOUN	Soiz	sˈojʦ	s ˈo j ʦ		salt_NOUN_1			
 Swabian	Swabian			salt_NOUN	Salz	sˈalʦ	s ˈa l ʦ		salt_NOUN_1			
 Alsatian	Alsatian			salt_NOUN	Sàlz	sˈɒlʦ	s ˈɒ l ʦ		salt_NOUN_1			
-Swiss German	Swiss German			salt_NOUN	Salz	sˈɒlʦ	s ˈɒ l ʦ		salt_NOUN_1			
+Swiss German	Swiss German			salt_NOUN	Salz	z̥ˈɒlʦ	z̥ ˈɒ l ʦ		salt_NOUN_1			
 Proto-Germanic	Proto-Germanic			sand_NOUN	samdaz	sˈɑmdɑz	s ˈɑ m d ɑ z		sand_NOUN_1			
 Old West Norse	Old West Norse			sand_NOUN	sandr	sˈɑndr	s ˈɑ n d r		sand_NOUN_1			
 Icelandic	Icelandic			sand_NOUN	sandur	sˈand̥ʏr̥	s ˈa n d̥ ʏ r̥		sand_NOUN_1			
@@ -7263,7 +7263,7 @@ Upper Franconian	Upper Franconian			sand_NOUN	Sand	sˈand̥	s ˈa n d̥		sand_NO
 Bavarian	Bavarian			sand_NOUN	Sond	sˈond̥	s ˈo n d̥		sand_NOUN_1			
 Swabian	Swabian			sand_NOUN	Sand	sˈand	s ˈa n d		sand_NOUN_1			
 Alsatian	Alsatian			sand_NOUN	Sànd	sˈɒnd̥	s ˈɒ n d̥		sand_NOUN_1			
-Swiss German	Swiss German			sand_NOUN	Sang	sˈɒŋ	s ˈɒ ŋ		sand_NOUN_1			
+Swiss German	Swiss German			sand_NOUN	Sang	z̥ˈɒŋ	z̥ ˈɒ ŋ		sand_NOUN_1			
 Proto-Germanic	Proto-Germanic			seven_NUM	sebun	sˈeβun	s ˈe β u n		seven_NUM_1			
 Gothic	Gothic			seven_NUM	𐍃𐌹𐌱𐌿𐌽	sˈiβun	s ˈi β u n		seven_NUM_1			
 Old West Norse	Old West Norse			seven_NUM	sjau	sjˈɑu̯	s j ˈɑu̯		seven_NUM_1			
@@ -7303,7 +7303,7 @@ Upper Franconian	Upper Franconian			seven_NUM	siem	sˈiːm	s ˈiː m		seven_NUM_
 Bavarian	Bavarian			seven_NUM	sieme	sˈiːmə	s ˈiː m ə		seven_NUM_1			
 Swabian	Swabian			seven_NUM	sieba	sˈiːba	s ˈiː b a		seven_NUM_1			
 Alsatian	Alsatian			seven_NUM	siwwe	sˈiʋə	s ˈi ʋ ə		seven_NUM_1			
-Swiss German	Swiss German			seven_NUM	sibe	sˈib̥ə	s ˈi b̥ ə		seven_NUM_1			
+Swiss German	Swiss German			seven_NUM	sibe	z̥ˈib̥ə	z̥ ˈi b̥ ə		seven_NUM_1			
 Proto-Germanic	Proto-Germanic			six_NUM	sehs	sˈexs	s ˈe x s		six_NUM_1			
 Gothic	Gothic			six_NUM	𐍃𐌰𐌹𐌷𐍃	sˈɛhs	s ˈɛ h s		six_NUM_1			
 Old West Norse	Old West Norse			six_NUM	sex	sˈeks	s ˈe k s		six_NUM_1			
@@ -7341,7 +7341,7 @@ Upper Franconian	Upper Franconian			six_NUM	sechs	sˈɛɡ̊s	s ˈɛ ɡ̊ s		six_
 Bavarian	Bavarian			six_NUM	sexe	sˈeɡ̊sə	s ˈe ɡ̊ s ə		six_NUM_1			
 Swabian	Swabian			six_NUM	seggs	sˈeɡs	s ˈe ɡ s		six_NUM_1			
 Alsatian	Alsatian			six_NUM	sechs	sˈeks	s ˈe k s		six_NUM_1			
-Swiss German	Swiss German			six_NUM	sächs	sˈæχs	s ˈæ χ s		six_NUM_1			
+Swiss German	Swiss German			six_NUM	sächs	z̥ˈæχːsː	z̥ ˈæ χː sː		six_NUM_1			
 Proto-Germanic	Proto-Germanic			see_VERB	sehwaną	sˈexʷɑnɑ̃	s ˈe xʷ ɑ n ɑ̃		see_VERB_1			
 Gothic	Gothic			see_VERB	𐍃𐌰𐌹𐍈𐌰𐌽	sˈɛʍan	s ˈɛ ʍ a n		see_VERB_1			
 Old West Norse	Old West Norse			see_VERB	sjá	sjˈɑː	s j ˈɑː		see_VERB_1			
@@ -7380,7 +7380,7 @@ Upper Franconian	Upper Franconian			see_VERB	siehn	sˈiːn	s ˈiː n		see_VERB_1
 Bavarian	Bavarian			see_VERB	seng	sˈeːŋ	s ˈeː ŋ		see_VERB_1			
 Swabian	Swabian			see_VERB	seha	sˈeːa	s ˈeː a		see_VERB_1			
 Alsatian	Alsatian			see_VERB	sähn	sˈæːn	s ˈæː n		see_VERB_1			
-Swiss German	Swiss German			see_VERB	gsee	ɡ̊sˈeː	ɡ̊ s ˈeː		see_VERB_1			
+Swiss German	Swiss German			see_VERB	gsee	ɡ̊z̥ˈeː	ɡ̊ z̥ ˈeː		see_VERB_1			
 Proto-Germanic	Proto-Germanic			self_PRON	selbaz	sˈelβɑz	s ˈe l β ɑ z		self_PRON_1			
 Gothic	Gothic			self_PRON	𐍃𐌹𐌻𐌱𐌰	sˈilβa	s ˈi l β a		self_PRON_1			
 Old West Norse	Old West Norse			self_PRON	sjalfr	sjˈɑlvr	s j ˈɑ l v r		self_PRON_1			
@@ -7418,7 +7418,7 @@ Standard German	Standard German			self_PRON	selber	zˈɛlbɐ	z ˈɛ l b ɐ		self
 Upper Franconian	Upper Franconian			self_PRON	selwer	sˈɛlβɐ	s ˈɛ l β ɐ		self_PRON_1			
 Bavarian	Bavarian			self_PRON	säiwa	sˈejβa	s ˈe j β a		self_PRON_1			
 Swabian	Swabian			self_PRON	selbr	sˈɛlbʌ	s ˈɛ l b ʌ		self_PRON_1			
-Swiss German	Swiss German			self_PRON	sälber	sˈælb̥ər	s ˈæ l b̥ ə r		self_PRON_1			
+Swiss German	Swiss German			self_PRON	sälber	z̥ˈælb̥ər	z̥ ˈæ l b̥ ə r		self_PRON_1			
 Proto-Germanic	Proto-Germanic			sick_ADJ	seukaz	sˈeu̯kɑz	s ˈeu̯ k ɑ z		sick_ADJ_1			
 Gothic	Gothic			sick_ADJ	𐍃𐌹𐌿𐌺𐍃	sˈiu̯ks	s ˈiu̯ k s		sick_ADJ_1			
 Old West Norse	Old West Norse			sick_ADJ	sjúkr	sjˈuːkr	s j ˈuː k r		sick_ADJ_1			
@@ -7480,7 +7480,7 @@ Upper Franconian	Upper Franconian			side_NOUN	Seidn	sˈaɪ̯d̥n̩	s ˈaɪ̯ d̥
 Bavarian	Bavarian			side_NOUN	Seiddn	sˈai̯d̥n̩	s ˈai̯ d̥ n̩		side_NOUN_1			
 Swabian	Swabian			side_NOUN	Seid	sˈəi̯d	s ˈəi̯ d		side_NOUN_1			
 Alsatian	Alsatian			side_NOUN	Sit	sˈiːt	s ˈiː t		side_NOUN_1			
-Swiss German	Swiss German			side_NOUN	Siite	sˈiːtə	s ˈiː t ə		side_NOUN_1			
+Swiss German	Swiss German			side_NOUN	Siite	z̥ˈiːtːə	z̥ ˈiː tː ə		side_NOUN_1			
 Proto-Germanic	Proto-Germanic			sing_VERB	singwaną	sˈiŋɡʷɑnɑ̃	s ˈi ŋ ɡʷ ɑ n ɑ̃		sing_VERB_1			
 Gothic	Gothic			sing_VERB	𐍃𐌹𐌲𐌲𐍅𐌰𐌽	sˈiŋɡʷan	s ˈi ŋ ɡʷ a n		sing_VERB_1			
 Old West Norse	Old West Norse			sing_VERB	syngja	sˈyŋɟɑ	s ˈy ŋ ɟ ɑ		sing_VERB_1			
@@ -7519,7 +7519,7 @@ Upper Franconian	Upper Franconian			sing_VERB	singa	sˈɪŋa	s ˈɪ ŋ a		sing_V
 Bavarian	Bavarian			sing_VERB	singa	sˈiŋa	s ˈi ŋ a		sing_VERB_1			
 Swabian	Swabian			sing_VERB	singa	sˈɪŋa	s ˈɪ ŋ a		sing_VERB_1			
 Alsatian	Alsatian			sing_VERB	singe	sˈiŋə	s ˈi ŋ ə		sing_VERB_1			
-Swiss German	Swiss German			sing_VERB	singe	sˈiŋə	s ˈi ŋ ə		sing_VERB_1			
+Swiss German	Swiss German			sing_VERB	singe	z̥ˈiŋə	z̥ ˈi ŋ ə		sing_VERB_1			
 Proto-Germanic	Proto-Germanic			sit_VERB	sitjaną	sˈitjɑnɑ̃	s ˈi t j ɑ n ɑ̃		sit_VERB_1			
 Gothic	Gothic			sit_VERB	𐍃𐌹𐍄𐌰𐌽	sˈitan	s ˈi t a n		sit_VERB_1			
 Old West Norse	Old West Norse			sit_VERB	sitja	sˈitjɑ	s ˈi t j ɑ		sit_VERB_1			
@@ -7559,7 +7559,7 @@ Upper Franconian	Upper Franconian			sit_VERB	sitzen	sˈɪʦn̩	s ˈɪ ʦ n̩		si
 Bavarian	Bavarian			sit_VERB	sizzn	sˈiʦn̩	s ˈi ʦ n̩		sit_VERB_1			
 Swabian	Swabian			sit_VERB	sitza	sˈiʦa	s ˈi ʦ a		sit_VERB_1			
 Alsatian	Alsatian			sit_VERB	setze	sˈeʦə	s ˈe ʦ ə		sit_VERB_1			
-Swiss German	Swiss German			sit_VERB	sitze	sˈiʦə	s ˈi ʦ ə		sit_VERB_1			
+Swiss German	Swiss German			sit_VERB	sitze	z̥ˈiʦə	z̥ ˈi ʦ ə		sit_VERB_1			
 Proto-Germanic	Proto-Germanic			sharp_ADJ	skarpaz	skˈɑrpɑz	s k ˈɑ r p ɑ z		sharp_ADJ_1			
 Gothic	Gothic			sharp_ADJ	𐍃𐌺𐌰𐍂𐍀𐍃	skˈarps	s k ˈa r p s		sharp_ADJ_1			
 Old West Norse	Old West Norse			sharp_ADJ	skarpr	skˈɑrpr	s k ˈɑ r p r		sharp_ADJ_1			
@@ -7598,7 +7598,7 @@ Standard German	Standard German			sharp_ADJ	scharf	ʃˈaɐf	ʃ ˈa ɐ f		sharp_A
 Upper Franconian	Upper Franconian			sharp_ADJ	scharf	ʃˈaɐf	ʃ ˈa ɐ f		sharp_ADJ_1			
 Bavarian	Bavarian			sharp_ADJ	scharf	ʃˈarf	ʃ ˈa r f		sharp_ADJ_1			
 Swabian	Swabian			sharp_ADJ	scharf	ʃˈaʕf	ʃ ˈa ʕ f		sharp_ADJ_1			
-Swiss German	Swiss German			sharp_ADJ	scharpf	ʃˈɒrp͡f	ʃ ˈɒ r p͡f		sharp_ADJ_1			
+Swiss German	Swiss German			sharp_ADJ	scharpf	ʒ̊ˈɒrp͡f	ʒ̊ ˈɒ r p͡f		sharp_ADJ_1			
 Proto-Germanic	Proto-Germanic			beautiful_ADJ	skauniz	skˈɑu̯niz	s k ˈɑu̯ n i z		beautiful_ADJ_1			
 Gothic	Gothic			beautiful_ADJ	𐍃𐌺𐌰𐌿𐌽𐍃	skˈɔːns	s k ˈɔː n s		beautiful_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			beautiful_ADJ	skjønn	ʂˈœnn	ʂ ˈœ n n		beautiful_ADJ_1			
@@ -7631,7 +7631,7 @@ Upper Franconian	Upper Franconian			beautiful_ADJ	scheen	ʃˈeːn	ʃ ˈeː n		be
 Bavarian	Bavarian			beautiful_ADJ	schee	ʃˈeː	ʃ ˈeː		beautiful_ADJ_1			
 Swabian	Swabian			beautiful_ADJ	schee	ʃˈeː	ʃ ˈeː		beautiful_ADJ_1			
 Alsatian	Alsatian			beautiful_ADJ	scheen	ʃˈeːn	ʃ ˈeː n		beautiful_ADJ_1			
-Swiss German	Swiss German			beautiful_ADJ	schöön	ʃˈøːn	ʃ ˈøː n		beautiful_ADJ_1			
+Swiss German	Swiss German			beautiful_ADJ	schöön	ʒ̊ˈøːn	ʒ̊ ˈøː n		beautiful_ADJ_1			
 Proto-Germanic	Proto-Germanic			shield_NOUN	skelduz	skˈelduz	s k ˈe l d u z		shield_NOUN_1			
 Gothic	Gothic			shield_NOUN	𐍃𐌺𐌹𐌻𐌳𐌿𐍃	skˈildus	s k ˈi l d u s		shield_NOUN_1			
 Old West Norse	Old West Norse			shield_NOUN	skjǫldr	scˈɔldr	s c ˈɔ l d r		shield_NOUN_1			
@@ -7696,7 +7696,7 @@ Standard German	Standard German			sheep_NOUN	Schaf	ʃˈaːf	ʃ ˈaː f		sheep_NO
 Upper Franconian	Upper Franconian			sheep_NOUN	Schof	ʃˈoːf	ʃ ˈoː f		sheep_NOUN_2			
 Bavarian	Bavarian			sheep_NOUN	Schof	ʃˈoːf	ʃ ˈoː f		sheep_NOUN_2			
 Swabian	Swabian			sheep_NOUN	Schof	ʃˈoːf	ʃ ˈoː f		sheep_NOUN_2			
-Swiss German	Swiss German			sheep_NOUN	Schoof	ʃˈoːf	ʃ ˈoː f		sheep_NOUN_2			
+Swiss German	Swiss German			sheep_NOUN	Schoof	ʒ̊ˈoːfː	ʒ̊ ˈoː fː		sheep_NOUN_2			
 Proto-Germanic	Proto-Germanic			shoot_VERB	skeutaną	skˈeu̯tɑnɑ̃	s k ˈeu̯ t ɑ n ɑ̃		shoot_VERB_1			
 Old West Norse	Old West Norse			shoot_VERB	skjóta	scˈoːtɑ	s c ˈoː t ɑ		shoot_VERB_1			
 Icelandic	Icelandic			shoot_VERB	skjóta	scˈoːu̯ta	s c ˈoːu̯ t a		shoot_VERB_1			
@@ -7735,7 +7735,7 @@ Upper Franconian	Upper Franconian			shoot_VERB	schießn	ʃˈiːsn̩	ʃ ˈiː s n
 Bavarian	Bavarian			shoot_VERB	schiassn	ʃˈiɐ̯sn̩	ʃ ˈiɐ̯ s n̩		shoot_VERB_1			
 Swabian	Swabian			shoot_VERB	schiaßa	ʃˈiə̯sa	ʃ ˈiə̯ s a		shoot_VERB_1			
 Alsatian	Alsatian			shoot_VERB	schiesse	ʃˈiːsə	ʃ ˈiː s ə		shoot_VERB_1			
-Swiss German	Swiss German			shoot_VERB	schiesse	ʃˈiːssə	ʃ ˈiː s s ə		shoot_VERB_1			
+Swiss German	Swiss German			shoot_VERB	schiesse	ʒ̊ˈiːsːə	ʒ̊ ˈiː sː ə		shoot_VERB_1			
 Proto-Germanic	Proto-Germanic			ship_NOUN	skipą	skˈipɑ̃	s k ˈi p ɑ̃		ship_NOUN_1			
 Gothic	Gothic			ship_NOUN	𐍃𐌺𐌹𐍀	skˈip	s k ˈi p		ship_NOUN_1			
 Old West Norse	Old West Norse			ship_NOUN	skip	scˈip	s c ˈi p		ship_NOUN_1			
@@ -7773,7 +7773,7 @@ Upper Franconian	Upper Franconian			ship_NOUN	Schief	ʃˈiːf	ʃ ˈiː f		ship_N
 Bavarian	Bavarian			ship_NOUN	Schiif	ʃˈiːf	ʃ ˈiː f		ship_NOUN_1			
 Swabian	Swabian			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
 Alsatian	Alsatian			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
-Swiss German	Swiss German			ship_NOUN	Schiff	ʃˈiff	ʃ ˈi f f		ship_NOUN_1			
+Swiss German	Swiss German			ship_NOUN	Schiff	ʒ̊ˈifː	ʒ̊ ˈi fː		ship_NOUN_1			
 Proto-Germanic	Proto-Germanic			shit_NOUN	skitaz	skˈitɑz	s k ˈi t ɑ z		shit_NOUN_1			
 Old West Norse	Old West Norse			shit_NOUN	skítr	scˈiːtr	s c ˈiː t r		shit_NOUN_1			
 Icelandic	Icelandic			shit_NOUN	skítur	scˈiːtʏr̥	s c ˈiː t ʏ r̥		shit_NOUN_1			
@@ -7803,7 +7803,7 @@ Standard German	Standard German			shit_NOUN	Scheiße	ʃˈaɪ̯sə	ʃ ˈaɪ̯ s �
 Upper Franconian	Upper Franconian			shit_NOUN	Scheiß	ʃˈaɪ̯s	ʃ ˈaɪ̯ s		shit_NOUN_1			
 Bavarian	Bavarian			shit_NOUN	Scheiss	ʃˈai̯s	ʃ ˈai̯ s		shit_NOUN_1			
 Swabian	Swabian			shit_NOUN	Scheiß	ʃˈəi̯s	ʃ ˈəi̯ s		shit_NOUN_1			
-Swiss German	Swiss German			shit_NOUN	Schiissi	ʃˈiːssi	ʃ ˈiː s s i		shit_NOUN_1			
+Swiss German	Swiss German			shit_NOUN	Schiissi	ʒ̊ˈiːsːi	ʒ̊ ˈiː sː i		shit_NOUN_1			
 Proto-Germanic	Proto-Germanic			shoe_NOUN	skōhaz	skˈɔːxɑz	s k ˈɔː x ɑ z		shoe_NOUN_1			
 Gothic	Gothic			shoe_NOUN	𐍃𐌺𐍉𐌷𐍃	skˈoːhs	s k ˈoː h s		shoe_NOUN_1			
 Old West Norse	Old West Norse			shoe_NOUN	skór	skˈoːr	s k ˈoː r		shoe_NOUN_1			
@@ -7842,7 +7842,7 @@ Upper Franconian	Upper Franconian			shoe_NOUN	Schuh	ʃˈuː	ʃ ˈuː		shoe_NOUN_
 Bavarian	Bavarian			shoe_NOUN	Schua	ʃˈuɐ̯	ʃ ˈuɐ̯		shoe_NOUN_1			
 Swabian	Swabian			shoe_NOUN	Schuah	ʃˈuə̯	ʃ ˈuə̯		shoe_NOUN_1			
 Alsatian	Alsatian			shoe_NOUN	Schüeh	ʃˈʊː	ʃ ˈʊː		shoe_NOUN_1			
-Swiss German	Swiss German			shoe_NOUN	Schue	ʃˈuə̯	ʃ ˈuə̯		shoe_NOUN_1			
+Swiss German	Swiss German			shoe_NOUN	Schue	ʒ̊ˈuə̯	ʒ̊ ˈuə̯		shoe_NOUN_1			
 Proto-Germanic	Proto-Germanic			slay_VERB	slahaną	slˈɑxɑnɑ̃	s l ˈɑ x ɑ n ɑ̃		slay_VERB_1			
 Gothic	Gothic			slay_VERB	𐍃𐌻𐌰𐌷𐌰𐌽	slˈahan	s l ˈa h a n		slay_VERB_1			
 Old West Norse	Old West Norse			slay_VERB	slá	slˈɑː	s l ˈɑː		slay_VERB_1			
@@ -7878,7 +7878,7 @@ Standard German	Standard German			slay_VERB	schlagen	ʃlˈaːɡn̩	ʃ l ˈaː ɡ
 Upper Franconian	Upper Franconian			slay_VERB	schlong	ʃlˈoːŋ	ʃ l ˈoː ŋ		slay_VERB_1			
 Bavarian	Bavarian			slay_VERB	schlång	ʃlˈɒːŋ	ʃ l ˈɒː ŋ		slay_VERB_1			
 Swabian	Swabian			slay_VERB	schlaga	ʃlˈaːɡa	ʃ l ˈaː ɡ a		slay_VERB_1			
-Swiss German	Swiss German			slay_VERB	schlaa	ʃlˈɒː	ʃ l ˈɒː		slay_VERB_1			
+Swiss German	Swiss German			slay_VERB	schlaa	ʒ̊lˈɒː	ʒ̊ l ˈɒː		slay_VERB_1			
 Proto-Germanic	Proto-Germanic			snake_NOUN	slangô	slˈɑŋɡɔːː	s l ˈɑ ŋ ɡ ɔːː		snake_NOUN_1			
 Old West Norse	Old West Norse			snake_NOUN	slangi	slˈɑŋɟi	s l ˈɑ ŋ ɟ i		snake_NOUN_1			
 Icelandic	Icelandic			snake_NOUN	slanga	slˈɑu̯ŋɡ̊a	s l ˈɑu̯ ŋ ɡ̊ a		snake_NOUN_1			
@@ -7938,7 +7938,7 @@ Upper Franconian	Upper Franconian			sleep_VERB	schlofn	ʃlˈoːfn̩	ʃ l ˈoː f
 Bavarian	Bavarian			sleep_VERB	schlaffa	ʃlˈɑfa	ʃ l ˈɑ f a		sleep_VERB_1			
 Swabian	Swabian			sleep_VERB	schlofa	ʃlˈɔːfa	ʃ l ˈɔː f a		sleep_VERB_1			
 Alsatian	Alsatian			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB_1			
-Swiss German	Swiss German			sleep_VERB	schlaafe	ʃlˈɒːfə	ʃ l ˈɒː f ə		sleep_VERB_1			
+Swiss German	Swiss German			sleep_VERB	schlaafe	ʒ̊lˈɒːfːə	ʒ̊ l ˈɒː fː ə		sleep_VERB_1			
 Proto-Germanic	Proto-Germanic			snow_NOUN	snaiwaz	snˈɑi̯wɑz	s n ˈɑi̯ w ɑ z		snow_NOUN_1			
 Gothic	Gothic			snow_NOUN	𐍃𐌽𐌰𐌹𐍅𐍃	snˈɛːws	s n ˈɛː w s		snow_NOUN_1			
 Old West Norse	Old West Norse			snow_NOUN	snjór	snjˈoːr	s n j ˈoː r		snow_NOUN_1			
@@ -7977,7 +7977,7 @@ Upper Franconian	Upper Franconian			snow_NOUN	Schnii	ʃnˈiː	ʃ n ˈiː		snow_N
 Bavarian	Bavarian			snow_NOUN	Schnä	ʃnˈeː	ʃ n ˈeː		snow_NOUN_1			
 Swabian	Swabian			snow_NOUN	Schnai	ʃnˈae̯	ʃ n ˈae̯		snow_NOUN_1			
 Alsatian	Alsatian			snow_NOUN	Schnee	ʃnˈeː	ʃ n ˈeː		snow_NOUN_1			
-Swiss German	Swiss German			snow_NOUN	Schnee	ʃnˈeː	ʃ n ˈeː		snow_NOUN_1			
+Swiss German	Swiss German			snow_NOUN	Schnee	ʒ̊nˈeː	ʒ̊ n ˈeː		snow_NOUN_1			
 Proto-Germanic	Proto-Germanic			seek_VERB	sōkijaną	sˈɔːkijɑnɑ̃	s ˈɔː k i j ɑ n ɑ̃		seek_VERB_1			
 Gothic	Gothic			seek_VERB	𐍃𐍉𐌺𐌾𐌰𐌽	sˈoːkjan	s ˈoː k j a n		seek_VERB_1			
 Old West Norse	Old West Norse			seek_VERB	sǿkja	sˈøːcɑ	s ˈøː c ɑ		seek_VERB_1			
@@ -8014,7 +8014,7 @@ Standard German	Standard German			seek_VERB	suchen	zˈuːxn̩	z ˈuː x n̩		see
 Upper Franconian	Upper Franconian			seek_VERB	suchn	sˈuːxn̩	s ˈuː x n̩		seek_VERB_1			
 Bavarian	Bavarian			seek_VERB	suacha	sˈuɐ̯xa	s ˈuɐ̯ x a		seek_VERB_1			
 Swabian	Swabian			seek_VERB	suacha	sˈuə̯xa	s ˈuə̯ x a		seek_VERB_1			
-Swiss German	Swiss German			seek_VERB	sueche	sˈuə̯χə	s ˈuə̯ χ ə		seek_VERB_1			
+Swiss German	Swiss German			seek_VERB	sueche	z̥ˈuə̯χːə	z̥ ˈuə̯ χː ə		seek_VERB_1			
 Proto-Germanic	Proto-Germanic			stone_NOUN	stainaz	stˈɑi̯nɑz	s t ˈɑi̯ n ɑ z		stone_NOUN_1			
 Gothic	Gothic			stone_NOUN	𐍃𐍄𐌰𐌹𐌽𐍃	stˈɛːns	s t ˈɛː n s		stone_NOUN_1			
 Old West Norse	Old West Norse			stone_NOUN	steinn	stˈɛi̯nn	s t ˈɛi̯ n n		stone_NOUN_1			
@@ -8053,7 +8053,7 @@ Upper Franconian	Upper Franconian			stone_NOUN	Staa	ʃd̥ˈaː	ʃ d̥ ˈaː		sto
 Bavarian	Bavarian			stone_NOUN	Schdoa	ʃd̥ˈoɐ̯	ʃ d̥ ˈoɐ̯		stone_NOUN_1			
 Swabian	Swabian			stone_NOUN	Schdoi	ʃdˈɔe̯	ʃ d ˈɔe̯		stone_NOUN_1			
 Alsatian	Alsatian			stone_NOUN	Stein	ʃtˈəi̯n	ʃ t ˈəi̯ n		stone_NOUN_1			
-Swiss German	Swiss German			stone_NOUN	Schtäi	ʃtˈæi̯	ʃ t ˈæi̯		stone_NOUN_1			
+Swiss German	Swiss German			stone_NOUN	Schtäi	ʒ̊tːˈæi̯	ʒ̊ tː ˈæi̯		stone_NOUN_1			
 Proto-Germanic	Proto-Germanic			star_NOUN	sternǭ	stˈernɔ̃ː	s t ˈe r n ɔ̃ː		star_NOUN_1			
 Gothic	Gothic			star_NOUN	𐍃𐍄𐌰𐌹𐍂𐌽𐍉	stˈɛrnoː	s t ˈɛ r n oː		star_NOUN_1			
 Old West Norse	Old West Norse			star_NOUN	stjarna	stjˈɑrnɑ	s t j ˈɑ r n ɑ		star_NOUN_1			
@@ -8092,7 +8092,7 @@ Upper Franconian	Upper Franconian			star_NOUN	Stern	ʃtˈɛɐn	ʃ t ˈɛ ɐ n		s
 Bavarian	Bavarian			star_NOUN	Schdean	ʃd̥ˈean	ʃ d̥ ˈe a n		star_NOUN_1			
 Swabian	Swabian			star_NOUN	Schdärn	ʃdˈɛʕn	ʃ d ˈɛ ʕ n		star_NOUN_1			
 Alsatian	Alsatian			star_NOUN	Stern	ʃtˈeʁn	ʃ t ˈe ʁ n		star_NOUN_1			
-Swiss German	Swiss German			star_NOUN	Schtärn	ʃtˈærn	ʃ t ˈæ r n		star_NOUN_1			
+Swiss German	Swiss German			star_NOUN	Schtärn	ʒ̊tːˈærn	ʒ̊ tː ˈæ r n		star_NOUN_1			
 Proto-Germanic	Proto-Germanic			stool_NOUN	stōlaz	stˈɔːlɑz	s t ˈɔː l ɑ z		stool_NOUN_1			
 Gothic	Gothic			stool_NOUN	𐍃𐍄𐍉𐌻𐍃	stˈoːls	s t ˈoː l s		stool_NOUN_1			
 Old West Norse	Old West Norse			stool_NOUN	stóll	stˈoːll	s t ˈoː l l		stool_NOUN_1			
@@ -8131,7 +8131,7 @@ Upper Franconian	Upper Franconian			stool_NOUN	Stuhl	ʃd̥ˈuːl	ʃ d̥ ˈuː l	
 Bavarian	Bavarian			stool_NOUN	Schdui	ʃd̥ˈuj	ʃ d̥ ˈu j		stool_NOUN_1			
 Swabian	Swabian			stool_NOUN	Schduhl	ʃdˈuːl	ʃ d ˈuː l		stool_NOUN_1			
 Alsatian	Alsatian			stool_NOUN	Stüehl	ʃtˈøːl	ʃ t ˈøː l		stool_NOUN_1			
-Swiss German	Swiss German			stool_NOUN	Schtuel	ʃtˈuə̯l	ʃ t ˈuə̯ l		stool_NOUN_1			
+Swiss German	Swiss German			stool_NOUN	Schtuel	ʒ̊tːˈuə̯l	ʒ̊ tː ˈuə̯ l		stool_NOUN_1			
 Proto-Germanic	Proto-Germanic			big_ADJ	stōraz	stˈɔːrɑz	s t ˈɔː r ɑ z		big_ADJ_1			
 Old West Norse	Old West Norse			big_ADJ	stórr	stˈoːrr	s t ˈoː r r		big_ADJ_1			
 Icelandic	Icelandic			big_ADJ	stór	stˈoːu̯r̥	s t ˈoːu̯ r̥		big_ADJ_1			
@@ -8173,7 +8173,7 @@ Yiddish	Yiddish			storm_NOUN	שטורעם	ʃtˈʊʀɛm	ʃ t ˈʊ ʀ ɛ m		storm_
 Standard German	Standard German			storm_NOUN	Sturm	ʃtˈʊɐm	ʃ t ˈʊ ɐ m		storm_NOUN_1			
 Upper Franconian	Upper Franconian			storm_NOUN	Sturm	ʃd̥ˈʊɐm	ʃ d̥ ˈʊ ɐ m		storm_NOUN_1			
 Bavarian	Bavarian			storm_NOUN	Schduam	ʃd̥ˈuam	ʃ d̥ ˈu a m		storm_NOUN_1			
-Swiss German	Swiss German			storm_NOUN	Schturm	ʃtˈurm	ʃ t ˈu r m		storm_NOUN_1			
+Swiss German	Swiss German			storm_NOUN	Schturm	ʒ̊tːˈurm	ʒ̊ tː ˈu r m		storm_NOUN_1			
 Proto-Germanic	Proto-Germanic			suck_VERB	sūganą	sˈuːɣɑnɑ̃	s ˈuː ɣ ɑ n ɑ̃		suck_VERB_1			
 Old West Norse	Old West Norse			suck_VERB	súga	sˈuːɡɑ	s ˈuː ɡ ɑ		suck_VERB_1			
 Icelandic	Icelandic			suck_VERB	sjúga	sjˈuːa	s j ˈuː a		suck_VERB_1			
@@ -8202,7 +8202,7 @@ Standard German	Standard German			suck_VERB	saugen	zˈaʊ̯ɡn̩	z ˈaʊ̯ ɡ n�
 Upper Franconian	Upper Franconian			suck_VERB	saung	sˈaʊ̯ŋ	s ˈaʊ̯ ŋ		suck_VERB_1			
 Bavarian	Bavarian			suck_VERB	saung	sˈau̯ŋ	s ˈau̯ ŋ		suck_VERB_1			
 Swabian	Swabian			suck_VERB	sauga	sˈao̯ɡa	s ˈao̯ ɡ a		suck_VERB_1			
-Swiss German	Swiss German			suck_VERB	suuge	sˈuːɡ̊ə	s ˈuː ɡ̊ ə		suck_VERB_1			
+Swiss German	Swiss German			suck_VERB	suuge	z̥ˈuːɡ̊ə	z̥ ˈuː ɡ̊ ə		suck_VERB_1			
 Proto-Germanic	Proto-Germanic			suck_VERB	sūkaną	sˈuːkɑnɑ̃	s ˈuː k ɑ n ɑ̃		suck_VERB_2			
 Scots	Scots			suck_VERB	souk	sˈuk	s ˈu k		suck_VERB_2			
 English	English			suck_VERB	suck	sˈɐk	s ˈɐ k		suck_VERB_2			
@@ -8245,7 +8245,7 @@ Upper Franconian	Upper Franconian			summer_NOUN	Summer	sˈʊmɐ	s ˈʊ m ɐ		sum
 Bavarian	Bavarian			summer_NOUN	Summa	sˈuma	s ˈu m a		summer_NOUN_1			
 Swabian	Swabian			summer_NOUN	Sommr	sˈomʌ	s ˈo m ʌ		summer_NOUN_1			
 Alsatian	Alsatian			summer_NOUN	Summer	sˈuməʁ	s ˈu m ə ʁ		summer_NOUN_1			
-Swiss German	Swiss German			summer_NOUN	Summer	sˈummər	s ˈu m m ə r		summer_NOUN_1			
+Swiss German	Swiss German			summer_NOUN	Summer	z̥ˈumər	z̥ ˈu m ə r		summer_NOUN_1			
 Proto-Germanic	Proto-Germanic			son_NOUN	sunuz	sˈunuz	s ˈu n u z		son_NOUN_1			
 Gothic	Gothic			son_NOUN	𐍃𐌿𐌽𐌿𐍃	sˈunus	s ˈu n u s		son_NOUN_1			
 Old West Norse	Old West Norse			son_NOUN	sonr	sˈonr	s ˈo n r		son_NOUN_1			
@@ -8282,7 +8282,7 @@ Standard German	Standard German			son_NOUN	Sohn	zˈoːn	z ˈoː n		son_NOUN_1
 Upper Franconian	Upper Franconian			son_NOUN	Su	sˈuː	s ˈuː		son_NOUN_1			
 Swabian	Swabian			son_NOUN	Soh	sˈoː	s ˈoː		son_NOUN_1			
 Alsatian	Alsatian			son_NOUN	Sohn	sˈoːn	s ˈoː n		son_NOUN_1			
-Swiss German	Swiss German			son_NOUN	Soon	sˈoːn	s ˈoː n		son_NOUN_1			
+Swiss German	Swiss German			son_NOUN	Soon	z̥ˈoːn	z̥ ˈoː n		son_NOUN_1			
 Proto-Germanic	Proto-Germanic			sour_ADJ	sūraz	sˈuːrɑz	s ˈuː r ɑ z		sour_ADJ_1			
 Old West Norse	Old West Norse			sour_ADJ	súrr	sˈuːrr	s ˈuː r r		sour_ADJ_1			
 Icelandic	Icelandic			sour_ADJ	súr	sˈuːr̥	s ˈuː r̥		sour_ADJ_1			
@@ -8321,7 +8321,7 @@ Upper Franconian	Upper Franconian			sour_ADJ	sauer	sˈaʊ̯ɐ	s ˈaʊ̯ ɐ		sour
 Bavarian	Bavarian			sour_ADJ	saua	sˈau̯a	s ˈau̯ a		sour_ADJ_1			
 Swabian	Swabian			sour_ADJ	sauer	sˈao̯ʌ	s ˈao̯ ʌ		sour_ADJ_1			
 Alsatian	Alsatian			sour_ADJ	süür	sˈyːʁ	s ˈyː ʁ		sour_ADJ_1			
-Swiss German	Swiss German			sour_ADJ	suur	sˈuːr	s ˈuː r		sour_ADJ_1			
+Swiss German	Swiss German			sour_ADJ	suur	z̥ˈuːr	z̥ ˈuː r		sour_ADJ_1			
 Proto-Germanic	Proto-Germanic			sow_NOUN	sūz	sˈuːz	s ˈuː z		sow_NOUN_1			
 Old West Norse	Old West Norse			sow_NOUN	sýr	sˈyːr	s ˈyː r		sow_NOUN_1			
 Icelandic	Icelandic			sow_NOUN	sýr	sˈiːr̥	s ˈiː r̥		sow_NOUN_1			
@@ -8348,7 +8348,7 @@ Standard German	Standard German			sow_NOUN	Sau	zˈaʊ̯	z ˈaʊ̯		sow_NOUN_1
 Upper Franconian	Upper Franconian			sow_NOUN	Sau	sˈaʊ̯	s ˈaʊ̯		sow_NOUN_1			
 Bavarian	Bavarian			sow_NOUN	Sau	sˈau̯	s ˈau̯		sow_NOUN_1			
 Swabian	Swabian			sow_NOUN	Sau	sˈao̯	s ˈao̯		sow_NOUN_1			
-Swiss German	Swiss German			sow_NOUN	Suu	sˈuː	s ˈuː		sow_NOUN_1			
+Swiss German	Swiss German			sow_NOUN	Suu	z̥ˈuː	z̥ ˈuː		sow_NOUN_1			
 Proto-Germanic	Proto-Germanic			sweat_NOUN	swaitą	swˈɑi̯tɑ̃	s w ˈɑi̯ t ɑ̃		sweat_NOUN_1			
 Scots	Scots			sweat_NOUN	sweit	swˈet	s w ˈe t		sweat_NOUN_1			
 English	English			sweat_NOUN	sweat	swˈet	s w ˈe t		sweat_NOUN_1			
@@ -8378,7 +8378,7 @@ Standard German	Standard German			sweat_NOUN	Schweiß	ʃvˈaɪ̯s	ʃ v ˈaɪ̯ s
 Upper Franconian	Upper Franconian			sweat_NOUN	Schwaß	ʃvˈaːs	ʃ v ˈaː s		sweat_NOUN_2			
 Bavarian	Bavarian			sweat_NOUN	Schwoass	ʃʋˈoɐ̯s	ʃ ʋ ˈoɐ̯ s		sweat_NOUN_2			
 Swabian	Swabian			sweat_NOUN	Schwoiß	ʃʋˈɔe̯s	ʃ ʋ ˈɔe̯ s		sweat_NOUN_2			
-Swiss German	Swiss German			sweat_NOUN	Schwäiss	ʃʋˈæi̯ss	ʃ ʋ ˈæi̯ s s		sweat_NOUN_2			
+Swiss German	Swiss German			sweat_NOUN	Schwäiss	ʒ̊ʋˈæi̯sː	ʒ̊ ʋ ˈæi̯ sː		sweat_NOUN_2			
 Proto-Germanic	Proto-Germanic			sweat_NOUN	swaitô	swˈɑi̯tɔːː	s w ˈɑi̯ t ɔːː		sweat_NOUN_3			
 Old West Norse	Old West Norse			sweat_NOUN	sveiti	svˈɛi̯ti	s v ˈɛi̯ t i		sweat_NOUN_3			
 Icelandic	Icelandic			sweat_NOUN	sviti	svˈɪːtɪ	s v ˈɪː t ɪ		sweat_NOUN_3			
@@ -8422,7 +8422,7 @@ Upper Franconian	Upper Franconian			black_ADJ	schwarz	ʃvˈaɐʦ	ʃ v ˈa ɐ ʦ	
 Bavarian	Bavarian			black_ADJ	schwoaz	ʃʋˈoɐʦ	ʃ ʋ ˈo ɐ ʦ		black_ADJ_1			
 Swabian	Swabian			black_ADJ	schwarz	ʃʋˈaʕʦ	ʃ ʋ ˈa ʕ ʦ		black_ADJ_1			
 Alsatian	Alsatian			black_ADJ	schwàrz	ʃwˈɒʁʦ	ʃ w ˈɒ ʁ ʦ		black_ADJ_1			
-Swiss German	Swiss German			black_ADJ	schwarz	ʃʋˈɒrʦ	ʃ ʋ ˈɒ r ʦ		black_ADJ_1			
+Swiss German	Swiss German			black_ADJ	schwarz	ʒ̊ʋˈɒrʦ	ʒ̊ ʋ ˈɒ r ʦ		black_ADJ_1			
 Proto-Germanic	Proto-Germanic			sleep_VERB	swefaną	swˈeɸɑnɑ̃	s w ˈe ɸ ɑ n ɑ̃		sleep_VERB_2			
 Old West Norse	Old West Norse			sleep_VERB	sofa	sˈovɑ	s ˈo v ɑ		sleep_VERB_2			
 Icelandic	Icelandic			sleep_VERB	sofa	sˈɔːva	s ˈɔː v a		sleep_VERB_2			
@@ -8464,7 +8464,7 @@ Standard German	Standard German			sword_NOUN	Schwert	ʃvˈɛɐt	ʃ v ˈɛ ɐ t		
 Upper Franconian	Upper Franconian			sword_NOUN	Schwert	ʃvˈɛɐd̥	ʃ v ˈɛ ɐ d̥		sword_NOUN_1			
 Bavarian	Bavarian			sword_NOUN	Schwead	ʃʋˈeɐd̥	ʃ ʋ ˈe ɐ d̥		sword_NOUN_1			
 Swabian	Swabian			sword_NOUN	Schwerd	ʃʋˈɛʕd	ʃ ʋ ˈɛ ʕ d		sword_NOUN_1			
-Swiss German	Swiss German			sword_NOUN	Schwärt	ʃʋˈært	ʃ ʋ ˈæ r t		sword_NOUN_1			
+Swiss German	Swiss German			sword_NOUN	Schwärt	ʒ̊ʋˈærtː	ʒ̊ ʋ ˈæ r tː		sword_NOUN_1			
 Proto-Germanic	Proto-Germanic			sister_NOUN	swestēr	swˈestɛːr	s w ˈe s t ɛː r		sister_NOUN_1			
 Gothic	Gothic			sister_NOUN	𐍃𐍅𐌹𐍃𐍄𐌰𐍂	swˈistar	s w ˈi s t a r		sister_NOUN_1			
 Old West Norse	Old West Norse			sister_NOUN	systir	sˈystir	s ˈy s t i r		sister_NOUN_1			
@@ -8505,7 +8505,7 @@ Upper Franconian	Upper Franconian			sister_NOUN	Schwester	ʃvˈɛsd̥ɐ	ʃ v ˈ�
 Bavarian	Bavarian			sister_NOUN	Schwesda	ʃʋˈesd̥a	ʃ ʋ ˈe s d̥ a		sister_NOUN_1			
 Swabian	Swabian			sister_NOUN	Schweschdr	ʃʋˈɛʃdʌ	ʃ ʋ ˈɛ ʃ d ʌ		sister_NOUN_1			
 Alsatian	Alsatian			sister_NOUN	Schweschter	ʃwˈeʃtəʁ	ʃ w ˈe ʃ t ə ʁ		sister_NOUN_1			
-Swiss German	Swiss German			sister_NOUN	Schwöschter	ʃʋˈøʃtər	ʃ ʋ ˈø ʃ t ə r		sister_NOUN_1			
+Swiss German	Swiss German			sister_NOUN	Schwöschter	ʒ̊ʋˈøʃːtːər	ʒ̊ ʋ ˈø ʃː tː ə r		sister_NOUN_1			
 Proto-Germanic	Proto-Germanic			swim_VERB	swimmaną	swˈimmɑnɑ̃	s w ˈi m m ɑ n ɑ̃		swim_VERB_1			
 Old West Norse	Old West Norse			swim_VERB	svimma	svˈimmɑ	s v ˈi m m ɑ		swim_VERB_1			
 Faroese	Faroese			swim_VERB	svimja	svˈɪmja	s v ˈɪ m j a		swim_VERB_1			
@@ -8542,7 +8542,7 @@ Upper Franconian	Upper Franconian			swim_VERB	schwimma	ʃvˈɪma	ʃ v ˈɪ m a		
 Bavarian	Bavarian			swim_VERB	schwimma	ʃʋˈima	ʃ ʋ ˈi m a		swim_VERB_1			
 Swabian	Swabian			swim_VERB	schwemma	ʃʋˈema	ʃ ʋ ˈe m a		swim_VERB_1			
 Alsatian	Alsatian			swim_VERB	schwimme	ʃwˈimə	ʃ w ˈi m ə		swim_VERB_1			
-Swiss German	Swiss German			swim_VERB	schwümme	ʃʋˈymmə	ʃ ʋ ˈy m m ə		swim_VERB_1			
+Swiss German	Swiss German			swim_VERB	schwümme	ʒ̊ʋˈymə	ʒ̊ ʋ ˈy m ə		swim_VERB_1			
 Proto-Germanic	Proto-Germanic			swine_NOUN	swīną	swˈiːnɑ̃	s w ˈiː n ɑ̃		swine_NOUN_1			
 Gothic	Gothic			swine_NOUN	𐍃𐍅𐌴𐌹𐌽	swˈiːn	s w ˈiː n		swine_NOUN_1			
 Old West Norse	Old West Norse			swine_NOUN	svín	svˈiːn	s v ˈiː n		swine_NOUN_1			
@@ -8615,7 +8615,7 @@ Upper Franconian	Upper Franconian			sweet_ADJ	sieß	sˈiːs	s ˈiː s		sweet_ADJ
 Bavarian	Bavarian			sweet_ADJ	siass	sˈiɐ̯s	s ˈiɐ̯ s		sweet_ADJ_1			
 Swabian	Swabian			sweet_ADJ	siaß	sˈiə̯s	s ˈiə̯ s		sweet_ADJ_1			
 Alsatian	Alsatian			sweet_ADJ	siess	sˈiːs	s ˈiː s		sweet_ADJ_1			
-Swiss German	Swiss German			sweet_ADJ	süess	sˈyə̯ss	s ˈyə̯ s s		sweet_ADJ_1			
+Swiss German	Swiss German			sweet_ADJ	süess	z̥ˈyə̯sː	z̥ ˈyə̯ sː		sweet_ADJ_1			
 Proto-Germanic	Proto-Germanic			tear_NOUN	tahrą	tˈɑxrɑ̃	t ˈɑ x r ɑ̃		tear_NOUN_1			
 Old West Norse	Old West Norse			tear_NOUN	tár	tʰˈɑːr	tʰ ˈɑː r		tear_NOUN_1			
 Icelandic	Icelandic			tear_NOUN	tár	tʰˈɑːu̯r̥	tʰ ˈɑːu̯ r̥		tear_NOUN_1			
@@ -8704,7 +8704,7 @@ Upper Franconian	Upper Franconian			token_NOUN	Zaache	ʦˈaːxə	ʦ ˈaː x ə		
 Bavarian	Bavarian			token_NOUN	Zoachn	ʦˈoɐ̯xn̩	ʦ ˈoɐ̯ x n̩		token_NOUN_1			
 Swabian	Swabian			token_NOUN	Zoicha	ʦˈɔe̯ça	ʦ ˈɔe̯ ç a		token_NOUN_1			
 Alsatian	Alsatian			token_NOUN	Zeiche	ʦˈei̯ʃə	ʦ ˈei̯ ʃ ə		token_NOUN_1			
-Swiss German	Swiss German			token_NOUN	Zäiche	ʦˈæi̯χə	ʦ ˈæi̯ χ ə		token_NOUN_1			
+Swiss German	Swiss German			token_NOUN	Zäiche	ʦˈæi̯χːə	ʦ ˈæi̯ χː ə		token_NOUN_1			
 Proto-Germanic	Proto-Germanic			tooth_NOUN	tanþs	tˈɑnθs	t ˈɑ n θ s		tooth_NOUN_1			
 Gothic	Gothic			tooth_NOUN	𐍄𐌿𐌽𐌸𐌿𐍃	tˈunθus	t ˈu n θ u s		tooth_NOUN_1			
 Old West Norse	Old West Norse			tooth_NOUN	tǫnn	tʰˈɔnn	tʰ ˈɔ n n		tooth_NOUN_1			
@@ -8818,7 +8818,7 @@ Upper Franconian	Upper Franconian			time_NOUN	Zeit	ʦˈaɪ̯d̥	ʦ ˈaɪ̯ d̥		
 Bavarian	Bavarian			time_NOUN	Zeid	ʦˈai̯d̥	ʦ ˈai̯ d̥		time_NOUN_1			
 Swabian	Swabian			time_NOUN	Zeid	ʦˈəi̯d	ʦ ˈəi̯ d		time_NOUN_1			
 Alsatian	Alsatian			time_NOUN	Zit	ʦˈiːt	ʦ ˈiː t		time_NOUN_1			
-Swiss German	Swiss German			time_NOUN	Ziit	ʦˈiːt	ʦ ˈiː t		time_NOUN_1			
+Swiss German	Swiss German			time_NOUN	Ziit	ʦˈiːtː	ʦ ˈiː tː		time_NOUN_1			
 Proto-Germanic	Proto-Germanic			tear_NOUN_FEM	trahnuz	trˈɑxnuz	t r ˈɑ x n u z		tear_NOUN_FEM_1			
 West Frisian	West Frisian			tear_NOUN_FEM	trien	trˈiə̯n	t r ˈiə̯ n		tear_NOUN_FEM_1			
 Saterland Frisian	Saterland Frisian			tear_NOUN_FEM	Troone	trˈoːnə	t r ˈoː n ə		tear_NOUN_FEM_1			
@@ -9010,7 +9010,7 @@ Upper Franconian	Upper Franconian			twelve_NUM	zwälfa	ʦvˈɛlfa	ʦ v ˈɛ l f 
 Bavarian	Bavarian			twelve_NUM	zwäife	ʦʋˈejfə	ʦ ʋ ˈe j f ə		twelve_NUM_1			
 Swabian	Swabian			twelve_NUM	zwelf	ʦʋˈelf	ʦ ʋ ˈe l f		twelve_NUM_1			
 Alsatian	Alsatian			twelve_NUM	zwelf	ʦʋˈelf	ʦ ʋ ˈe l f		twelve_NUM_1			
-Swiss German	Swiss German			twelve_NUM	zwölf	ʦʋˈølf	ʦ ʋ ˈø l f		twelve_NUM_1			
+Swiss German	Swiss German			twelve_NUM	zwölf	ʦʋˈølfː	ʦ ʋ ˈø l fː		twelve_NUM_1			
 Proto-Germanic	Proto-Germanic			over_PREP	uber	ˈuβer	ˈu β e r		over_PREP_1			
 Gothic	Gothic			over_PREP	𐌿𐍆𐌰𐍂	ˈufar	ˈu f a r		over_PREP_1			
 Scots	Scots			over_PREP	ower	ˈʌu̯ər	ˈʌu̯ ə r		over_PREP_1			
@@ -9087,7 +9087,7 @@ Upper Franconian	Upper Franconian			oven_NOUN	Ufn	ˈuːfn̩	ˈuː f n̩		oven_NO
 Bavarian	Bavarian			oven_NOUN	Ofa	ˈoːfa	ˈoː f a		oven_NOUN_1			
 Swabian	Swabian			oven_NOUN	Ofa	ˈoːfa	ˈoː f a		oven_NOUN_1			
 Alsatian	Alsatian			oven_NOUN	Offe	ˈofə	ˈo f ə		oven_NOUN_1			
-Swiss German	Swiss German			oven_NOUN	Ofe	ˈoːfə	ˈoː f ə		oven_NOUN_1			
+Swiss German	Swiss German			oven_NOUN	Ofe	ˈoːfːə	ˈoː fː ə		oven_NOUN_1			
 Proto-Germanic	Proto-Germanic			oven_NOUN	uhnaz	ˈuxnɑz	ˈu x n ɑ z		oven_NOUN_2			
 Gothic	Gothic			oven_NOUN	𐌰𐌿𐌷𐌽𐍃	ˈɔːhns	ˈɔː h n s		oven_NOUN_2			
 Proto-Germanic	Proto-Germanic			under_PREP	under	ˈunder	ˈu n d e r		under_PREP_1			
@@ -9166,7 +9166,7 @@ Upper Franconian	Upper Franconian			us_PRON	uns	ˈʊns	ˈʊ n s		us_PRON_1
 Bavarian	Bavarian			us_PRON	uns	ˈuns	ˈu n s		us_PRON_1			
 Swabian	Swabian			us_PRON	ons	ˈons	ˈo n s		us_PRON_1			
 Alsatian	Alsatian			us_PRON	uns	ˈunz̥	ˈu n z̥		us_PRON_1			
-Swiss German	Swiss German			us_PRON	öis	ˈøi̯s	ˈøi̯ s		us_PRON_1			
+Swiss German	Swiss German			us_PRON	öis	ˈøi̯z̥	ˈøi̯ z̥		us_PRON_1			
 Proto-Germanic	Proto-Germanic			up_ADV	upp	ˈupp	ˈu p p		up_ADV_1			
 Gothic	Gothic			up_ADV	𐌹𐌿𐍀	ˈiu̯p	ˈiu̯ p		up_ADV_1			
 Old West Norse	Old West Norse			up_ADV	upp	ˈupp	ˈu p p		up_ADV_1			
@@ -9205,7 +9205,7 @@ Upper Franconian	Upper Franconian			up_ADV	aff	ˈaf	ˈa f		up_ADV_1
 Bavarian	Bavarian			up_ADV	af	ˈaːf	ˈaː f		up_ADV_1			
 Swabian	Swabian			up_ADV	uff	ˈuf	ˈu f		up_ADV_1			
 Alsatian	Alsatian			up_ADV	uf	ˈuf	ˈu f		up_ADV_1			
-Swiss German	Swiss German			up_ADV	uf	ˈuf	ˈu f		up_ADV_1			
+Swiss German	Swiss German			up_ADV	uf	ˈufː	ˈu fː		up_ADV_1			
 Proto-Germanic	Proto-Germanic			out_PREP	ūt	ˈuːt	ˈuː t		out_PREP_1			
 Gothic	Gothic			out_PREP	𐌿𐍄	ˈuːt	ˈuː t		out_PREP_1			
 Old West Norse	Old West Norse			out_PREP	út	ˈuːt	ˈuː t		out_PREP_1			
@@ -9243,7 +9243,7 @@ Upper Franconian	Upper Franconian			out_PREP	aus	ˈaʊ̯s	ˈaʊ̯ s		out_PREP_1
 Bavarian	Bavarian			out_PREP	aus	ˈau̯s	ˈau̯ s		out_PREP_1			
 Swabian	Swabian			out_PREP	aus	ˈao̯s	ˈao̯ s		out_PREP_1			
 Alsatian	Alsatian			out_PREP	üs	ˈyːs	ˈyː s		out_PREP_1			
-Swiss German	Swiss German			out_PREP	us	ˈuːs	ˈuː s		out_PREP_1			
+Swiss German	Swiss German			out_PREP	us	ˈuːsː	ˈuː sː		out_PREP_1			
 Proto-Germanic	Proto-Germanic			owl_NOUN	uwwalǭ	ˈuwwɑlɔ̃ː	ˈu w w ɑ l ɔ̃ː		owl_NOUN_1			
 Gothic	Gothic			owl_NOUN	𐌿𐌲𐌲𐍅𐌹𐌻𐍉	ˈuɡɡʷiloː	ˈu ɡ ɡʷ i l oː		owl_NOUN_1			
 Old West Norse	Old West Norse			owl_NOUN	ugla	ˈuɡla	ˈu ɡ l a		owl_NOUN_1			
@@ -9391,7 +9391,7 @@ Bavarian	Bavarian			water_NOUN	Wassa	ʋˈɑsa	ʋ ˈɑ s a		water_NOUN_2
 Bavarian	Bavarian			water_NOUN	Wāssa	ʋˈɑːsa	ʋ ˈɑː s a		water_NOUN_2			
 Swabian	Swabian			water_NOUN	Wassr	ʋˈasʌ	ʋ ˈa s ʌ		water_NOUN_2			
 Alsatian	Alsatian			water_NOUN	Wàsser	ʋˈɒsəʁ	ʋ ˈɒ s ə ʁ		water_NOUN_2			
-Swiss German	Swiss German			water_NOUN	Wasser	ʋˈɒssər	ʋ ˈɒ s s ə r		water_NOUN_2			
+Swiss German	Swiss German			water_NOUN	Wasser	ʋˈɒsːər	ʋ ˈɒ sː ə r		water_NOUN_2			
 Proto-Germanic	Proto-Germanic			weather_NOUN	wedrą	wˈeðrɑ̃	w ˈe ð r ɑ̃		weather_NOUN_1			
 Old West Norse	Old West Norse			weather_NOUN	veðr	vˈeðr	v ˈe ð r		weather_NOUN_1			
 Icelandic	Icelandic			weather_NOUN	veður	vˈɛːðʏr̥	v ˈɛː ð ʏ r̥		weather_NOUN_1			
@@ -9428,7 +9428,7 @@ Upper Franconian	Upper Franconian			weather_NOUN	Wedder	vˈɛɾɐ	v ˈɛ ɾ ɐ		
 Bavarian	Bavarian			weather_NOUN	Weda	ʋˈed̥a	ʋ ˈe d̥ a		weather_NOUN_1			
 Swabian	Swabian			weather_NOUN	Weddr	ʋˈɛdʌ	ʋ ˈɛ d ʌ		weather_NOUN_1			
 Alsatian	Alsatian			weather_NOUN	Wetter	ʋˈetəʁ	ʋ ˈe t ə ʁ		weather_NOUN_1			
-Swiss German	Swiss German			weather_NOUN	Wätter	ʋˈættər	ʋ ˈæ t t ə r		weather_NOUN_1			
+Swiss German	Swiss German			weather_NOUN	Wätter	ʋˈætːər	ʋ ˈæ tː ə r		weather_NOUN_1			
 Proto-Germanic	Proto-Germanic			way_NOUN	wegaz	wˈeɣɑz	w ˈe ɣ ɑ z		way_NOUN_1			
 Gothic	Gothic			way_NOUN	𐍅𐌹𐌲𐍃	wˈiɡs	w ˈi ɡ s		way_NOUN_1			
 Old West Norse	Old West Norse			way_NOUN	vegr	vˈeɣr	v ˈe ɣ r		way_NOUN_1			
@@ -9493,7 +9493,7 @@ Palatine German	Palatine German			weapon_NOUN	Waff	βˈɑf	β ˈɑ f		weapon_NOU
 Yiddish	Yiddish			weapon_NOUN	וואָפֿן	vˈɔfn̩	v ˈɔ f n̩		weapon_NOUN_1			
 Standard German	Standard German			weapon_NOUN	Waffe	vˈafə	v ˈa f ə		weapon_NOUN_1			
 Upper Franconian	Upper Franconian			weapon_NOUN	Waffe	vˈafn̩	v ˈa f n̩		weapon_NOUN_1			
-Swiss German	Swiss German			weapon_NOUN	Waaffe	ʋˈɒːffə	ʋ ˈɒː f f ə		weapon_NOUN_1			
+Swiss German	Swiss German			weapon_NOUN	Waaffe	ʋˈɒːfːə	ʋ ˈɒː fː ə		weapon_NOUN_1			
 Proto-Germanic	Proto-Germanic			wife_NOUN	wībą	wˈiːβɑ̃	w ˈiː β ɑ̃		wife_NOUN_1			
 Scots	Scots			wife_NOUN	wife	wˈəi̯f	w ˈəi̯ f		wife_NOUN_1			
 English	English			wife_NOUN	wife	wˈaɪ̯f	w ˈaɪ̯ f		wife_NOUN_1			
@@ -9558,7 +9558,7 @@ Bavarian	Bavarian			week_NOUN	Woch	ʋˈox	ʋ ˈo x		week_NOUN_1
 Bavarian	Bavarian			week_NOUN	Wocha	ʋˈoxa	ʋ ˈo x a		week_NOUN_1			
 Swabian	Swabian			week_NOUN	Woch	ʋˈox	ʋ ˈo x		week_NOUN_1			
 Alsatian	Alsatian			week_NOUN	Wuch	ʋˈux	ʋ ˈu x		week_NOUN_1			
-Swiss German	Swiss German			week_NOUN	Wuch	ʋˈuχə	ʋ ˈu χ ə		week_NOUN_1			
+Swiss German	Swiss German			week_NOUN	Wuch	ʋˈuχːə	ʋ ˈu χː ə		week_NOUN_1			
 Proto-Germanic	Proto-Germanic			wild_ADJ	wilþijaz	wˈilθijɑz	w ˈi l θ i j ɑ z		wild_ADJ_1			
 Gothic	Gothic			wild_ADJ	𐍅𐌹𐌻𐌸𐌴𐌹𐍃	wˈilθiːs	w ˈi l θ iː s		wild_ADJ_1			
 Old West Norse	Old West Norse			wild_ADJ	villr	vˈillr	v ˈi l l r		wild_ADJ_1			
@@ -9710,7 +9710,7 @@ Upper Franconian	Upper Franconian			winter_NOUN	Winder	vˈɪnd̥ɐ	v ˈɪ n d̥ 
 Bavarian	Bavarian			winter_NOUN	Windda	ʋˈind̥a	ʋ ˈi n d̥ a		winter_NOUN_1			
 Swabian	Swabian			winter_NOUN	Wendr	ʋˈendʌ	ʋ ˈe n d ʌ		winter_NOUN_1			
 Alsatian	Alsatian			winter_NOUN	Winter	ʋˈintəʁ	ʋ ˈi n t ə ʁ		winter_NOUN_1			
-Swiss German	Swiss German			winter_NOUN	Winter	ʋˈintər	ʋ ˈi n t ə r		winter_NOUN_1			
+Swiss German	Swiss German			winter_NOUN	Winter	ʋˈintːər	ʋ ˈi n tː ə r		winter_NOUN_1			
 Proto-Germanic	Proto-Germanic			know_VERB	witaną	wˈitɑnɑ̃	w ˈi t ɑ n ɑ̃		know_VERB_1			
 Gothic	Gothic			know_VERB	𐍅𐌹𐍄𐌰𐌽	wˈitan	w ˈi t a n		know_VERB_1			
 Old West Norse	Old West Norse			know_VERB	vita	vˈitɑ	v ˈi t ɑ		know_VERB_1			
@@ -9747,7 +9747,7 @@ Upper Franconian	Upper Franconian			know_VERB	wissen	vˈɪsn̩	v ˈɪ s n̩		kno
 Bavarian	Bavarian			know_VERB	wissn	ʋˈisn̩	ʋ ˈi s n̩		know_VERB_1			
 Swabian	Swabian			know_VERB	wissa	ʋˈisa	ʋ ˈi s a		know_VERB_1			
 Alsatian	Alsatian			know_VERB	wisse	ʋˈisə	ʋ ˈi s ə		know_VERB_1			
-Swiss German	Swiss German			know_VERB	wüsse	ʋˈyssə	ʋ ˈy s s ə		know_VERB_1			
+Swiss German	Swiss German			know_VERB	wüsse	ʋˈysːə	ʋ ˈy sː ə		know_VERB_1			
 Proto-Germanic	Proto-Germanic			we_PRON	wīz	wˈiːz	w ˈiː z		we_PRON_1			
 Gothic	Gothic			we_PRON	𐍅𐌴𐌹𐍃	wˈiːs	w ˈiː s		we_PRON_1			
 Old West Norse	Old West Norse			we_PRON	vér	vˈeːr	v ˈeː r		we_PRON_1			
@@ -9835,7 +9835,7 @@ Upper Franconian	Upper Franconian			wolf_NOUN	Wolf	vˈɔlf	v ˈɔ l f		wolf_NOUN
 Bavarian	Bavarian			wolf_NOUN	Woif	ʋˈojf	ʋ ˈo j f		wolf_NOUN_1			
 Swabian	Swabian			wolf_NOUN	Wolf	ʋˈolf	ʋ ˈo l f		wolf_NOUN_1			
 Alsatian	Alsatian			wolf_NOUN	Wolf	ʋˈolf	ʋ ˈo l f		wolf_NOUN_1			
-Swiss German	Swiss German			wolf_NOUN	Wolf	ʋˈolf	ʋ ˈo l f		wolf_NOUN_1			
+Swiss German	Swiss German			wolf_NOUN	Wolf	ʋˈolfː	ʋ ˈo l fː		wolf_NOUN_1			
 Proto-Germanic	Proto-Germanic			wool_NOUN_FEM	wullō	wˈullɔː	w ˈu l l ɔː		wool_NOUN_FEM_1			
 Gothic	Gothic			wool_NOUN_FEM	𐍅𐌿𐌻𐌻𐌰	wˈulla	w ˈu l l a		wool_NOUN_FEM_1			
 Old West Norse	Old West Norse			wool_NOUN_FEM	ull	ˈull	ˈu l l		wool_NOUN_FEM_1			
@@ -9946,7 +9946,7 @@ Upper Franconian	Upper Franconian			wish_VERB	winschn	vˈɪnʃn̩	v ˈɪ n ʃ n�
 Bavarian	Bavarian			wish_VERB	winschn	ʋˈinʃn̩	ʋ ˈi n ʃ n̩		wish_VERB_1			
 Swabian	Swabian			wish_VERB	winscha	ʋˈɪnʃa	ʋ ˈɪ n ʃ a		wish_VERB_1			
 Alsatian	Alsatian			wish_VERB	winsche	ʋˈinʃə	ʋ ˈi n ʃ ə		wish_VERB_1			
-Swiss German	Swiss German			wish_VERB	wünsche	ʋˈynʃə	ʋ ˈy n ʃ ə		wish_VERB_1			
+Swiss German	Swiss German			wish_VERB	wünsche	ʋˈynʃːə	ʋ ˈy n ʃː ə		wish_VERB_1			
 Proto-Germanic	Proto-Germanic			word_NOUN	wurdą	wˈurðɑ̃	w ˈu r ð ɑ̃		word_NOUN_1			
 Gothic	Gothic			word_NOUN	𐍅𐌰𐌿𐍂𐌳	wˈɔrt	w ˈɔ r t		word_NOUN_1			
 Old West Norse	Old West Norse			word_NOUN	orð	ˈorð	ˈo r ð		word_NOUN_1			
@@ -9984,7 +9984,7 @@ Upper Franconian	Upper Franconian			word_NOUN	Wort	vˈɔɐd̥	v ˈɔ ɐ d̥		wor
 Bavarian	Bavarian			word_NOUN	Woadd	ʋˈoɐd̥	ʋ ˈo ɐ d̥		word_NOUN_1			
 Swabian	Swabian			word_NOUN	Wort	ʋˈoʕt	ʋ ˈo ʕ t		word_NOUN_1			
 Alsatian	Alsatian			word_NOUN	Wort	ʋˈoʁt	ʋ ˈo ʁ t		word_NOUN_1			
-Swiss German	Swiss German			word_NOUN	Woort	ʋˈoːrt	ʋ ˈoː r t		word_NOUN_1			
+Swiss German	Swiss German			word_NOUN	Woort	ʋˈoːrtː	ʋ ˈoː r tː		word_NOUN_1			
 Proto-Germanic	Proto-Germanic			worm_NOUN	wurmiz	wˈurmiz	w ˈu r m i z		worm_NOUN_1			
 Gothic	Gothic			worm_NOUN	𐍅𐌰𐌿𐍂𐌼𐍃	wˈɔrms	w ˈɔ r m s		worm_NOUN_1			
 Old West Norse	Old West Norse			worm_NOUN	ormr	ˈormr	ˈo r m r		worm_NOUN_1			
@@ -10054,7 +10054,7 @@ Yiddish	Yiddish			thank_VERB	דאַנקען	dˈaŋkən	d ˈa ŋ k ə n		thank_VE
 Standard German	Standard German			thank_VERB	danken	dˈaŋkn̩	d ˈa ŋ k n̩		thank_VERB_1			
 Bavarian	Bavarian			thank_VERB	dankn	d̥ˈaŋɡ̊n̩	d̥ ˈa ŋ ɡ̊ n̩		thank_VERB_1			
 Swabian	Swabian			thank_VERB	danga	dˈaŋɡa	d ˈa ŋ ɡ a		thank_VERB_1			
-Swiss German	Swiss German			thank_VERB	danke	d̥ˈɒŋkə	d̥ ˈɒ ŋ k ə		thank_VERB_1			
+Swiss German	Swiss German			thank_VERB	danke	d̥ˈɒŋkːə	d̥ ˈɒ ŋ kː ə		thank_VERB_1			
 Proto-Germanic	Proto-Germanic			thick_ADJ	þekuz	θˈekuz	θ ˈe k u z		thick_ADJ_1			
 Old West Norse	Old West Norse			thick_ADJ	þykkr	θˈykkr	θ ˈy k k r		thick_ADJ_1			
 Icelandic	Icelandic			thick_ADJ	þykkur	θˈɪʰkʏr̥	θ ˈɪ ʰk ʏ r̥		thick_ADJ_1			
@@ -10088,7 +10088,7 @@ Yiddish	Yiddish			thick_ADJ	דיק	dˈɪk	d ˈɪ k		thick_ADJ_1
 Standard German	Standard German			thick_ADJ	dick	dˈɪk	d ˈɪ k		thick_ADJ_1			
 Upper Franconian	Upper Franconian			thick_ADJ	dick	d̥ˈɪɡ̊	d̥ ˈɪ ɡ̊		thick_ADJ_1			
 Swabian	Swabian			thick_ADJ	digg	dˈiɡ	d ˈi ɡ		thick_ADJ_1			
-Swiss German	Swiss German			thick_ADJ	dick	d̥ˈik	d̥ ˈi k		thick_ADJ_1			
+Swiss German	Swiss German			thick_ADJ	dick	d̥ˈikː	d̥ ˈi kː		thick_ADJ_1			
 Proto-Germanic	Proto-Germanic			thief_NOUN	þeubaz	θˈeu̯βɑz	θ ˈeu̯ β ɑ z		thief_NOUN_1			
 Gothic	Gothic			thief_NOUN	𐌸𐌹𐌿𐍆𐍃	θˈiu̯fs	θ ˈiu̯ f s		thief_NOUN_1			
 Old West Norse	Old West Norse			thief_NOUN	þjófr	θjˈoːvr	θ j ˈoː v r		thief_NOUN_1			
@@ -10196,7 +10196,7 @@ Upper Franconian	Upper Franconian			Teutonic_ADJ	deitsch	d̥ˈaɪ̯d̥ʃ	d̥ ˈa
 Bavarian	Bavarian			Teutonic_ADJ	deidsch	d̥ˈai̯d̥ʃ	d̥ ˈai̯ d̥ ʃ		Teutonic_ADJ_1			
 Swabian	Swabian			Teutonic_ADJ	deidsch	dˈəi̯dʃ	d ˈəi̯ d ʃ		Teutonic_ADJ_1			
 Alsatian	Alsatian			Teutonic_ADJ	ditsch	d̥ˈitʃ	d̥ ˈi t ʃ		Teutonic_ADJ_1			
-Swiss German	Swiss German			Teutonic_ADJ	düütsch	d̥ˈyːtʃ	d̥ ˈyː t ʃ		Teutonic_ADJ_1			
+Swiss German	Swiss German			Teutonic_ADJ	düütsch	d̥ˈyːtːʃː	d̥ ˈyː tː ʃː		Teutonic_ADJ_1			
 Proto-Germanic	Proto-Germanic			thirteen_NUM	þritehun	θrˈitexun	θ r ˈi t e x u n		thirteen_NUM_1			
 Old West Norse	Old West Norse			thirteen_NUM	þrettán	θrˈettɑːn	θ r ˈe t t ɑː n		thirteen_NUM_1			
 Icelandic	Icelandic			thirteen_NUM	þrettán	θrˈɛʰtaːu̯n	θ r ˈɛ ʰt aːu̯ n		thirteen_NUM_1			
@@ -10308,7 +10308,7 @@ Upper Franconian	Upper Franconian			press_VERB	drickn	d̥rˈɪɡ̊n̩	d̥ r ˈɪ
 Bavarian	Bavarian			press_VERB	drugga	d̥rˈuɡ̊a	d̥ r ˈu ɡ̊ a		press_VERB_1			
 Swabian	Swabian			press_VERB	drugga	dʁˈuɡa	d ʁ ˈu ɡ a		press_VERB_1			
 Alsatian	Alsatian			press_VERB	drucke	d̥ʁˈukə	d̥ ʁ ˈu k ə		press_VERB_1			
-Swiss German	Swiss German			press_VERB	drücke	d̥rˈykkə	d̥ r ˈy k k ə		press_VERB_1			
+Swiss German	Swiss German			press_VERB	drücke	d̥rˈykːə	d̥ r ˈy kː ə		press_VERB_1			
 Proto-Germanic	Proto-Germanic			thou_PRON	þū	θˈuː	θ ˈuː		thou_PRON_1			
 Gothic	Gothic			thou_PRON	𐌸𐌿	θˈuː	θ ˈuː		thou_PRON_1			
 Old West Norse	Old West Norse			thou_PRON	þú	θˈuː	θ ˈuː		thou_PRON_1			
@@ -10377,7 +10377,7 @@ Upper Franconian	Upper Franconian			thumb_NOUN	Damma	d̥ˈama	d̥ ˈa m a		thumb
 Bavarian	Bavarian			thumb_NOUN	Daam	d̥ˈaːm	d̥ ˈaː m		thumb_NOUN_1			
 Swabian	Swabian			thumb_NOUN	Daum	dˈao̯m	d ˈao̯ m		thumb_NOUN_1			
 Alsatian	Alsatian			thumb_NOUN	Düme	d̥ˈyːmə	d̥ ˈyː m ə		thumb_NOUN_1			
-Swiss German	Swiss German			thumb_NOUN	Tuume	tˈuːmə	t ˈuː m ə		thumb_NOUN_1			
+Swiss German	Swiss German			thumb_NOUN	Tuume	tːˈuːmə	tː ˈuː m ə		thumb_NOUN_1			
 Proto-Germanic	Proto-Germanic			thin_ADJ	þunniz	θˈunniz	θ ˈu n n i z		thin_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			thin_ADJ	tynn	tʰˈʏnn	tʰ ˈʏ n n		thin_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			thin_ADJ	tynn	tʰˈʏnn	tʰ ˈʏ n n		thin_ADJ_1			
@@ -10515,7 +10515,7 @@ Upper Franconian	Upper Franconian			thirst_NOUN	Dorschd	d̥ˈɔɐʃd̥	d̥ ˈɔ 
 Bavarian	Bavarian			thirst_NOUN	Duaschd	d̥ˈuɐʃd̥	d̥ ˈu ɐ ʃ d̥		thirst_NOUN_1			
 Swabian	Swabian			thirst_NOUN	Durschd	dˈuʕʃd	d ˈu ʕ ʃ d		thirst_NOUN_1			
 Alsatian	Alsatian			thirst_NOUN	Durscht	d̥ˈuʁʃt	d̥ ˈu ʁ ʃ t		thirst_NOUN_1			
-Swiss German	Swiss German			thirst_NOUN	Turscht	d̥ˈurʃt	d̥ ˈu r ʃ t		thirst_NOUN_1			
+Swiss German	Swiss German			thirst_NOUN	Turscht	d̥ˈurʃːtː	d̥ ˈu r ʃː tː		thirst_NOUN_1			
 Proto-Germanic	Proto-Germanic			dry_ADJ	þursuz	θˈursuz	θ ˈu r s u z		dry_ADJ_3			
 Old West Norse	Old West Norse			dry_ADJ	þurr	θˈurr	θ ˈu r r		dry_ADJ_3			
 Icelandic	Icelandic			dry_ADJ	þurr	θˈʏr̥	θ ˈʏ r̥		dry_ADJ_3			
@@ -10572,7 +10572,7 @@ Upper Franconian	Upper Franconian			thousand_NUM	dausnd	d̥ˈaʊ̯sn̩d̥	d̥ ˈ
 Bavarian	Bavarian			thousand_NUM	dausad	d̥ˈau̯sad̥	d̥ ˈau̯ s a d̥		thousand_NUM_1			
 Swabian	Swabian			thousand_NUM	dausad	dˈao̯sad	d ˈao̯ s a d		thousand_NUM_1			
 Alsatian	Alsatian			thousand_NUM	döisig	d̥ˈøi̯siʃ	d̥ ˈøi̯ s i ʃ		thousand_NUM_1			
-Swiss German	Swiss German			thousand_NUM	tuusig	tˈuːsiɡ̊	t ˈuː s i ɡ̊		thousand_NUM_1			
+Swiss German	Swiss German			thousand_NUM	tuusig	tːˈuːz̥iɡ̊	tː ˈuː z̥ i ɡ̊		thousand_NUM_1			
 Old West Norse	Old West Norse			dear_ADJ	kærr	cʰˈɛːrr	cʰ ˈɛː r r		dear_ADJ_1			
 Icelandic	Icelandic			dear_ADJ	kær	cʰˈaːi̯r̥	cʰ ˈaːi̯ r̥		dear_ADJ_1			
 Faroese	Faroese			dear_ADJ	kærur	ʧʰˈɛːa̯ɹʊɹ	ʧʰ ˈɛːa̯ ɹ ʊ ɹ		dear_ADJ_1			
