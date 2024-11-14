@@ -402,7 +402,7 @@ if __name__ == "__main__":
             dist_func=distFunc,
             cognates=cognate_params['cluster'],
             linkage_method=tree_params['linkage'],
-            outtree=outtree,
+            #outtree=outtree,
             root=tree_params['root'],
             code=exp_id,
         )
