@@ -19,14 +19,10 @@ phon_corr:
     refresh: []
     refresh_all: true
 
-cluster:
-    cognates: none
-
 # evaluation:
 #     precalculated_word_scores: 
 
 tree:
-    linkage: nj
     root: Latin
     reference: [
         "datasets/Romance/trees/ref/reference_001.tre",

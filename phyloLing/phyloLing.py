@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from functools import lru_cache
 from itertools import combinations, product
 from math import sqrt
-from statistics import mean
+from statistics import mean, stdev
 from typing import Self
 
 import bcubed
@@ -19,6 +19,7 @@ import pandas as pd
 import seaborn as sns
 from constants import (ALIGNMENT_PARAM_DEFAULTS, PAD_CH_DEFAULT, SEG_JOIN_CH,
                        TRANSCRIPTION_PARAM_DEFAULTS)
+from lingDist import get_noncognate_scores
 from matplotlib import pyplot as plt
 from phonCorr import PhonCorrelator
 from phonUtils.initPhoneData import suprasegmental_diacritics
@@ -305,6 +306,19 @@ class LexicalDataset:
                 correlator = lang1.get_phoneme_correlator(lang2)
                 correlator.compute_phone_corrs(**kwargs)
 
+    def compute_noncognate_thresholds(self, eval_func, doculect_pairs=None, **kwargs):
+        """Computes the mean and standard deviation score between a sample of non-synonymous word pairs from a set of doculects according to a specified evaluation function."""
+        combined_noncognate_scores = []
+        if doculect_pairs is None:
+            doculect_pairs = self.get_doculect_pairs()
+        for lang1, lang2 in doculect_pairs:
+            self.logger.info(f"Computing non-cognate thresholds: {lang1.name}-{lang2.name}")
+            noncognate_scores = get_noncognate_scores(lang1, lang2, eval_func=eval_func, **kwargs)
+            combined_noncognate_scores.extend(noncognate_scores)
+        mean_nc_score = mean(noncognate_scores)
+        nc_score_stdev = stdev(noncognate_scores)
+        return mean_nc_score, nc_score_stdev
+
     def load_phoneme_pmi(self, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
 
@@ -425,12 +439,15 @@ class LexicalDataset:
                 elif phon_env:
                     self.logger.warning(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}')
 
-    def get_doculect_pairs(self, bidirectional=False):
+    def get_doculect_pairs(self, bidirectional=False, include_self_pairs=True):
         if bidirectional:
             doculect_pairs = product(self.languages.values(), self.languages.values())
         else:
             doculect_pairs = combinations(self.languages.values(), 2)
-        return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs if lang1 != lang2],
+        if include_self_pairs:
+            doculect_pairs = list(doculect_pairs)
+            doculect_pairs.extend([(lang, lang) for lang in self.languages.values()])
+        return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs],
                       key=lambda x: (x[0].name, x[1].name))
 
     def cognate_set_dendrogram(self,  # TODO UPDATE THIS FUNCTION
@@ -479,34 +496,39 @@ class LexicalDataset:
     def cluster_cognates(self,
                          concept_list,
                          dist_func,
-                         method='average',
+                         cluster_threshold=None,
+                         code=None,
                          **kwargs):
 
         # TODO make option for instead using k-means clustering given a known/desired number of clusters, as a mutually exclusive parameter with cutoff
-
-        self.logger.info('Clustering cognates...')
-        self.logger.debug(f'Cluster function: {dist_func.name}')
-        self.logger.debug(f'Cluster threshold: {dist_func.cluster_threshold}')
-
         concept_list = [concept for concept in concept_list if len(self.concepts[concept]) > 1]
-        self.logger.debug(f'Total concepts: {len(concept_list)}')
         clustered_cognates = {}
+        
+        # Unless otherwise specified, compute cluster threshold based on mean and standard deviation
+        # of non-synonymous word pair scores across all doculect pairs
+        if cluster_threshold is None and dist_func.cluster_threshold is not None:
+            cluster_threshold = dist_func.cluster_threshold
+        elif cluster_threshold is None:
+            mean_nc, stdev_nc = self.compute_noncognate_thresholds(dist_func)
+            cluster_threshold = mean_nc - stdev_nc
+            self.logger.info(f"Auto-computed cluster threshold: {round(cluster_threshold, 3)}")
+        self.logger.info(f'Clustering cognates with threshold={round(cluster_threshold, 3)}...')
+
         for concept in sorted(concept_list):
-            self.logger.debug(f'Clustering words for "{concept}"...')
             words = [word for lang in self.concepts[concept] for word in self.concepts[concept][lang]]
             clusters = cluster_items(group=words,
                                      dist_func=dist_func,
                                      sim=dist_func.sim,
-                                     cutoff=dist_func.cluster_threshold,
+                                     cutoff=cluster_threshold,
                                      **kwargs)
             clustered_cognates[concept] = clusters
 
         # Create code and store the result
-        code = self.generate_test_code(dist_func, cognates='auto')
+        if code is None:
+            code = self.generate_test_code(dist_func, cognates='auto', cluster_threshold=cluster_threshold)
         self.clustered_cognates[code] = clustered_cognates
-        self.write_cognate_index(clustered_cognates, os.path.join(self.cognates_dir, f'{code}.cog'))
 
-        return clustered_cognates
+        return clustered_cognates, code
 
     def write_cognate_index(self,
                             clustered_cognates,
@@ -540,7 +562,7 @@ class LexicalDataset:
 
         self.logger.info(f'Wrote clustered cognate index to {output_file}')
 
-    def load_cognate_index(self, index_file, sep='\t', variants_sep='~'):
+    def load_cognate_index(self, index_file, code=None, sep='\t', variants_sep='~'):
         assert sep != variants_sep
         index = defaultdict(lambda: defaultdict(lambda: []))
         with open(index_file, 'r') as f:
@@ -571,20 +593,10 @@ class LexicalDataset:
                             word = lang._get_Word(form_i, concept=concept, cognate_class='_'.join(cognate_id))
                             index[concept][cognate_class].append(word)
 
-        return index
+        if code:
+            self.clustered_cognates[code] = index
 
-    def load_clustered_cognates(self, **kwargs):
-        cognate_files = glob.glob(f'{self.cognates_dir}/*.cog')
-        for cognate_file in cognate_files:
-            code = os.path.splitext(os.path.basename(cognate_file))[0]
-            self.clustered_cognates[code] = self.load_cognate_index(cognate_file, **kwargs)
-        n = len(cognate_files)
-        s = f'Loaded {n} cognate'
-        if n > 1 or n < 1:
-            s += ' indices.'
-        else:
-            s += ' index.'
-        self.logger.info(s)
+        return index
 
     def evaluate_clusters(self, clustered_cognates, method='bcubed'):
         """Evaluates B-cubed precision, recall, and F1 of results of automatic
@@ -696,13 +708,12 @@ class LexicalDataset:
                         cluster_func=None,
                         cognates='auto',
                         outfile=None,
+                        code=None,
                         **kwargs):
 
         # Try to skip re-calculation of distance matrix by retrieving
         # a previously computed distance matrix by its code
-        code = self.generate_test_code(dist_func, cognates=cognates, **kwargs)
-
-        if code in self.distance_matrices:
+        if code and code in self.distance_matrices:
             return self.distance_matrices[code]
 
         # Use all available concepts by default
@@ -716,32 +727,37 @@ class LexicalDataset:
         # Automatic cognate clustering
         if cognates == 'auto':
             assert cluster_func is not None
-            cluster_code = self.generate_test_code(cluster_func, cognates='auto')
 
-            if cluster_code in self.clustered_cognates:
-                clustered_concepts = self.clustered_cognates[cluster_code]
+            if code and code in self.clustered_cognates:
+                clustered_concepts = self.clustered_cognates[code]
             else:
-                clustered_concepts = self.cluster_cognates(concept_list, dist_func=cluster_func)
+                clustered_concepts, _ = self.cluster_cognates(concept_list, dist_func=cluster_func, code=code)
 
         # Use gold cognate classes
         elif cognates == 'gold':
-            clustered_concepts = defaultdict(lambda: defaultdict(lambda: []))
-            for concept in concept_list:
-                # TODO there may be a better way to isolate these cognate IDs
-                cognate_ids = [cognate_id for cognate_id in self.cognate_sets if cognate_id.rsplit('_', maxsplit=1)[0] == concept]
-                for cognate_id in cognate_ids:
-                    for lang in self.cognate_sets[cognate_id]:
-                        for word in self.cognate_sets[cognate_id][lang]:
-                            clustered_concepts[concept][cognate_id].append(word)
+            if 'gold' in self.clustered_cognates:
+                clustered_concepts = self.clustered_cognates['gold']
+            else:
+                clustered_concepts = defaultdict(lambda: defaultdict(lambda: []))
+                for concept in concept_list:
+                    # TODO there may be a better way to isolate these cognate IDs
+                    cognate_ids = [cognate_id for cognate_id in self.cognate_sets if cognate_id.rsplit('_', maxsplit=1)[0] == concept]
+                    for cognate_id in cognate_ids:
+                        for lang in self.cognate_sets[cognate_id]:
+                            for word in self.cognate_sets[cognate_id][lang]:
+                                clustered_concepts[concept][cognate_id].append(word)
 
         # No separation of cognates/non-cognates:
         # all synonymous words are evaluated irrespective of cognacy
         # The concept itself is used as a dummy cognate class ID
         # NB: this logic will not work if the base concept ID already encodes cognate class
         elif cognates == 'none':
-            clustered_concepts = {concept: {concept: [
-                word for lang in self.concepts[concept]
-                for word in self.concepts[concept][lang]]} for concept in concept_list}
+            clustered_concepts = {
+                concept: {
+                    1: [word for lang in self.concepts[concept] for word in self.concepts[concept][lang]]
+                }
+                for concept in concept_list
+            }
 
         # Raise error for unrecognized cognate clustering methods
         else:
@@ -831,11 +847,6 @@ class LexicalDataset:
 
         group = [self.languages[lang] for lang in self.languages]
         labels = [lang.name for lang in group]
-
-        if outtree is None:
-            _, timestamp = create_timestamp()
-            outtree = os.path.join(self.tree_dir, f'{timestamp}.tre')
-
         lm = self.linkage_matrix(dist_func,
                                  concept_list=concept_list,
                                  cluster_func=cluster_func,
@@ -976,7 +987,7 @@ class LexicalDataset:
             if code in self.clustered_cognates:
                 clustered_concepts = self.clustered_cognates[code]
             else:
-                clustered_concepts = self.cluster_cognates(concept_list, dist_func=cluster_func)
+                clustered_concepts, _ = self.cluster_cognates(concept_list, dist_func=cluster_func)
 
         # Use gold cognate classes
         elif cognates == 'gold':

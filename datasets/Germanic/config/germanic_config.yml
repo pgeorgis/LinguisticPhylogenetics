@@ -15,18 +15,16 @@ transcription:
         ch_to_remove: ['̩']
 
 phon_corr:
-    phon_env: false
     refresh: []
     refresh_all: true
 
-cluster:
-    cognates: none
+# cognates:
+#     cluster_threshold: 1.334
 
 # evaluation:
-#     precalculated_word_scores:
+#     precalculated_word_scores: 
 
 tree:
-    linkage: nj
     root: Proto-Germanic
     reference: [
         "datasets/Germanic/trees/ref/reference_001.tre"

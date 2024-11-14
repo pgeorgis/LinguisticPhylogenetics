@@ -35,15 +35,16 @@ phon_corr:
   sample_size: 0.8
   min_corr: 2
   ngram: 1
-  phon_env: true 
+  phon_env: false 
   refresh: []
   refresh_all: false
   copy_to_outdir: true
 
-cluster:
-  cognates: auto
-  method: hybrid
-  cluster_threshold: 0.5
+cognates:
+  cluster: auto
+  cluster_method: hybrid
+  cluster_threshold: 
+  cognate_index:
 
 evaluation:
   similarity: gradient
@@ -53,7 +54,7 @@ evaluation:
   pmi_weight: 0.9
   surprisal_weight: 2.65
   phon_weight: 1.25
-  min_similarity: 0.7
+  min_similarity: 0
   normalize_weights: false
   exclude_synonyms: true
   calibrate: false
