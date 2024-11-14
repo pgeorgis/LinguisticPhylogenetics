@@ -22,7 +22,8 @@ Luxembourgish	Luxembourgish			deadly_ADJ	déidlech	dˈɜɪ̯dləɕ	d ˈɜɪ̯ d 
 Pennsylvania German	Pennsylvania German			deadly_ADJ	deedlich	dˈeːdlɪç	d ˈeː d l ɪ ç		deadly_ADJ_1			
 Yiddish	Yiddish			deadly_ADJ		tˈɔɪ̯tɫəχ	t ˈɔɪ̯ t ɫ ə χ		deadly_ADJ_1			
 Standard German	Standard German			deadly_ADJ	tödlich	tʰˈøːdlɪç	tʰ ˈøː d l ɪ ç		deadly_ADJ_1			
-Bavarian	Bavarian			deadly_ADJ	dedlich	d̥ˈeːd̥liç	d̥ ˈeː d̥ l i ç		deadly_ADJ_1			
+Upper Franconian	Upper Franconian			deadly_ADJ	deedli	d̥ˈeːd̥li	d̥ ˈeː d̥ l i		deadly_ADJ_1			
+Bavarian	Bavarian			deadly_ADJ	dedli	d̥ˈeːd̥li	d̥ ˈeː d̥ l i		deadly_ADJ_1			
 Swiss German	Swiss German			deadly_ADJ	tödlich	tˈøːd̥liχ	t ˈøː d̥ l i χ		deadly_ADJ_1			
 Proto-Germanic	Proto-Germanic			bee_NOUN	imbī	ˈimbiː	ˈi m b iː		bee_NOUN_1			
 Saterland Frisian	Saterland Frisian			bee_NOUN	Íeme	ˈiːmə	ˈiː m ə		bee_NOUN_1			
@@ -36,6 +37,7 @@ Ripuarian	Ripuarian			bee_NOUN	Imm	ˈɪm	ˈɪ m		bee_NOUN_1
 Pennsylvania German	Pennsylvania German			bee_NOUN	Iem	ˈiːm	ˈiː m		bee_NOUN_1			
 Palatine German	Palatine German			bee_NOUN	Im	ˈiːm	ˈiː m		bee_NOUN_1			
 Standard German	Standard German			bee_NOUN	Imme	ˈɪmə	ˈɪ m ə		bee_NOUN_1			
+Upper Franconian	Upper Franconian			bee_NOUN	Imma	ˈɪma	ˈɪ m a		bee_NOUN_1			
 Bavarian	Bavarian			bee_NOUN	Imbbm	ˈimb̥m	ˈi m b̥ m		bee_NOUN_1			
 Swabian	Swabian			bee_NOUN	Imm	ˈim	ˈi m		bee_NOUN_1			
 Alsatian	Alsatian			bee_NOUN	Imm	ˈim	ˈi m		bee_NOUN_1			
@@ -64,6 +66,7 @@ Hessian	Hessian			cheese_NOUN	Khẹẹs	kʰˈeːs	kʰ ˈeː s		cheese_NOUN_1
 Wymysorys	Wymysorys			cheese_NOUN	kys	kˈɘ̟s	k ˈɘ̟ s		cheese_NOUN_1			
 Yiddish	Yiddish			cheese_NOUN	קעז	kˈɛz	k ˈɛ z		cheese_NOUN_1			
 Standard German	Standard German			cheese_NOUN	Käse	kʰˈɛːzə	kʰ ˈɛː z ə		cheese_NOUN_1			
+Upper Franconian	Upper Franconian			cheese_NOUN	Kees	ɡ̊ˈeːs	ɡ̊ ˈeː s		cheese_NOUN_1			
 Bavarian	Bavarian			cheese_NOUN	Kààs	kʰˈaːs	kʰ ˈaː s		cheese_NOUN_1			
 Swabian	Swabian			cheese_NOUN	Käs	kʰˈɛːs	kʰ ˈɛː s		cheese_NOUN_1			
 Alsatian	Alsatian			cheese_NOUN	Käs	kʰˈæːz̥	kʰ ˈæː z̥		cheese_NOUN_1			
@@ -100,6 +103,7 @@ Hessian	Hessian			church_NOUN_FEM	Khȁǎsch	kʰˈæɐʃ	kʰ ˈæ ɐ ʃ		church_N
 Wymysorys	Wymysorys			church_NOUN_FEM	kiych	kˈiəç	k ˈi ə ç		church_NOUN_FEM_1			
 Yiddish	Yiddish			church_NOUN_FEM	קירך	kˈɪʀχ	k ˈɪ ʀ χ		church_NOUN_FEM_1			
 Standard German	Standard German			church_NOUN_FEM	Kirche	kʰˈɪɐçə	kʰ ˈɪ ɐ ç ə		church_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			church_NOUN_FEM	Kärch	ɡ̊ˈɘç	ɡ̊ ˈɘ ç		church_NOUN_FEM_1			
 Bavarian	Bavarian			church_NOUN_FEM	Kiach	kʰˈiɐç	kʰ ˈi ɐ ç		church_NOUN_FEM_1			
 Swabian	Swabian			church_NOUN_FEM	Kirch	kʰˈʌç	kʰ ˈʌ ç		church_NOUN_FEM_1			
 Alsatian	Alsatian			church_NOUN_FEM	Kirich	kʰˈiːʁiʃ	kʰ ˈiː ʁ i ʃ		church_NOUN_FEM_1			
@@ -158,6 +162,7 @@ Hessian	Hessian			speech_NOUN_FEM	Schprååch	ʒ̥pʀˈɑːx	ʒ̥ p ʀ ˈɑː x	
 Wymysorys	Wymysorys			speech_NOUN_FEM	śpröch	ʃprˈøx	ʃ p r ˈø x		speech_NOUN_FEM_1			
 Yiddish	Yiddish			speech_NOUN_FEM	שפּראַך	ʃpʀˈaχ	ʃ p ʀ ˈa χ		speech_NOUN_FEM_1			
 Standard German	Standard German			speech_NOUN_FEM	Sprache	ʃpʁˈaːxə	ʃ p ʁ ˈaː x ə		speech_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			speech_NOUN_FEM	Schbrooch	ʃb̥rˈoːx	ʃ b̥ r ˈoː x		speech_NOUN_FEM_1			
 Bavarian	Bavarian			speech_NOUN_FEM	Schbråch	ʃb̥rˈɒːx	ʃ b̥ r ˈɒː x		speech_NOUN_FEM_1			
 Swabian	Swabian			speech_NOUN_FEM	Schbroch	ʃbʁˈɔːx	ʃ b ʁ ˈɔː x		speech_NOUN_FEM_1			
 Alsatian	Alsatian			speech_NOUN_FEM	Sproch	ʃpʁˈoːx	ʃ p ʁ ˈoː x		speech_NOUN_FEM_1			
@@ -191,6 +196,7 @@ Palatine German	Palatine German			edge_NOUN	Eck	ˈɛɡ̊	ˈɛ ɡ̊		edge_NOUN_1
 Hessian	Hessian			edge_NOUN	Ẹkk	ˈek	ˈe k		edge_NOUN_1			
 Yiddish	Yiddish			edge_NOUN	עק	ˈɛk	ˈɛ k		edge_NOUN_1			
 Standard German	Standard German			edge_NOUN	Ecke	ˈɛkə	ˈɛ k ə		edge_NOUN_1			
+Upper Franconian	Upper Franconian			edge_NOUN	Eck	ˈɛɡ̊	ˈɛ ɡ̊		edge_NOUN_1			
 Bavarian	Bavarian			edge_NOUN	Egg	ˈeɡ̊	ˈe ɡ̊		edge_NOUN_1			
 Swabian	Swabian			edge_NOUN	Egg	ˈɛɡ	ˈɛ ɡ		edge_NOUN_1			
 Alsatian	Alsatian			edge_NOUN	Eck	ˈek	ˈe k		edge_NOUN_1			
@@ -229,6 +235,7 @@ Hessian	Hessian			eight_NUM	åcht	ˈɑxt	ˈɑ x t		eight_NUM_1
 Wymysorys	Wymysorys			eight_NUM	aocht	ˈɑxt	ˈɑ x t		eight_NUM_1			
 Yiddish	Yiddish			eight_NUM	אַכט	ˈaχt	ˈa χ t		eight_NUM_1			
 Standard German	Standard German			eight_NUM	acht	ˈaxt	ˈa x t		eight_NUM_1			
+Upper Franconian	Upper Franconian			eight_NUM	acht	ˈaxd̥	ˈa x d̥		eight_NUM_1			
 Bavarian	Bavarian			eight_NUM	achde	ˈɑxd̥ə	ˈɑ x d̥ ə		eight_NUM_1			
 Swabian	Swabian			eight_NUM	achd	ˈaxd	ˈa x d		eight_NUM_1			
 Alsatian	Alsatian			eight_NUM	àcht	ˈɒxt	ˈɒ x t		eight_NUM_1			
@@ -264,6 +271,7 @@ Pennsylvania German	Pennsylvania German			oak_NOUN_FEM	Eeche	ˈeːçə	ˈeː ç 
 Palatine German	Palatine German			oak_NOUN_FEM	Ääch	ˈɛːʃ	ˈɛː ʃ		oak_NOUN_FEM_1			
 Wymysorys	Wymysorys			oak_NOUN_FEM	aach	ˈax	ˈa x		oak_NOUN_FEM_1			
 Standard German	Standard German			oak_NOUN_FEM	Eiche	ˈaɪ̯çə	ˈaɪ̯ ç ə		oak_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			oak_NOUN_FEM	Aang	ˈaːŋ	ˈaː ŋ		oak_NOUN_FEM_1			
 Bavarian	Bavarian			oak_NOUN_FEM	Oach	ˈoɐ̯x	ˈoɐ̯ x		oak_NOUN_FEM_1			
 Swabian	Swabian			oak_NOUN_FEM	Oich	ˈɔe̯ç	ˈɔe̯ ç		oak_NOUN_FEM_1			
 Alsatian	Alsatian			oak_NOUN_FEM	Eich	ˈəi̯ʃ	ˈəi̯ ʃ		oak_NOUN_FEM_1			
@@ -314,6 +322,7 @@ Hessian	Hessian			eleven_NUM	ällf	ˈɛlf	ˈɛ l f		eleven_NUM_1
 Wymysorys	Wymysorys			eleven_NUM	alf	ˈalf	ˈa l f		eleven_NUM_1			
 Yiddish	Yiddish			eleven_NUM	עלף	ˈɛɫf	ˈɛ ɫ f		eleven_NUM_1			
 Standard German	Standard German			eleven_NUM	elf	ˈɛlf	ˈɛ l f		eleven_NUM_1			
+Upper Franconian	Upper Franconian			eleven_NUM	elfa	ˈɛlfa	ˈɛ l f a		eleven_NUM_1			
 Bavarian	Bavarian			eleven_NUM	äife	ˈejfə	ˈe j f ə		eleven_NUM_1			
 Swabian	Swabian			eleven_NUM	älf	ˈɛlf	ˈɛ l f		eleven_NUM_1			
 Alsatian	Alsatian			eleven_NUM	elef	ˈeːləf	ˈeː l ə f		eleven_NUM_1			
@@ -351,6 +360,7 @@ Palatine German	Palatine German			one_NUM	ään	ˈɛːn	ˈɛː n		one_NUM_1
 Wymysorys	Wymysorys			one_NUM	an	ˈan	ˈa n		one_NUM_1			
 Yiddish	Yiddish			one_NUM	איין	ˈɛɪ̯n	ˈɛɪ̯ n		one_NUM_1			
 Standard German	Standard German			one_NUM	ein	ˈaɪ̯n	ˈaɪ̯ n		one_NUM_1			
+Upper Franconian	Upper Franconian			one_NUM	a	ˈaː	ˈaː		one_NUM_1			
 Bavarian	Bavarian			one_NUM	oa	ˈoɐ̯	ˈoɐ̯		one_NUM_1			
 Swabian	Swabian			one_NUM	ois	ˈɔe̯s	ˈɔe̯ s		one_NUM_1			
 Swiss German	Swiss German			one_NUM	äi	ˈæi̯	ˈæi̯		one_NUM_1			
@@ -388,6 +398,7 @@ Hessian	Hessian			egg_NOUN_NEU	Ai	ˈai̯	ˈai̯		egg_NOUN_NEU_1
 Wymysorys	Wymysorys			egg_NOUN_NEU	aj	ˈai̯	ˈai̯		egg_NOUN_NEU_1			
 Yiddish	Yiddish			egg_NOUN_NEU	איי	ˈɛɪ̯	ˈɛɪ̯		egg_NOUN_NEU_1			
 Standard German	Standard German			egg_NOUN_NEU	Ei	ˈaɪ̯	ˈaɪ̯		egg_NOUN_NEU_1			
+Upper Franconian	Upper Franconian			egg_NOUN_NEU	Ää	ˈɛː	ˈɛː		egg_NOUN_NEU_1			
 Bavarian	Bavarian			egg_NOUN_NEU	Oa	ˈoɐ̯	ˈoɐ̯		egg_NOUN_NEU_1			
 Swabian	Swabian			egg_NOUN_NEU	Oi	ˈɔe̯	ˈɔe̯		egg_NOUN_NEU_1			
 Alsatian	Alsatian			egg_NOUN_NEU	Ei	ˈəi̯	ˈəi̯		egg_NOUN_NEU_1			
@@ -421,6 +432,7 @@ Hessian	Hessian			old_ADJ	aal	ˈaːl	ˈaː l		old_ADJ_1
 Wymysorys	Wymysorys			old_ADJ	aołd	ˈɑwd̥	ˈɑ w d̥		old_ADJ_1			
 Yiddish	Yiddish			old_ADJ	אַלט	ˈaɫt	ˈa ɫ t		old_ADJ_1			
 Standard German	Standard German			old_ADJ	alt	ˈalt	ˈa l t		old_ADJ_1			
+Upper Franconian	Upper Franconian			old_ADJ	alt	ˈald̥	ˈa l d̥		old_ADJ_1			
 Bavarian	Bavarian			old_ADJ	oid	ˈojd̥	ˈo j d̥		old_ADJ_1			
 Swabian	Swabian			old_ADJ	ald	ˈald	ˈa l d		old_ADJ_1			
 Alsatian	Alsatian			old_ADJ	àlt	ˈɒlt	ˈɒ l t		old_ADJ_1			
@@ -457,6 +469,7 @@ Palatine German	Palatine German			all_ADJ	all	ˈɑl	ˈɑ l		all_ADJ_1
 Hessian	Hessian			all_ADJ	all	ˈal	ˈa l		all_ADJ_1			
 Yiddish	Yiddish			all_ADJ	אַלע	ˈaɫə	ˈa ɫ ə		all_ADJ_1			
 Standard German	Standard German			all_ADJ	all	ˈal	ˈa l		all_ADJ_1			
+Upper Franconian	Upper Franconian			all_ADJ	all	ˈal	ˈa l		all_ADJ_1			
 Bavarian	Bavarian			all_ADJ	oi	ˈoj	ˈo j		all_ADJ_1			
 Swabian	Swabian			all_ADJ	älle	ˈɛle	ˈɛ l e		all_ADJ_1			
 Alsatian	Alsatian			all_ADJ	àll	ˈɒl	ˈɒ l		all_ADJ_1			
@@ -494,6 +507,7 @@ Hessian	Hessian			other_ADJ	ånnä	ˈɑnæ̆	ˈɑ n æ̆		other_ADJ_1
 Wymysorys	Wymysorys			other_ADJ	aonder	ˈɑndɛr	ˈɑ n d ɛ r		other_ADJ_1			
 Yiddish	Yiddish			other_ADJ	אַנדער	ˈandəʀ	ˈa n d ə ʀ		other_ADJ_1			
 Standard German	Standard German			other_ADJ	anderer	ˈandəʁɐ	ˈa n d ə ʁ ɐ		other_ADJ_1			
+Upper Franconian	Upper Franconian			other_ADJ	anner	ˈanɐ	ˈa n ɐ		other_ADJ_1			
 Bavarian	Bavarian			other_ADJ	anda	ˈɑnd̥a	ˈɑ n d̥ a		other_ADJ_1			
 Swabian	Swabian			other_ADJ	andr	ˈandʌ	ˈa n d ʌ		other_ADJ_1			
 Alsatian	Alsatian			other_ADJ	ànder	ˈɒnd̥əʁ	ˈɒ n d̥ ə ʁ		other_ADJ_1			
@@ -534,6 +548,7 @@ Hessian	Hessian			apple_NOUN	Abbl	ˈab̥l̩	ˈa b̥ l̩		apple_NOUN_2
 Wymysorys	Wymysorys			apple_NOUN	epuł	ˈɛpuw	ˈɛ p u w		apple_NOUN_2			
 Yiddish	Yiddish			apple_NOUN	עפּל	ˈɛpəɫ	ˈɛ p ə ɫ		apple_NOUN_2			
 Standard German	Standard German			apple_NOUN	Apfel	ˈap͡fl̩	ˈa p͡f l̩		apple_NOUN_2			
+Upper Franconian	Upper Franconian			apple_NOUN	Abfl	ˈab̥͡v̥l̩	ˈa b̥͡v̥ l̩		apple_NOUN_2			
 Bavarian	Bavarian			apple_NOUN	Abbfe	ˈɑb̥͡v̥ə	ˈɑ b̥͡v̥ ə		apple_NOUN_2			
 Swabian	Swabian			apple_NOUN	Abfl	ˈab̥͡fl̩	ˈa b̥͡f l̩		apple_NOUN_2			
 Alsatian	Alsatian			apple_NOUN	Àpfel	ˈɒp͡fl̩	ˈɒ p͡f l̩		apple_NOUN_2			
@@ -570,6 +585,7 @@ Palatine German	Palatine German			ape_NOUN	Aff	ˈɑf	ˈɑ f		ape_NOUN_1
 Hessian	Hessian			ape_NOUN	Aff	ˈaf	ˈa f		ape_NOUN_1			
 Yiddish	Yiddish			ape_NOUN	אַפֿע	ˈafə	ˈa f ə		ape_NOUN_1			
 Standard German	Standard German			ape_NOUN	Affe	ˈafə	ˈa f ə		ape_NOUN_1			
+Upper Franconian	Upper Franconian			ape_NOUN	Aff	ˈaf	ˈa f		ape_NOUN_1			
 Bavarian	Bavarian			ape_NOUN	Aff	ˈɑf	ˈɑ f		ape_NOUN_1			
 Swabian	Swabian			ape_NOUN	Aff	ˈaf	ˈa f		ape_NOUN_1			
 Alsatian	Alsatian			ape_NOUN	Àff	ˈɒf	ˈɒ f		ape_NOUN_1			
@@ -608,6 +624,7 @@ Palatine German	Palatine German			arm_NOUN	Aarm	ˈɑːɐm	ˈɑː ɐ m		arm_NOUN_
 Hessian	Hessian			arm_NOUN	Ååm	ˈɑːm	ˈɑː m		arm_NOUN_1			
 Yiddish	Yiddish			arm_NOUN	אָרעם	ˈɔʀəm	ˈɔ ʀ ə m		arm_NOUN_1			
 Standard German	Standard German			arm_NOUN	Arm	ˈaɐm	ˈa ɐ m		arm_NOUN_1			
+Upper Franconian	Upper Franconian			arm_NOUN	Arm	ˈaɐm	ˈa ɐ m		arm_NOUN_1			
 Bavarian	Bavarian			arm_NOUN	Oam	ˈoɐm	ˈo ɐ m		arm_NOUN_1			
 Swabian	Swabian			arm_NOUN	Arm	ˈaʕm	ˈa ʕ m		arm_NOUN_1			
 Alsatian	Alsatian			arm_NOUN	Àrm	ˈɒːʁm	ˈɒː ʁ m		arm_NOUN_1			
@@ -647,6 +664,7 @@ Hessian	Hessian			ash_NOUN	Äsch	ˈɛʃ	ˈɛ ʃ		ash_NOUN_1
 Wymysorys	Wymysorys			ash_NOUN	oś	ˈɔʃ	ˈɔ ʃ		ash_NOUN_1			
 Yiddish	Yiddish			ash_NOUN	אַש	ˈaʃ	ˈa ʃ		ash_NOUN_1			
 Standard German	Standard German			ash_NOUN	Asche	ˈaʃə	ˈa ʃ ə		ash_NOUN_1			
+Upper Franconian	Upper Franconian			ash_NOUN	Aschn	ˈaʃn̩	ˈa ʃ n̩		ash_NOUN_1			
 Swabian	Swabian			ash_NOUN	Äsch	ˈɛʃ	ˈɛ ʃ		ash_NOUN_1			
 Swiss German	Swiss German			ash_NOUN	Äsche	ˈæʃʃə	ˈæ ʃ ʃ ə		ash_NOUN_1			
 Proto-Germanic	Proto-Germanic			eye_NOUN	augô	ˈɑu̯ɣɔːː	ˈɑu̯ ɣ ɔːː		eye_NOUN_1			
@@ -684,6 +702,7 @@ Hessian	Hessian			eye_NOUN	Aach	ˈaːx	ˈaː x		eye_NOUN_1
 Wymysorys	Wymysorys			eye_NOUN	aojg	ˈɑi̯ɡ̊	ˈɑi̯ ɡ̊		eye_NOUN_1			
 Yiddish	Yiddish			eye_NOUN	אויג	ˈɔɪ̯ɡ	ˈɔɪ̯ ɡ		eye_NOUN_1			
 Standard German	Standard German			eye_NOUN	Auge	ˈaʊ̯ɡə	ˈaʊ̯ ɡ ə		eye_NOUN_1			
+Upper Franconian	Upper Franconian			eye_NOUN	Ach	ˈaːx	ˈaː x		eye_NOUN_1			
 Bavarian	Bavarian			eye_NOUN	Aug	ˈau̯ɡ̊	ˈau̯ ɡ̊		eye_NOUN_1			
 Swabian	Swabian			eye_NOUN	Aug	ˈao̯ɡ	ˈao̯ ɡ		eye_NOUN_1			
 Alsatian	Alsatian			eye_NOUN	Auw	ˈœʋ	ˈœ ʋ		eye_NOUN_1			
@@ -723,6 +742,7 @@ Hessian	Hessian			ear_NOUN	ơơǎ	ˈoːɐ	ˈoː ɐ		ear_NOUN_1
 Wymysorys	Wymysorys			ear_NOUN	ür	ˈʏr	ˈʏ r		ear_NOUN_1			
 Yiddish	Yiddish			ear_NOUN	אויער	ˈɔɪ̯əʀ	ˈɔɪ̯ ə ʀ		ear_NOUN_1			
 Standard German	Standard German			ear_NOUN	Ohr	ˈoːɐ	ˈoː ɐ		ear_NOUN_1			
+Upper Franconian	Upper Franconian			ear_NOUN	Uhr	ˈuːɐ	ˈuː ɐ		ear_NOUN_1			
 Bavarian	Bavarian			ear_NOUN	Oa	ˈoɐ	ˈo ɐ		ear_NOUN_1			
 Swabian	Swabian			ear_NOUN	Ohr	ˈoːʕ	ˈoː ʕ		ear_NOUN_1			
 Alsatian	Alsatian			ear_NOUN	Ohr	ˈoːʁ	ˈoː ʁ		ear_NOUN_1			
@@ -760,6 +780,7 @@ Palatine German	Palatine German			bone_NOUN	Baaⁿ	b̥ˈɑ̃ː	b̥ ˈɑ̃ː		bon
 Hessian	Hessian			bone_NOUN	Baañ	b̥ˈãː	b̥ ˈãː		bone_NOUN_1			
 Yiddish	Yiddish			bone_NOUN	ביין	bˈɛɪ̯n	b ˈɛɪ̯ n		bone_NOUN_1			
 Standard German	Standard German			bone_NOUN	Bein	bˈaɪ̯n	b ˈaɪ̯ n		bone_NOUN_1			
+Upper Franconian	Upper Franconian			bone_NOUN	Ba	b̥ˈaː	b̥ ˈaː		bone_NOUN_1			
 Bavarian	Bavarian			bone_NOUN	Boa	b̥ˈoɐ̯	b̥ ˈoɐ̯		bone_NOUN_1			
 Swabian	Swabian			bone_NOUN	Boi	bˈɔe̯	b ˈɔe̯		bone_NOUN_1			
 Alsatian	Alsatian			bone_NOUN	Bein	b̥ˈəi̯n	b̥ ˈəi̯ n		bone_NOUN_1			
@@ -848,6 +869,7 @@ Hessian	Hessian			better_ADJ	bẹssä	b̥ˈesæ̆	b̥ ˈe s æ̆		better_ADJ_1
 Wymysorys	Wymysorys			better_ADJ	beser	bˈɛsɛr	b ˈɛ s ɛ r		better_ADJ_1			
 Yiddish	Yiddish			better_ADJ	בעסער	bˈɛsəʀ	b ˈɛ s ə ʀ		better_ADJ_1			
 Standard German	Standard German			better_ADJ	besser	bˈɛsɐ	b ˈɛ s ɐ		better_ADJ_1			
+Upper Franconian	Upper Franconian			better_ADJ	besser	b̥ˈɛsɐ	b̥ ˈɛ s ɐ		better_ADJ_1			
 Bavarian	Bavarian			better_ADJ	bessa	b̥ˈesa	b̥ ˈe s a		better_ADJ_1			
 Swabian	Swabian			better_ADJ	bessr	bˈɛsʌ	b ˈɛ s ʌ		better_ADJ_1			
 Alsatian	Alsatian			better_ADJ	besser	b̥ˈesəʁ	b̥ ˈe s ə ʁ		better_ADJ_1			
@@ -881,6 +903,7 @@ Hessian	Hessian			tree_NOUN	Baam	b̥ˈaːm	b̥ ˈaː m		tree_NOUN_1
 Wymysorys	Wymysorys			tree_NOUN	baojm	bˈɑi̯m	b ˈɑi̯ m		tree_NOUN_1			
 Yiddish	Yiddish			tree_NOUN	בױם	bˈɔɪ̯m	b ˈɔɪ̯ m		tree_NOUN_1			
 Standard German	Standard German			tree_NOUN	Baum	bˈaʊ̯m	b ˈaʊ̯ m		tree_NOUN_1			
+Upper Franconian	Upper Franconian			tree_NOUN	Baam	b̥ˈaːm	b̥ ˈaː m		tree_NOUN_1			
 Bavarian	Bavarian			tree_NOUN	Baam	b̥ˈaːm	b̥ ˈaː m		tree_NOUN_1			
 Swabian	Swabian			tree_NOUN	Boom	bˈoːm	b ˈoː m		tree_NOUN_1			
 Alsatian	Alsatian			tree_NOUN	Baum	b̥ˈʊːm	b̥ ˈʊː m		tree_NOUN_1			
@@ -944,6 +967,7 @@ Pennsylvania German	Pennsylvania German			bath_NOUN_NEU	Baad	bˈɔːd̥	b ˈɔː
 Palatine German	Palatine German			bath_NOUN_NEU	Bad	b̥ˈɑːd̥	b̥ ˈɑː d̥		bath_NOUN_NEU_1			
 Hessian	Hessian			bath_NOUN_NEU	Bååt	b̥ˈɑːd̥	b̥ ˈɑː d̥		bath_NOUN_NEU_1			
 Standard German	Standard German			bath_NOUN_NEU	Bad	bˈaːd̥	b ˈaː d̥		bath_NOUN_NEU_1			
+Upper Franconian	Upper Franconian			bath_NOUN_NEU	Bod	b̥ˈoːd̥	b̥ ˈoː d̥		bath_NOUN_NEU_1			
 Bavarian	Bavarian			bath_NOUN_NEU	Båd	b̥ˈɒːd̥	b̥ ˈɒː d̥		bath_NOUN_NEU_1			
 Swabian	Swabian			bath_NOUN_NEU	Bad	bˈaːd	b ˈaː d		bath_NOUN_NEU_1			
 Alsatian	Alsatian			bath_NOUN_NEU	Bàd	b̥ˈɒːd̥	b̥ ˈɒː d̥		bath_NOUN_NEU_1			
@@ -981,6 +1005,7 @@ Palatine German	Palatine German			mountain_NOUN	Berg	b̥ˈɛɐʃ	b̥ ˈɛ ɐ ʃ	
 Hessian	Hessian			mountain_NOUN	Bȁǎsch	b̥ˈæɐʃ	b̥ ˈæ ɐ ʃ		mountain_NOUN_1			
 Yiddish	Yiddish			mountain_NOUN	באַרג	bˈaʀɡ	b ˈa ʀ ɡ		mountain_NOUN_1			
 Standard German	Standard German			mountain_NOUN	Berg	bˈɛɐɡ̊	b ˈɛ ɐ ɡ̊		mountain_NOUN_1			
+Upper Franconian	Upper Franconian			mountain_NOUN	Beag	b̥ˈɛɐç	b̥ ˈɛ ɐ ç		mountain_NOUN_1			
 Bavarian	Bavarian			mountain_NOUN	Beag	b̥ˈeɐɡ̊	b̥ ˈe ɐ ɡ̊		mountain_NOUN_1			
 Swabian	Swabian			mountain_NOUN	Berg	bˈɛʕɡ	b ˈɛ ʕ ɡ		mountain_NOUN_1			
 Alsatian	Alsatian			mountain_NOUN	Berri	b̥ˈæʁi	b̥ ˈæ ʁ i		mountain_NOUN_1			
@@ -1019,6 +1044,7 @@ Hessian	Hessian			bear_NOUN	Bȁȁǎ	b̥ˈæːɐ	b̥ ˈæː ɐ		bear_NOUN_1
 Wymysorys	Wymysorys			bear_NOUN	baor	bˈɑr	b ˈɑ r		bear_NOUN_1			
 Yiddish	Yiddish			bear_NOUN	בער	bˈɛʀ	b ˈɛ ʀ		bear_NOUN_1			
 Standard German	Standard German			bear_NOUN	Bär	bˈɛːɐ	b ˈɛː ɐ		bear_NOUN_1			
+Upper Franconian	Upper Franconian			bear_NOUN	Bär	b̥ˈɛːɐ	b̥ ˈɛː ɐ		bear_NOUN_1			
 Bavarian	Bavarian			bear_NOUN	Bäa	b̥ˈeɐ	b̥ ˈe ɐ		bear_NOUN_1			
 Swabian	Swabian			bear_NOUN	Bär	bˈɛːʕ	b ˈɛː ʕ		bear_NOUN_1			
 Alsatian	Alsatian			bear_NOUN	Bär	b̥ˈæːʁ	b̥ ˈæː ʁ		bear_NOUN_1			
@@ -1085,6 +1111,7 @@ Palatine German	Palatine German			request_VERB	birre	b̥ˈɪrə	b̥ ˈɪ r ə		r
 Hessian	Hessian			request_VERB	biddě	b̥ˈid̥ə	b̥ ˈi d̥ ə		request_VERB_1			
 Wymysorys	Wymysorys			request_VERB	byta	bˈɘ̟ta	b ˈɘ̟ t a		request_VERB_1			
 Standard German	Standard German			request_VERB	bitten	bˈɪtn̩	b ˈɪ t n̩		request_VERB_1			
+Upper Franconian	Upper Franconian			request_VERB	bittn	b̥ˈɪd̥n̩	b̥ ˈɪ d̥ n̩		request_VERB_1			
 Bavarian	Bavarian			request_VERB	bitdn	b̥ˈid̥n̩	b̥ ˈi d̥ n̩		request_VERB_1			
 Swabian	Swabian			request_VERB	bidda	bˈɪda	b ˈɪ d a		request_VERB_1			
 Swiss German	Swiss German			request_VERB	bitte	b̥ˈittə	b̥ ˈi t t ə		request_VERB_1			
@@ -1143,6 +1170,7 @@ Hessian	Hessian			bind_VERB	binně	b̥ˈinə	b̥ ˈi n ə		bind_VERB_1
 Wymysorys	Wymysorys			bind_VERB	bynda	bˈɘ̟nda	b ˈɘ̟ n d a		bind_VERB_1			
 Yiddish	Yiddish			bind_VERB	בינדן	bˈɪndn̩	b ˈɪ n d n̩		bind_VERB_1			
 Standard German	Standard German			bind_VERB	binden	bˈɪndn̩	b ˈɪ n d n̩		bind_VERB_1			
+Upper Franconian	Upper Franconian			bind_VERB	bindn	b̥ˈɪnd̥n̩	b̥ ˈɪ n d̥ n̩		bind_VERB_1			
 Bavarian	Bavarian			bind_VERB	bindn	b̥ˈind̥n̩	b̥ ˈi n d̥ n̩		bind_VERB_1			
 Swabian	Swabian			bind_VERB	benda	bˈɛnda	b ˈɛ n d a		bind_VERB_1			
 Alsatian	Alsatian			bind_VERB	binde	b̥ˈind̥ə	b̥ ˈi n d̥ ə		bind_VERB_1			
@@ -1186,6 +1214,7 @@ Hessian	Hessian			bite_VERB	baisě	b̥ˈai̯sə	b̥ ˈai̯ s ə		bite_VERB_1
 Wymysorys	Wymysorys			bite_VERB	bajsa	bˈai̯sa	b ˈai̯ s a		bite_VERB_1			
 Yiddish	Yiddish			bite_VERB	בײַסן	bˈaɪ̯sn̩	b ˈaɪ̯ s n̩		bite_VERB_1			
 Standard German	Standard German			bite_VERB	beißen	bˈaɪ̯sn̩	b ˈaɪ̯ s n̩		bite_VERB_1			
+Upper Franconian	Upper Franconian			bite_VERB	beißn	b̥ˈaɪ̯sn̩	b̥ ˈaɪ̯ s n̩		bite_VERB_1			
 Bavarian	Bavarian			bite_VERB	beissn	b̥ˈai̯sn̩	b̥ ˈai̯ s n̩		bite_VERB_1			
 Swabian	Swabian			bite_VERB	beißa	bˈəi̯sa	b ˈəi̯ s a		bite_VERB_1			
 Alsatian	Alsatian			bite_VERB	bïsse	b̥ˈiːsə	b̥ ˈiː s ə		bite_VERB_1			
@@ -1223,6 +1252,7 @@ Hessian	Hessian			leaf_NOUN_NEU	Platt	plˈad̥	p l ˈa d̥		leaf_NOUN_NEU_1
 Wymysorys	Wymysorys			leaf_NOUN_NEU	błot	bwˈɔt	b w ˈɔ t		leaf_NOUN_NEU_1			
 Yiddish	Yiddish			leaf_NOUN_NEU	בלאַט	bɫˈat	b ɫ ˈa t		leaf_NOUN_NEU_1			
 Standard German	Standard German			leaf_NOUN_NEU	Blatt	blˈat	b l ˈa t		leaf_NOUN_NEU_1			
+Upper Franconian	Upper Franconian			leaf_NOUN_NEU	Blatt	b̥lˈad̥	b̥ l ˈa d̥		leaf_NOUN_NEU_1			
 Bavarian	Bavarian			leaf_NOUN_NEU	Bladdl	b̥lˈɑd̥l̩	b̥ l ˈɑ d̥ l̩		leaf_NOUN_NEU_1			
 Swabian	Swabian			leaf_NOUN_NEU	Bladd	blˈad	b l ˈa d		leaf_NOUN_NEU_1			
 Alsatian	Alsatian			leaf_NOUN_NEU	Blàtt	b̥lˈɒt	b̥ l ˈɒ t		leaf_NOUN_NEU_1			
@@ -1261,6 +1291,7 @@ Hessian	Hessian			flower_NOUN	Plumm	plˈum	p l ˈu m		flower_NOUN_1
 Wymysorys	Wymysorys			flower_NOUN	błimła	bwˈimwa	b w ˈi m w a		flower_NOUN_1			
 Yiddish	Yiddish			flower_NOUN	בלום	bɫˈʊm	b ɫ ˈʊ m		flower_NOUN_1			
 Standard German	Standard German			flower_NOUN	Blume	blˈuːmə	b l ˈuː m ə		flower_NOUN_1			
+Upper Franconian	Upper Franconian			flower_NOUN	Bluma	b̥lˈuːma	b̥ l ˈuː m a		flower_NOUN_1			
 Bavarian	Bavarian			flower_NOUN	Bleame	b̥lˈeɐ̯mə	b̥ l ˈeɐ̯ m ə		flower_NOUN_1			
 Swabian	Swabian			flower_NOUN	Bloam	blˈɔə̯m	b l ˈɔə̯ m		flower_NOUN_1			
 Alsatian	Alsatian			flower_NOUN	Blüem	b̥lˈʊːm	b̥ l ˈʊː m		flower_NOUN_1			
@@ -1298,6 +1329,7 @@ Hessian	Hessian			blood_NOUN	Pluut	plˈuːd̥	p l ˈuː d̥		blood_NOUN_1
 Wymysorys	Wymysorys			blood_NOUN	błüt	bwˈʏt	b w ˈʏ t		blood_NOUN_1			
 Yiddish	Yiddish			blood_NOUN	בלוט	bɫˈʊt	b ɫ ˈʊ t		blood_NOUN_1			
 Standard German	Standard German			blood_NOUN	Blut	blˈuːt	b l ˈuː t		blood_NOUN_1			
+Upper Franconian	Upper Franconian			blood_NOUN	Blut	b̥lˈuːd̥	b̥ l ˈuː d̥		blood_NOUN_1			
 Bavarian	Bavarian			blood_NOUN	Bluad	b̥lˈuɐ̯d̥	b̥ l ˈuɐ̯ d̥		blood_NOUN_1			
 Swabian	Swabian			blood_NOUN	Bluad	blˈuə̯d	b l ˈuə̯ d		blood_NOUN_1			
 Alsatian	Alsatian			blood_NOUN	Blüet	b̥lˈʊːt	b̥ l ˈʊː t		blood_NOUN_1			
@@ -1368,6 +1400,7 @@ Hessian	Hessian			book_NOUN_FEM	Buch	b̥ˈux	b̥ ˈu x		book_NOUN_FEM_1
 Wymysorys	Wymysorys			book_NOUN_FEM	büch	bˈʏx	b ˈʏ x		book_NOUN_FEM_1			
 Yiddish	Yiddish			book_NOUN_FEM	בוך	bˈʊχ	b ˈʊ χ		book_NOUN_FEM_1			
 Standard German	Standard German			book_NOUN_FEM	Buch	bˈuːx	b ˈuː x		book_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			book_NOUN_FEM	Buch	b̥ˈuːx	b̥ ˈuː x		book_NOUN_FEM_1			
 Bavarian	Bavarian			book_NOUN_FEM	Buach	b̥ˈuɐ̯x	b̥ ˈuɐ̯ x		book_NOUN_FEM_1			
 Swabian	Swabian			book_NOUN_FEM	Buach	bˈuə̯x	b ˈuə̯ x		book_NOUN_FEM_1			
 Alsatian	Alsatian			book_NOUN_FEM	Büech	b̥ˈʊːʃ	b̥ ˈʊː ʃ		book_NOUN_FEM_1			
@@ -1406,6 +1439,7 @@ Hessian	Hessian			bread_NOUN	Proot	pʀˈoːd̥	p ʀ ˈoː d̥		bread_NOUN_1
 Wymysorys	Wymysorys			bread_NOUN	brut	brˈut	b r ˈu t		bread_NOUN_1			
 Yiddish	Yiddish			bread_NOUN	ברויט	bʀˈɔɪ̯t	b ʀ ˈɔɪ̯ t		bread_NOUN_1			
 Standard German	Standard German			bread_NOUN	Brot	bʁˈoːt	b ʁ ˈoː t		bread_NOUN_1			
+Upper Franconian	Upper Franconian			bread_NOUN	Brut	b̥rˈuːd̥	b̥ r ˈuː d̥		bread_NOUN_1			
 Bavarian	Bavarian			bread_NOUN	Brod	b̥rˈoːd̥	b̥ r ˈoː d̥		bread_NOUN_1			
 Swabian	Swabian			bread_NOUN	Brod	bʁˈoːd	b ʁ ˈoː d		bread_NOUN_1			
 Alsatian	Alsatian			bread_NOUN	Brot	b̥ʁˈoːt	b̥ ʁ ˈoː t		bread_NOUN_1			
@@ -1487,6 +1521,7 @@ Hessian	Hessian			brother_NOUN	Pruudä	pʀˈuːd̥æ̆	p ʀ ˈuː d̥ æ̆		brot
 Wymysorys	Wymysorys			brother_NOUN	brüder	brˈʏdɛr	b r ˈʏ d ɛ r		brother_NOUN_1			
 Yiddish	Yiddish			brother_NOUN	ברודער	bʀˈʊdəʀ	b ʀ ˈʊ d ə ʀ		brother_NOUN_1			
 Standard German	Standard German			brother_NOUN	Bruder	bʁˈuːdɐ	b ʁ ˈuː d ɐ		brother_NOUN_1			
+Upper Franconian	Upper Franconian			brother_NOUN	Bruder	b̥rˈuːɾɐ	b̥ r ˈuː ɾ ɐ		brother_NOUN_1			
 Bavarian	Bavarian			brother_NOUN	Bruada	b̥rˈuɐ̯d̥a	b̥ r ˈuɐ̯ d̥ a		brother_NOUN_1			
 Swabian	Swabian			brother_NOUN	Bruadr	bʁˈuə̯dʌ	b ʁ ˈuə̯ d ʌ		brother_NOUN_1			
 Alsatian	Alsatian			brother_NOUN	Brüeder	b̥ʁˈʊːd̥əʁ	b̥ ʁ ˈʊː d̥ ə ʁ		brother_NOUN_1			
@@ -1524,6 +1559,7 @@ Hessian	Hessian			bridge_NOUN	Prikk	pʀˈik	p ʀ ˈi k		bridge_NOUN_1
 Wymysorys	Wymysorys			bridge_NOUN	bryk	brˈɘ̟k	b r ˈɘ̟ k		bridge_NOUN_1			
 Yiddish	Yiddish			bridge_NOUN	בריק	bʀˈɪk	b ʀ ˈɪ k		bridge_NOUN_1			
 Standard German	Standard German			bridge_NOUN	Brücke	bʁˈʏkə	b ʁ ˈʏ k ə		bridge_NOUN_1			
+Upper Franconian	Upper Franconian			bridge_NOUN	Brick	b̥rˈɪɡ̊	b̥ r ˈɪ ɡ̊		bridge_NOUN_1			
 Bavarian	Bavarian			bridge_NOUN	Bruggn	b̥rˈuɡ̊n̩	b̥ r ˈu ɡ̊ n̩		bridge_NOUN_1			
 Swabian	Swabian			bridge_NOUN	Brugg	bʁˈuɡ	b ʁ ˈu ɡ		bridge_NOUN_1			
 Alsatian	Alsatian			bridge_NOUN	Bruck	b̥ʁˈuk	b̥ ʁ ˈu k		bridge_NOUN_1			
@@ -1550,6 +1586,7 @@ Hessian	Hessian			breast_NOUN	Prusst	pʀˈust	p ʀ ˈu s t		breast_NOUN_2
 Wymysorys	Wymysorys			breast_NOUN	brust	brˈust	b r ˈu s t		breast_NOUN_2			
 Yiddish	Yiddish			breast_NOUN	ברוסט	bʀˈʊst	b ʀ ˈʊ s t		breast_NOUN_2			
 Standard German	Standard German			breast_NOUN	Brust	bʁˈʊst	b ʁ ˈʊ s t		breast_NOUN_2			
+Upper Franconian	Upper Franconian			breast_NOUN	Bruschd	b̥rˈʊʃd̥	b̥ r ˈʊ ʃ d̥		breast_NOUN_2			
 Bavarian	Bavarian			breast_NOUN	Bruschd	b̥rˈuʃd̥	b̥ r ˈu ʃ d̥		breast_NOUN_2			
 Swabian	Swabian			breast_NOUN	Bruschd	bʁˈuʃd	b ʁ ˈu ʃ d		breast_NOUN_2			
 Alsatian	Alsatian			breast_NOUN	Bruscht	b̥ʁˈuʃt	b̥ ʁ ˈu ʃ t		breast_NOUN_2			
@@ -1588,6 +1625,7 @@ Hessian	Hessian			day_NOUN	Dååch	d̥ˈɑːɣ̥	d̥ ˈɑː ɣ̥		day_NOUN_1
 Wymysorys	Wymysorys			day_NOUN	taog	tˈɑɡ̊	t ˈɑ ɡ̊		day_NOUN_1			
 Yiddish	Yiddish			day_NOUN	טאָג	tˈɔɡ	t ˈɔ ɡ		day_NOUN_1			
 Standard German	Standard German			day_NOUN	Tag	tʰˈaːɡ̊	tʰ ˈaː ɡ̊		day_NOUN_1			
+Upper Franconian	Upper Franconian			day_NOUN	Dog	d̥ˈoːɡ̊	d̥ ˈoː ɡ̊		day_NOUN_1			
 Bavarian	Bavarian			day_NOUN	Dåg	d̥ˈɒːɡ̊	d̥ ˈɒː ɡ̊		day_NOUN_1			
 Swabian	Swabian			day_NOUN	Dag	dˈaːɡ	d ˈaː ɡ		day_NOUN_1			
 Alsatian	Alsatian			day_NOUN	Dàà	d̥ˈɒː	d̥ ˈɒː		day_NOUN_1			
@@ -1623,6 +1661,7 @@ Hessian	Hessian			dough_NOUN	Daasch	d̥ˈaːʃ	d̥ ˈaː ʃ		dough_NOUN_1
 Wymysorys	Wymysorys			dough_NOUN	taag	tˈaɡ̊	t ˈa ɡ̊		dough_NOUN_1			
 Yiddish	Yiddish			dough_NOUN	טייג	tˈɛɪ̯ɡ	t ˈɛɪ̯ ɡ		dough_NOUN_1			
 Standard German	Standard German			dough_NOUN	Teig	tʰˈaɪ̯ɡ̊	tʰ ˈaɪ̯ ɡ̊		dough_NOUN_1			
+Upper Franconian	Upper Franconian			dough_NOUN	Daach	d̥ˈaːx	d̥ ˈaː x		dough_NOUN_1			
 Bavarian	Bavarian			dough_NOUN	Doag	d̥ˈoɐ̯ɡ̊	d̥ ˈoɐ̯ ɡ̊		dough_NOUN_1			
 Swabian	Swabian			dough_NOUN	Doig	dˈɔe̯ɡ	d ˈɔe̯ ɡ		dough_NOUN_1			
 Alsatian	Alsatian			dough_NOUN	Deig	d̥ˈei̯ɡ̊	d̥ ˈei̯ ɡ̊		dough_NOUN_1			
@@ -1660,6 +1699,7 @@ Palatine German	Palatine German			dead_ADJ	dot	d̥ˈoːd̥	d̥ ˈoː d̥		dead_A
 Hessian	Hessian			dead_ADJ	doot	d̥oːd̥	d̥ oː d̥		dead_ADJ_1			
 Yiddish	Yiddish			dead_ADJ	טויט	tˈɔɪ̯t	t ˈɔɪ̯ t		dead_ADJ_1			
 Standard German	Standard German			dead_ADJ	tot	tʰˈoːt	tʰ ˈoː t		dead_ADJ_1			
+Upper Franconian	Upper Franconian			dead_ADJ	duud	d̥ˈuːd̥	d̥ ˈuː d̥		dead_ADJ_1			
 Bavarian	Bavarian			dead_ADJ	doud	d̥ˈou̯d̥	d̥ ˈou̯ d̥		dead_ADJ_1			
 Swabian	Swabian			dead_ADJ	dod	dˈoːd	d ˈoː d		dead_ADJ_1			
 Alsatian	Alsatian			dead_ADJ	dot	d̥ˈoːt	d̥ ˈoː t		dead_ADJ_1			
@@ -1697,6 +1737,7 @@ Palatine German	Palatine German			death_NOUN	Dod	d̥ˈoːd̥	d̥ ˈoː d̥		deat
 Wymysorys	Wymysorys			death_NOUN	tut	tˈut	t ˈu t		death_NOUN_1			
 Yiddish	Yiddish			death_NOUN	טויט	tˈɔɪ̯t	t ˈɔɪ̯ t		death_NOUN_1			
 Standard German	Standard German			death_NOUN	Tod	tʰˈoːd̥	tʰ ˈoː d̥		death_NOUN_1			
+Upper Franconian	Upper Franconian			death_NOUN	Duud	d̥ˈuːd̥	d̥ ˈuː d̥		death_NOUN_1			
 Bavarian	Bavarian			death_NOUN	Doud	d̥ˈou̯d̥	d̥ ˈou̯ d̥		death_NOUN_1			
 Swabian	Swabian			death_NOUN	Dod	dˈoːd	d ˈoː d		death_NOUN_1			
 Alsatian	Alsatian			death_NOUN	Dod	d̥ˈoːt	d̥ ˈoː t		death_NOUN_1			
@@ -1735,6 +1776,7 @@ Hessian	Hessian			deep_ADJ	diif	d̥ˈiːf	d̥ ˈiː f		deep_ADJ_1
 Wymysorys	Wymysorys			deep_ADJ	tiif	tˈif	t ˈi f		deep_ADJ_1			
 Yiddish	Yiddish			deep_ADJ	טיף	tˈɪf	t ˈɪ f		deep_ADJ_1			
 Standard German	Standard German			deep_ADJ	tief	tʰˈiːf	tʰ ˈiː f		deep_ADJ_1			
+Upper Franconian	Upper Franconian			deep_ADJ	dief	d̥ˈiːf	d̥ ˈiː f		deep_ADJ_1			
 Bavarian	Bavarian			deep_ADJ	diaf	d̥ˈiɐ̯f	d̥ ˈiɐ̯ f		deep_ADJ_1			
 Swabian	Swabian			deep_ADJ	diaf	dˈiə̯f	d ˈiə̯ f		deep_ADJ_1			
 Alsatian	Alsatian			deep_ADJ	dief	d̥ˈiːf	d̥ ˈiː f		deep_ADJ_1			
@@ -1772,6 +1814,7 @@ Pennsylvania German	Pennsylvania German			animal_NOUN	Dier	dˈiːɑ	d ˈiː ɑ		
 Palatine German	Palatine German			animal_NOUN	Dier	d̥ˈiːɐ	d̥ ˈiː ɐ		animal_NOUN_1			
 Hessian	Hessian			animal_NOUN	Diiǎ	d̥ˈiːɐ	d̥ ˈiː ɐ		animal_NOUN_1			
 Standard German	Standard German			animal_NOUN	Tier	tʰˈiːɐ	tʰ ˈiː ɐ		animal_NOUN_1			
+Upper Franconian	Upper Franconian			animal_NOUN	Dier	d̥ˈiːɐ	d̥ ˈiː ɐ		animal_NOUN_1			
 Bavarian	Bavarian			animal_NOUN	Dia	d̥ˈiɐ̯	d̥ ˈiɐ̯		animal_NOUN_1			
 Swabian	Swabian			animal_NOUN	Dier	dˈiːʕ	d ˈiː ʕ		animal_NOUN_1			
 Swiss German	Swiss German			animal_NOUN	Tier	tˈiə̯r	t ˈiə̯ r		animal_NOUN_1			
@@ -1809,6 +1852,7 @@ Hessian	Hessian			expensive_ADJ	doịjä	d̥ˈoi̯æ̆	d̥ ˈoi̯ æ̆		expensiv
 Wymysorys	Wymysorys			expensive_ADJ	taojer	tˈɑi̯ɛr	t ˈɑi̯ ɛ r		expensive_ADJ_1			
 Yiddish	Yiddish			expensive_ADJ	טייַער	tˈaɪ̯əʀ	t ˈaɪ̯ ə ʀ		expensive_ADJ_1			
 Standard German	Standard German			expensive_ADJ	teuer	tʰˈɔʏ̯ɐ	tʰ ˈɔʏ̯ ɐ		expensive_ADJ_1			
+Upper Franconian	Upper Franconian			expensive_ADJ	deier	d̥ˈaɪ̯ɐ	d̥ ˈaɪ̯ ɐ		expensive_ADJ_1			
 Bavarian	Bavarian			expensive_ADJ	deia	d̥ˈai̯a	d̥ ˈai̯ a		expensive_ADJ_1			
 Swabian	Swabian			expensive_ADJ	deier	dˈəi̯ʌ	d ˈəi̯ ʌ		expensive_ADJ_1			
 Alsatian	Alsatian			expensive_ADJ	diir	d̥ˈiːʁ	d̥ ˈiː ʁ		expensive_ADJ_1			
@@ -1865,6 +1909,7 @@ Palatine German	Palatine German			dream_NOUN	Traam	d̥rˈɑːm	d̥ r ˈɑː m		d
 Hessian	Hessian			dream_NOUN	Traam	tʀˈaːm	t ʀ ˈaː m		dream_NOUN_1			
 Yiddish	Yiddish			dream_NOUN	טרוים	tʀˈɔɪ̯m	t ʀ ˈɔɪ̯ m		dream_NOUN_1			
 Standard German	Standard German			dream_NOUN	Traum	tʰʁˈaʊ̯m	tʰ ʁ ˈaʊ̯ m		dream_NOUN_1			
+Upper Franconian	Upper Franconian			dream_NOUN	Draam	d̥rˈaːm	d̥ r ˈaː m		dream_NOUN_1			
 Bavarian	Bavarian			dream_NOUN	Dràm	d̥rˈaːm	d̥ r ˈaː m		dream_NOUN_1			
 Swabian	Swabian			dream_NOUN	Draum	dʁˈao̯m	d ʁ ˈao̯ m		dream_NOUN_1			
 Alsatian	Alsatian			dream_NOUN	Traum	tʁˈʊːm	t ʁ ˈʊː m		dream_NOUN_1			
@@ -1899,6 +1944,7 @@ Hessian	Hessian			dream_VERB	traamě	tʀˈaːmə	t ʀ ˈaː m ə		dream_VERB_1
 Wymysorys	Wymysorys			dream_VERB	traojma	trˈɑi̯ma	t r ˈɑi̯ m a		dream_VERB_1			
 Yiddish	Yiddish			dream_VERB	טרוימען	tʀˈɔɪ̯mən	t ʀ ˈɔɪ̯ m ə n		dream_VERB_1			
 Standard German	Standard German			dream_VERB	träumen	tʰʁˈɔʏ̯mən	tʰ ʁ ˈɔʏ̯ m ə n		dream_VERB_1			
+Upper Franconian	Upper Franconian			dream_VERB	dräma	d̥rˈɛːma	d̥ r ˈɛː m a		dream_VERB_1			
 Bavarian	Bavarian			dream_VERB	drama	d̥rˈaːma	d̥ r ˈaː m a		dream_VERB_1			
 Swabian	Swabian			dream_VERB	draima	dʁˈae̯ma	d ʁ ˈae̯ m a		dream_VERB_1			
 Alsatian	Alsatian			dream_VERB	traime	tʁˈai̯mə	t ʁ ˈai̯ m ə		dream_VERB_1			
@@ -1936,6 +1982,7 @@ Hessian	Hessian			drive_VERB	traiwě	tʀˈai̯və	t ʀ ˈai̯ v ə		drive_VERB_1
 Wymysorys	Wymysorys			drive_VERB	trajn	trˈai̯n	t r ˈai̯ n		drive_VERB_1			
 Yiddish	Yiddish			drive_VERB	טרײַבן	tʀˈaɪ̯bn̩	t ʀ ˈaɪ̯ b n̩		drive_VERB_1			
 Standard German	Standard German			drive_VERB	treiben	tʰʁˈaɪ̯bn̩	tʰ ʁ ˈaɪ̯ b n̩		drive_VERB_1			
+Upper Franconian	Upper Franconian			drive_VERB	dreim	d̥rˈaɪ̯m	d̥ r ˈaɪ̯ m		drive_VERB_1			
 Bavarian	Bavarian			drive_VERB	dreim	d̥rˈai̯m	d̥ r ˈai̯ m		drive_VERB_1			
 Swabian	Swabian			drive_VERB	dreiba	dʁˈəi̯ba	d ʁ ˈəi̯ b a		drive_VERB_1			
 Alsatian	Alsatian			drive_VERB	tribe	tʁˈiːb̥ə	t ʁ ˈiː b̥ ə		drive_VERB_1			
@@ -1974,6 +2021,7 @@ Hessian	Hessian			drink_VERB	tringgě	tʀˈiŋɡ̊ə	t ʀ ˈi ŋ ɡ̊ ə		drink_
 Wymysorys	Wymysorys			drink_VERB	trynkia	trˈɘ̟ŋca	t r ˈɘ̟ ŋ c a		drink_VERB_1			
 Yiddish	Yiddish			drink_VERB	טרינקען	tʀˈɪŋkən	t ʀ ˈɪ ŋ k ə n		drink_VERB_1			
 Standard German	Standard German			drink_VERB	trinken	tʰʁˈɪŋkn̩	tʰ ʁ ˈɪ ŋ k n̩		drink_VERB_1			
+Upper Franconian	Upper Franconian			drink_VERB	dringn	d̥rˈɪŋɡ̊n̩	d̥ r ˈɪ ŋ ɡ̊ n̩		drink_VERB_1			
 Bavarian	Bavarian			drink_VERB	dringa	d̥rˈiŋɡ̊a	d̥ r ˈi ŋ ɡ̊ a		drink_VERB_1			
 Swabian	Swabian			drink_VERB	dringa	dʁˈɪŋɡa	d ʁ ˈɪ ŋ ɡ a		drink_VERB_1			
 Alsatian	Alsatian			drink_VERB	trinke	tʁˈiŋkə	t ʁ ˈi ŋ k ə		drink_VERB_1			
@@ -1985,6 +2033,7 @@ Palatine German	Palatine German			dry_ADJ	trucke	d̥rˈuɡ̊ə	d̥ r ˈu ɡ̊ ə
 Wymysorys	Wymysorys			dry_ADJ	traojg	trˈɑi̯ɡ̊	t r ˈɑi̯ ɡ̊		dry_ADJ_2			
 Yiddish	Yiddish			dry_ADJ	טרוקן	tʀˈʊkn̩	t ʀ ˈʊ k n̩		dry_ADJ_2			
 Standard German	Standard German			dry_ADJ	trocken	tʰʁˈɔkn̩	tʰ ʁ ˈɔ k n̩		dry_ADJ_2			
+Upper Franconian	Upper Franconian			dry_ADJ	drogge	d̥rˈɔɡ̊ə	d̥ r ˈɔ ɡ̊ ə		dry_ADJ_2			
 Swabian	Swabian			dry_ADJ	drogga	dʁˈɔɡa	d ʁ ˈɔ ɡ a		dry_ADJ_2			
 Alsatian	Alsatian			dry_ADJ	trucket	tʁˈukət	t ʁ ˈu k ə t		dry_ADJ_2			
 Swiss German	Swiss German			dry_ADJ	troche	trˈoχə	t r ˈo χ ə		dry_ADJ_2			
@@ -2022,6 +2071,7 @@ Hessian	Hessian			dove_NOUN	Daup	d̥ˈau̯b̥	d̥ ˈau̯ b̥		dove_NOUN_1
 Wymysorys	Wymysorys			dove_NOUN	taoj	tˈɑi̯	t ˈɑi̯		dove_NOUN_1			
 Yiddish	Yiddish			dove_NOUN	טויב	tˈɔɪ̯b	t ˈɔɪ̯ b		dove_NOUN_1			
 Standard German	Standard German			dove_NOUN	Taube	tʰˈaʊ̯bə	tʰ ˈaʊ̯ b ə		dove_NOUN_1			
+Upper Franconian	Upper Franconian			dove_NOUN	Dauwa	d̥ˈaʊ̯βa	d̥ ˈaʊ̯ β a		dove_NOUN_1			
 Swabian	Swabian			dove_NOUN	Daub	dˈao̯b	d ˈao̯ b		dove_NOUN_1			
 Alsatian	Alsatian			dove_NOUN	Düüb	d̥ˈyːb̥	d̥ ˈyː b̥		dove_NOUN_1			
 Swiss German	Swiss German			dove_NOUN	Tuub	tˈuːb̥	t ˈuː b̥		dove_NOUN_1			
@@ -2058,6 +2108,7 @@ Palatine German	Palatine German			daughter_NOUN	Dochder	d̥ˈɔxd̥ɐ	d̥ ˈɔ x
 Wymysorys	Wymysorys			daughter_NOUN	tochter	tˈɔxtɛr	t ˈɔ x t ɛ r		daughter_NOUN_1			
 Yiddish	Yiddish			daughter_NOUN	טאָכטער	tˈɔχtəʀ	t ˈɔ χ t ə ʀ		daughter_NOUN_1			
 Standard German	Standard German			daughter_NOUN	Tochter	tʰˈɔxtɐ	tʰ ˈɔ x t ɐ		daughter_NOUN_1			
+Upper Franconian	Upper Franconian			daughter_NOUN	Dochder	d̥ˈɔxd̥ɐ	d̥ ˈɔ x d̥ ɐ		daughter_NOUN_1			
 Bavarian	Bavarian			daughter_NOUN	Dochda	d̥ˈoxd̥a	d̥ ˈo x d̥ a		daughter_NOUN_1			
 Swabian	Swabian			daughter_NOUN	Dochdr	dˈɔxdʌ	d ˈɔ x d ʌ		daughter_NOUN_1			
 Alsatian	Alsatian			daughter_NOUN	Doochter	d̥ˈoːxtəʁ	d̥ ˈoː x t ə ʁ		daughter_NOUN_1			
@@ -2083,6 +2134,7 @@ Pennsylvania German	Pennsylvania German			dwarf_NOUN	Zwaerich	ʦʋˈɛːɾɪç	�
 Palatine German	Palatine German			dwarf_NOUN	Zwärrich	ʣ̥βˈɛrɪʃ	ʣ̥ β ˈɛ r ɪ ʃ		dwarf_NOUN_1			
 Hessian	Hessian			dwarf_NOUN	Tswȁǎsch	ʦvˈæɐʒ̥	ʦ v ˈæ ɐ ʒ̥		dwarf_NOUN_1			
 Standard German	Standard German			dwarf_NOUN	Zwerg	ʦvˈɛɐɡ̊	ʦ v ˈɛ ɐ ɡ̊		dwarf_NOUN_1			
+Upper Franconian	Upper Franconian			dwarf_NOUN	Zwerch	ʦvˈɛɐç	ʦ v ˈɛ ɐ ç		dwarf_NOUN_1			
 Swiss German	Swiss German			dwarf_NOUN	Zwerg	ʦʋˈerɡ̊	ʦ ʋ ˈe r ɡ̊		dwarf_NOUN_1			
 Proto-Germanic	Proto-Germanic			I_PRON	ek	ˈek	ˈe k		I_PRON_1			
 Gothic	Gothic			I_PRON	𐌹𐌺	ˈik	ˈi k		I_PRON_1			
@@ -2119,6 +2171,7 @@ Hessian	Hessian			I_PRON	ischsch	ˈiʃ	ˈi ʃ		I_PRON_1
 Wymysorys	Wymysorys			I_PRON	ych	ˈɘ̟x	ˈɘ̟ x		I_PRON_1			
 Yiddish	Yiddish			I_PRON	איך	ˈɪχ	ˈɪ χ		I_PRON_1			
 Standard German	Standard German			I_PRON	ich	ˈɪç	ˈɪ ç		I_PRON_1			
+Upper Franconian	Upper Franconian			I_PRON	iich	ˈiːç	ˈiː ç		I_PRON_1			
 Bavarian	Bavarian			I_PRON	i	ˈi	ˈi		I_PRON_1			
 Swabian	Swabian			I_PRON	i	ˈi	ˈi		I_PRON_1			
 Swiss German	Swiss German			I_PRON	ig	ˈiɡ̊	ˈi ɡ̊		I_PRON_1			
@@ -2153,6 +2206,7 @@ Pennsylvania German	Pennsylvania German			eel_NOUN	Ool	ˈoːl	ˈoː l		eel_NOUN_
 Palatine German	Palatine German			eel_NOUN	Ool	ˈoːl	ˈoː l		eel_NOUN_1			
 Hessian	Hessian			eel_NOUN	Åål	ˈɑːl	ˈɑː l		eel_NOUN_1			
 Standard German	Standard German			eel_NOUN	Aal	ˈaːl	ˈaː l		eel_NOUN_1			
+Upper Franconian	Upper Franconian			eel_NOUN	Ool	ˈoːl	ˈoː l		eel_NOUN_1			
 Alsatian	Alsatian			eel_NOUN	Ààl	ˈɒːl	ˈɒː l		eel_NOUN_1			
 Swiss German	Swiss German			eel_NOUN	Aal	ˈɒːl	ˈɒː l		eel_NOUN_1			
 Proto-Germanic	Proto-Germanic			earth_NOUN	erþō	ˈerθɔː	ˈe r θ ɔː		earth_NOUN_1			
@@ -2189,6 +2243,7 @@ Hessian	Hessian			earth_NOUN	Ȁȁǎt	ˈæːɐd̥	ˈæː ɐ d̥		earth_NOUN_1
 Wymysorys	Wymysorys			earth_NOUN	aod	ˈɑd̥	ˈɑ d̥		earth_NOUN_1			
 Yiddish	Yiddish			earth_NOUN	ערד	ˈɛʀd	ˈɛ ʀ d		earth_NOUN_1			
 Standard German	Standard German			earth_NOUN	Erde	ˈɛɐdə	ˈɛ ɐ d ə		earth_NOUN_1			
+Upper Franconian	Upper Franconian			earth_NOUN	Eadn	ˈɛɐd̥n̩	ˈɛ ɐ d̥ n̩		earth_NOUN_1			
 Bavarian	Bavarian			earth_NOUN	Eadn	ˈeɐd̥n̩	ˈe ɐ d̥ n̩		earth_NOUN_1			
 Swabian	Swabian			earth_NOUN	Ärde	ˈɛʕde	ˈɛ ʕ d e		earth_NOUN_1			
 Swiss German	Swiss German			earth_NOUN	Härd	hˈærd̥	h ˈæ r d̥		earth_NOUN_1			
@@ -2226,6 +2281,7 @@ Hessian	Hessian			eat_VERB	ässě	ˈɛsə	ˈɛ s ə		eat_VERB_1
 Wymysorys	Wymysorys			eat_VERB	aosa	ˈɑsa	ˈɑ s a		eat_VERB_1			
 Yiddish	Yiddish			eat_VERB	עסן	ˈɛsn̩	ˈɛ s n̩		eat_VERB_1			
 Standard German	Standard German			eat_VERB	essen	ˈɛsn̩	ˈɛ s n̩		eat_VERB_1			
+Upper Franconian	Upper Franconian			eat_VERB	essen	ˈɛsn̩	ˈɛ s n̩		eat_VERB_1			
 Bavarian	Bavarian			eat_VERB	essn	ˈesn̩	ˈe s n̩		eat_VERB_1			
 Swabian	Swabian			eat_VERB	essa	ˈɛsa	ˈɛ s a		eat_VERB_1			
 Alsatian	Alsatian			eat_VERB	esse	ˈæsə	ˈæ s ə		eat_VERB_1			
@@ -2263,6 +2319,7 @@ Hessian	Hessian			father_NOUN	Faddä	fˈad̥æ̆	f ˈa d̥ æ̆		father_NOUN_1
 Wymysorys	Wymysorys			father_NOUN	foter	fˈɔtɛr	f ˈɔ t ɛ r		father_NOUN_1			
 Yiddish	Yiddish			father_NOUN	פֿאָטער	fˈɔtəʀ	f ˈɔ t ə ʀ		father_NOUN_1			
 Standard German	Standard German			father_NOUN	Vater	fˈaːtɐ	f ˈaː t ɐ		father_NOUN_1			
+Upper Franconian	Upper Franconian			father_NOUN	Vådder	fˈɔɾɐ	f ˈɔ ɾ ɐ		father_NOUN_1			
 Bavarian	Bavarian			father_NOUN	Vådda	fˈɒːd̥a	f ˈɒː d̥ a		father_NOUN_1			
 Swabian	Swabian			father_NOUN	Vaddr	fˈadʌ	f ˈa d ʌ		father_NOUN_1			
 Alsatian	Alsatian			father_NOUN	Vàtter	fˈɒtəʁ	f ˈɒ t ə ʁ		father_NOUN_1			
@@ -2289,6 +2346,7 @@ Palatine German	Palatine German			fast_ADJ	fescht	fˈɛʃd̥	f ˈɛ ʃ d̥		fast
 Hessian	Hessian			fast_ADJ	fẹsst	fˈest	f ˈe s t		fast_ADJ_1			
 Standard German	Standard German			fast_ADJ	fast	fˈast	f ˈa s t		fast_ADJ_1			
 Standard German	Standard German			fast_ADJ	fest	fˈɛst	f ˈɛ s t		fast_ADJ_1			
+Upper Franconian	Upper Franconian			fast_ADJ	feschd	fˈɛʃd̥	f ˈɛ ʃ d̥		fast_ADJ_1			
 Bavarian	Bavarian			fast_ADJ	feschd	fˈeʃd̥	f ˈe ʃ d̥		fast_ADJ_1			
 Proto-Germanic	Proto-Germanic			few_ADJ	fawaz	ɸˈɑwɑz	ɸ ˈɑ w ɑ z		few_ADJ_1			
 Gothic	Gothic			few_ADJ	𐍆𐌰𐌿𐍃	fˈɔːs	f ˈɔː s		few_ADJ_1			
@@ -2336,6 +2394,7 @@ Hessian	Hessian			four_NUM	fiiǎ	fˈiːɐ	f ˈiː ɐ		four_NUM_1
 Wymysorys	Wymysorys			four_NUM	fiyr	fˈiər	f ˈi ə r		four_NUM_1			
 Yiddish	Yiddish			four_NUM	פֿיר	fˈɪʀ	f ˈɪ ʀ		four_NUM_1			
 Standard German	Standard German			four_NUM	vier	fˈiːɐ	f ˈiː ɐ		four_NUM_1			
+Upper Franconian	Upper Franconian			four_NUM	vier	fˈiːɐ	f ˈiː ɐ		four_NUM_1			
 Bavarian	Bavarian			four_NUM	viare	fˈiɐ̯rə	f ˈiɐ̯ r ə		four_NUM_1			
 Swabian	Swabian			four_NUM	vier	fˈiʕ	f ˈi ʕ		four_NUM_1			
 Alsatian	Alsatian			four_NUM	vier	fˈiːʁ	f ˈiː ʁ		four_NUM_1			
@@ -2371,6 +2430,7 @@ Hessian	Hessian			feather_NOUN	Fäddä	fˈɛd̥æ̆	f ˈɛ d̥ æ̆		feather_NOU
 Wymysorys	Wymysorys			feather_NOUN	faoder	fˈɑdɛr	f ˈɑ d ɛ r		feather_NOUN_1			
 Yiddish	Yiddish			feather_NOUN	פֿעדער	fˈɛdəʀ	f ˈɛ d ə ʀ		feather_NOUN_1			
 Standard German	Standard German			feather_NOUN	Feder	fˈeːdɐ	f ˈeː d ɐ		feather_NOUN_1			
+Upper Franconian	Upper Franconian			feather_NOUN	Feder	fˈeːɾɐ	f ˈeː ɾ ɐ		feather_NOUN_1			
 Bavarian	Bavarian			feather_NOUN	Feda	fˈeːd̥a	f ˈeː d̥ a		feather_NOUN_1			
 Swabian	Swabian			feather_NOUN	Fädr	fˈɛːdʌ	f ˈɛː d ʌ		feather_NOUN_1			
 Alsatian	Alsatian			feather_NOUN	Fädder	fˈɛd̥əʁ	f ˈɛ d̥ ə ʁ		feather_NOUN_1			
@@ -2410,6 +2470,7 @@ Hessian	Hessian			five_NUM	fimmf	fˈimf	f ˈi m f		five_NUM_1
 Wymysorys	Wymysorys			five_NUM	fynf	fˈɘ̟nf	f ˈɘ̟ n f		five_NUM_1			
 Yiddish	Yiddish			five_NUM	פֿינף	fˈɪnf	f ˈɪ n f		five_NUM_1			
 Standard German	Standard German			five_NUM	fünf	fˈʏnf	f ˈʏ n f		five_NUM_1			
+Upper Franconian	Upper Franconian			five_NUM	fimf	fˈɪmf	f ˈɪ m f		five_NUM_1			
 Bavarian	Bavarian			five_NUM	fimf	fˈimf	f ˈi m f		five_NUM_1			
 Swabian	Swabian			five_NUM	femf	fˈɛmf	f ˈɛ m f		five_NUM_1			
 Alsatian	Alsatian			five_NUM	finef	fˈinef	f ˈi n e f		five_NUM_1			
@@ -2448,6 +2509,7 @@ Hessian	Hessian			finger_NOUN	Fingä	fˈiŋæ̆	f ˈi ŋ æ̆		finger_NOUN_1
 Wymysorys	Wymysorys			finger_NOUN	fyngier	fˈɘ̟ŋɟɛr	f ˈɘ̟ ŋ ɟ ɛ r		finger_NOUN_1			
 Yiddish	Yiddish			finger_NOUN	פֿינגער	fˈɪŋɡəʀ	f ˈɪ ŋ ɡ ə ʀ		finger_NOUN_1			
 Standard German	Standard German			finger_NOUN	Finger	fˈɪŋɐ	f ˈɪ ŋ ɐ		finger_NOUN_1			
+Upper Franconian	Upper Franconian			finger_NOUN	Finger	fˈɪŋɐ	f ˈɪ ŋ ɐ		finger_NOUN_1			
 Bavarian	Bavarian			finger_NOUN	Finga	fˈiŋa	f ˈi ŋ a		finger_NOUN_1			
 Swabian	Swabian			finger_NOUN	Fengr	fˈeŋʌ	f ˈe ŋ ʌ		finger_NOUN_1			
 Alsatian	Alsatian			finger_NOUN	Finger	fˈiŋəʁ	f ˈi ŋ ə ʁ		finger_NOUN_1			
@@ -2486,6 +2548,7 @@ Hessian	Hessian			find_VERB	finně	fˈinə	f ˈi n ə		find_VERB_1
 Wymysorys	Wymysorys			find_VERB	fynda	fˈɘ̟nda	f ˈɘ̟ n d a		find_VERB_1			
 Yiddish	Yiddish			find_VERB	געפֿינען	ɡəfˈɪnən	ɡ ə f ˈɪ n ə n		find_VERB_1			
 Standard German	Standard German			find_VERB	finden	fˈɪndn̩	f ˈɪ n d n̩		find_VERB_1			
+Upper Franconian	Upper Franconian			find_VERB	finna	fˈɪna	f ˈɪ n a		find_VERB_1			
 Bavarian	Bavarian			find_VERB	findn	fˈind̥n̩	f ˈi n d̥ n̩		find_VERB_1			
 Swabian	Swabian			find_VERB	finda	fˈɪnda	f ˈɪ n d a		find_VERB_1			
 Alsatian	Alsatian			find_VERB	finde	fˈind̥ə	f ˈi n d̥ ə		find_VERB_1			
@@ -2525,6 +2588,7 @@ Hessian	Hessian			fish_NOUN	Fisch	fˈiʃ	f ˈi ʃ		fish_NOUN_1
 Wymysorys	Wymysorys			fish_NOUN	fejś	fˈei̯ʃ	f ˈei̯ ʃ		fish_NOUN_1			
 Yiddish	Yiddish			fish_NOUN	פֿיש	fˈɪʃ	f ˈɪ ʃ		fish_NOUN_1			
 Standard German	Standard German			fish_NOUN	Fisch	fˈɪʃ	f ˈɪ ʃ		fish_NOUN_1			
+Upper Franconian	Upper Franconian			fish_NOUN	Fiisch	fˈiːʃ	f ˈiː ʃ		fish_NOUN_1			
 Bavarian	Bavarian			fish_NOUN	Fiisch	fˈiːʃ	f ˈiː ʃ		fish_NOUN_1			
 Swabian	Swabian			fish_NOUN	Fisch	fˈiʃ	f ˈi ʃ		fish_NOUN_1			
 Alsatian	Alsatian			fish_NOUN	Fisch	fˈiʃ	f ˈi ʃ		fish_NOUN_1			
@@ -2556,6 +2620,7 @@ Hessian	Hessian			flesh_NOUN	Flaasch	flˈaːʃ	f l ˈaː ʃ		flesh_NOUN_1
 Wymysorys	Wymysorys			flesh_NOUN	fłaś	fwˈaʃ	f w ˈa ʃ		flesh_NOUN_1			
 Yiddish	Yiddish			flesh_NOUN	פֿלייש	fɫˈɛɪ̯ʃ	f ɫ ˈɛɪ̯ ʃ		flesh_NOUN_1			
 Standard German	Standard German			flesh_NOUN	Fleisch	flˈaɪ̯ʃ	f l ˈaɪ̯ ʃ		flesh_NOUN_1			
+Upper Franconian	Upper Franconian			flesh_NOUN	Flasch	flˈaːʃ	f l ˈaː ʃ		flesh_NOUN_1			
 Bavarian	Bavarian			flesh_NOUN	Fleisch	flˈai̯ʃ	f l ˈai̯ ʃ		flesh_NOUN_1			
 Swabian	Swabian			flesh_NOUN	Floisch	flˈɔe̯ʃ	f l ˈɔe̯ ʃ		flesh_NOUN_1			
 Alsatian	Alsatian			flesh_NOUN	Fleisch	flˈəi̯ʃ	f l ˈəi̯ ʃ		flesh_NOUN_1			
@@ -2592,6 +2657,7 @@ Hessian	Hessian			fly_VERB	fliiịjě	flˈiːjə	f l ˈiː j ə		fly_VERB_1
 Wymysorys	Wymysorys			fly_VERB	fłigia	fwˈiɟa	f w ˈi ɟ a		fly_VERB_1			
 Yiddish	Yiddish			fly_VERB	פֿליִען	fɫˈɪən	f ɫ ˈɪ ə n		fly_VERB_1			
 Standard German	Standard German			fly_VERB	fliegen	flˈiːɡn̩	f l ˈiː ɡ n̩		fly_VERB_1			
+Upper Franconian	Upper Franconian			fly_VERB	fling	flˈiːŋ	f l ˈiː ŋ		fly_VERB_1			
 Bavarian	Bavarian			fly_VERB	fliang	flˈiɐ̯ŋ	f l ˈiɐ̯ ŋ		fly_VERB_1			
 Swabian	Swabian			fly_VERB	fliaga	flˈiə̯ɡa	f l ˈiə̯ ɡ a		fly_VERB_1			
 Alsatian	Alsatian			fly_VERB	flieje	flˈiːjə	f l ˈiː j ə		fly_VERB_1			
@@ -2625,7 +2691,7 @@ Palatine German	Palatine German			housefly_NOUN	Fliesch	flˈiːʃ	f l ˈiː ʃ		
 Wymysorys	Wymysorys			housefly_NOUN	fłig	fwˈiɡ̊	f w ˈi ɡ̊		housefly_NOUN_1			
 Yiddish	Yiddish			housefly_NOUN	פֿליג	fɫˈɪɡ	f ɫ ˈɪ ɡ		housefly_NOUN_1			
 Standard German	Standard German			housefly_NOUN	Fliege	flˈiːɡə	f l ˈiː ɡ ə		housefly_NOUN_1			
-Bavarian	Bavarian			housefly_NOUN	Fliaga	flˈiɐɡ̊a	f l ˈi ɐ ɡ̊ a		housefly_NOUN_1			
+Bavarian	Bavarian			housefly_NOUN	Fliaga	flˈiɐ̯ɡ̊a	f l ˈiɐ̯ ɡ̊ a		housefly_NOUN_1			
 Swiss German	Swiss German			housefly_NOUN	Flüüge	flˈyːɡ̊ə	f l ˈyː ɡ̊ ə		housefly_NOUN_1			
 Proto-Germanic	Proto-Germanic			feel_VERB	fōlijaną	ɸˈɔːlijɑnɑ̃	ɸ ˈɔː l i j ɑ n ɑ̃		feel_VERB_1			
 Scots	Scots			feel_VERB	feel	fˈil	f ˈi l		feel_VERB_1			
@@ -2652,6 +2718,7 @@ Palatine German	Palatine German			feel_VERB	fihle	fˈiːlə	f ˈiː l ə		feel_V
 Hessian	Hessian			feel_VERB	fiilě	fˈiːlə	f ˈiː l ə		feel_VERB_1			
 Yiddish	Yiddish			feel_VERB	פילן	fˈɪɫn̩	f ˈɪ ɫ n̩		feel_VERB_1			
 Standard German	Standard German			feel_VERB	fühlen	fˈyːln̩	f ˈyː l n̩		feel_VERB_1			
+Upper Franconian	Upper Franconian			feel_VERB	fiehln	fˈiːln̩	f ˈiː l n̩		feel_VERB_1			
 Bavarian	Bavarian			feel_VERB	fuin	fˈujn	f ˈu j n		feel_VERB_1			
 Swabian	Swabian			feel_VERB	fiehla	fˈiːla	f ˈiː l a		feel_VERB_1			
 Swiss German	Swiss German			feel_VERB	füüle	fˈyːlə	f ˈyː l ə		feel_VERB_1			
@@ -2689,6 +2756,7 @@ Hessian	Hessian			fire_NOUN	Foiä	fˈoi̯æ̆	f ˈoi̯ æ̆		fire_NOUN_2
 Wymysorys	Wymysorys			fire_NOUN	faojer	fˈɑi̯ɛr	f ˈɑi̯ ɛ r		fire_NOUN_2			
 Yiddish	Yiddish			fire_NOUN	פֿײַער	fˈaɪ̯əʀ	f ˈaɪ̯ ə ʀ		fire_NOUN_2			
 Standard German	Standard German			fire_NOUN	Feuer	fˈɔʏ̯ɐ	f ˈɔʏ̯ ɐ		fire_NOUN_2			
+Upper Franconian	Upper Franconian			fire_NOUN	Feier	fˈaɪ̯ɐ	f ˈaɪ̯ ɐ		fire_NOUN_2			
 Bavarian	Bavarian			fire_NOUN	Faia	fˈai̯a	f ˈai̯ a		fire_NOUN_2			
 Swabian	Swabian			fire_NOUN	Feir	fˈəi̯ʌ	f ˈəi̯ ʌ		fire_NOUN_2			
 Alsatian	Alsatian			fire_NOUN	Fiir	fˈiːʁ	f ˈiː ʁ		fire_NOUN_2			
@@ -2725,6 +2793,7 @@ Hessian	Hessian			feet_NOUN_PL	Fois	fˈoi̯s	f ˈoi̯ s		feet_NOUN_PL_1
 Wymysorys	Wymysorys			feet_NOUN_PL	fisa	fˈisa	f ˈi s a		feet_NOUN_PL_1			
 Yiddish	Yiddish			feet_NOUN_PL	פֿיס‎	fˈɪs	f ˈɪ s		feet_NOUN_PL_1			
 Standard German	Standard German			feet_NOUN_PL	Füße	fˈyːsə	f ˈyː s ə		feet_NOUN_PL_1			
+Upper Franconian	Upper Franconian			feet_NOUN_PL	Fieß	fˈiːs	f ˈiː s		feet_NOUN_PL_1			
 Bavarian	Bavarian			feet_NOUN_PL	Fiass	fˈiɐ̯s	f ˈiɐ̯ s		feet_NOUN_PL_1			
 Swabian	Swabian			feet_NOUN_PL	Fiaß	fˈiə̯s	f ˈiə̯ s		feet_NOUN_PL_1			
 Alsatian	Alsatian			feet_NOUN_PL	Fiess	fˈiːs	f ˈiː s		feet_NOUN_PL_1			
@@ -2763,6 +2832,7 @@ Hessian	Hessian			foot_NOUN	Fuus	fˈuːs	f ˈuː s		foot_NOUN_1
 Wymysorys	Wymysorys			foot_NOUN	füs	fˈʏs	f ˈʏ s		foot_NOUN_1			
 Yiddish	Yiddish			foot_NOUN	פֿוס	fˈʊs	f ˈʊ s		foot_NOUN_1			
 Standard German	Standard German			foot_NOUN	Fuß	fˈuːs	f ˈuː s		foot_NOUN_1			
+Upper Franconian	Upper Franconian			foot_NOUN	Fuß	fˈuːs	f ˈuː s		foot_NOUN_1			
 Bavarian	Bavarian			foot_NOUN	Fuass	fˈuɐ̯s	f ˈuɐ̯ s		foot_NOUN_1			
 Swabian	Swabian			foot_NOUN	Fuaß	fˈuə̯s	f ˈuə̯ s		foot_NOUN_1			
 Alsatian	Alsatian			foot_NOUN	Füess	fˈʊːs	f ˈʊː s		foot_NOUN_1			
@@ -2785,6 +2855,7 @@ Hessian	Hessian			woman_NOUN	Fraa	fʀˈaː	f ʀ ˈaː		woman_NOUN_1
 Wymysorys	Wymysorys			woman_NOUN	fraoj	frˈɑi̯	f r ˈɑi̯		woman_NOUN_1			
 Yiddish	Yiddish			woman_NOUN	פֿרוי	fʀˈɔɪ̯	f ʀ ˈɔɪ̯		woman_NOUN_1			
 Standard German	Standard German			woman_NOUN	Frau	fʁˈaʊ̯	f ʁ ˈaʊ̯		woman_NOUN_1			
+Upper Franconian	Upper Franconian			woman_NOUN	Fraa	frˈaː	f r ˈaː		woman_NOUN_1			
 Swabian	Swabian			woman_NOUN	Frau	fʁˈao̯	f ʁ ˈao̯		woman_NOUN_1			
 Alsatian	Alsatian			woman_NOUN	Fràui	fʁˈɔi̯	f ʁ ˈɔi̯		woman_NOUN_1			
 Swiss German	Swiss German			woman_NOUN	Frau	frˈau̯	f r ˈau̯		woman_NOUN_1			
@@ -2820,6 +2891,7 @@ Hessian	Hessian			freeze_VERB	friiǎn	fʀˈiːɐn	f ʀ ˈiː ɐ n		freeze_VERB_1
 Wymysorys	Wymysorys			freeze_VERB	friyn	frˈiən	f r ˈi ə n		freeze_VERB_1			
 Yiddish	Yiddish			freeze_VERB	פֿרירן	fʀˈɪʀn̩	f ʀ ˈɪ ʀ n̩		freeze_VERB_1			
 Standard German	Standard German			freeze_VERB	frieren	fʁˈiːʁən	f ʁ ˈiː ʁ ə n		freeze_VERB_1			
+Upper Franconian	Upper Franconian			freeze_VERB	friern	frˈiːɐn	f r ˈiː ɐ n		freeze_VERB_1			
 Swabian	Swabian			freeze_VERB	friera	fʁˈiːʁa	f ʁ ˈiː ʁ a		freeze_VERB_1			
 Swiss German	Swiss German			freeze_VERB	gfrüüre	ɡ̊frˈyːrə	ɡ̊ f r ˈyː r ə		freeze_VERB_1			
 Proto-Germanic	Proto-Germanic			free_ADJ	frijaz	ɸrˈijɑz	ɸ r ˈi j ɑ z		free_ADJ_1			
@@ -2849,6 +2921,7 @@ Hessian	Hessian			free_ADJ	frai	fʀˈai̯	f ʀ ˈai̯		free_ADJ_1
 Wymysorys	Wymysorys			free_ADJ	fraj	frˈai̯	f r ˈai̯		free_ADJ_1			
 Yiddish	Yiddish			free_ADJ	פֿרײַ	fʀˈaɪ̯	f ʀ ˈaɪ̯		free_ADJ_1			
 Standard German	Standard German			free_ADJ	frei	fʁˈaɪ̯	f ʁ ˈaɪ̯		free_ADJ_1			
+Upper Franconian	Upper Franconian			free_ADJ	frei	frˈaɪ̯	f r ˈaɪ̯		free_ADJ_1			
 Bavarian	Bavarian			free_ADJ	frei	frˈai̯	f r ˈai̯		free_ADJ_1			
 Alsatian	Alsatian			free_ADJ	frej	fʁˈei̯	f ʁ ˈei̯		free_ADJ_1			
 Swiss German	Swiss German			free_ADJ	frei	frˈei̯	f r ˈei̯		free_ADJ_1			
@@ -2887,6 +2960,7 @@ Hessian	Hessian			friend_NOUN	Froind	fʀˈoi̯nd̥	f ʀ ˈoi̯ n d̥		friend_NOU
 Wymysorys	Wymysorys			friend_NOUN	frajnd	frˈai̯nd̥	f r ˈai̯ n d̥		friend_NOUN_1			
 Yiddish	Yiddish			friend_NOUN	פֿרײַנד	fʀˈaɪ̯nd	f ʀ ˈaɪ̯ n d		friend_NOUN_1			
 Standard German	Standard German			friend_NOUN	Freund	fʁˈɔʏ̯nd̥	f ʁ ˈɔʏ̯ n d̥		friend_NOUN_1			
+Upper Franconian	Upper Franconian			friend_NOUN	Freind	frˈaɪ̯nd̥	f r ˈaɪ̯ n d̥		friend_NOUN_1			
 Bavarian	Bavarian			friend_NOUN	Freind	frˈai̯nd̥	f r ˈai̯ n d̥		friend_NOUN_1			
 Swabian	Swabian			friend_NOUN	Freind	fʁˈae̯nd	f ʁ ˈae̯ n d		friend_NOUN_1			
 Alsatian	Alsatian			friend_NOUN	Frind	fʁˈind̥	f ʁ ˈi n d̥		friend_NOUN_1			
@@ -2925,6 +2999,7 @@ Hessian	Hessian			fresh_ADJ	frisch	fʀˈiʃ	f ʀ ˈi ʃ		fresh_ADJ_1
 Wymysorys	Wymysorys			fresh_ADJ	fryś	frˈɘ̟ʃ	f r ˈɘ̟ ʃ		fresh_ADJ_1			
 Yiddish	Yiddish			fresh_ADJ	פֿריש	fʀˈɪʃ	f ʀ ˈɪ ʃ		fresh_ADJ_1			
 Standard German	Standard German			fresh_ADJ	frisch	fʁˈɪʃ	f ʁ ˈɪ ʃ		fresh_ADJ_1			
+Upper Franconian	Upper Franconian			fresh_ADJ	frisch	frˈɪʃ	f r ˈɪ ʃ		fresh_ADJ_1			
 Bavarian	Bavarian			fresh_ADJ	frisch	frˈiʃ	f r ˈi ʃ		fresh_ADJ_1			
 Swabian	Swabian			fresh_ADJ	frisch	fʁˈiʃ	f ʁ ˈi ʃ		fresh_ADJ_1			
 Alsatian	Alsatian			fresh_ADJ	frisch	fʁˈiʃ	f ʁ ˈi ʃ		fresh_ADJ_1			
@@ -2964,6 +3039,7 @@ Hessian	Hessian			bird_NOUN_MASC	Foochl	fˈoːɣ̥l̩	f ˈoː ɣ̥ l̩		bird_NOU
 Wymysorys	Wymysorys			bird_NOUN_MASC	föguł	fˈøɡuw	f ˈø ɡ u w		bird_NOUN_MASC_1			
 Yiddish	Yiddish			bird_NOUN_MASC	פֿויגל	fˈɔɪ̯ɡɫ̩	f ˈɔɪ̯ ɡ ɫ̩		bird_NOUN_MASC_1			
 Standard German	Standard German			bird_NOUN_MASC	Vogel	fˈoːɡl̩	f ˈoː ɡ l̩		bird_NOUN_MASC_1			
+Upper Franconian	Upper Franconian			bird_NOUN_MASC	Vogel	fˈoːçl̩	f ˈoː ç l̩		bird_NOUN_MASC_1			
 Bavarian	Bavarian			bird_NOUN_MASC	Vogl	fˈoːɡ̊l̩	f ˈoː ɡ̊ l̩		bird_NOUN_MASC_1			
 Swabian	Swabian			bird_NOUN_MASC	Vogl	fˈoːɡl̩	f ˈoː ɡ l̩		bird_NOUN_MASC_1			
 Alsatian	Alsatian			bird_NOUN_MASC	Vöjel	fˈøɡ̊l̩	f ˈø ɡ̊ l̩		bird_NOUN_MASC_1			
@@ -2992,6 +3068,7 @@ Hessian	Hessian			fox_NOUN	Fukks	fˈuks	f ˈu k s		fox_NOUN_1
 Wymysorys	Wymysorys			fox_NOUN	füks	fˈʏks	f ˈʏ k s		fox_NOUN_1			
 Yiddish	Yiddish			fox_NOUN	פֿוקס	fˈʊks	f ˈʊ k s		fox_NOUN_1			
 Standard German	Standard German			fox_NOUN	Fuchs	fˈʊks	f ˈʊ k s		fox_NOUN_1			
+Upper Franconian	Upper Franconian			fox_NOUN	Fuchs	fˈʊɡ̊s	f ˈʊ ɡ̊ s		fox_NOUN_1			
 Bavarian	Bavarian			fox_NOUN	Fux	fˈuɡ̊s	f ˈu ɡ̊ s		fox_NOUN_1			
 Swabian	Swabian			fox_NOUN	Fuchs	fˈuɡs	f ˈu ɡ s		fox_NOUN_1			
 Alsatian	Alsatian			fox_NOUN	Fuchs	fˈuks	f ˈu k s		fox_NOUN_1			
@@ -3020,6 +3097,7 @@ Palatine German	Palatine German			follow_VERB	folje	fˈɔljə	f ˈɔ l j ə		fol
 Wymysorys	Wymysorys			follow_VERB	fulgia	fˈulɟa	f ˈu l ɟ a		follow_VERB_1			
 Yiddish	Yiddish			follow_VERB	פֿאָלגן	fˈɔɫɡn̩	f ˈɔ ɫ ɡ n̩		follow_VERB_1			
 Standard German	Standard German			follow_VERB	folgen	fˈɔlɡn̩	f ˈɔ l ɡ n̩		follow_VERB_1			
+Upper Franconian	Upper Franconian			follow_VERB	folng	fˈɔlŋ	f ˈɔ l ŋ		follow_VERB_1			
 Bavarian	Bavarian			follow_VERB	foing	fˈojŋ	f ˈo j ŋ		follow_VERB_1			
 Swabian	Swabian			follow_VERB	folga	fˈolɡa	f ˈo l ɡ a		follow_VERB_1			
 Swiss German	Swiss German			follow_VERB	folge	fˈolɡ̊ə	f ˈo l ɡ̊ ə		follow_VERB_1			
@@ -3058,6 +3136,7 @@ Palatine German	Palatine German			folk_NOUN	Volk	fˈɔlɡ̊	f ˈɔ l ɡ̊		folk_
 Wymysorys	Wymysorys			folk_NOUN	fulk	fˈulk	f ˈu l k		folk_NOUN_1			
 Yiddish	Yiddish			folk_NOUN	פֿאָלק	fˈɔɫk	f ˈɔ ɫ k		folk_NOUN_1			
 Standard German	Standard German			folk_NOUN	Volk	fˈɔlk	f ˈɔ l k		folk_NOUN_1			
+Upper Franconian	Upper Franconian			folk_NOUN	Volk	fˈɔlɡ̊	f ˈɔ l ɡ̊		folk_NOUN_1			
 Bavarian	Bavarian			folk_NOUN	Voigg	fˈojɡ̊	f ˈo j ɡ̊		folk_NOUN_1			
 Swiss German	Swiss German			folk_NOUN	Vouk	fˈowk	f ˈo w k		folk_NOUN_1			
 Proto-Germanic	Proto-Germanic			full_ADJ	fullaz	ɸˈullɑz	ɸ ˈu l l ɑ z		full_ADJ_1			
@@ -3095,6 +3174,7 @@ Hessian	Hessian			full_ADJ	foll	fˈol	f ˈo l		full_ADJ_1
 Wymysorys	Wymysorys			full_ADJ	fułł	fˈuw	f ˈu w		full_ADJ_1			
 Yiddish	Yiddish			full_ADJ	פֿול	fˈʊɫ	f ˈʊ ɫ		full_ADJ_1			
 Standard German	Standard German			full_ADJ	voll	fˈɔl	f ˈɔ l		full_ADJ_1			
+Upper Franconian	Upper Franconian			full_ADJ	voll	fˈɔl	f ˈɔ l		full_ADJ_1			
 Bavarian	Bavarian			full_ADJ	voi	fˈoj	f ˈo j		full_ADJ_1			
 Swabian	Swabian			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1			
 Alsatian	Alsatian			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1			
@@ -3133,6 +3213,7 @@ Hessian	Hessian			for_PREP	fä	fæ̆	f æ̆		for_PREP_1
 Wymysorys	Wymysorys			for_PREP	fir	fˈir	f ˈi r		for_PREP_1			
 Yiddish	Yiddish			for_PREP	פֿאַר	fˈaʀ	f ˈa ʀ		for_PREP_1			
 Standard German	Standard German			for_PREP	für	fˈyːɐ	f ˈyː ɐ		for_PREP_1			
+Upper Franconian	Upper Franconian			for_PREP	fä	fˈɘ	f ˈɘ		for_PREP_1			
 Bavarian	Bavarian			for_PREP	fia	fˈiɐ	f ˈi ɐ		for_PREP_1			
 Swabian	Swabian			for_PREP	fir	fˈiʌ	f ˈi ʌ		for_PREP_1			
 Alsatian	Alsatian			for_PREP	fer	fˈeʁ	f ˈe ʁ		for_PREP_1			
@@ -3159,6 +3240,7 @@ Pennsylvania German	Pennsylvania German			ghost_NOUN	Geescht	ɡˈeːʃt	ɡ ˈeː
 Palatine German	Palatine German			ghost_NOUN	Gääscht	ɡ̊ˈɛːʃd̥	ɡ̊ ˈɛː ʃ d̥		ghost_NOUN_1			
 Yiddish	Yiddish			ghost_NOUN	גײַסט	ɡˈaɪ̯st	ɡ ˈaɪ̯ s t		ghost_NOUN_1			
 Standard German	Standard German			ghost_NOUN	Geist	ɡˈaɪ̯st	ɡ ˈaɪ̯ s t		ghost_NOUN_1			
+Upper Franconian	Upper Franconian			ghost_NOUN	Geist	ɡ̊ˈaɪ̯sd̥	ɡ̊ ˈaɪ̯ s d̥		ghost_NOUN_1			
 Bavarian	Bavarian			ghost_NOUN	Geischd	ɡ̊ˈai̯ʃd̥	ɡ̊ ˈai̯ ʃ d̥		ghost_NOUN_1			
 Swabian	Swabian			ghost_NOUN	Geischd	ɡˈae̯ʃd	ɡ ˈae̯ ʃ d		ghost_NOUN_1			
 Swiss German	Swiss German			ghost_NOUN	Gäischt	ɡ̊ˈæi̯ʃt	ɡ̊ ˈæi̯ ʃ t		ghost_NOUN_1			
@@ -3189,6 +3271,7 @@ Pennsylvania German	Pennsylvania German			goat_NOUN	Geess	ɡˈeːs	ɡ ˈeː s		g
 Palatine German	Palatine German			goat_NOUN	Gääß	ɡ̊ˈɛːs	ɡ̊ ˈɛː s		goat_NOUN_1			
 Hessian	Hessian			goat_NOUN	Gaas	ɡ̊ˈaːs	ɡ̊ ˈaː s		goat_NOUN_1			
 Standard German	Standard German			goat_NOUN	Geiß	ɡˈaɪ̯s	ɡ ˈaɪ̯ s		goat_NOUN_1			
+Upper Franconian	Upper Franconian			goat_NOUN	Gaß	ɡ̊ˈaːs	ɡ̊ ˈaː s		goat_NOUN_1			
 Bavarian	Bavarian			goat_NOUN	Goaß	ɡ̊ˈoɐ̯s	ɡ̊ ˈoɐ̯ s		goat_NOUN_1			
 Swabian	Swabian			goat_NOUN	Goiß	ɡˈɔe̯s	ɡ ˈɔe̯ s		goat_NOUN_1			
 Alsatian	Alsatian			goat_NOUN	Geiss	ɡ̊ˈəi̯s	ɡ̊ ˈəi̯ s		goat_NOUN_1			
@@ -3220,6 +3303,7 @@ Hessian	Hessian			go_VERB	gääñ	ɡ̊ˈɛ̃ː	ɡ̊ ˈɛ̃ː		go_VERB_1
 Wymysorys	Wymysorys			go_VERB	gejn	ɡˈei̯n	ɡ ˈei̯ n		go_VERB_1			
 Yiddish	Yiddish			go_VERB	גיין	ɡˈɛɪ̯n	ɡ ˈɛɪ̯ n		go_VERB_1			
 Standard German	Standard German			go_VERB	gehen	ɡˈeːən	ɡ ˈeː ə n		go_VERB_1			
+Upper Franconian	Upper Franconian			go_VERB	gihn	ɡ̊ˈiːn	ɡ̊ ˈiː n		go_VERB_1			
 Bavarian	Bavarian			go_VERB	gee	ɡ̊ˈeː	ɡ̊ ˈeː		go_VERB_1			
 Alsatian	Alsatian			go_VERB	gehn	ɡ̊ˈeːn	ɡ̊ ˈeː n		go_VERB_1			
 Swiss German	Swiss German			go_VERB	gaa	ɡ̊ˈɒː	ɡ̊ ˈɒː		go_VERB_1			
@@ -3267,6 +3351,7 @@ Hessian	Hessian			goose_NOUN	Gånnds	ɡ̊ˈɑnʣ̥	ɡ̊ ˈɑ n ʣ̥		goose_NOUN_
 Wymysorys	Wymysorys			goose_NOUN	gaons	ɡˈɑns	ɡ ˈɑ n s		goose_NOUN_1			
 Yiddish	Yiddish			goose_NOUN	גאַנדז	ɡˈandz	ɡ ˈa n d z		goose_NOUN_1			
 Standard German	Standard German			goose_NOUN	Gans	ɡˈanz̥	ɡ ˈa n z̥		goose_NOUN_1			
+Upper Franconian	Upper Franconian			goose_NOUN	Gans	ɡ̊ˈans	ɡ̊ ˈa n s		goose_NOUN_1			
 Bavarian	Bavarian			goose_NOUN	Gans	ɡ̊ˈɑns	ɡ̊ ˈɑ n s		goose_NOUN_1			
 Swabian	Swabian			goose_NOUN	Gaas	ɡˈaːs	ɡ ˈaː s		goose_NOUN_1			
 Alsatian	Alsatian			goose_NOUN	Gàns	ɡ̊ˈɒnz̥	ɡ̊ ˈɒ n z̥		goose_NOUN_1			
@@ -3363,6 +3448,7 @@ Hessian	Hessian			give_VERB	gäwwě	ɡ̊ˈɛvə	ɡ̊ ˈɛ v ə		give_VERB_1
 Wymysorys	Wymysorys			give_VERB	gaon	ɡˈɑn	ɡ ˈɑ n		give_VERB_1			
 Yiddish	Yiddish			give_VERB	געבן	ɡˈɛbn̩	ɡ ˈɛ b n̩		give_VERB_1			
 Standard German	Standard German			give_VERB	geben	ɡˈeːbn̩	ɡ ˈeː b n̩		give_VERB_1			
+Upper Franconian	Upper Franconian			give_VERB	gem	ɡ̊ˈeːm	ɡ̊ ˈeː m		give_VERB_1			
 Bavarian	Bavarian			give_VERB	gem	ɡ̊ˈeːm	ɡ̊ ˈeː m		give_VERB_1			
 Swabian	Swabian			give_VERB	gäba	ɡˈɛːba	ɡ ˈɛː b a		give_VERB_1			
 Alsatian	Alsatian			give_VERB	gänn	ɡ̊ˈæn	ɡ̊ ˈæ n		give_VERB_1			
@@ -3401,6 +3487,7 @@ Hessian	Hessian			yellow_ADJ	gääl	ɡ̊ˈɛːl	ɡ̊ ˈɛː l		yellow_ADJ_1
 Wymysorys	Wymysorys			yellow_ADJ	gaoł	ɡˈɑw	ɡ ˈɑ w		yellow_ADJ_1			
 Yiddish	Yiddish			yellow_ADJ	געל	ɡˈɛɫ	ɡ ˈɛ ɫ		yellow_ADJ_1			
 Standard German	Standard German			yellow_ADJ	gelb	ɡˈɛlb̥	ɡ ˈɛ l b̥		yellow_ADJ_1			
+Upper Franconian	Upper Franconian			yellow_ADJ	gelb	ɡ̊ˈɛlb̥	ɡ̊ ˈɛ l b̥		yellow_ADJ_1			
 Bavarian	Bavarian			yellow_ADJ	gäjb	ɡ̊ˈejb̥	ɡ̊ ˈe j b̥		yellow_ADJ_1			
 Swabian	Swabian			yellow_ADJ	geal	ɡˈeə̯l	ɡ ˈeə̯ l		yellow_ADJ_1			
 Alsatian	Alsatian			yellow_ADJ	gäl	ɡ̊ˈæːl	ɡ̊ ˈæː l		yellow_ADJ_1			
@@ -3439,6 +3526,7 @@ Hessian	Hessian			good_ADJ	guut	ɡ̊ˈuːd̥	ɡ̊ ˈuː d̥		good_ADJ_1
 Wymysorys	Wymysorys			good_ADJ	güt	ɡˈʏt	ɡ ˈʏ t		good_ADJ_1			
 Yiddish	Yiddish			good_ADJ	גוט	ɡˈʊt	ɡ ˈʊ t		good_ADJ_1			
 Standard German	Standard German			good_ADJ	gut	ɡˈuːt	ɡ ˈuː t		good_ADJ_1			
+Upper Franconian	Upper Franconian			good_ADJ	gud	ɡ̊ˈuːd̥	ɡ̊ ˈuː d̥		good_ADJ_1			
 Bavarian	Bavarian			good_ADJ	guad	ɡ̊ˈuɐ̯d̥	ɡ̊ ˈuɐ̯ d̥		good_ADJ_1			
 Swabian	Swabian			good_ADJ	guad	ɡˈuə̯d	ɡ ˈuə̯ d		good_ADJ_1			
 Alsatian	Alsatian			good_ADJ	güet	ɡ̊ˈʊːt	ɡ̊ ˈʊː t		good_ADJ_1			
@@ -3476,6 +3564,7 @@ Hessian	Hessian			grass_NOUN_NEU	Kråås	kʀˈɑːs	k ʀ ˈɑː s		grass_NOUN_NE
 Wymysorys	Wymysorys			grass_NOUN_NEU	gros	ɡrˈɔs	ɡ r ˈɔ s		grass_NOUN_NEU_1			
 Yiddish	Yiddish			grass_NOUN_NEU	גראָז	ɡʀˈɔz	ɡ ʀ ˈɔ z		grass_NOUN_NEU_1			
 Standard German	Standard German			grass_NOUN_NEU	Gras	ɡʁˈaːz̥	ɡ ʁ ˈaː z̥		grass_NOUN_NEU_1			
+Upper Franconian	Upper Franconian			grass_NOUN_NEU	Gros	ɡ̊rˈoːs	ɡ̊ r ˈoː s		grass_NOUN_NEU_1			
 Bavarian	Bavarian			grass_NOUN_NEU	Grås	ɡ̊rˈɒːs	ɡ̊ r ˈɒː s		grass_NOUN_NEU_1			
 Swabian	Swabian			grass_NOUN_NEU	Gras	ɡʁˈaːs	ɡ ʁ ˈaː s		grass_NOUN_NEU_1			
 Alsatian	Alsatian			grass_NOUN_NEU	Gràs	ɡ̊ʁˈɒːz̥	ɡ̊ ʁ ˈɒː z̥		grass_NOUN_NEU_1			
@@ -3508,6 +3597,7 @@ Hessian	Hessian			great_ADJ	kroos	kʀˈoːs	k ʀ ˈoː s		great_ADJ_1
 Wymysorys	Wymysorys			great_ADJ	grus	ɡrˈus	ɡ r ˈu s		great_ADJ_1			
 Yiddish	Yiddish			great_ADJ	גרויס	ɡʀˈɔɪ̯s	ɡ ʀ ˈɔɪ̯ s		great_ADJ_1			
 Standard German	Standard German			great_ADJ	groß	ɡʁˈoːs	ɡ ʁ ˈoː s		great_ADJ_1			
+Upper Franconian	Upper Franconian			great_ADJ	gruß	ɡ̊rˈuːs	ɡ̊ r ˈuː s		great_ADJ_1			
 Bavarian	Bavarian			great_ADJ	grous	ɡ̊rˈou̯s	ɡ̊ r ˈou̯ s		great_ADJ_1			
 Swabian	Swabian			great_ADJ	groß	ɡʁˈoːs	ɡ ʁ ˈoː s		great_ADJ_1			
 Alsatian	Alsatian			great_ADJ	gross	ɡ̊ʁˈoːs	ɡ̊ ʁ ˈoː s		great_ADJ_1			
@@ -3546,6 +3636,7 @@ Hessian	Hessian			green_ADJ	kriiñ	kʀˈĩː	k ʀ ˈĩː		green_ADJ_1
 Wymysorys	Wymysorys			green_ADJ	grin	ɡrˈin	ɡ r ˈi n		green_ADJ_1			
 Yiddish	Yiddish			green_ADJ	גרין	ɡʀˈɪn	ɡ ʀ ˈɪ n		green_ADJ_1			
 Standard German	Standard German			green_ADJ	grün	ɡʁˈyːn	ɡ ʁ ˈyː n		green_ADJ_1			
+Upper Franconian	Upper Franconian			green_ADJ	grien	ɡ̊rˈiːn	ɡ̊ r ˈiː n		green_ADJ_1			
 Bavarian	Bavarian			green_ADJ	grea	ɡ̊rˈeɐ̯	ɡ̊ r ˈeɐ̯		green_ADJ_1			
 Swabian	Swabian			green_ADJ	grea	ɡʁˈeə̯	ɡ ʁ ˈeə̯		green_ADJ_1			
 Alsatian	Alsatian			green_ADJ	grien	ɡ̊ʁˈiːn	ɡ̊ ʁ ˈiː n		green_ADJ_1			
@@ -3585,6 +3676,7 @@ Hessian	Hessian			god_NOUN	Gott	ɡ̊ˈot	ɡ̊ ˈo t		god_NOUN_1
 Wymysorys	Wymysorys			god_NOUN	göt	ɡˈøt	ɡ ˈø t		god_NOUN_1			
 Yiddish	Yiddish			god_NOUN	גאָט	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1			
 Standard German	Standard German			god_NOUN	Gott	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1			
+Upper Franconian	Upper Franconian			god_NOUN	Gott	ɡ̊ˈɔd̥	ɡ̊ ˈɔ d̥		god_NOUN_1			
 Bavarian	Bavarian			god_NOUN	Good	ɡ̊ˈoːd̥	ɡ̊ ˈoː d̥		god_NOUN_1			
 Swabian	Swabian			god_NOUN	Gott	ɡˈɔt	ɡ ˈɔ t		god_NOUN_1			
 Alsatian	Alsatian			god_NOUN	Gott	ɡ̊ˈot	ɡ̊ ˈo t		god_NOUN_1			
@@ -3624,6 +3716,7 @@ Hessian	Hessian			gold_NOUN_NEU	Gollt	ɡ̊ˈold̥	ɡ̊ ˈo l d̥		gold_NOUN_NEU_
 Wymysorys	Wymysorys			gold_NOUN_NEU	gułd	ɡˈuwd̥	ɡ ˈu w d̥		gold_NOUN_NEU_1			
 Yiddish	Yiddish			gold_NOUN_NEU	גאָלד	ɡˈɔɫd	ɡ ˈɔ ɫ d		gold_NOUN_NEU_1			
 Standard German	Standard German			gold_NOUN_NEU	Gold	ɡˈɔld̥	ɡ ˈɔ l d̥		gold_NOUN_NEU_1			
+Upper Franconian	Upper Franconian			gold_NOUN_NEU	Gold	ɡ̊ˈɔld̥	ɡ̊ ˈɔ l d̥		gold_NOUN_NEU_1			
 Bavarian	Bavarian			gold_NOUN_NEU	Goid	ɡ̊ˈojd̥	ɡ̊ ˈo j d̥		gold_NOUN_NEU_1			
 Swabian	Swabian			gold_NOUN_NEU	Gold	ɡˈold	ɡ ˈo l d		gold_NOUN_NEU_1			
 Swiss German	Swiss German			gold_NOUN_NEU	Gold	ɡ̊ˈold̥	ɡ̊ ˈo l d̥		gold_NOUN_NEU_1			
@@ -3661,6 +3754,7 @@ Hessian	Hessian			have_VERB	håwwě	hˈɑvə	h ˈɑ v ə		have_VERB_1
 Wymysorys	Wymysorys			have_VERB	hon	hˈɔn	h ˈɔ n		have_VERB_1			
 Yiddish	Yiddish			have_VERB	האָבן	hˈɔbn̩	h ˈɔ b n̩		have_VERB_1			
 Standard German	Standard German			have_VERB	haben	hˈaːbn̩	h ˈaː b n̩		have_VERB_1			
+Upper Franconian	Upper Franconian			have_VERB	ham	hˈaːm	h ˈaː m		have_VERB_1			
 Bavarian	Bavarian			have_VERB	hām	hˈɑːm	h ˈɑː m		have_VERB_1			
 Swabian	Swabian			have_VERB	hann	hˈan	h ˈa n		have_VERB_1			
 Alsatian	Alsatian			have_VERB	hàn	hˈɒn	h ˈɒ n		have_VERB_1			
@@ -3698,6 +3792,7 @@ Hessian	Hessian			holy_ADJ	hailisch	hˈai̯liʃ	h ˈai̯ l i ʃ		holy_ADJ_1
 Wymysorys	Wymysorys			holy_ADJ	haliky	hˈalɪkə	h ˈa l ɪ k ə		holy_ADJ_1			
 Yiddish	Yiddish			holy_ADJ	הייליק	hˈɛɪ̯ɫɪk	h ˈɛɪ̯ ɫ ɪ k		holy_ADJ_1			
 Standard German	Standard German			holy_ADJ	heilig	hˈaɪ̯lɪç	h ˈaɪ̯ l ɪ ç		holy_ADJ_1			
+Upper Franconian	Upper Franconian			holy_ADJ	hali	hˈaːli	h ˈaː l i		holy_ADJ_1			
 Bavarian	Bavarian			holy_ADJ	heilig	hˈai̯liɡ̊	h ˈai̯ l i ɡ̊		holy_ADJ_1	TRUE		
 Swabian	Swabian			holy_ADJ	heilig	hˈae̯lɪɡ	h ˈae̯ l ɪ ɡ		holy_ADJ_1			
 Alsatian	Alsatian			holy_ADJ	heili	hˈəi̯li	h ˈəi̯ l i		holy_ADJ_1			
@@ -3729,6 +3824,7 @@ Hessian	Hessian			home_NOUN	Haam	hˈaːm	h ˈaː m		home_NOUN_1
 Wymysorys	Wymysorys			home_NOUN	haom	hˈɑm	h ˈɑ m		home_NOUN_1			
 Yiddish	Yiddish			home_NOUN	היים	hˈɛɪ̯m	h ˈɛɪ̯ m		home_NOUN_1			
 Standard German	Standard German			home_NOUN	Heim	hˈaɪ̯m	h ˈaɪ̯ m		home_NOUN_1			
+Upper Franconian	Upper Franconian			home_NOUN	Ham	hˈaːm	h ˈaː m		home_NOUN_1			
 Bavarian	Bavarian			home_NOUN	Hoam	hˈoɐ̯m	h ˈoɐ̯ m		home_NOUN_1			
 Swabian	Swabian			home_NOUN	hoim	hˈɔe̯m	h ˈɔe̯ m		home_NOUN_1			
 Alsatian	Alsatian			home_NOUN	heim	hˈəi̯m	h ˈəi̯ m		home_NOUN_1			
@@ -3760,6 +3856,7 @@ Palatine German	Palatine German			hot_ADJ	hääß	hˈɛːs	h ˈɛː s		hot_ADJ_1
 Wymysorys	Wymysorys			hot_ADJ	haas	hˈas	h ˈa s		hot_ADJ_1			
 Yiddish	Yiddish			hot_ADJ	הייס	hˈɛɪ̯s	h ˈɛɪ̯ s		hot_ADJ_1			
 Standard German	Standard German			hot_ADJ	heiß	hˈaɪ̯s	h ˈaɪ̯ s		hot_ADJ_1			
+Upper Franconian	Upper Franconian			hot_ADJ	haß	hˈaːs	h ˈaː s		hot_ADJ_1			
 Bavarian	Bavarian			hot_ADJ	hoass	hˈoɐ̯s	h ˈoɐ̯ s		hot_ADJ_1			
 Swabian	Swabian			hot_ADJ	hoiß	hˈɔe̯s	h ˈɔe̯ s		hot_ADJ_1			
 Alsatian	Alsatian			hot_ADJ	heiss	hˈəi̯s	h ˈəi̯ s		hot_ADJ_1			
@@ -3799,6 +3896,7 @@ Hessian	Hessian			half_NOUN	hallwä	hˈalvæ̆	h ˈa l v æ̆		half_NOUN_1
 Wymysorys	Wymysorys			half_NOUN	hołwy	hˈɔwvə	h ˈɔ w v ə		half_NOUN_1			
 Yiddish	Yiddish			half_NOUN	האַלב	hˈaɫb	h ˈa ɫ b		half_NOUN_1			
 Standard German	Standard German			half_NOUN	halb	hˈalb̥	h ˈa l b̥		half_NOUN_1			
+Upper Franconian	Upper Franconian			half_NOUN	halb	hˈalb̥	h ˈa l b̥		half_NOUN_1			
 Bavarian	Bavarian			half_NOUN	hoib	hˈojb̥	h ˈo j b̥		half_NOUN_1			
 Swabian	Swabian			half_NOUN	halb	hˈalb	h ˈa l b		half_NOUN_1			
 Alsatian	Alsatian			half_NOUN	hàlb	hˈɒlb̥	h ˈɒ l b̥		half_NOUN_1			
@@ -3837,6 +3935,7 @@ Hessian	Hessian			hand_NOUN_FEM	Hånnt	hˈɑnd̥	h ˈɑ n d̥		hand_NOUN_FEM_1
 Wymysorys	Wymysorys			hand_NOUN_FEM	haond	hˈɑnd̥	h ˈɑ n d̥		hand_NOUN_FEM_1			
 Yiddish	Yiddish			hand_NOUN_FEM	האַנט	hˈant	h ˈa n t		hand_NOUN_FEM_1			
 Standard German	Standard German			hand_NOUN_FEM	Hand	hˈand̥	h ˈa n d̥		hand_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			hand_NOUN_FEM	Hand	hˈand̥	h ˈa n d̥		hand_NOUN_FEM_1			
 Bavarian	Bavarian			hand_NOUN_FEM	Hund	hˈund̥	h ˈu n d̥		hand_NOUN_FEM_1			
 Swabian	Swabian			hand_NOUN_FEM	Haad	hˈaːd	h ˈaː d		hand_NOUN_FEM_1			
 Alsatian	Alsatian			hand_NOUN_FEM	Hànd	hˈɒnd̥	h ˈɒ n d̥		hand_NOUN_FEM_1			
@@ -3859,6 +3958,7 @@ Afrikaans	Afrikaans			hen_NOUN	hen	ɦˈɛn	ɦ ˈɛ n		hen_NOUN_1
 Limburgish	Limburgish			hen_NOUN	hin	ɦˈɪn	ɦ ˈɪ n		hen_NOUN_1			
 Palatine German	Palatine German			hen_NOUN	Henne	hˈɛnə	h ˈɛ n ə		hen_NOUN_1			
 Standard German	Standard German			hen_NOUN	Henne	hˈɛnə	h ˈɛ n ə		hen_NOUN_1			
+Upper Franconian	Upper Franconian			hen_NOUN	Henna	hˈɛna	h ˈɛ n a		hen_NOUN_1			
 Bavarian	Bavarian			hen_NOUN	Heena	hˈeːna	h ˈeː n a		hen_NOUN_1			
 Swabian	Swabian			hen_NOUN	Henn	hˈɛn	h ˈɛ n		hen_NOUN_1			
 Swiss German	Swiss German			hen_NOUN	Häne	hˈænə	h ˈæ n ə		hen_NOUN_1			
@@ -3895,6 +3995,7 @@ Hessian	Hessian			hare_NOUN	Håås	hˈɑːs	h ˈɑː s		hare_NOUN_1
 Wymysorys	Wymysorys			hare_NOUN	hoza	hˈɔza	h ˈɔ z a		hare_NOUN_1			
 Yiddish	Yiddish			hare_NOUN	האָז	hˈɔz	h ˈɔ z		hare_NOUN_1			
 Standard German	Standard German			hare_NOUN	Hase	hˈaːzə	h ˈaː z ə		hare_NOUN_1			
+Upper Franconian	Upper Franconian			hare_NOUN	Hoos	hˈoːs	h ˈoː s		hare_NOUN_1			
 Bavarian	Bavarian			hare_NOUN	Hås	hˈɒːs	h ˈɒː s		hare_NOUN_1			
 Swabian	Swabian			hare_NOUN	Has	hˈaːs	h ˈaː s		hare_NOUN_1			
 Swiss German	Swiss German			hare_NOUN	Haas	hˈɒːs	h ˈɒː s		hare_NOUN_1			
@@ -3956,6 +4057,7 @@ Palatine German	Palatine German			head_NOUN	Haapt	hˈɑːb̥d̥	h ˈɑː b̥ d̥
 Wymysorys	Wymysorys			head_NOUN	hojpt	hˈoi̯pt	h ˈoi̯ p t		head_NOUN_1			
 Yiddish	Yiddish			head_NOUN	הויפּט	hˈɔɪ̯pt	h ˈɔɪ̯ p t		head_NOUN_1			
 Standard German	Standard German			head_NOUN	Haupt	hˈaʊ̯pt	h ˈaʊ̯ p t		head_NOUN_1			
+Upper Franconian	Upper Franconian			head_NOUN	Haad	hˈaːd̥	h ˈaː d̥		head_NOUN_1			
 Bavarian	Bavarian			head_NOUN	Hapt	hˈaːb̥d̥	h ˈaː b̥ d̥		head_NOUN_1			
 Swabian	Swabian			head_NOUN	Haubd	hˈao̯bd	h ˈao̯ b d		head_NOUN_1			
 Swiss German	Swiss German			head_NOUN	Haupt	hˈau̯pt	h ˈau̯ p t		head_NOUN_1			
@@ -3995,6 +4097,7 @@ Hessian	Hessian			high_ADJ	hooch	hˈoːx	h ˈoː x		high_ADJ_2
 Wymysorys	Wymysorys			high_ADJ	huch	hˈux	h ˈu x		high_ADJ_2			
 Yiddish	Yiddish			high_ADJ	הויך	hˈɔɪ̯χ	h ˈɔɪ̯ χ		high_ADJ_2			
 Standard German	Standard German			high_ADJ	hoch	hˈoːx	h ˈoː x		high_ADJ_2			
+Upper Franconian	Upper Franconian			high_ADJ	huch	hˈuːx	h ˈuː x		high_ADJ_2			
 Bavarian	Bavarian			high_ADJ	houch	hˈou̯x	h ˈou̯ x		high_ADJ_2			
 Swabian	Swabian			high_ADJ	hauch	hˈao̯x	h ˈao̯ x		high_ADJ_2			
 Alsatian	Alsatian			high_ADJ	hoch	hˈoːx	h ˈoː x		high_ADJ_2			
@@ -4032,6 +4135,7 @@ Palatine German	Palatine German			hear_VERB	heere	hˈeːrə	h ˈeː r ə		hear_V
 Hessian	Hessian			hear_VERB	hȁȁǎn	hˈæːɐn	h ˈæː ɐ n		hear_VERB_1			
 Yiddish	Yiddish			hear_VERB	הערן	hˈɛʀn	h ˈɛ ʀ n		hear_VERB_1			
 Standard German	Standard German			hear_VERB	hören	hˈøːʁən	h ˈøː ʁ ə n		hear_VERB_1			
+Upper Franconian	Upper Franconian			hear_VERB	häern	hˈɘɐn	h ˈɘ ɐ n		hear_VERB_1			
 Bavarian	Bavarian			hear_VERB	hean	hˈeːɐn	h ˈeː ɐ n		hear_VERB_1			
 Swabian	Swabian			hear_VERB	höra	hˈeːʁa	h ˈeː ʁ a		hear_VERB_1			
 Alsatian	Alsatian			hear_VERB	heere	hˈeːʁə	h ˈeː ʁ ə		hear_VERB_1			
@@ -4065,6 +4169,7 @@ Ripuarian	Ripuarian			here_ADV	hee	hˈeː	h ˈeː		here_ADV_1
 Luxembourgish	Luxembourgish			here_ADV	hei	hˈɑɪ̯	h ˈɑɪ̯		here_ADV_1			
 Palatine German	Palatine German			here_ADV	hier	hˈiːɐ	h ˈiː ɐ		here_ADV_1			
 Standard German	Standard German			here_ADV	hier	hˈiːɐ	h ˈiː ɐ		here_ADV_1			
+Upper Franconian	Upper Franconian			here_ADV	hier	hˈiːɐ	h ˈiː ɐ		here_ADV_1			
 Bavarian	Bavarian			here_ADV	hia	hˈiɐ	h ˈi ɐ		here_ADV_1			
 Swiss German	Swiss German			here_ADV	hie	hˈiə̯	h ˈiə̯		here_ADV_1			
 Proto-Germanic	Proto-Germanic			help_VERB	helpaną	xˈelpɑnɑ̃	x ˈe l p ɑ n ɑ̃		help_VERB_1			
@@ -4101,6 +4206,7 @@ Hessian	Hessian			help_VERB	hällvě	hˈɛlv̥ə	h ˈɛ l v̥ ə		help_VERB_1
 Wymysorys	Wymysorys			help_VERB	hyłfa	hˈɘ̟wfa	h ˈɘ̟ w f a		help_VERB_1			
 Yiddish	Yiddish			help_VERB	העלפֿן	hˈɛɫfn̩	h ˈɛ ɫ f n̩		help_VERB_1			
 Standard German	Standard German			help_VERB	helfen	hˈɛlfn̩	h ˈɛ l f n̩		help_VERB_1			
+Upper Franconian	Upper Franconian			help_VERB	helfn	hˈɛlfn̩	h ˈɛ l f n̩		help_VERB_1			
 Bavarian	Bavarian			help_VERB	häiffa	hˈejfa	h ˈe j f a		help_VERB_1			
 Swabian	Swabian			help_VERB	helfa	hˈɛlfa	h ˈɛ l f a		help_VERB_1			
 Alsatian	Alsatian			help_VERB	helfe	hˈælfə	h ˈæ l f ə		help_VERB_1			
@@ -4137,6 +4243,7 @@ Palatine German	Palatine German			hair_NOUN	Hoor	hˈoːɐ	h ˈoː ɐ		hair_NOUN_
 Hessian	Hessian			hair_NOUN	Håå	hˈɑː	h ˈɑː		hair_NOUN_1			
 Yiddish	Yiddish			hair_NOUN	האָר	hˈɔʀ	h ˈɔ ʀ		hair_NOUN_1			
 Standard German	Standard German			hair_NOUN	Haar	hˈaːɐ	h ˈaː ɐ		hair_NOUN_1			
+Upper Franconian	Upper Franconian			hair_NOUN	Hoer	hˈoːɐ	h ˈoː ɐ		hair_NOUN_1			
 Bavarian	Bavarian			hair_NOUN	Hoar	hˈoɐ̯	h ˈoɐ̯		hair_NOUN_1			
 Swabian	Swabian			hair_NOUN	Hoor	hˈɔːʕ	h ˈɔː ʕ		hair_NOUN_1			
 Alsatian	Alsatian			hair_NOUN	Hoor	hˈoːʁ	h ˈoː ʁ		hair_NOUN_1			
@@ -4175,6 +4282,7 @@ Hessian	Hessian			heart_NOUN	Hȁǎtts	hˈæɐʦ	h ˈæ ɐ ʦ		heart_NOUN_1
 Wymysorys	Wymysorys			heart_NOUN	haoc	hˈɑʦ	h ˈɑ ʦ		heart_NOUN_1			
 Yiddish	Yiddish			heart_NOUN	האַרץ	hˈaʀʦ	h ˈa ʀ ʦ		heart_NOUN_1			
 Standard German	Standard German			heart_NOUN	Herz	hˈɛɐʦ	h ˈɛ ɐ ʦ		heart_NOUN_1			
+Upper Franconian	Upper Franconian			heart_NOUN	Herzn	hˈɛɐʦn̩	h ˈɛ ɐ ʦ n̩		heart_NOUN_1			
 Bavarian	Bavarian			heart_NOUN	Herz	hˈeɐʦ	h ˈe ɐ ʦ		heart_NOUN_1			
 Swabian	Swabian			heart_NOUN	Herz	hˈɛʕʦ	h ˈɛ ʕ ʦ		heart_NOUN_1			
 Swiss German	Swiss German			heart_NOUN	Härz	hˈæːrʦ	h ˈæː r ʦ		heart_NOUN_1			
@@ -4211,6 +4319,7 @@ Hessian	Hessian			laugh_VERB	lachě	lˈaɣ̥ə	l ˈa ɣ̥ ə		laugh_VERB_1
 Wymysorys	Wymysorys			laugh_VERB	łaocha	wˈɑxa	w ˈɑ x a		laugh_VERB_1			
 Yiddish	Yiddish			laugh_VERB	לאַכן	ɫˈaχn̩	ɫ ˈa χ n̩		laugh_VERB_1			
 Standard German	Standard German			laugh_VERB	lachen	lˈaxn̩	l ˈa x n̩		laugh_VERB_1			
+Upper Franconian	Upper Franconian			laugh_VERB	lachen	lˈaxn̩	l ˈa x n̩		laugh_VERB_1			
 Bavarian	Bavarian			laugh_VERB	lācha	lˈɒːxa	l ˈɒː x a		laugh_VERB_1			
 Swabian	Swabian			laugh_VERB	lacha	lˈaxa	l ˈa x a		laugh_VERB_1			
 Alsatian	Alsatian			laugh_VERB	làche	lˈɒxə	l ˈɒ x ə		laugh_VERB_1			
@@ -4248,6 +4357,7 @@ Hessian	Hessian			leap_VERB	laavě	lˈaːv̥ə	l ˈaː v̥ ə		leap_VERB_1
 Wymysorys	Wymysorys			leap_VERB	łaojfa	wˈɑjfa	w ˈɑ j f a		leap_VERB_1			
 Yiddish	Yiddish			leap_VERB	לויפֿן	ɫˈɔɪ̯fn̩	ɫ ˈɔɪ̯ f n̩		leap_VERB_1			
 Standard German	Standard German			leap_VERB	laufen	lˈaʊ̯fn̩	l ˈaʊ̯ f n̩		leap_VERB_1			
+Upper Franconian	Upper Franconian			leap_VERB	lāfn	lˈaːfn̩	l ˈaː f n̩		leap_VERB_1			
 Bavarian	Bavarian			leap_VERB	laffa	lˈafa	l ˈa f a		leap_VERB_1			
 Swabian	Swabian			leap_VERB	laufa	lˈao̯fa	l ˈao̯ f a		leap_VERB_1			
 Alsatian	Alsatian			leap_VERB	laufe	lˈʊːfə	l ˈʊː f ə		leap_VERB_1			
@@ -4284,6 +4394,7 @@ Palatine German	Palatine German			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1
 Hessian	Hessian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
 Yiddish	Yiddish			nut_NOUN	נוס	nˈʊs	n ˈʊ s		nut_NOUN_1			
 Standard German	Standard German			nut_NOUN	Nuss	nˈʊs	n ˈʊ s		nut_NOUN_1			
+Upper Franconian	Upper Franconian			nut_NOUN	Nuss	nˈʊs	n ˈʊ s		nut_NOUN_1			
 Bavarian	Bavarian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
 Swabian	Swabian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
 Alsatian	Alsatian			nut_NOUN	Nuss	nˈus	n ˈu s		nut_NOUN_1			
@@ -4364,6 +4475,7 @@ Pennsylvania German	Pennsylvania German			ridge_NOUN	Rick	ɾˈɪk	ɾ ˈɪ k		rid
 Palatine German	Palatine German			ridge_NOUN	Rick	rˈɪɡ̊	r ˈɪ ɡ̊		ridge_NOUN_1			
 Hessian	Hessian			ridge_NOUN	Riggě	ʀˈiɡ̊ə	ʀ ˈi ɡ̊ ə		ridge_NOUN_1			
 Standard German	Standard German			ridge_NOUN	Rücken	ʁˈʏkn̩	ʁ ˈʏ k n̩		ridge_NOUN_1			
+Upper Franconian	Upper Franconian			ridge_NOUN	Rickn	rˈɪɡ̊n̩	r ˈɪ ɡ̊ n̩		ridge_NOUN_1			
 Bavarian	Bavarian			ridge_NOUN	Rugga	rˈuɡ̊a	r ˈu ɡ̊ a		ridge_NOUN_1			
 Alsatian	Alsatian			ridge_NOUN	Ruck	ʁˈuk	ʁ ˈu k		ridge_NOUN_1			
 Swiss German	Swiss German			ridge_NOUN	Rügge	rˈyɡ̊ɡ̊ə	r ˈy ɡ̊ ɡ̊ ə		ridge_NOUN_1			
@@ -4416,6 +4528,7 @@ Palatine German	Palatine German			skin_NOUN	Haut	hˈau̯̯d̥	h ˈau̯̯ d̥		sk
 Hessian	Hessian			skin_NOUN	Haut	hˈau̯d̥	h ˈau̯ d̥		skin_NOUN_1			
 Yiddish	Yiddish			skin_NOUN	הויט	hˈɔɪ̯t	h ˈɔɪ̯ t		skin_NOUN_1			
 Standard German	Standard German			skin_NOUN	Haut	hˈaʊ̯t	h ˈaʊ̯ t		skin_NOUN_1			
+Upper Franconian	Upper Franconian			skin_NOUN	Haud	hˈaʊ̯d̥	h ˈaʊ̯ d̥		skin_NOUN_1			
 Bavarian	Bavarian			skin_NOUN	Haud	hˈau̯d̥	h ˈau̯ d̥		skin_NOUN_1			
 Swabian	Swabian			skin_NOUN	Haud	hˈao̯d	h ˈao̯ d		skin_NOUN_1			
 Alsatian	Alsatian			skin_NOUN	Hüt	hˈyːt	h ˈyː t		skin_NOUN_1			
@@ -4439,6 +4552,7 @@ Hessian	Hessian			honey_NOUN	Honig	hˈoːniʃ	h ˈoː n i ʃ		honey_NOUN_1
 Wymysorys	Wymysorys			honey_NOUN	hung	hˈuŋɡ̊	h ˈu ŋ ɡ̊		honey_NOUN_1			
 Yiddish	Yiddish			honey_NOUN	האָניק	hˈɔnɪk	h ˈɔ n ɪ k		honey_NOUN_1			
 Standard German	Standard German			honey_NOUN	Honig	hˈoːnɪç	h ˈoː n ɪ ç		honey_NOUN_1			
+Upper Franconian	Upper Franconian			honey_NOUN	Honich	hˈoːnɪç	h ˈoː n ɪ ç		honey_NOUN_1			
 Bavarian	Bavarian			honey_NOUN	Hunk	hˈuŋɡ̊	h ˈu ŋ ɡ̊		honey_NOUN_1			
 Swabian	Swabian			honey_NOUN	Honig	hˈoːnɪɡ	h ˈoː n ɪ ɡ		honey_NOUN_1			
 Alsatian	Alsatian			honey_NOUN	Hunni	hˈuni	h ˈu n i		honey_NOUN_1			
@@ -4489,6 +4603,7 @@ Hessian	Hessian			hundred_NUM	hunnät	hˈunæ̆t	h ˈu n æ̆ t		hundred_NUM_1
 Wymysorys	Wymysorys			hundred_NUM	hundyt	hˈundət	h ˈu n d ə t		hundred_NUM_1			
 Yiddish	Yiddish			hundred_NUM	הונדערט	hˈʊndəʀt	h ˈʊ n d ə ʀ t		hundred_NUM_1			
 Standard German	Standard German			hundred_NUM	Hundert	hˈʊndɐt	h ˈʊ n d ɐ t		hundred_NUM_1			
+Upper Franconian	Upper Franconian			hundred_NUM	hunnert	hˈʊnɐd̥	h ˈʊ n ɐ d̥		hundred_NUM_1			
 Bavarian	Bavarian			hundred_NUM	hundad	hˈund̥ad̥	h ˈu n d̥ a d̥		hundred_NUM_1			
 Swabian	Swabian			hundred_NUM	hondrd	hˈondʌd	h ˈo n d ʌ d		hundred_NUM_1			
 Alsatian	Alsatian			hundred_NUM	hundert	hˈund̥əʁt	h ˈu n d̥ ə ʁ t		hundred_NUM_1			
@@ -4526,6 +4641,7 @@ Hessian	Hessian			dog_NOUN	Hunnt	hˈund̥	h ˈu n d̥		dog_NOUN_1
 Wymysorys	Wymysorys			dog_NOUN	Hund	hˈund̥	h ˈu n d̥		dog_NOUN_1			
 Yiddish	Yiddish			dog_NOUN	הונט	hˈʊnt	h ˈʊ n t		dog_NOUN_1			
 Standard German	Standard German			dog_NOUN	Hund	hˈʊnd̥	h ˈʊ n d̥		dog_NOUN_1			
+Upper Franconian	Upper Franconian			dog_NOUN	Hund	hˈʊnd̥	h ˈʊ n d̥		dog_NOUN_1			
 Bavarian	Bavarian			dog_NOUN	Hund	hˈund̥	h ˈu n d̥		dog_NOUN_1			
 Swabian	Swabian			dog_NOUN	Hond	hˈond	h ˈo n d		dog_NOUN_1			
 Alsatian	Alsatian			dog_NOUN	Hund	hˈund̥	h ˈu n d̥		dog_NOUN_1			
@@ -4559,6 +4675,7 @@ Pennsylvania German	Pennsylvania German			hunger_NOUN	Hunger	hˈʊŋɑ	h ˈʊ ŋ
 Palatine German	Palatine German			hunger_NOUN	Hunger	hˈuŋɐ	h ˈu ŋ ɐ		hunger_NOUN_1			
 Yiddish	Yiddish			hunger_NOUN	הונגער	hˈʊŋɡəʀ	h ˈʊ ŋ ɡ ə ʀ		hunger_NOUN_1			
 Standard German	Standard German			hunger_NOUN	Hunger	hˈʊŋɐ	h ˈʊ ŋ ɐ		hunger_NOUN_1			
+Upper Franconian	Upper Franconian			hunger_NOUN	Hunger	hˈʊŋɐ	h ˈʊ ŋ ɐ		hunger_NOUN_1			
 Bavarian	Bavarian			hunger_NOUN	Hunga	hˈuŋa	h ˈu ŋ a		hunger_NOUN_1			
 Swabian	Swabian			hunger_NOUN	Hongr	hˈoŋʌ	h ˈo ŋ ʌ		hunger_NOUN_1			
 Alsatian	Alsatian			hunger_NOUN	Hunger	hˈuŋəʁ	h ˈu ŋ ə ʁ		hunger_NOUN_1			
@@ -4596,6 +4713,7 @@ Palatine German	Palatine German			horn_NOUN	Horn	hˈɔɐn	h ˈɔ ɐ n		horn_NOUN
 Hessian	Hessian			horn_NOUN	Hǫǎnn	hˈɔɐn	h ˈɔ ɐ n		horn_NOUN_1			
 Yiddish	Yiddish			horn_NOUN	האָרן	hˈɔʀn	h ˈɔ ʀ n		horn_NOUN_1			
 Standard German	Standard German			horn_NOUN	Horn	hˈɔɐn	h ˈɔ ɐ n		horn_NOUN_1			
+Upper Franconian	Upper Franconian			horn_NOUN	Horn	hˈɔɐn	h ˈɔ ɐ n		horn_NOUN_1			
 Bavarian	Bavarian			horn_NOUN	Hoan	hˈoɐn	h ˈo ɐ n		horn_NOUN_1			
 Swabian	Swabian			horn_NOUN	Horn	hˈɔʕn	h ˈɔ ʕ n		horn_NOUN_1			
 Alsatian	Alsatian			horn_NOUN	Horn	hˈoʁn	h ˈo ʁ n		horn_NOUN_1			
@@ -4634,6 +4752,7 @@ Hessian	Hessian			house_NOUN	Haus	hˈau̯s	h ˈau̯ s		house_NOUN_1
 Wymysorys	Wymysorys			house_NOUN	haojs	hˈɑi̯s	h ˈɑi̯ s		house_NOUN_1			
 Yiddish	Yiddish			house_NOUN	הויז	hˈɔɪ̯z	h ˈɔɪ̯ z		house_NOUN_1			
 Standard German	Standard German			house_NOUN	Haus	hˈaʊ̯z̥	h ˈaʊ̯ z̥		house_NOUN_1			
+Upper Franconian	Upper Franconian			house_NOUN	Haus	hˈaʊ̯s	h ˈaʊ̯ s		house_NOUN_1			
 Bavarian	Bavarian			house_NOUN	Haus	hˈau̯s	h ˈau̯ s		house_NOUN_1			
 Swabian	Swabian			house_NOUN	Haus	hˈao̯s	h ˈao̯ s		house_NOUN_1			
 Alsatian	Alsatian			house_NOUN	Hüs	hˈyːz̥	h ˈyː z̥		house_NOUN_1			
@@ -4700,6 +4819,7 @@ Hessian	Hessian			what_PRON	wås	vˈɑs	v ˈɑ s		what_PRON_1
 Wymysorys	Wymysorys			what_PRON	vaos	vˈɑs	v ˈɑ s		what_PRON_1			
 Yiddish	Yiddish			what_PRON	וואָס	vˈɔs	v ˈɔ s		what_PRON_1			
 Standard German	Standard German			what_PRON	was	vˈas	v ˈa s		what_PRON_1			
+Upper Franconian	Upper Franconian			what_PRON	wos	vˈɔs	v ˈɔ s		what_PRON_1			
 Bavarian	Bavarian			what_PRON	wås	ʋˈɒːs	ʋ ˈɒː s		what_PRON_1			
 Swabian	Swabian			what_PRON	was	ʋˈas	ʋ ˈa s		what_PRON_1			
 Alsatian	Alsatian			what_PRON	wàs	ʋˈɒs	ʋ ˈɒ s		what_PRON_1			
@@ -4760,6 +4880,7 @@ Hessian	Hessian			white_ADJ	wais	vˈai̯s	v ˈai̯ s		white_ADJ_1
 Wymysorys	Wymysorys			white_ADJ	wajs	wˈai̯s	w ˈai̯ s		white_ADJ_1			
 Yiddish	Yiddish			white_ADJ	ווײַס	vˈaɪ̯s	v ˈaɪ̯ s		white_ADJ_1			
 Standard German	Standard German			white_ADJ	weiß	vˈaɪ̯s	v ˈaɪ̯ s		white_ADJ_1			
+Upper Franconian	Upper Franconian			white_ADJ	weiß	vˈaɪ̯s	v ˈaɪ̯ s		white_ADJ_1			
 Bavarian	Bavarian			white_ADJ	weiß	ʋˈai̯s	ʋ ˈai̯ s		white_ADJ_1			
 Swabian	Swabian			white_ADJ	weiß	ʋˈəi̯s	ʋ ˈəi̯ s		white_ADJ_1			
 Alsatian	Alsatian			white_ADJ	wïss	ʋˈiːs	ʋ ˈiː s		white_ADJ_1			
@@ -4797,6 +4918,7 @@ Palatine German	Palatine German			in_PREP	in	ˈɪn	ˈɪ n		in_PREP_1
 Hessian	Hessian			in_PREP	inn	ˈin	ˈi n		in_PREP_1			
 Yiddish	Yiddish			in_PREP	אין	ˈɪn	ˈɪ n		in_PREP_1			
 Standard German	Standard German			in_PREP	in	ˈɪn	ˈɪ n		in_PREP_1			
+Upper Franconian	Upper Franconian			in_PREP	in	ˈɪn	ˈɪ n		in_PREP_1			
 Bavarian	Bavarian			in_PREP	in	ˈin	ˈi n		in_PREP_1			
 Swabian	Swabian			in_PREP	en	ˈen	ˈe n		in_PREP_1			
 Alsatian	Alsatian			in_PREP	in	ˈin	ˈi n		in_PREP_1			
@@ -4834,6 +4956,7 @@ Hessian	Hessian			ice_NOUN	Ais	ˈai̯s	ˈai̯ s		ice_NOUN_1
 Wymysorys	Wymysorys			ice_NOUN	ajs	ˈai̯s	ˈai̯ s		ice_NOUN_1			
 Yiddish	Yiddish			ice_NOUN	אײַז	ˈaɪ̯z	ˈaɪ̯ z		ice_NOUN_1			
 Standard German	Standard German			ice_NOUN	Eis	ˈaɪ̯z̥	ˈaɪ̯ z̥		ice_NOUN_1			
+Upper Franconian	Upper Franconian			ice_NOUN	Eis	ˈaɪ̯s	ˈaɪ̯ s		ice_NOUN_1			
 Bavarian	Bavarian			ice_NOUN	Eis	ˈai̯s	ˈai̯ s		ice_NOUN_1			
 Swabian	Swabian			ice_NOUN	Eis	ˈəi̯s	ˈəi̯ s		ice_NOUN_1			
 Swiss German	Swiss German			ice_NOUN	Iis	ˈiːs	ˈiː s		ice_NOUN_1			
@@ -4871,6 +4994,7 @@ Hessian	Hessian			year_NOUN	Jåå	jˈɑː	j ˈɑː		year_NOUN_1
 Wymysorys	Wymysorys			year_NOUN	jür	jˈʏr	j ˈʏ r		year_NOUN_1			
 Yiddish	Yiddish			year_NOUN	יאָר	jˈɔʀ	j ˈɔ ʀ		year_NOUN_1			
 Standard German	Standard German			year_NOUN	Jahr	jˈaːɐ	j ˈaː ɐ		year_NOUN_1			
+Upper Franconian	Upper Franconian			year_NOUN	Johr	jˈoːɐ	j ˈoː ɐ		year_NOUN_1			
 Bavarian	Bavarian			year_NOUN	Jåhr	jˈɒːɐ	j ˈɒː ɐ		year_NOUN_1			
 Swabian	Swabian			year_NOUN	Johr	jˈɔːʕ	j ˈɔː ʕ		year_NOUN_1			
 Alsatian	Alsatian			year_NOUN	Johr	jˈoːʁ	j ˈoː ʁ		year_NOUN_1			
@@ -4909,6 +5033,7 @@ Hessian	Hessian			young_NOUN	jung	jˈuŋ	j ˈu ŋ		young_NOUN_1
 Wymysorys	Wymysorys			young_NOUN	jung	jˈuŋɡ̊	j ˈu ŋ ɡ̊		young_NOUN_1			
 Yiddish	Yiddish			young_NOUN	יונג	jˈʊŋɡ	j ˈʊ ŋ ɡ		young_NOUN_1			
 Standard German	Standard German			young_NOUN	jung	jˈʊŋ	j ˈʊ ŋ		young_NOUN_1			
+Upper Franconian	Upper Franconian			young_NOUN	jung	jˈʊŋ	j ˈʊ ŋ		young_NOUN_1			
 Bavarian	Bavarian			young_NOUN	junk	jˈuŋɡ̊	j ˈu ŋ ɡ̊		young_NOUN_1			
 Swabian	Swabian			young_NOUN	jong	jˈoŋ	j ˈo ŋ		young_NOUN_1			
 Alsatian	Alsatian			young_NOUN	jung	jˈuŋ	j ˈu ŋ		young_NOUN_1			
@@ -4986,6 +5111,7 @@ Hessian	Hessian			calf_NOUN	Khallp	kʰˈalb̥	kʰ ˈa l b̥		calf_NOUN_1
 Wymysorys	Wymysorys			calf_NOUN	kołb	kˈɔwb̥	k ˈɔ w b̥		calf_NOUN_1			
 Yiddish	Yiddish			calf_NOUN	קאַלב	kˈaɫb	k ˈa ɫ b		calf_NOUN_1			
 Standard German	Standard German			calf_NOUN	Kalb	kʰˈalb̥	kʰ ˈa l b̥		calf_NOUN_1			
+Upper Franconian	Upper Franconian			calf_NOUN	Kalb	ɡ̊ˈalb̥	ɡ̊ ˈa l b̥		calf_NOUN_1			
 Bavarian	Bavarian			calf_NOUN	Kaiwe	kʰˈajβə	kʰ ˈa j β ə		calf_NOUN_1			
 Swabian	Swabian			calf_NOUN	Kalb	kʰˈalb	kʰ ˈa l b		calf_NOUN_1			
 Alsatian	Alsatian			calf_NOUN	Kàlb	kʰˈɒlb̥	kʰ ˈɒ l b̥		calf_NOUN_1			
@@ -5024,6 +5150,7 @@ Hessian	Hessian			cold_ADJ	khaal	kʰˈaːl	kʰ ˈaː l		cold_ADJ_1
 Wymysorys	Wymysorys			cold_ADJ	kaołt	kˈɑwt	k ˈɑ w t		cold_ADJ_1			
 Yiddish	Yiddish			cold_ADJ	קאַלט	kˈaɫt	k ˈa ɫ t		cold_ADJ_1			
 Standard German	Standard German			cold_ADJ	kalt	kʰˈalt	kʰ ˈa l t		cold_ADJ_1			
+Upper Franconian	Upper Franconian			cold_ADJ	kald	ɡ̊ˈald̥	ɡ̊ ˈa l d̥		cold_ADJ_1			
 Bavarian	Bavarian			cold_ADJ	koid	kʰˈojd̥	kʰ ˈo j d̥		cold_ADJ_1			
 Swabian	Swabian			cold_ADJ	kald	kʰˈald	kʰ ˈa l d		cold_ADJ_1			
 Alsatian	Alsatian			cold_ADJ	kàlt	kʰˈɒlt	kʰ ˈɒ l t		cold_ADJ_1			
@@ -5062,6 +5189,7 @@ Hessian	Hessian			ken_VERB	khẹnně	kʰˈenə	kʰ ˈe n ə		ken_VERB_1
 Wymysorys	Wymysorys			ken_VERB	kena	kˈɛna	k ˈɛ n a		ken_VERB_1			
 Yiddish	Yiddish			ken_VERB	קענען	kˈɛnən	k ˈɛ n ə n		ken_VERB_1			
 Standard German	Standard German			ken_VERB	kennen	kʰˈɛnən	kʰ ˈɛ n ə n		ken_VERB_1			
+Upper Franconian	Upper Franconian			ken_VERB	kenna	ɡ̊ˈɛna	ɡ̊ ˈɛ n a		ken_VERB_1			
 Bavarian	Bavarian			ken_VERB	kenna	kʰˈena	kʰ ˈe n a		ken_VERB_1			
 Swabian	Swabian			ken_VERB	kenna	kʰˈɛna	kʰ ˈɛ n a		ken_VERB_1			
 Alsatian	Alsatian			ken_VERB	kenne	kʰˈenə	kʰ ˈe n ə		ken_VERB_1			
@@ -5099,6 +5227,7 @@ Hessian	Hessian			cat_NOUN	Khatts	kʰˈaʦ	kʰ ˈa ʦ		cat_NOUN_1
 Wymysorys	Wymysorys			cat_NOUN	koc	kˈɔʦ	k ˈɔ ʦ		cat_NOUN_1			
 Yiddish	Yiddish			cat_NOUN	קאַץ	kˈaʦ	k ˈa ʦ		cat_NOUN_1			
 Standard German	Standard German			cat_NOUN	Katze	kʰˈaʦə	kʰ ˈa ʦ ə		cat_NOUN_1			
+Upper Franconian	Upper Franconian			cat_NOUN	Katz	ɡ̊ˈaʦ	ɡ̊ ˈa ʦ		cat_NOUN_1			
 Bavarian	Bavarian			cat_NOUN	Katz	kʰˈɑʦ	kʰ ˈɑ ʦ		cat_NOUN_1			
 Swabian	Swabian			cat_NOUN	Kaddz	kʰˈaʣ	kʰ ˈa ʣ		cat_NOUN_1			
 Alsatian	Alsatian			cat_NOUN	Kàtz	kʰˈɒʦ	kʰ ˈɒ ʦ		cat_NOUN_1			
@@ -5133,6 +5262,7 @@ Hessian	Hessian			child_NOUN	Khinnt	kʰˈind̥	kʰ ˈi n d̥		child_NOUN_2
 Wymysorys	Wymysorys			child_NOUN	kynd	kˈɘ̟nd̥	k ˈɘ̟ n d̥		child_NOUN_2			
 Yiddish	Yiddish			child_NOUN	קינד	kˈɪnd	k ˈɪ n d		child_NOUN_2			
 Standard German	Standard German			child_NOUN	Kind	kʰˈɪnd̥	kʰ ˈɪ n d̥		child_NOUN_2			
+Upper Franconian	Upper Franconian			child_NOUN	Kind	ɡ̊ˈɪnd̥	ɡ̊ ˈɪ n d̥		child_NOUN_2			
 Bavarian	Bavarian			child_NOUN	Kind	kʰˈind̥	kʰ ˈi n d̥		child_NOUN_2			
 Alsatian	Alsatian			child_NOUN	Kind	kʰˈind̥	kʰ ˈi n d̥		child_NOUN_2			
 Swiss German	Swiss German			child_NOUN	Chind	χˈind̥	χ ˈi n d̥		child_NOUN_2			
@@ -5186,6 +5316,7 @@ Hessian	Hessian			knee_NOUN	Knii	knˈiː	k n ˈiː		knee_NOUN_1
 Wymysorys	Wymysorys			knee_NOUN	kni	knˈi	k n ˈi		knee_NOUN_1			
 Yiddish	Yiddish			knee_NOUN		knˈɪ	k n ˈɪ		knee_NOUN_1			
 Standard German	Standard German			knee_NOUN	Knie	kʰnˈiː	kʰ n ˈiː		knee_NOUN_1			
+Upper Franconian	Upper Franconian			knee_NOUN	Knie	ɡ̊nˈiː	ɡ̊ n ˈiː		knee_NOUN_1			
 Bavarian	Bavarian			knee_NOUN	Gnia	ɡ̊nˈiɐ̯	ɡ̊ n ˈiɐ̯		knee_NOUN_1			
 Alsatian	Alsatian			knee_NOUN	Knej	ɡ̊nˈei̯	ɡ̊ n ˈei̯		knee_NOUN_1			
 Swiss German	Swiss German			knee_NOUN	Chnü	χnˈyː	χ n ˈyː		knee_NOUN_1			
@@ -5251,6 +5382,7 @@ Hessian	Hessian			king_NOUN	Khẹẹnisch	kʰˈeːniʃ	kʰ ˈeː n i ʃ		king_NO
 Wymysorys	Wymysorys			king_NOUN	kyng	kˈɘ̟ŋɡ̊	k ˈɘ̟ ŋ ɡ̊		king_NOUN_1			
 Yiddish	Yiddish			king_NOUN	קעניג	kˈɛnɪɡ	k ˈɛ n ɪ ɡ		king_NOUN_1			
 Standard German	Standard German			king_NOUN	König	kʰˈøːnɪç	kʰ ˈøː n ɪ ç		king_NOUN_1			
+Upper Franconian	Upper Franconian			king_NOUN	Keniç	ɡ̊ˈeːniç	ɡ̊ ˈeː n i ç		king_NOUN_1			
 Bavarian	Bavarian			king_NOUN	Kini	kʰˈini	kʰ ˈi n i		king_NOUN_1			
 Swabian	Swabian			king_NOUN	Keenig	kʰˈeːniɡ	kʰ ˈeː n i ɡ		king_NOUN_1			
 Alsatian	Alsatian			king_NOUN	Kinni	kʰˈini	kʰ ˈi n i		king_NOUN_1			
@@ -5288,6 +5420,7 @@ Hessian	Hessian			can_VERB	khẹnně	kʰˈenə	kʰ ˈe n ə		can_VERB_1
 Wymysorys	Wymysorys			can_VERB	kyne	kˈɘ̟na	k ˈɘ̟ n a		can_VERB_1			
 Yiddish	Yiddish			can_VERB	קענען	kˈɛnən	k ˈɛ n ə n		can_VERB_1			
 Standard German	Standard German			can_VERB	können	kʰˈœnən	kʰ ˈœ n ə n		can_VERB_1			
+Upper Franconian	Upper Franconian			can_VERB	kenna	ɡ̊ˈɛna	ɡ̊ ˈɛ n a		can_VERB_1			
 Bavarian	Bavarian			can_VERB	kenna	kʰˈena	kʰ ˈe n a		can_VERB_1			
 Alsatian	Alsatian			can_VERB	kenne	kʰˈenə	kʰ ˈe n ə		can_VERB_1			
 Swiss German	Swiss German			can_VERB	chönne	χˈønnə	χ ˈø n n ə		can_VERB_1			
@@ -5309,6 +5442,7 @@ Palatine German	Palatine German			head_NOUN	Kopp	kʰˈɔb̥	kʰ ˈɔ b̥		head_N
 Hessian	Hessian			head_NOUN	Khopp	kʰˈop	kʰ ˈo p		head_NOUN_2			
 Yiddish	Yiddish			head_NOUN	קאָפּ	kˈɔp	k ˈɔ p		head_NOUN_2			
 Standard German	Standard German			head_NOUN	Kopf	kʰˈɔp͡f	kʰ ˈɔ p͡f		head_NOUN_2			
+Upper Franconian	Upper Franconian			head_NOUN	Kopf	ɡ̊ˈɔb̥͡v̥	ɡ̊ ˈɔ b̥͡v̥		head_NOUN_2			
 Bavarian	Bavarian			head_NOUN	Kobbf	kʰˈob̥͡v̥	kʰ ˈo b̥͡v̥		head_NOUN_2			
 Swabian	Swabian			head_NOUN	Kobbf	kʰˈɔb̥͡f	kʰ ˈɔ b̥͡f		head_NOUN_2			
 Alsatian	Alsatian			head_NOUN	Kopf	kʰˈop͡f	kʰ ˈo p͡f		head_NOUN_2			
@@ -5339,6 +5473,7 @@ Pennsylvania German	Pennsylvania German			corn_NOUN	Karn	kˈaːn	k ˈaː n		corn
 Palatine German	Palatine German			corn_NOUN	Korn	kʰˈɔɐn	kʰ ˈɔ ɐ n		corn_NOUN_1			
 Hessian	Hessian			corn_NOUN	Khǫǎnn	kʰˈɔɐn	kʰ ˈɔ ɐ n		corn_NOUN_1			
 Standard German	Standard German			corn_NOUN	Korn	kʰˈɔɐn	kʰ ˈɔ ɐ n		corn_NOUN_1			
+Upper Franconian	Upper Franconian			corn_NOUN	Korn	ɡ̊ˈɔɐn	ɡ̊ ˈɔ ɐ n		corn_NOUN_1			
 Bavarian	Bavarian			corn_NOUN	Koan	kʰˈoɐn	kʰ ˈo ɐ n		corn_NOUN_1			
 Alsatian	Alsatian			corn_NOUN	Korn	kʰˈoʁn	kʰ ˈo ʁ n		corn_NOUN_1			
 Swiss German	Swiss German			corn_NOUN	Chorn	χˈorn	χ ˈo r n		corn_NOUN_1			
@@ -5375,6 +5510,7 @@ Hessian	Hessian			cow_NOUN	Khuu	kʰˈuː	kʰ ˈuː		cow_NOUN_1
 Wymysorys	Wymysorys			cow_NOUN	kü	kˈʏ	k ˈʏ		cow_NOUN_1			
 Yiddish	Yiddish			cow_NOUN	קו	kˈʊ	k ˈʊ		cow_NOUN_1			
 Standard German	Standard German			cow_NOUN	Kuh	kʰˈuː	kʰ ˈuː		cow_NOUN_1			
+Upper Franconian	Upper Franconian			cow_NOUN	Kuh	ɡ̊ˈuː	ɡ̊ ˈuː		cow_NOUN_1			
 Bavarian	Bavarian			cow_NOUN	Kua	kʰˈuɐ̯	kʰ ˈuɐ̯		cow_NOUN_1			
 Swabian	Swabian			cow_NOUN	Kuah	kʰˈuə̯	kʰ ˈuə̯		cow_NOUN_1			
 Alsatian	Alsatian			cow_NOUN	Küeh	kʰˈʊː	kʰ ˈʊː		cow_NOUN_1			
@@ -5412,6 +5548,7 @@ Hessian	Hessian			come_VERB	khommě	kʰˈomə	kʰ ˈo m ə		come_VERB_1
 Wymysorys	Wymysorys			come_VERB	kuma	kˈuma	k ˈu m a		come_VERB_1			
 Yiddish	Yiddish			come_VERB	קומען	kˈʊmən	k ˈʊ m ə n		come_VERB_1			
 Standard German	Standard German			come_VERB	kommen	kʰˈɔmən	kʰ ˈɔ m ə n		come_VERB_1			
+Upper Franconian	Upper Franconian			come_VERB	kumma	ɡ̊ˈʊma	ɡ̊ ˈʊ m a		come_VERB_1			
 Bavarian	Bavarian			come_VERB	kemma	kʰˈema	kʰ ˈe m a		come_VERB_1			
 Bavarian	Bavarian			come_VERB	kumma	kʰˈuma	kʰ ˈu m a		come_VERB_1			
 Swabian	Swabian			come_VERB	komma	kʰˈɔma	kʰ ˈɔ m a		come_VERB_1			
@@ -5466,6 +5603,7 @@ Pennsylvania German	Pennsylvania German			lamb_NOUN	Lamm	lˈam	l ˈa m		lamb_NOU
 Palatine German	Palatine German			lamb_NOUN	Lamm	lˈɑm	l ˈɑ m		lamb_NOUN_1			
 Yiddish	Yiddish			lamb_NOUN	לאַם	ɫˈam	ɫ ˈa m		lamb_NOUN_1			
 Standard German	Standard German			lamb_NOUN	Lamm	lˈam	l ˈa m		lamb_NOUN_1			
+Upper Franconian	Upper Franconian			lamb_NOUN	Lamm	lˈam	l ˈa m		lamb_NOUN_1			
 Proto-Germanic	Proto-Germanic			land_NOUN	landą	lˈɑndɑ̃	l ˈɑ n d ɑ̃		land_NOUN_1			
 Gothic	Gothic			land_NOUN	𐌻𐌰𐌽𐌳	lˈant	l ˈa n t		land_NOUN_1			
 Old West Norse	Old West Norse			land_NOUN	land	lˈand	l ˈa n d		land_NOUN_1			
@@ -5500,6 +5638,7 @@ Hessian	Hessian			land_NOUN	Lånnt	lˈɑnd̥	l ˈɑ n d̥		land_NOUN_1
 Wymysorys	Wymysorys			land_NOUN	łaond	wˈɑnd̥	w ˈɑ n d̥		land_NOUN_1			
 Yiddish	Yiddish			land_NOUN	לאַנד	ɫˈand	ɫ ˈa n d		land_NOUN_1			
 Standard German	Standard German			land_NOUN	Land	lˈand̥	l ˈa n d̥		land_NOUN_1			
+Upper Franconian	Upper Franconian			land_NOUN	Land	lˈand̥	l ˈa n d̥		land_NOUN_1			
 Bavarian	Bavarian			land_NOUN	Land	lˈɑnd̥	l ˈɑ n d̥		land_NOUN_1			
 Swabian	Swabian			land_NOUN	Land	lˈand	l ˈa n d		land_NOUN_1			
 Alsatian	Alsatian			land_NOUN	Lànd	lˈɒnd̥	l ˈɒ n d̥		land_NOUN_1			
@@ -5539,6 +5678,7 @@ Hessian	Hessian			long_ADJ	lång	lˈɑŋ	l ˈɑ ŋ		long_ADJ_1
 Wymysorys	Wymysorys			long_ADJ	łaong	wˈɑŋɡ̊	w ˈɑ ŋ ɡ̊		long_ADJ_1			
 Yiddish	Yiddish			long_ADJ	לאַנג	ɫˈaŋɡ	ɫ ˈa ŋ ɡ		long_ADJ_1			
 Standard German	Standard German			long_ADJ	lang	lˈaŋ	l ˈa ŋ		long_ADJ_1			
+Upper Franconian	Upper Franconian			long_ADJ	lang	lˈaŋ	l ˈa ŋ		long_ADJ_1			
 Bavarian	Bavarian			long_ADJ	lang	lˈɑŋɡ̊	l ˈɑ ŋ ɡ̊		long_ADJ_1			
 Swabian	Swabian			long_ADJ	lang	lˈaŋ	l ˈa ŋ		long_ADJ_1			
 Alsatian	Alsatian			long_ADJ	làng	lˈɒŋ	l ˈɒ ŋ		long_ADJ_1			
@@ -5570,6 +5710,7 @@ Pennsylvania German	Pennsylvania German			leaf_NOUN	Laab	lˈɔːb̥	l ˈɔː b̥
 Palatine German	Palatine German			leaf_NOUN	Laab	lˈɑːb̥	l ˈɑː b̥		leaf_NOUN_1			
 Hessian	Hessian			leaf_NOUN	Laap	lˈaːb̥	l ˈaː b̥		leaf_NOUN_1			
 Standard German	Standard German			leaf_NOUN	Laub	lˈaʊ̯b̥	l ˈaʊ̯ b̥		leaf_NOUN_1			
+Upper Franconian	Upper Franconian			leaf_NOUN	Laab	lˈaːb̥	l ˈaː b̥		leaf_NOUN_1			
 Bavarian	Bavarian			leaf_NOUN	Laab	lˈaːb̥	l ˈaː b̥		leaf_NOUN_1			
 Swiss German	Swiss German			leaf_NOUN	Laub	lˈau̯b̥	l ˈau̯ b̥		leaf_NOUN_1			
 Proto-Germanic	Proto-Germanic			beloved_ADJ	leubaz	lˈeu̯βɑz	l ˈeu̯ β ɑ z		beloved_ADJ_1			
@@ -5600,6 +5741,7 @@ Pennsylvania German	Pennsylvania German			beloved_ADJ	lieb	lˈiːb̥	l ˈiː b̥
 Palatine German	Palatine German			beloved_ADJ	lieb	lˈiːb̥	l ˈiː b̥		beloved_ADJ_1			
 Hessian	Hessian			beloved_ADJ	liip	lˈiːb̥	l ˈiː b̥		beloved_ADJ_1			
 Standard German	Standard German			beloved_ADJ	lieb	lˈiːb̥	l ˈiː b̥		beloved_ADJ_1			
+Upper Franconian	Upper Franconian			beloved_ADJ	lieb	lˈiːb̥	l ˈiː b̥		beloved_ADJ_1			
 Bavarian	Bavarian			beloved_ADJ	lieb	lˈiɐ̯b̥	l ˈiɐ̯ b̥		beloved_ADJ_1			
 Proto-Germanic	Proto-Germanic			tell lies_VERB	leuganą	lˈeu̯ɣɑnɑ̃	l ˈeu̯ ɣ ɑ n ɑ̃		tell lies_VERB_1			
 Gothic	Gothic			tell lies_VERB	𐌻𐌹𐌿𐌲𐌰𐌽	lˈiu̯ɣan	l ˈiu̯ ɣ a n		tell lies_VERB_1			
@@ -5634,6 +5776,7 @@ Hessian	Hessian			tell lies_VERB	lischě	lˈiʒ̥ə	l ˈi ʒ̥ ə		tell lies_VER
 Wymysorys	Wymysorys			tell lies_VERB	łaojgyn	wˈɑi̯ɡən	w ˈɑi̯ ɡ ə n		tell lies_VERB_1			
 Yiddish	Yiddish			tell lies_VERB	לײַגן	ɫˈaɪ̯ɡn̩	ɫ ˈaɪ̯ ɡ n̩		tell lies_VERB_1			
 Standard German	Standard German			tell lies_VERB	lügen	lˈyːɡn̩	l ˈyː ɡ n̩		tell lies_VERB_1			
+Upper Franconian	Upper Franconian			tell lies_VERB	lieng	lˈiːŋ	l ˈiː ŋ		tell lies_VERB_1			
 Bavarian	Bavarian			tell lies_VERB	liang	lˈiɐ̯ŋ	l ˈiɐ̯ ŋ		tell lies_VERB_1			
 Swabian	Swabian			tell lies_VERB	liaga	lˈiə̯ɡa	l ˈiə̯ ɡ a		tell lies_VERB_1			
 Alsatian	Alsatian			tell lies_VERB	laje	lˈaːjə	l ˈaː j ə		tell lies_VERB_1			
@@ -5671,6 +5814,7 @@ Hessian	Hessian			light_NOUN	Lischtt	lˈiʃt	l ˈi ʃ t		light_NOUN_2
 Wymysorys	Wymysorys			light_NOUN	łicht	wˈɪxt	w ˈɪ x t		light_NOUN_2			
 Yiddish	Yiddish			light_NOUN	ליכט	ɫˈɪχt	ɫ ˈɪ χ t		light_NOUN_2			
 Standard German	Standard German			light_NOUN	Licht	lˈɪçt	l ˈɪ ç t		light_NOUN_2			
+Upper Franconian	Upper Franconian			light_NOUN	Liecht	lˈiːçd̥	l ˈiː ç d̥		light_NOUN_2			
 Bavarian	Bavarian			light_NOUN	Liachd	lˈiɐ̯xd̥	l ˈiɐ̯ x d̥		light_NOUN_2			
 Swabian	Swabian			light_NOUN	Lichd	lˈiçd	l ˈi ç d		light_NOUN_2			
 Alsatian	Alsatian			light_NOUN	Liecht	lˈiːʃt	l ˈiː ʃ t		light_NOUN_2			
@@ -5704,6 +5848,7 @@ Hessian	Hessian			liver_NOUN	Läwwä	lˈɛvæ̆	l ˈɛ v æ̆		liver_NOUN_1
 Wymysorys	Wymysorys			liver_NOUN	łaower	wˈɑvɛr	w ˈɑ v ɛ r		liver_NOUN_1			
 Yiddish	Yiddish			liver_NOUN	לעבער	ɫˈɛbəʀ	ɫ ˈɛ b ə ʀ		liver_NOUN_1			
 Standard German	Standard German			liver_NOUN	Leber	lˈeːbɐ	l ˈeː b ɐ		liver_NOUN_1			
+Upper Franconian	Upper Franconian			liver_NOUN	Lewer	lˈeːβɐ	l ˈeː β ɐ		liver_NOUN_1			
 Bavarian	Bavarian			liver_NOUN	Lewa	lˈeːβa	l ˈeː β a		liver_NOUN_1			
 Swabian	Swabian			liver_NOUN	Läbr	lˈɛːbʌ	l ˈɛː b ʌ		liver_NOUN_1			
 Alsatian	Alsatian			liver_NOUN	Läwwer	lˈæʋəʁ	l ˈæ ʋ ə ʁ		liver_NOUN_1			
@@ -5741,6 +5886,7 @@ Hessian	Hessian			lie_VERB	liiịjě	lˈiːjə	l ˈiː j ə		lie_VERB_1
 Wymysorys	Wymysorys			lie_VERB	łejgia	wˈei̯ɟa	w ˈei̯ ɟ a		lie_VERB_1			
 Yiddish	Yiddish			lie_VERB	ליגן	ɫˈɪɡn̩	ɫ ˈɪ ɡ n̩		lie_VERB_1			
 Standard German	Standard German			lie_VERB	liegen	lˈiːɡn̩	l ˈiː ɡ n̩		lie_VERB_1			
+Upper Franconian	Upper Franconian			lie_VERB	lieng	lˈiːŋ	l ˈiː ŋ		lie_VERB_1			
 Bavarian	Bavarian			lie_VERB	ling	lˈiŋ	l ˈi ŋ		lie_VERB_1			
 Swabian	Swabian			lie_VERB	liega	lˈiːɡa	l ˈiː ɡ a		lie_VERB_1			
 Alsatian	Alsatian			lie_VERB	lieje	lˈiːjə	l ˈiː j ə		lie_VERB_1			
@@ -5778,6 +5924,7 @@ Hessian	Hessian			light_ADJ	laischt	lˈai̯ʃt	l ˈai̯ ʃ t		light_ADJ_1
 Wymysorys	Wymysorys			light_ADJ	łajcht	wˈai̯xt	w ˈai̯ x t		light_ADJ_1			
 Yiddish	Yiddish			light_ADJ	לײַכט	ɫˈaɪ̯χt	ɫ ˈaɪ̯ χ t		light_ADJ_1			
 Standard German	Standard German			light_ADJ	leicht	lˈaɪ̯çt	l ˈaɪ̯ ç t		light_ADJ_1			
+Upper Franconian	Upper Franconian			light_ADJ	leichd	lˈaɪ̯çd̥	l ˈaɪ̯ ç d̥		light_ADJ_1			
 Bavarian	Bavarian			light_ADJ	loachd	lˈoɐ̯xd̥	l ˈoɐ̯ x d̥		light_ADJ_1			
 Swabian	Swabian			light_ADJ	leichd	lˈəi̯çd	l ˈəi̯ ç d		light_ADJ_1			
 Alsatian	Alsatian			light_ADJ	licht	lˈiʃt	l ˈi ʃ t		light_ADJ_1			
@@ -5813,6 +5960,7 @@ Hessian	Hessian			louse_NOUN	Laus	lˈau̯s	l ˈau̯ s		louse_NOUN_1
 Wymysorys	Wymysorys			louse_NOUN	łaojs	wˈɑi̯s	w ˈɑi̯ s		louse_NOUN_1			
 Yiddish	Yiddish			louse_NOUN	לויז	ɫˈɔɪ̯z	ɫ ˈɔɪ̯ z		louse_NOUN_1			
 Standard German	Standard German			louse_NOUN	Laus	lˈaʊ̯z̥	l ˈaʊ̯ z̥		louse_NOUN_1			
+Upper Franconian	Upper Franconian			louse_NOUN	Laus	lˈaʊ̯s	l ˈaʊ̯ s		louse_NOUN_1			
 Bavarian	Bavarian			louse_NOUN	Laus	lˈau̯s	l ˈau̯ s		louse_NOUN_1			
 Swabian	Swabian			louse_NOUN	Laus	lˈao̯s	l ˈao̯ s		louse_NOUN_1			
 Alsatian	Alsatian			louse_NOUN	Lüüs	lˈyːz̥	l ˈyː z̥		louse_NOUN_1			
@@ -5849,6 +5997,7 @@ Hessian	Hessian			might_NOUN	Måchtt	mˈɑxt	m ˈɑ x t		might_NOUN_1
 Wymysorys	Wymysorys			might_NOUN	maocht	mˈɑxt	m ˈɑ x t		might_NOUN_1			
 Yiddish	Yiddish			might_NOUN	מאַכט	mˈaχt	m ˈa χ t		might_NOUN_1			
 Standard German	Standard German			might_NOUN	Macht	mˈaxt	m ˈa x t		might_NOUN_1			
+Upper Franconian	Upper Franconian			might_NOUN	Macht	mˈaxd̥	m ˈa x d̥		might_NOUN_1			
 Bavarian	Bavarian			might_NOUN	Mocht	mˈoxd̥	m ˈo x d̥		might_NOUN_1			
 Swiss German	Swiss German			might_NOUN	Macht	mˈɒχt	m ˈɒ χ t		might_NOUN_1			
 Proto-Germanic	Proto-Germanic			man_NOUN	mann-	mˈɑnn	m ˈɑ n n		man_NOUN_1			
@@ -5884,6 +6033,7 @@ Hessian	Hessian			man_NOUN	Månn	mˈɑn	m ˈɑ n		man_NOUN_1
 Wymysorys	Wymysorys			man_NOUN	maon	mˈɑn	m ˈɑ n		man_NOUN_1			
 Yiddish	Yiddish			man_NOUN	מאַן	mˈan	m ˈa n		man_NOUN_1			
 Standard German	Standard German			man_NOUN	Mann	mˈan	m ˈa n		man_NOUN_1			
+Upper Franconian	Upper Franconian			man_NOUN	Mo	mˈoː	m ˈoː		man_NOUN_1			
 Bavarian	Bavarian			man_NOUN	Må	mˈɒː	m ˈɒː		man_NOUN_1			
 Swabian	Swabian			man_NOUN	Mo	mˈɔː	m ˈɔː		man_NOUN_1			
 Alsatian	Alsatian			man_NOUN	Mànn	mˈɒn	m ˈɒ n		man_NOUN_1			
@@ -5918,6 +6068,7 @@ Hessian	Hessian			person_NOUN	Mẹnndsch	mˈenʤ̥	m ˈe n ʤ̥		person_NOUN_1
 Wymysorys	Wymysorys			person_NOUN	menś	mˈɛnʃ	m ˈɛ n ʃ		person_NOUN_1			
 Yiddish	Yiddish			person_NOUN	מענטש	mˈɛnʧ	m ˈɛ n ʧ		person_NOUN_1			
 Standard German	Standard German			person_NOUN	Mensch	mˈɛnʃ	m ˈɛ n ʃ		person_NOUN_1			
+Upper Franconian	Upper Franconian			person_NOUN	Mensch	mˈɛnʃ	m ˈɛ n ʃ		person_NOUN_1			
 Bavarian	Bavarian			person_NOUN	Mensch	mˈenʃ	m ˈe n ʃ		person_NOUN_1			
 Alsatian	Alsatian			person_NOUN	Mensch	mˈenʃ	m ˈe n ʃ		person_NOUN_1			
 Swiss German	Swiss German			person_NOUN	Mänsch	mˈænʃ	m ˈæ n ʃ		person_NOUN_1			
@@ -5964,6 +6115,7 @@ Luxembourgish	Luxembourgish			sea_NOUN	Mier	mˈiːɐ	m ˈiː ɐ		sea_NOUN_1
 Palatine German	Palatine German			sea_NOUN	Meer	mˈeːɐ	m ˈeː ɐ		sea_NOUN_1			
 Wymysorys	Wymysorys			sea_NOUN	mier	mˈir	m ˈi r		sea_NOUN_1			
 Standard German	Standard German			sea_NOUN	Meer	mˈeːɐ	m ˈeː ɐ		sea_NOUN_1			
+Upper Franconian	Upper Franconian			sea_NOUN	Meer	mˈeːɐ	m ˈeː ɐ		sea_NOUN_1			
 Bavarian	Bavarian			sea_NOUN	Mea	mˈeːɐ	m ˈeː ɐ		sea_NOUN_1			
 Proto-Germanic	Proto-Germanic			me_PRON_ACC	mek	mˈek	m ˈe k		me_PRON_ACC_1			
 Gothic	Gothic			me_PRON_ACC	𐌼𐌹𐌺	mˈik	m ˈi k		me_PRON_ACC_1			
@@ -5984,6 +6136,7 @@ Hessian	Hessian			me_PRON_ACC	misch	mˈiʃ	m ˈi ʃ		me_PRON_ACC_1
 Wymysorys	Wymysorys			me_PRON_ACC	mejch	mˈei̯ç	m ˈei̯ ç		me_PRON_ACC_1			
 Yiddish	Yiddish			me_PRON_ACC	מיך	mˈɪχ	m ˈɪ χ		me_PRON_ACC_1			
 Standard German	Standard German			me_PRON_ACC	mich	mˈɪç	m ˈɪ ç		me_PRON_ACC_1			
+Upper Franconian	Upper Franconian			me_PRON_ACC	miech	mˈiːç	m ˈiː ç		me_PRON_ACC_1			
 Proto-Germanic	Proto-Germanic			milk_NOUN_FEM	meluks	mˈeluks	m ˈe l u k s		milk_NOUN_FEM_1			
 Gothic	Gothic			milk_NOUN_FEM	𐌼𐌹𐌻𐌿𐌺𐍃	mˈiluks	m ˈi l u k s		milk_NOUN_FEM_1			
 Old West Norse	Old West Norse			milk_NOUN_FEM	mjǫlk	mjˈɔlk	m j ˈɔ l k		milk_NOUN_FEM_1			
@@ -6018,6 +6171,7 @@ Hessian	Hessian			milk_NOUN_FEM	Milldsch	mˈilʤ̥	m ˈi l ʤ̥		milk_NOUN_FEM_1
 Wymysorys	Wymysorys			milk_NOUN_FEM	myłich	mˈɘ̟wɪç	m ˈɘ̟ w ɪ ç		milk_NOUN_FEM_1			
 Yiddish	Yiddish			milk_NOUN_FEM	מילך	mˈɪɫχ	m ˈɪ ɫ χ		milk_NOUN_FEM_1			
 Standard German	Standard German			milk_NOUN_FEM	Milch	mˈɪlç	m ˈɪ l ç		milk_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			milk_NOUN_FEM	Milch	mˈɪlç	m ˈɪ l ç		milk_NOUN_FEM_1			
 Bavarian	Bavarian			milk_NOUN_FEM	Milli	mˈili	m ˈi l i		milk_NOUN_FEM_1			
 Swabian	Swabian			milk_NOUN_FEM	Milch	mˈilç	m ˈi l ç		milk_NOUN_FEM_1			
 Alsatian	Alsatian			milk_NOUN_FEM	Millich	mˈiliʃ	m ˈi l i ʃ		milk_NOUN_FEM_1			
@@ -6055,6 +6209,7 @@ Palatine German	Palatine German			moon_NOUN	Mond	mˈoːnd̥	m ˈoː n d̥		moon_
 Hessian	Hessian			moon_NOUN	Moont	mˈoːnd̥	m ˈoː n d̥		moon_NOUN_1			
 Wymysorys	Wymysorys			moon_NOUN	mönd	mˈønd̥	m ˈø n d̥		moon_NOUN_1			
 Standard German	Standard German			moon_NOUN	Mond	mˈoːnd̥	m ˈoː n d̥		moon_NOUN_1			
+Upper Franconian	Upper Franconian			moon_NOUN	Mond	mˈoːnd̥	m ˈoː n d̥		moon_NOUN_1			
 Bavarian	Bavarian			moon_NOUN	Mond	mˈond̥	m ˈo n d̥		moon_NOUN_1			
 Swabian	Swabian			moon_NOUN	Mond	mˈond	m ˈo n d		moon_NOUN_1			
 Alsatian	Alsatian			moon_NOUN	Mond	mˈoːnd̥	m ˈoː n d̥		moon_NOUN_1			
@@ -6092,6 +6247,7 @@ Hessian	Hessian			month_NOUN	Moonått	mˈoːnɑt	m ˈoː n ɑ t		month_NOUN_1
 Wymysorys	Wymysorys			month_NOUN	mönda	mˈønda	m ˈø n d a		month_NOUN_1			
 Yiddish	Yiddish			month_NOUN	מאָנאַט	mˈɔnat	m ˈɔ n a t		month_NOUN_1			
 Standard German	Standard German			month_NOUN	Monat	mˈoːnat	m ˈoː n a t		month_NOUN_1			
+Upper Franconian	Upper Franconian			month_NOUN	Monat	mˈoːnad̥	m ˈoː n a d̥		month_NOUN_1			
 Bavarian	Bavarian			month_NOUN	Monat	mˈoːnad̥	m ˈoː n a d̥		month_NOUN_1			
 Swabian	Swabian			month_NOUN	Monad	mˈoːnad	m ˈoː n a d		month_NOUN_1			
 Alsatian	Alsatian			month_NOUN	Monet	mˈoːnət	m ˈoː n ə t		month_NOUN_1			
@@ -6121,6 +6277,7 @@ Pennsylvania German	Pennsylvania German			me_PRON_DAT	mer	mˈeːɑ	m ˈeː ɑ		m
 Hessian	Hessian			me_PRON_DAT	mä	mæ̆	m æ̆		me_PRON_DAT_1			
 Yiddish	Yiddish			me_PRON_DAT	מיר	mˈɪʀ	m ˈɪ ʀ		me_PRON_DAT_1			
 Standard German	Standard German			me_PRON_DAT	mir	mˈiːɐ	m ˈiː ɐ		me_PRON_DAT_1			
+Upper Franconian	Upper Franconian			me_PRON_DAT	mir	mˈiːɐ	m ˈiː ɐ		me_PRON_DAT_1			
 Bavarian	Bavarian			me_PRON_DAT	mi	mˈi	m ˈi		me_PRON_DAT_1			
 Swabian	Swabian			me_PRON_DAT	mi	mˈi	m ˈi		me_PRON_DAT_1			
 Swiss German	Swiss German			me_PRON_DAT	mi	mˈi	m ˈi		me_PRON_DAT_1			
@@ -6156,6 +6313,7 @@ Hessian	Hessian			mother_NOUN	Muddä	mˈud̥æ̆	m ˈu d̥ æ̆		mother_NOUN_1
 Wymysorys	Wymysorys			mother_NOUN	mütter	mˈʏtɛr	m ˈʏ t ɛ r		mother_NOUN_1			
 Yiddish	Yiddish			mother_NOUN	מוטער	mˈʊtəʀ	m ˈʊ t ə ʀ		mother_NOUN_1			
 Standard German	Standard German			mother_NOUN	Mutter	mˈʊtɐ	m ˈʊ t ɐ		mother_NOUN_1			
+Upper Franconian	Upper Franconian			mother_NOUN	Mudder	mˈʊɾɐ	m ˈʊ ɾ ɐ		mother_NOUN_1			
 Bavarian	Bavarian			mother_NOUN	Muadda	mˈuɐ̯d̥a	m ˈuɐ̯ d̥ a		mother_NOUN_1			
 Swabian	Swabian			mother_NOUN	Muddr	mˈudʌ	m ˈu d ʌ		mother_NOUN_1			
 Alsatian	Alsatian			mother_NOUN	Müeter	mˈøːtəʁ	m ˈøː t ə ʁ		mother_NOUN_1			
@@ -6186,6 +6344,7 @@ Palatine German	Palatine German			midge_NOUN	Mick	mˈɪɡ̊	m ˈɪ ɡ̊		midge_N
 Hessian	Hessian			midge_NOUN	Mikk	mˈik	m ˈi k		midge_NOUN_1			
 Wymysorys	Wymysorys			midge_NOUN	myk	mˈɘ̟k	m ˈɘ̟ k		midge_NOUN_1			
 Standard German	Standard German			midge_NOUN	Mücke	mˈʏkə	m ˈʏ k ə		midge_NOUN_1			
+Upper Franconian	Upper Franconian			midge_NOUN	Muggn	mˈʊɡ̊n̩	m ˈʊ ɡ̊ n̩		midge_NOUN_1			
 Bavarian	Bavarian			midge_NOUN	Mugga	mˈuɡ̊a	m ˈu ɡ̊ a		midge_NOUN_1			
 Swabian	Swabian			midge_NOUN	Mugg	mˈuɡ	m ˈu ɡ		midge_NOUN_1			
 Alsatian	Alsatian			midge_NOUN	Muck	mˈuk	m ˈu k		midge_NOUN_1			
@@ -6206,6 +6365,7 @@ Hessian	Hessian			mouth_NOUN	Maul	mˈau̯l	m ˈau̯ l		mouth_NOUN_1
 Wymysorys	Wymysorys			mouth_NOUN	maojł	mˈɑi̯w	m ˈɑi̯ w		mouth_NOUN_1			
 Yiddish	Yiddish			mouth_NOUN	מויל	mˈɔɪ̯ɫ	m ˈɔɪ̯ ɫ		mouth_NOUN_1			
 Standard German	Standard German			mouth_NOUN	Maul	mˈaʊ̯l	m ˈaʊ̯ l		mouth_NOUN_1			
+Upper Franconian	Upper Franconian			mouth_NOUN	Maul	mˈaʊ̯l	m ˈaʊ̯ l		mouth_NOUN_1			
 Bavarian	Bavarian			mouth_NOUN	Mai	mˈaj	m ˈa j		mouth_NOUN_1			
 Swabian	Swabian			mouth_NOUN	Maul	mˈao̯l	m ˈao̯ l		mouth_NOUN_1			
 Alsatian	Alsatian			mouth_NOUN	Mül	mˈyːl	m ˈyː l		mouth_NOUN_1			
@@ -6242,6 +6402,7 @@ Luxembourgish	Luxembourgish			mouth_NOUN	Mond	mˈɔnd̥	m ˈɔ n d̥		mouth_NOUN
 Pennsylvania German	Pennsylvania German			mouth_NOUN	Mund	mˈʊnd̥	m ˈʊ n d̥		mouth_NOUN_2			
 Palatine German	Palatine German			mouth_NOUN	Mund	mˈund̥	m ˈu n d̥		mouth_NOUN_2			
 Standard German	Standard German			mouth_NOUN	Mund	mˈʊnd̥	m ˈʊ n d̥		mouth_NOUN_2			
+Upper Franconian	Upper Franconian			mouth_NOUN	Mund	mˈʊnd̥	m ˈʊ n d̥		mouth_NOUN_2			
 Proto-Germanic	Proto-Germanic			mouse_NOUN_FEM	mūs	mˈuːs	m ˈuː s		mouse_NOUN_FEM_1			
 Old West Norse	Old West Norse			mouse_NOUN_FEM	mús	mˈuːs	m ˈuː s		mouse_NOUN_FEM_1			
 Icelandic	Icelandic			mouse_NOUN_FEM	mús	mˈuːs	m ˈuː s		mouse_NOUN_FEM_1			
@@ -6275,6 +6436,7 @@ Hessian	Hessian			mouse_NOUN_FEM	Maus	mˈau̯s	m ˈau̯ s		mouse_NOUN_FEM_1
 Wymysorys	Wymysorys			mouse_NOUN_FEM	maojs	mˈɑi̯s	m ˈɑi̯ s		mouse_NOUN_FEM_1			
 Yiddish	Yiddish			mouse_NOUN_FEM	מויז	mˈɔɪ̯z	m ˈɔɪ̯ z		mouse_NOUN_FEM_1			
 Standard German	Standard German			mouse_NOUN_FEM	Maus	mˈaʊ̯z̥	m ˈaʊ̯ z̥		mouse_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			mouse_NOUN_FEM	Maus	mˈaʊ̯s	m ˈaʊ̯ s		mouse_NOUN_FEM_1			
 Bavarian	Bavarian			mouse_NOUN_FEM	Maus	mˈau̯s	m ˈau̯ s		mouse_NOUN_FEM_1			
 Swabian	Swabian			mouse_NOUN_FEM	Maus	mˈao̯s	m ˈao̯ s		mouse_NOUN_FEM_1			
 Alsatian	Alsatian			mouse_NOUN_FEM	Müs	mˈyːz̥	m ˈyː z̥		mouse_NOUN_FEM_1			
@@ -6305,6 +6467,7 @@ Hessian	Hessian			mice_NOUN	Mois	mˈoi̯s	m ˈoi̯ s		mice_NOUN_1
 Wymysorys	Wymysorys			mice_NOUN	mojs	mˈoi̯s	m ˈoi̯ s		mice_NOUN_1			
 Yiddish	Yiddish			mice_NOUN	מײַז	mˈaɪ̯z	m ˈaɪ̯ z		mice_NOUN_1			
 Standard German	Standard German			mice_NOUN	Mäuse	mˈɔʏ̯zə	m ˈɔʏ̯ z ə		mice_NOUN_1			
+Upper Franconian	Upper Franconian			mice_NOUN	Mais	mˈaɪ̯s	m ˈaɪ̯ s		mice_NOUN_1			
 Bavarian	Bavarian			mice_NOUN	Mais	mˈai̯s	m ˈai̯ s		mice_NOUN_1			
 Swabian	Swabian			mice_NOUN	Meis	mˈae̯s	m ˈae̯ s		mice_NOUN_1			
 Alsatian	Alsatian			mice_NOUN	Miis	mˈiːz̥	m ˈiː z̥		mice_NOUN_1			
@@ -6343,6 +6506,7 @@ Hessian	Hessian			fingernail_NOUN	Nååchl	nˈɑːɣ̥l̩	n ˈɑː ɣ̥ l̩		fin
 Wymysorys	Wymysorys			fingernail_NOUN	niöl	nˈi̯øl	n ˈi̯ø l		fingernail_NOUN_1			
 Yiddish	Yiddish			fingernail_NOUN	נאָגל	nˈɔɡɫ̩	n ˈɔ ɡ ɫ̩		fingernail_NOUN_1			
 Standard German	Standard German			fingernail_NOUN	Nagel	nˈaːɡl̩	n ˈaː ɡ l̩		fingernail_NOUN_1			
+Upper Franconian	Upper Franconian			fingernail_NOUN	Nogl	nˈoːxl̩	n ˈoː x l̩		fingernail_NOUN_1			
 Bavarian	Bavarian			fingernail_NOUN	Nāgl	nˈɑːɡ̊l	n ˈɑː ɡ̊ l		fingernail_NOUN_1			
 Swabian	Swabian			fingernail_NOUN	Nagl	nˈaːɡl̩	n ˈaː ɡ l̩		fingernail_NOUN_1			
 Alsatian	Alsatian			fingernail_NOUN	Naawel	nˈaːʋl̩	n ˈaː ʋ l̩		fingernail_NOUN_1			
@@ -6381,6 +6545,7 @@ Hessian	Hessian			night_NOUN_FEM	Nåchtt	nˈɑxt	n ˈɑ x t		night_NOUN_FEM_1
 Wymysorys	Wymysorys			night_NOUN_FEM	naocht	nˈɑxt	n ˈɑ x t		night_NOUN_FEM_1			
 Yiddish	Yiddish			night_NOUN_FEM	נאַכט	nˈaχt	n ˈa χ t		night_NOUN_FEM_1			
 Standard German	Standard German			night_NOUN_FEM	Nacht	nˈaxt	n ˈa x t		night_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			night_NOUN_FEM	Nacht	nˈaxd̥	n ˈa x d̥		night_NOUN_FEM_1			
 Bavarian	Bavarian			night_NOUN_FEM	Nāchd	nˈɑːxd̥	n ˈɑː x d̥		night_NOUN_FEM_1			
 Swabian	Swabian			night_NOUN_FEM	Nachd	nˈaxd	n ˈa x d		night_NOUN_FEM_1			
 Alsatian	Alsatian			night_NOUN_FEM	Nààcht	nˈɒːxt	n ˈɒː x t		night_NOUN_FEM_1			
@@ -6415,6 +6580,7 @@ Hessian	Hessian			naked_ADJ	naggsch	nˈaɡ̊ʃ	n ˈa ɡ̊ ʃ		naked_ADJ_1
 Wymysorys	Wymysorys			naked_ADJ	naokyt	nˈɑkət	n ˈɑ k ə t		naked_ADJ_1			
 Yiddish	Yiddish			naked_ADJ	נאַקעט	nˈakɛt	n ˈa k ɛ t		naked_ADJ_1			
 Standard German	Standard German			naked_ADJ	nackt	nˈakt	n ˈa k t		naked_ADJ_1			
+Upper Franconian	Upper Franconian			naked_ADJ	nagt	nˈaːɡ̊d̥	n ˈaː ɡ̊ d̥		naked_ADJ_1			
 Bavarian	Bavarian			naked_ADJ	nāggad	nˈɑːɡ̊ɑd̥	n ˈɑː ɡ̊ ɑ d̥		naked_ADJ_1			
 Swabian	Swabian			naked_ADJ	naggt	nˈaɡt	n ˈa ɡ t		naked_ADJ_1			
 Swiss German	Swiss German			naked_ADJ	nackt	nˈɒkt	n ˈɒ k t		naked_ADJ_1			
@@ -6452,6 +6618,7 @@ Hessian	Hessian			name_NOUN	Nåmě	nˈɑmə	n ˈɑ m ə		name_NOUN_1
 Wymysorys	Wymysorys			name_NOUN	noma	nˈɔma	n ˈɔ m a		name_NOUN_1			
 Yiddish	Yiddish			name_NOUN	נאָמען	nˈɔmɛn	n ˈɔ m ɛ n		name_NOUN_1			
 Standard German	Standard German			name_NOUN	Name	nˈaːmə	n ˈaː m ə		name_NOUN_1			
+Upper Franconian	Upper Franconian			name_NOUN	Noma	nˈoːma	n ˈoː m a		name_NOUN_1			
 Bavarian	Bavarian			name_NOUN	Nāma	nˈɑːmɑ	n ˈɑː m ɑ		name_NOUN_1			
 Swabian	Swabian			name_NOUN	Noma	nˈɔːma	n ˈɔː m a		name_NOUN_1			
 Alsatian	Alsatian			name_NOUN	Nàmme	nˈɒmə	n ˈɒ m ə		name_NOUN_1			
@@ -6489,6 +6656,7 @@ Hessian	Hessian			nose_NOUN	Nåås	nˈɑːs	n ˈɑː s		nose_NOUN_1
 Wymysorys	Wymysorys			nose_NOUN	noos	nˈɔs	n ˈɔ s		nose_NOUN_1			
 Yiddish	Yiddish			nose_NOUN	נאָז	nˈɔz	n ˈɔ z		nose_NOUN_1			
 Standard German	Standard German			nose_NOUN	Nase	nˈaːzə	n ˈaː z ə		nose_NOUN_1			
+Upper Franconian	Upper Franconian			nose_NOUN	Nos	nˈoːs	n ˈoː s		nose_NOUN_1			
 Swabian	Swabian			nose_NOUN	Nos	nˈɔːs	n ˈɔː s		nose_NOUN_1			
 Alsatian	Alsatian			nose_NOUN	Nàs	nˈɒːz̥	n ˈɒː z̥		nose_NOUN_1			
 Swiss German	Swiss German			nose_NOUN	Nase	nˈɒsə	n ˈɒ s ə		nose_NOUN_1			
@@ -6517,6 +6685,7 @@ Palatine German	Palatine German			next_ADJ	neegscht	nˈeːɡ̊ʃd̥	n ˈeː ɡ̊
 Hessian	Hessian			next_ADJ	näkks	nˈɛks	n ˈɛ k s		next_ADJ_1			
 Yiddish	Yiddish			next_ADJ	נעקסט	nˈɛkst	n ˈɛ k s t		next_ADJ_1			
 Standard German	Standard German			next_ADJ	nächste	nˈɛːçstə	n ˈɛː ç s t ə		next_ADJ_1			
+Upper Franconian	Upper Franconian			next_ADJ	nägst	nˈɛɡ̊sd̥	n ˈɛ ɡ̊ s d̥		next_ADJ_1			
 Bavarian	Bavarian			next_ADJ	nächst	nˈeɡ̊ʃd̥	n ˈe ɡ̊ ʃ d̥		next_ADJ_1			
 Swabian	Swabian			next_ADJ	näggschd	nˈɛɡʃd	n ˈɛ ɡ ʃ d		next_ADJ_1			
 Swiss German	Swiss German			next_ADJ	nächscht	nˈæχʃt	n ˈæ χ ʃ t		next_ADJ_1			
@@ -6554,6 +6723,7 @@ Hessian	Hessian			nine_NUM	noiñ	nˈoĩ̯	n ˈoĩ̯		nine_NUM_1
 Wymysorys	Wymysorys			nine_NUM	naojn	nˈɑi̯n	n ˈɑi̯ n		nine_NUM_1			
 Yiddish	Yiddish			nine_NUM	נײַן	nˈaɪ̯n	n ˈaɪ̯ n		nine_NUM_1			
 Standard German	Standard German			nine_NUM	neun	nˈɔʏ̯n	n ˈɔʏ̯ n		nine_NUM_1			
+Upper Franconian	Upper Franconian			nine_NUM	nei	nˈaɪ̯	n ˈaɪ̯		nine_NUM_1			
 Bavarian	Bavarian			nine_NUM	nein	nˈai̯n	n ˈai̯ n		nine_NUM_1			
 Swabian	Swabian			nine_NUM	nein	nˈae̯n	n ˈae̯ n		nine_NUM_1			
 Alsatian	Alsatian			nine_NUM	niin	nˈiːn	n ˈiː n		nine_NUM_1			
@@ -6590,6 +6760,7 @@ Hessian	Hessian			needle_NOUN	Nåådl	nˈɑːd̥l̩	n ˈɑː d̥ l̩		needle_NOU
 Wymysorys	Wymysorys			needle_NOUN	nöłd	nˈøwd̥	n ˈø w d̥		needle_NOUN_1			
 Yiddish	Yiddish			needle_NOUN	נאָדל	nˈɔdɫ̩	n ˈɔ d ɫ̩		needle_NOUN_1			
 Standard German	Standard German			needle_NOUN	Nadel	nˈaːdl̩	n ˈaː d l̩		needle_NOUN_1			
+Upper Franconian	Upper Franconian			needle_NOUN	Nodl	nˈoːd̥l̩	n ˈoː d̥ l̩		needle_NOUN_1			
 Swabian	Swabian			needle_NOUN	Nodl	nˈɔːdl̩	n ˈɔː d l̩		needle_NOUN_1			
 Alsatian	Alsatian			needle_NOUN	Nodel	nˈoːd̥l̩	n ˈoː d̥ l̩		needle_NOUN_1			
 Swiss German	Swiss German			needle_NOUN	Naadle	nˈɒːd̥lə	n ˈɒː d̥ l ə		needle_NOUN_1			
@@ -6627,6 +6798,7 @@ Hessian	Hessian			new_ADJ	noi	nˈoi̯	n ˈoi̯		new_ADJ_1
 Wymysorys	Wymysorys			new_ADJ	naojy	nˈɑi̯ə	n ˈɑi̯ ə		new_ADJ_1			
 Yiddish	Yiddish			new_ADJ	נייַ	nˈaɪ̯	n ˈaɪ̯		new_ADJ_1			
 Standard German	Standard German			new_ADJ	neu	nˈɔʏ̯	n ˈɔʏ̯		new_ADJ_1			
+Upper Franconian	Upper Franconian			new_ADJ	nei	nˈaɪ̯	n ˈaɪ̯		new_ADJ_1			
 Bavarian	Bavarian			new_ADJ	nei	nˈai̯	n ˈai̯		new_ADJ_1			
 Swabian	Swabian			new_ADJ	nei	nˈəi̯	n ˈəi̯		new_ADJ_1			
 Alsatian	Alsatian			new_ADJ	nej	nˈei̯	n ˈei̯		new_ADJ_1			
@@ -6680,6 +6852,7 @@ Pennsylvania German	Pennsylvania German			path_NOUN	Paad	pˈɔːd̥	p ˈɔː d̥
 Palatine German	Palatine German			path_NOUN	Pad	pʰˈɑːd̥	pʰ ˈɑː d̥		path_NOUN_1			
 Hessian	Hessian			path_NOUN	Phååt	pʰˈɑːd̥	pʰ ˈɑː d̥		path_NOUN_1			
 Standard German	Standard German			path_NOUN	Pfad	p͡fˈaːd̥	p͡f ˈaː d̥		path_NOUN_1			
+Upper Franconian	Upper Franconian			path_NOUN	Pfåd	b̥͡v̥ˈoːd̥	b̥͡v̥ ˈoː d̥		path_NOUN_1			
 Bavarian	Bavarian			path_NOUN	Pfad	b̥͡v̥ˈaːd̥	b̥͡v̥ ˈaː d̥		path_NOUN_1			
 Swiss German	Swiss German			path_NOUN	Pfaad	p͡fˈɒːd̥	p͡f ˈɒː d̥		path_NOUN_1			
 Proto-Germanic	Proto-Germanic			plough_NOUN	plōgaz	plˈɔːɣɑz	p l ˈɔː ɣ ɑ z		plough_NOUN_1			
@@ -6712,6 +6885,7 @@ Palatine German	Palatine German			plough_NOUN	Plug	b̥lˈuːɡ̊	b̥ l ˈuː ɡ�
 Hessian	Hessian			plough_NOUN	Fluuch	flˈuːx	f l ˈuː x		plough_NOUN_1			
 Wymysorys	Wymysorys			plough_NOUN	fłüg	fwˈʏɡ̊	f w ˈʏ ɡ̊		plough_NOUN_1			
 Standard German	Standard German			plough_NOUN	Pflug	p͡flˈuːɡ̊	p͡f l ˈuː ɡ̊		plough_NOUN_1			
+Upper Franconian	Upper Franconian			plough_NOUN	Pflug	b̥͡v̥lˈuːx	b̥͡v̥ l ˈuː x		plough_NOUN_1			
 Bavarian	Bavarian			plough_NOUN	Pfluag	b̥͡v̥lˈuɐ̯ɡ̊	b̥͡v̥ l ˈuɐ̯ ɡ̊		plough_NOUN_1			
 Swabian	Swabian			plough_NOUN	Pflug	p͡flˈuːɡ	p͡f l ˈuː ɡ		plough_NOUN_1			
 Swiss German	Swiss German			plough_NOUN	Pflueg	p͡flˈuə̯ɡ̊	p͡f l ˈuə̯ ɡ̊		plough_NOUN_1			
@@ -6749,6 +6923,7 @@ Hessian	Hessian			red_ADJ	root	ʀˈoːd̥	ʀ ˈoː d̥		red_ADJ_1
 Wymysorys	Wymysorys			red_ADJ	rut	rˈut	r ˈu t		red_ADJ_1			
 Yiddish	Yiddish			red_ADJ	רויט	ʀˈɔɪ̯t	ʀ ˈɔɪ̯ t		red_ADJ_1			
 Standard German	Standard German			red_ADJ	rot	ʁˈoːt	ʁ ˈoː t		red_ADJ_1			
+Upper Franconian	Upper Franconian			red_ADJ	rud	rˈuːd̥	r ˈuː d̥		red_ADJ_1			
 Bavarian	Bavarian			red_ADJ	roud	rˈou̯d̥	r ˈou̯ d̥		red_ADJ_1			
 Swabian	Swabian			red_ADJ	rod	ʁˈoːd	ʁ ˈoː d		red_ADJ_1			
 Alsatian	Alsatian			red_ADJ	rot	ʁˈoːt	ʁ ˈoː t		red_ADJ_1			
@@ -6786,6 +6961,7 @@ Hessian	Hessian			smoke_NOUN	Raach	ʀˈaːx	ʀ ˈaː x		smoke_NOUN_1
 Wymysorys	Wymysorys			smoke_NOUN	raojch	rˈɑi̯ç	r ˈɑi̯ ç		smoke_NOUN_1			
 Yiddish	Yiddish			smoke_NOUN	רויך	ʀˈɔɪ̯χ	ʀ ˈɔɪ̯ χ		smoke_NOUN_1			
 Standard German	Standard German			smoke_NOUN	Rauch	ʁˈaʊ̯x	ʁ ˈaʊ̯ x		smoke_NOUN_1			
+Upper Franconian	Upper Franconian			smoke_NOUN	Raach	rˈaːx	r ˈaː x		smoke_NOUN_1			
 Bavarian	Bavarian			smoke_NOUN	Raach	rˈaːx	r ˈaː x		smoke_NOUN_1			
 Alsatian	Alsatian			smoke_NOUN	Rauch	ʁˈʊːʃ	ʁ ˈʊː ʃ		smoke_NOUN_1			
 Swiss German	Swiss German			smoke_NOUN	Rauch	rˈau̯χ	r ˈau̯ χ		smoke_NOUN_1			
@@ -6823,6 +6999,7 @@ Hessian	Hessian			rain_NOUN	Rääschě	ʀˈɛːʒ̥ə	ʀ ˈɛː ʒ̥ ə		rain_NO
 Wymysorys	Wymysorys			rain_NOUN	raan	rˈan	r ˈa n		rain_NOUN_1			
 Yiddish	Yiddish			rain_NOUN	רעגן	ʀˈɛɡn̩	ʀ ˈɛ ɡ n̩		rain_NOUN_1			
 Standard German	Standard German			rain_NOUN	Regen	ʁˈeːɡn̩	ʁ ˈeː ɡ n̩		rain_NOUN_1			
+Upper Franconian	Upper Franconian			rain_NOUN	Reng	rˈeːŋ	r ˈeː ŋ		rain_NOUN_1			
 Bavarian	Bavarian			rain_NOUN	Reng	rˈeːŋ	r ˈeː ŋ		rain_NOUN_1			
 Swabian	Swabian			rain_NOUN	Rega	ʁˈeːɡa	ʁ ˈeː ɡ a		rain_NOUN_1			
 Alsatian	Alsatian			rain_NOUN	Räje	ʁˈæːjə	ʁ ˈæː j ə		rain_NOUN_1			
@@ -6859,6 +7036,7 @@ Hessian	Hessian			right_ADJ	Räscht	ʀˈɛʃt	ʀ ˈɛ ʃ t		right_ADJ_1
 Wymysorys	Wymysorys			right_ADJ	racht	rˈaxt	r ˈa x t		right_ADJ_1			
 Yiddish	Yiddish			right_ADJ	רעכט	ʀˈɛχt	ʀ ˈɛ χ t		right_ADJ_1			
 Standard German	Standard German			right_ADJ	Recht	ʁˈɛçt	ʁ ˈɛ ç t		right_ADJ_1			
+Upper Franconian	Upper Franconian			right_ADJ	Recht	rˈɛçd̥	r ˈɛ ç d̥		right_ADJ_1			
 Swabian	Swabian			right_ADJ	rechd	ʁˈɛxd	ʁ ˈɛ x d		right_ADJ_1			
 Swiss German	Swiss German			right_ADJ	rächt	rˈæχt	r ˈæ χ t		right_ADJ_1			
 Proto-Germanic	Proto-Germanic			rich_ADJ	rīkijaz	rˈiːkijɑz	r ˈiː k i j ɑ z		rich_ADJ_1			
@@ -6895,6 +7073,7 @@ Hessian	Hessian			rich_ADJ	raisch	ʀˈai̯ʃ	ʀ ˈai̯ ʃ		rich_ADJ_1
 Wymysorys	Wymysorys			rich_ADJ	rajch	rˈai̯ç	r ˈai̯ ç		rich_ADJ_1			
 Yiddish	Yiddish			rich_ADJ	רײַך	ʀˈaɪ̯χ	ʀ ˈaɪ̯ χ		rich_ADJ_1			
 Standard German	Standard German			rich_ADJ	reich	ʁˈaɪ̯ç	ʁ ˈaɪ̯ ç		rich_ADJ_1			
+Upper Franconian	Upper Franconian			rich_ADJ	reich	rˈaɪ̯ç	r ˈaɪ̯ ç		rich_ADJ_1			
 Bavarian	Bavarian			rich_ADJ	reich	rˈai̯ç	r ˈai̯ ç		rich_ADJ_1			
 Swabian	Swabian			rich_ADJ	reich	ʁˈəi̯ç	ʁ ˈəi̯ ç		rich_ADJ_1			
 Swiss German	Swiss German			rich_ADJ	riich	rˈiːχ	r ˈiː χ		rich_ADJ_1			
@@ -6931,6 +7110,7 @@ Hessian	Hessian			say_VERB	sååchě	sˈɑːɣ̥ə	s ˈɑː ɣ̥ ə		say_VERB_1
 Wymysorys	Wymysorys			say_VERB	ziön	zˈi̯øn	z ˈi̯ø n		say_VERB_1			
 Yiddish	Yiddish			say_VERB	זאָגן	zˈɔɡn̩	z ˈɔ ɡ n̩		say_VERB_1			
 Standard German	Standard German			say_VERB	sagen	zˈaːɡn̩	z ˈaː ɡ n̩		say_VERB_1			
+Upper Franconian	Upper Franconian			say_VERB	song	sˈoːŋ	s ˈoː ŋ		say_VERB_1			
 Bavarian	Bavarian			say_VERB	sång	sˈɒːŋ	s ˈɒː ŋ		say_VERB_1			
 Swabian	Swabian			say_VERB	saga	sˈaːɡa	s ˈaː ɡ a		say_VERB_1			
 Alsatian	Alsatian			say_VERB	saawe	sˈaːʋə	s ˈaː ʋ ə		say_VERB_1			
@@ -6969,6 +7149,7 @@ Palatine German	Palatine German			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1
 Hessian	Hessian			soul_NOUN	Sẹẹl	sˈeːl	s ˈeː l		soul_NOUN_1			
 Wymysorys	Wymysorys			soul_NOUN	zejł	zˈei̯w	z ˈei̯ w		soul_NOUN_1			
 Standard German	Standard German			soul_NOUN	Seele	zˈeːlə	z ˈeː l ə		soul_NOUN_1			
+Upper Franconian	Upper Franconian			soul_NOUN	Siel	sˈiːl	s ˈiː l		soul_NOUN_1			
 Swabian	Swabian			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1			
 Alsatian	Alsatian			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1			
 Swiss German	Swiss German			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1			
@@ -7040,6 +7221,7 @@ Hessian	Hessian			salt_NOUN	Sallds	sˈalʣ̥	s ˈa l ʣ̥		salt_NOUN_1
 Wymysorys	Wymysorys			salt_NOUN	zaołc	zˈɑwʦ	z ˈɑ w ʦ		salt_NOUN_1			
 Yiddish	Yiddish			salt_NOUN	זאַלץ	zˈaɫʦ	z ˈa ɫ ʦ		salt_NOUN_1			
 Standard German	Standard German			salt_NOUN	Salz	zˈalʦ	z ˈa l ʦ		salt_NOUN_1			
+Upper Franconian	Upper Franconian			salt_NOUN	Salz	sˈalʦ	s ˈa l ʦ		salt_NOUN_1			
 Bavarian	Bavarian			salt_NOUN	Soiz	sˈojʦ	s ˈo j ʦ		salt_NOUN_1			
 Swabian	Swabian			salt_NOUN	Salz	sˈalʦ	s ˈa l ʦ		salt_NOUN_1			
 Alsatian	Alsatian			salt_NOUN	Sàlz	sˈɒlʦ	s ˈɒ l ʦ		salt_NOUN_1			
@@ -7077,6 +7259,7 @@ Hessian	Hessian			sand_NOUN	Sånnt	sˈɑnd̥	s ˈɑ n d̥		sand_NOUN_1
 Wymysorys	Wymysorys			sand_NOUN	zaond	zˈɑnd̥	z ˈɑ n d̥		sand_NOUN_1			
 Yiddish	Yiddish			sand_NOUN	זאַמד	zˈamd	z ˈa m d		sand_NOUN_1			
 Standard German	Standard German			sand_NOUN	Sand	zˈand̥	z ˈa n d̥		sand_NOUN_1			
+Upper Franconian	Upper Franconian			sand_NOUN	Sand	sˈand̥	s ˈa n d̥		sand_NOUN_1			
 Bavarian	Bavarian			sand_NOUN	Sond	sˈond̥	s ˈo n d̥		sand_NOUN_1			
 Swabian	Swabian			sand_NOUN	Sand	sˈand	s ˈa n d		sand_NOUN_1			
 Alsatian	Alsatian			sand_NOUN	Sànd	sˈɒnd̥	s ˈɒ n d̥		sand_NOUN_1			
@@ -7116,6 +7299,7 @@ Hessian	Hessian			seven_NUM	siwwě	sˈivə	s ˈi v ə		seven_NUM_1
 Wymysorys	Wymysorys			seven_NUM	zejwa	zˈei̯va	z ˈei̯ v a		seven_NUM_1			
 Yiddish	Yiddish			seven_NUM	זיבן	zˈɪbn̩	z ˈɪ b n̩		seven_NUM_1			
 Standard German	Standard German			seven_NUM	sieben	zˈiːbn̩	z ˈiː b n̩		seven_NUM_1			
+Upper Franconian	Upper Franconian			seven_NUM	siem	sˈiːm	s ˈiː m		seven_NUM_1			
 Bavarian	Bavarian			seven_NUM	sieme	sˈiːmə	s ˈiː m ə		seven_NUM_1			
 Swabian	Swabian			seven_NUM	sieba	sˈiːba	s ˈiː b a		seven_NUM_1			
 Alsatian	Alsatian			seven_NUM	siwwe	sˈiʋə	s ˈi ʋ ə		seven_NUM_1			
@@ -7153,6 +7337,7 @@ Hessian	Hessian			six_NUM	säkks	sˈɛks	s ˈɛ k s		six_NUM_1
 Wymysorys	Wymysorys			six_NUM	zachs	zˈaks	z ˈa k s		six_NUM_1			
 Yiddish	Yiddish			six_NUM	זעקס	zˈɛks	z ˈɛ k s		six_NUM_1			
 Standard German	Standard German			six_NUM	sechs	zˈɛks	z ˈɛ k s		six_NUM_1			
+Upper Franconian	Upper Franconian			six_NUM	sechs	sˈɛɡ̊s	s ˈɛ ɡ̊ s		six_NUM_1			
 Bavarian	Bavarian			six_NUM	sexe	sˈeɡ̊sə	s ˈe ɡ̊ s ə		six_NUM_1			
 Swabian	Swabian			six_NUM	seggs	sˈeɡs	s ˈe ɡ s		six_NUM_1			
 Alsatian	Alsatian			six_NUM	sechs	sˈeks	s ˈe k s		six_NUM_1			
@@ -7191,6 +7376,7 @@ Hessian	Hessian			see_VERB	sẹẹịjě	sˈeːjə	s ˈeː j ə		see_VERB_1
 Wymysorys	Wymysorys			see_VERB	zaon	zˈɑn	z ˈɑ n		see_VERB_1			
 Yiddish	Yiddish			see_VERB	זען	zˈɛn	z ˈɛ n		see_VERB_1			
 Standard German	Standard German			see_VERB	sehen	zˈeːən	z ˈeː ə n		see_VERB_1			
+Upper Franconian	Upper Franconian			see_VERB	siehn	sˈiːn	s ˈiː n		see_VERB_1			
 Bavarian	Bavarian			see_VERB	seng	sˈeːŋ	s ˈeː ŋ		see_VERB_1			
 Swabian	Swabian			see_VERB	seha	sˈeːa	s ˈeː a		see_VERB_1			
 Alsatian	Alsatian			see_VERB	sähn	sˈæːn	s ˈæː n		see_VERB_1			
@@ -7229,6 +7415,7 @@ Hessian	Hessian			self_PRON	sällwä	sˈɛlvæ̆	s ˈɛ l v æ̆		self_PRON_1
 Wymysorys	Wymysorys			self_PRON	zaojwer	zˈɑi̯vɛr	z ˈɑi̯ v ɛ r		self_PRON_1			
 Yiddish	Yiddish			self_PRON	זעלב	zˈɛɫb	z ˈɛ ɫ b		self_PRON_1			
 Standard German	Standard German			self_PRON	selber	zˈɛlbɐ	z ˈɛ l b ɐ		self_PRON_1			
+Upper Franconian	Upper Franconian			self_PRON	selwer	sˈɛlβɐ	s ˈɛ l β ɐ		self_PRON_1			
 Bavarian	Bavarian			self_PRON	säiwa	sˈejβa	s ˈe j β a		self_PRON_1			
 Swabian	Swabian			self_PRON	selbr	sˈɛlbʌ	s ˈɛ l b ʌ		self_PRON_1			
 Swiss German	Swiss German			self_PRON	sälber	sˈælb̥ər	s ˈæ l b̥ ə r		self_PRON_1			
@@ -7256,6 +7443,7 @@ Limburgish	Limburgish			sick_ADJ	zeek	zˈeːk	z ˈeː k		sick_ADJ_1
 Ripuarian	Ripuarian			sick_ADJ	seech	zˈeːɕ	z ˈeː ɕ		sick_ADJ_1			
 Palatine German	Palatine German			sick_ADJ	siech	sˈiːʃ	s ˈiː ʃ		sick_ADJ_1			
 Standard German	Standard German			sick_ADJ	siech	zˈiːç	z ˈiː ç		sick_ADJ_1			
+Upper Franconian	Upper Franconian			sick_ADJ	siech	sˈiːç	s ˈiː ç		sick_ADJ_1			
 Proto-Germanic	Proto-Germanic			side_NOUN	sīdǭ	sˈiːðɔ̃ː	s ˈiː ð ɔ̃ː		side_NOUN_1			
 Old West Norse	Old West Norse			side_NOUN	síða	sˈiːðɑ	s ˈiː ð ɑ		side_NOUN_1			
 Icelandic	Icelandic			side_NOUN	síða	sˈiːða	s ˈiː ð a		side_NOUN_1			
@@ -7288,6 +7476,7 @@ Palatine German	Palatine German			side_NOUN	Seit	sˈaɪ̯d̥	s ˈaɪ̯ d̥		side
 Wymysorys	Wymysorys			side_NOUN	zajt	zˈai̯t	z ˈai̯ t		side_NOUN_1			
 Yiddish	Yiddish			side_NOUN	זײַט	zˈaɪ̯t	z ˈaɪ̯ t		side_NOUN_1			
 Standard German	Standard German			side_NOUN	Seite	zˈaɪ̯tə	z ˈaɪ̯ t ə		side_NOUN_1			
+Upper Franconian	Upper Franconian			side_NOUN	Seidn	sˈaɪ̯d̥n̩	s ˈaɪ̯ d̥ n̩		side_NOUN_1			
 Bavarian	Bavarian			side_NOUN	Seiddn	sˈai̯d̥n̩	s ˈai̯ d̥ n̩		side_NOUN_1			
 Swabian	Swabian			side_NOUN	Seid	sˈəi̯d	s ˈəi̯ d		side_NOUN_1			
 Alsatian	Alsatian			side_NOUN	Sit	sˈiːt	s ˈiː t		side_NOUN_1			
@@ -7326,6 +7515,7 @@ Hessian	Hessian			sing_VERB	singě	sˈiŋə	s ˈi ŋ ə		sing_VERB_1
 Wymysorys	Wymysorys			sing_VERB	zyngia	zˈɘ̟ŋɟa	z ˈɘ̟ ŋ ɟ a		sing_VERB_1			
 Yiddish	Yiddish			sing_VERB	זינגען	zˈɪŋɡn̩	z ˈɪ ŋ ɡ n̩		sing_VERB_1			
 Standard German	Standard German			sing_VERB	singen	zˈɪŋən	z ˈɪ ŋ ə n		sing_VERB_1			
+Upper Franconian	Upper Franconian			sing_VERB	singa	sˈɪŋa	s ˈɪ ŋ a		sing_VERB_1			
 Bavarian	Bavarian			sing_VERB	singa	sˈiŋa	s ˈi ŋ a		sing_VERB_1			
 Swabian	Swabian			sing_VERB	singa	sˈɪŋa	s ˈɪ ŋ a		sing_VERB_1			
 Alsatian	Alsatian			sing_VERB	singe	sˈiŋə	s ˈi ŋ ə		sing_VERB_1			
@@ -7365,6 +7555,7 @@ Hessian	Hessian			sit_VERB	sittsě	sˈiʦə	s ˈi ʦ ə		sit_VERB_1
 Wymysorys	Wymysorys			sit_VERB	zyca	zˈɘ̟ʦa	z ˈɘ̟ ʦ a		sit_VERB_1			
 Yiddish	Yiddish			sit_VERB	זיצן	zˈɪʦn̩	z ˈɪ ʦ n̩		sit_VERB_1			
 Standard German	Standard German			sit_VERB	sitzen	zˈɪʦn̩	z ˈɪ ʦ n̩		sit_VERB_1			
+Upper Franconian	Upper Franconian			sit_VERB	sitzen	sˈɪʦn̩	s ˈɪ ʦ n̩		sit_VERB_1			
 Bavarian	Bavarian			sit_VERB	sizzn	sˈiʦn̩	s ˈi ʦ n̩		sit_VERB_1			
 Swabian	Swabian			sit_VERB	sitza	sˈiʦa	s ˈi ʦ a		sit_VERB_1			
 Alsatian	Alsatian			sit_VERB	setze	sˈeʦə	s ˈe ʦ ə		sit_VERB_1			
@@ -7404,6 +7595,7 @@ Hessian	Hessian			sharp_ADJ	schåff	ʃˈɑf	ʃ ˈɑ f		sharp_ADJ_1
 Wymysorys	Wymysorys			sharp_ADJ	siöf	ʃˈi̯øf	ʃ ˈi̯ø f		sharp_ADJ_1			
 Yiddish	Yiddish			sharp_ADJ	שאַרף	ʃˈaʀf	ʃ ˈa ʀ f		sharp_ADJ_1			
 Standard German	Standard German			sharp_ADJ	scharf	ʃˈaɐf	ʃ ˈa ɐ f		sharp_ADJ_1			
+Upper Franconian	Upper Franconian			sharp_ADJ	scharf	ʃˈaɐf	ʃ ˈa ɐ f		sharp_ADJ_1			
 Bavarian	Bavarian			sharp_ADJ	scharf	ʃˈarf	ʃ ˈa r f		sharp_ADJ_1			
 Swabian	Swabian			sharp_ADJ	scharf	ʃˈaʕf	ʃ ˈa ʕ f		sharp_ADJ_1			
 Swiss German	Swiss German			sharp_ADJ	scharpf	ʃˈɒrp͡f	ʃ ˈɒ r p͡f		sharp_ADJ_1			
@@ -7435,6 +7627,7 @@ Hessian	Hessian			beautiful_ADJ	scheeñ	ʃˈẽː	ʃ ˈẽː		beautiful_ADJ_1
 Wymysorys	Wymysorys			beautiful_ADJ	siejny	ʃˈei̯nə	ʃ ˈei̯ n ə		beautiful_ADJ_1			
 Yiddish	Yiddish			beautiful_ADJ	שיין	ʃˈɛɪ̯n	ʃ ˈɛɪ̯ n		beautiful_ADJ_1			
 Standard German	Standard German			beautiful_ADJ	schön	ʃˈøːn	ʃ ˈøː n		beautiful_ADJ_1			
+Upper Franconian	Upper Franconian			beautiful_ADJ	scheen	ʃˈeːn	ʃ ˈeː n		beautiful_ADJ_1			
 Bavarian	Bavarian			beautiful_ADJ	schee	ʃˈeː	ʃ ˈeː		beautiful_ADJ_1			
 Swabian	Swabian			beautiful_ADJ	schee	ʃˈeː	ʃ ˈeː		beautiful_ADJ_1			
 Alsatian	Alsatian			beautiful_ADJ	scheen	ʃˈeːn	ʃ ˈeː n		beautiful_ADJ_1			
@@ -7471,6 +7664,7 @@ Palatine German	Palatine German			shield_NOUN	Schild	ʃˈɪld̥	ʃ ˈɪ l d̥		s
 Hessian	Hessian			shield_NOUN	Schillt	ʃˈild̥	ʃ ˈi l d̥		shield_NOUN_1			
 Yiddish	Yiddish			shield_NOUN	שילד	ʃˈɪɫd	ʃ ˈɪ ɫ d		shield_NOUN_1			
 Standard German	Standard German			shield_NOUN	Schild	ʃˈɪld̥	ʃ ˈɪ l d̥		shield_NOUN_1			
+Upper Franconian	Upper Franconian			shield_NOUN	Schild	ʃˈɪld̥	ʃ ˈɪ l d̥		shield_NOUN_1			
 Swabian	Swabian			shield_NOUN	Schild	ʃˈild	ʃ ˈi l d		shield_NOUN_1			
 Proto-Germanic	Proto-Germanic			sheep_NOUN	skēpą	skˈɛːpɑ̃	s k ˈɛː p ɑ̃		sheep_NOUN_2			
 Scots	Scots			sheep_NOUN	sheep	ʃˈip	ʃ ˈi p		sheep_NOUN_2			
@@ -7499,6 +7693,7 @@ Hessian	Hessian			sheep_NOUN	Schååf	ʃˈɑːf	ʃ ˈɑː f		sheep_NOUN_2
 Wymysorys	Wymysorys			sheep_NOUN	siöf	ʃˈi̯øf	ʃ ˈi̯ø f		sheep_NOUN_2			
 Yiddish	Yiddish			sheep_NOUN	שאָף	ʃˈɔf	ʃ ˈɔ f		sheep_NOUN_2			
 Standard German	Standard German			sheep_NOUN	Schaf	ʃˈaːf	ʃ ˈaː f		sheep_NOUN_2			
+Upper Franconian	Upper Franconian			sheep_NOUN	Schof	ʃˈoːf	ʃ ˈoː f		sheep_NOUN_2			
 Bavarian	Bavarian			sheep_NOUN	Schof	ʃˈoːf	ʃ ˈoː f		sheep_NOUN_2			
 Swabian	Swabian			sheep_NOUN	Schof	ʃˈoːf	ʃ ˈoː f		sheep_NOUN_2			
 Swiss German	Swiss German			sheep_NOUN	Schoof	ʃˈoːf	ʃ ˈoː f		sheep_NOUN_2			
@@ -7536,6 +7731,7 @@ Hessian	Hessian			shoot_VERB	schiischě	ʃˈiːʒ̥ə	ʃ ˈiː ʒ̥ ə		shoot_VE
 Wymysorys	Wymysorys			shoot_VERB	śisa	ʃˈisa	ʃ ˈi s a		shoot_VERB_1			
 Yiddish	Yiddish			shoot_VERB	שיסן	ʃˈɪsn̩	ʃ ˈɪ s n̩		shoot_VERB_1			
 Standard German	Standard German			shoot_VERB	schießen	ʃˈiːsn̩	ʃ ˈiː s n̩		shoot_VERB_1			
+Upper Franconian	Upper Franconian			shoot_VERB	schießn	ʃˈiːsn̩	ʃ ˈiː s n̩		shoot_VERB_1			
 Bavarian	Bavarian			shoot_VERB	schiassn	ʃˈiɐ̯sn̩	ʃ ˈiɐ̯ s n̩		shoot_VERB_1			
 Swabian	Swabian			shoot_VERB	schiaßa	ʃˈiə̯sa	ʃ ˈiə̯ s a		shoot_VERB_1			
 Alsatian	Alsatian			shoot_VERB	schiesse	ʃˈiːsə	ʃ ˈiː s ə		shoot_VERB_1			
@@ -7573,6 +7769,7 @@ Palatine German	Palatine German			ship_NOUN	Schiff	ʃˈɪf	ʃ ˈɪ f		ship_NOUN_
 Hessian	Hessian			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
 Yiddish	Yiddish			ship_NOUN	שיף	ʃˈɪf	ʃ ˈɪ f		ship_NOUN_1			
 Standard German	Standard German			ship_NOUN	Schiff	ʃˈɪf	ʃ ˈɪ f		ship_NOUN_1			
+Upper Franconian	Upper Franconian			ship_NOUN	Schief	ʃˈiːf	ʃ ˈiː f		ship_NOUN_1			
 Bavarian	Bavarian			ship_NOUN	Schiif	ʃˈiːf	ʃ ˈiː f		ship_NOUN_1			
 Swabian	Swabian			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
 Alsatian	Alsatian			ship_NOUN	Schiff	ʃˈif	ʃ ˈi f		ship_NOUN_1			
@@ -7603,6 +7800,7 @@ Limburgish	Limburgish			shit_NOUN	sjiet	ʃˈiːt	ʃ ˈiː t		shit_NOUN_1
 Luxembourgish	Luxembourgish			shit_NOUN	Schäiss	ʃˈæːɪ̯s	ʃ ˈæːɪ̯ s		shit_NOUN_1			
 Palatine German	Palatine German			shit_NOUN	Scheiß	ʃˈaɪ̯s	ʃ ˈaɪ̯ s		shit_NOUN_1			
 Standard German	Standard German			shit_NOUN	Scheiße	ʃˈaɪ̯sə	ʃ ˈaɪ̯ s ə		shit_NOUN_1			
+Upper Franconian	Upper Franconian			shit_NOUN	Scheiß	ʃˈaɪ̯s	ʃ ˈaɪ̯ s		shit_NOUN_1			
 Bavarian	Bavarian			shit_NOUN	Scheiss	ʃˈai̯s	ʃ ˈai̯ s		shit_NOUN_1			
 Swabian	Swabian			shit_NOUN	Scheiß	ʃˈəi̯s	ʃ ˈəi̯ s		shit_NOUN_1			
 Swiss German	Swiss German			shit_NOUN	Schiissi	ʃˈiːssi	ʃ ˈiː s s i		shit_NOUN_1			
@@ -7640,6 +7838,7 @@ Hessian	Hessian			shoe_NOUN	Schuu	ʃˈuː	ʃ ˈuː		shoe_NOUN_1
 Wymysorys	Wymysorys			shoe_NOUN	śüh	ʃˈʏx	ʃ ˈʏ x		shoe_NOUN_1			
 Yiddish	Yiddish			shoe_NOUN	שוך	ʃˈʊχ	ʃ ˈʊ χ		shoe_NOUN_1			
 Standard German	Standard German			shoe_NOUN	Schuh	ʃˈuː	ʃ ˈuː		shoe_NOUN_1			
+Upper Franconian	Upper Franconian			shoe_NOUN	Schuh	ʃˈuː	ʃ ˈuː		shoe_NOUN_1			
 Bavarian	Bavarian			shoe_NOUN	Schua	ʃˈuɐ̯	ʃ ˈuɐ̯		shoe_NOUN_1			
 Swabian	Swabian			shoe_NOUN	Schuah	ʃˈuə̯	ʃ ˈuə̯		shoe_NOUN_1			
 Alsatian	Alsatian			shoe_NOUN	Schüeh	ʃˈʊː	ʃ ˈʊː		shoe_NOUN_1			
@@ -7676,6 +7875,7 @@ Palatine German	Palatine German			slay_VERB	schlaaⁿ	ʃlˈɑ̃ː	ʃ l ˈɑ̃ː	
 Wymysorys	Wymysorys			slay_VERB	śłön	ʃwˈøn	ʃ w ˈø n		slay_VERB_1			
 Yiddish	Yiddish			slay_VERB	שלאָגן	ʃɫˈɔɡŋ̩	ʃ ɫ ˈɔ ɡ ŋ̩		slay_VERB_1			
 Standard German	Standard German			slay_VERB	schlagen	ʃlˈaːɡn̩	ʃ l ˈaː ɡ n̩		slay_VERB_1			
+Upper Franconian	Upper Franconian			slay_VERB	schlong	ʃlˈoːŋ	ʃ l ˈoː ŋ		slay_VERB_1			
 Bavarian	Bavarian			slay_VERB	schlång	ʃlˈɒːŋ	ʃ l ˈɒː ŋ		slay_VERB_1			
 Swabian	Swabian			slay_VERB	schlaga	ʃlˈaːɡa	ʃ l ˈaː ɡ a		slay_VERB_1			
 Swiss German	Swiss German			slay_VERB	schlaa	ʃlˈɒː	ʃ l ˈɒː		slay_VERB_1			
@@ -7704,6 +7904,7 @@ Pennsylvania German	Pennsylvania German			snake_NOUN	Schlang	ʃlˈaŋ	ʃ l ˈa �
 Palatine German	Palatine German			snake_NOUN	Schlang	ʃlˈɑŋ	ʃ l ˈɑ ŋ		snake_NOUN_1			
 Yiddish	Yiddish			snake_NOUN	שלאַנג	ʃɫˈaŋɡ	ʃ ɫ ˈa ŋ ɡ		snake_NOUN_1			
 Standard German	Standard German			snake_NOUN	Schlange	ʃlˈaŋə	ʃ l ˈa ŋ ə		snake_NOUN_1			
+Upper Franconian	Upper Franconian			snake_NOUN	Schlanga	ʃlˈaŋa	ʃ l ˈa ŋ a		snake_NOUN_1			
 Swabian	Swabian			snake_NOUN	Schlang	ʃlˈaŋ	ʃ l ˈa ŋ		snake_NOUN_1			
 Alsatian	Alsatian			snake_NOUN	Schlàng	ʃlˈɒŋ	ʃ l ˈɒ ŋ		snake_NOUN_1			
 Proto-Germanic	Proto-Germanic			sleep_VERB	slēpaną	slˈɛːpɑnɑ̃	s l ˈɛː p ɑ n ɑ̃		sleep_VERB_1			
@@ -7733,6 +7934,7 @@ Hessian	Hessian			sleep_VERB	schlååvě	ʃlˈɑːv̥ə	ʃ l ˈɑː v̥ ə		slee
 Wymysorys	Wymysorys			sleep_VERB	śłöfa	ʃwˈøfa	ʃ w ˈø f a		sleep_VERB_1			
 Yiddish	Yiddish			sleep_VERB	שלאָפֿן	ʃɫˈɔfn̩	ʃ ɫ ˈɔ f n̩		sleep_VERB_1			
 Standard German	Standard German			sleep_VERB	schlafen	ʃlˈaːfn̩	ʃ l ˈaː f n̩		sleep_VERB_1			
+Upper Franconian	Upper Franconian			sleep_VERB	schlofn	ʃlˈoːfn̩	ʃ l ˈoː f n̩		sleep_VERB_1			
 Bavarian	Bavarian			sleep_VERB	schlaffa	ʃlˈɑfa	ʃ l ˈɑ f a		sleep_VERB_1			
 Swabian	Swabian			sleep_VERB	schlofa	ʃlˈɔːfa	ʃ l ˈɔː f a		sleep_VERB_1			
 Alsatian	Alsatian			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB_1			
@@ -7771,6 +7973,7 @@ Hessian	Hessian			snow_NOUN	Schnẹẹ	ʃnˈeː	ʃ n ˈeː		snow_NOUN_1
 Wymysorys	Wymysorys			snow_NOUN	śnej	ʃnˈei̯	ʃ n ˈei̯		snow_NOUN_1			
 Yiddish	Yiddish			snow_NOUN	שניי	ʃnˈɛɪ̯	ʃ n ˈɛɪ̯		snow_NOUN_1			
 Standard German	Standard German			snow_NOUN	Schnee	ʃnˈeː	ʃ n ˈeː		snow_NOUN_1			
+Upper Franconian	Upper Franconian			snow_NOUN	Schnii	ʃnˈiː	ʃ n ˈiː		snow_NOUN_1			
 Bavarian	Bavarian			snow_NOUN	Schnä	ʃnˈeː	ʃ n ˈeː		snow_NOUN_1			
 Swabian	Swabian			snow_NOUN	Schnai	ʃnˈae̯	ʃ n ˈae̯		snow_NOUN_1			
 Alsatian	Alsatian			snow_NOUN	Schnee	ʃnˈeː	ʃ n ˈeː		snow_NOUN_1			
@@ -7808,6 +8011,7 @@ Hessian	Hessian			seek_VERB	suchě	sˈuɣ̥ə	s ˈu ɣ̥ ə		seek_VERB_1
 Wymysorys	Wymysorys			seek_VERB	zicha	zˈixa	z ˈi x a		seek_VERB_1			
 Yiddish	Yiddish			seek_VERB	זוכן	zˈʊχn̩	z ˈʊ χ n̩		seek_VERB_1			
 Standard German	Standard German			seek_VERB	suchen	zˈuːxn̩	z ˈuː x n̩		seek_VERB_1			
+Upper Franconian	Upper Franconian			seek_VERB	suchn	sˈuːxn̩	s ˈuː x n̩		seek_VERB_1			
 Bavarian	Bavarian			seek_VERB	suacha	sˈuɐ̯xa	s ˈuɐ̯ x a		seek_VERB_1			
 Swabian	Swabian			seek_VERB	suacha	sˈuə̯xa	s ˈuə̯ x a		seek_VERB_1			
 Swiss German	Swiss German			seek_VERB	sueche	sˈuə̯χə	s ˈuə̯ χ ə		seek_VERB_1			
@@ -7845,6 +8049,7 @@ Hessian	Hessian			stone_NOUN	Schdaañ	ʃd̥ˈãː	ʃ d̥ ˈãː		stone_NOUN_1
 Wymysorys	Wymysorys			stone_NOUN	śtan	ʃtˈan	ʃ t ˈa n		stone_NOUN_1			
 Yiddish	Yiddish			stone_NOUN	שטיין	ʃtˈɛɪ̯n	ʃ t ˈɛɪ̯ n		stone_NOUN_1			
 Standard German	Standard German			stone_NOUN	Stein	ʃtˈaɪ̯n	ʃ t ˈaɪ̯ n		stone_NOUN_1			
+Upper Franconian	Upper Franconian			stone_NOUN	Staa	ʃd̥ˈaː	ʃ d̥ ˈaː		stone_NOUN_1			
 Bavarian	Bavarian			stone_NOUN	Schdoa	ʃd̥ˈoɐ̯	ʃ d̥ ˈoɐ̯		stone_NOUN_1			
 Swabian	Swabian			stone_NOUN	Schdoi	ʃdˈɔe̯	ʃ d ˈɔe̯		stone_NOUN_1			
 Alsatian	Alsatian			stone_NOUN	Stein	ʃtˈəi̯n	ʃ t ˈəi̯ n		stone_NOUN_1			
@@ -7883,6 +8088,7 @@ Hessian	Hessian			star_NOUN	Schdȁǎnn	ʃd̥ˈæɐn	ʃ d̥ ˈæ ɐ n		star_NOUN_
 Wymysorys	Wymysorys			star_NOUN	śtaom	ʃtˈɑm	ʃ t ˈɑ m		star_NOUN_1			
 Yiddish	Yiddish			star_NOUN	שטערן	ʃtˈɛʀən	ʃ t ˈɛ ʀ ə n		star_NOUN_1			
 Standard German	Standard German			star_NOUN	Stern	ʃtˈɛɐn	ʃ t ˈɛ ɐ n		star_NOUN_1			
+Upper Franconian	Upper Franconian			star_NOUN	Stern	ʃtˈɛɐn	ʃ t ˈɛ ɐ n		star_NOUN_1			
 Bavarian	Bavarian			star_NOUN	Schdean	ʃd̥ˈean	ʃ d̥ ˈe a n		star_NOUN_1			
 Swabian	Swabian			star_NOUN	Schdärn	ʃdˈɛʕn	ʃ d ˈɛ ʕ n		star_NOUN_1			
 Alsatian	Alsatian			star_NOUN	Stern	ʃtˈeʁn	ʃ t ˈe ʁ n		star_NOUN_1			
@@ -7921,6 +8127,7 @@ Hessian	Hessian			stool_NOUN	Schduul	ʃd̥ˈuːl	ʃ d̥ ˈuː l		stool_NOUN_1
 Wymysorys	Wymysorys			stool_NOUN	śtül	ʃtˈʏl	ʃ t ˈʏ l		stool_NOUN_1			
 Yiddish	Yiddish			stool_NOUN	שטול	ʃtˈʊɫ	ʃ t ˈʊ ɫ		stool_NOUN_1			
 Standard German	Standard German			stool_NOUN	Stuhl	ʃtˈuːl	ʃ t ˈuː l		stool_NOUN_1			
+Upper Franconian	Upper Franconian			stool_NOUN	Stuhl	ʃd̥ˈuːl	ʃ d̥ ˈuː l		stool_NOUN_1			
 Bavarian	Bavarian			stool_NOUN	Schdui	ʃd̥ˈuj	ʃ d̥ ˈu j		stool_NOUN_1			
 Swabian	Swabian			stool_NOUN	Schduhl	ʃdˈuːl	ʃ d ˈuː l		stool_NOUN_1			
 Alsatian	Alsatian			stool_NOUN	Stüehl	ʃtˈøːl	ʃ t ˈøː l		stool_NOUN_1			
@@ -7964,6 +8171,7 @@ Pennsylvania German	Pennsylvania German			storm_NOUN	Schtarem	ʃtˈaːɾəm	ʃ t
 Palatine German	Palatine German			storm_NOUN	Sturm	ʃd̥ˈuɐm	ʃ d̥ ˈu ɐ m		storm_NOUN_1			
 Yiddish	Yiddish			storm_NOUN	שטורעם	ʃtˈʊʀɛm	ʃ t ˈʊ ʀ ɛ m		storm_NOUN_1			
 Standard German	Standard German			storm_NOUN	Sturm	ʃtˈʊɐm	ʃ t ˈʊ ɐ m		storm_NOUN_1			
+Upper Franconian	Upper Franconian			storm_NOUN	Sturm	ʃd̥ˈʊɐm	ʃ d̥ ˈʊ ɐ m		storm_NOUN_1			
 Bavarian	Bavarian			storm_NOUN	Schduam	ʃd̥ˈuam	ʃ d̥ ˈu a m		storm_NOUN_1			
 Swiss German	Swiss German			storm_NOUN	Schturm	ʃtˈurm	ʃ t ˈu r m		storm_NOUN_1			
 Proto-Germanic	Proto-Germanic			suck_VERB	sūganą	sˈuːɣɑnɑ̃	s ˈuː ɣ ɑ n ɑ̃		suck_VERB_1			
@@ -7991,6 +8199,7 @@ Palatine German	Palatine German			suck_VERB	sauche	sˈau̯xə	s ˈau̯ x ə		suc
 Hessian	Hessian			suck_VERB	sauchě	sˈau̯ɣ̥ə	s ˈau̯ ɣ̥ ə		suck_VERB_1			
 Yiddish	Yiddish			suck_VERB	זויגן	zˈɔɪ̯ɡn̩	z ˈɔɪ̯ ɡ n̩		suck_VERB_1			
 Standard German	Standard German			suck_VERB	saugen	zˈaʊ̯ɡn̩	z ˈaʊ̯ ɡ n̩		suck_VERB_1			
+Upper Franconian	Upper Franconian			suck_VERB	saung	sˈaʊ̯ŋ	s ˈaʊ̯ ŋ		suck_VERB_1			
 Bavarian	Bavarian			suck_VERB	saung	sˈau̯ŋ	s ˈau̯ ŋ		suck_VERB_1			
 Swabian	Swabian			suck_VERB	sauga	sˈao̯ɡa	s ˈao̯ ɡ a		suck_VERB_1			
 Swiss German	Swiss German			suck_VERB	suuge	sˈuːɡ̊ə	s ˈuː ɡ̊ ə		suck_VERB_1			
@@ -8032,6 +8241,7 @@ Hessian	Hessian			summer_NOUN	Sommä	sˈomæ̆	s ˈo m æ̆		summer_NOUN_1
 Wymysorys	Wymysorys			summer_NOUN	zumer	zˈumɛr	z ˈu m ɛ r		summer_NOUN_1			
 Yiddish	Yiddish			summer_NOUN	זומער	zˈʊməʀ	z ˈʊ m ə ʀ		summer_NOUN_1			
 Standard German	Standard German			summer_NOUN	Sommer	zˈɔmɐ	z ˈɔ m ɐ		summer_NOUN_1			
+Upper Franconian	Upper Franconian			summer_NOUN	Summer	sˈʊmɐ	s ˈʊ m ɐ		summer_NOUN_1			
 Bavarian	Bavarian			summer_NOUN	Summa	sˈuma	s ˈu m a		summer_NOUN_1			
 Swabian	Swabian			summer_NOUN	Sommr	sˈomʌ	s ˈo m ʌ		summer_NOUN_1			
 Alsatian	Alsatian			summer_NOUN	Summer	sˈuməʁ	s ˈu m ə ʁ		summer_NOUN_1			
@@ -8069,6 +8279,7 @@ Hessian	Hessian			son_NOUN	Sooñ	sˈõː	s ˈõː		son_NOUN_1
 Wymysorys	Wymysorys			son_NOUN	zun	zˈun	z ˈu n		son_NOUN_1			
 Yiddish	Yiddish			son_NOUN	זון	zˈʊn	z ˈʊ n		son_NOUN_1			
 Standard German	Standard German			son_NOUN	Sohn	zˈoːn	z ˈoː n		son_NOUN_1			
+Upper Franconian	Upper Franconian			son_NOUN	Su	sˈuː	s ˈuː		son_NOUN_1			
 Swabian	Swabian			son_NOUN	Soh	sˈoː	s ˈoː		son_NOUN_1			
 Alsatian	Alsatian			son_NOUN	Sohn	sˈoːn	s ˈoː n		son_NOUN_1			
 Swiss German	Swiss German			son_NOUN	Soon	sˈoːn	s ˈoː n		son_NOUN_1			
@@ -8106,6 +8317,7 @@ Hessian	Hessian			sour_ADJ	sauä	sˈau̯æ̆	s ˈau̯ æ̆		sour_ADJ_1
 Wymysorys	Wymysorys			sour_ADJ	zaojwer	zˈɑi̯vɛr	z ˈɑi̯ v ɛ r		sour_ADJ_1			
 Yiddish	Yiddish			sour_ADJ	זויער	zˈɔɪ̯əʀ	z ˈɔɪ̯ ə ʀ		sour_ADJ_1			
 Standard German	Standard German			sour_ADJ	sauer	zˈaʊ̯ɐ	z ˈaʊ̯ ɐ		sour_ADJ_1			
+Upper Franconian	Upper Franconian			sour_ADJ	sauer	sˈaʊ̯ɐ	s ˈaʊ̯ ɐ		sour_ADJ_1			
 Bavarian	Bavarian			sour_ADJ	saua	sˈau̯a	s ˈau̯ a		sour_ADJ_1			
 Swabian	Swabian			sour_ADJ	sauer	sˈao̯ʌ	s ˈao̯ ʌ		sour_ADJ_1			
 Alsatian	Alsatian			sour_ADJ	süür	sˈyːʁ	s ˈyː ʁ		sour_ADJ_1			
@@ -8133,6 +8345,7 @@ Palatine German	Palatine German			sow_NOUN	Sau	sˈau̯	s ˈau̯		sow_NOUN_1
 Hessian	Hessian			sow_NOUN	Sau	sˈau̯	s ˈau̯		sow_NOUN_1			
 Wymysorys	Wymysorys			sow_NOUN	zaojła	zˈɑi̯wa	z ˈɑi̯ w a		sow_NOUN_1			
 Standard German	Standard German			sow_NOUN	Sau	zˈaʊ̯	z ˈaʊ̯		sow_NOUN_1			
+Upper Franconian	Upper Franconian			sow_NOUN	Sau	sˈaʊ̯	s ˈaʊ̯		sow_NOUN_1			
 Bavarian	Bavarian			sow_NOUN	Sau	sˈau̯	s ˈau̯		sow_NOUN_1			
 Swabian	Swabian			sow_NOUN	Sau	sˈao̯	s ˈao̯		sow_NOUN_1			
 Swiss German	Swiss German			sow_NOUN	Suu	sˈuː	s ˈuː		sow_NOUN_1			
@@ -8162,6 +8375,7 @@ Pennsylvania German	Pennsylvania German			sweat_NOUN	Schweess	ʃʋˈeːs	ʃ ʋ �
 Palatine German	Palatine German			sweat_NOUN	Schwääß	ʃβˈɛːs	ʃ β ˈɛː s		sweat_NOUN_2			
 Yiddish	Yiddish			sweat_NOUN	שווייס	ʃvˈɛɪ̯s	ʃ v ˈɛɪ̯ s		sweat_NOUN_2			
 Standard German	Standard German			sweat_NOUN	Schweiß	ʃvˈaɪ̯s	ʃ v ˈaɪ̯ s		sweat_NOUN_2			
+Upper Franconian	Upper Franconian			sweat_NOUN	Schwaß	ʃvˈaːs	ʃ v ˈaː s		sweat_NOUN_2			
 Bavarian	Bavarian			sweat_NOUN	Schwoass	ʃʋˈoɐ̯s	ʃ ʋ ˈoɐ̯ s		sweat_NOUN_2			
 Swabian	Swabian			sweat_NOUN	Schwoiß	ʃʋˈɔe̯s	ʃ ʋ ˈɔe̯ s		sweat_NOUN_2			
 Swiss German	Swiss German			sweat_NOUN	Schwäiss	ʃʋˈæi̯ss	ʃ ʋ ˈæi̯ s s		sweat_NOUN_2			
@@ -8204,6 +8418,7 @@ Hessian	Hessian			black_ADJ	schwåtts	ʃvˈɑʦ	ʃ v ˈɑ ʦ		black_ADJ_1
 Wymysorys	Wymysorys			black_ADJ	świöc	ʃvˈi̯øʦ	ʃ v ˈi̯ø ʦ		black_ADJ_1			
 Yiddish	Yiddish			black_ADJ	שוואַרץ	ʃvˈaʀʦ	ʃ v ˈa ʀ ʦ		black_ADJ_1			
 Standard German	Standard German			black_ADJ	schwarz	ʃvˈaɐʦ	ʃ v ˈa ɐ ʦ		black_ADJ_1			
+Upper Franconian	Upper Franconian			black_ADJ	schwarz	ʃvˈaɐʦ	ʃ v ˈa ɐ ʦ		black_ADJ_1			
 Bavarian	Bavarian			black_ADJ	schwoaz	ʃʋˈoɐʦ	ʃ ʋ ˈo ɐ ʦ		black_ADJ_1			
 Swabian	Swabian			black_ADJ	schwarz	ʃʋˈaʕʦ	ʃ ʋ ˈa ʕ ʦ		black_ADJ_1			
 Alsatian	Alsatian			black_ADJ	schwàrz	ʃwˈɒʁʦ	ʃ w ˈɒ ʁ ʦ		black_ADJ_1			
@@ -8246,6 +8461,7 @@ Wymysorys	Wymysorys			sword_NOUN	świert	ʃvjˈɛrt	ʃ v j ˈɛ r t		sword_NOUN_
 Yiddish	Yiddish			sword_NOUN	שווערד	ʃvˈɛʀd	ʃ v ˈɛ ʀ d		sword_NOUN_1			
 Standard German	Standard German			sword_NOUN	Schwert	ʃvˈeːɐt	ʃ v ˈeː ɐ t		sword_NOUN_1			
 Standard German	Standard German			sword_NOUN	Schwert	ʃvˈɛɐt	ʃ v ˈɛ ɐ t		sword_NOUN_1			
+Upper Franconian	Upper Franconian			sword_NOUN	Schwert	ʃvˈɛɐd̥	ʃ v ˈɛ ɐ d̥		sword_NOUN_1			
 Bavarian	Bavarian			sword_NOUN	Schwead	ʃʋˈeɐd̥	ʃ ʋ ˈe ɐ d̥		sword_NOUN_1			
 Swabian	Swabian			sword_NOUN	Schwerd	ʃʋˈɛʕd	ʃ ʋ ˈɛ ʕ d		sword_NOUN_1			
 Swiss German	Swiss German			sword_NOUN	Schwärt	ʃʋˈært	ʃ ʋ ˈæ r t		sword_NOUN_1			
@@ -8285,6 +8501,7 @@ Hessian	Hessian			sister_NOUN	Swẹssdä	svˈesd̥æ̆	s v ˈe s d̥ æ̆		siste
 Wymysorys	Wymysorys			sister_NOUN	śwaoster	ʃvˈɑstɛr	ʃ v ˈɑ s t ɛ r		sister_NOUN_1			
 Yiddish	Yiddish			sister_NOUN	שוועסטער	ʃvˈɛstəʀ	ʃ v ˈɛ s t ə ʀ		sister_NOUN_1			
 Standard German	Standard German			sister_NOUN	Schwester	ʃvˈɛstɐ	ʃ v ˈɛ s t ɐ		sister_NOUN_1			
+Upper Franconian	Upper Franconian			sister_NOUN	Schwester	ʃvˈɛsd̥ɐ	ʃ v ˈɛ s d̥ ɐ		sister_NOUN_1			
 Bavarian	Bavarian			sister_NOUN	Schwesda	ʃʋˈesd̥a	ʃ ʋ ˈe s d̥ a		sister_NOUN_1			
 Swabian	Swabian			sister_NOUN	Schweschdr	ʃʋˈɛʃdʌ	ʃ ʋ ˈɛ ʃ d ʌ		sister_NOUN_1			
 Alsatian	Alsatian			sister_NOUN	Schweschter	ʃwˈeʃtəʁ	ʃ w ˈe ʃ t ə ʁ		sister_NOUN_1			
@@ -8321,6 +8538,7 @@ Hessian	Hessian			swim_VERB	schwimmě	ʃvˈimə	ʃ v ˈi m ə		swim_VERB_1
 Wymysorys	Wymysorys			swim_VERB	śwyma	ʃvˈɘ̟ma	ʃ v ˈɘ̟ m a		swim_VERB_1			
 Yiddish	Yiddish			swim_VERB	שווימען	ʃvˈɪmən	ʃ v ˈɪ m ə n		swim_VERB_1			
 Standard German	Standard German			swim_VERB	schwimmen	ʃvˈɪmən	ʃ v ˈɪ m ə n		swim_VERB_1			
+Upper Franconian	Upper Franconian			swim_VERB	schwimma	ʃvˈɪma	ʃ v ˈɪ m a		swim_VERB_1			
 Bavarian	Bavarian			swim_VERB	schwimma	ʃʋˈima	ʃ ʋ ˈi m a		swim_VERB_1			
 Swabian	Swabian			swim_VERB	schwemma	ʃʋˈema	ʃ ʋ ˈe m a		swim_VERB_1			
 Alsatian	Alsatian			swim_VERB	schwimme	ʃwˈimə	ʃ w ˈi m ə		swim_VERB_1			
@@ -8358,6 +8576,7 @@ Pennsylvania German	Pennsylvania German			swine_NOUN	Schwein	ʃʋˈaɪ̯n	ʃ ʋ 
 Palatine German	Palatine German			swine_NOUN	Schwein	ʃβˈaɪ̯n	ʃ β ˈaɪ̯ n		swine_NOUN_1			
 Wymysorys	Wymysorys			swine_NOUN	śwajn	ʃvˈai̯n	ʃ v ˈai̯ n		swine_NOUN_1			
 Standard German	Standard German			swine_NOUN	Schwein	ʃvˈaɪ̯n	ʃ v ˈaɪ̯ n		swine_NOUN_1			
+Upper Franconian	Upper Franconian			swine_NOUN	Schwein	ʃvˈaɪ̯n	ʃ v ˈaɪ̯ n		swine_NOUN_1			
 Proto-Germanic	Proto-Germanic			sweet_ADJ	swōtuz	swˈɔːtuz	s w ˈɔː t u z		sweet_ADJ_1			
 Old West Norse	Old West Norse			sweet_ADJ	sǿtr	sˈøːtr	s ˈøː t r		sweet_ADJ_1			
 Icelandic	Icelandic			sweet_ADJ	sætur	sˈaːi̯tʏr̥	s ˈaːi̯ t ʏ r̥		sweet_ADJ_1			
@@ -8392,6 +8611,7 @@ Hessian	Hessian			sweet_ADJ	siis	sˈiːs	s ˈiː s		sweet_ADJ_1
 Wymysorys	Wymysorys			sweet_ADJ	ziss	zˈis	z ˈi s		sweet_ADJ_1			
 Yiddish	Yiddish			sweet_ADJ	זיס	zˈɪs	z ˈɪ s		sweet_ADJ_1			
 Standard German	Standard German			sweet_ADJ	süß	zˈyːs	z ˈyː s		sweet_ADJ_1			
+Upper Franconian	Upper Franconian			sweet_ADJ	sieß	sˈiːs	s ˈiː s		sweet_ADJ_1			
 Bavarian	Bavarian			sweet_ADJ	siass	sˈiɐ̯s	s ˈiɐ̯ s		sweet_ADJ_1			
 Swabian	Swabian			sweet_ADJ	siaß	sˈiə̯s	s ˈiə̯ s		sweet_ADJ_1			
 Alsatian	Alsatian			sweet_ADJ	siess	sˈiːs	s ˈiː s		sweet_ADJ_1			
@@ -8443,6 +8663,7 @@ Pennsylvania German	Pennsylvania German			toe_NOUN	Zehe	ʦˈeːə	ʦ ˈeː ə		t
 Palatine German	Palatine German			toe_NOUN	Zeh	ʣ̥ˈeː	ʣ̥ ˈeː		toe_NOUN_1			
 Hessian	Hessian			toe_NOUN	Tseeñ	ʦˈẽː	ʦ ˈẽː		toe_NOUN_1			
 Standard German	Standard German			toe_NOUN	Zeh	ʦˈeː	ʦ ˈeː		toe_NOUN_1			
+Upper Franconian	Upper Franconian			toe_NOUN	Zeha	ʦˈeːa	ʦ ˈeː a		toe_NOUN_1			
 Bavarian	Bavarian			toe_NOUN	Zächa	ʦˈeːça	ʦ ˈeː ç a		toe_NOUN_1			
 Swabian	Swabian			toe_NOUN	Zaia	ʦˈae̯a	ʦ ˈae̯ a		toe_NOUN_1			
 Swiss German	Swiss German			toe_NOUN	Zeh	ʦˈeː	ʦ ˈeː		toe_NOUN_1			
@@ -8479,6 +8700,7 @@ Palatine German	Palatine German			token_NOUN	Zeeche	ʣ̥ˈeːʃə	ʣ̥ ˈeː ʃ 
 Wymysorys	Wymysorys			token_NOUN	cacha	ʦˈaxa	ʦ ˈa x a		token_NOUN_1			
 Yiddish	Yiddish			token_NOUN	צייכן	ʦˈɛɪ̯χn̩	ʦ ˈɛɪ̯ χ n̩		token_NOUN_1			
 Standard German	Standard German			token_NOUN	Zeichen	ʦˈaɪ̯çn̩	ʦ ˈaɪ̯ ç n̩		token_NOUN_1			
+Upper Franconian	Upper Franconian			token_NOUN	Zaache	ʦˈaːxə	ʦ ˈaː x ə		token_NOUN_1			
 Bavarian	Bavarian			token_NOUN	Zoachn	ʦˈoɐ̯xn̩	ʦ ˈoɐ̯ x n̩		token_NOUN_1			
 Swabian	Swabian			token_NOUN	Zoicha	ʦˈɔe̯ça	ʦ ˈɔe̯ ç a		token_NOUN_1			
 Alsatian	Alsatian			token_NOUN	Zeiche	ʦˈei̯ʃə	ʦ ˈei̯ ʃ ə		token_NOUN_1			
@@ -8516,6 +8738,7 @@ Hessian	Hessian			tooth_NOUN	Tsaañ	ʦˈãː	ʦ ˈãː		tooth_NOUN_1
 Wymysorys	Wymysorys			tooth_NOUN	coon	ʦˈɔn	ʦ ˈɔ n		tooth_NOUN_1			
 Yiddish	Yiddish			tooth_NOUN	צאָן	ʦˈɔn	ʦ ˈɔ n		tooth_NOUN_1			
 Standard German	Standard German			tooth_NOUN	Zahn	ʦˈaːn	ʦ ˈaː n		tooth_NOUN_1			
+Upper Franconian	Upper Franconian			tooth_NOUN	Zoh	ʦˈoː	ʦ ˈoː		tooth_NOUN_1			
 Bavarian	Bavarian			tooth_NOUN	Zant	ʦˈand̥	ʦ ˈa n d̥		tooth_NOUN_1			
 Swabian	Swabian			tooth_NOUN	Zah	ʦˈaː	ʦ ˈaː		tooth_NOUN_1			
 Alsatian	Alsatian			tooth_NOUN	Zàhn	ʦˈɒːn	ʦ ˈɒː n		tooth_NOUN_1			
@@ -8554,6 +8777,7 @@ Hessian	Hessian			ten_NUM	tsää	ʦˈɛː	ʦ ˈɛː		ten_NUM_1
 Wymysorys	Wymysorys			ten_NUM	caon	ʦˈɑn	ʦ ˈɑ n		ten_NUM_1			
 Yiddish	Yiddish			ten_NUM	צען	ʦˈɛn	ʦ ˈɛ n		ten_NUM_1			
 Standard German	Standard German			ten_NUM	zehn	ʦˈeːn	ʦ ˈeː n		ten_NUM_1			
+Upper Franconian	Upper Franconian			ten_NUM	zeh	ʦˈeː	ʦ ˈeː		ten_NUM_1			
 Bavarian	Bavarian			ten_NUM	zehne	ʦˈeːnə	ʦ ˈeː n ə		ten_NUM_1			
 Swabian	Swabian			ten_NUM	zeah	ʦˈeə̯	ʦ ˈeə̯		ten_NUM_1			
 Alsatian	Alsatian			ten_NUM	zehn	ʦˈeːn	ʦ ˈeː n		ten_NUM_1			
@@ -8590,6 +8814,7 @@ Palatine German	Palatine German			time_NOUN	Zeit	ʣ̥ˈaɪ̯d̥	ʣ̥ ˈaɪ̯ d̥
 Wymysorys	Wymysorys			time_NOUN	cajt	ʦˈai̯t	ʦ ˈai̯ t		time_NOUN_1			
 Yiddish	Yiddish			time_NOUN	צײַט	ʦˈaɪ̯t	ʦ ˈaɪ̯ t		time_NOUN_1			
 Standard German	Standard German			time_NOUN	Zeit	ʦˈaɪ̯t	ʦ ˈaɪ̯ t		time_NOUN_1			
+Upper Franconian	Upper Franconian			time_NOUN	Zeit	ʦˈaɪ̯d̥	ʦ ˈaɪ̯ d̥		time_NOUN_1			
 Bavarian	Bavarian			time_NOUN	Zeid	ʦˈai̯d̥	ʦ ˈai̯ d̥		time_NOUN_1			
 Swabian	Swabian			time_NOUN	Zeid	ʦˈəi̯d	ʦ ˈəi̯ d		time_NOUN_1			
 Alsatian	Alsatian			time_NOUN	Zit	ʦˈiːt	ʦ ˈiː t		time_NOUN_1			
@@ -8612,6 +8837,7 @@ Pennsylvania German	Pennsylvania German			tear_NOUN_FEM	Draen	dɾˈɛːn	d ɾ ˈ
 Palatine German	Palatine German			tear_NOUN_FEM	Trän	d̥rˈɛːn	d̥ r ˈɛː n		tear_NOUN_FEM_1			
 Hessian	Hessian			tear_NOUN_FEM	Trääně	tʀˈɛːnə	t ʀ ˈɛː n ə		tear_NOUN_FEM_1			
 Standard German	Standard German			tear_NOUN_FEM	Träne	tʰʁˈɛːnə	tʰ ʁ ˈɛː n ə		tear_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			tear_NOUN_FEM	Dräna	d̥rˈɛːna	d̥ r ˈɛː n a		tear_NOUN_FEM_1			
 Swabian	Swabian			tear_NOUN_FEM	Drän	dʁˈɛːn	d ʁ ˈɛː n		tear_NOUN_FEM_1			
 Alsatian	Alsatian			tear_NOUN_FEM	Trän	tʁˈæːn	t ʁ ˈæː n		tear_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			tree_NOUN	trewą	trˈewɑ̃	t r ˈe w ɑ̃		tree_NOUN_2			
@@ -8661,6 +8887,7 @@ Hessian	Hessian			tongue_NOUN	Tsung	ʦˈuŋ	ʦ ˈu ŋ		tongue_NOUN_1
 Wymysorys	Wymysorys			tongue_NOUN	cung	ʦˈuŋɡ̊	ʦ ˈu ŋ ɡ̊		tongue_NOUN_1			
 Yiddish	Yiddish			tongue_NOUN	צונג	ʦˈʊŋɡ	ʦ ˈʊ ŋ ɡ		tongue_NOUN_1			
 Standard German	Standard German			tongue_NOUN	Zunge	ʦˈʊŋə	ʦ ˈʊ ŋ ə		tongue_NOUN_1			
+Upper Franconian	Upper Franconian			tongue_NOUN	Zunga	ʦˈʊŋa	ʦ ˈʊ ŋ a		tongue_NOUN_1			
 Bavarian	Bavarian			tongue_NOUN	Zunga	ʦˈuŋa	ʦ ˈu ŋ a		tongue_NOUN_1			
 Swabian	Swabian			tongue_NOUN	Zong	ʦˈoŋ	ʦ ˈo ŋ		tongue_NOUN_1			
 Alsatian	Alsatian			tongue_NOUN	Zung	ʦˈuŋ	ʦ ˈu ŋ		tongue_NOUN_1			
@@ -8701,6 +8928,7 @@ Hessian	Hessian			two_NUM	tswaa	ʦvˈaː	ʦ v ˈaː		two_NUM_1
 Wymysorys	Wymysorys			two_NUM	cwe	ʦvˈɛ	ʦ v ˈɛ		two_NUM_1			
 Yiddish	Yiddish			two_NUM	צוויי	ʦvˈɛɪ̯	ʦ v ˈɛɪ̯		two_NUM_1			
 Standard German	Standard German			two_NUM	zwei	ʦvˈaɪ̯	ʦ v ˈaɪ̯		two_NUM_1			
+Upper Franconian	Upper Franconian			two_NUM	zwaa	ʦvˈaː	ʦ v ˈaː		two_NUM_1			
 Bavarian	Bavarian			two_NUM	zwoa	ʦʋˈoɐ̯	ʦ ʋ ˈoɐ̯		two_NUM_1			
 Swabian	Swabian			two_NUM	zwoi	ʦʋˈɔe̯	ʦ ʋ ˈɔe̯		two_NUM_1			
 Alsatian	Alsatian			two_NUM	zwei	ʦʋˈəi̯	ʦ ʋ ˈəi̯		two_NUM_1			
@@ -8739,6 +8967,7 @@ Hessian	Hessian			twenty_NUM	tswannsisch	ʦvˈansiʃ	ʦ v ˈa n s i ʃ		twenty_N
 Wymysorys	Wymysorys			twenty_NUM	cwencik	ʦvˈɛnʦɪk	ʦ v ˈɛ n ʦ ɪ k		twenty_NUM_1			
 Yiddish	Yiddish			twenty_NUM	צוואַנציק	ʦvˈanʦɪk	ʦ v ˈa n ʦ ɪ k		twenty_NUM_1			
 Standard German	Standard German			twenty_NUM	zwanzig	ʦvˈanʦɪç	ʦ v ˈa n ʦ ɪ ç		twenty_NUM_1			
+Upper Franconian	Upper Franconian			twenty_NUM	zwanzg	ʦvˈanʦɡ̊	ʦ v ˈa n ʦ ɡ̊		twenty_NUM_1			
 Bavarian	Bavarian			twenty_NUM	zwanzge	ʦʋˈanʦɡ̊ə	ʦ ʋ ˈa n ʦ ɡ̊ ə		twenty_NUM_1			
 Swabian	Swabian			twenty_NUM	zwanzg	ʦʋˈanʦɡ	ʦ ʋ ˈa n ʦ ɡ		twenty_NUM_1			
 Alsatian	Alsatian			twenty_NUM	zwànzig	ʦʋˈɒnʦiʃ	ʦ ʋ ˈɒ n ʦ i ʃ		twenty_NUM_1			
@@ -8777,6 +9006,7 @@ Hessian	Hessian			twelve_NUM	tswẹllf	ʦvˈelf	ʦ v ˈe l f		twelve_NUM_1
 Wymysorys	Wymysorys			twelve_NUM	cwełf	ʦvˈɛwf	ʦ v ˈɛ w f		twelve_NUM_1			
 Yiddish	Yiddish			twelve_NUM	צוועלף	ʦvˈɛɫf	ʦ v ˈɛ ɫ f		twelve_NUM_1			
 Standard German	Standard German			twelve_NUM	zwölf	ʦvˈœlf	ʦ v ˈœ l f		twelve_NUM_1			
+Upper Franconian	Upper Franconian			twelve_NUM	zwälfa	ʦvˈɛlfa	ʦ v ˈɛ l f a		twelve_NUM_1			
 Bavarian	Bavarian			twelve_NUM	zwäife	ʦʋˈejfə	ʦ ʋ ˈe j f ə		twelve_NUM_1			
 Swabian	Swabian			twelve_NUM	zwelf	ʦʋˈelf	ʦ ʋ ˈe l f		twelve_NUM_1			
 Alsatian	Alsatian			twelve_NUM	zwelf	ʦʋˈelf	ʦ ʋ ˈe l f		twelve_NUM_1			
@@ -8816,6 +9046,7 @@ Hessian	Hessian			over_PREP	iwwä	ˈivæ̆	ˈi v æ̆		over_PREP_2
 Wymysorys	Wymysorys			over_PREP	ejwer	ˈei̯vɛr	ˈei̯ v ɛ r		over_PREP_2			
 Yiddish	Yiddish			over_PREP	איבער	ˈɪbəʀ	ˈɪ b ə ʀ		over_PREP_2			
 Standard German	Standard German			over_PREP	über	ˈyːbɐ	ˈyː b ɐ		over_PREP_2			
+Upper Franconian	Upper Franconian			over_PREP	iwwer	ˈɪβɐ	ˈɪ β ɐ		over_PREP_2			
 Bavarian	Bavarian			over_PREP	iwa	ˈiβa	ˈi β a		over_PREP_2			
 Swabian	Swabian			over_PREP	iber	ˈibʌ	ˈi b ʌ		over_PREP_2			
 Swiss German	Swiss German			over_PREP	über	ˈyːb̥ər	ˈyː b̥ ə r		over_PREP_2			
@@ -8852,6 +9083,7 @@ Hessian	Hessian			oven_NOUN	Oowě	ˈoːvə	ˈoː v ə		oven_NOUN_1
 Wymysorys	Wymysorys			oven_NOUN	uwa	ˈuva	ˈu v a		oven_NOUN_1			
 Yiddish	Yiddish			oven_NOUN	אויוון	ˈɔɪ̯vn̩	ˈɔɪ̯ v n̩		oven_NOUN_1			
 Standard German	Standard German			oven_NOUN	Ofen	ˈoːfn̩	ˈoː f n̩		oven_NOUN_1			
+Upper Franconian	Upper Franconian			oven_NOUN	Ufn	ˈuːfn̩	ˈuː f n̩		oven_NOUN_1			
 Bavarian	Bavarian			oven_NOUN	Ofa	ˈoːfa	ˈoː f a		oven_NOUN_1			
 Swabian	Swabian			oven_NOUN	Ofa	ˈoːfa	ˈoː f a		oven_NOUN_1			
 Alsatian	Alsatian			oven_NOUN	Offe	ˈofə	ˈo f ə		oven_NOUN_1			
@@ -8892,6 +9124,7 @@ Hessian	Hessian			under_PREP	unnä	ˈunæ̆	ˈu n æ̆		under_PREP_1
 Wymysorys	Wymysorys			under_PREP	under	ˈundɛr	ˈu n d ɛ r		under_PREP_1			
 Yiddish	Yiddish			under_PREP	אונטער	ˈʊntəʀ	ˈʊ n t ə ʀ		under_PREP_1			
 Standard German	Standard German			under_PREP	unter	ˈʊntɐ	ˈʊ n t ɐ		under_PREP_1			
+Upper Franconian	Upper Franconian			under_PREP	unner	ˈʊnɐ	ˈʊ n ɐ		under_PREP_1			
 Bavarian	Bavarian			under_PREP	undda	ˈund̥a	ˈu n d̥ a		under_PREP_1			
 Swabian	Swabian			under_PREP	ondr	ˈondʌ	ˈo n d ʌ		under_PREP_1			
 Alsatian	Alsatian			under_PREP	unter	ˈuntəʁ	ˈu n t ə ʁ		under_PREP_1			
@@ -8929,6 +9162,7 @@ Hessian	Hessian			us_PRON	uns	ˈuns	ˈu n s		us_PRON_1
 Wymysorys	Wymysorys			us_PRON	yns	ˈɘ̟ns	ˈɘ̟ n s		us_PRON_1			
 Yiddish	Yiddish			us_PRON	אונדז	ˈʊndz	ˈʊ n d z		us_PRON_1			
 Standard German	Standard German			us_PRON	uns	ˈʊnz̥	ˈʊ n z̥		us_PRON_1			
+Upper Franconian	Upper Franconian			us_PRON	uns	ˈʊns	ˈʊ n s		us_PRON_1			
 Bavarian	Bavarian			us_PRON	uns	ˈuns	ˈu n s		us_PRON_1			
 Swabian	Swabian			us_PRON	ons	ˈons	ˈo n s		us_PRON_1			
 Alsatian	Alsatian			us_PRON	uns	ˈunz̥	ˈu n z̥		us_PRON_1			
@@ -8967,6 +9201,7 @@ Hessian	Hessian			up_ADV	uff	ˈuf	ˈu f		up_ADV_1
 Wymysorys	Wymysorys			up_ADV	uf	ˈuf	ˈu f		up_ADV_1			
 Yiddish	Yiddish			up_ADV	אויף	ˈɔɪ̯f	ˈɔɪ̯ f		up_ADV_1			
 Standard German	Standard German			up_ADV	auf	ˈaʊ̯f	ˈaʊ̯ f		up_ADV_1			
+Upper Franconian	Upper Franconian			up_ADV	aff	ˈaf	ˈa f		up_ADV_1			
 Bavarian	Bavarian			up_ADV	af	ˈaːf	ˈaː f		up_ADV_1			
 Swabian	Swabian			up_ADV	uff	ˈuf	ˈu f		up_ADV_1			
 Alsatian	Alsatian			up_ADV	uf	ˈuf	ˈu f		up_ADV_1			
@@ -9004,6 +9239,7 @@ Palatine German	Palatine German			out_PREP	aus	ˈau̯s	ˈau̯ s		out_PREP_1
 Wymysorys	Wymysorys			out_PREP	aojs	ˈɑi̯s	ˈɑi̯ s		out_PREP_1			
 Yiddish	Yiddish			out_PREP	אויס	ˈɔɪ̯s	ˈɔɪ̯ s		out_PREP_1			
 Standard German	Standard German			out_PREP	aus	ˈaʊ̯s	ˈaʊ̯ s		out_PREP_1			
+Upper Franconian	Upper Franconian			out_PREP	aus	ˈaʊ̯s	ˈaʊ̯ s		out_PREP_1			
 Bavarian	Bavarian			out_PREP	aus	ˈau̯s	ˈau̯ s		out_PREP_1			
 Swabian	Swabian			out_PREP	aus	ˈao̯s	ˈao̯ s		out_PREP_1			
 Alsatian	Alsatian			out_PREP	üs	ˈyːs	ˈyː s		out_PREP_1			
@@ -9041,6 +9277,7 @@ Palatine German	Palatine German			owl_NOUN	Eil	ˈaɪ̯l	ˈaɪ̯ l		owl_NOUN_1
 Hessian	Hessian			owl_NOUN	Oil	ˈoi̯l	ˈoi̯ l		owl_NOUN_1			
 Wymysorys	Wymysorys			owl_NOUN	aojł	ˈɑi̯w	ˈɑi̯ w		owl_NOUN_1			
 Standard German	Standard German			owl_NOUN	Eule	ˈɔʏ̯lə	ˈɔʏ̯ l ə		owl_NOUN_1			
+Upper Franconian	Upper Franconian			owl_NOUN	Eil	ˈaɪ̯l	ˈaɪ̯ l		owl_NOUN_1			
 Swabian	Swabian			owl_NOUN	Eil	ˈae̯l	ˈae̯ l		owl_NOUN_1			
 Alsatian	Alsatian			owl_NOUN	Il	ˈil	ˈi l		owl_NOUN_1			
 Proto-Germanic	Proto-Germanic			weak_ADJ	waikwaz	wˈɑi̯kʷɑz	w ˈɑi̯ kʷ ɑ z		weak_ADJ_1			
@@ -9073,6 +9310,7 @@ Hessian	Hessian			weak_ADJ	waasch	vˈaːʃ	v ˈaː ʃ		weak_ADJ_1
 Wymysorys	Wymysorys			weak_ADJ	waach	vˈax	v ˈa x		weak_ADJ_1			
 Yiddish	Yiddish			weak_ADJ	ווייך	vˈɛɪ̯χ	v ˈɛɪ̯ χ		weak_ADJ_1			
 Standard German	Standard German			weak_ADJ	weich	vˈaɪ̯ç	v ˈaɪ̯ ç		weak_ADJ_1			
+Upper Franconian	Upper Franconian			weak_ADJ	waach	vˈaːx	v ˈaː x		weak_ADJ_1			
 Bavarian	Bavarian			weak_ADJ	woach	ʋˈoɐ̯x	ʋ ˈoɐ̯ x		weak_ADJ_1			
 Swabian	Swabian			weak_ADJ	woich	ʋˈɔe̯ç	ʋ ˈɔe̯ ç		weak_ADJ_1			
 Proto-Germanic	Proto-Germanic			warm_ADJ	warmaz	wˈɑrmɑz	w ˈɑ r m ɑ z		warm_ADJ_1			
@@ -9108,6 +9346,7 @@ Hessian	Hessian			warm_ADJ	wååm	vˈɑːm	v ˈɑː m		warm_ADJ_1
 Wymysorys	Wymysorys			warm_ADJ	wiöm	vˈi̯øm	v ˈi̯ø m		warm_ADJ_1			
 Yiddish	Yiddish			warm_ADJ	וואַרעם	vˈaʀɛm	v ˈa ʀ ɛ m		warm_ADJ_1			
 Standard German	Standard German			warm_ADJ	warm	vˈaɐm	v ˈa ɐ m		warm_ADJ_1			
+Upper Franconian	Upper Franconian			warm_ADJ	worm	vˈɔɐm	v ˈɔ ɐ m		warm_ADJ_1			
 Bavarian	Bavarian			warm_ADJ	wårm	ʋˈɒːɐm	ʋ ˈɒː ɐ m		warm_ADJ_1			
 Swabian	Swabian			warm_ADJ	warm	ʋˈaʕm	ʋ ˈa ʕ m		warm_ADJ_1			
 Alsatian	Alsatian			warm_ADJ	wàrm	ʋˈɒːʁm	ʋ ˈɒː ʁ m		warm_ADJ_1			
@@ -9147,6 +9386,7 @@ Hessian	Hessian			water_NOUN	Wassä	vˈasæ̆	v ˈa s æ̆		water_NOUN_2
 Wymysorys	Wymysorys			water_NOUN	woser	vˈɔsɛr	v ˈɔ s ɛ r		water_NOUN_2			
 Yiddish	Yiddish			water_NOUN	וואַסער	vˈasəʀ	v ˈa s ə ʀ		water_NOUN_2			
 Standard German	Standard German			water_NOUN	Wasser	vˈasɐ	v ˈa s ɐ		water_NOUN_2			
+Upper Franconian	Upper Franconian			water_NOUN	Wasser	vˈasɐ	v ˈa s ɐ		water_NOUN_2			
 Bavarian	Bavarian			water_NOUN	Wassa	ʋˈɑsa	ʋ ˈɑ s a		water_NOUN_2			
 Bavarian	Bavarian			water_NOUN	Wāssa	ʋˈɑːsa	ʋ ˈɑː s a		water_NOUN_2			
 Swabian	Swabian			water_NOUN	Wassr	ʋˈasʌ	ʋ ˈa s ʌ		water_NOUN_2			
@@ -9184,6 +9424,7 @@ Palatine German	Palatine German			weather_NOUN	Wedder	βˈɛrɐ	β ˈɛ r ɐ		we
 Hessian	Hessian			weather_NOUN	Wäddä	vˈɛd̥æ̆	v ˈɛ d̥ æ̆		weather_NOUN_1			
 Yiddish	Yiddish			weather_NOUN	וועטער	vˈɛtəʀ	v ˈɛ t ə ʀ		weather_NOUN_1			
 Standard German	Standard German			weather_NOUN	Wetter	vˈɛtɐ	v ˈɛ t ɐ		weather_NOUN_1			
+Upper Franconian	Upper Franconian			weather_NOUN	Wedder	vˈɛɾɐ	v ˈɛ ɾ ɐ		weather_NOUN_1			
 Bavarian	Bavarian			weather_NOUN	Weda	ʋˈed̥a	ʋ ˈe d̥ a		weather_NOUN_1			
 Swabian	Swabian			weather_NOUN	Weddr	ʋˈɛdʌ	ʋ ˈɛ d ʌ		weather_NOUN_1			
 Alsatian	Alsatian			weather_NOUN	Wetter	ʋˈetəʁ	ʋ ˈe t ə ʁ		weather_NOUN_1			
@@ -9222,6 +9463,7 @@ Hessian	Hessian			way_NOUN	Wääsch	vˈɛːʃ	v ˈɛː ʃ		way_NOUN_1
 Wymysorys	Wymysorys			way_NOUN	wak	vˈaɡ̊	v ˈa ɡ̊		way_NOUN_1			
 Yiddish	Yiddish			way_NOUN	וועג	vˈɛɡ	v ˈɛ ɡ		way_NOUN_1			
 Standard German	Standard German			way_NOUN	Weg	vˈeːɡ̊	v ˈeː ɡ̊		way_NOUN_1			
+Upper Franconian	Upper Franconian			way_NOUN	Weg	vˈeːç	v ˈeː ç		way_NOUN_1			
 Bavarian	Bavarian			way_NOUN	Weg	ʋˈeːɡ̊	ʋ ˈeː ɡ̊		way_NOUN_1			
 Swabian	Swabian			way_NOUN	Wäg	ʋˈɛːɡ	ʋ ˈɛː ɡ		way_NOUN_1			
 Alsatian	Alsatian			way_NOUN	Wäj	ʋˈæj	ʋ ˈæ j		way_NOUN_1			
@@ -9250,6 +9492,7 @@ Luxembourgish	Luxembourgish			weapon_NOUN	Waff	vˈɑf	v ˈɑ f		weapon_NOUN_1
 Palatine German	Palatine German			weapon_NOUN	Waff	βˈɑf	β ˈɑ f		weapon_NOUN_1			
 Yiddish	Yiddish			weapon_NOUN	וואָפֿן	vˈɔfn̩	v ˈɔ f n̩		weapon_NOUN_1			
 Standard German	Standard German			weapon_NOUN	Waffe	vˈafə	v ˈa f ə		weapon_NOUN_1			
+Upper Franconian	Upper Franconian			weapon_NOUN	Waffe	vˈafn̩	v ˈa f n̩		weapon_NOUN_1			
 Swiss German	Swiss German			weapon_NOUN	Waaffe	ʋˈɒːffə	ʋ ˈɒː f f ə		weapon_NOUN_1			
 Proto-Germanic	Proto-Germanic			wife_NOUN	wībą	wˈiːβɑ̃	w ˈiː β ɑ̃		wife_NOUN_1			
 Scots	Scots			wife_NOUN	wife	wˈəi̯f	w ˈəi̯ f		wife_NOUN_1			
@@ -9272,6 +9515,7 @@ Pennsylvania German	Pennsylvania German			wife_NOUN	Weib	ʋˈaɪ̯b̥	ʋ ˈaɪ̯
 Palatine German	Palatine German			wife_NOUN	Weib	βˈaɪ̯b̥	β ˈaɪ̯ b̥		wife_NOUN_1			
 Yiddish	Yiddish			wife_NOUN	ווײַב	vˈaɪ̯b	v ˈaɪ̯ b		wife_NOUN_1			
 Standard German	Standard German			wife_NOUN	Weib	vˈaɪ̯b̥	v ˈaɪ̯ b̥		wife_NOUN_1			
+Upper Franconian	Upper Franconian			wife_NOUN	Weib	vˈaɪ̯b̥	v ˈaɪ̯ b̥		wife_NOUN_1			
 Bavarian	Bavarian			wife_NOUN	Wei	ʋˈai̯	ʋ ˈai̯		wife_NOUN_1			
 Swabian	Swabian			wife_NOUN	Weib	ʋˈəi̯b	ʋ ˈəi̯ b		wife_NOUN_1			
 Swiss German	Swiss German			wife_NOUN	Wiib	ʋˈiːb̥	ʋ ˈiː b̥		wife_NOUN_1			
@@ -9309,6 +9553,7 @@ Hessian	Hessian			week_NOUN	Woche	vˈɔxə	v ˈɔ x ə		week_NOUN_1
 Wymysorys	Wymysorys			week_NOUN	woch	vˈɔx	v ˈɔ x		week_NOUN_1			
 Yiddish	Yiddish			week_NOUN	וואָך	vˈɔχ	v ˈɔ χ		week_NOUN_1			
 Standard German	Standard German			week_NOUN	Woche	vˈɔxə	v ˈɔ x ə		week_NOUN_1			
+Upper Franconian	Upper Franconian			week_NOUN	Wochn	vˈɔxn̩	v ˈɔ x n̩		week_NOUN_1			
 Bavarian	Bavarian			week_NOUN	Woch	ʋˈox	ʋ ˈo x		week_NOUN_1			
 Bavarian	Bavarian			week_NOUN	Wocha	ʋˈoxa	ʋ ˈo x a		week_NOUN_1			
 Swabian	Swabian			week_NOUN	Woch	ʋˈox	ʋ ˈo x		week_NOUN_1			
@@ -9346,6 +9591,7 @@ Hessian	Hessian			wild_ADJ	will	vˈil	v ˈi l		wild_ADJ_1
 Wymysorys	Wymysorys			wild_ADJ	wyłd	vˈɘ̟wd̥	v ˈɘ̟ w d̥		wild_ADJ_1			
 Yiddish	Yiddish			wild_ADJ	ווילד	vˈɪɫd	v ˈɪ ɫ d		wild_ADJ_1			
 Standard German	Standard German			wild_ADJ	wild	vˈɪld̥	v ˈɪ l d̥		wild_ADJ_1			
+Upper Franconian	Upper Franconian			wild_ADJ	wild	vˈɪld̥	v ˈɪ l d̥		wild_ADJ_1			
 Swabian	Swabian			wild_ADJ	wild	ʋˈild	ʋ ˈi l d		wild_ADJ_1			
 Alsatian	Alsatian			wild_ADJ	wild	ʋˈild̥	ʋ ˈi l d̥		wild_ADJ_1			
 Swiss German	Swiss German			wild_ADJ	wild	ʋˈild̥	ʋ ˈi l d̥		wild_ADJ_1			
@@ -9382,6 +9628,7 @@ Hessian	Hessian			wine_NOUN	Wåiñ	vˈɑ̃i̯	v ˈɑ̃i̯		wine_NOUN_1
 Wymysorys	Wymysorys			wine_NOUN	wajn	vˈai̯n	v ˈai̯ n		wine_NOUN_1			
 Yiddish	Yiddish			wine_NOUN	ווײַן	vˈaɪ̯n	v ˈaɪ̯ n		wine_NOUN_1			
 Standard German	Standard German			wine_NOUN	Wein	vˈaɪ̯n	v ˈaɪ̯ n		wine_NOUN_1			
+Upper Franconian	Upper Franconian			wine_NOUN	Wei	vˈaɪ̯	v ˈaɪ̯		wine_NOUN_1			
 Bavarian	Bavarian			wine_NOUN	Wein	ʋˈai̯n	ʋ ˈai̯ n		wine_NOUN_1			
 Swabian	Swabian			wine_NOUN	Wei	ʋˈae̯	ʋ ˈae̯		wine_NOUN_1			
 Alsatian	Alsatian			wine_NOUN	Win	ʋˈin	ʋ ˈi n		wine_NOUN_1			
@@ -9420,6 +9667,7 @@ Hessian	Hessian			wind_NOUN	Winnt	vˈind̥	v ˈi n d̥		wind_NOUN_1
 Wymysorys	Wymysorys			wind_NOUN	wynd	vˈɘ̟nd̥	v ˈɘ̟ n d̥		wind_NOUN_1			
 Yiddish	Yiddish			wind_NOUN	ווינט	vˈɪnt	v ˈɪ n t		wind_NOUN_1			
 Standard German	Standard German			wind_NOUN	Wind	vˈɪnd̥	v ˈɪ n d̥		wind_NOUN_1			
+Upper Franconian	Upper Franconian			wind_NOUN	Wind	vˈɪnd̥	v ˈɪ n d̥		wind_NOUN_1			
 Bavarian	Bavarian			wind_NOUN	Wind	ʋˈind̥	ʋ ˈi n d̥		wind_NOUN_1			
 Swabian	Swabian			wind_NOUN	Weed	ʋˈeːd	ʋ ˈeː d		wind_NOUN_1			
 Alsatian	Alsatian			wind_NOUN	Wind	ʋˈind̥	ʋ ˈi n d̥		wind_NOUN_1			
@@ -9458,6 +9706,7 @@ Hessian	Hessian			winter_NOUN	Winndä	vˈind̥æ̆	v ˈi n d̥ æ̆		winter_NOUN
 Wymysorys	Wymysorys			winter_NOUN	wynter	vˈɘ̟ntɛr	v ˈɘ̟ n t ɛ r		winter_NOUN_1			
 Yiddish	Yiddish			winter_NOUN	ווינטער	vˈɪntəʀ	v ˈɪ n t ə ʀ		winter_NOUN_1			
 Standard German	Standard German			winter_NOUN	Winter	vˈɪntɐ	v ˈɪ n t ɐ		winter_NOUN_1			
+Upper Franconian	Upper Franconian			winter_NOUN	Winder	vˈɪnd̥ɐ	v ˈɪ n d̥ ɐ		winter_NOUN_1			
 Bavarian	Bavarian			winter_NOUN	Windda	ʋˈind̥a	ʋ ˈi n d̥ a		winter_NOUN_1			
 Swabian	Swabian			winter_NOUN	Wendr	ʋˈendʌ	ʋ ˈe n d ʌ		winter_NOUN_1			
 Alsatian	Alsatian			winter_NOUN	Winter	ʋˈintəʁ	ʋ ˈi n t ə ʁ		winter_NOUN_1			
@@ -9494,6 +9743,7 @@ Palatine German	Palatine German			know_VERB	wisse	βˈɪsə	β ˈɪ s ə		know_V
 Wymysorys	Wymysorys			know_VERB	wysa	vˈɘ̟sa	v ˈɘ̟ s a		know_VERB_1			
 Yiddish	Yiddish			know_VERB	וויסן	vˈɪsn̩	v ˈɪ s n̩		know_VERB_1			
 Standard German	Standard German			know_VERB	wissen	vˈɪsn̩	v ˈɪ s n̩		know_VERB_1			
+Upper Franconian	Upper Franconian			know_VERB	wissen	vˈɪsn̩	v ˈɪ s n̩		know_VERB_1			
 Bavarian	Bavarian			know_VERB	wissn	ʋˈisn̩	ʋ ˈi s n̩		know_VERB_1			
 Swabian	Swabian			know_VERB	wissa	ʋˈisa	ʋ ˈi s a		know_VERB_1			
 Alsatian	Alsatian			know_VERB	wisse	ʋˈisə	ʋ ˈi s ə		know_VERB_1			
@@ -9530,6 +9780,7 @@ Hessian	Hessian			we_PRON	miiǎ	mˈiːɐ	m ˈiː ɐ		we_PRON_1
 Wymysorys	Wymysorys			we_PRON	wir	vˈir	v ˈi r		we_PRON_1			
 Yiddish	Yiddish			we_PRON	מיר	mˈɪʀ	m ˈɪ ʀ		we_PRON_1			
 Standard German	Standard German			we_PRON	wir	vˈiːɐ	v ˈiː ɐ		we_PRON_1			
+Upper Franconian	Upper Franconian			we_PRON	mir	mˈiːɐ	m ˈiː ɐ		we_PRON_1			
 Bavarian	Bavarian			we_PRON	mia	mˈiɐ	m ˈi ɐ		we_PRON_1			
 Swabian	Swabian			we_PRON	mir	mˈiʌ	m ˈi ʌ		we_PRON_1			
 Alsatian	Alsatian			we_PRON	mer	mˈeːʁ	m ˈeː ʁ		we_PRON_1			
@@ -9580,6 +9831,7 @@ Hessian	Hessian			wolf_NOUN	Wollf	vˈolf	v ˈo l f		wolf_NOUN_1
 Wymysorys	Wymysorys			wolf_NOUN	wuf	vˈuf	v ˈu f		wolf_NOUN_1			
 Yiddish	Yiddish			wolf_NOUN	וואָלף	vˈɔɫf	v ˈɔ ɫ f		wolf_NOUN_1			
 Standard German	Standard German			wolf_NOUN	Wolf	vˈɔlf	v ˈɔ l f		wolf_NOUN_1			
+Upper Franconian	Upper Franconian			wolf_NOUN	Wolf	vˈɔlf	v ˈɔ l f		wolf_NOUN_1			
 Bavarian	Bavarian			wolf_NOUN	Woif	ʋˈojf	ʋ ˈo j f		wolf_NOUN_1			
 Swabian	Swabian			wolf_NOUN	Wolf	ʋˈolf	ʋ ˈo l f		wolf_NOUN_1			
 Alsatian	Alsatian			wolf_NOUN	Wolf	ʋˈolf	ʋ ˈo l f		wolf_NOUN_1			
@@ -9618,6 +9870,7 @@ Palatine German	Palatine German			wool_NOUN_FEM	Woll	βˈɔl	β ˈɔ l		wool_NOU
 Hessian	Hessian			wool_NOUN_FEM	Woll	vˈol	v ˈo l		wool_NOUN_FEM_1			
 Yiddish	Yiddish			wool_NOUN_FEM	וואָל	vˈɔɫ	v ˈɔ ɫ		wool_NOUN_FEM_1			
 Standard German	Standard German			wool_NOUN_FEM	Wolle	vˈɔlə	v ˈɔ l ə		wool_NOUN_FEM_1			
+Upper Franconian	Upper Franconian			wool_NOUN_FEM	Wolln	vˈɔln̩	v ˈɔ l n̩		wool_NOUN_FEM_1			
 Bavarian	Bavarian			wool_NOUN_FEM	Woi	ʋˈoj	ʋ ˈo j		wool_NOUN_FEM_1			
 Swabian	Swabian			wool_NOUN_FEM	Wolle	ʋˈole	ʋ ˈo l e		wool_NOUN_FEM_1			
 Alsatian	Alsatian			wool_NOUN_FEM	Woll	ʋˈol	ʋ ˈo l		wool_NOUN_FEM_1			
@@ -9654,6 +9907,7 @@ Hessian	Hessian			wonder_NOUN	Wunnä	vˈunæ̆	v ˈu n æ̆		wonder_NOUN_1
 Wymysorys	Wymysorys			wonder_NOUN	wunder	vˈundɛr	v ˈu n d ɛ r		wonder_NOUN_1			
 Yiddish	Yiddish			wonder_NOUN	וווּנדער	vˈʊndəʀ	v ˈʊ n d ə ʀ		wonder_NOUN_1			
 Standard German	Standard German			wonder_NOUN	Wunder	vˈʊndɐ	v ˈʊ n d ɐ		wonder_NOUN_1			
+Upper Franconian	Upper Franconian			wonder_NOUN	Wunder	vˈʊnd̥ɐ	v ˈʊ n d̥ ɐ		wonder_NOUN_1			
 Alsatian	Alsatian			wonder_NOUN	Wunder	ʋˈund̥əʁ	ʋ ˈu n d̥ ə ʁ		wonder_NOUN_1			
 Swiss German	Swiss German			wonder_NOUN	Wunder	ʋˈund̥ər	ʋ ˈu n d̥ ə r		wonder_NOUN_1			
 Proto-Germanic	Proto-Germanic			wish_VERB	wunskijaną	wˈunskijɑnɑ̃	w ˈu n s k i j ɑ n ɑ̃		wish_VERB_1			
@@ -9688,6 +9942,7 @@ Hessian	Hessian			wish_VERB	winnschě	vˈinʒ̥ə	v ˈi n ʒ̥ ə		wish_VERB_1
 Wymysorys	Wymysorys			wish_VERB	wyncia	vˈɘ̟nʧa	v ˈɘ̟ n ʧ a		wish_VERB_1			
 Yiddish	Yiddish			wish_VERB	ווינטשן	vˈɪnʧn̩	v ˈɪ n ʧ n̩		wish_VERB_1			
 Standard German	Standard German			wish_VERB	wünschen	vˈʏnʃn̩	v ˈʏ n ʃ n̩		wish_VERB_1			
+Upper Franconian	Upper Franconian			wish_VERB	winschn	vˈɪnʃn̩	v ˈɪ n ʃ n̩		wish_VERB_1			
 Bavarian	Bavarian			wish_VERB	winschn	ʋˈinʃn̩	ʋ ˈi n ʃ n̩		wish_VERB_1			
 Swabian	Swabian			wish_VERB	winscha	ʋˈɪnʃa	ʋ ˈɪ n ʃ a		wish_VERB_1			
 Alsatian	Alsatian			wish_VERB	winsche	ʋˈinʃə	ʋ ˈi n ʃ ə		wish_VERB_1			
@@ -9725,6 +9980,7 @@ Hessian	Hessian			word_NOUN	Wǫǎt	vˈɔɐt	v ˈɔ ɐ t		word_NOUN_1
 Wymysorys	Wymysorys			word_NOUN	wiüt	vjˈʏt	v j ˈʏ t		word_NOUN_1			
 Yiddish	Yiddish			word_NOUN	וואָרט	vˈɔʀt	v ˈɔ ʀ t		word_NOUN_1			
 Standard German	Standard German			word_NOUN	Wort	vˈɔɐt	v ˈɔ ɐ t		word_NOUN_1			
+Upper Franconian	Upper Franconian			word_NOUN	Wort	vˈɔɐd̥	v ˈɔ ɐ d̥		word_NOUN_1			
 Bavarian	Bavarian			word_NOUN	Woadd	ʋˈoɐd̥	ʋ ˈo ɐ d̥		word_NOUN_1			
 Swabian	Swabian			word_NOUN	Wort	ʋˈoʕt	ʋ ˈo ʕ t		word_NOUN_1			
 Alsatian	Alsatian			word_NOUN	Wort	ʋˈoʁt	ʋ ˈo ʁ t		word_NOUN_1			
@@ -9762,6 +10018,7 @@ Hessian	Hessian			worm_NOUN	Wǫǎmm	vˈɔɐm	v ˈɔ ɐ m		worm_NOUN_1
 Wymysorys	Wymysorys			worm_NOUN	wüm	vˈʏm	v ˈʏ m		worm_NOUN_1			
 Yiddish	Yiddish			worm_NOUN	וואָרעם	vˈɔʀəm	v ˈɔ ʀ ə m		worm_NOUN_1			
 Standard German	Standard German			worm_NOUN	Wurm	vˈʊɐm	v ˈʊ ɐ m		worm_NOUN_1			
+Upper Franconian	Upper Franconian			worm_NOUN	Wurm	vˈʊɐm	v ˈʊ ɐ m		worm_NOUN_1			
 Alsatian	Alsatian			worm_NOUN	Wurm	ʋˈuʁm	ʋ ˈu ʁ m		worm_NOUN_1			
 Swiss German	Swiss German			worm_NOUN	Wurm	ʋˈurm	ʋ ˈu r m		worm_NOUN_1			
 Proto-Germanic	Proto-Germanic			thank_VERB	þankōną	θˈɑŋkɔːnɑ̃	θ ˈɑ ŋ k ɔː n ɑ̃		thank_VERB_1			
@@ -9829,6 +10086,7 @@ Palatine German	Palatine German			thick_ADJ	dick	d̥ˈɪɡ̊	d̥ ˈɪ ɡ̊		thic
 Hessian	Hessian			thick_ADJ	dikk	d̥ˈik	d̥ ˈi k		thick_ADJ_1			
 Yiddish	Yiddish			thick_ADJ	דיק	dˈɪk	d ˈɪ k		thick_ADJ_1			
 Standard German	Standard German			thick_ADJ	dick	dˈɪk	d ˈɪ k		thick_ADJ_1			
+Upper Franconian	Upper Franconian			thick_ADJ	dick	d̥ˈɪɡ̊	d̥ ˈɪ ɡ̊		thick_ADJ_1			
 Swabian	Swabian			thick_ADJ	digg	dˈiɡ	d ˈi ɡ		thick_ADJ_1			
 Swiss German	Swiss German			thick_ADJ	dick	d̥ˈik	d̥ ˈi k		thick_ADJ_1			
 Proto-Germanic	Proto-Germanic			thief_NOUN	þeubaz	θˈeu̯βɑz	θ ˈeu̯ β ɑ z		thief_NOUN_1			
@@ -9865,6 +10123,7 @@ Palatine German	Palatine German			thief_NOUN	Dieb	d̥ˈiːb̥	d̥ ˈiː b̥		thi
 Hessian	Hessian			thief_NOUN	Diip	d̥ˈiːb̥	d̥ ˈiː b̥		thief_NOUN_1			
 Wymysorys	Wymysorys			thief_NOUN	dib	dˈib̥	d ˈi b̥		thief_NOUN_1			
 Standard German	Standard German			thief_NOUN	Dieb	dˈiːb̥	d ˈiː b̥		thief_NOUN_1			
+Upper Franconian	Upper Franconian			thief_NOUN	Dieb	d̥ˈiːb̥	d̥ ˈiː b̥		thief_NOUN_1			
 Bavarian	Bavarian			thief_NOUN	Diab	d̥ˈiɐ̯b̥	d̥ ˈiɐ̯ b̥		thief_NOUN_1			
 Swabian	Swabian			thief_NOUN	Diab	dˈiə̯b	d ˈiə̯ b		thief_NOUN_1			
 Swiss German	Swiss German			thief_NOUN	Dieb	d̥ˈiə̯b̥	d̥ ˈiə̯ b̥		thief_NOUN_1			
@@ -9898,6 +10157,7 @@ Pennsylvania German	Pennsylvania German			thing_NOUN	Ding	dˈɪŋ	d ˈɪ ŋ		thi
 Palatine German	Palatine German			thing_NOUN	Ding	d̥ˈɪŋ	d̥ ˈɪ ŋ		thing_NOUN_1			
 Hessian	Hessian			thing_NOUN	Ding	d̥ˈiŋ	d̥ ˈi ŋ		thing_NOUN_1			
 Standard German	Standard German			thing_NOUN	Ding	dˈɪŋ	d ˈɪ ŋ		thing_NOUN_1			
+Upper Franconian	Upper Franconian			thing_NOUN	Ding	d̥ˈɪŋ	d̥ ˈɪ ŋ		thing_NOUN_1			
 Alsatian	Alsatian			thing_NOUN	Ding	d̥ˈiŋ	d̥ ˈi ŋ		thing_NOUN_1			
 Proto-Germanic	Proto-Germanic			thing_NOUN	þinhsą	θˈinxsɑ̃	θ ˈi n x s ɑ̃		thing_NOUN_2			
 Gothic	Gothic			thing_NOUN	𐌸𐌴𐌹𐌷𐍃	θˈiːhs	θ ˈiː h s		thing_NOUN_2			
@@ -9932,6 +10192,7 @@ Hessian	Hessian			Teutonic_ADJ	doitsch	d̥ˈoi̯tʃ	d̥ ˈoi̯ t ʃ		Teutonic_AD
 Wymysorys	Wymysorys			Teutonic_ADJ	daojć	dˈɑi̯tʃ	d ˈɑi̯ t ʃ		Teutonic_ADJ_1			
 Yiddish	Yiddish			Teutonic_ADJ	דײַטש	dˈaɪ̯tʃ	d ˈaɪ̯ t ʃ		Teutonic_ADJ_1			
 Standard German	Standard German			Teutonic_ADJ	deutsch	dˈɔʏ̯tʃ	d ˈɔʏ̯ t ʃ		Teutonic_ADJ_1			
+Upper Franconian	Upper Franconian			Teutonic_ADJ	deitsch	d̥ˈaɪ̯d̥ʃ	d̥ ˈaɪ̯ d̥ ʃ		Teutonic_ADJ_1			
 Bavarian	Bavarian			Teutonic_ADJ	deidsch	d̥ˈai̯d̥ʃ	d̥ ˈai̯ d̥ ʃ		Teutonic_ADJ_1			
 Swabian	Swabian			Teutonic_ADJ	deidsch	dˈəi̯dʃ	d ˈəi̯ d ʃ		Teutonic_ADJ_1			
 Alsatian	Alsatian			Teutonic_ADJ	ditsch	d̥ˈitʃ	d̥ ˈi t ʃ		Teutonic_ADJ_1			
@@ -9969,6 +10230,7 @@ Hessian	Hessian			thirteen_NUM	traitsää	tʀˈai̯ʦɛː	t ʀ ˈai̯ ʦ ɛː		t
 Wymysorys	Wymysorys			thirteen_NUM	drecao	drˈɛʦɑ	d r ˈɛ ʦ ɑ		thirteen_NUM_1			
 Yiddish	Yiddish			thirteen_NUM	דרײַצן	dʀˈaɪ̯ʦn̩	d ʀ ˈaɪ̯ ʦ n̩		thirteen_NUM_1			
 Standard German	Standard German			thirteen_NUM	dreizehn	dʁˈaɪ̯ʦeːn	d ʁ ˈaɪ̯ ʦ eː n		thirteen_NUM_1			
+Upper Franconian	Upper Franconian			thirteen_NUM	dreize	d̥rˈaɪ̯ʦeː	d̥ r ˈaɪ̯ ʦ eː		thirteen_NUM_1			
 Bavarian	Bavarian			thirteen_NUM	dreizeah	d̥rˈai̯ʦeɐ̯	d̥ r ˈai̯ ʦ eɐ̯		thirteen_NUM_1			
 Swabian	Swabian			thirteen_NUM	dreizeah	dʁˈae̯ʦeə̯	d ʁ ˈae̯ ʦ eə̯		thirteen_NUM_1			
 Alsatian	Alsatian			thirteen_NUM	drizehn	d̥ʁˈiʦeːn	d̥ ʁ ˈi ʦ eː n		thirteen_NUM_1			
@@ -10008,6 +10270,7 @@ Hessian	Hessian			three_NUM	trai	tʀˈai̯	t ʀ ˈai̯		three_NUM_1
 Wymysorys	Wymysorys			three_NUM	draj	drˈai̯	d r ˈai̯		three_NUM_1			
 Yiddish	Yiddish			three_NUM	דרײַ	dʀˈaɪ̯	d ʀ ˈaɪ̯		three_NUM_1			
 Standard German	Standard German			three_NUM	drei	dʁˈaɪ̯	d ʁ ˈaɪ̯		three_NUM_1			
+Upper Franconian	Upper Franconian			three_NUM	drei	d̥rˈaɪ̯	d̥ r ˈaɪ̯		three_NUM_1			
 Bavarian	Bavarian			three_NUM	drei	d̥rˈai̯	d̥ r ˈai̯		three_NUM_1			
 Swabian	Swabian			three_NUM	drei	dʁˈae̯	d ʁ ˈae̯		three_NUM_1			
 Alsatian	Alsatian			three_NUM	drej	d̥ʁˈei̯	d̥ ʁ ˈei̯		three_NUM_1			
@@ -10041,6 +10304,7 @@ Palatine German	Palatine German			press_VERB	dricke	d̥rˈɪɡ̊ə	d̥ r ˈɪ ɡ
 Hessian	Hessian			press_VERB	triggě	tʀˈiɡ̊ə	t ʀ ˈi ɡ̊ ə		press_VERB_1			
 Yiddish	Yiddish			press_VERB	דריקן	dʀˈɪkn̩	d ʀ ˈɪ k n̩		press_VERB_1			
 Standard German	Standard German			press_VERB	drücken	dʁˈʏkn̩	d ʁ ˈʏ k n̩		press_VERB_1			
+Upper Franconian	Upper Franconian			press_VERB	drickn	d̥rˈɪɡ̊n̩	d̥ r ˈɪ ɡ̊ n̩		press_VERB_1			
 Bavarian	Bavarian			press_VERB	drugga	d̥rˈuɡ̊a	d̥ r ˈu ɡ̊ a		press_VERB_1			
 Swabian	Swabian			press_VERB	drugga	dʁˈuɡa	d ʁ ˈu ɡ a		press_VERB_1			
 Alsatian	Alsatian			press_VERB	drucke	d̥ʁˈukə	d̥ ʁ ˈu k ə		press_VERB_1			
@@ -10074,6 +10338,7 @@ Palatine German	Palatine German			thou_PRON	du	d̥ˈuː	d̥ ˈuː		thou_PRON_1
 Hessian	Hessian			thou_PRON	duu	d̥ˈuː	d̥ ˈuː		thou_PRON_1			
 Yiddish	Yiddish			thou_PRON	דו	dˈʊ	d ˈʊ		thou_PRON_1			
 Standard German	Standard German			thou_PRON	du	dˈuː	d ˈuː		thou_PRON_1			
+Upper Franconian	Upper Franconian			thou_PRON	du	d̥ˈuː	d̥ ˈuː		thou_PRON_1			
 Bavarian	Bavarian			thou_PRON	du	d̥ˈu	d̥ ˈu		thou_PRON_1			
 Swabian	Swabian			thou_PRON	du	dˈuː	d ˈuː		thou_PRON_1			
 Swiss German	Swiss German			thou_PRON	du	d̥ˈu	d̥ ˈu		thou_PRON_1			
@@ -10108,6 +10373,7 @@ Pennsylvania German	Pennsylvania German			thumb_NOUN	Daume	dˈaʊ̯mə	d ˈaʊ̯
 Palatine German	Palatine German			thumb_NOUN	Daume	d̥ˈau̯mə	d̥ ˈau̯ m ə		thumb_NOUN_1			
 Hessian	Hessian			thumb_NOUN	Daumě	d̥ˈau̯mə	d̥ ˈau̯ m ə		thumb_NOUN_1			
 Standard German	Standard German			thumb_NOUN	Daumen	dˈaʊ̯mən	d ˈaʊ̯ m ə n		thumb_NOUN_1			
+Upper Franconian	Upper Franconian			thumb_NOUN	Damma	d̥ˈama	d̥ ˈa m a		thumb_NOUN_1			
 Bavarian	Bavarian			thumb_NOUN	Daam	d̥ˈaːm	d̥ ˈaː m		thumb_NOUN_1			
 Swabian	Swabian			thumb_NOUN	Daum	dˈao̯m	d ˈao̯ m		thumb_NOUN_1			
 Alsatian	Alsatian			thumb_NOUN	Düme	d̥ˈyːmə	d̥ ˈyː m ə		thumb_NOUN_1			
@@ -10140,6 +10406,7 @@ Hessian	Hessian			thin_ADJ	dinn	d̥ˈin	d̥ ˈi n		thin_ADJ_1
 Wymysorys	Wymysorys			thin_ADJ	dynn	dˈɘ̟n	d ˈɘ̟ n		thin_ADJ_1			
 Yiddish	Yiddish			thin_ADJ	דין	dˈɪn	d ˈɪ n		thin_ADJ_1			
 Standard German	Standard German			thin_ADJ	dünn	dˈʏn	d ˈʏ n		thin_ADJ_1			
+Upper Franconian	Upper Franconian			thin_ADJ	dinn	d̥ˈɪn	d̥ ˈɪ n		thin_ADJ_1			
 Bavarian	Bavarian			thin_ADJ	dinn	d̥ˈin	d̥ ˈi n		thin_ADJ_1			
 Swiss German	Swiss German			thin_ADJ	dünn	d̥ˈyn	d̥ ˈy n		thin_ADJ_1			
 Proto-Germanic	Proto-Germanic			thin_ADJ	þunnuz	θˈunnuz	θ ˈu n n u z		thin_ADJ_2			
@@ -10173,6 +10440,7 @@ Hessian	Hessian			thunder_NOUN	Donnä	d̥ˈonæ̆	d̥ ˈo n æ̆		thunder_NOUN_1
 Wymysorys	Wymysorys			thunder_NOUN	dunyn	dˈunən	d ˈu n ə n		thunder_NOUN_1			
 Yiddish	Yiddish			thunder_NOUN	דונער	dˈʊnəʀ	d ˈʊ n ə ʀ		thunder_NOUN_1			
 Standard German	Standard German			thunder_NOUN	Donner	dˈɔnɐ	d ˈɔ n ɐ		thunder_NOUN_1			
+Upper Franconian	Upper Franconian			thunder_NOUN	Dunner	d̥ˈʊnɐ	d̥ ˈʊ n ɐ		thunder_NOUN_1			
 Bavarian	Bavarian			thunder_NOUN	Donna	d̥ˈona	d̥ ˈo n a		thunder_NOUN_1			
 Swabian	Swabian			thunder_NOUN	Donndr	dˈondʌ	d ˈo n d ʌ		thunder_NOUN_1			
 Alsatian	Alsatian			thunder_NOUN	Donner	d̥ˈonəʁ	d̥ ˈo n ə ʁ		thunder_NOUN_1			
@@ -10207,6 +10475,7 @@ Palatine German	Palatine German			thorn_NOUN	Dorn	d̥ˈɔɐn	d̥ ˈɔ ɐ n		thor
 Hessian	Hessian			thorn_NOUN	Dǫǎnn	d̥ˈɔɐn	d̥ ˈɔ ɐ n		thorn_NOUN_1			
 Yiddish	Yiddish			thorn_NOUN	דאָרן	dˈɔʀn	d ˈɔ ʀ n		thorn_NOUN_1			
 Standard German	Standard German			thorn_NOUN	Dorn	dˈɔɐn	d ˈɔ ɐ n		thorn_NOUN_1			
+Upper Franconian	Upper Franconian			thorn_NOUN	Dorn	d̥ˈɔɐn	d̥ ˈɔ ɐ n		thorn_NOUN_1			
 Bavarian	Bavarian			thorn_NOUN	Dorn	d̥ˈorn	d̥ ˈo r n		thorn_NOUN_1			
 Swabian	Swabian			thorn_NOUN	Dorn	dˈɔʕn	d ˈɔ ʕ n		thorn_NOUN_1			
 Swiss German	Swiss German			thorn_NOUN	Dorn	d̥ˈorn	d̥ ˈo r n		thorn_NOUN_1			
@@ -10242,6 +10511,7 @@ Palatine German	Palatine German			thirst_NOUN	Dorscht	d̥ˈɔɐʃd̥	d̥ ˈɔ ɐ
 Hessian	Hessian			thirst_NOUN	Dǫǎschd	d̥ˈɔɐʃd̥	d̥ ˈɔ ɐ ʃ d̥		thirst_NOUN_1			
 Yiddish	Yiddish			thirst_NOUN	דאָרשט	dˈɔʀʃt	d ˈɔ ʀ ʃ t		thirst_NOUN_1			
 Standard German	Standard German			thirst_NOUN	Durst	dˈʊɐst	d ˈʊ ɐ s t		thirst_NOUN_1			
+Upper Franconian	Upper Franconian			thirst_NOUN	Dorschd	d̥ˈɔɐʃd̥	d̥ ˈɔ ɐ ʃ d̥		thirst_NOUN_1			
 Bavarian	Bavarian			thirst_NOUN	Duaschd	d̥ˈuɐʃd̥	d̥ ˈu ɐ ʃ d̥		thirst_NOUN_1			
 Swabian	Swabian			thirst_NOUN	Durschd	dˈuʕʃd	d ˈu ʕ ʃ d		thirst_NOUN_1			
 Alsatian	Alsatian			thirst_NOUN	Durscht	d̥ˈuʁʃt	d̥ ˈu ʁ ʃ t		thirst_NOUN_1			
@@ -10264,6 +10534,7 @@ Pennsylvania German	Pennsylvania German			dry_ADJ	daerr	dˈɛːɑ	d ˈɛː ɑ		d
 Palatine German	Palatine German			dry_ADJ	därr	d̥ˈɛɐ	d̥ ˈɛ ɐ		dry_ADJ_3			
 Hessian	Hessian			dry_ADJ	dȁǎ	d̥ˈæɐ	d̥ ˈæ ɐ		dry_ADJ_3			
 Standard German	Standard German			dry_ADJ	dürr	dˈʏɐ	d ˈʏ ɐ		dry_ADJ_3			
+Upper Franconian	Upper Franconian			dry_ADJ	därr	d̥ˈɘ	d̥ ˈɘ		dry_ADJ_3			
 Proto-Germanic	Proto-Germanic			thousand_NUM	þūsundī	θˈuːsundiː	θ ˈuː s u n d iː		thousand_NUM_1			
 Gothic	Gothic			thousand_NUM	𐌸𐌿𐍃𐌿𐌽𐌳𐌹	θˈuːsundi	θ ˈuː s u n d i		thousand_NUM_1			
 Old West Norse	Old West Norse			thousand_NUM	þúsund	θˈuːsund	θ ˈuː s u n d		thousand_NUM_1			
@@ -10297,6 +10568,7 @@ Palatine German	Palatine German			thousand_NUM	dausend	d̥ˈau̯sənd̥	d̥ ˈau
 Wymysorys	Wymysorys			thousand_NUM	taojzyt	tˈɑi̯zət	t ˈɑi̯ z ə t		thousand_NUM_1			
 Yiddish	Yiddish			thousand_NUM	טויזנט	tˈɔɪ̯zn̩d	t ˈɔɪ̯ z n̩ d		thousand_NUM_1			
 Standard German	Standard German			thousand_NUM	tausend	tʰˈaʊ̯zn̩d̥	tʰ ˈaʊ̯ z n̩ d̥		thousand_NUM_1			
+Upper Franconian	Upper Franconian			thousand_NUM	dausnd	d̥ˈaʊ̯sn̩d̥	d̥ ˈaʊ̯ s n̩ d̥		thousand_NUM_1			
 Bavarian	Bavarian			thousand_NUM	dausad	d̥ˈau̯sad̥	d̥ ˈau̯ s a d̥		thousand_NUM_1			
 Swabian	Swabian			thousand_NUM	dausad	dˈao̯sad	d ˈao̯ s a d		thousand_NUM_1			
 Alsatian	Alsatian			thousand_NUM	döisig	d̥ˈøi̯siʃ	d̥ ˈøi̯ s i ʃ		thousand_NUM_1			
