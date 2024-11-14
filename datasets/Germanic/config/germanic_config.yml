@@ -13,11 +13,6 @@ transcription:
         combine_diphthongs: true
         normalize_geminates: true
         ch_to_remove: ['̩']
-    # doculects:
-    #     "Swiss German":
-    #         normalize_geminates: false
-    #     Danish:
-    #         suprasegmentals: ['ˀ']
 
 phon_corr:
     refresh: []
