@@ -4,7 +4,7 @@ VOWELS
 	<saua> /sˈau̯a/ "sour_ADJ"
 	<Weda> /ʋˈed̥a/ "weather_NOUN"
 
-/ˈi/ (0.032)
+/ˈi/ (0.031)
 	<bindn> /b̥ˈind̥n̩/ "bind_VERB"
 	<fimf> /fˈimf/ "five_NUM"
 	<Kind> /kʰˈind̥/ "child_NOUN"
@@ -29,35 +29,35 @@ VOWELS
 	<nei> /nˈai̯/ "new_ADJ"
 	<nein> /nˈai̯n/ "nine_NUM"
 
-/ɐ/ (0.025)
-	<wårm> /ʋˈɒːɐm/ "warm_ADJ"
+/ɐ/ (0.024)
+	<mia> /mˈiɐ/ "we_PRON"
 	<Oam> /ˈoɐm/ "arm_NOUN"
-	<Jåhr> /jˈɒːɐ/ "year_NOUN"
+	<Noadn> /nˈoɐd̥n̩/ "north_NOUN"
 
 /ˈeː/ (0.019)
-	<zehne> /ʦˈeːnə/ "ten_NUM"
 	<Lewa> /lˈeːβa/ "liver_NOUN"
 	<Heena> /hˈeːna/ "hen_NOUN"
+	<Feda> /fˈeːd̥a/ "feather_NOUN"
 
 /ˈoɐ̯/ (0.016)
-	<oa> /ˈoɐ̯/ "one_NUM"
-	<Doag> /d̥ˈoɐ̯ɡ̊/ "dough_NOUN"
+	<woach> /ʋˈoɐ̯x/ "weak_ADJ"
 	<Hoam> /hˈoɐ̯m/ "home_NOUN"
+	<Boa> /b̥ˈoɐ̯/ "bone_NOUN"
 
 /ˈɒː/ (0.014)
 	<Båd> /b̥ˈɒːd̥/ "bath_NOUN_NEU"
 	<Jåhr> /jˈɒːɐ/ "year_NOUN"
-	<wås> /ʋˈɒːs/ "what_PRON"
+	<wårm> /ʋˈɒːɐm/ "warm_ADJ"
 
-/ˈiɐ̯/ (0.013)
-	<liang> /lˈiɐ̯ŋ/ "tell lies_VERB"
-	<schiassn> /ʃˈiɐ̯sn̩/ "shoot_VERB"
+/ˈiɐ̯/ (0.014)
+	<Liachd> /lˈiɐ̯xd̥/ "light_NOUN"
 	<Dia> /d̥ˈiɐ̯/ "animal_NOUN"
+	<Fliaga> /flˈiɐ̯ɡ̊a/ "housefly_NOUN"
 
 /ˈɑ/ (0.012)
-	<Bladdl> /b̥lˈɑd̥l̩/ "leaf_NOUN_NEU"
-	<achde> /ˈɑxd̥ə/ "eight_NUM"
 	<Wassa> /ʋˈɑsa/ "water_NOUN"
+	<achde> /ˈɑxd̥ə/ "eight_NUM"
+	<Bladdl> /b̥lˈɑd̥l̩/ "leaf_NOUN_NEU"
 
 /ˈuɐ̯/ (0.012)
 	<bluaddn> /b̥lˈuɐ̯d̥n̩/ "bleed_VERB"
@@ -128,7 +128,7 @@ CONSONANTS
 	<drama> /d̥rˈaːma/ "dream_VERB"
 	<Mond> /mˈond̥/ "moon_NOUN"
 
-/n/ (0.07)
+/n/ (0.071)
 	<nein> /nˈai̯n/ "nine_NUM"
 	<uns> /ˈuns/ "us_PRON"
 	<sizzn> /sˈiʦn̩/ "sit_VERB"
@@ -178,12 +178,12 @@ CONSONANTS
 	<Brod> /b̥rˈoːd̥/ "bread_NOUN"
 	<dreizeah> /d̥rˈai̯ʦeɐ̯/ "thirteen_NUM"
 
-/j/ (0.023)
+/j/ (0.024)
 	<foing> /fˈojŋ/ "follow_VERB"
 	<Woif> /ʋˈojf/ "wolf_NOUN"
 	<voi> /fˈoj/ "full_ADJ"
 
-/h/ (0.023)
+/h/ (0.024)
 	<houch> /hˈou̯x/ "high_ADJ"
 	<Hoan> /hˈoɐn/ "horn_NOUN"
 	<hia> /hˈiɐ/ "here_ADV"
@@ -213,15 +213,15 @@ CONSONANTS
 	<säiwa> /sˈejβa/ "self_PRON"
 	<Kaiwe> /kʰˈajβə/ "calf_NOUN"
 
-/ç/ (0.004)
-	<Zächa> /ʦˈeːça/ "toe_NOUN"
-	<dedlich> /d̥ˈeːd̥liç/ "deadly_ADJ"
-	<Kiach> /kʰˈiɐç/ "church_NOUN_FEM"
-
 /b̥͡v̥/ (0.004)
 	<Pfluag> /b̥͡v̥lˈuɐ̯ɡ̊/ "plough_NOUN"
 	<Kobbf> /kʰˈob̥͡v̥/ "head_NOUN"
-	<Pfad> /b̥͡v̥ˈaːd̥/ "path_NOUN"
+	<Abbfe> /ˈɑb̥͡v̥ə/ "apple_NOUN"
+
+/ç/ (0.003)
+	<Zächa> /ʦˈeːça/ "toe_NOUN"
+	<reich> /rˈai̯ç/ "rich_ADJ"
+	<Kiach> /kʰˈiɐç/ "church_NOUN_FEM"
 
 
 
