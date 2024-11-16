@@ -4,7 +4,7 @@ VOWELS
 	<Stern> /ʃd̥ˈɛɐn/ "star_NOUN"
 	<Johr> /jˈoːɐ/ "year_NOUN"
 
-/ə/ (0.045)
+/ə/ (0.046)
 	<kenne> /kʰˈɛnə/ "can_VERB"
 	<gewwe> /ɡ̊ˈɛβə/ "give_VERB"
 	<trinke> /d̥rˈɪŋɡ̊ə/ "drink_VERB"
@@ -34,19 +34,19 @@ VOWELS
 	<Pad> /pʰˈɑːd̥/ "path_NOUN"
 	<Haapt> /hˈɑːb̥d̥/ "head_NOUN"
 
-/ˈoː/ (0.02)
-	<grooß> /ɡ̊rˈoːs/ "great_ADJ"
-	<Sproch> /ʃb̥rˈoːx/ "speech_NOUN_FEM"
-	<dot> /d̥ˈoːd̥/ "dead_ADJ"
+/ˈoː/ (0.019)
+	<Hoor> /hˈoːɐ/ "hair_NOUN"
+	<Dod> /d̥ˈoːd̥/ "death_NOUN"
+	<Knode> /ɡ̊nˈoːrə/ "knot_NOUN"
 
 /ˈiː/ (0.019)
-	<Fliesch> /flˈiːʃ/ "housefly_NOUN"
 	<Dier> /d̥ˈiːɐ/ "animal_NOUN"
+	<mir> /mˈiːɐ/ "we_PRON"
 	<Dieb> /d̥ˈiːb̥/ "thief_NOUN"
 
 /ˈɔ/ (0.018)
-	<Broscht> /b̥rˈɔʃd̥/ "breast_NOUN"
 	<Worm> /βˈɔɐm/ "worm_NOUN"
+	<Broscht> /b̥rˈɔʃd̥/ "breast_NOUN"
 	<Dorn> /d̥ˈɔɐn/ "thorn_NOUN"
 
 /ˈu/ (0.018)
@@ -123,10 +123,10 @@ VOWELS
 
 
 CONSONANTS
-/d̥/ (0.087)
-	<dreizeh> /d̥rˈaɪ̯ʣ̥eː/ "thirteen_NUM"
-	<alt> /ˈɑld̥/ "old_ADJ"
-	<dot> /d̥ˈoːd̥/ "dead_ADJ"
+/d̥/ (0.086)
+	<Dorn> /d̥ˈɔɐn/ "thorn_NOUN"
+	<Pad> /pʰˈɑːd̥/ "path_NOUN"
+	<Dod> /d̥ˈoːd̥/ "death_NOUN"
 
 /n/ (0.059)
 	<Name> /nˈɑːmə/ "name_NOUN"
@@ -148,12 +148,12 @@ CONSONANTS
 	<Scheiß> /ʃˈaɪ̯s/ "shit_NOUN"
 	<dausend> /d̥ˈau̯sənd̥/ "thousand_NUM"
 
-/r/ (0.041)
+/r/ (0.042)
 	<blude> /b̥lˈuːrə/ "bleed_VERB"
 	<Rick> /rˈɪɡ̊/ "ridge_NOUN"
 	<Brot> /b̥rˈoːd̥/ "bread_NOUN"
 
-/f/ (0.04)
+/f/ (0.041)
 	<fär> /fˈɛɐ/ "for_PREP"
 	<Fraa> /frˈɑː/ "woman_NOUN"
 	<Waff> /βˈɑf/ "weapon_NOUN"
@@ -173,39 +173,39 @@ CONSONANTS
 	<Mick> /mˈɪɡ̊/ "midge_NOUN"
 	<Millich> /mˈɪlɪʃ/ "milk_NOUN_FEM"
 
-/b̥/ (0.032)
-	<Berg> /b̥ˈɛɐʃ/ "mountain_NOUN"
-	<Kopp> /kʰˈɔb̥/ "head_NOUN"
-	<Dieb> /d̥ˈiːb̥/ "thief_NOUN"
+/b̥/ (0.031)
+	<Brot> /b̥rˈoːd̥/ "bread_NOUN"
+	<Kalb> /kʰˈɑlb̥/ "calf_NOUN"
+	<Buch> /b̥ˈuːx/ "book_NOUN_FEM"
 
 /h/ (0.023)
-	<heere> /hˈeːrə/ "hear_VERB"
-	<Hunger> /hˈuŋɐ/ "hunger_NOUN"
-	<Horn> /hˈɔɐn/ "horn_NOUN"
+	<hääß> /hˈɛːs/ "hot_ADJ"
+	<Henne> /hˈɛnə/ "hen_NOUN"
+	<heilich> /hˈaɪ̯lɪʃ/ "holy_ADJ"
 
 /ʣ̥/ (0.017)
-	<schwarz> /ʃβˈɑɐʣ̥/ "black_ADJ"
-	<zehⁿ> /ʣ̥ˈẽː/ "ten_NUM"
-	<Zahⁿ> /ʣ̥ˈɑ̃ː/ "tooth_NOUN"
+	<Zeit> /ʣ̥ˈaɪ̯d̥/ "time_NOUN"
+	<Zeeche> /ʣ̥ˈeːʃə/ "token_NOUN"
+	<zwää> /ʣ̥βˈɛː/ "two_NUM"
 
 /x/ (0.014)
-	<Woch> /βˈɔx/ "week_NOUN"
+	<suche> /sˈuːxə/ "seek_VERB"
 	<Sproch> /ʃb̥rˈoːx/ "speech_NOUN_FEM"
-	<Nacht> /nˈɑxd̥/ "night_NOUN_FEM"
+	<Vogel> /fˈoːxl̩/ "bird_NOUN_MASC"
 
 /kʰ/ (0.013)
-	<Kenich> /kʰˈeːnɪʃ/ "king_NOUN"
-	<Katz> /kʰˈɑʣ̥/ "cat_NOUN"
+	<kalt> /kʰˈɑld̥/ "cold_ADJ"
+	<kenne> /kʰˈɛnə/ "ken_VERB"
 	<Korn> /kʰˈɔɐn/ "corn_NOUN"
 
 /ŋ/ (0.01)
+	<Hunger> /hˈuŋɐ/ "hunger_NOUN"
 	<Ding> /d̥ˈɪŋ/ "thing_NOUN"
 	<lang> /lˈɑŋ/ "long_ADJ"
-	<Schlang> /ʃlˈɑŋ/ "snake_NOUN"
 
 /j/ (0.005)
-	<flieje> /flˈiːjə/ "fly_VERB"
 	<Johr> /jˈoːɐ/ "year_NOUN"
+	<flieje> /flˈiːjə/ "fly_VERB"
 	<folje> /fˈɔljə/ "follow_VERB"
 
 /pʰ/ (0.001)
