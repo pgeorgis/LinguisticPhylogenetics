@@ -19,7 +19,7 @@ phon_corr:
     refresh_all: true
 
 # cognates:
-#     cluster_threshold: 1.366
+#     cluster_threshold: 1.41 #1.366
 
 # evaluation:
 #     precalculated_word_scores: 
