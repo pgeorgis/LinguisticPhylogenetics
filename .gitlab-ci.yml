@@ -99,4 +99,4 @@ baltoslavic:
     - make classify-baltoslavic
   artifacts:
     paths:
-      - datasets/Balto-Slavic/experiments
+      - datasets/BaltoSlavic/experiments
