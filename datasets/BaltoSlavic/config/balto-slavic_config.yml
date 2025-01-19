@@ -9,7 +9,7 @@ family:
         'Kajkavian',
         'Latgalian',
         'Samogitian',
-        'Old Prussian',
+        #'Old Prussian',
     ]
     outdir: datasets/BaltoSlavic/
 
