@@ -1,16 +1,16 @@
 VOWELS
-/ɛ/ (0.082)
+/ɛ/ (0.081)
 	<земя> /zɛmʲˈa/ "EARTH_NOUN"
 	<хръбет> /xrɐbˈɛt/ "SPINE_NOUN"
 	<теле> /tɛlˈɛ/ "CALF_NOUN"
 
-/a/ (0.066)
-	<ръка> /rɐkˈa/ "HAND_NOUN"
-	<хладен> /xɫˈadɛn/ "COLD_ADJ"
-	<пясък> /pʲˈasɐk/ "SAND_NOUN"
+/a/ (0.067)
+	<трева> /trɛvˈa/ "GRASS_NOUN"
+	<град> /ɡrˈad̥/ "CITY_NOUN"
+	<река> /rɛkˈa/ "RIVER_NOUN"
 
 /ɐ/ (0.048)
-	<веза> /vˈɛzɐ/ "TIE_VERB"
+	<вежа> /vˈɛʒɐ/ "TIE_VERB"
 	<топъл> /tˈɔpɐɫ/ "WARM_ADJ"
 	<гладък> /ɡɫˈadɐk/ "SMOOTH_ADJ"
 
@@ -67,10 +67,10 @@ CONSONANTS
 	<гладък> /ɡɫˈadɐk/ "SMOOTH_ADJ"
 	<вълк> /vˈɤɫk/ "WOLF_NOUN"
 
-/v/ (0.03)
-	<взема> /vzˈɛmɐ/ "TAKE_VERB"
-	<девет> /dˈɛvɛt/ "NINE_NUM"
-	<невеста> /nɛvˈɛstɐ/ "BRIDE_NOUN"
+/v/ (0.028)
+	<вежа> /vˈɛʒɐ/ "TIE_VERB"
+	<вол> /vˈɔɫ/ "OX_NOUN"
+	<крава> /krˈavɐ/ "COW_NOUN"
 
 /n/ (0.028)
 	<нощ> /nˈɔʃt/ "NIGHT_NOUN"
@@ -92,8 +92,8 @@ CONSONANTS
 	<гора> /ɡorˈa/ "MOUNTAIN_NOUN"
 	<глава> /ɡɫɐvˈa/ "HEAD_NOUN"
 
-/z/ (0.018)
-	<веза> /vˈɛzɐ/ "TIE_VERB"
+/z/ (0.016)
+	<език> /ɛzˈik/ "TONGUE_NOUN"
 	<здрав> /zdrˈaf/ "HEALTHY_ADJ"
 	<зная> /znˈajɐ/ "KNOW_VERB"
 
@@ -117,8 +117,8 @@ CONSONANTS
 	<цвете> /ʦvˈɛtɛ/ "FLOWERS_NOUN"
 	<цвят> /ʦvʲˈat/ "FLOWER_NOUN"
 
-/ʒ/ (0.007)
-	<жълт> /ʒˈɤɫt/ "YELLOW_ADJ"
+/ʒ/ (0.009)
+	<жена> /ʒɛnˈa/ "WOMAN_NOUN"
 	<кожа> /kˈɔʒɐ/ "SKIN_NOUN"
 	<тежък> /tˈɛʒɐk/ "HEAVY_ADJ"
 
@@ -147,25 +147,25 @@ CONSONANTS
 	<бог> /bˈɔɡ̊/ "GOD_NOUN"
 	<дълъг> /dˈɤɫɐɡ̊/ "LONG_ADJ"
 
+/vʲ/ (0.006)
+	<звяр> /zvʲˈar/ "BEAST_NOUN"
+	<вятър> /vʲˈatɐr/ "WIND_NOUN"
+	<цвят> /ʦvʲˈat/ "FLOWER_NOUN"
+
 /j/ (0.006)
-	<ягода> /jˈaɡodɐ/ "BERRY_NOUN"
 	<живея> /ʒivˈɛjɐ/ "LIVE_VERB"
 	<зная> /znˈajɐ/ "KNOW_VERB"
+	<пия> /pˈijɐ/ "DRINK_VERB"
 
 /f/ (0.006)
-	<лъв> /ɫˈɤf/ "LION_NOUN"
 	<здрав> /zdrˈaf/ "HEALTHY_ADJ"
 	<мъртъв> /mˈɤrtɐf/ "DEAD_ADJ"
+	<лъв> /ɫˈɤf/ "LION_NOUN"
 
 /ʃ/ (0.004)
 	<шест> /ʃˈɛst/ "SIX_NUM"
-	<нощ> /nˈɔʃt/ "NIGHT_NOUN"
 	<щастие> /ʃtˈastiɛ/ "HAPPINESS_NOUN"
-
-/vʲ/ (0.004)
-	<цвят> /ʦvʲˈat/ "FLOWER_NOUN"
-	<звяр> /zvʲˈar/ "BEAST_NOUN"
-	<вятър> /vʲˈatɐr/ "WIND_NOUN"
+	<нощ> /nˈɔʃt/ "NIGHT_NOUN"
 
 /b̥/ (0.004)
 	<зъб> /zˈɤb̥/ "TOOTH_NOUN"
