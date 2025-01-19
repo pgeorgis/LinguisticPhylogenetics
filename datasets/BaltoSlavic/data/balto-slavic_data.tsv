@@ -1,6 +1,6 @@
 ID	Language_ID	Glottocode	ISO 639-3	Parameter_ID	Value	Form	Segments	Source_Form	Cognate_ID	Loan	Comment	Source
-Proto-Balto-Slavic	Proto-Balto-Slavic			ONE_NUM	aiˀnas	ˈai̯ˀnas	ˈai̯ˀ n a s		ONE_NUM_1			
-Lithuanian	Lithuanian			ONE_NUM	víenas	vʲˈiə̯nɐs	vʲ ˈiə̯ n ɐ s		ONE_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			ONE_NUM	aiˀnas	ai̯ˀnas	ai̯ˀ n a s		ONE_NUM_1			
+Lithuanian	Lithuanian			ONE_NUM	víenas	vʲîə̯nɐs	vʲ îə̯ n ɐ s		ONE_NUM_1			
 Latvian	Latvian			ONE_NUM	viens	vˈiɛ̯ns	v ˈiɛ̯ n s		ONE_NUM_1			
 Proto-Slavic	Proto-Slavic			ONE_NUM	edìnъ	edǐnŭ	e d ǐ n ŭ		ONE_NUM_1			
 Bulgarian	Bulgarian			ONE_NUM	един	ɛdˈin	ɛ d ˈi n		ONE_NUM_1			
@@ -21,8 +21,8 @@ Russian	Russian			ONE_NUM	один	ɐdʲˈin	ɐ dʲ ˈi n		ONE_NUM_1
 Čakavian (Cres)	Čakavian (Cres)			ONE_NUM		jɛdˈɛn	j ɛ d ˈɛ n		ONE_NUM_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			ONE_NUM		jˈɛdaːn	j ˈɛ d aː n		ONE_NUM_1			
 Kajkavian	Kajkavian			ONE_NUM		jˈædæn	j ˈæ d æ n		ONE_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			NUT_NOUN	aráiˀsas	arˈai̯ˀsas	a r ˈai̯ˀ s a s		NUT_NOUN_1			
-Lithuanian	Lithuanian			NUT_NOUN	ríešutas	rʲˈiə̯ʃʊtɐs	rʲ ˈiə̯ ʃ ʊ t ɐ s		NUT_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			NUT_NOUN	aráiˀsas	arái̯ˀsas	a r ái̯ˀ s a s		NUT_NOUN_1			
+Lithuanian	Lithuanian			NUT_NOUN	ríešutas	rʲîə̯ʃʊtɐs	rʲ îə̯ ʃ ʊ t ɐ s		NUT_NOUN_1			
 Latvian	Latvian			NUT_NOUN	rieksts	rˈiɛ̯ksts	r ˈiɛ̯ k s t s		NUT_NOUN_1			
 Proto-Slavic	Proto-Slavic			NUT_NOUN	orě̀xъ	orɛ̌xŭ	o r ɛ̌ x ŭ		NUT_NOUN_1			
 Bulgarian	Bulgarian			NUT_NOUN	орех	ˈɔrɛx	ˈɔ r ɛ x		NUT_NOUN_1			
@@ -39,8 +39,8 @@ Kashubian	Kashubian			NUT_NOUN	òrzech	u̯ˈɛʐɛx	u̯ˈɛ ʐ ɛ x		NUT_NOUN_1
 Ukrainian	Ukrainian			NUT_NOUN	горіх	ɦɔrʲˈix	ɦ ɔ rʲ ˈi x		NUT_NOUN_1			
 Belarusian	Belarusian			NUT_NOUN	арэх	arˈɛx	a r ˈɛ x		NUT_NOUN_1			
 Russian	Russian			NUT_NOUN	орех	ɐrʲˈex	ɐ rʲ ˈe x		NUT_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			PLOUGH_NOUN	árˀtla	ˈarˀtla	ˈa rˀ t l a		PLOUGH_NOUN_1			
-Lithuanian	Lithuanian			PLOUGH_NOUN	árklas	ˈaːrkɫɐs	ˈaː r k ɫ ɐ s		PLOUGH_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			PLOUGH_NOUN	árˀtla	árˀtla	á rˀ t l a		PLOUGH_NOUN_1			
+Lithuanian	Lithuanian			PLOUGH_NOUN	árklas	âːrkɫɐs	âː r k ɫ ɐ s		PLOUGH_NOUN_1			
 Latvian	Latvian			PLOUGH_NOUN	arkls	ˈarkl̩s	ˈa r k l̩ s		PLOUGH_NOUN_1			
 Proto-Slavic	Proto-Slavic			PLOUGH_NOUN	őrdlo	oˀrdlo	oˀ r d l o		PLOUGH_NOUN_1			
 Bulgarian	Bulgarian			PLOUGH_NOUN	рало	rˈaɫo	r ˈa ɫ o		PLOUGH_NOUN_1			
@@ -56,7 +56,7 @@ Kashubian	Kashubian			PLOUGH_NOUN	redło	rˈɛdwɔ	r ˈɛ d w ɔ		PLOUGH_NOUN_1
 Ukrainian	Ukrainian			PLOUGH_NOUN	рало	rˈɑɫɔ	r ˈɑ ɫ ɔ		PLOUGH_NOUN_1			
 Belarusian	Belarusian			PLOUGH_NOUN	рала	rˈaɫa	r ˈa ɫ a		PLOUGH_NOUN_1			
 Russian	Russian			PLOUGH_NOUN	рало	rˈaɫə	r ˈa ɫ ə		PLOUGH_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			EIGHT_NUM	aśtṓ	akʲtˈoː	a kʲ t ˈoː		EIGHT_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			EIGHT_NUM	aśtṓ	asʲtóː	a sʲ t óː		EIGHT_NUM_1			
 Lithuanian	Lithuanian			EIGHT_NUM	aštuonì	ɐʃtuə̯nʲˈɪ	ɐ ʃ t uə̯ nʲ ˈɪ		EIGHT_NUM_1			
 Latvian	Latvian			EIGHT_NUM	astoņi	ˈastuɔ̯ɲi	ˈa s t uɔ̯ ɲ i		EIGHT_NUM_1			
 Proto-Slavic	Proto-Slavic			EIGHT_NUM	òsmь	ǒsmĭ	ǒ s m ĭ		EIGHT_NUM_1			
@@ -74,8 +74,8 @@ Kashubian	Kashubian			EIGHT_NUM	òsmë	u̯ˈɛsmə	u̯ˈɛ s m ə		EIGHT_NUM_1
 Ukrainian	Ukrainian			EIGHT_NUM	вісім	ʋʲˈisʲim	ʋʲ ˈi sʲ i m		EIGHT_NUM_1			
 Belarusian	Belarusian			EIGHT_NUM	восем	vˈosʲem	v ˈo sʲ e m		EIGHT_NUM_1			
 Russian	Russian			EIGHT_NUM	восемь	vˈosʲɪmʲ	v ˈo sʲ ɪ mʲ		EIGHT_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			WHITE_ADJ	bálˀtas	bˈalˀtas	b ˈa lˀ t a s		WHITE_ADJ_1			
-Lithuanian	Lithuanian			WHITE_ADJ	báltas	bˈaːɫtɐs	b ˈaː ɫ t ɐ s		WHITE_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			WHITE_ADJ	bálˀtas	bálˀtas	b á lˀ t a s		WHITE_ADJ_1			
+Lithuanian	Lithuanian			WHITE_ADJ	báltas	bâːɫtɐs	b âː ɫ t ɐ s		WHITE_ADJ_1			
 Latvian	Latvian			WHITE_ADJ	balts	bˈalts	b ˈa l t s		WHITE_ADJ_1			
 Proto-Slavic	Proto-Slavic			WHITE_ADJ	bě̃lъ	bɛ̌ːlŭ	b ɛ̌ː l ŭ		WHITE_ADJ_1			
 Bulgarian	Bulgarian			WHITE_ADJ	бял	bʲˈaɫ	bʲ ˈa ɫ		WHITE_ADJ_1			
@@ -87,7 +87,7 @@ Slovenian	Slovenian			WHITE_ADJ	bẹ́ł	bèːw	b èː w		WHITE_ADJ_1
 Čakavian (Istria)	Čakavian (Istria)			WHITE_ADJ		bjêl	b j ê l		WHITE_ADJ_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			WHITE_ADJ		bjêl	b j ê l		WHITE_ADJ_1			
 Kajkavian	Kajkavian			WHITE_ADJ		bejl	b e j l		WHITE_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			BEE_NOUN	bitē	bˈiteː	b ˈi t eː		BEE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			BEE_NOUN	bitē	biteː	b i t eː		BEE_NOUN_1			
 Lithuanian	Lithuanian			BEE_NOUN	bìtė	bʲˈɪtʲe	bʲ ˈɪ tʲ e		BEE_NOUN_1			
 Latvian	Latvian			BEE_NOUN	bite	bˈitɛ	b ˈi t ɛ		BEE_NOUN_1			
 Proto-Slavic	Proto-Slavic			BEE_NOUN	bьčelà	bĭʧelǎ	b ĭ ʧ e l ǎ		BEE_NOUN_1			
@@ -104,10 +104,10 @@ Kashubian	Kashubian			BEE_NOUN	pszczoła	pʃʧˈɔwa	p ʃ ʧ ˈɔ w a		BEE_NOUN_
 Ukrainian	Ukrainian			BEE_NOUN	бджола	bʤɔɫˈa	b ʤ ɔ ɫ ˈa		BEE_NOUN_1			
 Belarusian	Belarusian			BEE_NOUN	пчала	pʧaɫˈa	p ʧ a ɫ ˈa		BEE_NOUN_1			
 Russian	Russian			BEE_NOUN	пчела	pʨɪɫˈa	p ʨ ɪ ɫ ˈa		BEE_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			GOD_NOUN	deiwás	dei̯wˈas	d ei̯ w ˈa s		GOD_NOUN_1			
-Lithuanian	Lithuanian			GOD_NOUN	diẽvas	dʲˈiə̯vɐs	dʲ ˈiə̯ v ɐ s		GOD_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			GOD_NOUN	deiwás	dei̯wás	d ei̯ w á s		GOD_NOUN_1			
+Lithuanian	Lithuanian			GOD_NOUN	diẽvas	dʲǐə̯vɐs	dʲ ǐə̯ v ɐ s		GOD_NOUN_1			
 Latvian	Latvian			GOD_NOUN	dievs	dˈiɛ̯ws	d ˈiɛ̯ w s		GOD_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			TREE_NOUN	dérwa	dˈerwa	d ˈe r w a		TREE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			TREE_NOUN	dérwa	dérwa	d é r w a		TREE_NOUN_1			
 Proto-Slavic	Proto-Slavic			TREE_NOUN	dȇrvo	dêːrvo	d êː r v o		TREE_NOUN_1			
 Čakavian	Čakavian			TREE_NOUN	drȋvo	drîːʋo	d r îː ʋ o		TREE_NOUN_1			
 Slovenian	Slovenian			TREE_NOUN	drevọ̑	dreʋóː	d r e ʋ óː		TREE_NOUN_1			
@@ -123,8 +123,8 @@ Russian	Russian			TREE_NOUN	дерево	dʲˈerʲɪvə	dʲ ˈe rʲ ɪ v ə		TRE
 Čakavian (Istria)	Čakavian (Istria)			TREE_NOUN		drjêvɔ	d r j ê v ɔ		TREE_NOUN_1			
 Čakavian (Cres)	Čakavian (Cres)			TREE_NOUN		drêːvɔ	d r êː v ɔ		TREE_NOUN_1			
 Kajkavian	Kajkavian			TREE_NOUN		drˈejvɔ	d r ˈe j v ɔ		TREE_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			TEN_NUM	déśimt	dˈekʲimt	d ˈe kʲ i m t		TEN_NUM_1			
-Lithuanian	Lithuanian			TEN_NUM	dẽšimt	dʲˈæːɕɪmt	dʲ ˈæː ɕ ɪ m t		TEN_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			TEN_NUM	déśimt	désʲimt	d é sʲ i m t		TEN_NUM_1			
+Lithuanian	Lithuanian			TEN_NUM	dẽšimt	dʲæ̌ːɕɪmt	dʲ æ̌ː ɕ ɪ m t		TEN_NUM_1			
 Latvian	Latvian			TEN_NUM	desmit	dˈɛsmit	d ˈɛ s m i t		TEN_NUM_1			
 Old Prussian	Old Prussian			TEN_NUM	dessempts	desempts	d e s e m p t s		TEN_NUM_1			
 Proto-Slavic	Proto-Slavic			TEN_NUM	dȅsętь	dêsẽtĭ	d ê s ẽ t ĭ		TEN_NUM_1			
@@ -142,7 +142,7 @@ Kashubian	Kashubian			TEN_NUM	dzesãc	ʣˈɛsaŋʦ	ʣ ˈɛ s a ŋ ʦ		TEN_NUM_1
 Ukrainian	Ukrainian			TEN_NUM	десять	dˈɛsʲɐtʲ	d ˈɛ sʲ ɐ tʲ		TEN_NUM_1			
 Belarusian	Belarusian			TEN_NUM	дзесяць	ʣʲˈesʲæʦʲ	ʣʲ ˈe sʲ æ ʦʲ		TEN_NUM_1			
 Russian	Russian			TEN_NUM	десять	dʲˈesʲɪtʲ	dʲ ˈe sʲ ɪ tʲ		TEN_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			LONG_ADJ	dílˀgas	dˈilˀɡas	d ˈi lˀ ɡ a s		LONG_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			LONG_ADJ	dílˀgas	dílˀɡas	d í lˀ ɡ a s		LONG_ADJ_1			
 Lithuanian	Lithuanian			LONG_ADJ	ìlgas	ˈɪɫɡɐs	ˈɪ ɫ ɡ ɐ s		LONG_ADJ_1			
 Latvian	Latvian			LONG_ADJ	ilgs	ˈilɡ̊s	ˈi l ɡ̊ s		LONG_ADJ_1			
 Proto-Slavic	Proto-Slavic			LONG_ADJ	dь̀lgъ	dĭˀlɡŭ	d ĭˀ l ɡ ŭ		LONG_ADJ_1			
@@ -175,8 +175,8 @@ Russian	Russian			TWO_NUM	два	dvˈa	d v ˈa		TWO_NUM_1
 Čakavian (Cres)	Čakavian (Cres)			TWO_NUM		dvâː	d v âː		TWO_NUM_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			TWO_NUM		dvǎː	d v ǎː		TWO_NUM_1			
 Kajkavian	Kajkavian			TWO_NUM		dvaː	d v aː		TWO_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			SMOKE_NOUN	dū́ˀmas	dˈuːˀmas	d ˈuːˀ m a s		SMOKE_NOUN_1			
-Lithuanian	Lithuanian			SMOKE_NOUN	dū́mas	dˈuːmɐs	d ˈuː m ɐ s		SMOKE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			SMOKE_NOUN	dū́ˀmas	dúːˀmas	d úːˀ m a s		SMOKE_NOUN_1			
+Lithuanian	Lithuanian			SMOKE_NOUN	dū́mas	dûːmɐs	d ûː m ɐ s		SMOKE_NOUN_1			
 Latvian	Latvian			SMOKE_NOUN	dūmi	dˈuːmi	d ˈuː m i		SMOKE_NOUN_1			
 Proto-Slavic	Proto-Slavic			SMOKE_NOUN	dỳmъ	dɨˀmŭ	d ɨˀ m ŭ		SMOKE_NOUN_1			
 Bulgarian	Bulgarian			SMOKE_NOUN	дим	dˈim	d ˈi m		SMOKE_NOUN_1			
@@ -197,8 +197,8 @@ Russian	Russian			SMOKE_NOUN	дым	dˈɨm	d ˈɨ m		SMOKE_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			SMOKE_NOUN		dǐːm	d ǐː m		SMOKE_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			SMOKE_NOUN		dîːm	d îː m		SMOKE_NOUN_1			
 Kajkavian	Kajkavian			SMOKE_NOUN		diːm	d iː m		SMOKE_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			LAKE_NOUN	éźera	ˈeɡʲera	ˈe ɡʲ e r a		LAKE_NOUN_1			
-Lithuanian	Lithuanian			LAKE_NOUN	ẽžeras	ˈæːʑɛrɐs	ˈæː ʑ ɛ r ɐ s		LAKE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			LAKE_NOUN	éźera	ézʲera	é zʲ e r a		LAKE_NOUN_1			
+Lithuanian	Lithuanian			LAKE_NOUN	ẽžeras	æ̌ːʑɛrɐs	æ̌ː ʑ ɛ r ɐ s		LAKE_NOUN_1			
 Latgalian	Latgalian			LAKE_NOUN	azars	ˈɑzɑrs	ˈɑ z ɑ r s		LAKE_NOUN_1			
 Latvian	Latvian			LAKE_NOUN	ezers	ˈæzærs	ˈæ z æ r s		LAKE_NOUN_1			
 Old Prussian	Old Prussian			LAKE_NOUN	assaran	asaran	a s a r a n		LAKE_NOUN_1			
@@ -217,8 +217,8 @@ Kashubian	Kashubian			LAKE_NOUN	jezoro	jˈɛzɔrɔ	j ˈɛ z ɔ r ɔ		LAKE_NOUN_1
 Ukrainian	Ukrainian			LAKE_NOUN	озеро	ˈɔzɛrɔ	ˈɔ z ɛ r ɔ		LAKE_NOUN_1			
 Belarusian	Belarusian			LAKE_NOUN	возера	vˈozʲera	v ˈo zʲ e r a		LAKE_NOUN_1			
 Russian	Russian			LAKE_NOUN	озеро	ˈozʲɪrə	ˈo zʲ ɪ r ə		LAKE_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			I_POS	ēˀźum	eːˀɡʲum	eːˀ ɡʲ u m		I_POS_1			
-Lithuanian	Lithuanian			I_POS	aš	ˈɐʃ	ˈɐ ʃ		I_POS_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			I_POS	ēˀźum	eːˀzʲum	eːˀ zʲ u m		I_POS_1			
+Lithuanian	Lithuanian			I_POS	àš	ˈɐʃ	ˈɐ ʃ		I_POS_1			
 Latvian	Latvian			I_POS	es	ˈɛs	ˈɛ s		I_POS_1			
 Old Prussian	Old Prussian			I_POS	as	as	a s		I_POS_1			
 Proto-Slavic	Proto-Slavic			I_POS	(j)ãzъ	jǎːzŭ	j ǎː z ŭ		I_POS_1			
@@ -235,7 +235,7 @@ Kashubian	Kashubian			I_POS	jô	jˈɞ	j ˈɞ		I_POS_1
 Ukrainian	Ukrainian			I_POS	я	jˈɑ	j ˈɑ		I_POS_1			
 Belarusian	Belarusian			I_POS	я	jˈæ	j ˈæ		I_POS_1			
 Russian	Russian			I_POS	я	jˈa	j ˈa		I_POS_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			VOICE_NOUN	galsás	ɡalsˈas	ɡ a l s ˈa s		VOICE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			VOICE_NOUN	galsás	ɡalsás	ɡ a l s á s		VOICE_NOUN_1			
 Proto-Slavic	Proto-Slavic			VOICE_NOUN	gȏlsъ	ɡôːlsŭ	ɡ ôː l s ŭ		VOICE_NOUN_1			
 Bulgarian	Bulgarian			VOICE_NOUN	глас	ɡɫˈas	ɡ ɫ ˈa s		VOICE_NOUN_1			
 Macedonian	Macedonian			VOICE_NOUN	глас	ɡɫˈas	ɡ ɫ ˈa s		VOICE_NOUN_1			
@@ -251,7 +251,7 @@ Kashubian	Kashubian			VOICE_NOUN	głos	ɡwˈɔs	ɡ w ˈɔ s		VOICE_NOUN_1
 Ukrainian	Ukrainian			VOICE_NOUN	голос	ɦˈɔɫɔs	ɦ ˈɔ ɫ ɔ s		VOICE_NOUN_1			
 Belarusian	Belarusian			VOICE_NOUN	голас	ɣˈoɫas	ɣ ˈo ɫ a s		VOICE_NOUN_1			
 Russian	Russian			VOICE_NOUN	голос	ɡˈoɫəs	ɡ ˈo ɫ ə s		VOICE_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			HEAD_NOUN	galˀwā́ˀ	ɡalˀwˈaːˀ	ɡ a lˀ w ˈaːˀ		HEAD_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			HEAD_NOUN	galˀwā́ˀ	ɡalˀwáːˀ	ɡ a lˀ w áːˀ		HEAD_NOUN_1			
 Lithuanian	Lithuanian			HEAD_NOUN	galvà	ɡɐɫvˈɐ	ɡ ɐ ɫ v ˈɐ		HEAD_NOUN_1			
 Latvian	Latvian			HEAD_NOUN	galva	ɡˈalva	ɡ ˈa l v a		HEAD_NOUN_1			
 Old Prussian	Old Prussian			HEAD_NOUN	galwo	ɡalvo	ɡ a l v o		HEAD_NOUN_1			
@@ -274,7 +274,7 @@ Russian	Russian			HEAD_NOUN	голова	ɡəɫɐvˈa	ɡ ə ɫ ɐ v ˈa		HEAD_NO
 Čakavian (Cres)	Čakavian (Cres)			HEAD_NOUN		ɡlavˈa	ɡ l a v ˈa		HEAD_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			HEAD_NOUN		ɡlâːva	ɡ l âː v a		HEAD_NOUN_1			
 Kajkavian	Kajkavian			HEAD_NOUN		ɡlˈaːvɒ	ɡ l ˈaː v ɒ		HEAD_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			MOUNTAIN_NOUN	garā́ˀ	ɡarˈaːˀ	ɡ a r ˈaːˀ		MOUNTAIN_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			MOUNTAIN_NOUN	garā́ˀ	ɡaráːˀ	ɡ a r áːˀ		MOUNTAIN_NOUN_1			
 Lithuanian	Lithuanian			MOUNTAIN_NOUN	girià	ɡʲɪrʲˈɐ	ɡʲ ɪ rʲ ˈɐ		MOUNTAIN_NOUN_1			
 Proto-Slavic	Proto-Slavic			MOUNTAIN_NOUN	gorà	ɡorǎ	ɡ o r ǎ		MOUNTAIN_NOUN_1			
 Bulgarian	Bulgarian			MOUNTAIN_NOUN	гора	ɡorˈa	ɡ o r ˈa		MOUNTAIN_NOUN_1			
@@ -294,7 +294,7 @@ Russian	Russian			MOUNTAIN_NOUN	гора	ɡɐrˈa	ɡ ɐ r ˈa		MOUNTAIN_NOUN_1
 Čakavian (Istria)	Čakavian (Istria)			MOUNTAIN_NOUN		ɡɔrˈa	ɡ ɔ r ˈa		MOUNTAIN_NOUN_1			
 Čakavian (Cres)	Čakavian (Cres)			MOUNTAIN_NOUN		ɡɔrˈa	ɡ ɔ r ˈa		MOUNTAIN_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			MOUNTAIN_NOUN		ɡu̯ɔ̌ra	ɡ u̯ɔ̌ r a		MOUNTAIN_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			WOMAN_NOUN	génāˀ	ɡˈenaːˀ	ɡ ˈe n aːˀ		WOMAN_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			WOMAN_NOUN	génāˀ	ɡénaːˀ	ɡ é n aːˀ		WOMAN_NOUN_1			
 Proto-Slavic	Proto-Slavic			WOMAN_NOUN	ženà	ʒenǎ	ʒ e n ǎ		WOMAN_NOUN_1			
 Bulgarian	Bulgarian			WOMAN_NOUN	жена	ʒɛnˈa	ʒ ɛ n ˈa		WOMAN_NOUN_1			
 Macedonian	Macedonian			WOMAN_NOUN	жена	ʒˈɛna	ʒ ˈɛ n a		WOMAN_NOUN_1			
@@ -314,7 +314,7 @@ Russian	Russian			WOMAN_NOUN	жена	ʐɨnˈa	ʐ ɨ n ˈa		WOMAN_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			WOMAN_NOUN		ʒɛnˈa	ʒ ɛ n ˈa		WOMAN_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			WOMAN_NOUN		ʒˈɛna	ʒ ˈɛ n a		WOMAN_NOUN_1			
 Kajkavian	Kajkavian			WOMAN_NOUN		ʒjˈenɒ	ʒ j ˈe n ɒ		WOMAN_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			SMOOTH_ADJ	glā́ˀdus	ɡlˈaːˀdus	ɡ l ˈaːˀ d u s		SMOOTH_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			SMOOTH_ADJ	glā́ˀdus	ɡláːˀdus	ɡ l áːˀ d u s		SMOOTH_ADJ_1			
 Latvian	Latvian			SMOOTH_ADJ	gluds	ɡlˈud̥s	ɡ l ˈu d̥ s		SMOOTH_ADJ_1			
 Proto-Slavic	Proto-Slavic			SMOOTH_ADJ	glàdъkъ	ɡlaˀdŭkŭ	ɡ l aˀ d ŭ k ŭ		SMOOTH_ADJ_1			
 Bulgarian	Bulgarian			SMOOTH_ADJ	гладък	ɡɫˈadɐk	ɡ ɫ ˈa d ɐ k		SMOOTH_ADJ_1			
@@ -322,7 +322,7 @@ Macedonian	Macedonian			SMOOTH_ADJ	гладок	ɡɫˈadok	ɡ ɫ ˈa d o k		SMOO
 Štokavian	Štokavian			SMOOTH_ADJ	glȁdak	ɡlâdak	ɡ l â d a k		SMOOTH_ADJ_1			
 Čakavian	Čakavian			SMOOTH_ADJ	glȁdak	ɡlâdak	ɡ l â d a k		SMOOTH_ADJ_1			
 Slovenian	Slovenian			SMOOTH_ADJ	gládək	ɡlàːdək	ɡ l àː d ə k		SMOOTH_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			WHOLE_ADJ	káilas	kˈai̯las	k ˈai̯ l a s		WHOLE_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			WHOLE_ADJ	káilas	kái̯las	k ái̯ l a s		WHOLE_ADJ_1			
 Proto-Slavic	Proto-Slavic			WHOLE_ADJ	cě̑lъ	ʦɛ̂ːlŭ	ʦ ɛ̂ː l ŭ		WHOLE_ADJ_1			
 Bulgarian	Bulgarian			WHOLE_ADJ	цял	ʦʲˈaɫ	ʦʲ ˈa ɫ		WHOLE_ADJ_1			
 Macedonian	Macedonian			WHOLE_ADJ	цел	ʦˈɛɫ	ʦ ˈɛ ɫ		WHOLE_ADJ_1			
@@ -330,7 +330,7 @@ Macedonian	Macedonian			WHOLE_ADJ	цел	ʦˈɛɫ	ʦ ˈɛ ɫ		WHOLE_ADJ_1
 Čakavian	Čakavian			WHOLE_ADJ	cȋl	ʦîːl	ʦ îː l		WHOLE_ADJ_1			
 Čakavian	Čakavian			WHOLE_ADJ	cȋ	ʦîː	ʦ îː		WHOLE_ADJ_1			
 Slovenian	Slovenian			WHOLE_ADJ	cẹ̑ł	ʦéːw	ʦ éː w		WHOLE_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			BARK_NOUN	karā́ˀ	karˈaːˀ	k a r ˈaːˀ		BARK_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			BARK_NOUN	karā́ˀ	karáːˀ	k a r áːˀ		BARK_NOUN_1			
 Proto-Slavic	Proto-Slavic			BARK_NOUN	korà	korǎ	k o r ǎ		BARK_NOUN_1			
 Bulgarian	Bulgarian			BARK_NOUN	кора	korˈa	k o r ˈa		BARK_NOUN_1			
 Macedonian	Macedonian			BARK_NOUN	кора	kˈora	k ˈo r a		BARK_NOUN_1			
@@ -348,8 +348,8 @@ Russian	Russian			BARK_NOUN	кора	kɐrˈa	k ɐ r ˈa		BARK_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			BARK_NOUN		kɔ̌ːra	k ɔ̌ː r a		BARK_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			BARK_NOUN		ku̯ɔ̌ra	k u̯ɔ̌ r a		BARK_NOUN_1			
 Kajkavian	Kajkavian			BARK_NOUN		kˈu̯orɒ	k ˈu̯o r ɒ		BARK_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			COW_NOUN	kárˀwāˀ	kˈarˀwaːˀ	k ˈa rˀ w aːˀ		COW_NOUN_1			
-Lithuanian	Lithuanian			COW_NOUN	kárvė	kˈaːrʲvʲe	k ˈaː rʲ vʲ e		COW_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			COW_NOUN	kárˀwāˀ	kárˀwaːˀ	k á rˀ w aːˀ		COW_NOUN_1			
+Lithuanian	Lithuanian			COW_NOUN	kárvė	kâːrʲvʲe	k âː rʲ vʲ e		COW_NOUN_1			
 Old Prussian	Old Prussian			COW_NOUN	curwis	kurvis	k u r v i s		COW_NOUN_1			
 Proto-Slavic	Proto-Slavic			COW_NOUN	kőrva	koˀrva	k oˀ r v a		COW_NOUN_1			
 Bulgarian	Bulgarian			COW_NOUN	крава	krˈavɐ	k r ˈa v ɐ		COW_NOUN_1			
@@ -366,7 +366,7 @@ Kashubian	Kashubian			COW_NOUN	karwa	kˈarva	k ˈa r v a		COW_NOUN_1
 Ukrainian	Ukrainian			COW_NOUN	корова	kɔrˈɔʋɐ	k ɔ r ˈɔ ʋ ɐ		COW_NOUN_1			
 Belarusian	Belarusian			COW_NOUN	карова	karˈova	k a r ˈo v a		COW_NOUN_1			
 Russian	Russian			COW_NOUN	корова	kɐrˈovə	k ɐ r ˈo v ə		COW_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			FOUR_NUM	ketū́res	ketˈuːres	k e t ˈuː r e s		FOUR_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			FOUR_NUM	ketū́res	ketúːres	k e t úː r e s		FOUR_NUM_1			
 Lithuanian	Lithuanian			FOUR_NUM	keturì	kʲɛtʊrʲˈɪ	kʲ ɛ t ʊ rʲ ˈɪ		FOUR_NUM_1			
 Latvian	Latvian			FOUR_NUM	četri	ʧˈɛtri	ʧ ˈɛ t r i		FOUR_NUM_1			
 Proto-Slavic	Proto-Slavic			FOUR_NUM	četỳre	ʧetɨ̌re	ʧ e t ɨ̌ r e		FOUR_NUM_1			
@@ -386,8 +386,8 @@ Ukrainian	Ukrainian			FOUR_NUM	чотири	ʧɔtˈɪrɪ	ʧ ɔ t ˈɪ r ɪ		FOUR
 Belarusian	Belarusian			FOUR_NUM	чатыры	ʧatˈɨrɨ	ʧ a t ˈɨ r ɨ		FOUR_NUM_1			
 Russian	Russian			FOUR_NUM	четыре	ʨɪtˈɨrʲe	ʨ ɪ t ˈɨ rʲ e		FOUR_NUM_1			
 Russian	Russian			FOUR_NUM	четыре	ʨɪtˈɨrʲɪ	ʨ ɪ t ˈɨ rʲ ɪ		FOUR_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			BLOOD_NOUN	kraujas	krˈau̯jas	k r ˈau̯ j a s		BLOOD_NOUN_1			
-Lithuanian	Lithuanian			BLOOD_NOUN	kraũjas	krˈɐʊ̯jɐs	k r ˈɐʊ̯ j ɐ s		BLOOD_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			BLOOD_NOUN	kraujas	krau̯jas	k r au̯ j a s		BLOOD_NOUN_1			
+Lithuanian	Lithuanian			BLOOD_NOUN	kraũjas	krɐ̌ʊ̯jɐs	k r ɐ̌ʊ̯ j ɐ s		BLOOD_NOUN_1			
 Old Prussian	Old Prussian			BLOOD_NOUN	crauyo	krau̯jo	k r au̯ j o		BLOOD_NOUN_1			
 Proto-Slavic	Proto-Slavic			BLOOD_NOUN	krъ̏vь	krŭ̂vĭ	k r ŭ̂ v ĭ		BLOOD_NOUN_1			
 Bulgarian	Bulgarian			BLOOD_NOUN	кръв	krˈɤf	k r ˈɤ f		BLOOD_NOUN_1			
@@ -440,7 +440,7 @@ Russian	Russian			SUMMER_NOUN	лето	lʲˈetə	lʲ ˈe t ə		SUMMER_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			SUMMER_NOUN		lěːtɔ	l ěː t ɔ		SUMMER_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			SUMMER_NOUN		ljětɔ	l j ě t ɔ		SUMMER_NOUN_1			
 Kajkavian	Kajkavian			SUMMER_NOUN		ljˈetɔ	l j ˈe t ɔ		SUMMER_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			HUSBAND_NOUN	mangjás	maŋɡjˈas	m a ŋ ɡ j ˈa s		HUSBAND_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			HUSBAND_NOUN	mangjás	maŋɡjás	m a ŋ ɡ j á s		HUSBAND_NOUN_1			
 Proto-Slavic	Proto-Slavic			HUSBAND_NOUN	mǫ̑žь	mõ̂ːʒĭ	m õ̂ː ʒ ĭ		HUSBAND_NOUN_1			
 Bulgarian	Bulgarian			HUSBAND_NOUN	мъж	mˈɤʒ̊	m ˈɤ ʒ̊		HUSBAND_NOUN_1			
 Macedonian	Macedonian			HUSBAND_NOUN	маж	mˈaʒ̊	m ˈa ʒ̊		HUSBAND_NOUN_1			
@@ -460,7 +460,7 @@ Russian	Russian			HUSBAND_NOUN	муж	mˈuʐ̊	m ˈu ʐ̊		HUSBAND_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			HUSBAND_NOUN		mûːʃ	m ûː ʃ		HUSBAND_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			HUSBAND_NOUN		mûːʒ	m ûː ʒ		HUSBAND_NOUN_1			
 Kajkavian	Kajkavian			HUSBAND_NOUN		mowʃ	m o w ʃ		HUSBAND_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			MEAT_NOUN	mḗns	mˈeːns	m ˈeː n s		MEAT_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			MEAT_NOUN	mḗns	méːns	m éː n s		MEAT_NOUN_1			
 Lithuanian	Lithuanian			MEAT_NOUN	mėsà	mʲesˈɐ	mʲ e s ˈɐ		MEAT_NOUN_1			
 Proto-Slavic	Proto-Slavic			MEAT_NOUN	mę̑so	mẽ̂ːso	m ẽ̂ː s o		MEAT_NOUN_1			
 Bulgarian	Bulgarian			MEAT_NOUN	месо	mɛsˈɔ	m ɛ s ˈɔ		MEAT_NOUN_1			
@@ -481,7 +481,7 @@ Russian	Russian			MEAT_NOUN	мясо	mʲˈasə	mʲ ˈa s ə		MEAT_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			MEAT_NOUN		mêːsɔ	m êː s ɔ		MEAT_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			MEAT_NOUN		mjêsɔ	m j ê s ɔ		MEAT_NOUN_1			
 Kajkavian	Kajkavian			MEAT_NOUN		mˈejsɔ	m ˈe j s ɔ		MEAT_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			FOG_NOUN	míglāˀ	mˈiɡlaːˀ	m ˈi ɡ l aːˀ		FOG_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			FOG_NOUN	míglāˀ	míɡlaːˀ	m í ɡ l aːˀ		FOG_NOUN_1			
 Lithuanian	Lithuanian			FOG_NOUN	miglà	mʲɪɡɫˈɐ	mʲ ɪ ɡ ɫ ˈɐ		FOG_NOUN_1			
 Latvian	Latvian			FOG_NOUN	migla	mˈiɡla	m ˈi ɡ l a		FOG_NOUN_1			
 Proto-Slavic	Proto-Slavic			FOG_NOUN	mьglà	mĭɡlǎ	m ĭ ɡ l ǎ		FOG_NOUN_1			
@@ -500,7 +500,7 @@ Kashubian	Kashubian			FOG_NOUN	mgła	mɡwˈa	m ɡ w ˈa		FOG_NOUN_1
 Ukrainian	Ukrainian			FOG_NOUN	імла	imɫˈa	i m ɫ ˈa		FOG_NOUN_1			
 Belarusian	Belarusian			FOG_NOUN	імгла	jimɣɫˈa	j i m ɣ ɫ ˈa		FOG_NOUN_1			
 Russian	Russian			FOG_NOUN	мгла	mɡɫˈa	m ɡ ɫ ˈa		FOG_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			DEATH_NOUN	mirtís	mirtˈis	m i r t ˈi s		DEATH_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			DEATH_NOUN	mirtís	mirtís	m i r t í s		DEATH_NOUN_1			
 Lithuanian	Lithuanian			DEATH_NOUN	mirtìs	mʲɪrʲtʲˈɪs	mʲ ɪ rʲ tʲ ˈɪ s		DEATH_NOUN_1			
 Proto-Slavic	Proto-Slavic			DEATH_NOUN	sъmьrtь	sŭmĭrtĭ	s ŭ m ĭ r t ĭ		DEATH_NOUN_1			
 Bulgarian	Bulgarian			DEATH_NOUN	смърт	smˈɤrt	s m ˈɤ r t		DEATH_NOUN_1			
@@ -521,11 +521,11 @@ Proto-Balto-Slavic	Proto-Balto-Slavic			DEAD_ADJ	mirtwas	mirtwas	m i r t w a s		
 Proto-Slavic	Proto-Slavic			DEAD_ADJ	mь̃rtvъ	mĭ̌ːrtvŭ	m ĭ̌ː r t v ŭ		DEAD_ADJ_1			
 Bulgarian	Bulgarian			DEAD_ADJ	мъртъв	mˈɤrtɐf	m ˈɤ r t ɐ f		DEAD_ADJ_1			
 Macedonian	Macedonian			DEAD_ADJ	мртов	mˈr̩tof	m ˈr̩ t o f		DEAD_ADJ_1			
-Štokavian	Štokavian			DEAD_ADJ	mr̀tav	mřtaʋ	m ř t a ʋ		DEAD_ADJ_1			
+Štokavian	Štokavian			DEAD_ADJ	mr̀tav	mř̩taʋ	m ř̩ t a ʋ		DEAD_ADJ_1			
 Čakavian	Čakavian			DEAD_ADJ	mrtãv	mr̩tǎːʋ	m r̩ t ǎː ʋ		DEAD_ADJ_1			
 Slovenian	Slovenian			DEAD_ADJ	mŕtəv	mə̀rtəʋ	m ə̀ r t ə ʋ		DEAD_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			FINGERNAIL_NOUN	nágas	nˈaɡas	n ˈa ɡ a s		FINGERNAIL_NOUN_1			
-Lithuanian	Lithuanian			FINGERNAIL_NOUN	nãgas	nˈaːɡɐs	n ˈaː ɡ ɐ s		FINGERNAIL_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			FINGERNAIL_NOUN	nágas	náɡas	n á ɡ a s		FINGERNAIL_NOUN_1			
+Lithuanian	Lithuanian			FINGERNAIL_NOUN	nãgas	nǎːɡɐs	n ǎː ɡ ɐ s		FINGERNAIL_NOUN_1			
 Latvian	Latvian			FINGERNAIL_NOUN	nags	nˈaɡ̊s	n ˈa ɡ̊ s		FINGERNAIL_NOUN_1			
 Proto-Slavic	Proto-Slavic			FINGERNAIL_NOUN	nȍgъtь	nôɡŭtĭ	n ô ɡ ŭ t ĭ		FINGERNAIL_NOUN_1			
 Bulgarian	Bulgarian			FINGERNAIL_NOUN	нокът	nˈɔkɐt	n ˈɔ k ɐ t		FINGERNAIL_NOUN_1			
@@ -546,7 +546,7 @@ Russian	Russian			FINGERNAIL_NOUN	ноготь	nˈoɡətʲ	n ˈo ɡ ə tʲ		FING
 Čakavian (Cres)	Čakavian (Cres)			FINGERNAIL_NOUN		nɔ̌ːxɛt	n ɔ̌ː x ɛ t		FINGERNAIL_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			FINGERNAIL_NOUN		nu̯ɔ̌ɦat	n u̯ɔ̌ ɦ a t		FINGERNAIL_NOUN_1			
 Kajkavian	Kajkavian			FINGERNAIL_NOUN		nˈu̯ovæt	n ˈu̯o v æ t		FINGERNAIL_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			FOOT_NOUN	nagā́ˀ	naɡˈaːˀ	n a ɡ ˈaːˀ		FOOT_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			FOOT_NOUN	nagā́ˀ	naɡáːˀ	n a ɡ áːˀ		FOOT_NOUN_1			
 Proto-Slavic	Proto-Slavic			FOOT_NOUN	nogà	noɡǎ	n o ɡ ǎ		FOOT_NOUN_1			
 Bulgarian	Bulgarian			FOOT_NOUN	нога	noɡˈa	n o ɡ ˈa		FOOT_NOUN_1			
 Macedonian	Macedonian			FOOT_NOUN	нога	nˈoɡa	n ˈo ɡ a		FOOT_NOUN_1			
@@ -566,7 +566,7 @@ Russian	Russian			FOOT_NOUN	нога	nɐɡˈa	n ɐ ɡ ˈa		FOOT_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			FOOT_NOUN		nɔɡˈa	n ɔ ɡ ˈa		FOOT_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			FOOT_NOUN		nu̯ɔ̌ɡa	n u̯ɔ̌ ɡ a		FOOT_NOUN_1			
 Kajkavian	Kajkavian			FOOT_NOUN		nˈu̯oɡɒ	n ˈu̯o ɡ ɒ		FOOT_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			NIGHT_NOUN	náktis	nˈaktis	n ˈa k t i s		NIGHT_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			NIGHT_NOUN	náktis	náktis	n á k t i s		NIGHT_NOUN_1			
 Lithuanian	Lithuanian			NIGHT_NOUN	naktìs	nɐktʲˈɪs	n ɐ k tʲ ˈɪ s		NIGHT_NOUN_1			
 Latvian	Latvian			NIGHT_NOUN	nakts	nˈakts	n ˈa k t s		NIGHT_NOUN_1			
 Proto-Slavic	Proto-Slavic			NIGHT_NOUN	nȏktь	nôːktĭ	n ôː k t ĭ		NIGHT_NOUN_1			
@@ -588,8 +588,8 @@ Russian	Russian			NIGHT_NOUN	ночь	nˈoʨ	n ˈo ʨ		NIGHT_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			NIGHT_NOUN		nôːc	n ôː c		NIGHT_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			NIGHT_NOUN		nu̯ôc	n u̯ô c		NIGHT_NOUN_1			
 Kajkavian	Kajkavian			NIGHT_NOUN		nowʧ	n o w ʧ		NIGHT_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			NOSE_NOUN	nasús	nasˈus	n a s ˈu s		NOSE_NOUN_1			
-Lithuanian	Lithuanian			NOSE_NOUN	nósis	nˈoːsʲɪs	n ˈoː sʲ ɪ s		NOSE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			NOSE_NOUN	nasús	nasús	n a s ú s		NOSE_NOUN_1			
+Lithuanian	Lithuanian			NOSE_NOUN	nósis	nôːsʲɪs	n ôː sʲ ɪ s		NOSE_NOUN_1			
 Latvian	Latvian			NOSE_NOUN	nāss	nˈaːss	n ˈaː s s		NOSE_NOUN_1			
 Proto-Slavic	Proto-Slavic			NOSE_NOUN	nȏsъ	nôːsŭ	n ôː s ŭ		NOSE_NOUN_1			
 Bulgarian	Bulgarian			NOSE_NOUN	нос	nˈɔs	n ˈɔ s		NOSE_NOUN_1			
@@ -610,7 +610,7 @@ Russian	Russian			NOSE_NOUN	нос	nˈos	n ˈo s		NOSE_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			NOSE_NOUN		nôːs	n ôː s		NOSE_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			NOSE_NOUN		nu̯ôs	n u̯ô s		NOSE_NOUN_1			
 Kajkavian	Kajkavian			NOSE_NOUN		nu̯os	n u̯o s		NOSE_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			NINE_NUM	néwin	nˈewin	n ˈe w i n		NINE_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			NINE_NUM	néwin	néwin	n é w i n		NINE_NUM_1			
 Lithuanian	Lithuanian			NINE_NUM	devynì	dʲɛvʲinʲˈɪ	dʲ ɛ vʲ i nʲ ˈɪ		NINE_NUM_1			
 Latvian	Latvian			NINE_NUM	deviņi	dˈɛviɲi	d ˈɛ v i ɲ i		NINE_NUM_1			
 Proto-Slavic	Proto-Slavic			NINE_NUM	dȅvętь	dêvẽtĭ	d ê v ẽ t ĭ		NINE_NUM_1			
@@ -628,8 +628,8 @@ Kashubian	Kashubian			NINE_NUM	dzewiãc	ʣˈɛvjaŋʦ	ʣ ˈɛ v j a ŋ ʦ		NINE_
 Ukrainian	Ukrainian			NINE_NUM	дев'ять	dˈɛʋjɐtʲ	d ˈɛ ʋ j ɐ tʲ		NINE_NUM_1			
 Belarusian	Belarusian			NINE_NUM	дзевяць	ʣʲˈevʲæʦʲ	ʣʲ ˈe vʲ æ ʦʲ		NINE_NUM_1			
 Russian	Russian			NINE_NUM	девять	dʲˈevʲɪtʲ	dʲ ˈe vʲ ɪ tʲ		NINE_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			BERRY_NOUN	ṓˀgāˀ	ˈoːˀɡaːˀ	ˈoːˀ ɡ aːˀ		BERRY_NOUN_1			
-Lithuanian	Lithuanian			BERRY_NOUN	úoga	ˈuə̯ɡɐ	ˈuə̯ ɡ ɐ		BERRY_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			BERRY_NOUN	ṓˀgāˀ	óːˀɡaːˀ	óːˀ ɡ aːˀ		BERRY_NOUN_1			
+Lithuanian	Lithuanian			BERRY_NOUN	úoga	ûə̯ɡɐ	ûə̯ ɡ ɐ		BERRY_NOUN_1			
 Latvian	Latvian			BERRY_NOUN	oga	ˈuɔ̯ɡa	ˈuɔ̯ ɡ a		BERRY_NOUN_1			
 Proto-Slavic	Proto-Slavic			BERRY_NOUN	a̋goda	aˀɡoda	aˀ ɡ o d a		BERRY_NOUN_1			
 Bulgarian	Bulgarian			BERRY_NOUN	ягода	jˈaɡodɐ	j ˈa ɡ o d ɐ		BERRY_NOUN_1			
@@ -646,7 +646,7 @@ Kashubian	Kashubian			BERRY_NOUN	jagòda	jˈaɡu̯ɛda	j ˈa ɡ u̯ɛ d a		BERRY
 Ukrainian	Ukrainian			BERRY_NOUN	ягода	jˈɑɦɔdɐ	j ˈɑ ɦ ɔ d ɐ		BERRY_NOUN_1			
 Belarusian	Belarusian			BERRY_NOUN	ягада	jˈæɣada	j ˈæ ɣ a d a		BERRY_NOUN_1			
 Russian	Russian			BERRY_NOUN	ягода	jˈaɡədə	j ˈa ɡ ə d ə		BERRY_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			WAY_NOUN	pántis	pˈantis	p ˈa n t i s		WAY_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			WAY_NOUN	pántis	pántis	p á n t i s		WAY_NOUN_1			
 Old Prussian	Old Prussian			WAY_NOUN	pintis	pintis	p i n t i s		WAY_NOUN_1			
 Proto-Slavic	Proto-Slavic			WAY_NOUN	pǫ́tь	põ̌ːtĭ	p õ̌ː t ĭ		WAY_NOUN_1			
 Bulgarian	Bulgarian			WAY_NOUN	път	pˈɤt	p ˈɤ t		WAY_NOUN_1			
@@ -662,7 +662,7 @@ Polish	Polish			WAY_NOUN	pąć	pˈɔɲʨ	p ˈɔ ɲ ʨ		WAY_NOUN_1
 Ukrainian	Ukrainian			WAY_NOUN	путь	pˈutʲ	p ˈu tʲ		WAY_NOUN_1			
 Belarusian	Belarusian			WAY_NOUN	пуць	pˈuʦʲ	p ˈu ʦʲ		WAY_NOUN_1			
 Russian	Russian			WAY_NOUN	путь	pˈutʲ	p ˈu tʲ		WAY_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			FIVE_NUM	pénki	pˈenki	p ˈe n k i		FIVE_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			FIVE_NUM	pénki	pénki	p é n k i		FIVE_NUM_1			
 Lithuanian	Lithuanian			FIVE_NUM	penkì	pʲɛŋʲkʲˈɪ	pʲ ɛ ŋʲ kʲ ˈɪ		FIVE_NUM_1			
 Latgalian	Latgalian			FIVE_NUM	pīci	pˈiːʦi	p ˈiː ʦ i		FIVE_NUM_1			
 Latvian	Latvian			FIVE_NUM	pieci	pˈiɛ̯ʦi	p ˈiɛ̯ ʦ i		FIVE_NUM_1			
@@ -681,7 +681,7 @@ Kashubian	Kashubian			FIVE_NUM	piãc	pjˈaŋʦ	p j ˈa ŋ ʦ		FIVE_NUM_1
 Ukrainian	Ukrainian			FIVE_NUM	п'ять	pjˈɑtʲ	p j ˈɑ tʲ		FIVE_NUM_1			
 Belarusian	Belarusian			FIVE_NUM	пяць	pʲˈæʦʲ	pʲ ˈæ ʦʲ		FIVE_NUM_1			
 Russian	Russian			FIVE_NUM	пять	pʲˈætʲ	pʲ ˈæ tʲ		FIVE_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			FULL_ADJ	pílˀnas	pˈilˀnas	p ˈi lˀ n a s		FULL_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			FULL_ADJ	pílˀnas	pílˀnas	p í lˀ n a s		FULL_ADJ_1			
 Lithuanian	Lithuanian			FULL_ADJ	pìlnas	pʲˈɪɫnɐs	pʲ ˈɪ ɫ n ɐ s		FULL_ADJ_1			
 Latvian	Latvian			FULL_ADJ	pilns	pˈilns	p ˈi l n s		FULL_ADJ_1			
 Proto-Slavic	Proto-Slavic			FULL_ADJ	pь̋lnъ	pĭˀlnŭ	p ĭˀ l n ŭ		FULL_ADJ_1			
@@ -693,7 +693,24 @@ Slovenian	Slovenian			FULL_ADJ	pȏłn	pɔ́ːwn	p ɔ́ː w n		FULL_ADJ_1
 Čakavian (Istria)	Čakavian (Istria)			FULL_ADJ		pǔːn	p ǔː n		FULL_ADJ_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			FULL_ADJ		pûːn	p ûː n		FULL_ADJ_1			
 Kajkavian	Kajkavian			FULL_ADJ		pun	p u n		FULL_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			DRINK_VERB	pītei	pˈiːtei̯	p ˈiː t ei̯		DRINK_VERB_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			FINGER_NOUN	pírštan	pírʃtan	p í r ʃ t a n		FINGER_NOUN_1			
+Lithuanian	Lithuanian			FINGER_NOUN	pir̃štas	pʲɪ̌rʃtɐs	pʲ ɪ̌ r ʃ t ɐ s		FINGER_NOUN_1			
+Samogitian	Samogitian			FINGER_NOUN	pėršts	pˈeːrʃts	p ˈeː r ʃ t s		FINGER_NOUN_1			
+Latgalian	Latgalian			FINGER_NOUN	piersts	pˈiɛ̯rsts	p ˈiɛ̯ r s t s		FINGER_NOUN_1			
+Latvian	Latvian			FINGER_NOUN	pirksts	pˈirksts	p ˈi r k s t s		FINGER_NOUN_1			
+Old Prussian	Old Prussian			FINGER_NOUN	pirsten	pirsten	p i r s t e n		FINGER_NOUN_1			
+Proto-Slavic	Proto-Slavic			FINGER_NOUN	pь̀rstъ	pĭ̌rstŭ	p ĭ̌ r s t ŭ		FINGER_NOUN_1			
+Bulgarian	Bulgarian			FINGER_NOUN	пръст	prˈɤst	p r ˈɤ s t		FINGER_NOUN_1			
+Macedonian	Macedonian			FINGER_NOUN	прст	pˈr̩st	p ˈr̩ s t		FINGER_NOUN_1			
+Štokavian	Štokavian			FINGER_NOUN	pȑst	pr̩̂st	p r̩̂ s t		FINGER_NOUN_1			
+Čakavian	Čakavian			FINGER_NOUN	pȑst	pr̩̂st	p r̩̂ s t		FINGER_NOUN_1			
+Slovenian	Slovenian			FINGER_NOUN	pȓst	pə́rst	p ə́ r s t		FINGER_NOUN_1			
+Slovak	Slovak			FINGER_NOUN	prst	pˈr̩st	p ˈr̩ s t		FINGER_NOUN_1			
+Czech	Czech			FINGER_NOUN	prst	pˈr̩st	p ˈr̩ s t		FINGER_NOUN_1			
+Upper Sorbian	Upper Sorbian			FINGER_NOUN	porst	pˈɔʀst	p ˈɔ ʀ s t		FINGER_NOUN_1			
+Ukrainian	Ukrainian			FINGER_NOUN	перст	pˈɛrst	p ˈɛ r s t		FINGER_NOUN_1			
+Russian	Russian			FINGER_NOUN	перст	pʲˈerst	pʲ ˈe r s t		FINGER_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			DRINK_VERB	pītei	piːtei̯	p iː t ei̯		DRINK_VERB_1			
 Proto-Slavic	Proto-Slavic			DRINK_VERB	pìti	pǐti	p ǐ t i		DRINK_VERB_1			
 Bulgarian	Bulgarian			DRINK_VERB	пия	pˈijɐ	p ˈi j ɐ		DRINK_VERB_1			
 Macedonian	Macedonian			DRINK_VERB	пие	pˈiɛ	p ˈi ɛ		DRINK_VERB_1			
@@ -709,8 +726,8 @@ Kashubian	Kashubian			DRINK_VERB	pic	pˈiʦ	p ˈi ʦ		DRINK_VERB_1
 Ukrainian	Ukrainian			DRINK_VERB	пити	pˈɪte	p ˈɪ t e		DRINK_VERB_1			
 Belarusian	Belarusian			DRINK_VERB	піць	pʲˈiʦʲ	pʲ ˈi ʦʲ		DRINK_VERB_1			
 Russian	Russian			DRINK_VERB	пить	pʲˈitʲ	pʲ ˈi tʲ		DRINK_VERB_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			HORN_NOUN	rágas	rˈaɡas	r ˈa ɡ a s		HORN_NOUN_1			
-Lithuanian	Lithuanian			HORN_NOUN	rãgas	rˈaːɡɐs	r ˈaː ɡ ɐ s		HORN_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			HORN_NOUN	rágas	ráɡas	r á ɡ a s		HORN_NOUN_1			
+Lithuanian	Lithuanian			HORN_NOUN	rãgas	rǎːɡɐs	r ǎː ɡ ɐ s		HORN_NOUN_1			
 Latgalian	Latgalian			HORN_NOUN	rogs	rˈoɡ̊s	r ˈo ɡ̊ s		HORN_NOUN_1			
 Latvian	Latvian			HORN_NOUN	rags	rˈaɡ̊s	r ˈa ɡ̊ s		HORN_NOUN_1			
 Old Prussian	Old Prussian			HORN_NOUN	ragis	raɡis	r a ɡ i s		HORN_NOUN_1			
@@ -733,7 +750,7 @@ Russian	Russian			HORN_NOUN	рог	rˈoɡ̊	r ˈo ɡ̊		HORN_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			HORN_NOUN		rôːx	r ôː x		HORN_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			HORN_NOUN		ru̯ôɡ	r u̯ô ɡ		HORN_NOUN_1			
 Kajkavian	Kajkavian			HORN_NOUN		ru̯oɡ	r u̯o ɡ		HORN_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			HAND_NOUN	ránkāˀ	rˈaŋkaːˀ	r ˈa ŋ k aːˀ		HAND_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			HAND_NOUN	ránkāˀ	ráŋkaːˀ	r á ŋ k aːˀ		HAND_NOUN_1			
 Lithuanian	Lithuanian			HAND_NOUN	rankà	rɐŋkˈɐ	r ɐ ŋ k ˈɐ		HAND_NOUN_1			
 Samogitian	Samogitian			HAND_NOUN	ronka	roŋkˈa	r o ŋ k ˈa		HAND_NOUN_1			
 Latgalian	Latgalian			HAND_NOUN	rūka	rˈuːkɑ	r ˈuː k ɑ		HAND_NOUN_1			
@@ -759,7 +776,7 @@ Russian	Russian			HAND_NOUN	рука	rʊkˈa	r ʊ k ˈa		HAND_NOUN_1
 Čakavian (Burgenland)	Čakavian (Burgenland)			HAND_NOUN		rˈuka	r ˈu k a		HAND_NOUN_1			
 Kajkavian	Kajkavian			HAND_NOUN		rˈowka	r ˈo w k a		HAND_NOUN_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			GARDEN_NOUN	sādas	saːdas	s aː d a s		GARDEN_NOUN_1			
-Lithuanian	Lithuanian			GARDEN_NOUN	sõdas	sˈoːdɐs	s ˈoː d ɐ s		GARDEN_NOUN_1			
+Lithuanian	Lithuanian			GARDEN_NOUN	sõdas	sǒːdɐs	s ǒː d ɐ s		GARDEN_NOUN_1			
 Latvian	Latvian			GARDEN_NOUN	sads	sˈad̥s	s ˈa d̥ s		GARDEN_NOUN_1			
 Proto-Slavic	Proto-Slavic			GARDEN_NOUN	sȃdъ	sâːdŭ	s âː d ŭ		GARDEN_NOUN_1			
 Bulgarian	Bulgarian			GARDEN_NOUN	сад	sˈad̥	s ˈa d̥		GARDEN_NOUN_1			
@@ -774,9 +791,10 @@ Polish	Polish			GARDEN_NOUN	sad	sˈad̥	s ˈa d̥		GARDEN_NOUN_1
 Ukrainian	Ukrainian			GARDEN_NOUN	сад	sˈad	s ˈa d		GARDEN_NOUN_1			
 Belarusian	Belarusian			GARDEN_NOUN	сад	sˈad̥	s ˈa d̥		GARDEN_NOUN_1			
 Russian	Russian			GARDEN_NOUN	сад	sˈad̥	s ˈa d̥		GARDEN_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			DRY_ADJ	saušás	sau̯ʃˈas	s au̯ ʃ ˈa s		DRY_ADJ_1			
-Lithuanian	Lithuanian			DRY_ADJ	saũsas	sˈɐʊ̯sɐs	s ˈɐʊ̯ s ɐ s		DRY_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			DRY_ADJ	saušás	sau̯ʃás	s au̯ ʃ á s		DRY_ADJ_1			
+Lithuanian	Lithuanian			DRY_ADJ	saũsas	sɐ̌ʊ̯sɐs	s ɐ̌ʊ̯ s ɐ s		DRY_ADJ_1			
 Latvian	Latvian			DRY_ADJ	sauss	sˈau̯ss	s ˈau̯ s s		DRY_ADJ_1			
+Old Prussian	Old Prussian			DRY_ADJ	sausā	sau̯sa	s au̯ s a		DRY_ADJ_1			
 Proto-Slavic	Proto-Slavic			DRY_ADJ	sȗxъ	sûːxŭ	s ûː x ŭ		DRY_ADJ_1			
 Bulgarian	Bulgarian			DRY_ADJ	сух	sˈux	s ˈu x		DRY_ADJ_1			
 Macedonian	Macedonian			DRY_ADJ	сув	sˈuf	s ˈu f		DRY_ADJ_1			
@@ -787,8 +805,8 @@ Slovenian	Slovenian			DRY_ADJ	sȗh	súːx	s úː x		DRY_ADJ_1
 Čakavian (Cres)	Čakavian (Cres)			DRY_ADJ		sûːx	s ûː x		DRY_ADJ_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			DRY_ADJ		sûːɦ	s ûː ɦ		DRY_ADJ_1			
 Kajkavian	Kajkavian			DRY_ADJ		suːh	s uː h		DRY_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			SUN_NOUN	sáuˀlijāˀ	sˈau̯ˀlijaːˀ	s ˈau̯ˀ l i j aːˀ		SUN_NOUN_1			
-Lithuanian	Lithuanian			SUN_NOUN	sáulė	sˈaʊ̯lʲe	s ˈaʊ̯ lʲ e		SUN_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			SUN_NOUN	sáuˀlijāˀ	sáu̯ˀlijaːˀ	s áu̯ˀ l i j aːˀ		SUN_NOUN_1			
+Lithuanian	Lithuanian			SUN_NOUN	sáulė	sâʊ̯lʲe	s âʊ̯ lʲ e		SUN_NOUN_1			
 Latvian	Latvian			SUN_NOUN	saule	sˈau̯lɛ	s ˈau̯ l ɛ		SUN_NOUN_1			
 Proto-Slavic	Proto-Slavic			SUN_NOUN	sъ̏lnьce	sŭ̂lnĭʦe	s ŭ̂ l n ĭ ʦ e		SUN_NOUN_1			
 Bulgarian	Bulgarian			SUN_NOUN	слънце	sɫˈɤnʦɛ	s ɫ ˈɤ n ʦ ɛ		SUN_NOUN_1			
@@ -809,7 +827,7 @@ Russian	Russian			SUN_NOUN	солнце	sˈonʦə	s ˈo n ʦ ə		SUN_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			SUN_NOUN		sěːnʦɛ	s ěː n ʦ ɛ		SUN_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			SUN_NOUN		sûːnʦɛ	s ûː n ʦ ɛ		SUN_NOUN_1			
 Kajkavian	Kajkavian			SUN_NOUN		sˈownʦæ	s ˈo w n ʦ æ		SUN_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			SALT_NOUN	sāˀlis	sˈaːˀlis	s ˈaːˀ l i s		SALT_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			SALT_NOUN	sāˀlis	sáːˀlis	s áːˀ l i s		SALT_NOUN_1			
 Latvian	Latvian			SALT_NOUN	sāls	sˈaːls	s ˈaː l s		SALT_NOUN_1			
 Old Prussian	Old Prussian			SALT_NOUN	sal	sal	s a l		SALT_NOUN_1			
 Proto-Slavic	Proto-Slavic			SALT_NOUN	sȍlь	sôlĭ	s ô l ĭ		SALT_NOUN_1			
@@ -831,7 +849,7 @@ Russian	Russian			SALT_NOUN	соль	sˈolʲ	s ˈo lʲ		SALT_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			SALT_NOUN		sôːl	s ôː l		SALT_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			SALT_NOUN		su̯ôl	s u̯ô l		SALT_NOUN_1			
 Kajkavian	Kajkavian			SALT_NOUN		sowj	s o w j		SALT_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			SEVEN_NUM	septín	septˈin	s e p t ˈi n		SEVEN_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			SEVEN_NUM	septín	septín	s e p t í n		SEVEN_NUM_1			
 Lithuanian	Lithuanian			SEVEN_NUM	septynì	sʲɛpʲtʲinʲˈɪ	sʲ ɛ pʲ tʲ i nʲ ˈɪ		SEVEN_NUM_1			
 Latvian	Latvian			SEVEN_NUM	septiņi	sˈɛptiɲi	s ˈɛ p t i ɲ i		SEVEN_NUM_1			
 Proto-Slavic	Proto-Slavic			SEVEN_NUM	sèdmь	sědmĭ	s ě d m ĭ		SEVEN_NUM_1			
@@ -849,7 +867,7 @@ Kashubian	Kashubian			SEVEN_NUM	sétmë	sˈedmə	s ˈe d m ə		SEVEN_NUM_1
 Ukrainian	Ukrainian			SEVEN_NUM	сім	sʲˈim	sʲ ˈi m		SEVEN_NUM_1			
 Belarusian	Belarusian			SEVEN_NUM	сем	sʲˈem	sʲ ˈe m		SEVEN_NUM_1			
 Russian	Russian			SEVEN_NUM	семь	sʲˈemʲ	sʲ ˈe mʲ		SEVEN_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			HEART_NOUN	śḗr	kʲˈeːr	kʲ ˈeː r		HEART_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			HEART_NOUN	śḗr	sʲéːr	sʲ éː r		HEART_NOUN_1			
 Lithuanian	Lithuanian			HEART_NOUN	širdìs	ɕɪrʲdʲˈɪs	ɕ ɪ rʲ dʲ ˈɪ s		HEART_NOUN_1			
 Latvian	Latvian			HEART_NOUN	sirds	sˈird̥s	s ˈi r d̥ s		HEART_NOUN_1			
 Proto-Slavic	Proto-Slavic			HEART_NOUN	sь̑rdьce	sĭ̂rdĭʦe	s ĭ̂ r d ĭ ʦ e		HEART_NOUN_1			
@@ -870,7 +888,7 @@ Russian	Russian			HEART_NOUN	сердце	sʲˈerʦə	sʲ ˈe r ʦ ə		HEART_NOU
 Čakavian (Cres)	Čakavian (Cres)			HEART_NOUN		sˈɛrʦɛ	s ˈɛ r ʦ ɛ		HEART_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			HEART_NOUN		sˈr̩ʦɛ	s ˈr̩ ʦ ɛ		HEART_NOUN_1			
 Kajkavian	Kajkavian			HEART_NOUN		sˈɛrʦæ	s ˈɛ r ʦ æ		HEART_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			SIX_NUM	šéš	ʃˈeʃ	ʃ ˈe ʃ		SIX_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			SIX_NUM	šéš	ʃéʃ	ʃ é ʃ		SIX_NUM_1			
 Lithuanian	Lithuanian			SIX_NUM	šešì	ɕɛɕˈɪ	ɕ ɛ ɕ ˈɪ		SIX_NUM_1			
 Latvian	Latvian			SIX_NUM	seši	sˈɛʃi	s ˈɛ ʃ i		SIX_NUM_1			
 Proto-Slavic	Proto-Slavic			SIX_NUM	šȇstь	ʃêːstĭ	ʃ êː s t ĭ		SIX_NUM_1			
@@ -888,8 +906,8 @@ Kashubian	Kashubian			SIX_NUM	szesc	ʃˈɛsʦ	ʃ ˈɛ s ʦ		SIX_NUM_1
 Ukrainian	Ukrainian			SIX_NUM	шість	ʃʲˈistʲ	ʃʲ ˈi s tʲ		SIX_NUM_1			
 Belarusian	Belarusian			SIX_NUM	шэсць	ʂˈɛsʲʦʲ	ʂ ˈɛ sʲ ʦʲ		SIX_NUM_1			
 Russian	Russian			SIX_NUM	шесть	ʂˈɛsʲtʲ	ʂ ˈɛ sʲ tʲ		SIX_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			SNOW_NOUN	snáigas	snˈai̯ɡas	s n ˈai̯ ɡ a s		SNOW_NOUN_1			
-Lithuanian	Lithuanian			SNOW_NOUN	sniẽgas	sʲnʲˈiə̯ɡɐs	sʲ nʲ ˈiə̯ ɡ ɐ s		SNOW_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			SNOW_NOUN	snáigas	snái̯ɡas	s n ái̯ ɡ a s		SNOW_NOUN_1			
+Lithuanian	Lithuanian			SNOW_NOUN	sniẽgas	sʲnʲǐə̯ɡɐs	sʲ nʲ ǐə̯ ɡ ɐ s		SNOW_NOUN_1			
 Latvian	Latvian			SNOW_NOUN	sniegs	snˈiɛ̯ɡ̊s	s n ˈiɛ̯ ɡ̊ s		SNOW_NOUN_1			
 Old Prussian	Old Prussian			SNOW_NOUN	snaygis	snajɡis	s n a j ɡ i s		SNOW_NOUN_1			
 Proto-Slavic	Proto-Slavic			SNOW_NOUN	sně̑gъ	snɛ̂ːɡŭ	s n ɛ̂ː ɡ ŭ		SNOW_NOUN_1			
@@ -907,8 +925,8 @@ Kashubian	Kashubian			SNOW_NOUN	sniég	sɲˈeɡ̊	s ɲ ˈe ɡ̊		SNOW_NOUN_1
 Ukrainian	Ukrainian			SNOW_NOUN	сніг	snʲˈiɦ	s nʲ ˈi ɦ		SNOW_NOUN_1			
 Belarusian	Belarusian			SNOW_NOUN	снег	sʲnʲˈex	sʲ nʲ ˈe x		SNOW_NOUN_1			
 Russian	Russian			SNOW_NOUN	снег	sʲnʲˈeɡ̊	sʲ nʲ ˈe ɡ̊		SNOW_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			OLD_ADJ	stā́ˀras	stˈaːˀras	s t ˈaːˀ r a s		OLD_ADJ_1			
-Lithuanian	Lithuanian			OLD_ADJ	stóras	stˈoːrɐs	s t ˈoː r ɐ s		OLD_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			OLD_ADJ	stā́ˀras	stáːˀras	s t áːˀ r a s		OLD_ADJ_1			
+Lithuanian	Lithuanian			OLD_ADJ	stóras	stôːrɐs	s t ôː r ɐ s		OLD_ADJ_1			
 Proto-Slavic	Proto-Slavic			OLD_ADJ	sta̋rъ	staˀrŭ	s t aˀ r ŭ		OLD_ADJ_1			
 Bulgarian	Bulgarian			OLD_ADJ	стар	stˈar	s t ˈa r		OLD_ADJ_1			
 Štokavian	Štokavian			OLD_ADJ	stȁr	stâr	s t â r		OLD_ADJ_1			
@@ -921,7 +939,7 @@ Bulgarian	Bulgarian			QUIET_ADJ	тих	tˈix	t ˈi x		QUIET_ADJ_1
 Macedonian	Macedonian			QUIET_ADJ	тих	tˈix	t ˈi x		QUIET_ADJ_1			
 Štokavian	Štokavian			QUIET_ADJ	tȉh	tîx	t î x		QUIET_ADJ_1			
 Slovenian	Slovenian			QUIET_ADJ	tȋh	tíːx	t íː x		QUIET_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			HEAVY_ADJ	tingús	tiŋɡˈus	t i ŋ ɡ ˈu s		HEAVY_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			HEAVY_ADJ	tingús	tiŋɡús	t i ŋ ɡ ú s		HEAVY_ADJ_1			
 Lithuanian	Lithuanian			HEAVY_ADJ	tingùs	tʲɪŋɡˈʊs	tʲ ɪ ŋ ɡ ˈʊ s		HEAVY_ADJ_1			
 Proto-Slavic	Proto-Slavic			HEAVY_ADJ	tęžьkъ	tẽʒĭkŭ	t ẽ ʒ ĭ k ŭ		HEAVY_ADJ_1			
 Bulgarian	Bulgarian			HEAVY_ADJ	тежък	tˈɛʒɐk	t ˈɛ ʒ ɐ k		HEAVY_ADJ_1			
@@ -933,8 +951,8 @@ Slovenian	Slovenian			HEAVY_ADJ	téžək	tɛ̀ːʒək	t ɛ̀ː ʒ ə k		HEAVY_AD
 Čakavian (Cres)	Čakavian (Cres)			HEAVY_ADJ		těːʃki	t ěː ʃ k i		HEAVY_ADJ_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			HEAVY_ADJ		tjêʒak	t j ê ʒ a k		HEAVY_ADJ_1			
 Kajkavian	Kajkavian			HEAVY_ADJ		tˈæʒæk	t ˈæ ʒ æ k		HEAVY_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			THREE_NUM	tríjes	trˈijes	t r ˈi j e s		THREE_NUM_1			
-Lithuanian	Lithuanian			THREE_NUM	trỹs	tʲrʲˈiːs	tʲ rʲ ˈiː s		THREE_NUM_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			THREE_NUM	tríjes	tríjes	t r í j e s		THREE_NUM_1			
+Lithuanian	Lithuanian			THREE_NUM	trỹs	tʲrʲǐːs	tʲ rʲ ǐː s		THREE_NUM_1			
 Latgalian	Latgalian			THREE_NUM	treis	trˈɛi̯s	t r ˈɛi̯ s		THREE_NUM_1			
 Latvian	Latvian			THREE_NUM	trīs	trˈiːs	t r ˈiː s		THREE_NUM_1			
 Proto-Slavic	Proto-Slavic			THREE_NUM	tri	tri	t r i		THREE_NUM_1			
@@ -946,21 +964,21 @@ Slovak	Slovak			THREE_NUM	tri	trˈi	t r ˈi		THREE_NUM_1
 Czech	Czech			THREE_NUM	tři	tr̝̊ˈɪ	t r̝̊ ˈɪ		THREE_NUM_1			
 Upper Sorbian	Upper Sorbian			THREE_NUM	tři	tʃˈi	t ʃ ˈi		THREE_NUM_1			
 Lower Sorbian	Lower Sorbian			THREE_NUM	tśi	tɕˈi	t ɕ ˈi		THREE_NUM_1			
-Polish	Polish			THREE_NUM	trzy	tʂˈɨ	t ʂ ˈɨ		THREE_NUM_1			
-Kashubian	Kashubian			THREE_NUM	trzë	tʂˈə	t ʂ ˈə		THREE_NUM_1			
+Polish	Polish			THREE_NUM	trzy	tʐ̊ˈɨ	t ʐ̊ ˈɨ		THREE_NUM_1			
+Kashubian	Kashubian			THREE_NUM	trzë	tʐ̊ˈə	t ʐ̊ ˈə		THREE_NUM_1			
 Ukrainian	Ukrainian			THREE_NUM	три	trˈɪ	t r ˈɪ		THREE_NUM_1			
 Belarusian	Belarusian			THREE_NUM	тры	trˈɨ	t r ˈɨ		THREE_NUM_1			
 Russian	Russian			THREE_NUM	три	trʲˈi	t rʲ ˈi		THREE_NUM_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			HARD_ADJ	twirˀtás	twirˀtˈas	t w i rˀ t ˈa s		HARD_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			HARD_ADJ	twirˀtás	twirˀtás	t w i rˀ t á s		HARD_ADJ_1			
 Lithuanian	Lithuanian			HARD_ADJ	tvìrtas	tʲvʲˈɪrtɐs	tʲ vʲ ˈɪ r t ɐ s		HARD_ADJ_1			
 Latvian	Latvian			HARD_ADJ	tvirts	tvˈirts	t v ˈi r t s		HARD_ADJ_1			
 Proto-Slavic	Proto-Slavic			HARD_ADJ	tvь̑rdъ	tvĭ̂rdŭ	t v ĭ̂ r d ŭ		HARD_ADJ_1			
 Bulgarian	Bulgarian			HARD_ADJ	твърд	tvˈɤrd̥	t v ˈɤ r d̥		HARD_ADJ_1			
 Macedonian	Macedonian			HARD_ADJ	тврд	tvˈr̩d̥	t v ˈr̩ d̥		HARD_ADJ_1			
-Štokavian	Štokavian			HARD_ADJ	tvȓd	tʋr̂ːd	t ʋ r̂ː d		HARD_ADJ_1			
-Čakavian	Čakavian			HARD_ADJ	tvȑd	tʋr̂d̥	t ʋ r̂ d̥		HARD_ADJ_1			
+Štokavian	Štokavian			HARD_ADJ	tvȓd	tʋr̩̂ːd	t ʋ r̩̂ː d		HARD_ADJ_1			
+Čakavian	Čakavian			HARD_ADJ	tvȑd	tʋr̩̂d̥	t ʋ r̩̂ d̥		HARD_ADJ_1			
 Slovenian	Slovenian			HARD_ADJ	tȓd	tə́rd̥	t ə́ r d̥		HARD_ADJ_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			FIRE_NOUN	úngnis	ˈuŋɡnis	ˈu ŋ ɡ n i s		FIRE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			FIRE_NOUN	úngnis	úŋɡnis	ú ŋ ɡ n i s		FIRE_NOUN_1			
 Lithuanian	Lithuanian			FIRE_NOUN	ugnìs	ʊɡnʲˈɪs	ʊ ɡ nʲ ˈɪ s		FIRE_NOUN_1			
 Latgalian	Latgalian			FIRE_NOUN	guņs	ɡˈunʲʦʲ	ɡ ˈu nʲ ʦʲ		FIRE_NOUN_1			
 Latvian	Latvian			FIRE_NOUN	uguns	ˈuɡuns	ˈu ɡ u n s		FIRE_NOUN_1			
@@ -983,7 +1001,7 @@ Russian	Russian			FIRE_NOUN	огонь	ɐɡˈonʲ	ɐ ɡ ˈo nʲ		FIRE_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			FIRE_NOUN		ɔɡˈɛɲ	ɔ ɡ ˈɛ ɲ		FIRE_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			FIRE_NOUN		ʔˈɔɡaːɲ	ʔ ˈɔ ɡ aː ɲ		FIRE_NOUN_1			
 Kajkavian	Kajkavian			FIRE_NOUN		ˈu̯oɡæɲ	ˈu̯o ɡ æ ɲ		FIRE_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			OX_NOUN	wálas	wˈalas	w ˈa l a s		OX_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			OX_NOUN	wálas	wálas	w á l a s		OX_NOUN_1			
 Proto-Slavic	Proto-Slavic			OX_NOUN	vòlъ	vǒlŭ	v ǒ l ŭ		OX_NOUN_1			
 Bulgarian	Bulgarian			OX_NOUN	вол	vˈɔɫ	v ˈɔ ɫ		OX_NOUN_1			
 Macedonian	Macedonian			OX_NOUN	вол	vˈoɫ	v ˈo ɫ		OX_NOUN_1			
@@ -997,8 +1015,8 @@ Polish	Polish			OX_NOUN	wół	vˈuw	v ˈu w		OX_NOUN_1
 Ukrainian	Ukrainian			OX_NOUN	віл	ʋʲˈiɫ	ʋʲ ˈi ɫ		OX_NOUN_1			
 Belarusian	Belarusian			OX_NOUN	вол	vˈoɫ	v ˈo ɫ		OX_NOUN_1			
 Russian	Russian			OX_NOUN	вол	vˈoɫ	v ˈo ɫ		OX_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			WATER_NOUN	wandō	wandˈoː	w a n d ˈoː		WATER_NOUN_1			
-Lithuanian	Lithuanian			WATER_NOUN	vanduõ	vɐndˈuə̯	v ɐ n d ˈuə̯		WATER_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			WATER_NOUN	wandō	wandoː	w a n d oː		WATER_NOUN_1			
+Lithuanian	Lithuanian			WATER_NOUN	vanduõ	vɐndǔə̯	v ɐ n d ǔə̯		WATER_NOUN_1			
 Latvian	Latvian			WATER_NOUN	ūdens	ˈuːdɛns	ˈuː d ɛ n s		WATER_NOUN_1			
 Old Prussian	Old Prussian			WATER_NOUN	wundan	vundan	v u n d a n		WATER_NOUN_1			
 Proto-Slavic	Proto-Slavic			WATER_NOUN	vodà	vodǎ	v o d ǎ		WATER_NOUN_1			
@@ -1020,7 +1038,7 @@ Russian	Russian			WATER_NOUN	вода	vɐdˈa	v ɐ d ˈa		WATER_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			WATER_NOUN		vɔdˈa	v ɔ d ˈa		WATER_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			WATER_NOUN		vu̯ɔ̌da	v u̯ɔ̌ d a		WATER_NOUN_1			
 Kajkavian	Kajkavian			WATER_NOUN		vˈu̯odɒ	v ˈu̯o d ɒ		WATER_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			WASP_NOUN	wápsāˀ	wˈapsaːˀ	w ˈa p s aːˀ		WASP_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			WASP_NOUN	wápsāˀ	wápsaːˀ	w á p s aːˀ		WASP_NOUN_1			
 Lithuanian	Lithuanian			WASP_NOUN	vapsvà	vɐpsvˈɐ	v ɐ p s v ˈɐ		WASP_NOUN_1			
 Latvian	Latvian			WASP_NOUN	lapsene	lˈapsɛnɛ	l ˈa p s ɛ n ɛ		WASP_NOUN_1			
 Proto-Slavic	Proto-Slavic			WASP_NOUN	osà	osǎ	o s ǎ		WASP_NOUN_1			
@@ -1036,8 +1054,8 @@ Polish	Polish			WASP_NOUN	osa	ˈɔsa	ˈɔ s a		WASP_NOUN_1
 Ukrainian	Ukrainian			WASP_NOUN	оса	ɔsˈɑ	ɔ s ˈɑ		WASP_NOUN_1			
 Belarusian	Belarusian			WASP_NOUN	аса	asˈa	a s ˈa		WASP_NOUN_1			
 Russian	Russian			WASP_NOUN	оса	ɐsˈa	ɐ s ˈa		WASP_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			WOLF_NOUN	wilkás	wilkˈas	w i l k ˈa s		WOLF_NOUN_1			
-Lithuanian	Lithuanian			WOLF_NOUN	vil̃kas	vʲˈɪɫkɐs	vʲ ˈɪ ɫ k ɐ s		WOLF_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			WOLF_NOUN	wilkás	wilkás	w i l k á s		WOLF_NOUN_1			
+Lithuanian	Lithuanian			WOLF_NOUN	vil̃kas	vʲɪ̌ɫkɐs	vʲ ɪ̌ ɫ k ɐ s		WOLF_NOUN_1			
 Latvian	Latvian			WOLF_NOUN	vilks	vˈilks	v ˈi l k s		WOLF_NOUN_1			
 Proto-Slavic	Proto-Slavic			WOLF_NOUN	vь̑lkъ	vĭ̂lkŭ	v ĭ̂ l k ŭ		WOLF_NOUN_1			
 Bulgarian	Bulgarian			WOLF_NOUN	вълк	vˈɤɫk	v ˈɤ ɫ k		WOLF_NOUN_1			
@@ -1054,7 +1072,7 @@ Kashubian	Kashubian			WOLF_NOUN	wôłk	vˈɞwk	v ˈɞ w k		WOLF_NOUN_1
 Ukrainian	Ukrainian			WOLF_NOUN	вовк	wˈɔʍk	w ˈɔ ʍ k		WOLF_NOUN_1			
 Belarusian	Belarusian			WOLF_NOUN	воўк	vˈowk	v ˈo w k		WOLF_NOUN_1			
 Russian	Russian			WOLF_NOUN	волк	vˈoɫk	v ˈo ɫ k		WOLF_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			TOOTH_NOUN	źámbas	ɡʲˈambas	ɡʲ ˈa m b a s		TOOTH_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			TOOTH_NOUN	źámbas	zʲámbas	zʲ á m b a s		TOOTH_NOUN_1			
 Latvian	Latvian			TOOTH_NOUN	zobs	zˈuɔ̯b̥s	z ˈuɔ̯ b̥ s		TOOTH_NOUN_1			
 Proto-Slavic	Proto-Slavic			TOOTH_NOUN	zǫ̑bъ	zõ̂bŭ	z õ̂ b ŭ		TOOTH_NOUN_1			
 Bulgarian	Bulgarian			TOOTH_NOUN	зъб	zˈɤb̥	z ˈɤ b̥		TOOTH_NOUN_1			
@@ -1075,8 +1093,8 @@ Russian	Russian			TOOTH_NOUN	зуб	zˈub̥	z ˈu b̥		TOOTH_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			TOOTH_NOUN		zûːp	z ûː p		TOOTH_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			TOOTH_NOUN		zub	z u b		TOOTH_NOUN_1			
 Kajkavian	Kajkavian			TOOTH_NOUN		zowb	z o w b		TOOTH_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			EARTH_NOUN	źémē	ɡʲˈemeː	ɡʲ ˈe m eː		EARTH_NOUN_1			
-Lithuanian	Lithuanian			EARTH_NOUN	žẽmė	ʑˈæːmʲe	ʑ ˈæː mʲ e		EARTH_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			EARTH_NOUN	źémē	zʲémeː	zʲ é m eː		EARTH_NOUN_1			
+Lithuanian	Lithuanian			EARTH_NOUN	žẽmė	ʑæ̌ːmʲe	ʑ æ̌ː mʲ e		EARTH_NOUN_1			
 Latvian	Latvian			EARTH_NOUN	zeme	zˈɛmɛ	z ˈɛ m ɛ		EARTH_NOUN_1			
 Proto-Slavic	Proto-Slavic			EARTH_NOUN	zemľà	zemʎǎ	z e m ʎ ǎ		EARTH_NOUN_1			
 Bulgarian	Bulgarian			EARTH_NOUN	земя	zɛmʲˈa	z ɛ mʲ ˈa		EARTH_NOUN_1			
@@ -1097,8 +1115,8 @@ Russian	Russian			EARTH_NOUN	земля	zʲɪmlʲˈa	zʲ ɪ m lʲ ˈa		EARTH_NOU
 Čakavian (Cres)	Čakavian (Cres)			EARTH_NOUN		zɛmjˈa	z ɛ m j ˈa		EARTH_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			EARTH_NOUN		zˈɛmʎa	z ˈɛ m ʎ a		EARTH_NOUN_1			
 Kajkavian	Kajkavian			EARTH_NOUN		zˈæmʎɒ	z ˈæ m ʎ ɒ		EARTH_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			KNOW_VERB	źinōˀtei	ɡʲinoːˀtei̯	ɡʲ i n oːˀ t ei̯		KNOW_VERB_1			
-Lithuanian	Lithuanian			KNOW_VERB	žinóti	ʑɪnˈoːtʲɪ	ʑ ɪ n ˈoː tʲ ɪ		KNOW_VERB_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			KNOW_VERB	źinōˀtei	zʲinoːˀtei̯	zʲ i n oːˀ t ei̯		KNOW_VERB_1			
+Lithuanian	Lithuanian			KNOW_VERB	žinóti	ʑɪnôːtʲɪ	ʑ ɪ n ôː tʲ ɪ		KNOW_VERB_1			
 Latvian	Latvian			KNOW_VERB	zināt	zˈinaːt	z ˈi n aː t		KNOW_VERB_1			
 Proto-Slavic	Proto-Slavic			KNOW_VERB	znàti	znǎti	z n ǎ t i		KNOW_VERB_1			
 Bulgarian	Bulgarian			KNOW_VERB	зная	znˈajɐ	z n ˈa j ɐ		KNOW_VERB_1			
@@ -1114,8 +1132,8 @@ Kashubian	Kashubian			KNOW_VERB	znac	znˈaʦ	z n ˈa ʦ		KNOW_VERB_1
 Ukrainian	Ukrainian			KNOW_VERB	знати	znˈɑte	z n ˈɑ t e		KNOW_VERB_1			
 Belarusian	Belarusian			KNOW_VERB	знаць	znˈaʦʲ	z n ˈa ʦʲ		KNOW_VERB_1			
 Russian	Russian			KNOW_VERB	знать	znˈatʲ	z n ˈa tʲ		KNOW_VERB_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			STAR_NOUN	źwaisdā́ˀ	ɡʲwai̯zdˈaːˀ	ɡʲ w ai̯ z d ˈaːˀ		STAR_NOUN_1			
-Lithuanian	Lithuanian			STAR_NOUN	žvaigždė̃	ʒvɐɪ̯ɡʲʑdʲˈeː	ʒ v ɐɪ̯ ɡʲ ʑ dʲ ˈeː		STAR_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			STAR_NOUN	źwaisdā́ˀ	zʲwai̯zdáːˀ	zʲ w ai̯ z d áːˀ		STAR_NOUN_1			
+Lithuanian	Lithuanian			STAR_NOUN	žvaigždė̃	ʒvɐɪ̯ɡʲʑdʲěː	ʒ v ɐɪ̯ ɡʲ ʑ dʲ ěː		STAR_NOUN_1			
 Samogitian	Samogitian			STAR_NOUN	žvaiždie	ʒvaɪ̯ʒdˈiɛ̯	ʒ v aɪ̯ ʒ d ˈiɛ̯		STAR_NOUN_1			
 Latgalian	Latgalian			STAR_NOUN	zvaigzne	zvˈai̯ɡznɛ	z v ˈai̯ ɡ z n ɛ		STAR_NOUN_1			
 Latvian	Latvian			STAR_NOUN	zvaigzne	zvˈai̯ɡznɛ	z v ˈai̯ ɡ z n ɛ		STAR_NOUN_1			
@@ -1139,7 +1157,7 @@ Russian	Russian			STAR_NOUN	звезда	zvʲɪzdˈa	z vʲ ɪ z d ˈa		STAR_NOUN
 Čakavian (Cres)	Čakavian (Cres)			STAR_NOUN		zvɛzdˈa	z v ɛ z d ˈa		STAR_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			STAR_NOUN		zvjêzda	z v j ê z d a		STAR_NOUN_1			
 Kajkavian	Kajkavian			STAR_NOUN		zvˈejzdɒ	z v ˈe j z d ɒ		STAR_NOUN_1			
-Proto-Balto-Slavic	Proto-Balto-Slavic			BEAST_NOUN	źwēˀrís	ɡʲweːˀrˈis	ɡʲ w eːˀ r ˈi s		BEAST_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			BEAST_NOUN	źwēˀrís	zʲweːˀrís	zʲ w eːˀ r í s		BEAST_NOUN_1			
 Lithuanian	Lithuanian			BEAST_NOUN	žvėrìs	ʑvʲerʲˈɪs	ʑ vʲ e rʲ ˈɪ s		BEAST_NOUN_1			
 Proto-Slavic	Proto-Slavic			BEAST_NOUN	zvě̑rь 	zvɛ̂ːrĭ	z v ɛ̂ː r ĭ		BEAST_NOUN_1			
 Bulgarian	Bulgarian			BEAST_NOUN	звяр	zvʲˈar	z vʲ ˈa r		BEAST_NOUN_1			
@@ -1151,7 +1169,7 @@ Slovak	Slovak			BEAST_NOUN	zver	zʋˈɛr	z ʋ ˈɛ r		BEAST_NOUN_1
 Czech	Czech			BEAST_NOUN	zvěř	zvjˈɛr̝̊	z v j ˈɛ r̝̊		BEAST_NOUN_1			
 Upper Sorbian	Upper Sorbian			BEAST_NOUN	zwěrjo	zɥˈeʀʲɔ	z ɥ ˈe ʀʲ ɔ		BEAST_NOUN_1			
 Lower Sorbian	Lower Sorbian			BEAST_NOUN	zwěrje	zvʲˈɪrʲe	z vʲ ˈɪ rʲ e		BEAST_NOUN_1			
-Polish	Polish			BEAST_NOUN	zwierz	zvjˈɛʂ	z v j ˈɛ ʂ		BEAST_NOUN_1			
+Polish	Polish			BEAST_NOUN	zwierz	zvjˈɛʐ̊	z v j ˈɛ ʐ̊		BEAST_NOUN_1			
 Kashubian	Kashubian			BEAST_NOUN	zwierzã	zvjˈɛʐã	z v j ˈɛ ʐ ã		BEAST_NOUN_1			
 Ukrainian	Ukrainian			BEAST_NOUN	звір	zʲʋʲˈir	zʲ ʋʲ ˈi r		BEAST_NOUN_1			
 Belarusian	Belarusian			BEAST_NOUN	звер	zʲvʲˈer	zʲ vʲ ˈe r		BEAST_NOUN_1			
@@ -1213,7 +1231,7 @@ Kashubian	Kashubian			WHOLE_ADJ	całi	ʦˈawi	ʦ ˈa w i		WHOLE_ADJ_2
 Ukrainian	Ukrainian			WHOLE_ADJ	цілий	ʦʲˈiɫej	ʦʲ ˈi ɫ e j		WHOLE_ADJ_2			
 Belarusian	Belarusian			WHOLE_ADJ	цэлы	ʦˈɛɫɨ	ʦ ˈɛ ɫ ɨ		WHOLE_ADJ_2			
 Russian	Russian			WHOLE_ADJ	целый	ʦˈɛɫɨj	ʦ ˈɛ ɫ ɨ j		WHOLE_ADJ_2			
-Lithuanian	Lithuanian			BLACK_ADJ	kir̃snas	kʲˈɪrsnɐs	kʲ ˈɪ r s n ɐ s		BLACK_ADJ_1			
+Lithuanian	Lithuanian			BLACK_ADJ	kir̃snas	kʲɪ̌rsnɐs	kʲ ɪ̌ r s n ɐ s		BLACK_ADJ_1			
 Proto-Slavic	Proto-Slavic			BLACK_ADJ	čь̀rnъ	ʧĭ̌rnŭ	ʧ ĭ̌ r n ŭ		BLACK_ADJ_1			
 Bulgarian	Bulgarian			BLACK_ADJ	черен	ʧˈɛrɛn	ʧ ˈɛ r ɛ n		BLACK_ADJ_1			
 Macedonian	Macedonian			BLACK_ADJ	црн	ʦˈr̩n	ʦ ˈr̩ n		BLACK_ADJ_1			
@@ -1324,17 +1342,17 @@ Russian	Russian			TONGUE_NOUN	язык	jɪzˈɨk	j ɪ z ˈɨ k		TONGUE_NOUN_1
 Čakavian (Burgenland)	Čakavian (Burgenland)			TONGUE_NOUN		jˈɛziːk	j ˈɛ z iː k		TONGUE_NOUN_1			
 Kajkavian	Kajkavian			TONGUE_NOUN		jˈæzik	j ˈæ z i k		TONGUE_NOUN_1			
 Proto-Slavic	Proto-Slavic			SMOOTH_ADJ	glàdъkъjь	ɡlaˀdŭkŭjĭ	ɡ l aˀ d ŭ k ŭ j ĭ		SMOOTH_ADJ_2			
-Štokavian	Štokavian			SMOOTH_ADJ	glàtkī	ɡlǎtkiː	ɡ l ǎ t k iː		SMOOTH_ADJ_2			
-Slovak	Slovak			SMOOTH_ADJ	hladký	ɦɫˈatkiː	ɦ ɫ ˈa t k iː		SMOOTH_ADJ_2			
-Czech	Czech			SMOOTH_ADJ	hladký	ɦlˈatkiː	ɦ l ˈa t k iː		SMOOTH_ADJ_2			
-Upper Sorbian	Upper Sorbian			SMOOTH_ADJ	hładki	ɦwˈatkʲi	ɦ w ˈa t kʲ i		SMOOTH_ADJ_2			
-Lower Sorbian	Lower Sorbian			SMOOTH_ADJ	gładki	ɡwˈatkʲi	ɡ w ˈa t kʲ i		SMOOTH_ADJ_2			
-Polish	Polish			SMOOTH_ADJ	gładki	ɡwˈatki	ɡ w ˈa t k i		SMOOTH_ADJ_2			
-Kashubian	Kashubian			SMOOTH_ADJ	głôdczi	ɡwˈɞtʧi	ɡ w ˈɞ t ʧ i		SMOOTH_ADJ_2			
+Štokavian	Štokavian			SMOOTH_ADJ	glàtkī	ɡlǎd̥kiː	ɡ l ǎ d̥ k iː		SMOOTH_ADJ_2			
+Slovak	Slovak			SMOOTH_ADJ	hladký	ɦɫˈad̥kiː	ɦ ɫ ˈa d̥ k iː		SMOOTH_ADJ_2			
+Czech	Czech			SMOOTH_ADJ	hladký	ɦlˈad̥kiː	ɦ l ˈa d̥ k iː		SMOOTH_ADJ_2			
+Upper Sorbian	Upper Sorbian			SMOOTH_ADJ	hładki	ɦwˈad̥kʲi	ɦ w ˈa d̥ kʲ i		SMOOTH_ADJ_2			
+Lower Sorbian	Lower Sorbian			SMOOTH_ADJ	gładki	ɡwˈad̥kʲi	ɡ w ˈa d̥ kʲ i		SMOOTH_ADJ_2			
+Polish	Polish			SMOOTH_ADJ	gładki	ɡwˈad̥ki	ɡ w ˈa d̥ k i		SMOOTH_ADJ_2			
+Kashubian	Kashubian			SMOOTH_ADJ	głôdczi	ɡwˈɞd̥ʧi	ɡ w ˈɞ d̥ ʧ i		SMOOTH_ADJ_2			
 Ukrainian	Ukrainian			SMOOTH_ADJ	гладкий	ɦɫɐdkˈɪj	ɦ ɫ ɐ d k ˈɪ j		SMOOTH_ADJ_2			
 Ukrainian	Ukrainian			SMOOTH_ADJ	гладкий	ɦɫˈɑdkej	ɦ ɫ ˈɑ d k e j		SMOOTH_ADJ_2			
-Belarusian	Belarusian			SMOOTH_ADJ	гладкі	ɣɫˈatʲkʲi	ɣ ɫ ˈa tʲ kʲ i		SMOOTH_ADJ_2			
-Russian	Russian			SMOOTH_ADJ	гладкий	ɡɫˈatkʲɪj	ɡ ɫ ˈa t kʲ ɪ j		SMOOTH_ADJ_2			
+Belarusian	Belarusian			SMOOTH_ADJ	гладкі	ɣɫˈad̥ʲkʲi	ɣ ɫ ˈa d̥ʲ kʲ i		SMOOTH_ADJ_2			
+Russian	Russian			SMOOTH_ADJ	гладкий	ɡɫˈad̥kʲɪj	ɡ ɫ ˈa d̥ kʲ ɪ j		SMOOTH_ADJ_2			
 Proto-Slavic	Proto-Slavic			STUPID_ADJ	glũpъ	ɡlǔːpŭ	ɡ l ǔː p ŭ		STUPID_ADJ_1			
 Bulgarian	Bulgarian			STUPID_ADJ	глуп	ɡɫˈup	ɡ ɫ ˈu p		STUPID_ADJ_1			
 Macedonian	Macedonian			STUPID_ADJ	глуп	ɡɫˈup	ɡ ɫ ˈu p		STUPID_ADJ_1			
@@ -1414,7 +1432,7 @@ Russian	Russian			NAME_NOUN	имя	ˈimʲə	ˈi mʲ ə		NAME_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			NAME_NOUN		ˈimɛ	ˈi m ɛ		NAME_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			NAME_NOUN		ʔimɛ	ʔ i m ɛ		NAME_NOUN_1			
 Kajkavian	Kajkavian			NAME_NOUN		ˈimæ	ˈi m æ		NAME_NOUN_1			
-Lithuanian	Lithuanian			KNEE_NOUN	kẽlis	kʲˈæːlʲɪs	kʲ ˈæː lʲ ɪ s		KNEE_NOUN_1			
+Lithuanian	Lithuanian			KNEE_NOUN	kẽlis	kʲ̌æːlʲɪs	kʲ̌ æː lʲ ɪ s		KNEE_NOUN_1			
 Latvian	Latvian			KNEE_NOUN	celis	ʦˈɛlis	ʦ ˈɛ l i s		KNEE_NOUN_1			
 Proto-Slavic	Proto-Slavic			KNEE_NOUN	kolě̋no	kolɛˀno	k o l ɛˀ n o		KNEE_NOUN_1			
 Bulgarian	Bulgarian			KNEE_NOUN	коляно	kolʲˈano	k o lʲ ˈa n o		KNEE_NOUN_1			
@@ -1450,7 +1468,7 @@ Kashubian	Kashubian			HORSE_NOUN	kóń	kˈuɲ	k ˈu ɲ		HORSE_NOUN_1
 Ukrainian	Ukrainian			HORSE_NOUN	кінь	kʲˈinʲ	kʲ ˈi nʲ		HORSE_NOUN_1			
 Belarusian	Belarusian			HORSE_NOUN	конь	kˈonʲ	k ˈo nʲ		HORSE_NOUN_1			
 Russian	Russian			HORSE_NOUN	конь	kˈonʲ	k ˈo nʲ		HORSE_NOUN_1			
-Lithuanian	Lithuanian			ROOT_NOUN	kẽras	kʲˈæːrɐs	kʲ ˈæː r ɐ s		ROOT_NOUN_1			
+Lithuanian	Lithuanian			ROOT_NOUN	kẽras	kʲ̌æːrɐs	kʲ̌ æː r ɐ s		ROOT_NOUN_1			
 Proto-Slavic	Proto-Slavic			ROOT_NOUN	kȍrě̄nь	kôrɛːnĭ	k ô r ɛː n ĭ		ROOT_NOUN_1			
 Bulgarian	Bulgarian			ROOT_NOUN	корен	kˈɔrɛn	k ˈɔ r ɛ n		ROOT_NOUN_1			
 Macedonian	Macedonian			ROOT_NOUN	корен	kˈorɛn	k ˈo r ɛ n		ROOT_NOUN_1			
@@ -1470,7 +1488,7 @@ Russian	Russian			ROOT_NOUN	корень	kˈorʲɪnʲ	k ˈo rʲ ɪ nʲ		ROOT_NOU
 Čakavian (Cres)	Čakavian (Cres)			ROOT_NOUN		kɔ̌ːrɛn	k ɔ̌ː r ɛ n		ROOT_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			ROOT_NOUN		ku̯ɔ̌rɛn	k u̯ɔ̌ r ɛ n		ROOT_NOUN_1			
 Kajkavian	Kajkavian			ROOT_NOUN		kˈu̯orænɒ	k ˈu̯o r æ n ɒ		ROOT_NOUN_1			
-Lithuanian	Lithuanian			KING_NOUN	karãlius	kɐrˈaːlʲʊs	k ɐ r ˈaː lʲ ʊ s		KING_NOUN_1	TRUE		
+Lithuanian	Lithuanian			KING_NOUN	karãlius	kɐrǎːlʲʊs	k ɐ r ǎː lʲ ʊ s		KING_NOUN_1	TRUE		
 Latvian	Latvian			KING_NOUN	karalis	kˈaralis	k ˈa r a l i s		KING_NOUN_1	TRUE		
 Proto-Slavic	Proto-Slavic			KING_NOUN	kõrľь	kǒːrʎŭ	k ǒː r ʎ ŭ		KING_NOUN_1			
 Bulgarian	Bulgarian			KING_NOUN	крал	krˈaɫ	k r ˈa ɫ		KING_NOUN_1			
@@ -1574,7 +1592,7 @@ Kashubian	Kashubian			FOREST_NOUN	las	lˈas	l ˈa s		FOREST_NOUN_1
 Ukrainian	Ukrainian			FOREST_NOUN	ліс	lʲˈis	lʲ ˈi s		FOREST_NOUN_1			
 Belarusian	Belarusian			FOREST_NOUN	лес	lʲˈes	lʲ ˈe s		FOREST_NOUN_1			
 Russian	Russian			FOREST_NOUN	лес	lʲˈes	lʲ ˈe s		FOREST_NOUN_1			
-Lithuanian	Lithuanian			LEAF_NOUN	láiškas	ɫˈaɪ̯ʃkɐs	ɫ ˈaɪ̯ ʃ k ɐ s		LEAF_NOUN_1			
+Lithuanian	Lithuanian			LEAF_NOUN	láiškas	ɫâɪ̯ʃkɐs	ɫ âɪ̯ ʃ k ɐ s		LEAF_NOUN_1			
 Old Prussian	Old Prussian			LEAF_NOUN	lāiskas	laːi̯skas	l aːi̯ s k a s		LEAF_NOUN_1			
 Proto-Slavic	Proto-Slavic			LEAF_NOUN	lȋstъ	lîːstŭ	l îː s t ŭ		LEAF_NOUN_1			
 Bulgarian	Bulgarian			LEAF_NOUN	лист	lˈist	l ˈi s t		LEAF_NOUN_1			
@@ -1624,7 +1642,7 @@ Kashubian	Kashubian			MILK_NOUN	mélkò	melku̯ˈɛ	m e l k u̯ˈɛ		MILK_NOUN_1
 Ukrainian	Ukrainian			MILK_NOUN	молоко	mɔɫɔkˈɔ	m ɔ ɫ ɔ k ˈɔ		MILK_NOUN_1			
 Belarusian	Belarusian			MILK_NOUN	малако	mʌɫakˈo	m ʌ ɫ a k ˈo		MILK_NOUN_1			
 Russian	Russian			MILK_NOUN	молоко	məɫɐkˈo	m ə ɫ ɐ k ˈo		MILK_NOUN_1			
-Lithuanian	Lithuanian			MONTH_NOUN	mė́nesis	mʲˈeːnʲɛsʲɪs	mʲ ˈeː nʲ ɛ sʲ ɪ s		MONTH_NOUN_1			
+Lithuanian	Lithuanian			MONTH_NOUN	mė́nesis	mʲêːnʲɛsʲɪs	mʲ êː nʲ ɛ sʲ ɪ s		MONTH_NOUN_1			
 Latvian	Latvian			MONTH_NOUN	mēness	mˈɛːness	m ˈɛː n e s s		MONTH_NOUN_1			
 Proto-Slavic	Proto-Slavic			MONTH_NOUN	mě̀sę̄cь	mɛˀsẽːʦĭ	m ɛˀ s ẽː ʦ ĭ		MONTH_NOUN_1			
 Bulgarian	Bulgarian			MONTH_NOUN	месец	mˈɛsɛʦ	m ˈɛ s ɛ ʦ		MONTH_NOUN_1			
@@ -1659,7 +1677,7 @@ Kashubian	Kashubian			PLACE_NOUN	miasto	mjˈastɔ	m j ˈa s t ɔ		PLACE_NOUN_1
 Ukrainian	Ukrainian			PLACE_NOUN	місто	mʲˈistɔ	mʲ ˈi s t ɔ		PLACE_NOUN_1			
 Belarusian	Belarusian			PLACE_NOUN	места	mʲˈesta	mʲ ˈe s t a		PLACE_NOUN_1			
 Russian	Russian			PLACE_NOUN	место	mʲˈestə	mʲ ˈe s t ə		PLACE_NOUN_1			
-Lithuanian	Lithuanian			SEA_NOUN	mãrios	mˈaːrʲos	m ˈaː rʲ o s		SEA_NOUN_1			
+Lithuanian	Lithuanian			SEA_NOUN	mãrios	mǎːrʲos	m ǎː rʲ o s		SEA_NOUN_1			
 Proto-Slavic	Proto-Slavic			SEA_NOUN	mȍře	môrʲe	m ô rʲ e		SEA_NOUN_1			
 Bulgarian	Bulgarian			SEA_NOUN	море	morˈɛ	m o r ˈɛ		SEA_NOUN_1			
 Macedonian	Macedonian			SEA_NOUN	море	mˈorɛ	m ˈo r ɛ		SEA_NOUN_1			
@@ -1692,7 +1710,7 @@ Ukrainian	Ukrainian			THOUGHT_NOUN	мисль	mˈɪsʲlʲ	m ˈɪ sʲ lʲ		THOUGH
 Belarusian	Belarusian			THOUGHT_NOUN	мысль	mˈɨsʲlʲ	m ˈɨ sʲ lʲ		THOUGHT_NOUN_1			
 Russian	Russian			THOUGHT_NOUN	мысль	mˈɨsʲlʲ	m ˈɨ sʲ lʲ		THOUGHT_NOUN_1			
 Proto-Slavic	Proto-Slavic			DEAD_ADJ	mь̃rtvъjь	mĭ̌ːrtvŭjĭ	m ĭ̌ː r t v ŭ j ĭ		DEAD_ADJ_2			
-Štokavian	Štokavian			DEAD_ADJ	mȓtvī	mr̂ːtʋiː	m r̂ː t ʋ iː		DEAD_ADJ_2			
+Štokavian	Štokavian			DEAD_ADJ	mȓtvī	mr̩̂ːtʋiː	m r̩̂ː t ʋ iː		DEAD_ADJ_2			
 Slovak	Slovak			DEAD_ADJ	mŕtvy	mˈr̩ːtʋi	m ˈr̩ː t ʋ i		DEAD_ADJ_2			
 Czech	Czech			DEAD_ADJ	mrtvý	mˈr̩tviː	m ˈr̩ t v iː		DEAD_ADJ_2			
 Upper Sorbian	Upper Sorbian			DEAD_ADJ	mortwy	mˈɔʀtβɪ	m ˈɔ ʀ t β ɪ		DEAD_ADJ_2			
@@ -1844,17 +1862,6 @@ Ukrainian	Ukrainian			FULL_ADJ	повний	pˈɔʋnej	p ˈɔ ʋ n e j		FULL_ADJ
 Belarusian	Belarusian			FULL_ADJ	поўны	pˈownɨ	p ˈo w n ɨ		FULL_ADJ_2			
 Russian	Russian			FULL_ADJ	полный	pˈoɫnɨj	p ˈo ɫ n ɨ j		FULL_ADJ_2			
 Čakavian (Cres)	Čakavian (Cres)			FULL_ADJ		pˈɛlni	p ˈɛ l n i		FULL_ADJ_2			
-Proto-Slavic	Proto-Slavic			FINGER_NOUN	pь̀rstъ	pĭ̌rstŭ	p ĭ̌ r s t ŭ		FINGER_NOUN_1			
-Bulgarian	Bulgarian			FINGER_NOUN	пръст	prˈɤst	p r ˈɤ s t		FINGER_NOUN_1			
-Macedonian	Macedonian			FINGER_NOUN	прст	pˈr̩st	p ˈr̩ s t		FINGER_NOUN_1			
-Štokavian	Štokavian			FINGER_NOUN	pȑst	pr̩̂st	p r̩̂ s t		FINGER_NOUN_1			
-Čakavian	Čakavian			FINGER_NOUN	pȑst	pr̩̂st	p r̩̂ s t		FINGER_NOUN_1			
-Slovenian	Slovenian			FINGER_NOUN	pȓst	pə́rst	p ə́ r s t		FINGER_NOUN_1			
-Slovak	Slovak			FINGER_NOUN	prst	pˈr̩st	p ˈr̩ s t		FINGER_NOUN_1			
-Czech	Czech			FINGER_NOUN	prst	pˈr̩st	p ˈr̩ s t		FINGER_NOUN_1			
-Upper Sorbian	Upper Sorbian			FINGER_NOUN	porst	pˈɔʀst	p ˈɔ ʀ s t		FINGER_NOUN_1			
-Ukrainian	Ukrainian			FINGER_NOUN	перст	pˈɛrst	p ˈɛ r s t		FINGER_NOUN_1			
-Russian	Russian			FINGER_NOUN	перст	pʲˈerst	pʲ ˈe r s t		FINGER_NOUN_1			
 Proto-Slavic	Proto-Slavic			DOG_NOUN	pь̀sъ	pĭ̌sŭ	p ĭ̌ s ŭ		DOG_NOUN_1			
 Štokavian	Štokavian			DOG_NOUN	pȁs	pâs	p â s		DOG_NOUN_1			
 Čakavian	Čakavian			DOG_NOUN	pȁs	pâs	p â s		DOG_NOUN_1			
@@ -1988,15 +1995,15 @@ Ukrainian	Ukrainian			WARM_ADJ	теплий	tˈɛpɫej	t ˈɛ p ɫ e j		WARM_ADJ
 Belarusian	Belarusian			WARM_ADJ	цёплы	ʦʲˈɵpɫɨ	ʦʲ ˈɵ p ɫ ɨ		WARM_ADJ_1			
 Russian	Russian			WARM_ADJ	тёплый	tʲˈɵpɫɨj	tʲ ˈɵ p ɫ ɨ j		WARM_ADJ_1			
 Proto-Slavic	Proto-Slavic			HEAVY_ADJ	tęžьkъjь	tẽʒĭkŭjĭ	t ẽ ʒ ĭ k ŭ j ĭ		HEAVY_ADJ_2			
-Slovak	Slovak			HEAVY_ADJ	ťažký	cˈaʃkiː	c ˈa ʃ k iː		HEAVY_ADJ_2			
-Czech	Czech			HEAVY_ADJ	těžký	cˈɛʃkiː	c ˈɛ ʃ k iː		HEAVY_ADJ_2			
-Upper Sorbian	Upper Sorbian			HEAVY_ADJ	ćežki	ʧˈɛʃkʲi	ʧ ˈɛ ʃ kʲ i		HEAVY_ADJ_2			
-Lower Sorbian	Lower Sorbian			HEAVY_ADJ	śěžki	ɕˈɪʂkʲi	ɕ ˈɪ ʂ kʲ i		HEAVY_ADJ_2			
-Polish	Polish			HEAVY_ADJ	ciężki	ʨˈɛw̃ʂki	ʨ ˈɛ w̃ ʂ k i		HEAVY_ADJ_2			
-Kashubian	Kashubian			HEAVY_ADJ	czãżczi	ʧˈaŋʃʧi	ʧ ˈa ŋ ʃ ʧ i		HEAVY_ADJ_2			
+Slovak	Slovak			HEAVY_ADJ	ťažký	cˈaʒ̊kiː	c ˈa ʒ̊ k iː		HEAVY_ADJ_2			
+Czech	Czech			HEAVY_ADJ	těžký	cˈɛʒ̊kiː	c ˈɛ ʒ̊ k iː		HEAVY_ADJ_2			
+Upper Sorbian	Upper Sorbian			HEAVY_ADJ	ćežki	ʧˈɛʒ̊kʲi	ʧ ˈɛ ʒ̊ kʲ i		HEAVY_ADJ_2			
+Lower Sorbian	Lower Sorbian			HEAVY_ADJ	śěžki	ɕˈɪʐ̊kʲi	ɕ ˈɪ ʐ̊ kʲ i		HEAVY_ADJ_2			
+Polish	Polish			HEAVY_ADJ	ciężki	ʨˈɛw̃ʐ̊ki	ʨ ˈɛ w̃ ʐ̊ k i		HEAVY_ADJ_2			
+Kashubian	Kashubian			HEAVY_ADJ	czãżczi	ʧˈaŋʒ̊ʧi	ʧ ˈa ŋ ʒ̊ ʧ i		HEAVY_ADJ_2			
 Ukrainian	Ukrainian			HEAVY_ADJ	тяжкий	tʲɐʒkˈɪj	tʲ ɐ ʒ k ˈɪ j		HEAVY_ADJ_2			
-Belarusian	Belarusian			HEAVY_ADJ	цяжкі	ʦʲˈæʂkʲi	ʦʲ ˈæ ʂ kʲ i		HEAVY_ADJ_2			
-Russian	Russian			HEAVY_ADJ	тяжкий	tʲˈaʂkʲɪj	tʲ ˈa ʂ kʲ ɪ j		HEAVY_ADJ_2			
+Belarusian	Belarusian			HEAVY_ADJ	цяжкі	ʦʲˈæʐ̊kʲi	ʦʲ ˈæ ʐ̊ kʲ i		HEAVY_ADJ_2			
+Russian	Russian			HEAVY_ADJ	тяжкий	tʲˈaʐ̊kʲɪj	tʲ ˈa ʐ̊ kʲ ɪ j		HEAVY_ADJ_2			
 Proto-Slavic	Proto-Slavic			QUIET_ADJ	tixъjь	tixŭjĭ	t i x ŭ j ĭ		QUIET_ADJ_2			
 Slovak	Slovak			QUIET_ADJ	tichý	cˈixiː	c ˈi x iː		QUIET_ADJ_2			
 Czech	Czech			QUIET_ADJ	tichý	cˈɪxiː	c ˈɪ x iː		QUIET_ADJ_2			
@@ -2108,7 +2115,7 @@ Polish	Polish			DRAG_VERB	wlec	vlˈɛʦ	v l ˈɛ ʦ		DRAG_VERB_1
 Ukrainian	Ukrainian			DRAG_VERB	волокти	wɔɫɔktˈɪ	w ɔ ɫ ɔ k t ˈɪ		DRAG_VERB_1			
 Belarusian	Belarusian			DRAG_VERB	валачы	vʌɫaʧˈɨ	v ʌ ɫ a ʧ ˈɨ		DRAG_VERB_1			
 Russian	Russian			DRAG_VERB	волочь	vɐɫˈoʨ	v ɐ ɫ ˈo ʨ		DRAG_VERB_1			
-Lithuanian	Lithuanian			WIND_NOUN	vė́jas	vʲˈeːjɐs	vʲ ˈeː j ɐ s		WIND_NOUN_1			
+Lithuanian	Lithuanian			WIND_NOUN	vė́jas	vʲêːjɐs	vʲ êː j ɐ s		WIND_NOUN_1			
 Latvian	Latvian			WIND_NOUN	vējš	vˈɛːjʃ	v ˈɛː j ʃ		WIND_NOUN_1			
 Proto-Slavic	Proto-Slavic			WIND_NOUN	vě̀trъ	vɛˀtrŭ	v ɛˀ t r ŭ		WIND_NOUN_1			
 Bulgarian	Bulgarian			WIND_NOUN	вятър	vʲˈatɐr	vʲ ˈa t ɐ r		WIND_NOUN_1			
@@ -2193,7 +2200,7 @@ Kashubian	Kashubian			BREAD_NOUN	chléb	xlˈeb̥	x l ˈe b̥		BREAD_NOUN_1
 Ukrainian	Ukrainian			BREAD_NOUN	хліб	xlʲˈib	x lʲ ˈi b		BREAD_NOUN_1			
 Belarusian	Belarusian			BREAD_NOUN	хлеб	xlʲˈeb̥	x lʲ ˈe b̥		BREAD_NOUN_1			
 Russian	Russian			BREAD_NOUN	хлеб	xlʲˈeb̥	x lʲ ˈe b̥		BREAD_NOUN_1			
-Lithuanian	Lithuanian			COLD_ADJ	šáltas	ʃˈaːɫtɐs	ʃ ˈaː ɫ t ɐ s		COLD_ADJ_1			
+Lithuanian	Lithuanian			COLD_ADJ	šáltas	ʃâːɫtɐs	ʃ âː ɫ t ɐ s		COLD_ADJ_1			
 Proto-Slavic	Proto-Slavic			COLD_ADJ	xȏldьnъ	xôːldĭnŭ	x ôː l d ĭ n ŭ		COLD_ADJ_1			
 Bulgarian	Bulgarian			COLD_ADJ	хладен	xɫˈadɛn	x ɫ ˈa d ɛ n		COLD_ADJ_1			
 Macedonian	Macedonian			COLD_ADJ	ладен	ɫˈaden	ɫ ˈa d e n		COLD_ADJ_1			
@@ -2223,11 +2230,11 @@ Czech	Czech			SPINE_NOUN	hřbet	ɦr̝bˈɛt	ɦ r̝ b ˈɛ t		SPINE_NOUN_1
 Upper Sorbian	Upper Sorbian			SPINE_NOUN	chribjet	xʀʲˈibʲet	x ʀʲ ˈi bʲ e t		SPINE_NOUN_1			
 Lower Sorbian	Lower Sorbian			SPINE_NOUN	kśebjat	kɕˈebʲat	k ɕ ˈe bʲ a t		SPINE_NOUN_1			
 Polish	Polish			SPINE_NOUN	grzbiet	ɡʐbjˈɛt	ɡ ʐ b j ˈɛ t		SPINE_NOUN_1			
-Kashubian	Kashubian			SPINE_NOUN	chrzëbt	xʂˈəpt	x ʂ ˈə p t		SPINE_NOUN_1			
+Kashubian	Kashubian			SPINE_NOUN	chrzëbt	xʐ̊ˈəpt	x ʐ̊ ˈə p t		SPINE_NOUN_1			
 Ukrainian	Ukrainian			SPINE_NOUN	хребет	xrebˈɛt	x r e b ˈɛ t		SPINE_NOUN_1			
 Belarusian	Belarusian			SPINE_NOUN	хрыбет	xrɨbʲˈet	x r ɨ bʲ ˈe t		SPINE_NOUN_1			
 Russian	Russian			SPINE_NOUN	хребет	xrʲɪbʲˈet	x rʲ ɪ bʲ ˈe t		SPINE_NOUN_1			
-Lithuanian	Lithuanian			GREEN_ADJ	žãlias	ʒˈaːlʲɐs	ʒ ˈaː lʲ ɐ s		GREEN_ADJ_1			
+Lithuanian	Lithuanian			GREEN_ADJ	žãlias	ʒǎːlʲɐs	ʒ ǎː lʲ ɐ s		GREEN_ADJ_1			
 Latvian	Latvian			GREEN_ADJ	zaļš	zˈaʎʃ	z ˈa ʎ ʃ		GREEN_ADJ_1			
 Proto-Slavic	Proto-Slavic			GREEN_ADJ	zelènъ	zelěnŭ	z e l ě n ŭ		GREEN_ADJ_1			
 Bulgarian	Bulgarian			GREEN_ADJ	зелен	zɛlˈɛn	z ɛ l ˈɛ n		GREEN_ADJ_1			
@@ -2259,7 +2266,7 @@ Kashubian	Kashubian			LIVE_VERB	żëc	ʒˈəʦ	ʒ ˈə ʦ		LIVE_VERB_1
 Ukrainian	Ukrainian			LIVE_VERB	жити	ʒˈɪte	ʒ ˈɪ t e		LIVE_VERB_1			
 Belarusian	Belarusian			LIVE_VERB	жыць	ʐˈɨʦʲ	ʐ ˈɨ ʦʲ		LIVE_VERB_1			
 Russian	Russian			LIVE_VERB	жить	ʐˈɨtʲ	ʐ ˈɨ tʲ		LIVE_VERB_1			
-Lithuanian	Lithuanian			LIVE_VERB	gyvénti	ɡʲivʲˈæːnʲtʲɪ	ɡʲ i vʲ ˈæː nʲ tʲ ɪ		LIVE_VERB_2			
+Lithuanian	Lithuanian			LIVE_VERB	gyvénti	ɡʲivʲæ̂ːnʲtʲɪ	ɡʲ i vʲ æ̂ː nʲ tʲ ɪ		LIVE_VERB_2			
 Latvian	Latvian			LIVE_VERB	dzīvot	ʣˈiːvuɔ̯t	ʣ ˈiː v uɔ̯ t		LIVE_VERB_2			
 Proto-Slavic	Proto-Slavic			LIVE_VERB	živěti	ʒivɛti	ʒ i v ɛ t i		LIVE_VERB_2			
 Bulgarian	Bulgarian			LIVE_VERB	живея	ʒivˈɛjɐ	ʒ i v ˈɛ j ɐ		LIVE_VERB_2			
@@ -2267,7 +2274,7 @@ Macedonian	Macedonian			LIVE_VERB	живее	ʒˈivɛɛ	ʒ ˈi v ɛ ɛ		LIVE_VER
 Štokavian	Štokavian			LIVE_VERB	žívjeti	ʒǐːʋjeti	ʒ ǐː ʋ j e t i		LIVE_VERB_2			
 Čakavian	Čakavian			LIVE_VERB	žīvȉti	ʒiːʋîti	ʒ iː ʋ î t i		LIVE_VERB_2			
 Slovenian	Slovenian			LIVE_VERB	živẹ́ti	ʒiʋèːti	ʒ i ʋ èː t i		LIVE_VERB_2			
-Lithuanian	Lithuanian			YELLOW_ADJ	geltónas	ɡʲɛɫtˈoːnɐs	ɡʲ ɛ ɫ t ˈoː n ɐ s		YELLOW_ADJ_1			
+Lithuanian	Lithuanian			YELLOW_ADJ	geltónas	ɡʲɛɫtôːnɐs	ɡʲ ɛ ɫ t ôː n ɐ s		YELLOW_ADJ_1			
 Latvian	Latvian			YELLOW_ADJ	dzeltens	ʣˈæltæns	ʣ ˈæ l t æ n s		YELLOW_ADJ_1			
 Proto-Slavic	Proto-Slavic			YELLOW_ADJ	žь̑ltъ	ʒĭ̂ltŭ	ʒ ĭ̂ l t ŭ		YELLOW_ADJ_1			
 Bulgarian	Bulgarian			YELLOW_ADJ	жълт	ʒˈɤɫt	ʒ ˈɤ ɫ t		YELLOW_ADJ_1			

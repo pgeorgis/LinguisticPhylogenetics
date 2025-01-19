@@ -16,7 +16,7 @@ VOWELS
 
 /iː/ (0.058)
 	<dým> /dˈiːm/ "SMOKE_NOUN"
-	<těžký> /cˈɛʃkiː/ "HEAVY_ADJ"
+	<těžký> /cˈɛʒ̊kiː/ "HEAVY_ADJ"
 	<teplý> /tˈɛpliː/ "WARM_ADJ"
 
 /ɪ/ (0.02)
@@ -52,9 +52,9 @@ VOWELS
 
 
 CONSONANTS
-/t/ (0.066)
+/t/ (0.064)
 	<kost> /kˈost/ "BONE_NOUN"
-	<vítr> /vˈiːtr̩/ "WIND_NOUN"
+	<žlutý> /ʒlˈutiː/ "YELLOW_ADJ"
 	<pták> /ptˈaːk/ "BIRD_NOUN"
 
 /l/ (0.064)
@@ -95,7 +95,7 @@ CONSONANTS
 /ɦ/ (0.029)
 	<dlouhý> /dlˈou̯ɦiː/ "LONG_ADJ"
 	<hrád> /ɦrˈaːd̥/ "CITY_NOUN"
-	<hladký> /ɦlˈatkiː/ "SMOOTH_ADJ"
+	<hladký> /ɦlˈad̥kiː/ "SMOOTH_ADJ"
 
 /m/ (0.024)
 	<maso> /mˈaso/ "MEAT_NOUN"
@@ -130,7 +130,7 @@ CONSONANTS
 /c/ (0.013)
 	<tichý> /cˈɪxiː/ "QUIET_ADJ"
 	<štěstí> /ʃcˈɛsciː/ "HAPPINESS_NOUN"
-	<těžký> /cˈɛʃkiː/ "HEAVY_ADJ"
+	<těžký> /cˈɛʒ̊kiː/ "HEAVY_ADJ"
 
 /ʦ/ (0.011)
 	<slunce> /slˈunʦɛ/ "SUN_NOUN"
@@ -162,15 +162,20 @@ CONSONANTS
 	<žlutý> /ʒlˈutiː/ "YELLOW_ADJ"
 	<kůže> /kˈuːʒɛ/ "SKIN_NOUN"
 
-/ʃ/ (0.007)
-	<těžký> /cˈɛʃkiː/ "HEAVY_ADJ"
-	<štěstí> /ʃcˈɛsciː/ "HAPPINESS_NOUN"
-	<déšť> /dˈɛːʃc/ "RAIN_NOUN"
-
 /l̩/ (0.007)
+	<plný> /pˈl̩niː/ "FULL_ADJ"
 	<mlha> /mˈl̩ɦa/ "FOG_NOUN"
-	<vlk> /vˈl̩k/ "WOLF_NOUN"
 	<mysl> /mˈɪsl̩/ "THOUGHT_NOUN"
+
+/d̥/ (0.007)
+	<hrád> /ɦrˈaːd̥/ "CITY_NOUN"
+	<hladký> /ɦlˈad̥kiː/ "SMOOTH_ADJ"
+	<led> /lˈɛd̥/ "ICE_NOUN"
+
+/ʃ/ (0.005)
+	<déšť> /dˈɛːʃc/ "RAIN_NOUN"
+	<šest> /ʃˈɛst/ "SIX_NUM"
+	<štěstí> /ʃcˈɛsciː/ "HAPPINESS_NOUN"
 
 /r̝̊/ (0.005)
 	<tři> /tr̝̊ˈɪ/ "THREE_NUM"
@@ -179,18 +184,17 @@ CONSONANTS
 
 /f/ (0.005)
 	<krev> /krˈɛf/ "BLOOD_NOUN"
-	<lev> /lˈɛf/ "LION_NOUN"
 	<včela> /fʧˈɛla/ "BEE_NOUN"
-
-/d̥/ (0.005)
-	<sad> /sˈad̥/ "GARDEN_NOUN"
-	<hrád> /ɦrˈaːd̥/ "CITY_NOUN"
-	<led> /lˈɛd̥/ "ICE_NOUN"
+	<lev> /lˈɛf/ "LION_NOUN"
 
 /b̥/ (0.005)
 	<holub> /ɦˈolub̥/ "DOVE_NOUN"
 	<chléb> /xlˈɛːb̥/ "BREAD_NOUN"
 	<zub> /zˈub̥/ "TOOTH_NOUN"
+
+/ʒ̊/ (0.004)
+	<muž> /mˈuʒ̊/ "HUSBAND_NOUN"
+	<těžký> /cˈɛʒ̊kiː/ "HEAVY_ADJ"
 
 /ɟ/ (0.004)
 	<vidět> /vˈɪɟɛt/ "SEE_VERB"
@@ -199,9 +203,6 @@ CONSONANTS
 /m̩/ (0.004)
 	<sedm> /sˈɛdm̩/ "SEVEN_NUM"
 	<osm> /ˈosm̩/ "EIGHT_NUM"
-
-/ʒ̊/ (0.002)
-	<muž> /mˈuʒ̊/ "HUSBAND_NOUN"
 
 
 

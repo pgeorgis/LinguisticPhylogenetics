@@ -13,11 +13,14 @@ family:
     ]
     outdir: datasets/BaltoSlavic/
 
+# experiment:
+#   name: ""
+
 transcription:
     global:
         combine_diphthongs: true
         normalize_geminates: false
-        #suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', '̄', 'ˈ']
+        suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', 'ˈ']
         #level_suprasegmentals: 'ˈ'
     doculects:
         Latvian:

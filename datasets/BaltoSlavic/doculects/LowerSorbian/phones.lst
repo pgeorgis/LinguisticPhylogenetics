@@ -7,7 +7,7 @@ VOWELS
 /a/ (0.081)
 	<twardy> /tvˈardɨ/ "HARD_ADJ"
 	<pjas> /pʲˈas/ "DOG_NOUN"
-	<gładki> /ɡwˈatkʲi/ "SMOOTH_ADJ"
+	<gładki> /ɡwˈad̥kʲi/ "SMOOTH_ADJ"
 
 /ɛ/ (0.05)
 	<mórjo> /mˈɛrʲɔ/ "SEA_NOUN"
@@ -31,8 +31,8 @@ VOWELS
 
 /i/ (0.025)
 	<kśidło> /kɕˈidwɔ/ "WING_NOUN"
-	<śěžki> /ɕˈɪʂkʲi/ "HEAVY_ADJ"
-	<gładki> /ɡwˈatkʲi/ "SMOOTH_ADJ"
+	<śěžki> /ɕˈɪʐ̊kʲi/ "HEAVY_ADJ"
+	<gładki> /ɡwˈad̥kʲi/ "SMOOTH_ADJ"
 
 /u/ (0.019)
 	<suchy> /sˈuxɨ/ "DRY_ADJ"
@@ -70,19 +70,19 @@ CONSONANTS
 	<rosć> /rˈɔsʨ/ "GROWTH_NOUN"
 	<serce> /sˈɛrʦɛ/ "HEART_NOUN"
 
-/t/ (0.033)
-	<list> /lˈist/ "LEAF_NOUN"
-	<žołty> /ʐˈowtɨ/ "YELLOW_ADJ"
-	<kśebjat> /kɕˈebʲat/ "SPINE_NOUN"
-
 /l/ (0.033)
-	<lěto> /lˈɪtɔ/ "SUMMER_NOUN"
-	<kóleno> /kˈɛlɛnɔ/ "KNEE_NOUN"
+	<lod> /lˈɔd̥/ "ICE_NOUN"
 	<wjelk> /vʲˈelk/ "WOLF_NOUN"
+	<mloko> /mlˈɔkɔ/ "MILK_NOUN"
+
+/t/ (0.031)
+	<wětš> /vʲˈɪtʂ/ "WIND_NOUN"
+	<tšawa> /tʂˈava/ "GRASS_NOUN"
+	<ptačk> /tˈat͡ʂk/ "BIRD_NOUN"
 
 /d/ (0.029)
-	<jagoda> /jˈaɡɔda/ "BERRY_NOUN"
 	<radło> /rˈadwɔ/ "PLOUGH_NOUN"
+	<wóda> /vˈɛda/ "WATER_NOUN"
 	<sedym> /sˈedɨm/ "SEVEN_NUM"
 
 /v/ (0.025)
@@ -145,24 +145,19 @@ CONSONANTS
 	<wiźeś> /vʲˈiʑeɕ/ "SEE_VERB"
 	<źaseś> /ʑˈaseɕ/ "TEN_NUM"
 
-/ʂ/ (0.01)
-	<šesć> /ʂˈesʨ/ "SIX_NUM"
-	<kšej> /kʂˈej/ "BLOOD_NOUN"
-	<tšawa> /tʂˈava/ "GRASS_NOUN"
-
 /x/ (0.01)
-	<chłodny> /xˈɔdnɨ/ "COLD_ADJ"
-	<wucho> /ˈuxɔ/ "EAR_NOUN"
 	<wórjech> /vˈɛrʲɛx/ "NUT_NOUN"
+	<chłodny> /xˈɔdnɨ/ "COLD_ADJ"
+	<suchy> /sˈuxɨ/ "DRY_ADJ"
 
 /pʲ/ (0.01)
-	<pěsk> /pʲˈɪsk/ "SAND_NOUN"
-	<pěś> /pʲˈɪɕ/ "FIVE_NUM"
+	<popjeł> /pˈɔpʲew/ "ASH_NOUN"
 	<piś> /pʲˈiɕ/ "DRINK_VERB"
+	<pěś> /pʲˈɪɕ/ "FIVE_NUM"
 
 /p/ (0.01)
-	<połny> /pˈɔwnɨ/ "FULL_ADJ"
 	<puś> /pˈuɕ/ "WAY_NOUN"
+	<śopły> /ɕˈɔpwɨ/ "WARM_ADJ"
 	<głupy> /ɡˈupɨ/ "STUPID_ADJ"
 
 /ʨ/ (0.008)
@@ -171,19 +166,24 @@ CONSONANTS
 	<dešć> /dˈɛɕʨ/ "RAIN_NOUN"
 
 /ʐ/ (0.008)
-	<kóža> /kˈɛʐa/ "SKIN_NOUN"
+	<žyś> /ʐˈɨɕ/ "LIVE_VERB"
 	<žołty> /ʐˈowtɨ/ "YELLOW_ADJ"
 	<žona> /ʐˈɔna/ "WOMAN_NOUN"
 
+/ʂ/ (0.008)
+	<wětš> /vʲˈɪtʂ/ "WIND_NOUN"
+	<šesć> /ʂˈesʨ/ "SIX_NUM"
+	<tšawa> /tʂˈava/ "GRASS_NOUN"
+
 /kʲ/ (0.008)
 	<dłujki> /dwˈujkʲi/ "LONG_ADJ"
-	<śěžki> /ɕˈɪʂkʲi/ "HEAVY_ADJ"
-	<gładki> /ɡwˈatkʲi/ "SMOOTH_ADJ"
+	<śěžki> /ɕˈɪʐ̊kʲi/ "HEAVY_ADJ"
+	<gładki> /ɡwˈad̥kʲi/ "SMOOTH_ADJ"
 
-/d̥/ (0.006)
-	<lod> /lˈɔd̥/ "ICE_NOUN"
+/d̥/ (0.008)
 	<grod> /ɡrˈɔd̥/ "CITY_NOUN"
 	<sad> /sˈad̥/ "GARDEN_NOUN"
+	<gładki> /ɡwˈad̥kʲi/ "SMOOTH_ADJ"
 
 /b̥/ (0.006)
 	<zub> /zˈub̥/ "TOOTH_NOUN"
@@ -191,9 +191,13 @@ CONSONANTS
 	<gołub> /ɡˈɔwub̥/ "DOVE_NOUN"
 
 /b/ (0.006)
-	<bog> /bˈɔk/ "GOD_NOUN"
 	<ryba> /rˈɨba/ "FISH_NOUN"
+	<bog> /bˈɔk/ "GOD_NOUN"
 	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
+
+/ʐ̊/ (0.004)
+	<śěžki> /ɕˈɪʐ̊kʲi/ "HEAVY_ADJ"
+	<muž> /mˈuʐ̊/ "HUSBAND_NOUN"
 
 /ɡ̊/ (0.004)
 	<sněg> /snʲˈɪɡ̊/ "SNOW_NOUN"
@@ -202,9 +206,6 @@ CONSONANTS
 /bʲ/ (0.004)
 	<běły> /bʲˈɪwɨ/ "WHITE_ADJ"
 	<kśebjat> /kɕˈebʲat/ "SPINE_NOUN"
-
-/ʐ̊/ (0.002)
-	<muž> /mˈuʐ̊/ "HUSBAND_NOUN"
 
 /ɡʲ/ (0.002)
 	<wogeń> /ˈɔɡʲɛɲ/ "FIRE_NOUN"

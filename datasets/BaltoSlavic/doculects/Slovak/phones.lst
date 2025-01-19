@@ -74,7 +74,7 @@ CONSONANTS
 
 /k/ (0.047)
 	<oko> /ˈɔkɔ/ "EYE_NOUN"
-	<hladký> /ɦɫˈatkiː/ "SMOOTH_ADJ"
+	<hladký> /ɦɫˈad̥kiː/ "SMOOTH_ADJ"
 	<vlk> /ʋˈɫ̩k/ "WOLF_NOUN"
 
 /ʋ/ (0.045)
@@ -87,7 +87,7 @@ CONSONANTS
 	<desať> /ɟˈɛsac/ "TEN_NUM"
 	<smrť> /smˈr̩c/ "DEATH_NOUN"
 
-/t/ (0.037)
+/t/ (0.036)
 	<kvet> /kʋˈɛt/ "FLOWER_NOUN"
 	<tvrdý> /tʋˈr̩diː/ "HARD_ADJ"
 	<necht> /ɲˈɛxt/ "FINGERNAIL_NOUN"
@@ -95,7 +95,7 @@ CONSONANTS
 /ɫ/ (0.034)
 	<vôl> /ʋʊ̯ˈɔɫ/ "OX_NOUN"
 	<celý> /ʦˈɛɫiː/ "WHOLE_ADJ"
-	<hladký> /ɦɫˈatkiː/ "SMOOTH_ADJ"
+	<hladký> /ɦɫˈad̥kiː/ "SMOOTH_ADJ"
 
 /m/ (0.028)
 	<mesiac> /mˈɛsɪ̯aʦ/ "MONTH_NOUN"
@@ -182,29 +182,30 @@ CONSONANTS
 	<koža> /kˈɔʒa/ "SKIN_NOUN"
 	<žltý> /ʒˈɫ̩tiː/ "YELLOW_ADJ"
 
-/ʃ/ (0.007)
-	<štyri> /ʃtˈiri/ "FOUR_NUM"
-	<šťastie> /ʃcˈascɪ̯ɛ/ "HAPPINESS_NOUN"
-	<šesť> /ʃˈɛsc/ "SIX_NUM"
+/d̥/ (0.007)
+	<hrad> /ɦrˈad̥/ "CITY_NOUN"
+	<sad> /sˈad̥/ "GARDEN_NOUN"
+	<hladký> /ɦɫˈad̥kiː/ "SMOOTH_ADJ"
 
 /ʧ/ (0.006)
 	<človek> /ʧɫˈɔʋɛk/ "PERSON_NOUN"
 	<včela> /fʧˈɛɫa/ "BEE_NOUN"
 	<čierny> /ʧɪ̯ˈɛrni/ "BLACK_ADJ"
 
-/d̥/ (0.006)
-	<hrad> /ɦrˈad̥/ "CITY_NOUN"
-	<sad> /sˈad̥/ "GARDEN_NOUN"
-	<ľad> /ʎˈad̥/ "ICE_NOUN"
+/ʒ̊/ (0.006)
+	<ťažký> /cˈaʒ̊kiː/ "HEAVY_ADJ"
+	<muž> /mˈuʒ̊/ "HUSBAND_NOUN"
+	<dážď> /dˈaːʒ̊ɟ̊/ "RAIN_NOUN"
+
+/ʃ/ (0.006)
+	<šesť> /ʃˈɛsc/ "SIX_NUM"
+	<štyri> /ʃtˈiri/ "FOUR_NUM"
+	<šťastie> /ʃcˈascɪ̯ɛ/ "HAPPINESS_NOUN"
 
 /b̥/ (0.006)
+	<holub> /ɦˈɔɫub̥/ "DOVE_NOUN"
 	<zub> /zˈub̥/ "TOOTH_NOUN"
 	<chlieb> /xlɪ̯ˈɛb̥/ "BREAD_NOUN"
-	<holub> /ɦˈɔɫub̥/ "DOVE_NOUN"
-
-/ʒ̊/ (0.004)
-	<dážď> /dˈaːʒ̊ɟ̊/ "RAIN_NOUN"
-	<muž> /mˈuʒ̊/ "HUSBAND_NOUN"
 
 /f/ (0.004)
 	<vták> /ftˈaːk/ "BIRD_NOUN"
