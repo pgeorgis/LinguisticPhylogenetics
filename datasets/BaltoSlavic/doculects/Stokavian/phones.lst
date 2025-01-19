@@ -1,35 +1,35 @@
 VOWELS
 /a/ (0.079)
 	<mr̀tav> /mř̩taʋ/ "DEAD_ADJ"
-	<pijésak> /pjěːsak/ "SAND_NOUN"
-	<vjȅtar> /ʋjêtar/ "WIND_NOUN"
+	<dȁžd> /dâʒd/ "RAIN_NOUN"
+	<zíma> /zǐːma/ "WINTER_NOUN"
 
-/o/ (0.053)
+/o/ (0.051)
 	<ȍblāk> /ôblaːk/ "CLOUD_NOUN"
 	<kòljeno> /kǒʎeno/ "KNEE_NOUN"
 	<ȍsam> /ôsam/ "EIGHT_NUM"
 
-/e/ (0.049)
+/e/ (0.047)
 	<ȉme> /îme/ "NAME_NOUN"
 	<sȗnce> /sûːnʦe/ "SUN_NOUN"
 	<mjȅsēc> /mjêseːʦ/ "MONTH_NOUN"
 
 /eː/ (0.031)
-	<snijȇg> /snjêːɡ/ "SNOW_NOUN"
-	<bijȇl> /bjêːl/ "WHITE_ADJ"
-	<kȍrijēn> /kôrjeːn/ "ROOT_NOUN"
+	<šȇst> /ʃêːst/ "SIX_NUM"
+	<vézati> /ʋěːzati/ "TIE_VERB"
+	<rijéka> /rjěːka/ "RIVER_NOUN"
 
 /i/ (0.028)
 	<gȍdina> /ɡôdina/ "HOUR_NOUN"
 	<rȉba> /rîba/ "FISH_NOUN"
-	<znȁti> /znâti/ "KNOW_VERB"
+	<vézati> /ʋěːzati/ "TIE_VERB"
 
-/uː/ (0.018)
+/uː/ (0.017)
 	<glȗh> /ɡlûːx/ "DEAF_ADJ"
 	<ústa> /ǔːsta/ "MOUTH_NOUN"
 	<vȗk> /ʋûːk/ "WOLF_NOUN"
 
-/aː/ (0.018)
+/aː/ (0.017)
 	<jâ> /jâː/ "I_POS"
 	<bráda> /brǎːda/ "BEARD_NOUN"
 	<rȃst> /râːst/ "GROWTH_NOUN"
@@ -39,12 +39,12 @@ VOWELS
 	<lȋst> /lîːst/ "LEAF_NOUN"
 	<kćȋ> /kʨîː/ "DAUGHTER_NOUN"
 
-/oː/ (0.011)
-	<vȏl> /ʋôːl/ "OX_NOUN"
+/oː/ (0.013)
+	<nȏs> /nôːs/ "NOSE_NOUN"
 	<kȏst> /kôːst/ "BONE_NOUN"
-	<sȏl> /sôːl/ "SALT_NOUN"
+	<mȏre> /môːre/ "SEA_NOUN"
 
-/u/ (0.006)
+/u/ (0.008)
 	<ȕho> /ûxo/ "EAR_NOUN"
 	<dȕg> /dûɡ/ "LONG_ADJ"
 	<ùzēti> /ǔzeːti/ "TAKE_VERB"
@@ -52,34 +52,34 @@ VOWELS
 
 
 CONSONANTS
-/t/ (0.054)
-	<stȁr> /stâr/ "OLD_ADJ"
-	<cvijȇt> /ʦʋjêːt/ "FLOWER_NOUN"
-	<vȉdjeti> /ʋîdjeti/ "SEE_VERB"
-
-/ʋ/ (0.039)
-	<dȑvo> /dr̩̂ʋo/ "TREE_NOUN"
-	<žȋv> /ʒîːʋ/ "ALIVE_ADJ"
-	<žívjeti> /ʒǐːʋjeti/ "LIVE_VERB"
-
-/s/ (0.039)
-	<sȃd> /sâːd/ "GARDEN_NOUN"
-	<dȅsēt> /dêseːt/ "TEN_NUM"
+/t/ (0.056)
 	<ústa> /ǔːsta/ "MOUTH_NOUN"
+	<cvijȇt> /ʦʋjêːt/ "FLOWER_NOUN"
+	<mjȅsto> /mjêsto/ "PLACE_NOUN"
+
+/s/ (0.041)
+	<šȇst> /ʃêːst/ "SIX_NUM"
+	<kȏst> /kôːst/ "BONE_NOUN"
+	<ústa> /ǔːsta/ "MOUTH_NOUN"
+
+/ʋ/ (0.04)
+	<vući> /ʋûːʨi/ "DRAG_VERB"
+	<vézati> /ʋěːzati/ "TIE_VERB"
+	<zdrȁv> /zdrâʋ/ "HEALTHY_ADJ"
 
 /l/ (0.039)
 	<lȁv> /lâʋ/ "LION_NOUN"
 	<vȏl> /ʋôːl/ "OX_NOUN"
 	<lȁkat> /lâkat/ "ELBOW_NOUN"
 
-/k/ (0.037)
-	<rúka> /rǔːka/ "HAND_NOUN"
-	<lȁkat> /lâkat/ "ELBOW_NOUN"
-	<kȍža> /kôʒa/ "SKIN_NOUN"
-
 /r/ (0.036)
+	<rúka> /rǔːka/ "HAND_NOUN"
 	<čètiri> /ʧětiri/ "FOUR_NUM"
-	<vjȅtar> /ʋjêtar/ "WIND_NOUN"
+	<rijéka> /rjěːka/ "RIVER_NOUN"
+
+/k/ (0.036)
+	<lȁkat> /lâkat/ "ELBOW_NOUN"
+	<jèzik> /jězik/ "TONGUE_NOUN"
 	<krȃlj> /krâːʎ/ "KING_NOUN"
 
 /d/ (0.035)
@@ -87,37 +87,37 @@ CONSONANTS
 	<bráda> /brǎːda/ "BEARD_NOUN"
 	<jèdan> /jědan/ "ONE_NUM"
 
-/j/ (0.033)
+/j/ (0.032)
 	<snijȇg> /snjêːɡ/ "SNOW_NOUN"
 	<jèzik> /jězik/ "TONGUE_NOUN"
 	<nèvjesta> /něʋjesta/ "BRIDE_NOUN"
 
-/ɡ/ (0.025)
+/ɡ/ (0.024)
 	<màgla> /mǎɡla/ "FOG_NOUN"
 	<rȏg> /rôːɡ/ "HORN_NOUN"
 	<gȍlūb> /ɡôluːb/ "DOVE_NOUN"
 
-/n/ (0.025)
+/n/ (0.024)
 	<znȁti> /znâti/ "KNOW_VERB"
 	<sȗnce> /sûːnʦe/ "SUN_NOUN"
 	<jèdan> /jědan/ "ONE_NUM"
 
 /m/ (0.024)
-	<zíma> /zǐːma/ "WINTER_NOUN"
-	<mȗž> /mûːʒ/ "HUSBAND_NOUN"
-	<ȍsam> /ôsam/ "EIGHT_NUM"
+	<mȋsao> /mîːsao/ "THOUGHT_NOUN"
+	<mùha> /mǔxa/ "HOUSEFLY_NOUN"
+	<mlijéko> /mljěːko/ "MILK_NOUN"
 
 /z/ (0.019)
 	<žèljezo> /ʒěʎezo/ "IRON_NOUN"
 	<vézati> /ʋěːzati/ "TIE_VERB"
 	<zvijézda> /zʋjěːzda/ "STAR_NOUN"
 
-/p/ (0.018)
+/p/ (0.017)
 	<pijésak> /pjěːsak/ "SAND_NOUN"
 	<pȇt> /pêːt/ "FIVE_NUM"
 	<glȗp> /ɡlûːp/ "STUPID_ADJ"
 
-/b/ (0.014)
+/b/ (0.013)
 	<bráda> /brǎːda/ "BEARD_NOUN"
 	<hȑbat> /xr̩̂bat/ "SPINE_NOUN"
 	<gȍlūb> /ɡôluːb/ "DOVE_NOUN"
@@ -127,15 +127,15 @@ CONSONANTS
 	<žȗt> /ʒûːt/ "YELLOW_ADJ"
 	<dȁžd> /dâʒd/ "RAIN_NOUN"
 
-/ʦ/ (0.011)
-	<cvijȇt> /ʦʋjêːt/ "FLOWER_NOUN"
-	<cȉo> /ʦîo/ "WHOLE_ADJ"
-	<mjȅsēc> /mjêseːʦ/ "MONTH_NOUN"
+/x/ (0.012)
+	<glȗh> /ɡlûːx/ "DEAF_ADJ"
+	<mùha> /mǔxa/ "HOUSEFLY_NOUN"
+	<ȕho> /ûxo/ "EAR_NOUN"
 
-/x/ (0.011)
-	<òrah> /ǒrax/ "NUT_NOUN"
-	<hljȅb> /xʎêb/ "BREAD_NOUN"
-	<sȗh> /sûːx/ "DRY_ADJ"
+/ʦ/ (0.011)
+	<sȗnce> /sûːnʦe/ "SUN_NOUN"
+	<ptȉca> /ptîʦa/ "BIRD_NOUN"
+	<sȑce> /sr̩̂ʦe/ "HEART_NOUN"
 
 /r̩/ (0.008)
 	<dȑvo> /dr̩̂ʋo/ "TREE_NOUN"
@@ -147,12 +147,12 @@ CONSONANTS
 	<krȃlj> /krâːʎ/ "KING_NOUN"
 	<kòljeno> /kǒʎeno/ "KNEE_NOUN"
 
-/ʨ/ (0.006)
+/ʨ/ (0.005)
 	<nȏć> /nôːʨ/ "NIGHT_NOUN"
 	<vući> /ʋûːʨi/ "DRAG_VERB"
 	<kćȇr> /kʨêːr/ "DAUGHTER_NOUN"
 
-/r̩ː/ (0.006)
+/r̩ː/ (0.005)
 	<tvȓd> /tʋr̩̂ːd/ "HARD_ADJ"
 	<cȓn> /ʦr̩̂ːn/ "BLACK_ADJ"
 	<kȓv> /kr̩̂ːʋ/ "BLOOD_NOUN"
@@ -175,15 +175,15 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
-/̂/ (0.133)
-	<mȏre> /môːre/ "SEA_NOUN"
-	<vȉdjeti> /ʋîdjeti/ "SEE_VERB"
+/̂/ (0.134)
+	<dȁžd> /dâʒd/ "RAIN_NOUN"
+	<kȍrijēn> /kôrjeːn/ "ROOT_NOUN"
 	<nȍkat> /nôkat/ "FINGERNAIL_NOUN"
 
-/̌/ (0.053)
-	<čòvjek> /ʧǒʋjek/ "PERSON_NOUN"
-	<jèzik> /jězik/ "TONGUE_NOUN"
-	<ústa> /ǔːsta/ "MOUTH_NOUN"
+/̌/ (0.052)
+	<jèdan> /jědan/ "ONE_NUM"
+	<vézati> /ʋěːzati/ "TIE_VERB"
+	<gòra> /ɡǒra/ "MOUNTAIN_NOUN"
 
 
 
