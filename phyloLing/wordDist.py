@@ -5,7 +5,7 @@ from statistics import mean
 from asjp import ipa2asjp
 from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
 from nltk import edit_distance
-from phonAlign import Alignment, Gap, get_alignment_iter
+from phonAlign import Alignment, AlignedPair, Gap, get_alignment_iter
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
@@ -223,18 +223,29 @@ def scale_deletion_penalty_by_prosodic_env_strength(penalty: float | int,
     return penalty, discount
 
 
-def accent_is_shifted(alignment, i, gap_ch):
+def accent_is_shifted(alignment, i, gap_ch, pad_ch):
     """Returns True if there is an unaligned suprasegmental in the opposite alignment position later in the word relative to position i"""
     shifted = False
-    deleted_index = alignment[i].index(gap_ch) - 1
-    for k in range(i + 1, len(alignment)):
-        if gap_ch in alignment[k]:
-            gap_k = alignment[k].index(gap_ch)
-            deleted_k = gap_k - 1
-            if isinstance(alignment[k][deleted_k], tuple):  # TODO handle this better, maybe set phon env as Segment object attribute
-                deleted_seg_k = _toSegment(alignment[k][deleted_k][0])
+    align_iter = alignment.alignment if isinstance(alignment, Alignment) else alignment
+    aligned_pair = AlignedPair(alignment, i, gap_ch=gap_ch, pad_ch=pad_ch)
+    if aligned_pair.is_gappy:
+        deleted_index = align_iter[i].index(gap_ch) - 1
+    elif aligned_pair.contains_boundary():
+        deleted_index = 0 if pad_ch in align_iter[i][0] else -1
+    else:
+        return shifted
+    for k in range(i + 1, len(align_iter)):
+        aligned_pair_k = AlignedPair(alignment, k, gap_ch=gap_ch, pad_ch=pad_ch)
+        if aligned_pair_k.is_gappy or aligned_pair_k.contains_boundary():
+            if aligned_pair_k.is_gappy:
+                gap_k = align_iter[k].index(gap_ch)
             else:
-                deleted_seg_k = _toSegment(alignment[k][deleted_k])
+                gap_k = 0 if pad_ch in align_iter[k][0] else -1
+            deleted_k = gap_k - 1
+            if isinstance(align_iter[k][deleted_k], tuple):  # TODO handle this better, maybe set phon env as Segment object attribute
+                deleted_seg_k = _toSegment(align_iter[k][deleted_k][0])
+            else:
+                deleted_seg_k = _toSegment(align_iter[k][deleted_k])
             if abs(deleted_k) != abs(deleted_index) and deleted_seg_k.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
                 shifted = True
                 break
@@ -393,7 +404,7 @@ def phonological_dist(word1: Word | Alignment,
             # Check if a later pair includes a deleted suprasegmental/toneme in the opposite alignment position
             # If so, skip penalizing the current pair altogether
             if deleted_segment.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
-                if accent_is_shifted(alignment, i, gap_ch):
+                if accent_is_shifted(alignment, i, gap_ch, pad_ch):
                     continue
 
             if penalize_sonority:
@@ -542,7 +553,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False,
                 if seg in seg_lang.tonemes:
                     if gap_lang.tonal is False:
                         continue
-                    elif accent_is_shifted(align_iter, i, alignment.gap_ch):
+                    elif accent_is_shifted(alignment, i, alignment.gap_ch, alignment.pad_ch):
                         continue
 
             # # Continued from above:
@@ -638,13 +649,13 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
             if weight1 is None:
                 weight = weight2
                 if pair[-1] in alignment.word2.language.tonemes:
-                    if accent_is_shifted(alignment.alignment, i, alignment.gap_ch):  # TODO does this still work if the pair includes a n>1-gram?
+                    if accent_is_shifted(alignment, i, alignment.gap_ch, alignment.pad_ch):  # TODO does this still work if the pair includes a n>1-gram?
                         continue
 
             elif weight2 is None:
                 weight = weight1
                 if pair[0] in alignment.word1.language.tonemes:
-                    if accent_is_shifted(alignment.alignment, i, alignment.gap_ch):  # TODO does this still work if the pair includes a n>1-gram?
+                    if accent_is_shifted(alignment, i, alignment.gap_ch, alignment.pad_ch):  # TODO does this still work if the pair includes a n>1-gram?
                         continue
             else:
                 weight = mean([weight1, weight2])
