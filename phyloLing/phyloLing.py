@@ -707,7 +707,7 @@ class LexicalDataset:
                         concept_list=None,
                         cluster_func=None,
                         cognates='auto',
-                        outfile=None,
+                        dm_outfile=None,
                         code=None,
                         **kwargs):
 
@@ -772,6 +772,13 @@ class LexicalDataset:
 
         # Store computed distance matrix
         self.distance_matrices[code] = dm
+        
+        # Write distance matrix to outfile
+        if dm_outfile:
+            outfile_dir = os.path.dirname(dm_outfile)
+            os.makedirs(outfile_dir, exist_ok=True)
+            self.write_distance_matrix(dm, outfile=dm_outfile)
+            self.logger.info(f"Wrote distance matrix to {dm_outfile}")
 
         return dm
 
