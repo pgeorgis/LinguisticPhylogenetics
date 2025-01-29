@@ -17,7 +17,11 @@ import bcubed
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from constants import (ALIGNMENT_PARAM_DEFAULTS, PAD_CH_DEFAULT, SEG_JOIN_CH,
+from constants import (ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
+                       CONCEPT_LABEL, GLOTTOCODE_LABEL, ID_COLUMN_LABEL,
+                       ISO_CODE_LABEL, LANGUAGE_NAME_LABEL, LOAN_LABEL,
+                       ORTHOGRAPHY_LABEL, PAD_CH_DEFAULT, PHONETIC_FORM_LABEL,
+                       SEG_JOIN_CH, SEGMENTS_LABEL,
                        TRANSCRIPTION_PARAM_DEFAULTS)
 from lingDist import get_noncognate_scores
 from matplotlib import pyplot as plt
@@ -44,26 +48,24 @@ from utils.sequence import (Ngram, flatten_ngram, generate_ngrams,
                             pad_sequence, remove_overlapping_ngrams)
 from utils.string import asjp_in_ipa, format_as_variable, strip_ch
 from utils.tree import postprocess_newick, reroot_tree
-from utils.utils import (create_timestamp, csv2dict, default_dict,
-                         dict_tuplelist, normalize_dict,
-                         dict_of_sets,
-                         create_default_dict,
-                         create_default_dict_of_dicts)
+from utils.utils import (create_default_dict, create_default_dict_of_dicts,
+                         csv2dict, default_dict, dict_of_sets, dict_tuplelist,
+                         normalize_dict)
 
 
 class LexicalDataset:
     def __init__(self, filepath, name,
                  outdir=None,
-                 id_c='ID',
-                 language_name_c='Language_ID',
-                 concept_c='Parameter_ID',
-                 orthography_c='Value',
-                 ipa_c='Form',
-                 segments_c='Segments',
-                 cognate_class_c='Cognate_ID',
-                 loan_c='Loan',
-                 glottocode_c='Glottocode',
-                 iso_code_c='ISO 639-3',
+                 id_c=ID_COLUMN_LABEL,
+                 language_name_c=LANGUAGE_NAME_LABEL,
+                 concept_c=CONCEPT_LABEL,
+                 orthography_c=ORTHOGRAPHY_LABEL,
+                 ipa_c=PHONETIC_FORM_LABEL,
+                 segments_c=SEGMENTS_LABEL,
+                 cognate_class_c=COGNATE_CLASS_LABEL,
+                 loan_c=LOAN_LABEL,
+                 glottocode_c=GLOTTOCODE_LABEL,
+                 iso_code_c=ISO_CODE_LABEL,
                  included_doculects=None,
                  excluded_doculects=None,
                  transcription_params={'global': TRANSCRIPTION_PARAM_DEFAULTS},
