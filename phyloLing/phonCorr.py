@@ -235,11 +235,16 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
     concept_indices = defaultdict(lambda: [])
     tied_indices = defaultdict(lambda: set())
     indices_to_prune = set()
+    seen_pairs =  set()
+    wordlist = list(set(wordlist))
     for q, pair in enumerate(wordlist):
-        word1, word2 = pair
-        concept = word1.concept
-        concept_counts[concept] += 1
-        concept_indices[concept].append(q)
+        if pair not in seen_pairs:
+            seen_pairs.add(pair)
+            word1, word2 = pair
+            concept = word1.concept
+            assert concept == word2.concept
+            concept_counts[concept] += 1
+            concept_indices[concept].append(q)
 
     # Find optimal mappings for each concept with >1 word pair
     for concept, count in concept_counts.items():
