@@ -373,6 +373,7 @@ def ngram2log_format(ngram, phon_env=False):
 
 def add_phon_dist_to_align_costs(align_costs, phon_gop=-1.2, gap_ch=GAP_CH_DEFAULT, pad_ch=PAD_CH_DEFAULT):
     #phon_gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
+    # TODO would be better to add this into Alignment object with boolean add_phon_dist param
     for ngram1 in align_costs.get_primary_keys():
         ngram1 = Ngram(ngram1)
         # Remove gaps and boundaries
