@@ -517,6 +517,7 @@ class LexicalDataset:
         self.logger.info(f'Clustering cognates with threshold={round(cluster_threshold, 3)}...')
 
         for concept in sorted(concept_list):
+            self.logger.info(f"Clustering cognates for concept '{concept}'...")
             words = [word for lang in self.concepts[concept] for word in self.concepts[concept][lang]]
             clusters = cluster_items(group=words,
                                      dist_func=dist_func,
