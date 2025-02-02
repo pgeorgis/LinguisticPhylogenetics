@@ -1,161 +1,163 @@
 VOWELS
 /ɛ/ (0.097)
-	<влече> /vlˈɛʧɛ/ "DRAG_VERB"
-	<корен> /kˈorɛn/ "ROOT_NOUN"
-	<жена> /ʒˈɛna/ "WOMAN_NOUN"
+	<јаглен> /jˈaɡlɛn/ "COAL_NOUN"
+	<девет> /dˈɛvɛt/ "NINE_NUM"
+	<сонце> /sˈonʦɛ/ "SUN_NOUN"
 
-/a/ (0.085)
-	<пат> /pˈat/ "WAY_NOUN"
-	<коска> /kˈoska/ "BONE_NOUN"
-	<магла> /mˈaɡɫa/ "FOG_NOUN"
+/a/ (0.089)
+	<мисла> /mˈisɫa/ "THOUGHT_NOUN"
+	<јува> /jˈuva/ "SOUP_NOUN"
+	<пчела> /pʧˈɛɫa/ "BEE_NOUN"
 
-/o/ (0.079)
+/o/ (0.068)
+	<рог> /rˈoɡ̊/ "HORN_NOUN"
 	<осум> /ˈosum/ "EIGHT_NUM"
 	<човек> /ʧˈovɛk/ "PERSON_NOUN"
-	<крило> /krˈiɫo/ "WING_NOUN"
 
-/i/ (0.029)
-	<три> /trˈi/ "THREE_NUM"
-	<јазик> /jˈazik/ "TONGUE_NOUN"
-	<дим> /dˈim/ "SMOKE_NOUN"
+/i/ (0.028)
+	<син> /sˈin/ "SON_NOUN"
+	<мисла> /mˈisɫa/ "THOUGHT_NOUN"
+	<види> /vˈidi/ "SEE_VERB"
 
-/u/ (0.013)
+/u/ (0.016)
+	<мудар> /mˈudar/ "WISE_ADJ"
 	<уво> /ˈuvo/ "EAR_NOUN"
 	<гулаб> /ɡˈuɫab̥/ "DOVE_NOUN"
-	<глуп> /ɡɫˈup/ "STUPID_ADJ"
+
+/ɔ/ (0.011)
+	<орел> /ˈɔrɛɫ/ "EAGLE_NOUN"
+	<јаболко> /jˈabɔɫkɔ/ "APPLE_NOUN"
+	<восок> /vˈɔsɔk/ "WAX_NOUN"
 
 /e/ (0.003)
-	<ѕвер> /ʣvˈer/ "BEAST_NOUN"
 	<ладен> /ɫˈaden/ "COLD_ADJ"
-
-/ɔ/ (0.001)
-	<орев> /ˈɔɾɛf/ "NUT_NOUN"
+	<ѕвер> /ʣvˈer/ "BEAST_NOUN"
 
 
 
 CONSONANTS
-/t/ (0.047)
-	<тело> /tˈɛɫo/ "BODY_NOUN"
-	<топол> /tˈopoɫ/ "WARM_ADJ"
-	<лист> /lˈist/ "LEAF_NOUN"
-
-/s/ (0.044)
+/s/ (0.047)
 	<снег> /snˈɛɡ̊/ "SNOW_NOUN"
-	<стол> /stˈoɫ/ "TABLE_NOUN"
-	<слава> /sɫˈava/ "GLORY_NOUN"
+	<јас> /jˈas/ "I_POS"
+	<срце> /sˈr̩ʦɛ/ "HEART_NOUN"
 
-/ɫ/ (0.043)
-	<гладок> /ɡɫˈadok/ "SMOOTH_ADJ"
-	<облак> /ˈobɫak/ "CLOUD_NOUN"
-	<жолт> /ʒˈoɫt/ "YELLOW_ADJ"
+/ɫ/ (0.04)
+	<глув> /ɡɫˈuf/ "DEAF_ADJ"
+	<сол> /sˈoɫ/ "SALT_NOUN"
+	<пепел> /pˈɛpɛɫ/ "ASH_NOUN"
 
-/v/ (0.038)
-	<глава> /ɡɫˈava/ "HEAD_NOUN"
-	<ѕвер> /ʣvˈer/ "BEAST_NOUN"
-	<ѕвезда> /ʣvˈɛzda/ "STAR_NOUN"
+/t/ (0.04)
+	<невеста> /nˈɛvɛsta/ "BRIDE_NOUN"
+	<тело> /tˈɛɫo/ "BODY_NOUN"
+	<лето> /lˈɛto/ "SUMMER_NOUN"
 
-/k/ (0.038)
+/k/ (0.04)
 	<река> /rˈɛka/ "RIVER_NOUN"
+	<облак> /ˈobɫak/ "CLOUD_NOUN"
+	<велик> /vˈɛlik/ "GREAT_ADJ"
+
+/r/ (0.039)
+	<рало> /rˈaɫo/ "PLOUGH_NOUN"
 	<кора> /kˈora/ "BARK_NOUN"
-	<коњ> /kˈoɲ/ "HORSE_NOUN"
+	<рака> /rˈaka/ "HAND_NOUN"
 
-/r/ (0.037)
-	<море> /mˈorɛ/ "SEA_NOUN"
-	<риба> /rˈiba/ "FISH_NOUN"
-	<рог> /rˈoɡ̊/ "HORN_NOUN"
+/v/ (0.037)
+	<слава> /sɫˈava/ "GLORY_NOUN"
+	<два> /dvˈa/ "TWO_NUM"
+	<во> /vo/ "IN_PREP"
 
-/d/ (0.031)
-	<брада> /brˈada/ "BEARD_NOUN"
-	<ѕвезда> /ʣvˈɛzda/ "STAR_NOUN"
-	<долг> /dˈoɫɡ̊/ "LONG_ADJ"
-
-/n/ (0.028)
+/n/ (0.031)
+	<ноќ> /nˈoc/ "NIGHT_NOUN"
 	<еден> /ˈɛdɛn/ "ONE_NUM"
-	<корен> /kˈorɛn/ "ROOT_NOUN"
-	<полн> /pˈoɫn/ "FULL_ADJ"
+	<нокт> /nˈokt/ "FINGERNAIL_NOUN"
 
-/m/ (0.026)
-	<место> /mˈɛsto/ "PLACE_NOUN"
+/d/ (0.029)
+	<видра> /vˈidra/ "OTTER_NOUN"
+	<година> /ɡˈodina/ "HOUR_NOUN"
+	<вода> /vˈoda/ "WATER_NOUN"
+
+/m/ (0.028)
+	<мува> /mˈuva/ "HOUSEFLY_NOUN"
+	<море> /mˈorɛ/ "SEA_NOUN"
 	<месо> /mˈɛso/ "MEAT_NOUN"
-	<мисла> /mˈisɫa/ "THOUGHT_NOUN"
 
 /ɡ/ (0.019)
 	<глас> /ɡɫˈas/ "VOICE_NOUN"
-	<глава> /ɡɫˈava/ "HEAD_NOUN"
-	<оган> /ˈoɡan/ "FIRE_NOUN"
+	<јагода> /jˈaɡoda/ "BERRY_NOUN"
+	<магла> /mˈaɡɫa/ "FOG_NOUN"
 
 /z/ (0.016)
-	<земја> /zˈɛmja/ "EARTH_NOUN"
 	<ѕвезда> /ʣvˈɛzda/ "STAR_NOUN"
 	<јазик> /jˈazik/ "TONGUE_NOUN"
+	<мозок> /mˈɔzɔk/ "BRAIN_NOUN"
 
-/p/ (0.016)
+/l/ (0.015)
+	<јаглен> /jˈaɡlɛn/ "COAL_NOUN"
+	<млеко> /mlˈɛko/ "MILK_NOUN"
+	<велик> /vˈɛlik/ "GREAT_ADJ"
+
+/p/ (0.014)
 	<пчела> /pʧˈɛɫa/ "BEE_NOUN"
-	<пие> /pˈiɛ/ "DRINK_VERB"
-	<пет> /pˈɛt/ "FIVE_NUM"
+	<полн> /pˈoɫn/ "FULL_ADJ"
+	<песок> /pˈɛsok/ "SAND_NOUN"
 
-/l/ (0.016)
-	<теле> /tˈɛlɛ/ "CALF_NOUN"
-	<лед> /lˈɛd̥/ "ICE_NOUN"
-	<лист> /lˈist/ "LEAF_NOUN"
+/b/ (0.014)
+	<’рбет> /ˈr̩bɛt/ "SPINE_NOUN"
+	<бреза> /brˈɛza/ "BIRCH_NOUN"
+	<облак> /ˈobɫak/ "CLOUD_NOUN"
 
-/r̩/ (0.013)
+/r̩/ (0.011)
+	<прст> /pˈr̩st/ "FINGER_NOUN"
+	<’рбет> /ˈr̩bɛt/ "SPINE_NOUN"
 	<срце> /sˈr̩ʦɛ/ "HEART_NOUN"
-	<смрт> /smˈr̩t/ "DEATH_NOUN"
-	<мртов> /mˈr̩tof/ "DEAD_ADJ"
 
-/f/ (0.012)
-	<сув> /sˈuf/ "DRY_ADJ"
+/j/ (0.01)
+	<јува> /jˈuva/ "SOUP_NOUN"
+	<земја> /zˈɛmja/ "EARTH_NOUN"
+	<јаболко> /jˈabɔɫkɔ/ "APPLE_NOUN"
+
+/f/ (0.01)
 	<орев> /ˈɔɾɛf/ "NUT_NOUN"
-	<глув> /ɡɫˈuf/ "DEAF_ADJ"
-
-/ʒ/ (0.01)
-	<жолт> /ʒˈoɫt/ "YELLOW_ADJ"
-	<кожа> /kˈoʒa/ "SKIN_NOUN"
-	<живее> /ʒˈivɛɛ/ "LIVE_VERB"
-
-/b/ (0.01)
-	<добар> /dˈobar/ "GOOD_ADJ"
-	<брада> /brˈada/ "BEARD_NOUN"
-	<бог> /bˈoɡ̊/ "GOD_NOUN"
+	<крв> /kˈr̩f/ "BLOOD_NOUN"
+	<здрав> /zdrˈaf/ "HEALTHY_ADJ"
 
 /ʦ/ (0.009)
-	<цвет> /ʦvˈɛt/ "FLOWER_NOUN"
+	<цел> /ʦˈɛɫ/ "WHOLE_ADJ"
 	<месец> /mˈɛsɛʦ/ "MONTH_NOUN"
 	<сонце> /sˈonʦɛ/ "SUN_NOUN"
 
-/d̥/ (0.007)
-	<сад> /sˈad̥/ "GARDEN_NOUN"
-	<тврд> /tvˈr̩d̥/ "HARD_ADJ"
+/ʒ/ (0.009)
+	<жена> /ʒˈɛna/ "WOMAN_NOUN"
+	<тежок> /tˈɛʒok/ "HEAVY_ADJ"
+	<железо> /ʒˈɛlɛzo/ "IRON_NOUN"
+
+/d̥/ (0.008)
 	<лед> /lˈɛd̥/ "ICE_NOUN"
+	<тврд> /tvˈr̩d̥/ "HARD_ADJ"
+	<град> /ɡrˈad̥/ "CITY_NOUN"
 
 /ʧ/ (0.006)
 	<четири> /ʧˈɛtiri/ "FOUR_NUM"
 	<пчела> /pʧˈɛɫa/ "BEE_NOUN"
-	<влече> /vlˈɛʧɛ/ "DRAG_VERB"
+	<човек> /ʧˈovɛk/ "PERSON_NOUN"
 
-/ɡ̊/ (0.006)
-	<бог> /bˈoɡ̊/ "GOD_NOUN"
+/ɡ̊/ (0.005)
 	<снег> /snˈɛɡ̊/ "SNOW_NOUN"
 	<рог> /rˈoɡ̊/ "HORN_NOUN"
-
-/j/ (0.006)
-	<јас> /jˈas/ "I_POS"
-	<земја> /zˈɛmja/ "EARTH_NOUN"
-	<јагода> /jˈaɡoda/ "BERRY_NOUN"
+	<долг> /dˈoɫɡ̊/ "LONG_ADJ"
 
 /b̥/ (0.004)
-	<гулаб> /ɡˈuɫab̥/ "DOVE_NOUN"
-	<леб> /lˈɛb̥/ "BREAD_NOUN"
 	<заб> /zˈab̥/ "TOOTH_NOUN"
+	<леб> /lˈɛb̥/ "BREAD_NOUN"
+	<гулаб> /ɡˈuɫab̥/ "DOVE_NOUN"
 
 /ʣ/ (0.003)
-	<ѕвезда> /ʣvˈɛzda/ "STAR_NOUN"
 	<ѕвер> /ʣvˈer/ "BEAST_NOUN"
+	<ѕвезда> /ʣvˈɛzda/ "STAR_NOUN"
 
 /ʒ̊/ (0.003)
-	<маж> /mˈaʒ̊/ "HUSBAND_NOUN"
 	<дожд> /dˈoʒ̊d̥/ "RAIN_NOUN"
+	<маж> /mˈaʒ̊/ "HUSBAND_NOUN"
 
 /c/ (0.003)
 	<ќерка> /cˈɛrka/ "DAUGHTER_NOUN"
@@ -170,16 +172,22 @@ CONSONANTS
 /ɲ/ (0.001)
 	<коњ> /kˈoɲ/ "HORSE_NOUN"
 
+/ɟ/ (0.001)
+	<луѓе> /ɫˈuɟɛ/ "PEOPLE_NOUN"
+
+/z̥/ (0.001)
+	<без> /bˈɛz̥/ "WITHOUT_PREP"
+
 /x/ (0.001)
 	<тих> /tˈix/ "QUIET_ADJ"
 
 
 
 SUPRASEGMENTALS
-/ˈ/ (0.193)
-	<два> /dvˈa/ "TWO_NUM"
-	<знае> /znˈaɛ/ "KNOW_VERB"
-	<пепел> /pˈɛpɛɫ/ "ASH_NOUN"
+/ˈ/ (0.191)
+	<гладок> /ɡɫˈadok/ "SMOOTH_ADJ"
+	<свет> /svˈɛt/ "HOLY_ADJ"
+	<восок> /vˈɔsɔk/ "WAX_NOUN"
 
 
 
