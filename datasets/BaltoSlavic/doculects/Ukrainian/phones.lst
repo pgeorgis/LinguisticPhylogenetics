@@ -1,0 +1,242 @@
+VOWELS
+/ɔ/ (0.082)
+	<кров> /krˈɔw/ "BLOOD_NOUN"
+	<озеро> /ˈɔzɛrɔ/ "LAKE_NOUN"
+	<оса> /ɔsˈɑ/ "WASP_NOUN"
+
+/i/ (0.053)
+	<хліб> /xlʲˈib/ "BREAD_NOUN"
+	<ріст> /rʲˈist/ "GROWTH_NOUN"
+	<вісім> /ʋʲˈisʲim/ "EIGHT_NUM"
+
+/ɑ/ (0.037)
+	<оса> /ɔsˈɑ/ "WASP_NOUN"
+	<взяти> /ʋzʲˈɑtɪ/ "TAKE_VERB"
+	<два> /dʋˈɑ/ "TWO_NUM"
+
+/e/ (0.036)
+	<тихий> /tˈɪxej/ "QUIET_ADJ"
+	<великий> /ʋeɫˈɪkej/ "GREAT_ADJ"
+	<в'язати> /ʋjɐzˈɑte/ "TIE_VERB"
+
+/ɪ/ (0.033)
+	<чотири> /ʧɔtˈɪrɪ/ "FOUR_NUM"
+	<пити> /pˈɪte/ "DRINK_VERB"
+	<старий> /stɐrˈɪj/ "OLD_ADJ"
+
+/ɛ/ (0.03)
+	<бобер> /bɔbˈɛr/ "BEAVER_NOUN"
+	<серце> /sˈɛrʦɛ/ "HEART_NOUN"
+	<мед> /mˈɛd/ "HONEY_NOUN"
+
+/ɐ/ (0.028)
+	<старий> /stɐrˈɪj/ "OLD_ADJ"
+	<язик> /jɐzˈɪk/ "TONGUE_NOUN"
+	<ягода> /jˈɑɦɔdɐ/ "BERRY_NOUN"
+
+/u/ (0.014)
+	<путь> /pˈutʲ/ "WAY_NOUN"
+	<люди> /lʲˈude/ "PEOPLE_NOUN"
+	<муха> /mˈuxɐ/ "HOUSEFLY_NOUN"
+
+/ʊ/ (0.008)
+	<рука> /rʊkˈɑ/ "HAND_NOUN"
+	<кусати> /kʊsˈate/ "BITE_VERB"
+	<сухий> /sʊxˈɪj/ "DRY_ADJ"
+
+/a/ (0.003)
+	<яблуко> /jˈabɫʊkɔ/ "APPLE_NOUN"
+	<кусати> /kʊsˈate/ "BITE_VERB"
+	<камінь> /kˈamʲinʲ/ "STONE_NOUN"
+
+
+
+CONSONANTS
+/j/ (0.04)
+	<яблуко> /jˈabɫʊkɔ/ "APPLE_NOUN"
+	<мудрий> /mˈudrej/ "WISE_ADJ"
+	<живий> /ʒeʋˈej/ "ALIVE_ADJ"
+
+/r/ (0.039)
+	<озеро> /ˈɔzɛrɔ/ "LAKE_NOUN"
+	<вечір> /ʋˈɛʧʲir/ "EVENING_NOUN"
+	<видра> /ʋˈɪdrɐ/ "OTTER_NOUN"
+
+/t/ (0.035)
+	<птах> /ptˈɑx/ "BIRD_NOUN"
+	<твердий> /tʋerdˈɪj/ "HARD_ADJ"
+	<в'язати> /ʋjɐzˈɑte/ "TIE_VERB"
+
+/k/ (0.034)
+	<король> /kɔrˈɔlʲ/ "KING_NOUN"
+	<молоко> /mɔɫɔkˈɔ/ "MILK_NOUN"
+	<волокти> /wɔɫɔktˈɪ/ "DRAG_VERB"
+
+/ɫ/ (0.033)
+	<слава> /sɫˈɑʋɐ/ "GLORY_NOUN"
+	<волокти> /wɔɫɔktˈɪ/ "DRAG_VERB"
+	<гладкий> /ɦɫɐdkˈɪj/ "SMOOTH_ADJ"
+
+/s/ (0.033)
+	<сон> /sˈɔn/ "DREAM_NOUN"
+	<сніг> /snʲˈiɦ/ "SNOW_NOUN"
+	<ріст> /rʲˈist/ "GROWTH_NOUN"
+
+/d/ (0.03)
+	<здоровий> /zdɔrˈɔʋej/ "HEALTHY_ADJ"
+	<борода> /bɔrɔdˈɑ/ "BEARD_NOUN"
+	<довгий> /dˈɔʋɦej/ "LONG_ADJ"
+
+/ɦ/ (0.024)
+	<гладкий> /ɦɫɐdkˈɪj/ "SMOOTH_ADJ"
+	<глупий> /ɦɫˈupej/ "STUPID_ADJ"
+	<голуб> /ɦˈɔɫʊb/ "DOVE_NOUN"
+
+/ʋ/ (0.022)
+	<глива> /ɦɫˈɪʋɐ/ "FUNGUS_NOUN"
+	<твердий> /tʋerdˈɪj/ "HARD_ADJ"
+	<вечір> /ʋˈɛʧʲir/ "EVENING_NOUN"
+
+/m/ (0.02)
+	<молоко> /mɔɫɔkˈɔ/ "MILK_NOUN"
+	<зима> /zɪmˈɑ/ "WINTER_NOUN"
+	<сім> /sʲˈim/ "SEVEN_NUM"
+
+/n/ (0.017)
+	<повний> /pˈɔʋnej/ "FULL_ADJ"
+	<сон> /sˈɔn/ "DREAM_NOUN"
+	<сонце> /sˈɔnʦɛ/ "SUN_NOUN"
+
+/z/ (0.016)
+	<в'язати> /ʋjɐzˈɑte/ "TIE_VERB"
+	<озеро> /ˈɔzɛrɔ/ "LAKE_NOUN"
+	<звізда> /zʲʋʲizdˈɑ/ "STAR_NOUN"
+
+/b/ (0.016)
+	<хліб> /xlʲˈib/ "BREAD_NOUN"
+	<бог> /bˈɔɦ/ "GOD_NOUN"
+	<яблуко> /jˈabɫʊkɔ/ "APPLE_NOUN"
+
+/lʲ/ (0.015)
+	<залізо> /zɐlʲˈizɔ/ "IRON_NOUN"
+	<земля> /zɛmlʲˈɑ/ "EARTH_NOUN"
+	<сіль> /sʲˈilʲ/ "SALT_NOUN"
+
+/tʲ/ (0.014)
+	<путь> /pˈutʲ/ "WAY_NOUN"
+	<щастя> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
+	<десять> /dˈɛsʲɐtʲ/ "TEN_NUM"
+
+/ʋʲ/ (0.012)
+	<вітер> /ʋʲˈitɛr/ "WIND_NOUN"
+	<вісім> /ʋʲˈisʲim/ "EIGHT_NUM"
+	<святий> /sʲʋʲɐtˈɪj/ "HOLY_ADJ"
+
+/x/ (0.012)
+	<тихий> /tˈɪxej/ "QUIET_ADJ"
+	<вухо> /wˈuxɔ/ "EAR_NOUN"
+	<хліб> /xlʲˈib/ "BREAD_NOUN"
+
+/w/ (0.011)
+	<дерево> /dˈɛrɛwɔ/ "TREE_NOUN"
+	<вода> /wɔdˈɑ/ "WATER_NOUN"
+	<вугіль> /wˈuɦʲilʲ/ "COAL_NOUN"
+
+/p/ (0.011)
+	<пес> /pˈɛs/ "DOG_NOUN"
+	<теплий> /tˈɛpɫej/ "WARM_ADJ"
+	<повний> /pˈɔʋnej/ "FULL_ADJ"
+
+/sʲ/ (0.01)
+	<сім> /sʲˈim/ "SEVEN_NUM"
+	<десять> /dˈɛsʲɐtʲ/ "TEN_NUM"
+	<мисль> /mˈɪsʲlʲ/ "THOUGHT_NOUN"
+
+/nʲ/ (0.01)
+	<день> /dˈɛnʲ/ "DAY_NOUN"
+	<сніг> /snʲˈiɦ/ "SNOW_NOUN"
+	<камінь> /kˈamʲinʲ/ "STONE_NOUN"
+
+/ʧ/ (0.008)
+	<чотири> /ʧɔtˈɪrɪ/ "FOUR_NUM"
+	<чоловік> /ʧɔɫɔʋʲˈik/ "PERSON_NOUN"
+	<ніч> /nʲˈiʧ/ "NIGHT_NOUN"
+
+/ʒ/ (0.007)
+	<вуж> /wˈuʒ/ "SNAKE_NOUN"
+	<жовтий> /ʒˈɔʍtej/ "YELLOW_ADJ"
+	<жити> /ʒˈɪte/ "LIVE_VERB"
+
+/rʲ/ (0.005)
+	<ріг> /rʲˈiɦ/ "HORN_NOUN"
+	<корінь> /kˈɔrʲinʲ/ "ROOT_NOUN"
+	<горіх> /ɦɔrʲˈix/ "NUT_NOUN"
+
+/ʦʲ/ (0.003)
+	<місяць> /mʲˈisʲɐʦʲ/ "MONTH_NOUN"
+	<цілий> /ʦʲˈiɫej/ "WHOLE_ADJ"
+	<ціна> /ʦʲinˈɑ/ "PRICE_NOUN"
+
+/ʦ/ (0.003)
+	<сонце> /sˈɔnʦɛ/ "SUN_NOUN"
+	<цвіт> /ʦʋʲˈit/ "FLOWER_NOUN"
+	<серце> /sˈɛrʦɛ/ "HEART_NOUN"
+
+/zʲ/ (0.003)
+	<взяти> /ʋzʲˈɑtɪ/ "TAKE_VERB"
+	<звізда> /zʲʋʲizdˈɑ/ "STAR_NOUN"
+	<звір> /zʲʋʲˈir/ "BEAST_NOUN"
+
+/mʲ/ (0.003)
+	<місто> /mʲˈistɔ/ "PLACE_NOUN"
+	<камінь> /kˈamʲinʲ/ "STONE_NOUN"
+	<місяць> /mʲˈisʲɐʦʲ/ "MONTH_NOUN"
+
+/ʍ/ (0.002)
+	<жовтий> /ʒˈɔʍtej/ "YELLOW_ADJ"
+	<вовк> /wˈɔʍk/ "WOLF_NOUN"
+
+/ʃ/ (0.002)
+	<щастя> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
+	<дощ> /dˈɔʃʧ/ "RAIN_NOUN"
+
+/pʲ/ (0.002)
+	<попіл> /pˈɔpʲiɫ/ "ASH_NOUN"
+	<пісок> /pʲisˈɔk/ "SAND_NOUN"
+
+/kʲ/ (0.002)
+	<кінь> /kʲˈinʲ/ "HORSE_NOUN"
+	<кість> /kʲˈistʲ/ "BONE_NOUN"
+
+/bʲ/ (0.002)
+	<білий> /bʲˈiɫej/ "WHITE_ADJ"
+	<біг> /bʲˈiɦ/ "GOD_NOUN"
+
+/ʧʲ/ (0.001)
+	<вечір> /ʋˈɛʧʲir/ "EVENING_NOUN"
+
+/ʤ/ (0.001)
+	<бджола> /bʤɔɫˈɑ/ "BEE_NOUN"
+
+/ʒʲ/ (0.001)
+	<жінка> /ʒʲˈinkɐ/ "WOMAN_NOUN"
+
+/ʃʲ/ (0.001)
+	<шість> /ʃʲˈistʲ/ "SIX_NUM"
+
+/ɦʲ/ (0.001)
+	<вугіль> /wˈuɦʲilʲ/ "COAL_NOUN"
+
+/dʲ/ (0.001)
+	<видіти> /ʋˈɪdʲite/ "SEE_VERB"
+
+
+
+SUPRASEGMENTALS
+/ˈ/ (0.174)
+	<вітер> /ʋʲˈitɛr/ "WIND_NOUN"
+	<бджола> /bʤɔɫˈɑ/ "BEE_NOUN"
+	<сад> /sˈɑd/ "GARDEN_NOUN"
+
+
+

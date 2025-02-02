@@ -186,17 +186,6 @@ def load_precalculated_word_scores(distance_dir, family, dist_keys, excluded_doc
     return precalculated_word_scores
 
 
-def write_lang_dists_to_tsv(dist, outfile):
-    # TODO add description
-    with open(outfile, 'w') as f:
-        header = '\t'.join(['Language1', 'Language2', 'Measurement'])
-        f.write(f'{header}\n')
-        for key, value in dist.measured.items():
-            lang1, lang2, kwargs = key
-            line = '\t'.join([lang1.name, lang2.name, str(value)])
-            f.write(f'{line}\n')
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Loads a lexical dataset in CLDF format and produces a phylogenetic tree according to user specifications')
     parser.add_argument('config', help='Path to config.yml file')
@@ -493,9 +482,6 @@ if __name__ == "__main__":
             logger.info(f"TreeDist wrt reference tree {ref_tree_file}: {round(tree_mutual_info, 3)}")
         params["tree"]["eval"] = tree_scores
 
-    # Write distance matrix TSV
-    out_distmatrix = os.path.join(exp_outdir, f'distance-matrix.tsv')
-    write_lang_dists_to_tsv(distFunc, outfile=out_distmatrix)
     # Write lexical comparison files
     for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):
         dist_outdir = os.path.join(exp_outdir, 'distances')

@@ -235,11 +235,16 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
     concept_indices = defaultdict(lambda: [])
     tied_indices = defaultdict(lambda: set())
     indices_to_prune = set()
+    seen_pairs =  set()
+    wordlist = list(set(wordlist))
     for q, pair in enumerate(wordlist):
-        word1, word2 = pair
-        concept = word1.concept
-        concept_counts[concept] += 1
-        concept_indices[concept].append(q)
+        if pair not in seen_pairs:
+            seen_pairs.add(pair)
+            word1, word2 = pair
+            concept = word1.concept
+            assert concept == word2.concept
+            concept_counts[concept] += 1
+            concept_indices[concept].append(q)
 
     # Find optimal mappings for each concept with >1 word pair
     for concept, count in concept_counts.items():
@@ -364,6 +369,50 @@ def ngram2log_format(ngram, phon_env=False):
         return (Ngram(ngram).string, phon_env)
     else:
         return Ngram(ngram).string
+
+
+def add_phon_dist_to_align_costs(align_costs, phon_gop=-1.2, gap_ch=GAP_CH_DEFAULT, pad_ch=PAD_CH_DEFAULT):
+    #phon_gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
+    # TODO would be better to add this into Alignment object with boolean add_phon_dist param
+    for ngram1 in align_costs.get_primary_keys():
+        ngram1 = Ngram(ngram1)
+        # Remove gaps and boundaries
+        gapless_ngram1 = ngram1.remove_boundaries(pad_ch).remove_gaps(gap_ch)
+        for ngram2 in align_costs.get_secondary_keys(ngram1.undo()):
+            ngram2 = Ngram(ngram2)
+            gapless_ngram2 = ngram2.remove_boundaries(pad_ch).remove_gaps(gap_ch)
+
+            # Skip computing phonetic similarity between gaps/boundaries with each other
+            if gapless_ngram1.size == 0 and gapless_ngram2.size == 0:
+                continue
+            # For full gaps/boundaries with segments, assign cost as GOP * length of segment sequence
+            elif gapless_ngram1.size == 0 or gapless_ngram2.size == 0:
+                phon_align_cost = phon_gop * max(gapless_ngram1.size, gapless_ngram2.size)
+            # Directly compute phonetic distance of two single phones
+            elif gapless_ngram1.size == 1 and gapless_ngram2.size == 1:
+                phon_align_cost = PhoneFeatureDist.eval(gapless_ngram1.string, gapless_ngram2.string)
+            # Else compute phonetic distance of the two aligned ngram sequences
+            else:
+                phon_costs: PhonemeMap = calculate_alignment_costs(
+                    gapless_ngram1.ngram,
+                    gapless_ngram2.ngram,
+                    cost_func=PhoneFeatureDist,
+                    as_indices=False
+                )
+                phon_align_cost, _, _ = needleman_wunsch_extended(
+                    gapless_ngram1.ngram,
+                    gapless_ngram2.ngram,
+                    align_cost=phon_costs,
+                    gap_cost=PhonemeMap(),
+                    default_gop=phon_gop,
+                    maximize_score=True,
+                    gap_ch=gap_ch,
+                    allow_complex=False
+                )
+            # Add phonetic alignment cost to align_costs dict storing PMI values
+            base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
+            align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
+    return align_costs
 
 
 class Wordlist:
@@ -617,45 +666,11 @@ class PhonCorrelator:
 
         # Optionally add phone similarity measure between phone pairs to align costs/scores
         if add_phon_dist:
-            phon_gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
-            for ngram1 in align_costs.get_primary_keys():
-                ngram1 = Ngram(ngram1)
-                # Remove gaps and boundaries
-                gapless_ngram1 = ngram1.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
-                for ngram2 in align_costs.get_secondary_keys(ngram1.undo()):
-                    ngram2 = Ngram(ngram2)
-                    gapless_ngram2 = ngram2.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
-
-                    # Skip computing phonetic similarity between gaps/boundaries with each other
-                    if gapless_ngram1.size == 0 and gapless_ngram2.size == 0:
-                        continue
-                    # For full gaps/boundaries with segments, assign cost as GOP * length of segment sequence
-                    elif gapless_ngram1.size == 0 or gapless_ngram2.size == 0:
-                        phon_align_cost = phon_gop * max(gapless_ngram1.size, gapless_ngram2.size)
-                    # Directly compute phonetic distance of two single phones
-                    elif gapless_ngram1.size == 1 and gapless_ngram2.size == 1:
-                        phon_align_cost = PhoneFeatureDist.eval(gapless_ngram1.string, gapless_ngram2.string)
-                    # Else compute phonetic distance of the two aligned ngram sequences
-                    else:
-                        phon_costs: PhonemeMap = calculate_alignment_costs(
-                            gapless_ngram1.ngram,
-                            gapless_ngram2.ngram,
-                            cost_func=PhoneFeatureDist,
-                            as_indices=False
-                        )
-                        phon_align_cost, _, _ = needleman_wunsch_extended(
-                            gapless_ngram1.ngram,
-                            gapless_ngram2.ngram,
-                            align_cost=phon_costs,
-                            gap_cost=PhonemeMap(),
-                            default_gop=phon_gop,
-                            maximize_score=True,
-                            gap_ch=self.gap_ch,
-                            allow_complex=False
-                        )
-                    # Add phonetic alignment cost to align_costs dict storing PMI values
-                    base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
-                    align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
+            align_costs = add_phon_dist_to_align_costs(
+                align_costs=align_costs,
+                gap_ch=self.gap_ch,
+                pad_ch=self.pad_ch,
+            )
 
         alignment_list = [
             Alignment(

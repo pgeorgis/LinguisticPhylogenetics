@@ -49,14 +49,14 @@ VOWELS
 	<dihr> /dˈiːɑ/ "ye_PRON"
 	<Dieb> /dˈiːb̥/ "thief_NOUN"
 
-/ˈoː/ (0.016)
-	<Schof> /ʃˈoːf/ "sheep_NOUN"
-	<Nodel> /nˈoːdl̩/ "needle_NOUN"
-	<Dod> /dˈoːd̥/ "death_NOUN"
+/ˈoː/ (0.015)
+	<Schprooch> /ʃpɾˈoːx/ "speech_NOUN_FEM"
+	<hooch> /hˈoːx/ "high_ADJ"
+	<rot> /ɾˈoːd̥/ "red_ADJ"
 
 /ˈaʊ̯/ (0.013)
+	<Laus> /lˈaʊ̯s/ "louse_NOUN"
 	<aus> /ˈaʊ̯s/ "out_PREP"
-	<dausend> /dˈaʊ̯sənd̥/ "thousand_NUM"
 	<braue> /bɾˈaʊ̯ə/ "brew_VERB"
 
 /ˈɔ/ (0.012)
@@ -93,7 +93,7 @@ VOWELS
 
 
 CONSONANTS
-/l/ (0.056)
+/l/ (0.057)
 	<Seel> /sˈeːl/ "soul_NOUN"
 	<helfe> /hˈɛlfə/ "help_VERB"
 	<Schlang> /ʃlˈaŋ/ "snake_NOUN"
@@ -133,10 +133,10 @@ CONSONANTS
 	<Fisch> /fˈɪʃ/ "fish_NOUN"
 	<Schweess> /ʃʋˈeːs/ "sweat_NOUN"
 
-/d̥/ (0.034)
-	<wild> /ʋˈɪld̥/ "wild_ADJ"
-	<Dod> /dˈoːd̥/ "death_NOUN"
-	<Gott> /ɡˈɔd̥/ "god_NOUN"
+/d̥/ (0.035)
+	<Zeit> /ʦˈaɪ̯d̥/ "time_NOUN"
+	<dot> /dˈoːd̥/ "dead_ADJ"
+	<Freind> /fɾˈaɪ̯nd̥/ "friend_NOUN"
 
 /m/ (0.032)
 	<Summer> /sˈʊmɑ/ "summer_NOUN"
@@ -148,40 +148,40 @@ CONSONANTS
 	<Brick> /bɾˈɪk/ "bridge_NOUN"
 	<Fuchs> /fˈʊks/ "fox_NOUN"
 
-/b/ (0.023)
+/b/ (0.022)
 	<Baer> /bˈɛːɑ/ "bear_NOUN"
-	<Boot> /bˈoːt/ "boat_NOUN"
-	<Baam> /bˈɔːm/ "tree_NOUN"
+	<Bee> /bˈeː/ "bone_NOUN"
+	<Blug> /blˈuːɡ̊/ "plough_NOUN"
 
 /h/ (0.021)
-	<Hunger> /hˈʊŋɑ/ "hunger_NOUN"
 	<hunnert> /hˈʊnɑd̥/ "hundred_NUM"
 	<Haut> /hˈaʊ̯d̥/ "skin_NOUN"
+	<heilich> /hˈaɪ̯lɪç/ "holy_ADJ"
 
 /ç/ (0.018)
-	<Eeche> /ˈeːçə/ "oak_NOUN_FEM"
 	<Hunnich> /hˈʊnɪç/ "honey_NOUN"
-	<zwansich> /ʦʋˈansɪç/ "twenty_NUM"
-
-/t/ (0.017)
-	<Darscht> /dˈaːʃt/ "thirst_NOUN"
-	<Licht> /lˈɪçt/ "light_NOUN"
-	<deitsch> /dˈaɪ̯tʃ/ "Teutonic_ADJ"
+	<weech> /ʋˈeːç/ "weak_ADJ"
+	<leicht> /lˈaɪ̯çt/ "light_ADJ"
 
 /ɡ/ (0.016)
-	<gut> /ɡˈuːd̥/ "good_ADJ"
-	<Graas> /ɡɾˈaːs/ "grass_NOUN_NEU"
-	<liege> /lˈiːɡə/ "tell lies_VERB"
+	<Geescht> /ɡˈeːʃt/ "ghost_NOUN"
+	<Gnie> /ɡnˈiː/ "knee_NOUN"
+	<Geess> /ɡˈeːs/ "goat_NOUN"
 
 /ʦ/ (0.015)
 	<Zehe> /ʦˈeːə/ "toe_NOUN"
-	<Haerz> /hˈɛːɑʦ/ "heart_NOUN"
-	<dreizeh> /dɾˈaɪ̯ʦeː/ "thirteen_NUM"
+	<zwansich> /ʦʋˈansɪç/ "twenty_NUM"
+	<zwee> /ʦʋˈeː/ "two_NUM"
+
+/t/ (0.015)
+	<Gascht> /ɡˈaʃt/ "guest_NOUN"
+	<Macht> /mˈaxt/ "might_NOUN"
+	<Nacht> /nˈaxt/ "night_NOUN_FEM"
 
 /ŋ/ (0.011)
-	<Ding> /dˈɪŋ/ "thing_NOUN"
 	<singe> /sˈɪŋə/ "sing_VERB"
 	<Zung> /ʦˈʊŋ/ "tongue_NOUN"
+	<yung> /jˈʊŋ/ "young_NOUN"
 
 /x/ (0.011)
 	<suche> /sˈuːxə/ "seek_VERB"

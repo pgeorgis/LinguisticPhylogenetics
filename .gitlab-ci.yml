@@ -93,10 +93,10 @@ sinitic:
     paths:
       - datasets/Sinitic/experiments
 
-slavic:
+baltoslavic:
   stage: classify
   script:
-    - make classify-slavic
+    - make classify-baltoslavic
   artifacts:
     paths:
-      - datasets/Slavic/experiments
+      - datasets/BaltoSlavic/experiments

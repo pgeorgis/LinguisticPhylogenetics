@@ -1,5 +1,5 @@
 VOWELS
-/ɐ/ (0.052)
+/ɐ/ (0.053)
 	<Tochter> /tʰˈɔxtɐ/ "daughter_NOUN"
 	<scharf> /ʃˈaɐf/ "sharp_ADJ"
 	<Wort> /vˈɔɐt/ "word_NOUN"
@@ -54,15 +54,15 @@ VOWELS
 	<Wurm> /vˈʊɐm/ "worm_NOUN"
 	<Mund> /mˈʊnd̥/ "mouth_NOUN"
 
-/ˈoː/ (0.013)
-	<Monat> /mˈoːnat/ "month_NOUN"
-	<tot> /tʰˈoːt/ "dead_ADJ"
-	<groß> /ɡʁˈoːs/ "great_ADJ"
-
 /ˈeː/ (0.013)
-	<Schwert> /ʃvˈeːɐt/ "sword_NOUN"
-	<Beere> /bˈeːʁə/ "berry_NOUN"
-	<sehen> /zˈeːən/ "see_VERB"
+	<Seele> /zˈeːlə/ "soul_NOUN"
+	<gehen> /ɡˈeːən/ "go_VERB"
+	<Meer> /mˈeːɐ/ "sea_NOUN"
+
+/ˈoː/ (0.012)
+	<Ofen> /ˈoːfn̩/ "oven_NOUN"
+	<Vogel> /fˈoːɡl̩/ "bird_NOUN_MASC"
+	<Knoten> /kʰnˈoːtn̩/ "knot_NOUN"
 
 /ˈuː/ (0.012)
 	<Bruder> /bʁˈuːdɐ/ "brother_NOUN"
@@ -123,9 +123,9 @@ CONSONANTS
 	<lieb> /lˈiːb̥/ "beloved_ADJ"
 
 /t/ (0.044)
-	<alt> /ˈalt/ "old_ADJ"
-	<Gott> /ɡˈɔt/ "god_NOUN"
-	<Wetter> /vˈɛtɐ/ "weather_NOUN"
+	<Pflicht> /p͡flˈɪçt/ "plight_NOUN"
+	<gut> /ɡˈuːt/ "good_ADJ"
+	<Winter> /vˈɪntɐ/ "winter_NOUN"
 
 /f/ (0.037)
 	<frisch> /fʁˈɪʃ/ "fresh_ADJ"
@@ -142,7 +142,7 @@ CONSONANTS
 	<Schwein> /ʃvˈaɪ̯n/ "swine_NOUN"
 	<zwanzig> /ʦvˈanʦɪç/ "twenty_NUM"
 
-/m/ (0.028)
+/m/ (0.029)
 	<Sturm> /ʃtˈʊɐm/ "storm_NOUN"
 	<Mensch> /mˈɛnʃ/ "person_NOUN"
 	<Wurm> /vˈʊɐm/ "worm_NOUN"
@@ -152,15 +152,15 @@ CONSONANTS
 	<deutsch> /dˈɔʏ̯tʃ/ "Teutonic_ADJ"
 	<Schwester> /ʃvˈɛstɐ/ "sister_NOUN"
 
-/b/ (0.028)
-	<Bär> /bˈɛːɐ/ "bear_NOUN"
-	<Blut> /blˈuːt/ "blood_NOUN"
-	<haben> /hˈaːbn̩/ "have_VERB"
-
 /s/ (0.027)
-	<Wasser> /vˈasɐ/ "water_NOUN"
-	<aus> /ˈaʊ̯s/ "out_PREP"
-	<Nuss> /nˈʊs/ "nut_NOUN"
+	<beißen> /bˈaɪ̯sn̩/ "bite_VERB"
+	<Geist> /ɡˈaɪ̯st/ "ghost_NOUN"
+	<Schwester> /ʃvˈɛstɐ/ "sister_NOUN"
+
+/b/ (0.027)
+	<selber> /zˈɛlbɐ/ "self_PRON"
+	<Blume> /blˈuːmə/ "flower_NOUN"
+	<treiben> /tʰʁˈaɪ̯bn̩/ "drive_VERB"
 
 /ɡ/ (0.023)
 	<liegen> /lˈiːɡn̩/ "lie_VERB"
@@ -177,7 +177,7 @@ CONSONANTS
 	<Wunder> /vˈʊndɐ/ "wonder_NOUN"
 	<Feder> /fˈeːdɐ/ "feather_NOUN"
 
-/h/ (0.02)
+/h/ (0.021)
 	<Horn> /hˈɔɐn/ "horn_NOUN"
 	<Haupt> /hˈaʊ̯pt/ "head_NOUN"
 	<hier> /hˈiːɐ/ "here_ADV"

@@ -30,8 +30,8 @@ classify-romance:
 classify-germanic:
 	$(MAKE) classify CONFIG=datasets/Germanic/config/germanic_config.yml
 
-classify-slavic:
-	$(MAKE) classify CONFIG=datasets/Slavic/config/slavic_config.yml
+classify-baltoslavic:
+	$(MAKE) classify CONFIG=datasets/BaltoSlavic/config/balto-slavic_config.yml
 
 classify-sinitic:
 	$(MAKE) classify CONFIG=datasets/Sinitic/config/sinitic_config.yml
