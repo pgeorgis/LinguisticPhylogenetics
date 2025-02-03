@@ -431,12 +431,18 @@ def calculate_tree_distance(tree1, tree2):
         raise ValueError("Error parsing TreeDistance result")
 
 
-def plot_tree(newick_path, png_path):
+def plot_tree(newick_path, png_path, classifications_file=None):
     """Plots a phylogenetic tree (from file saved as Newick string) to a PNG image file."""
     current_directory = os.path.abspath(os.path.dirname(__file__))
-    plot_tree_script = os.path.join(current_directory, "plotTree.R")
+    if classifications_file:
+        plot_tree_script = os.path.join(current_directory, "plotTreeWithClassifications.R")
+    else:
+        plot_tree_script = os.path.join(current_directory, "plotTree.R")
+    r_script_args = ["Rscript", plot_tree_script, newick_path, png_path]
+    if classifications_file:
+        r_script_args.append(classifications_file)
     result = subprocess.run(
-        ["Rscript", plot_tree_script, newick_path, png_path],
+        r_script_args,
         capture_output=True,
         text=True
     )

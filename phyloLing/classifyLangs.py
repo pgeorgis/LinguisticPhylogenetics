@@ -393,12 +393,8 @@ if __name__ == "__main__":
         clustered_cognates = family.clustered_cognates[exp_id]
         family.write_cognate_index(clustered_cognates, os.path.join(exp_outdir, f'cognate_classes.tsv'))
 
-    # Plot the phylogenetic tree
-    out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
-    plot_tree(os.path.abspath(outtree), out_png)
-    logger.info(f'Plotted phylogenetic tree to {out_png}')
-
     # Optionally evaluate tree wrt to reference tree(s)
+    ref_classifications = None
     if tree_params["reference"]:
         tree_scores = defaultdict(dict)
         for ref_tree_file in tree_params["reference"]:
@@ -415,6 +411,22 @@ if __name__ == "__main__":
             tree_scores[ref_tree_file]["TreeDist"] = tree_mutual_info
             logger.info(f"TreeDist wrt reference tree {ref_tree_file}: {round(tree_mutual_info, 3)}")
         params["tree"]["eval"] = tree_scores
+        best_reference = min(
+            tree_scores.keys(),
+            key=lambda ref: sum(value for value in tree_scores[ref].values() if isinstance(value, (int, float)))
+        )
+        if best_reference.endswith(".csv"):
+            if os.path.exists(best_reference):
+                ref_classifications = os.path.abspath(best_reference)
+        else:
+            ref_csv = best_reference.replace(".tre", ".csv")
+            if os.path.exists(ref_csv):
+                ref_classifications = os.path.abspath(ref_csv)
+
+    # Plot the phylogenetic tree
+    out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
+    plot_tree(os.path.abspath(outtree), out_png, classifications_file=ref_classifications)
+    logger.info(f'Plotted phylogenetic tree to {out_png}')
 
     # Write lexical comparison files
     for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):
