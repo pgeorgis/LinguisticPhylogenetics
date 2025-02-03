@@ -395,7 +395,9 @@ if __name__ == "__main__":
 
     # Optionally evaluate tree wrt to reference tree(s)
     ref_classifications = None
-    if tree_params["reference"]:
+    if tree_params["reference"] and len(family.languages) < 3:
+        logger.info("Fewer than 3 doculects provided; skipping evaluation.")
+    elif tree_params["reference"]:
         tree_scores = defaultdict(dict)
         for ref_tree_file in tree_params["reference"]:
             ref_tree = load_newick_tree(ref_tree_file)
@@ -403,6 +405,7 @@ if __name__ == "__main__":
             gqd_score = gqd(
                 tree,
                 ref_tree,
+                group_size=min(4, len(family.languages)),
                 is_rooted=tree_params['root'] is not None
             )
             tree_scores[ref_tree_file]["GQD"] = gqd_score
