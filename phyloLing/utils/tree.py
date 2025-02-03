@@ -25,6 +25,7 @@ def load_newick_tree(file_path, as_string=True):
 
 def postprocess_newick(newick_tree):
     # Fix formatting of Newick string
+    newick_tree = newick_tree.strip()
     newick_tree = re.sub(r'\s+', '_', newick_tree)
     newick_tree = re.sub(r',_', ',', newick_tree)
     return newick_tree
