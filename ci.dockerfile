@@ -1,8 +1,4 @@
-FROM python:3.12
+FROM python:3.12-alpine
 
-ARG DEBIAN_FRONTEND=noninteractive
-
-# Install R and other dependencies in Debian Bookworm
-RUN apt-get update && apt-get -y upgrade && apt-get install -y \
-    r-base \
-    r-base-dev
+# Update and install R and other dependencies in Alpine
+RUN apk update && apk add --no-cache R R-dev
