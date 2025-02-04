@@ -65,9 +65,9 @@ tryCatch({
     png_plot_path = args[2]
     png(filename=png_plot_path, width=1000, height=1350)
     p <- ggtree(tree, ladderize = FALSE) %<+% classification_data + 
-        geom_tippoint(aes(color=Classification), size=5, show.legend=TRUE) + 
+        geom_tippoint(aes(color=Classification), size=5, show.legend=FALSE) + 
         geom_tiplab(aes(color=Classification), offset=0.01, align=FALSE, show.legend=FALSE, size=9, fontface='bold.italic', family='Times') +
-        theme(legend.text=element_text(size=11, family="Times"), legend.title=element_text(size=14, family="Times", face='bold')) +
+        #theme(legend.text=element_text(size=11, family="Times"), legend.title=element_text(size=14, family="Times", face='bold')) +
         xlim(0, max_depth + (max_depth * 0.5))
     print(p)
     dev.off()
