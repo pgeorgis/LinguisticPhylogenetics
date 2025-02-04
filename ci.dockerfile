@@ -5,4 +5,5 @@ RUN apk update && apk add --no-cache \
     git \
     bash \
 	gcc g++ \
-    make
+    make \
+    libhdf5-dev
