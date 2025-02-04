@@ -14,7 +14,7 @@ install_if_needed("phytools")
 install_if_needed("ape")
 install_if_needed("stringr")
 install_if_needed("BiocManager")
-install_if_needed("ggtree")
+BiocManager::install("ggtree")
 install_if_needed("ggplot2")
 
 #Function for modifying format of tree tip labels (doculect names) 
