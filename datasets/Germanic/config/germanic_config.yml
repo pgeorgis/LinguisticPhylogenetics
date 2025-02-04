@@ -1,6 +1,7 @@
 family:
     name: Germanic
     file: datasets/Germanic/data/germanic_data.tsv
+    include: ["Proto-Germanic", "Standard German", "Dutch", "Icelandic"]
     exclude: ['Old English', 'Old West Norse', 'Plautdietsch']
     outdir: datasets/Germanic/
 
