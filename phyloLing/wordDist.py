@@ -1,4 +1,3 @@
-import copy
 import re
 from math import sqrt
 from statistics import mean
@@ -98,8 +97,7 @@ def prepare_alignment(word1, word2, **kwargs):
     else:
         alignment = Alignment(word1, word2, **kwargs)
 
-    alignment_copy = copy.deepcopy(alignment)
-    return alignment_copy
+    return alignment
 
 
 def handle_word_pair_input(input1, input2):
