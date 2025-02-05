@@ -15,6 +15,12 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(mes
 logger = logging.getLogger(__name__)
 
 
+def get_align_key(word1, word2):
+    """Generate an alignment key string representing the IPA strings of the words to be aligned."""
+    key = f'/{word1.ipa}/ - /{word2.ipa}/'
+    return key
+
+
 class Alignment:
     def __init__(self,
                  seq1, seq2,
@@ -51,6 +57,7 @@ class Alignment:
         # Prepare the input sequences for alignment
         self.seq1, self.word1 = self.prepare_seq(seq1, lang1)
         self.seq2, self.word2 = self.prepare_seq(seq2, lang2)
+        self.key = get_align_key(self.word1, self.word2)
 
         # Set languages
         self.lang1 = lang1
