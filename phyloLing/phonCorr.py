@@ -22,7 +22,7 @@ from utils.distance import Distance
 from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
-                            pad_sequence, start_token)
+                            filter_out_invalid_ngrams, pad_sequence, start_token)
 from utils.utils import (default_dict,
                          dict_tuplelist,
                          normalize_dict,
@@ -724,10 +724,12 @@ class PhonCorrelator:
                 segs1 = zip(segs2, env2)
             for ngram_size_i in ngram_sizes:
                 ngrams1 = word1.get_ngrams(size=ngram_size_i, pad_ch=self.pad_ch)
+                ngrams1 = filter_out_invalid_ngrams(ngrams1, language=self.lang1)
                 if ngram_size_i > 1:
                     ngrams1 = [SEG_JOIN_CH.join(ngram) for ngram in ngrams1]
                 for ngram_size_j in ngram_sizes:
                     ngrams2 = word2.get_ngrams(size=ngram_size_j, pad_ch=self.pad_ch)
+                    ngrams2 = filter_out_invalid_ngrams(ngrams2, language=self.lang2)
                     if ngram_size_j > 1:
                         ngrams2 = [SEG_JOIN_CH.join(ngram) for ngram in ngrams2]
                     corpus.append((ngrams1, ngrams2))
