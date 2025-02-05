@@ -4,6 +4,5 @@ RUN apk update && apk add --no-cache \
     R R-dev \
     git \
     bash \
-	gcc g++ \
-    make \
+    gcc g++ make \
     hdf5-dev
