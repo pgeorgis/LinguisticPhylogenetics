@@ -92,7 +92,7 @@ def prepare_alignment(word1, word2, **kwargs):
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
         alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
         # Add new alignment to alignment log
-        correlator.align_log[key][alignment] += 1
+        correlator.align_log[key] = alignment
 
     # Perform phonetic alignment without PMI support
     else:

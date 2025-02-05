@@ -1809,19 +1809,16 @@ class PhonCorrelator:
 
     def log_alignments(self, alignments, align_log):
         for alignment in alignments:
-            align_log[alignment.key][alignment] += 1
+            align_log[alignment.key] = alignment
 
     def write_alignments_log(self, alignment_log, log_file):
         sorted_alignment_keys = sorted(alignment_log.keys())
         with open(log_file, 'w') as f:
             for key in sorted_alignment_keys:
                 f.write(f'{key}\n')
-                sorted_alignments = dict_tuplelist(alignment_log[key])
-                sorted_alignments.sort(key=lambda x: (x[-1], x[0].alignment), reverse=True)
-                for alignment, count in sorted_alignments:
-                    freq = f'{count}/{sum(alignment_log[key].values())}'
-                    align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
-                    f.write(f'[{freq}] {align_str}\n')
+                alignment = alignment_log[key]
+                align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
+                f.write(f'{align_str}\n')
                 f.write('\n-------------------\n\n')
 
     def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):
