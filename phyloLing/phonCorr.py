@@ -466,7 +466,7 @@ class PhonCorrelator:
 
         # Logging
         self.set_log_dirs()
-        self.align_log = create_default_dict(0, 3)
+        self.align_log = create_default_dict(0, 2)
         self.logger = logger
 
     def reload_language_pair_data(self):
@@ -1289,7 +1289,7 @@ class PhonCorrelator:
             maximize_score=True
         )
         # Log final alignments
-        self.log_alignments(final_alignments, self.align_log['PMI'])
+        self.log_alignments(final_alignments, self.align_log)
 
         # Compute phone surprisal
         self.compute_phone_surprisal(
@@ -1314,7 +1314,7 @@ class PhonCorrelator:
 
         # Write alignment log
         align_log_file = os.path.join(self.phon_corr_dir, 'alignments.log')
-        self.write_alignments_log(self.align_log['PMI'], align_log_file)
+        self.write_alignments_log(self.align_log, align_log_file)
 
         # Save PMI results
         self.lang1.phoneme_pmi[self.lang2_name] = results
