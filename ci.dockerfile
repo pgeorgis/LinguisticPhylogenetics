@@ -6,4 +6,4 @@ RUN apk update && apk add --no-cache \
     bash \
 	gcc g++ \
     make \
-    libhdf5-dev
+    hdf5-dev
