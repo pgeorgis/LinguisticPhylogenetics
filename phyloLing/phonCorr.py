@@ -309,15 +309,19 @@ def average_corrs(corr_dict1: PhonemeMap, corr_dict2: PhonemeMap) -> PhonemeMap:
     return avg_corr
 
 
-def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0) -> PhonemeMap:
+def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0, drop_inf=True) -> PhonemeMap:
     corr1_all = set(corr1 for d in dict_list for corr1 in d.get_primary_keys())
     corr2_all = {corr1: set(corr2 for d in dict_list for corr2 in d.get_secondary_keys(corr1)) for corr1 in corr1_all}
     results = PhonemeMap(0)
     for corr1 in corr1_all:
         for corr2 in corr2_all[corr1]:
-            vals: [float] = []
+            vals = []
             for d in dict_list:
-                vals.append(d.get_value_or_default(corr1, corr2, default))
+                value = d.get_value_or_default(corr1, corr2, default)
+                if drop_inf and value not in {-inf, inf}:
+                    vals.append(value)
+                elif not drop_inf:
+                    vals.append(value)
             if len(vals) > 0:
                 results.set_value(corr1, corr2, mean(vals))
     return results
