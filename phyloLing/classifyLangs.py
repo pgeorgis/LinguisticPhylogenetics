@@ -376,14 +376,15 @@ if __name__ == "__main__":
     BEST_YET = inf
     def objective(weights):
         global BEST_YET
-        min_sim = list(weights)[-1]
-        weights = tuple(list(weights)[:-1])
+        #min_sim = list(weights)[-1]
+        #weights = tuple(list(weights)[:-1])
+        weights = tuple(list(weights))
         logger.info(f"Weights: {weights}")
-        logger.info(f"Min similarity: {min_sim}")
+        #logger.info(f"Min similarity: {min_sim}")
         distFunc.kwargs['eval_func'].measured = {}
         distFunc.kwargs['eval_func'].kwargs['weights'] = weights
         distFunc.kwargs['eval_func'].hashable_kwargs = distFunc.kwargs['eval_func'].get_hashable_kwargs(distFunc.kwargs['eval_func'].kwargs)
-        distFunc.kwargs['min_similarity'] = min_sim
+        #distFunc.kwargs['min_similarity'] = min_sim
         distFunc.measured = {}
         distFunc.hashable_kwargs = distFunc.get_hashable_kwargs(distFunc.kwargs)
         tree = family.generate_tree(
@@ -419,7 +420,7 @@ if __name__ == "__main__":
 
     # Bounds for the weights (optional, if you want to restrict the range)
     #bounds = [(0, None) for _ in initial_vals]  # Non-negative weights
-    bounds = [(0, 1), (1, 3), (0, 2), (0, 0.75)]
+    bounds = [(0, 1), (1, 3), (0, 2)]#, (0, 0.75)]
 
     # Minimize the evaluation score by adjusting weights
     # result = minimize(
