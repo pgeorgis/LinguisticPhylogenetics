@@ -441,6 +441,7 @@ if __name__ == "__main__":
         maxiter=100,     # Number of iterations
         mutation=(0.5, 1),  # Mutation factor
         recombination=0.7   # Crossover probability
+    )
     # Generate Newick tree string
     logger.info('Generating phylogenetic tree...')
     outtree = os.path.join(exp_outdir, "newick.tre")

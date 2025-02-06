@@ -82,7 +82,7 @@ def prepare_alignment(word1, word2, **kwargs):
         pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2)
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
-        alignment = Alignment(word1, word2, align_costs=add_phon_dist_to_align_costs(pmi_dict), **kwargs)
+        alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
 
     # Perform phonetic alignment without PMI support
     else:
@@ -448,7 +448,7 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False,
     get_phoneme_surprisal(lang1, lang2, ngram_size=ngram_size, **kwargs)
 
     # Generate alignments in each direction: alignments need to come from PMI
-    alignment = Alignment(word1, word2, align_costs=add_phon_dist_to_align_costs(pmi_dict, pad_ch=pad_ch), phon_env=phon_env)
+    alignment = Alignment(word1, word2, align_costs=pmi_dict, pad_ch=pad_ch, phon_env=phon_env)
     alignment.remove_padding()
     # Add phon env
     if phon_env:
@@ -562,7 +562,7 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
     pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
 
     # Align the words with PMI
-    alignment = Alignment(word1, word2, align_costs=add_phon_dist_to_align_costs(pmi_dict, pad_ch=pad_ch))
+    alignment = Alignment(word1, word2, align_costs=pmi_dict, pad_ch=pad_ch)
     alignment.remove_padding()
 
     # Calculate PMI scores for each aligned pair
