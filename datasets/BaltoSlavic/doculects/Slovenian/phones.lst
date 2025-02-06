@@ -1,5 +1,9 @@
 VOWELS
+<<<<<<< HEAD
 /eː/ (0.046)
+=======
+/eː/ (0.045)
+>>>>>>> main
 	<cvẹ̑t> /ʦʋéːt/ "FLOWER_NOUN"
 	<vẹ́zati> /ʋèːzati/ "TIE_VERB"
 	<nevesta> /nèːʋɛsta/ "BRIDE_NOUN"
@@ -18,6 +22,7 @@ VOWELS
 	<dọ́bər> /dòːbər/ "GOOD_ADJ"
 	<ọ̑gəł> /óːɡəw/ "COAL_NOUN"
 	<mọ́dər> /mòːdər/ "WISE_ADJ"
+<<<<<<< HEAD
 
 /aː/ (0.025)
 	<jábołko> /jàːbɔwkɔ/ "APPLE_NOUN"
@@ -25,11 +30,24 @@ VOWELS
 	<gláva> /ɡlàːʋa/ "HEAD_NOUN"
 
 /ɛ/ (0.021)
+=======
+
+/aː/ (0.026)
+	<jábołko> /jàːbɔwkɔ/ "APPLE_NOUN"
+	<rȃst> /ráːst/ "GROWTH_NOUN"
+	<gláva> /ɡlàːʋa/ "HEAD_NOUN"
+
+/ɛ/ (0.02)
+>>>>>>> main
 	<hlȅb> /xlɛ́b̥/ "BREAD_NOUN"
 	<trȋje> /tríːjɛ/ "THREE_NUM"
 	<štírje> /ʃtìːrjɛ/ "FOUR_NUM"
 
+<<<<<<< HEAD
 /iː/ (0.021)
+=======
+/iː/ (0.02)
+>>>>>>> main
 	<štíri> /ʃtìːri/ "FOUR_NUM"
 	<krȋ> /kríː/ "BLOOD_NOUN"
 	<vȋdra> /ʋíːdra/ "OTTER_NOUN"
@@ -86,7 +104,11 @@ CONSONANTS
 	<čŕn> /ʧə̀rn/ "BLACK_ADJ"
 	<mŕtəv> /mə̀rtəʋ/ "DEAD_ADJ"
 
+<<<<<<< HEAD
 /s/ (0.046)
+=======
+/s/ (0.045)
+>>>>>>> main
 	<svẹ̑t> /sʋéːt/ "HOLY_ADJ"
 	<pə̏s> /pə́s/ "DOG_NOUN"
 	<mesọ̑> /mesóː/ "MEAT_NOUN"
@@ -101,7 +123,11 @@ CONSONANTS
 	<krílo> /krìːlɔ/ "WING_NOUN"
 	<člóvek> /ʧlɔ̀ːʋɛk/ "PERSON_NOUN"
 
+<<<<<<< HEAD
 /k/ (0.03)
+=======
+/k/ (0.031)
+>>>>>>> main
 	<pẹ́sək> /pèːsək/ "SAND_NOUN"
 	<skọ̄rja> /skòːrja/ "BARK_NOUN"
 	<člóvek> /ʧlɔ̀ːʋɛk/ "PERSON_NOUN"
@@ -146,6 +172,7 @@ CONSONANTS
 	<hlȅb> /xlɛ́b̥/ "BREAD_NOUN"
 	<glȗh> /ɡlúːx/ "DEAF_ADJ"
 
+<<<<<<< HEAD
 /p/ (0.015)
 	<pọ́t> /pòːt/ "WAY_NOUN"
 	<tópəł> /tɔ̀ːpəw/ "WARM_ADJ"
@@ -172,6 +199,36 @@ CONSONANTS
 	<hčȋ> /xʧíː/ "DAUGHTER_NOUN"
 
 /ɡ̊/ (0.006)
+=======
+/j/ (0.016)
+	<trȋje> /tríːjɛ/ "THREE_NUM"
+	<mọ̑rje> /móːrjɛ/ "SEA_NOUN"
+	<jézik> /jɛ̀ːzik/ "TONGUE_NOUN"
+
+/p/ (0.015)
+	<tópəł> /tɔ̀ːpəw/ "WARM_ADJ"
+	<pȏłn> /pɔ́ːwn/ "FULL_ADJ"
+	<pə̏s> /pə́s/ "DOG_NOUN"
+
+/ʦ/ (0.008)
+	<cvẹ̑t> /ʦʋéːt/ "FLOWER_NOUN"
+	<cẹ́na> /ʦèːna/ "PRICE_NOUN"
+	<cẹ̑ł> /ʦéːw/ "WHOLE_ADJ"
+
+/ʒ/ (0.008)
+	<žȋv> /ʒíːʋ/ "ALIVE_ADJ"
+	<téžək> /tɛ̀ːʒək/ "HEAVY_ADJ"
+	<kọ́ža> /kòːʒa/ "SKIN_NOUN"
+
+/ʧ/ (0.007)
+	<nọ̑č> /nóːʧ/ "NIGHT_NOUN"
+	<hčȋ> /xʧíː/ "DAUGHTER_NOUN"
+	<večẹ̑r> /ʋɛʧéːr/ "EVENING_NOUN"
+
+/ɡ̊/ (0.006)
+	<snẹ̑g> /snéːɡ̊/ "SNOW_NOUN"
+	<rọ̑g> /róːɡ̊/ "HORN_NOUN"
+>>>>>>> main
 	<dȏlg> /dɔ́ːwɡ̊/ "LONG_ADJ"
 	<rọ̑g> /róːɡ̊/ "HORN_NOUN"
 	<snẹ̑g> /snéːɡ̊/ "SNOW_NOUN"

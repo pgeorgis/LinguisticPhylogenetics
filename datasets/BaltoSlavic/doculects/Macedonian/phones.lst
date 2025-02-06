@@ -1,5 +1,9 @@
 VOWELS
+<<<<<<< HEAD
 /ɛ/ (0.097)
+=======
+/ɛ/ (0.096)
+>>>>>>> main
 	<јаглен> /jˈaɡlɛn/ "COAL_NOUN"
 	<девет> /dˈɛvɛt/ "NINE_NUM"
 	<сонце> /sˈonʦɛ/ "SUN_NOUN"
@@ -9,7 +13,11 @@ VOWELS
 	<јува> /jˈuva/ "SOUP_NOUN"
 	<пчела> /pʧˈɛɫa/ "BEE_NOUN"
 
+<<<<<<< HEAD
 /o/ (0.068)
+=======
+/o/ (0.069)
+>>>>>>> main
 	<рог> /rˈoɡ̊/ "HORN_NOUN"
 	<осум> /ˈosum/ "EIGHT_NUM"
 	<човек> /ʧˈovɛk/ "PERSON_NOUN"
@@ -36,11 +44,16 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /s/ (0.047)
+=======
+/s/ (0.046)
+>>>>>>> main
 	<снег> /snˈɛɡ̊/ "SNOW_NOUN"
 	<јас> /jˈas/ "I_POS"
 	<срце> /sˈr̩ʦɛ/ "HEART_NOUN"
 
+<<<<<<< HEAD
 /ɫ/ (0.04)
 	<глув> /ɡɫˈuf/ "DEAF_ADJ"
 	<сол> /sˈoɫ/ "SALT_NOUN"
@@ -62,6 +75,47 @@ CONSONANTS
 	<рака> /rˈaka/ "HAND_NOUN"
 
 /v/ (0.037)
+	<слава> /sɫˈava/ "GLORY_NOUN"
+	<два> /dvˈa/ "TWO_NUM"
+	<во> /vo/ "IN_PREP"
+
+/n/ (0.031)
+	<ноќ> /nˈoc/ "NIGHT_NOUN"
+	<еден> /ˈɛdɛn/ "ONE_NUM"
+	<нокт> /nˈokt/ "FINGERNAIL_NOUN"
+
+/d/ (0.029)
+	<видра> /vˈidra/ "OTTER_NOUN"
+	<година> /ɡˈodina/ "HOUR_NOUN"
+	<вода> /vˈoda/ "WATER_NOUN"
+
+/m/ (0.028)
+	<мува> /mˈuva/ "HOUSEFLY_NOUN"
+	<море> /mˈorɛ/ "SEA_NOUN"
+	<месо> /mˈɛso/ "MEAT_NOUN"
+=======
+/t/ (0.041)
+	<нокт> /nˈokt/ "FINGERNAIL_NOUN"
+	<место> /mˈɛsto/ "PLACE_NOUN"
+	<невеста> /nˈɛvɛsta/ "BRIDE_NOUN"
+
+/ɫ/ (0.04)
+	<пепел> /pˈɛpɛɫ/ "ASH_NOUN"
+	<јаболко> /jˈabɔɫkɔ/ "APPLE_NOUN"
+	<мисла> /mˈisɫa/ "THOUGHT_NOUN"
+>>>>>>> main
+
+/k/ (0.04)
+	<река> /rˈɛka/ "RIVER_NOUN"
+	<облак> /ˈobɫak/ "CLOUD_NOUN"
+	<велик> /vˈɛlik/ "GREAT_ADJ"
+
+/r/ (0.039)
+	<рало> /rˈaɫo/ "PLOUGH_NOUN"
+	<кора> /kˈora/ "BARK_NOUN"
+	<рака> /rˈaka/ "HAND_NOUN"
+
+/v/ (0.036)
 	<слава> /sɫˈava/ "GLORY_NOUN"
 	<два> /dvˈa/ "TWO_NUM"
 	<во> /vo/ "IN_PREP"
@@ -158,13 +212,17 @@ CONSONANTS
 /ʒ̊/ (0.003)
 	<дожд> /dˈoʒ̊d̥/ "RAIN_NOUN"
 	<маж> /mˈaʒ̊/ "HUSBAND_NOUN"
+<<<<<<< HEAD
+=======
+
+/ʃ/ (0.003)
+	<шест> /ʃˈɛst/ "SIX_NUM"
+	<што> /ʃtˈo/ "WHAT_PRON"
+>>>>>>> main
 
 /c/ (0.003)
 	<ќерка> /cˈɛrka/ "DAUGHTER_NOUN"
 	<ноќ> /nˈoc/ "NIGHT_NOUN"
-
-/ʃ/ (0.001)
-	<шест> /ʃˈɛst/ "SIX_NUM"
 
 /ɾ/ (0.001)
 	<орев> /ˈɔɾɛf/ "NUT_NOUN"
@@ -184,10 +242,17 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
+<<<<<<< HEAD
 /ˈ/ (0.191)
 	<гладок> /ɡɫˈadok/ "SMOOTH_ADJ"
 	<свет> /svˈɛt/ "HOLY_ADJ"
 	<восок> /vˈɔsɔk/ "WAX_NOUN"
+=======
+/ˈ/ (0.192)
+	<свет> /svˈɛt/ "HOLY_ADJ"
+	<восок> /vˈɔsɔk/ "WAX_NOUN"
+	<јаболко> /jˈabɔɫkɔ/ "APPLE_NOUN"
+>>>>>>> main
 
 
 

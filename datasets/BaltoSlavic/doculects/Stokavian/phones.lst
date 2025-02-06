@@ -1,10 +1,18 @@
 VOWELS
+<<<<<<< HEAD
 /a/ (0.089)
+=======
+/a/ (0.088)
+>>>>>>> main
 	<sȁn> /sân/ "DREAM_NOUN"
 	<kúsati> /kǔːsati/ "BITE_VERB"
 	<rúka> /rǔːka/ "HAND_NOUN"
 
+<<<<<<< HEAD
 /o/ (0.048)
+=======
+/o/ (0.049)
+>>>>>>> main
 	<òrao> /ǒrao/ "EAGLE_NOUN"
 	<dȑvo> /dr̩̂ʋo/ "TREE_NOUN"
 	<kȍža> /kôʒa/ "SKIN_NOUN"
@@ -52,7 +60,11 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /t/ (0.05)
+=======
+/t/ (0.051)
+>>>>>>> main
 	<ptȉca> /ptîʦa/ "BIRD_NOUN"
 	<hȑbat> /xr̩̂bat/ "SPINE_NOUN"
 	<pȇt> /pêːt/ "FIVE_NUM"
@@ -62,12 +74,20 @@ CONSONANTS
 	<sȗnce> /sûːnʦe/ "SUN_NOUN"
 	<glȃs> /ɡlâːs/ "VOICE_NOUN"
 
+<<<<<<< HEAD
 /ʋ/ (0.038)
+=======
+/ʋ/ (0.037)
+>>>>>>> main
 	<tvȓd> /tʋr̩̂ːd/ "HARD_ADJ"
 	<vȏl> /ʋôːl/ "OX_NOUN"
 	<vòda> /ʋǒda/ "WATER_NOUN"
 
+<<<<<<< HEAD
 /r/ (0.038)
+=======
+/r/ (0.037)
+>>>>>>> main
 	<rȏg> /rôːɡ/ "HORN_NOUN"
 	<bráda> /brǎːda/ "BEARD_NOUN"
 	<rijéka> /rjěːka/ "RIVER_NOUN"
@@ -162,6 +182,7 @@ CONSONANTS
 	<tvȓd> /tʋr̩̂ːd/ "HARD_ADJ"
 	<mȓtvī> /mr̩̂ːtʋiː/ "DEAD_ADJ"
 
+<<<<<<< HEAD
 /ɲ/ (0.002)
 	<kȍnj> /kôɲ/ "HORSE_NOUN"
 	<òganj> /ǒɡaɲ/ "FIRE_NOUN"
@@ -169,6 +190,16 @@ CONSONANTS
 /ʃ/ (0.001)
 	<šȇst> /ʃêːst/ "SIX_NUM"
 
+=======
+/ʃ/ (0.002)
+	<štȍ> /ʃtô/ "WHAT_PRON"
+	<šȇst> /ʃêːst/ "SIX_NUM"
+
+/ɲ/ (0.002)
+	<kȍnj> /kôɲ/ "HORSE_NOUN"
+	<òganj> /ǒɡaɲ/ "FIRE_NOUN"
+
+>>>>>>> main
 /ɡ̊/ (0.001)
 	<mȍzak> /môzaɡ̊/ "BRAIN_NOUN"
 
@@ -178,6 +209,7 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
+<<<<<<< HEAD
 /̂/ (0.132)
 	<sȏl> /sôːl/ "SALT_NOUN"
 	<mjȅsēc> /mjêseːʦ/ "MONTH_NOUN"
@@ -187,6 +219,17 @@ SUPRASEGMENTALS
 	<žèna> /ʒěna/ "WOMAN_NOUN"
 	<bráda> /brǎːda/ "BEARD_NOUN"
 	<žívjeti> /ʒǐːʋjeti/ "LIVE_VERB"
+=======
+/̂/ (0.133)
+	<gȕska> /ɡûska/ "GOOSE_NOUN"
+	<dȅsēt> /dêseːt/ "TEN_NUM"
+	<pȗt> /pûːt/ "WAY_NOUN"
+
+/̌/ (0.053)
+	<rijéka> /rjěːka/ "RIVER_NOUN"
+	<mr̀tav> /mř̩taʋ/ "DEAD_ADJ"
+	<pijésak> /pjěːsak/ "SAND_NOUN"
+>>>>>>> main
 
 
 

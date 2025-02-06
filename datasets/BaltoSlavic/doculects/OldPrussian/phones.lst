@@ -1,10 +1,18 @@
 VOWELS
+<<<<<<< HEAD
 /i/ (0.09)
+=======
+/i/ (0.089)
+>>>>>>> main
 	<anglis> /aŋɡlis/ "COAL_NOUN"
 	<giwīt> /ɡiviːt/ "LIVE_VERB"
 	<pintis> /pintis/ "WAY_NOUN"
 
+<<<<<<< HEAD
 /a/ (0.084)
+=======
+/a/ (0.086)
+>>>>>>> main
 	<stalis> /stalis/ "TABLE_NOUN"
 	<swāigstan> /zvaːi̯ɡstan/ "STAR_NOUN"
 	<anglis> /aŋɡlis/ "COAL_NOUN"
@@ -14,7 +22,11 @@ VOWELS
 	<berse> /berze/ "BIRCH_NOUN"
 	<juse> /juse/ "SOUP_NOUN"
 
+<<<<<<< HEAD
 /o/ (0.048)
+=======
+/o/ (0.047)
+>>>>>>> main
 	<wudro> /vudro/ "OTTER_NOUN"
 	<wobse> /vopse/ "WASP_NOUN"
 	<gelso> /ɡelzo/ "IRON_NOUN"
@@ -64,17 +76,29 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /s/ (0.149)
+=======
+/s/ (0.15)
+>>>>>>> main
 	<nosy> /nosi/ "NOSE_NOUN"
 	<bordus> /bordus/ "BEARD_NOUN"
 	<soūns> /suːns/ "SON_NOUN"
 
+<<<<<<< HEAD
 /n/ (0.098)
+=======
+/n/ (0.097)
+>>>>>>> main
 	<āusins> /aːu̯sins/ "EAR_NOUN"
 	<snaygis> /snajɡis/ "SNOW_NOUN"
 	<en> /en/ "IN_PREP"
 
+<<<<<<< HEAD
 /t/ (0.048)
+=======
+/t/ (0.047)
+>>>>>>> main
 	<dessempts> /desempts/ "TEN_NUM"
 	<sīmtan> /siːmtan/ "HUNDRED_NUM"
 	<pirsten> /pirsten/ "FINGER_NOUN"
@@ -84,17 +108,29 @@ CONSONANTS
 	<rancko> /raŋko/ "HAND_NOUN"
 	<wudro> /vudro/ "OTTER_NOUN"
 
+<<<<<<< HEAD
 /v/ (0.037)
+=======
+/v/ (0.036)
+>>>>>>> main
 	<wilkis> /vilkis/ "WOLF_NOUN"
 	<wudro> /vudro/ "OTTER_NOUN"
 	<galwo> /ɡalvo/ "HEAD_NOUN"
 
+<<<<<<< HEAD
 /l/ (0.037)
+=======
+/l/ (0.036)
+>>>>>>> main
 	<woble> /voble/ "APPLE_NOUN"
 	<gelso> /ɡelzo/ "IRON_NOUN"
 	<ludis> /ludis/ "PEOPLE_NOUN"
 
+<<<<<<< HEAD
 /ɡ/ (0.034)
+=======
+/ɡ/ (0.033)
+>>>>>>> main
 	<snaygis> /snajɡis/ "SNOW_NOUN"
 	<musgeno> /musɡeno/ "BRAIN_NOUN"
 	<anglis> /aŋɡlis/ "COAL_NOUN"
@@ -109,6 +145,7 @@ CONSONANTS
 	<insuwis> /inzuvis/ "TONGUE_NOUN"
 	<assaran> /azaran/ "LAKE_NOUN"
 
+<<<<<<< HEAD
 /d/ (0.028)
 	<dessempts> /desempts/ "TEN_NUM"
 	<meddo> /medo/ "HONEY_NOUN"
@@ -132,12 +169,42 @@ CONSONANTS
 /ŋ/ (0.008)
 	<anglis> /aŋɡlis/ "COAL_NOUN"
 	<rancko> /raŋko/ "HAND_NOUN"
+=======
+/k/ (0.028)
+	<kas> /kas/ "WHAT_PRON"
+	<duckti> /dukti/ "DAUGHTER_NOUN"
+	<ackis> /akis/ "EYE_NOUN"
+
+/d/ (0.028)
+	<ladis> /ladis/ "ICE_NOUN"
+	<dumis> /dumis/ "SMOKE_NOUN"
+	<ludis> /ludis/ "PEOPLE_NOUN"
+
+/b/ (0.022)
+	<būton> /buːton/ "BE_VERB"
+	<woble> /voble/ "APPLE_NOUN"
+	<bitte> /bite/ "BEE_NOUN"
+
+/p/ (0.019)
+	<pōuton> /poːu̯ton/ "DRINK_VERB"
+	<wobse> /vopse/ "WASP_NOUN"
+	<pilnan> /pilnan/ "FULL_ADJ"
+
+/ŋ/ (0.008)
+	<rancko> /raŋko/ "HAND_NOUN"
+	<anglis> /aŋɡlis/ "COAL_NOUN"
+>>>>>>> main
 	<angis> /aŋɡis/ "SNAKE_NOUN"
 
 /j/ (0.008)
 	<juse> /juse/ "SOUP_NOUN"
+<<<<<<< HEAD
 	<crauyo> /krau̯jo/ "BLOOD_NOUN"
 	<snaygis> /snajɡis/ "SNOW_NOUN"
+=======
+	<snaygis> /snajɡis/ "SNOW_NOUN"
+	<crauyo> /krau̯jo/ "BLOOD_NOUN"
+>>>>>>> main
 
 /w/ (0.003)
 	<newīnts> /newiːnts/ "NINE_NUM"

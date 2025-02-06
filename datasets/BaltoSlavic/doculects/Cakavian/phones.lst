@@ -1,4 +1,5 @@
 VOWELS
+<<<<<<< HEAD
 /a/ (0.077)
 	<hlȃdan> /xlâːdan/ "COLD_ADJ"
 	<jūhȁ> /juːxâ/ "SOUP_NOUN"
@@ -12,6 +13,21 @@ VOWELS
 /i/ (0.039)
 	<orȉh> /orîx/ "NUT_NOUN"
 	<ljûdi> /lûːdi/ "PEOPLE_NOUN"
+=======
+/a/ (0.078)
+	<hlȃdan> /xlâːdan/ "COLD_ADJ"
+	<jūhȁ> /juːxâ/ "SOUP_NOUN"
+	<ženȁ> /ʒenâ/ "WOMAN_NOUN"
+
+/o/ (0.045)
+	<jȁgoda> /jâɡoda/ "BERRY_NOUN"
+	<ȍko> /ôko/ "EYE_NOUN"
+	<mȍzak> /môzaɡ̊/ "BRAIN_NOUN"
+
+/i/ (0.039)
+	<ljûdi> /lûːdi/ "PEOPLE_NOUN"
+	<orȉh> /orîx/ "NUT_NOUN"
+>>>>>>> main
 	<vēzȁti> /ʋeːzâti/ "TIE_VERB"
 
 /e/ (0.039)
@@ -57,7 +73,11 @@ CONSONANTS
 	<trāvȁ> /traːʋâ/ "GRASS_NOUN"
 	<stõ> /stǒː/ "TABLE_NOUN"
 
+<<<<<<< HEAD
 /s/ (0.044)
+=======
+/s/ (0.043)
+>>>>>>> main
 	<snȋg> /snîːɡ̊/ "SNOW_NOUN"
 	<kȏst> /kôːst/ "BONE_NOUN"
 	<ũsta> /ǔːsta/ "MOUTH_NOUN"
@@ -142,6 +162,7 @@ CONSONANTS
 	<jedãn> /jedǎːn/ "ONE_NUM"
 	<jazȉk> /jazîk/ "TONGUE_NOUN"
 
+<<<<<<< HEAD
 /ɡ̊/ (0.007)
 	<bȏg> /bôːɡ̊/ "GOD_NOUN"
 	<dȕg> /dûɡ̊/ "LONG_ADJ"
@@ -165,6 +186,31 @@ CONSONANTS
 /b̥/ (0.004)
 	<hlȉb> /xlîb̥/ "BREAD_NOUN"
 	<zȗb> /zûːb̥/ "TOOTH_NOUN"
+=======
+/ʧ/ (0.007)
+	<vȅčēr> /ʋêʧeːr/ "EVENING_NOUN"
+	<čovȉk> /ʧoʋîk/ "PERSON_NOUN"
+	<čȁ> /ʧâ/ "WHAT_PRON"
+
+/ɡ̊/ (0.007)
+	<dȕg> /dûɡ̊/ "LONG_ADJ"
+	<mȍzak> /môzaɡ̊/ "BRAIN_NOUN"
+	<bȏg> /bôːɡ̊/ "GOD_NOUN"
+
+/d̥/ (0.006)
+	<grȃd> /ɡrâːd̥/ "CITY_NOUN"
+	<tvȑd> /tʋr̩̂d̥/ "HARD_ADJ"
+	<mȇd> /mêːd̥/ "HONEY_NOUN"
+
+/ɲ/ (0.004)
+	<kõnj> /kǒːɲ/ "HORSE_NOUN"
+	<sãnj> /sǎːɲ/ "DREAM_NOUN"
+	<ȍganj> /ôɡaɲ/ "FIRE_NOUN"
+
+/b̥/ (0.004)
+	<zȗb> /zûːb̥/ "TOOTH_NOUN"
+	<hlȉb> /xlîb̥/ "BREAD_NOUN"
+>>>>>>> main
 	<gȍlūb> /ɡôluːb̥/ "DOVE_NOUN"
 
 /ʒ̊/ (0.003)
@@ -185,7 +231,11 @@ CONSONANTS
 
 SUPRASEGMENTALS
 /̂/ (0.166)
+<<<<<<< HEAD
 	<ženȁ> /ʒenâ/ "WOMAN_NOUN"
+=======
+	<vȗk> /ʋûːk/ "WOLF_NOUN"
+>>>>>>> main
 	<ȍko> /ôko/ "EYE_NOUN"
 	<mȏre> /môːre/ "SEA_NOUN"
 

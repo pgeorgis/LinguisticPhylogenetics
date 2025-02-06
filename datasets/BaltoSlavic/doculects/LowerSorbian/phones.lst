@@ -4,8 +4,13 @@ VOWELS
 	<wudra> /vˈudra/ "OTTER_NOUN"
 	<žona> /ʐˈɔna/ "WOMAN_NOUN"
 
+<<<<<<< HEAD
 /ɔ/ (0.082)
 	<kśidło> /kɕˈidwɔ/ "WING_NOUN"
+=======
+/ɔ/ (0.083)
+	<co> /ʦˈɔ/ "WHAT_PRON"
+>>>>>>> main
 	<coła> /ʦˈɔwa/ "BEE_NOUN"
 	<wogeń> /ˈɔɡʲɛɲ/ "FIRE_NOUN"
 
@@ -47,7 +52,11 @@ CONSONANTS
 	<mjasec> /mʲˈasɛʦ/ "MONTH_NOUN"
 	<kósć> /kˈɛsʨ/ "BONE_NOUN"
 
+<<<<<<< HEAD
 /k/ (0.043)
+=======
+/k/ (0.042)
+>>>>>>> main
 	<jabłuko> /jˈabwukɔ/ "APPLE_NOUN"
 	<pěsk> /pʲˈɪsk/ "SAND_NOUN"
 	<cłowjek> /ʦwˈɔvʲek/ "PERSON_NOUN"
@@ -67,6 +76,7 @@ CONSONANTS
 	<rog> /rˈɔɡ̊/ "HORN_NOUN"
 	<smjerś> /smʲˈerɕ/ "DEATH_NOUN"
 
+<<<<<<< HEAD
 /l/ (0.03)
 	<mloko> /mlˈɔkɔ/ "MILK_NOUN"
 	<luźe> /lˈuʑɛ/ "PEOPLE_NOUN"
@@ -76,6 +86,17 @@ CONSONANTS
 	<głowa> /ɡwˈɔva/ "HEAD_NOUN"
 	<wudra> /vˈudra/ "OTTER_NOUN"
 	<wósk> /vˈɛsk/ "WAX_NOUN"
+=======
+/v/ (0.03)
+	<wześ> /vzˈɛɕ/ "TAKE_VERB"
+	<drjewo> /drʲˈevɔ/ "TREE_NOUN"
+	<wósa> /vˈɛsa/ "WASP_NOUN"
+
+/l/ (0.03)
+	<zeleny> /zˈelenɨ/ "GREEN_ADJ"
+	<kóleno> /kˈɛlɛnɔ/ "KNEE_NOUN"
+	<wjelk> /vʲˈelk/ "WOLF_NOUN"
+>>>>>>> main
 
 /t/ (0.029)
 	<swěty> /svʲˈɪtɨ/ "HOLY_ADJ"
@@ -112,6 +133,7 @@ CONSONANTS
 	<mysl> /mˈɨsl/ "THOUGHT_NOUN"
 	<mła> /mwˈa/ "FOG_NOUN"
 
+<<<<<<< HEAD
 /j/ (0.017)
 	<jerjeł> /jˈɛrʲɛw/ "EAGLE_NOUN"
 	<jězyk> /jˈɪzɨk/ "TONGUE_NOUN"
@@ -121,6 +143,17 @@ CONSONANTS
 	<słyńco> /swˈɨɲʦɔ/ "SUN_NOUN"
 	<noc> /nˈɔʦ/ "NIGHT_NOUN"
 	<coła> /ʦˈɔwa/ "BEE_NOUN"
+=======
+/ʦ/ (0.017)
+	<serce> /sˈɛrʦɛ/ "HEART_NOUN"
+	<ceły> /ʦˈɛwɨ/ "WHOLE_ADJ"
+	<cłowjek> /ʦwˈɔvʲek/ "PERSON_NOUN"
+
+/j/ (0.017)
+	<jaden> /jˈaden/ "ONE_NUM"
+	<jazoro> /jˈazɔrɔ/ "LAKE_NOUN"
+	<jabłuko> /jˈabwukɔ/ "APPLE_NOUN"
+>>>>>>> main
 
 /b/ (0.015)
 	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
@@ -204,13 +237,17 @@ CONSONANTS
 /ɡʲ/ (0.003)
 	<wogeń> /ˈɔɡʲɛɲ/ "FIRE_NOUN"
 	<mórzgi> /mˈɛrzɡʲi/ "BRAIN_NOUN"
+<<<<<<< HEAD
 
 /bʲ/ (0.003)
 	<kśebjat> /kɕˈebʲat/ "SPINE_NOUN"
 	<běły> /bʲˈɪwɨ/ "WHITE_ADJ"
+=======
+>>>>>>> main
 
-/β/ (0.002)
-	<sława> /swˈaβa/ "GLORY_NOUN"
+/bʲ/ (0.003)
+	<kśebjat> /kɕˈebʲat/ "SPINE_NOUN"
+	<běły> /bʲˈɪwɨ/ "WHITE_ADJ"
 
 /ʒ/ (0.002)
 	<žywy> /ʒˈɨvɨ/ "ALIVE_ADJ"

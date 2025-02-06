@@ -1,10 +1,18 @@
 VOWELS
+<<<<<<< HEAD
 /a/ (0.111)
+=======
+/a/ (0.11)
+>>>>>>> main
 	<дачка> /daʧkˈa/ "DAUGHTER_NOUN"
 	<зима> /zʲimˈa/ "WINTER_NOUN"
 	<кусаць> /kusˈaʦʲ/ "BITE_VERB"
 
+<<<<<<< HEAD
 /o/ (0.052)
+=======
+/o/ (0.053)
+>>>>>>> main
 	<ногаць> /nˈoɣaʦʲ/ "FINGERNAIL_NOUN"
 	<воблака> /vˈobɫaka/ "CLOUD_NOUN"
 	<нос> /nˈos/ "NOSE_NOUN"
@@ -56,7 +64,11 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /r/ (0.047)
+=======
+/r/ (0.046)
+>>>>>>> main
 	<арэх> /arˈɛx/ "NUT_NOUN"
 	<барада> /bʌradˈa/ "BEARD_NOUN"
 	<мора> /mˈora/ "SEA_NOUN"
@@ -86,8 +98,13 @@ CONSONANTS
 	<жывы> /ʐɨvˈɨ/ "ALIVE_ADJ"
 	<возера> /vˈozʲera/ "LAKE_NOUN"
 
+<<<<<<< HEAD
 /t/ (0.021)
 	<жоўты> /ʐˈowtɨ/ "YELLOW_ADJ"
+=======
+/t/ (0.022)
+	<што> /ʂtˈo/ "WHAT_PRON"
+>>>>>>> main
 	<кветка> /kʲvʲˈetka/ "FLOWER_NOUN"
 	<чатыры> /ʧatˈɨrɨ/ "FOUR_NUM"
 
@@ -226,6 +243,13 @@ CONSONANTS
 	<голуб> /ɣˈoɫub̥/ "DOVE_NOUN"
 	<хлеб> /xlʲˈeb̥/ "BREAD_NOUN"
 
+<<<<<<< HEAD
+=======
+/ʂ/ (0.002)
+	<шэсць> /ʂˈɛsʲʦʲ/ "SIX_NUM"
+	<што> /ʂtˈo/ "WHAT_PRON"
+
+>>>>>>> main
 /z̥/ (0.002)
 	<мозг> /mˈoz̥x/ "BRAIN_NOUN"
 	<без> /bʲˈez̥/ "WITHOUT_PREP"
@@ -235,9 +259,6 @@ CONSONANTS
 
 /ʃ/ (0.001)
 	<шчасце> /ʃʧˈasʲʦʲe/ "HAPPINESS_NOUN"
-
-/ʂ/ (0.001)
-	<шэсць> /ʂˈɛsʲʦʲ/ "SIX_NUM"
 
 /ɣʲ/ (0.001)
 	<доўгі> /dˈowɣʲi/ "LONG_ADJ"
@@ -249,9 +270,15 @@ CONSONANTS
 
 SUPRASEGMENTALS
 /ˈ/ (0.182)
+<<<<<<< HEAD
 	<хлеб> /xlʲˈeb̥/ "BREAD_NOUN"
 	<сыр> /sˈɨr/ "CHEESE_NOUN"
 	<барада> /bʌradˈa/ "BEARD_NOUN"
+=======
+	<сыр> /sˈɨr/ "CHEESE_NOUN"
+	<барада> /bʌradˈa/ "BEARD_NOUN"
+	<мора> /mˈora/ "SEA_NOUN"
+>>>>>>> main
 
 
 

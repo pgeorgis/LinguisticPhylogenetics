@@ -4,12 +4,20 @@ VOWELS
 	<imię> /ˈimjɛw̃/ "NAME_NOUN"
 	<słońce> /swˈɔɲʦɛ/ "SUN_NOUN"
 
+<<<<<<< HEAD
 /ɔ/ (0.087)
+=======
+/ɔ/ (0.088)
+>>>>>>> main
 	<drzewo> /dʐˈɛvɔ/ "TREE_NOUN"
 	<wziąć> /vʑˈɔɲʨ/ "TAKE_VERB"
 	<pszczoła> /pʂʈ͡ʂˈɔwa/ "BEE_NOUN"
 
+<<<<<<< HEAD
 /a/ (0.085)
+=======
+/a/ (0.084)
+>>>>>>> main
 	<paznokieć> /paznˈɔkjɛʨ/ "FINGERNAIL_NOUN"
 	<kąsać> /kˈɔw̃saʨ/ "BITE_VERB"
 	<żelazo> /ʐɛlˈazɔ/ "IRON_NOUN"
@@ -82,17 +90,29 @@ CONSONANTS
 	<kolano> /kɔlˈanɔ/ "KNEE_NOUN"
 	<wilk> /vˈilk/ "WOLF_NOUN"
 
+<<<<<<< HEAD
 /ɡ/ (0.026)
+=======
+/ɡ/ (0.025)
+>>>>>>> main
 	<noga> /nˈɔɡa/ "FOOT_NOUN"
 	<gładki> /ɡwˈad̥ki/ "SMOOTH_ADJ"
 	<gęś> /ɡˈɛw̃ɕ/ "GOOSE_NOUN"
 
+<<<<<<< HEAD
 /t/ (0.026)
+=======
+/t/ (0.025)
+>>>>>>> main
 	<ptak> /ptˈak/ "BIRD_NOUN"
 	<grzbiet> /ɡʐbjˈɛt/ "SPINE_NOUN"
 	<kwiat> /kfjˈat/ "FLOWER_NOUN"
 
+<<<<<<< HEAD
 /d/ (0.026)
+=======
+/d/ (0.025)
+>>>>>>> main
 	<zdrowy> /zdrˈɔvɨ/ "HEALTHY_ADJ"
 	<radło> /rˈadwɔ/ "PLOUGH_NOUN"
 	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
@@ -111,6 +131,7 @@ CONSONANTS
 	<siedem> /ɕˈɛdɛm/ "SEVEN_NUM"
 	<śnieg> /ɕɲˈɛɡ̊/ "SNOW_NOUN"
 	<gęś> /ɡˈɛw̃ɕ/ "GOOSE_NOUN"
+<<<<<<< HEAD
 
 /p/ (0.017)
 	<pić> /pˈiʨ/ "DRINK_VERB"
@@ -141,6 +162,38 @@ CONSONANTS
 	<cena> /ʦˈɛna/ "PRICE_NOUN"
 	<córa> /ʦˈura/ "DAUGHTER_NOUN"
 	<miesiąc> /mjˈɛɕɔnʦ/ "MONTH_NOUN"
+=======
+
+/p/ (0.017)
+	<pić> /pˈiʨ/ "DRINK_VERB"
+	<pąć> /pˈɔɲʨ/ "WAY_NOUN"
+	<głupi> /ɡwˈupi/ "STUPID_ADJ"
+
+/b/ (0.016)
+	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
+	<grzbiet> /ɡʐbjˈɛt/ "SPINE_NOUN"
+	<bóg> /bˈuɡ̊/ "GOD_NOUN"
+
+/z/ (0.013)
+	<ząb> /zˈɔmb̥/ "TOOTH_NOUN"
+	<zwierz> /zvjˈɛʐ̊/ "BEAST_NOUN"
+	<wiązać> /vjˈɔw̃zaʨ/ "TIE_VERB"
+
+/w̃/ (0.013)
+	<ciężki> /ʨˈɛw̃ʐ̊ki/ "HEAVY_ADJ"
+	<imię> /ˈimjɛw̃/ "NAME_NOUN"
+	<wiązać> /vjˈɔw̃zaʨ/ "TIE_VERB"
+
+/ʦ/ (0.012)
+	<serce> /sˈɛrʦɛ/ "HEART_NOUN"
+	<cena> /ʦˈɛna/ "PRICE_NOUN"
+	<noc> /nˈɔʦ/ "NIGHT_NOUN"
+
+/x/ (0.012)
+	<mucha> /mˈuxa/ "HOUSEFLY_NOUN"
+	<chłodny> /xwˈɔdnɨ/ "COLD_ADJ"
+	<suchy> /sˈuxɨ/ "DRY_ADJ"
+>>>>>>> main
 
 /ʈ͡ʂ/ (0.009)
 	<człowiek> /ʈ͡ʂwˈɔvjɛk/ "PERSON_NOUN"

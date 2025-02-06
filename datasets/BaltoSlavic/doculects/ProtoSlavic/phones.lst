@@ -4,7 +4,11 @@ VOWELS
 	<edìnъ> /edǐnŭ/ "ONE_NUM"
 	<žь̑ltъjь> /ʒĭ̂ltŭjĭ/ "YELLOW_ADJ"
 
+<<<<<<< HEAD
 /ĭ/ (0.069)
+=======
+/ĭ/ (0.07)
+>>>>>>> main
 	<ǫ̀glь> /õːˀɡlĭ/ "COAL_NOUN"
 	<zelènъjь> /zelěnŭjĭ/ "GREEN_ADJ"
 	<pь̀sъ> /pĭ̌sŭ/ "DOG_NOUN"
@@ -29,7 +33,11 @@ VOWELS
 	<vě̀trъ> /vɛːˀtrŭ/ "WIND_NOUN"
 	<cělъjь> /ʦɛ̂ːlŭjĭ/ "WHOLE_ADJ"
 
+<<<<<<< HEAD
 /i/ (0.023)
+=======
+/i/ (0.022)
+>>>>>>> main
 	<znàti> /znǎti/ "KNOW_VERB"
 	<živěti> /ʒivɛːti/ "LIVE_VERB"
 	<vъzęti> /vŭzẽti/ "TAKE_VERB"
@@ -100,7 +108,11 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /t/ (0.049)
+=======
+/t/ (0.05)
+>>>>>>> main
 	<kvě̑tъkъ> /kvɛːtŭ̂kŭ/ "FLOWER_NOUN"
 	<kvě̑tъ> /kvɛ̂ːtŭ/ "FLOWER_NOUN"
 	<dȅvętь> /dêvẽtĭ/ "NINE_NUM"
@@ -140,7 +152,11 @@ CONSONANTS
 	<(j)ãzъ> /jǎːzŭ/ "I_POS"
 	<xȏldьnъjь> /xôːldĭnŭjĭ/ "COLD_ADJ"
 
+<<<<<<< HEAD
 /n/ (0.023)
+=======
+/n/ (0.022)
+>>>>>>> main
 	<sy̑nъ> /sɨ̂ːnŭ/ "SON_NOUN"
 	<xȏldьnъ> /xôːldĭnŭ/ "COLD_ADJ"
 	<kolě̋no> /kolɛːˀno/ "KNEE_NOUN"
@@ -180,6 +196,7 @@ CONSONANTS
 	<mùxa> /mǔxa/ "HOUSEFLY_NOUN"
 	<sȗxъ> /sûːxŭ/ "DRY_ADJ"
 
+<<<<<<< HEAD
 /ʧ/ (0.006)
 	<čelověkъ> /ʧelovɛːkŭ/ "PERSON_NOUN"
 	<četỳre> /ʧetɨ̌re/ "FOUR_NUM"
@@ -189,6 +206,17 @@ CONSONANTS
 	<cěnà> /ʦɛːnaˀ/ "PRICE_NOUN"
 	<mě̀sę̄cь> /mɛːˀsẽːʦĭ/ "MONTH_NOUN"
 	<sъ̏lnьce> /sŭ̂lnĭʦe/ "SUN_NOUN"
+=======
+/ʧ/ (0.007)
+	<sъčę̑stьje> /sŭʧẽ̂ːstĭje/ "HAPPINESS_NOUN"
+	<vȅčerъ> /vêʧerŭ/ "EVENING_NOUN"
+	<čь̀rnъjь> /ʧĭ̌rnŭjĭ/ "BLACK_ADJ"
+
+/ʦ/ (0.006)
+	<cělъjь> /ʦɛ̂ːlŭjĭ/ "WHOLE_ADJ"
+	<sъ̏lnьce> /sŭ̂lnĭʦe/ "SUN_NOUN"
+	<cě̑lъ> /ʦɛ̂ːlŭ/ "WHOLE_ADJ"
+>>>>>>> main
 
 /ʎ/ (0.003)
 	<ľȗdьje> /ʎûːdĭje/ "PEOPLE_NOUN"
@@ -215,7 +243,11 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
+<<<<<<< HEAD
 /̌/ (0.063)
+=======
+/̌/ (0.062)
+>>>>>>> main
 	<tèplъjь> /těplŭjĭ/ "WARM_ADJ"
 	<pě̄sъ̀kъ> /pɛːsŭ̌kŭ/ "SAND_NOUN"
 	<stòlъ> /stǒlŭ/ "TABLE_NOUN"

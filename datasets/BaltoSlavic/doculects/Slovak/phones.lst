@@ -1,10 +1,18 @@
 VOWELS
+<<<<<<< HEAD
 /a/ (0.088)
+=======
+/a/ (0.087)
+>>>>>>> main
 	<teľa> /cˈɛʎa/ "CALF_NOUN"
 	<ústa> /ˈuːsta/ "MOUTH_NOUN"
 	<zima> /zˈima/ "WINTER_NOUN"
 
+<<<<<<< HEAD
 /ɔ/ (0.074)
+=======
+/ɔ/ (0.076)
+>>>>>>> main
 	<telo> /cˈɛɫɔ/ "BODY_NOUN"
 	<dobrý> /dˈɔbriː/ "GOOD_ADJ"
 	<oblak> /ˈɔbɫak/ "CLOUD_NOUN"
@@ -29,7 +37,11 @@ VOWELS
 	<vietor> /ʋɪ̯ˈɛtɔr/ "WIND_NOUN"
 	<vidieť> /ʋˈiɟɪ̯ɛc/ "SEE_VERB"
 
+<<<<<<< HEAD
 /u/ (0.018)
+=======
+/u/ (0.017)
+>>>>>>> main
 	<uhlie> /ˈuɦʎɪ̯ɛ/ "COAL_NOUN"
 	<mucha> /mˈuxa/ "HOUSEFLY_NOUN"
 	<ucho> /ˈuxɔ/ "EAR_NOUN"
@@ -139,7 +151,11 @@ CONSONANTS
 	<brada> /brˈada/ "BEARD_NOUN"
 	<boh> /bˈɔx/ "GOD_NOUN"
 
+<<<<<<< HEAD
 /l/ (0.018)
+=======
+/l/ (0.017)
+>>>>>>> main
 	<teplý> /cˈɛpliː/ "WARM_ADJ"
 	<mlieko> /mlɪ̯ˈɛkɔ/ "MILK_NOUN"
 	<hluchý> /ɦlˈuxiː/ "DEAF_ADJ"
@@ -184,6 +200,7 @@ CONSONANTS
 	<prst> /pˈr̩st/ "FINGER_NOUN"
 	<chrbát> /xˈr̩baːt/ "SPINE_NOUN"
 
+<<<<<<< HEAD
 /ɫ̩/ (0.007)
 	<vlk> /ʋˈɫ̩k/ "WOLF_NOUN"
 	<slnce> /sˈɫ̩nʦɛ/ "SUN_NOUN"
@@ -202,9 +219,30 @@ CONSONANTS
 /ʒ̊/ (0.004)
 	<muž> /mˈuʒ̊/ "HUSBAND_NOUN"
 	<ťažký> /cˈaʒ̊kiː/ "HEAVY_ADJ"
+=======
+/ʧ/ (0.007)
+	<človek> /ʧɫˈɔʋɛk/ "PERSON_NOUN"
+	<večer> /ʋˈɛʧɛr/ "EVENING_NOUN"
+	<čo> /ʧˈɔ/ "WHAT_PRON"
+
+/ɫ̩/ (0.007)
+	<žltý> /ʒˈɫ̩tiː/ "YELLOW_ADJ"
+	<plný> /pˈɫ̩niː/ "FULL_ADJ"
+	<dlhý> /dˈɫ̩ɦiː/ "LONG_ADJ"
+
+/d̥/ (0.007)
+	<hladký> /ɦɫˈad̥kiː/ "SMOOTH_ADJ"
+	<sad> /sˈad̥/ "GARDEN_NOUN"
+	<med> /mˈed̥/ "HONEY_NOUN"
+
+/ʒ̊/ (0.004)
+>>>>>>> main
 	<dážď> /dˈaːʒ̊ɟ̊/ "RAIN_NOUN"
+	<ťažký> /cˈaʒ̊kiː/ "HEAVY_ADJ"
+	<muž> /mˈuʒ̊/ "HUSBAND_NOUN"
 
 /ʃ/ (0.004)
+<<<<<<< HEAD
 	<šťastie> /ʃcˈascɪ̯ɛ/ "HAPPINESS_NOUN"
 	<štyri> /ʃtˈiri/ "FOUR_NUM"
 	<šesť> /ʃˈɛsc/ "SIX_NUM"
@@ -213,6 +251,16 @@ CONSONANTS
 	<holub> /ɦˈɔɫub̥/ "DOVE_NOUN"
 	<zub> /zˈub̥/ "TOOTH_NOUN"
 	<chlieb> /xlɪ̯ˈɛb̥/ "BREAD_NOUN"
+=======
+	<štyri> /ʃtˈiri/ "FOUR_NUM"
+	<šťastie> /ʃcˈascɪ̯ɛ/ "HAPPINESS_NOUN"
+	<šesť> /ʃˈɛsc/ "SIX_NUM"
+
+/b̥/ (0.004)
+	<zub> /zˈub̥/ "TOOTH_NOUN"
+	<chlieb> /xlɪ̯ˈɛb̥/ "BREAD_NOUN"
+	<holub> /ɦˈɔɫub̥/ "DOVE_NOUN"
+>>>>>>> main
 
 /v/ (0.003)
 	<vziať> /vzɪ̯ˈac/ "TAKE_VERB"

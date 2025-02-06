@@ -1,4 +1,5 @@
 VOWELS
+<<<<<<< HEAD
 /a/ (0.068)
 	<sapnis> /sˈapnis/ "DREAM_NOUN"
 	<osta> /ˈuɔ̯sta/ "MOUTH_NOUN"
@@ -26,6 +27,35 @@ VOWELS
 
 /iɛ̯/ (0.018)
 	<ziema> /zˈiɛ̯ma/ "WINTER_NOUN"
+=======
+/a/ (0.07)
+	<sapnis> /sˈapnis/ "DREAM_NOUN"
+	<osta> /ˈuɔ̯sta/ "MOUTH_NOUN"
+	<balts> /bˈalts/ "WHITE_ADJ"
+
+/i/ (0.066)
+	<divi> /dˈivi/ "TWO_NUM"
+	<vilkt> /vˈilkt/ "DRAG_VERB"
+	<migla> /mˈiɡla/ "FOG_NOUN"
+
+/ɛ/ (0.052)
+	<zeme> /zˈɛmɛ/ "EARTH_NOUN"
+	<akmens> /ˈakmɛns/ "STONE_NOUN"
+	<zvaigzne> /zvˈai̯ɡznɛ/ "STAR_NOUN"
+
+/uɔ̯/ (0.027)
+	<dzīvot> /ʣˈiːvuɔ̯t/ "LIVE_VERB"
+	<zobs> /zˈuɔ̯b̥s/ "TOOTH_NOUN"
+	<ròka> /rˈuɔ̯ka/ "HAND_NOUN"
+
+/æ/ (0.02)
+	<dzeltens> /ʣˈæltæns/ "YELLOW_ADJ"
+	<bebrs> /bˈæbr̩s/ "BEAVER_NOUN"
+	<pelni> /pˈælni/ "ASH_NOUN"
+
+/iɛ̯/ (0.018)
+	<ziema> /zˈiɛ̯ma/ "WINTER_NOUN"
+>>>>>>> main
 	<diena> /dˈiɛ̯na/ "DAY_NOUN"
 	<rieksts> /rˈiɛ̯ksts/ "NUT_NOUN"
 
@@ -73,12 +103,20 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /s/ (0.187)
+=======
+/s/ (0.188)
+>>>>>>> main
 	<rags> /rˈaɡ̊s/ "HORN_NOUN"
 	<lapsene> /lˈapsɛnɛ/ "WASP_NOUN"
 	<mēness> /mˈɛːness/ "MONTH_NOUN"
 
+<<<<<<< HEAD
 /l/ (0.053)
+=======
+/l/ (0.052)
+>>>>>>> main
 	<ābols> /ˈaːbuɔ̯ls/ "APPLE_NOUN"
 	<karalis> /kˈaralis/ "KING_NOUN"
 	<gluds> /ɡlˈud̥s/ "SMOOTH_ADJ"
@@ -103,6 +141,7 @@ CONSONANTS
 	<vilks> /vˈilks/ "WOLF_NOUN"
 	<vējš> /vˈɛːjʃ/ "WIND_NOUN"
 
+<<<<<<< HEAD
 /d/ (0.03)
 	<ļaudis> /ʎˈau̯dis/ "PEOPLE_NOUN"
 	<dūmi> /dˈuːmi/ "SMOKE_NOUN"
@@ -112,6 +151,17 @@ CONSONANTS
 	<akmens> /ˈakmɛns/ "STONE_NOUN"
 	<kost> /kˈuɔ̯st/ "BITE_VERB"
 	<rieksts> /rˈiɛ̯ksts/ "NUT_NOUN"
+=======
+/k/ (0.029)
+	<rieksts> /rˈiɛ̯ksts/ "NUT_NOUN"
+	<arkls> /ˈarkl̩s/ "PLOUGH_NOUN"
+	<nakts> /nˈakts/ "NIGHT_NOUN"
+
+/d/ (0.029)
+	<desmit> /dˈɛsmit/ "TEN_NUM"
+	<bārda> /bˈaːrda/ "BEARD_NOUN"
+	<ļaudis> /ʎˈau̯dis/ "PEOPLE_NOUN"
+>>>>>>> main
 
 /m/ (0.025)
 	<muša> /mˈuʃa/ "HOUSEFLY_NOUN"
@@ -128,7 +178,11 @@ CONSONANTS
 	<zobs> /zˈuɔ̯b̥s/ "TOOTH_NOUN"
 	<ezers> /ˈæzærs/ "LAKE_NOUN"
 
+<<<<<<< HEAD
 /b/ (0.021)
+=======
+/b/ (0.02)
+>>>>>>> main
 	<bārda> /bˈaːrda/ "BEARD_NOUN"
 	<balts> /bˈalts/ "WHITE_ADJ"
 	<bez> /bˈɛz̥/ "WITHOUT_PREP"

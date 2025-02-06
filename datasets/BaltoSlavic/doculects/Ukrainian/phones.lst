@@ -1,5 +1,9 @@
 VOWELS
+<<<<<<< HEAD
 /ɔ/ (0.082)
+=======
+/ɔ/ (0.083)
+>>>>>>> main
 	<кров> /krˈɔw/ "BLOOD_NOUN"
 	<озеро> /ˈɔzɛrɔ/ "LAKE_NOUN"
 	<оса> /ɔsˈɑ/ "WASP_NOUN"
@@ -18,12 +22,21 @@ VOWELS
 	<тихий> /tˈɪxej/ "QUIET_ADJ"
 	<великий> /ʋeɫˈɪkej/ "GREAT_ADJ"
 	<в'язати> /ʋjɐzˈɑte/ "TIE_VERB"
+<<<<<<< HEAD
 
 /ɪ/ (0.033)
 	<чотири> /ʧɔtˈɪrɪ/ "FOUR_NUM"
 	<пити> /pˈɪte/ "DRINK_VERB"
 	<старий> /stɐrˈɪj/ "OLD_ADJ"
 
+=======
+
+/ɪ/ (0.032)
+	<чотири> /ʧɔtˈɪrɪ/ "FOUR_NUM"
+	<пити> /pˈɪte/ "DRINK_VERB"
+	<старий> /stɐrˈɪj/ "OLD_ADJ"
+
+>>>>>>> main
 /ɛ/ (0.03)
 	<бобер> /bɔbˈɛr/ "BEAVER_NOUN"
 	<серце> /sˈɛrʦɛ/ "HEART_NOUN"
@@ -67,17 +80,29 @@ CONSONANTS
 	<твердий> /tʋerdˈɪj/ "HARD_ADJ"
 	<в'язати> /ʋjɐzˈɑte/ "TIE_VERB"
 
+<<<<<<< HEAD
 /k/ (0.034)
+=======
+/k/ (0.033)
+>>>>>>> main
 	<король> /kɔrˈɔlʲ/ "KING_NOUN"
 	<молоко> /mɔɫɔkˈɔ/ "MILK_NOUN"
 	<волокти> /wɔɫɔktˈɪ/ "DRAG_VERB"
 
+<<<<<<< HEAD
 /ɫ/ (0.033)
+=======
+/ɫ/ (0.032)
+>>>>>>> main
 	<слава> /sɫˈɑʋɐ/ "GLORY_NOUN"
 	<волокти> /wɔɫɔktˈɪ/ "DRAG_VERB"
 	<гладкий> /ɦɫɐdkˈɪj/ "SMOOTH_ADJ"
 
+<<<<<<< HEAD
 /s/ (0.033)
+=======
+/s/ (0.032)
+>>>>>>> main
 	<сон> /sˈɔn/ "DREAM_NOUN"
 	<сніг> /snʲˈiɦ/ "SNOW_NOUN"
 	<ріст> /rʲˈist/ "GROWTH_NOUN"
@@ -86,6 +111,7 @@ CONSONANTS
 	<здоровий> /zdɔrˈɔʋej/ "HEALTHY_ADJ"
 	<борода> /bɔrɔdˈɑ/ "BEARD_NOUN"
 	<довгий> /dˈɔʋɦej/ "LONG_ADJ"
+<<<<<<< HEAD
 
 /ɦ/ (0.024)
 	<гладкий> /ɦɫɐdkˈɪj/ "SMOOTH_ADJ"
@@ -98,6 +124,20 @@ CONSONANTS
 	<вечір> /ʋˈɛʧʲir/ "EVENING_NOUN"
 
 /m/ (0.02)
+=======
+
+/ɦ/ (0.024)
+	<гладкий> /ɦɫɐdkˈɪj/ "SMOOTH_ADJ"
+	<глупий> /ɦɫˈupej/ "STUPID_ADJ"
+	<голуб> /ɦˈɔɫʊb/ "DOVE_NOUN"
+
+/ʋ/ (0.022)
+	<глива> /ɦɫˈɪʋɐ/ "FUNGUS_NOUN"
+	<твердий> /tʋerdˈɪj/ "HARD_ADJ"
+	<вечір> /ʋˈɛʧʲir/ "EVENING_NOUN"
+
+/m/ (0.019)
+>>>>>>> main
 	<молоко> /mɔɫɔkˈɔ/ "MILK_NOUN"
 	<зима> /zɪmˈɑ/ "WINTER_NOUN"
 	<сім> /sʲˈim/ "SEVEN_NUM"
@@ -157,12 +197,21 @@ CONSONANTS
 	<сніг> /snʲˈiɦ/ "SNOW_NOUN"
 	<камінь> /kˈamʲinʲ/ "STONE_NOUN"
 
+<<<<<<< HEAD
 /ʧ/ (0.008)
 	<чотири> /ʧɔtˈɪrɪ/ "FOUR_NUM"
 	<чоловік> /ʧɔɫɔʋʲˈik/ "PERSON_NOUN"
 	<ніч> /nʲˈiʧ/ "NIGHT_NOUN"
 
 /ʒ/ (0.007)
+=======
+/ʧ/ (0.009)
+	<ніч> /nʲˈiʧ/ "NIGHT_NOUN"
+	<чоловік> /ʧɔɫɔʋʲˈik/ "PERSON_NOUN"
+	<що> /ʃʧˈɔ/ "WHAT_PRON"
+
+/ʒ/ (0.006)
+>>>>>>> main
 	<вуж> /wˈuʒ/ "SNAKE_NOUN"
 	<жовтий> /ʒˈɔʍtej/ "YELLOW_ADJ"
 	<жити> /ʒˈɪte/ "LIVE_VERB"
@@ -182,20 +231,33 @@ CONSONANTS
 	<цвіт> /ʦʋʲˈit/ "FLOWER_NOUN"
 	<серце> /sˈɛrʦɛ/ "HEART_NOUN"
 
+<<<<<<< HEAD
 /zʲ/ (0.003)
 	<взяти> /ʋzʲˈɑtɪ/ "TAKE_VERB"
 	<звізда> /zʲʋʲizdˈɑ/ "STAR_NOUN"
+=======
+/ʃ/ (0.003)
+	<що> /ʃʧˈɔ/ "WHAT_PRON"
+	<дощ> /dˈɔʃʧ/ "RAIN_NOUN"
+	<щастя> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
+
+/zʲ/ (0.003)
+	<звізда> /zʲʋʲizdˈɑ/ "STAR_NOUN"
+	<взяти> /ʋzʲˈɑtɪ/ "TAKE_VERB"
+>>>>>>> main
 	<звір> /zʲʋʲˈir/ "BEAST_NOUN"
 
 /mʲ/ (0.003)
 	<місто> /mʲˈistɔ/ "PLACE_NOUN"
 	<камінь> /kˈamʲinʲ/ "STONE_NOUN"
 	<місяць> /mʲˈisʲɐʦʲ/ "MONTH_NOUN"
+	<камінь> /kˈamʲinʲ/ "STONE_NOUN"
 
 /ʍ/ (0.002)
 	<жовтий> /ʒˈɔʍtej/ "YELLOW_ADJ"
 	<вовк> /wˈɔʍk/ "WOLF_NOUN"
 
+<<<<<<< HEAD
 /ʃ/ (0.002)
 	<щастя> /ʃʧˈɑsʲtʲɐ/ "HAPPINESS_NOUN"
 	<дощ> /dˈɔʃʧ/ "RAIN_NOUN"
@@ -206,7 +268,15 @@ CONSONANTS
 
 /kʲ/ (0.002)
 	<кінь> /kʲˈinʲ/ "HORSE_NOUN"
+=======
+/pʲ/ (0.002)
+	<пісок> /pʲisˈɔk/ "SAND_NOUN"
+	<попіл> /pˈɔpʲiɫ/ "ASH_NOUN"
+
+/kʲ/ (0.002)
+>>>>>>> main
 	<кість> /kʲˈistʲ/ "BONE_NOUN"
+	<кінь> /kʲˈinʲ/ "HORSE_NOUN"
 
 /bʲ/ (0.002)
 	<білий> /bʲˈiɫej/ "WHITE_ADJ"
@@ -233,10 +303,17 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
+<<<<<<< HEAD
 /ˈ/ (0.174)
 	<вітер> /ʋʲˈitɛr/ "WIND_NOUN"
 	<бджола> /bʤɔɫˈɑ/ "BEE_NOUN"
 	<сад> /sˈɑd/ "GARDEN_NOUN"
+=======
+/ˈ/ (0.175)
+	<сад> /sˈɑd/ "GARDEN_NOUN"
+	<ніготь> /nʲˈiɦɔtʲ/ "FINGERNAIL_NOUN"
+	<в'язати> /ʋjɐzˈɑte/ "TIE_VERB"
+>>>>>>> main
 
 
 

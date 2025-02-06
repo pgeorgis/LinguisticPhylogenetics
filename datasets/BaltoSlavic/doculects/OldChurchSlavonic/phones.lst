@@ -3,6 +3,7 @@ VOWELS
 	<съмрьть> /sʊmrˈɪtɪ/ "DEATH_NOUN"
 	<бѣлъ> /bˈælʊ/ "WHITE_ADJ"
 	<хлѣбъ> /xlˈæbʊ/ "BREAD_NOUN"
+<<<<<<< HEAD
 
 /ɑ/ (0.053)
 	<садъ> /sˈɑdʊ/ "GARDEN_NOUN"
@@ -20,6 +21,25 @@ VOWELS
 	<мрьтвъ> /mrˈɪtvʊ/ "DEAD_ADJ"
 
 /ɛ/ (0.036)
+=======
+
+/ɔ/ (0.053)
+	<добръ> /dˈɔbrʊ/ "GOOD_ADJ"
+	<голѫбь> /ɡˈɔlɔ̃bɪ/ "DOVE_NOUN"
+	<мѣсто> /mˈæstɔ/ "PLACE_NOUN"
+
+/ɑ/ (0.053)
+	<оуста> /ustˈɑ/ "MOUTH_NOUN"
+	<рало> /rˈɑlɔ/ "PLOUGH_NOUN"
+	<вода> /vɔdˈɑ/ "WATER_NOUN"
+
+/ɪ/ (0.051)
+	<дльгъ> /dlˈɪɡʊ/ "LONG_ADJ"
+	<прьстъ> /prˈɪstʊ/ "FINGER_NOUN"
+	<мрьтвъ> /mrˈɪtvʊ/ "DEAD_ADJ"
+
+/ɛ/ (0.035)
+>>>>>>> main
 	<девѧть> /dˈɛvɛ̃tɪ/ "NINE_NUM"
 	<пепелъ> /pˈɛpɛlʊ/ "ASH_NOUN"
 	<жена> /ʒɛnˈɑ/ "WOMAN_NOUN"
@@ -60,7 +80,11 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /t/ (0.052)
+=======
+/t/ (0.053)
+>>>>>>> main
 	<видѣти> /vidˈæti/ "SEE_VERB"
 	<прьстъ> /prˈɪstʊ/ "FINGER_NOUN"
 	<нощь> /nˈɔʃtɪ/ "NIGHT_NOUN"
@@ -145,10 +169,17 @@ CONSONANTS
 	<мѣсѧць> /mˈæsɛ̃ʦɪ/ "MONTH_NOUN"
 	<пътица> /pʊtˈiʦɑ/ "BIRD_NOUN"
 
+<<<<<<< HEAD
 /ʧ/ (0.006)
 	<чєтꙑрє> /ʧɛtˈɯrɛ/ "FOUR_NUM"
 	<бъчела> /bʊʧˈɛlɑ/ "BEE_NOUN"
 	<чрьнъ> /ʧrˈɪnʊ/ "BLACK_ADJ"
+=======
+/ʧ/ (0.007)
+	<чєтꙑрє> /ʧɛtˈɯrɛ/ "FOUR_NUM"
+	<бъчела> /bʊʧˈɛlɑ/ "BEE_NOUN"
+	<вечеръ> /vˈɛʧɛrʊ/ "EVENING_NOUN"
+>>>>>>> main
 
 /ʃ/ (0.004)
 	<шесть> /ʃˈɛstɪ/ "SIX_NUM"

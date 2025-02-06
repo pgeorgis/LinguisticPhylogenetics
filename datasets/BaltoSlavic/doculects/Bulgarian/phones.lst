@@ -4,7 +4,11 @@ VOWELS
 	<орех> /ˈɔrɛx/ "NUT_NOUN"
 	<жена> /ʒɛnˈa/ "WOMAN_NOUN"
 
+<<<<<<< HEAD
 /a/ (0.067)
+=======
+/a/ (0.066)
+>>>>>>> main
 	<оса> /osˈa/ "WASP_NOUN"
 	<лято> /lʲˈato/ "SUMMER_NOUN"
 	<пчела> /pʧɛɫˈa/ "BEE_NOUN"
@@ -13,6 +17,7 @@ VOWELS
 	<огън> /ˈɔɡɐn/ "FIRE_NOUN"
 	<невяста> /nɛvʲˈastɐ/ "BRIDE_NOUN"
 	<пясък> /pʲˈasɐk/ "SAND_NOUN"
+<<<<<<< HEAD
 
 /ɔ/ (0.03)
 	<восък> /vˈɔsɐk/ "WAX_NOUN"
@@ -24,12 +29,29 @@ VOWELS
 	<име> /ˈimɛ/ "NAME_NOUN"
 	<глива> /ɡlˈivɐ/ "FUNGUS_NOUN"
 
+=======
+
+/ɔ/ (0.031)
+	<восък> /vˈɔsɐk/ "WAX_NOUN"
+	<нощ> /nˈɔʃt/ "NIGHT_NOUN"
+	<нос> /nˈɔs/ "NOSE_NOUN"
+
+/i/ (0.029)
+	<три> /trˈi/ "THREE_NUM"
+	<име> /ˈimɛ/ "NAME_NOUN"
+	<глива> /ɡlˈivɐ/ "FUNGUS_NOUN"
+
+>>>>>>> main
 /ɤ/ (0.028)
 	<мъртъв> /mˈɤrtɐf/ "DEAD_ADJ"
 	<лъв> /ɫˈɤf/ "LION_NOUN"
 	<късам> /kˈɤsɐm/ "BITE_VERB"
 
+<<<<<<< HEAD
 /o/ (0.025)
+=======
+/o/ (0.024)
+>>>>>>> main
 	<гора> /ɡorˈa/ "MOUNTAIN_NOUN"
 	<човек> /ʧovˈɛk/ "PERSON_NOUN"
 	<кора> /korˈa/ "BARK_NOUN"
@@ -47,12 +69,20 @@ CONSONANTS
 	<дърво> /dɐrvˈɔ/ "TREE_NOUN"
 	<кръв> /krˈɤf/ "BLOOD_NOUN"
 
+<<<<<<< HEAD
 /t/ (0.046)
+=======
+/t/ (0.047)
+>>>>>>> main
 	<сто> /stˈɔ/ "HUNDRED_NUM"
 	<кост> /kˈɔst/ "BONE_NOUN"
 	<топъл> /tˈɔpɐɫ/ "WARM_ADJ"
 
+<<<<<<< HEAD
 /s/ (0.046)
+=======
+/s/ (0.045)
+>>>>>>> main
 	<късам> /kˈɤsɐm/ "BITE_VERB"
 	<стар> /stˈar/ "OLD_ADJ"
 	<гъска> /ɡˈɤskɐ/ "GOOSE_NOUN"
@@ -81,6 +111,7 @@ CONSONANTS
 	<година> /ɡodˈinɐ/ "HOUR_NOUN"
 	<седем> /sˈɛdɛm/ "SEVEN_NUM"
 	<девет> /dˈɛvɛt/ "NINE_NUM"
+<<<<<<< HEAD
 
 /m/ (0.025)
 	<късам> /kˈɤsɐm/ "BITE_VERB"
@@ -97,6 +128,24 @@ CONSONANTS
 	<зелен> /zɛlˈɛn/ "GREEN_ADJ"
 	<бреза> /brɛzˈa/ "BIRCH_NOUN"
 
+=======
+
+/m/ (0.024)
+	<късам> /kˈɤsɐm/ "BITE_VERB"
+	<море> /morˈɛ/ "SEA_NOUN"
+	<взема> /vzˈɛmɐ/ "TAKE_VERB"
+
+/ɡ/ (0.019)
+	<глух> /ɡɫˈux/ "DEAF_ADJ"
+	<въглен> /vˈɤɡlɛn/ "COAL_NOUN"
+	<глава> /ɡɫɐvˈa/ "HEAD_NOUN"
+
+/z/ (0.017)
+	<език> /ɛzˈik/ "TONGUE_NOUN"
+	<зелен> /zɛlˈɛn/ "GREEN_ADJ"
+	<бреза> /brɛzˈa/ "BIRCH_NOUN"
+
+>>>>>>> main
 /p/ (0.013)
 	<пет> /pˈɛt/ "FIVE_NUM"
 	<топъл> /tˈɔpɐɫ/ "WARM_ADJ"
@@ -112,7 +161,11 @@ CONSONANTS
 	<тих> /tˈix/ "QUIET_ADJ"
 	<орех> /ˈɔrɛx/ "NUT_NOUN"
 
+<<<<<<< HEAD
 /l/ (0.011)
+=======
+/l/ (0.01)
+>>>>>>> main
 	<теле> /tɛlˈɛ/ "CALF_NOUN"
 	<лед> /lˈɛd̥/ "ICE_NOUN"
 	<въглен> /vˈɤɡlɛn/ "COAL_NOUN"
@@ -146,6 +199,7 @@ CONSONANTS
 	<вечер> /vˈɛʧɛr/ "EVENING_NOUN"
 	<четири> /ʧˈɛtiri/ "FOUR_NUM"
 	<човек> /ʧovˈɛk/ "PERSON_NOUN"
+<<<<<<< HEAD
 
 /vʲ/ (0.006)
 	<звяр> /zvʲˈar/ "BEAST_NOUN"
@@ -161,24 +215,51 @@ CONSONANTS
 	<щастие> /ʃtˈastiɛ/ "HAPPINESS_NOUN"
 	<дъщеря> /dɐʃtɛrʲˈa/ "DAUGHTER_NOUN"
 	<нощ> /nˈɔʃt/ "NIGHT_NOUN"
+=======
+
+/ʃ/ (0.006)
+	<дъщеря> /dɐʃtɛrʲˈa/ "DAUGHTER_NOUN"
+	<шест> /ʃˈɛst/ "SIX_NUM"
+	<що> /ʃtˈɔ/ "WHAT_PRON"
+
+/vʲ/ (0.006)
+	<цвят> /ʦvʲˈat/ "FLOWER_NOUN"
+	<свят> /svʲˈat/ "HOLY_ADJ"
+	<вятър> /vʲˈatɐr/ "WIND_NOUN"
+
+/f/ (0.006)
+	<кръв> /krˈɤf/ "BLOOD_NOUN"
+	<лъв> /ɫˈɤf/ "LION_NOUN"
+	<мъртъв> /mˈɤrtɐf/ "DEAD_ADJ"
+>>>>>>> main
 
 /ɡ̊/ (0.005)
+	<рог> /rˈɔɡ̊/ "HORN_NOUN"
 	<бог> /bˈɔɡ̊/ "GOD_NOUN"
-	<сняг> /snʲˈaɡ̊/ "SNOW_NOUN"
 	<дълъг> /dˈɤɫɐɡ̊/ "LONG_ADJ"
 
+<<<<<<< HEAD
 /b̥/ (0.004)
 	<гълъб> /ɡˈɤɫɐb̥/ "DOVE_NOUN"
+=======
+/b̥/ (0.003)
+>>>>>>> main
 	<зъб> /zˈɤb̥/ "TOOTH_NOUN"
 	<хляб> /xlʲˈab̥/ "BREAD_NOUN"
+	<гълъб> /ɡˈɤɫɐb̥/ "DOVE_NOUN"
 
 /ʒ̊/ (0.002)
 	<дъжд> /dˈɤʒ̊d̥/ "RAIN_NOUN"
 	<мъж> /mˈɤʒ̊/ "HUSBAND_NOUN"
 
 /z̥/ (0.002)
+<<<<<<< HEAD
 	<аз> /ˈaz̥/ "I_POS"
 	<без> /bˈɛz̥/ "WITHOUT_PREP"
+=======
+	<без> /bˈɛz̥/ "WITHOUT_PREP"
+	<аз> /ˈaz̥/ "I_POS"
+>>>>>>> main
 
 /mʲ/ (0.002)
 	<земя> /zɛmʲˈa/ "EARTH_NOUN"
@@ -209,9 +290,15 @@ CONSONANTS
 
 SUPRASEGMENTALS
 /ˈ/ (0.186)
+<<<<<<< HEAD
 	<дълъг> /dˈɤɫɐɡ̊/ "LONG_ADJ"
 	<люде> /lʲˈudɛ/ "PEOPLE_NOUN"
 	<лист> /lˈist/ "LEAF_NOUN"
+=======
+	<камък> /kˈamɐk/ "STONE_NOUN"
+	<вол> /vˈɔɫ/ "OX_NOUN"
+	<сняг> /snʲˈaɡ̊/ "SNOW_NOUN"
+>>>>>>> main
 
 
 

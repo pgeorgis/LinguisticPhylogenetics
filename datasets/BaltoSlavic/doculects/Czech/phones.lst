@@ -1,5 +1,9 @@
 VOWELS
+<<<<<<< HEAD
 /ɛ/ (0.099)
+=======
+/ɛ/ (0.098)
+>>>>>>> main
 	<tele> /tˈɛlɛ/ "CALF_NOUN"
 	<ořech> /ˈor̝ɛx/ "NUT_NOUN"
 	<teplý> /tˈɛpliː/ "WARM_ADJ"
@@ -9,7 +13,11 @@ VOWELS
 	<hlíva> /ɦlˈiːva/ "FUNGUS_NOUN"
 	<nevěsta> /nˈɛvjɛsta/ "BRIDE_NOUN"
 
+<<<<<<< HEAD
 /o/ (0.062)
+=======
+/o/ (0.063)
+>>>>>>> main
 	<místo> /mˈiːsto/ "PLACE_NOUN"
 	<nos> /nˈos/ "NOSE_NOUN"
 	<člověk> /ʧlˈovjɛk/ "PERSON_NOUN"
@@ -52,7 +60,11 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /l/ (0.062)
+=======
+/l/ (0.061)
+>>>>>>> main
 	<vůl> /vˈuːl/ "OX_NOUN"
 	<včela> /fʧˈɛla/ "BEE_NOUN"
 	<hloupý> /ɦlˈou̯piː/ "STUPID_ADJ"
@@ -127,9 +139,15 @@ CONSONANTS
 	<hloupý> /ɦlˈou̯piː/ "STUPID_ADJ"
 	<pouť> /pˈou̯c/ "WAY_NOUN"
 
+<<<<<<< HEAD
 /ʦ/ (0.011)
 	<vléct> /vlˈɛːʦt/ "DRAG_VERB"
 	<měsíc> /mɲˈɛsiːʦ/ "MONTH_NOUN"
+=======
+/ʦ/ (0.013)
+	<vléct> /vlˈɛːʦt/ "DRAG_VERB"
+	<co> /ʦˈo/ "WHAT_PRON"
+>>>>>>> main
 	<cena> /ʦˈɛna/ "PRICE_NOUN"
 
 /r̝/ (0.011)

@@ -1,20 +1,36 @@
 VOWELS
+<<<<<<< HEAD
 /a/ (0.11)
+=======
+/a/ (0.111)
+>>>>>>> main
 	<gárdas> /ɡárdas/ "CITY_NOUN"
 	<garā́ˀ> /ɡaráːˀ/ "MOUNTAIN_NOUN"
 	<wápsāˀ> /wápsaːˀ/ "WASP_NOUN"
 
+<<<<<<< HEAD
 /i/ (0.045)
+=======
+/i/ (0.044)
+>>>>>>> main
 	<déśimt> /désʲimt/ "TEN_NUM"
 	<sáuˀlijāˀ> /sáu̯ˀlijaːˀ/ "SUN_NOUN"
 	<anˀglís> /aŋˀɡlís/ "COAL_NOUN"
 
+<<<<<<< HEAD
 /aː/ (0.039)
+=======
+/aː/ (0.038)
+>>>>>>> main
 	<sādas> /saːdas/ "GARDEN_NOUN"
 	<ṓˀgāˀ> /óːˀɡaːˀ/ "BERRY_NOUN"
 	<ū́ˀdrāˀ> /úːˀdraːˀ/ "OTTER_NOUN"
 
+<<<<<<< HEAD
 /e/ (0.033)
+=======
+/e/ (0.032)
+>>>>>>> main
 	<šéš> /ʃéʃ/ "SIX_NUM"
 	<déśimt> /désʲimt/ "TEN_NUM"
 	<néwin> /néwin/ "NINE_NUM"
@@ -67,7 +83,11 @@ VOWELS
 
 
 CONSONANTS
+<<<<<<< HEAD
 /s/ (0.11)
+=======
+/s/ (0.111)
+>>>>>>> main
 	<glā́ˀdus> /ɡláːˀdus/ "SMOOTH_ADJ"
 	<źwēˀrís> /zʲweːˀrís/ "BEAST_NOUN"
 	<mḗns> /méːns/ "MEAT_NOUN"
@@ -77,7 +97,11 @@ CONSONANTS
 	<ū́ˀdrāˀ> /úːˀdraːˀ/ "OTTER_NOUN"
 	<ketū́res> /ketúːres/ "FOUR_NUM"
 
+<<<<<<< HEAD
 /t/ (0.042)
+=======
+/t/ (0.041)
+>>>>>>> main
 	<źinōˀtei> /zʲinoːˀtei̯/ "KNOW_VERB"
 	<stā́ˀras> /stáːˀras/ "OLD_ADJ"
 	<aśtṓ> /asʲtóː/ "EIGHT_NUM"
@@ -87,7 +111,11 @@ CONSONANTS
 	<nagā́ˀ> /naɡáːˀ/ "FOOT_NOUN"
 	<sū́ˀnus> /súːˀnus/ "SON_NOUN"
 
+<<<<<<< HEAD
 /l/ (0.036)
+=======
+/l/ (0.035)
+>>>>>>> main
 	<ślṓˀwāˀ> /sʲlóːˀwaːˀ/ "GLORY_NOUN"
 	<árˀtla> /árˀtla/ "PLOUGH_NOUN"
 	<ledús> /ledús/ "ICE_NOUN"
@@ -102,6 +130,7 @@ CONSONANTS
 	<mirtwas> /mirtwas/ "DEAD_ADJ"
 	<kwaitas> /kwai̯tas/ "FLOWER_NOUN"
 
+<<<<<<< HEAD
 /d/ (0.028)
 	<ū́ˀdrāˀ> /úːˀdraːˀ/ "OTTER_NOUN"
 	<sādas> /saːdas/ "GARDEN_NOUN"
@@ -129,10 +158,40 @@ CONSONANTS
 
 /ʃ/ (0.013)
 	<šéš> /ʃéʃ/ "SIX_NUM"
+=======
+/k/ (0.028)
+	<ketū́res> /ketúːres/ "FOUR_NUM"
+	<áiˀšknas> /ái̯ˀʃknas/ "CLEAR_ADJ"
+	<ránkāˀ> /ráŋkaːˀ/ "HAND_NOUN"
+
+/d/ (0.028)
+	<duwō> /duwoː/ "TWO_NUM"
+	<źwaisdā́ˀ> /zʲwai̯zdáːˀ/ "STAR_NOUN"
+	<mondros> /mondros/ "WISE_ADJ"
+
+/m/ (0.027)
+	<máušāˀ> /máu̯ʃaːˀ/ "HOUSEFLY_NOUN"
+	<ēˀźum> /eːˀzʲum/ "I_POS"
+	<źeimā́ˀ> /zʲei̯máːˀ/ "WINTER_NOUN"
+
+/zʲ/ (0.018)
+	<źámbas> /zʲámbas/ "TOOTH_NOUN"
+	<éźera> /ézʲera/ "LAKE_NOUN"
+	<źwaisdā́ˀ> /zʲwai̯zdáːˀ/ "STAR_NOUN"
+
+/b/ (0.015)
+	<źámbas> /zʲámbas/ "TOOTH_NOUN"
+	<ā́ˀbōl> /áːˀboːl/ "APPLE_NOUN"
+	<bitē> /biteː/ "BEE_NOUN"
+
+/ʃ/ (0.013)
+>>>>>>> main
 	<pírštan> /pírʃtan/ "FINGER_NOUN"
 	<teišus> /tei̯ʃus/ "QUIET_ADJ"
+	<jáušāˀ> /jáu̯ʃaːˀ/ "SOUP_NOUN"
 
 /p/ (0.012)
+<<<<<<< HEAD
 	<pírštan> /pírʃtan/ "FINGER_NOUN"
 	<pántis> /pántis/ "WAY_NOUN"
 	<pílˀnas> /pílˀnas/ "FULL_ADJ"
@@ -141,6 +200,16 @@ CONSONANTS
 	<déśimt> /désʲimt/ "TEN_NUM"
 	<wáśka> /wásʲka/ "WAX_NOUN"
 	<śḗr> /sʲéːr/ "HEART_NOUN"
+=======
+	<wápsāˀ> /wápsaːˀ/ "WASP_NOUN"
+	<septín> /septín/ "SEVEN_NUM"
+	<pītei> /piːtei̯/ "DRINK_VERB"
+
+/sʲ/ (0.01)
+	<śḗr> /sʲéːr/ "HEART_NOUN"
+	<śímta> /sʲímta/ "HUNDRED_NUM"
+	<wáśka> /wásʲka/ "WAX_NOUN"
+>>>>>>> main
 
 /ŋ/ (0.009)
 	<anˀglís> /aŋˀɡlís/ "COAL_NOUN"

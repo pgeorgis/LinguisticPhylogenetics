@@ -440,6 +440,19 @@ if __name__ == "__main__":
         maxiter=100,     # Number of iterations
         mutation=(0.5, 1),  # Mutation factor
         recombination=0.7   # Crossover probability
+    # Generate Newick tree string
+    logger.info('Generating phylogenetic tree...')
+    outtree = os.path.join(exp_outdir, "newick.tre")
+    out_distmatrix = os.path.join(exp_outdir, "distance-matrix.tsv")
+    tree = family.generate_tree(
+        cluster_func=clusterDist,
+        dist_func=distFunc,
+        cognates=cognate_params['cluster'],
+        linkage_method=tree_params['linkage'],
+        outtree=outtree,
+        root=tree_params['root'],
+        code=exp_id,
+        dm_outfile=out_distmatrix,
     )
 
     # Refine using Powell method
@@ -459,13 +472,11 @@ if __name__ == "__main__":
     #     f.write(tree)
     # logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
 
-    # Plot the phylogenetic tree
-    out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
-    plot_tree(os.path.abspath(outtree), out_png)
-    logger.info(f'Plotted phylogenetic tree to {out_png}')
-
     # Optionally evaluate tree wrt to reference tree(s)
-    if tree_params["reference"]:
+    ref_classifications = None
+    if tree_params["reference"] and len(family.languages) < 3:
+        logger.info("Fewer than 3 doculects provided; skipping evaluation.")
+    elif tree_params["reference"]:
         tree_scores = defaultdict(dict)
         for ref_tree_file in tree_params["reference"]:
             ref_tree = load_newick_tree(ref_tree_file)
@@ -473,6 +484,7 @@ if __name__ == "__main__":
             gqd_score = gqd(
                 tree,
                 ref_tree,
+                group_size=min(4, len(family.languages)),
                 is_rooted=tree_params['root'] is not None
             )
             tree_scores[ref_tree_file]["GQD"] = gqd_score
@@ -481,6 +493,23 @@ if __name__ == "__main__":
             tree_scores[ref_tree_file]["TreeDist"] = tree_mutual_info
             logger.info(f"TreeDist wrt reference tree {ref_tree_file}: {round(tree_mutual_info, 3)}")
         params["tree"]["eval"] = tree_scores
+        best_reference = min(
+            tree_scores.keys(),
+            key=lambda ref: sum(value for value in tree_scores[ref].values() if isinstance(value, (int, float)))
+        )
+        if best_reference.endswith(".csv"):
+            if os.path.exists(best_reference):
+                ref_classifications = os.path.abspath(best_reference)
+        else:
+            ref_csv = best_reference.replace(".tre", ".csv")
+            if os.path.exists(ref_csv):
+                ref_classifications = os.path.abspath(ref_csv)
+
+    # Plot the phylogenetic tree
+    out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
+    #plot_tree(os.path.abspath(outtree), out_png, classifications_file=ref_classifications)
+    plot_tree(os.path.abspath(outtree), out_png)  # TODO restore plotting with classifications_file for color coding once ggtree works in gitlab pipeline
+    logger.info(f'Plotted phylogenetic tree to {out_png}')
 
     # Write lexical comparison files
     for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):

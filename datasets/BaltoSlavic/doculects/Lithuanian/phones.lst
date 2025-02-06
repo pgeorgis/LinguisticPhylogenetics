@@ -1,4 +1,5 @@
 VOWELS
+<<<<<<< HEAD
 /ɐ/ (0.102)
 	<anglìs> /ɐŋɡlʲˈɪs/ "COAL_NOUN"
 	<ìlgas> /ˈɪɫɡɐs/ "LONG_ADJ"
@@ -71,6 +72,81 @@ VOWELS
 /ɛʊ̯/ (0.001)
 	<liáudis> /lʲɛ̂ʊ̯dʲɪs/ "PEOPLE_NOUN"
 
+=======
+/ɐ/ (0.103)
+	<nãgas> /nǎːɡɐs/ "FINGERNAIL_NOUN"
+	<anglìs> /ɐŋɡlʲˈɪs/ "COAL_NOUN"
+	<àš> /ˈɐʃ/ "I_POS"
+
+/ɪ/ (0.064)
+	<mirtìs> /mʲɪrʲtʲˈɪs/ "DEATH_NOUN"
+	<naktìs> /nɐktʲˈɪs/ "NIGHT_NOUN"
+	<ìlgas> /ˈɪɫɡɐs/ "LONG_ADJ"
+
+/ʊ/ (0.021)
+	<mùsė> /mˈʊsʲeː/ "HOUSEFLY_NOUN"
+	<teisùs> /tʲɛɪ̯sˈʊs/ "QUIET_ADJ"
+	<medùs> /mʲɛdˈʊs/ "HONEY_NOUN"
+
+/ɛ/ (0.021)
+	<bè> /bʲˈɛ/ "WITHOUT_PREP"
+	<keturì> /kʲɛtʊrʲˈɪ/ "FOUR_NUM"
+	<erẽlis> /ɛrʲæ̌ːlʲɪs/ "EAGLE_NOUN"
+
+/aː/ (0.021)
+	<žãlias> /ʒǎːlʲɐs/ "GREEN_ADJ"
+	<ką́sti> /kâːsʲtʲɪ/ "BITE_VERB"
+	<žąsìs> /ʒaːsʲˈɪs/ "GOOSE_NOUN"
+
+/eː/ (0.02)
+	<šlovė̃> /ʃɫoːvʲěː/ "GLORY_NOUN"
+	<mė́nesis> /mʲêːnʲɛsʲɪs/ "MONTH_NOUN"
+	<žvėrìs> /ʑvʲeːrʲˈɪs/ "BEAST_NOUN"
+
+/æː/ (0.016)
+	<ẽžeras> /æ̌ːʑɛrɐs/ "LAKE_NOUN"
+	<žẽmė> /ʑæ̌ːmʲeː/ "EARTH_NOUN"
+	<erẽlis> /ɛrʲæ̌ːlʲɪs/ "EAGLE_NOUN"
+
+/oː/ (0.013)
+	<sõdas> /sǒːdɐs/ "GARDEN_NOUN"
+	<stóras> /stôːrɐs/ "OLD_ADJ"
+	<obuolỹs> /oːbuə̯lʲǐːs/ "APPLE_NOUN"
+
+/iː/ (0.011)
+	<gývas> /ɡʲîːvɐs/ "ALIVE_ADJ"
+	<trỹs> /tʲrʲǐːs/ "THREE_NUM"
+	<devynì> /dʲɛvʲiːnʲˈɪ/ "NINE_NUM"
+
+/iə̯/ (0.01)
+	<sniẽgas> /sʲnʲǐə̯ɡɐs/ "SNOW_NOUN"
+	<dienà> /dʲiə̯nˈɐ/ "DAY_NOUN"
+	<víenas> /vʲîə̯nɐs/ "ONE_NUM"
+
+/uː/ (0.008)
+	<jū́šė> /jûːɕeː/ "SOUP_NOUN"
+	<sū́ris> /sûːrʲɪs/ "CHEESE_NOUN"
+	<dū́mas> /dûːmɐs/ "SMOKE_NOUN"
+
+/uə̯/ (0.008)
+	<vanduõ> /vɐndǔə̯/ "WATER_NOUN"
+	<obuolỹs> /oːbuə̯lʲǐːs/ "APPLE_NOUN"
+	<úoga> /ûə̯ɡɐ/ "BERRY_NOUN"
+
+/ɐʊ̯/ (0.004)
+	<saũsas> /sɐ̌ʊ̯sɐs/ "DRY_ADJ"
+	<ausìs> /ɐʊ̯sʲˈɪs/ "EAR_NOUN"
+	<kraũjas> /krɐ̌ʊ̯jɐs/ "BLOOD_NOUN"
+
+/aɪ̯/ (0.004)
+	<láiškas> /ɫâɪ̯ʃkɐs/ "LEAF_NOUN"
+	<áiškus> /âɪ̯ʃkʊs/ "CLEAR_ADJ"
+	<káina> /kâɪ̯nɐ/ "PRICE_NOUN"
+
+/ɛʊ̯/ (0.001)
+	<liáudis> /lʲɛ̂ʊ̯dʲɪs/ "PEOPLE_NOUN"
+
+>>>>>>> main
 /ɛɪ̯/ (0.001)
 	<teisùs> /tʲɛɪ̯sˈʊs/ "QUIET_ADJ"
 
@@ -79,17 +155,24 @@ VOWELS
 
 /æɪ̯/ (0.001)
 	<gléivės> /ɡlʲæ̂ɪ̯vʲeːs/ "FUNGUS_NOUN"
+<<<<<<< HEAD
 
 /aʊ̯/ (0.001)
 	<sáulė> /sâʊ̯lʲeː/ "SUN_NOUN"
 
 /ai̯/ (0.001)
 	<áiškus> /âi̯ʃkʊs/ "CLEAR_ADJ"
+=======
+
+/aʊ̯/ (0.001)
+	<sáulė> /sâʊ̯lʲeː/ "SUN_NOUN"
+>>>>>>> main
 
 
 
 CONSONANTS
 /s/ (0.121)
+<<<<<<< HEAD
 	<žvėrìs> /ʑvʲeːrʲˈɪs/ "BEAST_NOUN"
 	<árklas> /âːrkɫɐs/ "PLOUGH_NOUN"
 	<mañdras> /mɐňdrɐs/ "WISE_ADJ"
@@ -121,9 +204,29 @@ CONSONANTS
 
 /tʲ/ (0.02)
 	<tingùs> /tʲɪŋɡˈʊs/ "HEAVY_ADJ"
+=======
+	<ugnìs> /ʊɡnʲˈɪs/ "FIRE_NOUN"
+	<lẽdas> /lʲæ̌ːdɐs/ "ICE_NOUN"
+	<sãpnas> /sǎːpnɐs/ "DREAM_NOUN"
+
+/r/ (0.025)
+	<rãgas> /rǎːɡɐs/ "HORN_NOUN"
+	<kẽras> /kʲæ̌ːrɐs/ "ROOT_NOUN"
+	<stóras> /stôːrɐs/ "OLD_ADJ"
+
+/k/ (0.024)
+	<vil̃kas> /vʲɪɫ̌kɐs/ "WOLF_NOUN"
+	<vãkaras> /vǎːkɐrɐs/ "EVENING_NOUN"
+	<duktė̃> /dʊktʲěː/ "DAUGHTER_NOUN"
+
+/n/ (0.023)
+	<nósis> /nôːsʲɪs/ "NOSE_NOUN"
+	<geltónas> /ɡʲɛɫtôːnɐs/ "YELLOW_ADJ"
+>>>>>>> main
 	<žinóti> /ʑɪnôːtʲɪ/ "KNOW_VERB"
 	<tvìrtas> /tʲvʲˈɪrtɐs/ "HARD_ADJ"
 
+<<<<<<< HEAD
 /t/ (0.02)
 	<stóras> /stôːrɐs/ "OLD_ADJ"
 	<šáltas> /ʃâːɫtɐs/ "COLD_ADJ"
@@ -156,14 +259,84 @@ CONSONANTS
 
 /v/ (0.013)
 	<vapsvà> /vɐpsvˈɐ/ "WASP_NOUN"
+=======
+/ɫ/ (0.021)
+	<vil̃kas> /vʲɪɫ̌kɐs/ "WOLF_NOUN"
+	<ìlgas> /ˈɪɫɡɐs/ "LONG_ADJ"
+	<galvà> /ɡɐɫvˈɐ/ "HEAD_NOUN"
+
+/ɡ/ (0.021)
+	<galvà> /ɡɐɫvˈɐ/ "HEAD_NOUN"
+	<glodùs> /ɡɫoːdˈʊs/ "SMOOTH_ADJ"
+	<úoga> /ûə̯ɡɐ/ "BERRY_NOUN"
+
+/tʲ/ (0.02)
+	<tingùs> /tʲɪŋɡˈʊs/ "HEAVY_ADJ"
+	<duktė̃> /dʊktʲěː/ "DAUGHTER_NOUN"
+	<teisùs> /tʲɛɪ̯sˈʊs/ "QUIET_ADJ"
+
+/t/ (0.02)
+	<báltas> /bâːɫtɐs/ "WHITE_ADJ"
+	<šim̃tas> /ɕɪm̌tɐs/ "HUNDRED_NUM"
+	<geltónas> /ɡʲɛɫtôːnɐs/ "YELLOW_ADJ"
+
+/vʲ/ (0.018)
+	<liežùvis> /lʲiə̯ʒˈʊvʲɪs/ "TONGUE_NOUN"
+	<vil̃kti> /vʲɪɫ̌ktʲɪ/ "DRAG_VERB"
+	<tvìrtas> /tʲvʲˈɪrtɐs/ "HARD_ADJ"
+
+/lʲ/ (0.017)
+	<kẽlis> /kʲæ̌ːlʲɪs/ "KNEE_NOUN"
+	<sáulė> /sâʊ̯lʲeː/ "SUN_NOUN"
+	<lẽdas> /lʲæ̌ːdɐs/ "ICE_NOUN"
+
+/d/ (0.017)
+	<gar̃das> /ɡɐřdɐs/ "CITY_NOUN"
+	<dū́mas> /dûːmɐs/ "SMOKE_NOUN"
+	<glodùs> /ɡɫoːdˈʊs/ "SMOOTH_ADJ"
+
+/rʲ/ (0.016)
+	<sū́ris> /sûːrʲɪs/ "CHEESE_NOUN"
+	<kárvė> /kâːrʲvʲeː/ "COW_NOUN"
+	<ríešutas> /rʲîə̯ʃʊtɐs/ "NUT_NOUN"
+
+/ʃ/ (0.014)
+	<àš> /ˈɐʃ/ "I_POS"
+	<šlovė̃> /ʃɫoːvʲěː/ "GLORY_NOUN"
+	<láiškas> /ɫâɪ̯ʃkɐs/ "LEAF_NOUN"
+
+/v/ (0.013)
+	<gývas> /ɡʲîːvɐs/ "ALIVE_ADJ"
+>>>>>>> main
 	<galvà> /ɡɐɫvˈɐ/ "HEAD_NOUN"
 	<vãškas> /vǎːʃkɐs/ "WAX_NOUN"
 
 /sʲ/ (0.013)
+<<<<<<< HEAD
 	<ką́sti> /kâːsʲtʲɪ/ "BITE_VERB"
 	<septynì> /sʲɛpʲtʲiːnʲˈɪ/ "SEVEN_NUM"
-	<sniẽgas> /sʲnʲǐə̯ɡɐs/ "SNOW_NOUN"
+=======
+	<mùsė> /mˈʊsʲeː/ "HOUSEFLY_NOUN"
+	<nósis> /nôːsʲɪs/ "NOSE_NOUN"
+	<mė́nesis> /mʲêːnʲɛsʲɪs/ "MONTH_NOUN"
 
+/m/ (0.013)
+	<mãrios> /mǎːrʲoːs/ "SEA_NOUN"
+	<mañdras> /mɐňdrɐs/ "WISE_ADJ"
+	<akmuõ> /ɐkmǔə̯/ "STONE_NOUN"
+
+/ɡʲ/ (0.011)
+	<gyvénti> /ɡʲiːvʲæ̂ːnʲtʲɪ/ "LIVE_VERB"
+	<gývas> /ɡʲîːvɐs/ "ALIVE_ADJ"
+	<smẽgenys> /sʲmʲæ̌ːɡʲɛnʲiːs/ "BRAIN_NOUN"
+
+/nʲ/ (0.011)
+	<gyvénti> /ɡʲiːvʲæ̂ːnʲtʲɪ/ "LIVE_VERB"
+>>>>>>> main
+	<sniẽgas> /sʲnʲǐə̯ɡɐs/ "SNOW_NOUN"
+	<mė́nesis> /mʲêːnʲɛsʲɪs/ "MONTH_NOUN"
+
+<<<<<<< HEAD
 /m/ (0.013)
 	<akmuõ> /ɐkmǔə̯/ "STONE_NOUN"
 	<žam̃bas> /ʒɐm̌bɐs/ "TOOTH_NOUN"
@@ -222,6 +395,51 @@ CONSONANTS
 /bʲ/ (0.006)
 	<béržas> /bʲæ̂ːrʒɐs/ "BIRCH_NOUN"
 	<bè> /bʲˈɛ/ "WITHOUT_PREP"
+=======
+/ʑ/ (0.01)
+	<geležis> /ɡʲɛlʲɛʑˈɪs/ "IRON_NOUN"
+	<ẽžeras> /æ̌ːʑɛrɐs/ "LAKE_NOUN"
+	<žiemà> /ʑiə̯mˈɐ/ "WINTER_NOUN"
+
+/ɕ/ (0.01)
+	<šešì> /ɕɛɕˈɪ/ "SIX_NUM"
+	<šim̃tas> /ɕɪm̌tɐs/ "HUNDRED_NUM"
+	<širdìs> /ɕɪrʲdʲˈɪs/ "HEART_NOUN"
+
+/mʲ/ (0.01)
+	<miglà> /mʲɪɡɫˈɐ/ "FOG_NOUN"
+	<mėsà> /mʲeːsˈɐ/ "MEAT_NOUN"
+	<medùs> /mʲɛdˈʊs/ "HONEY_NOUN"
+
+/dʲ/ (0.01)
+	<dẽšimt> /dʲæ̌ːɕɪmt/ "TEN_NUM"
+	<diẽvas> /dʲǐə̯vɐs/ "GOD_NOUN"
+	<liáudis> /lʲɛ̂ʊ̯dʲɪs/ "PEOPLE_NOUN"
+
+/ʒ/ (0.008)
+	<liežùvis> /lʲiə̯ʒˈʊvʲɪs/ "TONGUE_NOUN"
+	<žąsìs> /ʒaːsʲˈɪs/ "GOOSE_NOUN"
+	<žvaigždė̃> /ʒvɐɪ̯ɡʲʑdʲěː/ "STAR_NOUN"
+
+/kʲ/ (0.008)
+	<kir̃snas> /kʲɪřsnɐs/ "BLACK_ADJ"
+	<keturì> /kʲɛtʊrʲˈɪ/ "FOUR_NUM"
+	<penkì> /pʲɛŋʲkʲˈɪ/ "FIVE_NUM"
+
+/b/ (0.008)
+	<žam̃bas> /ʒɐm̌bɐs/ "TOOTH_NOUN"
+	<báltas> /bâːɫtɐs/ "WHITE_ADJ"
+	<barzdà> /bɐrzdˈɐ/ "BEARD_NOUN"
+
+/pʲ/ (0.006)
+	<septynì> /sʲɛpʲtʲiːnʲˈɪ/ "SEVEN_NUM"
+	<penkì> /pʲɛŋʲkʲˈɪ/ "FIVE_NUM"
+	<pìlnas> /pʲˈɪɫnɐs/ "FULL_ADJ"
+
+/bʲ/ (0.006)
+	<bè> /bʲˈɛ/ "WITHOUT_PREP"
+	<bìtė> /bʲˈɪtʲeː/ "BEE_NOUN"
+>>>>>>> main
 	<bẽbras> /bʲæ̌ːbrɐs/ "BEAVER_NOUN"
 
 /ŋ/ (0.004)
@@ -233,12 +451,17 @@ CONSONANTS
 	<jū́šė> /jûːɕeː/ "SOUP_NOUN"
 	<vė́jas> /vʲêːjɐs/ "WIND_NOUN"
 	<kraũjas> /krɐ̌ʊ̯jɐs/ "BLOOD_NOUN"
+	<jū́šė> /jûːɕeː/ "SOUP_NOUN"
 
 /ŋʲ/ (0.003)
 	<penkì> /pʲɛŋʲkʲˈɪ/ "FIVE_NUM"
 	<angìs> /ɐŋʲɡʲˈɪs/ "SNAKE_NOUN"
 
 /p/ (0.003)
+<<<<<<< HEAD
+=======
+	<sãpnas> /sǎːpnɐs/ "DREAM_NOUN"
+>>>>>>> main
 	<vapsvà> /vɐpsvˈɐ/ "WASP_NOUN"
 	<sãpnas> /sǎːpnɐs/ "DREAM_NOUN"
 
@@ -248,6 +471,7 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
+<<<<<<< HEAD
 /ˈ/ (0.06)
 	<žiemà> /ʑiə̯mˈɐ/ "WINTER_NOUN"
 	<penkì> /pʲɛŋʲkʲˈɪ/ "FIVE_NUM"
@@ -262,6 +486,22 @@ SUPRASEGMENTALS
 	<sáulė> /sâʊ̯lʲeː/ "SUN_NOUN"
 	<stóras> /stôːrɐs/ "OLD_ADJ"
 	<vė́jas> /vʲêːjɐs/ "WIND_NOUN"
+=======
+/ˈ/ (0.061)
+	<dienà> /dʲiə̯nˈɐ/ "DAY_NOUN"
+	<glùšas> /ɡɫˈʊʃɐs/ "DEAF_ADJ"
+	<žvėrìs> /ʑvʲeːrʲˈɪs/ "BEAST_NOUN"
+
+/̌/ (0.056)
+	<mãrios> /mǎːrʲoːs/ "SEA_NOUN"
+	<obuolỹs> /oːbuə̯lʲǐːs/ "APPLE_NOUN"
+	<diẽvas> /dʲǐə̯vɐs/ "GOD_NOUN"
+
+/̂/ (0.041)
+	<šáltas> /ʃâːɫtɐs/ "COLD_ADJ"
+	<kárvė> /kâːrʲvʲeː/ "COW_NOUN"
+	<béržas> /bʲæ̂ːrʒɐs/ "BIRCH_NOUN"
+>>>>>>> main
 
 
 

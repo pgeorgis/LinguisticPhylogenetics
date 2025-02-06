@@ -6,7 +6,6 @@ from asjp import ipa2asjp
 from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
 from nltk import edit_distance
 from phonAlign import Alignment, AlignedPair, Gap, get_alignment_iter
-from phonCorr import add_phon_dist_to_align_costs
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
@@ -224,35 +223,6 @@ def scale_deletion_penalty_by_prosodic_env_strength(penalty: float | int,
     return penalty, discount
 
 
-# def accent_is_shifted(alignment, i, gap_ch, pad_ch):
-#     """Returns True if there is an unaligned suprasegmental in the opposite alignment position later in the word relative to position i"""
-#     shifted = False
-#     align_iter = alignment.alignment if isinstance(alignment, Alignment) else alignment
-#     aligned_pair = AlignedPair(alignment, i, gap_ch=gap_ch, pad_ch=pad_ch)
-#     if aligned_pair.is_gappy:
-#         deleted_index = align_iter[i].index(gap_ch) - 1
-#     elif aligned_pair.contains_boundary():
-#         deleted_index = 0 if pad_ch in align_iter[i][0] else -1
-#     else:
-#         return shifted
-#     for k in range(i + 1, len(align_iter)):
-#         aligned_pair_k = AlignedPair(alignment, k, gap_ch=gap_ch, pad_ch=pad_ch)
-#         if aligned_pair_k.is_gappy or aligned_pair_k.contains_boundary():
-#             if aligned_pair_k.is_gappy:
-#                 gap_k = align_iter[k].index(gap_ch)
-#             else:
-#                 gap_k = 0 if pad_ch in align_iter[k][0] else -1
-#             deleted_k = gap_k - 1
-#             if isinstance(align_iter[k][deleted_k], tuple):  # TODO handle this better, maybe set phon env as Segment object attribute
-#                 deleted_seg_k = _toSegment(align_iter[k][deleted_k][0])
-#             else:
-#                 deleted_seg_k = _toSegment(align_iter[k][deleted_k])
-#             if abs(deleted_k) != abs(deleted_index) and deleted_seg_k.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
-#                 shifted = True
-#                 break
-#     return shifted
-
-
 def reduce_phon_deletion_penalty_by_phon_context(penalty: float,
                                                  gap: Gap,
                                                  alignment: list,
@@ -401,13 +371,6 @@ def phonological_dist(word1: Word | Alignment,
             deleted_segment = _toSegment(gap.segment)
             deleted_index = gap.seg_i
 
-            # Stress/accent in different positions should be penalized only once
-            # Check if a later pair includes a deleted suprasegmental/toneme in the opposite alignment position
-            # If so, skip penalizing the current pair altogether
-            # if deleted_segment.phone_class in ('TONEME', 'SUPRASEGMENTAL'):
-            #     if accent_is_shifted(alignment, i, gap_ch, pad_ch):
-            #         continue
-
             if penalize_sonority:
                 sonority = deleted_segment.sonority
                 sonority_penalty = 1 - (sonority / (MAX_SONORITY + 1))
@@ -539,35 +502,21 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False,
         align_iter = get_alignment_iter(alignment, phon_env=phon_env)
         for i, pair in enumerate(align_iter):
 
-            # # Skip pairs with aligned suprasegmental features with a gap
-            # # when the paired language (of the gap) does not have phonemic tones/suprasegmental features
-            # # Such gaps skew linguistic distances since tones/suprasegmental features occur on most or all words
-            # # and never have any equivalent
-            # # Also don't double-penalize deletion for shifted accent
-            # if alignment.gap_ch in pair:
-            #     gap_index = pair.index(alignment.gap_ch)
-            #     seg = pair[gap_index - 1]
-            #     if gap_index == 0:
-            #         seg_lang, gap_lang = alignment.word2.language, alignment.word1.language
-            #     else:
-            #         seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
-            #     if seg in seg_lang.tonemes:
-            #         if gap_lang.tonal is False:
-            #             continue
-            #         elif accent_is_shifted(alignment, i, alignment.gap_ch, alignment.pad_ch):
-            #             continue
-
-            # # Continued from above:
-            # # When comparing between a pitch accent and stress accent language,
-            # # reduce surprisal from perspective of stress accent language
-            # # by instead using total probability of being aligned with any suprasegmental in the pitch accent language
-            # # Amounts to normalizing to accented vs. non-accented syllable from the perspective of stress accent language
-            # # TODO : confirm that this should be done
-            # elif alignment.word1.language.prosodic_typology == 'STRESS' and alignment.word2.language.prosodic_typology != 'STRESS':
-            #     if self_surprisal[seq_map1[i]][0] in {"ˈ", "ˌ"}:
-            #         corr = sur_dict[(pair[0],)]
-            #         accent_probs = [surprisal_to_prob(corr[c]) for c in corr if c != alignment.gap_ch]
-            #         WAS[i] = surprisal(sum(accent_probs))
+            # Skip pairs with aligned suprasegmental features with a gap
+            # when the paired language (of the gap) does not have phonemic tones/suprasegmental features
+            # Such gaps skew linguistic distances since tones/suprasegmental features occur on most or all words
+            # and never have any equivalent
+            # Also don't double-penalize deletion for shifted accent
+            if alignment.gap_ch in pair:
+                gap_index = pair.index(alignment.gap_ch)
+                seg = pair[gap_index - 1]
+                if gap_index == 0:
+                    seg_lang, gap_lang = alignment.word2.language, alignment.word1.language
+                else:
+                    seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
+                if seg in seg_lang.tonemes:
+                    if gap_lang.tonal is False:
+                        continue
 
             if seq_map1[i] is not None:
                 weight = sum([self_surprisal[index][-1] for j, index in enumerate(seq_map1[i])]) / self_info
@@ -649,15 +598,10 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
             # Don't double-penalize deletion in case of shifted stress/accent: skip adding value if shifted later
             if weight1 is None:
                 weight = weight2
-                # if pair[-1] in alignment.word2.language.tonemes:
-                #     if accent_is_shifted(alignment, i, alignment.gap_ch, alignment.pad_ch):  # TODO does this still work if the pair includes a n>1-gram?
-                #         continue
 
             elif weight2 is None:
                 weight = weight1
-                # if pair[0] in alignment.word1.language.tonemes:
-                #     if accent_is_shifted(alignment, i, alignment.gap_ch, alignment.pad_ch):  # TODO does this still work if the pair includes a n>1-gram?
-                #         continue
+
             else:
                 weight = mean([weight1, weight2])
 
