@@ -13,8 +13,8 @@ def get_shared_concepts(lang1, lang2, clustered_cognates):
     """Returns a sorted list of concepts from a clustered cognate class dictionary that both doculects share.
 
     Args:
-        lang1 (phyloLing.Language): First Language object
-        lang2 (phyloLing.Language): Second Language object
+        lang1 (Doculect): First Doculect object
+        lang2 (Doculect): Second Doculect object
         clustered_cognates (dict): Nested dictionary of Word objects organized by concepts and cognate classes
 
     Raises:
@@ -34,11 +34,11 @@ def filter_cognates_by_lang(lang, cluster):
     """Filters an iterable of Word objects and returns only those that belong to a particular language.
 
     Args:
-        lang (phyloLing.Language): Language object of interest
+        lang (Doculect): Doculect object of interest
         cluster (iterable): Iterable of Word objects
 
     Returns:
-        list: Word objects belonging to the specified Language
+        list: Word objects belonging to the specified Doculect
     """
     # Filter by language and sort
     filtered_cognates = list(filter(lambda word: word.language == lang, cluster))
@@ -74,8 +74,8 @@ def get_calibration_params(lang1, lang2, eval_func, seed=1, sample_size=None, as
     """Gets the mean and standard deviation of similarity of a random sample of non-cognates (word pairs with different concepts) from two doculects to use for CDF weighting.
 
     Args:
-        lang1 (phyloLing.Language): First doculect to compare
-        lang2 (phyloLing.Language): Second doculect to compare
+        lang1 (Doculect): First doculect to compare
+        lang2 (Doculect): Second doculect to compare
         eval_func (Distance): Distance to apply to word pairs
         seed (int): Random seed
         sample_size (int): Size of random sample
@@ -101,8 +101,8 @@ def binary_cognate_sim(lang1,
     """Calculates linguistic similarity based on the proportion of shared cognates between two doculects.
 
     Args:
-        lang1 (phyloLing.Language): First doculect to compare
-        lang2 (phyloLing.Language): Second doculect to compare
+        lang1 (Doculect): First doculect to compare
+        lang2 (Doculect): Second doculect to compare
         clustered_cognates (dict): Nested dictionary of Word objects organized by concepts and cognate classes
         exclude_synonyms (bool, optional): If more than one cognate class is present for the same concept, takes only the most similar pair. Defaults to True.
 
