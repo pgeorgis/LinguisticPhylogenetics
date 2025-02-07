@@ -5,7 +5,7 @@ from statistics import mean
 from asjp import ipa2asjp
 from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
 from nltk import edit_distance
-from phonAlign import Alignment, Gap, get_alignment_iter
+from phonAlign import Alignment, AlignedPair, Gap, get_alignment_iter
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
