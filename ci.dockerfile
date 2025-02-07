@@ -5,7 +5,8 @@ RUN apk update && apk add --no-cache \
     git \
     bash \
     gcc g++ make \
-    hdf5-dev
+    hdf5-dev \
+    msttcorefonts-installer fontconfig && update-ms-fonts && fc-cache -f
 
 WORKDIR /phyloLing
 COPY install_r_dependencies.R install_r_dependencies.R
