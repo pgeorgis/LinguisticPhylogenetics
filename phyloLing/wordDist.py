@@ -581,8 +581,8 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
     # Weight by information content per segment
     def weight_by_info_content(alignment, PMI_vals):
         word1, word2 = alignment.word1, alignment.word2
-        info_content1 = word1.getInfoContent()
-        info_content2 = word2.getInfoContent()
+        info_content1 = word1.getInfoContent(doculect=lang1)
+        info_content2 = word2.getInfoContent(doculect=lang2)
         total_info1 = word1.total_info_content
         total_info2 = word2.total_info_content
         seq_map1, seq_map2 = alignment.seq_map

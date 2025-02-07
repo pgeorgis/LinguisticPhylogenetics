@@ -532,8 +532,8 @@ class PhonCorrelator:
                 min(pair[0].ipa, pair[1].ipa), max(pair[0].ipa, pair[1].ipa),
                 min(pair[0].concept, pair[1].concept), max(pair[0].concept, pair[1].concept),
                 min(pair[0].orthography, pair[1].orthography), max(pair[0].orthography, pair[1].orthography),
-                min(pair[0].getInfoContent(total=True), pair[1].getInfoContent(total=True)),
-                max(pair[0].getInfoContent(total=True), pair[1].getInfoContent(total=True))
+                min(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2)),
+                max(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2))
             )
         )
 
