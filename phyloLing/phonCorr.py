@@ -10,7 +10,8 @@ from typing import Iterable, Self
 
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
-                       PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
+                       PAD_CH_DEFAULT, PHONE_CORRELATORS_INDEX_KEY,
+                       SEG_JOIN_CH, START_PAD_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 from phonAlign import Alignment, visual_align
 from phonUtils.phonEnv import phon_env_ngrams
@@ -1297,7 +1298,7 @@ class PhonCorrelator:
             ngram_size=ngram_size,
         )
         # Compute surprisal in opposite direction with reversed alignments
-        twin = self.get_twin(family_index["phone_correlators"])
+        twin = self.get_twin(family_index[PHONE_CORRELATORS_INDEX_KEY])
         reversed_final_alignments = [alignment.reverse() for alignment in final_alignments]
         twin.compute_phone_surprisal(
             reversed_final_alignments,

@@ -13,10 +13,12 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from constants import (ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
-                       CONCEPT_LABEL, GLOTTOCODE_LABEL, ID_COLUMN_LABEL,
-                       ISO_CODE_LABEL, LANGUAGE_NAME_LABEL, LOAN_LABEL,
-                       ORTHOGRAPHY_LABEL, PHONETIC_FORM_LABEL, SEG_JOIN_CH,
-                       SEGMENTS_LABEL, TRANSCRIPTION_PARAM_DEFAULTS)
+                       CONCEPT_LABEL, DOCULECT_INDEX_KEY, GLOTTOCODE_LABEL,
+                       ID_COLUMN_LABEL, ISO_CODE_LABEL, LANGUAGE_NAME_LABEL,
+                       LOAN_LABEL, ORTHOGRAPHY_LABEL,
+                       PHONE_CORRELATORS_INDEX_KEY, PHONETIC_FORM_LABEL,
+                       SEG_JOIN_CH, SEGMENTS_LABEL,
+                       TRANSCRIPTION_PARAM_DEFAULTS)
 from lingDist import get_noncognate_scores
 from matplotlib import pyplot as plt
 from phonCorr import get_phone_correlator
@@ -33,8 +35,7 @@ from utils.network import dm2coords, newer_network_plot
 from utils.sequence import Ngram
 from utils.string import format_as_variable, strip_ch
 from utils.tree import postprocess_newick, reroot_tree
-from utils.utils import (create_default_dict_of_dicts,
-                         csv2dict, default_dict)
+from utils.utils import create_default_dict_of_dicts, csv2dict, default_dict
 
 logger = logging.getLogger(__name__)
 FAMILY_INDEX: dict[str, dict] = {}
@@ -276,10 +277,10 @@ class LexicalDataset:
         # Check whether phoneme PMI has been calculated already for this pair
         # If not, calculate it now
         for lang1, lang2 in lang_pairs:
-            correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+            correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
                 lang1,
                 lang2,
-                phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                 log_outdir=self.phone_corr_dir,
             )
             if len(correlator.pmi_results) == 0:
@@ -295,11 +296,11 @@ class LexicalDataset:
             doculect_pairs = self.get_doculect_pairs()
         for lang1, lang2 in doculect_pairs:
             logger.info(f"Computing non-cognate thresholds: {lang1.name}-{lang2.name}")
-            noncognate_scores, FAMILY_INDEX[self.name]["phone_correlators"] = get_noncognate_scores(
+            noncognate_scores, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_noncognate_scores(
                 lang1,
                 lang2,
                 eval_func=eval_func,
-                phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                 log_outdir=self.phone_corr_dir,
                 **kwargs
             )
@@ -324,14 +325,14 @@ class LexicalDataset:
                 )
 
                 # Try to load the file of saved PMI values, otherwise calculate PMI first
-                correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+                correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
                     lang1,
                     lang2,
-                    phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                     log_outdir=self.phone_corr_dir,
                 )
                 twin = correlator.get_twin(
-                    phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                 )
                 if not os.path.exists(pmi_file):
                     correlator.compute_phone_corrs(
@@ -352,10 +353,10 @@ class LexicalDataset:
     def write_phoneme_pmi(self, **kwargs):
         logger.info(f'Saving {self.name} phoneme PMI...')
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
-            correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+            correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
                 lang1,
                 lang2,
-                phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                 log_outdir=self.phone_corr_dir,
             )
 
@@ -371,10 +372,10 @@ class LexicalDataset:
     def write_phoneme_surprisal(self, phon_env=True, ngram_size=1, **kwargs):
         logger.info(f'Saving {self.name} phoneme surprisal...')
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
-            correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+            correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
                 lang1,
                 lang2,
-                phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                 log_outdir=self.phone_corr_dir,
             )
 
@@ -432,10 +433,10 @@ class LexicalDataset:
                 if phon_env:
                     surprisal_file_phon_env = os.path.join(phon_corr_dir, 'phonEnvSurprisal.tsv')
 
-                correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+                correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
                     lang1,
                     lang2,
-                    phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                     log_outdir=self.phone_corr_dir,
                 )
                 # Try to load the file of saved surprisal values, otherwise calculate surprisal first
@@ -1150,8 +1151,8 @@ def load_family(family,
         family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
     family.write_lexical_index()
     family_index = {
-        "doculects": family.languages,
-        "phone_correlators": create_default_dict_of_dicts(2)
+        DOCULECT_INDEX_KEY: family.languages,
+        PHONE_CORRELATORS_INDEX_KEY: create_default_dict_of_dicts(2)
     }
     FAMILY_INDEX[family.name] = family_index
     return family, FAMILY_INDEX

@@ -4,7 +4,8 @@ from math import sqrt
 from statistics import mean
 
 from asjp import ipa2asjp
-from constants import PAD_CH_DEFAULT
+from constants import (DOCULECT_INDEX_KEY, PAD_CH_DEFAULT,
+                       PHONE_CORRELATORS_INDEX_KEY)
 from nltk import edit_distance
 from phonAlign import Alignment, Gap, get_alignment_iter
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
@@ -44,15 +45,15 @@ class WordDistance(Distance):
 
 
 def get_doculects_from_word_pair(word1, word2, family_index):
-    lang1 = word1.get_doculect(family_index["doculects"])
-    lang2 = word2.get_doculect(family_index["doculects"])
+    lang1 = word1.get_doculect(family_index[DOCULECT_INDEX_KEY])
+    lang2 = word2.get_doculect(family_index[DOCULECT_INDEX_KEY])
     return lang1, lang2
 
 
 def get_phoneme_surprisal(lang1, lang2, family_index, ngram_size=1, **kwargs):
     """Calculate phoneme surprisal if not already done."""
 
-    phone_correlators_index = family_index["phone_correlators"]
+    phone_correlators_index = family_index[PHONE_CORRELATORS_INDEX_KEY]
     from phonCorr import get_phone_correlator
     correlator1, _ = get_phone_correlator(
         lang1,
@@ -76,7 +77,7 @@ def get_pmi_dict(lang1,
     correlator, _ = get_phone_correlator(
         lang1,
         lang2,
-        phone_correlators_index=family_index["phone_correlators"],
+        phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
     )
     if len(correlator.pmi_results) == 0:
         correlator.compute_phone_corrs(family_index, **kwargs)
