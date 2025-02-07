@@ -476,14 +476,14 @@ class PhonCorrelator:
         self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2_name]
         self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2_name]
 
-    def get_twin(self) -> Self:
+    def get_twin(self, phon_correlators_index) -> Self:
         """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
         if self.lang1_name == self.lang2_name:
             return self
         twin_correlator, _ = get_phone_correlator(
             self.lang1,
             self.lang2,
-            phone_correlators_index={}, # TODO check that this should be empty? 
+            phone_correlators_index=phon_correlators_index, 
             wordlist=tuple(self.wordlist),
             seed=self.seed,
             log_outdir=self.log_outdir,
@@ -1075,6 +1075,7 @@ class PhonCorrelator:
         return pmi_dict
 
     def compute_phone_corrs(self,
+                            phone_correlators_index,
                             p_threshold=0.1,
                             max_iterations=3,
                             n_samples=3,
@@ -1299,7 +1300,7 @@ class PhonCorrelator:
             ngram_size=ngram_size,
         )
         # Compute surprisal in opposite direction with reversed alignments
-        twin = self.get_twin()
+        twin = self.get_twin(phone_correlators_index)
         reversed_final_alignments = [alignment.reverse() for alignment in final_alignments]
         twin.compute_phone_surprisal(
             reversed_final_alignments,

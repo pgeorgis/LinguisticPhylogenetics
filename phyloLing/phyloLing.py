@@ -283,7 +283,10 @@ class LexicalDataset:
                     phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
                     log_outdir=self.phone_corr_dir,
                 )
-                correlator.compute_phone_corrs(**kwargs)
+                correlator.compute_phone_corrs(
+                    phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                    **kwargs
+                )
 
     def compute_noncognate_thresholds(self, eval_func, doculect_pairs=None, **kwargs):
         """Computes the mean and standard deviation score between a sample of non-synonymous word pairs from a set of doculects according to a specified evaluation function."""
@@ -292,7 +295,14 @@ class LexicalDataset:
             doculect_pairs = self.get_doculect_pairs()
         for lang1, lang2 in doculect_pairs:
             logger.info(f"Computing non-cognate thresholds: {lang1.name}-{lang2.name}")
-            noncognate_scores = get_noncognate_scores(lang1, lang2, eval_func=eval_func, **kwargs)
+            noncognate_scores, FAMILY_INDEX[self.name]["phone_correlators"] = get_noncognate_scores(
+                lang1,
+                lang2,
+                eval_func=eval_func,
+                phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                log_outdir=self.phone_corr_dir,
+                **kwargs
+            )
             combined_noncognate_scores.extend(noncognate_scores)
         mean_nc_score = mean(noncognate_scores)
         nc_score_stdev = stdev(noncognate_scores)
@@ -321,7 +331,10 @@ class LexicalDataset:
                         phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
                         log_outdir=self.phone_corr_dir,
                     )
-                    correlator.compute_phone_corrs(**kwargs)
+                    correlator.compute_phone_corrs(
+                        phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                        **kwargs
+                    )
                 pmi_data = pd.read_csv(pmi_file, sep=sep)
 
                 # Iterate through the dataframe and save the PMI values to the Language
@@ -431,7 +444,12 @@ class LexicalDataset:
                         phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
                         log_outdir=self.phone_corr_dir,
                     )
-                    correlator.compute_phone_corrs(ngram_size=ngram_size, phon_env=phon_env, **kwargs)
+                    correlator.compute_phone_corrs(
+                        phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                        ngram_size=ngram_size,
+                        phon_env=phon_env,
+                        **kwargs
+                    )
                 surprisal_data = pd.read_csv(surprisal_file, sep=sep)
 
                 # Extract and save the surprisal values to phoneme_surprisal attribute of language object
