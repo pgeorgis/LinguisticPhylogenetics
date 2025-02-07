@@ -1,3 +1,4 @@
+import logging
 import re
 from math import sqrt
 from statistics import mean
@@ -16,6 +17,8 @@ from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
 from utils.word import Word
+
+logger = logging.getLogger(__name__)
 
 # Designate maximum sonority as sonority of a toneme
 MAX_SONORITY = _toSegment('˧').sonority

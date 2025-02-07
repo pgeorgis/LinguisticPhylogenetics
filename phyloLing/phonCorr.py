@@ -1,3 +1,4 @@
+import logging
 import os
 import random
 from collections import defaultdict
@@ -5,7 +6,7 @@ from functools import lru_cache
 from itertools import product
 from math import inf, log
 from statistics import mean, stdev
-from typing import Self, Iterable
+from typing import Iterable, Self
 
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
@@ -15,21 +16,21 @@ from phonAlign import Alignment, visual_align
 from phonUtils.phonEnv import phon_env_ngrams
 from phonUtils.phonSim import phone_sim
 from scipy.stats import norm
-
 from utils import PhonemeMap
-from utils.alignment import calculate_alignment_costs, needleman_wunsch_extended
+from utils.alignment import (calculate_alignment_costs,
+                             needleman_wunsch_extended)
 from utils.distance import Distance
 from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
-                            filter_out_invalid_ngrams, pad_sequence, start_token)
-from utils.utils import (default_dict,
-                         dict_tuplelist,
-                         normalize_dict,
-                         balanced_resample,
-                         segment_ranges,
-                         create_default_dict,
-                         create_default_dict_of_dicts)
+                            filter_out_invalid_ngrams, pad_sequence,
+                            start_token)
+from utils.utils import (balanced_resample, create_default_dict,
+                         create_default_dict_of_dicts, default_dict,
+                         dict_tuplelist, normalize_dict, segment_ranges)
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s phonCorr %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 # Designate phonetic feature distance
 def phone_dist(x, y, **kwargs):
@@ -443,7 +444,8 @@ class PhonCorrelator:
                  gap_ch=GAP_CH_DEFAULT,
                  pad_ch=PAD_CH_DEFAULT,
                  seed=1,
-                 logger=None):
+                 log_outdir=None,
+                 ):
         # Set Doculect objects
         self.lang1 = lang1
         self.lang1_name = lang1.name
@@ -468,10 +470,11 @@ class PhonCorrelator:
         self.scored_words = create_default_dict_of_dicts()
         self.low_coverage_phones = None
 
-        # Logging
-        self.set_log_dirs()
+        # Logging output directories
+        self.log_outdir = log_outdir if log_outdir else ""  # TODO revisit what default outdir path should be
+        self.phon_corr_dir = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name)
+        os.makedirs(self.phon_corr_dir, exist_ok=True)
         self.align_log = create_default_dict(0, 2)
-        self.logger = logger
 
     def reload_language_pair_data(self):
         self.pmi_dict = self.lang1.phoneme_pmi[self.lang2_name]
@@ -480,11 +483,17 @@ class PhonCorrelator:
 
     def get_twin(self) -> Self:
         """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
-        return self.lang2.get_phoneme_correlator(
-            lang2=self.lang1,
+        if self.lang1_name == self.lang2_name:
+            return self
+        twin_correlator, _ = get_phone_correlator(
+            self.lang1,
+            self.lang2,
+            phone_correlators_index={}, # TODO check that this should be empty? 
             wordlist=tuple(self.wordlist),
-            seed=self.seed
+            seed=self.seed,
+            log_outdir=self.log_outdir,
         )
+        return twin_correlator
 
     def reset_seed(self):
         random.seed(self.seed)
@@ -495,11 +504,6 @@ class PhonCorrelator:
         if l2 is None:
             l2 = self.lang2
         return l1, l2
-
-    def set_log_dirs(self):
-        self.outdir = self.lang1.family.phone_corr_dir
-        self.phon_corr_dir = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name)
-        os.makedirs(self.phon_corr_dir, exist_ok=True)
 
     def get_concept_list(self, wordlist=None):
         # If no wordlist is provided, by default use all concepts shared by the two languages
@@ -600,7 +604,7 @@ class PhonCorrelator:
 
         # Write sample log (only if new samples were drawn)
         if log_samples and new_samples:
-            sample_log_file = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name, 'samples.log')
+            sample_log_file = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name, 'samples.log')
             self.write_sample_log(sample_logs, sample_log_file)
 
         return samples
@@ -1104,8 +1108,7 @@ class PhonCorrelator:
         Returns:
             results (dict): Nested dictionary of PMI correspondences.
         """
-        if self.logger:
-            self.logger.info(f'Computing phone correspondences: {self.lang1_name}-{self.lang2_name}...')
+        logger.info(f'Computing phone correspondences: {self.lang1_name}-{self.lang2_name}...')
 
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
         sample_results: dict[int, PhonemeMap] = {}
@@ -1257,7 +1260,7 @@ class PhonCorrelator:
                 )
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
-                    self.logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
+                    logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
                 disqualified_words[iteration] = disqualified + diff_sample
 
                 # Log results of this iteration
@@ -1867,3 +1870,26 @@ def get_phonEnv_weight(phonEnv):
     weight += len(prefix)
     weight += len(suffix)
     return weight
+
+
+def get_phone_correlator(lang1,
+                         lang2,
+                         phone_correlators_index,
+                         wordlist=None,
+                         log_outdir=None,
+                         seed=1,
+                         ):
+    """Retrieve previously initialized PhonCorrelator or create a new instance if not yet initialized."""
+    key = (lang1.name, lang2.name, wordlist, seed)
+    if key not in phone_correlators_index:
+        phone_correlators_index[key] = PhonCorrelator(
+            lang1=lang1,
+            lang2=lang2,
+            wordlist=wordlist,
+            #gap_ch=self.alignment_params.get('gap_ch', ALIGNMENT_PARAM_DEFAULTS['gap_ch']),
+            #pad_ch=self.alignment_params.get('pad_ch', ALIGNMENT_PARAM_DEFAULTS['pad_ch']),
+            seed=seed,
+            log_outdir=log_outdir,
+        )
+    correlator = phone_correlators_index[key]
+    return correlator, phone_correlators_index

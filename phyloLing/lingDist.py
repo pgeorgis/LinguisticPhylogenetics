@@ -1,12 +1,14 @@
+import logging
 import random
 from functools import lru_cache
 from statistics import StatisticsError, mean, stdev
-import numpy as np
 
+import numpy as np
 from scipy.stats import norm
-from utils.distance import dist_to_sim, Distance
+from utils.distance import Distance, dist_to_sim
 from utils.utils import balanced_resample, create_default_dict_of_dicts
 
+logger = logging.getLogger(__name__)
 
 # HELPER FUNCTIONS
 def get_shared_concepts(lang1, lang2, clustered_cognates):
@@ -153,7 +155,7 @@ def gradient_cognate_dist(lang1,
                           seed=1,
                           n_samples=50,
                           sample_size=0.8,
-                          logger=None):
+                          ):
 
     # Set random seed and initialize random number generator
     random.seed(seed)
@@ -262,8 +264,7 @@ def gradient_cognate_dist(lang1,
         group_scores[n] = mean(sims.values())
 
     similarity_score = mean(group_scores.values())
-    if logger:
-        logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(similarity_score, 3)}')
+    logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(similarity_score, 3)}')
         
     distance_score = 1 - similarity_score
     return distance_score

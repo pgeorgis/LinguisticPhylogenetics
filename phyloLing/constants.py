@@ -1,3 +1,7 @@
+# Initialize logger
+import logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)s %(levelname)s: %(message)s')
+
 # SPECIAL CHARACTERS FOR JOINING AND/OR DELIMITING PHON CORRS
 SEG_JOIN_CH = '_'
 PHON_ENV_JOIN_CH = ';'

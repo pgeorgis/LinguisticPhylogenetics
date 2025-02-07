@@ -4,7 +4,6 @@ import os
 import re
 from collections import defaultdict
 from collections.abc import Iterable
-from dataclasses import dataclass
 from itertools import combinations, product
 from math import sqrt
 from statistics import mean, stdev
@@ -20,6 +19,7 @@ from constants import (ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
                        SEGMENTS_LABEL, TRANSCRIPTION_PARAM_DEFAULTS)
 from lingDist import get_noncognate_scores
 from matplotlib import pyplot as plt
+from phonCorr import get_phone_correlator
 from phonUtils.ipaTools import invalid_ch, normalize_ipa_ch, strip_diacritics
 from scipy.cluster.hierarchy import linkage
 from scipy.spatial.distance import squareform
@@ -36,6 +36,8 @@ from utils.tree import postprocess_newick, reroot_tree
 from utils.utils import (create_default_dict_of_dicts,
                          csv2dict, default_dict)
 
+logger = logging.getLogger(__name__)
+FAMILY_INDEX = {}
 
 class LexicalDataset:
     def __init__(self, filepath, name,
@@ -54,20 +56,13 @@ class LexicalDataset:
                  excluded_doculects=None,
                  transcription_params={'global': TRANSCRIPTION_PARAM_DEFAULTS},
                  alignment_params=ALIGNMENT_PARAM_DEFAULTS,
-                 logger=None
                  ):
 
         # Dataset name and logger
         self.data: dict[int, dict[str, str]] = {}
         self.name = name
         self.path_name = format_as_variable(name)
-        if logger:
-            self.logger = logger
-        else:
-            # Configure the logger from scratch, default loglevel=INFO
-            logging.basicConfig(level=logging.INFO, format='%(asctime)s phyloLing %(levelname)s: %(message)s')
-            logger = logging.getLogger(__name__)
-        self.logger.info(f'Loading {self.name}...')
+        logger.info(f'Loading {self.name}...')
 
         # Directory to dataset
         self.filepath = filepath
@@ -144,25 +139,19 @@ class LexicalDataset:
 
         language_list = sorted(list(language_vocab_data.keys()))
         for lang in language_list:
-            os.makedirs(os.path.join(self.doculects_dir, format_as_variable(lang)), exist_ok=True)
+            path_name = format_as_variable(lang)
             self.languages[lang] = Doculect(
                 name=lang,
                 lang_id=self.lang_ids[lang],
                 glottocode=self.glottocodes[lang],
                 iso_code=self.iso_codes[lang],
-                family=LanguageFamilyData(
-                    name=self.name,
-                    phone_corr_dir=self.phone_corr_dir,
-                    doculects_dir=self.doculects_dir,
-                    language_count=len(self.languages),
-                ),
+                doculect_dir=os.path.join(self.phone_corr_dir, path_name),
                 data=language_vocab_data[lang],
                 columns=self.columns,
                 transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global']),
                 alignment_params=self.alignment_params,
-                logger=self.logger,
             )
-            self.logger.info(f'Loaded doculect {lang}.')
+            logger.info(f'Loaded doculect {lang}.')
             for concept in self.languages[lang].vocabulary:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
         for lang in language_list:
@@ -172,7 +161,7 @@ class LexicalDataset:
         """Writes a missing_concepts.lst file indicating which concepts present
         in the lexical dataset are missing from a particular doculect."""
         doculect = self.languages[doculect]
-        missing_lst = os.path.join(self.doculects_dir, doculect.path_name, "missing_concepts.lst")
+        missing_lst = os.path.join(doculect.doculect_dir, "missing_concepts.lst")
         missing_concepts = self.concepts.keys() - doculect.vocabulary.keys()
         missing_concepts = '\n'.join(sorted(missing_concepts))
         with open(missing_lst, 'w') as f:
@@ -278,8 +267,7 @@ class LexicalDataset:
                 else:
                     prune_log += f'\n\t\t{lang} ({vocab_size} concepts)'
             prune_log += f'\tAMC increased from {round(original_amc, 2)} to {round(self.mutual_coverage[1], 2)}.'
-            if self.logger:
-                self.logger.info(prune_log)
+            logger.info(prune_log)
 
     def calculate_phone_corrs(self, **kwargs):
         """Calculates phone correspondence values for all
@@ -289,7 +277,12 @@ class LexicalDataset:
         # If not, calculate it now
         for lang1, lang2 in lang_pairs:
             if len(lang1.phoneme_pmi[lang2.name]) == 0:
-                correlator = lang1.get_phoneme_correlator(lang2)
+                correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+                    lang1,
+                    lang2,
+                    phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                    log_outdir=self.phone_corr_dir,
+                )
                 correlator.compute_phone_corrs(**kwargs)
 
     def compute_noncognate_thresholds(self, eval_func, doculect_pairs=None, **kwargs):
@@ -298,7 +291,7 @@ class LexicalDataset:
         if doculect_pairs is None:
             doculect_pairs = self.get_doculect_pairs()
         for lang1, lang2 in doculect_pairs:
-            self.logger.info(f"Computing non-cognate thresholds: {lang1.name}-{lang2.name}")
+            logger.info(f"Computing non-cognate thresholds: {lang1.name}-{lang2.name}")
             noncognate_scores = get_noncognate_scores(lang1, lang2, eval_func=eval_func, **kwargs)
             combined_noncognate_scores.extend(noncognate_scores)
         mean_nc_score = mean(noncognate_scores)
@@ -313,11 +306,21 @@ class LexicalDataset:
 
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                pmi_file = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name, 'phonPMI.tsv')
+                pmi_file = os.path.join(
+                    self.phone_corr_dir,
+                    lang1.path_name,
+                    lang2.path_name,
+                    "phonPMI.tsv"
+                )
 
                 # Try to load the file of saved PMI values, otherwise calculate PMI first
                 if not os.path.exists(pmi_file):
-                    correlator = lang1.get_phoneme_correlator(lang2)
+                    correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+                        lang1,
+                        lang2,
+                        phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                        log_outdir=self.phone_corr_dir,
+                    )
                     correlator.compute_phone_corrs(**kwargs)
                 pmi_data = pd.read_csv(pmi_file, sep=sep)
 
@@ -331,13 +334,18 @@ class LexicalDataset:
                     lang2.phoneme_pmi[lang1.name].set_value(ngram2.undo(), ngram1.undo(), pmi_value)
 
     def write_phoneme_pmi(self, **kwargs):
-        self.logger.info(f'Saving {self.name} phoneme PMI...')
+        logger.info(f'Saving {self.name} phoneme PMI...')
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
             # Retrieve the precalculated values
             if len(lang1.phoneme_pmi[lang2.name]) == 0:
-                self.logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
+                logger.warning(f'Phoneme PMI has not been calculated for pair: {lang1.name} - {lang2.name}.')
                 continue
-            correlator = lang1.get_phoneme_correlator(lang2)
+            correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+                lang1,
+                lang2,
+                phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                log_outdir=self.phone_corr_dir,
+            )
 
             # Skip rewriting PMI for doculect pairs for which PMI was not calculated in this run
             # This happens when recalculating for specific doculects only and loading others from file
@@ -347,14 +355,19 @@ class LexicalDataset:
             correlator.log_phoneme_pmi(**kwargs)
 
     def write_phoneme_surprisal(self, phon_env=True, ngram_size=1, **kwargs):
-        self.logger.info(f'Saving {self.name} phoneme surprisal...')
+        logger.info(f'Saving {self.name} phoneme surprisal...')
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
 
             # Retrieve the precalculated values
             if len(lang1.phoneme_surprisal[lang2.name][ngram_size]) == 0:
-                self.logger.warning(f'{ngram_size}-gram phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}')
+                logger.warning(f'{ngram_size}-gram phoneme surprisal has not been calculated for pair: {lang1.name} - {lang2.name}')
                 continue
-            correlator = lang1.get_phoneme_correlator(lang2)
+            correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+                lang1,
+                lang2,
+                phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                log_outdir=self.phone_corr_dir,
+            )
 
             # Skip rewriting surprisal for doculect pairs for which surprisal was not calculated in this run
             # This happens when recalculating for specific doculects only and loading others from file
@@ -401,14 +414,23 @@ class LexicalDataset:
 
         for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
             if (lang1.name not in excepted) and (lang2.name not in excepted):
-                phon_corr_dir = os.path.join(self.phone_corr_dir, lang1.path_name, lang2.path_name)
+                phon_corr_dir = os.path.join(
+                    self.phone_corr_dir,
+                    lang1.path_name,
+                    lang2.path_name,
+                )
                 surprisal_file = os.path.join(phon_corr_dir, 'phonSurprisal.tsv')
                 if phon_env:
                     surprisal_file_phon_env = os.path.join(phon_corr_dir, 'phonEnvSurprisal.tsv')
 
                 # Try to load the file of saved surprisal values, otherwise calculate surprisal first
                 if not os.path.exists(surprisal_file):
-                    correlator = lang1.get_phoneme_correlator(lang2)
+                    correlator, FAMILY_INDEX[self.name]["phone_correlators"] = get_phone_correlator(
+                        lang1,
+                        lang2,
+                        phone_correlators_index=FAMILY_INDEX[self.name]["phone_correlators"],
+                        log_outdir=self.phone_corr_dir,
+                    )
                     correlator.compute_phone_corrs(ngram_size=ngram_size, phon_env=phon_env, **kwargs)
                 surprisal_data = pd.read_csv(surprisal_file, sep=sep)
 
@@ -423,7 +445,7 @@ class LexicalDataset:
                     lang1.phon_env_surprisal[lang2.name] = loaded_phon_env_surprisal
 
                 elif phon_env:
-                    self.logger.warning(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}')
+                    logger.warning(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}')
 
     def get_doculect_pairs(self, bidirectional=False, include_self_pairs=True):
         if bidirectional:
@@ -497,11 +519,11 @@ class LexicalDataset:
         elif cluster_threshold is None:
             mean_nc, stdev_nc = self.compute_noncognate_thresholds(dist_func)
             cluster_threshold = mean_nc - stdev_nc
-            self.logger.info(f"Auto-computed cluster threshold: {round(cluster_threshold, 3)}")
-        self.logger.info(f'Clustering cognates with threshold={round(cluster_threshold, 3)}...')
+            logger.info(f"Auto-computed cluster threshold: {round(cluster_threshold, 3)}")
+        logger.info(f'Clustering cognates with threshold={round(cluster_threshold, 3)}...')
 
         for concept in sorted(concept_list):
-            self.logger.info(f"Clustering cognates for concept '{concept}'...")
+            logger.info(f"Clustering cognates for concept '{concept}'...")
             words = [word for lang in self.concepts[concept] for word in self.concepts[concept][lang]]
             clusters = cluster_items(group=words,
                                      dist_func=dist_func,
@@ -547,7 +569,7 @@ class LexicalDataset:
                 line = sep.join(line)
                 f.write(f'{line}\n')
 
-        self.logger.info(f'Wrote clustered cognate index to {output_file}')
+        logger.info(f'Wrote clustered cognate index to {output_file}')
 
     def load_cognate_index(self, index_file, code=None, sep='\t', variants_sep='~'):
         assert sep != variants_sep
@@ -647,7 +669,7 @@ class LexicalDataset:
         """Creates a unique identifier for the current experiment"""
 
         if not isinstance(dist_func, Distance):
-            self.logger.error(f'dist_func must be a Distance class object, found {type(dist_func)} instead.')
+            logger.error(f'dist_func must be a Distance class object, found {type(dist_func)} instead.')
             raise TypeError
 
         name = dist_func.name if dist_func.name else dist_func.func.__name__
@@ -748,7 +770,7 @@ class LexicalDataset:
 
         # Raise error for unrecognized cognate clustering methods
         else:
-            self.logger.error(f'Cognate clustering method "{cognates}" not recognized!')
+            logger.error(f'Cognate clustering method "{cognates}" not recognized!')
             raise ValueError
 
         # Compute distance matrix over Doculect objects
@@ -765,7 +787,7 @@ class LexicalDataset:
             outfile_dir = os.path.dirname(dm_outfile)
             os.makedirs(outfile_dir, exist_ok=True)
             self.write_distance_matrix(dm, outfile=dm_outfile)
-            self.logger.info(f"Wrote distance matrix to {dm_outfile}")
+            logger.info(f"Wrote distance matrix to {dm_outfile}")
 
         return dm
 
@@ -1092,14 +1114,6 @@ class LexicalDataset:
         return s
 
 
-@dataclass
-class LanguageFamilyData:
-    name: str
-    phone_corr_dir: str
-    doculects_dir: str
-    language_count: int
-
-
 # COMBINING DATASETS
 def combine_datasets(dataset_list):
     # TODO
@@ -1112,18 +1126,18 @@ def load_family(family,
                 concept_list=None,
                 excluded_doculects=None,
                 included_doculects=None,
-                logger=None,
                 **kwargs):
     family = LexicalDataset(data_file,
                             family,
                             excluded_doculects=excluded_doculects,
                             included_doculects=included_doculects,
-                            logger=logger,
                             **kwargs)
     if min_amc:
         family.prune_languages(min_amc=float(min_amc), concept_list=concept_list)
     family.write_lexical_index()
-    language_variables = {format_as_variable(lang): family.languages[lang]
-                          for lang in family.languages}
-    globals().update(language_variables)
-    return family
+    family_index = {
+        "doculects": family.languages,
+        "phone_correlators": create_default_dict_of_dicts(2)
+    }
+    FAMILY_INDEX[family.name] = family_index
+    return family, FAMILY_INDEX
