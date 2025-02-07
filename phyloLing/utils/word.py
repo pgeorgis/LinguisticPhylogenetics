@@ -42,7 +42,7 @@ class Word:
     def get_doculect(self, doculect_index):
         if self.doculect_key not in doculect_index:
             raise ValueError(f"No doculect with name '{self.doculect_key}' found!")
-        return doculect_index[self.name]
+        return doculect_index[self.doculect_key]
 
     def get_parameter(self, label):
         return self.parameters.get(label, TRANSCRIPTION_PARAM_DEFAULTS[label])

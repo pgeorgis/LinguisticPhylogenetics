@@ -268,6 +268,11 @@ if __name__ == "__main__":
         transcription_params=transcription_params,
         alignment_params=alignment_params,
     )
+    for function_key in function_map:
+        function_map[function_key].set(
+            'family_index',
+            family_index[family.name]
+        )
 
     # Print some summary info about the loaded dataset
     logger.info(f'Loaded {len(family.languages)} doculects.')

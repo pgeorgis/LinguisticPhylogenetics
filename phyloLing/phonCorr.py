@@ -209,7 +209,7 @@ def prune_oov_surprisal(surprisal_dict):
     return pruned, oov_val
 
 
-def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=True):
+def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, maximize_score=True):
     # Resolve synonyms: prune redundant/extraneous
     # If a concept has >1 words listed, we may end up with, e.g.
     # DE <Kopf> - NL <kop>
@@ -259,8 +259,8 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
                     best_index = best_pairings[word1]
                     best_alignment = alignments[best_index]
                     current_alignment = alignments[index]
-                    phon_dist_best = phonological_dist(best_alignment)
-                    phon_dist_current = phonological_dist(current_alignment)
+                    phon_dist_best = phonological_dist(best_alignment, family_index)
+                    phon_dist_current = phonological_dist(current_alignment, family_index)
                     if maximize_score:
                         phon_dist_best *= -1
                         phon_dist_current *= -1
@@ -463,10 +463,10 @@ class PhonCorrelator:
         self.samples = {}
 
         # PMI, ngrams, scored words
-        self.pmi_dict: PhonemeMap = PhonemeMap()
-        self.surprisal_dict: dict[str, dict[str, float]] = {}
-        self.phon_env_surprisal_dict: dict[str, dict[str, float]] = {}
-        self.reload_language_pair_data()
+        self.pmi_results: PhonemeMap = PhonemeMap()
+        self.surprisal_results = create_default_dict(self.lang2.phoneme_entropy, 3)
+        self.phon_env_surprisal_results = create_default_dict(self.lang2.phoneme_entropy, 3)
+        self.noncognate_thresholds: dict[(Distance, int, int), list] = defaultdict(list)
         self.scored_words = create_default_dict_of_dicts()
         self.low_coverage_phones = None
 
@@ -476,11 +476,6 @@ class PhonCorrelator:
         os.makedirs(self.phon_corr_dir, exist_ok=True)
         self.align_log = create_default_dict(0, 2)
 
-    def reload_language_pair_data(self):
-        self.pmi_dict = self.lang1.phoneme_pmi[self.lang2_name]
-        self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2_name]
-        self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2_name]
-
     def get_twin(self, phon_correlators_index) -> Self:
         """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
         if self.lang1_name == self.lang2_name:
@@ -488,7 +483,7 @@ class PhonCorrelator:
         twin_correlator, _ = get_phone_correlator(
             self.lang1,
             self.lang2,
-            phone_correlators_index=phon_correlators_index, 
+            phone_correlators_index=phon_correlators_index,
             wordlist=tuple(self.wordlist),
             seed=self.seed,
             log_outdir=self.log_outdir,
@@ -1082,7 +1077,7 @@ class PhonCorrelator:
         return pmi_dict
 
     def compute_phone_corrs(self,
-                            phone_correlators_index,
+                            family_index,
                             p_threshold=0.1,
                             max_iterations=3,
                             n_samples=3,
@@ -1258,6 +1253,7 @@ class PhonCorrelator:
                     alignments=qualifying_alignments,
                     scores=qualified_PMI,
                     maximize_score=True,
+                    family_index=family_index,
                 )
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
@@ -1294,7 +1290,8 @@ class PhonCorrelator:
         final_qualifying, final_alignments = prune_extraneous_synonyms(
             wordlist=final_qualifying,
             alignments=final_alignments,
-            maximize_score=True
+            maximize_score=True,
+            family_index=family_index,
         )
         # Log final alignments
         self.log_alignments(final_alignments, self.align_log)
@@ -1307,7 +1304,7 @@ class PhonCorrelator:
             ngram_size=ngram_size,
         )
         # Compute surprisal in opposite direction with reversed alignments
-        twin = self.get_twin(phone_correlators_index)
+        twin = self.get_twin(family_index["phone_correlators"])
         reversed_final_alignments = [alignment.reverse() for alignment in final_alignments]
         twin.compute_phone_surprisal(
             reversed_final_alignments,
@@ -1325,11 +1322,8 @@ class PhonCorrelator:
         self.write_alignments_log(self.align_log, align_log_file)
 
         # Save PMI results
-        self.lang1.phoneme_pmi[self.lang2_name] = results
-        self.lang2.phoneme_pmi[self.lang1_name] = reverse_corr_dict_map(results)
-        # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
-
-        self.pmi_dict = results
+        self.pmi_results = results
+        twin.pmi_results = reverse_corr_dict_map(results)
         self.log_phoneme_pmi()
 
         return results
@@ -1573,11 +1567,9 @@ class PhonCorrelator:
             )
 
         # Save surprisal results
-        self.lang1.phoneme_surprisal[self.lang2_name][ngram_size] = surprisal_results
-        self.surprisal_dict[ngram_size] = surprisal_results
+        self.surprisal_results[ngram_size] = surprisal_results
         if phon_env:
-            self.lang1.phon_env_surprisal[self.lang2_name] = phon_env_surprisal_results
-            self.phon_env_surprisal_dict = phon_env_surprisal_results
+            self.phon_env_surprisal_results = phon_env_surprisal_results
 
         # Write phone correlation report based on surprisal results
         phon_corr_report = os.path.join(self.phon_corr_dir, 'phon_corr.tsv')
@@ -1588,10 +1580,6 @@ class PhonCorrelator:
         if phon_env:
             self.log_phoneme_surprisal(phon_env=True)
 
-        if phon_env:
-            return surprisal_results, phon_env_surprisal_results
-
-        return surprisal_results, None
 
     def marginalize_over_phon_env_surprisal(self, phon_env_surprisal_dict, ngram_size=1):
         """Converts a phon env surprisal dictionary into a vanilla surprisal dictionary by marginalizing over phon envs"""
@@ -1642,7 +1630,7 @@ class PhonCorrelator:
 
         return self.low_coverage_phones
 
-    def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
+    def compute_noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
@@ -1667,8 +1655,8 @@ class PhonCorrelator:
         self.reset_seed()
 
         if save:
-            key = (self.lang2_name, eval_func, sample_size, seed)
-            self.lang1.noncognate_thresholds[key] = noncognate_scores
+            key = (eval_func, sample_size, seed)
+            self.noncognate_thresholds[key] = noncognate_scores
 
         return noncognate_scores
 
@@ -1680,9 +1668,9 @@ class PhonCorrelator:
         # Save all segment pairs with non-zero PMI values to file
         # Skip extremely small decimals that are close to zero
         lines = []
-        for seg1 in self.pmi_dict.get_primary_keys():
-            for seg2 in self.pmi_dict.get_secondary_keys(seg1):
-                pmi_val = round(self.pmi_dict.get_value(seg1, seg2), 3)
+        for seg1 in self.pmi_results.get_primary_keys():
+            for seg2 in self.pmi_results.get_secondary_keys(seg1):
+                pmi_val = round(self.pmi_results.get_value(seg1, seg2), 3)
                 if abs(pmi_val) > threshold:
                     line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
                     lines.append(line)
@@ -1704,9 +1692,9 @@ class PhonCorrelator:
         os.makedirs(outdir, exist_ok=True)
 
         if phon_env:
-            surprisal_dict = self.phon_env_surprisal_dict
+            surprisal_dict = self.phon_env_surprisal_results
         else:
-            surprisal_dict = self.surprisal_dict[ngram_size]
+            surprisal_dict = self.surprisal_results[ngram_size]
 
         lines = []
         surprisal_dict, oov_value = prune_oov_surprisal(surprisal_dict)
@@ -1724,7 +1712,7 @@ class PhonCorrelator:
                     ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
                     str(abs(round(surprisal_dict[seg1][seg2], 3))),
                     str(oov_value)
-                    ]
+                ]
                 )
                 if phon_env:
                     lines[-1].insert(1, phon_env)
