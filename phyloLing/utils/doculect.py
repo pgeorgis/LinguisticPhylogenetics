@@ -8,7 +8,6 @@ from statistics import mean
 from typing import Self
 
 from constants import ALIGNMENT_PARAM_DEFAULTS, TRANSCRIPTION_PARAM_DEFAULTS
-from phonCorr import PhonCorrelator
 from phonUtils.initPhoneData import suprasegmental_diacritics
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
@@ -22,6 +21,8 @@ from utils.utils import (create_default_dict, create_default_dict_of_dicts,
                          dict_of_sets, dict_tuplelist, normalize_dict)
 from utils.word import Word
 
+logger = logging.getLogger(__name__)
+
 class Doculect:
     def __init__(self,
                  name: str,
@@ -32,18 +33,20 @@ class Doculect:
                  lang_id=None,
                  glottocode=None,
                  iso_code=None,
-                 family: LanguageFamilyData=None,
-                 logger: logging.Logger =None
+                 doculect_dir="",
                  ):
 
         # Language data
-        self.logger: logging.Logger | None = logger
         self.name: str = name
         self.path_name: str = format_as_variable(name)
+        self.doculect_dir = doculect_dir
         self.lang_id = lang_id
         self.glottocode = glottocode
         self.iso_code = iso_code
-        self.family: LanguageFamilyData = family
+        
+        # Logging / outfile directory
+        self.doculect_dir = doculect_dir
+        os.makedirs(self.doculect_dir, exist_ok=True)
 
         # Attributes for parsing data dictionary (TODO could this be inherited via a subclass?)
         self.data = data
@@ -165,7 +168,7 @@ class Doculect:
         for phoneme in self.phoneme_counts:
             count = self.phoneme_counts[phoneme]
             if count < self.transcription_params["min_phone_instances"]:
-                self.logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
+                logger.warning(f'Only {count} instance(s) of /{phoneme}/ in {self.name}.')
             self.phonemes[phoneme] = count / total_tokens
 
         # Phone classes
@@ -202,11 +205,8 @@ class Doculect:
             self.prosodic_typology = 'OTHER'
 
     def write_phoneme_inventory(self, n_examples=3, seed=1):
-        doculect_dir = os.path.join(self.family.doculects_dir, self.path_name)
-        os.makedirs(doculect_dir, exist_ok=True)
         random.seed(seed)
-        vowels, consonants, tonemes = map(dict_tuplelist, [self.vowels, self.consonants, self.tonemes])
-        with open(os.path.join(doculect_dir, 'phones.lst'), 'w') as f:
+        with open(os.path.join(self.doculect_dir, 'phones.lst'), 'w') as f:
             for group, label in zip([
                 self.vowels,
                 self.consonants,
@@ -232,7 +232,7 @@ class Doculect:
                                     [self.vowels, self.consonants, self.tonemes]):
             if len(phone_list) > 0:
                 phone_list = '\n'.join(sorted(list(phone_list.keys())))
-                with open(os.path.join(doculect_dir, file), 'w') as f:
+                with open(os.path.join(self.doculect_dir, file), 'w') as f:
                     f.write(phone_list)
 
     def list_ngrams(self, ngram_size, phon_env=False):
@@ -434,19 +434,6 @@ class Doculect:
                                save_directory=save_directory,
                                **kwargs)
 
-    def get_phoneme_correlator(self, lang2: Self, wordlist=None, seed=1):
-        key = (lang2, wordlist, seed)
-        if key not in self.phoneme_correlators:
-            self.phoneme_correlators[key] = PhonCorrelator(lang1=self,
-                                                           lang2=lang2,
-                                                           wordlist=wordlist,
-                                                           gap_ch=self.alignment_params.get('gap_ch', ALIGNMENT_PARAM_DEFAULTS['gap_ch']),
-                                                           pad_ch=self.alignment_params.get('pad_ch', ALIGNMENT_PARAM_DEFAULTS['pad_ch']),
-                                                           seed=seed,
-                                                           logger=self.logger)
-        correlator = self.phoneme_correlators[key]
-        return correlator
-
     def write_lexical_comparison(self, lang2: Self, outfile):
         measures = sorted(list(self.lexical_comparison_measures))
         with open(outfile, 'w') as f:
@@ -462,8 +449,6 @@ class Doculect:
         """Print a summary of the language object"""
         # TODO improve this
         s = f'{self.name.upper()} [{self.glottocode}][{self.iso_code}]'
-        s += f'\nFamily: {self.family.name}'
-        s += f'\nRelatives: {self.family.language_count}'
         s += f'\nConsonants: {len(self.consonants)}'
         consonant_inventory = ', '.join([pair[0] for pair in dict_tuplelist(self.consonants)])
         s += f'\n/{consonant_inventory}/'
