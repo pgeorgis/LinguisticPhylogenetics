@@ -4,6 +4,7 @@ from functools import lru_cache
 from statistics import StatisticsError, mean, stdev
 
 import numpy as np
+from phonCorr import get_phone_correlator
 from scipy.stats import norm
 from utils.distance import Distance, dist_to_sim
 from utils.utils import balanced_resample, create_default_dict_of_dicts
@@ -55,20 +56,33 @@ def filter_cognates_by_lang(lang, cluster):
     return filtered_cognates
 
 
-def get_noncognate_scores(lang1, lang2, eval_func, seed=1, sample_size=None, as_similarity=False):
+def get_noncognate_scores(lang1,
+                          lang2,
+                          eval_func,
+                          phone_correlators_index,
+                          seed=1,
+                          sample_size=None,
+                          as_similarity=False,
+                          log_outdir=None,
+                          ):
     # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
     key: tuple[str, Distance, int, int] = (lang2.name, eval_func, sample_size, seed)
     if len(lang1.noncognate_thresholds[key]) > 0:
         noncognate_scores = lang1.noncognate_thresholds[key]
     else:
-        correlator = lang1.get_phoneme_correlator(lang2)
+        correlator, phone_correlators_index = get_phone_correlator(
+            lang1,
+            lang2,
+            phone_correlators_index=phone_correlators_index,
+            log_outdir=log_outdir,
+        )
         noncognate_scores = correlator.noncognate_thresholds(eval_func, seed=seed, sample_size=sample_size)
 
     # Transform distance scores into similarity scores
     if as_similarity and not eval_func.sim:
         noncognate_scores = [dist_to_sim(score) for score in noncognate_scores]
     
-    return noncognate_scores
+    return noncognate_scores, phone_correlators_index
 
 
 @lru_cache(maxsize=None)
@@ -85,7 +99,7 @@ def get_calibration_params(lang1, lang2, eval_func, seed=1, sample_size=None, as
     Returns:
         tuple: Mean and standard deviation of similarity of random sampling of non-cognate word pairs
     """
-    noncognate_scores = get_noncognate_scores(lang1, lang2, eval_func, seed, sample_size, as_similarity=as_similarity)
+    noncognate_scores, _ = get_noncognate_scores(lang1, lang2, eval_func, seed, sample_size, as_similarity=as_similarity)
 
     # Calculate mean and standard deviation from this sample distribution
     mean_nc_score = mean(noncognate_scores)  # TODO why is this being recalculated each time?
@@ -239,7 +253,14 @@ def gradient_cognate_dist(lang1,
         if calibrate:
             # TODO theoretically this would probably be better to recalculate per group as seed+n rather than seed, but doesn't seem to make a significant difference in tree topology but does significantly impact computational time
             # should investigate explicitly whether this makes a significant difference
-            mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, seed, group_size, as_similarity=True)
+            mean_nc_score, nc_score_stdev = get_calibration_params(
+                lang1,
+                lang2,
+                eval_func,
+                seed,
+                group_size,
+                as_similarity=True
+            )
 
         # Apply minimum similarity and calibration
         for concept, score in sims.items():
