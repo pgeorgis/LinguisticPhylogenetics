@@ -1,18 +1,11 @@
 #!/usr/bin/env Rscript
-
-# Function to check if a package is installed and install it if necessary
-install_if_needed <- function(package_name) {
-    if (!require(package_name, quietly = TRUE, character.only = TRUE)) {
-        install.packages(package_name, repos = "https://cran.r-project.org")
-        suppressPackageStartupMessages(library(package_name, character.only = TRUE))
-    } else {
-        suppressPackageStartupMessages(library(package_name, character.only = TRUE))
-    }
-}
+source("phyloLing/utils/r/dependencies.R")
 
 # Install 'TreeDist' and 'ape' if not already installed
-install_if_needed("TreeDist")
-install_if_needed("ape")
+install_packages_if_needed(c(
+	"TreeDist",
+	"ape"
+))
 
 # Error handling
 tryCatch({

@@ -413,9 +413,10 @@ def calculate_tree_distance(tree1, tree2):
     if isinstance(tree2, dendropy.Tree):
         tree2 = tree2.as_string("newick").strip()
     current_directory = os.path.abspath(os.path.dirname(__file__))
-    tree_dist_script = os.path.join(current_directory, "treeDist.R")
+    r_utils_directory = os.path.join(current_directory, "r")
+    tree_dist_script = os.path.join(r_utils_directory, "treeDist.R")
     result = subprocess.run(
-        ["Rscript", tree_dist_script, tree1, tree2],
+        [tree_dist_script, tree1, tree2],
         capture_output=True,
         text=True
     )
@@ -434,11 +435,12 @@ def calculate_tree_distance(tree1, tree2):
 def plot_tree(newick_path, png_path, classifications_file=None):
     """Plots a phylogenetic tree (from file saved as Newick string) to a PNG image file."""
     current_directory = os.path.abspath(os.path.dirname(__file__))
-    if classifications_file:
-        plot_tree_script = os.path.join(current_directory, "plotTreeWithClassifications.R")
-    else:
-        plot_tree_script = os.path.join(current_directory, "plotTree.R")
-    r_script_args = ["Rscript", plot_tree_script, newick_path, png_path]
+    r_utils_directory = os.path.join(current_directory, "r")
+    plot_tree_script = os.path.join(
+        r_utils_directory,
+        "plotTreeWithClassifications.R" if classifications_file else "plotTree.R"
+    )
+    r_script_args = [plot_tree_script, newick_path, png_path]
     if classifications_file:
         r_script_args.append(classifications_file)
     result = subprocess.run(

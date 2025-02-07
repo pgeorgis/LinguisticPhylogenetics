@@ -39,7 +39,7 @@ default:
 prepare:ci:
   stage: prepare
   image: ${DIND_IMAGE}
-  interruptible: true
+  resource_group: prepare
   before_script: []
   services:
     - name: ${DIND_IMAGE}
