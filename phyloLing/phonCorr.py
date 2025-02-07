@@ -444,7 +444,7 @@ class PhonCorrelator:
                  pad_ch=PAD_CH_DEFAULT,
                  seed=1,
                  logger=None):
-        # Set Language objects
+        # Set Doculect objects
         self.lang1 = lang1
         self.lang1_name = lang1.name
         self.lang2 = lang2

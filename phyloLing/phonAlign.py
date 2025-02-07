@@ -1,4 +1,3 @@
-import importlib
 import logging
 from collections.abc import Iterable
 
@@ -6,9 +5,10 @@ from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
                        PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
 from phonUtils.phonEnv import get_phon_env
 from utils import PhonemeMap
+from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
+from utils.doculect import Doculect
 from utils.sequence import (Ngram, PhonEnvNgram, end_token, flatten_ngram,
                             pad_sequence, start_token)
-from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
 from utils.utils import validate_class
 from utils.word import Word
 
@@ -42,8 +42,8 @@ class Alignment:
             seq1 (Word | str): First phone sequence.
             seq2 (Word | str): Second phone sequence.
             align_costs (PhonemeMap): Dictionary of alignment costs or scores.
-            lang1 (phyloLing.Language, optional): Language of seq1.
-            lang2 (phyloLing.Language, optional): Language of seq2.
+            lang1 (Doculect, optional): Language of seq1.
+            lang2 (Doculect, optional): Language of seq2.
             gap_ch (str, optional): Gap character.
             gop (int, optional): Default gap opening penalty.
             pad_ch (str, optional): Pad character.
@@ -94,12 +94,11 @@ class Alignment:
 
     def validate_args(self, seq1, seq2, lang1, lang2):
         """Verifies that all input arguments are of the correct types"""
-        phyloLing = importlib.import_module('phyloLing')
         validate_class((seq1,), ((Word, str),))
         validate_class((seq2,), ((Word, str),))
         for lang in (lang1, lang2):
             if lang:  # skip if None
-                validate_class((lang,), (phyloLing.Language,))
+                validate_class((lang,), (Doculect,))
 
     def prepare_seq(self, seq, lang):
         if isinstance(seq, Word):
