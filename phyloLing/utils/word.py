@@ -17,13 +17,13 @@ class Word:
                  ipa_string,
                  concept=None,
                  orthography=None,
-                 language=None,
+                 doculect_key=None,
                  cognate_class=None,
                  loanword=False,
                  transcription_parameters=TRANSCRIPTION_PARAM_DEFAULTS,
                  ):
         """Initialize Word object."""
-        self.language = language
+        self.doculect_key = doculect_key
         self.parameters = transcription_parameters
         self.raw_ipa = ipa_string
         self.ipa = self.preprocess(ipa_string)
@@ -38,6 +38,11 @@ class Word:
         self.phon_env = self.getPhonEnv()
         self.info_content = None
         self.total_info_content = None
+
+    def get_doculect(self, doculect_index):
+        if self.doculect_key not in doculect_index:
+            raise ValueError(f"No doculect with name '{self.doculect_key}' found!")
+        return doculect_index[self.name]
 
     def get_parameter(self, label):
         return self.parameters.get(label, TRANSCRIPTION_PARAM_DEFAULTS[label])
@@ -91,19 +96,20 @@ class Word:
         self.ngrams[(size, phon_env)] = ngram_seq
         return ngram_seq
     
-    def complex_segmentation(self, pad_ch=PAD_CH_DEFAULT):
+    def complex_segmentation(self, doculect_index, pad_ch=PAD_CH_DEFAULT):
         """Create non-overlapping complex ngram segmentation with ngrams of variable sizes based on self-surprisal."""
         if self.complex_segments is not None:
             return self.complex_segmentation
 
-        assert self.language is not None
+        assert self.doculect_key is not None
         # Generate bigrams
         bigrams_seq = self.get_ngrams(size=2, pad_ch=pad_ch)
         
         # Remove overlapping bigrams and decompose into unigrams if appropriate
         def get_ngram_self_surprisal(ngram):
             ngram = Ngram(ngram)
-            ngram_info = self.language.self_surprisal(list(ngram.ngram), as_seq=True, ngram_size=ngram.size)
+            doculect = self.get_doculect(doculect_index=doculect_index)
+            ngram_info = doculect.self_surprisal(list(ngram.ngram), as_seq=True, ngram_size=ngram.size)
             return mean([ngram_info[j][-1] for j in ngram_info])
         
         complex_ngram_seq = remove_overlapping_ngrams(
@@ -129,16 +135,19 @@ class Word:
             phon_env.append(get_phon_env(self.segments, i))
         return phon_env
 
-    def getInfoContent(self, total=False):
+    def getInfoContent(self, doculect=None, total=False, doculect_index=None):
         if self.info_content is not None:
             if total:
                 return self.total_info_content
             return self.info_content
 
-        if self.language is None:
-            raise AssertionError('Language must be specified in order to calculate information content.')
-
-        self.info_content = self.language.calculate_infocontent(self)
+        if self.doculect_key is None:
+            raise AssertionError('Doculect must be specified in order to calculate information content.')
+        elif doculect is not None:
+            assert doculect.name == self.doculect_key
+        else:
+            doculect = self.get_doculect(doculect_index)
+        self.info_content = doculect.calculate_infocontent(self)
         self.total_info_content = sum([self.info_content[j][-1] for j in self.info_content])
         if total:
             return self.total_info_content
@@ -152,6 +161,6 @@ class Word:
             form_tr = f"<{self.orthography}> {syl_tr}"
         if self.concept and self.concept != "":
             form_tr = f"{form_tr}\n'{self.concept}'"
-        if self.language:
-            form_tr = f"{form_tr} ({self.language.name})"
+        if self.doculect_key:
+            form_tr = f"{form_tr} ({self.doculect_key})"
         return form_tr

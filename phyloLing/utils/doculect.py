@@ -112,7 +112,7 @@ class Doculect:
                 concept=concept,
                 orthography=entry[self.columns['orthography']],
                 transcription_parameters=self.transcription_params,
-                language=self,
+                doculect_key=self.name,
                 cognate_class=cognate_class,
                 loanword=loan,
             )
@@ -311,7 +311,7 @@ class Doculect:
             concept=concept,
             orthography=orthography,
             transcription_parameters=transcription_params,
-            language=self,
+            doculect_key=self.name,
             cognate_class=cognate_class,
             loanword=loan,
         )
@@ -332,7 +332,8 @@ class Doculect:
             word = Word(
                 ipa_string=ipa_string,
                 transcription_parameters=self.transcription_params,
-                language=self)
+                doculect_key=self.name,
+            )
         else:
             raise TypeError
 
