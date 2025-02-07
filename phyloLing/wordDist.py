@@ -3,7 +3,7 @@ from math import sqrt
 from statistics import mean
 
 from asjp import ipa2asjp
-from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
+from constants import PAD_CH_DEFAULT
 from nltk import edit_distance
 from phonAlign import Alignment, Gap, get_align_key, get_alignment_iter
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
@@ -15,8 +15,7 @@ from utils.distance import Distance, dist_to_sim, sim_to_dist
 from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
-
-from phyloLing import Word
+from utils.word import Word
 
 # Designate maximum sonority as sonority of a toneme
 MAX_SONORITY = _toSegment('˧').sonority

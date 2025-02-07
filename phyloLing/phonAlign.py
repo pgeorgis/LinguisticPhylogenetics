@@ -10,6 +10,7 @@ from utils.sequence import (Ngram, PhonEnvNgram, end_token, flatten_ngram,
                             pad_sequence, start_token)
 from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
 from utils.utils import validate_class
+from utils.word import Word
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
@@ -38,8 +39,8 @@ class Alignment:
         """Produces a pairwise alignment of two phone sequences.
 
         Args:
-            seq1 (phyloLing.Word | str): First phone sequence.
-            seq2 (phyloLing.Word | str): Second phone sequence.
+            seq1 (Word | str): First phone sequence.
+            seq2 (Word | str): Second phone sequence.
             align_costs (PhonemeMap): Dictionary of alignment costs or scores.
             lang1 (phyloLing.Language, optional): Language of seq1.
             lang2 (phyloLing.Language, optional): Language of seq2.
@@ -94,18 +95,17 @@ class Alignment:
     def validate_args(self, seq1, seq2, lang1, lang2):
         """Verifies that all input arguments are of the correct types"""
         phyloLing = importlib.import_module('phyloLing')
-        validate_class((seq1,), ((phyloLing.Word, str),))
-        validate_class((seq2,), ((phyloLing.Word, str),))
+        validate_class((seq1,), ((Word, str),))
+        validate_class((seq2,), ((Word, str),))
         for lang in (lang1, lang2):
             if lang:  # skip if None
                 validate_class((lang,), (phyloLing.Language,))
 
     def prepare_seq(self, seq, lang):
-        phyloLing = importlib.import_module('phyloLing')
-        if isinstance(seq, phyloLing.Word):
+        if isinstance(seq, Word):
             word1 = seq
         elif isinstance(seq, str):
-            word1 = phyloLing.Word(seq, language=lang)
+            word1 = Word(seq, language=lang)
 
         return word1.segments, word1
 
