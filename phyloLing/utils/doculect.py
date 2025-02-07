@@ -89,16 +89,8 @@ class Doculect:
         self.phoneme_entropy: float = entropy(self.phonemes)
 
         # Comparison with other languages
-        self.phoneme_correlators = {}
-        self.phoneme_pmi: dict[str, PhonemeMap] = defaultdict(PhonemeMap)
-        self.phoneme_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 4)
-        self.phon_env_surprisal: dict[str, dict] = create_default_dict(self.get_negative_phoneme_entropy(), 3)
-        self.noncognate_thresholds: dict[(str, Distance, int, int), list] = defaultdict(list)
         self.lexical_comparison: dict[str, dict] = create_default_dict_of_dicts(2)
         self.lexical_comparison_measures = set()
-
-    def get_negative_phoneme_entropy(self) -> float:
-        return -self.phoneme_entropy
 
     def create_vocabulary(self) -> None:
         for i in self.data:

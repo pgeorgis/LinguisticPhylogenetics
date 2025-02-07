@@ -44,7 +44,7 @@ def filter_cognates_by_lang(lang, cluster):
         list: Word objects belonging to the specified Doculect
     """
     # Filter by language and sort
-    filtered_cognates = list(filter(lambda word: word.language == lang, cluster))
+    filtered_cognates = list(filter(lambda word: word.doculect_key == lang.name, cluster))
     filtered_cognates.sort(key=lambda word: (
         word.ipa,
         word.orthography,
@@ -66,17 +66,17 @@ def get_noncognate_scores(lang1,
                           log_outdir=None,
                           ):
     # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
-    key: tuple[str, Distance, int, int] = (lang2.name, eval_func, sample_size, seed)
-    if len(lang1.noncognate_thresholds[key]) > 0:
-        noncognate_scores = lang1.noncognate_thresholds[key]
+    key: tuple[Distance, int, int] = (eval_func, sample_size, seed)
+    correlator, phone_correlators_index = get_phone_correlator(
+        lang1,
+        lang2,
+        phone_correlators_index=phone_correlators_index,
+        log_outdir=log_outdir,
+    )
+    if len(correlator.noncognate_thresholds[key]) > 0:
+        noncognate_scores = correlator.noncognate_thresholds[key]
     else:
-        correlator, phone_correlators_index = get_phone_correlator(
-            lang1,
-            lang2,
-            phone_correlators_index=phone_correlators_index,
-            log_outdir=log_outdir,
-        )
-        noncognate_scores = correlator.noncognate_thresholds(eval_func, seed=seed, sample_size=sample_size)
+        noncognate_scores = correlator.compute_noncognate_thresholds(eval_func, seed=seed, sample_size=sample_size)
 
     # Transform distance scores into similarity scores
     if as_similarity and not eval_func.sim:

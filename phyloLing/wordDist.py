@@ -29,7 +29,7 @@ MAX_PROSODIC_ENV_STRENGTH = 7
 class WordDistance(Distance):
     def eval(self, x, y, **kwargs):
         if isinstance(x, Word) and isinstance(y, Word):
-            key = ((x.language.name, x.ipa), (y.language.name, y.ipa), self.hashable_kwargs)
+            key = ((x.doculect_key, x.ipa), (y.doculect_key, y.ipa), self.hashable_kwargs)
             if key in self.measured:
                 return self.measured[key]
 
@@ -43,26 +43,47 @@ class WordDistance(Distance):
             return result
 
 
-def get_phoneme_surprisal(lang1, lang2, ngram_size=1, **kwargs):
+def get_doculects_from_word_pair(word1, word2, family_index):
+    lang1 = word1.get_doculect(family_index["doculects"])
+    lang2 = word2.get_doculect(family_index["doculects"])
+    return lang1, lang2
+
+
+def get_phoneme_surprisal(lang1, lang2, family_index, ngram_size=1, **kwargs):
     """Calculate phoneme surprisal if not already done."""
-    if len(lang1.phoneme_surprisal[lang2.name][ngram_size]) == 0:
-        correlator1 = lang1.get_phoneme_correlator(lang2)
-        correlator1.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
-    if len(lang2.phoneme_surprisal[lang1.name][ngram_size]) == 0:
-        correlator2 = lang2.get_phoneme_correlator(lang1)
-        correlator2.compute_phone_corrs(ngram_size=ngram_size, **kwargs)
+
+    phone_correlators_index = family_index["phone_correlators"]
+    from phonCorr import get_phone_correlator
+    correlator1, _ = get_phone_correlator(
+        lang1,
+        lang2,
+        phone_correlators_index=phone_correlators_index,
+    )
+    correlator2 = correlator1.get_twin(phone_correlators_index)
+    if len(correlator1.surprisal_results[ngram_size]) == 0:
+        correlator1.compute_phone_corrs(ngram_size=ngram_size, family_index=family_index, **kwargs)
+    if len(correlator2.surprisal_results[ngram_size]) == 0:
+        correlator2.compute_phone_corrs(ngram_size=ngram_size, family_index=family_index, **kwargs)
+    return correlator1, correlator2
 
 
-def get_pmi_dict(lang1, lang2, **kwargs) -> PhonemeMap:
+def get_pmi_dict(lang1,
+                 lang2,
+                 family_index,
+                 **kwargs) -> PhonemeMap:
     """Calculate phoneme PMI if not already done and return PMI dict."""
-    if len(lang1.phoneme_pmi[lang2.name]) == 0:
-        correlator = lang1.get_phoneme_correlator(lang2)
-        correlator.compute_phone_corrs(**kwargs)
-    pmi_dict = lang1.phoneme_pmi[lang2.name]
-    return pmi_dict
+    from phonCorr import get_phone_correlator
+    correlator, _ = get_phone_correlator(
+        lang1,
+        lang2,
+        phone_correlators_index=family_index["phone_correlators"],
+    )
+    if len(correlator.pmi_results) == 0:
+        correlator.compute_phone_corrs(family_index, **kwargs)
+    return correlator.pmi_results
 
 
-def prepare_alignment(word1, word2, **kwargs):
+def prepare_alignment(word1, word2, family_index, **kwargs):
     """Prepares pairwise alignment of two Word objects.
     If the language of both words is specified, phoneme PMI is additionally used for the alignment, else only phonetic similarity.
     If phonetic PMI has not been previously calculated, it will be calculated automatically here.
@@ -75,12 +96,12 @@ def prepare_alignment(word1, word2, **kwargs):
         Alignment: aligned object of the two words
     """
     # If language is specified for both words, incorporate their phoneme PMI for the alignment
-    lang1, lang2 = word1.language, word2.language
+    lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
     if lang1 is not None and lang2 is not None:
 
         # Check whether phoneme PMI has been calculated for this language pair
         # If not, then calculate it; if so, then retrieve it
-        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2)
+        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2, family_index)
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
         alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
@@ -92,7 +113,7 @@ def prepare_alignment(word1, word2, **kwargs):
     return alignment
 
 
-def handle_word_pair_input(input1, input2):
+def handle_word_pair_input(input1, input2, family_index):
     """Check if a pair of word inputs or if already aligned word pair; align if not done already."""
     if isinstance(input1, Alignment):
         alignment = input1
@@ -100,11 +121,11 @@ def handle_word_pair_input(input1, input2):
         word2 = alignment.word2
     else:
         word1, word2 = input1, input2
-        alignment = prepare_alignment(word1, word2)
+        alignment = prepare_alignment(word1, word2, family_index)
     return word1, word2, alignment
 
 
-def phonetic_dist(word1, word2=None, phone_sim_func=phone_sim, **kwargs):
+def phonetic_dist(word1, family_index, word2=None, phone_sim_func=phone_sim, **kwargs):
     """Calculates phonetic distance of an alignment without weighting by
     segment type, position, etc.
 
@@ -115,7 +136,7 @@ def phonetic_dist(word1, word2=None, phone_sim_func=phone_sim, **kwargs):
     """
 
     # Calculate or retrieve the alignment
-    _, _, alignment = handle_word_pair_input(word1, word2)
+    _, _, alignment = handle_word_pair_input(word1, word2, family_index=family_index)
 
     # Calculate the phonetic similarity of each aligned segment
     # Gap alignments receive a score of 0
@@ -309,6 +330,7 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float,
 
 def phonological_dist(word1: Word | Alignment,
                       word2: Word=None,
+                      family_index=None, # TODO this should not be none
                       sim_func=phone_sim,
                       penalize_sonority=True,
                       context_reduction=False,
@@ -331,7 +353,7 @@ def phonological_dist(word1: Word | Alignment,
     """
 
     # If word2 is None, we assume word1 argument is actually an aligned word pair
-    word1, word2, alignment = handle_word_pair_input(word1, word2)
+    word1, word2, alignment = handle_word_pair_input(word1, word2, family_index)
     gap_ch = alignment.gap_ch
     pad_ch = alignment.pad_ch
     alignment_obj = alignment
@@ -437,16 +459,26 @@ def phonological_dist(word1: Word | Alignment,
     return word_dist
 
 
-def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False, pad_ch=PAD_CH_DEFAULT, **kwargs):
-    lang1 = word1.language
-    lang2 = word2.language
+def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, normalize=False, pad_ch=PAD_CH_DEFAULT, **kwargs):
+    lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
 
     # Check whether phoneme PMI has been calculated for this language pair
     # Otherwise calculate from scratch
-    pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
+    pmi_dict = get_pmi_dict(
+        lang1,
+        lang2,
+        family_index=family_index,
+        **kwargs
+    )
 
     # Calculate phoneme surprisal if not already done
-    get_phoneme_surprisal(lang1, lang2, ngram_size=ngram_size, **kwargs)
+    correlator1, correlator2 = get_phoneme_surprisal(
+        lang1,
+        lang2,
+        ngram_size=ngram_size,
+        family_index=family_index,
+        **kwargs
+    )
 
     # Generate alignments in each direction: alignments need to come from PMI
     alignment = Alignment(word1, word2, align_costs=pmi_dict, phon_env=phon_env)
@@ -460,11 +492,11 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False,
     # Calculate the word-adaptation surprisal in each direction
     # (note: alignment needs to be reversed to run in second direction)
     if phon_env:
-        sur_dict1 = lang1.phon_env_surprisal[lang2.name]
-        sur_dict2 = lang2.phon_env_surprisal[lang1.name]
+        sur_dict1 = correlator1.phon_env_surprisal_results
+        sur_dict2 = correlator2.phon_env_surprisal_results
     else:
-        sur_dict1 = lang1.phoneme_surprisal[lang2.name][ngram_size]
-        sur_dict2 = lang2.phoneme_surprisal[lang1.name][ngram_size]
+        sur_dict1 = correlator1.surprisal_results[ngram_size]
+        sur_dict2 = correlator2.surprisal_results[ngram_size]
 
     WAS_l1l2 = adaptation_surprisal(alignment,
                                     surprisal_dict=sur_dict1,
@@ -508,16 +540,16 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False,
             # Such gaps skew linguistic distances since tones/suprasegmental features occur on most or all words
             # and never have any equivalent
             # Also don't double-penalize deletion for shifted accent
-            if alignment.gap_ch in pair:
-                gap_index = pair.index(alignment.gap_ch)
-                seg = pair[gap_index - 1]
-                if gap_index == 0:
-                    seg_lang, gap_lang = alignment.word2.language, alignment.word1.language
-                else:
-                    seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
-                if seg in seg_lang.tonemes:
-                    if gap_lang.tonal is False:
-                        continue
+            # if alignment.gap_ch in pair:
+            #     gap_index = pair.index(alignment.gap_ch)
+            #     seg = pair[gap_index - 1]
+            #     if gap_index == 0:
+            #         seg_lang, gap_lang = alignment.word2.language, alignment.word1.language
+            #     else:
+            #         seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
+            #     if seg in seg_lang.tonemes:
+            #         if gap_lang.tonal is False:
+            #             continue
 
             if seq_map1[i] is not None:
                 weight = sum([self_surprisal[index][-1] for j, index in enumerate(seq_map1[i])]) / self_info
@@ -554,13 +586,17 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False,
     return score
 
 
-def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_CH_DEFAULT, **kwargs):
-    lang1 = word1.language
-    lang2 = word2.language
+def pmi_dist(word1, word2, family_index, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_CH_DEFAULT, **kwargs):
+    lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
 
     # Check whether phoneme PMI has been calculated for this language pair
     # Otherwise calculate from scratch
-    pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
+    pmi_dict = get_pmi_dict(
+        lang1,
+        lang2,
+        family_index=family_index,
+        **kwargs
+    )
 
     # Align the words with PMI
     alignment = Alignment(word1, word2, align_costs=pmi_dict)
@@ -641,7 +677,7 @@ def levenshtein_dist(word1, word2, normalize=True, asjp=True):
     return LevDist
 
 
-def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False) -> float:
+def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False, family_index=None) -> float:
     """Calculates a hybrid distance of multiple distance or similarity functions
 
     Args:
@@ -676,7 +712,7 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
 
         # Record word scores # TODO into Distance class object?
         if word1.concept == word2.concept:
-            log_word_score(word1, word2, score, key=func.name)
+            log_word_score(word1, word2, score, key=func.name, family_index=family_index)
 
     # score = euclidean_dist(scores)
     # score = sum(scores)
@@ -684,14 +720,14 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
     pmi_score, surprisal_score, phon_score = scores
     score = pmi_score + (surprisal_score * phon_score)
     if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key=HYBRID_DIST_KEY)
-        log_word_score(word1, word2, dist_to_sim(score), key=HYBRID_SIM_KEY)
+        log_word_score(word1, word2, score, key=HYBRID_DIST_KEY, family_index=family_index)
+        log_word_score(word1, word2, dist_to_sim(score), key=HYBRID_SIM_KEY, family_index=family_index)
 
     return score
 
 
-def log_word_score(word1, word2, score, key):
-    lang1, lang2 = word1.language, word2.language
+def log_word_score(word1, word2, score, key, family_index):
+    lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
     lang1.lexical_comparison[lang2.name][(word1, word2)][key] = score
     lang2.lexical_comparison[lang1.name][(word2, word1)][key] = score
     lang1.lexical_comparison_measures.add(key)
@@ -708,7 +744,7 @@ SURPRISAL_DIST_KEY = 'SurprisalDist'
 HYBRID_DIST_KEY = 'HybridDist'
 HYBRID_SIM_KEY = 'HybridSimilarity'
 LevenshteinDist = WordDistance(func=levenshtein_dist, name=LEVENSHTEIN_DIST_KEY)
-PhoneticDist = WordDistance(func=phonetic_dist, name=PHONETIC_DIST_KEY)
+# PhoneticDist = WordDistance(func=phonetic_dist, name=PHONETIC_DIST_KEY)
 PhonDist = WordDistance(func=phonological_dist, name=PHONOLOGICAL_DIST_KEY)
 PMIDist = WordDistance(func=pmi_dist, name=PMI_DIST_KEY)
 SurprisalDist = WordDistance(func=mutual_surprisal, name=SURPRISAL_DIST_KEY, ngram_size=1)
