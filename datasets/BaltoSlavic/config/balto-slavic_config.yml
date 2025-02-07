@@ -2,7 +2,6 @@ family:
     name: Balto-Slavic
     file: datasets/BaltoSlavic/data/balto-slavic_data.tsv
     min_amc: 0.6
-    include: ["Czech", "Russian", "Lithuanian", "Proto-Balto-Slavic"]
     exclude: [
         'Čakavian (Istria)',
         'Čakavian (Cres)',

@@ -2,7 +2,6 @@ family:
     name: Sinitic
     file: datasets/Sinitic/data/sinitic_data.tsv
     min_amc: 0.75
-    include: ["Old Chinese", "Fuzhounese", "Cantonese", "Standard Mandarin"]
     exclude: ['Sino-Vietnamese', 'Sino-Japanese', 'Sino-Korean']
     outdir: datasets/Sinitic/
 
