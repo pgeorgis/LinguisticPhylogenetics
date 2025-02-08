@@ -331,7 +331,7 @@ class LexicalDataset:
                     phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                     log_outdir=self.phone_corr_dir,
                 )
-                twin = correlator.get_twin(
+                twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
                     phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                 )
                 if not os.path.exists(pmi_file):
