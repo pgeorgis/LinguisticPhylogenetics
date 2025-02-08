@@ -421,8 +421,7 @@ if __name__ == "__main__":
 
     # Plot the phylogenetic tree
     out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
-    #plot_tree(os.path.abspath(outtree), out_png, classifications_file=ref_classifications)
-    plot_tree(os.path.abspath(outtree), out_png)  # TODO restore plotting with classifications_file for color coding once ggtree works in gitlab pipeline
+    plot_tree(os.path.abspath(outtree), out_png, classifications_file=ref_classifications)
     logger.info(f'Plotted phylogenetic tree to {out_png}')
 
     # Write lexical comparison files

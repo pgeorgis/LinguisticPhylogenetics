@@ -4,6 +4,9 @@ set -eou pipefail
 # Initialize and update submodules
 git submodule update --init --recursive
 
+# Install R dependencies
+./install_r_dependencies.R
+
 # Create the virtual environment:
 python3.12 -m venv venv || python3 -m venv venv
 
