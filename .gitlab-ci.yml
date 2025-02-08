@@ -10,14 +10,16 @@ variables:
   DIND_IMAGE: docker:27-dind
   DOCKER_HOST: tcp://docker:2375
   DOCKER_TLS_CERTDIR: ""
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  VENV_DIR: "$CI_PROJECT_DIR/venv"
 
 .commit-cache: &commit-cache
   key: commit-cache-${CI_COMMIT_REF_SLUG}
   fallback_keys:
     - commit-cache-${CI_DEFAULT_BRANCH}
   paths:
-    - "$CI_PROJECT_DIR/.cache/pip"
-    - "$CI_PROJECT_DIR/venv"
+    - $PIP_CACHE_DIR
+    - $VENV_DIR
   policy: pull
 
 default:
@@ -37,7 +39,7 @@ default:
 prepare:ci:
   stage: prepare
   image: ${DIND_IMAGE}
-  interruptible: true
+  resource_group: prepare
   before_script: []
   services:
     - name: ${DIND_IMAGE}

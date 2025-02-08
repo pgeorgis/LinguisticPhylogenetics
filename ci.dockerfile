@@ -1,8 +1,14 @@
-FROM python:3.12
+FROM python:3.12-alpine
 
-ARG DEBIAN_FRONTEND=noninteractive
+RUN apk update && apk add --no-cache \
+    R R-dev R-doc \
+    git \
+    bash \
+    gcc g++ make \
+    hdf5-dev \
+    msttcorefonts-installer fontconfig && update-ms-fonts && fc-cache -f
 
-# Install R and other dependencies in Debian Bookworm
-RUN apt-get update && apt-get -y upgrade && apt-get install -y \
-    r-base \
-    r-base-dev
+WORKDIR /phyloLing
+COPY install_r_dependencies.R install_r_dependencies.R
+COPY phyloLing/utils/r/dependencies.R phyloLing/utils/r/dependencies.R
+RUN ./install_r_dependencies.R
