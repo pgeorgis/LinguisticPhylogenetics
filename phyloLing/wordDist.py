@@ -102,7 +102,12 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
 
         # Retrieve phone correlator and check whether this word pair has already been aligned
         # If so, return this saved alignment
-        correlator = lang1.get_phoneme_correlator(lang2)
+        from phonCorr import get_phone_correlator
+        correlator, _ = get_phone_correlator(
+            lang1,
+            lang2,
+            phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
+        )
         align_log = correlator.align_log
         key = get_align_key(word1, word2)
         if key in align_log:
@@ -492,7 +497,7 @@ def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, no
     )
 
     # Generate alignments in each direction
-    alignment = prepare_alignment(word1, word2, phon_env=phon_env)
+    alignment = prepare_alignment(word1, word2, family_index, phon_env=phon_env)
     alignment.remove_padding()
     # Add phon env
     if phon_env:
@@ -610,7 +615,7 @@ def pmi_dist(word1, word2, family_index, normalize=True, sim2dist=True, alpha=0.
     )
 
     # Fetch already computed alignments
-    alignment = prepare_alignment(word1, word2, **kwargs)
+    alignment = prepare_alignment(word1, word2, family_index, **kwargs)
     alignment.remove_padding()
 
     # Calculate PMI scores for each aligned pair
