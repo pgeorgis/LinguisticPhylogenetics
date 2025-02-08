@@ -731,10 +731,15 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
     return ALIGNMENT_POSITION_DELIMITER.join(a)
 
 
-def undo_visual_align(visual_alignment, undo_ngrams=True):
+def undo_visual_align(visual_alignment, gap_ch=GAP_CH_DEFAULT, undo_ngrams=True):
     """Reverts a visual alignment to a list of tuple segment pairs"""
     seg_pairs = visual_alignment.split(ALIGNMENT_POSITION_DELIMITER)
     seg_pairs = [tuple(pair.split(ALIGNED_PAIR_DELIMITER)) for pair in seg_pairs]
+    # Replace null character with gap character
+    seg_pairs = [
+        (left.replace(NULL_CH_DEFAULT, gap_ch), right.replace(NULL_CH_DEFAULT, gap_ch))
+        for left, right in seg_pairs
+    ]
     seg_pairs = [(Ngram(left), Ngram(right)) for left, right in seg_pairs]
     if undo_ngrams:
         seg_pairs = [(left.undo(), right.undo()) for left, right in seg_pairs]
@@ -760,7 +765,7 @@ def init_precomputed_alignment(alignment,
     """Creates an Alignment object from a precomputed alignment."""
     # Convert alignment string to list of aligned Ngrams
     if isinstance(alignment, str):
-        alignment = undo_visual_align(alignment, undo_ngrams=False)
+        alignment = undo_visual_align(alignment, gap_ch=gap_ch, undo_ngrams=False)
     else:
         alignment = [(Ngram(left), Ngram(right)) for left, right in alignment]
   
