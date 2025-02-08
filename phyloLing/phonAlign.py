@@ -1,9 +1,9 @@
 import logging
 from collections.abc import Iterable
 
-from constants import (ALIGNMENT_POSITION_DELIMITER, END_PAD_CH,
-                       GAP_CH_DEFAULT, NULL_CH_DEFAULT, PAD_CH_DEFAULT,
-                       SEG_JOIN_CH, START_PAD_CH)
+from constants import (ALIGNED_PAIR_DELIMITER, ALIGNMENT_POSITION_DELIMITER,
+                       END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
+                       PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
 from phonUtils.phonEnv import get_phon_env
 from utils import PhonemeMap
 from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
@@ -32,6 +32,9 @@ class Alignment:
                  pad_n=1,
                  allow_complex=True,
                  phon_env=False,
+                 override_alignment=None,
+                 override_seq_map=None,
+                 override_cost=None,
                  **kwargs
                  ):
         """Produces a pairwise alignment of two phone sequences.
@@ -46,6 +49,9 @@ class Alignment:
             pad_n (int, optional): Number of padding units to add to beginning and end of sequences.
             allow_complex (bool, optional): Allow complex alignments instead of only simple one-to-one alignments.
             phon_env (bool, optional): Adds phonological environment to alignment.
+            override_alignment (list): Precomputed alignment to use instead of dynamically computing a new alignment from costs.
+            override_seq_map (tuple): Precomputed sequence map associated with precomputed alignment.
+            override_cost (float): Precomputed alignment cost associated with precomputed alignment.
         """
 
         # Verify that input arguments are of the correct types
@@ -65,17 +71,25 @@ class Alignment:
         self.align_costs: PhonemeMap = align_costs
         self.kwargs = kwargs
 
-        # Perform alignment and parse results
-        self.alignment, self.seq_map, self.cost = self.align(
-            allow_complex=allow_complex,
-            pad_n=pad_n,
-        )
-        self.length = len(self.alignment)
-        self.seq_map = self.validate_seq_map(*self.seq_map)
+        if override_alignment is not None:
+            # Load precomputed alignment; at least seq map must also be specified
+            assert override_seq_map is not None
+            self.alignment = override_alignment
+            self.seq_map = override_seq_map
+            self.cost = override_cost
+            self.length = len(self.alignment)
+        else:
+            # Standard: Perform alignment and parse results
+            self.alignment, self.seq_map, self.cost = self.align(
+                allow_complex=allow_complex,
+                pad_n=pad_n,
+            )
+            self.length = len(self.alignment)
+            self.seq_map = self.validate_seq_map(*self.seq_map)
 
-        # Compact boundary aligned gaps
-        self.alignment = self.compact_boundary_gaps(self.alignment)
-        self.update()
+            # Compact boundary aligned gaps
+            self.alignment = self.compact_boundary_gaps(self.alignment)
+            self.update()
 
         # Phonological environment alignment
         self.phon_env = phon_env
@@ -717,10 +731,13 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
     return ALIGNMENT_POSITION_DELIMITER.join(a)
 
 
-def undo_visual_align(visual_alignment, gap_ch=GAP_CH_DEFAULT):
+def undo_visual_align(visual_alignment, undo_ngrams=True):
     """Reverts a visual alignment to a list of tuple segment pairs"""
     seg_pairs = visual_alignment.split(ALIGNMENT_POSITION_DELIMITER)
-    seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]
+    seg_pairs = [tuple(pair.split(ALIGNED_PAIR_DELIMITER)) for pair in seg_pairs]
+    seg_pairs = [(Ngram(left), Ngram(right)) for left, right in seg_pairs]
+    if undo_ngrams:
+        seg_pairs = [(left.undo(), right.undo()) for left, right in seg_pairs]
     return seg_pairs
 
 
@@ -732,3 +749,50 @@ def flatten_tuple(nested_tuple):
         else:
             flattened.append(item)
     return flattened
+
+
+def init_precomputed_alignment(alignment,
+                               seq_map,
+                               cost,
+                               gap_ch=GAP_CH_DEFAULT,
+                               pad_ch=PAD_CH_DEFAULT,
+                               **kwargs):
+    """Creates an Alignment object from a precomputed alignment."""
+    # Convert alignment string to list of aligned Ngrams
+    if isinstance(alignment, str):
+        alignment = undo_visual_align(alignment, undo_ngrams=False)
+    else:
+        alignment = [(Ngram(left), Ngram(right)) for left, right in alignment]
+  
+    # Create dummy align cost map
+    align_costs = PhonemeMap()
+    
+    # Extract sequences from alignment iterable, excluding boundary tokens and gaps
+    seq1, seq2 = [], []
+    for left, right in alignment:
+        left = left.remove_boundaries(pad_ch=pad_ch)
+        left = left.remove_gaps(gap_ch=gap_ch)
+        seq1.extend(left.ngram)
+        right = right.remove_boundaries(pad_ch=pad_ch)
+        right = right.remove_gaps(gap_ch=gap_ch)
+        seq2.extend(right.ngram)
+    seq1 = ''.join(seq1)
+    seq2 = ''.join(seq2)
+    
+    # Extract segments from aligned Ngrams
+    # (needs to occur after sequence extraction in order to enable filtering by boundary/gap token)
+    alignment = [(left.undo(), right.undo()) for left, right in alignment]
+    
+    alignment = Alignment(
+        seq1=seq1,
+        seq2=seq2,
+        override_alignment=alignment,
+        override_seq_map=seq_map,
+        override_cost=cost,
+        align_costs=align_costs,
+        gap_ch=gap_ch,
+        pad_ch=pad_ch,
+        **kwargs
+    )
+    
+    return alignment

@@ -304,6 +304,10 @@ if __name__ == "__main__":
                     excepted=phon_corr_params['refresh'],
                 )
 
+        # Load previous alignments
+        logger.info(f'Loading {family.name} phonetic sequence alignments...')
+        family.load_alignments(excepted=phon_corr_params['refresh'])
+
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
     if phon_corr_params['refresh_all'] or len(phon_corr_params['refresh']) > 0:
