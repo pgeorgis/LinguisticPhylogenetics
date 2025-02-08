@@ -344,22 +344,27 @@ class LexicalDataset:
                     "alignments.log",
                 )
                 align_dict = parse_alignment_log(alignment_file, lang1=lang1, lang2=lang2, **kwargs)
+                # Get reverse alignments dict
+                reverse_align_dict = {}
+                for key, alignment in align_dict.items():
+                    reverse_key = re.sub(r"/(.+)/ - /(.+)/", r'/$2/ - /$1/', key)
+                    reverse_alignment = alignment.reverse()
+                    reverse_align_dict[reverse_key] = reverse_alignment
                 
-                # Try to load the file of saved PMI values, otherwise calculate PMI first
+                # Fetch correlators
                 correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
                     lang1,
                     lang2,
                     phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                     log_outdir=self.phone_corr_dir,
                 )
-                correlator.align_log.update(align_dict)
                 twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
                     phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
                 )
                 
-                # TODO reverse direction
-                
-                
+                # Update correlators with alignments
+                correlator.align_log.update(align_dict)
+                twin.align_log.update(reverse_align_dict)
 
     def load_phoneme_pmi(self, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
