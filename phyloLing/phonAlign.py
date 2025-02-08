@@ -7,7 +7,6 @@ from constants import (ALIGNMENT_POSITION_DELIMITER, END_PAD_CH,
 from phonUtils.phonEnv import get_phon_env
 from utils import PhonemeMap
 from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
-from utils.doculect import Doculect
 from utils.sequence import (Ngram, PhonEnvNgram, end_token, flatten_ngram,
                             pad_sequence, start_token)
 from utils.utils import validate_class
@@ -27,8 +26,6 @@ class Alignment:
     def __init__(self,
                  seq1, seq2,
                  align_costs: PhonemeMap,
-                 lang1=None,
-                 lang2=None,
                  gap_ch=GAP_CH_DEFAULT,
                  gop=-5,
                  pad_ch=PAD_CH_DEFAULT,
@@ -43,8 +40,6 @@ class Alignment:
             seq1 (Word | str): First phone sequence.
             seq2 (Word | str): Second phone sequence.
             align_costs (PhonemeMap): Dictionary of alignment costs or scores.
-            lang1 (Doculect, optional): Language of seq1.
-            lang2 (Doculect, optional): Language of seq2.
             gap_ch (str, optional): Gap character.
             gop (int, optional): Default gap opening penalty.
             pad_ch (str, optional): Pad character.
@@ -54,16 +49,12 @@ class Alignment:
         """
 
         # Verify that input arguments are of the correct types
-        self.validate_args(seq1, seq2, lang1, lang2)
+        self.validate_args(seq1, seq2)
 
         # Prepare the input sequences for alignment
-        self.seq1, self.word1 = self.prepare_seq(seq1, lang1)
-        self.seq2, self.word2 = self.prepare_seq(seq2, lang2)
+        self.seq1, self.word1 = self.prepare_seq(seq1)
+        self.seq2, self.word2 = self.prepare_seq(seq2)
         self.key = get_align_key(self.word1, self.word2)
-
-        # Set languages
-        self.lang1 = lang1
-        self.lang2 = lang2
 
         # Designate alignment parameters
         self.gap_ch = gap_ch
@@ -93,19 +84,16 @@ class Alignment:
         else:
             self.phon_env_alignment = None
 
-    def validate_args(self, seq1, seq2, lang1, lang2):
+    def validate_args(self, seq1, seq2):
         """Verifies that all input arguments are of the correct types"""
         validate_class((seq1,), ((Word, str),))
         validate_class((seq2,), ((Word, str),))
-        for lang in (lang1, lang2):
-            if lang:  # skip if None
-                validate_class((lang,), (Doculect,))
 
-    def prepare_seq(self, seq, lang):
+    def prepare_seq(self, seq):
         if isinstance(seq, Word):
             word1 = seq
         elif isinstance(seq, str):
-            word1 = Word(seq, language=lang)
+            word1 = Word(seq)
 
         return word1.segments, word1
 
@@ -600,8 +588,6 @@ class ReversedAlignment(Alignment):
         self.seq2 = alignment.seq1
         self.word1 = alignment.word2
         self.word2 = alignment.word1
-        self.lang1 = alignment.lang2
-        self.lang2 = alignment.lang1
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.pad_ch = alignment.pad_ch
