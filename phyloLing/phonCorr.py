@@ -478,19 +478,19 @@ class PhonCorrelator:
         os.makedirs(self.phon_corr_dir, exist_ok=True)
         self.align_log = create_default_dict(0, 2)
 
-    def get_twin(self, phon_correlators_index) -> Self:
+    def get_twin(self, phone_correlators_index) -> Self:
         """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
         if self.lang1_name == self.lang2_name:
-            return self, phon_correlators_index
-        twin_correlator, phon_correlators_index = get_phone_correlator(
+            return self, phone_correlators_index
+        twin_correlator, phone_correlators_index = get_phone_correlator(
             self.lang2,
             self.lang1,
-            phone_correlators_index=phon_correlators_index,
+            phone_correlators_index=phone_correlators_index,
             wordlist=self.input_wordlist,
             seed=self.seed,
             log_outdir=self.log_outdir,
         )
-        return twin_correlator, phon_correlators_index
+        return twin_correlator, phone_correlators_index
 
     def reset_seed(self):
         random.seed(self.seed)
