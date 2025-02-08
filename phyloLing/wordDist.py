@@ -60,7 +60,7 @@ def get_phoneme_surprisal(lang1, lang2, family_index, ngram_size=1, **kwargs):
         lang2,
         phone_correlators_index=phone_correlators_index,
     )
-    correlator2 = correlator1.get_twin(phone_correlators_index)
+    correlator2, _ = correlator1.get_twin(phone_correlators_index)
     if len(correlator1.surprisal_results[ngram_size]) == 0:
         correlator1.compute_phone_corrs(ngram_size=ngram_size, family_index=family_index, **kwargs)
     if len(correlator2.surprisal_results[ngram_size]) == 0:

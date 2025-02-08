@@ -459,6 +459,7 @@ class PhonCorrelator:
         self.seed = seed
 
         # Prepare wordlists: sort out same/different-meaning words and loanwords
+        self.input_wordlist = tuple(wordlist) if wordlist is not None else wordlist  # used for initializing twin, needs to be None of wordlist input arg was also None
         self.wordlist = self.get_concept_list(wordlist)
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists()
         self.samples = {}
@@ -480,16 +481,16 @@ class PhonCorrelator:
     def get_twin(self, phon_correlators_index) -> Self:
         """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
         if self.lang1_name == self.lang2_name:
-            return self
-        twin_correlator, _ = get_phone_correlator(
-            self.lang1,
+            return self, phon_correlators_index
+        twin_correlator, phon_correlators_index = get_phone_correlator(
             self.lang2,
+            self.lang1,
             phone_correlators_index=phon_correlators_index,
-            wordlist=tuple(self.wordlist),
+            wordlist=self.input_wordlist,
             seed=self.seed,
             log_outdir=self.log_outdir,
         )
-        return twin_correlator
+        return twin_correlator, phon_correlators_index
 
     def reset_seed(self):
         random.seed(self.seed)
@@ -1305,7 +1306,7 @@ class PhonCorrelator:
             ngram_size=ngram_size,
         )
         # Compute surprisal in opposite direction with reversed alignments
-        twin = self.get_twin(family_index[PHONE_CORRELATORS_INDEX_KEY])
+        twin, family_index[PHONE_CORRELATORS_INDEX_KEY] = self.get_twin(family_index[PHONE_CORRELATORS_INDEX_KEY])
         reversed_final_alignments = [alignment.reverse() for alignment in final_alignments]
         twin.compute_phone_surprisal(
             reversed_final_alignments,
