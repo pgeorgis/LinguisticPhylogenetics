@@ -1,8 +1,9 @@
 import logging
 from collections.abc import Iterable
 
-from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
-                       PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
+from constants import (ALIGNMENT_POSITION_DELIMITER, END_PAD_CH,
+                       GAP_CH_DEFAULT, NULL_CH_DEFAULT, PAD_CH_DEFAULT,
+                       SEG_JOIN_CH, START_PAD_CH)
 from phonUtils.phonEnv import get_phon_env
 from utils import PhonemeMap
 from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
@@ -727,12 +728,12 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
             else:
                 a.append(f'{seg1}-{null}')
 
-    return ' / '.join(a)
+    return ALIGNMENT_POSITION_DELIMITER.join(a)
 
 
 def undo_visual_align(visual_alignment, gap_ch=GAP_CH_DEFAULT):
     """Reverts a visual alignment to a list of tuple segment pairs"""
-    seg_pairs = visual_alignment.split(' / ')
+    seg_pairs = visual_alignment.split(ALIGNMENT_POSITION_DELIMITER)
     seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]
     return seg_pairs
 

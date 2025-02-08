@@ -9,9 +9,9 @@ from statistics import mean, stdev
 from typing import Iterable, Self
 
 import numpy as np
-from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
-                       PAD_CH_DEFAULT, PHONE_CORRELATORS_INDEX_KEY,
-                       SEG_JOIN_CH, START_PAD_CH)
+from constants import (ALIGNMENT_DELIMITER, END_PAD_CH, GAP_CH_DEFAULT,
+                       NON_IPA_CH_DEFAULT, PAD_CH_DEFAULT,
+                       PHONE_CORRELATORS_INDEX_KEY, SEG_JOIN_CH, START_PAD_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 from phonAlign import Alignment, visual_align
 from phonUtils.phonEnv import phon_env_ngrams
@@ -1817,7 +1817,7 @@ class PhonCorrelator:
                 alignment = alignment_log[key]
                 align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
                 f.write(f'{align_str}\n')
-                f.write('\n-------------------\n\n')
+                f.write(f'\n{ALIGNMENT_DELIMITER}\n\n')
 
     def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):
         lines = []
