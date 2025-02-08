@@ -109,7 +109,7 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
             phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
         )
         align_log = correlator.align_log
-        key = get_align_key(word1, word2)
+        key = get_align_key(word1.ipa, word2.ipa)
         if key in align_log:
             return align_log[key]
 

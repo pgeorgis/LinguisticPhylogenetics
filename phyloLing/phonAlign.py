@@ -1,9 +1,10 @@
 import logging
 from collections.abc import Iterable
 
-from constants import (ALIGNED_PAIR_DELIMITER, ALIGNMENT_POSITION_DELIMITER,
-                       END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
-                       PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
+from constants import (ALIGNED_PAIR_DELIMITER, ALIGNMENT_KEY_REGEX,
+                       ALIGNMENT_POSITION_DELIMITER, END_PAD_CH,
+                       GAP_CH_DEFAULT, NULL_CH_DEFAULT, PAD_CH_DEFAULT,
+                       SEG_JOIN_CH, START_PAD_CH)
 from phonUtils.phonEnv import get_phon_env
 from utils import PhonemeMap
 from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
@@ -18,7 +19,16 @@ logger = logging.getLogger(__name__)
 
 def get_align_key(word1, word2):
     """Generate an alignment key string representing the IPA strings of the words to be aligned."""
-    key = f'/{word1.ipa}/ - /{word2.ipa}/'
+    def _get_word_key(word):
+        if isinstance(word, str):
+            return word
+        if isinstance(word, Word):
+            return word.ipa
+        else:
+            raise TypeError
+    word1_key = _get_word_key(word1)
+    word2_key = _get_word_key(word2)
+    key = f'/{word1_key}/ - /{word2_key}/'
     return key
 
 
@@ -57,10 +67,12 @@ class Alignment:
         # Verify that input arguments are of the correct types
         self.validate_args(seq1, seq2)
 
+        # Set alignment key
+        self.key = get_align_key(seq1, seq2)
+
         # Prepare the input sequences for alignment
-        self.seq1, self.word1 = self.prepare_seq(seq1)
-        self.seq2, self.word2 = self.prepare_seq(seq2)
-        self.key = get_align_key(self.word1, self.word2)
+        self.seq1 = self.prepare_seq(seq1)
+        self.seq2 = self.prepare_seq(seq2)
 
         # Designate alignment parameters
         self.gap_ch = gap_ch
@@ -105,11 +117,9 @@ class Alignment:
 
     def prepare_seq(self, seq):
         if isinstance(seq, Word):
-            word1 = seq
-        elif isinstance(seq, str):
-            word1 = Word(seq)
-
-        return word1.segments, word1
+            return seq.segments
+        else:
+            raise TypeError("Expected seq to be a Word object")  # TODO need to adjust validate_args
 
     def align(self, allow_complex=True, pad_n=1):
         """Align segments of two words word1 with segments of word2 according to an extended Needleman-Wunsch algorithm.
@@ -600,8 +610,6 @@ class ReversedAlignment(Alignment):
         validate_class((alignment,), (Alignment,))
         self.seq1 = alignment.seq2
         self.seq2 = alignment.seq1
-        self.word1 = alignment.word2
-        self.word2 = alignment.word1
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.pad_ch = alignment.pad_ch
@@ -757,8 +765,11 @@ def flatten_tuple(nested_tuple):
 
 
 def init_precomputed_alignment(alignment,
+                               align_key,
                                seq_map,
                                cost,
+                               lang1,
+                               lang2,
                                gap_ch=GAP_CH_DEFAULT,
                                pad_ch=PAD_CH_DEFAULT,
                                **kwargs):
@@ -771,26 +782,20 @@ def init_precomputed_alignment(alignment,
   
     # Create dummy align cost map
     align_costs = PhonemeMap()
-    
-    # Extract sequences from alignment iterable, excluding boundary tokens and gaps
-    seq1, seq2 = [], []
-    for left, right in alignment:
-        left = left.remove_boundaries(pad_ch=pad_ch)
-        left = left.remove_gaps(gap_ch=gap_ch)
-        seq1.extend(left.ngram)
-        right = right.remove_boundaries(pad_ch=pad_ch)
-        right = right.remove_gaps(gap_ch=gap_ch)
-        seq2.extend(right.ngram)
-    seq1 = ''.join(seq1)
-    seq2 = ''.join(seq2)
+
+    # Extract IPA strings from alignment key
+    word1 = ALIGNMENT_KEY_REGEX.sub(r"\1", align_key)
+    word2 = ALIGNMENT_KEY_REGEX.sub(r"\2", align_key)
+    word1 = Word(word1, transcription_parameters=lang1.transcription_params)
+    word2 = Word(word2, transcription_parameters=lang2.transcription_params)
     
     # Extract segments from aligned Ngrams
     # (needs to occur after sequence extraction in order to enable filtering by boundary/gap token)
     alignment = [(left.undo(), right.undo()) for left, right in alignment]
     
     alignment = Alignment(
-        seq1=seq1,
-        seq2=seq2,
+        seq1=word1,
+        seq2=word2,
         override_alignment=alignment,
         override_seq_map=seq_map,
         override_cost=cost,

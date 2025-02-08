@@ -13,10 +13,11 @@ import bcubed
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from constants import (ALIGNMENT_DELIMITER, ALIGNMENT_PARAM_DEFAULTS,
-                       COGNATE_CLASS_LABEL, CONCEPT_LABEL, DOCULECT_INDEX_KEY,
-                       GLOTTOCODE_LABEL, ID_COLUMN_LABEL, ISO_CODE_LABEL,
-                       LANGUAGE_NAME_LABEL, LOAN_LABEL, ORTHOGRAPHY_LABEL,
+from constants import (ALIGNMENT_DELIMITER, ALIGNMENT_KEY_REGEX,
+                       ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
+                       CONCEPT_LABEL, DOCULECT_INDEX_KEY, GLOTTOCODE_LABEL,
+                       ID_COLUMN_LABEL, ISO_CODE_LABEL, LANGUAGE_NAME_LABEL,
+                       LOAN_LABEL, ORTHOGRAPHY_LABEL,
                        PHONE_CORRELATORS_INDEX_KEY, PHONETIC_FORM_LABEL,
                        SEG_JOIN_CH, SEGMENTS_LABEL,
                        TRANSCRIPTION_PARAM_DEFAULTS)
@@ -326,6 +327,7 @@ class LexicalDataset:
                     cost = float(re.search(r"[\d\.]+", cost).group())
                     alignment = init_precomputed_alignment(
                         alignment.strip(),
+                        align_key,
                         seq_map=(seq_map1, seq_map2),
                         cost=cost,
                         lang1=lang1,
@@ -347,7 +349,7 @@ class LexicalDataset:
                 # Get reverse alignments dict
                 reverse_align_dict = {}
                 for key, alignment in align_dict.items():
-                    reverse_key = re.sub(r"/(.+)/ - /(.+)/", r'/$2/ - /$1/', key)
+                    reverse_key = ALIGNMENT_KEY_REGEX.sub(r"/\2/ - /\1/", key)
                     reverse_alignment = alignment.reverse()
                     reverse_align_dict[reverse_key] = reverse_alignment
                 

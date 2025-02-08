@@ -1,5 +1,7 @@
 # Initialize logger
 import logging
+import re
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)s %(levelname)s: %(message)s')
 
 # SPECIAL CHARACTERS FOR JOINING AND/OR DELIMITING PHON CORRS
@@ -27,6 +29,9 @@ PAD_CH_DEFAULT = '#'
 ALIGNMENT_DELIMITER = "-------------------"
 ALIGNMENT_POSITION_DELIMITER = " / "
 ALIGNED_PAIR_DELIMITER = "-"
+
+# ALIGNMENT KEY REGEX
+ALIGNMENT_KEY_REGEX = re.compile(r"/(.+)/ - /(.+)/")
 
 # DEFAULT PARAMETERS
 TRANSCRIPTION_PARAM_DEFAULTS = {
