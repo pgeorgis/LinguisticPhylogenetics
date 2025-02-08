@@ -108,7 +108,7 @@ def needleman_wunsch_extended(seq1: list,
                     if max_size > 1 and allow_complex is False:
                         continue
                     ngram_unit2 = seq2ngram(seq2[j-l:j])
-                    cost = align_cost.get_value_or_default(ngram_unit1, ngram_unit2, default_gop * max_size)
+                    cost = align_cost.get_value_or_default(ngram_unit1, ngram_unit2, worst_score)
                     score = dp[i-k][j-l] + cost
                     if score_is_better(score, best_score):
                         best_score = score

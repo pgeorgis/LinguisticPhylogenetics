@@ -5,14 +5,13 @@ from statistics import mean
 from asjp import ipa2asjp
 from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
 from nltk import edit_distance
-from phonAlign import Alignment, AlignedPair, Gap, get_alignment_iter
+from phonAlign import Alignment, Gap, get_align_key, get_alignment_iter
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
-
 from utils import PhonemeMap
-from utils.distance import Distance, sim_to_dist, dist_to_sim
+from utils.distance import Distance, dist_to_sim, sim_to_dist
 from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
@@ -77,12 +76,22 @@ def prepare_alignment(word1, word2, **kwargs):
     lang1, lang2 = word1.language, word2.language
     if lang1 is not None and lang2 is not None:
 
+        # Retrieve phone correlator and check whether this word pair has already been aligned
+        # If so, return this saved alignment
+        correlator = lang1.get_phoneme_correlator(lang2)
+        align_log = correlator.align_log
+        key = get_align_key(word1, word2)
+        if key in align_log:
+            return align_log[key]
+
         # Check whether phoneme PMI has been calculated for this language pair
         # If not, then calculate it; if so, then retrieve it
-        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2)
+        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2, **kwargs)
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
         alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
+        # Add new alignment to alignment log
+        correlator.align_log[key] = alignment
 
     # Perform phonetic alignment without PMI support
     else:
@@ -440,15 +449,11 @@ def mutual_surprisal(word1, word2, ngram_size=1, phon_env=True, normalize=False,
     lang1 = word1.language
     lang2 = word2.language
 
-    # Check whether phoneme PMI has been calculated for this language pair
-    # Otherwise calculate from scratch
-    pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
-
     # Calculate phoneme surprisal if not already done
     get_phoneme_surprisal(lang1, lang2, ngram_size=ngram_size, **kwargs)
 
-    # Generate alignments in each direction: alignments need to come from PMI
-    alignment = Alignment(word1, word2, align_costs=pmi_dict, phon_env=phon_env)
+    # Generate alignments in each direction
+    alignment = prepare_alignment(word1, word2, phon_env=phon_env)
     alignment.remove_padding()
     # Add phon env
     if phon_env:
@@ -561,8 +566,8 @@ def pmi_dist(word1, word2, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_
     # Otherwise calculate from scratch
     pmi_dict = get_pmi_dict(lang1, lang2, **kwargs)
 
-    # Align the words with PMI
-    alignment = Alignment(word1, word2, align_costs=pmi_dict)
+    # Fetch already computed alignments
+    alignment = prepare_alignment(word1, word2, **kwargs)
     alignment.remove_padding()
 
     # Calculate PMI scores for each aligned pair

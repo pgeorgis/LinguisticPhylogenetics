@@ -10,6 +10,7 @@ Latvian	Latvian	probability
 ɛ	ɛ	1.0
 æː	æː	1.0
 æ	æ	1.0
+z̥	z̥	1.0
 z	z	1.0
 w	w	1.0
 v	v	1.0
@@ -17,9 +18,11 @@ uː	uː	1.0
 uɔ̯	uɔ̯	1.0
 u	u	1.0
 t	t	1.0
-s_t	s_t	1.0
+s_ɛ	s_ɛ	1.0
 s_s	s_s	1.0
+s_i	s_i	1.0
 s	s	1.0
+r̩	r̩	1.0
 r	r	1.0
 p	p	1.0
 n	n	1.0
@@ -28,6 +31,7 @@ l	l	1.0
 k	k	1.0
 iː	iː	1.0
 iɛ̯	iɛ̯	1.0
+i_s	i_s	1.0
 i	i	1.0
 d̥	d̥	1.0
 d	d	1.0

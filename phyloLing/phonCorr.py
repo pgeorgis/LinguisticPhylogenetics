@@ -22,7 +22,7 @@ from utils.distance import Distance
 from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
-                            pad_sequence, start_token)
+                            filter_out_invalid_ngrams, pad_sequence, start_token)
 from utils.utils import (default_dict,
                          dict_tuplelist,
                          normalize_dict,
@@ -309,15 +309,19 @@ def average_corrs(corr_dict1: PhonemeMap, corr_dict2: PhonemeMap) -> PhonemeMap:
     return avg_corr
 
 
-def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0) -> PhonemeMap:
+def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0, drop_inf=True) -> PhonemeMap:
     corr1_all = set(corr1 for d in dict_list for corr1 in d.get_primary_keys())
     corr2_all = {corr1: set(corr2 for d in dict_list for corr2 in d.get_secondary_keys(corr1)) for corr1 in corr1_all}
     results = PhonemeMap(0)
     for corr1 in corr1_all:
         for corr2 in corr2_all[corr1]:
-            vals: [float] = []
+            vals = []
             for d in dict_list:
-                vals.append(d.get_value_or_default(corr1, corr2, default))
+                value = d.get_value_or_default(corr1, corr2, default)
+                if drop_inf and value not in {-inf, inf}:
+                    vals.append(value)
+                elif not drop_inf:
+                    vals.append(value)
             if len(vals) > 0:
                 results.set_value(corr1, corr2, mean(vals))
     return results
@@ -466,7 +470,7 @@ class PhonCorrelator:
 
         # Logging
         self.set_log_dirs()
-        self.align_log = create_default_dict(0, 3)
+        self.align_log = create_default_dict(0, 2)
         self.logger = logger
 
     def reload_language_pair_data(self):
@@ -724,10 +728,12 @@ class PhonCorrelator:
                 segs1 = zip(segs2, env2)
             for ngram_size_i in ngram_sizes:
                 ngrams1 = word1.get_ngrams(size=ngram_size_i, pad_ch=self.pad_ch)
+                ngrams1 = filter_out_invalid_ngrams(ngrams1, language=self.lang1)
                 if ngram_size_i > 1:
                     ngrams1 = [SEG_JOIN_CH.join(ngram) for ngram in ngrams1]
                 for ngram_size_j in ngram_sizes:
                     ngrams2 = word2.get_ngrams(size=ngram_size_j, pad_ch=self.pad_ch)
+                    ngrams2 = filter_out_invalid_ngrams(ngrams2, language=self.lang2)
                     if ngram_size_j > 1:
                         ngrams2 = [SEG_JOIN_CH.join(ngram) for ngram in ngrams2]
                     corpus.append((ngrams1, ngrams2))
@@ -1287,7 +1293,7 @@ class PhonCorrelator:
             maximize_score=True
         )
         # Log final alignments
-        self.log_alignments(final_alignments, self.align_log['PMI'])
+        self.log_alignments(final_alignments, self.align_log)
 
         # Compute phone surprisal
         self.compute_phone_surprisal(
@@ -1312,7 +1318,7 @@ class PhonCorrelator:
 
         # Write alignment log
         align_log_file = os.path.join(self.phon_corr_dir, 'alignments.log')
-        self.write_alignments_log(self.align_log['PMI'], align_log_file)
+        self.write_alignments_log(self.align_log, align_log_file)
 
         # Save PMI results
         self.lang1.phoneme_pmi[self.lang2_name] = results
@@ -1807,20 +1813,16 @@ class PhonCorrelator:
 
     def log_alignments(self, alignments, align_log):
         for alignment in alignments:
-            key = f'/{alignment.word1.ipa}/ - /{alignment.word2.ipa}/'
-            align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
-            align_log[key][align_str] += 1
+            align_log[alignment.key] = alignment
 
     def write_alignments_log(self, alignment_log, log_file):
         sorted_alignment_keys = sorted(alignment_log.keys())
         with open(log_file, 'w') as f:
             for key in sorted_alignment_keys:
                 f.write(f'{key}\n')
-                sorted_alignments = dict_tuplelist(alignment_log[key])
-                sorted_alignments.sort(key=lambda x: (x[-1], x[0]), reverse=True)
-                for alignment, count in sorted_alignments:
-                    freq = f'{count}/{sum(alignment_log[key].values())}'
-                    f.write(f'[{freq}] {alignment}\n')
+                alignment = alignment_log[key]
+                align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
+                f.write(f'{align_str}\n')
                 f.write('\n-------------------\n\n')
 
     def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):

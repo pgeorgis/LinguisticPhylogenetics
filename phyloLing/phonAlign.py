@@ -15,6 +15,12 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(mes
 logger = logging.getLogger(__name__)
 
 
+def get_align_key(word1, word2):
+    """Generate an alignment key string representing the IPA strings of the words to be aligned."""
+    key = f'/{word1.ipa}/ - /{word2.ipa}/'
+    return key
+
+
 class Alignment:
     def __init__(self,
                  seq1, seq2,
@@ -51,6 +57,7 @@ class Alignment:
         # Prepare the input sequences for alignment
         self.seq1, self.word1 = self.prepare_seq(seq1, lang1)
         self.seq2, self.word2 = self.prepare_seq(seq2, lang2)
+        self.key = get_align_key(self.word1, self.word2)
 
         # Set languages
         self.lang1 = lang1
@@ -238,8 +245,8 @@ class Alignment:
                     initial_complex = [[], []]
                     if next_ngram.size == 2 or first_ngram.size == 2: # aligned unigram
                         initial_complex[start_boundary_gap.gap_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.gap_i]).ngram if x not in (self.gap_ch, self.start_boundary_token)])
-                        initial_complex[start_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.seg_i]).ngram if x not in (self.gap_ch, self.start_boundary_token)])
                         initial_complex[start_boundary_gap.seg_i].extend([x for x in Ngram(start_boundary_gap.pair).ngram if x != self.gap_ch])
+                        initial_complex[start_boundary_gap.seg_i].extend([x for x in Ngram(complex_alignment[1][start_boundary_gap.seg_i]).ngram if x not in (self.gap_ch, self.start_boundary_token)])
                         initial_complex[start_boundary_gap.gap_i].insert(0, self.start_boundary_token)
                         complex_alignment = [(Ngram(initial_complex[0]).undo(), Ngram(initial_complex[-1]).undo())] + complex_alignment[2:]
                     else:
