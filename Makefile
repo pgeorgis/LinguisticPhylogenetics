@@ -52,7 +52,7 @@ endif
 ifneq ($(filter $(DATASET),$(TEST_DATASETS)),)
 	@source venv/bin/activate && \
 		export PYTHONPATH=$(shell pwd):$$PYTHONPATH && \
-		python3 -m unittest phyloLing.test.test_$(DATASET)$(if $(TESTSET),.$(TESTSET),)
+		python3 -m xmlrunner phyloLing.test.test_$(DATASET)$(if $(TESTSET),.$(TESTSET),) -o tests
 else
 	@echo "Error: Invalid dataset. Please choose from $(TEST_DATASETS)" &&
 		exit 1
@@ -88,7 +88,7 @@ ifndef DATASET
 	@echo "Error: Please provide a dataset to test using 'make test-tree-distance DATASET=<dataset>'"
 	exit 1
 endif
-	$(MAKE) test DATASET=$(DATASET) TESTSET=TestDeterminism
+	$(MAKE) test DATASET=$(DATASET) TESTSET=TestTreeDistance
 
 test-tree-distance-romance:
 	$(MAKE) test-tree-distance DATASET=romance
