@@ -150,6 +150,14 @@ class ExecutionResultInformation:
     time_elapsed: datetime.timedelta | None = None
 
 
+def map_to_execution_reference(result: ExecutionResult) -> ExecutionReference:
+    return ExecutionReference(
+        reference_trees=result.reference_trees,
+        languages=result.languages,
+        root_language=result.root_language,
+    )
+
+
 class TestConfiguration(Enum):
     MINIMAL = 'minimal',
     FULL = 'full',
@@ -214,7 +222,14 @@ class TestDataset:
         with open(output_config_path, 'r') as file:
             config = yaml.safe_load(file)
 
-        languages: list[str] = config.get('family', {}).get('include', [])
+        languages: list[str] = []
+        with (open(dist_matrix_path, 'r') as file):
+            reader = csv.DictReader(file, delimiter='\t')
+            for row in reader:
+                language: str = row['Labels'].strip()
+                if language != 'Labels':
+                    languages.append(language)
+
         tree_config: dict = config.get('tree', {})
         tree_root_language: str | None = tree_config.get('root')
         reference_trees: list[str] = tree_config.get('reference', [])
@@ -352,15 +367,6 @@ class TestDataset:
             time_elapsed,
         )
 
-
-    @staticmethod
-    def get_execution_reference(result: ExecutionResult) -> ExecutionReference:
-        return ExecutionReference(
-            reference_trees=result.reference_trees,
-            languages=result.languages,
-            root_language=result.root_language,
-        )
-
     def get_best_tree_distances(self,
             execution_reference: ExecutionReference) -> dict[str, TreeDistance]:
         return self.get_tree_distances(self.best_tree_path, execution_reference)
@@ -416,11 +422,17 @@ class TestDataset:
             )
             last_values = current_matrix
 
-    @staticmethod
-    def assert_tree_distances(mapping: Callable[[TreeDistance], float],
-                              result: ExecutionResult,
-                              best_tree_distances: dict[str, TreeDistance],
+    def assert_tree_distances(self,
+                              mapping: Callable[[TreeDistance], float],
+                              configuration: TestConfiguration,
                               test: unittest.TestCase) -> None:
+        result_information: ExecutionResultInformation = self.get_result(
+            configuration, False, test
+        )
+        result = result_information.result
+        best_tree_distances = self.get_best_tree_distances(
+            map_to_execution_reference(result)
+        )
         for reference_tree in result.reference_trees:
             best_tree_distance: float = mapping(best_tree_distances[reference_tree])
             result_tree_distance: float = mapping(result.tree_distance)
@@ -437,31 +449,11 @@ class TestDataset:
     def assert_gqd_distance(self,
             configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
-        result_information: ExecutionResultInformation = self.get_result(configuration, True, test)
-        result = result_information.result
-        best_tree_distances = self.get_best_tree_distances(
-            self.get_execution_reference(result)
-        )
         logger.info("GQD distances:")
-        self.assert_tree_distances(
-            lambda distance: distance.gqd,
-            result,
-            best_tree_distances,
-            test,
-        )
+        self.assert_tree_distances(lambda distance: distance.gqd, configuration, test)
 
     def assert_wrt_distance(self,
                             configuration: TestConfiguration,
                             test: unittest.TestCase) -> None:
-        result_information: ExecutionResultInformation = self.get_result(configuration, True, test)
-        result = result_information.result
-        best_tree_distances = self.get_best_tree_distances(
-            self.get_execution_reference(result)
-        )
         logger.info("WRT distances:")
-        self.assert_tree_distances(
-            lambda distance: distance.wrt,
-            result,
-            best_tree_distances,
-            test,
-        )
+        self.assert_tree_distances(lambda distance: distance.wrt, configuration, test)

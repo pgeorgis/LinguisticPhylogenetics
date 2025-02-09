@@ -451,11 +451,13 @@ def plot_tree(newick_path, png_path, classifications_file=None):
     if result.returncode != 0:
         raise RuntimeError(f"R script failed with error:\n{result.stdout}\n{result.stderr}")
 
-def get_gqd_score_to_reference(tree,
+def get_gqd_score_to_reference(tree: str,
                                reference_tree_path: str,
                                family_language_count: int,
                                root_element: str | None):
     ref_tree = load_newick_tree(reference_tree_path)
+    if family_language_count == 0:
+        raise ValueError("Family language count must be greater than 0")
     gqd_score = gqd(
         tree,
         ref_tree,

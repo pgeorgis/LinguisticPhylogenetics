@@ -15,7 +15,7 @@ init:
 	./setup.sh
 
 init-silent:
-	@./setup.sh > /dev/null
+	$(MAKE) init > /dev/null 2>&1
 
 classify: init-silent
 ifdef CONFIG
