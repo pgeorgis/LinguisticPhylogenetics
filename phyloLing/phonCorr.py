@@ -6,7 +6,7 @@ from functools import lru_cache
 from itertools import product
 from math import inf, log
 from statistics import mean, stdev
-from typing import Iterable, Self
+from typing import Self
 
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT,
@@ -982,11 +982,6 @@ class PhonCorrelator:
             if cumulative:
                 all_cognate_alignments = []
 
-            def score_pmi(alignment: Alignment, pmi_dict: PhonemeMap):  # TODO use more sophisticated pmi_dist from wordDist.py or word adaptation surprisal or alignment cost measure within Alignment object
-                alignment_tuples = alignment.alignment
-                PMI_score = mean([pmi_dict.get_value_or_default(pair[0], pair[1], 0) for pair in alignment_tuples])
-                return PMI_score
-
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
                 iteration += 1
                 qual_prev_sample = qualifying_words[iteration - 1]
@@ -1065,30 +1060,29 @@ class PhonCorrelator:
                 )
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
-                noncognate_PMI = []
+                noncognate_alignment_scores = []
                 for alignment in noncognate_alignments:
-                    noncognate_PMI.append(score_pmi(alignment, pmi_dict=PMI_iterations[iteration]))
-                nc_mean = mean(noncognate_PMI)
-                nc_stdev = stdev(noncognate_PMI)
+                    length_normalized_score = alignment.cost / alignment.length
+                    noncognate_alignment_scores.append(length_normalized_score)
+                nc_mean = mean(noncognate_alignment_scores)
+                nc_stdev = stdev(noncognate_alignment_scores)
 
-                # Score same-meaning alignments for overall PMI and calculate p-value
-                # against different-meaning alignments
+                # Score same-meaning alignments against different-meaning alignments
                 qualifying, disqualified = [], []
                 qualifying_alignments = []
                 qualified_PMI = []
                 for q, pair in enumerate(synonym_sample):
                     alignment = aligned_synonym_sample[q]
-                    PMI_score = score_pmi(alignment, pmi_dict=PMI_iterations[iteration])
+                    length_normalized_score = alignment.cost / alignment.length
 
-                    # Proportion of non-cognate word pairs which would have a PMI score at least as low as this word pair
-                    pnorm = 1 - norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
+                    # Proportion of non-cognate word pairs which would have an alignment score at least as low as this word pair
+                    pnorm = 1 - norm.cdf(length_normalized_score, loc=nc_mean, scale=nc_stdev)
                     if pnorm < p_threshold:
                         qualifying.append(pair)
                         qualifying_alignments.append(alignment)
-                        qualified_PMI.append(PMI_score)
+                        qualified_PMI.append(length_normalized_score)
                     else:
                         disqualified.append(pair)
-                        # disqualified_PMI.append(PMI_score)
                 qualifying, qualifying_alignments = prune_extraneous_synonyms(
                     wordlist=qualifying,
                     alignments=qualifying_alignments,
