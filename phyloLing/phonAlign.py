@@ -78,8 +78,8 @@ class Alignment:
         self.gap_ch = gap_ch
         self.gop = gop
         self.pad_ch = pad_ch
-        self.start_boundary_token = f'{START_PAD_CH}{self.pad_ch}'
-        self.end_boundary_token = f'{self.pad_ch}{END_PAD_CH}'
+        self.start_boundary_token = self.get_start_boundary_token()
+        self.end_boundary_token = self.get_end_boundary_token()
         self.align_costs: PhonemeMap = align_costs
         self.kwargs = kwargs
 
@@ -337,6 +337,12 @@ class Alignment:
             del self.alignment[index]
         self.alignment.insert(new_index, merged)
         self.length = len(self.alignment)
+
+    def get_start_boundary_token(self):
+        return f'{START_PAD_CH}{self.pad_ch}'
+    
+    def get_end_boundary_token(self):
+        return f'{self.pad_ch}{END_PAD_CH}'
 
     def start_boundary(self, size=2):
         # ('<#', '<#')
@@ -613,6 +619,8 @@ class ReversedAlignment(Alignment):
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.pad_ch = alignment.pad_ch
+        self.start_boundary_token = self.get_start_boundary_token()
+        self.end_boundary_token = self.get_end_boundary_token()
         self.align_costs: PhonemeMap = alignment.align_costs
         self.kwargs = alignment.kwargs
         self.alignment = reverse_alignment(alignment.alignment)
