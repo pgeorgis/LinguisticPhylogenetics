@@ -23,7 +23,7 @@ from utils.alignment import (calculate_alignment_costs,
 from utils.distance import Distance
 from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
-from utils.logging import write_alignments_log
+from utils.logging import write_alignments_log, write_phon_corr_iteration_log
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
                             filter_out_invalid_ngrams, pad_sequence,
                             start_token)
@@ -1237,7 +1237,7 @@ class PhonCorrelator:
 
         # Write the iteration log
         log_file = os.path.join(self.phon_corr_dir, 'iterations.log')
-        self.write_iter_log(iter_logs, log_file)
+        write_phon_corr_iteration_log(iter_logs, log_file, n_same_meaning_pairs=len(self.same_meaning))
 
         # Write alignment log
         align_log_file = os.path.join(self.phon_corr_dir, 'alignments.log')
@@ -1706,24 +1706,6 @@ class PhonCorrelator:
         iter_log = '\n'.join(iter_log)
 
         return iter_log
-
-    def write_iter_log(self, iter_logs, log_file):
-        log_dir = os.path.abspath(os.path.dirname(log_file))
-        os.makedirs(log_dir, exist_ok=True)
-        with open(log_file, 'w') as f:
-            f.write(f'Same meaning pairs: {len(self.same_meaning)}\n')
-            for n in iter_logs:
-                iter_log = '\n\n'.join(iter_logs[n][:-1])
-                f.write(f'****SAMPLE {n+1}****\n')
-                f.write(iter_log)
-                final_qualifying, final_disqualified = iter_logs[n][-1]
-                f.write('\n\nFinal qualifying:\n')
-                for word1, word2 in sort_wordlist(final_qualifying):
-                    f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
-                f.write('\nFinal disqualified:\n')
-                for word1, word2 in sort_wordlist(final_disqualified):
-                    f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
-                f.write('\n\n-------------------\n\n')
 
     def log_alignments(self, alignments, align_log):
         for alignment in alignments:
