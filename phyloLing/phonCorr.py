@@ -992,38 +992,42 @@ class PhonCorrelator:
                 qual_prev_sample = qualifying_words[iteration - 1]
                 reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
 
-                # Fit IBM translation/alignment model on ngrams of varying sizes
-                initial_corr_counts1, _ = self.fit_radial_ibm_model(
-                    qual_prev_sample,
-                    min_corr=min_corr,
-                    max_ngram_size=max_ngram_size,
-                    seed=seed_i,
-                )
-                initial_corr_counts2, _ = self.fit_radial_ibm_model(
-                    reversed_qual_prev_sample,
-                    min_corr=min_corr,
-                    max_ngram_size=max_ngram_size,
-                    seed=seed_i,
-                )
-
-                # Calculate initial PMI for all ngram pairs
-                pmi_dict_l1l2, pmi_dict_l2l1 = [
-                    self.phoneme_pmi(
-                        conditional_counts=initial_corr_counts1,
-                        l1=self.lang1,
-                        l2=self.lang2,
-                        wordlist=qual_prev_sample,
-                    ),
-                    self.phoneme_pmi(
-                        conditional_counts=initial_corr_counts2,
-                        l1=self.lang2,
-                        l2=self.lang1,
-                        wordlist=reversed_qual_prev_sample,
+                if iteration == 1:
+                    # Fit IBM translation/alignment model on ngrams of varying sizes
+                    initial_corr_counts1, _ = self.fit_radial_ibm_model(
+                        qual_prev_sample,
+                        min_corr=min_corr,
+                        max_ngram_size=max_ngram_size,
+                        seed=seed_i,
                     )
-                ]
+                    initial_corr_counts2, _ = self.fit_radial_ibm_model(
+                        reversed_qual_prev_sample,
+                        min_corr=min_corr,
+                        max_ngram_size=max_ngram_size,
+                        seed=seed_i,
+                    )
 
-                # Average together the PMI values from each direction
-                pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
+                    # Calculate initial PMI for all ngram pairs
+                    pmi_dict_l1l2, pmi_dict_l2l1 = [
+                        self.phoneme_pmi(
+                            conditional_counts=initial_corr_counts1,
+                            l1=self.lang1,
+                            l2=self.lang2,
+                            wordlist=qual_prev_sample,
+                        ),
+                        self.phoneme_pmi(
+                            conditional_counts=initial_corr_counts2,
+                            l1=self.lang2,
+                            l2=self.lang1,
+                            wordlist=reversed_qual_prev_sample,
+                        )
+                    ]
+
+                    # Average together the PMI values from each direction
+                    pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
+                
+                else:
+                    pmi_step_i = PMI_iterations[iteration - 1]
 
                 # Align the qualifying words of the previous step using initial PMI
                 cognate_alignments = self.align_wordlist(
@@ -1097,6 +1101,7 @@ class PhonCorrelator:
                     family_index=family_index,
                 )
                 qualifying_words[iteration] = sort_wordlist(qualifying)
+                qualifying_alignments[iteration] = qualifying_alignments
                 if len(qualifying_words[iteration]) == 0:
                     logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
                 disqualified_words[iteration] = disqualified + diff_sample
