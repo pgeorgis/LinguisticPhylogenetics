@@ -2,6 +2,7 @@
 .DEFAULT_GOAL := help
 SHELL := /bin/bash
 TEST_DATASETS = romance germanic balto_slavic sinitic
+COVERAGE_REPORT_CONFIG = datasets/BaltoSlavic/config/test_config_minimal.yml
 
 # Usage help
 help:
@@ -101,3 +102,10 @@ test-tree-distance-balto-slavic:
 
 test-tree-distance-sinitic:
 	$(MAKE) test-tree-distance DATASET=sinitic
+
+coverage: init-silent
+	@source venv/bin/activate && \
+		export PYTHONPATH=$(shell pwd):$$PYTHONPATH && \
+		coverage erase && \
+		coverage run phyloLing/classifyLangs.py $(COVERAGE_REPORT_CONFIG) && \
+		coverage xml
