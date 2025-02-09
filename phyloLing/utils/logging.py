@@ -63,7 +63,7 @@ def write_phon_corr_iteration_log(iter_logs, log_file, n_same_meaning_pairs):
             f.write('\n\n-------------------\n\n')
 
 
-def log_phoneme_pmi(pmi_results, outfile, threshold=0.0001, sep='\t'):
+def write_phoneme_pmi_report(pmi_results, outfile, threshold=0.0001, sep='\t'):
     make_outdir(outfile)
     # Save all segment pairs with non-zero PMI values to file
     # Skip extremely small decimals that are close to zero
@@ -83,7 +83,7 @@ def log_phoneme_pmi(pmi_results, outfile, threshold=0.0001, sep='\t'):
         f.write(f'{header}\n{lines}')
 
 
-def log_phoneme_surprisal(surprisal_results, outfile, phon_env=True, ngram_size=1, sep='\t'):
+def write_phoneme_surprisal_report(surprisal_results, outfile, phon_env=True, ngram_size=1, sep='\t'):
     make_outdir(outfile)
     lines = []
     surprisal_results, oov_value = prune_oov_surprisal(surprisal_results)

@@ -23,9 +23,9 @@ from utils.distance import Distance
 from utils.information import (get_oov_val, pointwise_mutual_info,
                                prune_oov_surprisal, surprisal,
                                surprisal_to_prob)
-from utils.logging import (log_phoneme_pmi, log_phoneme_surprisal,
-                           write_alignments_log, write_phon_corr_iteration_log,
-                           write_phon_corr_report, write_sample_log)
+from utils.logging import (write_alignments_log, write_phon_corr_iteration_log,
+                           write_phon_corr_report, write_phoneme_pmi_report,
+                           write_phoneme_surprisal_report, write_sample_log)
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
                             filter_out_invalid_ngrams, pad_sequence,
                             start_token)
@@ -1548,7 +1548,7 @@ class PhonCorrelator:
         return noncognate_scores
 
     def log_phoneme_pmi(self, threshold=0.0001):
-        log_phoneme_pmi(
+        write_phoneme_pmi_report(
             self.pmi_results,
             outfile=os.path.join(self.phon_corr_dir, 'phonPMI.tsv'),
             threshold=threshold,
@@ -1561,7 +1561,7 @@ class PhonCorrelator:
         else:
             outfile = os.path.join(self.phon_corr_dir, 'phonSurprisal.tsv')
             surprisal_results = self.surprisal_results[ngram_size]
-        log_phoneme_surprisal(
+        write_phoneme_surprisal_report(
             surprisal_results=surprisal_results,
             outfile=outfile,
             phon_env=phon_env,
