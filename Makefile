@@ -17,13 +17,12 @@ init:
 init-silent:
 	@./setup.sh > /dev/null
 
-classify:
+classify: init-silent
 ifdef CONFIG
 	@source venv/bin/activate && \
 		OUTPUT_LOG_DIR=$$(python3 -c "import os; from phyloLing.utils.utils import load_config; config = load_config('$(CONFIG)'); print(config.get('family', {}).get('outdir', os.path.dirname(config['family']['file'])))") && \
 		OUTPUT_LOG_PATH=$$OUTPUT_LOG_DIR/logs/classify.log && \
 		mkdir -p $$OUTPUT_LOG_DIR/logs && \
-		export PYTHONPATH=$$PYTHONPATH:$(shell pwd) && \
 		python3 phyloLing/classifyLangs.py $(CONFIG) $(if $(LOGLEVEL),--loglevel $(LOGLEVEL)) 2>&1|tee $$OUTPUT_LOG_PATH
 else
 	@echo "Error: Please provide a path to config.yml using 'make classify CONFIG=<path> [LOGLEVEL=<desired log level>]'"
@@ -41,10 +40,7 @@ classify-balto-slavic:
 classify-sinitic:
 	$(MAKE) classify CONFIG=datasets/Sinitic/config/sinitic_config.yml
 
-classify-all: init-silent
-	$(MAKE) -j classify-balto-slavic classify-germanic classify-romance classify-sinitic
-
-test:
+test: init-silent
 ifndef DATASET
 	@echo "Error: Please provide a dataset to test using 'make test DATASET=<dataset>'"
 	exit 1
@@ -77,12 +73,6 @@ test-determinism-balto-slavic:
 
 test-determinism-sinitic:
 	$(MAKE) test-determinism DATASET=sinitic
-
-test-determinism-all: init-silent
-	$(MAKE) -j test-determinism-balto-slavic \
-		test-determinism-germanic \
-		test-determinism-romance \
-		test-determinism-sinitic
 
 test-tree-distance:
 ifndef DATASET
