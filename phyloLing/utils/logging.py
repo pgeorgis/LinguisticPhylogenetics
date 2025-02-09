@@ -45,6 +45,47 @@ def write_alignments_log(alignment_log, log_file):
                 f.write(f'\n{ALIGNMENT_DELIMITER}\n\n')
 
 
+def log_phon_corr_iteration(iteration,
+                            qualifying_words,
+                            disqualified_words,
+                            method=None,
+                            same_meaning_alignments=None
+                            ):
+    iter_log = []
+    if method == 'surprisal':
+        assert same_meaning_alignments is not None
+
+        def get_word_pairs(indices, lst):
+            aligns = [lst[i] for i in indices]
+            pairs = [(align.word1, align.word2) for align in aligns]
+            return pairs
+
+        qualifying = get_word_pairs(qualifying_words[iteration], same_meaning_alignments)
+        prev_qualifying = get_word_pairs(qualifying_words[iteration - 1], same_meaning_alignments)
+        disqualified = get_word_pairs(disqualified_words[iteration], same_meaning_alignments)
+        prev_disqualified = get_word_pairs(disqualified_words[iteration - 1], same_meaning_alignments)
+    else:
+        qualifying = qualifying_words[iteration]
+        prev_qualifying = qualifying_words[iteration - 1]
+        disqualified = disqualified_words[iteration]
+        prev_disqualified = disqualified_words[iteration - 1]
+    iter_log.append(f'Iteration {iteration}')
+    iter_log.append(f'\tQualified: {len(qualifying)}')
+    iter_log.append(f'\tDisqualified: {len(disqualified)}')
+    added = set(qualifying) - set(prev_qualifying)
+    iter_log.append(f'\tAdded: {len(added)}')
+    for word1, word2 in sort_wordlist(added):
+        iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
+    removed = set(disqualified) - set(prev_disqualified)
+    iter_log.append(f'\tRemoved: {len(removed)}')
+    for word1, word2 in sort_wordlist(removed):
+        iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
+
+    iter_log = '\n'.join(iter_log)
+
+    return iter_log
+
+
 def write_phon_corr_iteration_log(iter_logs, log_file, n_same_meaning_pairs):
     make_outdir(log_file)
     with open(log_file, 'w') as f:

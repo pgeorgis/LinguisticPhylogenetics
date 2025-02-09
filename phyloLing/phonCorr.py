@@ -23,7 +23,8 @@ from utils.distance import Distance
 from utils.information import (get_oov_val, pointwise_mutual_info,
                                prune_oov_surprisal, surprisal,
                                surprisal_to_prob)
-from utils.logging import (write_alignments_log, write_phon_corr_iteration_log,
+from utils.logging import (log_phon_corr_iteration, write_alignments_log,
+                           write_phon_corr_iteration_log,
                            write_phon_corr_report, write_phoneme_pmi_report,
                            write_phoneme_surprisal_report, write_sample_log)
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
@@ -1148,7 +1149,11 @@ class PhonCorrelator:
                 disqualified_words[iteration] = disqualified + diff_sample
 
                 # Log results of this iteration
-                iter_log = self.log_iteration(iteration, qualifying_words, disqualified_words)
+                iter_log = log_phon_corr_iteration(
+                    iteration=iteration,
+                    qualifying_words=qualifying_words,
+                    disqualified_words=disqualified_words,
+                )
                 iter_logs[sample_n].append(iter_log)
 
             # Log final set of qualifying/disqualified word pairs
@@ -1580,41 +1585,6 @@ class PhonCorrelator:
         sample_log = f'SAMPLE: {sample_n}\nSEED: {seed}\n'
         sample_log += '\n'.join(sample)
         return sample_log
-
-    def log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
-        iter_log = []
-        if method == 'surprisal':
-            assert same_meaning_alignments is not None
-
-            def get_word_pairs(indices, lst):
-                aligns = [lst[i] for i in indices]
-                pairs = [(align.word1, align.word2) for align in aligns]
-                return pairs
-
-            qualifying = get_word_pairs(qualifying_words[iteration], same_meaning_alignments)
-            prev_qualifying = get_word_pairs(qualifying_words[iteration - 1], same_meaning_alignments)
-            disqualified = get_word_pairs(disqualified_words[iteration], same_meaning_alignments)
-            prev_disqualified = get_word_pairs(disqualified_words[iteration - 1], same_meaning_alignments)
-        else:
-            qualifying = qualifying_words[iteration]
-            prev_qualifying = qualifying_words[iteration - 1]
-            disqualified = disqualified_words[iteration]
-            prev_disqualified = disqualified_words[iteration - 1]
-        iter_log.append(f'Iteration {iteration}')
-        iter_log.append(f'\tQualified: {len(qualifying)}')
-        iter_log.append(f'\tDisqualified: {len(disqualified)}')
-        added = set(qualifying) - set(prev_qualifying)
-        iter_log.append(f'\tAdded: {len(added)}')
-        for word1, word2 in sort_wordlist(added):
-            iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
-        removed = set(disqualified) - set(prev_disqualified)
-        iter_log.append(f'\tRemoved: {len(removed)}')
-        for word1, word2 in sort_wordlist(removed):
-            iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
-
-        iter_log = '\n'.join(iter_log)
-
-        return iter_log
 
     def log_alignments(self, alignments, align_log):
         for alignment in alignments:
