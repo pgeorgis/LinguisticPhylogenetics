@@ -25,13 +25,13 @@ from utils.information import (get_oov_val, pointwise_mutual_info,
                                surprisal_to_prob)
 from utils.logging import (log_phoneme_pmi, log_phoneme_surprisal,
                            write_alignments_log, write_phon_corr_iteration_log,
-                           write_sample_log)
+                           write_phon_corr_report, write_sample_log)
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
                             filter_out_invalid_ngrams, pad_sequence,
                             start_token)
 from utils.utils import (balanced_resample, create_default_dict,
                          create_default_dict_of_dicts, default_dict,
-                         dict_tuplelist, normalize_dict, segment_ranges)
+                         normalize_dict, segment_ranges)
 from utils.wordlist import Wordlist, sort_wordlist
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s phonCorr %(levelname)s: %(message)s')
@@ -1460,7 +1460,7 @@ class PhonCorrelator:
 
         # Write phone correlation report based on surprisal results
         phon_corr_report = os.path.join(self.phon_corr_dir, 'phon_corr.tsv')
-        self.write_phon_corr_report(surprisal_results, phon_corr_report, type='surprisal')
+        self.write_phon_corr_report(surprisal_results, phon_corr_report, corr_type='surprisal')
 
         # Write surprisal logs
         self.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size)
@@ -1620,32 +1620,15 @@ class PhonCorrelator:
         for alignment in alignments:
             align_log[alignment.key] = alignment
 
-    def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):
-        lines = []
-        corr, _ = prune_oov_surprisal(corr)
-        l1_phons = sorted([p for p in corr if self.gap_ch not in p], key=lambda x: Ngram(x).string)
-        for p1 in l1_phons:
-            p2_candidates = corr[p1]
-            if len(p2_candidates) > 0:
-                p2_candidates = dict_tuplelist(p2_candidates, reverse=True)
-                for p2, score in p2_candidates:
-                    if type == 'surprisal':
-                        prob = surprisal_to_prob(score)  # turn surprisal value into probability
-                        if prob >= min_prob:
-                            p1 = Ngram(p1).string
-                            p2 = Ngram(p2).string
-                            line = [p1, p2, str(round(prob, 3))]
-                            lines.append(line)
-                    else:
-                        raise NotImplementedError  # not implemented for PMI
-        # Sort by corr value, then by phone string if values are equal
-        lines.sort(key=lambda x: (float(x[-1]), x[0], x[1]), reverse=True)
-        lines = ['\t'.join(line) for line in lines]
-        header = '\t'.join([self.lang1_name, self.lang2_name, 'probability'])
-        lines = '\n'.join(lines)
-        content = '\n'.join([header, lines])
-        with open(outfile, 'w') as f:
-            f.write(f'{content}')
+    def write_phon_corr_report(self, corr, outfile, corr_type):
+        write_phon_corr_report(
+            corr=corr,
+            corr_type=corr_type,
+            outfile=outfile,
+            lang1_name=self.lang1_name,
+            lang2_name=self.lang1_name,
+            gap_ch=self.gap_ch,
+        )
 
 
 @lru_cache(maxsize=None)
