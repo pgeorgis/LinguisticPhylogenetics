@@ -1,20 +1,23 @@
+import logging
 import random
 from functools import lru_cache
 from statistics import StatisticsError, mean, stdev
-import numpy as np
 
+import numpy as np
+from phonCorr import get_phone_correlator
 from scipy.stats import norm
-from utils.distance import dist_to_sim, Distance
+from utils.distance import Distance, dist_to_sim
 from utils.utils import balanced_resample, create_default_dict_of_dicts
 
+logger = logging.getLogger(__name__)
 
 # HELPER FUNCTIONS
 def get_shared_concepts(lang1, lang2, clustered_cognates):
     """Returns a sorted list of concepts from a clustered cognate class dictionary that both doculects share.
 
     Args:
-        lang1 (phyloLing.Language): First Language object
-        lang2 (phyloLing.Language): Second Language object
+        lang1 (Doculect): First Doculect object
+        lang2 (Doculect): Second Doculect object
         clustered_cognates (dict): Nested dictionary of Word objects organized by concepts and cognate classes
 
     Raises:
@@ -34,39 +37,52 @@ def filter_cognates_by_lang(lang, cluster):
     """Filters an iterable of Word objects and returns only those that belong to a particular language.
 
     Args:
-        lang (phyloLing.Language): Language object of interest
+        lang (Doculect): Doculect object of interest
         cluster (iterable): Iterable of Word objects
 
     Returns:
-        list: Word objects belonging to the specified Language
+        list: Word objects belonging to the specified Doculect
     """
     # Filter by language and sort
-    filtered_cognates = list(filter(lambda word: word.language == lang, cluster))
+    filtered_cognates = list(filter(lambda word: word.doculect_key == lang.name, cluster))
     filtered_cognates.sort(key=lambda word: (
         word.ipa,
         word.orthography,
         word.concept,
-        word.getInfoContent(total=True)
+        word.getInfoContent(total=True, doculect=lang)
         )
     )
     
     return filtered_cognates
 
 
-def get_noncognate_scores(lang1, lang2, eval_func, seed=1, sample_size=None, as_similarity=False):
+def get_noncognate_scores(lang1,
+                          lang2,
+                          eval_func,
+                          phone_correlators_index,
+                          seed=1,
+                          sample_size=None,
+                          as_similarity=False,
+                          log_outdir=None,
+                          ):
     # Get the non-synonymous word pair scores against which to calibrate the synonymous word scores
-    key: tuple[str, Distance, int, int] = (lang2.name, eval_func, sample_size, seed)
-    if len(lang1.noncognate_thresholds[key]) > 0:
-        noncognate_scores = lang1.noncognate_thresholds[key]
+    key: tuple[Distance, int, int] = (eval_func, sample_size, seed)
+    correlator, phone_correlators_index = get_phone_correlator(
+        lang1,
+        lang2,
+        phone_correlators_index=phone_correlators_index,
+        log_outdir=log_outdir,
+    )
+    if len(correlator.noncognate_thresholds[key]) > 0:
+        noncognate_scores = correlator.noncognate_thresholds[key]
     else:
-        correlator = lang1.get_phoneme_correlator(lang2)
-        noncognate_scores = correlator.noncognate_thresholds(eval_func, seed=seed, sample_size=sample_size)
+        noncognate_scores = correlator.compute_noncognate_thresholds(eval_func, seed=seed, sample_size=sample_size)
 
     # Transform distance scores into similarity scores
     if as_similarity and not eval_func.sim:
         noncognate_scores = [dist_to_sim(score) for score in noncognate_scores]
     
-    return noncognate_scores
+    return noncognate_scores, phone_correlators_index
 
 
 @lru_cache(maxsize=None)
@@ -74,8 +90,8 @@ def get_calibration_params(lang1, lang2, eval_func, seed=1, sample_size=None, as
     """Gets the mean and standard deviation of similarity of a random sample of non-cognates (word pairs with different concepts) from two doculects to use for CDF weighting.
 
     Args:
-        lang1 (phyloLing.Language): First doculect to compare
-        lang2 (phyloLing.Language): Second doculect to compare
+        lang1 (Doculect): First doculect to compare
+        lang2 (Doculect): Second doculect to compare
         eval_func (Distance): Distance to apply to word pairs
         seed (int): Random seed
         sample_size (int): Size of random sample
@@ -83,7 +99,7 @@ def get_calibration_params(lang1, lang2, eval_func, seed=1, sample_size=None, as
     Returns:
         tuple: Mean and standard deviation of similarity of random sampling of non-cognate word pairs
     """
-    noncognate_scores = get_noncognate_scores(lang1, lang2, eval_func, seed, sample_size, as_similarity=as_similarity)
+    noncognate_scores, _ = get_noncognate_scores(lang1, lang2, eval_func, seed, sample_size, as_similarity=as_similarity)
 
     # Calculate mean and standard deviation from this sample distribution
     mean_nc_score = mean(noncognate_scores)  # TODO why is this being recalculated each time?
@@ -101,8 +117,8 @@ def binary_cognate_sim(lang1,
     """Calculates linguistic similarity based on the proportion of shared cognates between two doculects.
 
     Args:
-        lang1 (phyloLing.Language): First doculect to compare
-        lang2 (phyloLing.Language): Second doculect to compare
+        lang1 (Doculect): First doculect to compare
+        lang2 (Doculect): Second doculect to compare
         clustered_cognates (dict): Nested dictionary of Word objects organized by concepts and cognate classes
         exclude_synonyms (bool, optional): If more than one cognate class is present for the same concept, takes only the most similar pair. Defaults to True.
 
@@ -153,7 +169,7 @@ def gradient_cognate_dist(lang1,
                           seed=1,
                           n_samples=50,
                           sample_size=0.8,
-                          logger=None):
+                          ):
 
     # Set random seed and initialize random number generator
     random.seed(seed)
@@ -237,7 +253,14 @@ def gradient_cognate_dist(lang1,
         if calibrate:
             # TODO theoretically this would probably be better to recalculate per group as seed+n rather than seed, but doesn't seem to make a significant difference in tree topology but does significantly impact computational time
             # should investigate explicitly whether this makes a significant difference
-            mean_nc_score, nc_score_stdev = get_calibration_params(lang1, lang2, eval_func, seed, group_size, as_similarity=True)
+            mean_nc_score, nc_score_stdev = get_calibration_params(
+                lang1,
+                lang2,
+                eval_func,
+                seed,
+                group_size,
+                as_similarity=True
+            )
 
         # Apply minimum similarity and calibration
         for concept, score in sims.items():
@@ -262,8 +285,7 @@ def gradient_cognate_dist(lang1,
         group_scores[n] = mean(sims.values())
 
     similarity_score = mean(group_scores.values())
-    if logger:
-        logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(similarity_score, 3)}')
+    logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(similarity_score, 3)}')
         
     distance_score = 1 - similarity_score
     return distance_score
