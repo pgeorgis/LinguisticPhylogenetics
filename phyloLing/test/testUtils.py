@@ -8,7 +8,9 @@ import subprocess
 import sys
 import unittest
 from dataclasses import dataclass
+from datetime import timedelta
 from enum import Enum
+from typing import Callable
 
 import xmlrunner
 import yaml
@@ -138,6 +140,13 @@ class ExecutionResult:
     distance_matrix: DistanceMatrix
     tree_distance: TreeDistance
 
+@dataclass(
+    frozen=True,
+)
+class ExecutionResultInformation:
+    result: ExecutionResult
+    time_elapsed: datetime.timedelta | None = None
+
 
 class TestConfiguration(Enum):
     MINIMAL = 'minimal',
@@ -152,8 +161,8 @@ class TestDataset:
                  config_files: dict[TestConfiguration, str] = None):
         self.places = 4
 
-        self.language_family = language_family
-        dataset_path = os.path.join('datasets', language_family.name)
+        self.language_family = language_family.name
+        dataset_path = os.path.join('datasets', self.language_family)
         config_path = os.path.join(dataset_path, 'config')
 
         self.best_tree_path = os.path.join(dataset_path, 'trees', 'newick.tre')
@@ -295,19 +304,27 @@ class TestDataset:
 
     def get_result(self,
                    config_key: TestConfiguration,
-                   test: unittest.TestCase) -> ExecutionResult:
-        family_name = self.language_family.name
-        if family_name not in TestDataset.results_cache:
-            TestDataset.results_cache[family_name] = {}
-        language_result_cache = TestDataset.results_cache[family_name]
+                   test: unittest.TestCase) -> ExecutionResultInformation:
+        if self.language_family not in TestDataset.results_cache:
+            TestDataset.results_cache[self.language_family] = {}
+        language_result_cache = TestDataset.results_cache[self.language_family]
 
         config_name = config_key.name
         if config_name in language_result_cache:
-            return language_result_cache[config_name]
-        logger.info(f"No cached result found for language family '{family_name}' with config '{config_name}'. Calculating...")
+            return ExecutionResultInformation(
+                result=language_result_cache[config_name]
+            )
+        logger.info(f"No cached result found for language family '{self.language_family}' with config '{config_name}'. Calculating...")
+        start_time = datetime.datetime.now()
         result = self.execute_classify_langs(config_key, test)
+        end_time = datetime.datetime.now()
+        time_elapsed = end_time - start_time
         language_result_cache[config_name] = result
-        return result
+        return ExecutionResultInformation(
+            result,
+            time_elapsed,
+        )
+
 
     @staticmethod
     def get_execution_reference(result: ExecutionResult) -> ExecutionReference:
@@ -337,60 +354,82 @@ class TestDataset:
     def assert_determinism(self,
             test_configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
-        initial_result = self.get_result(test_configuration, test)
-        last_values = initial_result.distance_matrix
-        for i in range(5):
-            logger.info(f"Running iteration {i + 1} for {self.language_family.name}...")
-            start_time = datetime.datetime.now()
-            current_result = self.execute_classify_langs(test_configuration, test)
-            end_time = datetime.datetime.now()
-            time_elapsed_seconds = round((end_time - start_time).total_seconds())
-            total_time_string = str(datetime.timedelta(seconds=time_elapsed_seconds))
-            logger.info(f"Iteration {i + 1} done in {total_time_string}.")
-            current_matrix = current_result.distance_matrix
+        initial_result: ExecutionResultInformation = self.get_result(test_configuration, test)
+        last_values: DistanceMatrix = initial_result.result.distance_matrix
+        iterations: int = 5
+
+        last_iteration_time: timedelta | None = initial_result.time_elapsed
+        for i in range(iterations):
+            logger.info(f"Running iteration {i + 1} for {self.language_family}...")
+            if last_iteration_time is not None:
+                remaining_iterations: int = iterations - i
+                estimated_remaining_time_seconds: int = remaining_iterations * round(last_iteration_time.total_seconds())
+                estimated_remaining_time = datetime.timedelta(
+                    seconds=estimated_remaining_time_seconds,
+                )
+                logger.info(f"Estimated remaining time for {self.language_family}: {str(estimated_remaining_time)}.")
+
+            start_time: datetime = datetime.datetime.now()
+            current_result: ExecutionResult = self.execute_classify_langs(test_configuration, test)
+            end_time: datetime = datetime.datetime.now()
+            last_iteration_time = end_time - start_time
+            logger.info(f"Iteration {i + 1} done in {str(last_iteration_time)}.")
+
+            current_matrix: DistanceMatrix = current_result.distance_matrix
             assert_distance_matrices_equal(test,
                 last_values, current_matrix, self.places
             )
+            assert_distance_matrices_equal(test,
+                initial_result.result.distance_matrix, current_matrix, self.places
+            )
             last_values = current_matrix
+
+    @staticmethod
+    def assert_tree_distances(mapping: Callable[[TreeDistance], float],
+                              result: ExecutionResult,
+                              best_tree_distances: dict[str, TreeDistance],
+                              test: unittest.TestCase) -> None:
+        for reference_tree in result.reference_trees:
+            best_tree_distance: float = mapping(best_tree_distances[reference_tree])
+            result_tree_distance: float = mapping(result.tree_distance)
+
+            logger.info(f"\tReference tree: {reference_tree}")
+            logger.info(f"\t\tBest tree: \t{best_tree_distance}")
+            logger.info(f"\t\tTest tree: \t{result_tree_distance}")
+
+            test.assertLessEqual(
+                result_tree_distance, best_tree_distance,
+                f"Test tree distance is greater than the best tree distance for {reference_tree}"
+            )
 
     def assert_gqd_distance(self,
             configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
-        result: ExecutionResult = self.get_result(configuration, test)
+        result_information: ExecutionResultInformation = self.get_result(configuration, test)
+        result = result_information.result
         best_tree_distances = self.get_best_tree_distances(
             self.get_execution_reference(result)
         )
         logger.info("GQD distances:")
-        for reference_tree in result.reference_trees:
-            best_tree_distance = best_tree_distances[reference_tree].gqd
-            result_tree_distance = result.tree_distance.gqd
-
-            logger.info(f"\tReference tree: {reference_tree}")
-            logger.info(f"\t\tBest tree: \t{best_tree_distance}")
-            logger.info(f"\t\tTest tree: \t{result_tree_distance}")
-
-            test.assertLessEqual(
-                result_tree_distance, best_tree_distance,
-                f"Test tree distance is greater than the best tree distance for {reference_tree}"
-            )
+        self.assert_tree_distances(
+            lambda distance: distance.gqd,
+            result,
+            best_tree_distances,
+            test,
+        )
 
     def assert_wrt_distance(self,
-                            test_configuration: TestConfiguration,
+                            configuration: TestConfiguration,
                             test: unittest.TestCase) -> None:
-        result: ExecutionResult = self.get_result(test_configuration, test)
+        result_information: ExecutionResultInformation = self.get_result(configuration, test)
+        result = result_information.result
         best_tree_distances = self.get_best_tree_distances(
             self.get_execution_reference(result)
         )
         logger.info("WRT distances:")
-        for reference_tree in result.reference_trees:
-            best_tree_distance = best_tree_distances[reference_tree].wrt
-            result_tree_distance = result.tree_distance.wrt
-
-            logger.info(f"\tReference tree: {reference_tree}")
-            logger.info(f"\t\tBest tree: \t{best_tree_distance}")
-            logger.info(f"\t\tTest tree: \t{result_tree_distance}")
-
-            test.assertLessEqual(
-                result_tree_distance, best_tree_distance,
-                f"Test tree distance is greater than the best tree distance for {reference_tree}"
-            )
+        self.assert_tree_distances(
+            lambda distance: distance.wrt,
+            result,
+            best_tree_distances,
+            test,
+        )
