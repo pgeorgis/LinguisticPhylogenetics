@@ -167,11 +167,11 @@ def sort_wordlist(wordlist):
 def prune_corrs(corr_dict, min_val=2, exc1=None, exc2=None):
     # Prune correspondences below a minimum count/probability threshold
     for seg1 in corr_dict:
-        if exc1 and seg1 in exc1:
+        if exc1 and Ngram(seg1).string in exc1:
             continue
         seg2_to_del = [seg2 for seg2 in corr_dict[seg1] if corr_dict[seg1][seg2] < min_val]
         for seg2 in seg2_to_del:
-            if exc2 and seg2 in exc2:
+            if exc2 and Ngram(seg2).string in exc2:
                 continue
             del corr_dict[seg1][seg2]
     # Delete empty seg1 entries
