@@ -60,7 +60,7 @@ VOWELS
 	<Tähn> /tʰˈeːn/ "tooth_NOUN"
 
 /ˈɛ/ (0.01)
-	<kennen> /kʰˈɛn̩ː/ "ken_VERB"
+	<kennen> /kʰˈɛnn̩/ "ken_VERB"
 	<Weg> /vˈɛç/ "way_NOUN"
 	<Wedder> /vˈɛlɐ/ "weather_NOUN"
 
@@ -106,7 +106,7 @@ VOWELS
 
 /ˈœː/ (0.002)
 	<ölven> /ˈœːlm/ "eleven_NUM"
-	<könen> /kʰˈœːn̩ː/ "can_VERB"
+	<könen> /kʰˈœːnn̩/ "can_VERB"
 
 /ˈø/ (0.002)
 	<swimmen> /ʃvˈøm/ "swim_VERB"
@@ -136,10 +136,10 @@ CONSONANTS
 	<Wind> /vˈɪnd/ "wind_NOUN"
 	<danken> /dˈaŋkn̩/ "thank_VERB"
 
-/n/ (0.09)
-	<flegen> /flˈaɪ̯n/ "fly_VERB"
-	<hören> /hˈɔʏ̯ɐn/ "hear_VERB"
-	<Doorn> /dˈaʊ̯ɐn/ "thorn_NOUN"
+/n/ (0.098)
+	<föhlen> /fˈɔʏ̯ln̩/ "feel_VERB"
+	<gahn> /ɡˈoːn/ "go_VERB"
+	<teihn> /tʰˈaɪ̯n/ "ten_NUM"
 
 /l/ (0.058)
 	<geel> /ɡˈeːl/ "yellow_ADJ"
@@ -186,7 +186,7 @@ CONSONANTS
 	<söss> /zˈøs/ "six_NUM"
 	<söben> /zˈøːm/ "seven_NUM"
 
-/h/ (0.022)
+/h/ (0.021)
 	<hunnert> /hˈʊnɐt/ "hundred_NUM"
 	<Hund> /hˈʊnd/ "dog_NOUN"
 	<hillig> /hˈɪlɪç/ "holy_ADJ"
@@ -231,20 +231,15 @@ CONSONANTS
 	<Kees> /kʰˈɛɪ̯z̥/ "cheese_NOUN"
 	<Ies> /ˈiːz̥/ "ice_NOUN"
 
-/nː/ (0.004)
-	<finnen> /fˈɪn̩ː/ "find_VERB"
-	<könen> /kʰˈœːn̩ː/ "can_VERB"
-	<binnen> /bˈɪn̩ː/ "bind_VERB"
-
 /ʒ/ (0.003)
-	<jüm> /ʒˈʏm/ "ye_PRON"
 	<jung> /ʒˈʊŋ/ "young_NOUN"
 	<Johr> /ʒˈoːɐ/ "year_NOUN"
+	<jüm> /ʒˈʏm/ "ye_PRON"
 
 /k/ (0.003)
+	<danken> /dˈaŋkn̩/ "thank_VERB"
 	<naakt> /nˈoːkt/ "naked_ADJ"
 	<süük> /zˈyːk/ "sick_ADJ"
-	<danken> /dˈaŋkn̩/ "thank_VERB"
 
 /pʰ/ (0.002)
 	<Padd> /pʰˈad/ "path_NOUN"
