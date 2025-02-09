@@ -3,7 +3,7 @@ from math import inf
 from statistics import mean
 from typing import Iterable, NewType, Tuple
 
-type Phoneme = NewType('Phoneme', str)
+Phoneme = NewType('Phoneme', str)
 
 type MultiPhoneme = Phoneme | tuple[Phoneme, ...]
 

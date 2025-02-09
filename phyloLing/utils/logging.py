@@ -89,7 +89,7 @@ def log_phon_corr_iteration(iteration,
 def write_phon_corr_iteration_log(iter_logs, log_file, n_same_meaning_pairs):
     make_outdir(log_file)
     with open(log_file, 'w') as f:
-        f.write(f'Same meaning pairs: {len(n_same_meaning_pairs)}\n')
+        f.write(f'Same meaning pairs: {n_same_meaning_pairs}\n')
         for n in iter_logs:
             iter_log = '\n\n'.join(iter_logs[n][:-1])
             f.write(f'****SAMPLE {n+1}****\n')
