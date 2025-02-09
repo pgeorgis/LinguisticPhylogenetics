@@ -9,11 +9,11 @@ from statistics import mean, stdev
 from typing import Iterable, Self
 
 import numpy as np
-from constants import (ALIGNMENT_DELIMITER, END_PAD_CH, GAP_CH_DEFAULT,
-                       NON_IPA_CH_DEFAULT, PAD_CH_DEFAULT,
-                       PHONE_CORRELATORS_INDEX_KEY, SEG_JOIN_CH, START_PAD_CH)
+from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
+                       PAD_CH_DEFAULT, PHONE_CORRELATORS_INDEX_KEY,
+                       SEG_JOIN_CH, START_PAD_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
-from phonAlign import Alignment, visual_align
+from phonAlign import Alignment
 from phonUtils.phonEnv import phon_env_ngrams
 from phonUtils.phonSim import phone_sim
 from scipy.stats import norm
@@ -23,6 +23,7 @@ from utils.alignment import (calculate_alignment_costs,
 from utils.distance import Distance
 from utils.information import (pointwise_mutual_info, surprisal,
                                surprisal_to_prob)
+from utils.logging import write_alignments_log
 from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
                             filter_out_invalid_ngrams, pad_sequence,
                             start_token)
@@ -1323,7 +1324,7 @@ class PhonCorrelator:
 
         # Write alignment log
         align_log_file = os.path.join(self.phon_corr_dir, 'alignments.log')
-        self.write_alignments_log(self.align_log, align_log_file)
+        write_alignments_log(self.align_log, align_log_file)
 
         # Save PMI results
         self.pmi_results = results
@@ -1810,20 +1811,6 @@ class PhonCorrelator:
     def log_alignments(self, alignments, align_log):
         for alignment in alignments:
             align_log[alignment.key] = alignment
-
-    def write_alignments_log(self, alignment_log, log_file): # TODO this function does not need to be a method of PhonCorrelator, can be moved to utils
-        sorted_alignment_keys = sorted(alignment_log.keys())
-        n_alignments = len(sorted_alignment_keys)
-        with open(log_file, 'w') as f:
-            for i, key in enumerate(sorted_alignment_keys):
-                f.write(f'{key}\n')
-                alignment = alignment_log[key]
-                align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
-                align_cost = round(alignment.cost, 3)
-                seq_map1, seq_map2 = alignment.seq_map
-                f.write(f'{align_str}\n{seq_map1}\n{seq_map2}\nCOST: {align_cost}\n')
-                if i < n_alignments - 1:
-                    f.write(f'\n{ALIGNMENT_DELIMITER}\n\n')
 
     def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):
         lines = []
