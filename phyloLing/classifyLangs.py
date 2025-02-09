@@ -8,7 +8,7 @@ from collections import defaultdict
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_dist
-from utils.tree import (calculate_tree_distance, gqd, load_newick_tree,
+from utils.tree import (calculate_tree_distance, get_gqd_score_to_reference,
                         plot_tree)
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
                          create_datestamp, create_timestamp, csv2dict,

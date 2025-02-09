@@ -214,7 +214,8 @@ class TestDataset:
         )
 
     def execute_classify_langs_in_subprocess(self,
-            test_configuration: TestConfiguration) -> ExecutionResult:
+            test_configuration: TestConfiguration,
+            test: unittest.TestCase) -> ExecutionResult:
         config_file = self.test_configurations[test_configuration]
         make_command = [
             "make",
@@ -227,8 +228,7 @@ class TestDataset:
             universal_newlines=True,
             cwd=root_project_path,
         )
-        if result.returncode != 0:
-            raise Exception(f"Command failed with return code {result.returncode}.\n\nstdout:\n{result.stdout}\n\n{result.stderr}\n")
+        test.assertEqual(result.returncode, 0, f"Command failed with return code {result.returncode}.\n\nstdout:\n{result.stdout}\n\n{result.stderr}\n")
         stdout_lines = result.stdout.splitlines()
 
         dist_matrix = None
@@ -287,13 +287,15 @@ class TestDataset:
         return result
 
     def execute_classify_langs(self,
-                               test_configuration: TestConfiguration) -> ExecutionResult:
-        return self.execute_classify_langs_in_subprocess(test_configuration) \
+                               test_configuration: TestConfiguration,
+                               test: unittest.TestCase) -> ExecutionResult:
+        return self.execute_classify_langs_in_subprocess(test_configuration, test) \
             if self.exec_in_subprocess \
             else self.execute_classify_langs_directly(test_configuration)
 
     def get_result(self,
-                   config_key: TestConfiguration) -> ExecutionResult:
+                   config_key: TestConfiguration,
+                   test: unittest.TestCase) -> ExecutionResult:
         family_name = self.language_family.name
         if family_name not in TestDataset.results_cache:
             TestDataset.results_cache[family_name] = {}
@@ -303,7 +305,7 @@ class TestDataset:
         if config_name in language_result_cache:
             return language_result_cache[config_name]
         logger.info(f"No cached result found for language family '{family_name}' with config '{config_name}'. Calculating...")
-        result = self.execute_classify_langs(config_key)
+        result = self.execute_classify_langs(config_key, test)
         language_result_cache[config_name] = result
         return result
 
@@ -335,12 +337,12 @@ class TestDataset:
     def assert_determinism(self,
             test_configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
-        initial_result = self.get_result(test_configuration)
+        initial_result = self.get_result(test_configuration, test)
         last_values = initial_result.distance_matrix
         for i in range(5):
             logger.info(f"Running iteration {i + 1} for {self.language_family.name}...")
             start_time = datetime.datetime.now()
-            current_result = self.execute_classify_langs(test_configuration)
+            current_result = self.execute_classify_langs(test_configuration, test)
             end_time = datetime.datetime.now()
             time_elapsed_seconds = round((end_time - start_time).total_seconds())
             total_time_string = str(datetime.timedelta(seconds=time_elapsed_seconds))
@@ -354,7 +356,7 @@ class TestDataset:
     def assert_gqd_distance(self,
             configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
-        result: ExecutionResult = self.get_result(configuration)
+        result: ExecutionResult = self.get_result(configuration, test)
         best_tree_distances = self.get_best_tree_distances(
             self.get_execution_reference(result)
         )
@@ -375,7 +377,7 @@ class TestDataset:
     def assert_wrt_distance(self,
                             test_configuration: TestConfiguration,
                             test: unittest.TestCase) -> None:
-        result: ExecutionResult = self.get_result(test_configuration)
+        result: ExecutionResult = self.get_result(test_configuration, test)
         best_tree_distances = self.get_best_tree_distances(
             self.get_execution_reference(result)
         )
