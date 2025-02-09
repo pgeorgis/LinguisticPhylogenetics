@@ -149,7 +149,7 @@ class LexicalDataset:
                 lang_id=self.lang_ids[lang],
                 glottocode=self.glottocodes[lang],
                 iso_code=self.iso_codes[lang],
-                doculect_dir=os.path.join(self.phone_corr_dir, path_name),
+                doculect_dir=os.path.join(self.doculects_dir, path_name),
                 data=language_vocab_data[lang],
                 columns=self.columns,
                 transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global']),
