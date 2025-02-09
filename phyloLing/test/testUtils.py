@@ -403,7 +403,9 @@ class TestDataset:
                 estimated_remaining_time = datetime.timedelta(
                     seconds=estimated_remaining_time_seconds,
                 )
-                logger.info(f"Estimated remaining time for {self.language_family}: {str(estimated_remaining_time)}.")
+                logger.info(f"Estimated time remaining for {self.language_family}: {str(estimated_remaining_time)}")
+                estimated_end_time = (datetime.datetime.now() + estimated_remaining_time).isoformat(sep=" ", timespec="seconds")
+                logger.info(f"Estimated finish time: {estimated_end_time}")
 
             start_time: datetime = datetime.datetime.now()
             current_result: ExecutionResult = self.execute_classify_langs(
