@@ -6,6 +6,7 @@ Cantonese	Cantonese	probability
 ʦʰ	ʦʰ	1.0
 ʦ	ʦ	1.0
 ʊ	ʊ	1.0
+ʃ	ʃ	1.0
 ɵ	ɵ	1.0
 ɪ	ɪ	1.0
 ɥ	ɥ	1.0
@@ -13,6 +14,7 @@ Cantonese	Cantonese	probability
 ɔː	ɔː	1.0
 ɐ	ɐ	1.0
 œː	œː	1.0
+ŋ̍	ŋ̍	1.0
 ŋ	ŋ	1.0
 ¹³	¹³	1.0
 ³⁵	³⁵	1.0
@@ -36,7 +38,8 @@ n	n	1.0
 m	m	1.0
 l	l	1.0
 k̚	k̚	1.0
-kʷ	kʷ	1.0
+kʷʰ	kʷʰ	1.0
+kʷ	-	1.0
 kʰ	kʰ	1.0
 k	k	1.0
 j	j	1.0

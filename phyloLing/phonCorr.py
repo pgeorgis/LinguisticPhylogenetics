@@ -1,3 +1,4 @@
+import logging
 import os
 import random
 from collections import defaultdict
@@ -5,31 +6,38 @@ from functools import lru_cache
 from itertools import product
 from math import inf, log
 from statistics import mean, stdev
-from typing import Self, Iterable
+from typing import Self
 
 import numpy as np
-from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
-                       PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
+from constants import (END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT,
+                       PHONE_CORRELATORS_INDEX_KEY, SEG_JOIN_CH, START_PAD_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
-from phonAlign import Alignment, visual_align
+from phonAlign import Alignment
 from phonUtils.phonEnv import phon_env_ngrams
 from phonUtils.phonSim import phone_sim
 from scipy.stats import norm
-
-from utils import PhonemeMap
-from utils.alignment import calculate_alignment_costs, needleman_wunsch_extended
+from utils import (PhonemeMap, average_corrs, average_nested_dicts,
+                   reverse_corr_dict, reverse_corr_dict_map)
+from utils.alignment import (calculate_alignment_costs,
+                             needleman_wunsch_extended)
 from utils.distance import Distance
-from utils.information import (pointwise_mutual_info, surprisal,
+from utils.information import (get_oov_val, pointwise_mutual_info,
+                               prune_oov_surprisal, surprisal,
                                surprisal_to_prob)
-from utils.sequence import (Ngram, PhonEnvNgram, count_subsequences, end_token,
-                            filter_out_invalid_ngrams, pad_sequence, start_token)
-from utils.utils import (default_dict,
-                         dict_tuplelist,
-                         normalize_dict,
-                         balanced_resample,
-                         segment_ranges,
-                         create_default_dict,
-                         create_default_dict_of_dicts)
+from utils.logging import (log_phon_corr_iteration, write_alignments_log,
+                           write_phon_corr_iteration_log,
+                           write_phon_corr_report, write_phoneme_pmi_report,
+                           write_phoneme_surprisal_report, write_sample_log)
+from utils.sequence import (Ngram, PhonEnvNgram, end_token,
+                            filter_out_invalid_ngrams, pad_sequence,
+                            start_token)
+from utils.utils import (balanced_resample, create_default_dict,
+                         create_default_dict_of_dicts, default_dict,
+                         normalize_dict, segment_ranges)
+from utils.wordlist import Wordlist, sort_wordlist
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s phonCorr %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 # Designate phonetic feature distance
 def phone_dist(x, y, **kwargs):
@@ -158,18 +166,14 @@ def postprocess_boundary_alignments(aligned_pair):
     return alignment
 
 
-def sort_wordlist(wordlist):
-    return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa, x[0].concept, x[1].concept))
-
-
 def prune_corrs(corr_dict, min_val=2, exc1=None, exc2=None):
     # Prune correspondences below a minimum count/probability threshold
     for seg1 in corr_dict:
-        if exc1 and seg1 in exc1:
+        if exc1 and Ngram(seg1).string in exc1:
             continue
         seg2_to_del = [seg2 for seg2 in corr_dict[seg1] if corr_dict[seg1][seg2] < min_val]
         for seg2 in seg2_to_del:
-            if exc2 and seg2 in exc2:
+            if exc2 and Ngram(seg2).string in exc2:
                 continue
             del corr_dict[seg1][seg2]
     # Delete empty seg1 entries
@@ -179,36 +183,7 @@ def prune_corrs(corr_dict, min_val=2, exc1=None, exc2=None):
     return corr_dict
 
 
-def get_oov_val(corr_dict, oov_ch=NON_IPA_CH_DEFAULT):
-    # Determine the (potentially smoothed) value for unseen ("out of vocabulary" [OOV]) correspondences
-    # Check using an OOV/non-IPA character
-    oov_val = corr_dict[oov_ch]
-
-    # Then remove this character from the surprisal dictionary
-    del corr_dict[oov_ch]
-
-    return oov_val
-
-
-def prune_oov_surprisal(surprisal_dict):
-    # Prune correspondences with a surprisal value greater than OOV surprisal
-    pruned = defaultdict(lambda: {})
-    for seg1 in surprisal_dict:
-        oov_val = get_oov_val(surprisal_dict[seg1])
-
-        # Save values which are not equal to (less than) the OOV smoothed value
-        for seg2 in surprisal_dict[seg1]:
-            surprisal_val = surprisal_dict[seg1][seg2]
-            if surprisal_val < oov_val:
-                pruned[seg1][seg2] = surprisal_val
-
-        # Set as default dict with OOV value as default
-        pruned[seg1] = default_dict(pruned[seg1], lmbda=oov_val)
-
-    return pruned, oov_val
-
-
-def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=True):
+def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, maximize_score=True):
     # Resolve synonyms: prune redundant/extraneous
     # If a concept has >1 words listed, we may end up with, e.g.
     # DE <Kopf> - NL <kop>
@@ -250,16 +225,17 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
                 word1, word2 = wordlist[index]
                 score = scores[index]  # TODO seems like this could benefit from a Wordpair object
                 if word1 not in best_pairings or score_is_better(score, best_pairing_scores[word1]):
-                    best_pairings[word1] = index
+                    best_pairings[word1] = index, word2
                     best_pairing_scores[word1] = score
                 elif score == best_pairing_scores[word1]:
                     # In case of tied correspondence-based scores, consider the phonetic distance too
                     from wordDist import phonological_dist
-                    best_index = best_pairings[word1]
+                    best_index, word2_best = best_pairings[word1]
                     best_alignment = alignments[best_index]
                     current_alignment = alignments[index]
-                    phon_dist_best = phonological_dist(best_alignment)
-                    phon_dist_current = phonological_dist(current_alignment)
+                    # TODO check that these word objects input to phonological_dist are the right ones
+                    phon_dist_best = phonological_dist(word1, word2_best, alignment=best_alignment, family_index=family_index)
+                    phon_dist_current = phonological_dist(word1, word2, alignment=current_alignment, family_index=family_index)
                     if maximize_score:
                         phon_dist_best *= -1
                         phon_dist_current *= -1
@@ -269,21 +245,22 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
                         # If still no distance between the two pairs, use both as there is no good way to select one
                         tied_indices[concept].update({index, best_index})
                     elif score_is_better(current_score, best_score):
-                        best_pairings[word1] = index
+                        best_pairings[word1] = index, word2
                         best_pairing_scores[word1] = score
 
             # Now best_pairings contains the best mapping for each concept
             # based on the best (highest/lowest) scoring pair wrt to first language word
+            best_indices = [index for index, _ in best_pairings.values()]
             for index in concept_indices[concept]:
-                if index not in best_pairings.values() and index not in tied_indices[concept]:
+                if index not in best_indices and index not in tied_indices[concept]:
                     indices_to_prune.add(index)
 
             # Now check for multiple l1 words mappedåto the same l2 word
             # Choose only the best of these
-            selected_word2 = [wordlist[index][-1] for index in best_pairings.values()]
-            if len(set(selected_word2)) < len(best_pairings.values()):
+            selected_word2 = [wordlist[index][-1] for index in best_indices]
+            if len(set(selected_word2)) < len(best_indices):
                 for word2 in set(selected_word2):
-                    indices = [index for index in best_pairings.values() if wordlist[index][-1] == word2]
+                    indices = [index for index in best_indices if wordlist[index][-1] == word2]
                     if maximize_score:
                         best_choice = max(indices, key=lambda x: scores[x])
                     else:
@@ -299,142 +276,6 @@ def prune_extraneous_synonyms(wordlist, alignments, scores=None, maximize_score=
     return wordlist, alignments
 
 
-def average_corrs(corr_dict1: PhonemeMap, corr_dict2: PhonemeMap) -> PhonemeMap:
-    avg_corr: PhonemeMap = PhonemeMap(0)
-    for (seg1, seg2) in corr_dict1.get_key_pairs():
-        avg_corr.set_value(seg1, seg2, mean([corr_dict1.get_value(seg1, seg2), corr_dict2.get_value(seg2, seg1)]))
-    for (seg2, seg1) in corr_dict2.get_key_pairs():
-        if not avg_corr.has_value(seg1, seg2):
-            avg_corr.set_value(seg1, seg2, mean([corr_dict1.get_value(seg1, seg2), corr_dict2.get_value(seg2, seg1)]))
-    return avg_corr
-
-
-def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0, drop_inf=True) -> PhonemeMap:
-    corr1_all = set(corr1 for d in dict_list for corr1 in d.get_primary_keys())
-    corr2_all = {corr1: set(corr2 for d in dict_list for corr2 in d.get_secondary_keys(corr1)) for corr1 in corr1_all}
-    results = PhonemeMap(0)
-    for corr1 in corr1_all:
-        for corr2 in corr2_all[corr1]:
-            vals = []
-            for d in dict_list:
-                value = d.get_value_or_default(corr1, corr2, default)
-                if drop_inf and value not in {-inf, inf}:
-                    vals.append(value)
-                elif not drop_inf:
-                    vals.append(value)
-            if len(vals) > 0:
-                results.set_value(corr1, corr2, mean(vals))
-    return results
-
-
-def reverse_corr_dict[TPrimaryKey, TSecondaryKey, TValue](
-        corr_dict: dict[TPrimaryKey, dict[TSecondaryKey, TValue]]) -> dict[TSecondaryKey, dict[TPrimaryKey, TValue]]:
-
-    if not isinstance(corr_dict, dict):
-        raise ValueError("corr_dict must be a dictionary")
-    reverse = defaultdict(lambda: defaultdict(lambda: 0))
-    for seg1 in corr_dict:
-        for seg2 in corr_dict[seg1]:
-            reverse[seg2][seg1] = corr_dict[seg1][seg2]
-    return reverse
-
-def reverse_corr_dict_map(corr_dict: PhonemeMap) -> PhonemeMap:
-    if not isinstance(corr_dict, PhonemeMap):
-        raise ValueError("corr_dict must be a PhonemeMap object")
-    reverse = PhonemeMap(0)
-    for (seg1, seg2) in corr_dict.get_key_pairs():
-        reverse.set_value(seg2, seg1, corr_dict.get_value(seg1, seg2))
-    return reverse
-
-def ngram_count_word(ngram, word):
-    count = 0
-    for i in range(len(word) - len(ngram) + 1):
-        if word[i:i + len(ngram)] == list(ngram):
-            count += 1
-    return count
-
-
-def ngram_count_wordlist(ngram, seq_list):
-    """Retrieve the count of an ngram of segments from a list of segment sequences"""
-    count = 0
-    for seq in seq_list:
-        count += ngram_count_word(ngram, seq)
-    return count
-
-
-def ngram2log_format(ngram, phon_env=False):
-    if phon_env:
-        ngram, phon_env = ngram[:-1], ngram[-1]
-        return (Ngram(ngram).string, phon_env)
-    else:
-        return Ngram(ngram).string
-
-
-class Wordlist:
-    def __init__(self, word_pairs, pad_n=1):
-        self.pad_n = pad_n
-        self.wordlist_lang1, self.wordlist_lang2 = zip(*word_pairs)
-        self.seqs1, self.seqs2 = self.extract_seqs()
-        self.seq_lens1, self.seq_lens2 = self.seq_lens()
-        self.total_seq_len1, self.total_seq_len2 = self.total_lens()
-        self.ngram_probs1, self.ngram_probs2 = {}, {}
-
-    def extract_seqs(self):
-        seqs1 = [word.segments for word in self.wordlist_lang1]
-        seqs2 = [word.segments for word in self.wordlist_lang2]
-        if self.pad_n > 0:
-            seqs1 = [pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=self.pad_n) for seq in seqs1]
-            seqs2 = [pad_sequence(seq, pad_ch=PAD_CH_DEFAULT, pad_n=self.pad_n) for seq in seqs2]
-        return seqs1, seqs2
-
-    def seq_lens(self):
-        seq_lens1 = [len(seq) for seq in self.seqs1]
-        seq_lens2 = [len(seq) for seq in self.seqs2]
-        return seq_lens1, seq_lens2
-
-    def total_lens(self):
-        total_seq_len1 = sum(self.seq_lens1)
-        total_seq_len2 = sum(self.seq_lens2)
-        return total_seq_len1, total_seq_len2
-
-    def ngram_probability(self, ngram, lang=1, normalize=True):
-        # if not isinstance(ngram, [Ngram, PhonEnvNgram]):
-        #     if PHON_ENV_REGEX.search(ngram):
-        #         ngram = PhonEnvNgram(ngram)
-        #     else:
-        #         ngram = Ngram(ngram)
-        assert isinstance(ngram, (Ngram, PhonEnvNgram))
-
-        if lang == 1:
-            seqs = self.seqs1
-            seq_lens = self.seq_lens1
-            total_seq_len = self.total_seq_len1
-            saved = self.ngram_probs1
-        elif lang == 2:
-            seqs = self.seqs2
-            seq_lens = self.seq_lens2
-            total_seq_len = self.total_seq_len2
-            saved = self.ngram_probs2
-        else:
-            raise ValueError
-
-        if ngram.ngram in saved:
-            return saved[ngram.ngram]
-
-        else:
-            count = ngram_count_wordlist(ngram.ngram, seqs)
-            if normalize:
-                if ngram.size > 1:
-                    prob = count / sum([count_subsequences(length, ngram.size) for length in seq_lens])
-                else:
-                    prob = count / total_seq_len
-            else:
-                prob = count
-
-        saved[ngram.ngram] = prob
-        return prob
-
-
 class PhonCorrelator:
     def __init__(self,
                  lang1,
@@ -443,8 +284,9 @@ class PhonCorrelator:
                  gap_ch=GAP_CH_DEFAULT,
                  pad_ch=PAD_CH_DEFAULT,
                  seed=1,
-                 logger=None):
-        # Set Language objects
+                 log_outdir=None,
+                 ):
+        # Set Doculect objects
         self.lang1 = lang1
         self.lang1_name = lang1.name
         self.lang2 = lang2
@@ -456,35 +298,38 @@ class PhonCorrelator:
         self.seed = seed
 
         # Prepare wordlists: sort out same/different-meaning words and loanwords
+        self.input_wordlist = tuple(wordlist) if wordlist is not None else wordlist  # used for initializing twin, needs to be None of wordlist input arg was also None
         self.wordlist = self.get_concept_list(wordlist)
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists()
         self.samples = {}
 
         # PMI, ngrams, scored words
-        self.pmi_dict: PhonemeMap = PhonemeMap()
-        self.surprisal_dict: dict[str, dict[str, float]] = {}
-        self.phon_env_surprisal_dict: dict[str, dict[str, float]] = {}
-        self.reload_language_pair_data()
+        self.pmi_results: PhonemeMap = PhonemeMap()
+        self.surprisal_results = create_default_dict(self.lang2.phoneme_entropy, 3)
+        self.phon_env_surprisal_results = create_default_dict(self.lang2.phoneme_entropy, 3)
+        self.noncognate_thresholds: dict[(Distance, int, int), list] = defaultdict(list)
         self.scored_words = create_default_dict_of_dicts()
         self.low_coverage_phones = None
 
-        # Logging
-        self.set_log_dirs()
+        # Logging output directories
+        self.log_outdir = log_outdir if log_outdir else ""  # TODO revisit what default outdir path should be
+        self.phon_corr_dir = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name)
+        os.makedirs(self.phon_corr_dir, exist_ok=True)
         self.align_log = create_default_dict(0, 2)
-        self.logger = logger
 
-    def reload_language_pair_data(self):
-        self.pmi_dict = self.lang1.phoneme_pmi[self.lang2_name]
-        self.surprisal_dict = self.lang1.phoneme_surprisal[self.lang2_name]
-        self.phon_env_surprisal_dict = self.lang1.phon_env_surprisal[self.lang2_name]
-
-    def get_twin(self) -> Self:
+    def get_twin(self, phone_correlators_index) -> Self:
         """Retrieve the twin PhonCorrelator object for the reverse direction of the same language pair."""
-        return self.lang2.get_phoneme_correlator(
-            lang2=self.lang1,
-            wordlist=tuple(self.wordlist),
-            seed=self.seed
+        if self.lang1_name == self.lang2_name:
+            return self, phone_correlators_index
+        twin_correlator, phone_correlators_index = get_phone_correlator(
+            self.lang2,
+            self.lang1,
+            phone_correlators_index=phone_correlators_index,
+            wordlist=self.input_wordlist,
+            seed=self.seed,
+            log_outdir=self.log_outdir,
         )
+        return twin_correlator, phone_correlators_index
 
     def reset_seed(self):
         random.seed(self.seed)
@@ -495,11 +340,6 @@ class PhonCorrelator:
         if l2 is None:
             l2 = self.lang2
         return l1, l2
-
-    def set_log_dirs(self):
-        self.outdir = self.lang1.family.phone_corr_dir
-        self.phon_corr_dir = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name)
-        os.makedirs(self.phon_corr_dir, exist_ok=True)
 
     def get_concept_list(self, wordlist=None):
         # If no wordlist is provided, by default use all concepts shared by the two languages
@@ -528,8 +368,8 @@ class PhonCorrelator:
                 min(pair[0].ipa, pair[1].ipa), max(pair[0].ipa, pair[1].ipa),
                 min(pair[0].concept, pair[1].concept), max(pair[0].concept, pair[1].concept),
                 min(pair[0].orthography, pair[1].orthography), max(pair[0].orthography, pair[1].orthography),
-                min(pair[0].getInfoContent(total=True), pair[1].getInfoContent(total=True)),
-                max(pair[0].getInfoContent(total=True), pair[1].getInfoContent(total=True))
+                min(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2)),
+                max(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2))
             )
         )
 
@@ -600,8 +440,8 @@ class PhonCorrelator:
 
         # Write sample log (only if new samples were drawn)
         if log_samples and new_samples:
-            sample_log_file = os.path.join(self.outdir, self.lang1.path_name, self.lang2.path_name, 'samples.log')
-            self.write_sample_log(sample_logs, sample_log_file)
+            sample_log_file = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name, 'samples.log')
+            write_sample_log(sample_logs, sample_log_file)
 
         return samples
 
@@ -1078,6 +918,7 @@ class PhonCorrelator:
         return pmi_dict
 
     def compute_phone_corrs(self,
+                            family_index,
                             p_threshold=0.1,
                             max_iterations=3,
                             n_samples=3,
@@ -1104,8 +945,7 @@ class PhonCorrelator:
         Returns:
             results (dict): Nested dictionary of PMI correspondences.
         """
-        if self.logger:
-            self.logger.info(f'Computing phone correspondences: {self.lang1_name}-{self.lang2_name}...')
+        logger.info(f'Computing phone correspondences: {self.lang1_name}-{self.lang2_name}...')
 
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
         sample_results: dict[int, PhonemeMap] = {}
@@ -1141,11 +981,6 @@ class PhonCorrelator:
             disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
             if cumulative:
                 all_cognate_alignments = []
-
-            def score_pmi(alignment: Alignment, pmi_dict: PhonemeMap):  # TODO use more sophisticated pmi_dist from wordDist.py or word adaptation surprisal or alignment cost measure within Alignment object
-                alignment_tuples = alignment.alignment
-                PMI_score = mean([pmi_dict.get_value_or_default(pair[0], pair[1], 0) for pair in alignment_tuples])
-                return PMI_score
 
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
                 iteration += 1
@@ -1225,43 +1060,47 @@ class PhonCorrelator:
                 )
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
-                noncognate_PMI = []
+                noncognate_alignment_scores = []
                 for alignment in noncognate_alignments:
-                    noncognate_PMI.append(score_pmi(alignment, pmi_dict=PMI_iterations[iteration]))
-                nc_mean = mean(noncognate_PMI)
-                nc_stdev = stdev(noncognate_PMI)
+                    length_normalized_score = alignment.cost / alignment.length
+                    noncognate_alignment_scores.append(length_normalized_score)
+                nc_mean = mean(noncognate_alignment_scores)
+                nc_stdev = stdev(noncognate_alignment_scores)
 
-                # Score same-meaning alignments for overall PMI and calculate p-value
-                # against different-meaning alignments
+                # Score same-meaning alignments against different-meaning alignments
                 qualifying, disqualified = [], []
                 qualifying_alignments = []
                 qualified_PMI = []
                 for q, pair in enumerate(synonym_sample):
                     alignment = aligned_synonym_sample[q]
-                    PMI_score = score_pmi(alignment, pmi_dict=PMI_iterations[iteration])
+                    length_normalized_score = alignment.cost / alignment.length
 
-                    # Proportion of non-cognate word pairs which would have a PMI score at least as low as this word pair
-                    pnorm = 1 - norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
+                    # Proportion of non-cognate word pairs which would have an alignment score at least as low as this word pair
+                    pnorm = 1 - norm.cdf(length_normalized_score, loc=nc_mean, scale=nc_stdev)
                     if pnorm < p_threshold:
                         qualifying.append(pair)
                         qualifying_alignments.append(alignment)
-                        qualified_PMI.append(PMI_score)
+                        qualified_PMI.append(length_normalized_score)
                     else:
                         disqualified.append(pair)
-                        # disqualified_PMI.append(PMI_score)
                 qualifying, qualifying_alignments = prune_extraneous_synonyms(
                     wordlist=qualifying,
                     alignments=qualifying_alignments,
                     scores=qualified_PMI,
                     maximize_score=True,
+                    family_index=family_index,
                 )
                 qualifying_words[iteration] = sort_wordlist(qualifying)
                 if len(qualifying_words[iteration]) == 0:
-                    self.logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
+                    logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
                 disqualified_words[iteration] = disqualified + diff_sample
 
                 # Log results of this iteration
-                iter_log = self.log_iteration(iteration, qualifying_words, disqualified_words)
+                iter_log = log_phon_corr_iteration(
+                    iteration=iteration,
+                    qualifying_words=qualifying_words,
+                    disqualified_words=disqualified_words,
+                )
                 iter_logs[sample_n].append(iter_log)
 
             # Log final set of qualifying/disqualified word pairs
@@ -1290,10 +1129,11 @@ class PhonCorrelator:
         final_qualifying, final_alignments = prune_extraneous_synonyms(
             wordlist=final_qualifying,
             alignments=final_alignments,
-            maximize_score=True
+            maximize_score=True,
+            family_index=family_index,
         )
         # Log final alignments
-        self.log_alignments(final_alignments, self.align_log)
+        self.log_alignments(final_alignments)
 
         # Compute phone surprisal
         self.compute_phone_surprisal(
@@ -1303,7 +1143,7 @@ class PhonCorrelator:
             ngram_size=ngram_size,
         )
         # Compute surprisal in opposite direction with reversed alignments
-        twin = self.get_twin()
+        twin, family_index[PHONE_CORRELATORS_INDEX_KEY] = self.get_twin(family_index[PHONE_CORRELATORS_INDEX_KEY])
         reversed_final_alignments = [alignment.reverse() for alignment in final_alignments]
         twin.compute_phone_surprisal(
             reversed_final_alignments,
@@ -1314,18 +1154,15 @@ class PhonCorrelator:
 
         # Write the iteration log
         log_file = os.path.join(self.phon_corr_dir, 'iterations.log')
-        self.write_iter_log(iter_logs, log_file)
+        write_phon_corr_iteration_log(iter_logs, log_file, n_same_meaning_pairs=len(self.same_meaning))
 
         # Write alignment log
         align_log_file = os.path.join(self.phon_corr_dir, 'alignments.log')
-        self.write_alignments_log(self.align_log, align_log_file)
+        write_alignments_log(self.align_log, align_log_file)
 
         # Save PMI results
-        self.lang1.phoneme_pmi[self.lang2_name] = results
-        self.lang2.phoneme_pmi[self.lang1_name] = reverse_corr_dict_map(results)
-        # self.lang1.phoneme_pmi[self.lang2]['thresholds'] = noncognate_PMI
-
-        self.pmi_dict = results
+        self.pmi_results = results
+        twin.pmi_results = reverse_corr_dict_map(results)
         self.log_phoneme_pmi()
 
         return results
@@ -1569,25 +1406,19 @@ class PhonCorrelator:
             )
 
         # Save surprisal results
-        self.lang1.phoneme_surprisal[self.lang2_name][ngram_size] = surprisal_results
-        self.surprisal_dict[ngram_size] = surprisal_results
+        self.surprisal_results[ngram_size] = surprisal_results
         if phon_env:
-            self.lang1.phon_env_surprisal[self.lang2_name] = phon_env_surprisal_results
-            self.phon_env_surprisal_dict = phon_env_surprisal_results
+            self.phon_env_surprisal_results = phon_env_surprisal_results
 
         # Write phone correlation report based on surprisal results
         phon_corr_report = os.path.join(self.phon_corr_dir, 'phon_corr.tsv')
-        self.write_phon_corr_report(surprisal_results, phon_corr_report, type='surprisal')
+        self.write_phon_corr_report(surprisal_results, phon_corr_report, corr_type='surprisal')
 
         # Write surprisal logs
         self.log_phoneme_surprisal(phon_env=False, ngram_size=ngram_size)
         if phon_env:
             self.log_phoneme_surprisal(phon_env=True)
 
-        if phon_env:
-            return surprisal_results, phon_env_surprisal_results
-
-        return surprisal_results, None
 
     def marginalize_over_phon_env_surprisal(self, phon_env_surprisal_dict, ngram_size=1):
         """Converts a phon env surprisal dictionary into a vanilla surprisal dictionary by marginalizing over phon envs"""
@@ -1638,7 +1469,7 @@ class PhonCorrelator:
 
         return self.low_coverage_phones
 
-    def noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
+    def compute_noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
@@ -1663,80 +1494,31 @@ class PhonCorrelator:
         self.reset_seed()
 
         if save:
-            key = (self.lang2_name, eval_func, sample_size, seed)
-            self.lang1.noncognate_thresholds[key] = noncognate_scores
+            key = (eval_func, sample_size, seed)
+            self.noncognate_thresholds[key] = noncognate_scores
 
         return noncognate_scores
 
-    def log_phoneme_pmi(self, outfile=None, threshold=0.0001, sep='\t'):
-        # Save calculated PMI values to file
-        if outfile is None:
-            outfile = os.path.join(self.phon_corr_dir, 'phonPMI.tsv')
+    def log_phoneme_pmi(self, threshold=0.0001):
+        write_phoneme_pmi_report(
+            self.pmi_results,
+            outfile=os.path.join(self.phon_corr_dir, 'phonPMI.tsv'),
+            threshold=threshold,
+        )
 
-        # Save all segment pairs with non-zero PMI values to file
-        # Skip extremely small decimals that are close to zero
-        lines = []
-        for seg1 in self.pmi_dict.get_primary_keys():
-            for seg2 in self.pmi_dict.get_secondary_keys(seg1):
-                pmi_val = round(self.pmi_dict.get_value(seg1, seg2), 3)
-                if abs(pmi_val) > threshold:
-                    line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
-                    lines.append(line)
-        # Sort PMI in descending order, then by phone pair
-        lines = sorted(lines, key=lambda line: (float(line[-1]), line[0], line[1]), reverse=True)
-        lines = '\n'.join([sep.join(line) for line in lines])
-
-        with open(outfile, 'w') as f:
-            header = sep.join(['Phone1', 'Phone2', 'PMI'])
-            f.write(f'{header}\n{lines}')
-
-    def log_phoneme_surprisal(self, outfile=None, sep='\t', phon_env=True, ngram_size=1):
-        if outfile is None:
-            if phon_env:
-                outfile = os.path.join(self.phon_corr_dir, 'phonEnvSurprisal.tsv')
-            else:
-                outfile = os.path.join(self.phon_corr_dir, 'phonSurprisal.tsv')
-        outdir = os.path.abspath(os.path.dirname(outfile))
-        os.makedirs(outdir, exist_ok=True)
-
+    def log_phoneme_surprisal(self, phon_env=True, ngram_size=1):
         if phon_env:
-            surprisal_dict = self.phon_env_surprisal_dict
+            outfile = os.path.join(self.phon_corr_dir, 'phonEnvSurprisal.tsv')
+            surprisal_results = self.phon_env_surprisal_results
         else:
-            surprisal_dict = self.surprisal_dict[ngram_size]
-
-        lines = []
-        surprisal_dict, oov_value = prune_oov_surprisal(surprisal_dict)
-        oov_value = round(oov_value, 3)
-        for seg1 in surprisal_dict:
-            for seg2 in surprisal_dict[seg1]:
-                if ngram_size > 1:
-                    raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
-                if phon_env:
-                    seg1_str, phon_env = ngram2log_format(seg1, phon_env=True)
-                else:
-                    seg1_str = ngram2log_format(seg1, phon_env=False)
-                lines.append([
-                    seg1_str,
-                    ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
-                    str(abs(round(surprisal_dict[seg1][seg2], 3))),
-                    str(oov_value)
-                    ]
-                )
-                if phon_env:
-                    lines[-1].insert(1, phon_env)
-
-        # Sort by phone1 (by phon env if relevant) and then by surprisal in ascending order
-        if phon_env:
-            lines = sorted(lines, key=lambda x: (x[0], x[1], float(x[3]), x[2]), reverse=False)
-        else:
-            lines = sorted(lines, key=lambda x: (x[0], float(x[2]), x[1]), reverse=False)
-        lines = '\n'.join([sep.join(line) for line in lines])
-        with open(outfile, 'w') as f:
-            header = ['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed']
-            if phon_env:
-                header.insert(1, "PhonEnv")
-            header = sep.join(header)
-            f.write(f'{header}\n{lines}')
+            outfile = os.path.join(self.phon_corr_dir, 'phonSurprisal.tsv')
+            surprisal_results = self.surprisal_results[ngram_size]
+        write_phoneme_surprisal_report(
+            surprisal_results=surprisal_results,
+            outfile=outfile,
+            phon_env=phon_env,
+            ngram_size=ngram_size,
+        )
 
     def log_sample(self, sample, sample_n, seed=None):
         if seed is None:
@@ -1751,106 +1533,19 @@ class PhonCorrelator:
         sample_log += '\n'.join(sample)
         return sample_log
 
-    def write_sample_log(self, sample_logs, log_file):
-        log_dir = os.path.abspath(os.path.dirname(log_file))
-        os.makedirs(log_dir, exist_ok=True)
-        content = '\n\n'.join([sample_logs[sample_n] for sample_n in range(len(sample_logs))])
-        with open(log_file, 'w') as f:
-            f.write(content)
-
-    def log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
-        iter_log = []
-        if method == 'surprisal':
-            assert same_meaning_alignments is not None
-
-            def get_word_pairs(indices, lst):
-                aligns = [lst[i] for i in indices]
-                pairs = [(align.word1, align.word2) for align in aligns]
-                return pairs
-
-            qualifying = get_word_pairs(qualifying_words[iteration], same_meaning_alignments)
-            prev_qualifying = get_word_pairs(qualifying_words[iteration - 1], same_meaning_alignments)
-            disqualified = get_word_pairs(disqualified_words[iteration], same_meaning_alignments)
-            prev_disqualified = get_word_pairs(disqualified_words[iteration - 1], same_meaning_alignments)
-        else:
-            qualifying = qualifying_words[iteration]
-            prev_qualifying = qualifying_words[iteration - 1]
-            disqualified = disqualified_words[iteration]
-            prev_disqualified = disqualified_words[iteration - 1]
-        iter_log.append(f'Iteration {iteration}')
-        iter_log.append(f'\tQualified: {len(qualifying)}')
-        iter_log.append(f'\tDisqualified: {len(disqualified)}')
-        added = set(qualifying) - set(prev_qualifying)
-        iter_log.append(f'\tAdded: {len(added)}')
-        for word1, word2 in sort_wordlist(added):
-            iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
-        removed = set(disqualified) - set(prev_disqualified)
-        iter_log.append(f'\tRemoved: {len(removed)}')
-        for word1, word2 in sort_wordlist(removed):
-            iter_log.append(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/')
-
-        iter_log = '\n'.join(iter_log)
-
-        return iter_log
-
-    def write_iter_log(self, iter_logs, log_file):
-        log_dir = os.path.abspath(os.path.dirname(log_file))
-        os.makedirs(log_dir, exist_ok=True)
-        with open(log_file, 'w') as f:
-            f.write(f'Same meaning pairs: {len(self.same_meaning)}\n')
-            for n in iter_logs:
-                iter_log = '\n\n'.join(iter_logs[n][:-1])
-                f.write(f'****SAMPLE {n+1}****\n')
-                f.write(iter_log)
-                final_qualifying, final_disqualified = iter_logs[n][-1]
-                f.write('\n\nFinal qualifying:\n')
-                for word1, word2 in sort_wordlist(final_qualifying):
-                    f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
-                f.write('\nFinal disqualified:\n')
-                for word1, word2 in sort_wordlist(final_disqualified):
-                    f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
-                f.write('\n\n-------------------\n\n')
-
-    def log_alignments(self, alignments, align_log):
+    def log_alignments(self, alignments):
         for alignment in alignments:
-            align_log[alignment.key] = alignment
+            self.align_log[alignment.key] = alignment
 
-    def write_alignments_log(self, alignment_log, log_file):
-        sorted_alignment_keys = sorted(alignment_log.keys())
-        with open(log_file, 'w') as f:
-            for key in sorted_alignment_keys:
-                f.write(f'{key}\n')
-                alignment = alignment_log[key]
-                align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
-                f.write(f'{align_str}\n')
-                f.write('\n-------------------\n\n')
-
-    def write_phon_corr_report(self, corr, outfile, type, min_prob=0.05):
-        lines = []
-        corr, _ = prune_oov_surprisal(corr)
-        l1_phons = sorted([p for p in corr if self.gap_ch not in p], key=lambda x: Ngram(x).string)
-        for p1 in l1_phons:
-            p2_candidates = corr[p1]
-            if len(p2_candidates) > 0:
-                p2_candidates = dict_tuplelist(p2_candidates, reverse=True)
-                for p2, score in p2_candidates:
-                    if type == 'surprisal':
-                        prob = surprisal_to_prob(score)  # turn surprisal value into probability
-                        if prob >= min_prob:
-                            p1 = Ngram(p1).string
-                            p2 = Ngram(p2).string
-                            line = [p1, p2, str(round(prob, 3))]
-                            lines.append(line)
-                    else:
-                        raise NotImplementedError  # not implemented for PMI
-        # Sort by corr value, then by phone string if values are equal
-        lines.sort(key=lambda x: (float(x[-1]), x[0], x[1]), reverse=True)
-        lines = ['\t'.join(line) for line in lines]
-        header = '\t'.join([self.lang1_name, self.lang2_name, 'probability'])
-        lines = '\n'.join(lines)
-        content = '\n'.join([header, lines])
-        with open(outfile, 'w') as f:
-            f.write(f'{content}')
+    def write_phon_corr_report(self, corr, outfile, corr_type):
+        write_phon_corr_report(
+            corr=corr,
+            corr_type=corr_type,
+            outfile=outfile,
+            lang1_name=self.lang1_name,
+            lang2_name=self.lang1_name,
+            gap_ch=self.gap_ch,
+        )
 
 
 @lru_cache(maxsize=None)
@@ -1867,3 +1562,26 @@ def get_phonEnv_weight(phonEnv):
     weight += len(prefix)
     weight += len(suffix)
     return weight
+
+
+def get_phone_correlator(lang1,
+                         lang2,
+                         phone_correlators_index,
+                         wordlist=None,
+                         log_outdir=None,
+                         seed=1,
+                         ):
+    """Retrieve previously initialized PhonCorrelator or create a new instance if not yet initialized."""
+    key = (lang1.name, lang2.name, wordlist, seed)
+    if key not in phone_correlators_index:
+        phone_correlators_index[key] = PhonCorrelator(
+            lang1=lang1,
+            lang2=lang2,
+            wordlist=wordlist,
+            #gap_ch=self.alignment_params.get('gap_ch', ALIGNMENT_PARAM_DEFAULTS['gap_ch']),
+            #pad_ch=self.alignment_params.get('pad_ch', ALIGNMENT_PARAM_DEFAULTS['pad_ch']),
+            seed=seed,
+            log_outdir=log_outdir,
+        )
+    correlator = phone_correlators_index[key]
+    return correlator, phone_correlators_index

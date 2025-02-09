@@ -1,15 +1,17 @@
-import importlib
 import logging
 from collections.abc import Iterable
 
-from constants import (END_PAD_CH, GAP_CH_DEFAULT, NULL_CH_DEFAULT,
-                       PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH)
+from constants import (ALIGNED_PAIR_DELIMITER, ALIGNMENT_KEY_REGEX,
+                       ALIGNMENT_POSITION_DELIMITER, END_PAD_CH,
+                       GAP_CH_DEFAULT, NULL_CH_DEFAULT, PAD_CH_DEFAULT,
+                       SEG_JOIN_CH, START_PAD_CH)
 from phonUtils.phonEnv import get_phon_env
 from utils import PhonemeMap
+from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
 from utils.sequence import (Ngram, PhonEnvNgram, end_token, flatten_ngram,
                             pad_sequence, start_token)
-from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
 from utils.utils import validate_class
+from utils.word import Word
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
@@ -17,7 +19,16 @@ logger = logging.getLogger(__name__)
 
 def get_align_key(word1, word2):
     """Generate an alignment key string representing the IPA strings of the words to be aligned."""
-    key = f'/{word1.ipa}/ - /{word2.ipa}/'
+    def _get_word_key(word):
+        if isinstance(word, str):
+            return word
+        if isinstance(word, Word):
+            return word.ipa
+        else:
+            raise TypeError
+    word1_key = _get_word_key(word1)
+    word2_key = _get_word_key(word2)
+    key = f'/{word1_key}/ - /{word2_key}/'
     return key
 
 
@@ -25,43 +36,43 @@ class Alignment:
     def __init__(self,
                  seq1, seq2,
                  align_costs: PhonemeMap,
-                 lang1=None,
-                 lang2=None,
                  gap_ch=GAP_CH_DEFAULT,
                  gop=-5,
                  pad_ch=PAD_CH_DEFAULT,
                  pad_n=1,
                  allow_complex=True,
                  phon_env=False,
+                 override_alignment=None,
+                 override_seq_map=None,
+                 override_cost=None,
                  **kwargs
                  ):
         """Produces a pairwise alignment of two phone sequences.
 
         Args:
-            seq1 (phyloLing.Word | str): First phone sequence.
-            seq2 (phyloLing.Word | str): Second phone sequence.
+            seq1 (Word | str): First phone sequence.
+            seq2 (Word | str): Second phone sequence.
             align_costs (PhonemeMap): Dictionary of alignment costs or scores.
-            lang1 (phyloLing.Language, optional): Language of seq1.
-            lang2 (phyloLing.Language, optional): Language of seq2.
             gap_ch (str, optional): Gap character.
             gop (int, optional): Default gap opening penalty.
             pad_ch (str, optional): Pad character.
             pad_n (int, optional): Number of padding units to add to beginning and end of sequences.
             allow_complex (bool, optional): Allow complex alignments instead of only simple one-to-one alignments.
             phon_env (bool, optional): Adds phonological environment to alignment.
+            override_alignment (list): Precomputed alignment to use instead of dynamically computing a new alignment from costs.
+            override_seq_map (tuple): Precomputed sequence map associated with precomputed alignment.
+            override_cost (float): Precomputed alignment cost associated with precomputed alignment.
         """
 
         # Verify that input arguments are of the correct types
-        self.validate_args(seq1, seq2, lang1, lang2)
+        self.validate_args(seq1, seq2)
+
+        # Set alignment key
+        self.key = get_align_key(seq1, seq2)
 
         # Prepare the input sequences for alignment
-        self.seq1, self.word1 = self.prepare_seq(seq1, lang1)
-        self.seq2, self.word2 = self.prepare_seq(seq2, lang2)
-        self.key = get_align_key(self.word1, self.word2)
-
-        # Set languages
-        self.lang1 = lang1
-        self.lang2 = lang2
+        self.seq1 = self.prepare_seq(seq1)
+        self.seq2 = self.prepare_seq(seq2)
 
         # Designate alignment parameters
         self.gap_ch = gap_ch
@@ -72,17 +83,25 @@ class Alignment:
         self.align_costs: PhonemeMap = align_costs
         self.kwargs = kwargs
 
-        # Perform alignment and parse results
-        self.alignment, self.seq_map, self.cost = self.align(
-            allow_complex=allow_complex,
-            pad_n=pad_n,
-        )
-        self.length = len(self.alignment)
-        self.seq_map = self.validate_seq_map(*self.seq_map)
+        if override_alignment is not None:
+            # Load precomputed alignment; at least seq map must also be specified
+            assert override_seq_map is not None
+            self.alignment = override_alignment
+            self.seq_map = override_seq_map
+            self.cost = override_cost
+            self.length = len(self.alignment)
+        else:
+            # Standard: Perform alignment and parse results
+            self.alignment, self.seq_map, self.cost = self.align(
+                allow_complex=allow_complex,
+                pad_n=pad_n,
+            )
+            self.length = len(self.alignment)
+            self.seq_map = self.validate_seq_map(*self.seq_map)
 
-        # Compact boundary aligned gaps
-        self.alignment = self.compact_boundary_gaps(self.alignment)
-        self.update()
+            # Compact boundary aligned gaps
+            self.alignment = self.compact_boundary_gaps(self.alignment)
+            self.update()
 
         # Phonological environment alignment
         self.phon_env = phon_env
@@ -91,23 +110,16 @@ class Alignment:
         else:
             self.phon_env_alignment = None
 
-    def validate_args(self, seq1, seq2, lang1, lang2):
+    def validate_args(self, seq1, seq2):
         """Verifies that all input arguments are of the correct types"""
-        phyloLing = importlib.import_module('phyloLing')
-        validate_class((seq1,), ((phyloLing.Word, str),))
-        validate_class((seq2,), ((phyloLing.Word, str),))
-        for lang in (lang1, lang2):
-            if lang:  # skip if None
-                validate_class((lang,), (phyloLing.Language,))
+        validate_class((seq1,), ((Word, str),))
+        validate_class((seq2,), ((Word, str),))
 
-    def prepare_seq(self, seq, lang):
-        phyloLing = importlib.import_module('phyloLing')
-        if isinstance(seq, phyloLing.Word):
-            word1 = seq
-        elif isinstance(seq, str):
-            word1 = phyloLing.Word(seq, language=lang)
-
-        return word1.segments, word1
+    def prepare_seq(self, seq):
+        if isinstance(seq, Word):
+            return seq.segments
+        else:
+            raise TypeError("Expected seq to be a Word object")  # TODO need to adjust validate_args
 
     def align(self, allow_complex=True, pad_n=1):
         """Align segments of two words word1 with segments of word2 according to an extended Needleman-Wunsch algorithm.
@@ -598,10 +610,6 @@ class ReversedAlignment(Alignment):
         validate_class((alignment,), (Alignment,))
         self.seq1 = alignment.seq2
         self.seq2 = alignment.seq1
-        self.word1 = alignment.word2
-        self.word2 = alignment.word1
-        self.lang1 = alignment.lang2
-        self.lang2 = alignment.lang1
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.pad_ch = alignment.pad_ch
@@ -728,13 +736,21 @@ def visual_align(alignment, gap_ch=GAP_CH_DEFAULT, null=NULL_CH_DEFAULT, phon_en
             else:
                 a.append(f'{seg1}-{null}')
 
-    return ' / '.join(a)
+    return ALIGNMENT_POSITION_DELIMITER.join(a)
 
 
-def undo_visual_align(visual_alignment, gap_ch=GAP_CH_DEFAULT):
+def undo_visual_align(visual_alignment, gap_ch=GAP_CH_DEFAULT, undo_ngrams=True):
     """Reverts a visual alignment to a list of tuple segment pairs"""
-    seg_pairs = visual_alignment.split(' / ')
-    seg_pairs = [tuple(pair.split(gap_ch)) for pair in seg_pairs]
+    seg_pairs = visual_alignment.split(ALIGNMENT_POSITION_DELIMITER)
+    seg_pairs = [tuple(pair.split(ALIGNED_PAIR_DELIMITER)) for pair in seg_pairs]
+    # Replace null character with gap character
+    seg_pairs = [
+        (left.replace(NULL_CH_DEFAULT, gap_ch), right.replace(NULL_CH_DEFAULT, gap_ch))
+        for left, right in seg_pairs
+    ]
+    seg_pairs = [(Ngram(left), Ngram(right)) for left, right in seg_pairs]
+    if undo_ngrams:
+        seg_pairs = [(left.undo(), right.undo()) for left, right in seg_pairs]
     return seg_pairs
 
 
@@ -746,3 +762,47 @@ def flatten_tuple(nested_tuple):
         else:
             flattened.append(item)
     return flattened
+
+
+def init_precomputed_alignment(alignment,
+                               align_key,
+                               seq_map,
+                               cost,
+                               lang1,
+                               lang2,
+                               gap_ch=GAP_CH_DEFAULT,
+                               pad_ch=PAD_CH_DEFAULT,
+                               **kwargs):
+    """Creates an Alignment object from a precomputed alignment."""
+    # Convert alignment string to list of aligned Ngrams
+    if isinstance(alignment, str):
+        alignment = undo_visual_align(alignment, gap_ch=gap_ch, undo_ngrams=False)
+    else:
+        alignment = [(Ngram(left), Ngram(right)) for left, right in alignment]
+  
+    # Create dummy align cost map
+    align_costs = PhonemeMap()
+
+    # Extract IPA strings from alignment key
+    word1 = ALIGNMENT_KEY_REGEX.sub(r"\1", align_key)
+    word2 = ALIGNMENT_KEY_REGEX.sub(r"\2", align_key)
+    word1 = Word(word1, transcription_parameters=lang1.transcription_params)
+    word2 = Word(word2, transcription_parameters=lang2.transcription_params)
+    
+    # Extract segments from aligned Ngrams
+    # (needs to occur after sequence extraction in order to enable filtering by boundary/gap token)
+    alignment = [(left.undo(), right.undo()) for left, right in alignment]
+    
+    alignment = Alignment(
+        seq1=word1,
+        seq2=word2,
+        override_alignment=alignment,
+        override_seq_map=seq_map,
+        override_cost=cost,
+        align_costs=align_costs,
+        gap_ch=gap_ch,
+        pad_ch=pad_ch,
+        **kwargs
+    )
+    
+    return alignment

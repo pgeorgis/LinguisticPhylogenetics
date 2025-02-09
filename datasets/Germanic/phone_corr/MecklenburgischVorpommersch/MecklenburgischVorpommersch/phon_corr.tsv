@@ -3,12 +3,14 @@ Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch	probability
 ˈʊ	ˈʊ	1.0
 ˈɪ	ˈɪ	1.0
 ˈɛː	ˈɛː	1.0
+ˈɛɪ̯	ˈɛɪ̯	1.0
 ˈɛ	ˈɛ	1.0
 ˈɔʏ̯	ˈɔʏ̯	1.0
 ˈɔ	ˈɔ	1.0
 ˈɒː	ˈɒː	1.0
 ˈœː	ˈœː	1.0
 ˈœ	ˈœ	1.0
+ˈøː	ˈøː	1.0
 ˈyː	ˈyː	1.0
 ˈuː	ˈuː	1.0
 ˈoː	ˈoː	1.0
@@ -23,6 +25,8 @@ Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch	probability
 ɾ	ɾ	1.0
 ɪ	ɪ	1.0
 ɣ̊	ɣ̊	1.0
+ɣ	ɣ	1.0
+ɡ̊	ɡ̊	1.0
 ɡ	ɡ	1.0
 ŋ	ŋ	1.0
 ç	ç	1.0
@@ -37,9 +41,10 @@ tʰ	tʰ	1.0
 t	t	1.0
 s	s	1.0
 r	r	1.0
+pʰ	pʰ	1.0
 p	p	1.0
-nː	nː	1.0
 n_t	n_t	1.0
+n_n	n_n	1.0
 n	n	1.0
 m	m	1.0
 l	l	1.0
@@ -52,3 +57,4 @@ d̥	d̥	1.0
 d_n	d_n	1.0
 d	d	1.0
 b	b	1.0
+ae̯	ae̯	1.0

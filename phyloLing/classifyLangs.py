@@ -20,13 +20,7 @@ from wordDist import (HYBRID_DIST_KEY, LEVENSHTEIN_DIST_KEY,
 
 from phyloLing import load_family
 
-# Loglevel mapping
-log_levels = {
-    'DEBUG': logging.DEBUG,
-    'INFO': logging.INFO,
-    'WARNING': logging.WARNING,
-    'ERROR': logging.ERROR,
-}
+logger = logging.getLogger(__name__)
 
 # Valid parameter values for certain parameters
 valid_params = {
@@ -58,7 +52,7 @@ aux_func_map = {
 } # TODO unify these with function_map
 
 
-def validate_params(params, valid_params, logger):
+def validate_params(params, valid_params):
     for section_name in valid_params:
         for param_name in valid_params[section_name]:
             param_value = params[section_name][param_name]
@@ -79,7 +73,7 @@ def validate_params(params, valid_params, logger):
         params['family']['outdir'] = outdir
     else:
         outdir = os.path.abspath(params['family']['outdir'])
-    logger.debug(f'Experiment outdir: {outdir}')
+    logger.info(f'Experiment outdir: {outdir}')
 
     # Designate global transcription parameter defaults
     for transcription_param in TRANSCRIPTION_PARAM_DEFAULTS:
@@ -167,12 +161,8 @@ def load_precalculated_word_scores(distance_dir, family, dist_keys, excluded_doc
     return precalculated_word_scores
 
 
-def main(config, loglevel='INFO') -> dict:
+def main(config) -> dict:
     start_time, start_timestamp = create_timestamp()
-
-    # Configure the logger
-    logging.basicConfig(level=log_levels[loglevel], format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
-    logger = logging.getLogger(__name__)
 
     # Load parameters from config file
     params: dict = load_config(config)
@@ -187,7 +177,7 @@ def main(config, loglevel='INFO') -> dict:
             if param_name not in params[section_name]:
                 params[section_name][param_name] = default_params[section_name][param_name]
     # Validate parameters
-    validate_params(params, valid_params, logger)
+    validate_params(params, valid_params)
 
     # Add git commmit hash to run config
     params["run_info"]["version"] = get_git_commit_hash()
@@ -249,16 +239,21 @@ def main(config, loglevel='INFO') -> dict:
     transcription_params["global"]["min_phone_instances"] = max(
         transcription_params["global"]["min_phone_instances"], phon_corr_params['min_corr']
     )
-    family = load_family(family_params['name'],
-                         family_params['file'],
-                         outdir=family_params['outdir'],
-                         excluded_doculects=family_params['exclude'],
-                         included_doculects=family_params['include'],
-                         min_amc=family_params['min_amc'],
-                         transcription_params=transcription_params,
-                         alignment_params=alignment_params,
-                         logger=logger
-                         )
+    family, family_index = load_family(
+        family_params['name'],
+        family_params['file'],
+        outdir=family_params['outdir'],
+        excluded_doculects=family_params['exclude'],
+        included_doculects=family_params['include'],
+        min_amc=family_params['min_amc'],
+        transcription_params=transcription_params,
+        alignment_params=alignment_params,
+    )
+    for function_key in function_map:
+        function_map[function_key].set(
+            'family_index',
+            family_index[family.name]
+        )
 
     # Print some summary info about the loaded dataset
     logger.info(f'Loaded {len(family.languages)} doculects.')
@@ -289,6 +284,10 @@ def main(config, loglevel='INFO') -> dict:
                     gold=False,
                     excepted=phon_corr_params['refresh'],
                 )
+
+        # Load previous alignments
+        logger.info(f'Loading {family.name} phonetic sequence alignments...')
+        family.load_alignments(excepted=phon_corr_params['refresh'])
 
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
@@ -337,7 +336,6 @@ def main(config, loglevel='INFO') -> dict:
             exclude_synonyms=eval_params['exclude_synonyms'],
             calibrate=eval_params['calibrate'],
             min_similarity=eval_params['min_similarity'],
-            logger=logger,
         )
     elif eval_params['similarity'] == 'binary':
         dist_func = binary_cognate_sim
@@ -451,6 +449,5 @@ def main(config, loglevel='INFO') -> dict:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Loads a lexical dataset in CLDF format and produces a phylogenetic tree according to user specifications')
     parser.add_argument('config', help='Path to config.yml file')
-    parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
     args = parser.parse_args()
-    main(args.config, args.loglevel)
+    main(args.config)
