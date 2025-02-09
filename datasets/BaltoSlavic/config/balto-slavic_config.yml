@@ -47,5 +47,6 @@ tree:
     linkage: nj
     root: Proto-Balto-Slavic
     reference: [
-        "datasets/BaltoSlavic/trees/ref/reference_001.tre"
+        "datasets/BaltoSlavic/trees/ref/reference_001.tre",
+        "datasets/BaltoSlavic/trees/ref/reference_002.tre",
     ]
