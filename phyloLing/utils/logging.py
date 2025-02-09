@@ -20,6 +20,13 @@ def ngram2log_format(ngram, phon_env=False):
         return Ngram(ngram).string
 
 
+def write_sample_log(sample_logs, log_file):
+    make_outdir(log_file)
+    content = '\n\n'.join([sample_logs[sample_n] for sample_n in range(len(sample_logs))])
+    with open(log_file, 'w') as f:
+        f.write(content)
+
+
 def write_alignments_log(alignment_log, log_file):
     """Write an alignment log."""
     sorted_alignment_keys = sorted(alignment_log.keys())

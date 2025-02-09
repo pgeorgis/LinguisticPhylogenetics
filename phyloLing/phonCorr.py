@@ -9,9 +9,8 @@ from statistics import mean, stdev
 from typing import Iterable, Self
 
 import numpy as np
-from constants import (END_PAD_CH, GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT,
-                       PAD_CH_DEFAULT, PHONE_CORRELATORS_INDEX_KEY,
-                       SEG_JOIN_CH, START_PAD_CH)
+from constants import (END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT,
+                       PHONE_CORRELATORS_INDEX_KEY, SEG_JOIN_CH, START_PAD_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 from phonAlign import Alignment
 from phonUtils.phonEnv import phon_env_ngrams
@@ -25,7 +24,8 @@ from utils.information import (get_oov_val, pointwise_mutual_info,
                                prune_oov_surprisal, surprisal,
                                surprisal_to_prob)
 from utils.logging import (log_phoneme_pmi, log_phoneme_surprisal,
-                           write_alignments_log, write_phon_corr_iteration_log)
+                           write_alignments_log, write_phon_corr_iteration_log,
+                           write_sample_log)
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
                             filter_out_invalid_ngrams, pad_sequence,
                             start_token)
@@ -487,7 +487,7 @@ class PhonCorrelator:
         # Write sample log (only if new samples were drawn)
         if log_samples and new_samples:
             sample_log_file = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name, 'samples.log')
-            self.write_sample_log(sample_logs, sample_log_file)
+            write_sample_log(sample_logs, sample_log_file)
 
         return samples
 
@@ -1580,13 +1580,6 @@ class PhonCorrelator:
         sample_log = f'SAMPLE: {sample_n}\nSEED: {seed}\n'
         sample_log += '\n'.join(sample)
         return sample_log
-
-    def write_sample_log(self, sample_logs, log_file):
-        log_dir = os.path.abspath(os.path.dirname(log_file))
-        os.makedirs(log_dir, exist_ok=True)
-        content = '\n\n'.join([sample_logs[sample_n] for sample_n in range(len(sample_logs))])
-        with open(log_file, 'w') as f:
-            f.write(content)
 
     def log_iteration(self, iteration, qualifying_words, disqualified_words, method=None, same_meaning_alignments=None):
         iter_log = []
