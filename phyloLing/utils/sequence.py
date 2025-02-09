@@ -5,7 +5,7 @@ from statistics import mean
 
 from constants import END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH
 from phonUtils.phonEnv import PHON_ENV_REGEX
-
+from phonUtils.segment import _toSegment
 
 class Ngram:
     def __init__(self, ngram, lang=None, seg_sep=SEG_JOIN_CH):
@@ -167,6 +167,41 @@ def generate_ngrams(seq, ngram_size, pad_ch=PAD_CH_DEFAULT, as_ngram=True):
         else:
             ngrams.append(ngram.undo())
     return ngrams
+
+
+@lru_cache(maxsize=None)
+def is_valid_phon_ngram_unit(ngram, language=None):
+    """Returns boolean value indicating ngram's validity.
+    invalid ngram units:
+    - stress with non-syllabic segment
+    """
+    if not isinstance(ngram, Ngram):
+        ngram = Ngram(ngram)
+    if ngram.size == 1:
+        return True
+
+    # Stress with non-syllabic segment
+    if "ˈ" in ngram.ngram or "ˌ" in ngram.ngram:
+        remaining_segs = [
+            _toSegment(seg)
+            for seg in ngram.ngram
+            if seg not in {"ˈ", "ˌ", start_token(), end_token()}
+        ]
+        syllabic = any(seg.features['syllabic'] == 1 for seg in remaining_segs)
+        if not syllabic and len(remaining_segs) > 0:
+            return False
+
+    #if any(seg in language.tonemes for seg in ngram.ngram):
+    return True
+
+
+def filter_out_invalid_ngrams(ngrams, language=None):
+    """Return filtered valid ngrams from a list of ngrams."""
+    return [
+        ngram
+        for ngram in ngrams
+        if is_valid_phon_ngram_unit(ngram, language=language)
+    ]
 
 
 def score_is_better(score1, score2, maximize_score):

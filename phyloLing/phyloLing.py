@@ -1,3 +1,4 @@
+import ast
 import copy
 import logging
 import os
@@ -12,7 +13,8 @@ import bcubed
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from constants import (ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
+from constants import (ALIGNMENT_DELIMITER, ALIGNMENT_KEY_REGEX,
+                       ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
                        CONCEPT_LABEL, DOCULECT_INDEX_KEY, GLOTTOCODE_LABEL,
                        ID_COLUMN_LABEL, ISO_CODE_LABEL, LANGUAGE_NAME_LABEL,
                        LOAN_LABEL, ORTHOGRAPHY_LABEL,
@@ -21,6 +23,7 @@ from constants import (ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
                        TRANSCRIPTION_PARAM_DEFAULTS)
 from lingDist import get_noncognate_scores
 from matplotlib import pyplot as plt
+from phonAlign import init_precomputed_alignment
 from phonCorr import get_phone_correlator
 from phonUtils.ipaTools import invalid_ch, normalize_ipa_ch, strip_diacritics
 from scipy.cluster.hierarchy import linkage
@@ -146,7 +149,7 @@ class LexicalDataset:
                 lang_id=self.lang_ids[lang],
                 glottocode=self.glottocodes[lang],
                 iso_code=self.iso_codes[lang],
-                doculect_dir=os.path.join(self.phone_corr_dir, path_name),
+                doculect_dir=os.path.join(self.doculects_dir, path_name),
                 data=language_vocab_data[lang],
                 columns=self.columns,
                 transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global']),
@@ -308,6 +311,62 @@ class LexicalDataset:
         mean_nc_score = mean(noncognate_scores)
         nc_score_stdev = stdev(noncognate_scores)
         return mean_nc_score, nc_score_stdev
+
+    def load_alignments(self, excepted=[], **kwargs):
+        """Loads pre-computed phonetic sequence alignments from file."""
+        
+        def parse_alignment_log(alignment_log, lang1, lang2, **kwargs):
+            align_dict = {}
+            with open(alignment_log, "r") as f:
+                f = f.read()
+                alignment_sections = [section.strip() for section in f.split(ALIGNMENT_DELIMITER)]
+                for alignment_section in alignment_sections:
+                    align_key, alignment, seq_map1, seq_map2, cost = alignment_section.split("\n")
+                    seq_map1 = ast.literal_eval(seq_map1)
+                    seq_map2 = ast.literal_eval(seq_map2)
+                    cost = float(re.search(r"[\d\.]+", cost).group())
+                    alignment = init_precomputed_alignment(
+                        alignment.strip(),
+                        align_key,
+                        seq_map=(seq_map1, seq_map2),
+                        cost=cost,
+                        lang1=lang1,
+                        lang2=lang2,
+                        **kwargs
+                    )
+                    align_dict[align_key.strip()] = alignment
+            return align_dict
+        
+        for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
+            if (lang1.name not in excepted) and (lang2.name not in excepted):
+                alignment_file = os.path.join(
+                    self.phone_corr_dir,
+                    lang1.path_name,
+                    lang2.path_name,
+                    "alignments.log",
+                )
+                align_dict = parse_alignment_log(alignment_file, lang1=lang1, lang2=lang2, **kwargs)
+                # Get reverse alignments dict
+                reverse_align_dict = {}
+                for key, alignment in align_dict.items():
+                    reverse_key = ALIGNMENT_KEY_REGEX.sub(r"/\2/ - /\1/", key)
+                    reverse_alignment = alignment.reverse()
+                    reverse_align_dict[reverse_key] = reverse_alignment
+                
+                # Fetch correlators
+                correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
+                    lang1,
+                    lang2,
+                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                    log_outdir=self.phone_corr_dir,
+                )
+                twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
+                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                )
+                
+                # Update correlators with alignments
+                correlator.align_log.update(align_dict)
+                twin.align_log.update(reverse_align_dict)
 
     def load_phoneme_pmi(self, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""

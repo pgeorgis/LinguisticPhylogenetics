@@ -2,7 +2,6 @@ import logging
 import os
 import random
 import re
-from collections import defaultdict
 from functools import lru_cache
 from statistics import mean
 from typing import Self
@@ -11,9 +10,7 @@ from constants import ALIGNMENT_PARAM_DEFAULTS, TRANSCRIPTION_PARAM_DEFAULTS
 from phonUtils.initPhoneData import suprasegmental_diacritics
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
-from utils import PhonemeMap
 from utils.cluster import draw_dendrogram
-from utils.distance import Distance
 from utils.information import calculate_infocontent_of_word, entropy
 from utils.sequence import Ngram, flatten_ngram, pad_sequence
 from utils.string import format_as_variable, strip_ch

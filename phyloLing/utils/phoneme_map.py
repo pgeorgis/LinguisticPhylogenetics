@@ -1,6 +1,9 @@
-from typing import NewType, Tuple
+from collections import defaultdict
+from math import inf
+from statistics import mean
+from typing import Iterable, NewType, Tuple
 
-type Phoneme = NewType('Phoneme', str)
+Phoneme = NewType('Phoneme', str)
 
 type MultiPhoneme = Phoneme | tuple[Phoneme, ...]
 
@@ -153,3 +156,64 @@ class PhonemeMap:
 
     def __len__(self):
         return self.internal_map.length()
+
+
+def average_corrs(corr_dict1: PhonemeMap, corr_dict2: PhonemeMap) -> PhonemeMap:
+    avg_corr: PhonemeMap = PhonemeMap(0)
+    for (seg1, seg2) in corr_dict1.get_key_pairs():
+        avg_corr.set_value(
+            seg1,
+            seg2,
+            mean([corr_dict1.get_value(seg1, seg2), corr_dict2.get_value(seg2, seg1)])
+        )
+    for (seg2, seg1) in corr_dict2.get_key_pairs():
+        if not avg_corr.has_value(seg1, seg2):
+            avg_corr.set_value(
+                seg1,
+                seg2,
+                mean([corr_dict1.get_value(seg1, seg2), corr_dict2.get_value(seg2, seg1)])
+            )
+    return avg_corr
+
+
+def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0, drop_inf=True) -> PhonemeMap:
+    corr1_all = set(corr1 for d in dict_list for corr1 in d.get_primary_keys())
+    corr2_all = {
+        corr1: set(
+            corr2 for d in dict_list
+            for corr2 in d.get_secondary_keys(corr1)
+        )
+        for corr1 in corr1_all
+    }
+    results = PhonemeMap(0)
+    for corr1 in corr1_all:
+        for corr2 in corr2_all[corr1]:
+            vals = []
+            for d in dict_list:
+                value = d.get_value_or_default(corr1, corr2, default)
+                if drop_inf and value not in {-inf, inf}:
+                    vals.append(value)
+                elif not drop_inf:
+                    vals.append(value)
+            if len(vals) > 0:
+                results.set_value(corr1, corr2, mean(vals))
+    return results
+
+
+def reverse_corr_dict(corr_dict: dict) -> dict:
+    if not isinstance(corr_dict, dict):
+        raise ValueError("corr_dict must be a dictionary")
+    reverse = defaultdict(lambda: defaultdict(lambda: 0))
+    for seg1 in corr_dict:
+        for seg2 in corr_dict[seg1]:
+            reverse[seg2][seg1] = corr_dict[seg1][seg2]
+    return reverse
+
+
+def reverse_corr_dict_map(corr_dict: PhonemeMap) -> PhonemeMap:
+    if not isinstance(corr_dict, PhonemeMap):
+        raise ValueError("corr_dict must be a PhonemeMap object")
+    reverse = PhonemeMap(0)
+    for (seg1, seg2) in corr_dict.get_key_pairs():
+        reverse.set_value(seg2, seg1, corr_dict.get_value(seg1, seg2))
+    return reverse

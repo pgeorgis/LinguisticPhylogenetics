@@ -1,9 +1,8 @@
 Upper Sorbian	Upper Sorbian	probability
-β	β	1.0
-ʧ_ɔ	ʧ_ɔ	1.0
+ʨ	ʨ	1.0
 ʧ	ʧ	1.0
 ʦ	ʦ	1.0
-ʤ	ʤ	1.0
+ʥ	ʥ	1.0
 ʒ̊	ʒ̊	1.0
 ʒ	ʒ	1.0
 ʃ	ʃ	1.0
@@ -16,14 +15,15 @@ Upper Sorbian	Upper Sorbian	probability
 ɛ	ɛ	1.0
 ɔ_s	ɔ_s	1.0
 ɔ	ɔ	1.0
+z̥	z̥	1.0
 z	z	1.0
 xʲ	xʲ	1.0
 x	x	1.0
 w	w	1.0
 u	u	1.0
 t	t	1.0
+s_ɪ	s_ɪ	1.0
 s	s	1.0
-r	r	1.0
 pʲ	pʲ	1.0
 p	p	1.0
 o	o	1.0
@@ -39,6 +39,6 @@ e	e	1.0
 d̥	d̥	1.0
 d	d	1.0
 b̥	b̥	1.0
-bʲ	bʲ	1.0
+bʲ	-	1.0
 b	b	1.0
 a	a	1.0

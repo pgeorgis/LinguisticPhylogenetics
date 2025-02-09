@@ -77,7 +77,7 @@ VOWELS
 /ˈɝ/ (0.006)
 	<thirst> /θˈɝst/ "thirst_NOUN"
 	<church> /ʧˈɝʧ/ "church_NOUN_FEM"
-	<thirteen> /θˈɝtːin/ "thirteen_NUM"
+	<thirteen> /θˈɝttin/ "thirteen_NUM"
 
 /ˈɛə̯/ (0.006)
 	<man> /mˈɛə̯n/ "man_NOUN"
@@ -91,7 +91,7 @@ VOWELS
 
 /i/ (0.006)
 	<holy> /hˈoʊ̯ɫi/ "holy_ADJ"
-	<thirteen> /θˈɝtːin/ "thirteen_NUM"
+	<thirteen> /θˈɝttin/ "thirteen_NUM"
 	<honey> /hˈʌni/ "honey_NOUN"
 
 /oʊ̯/ (0.003)
@@ -111,7 +111,7 @@ CONSONANTS
 	<yarn> /jˈɑɹn/ "yarn_NOUN"
 	<nine> /nˈaɪ̯n/ "nine_NUM"
 
-/d/ (0.058)
+/d/ (0.057)
 	<friend> /fɹˈɛnd/ "friend_NOUN"
 	<red> /ɹˈɛd/ "red_ADJ"
 	<bind> /bˈaɪ̯nd/ "bind_VERB"
@@ -176,83 +176,80 @@ CONSONANTS
 	<book> /bˈʊk/ "book_NOUN_FEM"
 	<naked> /nˈeɪ̯kɪd/ "naked_ADJ"
 
-/ɡ/ (0.016)
-	<good> /ɡˈʊd/ "good_ADJ"
-	<guest> /ɡˈɛst/ "guest_NOUN"
-	<hunger> /hˈʌŋɡɚ/ "hunger_NOUN"
-
-/t/ (0.016)
-	<guest> /ɡˈɛst/ "guest_NOUN"
+/t/ (0.018)
+	<star> /stˈɑɹ/ "star_NOUN"
 	<sister> /sˈɪstɚ/ "sister_NOUN"
 	<stone> /stˈoʊ̯n/ "stone_NOUN"
 
+/ɡ/ (0.016)
+	<goat> /ɡˈoʊ̯ʔ/ "goat_NOUN"
+	<guest> /ɡˈɛst/ "guest_NOUN"
+	<goose> /ɡˈus/ "goose_NOUN"
+
 /ʃ/ (0.014)
 	<sharp> /ʃˈɑɹp/ "sharp_ADJ"
-	<shit> /ʃˈɪʔ/ "shit_NOUN"
-	<wish> /wˈɪʃ/ "wish_VERB"
+	<shield> /ʃˈiɫ̩d/ "shield_NOUN"
+	<fresh> /fɹˈɛʃ/ "fresh_ADJ"
 
 /p/ (0.013)
-	<ship> /ʃˈɪp/ "ship_NOUN"
-	<leap> /lˈip/ "leap_VERB"
+	<up> /ˈʌp/ "up_ADV"
 	<sleep> /slˈip/ "sleep_VERB"
+	<speech> /spˈiʧ/ "speech_NOUN_FEM"
 
-/ŋ/ (0.012)
-	<tongue> /tʰˈʌŋ/ "tongue_NOUN"
+/ŋ/ (0.011)
 	<drink> /dɹˈɪŋk/ "drink_VERB"
 	<sing> /sˈɪŋ/ "sing_VERB"
+	<thing> /θˈɪŋ/ "thing_NOUN"
 
-/v/ (0.012)
-	<over> /ˈoʊ̯vɚ/ "over_PREP"
+/v/ (0.011)
 	<eleven> /əlˈɛvən/ "eleven_NUM"
-	<twelve> /tʰwˈɛɫv/ "twelve_NUM"
+	<over> /ˈoʊ̯vɚ/ "over_PREP"
+	<seven> /sˈɛvən/ "seven_NUM"
 
-/tʰ/ (0.012)
-	<twelve> /tʰwˈɛɫv/ "twelve_NUM"
+/tʰ/ (0.011)
 	<toe> /tʰˈoʊ̯/ "toe_NOUN"
 	<tooth> /tʰˈuθ/ "tooth_NOUN"
+	<tear> /tʰˈiɚ/ "tear_NOUN"
 
 /kʰ/ (0.01)
-	<calf> /kʰˈæf/ "calf_NOUN"
 	<ken> /kʰˈɛn/ "ken_VERB"
 	<corn> /kʰˈɔɹn/ "corn_NOUN"
+	<cold> /kʰˈoʊ̯ɫd/ "cold_ADJ"
 
 /ʧ/ (0.008)
 	<thrutch> /θɹˈʌʧ/ "press_VERB"
-	<speech> /spˈiʧ/ "speech_NOUN_FEM"
-	<chicken> /ʧˈɪkɪn/ "chicken_NOUN"
+	<church> /ʧˈɝʧ/ "church_NOUN_FEM"
+	<rich> /ɹˈɪʧ/ "rich_ADJ"
 
 /ð/ (0.007)
-	<other> /ˈʌðɚ/ "other_ADJ"
+	<weather> /wˈɛðɚ/ "weather_NOUN"
+	<feather> /fˈɛðɚ/ "feather_NOUN"
 	<mother> /mˈʌðɚ/ "mother_NOUN"
-	<thou> /ðˈaʊ̯/ "thou_PRON"
 
 /j/ (0.006)
 	<you> /jˈu/ "ye_PRON"
-	<year> /jˈiɚ/ "year_NOUN"
+	<few> /fjˈu/ "few_ADJ"
 	<young> /jˈʌŋ/ "young_NOUN"
 
 /ʤ/ (0.004)
-	<bridge> /bɹˈɪʤ/ "bridge_NOUN"
+	<ridge> /ɹˈɪʤ/ "ridge_NOUN"
 	<midge> /mˈɪʤ/ "midge_NOUN"
-	<edge> /ˈɛʤ/ "edge_NOUN"
+	<bridge> /bɹˈɪʤ/ "bridge_NOUN"
 
 /z/ (0.004)
-	<thousand> /θˈaʊ̯zn̩d/ "thousand_NUM"
+	<freeze> /fɹˈiz/ "freeze_VERB"
 	<nose> /nˈoʊ̯z/ "nose_NOUN"
 	<cheese> /ʧˈiz/ "cheese_NOUN"
 
 /ɾ/ (0.003)
-	<better> /bˈɛɾɚ/ "better_ADJ"
 	<water> /wˈɑɾɚ/ "water_NOUN"
+	<better> /bˈɛɾɚ/ "better_ADJ"
 	<daughter> /dˈɑɾɚ/ "daughter_NOUN"
 
 /pʰ/ (0.003)
-	<path> /pʰˈæθ/ "path_NOUN"
-	<plight> /pʰlˈʌɪ̯ʔ/ "plight_NOUN"
 	<plough> /pʰlˈaʊ̯/ "plough_NOUN"
-
-/tː/ (0.001)
-	<thirteen> /θˈɝtːin/ "thirteen_NUM"
+	<plight> /pʰlˈʌɪ̯ʔ/ "plight_NOUN"
+	<path> /pʰˈæθ/ "path_NOUN"
 
 
 

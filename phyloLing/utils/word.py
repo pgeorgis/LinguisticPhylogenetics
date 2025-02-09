@@ -141,10 +141,11 @@ class Word:
                 return self.total_info_content
             return self.info_content
 
-        if self.doculect_key is None:
+        if self.doculect_key is None and doculect is None:
             raise AssertionError('Doculect must be specified in order to calculate information content.')
         elif doculect is not None:
-            assert doculect.name == self.doculect_key
+            if self.doculect_key is not None:
+                assert doculect.name == self.doculect_key
         else:
             doculect = self.get_doculect(doculect_index)
         self.info_content = doculect.calculate_infocontent(self)

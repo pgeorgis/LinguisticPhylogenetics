@@ -4,7 +4,7 @@ VOWELS
 	<Wäder> /vˈɛːɾæ/ "weather_NOUN"
 	<Brauder> /brˈaʊ̯ɾæ/ "brother_NOUN"
 
-/ˈɪ/ (0.031)
+/ˈɪ/ (0.03)
 	<frisch> /frˈɪʃ/ "fresh_ADJ"
 	<Kind> /kʰˈɪnd̥/ "child_NOUN"
 	<Minsch> /mˈɪnʃ/ "person_NOUN"
@@ -120,15 +120,15 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.091)
-	<seihn> /zˈae̯n/ "see_VERB"
-	<Henn> /hˈɛn/ "hen_NOUN"
-	<Nœt> /nˈœːt/ "nut_NOUN"
+/n/ (0.099)
+	<Minsch> /mˈɪnʃ/ "person_NOUN"
+	<wünschen> /vˈʏnʃn̩/ "wish_VERB"
+	<haten> /hˈaːtn̩/ "hate_VERB"
 
 /l/ (0.057)
+	<Land> /lˈand̥/ "land_NOUN"
 	<Nådel> /nˈɒːdl̩/ "needle_NOUN"
 	<Schlang> /ʃlˈaŋ/ "snake_NOUN"
-	<Wall> /vˈal/ "whale_NOUN"
 
 /t/ (0.047)
 	<witt> /vˈɪt/ "white_ADJ"
@@ -145,17 +145,17 @@ CONSONANTS
 	<drütteihn> /drˈʏtae̯n/ "thirteen_NUM"
 	<Ding> /dˈɪŋ/ "thing_NOUN"
 
-/r/ (0.031)
+/r/ (0.03)
 	<gräun> /ɡrˈɔʏ̯n/ "green_ADJ"
 	<Rok> /rˈaʊ̯k/ "smoke_NOUN"
 	<Brot> /brˈaʊ̯d̥/ "bread_NOUN"
 
-/d̥/ (0.031)
+/d̥/ (0.03)
 	<Blatt> /blˈad̥/ "leaf_NOUN_NEU"
 	<Blaut> /blˈaʊ̯d̥/ "blood_NOUN"
 	<Gott> /ɡˈɔd̥/ "god_NOUN"
 
-/ʃ/ (0.03)
+/ʃ/ (0.029)
 	<Stauhl> /ʃtˈaʊ̯l/ "stool_NOUN"
 	<wünschen> /vˈʏnʃn̩/ "wish_VERB"
 	<Språk> /ʃprˈɒːk/ "speech_NOUN_FEM"
@@ -166,7 +166,7 @@ CONSONANTS
 	<wünschen> /vˈʏnʃn̩/ "wish_VERB"
 
 /f/ (0.027)
-	<finnen> /fˈɪn̩ː/ "find_VERB"
+	<finnen> /fˈɪnn̩/ "find_VERB"
 	<Voss> /fˈɔs/ "fox_NOUN"
 	<Füer> /fˈyːæ/ "fire_NOUN"
 
@@ -215,7 +215,7 @@ CONSONANTS
 	<Schipp> /ʃˈɪp/ "ship_NOUN"
 	<Kopp> /kʰˈɔp/ "head_NOUN"
 
-/tʰ/ (0.011)
+/tʰ/ (0.01)
 	<twintig> /tʰvˈɪntɪç/ "twenty_NUM"
 	<Tähn> /tʰˈɛːn/ "tooth_NOUN"
 	<twölf> /tʰvˈœlf/ "twelve_NUM"
@@ -255,14 +255,9 @@ CONSONANTS
 	<Schwien> /ʃwˈiːn/ "swine_NOUN"
 	<Sweet> /ʃwˈae̯t/ "sweat_NOUN"
 
-/nː/ (0.004)
-	<binnen> /bˈɪn̩ː/ "bind_VERB"
-	<kœnen> /kʰˈœːn̩ː/ "can_VERB"
-	<kennen> /kʰˈɛn̩ː/ "ken_VERB"
-
 /ɣ̊/ (0.002)
-	<Barch> /bˈaːɣ̊/ "mountain_NOUN"
 	<Dach> /dˈaɣ̊/ "day_NOUN"
+	<Barch> /bˈaːɣ̊/ "mountain_NOUN"
 
 /ɣ/ (0.001)
 	<negen> /nˈɛːɣn̩/ "nine_NUM"

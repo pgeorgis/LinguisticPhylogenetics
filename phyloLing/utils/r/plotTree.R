@@ -1,18 +1,12 @@
 #!/usr/bin/env Rscript
+source("phyloLing/utils/r/dependencies.R")
 
-# Function to check if a package is installed and install it if necessary
-install_if_needed <- function(package_name) {
-    if (!require(package_name, quietly = TRUE, character.only = TRUE)) {
-        install.packages(package_name, repos = "https://cran.r-project.org")
-        suppressPackageStartupMessages(library(package_name, character.only = TRUE))
-    } else {
-        suppressPackageStartupMessages(library(package_name, character.only = TRUE))
-    }
-}
-
-install_if_needed("ape")
-install_if_needed("phytools")
-install_if_needed("stringr")
+install_packages_if_needed(c(
+	"phytools",
+	"ape",
+	"stringr",
+	"ggplot2"
+))
 
 #Function for modifying format of tree tip labels (doculect names) 
 #in order to match how they are written in the CSV

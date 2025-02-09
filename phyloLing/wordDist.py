@@ -7,7 +7,7 @@ from asjp import ipa2asjp
 from constants import (DOCULECT_INDEX_KEY, PAD_CH_DEFAULT,
                        PHONE_CORRELATORS_INDEX_KEY)
 from nltk import edit_distance
-from phonAlign import Alignment, Gap, get_alignment_iter
+from phonAlign import Alignment, Gap, get_align_key, get_alignment_iter
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
@@ -100,12 +100,27 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
     lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
     if lang1 is not None and lang2 is not None:
 
+        # Retrieve phone correlator and check whether this word pair has already been aligned
+        # If so, return this saved alignment
+        from phonCorr import get_phone_correlator
+        correlator, _ = get_phone_correlator(
+            lang1,
+            lang2,
+            phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
+        )
+        align_log = correlator.align_log
+        key = get_align_key(word1.ipa, word2.ipa)
+        if key in align_log:
+            return align_log[key]
+
         # Check whether phoneme PMI has been calculated for this language pair
         # If not, then calculate it; if so, then retrieve it
-        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2, family_index)
+        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2, family_index, **kwargs)
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
         alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
+        # Add new alignment to alignment log
+        correlator.align_log[key] = alignment
 
     # Perform phonetic alignment without PMI support
     else:
@@ -114,7 +129,7 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
     return alignment
 
 
-def handle_word_pair_input(input1, input2, family_index):
+def handle_word_pair_input(input1, input2, family_index):  # TODO remove this function, used only for phonetic_dist
     """Check if a pair of word inputs or if already aligned word pair; align if not done already."""
     if isinstance(input1, Alignment):
         alignment = input1
@@ -329,9 +344,10 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float,
     return penalty
 
 
-def phonological_dist(word1: Word | Alignment,
-                      word2: Word=None,
-                      family_index=None, # TODO this should not be none
+def phonological_dist(word1: Word,
+                      word2: Word,
+                      family_index,
+                      alignment=None,
                       sim_func=phone_sim,
                       penalize_sonority=True,
                       context_reduction=False,
@@ -341,8 +357,10 @@ def phonological_dist(word1: Word | Alignment,
     f"""Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
 
     Args:
-        word1 (Word or Alignment): first Word object, or an Alignment object
-        word2 (Word): second Word object. Defaults to None.
+        word1 (Word): first Word object
+        word2 (Word): second Word object
+        alignment (Alignment): optional Alignment object
+        family_index (dict): Family index dict for retrieving Doculect and PhonCorrelator objects.
         sim_func (_type_, optional): Phonetic similarity function. Defaults to {sim_func}.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to {penalize_sonority}.
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to {context_reduction}.
@@ -352,9 +370,8 @@ def phonological_dist(word1: Word | Alignment,
     Returns:
         float: phonological distance value
     """
-
-    # If word2 is None, we assume word1 argument is actually an aligned word pair
-    word1, word2, alignment = handle_word_pair_input(word1, word2, family_index)
+    if alignment is None:
+        alignment = prepare_alignment(word1, word2, family_index)
     gap_ch = alignment.gap_ch
     pad_ch = alignment.pad_ch
     alignment_obj = alignment
@@ -481,8 +498,8 @@ def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, no
         **kwargs
     )
 
-    # Generate alignments in each direction: alignments need to come from PMI
-    alignment = Alignment(word1, word2, align_costs=pmi_dict, phon_env=phon_env)
+    # Generate alignments in each direction
+    alignment = prepare_alignment(word1, word2, family_index, phon_env=phon_env)
     alignment.remove_padding()
     # Add phon env
     if phon_env:
@@ -599,8 +616,8 @@ def pmi_dist(word1, word2, family_index, normalize=True, sim2dist=True, alpha=0.
         **kwargs
     )
 
-    # Align the words with PMI
-    alignment = Alignment(word1, word2, align_costs=pmi_dict)
+    # Fetch already computed alignments
+    alignment = prepare_alignment(word1, word2, family_index, **kwargs)
     alignment.remove_padding()
 
     # Calculate PMI scores for each aligned pair
@@ -611,7 +628,6 @@ def pmi_dist(word1, word2, family_index, normalize=True, sim2dist=True, alpha=0.
 
     # Weight by information content per segment
     def weight_by_info_content(alignment, PMI_vals):
-        word1, word2 = alignment.word1, alignment.word2
         info_content1 = word1.getInfoContent(doculect=lang1)
         info_content2 = word2.getInfoContent(doculect=lang2)
         total_info1 = word1.total_info_content

@@ -304,6 +304,10 @@ if __name__ == "__main__":
                     excepted=phon_corr_params['refresh'],
                 )
 
+        # Load previous alignments
+        logger.info(f'Loading {family.name} phonetic sequence alignments...')
+        family.load_alignments(excepted=phon_corr_params['refresh'])
+
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
     if phon_corr_params['refresh_all'] or len(phon_corr_params['refresh']) > 0:
@@ -421,8 +425,7 @@ if __name__ == "__main__":
 
     # Plot the phylogenetic tree
     out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
-    #plot_tree(os.path.abspath(outtree), out_png, classifications_file=ref_classifications)
-    plot_tree(os.path.abspath(outtree), out_png)  # TODO restore plotting with classifications_file for color coding once ggtree works in gitlab pipeline
+    plot_tree(os.path.abspath(outtree), out_png, classifications_file=ref_classifications)
     logger.info(f'Plotted phylogenetic tree to {out_png}')
 
     # Write lexical comparison files
