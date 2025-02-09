@@ -21,9 +21,11 @@ from utils import PhonemeMap
 from utils.alignment import (calculate_alignment_costs,
                              needleman_wunsch_extended)
 from utils.distance import Distance
-from utils.information import (pointwise_mutual_info, surprisal,
+from utils.information import (get_oov_val, pointwise_mutual_info,
+                               prune_oov_surprisal, surprisal,
                                surprisal_to_prob)
-from utils.logging import write_alignments_log, write_phon_corr_iteration_log
+from utils.logging import (log_phoneme_pmi, log_phoneme_surprisal,
+                           write_alignments_log, write_phon_corr_iteration_log)
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
                             filter_out_invalid_ngrams, pad_sequence,
                             start_token)
@@ -179,35 +181,6 @@ def prune_corrs(corr_dict, min_val=2, exc1=None, exc2=None):
     return corr_dict
 
 
-def get_oov_val(corr_dict, oov_ch=NON_IPA_CH_DEFAULT):
-    # Determine the (potentially smoothed) value for unseen ("out of vocabulary" [OOV]) correspondences
-    # Check using an OOV/non-IPA character
-    oov_val = corr_dict[oov_ch]
-
-    # Then remove this character from the surprisal dictionary
-    del corr_dict[oov_ch]
-
-    return oov_val
-
-
-def prune_oov_surprisal(surprisal_dict):
-    # Prune correspondences with a surprisal value greater than OOV surprisal
-    pruned = defaultdict(lambda: {})
-    for seg1 in surprisal_dict:
-        oov_val = get_oov_val(surprisal_dict[seg1])
-
-        # Save values which are not equal to (less than) the OOV smoothed value
-        for seg2 in surprisal_dict[seg1]:
-            surprisal_val = surprisal_dict[seg1][seg2]
-            if surprisal_val < oov_val:
-                pruned[seg1][seg2] = surprisal_val
-
-        # Set as default dict with OOV value as default
-        pruned[seg1] = default_dict(pruned[seg1], lmbda=oov_val)
-
-    return pruned, oov_val
-
-
 def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, maximize_score=True):
     # Resolve synonyms: prune redundant/extraneous
     # If a concept has >1 words listed, we may end up with, e.g.
@@ -347,14 +320,6 @@ def reverse_corr_dict_map(corr_dict: PhonemeMap) -> PhonemeMap:
     for (seg1, seg2) in corr_dict.get_key_pairs():
         reverse.set_value(seg2, seg1, corr_dict.get_value(seg1, seg2))
     return reverse
-
-
-def ngram2log_format(ngram, phon_env=False):
-    if phon_env:
-        ngram, phon_env = ngram[:-1], ngram[-1]
-        return (Ngram(ngram).string, phon_env)
-    else:
-        return Ngram(ngram).string
 
 
 class PhonCorrelator:
@@ -1582,75 +1547,26 @@ class PhonCorrelator:
 
         return noncognate_scores
 
-    def log_phoneme_pmi(self, outfile=None, threshold=0.0001, sep='\t'):
-        # Save calculated PMI values to file
-        if outfile is None:
-            outfile = os.path.join(self.phon_corr_dir, 'phonPMI.tsv')
+    def log_phoneme_pmi(self, threshold=0.0001):
+        log_phoneme_pmi(
+            self.pmi_results,
+            outfile=os.path.join(self.phon_corr_dir, 'phonPMI.tsv'),
+            threshold=threshold,
+        )
 
-        # Save all segment pairs with non-zero PMI values to file
-        # Skip extremely small decimals that are close to zero
-        lines = []
-        for seg1 in self.pmi_results.get_primary_keys():
-            for seg2 in self.pmi_results.get_secondary_keys(seg1):
-                pmi_val = round(self.pmi_results.get_value(seg1, seg2), 3)
-                if abs(pmi_val) > threshold:
-                    line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
-                    lines.append(line)
-        # Sort PMI in descending order, then by phone pair
-        lines = sorted(lines, key=lambda line: (float(line[-1]), line[0], line[1]), reverse=True)
-        lines = '\n'.join([sep.join(line) for line in lines])
-
-        with open(outfile, 'w') as f:
-            header = sep.join(['Phone1', 'Phone2', 'PMI'])
-            f.write(f'{header}\n{lines}')
-
-    def log_phoneme_surprisal(self, outfile=None, sep='\t', phon_env=True, ngram_size=1):
-        if outfile is None:
-            if phon_env:
-                outfile = os.path.join(self.phon_corr_dir, 'phonEnvSurprisal.tsv')
-            else:
-                outfile = os.path.join(self.phon_corr_dir, 'phonSurprisal.tsv')
-        outdir = os.path.abspath(os.path.dirname(outfile))
-        os.makedirs(outdir, exist_ok=True)
-
+    def log_phoneme_surprisal(self, phon_env=True, ngram_size=1):
         if phon_env:
-            surprisal_dict = self.phon_env_surprisal_results
+            outfile = os.path.join(self.phon_corr_dir, 'phonEnvSurprisal.tsv')
+            surprisal_results = self.phon_env_surprisal_results
         else:
-            surprisal_dict = self.surprisal_results[ngram_size]
-
-        lines = []
-        surprisal_dict, oov_value = prune_oov_surprisal(surprisal_dict)
-        oov_value = round(oov_value, 3)
-        for seg1 in surprisal_dict:
-            for seg2 in surprisal_dict[seg1]:
-                if ngram_size > 1:
-                    raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
-                if phon_env:
-                    seg1_str, phon_env = ngram2log_format(seg1, phon_env=True)
-                else:
-                    seg1_str = ngram2log_format(seg1, phon_env=False)
-                lines.append([
-                    seg1_str,
-                    ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
-                    str(abs(round(surprisal_dict[seg1][seg2], 3))),
-                    str(oov_value)
-                ]
-                )
-                if phon_env:
-                    lines[-1].insert(1, phon_env)
-
-        # Sort by phone1 (by phon env if relevant) and then by surprisal in ascending order
-        if phon_env:
-            lines = sorted(lines, key=lambda x: (x[0], x[1], float(x[3]), x[2]), reverse=False)
-        else:
-            lines = sorted(lines, key=lambda x: (x[0], float(x[2]), x[1]), reverse=False)
-        lines = '\n'.join([sep.join(line) for line in lines])
-        with open(outfile, 'w') as f:
-            header = ['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed']
-            if phon_env:
-                header.insert(1, "PhonEnv")
-            header = sep.join(header)
-            f.write(f'{header}\n{lines}')
+            outfile = os.path.join(self.phon_corr_dir, 'phonSurprisal.tsv')
+            surprisal_results = self.surprisal_results[ngram_size]
+        log_phoneme_surprisal(
+            surprisal_results=surprisal_results,
+            outfile=outfile,
+            phon_env=phon_env,
+            ngram_size=ngram_size,
+        )
 
     def log_sample(self, sample, sample_n, seed=None):
         if seed is None:
