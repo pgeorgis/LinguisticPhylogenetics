@@ -356,7 +356,7 @@ class TestDataset:
             return ExecutionResultInformation(
                 result=language_result_cache[config_name]
             )
-        logger.info(f"No cached result found for language family '{self.language_family}' with config '{config_name}'. Calculating...")
+        logger.info(f"No cached result found for language family '{self.language_family}' with config '{config_name}'. Running classifyLangs...")
         start_time = datetime.datetime.now()
         result = self.execute_classify_langs(config_key, tail_output, test)
         end_time = datetime.datetime.now()
@@ -391,6 +391,8 @@ class TestDataset:
         initial_result: ExecutionResultInformation = self.get_result(
             test_configuration, tail_output, test
         )
+        if initial_result.time_elapsed is not None:
+            logger.info(f"Initial run done in {str(initial_result.time_elapsed).split('.')[0]}")
         last_values: DistanceMatrix = initial_result.result.distance_matrix
         iterations: int = 5
 
@@ -413,7 +415,7 @@ class TestDataset:
             )
             end_time: datetime = datetime.datetime.now()
             last_iteration_time = end_time - start_time
-            logger.info(f"Iteration {i + 1} done in {str(last_iteration_time)}.")
+            logger.info(f"Iteration {i + 1} done in {str(last_iteration_time).split('.')[0]}")
 
             current_matrix: DistanceMatrix = current_result.distance_matrix
             assert_distance_matrices_equal(test,
