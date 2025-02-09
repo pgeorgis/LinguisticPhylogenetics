@@ -1,5 +1,6 @@
-Lower Sorbian	Czech	probability
+Lower Sorbian	Lower Sorbian	probability
 ʨ	t	1.0
+ʒ	ʒ	1.0
 ʐ̊	ʒ̊	1.0
 ʐ	ʒ	1.0
 ʂ	r	1.0
@@ -9,19 +10,23 @@ Lower Sorbian	Czech	probability
 ɡ	ɦ	1.0
 ɔ_v	a_v	1.0
 ɔ_r	ɛ_r	1.0
+z̥	z̥	1.0
 z	z	1.0
 x	x	1.0
 v_ɛ	o	1.0
 v	v	1.0
+t͡ʂ	-	1.0
 t_ɔ	t_o	1.0
 t	t	1.0
 r_ɔ	r_aː	1.0
 pʲ	p	1.0
 p	p	1.0
+nʲ	ɲ	1.0
 n	n	1.0
 mʲ	m	1.0
 m	m	1.0
 kʲ_i	k_iː	1.0
+f	f	1.0
 d̥	d̥	1.0
 d	d	1.0
 b̥	b̥	1.0

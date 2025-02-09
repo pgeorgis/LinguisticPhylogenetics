@@ -1,5 +1,6 @@
-Valencian	Catalan	probability
+Valencian	Valencian	probability
 β	β	1.0
+ˈɛ	ˈɛ	1.0
 ˈɒ	ˈɔ	1.0
 ˈæ	ˈɛ	1.0
 ˈu_r_#>	ˈu_#>	1.0
@@ -21,9 +22,9 @@ Valencian	Catalan	probability
 ʃ	ʃ	1.0
 ɾ	ɾ	1.0
 ɲ	ɲ	1.0
+ɫː	ʎː	1.0
 ɣ	ɣ	1.0
 ɡ	ɡ	1.0
-ɞ	ə	1.0
 ɜ	ə	1.0
 ɐ	ə	1.0
 ŋ_k	ŋ	1.0
@@ -47,6 +48,7 @@ o	u	1.0
 n_ˈæ	n_ˈɛ	1.0
 n_t	n	1.0
 n	n	1.0
+mː	mː	1.0
 m	m	1.0
 l_ɐ	l_ə	1.0
 l	l	1.0
@@ -61,6 +63,7 @@ d	d	1.0
 b	b	1.0
 a_ɾ	ə_ɾ	1.0
 a	ə	1.0
+ɞ	ə	0.957
 r	r	0.889
 ʤ	ʒ	0.833
 v	b	0.742

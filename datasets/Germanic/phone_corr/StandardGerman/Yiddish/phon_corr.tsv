@@ -1,4 +1,4 @@
-Standard German	Yiddish	probability
+Standard German	Standard German	probability
 ˈʏ	ˈɪ	1.0
 ˈɪ	ˈɪ	1.0
 ˈɛː	ˈɛ	1.0
@@ -30,8 +30,10 @@ kʰ	k	1.0
 j	j	1.0
 h	h	1.0
 f	f	1.0
+eː	-	1.0
 b̥_#>	b_#>	1.0
 b	b	1.0
+a	a	1.0
 <#_ʁ	<#_ʀ	1.0
 <#	<#_t	1.0
 #>	ɡ_#>	1.0

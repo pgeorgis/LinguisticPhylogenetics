@@ -1,4 +1,4 @@
-Old Church Slavonic	Czech	probability
+Old Church Slavonic	Old Church Slavonic	probability
 ˈ	-	1.0
 ʧ	ʧ	1.0
 ʊ_ˈ	u	1.0
@@ -22,6 +22,7 @@ v_ɛ	v_ɛ	1.0
 v	v	1.0
 t_ɑ	t_a	1.0
 s	s	1.0
+rʲ	r̝	1.0
 r_ɪ	r̩	1.0
 r_æ	r̝_ɛ	1.0
 p	p	1.0
@@ -38,6 +39,7 @@ j	j	1.0
 i_ˈ	ɪ	1.0
 i_#>	#>	1.0
 d_ʊ	d̥	1.0
+a	a	1.0
 <#_ɔ	<#_o	1.0
 <#_t	<#_t	1.0
 <#_r	<#_r	1.0
