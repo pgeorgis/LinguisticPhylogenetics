@@ -129,7 +129,7 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
     return alignment
 
 
-def handle_word_pair_input(input1, input2, family_index):
+def handle_word_pair_input(input1, input2, family_index):  # TODO remove this function, used only for phonetic_dist
     """Check if a pair of word inputs or if already aligned word pair; align if not done already."""
     if isinstance(input1, Alignment):
         alignment = input1
@@ -344,9 +344,10 @@ def reduce_phon_deletion_penalty_by_phon_context(penalty: float,
     return penalty
 
 
-def phonological_dist(word1: Word | Alignment,
-                      word2: Word=None,
-                      family_index=None, # TODO this should not be none
+def phonological_dist(word1: Word,
+                      word2: Word,
+                      family_index,
+                      alignment=None,
                       sim_func=phone_sim,
                       penalize_sonority=True,
                       context_reduction=False,
@@ -356,8 +357,10 @@ def phonological_dist(word1: Word | Alignment,
     f"""Calculates phonological distance between two words on the basis of the phonetic similarity of aligned segments and phonological deletion penalties.
 
     Args:
-        word1 (Word or Alignment): first Word object, or an Alignment object
-        word2 (Word): second Word object. Defaults to None.
+        word1 (Word): first Word object
+        word2 (Word): second Word object
+        alignment (Alignment): optional Alignment object
+        family_index (dict): Family index dict for retrieving Doculect and PhonCorrelator objects.
         sim_func (_type_, optional): Phonetic similarity function. Defaults to {sim_func}.
         penalize_sonority (bool, optional): Penalizes deletions according to sonority of the deleted segment. Defaults to {penalize_sonority}.
         context_reduction (bool, optional): Reduces deletion penalties if certain phonological context conditions are met. Defaults to {context_reduction}.
@@ -367,9 +370,8 @@ def phonological_dist(word1: Word | Alignment,
     Returns:
         float: phonological distance value
     """
-
-    # If word2 is None, we assume word1 argument is actually an aligned word pair
-    word1, word2, alignment = handle_word_pair_input(word1, word2, family_index)
+    if alignment is None:
+        alignment = prepare_alignment(word1, word2, family_index)
     gap_ch = alignment.gap_ch
     pad_ch = alignment.pad_ch
     alignment_obj = alignment

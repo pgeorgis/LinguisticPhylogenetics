@@ -252,16 +252,17 @@ def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, m
                 word1, word2 = wordlist[index]
                 score = scores[index]  # TODO seems like this could benefit from a Wordpair object
                 if word1 not in best_pairings or score_is_better(score, best_pairing_scores[word1]):
-                    best_pairings[word1] = index
+                    best_pairings[word1] = index, word2
                     best_pairing_scores[word1] = score
                 elif score == best_pairing_scores[word1]:
                     # In case of tied correspondence-based scores, consider the phonetic distance too
                     from wordDist import phonological_dist
-                    best_index = best_pairings[word1]
+                    best_index, word2_best = best_pairings[word1]
                     best_alignment = alignments[best_index]
                     current_alignment = alignments[index]
-                    phon_dist_best = phonological_dist(best_alignment, family_index)
-                    phon_dist_current = phonological_dist(current_alignment, family_index)
+                    # TODO check that these word objects input to phonological_dist are the right ones
+                    phon_dist_best = phonological_dist(word1, word2_best, alignment=best_alignment, family_index=family_index)
+                    phon_dist_current = phonological_dist(word1, word2, alignment=current_alignment, family_index=family_index)
                     if maximize_score:
                         phon_dist_best *= -1
                         phon_dist_current *= -1
@@ -271,21 +272,22 @@ def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, m
                         # If still no distance between the two pairs, use both as there is no good way to select one
                         tied_indices[concept].update({index, best_index})
                     elif score_is_better(current_score, best_score):
-                        best_pairings[word1] = index
+                        best_pairings[word1] = index, word2
                         best_pairing_scores[word1] = score
 
             # Now best_pairings contains the best mapping for each concept
             # based on the best (highest/lowest) scoring pair wrt to first language word
+            best_indices = [index for index, _ in best_pairings.values()]
             for index in concept_indices[concept]:
-                if index not in best_pairings.values() and index not in tied_indices[concept]:
+                if index not in best_indices and index not in tied_indices[concept]:
                     indices_to_prune.add(index)
 
             # Now check for multiple l1 words mappedåto the same l2 word
             # Choose only the best of these
-            selected_word2 = [wordlist[index][-1] for index in best_pairings.values()]
-            if len(set(selected_word2)) < len(best_pairings.values()):
+            selected_word2 = [wordlist[index][-1] for index in best_indices]
+            if len(set(selected_word2)) < len(best_indices):
                 for word2 in set(selected_word2):
-                    indices = [index for index in best_pairings.values() if wordlist[index][-1] == word2]
+                    indices = [index for index in best_indices if wordlist[index][-1] == word2]
                     if maximize_score:
                         best_choice = max(indices, key=lambda x: scores[x])
                     else:
