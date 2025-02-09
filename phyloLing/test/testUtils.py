@@ -25,7 +25,9 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), os.pa
 from phyloLing.utils.tree import (calculate_tree_distance,
                                   get_gqd_score_to_reference, load_newick_tree)
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)s %(levelname)s: %(message)s')
+default_logging_level: int = logging.INFO
+default_logging_format: str = '%(asctime)s %(name)s %(levelname)s: %(message)s'
+logging.basicConfig(level=default_logging_level, format=default_logging_format)
 logger = logging.getLogger(__name__)
 
 class LanguageFamily(Enum):
@@ -224,6 +226,7 @@ class TestDataset:
 
     def execute_classify_langs_in_subprocess(self,
             test_configuration: TestConfiguration,
+            tail_output: bool,
             test: unittest.TestCase) -> ExecutionResult:
         config_file = self.test_configurations[test_configuration]
         make_command = [
@@ -231,14 +234,36 @@ class TestDataset:
             "classify",
             "CONFIG=" + config_file,
         ]
-        result = subprocess.run(
-            make_command,
-            capture_output=True,
-            universal_newlines=True,
-            cwd=root_project_path,
-        )
-        test.assertEqual(result.returncode, 0, f"Command failed with return code {result.returncode}.\n\nstdout:\n{result.stdout}\n\n{result.stderr}\n")
-        stdout_lines = result.stdout.splitlines()
+        stdout_lines = []
+        if tail_output:
+            result = subprocess.Popen(
+                make_command,
+                cwd=root_project_path,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                universal_newlines=True,
+                text=True,
+            )
+            logging.basicConfig(level=default_logging_level, format='%(message)s', force=True)
+            while True:
+                line = result.stdout.readline()
+                if not line:
+                    break
+                logger.info(line.strip('\n'))
+                stdout_lines.append(line)
+            result.wait()
+            logging.basicConfig(level=default_logging_level, format=default_logging_format, force=True)
+        else:
+            result = subprocess.run(
+                make_command,
+                capture_output=True,
+                universal_newlines=True,
+                cwd=root_project_path,
+                text=True,
+            )
+            stdout_lines = result.stdout.splitlines()
+
+        test.assertEqual(result.returncode, 0, f"Command failed with return code {result.returncode}.\n\nstdout:\n{result.stdout}\n\nstderr:{result.stderr}\n")
 
         dist_matrix = None
         gqd_distance = None
@@ -248,7 +273,7 @@ class TestDataset:
             gqd_distance_separator = "GQD wrt reference tree "
             wrt_distance_separator = "TreeDist wrt reference tree "
             if distance_matrix_separator in line:
-                dist_matrix = line.split(distance_matrix_separator)[1]
+                dist_matrix = line.split(distance_matrix_separator)[1].strip()
             elif gqd_distance_separator in line:
                 gqd_distance_line = line.split(gqd_distance_separator)[1]
                 gqd_distance = float(gqd_distance_line.split(": ")[1])
@@ -297,13 +322,15 @@ class TestDataset:
 
     def execute_classify_langs(self,
                                test_configuration: TestConfiguration,
+                               tail_output: bool,
                                test: unittest.TestCase) -> ExecutionResult:
-        return self.execute_classify_langs_in_subprocess(test_configuration, test) \
+        return self.execute_classify_langs_in_subprocess(test_configuration, tail_output, test) \
             if self.exec_in_subprocess \
             else self.execute_classify_langs_directly(test_configuration)
 
     def get_result(self,
                    config_key: TestConfiguration,
+                   tail_output: bool,
                    test: unittest.TestCase) -> ExecutionResultInformation:
         if self.language_family not in TestDataset.results_cache:
             TestDataset.results_cache[self.language_family] = {}
@@ -316,7 +343,7 @@ class TestDataset:
             )
         logger.info(f"No cached result found for language family '{self.language_family}' with config '{config_name}'. Calculating...")
         start_time = datetime.datetime.now()
-        result = self.execute_classify_langs(config_key, test)
+        result = self.execute_classify_langs(config_key, tail_output, test)
         end_time = datetime.datetime.now()
         time_elapsed = end_time - start_time
         language_result_cache[config_name] = result
@@ -354,7 +381,10 @@ class TestDataset:
     def assert_determinism(self,
             test_configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
-        initial_result: ExecutionResultInformation = self.get_result(test_configuration, test)
+        tail_output=False
+        initial_result: ExecutionResultInformation = self.get_result(
+            test_configuration, tail_output, test
+        )
         last_values: DistanceMatrix = initial_result.result.distance_matrix
         iterations: int = 5
 
@@ -370,7 +400,9 @@ class TestDataset:
                 logger.info(f"Estimated remaining time for {self.language_family}: {str(estimated_remaining_time)}.")
 
             start_time: datetime = datetime.datetime.now()
-            current_result: ExecutionResult = self.execute_classify_langs(test_configuration, test)
+            current_result: ExecutionResult = self.execute_classify_langs(
+                test_configuration, tail_output, test
+            )
             end_time: datetime = datetime.datetime.now()
             last_iteration_time = end_time - start_time
             logger.info(f"Iteration {i + 1} done in {str(last_iteration_time)}.")
@@ -405,7 +437,7 @@ class TestDataset:
     def assert_gqd_distance(self,
             configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
-        result_information: ExecutionResultInformation = self.get_result(configuration, test)
+        result_information: ExecutionResultInformation = self.get_result(configuration, True, test)
         result = result_information.result
         best_tree_distances = self.get_best_tree_distances(
             self.get_execution_reference(result)
@@ -421,7 +453,7 @@ class TestDataset:
     def assert_wrt_distance(self,
                             configuration: TestConfiguration,
                             test: unittest.TestCase) -> None:
-        result_information: ExecutionResultInformation = self.get_result(configuration, test)
+        result_information: ExecutionResultInformation = self.get_result(configuration, True, test)
         result = result_information.result
         best_tree_distances = self.get_best_tree_distances(
             self.get_execution_reference(result)
