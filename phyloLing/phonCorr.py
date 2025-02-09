@@ -1186,7 +1186,7 @@ class PhonCorrelator:
             family_index=family_index,
         )
         # Log final alignments
-        self.log_alignments(final_alignments, self.align_log)
+        self.log_alignments(final_alignments)
 
         # Compute phone surprisal
         self.compute_phone_surprisal(
@@ -1586,9 +1586,9 @@ class PhonCorrelator:
         sample_log += '\n'.join(sample)
         return sample_log
 
-    def log_alignments(self, alignments, align_log):
+    def log_alignments(self, alignments):
         for alignment in alignments:
-            align_log[alignment.key] = alignment
+            self.align_log[alignment.key] = alignment
 
     def write_phon_corr_report(self, corr, outfile, corr_type):
         write_phon_corr_report(
