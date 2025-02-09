@@ -67,9 +67,9 @@ prepare:ci:
 
 prepare:install_dependencies:
   stage: prepare
+  resource_group: install_dependencies
   needs:
     - prepare:ci
-  interruptible: true
   script:
     - make init
   cache:

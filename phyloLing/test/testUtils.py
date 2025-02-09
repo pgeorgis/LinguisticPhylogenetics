@@ -1,6 +1,7 @@
 import csv
 import datetime
 import importlib
+import logging
 import math
 import os
 import subprocess
@@ -22,6 +23,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), os.pa
 from phyloLing.utils.tree import (calculate_tree_distance,
                                   get_gqd_score_to_reference, load_newick_tree)
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)s %(levelname)s: %(message)s')
+logger = logging.getLogger(__name__)
 
 class LanguageFamily(Enum):
     BaltoSlavic = 'BaltoSlavic',
@@ -73,7 +76,7 @@ def assert_distance_matrices_equal(test: unittest.TestCase,
         pairs_label = 'pair differs' if different_count == 1 else 'pairs differ'
         test.fail(f"Distance matrices are not equal, {different_count} {pairs_label} more than {max_delta}:\n{summary.get_string()}")
     else:
-        print(f"Distance matrices are equal:\n{summary.get_string()}")
+        logger.info(f"Distance matrices are equal:\n{summary.get_string()}")
 
 
 def read_experiment_values(result_path: str) -> DistanceMatrix:
@@ -299,7 +302,7 @@ class TestDataset:
         config_name = config_key.name
         if config_name in language_result_cache:
             return language_result_cache[config_name]
-        print(f"No cached result found for language family '{family_name}' with config '{config_name}'. Calculating...")
+        logger.info(f"No cached result found for language family '{family_name}' with config '{config_name}'. Calculating...")
         result = self.execute_classify_langs(config_key)
         language_result_cache[config_name] = result
         return result
@@ -335,13 +338,13 @@ class TestDataset:
         initial_result = self.get_result(test_configuration)
         last_values = initial_result.distance_matrix
         for i in range(5):
-            print(f"Running iteration {i + 1} for {self.language_family.name}...")
+            logger.info(f"Running iteration {i + 1} for {self.language_family.name}...")
             start_time = datetime.datetime.now()
             current_result = self.execute_classify_langs(test_configuration)
             end_time = datetime.datetime.now()
             time_elapsed_seconds = round((end_time - start_time).total_seconds())
             total_time_string = str(datetime.timedelta(seconds=time_elapsed_seconds))
-            print(f"Iteration {i + 1} done in {total_time_string}.")
+            logger.info(f"Iteration {i + 1} done in {total_time_string}.")
             current_matrix = current_result.distance_matrix
             assert_distance_matrices_equal(test,
                 last_values, current_matrix, self.places
@@ -355,14 +358,14 @@ class TestDataset:
         best_tree_distances = self.get_best_tree_distances(
             self.get_execution_reference(result)
         )
-        print("GQD distances:")
+        logger.info("GQD distances:")
         for reference_tree in result.reference_trees:
             best_tree_distance = best_tree_distances[reference_tree].gqd
             result_tree_distance = result.tree_distance.gqd
 
-            print(f"\tReference tree: {reference_tree}")
-            print(f"\t\tBest tree: \t{best_tree_distance}")
-            print(f"\t\tTest tree: \t{result_tree_distance}")
+            logger.info(f"\tReference tree: {reference_tree}")
+            logger.info(f"\t\tBest tree: \t{best_tree_distance}")
+            logger.info(f"\t\tTest tree: \t{result_tree_distance}")
 
             test.assertLessEqual(
                 result_tree_distance, best_tree_distance,
@@ -376,14 +379,14 @@ class TestDataset:
         best_tree_distances = self.get_best_tree_distances(
             self.get_execution_reference(result)
         )
-        print("WRT distances:")
+        logger.info("WRT distances:")
         for reference_tree in result.reference_trees:
             best_tree_distance = best_tree_distances[reference_tree].wrt
             result_tree_distance = result.tree_distance.wrt
 
-            print(f"\tReference tree: {reference_tree}")
-            print(f"\t\tBest tree: \t{best_tree_distance}")
-            print(f"\t\tTest tree: \t{result_tree_distance}")
+            logger.info(f"\tReference tree: {reference_tree}")
+            logger.info(f"\t\tBest tree: \t{best_tree_distance}")
+            logger.info(f"\t\tTest tree: \t{result_tree_distance}")
 
             test.assertLessEqual(
                 result_tree_distance, best_tree_distance,
