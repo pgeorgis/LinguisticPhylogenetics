@@ -40,7 +40,7 @@ def write_alignments_log(alignment_log, log_file):
             align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
             align_cost = round(alignment.cost, 3)
             seq_map1, seq_map2 = alignment.seq_map
-            f.write(f'{align_str}\n{seq_map1}\n{seq_map2}\nCOST: {align_cost}\n')
+            f.write(f'{align_str}\n{seq_map1}\n{seq_map2}\nSCORE: {align_cost}\n')
             if i < n_alignments - 1:
                 f.write(f'\n{ALIGNMENT_DELIMITER}\n\n')
 
