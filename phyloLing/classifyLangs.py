@@ -318,12 +318,6 @@ if __name__ == "__main__":
             ngram_size=phon_corr_params['ngram'],
             phon_env=phon_corr_params['phon_env'],
         )
-        family.write_phoneme_pmi()
-        if eval_params['method'] in ('surprisal', 'hybrid'):
-            family.write_phoneme_surprisal(
-                ngram_size=phon_corr_params['ngram'],
-                phon_env=phon_corr_params['phon_env'],
-            )
 
     # Auto cognate clustering only
     if cognate_params['cluster'] in ('auto', 'gold'):
