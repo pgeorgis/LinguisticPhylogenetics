@@ -40,9 +40,14 @@ class LanguageFamily(Enum):
 type DistanceMatrix = dict[tuple[str, str], float]
 
 
+def format_elapsed_time(time: datetime.timedelta) -> str:
+    return str(time).split('.')[0]
+
+
 def assert_distance_matrices_equal(test: unittest.TestCase,
                                    first: DistanceMatrix,
                                    second: DistanceMatrix,
+                                   only_warn: bool,
                                    places: int) -> None:
     test.assertCountEqual(
         first.keys(), second.keys(), "The number of language pairs is not equal.")
@@ -78,9 +83,13 @@ def assert_distance_matrices_equal(test: unittest.TestCase,
 
     if different:
         pairs_label = 'pair differs' if different_count == 1 else 'pairs differ'
-        test.fail(f"Distance matrices are not equal, {different_count} {pairs_label} more than {max_delta}:\n{summary.get_string()}")
+        message = f"Distance matrices are not equal, {different_count} {pairs_label} more than {max_delta}:\n{summary.get_string()}"
+        if only_warn:
+            logger.warning(message)
+        else:
+            test.fail(message)
     else:
-        logger.info(f"Distance matrices are equal:\n{summary.get_string()}")
+        logger.info(f"Distance matrices are equal.")
 
 
 def read_experiment_values(result_path: str) -> DistanceMatrix:
@@ -122,6 +131,43 @@ def run_test_suite() -> None:
 class TreeDistance:
     gqd: float
     wrt: float
+
+type TreeDistanceMapper = Callable[[TreeDistance], float]
+
+
+def assert_tree_distances_equal(test: unittest.TestCase,
+                                first: TreeDistance,
+                                second: TreeDistance,
+                                mapper: TreeDistanceMapper,
+                                distance_label: str,
+                                places: int) -> None:
+    first_value = mapper(first)
+    second_value = mapper(second)
+    max_difference = 10 ** -places
+    formatted_first_value = f"{first_value:.{places}f}"
+    formatted_second_value = f"{second_value:.{places}f}"
+
+    test.assertAlmostEqual(
+        first_value, second_value,
+        places,
+        f"{distance_label} tree distances are not equal: {formatted_first_value} != {formatted_second_value}, |Δ|: {abs(first_value - second_value)}"
+    )
+    if math.isclose(first_value, second_value, rel_tol=max_difference):
+        logger.info(f"{distance_label} tree distances are equal: {formatted_first_value} == {formatted_second_value}.")
+
+
+def assert_all_tree_distances_equal(test: unittest.TestCase,
+                                expected: TreeDistance,
+                                actual: TreeDistance,
+                                places: int) -> None:
+    assert_tree_distances_equal(
+        test, expected, actual,
+        lambda distance: distance.gqd,
+        "GQD", places)
+    assert_tree_distances_equal(
+        test, expected, actual,
+        lambda distance: distance.wrt,
+        "WRT", places)
 
 
 @dataclass(
@@ -384,6 +430,20 @@ class TestDataset:
             )
         return result
 
+    def assert_results_equal(self,
+            test: unittest.TestCase,
+            current_result: ExecutionResult,
+            expected_result: ExecutionResult) -> None:
+        assert_distance_matrices_equal(test,
+            current_result.distance_matrix,
+            expected_result.distance_matrix,
+            True,
+            self.places)
+        assert_all_tree_distances_equal(test,
+            expected_result.tree_distance,
+            current_result.tree_distance,
+            self.places)
+
     def assert_determinism(self,
             test_configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
@@ -392,20 +452,21 @@ class TestDataset:
             test_configuration, tail_output, test
         )
         if initial_result.time_elapsed is not None:
-            logger.info(f"Initial run done in {str(initial_result.time_elapsed).split('.')[0]}")
-        last_values: DistanceMatrix = initial_result.result.distance_matrix
+            logger.info(f"Initial run done in {format_elapsed_time(initial_result.time_elapsed)}")
+        last_result: ExecutionResult = initial_result.result
         iterations: int = 5
 
         last_iteration_time: timedelta | None = initial_result.time_elapsed
         for i in range(iterations):
-            logger.info(f"Running iteration {i + 1} for {self.language_family}...")
+            formatted_iteration: int = i + 1
+            logger.info(f"Running iteration {formatted_iteration} for {self.language_family}...")
             if last_iteration_time is not None:
                 remaining_iterations: int = iterations - i
                 estimated_remaining_time_seconds: int = remaining_iterations * round(last_iteration_time.total_seconds())
                 estimated_remaining_time = datetime.timedelta(
                     seconds=estimated_remaining_time_seconds,
                 )
-                logger.info(f"Estimated time remaining for {self.language_family}: {str(estimated_remaining_time)}")
+                logger.info(f"Estimated time remaining: {str(estimated_remaining_time)}")
                 estimated_end_time = (datetime.datetime.now() + estimated_remaining_time).isoformat(sep=" ", timespec="seconds")
                 logger.info(f"Estimated finish time: {estimated_end_time}")
 
@@ -415,21 +476,18 @@ class TestDataset:
             )
             end_time: datetime = datetime.datetime.now()
             last_iteration_time = end_time - start_time
-            logger.info(f"Iteration {i + 1} done in {str(last_iteration_time).split('.')[0]}")
+            logger.info(f"Iteration {formatted_iteration} done in {format_elapsed_time(last_iteration_time)}")
 
-            current_matrix: DistanceMatrix = current_result.distance_matrix
-            logging.info(f"Comparing with last iteration values...")
-            assert_distance_matrices_equal(test,
-                last_values, current_matrix, self.places
-            )
-            logging.info(f"Comparing with initial iteration values...")
-            assert_distance_matrices_equal(test,
-                initial_result.result.distance_matrix, current_matrix, self.places
-            )
-            last_values = current_matrix
+            logger.info(f"Comparing with last iteration values...")
+            self.assert_results_equal(test, current_result, last_result)
+
+            logger.info(f"Comparing with initial iteration values...")
+            self.assert_results_equal(test, current_result, initial_result.result)
+
+            last_result = current_result
 
     def assert_tree_distances(self,
-                              mapping: Callable[[TreeDistance], float],
+                              mapping: TreeDistanceMapper,
                               distance_label: str,
                               configuration: TestConfiguration,
                               test: unittest.TestCase) -> None:
@@ -440,12 +498,12 @@ class TestDataset:
         best_tree_distances = self.get_best_tree_distances(
             map_to_execution_reference(result)
         )
-        logging.info(f"{distance_label} distances for {self.language_family}:‚")
+        logger.info(f"{distance_label} distances for {self.language_family}:")
         for reference_tree in result.reference_trees:
             best_tree_distance: float = mapping(best_tree_distances[reference_tree])
             result_tree_distance: float = mapping(result.tree_distance)
 
-            logger.info(f"\tReference tree: {reference_tree}")
+            logger.info(f"\tReference tree: {reference_tree.split('/')[-1]}")
             logger.info(f"\t\tBest tree: \t{best_tree_distance}")
             logger.info(f"\t\tTest tree: \t{result_tree_distance}")
 
