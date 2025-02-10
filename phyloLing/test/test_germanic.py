@@ -3,7 +3,7 @@ from phyloLing.test.utils.test_factory import create_test_classes
 from phyloLing.test.utils.test_runner import run_test_suite
 from phyloLing.test.utils.types import LanguageFamily
 
-dataset = TestDataset(LanguageFamily.BaltoSlavic)
+dataset = TestDataset(LanguageFamily.Germanic)
 TestTreeDistanceClass, TestDeterminismClass = create_test_classes(dataset)
 
 class TestTreeDistance(TestTreeDistanceClass):
