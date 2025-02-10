@@ -232,7 +232,7 @@ class TestDataset:
 
         tree_config: dict = config.get('tree', {})
         tree_root_language: str | None = tree_config.get('root')
-        reference_trees: list[str] = tree_config.get('reference', [])
+        reference_trees: list[str] = list(dict.fromkeys(tree_config.get('reference', [])))
         return ExecutionReference(
             reference_trees=reference_trees,
             languages=languages,
@@ -418,9 +418,11 @@ class TestDataset:
             logger.info(f"Iteration {i + 1} done in {str(last_iteration_time).split('.')[0]}")
 
             current_matrix: DistanceMatrix = current_result.distance_matrix
+            logging.info(f"Comparing with last iteration values...")
             assert_distance_matrices_equal(test,
                 last_values, current_matrix, self.places
             )
+            logging.info(f"Comparing with initial iteration values...")
             assert_distance_matrices_equal(test,
                 initial_result.result.distance_matrix, current_matrix, self.places
             )
@@ -428,6 +430,7 @@ class TestDataset:
 
     def assert_tree_distances(self,
                               mapping: Callable[[TreeDistance], float],
+                              distance_label: str,
                               configuration: TestConfiguration,
                               test: unittest.TestCase) -> None:
         result_information: ExecutionResultInformation = self.get_result(
@@ -437,6 +440,7 @@ class TestDataset:
         best_tree_distances = self.get_best_tree_distances(
             map_to_execution_reference(result)
         )
+        logging.info(f"{distance_label} distances for {self.language_family}:‚")
         for reference_tree in result.reference_trees:
             best_tree_distance: float = mapping(best_tree_distances[reference_tree])
             result_tree_distance: float = mapping(result.tree_distance)
@@ -453,11 +457,11 @@ class TestDataset:
     def assert_gqd_distance(self,
             configuration: TestConfiguration,
             test: unittest.TestCase) -> None:
-        logger.info("GQD distances:")
-        self.assert_tree_distances(lambda distance: distance.gqd, configuration, test)
+        self.assert_tree_distances(
+            lambda distance: distance.gqd, "GQD", configuration, test)
 
     def assert_wrt_distance(self,
                             configuration: TestConfiguration,
                             test: unittest.TestCase) -> None:
-        logger.info("WRT distances:")
-        self.assert_tree_distances(lambda distance: distance.wrt, configuration, test)
+        self.assert_tree_distances(
+            lambda distance: distance.wrt, "WRT", configuration, test)
