@@ -303,13 +303,14 @@ class PhonCorrelator:
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists()
         self.samples = {}
 
-        # PMI, ngrams, scored words
+        # PMI and surprisal results
+        self.low_coverage_phones = None
         self.pmi_results: PhonemeMap = PhonemeMap()
         self.surprisal_results = create_default_dict(self.lang2.phoneme_entropy, 3)
         self.phon_env_surprisal_results = create_default_dict(self.lang2.phoneme_entropy, 3)
+        
+        # Non-cognate thresholds for calibration
         self.noncognate_thresholds: dict[(Distance, int, int), list] = defaultdict(list)
-        self.scored_words = create_default_dict_of_dicts()
-        self.low_coverage_phones = None
 
         # Logging output directories
         self.log_outdir = log_outdir if log_outdir else ""  # TODO revisit what default outdir path should be
@@ -1483,14 +1484,9 @@ class PhonCorrelator:
 
         diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
         noncognate_scores = []
-        func_key = (eval_func, eval_func.hashable_kwargs)
         for pair in diff_sample:
-            if pair in self.scored_words[func_key]:
-                noncognate_scores.append(self.scored_words[func_key][pair])
-            else:
-                score = eval_func.eval(pair[0], pair[1])
-                noncognate_scores.append(score)
-                self.scored_words[func_key][pair] = score
+            score = eval_func.eval(pair[0], pair[1])
+            noncognate_scores.append(score)
         self.reset_seed()
 
         if save:
