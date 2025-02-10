@@ -1,3 +1,4 @@
+import copy
 import logging
 import os
 import random
@@ -461,6 +462,7 @@ class PhonCorrelator:
 
         # Optionally add phone similarity measure between phone pairs to align costs/scores
         if add_phon_dist:
+            align_costs = copy.deepcopy(align_costs)
             phon_gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
             for ngram1 in align_costs.get_primary_keys():
                 ngram1 = Ngram(ngram1)
