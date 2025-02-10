@@ -373,12 +373,12 @@ def ddict2dict(d) -> dict:
     return dict(d)
 
 
-def update_values_if_not_defined(target: dict, source: dict) -> None:
+def recursively_inherit_dict_values(target: dict, source: dict) -> None:
     for key, value in source.items():
         if key not in target:
             target[key] = value
         elif isinstance(value, dict):
-            update_values_if_not_defined(target[key], value)
+            recursively_inherit_dict_values(target[key], value)
 
 def to_absolute_path(path: str) -> str:
     if os.path.isabs(path):
@@ -414,6 +414,6 @@ def load_config(config_path: str) -> dict:
         included_config_path: str = to_absolute_path(included_config_path)
         included_config = load_config(included_config_path)
 
-    update_values_if_not_defined(loaded_config, included_config)
+    recursively_inherit_dict_values(loaded_config, included_config)
 
     return loaded_config
