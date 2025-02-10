@@ -492,7 +492,7 @@ class TestDataset:
                               configuration: TestConfiguration,
                               test: unittest.TestCase) -> None:
         result_information: ExecutionResultInformation = self.get_result(
-            configuration, False, test
+            configuration, True, test
         )
         result = result_information.result
         best_tree_distances = self.get_best_tree_distances(
