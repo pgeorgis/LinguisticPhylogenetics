@@ -1,8 +1,5 @@
 experiment:
     name: "test"
 
-cognates:
-    cluster: none
-
 config:
     extend: "datasets/Sinitic/config/sinitic_config.yml"

@@ -1,8 +1,5 @@
 experiment:
     name: "test"
 
-cognates:
-    cluster: none
-
 config:
     extend: "datasets/Germanic/config/germanic_config.yml"
