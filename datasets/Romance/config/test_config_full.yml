@@ -1,0 +1,5 @@
+experiment:
+    name: "test"
+
+config:
+    extend: "datasets/Romance/config/romance_config.yml"

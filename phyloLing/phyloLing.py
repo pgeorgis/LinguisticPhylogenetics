@@ -945,7 +945,7 @@ class LexicalDataset:
                                  **kwargs)
 
         if linkage_method == 'nj':
-            newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
+            newick_tree = str(nj(lm, neg_as_zero=True))
         else:
             newick_tree = linkage2newick(lm, labels)
 

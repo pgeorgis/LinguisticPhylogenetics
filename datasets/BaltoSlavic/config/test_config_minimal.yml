@@ -1,0 +1,5 @@
+family:
+    include: ['Proto-Balto-Slavic', 'Lithuanian', 'Russian', 'Polish']
+
+config:
+    extend: "datasets/BaltoSlavic/config/test_config_full.yml"
