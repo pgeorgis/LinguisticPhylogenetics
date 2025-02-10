@@ -1,5 +1,8 @@
 experiment:
     name: "test"
 
+cognates:
+    cluster: none
+
 config:
     extend: "datasets/Romance/config/romance_config.yml"

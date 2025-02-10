@@ -1,5 +1,8 @@
 experiment:
     name: "test"
 
+cognates:
+    cluster: none
+
 config:
     extend: "datasets/BaltoSlavic/config/balto-slavic_config.yml"
