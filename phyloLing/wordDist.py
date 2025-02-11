@@ -728,17 +728,15 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
         scores.append(score * weight)
 
         # Record word scores # TODO into Distance class object?
-        if word1.concept == word2.concept:
-            log_word_score(word1, word2, score, key=func.name, family_index=family_index)
+        log_word_score(word1, word2, score, key=func.name, family_index=family_index)
 
     # score = euclidean_dist(scores)
     # score = sum(scores)
     # TODO temp implementation: make more robust by checking that each function is as expected
     pmi_score, surprisal_score, phon_score = scores
     score = pmi_score + (surprisal_score * phon_score)
-    if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key=HYBRID_DIST_KEY, family_index=family_index)
-        log_word_score(word1, word2, dist_to_sim(score), key=HYBRID_SIM_KEY, family_index=family_index)
+    log_word_score(word1, word2, score, key=HYBRID_DIST_KEY, family_index=family_index)
+    log_word_score(word1, word2, dist_to_sim(score), key=HYBRID_SIM_KEY, family_index=family_index)
 
     return score
 
