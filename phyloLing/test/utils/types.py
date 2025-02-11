@@ -21,33 +21,28 @@ class TreeDistance:
     gqd: float
     wrt: float
 
+
 type TreeDistanceMapper = Callable[[TreeDistance], float]
+
+
+type ReferenceTreePath = str
 
 
 @dataclass(frozen=True)
 class ExecutionReference:
-    reference_trees: list[str]
+    reference_trees: list[ReferenceTreePath]
     languages: list[str]
     root_language: str
+    tree_distances: dict[ReferenceTreePath, TreeDistance]
 
 
 type DistanceMatrix = dict[tuple[str, str], float]
 
 
 @dataclass(frozen=True)
-class ExecutionResult:
-    reference_trees: list[str]
-    languages: list[str]
-    root_language: str
+class ExecutionResult(ExecutionReference):
     distance_matrix: DistanceMatrix
-    tree_distance: TreeDistance
 
-    def map_to_execution_reference(self) -> ExecutionReference:
-        return ExecutionReference(
-            reference_trees=self.reference_trees,
-            languages=self.languages,
-            root_language=self.root_language,
-        )
 
 @dataclass(frozen=True)
 class ExecutionResultInformation:
