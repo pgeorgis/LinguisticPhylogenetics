@@ -429,10 +429,15 @@ class PhonCorrelator:
             # Record samples
             samples[(seed_i, sample_size)] = (synonym_sample, diff_sample)
 
-            # Log same-meaning sample
+            # Log samples
             if log_outfile:
-                sample_log = self.log_sample(synonym_sample, sample_n, seed=seed_i)
-                sample_logs[sample_n] = sample_log
+                same_meaning_sample_log = self.log_sample(
+                    synonym_sample, sample_n, label="synonym", seed=seed_i
+                )
+                diff_meaning_sample_log = self.log_sample(
+                    diff_sample, sample_n, label="different meaning", seed=seed_i
+                )
+                sample_logs[sample_n] = (same_meaning_sample_log, diff_meaning_sample_log)
 
         # Update dictionary of samples
         if new_samples:
@@ -1536,7 +1541,7 @@ class PhonCorrelator:
             ngram_size=ngram_size,
         )
 
-    def log_sample(self, sample, sample_n, seed=None):
+    def log_sample(self, sample, sample_n, label, seed=None):
         if seed is None:
             seed = self.seed
         sample = sorted(
@@ -1545,7 +1550,7 @@ class PhonCorrelator:
                 for word1, word2 in sample
             ]
         )
-        sample_log = f'SAMPLE: {sample_n}\nSEED: {seed}\n'
+        sample_log = f'SAMPLE: {sample_n}\nSEED: {seed}\nLABEL: {label}\n'
         sample_log += '\n'.join(sample)
         return sample_log
 
