@@ -123,35 +123,37 @@ def _assert_results_equal(test: unittest.TestCase,
                                          expected_tree_distance)
 
 
+def _log_estimated_time_remaining(current_iteration: int,
+                                  last_iteration_time: timedelta,
+                                  language_family: str) -> None:
+    formatted_iteration: int = current_iteration + 1
+    _logger.info(f"Running iteration {formatted_iteration} for {language_family}...")
+    remaining_iterations: int = determinism_test_iterations - current_iteration
+    estimated_remaining_time_seconds: int = remaining_iterations * round(last_iteration_time.total_seconds())
+    estimated_remaining_time: timedelta = timedelta(seconds=estimated_remaining_time_seconds)
+    _logger.info(f"Estimated time remaining: {str(estimated_remaining_time)}")
+    estimated_end_time = _format_datetime(datetime.now() + estimated_remaining_time)
+    _logger.info(f"Estimated finish time: {estimated_end_time}")
+
+
 def assert_determinism(test: unittest.TestCase,
                        initial_result: ExecutionResultInformation) -> None:
-    _logger.info(f"Initial run done in {_format_elapsed_time(initial_result.time_elapsed)}")
+    initial_run_duration: timedelta = initial_result.result.run_duration
+    _logger.info(f"Initial run done in {_format_elapsed_time(initial_run_duration)}")
     last_result: ExecutionResult = initial_result.result
     language_family: str = initial_result.language_family
     test_config_file: str = initial_result.test_configuration_file
     tail_execution_output: bool = False
 
-    last_iteration_time: timedelta | None = initial_result.time_elapsed
+    last_iteration_time: timedelta = initial_run_duration
     for i in range(determinism_test_iterations):
-        formatted_iteration: int = i + 1
-        _logger.info(f"Running iteration {formatted_iteration} for {language_family}...")
-        if last_iteration_time is not None:
-            remaining_iterations: int = determinism_test_iterations - i
-            estimated_remaining_time_seconds: int = remaining_iterations * round(last_iteration_time.total_seconds())
-            estimated_remaining_time = timedelta(
-                seconds=estimated_remaining_time_seconds,
-            )
-            _logger.info(f"Estimated time remaining: {str(estimated_remaining_time)}")
-            estimated_end_time = _format_datetime(datetime.now() + estimated_remaining_time)
-            _logger.info(f"Estimated finish time: {estimated_end_time}")
+        _log_estimated_time_remaining(i, last_iteration_time, language_family)
 
-        start_time: datetime = datetime.now()
         current_result: ExecutionResult = execute_classify_langs(
             test_config_file, tail_execution_output, test
         )
-        end_time: datetime = datetime.now()
-        last_iteration_time = end_time - start_time
-        _logger.info(f"Iteration {formatted_iteration} done in {_format_elapsed_time(last_iteration_time)}")
+        last_iteration_time = current_result.run_duration
+        _logger.info(f"Iteration {i + 1} done in {_format_elapsed_time(last_iteration_time)}")
 
         _logger.info(f"Comparing with last iteration values...")
         _assert_results_equal(test, current_result, last_result)

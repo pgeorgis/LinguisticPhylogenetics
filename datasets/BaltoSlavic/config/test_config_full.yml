@@ -1,5 +1,5 @@
 experiment:
-    name: "test"
+    name: "test-full"
 
 config:
     extend: "datasets/BaltoSlavic/config/balto-slavic_config.yml"

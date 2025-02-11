@@ -15,6 +15,9 @@ class TestConfiguration(Enum):
     MINIMAL = 'minimal',
     FULL = 'full',
 
+    def get_experiment_name(self) -> str:
+        return f"test-{self.name.lower()}"
+
 
 @dataclass(frozen=True)
 class TreeDistance:
@@ -34,6 +37,8 @@ class ExecutionReference:
     languages: list[str]
     root_language: str
     tree_distances: dict[ReferenceTreePath, TreeDistance]
+    run_duration: timedelta
+    dist_matrix_path: str
 
 
 type DistanceMatrix = dict[tuple[str, str], float]
@@ -49,6 +54,5 @@ class ExecutionResultInformation:
     test_configuration_file: str
     language_family: str
     result: ExecutionResult
-    time_elapsed: timedelta
 
 

@@ -55,24 +55,25 @@ else
 		exit 1
 endif
 
-test-determinism:
+test-minimal:
 ifndef DATASET
 	@echo "Error: Please provide a dataset to test using 'make test-determinism DATASET=<dataset>'"
 	exit 1
 endif
 	$(MAKE) test DATASET=$(DATASET) TESTSET=TestDeterminism
+	$(MAKE) test DATASET=$(DATASET) TESTSET=TestMinimalTreeDistance
 
-test-determinism-romance:
-	$(MAKE) test-determinism DATASET=romance
+test-romance:
+	$(MAKE) test-minimal DATASET=romance
 
-test-determinism-germanic:
-	$(MAKE) test-determinism DATASET=germanic
+test-germanic:
+	$(MAKE) test-minimal DATASET=germanic
 
-test-determinism-balto-slavic:
-	$(MAKE) test-determinism DATASET=balto_slavic
+test-balto-slavic:
+	$(MAKE) test-minimal DATASET=balto_slavic
 
-test-determinism-sinitic:
-	$(MAKE) test-determinism DATASET=sinitic
+test-sinitic:
+	$(MAKE) test-minimal DATASET=sinitic
 
 test-tree-distance:
 ifndef DATASET
