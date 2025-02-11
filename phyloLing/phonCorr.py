@@ -1546,7 +1546,7 @@ class PhonCorrelator:
             seed = self.seed
         sample = sorted(
             [
-                f'[{word1.concept}] {word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/'
+                f'[{word1.concept}] {word1.orthography} /{word1.ipa}/ - [{word2.concept}] {word2.orthography} /{word2.ipa}/'
                 for word1, word2 in sample
             ]
         )
