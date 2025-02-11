@@ -965,7 +965,7 @@ class PhonCorrelator:
                 )
             }
         final_qualifying = set()
-        other_word_pairs = set()
+        #other_word_pairs = set()
         for key, sample in sample_dict.items():
             seed_i, _ = key
             sample_n = seed_i - start_seed
@@ -1082,7 +1082,7 @@ class PhonCorrelator:
                         qualified_PMI.append(length_normalized_score)
                     else:
                         disqualified.append(pair)
-                        other_word_pairs.add(pair)
+                        #other_word_pairs.add(pair)
                 qualifying, qualifying_alignments = prune_extraneous_synonyms(
                     wordlist=qualifying,
                     alignments=qualifying_alignments,
@@ -1121,10 +1121,10 @@ class PhonCorrelator:
             results = sample_results[0]
 
         # Realign final qualifying using averaged PMI values from all samples
-        other_word_pairs = other_word_pairs - final_qualifying
-        other_word_pairs.update(diff_meaning_sampled)
+        #other_word_pairs = other_word_pairs - final_qualifying
+        #other_word_pairs.update(diff_meaning_sampled)
         final_qualifying = list(final_qualifying)
-        other_word_pairs = list(other_word_pairs)
+        #other_word_pairs = list(other_word_pairs)
         final_qualifying_alignments = self.align_wordlist(
             final_qualifying,
             align_costs=results,
@@ -1135,10 +1135,10 @@ class PhonCorrelator:
             maximize_score=True,
             family_index=family_index,
         )
-        final_other_alignments = self.align_wordlist(
-            other_word_pairs,
-            align_costs=results,
-        )
+        # final_other_alignments = self.align_wordlist(
+        #     other_word_pairs,
+        #     align_costs=results,
+        # )
 
         # Compute phone surprisal
         self.compute_phone_surprisal(
@@ -1159,10 +1159,10 @@ class PhonCorrelator:
 
         # Log all final alignments
         self.log_alignments(final_qualifying_alignments)
-        self.log_alignments(final_other_alignments)
+        #self.log_alignments(final_other_alignments)
         twin.log_alignments(reversed_final_alignments)
-        reversed_other_alignments = [alignment.reverse() for alignment in final_other_alignments]
-        twin.log_alignments(reversed_other_alignments)
+        #reversed_other_alignments = [alignment.reverse() for alignment in final_other_alignments]
+        #twin.log_alignments(reversed_other_alignments)
 
         # Write the iteration log
         log_file = os.path.join(self.phon_corr_dir, 'iterations.log')
