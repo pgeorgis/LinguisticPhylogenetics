@@ -359,20 +359,7 @@ class PhonCorrelator:
 
         # Get all unique combinations of L1 and L2 word
         # Sort the wordlists in order to ensure that random samples of same/different meaning pairs are reproducible
-        # Sort pairs symmetrically to ensure consistent ordering no matter which language is first
-        # Use info content to sort only as last resort, in case the words' IPA, concept, and orthography are all identical
-        # NB: in theory possible for the info content to be equal too, but this is almost impossible unless the languages are identical
-        all_wordpairs = sorted(
-            product(l1_wordlist, l2_wordlist),
-            key=lambda pair: (
-                min(pair[0].ipa, pair[1].ipa), max(pair[0].ipa, pair[1].ipa),
-                pair[0].ipa, pair[1].ipa,
-                min(pair[0].concept, pair[1].concept), max(pair[0].concept, pair[1].concept),
-                min(pair[0].orthography, pair[1].orthography), max(pair[0].orthography, pair[1].orthography),
-                min(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2)),
-                max(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2))
-            )
-        )
+        all_wordpairs = sort_wordlist(product(l1_wordlist, l2_wordlist))
 
         # Sort out same-meaning from different-meaning word pairs, and loanwords
         same_meaning, diff_meaning, loanwords = [], [], []
