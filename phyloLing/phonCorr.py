@@ -390,14 +390,14 @@ class PhonCorrelator:
         # Return a tuple of the three word type lists
         return same_meaning, diff_meaning, loanwords
 
-    def sample_wordlists(self, n_samples, sample_size, start_seed=None, log_samples=True):
+    def sample_wordlists(self, n_samples, sample_size, start_seed=None, log_outfile='samples.log'):
         # Take N samples of same- and different-meaning words
         if start_seed is None:
             start_seed = self.seed
 
         samples = self.samples
         new_samples = False
-        if log_samples:
+        if log_outfile:
             sample_logs = {}
 
         # Track how many times each index has been sampled
@@ -431,7 +431,7 @@ class PhonCorrelator:
             samples[(seed_i, sample_size)] = (synonym_sample, diff_sample)
 
             # Log same-meaning sample
-            if log_samples:
+            if log_outfile:
                 sample_log = self.log_sample(synonym_sample, sample_n, seed=seed_i)
                 sample_logs[sample_n] = sample_log
 
@@ -440,8 +440,8 @@ class PhonCorrelator:
             self.samples.update(samples)
 
         # Write sample log (only if new samples were drawn)
-        if log_samples and new_samples:
-            sample_log_file = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name, 'samples.log')
+        if log_outfile and new_samples:
+            sample_log_file = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name, log_outfile)
             write_sample_log(sample_logs, sample_log_file)
 
         return samples
@@ -960,6 +960,7 @@ class PhonCorrelator:
                 n_samples=n_samples,
                 sample_size=sample_size,
                 start_seed=start_seed,
+                log_outfile="phone_corr_samples.log",
             )
             diff_meaning_sampled = set()
             for _, (_, diff_sample) in sample_dict.items():
@@ -1499,7 +1500,10 @@ class PhonCorrelator:
 
         if (seed, sample_size) not in self.samples:
             _ = self.sample_wordlists(
-                1, sample_size, seed
+                n_samples=1, 
+                sample_size=sample_size,
+                start_seed=seed,
+                log_outfile="noncognate_thresholds_samples.log",
             )
         _, diff_sample = self.samples[(seed, sample_size)]
         noncognate_scores = []
