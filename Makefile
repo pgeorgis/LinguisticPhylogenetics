@@ -1,6 +1,8 @@
 # Define the default target
 .DEFAULT_GOAL := help
 SHELL := /bin/bash
+TEST_DATASETS = romance germanic balto_slavic sinitic
+COVERAGE_REPORT_CONFIG = datasets/BaltoSlavic/config/test_config_minimal.yml
 
 # Usage help
 help:
@@ -12,11 +14,13 @@ help:
 init:
 	./setup.sh
 
-# Run classification with nohup
-classify: init
+init-silent:
+	$(MAKE) init > /dev/null 2>&1
+
+classify: init-silent
 ifdef CONFIG
 	@source venv/bin/activate && \
-		OUTPUT_LOG_DIR=$$(python3 -c "import yaml, os; config = yaml.safe_load(open('$(CONFIG)', 'r')); print(config.get('family', {}).get('outdir', os.path.dirname(config['family']['file'])))") && \
+		OUTPUT_LOG_DIR=$$(python3 -c "import os; from phyloLing.utils.utils import load_config; config = load_config('$(CONFIG)'); print(config.get('family', {}).get('outdir', os.path.dirname(config['family']['file'])))") && \
 		OUTPUT_LOG_PATH=$$OUTPUT_LOG_DIR/logs/classify.log && \
 		mkdir -p $$OUTPUT_LOG_DIR/logs && \
 		python3 phyloLing/classifyLangs.py $(CONFIG) $(if $(LOGLEVEL),--loglevel $(LOGLEVEL)) 2>&1|tee $$OUTPUT_LOG_PATH
@@ -30,9 +34,68 @@ classify-romance:
 classify-germanic:
 	$(MAKE) classify CONFIG=datasets/Germanic/config/germanic_config.yml
 
-classify-baltoslavic:
+classify-balto-slavic:
 	$(MAKE) classify CONFIG=datasets/BaltoSlavic/config/balto-slavic_config.yml
 
 classify-sinitic:
 	$(MAKE) classify CONFIG=datasets/Sinitic/config/sinitic_config.yml
 
+test: init-silent
+ifndef DATASET
+	@echo "Error: Please provide a dataset to test using 'make test DATASET=<dataset>'"
+	exit 1
+endif
+
+ifneq ($(filter $(DATASET),$(TEST_DATASETS)),)
+	@source venv/bin/activate && \
+		export PYTHONPATH=$(shell pwd):$$PYTHONPATH && \
+		python3 -m xmlrunner phyloLing.test.test_$(DATASET)$(if $(TESTSET),.$(TESTSET),) -o tests
+else
+	@echo "Error: Invalid dataset. Please choose from $(TEST_DATASETS)" &&
+		exit 1
+endif
+
+test-determinism:
+ifndef DATASET
+	@echo "Error: Please provide a dataset to test using 'make test-determinism DATASET=<dataset>'"
+	exit 1
+endif
+	$(MAKE) test DATASET=$(DATASET) TESTSET=TestDeterminism
+
+test-determinism-romance:
+	$(MAKE) test-determinism DATASET=romance
+
+test-determinism-germanic:
+	$(MAKE) test-determinism DATASET=germanic
+
+test-determinism-balto-slavic:
+	$(MAKE) test-determinism DATASET=balto_slavic
+
+test-determinism-sinitic:
+	$(MAKE) test-determinism DATASET=sinitic
+
+test-tree-distance:
+ifndef DATASET
+	@echo "Error: Please provide a dataset to test using 'make test-tree-distance DATASET=<dataset>'"
+	exit 1
+endif
+	$(MAKE) test DATASET=$(DATASET) TESTSET=TestTreeDistance
+
+test-tree-distance-romance:
+	$(MAKE) test-tree-distance DATASET=romance
+
+test-tree-distance-germanic:
+	$(MAKE) test-tree-distance DATASET=germanic
+
+test-tree-distance-balto-slavic:
+	$(MAKE) test-tree-distance DATASET=balto_slavic
+
+test-tree-distance-sinitic:
+	$(MAKE) test-tree-distance DATASET=sinitic
+
+coverage: init-silent
+	@source venv/bin/activate && \
+		export PYTHONPATH=$(shell pwd):$$PYTHONPATH && \
+		coverage erase && \
+		coverage run phyloLing/classifyLangs.py $(COVERAGE_REPORT_CONFIG) && \
+		coverage xml

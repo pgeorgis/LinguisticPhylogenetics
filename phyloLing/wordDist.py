@@ -7,7 +7,8 @@ from asjp import ipa2asjp
 from constants import (DOCULECT_INDEX_KEY, PAD_CH_DEFAULT,
                        PHONE_CORRELATORS_INDEX_KEY)
 from nltk import edit_distance
-from phonAlign import Alignment, Gap, get_align_key, get_alignment_iter
+from phonAlign import (Alignment, Gap, get_align_key, get_alignment_iter,
+                       visual_align)
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
@@ -55,7 +56,7 @@ def get_phoneme_surprisal(lang1, lang2, family_index, ngram_size=1, **kwargs):
 
     phone_correlators_index = family_index[PHONE_CORRELATORS_INDEX_KEY]
     from phonCorr import get_phone_correlator
-    correlator1, _ = get_phone_correlator(
+    correlator1, family_index[PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
         lang1,
         lang2,
         phone_correlators_index=phone_correlators_index,
@@ -74,7 +75,7 @@ def get_pmi_dict(lang1,
                  **kwargs) -> PhonemeMap:
     """Calculate phoneme PMI if not already done and return PMI dict."""
     from phonCorr import get_phone_correlator
-    correlator, _ = get_phone_correlator(
+    correlator, family_index[PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
         lang1,
         lang2,
         phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
@@ -82,6 +83,21 @@ def get_pmi_dict(lang1,
     if len(correlator.pmi_results) == 0:
         correlator.compute_phone_corrs(family_index, **kwargs)
     return correlator.pmi_results
+
+
+def retrieve_saved_alignment(align_key, lang1, lang2, family_index):
+    # Retrieve phone correlator and check whether this word pair has already been aligned
+    # If so, return this saved alignment
+    from phonCorr import get_phone_correlator
+    correlator, family_index[PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
+        lang1,
+        lang2,
+        phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
+    )
+    align_log = correlator.align_log
+    if align_key in align_log:
+        return align_log[align_key], correlator, family_index[PHONE_CORRELATORS_INDEX_KEY]
+    return None, correlator, family_index[PHONE_CORRELATORS_INDEX_KEY]
 
 
 def prepare_alignment(word1, word2, family_index, **kwargs):
@@ -99,19 +115,12 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
     # If language is specified for both words, incorporate their phoneme PMI for the alignment
     lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
     if lang1 is not None and lang2 is not None:
-
-        # Retrieve phone correlator and check whether this word pair has already been aligned
-        # If so, return this saved alignment
-        from phonCorr import get_phone_correlator
-        correlator, _ = get_phone_correlator(
-            lang1,
-            lang2,
-            phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
+        align_key = get_align_key(word1.ipa, word2.ipa)
+        saved_alignment, _, family_index[PHONE_CORRELATORS_INDEX_KEY] = retrieve_saved_alignment(
+            align_key, lang1, lang2, family_index,
         )
-        align_log = correlator.align_log
-        key = get_align_key(word1.ipa, word2.ipa)
-        if key in align_log:
-            return align_log[key]
+        if saved_alignment is not None:
+            return saved_alignment
 
         # Check whether phoneme PMI has been calculated for this language pair
         # If not, then calculate it; if so, then retrieve it
@@ -119,8 +128,13 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
 
         # Align the phonetic sequences with phonetic similarity and phoneme PMI
         alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
+        reverse_alignment = alignment.reverse()
+        reverse_align_key = reverse_alignment.key
         # Add new alignment to alignment log
-        correlator.align_log[key] = alignment
+        key = (lang1.name, lang2.name, None, 1) # TODO this has hardcoded wordlist and seed
+        twin_key = (lang2.name, lang1.name, None, 1) # TODO this has hardcoded wordlist and seed
+        family_index[PHONE_CORRELATORS_INDEX_KEY][key].align_log[align_key] = alignment
+        family_index[PHONE_CORRELATORS_INDEX_KEY][twin_key].align_log[reverse_align_key] = reverse_alignment
 
     # Perform phonetic alignment without PMI support
     else:
@@ -728,27 +742,40 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
         scores.append(score * weight)
 
         # Record word scores # TODO into Distance class object?
-        if word1.concept == word2.concept:
-            log_word_score(word1, word2, score, key=func.name, family_index=family_index)
+        log_word_score(word1, word2, score, key=func.name, family_index=family_index)
 
     # score = euclidean_dist(scores)
     # score = sum(scores)
     # TODO temp implementation: make more robust by checking that each function is as expected
     pmi_score, surprisal_score, phon_score = scores
     score = pmi_score + (surprisal_score * phon_score)
-    if word1.concept == word2.concept:
-        log_word_score(word1, word2, score, key=HYBRID_DIST_KEY, family_index=family_index)
-        log_word_score(word1, word2, dist_to_sim(score), key=HYBRID_SIM_KEY, family_index=family_index)
+    log_word_score(word1, word2, score, key=HYBRID_DIST_KEY, family_index=family_index)
+    log_word_score(word1, word2, dist_to_sim(score), key=HYBRID_SIM_KEY, family_index=family_index)
 
     return score
 
 
+def log_alignment(word1, word2, lang1, lang2, family_index):
+    if "alignment" not in lang1.lexical_comparison[lang2.name][(word1, word2)]:
+        align_key = get_align_key(word1, word2)
+        alignment, _, family_index[PHONE_CORRELATORS_INDEX_KEY] = retrieve_saved_alignment(
+            align_key, lang1, lang2, family_index
+        )
+        if alignment is None:
+            logger.warning(f"No saved alignment found for key {align_key}")
+        else:
+            alignment_str = visual_align(alignment)
+            lang1.lexical_comparison[lang2.name][(word1, word2)]["alignment"] = alignment_str
+
+
 def log_word_score(word1, word2, score, key, family_index):
     lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
-    lang1.lexical_comparison[lang2.name][(word1, word2)][key] = score
-    lang2.lexical_comparison[lang1.name][(word2, word1)][key] = score
     lang1.lexical_comparison_measures.add(key)
     lang2.lexical_comparison_measures.add(key)
+    lang1.lexical_comparison[lang2.name][(word1, word2)][key] = score
+    lang2.lexical_comparison[lang1.name][(word2, word1)][key] = score
+    log_alignment(word1, word2, lang1, lang2, family_index)
+    log_alignment(word2, word1, lang2, lang1, family_index)
 
 
 # Initialize distance functions as Distance objects

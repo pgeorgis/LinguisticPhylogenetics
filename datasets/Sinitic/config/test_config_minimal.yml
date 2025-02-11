@@ -1,0 +1,5 @@
+family:
+    include: ['Old Chinese', 'Standard Mandarin', 'Taiwanese Hokkien', 'Cantonese']
+
+config:
+    extend: "datasets/Sinitic/config/test_config_full.yml"

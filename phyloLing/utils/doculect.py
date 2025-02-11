@@ -424,16 +424,18 @@ class Doculect:
                                save_directory=save_directory,
                                **kwargs)
 
-    def write_lexical_comparison(self, lang2: Self, outfile):
+    def write_lexical_comparison(self, lang2: Self, outfile):  # TODO this would be better in utils/logging.py
         measures = sorted(list(self.lexical_comparison_measures))
-        with open(outfile, 'w') as f:
-            header = '\t'.join([self.name, lang2.name] + measures)
-            f.write(f'{header}\n')
+        with open(outfile, "w") as f:
+            header = "\t".join([self.name, lang2.name, "alignment"] + measures)
+            f.write(f"{header}\n")
             for word1, word2 in self.lexical_comparison[lang2.name]:
-                values = [self.lexical_comparison[lang2.name][(word1, word2)].get(measure, 'n/a') for measure in measures]
+                entry = self.lexical_comparison[lang2.name][(word1, word2)]
+                values = [entry.get(measure, "") for measure in measures]
+                alignment = entry.get("alignment", "")
                 values = [str(v) for v in values]
-                line = '\t'.join([word1.ipa, word2.ipa] + values)
-                f.write(f'{line}\n')
+                line = "\t".join([word1.ipa, word2.ipa, alignment] + values)
+                f.write(f"{line}\n")
 
     def __str__(self):
         """Print a summary of the language object"""

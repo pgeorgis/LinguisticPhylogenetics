@@ -285,7 +285,40 @@ def gradient_cognate_dist(lang1,
         group_scores[n] = mean(sims.values())
 
     similarity_score = mean(group_scores.values())
-    logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(similarity_score, 3)}')
-        
     distance_score = 1 - similarity_score
+
+    # Normalize by distance to self
+    if lang1 != lang2:
+        self_distance1 = gradient_cognate_dist(
+            lang1=lang1,
+            lang2=lang1,
+            clustered_cognates=clustered_cognates,
+            eval_func=eval_func,
+            exclude_synonyms=exclude_synonyms,
+            calibrate=calibrate,
+            min_similarity=min_similarity,
+            p_threshold=p_threshold,
+            seed=seed,
+            n_samples=n_samples,
+            sample_size=sample_size,
+        )
+        self_distance2 = gradient_cognate_dist(
+            lang1=lang2,
+            lang2=lang2,
+            clustered_cognates=clustered_cognates,
+            eval_func=eval_func,
+            exclude_synonyms=exclude_synonyms,
+            calibrate=calibrate,
+            min_similarity=min_similarity,
+            p_threshold=p_threshold,
+            seed=seed,
+            n_samples=n_samples,
+            sample_size=sample_size,
+        )
+        avg_self_distance = mean([self_distance1, self_distance2])
+        distance_score -= avg_self_distance
+        distance_score = max(0, distance_score)
+        if logger:
+            logger.info(f'Similarity of {lang1.name} and {lang2.name}: {round(1 - distance_score, 3)}')
+
     return distance_score
