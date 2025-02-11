@@ -1488,7 +1488,7 @@ class PhonCorrelator:
 
         return self.low_coverage_phones
 
-    def compute_noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
+    def compute_noncognate_thresholds(self, eval_func, sample_size=None, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
@@ -1506,9 +1506,9 @@ class PhonCorrelator:
         for pair in diff_sample:
             score = eval_func.eval(pair[0], pair[1])
             noncognate_scores.append(score)
-        if save:
-            key = (eval_func, sample_size, seed)
-            self.noncognate_thresholds[key] = noncognate_scores
+        # Save results
+        key = (eval_func, sample_size, seed)
+        self.noncognate_thresholds[key] = noncognate_scores
 
         return noncognate_scores
 
