@@ -366,6 +366,7 @@ class PhonCorrelator:
             product(l1_wordlist, l2_wordlist),
             key=lambda pair: (
                 min(pair[0].ipa, pair[1].ipa), max(pair[0].ipa, pair[1].ipa),
+                pair[0].ipa, pair[1].ipa,
                 min(pair[0].concept, pair[1].concept), max(pair[0].concept, pair[1].concept),
                 min(pair[0].orthography, pair[1].orthography), max(pair[0].orthography, pair[1].orthography),
                 min(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2)),
