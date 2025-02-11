@@ -31,8 +31,7 @@ from utils.logging import (log_phon_corr_iteration, write_alignments_log,
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
                             filter_out_invalid_ngrams, pad_sequence,
                             start_token)
-from utils.utils import (balanced_resample, create_default_dict,
-                         create_default_dict_of_dicts, default_dict,
+from utils.utils import (balanced_resample, create_default_dict, default_dict,
                          normalize_dict, segment_ranges)
 from utils.wordlist import Wordlist, sort_wordlist
 
