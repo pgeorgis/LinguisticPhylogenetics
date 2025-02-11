@@ -56,7 +56,7 @@ def get_phoneme_surprisal(lang1, lang2, family_index, ngram_size=1, **kwargs):
 
     phone_correlators_index = family_index[PHONE_CORRELATORS_INDEX_KEY]
     from phonCorr import get_phone_correlator
-    correlator1, _ = get_phone_correlator(
+    correlator1, family_index[PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
         lang1,
         lang2,
         phone_correlators_index=phone_correlators_index,
@@ -75,7 +75,7 @@ def get_pmi_dict(lang1,
                  **kwargs) -> PhonemeMap:
     """Calculate phoneme PMI if not already done and return PMI dict."""
     from phonCorr import get_phone_correlator
-    correlator, _ = get_phone_correlator(
+    correlator, family_index[PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
         lang1,
         lang2,
         phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
@@ -89,7 +89,7 @@ def retrieve_saved_alignment(align_key, lang1, lang2, family_index):
     # Retrieve phone correlator and check whether this word pair has already been aligned
     # If so, return this saved alignment
     from phonCorr import get_phone_correlator
-    correlator, _ = get_phone_correlator(
+    correlator, family_index[PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
         lang1,
         lang2,
         phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
