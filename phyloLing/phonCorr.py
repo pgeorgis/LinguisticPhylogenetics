@@ -961,13 +961,18 @@ class PhonCorrelator:
                 sample_size=sample_size,
                 start_seed=start_seed,
             )
+            diff_meaning_sampled = set()
+            for _, (_, diff_sample) in sample_dict.items():
+                diff_meaning_sampled.update(diff_sample)
         else:
+            diff_meaning_sampled = random.sample(self.diff_meaning, len(self.same_meaning))
             sample_dict = {
                 (start_seed, len(self.same_meaning)): (
-                    self.same_meaning, random.sample(self.diff_meaning, len(self.same_meaning))
+                    self.same_meaning, diff_meaning_sampled
                 )
             }
         final_qualifying = set()
+        other_word_pairs = set()
         for key, sample in sample_dict.items():
             seed_i, _ = key
             sample_n = seed_i - start_seed
@@ -1084,6 +1089,7 @@ class PhonCorrelator:
                         qualified_PMI.append(length_normalized_score)
                     else:
                         disqualified.append(pair)
+                        other_word_pairs.add(pair)
                 qualifying, qualifying_alignments = prune_extraneous_synonyms(
                     wordlist=qualifying,
                     alignments=qualifying_alignments,
@@ -1122,36 +1128,48 @@ class PhonCorrelator:
             results = sample_results[0]
 
         # Realign final qualifying using averaged PMI values from all samples
+        other_word_pairs = other_word_pairs - final_qualifying
+        other_word_pairs.update(diff_meaning_sampled)
         final_qualifying = list(final_qualifying)
-        final_alignments = self.align_wordlist(
+        other_word_pairs = list(other_word_pairs)
+        final_qualifying_alignments = self.align_wordlist(
             final_qualifying,
             align_costs=results,
         )
-        final_qualifying, final_alignments = prune_extraneous_synonyms(
+        final_qualifying, final_qualifying_alignments = prune_extraneous_synonyms(
             wordlist=final_qualifying,
-            alignments=final_alignments,
+            alignments=final_qualifying_alignments,
             maximize_score=True,
             family_index=family_index,
         )
-        # Log final alignments
-        self.log_alignments(final_alignments)
+        final_other_alignments = self.align_wordlist(
+            other_word_pairs,
+            align_costs=results,
+        )
 
         # Compute phone surprisal
         self.compute_phone_surprisal(
-            final_alignments,
+            final_qualifying_alignments,
             phon_env=phon_env,
             min_corr=min_corr,
             ngram_size=ngram_size,
         )
         # Compute surprisal in opposite direction with reversed alignments
         twin, family_index[PHONE_CORRELATORS_INDEX_KEY] = self.get_twin(family_index[PHONE_CORRELATORS_INDEX_KEY])
-        reversed_final_alignments = [alignment.reverse() for alignment in final_alignments]
+        reversed_final_alignments = [alignment.reverse() for alignment in final_qualifying_alignments]
         twin.compute_phone_surprisal(
             reversed_final_alignments,
             phon_env=phon_env,
             min_corr=min_corr,
             ngram_size=ngram_size,
         )
+
+        # Log all final alignments
+        self.log_alignments(final_qualifying_alignments)
+        self.log_alignments(final_other_alignments)
+        twin.log_alignments(reversed_final_alignments)
+        reversed_other_alignments = [alignment.reverse() for alignment in final_other_alignments]
+        twin.log_alignments(reversed_other_alignments)
 
         # Write the iteration log
         log_file = os.path.join(self.phon_corr_dir, 'iterations.log')
@@ -1476,19 +1494,18 @@ class PhonCorrelator:
         # Take a sample of different-meaning words, by default as large as the same-meaning set
         if sample_size is None:
             sample_size = len(self.same_meaning)
+        else:
+            sample_size = min(sample_size, len(self.diff_meaning))
 
-        # Set random seed: may or may not be the default seed attribute of the PhonCorrelator class
-        if not seed:
-            seed = self.seed
-        random.seed(seed)
-
-        diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
+        if (seed, sample_size) not in self.samples:
+            _ = self.sample_wordlists(
+                1, sample_size, seed
+            )
+        _, diff_sample = self.samples[(seed, sample_size)]
         noncognate_scores = []
         for pair in diff_sample:
             score = eval_func.eval(pair[0], pair[1])
             noncognate_scores.append(score)
-        self.reset_seed()
-
         if save:
             key = (eval_func, sample_size, seed)
             self.noncognate_thresholds[key] = noncognate_scores

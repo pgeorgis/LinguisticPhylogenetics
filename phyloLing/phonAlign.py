@@ -1,4 +1,5 @@
 import logging
+import re
 from collections.abc import Iterable
 
 from constants import (ALIGNED_PAIR_DELIMITER, ALIGNMENT_KEY_REGEX,
@@ -616,6 +617,7 @@ class ReversedAlignment(Alignment):
         validate_class((alignment,), (Alignment,))
         self.seq1 = alignment.seq2
         self.seq2 = alignment.seq1
+        self.key = self.reverse_align_key(alignment.key)
         self.gap_ch = alignment.gap_ch
         self.gop = alignment.gop
         self.pad_ch = alignment.pad_ch
@@ -634,6 +636,10 @@ class ReversedAlignment(Alignment):
             self.phon_env_alignment = super().add_phon_env()
         else:
             self.phon_env_alignment = None
+
+    @staticmethod
+    def reverse_align_key(align_key):
+        return re.sub(r"/(.+)/ - /(.+)/", r"/\2/ - /\1/", align_key)
 
 
 class AlignedPair:
