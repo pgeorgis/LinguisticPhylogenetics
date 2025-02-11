@@ -1,0 +1,5 @@
+family:
+    include: ['Latin', 'Spanish', 'French', 'Romanian']
+
+config:
+    extend: "datasets/Romance/config/test_config_full.yml"

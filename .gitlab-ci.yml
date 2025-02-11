@@ -1,6 +1,12 @@
 stages:
   - prepare
-  - classify
+  - test-determinism
+  - get-trees
+  - reports
+
+workflow:
+  auto_cancel:
+    on_job_failure: none
 
 variables:
   GIT_SUBMODULE_STRATEGY: none
@@ -14,9 +20,10 @@ variables:
   VENV_DIR: "$CI_PROJECT_DIR/venv"
 
 .commit-cache: &commit-cache
-  key: commit-cache-${CI_COMMIT_REF_SLUG}
-  fallback_keys:
-    - commit-cache-${CI_DEFAULT_BRANCH}
+  key:
+    files:
+      - requirements.txt
+      - ci.dockerfile
   paths:
     - $PIP_CACHE_DIR
     - $VENV_DIR
@@ -61,44 +68,98 @@ prepare:ci:
 
 prepare:install_dependencies:
   stage: prepare
-  image: ${CI_IMAGE}
+  resource_group: install_dependencies
   needs:
     - prepare:ci
-  interruptible: true
   script:
     - make init
   cache:
     <<: *commit-cache
     policy: pull-push
 
-romance:
-  stage: classify
+.test-determinism-job:
+  stage: test-determinism
+  needs:
+    - prepare:install_dependencies
   script:
-    - make classify-romance
+    - make test-determinism-${DATASET}
   artifacts:
+    when: always
     paths:
-      - datasets/Romance/experiments
+      - datasets/*/experiments
+      - tests/*.xml
+    expire_in: 180 days
+    reports:
+      junit: tests/*.xml
 
-germanic:
-  stage: classify
-  script:
-    - make classify-germanic
-  artifacts:
-    paths:
-      - datasets/Germanic/experiments
+test-romance:
+  extends: .test-determinism-job
+  variables:
+    DATASET: romance
 
-sinitic:
-  stage: classify
-  script:
-    - make classify-sinitic
-  artifacts:
-    paths:
-      - datasets/Sinitic/experiments
+test-germanic:
+  extends: .test-determinism-job
+  variables:
+    DATASET: germanic
 
-baltoslavic:
-  stage: classify
+test-sinitic:
+  extends: .test-determinism-job
+  variables:
+    DATASET: sinitic
+
+test-balto-slavic:
+  extends: .test-determinism-job
+  variables:
+    DATASET: balto-slavic
+
+.test-tree-distance-job:
+  stage: get-trees
+  needs:
+    - prepare:install_dependencies
   script:
-    - make classify-baltoslavic
+    - DATASET_NAME=$(echo ${DATASET} | sed -r 's/([a-z])([A-Z])/\1-\2/g' | tr '[:upper:]' '[:lower:]')
+    - make test-tree-distance-${DATASET_NAME}
   artifacts:
+    when: always
     paths:
-      - datasets/BaltoSlavic/experiments
+      - datasets/*/experiments
+      - tests/*.xml
+    expire_in: 180 days
+    reports:
+      junit: tests/*.xml
+
+classify-romance:
+  extends: .test-tree-distance-job
+  variables:
+    DATASET: Romance
+
+classify-germanic:
+  extends: .test-tree-distance-job
+  variables:
+    DATASET: Germanic
+
+classify-sinitic:
+  extends: .test-tree-distance-job
+  variables:
+    DATASET: Sinitic
+
+classify-balto-slavic:
+  extends: .test-tree-distance-job
+  variables:
+    DATASET: BaltoSlavic
+
+coverage:
+  stage: reports
+  needs:
+    - prepare:install_dependencies
+  script:
+    - make coverage
+  artifacts:
+    when: always
+    expire_in: 180 days
+    paths:
+      - coverage.xml
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml

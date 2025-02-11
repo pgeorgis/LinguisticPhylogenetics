@@ -1,0 +1,5 @@
+family:
+    include: ['Proto-Germanic', 'Standard German', 'Icelandic', 'Gothic']
+
+config:
+    extend: "datasets/Germanic/config/test_config_full.yml"
