@@ -115,9 +115,12 @@ def _assert_results_equal(test: unittest.TestCase,
                                     current_result.distance_matrix,
                                     expected_result.distance_matrix,
                                     assert_distance_matrice_equality)
-    _assert_all_tree_distances_equal(test,
-                                     current_result.tree_distance,
-                                     expected_result.tree_distance)
+    for reference_tree in expected_result.reference_trees:
+        current_tree_distance = current_result.tree_distances[reference_tree]
+        expected_tree_distance = expected_result.tree_distances[reference_tree]
+        _assert_all_tree_distances_equal(test,
+                                         current_tree_distance,
+                                         expected_tree_distance)
 
 
 def assert_determinism(test: unittest.TestCase,
@@ -163,10 +166,10 @@ def assert_tree_distances_improved(test: unittest.TestCase,
                                    best_tree_path: str,
                                    tree_distance_label: str,
                                    tree_distance_mapper: TreeDistanceMapper) -> None:
-    best_tree_distances = get_tree_distances(best_tree_path, result.map_to_execution_reference())
+    best_tree_distances = get_tree_distances(best_tree_path, result)
     for reference_tree in result.reference_trees:
         best_tree_distance: float = tree_distance_mapper(best_tree_distances[reference_tree])
-        result_tree_distance: float = tree_distance_mapper(result.tree_distance)
+        result_tree_distance: float = tree_distance_mapper(result.tree_distances[reference_tree])
 
         best_tree_distance_formatted = _format_float(best_tree_distance)
         result_tree_distance_formatted = _format_float(result_tree_distance)

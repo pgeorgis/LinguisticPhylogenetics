@@ -12,7 +12,7 @@ from phyloLing.test.utils.test_configuration import (default_logging_format,
                                                      exec_in_subprocess,
                                                      root_project_path)
 from phyloLing.test.utils.types import (DistanceMatrix, ExecutionReference,
-                                        ExecutionResult, TreeDistance)
+                                        ExecutionResult, TreeDistance, ReferenceTreePath)
 
 logging.basicConfig(level=default_logging_level, format=default_logging_format)
 logger = logging.getLogger(__name__)
@@ -46,12 +46,24 @@ def _get_output_config(dist_matrix_path: str) -> ExecutionReference:
 
     tree_config: dict = config.get('tree', {})
     tree_root_language: str | None = tree_config.get('root')
-    reference_trees: list[str] = list(dict.fromkeys(tree_config.get('reference', [])))
+    reference_trees: list[ReferenceTreePath] = list(dict.fromkeys(tree_config.get('reference', [])))
+
+    tree_distances: dict[ReferenceTreePath, TreeDistance] = {}
+    tree_evaluation: dict[ReferenceTreePath, dict[str, float | str]] = tree_config.get('eval', {})
+    for reference_tree in reference_trees:
+        evaluation_result = tree_evaluation.get(reference_tree, {})
+        tree_distances[reference_tree] = TreeDistance(
+            gqd=float(evaluation_result.get('GQD', 0)),
+            wrt=float(evaluation_result.get('TreeDist', 0)),
+        )
+
     return ExecutionReference(
         reference_trees=reference_trees,
         languages=languages,
         root_language=tree_root_language,
+        tree_distances=tree_distances,
     )
+
 
 def _execute_classify_langs_in_subprocess(config_file: str,
                                           tail_output: bool,
@@ -90,30 +102,17 @@ def _execute_classify_langs_in_subprocess(config_file: str,
         )
         stdout_lines = result.stdout.splitlines()
 
-    test.assertEqual(result.returncode, 0, f"Command failed with return code {result.returncode}.\n\nstdout:\n{result.stdout}\n\nstderr:{result.stderr}\n")
+    test.assertEqual(result.returncode, 0,
+                     f"Command failed with return code {result.returncode}.\n\nstdout:\n{result.stdout}\n\nstderr:{result.stderr}\n")
 
     dist_matrix = None
-    gqd_distance = None
-    wrt_distance = None
     for line in stdout_lines:
         distance_matrix_separator = "Wrote distance matrix to "
-        gqd_distance_separator = "GQD wrt reference tree "
-        wrt_distance_separator = "TreeDist wrt reference tree "
         if distance_matrix_separator in line:
             dist_matrix = line.split(distance_matrix_separator)[1].strip()
-        elif gqd_distance_separator in line:
-            gqd_distance_line = line.split(gqd_distance_separator)[1]
-            gqd_distance = float(gqd_distance_line.split(": ")[1])
-        elif wrt_distance_separator in line:
-            wrt_distance_line = line.split(wrt_distance_separator)[1]
-            wrt_distance = float(wrt_distance_line.split(": ")[1])
 
     if not dist_matrix:
         raise Exception("Distance matrix not found.")
-    if gqd_distance is None:
-        raise Exception("GQD distance not found.")
-    if wrt_distance is None:
-        raise Exception("WRT distance not found.")
 
     output_config = _get_output_config(dist_matrix)
     return ExecutionResult(
@@ -121,10 +120,7 @@ def _execute_classify_langs_in_subprocess(config_file: str,
         languages=output_config.languages,
         root_language=output_config.root_language,
         distance_matrix=_read_experiment_values(dist_matrix),
-        tree_distance=TreeDistance(
-            gqd=gqd_distance,
-            wrt=wrt_distance,
-        ),
+        tree_distances=output_config.tree_distances,
     )
 
 def _execute_classify_langs_directly(config_file: str) -> ExecutionResult:
@@ -137,10 +133,7 @@ def _execute_classify_langs_directly(config_file: str) -> ExecutionResult:
         root_language=output_config.root_language,
         languages=output_config.languages,
         distance_matrix=_read_experiment_values(dist_matrix_path),
-        tree_distance=TreeDistance(
-            gqd=result['gqd_distance'],
-            wrt=result['wrt_distance'],
-        ),
+        tree_distances=output_config.tree_distances,
     )
     importlib.reload(classify_langs)
     return result
