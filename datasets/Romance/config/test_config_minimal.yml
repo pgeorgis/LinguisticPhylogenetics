@@ -1,5 +1,8 @@
 family:
     include: ['Latin', 'Spanish', 'French', 'Romanian']
 
+experiment:
+    name: "test-minimal"
+
 config:
     extend: "datasets/Romance/config/test_config_full.yml"

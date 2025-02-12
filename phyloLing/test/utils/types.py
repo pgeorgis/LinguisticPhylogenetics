@@ -15,45 +15,44 @@ class TestConfiguration(Enum):
     MINIMAL = 'minimal',
     FULL = 'full',
 
+    def get_experiment_name(self) -> str:
+        return f"test-{self.name.lower()}"
+
 
 @dataclass(frozen=True)
 class TreeDistance:
     gqd: float
     wrt: float
 
+
 type TreeDistanceMapper = Callable[[TreeDistance], float]
+
+
+type ReferenceTreePath = str
 
 
 @dataclass(frozen=True)
 class ExecutionReference:
-    reference_trees: list[str]
+    reference_trees: list[ReferenceTreePath]
     languages: list[str]
     root_language: str
+    tree_distances: dict[ReferenceTreePath, TreeDistance]
+    run_duration: timedelta
+    dist_matrix_path: str
 
 
 type DistanceMatrix = dict[tuple[str, str], float]
 
 
 @dataclass(frozen=True)
-class ExecutionResult:
-    reference_trees: list[str]
-    languages: list[str]
-    root_language: str
+class ExecutionResult(ExecutionReference):
     distance_matrix: DistanceMatrix
-    tree_distance: TreeDistance
 
-    def map_to_execution_reference(self) -> ExecutionReference:
-        return ExecutionReference(
-            reference_trees=self.reference_trees,
-            languages=self.languages,
-            root_language=self.root_language,
-        )
 
 @dataclass(frozen=True)
 class ExecutionResultInformation:
     test_configuration_file: str
     language_family: str
     result: ExecutionResult
-    time_elapsed: timedelta
 
 

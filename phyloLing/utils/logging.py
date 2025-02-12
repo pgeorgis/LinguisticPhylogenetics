@@ -23,7 +23,11 @@ def ngram2log_format(ngram, phon_env=False):
 
 def write_sample_log(sample_logs, log_file):
     make_outdir(log_file)
-    content = '\n\n'.join([sample_logs[sample_n] for sample_n in range(len(sample_logs))])
+    content = []
+    for _, (same_meaning_log, diff_meaning_log) in sample_logs.items():
+        sample_n_log = "\n\n".join([same_meaning_log, diff_meaning_log])
+        content.append(sample_n_log)
+    content = "\n\n".join(content)
     with open(log_file, 'w') as f:
         f.write(content)
 

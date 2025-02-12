@@ -4,6 +4,7 @@ import logging
 import os
 import subprocess
 import unittest
+from datetime import timedelta, datetime
 
 import yaml
 
@@ -12,7 +13,7 @@ from phyloLing.test.utils.test_configuration import (default_logging_format,
                                                      exec_in_subprocess,
                                                      root_project_path)
 from phyloLing.test.utils.types import (DistanceMatrix, ExecutionReference,
-                                        ExecutionResult, TreeDistance)
+                                        ExecutionResult, TreeDistance, ReferenceTreePath)
 
 logging.basicConfig(level=default_logging_level, format=default_logging_format)
 logger = logging.getLogger(__name__)
@@ -31,27 +32,10 @@ def _read_experiment_values(result_path: str) -> DistanceMatrix:
     return actual_values
 
 
-def _get_output_config(dist_matrix_path: str) -> ExecutionReference:
-    output_config_path: str = os.path.abspath(os.path.join(dist_matrix_path, os.pardir, 'config.yml'))
-    with open(output_config_path, 'r') as file:
-        config = yaml.safe_load(file)
+def _load_experiment_from_dist_matrix(dist_matrix_path: str) -> ExecutionResult:
+    output_config_path = os.path.abspath(os.path.join(dist_matrix_path, os.pardir, 'config.yml'))
+    return load_experiment_from_output_config(output_config_path)
 
-    languages: list[str] = []
-    with (open(dist_matrix_path, 'r') as file):
-        reader = csv.DictReader(file, delimiter='\t')
-        for row in reader:
-            language: str = row['Labels'].strip()
-            if language != 'Labels':
-                languages.append(language)
-
-    tree_config: dict = config.get('tree', {})
-    tree_root_language: str | None = tree_config.get('root')
-    reference_trees: list[str] = list(dict.fromkeys(tree_config.get('reference', [])))
-    return ExecutionReference(
-        reference_trees=reference_trees,
-        languages=languages,
-        root_language=tree_root_language,
-    )
 
 def _execute_classify_langs_in_subprocess(config_file: str,
                                           tail_output: bool,
@@ -90,60 +74,82 @@ def _execute_classify_langs_in_subprocess(config_file: str,
         )
         stdout_lines = result.stdout.splitlines()
 
-    test.assertEqual(result.returncode, 0, f"Command failed with return code {result.returncode}.\n\nstdout:\n{result.stdout}\n\nstderr:{result.stderr}\n")
+    test.assertEqual(result.returncode, 0,
+                     f"Command failed with return code {result.returncode}.\n\nstdout:\n{result.stdout}\n\nstderr:{result.stderr}\n")
 
     dist_matrix = None
-    gqd_distance = None
-    wrt_distance = None
     for line in stdout_lines:
         distance_matrix_separator = "Wrote distance matrix to "
-        gqd_distance_separator = "GQD wrt reference tree "
-        wrt_distance_separator = "TreeDist wrt reference tree "
         if distance_matrix_separator in line:
             dist_matrix = line.split(distance_matrix_separator)[1].strip()
-        elif gqd_distance_separator in line:
-            gqd_distance_line = line.split(gqd_distance_separator)[1]
-            gqd_distance = float(gqd_distance_line.split(": ")[1])
-        elif wrt_distance_separator in line:
-            wrt_distance_line = line.split(wrt_distance_separator)[1]
-            wrt_distance = float(wrt_distance_line.split(": ")[1])
 
     if not dist_matrix:
         raise Exception("Distance matrix not found.")
-    if gqd_distance is None:
-        raise Exception("GQD distance not found.")
-    if wrt_distance is None:
-        raise Exception("WRT distance not found.")
 
-    output_config = _get_output_config(dist_matrix)
-    return ExecutionResult(
-        reference_trees=output_config.reference_trees,
-        languages=output_config.languages,
-        root_language=output_config.root_language,
-        distance_matrix=_read_experiment_values(dist_matrix),
-        tree_distance=TreeDistance(
-            gqd=gqd_distance,
-            wrt=wrt_distance,
-        ),
-    )
+    return _load_experiment_from_dist_matrix(dist_matrix)
 
 def _execute_classify_langs_directly(config_file: str) -> ExecutionResult:
     classify_langs = importlib.import_module('phyloLing.classifyLangs')
     result = classify_langs.main(config_file)
     dist_matrix_path = os.path.join(os.path.abspath(root_project_path), result['distance_matrix'])
-    output_config = _get_output_config(dist_matrix_path)
-    result = ExecutionResult(
-        reference_trees=output_config.reference_trees,
-        root_language=output_config.root_language,
-        languages=output_config.languages,
-        distance_matrix=_read_experiment_values(dist_matrix_path),
-        tree_distance=TreeDistance(
-            gqd=result['gqd_distance'],
-            wrt=result['wrt_distance'],
-        ),
-    )
+    result = _load_experiment_from_dist_matrix(dist_matrix_path)
     importlib.reload(classify_langs)
     return result
+
+
+def _load_result_config(output_config_path: str) -> ExecutionReference:
+    with open(output_config_path, 'r') as file:
+        config = yaml.safe_load(file)
+
+    dist_matrix_path: str = config.get('output', {}).get('dist_matrix')
+    languages: list[str] = []
+    with (open(dist_matrix_path, 'r') as file):
+        reader = csv.DictReader(file, delimiter='\t')
+        for row in reader:
+            language: str = row['Labels'].strip()
+            if language != 'Labels':
+                languages.append(language)
+
+    tree_config: dict = config.get('tree', {})
+    tree_root_language: str | None = tree_config.get('root')
+    reference_trees: list[ReferenceTreePath] = list(dict.fromkeys(tree_config.get('reference', [])))
+
+    tree_distances: dict[ReferenceTreePath, TreeDistance] = {}
+    tree_evaluation: dict[ReferenceTreePath, dict[str, float | str]] = tree_config.get('eval', {})
+    for reference_tree in reference_trees:
+        evaluation_result = tree_evaluation.get(reference_tree, {})
+        tree_distances[reference_tree] = TreeDistance(
+            gqd=float(evaluation_result.get('GQD', 0)),
+            wrt=float(evaluation_result.get('TreeDist', 0)),
+        )
+
+    run_duration_string: str = config.get('run_info', {}).get('duration', '')
+    run_duration_time = datetime.strptime(run_duration_string,"%H:%M:%S")
+    run_duration = timedelta(hours=run_duration_time.hour,
+                             minutes=run_duration_time.minute,
+                             seconds=run_duration_time.second)
+    return ExecutionReference(
+        reference_trees=reference_trees,
+        languages=languages,
+        root_language=tree_root_language,
+        tree_distances=tree_distances,
+        run_duration=run_duration,
+        dist_matrix_path=dist_matrix_path,
+    )
+
+
+def load_experiment_from_output_config(config_path: str) -> ExecutionResult:
+    output_config = _load_result_config(config_path)
+    return ExecutionResult(
+        reference_trees=output_config.reference_trees,
+        languages=output_config.languages,
+        root_language=output_config.root_language,
+        distance_matrix=_read_experiment_values(output_config.dist_matrix_path),
+        tree_distances=output_config.tree_distances,
+        run_duration=output_config.run_duration,
+        dist_matrix_path=output_config.dist_matrix_path,
+    )
+
 
 def execute_classify_langs(test_configuration_file: str,
                            tail_output: bool,
