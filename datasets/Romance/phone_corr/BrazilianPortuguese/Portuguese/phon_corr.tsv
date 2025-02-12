@@ -1,4 +1,4 @@
-Brazilian Portuguese	Portuguese	probability
+Brazilian Portuguese	Brazilian Portuguese	probability
 ˈɛ	ˈɛ	1.0
 ˈɔ_j	ˈɔ	1.0
 ˈɔ	ˈɔ	1.0
@@ -27,10 +27,11 @@ z	z	1.0
 w̃	w̃	1.0
 w_ɾ	w_ɾ	1.0
 v	v	1.0
+ũ	ũ	1.0
 t	t	1.0
 p_ɾ	p_ɾ	1.0
 p	p	1.0
-õ	-	1.0
+õ	õ	1.0
 o_m	u_m	1.0
 n	n	1.0
 m	m	1.0
@@ -50,16 +51,17 @@ a_ɾ	ɐ_ɾ	1.0
 a_d	ɐ_ð	1.0
 a_b	ɐ_β	1.0
 a	ɐ	1.0
+<#_o	<#_ɔ	1.0
 u	u	0.981
 s	s	0.966
 i	ɨ	0.867
+o	u	0.833
 ˈɐ̃	ˈɐ̃	0.815
 h	ɾ	0.804
 j̃	ɲ	0.704
 ˈõ	ˈõ	0.692
 ˈĩ	ˈi	0.643
 ɡ	ɣ	0.625
-o	u	0.625
 ˈe	ˈe	0.611
 ˈũ	ˈu	0.6
 b	b	0.593
@@ -81,13 +83,12 @@ e	i	0.37
 ˈõ	ˈo	0.308
 j̃	j̃	0.296
 ˈe	ˈɐ	0.278
-o	ɔ	0.25
 h	ʁ	0.196
 ˈẽ	ˈe	0.188
 ˈɐ̃	ˈɐ	0.185
+o	o	0.167
 i	i	0.133
 ˈẽ	ˈɐ̃	0.125
 ˈẽ	ˈɐ_j	0.125
-o	o	0.125
 ˈe	ˈɐ_j	0.111
 e	j	0.111

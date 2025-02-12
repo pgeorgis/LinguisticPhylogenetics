@@ -5,7 +5,7 @@ VOWELS
 	<blooje> /blˈʊːjə/ "bleed_VERB"
 
 /ˈeː/ (0.032)
-	<vleeg> /vlˈeːx/ "housefly_NOUN"
+	<vleeg> /vlˈeːɣ̊/ "housefly_NOUN"
 	<ete> /ˈeːtə/ "eat_VERB"
 	<veer> /vˈeːʀ/ "we_PRON"
 
@@ -81,7 +81,7 @@ VOWELS
 
 /ˈoː/ (0.008)
 	<honing> /ɦˈoːnɪŋ/ "honey_NOUN"
-	<ploog> /plˈoːx/ "plough_NOUN"
+	<ploog> /plˈoːɣ̊/ "plough_NOUN"
 	<zomer> /zˈoːməʀ/ "summer_NOUN"
 
 /ˈɑː/ (0.007)
@@ -102,7 +102,7 @@ VOWELS
 /ˈæː/ (0.006)
 	<sjerp> /ʃˈæːʀəp/ "sharp_ADJ"
 	<helpe> /ɦˈæːləpə/ "help_VERB"
-	<berg> /bˈæːʀəx/ "mountain_NOUN"
+	<berg> /bˈæːʀəɣ̊/ "mountain_NOUN"
 
 /ˈɔu̯/ (0.005)
 	<vrouw> /vʀˈɔu̯/ "woman_NOUN"
@@ -215,59 +215,64 @@ CONSONANTS
 	<zoeke> /zˈuːkə/ "suck_VERB"
 	<zoer> /zˈuːʀ/ "sour_ADJ"
 
-/x/ (0.023)
-	<dwerg> /dβˈæːʀəx/ "dwarf_NOUN"
-	<miech> /mˈix/ "me_PRON_ACC"
-	<lache> /lˈɑxə/ "laugh_VERB"
-
 /b/ (0.023)
-	<brouwe> /bʀˈɔu̯ə/ "brew_VERB"
-	<bein> /bˈɛːn/ "bone_NOUN"
+	<binde> /bˈɪːndə/ "bind_VERB"
+	<brögk> /bʀˈœk/ "bridge_NOUN"
 	<broed> /bʀˈud̥/ "bread_NOUN"
 
 /ɦ/ (0.022)
+	<heim> /ɦˈɛːi̯m/ "home_NOUN"
 	<hin> /ɦˈɪn/ "hen_NOUN"
-	<hoond> /ɦˈʊːnd̥/ "dog_NOUN"
-	<hore> /ɦˈʊːʀə/ "horn_NOUN"
+	<hoeg> /ɦˈuɣ̊/ "high_ADJ"
 
 /ɣ/ (0.02)
+	<gaajs> /ɣˈaːjz̥/ "goose_NOUN"
+	<vogel> /vˈoːɣəl/ "bird_NOUN_MASC"
 	<rege> /ʀˈeːɣə/ "rain_NOUN"
-	<gare> /ɣˈaːʀə/ "yarn_NOUN"
-	<gooj> /ɣˈʊːj/ "good_ADJ"
 
 /j/ (0.016)
+	<moojer> /mˈoːjəʀ/ "mother_NOUN"
 	<zij> /zˈɛj/ "side_NOUN"
-	<bij> /bˈɛj/ "bee_NOUN"
-	<beie> /bˈɛjə/ "request_VERB"
+	<gaajs> /ɣˈaːjz̥/ "goose_NOUN"
 
 /p/ (0.015)
-	<pliech> /plˈix/ "plight_NOUN"
-	<sjaop> /ʃˈɒːp/ "sheep_NOUN"
-	<deep> /dˈeːp/ "deep_ADJ"
+	<aap> /ˈaːp/ "ape_NOUN"
+	<slaope> /slˈɒːpə/ "sleep_VERB"
+	<kop> /kˈɔp/ "head_NOUN"
+
+/ɣ̊/ (0.012)
+	<ploog> /plˈoːɣ̊/ "plough_NOUN"
+	<druug> /dʀˈyːɣ̊/ "dry_ADJ"
+	<vleeg> /vlˈeːɣ̊/ "housefly_NOUN"
 
 /ŋ/ (0.012)
-	<slang> /slˈɑŋ/ "snake_NOUN"
 	<daanke> /dˈaːŋkə/ "thank_VERB"
 	<honing> /ɦˈoːnɪŋ/ "honey_NOUN"
+	<vinger> /vˈɪːŋəʀ/ "finger_NOUN"
+
+/x/ (0.011)
+	<mach> /mˈɑx/ "might_NOUN"
+	<lache> /lˈɑxə/ "laugh_VERB"
+	<'ch> /əx/ "I_PRON"
 
 /v̥/ (0.01)
+	<wolf> /βˈɔːləv̥/ "wolf_NOUN"
 	<kaaf> /kˈaːv̥/ "calf_NOUN"
-	<twelf> /tβˈæləv̥/ "twelve_NUM"
-	<vief> /vˈiːv̥/ "five_NUM"
+	<wief> /βˈiːv̥/ "wife_NOUN"
 
 /z̥/ (0.008)
 	<kies> /kˈiz̥/ "cheese_NOUN"
-	<gaajs> /ɣˈaːjz̥/ "goose_NOUN"
+	<moes> /mˈuːz̥/ "mouse_NOUN_FEM"
 	<naos> /nˈɒːz̥/ "nose_NOUN"
 
 /ʃ/ (0.008)
-	<sjoen> /ʃˈun/ "beautiful_ADJ"
-	<sjèld> /ʃˈɛːld̥/ "shield_NOUN"
-	<sjete> /ʃˈeːtə/ "shoot_VERB"
+	<sjeep> /ʃˈeːp/ "ship_NOUN"
+	<sjerp> /ʃˈæːʀəp/ "sharp_ADJ"
+	<sjaop> /ʃˈɒːp/ "sheep_NOUN"
 
 /ɡ/ (0.002)
-	<zègke> /zˈɛɡə/ "say_VERB"
 	<ligke> /lˈɪɡə/ "lie_VERB"
+	<zègke> /zˈɛɡə/ "say_VERB"
 
 /w/ (0.001)
 	<goud> /ɣˈɔːwd̥/ "gold_NOUN_NEU"

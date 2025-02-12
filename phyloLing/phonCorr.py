@@ -6,7 +6,7 @@ from functools import lru_cache
 from itertools import product
 from math import inf, log
 from statistics import mean, stdev
-from typing import Iterable, Self
+from typing import Self
 
 import numpy as np
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT,
@@ -31,8 +31,7 @@ from utils.logging import (log_phon_corr_iteration, write_alignments_log,
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
                             filter_out_invalid_ngrams, pad_sequence,
                             start_token)
-from utils.utils import (balanced_resample, create_default_dict,
-                         create_default_dict_of_dicts, default_dict,
+from utils.utils import (balanced_resample, create_default_dict, default_dict,
                          normalize_dict, segment_ranges)
 from utils.wordlist import Wordlist, sort_wordlist
 
@@ -303,13 +302,14 @@ class PhonCorrelator:
         self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists()
         self.samples = {}
 
-        # PMI, ngrams, scored words
+        # PMI and surprisal results
+        self.low_coverage_phones = None
         self.pmi_results: PhonemeMap = PhonemeMap()
         self.surprisal_results = create_default_dict(self.lang2.phoneme_entropy, 3)
         self.phon_env_surprisal_results = create_default_dict(self.lang2.phoneme_entropy, 3)
+        
+        # Non-cognate thresholds for calibration
         self.noncognate_thresholds: dict[(Distance, int, int), list] = defaultdict(list)
-        self.scored_words = create_default_dict_of_dicts()
-        self.low_coverage_phones = None
 
         # Logging output directories
         self.log_outdir = log_outdir if log_outdir else ""  # TODO revisit what default outdir path should be
@@ -359,19 +359,7 @@ class PhonCorrelator:
 
         # Get all unique combinations of L1 and L2 word
         # Sort the wordlists in order to ensure that random samples of same/different meaning pairs are reproducible
-        # Sort pairs symmetrically to ensure consistent ordering no matter which language is first
-        # Use info content to sort only as last resort, in case the words' IPA, concept, and orthography are all identical
-        # NB: in theory possible for the info content to be equal too, but this is almost impossible unless the languages are identical
-        all_wordpairs = sorted(
-            product(l1_wordlist, l2_wordlist),
-            key=lambda pair: (
-                min(pair[0].ipa, pair[1].ipa), max(pair[0].ipa, pair[1].ipa),
-                min(pair[0].concept, pair[1].concept), max(pair[0].concept, pair[1].concept),
-                min(pair[0].orthography, pair[1].orthography), max(pair[0].orthography, pair[1].orthography),
-                min(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2)),
-                max(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2))
-            )
-        )
+        all_wordpairs = sort_wordlist(product(l1_wordlist, l2_wordlist))
 
         # Sort out same-meaning from different-meaning word pairs, and loanwords
         same_meaning, diff_meaning, loanwords = [], [], []
@@ -389,14 +377,14 @@ class PhonCorrelator:
         # Return a tuple of the three word type lists
         return same_meaning, diff_meaning, loanwords
 
-    def sample_wordlists(self, n_samples, sample_size, start_seed=None, log_samples=True):
+    def sample_wordlists(self, n_samples, sample_size, start_seed=None, log_outfile='samples.log'):
         # Take N samples of same- and different-meaning words
         if start_seed is None:
             start_seed = self.seed
 
         samples = self.samples
         new_samples = False
-        if log_samples:
+        if log_outfile:
             sample_logs = {}
 
         # Track how many times each index has been sampled
@@ -429,18 +417,23 @@ class PhonCorrelator:
             # Record samples
             samples[(seed_i, sample_size)] = (synonym_sample, diff_sample)
 
-            # Log same-meaning sample
-            if log_samples:
-                sample_log = self.log_sample(synonym_sample, sample_n, seed=seed_i)
-                sample_logs[sample_n] = sample_log
+            # Log samples
+            if log_outfile:
+                same_meaning_sample_log = self.log_sample(
+                    synonym_sample, sample_n, label="synonym", seed=seed_i
+                )
+                diff_meaning_sample_log = self.log_sample(
+                    diff_sample, sample_n, label="different meaning", seed=seed_i
+                )
+                sample_logs[sample_n] = (same_meaning_sample_log, diff_meaning_sample_log)
 
         # Update dictionary of samples
         if new_samples:
             self.samples.update(samples)
 
         # Write sample log (only if new samples were drawn)
-        if log_samples and new_samples:
-            sample_log_file = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name, 'samples.log')
+        if log_outfile and new_samples:
+            sample_log_file = os.path.join(self.log_outdir, self.lang1.path_name, self.lang2.path_name, log_outfile)
             write_sample_log(sample_logs, sample_log_file)
 
         return samples
@@ -959,14 +952,20 @@ class PhonCorrelator:
                 n_samples=n_samples,
                 sample_size=sample_size,
                 start_seed=start_seed,
+                log_outfile="phone_corr_samples.log",
             )
+            diff_meaning_sampled = set()
+            for _, (_, diff_sample) in sample_dict.items():
+                diff_meaning_sampled.update(diff_sample)
         else:
+            diff_meaning_sampled = random.sample(self.diff_meaning, len(self.same_meaning))
             sample_dict = {
                 (start_seed, len(self.same_meaning)): (
-                    self.same_meaning, random.sample(self.diff_meaning, len(self.same_meaning))
+                    self.same_meaning, diff_meaning_sampled
                 )
             }
         final_qualifying = set()
+        #other_word_pairs = set()
         for key, sample in sample_dict.items():
             seed_i, _ = key
             sample_n = seed_i - start_seed
@@ -981,11 +980,6 @@ class PhonCorrelator:
             disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
             if cumulative:
                 all_cognate_alignments = []
-
-            def score_pmi(alignment: Alignment, pmi_dict: PhonemeMap):  # TODO use more sophisticated pmi_dist from wordDist.py or word adaptation surprisal or alignment cost measure within Alignment object
-                alignment_tuples = alignment.alignment
-                PMI_score = mean([pmi_dict.get_value_or_default(pair[0], pair[1], 0) for pair in alignment_tuples])
-                return PMI_score
 
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
                 iteration += 1
@@ -1069,30 +1063,30 @@ class PhonCorrelator:
                 )
 
                 # Score PMI for different meaning words and words disqualified in previous iteration
-                noncognate_PMI = []
+                noncognate_alignment_scores = []
                 for alignment in noncognate_alignments:
-                    noncognate_PMI.append(score_pmi(alignment, pmi_dict=PMI_iterations[iteration]))
-                nc_mean = mean(noncognate_PMI)
-                nc_stdev = stdev(noncognate_PMI)
+                    length_normalized_score = alignment.cost / alignment.length
+                    noncognate_alignment_scores.append(length_normalized_score)
+                nc_mean = mean(noncognate_alignment_scores)
+                nc_stdev = stdev(noncognate_alignment_scores)
 
-                # Score same-meaning alignments for overall PMI and calculate p-value
-                # against different-meaning alignments
+                # Score same-meaning alignments against different-meaning alignments
                 qualifying, disqualified = [], []
                 qualifying_alignments = []
                 qualified_PMI = []
                 for q, pair in enumerate(synonym_sample):
                     alignment = aligned_synonym_sample[q]
-                    PMI_score = score_pmi(alignment, pmi_dict=PMI_iterations[iteration])
+                    length_normalized_score = alignment.cost / alignment.length
 
-                    # Proportion of non-cognate word pairs which would have a PMI score at least as low as this word pair
-                    pnorm = 1 - norm.cdf(PMI_score, loc=nc_mean, scale=nc_stdev)
+                    # Proportion of non-cognate word pairs which would have an alignment score at least as low as this word pair
+                    pnorm = 1 - norm.cdf(length_normalized_score, loc=nc_mean, scale=nc_stdev)
                     if pnorm < p_threshold:
                         qualifying.append(pair)
                         qualifying_alignments.append(alignment)
-                        qualified_PMI.append(PMI_score)
+                        qualified_PMI.append(length_normalized_score)
                     else:
                         disqualified.append(pair)
-                        # disqualified_PMI.append(PMI_score)
+                        #other_word_pairs.add(pair)
                 qualifying, qualifying_alignments = prune_extraneous_synonyms(
                     wordlist=qualifying,
                     alignments=qualifying_alignments,
@@ -1132,36 +1126,48 @@ class PhonCorrelator:
             results = sample_results[0]
 
         # Realign final qualifying using averaged PMI values from all samples
+        #other_word_pairs = other_word_pairs - final_qualifying
+        #other_word_pairs.update(diff_meaning_sampled)
         final_qualifying = list(final_qualifying)
-        final_alignments = self.align_wordlist(
+        #other_word_pairs = list(other_word_pairs)
+        final_qualifying_alignments = self.align_wordlist(
             final_qualifying,
             align_costs=results,
         )
-        final_qualifying, final_alignments = prune_extraneous_synonyms(
+        final_qualifying, final_qualifying_alignments = prune_extraneous_synonyms(
             wordlist=final_qualifying,
-            alignments=final_alignments,
+            alignments=final_qualifying_alignments,
             maximize_score=True,
             family_index=family_index,
         )
-        # Log final alignments
-        self.log_alignments(final_alignments)
+        # final_other_alignments = self.align_wordlist(
+        #     other_word_pairs,
+        #     align_costs=results,
+        # )
 
         # Compute phone surprisal
         self.compute_phone_surprisal(
-            final_alignments,
+            final_qualifying_alignments,
             phon_env=phon_env,
             min_corr=min_corr,
             ngram_size=ngram_size,
         )
         # Compute surprisal in opposite direction with reversed alignments
         twin, family_index[PHONE_CORRELATORS_INDEX_KEY] = self.get_twin(family_index[PHONE_CORRELATORS_INDEX_KEY])
-        reversed_final_alignments = [alignment.reverse() for alignment in final_alignments]
+        reversed_final_alignments = [alignment.reverse() for alignment in final_qualifying_alignments]
         twin.compute_phone_surprisal(
             reversed_final_alignments,
             phon_env=phon_env,
             min_corr=min_corr,
             ngram_size=ngram_size,
         )
+
+        # Log all final alignments
+        self.log_alignments(final_qualifying_alignments)
+        #self.log_alignments(final_other_alignments)
+        twin.log_alignments(reversed_final_alignments)
+        #reversed_other_alignments = [alignment.reverse() for alignment in final_other_alignments]
+        #twin.log_alignments(reversed_other_alignments)
 
         # Write the iteration log
         log_file = os.path.join(self.phon_corr_dir, 'iterations.log')
@@ -1480,33 +1486,30 @@ class PhonCorrelator:
 
         return self.low_coverage_phones
 
-    def compute_noncognate_thresholds(self, eval_func, sample_size=None, save=True, seed=None):
+    def compute_noncognate_thresholds(self, eval_func, sample_size=None, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
         if sample_size is None:
             sample_size = len(self.same_meaning)
+        else:
+            sample_size = min(sample_size, len(self.diff_meaning))
 
-        # Set random seed: may or may not be the default seed attribute of the PhonCorrelator class
-        if not seed:
-            seed = self.seed
-        random.seed(seed)
-
-        diff_sample = random.sample(self.diff_meaning, min(sample_size, len(self.diff_meaning)))
+        if (seed, sample_size) not in self.samples:
+            _ = self.sample_wordlists(
+                n_samples=1, 
+                sample_size=sample_size,
+                start_seed=seed,
+                log_outfile="noncognate_thresholds_samples.log",
+            )
+        _, diff_sample = self.samples[(seed, sample_size)]
         noncognate_scores = []
-        func_key = (eval_func, eval_func.hashable_kwargs)
         for pair in diff_sample:
-            if pair in self.scored_words[func_key]:
-                noncognate_scores.append(self.scored_words[func_key][pair])
-            else:
-                score = eval_func.eval(pair[0], pair[1])
-                noncognate_scores.append(score)
-                self.scored_words[func_key][pair] = score
-        self.reset_seed()
-
-        if save:
-            key = (eval_func, sample_size, seed)
-            self.noncognate_thresholds[key] = noncognate_scores
+            score = eval_func.eval(pair[0], pair[1])
+            noncognate_scores.append(score)
+        # Save results
+        key = (eval_func, sample_size, seed)
+        self.noncognate_thresholds[key] = noncognate_scores
 
         return noncognate_scores
 
@@ -1531,16 +1534,16 @@ class PhonCorrelator:
             ngram_size=ngram_size,
         )
 
-    def log_sample(self, sample, sample_n, seed=None):
+    def log_sample(self, sample, sample_n, label, seed=None):
         if seed is None:
             seed = self.seed
         sample = sorted(
             [
-                f'[{word1.concept}] {word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/'
+                f'[{word1.concept}] {word1.orthography} /{word1.ipa}/ - [{word2.concept}] {word2.orthography} /{word2.ipa}/'
                 for word1, word2 in sample
             ]
         )
-        sample_log = f'SAMPLE: {sample_n}\nSEED: {seed}\n'
+        sample_log = f'SAMPLE: {sample_n}\nSEED: {seed}\nLABEL: {label}\n'
         sample_log += '\n'.join(sample)
         return sample_log
 

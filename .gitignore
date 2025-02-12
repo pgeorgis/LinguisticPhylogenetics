@@ -6,3 +6,7 @@ __pycache__/
 archive/
 .DS_Store
 datasets/
+tests/
+.coverage
+coverage.xml
+coverage/

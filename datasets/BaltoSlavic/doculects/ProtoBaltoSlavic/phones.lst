@@ -1,18 +1,18 @@
 VOWELS
 /a/ (0.111)
 	<gárdas> /ɡárdas/ "CITY_NOUN"
-	<garā́ˀ> /ɡaráːˀ/ "MOUNTAIN_NOUN"
-	<wápsāˀ> /wápsaːˀ/ "WASP_NOUN"
+	<dílˀgas> /dílˀɡas/ "LONG_ADJ"
+	<galsás> /ɡalsás/ "VOICE_NOUN"
 
 /i/ (0.044)
 	<déśimt> /désʲimt/ "TEN_NUM"
 	<sáuˀlijāˀ> /sáu̯ˀlijaːˀ/ "SUN_NOUN"
 	<anˀglís> /aŋˀɡlís/ "COAL_NOUN"
 
-/aː/ (0.038)
+/aː/ (0.039)
 	<sādas> /saːdas/ "GARDEN_NOUN"
 	<ṓˀgāˀ> /óːˀɡaːˀ/ "BERRY_NOUN"
-	<ū́ˀdrāˀ> /úːˀdraːˀ/ "OTTER_NOUN"
+	<stā́ˀras> /stáːˀras/ "OLD_ADJ"
 
 /e/ (0.032)
 	<šéš> /ʃéʃ/ "SIX_NUM"
@@ -68,11 +68,11 @@ VOWELS
 
 CONSONANTS
 /s/ (0.111)
-	<glā́ˀdus> /ɡláːˀdus/ "SMOOTH_ADJ"
+	<dū́ˀmas> /dúːˀmas/ "SMOKE_NOUN"
 	<źwēˀrís> /zʲweːˀrís/ "BEAST_NOUN"
-	<mḗns> /méːns/ "MEAT_NOUN"
+	<dílˀgas> /dílˀɡas/ "LONG_ADJ"
 
-/r/ (0.043)
+/r/ (0.042)
 	<gárdas> /ɡárdas/ "CITY_NOUN"
 	<ū́ˀdrāˀ> /úːˀdraːˀ/ "OTTER_NOUN"
 	<ketū́res> /ketúːres/ "FOUR_NUM"
@@ -82,10 +82,10 @@ CONSONANTS
 	<stā́ˀras> /stáːˀras/ "OLD_ADJ"
 	<aśtṓ> /asʲtóː/ "EIGHT_NUM"
 
-/n/ (0.04)
-	<in> /in/ "IN_PREP"
+/n/ (0.041)
+	<śwentás> /sʲwentás/ "HOLY_ADJ"
 	<nagā́ˀ> /naɡáːˀ/ "FOOT_NOUN"
-	<sū́ˀnus> /súːˀnus/ "SON_NOUN"
+	<snáigas> /snái̯ɡas/ "SNOW_NOUN"
 
 /l/ (0.035)
 	<ślṓˀwāˀ> /sʲlóːˀwaːˀ/ "GLORY_NOUN"
@@ -102,25 +102,25 @@ CONSONANTS
 	<mirtwas> /mirtwas/ "DEAD_ADJ"
 	<kwaitas> /kwai̯tas/ "FLOWER_NOUN"
 
-/k/ (0.028)
+/k/ (0.029)
 	<ketū́res> /ketúːres/ "FOUR_NUM"
 	<áiˀšknas> /ái̯ˀʃknas/ "CLEAR_ADJ"
-	<ránkāˀ> /ráŋkaːˀ/ "HAND_NOUN"
+	<źanskāˀ> /zʲanskaːˀ/ "GOOSE_NOUN"
 
 /d/ (0.028)
 	<duwō> /duwoː/ "TWO_NUM"
 	<źwaisdā́ˀ> /zʲwai̯zdáːˀ/ "STAR_NOUN"
 	<mondros> /mondros/ "WISE_ADJ"
 
-/m/ (0.027)
+/m/ (0.026)
 	<máušāˀ> /máu̯ʃaːˀ/ "HOUSEFLY_NOUN"
 	<ēˀźum> /eːˀzʲum/ "I_POS"
 	<źeimā́ˀ> /zʲei̯máːˀ/ "WINTER_NOUN"
 
-/zʲ/ (0.018)
-	<źámbas> /zʲámbas/ "TOOTH_NOUN"
-	<éźera> /ézʲera/ "LAKE_NOUN"
+/zʲ/ (0.019)
 	<źwaisdā́ˀ> /zʲwai̯zdáːˀ/ "STAR_NOUN"
+	<źinōˀtei> /zʲinoːˀtei̯/ "KNOW_VERB"
+	<éźera> /ézʲera/ "LAKE_NOUN"
 
 /b/ (0.015)
 	<źámbas> /zʲámbas/ "TOOTH_NOUN"
@@ -158,15 +158,15 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
-/́/ (0.095)
+/́/ (0.094)
 	<wilkás> /wilkás/ "WOLF_NOUN"
 	<bérˀźas> /bérˀzʲas/ "BIRCH_NOUN"
 	<bálˀtas> /bálˀtas/ "WHITE_ADJ"
 
-/ˀ/ (0.04)
+/ˀ/ (0.041)
 	<źwēˀrís> /zʲweːˀrís/ "BEAST_NOUN"
 	<gléiˀwāˀ> /ɡléi̯ˀwaːˀ/ "FUNGUS_NOUN"
-	<sáuˀlijāˀ> /sáu̯ˀlijaːˀ/ "SUN_NOUN"
+	<jáušāˀ> /jáu̯ʃaːˀ/ "SOUP_NOUN"
 
 /́ˀ/ (0.037)
 	<glā́ˀdus> /ɡláːˀdus/ "SMOOTH_ADJ"

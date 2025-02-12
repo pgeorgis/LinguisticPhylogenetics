@@ -149,7 +149,7 @@ class LexicalDataset:
                 lang_id=self.lang_ids[lang],
                 glottocode=self.glottocodes[lang],
                 iso_code=self.iso_codes[lang],
-                doculect_dir=os.path.join(self.phone_corr_dir, path_name),
+                doculect_dir=os.path.join(self.doculects_dir, path_name),
                 data=language_vocab_data[lang],
                 columns=self.columns,
                 transcription_params=self.transcription_params.get('doculects', {}).get(lang, self.transcription_params['global']),
@@ -945,7 +945,7 @@ class LexicalDataset:
                                  **kwargs)
 
         if linkage_method == 'nj':
-            newick_tree = nj(lm, disallow_negative_branch_length=True, result_constructor=str)
+            newick_tree = str(nj(lm, neg_as_zero=True))
         else:
             newick_tree = linkage2newick(lm, labels)
 

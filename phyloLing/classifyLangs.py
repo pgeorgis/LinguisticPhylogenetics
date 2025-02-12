@@ -8,11 +8,11 @@ from collections import defaultdict
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_dist
-from utils.tree import (calculate_tree_distance, gqd, load_newick_tree,
+from utils.tree import (calculate_tree_distance, get_gqd_score_to_reference,
                         plot_tree)
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
                          create_datestamp, create_timestamp, csv2dict,
-                         get_git_commit_hash)
+                         get_git_commit_hash, load_config)
 from wordDist import (HYBRID_DIST_KEY, LEVENSHTEIN_DIST_KEY,
                       PHONOLOGICAL_DIST_KEY, PMI_DIST_KEY, SURPRISAL_DIST_KEY,
                       LevenshteinDist, PhonDist, PMIDist, SurprisalDist,
@@ -50,22 +50,6 @@ aux_func_map = {
     'levenshtein': LEVENSHTEIN_DIST_KEY,
     'hybrid': HYBRID_DIST_KEY,
 } # TODO unify these with function_map
-
-
-def load_config(config_path):
-    """Returns a dictionary containing parameters from a specified config.yml file
-
-    Args:
-        config_path (str): Path to config.yml file
-
-    Returns:
-        config: nested dictionary of parameter names and values
-    """
-
-    with open(config_path, 'r') as f:
-        config = yaml.safe_load(f)
-
-    return config
 
 
 def validate_params(params, valid_params):
@@ -177,14 +161,11 @@ def load_precalculated_word_scores(distance_dir, family, dist_keys, excluded_doc
     return precalculated_word_scores
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Loads a lexical dataset in CLDF format and produces a phylogenetic tree according to user specifications')
-    parser.add_argument('config', help='Path to config.yml file')
-    args = parser.parse_args()
+def main(config) -> dict:
     start_time, start_timestamp = create_timestamp()
 
     # Load parameters from config file
-    params = load_config(args.config)
+    params: dict = load_config(config)
     # Load default parameters from default config file
     default_params = load_config(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config/default_config.yml'))
     # Set default values in case unspecified in config file
@@ -318,12 +299,6 @@ if __name__ == "__main__":
             ngram_size=phon_corr_params['ngram'],
             phon_env=phon_corr_params['phon_env'],
         )
-        family.write_phoneme_pmi()
-        if eval_params['method'] in ('surprisal', 'hybrid'):
-            family.write_phoneme_surprisal(
-                ngram_size=phon_corr_params['ngram'],
-                phon_env=phon_corr_params['phon_env'],
-            )
 
     # Auto cognate clustering only
     if cognate_params['cluster'] in ('auto', 'gold'):
@@ -384,7 +359,7 @@ if __name__ == "__main__":
     with open(outtree, 'w') as f:
         f.write(tree)
     logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
-    
+
     # Write clustered cognate class index
     if cognate_params['cluster'] == 'auto':
         clustered_cognates = family.clustered_cognates[exp_id]
@@ -392,19 +367,20 @@ if __name__ == "__main__":
 
     # Optionally evaluate tree wrt to reference tree(s)
     ref_classifications = None
+    gqd_score = None
+    tree_mutual_info = None
     if tree_params["reference"] and len(family.languages) < 3:
         logger.info("Fewer than 3 doculects provided; skipping evaluation.")
     elif tree_params["reference"]:
         tree_scores = defaultdict(dict)
         for ref_tree_file in tree_params["reference"]:
-            ref_tree = load_newick_tree(ref_tree_file)
-            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
-            gqd_score = gqd(
+            gqd_score, ref_tree = get_gqd_score_to_reference(
                 tree,
-                ref_tree,
-                group_size=min(4, len(family.languages)),
-                is_rooted=tree_params['root'] is not None
+                ref_tree_file,
+                len(family.languages),
+                tree_params['root']
             )
+            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
             tree_scores[ref_tree_file]["GQD"] = gqd_score
             logger.info(f"GQD wrt reference tree {ref_tree_file}: {round(gqd_score, 3)}")
             tree_mutual_info = calculate_tree_distance(tree, ref_tree)
@@ -458,3 +434,14 @@ if __name__ == "__main__":
     logger.info(f"Wrote experiment run config to {os.path.abspath(config_copy)}")
 
     logger.info('Completed successfully.')
+    return {
+        "distance_matrix": out_distmatrix,
+        "gqd_distance": gqd_score,
+        "wrt_distance": tree_mutual_info,
+    }
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Loads a lexical dataset in CLDF format and produces a phylogenetic tree according to user specifications')
+    parser.add_argument('config', help='Path to config.yml file')
+    args = parser.parse_args()
+    main(args.config)

@@ -1,6 +1,8 @@
-Swabian	Standard German	probability
+Swabian	Swabian	probability
+ˈʌ	ˈɪ_ɐ	1.0
 ˈɪ	ˈɪ	1.0
 ˈɔː	ˈaː	1.0
+ˈɔə̯	ˈuː	1.0
 ˈɔe̯	ˈaɪ̯	1.0
 ˈɔ	ˈɔ	1.0
 ˈuː	ˈuː	1.0
@@ -9,6 +11,7 @@ Swabian	Standard German	probability
 ˈeə̯	n	1.0
 ˈao̯	ˈaʊ̯	1.0
 ʦ	ʦ	1.0
+ʣ	ʦ_ə	1.0
 ʕ	ɐ	1.0
 ʌ	ɐ	1.0
 ʋ	v	1.0
@@ -20,13 +23,16 @@ Swabian	Standard German	probability
 ç	ç	1.0
 x	x	1.0
 t	t	1.0
+p͡f	p͡f	1.0
 n_ˈa	n_ˈa	1.0
 n_#>	n_ə_#>	1.0
 n	n	1.0
 l	l	1.0
 kʰ	kʰ	1.0
 j	j	1.0
+i	ɪ	1.0
 h	h	1.0
+eə̯	eː_n	1.0
 e	ə	1.0
 b̥͡f	p͡f	1.0
 #>	n_#>	1.0
@@ -37,7 +43,7 @@ m	m	0.923
 b	b	0.812
 ˈaː	ˈaː	0.8
 ˈɛ	ˈɛ	0.773
-a	n	0.756
+a	n	0.773
 ˈəi̯	ˈaɪ̯	0.714
 ˈe	ˈɪ	0.714
 ˈi	ˈɪ	0.706
@@ -61,8 +67,8 @@ d	t	0.395
 ˈe	-	0.286
 d	d	0.247
 ɡ	k	0.244
+a	ə_n	0.205
 ˈaː	ˈa_n	0.2
-a	ə_n	0.2
 d	tʰ	0.198
 ˈi	ˈiː	0.176
 ˈae̯	-	0.167

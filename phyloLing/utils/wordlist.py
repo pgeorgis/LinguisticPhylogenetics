@@ -20,7 +20,21 @@ def ngram_count_wordlist(ngram, seq_list):
 
 
 def sort_wordlist(wordlist):
-    return sorted(wordlist, key=lambda x: (x[0].ipa, x[1].ipa, x[0].concept, x[1].concept))
+    # Get all unique combinations of L1 and L2 word
+    # Sort the wordlists in order to ensure that random samples of same/different meaning pairs are reproducible
+    # Sort pairs symmetrically to ensure consistent ordering no matter which language is first
+    sorted_wordlist = sorted(
+        wordlist,
+        key=lambda pair: (
+            min(pair[0].ipa, pair[1].ipa), max(pair[0].ipa, pair[1].ipa),
+            pair[0].ipa, pair[1].ipa,
+            min(pair[0].concept, pair[1].concept), max(pair[0].concept, pair[1].concept),
+            min(pair[0].orthography, pair[1].orthography), max(pair[0].orthography, pair[1].orthography),
+            #min(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2)),
+            #max(pair[0].getInfoContent(total=True, doculect=self.lang1), pair[1].getInfoContent(total=True, doculect=self.lang2))
+        )
+    )
+    return sorted_wordlist
 
 
 class Wordlist:

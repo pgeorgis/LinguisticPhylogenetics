@@ -967,8 +967,8 @@ Lower Sorbian	Lower Sorbian			HONEY_NOUN	mjod	mʲɔd̥	mʲ ɔ d̥		HONEY_NOUN_1
 Polish	Polish			HONEY_NOUN	miód	mjˈud̥	m j ˈu d̥		HONEY_NOUN_1			
 Kashubian	Kashubian			HONEY_NOUN	miód	mjˈud̥	m j ˈu d̥		HONEY_NOUN_1			
 Ukrainian	Ukrainian			HONEY_NOUN	мед	mˈɛd	m ˈɛ d		HONEY_NOUN_1			
-Belarusian	Belarusian			HONEY_NOUN	мёд	mʲɵd̥	mʲ ɵ d̥		HONEY_NOUN_1			
-Russian	Russian			HONEY_NOUN	мёд	mʲɵd̥	mʲ ɵ d̥		HONEY_NOUN_1			
+Belarusian	Belarusian			HONEY_NOUN	мёд	mʲˈɵd̥	mʲ ˈɵ d̥		HONEY_NOUN_1			
+Russian	Russian			HONEY_NOUN	мёд	mʲˈɵd̥	mʲ ˈɵ d̥		HONEY_NOUN_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			MEAT_NOUN	mḗns	méːns	m éː n s		MEAT_NOUN_1			
 Lithuanian	Lithuanian			MEAT_NOUN	mėsà	mʲeːsˈɐ	mʲ eː s ˈɐ		MEAT_NOUN_1			
 Old Prussian	Old Prussian			MEAT_NOUN	menso	menso	m e n s o		MEAT_NOUN_1			
@@ -1848,11 +1848,8 @@ Proto-Balto-Slavic	Proto-Balto-Slavic			GOOSE_NOUN	źansís	zʲansís	zʲ a n s
 Lithuanian	Lithuanian			GOOSE_NOUN	žąsìs	ʒaːsʲˈɪs	ʒ aː sʲ ˈɪ s		GOOSE_NOUN_1			
 Latvian	Latvian			GOOSE_NOUN	zoss	zˈuɔ̯ss	z ˈuɔ̯ s s		GOOSE_NOUN_1			
 Old Prussian	Old Prussian			GOOSE_NOUN	sansy	zansi	z a n s i		GOOSE_NOUN_1			
-Proto-Slavic	Proto-Slavic			GOOSE_NOUN	gǫ̑sь	ɡɔ̃̂ːsĭ	ɡ ɔ̃̂ː s ĭ		GOOSE_NOUN_1			
+Proto-Slavic	Proto-Slavic			GOOSE_NOUN	gǫ̑sь	ɡõ̂ːsĭ	ɡ õ̂ː s ĭ		GOOSE_NOUN_1			
 Old Church Slavonic	Old Church Slavonic			GOOSE_NOUN	гѫсь	ɡˈɔ̃sɪ	ɡ ˈɔ̃ s ɪ		GOOSE_NOUN_1			
-Bulgarian	Bulgarian			GOOSE_NOUN	гъска	ɡˈɤskɐ	ɡ ˈɤ s k ɐ		GOOSE_NOUN_1			
-Macedonian	Macedonian			GOOSE_NOUN	гуска	ɡˈuska	ɡ ˈu s k a		GOOSE_NOUN_1			
-Štokavian	Štokavian			GOOSE_NOUN	gȕska	ɡûska	ɡ û s k a		GOOSE_NOUN_1			
 Slovenian	Slovenian			GOOSE_NOUN	gọ̑s	ɡóːs	ɡ óː s		GOOSE_NOUN_1			
 Slovak	Slovak			GOOSE_NOUN	hus	ɦˈus	ɦ ˈu s		GOOSE_NOUN_1			
 Czech	Czech			GOOSE_NOUN	husa	ɦˈusa	ɦ ˈu s a		GOOSE_NOUN_1			
@@ -1860,9 +1857,14 @@ Upper Sorbian	Upper Sorbian			GOOSE_NOUN	hus	ɦˈus	ɦ ˈu s		GOOSE_NOUN_1
 Lower Sorbian	Lower Sorbian			GOOSE_NOUN	gus	ɡˈus	ɡ ˈu s		GOOSE_NOUN_1			
 Polish	Polish			GOOSE_NOUN	gęś	ɡˈɛw̃ɕ	ɡ ˈɛ w̃ ɕ		GOOSE_NOUN_1			
 Kashubian	Kashubian			GOOSE_NOUN	gãs	ɡˈãs	ɡ ˈã s		GOOSE_NOUN_1			
-Ukrainian	Ukrainian			GOOSE_NOUN	гуска	ɦˈuskɐ	ɦ ˈu s k ɐ		GOOSE_NOUN_1			
 Belarusian	Belarusian			GOOSE_NOUN	гусь	ɣˈusʲ	ɣ ˈu sʲ		GOOSE_NOUN_1			
 Russian	Russian			GOOSE_NOUN	гусь	ɡˈusʲ	ɡ ˈu sʲ		GOOSE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			GOOSE_NOUN	źanskāˀ	zʲanskaːˀ	zʲ a n s k aːˀ		GOOSE_NOUN_2			
+Proto-Slavic	Proto-Slavic			GOOSE_NOUN	gǫ̑sъka	ɡõ̂ːsŭka	ɡ õ̂ː s ŭ k a		GOOSE_NOUN_2			
+Bulgarian	Bulgarian			GOOSE_NOUN	гъска	ɡˈɤskɐ	ɡ ˈɤ s k ɐ		GOOSE_NOUN_2			
+Macedonian	Macedonian			GOOSE_NOUN	гуска	ɡˈuska	ɡ ˈu s k a		GOOSE_NOUN_2			
+Štokavian	Štokavian			GOOSE_NOUN	gȕska	ɡûska	ɡ û s k a		GOOSE_NOUN_2			
+Ukrainian	Ukrainian			GOOSE_NOUN	гуска	ɦˈuskɐ	ɦ ˈu s k ɐ		GOOSE_NOUN_2			
 Proto-Balto-Slavic	Proto-Balto-Slavic			WINTER_NOUN	źeimā́ˀ	zʲei̯máːˀ	zʲ ei̯ m áːˀ		WINTER_NOUN_1			
 Lithuanian	Lithuanian			WINTER_NOUN	žiemà	ʑiə̯mˈɐ	ʑ iə̯ m ˈɐ		WINTER_NOUN_1			
 Latgalian	Latgalian			WINTER_NOUN	zīma	zˈiːma	z ˈiː m a		WINTER_NOUN_1			

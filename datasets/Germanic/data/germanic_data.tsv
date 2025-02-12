@@ -1,6 +1,6 @@
 ID	Language_ID	Glottocode	ISO 639-3	Parameter_ID	Value	Form	Segments	Source_Form	Cognate_ID	Loan	Comment	Source
 Proto-Germanic	Proto-Germanic			deadly_ADJ	daudalīkaz	dˈɑu̯ðɑliːkɑz	d ˈɑu̯ ð ɑ l iː k ɑ z		deadly_ADJ_1			
-Old West Norse	Old West Norse			deadly_ADJ	dauðligr	dˈɒu̯ðliɡr	d ˈɒu̯ ð l i ɡ r		deadly_ADJ_1			
+Old West Norse	Old West Norse			deadly_ADJ	dauðligr	dˈɒu̯ðliɡr̥	d ˈɒu̯ ð l i ɡ r̥		deadly_ADJ_1			
 Icelandic	Icelandic			deadly_ADJ	dauðlegur	d̥ˈœːy̯ðlɛɣʏr̥	d̥ ˈœːy̯ ð l ɛ ɣ ʏ r̥		deadly_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			deadly_ADJ	dødeleg	dˈøːdeleɡ	d ˈøː d e l e ɡ		deadly_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			deadly_ADJ	dødelig	dˈøːdəli	d ˈøː d ə l i		deadly_ADJ_1			
@@ -54,6 +54,8 @@ Northern Low Saxon	Northern Low Saxon			cheese_NOUN	Kees	kʰˈɛɪ̯z̥	kʰ ˈɛ
 Westphalian	Westphalian			cheese_NOUN	Kaise	kˈaɪ̯zə	k ˈaɪ̯ z ə		cheese_NOUN_1			
 Eastphalian	Eastphalian			cheese_NOUN	Keese	kˈɛɪ̯zə	k ˈɛɪ̯ z ə		cheese_NOUN_1			
 Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			cheese_NOUN	Kees	kʰˈɛɪ̯z̥	kʰ ˈɛɪ̯ z̥		cheese_NOUN_1			
+Old Dutch	Old Dutch			cheese_NOUN	kāsi	kˈɑːzi	k ˈɑː z i		cheese_NOUN_1			
+Middle Dutch	Middle Dutch			cheese_NOUN	câse	kˈɑːzə	k ˈɑː z ə		cheese_NOUN_1			
 Dutch	Dutch			cheese_NOUN	kaas	kˈaːz̥	k ˈaː z̥		cheese_NOUN_1			
 Afrikaans	Afrikaans			cheese_NOUN	kaas	kˈɑːs	k ˈɑː s		cheese_NOUN_1			
 Zeelandic	Zeelandic			cheese_NOUN	kaes	kˈɛːz̥	k ˈɛː z̥		cheese_NOUN_1			
@@ -158,6 +160,8 @@ Westphalian	Westphalian			speech_NOUN_FEM	Spraoke	ʃprˈɔːkə	ʃ p r ˈɔː k 
 Eastphalian	Eastphalian			speech_NOUN_FEM	Sprake	sprˈɒːkə	s p r ˈɒː k ə		speech_NOUN_FEM_1			
 Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			speech_NOUN_FEM	Språk	ʃprˈɒːk	ʃ p r ˈɒː k		speech_NOUN_FEM_1			
 Plautdietsch	Plautdietsch			speech_NOUN_FEM	Sproak	ʃprˈoa̯k	ʃ p r ˈoa̯ k		speech_NOUN_FEM_1			
+Old Dutch	Old Dutch			speech_NOUN_FEM	sprāka	sprˈɑːka	s p r ˈɑː k a		speech_NOUN_FEM_1			
+Middle Dutch	Middle Dutch			speech_NOUN_FEM	sprâke	sprˈɑːkə	s p r ˈɑː k ə		speech_NOUN_FEM_1			
 Dutch	Dutch			speech_NOUN_FEM	spraak	spɾˈaːk	s p ɾ ˈaː k		speech_NOUN_FEM_1			
 Afrikaans	Afrikaans			speech_NOUN_FEM	spraak	sprˈɑːk	s p r ˈɑː k		speech_NOUN_FEM_1			
 Zeelandic	Zeelandic			speech_NOUN_FEM	spraeke	spɾˈɛːkə	s p ɾ ˈɛː k ə		speech_NOUN_FEM_1			
@@ -198,7 +202,7 @@ Dutch	Dutch			edge_NOUN	eg	ˈɛχ	ˈɛ χ		edge_NOUN_1
 Afrikaans	Afrikaans			edge_NOUN	eg	ˈæχ	ˈæ χ		edge_NOUN_1			
 Zeelandic	Zeelandic			edge_NOUN	egge	ˈæxə	ˈæ x ə		edge_NOUN_1			
 West Flemish	West Flemish			edge_NOUN	egge	ˈɛɦə	ˈɛ ɦ ə		edge_NOUN_1			
-Limburgish	Limburgish			edge_NOUN	eeg	ˈeːx	ˈeː x		edge_NOUN_1			
+Limburgish	Limburgish			edge_NOUN	eeg	ˈeːɣ̊	ˈeː ɣ̊		edge_NOUN_1			
 Ripuarian	Ripuarian			edge_NOUN	Eck	ˈɛk	ˈɛ k		edge_NOUN_1			
 Luxembourgish	Luxembourgish			edge_NOUN	Eck	ˈɛk	ˈɛ k		edge_NOUN_1			
 Pennsylvania German	Pennsylvania German			edge_NOUN	Eck	ˈɛk	ˈɛ k		edge_NOUN_1			
@@ -292,7 +296,7 @@ Swabian	Swabian			oak_NOUN_FEM	Oich	ˈɔe̯ç	ˈɔe̯ ç		oak_NOUN_FEM_1
 Alsatian	Alsatian			oak_NOUN_FEM	Eich	ˈəi̯ʃ	ˈəi̯ ʃ		oak_NOUN_FEM_1			
 Swiss German	Swiss German			oak_NOUN_FEM	Äiche	ˈæi̯χːə	ˈæi̯ χː ə		oak_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			fire_NOUN	ailidaz	ˈɑi̯liðɑz	ˈɑi̯ l i ð ɑ z		fire_NOUN_1			
-Old West Norse	Old West Norse			fire_NOUN	eldr	ˈɛldr	ˈɛ l d r		fire_NOUN_1			
+Old West Norse	Old West Norse			fire_NOUN	eldr	ˈɛldr̥	ˈɛ l d r̥		fire_NOUN_1			
 Icelandic	Icelandic			fire_NOUN	eldur	ˈɛld̥ʏr̥	ˈɛ l d̥ ʏ r̥		fire_NOUN_1			
 Faroese	Faroese			fire_NOUN	eldur	ˈɛld̥ʊɹ	ˈɛ l d̥ ʊ ɹ		fire_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			fire_NOUN	eld	ˈɛll	ˈɛ l l		fire_NOUN_1			
@@ -459,18 +463,18 @@ Alsatian	Alsatian			old_ADJ	àlt	ˈɒlt	ˈɒ l t		old_ADJ_1
 Swiss German	Swiss German			old_ADJ	alt	ˈɒltː	ˈɒ l tː		old_ADJ_1			
 Proto-Germanic	Proto-Germanic			all_ADJ	allaz	ˈɑllɑz	ˈɑ l l ɑ z		all_ADJ_1			
 Gothic	Gothic			all_ADJ	𐌰𐌻𐌻𐍃	ˈalls	ˈa l l s		all_ADJ_1			
-Old West Norse	Old West Norse			all_ADJ	allr	ˈɑllr	ˈɑ l l r		all_ADJ_1			
+Old West Norse	Old West Norse			all_ADJ	allr	ˈɑllr̥	ˈɑ l l r̥		all_ADJ_1			
 Icelandic	Icelandic			all_ADJ	allur	ˈat͡l̥ʏr̥	ˈa t͡l̥ ʏ r̥		all_ADJ_1			
 Faroese	Faroese			all_ADJ	allur	ˈat͡l̥ʊɹ	ˈa t͡l̥ ʊ ɹ		all_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			all_ADJ	all	ˈɑll	ˈɑ l l		all_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			all_ADJ	all	ˈɑll	ˈɑ l l		all_ADJ_1			
-Danish	Danish			all_ADJ	al	ˈal	ˈa l		all_ADJ_1			
+Danish	Danish			all_ADJ	al	ˈælˀ	ˈæ lˀ		all_ADJ_1			
 Swedish	Swedish			all_ADJ	all	ˈall	ˈa l l		all_ADJ_1			
 Elfdalian	Elfdalian			all_ADJ	all	ˈɔll	ˈɔ l l		all_ADJ_1			
 Scots	Scots			all_ADJ	aw	ˈɑː	ˈɑː		all_ADJ_1			
 English	English			all_ADJ	all	ˈɔːɫ	ˈɔː ɫ		all_ADJ_1			
 American English	American English			all_ADJ	all	ˈɑɫ	ˈɑ ɫ		all_ADJ_1			
-Old English	Old English			all_ADJ	eall	ˈæɑ̯ll	ˈæɑ̯ l l		all_ADJ_1			
+Old English	Old English			all_ADJ	eall	ˈæɑ̯ɫɫ	ˈæɑ̯ ɫ ɫ		all_ADJ_1			
 West Frisian	West Frisian			all_ADJ	al	ˈal	ˈa l		all_ADJ_1			
 Saterland Frisian	Saterland Frisian			all_ADJ	aal	ˈaːl	ˈaː l		all_ADJ_1			
 Insular North Frisian	Insular North Frisian			all_ADJ	al	ˈal	ˈa l		all_ADJ_1			
@@ -498,12 +502,12 @@ Alsatian	Alsatian			all_ADJ	àll	ˈɒl	ˈɒ l		all_ADJ_1
 Swiss German	Swiss German			all_ADJ	all	ˈɒl	ˈɒ l		all_ADJ_1			
 Proto-Germanic	Proto-Germanic			other_ADJ	anþeraz	ˈɑnθerɑz	ˈɑ n θ e r ɑ z		other_ADJ_1			
 Gothic	Gothic			other_ADJ	𐌰𐌽𐌸𐌰𐍂	ˈanθar	ˈa n θ a r		other_ADJ_1			
-Old West Norse	Old West Norse			other_ADJ	annarr	ˈɑnnɑrr	ˈɑ n n ɑ r r		other_ADJ_1			
+Old West Norse	Old West Norse			other_ADJ	annarr	ˈɑnnɑrr̥	ˈɑ n n ɑ r r̥		other_ADJ_1			
 Icelandic	Icelandic			other_ADJ	annar	ˈannar̥	ˈa n n a r̥		other_ADJ_1			
 Faroese	Faroese			other_ADJ	annar	ˈannaɹ	ˈa n n a ɹ		other_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			other_ADJ	annan	ˈɑnnɑn	ˈɑ n n ɑ n		other_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			other_ADJ	annen	ˈɑnnən	ˈɑ n n ə n		other_ADJ_1			
-Danish	Danish			other_ADJ	anden	ˈanən	ˈa n ə n		other_ADJ_1			
+Danish	Danish			other_ADJ	anden	ˈænən	ˈæ n ə n		other_ADJ_1			
 Swedish	Swedish			other_ADJ	annan	ˈannan	ˈa n n a n		other_ADJ_1			
 Elfdalian	Elfdalian			other_ADJ	anan	ˈɑːnɑn	ˈɑː n ɑ n		other_ADJ_1			
 Scots	Scots			other_ADJ	ither	ˈɪðɛr	ˈɪ ð ɛ r		other_ADJ_1			
@@ -551,7 +555,7 @@ Proto-Germanic	Proto-Germanic			apple_NOUN	apluz	ˈɑpluz	ˈɑ p l u z		apple_NO
 Scots	Scots			apple_NOUN	aipple	ˈepl̩	ˈe p l̩		apple_NOUN_2			
 English	English			apple_NOUN	apple	ˈæpɫ̩	ˈæ p ɫ̩		apple_NOUN_2			
 American English	American English			apple_NOUN	apple	ˈæpɫ̩	ˈæ p ɫ̩		apple_NOUN_2			
-Old English	Old English			apple_NOUN	æppel	ˈæppel	ˈæ p p e l		apple_NOUN_2			
+Old English	Old English			apple_NOUN	æppel	ˈæppeɫ	ˈæ p p e ɫ		apple_NOUN_2			
 West Frisian	West Frisian			apple_NOUN	apel	ˈaːpəl	ˈaː p ə l		apple_NOUN_2			
 Saterland Frisian	Saterland Frisian			apple_NOUN	Appel	ˈapəl	ˈa p ə l		apple_NOUN_2			
 Insular North Frisian	Insular North Frisian			apple_NOUN	Aapel	ˈɔːpəl	ˈɔː p ə l		apple_NOUN_2			
@@ -586,7 +590,7 @@ Icelandic	Icelandic			ape_NOUN	api	ˈaːpɪ	ˈaː p ɪ		ape_NOUN_1
 Faroese	Faroese			ape_NOUN	apa	ˈɛːa̯ʰpa	ˈɛːa̯ ʰp a		ape_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			ape_NOUN	ape	ˈɑːpe	ˈɑː p e		ape_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			ape_NOUN	ape	ˈɑːpə	ˈɑː p ə		ape_NOUN_1			
-Danish	Danish			ape_NOUN	abe	ˈaːb̥ə	ˈaː b̥ ə		ape_NOUN_1			
+Danish	Danish			ape_NOUN	abe	ˈɛːb̥ə	ˈɛː b̥ ə		ape_NOUN_1			
 Swedish	Swedish			ape_NOUN	apa	ˈɑːpa	ˈɑː p a		ape_NOUN_1			
 Elfdalian	Elfdalian			ape_NOUN	apa	ˈɑːpɑ	ˈɑː p ɑ		ape_NOUN_1			
 Scots	Scots			ape_NOUN	aip	ˈep	ˈe p		ape_NOUN_1			
@@ -621,7 +625,7 @@ Alsatian	Alsatian			ape_NOUN	Àff	ˈɒf	ˈɒ f		ape_NOUN_1
 Swiss German	Swiss German			ape_NOUN	Aff	ˈɒfː	ˈɒ fː		ape_NOUN_1			
 Proto-Germanic	Proto-Germanic			arm_NOUN	armaz	ˈɑrmɑz	ˈɑ r m ɑ z		arm_NOUN_1			
 Gothic	Gothic			arm_NOUN	𐌰𐍂𐌼𐍃	ˈarms	ˈa r m s		arm_NOUN_1			
-Old West Norse	Old West Norse			arm_NOUN	armr	ˈɑrmr	ˈɑ r m r		arm_NOUN_1			
+Old West Norse	Old West Norse			arm_NOUN	armr	ˈɑrmr̥	ˈɑ r m r̥		arm_NOUN_1			
 Icelandic	Icelandic			arm_NOUN	armur	ˈarmʏr̥	ˈa r m ʏ r̥		arm_NOUN_1			
 Faroese	Faroese			arm_NOUN	armur	ˈaɹmʊɹ	ˈa ɹ m ʊ ɹ		arm_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			arm_NOUN	arm	ˈɑɾm	ˈɑ ɾ m		arm_NOUN_1			
@@ -666,7 +670,7 @@ Icelandic	Icelandic			ash_NOUN	aska	ˈaska	ˈa s k a		ash_NOUN_1
 Faroese	Faroese			ash_NOUN	øska	ˈœska	ˈœ s k a		ash_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			ash_NOUN	oske	ˈʊske	ˈʊ s k e		ash_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			ash_NOUN	aske	ˈɑskə	ˈɑ s k ə		ash_NOUN_1			
-Danish	Danish			ash_NOUN	aske	ˈɛsɡ̊ə	ˈɛ s ɡ̊ ə		ash_NOUN_1			
+Danish	Danish			ash_NOUN	aske	ˈæsɡ̊ə	ˈæ s ɡ̊ ə		ash_NOUN_1			
 Swedish	Swedish			ash_NOUN	aska	ˈaska	ˈa s k a		ash_NOUN_1			
 Elfdalian	Elfdalian			ash_NOUN	aska	ˈɑskɑ	ˈɑ s k ɑ		ash_NOUN_1			
 Scots	Scots			ash_NOUN	ess	ˈɛs	ˈɛ s		ash_NOUN_1			
@@ -725,7 +729,7 @@ Dutch	Dutch			eye_NOUN	oog	ˈoːχ	ˈoː χ		eye_NOUN_1
 Afrikaans	Afrikaans			eye_NOUN	oog	ˈʊə̯χ	ˈʊə̯ χ		eye_NOUN_1			
 Zeelandic	Zeelandic			eye_NOUN	ôôge	ˈʊə̯xə	ˈʊə̯ x ə		eye_NOUN_1			
 West Flemish	West Flemish			eye_NOUN	ooge	ˈoːɦə	ˈoː ɦ ə		eye_NOUN_1			
-Limburgish	Limburgish			eye_NOUN	oug	ˈɔu̯x	ˈɔu̯ x		eye_NOUN_1			
+Limburgish	Limburgish			eye_NOUN	oug	ˈɔu̯ɣ̊	ˈɔu̯ ɣ̊		eye_NOUN_1			
 Ripuarian	Ripuarian			eye_NOUN	Auch	ˈɔʊ̯ɣ̊	ˈɔʊ̯ ɣ̊		eye_NOUN_1			
 Luxembourgish	Luxembourgish			eye_NOUN	A	ˈaː	ˈaː		eye_NOUN_1			
 Pennsylvania German	Pennsylvania German			eye_NOUN	Aag	ˈɔːɡ̊	ˈɔː ɡ̊		eye_NOUN_1			
@@ -820,7 +824,7 @@ Swabian	Swabian			bone_NOUN	Boi	bˈɔe̯	b ˈɔe̯		bone_NOUN_1
 Alsatian	Alsatian			bone_NOUN	Bein	b̥ˈəi̯n	b̥ ˈəi̯ n		bone_NOUN_1			
 Swiss German	Swiss German			bone_NOUN	Bäi	b̥ˈæi̯	b̥ ˈæi̯		bone_NOUN_1			
 Proto-Germanic	Proto-Germanic			boat_NOUN	baitaz	bˈɑi̯tɑz	b ˈɑi̯ t ɑ z		boat_NOUN_1			
-Old West Norse	Old West Norse			boat_NOUN	bátr	bˈɑːtr	b ˈɑː t r		boat_NOUN_1			
+Old West Norse	Old West Norse			boat_NOUN	bátr	bˈɑːtr̥	b ˈɑː t r̥		boat_NOUN_1			
 Icelandic	Icelandic			boat_NOUN	bátur	b̥ˈaːu̯tʏr̥	b̥ ˈaːu̯ t ʏ r̥		boat_NOUN_1			
 Faroese	Faroese			boat_NOUN	bátur	b̥ˈɔ̯aːʰtʊɹ	b̥ ˈɔ̯aː ʰt ʊ ɹ		boat_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			boat_NOUN	båt	bˈoːt	b ˈoː t		boat_NOUN_1			
@@ -907,7 +911,7 @@ Alsatian	Alsatian			better_ADJ	besser	b̥ˈesəʁ	b̥ ˈe s ə ʁ		better_ADJ_1
 Swiss German	Swiss German			better_ADJ	besser	b̥ˈesːər	b̥ ˈe sː ə r		better_ADJ_1			
 Proto-Germanic	Proto-Germanic			tree_NOUN	baumaz	bˈɑu̯mɑz	b ˈɑu̯ m ɑ z		tree_NOUN_1			
 Gothic	Gothic			tree_NOUN	𐌱𐌰𐌲𐌼𐍃	bˈaɡms	b ˈa ɡ m s		tree_NOUN_1			
-Old West Norse	Old West Norse			tree_NOUN	baðmr	 bˈɑðmr	b ˈɑ ð m r		tree_NOUN_1			
+Old West Norse	Old West Norse			tree_NOUN	baðmr	bˈɑðmr̥	b ˈɑ ð m r̥		tree_NOUN_1			
 Icelandic	Icelandic			tree_NOUN	baðmur	b̥ˈaðmʏr̥	b̥ ˈa ð m ʏ r̥		tree_NOUN_1			
 English	English			tree_NOUN	beam	bˈiːm	b ˈiː m		tree_NOUN_1			
 American English	American English			tree_NOUN	beam	bˈim	b ˈi m		tree_NOUN_1			
@@ -940,7 +944,7 @@ Swabian	Swabian			tree_NOUN	Boom	bˈoːm	b ˈoː m		tree_NOUN_1
 Alsatian	Alsatian			tree_NOUN	Baum	b̥ˈʊːm	b̥ ˈʊː m		tree_NOUN_1			
 Swiss German	Swiss German			tree_NOUN	Baum	b̥ˈau̯m	b̥ ˈau̯ m		tree_NOUN_1			
 Proto-Germanic	Proto-Germanic			berry_NOUN	bazją	bˈɑzjɑ̃	b ˈɑ z j ɑ̃		berry_NOUN_2			
-Old West Norse	Old West Norse			berry_NOUN	ber	bˈer	b ˈe r		berry_NOUN_2			
+Old West Norse	Old West Norse			berry_NOUN	ber	bˈer̥	b ˈe r̥		berry_NOUN_2			
 Icelandic	Icelandic			berry_NOUN	ber	b̥ˈɛːr̥	b̥ ˈɛː r̥		berry_NOUN_2			
 Faroese	Faroese			berry_NOUN	ber	b̥ˈeːɹ	b̥ ˈeː ɹ		berry_NOUN_2			
 Nynorsk Norwegian	Nynorsk Norwegian			berry_NOUN	bær	bˈæːɾ	b ˈæː ɾ		berry_NOUN_2			
@@ -978,7 +982,7 @@ Icelandic	Icelandic			bath_NOUN_NEU	bað	b̥ˈaːð	b̥ ˈaː ð		bath_NOUN_NEU_
 Faroese	Faroese			bath_NOUN_NEU	bað	b̥ˈɛːa̯	b̥ ˈɛːa̯		bath_NOUN_NEU_1			
 Nynorsk Norwegian	Nynorsk Norwegian			bath_NOUN_NEU	bad	bˈɑː	b ˈɑː		bath_NOUN_NEU_1			
 Bokmål Norwegian	Bokmål Norwegian			bath_NOUN_NEU	bad	bˈɑː	b ˈɑː		bath_NOUN_NEU_1			
-Danish	Danish			bath_NOUN_NEU	bad	b̥ˈað̞ˠ	b̥ ˈa ð̞ˠ		bath_NOUN_NEU_1			
+Danish	Danish			bath_NOUN_NEU	bad	b̥ˈæð̞ˠ	b̥ ˈæ ð̞ˠ		bath_NOUN_NEU_1			
 Swedish	Swedish			bath_NOUN_NEU	bad	bˈɑːd	b ˈɑː d		bath_NOUN_NEU_1			
 Elfdalian	Elfdalian			bath_NOUN_NEU	bað	bˈɑːð	b ˈɑː ð		bath_NOUN_NEU_1			
 Scots	Scots			bath_NOUN_NEU	bath	bˈaθ	b ˈa θ		bath_NOUN_NEU_1			
@@ -1035,7 +1039,7 @@ Dutch	Dutch			mountain_NOUN	berg	bˈɛɾχ	b ˈɛ ɾ χ		mountain_NOUN_1
 Afrikaans	Afrikaans			mountain_NOUN	berg	bˈæːrχ	b ˈæː r χ		mountain_NOUN_1			
 Zeelandic	Zeelandic			mountain_NOUN	berg	bˈæɾx	b ˈæ ɾ x		mountain_NOUN_1			
 West Flemish	West Flemish			mountain_NOUN	berg	bˈæɾɦ̥	b ˈæ ɾ ɦ̥		mountain_NOUN_1			
-Limburgish	Limburgish			mountain_NOUN	berg	bˈæːʀəx	b ˈæː ʀ ə x		mountain_NOUN_1			
+Limburgish	Limburgish			mountain_NOUN	berg	bˈæːʀəɣ̊	b ˈæː ʀ ə ɣ̊		mountain_NOUN_1			
 Ripuarian	Ripuarian			mountain_NOUN	Berch	bˈɛɐɕ	b ˈɛ ɐ ɕ		mountain_NOUN_1			
 Luxembourgish	Luxembourgish			mountain_NOUN	Bierg	bˈiːɐɕ	b ˈiː ɐ ɕ		mountain_NOUN_1			
 Pennsylvania German	Pennsylvania German			mountain_NOUN	Baerig	bˈɛːɾɪɡ̊	b ˈɛː ɾ ɪ ɡ̊		mountain_NOUN_1			
@@ -1275,7 +1279,7 @@ Icelandic	Icelandic			leaf_NOUN_NEU	blað	b̥lˈaːð	b̥ l ˈaː ð		leaf_NOUN_
 Faroese	Faroese			leaf_NOUN_NEU	blað	b̥lˈɛːa̯	b̥ l ˈɛːa̯		leaf_NOUN_NEU_1			
 Nynorsk Norwegian	Nynorsk Norwegian			leaf_NOUN_NEU	blad	blˈɑː	b l ˈɑː		leaf_NOUN_NEU_1			
 Bokmål Norwegian	Bokmål Norwegian			leaf_NOUN_NEU	blad	blˈɑː	b l ˈɑː		leaf_NOUN_NEU_1			
-Danish	Danish			leaf_NOUN_NEU	blad	b̥lˈað̞ˠ	b̥ l ˈa ð̞ˠ		leaf_NOUN_NEU_1			
+Danish	Danish			leaf_NOUN_NEU	blad	b̥lˈæð̞ˠ	b̥ l ˈæ ð̞ˠ		leaf_NOUN_NEU_1			
 Swedish	Swedish			leaf_NOUN_NEU	blad	blˈɑːd	b l ˈɑː d		leaf_NOUN_NEU_1			
 Elfdalian	Elfdalian			leaf_NOUN_NEU	blað	bɽˈɑːð	b ɽ ˈɑː ð		leaf_NOUN_NEU_1			
 Scots	Scots			leaf_NOUN_NEU	blade	blˈed	b l ˈe d		leaf_NOUN_NEU_1			
@@ -1331,6 +1335,8 @@ Northern Low Saxon	Northern Low Saxon			flower_NOUN	Bloom	blˈaʊ̯m	b l ˈaʊ̯
 Westphalian	Westphalian			flower_NOUN	Blome	blˈoːmə	b l ˈoː m ə		flower_NOUN_1			
 Eastphalian	Eastphalian			flower_NOUN	Blaume	blˈaʊ̯mə	b l ˈaʊ̯ m ə		flower_NOUN_1			
 Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			flower_NOUN	Blaum	blˈaʊ̯m	b l ˈaʊ̯ m		flower_NOUN_1			
+Old Dutch	Old Dutch			flower_NOUN	bluomo	blˈuo̯mɔ	b l ˈuo̯ m ɔ		flower_NOUN_1			
+Middle Dutch	Middle Dutch			flower_NOUN	bloeme	bɫˈuə̯mə	b ɫ ˈuə̯ m ə		flower_NOUN_1			
 Dutch	Dutch			flower_NOUN	bloem	bɫˈum	b ɫ ˈu m		flower_NOUN_1			
 Afrikaans	Afrikaans			flower_NOUN	blom	bɫˈɔm	b ɫ ˈɔ m		flower_NOUN_1			
 Zeelandic	Zeelandic			flower_NOUN	blomme	bɫˈɔmə	b ɫ ˈɔ m ə		flower_NOUN_1			
@@ -1662,7 +1668,7 @@ Alsatian	Alsatian			breast_NOUN	Bruscht	b̥ʁˈuʃt	b̥ ʁ ˈu ʃ t		breast_NOUN
 Swiss German	Swiss German			breast_NOUN	Bruscht	b̥rˈuʃːtː	b̥ r ˈu ʃː tː		breast_NOUN_2			
 Proto-Germanic	Proto-Germanic			day_NOUN	dagaz	dˈɑɣɑz	d ˈɑ ɣ ɑ z		day_NOUN_1			
 Gothic	Gothic			day_NOUN	𐌳𐌰𐌲𐍃	dˈaxs	d ˈa x s		day_NOUN_1			
-Old West Norse	Old West Norse			day_NOUN	dagr	dˈɑɣr	d ˈɑ ɣ r		day_NOUN_1			
+Old West Norse	Old West Norse			day_NOUN	dagr	dˈɑɣr̥	d ˈɑ ɣ r̥		day_NOUN_1			
 Icelandic	Icelandic			day_NOUN	dagur	d̥ˈaːɣʏr̥	d̥ ˈaː ɣ ʏ r̥		day_NOUN_1			
 Faroese	Faroese			day_NOUN	dagur	d̥ˈɛːa̯wʊɹ	d̥ ˈɛːa̯ w ʊ ɹ		day_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			day_NOUN	dag	dˈɑːɡ	d ˈɑː ɡ		day_NOUN_1			
@@ -1688,7 +1694,7 @@ Dutch	Dutch			day_NOUN	dag	dˈɑχ	d ˈɑ χ		day_NOUN_1
 Afrikaans	Afrikaans			day_NOUN	dag	dˈaχ	d ˈa χ		day_NOUN_1			
 Zeelandic	Zeelandic			day_NOUN	dag	dˈɑx	d ˈɑ x		day_NOUN_1			
 West Flemish	West Flemish			day_NOUN	dag	dˈɑɦ̥	d ˈɑ ɦ̥		day_NOUN_1			
-Limburgish	Limburgish			day_NOUN	daag	dˈaːx	d ˈaː x		day_NOUN_1			
+Limburgish	Limburgish			day_NOUN	daag	dˈaːɣ̊	d ˈaː ɣ̊		day_NOUN_1			
 Ripuarian	Ripuarian			day_NOUN	Daach	dˈaːɣ̊	d ˈaː ɣ̊		day_NOUN_1			
 Luxembourgish	Luxembourgish			day_NOUN	Dag	dˈaːχ	d ˈaː χ		day_NOUN_1			
 Pennsylvania German	Pennsylvania German			day_NOUN	Daag	dˈɔːɡ̊	d ˈɔː ɡ̊		day_NOUN_1			
@@ -1704,7 +1710,7 @@ Alsatian	Alsatian			day_NOUN	Dàà	d̥ˈɒː	d̥ ˈɒː		day_NOUN_1
 Swiss German	Swiss German			day_NOUN	Taag	tːˈɒːɡ̊	tː ˈɒː ɡ̊		day_NOUN_1			
 Proto-Germanic	Proto-Germanic			dough_NOUN	daigaz	dˈɑi̯ɣɑz	d ˈɑi̯ ɣ ɑ z		dough_NOUN_1			
 Gothic	Gothic			dough_NOUN	𐌳𐌰𐌹𐌲𐍃	dˈɛːxs	d ˈɛː x s		dough_NOUN_1			
-Old West Norse	Old West Norse			dough_NOUN	deigr	dˈɛi̯ɡr	d ˈɛi̯ ɡ r		dough_NOUN_1			
+Old West Norse	Old West Norse			dough_NOUN	deigr	dˈɛi̯ɡr̥	d ˈɛi̯ ɡ r̥		dough_NOUN_1			
 Icelandic	Icelandic			dough_NOUN	deig	d̥ˈɛːi̯x	d̥ ˈɛːi̯ x		dough_NOUN_1			
 Faroese	Faroese			dough_NOUN	deiggj	d̥ˈai̯ʤ̊	d̥ ˈai̯ ʤ̊		dough_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			dough_NOUN	deig	dˈæɪ̯ɡ	d ˈæɪ̯ ɡ		dough_NOUN_1			
@@ -1726,7 +1732,7 @@ Dutch	Dutch			dough_NOUN	deeg	dˈeːχ	d ˈeː χ		dough_NOUN_1
 Afrikaans	Afrikaans			dough_NOUN	deeg	dˈɪə̯χ	d ˈɪə̯ χ		dough_NOUN_1			
 Zeelandic	Zeelandic			dough_NOUN	dêêg	dˈɪə̯x	d ˈɪə̯ x		dough_NOUN_1			
 West Flemish	West Flemish			dough_NOUN	deeg	dˈeːɦ̥	d ˈeː ɦ̥		dough_NOUN_1			
-Limburgish	Limburgish			dough_NOUN	deig	dˈɛːx	d ˈɛː x		dough_NOUN_1			
+Limburgish	Limburgish			dough_NOUN	deig	dˈɛːɣ̊	d ˈɛː ɣ̊		dough_NOUN_1			
 Ripuarian	Ripuarian			dough_NOUN	Deig	dˈeɪ̯ɕ	d ˈeɪ̯ ɕ		dough_NOUN_1			
 Luxembourgish	Luxembourgish			dough_NOUN	Deeg	dˈeːɕ	d ˈeː ɕ		dough_NOUN_1			
 Pennsylvania German	Pennsylvania German			dough_NOUN	Deeg	dˈeːɡ̊	d ˈeː ɡ̊		dough_NOUN_1			
@@ -1742,7 +1748,7 @@ Alsatian	Alsatian			dough_NOUN	Deig	d̥ˈei̯ɡ̊	d̥ ˈei̯ ɡ̊		dough_NOUN_1
 Swiss German	Swiss German			dough_NOUN	Täigg	tːˈæi̯ɡ̊	tː ˈæi̯ ɡ̊		dough_NOUN_1			
 Proto-Germanic	Proto-Germanic			dead_ADJ	daudaz	dˈɑu̯ðɑz	d ˈɑu̯ ð ɑ z		dead_ADJ_1			
 Gothic	Gothic			dead_ADJ	𐌳𐌰𐌿𐌸𐍃	dˈɔːθs	d ˈɔː θ s		dead_ADJ_1			
-Old West Norse	Old West Norse			dead_ADJ	dauðr	dˈɑu̯ðr	d ˈɑu̯ ð r		dead_ADJ_1			
+Old West Norse	Old West Norse			dead_ADJ	dauðr	dˈɑu̯ðr̥	d ˈɑu̯ ð r̥		dead_ADJ_1			
 Icelandic	Icelandic			dead_ADJ	dauður	d̥ˈœːy̯ðʏr̥	d̥ ˈœːy̯ ð ʏ r̥		dead_ADJ_1			
 Faroese	Faroese			dead_ADJ	deyður	d̥ˈɛːi̯jʊɹ	d̥ ˈɛːi̯ j ʊ ɹ		dead_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			dead_ADJ	daud	dˈæʉ̯	d ˈæʉ̯		dead_ADJ_1			
@@ -1787,7 +1793,7 @@ Icelandic	Icelandic			death_NOUN	dauði	d̥ˈœːy̯ðɪ	d̥ ˈœːy̯ ð ɪ		de
 Faroese	Faroese			death_NOUN	deyði	d̥ˈɛːi̯jɪ	d̥ ˈɛːi̯ j ɪ		death_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			death_NOUN	daude	dˈæʉ̯e	d ˈæʉ̯ e		death_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			death_NOUN	død	dˈøː	d ˈøː		death_NOUN_1			
-Danish	Danish			death_NOUN	død	d̥ˈœˀð̞ˠ	d̥ ˈœˀ ð̞ˠ		death_NOUN_1			
+Danish	Danish			death_NOUN	død	d̥ˈøˀð̞ˠ	d̥ ˈøˀ ð̞ˠ		death_NOUN_1			
 Swedish	Swedish			death_NOUN	död	dˈøːd	d ˈøː d		death_NOUN_1			
 Elfdalian	Elfdalian			death_NOUN	döð	dˈœːð	d ˈœː ð		death_NOUN_1			
 Scots	Scots			death_NOUN	daith	dˈeːθ	d ˈeː θ		death_NOUN_1			
@@ -1822,7 +1828,7 @@ Alsatian	Alsatian			death_NOUN	Dod	d̥ˈoːt	d̥ ˈoː t		death_NOUN_1
 Swiss German	Swiss German			death_NOUN	Tood	tːˈoːd̥	tː ˈoː d̥		death_NOUN_1			
 Proto-Germanic	Proto-Germanic			deep_ADJ	deupaz	dˈeu̯pɑz	d ˈeu̯ p ɑ z		deep_ADJ_1			
 Gothic	Gothic			deep_ADJ	𐌳𐌹𐌿𐍀𐍃	dˈiu̯ps	d ˈiu̯ p s		deep_ADJ_1			
-Old West Norse	Old West Norse			deep_ADJ	djúpr	djˈuːpr	d j ˈuː p r		deep_ADJ_1			
+Old West Norse	Old West Norse			deep_ADJ	djúpr	djˈuːpr̥	d j ˈuː p r̥		deep_ADJ_1			
 Icelandic	Icelandic			deep_ADJ	djúpur	d̥jˈuːpʏr̥	d̥ j ˈuː p ʏ r̥		deep_ADJ_1			
 Faroese	Faroese			deep_ADJ	djúpur	ʤ̊ˈʉːu̯pʊɹ	ʤ̊ ˈʉːu̯ p ʊ ɹ		deep_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			deep_ADJ	djup	jˈʉːp	j ˈʉː p		deep_ADJ_1			
@@ -1901,7 +1907,7 @@ Bavarian	Bavarian			animal_NOUN	Dia	d̥ˈiɐ̯	d̥ ˈiɐ̯		animal_NOUN_1
 Swabian	Swabian			animal_NOUN	Dier	dˈiːʕ	d ˈiː ʕ		animal_NOUN_1			
 Swiss German	Swiss German			animal_NOUN	Tier	tːˈiə̯r	tː ˈiə̯ r		animal_NOUN_1			
 Proto-Germanic	Proto-Germanic			expensive_ADJ	diurijaz	dˈiu̯rijɑz	d ˈiu̯ r i j ɑ z		expensive_ADJ_1			
-Old West Norse	Old West Norse			expensive_ADJ	dýrr	dˈyːrr	d ˈyː r r		expensive_ADJ_1			
+Old West Norse	Old West Norse			expensive_ADJ	dýrr	dˈyːrr̥	d ˈyː r r̥		expensive_ADJ_1			
 Icelandic	Icelandic			expensive_ADJ	dýr	d̥ˈiːr̥	d̥ ˈiː r̥		expensive_ADJ_1			
 Faroese	Faroese			expensive_ADJ	dýrur	d̥ˈʊ̯iːɹʊɹ	d̥ ˈʊ̯iː ɹ ʊ ɹ		expensive_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			expensive_ADJ	dyr	dˈyːɾ	d ˈyː ɾ		expensive_ADJ_1			
@@ -1960,10 +1966,10 @@ Dutch	Dutch			dry_ADJ	droog	dɾˈoːχ	d ɾ ˈoː χ		dry_ADJ_1
 Afrikaans	Afrikaans			dry_ADJ	droog	drˈʊə̯χ	d r ˈʊə̯ χ		dry_ADJ_1			
 Zeelandic	Zeelandic			dry_ADJ	drôôg	dɾˈʊə̯x	d ɾ ˈʊə̯ x		dry_ADJ_1			
 West Flemish	West Flemish			dry_ADJ	droog	dɾˈoːɦ̥	d ɾ ˈoː ɦ̥		dry_ADJ_1			
-Limburgish	Limburgish			dry_ADJ	druug	dʀˈyːx	d ʀ ˈyː x		dry_ADJ_1			
+Limburgish	Limburgish			dry_ADJ	druug	dʀˈyːɣ̊	d ʀ ˈyː ɣ̊		dry_ADJ_1			
 Ripuarian	Ripuarian			dry_ADJ	drüch	dʀˈyːɕ	d ʀ ˈyː ɕ		dry_ADJ_1			
 Proto-Germanic	Proto-Germanic			dream_NOUN	draumaz	drˈɑu̯mɑz	d r ˈɑu̯ m ɑ z		dream_NOUN_1			
-Old West Norse	Old West Norse			dream_NOUN	draumr	drˈɑu̯mr	d r ˈɑu̯ m r		dream_NOUN_1			
+Old West Norse	Old West Norse			dream_NOUN	draumr	drˈɑu̯mr̥	d r ˈɑu̯ m r̥		dream_NOUN_1			
 Icelandic	Icelandic			dream_NOUN	draumur	d̥rˈœːy̯mʏr̥	d̥ r ˈœːy̯ m ʏ r̥		dream_NOUN_1			
 Faroese	Faroese			dream_NOUN	dreymur	d̥ɹˈɛːi̯mʊɹ	d̥ ɹ ˈɛːi̯ m ʊ ɹ		dream_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			dream_NOUN	draum	dɾˈæʉ̯m	d ɾ ˈæʉ̯ m		dream_NOUN_1			
@@ -2084,7 +2090,7 @@ Icelandic	Icelandic			drink_VERB	drekka	d̥rˈɛʰka	d̥ r ˈɛ ʰk a		drink_VER
 Faroese	Faroese			drink_VERB	drekka	d̥ɹˈɛʰka	d̥ ɹ ˈɛ ʰk a		drink_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			drink_VERB	drikka	dɾˈɪʰkkɑ	d ɾ ˈɪ ʰk k ɑ		drink_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			drink_VERB	drikke	dɾˈɪkkə	d ɾ ˈɪ k k ə		drink_VERB_1			
-Danish	Danish			drink_VERB	drikke	d̥ʁˈeɡ̊ə	d̥ ʁ ˈe ɡ̊ ə		drink_VERB_1			
+Danish	Danish			drink_VERB	drikke	d̥ʁˈɛɡ̊ə	d̥ ʁ ˈɛ ɡ̊ ə		drink_VERB_1			
 Swedish	Swedish			drink_VERB	dricka	drˈɪkka	d r ˈɪ k k a		drink_VERB_1			
 Elfdalian	Elfdalian			drink_VERB	drikka	drˈɪkkɑ	d r ˈɪ k k ɑ		drink_VERB_1			
 Scots	Scots			drink_VERB	drink	drˈɪŋk	d r ˈɪ ŋ k		drink_VERB_1			
@@ -2170,7 +2176,7 @@ Alsatian	Alsatian			dove_NOUN	Düüb	d̥ˈyːb̥	d̥ ˈyː b̥		dove_NOUN_1
 Swiss German	Swiss German			dove_NOUN	Tuub	tːˈuːb̥	tː ˈuː b̥		dove_NOUN_1			
 Proto-Germanic	Proto-Germanic			daughter_NOUN	duhtēr	dˈuxtɛːr	d ˈu x t ɛː r		daughter_NOUN_1			
 Gothic	Gothic			daughter_NOUN	𐌳𐌰𐌿𐌷𐍄𐌰𐍂	dˈɔːhtar	d ˈɔː h t a r		daughter_NOUN_1			
-Old West Norse	Old West Norse			daughter_NOUN	dóttir	dˈoːttir	d ˈoː t t i r		daughter_NOUN_1			
+Old West Norse	Old West Norse			daughter_NOUN	dóttir	dˈoːttir̥	d ˈoː t t i r̥		daughter_NOUN_1			
 Icelandic	Icelandic			daughter_NOUN	dóttir	d̥ˈɔu̯ʰtɪr̥	d̥ ˈɔu̯ ʰt ɪ r̥		daughter_NOUN_1			
 Faroese	Faroese			daughter_NOUN	dóttir	d̥ˈœʰtɪɹ	d̥ ˈœ ʰt ɪ ɹ		daughter_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			daughter_NOUN	datter	dˈɔʰtteɾ	d ˈɔ ʰt t e ɾ		daughter_NOUN_1			
@@ -2210,12 +2216,12 @@ Swabian	Swabian			daughter_NOUN	Dochdr	dˈɔxdʌ	d ˈɔ x d ʌ		daughter_NOUN_1
 Alsatian	Alsatian			daughter_NOUN	Doochter	d̥ˈoːxtəʁ	d̥ ˈoː x t ə ʁ		daughter_NOUN_1			
 Swiss German	Swiss German			daughter_NOUN	Tochter	tːˈoχːtːər	tː ˈo χː tː ə r		daughter_NOUN_1			
 Proto-Germanic	Proto-Germanic			dwarf_NOUN	dwergaz	dwˈerɣɑz	d w ˈe r ɣ ɑ z		dwarf_NOUN_1			
-Old West Norse	Old West Norse			dwarf_NOUN	dvergr	dvˈerɣr	d v ˈe r ɣ r		dwarf_NOUN_1			
+Old West Norse	Old West Norse			dwarf_NOUN	dvergr	dvˈerɣr̥	d v ˈe r ɣ r̥		dwarf_NOUN_1			
 Icelandic	Icelandic			dwarf_NOUN	dvergur	d̥vˈɛrɡ̊ʏr̥	d̥ v ˈɛ r ɡ̊ ʏ r̥		dwarf_NOUN_1			
 Faroese	Faroese			dwarf_NOUN	dvørgur	d̥vˈœɹɡ̊ʊɹ	d̥ v ˈœ ɹ ɡ̊ ʊ ɹ		dwarf_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			dwarf_NOUN	dverg	dʋˈɛɾɡ	d ʋ ˈɛ ɾ ɡ		dwarf_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			dwarf_NOUN	dverg	dʋˈɛɾɡ	d ʋ ˈɛ ɾ ɡ		dwarf_NOUN_1			
-Danish	Danish			dwarf_NOUN	dværg	d̥ʋˈæɐˀw	d̥ ʋ ˈæ ɐˀ w		dwarf_NOUN_1			
+Danish	Danish			dwarf_NOUN	dværg	d̥ʋˈɛɐˀw	d̥ ʋ ˈɛ ɐˀ w		dwarf_NOUN_1			
 Swedish	Swedish			dwarf_NOUN	dvärg	dvˈærj	d v ˈæ r j		dwarf_NOUN_1			
 Elfdalian	Elfdalian			dwarf_NOUN	dwerg	dwˈɛrɣ	d w ˈɛ r ɣ		dwarf_NOUN_1			
 Scots	Scots			dwarf_NOUN	droich	drˈɔɪ̯ç	d r ˈɔɪ̯ ç		dwarf_NOUN_1			
@@ -2226,7 +2232,7 @@ West Frisian	West Frisian			dwarf_NOUN	dwerch	dvˈɛrχ	d v ˈɛ r χ		dwarf_NOU
 Saterland Frisian	Saterland Frisian			dwarf_NOUN	Dwärch	dvˈɛrx	d v ˈɛ r x		dwarf_NOUN_1			
 Dutch	Dutch			dwarf_NOUN	dwerg	dʋˈɛɾχ	d ʋ ˈɛ ɾ χ		dwarf_NOUN_1			
 Afrikaans	Afrikaans			dwarf_NOUN	dwerg	dvˈærχ	d v ˈæ r χ		dwarf_NOUN_1			
-Limburgish	Limburgish			dwarf_NOUN	dwerg	dβˈæːʀəx	d β ˈæː ʀ ə x		dwarf_NOUN_1			
+Limburgish	Limburgish			dwarf_NOUN	dwerg	dβˈæːʀəɣ̊	d β ˈæː ʀ ə ɣ̊		dwarf_NOUN_1			
 Pennsylvania German	Pennsylvania German			dwarf_NOUN	Zwaerich	ʦʋˈɛːɾɪç	ʦ ʋ ˈɛː ɾ ɪ ç		dwarf_NOUN_1			
 Palatine German	Palatine German			dwarf_NOUN	Zwärrich	ʣ̥βˈɛrɪʃ	ʣ̥ β ˈɛ r ɪ ʃ		dwarf_NOUN_1			
 Hessian	Hessian			dwarf_NOUN	Tswȁǎsch	ʦvˈæɐʒ̊	ʦ v ˈæ ɐ ʒ̊		dwarf_NOUN_1			
@@ -2287,7 +2293,7 @@ Elfdalian	Elfdalian			eel_NOUN	ål	ˈɔːɽ	ˈɔː ɽ		eel_NOUN_1
 Scots	Scots			eel_NOUN	eel	ˈil	ˈi l		eel_NOUN_1			
 English	English			eel_NOUN	eel	ˈiːɫ	ˈiː ɫ		eel_NOUN_1			
 American English	American English			eel_NOUN	eel	ˈiɫ	ˈi ɫ		eel_NOUN_1			
-Old English	Old English			eel_NOUN	ǣl	ˈæːl	ˈæː l		eel_NOUN_1			
+Old English	Old English			eel_NOUN	ǣl	ˈæːɫ	ˈæː ɫ		eel_NOUN_1			
 West Frisian	West Frisian			eel_NOUN	iel	ˈiə̯l	ˈiə̯ l		eel_NOUN_1			
 Saterland Frisian	Saterland Frisian			eel_NOUN	Äil	ˈɛɪ̯l	ˈɛɪ̯ l		eel_NOUN_1			
 Insular North Frisian	Insular North Frisian			eel_NOUN	Aal	ˈɔːl	ˈɔː l		eel_NOUN_1			
@@ -2356,7 +2362,7 @@ Icelandic	Icelandic			eat_VERB	éta	jˈɛta	j ˈɛ t a		eat_VERB_1
 Faroese	Faroese			eat_VERB	eta	ˈeːʰta	ˈeː ʰt a		eat_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			eat_VERB	eta	ˈeːtɑ	ˈeː t ɑ		eat_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			eat_VERB	ete	ˈeːtə	ˈeː t ə		eat_VERB_1			
-Danish	Danish			eat_VERB	æde	ˈɛːð̞ˠə	ˈɛː ð̞ˠ ə		eat_VERB_1			
+Danish	Danish			eat_VERB	æde	ˈeːð̞ˠə	ˈeː ð̞ˠ ə		eat_VERB_1			
 Swedish	Swedish			eat_VERB	äta	ˈɛːta	ˈɛː t a		eat_VERB_1			
 Elfdalian	Elfdalian			eat_VERB	jätå	jˈætɔ	j ˈæ t ɔ		eat_VERB_1			
 Scots	Scots			eat_VERB	eat	ˈit	ˈi t		eat_VERB_1			
@@ -2431,7 +2437,7 @@ Swabian	Swabian			father_NOUN	Vaddr	fˈadʌ	f ˈa d ʌ		father_NOUN_1
 Alsatian	Alsatian			father_NOUN	Vàtter	fˈɒtəʁ	f ˈɒ t ə ʁ		father_NOUN_1			
 Swiss German	Swiss German			father_NOUN	Fatter	v̥ˈɒtːər	v̥ ˈɒ tː ə r		father_NOUN_1			
 Proto-Germanic	Proto-Germanic			sheep_NOUN	fahaz	ɸˈɑxɑz	ɸ ˈɑ x ɑ z		sheep_NOUN_1			
-Old West Norse	Old West Norse			sheep_NOUN	fær	fˈɛːr	f ˈɛː r		sheep_NOUN_1			
+Old West Norse	Old West Norse			sheep_NOUN	fær	fˈɛːr̥	f ˈɛː r̥		sheep_NOUN_1			
 Faroese	Faroese			sheep_NOUN	fár	fˈɔ̯aːɹ	f ˈɔ̯aː ɹ		sheep_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			sheep_NOUN	får	fˈoːɾ	f ˈoː ɾ		sheep_NOUN_1			
 Danish	Danish			sheep_NOUN	får	fˈɒˀ	f ˈɒˀ		sheep_NOUN_1			
@@ -2456,7 +2462,7 @@ Upper Franconian	Upper Franconian			fast_ADJ	feschd	fˈɛʃd̥	f ˈɛ ʃ d̥		fa
 Bavarian	Bavarian			fast_ADJ	feschd	fˈeʃd̥	f ˈe ʃ d̥		fast_ADJ_1			
 Proto-Germanic	Proto-Germanic			few_ADJ	fawaz	ɸˈɑwɑz	ɸ ˈɑ w ɑ z		few_ADJ_1			
 Gothic	Gothic			few_ADJ	𐍆𐌰𐌿𐍃	fˈɔːs	f ˈɔː s		few_ADJ_1			
-Old West Norse	Old West Norse			few_ADJ	fár	fˈɑːr	f ˈɑː r		few_ADJ_1			
+Old West Norse	Old West Norse			few_ADJ	fár	fˈɑːr̥	f ˈɑː r̥		few_ADJ_1			
 Icelandic	Icelandic			few_ADJ	fár	fˈaːur̥	f ˈaː u r̥		few_ADJ_1			
 Faroese	Faroese			few_ADJ	fáur	fˈɔ̯aːʊɹ	f ˈɔ̯aː ʊ ɹ		few_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			few_ADJ	få	fˈoː	f ˈoː		few_ADJ_1			
@@ -2468,12 +2474,12 @@ English	English			few_ADJ	few	fjˈuː	f j ˈuː		few_ADJ_1
 American English	American English			few_ADJ	few	fjˈu	f j ˈu		few_ADJ_1			
 Proto-Germanic	Proto-Germanic			four_NUM	fedwōr	ɸˈeðwɔːr	ɸ ˈe ð w ɔː r		four_NUM_1			
 Gothic	Gothic			four_NUM	𐍆𐌹𐌳𐍅𐍉𐍂	fˈiðwoːr	f ˈi ð w oː r		four_NUM_1			
-Old West Norse	Old West Norse			four_NUM	fjórir	fjˈoːrir	f j ˈoː r i r		four_NUM_1			
+Old West Norse	Old West Norse			four_NUM	fjórir	fjˈoːrir̥	f j ˈoː r i r̥		four_NUM_1			
 Icelandic	Icelandic			four_NUM	fjórir	fjˈoːu̯rɪr̥	f j ˈoːu̯ r ɪ r̥		four_NUM_1			
 Faroese	Faroese			four_NUM	fýra	fˈʊ̯iːɹa	f ˈʊ̯iː ɹ a		four_NUM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			four_NUM	fire	fˈiːɾe	f ˈiː ɾ e		four_NUM_1			
 Bokmål Norwegian	Bokmål Norwegian			four_NUM	fire	fˈiːɾə	f ˈiː ɾ ə		four_NUM_1			
-Danish	Danish			four_NUM	fire	fˈiːʌ	f ˈiː ʌ		four_NUM_1			
+Danish	Danish			four_NUM	fire	fˈiːɐ	f ˈiː ɐ		four_NUM_1			
 Swedish	Swedish			four_NUM	fyra	fˈyːra	f ˈyː r a		four_NUM_1			
 Elfdalian	Elfdalian			four_NUM	fiuorer	fjˈʉːə̯rɛr	f j ˈʉːə̯ r ɛ r		four_NUM_1			
 Scots	Scots			four_NUM	fower	fˈʌu̯ər	f ˈʌu̯ ə r		four_NUM_1			
@@ -2553,7 +2559,7 @@ Icelandic	Icelandic			five_NUM	fimm	fˈɪm	f ˈɪ m		five_NUM_1
 Faroese	Faroese			five_NUM	fimm	fˈɪm	f ˈɪ m		five_NUM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			five_NUM	fem	fˈɛm	f ˈɛ m		five_NUM_1			
 Bokmål Norwegian	Bokmål Norwegian			five_NUM	fem	fˈɛm	f ˈɛ m		five_NUM_1			
-Danish	Danish			five_NUM	fem	fˈɛmˀ	f ˈɛ mˀ		five_NUM_1			
+Danish	Danish			five_NUM	fem	fˈemˀ	f ˈe mˀ		five_NUM_1			
 Swedish	Swedish			five_NUM	fem	fˈɛm	f ˈɛ m		five_NUM_1			
 Elfdalian	Elfdalian			five_NUM	fem	fˈɛm	f ˈɛ m		five_NUM_1			
 Scots	Scots			five_NUM	five	fˈaːɪ̯v	f ˈaːɪ̯ v		five_NUM_1			
@@ -2589,7 +2595,7 @@ Alsatian	Alsatian			five_NUM	finef	fˈinef	f ˈi n e f		five_NUM_1
 Swiss German	Swiss German			five_NUM	füüf	v̥ˈyːfː	v̥ ˈyː fː		five_NUM_1			
 Proto-Germanic	Proto-Germanic			finger_NOUN	fingraz	ɸˈiŋɡrɑz	ɸ ˈi ŋ ɡ r ɑ z		finger_NOUN_1			
 Gothic	Gothic			finger_NOUN	𐍆𐌹𐌲𐌲𐍂𐍃	fˈiŋɡrs	f ˈi ŋ ɡ r s		finger_NOUN_1			
-Old West Norse	Old West Norse			finger_NOUN	fingr	fˈiŋɡr	f ˈi ŋ ɡ r		finger_NOUN_1			
+Old West Norse	Old West Norse			finger_NOUN	fingr	fˈiŋɡr̥	f ˈi ŋ ɡ r̥		finger_NOUN_1			
 Icelandic	Icelandic			finger_NOUN	fingur	fˈiŋɡ̊ʏr̥	f ˈi ŋ ɡ̊ ʏ r̥		finger_NOUN_1			
 Faroese	Faroese			finger_NOUN	fingur	fˈɪŋɡ̊ʊɹ	f ˈɪ ŋ ɡ̊ ʊ ɹ		finger_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			finger_NOUN	finger	fˈɪŋŋeɾ	f ˈɪ ŋ ŋ e ɾ		finger_NOUN_1			
@@ -2671,7 +2677,7 @@ Alsatian	Alsatian			find_VERB	finde	fˈind̥ə	f ˈi n d̥ ə		find_VERB_1
 Swiss German	Swiss German			find_VERB	finde	v̥ˈind̥ə	v̥ ˈi n d̥ ə		find_VERB_1			
 Proto-Germanic	Proto-Germanic			fish_NOUN	fiskaz	ɸˈiskɑz	ɸ ˈi s k ɑ z		fish_NOUN_1			
 Gothic	Gothic			fish_NOUN	𐍆𐌹𐍃𐌺𐍃	fˈisks	f ˈi s k s		fish_NOUN_1			
-Old West Norse	Old West Norse			fish_NOUN	fiskr	fˈiskr	f ˈi s k r		fish_NOUN_1			
+Old West Norse	Old West Norse			fish_NOUN	fiskr	fˈiskr̥	f ˈi s k r̥		fish_NOUN_1			
 Icelandic	Icelandic			fish_NOUN	fiskur	fˈɪskʏr̥	f ˈɪ s k ʏ r̥		fish_NOUN_1			
 Faroese	Faroese			fish_NOUN	fiskur	fˈɪskʊɹ	f ˈɪ s k ʊ ɹ		fish_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			fish_NOUN	fisk	fˈɪsk	f ˈɪ s k		fish_NOUN_1			
@@ -2692,6 +2698,8 @@ Northern Low Saxon	Northern Low Saxon			fish_NOUN	Fisch	fˈɪʃ	f ˈɪ ʃ		fish_
 Westphalian	Westphalian			fish_NOUN	Fisk	fˈɪʃk	f ˈɪ ʃ k		fish_NOUN_1			
 Eastphalian	Eastphalian			fish_NOUN	Fisch	fˈɪʃ	f ˈɪ ʃ		fish_NOUN_1			
 Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			fish_NOUN	Fisch	fˈɪʃ	f ˈɪ ʃ		fish_NOUN_1			
+Old Dutch	Old Dutch			fish_NOUN	fisc	fˈisk	f ˈi s k		fish_NOUN_1			
+Middle Dutch	Middle Dutch			fish_NOUN	visch	vˈɪsx	v ˈɪ s x		fish_NOUN_1			
 Dutch	Dutch			fish_NOUN	vis	vˈɪs	v ˈɪ s		fish_NOUN_1			
 Afrikaans	Afrikaans			fish_NOUN	vis	v̥ˈəs	v̥ ˈə s		fish_NOUN_1			
 Zeelandic	Zeelandic			fish_NOUN	vis	vˈɪs	v ˈɪ s		fish_NOUN_1			
@@ -2805,7 +2813,7 @@ Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			housefly_NOUN	Fleich
 Dutch	Dutch			housefly_NOUN	vlieg	vɫˈiχ	v ɫ ˈi χ		housefly_NOUN_1			
 Afrikaans	Afrikaans			housefly_NOUN	vlieg	v̥ɫˈiχ	v̥ ɫ ˈi χ		housefly_NOUN_1			
 West Flemish	West Flemish			housefly_NOUN	vliege	vlˈiə̯ɦə	v l ˈiə̯ ɦ ə		housefly_NOUN_1			
-Limburgish	Limburgish			housefly_NOUN	vleeg	vlˈeːx	v l ˈeː x		housefly_NOUN_1			
+Limburgish	Limburgish			housefly_NOUN	vleeg	vlˈeːɣ̊	v l ˈeː ɣ̊		housefly_NOUN_1			
 Ripuarian	Ripuarian			housefly_NOUN	Fleeg	flˈeːɕ	f l ˈeː ɕ		housefly_NOUN_1			
 Luxembourgish	Luxembourgish			housefly_NOUN	Fléi	flˈɜɪ̯	f l ˈɜɪ̯		housefly_NOUN_1			
 Palatine German	Palatine German			housefly_NOUN	Fliesch	flˈiːʃ	f l ˈiː ʃ		housefly_NOUN_1			
@@ -2846,7 +2854,7 @@ Swabian	Swabian			feel_VERB	fiehla	fˈiːla	f ˈiː l a		feel_VERB_1
 Swiss German	Swiss German			feel_VERB	füüle	v̥ˈyːlə	v̥ ˈyː l ə		feel_VERB_1			
 Proto-Germanic	Proto-Germanic			fire_NOUN	fōr	ɸˈɔːr	ɸ ˈɔː r		fire_NOUN_2			
 Gothic	Gothic			fire_NOUN	𐍆𐍉𐌽	fˈoːn	f ˈoː n		fire_NOUN_2			
-Old West Norse	Old West Norse			fire_NOUN	fúrr	fˈuːrr	f ˈuː r r		fire_NOUN_2			
+Old West Norse	Old West Norse			fire_NOUN	fúrr	fˈuːrr̥	f ˈuː r r̥		fire_NOUN_2			
 Old West Norse	Old West Norse			fire_NOUN	fýr	fˈyːr	f ˈyː r		fire_NOUN_2			
 Icelandic	Icelandic			fire_NOUN	funi	fˈʏːnɪ	f ˈʏː n ɪ		fire_NOUN_2			
 Faroese	Faroese			fire_NOUN	fýrur	fˈʊ̯iːɹʊɹ	f ˈʊ̯iː ɹ ʊ ɹ		fire_NOUN_2			
@@ -2868,6 +2876,8 @@ Westphalian	Westphalian			fire_NOUN	Füer	fˈyːɐ	f ˈyː ɐ		fire_NOUN_2
 Eastphalian	Eastphalian			fire_NOUN	Füer	fˈyːɐ	f ˈyː ɐ		fire_NOUN_2			
 Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			fire_NOUN	Füer	fˈyːæ	f ˈyː æ		fire_NOUN_2			
 Plautdietsch	Plautdietsch			fire_NOUN	Fiea	fˈia	f ˈi a		fire_NOUN_2			
+Old Dutch	Old Dutch			fire_NOUN	fuir	fˈyːr	f ˈyː r		fire_NOUN_2			
+Middle Dutch	Middle Dutch			fire_NOUN	vuur	vˈyːr	v ˈyː r		fire_NOUN_2			
 Dutch	Dutch			fire_NOUN	vuur	vˈyːɾ	v ˈyː ɾ		fire_NOUN_2			
 Afrikaans	Afrikaans			fire_NOUN	vuur	v̥ˈyːr	v̥ ˈyː r		fire_NOUN_2			
 Zeelandic	Zeelandic			fire_NOUN	vie:r	vˈiːɾ	v ˈiː ɾ		fire_NOUN_2			
@@ -2887,12 +2897,12 @@ Swabian	Swabian			fire_NOUN	Feir	fˈəi̯ʌ	f ˈəi̯ ʌ		fire_NOUN_2
 Alsatian	Alsatian			fire_NOUN	Fiir	fˈiːʁ	f ˈiː ʁ		fire_NOUN_2			
 Swiss German	Swiss German			fire_NOUN	Füür	v̥ˈyːr	v̥ ˈyː r		fire_NOUN_2			
 Proto-Germanic	Proto-Germanic			feet_NOUN_PL	fōtiz	ɸˈɔːtiz	ɸ ˈɔː t i z		feet_NOUN_PL_1			
-Old West Norse	Old West Norse			feet_NOUN_PL	fǿtr	fˈøːtr	f ˈøː t r		feet_NOUN_PL_1			
+Old West Norse	Old West Norse			feet_NOUN_PL	fǿtr	fˈøːtr̥	f ˈøː t r̥		feet_NOUN_PL_1			
 Icelandic	Icelandic			feet_NOUN_PL	fætur	fˈaːi̯tʏr̥	f ˈaːi̯ t ʏ r̥		feet_NOUN_PL_1			
 Faroese	Faroese			feet_NOUN_PL	føtur	fˈøːtʊɹ	f ˈøː t ʊ ɹ		feet_NOUN_PL_1			
 Nynorsk Norwegian	Nynorsk Norwegian			feet_NOUN_PL	føter	fˈøːteɾ	f ˈøː t e ɾ		feet_NOUN_PL_1			
 Bokmål Norwegian	Bokmål Norwegian			feet_NOUN_PL	føtter	fˈœttəɾ	f ˈœ t t ə ɾ		feet_NOUN_PL_1			
-Danish	Danish			feet_NOUN_PL	fødder	fˈœð̞ˠɐ	f ˈœ ð̞ˠ ɐ		feet_NOUN_PL_1			
+Danish	Danish			feet_NOUN_PL	fødder	fˈøð̞ˠɐ	f ˈø ð̞ˠ ɐ		feet_NOUN_PL_1			
 Swedish	Swedish			feet_NOUN_PL	fötter	fˈœttɛr	f ˈœ t t ɛ r		feet_NOUN_PL_1			
 Elfdalian	Elfdalian			feet_NOUN_PL	fuotą	fˈʉːə̯tɑ̃	f ˈʉːə̯ t ɑ̃		feet_NOUN_PL_1			
 Scots	Scots			feet_NOUN_PL	feet	fˈit	f ˈi t		feet_NOUN_PL_1			
@@ -2927,7 +2937,7 @@ Alsatian	Alsatian			feet_NOUN_PL	Fiess	fˈiːs	f ˈiː s		feet_NOUN_PL_1
 Swiss German	Swiss German			feet_NOUN_PL	Füess	v̥ˈyə̯sː	v̥ ˈyə̯ sː		feet_NOUN_PL_1			
 Proto-Germanic	Proto-Germanic			foot_NOUN	fōts	ɸˈɔːts	ɸ ˈɔː t s		foot_NOUN_1			
 Gothic	Gothic			foot_NOUN	𐍆𐍉𐍄𐌿𐍃	fˈoːtus	f ˈoː t u s		foot_NOUN_1			
-Old West Norse	Old West Norse			foot_NOUN	fótr	fˈoːtr	f ˈoː t r		foot_NOUN_1			
+Old West Norse	Old West Norse			foot_NOUN	fótr	fˈoːtr̥	f ˈoː t r̥		foot_NOUN_1			
 Icelandic	Icelandic			foot_NOUN	fótur	fˈoːu̯tʏr̥	f ˈoːu̯ t ʏ r̥		foot_NOUN_1			
 Faroese	Faroese			foot_NOUN	fótur	fˈɔːu̯tʊɹ	f ˈɔːu̯ t ʊ ɹ		foot_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			foot_NOUN	fot	fˈuːt	f ˈuː t		foot_NOUN_1			
@@ -3099,12 +3109,12 @@ Swabian	Swabian			friend_NOUN	Freind	fʁˈae̯nd	f ʁ ˈae̯ n d		friend_NOUN_1
 Alsatian	Alsatian			friend_NOUN	Frind	fʁˈind̥	f ʁ ˈi n d̥		friend_NOUN_1			
 Swiss German	Swiss German			friend_NOUN	Fründ	v̥rˈynd̥	v̥ r ˈy n d̥		friend_NOUN_1			
 Proto-Germanic	Proto-Germanic			fresh_ADJ	friskaz	ɸrˈiskɑz	ɸ r ˈi s k ɑ z		fresh_ADJ_1			
-Old West Norse	Old West Norse			fresh_ADJ	ferskr	fˈerskr	f ˈe r s k r		fresh_ADJ_1			
+Old West Norse	Old West Norse			fresh_ADJ	ferskr	fˈerskr̥	f ˈe r s k r̥		fresh_ADJ_1			
 Icelandic	Icelandic			fresh_ADJ	ferskur	fˈɛr̥skʏr̥	f ˈɛ r̥ s k ʏ r̥		fresh_ADJ_1			
 Faroese	Faroese			fresh_ADJ	feskur	fˈɛskʊɹ	f ˈɛ s k ʊ ɹ		fresh_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			fresh_ADJ	frisk	fɾˈɪsk	f ɾ ˈɪ s k		fresh_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			fresh_ADJ	frisk	fɾˈɪsk	f ɾ ˈɪ s k		fresh_ADJ_1			
-Danish	Danish			fresh_ADJ	frisk	fʁˈesɡ̊	f ʁ ˈe s ɡ̊		fresh_ADJ_1			
+Danish	Danish			fresh_ADJ	frisk	fʁˈɛsɡ̊	f ʁ ˈɛ s ɡ̊		fresh_ADJ_1			
 Swedish	Swedish			fresh_ADJ	frisk	frˈɪsk	f r ˈɪ s k		fresh_ADJ_1			
 Elfdalian	Elfdalian			fresh_ADJ	frisk	frˈɪsk	f r ˈɪ s k		fresh_ADJ_1			
 Scots	Scots			fresh_ADJ	fresh	frˈɛʃ	f r ˈɛ ʃ		fresh_ADJ_1			
@@ -3151,7 +3161,7 @@ Elfdalian	Elfdalian			bird_NOUN_MASC	fugel	fˈʉːɣɛɽ	f ˈʉː ɣ ɛ ɽ		bird
 Scots	Scots			bird_NOUN_MASC	foul	fˈul	f ˈu l		bird_NOUN_MASC_1			
 English	English			bird_NOUN_MASC	fowl	fˈaʊ̯ɫ	f ˈaʊ̯ ɫ		bird_NOUN_MASC_1			
 American English	American English			bird_NOUN_MASC	fowl	fˈaʊ̯ɫ	f ˈaʊ̯ ɫ		bird_NOUN_MASC_1			
-Old English	Old English			bird_NOUN_MASC	fugol	fˈuɣol	f ˈu ɣ o l		bird_NOUN_MASC_1			
+Old English	Old English			bird_NOUN_MASC	fugol	fˈuɣoɫ	f ˈu ɣ o ɫ		bird_NOUN_MASC_1			
 West Frisian	West Frisian			bird_NOUN_MASC	fûgel	fˈuɣəl	f ˈu ɣ ə l		bird_NOUN_MASC_1			
 Saterland Frisian	Saterland Frisian			bird_NOUN_MASC	Fúgel	fˈuːɣəl	f ˈuː ɣ ə l		bird_NOUN_MASC_1			
 Insular North Frisian	Insular North Frisian			bird_NOUN_MASC	Fügel	fˈʏçəl	f ˈʏ ç ə l		bird_NOUN_MASC_1			
@@ -3244,7 +3254,7 @@ Icelandic	Icelandic			follow_VERB	fylgja	fˈɪlɟ̊a	f ˈɪ l ɟ̊ a		follow_VER
 Faroese	Faroese			follow_VERB	fylgja	fˈɪlʤ̊a	f ˈɪ l ʤ̊ a		follow_VERB_2			
 Nynorsk Norwegian	Nynorsk Norwegian			follow_VERB	fylgja	fˈʏljɑ	f ˈʏ l j ɑ		follow_VERB_2			
 Bokmål Norwegian	Bokmål Norwegian			follow_VERB	følge	fˈœlɡə	f ˈœ l ɡ ə		follow_VERB_2			
-Danish	Danish			follow_VERB	følge	fˈœlə	f ˈœ l ə		follow_VERB_2			
+Danish	Danish			follow_VERB	følge	fˈøljə	f ˈø l j ə		follow_VERB_2			
 Swedish	Swedish			follow_VERB	följa	fˈœlja	f ˈœ l j a		follow_VERB_2			
 Elfdalian	Elfdalian			follow_VERB	fy	fˈʏː	f ˈʏː		follow_VERB_2			
 Proto-Germanic	Proto-Germanic			folk_NOUN	fulką	ɸˈulkɑ̃	ɸ ˈu l k ɑ̃		folk_NOUN_1			
@@ -3280,7 +3290,7 @@ Bavarian	Bavarian			folk_NOUN	Voigg	fˈojɡ̊	f ˈo j ɡ̊		folk_NOUN_1
 Swiss German	Swiss German			folk_NOUN	Vouk	v̥ˈowkː	v̥ ˈo w kː		folk_NOUN_1			
 Proto-Germanic	Proto-Germanic			full_ADJ	fullaz	ɸˈullɑz	ɸ ˈu l l ɑ z		full_ADJ_1			
 Gothic	Gothic			full_ADJ	𐍆𐌿𐌻𐌻𐍃	fˈulls	f ˈu l l s		full_ADJ_1			
-Old West Norse	Old West Norse			full_ADJ	fullr	fˈullr	f ˈu l l r		full_ADJ_1			
+Old West Norse	Old West Norse			full_ADJ	fullr	fˈullr̥	f ˈu l l r̥		full_ADJ_1			
 Icelandic	Icelandic			full_ADJ	fullur	fˈʏt͡l̥ʏr̥	f ˈʏ t͡l̥ ʏ r̥		full_ADJ_1			
 Faroese	Faroese			full_ADJ	fullur	fˈʊt͡l̥ʊɹ	f ˈʊ t͡l̥ ʊ ɹ		full_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			full_ADJ	full	fˈʉll	f ˈʉ l l		full_ADJ_1			
@@ -3291,7 +3301,7 @@ Elfdalian	Elfdalian			full_ADJ	full	fˈʉll	f ˈʉ l l		full_ADJ_1
 Scots	Scots			full_ADJ	fou	fˈuː	f ˈuː		full_ADJ_1			
 English	English			full_ADJ	full	fˈʊɫ	f ˈʊ ɫ		full_ADJ_1			
 American English	American English			full_ADJ	full	fˈʊɫ	f ˈʊ ɫ		full_ADJ_1			
-Old English	Old English			full_ADJ	full	fˈull	f ˈu l l		full_ADJ_1			
+Old English	Old English			full_ADJ	full	fˈuɫɫ	f ˈu ɫ ɫ		full_ADJ_1			
 West Frisian	West Frisian			full_ADJ	fol	fˈɔl	f ˈɔ l		full_ADJ_1			
 Saterland Frisian	Saterland Frisian			full_ADJ	ful	fˈʊl	f ˈʊ l		full_ADJ_1			
 Insular North Frisian	Insular North Frisian			full_ADJ	fol	fˈɔl	f ˈɔ l		full_ADJ_1			
@@ -3321,7 +3331,7 @@ Alsatian	Alsatian			full_ADJ	voll	fˈol	f ˈo l		full_ADJ_1
 Swiss German	Swiss German			full_ADJ	voll	v̥ˈol	v̥ ˈo l		full_ADJ_1			
 Proto-Germanic	Proto-Germanic			for_PREP	furi	ɸˈuri	ɸ ˈu r i		for_PREP_1			
 Gothic	Gothic			for_PREP	𐍆𐌰𐌿𐍂	fˈɔːr	f ˈɔː r		for_PREP_1			
-Old West Norse	Old West Norse			for_PREP	fyrir	fˈyrir	f ˈy r i r		for_PREP_1			
+Old West Norse	Old West Norse			for_PREP	fyrir	fˈyrir̥	f ˈy r i r̥		for_PREP_1			
 Icelandic	Icelandic			for_PREP	fyrir	fˈɪːrɪr̥	f ˈɪː r ɪ r̥		for_PREP_1			
 Faroese	Faroese			for_PREP	fyri	fˈiːɹɪ	f ˈiː ɹ ɪ		for_PREP_1			
 Nynorsk Norwegian	Nynorsk Norwegian			for_PREP	for	fˈɔɾ	f ˈɔ ɾ		for_PREP_1			
@@ -3535,12 +3545,12 @@ Palatine German	Palatine German			yarn_NOUN	Gaarn	ɡ̊ˈɑːɐn	ɡ̊ ˈɑː ɐ n
 Hessian	Hessian			yarn_NOUN	Gåån	ɡ̊ˈɑːn	ɡ̊ ˈɑː n		yarn_NOUN_1			
 Standard German	Standard German			yarn_NOUN	Garn	ɡˈaɐn	ɡ ˈa ɐ n		yarn_NOUN_1			
 Proto-Germanic	Proto-Germanic			guest_NOUN	gastiz	ɣˈɑstiz	ɣ ˈɑ s t i z		guest_NOUN_1			
-Old West Norse	Old West Norse			guest_NOUN	gestr	ɟˈɛstr	ɟ ˈɛ s t r		guest_NOUN_1			
+Old West Norse	Old West Norse			guest_NOUN	gestr	ɟˈɛstr̥	ɟ ˈɛ s t r̥		guest_NOUN_1			
 Icelandic	Icelandic			guest_NOUN	gestur	ɟ̊ˈɛstʏr̥	ɟ̊ ˈɛ s t ʏ r̥		guest_NOUN_1			
 Faroese	Faroese			guest_NOUN	gestur	ʤ̊ˈɛstʊɹ	ʤ̊ ˈɛ s t ʊ ɹ		guest_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			guest_NOUN	gjest	jˈɛst	j ˈɛ s t		guest_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			guest_NOUN	gjest	jˈɛst	j ˈɛ s t		guest_NOUN_1			
-Danish	Danish			guest_NOUN	gæst	ɡ̊ˈɛsd̥	ɡ̊ ˈɛ s d̥		guest_NOUN_1			
+Danish	Danish			guest_NOUN	gæst	ɡ̊ˈesd̥	ɡ̊ ˈe s d̥		guest_NOUN_1			
 Swedish	Swedish			guest_NOUN	gäst	jˈɛst	j ˈɛ s t		guest_NOUN_1			
 Elfdalian	Elfdalian			guest_NOUN	djäst	ʥˈæst	ʥ ˈæ s t		guest_NOUN_1			
 Scots	Scots			guest_NOUN	guest	ɡˈɛst	ɡ ˈɛ s t		guest_NOUN_1			
@@ -3610,7 +3620,7 @@ Swabian	Swabian			give_VERB	gäba	ɡˈɛːba	ɡ ˈɛː b a		give_VERB_1
 Alsatian	Alsatian			give_VERB	gänn	ɡ̊ˈæn	ɡ̊ ˈæ n		give_VERB_1			
 Swiss German	Swiss German			give_VERB	gää	ɡ̊ˈæː	ɡ̊ ˈæː		give_VERB_1			
 Proto-Germanic	Proto-Germanic			yellow_ADJ	gelwaz	ɣˈelwɑz	ɣ ˈe l w ɑ z		yellow_ADJ_1			
-Old West Norse	Old West Norse			yellow_ADJ	gulr	ɡˈulr	ɡ ˈu l r		yellow_ADJ_1			
+Old West Norse	Old West Norse			yellow_ADJ	gulr	ɡˈulr̥	ɡ ˈu l r̥		yellow_ADJ_1			
 Icelandic	Icelandic			yellow_ADJ	gulur	ɡ̊ˈʏːlʏr̥	ɡ̊ ˈʏː l ʏ r̥		yellow_ADJ_1			
 Faroese	Faroese			yellow_ADJ	gulur	ɡ̊ˈuːlʊɹ	ɡ̊ ˈuː l ʊ ɹ		yellow_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			yellow_ADJ	gul	ɡˈʉːl	ɡ ˈʉː l		yellow_ADJ_1			
@@ -3652,7 +3662,7 @@ Alsatian	Alsatian			yellow_ADJ	gäl	ɡ̊ˈæːl	ɡ̊ ˈæː l		yellow_ADJ_1
 Swiss German	Swiss German			yellow_ADJ	gälb	ɡ̊ˈælb̥	ɡ̊ ˈæ l b̥		yellow_ADJ_1			
 Proto-Germanic	Proto-Germanic			good_ADJ	gōdaz	ɣˈɔːðɑz	ɣ ˈɔː ð ɑ z		good_ADJ_1			
 Gothic	Gothic			good_ADJ	𐌲𐍉𐌸𐍃	ɡˈoːθs	ɡ ˈoː θ s		good_ADJ_1			
-Old West Norse	Old West Norse			good_ADJ	góðr	ɡˈoːðr	ɡ ˈoː ð r		good_ADJ_1			
+Old West Norse	Old West Norse			good_ADJ	góðr	ɡˈoːðr̥	ɡ ˈoː ð r̥		good_ADJ_1			
 Icelandic	Icelandic			good_ADJ	góður	ɡ̊ˈoːu̯ðʏr̥	ɡ̊ ˈoːu̯ ð ʏ r̥		good_ADJ_1			
 Faroese	Faroese			good_ADJ	góður	ɡ̊ˈɔːu̯wʊɹ	ɡ̊ ˈɔːu̯ w ʊ ɹ		good_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			good_ADJ	god	ɡˈuː	ɡ ˈuː		good_ADJ_1			
@@ -3697,7 +3707,7 @@ Icelandic	Icelandic			grass_NOUN_NEU	gras	ɡ̊rˈaːs	ɡ̊ r ˈaː s		grass_NOUN
 Faroese	Faroese			grass_NOUN_NEU	grass	ɡ̊ɹˈɛːa̯s	ɡ̊ ɹ ˈɛːa̯ s		grass_NOUN_NEU_1			
 Nynorsk Norwegian	Nynorsk Norwegian			grass_NOUN_NEU	gras	ɡɾˈɑːs	ɡ ɾ ˈɑː s		grass_NOUN_NEU_1			
 Bokmål Norwegian	Bokmål Norwegian			grass_NOUN_NEU	gress	ɡɾˈɛss	ɡ ɾ ˈɛ s s		grass_NOUN_NEU_1			
-Danish	Danish			grass_NOUN_NEU	græs	ɡ̊ʁˈas	ɡ̊ ʁ ˈa s		grass_NOUN_NEU_1			
+Danish	Danish			grass_NOUN_NEU	græs	ɡ̊ʁˈɛs	ɡ̊ ʁ ˈɛ s		grass_NOUN_NEU_1			
 Swedish	Swedish			grass_NOUN_NEU	gräs	ɡrˈɛːs	ɡ r ˈɛː s		grass_NOUN_NEU_1			
 Elfdalian	Elfdalian			grass_NOUN_NEU	gras	ɡrˈɑːs	ɡ r ˈɑː s		grass_NOUN_NEU_1			
 Scots	Scots			grass_NOUN_NEU	gress	ɡrˈɛs	ɡ r ˈɛ s		grass_NOUN_NEU_1			
@@ -3929,7 +3939,7 @@ Alsatian	Alsatian			have_VERB	hàn	hˈɒn	h ˈɒ n		have_VERB_1
 Swiss German	Swiss German			have_VERB	haa	hˈɒː	h ˈɒː		have_VERB_1			
 Proto-Germanic	Proto-Germanic			holy_ADJ	hailagaz	xˈɑi̯lɑɣɑz	x ˈɑi̯ l ɑ ɣ ɑ z		holy_ADJ_1			
 Gothic	Gothic			holy_ADJ	𐌷𐌰𐌹𐌻𐌰𐌲𐍃	hˈɛːlaxs	h ˈɛː l a x s		holy_ADJ_1			
-Old West Norse	Old West Norse			holy_ADJ	heilagr	hˈɛi̯lɑɣr	h ˈɛi̯ l ɑ ɣ r		holy_ADJ_1			
+Old West Norse	Old West Norse			holy_ADJ	heilagr	hˈɛi̯lɑɣr̥	h ˈɛi̯ l ɑ ɣ r̥		holy_ADJ_1			
 Icelandic	Icelandic			holy_ADJ	helgur	hˈɛlɡ̊ʏr̥	h ˈɛ l ɡ̊ ʏ r̥		holy_ADJ_1			
 Faroese	Faroese			holy_ADJ	heilagur	hˈai̯lavʊɹ	h ˈai̯ l a v ʊ ɹ		holy_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			holy_ADJ	heilag	hˈæɪ̯lɑɡ	h ˈæɪ̯ l ɑ ɡ		holy_ADJ_1			
@@ -3953,7 +3963,7 @@ Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			holy_ADJ	hillig	hˈ�
 Dutch	Dutch			holy_ADJ	heilig	ɦˈɛi̯ɫəχ	ɦ ˈɛi̯ ɫ ə χ		holy_ADJ_1			
 Afrikaans	Afrikaans			holy_ADJ	heilig	ɦˈəɪ̯ɫəχ	ɦ ˈəɪ̯ ɫ ə χ		holy_ADJ_1			
 West Flemish	West Flemish			holy_ADJ	eillig	ˈɛləç	ˈɛ l ə ç		holy_ADJ_1			
-Limburgish	Limburgish			holy_ADJ	heileg	ɦˈɛːləx	ɦ ˈɛː l ə x		holy_ADJ_1			
+Limburgish	Limburgish			holy_ADJ	heileg	ɦˈɛːləɣ̊	ɦ ˈɛː l ə ɣ̊		holy_ADJ_1			
 Ripuarian	Ripuarian			holy_ADJ	hellig	hˈɛləɕ	h ˈɛ l ə ɕ		holy_ADJ_1			
 Luxembourgish	Luxembourgish			holy_ADJ	helleg	hˈɛləɕ	h ˈɛ l ə ɕ		holy_ADJ_1			
 Pennsylvania German	Pennsylvania German			holy_ADJ	heilich	hˈaɪ̯lɪç	h ˈaɪ̯ l ɪ ç		holy_ADJ_1			
@@ -3969,7 +3979,7 @@ Alsatian	Alsatian			holy_ADJ	heili	hˈəi̯li	h ˈəi̯ l i		holy_ADJ_1
 Swiss German	Swiss German			holy_ADJ	häilig	hˈæi̯liɡ̊	h ˈæi̯ l i ɡ̊		holy_ADJ_1			
 Proto-Germanic	Proto-Germanic			home_NOUN	haimaz	xˈɑi̯mɑz	x ˈɑi̯ m ɑ z		home_NOUN_1			
 Gothic	Gothic			home_NOUN	𐌷𐌰𐌹𐌼𐍃	hˈɛːms	h ˈɛː m s		home_NOUN_1			
-Old West Norse	Old West Norse			home_NOUN	heimr	hˈɛi̯mr	h ˈɛi̯ m r		home_NOUN_1			
+Old West Norse	Old West Norse			home_NOUN	heimr	hˈɛi̯mr̥	h ˈɛi̯ m r̥		home_NOUN_1			
 Icelandic	Icelandic			home_NOUN	heimur	hˈɛːi̯mʏr̥	h ˈɛːi̯ m ʏ r̥		home_NOUN_1			
 Faroese	Faroese			home_NOUN	heimur	hˈaːi̯mʊɹ	h ˈaːi̯ m ʊ ɹ		home_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			home_NOUN	heim	hˈæɪ̯m	h ˈæɪ̯ m		home_NOUN_1			
@@ -4001,7 +4011,7 @@ Bavarian	Bavarian			home_NOUN	Hoam	hˈoɐ̯m	h ˈoɐ̯ m		home_NOUN_1
 Swabian	Swabian			home_NOUN	hoim	hˈɔe̯m	h ˈɔe̯ m		home_NOUN_1			
 Alsatian	Alsatian			home_NOUN	heim	hˈəi̯m	h ˈəi̯ m		home_NOUN_1			
 Proto-Germanic	Proto-Germanic			hot_ADJ	haitaz	xˈɑi̯tɑz	x ˈɑi̯ t ɑ z		hot_ADJ_1			
-Old West Norse	Old West Norse			hot_ADJ	heitr	hˈɛi̯tr	h ˈɛi̯ t r		hot_ADJ_1			
+Old West Norse	Old West Norse			hot_ADJ	heitr	hˈɛi̯tr̥	h ˈɛi̯ t r̥		hot_ADJ_1			
 Icelandic	Icelandic			hot_ADJ	heitur	hˈɛːi̯tʏr̥	h ˈɛːi̯ t ʏ r̥		hot_ADJ_1			
 Faroese	Faroese			hot_ADJ	heitur	hˈaːi̯tʊɹ	h ˈaːi̯ t ʊ ɹ		hot_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			hot_ADJ	heit	hˈæɪ̯t	h ˈæɪ̯ t		hot_ADJ_1			
@@ -4037,12 +4047,12 @@ Alsatian	Alsatian			hot_ADJ	heiss	hˈəi̯s	h ˈəi̯ s		hot_ADJ_1
 Swiss German	Swiss German			hot_ADJ	häiss	hˈæi̯sː	h ˈæi̯ sː		hot_ADJ_1			
 Proto-Germanic	Proto-Germanic			half_NOUN	halbaz	xˈɑlβɑz	x ˈɑ l β ɑ z		half_NOUN_1			
 Gothic	Gothic			half_NOUN	𐌷𐌰𐌻𐌱𐍃	hˈalbs	h ˈa l b s		half_NOUN_1			
-Old West Norse	Old West Norse			half_NOUN	halfr	hˈɑlfr	h ˈɑ l f r		half_NOUN_1			
+Old West Norse	Old West Norse			half_NOUN	halfr	hˈɑlfr̥	h ˈɑ l f r̥		half_NOUN_1			
 Icelandic	Icelandic			half_NOUN	hálfur	hˈau̯lvʏr̥	h ˈau̯ l v ʏ r̥		half_NOUN_1			
 Faroese	Faroese			half_NOUN	hálvur	hˈɔlvʊr	h ˈɔ l v ʊ r		half_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			half_NOUN	halv	hˈɑll	h ˈɑ l l		half_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			half_NOUN	halv	hˈɑll	h ˈɑ l l		half_NOUN_1			
-Danish	Danish			half_NOUN	halv	hˈalˀ	h ˈa lˀ		half_NOUN_1			
+Danish	Danish			half_NOUN	halv	hˈælˀ	h ˈæ lˀ		half_NOUN_1			
 Swedish	Swedish			half_NOUN	halv	hˈalv	h ˈa l v		half_NOUN_1			
 Elfdalian	Elfdalian			half_NOUN	åv	ˈɔːv	ˈɔː v		half_NOUN_1			
 Scots	Scots			half_NOUN	hauf	hˈɑːf	h ˈɑː f		half_NOUN_1			
@@ -4186,7 +4196,7 @@ Icelandic	Icelandic			hate_VERB	hata	hˈaːta	h ˈaː t a		hate_VERB_1
 Faroese	Faroese			hate_VERB	hata	hˈɛːa̯ta	h ˈɛːa̯ t a		hate_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			hate_VERB	hata	hˈɑːtɑ	h ˈɑː t ɑ		hate_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			hate_VERB	hate	hˈɑːtə	h ˈɑː t ə		hate_VERB_1			
-Danish	Danish			hate_VERB	hade	hˈæːð̞ˠə	h ˈæː ð̞ˠ ə		hate_VERB_1			
+Danish	Danish			hate_VERB	hade	hˈɛːð̞ˠə	h ˈɛː ð̞ˠ ə		hate_VERB_1			
 Swedish	Swedish			hate_VERB	hata	hˈɑːta	h ˈɑː t a		hate_VERB_1			
 Elfdalian	Elfdalian			hate_VERB	åtå	ˈɔtɔ	ˈɔ t ɔ		hate_VERB_1			
 Scots	Scots			hate_VERB	hate	hˈet	h ˈe t		hate_VERB_1			
@@ -4218,7 +4228,7 @@ Icelandic	Icelandic			head_NOUN	höfuð	hˈœːvʏð	h ˈœː v ʏ ð		head_NOUN
 Faroese	Faroese			head_NOUN	høvd	hˈœd̥	h ˈœ d̥		head_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			head_NOUN	hovud	hˈuːʋʉ	h ˈuː ʋ ʉ		head_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			head_NOUN	hode	hˈuːdə	h ˈuː d ə		head_NOUN_1			
-Danish	Danish			head_NOUN	hoved	hˈoːəð̞ˠ	h ˈoː ə ð̞ˠ		head_NOUN_1			
+Danish	Danish			head_NOUN	hoved	hˈoːwəð̞ˠ	h ˈoː w ə ð̞ˠ		head_NOUN_1			
 Swedish	Swedish			head_NOUN	huvud	hˈʉːvɵd	h ˈʉː v ɵ d		head_NOUN_1			
 Elfdalian	Elfdalian			head_NOUN	ovuð	ˈoːvʉð	ˈoː v ʉ ð		head_NOUN_1			
 Scots	Scots			head_NOUN	heid	hˈid	h ˈi d		head_NOUN_1			
@@ -4254,7 +4264,7 @@ Swedish	Swedish			high_ADJ	hög	hˈøːɡ	h ˈøː ɡ		high_ADJ_1
 Elfdalian	Elfdalian			high_ADJ	og	ˈoːɣ	ˈoː ɣ		high_ADJ_1			
 Proto-Germanic	Proto-Germanic			high_ADJ	hauhaz	xˈɑu̯xɑz	x ˈɑu̯ x ɑ z		high_ADJ_2			
 Gothic	Gothic			high_ADJ	𐌷𐌰𐌿𐌷𐍃	hˈɔːhs	h ˈɔː h s		high_ADJ_2			
-Old West Norse	Old West Norse			high_ADJ	hár	hˈɑːr	h ˈɑː r		high_ADJ_2			
+Old West Norse	Old West Norse			high_ADJ	hár	hˈɑːr̥	h ˈɑː r̥		high_ADJ_2			
 Icelandic	Icelandic			high_ADJ	hár	hˈɑːu̯r̥	h ˈɑːu̯ r̥		high_ADJ_2			
 Faroese	Faroese			high_ADJ	háur	hˈɔ̯aːvʊɹ	h ˈɔ̯aː v ʊ ɹ		high_ADJ_2			
 Scots	Scots			high_ADJ	heech	hˈiç	h ˈi ç		high_ADJ_2			
@@ -4270,11 +4280,13 @@ Northern Low Saxon	Northern Low Saxon			high_ADJ	hoch	hˈaʊ̯x	h ˈaʊ̯ x		hig
 Westphalian	Westphalian			high_ADJ	haug	hˈaʊ̯x	h ˈaʊ̯ x		high_ADJ_2			
 Eastphalian	Eastphalian			high_ADJ	hoch	hˈeo̯x	h ˈeo̯ x		high_ADJ_2			
 Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			high_ADJ	hoch	hˈaʊ̯x	h ˈaʊ̯ x		high_ADJ_2			
+Old Dutch	Old Dutch			high_ADJ	hōh	hˈoːx	h ˈoː x		high_ADJ_2			
+Middle Dutch	Middle Dutch			high_ADJ	hooch	hˈoːx	h ˈoː x		high_ADJ_2			
 Dutch	Dutch			high_ADJ	hoog	ɦˈoːχ	ɦ ˈoː χ		high_ADJ_2			
 Afrikaans	Afrikaans			high_ADJ	hoog	ɦˈʊə̯χ	ɦ ˈʊə̯ χ		high_ADJ_2			
 Zeelandic	Zeelandic			high_ADJ	ôôg	ˈʊə̯x	ˈʊə̯ x		high_ADJ_2			
 West Flemish	West Flemish			high_ADJ	oog	ˈoːɦ̥	ˈoː ɦ̥		high_ADJ_2			
-Limburgish	Limburgish			high_ADJ	hoeg	ɦˈux	ɦ ˈu x		high_ADJ_2			
+Limburgish	Limburgish			high_ADJ	hoeg	ɦˈuɣ̊	ɦ ˈu ɣ̊		high_ADJ_2			
 Ripuarian	Ripuarian			high_ADJ	huh	hˈuː	h ˈuː		high_ADJ_2			
 Luxembourgish	Luxembourgish			high_ADJ	héich	hˈɜɪ̯ɕ	h ˈɜɪ̯ ɕ		high_ADJ_2			
 Pennsylvania German	Pennsylvania German			high_ADJ	hooch	hˈoːx	h ˈoː x		high_ADJ_2			
@@ -4369,7 +4381,7 @@ Icelandic	Icelandic			help_VERB	hjálpa	çˈau̯l̥pa	ç ˈau̯ l̥ p a		help_VE
 Faroese	Faroese			help_VERB	hjálpa	jˈɔl̥pa	j ˈɔ l̥ p a		help_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			help_VERB	hjelpa	jˈɛlpɑ	j ˈɛ l p ɑ		help_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			help_VERB	hjelpe	jˈɛlpə	j ˈɛ l p ə		help_VERB_1			
-Danish	Danish			help_VERB	hjælpe	jˈɛlb̥ə	j ˈɛ l b̥ ə		help_VERB_1			
+Danish	Danish			help_VERB	hjælpe	jˈelb̥ə	j ˈe l b̥ ə		help_VERB_1			
 Swedish	Swedish			help_VERB	hjälpa	jˈɛlpa	j ˈɛ l p a		help_VERB_1			
 Elfdalian	Elfdalian			help_VERB	jåpa	jˈɔːpɑ	j ˈɔː p ɑ		help_VERB_1			
 Scots	Scots			help_VERB	help	hˈɛlp	h ˈɛ l p		help_VERB_1			
@@ -4569,7 +4581,7 @@ Icelandic	Icelandic			nut_NOUN	hnot	n̥ˈɔːt	n̥ ˈɔː t		nut_NOUN_1
 Faroese	Faroese			nut_NOUN	nøt	nˈøːʰt	n ˈøː ʰt		nut_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			nut_NOUN	nøtt	nˈœʰtt	n ˈœ ʰt t		nut_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			nut_NOUN	nøtt	nˈœtt	n ˈœ t t		nut_NOUN_1			
-Danish	Danish			nut_NOUN	nød	nˈœˀð̞ˠ	n ˈœˀ ð̞ˠ		nut_NOUN_1			
+Danish	Danish			nut_NOUN	nød	nˈøˀð̞ˠ	n ˈøˀ ð̞ˠ		nut_NOUN_1			
 Swedish	Swedish			nut_NOUN	nöt	nˈøːt	n ˈøː t		nut_NOUN_1			
 Elfdalian	Elfdalian			nut_NOUN	nöt	nˈœːt	n ˈœː t		nut_NOUN_1			
 Scots	Scots			nut_NOUN	nit	nˈɪt	n ˈɪ t		nut_NOUN_1			
@@ -4613,12 +4625,12 @@ Swedish	Swedish			hen_NOUN	höna	hˈøːna	h ˈøː n a		hen_NOUN_2
 Elfdalian	Elfdalian			hen_NOUN	yöna	ˈyːœ̯nɑ	ˈyːœ̯ n ɑ		hen_NOUN_2			
 Proto-Germanic	Proto-Germanic			ring_NOUN	hringaz	xrˈiŋɡɑz	x r ˈi ŋ ɡ ɑ z		ring_NOUN_1			
 Gothic	Gothic			ring_NOUN	𐌷𐍂𐌹𐌲𐌲𐍃	hrˈiŋɡs	h r ˈi ŋ ɡ s		ring_NOUN_1			
-Old West Norse	Old West Norse			ring_NOUN	hringr	r̥ˈiŋɡr	r̥ ˈi ŋ ɡ r		ring_NOUN_1			
+Old West Norse	Old West Norse			ring_NOUN	hringr	r̥ˈiŋɡr̥	r̥ ˈi ŋ ɡ r̥		ring_NOUN_1			
 Icelandic	Icelandic			ring_NOUN	hringur	r̥ˈiŋɡ̊ʏr̥	r̥ ˈi ŋ ɡ̊ ʏ r̥		ring_NOUN_1			
 Faroese	Faroese			ring_NOUN	ringur	ɹˈɪŋɡ̊ʊɹ	ɹ ˈɪ ŋ ɡ̊ ʊ ɹ		ring_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			ring_NOUN	ring	ɾˈɪŋŋ	ɾ ˈɪ ŋ ŋ		ring_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			ring_NOUN	ring	ɾˈɪŋŋ	ɾ ˈɪ ŋ ŋ		ring_NOUN_1			
-Danish	Danish			ring_NOUN	ring	ʁˈeŋˀ	ʁ ˈe ŋˀ		ring_NOUN_1			
+Danish	Danish			ring_NOUN	ring	ʁˈɛŋˀ	ʁ ˈɛ ŋˀ		ring_NOUN_1			
 Swedish	Swedish			ring_NOUN	ring	rˈɪŋŋ	r ˈɪ ŋ ŋ		ring_NOUN_1			
 Elfdalian	Elfdalian			ring_NOUN	ringg	rˈɪŋɡ	r ˈɪ ŋ ɡ		ring_NOUN_1			
 Scots	Scots			ring_NOUN	ring	rˈɪŋ	r ˈɪ ŋ		ring_NOUN_1			
@@ -4651,7 +4663,7 @@ Swabian	Swabian			ring_NOUN	Reng	ʁˈeŋ	ʁ ˈe ŋ		ring_NOUN_1
 Alsatian	Alsatian			ring_NOUN	Ring	ʁˈiŋ	ʁ ˈi ŋ		ring_NOUN_1			
 Swiss German	Swiss German			ring_NOUN	Ring	rˈiŋ	r ˈi ŋ		ring_NOUN_1			
 Proto-Germanic	Proto-Germanic			ridge_NOUN	hrugjaz	xrˈuɣjɑz	x r ˈu ɣ j ɑ z		ridge_NOUN_1			
-Old West Norse	Old West Norse			ridge_NOUN	hryggr	r̥ˈyɡɡr	r̥ ˈy ɡ ɡ r		ridge_NOUN_1			
+Old West Norse	Old West Norse			ridge_NOUN	hryggr	r̥ˈyɡɡr̥	r̥ ˈy ɡ ɡ r̥		ridge_NOUN_1			
 Icelandic	Icelandic			ridge_NOUN	hryggur	r̥ˈɪɡ̊ɡ̊ʏr̥	r̥ ˈɪ ɡ̊ ɡ̊ ʏ r̥		ridge_NOUN_1			
 Faroese	Faroese			ridge_NOUN	ryggur	ɹˈɪɡ̊ɡ̊ʊɹ	ɹ ˈɪ ɡ̊ ɡ̊ ʊ ɹ		ridge_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			ridge_NOUN	rygg	ɾˈʏɡɡ	ɾ ˈʏ ɡ ɡ		ridge_NOUN_1			
@@ -4825,7 +4837,7 @@ Alsatian	Alsatian			hundred_NUM	hundert	hˈund̥əʁt	h ˈu n d̥ ə ʁ t		hundr
 Swiss German	Swiss German			hundred_NUM	hundert	hˈund̥ərtː	h ˈu n d̥ ə r tː		hundred_NUM_1			
 Proto-Germanic	Proto-Germanic			dog_NOUN	hundaz	xˈundɑz	x ˈu n d ɑ z		dog_NOUN_1			
 Gothic	Gothic			dog_NOUN	𐌷𐌿𐌽𐌳𐍃	hˈunds	h ˈu n d s		dog_NOUN_1			
-Old West Norse	Old West Norse			dog_NOUN	hundr	hˈundr	h ˈu n d r		dog_NOUN_1			
+Old West Norse	Old West Norse			dog_NOUN	hundr	hˈundr̥	h ˈu n d r̥		dog_NOUN_1			
 Icelandic	Icelandic			dog_NOUN	hundur	hˈʏnd̥ʏr̥	h ˈʏ n d̥ ʏ r̥		dog_NOUN_1			
 Faroese	Faroese			dog_NOUN	hundur	hˈʊnd̥ʊɹ	h ˈʊ n d̥ ʊ ɹ		dog_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			dog_NOUN	hund	hˈʉnn	h ˈʉ n n		dog_NOUN_1			
@@ -4844,6 +4856,8 @@ East Frisian Low Saxon	East Frisian Low Saxon			dog_NOUN	Hund	hˈʊnd̥	h ˈʊ n
 Northern Low Saxon	Northern Low Saxon			dog_NOUN	Hund	hˈʊnd	h ˈʊ n d		dog_NOUN_1			
 Eastphalian	Eastphalian			dog_NOUN	Hund	hˈʊnd̥	h ˈʊ n d̥		dog_NOUN_1			
 Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			dog_NOUN	Hund	hˈʊnd̥	h ˈʊ n d̥		dog_NOUN_1			
+Old Dutch	Old Dutch			dog_NOUN	hunt	hˈʊnd̥	h ˈʊ n d̥		dog_NOUN_1			
+Middle Dutch	Middle Dutch			dog_NOUN	hont	hˈɔnd̥	h ˈɔ n d̥		dog_NOUN_1			
 Dutch	Dutch			dog_NOUN	hond	ɦˈɔnd̥	ɦ ˈɔ n d̥		dog_NOUN_1			
 Afrikaans	Afrikaans			dog_NOUN	hond	ɦˈɔnd̥	ɦ ˈɔ n d̥		dog_NOUN_1			
 Zeelandic	Zeelandic			dog_NOUN	ond	ˈɔnd̥	ˈɔ n d̥		dog_NOUN_1			
@@ -4863,7 +4877,7 @@ Swabian	Swabian			dog_NOUN	Hond	hˈond	h ˈo n d		dog_NOUN_1
 Alsatian	Alsatian			dog_NOUN	Hund	hˈund̥	h ˈu n d̥		dog_NOUN_1			
 Swiss German	Swiss German			dog_NOUN	Hung	hˈuŋ	h ˈu ŋ		dog_NOUN_1			
 Proto-Germanic	Proto-Germanic			hunger_NOUN	hungruz	xˈuŋɡruz	x ˈu ŋ ɡ r u z		hunger_NOUN_1			
-Old West Norse	Old West Norse			hunger_NOUN	hungr	hˈuŋɡr	h ˈu ŋ ɡ r		hunger_NOUN_1			
+Old West Norse	Old West Norse			hunger_NOUN	hungr	hˈuŋɡr̥	h ˈu ŋ ɡ r̥		hunger_NOUN_1			
 Icelandic	Icelandic			hunger_NOUN	hungur	hˈuŋɡ̊ʏr̥	h ˈu ŋ ɡ̊ ʏ r̥		hunger_NOUN_1			
 Faroese	Faroese			hunger_NOUN	hungur	hˈʊŋɡ̊ʊɹ	h ˈʊ ŋ ɡ̊ ʊ ɹ		hunger_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			hunger_NOUN	hunger	hˈʉŋŋəɾ	h ˈʉ ŋ ŋ ə ɾ		hunger_NOUN_1			
@@ -4980,18 +4994,18 @@ Swabian	Swabian			house_NOUN	Haus	hˈao̯s	h ˈao̯ s		house_NOUN_1
 Alsatian	Alsatian			house_NOUN	Hüs	hˈyːz̥	h ˈyː z̥		house_NOUN_1			
 Swiss German	Swiss German			house_NOUN	Huus	hˈuːz̥	h ˈuː z̥		house_NOUN_1			
 Proto-Germanic	Proto-Germanic			whale_NOUN	hwalaz	xʷˈɑlɑz	xʷ ˈɑ l ɑ z		whale_NOUN_1			
-Old West Norse	Old West Norse			whale_NOUN	hvalr	xwˈɑlr	x w ˈɑ l r		whale_NOUN_1			
+Old West Norse	Old West Norse			whale_NOUN	hvalr	xwˈɑlr̥	x w ˈɑ l r̥		whale_NOUN_1			
 Icelandic	Icelandic			whale_NOUN	hvalur	kʰvˈaːlʏr̥	kʰ v ˈaː l ʏ r̥		whale_NOUN_1			
 Faroese	Faroese			whale_NOUN	hvalur	kʰvˈɛːa̯lʊɹ	kʰ v ˈɛːa̯ l ʊ ɹ		whale_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			whale_NOUN	kval	kʰʋˈɑːl	kʰ ʋ ˈɑː l		whale_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			whale_NOUN	hval	ʋˈɑːl	ʋ ˈɑː l		whale_NOUN_1			
-Danish	Danish			whale_NOUN	hval	ʋˈɛˀl	ʋ ˈɛˀ l		whale_NOUN_1			
+Danish	Danish			whale_NOUN	hval	ʋˈæˀl	ʋ ˈæˀ l		whale_NOUN_1			
 Swedish	Swedish			whale_NOUN	val	vˈɑːl	v ˈɑː l		whale_NOUN_1			
 Elfdalian	Elfdalian			whale_NOUN	wal	wˈɑːɽ	w ˈɑː ɽ		whale_NOUN_1			
 Scots	Scots			whale_NOUN	whaul	ʍˈɑːl	ʍ ˈɑː l		whale_NOUN_1			
 English	English			whale_NOUN	whale	wˈeɪ̯ɫ	w ˈeɪ̯ ɫ		whale_NOUN_1			
 American English	American English			whale_NOUN	whale	wˈeɪ̯ɫ	w ˈeɪ̯ ɫ		whale_NOUN_1			
-Old English	Old English			whale_NOUN	hwæl	ʍˈæl	ʍ ˈæ l		whale_NOUN_1			
+Old English	Old English			whale_NOUN	hwæl	ʍˈæɫ	ʍ ˈæ ɫ		whale_NOUN_1			
 West Frisian	West Frisian			whale_NOUN	wal	ʋˈal	ʋ ˈa l		whale_NOUN_1			
 Insular North Frisian	Insular North Frisian			whale_NOUN	Wal	vˈal	v ˈa l		whale_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			whale_NOUN	wål	vˈɒl	v ˈɒ l		whale_NOUN_1			
@@ -5016,7 +5030,7 @@ Icelandic	Icelandic			what_PRON	hvað	kʰvˈaːð	kʰ v ˈaː ð		what_PRON_1
 Faroese	Faroese			what_PRON	hvat	kʰvˈɛːa̯ʰt	kʰ v ˈɛːa̯ ʰt		what_PRON_1			
 Nynorsk Norwegian	Nynorsk Norwegian			what_PRON	kva	kʰʋˈɑː	kʰ ʋ ˈɑː		what_PRON_1			
 Bokmål Norwegian	Bokmål Norwegian			what_PRON	hva	ʋˈɑ	ʋ ˈɑ		what_PRON_1			
-Danish	Danish			what_PRON	hvad	ʋˈað̞ˠ	ʋ ˈa ð̞ˠ		what_PRON_1			
+Danish	Danish			what_PRON	hvad	ʋˈæð̞ˠ	ʋ ˈæ ð̞ˠ		what_PRON_1			
 Swedish	Swedish			what_PRON	vad	vˈɑːd	v ˈɑː d		what_PRON_1			
 Elfdalian	Elfdalian			what_PRON	wen	wˈɛːn	w ˈɛː n		what_PRON_1			
 Scots	Scots			what_PRON	what	ʍˈɪt	ʍ ˈɪ t		what_PRON_1			
@@ -5087,7 +5101,7 @@ West Flemish	West Flemish			white_ADJ	wit	ʋˈɛt	ʋ ˈɛ t		white_ADJ_1
 Limburgish	Limburgish			white_ADJ	wit	βˈɪt	β ˈɪ t		white_ADJ_1			
 Proto-Germanic	Proto-Germanic			white_ADJ	hwītaz	xʷˈiːtɑz	xʷ ˈiː t ɑ z		white_ADJ_2			
 Gothic	Gothic			white_ADJ	𐍈𐌴𐌹𐍄𐍃	ʍˈiːts	ʍ ˈiː t s		white_ADJ_2			
-Old West Norse	Old West Norse			white_ADJ	hvítr	xwˈiːtr	x w ˈiː t r		white_ADJ_2			
+Old West Norse	Old West Norse			white_ADJ	hvítr	xwˈiːtr̥	x w ˈiː t r̥		white_ADJ_2			
 Icelandic	Icelandic			white_ADJ	hvítur	kʰvˈiːtʏr̥	kʰ v ˈiː t ʏ r̥		white_ADJ_2			
 Faroese	Faroese			white_ADJ	hvítur	kʰvˈʊ̯iːtʊɹ	kʰ v ˈʊ̯iː t ʊ ɹ		white_ADJ_2			
 Nynorsk Norwegian	Nynorsk Norwegian			white_ADJ	kvit	kʰʋˈiːt	kʰ ʋ ˈiː t		white_ADJ_2			
@@ -5202,7 +5216,7 @@ Icelandic	Icelandic			year_NOUN	ár	ˈɑːu̯r̥	ˈɑːu̯ r̥		year_NOUN_1
 Faroese	Faroese			year_NOUN	ár	ˈɔ̯aːɹ	ˈɔ̯aː ɹ		year_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			year_NOUN	år	ˈoːɾ	ˈoː ɾ		year_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			year_NOUN	år	ˈoːɾ	ˈoː ɾ		year_NOUN_1			
-Danish	Danish			year_NOUN	år	ˈɔˀ	ˈɔˀ		year_NOUN_1			
+Danish	Danish			year_NOUN	år	ˈɒˀ	ˈɒˀ		year_NOUN_1			
 Swedish	Swedish			year_NOUN	år	ˈoːr	ˈoː r		year_NOUN_1			
 Elfdalian	Elfdalian			year_NOUN	år	ˈɔːr	ˈɔː r		year_NOUN_1			
 Scots	Scots			year_NOUN	year	jˈiːr	j ˈiː r		year_NOUN_1			
@@ -5239,12 +5253,12 @@ Alsatian	Alsatian			year_NOUN	Johr	jˈoːʁ	j ˈoː ʁ		year_NOUN_1
 Swiss German	Swiss German			year_NOUN	Jaar	jˈɒːr	j ˈɒː r		year_NOUN_1			
 Proto-Germanic	Proto-Germanic			young_NOUN	jungaz	jˈuŋɡɑz	j ˈu ŋ ɡ ɑ z		young_NOUN_1			
 Gothic	Gothic			young_NOUN	𐌾𐌿𐌲𐌲𐍃	jˈuŋɡs	j ˈu ŋ ɡ s		young_NOUN_1			
-Old West Norse	Old West Norse			young_NOUN	ungr	ˈuŋɡr	ˈu ŋ ɡ r		young_NOUN_1			
+Old West Norse	Old West Norse			young_NOUN	ungr	ˈuŋɡr̥	ˈu ŋ ɡ r̥		young_NOUN_1			
 Icelandic	Icelandic			young_NOUN	ungur	ˈuŋɡ̊ʏr̥	ˈu ŋ ɡ̊ ʏ r̥		young_NOUN_1			
 Faroese	Faroese			young_NOUN	ungur	ˈʊŋɡ̊ʊɹ	ˈʊ ŋ ɡ̊ ʊ ɹ		young_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			young_NOUN	ung	ˈʉŋŋ	ˈʉ ŋ ŋ		young_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			young_NOUN	ung	ˈʉŋŋ	ˈʉ ŋ ŋ		young_NOUN_1			
-Danish	Danish			young_NOUN	ung	ˈɔŋˀ	ˈɔ ŋˀ		young_NOUN_1			
+Danish	Danish			young_NOUN	ung	ˈuŋˀ	ˈu ŋˀ		young_NOUN_1			
 Swedish	Swedish			young_NOUN	ung	ˈɵŋŋ	ˈɵ ŋ ŋ		young_NOUN_1			
 Elfdalian	Elfdalian			young_NOUN	ungg	ˈʉŋɡ	ˈʉ ŋ ɡ		young_NOUN_1			
 Scots	Scots			young_NOUN	young	jˈʌŋ	j ˈʌ ŋ		young_NOUN_1			
@@ -5280,7 +5294,7 @@ Alsatian	Alsatian			young_NOUN	jung	jˈuŋ	j ˈu ŋ		young_NOUN_1
 Swiss German	Swiss German			young_NOUN	jung	jˈuŋɡ̊	j ˈu ŋ ɡ̊		young_NOUN_1			
 Proto-Germanic	Proto-Germanic			ye_PRON	jūz	jˈuːz	j ˈuː z		ye_PRON_1			
 Gothic	Gothic			ye_PRON	𐌾𐌿𐍃	jˈuːs	j ˈuː s		ye_PRON_1			
-Old West Norse	Old West Norse			ye_PRON	ér	ˈeːr	ˈeː r		ye_PRON_1			
+Old West Norse	Old West Norse			ye_PRON	ér	ˈeːr̥	ˈeː r̥		ye_PRON_1			
 Icelandic	Icelandic			ye_PRON	þér	θˈɛːr̥	θ ˈɛː r̥		ye_PRON_1			
 Faroese	Faroese			ye_PRON	tær	tʰˈɛːa̯ɹ	tʰ ˈɛːa̯ ɹ		ye_PRON_1			
 Nynorsk Norwegian	Nynorsk Norwegian			ye_PRON	de	dˈeː	d ˈeː		ye_PRON_1			
@@ -5321,12 +5335,12 @@ Alsatian	Alsatian			ye_PRON	ihr	ˈiːʁ	ˈiː ʁ		ye_PRON_1
 Swiss German	Swiss German			ye_PRON	ir	ˈir	ˈi r		ye_PRON_1			
 Proto-Germanic	Proto-Germanic			calf_NOUN	kalbaz	kˈɑlβɑz	k ˈɑ l β ɑ z		calf_NOUN_1			
 Gothic	Gothic			calf_NOUN	𐌺𐌰𐌻𐌱𐍉	kˈalboː	k ˈa l b oː		calf_NOUN_1			
-Old West Norse	Old West Norse			calf_NOUN	kalfr	kʰˈɑlvr	kʰ ˈɑ l v r		calf_NOUN_1			
+Old West Norse	Old West Norse			calf_NOUN	kalfr	kʰˈɑlvr̥	kʰ ˈɑ l v r̥		calf_NOUN_1			
 Icelandic	Icelandic			calf_NOUN	kálfur	kʰˈɑu̯lvʏr̥	kʰ ˈɑu̯ l v ʏ r̥		calf_NOUN_1			
 Faroese	Faroese			calf_NOUN	kálvur	kʰˈɔlvʊɹ	kʰ ˈɔ l v ʊ ɹ		calf_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			calf_NOUN	kalv	kʰˈɑlʋ	kʰ ˈɑ l ʋ		calf_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			calf_NOUN	kalv	kʰˈɑlʋ	kʰ ˈɑ l ʋ		calf_NOUN_1			
-Danish	Danish			calf_NOUN	kalv	kʰˈɛlˀʋ	kʰ ˈɛ lˀ ʋ		calf_NOUN_1			
+Danish	Danish			calf_NOUN	kalv	kʰˈælˀʋ	kʰ ˈæ lˀ ʋ		calf_NOUN_1			
 Swedish	Swedish			calf_NOUN	kalv	kʰˈalv	kʰ ˈa l v		calf_NOUN_1			
 Elfdalian	Elfdalian			calf_NOUN	kåv	kʰˈɔːv	kʰ ˈɔː v		calf_NOUN_1			
 Scots	Scots			calf_NOUN	cauf	kʰˈɑːf	kʰ ˈɑː f		calf_NOUN_1			
@@ -5362,7 +5376,7 @@ Alsatian	Alsatian			calf_NOUN	Kàlb	kʰˈɒlb̥	kʰ ˈɒ l b̥		calf_NOUN_1
 Swiss German	Swiss German			calf_NOUN	Chalb	ɣ̊ˈɒlb̥	ɣ̊ ˈɒ l b̥		calf_NOUN_1			
 Proto-Germanic	Proto-Germanic			cold_ADJ	kaldaz	kˈɑldɑz	k ˈɑ l d ɑ z		cold_ADJ_1			
 Gothic	Gothic			cold_ADJ	𐌺𐌰𐌻𐌳𐍃	kˈalds	k ˈa l d s		cold_ADJ_1			
-Old West Norse	Old West Norse			cold_ADJ	kaldr	kʰˈɑldr	kʰ ˈɑ l d r		cold_ADJ_1			
+Old West Norse	Old West Norse			cold_ADJ	kaldr	kʰˈɑldr̥	kʰ ˈɑ l d r̥		cold_ADJ_1			
 Icelandic	Icelandic			cold_ADJ	kaldur	kʰˈald̥ʏr̥	kʰ ˈa l d̥ ʏ r̥		cold_ADJ_1			
 Faroese	Faroese			cold_ADJ	kaldur	kʰˈald̥ʊɹ	kʰ ˈa l d̥ ʊ ɹ		cold_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			cold_ADJ	kald	kʰˈɑll	kʰ ˈɑ l l		cold_ADJ_1			
@@ -5443,7 +5457,7 @@ Swabian	Swabian			ken_VERB	kenna	kʰˈɛna	kʰ ˈɛ n a		ken_VERB_1
 Alsatian	Alsatian			ken_VERB	kenne	kʰˈenə	kʰ ˈe n ə		ken_VERB_1			
 Swiss German	Swiss German			ken_VERB	känne	kːˈænə	kː ˈæ n ə		ken_VERB_1			
 Proto-Germanic	Proto-Germanic			cat_NOUN	kattuz	kˈɑttuz	k ˈɑ t t u z		cat_NOUN_1			
-Old West Norse	Old West Norse			cat_NOUN	kǫttr	kʰˈɔttr	kʰ ˈɔ t t r		cat_NOUN_1			
+Old West Norse	Old West Norse			cat_NOUN	kǫttr	kʰˈɔttr̥	kʰ ˈɔ t t r̥		cat_NOUN_1			
 Icelandic	Icelandic			cat_NOUN	köttur	kʰˈœʰtʏr̥	kʰ ˈœ ʰt ʏ r̥		cat_NOUN_1			
 Faroese	Faroese			cat_NOUN	køttur	kʰˈœʰtʊɹ	kʰ ˈœ ʰt ʊ ɹ		cat_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			cat_NOUN	katt	kʰˈɑtt	kʰ ˈɑ t t		cat_NOUN_1			
@@ -5576,7 +5590,7 @@ Bavarian	Bavarian			knee_NOUN	Gnia	ɡ̊nˈiɐ̯	ɡ̊ n ˈiɐ̯		knee_NOUN_1
 Alsatian	Alsatian			knee_NOUN	Knej	ɡ̊nˈei̯	ɡ̊ n ˈei̯		knee_NOUN_1			
 Swiss German	Swiss German			knee_NOUN	Chnü	ɣ̊nˈyː	ɣ̊ n ˈyː		knee_NOUN_1			
 Proto-Germanic	Proto-Germanic			knot_NOUN	knuttô	knˈuttɔːː	k n ˈu t t ɔːː		knot_NOUN_1			
-Old West Norse	Old West Norse			knot_NOUN	knútr	kʰnˈuːtr	kʰ n ˈuː t r		knot_NOUN_1			
+Old West Norse	Old West Norse			knot_NOUN	knútr	kʰnˈuːtr̥	kʰ n ˈuː t r̥		knot_NOUN_1			
 Icelandic	Icelandic			knot_NOUN	hnútur	n̥ˈuːtʏr̥	n̥ ˈuː t ʏ r̥		knot_NOUN_1			
 Faroese	Faroese			knot_NOUN	knútur	kʰnˈʉːu̯ʰtʊɹ	kʰ n ˈʉːu̯ ʰt ʊ ɹ		knot_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			knot_NOUN	knut	kʰnˈʉːt	kʰ n ˈʉː t		knot_NOUN_1			
@@ -5601,7 +5615,7 @@ Hessian	Hessian			knot_NOUN	Knoodě	knˈoːd̥ə	k n ˈoː d̥ ə		knot_NOUN_1
 Standard German	Standard German			knot_NOUN	Knoten	kʰnˈoːtn̩	kʰ n ˈoː t n̩		knot_NOUN_1			
 Swiss German	Swiss German			knot_NOUN	Chnode	ɣ̊nˈoːd̥ə	ɣ̊ n ˈoː d̥ ə		knot_NOUN_1			
 Proto-Germanic	Proto-Germanic			chicken_NOUN	kukkilīngaz	kˈukkiliːŋɡaz	k ˈu k k i l iː ŋ ɡ a z		chicken_NOUN_2			
-Old West Norse	Old West Norse			chicken_NOUN	kyklingr	cʰˈykliŋɡr	cʰ ˈy k l i ŋ ɡ r		chicken_NOUN_2			
+Old West Norse	Old West Norse			chicken_NOUN	kyklingr	cʰˈykliŋɡr̥	cʰ ˈy k l i ŋ ɡ r̥		chicken_NOUN_2			
 Icelandic	Icelandic			chicken_NOUN	kjúklingur	cʰˈuʰkliŋɡ̊ʏr̥	cʰ ˈu ʰk l i ŋ ɡ̊ ʏ r̥		chicken_NOUN_2			
 Faroese	Faroese			chicken_NOUN	kjúklingur	ʧʰˈʏʰklɪŋɡ̊ʊɹ	ʧʰ ˈʏ ʰk l ɪ ŋ ɡ̊ ʊ ɹ		chicken_NOUN_2			
 Nynorsk Norwegian	Nynorsk Norwegian			chicken_NOUN	kjukling	çˈʉklɪŋ	ç ˈʉ k l ɪ ŋ		chicken_NOUN_2			
@@ -5610,7 +5624,7 @@ Danish	Danish			chicken_NOUN	kylling	kʰˈyleŋ	kʰ ˈy l e ŋ		chicken_NOUN_2
 Swedish	Swedish			chicken_NOUN	kyckling	ɕˈʏkklɪŋ	ɕ ˈʏ k k l ɪ ŋ		chicken_NOUN_2			
 Elfdalian	Elfdalian			chicken_NOUN	tjykklingg	ʨˈʏkklɪŋɡ	ʨ ˈʏ k k l ɪ ŋ ɡ		chicken_NOUN_2			
 Proto-Germanic	Proto-Germanic			king_NOUN	kuningaz	kˈuniŋɡɑz	k ˈu n i ŋ ɡ ɑ z		king_NOUN_1			
-Old West Norse	Old West Norse			king_NOUN	konungr	kʰˈonuŋɡr	kʰ ˈo n u ŋ ɡ r		king_NOUN_1			
+Old West Norse	Old West Norse			king_NOUN	konungr	kʰˈonuŋɡr̥	kʰ ˈo n u ŋ ɡ r̥		king_NOUN_1			
 Icelandic	Icelandic			king_NOUN	kóngur	kʰˈou̯ŋɡ̊ʏr̥	kʰ ˈou̯ ŋ ɡ̊ ʏ r̥		king_NOUN_1			
 Faroese	Faroese			king_NOUN	kongur	kʰˈɔŋɡ̊ʊɹ	kʰ ˈɔ ŋ ɡ̊ ʊ ɹ		king_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			king_NOUN	kong	kʰˈʊŋ	kʰ ˈʊ ŋ		king_NOUN_1			
@@ -5743,7 +5757,7 @@ Bavarian	Bavarian			corn_NOUN	Koan	kʰˈoɐn	kʰ ˈo ɐ n		corn_NOUN_1
 Alsatian	Alsatian			corn_NOUN	Korn	kʰˈoʁn	kʰ ˈo ʁ n		corn_NOUN_1			
 Swiss German	Swiss German			corn_NOUN	Chorn	ɣ̊ˈorn	ɣ̊ ˈo r n		corn_NOUN_1			
 Proto-Germanic	Proto-Germanic			cow_NOUN	kūz	kˈuːz	k ˈuː z		cow_NOUN_1			
-Old West Norse	Old West Norse			cow_NOUN	kýr	cʰˈyːr	cʰ ˈyː r		cow_NOUN_1			
+Old West Norse	Old West Norse			cow_NOUN	kýr	cʰˈyːr̥	cʰ ˈyː r̥		cow_NOUN_1			
 Icelandic	Icelandic			cow_NOUN	kýr	cʰˈiːr̥	cʰ ˈiː r̥		cow_NOUN_1			
 Faroese	Faroese			cow_NOUN	kúgv	kʰˈɪɡ̊v̥	kʰ ˈɪ ɡ̊ v̥		cow_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			cow_NOUN	ku	kʰˈʉː	kʰ ˈʉː		cow_NOUN_1			
@@ -5881,7 +5895,7 @@ Icelandic	Icelandic			land_NOUN	land	lˈand̥	l ˈa n d̥		land_NOUN_1
 Faroese	Faroese			land_NOUN	land	lˈand̥	l ˈa n d̥		land_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			land_NOUN	land	lˈɑnn	l ˈɑ n n		land_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			land_NOUN	land	lˈɑnn	l ˈɑ n n		land_NOUN_1			
-Danish	Danish			land_NOUN	land	lˈanˀ	l ˈa nˀ		land_NOUN_1			
+Danish	Danish			land_NOUN	land	lˈænˀ	l ˈæ nˀ		land_NOUN_1			
 Swedish	Swedish			land_NOUN	land	lˈand	l ˈa n d		land_NOUN_1			
 Elfdalian	Elfdalian			land_NOUN	land	ɽˈɑnd	ɽ ˈɑ n d		land_NOUN_1			
 Scots	Scots			land_NOUN	laund	lˈɑːnd	l ˈɑː n d		land_NOUN_1			
@@ -5917,7 +5931,7 @@ Alsatian	Alsatian			land_NOUN	Lànd	lˈɒnd̥	l ˈɒ n d̥		land_NOUN_1
 Swiss German	Swiss German			land_NOUN	Land	lˈɒnd̥	l ˈɒ n d̥		land_NOUN_1			
 Proto-Germanic	Proto-Germanic			long_ADJ	langaz	lˈɑŋɡɑz	l ˈɑ ŋ ɡ ɑ z		long_ADJ_1			
 Gothic	Gothic			long_ADJ	𐌻𐌰𐌲𐌲𐍃	lˈaŋɡs	l ˈa ŋ ɡ s		long_ADJ_1			
-Old West Norse	Old West Norse			long_ADJ	langr	lˈɑŋɡr	l ˈɑ ŋ ɡ r		long_ADJ_1			
+Old West Norse	Old West Norse			long_ADJ	langr	lˈɑŋɡr̥	l ˈɑ ŋ ɡ r̥		long_ADJ_1			
 Icelandic	Icelandic			long_ADJ	langur	lˈɑu̯ŋɡ̊ʏr̥	l ˈɑu̯ ŋ ɡ̊ ʏ r̥		long_ADJ_1			
 Faroese	Faroese			long_ADJ	langur	lˈɛŋɡ̊ʊɹ	l ˈɛ ŋ ɡ̊ ʊ ɹ		long_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			long_ADJ	lang	lˈɑŋŋ	l ˈɑ ŋ ŋ		long_ADJ_1			
@@ -5964,7 +5978,7 @@ Icelandic	Icelandic			leaf_NOUN	lauf	lˈœːy̯f	l ˈœːy̯ f		leaf_NOUN_1
 Faroese	Faroese			leaf_NOUN	leyv	lˈɛːi̯v	l ˈɛːi̯ v		leaf_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			leaf_NOUN	lauv	lˈæʉ̯ʋ	l ˈæʉ̯ ʋ		leaf_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			leaf_NOUN	løv	lˈøːʋ	l ˈøː ʋ		leaf_NOUN_1			
-Danish	Danish			leaf_NOUN	løv	lˈœˀw	l ˈœˀ w		leaf_NOUN_1			
+Danish	Danish			leaf_NOUN	løv	lˈøˀw	l ˈøˀ w		leaf_NOUN_1			
 Swedish	Swedish			leaf_NOUN	löv	lˈøːv	l ˈøː v		leaf_NOUN_1			
 Scots	Scots			leaf_NOUN	leaf	lˈif	l ˈi f		leaf_NOUN_1			
 English	English			leaf_NOUN	leaf	lˈiːf	l ˈiː f		leaf_NOUN_1			
@@ -5990,7 +6004,7 @@ Bavarian	Bavarian			leaf_NOUN	Laab	lˈaːb̥	l ˈaː b̥		leaf_NOUN_1
 Swiss German	Swiss German			leaf_NOUN	Laub	lˈau̯b̥	l ˈau̯ b̥		leaf_NOUN_1			
 Proto-Germanic	Proto-Germanic			beloved_ADJ	leubaz	lˈeu̯βɑz	l ˈeu̯ β ɑ z		beloved_ADJ_1			
 Gothic	Gothic			beloved_ADJ	𐌻𐌹𐌿𐍆𐍃	lˈiu̯fs	l ˈiu̯ f s		beloved_ADJ_1			
-Old West Norse	Old West Norse			beloved_ADJ	ljúfr	ljˈuːfr	l j ˈuː f r		beloved_ADJ_1			
+Old West Norse	Old West Norse			beloved_ADJ	ljúfr	ljˈuːfr̥	l j ˈuː f r̥		beloved_ADJ_1			
 Icelandic	Icelandic			beloved_ADJ	ljúfur	ljˈuːvʏr̥	l j ˈuː v ʏ r̥		beloved_ADJ_1			
 Faroese	Faroese			beloved_ADJ	ljúvur	ljˈʉːu̯vʊɹ	l j ˈʉːu̯ v ʊ ɹ		beloved_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			beloved_ADJ	ljuv	jˈʉːʋ	j ˈʉː ʋ		beloved_ADJ_1			
@@ -6100,7 +6114,7 @@ Swabian	Swabian			light_NOUN	Lichd	lˈiçd	l ˈi ç d		light_NOUN_2
 Alsatian	Alsatian			light_NOUN	Liecht	lˈiːʃt	l ˈiː ʃ t		light_NOUN_2			
 Swiss German	Swiss German			light_NOUN	Liecht	lˈiə̯χːtː	l ˈiə̯ χː tː		light_NOUN_2			
 Proto-Germanic	Proto-Germanic			liver_NOUN	librō	lˈiβrɔː	l ˈi β r ɔː		liver_NOUN_1			
-Old West Norse	Old West Norse			liver_NOUN	livr	lˈivr	l ˈi v r		liver_NOUN_1			
+Old West Norse	Old West Norse			liver_NOUN	livr	lˈivr̥	l ˈi v r̥		liver_NOUN_1			
 Icelandic	Icelandic			liver_NOUN	lifur	lˈɪːvʏr̥	l ˈɪː v ʏ r̥		liver_NOUN_1			
 Faroese	Faroese			liver_NOUN	livur	lˈiːvʊɹ	l ˈiː v ʊ ɹ		liver_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			liver_NOUN	lever	lˈeːʋeɾ	l ˈeː ʋ e ɾ		liver_NOUN_1			
@@ -6176,7 +6190,7 @@ Swabian	Swabian			lie_VERB	liega	lˈiːɡa	l ˈiː ɡ a		lie_VERB_1
 Alsatian	Alsatian			lie_VERB	lieje	lˈiːjə	l ˈiː j ə		lie_VERB_1			
 Swiss German	Swiss German			lie_VERB	ligge	lˈikːə	l ˈi kː ə		lie_VERB_1			
 Proto-Germanic	Proto-Germanic			light_ADJ	linhtaz	lˈĩːxtɑz	l ˈĩː x t ɑ z		light_ADJ_1			
-Old West Norse	Old West Norse			light_ADJ	léttr	lˈeːttr	l ˈeː t t r		light_ADJ_1			
+Old West Norse	Old West Norse			light_ADJ	léttr	lˈeːttr̥	l ˈeː t t r̥		light_ADJ_1			
 Icelandic	Icelandic			light_ADJ	léttur	ljˈɛʰtʏr̥	l j ˈɛ ʰt ʏ r̥		light_ADJ_1			
 Faroese	Faroese			light_ADJ	lættur	lˈaʰtʊɹ	l ˈa ʰt ʊ ɹ		light_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			light_ADJ	lett	lˈɛʰtt	l ˈɛ ʰt t		light_ADJ_1			
@@ -6254,7 +6268,7 @@ Swabian	Swabian			louse_NOUN	Laus	lˈao̯s	l ˈao̯ s		louse_NOUN_1
 Alsatian	Alsatian			louse_NOUN	Lüüs	lˈyːz̥	l ˈyː z̥		louse_NOUN_1			
 Swiss German	Swiss German			louse_NOUN	Luus	lˈuːz̥	l ˈuː z̥		louse_NOUN_1			
 Proto-Germanic	Proto-Germanic			might_NOUN	mahtiz	mˈɑxtiz	m ˈɑ x t i z		might_NOUN_1			
-Old West Norse	Old West Norse			might_NOUN	máttr	mˈɑːttr	m ˈɑː t t r		might_NOUN_1			
+Old West Norse	Old West Norse			might_NOUN	máttr	mˈɑːttr̥	m ˈɑː t t r̥		might_NOUN_1			
 Icelandic	Icelandic			might_NOUN	máttur	mˈɑu̯ʰtʏr̥	m ˈɑu̯ ʰt ʏ r̥		might_NOUN_1			
 Faroese	Faroese			might_NOUN	máttur	mˈɔʰtʊɹ	m ˈɔ ʰt ʊ ɹ		might_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			might_NOUN	mått	mˈɔʰtt	m ˈɔ ʰt t		might_NOUN_1			
@@ -6292,12 +6306,12 @@ Bavarian	Bavarian			might_NOUN	Mocht	mˈoxd̥	m ˈo x d̥		might_NOUN_1
 Swiss German	Swiss German			might_NOUN	Macht	mˈɒχːtː	m ˈɒ χː tː		might_NOUN_1			
 Proto-Germanic	Proto-Germanic			man_NOUN	mann-	mˈɑnn	m ˈɑ n n		man_NOUN_1			
 Gothic	Gothic			man_NOUN	𐌼𐌰𐌽𐌽𐌰	mˈanna	m ˈa n n a		man_NOUN_1			
-Old West Norse	Old West Norse			man_NOUN	maðr	mˈaðr	m ˈa ð r		man_NOUN_1			
+Old West Norse	Old West Norse			man_NOUN	maðr	mˈaðr̥	m ˈa ð r̥		man_NOUN_1			
 Icelandic	Icelandic			man_NOUN	maður	mˈaːðʏr̥	m ˈaː ð ʏ r̥		man_NOUN_1			
 Faroese	Faroese			man_NOUN	maður	mˈɛːa̯vʊɹ	m ˈɛːa̯ v ʊ ɹ		man_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			man_NOUN	mann	mˈɑnn	m ˈɑ n n		man_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			man_NOUN	mann	mˈɑnn	m ˈɑ n n		man_NOUN_1			
-Danish	Danish			man_NOUN	mand	mˈɛnˀ	m ˈɛ nˀ		man_NOUN_1			
+Danish	Danish			man_NOUN	mand	mˈænˀ	m ˈæ nˀ		man_NOUN_1			
 Swedish	Swedish			man_NOUN	man	mˈan	m ˈa n		man_NOUN_1			
 Scots	Scots			man_NOUN	man	mˈan	m ˈa n		man_NOUN_1			
 English	English			man_NOUN	man	mˈæn	m ˈæ n		man_NOUN_1			
@@ -6336,7 +6350,7 @@ Icelandic	Icelandic			person_NOUN	manneskja	mˈannɛsca	m ˈa n n ɛ s c a		pers
 Faroese	Faroese			person_NOUN	menniskja	mˈɛnnɪʃa	m ˈɛ n n ɪ ʃ a		person_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			person_NOUN	menneske	mˈɛnnɛʂe	m ˈɛ n n ɛ ʂ e		person_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			person_NOUN	menneske	mˈɛnnəskə	m ˈɛ n n ə s k ə		person_NOUN_1			
-Danish	Danish			person_NOUN	menneske	mˈen̩sɡ̊ə	m ˈe n̩ s ɡ̊ ə		person_NOUN_1			
+Danish	Danish			person_NOUN	menneske	mˈenəsɡ̊ə	m ˈe n ə s ɡ̊ ə		person_NOUN_1			
 Swedish	Swedish			person_NOUN	människa	mˈɛnnɪɧa	m ˈɛ n n ɪ ɧ a		person_NOUN_1			
 Elfdalian	Elfdalian			person_NOUN	mennistj	mˈɛnnɪsʨ	m ˈɛ n n ɪ s ʨ		person_NOUN_1			
 West Frisian	West Frisian			person_NOUN	minske	mˈɪnskə	m ˈɪ n s k ə		person_NOUN_1			
@@ -6392,7 +6406,7 @@ Alsatian	Alsatian			men_NOUN_PL	Männer	mˈɛnəʁ	m ˈɛ n ə ʁ		men_NOUN_PL_1
 Swiss German	Swiss German			men_NOUN_PL	Männer	mˈænər	m ˈæ n ə r		men_NOUN_PL_1			
 Proto-Germanic	Proto-Germanic			sea_NOUN	mari	mˈɑri	m ˈɑ r i		sea_NOUN_1			
 Gothic	Gothic			sea_NOUN	𐌼𐌰𐍂𐌴𐌹	mˈariː	m ˈa r iː		sea_NOUN_1			
-Old West Norse	Old West Norse			sea_NOUN	marr	mˈɑrr	m ˈɑ r r		sea_NOUN_1			
+Old West Norse	Old West Norse			sea_NOUN	marr	mˈɑrr̥	m ˈɑ r r̥		sea_NOUN_1			
 Icelandic	Icelandic			sea_NOUN	mar	mˈaːr	m ˈaː r		sea_NOUN_1			
 Faroese	Faroese			sea_NOUN	marur	mˈɛːa̯ɹʊɹ	m ˈɛːa̯ ɹ ʊ ɹ		sea_NOUN_1			
 Scots	Scots			sea_NOUN	mere	mˈiːr	m ˈiː r		sea_NOUN_1			
@@ -6420,7 +6434,7 @@ Bokmål Norwegian	Bokmål Norwegian			me_PRON_ACC	meg	mˈæɪ̯	m ˈæɪ̯		me_P
 Danish	Danish			me_PRON_ACC	meg	mˈɑj	m ˈɑ j		me_PRON_ACC_1			
 Swedish	Swedish			me_PRON_ACC	mig	mˈɛj	m ˈɛ j		me_PRON_ACC_1			
 Elfdalian	Elfdalian			me_PRON_ACC	mig	mˈɪːɣ	m ˈɪː ɣ		me_PRON_ACC_1			
-Old English	Old English			me_PRON_ACC		mec mˈek	m e c m ˈe k		me_PRON_ACC_1			
+Old English	Old English			me_PRON_ACC	mec	mˈek	m ˈe k		me_PRON_ACC_1			
 Limburgish	Limburgish			me_PRON_ACC	miech	mˈix	m ˈi x		me_PRON_ACC_1			
 Ripuarian	Ripuarian			me_PRON_ACC	mich	mˈɪɕ	m ˈɪ ɕ		me_PRON_ACC_1			
 Luxembourgish	Luxembourgish			me_PRON_ACC	mech	mˈəɕ	m ˈə ɕ		me_PRON_ACC_1			
@@ -6513,7 +6527,7 @@ Alsatian	Alsatian			moon_NOUN	Mond	mˈoːnd̥	m ˈoː n d̥		moon_NOUN_1
 Swiss German	Swiss German			moon_NOUN	Mond	mˈond̥	m ˈo n d̥		moon_NOUN_1			
 Proto-Germanic	Proto-Germanic			month_NOUN	mēnōþs	mˈɛːnɔːθs	m ˈɛː n ɔː θ s		month_NOUN_1			
 Gothic	Gothic			month_NOUN	𐌼𐌴𐌽𐍉𐌸𐍃	mˈeːnoːθs	m ˈeː n oː θ s		month_NOUN_1			
-Old West Norse	Old West Norse			month_NOUN	mánaðr	mˈɑːnɑðr	m ˈɑː n ɑ ð r		month_NOUN_1			
+Old West Norse	Old West Norse			month_NOUN	mánaðr	mˈɑːnɑðr̥	m ˈɑː n ɑ ð r̥		month_NOUN_1			
 Icelandic	Icelandic			month_NOUN	mánuður	mˈaːu̯nʏðʏr̥	m ˈaːu̯ n ʏ ð ʏ r̥		month_NOUN_1			
 Faroese	Faroese			month_NOUN	mánaður	mˈɔ̯aːnavʊɹ	m ˈɔ̯aː n a v ʊ ɹ		month_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			month_NOUN	månad	mˈoːnɑ	m ˈoː n ɑ		month_NOUN_1			
@@ -6553,7 +6567,7 @@ Alsatian	Alsatian			month_NOUN	Monet	mˈoːnət	m ˈoː n ə t		month_NOUN_1
 Swiss German	Swiss German			month_NOUN	Monet	mˈoːnətː	m ˈoː n ə tː		month_NOUN_1			
 Proto-Germanic	Proto-Germanic			me_PRON_DAT	miz	mˈiz	m ˈi z		me_PRON_DAT_1			
 Gothic	Gothic			me_PRON_DAT	𐌼𐌹𐍃	mˈis	m ˈi s		me_PRON_DAT_1			
-Old West Norse	Old West Norse			me_PRON_DAT	mér	mˈeːr	m ˈeː r		me_PRON_DAT_1			
+Old West Norse	Old West Norse			me_PRON_DAT	mér	mˈeːr̥	m ˈeː r̥		me_PRON_DAT_1			
 Icelandic	Icelandic			me_PRON_DAT	mér	mjˈɛːr̥	m j ˈɛː r̥		me_PRON_DAT_1			
 Faroese	Faroese			me_PRON_DAT	mær	mˈɛːa̯ɹ	m ˈɛːa̯ ɹ		me_PRON_DAT_1			
 Scots	Scots			me_PRON_DAT	me	mˈiː	m ˈiː		me_PRON_DAT_1			
@@ -6678,12 +6692,12 @@ Swiss German	Swiss German			mouth_NOUN	Muul	mˈuːl	m ˈuː l		mouth_NOUN_1
 Swiss German	Swiss German			mouth_NOUN	Muu	mˈuː	m ˈuː		mouth_NOUN_1			
 Proto-Germanic	Proto-Germanic			mouth_NOUN	munþaz	mˈunθɑz	m ˈu n θ ɑ z		mouth_NOUN_2			
 Gothic	Gothic			mouth_NOUN	𐌼𐌿𐌽𐌸𐍃	mˈunθs	m ˈu n θ s		mouth_NOUN_2			
-Old West Norse	Old West Norse			mouth_NOUN	munnr	mˈunnr	m ˈu n n r		mouth_NOUN_2			
+Old West Norse	Old West Norse			mouth_NOUN	munnr	mˈunnr̥	m ˈu n n r̥		mouth_NOUN_2			
 Icelandic	Icelandic			mouth_NOUN	munnur	mˈʏnnʏr̥	m ˈʏ n n ʏ r̥		mouth_NOUN_2			
 Faroese	Faroese			mouth_NOUN	munn	mˈʊnn	m ˈʊ n n		mouth_NOUN_2			
 Nynorsk Norwegian	Nynorsk Norwegian			mouth_NOUN	munn	mˈʉnn	m ˈʉ n n		mouth_NOUN_2			
 Bokmål Norwegian	Bokmål Norwegian			mouth_NOUN	munn	mˈʉnn	m ˈʉ n n		mouth_NOUN_2			
-Danish	Danish			mouth_NOUN	mund	mˈɔnˀ	m ˈɔ nˀ		mouth_NOUN_2			
+Danish	Danish			mouth_NOUN	mund	mˈunˀ	m ˈu nˀ		mouth_NOUN_2			
 Swedish	Swedish			mouth_NOUN	mun	mˈɵnn	m ˈɵ n n		mouth_NOUN_2			
 Elfdalian	Elfdalian			mouth_NOUN	munn	mˈʉnn	m ˈʉ n n		mouth_NOUN_2			
 Scots	Scots			mouth_NOUN	mooth	mˈuθ	m ˈu θ		mouth_NOUN_2			
@@ -6835,7 +6849,7 @@ Icelandic	Icelandic			night_NOUN_FEM	nótt	nˈɔu̯ʰt	n ˈɔu̯ ʰt		night_NOUN
 Faroese	Faroese			night_NOUN_FEM	nátt	nˈɔʰt	n ˈɔ ʰt		night_NOUN_FEM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			night_NOUN_FEM	natt	nˈɑʰtt	n ˈɑ ʰt t		night_NOUN_FEM_1			
 Bokmål Norwegian	Bokmål Norwegian			night_NOUN_FEM	natt	nˈɑtt	n ˈɑ t t		night_NOUN_FEM_1			
-Danish	Danish			night_NOUN_FEM	nat	nˈɛd̥	n ˈɛ d̥		night_NOUN_FEM_1			
+Danish	Danish			night_NOUN_FEM	nat	nˈæd̥	n ˈæ d̥		night_NOUN_FEM_1			
 Swedish	Swedish			night_NOUN_FEM	natt	nˈatt	n ˈa t t		night_NOUN_FEM_1			
 Elfdalian	Elfdalian			night_NOUN_FEM	nǫt	nˈɔ̃ːt	n ˈɔ̃ː t		night_NOUN_FEM_1			
 Scots	Scots			night_NOUN_FEM	nicht	nˈɪçt	n ˈɪ ç t		night_NOUN_FEM_1			
@@ -6912,7 +6926,7 @@ Icelandic	Icelandic			name_NOUN	nafn	nˈapn̥	n ˈa p n̥		name_NOUN_1
 Faroese	Faroese			name_NOUN	navn	nˈawn	n ˈa w n		name_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			name_NOUN	namn	nˈɑmn	n ˈɑ m n		name_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			name_NOUN	navn	nˈɑʋn	n ˈɑ ʋ n		name_NOUN_1			
-Danish	Danish			name_NOUN	navn	nˈawˀn	n ˈa wˀ n		name_NOUN_1			
+Danish	Danish			name_NOUN	navn	nˈæwˀn	n ˈæ wˀ n		name_NOUN_1			
 Swedish	Swedish			name_NOUN	namn	nˈamn	n ˈa m n		name_NOUN_1			
 Elfdalian	Elfdalian			name_NOUN	nammen	nˈɑmmɛn	n ˈɑ m m ɛ n		name_NOUN_1			
 Scots	Scots			name_NOUN	name	nˈem	n ˈe m		name_NOUN_1			
@@ -6950,7 +6964,7 @@ Proto-Germanic	Proto-Germanic			nose_NOUN	nasō	nˈɑsɔː	n ˈɑ s ɔː		nose_N
 Faroese	Faroese			nose_NOUN	nøs	nˈøːs	n ˈøː s		nose_NOUN_2			
 Nynorsk Norwegian	Nynorsk Norwegian			nose_NOUN	nase	nˈɑːse	n ˈɑː s e		nose_NOUN_2			
 Bokmål Norwegian	Bokmål Norwegian			nose_NOUN	nese	nˈeːsə	n ˈeː s ə		nose_NOUN_2			
-Danish	Danish			nose_NOUN	næse	nˈɛːsə	n ˈɛː s ə		nose_NOUN_2			
+Danish	Danish			nose_NOUN	næse	nˈeːsə	n ˈeː s ə		nose_NOUN_2			
 Swedish	Swedish			nose_NOUN	näsa	nˈɛːsa	n ˈɛː s a		nose_NOUN_2			
 Scots	Scots			nose_NOUN	nose	nˈoːz	n ˈoː z		nose_NOUN_2			
 English	English			nose_NOUN	nose	nˈəʊ̯z	n ˈəʊ̯ z		nose_NOUN_2			
@@ -6983,12 +6997,12 @@ Swabian	Swabian			nose_NOUN	Nos	nˈɔːs	n ˈɔː s		nose_NOUN_2
 Alsatian	Alsatian			nose_NOUN	Nàs	nˈɒːz̥	n ˈɒː z̥		nose_NOUN_2			
 Swiss German	Swiss German			nose_NOUN	Nase	nˈɒz̥ə	n ˈɒ z̥ ə		nose_NOUN_2			
 Proto-Germanic	Proto-Germanic			next_ADJ	nēhwist	nˈɛːxʷist	n ˈɛː xʷ i s t		next_ADJ_1			
-Old West Norse	Old West Norse			next_ADJ	næstr	nˈɛːstr	n ˈɛː s t r		next_ADJ_1			
+Old West Norse	Old West Norse			next_ADJ	næstr	nˈɛːstr̥	n ˈɛː s t r̥		next_ADJ_1			
 Icelandic	Icelandic			next_ADJ	næstur	nˈai̯stʏr̥	n ˈai̯ s t ʏ r̥		next_ADJ_1			
 Faroese	Faroese			next_ADJ	næstur	nˈastʊɹ	n ˈa s t ʊ ɹ		next_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			next_ADJ	neste	nˈɛste	n ˈɛ s t e		next_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			next_ADJ	neste	nˈɛstə	n ˈɛ s t ə		next_ADJ_1			
-Danish	Danish			next_ADJ	næste	nˈɛsd̥ə	n ˈɛ s d̥ ə		next_ADJ_1			
+Danish	Danish			next_ADJ	næste	nˈesd̥ə	n ˈe s d̥ ə		next_ADJ_1			
 Swedish	Swedish			next_ADJ	nästa	nˈɛsta	n ˈɛ s t a		next_ADJ_1			
 Elfdalian	Elfdalian			next_ADJ	nesta	nˈɛstɑ	n ˈɛ s t ɑ		next_ADJ_1			
 Scots	Scots			next_ADJ	neist	nˈist	n ˈi s t		next_ADJ_1			
@@ -7068,7 +7082,7 @@ Elfdalian	Elfdalian			needle_NOUN	nǫl	nˈɔ̃ːɽ	n ˈɔ̃ː ɽ		needle_NOUN_1
 Scots	Scots			needle_NOUN	nidl	nˈidl̩	n ˈi d l̩		needle_NOUN_1			
 English	English			needle_NOUN	needle	nˈiːdɫ̩	n ˈiː d ɫ̩		needle_NOUN_1			
 American English	American English			needle_NOUN	needle	nˈidɫ̩	n ˈi d ɫ̩		needle_NOUN_1			
-Old English	Old English			needle_NOUN	nǣdl	nˈæːdl	n ˈæː d l		needle_NOUN_1			
+Old English	Old English			needle_NOUN	nǣdl	nˈæːdɫ	n ˈæː d ɫ		needle_NOUN_1			
 West Frisian	West Frisian			needle_NOUN	nulle	nˈølə	n ˈø l ə		needle_NOUN_1			
 Saterland Frisian	Saterland Frisian			needle_NOUN	Näddel	nˈɛdəl	n ˈɛ d ə l		needle_NOUN_1			
 Insular North Frisian	Insular North Frisian			needle_NOUN	Neerel	nˈeːɾəl	n ˈeː ɾ ə l		needle_NOUN_1			
@@ -7095,7 +7109,7 @@ Alsatian	Alsatian			needle_NOUN	Nodel	nˈoːd̥l̩	n ˈoː d̥ l̩		needle_NOUN_
 Swiss German	Swiss German			needle_NOUN	Naadle	nˈɒːd̥lə	n ˈɒː d̥ l ə		needle_NOUN_1			
 Proto-Germanic	Proto-Germanic			new_ADJ	niwjaz	nˈiu̯jɑz	n ˈiu̯ j ɑ z		new_ADJ_1			
 Gothic	Gothic			new_ADJ	𐌽𐌹𐌿𐌾𐌹𐍃	nˈiu̯jis	n ˈiu̯ j i s		new_ADJ_1			
-Old West Norse	Old West Norse			new_ADJ	nýr	nˈyːr	n ˈyː r		new_ADJ_1			
+Old West Norse	Old West Norse			new_ADJ	nýr	nˈyːr̥	n ˈyː r̥		new_ADJ_1			
 Icelandic	Icelandic			new_ADJ	nýr	nˈiːr̥	n ˈiː r̥		new_ADJ_1			
 Faroese	Faroese			new_ADJ	nýggjur	nˈʊʤ̊ʤ̊ʊɹ	n ˈʊ ʤ̊ ʤ̊ ʊ ɹ		new_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			new_ADJ	ny	nˈyː	n ˈyː		new_ADJ_1			
@@ -7191,12 +7205,12 @@ Upper Franconian	Upper Franconian			path_NOUN	Pfåd	b̥͡v̥ˈoːd̥	b̥͡v̥ ˈ
 Bavarian	Bavarian			path_NOUN	Pfad	b̥͡v̥ˈaːd̥	b̥͡v̥ ˈaː d̥		path_NOUN_1			
 Swiss German	Swiss German			path_NOUN	Pfaad	p͡fˈɒːd̥	p͡f ˈɒː d̥		path_NOUN_1			
 Proto-Germanic	Proto-Germanic			plough_NOUN	plōgaz	plˈɔːɣɑz	p l ˈɔː ɣ ɑ z		plough_NOUN_1			
-Old West Norse	Old West Norse			plough_NOUN	plógr	pʰlˈoːɡr	pʰ l ˈoː ɡ r		plough_NOUN_1			
+Old West Norse	Old West Norse			plough_NOUN	plógr	pʰlˈoːɡr̥	pʰ l ˈoː ɡ r̥		plough_NOUN_1			
 Icelandic	Icelandic			plough_NOUN	plógur	pʰlˈoːu̯ʏr̥	pʰ l ˈoːu̯ ʏ r̥		plough_NOUN_1			
 Faroese	Faroese			plough_NOUN	plógv	pʰlˈɛɡ̊v̥	pʰ l ˈɛ ɡ̊ v̥		plough_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			plough_NOUN	plog	pʰlˈuːɡ	pʰ l ˈuː ɡ		plough_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			plough_NOUN	plog	pʰlˈuːɡ	pʰ l ˈuː ɡ		plough_NOUN_1			
-Danish	Danish			plough_NOUN	plov	pʰlˈɒˀw	pʰ l ˈɒˀ w		plough_NOUN_1			
+Danish	Danish			plough_NOUN	plov	pʰlˈoˀw	pʰ l ˈoˀ w		plough_NOUN_1			
 Swedish	Swedish			plough_NOUN	plog	pʰlˈuːɡ	pʰ l ˈuː ɡ		plough_NOUN_1			
 Elfdalian	Elfdalian			plough_NOUN	pluog	pʰɽˈʉːə̯ɣ	pʰ ɽ ˈʉːə̯ ɣ		plough_NOUN_1			
 Scots	Scots			plough_NOUN	pleuch	pʰlˈux	pʰ l ˈu x		plough_NOUN_1			
@@ -7214,7 +7228,7 @@ Dutch	Dutch			plough_NOUN	ploeg	pɫˈuχ	p ɫ ˈu χ		plough_NOUN_1
 Afrikaans	Afrikaans			plough_NOUN	ploeg	pɫˈuχ	p ɫ ˈu χ		plough_NOUN_1			
 Zeelandic	Zeelandic			plough_NOUN	ploeg	pɫˈux	p ɫ ˈu x		plough_NOUN_1			
 West Flemish	West Flemish			plough_NOUN	ploeg	plˈuə̯ɦ̥	p l ˈuə̯ ɦ̥		plough_NOUN_1			
-Limburgish	Limburgish			plough_NOUN	ploog	plˈoːx	p l ˈoː x		plough_NOUN_1			
+Limburgish	Limburgish			plough_NOUN	ploog	plˈoːɣ̊	p l ˈoː ɣ̊		plough_NOUN_1			
 Ripuarian	Ripuarian			plough_NOUN	Plog	plˈoːɣ̊	p l ˈoː ɣ̊		plough_NOUN_1			
 Luxembourgish	Luxembourgish			plough_NOUN	Plou	pʰlˈəʊ̯	pʰ l ˈəʊ̯		plough_NOUN_1			
 Pennsylvania German	Pennsylvania German			plough_NOUN	Blug	blˈuːɡ̊	b l ˈuː ɡ̊		plough_NOUN_1			
@@ -7228,7 +7242,7 @@ Swabian	Swabian			plough_NOUN	Pflug	p͡flˈuːɡ	p͡f l ˈuː ɡ		plough_NOUN_1
 Swiss German	Swiss German			plough_NOUN	Pflueg	p͡flˈuə̯ɡ̊	p͡f l ˈuə̯ ɡ̊		plough_NOUN_1			
 Proto-Germanic	Proto-Germanic			red_ADJ	raudaz	rˈɑu̯ðɑz	r ˈɑu̯ ð ɑ z		red_ADJ_1			
 Gothic	Gothic			red_ADJ	𐍂𐌰𐌿𐌸𐍃	rˈɔθs	r ˈɔ θ s		red_ADJ_1			
-Old West Norse	Old West Norse			red_ADJ	rauðr	rˈɑu̯ðr	r ˈɑu̯ ð r		red_ADJ_1			
+Old West Norse	Old West Norse			red_ADJ	rauðr	rˈɑu̯ðr̥	r ˈɑu̯ ð r̥		red_ADJ_1			
 Icelandic	Icelandic			red_ADJ	rauður	rˈœːy̯ðʏr̥	r ˈœːy̯ ð ʏ r̥		red_ADJ_1			
 Faroese	Faroese			red_ADJ	reyður	ɹˈɛːi̯jʊɹ	ɹ ˈɛːi̯ j ʊ ɹ		red_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			red_ADJ	raud	ɾˈæʉ̯	ɾ ˈæʉ̯		red_ADJ_1			
@@ -7268,7 +7282,7 @@ Swabian	Swabian			red_ADJ	rod	ʁˈoːd	ʁ ˈoː d		red_ADJ_1
 Alsatian	Alsatian			red_ADJ	rot	ʁˈoːt	ʁ ˈoː t		red_ADJ_1			
 Swiss German	Swiss German			red_ADJ	root	rˈoːtː	r ˈoː tː		red_ADJ_1			
 Proto-Germanic	Proto-Germanic			smoke_NOUN	raukiz	rˈɑu̯kiz	r ˈɑu̯ k i z		smoke_NOUN_1			
-Old West Norse	Old West Norse			smoke_NOUN	reykr	rˈøy̯kr	r ˈøy̯ k r		smoke_NOUN_1			
+Old West Norse	Old West Norse			smoke_NOUN	reykr	rˈøy̯kr̥	r ˈøy̯ k r̥		smoke_NOUN_1			
 Icelandic	Icelandic			smoke_NOUN	reykur	rˈɛːi̯kʏr̥	r ˈɛːi̯ k ʏ r̥		smoke_NOUN_1			
 Faroese	Faroese			smoke_NOUN	roykur	ɹˈɔːi̯kʊɹ	ɹ ˈɔːi̯ k ʊ ɹ		smoke_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			smoke_NOUN	røyk	ɾˈœʏ̯k	ɾ ˈœʏ̯ k		smoke_NOUN_1			
@@ -7348,12 +7362,12 @@ Alsatian	Alsatian			rain_NOUN	Räje	ʁˈæːjə	ʁ ˈæː j ə		rain_NOUN_1
 Swiss German	Swiss German			rain_NOUN	Rääge	rˈæːɡ̊ə	r ˈæː ɡ̊ ə		rain_NOUN_1			
 Proto-Germanic	Proto-Germanic			right_ADJ	rehtaz	rˈextɑz	r ˈe x t ɑ z		right_ADJ_1			
 Gothic	Gothic			right_ADJ	𐍂𐌰𐌹𐌷𐍄𐍃	rˈɛhts	r ˈɛ h t s		right_ADJ_1			
-Old West Norse	Old West Norse			right_ADJ	réttr	rˈeːttr	r ˈeː t t r		right_ADJ_1			
+Old West Norse	Old West Norse			right_ADJ	réttr	rˈeːttr̥	r ˈeː t t r̥		right_ADJ_1			
 Icelandic	Icelandic			right_ADJ	réttur	rjˈɛʰtʏr̥	r j ˈɛ ʰt ʏ r̥		right_ADJ_1			
 Faroese	Faroese			right_ADJ	rættur	ɹˈɛːa̯ʰtʊɹ	ɹ ˈɛːa̯ ʰt ʊ ɹ		right_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			right_ADJ	rett	ɾˈɛʰtt	ɾ ˈɛ ʰt t		right_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			right_ADJ	rett	ɾˈɛtt	ɾ ˈɛ t t		right_ADJ_1			
-Danish	Danish			right_ADJ	ret	ʁˈad̥	ʁ ˈa d̥		right_ADJ_1			
+Danish	Danish			right_ADJ	ret	ʁˈɑd̥	ʁ ˈɑ d̥		right_ADJ_1			
 Swedish	Swedish			right_ADJ	rätt	rˈɛtt	r ˈɛ t t		right_ADJ_1			
 Elfdalian	Elfdalian			right_ADJ	rett	rˈɛtt	r ˈɛ t t		right_ADJ_1			
 Scots	Scots			right_ADJ	richt	rˈɪçt	r ˈɪ ç t		right_ADJ_1			
@@ -7385,7 +7399,7 @@ Swabian	Swabian			right_ADJ	rechd	ʁˈɛxd	ʁ ˈɛ x d		right_ADJ_1
 Swiss German	Swiss German			right_ADJ	rächt	rˈæχːtː	r ˈæ χː tː		right_ADJ_1			
 Proto-Germanic	Proto-Germanic			rich_ADJ	rīkijaz	rˈiːkijɑz	r ˈiː k i j ɑ z		rich_ADJ_1			
 Gothic	Gothic			rich_ADJ	𐍂𐌴𐌹𐌺𐌴𐌹𐍃	rˈiːkiːs	r ˈiː k iː s		rich_ADJ_1			
-Old West Norse	Old West Norse			rich_ADJ	ríkr	rˈiːkr	r ˈiː k r		rich_ADJ_1			
+Old West Norse	Old West Norse			rich_ADJ	ríkr	rˈiːkr̥	r ˈiː k r̥		rich_ADJ_1			
 Icelandic	Icelandic			rich_ADJ	ríkur	rˈiːkʏr̥	r ˈiː k ʏ r̥		rich_ADJ_1			
 Faroese	Faroese			rich_ADJ	ríkur	ɹˈʊ̯iːkʊɹ	ɹ ˈʊ̯iː k ʊ ɹ		rich_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			rich_ADJ	rik	ɾˈiːk	ɾ ˈiː k		rich_ADJ_1			
@@ -7471,13 +7485,13 @@ Icelandic	Icelandic			soul_NOUN	sál	sˈɑːu̯l	s ˈɑːu̯ l		soul_NOUN_1
 Faroese	Faroese			soul_NOUN	sál	sˈɔ̯aːl	s ˈɔ̯aː l		soul_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			soul_NOUN	sål	sˈoːl	s ˈoː l		soul_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			soul_NOUN	sjel	ʂˈɛl	ʂ ˈɛ l		soul_NOUN_1			
-Danish	Danish			soul_NOUN	sjæl	ɕˈɛˀl	ɕ ˈɛˀ l		soul_NOUN_1			
+Danish	Danish			soul_NOUN	sjæl	ɕˈeˀl	ɕ ˈeˀ l		soul_NOUN_1			
 Swedish	Swedish			soul_NOUN	själ	ɧˈɛːl	ɧ ˈɛː l		soul_NOUN_1			
 Elfdalian	Elfdalian			soul_NOUN	själ	sjˈæːɽ	s j ˈæː ɽ		soul_NOUN_1			
 Scots	Scots			soul_NOUN	saul	sˈɑːl	s ˈɑː l		soul_NOUN_1			
 English	English			soul_NOUN	soul	sˈəʊ̯l	s ˈəʊ̯ l		soul_NOUN_1			
 American English	American English			soul_NOUN	soul	sˈoʊ̯ɫ	s ˈoʊ̯ ɫ		soul_NOUN_1			
-Old English	Old English			soul_NOUN	sāwol	sˈɑːwol	s ˈɑː w o l		soul_NOUN_1			
+Old English	Old English			soul_NOUN	sāwol	sˈɑːwoɫ	s ˈɑː w o ɫ		soul_NOUN_1			
 West Frisian	West Frisian			soul_NOUN	siel	sˈiə̯l	s ˈiə̯ l		soul_NOUN_1			
 Saterland Frisian	Saterland Frisian			soul_NOUN	Seele	sˈeːlə	s ˈeː l ə		soul_NOUN_1			
 Insular North Frisian	Insular North Frisian			soul_NOUN	Siil	sˈiːl	s ˈiː l		soul_NOUN_1			
@@ -7505,8 +7519,8 @@ Alsatian	Alsatian			soul_NOUN	Seel	sˈeːl	s ˈeː l		soul_NOUN_1
 Swiss German	Swiss German			soul_NOUN	Seel	z̥ˈeːl	z̥ ˈeː l		soul_NOUN_1			
 Proto-Germanic	Proto-Germanic			sea_NOUN	saiwiz	sˈɑi̯wiz	s ˈɑi̯ w i z		sea_NOUN_2			
 Gothic	Gothic			sea_NOUN	𐍃𐌰𐌹𐍅𐍃	sˈɛːws	s ˈɛː w s		sea_NOUN_2			
-Old West Norse	Old West Norse			sea_NOUN	sjór	sjˈoːr	s j ˈoː r		sea_NOUN_2			
-Old West Norse	Old West Norse			sea_NOUN	sær	sˈɛːr	s ˈɛː r		sea_NOUN_2			
+Old West Norse	Old West Norse			sea_NOUN	sjór	sjˈoːr̥	s j ˈoː r̥		sea_NOUN_2			
+Old West Norse	Old West Norse			sea_NOUN	sær	sˈɛːr̥	s ˈɛː r̥		sea_NOUN_2			
 Icelandic	Icelandic			sea_NOUN	sjór	sjˈoːu̯r̥	s j ˈoːu̯ r̥		sea_NOUN_2			
 Faroese	Faroese			sea_NOUN	sjógvur	ʃˈɛɡ̊v̥ʊɹ	ʃ ˈɛ ɡ̊ v̥ ʊ ɹ		sea_NOUN_2			
 Nynorsk Norwegian	Nynorsk Norwegian			sea_NOUN	sjø	ʂˈøː	ʂ ˈøː		sea_NOUN_2			
@@ -7545,7 +7559,7 @@ Icelandic	Icelandic			salt_NOUN	salt	sˈal̥t	s ˈa l̥ t		salt_NOUN_1
 Faroese	Faroese			salt_NOUN	salt	sˈal̥t	s ˈa l̥ t		salt_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			salt_NOUN	salt	sˈɑlt	s ˈɑ l t		salt_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			salt_NOUN	salt	sˈɑlt	s ˈɑ l t		salt_NOUN_1			
-Danish	Danish			salt_NOUN	salt	sˈɛlˀd̥	s ˈɛ lˀ d̥		salt_NOUN_1			
+Danish	Danish			salt_NOUN	salt	sˈælˀd̥	s ˈæ lˀ d̥		salt_NOUN_1			
 Swedish	Swedish			salt_NOUN	salt	sˈalt	s ˈa l t		salt_NOUN_1			
 Elfdalian	Elfdalian			salt_NOUN	solt	sˈolt	s ˈo l t		salt_NOUN_1			
 Scots	Scots			salt_NOUN	saut	sˈɑːt	s ˈɑː t		salt_NOUN_1			
@@ -7581,12 +7595,12 @@ Swabian	Swabian			salt_NOUN	Salz	sˈalʦ	s ˈa l ʦ		salt_NOUN_1
 Alsatian	Alsatian			salt_NOUN	Sàlz	sˈɒlʦ	s ˈɒ l ʦ		salt_NOUN_1			
 Swiss German	Swiss German			salt_NOUN	Salz	z̥ˈɒlʦ	z̥ ˈɒ l ʦ		salt_NOUN_1			
 Proto-Germanic	Proto-Germanic			sand_NOUN	samdaz	sˈɑmdɑz	s ˈɑ m d ɑ z		sand_NOUN_1			
-Old West Norse	Old West Norse			sand_NOUN	sandr	sˈɑndr	s ˈɑ n d r		sand_NOUN_1			
+Old West Norse	Old West Norse			sand_NOUN	sandr	sˈɑndr̥	s ˈɑ n d r̥		sand_NOUN_1			
 Icelandic	Icelandic			sand_NOUN	sandur	sˈand̥ʏr̥	s ˈa n d̥ ʏ r̥		sand_NOUN_1			
 Faroese	Faroese			sand_NOUN	sandur	sˈand̥ʊɹ	s ˈa n d̥ ʊ ɹ		sand_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			sand_NOUN	sand	sˈɑnn	s ˈɑ n n		sand_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			sand_NOUN	sand	sˈɑnn	s ˈɑ n n		sand_NOUN_1			
-Danish	Danish			sand_NOUN	sand	sˈanˀ	s ˈa nˀ		sand_NOUN_1			
+Danish	Danish			sand_NOUN	sand	sˈænˀ	s ˈæ nˀ		sand_NOUN_1			
 Swedish	Swedish			sand_NOUN	sand	sˈand	s ˈa n d		sand_NOUN_1			
 Elfdalian	Elfdalian			sand_NOUN	sand	sˈɑnd	s ˈɑ n d		sand_NOUN_1			
 Scots	Scots			sand_NOUN	saund	sˈɑːnd	s ˈɑː n d		sand_NOUN_1			
@@ -7709,7 +7723,7 @@ Icelandic	Icelandic			see_VERB	sjá	sjˈɑːu̯	s j ˈɑːu̯		see_VERB_1
 Faroese	Faroese			see_VERB	síggja	sˈʊʤ̊ʤ̊a	s ˈʊ ʤ̊ ʤ̊ a		see_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			see_VERB	sjå	ʂˈoː	ʂ ˈoː		see_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			see_VERB	se	sˈeː	s ˈeː		see_VERB_1			
-Danish	Danish			see_VERB	se	sˈeː	s ˈeː		see_VERB_1			
+Danish	Danish			see_VERB	se	sˈeˀ	s ˈeˀ		see_VERB_1			
 Swedish	Swedish			see_VERB	se	sˈeː	s ˈeː		see_VERB_1			
 Elfdalian	Elfdalian			see_VERB	sjǫ	sjˈɔ̃ː	s j ˈɔ̃ː		see_VERB_1			
 Scots	Scots			see_VERB	see	sˈiː	s ˈiː		see_VERB_1			
@@ -7745,7 +7759,7 @@ Alsatian	Alsatian			see_VERB	sähn	sˈæːn	s ˈæː n		see_VERB_1
 Swiss German	Swiss German			see_VERB	gsee	ɡ̊z̥ˈeː	ɡ̊ z̥ ˈeː		see_VERB_1			
 Proto-Germanic	Proto-Germanic			self_PRON	selbaz	sˈelβɑz	s ˈe l β ɑ z		self_PRON_1			
 Gothic	Gothic			self_PRON	𐍃𐌹𐌻𐌱𐌰	sˈilβa	s ˈi l β a		self_PRON_1			
-Old West Norse	Old West Norse			self_PRON	sjalfr	sjˈɑlvr	s j ˈɑ l v r		self_PRON_1			
+Old West Norse	Old West Norse			self_PRON	sjalfr	sjˈɑlvr̥	s j ˈɑ l v r̥		self_PRON_1			
 Icelandic	Icelandic			self_PRON	sjálfur	sjˈau̯lvʏr̥	s j ˈau̯ l v ʏ r̥		self_PRON_1			
 Faroese	Faroese			self_PRON	sjálvur	ʃˈɔlvʊɹ	ʃ ˈɔ l v ʊ ɹ		self_PRON_1			
 Nynorsk Norwegian	Nynorsk Norwegian			self_PRON	sjølv	ʂˈœlʋ	ʂ ˈœ l ʋ		self_PRON_1			
@@ -7785,7 +7799,7 @@ Swabian	Swabian			self_PRON	selbr	sˈɛlbʌ	s ˈɛ l b ʌ		self_PRON_1
 Swiss German	Swiss German			self_PRON	sälber	z̥ˈælb̥ər	z̥ ˈæ l b̥ ə r		self_PRON_1			
 Proto-Germanic	Proto-Germanic			sick_ADJ	seukaz	sˈeu̯kɑz	s ˈeu̯ k ɑ z		sick_ADJ_1			
 Gothic	Gothic			sick_ADJ	𐍃𐌹𐌿𐌺𐍃	sˈiu̯ks	s ˈiu̯ k s		sick_ADJ_1			
-Old West Norse	Old West Norse			sick_ADJ	sjúkr	sjˈuːkr	s j ˈuː k r		sick_ADJ_1			
+Old West Norse	Old West Norse			sick_ADJ	sjúkr	sjˈuːkr̥	s j ˈuː k r̥		sick_ADJ_1			
 Icelandic	Icelandic			sick_ADJ	sjúkur	sjˈuːkʏr̥	s j ˈuː k ʏ r̥		sick_ADJ_1			
 Faroese	Faroese			sick_ADJ	sjúkur	ʃˈʉːu̯kʊɹ	ʃ ˈʉːu̯ k ʊ ɹ		sick_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			sick_ADJ	sjuk	ʂˈʉːk	ʂ ˈʉː k		sick_ADJ_1			
@@ -7932,12 +7946,12 @@ Alsatian	Alsatian			sit_VERB	setze	sˈeʦə	s ˈe ʦ ə		sit_VERB_1
 Swiss German	Swiss German			sit_VERB	sitze	z̥ˈiʦə	z̥ ˈi ʦ ə		sit_VERB_1			
 Proto-Germanic	Proto-Germanic			sharp_ADJ	skarpaz	skˈɑrpɑz	s k ˈɑ r p ɑ z		sharp_ADJ_1			
 Gothic	Gothic			sharp_ADJ	𐍃𐌺𐌰𐍂𐍀𐍃	skˈarps	s k ˈa r p s		sharp_ADJ_1			
-Old West Norse	Old West Norse			sharp_ADJ	skarpr	skˈɑrpr	s k ˈɑ r p r		sharp_ADJ_1			
+Old West Norse	Old West Norse			sharp_ADJ	skarpr	skˈɑrpr̥	s k ˈɑ r p r̥		sharp_ADJ_1			
 Icelandic	Icelandic			sharp_ADJ	skarpur	skˈar̥pʏr̥	s k ˈa r̥ p ʏ r̥		sharp_ADJ_1			
 Faroese	Faroese			sharp_ADJ	skarpur	skˈaɹpʊɹ	s k ˈa ɹ p ʊ ɹ		sharp_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			sharp_ADJ	skarp	skˈɑɾp	s k ˈɑ ɾ p		sharp_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			sharp_ADJ	skarp	skˈɑɾp	s k ˈɑ ɾ p		sharp_ADJ_1			
-Danish	Danish			sharp_ADJ	skarp	sɡ̊ˈab̥	s ɡ̊ ˈa b̥		sharp_ADJ_1			
+Danish	Danish			sharp_ADJ	skarp	sɡ̊ˈɑb̥	s ɡ̊ ˈɑ b̥		sharp_ADJ_1			
 Swedish	Swedish			sharp_ADJ	skarp	skˈarp	s k ˈa r p		sharp_ADJ_1			
 Elfdalian	Elfdalian			sharp_ADJ	skarp	skˈɑrp	s k ˈɑ r p		sharp_ADJ_1			
 Scots	Scots			sharp_ADJ	shairp	ʃˈeːrp	ʃ ˈeː r p		sharp_ADJ_1			
@@ -7974,7 +7988,7 @@ Proto-Germanic	Proto-Germanic			beautiful_ADJ	skauniz	skˈɑu̯niz	s k ˈɑu̯ n
 Gothic	Gothic			beautiful_ADJ	𐍃𐌺𐌰𐌿𐌽𐍃	skˈɔːns	s k ˈɔː n s		beautiful_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			beautiful_ADJ	skjønn	ʂˈœnn	ʂ ˈœ n n		beautiful_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			beautiful_ADJ	skjønn	ʂˈœnn	ʂ ˈœ n n		beautiful_ADJ_1			
-Danish	Danish			beautiful_ADJ	skøn	sɡ̊ˈœˀn	s ɡ̊ ˈœˀ n		beautiful_ADJ_1			
+Danish	Danish			beautiful_ADJ	skøn	sɡ̊ˈøˀn	s ɡ̊ ˈøˀ n		beautiful_ADJ_1			
 Swedish	Swedish			beautiful_ADJ	skön	ɧˈøːn	ɧ ˈøː n		beautiful_ADJ_1			
 Elfdalian	Elfdalian			beautiful_ADJ	stjön	sʨˈœːn	s ʨ ˈœː n		beautiful_ADJ_1			
 Scots	Scots			beautiful_ADJ	sheen	ʃˈin	ʃ ˈi n		beautiful_ADJ_1			
@@ -8006,7 +8020,7 @@ Alsatian	Alsatian			beautiful_ADJ	scheen	ʃˈeːn	ʃ ˈeː n		beautiful_ADJ_1
 Swiss German	Swiss German			beautiful_ADJ	schöön	ʒ̊ˈøːn	ʒ̊ ˈøː n		beautiful_ADJ_1			
 Proto-Germanic	Proto-Germanic			shield_NOUN	skelduz	skˈelduz	s k ˈe l d u z		shield_NOUN_1			
 Gothic	Gothic			shield_NOUN	𐍃𐌺𐌹𐌻𐌳𐌿𐍃	skˈildus	s k ˈi l d u s		shield_NOUN_1			
-Old West Norse	Old West Norse			shield_NOUN	skjǫldr	scˈɔldr	s c ˈɔ l d r		shield_NOUN_1			
+Old West Norse	Old West Norse			shield_NOUN	skjǫldr	scˈɔldr̥	s c ˈɔ l d r̥		shield_NOUN_1			
 Icelandic	Icelandic			shield_NOUN	skjöldur	scˈœld̥ʏr̥	s c ˈœ l d̥ ʏ r̥		shield_NOUN_1			
 Faroese	Faroese			shield_NOUN	skjøldur	ʃˈœld̥ʊɹ	ʃ ˈœ l d̥ ʊ ɹ		shield_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			shield_NOUN	skjold	ʂˈɔll	ʂ ˈɔ l l		shield_NOUN_1			
@@ -8055,6 +8069,8 @@ Westphalian	Westphalian			sheep_NOUN	Schaop	ʃˈɔːp	ʃ ˈɔː p		sheep_NOUN_2
 Eastphalian	Eastphalian			sheep_NOUN	Schap	ʃˈɒːp	ʃ ˈɒː p		sheep_NOUN_2			
 Mecklenburgisch-Vorpommersch	Mecklenburgisch-Vorpommersch			sheep_NOUN	Schåp	ʃˈɒːp	ʃ ˈɒː p		sheep_NOUN_2			
 Plautdietsch	Plautdietsch			sheep_NOUN	Schoop	ʃˈəʊ̯p	ʃ ˈəʊ̯ p		sheep_NOUN_2			
+Old Dutch	Old Dutch			sheep_NOUN	scāp	skˈɑːp	s k ˈɑː p		sheep_NOUN_2			
+Middle Dutch	Middle Dutch			sheep_NOUN	schâep	sxˈaːp	s x ˈaː p		sheep_NOUN_2			
 Dutch	Dutch			sheep_NOUN	schaap	sχˈaːp	s χ ˈaː p		sheep_NOUN_2			
 Afrikaans	Afrikaans			sheep_NOUN	skaap	skˈɑːp	s k ˈɑː p		sheep_NOUN_2			
 Zeelandic	Zeelandic			sheep_NOUN	schaep	sxˈɛːp	s x ˈɛː p		sheep_NOUN_2			
@@ -8156,7 +8172,7 @@ Proto-Germanic	Proto-Germanic			shit_NOUN	skitaz	skˈitɑz	s k ˈi t ɑ z		shit_
 English	English			shit_NOUN	shit	ʃˈɪt	ʃ ˈɪ t		shit_NOUN_1			
 American English	American English			shit_NOUN	shit	ʃˈɪʔ	ʃ ˈɪ ʔ		shit_NOUN_1			
 Proto-Germanic	Proto-Germanic			shit_NOUN	skitaz	skˈitiz	s k ˈi t i z		shit_NOUN_2			
-Old West Norse	Old West Norse			shit_NOUN	skítr	scˈiːtr	s c ˈiː t r		shit_NOUN_2			
+Old West Norse	Old West Norse			shit_NOUN	skítr	scˈiːtr̥	s c ˈiː t r̥		shit_NOUN_2			
 Icelandic	Icelandic			shit_NOUN	skítur	scˈiːtʏr̥	s c ˈiː t ʏ r̥		shit_NOUN_2			
 Faroese	Faroese			shit_NOUN	skítur	ʃˈʊ̯iːtʊɹ	ʃ ˈʊ̯iː t ʊ ɹ		shit_NOUN_2			
 Nynorsk Norwegian	Nynorsk Norwegian			shit_NOUN	skit	ʂˈiːt	ʂ ˈiː t		shit_NOUN_2			
@@ -8188,7 +8204,7 @@ Swabian	Swabian			shit_NOUN	Scheiß	ʃˈəi̯s	ʃ ˈəi̯ s		shit_NOUN_2
 Swiss German	Swiss German			shit_NOUN	Schiissi	ʒ̊ˈiːsːi	ʒ̊ ˈiː sː i		shit_NOUN_2			
 Proto-Germanic	Proto-Germanic			shoe_NOUN	skōhaz	skˈɔːxɑz	s k ˈɔː x ɑ z		shoe_NOUN_1			
 Gothic	Gothic			shoe_NOUN	𐍃𐌺𐍉𐌷𐍃	skˈoːhs	s k ˈoː h s		shoe_NOUN_1			
-Old West Norse	Old West Norse			shoe_NOUN	skór	skˈoːr	s k ˈoː r		shoe_NOUN_1			
+Old West Norse	Old West Norse			shoe_NOUN	skór	skˈoːr̥	s k ˈoː r̥		shoe_NOUN_1			
 Icelandic	Icelandic			shoe_NOUN	skór	skˈoːu̯r̥	s k ˈoːu̯ r̥		shoe_NOUN_1			
 Faroese	Faroese			shoe_NOUN	skógvur	skˈɛɡ̊v̥ʊɹ	s k ˈɛ ɡ̊ v̥ ʊ ɹ		shoe_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			shoe_NOUN	sko	skˈuː	s k ˈuː		shoe_NOUN_1			
@@ -8330,8 +8346,8 @@ Alsatian	Alsatian			sleep_VERB	schlofe	ʃlˈoːfə	ʃ l ˈoː f ə		sleep_VERB_1
 Swiss German	Swiss German			sleep_VERB	schlaafe	ʒ̊lˈɒːfːə	ʒ̊ l ˈɒː fː ə		sleep_VERB_1			
 Proto-Germanic	Proto-Germanic			snow_NOUN	snaiwaz	snˈɑi̯wɑz	s n ˈɑi̯ w ɑ z		snow_NOUN_1			
 Gothic	Gothic			snow_NOUN	𐍃𐌽𐌰𐌹𐍅𐍃	snˈɛːws	s n ˈɛː w s		snow_NOUN_1			
-Old West Norse	Old West Norse			snow_NOUN	snjór	snjˈoːr	s n j ˈoː r		snow_NOUN_1			
-Old West Norse	Old West Norse			snow_NOUN	snær	snˈɛːr	s n ˈɛː r		snow_NOUN_1			
+Old West Norse	Old West Norse			snow_NOUN	snjór	snjˈoːr̥	s n j ˈoː r̥		snow_NOUN_1			
+Old West Norse	Old West Norse			snow_NOUN	snær	snˈɛːr̥	s n ˈɛː r̥		snow_NOUN_1			
 Icelandic	Icelandic			snow_NOUN	snjór	st͡n̥jˈoːu̯r̥	s t͡n̥ j ˈoːu̯ r̥		snow_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			snow_NOUN	snø	snˈøː	s n ˈøː		snow_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			snow_NOUN	snø	snˈøː	s n ˈøː		snow_NOUN_1			
@@ -8458,7 +8474,7 @@ Icelandic	Icelandic			star_NOUN	stjarna	stjˈart͡n̥a	s t j ˈa r t͡n̥ a		sta
 Faroese	Faroese			star_NOUN	stjørna	ʃtjˈœt͡n̥a	ʃ t j ˈœ t͡n̥ a		star_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			star_NOUN	stjerne	sçˈɛnne	s ç ˈɛ n n e		star_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			star_NOUN	stjerne	stjˈæːɳə	s t j ˈæː ɳ ə		star_NOUN_1			
-Danish	Danish			star_NOUN	stjerne	sd̥jˈæɐnə	s d̥ j ˈæ ɐ n ə		star_NOUN_1			
+Danish	Danish			star_NOUN	stjerne	sd̥jˈɛɐnə	s d̥ j ˈɛ ɐ n ə		star_NOUN_1			
 Swedish	Swedish			star_NOUN	stjärna	ɧˈæːɳa	ɧ ˈæː ɳ a		star_NOUN_1			
 Elfdalian	Elfdalian			star_NOUN	stienna	stˈiːe̯nnɑ	s t ˈiːe̯ n n ɑ		star_NOUN_1			
 Scots	Scots			star_NOUN	starn	stˈarn	s t ˈa r n		star_NOUN_1			
@@ -8506,7 +8522,7 @@ Elfdalian	Elfdalian			stool_NOUN	stuol	stˈʉːə̯ɽ	s t ˈʉːə̯ ɽ		stool_N
 Scots	Scots			stool_NOUN	stuil	stˈøl	s t ˈø l		stool_NOUN_1			
 English	English			stool_NOUN	stool	stˈuːɫ	s t ˈuː ɫ		stool_NOUN_1			
 American English	American English			stool_NOUN	stool	stˈuɫ	s t ˈu ɫ		stool_NOUN_1			
-Old English	Old English			stool_NOUN	stōl	stˈoːl	s t ˈoː l		stool_NOUN_1			
+Old English	Old English			stool_NOUN	stōl	stˈoːɫ	s t ˈoː ɫ		stool_NOUN_1			
 West Frisian	West Frisian			stool_NOUN	stoel	stˈuə̯l	s t ˈuə̯ l		stool_NOUN_1			
 Saterland Frisian	Saterland Frisian			stool_NOUN	Stoul	stˈoːu̯l	s t ˈoːu̯ l		stool_NOUN_1			
 Insular North Frisian	Insular North Frisian			stool_NOUN	Stööl	stˈøːl	s t ˈøː l		stool_NOUN_1			
@@ -8535,7 +8551,7 @@ Swabian	Swabian			stool_NOUN	Schduhl	ʃdˈuːl	ʃ d ˈuː l		stool_NOUN_1
 Alsatian	Alsatian			stool_NOUN	Stüehl	ʃtˈøːl	ʃ t ˈøː l		stool_NOUN_1			
 Swiss German	Swiss German			stool_NOUN	Schtuel	ʒ̊tːˈuə̯l	ʒ̊ tː ˈuə̯ l		stool_NOUN_1			
 Proto-Germanic	Proto-Germanic			big_ADJ	stōraz	stˈɔːrɑz	s t ˈɔː r ɑ z		big_ADJ_1			
-Old West Norse	Old West Norse			big_ADJ	stórr	stˈoːrr	s t ˈoː r r		big_ADJ_1			
+Old West Norse	Old West Norse			big_ADJ	stórr	stˈoːrr̥	s t ˈoː r r̥		big_ADJ_1			
 Icelandic	Icelandic			big_ADJ	stór	stˈoːu̯r̥	s t ˈoːu̯ r̥		big_ADJ_1			
 Faroese	Faroese			big_ADJ	stórur	stˈɔːu̯ɹʊɹ	s t ˈɔːu̯ ɹ ʊ ɹ		big_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			big_ADJ	stor	stˈuːɾ	s t ˈuː ɾ		big_ADJ_1			
@@ -8544,12 +8560,12 @@ Danish	Danish			big_ADJ	stor	sd̥ˈoˀɐ	s d̥ ˈoˀ ɐ		big_ADJ_1
 Swedish	Swedish			big_ADJ	stor	stˈuːr	s t ˈuː r		big_ADJ_1			
 Elfdalian	Elfdalian			big_ADJ	stur	stˈʉːr	s t ˈʉː r		big_ADJ_1			
 Proto-Germanic	Proto-Germanic			storm_NOUN	sturmaz	stˈurmɑz	s t ˈu r m ɑ z		storm_NOUN_1			
-Old West Norse	Old West Norse			storm_NOUN	stormr	stˈormr	s t ˈo r m r		storm_NOUN_1			
+Old West Norse	Old West Norse			storm_NOUN	stormr	stˈormr̥	s t ˈo r m r̥		storm_NOUN_1			
 Icelandic	Icelandic			storm_NOUN	stormur	stˈɔrmʏr̥	s t ˈɔ r m ʏ r̥		storm_NOUN_1			
 Faroese	Faroese			storm_NOUN	stormur	stˈɔɹmʊɹ	s t ˈɔ ɹ m ʊ ɹ		storm_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			storm_NOUN	storm	stˈɔɾm	s t ˈɔ ɾ m		storm_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			storm_NOUN	storm	stˈɔɾm	s t ˈɔ ɾ m		storm_NOUN_1			
-Danish	Danish			storm_NOUN	storm	sd̥ˈɔˀm	s d̥ ˈɔˀ m		storm_NOUN_1			
+Danish	Danish			storm_NOUN	storm	sd̥ˈoɐˀm	s d̥ ˈo ɐˀ m		storm_NOUN_1			
 Swedish	Swedish			storm_NOUN	storm	stˈɔrm	s t ˈɔ r m		storm_NOUN_1			
 Elfdalian	Elfdalian			storm_NOUN	storm	stˈorm	s t ˈo r m		storm_NOUN_1			
 Scots	Scots			storm_NOUN	storm	stˈoːrm	s t ˈoː r m		storm_NOUN_1			
@@ -8657,7 +8673,7 @@ Alsatian	Alsatian			summer_NOUN	Summer	sˈuməʁ	s ˈu m ə ʁ		summer_NOUN_1
 Swiss German	Swiss German			summer_NOUN	Summer	z̥ˈumər	z̥ ˈu m ə r		summer_NOUN_1			
 Proto-Germanic	Proto-Germanic			son_NOUN	sunuz	sˈunuz	s ˈu n u z		son_NOUN_1			
 Gothic	Gothic			son_NOUN	𐍃𐌿𐌽𐌿𐍃	sˈunus	s ˈu n u s		son_NOUN_1			
-Old West Norse	Old West Norse			son_NOUN	sonr	sˈonr	s ˈo n r		son_NOUN_1			
+Old West Norse	Old West Norse			son_NOUN	sonr	sˈonr̥	s ˈo n r̥		son_NOUN_1			
 Icelandic	Icelandic			son_NOUN	sonur	sˈɔːnʏr̥	s ˈɔː n ʏ r̥		son_NOUN_1			
 Faroese	Faroese			son_NOUN	sonur	sˈɔnʊɹ	s ˈɔ n ʊ ɹ		son_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			son_NOUN	son	sˈɔn	s ˈɔ n		son_NOUN_1			
@@ -8695,7 +8711,7 @@ Swabian	Swabian			son_NOUN	Soh	sˈoː	s ˈoː		son_NOUN_1
 Alsatian	Alsatian			son_NOUN	Sohn	sˈoːn	s ˈoː n		son_NOUN_1			
 Swiss German	Swiss German			son_NOUN	Soon	z̥ˈoːn	z̥ ˈoː n		son_NOUN_1			
 Proto-Germanic	Proto-Germanic			sour_ADJ	sūraz	sˈuːrɑz	s ˈuː r ɑ z		sour_ADJ_1			
-Old West Norse	Old West Norse			sour_ADJ	súrr	sˈuːrr	s ˈuː r r		sour_ADJ_1			
+Old West Norse	Old West Norse			sour_ADJ	súrr	sˈuːrr̥	s ˈuː r r̥		sour_ADJ_1			
 Icelandic	Icelandic			sour_ADJ	súr	sˈuːr̥	s ˈuː r̥		sour_ADJ_1			
 Faroese	Faroese			sour_ADJ	súrur	sˈʉːu̯ɹʊɹ	s ˈʉːu̯ ɹ ʊ ɹ		sour_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			sour_ADJ	sur	sˈʉːɾ	s ˈʉː ɾ		sour_ADJ_1			
@@ -8735,7 +8751,7 @@ Swabian	Swabian			sour_ADJ	sauer	sˈao̯ʌ	s ˈao̯ ʌ		sour_ADJ_1
 Alsatian	Alsatian			sour_ADJ	süür	sˈyːʁ	s ˈyː ʁ		sour_ADJ_1			
 Swiss German	Swiss German			sour_ADJ	suur	z̥ˈuːr	z̥ ˈuː r		sour_ADJ_1			
 Proto-Germanic	Proto-Germanic			sow_NOUN	sūz	sˈuːz	s ˈuː z		sow_NOUN_1			
-Old West Norse	Old West Norse			sow_NOUN	sýr	sˈyːr	s ˈyː r		sow_NOUN_1			
+Old West Norse	Old West Norse			sow_NOUN	sýr	sˈyːr̥	s ˈyː r̥		sow_NOUN_1			
 Icelandic	Icelandic			sow_NOUN	sýr	sˈiːr̥	s ˈiː r̥		sow_NOUN_1			
 Faroese	Faroese			sow_NOUN	súgv	sˈɪɡ̊v̥	s ˈɪ ɡ̊ v̥		sow_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			sow_NOUN	su	sˈʉː	s ˈʉː		sow_NOUN_1			
@@ -8801,7 +8817,7 @@ Faroese	Faroese			sweat_NOUN	sveitti	svˈai̯ʰtɪ	s v ˈai̯ ʰt ɪ		sweat_NOUN
 Nynorsk Norwegian	Nynorsk Norwegian			sweat_NOUN	sveitte	sʋˈæɪ̯ʰtte	s ʋ ˈæɪ̯ ʰt t e		sweat_NOUN_3			
 Proto-Germanic	Proto-Germanic			black_ADJ	swartaz	swˈɑrtɑz	s w ˈɑ r t ɑ z		black_ADJ_1			
 Gothic	Gothic			black_ADJ	𐍃𐍅𐌰𐍂𐍄𐍃	swˈarts	s w ˈa r t s		black_ADJ_1			
-Old West Norse	Old West Norse			black_ADJ	svartr	svˈɑrtr	s v ˈɑ r t r		black_ADJ_1			
+Old West Norse	Old West Norse			black_ADJ	svartr	svˈɑrtr̥	s v ˈɑ r t r̥		black_ADJ_1			
 Icelandic	Icelandic			black_ADJ	svartur	svˈar̥tʏr̥	s v ˈa r̥ t ʏ r̥		black_ADJ_1			
 Faroese	Faroese			black_ADJ	svartur	svˈaɹʈʊɹ	s v ˈa ɹ ʈ ʊ ɹ		black_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			black_ADJ	svart	sʋˈɑɾt	s ʋ ˈɑ ɾ t		black_ADJ_1			
@@ -8846,7 +8862,7 @@ Icelandic	Icelandic			sleep_VERB	sofa	sˈɔːva	s ˈɔː v a		sleep_VERB_2
 Faroese	Faroese			sleep_VERB	sova	sˈoːva	s ˈoː v a		sleep_VERB_2			
 Nynorsk Norwegian	Nynorsk Norwegian			sleep_VERB	sova	sˈoːʋɑ	s ˈoː ʋ ɑ		sleep_VERB_2			
 Bokmål Norwegian	Bokmål Norwegian			sleep_VERB	sove	sˈoːʋə	s ˈoː ʋ ə		sleep_VERB_2			
-Danish	Danish			sleep_VERB	sove	sˈɒːwə	s ˈɒː w ə		sleep_VERB_2			
+Danish	Danish			sleep_VERB	sove	sˈɔːwə	s ˈɔː w ə		sleep_VERB_2			
 Swedish	Swedish			sleep_VERB	sova	sˈoːva	s ˈoː v a		sleep_VERB_2			
 Elfdalian	Elfdalian			sleep_VERB	såvå	sˈɔvɔ	s ˈɔ v ɔ		sleep_VERB_2			
 Proto-Germanic	Proto-Germanic			sword_NOUN	swerdą	swˈerðɑ̃	s w ˈe r ð ɑ̃		sword_NOUN_1			
@@ -8887,12 +8903,12 @@ Swabian	Swabian			sword_NOUN	Schwerd	ʃʋˈɛʕd	ʃ ʋ ˈɛ ʕ d		sword_NOUN_1
 Swiss German	Swiss German			sword_NOUN	Schwärt	ʒ̊ʋˈærtː	ʒ̊ ʋ ˈæ r tː		sword_NOUN_1			
 Proto-Germanic	Proto-Germanic			sister_NOUN	swestēr	swˈestɛːr	s w ˈe s t ɛː r		sister_NOUN_1			
 Gothic	Gothic			sister_NOUN	𐍃𐍅𐌹𐍃𐍄𐌰𐍂	swˈistar	s w ˈi s t a r		sister_NOUN_1			
-Old West Norse	Old West Norse			sister_NOUN	systir	sˈystir	s ˈy s t i r		sister_NOUN_1			
+Old West Norse	Old West Norse			sister_NOUN	systir	sˈystir̥	s ˈy s t i r̥		sister_NOUN_1			
 Icelandic	Icelandic			sister_NOUN	systir	sˈɪstɪr̥	s ˈɪ s t ɪ r̥		sister_NOUN_1			
 Faroese	Faroese			sister_NOUN	systir	sˈɪstɪɹ	s ˈɪ s t ɪ ɹ		sister_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			sister_NOUN	syster	sˈʏstɛɾ	s ˈʏ s t ɛ ɾ		sister_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			sister_NOUN	søster	sˈœstəɾ	s ˈœ s t ə ɾ		sister_NOUN_1			
-Danish	Danish			sister_NOUN	søster	sˈœsd̥ʌ	s ˈœ s d̥ ʌ		sister_NOUN_1			
+Danish	Danish			sister_NOUN	søster	sˈøsd̥ɐ	s ˈø s d̥ ɐ		sister_NOUN_1			
 Swedish	Swedish			sister_NOUN	syster	sˈʏstɛr	s ˈʏ s t ɛ r		sister_NOUN_1			
 Elfdalian	Elfdalian			sister_NOUN	syster	sˈʏstɛr	s ˈʏ s t ɛ r		sister_NOUN_1			
 Scots	Scots			sister_NOUN	sister	sˈɪstər	s ˈɪ s t ə r		sister_NOUN_1			
@@ -8932,7 +8948,7 @@ Old West Norse	Old West Norse			swim_VERB	svimma	svˈimmɑ	s v ˈi m m ɑ		swim_
 Faroese	Faroese			swim_VERB	svimja	svˈɪmja	s v ˈɪ m j a		swim_VERB_1			
 Nynorsk Norwegian	Nynorsk Norwegian			swim_VERB	symja	sˈʏmjɑ	s ˈʏ m j ɑ		swim_VERB_1			
 Bokmål Norwegian	Bokmål Norwegian			swim_VERB	svømme	sʋˈœmmə	s ʋ ˈœ m m ə		swim_VERB_1			
-Danish	Danish			swim_VERB	svømme	sʋˈœmə	s ʋ ˈœ m ə		swim_VERB_1			
+Danish	Danish			swim_VERB	svømme	sʋˈømə	s ʋ ˈø m ə		swim_VERB_1			
 Swedish	Swedish			swim_VERB	simma	sˈɪmma	s ˈɪ m m a		swim_VERB_1			
 Elfdalian	Elfdalian			swim_VERB	simma	sˈɪmmɑ	s ˈɪ m m ɑ		swim_VERB_1			
 Scots	Scots			swim_VERB	soum	sˈum	s ˈu m		swim_VERB_1			
@@ -9001,7 +9017,7 @@ Wymysorys	Wymysorys			swine_NOUN	śwajn	ʃvˈai̯n	ʃ v ˈai̯ n		swine_NOUN_1
 Standard German	Standard German			swine_NOUN	Schwein	ʃvˈaɪ̯n	ʃ v ˈaɪ̯ n		swine_NOUN_1			
 Upper Franconian	Upper Franconian			swine_NOUN	Schwein	ʃvˈaɪ̯n	ʃ v ˈaɪ̯ n		swine_NOUN_1			
 Proto-Germanic	Proto-Germanic			sweet_ADJ	swōtuz	swˈɔːtuz	s w ˈɔː t u z		sweet_ADJ_1			
-Old West Norse	Old West Norse			sweet_ADJ	sǿtr	sˈøːtr	s ˈøː t r		sweet_ADJ_1			
+Old West Norse	Old West Norse			sweet_ADJ	sǿtr	sˈøːtr̥	s ˈøː t r̥		sweet_ADJ_1			
 Icelandic	Icelandic			sweet_ADJ	sætur	sˈaːi̯tʏr̥	s ˈaːi̯ t ʏ r̥		sweet_ADJ_1			
 Faroese	Faroese			sweet_ADJ	søtur	sˈøːtʊɹ	s ˈøː t ʊ ɹ		sweet_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			sweet_ADJ	søt	sˈøːt	s ˈøː t		sweet_ADJ_1			
@@ -9041,12 +9057,12 @@ Swabian	Swabian			sweet_ADJ	siaß	sˈiə̯s	s ˈiə̯ s		sweet_ADJ_1
 Alsatian	Alsatian			sweet_ADJ	siess	sˈiːs	s ˈiː s		sweet_ADJ_1			
 Swiss German	Swiss German			sweet_ADJ	süess	z̥ˈyə̯sː	z̥ ˈyə̯ sː		sweet_ADJ_1			
 Proto-Germanic	Proto-Germanic			tear_NOUN	tahrą	tˈɑxrɑ̃	t ˈɑ x r ɑ̃		tear_NOUN_1			
-Old West Norse	Old West Norse			tear_NOUN	tár	tʰˈɑːr	tʰ ˈɑː r		tear_NOUN_1			
+Old West Norse	Old West Norse			tear_NOUN	tár	tʰˈɑːr̥	tʰ ˈɑː r̥		tear_NOUN_1			
 Icelandic	Icelandic			tear_NOUN	tár	tʰˈɑːu̯r̥	tʰ ˈɑːu̯ r̥		tear_NOUN_1			
 Faroese	Faroese			tear_NOUN	tár	tʰˈɔ̯aːɹ	tʰ ˈɔ̯aː ɹ		tear_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			tear_NOUN	tåre	tʰˈoːɾe	tʰ ˈoː ɾ e		tear_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			tear_NOUN	tåre	tʰˈoːɾə	tʰ ˈoː ɾ ə		tear_NOUN_1			
-Danish	Danish			tear_NOUN	tåre	ʦʰˈɒːʌ	ʦʰ ˈɒː ʌ		tear_NOUN_1			
+Danish	Danish			tear_NOUN	tåre	ʦʰˈɒːɐ	ʦʰ ˈɒː ɐ		tear_NOUN_1			
 Swedish	Swedish			tear_NOUN	tår	tʰˈoːr	tʰ ˈoː r		tear_NOUN_1			
 Elfdalian	Elfdalian			tear_NOUN	tår	tʰˈɔːr	tʰ ˈɔː r		tear_NOUN_1			
 Scots	Scots			tear_NOUN	tear	tʰˈiːr	tʰ ˈiː r		tear_NOUN_1			
@@ -9140,7 +9156,7 @@ Icelandic	Icelandic			tooth_NOUN	tönn	tʰˈœnn	tʰ ˈœ n n		tooth_NOUN_1
 Faroese	Faroese			tooth_NOUN	tonn	tʰˈɔnn	tʰ ˈɔ n n		tooth_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			tooth_NOUN	tann	tʰˈɑnn	tʰ ˈɑ n n		tooth_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			tooth_NOUN	tann	tʰˈɑnn	tʰ ˈɑ n n		tooth_NOUN_1			
-Danish	Danish			tooth_NOUN	tand	ʦʰˈanˀ	ʦʰ ˈa nˀ		tooth_NOUN_1			
+Danish	Danish			tooth_NOUN	tand	ʦʰˈænˀ	ʦʰ ˈæ nˀ		tooth_NOUN_1			
 Swedish	Swedish			tooth_NOUN	tand	tʰˈand	tʰ ˈa n d		tooth_NOUN_1			
 Elfdalian	Elfdalian			tooth_NOUN	tann	tʰˈɑnn	tʰ ˈɑ n n		tooth_NOUN_1			
 Scots	Scots			tooth_NOUN	tuith	tʰˈøθ	tʰ ˈø θ		tooth_NOUN_1			
@@ -9296,7 +9312,7 @@ Icelandic	Icelandic			tongue_NOUN	tunga	tʰˈuŋɡ̊a	tʰ ˈu ŋ ɡ̊ a		tongue_
 Faroese	Faroese			tongue_NOUN	tunga	tʰˈʊŋɡ̊a	tʰ ˈʊ ŋ ɡ̊ a		tongue_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			tongue_NOUN	tunge	tʰˈʉŋŋe	tʰ ˈʉ ŋ ŋ e		tongue_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			tongue_NOUN	tunge	tʰˈʉŋŋə	tʰ ˈʉ ŋ ŋ ə		tongue_NOUN_1			
-Danish	Danish			tongue_NOUN	tunge	ʦʰˈɔŋə	ʦʰ ˈɔ ŋ ə		tongue_NOUN_1			
+Danish	Danish			tongue_NOUN	tunge	ʦʰˈuŋə	ʦʰ ˈu ŋ ə		tongue_NOUN_1			
 Swedish	Swedish			tongue_NOUN	tunga	tʰˈʊŋŋa	tʰ ˈʊ ŋ ŋ a		tongue_NOUN_1			
 Elfdalian	Elfdalian			tongue_NOUN	tungga	tʰˈʉŋɡɑ	tʰ ˈʉ ŋ ɡ ɑ		tongue_NOUN_1			
 Scots	Scots			tongue_NOUN	tongue	tʰˈʌŋ	tʰ ˈʌ ŋ		tongue_NOUN_1			
@@ -9332,7 +9348,7 @@ Alsatian	Alsatian			tongue_NOUN	Zung	ʦˈuŋ	ʦ ˈu ŋ		tongue_NOUN_1
 Swiss German	Swiss German			tongue_NOUN	Zunge	ʦˈuŋə	ʦ ˈu ŋ ə		tongue_NOUN_1			
 Proto-Germanic	Proto-Germanic			two_NUM	twai	twˈɑi̯	t w ˈɑi̯		two_NUM_1			
 Gothic	Gothic			two_NUM	𐍄𐍅𐌰𐌹	twˈɛː	t w ˈɛː		two_NUM_1			
-Old West Norse	Old West Norse			two_NUM	tveir	tʰvˈɛi̯r	tʰ v ˈɛi̯ r		two_NUM_1			
+Old West Norse	Old West Norse			two_NUM	tveir	tʰvˈɛi̯r̥	tʰ v ˈɛi̯ r̥		two_NUM_1			
 Icelandic	Icelandic			two_NUM	tvö	tʰvˈœː	tʰ v ˈœː		two_NUM_1			
 Faroese	Faroese			two_NUM	tvey	tʰvˈɛːi̯	tʰ v ˈɛːi̯		two_NUM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			two_NUM	to	tʰˈuː	tʰ ˈuː		two_NUM_1			
@@ -9400,7 +9416,7 @@ Dutch	Dutch			twenty_NUM	twintig	tʋˈɪntəχ	t ʋ ˈɪ n t ə χ		twenty_NUM_1
 Afrikaans	Afrikaans			twenty_NUM	twintig	tvˈəntəχ	t v ˈə n t ə χ		twenty_NUM_1			
 Zeelandic	Zeelandic			twenty_NUM	twintig	tʋˈɪntɪx	t ʋ ˈɪ n t ɪ x		twenty_NUM_1			
 West Flemish	West Flemish			twenty_NUM	twientig	tʋˈiə̯ntəɦ̥	t ʋ ˈiə̯ n t ə ɦ̥		twenty_NUM_1			
-Limburgish	Limburgish			twenty_NUM	twinteg	tβˈɪːntəx	t β ˈɪː n t ə x		twenty_NUM_1			
+Limburgish	Limburgish			twenty_NUM	twinteg	tβˈɪːntəɣ̊	t β ˈɪː n t ə ɣ̊		twenty_NUM_1			
 Ripuarian	Ripuarian			twenty_NUM	zwanzig	ʦʋˈanʦɪɕ	ʦ ʋ ˈa n ʦ ɪ ɕ		twenty_NUM_1			
 Luxembourgish	Luxembourgish			twenty_NUM	zwanzeg	ʦwˈɑnʦəɕ	ʦ w ˈɑ n ʦ ə ɕ		twenty_NUM_1			
 Pennsylvania German	Pennsylvania German			twenty_NUM	zwansich	ʦʋˈansɪç	ʦ ʋ ˈa n s ɪ ç		twenty_NUM_1			
@@ -9476,12 +9492,12 @@ Zeelandic	Zeelandic			over_PREP	over	ˈoːvəɾ	ˈoː v ə ɾ		over_PREP_1
 West Flemish	West Flemish			over_PREP	oovr	ˈoːvɾ̩	ˈoː v ɾ̩		over_PREP_1			
 Limburgish	Limburgish			over_PREP	euver	ˈøːvəʀ	ˈøː v ə ʀ		over_PREP_1			
 Proto-Germanic	Proto-Germanic			over_PREP	ubiri	ˈuβiri	ˈu β i r i		over_PREP_2			
-Old West Norse	Old West Norse			over_PREP	yfir	ˈyvir	ˈy v i r		over_PREP_2			
+Old West Norse	Old West Norse			over_PREP	yfir	ˈyvir̥	ˈy v i r̥		over_PREP_2			
 Icelandic	Icelandic			over_PREP	yfir	ˈivɪr̥	ˈi v ɪ r̥		over_PREP_2			
 Faroese	Faroese			over_PREP	yvir	ˈiːvɪɹ	ˈiː v ɪ ɹ		over_PREP_2			
 Nynorsk Norwegian	Nynorsk Norwegian			over_PREP	over	ˈoːʋeɾ	ˈoː ʋ e ɾ		over_PREP_2			
 Bokmål Norwegian	Bokmål Norwegian			over_PREP	over	ˈoːʋəɾ	ˈoː ʋ ə ɾ		over_PREP_2			
-Danish	Danish			over_PREP	over	ˈɒwʌ	ˈɒ w ʌ		over_PREP_2			
+Danish	Danish			over_PREP	over	ˈɔwɐ	ˈɔ w ɐ		over_PREP_2			
 Swedish	Swedish			over_PREP	över	ˈøːvɛr	ˈøː v ɛ r		over_PREP_2			
 Elfdalian	Elfdalian			over_PREP	yvyr	ˈʏːvʏr	ˈʏː v ʏ r		over_PREP_2			
 Ripuarian	Ripuarian			over_PREP	üvver	ˈʏvɐ	ˈʏ v ɐ		over_PREP_2			
@@ -9502,7 +9518,7 @@ Icelandic	Icelandic			oven_NOUN	ofn	ˈɔpn̥	ˈɔ p n̥		oven_NOUN_1
 Faroese	Faroese			oven_NOUN	ofn	ˈɔfn̥	ˈɔ f n̥		oven_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			oven_NOUN	omn	ˈɔmn	ˈɔ m n		oven_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			oven_NOUN	ovn	ˈɔʋn	ˈɔ ʋ n		oven_NOUN_1			
-Danish	Danish			oven_NOUN	ovn	ˈɒwˀn	ˈɒ wˀ n		oven_NOUN_1			
+Danish	Danish			oven_NOUN	ovn	ˈɔwˀn	ˈɔ wˀ n		oven_NOUN_1			
 Swedish	Swedish			oven_NOUN	ugn	ˈɵŋn	ˈɵ ŋ n		oven_NOUN_1			
 Elfdalian	Elfdalian			oven_NOUN	ungen	ˈʉŋɛn	ˈʉ ŋ ɛ n		oven_NOUN_1			
 Scots	Scots			oven_NOUN	uin	ˈøn	ˈø n		oven_NOUN_1			
@@ -9545,7 +9561,7 @@ Icelandic	Icelandic			under_PREP	undir	ˈʏnd̥ɪr̥	ˈʏ n d̥ ɪ r̥		under_PR
 Faroese	Faroese			under_PREP	undir	ˈʊnd̥ɪɹ	ˈʊ n d̥ ɪ ɹ		under_PREP_1			
 Nynorsk Norwegian	Nynorsk Norwegian			under_PREP	under	ˈʉndəɾ	ˈʉ n d ə ɾ		under_PREP_1			
 Bokmål Norwegian	Bokmål Norwegian			under_PREP	under	ˈʉnnəɾ	ˈʉ n n ə ɾ		under_PREP_1			
-Danish	Danish			under_PREP	under	ˈɔnˀʌ	ˈɔ nˀ ʌ		under_PREP_1			
+Danish	Danish			under_PREP	under	ˈunˀɐ	ˈu nˀ ɐ		under_PREP_1			
 Swedish	Swedish			under_PREP	under	ˈɵndɛr	ˈɵ n d ɛ r		under_PREP_1			
 Elfdalian	Elfdalian			under_PREP	under	ˈʉndɛr	ˈʉ n d ɛ r		under_PREP_1			
 Scots	Scots			under_PREP	unner	ˈʌnər	ˈʌ n ə r		under_PREP_1			
@@ -9586,7 +9602,7 @@ Icelandic	Icelandic			us_PRON	oss	ˈɔss	ˈɔ s s		us_PRON_1
 Faroese	Faroese			us_PRON	oss	ˈɔss	ˈɔ s s		us_PRON_1			
 Nynorsk Norwegian	Nynorsk Norwegian			us_PRON	oss	ˈɔss	ˈɔ s s		us_PRON_1			
 Bokmål Norwegian	Bokmål Norwegian			us_PRON	oss	ˈɔss	ˈɔ s s		us_PRON_1			
-Danish	Danish			us_PRON	os	ˈʌs	ˈʌ s		us_PRON_1			
+Danish	Danish			us_PRON	os	ˈɔs	ˈɔ s		us_PRON_1			
 Swedish	Swedish			us_PRON	oss	ˈɔss	ˈɔ s s		us_PRON_1			
 Elfdalian	Elfdalian			us_PRON	uoss	ˈʉə̯ss	ˈʉə̯ s s		us_PRON_1			
 Scots	Scots			us_PRON	us	ˈʌs	ˈʌ s		us_PRON_1			
@@ -9626,7 +9642,7 @@ Icelandic	Icelandic			up_ADV	upp	ˈʏʰp	ˈʏ ʰp		up_ADV_1
 Faroese	Faroese			up_ADV	upp	ˈʊʰp	ˈʊ ʰp		up_ADV_1			
 Nynorsk Norwegian	Nynorsk Norwegian			up_ADV	upp	ˈʉʰpp	ˈʉ ʰp p		up_ADV_1			
 Bokmål Norwegian	Bokmål Norwegian			up_ADV	opp	ˈɔpp	ˈɔ p p		up_ADV_1			
-Danish	Danish			up_ADV	op	ˈʌb̥	ˈʌ b̥		up_ADV_1			
+Danish	Danish			up_ADV	op	ˈɔb̥	ˈɔ b̥		up_ADV_1			
 Swedish	Swedish			up_ADV	upp	ˈɵpp	ˈɵ p p		up_ADV_1			
 Elfdalian	Elfdalian			up_ADV	upp	ˈʉpp	ˈʉ p p		up_ADV_1			
 Scots	Scots			up_ADV	up	ˈʌp	ˈʌ p		up_ADV_1			
@@ -9739,7 +9755,7 @@ Upper Franconian	Upper Franconian			owl_NOUN	Eil	ˈaɪ̯l	ˈaɪ̯ l		owl_NOUN_1
 Swabian	Swabian			owl_NOUN	Eil	ˈae̯l	ˈae̯ l		owl_NOUN_1			
 Alsatian	Alsatian			owl_NOUN	Il	ˈil	ˈi l		owl_NOUN_1			
 Proto-Germanic	Proto-Germanic			weak_ADJ	waikwaz	wˈɑi̯kʷɑz	w ˈɑi̯ kʷ ɑ z		weak_ADJ_1			
-Old West Norse	Old West Norse			weak_ADJ	veikr	vˈɛi̯kr	v ˈɛi̯ k r		weak_ADJ_1			
+Old West Norse	Old West Norse			weak_ADJ	veikr	vˈɛi̯kr̥	v ˈɛi̯ k r̥		weak_ADJ_1			
 Icelandic	Icelandic			weak_ADJ	veikur	vˈɛːi̯kʏr̥	v ˈɛːi̯ k ʏ r̥		weak_ADJ_1			
 Faroese	Faroese			weak_ADJ	veikur	vˈai̯kʊɹ	v ˈai̯ k ʊ ɹ		weak_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			weak_ADJ	veik	ʋˈæɪ̯k	ʋ ˈæɪ̯ k		weak_ADJ_1			
@@ -9773,7 +9789,7 @@ Upper Franconian	Upper Franconian			weak_ADJ	waach	vˈaːx	v ˈaː x		weak_ADJ_1
 Bavarian	Bavarian			weak_ADJ	woach	ʋˈoɐ̯x	ʋ ˈoɐ̯ x		weak_ADJ_1			
 Swabian	Swabian			weak_ADJ	woich	ʋˈɔe̯ç	ʋ ˈɔe̯ ç		weak_ADJ_1			
 Proto-Germanic	Proto-Germanic			warm_ADJ	warmaz	wˈɑrmɑz	w ˈɑ r m ɑ z		warm_ADJ_1			
-Old West Norse	Old West Norse			warm_ADJ	varmr	vˈɑrmr	v ˈɑ r m r		warm_ADJ_1			
+Old West Norse	Old West Norse			warm_ADJ	varmr	vˈɑrmr̥	v ˈɑ r m r̥		warm_ADJ_1			
 Icelandic	Icelandic			warm_ADJ	varmur	vˈarmʏr̥	v ˈa r m ʏ r̥		warm_ADJ_1			
 Faroese	Faroese			warm_ADJ	varmur	vˈaɹmʊɹ	v ˈa ɹ m ʊ ɹ		warm_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			warm_ADJ	varm	ʋˈɑɾm	ʋ ˈɑ ɾ m		warm_ADJ_1			
@@ -9818,7 +9834,7 @@ Icelandic	Icelandic			water_NOUN	vatn	vˈaʰt͡n̥	v ˈa ʰt͡n̥		water_NOUN_1
 Faroese	Faroese			water_NOUN	vatn	vˈaʰt͡n̥	v ˈa ʰt͡n̥		water_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			water_NOUN	vatn	ʋˈɑtən	ʋ ˈɑ t ə n		water_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			water_NOUN	vann	ʋˈɑnn	ʋ ˈɑ n n		water_NOUN_1			
-Danish	Danish			water_NOUN	vand	ʋˈanˀ	ʋ ˈa nˀ		water_NOUN_1			
+Danish	Danish			water_NOUN	vand	ʋˈænˀ	ʋ ˈæ nˀ		water_NOUN_1			
 Swedish	Swedish			water_NOUN	vatten	vˈattɛn	v ˈa t t ɛ n		water_NOUN_1			
 Elfdalian	Elfdalian			water_NOUN	wattn	wˈɑtn̩	w ˈɑ t n̩		water_NOUN_1			
 Proto-Germanic	Proto-Germanic			water_NOUN	watōr	wˈɑtɔːr	w ˈɑ t ɔː r		water_NOUN_2			
@@ -9896,7 +9912,7 @@ Alsatian	Alsatian			weather_NOUN	Wetter	ʋˈetəʁ	ʋ ˈe t ə ʁ		weather_NOUN_
 Swiss German	Swiss German			weather_NOUN	Wätter	ʋˈætːər	ʋ ˈæ tː ə r		weather_NOUN_1			
 Proto-Germanic	Proto-Germanic			way_NOUN	wegaz	wˈeɣɑz	w ˈe ɣ ɑ z		way_NOUN_1			
 Gothic	Gothic			way_NOUN	𐍅𐌹𐌲𐍃	wˈiɡs	w ˈi ɡ s		way_NOUN_1			
-Old West Norse	Old West Norse			way_NOUN	vegr	vˈeɣr	v ˈe ɣ r		way_NOUN_1			
+Old West Norse	Old West Norse			way_NOUN	vegr	vˈeɣr̥	v ˈe ɣ r̥		way_NOUN_1			
 Icelandic	Icelandic			way_NOUN	vegur	vˈɛːɣʏr̥	v ˈɛː ɣ ʏ r̥		way_NOUN_1			
 Faroese	Faroese			way_NOUN	vegur	vˈeːvʊɹ	v ˈeː v ʊ ɹ		way_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			way_NOUN	veg	ʋˈeːɡ	ʋ ˈeː ɡ		way_NOUN_1			
@@ -9922,7 +9938,7 @@ Dutch	Dutch			way_NOUN	weg	ʋˈɛχ	ʋ ˈɛ χ		way_NOUN_1
 Afrikaans	Afrikaans			way_NOUN	weg	vˈæχ	v ˈæ χ		way_NOUN_1			
 Zeelandic	Zeelandic			way_NOUN	weg	ʋˈæx	ʋ ˈæ x		way_NOUN_1			
 West Flemish	West Flemish			way_NOUN	weg	ʋˈæɦ̥	ʋ ˈæ ɦ̥		way_NOUN_1			
-Limburgish	Limburgish			way_NOUN	weeg	βˈeːx	β ˈeː x		way_NOUN_1			
+Limburgish	Limburgish			way_NOUN	weeg	βˈeːɣ̊	β ˈeː ɣ̊		way_NOUN_1			
 Ripuarian	Ripuarian			way_NOUN	Wääch	ʋˈɛːɕ	ʋ ˈɛː ɕ		way_NOUN_1			
 Luxembourgish	Luxembourgish			way_NOUN	Wee	vˈeː	v ˈeː		way_NOUN_1			
 Pennsylvania German	Pennsylvania German			way_NOUN	Weg	ʋˈeːɡ̊	ʋ ˈeː ɡ̊		way_NOUN_1			
@@ -10034,7 +10050,7 @@ Alsatian	Alsatian			week_NOUN	Wuch	ʋˈux	ʋ ˈu x		week_NOUN_1
 Swiss German	Swiss German			week_NOUN	Wuch	ʋˈuχːə	ʋ ˈu χː ə		week_NOUN_1			
 Proto-Germanic	Proto-Germanic			wild_ADJ	wilþijaz	wˈilθijɑz	w ˈi l θ i j ɑ z		wild_ADJ_1			
 Gothic	Gothic			wild_ADJ	𐍅𐌹𐌻𐌸𐌴𐌹𐍃	wˈilθiːs	w ˈi l θ iː s		wild_ADJ_1			
-Old West Norse	Old West Norse			wild_ADJ	villr	vˈillr	v ˈi l l r		wild_ADJ_1			
+Old West Norse	Old West Norse			wild_ADJ	villr	vˈillr̥	v ˈi l l r̥		wild_ADJ_1			
 Icelandic	Icelandic			wild_ADJ	villur	vˈɪt͡l̥ʏr̥	v ˈɪ t͡l̥ ʏ r̥		wild_ADJ_1			
 Faroese	Faroese			wild_ADJ	villur	vˈɪt͡l̥ʊɹ	v ˈɪ t͡l̥ ʊ ɹ		wild_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			wild_ADJ	vill	ʋˈɪll	ʋ ˈɪ l l		wild_ADJ_1			
@@ -10112,7 +10128,7 @@ Alsatian	Alsatian			wine_NOUN	Win	ʋˈin	ʋ ˈi n		wine_NOUN_1
 Swiss German	Swiss German			wine_NOUN	Wii	ʋˈiː	ʋ ˈiː		wine_NOUN_1			
 Proto-Germanic	Proto-Germanic			wind_NOUN	windaz	wˈindɑz	w ˈi n d ɑ z		wind_NOUN_1			
 Gothic	Gothic			wind_NOUN	𐍅𐌹𐌽𐌳𐍃	wˈinds	w ˈi n d s		wind_NOUN_1			
-Old West Norse	Old West Norse			wind_NOUN	vindr	vˈindr	v ˈi n d r		wind_NOUN_1			
+Old West Norse	Old West Norse			wind_NOUN	vindr	vˈindr̥	v ˈi n d r̥		wind_NOUN_1			
 Icelandic	Icelandic			wind_NOUN	vindur	vˈɪnd̥ʏr̥	v ˈɪ n d̥ ʏ r̥		wind_NOUN_1			
 Faroese	Faroese			wind_NOUN	vindur	vˈɪnd̥ʊɹ	v ˈɪ n d̥ ʊ ɹ		wind_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			wind_NOUN	vind	ʋˈɪnn	ʋ ˈɪ n n		wind_NOUN_1			
@@ -10154,12 +10170,12 @@ Alsatian	Alsatian			wind_NOUN	Wind	ʋˈind̥	ʋ ˈi n d̥		wind_NOUN_1
 Swiss German	Swiss German			wind_NOUN	Wind	ʋˈind̥	ʋ ˈi n d̥		wind_NOUN_1			
 Proto-Germanic	Proto-Germanic			winter_NOUN	wintruz	wˈintruz	w ˈi n t r u z		winter_NOUN_1			
 Gothic	Gothic			winter_NOUN	𐍅𐌹𐌽𐍄𐍂𐌿𐍃	wˈintrus	w ˈi n t r u s		winter_NOUN_1			
-Old West Norse	Old West Norse			winter_NOUN	vetr	vˈetr	v ˈe t r		winter_NOUN_1			
+Old West Norse	Old West Norse			winter_NOUN	vetr	vˈetr̥	v ˈe t r̥		winter_NOUN_1			
 Icelandic	Icelandic			winter_NOUN	vetur	vˈɛːtʏr̥	v ˈɛː t ʏ r̥		winter_NOUN_1			
 Faroese	Faroese			winter_NOUN	vetur	vˈeːʰtʊr	v ˈeː ʰt ʊ r		winter_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			winter_NOUN	vetter	ʋˈɛʰttəɾ	ʋ ˈɛ ʰt t ə ɾ		winter_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			winter_NOUN	vinter	ʋˈɪntəɾ	ʋ ˈɪ n t ə ɾ		winter_NOUN_1			
-Danish	Danish			winter_NOUN	vinter	ʋˈenˀd̥ʌ	ʋ ˈe nˀ d̥ ʌ		winter_NOUN_1			
+Danish	Danish			winter_NOUN	vinter	ʋˈenˀd̥ɐ	ʋ ˈe nˀ d̥ ɐ		winter_NOUN_1			
 Swedish	Swedish			winter_NOUN	vinter	vˈɪntɛr	v ˈɪ n t ɛ r		winter_NOUN_1			
 Elfdalian	Elfdalian			winter_NOUN	witter	wˈɪttɛr	w ˈɪ t t ɛ r		winter_NOUN_1			
 Scots	Scots			winter_NOUN	winter	wˈɪntər	w ˈɪ n t ə r		winter_NOUN_1			
@@ -10235,7 +10251,7 @@ Alsatian	Alsatian			know_VERB	wisse	ʋˈisə	ʋ ˈi s ə		know_VERB_1
 Swiss German	Swiss German			know_VERB	wüsse	ʋˈysːə	ʋ ˈy sː ə		know_VERB_1			
 Proto-Germanic	Proto-Germanic			we_PRON	wīz	wˈiːz	w ˈiː z		we_PRON_1			
 Gothic	Gothic			we_PRON	𐍅𐌴𐌹𐍃	wˈiːs	w ˈiː s		we_PRON_1			
-Old West Norse	Old West Norse			we_PRON	vér	vˈeːr	v ˈeː r		we_PRON_1			
+Old West Norse	Old West Norse			we_PRON	vér	vˈeːr̥	v ˈeː r̥		we_PRON_1			
 Icelandic	Icelandic			we_PRON	vér	vjˈɛːr̥	v j ˈɛː r̥		we_PRON_1			
 Faroese	Faroese			we_PRON	vær	vˈɛːa̯ɹ	v ˈɛːa̯ ɹ		we_PRON_1			
 Nynorsk Norwegian	Nynorsk Norwegian			we_PRON	vi	ʋˈiː	ʋ ˈiː		we_PRON_1			
@@ -10289,7 +10305,7 @@ Mainland North Frisian	Mainland North Frisian			root_NOUN_FEM	rötj	ʀˈœtʲ	ʀ
 East Frisian Low Saxon	East Frisian Low Saxon			root_NOUN_FEM	rüüed	rˈyːʏ̯d̥	r ˈyːʏ̯ d̥		root_NOUN_FEM_1			
 Proto-Germanic	Proto-Germanic			wolf_NOUN	wulfaz	wˈulɸɑz	w ˈu l ɸ ɑ z		wolf_NOUN_1			
 Gothic	Gothic			wolf_NOUN	𐍅𐌿𐌻𐍆𐍃	wˈulfs	w ˈu l f s		wolf_NOUN_1			
-Old West Norse	Old West Norse			wolf_NOUN	ulfr	ˈulvr	ˈu l v r		wolf_NOUN_1			
+Old West Norse	Old West Norse			wolf_NOUN	ulfr	ˈulvr̥	ˈu l v r̥		wolf_NOUN_1			
 Icelandic	Icelandic			wolf_NOUN	úlfur	ˈulvʏr̥	ˈu l v ʏ r̥		wolf_NOUN_1			
 Faroese	Faroese			wolf_NOUN	úlvur	ˈʏlvʊɹ	ˈʏ l v ʊ ɹ		wolf_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			wolf_NOUN	ulv	ˈʉlʋ	ˈʉ l ʋ		wolf_NOUN_1			
@@ -10340,7 +10356,7 @@ Elfdalian	Elfdalian			wool_NOUN_FEM	ull	ˈʉll	ˈʉ l l		wool_NOUN_FEM_1
 Scots	Scots			wool_NOUN_FEM	oo	ˈuː	ˈuː		wool_NOUN_FEM_1			
 English	English			wool_NOUN_FEM	wool	wˈʊɫ	w ˈʊ ɫ		wool_NOUN_FEM_1			
 American English	American English			wool_NOUN_FEM	wool	wˈʊɫ	w ˈʊ ɫ		wool_NOUN_FEM_1			
-Old English	Old English			wool_NOUN_FEM	wull	wˈuɫ	w ˈu ɫ		wool_NOUN_FEM_1			
+Old English	Old English			wool_NOUN_FEM	wull	wˈuɫɫ	w ˈu ɫ ɫ		wool_NOUN_FEM_1			
 West Frisian	West Frisian			wool_NOUN_FEM	wolle	ʋˈɔlə	ʋ ˈɔ l ə		wool_NOUN_FEM_1			
 Saterland Frisian	Saterland Frisian			wool_NOUN_FEM	Wulle	vˈʊlə	v ˈʊ l ə		wool_NOUN_FEM_1			
 Insular North Frisian	Insular North Frisian			wool_NOUN_FEM	Ül	ˈʏl	ˈʏ l		wool_NOUN_FEM_1			
@@ -10373,7 +10389,7 @@ Icelandic	Icelandic			wonder_NOUN	undur	ˈʏnd̥ʏr̥	ˈʏ n d̥ ʏ r̥		wonder_
 Faroese	Faroese			wonder_NOUN	undur	ˈʊnd̥ʊɹ	ˈʊ n d̥ ʊ ɹ		wonder_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			wonder_NOUN	under	ˈʉndəɾ	ˈʉ n d ə ɾ		wonder_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			wonder_NOUN	under	ˈʉnnəɾ	ˈʉ n n ə ɾ		wonder_NOUN_1			
-Danish	Danish			wonder_NOUN	under	ˈɔnˀʌ	ˈɔ nˀ ʌ		wonder_NOUN_1			
+Danish	Danish			wonder_NOUN	under	ˈunˀɐ	ˈu nˀ ɐ		wonder_NOUN_1			
 Swedish	Swedish			wonder_NOUN	under	ˈɵndɛr	ˈɵ n d ɛ r		wonder_NOUN_1			
 Elfdalian	Elfdalian			wonder_NOUN	under	ˈʉndɛr	ˈʉ n d ɛ r		wonder_NOUN_1			
 Scots	Scots			wonder_NOUN	wunner	wˈʌnər	w ˈʌ n ə r		wonder_NOUN_1			
@@ -10485,7 +10501,7 @@ Alsatian	Alsatian			word_NOUN	Wort	ʋˈoʁt	ʋ ˈo ʁ t		word_NOUN_1
 Swiss German	Swiss German			word_NOUN	Woort	ʋˈoːrtː	ʋ ˈoː r tː		word_NOUN_1			
 Proto-Germanic	Proto-Germanic			worm_NOUN	wurmiz	wˈurmiz	w ˈu r m i z		worm_NOUN_1			
 Gothic	Gothic			worm_NOUN	𐍅𐌰𐌿𐍂𐌼𐍃	wˈɔrms	w ˈɔ r m s		worm_NOUN_1			
-Old West Norse	Old West Norse			worm_NOUN	ormr	ˈormr	ˈo r m r		worm_NOUN_1			
+Old West Norse	Old West Norse			worm_NOUN	ormr	ˈormr̥	ˈo r m r̥		worm_NOUN_1			
 Icelandic	Icelandic			worm_NOUN	ormur	ˈɔrmʏr̥	ˈɔ r m ʏ r̥		worm_NOUN_1			
 Faroese	Faroese			worm_NOUN	ormur	ˈɔɹmʊɹ	ˈɔ ɹ m ʊ ɹ		worm_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			worm_NOUN	orm	ˈɔɾm	ˈɔ ɾ m		worm_NOUN_1			
@@ -10558,7 +10574,7 @@ Bavarian	Bavarian			thank_VERB	dankn	d̥ˈaŋɡ̊n̩	d̥ ˈa ŋ ɡ̊ n̩		thank_
 Swabian	Swabian			thank_VERB	danga	dˈaŋɡa	d ˈa ŋ ɡ a		thank_VERB_1			
 Swiss German	Swiss German			thank_VERB	danke	d̥ˈɒŋkːə	d̥ ˈɒ ŋ kː ə		thank_VERB_1			
 Proto-Germanic	Proto-Germanic			thick_ADJ	þekuz	θˈekuz	θ ˈe k u z		thick_ADJ_1			
-Old West Norse	Old West Norse			thick_ADJ	þykkr	θˈykkr	θ ˈy k k r		thick_ADJ_1			
+Old West Norse	Old West Norse			thick_ADJ	þykkr	θˈykkr̥	θ ˈy k k r̥		thick_ADJ_1			
 Icelandic	Icelandic			thick_ADJ	þykkur	θˈɪʰkʏr̥	θ ˈɪ ʰk ʏ r̥		thick_ADJ_1			
 Faroese	Faroese			thick_ADJ	tjúkkur	ʧʰˈʏʰkʊɹ	ʧʰ ˈʏ ʰk ʊ ɹ		thick_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			thick_ADJ	tjukk	çˈʉʰkk	ç ˈʉ ʰk k		thick_ADJ_1			
@@ -10595,7 +10611,7 @@ Swabian	Swabian			thick_ADJ	digg	dˈiɡ	d ˈi ɡ		thick_ADJ_1
 Swiss German	Swiss German			thick_ADJ	dick	d̥ˈikː	d̥ ˈi kː		thick_ADJ_1			
 Proto-Germanic	Proto-Germanic			thief_NOUN	þeubaz	θˈeu̯βɑz	θ ˈeu̯ β ɑ z		thief_NOUN_1			
 Gothic	Gothic			thief_NOUN	𐌸𐌹𐌿𐍆𐍃	θˈiu̯fs	θ ˈiu̯ f s		thief_NOUN_1			
-Old West Norse	Old West Norse			thief_NOUN	þjófr	θjˈoːvr	θ j ˈoː v r		thief_NOUN_1			
+Old West Norse	Old West Norse			thief_NOUN	þjófr	θjˈoːvr̥	θ j ˈoː v r̥		thief_NOUN_1			
 Icelandic	Icelandic			thief_NOUN	þjófur	θjˈoːu̯vʏr̥	θ j ˈoːu̯ v ʏ r̥		thief_NOUN_1			
 Faroese	Faroese			thief_NOUN	tjóvur	ʧʰˈɔːu̯vʊɹ	ʧʰ ˈɔːu̯ v ʊ ɹ		thief_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			thief_NOUN	tjov	çˈuːʋ	ç ˈuː ʋ		thief_NOUN_1			
@@ -10671,7 +10687,7 @@ Proto-Germanic	Proto-Germanic			thing_NOUN	þinhsą	θˈinxsɑ̃	θ ˈi n x s ɑ
 Gothic	Gothic			thing_NOUN	𐌸𐌴𐌹𐌷𐍃	θˈiːhs	θ ˈiː h s		thing_NOUN_2			
 Proto-Germanic	Proto-Germanic			Teutonic_ADJ	þiudiskaz	θˈiu̯ðiskɑz	θ ˈiu̯ ð i s k ɑ z		Teutonic_ADJ_1			
 Gothic	Gothic			Teutonic_ADJ	𐌸𐌹𐌿𐌳𐌹𐍃𐌺𐍃	θˈiu̯ðisks	θ ˈiu̯ ð i s k s		Teutonic_ADJ_1			
-Old West Norse	Old West Norse			Teutonic_ADJ	þýzkr	θˈyːʦkr	θ ˈyː ʦ k r		Teutonic_ADJ_1			
+Old West Norse	Old West Norse			Teutonic_ADJ	þýzkr	θˈyːʦkr̥	θ ˈyː ʦ k r̥		Teutonic_ADJ_1			
 Icelandic	Icelandic			Teutonic_ADJ	þýskur	θˈiskʏr̥	θ ˈi s k ʏ r̥		Teutonic_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			Teutonic_ADJ	tˈysk	tʰˈʏsk	tʰ ˈʏ s k		Teutonic_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			Teutonic_ADJ	tˈysk	tʰˈʏsk	tʰ ˈʏ s k		Teutonic_ADJ_1			
@@ -10712,7 +10728,7 @@ Icelandic	Icelandic			thirteen_NUM	þrettán	θrˈɛʰtaːu̯n	θ r ˈɛ ʰt aː
 Faroese	Faroese			thirteen_NUM	trettan	tʰɹˈɛʰtan	tʰ ɹ ˈɛ ʰt a n		thirteen_NUM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			thirteen_NUM	tretten	tʰɾˈɛtten	tʰ ɾ ˈɛ t t e n		thirteen_NUM_1			
 Bokmål Norwegian	Bokmål Norwegian			thirteen_NUM	tretten	tʰɾˈɛttən	tʰ ɾ ˈɛ t t ə n		thirteen_NUM_1			
-Danish	Danish			thirteen_NUM	tretten	ʦʰʁˈɑd̥n̩	ʦʰ ʁ ˈɑ d̥ n̩		thirteen_NUM_1			
+Danish	Danish			thirteen_NUM	tretten	ʦʰʁˈɑd̥ən	ʦʰ ʁ ˈɑ d̥ ə n		thirteen_NUM_1			
 Swedish	Swedish			thirteen_NUM	tretton	tʰrˈɛttɔn	tʰ r ˈɛ t t ɔ n		thirteen_NUM_1			
 Elfdalian	Elfdalian			thirteen_NUM	trettǫ	tʰrˈɛttɔ̃	tʰ r ˈɛ t t ɔ̃		thirteen_NUM_1			
 Scots	Scots			thirteen_NUM	thritteen	θrˈɪtin	θ r ˈɪ t i n		thirteen_NUM_1			
@@ -10748,7 +10764,7 @@ Alsatian	Alsatian			thirteen_NUM	drizehn	d̥ʁˈiʦeːn	d̥ ʁ ˈi ʦ eː n		thi
 Swiss German	Swiss German			thirteen_NUM	driizä	d̥rˈiːʦæ	d̥ r ˈiː ʦ æ		thirteen_NUM_1			
 Proto-Germanic	Proto-Germanic			three_NUM	þrīz	θrˈiːz	θ r ˈiː z		three_NUM_1			
 Gothic	Gothic			three_NUM	𐌸𐍂𐌴𐌹𐍃	θrˈiːs	θ r ˈiː s		three_NUM_1			
-Old West Norse	Old West Norse			three_NUM	þrír	θrˈiːr	θ r ˈiː r		three_NUM_1			
+Old West Norse	Old West Norse			three_NUM	þrír	θrˈiːr̥	θ r ˈiː r̥		three_NUM_1			
 Icelandic	Icelandic			three_NUM	þrír	θrˈiːr̥	θ r ˈiː r̥		three_NUM_1			
 Faroese	Faroese			three_NUM	trý	tʰɹˈʊ̯iː	tʰ ɹ ˈʊ̯iː		three_NUM_1			
 Nynorsk Norwegian	Nynorsk Norwegian			three_NUM	tre	tʰɾˈeː	tʰ ɾ ˈeː		three_NUM_1			
@@ -10865,7 +10881,7 @@ Icelandic	Icelandic			thumb_NOUN	þumi	θˈuːmɪ	θ ˈuː m ɪ		thumb_NOUN_1
 Faroese	Faroese			thumb_NOUN	tummi	tʰˈʊmmɪ	tʰ ˈʊ m m ɪ		thumb_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			thumb_NOUN	tomme	tʰˈɔmme	tʰ ˈɔ m m e		thumb_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			thumb_NOUN	tomme	tʰˈʊmmə	tʰ ˈʊ m m ə		thumb_NOUN_1			
-Danish	Danish			thumb_NOUN	tomme	 ʦʰˈʌmə	ʦʰ ˈʌ m ə		thumb_NOUN_1			
+Danish	Danish			thumb_NOUN	tomme	 ʦʰˈɔmə	ʦʰ ˈɔ m ə		thumb_NOUN_1			
 Swedish	Swedish			thumb_NOUN	tumme	tʰˈɵmmɛ	tʰ ˈɵ m m ɛ		thumb_NOUN_1			
 Scots	Scots			thumb_NOUN	thoum	θˈum	θ ˈu m		thumb_NOUN_1			
 English	English			thumb_NOUN	thumb	θˈɐm	θ ˈɐ m		thumb_NOUN_1			
@@ -10929,7 +10945,7 @@ Upper Franconian	Upper Franconian			thin_ADJ	dinn	d̥ˈɪn	d̥ ˈɪ n		thin_ADJ_
 Bavarian	Bavarian			thin_ADJ	dinn	d̥ˈin	d̥ ˈi n		thin_ADJ_1			
 Swiss German	Swiss German			thin_ADJ	dünn	d̥ˈyn	d̥ ˈy n		thin_ADJ_1			
 Proto-Germanic	Proto-Germanic			thin_ADJ	þunnuz	θˈunnuz	θ ˈu n n u z		thin_ADJ_2			
-Old West Norse	Old West Norse			thin_ADJ	þunnr	θˈunnr	θ ˈu n n r		thin_ADJ_2			
+Old West Norse	Old West Norse			thin_ADJ	þunnr	θˈunnr̥	θ ˈu n n r̥		thin_ADJ_2			
 Icelandic	Icelandic			thin_ADJ	þunnur	θˈʏnnʏr̥	θ ˈʏ n n ʏ r̥		thin_ADJ_2			
 Faroese	Faroese			thin_ADJ	tunnur	tʰˈʊnnʊɹ	tʰ ˈʊ n n ʊ ɹ		thin_ADJ_2			
 Swedish	Swedish			thin_ADJ	tunn	tʰˈɵnn	tʰ ˈɵ n n		thin_ADJ_2			
@@ -10966,11 +10982,11 @@ Bavarian	Bavarian			thunder_NOUN	Donna	d̥ˈona	d̥ ˈo n a		thunder_NOUN_1
 Swabian	Swabian			thunder_NOUN	Donndr	dˈondʌ	d ˈo n d ʌ		thunder_NOUN_1			
 Alsatian	Alsatian			thunder_NOUN	Donner	d̥ˈonəʁ	d̥ ˈo n ə ʁ		thunder_NOUN_1			
 Proto-Germanic	Proto-Germanic			thorn_NOUN	þurnaz	θˈurnɑz	θ ˈu r n ɑ z		thorn_NOUN_1			
-Old West Norse	Old West Norse			thorn_NOUN	þyrnir	θˈyrnir	θ ˈy r n i r		thorn_NOUN_1			
+Old West Norse	Old West Norse			thorn_NOUN	þyrnir	θˈyrnir̥	θ ˈy r n i r̥		thorn_NOUN_1			
 Icelandic	Icelandic			thorn_NOUN	þyrnir	θˈɪrt͡n̥ɪr̥	θ ˈɪ r t͡n̥ ɪ r̥		thorn_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			thorn_NOUN	torn	tʰˈʊɾn	tʰ ˈʊ ɾ n		thorn_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			thorn_NOUN	torn	tʰˈuːɳ	tʰ ˈuː ɳ		thorn_NOUN_1			
-Danish	Danish			thorn_NOUN	tjørn	ʨˈɶɐˀn	ʨ ˈɶ ɐˀ n		thorn_NOUN_1			
+Danish	Danish			thorn_NOUN	tjørn	ʨˈœɐˀn	ʨ ˈœ ɐˀ n		thorn_NOUN_1			
 Swedish	Swedish			thorn_NOUN	törne	tʰˈœɳɳɛ	tʰ ˈœ ɳ ɳ ɛ		thorn_NOUN_1			
 Scots	Scots			thorn_NOUN	thorn	θˈorn	θ ˈo r n		thorn_NOUN_1			
 English	English			thorn_NOUN	thorn	θˈɔːn	θ ˈɔː n		thorn_NOUN_1			
@@ -11008,7 +11024,7 @@ Icelandic	Icelandic			thirst_NOUN	þorsti	θˈɔr̥stɪ	θ ˈɔ r̥ s t ɪ		thir
 Faroese	Faroese			thirst_NOUN	tosti	tʰˈɔstɪ	tʰ ˈɔ s t ɪ		thirst_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			thirst_NOUN	tørste	tʰˈœɾstə	tʰ ˈœ ɾ s t ə		thirst_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			thirst_NOUN	tørst	tʰˈœʂʈ	tʰ ˈœ ʂ ʈ		thirst_NOUN_1			
-Danish	Danish			thirst_NOUN	tørst	ʦʰˈɶɐsd̥	ʦʰ ˈɶ ɐ s d̥		thirst_NOUN_1			
+Danish	Danish			thirst_NOUN	tørst	ʦʰˈœɐsd̥	ʦʰ ˈœ ɐ s d̥		thirst_NOUN_1			
 Swedish	Swedish			thirst_NOUN	törst	tʰˈœʂʈ	tʰ ˈœ ʂ ʈ		thirst_NOUN_1			
 Elfdalian	Elfdalian			thirst_NOUN	tuost	tʰˈʉə̯st	tʰ ˈʉə̯ s t		thirst_NOUN_1			
 Scots	Scots			thirst_NOUN	thrist	θrˈɪst	θ r ˈɪ s t		thirst_NOUN_1			
@@ -11041,12 +11057,12 @@ Swabian	Swabian			thirst_NOUN	Durschd	dˈuʕʃd	d ˈu ʕ ʃ d		thirst_NOUN_1
 Alsatian	Alsatian			thirst_NOUN	Durscht	d̥ˈuʁʃt	d̥ ˈu ʁ ʃ t		thirst_NOUN_1			
 Swiss German	Swiss German			thirst_NOUN	Turscht	d̥ˈurʃːtː	d̥ ˈu r ʃː tː		thirst_NOUN_1			
 Proto-Germanic	Proto-Germanic			dry_ADJ	þursuz	θˈursuz	θ ˈu r s u z		dry_ADJ_3			
-Old West Norse	Old West Norse			dry_ADJ	þurr	θˈurr	θ ˈu r r		dry_ADJ_3			
+Old West Norse	Old West Norse			dry_ADJ	þurr	θˈurr̥	θ ˈu r r̥		dry_ADJ_3			
 Icelandic	Icelandic			dry_ADJ	þurr	θˈʏr̥	θ ˈʏ r̥		dry_ADJ_3			
 Faroese	Faroese			dry_ADJ	turrur	tʰˈʊɹʊɹ	tʰ ˈʊ ɹ ʊ ɹ		dry_ADJ_3			
 Nynorsk Norwegian	Nynorsk Norwegian			dry_ADJ	turr	tʰˈʉɾ	tʰ ˈʉ ɾ		dry_ADJ_3			
 Bokmål Norwegian	Bokmål Norwegian			dry_ADJ	tørr	tʰˈœɾ	tʰ ˈœ ɾ		dry_ADJ_3			
-Danish	Danish			dry_ADJ	tør	ʦʰˈɶˀɐ	ʦʰ ˈɶˀ ɐ		dry_ADJ_3			
+Danish	Danish			dry_ADJ	tør	ʦʰˈœˀɐ	ʦʰ ˈœˀ ɐ		dry_ADJ_3			
 Swedish	Swedish			dry_ADJ	torr	tʰˈɔrr	tʰ ˈɔ r r		dry_ADJ_3			
 Elfdalian	Elfdalian			dry_ADJ	tuorr	tʰˈʉə̯rr	tʰ ˈʉə̯ r r		dry_ADJ_3			
 Old English	Old English			dry_ADJ	þyrre	θˈyrre	θ ˈy r r e		dry_ADJ_3			
@@ -11100,7 +11116,7 @@ Bavarian	Bavarian			thousand_NUM	dausad	d̥ˈau̯sad̥	d̥ ˈau̯ s a d̥		thous
 Swabian	Swabian			thousand_NUM	dausad	dˈao̯sad	d ˈao̯ s a d		thousand_NUM_1			
 Alsatian	Alsatian			thousand_NUM	döisig	d̥ˈøi̯siʃ	d̥ ˈøi̯ s i ʃ		thousand_NUM_1			
 Swiss German	Swiss German			thousand_NUM	tuusig	tːˈuːz̥iɡ̊	tː ˈuː z̥ i ɡ̊		thousand_NUM_1			
-Old West Norse	Old West Norse			dear_ADJ	kærr	cʰˈɛːrr	cʰ ˈɛː r r		dear_ADJ_1			
+Old West Norse	Old West Norse			dear_ADJ	kærr	cʰˈɛːrr̥	cʰ ˈɛː r r̥		dear_ADJ_1			
 Icelandic	Icelandic			dear_ADJ	kær	cʰˈaːi̯r̥	cʰ ˈaːi̯ r̥		dear_ADJ_1			
 Faroese	Faroese			dear_ADJ	kærur	ʧʰˈɛːa̯ɹʊɹ	ʧʰ ˈɛːa̯ ɹ ʊ ɹ		dear_ADJ_1			
 Nynorsk Norwegian	Nynorsk Norwegian			dear_ADJ	kjær	çˈæːɾ	ç ˈæː ɾ		dear_ADJ_1			

@@ -1,4 +1,5 @@
-Megleno-Romanian	Aromanian	probability
+Megleno-Romanian	Megleno-Romanian	probability
+ˈɛ	ˈe	1.0
 ˈɔ_j	ˈɨ	1.0
 ˈɔ	ˈɨ	1.0
 ˈi	ˈi	1.0
@@ -10,6 +11,7 @@ Megleno-Romanian	Aromanian	probability
 ʎ	ʎ	1.0
 ʃ	ʃ	1.0
 ɡ	ɡ	1.0
+ɔ	ɨ	1.0
 ŋ	-	1.0
 z	ʣ	1.0
 w	w	1.0
@@ -35,7 +37,6 @@ a	-	1.0
 <#_w_ˈo	<#_ˈo	1.0
 <#_r	<#_a_r	1.0
 <#	<#_a	1.0
-#>	u_#>	1.0
 ˈa	ˈa	0.946
 n	n	0.921
 ˈu	ˈu	0.917
@@ -48,8 +49,10 @@ m	m	0.895
 b	b	0.857
 u	u	0.824
 j	j	0.7
+#>	u_#>	0.636
 v	v	0.5
 v	j	0.5
+#>	ə_#>	0.364
 j	-	0.3
 u	-	0.176
 ˈo	ˈa	0.143

@@ -23,7 +23,11 @@ def ngram2log_format(ngram, phon_env=False):
 
 def write_sample_log(sample_logs, log_file):
     make_outdir(log_file)
-    content = '\n\n'.join([sample_logs[sample_n] for sample_n in range(len(sample_logs))])
+    content = []
+    for _, (same_meaning_log, diff_meaning_log) in sample_logs.items():
+        sample_n_log = "\n\n".join([same_meaning_log, diff_meaning_log])
+        content.append(sample_n_log)
+    content = "\n\n".join(content)
     with open(log_file, 'w') as f:
         f.write(content)
 
@@ -40,7 +44,7 @@ def write_alignments_log(alignment_log, log_file):
             align_str = visual_align(alignment.alignment, gap_ch=alignment.gap_ch)
             align_cost = round(alignment.cost, 3)
             seq_map1, seq_map2 = alignment.seq_map
-            f.write(f'{align_str}\n{seq_map1}\n{seq_map2}\nCOST: {align_cost}\n')
+            f.write(f'{align_str}\n{seq_map1}\n{seq_map2}\nSCORE: {align_cost}\n')
             if i < n_alignments - 1:
                 f.write(f'\n{ALIGNMENT_DELIMITER}\n\n')
 
