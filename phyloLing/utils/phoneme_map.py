@@ -99,6 +99,7 @@ class PhonemeMap:
     def __init__(self, default_value: SomeNumber = 0):
         self.default_value: SomeNumber = default_value
         self.internal_map = DoubleMap[MultiPhoneme, SomeNumber](default_value)
+        self.phon_dist_added = False
 
     def __getitem__(self, **args) -> SomeNumber:
         raise NotImplementedError("Use get_value instead")
