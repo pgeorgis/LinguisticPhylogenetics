@@ -4,12 +4,15 @@ from phyloLing.test.utils.test_runner import run_test_suite
 from phyloLing.test.utils.types import LanguageFamily
 
 dataset = TestDataset(LanguageFamily.Germanic)
-TestTreeDistanceClass, TestDeterminismClass = create_test_classes(dataset)
+TestTreeDistanceClass, TestDeterminismClass, TestMinimalTreeDistanceClass = create_test_classes(dataset)
 
 class TestTreeDistance(TestTreeDistanceClass):
     pass
 
 class TestDeterminism(TestDeterminismClass):
+    pass
+
+class TestMinimalTreeDistance(TestMinimalTreeDistanceClass):
     pass
 
 if __name__ == '__main__':

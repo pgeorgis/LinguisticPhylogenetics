@@ -1,6 +1,6 @@
 stages:
   - prepare
-  - test-determinism
+  - test
   - get-trees
   - reports
 
@@ -77,12 +77,12 @@ prepare:install_dependencies:
     <<: *commit-cache
     policy: pull-push
 
-.test-determinism-job:
-  stage: test-determinism
+.test-job:
+  stage: test
   needs:
     - prepare:install_dependencies
   script:
-    - make test-determinism-${DATASET}
+    - make test-${DATASET}
   artifacts:
     when: always
     paths:
@@ -93,26 +93,26 @@ prepare:install_dependencies:
       junit: tests/*.xml
 
 test-romance:
-  extends: .test-determinism-job
+  extends: .test-job
   variables:
     DATASET: romance
 
 test-germanic:
-  extends: .test-determinism-job
+  extends: .test-job
   variables:
     DATASET: germanic
 
 test-sinitic:
-  extends: .test-determinism-job
+  extends: .test-job
   variables:
     DATASET: sinitic
 
 test-balto-slavic:
-  extends: .test-determinism-job
+  extends: .test-job
   variables:
     DATASET: balto-slavic
 
-.test-tree-distance-job:
+.classify-job:
   stage: get-trees
   needs:
     - prepare:install_dependencies
@@ -129,22 +129,22 @@ test-balto-slavic:
       junit: tests/*.xml
 
 classify-romance:
-  extends: .test-tree-distance-job
+  extends: .classify-job
   variables:
     DATASET: Romance
 
 classify-germanic:
-  extends: .test-tree-distance-job
+  extends: .classify-job
   variables:
     DATASET: Germanic
 
 classify-sinitic:
-  extends: .test-tree-distance-job
+  extends: .classify-job
   variables:
     DATASET: Sinitic
 
 classify-balto-slavic:
-  extends: .test-tree-distance-job
+  extends: .classify-job
   variables:
     DATASET: BaltoSlavic
 

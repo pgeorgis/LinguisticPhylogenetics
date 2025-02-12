@@ -13,7 +13,7 @@ test_output_time_zone: tzinfo = ZoneInfo('Europe/Berlin')
 
 # should not be changed until a clean way to reload the module is found
 exec_in_subprocess: bool = True
-assert_distance_matrice_equality: bool = False
+assert_distance_matrice_equality: bool = True
 
 tail_output: dict[TestConfiguration, bool] = {
     TestConfiguration.MINIMAL: False,

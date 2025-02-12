@@ -1,5 +1,5 @@
 experiment:
-    name: "test"
+    name: "test-full"
 
 config:
     extend: "datasets/Sinitic/config/sinitic_config.yml"
