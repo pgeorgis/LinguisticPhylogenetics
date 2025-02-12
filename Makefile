@@ -98,5 +98,7 @@ coverage: init-silent
 	@source venv/bin/activate && \
 		export PYTHONPATH=$(shell pwd):$$PYTHONPATH && \
 		coverage erase && \
-		coverage run phyloLing/classifyLangs.py $(COVERAGE_REPORT_CONFIG) && \
-		coverage xml
+		coverage run --omit=phyloLing/phonUtils/* phyloLing/classifyLangs.py $(COVERAGE_REPORT_CONFIG) && \
+		coverage xml && \
+		coverage html -d coverage && \
+		coverage report
