@@ -116,25 +116,25 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
     lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
     if lang1 is not None and lang2 is not None:
         align_key = get_align_key(word1.ipa, word2.ipa)
-        saved_alignment, _, family_index[PHONE_CORRELATORS_INDEX_KEY] = retrieve_saved_alignment(
+        saved_alignment, correlator, family_index[PHONE_CORRELATORS_INDEX_KEY] = retrieve_saved_alignment(
             align_key, lang1, lang2, family_index,
         )
         if saved_alignment is not None:
             return saved_alignment
 
-        # Check whether phoneme PMI has been calculated for this language pair
-        # If not, then calculate it; if so, then retrieve it
-        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2, family_index, **kwargs)
+        # Align the phonetic sequences
+        alignment = correlator.align_wordlist(
+            [(word1, word2)],
+            align_costs=correlator.pmi_results,
+            **kwargs
+        )[0]
 
-        # Align the phonetic sequences with phonetic similarity and phoneme PMI
-        alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
         reverse_alignment = alignment.reverse()
         reverse_align_key = reverse_alignment.key
         # Add new alignment to alignment log
-        key = (lang1.name, lang2.name, None, 1) # TODO this has hardcoded wordlist and seed
-        twin_key = (lang2.name, lang1.name, None, 1) # TODO this has hardcoded wordlist and seed
-        family_index[PHONE_CORRELATORS_INDEX_KEY][key].align_log[align_key] = alignment
-        family_index[PHONE_CORRELATORS_INDEX_KEY][twin_key].align_log[reverse_align_key] = reverse_alignment
+        correlator.align_log[align_key] = alignment
+        twin, family_index[PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(family_index[PHONE_CORRELATORS_INDEX_KEY])
+        twin.align_log[reverse_align_key] = reverse_alignment
 
     # Perform phonetic alignment without PMI support
     else:
@@ -758,11 +758,11 @@ def hybrid_dist(word1, word2, funcs: dict, weights=None, normalize_weights=False
 def log_alignment(word1, word2, lang1, lang2, family_index):
     if "alignment" not in lang1.lexical_comparison[lang2.name][(word1, word2)]:
         align_key = get_align_key(word1, word2)
-        alignment, _, family_index[PHONE_CORRELATORS_INDEX_KEY] = retrieve_saved_alignment(
+        alignment, correlator, family_index[PHONE_CORRELATORS_INDEX_KEY] = retrieve_saved_alignment(
             align_key, lang1, lang2, family_index
         )
         if alignment is None:
-            logger.warning(f"No saved alignment found for key {align_key}")
+            logger.debug(f"No saved alignment found for key {align_key}")
         else:
             alignment_str = visual_align(alignment)
             lang1.lexical_comparison[lang2.name][(word1, word2)]["alignment"] = alignment_str
