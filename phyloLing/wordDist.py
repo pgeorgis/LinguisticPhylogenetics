@@ -762,7 +762,7 @@ def log_alignment(word1, word2, lang1, lang2, family_index):
             align_key, lang1, lang2, family_index
         )
         if alignment is None:
-            logger.warning(f"No saved alignment found for key {align_key}")
+            logger.debug(f"No saved alignment found for key {align_key}")
         else:
             alignment_str = visual_align(alignment)
             lang1.lexical_comparison[lang2.name][(word1, word2)]["alignment"] = alignment_str
