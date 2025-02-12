@@ -46,7 +46,6 @@ default:
 prepare:ci:
   stage: prepare
   image: ${DIND_IMAGE}
-  resource_group: prepare
   before_script: []
   services:
     - name: ${DIND_IMAGE}
@@ -68,7 +67,6 @@ prepare:ci:
 
 prepare:install_dependencies:
   stage: prepare
-  resource_group: install_dependencies
   needs:
     - prepare:ci
   script:
