@@ -122,12 +122,20 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
         if saved_alignment is not None:
             return saved_alignment
 
-        # Check whether phoneme PMI has been calculated for this language pair
-        # If not, then calculate it; if so, then retrieve it
-        pmi_dict: PhonemeMap = get_pmi_dict(lang1, lang2, family_index, **kwargs)
+        # Retrieve PhonCorrelator for this language pair
+        from phonCorr import get_phone_correlator
+        correlator, family_index[PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
+            lang1,
+            lang2,
+            phone_correlators_index=family_index[PHONE_CORRELATORS_INDEX_KEY],
+        )
+        # Align the phonetic sequences
+        alignment = correlator.align_wordlist(
+            [(word1, word2)],
+            align_costs=correlator.pmi_results,
+            **kwargs
+        )[0]
 
-        # Align the phonetic sequences with phonetic similarity and phoneme PMI
-        alignment = Alignment(word1, word2, align_costs=pmi_dict, **kwargs)
         reverse_alignment = alignment.reverse()
         reverse_align_key = reverse_alignment.key
         # Add new alignment to alignment log
