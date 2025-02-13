@@ -21,6 +21,7 @@ from utils import (PhonemeMap, average_corrs, average_nested_dicts,
 from utils.alignment import (calculate_alignment_costs,
                              needleman_wunsch_extended)
 from utils.distance import Distance
+from utils.doculect import Doculect
 from utils.information import (get_oov_val, pointwise_mutual_info,
                                prune_oov_surprisal, surprisal,
                                surprisal_to_prob)
@@ -182,7 +183,12 @@ def prune_corrs(corr_dict, min_val=2, exc1=None, exc2=None):
     return corr_dict
 
 
-def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, maximize_score=True):
+def prune_extraneous_synonyms(wordlist: Wordlist,
+                              alignments: list,
+                              family_index: dict,
+                              scores: list=None,
+                              maximize_score: bool=True,
+                              ):
     # Resolve synonyms: prune redundant/extraneous
     # If a concept has >1 words listed, we may end up with, e.g.
     # DE <Kopf> - NL <kop>
@@ -193,7 +199,7 @@ def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, m
     # If both languages have >1 qualifying words for a concept, only consider the best pairings, i.e. prune the extraneous pairs
     if scores is None:
         scores = [alignment.cost for alignment in alignments]
-    assert len(wordlist) == len(alignments) == len(scores)
+    assert len(wordlist.word_pairs) == len(alignments) == len(scores)
 
     def score_is_better(score1, score2):
         # maximize_score : if True, the optimum alignment has a score score
@@ -209,7 +215,7 @@ def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, m
     concept_indices = defaultdict(lambda: [])
     tied_indices = defaultdict(lambda: set())
     indices_to_prune = set()
-    for q, pair in enumerate(wordlist):
+    for q, pair in enumerate(wordlist.word_pairs):
         word1, word2 = pair
         concept = word1.concept
         concept_counts[concept] += 1
@@ -221,7 +227,7 @@ def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, m
             best_pairings = {}
             best_pairing_scores = {}
             for index in concept_indices[concept]:
-                word1, word2 = wordlist[index]
+                word1, word2 = wordlist.word_pairs[index]
                 score = scores[index]  # TODO seems like this could benefit from a Wordpair object
                 if word1 not in best_pairings or score_is_better(score, best_pairing_scores[word1]):
                     best_pairings[word1] = index, word2
@@ -256,10 +262,10 @@ def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, m
 
             # Now check for multiple l1 words mappedåto the same l2 word
             # Choose only the best of these
-            selected_word2 = [wordlist[index][-1] for index in best_indices]
+            selected_word2 = [wordlist.word_pairs[index][-1] for index in best_indices]
             if len(set(selected_word2)) < len(best_indices):
                 for word2 in set(selected_word2):
-                    indices = [index for index in best_indices if wordlist[index][-1] == word2]
+                    indices = [index for index in best_indices if wordlist.word_pairs[index][-1] == word2]
                     if maximize_score:
                         best_choice = max(indices, key=lambda x: scores[x])
                     else:
@@ -269,7 +275,7 @@ def prune_extraneous_synonyms(wordlist, alignments, family_index, scores=None, m
     # Then prune all suboptimal word pair indices
     indices_to_prune = sorted(list(indices_to_prune), reverse=True)
     for index in indices_to_prune:
-        del wordlist[index]
+        wordlist.remove_by_index(idx=index)
         del alignments[index]
 
     return wordlist, alignments
@@ -333,13 +339,6 @@ class PhonCorrelator:
 
     def reset_seed(self):
         random.seed(self.seed)
-
-    def langs(self, l1=None, l2=None):
-        if l1 is None:
-            l1 = self.lang1
-        if l2 is None:
-            l2 = self.lang2
-        return l1, l2
 
     def get_concept_list(self, wordlist=None):
         # If no wordlist is provided, by default use all concepts shared by the two languages
@@ -444,10 +443,10 @@ class PhonCorrelator:
         return [map(_pad, word) for word in wordlist]
 
     def align_wordlist(self,
-                       wordlist,
+                       wordlist: Wordlist | list,
                        align_costs: PhonemeMap = None,
-                       remove_uncompacted_padding=True,
-                       add_phon_dist=True,
+                       remove_uncompacted_padding: bool=True,
+                       add_phon_dist: bool=True,
                        # phon_env=False,
                        **kwargs):
         """Returns a list of the aligned segments from the wordlists"""
@@ -494,6 +493,7 @@ class PhonCorrelator:
                     base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
                     align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
 
+        word_pairs = wordlist.word_pairs if isinstance(wordlist, Wordlist) else wordlist
         alignment_list = [
             Alignment(
                 seq1=word1,
@@ -505,7 +505,7 @@ class PhonCorrelator:
                 pad_ch=self.pad_ch,
                 **kwargs
             )
-            for word1, word2 in wordlist
+            for word1, word2 in word_pairs
         ]
 
         if remove_uncompacted_padding:
@@ -539,19 +539,21 @@ class PhonCorrelator:
         return all_ngrams
 
     def fit_radial_ibm_model(self,
-                             sample,
+                             sample: Wordlist,
+                             lang1: Doculect,
+                             lang2: Doculect,
                              phon_env=False, # TODO add
-                             ibm_model=2,
-                             max_ngram_size=2,
-                             min_corr=2,
-                             seed=None,
+                             ibm_model: int=2,
+                             max_ngram_size: int=2,
+                             min_corr: int=2,
+                             seed: int=None,
                              ):
         """Fits IBM translation models on ngram sequences of varying sizes and aggregates the translation tables."""
 
         # Create "corpora" consisting of words segmented into unigrams or bigrams
         corpus = []
         ngram_sizes = list(range(1, max_ngram_size + 1))
-        for word1, word2 in sample:
+        for word1, word2 in sample.word_pairs:
             segs1, segs2 = word1.segments, word2.segments
             # Optionally add phon env
             if phon_env:
@@ -639,9 +641,8 @@ class PhonCorrelator:
                             corr_dict_l1l2[seg_i_i][seg_j] -= 1
 
         # Prune correspondences which occur fewer than min_corr times
-        # with the exception of phones which occur fewer than min_corr times in the language overall
-        # TODO maybe should set to just 1 across the board?
-        exc1, exc2 = self.phones_below_min_corr(min_corr)
+        # with the exception of phones which occur fewer than min_corr times in the sample
+        exc1, exc2 = sample.phones_below_min_corr(min_corr=min_corr, lang1=lang1, lang2=lang2)
         corr_dict_l1l2 = prune_corrs(corr_dict_l1l2, min_val=min_corr, exc1=exc1, exc2=exc2)
         corr_dict_l2l1 = prune_corrs(corr_dict_l2l1, min_val=min_corr, exc1=exc1, exc2=exc2)
 
@@ -656,9 +657,18 @@ class PhonCorrelator:
 
         return corr_dict_l1l2, corr_dict_l2l1
 
-    def joint_probs(self, conditional_counts, l1=None, l2=None, wordlist=None):
-        """Converts a nested dictionary of conditional frequencies into a nested dictionary of joint probabilities"""
-        l1, l2 = self.langs(l1=l1, l2=l2)
+    def joint_probs(self, conditional_counts: defaultdict, l1: Doculect, l2: Doculect, wordlist: Wordlist):
+        """Converts a nested dictionary of conditional phoneme frequencies into a nested dictionary of joint probabilities.
+        
+        Args:
+            conditional_counts (defaultdict): Nested dictionary of conditional frequencies.
+            l1 (Doculect): First doculect/language.
+            l2 (Doculect): Second doculect/language.
+            wordlist (Wordlist, optional): Wordlist for searching ngram probabilities.
+
+        Returns:
+            defaultdict: Nested dictionary of joint phoneme probabilities.
+        """
         joint_prob_dist = defaultdict(lambda: {})
 
         # Aggregate total counts of seg1 and adjust conditional counts
@@ -720,16 +730,14 @@ class PhonCorrelator:
                 seg2_ngram = Ngram(seg2)
                 cond_count = conditional_counts[seg1][seg2]
                 cond_prob = cond_count / seg1_totals
-                if wordlist:
-                    p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
-                else:
-                    p_ind1 = l1.ngram_probability(seg1_ngram)
+                p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
                 joint_prob = cond_prob * p_ind1
                 joint_prob_dist[seg1][seg2] = joint_prob
         return joint_prob_dist
 
     def correspondence_probs(self,
                              alignment_list,
+                             wordlist: Wordlist,
                              ngram_size=1,
                              counts=False,
                              min_corr=2,
@@ -762,7 +770,7 @@ class PhonCorrelator:
                 corr_counts[seg1][seg2] += 1
 
         if min_corr > 1:
-            exc1, exc2 = self.phones_below_min_corr(min_corr)
+            exc1, exc2 = wordlist.phones_below_min_corr(min_corr=min_corr, lang1=self.lang1, lang2=self.lang2)
             corr_counts = prune_corrs(corr_counts, min_val=min_corr, exc1=exc1, exc2=exc2)
 
         if not counts:
@@ -786,13 +794,18 @@ class PhonCorrelator:
 
         return corr_counts
 
-    def phoneme_pmi(self, conditional_counts, l1=None, l2=None, wordlist=None) -> PhonemeMap:
+    def phoneme_pmi(self, conditional_counts: defaultdict, l1: Doculect, l2: Doculect, wordlist: Wordlist) -> PhonemeMap:
+        """Computes phoneme PMI based on conditional counts from a paired wordlist.
+
+        Args:
+            conditional_counts (defaultdict): Nested dictionary of conditional correspondence probabilities in potential cognates.
+            l1 (Doculect): First doculect/language.
+            l2 (Doculect): Second doculect/language.
+            wordlist (Wordlist, optional): _description_. Defaults to None.
+
+        Returns:
+            PhonemeMap: Mapping of phoneme pairs from the two languages with their PMI values.
         """
-        conditional_probs : nested dictionary of conditional correspondence probabilities in potential cognates
-        """
-        l1, l2 = self.langs(l1=l1, l2=l2)
-        if wordlist:
-            wordlist = Wordlist(wordlist, pad_n=1)
 
         # Convert conditional probabilities to joint probabilities
         joint_prob_dist = self.joint_probs(conditional_counts, l1=l1, l2=l2, wordlist=wordlist)
@@ -856,44 +869,26 @@ class PhonCorrelator:
 
             # Calculation below gives a more precise probability specific to a certain subset of words,
             # which directly reflects shared coverage between l1 and l2.
-            # Else, using lang.ngram_probability will consider all words in the vocabulary
-            if wordlist:
-                if not seg1_ngram.is_gappy(self.gap_ch):
-                    p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
-                elif seg1_ngram.size == 1:
-                    p_ind1 = gap_prob1
-                elif seg1_ngram.size > 1:
-                    gapless_seg1_ngram = seg1_ngram.remove_gaps(self.gap_ch)
-                    p_ind1 = wordlist.ngram_probability(gapless_seg1_ngram, lang=1)
-                if not seg2_ngram.is_gappy(self.gap_ch):
-                    p_ind2 = wordlist.ngram_probability(seg2_ngram, lang=2)
-                elif seg2_ngram.size == 1:
-                    p_ind2 = gap_prob2
-                elif seg1_ngram.size > 1:
-                    gapless_seg2_ngram = seg2_ngram.remove_gaps(self.gap_ch)
-                    p_ind2 = wordlist.ngram_probability(gapless_seg2_ngram, lang=2)
+            if not seg1_ngram.is_gappy(self.gap_ch):
+                p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
+            elif seg1_ngram.size == 1:
+                p_ind1 = gap_prob1
+            elif seg1_ngram.size > 1:
+                gapless_seg1_ngram = seg1_ngram.remove_gaps(self.gap_ch)
+                p_ind1 = wordlist.ngram_probability(gapless_seg1_ngram, lang=1)
+            if not seg2_ngram.is_gappy(self.gap_ch):
+                p_ind2 = wordlist.ngram_probability(seg2_ngram, lang=2)
+            elif seg2_ngram.size == 1:
+                p_ind2 = gap_prob2
+            elif seg1_ngram.size > 1:
+                gapless_seg2_ngram = seg2_ngram.remove_gaps(self.gap_ch)
+                p_ind2 = wordlist.ngram_probability(gapless_seg2_ngram, lang=2)
 
-                # Because we iterate over all possible phone pairs, when considering only the counts of phones/ngrams
-                # within a specific wordlist, it could occur that the count is zero for a segment in that wordlist.
-                # In that case, skip PMI calculation for this pair as there is insufficient data.
-                if p_ind1 == 0 or p_ind2 == 0:
-                    continue
-
-            else: # TODO consolidate this block with the above as much as possible
-                if not seg1_ngram.is_gappy(self.gap_ch):
-                    p_ind1 = l1.ngram_probability(seg1_ngram)
-                elif seg1_ngram.size == 1:
-                    p_ind1 = gap_prob1
-                elif seg1_ngram.size > 1:
-                    gapless_seg1_ngram = seg1_ngram.remove_gaps(self.gap_ch)
-                    p_ind1 = l1.ngram_probability(gapless_seg1_ngram)
-                if not seg2_ngram.is_gappy(self.gap_ch):
-                    p_ind2 = l2.ngram_probability(seg2_ngram)
-                elif seg2_ngram.size == 1:
-                    p_ind2 = gap_prob2
-                elif seg1_ngram.size > 1:
-                    gapless_seg2_ngram = seg2_ngram.remove_gaps(self.gap_ch)
-                    p_ind2 = l2.ngram_probability(gapless_seg2_ngram)
+            # Because we iterate over all possible phone pairs, when considering only the counts of phones/ngrams
+            # within a specific wordlist, it could occur that the count is zero for a segment in that wordlist.
+            # In that case, skip PMI calculation for this pair as there is insufficient data.
+            if p_ind1 == 0 or p_ind2 == 0:
+                continue
 
             p_ind = p_ind1 * p_ind2
             joint_prob = joint_prob_dist.get(seg1, {}).get(seg2, p_ind)
@@ -971,12 +966,13 @@ class PhonCorrelator:
             sample_n = seed_i - start_seed
             synonym_sample, diff_sample = sample
             synonym_sample, diff_sample = map(sort_wordlist, [synonym_sample, diff_sample])
+            synonym_sample_wordlist = Wordlist(synonym_sample)
 
             # At each following iteration N, re-align using the pmi_stepN as an
             # additional penalty, and then recalculate PMI
             iteration = 0
             PMI_iterations: dict[int, PhonemeMap] = {}
-            qualifying_words = default_dict({iteration: synonym_sample}, lmbda=[])
+            qualifying_words = default_dict({iteration: synonym_sample_wordlist}, lmbda=[])
             disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
             if cumulative:
                 all_cognate_alignments = []
@@ -984,17 +980,21 @@ class PhonCorrelator:
             while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
                 iteration += 1
                 qual_prev_sample = qualifying_words[iteration - 1]
-                reversed_qual_prev_sample = [(pair[-1], pair[0]) for pair in qual_prev_sample]
+                reversed_qual_prev_sample = qual_prev_sample.reverse()
 
                 # Fit IBM translation/alignment model on ngrams of varying sizes
                 initial_corr_counts1, _ = self.fit_radial_ibm_model(
                     qual_prev_sample,
+                    lang1=self.lang1,
+                    lang2=self.lang2,
                     min_corr=min_corr,
                     max_ngram_size=max_ngram_size,
                     seed=seed_i,
                 )
                 initial_corr_counts2, _ = self.fit_radial_ibm_model(
                     reversed_qual_prev_sample,
+                    lang1=self.lang2,
+                    lang2=self.lang1,
                     min_corr=min_corr,
                     max_ngram_size=max_ngram_size,
                     seed=seed_i,
@@ -1036,12 +1036,15 @@ class PhonCorrelator:
                 # impose minimum corr requirements and only consider actually aligned segments
                 cognate_probs = self.correspondence_probs(
                     cognate_alignments,
+                    wordlist=qual_prev_sample,
                     exclude_null=False,
                     counts=True,
                     min_corr=min_corr,
                 )
                 PMI_iterations[iteration] = self.phoneme_pmi(
                     cognate_probs,
+                    l1=self.lang1,
+                    l2=self.lang2,
                     wordlist=qual_prev_sample
                 )
 
@@ -1083,16 +1086,17 @@ class PhonCorrelator:
                     else:
                         disqualified.append(pair)
                         #other_word_pairs.add(pair)
-                qualifying, qualifying_alignments = prune_extraneous_synonyms(
-                    wordlist=qualifying,
+                qualifying_wordlist = Wordlist(sort_wordlist(qualifying))
+                qualifying_wordlist, qualifying_alignments = prune_extraneous_synonyms(
+                    wordlist=qualifying_wordlist,
                     alignments=qualifying_alignments,
                     scores=qualified_PMI,
                     maximize_score=True,
                     family_index=family_index,
                 )
-                qualifying_words[iteration] = sort_wordlist(qualifying)
-                if len(qualifying_words[iteration]) == 0:
+                if len(qualifying) == 0:
                     logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
+                qualifying_words[iteration] = qualifying_wordlist
                 disqualified_words[iteration] = disqualified + diff_sample
 
                 # Log results of this iteration
@@ -1123,7 +1127,8 @@ class PhonCorrelator:
         # Realign final qualifying using averaged PMI values from all samples
         #other_word_pairs = other_word_pairs - final_qualifying
         #other_word_pairs.update(diff_meaning_sampled)
-        final_qualifying = list(final_qualifying)
+        final_qualifying = Wordlist(final_qualifying)
+        reversed_final_qualifying = final_qualifying.reverse()
         #other_word_pairs = list(other_word_pairs)
         final_qualifying_alignments = self.align_wordlist(
             final_qualifying,
@@ -1142,7 +1147,8 @@ class PhonCorrelator:
 
         # Compute phone surprisal
         self.compute_phone_surprisal(
-            final_qualifying_alignments,
+            alignments=final_qualifying_alignments,
+            wordlist=final_qualifying,
             phon_env=phon_env,
             min_corr=min_corr,
             ngram_size=ngram_size,
@@ -1151,7 +1157,8 @@ class PhonCorrelator:
         twin, family_index[PHONE_CORRELATORS_INDEX_KEY] = self.get_twin(family_index[PHONE_CORRELATORS_INDEX_KEY])
         reversed_final_alignments = [alignment.reverse() for alignment in final_qualifying_alignments]
         twin.compute_phone_surprisal(
-            reversed_final_alignments,
+            alignments=reversed_final_alignments,
+            wordlist=reversed_final_qualifying,
             phon_env=phon_env,
             min_corr=min_corr,
             ngram_size=ngram_size,
@@ -1367,7 +1374,8 @@ class PhonCorrelator:
         return smoothed_surprisal
 
     def compute_phone_surprisal(self,
-                                alignments,
+                                alignments: list,
+                                wordlist: Wordlist,
                                 phon_env=False,
                                 min_corr=2,
                                 ngram_size=1, # TODO remove if not going to be developed further
@@ -1386,7 +1394,8 @@ class PhonCorrelator:
         """
         # Get correspondence probabilities from alignments
         corr_probs = self.correspondence_probs(
-            alignments,
+            alignment_list=alignments,
+            wordlist=wordlist,
             counts=True,
             min_corr=min_corr,
             exclude_null=False,
@@ -1463,23 +1472,6 @@ class PhonCorrelator:
         outer_oov_val = get_oov_val(phon_env_surprisal_dict)
         surprisal_dict, oov_value = prune_oov_surprisal(default_dict(surprisal_dict, lmbda=outer_oov_val))
         return surprisal_dict
-
-    def phones_below_min_corr(self, min_corr):
-        """Return sets of phones in each language with fewer occurrences than required by min_corr value"""
-        if self.low_coverage_phones is None:
-            low_coverage_l1 = set(
-                phone for phone in self.lang1.phoneme_counts
-                if self.lang1.phoneme_counts[phone] < min_corr
-            )
-
-            low_coverage_l2 = set(
-                phone for phone in self.lang2.phoneme_counts
-                if self.lang2.phoneme_counts[phone] < min_corr
-            )
-
-            self.low_coverage_phones = low_coverage_l1, low_coverage_l2
-
-        return self.low_coverage_phones
 
     def compute_noncognate_thresholds(self, eval_func, sample_size=None, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
