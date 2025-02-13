@@ -19,11 +19,11 @@ logging.basicConfig(level=default_logging_level, format=default_logging_format)
 _logger = logging.getLogger(__name__)
 
 _max_value_difference = 10 ** -decimal_places
-_float_format_string = f".{decimal_places + 1}f"
+_output_decimal_places = decimal_places + 1
 
 
 def _format_float(value: float) -> str:
-    return f"{value:{_float_format_string}}"
+    return f"{value:.{_output_decimal_places}f}"
 
 
 def _format_elapsed_time(time: timedelta) -> str:
@@ -44,7 +44,8 @@ def _assert_distance_matrices_equal(test: unittest.TestCase,
                                     fail_if_distance_matrices_differ: bool) -> None:
     test.assertCountEqual(first.keys(), second.keys(), "The number of language pairs is not equal.")
     different = []
-    identical = []
+    equal_under_threshold = []
+    completely_equal: bool = True
     for (lang1, lang2), expected_value in first.items():
         if (lang1, lang2) not in second and (lang2, lang1) not in second:
             test.fail(f"Pair ({lang1}, {lang2}) is missing.")
@@ -54,20 +55,22 @@ def _assert_distance_matrices_equal(test: unittest.TestCase,
                       expected_value,
                       actual_value,
                       abs_diff]
+        if abs_diff > 0:
+            completely_equal = False
         if _is_close(expected_value, actual_value):
-            identical.append(output_row)
+            equal_under_threshold.append(output_row)
         else:
             different.append(output_row)
 
     output_columns = ['Language pair', 'Expected', 'Actual', 'Difference']
     summary: PrettyTable = PrettyTable(output_columns)
     summary.align = 'r'
-    summary.float_format = _float_format_string
+    summary.float_format = f".{_output_decimal_places}"
     different_count = len(different)
     if different:
         for i, row in enumerate(different):
             summary.add_row(row, divider=(i == different_count - 1))
-    for row in identical:
+    for row in equal_under_threshold:
         summary.add_row(row)
 
     if different:
@@ -78,7 +81,10 @@ def _assert_distance_matrices_equal(test: unittest.TestCase,
         else:
             _logger.warning(message)
     else:
-        _logger.info(f"Distance matrices are equal.")
+        if completely_equal:
+            _logger.info(f"Distance matrices are equal.")
+        else:
+            _logger.info(f"Distance matrices are almost equal:\n{summary.get_string()}")
 
 
 def _assert_tree_distances_equal(test: unittest.TestCase,
