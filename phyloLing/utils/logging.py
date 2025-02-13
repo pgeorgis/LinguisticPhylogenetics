@@ -56,23 +56,10 @@ def log_phon_corr_iteration(iteration,
                             same_meaning_alignments=None
                             ):
     iter_log = []
-    if method == 'surprisal':
-        assert same_meaning_alignments is not None
-
-        def get_word_pairs(indices, lst):
-            aligns = [lst[i] for i in indices]
-            pairs = [(align.word1, align.word2) for align in aligns]
-            return pairs
-
-        qualifying = get_word_pairs(qualifying_words[iteration], same_meaning_alignments)
-        prev_qualifying = get_word_pairs(qualifying_words[iteration - 1], same_meaning_alignments)
-        disqualified = get_word_pairs(disqualified_words[iteration], same_meaning_alignments)
-        prev_disqualified = get_word_pairs(disqualified_words[iteration - 1], same_meaning_alignments)
-    else:
-        qualifying = qualifying_words[iteration]
-        prev_qualifying = qualifying_words[iteration - 1]
-        disqualified = disqualified_words[iteration]
-        prev_disqualified = disqualified_words[iteration - 1]
+    qualifying = qualifying_words[iteration].word_pairs
+    prev_qualifying = qualifying_words[iteration - 1].word_pairs
+    disqualified = disqualified_words[iteration]
+    prev_disqualified = disqualified_words[iteration - 1]
     iter_log.append(f'Iteration {iteration}')
     iter_log.append(f'\tQualified: {len(qualifying)}')
     iter_log.append(f'\tDisqualified: {len(disqualified)}')
@@ -100,7 +87,7 @@ def write_phon_corr_iteration_log(iter_logs, log_file, n_same_meaning_pairs):
             f.write(iter_log)
             final_qualifying, final_disqualified = iter_logs[n][-1]
             f.write('\n\nFinal qualifying:\n')
-            for word1, word2 in sort_wordlist(final_qualifying):
+            for word1, word2 in sort_wordlist(final_qualifying.word_pairs):
                 f.write(f'\t\t{word1.orthography} /{word1.ipa}/ - {word2.orthography} /{word2.ipa}/\n')
             f.write('\nFinal disqualified:\n')
             for word1, word2 in sort_wordlist(final_disqualified):
