@@ -15,6 +15,7 @@ from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 from phonAlign import Alignment
 from phonUtils.phonEnv import phon_env_ngrams
 from phonUtils.phonSim import phone_sim
+from phonUtils.segment import Segment, _toSegment
 from scipy.stats import norm
 from utils import (PhonemeMap, average_corrs, average_nested_dicts,
                    reverse_corr_dict, reverse_corr_dict_map)
@@ -39,8 +40,23 @@ from utils.wordlist import Wordlist, sort_wordlist
 logging.basicConfig(level=logging.INFO, format='%(asctime)s phonCorr %(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-# Designate phonetic feature distance
+# Designate phonetic feature distance for alignment purposes
+PROSODIC_UNIT_LABELS = {'TONEME', 'SUPRASEGMENTAL'}
+
+@lru_cache(maxsize=None)
+def is_prosodic_unit(segment):
+    segment = _toSegment(segment) if not isinstance(segment, Segment) else segment
+    if segment.phone_class in PROSODIC_UNIT_LABELS:
+        return True
+    return False
+
 def phone_dist(x, y, **kwargs):
+    if x == y:
+        return 0
+    # Free-standing tonemes and suprasegmentals get distance of 0 to each other
+    # (for alignment purposes only)
+    if is_prosodic_unit(x) and is_prosodic_unit(y):
+        return 0
     sim = phone_sim(x, y, **kwargs)
     if sim > 0:
         return log(sim)
