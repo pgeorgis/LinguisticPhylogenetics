@@ -1097,7 +1097,6 @@ class PhonCorrelator:
                     family_index=family_index,
                 )
                 qualifying_words[iteration] = sort_wordlist(qualifying)
-                qualifying_alignments[iteration] = qualifying_alignments
                 if len(qualifying_words[iteration]) == 0:
                     logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
                 disqualified_words[iteration] = disqualified + diff_sample
