@@ -453,7 +453,7 @@ class PhonCorrelator:
         """Returns a list of the aligned segments from the wordlists"""
 
         # Optionally add phone similarity measure between phone pairs to align costs/scores
-        if add_phon_dist:
+        if add_phon_dist and align_costs.phon_dist_added is False:
             phon_gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
             for ngram1 in align_costs.get_primary_keys():
                 ngram1 = Ngram(ngram1)
@@ -493,6 +493,7 @@ class PhonCorrelator:
                     # Add phonetic alignment cost to align_costs dict storing PMI values
                     base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
                     align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
+            align_costs.phon_dist_added = True
 
         alignment_list = [
             Alignment(
