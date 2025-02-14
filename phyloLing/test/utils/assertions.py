@@ -175,21 +175,26 @@ def assert_tree_distances_improved(test: unittest.TestCase,
                                    tree_distance_label: str,
                                    tree_distance_mapper: TreeDistanceMapper) -> None:
     best_tree_distances = get_tree_distances(best_tree_path, result)
+    distances_have_worsened: bool = False
+
+    summary = PrettyTable(["Reference tree", "Test distance", "Best distance", "Difference"])
+    summary.align = 'r'
+    summary.float_format = f".{decimal_places}"
     for reference_tree in result.reference_trees:
         best_tree_distance: float = tree_distance_mapper(best_tree_distances[reference_tree])
         result_tree_distance: float = tree_distance_mapper(result.tree_distances[reference_tree])
 
-        best_tree_distance_formatted = _format_float(best_tree_distance)
-        result_tree_distance_formatted = _format_float(result_tree_distance)
+        is_result_close_to_best: bool = _is_close(result_tree_distance, best_tree_distance)
+        if result_tree_distance > best_tree_distance and not is_result_close_to_best:
+            distances_have_worsened = True
 
-        reference_tree_name = reference_tree.split('/')[-1]
-        if result_tree_distance > best_tree_distance:
-            test.fail(
-                f"{tree_distance_label} distance is greater than the best tree distance for {reference_tree_name}: "
-                f"{result_tree_distance_formatted} > {best_tree_distance_formatted}"
-            )
-        else:
-            _logger.info(
-                f"{tree_distance_label} distance is less or equal to the best tree distance for {reference_tree_name}: "
-                f"{result_tree_distance_formatted} <= {best_tree_distance_formatted}"
-            )
+        reference_tree_name: str = reference_tree.split('/')[-1]
+        summary.add_row([reference_tree_name,
+                         result_tree_distance,
+                         best_tree_distance,
+                         result_tree_distance - best_tree_distance])
+
+    if distances_have_worsened:
+        test.fail(f"{tree_distance_label} tree distances have worsened:\n{summary.get_string()}")
+    else:
+        _logger.info(f"{tree_distance_label} tree distances:\n{summary.get_string()}")

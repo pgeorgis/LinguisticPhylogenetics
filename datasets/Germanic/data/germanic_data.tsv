@@ -2323,9 +2323,9 @@ Icelandic	Icelandic			earth_NOUN	jörð	jˈœrð	j ˈœ r ð		earth_NOUN_1
 Faroese	Faroese			earth_NOUN	jørð	jˈøːɹ	j ˈøː ɹ		earth_NOUN_1			
 Nynorsk Norwegian	Nynorsk Norwegian			earth_NOUN	jord	jˈuːɾ	j ˈuː ɾ		earth_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			earth_NOUN	jord	jˈuːɾ	j ˈuː ɾ		earth_NOUN_1			
-Danish	Danish			earth_NOUN	jord	jˈoˀɐ	j ˈoˀ ɐ		earth_NOUN_1			
+Danish	Danish			earth_NOUN	jord	jˈoɐˀ	j ˈo ɐˀ		earth_NOUN_1			
 Swedish	Swedish			earth_NOUN	jord	jˈuːɖ	j ˈuː ɖ		earth_NOUN_1			
-Elfdalian	Elfdalian			earth_NOUN	juord	jˈʉə̯rð	j ˈʉə̯ r ð		earth_NOUN_1			
+Elfdalian	Elfdalian			earth_NOUN	juord	jˈʉə̯rd	j ˈʉə̯ r d		earth_NOUN_1			
 Scots	Scots			earth_NOUN	yird	jˈɪrd	j ˈɪ r d		earth_NOUN_1			
 English	English			earth_NOUN	earth	ˈɜːθ	ˈɜː θ		earth_NOUN_1			
 American English	American English			earth_NOUN	earth	ˈɝθ	ˈɝ θ		earth_NOUN_1			
@@ -3866,6 +3866,7 @@ Nynorsk Norwegian	Nynorsk Norwegian			gold_NOUN_NEU	gull	ɡˈʉll	ɡ ˈʉ l l		g
 Bokmål Norwegian	Bokmål Norwegian			gold_NOUN_NEU	gull	ɡˈʉll	ɡ ˈʉ l l		gold_NOUN_NEU_1			
 Danish	Danish			gold_NOUN_NEU	guld	ɡ̊ˈulˀ	ɡ̊ ˈu lˀ		gold_NOUN_NEU_1			
 Swedish	Swedish			gold_NOUN_NEU	guld	ɡˈɵld	ɡ ˈɵ l d		gold_NOUN_NEU_1			
+Swedish	Swedish			gold_NOUN_NEU	gull	ɡˈɵll	ɡ ˈɵ l l		gold_NOUN_NEU_1			
 Elfdalian	Elfdalian			gold_NOUN_NEU	gull	ɡˈʉll	ɡ ˈʉ l l		gold_NOUN_NEU_1			
 Scots	Scots			gold_NOUN_NEU	gowd	ɡˈʌu̯d	ɡ ˈʌu̯ d		gold_NOUN_NEU_1			
 English	English			gold_NOUN_NEU	gold	ɡˈəʊ̯ɫd	ɡ ˈəʊ̯ ɫ d		gold_NOUN_NEU_1			
@@ -7157,7 +7158,7 @@ Nynorsk Norwegian	Nynorsk Norwegian			north_NOUN	nord	nˈuːɾ	n ˈuː ɾ		north
 Bokmål Norwegian	Bokmål Norwegian			north_NOUN	nord	nˈuːɾ	n ˈuː ɾ		north_NOUN_1			
 Danish	Danish			north_NOUN	nord	nˈoɐˀ	n ˈo ɐˀ		north_NOUN_1			
 Swedish	Swedish			north_NOUN	norr	nˈɔrr	n ˈɔ r r		north_NOUN_1			
-Elfdalian	Elfdalian			north_NOUN	nordǫ	nˈorðɔ̃	n ˈo r ð ɔ̃		north_NOUN_1			
+Elfdalian	Elfdalian			north_NOUN	nordǫ	nˈordɔ̃	n ˈo r d ɔ̃		north_NOUN_1			
 Scots	Scots			north_NOUN	north	nˈorθ	n ˈo r θ		north_NOUN_1			
 English	English			north_NOUN	north	nˈɔːθ	n ˈɔː θ		north_NOUN_1			
 American English	American English			north_NOUN	north	nˈɔɹθ	n ˈɔ ɹ θ		north_NOUN_1			
@@ -8873,7 +8874,7 @@ Nynorsk Norwegian	Nynorsk Norwegian			sword_NOUN	sverd	sʋˈæːɾ	s ʋ ˈæː �
 Bokmål Norwegian	Bokmål Norwegian			sword_NOUN	sverd	sʋˈæːɾ	s ʋ ˈæː ɾ		sword_NOUN_1			
 Danish	Danish			sword_NOUN	sværd	sʋˈɛɐˀ	s ʋ ˈɛ ɐˀ		sword_NOUN_1			
 Swedish	Swedish			sword_NOUN	svärd	svˈæːɖ	s v ˈæː ɖ		sword_NOUN_1			
-Elfdalian	Elfdalian			sword_NOUN	swärd	swˈærð	s w ˈæ r ð		sword_NOUN_1			
+Elfdalian	Elfdalian			sword_NOUN	swärd	swˈærd	s w ˈæ r d		sword_NOUN_1			
 Scots	Scots			sword_NOUN	swuird	swˈʌrd	s w ˈʌ r d		sword_NOUN_1			
 English	English			sword_NOUN	sword	sˈɔːd	s ˈɔː d		sword_NOUN_1			
 American English	American English			sword_NOUN	sword	sˈɔɹd	s ˈɔ ɹ d		sword_NOUN_1			
@@ -10580,7 +10581,7 @@ Faroese	Faroese			thick_ADJ	tjúkkur	ʧʰˈʏʰkʊɹ	ʧʰ ˈʏ ʰk ʊ ɹ		thick_
 Nynorsk Norwegian	Nynorsk Norwegian			thick_ADJ	tjukk	çˈʉʰkk	ç ˈʉ ʰk k		thick_ADJ_1			
 Bokmål Norwegian	Bokmål Norwegian			thick_ADJ	tjukk	çˈʉkk	ç ˈʉ k k		thick_ADJ_1			
 Danish	Danish			thick_ADJ	tyk	ʦʰˈyɡ̊	ʦʰ ˈy ɡ̊		thick_ADJ_1			
-Swedish	Swedish			thick_ADJ	tjock	ɕˈɔk	ɕ ˈɔ k		thick_ADJ_1			
+Swedish	Swedish			thick_ADJ	tjock	ɕˈɔkk	ɕ ˈɔ k k		thick_ADJ_1			
 Elfdalian	Elfdalian			thick_ADJ	tiokk	tʰjˈokk	tʰ j ˈo k k		thick_ADJ_1			
 Scots	Scots			thick_ADJ	thick	θˈɪk	θ ˈɪ k		thick_ADJ_1			
 English	English			thick_ADJ	thick	θˈɪk	θ ˈɪ k		thick_ADJ_1			
@@ -10987,7 +10988,7 @@ Icelandic	Icelandic			thorn_NOUN	þyrnir	θˈɪrt͡n̥ɪr̥	θ ˈɪ r t͡n̥ ɪ 
 Nynorsk Norwegian	Nynorsk Norwegian			thorn_NOUN	torn	tʰˈʊɾn	tʰ ˈʊ ɾ n		thorn_NOUN_1			
 Bokmål Norwegian	Bokmål Norwegian			thorn_NOUN	torn	tʰˈuːɳ	tʰ ˈuː ɳ		thorn_NOUN_1			
 Danish	Danish			thorn_NOUN	tjørn	ʨˈœɐˀn	ʨ ˈœ ɐˀ n		thorn_NOUN_1			
-Swedish	Swedish			thorn_NOUN	törne	tʰˈœɳɳɛ	tʰ ˈœ ɳ ɳ ɛ		thorn_NOUN_1			
+Swedish	Swedish			thorn_NOUN	törne	tʰˈœɳɛ	tʰ ˈœ ɳ ɛ		thorn_NOUN_1			
 Scots	Scots			thorn_NOUN	thorn	θˈorn	θ ˈo r n		thorn_NOUN_1			
 English	English			thorn_NOUN	thorn	θˈɔːn	θ ˈɔː n		thorn_NOUN_1			
 American English	American English			thorn_NOUN	thorn	θˈɔɹn	θ ˈɔ ɹ n		thorn_NOUN_1			
