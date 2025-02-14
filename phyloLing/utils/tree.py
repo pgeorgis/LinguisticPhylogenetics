@@ -353,7 +353,7 @@ def taxa_subset_state(tips, tree):
     return 0
 
 
-def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_depth_in_tree=False):
+def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_depth_in_tree=True):
     """
     Calculates the Generalized Quartet Distance (GQD) between two trees.
 
@@ -379,6 +379,10 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_de
     resolved_count = 0
     differing_count = 0
 
+    # Get maximum tree depth
+    if weight_by_depth_in_tree:
+        max_depth = max(leaf.distance_from_root() for leaf in non_binary_tree.leaf_nodes())
+
     for ntet in all_ntets:
         b_state = taxa_subset_state(ntet, binary_tree)
         nb_state = taxa_subset_state(ntet, non_binary_tree)
@@ -393,7 +397,7 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_de
             )
             incr = 1
             if weight_by_depth_in_tree:
-                weight = len(mrca.leaf_nodes()) / n_tips
+                weight = 1 + (max_depth - mrca.distance_from_root()) / max_depth
                 incr = weight
             
             resolved_count += incr
