@@ -155,7 +155,7 @@ VOWELS
 
 /ɔ̃/ (0.002)
 	<trettǫ> /tʰrˈɛtːɔ̃/ "thirteen_NUM"
-	<nordǫ> /nˈorðɔ̃/ "north_NOUN"
+	<nordǫ> /nˈordɔ̃/ "north_NOUN"
 
 /ˈɪ̃ː/ (0.001)
 	<wįð> /wˈɪ̃ːð/ "we_PRON"
@@ -181,7 +181,7 @@ CONSONANTS
 	<trettǫ> /tʰrˈɛtːɔ̃/ "thirteen_NUM"
 
 /s/ (0.063)
-	<swärd> /swˈærð/ "sword_NOUN"
+	<swärd> /swˈærd/ "sword_NOUN"
 	<sjǫ> /sjˈɔ̃ː/ "see_VERB"
 	<syster> /sˈʏstɛr/ "sister_NOUN"
 
@@ -200,80 +200,80 @@ CONSONANTS
 	<blað> /bɽˈɑːð/ "leaf_NOUN_NEU"
 	<eppel> /ˈɛpːɛɽ/ "apple_NOUN"
 
+/d/ (0.032)
+	<jäld> /jˈæld/ "fire_NOUN"
+	<undrað> /ˈʉndrɑð/ "hundred_NUM"
+	<du> /dˈʉː/ "thou_PRON"
+
 /j/ (0.03)
-	<sju> /sjˈʉː/ "sea_NOUN"
 	<siuov> /sjˈʉːə̯v/ "self_PRON"
-	<liuoga> /ɽjˈʉːə̯ɣɑ/ "tell lies_VERB"
+	<järta> /jˈærtɑ/ "heart_NOUN"
+	<mjok> /mjˈoːk/ "milk_NOUN_FEM"
 
-/d/ (0.029)
-	<land> /ɽˈɑnd/ "land_NOUN"
-	<dröm> /drˈœːm/ "dream_NOUN"
-	<dwerg> /dwˈɛrɣ/ "dwarf_NOUN"
-
-/ð/ (0.027)
-	<saiða> /sˈɑːi̯ðɑ/ "side_NOUN"
+/ð/ (0.024)
+	<tið> /tʰˈɪːð/ "time_NOUN"
 	<bað> /bˈɑːð/ "bath_NOUN_NEU"
-	<ið> /ˈɪːð/ "ye_PRON"
+	<faðer> /fˈɑːðɛr/ "father_NOUN"
 
 /w/ (0.024)
-	<warm> /wˈɑrm/ "warm_ADJ"
 	<win> /wˈɪːn/ "wine_NOUN"
-	<swärd> /swˈærð/ "sword_NOUN"
+	<swärd> /swˈærd/ "sword_NOUN"
+	<wait> /wˈɑːi̯t/ "white_ADJ"
 
 /tʰ/ (0.022)
-	<trai> /tʰrˈɑːi̯/ "tree_NOUN"
 	<tolv> /tʰˈoɽv/ "twelve_NUM"
 	<takka> /tʰˈɑkːɑ/ "thank_VERB"
+	<tryttja> /tʰrˈʏʨːɑ/ "press_VERB"
 
 /b/ (0.022)
-	<bia> /bˈɪːɑ/ "bee_NOUN"
 	<bruor> /brˈʉːə̯r/ "brother_NOUN"
 	<blyöða> /bɽˈyːœ̯ðɑ/ "bleed_VERB"
+	<byönn> /bˈyœ̯nː/ "bear_NOUN"
 
 /ɡ/ (0.021)
-	<fingger> /fˈɪŋɡɛr/ "finger_NOUN"
 	<go> /ɡˈoː/ "go_VERB"
-	<guol> /ɡˈʉːə̯ɽ/ "yellow_ADJ"
+	<ungg> /ˈʉŋɡ/ "young_NOUN"
+	<tjykklingg> /ʨˈʏkːlɪŋɡ/ "chicken_NOUN"
 
 /k/ (0.021)
-	<tysk> /tʰˈʏsk/ "Teutonic_ADJ"
 	<siuok> /sjˈʉːə̯k/ "sick_ADJ"
-	<wiku> /wˈɪːkʉ/ "week_NOUN"
+	<tysk> /tʰˈʏsk/ "Teutonic_ADJ"
+	<nakun> /nˈɑːkʉn/ "naked_ADJ"
 
 /m/ (0.02)
-	<makt> /mˈɑkt/ "might_NOUN"
 	<mugg> /mˈʉɡː/ "midge_NOUN"
-	<uorm> /ˈʉə̯rm/ "worm_NOUN"
+	<makt> /mˈɑkt/ "might_NOUN"
+	<dröma> /drˈœːmɑ/ "dream_VERB"
 
 /f/ (0.02)
-	<fuotą> /fˈʉːə̯tɑ̃/ "feet_NOUN_PL"
 	<fingger> /fˈɪŋɡɛr/ "finger_NOUN"
 	<fy> /fˈʏː/ "follow_VERB"
+	<fliuoga> /fɽjˈʉːə̯ɣɑ/ "fly_VERB"
 
 /ɣ/ (0.018)
-	<flugu> /fɽˈʉːɣʉ/ "housefly_NOUN"
 	<dag> /dˈɑːɣ/ "day_NOUN"
-	<tiugu> /tʰjˈʉːɣʉ/ "twenty_NUM"
+	<oga> /ˈoːɣɑ/ "eye_NOUN"
+	<weg> /wˈɛːɣ/ "way_NOUN"
 
 /v/ (0.015)
-	<draiva> /drˈɑːi̯vɑ/ "drive_VERB"
 	<djävå> /ʥˈævɔ/ "give_VERB"
 	<nev> /nˈɛːv/ "nose_NOUN"
+	<draiva> /drˈɑːi̯vɑ/ "drive_VERB"
 
 /ʨ/ (0.014)
-	<tjyörtja> /ʨˈyœ̯rʨɑ/ "church_NOUN_FEM"
 	<stjuota> /sʨˈʉːə̯tɑ/ "shoot_VERB"
 	<tjyöt> /ʨˈyːœ̯t/ "meat_NOUN"
+	<yönstja> /ˈyœ̯nsʨɑ/ "wish_VERB"
 
 /ŋ/ (0.013)
-	<tingg> /tʰˈɪŋɡ/ "thing_NOUN"
 	<tungga> /tʰˈʉŋɡɑ/ "tongue_NOUN"
 	<kunungg> /kʰˈʉːnʉŋɡ/ "king_NOUN"
+	<raingen> /rˈɑːi̯ŋɛn/ "rain_NOUN"
 
 /nː/ (0.012)
-	<mennistj> /mˈɛnːɪsʨ/ "person_NOUN"
-	<kenna> /kʰˈɛnːɑ/ "ken_VERB"
 	<kwinna> /kʰwˈɪnːɑ/ "woman_NOUN"
+	<kenna> /kʰˈɛnːɑ/ "ken_VERB"
+	<mennistj> /mˈɛnːɪsʨ/ "person_NOUN"
 
 /kʰ/ (0.011)
 	<kunungg> /kʰˈʉːnʉŋɡ/ "king_NOUN"
