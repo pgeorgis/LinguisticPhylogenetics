@@ -8,6 +8,7 @@ from collections.abc import Iterable
 from itertools import combinations, product
 from math import sqrt
 from statistics import mean, stdev
+from tqdm import tqdm
 
 import bcubed
 import pandas as pd
@@ -273,20 +274,24 @@ class LexicalDataset:
         """Calculates phone correspondence values for all
         language pairs in the dataset and saves the results to file"""
         lang_pairs = self.get_doculect_pairs(bidirectional=False)
-        # Check whether phoneme PMI has been calculated already for this pair
-        # If not, calculate it now
-        for lang1, lang2 in lang_pairs:
-            correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
-                lang1,
-                lang2,
-                phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                log_outdir=self.phone_corr_dir,
-            )
-            if len(correlator.pmi_results) == 0:
-                correlator.compute_phone_corrs(
-                    family_index=FAMILY_INDEX[self.name],
-                    **kwargs
+        with tqdm(total=len(lang_pairs), unit="pair") as pbar:
+            for lang1, lang2 in lang_pairs:
+                pbar.set_description(f"Computing phone correspondences... [{lang1.name}-{lang2.name}]")
+                # Retrieve or initialize PhoneCorrelator for this pair
+                correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
+                    lang1,
+                    lang2,
+                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                    log_outdir=self.phone_corr_dir,
                 )
+                # Check whether phone correspondences habe been calculated already for this pair
+                # If not, calculate it now
+                if len(correlator.pmi_results) == 0:
+                    correlator.compute_phone_corrs(
+                        family_index=FAMILY_INDEX[self.name],
+                        **kwargs
+                    )
+                pbar.update(1)
 
     def compute_noncognate_thresholds(self, eval_func, doculect_pairs=None, **kwargs):
         """Computes the mean and standard deviation score between a sample of non-synonymous word pairs from a set of doculects according to a specified evaluation function."""

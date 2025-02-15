@@ -950,7 +950,6 @@ class PhonCorrelator:
         Returns:
             results (dict): Nested dictionary of PMI correspondences.
         """
-        logger.info(f'Computing phone correspondences: {self.lang1_name}-{self.lang2_name}...')
 
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
         sample_results: dict[int, PhonemeMap] = {}
