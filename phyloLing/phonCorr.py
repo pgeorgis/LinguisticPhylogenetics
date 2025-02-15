@@ -923,6 +923,31 @@ class PhonCorrelator:
         return pmi_dict
 
 
+    def bidirectional_phoneme_pmi(self,
+                                  conditional_counts_l1l2: PhonemeMap,
+                                  conditional_counts_l2l1: PhonemeMap,
+                                  wordlist_l1l2: Wordlist,
+                                  wordlist_l2l1: Wordlist,
+                                  ):
+        """Computes average PMI from two directional conditional count phoneme maps."""
+        pmi_dict_l1l2, pmi_dict_l2l1 = [
+            self.phoneme_pmi(
+                conditional_counts=conditional_counts_l1l2,
+                l1=self.lang1,
+                l2=self.lang2,
+                wordlist=wordlist_l1l2,
+            ),
+            self.phoneme_pmi(
+                conditional_counts=conditional_counts_l2l1,
+                l1=self.lang2,
+                l2=self.lang1,
+                wordlist=wordlist_l2l1,
+            )
+        ]
+
+        # Average together the PMI values from each direction
+        return average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
+
     def iterate_phone_pmi(self,
                           synonym_sample: list,
                           diff_sample: list,
@@ -970,24 +995,13 @@ class PhonCorrelator:
                 )
 
                 # Calculate initial PMI for all ngram pairs
-                pmi_dict_l1l2, pmi_dict_l2l1 = [
-                    self.phoneme_pmi(
-                        conditional_counts=initial_corr_counts1,
-                        l1=self.lang1,
-                        l2=self.lang2,
-                        wordlist=qual_prev_sample,
-                    ),
-                    self.phoneme_pmi(
-                        conditional_counts=initial_corr_counts2,
-                        l1=self.lang2,
-                        l2=self.lang1,
-                        wordlist=reversed_qual_prev_sample,
-                    )
-                ]
+                pmi_step_i = self.bidirectional_phoneme_pmi(
+                    conditional_counts_l1l2=initial_corr_counts1,
+                    conditional_counts_l2l1=initial_corr_counts2,
+                    wordlist_l1l2=qual_prev_sample,
+                    wordlist_l2l1=reversed_qual_prev_sample,
+                )
 
-                # Average together the PMI values from each direction
-                pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
-            
             else:
                 pmi_step_i = PMI_iterations[iteration - 1]
 
@@ -1013,23 +1027,14 @@ class PhonCorrelator:
                 counts=True,
                 min_corr=min_corr,
             )
-            pmi_step_ii = [
-                self.phoneme_pmi(
-                    cognate_probs,
-                    l1=self.lang1,
-                    l2=self.lang2,
-                    wordlist=qual_prev_sample
-                ),
-                self.phoneme_pmi(
-                    reverse_corr_dict(cognate_probs),
-                    l1=self.lang2,
-                    l2=self.lang2,
-                    wordlist=reversed_qual_prev_sample
-                ),
-            ]
-            pmi_step_ii = average_corrs(*pmi_step_ii)
+            pmi_step_ii = self.bidirectional_phoneme_pmi(
+                conditional_counts_l1l2=cognate_probs,
+                conditional_counts_l2l1=reverse_corr_dict(cognate_probs),
+                wordlist_l1l2=qual_prev_sample,
+                wordlist_l2l1=reversed_qual_prev_sample,
+            )
             PMI_iterations[iteration] = pmi_step_ii
-            qualifying_wordlist, qualifying_pairs, disqualified_pairs = self.get_qualifying_word_pairs(
+            qualifying_wordlist, _, disqualified_pairs = self.get_qualifying_word_pairs(
                 synonym_sample=synonym_sample_wordlist,
                 diff_sample=disqualified_words[iteration - 1],
                 pmi_iteration_dict=PMI_iterations[iteration],
