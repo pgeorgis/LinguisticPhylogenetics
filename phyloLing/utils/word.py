@@ -57,12 +57,6 @@ class Word:
         if self.get_parameter('normalize_geminates'):
             ipa_string = normalize_geminates(ipa_string)
 
-        # Level any suprasegmentals to stress annotation
-        supraseg_target = self.get_parameter('level_suprasegmentals')
-        if supraseg_target:
-            suprasegs = self.get_parameter('suprasegmentals')
-            ipa_string = re.sub(fr'[{suprasegs}]', supraseg_target, ipa_string)
-
         # Convert to ASJP transcriptions
         if self.get_parameter('asjp'):
             # Convert some non-IPA ASJP characters to IPA equivalents

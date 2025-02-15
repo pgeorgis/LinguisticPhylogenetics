@@ -42,7 +42,6 @@ TRANSCRIPTION_PARAM_DEFAULTS = {
     'preaspiration': True,
     'ch_to_remove': {' '},  # TODO add syllabic diacritics here
     'suprasegmentals': None,
-    'level_suprasegmentals': None,
     'min_phone_instances': 2,  # minimum instances of a phone in a doculect to be considered valid, else issue a warning
 }
 
