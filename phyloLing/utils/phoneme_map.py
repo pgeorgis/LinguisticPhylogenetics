@@ -1,17 +1,16 @@
 from collections import defaultdict
 from math import inf
 from statistics import mean
-from typing import Iterable, NewType, Tuple
+from typing import Iterable, NewType
 
 Phoneme = NewType('Phoneme', str)
-
 type MultiPhoneme = Phoneme | tuple[Phoneme, ...]
-
+type SomeNumber = int | float
 
 class DoubleMap[TKey, TValue]:
-    def __init__(self, default_value: TValue):
+    def __init__(self, default_value: TValue, values: dict=None):
         self.default_value = default_value
-        self.values: dict[TKey, dict[TKey, TValue]] = {}
+        self.values: dict[TKey, dict[TKey, TValue]] = values if values else {}
 
     def get_value(self, primary_key: TKey,
                   secondary_key: TKey) -> TValue:
@@ -47,7 +46,7 @@ class DoubleMap[TKey, TValue]:
                   secondary_key: TKey) -> bool:
         return primary_key in self.values and secondary_key in self.values[primary_key]
 
-    def get_key_pairs(self) -> list[Tuple[MultiPhoneme, MultiPhoneme]]:
+    def get_key_pairs(self):
         for primary_key in self.values:
             for secondary_key in self.values[primary_key]:
                 yield primary_key, secondary_key
@@ -79,26 +78,11 @@ class DoubleMap[TKey, TValue]:
             return self.values == other
         return False
 
-class IntegerPhonemeMap:
-    def __init__(self, default_score: int = 0):
-        self.internal_map = DoubleMap[MultiPhoneme, int](default_score)
-
-    def get_value(self, phoneme: MultiPhoneme, other_phoneme: MultiPhoneme) -> int:
-        return self.internal_map.get_value(phoneme, other_phoneme)
-
-    def increment_by_one(self, phoneme: Phoneme, other_phoneme: Phoneme) -> None:
-        current_score = self.get_value(phoneme, other_phoneme)
-        self.internal_map.set_value(phoneme, other_phoneme, current_score + 1)
-
-    def get_key_pairs(self):
-        return self.internal_map.get_key_pairs()
-
-type SomeNumber = int | float
 
 class PhonemeMap:
-    def __init__(self, default_value: SomeNumber = 0):
+    def __init__(self, default_value: SomeNumber = 0, values: dict=None):
         self.default_value: SomeNumber = default_value
-        self.internal_map = DoubleMap[MultiPhoneme, SomeNumber](default_value)
+        self.internal_map = DoubleMap(default_value, values)
         self.phon_dist_added = False
 
     def __getitem__(self, **args) -> SomeNumber:
