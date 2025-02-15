@@ -8,6 +8,7 @@ Nynorsk Norwegian,Germanic > Common Germanic > Northwest Germanic > North German
 Bokmål Norwegian,Germanic > Common Germanic > Northwest Germanic > North Germanic > East Scandinavian > Southeast Scandinavian
 Danish,Germanic > Common Germanic > Northwest Germanic > North Germanic > East Scandinavian > Southeast Scandinavian
 Swedish,Germanic > Common Germanic > Northwest Germanic > North Germanic > East Scandinavian > Northeast Scandinavian
+Elfdalian,Germanic > Common Germanic > Northwest Germanic > North Germanic > East Scandinavian > Northeast Scandinavian
 Old English,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Anglo-Frisian > Anglic > Anglo-Saxon
 Scots,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Anglo-Frisian > Anglic > English > Scots
 English,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Anglo-Frisian > Anglic > English > Modern English
@@ -16,10 +17,11 @@ West Frisian,Germanic > Common Germanic > Northwest Germanic > West Germanic > N
 Saterland Frisian,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Anglo-Frisian > Frisian > East Frisian
 Mainland North Frisian,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Anglo-Frisian > Frisian > North Frisian
 Insular North Frisian,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Anglo-Frisian > Frisian > North Frisian
-East Low German,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Low German > East Low German
-Northern Low Saxon,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Low German > West Low German
-Eastphalian,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Low German > West Low German
+East Frisian Low Saxon,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Low German > West Low German > Northern Low Saxon
+Northern Low Saxon,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Low German > West Low German > Northern Low Saxon
 Westphalian,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Low German > West Low German
+Eastphalian,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Low German > West Low German
+Mecklenburgisch-Vorpommersch,Germanic > Common Germanic > Northwest Germanic > West Germanic > North Sea Germanic > Low German > East Low German
 Dutch,Germanic > Common Germanic > Northwest Germanic > West Germanic > Low Franconian > West Low Franconian > Hollandic
 Afrikaans,Germanic > Common Germanic > Northwest Germanic > West Germanic > Low Franconian > West Low Franconian > Hollandic > Afrikaans
 Zeelandic,Germanic > Common Germanic > Northwest Germanic > West Germanic > Low Franconian > West Low Franconian > Southwestern Dutch
@@ -27,11 +29,13 @@ West Flemish,Germanic > Common Germanic > Northwest Germanic > West Germanic > L
 Limburgish,Germanic > Common Germanic > Northwest Germanic > West Germanic > Low Franconian > South Low Franconian
 Ripuarian,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Central German > West Central German > Middle Franconian > Ripuarian
 Luxembourgish,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Central German > West Central German > Middle Franconian > Moselle Franconian
-Pennsylvania German,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Central German > West Central German > Rhine Franconian
+Pennsylvania German,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Central German > West Central German > Rhine Franconian > Palatine
+Palatine German,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Central German > West Central German > Rhine Franconian > Palatine
 Hessian,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Central German > West Central German > Rhine Franconian
 Yiddish,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Central German > East Central German
 Wymysorys,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Central German > East Central German
-Standard German,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Upper German > Upper Franconian
+Standard German,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Upper German > High Franconian
+Upper Franconian,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Upper German > High Franconian
 Bavarian,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Upper German > Austro-Bavarian
 Swabian,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Upper German > Alemannic > North Alemannic
 Alsatian,Germanic > Common Germanic > Northwest Germanic > West Germanic > High German > Upper German > Alemannic > South Alemannic

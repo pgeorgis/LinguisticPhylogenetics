@@ -8,11 +8,11 @@ from collections import defaultdict
 import yaml
 from constants import SPECIAL_JOIN_CHS, TRANSCRIPTION_PARAM_DEFAULTS
 from lingDist import binary_cognate_sim, gradient_cognate_dist
-from utils.tree import (calculate_tree_distance, gqd, load_newick_tree,
+from utils.tree import (calculate_tree_distance, get_gqd_score_to_reference,
                         plot_tree)
 from utils.utils import (calculate_time_interval, convert_sets_to_lists,
                          create_datestamp, create_timestamp, csv2dict,
-                         get_git_commit_hash)
+                         get_git_commit_hash, load_config)
 from wordDist import (HYBRID_DIST_KEY, LEVENSHTEIN_DIST_KEY,
                       PHONOLOGICAL_DIST_KEY, PMI_DIST_KEY, SURPRISAL_DIST_KEY,
                       LevenshteinDist, PhonDist, PMIDist, SurprisalDist,
@@ -20,19 +20,13 @@ from wordDist import (HYBRID_DIST_KEY, LEVENSHTEIN_DIST_KEY,
 
 from phyloLing import load_family
 
-# Loglevel mapping
-log_levels = {
-    'DEBUG': logging.DEBUG,
-    'INFO': logging.INFO,
-    'WARNING': logging.WARNING,
-    'ERROR': logging.ERROR,
-}
+logger = logging.getLogger(__name__)
 
 # Valid parameter values for certain parameters
 valid_params = {
-    'cluster': {
-        'cognates': {'auto', 'gold', 'none'},
-        'method': {'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid'},
+    'cognates': {
+        'cluster': {'auto', 'gold', 'none'},
+        'cluster_method': {'phon', 'pmi', 'surprisal', 'levenshtein', 'hybrid'},
     },
     'evaluation': {
         'similarity': {'gradient', 'binary'},
@@ -50,25 +44,15 @@ function_map = {
     PHONOLOGICAL_DIST_KEY: PhonDist,
     LEVENSHTEIN_DIST_KEY: LevenshteinDist
 }
+aux_func_map = {
+    'pmi': PMI_DIST_KEY,
+    'surprisal': SURPRISAL_DIST_KEY,
+    'levenshtein': LEVENSHTEIN_DIST_KEY,
+    'hybrid': HYBRID_DIST_KEY,
+} # TODO unify these with function_map
 
 
-def load_config(config_path):
-    """Returns a dictionary containing parameters from a specified config.yml file
-
-    Args:
-        config_path (str): Path to config.yml file
-
-    Returns:
-        config: nested dictionary of parameter names and values
-    """
-
-    with open(config_path, 'r') as f:
-        config = yaml.safe_load(f)
-
-    return config
-
-
-def validate_params(params, valid_params, logger):
+def validate_params(params, valid_params):
     for section_name in valid_params:
         for param_name in valid_params[section_name]:
             param_value = params[section_name][param_name]
@@ -89,7 +73,7 @@ def validate_params(params, valid_params, logger):
         params['family']['outdir'] = outdir
     else:
         outdir = os.path.abspath(params['family']['outdir'])
-    logger.debug(f'Experiment outdir: {outdir}')
+    logger.info(f'Experiment outdir: {outdir}')
 
     # Designate global transcription parameter defaults
     for transcription_param in TRANSCRIPTION_PARAM_DEFAULTS:
@@ -108,7 +92,7 @@ def validate_params(params, valid_params, logger):
             }
 
     # Raise error if binary cognate similarity is used with "none" cognate clustering
-    if params['cluster']['cognates'] == 'none' and params['evaluation']['similarity'] == 'binary':
+    if params['cognates']['cluster'] == 'none' and params['evaluation']['similarity'] == 'binary':
         logger.error('Binary cognate similarity cannot use "none" cognate clustering. Valid options are: [`auto`, `gold`]')
         raise ValueError
 
@@ -177,30 +161,11 @@ def load_precalculated_word_scores(distance_dir, family, dist_keys, excluded_doc
     return precalculated_word_scores
 
 
-def write_lang_dists_to_tsv(dist, outfile):
-    # TODO add description
-    with open(outfile, 'w') as f:
-        header = '\t'.join(['Language1', 'Language2', 'Measurement'])
-        f.write(f'{header}\n')
-        for key, value in dist.measured.items():
-            lang1, lang2, kwargs = key
-            line = '\t'.join([lang1.name, lang2.name, str(value)])
-            f.write(f'{line}\n')
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Loads a lexical dataset in CLDF format and produces a phylogenetic tree according to user specifications')
-    parser.add_argument('config', help='Path to config.yml file')
-    parser.add_argument('--loglevel', default='INFO', choices=['DEBUG', 'INFO', 'WARNING', 'ERROR'], help='Log level for printed log messages')
-    args = parser.parse_args()
+def main(config) -> dict:
     start_time, start_timestamp = create_timestamp()
 
-    # Configure the logger
-    logging.basicConfig(level=log_levels[args.loglevel], format='%(asctime)s classifyLangs %(levelname)s: %(message)s')
-    logger = logging.getLogger(__name__)
-
     # Load parameters from config file
-    params = load_config(args.config)
+    params: dict = load_config(config)
     # Load default parameters from default config file
     default_params = load_config(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config/default_config.yml'))
     # Set default values in case unspecified in config file
@@ -212,7 +177,7 @@ if __name__ == "__main__":
             if param_name not in params[section_name]:
                 params[section_name][param_name] = default_params[section_name][param_name]
     # Validate parameters
-    validate_params(params, valid_params, logger)
+    validate_params(params, valid_params)
 
     # Add git commmit hash to run config
     params["run_info"]["version"] = get_git_commit_hash()
@@ -225,37 +190,43 @@ if __name__ == "__main__":
     transcription_params = params['transcription']
     alignment_params = params['alignment']
     phon_corr_params = params['phon_corr']
-    cluster_params = params['cluster']
+    cognate_params = params['cognates']
     eval_params = params['evaluation']
     tree_params = params['tree']
     experiment_params = params['experiment']
 
+    # Generate experiment ID and outdir
+    exp_name = experiment_params['name']
+    if exp_name is None:
+        exp_id = start_timestamp
+    else:
+        exp_id = os.path.join(exp_name, start_timestamp)
+    logger.info(f'Experiment ID: {exp_id}')
+    exp_outdir = os.path.join(family_params["outdir"], "experiments", create_datestamp(), exp_id)
+    os.makedirs(exp_outdir, exist_ok=True)
+    params["run_info"]["experimentID"] = exp_id
+
     # Set ngram size used for surprisal
     surprisal_funcs = ('surprisal', 'hybrid')
-    if eval_params['method'] in surprisal_funcs or cluster_params['method'] in phon_corr_params:
+    if eval_params['method'] in surprisal_funcs or cognate_params['cluster_method'] in phon_corr_params:
         function_map[SURPRISAL_DIST_KEY].set('ngram_size', phon_corr_params['ngram'])
         function_map[SURPRISAL_DIST_KEY].set('phon_env', phon_corr_params['phon_env'])
         SurprisalDist = function_map[SURPRISAL_DIST_KEY]
 
         # Initialize hybrid distance object
-        if eval_params['method'] == 'hybrid' or cluster_params['method'] == 'hybrid':
+        if eval_params['method'] == 'hybrid' or cognate_params['cluster_method'] == 'hybrid':
             function_map[HYBRID_DIST_KEY] = init_hybrid(function_map, eval_params)
 
     # Designate cluster function if performing auto cognate clustering
-    if cluster_params['cognates'] == 'auto':
-        clusterDist = function_map[cluster_params['method']]
-        # Set specified cluster threshold # TODO cluster_threshold needs to be recalibrated
-        clusterDist.cluster_threshold = cluster_params['cluster_threshold']
+    if cognate_params['cluster'] == 'auto':
+        clusterDist = function_map[aux_func_map[cognate_params['cluster_method']]]
+        # Set cluster threshold if specified
+        if cognate_params['cluster_threshold']:
+            clusterDist.cluster_threshold = cognate_params['cluster_threshold']
     else:
         clusterDist = None
 
     # Designate evaluation function
-    aux_func_map = {
-        'pmi': PMI_DIST_KEY,
-        'surprisal': SURPRISAL_DIST_KEY,
-        'levenshtein': LEVENSHTEIN_DIST_KEY,
-        'hybrid': HYBRID_DIST_KEY,
-    }
     evalDist = function_map[aux_func_map[eval_params['method']]]
 
     # Load CLDF dataset
@@ -268,16 +239,21 @@ if __name__ == "__main__":
     transcription_params["global"]["min_phone_instances"] = max(
         transcription_params["global"]["min_phone_instances"], phon_corr_params['min_corr']
     )
-    family = load_family(family_params['name'],
-                         family_params['file'],
-                         outdir=family_params['outdir'],
-                         excluded_doculects=family_params['exclude'],
-                         included_doculects=family_params['include'],
-                         min_amc=family_params['min_amc'],
-                         transcription_params=transcription_params,
-                         alignment_params=alignment_params,
-                         logger=logger
-                         )
+    family, family_index = load_family(
+        family_params['name'],
+        family_params['file'],
+        outdir=family_params['outdir'],
+        excluded_doculects=family_params['exclude'],
+        included_doculects=family_params['include'],
+        min_amc=family_params['min_amc'],
+        transcription_params=transcription_params,
+        alignment_params=alignment_params,
+    )
+    for function_key in function_map:
+        function_map[function_key].set(
+            'family_index',
+            family_index[family.name]
+        )
 
     # Print some summary info about the loaded dataset
     logger.info(f'Loaded {len(family.languages)} doculects.')
@@ -294,7 +270,7 @@ if __name__ == "__main__":
 
         if eval_params['method'] in ('surprisal', 'hybrid'):
             logger.info(f'Loading {family.name} phoneme surprisal...')
-            if cluster_params['cognates'] == 'gold':
+            if cognate_params['cluster'] == 'gold':
                 family.load_phoneme_surprisal(
                     ngram_size=phon_corr_params['ngram'],
                     phon_env=phon_corr_params['phon_env'],
@@ -309,6 +285,10 @@ if __name__ == "__main__":
                     excepted=phon_corr_params['refresh'],
                 )
 
+        # Load previous alignments
+        logger.info(f'Loading {family.name} phonetic sequence alignments...')
+        family.load_alignments(excepted=phon_corr_params['refresh'])
+
     # If phoneme PMI/surprisal was refreshed for one or more languages, rewrite the saved files
     # Needs to occur after PMI/surprisal was recalculated for the language(s) in question
     if phon_corr_params['refresh_all'] or len(phon_corr_params['refresh']) > 0:
@@ -319,21 +299,14 @@ if __name__ == "__main__":
             ngram_size=phon_corr_params['ngram'],
             phon_env=phon_corr_params['phon_env'],
         )
-        family.write_phoneme_pmi()
-        if eval_params['method'] in ('surprisal', 'hybrid'):
-            family.write_phoneme_surprisal(
-                ngram_size=phon_corr_params['ngram'],
-                phon_env=phon_corr_params['phon_env'],
-            )
 
     # Auto cognate clustering only
-    if cluster_params['cognates'] == 'auto':
-        # Load pre-clustered cognate sets, if available
-        family.load_clustered_cognates()
-
-        # Set cognate cluster ID according to settings
-        cog_id = f"{family.name}_distfunc-{cluster_params['method']}_cutoff-{cluster_params['cluster_threshold']}"
-        # TODO cog_id should include weights and any other params for hybrid
+    if cognate_params['cluster'] in ('auto', 'gold'):
+        # Load pre-clustered cognate sets, if specified
+        cognate_index_file = cognate_params['cognate_index']
+        if cognate_index_file:
+            cognate_index = family.load_cognate_index(cognate_index_file, code=exp_id)
+            logger.info(f"Loaded cognate index from {cognate_index_file}")
 
     # Load precalculated word scores from specified directory
     precalculated_word_scores = None
@@ -357,7 +330,6 @@ if __name__ == "__main__":
             exclude_synonyms=eval_params['exclude_synonyms'],
             calibrate=eval_params['calibrate'],
             min_similarity=eval_params['min_similarity'],
-            logger=logger,
         )
     elif eval_params['similarity'] == 'binary':
         dist_func = binary_cognate_sim
@@ -369,64 +341,69 @@ if __name__ == "__main__":
             # sample_size=eval_params['sample_size'],
         )
 
-    # Generate test code # TODO is this used still?
-    code = family.generate_test_code(distFunc, cognates=cluster_params['cognates'], cutoff=cluster_params['cluster_threshold'])
-    if eval_params['similarity'] == 'gradient':
-        code += family.generate_test_code(evalDist)
-
-    # Generate experiment ID and outdir
-    exp_name = experiment_params['name']
-    if exp_name is None:
-        exp_id = start_timestamp
-    else:
-        exp_id = os.path.join(exp_name, start_timestamp)
-    logger.info(f'Experiment ID: {exp_id}')
-    exp_outdir = os.path.join(family_params["outdir"], "experiments", create_datestamp(), exp_id)
-    os.makedirs(exp_outdir, exist_ok=True)
-    params["run_info"]["experimentID"] = exp_id
-
     # Generate Newick tree string
     logger.info('Generating phylogenetic tree...')
     outtree = os.path.join(exp_outdir, "newick.tre")
+    out_distmatrix = os.path.join(exp_outdir, "distance-matrix.tsv")
     tree = family.generate_tree(
         cluster_func=clusterDist,
         dist_func=distFunc,
-        cognates=cluster_params['cognates'],
+        cognates=cognate_params['cluster'],
         linkage_method=tree_params['linkage'],
         outtree=outtree,
         root=tree_params['root'],
+        code=exp_id,
+        dm_outfile=out_distmatrix,
     )
     params["tree"]["newick"] = tree
     with open(outtree, 'w') as f:
         f.write(tree)
     logger.info(f'Wrote Newick tree to {os.path.abspath(outtree)}')
 
-    # Plot the phylogenetic tree
-    out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
-    plot_tree(os.path.abspath(outtree), out_png)
-    logger.info(f'Plotted phylogenetic tree to {out_png}')
+    # Write clustered cognate class index
+    if cognate_params['cluster'] == 'auto':
+        clustered_cognates = family.clustered_cognates[exp_id]
+        family.write_cognate_index(clustered_cognates, os.path.join(exp_outdir, f'cognate_classes.tsv'))
 
     # Optionally evaluate tree wrt to reference tree(s)
-    if tree_params["reference"]:
+    ref_classifications = None
+    gqd_score = None
+    tree_mutual_info = None
+    if tree_params["reference"] and len(family.languages) < 3:
+        logger.info("Fewer than 3 doculects provided; skipping evaluation.")
+    elif tree_params["reference"]:
         tree_scores = defaultdict(dict)
         for ref_tree_file in tree_params["reference"]:
-            ref_tree = load_newick_tree(ref_tree_file)
-            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
-            gqd_score = gqd(
+            gqd_score, ref_tree = get_gqd_score_to_reference(
                 tree,
-                ref_tree,
-                is_rooted=tree_params['root'] is not None
+                ref_tree_file,
+                len(family.languages),
+                tree_params['root']
             )
+            tree_scores[ref_tree_file]["newick"] = ref_tree.as_string("newick").strip()
             tree_scores[ref_tree_file]["GQD"] = gqd_score
             logger.info(f"GQD wrt reference tree {ref_tree_file}: {round(gqd_score, 3)}")
             tree_mutual_info = calculate_tree_distance(tree, ref_tree)
             tree_scores[ref_tree_file]["TreeDist"] = tree_mutual_info
             logger.info(f"TreeDist wrt reference tree {ref_tree_file}: {round(tree_mutual_info, 3)}")
         params["tree"]["eval"] = tree_scores
+        best_reference = min(
+            tree_scores.keys(),
+            key=lambda ref: sum(value for value in tree_scores[ref].values() if isinstance(value, (int, float)))
+        )
+        if best_reference.endswith(".csv"):
+            if os.path.exists(best_reference):
+                ref_classifications = os.path.abspath(best_reference)
+        else:
+            ref_csv = best_reference.replace(".tre", ".csv")
+            if os.path.exists(ref_csv):
+                ref_classifications = os.path.abspath(ref_csv)
 
-    # Write distance matrix TSV
-    out_distmatrix = os.path.join(exp_outdir, f'distance-matrix.tsv')
-    write_lang_dists_to_tsv(distFunc, outfile=out_distmatrix)
+    # Plot the phylogenetic tree
+    out_png = os.path.abspath(os.path.join(exp_outdir, "tree.png"))
+    plot_tree(os.path.abspath(outtree), out_png, classifications_file=ref_classifications)
+    logger.info(f'Plotted phylogenetic tree to {out_png}')
+
     # Write lexical comparison files
     for lang1, lang2 in family.get_doculect_pairs(bidirectional=True):
         dist_outdir = os.path.join(exp_outdir, 'distances')
@@ -457,3 +434,14 @@ if __name__ == "__main__":
     logger.info(f"Wrote experiment run config to {os.path.abspath(config_copy)}")
 
     logger.info('Completed successfully.')
+    return {
+        "distance_matrix": out_distmatrix,
+        "gqd_distance": gqd_score,
+        "wrt_distance": tree_mutual_info,
+    }
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Loads a lexical dataset in CLDF format and produces a phylogenetic tree according to user specifications')
+    parser.add_argument('config', help='Path to config.yml file')
+    args = parser.parse_args()
+    main(args.config)

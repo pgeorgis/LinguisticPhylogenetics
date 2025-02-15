@@ -14,10 +14,10 @@ VOWELS
 	<under> /ˈɐndə/ "under_PREP"
 	<sister> /sˈɪstə/ "sister_NOUN"
 
-/ˈaɪ̯/ (0.034)
+/ˈaɪ̯/ (0.035)
 	<ice> /ˈaɪ̯s/ "ice_NOUN"
 	<eye> /ˈaɪ̯/ "eye_NOUN"
-	<wine> /wˈaɪ̯n/ "wine_NOUN"
+	<wild> /wˈaɪ̯ɫd/ "wild_ADJ"
 
 /ˈe/ (0.031)
 	<better> /bˈetə/ "better_ADJ"
@@ -64,12 +64,12 @@ VOWELS
 	<apple> /ˈæpɫ̩/ "apple_NOUN"
 	<man> /mˈæn/ "man_NOUN"
 
-/ˈɒ/ (0.009)
+/ˈɒ/ (0.008)
 	<hot> /hˈɒt/ "hot_ADJ"
 	<salt> /sˈɒɫt/ "salt_NOUN"
 	<what> /wˈɒt/ "what_PRON"
 
-/ɪ/ (0.009)
+/ɪ/ (0.008)
 	<twenty> /tʰwˈentɪ/ "twenty_NUM"
 	<holy> /hˈəʊ̯lɪ/ "holy_ADJ"
 	<chicken> /ʧˈɪkɪn/ "chicken_NOUN"
@@ -105,7 +105,7 @@ CONSONANTS
 	<thin> /θˈɪn/ "thin_ADJ"
 	<ten> /tʰˈen/ "ten_NUM"
 
-/d/ (0.059)
+/d/ (0.058)
 	<land> /lˈænd/ "land_NOUN"
 	<gold> /ɡˈəʊ̯ɫd/ "gold_NOUN_NEU"
 	<hide> /hˈaɪ̯d/ "skin_NOUN"
@@ -115,8 +115,8 @@ CONSONANTS
 	<see> /sˈiː/ "see_VERB"
 	<sea> /sˈiː/ "sea_NOUN"
 
-/t/ (0.052)
-	<stone> /stˈəʊ̯n/ "stone_NOUN"
+/t/ (0.053)
+	<star> /stˈɑː/ "star_NOUN"
 	<salt> /sˈɒɫt/ "salt_NOUN"
 	<shit> /ʃˈɪt/ "shit_NOUN"
 
@@ -145,7 +145,7 @@ CONSONANTS
 	<storm> /stˈɔːm/ "storm_NOUN"
 	<swim> /swˈɪm/ "swim_VERB"
 
-/h/ (0.026)
+/h/ (0.025)
 	<hen> /hˈen/ "hen_NOUN"
 	<half> /hˈɑːf/ "half_NOUN"
 	<holy> /hˈəʊ̯lɪ/ "holy_ADJ"
@@ -175,7 +175,7 @@ CONSONANTS
 	<guest> /ɡˈest/ "guest_NOUN"
 	<goose> /ɡˈuːs/ "goose_NOUN"
 
-/ʃ/ (0.014)
+/ʃ/ (0.015)
 	<shit> /ʃˈɪt/ "shit_NOUN"
 	<wish> /wˈɪʃ/ "wish_VERB"
 	<sheep> /ʃˈiːp/ "sheep_NOUN"
@@ -205,7 +205,7 @@ CONSONANTS
 	<quean> /kʰwˈiːn/ "woman_NOUN"
 	<ken> /kʰˈen/ "ken_VERB"
 
-/ʧ/ (0.009)
+/ʧ/ (0.008)
 	<child> /ʧˈaɪ̯ɫd/ "child_NOUN"
 	<rich> /ɹˈɪʧ/ "rich_ADJ"
 	<thrutch> /θɹˈɐʧ/ "press_VERB"

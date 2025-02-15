@@ -1,0 +1,5 @@
+experiment:
+    name: "test-full"
+
+config:
+    extend: "datasets/Germanic/config/germanic_config.yml"

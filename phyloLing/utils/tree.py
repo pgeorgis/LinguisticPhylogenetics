@@ -25,6 +25,7 @@ def load_newick_tree(file_path, as_string=True):
 
 def postprocess_newick(newick_tree):
     # Fix formatting of Newick string
+    newick_tree = newick_tree.strip()
     newick_tree = re.sub(r'\s+', '_', newick_tree)
     newick_tree = re.sub(r',_', ',', newick_tree)
     return newick_tree
@@ -352,7 +353,7 @@ def taxa_subset_state(tips, tree):
     return 0
 
 
-def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_depth_in_tree=False):
+def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_depth_in_tree=True):
     """
     Calculates the Generalized Quartet Distance (GQD) between two trees.
 
@@ -378,6 +379,10 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_de
     resolved_count = 0
     differing_count = 0
 
+    # Get maximum tree depth
+    if weight_by_depth_in_tree:
+        max_depth = max(leaf.distance_from_root() for leaf in non_binary_tree.leaf_nodes())
+
     for ntet in all_ntets:
         b_state = taxa_subset_state(ntet, binary_tree)
         nb_state = taxa_subset_state(ntet, non_binary_tree)
@@ -392,7 +397,7 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_de
             )
             incr = 1
             if weight_by_depth_in_tree:
-                weight = len(mrca.leaf_nodes()) / n_tips
+                weight = 1 + (max_depth - mrca.distance_from_root()) / max_depth
                 incr = weight
             
             resolved_count += incr
@@ -412,9 +417,10 @@ def calculate_tree_distance(tree1, tree2):
     if isinstance(tree2, dendropy.Tree):
         tree2 = tree2.as_string("newick").strip()
     current_directory = os.path.abspath(os.path.dirname(__file__))
-    tree_dist_script = os.path.join(current_directory, "treeDist.R")
+    r_utils_directory = os.path.join(current_directory, "r")
+    tree_dist_script = os.path.join(r_utils_directory, "treeDist.R")
     result = subprocess.run(
-        ["Rscript", tree_dist_script, tree1, tree2],
+        [tree_dist_script, tree1, tree2],
         capture_output=True,
         text=True
     )
@@ -430,14 +436,36 @@ def calculate_tree_distance(tree1, tree2):
         raise ValueError("Error parsing TreeDistance result")
 
 
-def plot_tree(newick_path, png_path):
+def plot_tree(newick_path, png_path, classifications_file=None):
     """Plots a phylogenetic tree (from file saved as Newick string) to a PNG image file."""
     current_directory = os.path.abspath(os.path.dirname(__file__))
-    plot_tree_script = os.path.join(current_directory, "plotTree.R")
+    r_utils_directory = os.path.join(current_directory, "r")
+    plot_tree_script = os.path.join(
+        r_utils_directory,
+        "plotTreeWithClassifications.R" if classifications_file else "plotTree.R"
+    )
+    r_script_args = [plot_tree_script, newick_path, png_path]
+    if classifications_file:
+        r_script_args.append(classifications_file)
     result = subprocess.run(
-        ["Rscript", plot_tree_script, newick_path, png_path],
+        r_script_args,
         capture_output=True,
         text=True
     )
     if result.returncode != 0:
         raise RuntimeError(f"R script failed with error:\n{result.stdout}\n{result.stderr}")
+
+def get_gqd_score_to_reference(tree: str,
+                               reference_tree_path: str,
+                               family_language_count: int,
+                               root_element: str | None):
+    ref_tree = load_newick_tree(reference_tree_path)
+    if family_language_count == 0:
+        raise ValueError("Family language count must be greater than 0")
+    gqd_score = gqd(
+        tree,
+        ref_tree,
+        group_size=min(4, family_language_count),
+        is_rooted=root_element is not None
+    )
+    return gqd_score, ref_tree

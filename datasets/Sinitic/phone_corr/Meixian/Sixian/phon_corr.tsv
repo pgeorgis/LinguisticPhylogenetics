@@ -1,7 +1,8 @@
-Meixian	Sixian	probability
+Meixian	Meixian	probability
 ⁵	⁵	1.0
 ⁴⁴	²⁴	1.0
 ʨʰ	ʨʰ	1.0
+ʨ	ʨ	1.0
 ʦʰ	ʦʰ	1.0
 ʦ	ʦ	1.0
 ʋ	v	1.0
@@ -14,6 +15,7 @@ Meixian	Sixian	probability
 ¹¹	¹¹	1.0
 ¹	²	1.0
 ³¹	³¹	1.0
+²	²	1.0
 z̩	ɨ	1.0
 z	ɨ	1.0
 w	w	1.0
@@ -22,10 +24,13 @@ t̚	t̚	1.0
 tʰ	tʰ	1.0
 t	t	1.0
 s	s	1.0
+p̚	p̚	1.0
 pʰ	pʰ	1.0
 p	p	1.0
 o_¹¹	o_²⁴	1.0
 o	o	1.0
+n̩	ŋ̍	1.0
+n	n	1.0
 m	m	1.0
 l	l	1.0
 k̚	k̚	1.0
@@ -41,11 +46,10 @@ e	e	1.0
 cʰ	kʰ	1.0
 c	k	1.0
 a_w	o	1.0
-n	n	0.939
+<#_n	<#_ŋ̍	1.0
 ⁵³	⁵⁵	0.889
 a	a	0.763
 ɕ	ɕ	0.667
 ɕ	s	0.333
 a	e	0.237
 ⁵³	²⁴	0.111
-n	ŋ̍	0.061

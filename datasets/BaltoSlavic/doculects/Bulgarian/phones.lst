@@ -1,0 +1,217 @@
+VOWELS
+/ɛ/ (0.077)
+	<хладен> /xɫˈadɛn/ "COLD_ADJ"
+	<орех> /ˈɔrɛx/ "NUT_NOUN"
+	<жена> /ʒɛnˈa/ "WOMAN_NOUN"
+
+/a/ (0.066)
+	<оса> /osˈa/ "WASP_NOUN"
+	<лято> /lʲˈato/ "SUMMER_NOUN"
+	<пчела> /pʧɛɫˈa/ "BEE_NOUN"
+
+/ɐ/ (0.055)
+	<огън> /ˈɔɡɐn/ "FIRE_NOUN"
+	<невяста> /nɛvʲˈastɐ/ "BRIDE_NOUN"
+	<пясък> /pʲˈasɐk/ "SAND_NOUN"
+
+/ɔ/ (0.031)
+	<восък> /vˈɔsɐk/ "WAX_NOUN"
+	<нощ> /nˈɔʃt/ "NIGHT_NOUN"
+	<нос> /nˈɔs/ "NOSE_NOUN"
+
+/i/ (0.029)
+	<три> /trˈi/ "THREE_NUM"
+	<име> /ˈimɛ/ "NAME_NOUN"
+	<глива> /ɡlˈivɐ/ "FUNGUS_NOUN"
+
+/ɤ/ (0.028)
+	<мъртъв> /mˈɤrtɐf/ "DEAD_ADJ"
+	<лъв> /ɫˈɤf/ "LION_NOUN"
+	<късам> /kˈɤsɐm/ "BITE_VERB"
+
+/o/ (0.024)
+	<гора> /ɡorˈa/ "MOUNTAIN_NOUN"
+	<човек> /ʧovˈɛk/ "PERSON_NOUN"
+	<кора> /korˈa/ "BARK_NOUN"
+
+/u/ (0.009)
+	<глуп> /ɡɫˈup/ "STUPID_ADJ"
+	<ухо> /uxˈɔ/ "EAR_NOUN"
+	<люде> /lʲˈudɛ/ "PEOPLE_NOUN"
+
+
+
+CONSONANTS
+/r/ (0.048)
+	<пръст> /prˈɤst/ "FINGER_NOUN"
+	<дърво> /dɐrvˈɔ/ "TREE_NOUN"
+	<кръв> /krˈɤf/ "BLOOD_NOUN"
+
+/t/ (0.047)
+	<сто> /stˈɔ/ "HUNDRED_NUM"
+	<кост> /kˈɔst/ "BONE_NOUN"
+	<топъл> /tˈɔpɐɫ/ "WARM_ADJ"
+
+/s/ (0.045)
+	<късам> /kˈɤsɐm/ "BITE_VERB"
+	<стар> /stˈar/ "OLD_ADJ"
+	<гъска> /ɡˈɤskɐ/ "GOOSE_NOUN"
+
+/k/ (0.037)
+	<велик> /vɛlˈik/ "GREAT_ADJ"
+	<пясък> /pʲˈasɐk/ "SAND_NOUN"
+	<ябълка> /jˈabɐɫkɐ/ "APPLE_NOUN"
+
+/ɫ/ (0.036)
+	<вол> /vˈɔɫ/ "OX_NOUN"
+	<гълъб> /ɡˈɤɫɐb̥/ "DOVE_NOUN"
+	<глас> /ɡɫˈas/ "VOICE_NOUN"
+
+/v/ (0.03)
+	<видра> /vˈidrɐ/ "OTTER_NOUN"
+	<вол> /vˈɔɫ/ "OX_NOUN"
+	<видя> /vˈidʲɐ/ "SEE_VERB"
+
+/n/ (0.028)
+	<нокът> /nˈɔkɐt/ "FINGERNAIL_NOUN"
+	<зелен> /zɛlˈɛn/ "GREEN_ADJ"
+	<син> /sˈin/ "SON_NOUN"
+
+/d/ (0.027)
+	<година> /ɡodˈinɐ/ "HOUR_NOUN"
+	<седем> /sˈɛdɛm/ "SEVEN_NUM"
+	<девет> /dˈɛvɛt/ "NINE_NUM"
+
+/m/ (0.024)
+	<късам> /kˈɤsɐm/ "BITE_VERB"
+	<море> /morˈɛ/ "SEA_NOUN"
+	<взема> /vzˈɛmɐ/ "TAKE_VERB"
+
+/ɡ/ (0.019)
+	<глух> /ɡɫˈux/ "DEAF_ADJ"
+	<въглен> /vˈɤɡlɛn/ "COAL_NOUN"
+	<глава> /ɡɫɐvˈa/ "HEAD_NOUN"
+
+/z/ (0.017)
+	<език> /ɛzˈik/ "TONGUE_NOUN"
+	<зелен> /zɛlˈɛn/ "GREEN_ADJ"
+	<бреза> /brɛzˈa/ "BIRCH_NOUN"
+
+/p/ (0.013)
+	<пет> /pˈɛt/ "FIVE_NUM"
+	<топъл> /tˈɔpɐɫ/ "WARM_ADJ"
+	<пълен> /pˈɤlɛn/ "FULL_ADJ"
+
+/b/ (0.013)
+	<хръбет> /xrɐbˈɛt/ "SPINE_NOUN"
+	<бреза> /brɛzˈa/ "BIRCH_NOUN"
+	<облак> /ˈɔbɫɐk/ "CLOUD_NOUN"
+
+/x/ (0.012)
+	<ухо> /uxˈɔ/ "EAR_NOUN"
+	<тих> /tˈix/ "QUIET_ADJ"
+	<орех> /ˈɔrɛx/ "NUT_NOUN"
+
+/l/ (0.01)
+	<теле> /tɛlˈɛ/ "CALF_NOUN"
+	<лед> /lˈɛd̥/ "ICE_NOUN"
+	<въглен> /vˈɤɡlɛn/ "COAL_NOUN"
+
+/ʒ/ (0.009)
+	<жена> /ʒɛnˈa/ "WOMAN_NOUN"
+	<живея> /ʒivˈɛjɐ/ "LIVE_VERB"
+	<вежа> /vˈɛʒɐ/ "TIE_VERB"
+
+/ʦ/ (0.008)
+	<цвете> /ʦvˈɛtɛ/ "FLOWERS_NOUN"
+	<цвят> /ʦvʲˈat/ "FLOWER_NOUN"
+	<месец> /mˈɛsɛʦ/ "MONTH_NOUN"
+
+/lʲ/ (0.008)
+	<люде> /lʲˈudɛ/ "PEOPLE_NOUN"
+	<лято> /lʲˈato/ "SUMMER_NOUN"
+	<желязо> /ʒɛlʲˈazo/ "IRON_NOUN"
+
+/j/ (0.008)
+	<ябълка> /jˈabɐɫkɐ/ "APPLE_NOUN"
+	<пия> /pˈijɐ/ "DRINK_VERB"
+	<зная> /znˈajɐ/ "KNOW_VERB"
+
+/d̥/ (0.007)
+	<град> /ɡrˈad̥/ "CITY_NOUN"
+	<сад> /sˈad̥/ "GARDEN_NOUN"
+	<мед> /mˈɛd̥/ "HONEY_NOUN"
+
+/ʧ/ (0.006)
+	<вечер> /vˈɛʧɛr/ "EVENING_NOUN"
+	<четири> /ʧˈɛtiri/ "FOUR_NUM"
+	<човек> /ʧovˈɛk/ "PERSON_NOUN"
+
+/ʃ/ (0.006)
+	<дъщеря> /dɐʃtɛrʲˈa/ "DAUGHTER_NOUN"
+	<шест> /ʃˈɛst/ "SIX_NUM"
+	<що> /ʃtˈɔ/ "WHAT_PRON"
+
+/vʲ/ (0.006)
+	<цвят> /ʦvʲˈat/ "FLOWER_NOUN"
+	<свят> /svʲˈat/ "HOLY_ADJ"
+	<вятър> /vʲˈatɐr/ "WIND_NOUN"
+
+/f/ (0.006)
+	<кръв> /krˈɤf/ "BLOOD_NOUN"
+	<лъв> /ɫˈɤf/ "LION_NOUN"
+	<мъртъв> /mˈɤrtɐf/ "DEAD_ADJ"
+
+/ɡ̊/ (0.005)
+	<рог> /rˈɔɡ̊/ "HORN_NOUN"
+	<бог> /bˈɔɡ̊/ "GOD_NOUN"
+	<дълъг> /dˈɤɫɐɡ̊/ "LONG_ADJ"
+
+/b̥/ (0.003)
+	<зъб> /zˈɤb̥/ "TOOTH_NOUN"
+	<хляб> /xlʲˈab̥/ "BREAD_NOUN"
+	<гълъб> /ɡˈɤɫɐb̥/ "DOVE_NOUN"
+
+/ʒ̊/ (0.002)
+	<дъжд> /dˈɤʒ̊d̥/ "RAIN_NOUN"
+	<мъж> /mˈɤʒ̊/ "HUSBAND_NOUN"
+
+/z̥/ (0.002)
+	<без> /bˈɛz̥/ "WITHOUT_PREP"
+	<аз> /ˈaz̥/ "I_POS"
+
+/mʲ/ (0.002)
+	<земя> /zɛmʲˈa/ "EARTH_NOUN"
+	<място> /mʲˈasto/ "PLACE_NOUN"
+
+/ʦʲ/ (0.001)
+	<цял> /ʦʲˈaɫ/ "WHOLE_ADJ"
+
+/tʲ/ (0.001)
+	<тяло> /tʲˈaɫo/ "BODY_NOUN"
+
+/rʲ/ (0.001)
+	<дъщеря> /dɐʃtɛrʲˈa/ "DAUGHTER_NOUN"
+
+/pʲ/ (0.001)
+	<пясък> /pʲˈasɐk/ "SAND_NOUN"
+
+/nʲ/ (0.001)
+	<сняг> /snʲˈaɡ̊/ "SNOW_NOUN"
+
+/dʲ/ (0.001)
+	<видя> /vˈidʲɐ/ "SEE_VERB"
+
+/bʲ/ (0.001)
+	<бял> /bʲˈaɫ/ "WHITE_ADJ"
+
+
+
+SUPRASEGMENTALS
+/ˈ/ (0.186)
+	<камък> /kˈamɐk/ "STONE_NOUN"
+	<вол> /vˈɔɫ/ "OX_NOUN"
+	<сняг> /snʲˈaɡ̊/ "SNOW_NOUN"
+
+
+

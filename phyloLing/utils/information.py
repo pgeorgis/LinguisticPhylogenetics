@@ -1,8 +1,10 @@
+from collections import defaultdict
 from math import log
 from statistics import mean
 
-from constants import GAP_CH_DEFAULT, PAD_CH_DEFAULT
+from constants import GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT, PAD_CH_DEFAULT
 from utils.sequence import Ngram, PhonEnvNgram, pad_sequence
+from utils.utils import default_dict
 
 
 def pointwise_mutual_info(p_joint, p_x, p_y):
@@ -93,6 +95,35 @@ def adaptation_surprisal(alignment,
         return mean(values)
     else:
         return values
+
+
+def get_oov_val(corr_dict, oov_ch=NON_IPA_CH_DEFAULT):
+    # Determine the (potentially smoothed) value for unseen ("out of vocabulary" [OOV]) correspondences
+    # Check using an OOV/non-IPA character
+    oov_val = corr_dict[oov_ch]
+
+    # Then remove this character from the surprisal dictionary
+    del corr_dict[oov_ch]
+
+    return oov_val
+
+
+def prune_oov_surprisal(surprisal_dict):
+    # Prune correspondences with a surprisal value greater than OOV surprisal
+    pruned = defaultdict(lambda: {})
+    for seg1 in surprisal_dict:
+        oov_val = get_oov_val(surprisal_dict[seg1])
+
+        # Save values which are not equal to (less than) the OOV smoothed value
+        for seg2 in surprisal_dict[seg1]:
+            surprisal_val = surprisal_dict[seg1][seg2]
+            if surprisal_val < oov_val:
+                pruned[seg1][seg2] = surprisal_val
+
+        # Set as default dict with OOV value as default
+        pruned[seg1] = default_dict(pruned[seg1], lmbda=oov_val)
+
+    return pruned, oov_val
 
 
 def calculate_infocontent_of_word(seq, lang, ngram_size=3, pad_ch=PAD_CH_DEFAULT):
