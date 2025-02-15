@@ -922,6 +922,192 @@ class PhonCorrelator:
                     pmi_dict.set_value(seg1_ngram.undo(), seg2_ngram.undo(), pmi_val)
         return pmi_dict
 
+
+    def iterate_phone_pmi(self,
+                          synonym_sample: list,
+                          diff_sample: list,
+                          family_index: dict,
+                          seed_i: int,
+                          max_iterations: int = 3,
+                          min_corr=2,
+                          max_ngram_size=2,
+                          p_threshold=0.1,
+                          cumulative=False
+                          ):
+        synonym_sample, diff_sample = map(sort_wordlist, [synonym_sample, diff_sample])
+        synonym_sample_wordlist = Wordlist(synonym_sample)
+        # At each following iteration N, re-align using the pmi_stepN as an
+        # additional penalty, and then recalculate PMI
+        iteration = 0
+        PMI_iterations: dict[int, PhonemeMap] = {}
+        qualifying_words = default_dict({iteration: synonym_sample_wordlist}, lmbda=[])
+        disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
+        if cumulative:
+            all_cognate_alignments = []
+
+        while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
+            iteration += 1
+            qual_prev_sample = qualifying_words[iteration - 1]
+            reversed_qual_prev_sample = qual_prev_sample.reverse()
+
+            if iteration == 1:
+                # Fit IBM translation/alignment model on ngrams of varying sizes
+                initial_corr_counts1, _ = self.fit_radial_ibm_model(
+                    qual_prev_sample,
+                    lang1=self.lang1,
+                    lang2=self.lang2,
+                    min_corr=min_corr,
+                    max_ngram_size=max_ngram_size,
+                    seed=seed_i,
+                )
+                initial_corr_counts2, _ = self.fit_radial_ibm_model(
+                    reversed_qual_prev_sample,
+                    lang1=self.lang2,
+                    lang2=self.lang1,
+                    min_corr=min_corr,
+                    max_ngram_size=max_ngram_size,
+                    seed=seed_i,
+                )
+
+                # Calculate initial PMI for all ngram pairs
+                pmi_dict_l1l2, pmi_dict_l2l1 = [
+                    self.phoneme_pmi(
+                        conditional_counts=initial_corr_counts1,
+                        l1=self.lang1,
+                        l2=self.lang2,
+                        wordlist=qual_prev_sample,
+                    ),
+                    self.phoneme_pmi(
+                        conditional_counts=initial_corr_counts2,
+                        l1=self.lang2,
+                        l2=self.lang1,
+                        wordlist=reversed_qual_prev_sample,
+                    )
+                ]
+
+                # Average together the PMI values from each direction
+                pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
+            
+            else:
+                pmi_step_i = PMI_iterations[iteration - 1]
+
+            # Align the qualifying words of the previous step using initial PMI
+            cognate_alignments = self.align_wordlist(
+                qual_prev_sample,
+                align_costs=pmi_step_i
+            )
+
+            # Add cognate alignments into running pool of alignments
+            if cumulative:
+                all_cognate_alignments.extend(cognate_alignments)
+                cognate_alignments = all_cognate_alignments
+
+            # Recalculate correspondence probabilities and PMI values
+            # from these alignments alone, i.e. not using radial IBM
+            # Reason for recalculating is that using alignments we can be stricter:
+            # impose minimum corr requirements and only consider actually aligned segments
+            cognate_probs = self.correspondence_probs(
+                cognate_alignments,
+                wordlist=qual_prev_sample,
+                exclude_null=False,
+                counts=True,
+                min_corr=min_corr,
+            )
+            pmi_step_ii = [
+                self.phoneme_pmi(
+                    cognate_probs,
+                    l1=self.lang1,
+                    l2=self.lang2,
+                    wordlist=qual_prev_sample
+                ),
+                self.phoneme_pmi(
+                    reverse_corr_dict(cognate_probs),
+                    l1=self.lang2,
+                    l2=self.lang2,
+                    wordlist=reversed_qual_prev_sample
+                ),
+            ]
+            pmi_step_ii = average_corrs(*pmi_step_ii)
+            PMI_iterations[iteration] = pmi_step_ii
+            qualifying_wordlist, qualifying_pairs, disqualified_pairs = self.get_qualifying_word_pairs(
+                synonym_sample=synonym_sample_wordlist,
+                diff_sample=disqualified_words[iteration - 1],
+                pmi_iteration_dict=PMI_iterations[iteration],
+                p_threshold=p_threshold,
+                family_index=family_index,
+            )
+            if len(qualifying_wordlist.word_pairs) == 0:
+                logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
+            qualifying_words[iteration] = qualifying_wordlist
+            disqualified_words[iteration] = disqualified_pairs + diff_sample
+
+            # Log results of this iteration
+            iter_log = log_phon_corr_iteration(
+                iteration=iteration,
+                qualifying_words=qualifying_words,
+                disqualified_words=disqualified_words,
+            )
+
+        # Return iterations dict, qualifying wordlist, list of disqualified pairs,  and iteration log
+        return PMI_iterations, qualifying_wordlist, disqualified_pairs, iter_log
+
+
+    def get_qualifying_word_pairs(self,
+                                  synonym_sample,
+                                  diff_sample,
+                                  pmi_iteration_dict,
+                                  p_threshold,
+                                  family_index,
+                                  ):
+        # Align all same-meaning word pairs with recalculated PMI
+        aligned_synonym_sample = self.align_wordlist(
+            synonym_sample,
+            align_costs=pmi_iteration_dict,
+        )
+
+        # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
+        # disqualified_words[iteration-1] already contains both types
+        noncognate_alignments = self.align_wordlist(
+            diff_sample,
+            align_costs=pmi_iteration_dict,
+        )
+
+        # Score PMI for different meaning words and words disqualified in previous iteration
+        noncognate_alignment_scores = []
+        for alignment in noncognate_alignments:
+            length_normalized_score = alignment.cost / alignment.length
+            noncognate_alignment_scores.append(length_normalized_score)
+        nc_mean = mean(noncognate_alignment_scores)
+        nc_stdev = stdev(noncognate_alignment_scores)
+
+        # Score same-meaning alignments against different-meaning alignments
+        qualifying_pairs, disqualified_pairs = [], []
+        qualifying_alignments = []
+        qualified_PMI = []
+        for q, pair in enumerate(synonym_sample.word_pairs):
+            alignment = aligned_synonym_sample[q]
+            length_normalized_score = alignment.cost / alignment.length
+
+            # Proportion of non-cognate word pairs which would have an alignment score at least as low as this word pair
+            pnorm = 1 - norm.cdf(length_normalized_score, loc=nc_mean, scale=nc_stdev)
+            if pnorm < p_threshold:
+                qualifying_pairs.append(pair)
+                qualifying_alignments.append(alignment)
+                qualified_PMI.append(length_normalized_score)
+            else:
+                disqualified_pairs.append(pair)
+                #other_word_pairs.add(pair)
+        qualifying_wordlist = Wordlist(sort_wordlist(qualifying_pairs))
+        qualifying_wordlist, qualifying_alignments = prune_extraneous_synonyms(
+            wordlist=qualifying_wordlist,
+            alignments=qualifying_alignments,
+            scores=qualified_PMI,
+            maximize_score=True,
+            family_index=family_index,
+        )
+        return qualifying_wordlist, qualifying_pairs, disqualified_pairs
+
+
     def compute_phone_corrs(self,
                             family_index,
                             p_threshold=0.1,
@@ -955,9 +1141,8 @@ class PhonCorrelator:
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
         sample_results: dict[int, PhonemeMap] = {}
         sample_size = round(len(self.same_meaning) * sample_size)
-        # Take N samples of different-meaning words, perform PMI calibration, then average all of the estimates from the various samples
-        iter_logs = defaultdict(lambda: [])
-        sample_iterations = {}
+        # Take N samples of different-meaning words, perform PMI calibration,
+        # then average all of the estimates from the various samples
         start_seed = self.seed
         if n_samples > 1:
             sample_dict = self.sample_wordlists(
@@ -977,176 +1162,30 @@ class PhonCorrelator:
                 )
             }
         final_qualifying = set()
+        iter_logs = defaultdict(lambda: [])
         #other_word_pairs = set()
         for key, sample in sample_dict.items():
             seed_i, _ = key
             sample_n = seed_i - start_seed
             synonym_sample, diff_sample = sample
-            synonym_sample, diff_sample = map(sort_wordlist, [synonym_sample, diff_sample])
-            synonym_sample_wordlist = Wordlist(synonym_sample)
+            pmi_iteration_results, qualifying_wordlist, disqualified_pairs, iter_log = self.iterate_phone_pmi(
+                synonym_sample=synonym_sample,
+                diff_sample=diff_sample,
+                max_iterations=max_iterations,
+                min_corr=min_corr,
+                max_ngram_size=max_ngram_size,
+                p_threshold=p_threshold,
+                cumulative=cumulative,
+                family_index=family_index,
+                seed_i=seed_i,
+            )
+            final_iteration_results = pmi_iteration_results[max(pmi_iteration_results.keys())]
 
-            # At each following iteration N, re-align using the pmi_stepN as an
-            # additional penalty, and then recalculate PMI
-            iteration = 0
-            PMI_iterations: dict[int, PhonemeMap] = {}
-            qualifying_words = default_dict({iteration: synonym_sample_wordlist}, lmbda=[])
-            disqualified_words = default_dict({iteration: diff_sample}, lmbda=[])
-            if cumulative:
-                all_cognate_alignments = []
-
-            while iteration < max_iterations and qualifying_words[iteration] != qualifying_words[iteration - 1]:
-                iteration += 1
-                qual_prev_sample = qualifying_words[iteration - 1]
-                reversed_qual_prev_sample = qual_prev_sample.reverse()
-
-                if iteration == 1:
-                    # Fit IBM translation/alignment model on ngrams of varying sizes
-                    initial_corr_counts1, _ = self.fit_radial_ibm_model(
-                        qual_prev_sample,
-                        lang1=self.lang1,
-                        lang2=self.lang2,
-                        min_corr=min_corr,
-                        max_ngram_size=max_ngram_size,
-                        seed=seed_i,
-                    )
-                    initial_corr_counts2, _ = self.fit_radial_ibm_model(
-                        reversed_qual_prev_sample,
-                        lang1=self.lang2,
-                        lang2=self.lang1,
-                        min_corr=min_corr,
-                        max_ngram_size=max_ngram_size,
-                        seed=seed_i,
-                    )
-
-                    # Calculate initial PMI for all ngram pairs
-                    pmi_dict_l1l2, pmi_dict_l2l1 = [
-                        self.phoneme_pmi(
-                            conditional_counts=initial_corr_counts1,
-                            l1=self.lang1,
-                            l2=self.lang2,
-                            wordlist=qual_prev_sample,
-                        ),
-                        self.phoneme_pmi(
-                            conditional_counts=initial_corr_counts2,
-                            l1=self.lang2,
-                            l2=self.lang1,
-                            wordlist=reversed_qual_prev_sample,
-                        )
-                    ]
-
-                    # Average together the PMI values from each direction
-                    pmi_step_i = average_corrs(pmi_dict_l1l2, pmi_dict_l2l1)
-                
-                else:
-                    pmi_step_i = PMI_iterations[iteration - 1]
-
-                # Align the qualifying words of the previous step using initial PMI
-                cognate_alignments = self.align_wordlist(
-                    qual_prev_sample,
-                    align_costs=pmi_step_i
-                )
-
-                # Add cognate alignments into running pool of alignments
-                if cumulative:
-                    all_cognate_alignments.extend(cognate_alignments)
-                    cognate_alignments = all_cognate_alignments
-
-                # Recalculate correspondence probabilities and PMI values
-                # from these alignments alone, i.e. not using radial EM
-                # Reason for recalculating is that using alignments we can be stricter:
-                # impose minimum corr requirements and only consider actually aligned segments
-                cognate_probs = self.correspondence_probs(
-                    cognate_alignments,
-                    wordlist=qual_prev_sample,
-                    exclude_null=False,
-                    counts=True,
-                    min_corr=min_corr,
-                )
-                pmi_step_ii = [
-                    self.phoneme_pmi(
-                        cognate_probs,
-                        l1=self.lang1,
-                        l2=self.lang2,
-                        wordlist=qual_prev_sample
-                    ),
-                    self.phoneme_pmi(
-                        reverse_corr_dict(cognate_probs),
-                        l1=self.lang2,
-                        l2=self.lang2,
-                        wordlist=reversed_qual_prev_sample
-                    ),
-                ]
-                pmi_step_ii = average_corrs(*pmi_step_ii)
-                PMI_iterations[iteration] = pmi_step_ii
-
-                # Align all same-meaning word pairs with recalculated PMI
-                aligned_synonym_sample = self.align_wordlist(
-                    synonym_sample,
-                    align_costs=PMI_iterations[iteration],
-                )
-
-                # Align sample of different-meaning word pairs + non-cognates detected from previous iteration
-                # disqualified_words[iteration-1] already contains both types
-                noncognate_alignments = self.align_wordlist(
-                    disqualified_words[iteration - 1],
-                    align_costs=PMI_iterations[iteration],
-                )
-
-                # Score PMI for different meaning words and words disqualified in previous iteration
-                noncognate_alignment_scores = []
-                for alignment in noncognate_alignments:
-                    length_normalized_score = alignment.cost / alignment.length
-                    noncognate_alignment_scores.append(length_normalized_score)
-                nc_mean = mean(noncognate_alignment_scores)
-                nc_stdev = stdev(noncognate_alignment_scores)
-
-                # Score same-meaning alignments against different-meaning alignments
-                qualifying, disqualified = [], []
-                qualifying_alignments = []
-                qualified_PMI = []
-                for q, pair in enumerate(synonym_sample):
-                    alignment = aligned_synonym_sample[q]
-                    length_normalized_score = alignment.cost / alignment.length
-
-                    # Proportion of non-cognate word pairs which would have an alignment score at least as low as this word pair
-                    pnorm = 1 - norm.cdf(length_normalized_score, loc=nc_mean, scale=nc_stdev)
-                    if pnorm < p_threshold:
-                        qualifying.append(pair)
-                        qualifying_alignments.append(alignment)
-                        qualified_PMI.append(length_normalized_score)
-                    else:
-                        disqualified.append(pair)
-                        #other_word_pairs.add(pair)
-                qualifying_wordlist = Wordlist(sort_wordlist(qualifying))
-                qualifying_wordlist, qualifying_alignments = prune_extraneous_synonyms(
-                    wordlist=qualifying_wordlist,
-                    alignments=qualifying_alignments,
-                    scores=qualified_PMI,
-                    maximize_score=True,
-                    family_index=family_index,
-                )
-                if len(qualifying) == 0:
-                    logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
-                qualifying_words[iteration] = qualifying_wordlist
-                disqualified_words[iteration] = disqualified + diff_sample
-
-                # Log results of this iteration
-                iter_log = log_phon_corr_iteration(
-                    iteration=iteration,
-                    qualifying_words=qualifying_words,
-                    disqualified_words=disqualified_words,
-                )
-                iter_logs[sample_n].append(iter_log)
-
-            # Log final set of qualifying/disqualified word pairs
-            iter_logs[sample_n].append((qualifying_words[iteration], sort_wordlist(disqualified)))
-
-            # Return and save the final iteration's PMI results
-            results = PMI_iterations[max(PMI_iterations.keys())]
-            sample_results[sample_n] = results
-            sample_iterations[sample_n] = len(PMI_iterations) - 1
-            final_qualifying.update(qualifying)
-
+            # Save iteration results
+            iter_logs[sample_n].append(iter_log)
+            iter_logs[sample_n].append((qualifying_wordlist, sort_wordlist(disqualified_pairs)))
+            sample_results[sample_n] = final_iteration_results
+            final_qualifying.update(qualifying_wordlist.word_pairs)
             self.reset_seed()
 
         # Average together the PMI estimations from each sample
