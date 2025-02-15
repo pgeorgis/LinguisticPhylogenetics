@@ -10,9 +10,7 @@ from math import sqrt
 from statistics import mean, stdev
 
 import bcubed
-import numpy as np
 import pandas as pd
-import seaborn as sns
 from constants import (ALIGNMENT_DELIMITER, ALIGNMENT_KEY_REGEX,
                        ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
                        CONCEPT_LABEL, DOCULECT_INDEX_KEY, GLOTTOCODE_LABEL,
@@ -22,7 +20,6 @@ from constants import (ALIGNMENT_DELIMITER, ALIGNMENT_KEY_REGEX,
                        SEG_JOIN_CH, SEGMENTS_LABEL,
                        TRANSCRIPTION_PARAM_DEFAULTS)
 from lingDist import get_noncognate_scores
-from matplotlib import pyplot as plt
 from phonAlign import init_precomputed_alignment
 from phonCorr import get_phone_correlator
 from phonUtils.ipaTools import invalid_ch, normalize_ipa_ch, strip_diacritics
@@ -31,10 +28,9 @@ from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
 from unidecode import unidecode
-from utils.cluster import cluster_items, draw_dendrogram, linkage2newick
+from utils.cluster import cluster_items, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.doculect import Doculect
-from utils.network import dm2coords, newer_network_plot
 from utils.sequence import Ngram
 from utils.string import format_as_variable, strip_ch
 from utils.tree import postprocess_newick, reroot_tree
@@ -532,49 +528,6 @@ class LexicalDataset:
         return sorted([(lang1, lang2) for lang1, lang2 in doculect_pairs],
                       key=lambda x: (x[0].name, x[1].name))
 
-    def cognate_set_dendrogram(self,  # TODO UPDATE THIS FUNCTION
-                               cognate_id,
-                               dist_func,
-                               combine_cognate_sets=True,
-                               method='average',
-                               title=None,
-                               save_directory=None,
-                               **kwargs):
-        if combine_cognate_sets:
-            cognate_ids = [c for c in self.cognate_sets if c.split('_')[0] == cognate_id]
-        else:
-            cognate_ids = [cognate_id]
-
-        words = [strip_ch(item[i], ['(', ')'])
-                 for cognate_id in cognate_ids
-                 for item in self.cognate_sets[cognate_id].values()
-                 for i in range(len(item))]
-
-        lang_labels = [key for cognate_id in cognate_ids
-                       for key in self.cognate_sets[cognate_id].keys()
-                       for i in range(len(self.cognate_sets[cognate_id][key]))]
-        labels = [f'{lang_labels[i]} /{words[i]}/' for i in range(len(words))]
-
-        # Create tuple input of (word, lang)
-        langs = [self.languages[lang] for lang in lang_labels]
-        words = list(zip(words, langs))
-
-        if title is None:
-            title = f'{self.name} "{cognate_id}"'
-
-        if save_directory is None:
-            save_directory = self.plots_dir
-
-        draw_dendrogram(group=words,
-                        labels=labels,
-                        dist_func=dist_func,
-                        sim=dist_func.sim,
-                        method=method,
-                        title=title,
-                        save_directory=save_directory,
-                        **kwargs
-                        )
-
     def cluster_cognates(self,
                          concept_list,
                          dist_func,
@@ -963,164 +916,6 @@ class LexicalDataset:
 
         return newick_tree
 
-    def plot_languages(self,
-                       dist_func,
-                       concept_list=None,
-                       cluster_func=None,
-                       cognates='auto',
-                       dimensions=2,
-                       top_connections=0.3,
-                       max_dist=1,
-                       alpha_func=None,
-                       plotsize=None,
-                       invert_xaxis=False,
-                       invert_yaxis=False,
-                       title=None,
-                       save_directory=None,
-                       **kwargs):
-
-        # Get lists of language objects and their labels
-        group = [self.languages[lang] for lang in self.languages]
-        labels = [lang.name for lang in group]
-
-        # Compute a distance matrix
-        dm = self.distance_matrix(dist_func=dist_func,
-                                  concept_list=concept_list,
-                                  cluster_func=cluster_func,
-                                  cognates=cognates,
-                                  **kwargs)
-
-        # Use MDS to compute coordinate embeddings from distance matrix
-        coords = dm2coords(dm, dimensions)
-
-        # Set the plot dimensions
-        sns.set(font_scale=1.0)
-        if plotsize is None:
-            x_coords = [coords[i][0] for i in range(len(coords))]
-            y_coords = [coords[i][1] for i in range(len(coords))]
-            x_range = max(x_coords) - min(x_coords)
-            y_range = max(y_coords) - min(y_coords)
-            y_ratio = y_range / x_range
-            n = max(10, round((len(group) / 10) * 2))
-            plotsize = (n, n * y_ratio)
-        plt.figure(figsize=plotsize)
-
-        # Draw scatterplot points
-        plt.scatter(coords[:, 0], coords[:, 1], marker='o')
-
-        # Add labels to points
-        for label, x, y in zip(labels, coords[:, 0], coords[:, 1]):
-            plt.annotate(
-                label,
-                xy=(x, y), xytext=(5, -5),
-                textcoords='offset points', ha='left', va='bottom',
-            )
-
-        # Add lines connecting points with a distance under a certain threshold
-        connected = []
-        for i in range(len(coords)):
-            for j in range(len(coords)):
-                if (j, i) not in connected:
-                    dist = dm[i][j]
-                    if dist <= max_dist:
-                        # if dist <= np.mean(dm[i]): # if the distance is lower than average
-                        if dist in np.sort(dm[i])[1:round(top_connections * (len(dm) - 1))]:
-                            coords1, coords2 = coords[i], coords[j]
-                            x1, y1 = coords1
-                            x2, y2 = coords2
-                            if alpha_func is None:
-                                plt.plot([x1, x2], [y1, y2], alpha=1 - dist)
-                            else:
-                                plt.plot([x1, x2], [y1, y2], alpha=alpha_func(dist))
-                            connected.append((i, j))
-
-        # Optionally invert axes
-        if invert_yaxis:
-            plt.gca().invert_yaxis()
-        if invert_xaxis:
-            plt.gca().invert_xaxis()
-
-        # Save the plot
-        if title is None:
-            title = f'{self.name} plot'
-            if save_directory is None:
-                save_directory = self.plots_dir
-            plt.savefig(f'{os.path.join(save_directory, title)}.png', bbox_inches='tight', dpi=300)
-
-        # Show the figure
-        plt.show()
-        plt.close()
-
-    def draw_network(self,
-                     dist_func,
-                     concept_list=None,
-                     cluster_func=None,
-                     cognates='auto',
-                     method='spring',
-                     title=None,
-                     save_directory=None,
-                     network_function=newer_network_plot,
-                     **kwargs):
-
-        # Use all available concepts by default
-        if concept_list is None:
-            concept_list = sorted([concept for concept in self.concepts.keys()
-                                   if len(self.concepts[concept]) > 1])
-        else:
-            concept_list = sorted([concept for concept in concept_list
-                                   if len(self.concepts[concept]) > 1])
-
-        # Automatic cognate clustering
-        if cognates == 'auto':
-            assert cluster_func is not None
-            code = self.generate_test_code(cluster_func, cognates, **kwargs)
-            if code in self.clustered_cognates:
-                clustered_concepts = self.clustered_cognates[code]
-            else:
-                clustered_concepts, _ = self.cluster_cognates(concept_list, dist_func=cluster_func)
-
-        # Use gold cognate classes
-        elif cognates == 'gold':
-            clustered_concepts = defaultdict(lambda: defaultdict(lambda: []))
-            for concept in concept_list:
-                cognate_ids = [cognate_id for cognate_id in self.cognate_sets
-                               if cognate_id.split('_')[0] == concept]
-                for cognate_id in cognate_ids:
-                    for lang in self.cognate_sets[cognate_id]:
-                        for form in self.cognate_sets[cognate_id][lang]:
-                            form = strip_ch(form, ['(', ')'])
-                            clustered_concepts[concept][cognate_id].append(f'{lang} /{form}/')
-
-        # No separation of cognates/non-cognates:
-        # all synonymous words are evaluated irrespective of cognacy
-        elif cognates == 'none':
-            clustered_concepts = {concept: {concept: [f'{lang} /{self.concepts[concept][lang][i][1]}/'
-                                  for lang in self.concepts[concept]
-                                  for i in range(len(self.concepts[concept][lang]))]}
-                                  for concept in concept_list}
-
-        # Raise error for unrecognized cognate clustering methods
-        else:
-            raise ValueError(f'Error: cognate clustering method "{cognates}" not recognized!')
-
-        # Dendrogram characteristics
-        languages = [self.languages[lang] for lang in self.languages]
-        names = [lang.name for lang in languages]
-        if title is None:
-            title = f'{self.name} network'
-        if save_directory is None:
-            save_directory = self.plots_dir
-
-        return network_function(group=languages,
-                                labels=names,
-                                dist_func=dist_func,
-                                sim=dist_func.sim,
-                                method=method,
-                                title=title,
-                                save_directory=save_directory,
-                                clustered_cognates=clustered_concepts,
-                                **kwargs)
-
     def remove_languages(self, langs_to_delete):
         """Removes a list of languages from a dataset"""
 
@@ -1186,12 +981,6 @@ class LexicalDataset:
         s += f'\nConcepts: {len(self.concepts)}\nCognate Classes: {len(self.cognate_sets)}'
 
         return s
-
-
-# COMBINING DATASETS
-def combine_datasets(dataset_list):
-    # TODO
-    pass
 
 
 def load_family(family,
