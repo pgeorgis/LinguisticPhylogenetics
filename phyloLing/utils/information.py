@@ -3,6 +3,7 @@ from math import log
 from statistics import mean
 
 from constants import GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT, PAD_CH_DEFAULT
+from phonAlign import Alignment
 from utils.sequence import Ngram, PhonEnvNgram, pad_sequence
 from utils.utils import default_dict
 
@@ -27,7 +28,7 @@ def surprisal_to_prob(s):
     return 2**-s
 
 
-def adaptation_surprisal(alignment,
+def adaptation_surprisal(alignment: Alignment,
                          surprisal_dict,
                          ngram_size=1,
                          phon_env=False,
@@ -38,28 +39,14 @@ def adaptation_surprisal(alignment,
     """Calculates the surprisal of an aligned sequence, given a dictionary of
     surprisal values for the sequence corresponcences"""
 
-    # if type(alignment) is Alignment:
-    #     length = alignment.length
-    #     alignment = alignment.alignment
-    # elif type(alignment) is list:
-    #     length = len(alignment)
-    # else:
-    #     raise TypeError
-    # TODO problem: this function needs to live in this script to avoid circular imports
-    # but importing Alignment object from phonAlign.py would also cause a circular import
-    # Temp solution: assume that if the alignment is not a list, it is an Alignment class object
-    if isinstance(alignment, list):
-        length = len(alignment)
+    if phon_env:
+        if alignment.phon_env_alignment is None:
+            alignment.phon_env_alignment = alignment.add_phon_env()
+        alignment = alignment.phon_env_alignment
+
     else:
-        if phon_env:
-            if alignment.phon_env_alignment is None:
-                alignment.phon_env_alignment = alignment.add_phon_env()
-            alignment = alignment.phon_env_alignment
-
-        else:
-            alignment = alignment.alignment
-        length = len(alignment)
-
+        alignment = alignment.alignment
+    length = len(alignment)
     pad_n = ngram_size - 1
     if ngram_size > 1:
         alignment = [(pad_ch, pad_ch)] * pad_n + alignment + [(pad_ch, pad_ch)] * pad_n

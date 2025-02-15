@@ -530,14 +530,15 @@ def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, no
         sur_dict1 = correlator1.surprisal_results[ngram_size]
         sur_dict2 = correlator2.surprisal_results[ngram_size]
 
-    WAS_l1l2 = adaptation_surprisal(alignment,
-                                    surprisal_dict=sur_dict1,
-                                    ngram_size=ngram_size,
-                                    phon_env=phon_env,
-                                    normalize=False,
-                                    pad_ch=lang1.alignment_params['pad_ch'],
-                                    gap_ch=lang1.alignment_params['gap_ch'],
-                                    )
+    WAS_l1l2 = adaptation_surprisal(
+        alignment,
+        surprisal_dict=sur_dict1,
+        ngram_size=ngram_size,
+        phon_env=phon_env,
+        normalize=False,
+        pad_ch=lang1.alignment_params['pad_ch'],
+        gap_ch=lang1.alignment_params['gap_ch'],
+    )
     if ngram_size > 1:
         # TODO issue is possibly that the ngram size of 2 is not actually in the dict keys also including phon env, just has phon_env OR 2gram in separate dicts...
         # the way to get around this is:
