@@ -1062,12 +1062,22 @@ class PhonCorrelator:
                     counts=True,
                     min_corr=min_corr,
                 )
-                PMI_iterations[iteration] = self.phoneme_pmi(
-                    cognate_probs,
-                    l1=self.lang1,
-                    l2=self.lang2,
-                    wordlist=qual_prev_sample
-                )
+                pmi_step_ii = [
+                    self.phoneme_pmi(
+                        cognate_probs,
+                        l1=self.lang1,
+                        l2=self.lang2,
+                        wordlist=qual_prev_sample
+                    ),
+                    self.phoneme_pmi(
+                        reverse_corr_dict(cognate_probs),
+                        l1=self.lang2,
+                        l2=self.lang2,
+                        wordlist=reversed_qual_prev_sample
+                    ),
+                ]
+                pmi_step_ii = average_corrs(*pmi_step_ii)
+                PMI_iterations[iteration] = pmi_step_ii
 
                 # Align all same-meaning word pairs with recalculated PMI
                 aligned_synonym_sample = self.align_wordlist(
