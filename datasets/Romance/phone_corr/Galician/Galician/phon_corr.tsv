@@ -20,7 +20,6 @@ Galician	Galician	probability
 ɾ_ɐ	ɾ_ɐ	1.0
 ɾ_t	ɾ_t	1.0
 ɾ_n	ɾ_n	1.0
-ɾ_m	ɾ_m	1.0
 ɾ_k	ɾ_k	1.0
 ɾ	ɾ	1.0
 ɲ	ɲ	1.0
@@ -34,20 +33,21 @@ Galician	Galician	probability
 ŋ	ŋ	1.0
 ð	ð	1.0
 w	w	1.0
-v	-	1.0
+v	v	1.0
 u	u	1.0
+t_ˈo	t_ˈo	1.0
 t	t	1.0
+s_ˈe	s_ˈe	1.0
 s_ʊ	s_ʊ	1.0
 s_ɐ	s_ɐ	1.0
 s	s	1.0
 r	r	1.0
 p	p	1.0
 o	o	1.0
-n_ˈo	n_ˈo	1.0
 n	n	1.0
 m	m	1.0
+l_ˈo	l_ˈo	1.0
 l	l	1.0
-k_ˈe	k_ˈe	1.0
 k_ɾ	k_ɾ	1.0
 k	k	1.0
 j	j	1.0
@@ -57,3 +57,4 @@ e	e	1.0
 d	d	1.0
 b	b	1.0
 a	a	1.0
+<#_ˈa	<#_ˈa	1.0

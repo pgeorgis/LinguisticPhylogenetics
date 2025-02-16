@@ -26,11 +26,10 @@ Lengadocian	Lengadocian	probability
 ŋ	ŋ	1.0
 ð	ð	1.0
 z	z	1.0
-y	-	1.0
+y	y	1.0
 w	w	1.0
 u	u	1.0
 t	t	1.0
-s_ɔ	s_ɔ	1.0
 s_k	s_k	1.0
 s_e	s_e	1.0
 s	s	1.0
@@ -39,7 +38,8 @@ nː	nː	1.0
 n	n	1.0
 mː	mː	1.0
 m	m	1.0
-lː	-	1.0
+lː	lː	1.0
+l_s	l_s	1.0
 l_e	l_e	1.0
 l	l	1.0
 k	k	1.0
@@ -51,3 +51,4 @@ e	e	1.0
 d	d	1.0
 b	b	1.0
 a	a	1.0
+<#_ˈa	<#_ˈa	1.0

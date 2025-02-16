@@ -120,24 +120,23 @@ def write_phoneme_surprisal_report(surprisal_results, outfile, phon_env=True, ng
     lines = []
     surprisal_results, oov_value = prune_oov_surprisal(surprisal_results)
     oov_value = round(oov_value, 3)
-    for seg1 in surprisal_results:
-        for seg2 in surprisal_results[seg1]:
-            if ngram_size > 1:
-                raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
-            if phon_env:
-                seg1_str, phon_env = ngram2log_format(seg1, phon_env=True)
-            else:
-                seg1_str = ngram2log_format(seg1, phon_env=False)
-            lines.append(
-                [
-                    seg1_str,
-                    ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
-                    str(abs(round(surprisal_results[seg1][seg2], 3))),
-                    str(oov_value)
-                ]
-            )
-            if phon_env:
-                lines[-1].insert(1, phon_env)
+    for seg1, seg2 in surprisal_results.get_key_pairs():
+        if ngram_size > 1:
+            raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
+        if phon_env:
+            seg1_str, phon_env = ngram2log_format(seg1, phon_env=True)
+        else:
+            seg1_str = ngram2log_format(seg1, phon_env=False)
+        lines.append(
+            [
+                seg1_str,
+                ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
+                str(abs(round(surprisal_results.get_value(seg1, seg2), 3))),
+                str(oov_value)
+            ]
+        )
+        if phon_env:
+            lines[-1].insert(1, phon_env)
 
     # Sort by phone1 (by phon env if relevant) and then by surprisal in ascending order
     if phon_env:
@@ -157,9 +156,9 @@ def write_phon_corr_report(corr, lang1_name, lang2_name, gap_ch, outfile, corr_t
     make_outdir(outfile)
     lines = []
     corr, _ = prune_oov_surprisal(corr)
-    l1_phons = sorted([p for p in corr if gap_ch not in p], key=lambda x: Ngram(x).string)
+    l1_phons = sorted([p for p in corr.get_primary_keys() if gap_ch not in p], key=lambda x: Ngram(x).string)
     for p1 in l1_phons:
-        p2_candidates = corr[p1]
+        p2_candidates = corr.get_primary_key_map(p1)
         if len(p2_candidates) > 0:
             p2_candidates = dict_tuplelist(p2_candidates, reverse=True)
             for p2, score in p2_candidates:

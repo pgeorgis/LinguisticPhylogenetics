@@ -3,7 +3,7 @@ from itertools import zip_longest
 from math import inf, log
 import numpy as np
 from constants import GAP_CH_DEFAULT
-from utils import PhonemeMap
+from utils.phoneme_map import PhonemeMap
 from utils.sequence import Ngram
 
 

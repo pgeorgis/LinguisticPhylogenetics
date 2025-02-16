@@ -1,10 +1,10 @@
-from collections import defaultdict
 from math import log
 from statistics import mean
 
 from constants import GAP_CH_DEFAULT, NON_IPA_CH_DEFAULT, PAD_CH_DEFAULT
+from phonAlign import Alignment
+from utils.phoneme_map import PhonemeMap
 from utils.sequence import Ngram, PhonEnvNgram, pad_sequence
-from utils.utils import default_dict
 
 
 def pointwise_mutual_info(p_joint, p_x, p_y):
@@ -27,8 +27,8 @@ def surprisal_to_prob(s):
     return 2**-s
 
 
-def adaptation_surprisal(alignment,
-                         surprisal_dict,
+def adaptation_surprisal(alignment: Alignment,
+                         surprisal_map: PhonemeMap,
                          ngram_size=1,
                          phon_env=False,
                          normalize=True,
@@ -38,28 +38,13 @@ def adaptation_surprisal(alignment,
     """Calculates the surprisal of an aligned sequence, given a dictionary of
     surprisal values for the sequence corresponcences"""
 
-    # if type(alignment) is Alignment:
-    #     length = alignment.length
-    #     alignment = alignment.alignment
-    # elif type(alignment) is list:
-    #     length = len(alignment)
-    # else:
-    #     raise TypeError
-    # TODO problem: this function needs to live in this script to avoid circular imports
-    # but importing Alignment object from phonAlign.py would also cause a circular import
-    # Temp solution: assume that if the alignment is not a list, it is an Alignment class object
-    if isinstance(alignment, list):
-        length = len(alignment)
+    if phon_env:
+        if alignment.phon_env_alignment is None:
+            alignment.phon_env_alignment = alignment.add_phon_env()
+        alignment = alignment.phon_env_alignment
     else:
-        if phon_env:
-            if alignment.phon_env_alignment is None:
-                alignment.phon_env_alignment = alignment.add_phon_env()
-            alignment = alignment.phon_env_alignment
-
-        else:
-            alignment = alignment.alignment
-        length = len(alignment)
-
+        alignment = alignment.alignment
+    length = len(alignment)
     pad_n = ngram_size - 1
     if ngram_size > 1:
         alignment = [(pad_ch, pad_ch)] * pad_n + alignment + [(pad_ch, pad_ch)] * pad_n
@@ -89,7 +74,7 @@ def adaptation_surprisal(alignment,
         else:
             seg1 = ngram1.undo()
         seg2 = Ngram(seg2).undo()
-        values.append(surprisal_dict[seg1][seg2])
+        values.append(surprisal_map.get_value(seg1, seg2))
 
     if normalize:
         return mean(values)
@@ -108,21 +93,14 @@ def get_oov_val(corr_dict, oov_ch=NON_IPA_CH_DEFAULT):
     return oov_val
 
 
-def prune_oov_surprisal(surprisal_dict):
-    # Prune correspondences with a surprisal value greater than OOV surprisal
-    pruned = defaultdict(lambda: {})
-    for seg1 in surprisal_dict:
-        oov_val = get_oov_val(surprisal_dict[seg1])
-
-        # Save values which are not equal to (less than) the OOV smoothed value
-        for seg2 in surprisal_dict[seg1]:
-            surprisal_val = surprisal_dict[seg1][seg2]
-            if surprisal_val < oov_val:
-                pruned[seg1][seg2] = surprisal_val
-
-        # Set as default dict with OOV value as default
-        pruned[seg1] = default_dict(pruned[seg1], lmbda=oov_val)
-
+def prune_oov_surprisal(surprisal_dict: PhonemeMap):
+    """Prune correspondences with a surprisal value greater than OOV surprisal."""
+    oov_val = surprisal_dict.default_value
+    pruned = PhonemeMap(oov_val)
+    for seg1, seg2 in surprisal_dict.get_key_pairs():
+        surprisal_val = surprisal_dict.get_value(seg1, seg2)
+        if surprisal_val < oov_val:
+            pruned.set_value(seg1, seg2, surprisal_val)
     return pruned, oov_val
 
 
