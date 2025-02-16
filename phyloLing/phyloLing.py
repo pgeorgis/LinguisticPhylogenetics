@@ -32,6 +32,7 @@ from unidecode import unidecode
 from utils.cluster import cluster_items, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.doculect import Doculect
+from utils.phoneme_map import PhonemeMap
 from utils.sequence import Ngram
 from utils.string import format_as_variable, strip_ch
 from utils.tree import postprocess_newick, reroot_tree
@@ -455,13 +456,12 @@ class LexicalDataset:
             return Ngram(str, lang=self, seg_sep=join_ch)
 
         def extract_surprisal_from_df(surprisal_data, lang2, phon_env=False):
-            surprisal_dict = defaultdict(lambda: {})
-            oov_vals = {}
-            for index, row in surprisal_data.iterrows():
+            surprisal_dict = PhonemeMap(lang2.phoneme_entropy * ngram_size)
+            for _, row in surprisal_data.iterrows():
                 phone1, phone2 = row['Phone1'], row['Phone2']
                 surprisal_value = row['Surprisal']
                 if ngram_size > 1:
-                    breakpoint()  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
+                    raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
                 ngram1, ngram2 = map(str2ngram, [phone1, phone2])
                 ngram2_dict_form = ngram2.undo()
                 if phon_env:
@@ -469,16 +469,7 @@ class LexicalDataset:
                     ngram1_dict_form = (Ngram(phone1).undo(), env)
                 else:
                     ngram1_dict_form = ngram1.undo()
-                surprisal_dict[ngram1_dict_form][ngram2_dict_form] = surprisal_value
-                if ngram1_dict_form not in oov_vals:
-                    oov_smoothed = row['OOV_Smoothed']
-                    oov_vals[ngram1_dict_form] = oov_smoothed
-
-            # Iterate back through language pairs and phone1 combinations and set OOV values
-            for phone1 in oov_vals:
-                oov_val = oov_vals[phone1]
-                surprisal_dict[phone1] = default_dict(surprisal_dict[phone1], lmbda=oov_val)
-            surprisal_dict = default_dict(surprisal_dict, lmbda=defaultdict(lambda: oov_val))
+                surprisal_dict.set_value(ngram1_dict_form, ngram2_dict_form, surprisal_value)
 
             return surprisal_dict
 
