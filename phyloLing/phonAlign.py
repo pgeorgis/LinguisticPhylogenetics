@@ -7,8 +7,8 @@ from constants import (ALIGNED_PAIR_DELIMITER, ALIGNMENT_KEY_REGEX,
                        GAP_CH_DEFAULT, NULL_CH_DEFAULT, PAD_CH_DEFAULT,
                        SEG_JOIN_CH, START_PAD_CH)
 from phonUtils.phonEnv import get_phon_env
-from utils import PhonemeMap
 from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
+from utils.phoneme_map import PhonemeMap
 from utils.sequence import (Ngram, PhonEnvNgram, end_token, flatten_ngram,
                             pad_sequence, start_token)
 from utils.utils import validate_class

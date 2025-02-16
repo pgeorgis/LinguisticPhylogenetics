@@ -13,7 +13,7 @@ from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
-from utils import PhonemeMap
+from utils.phoneme_map import PhonemeMap
 from utils.distance import Distance, dist_to_sim, sim_to_dist
 from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
@@ -496,12 +496,7 @@ def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, no
 
     # Check whether phoneme PMI has been calculated for this language pair
     # Otherwise calculate from scratch
-    pmi_dict = get_pmi_dict(
-        lang1,
-        lang2,
-        family_index=family_index,
-        **kwargs
-    )
+    get_pmi_dict(lang1, lang2, family_index=family_index, **kwargs)
 
     # Calculate phoneme surprisal if not already done
     correlator1, correlator2 = get_phoneme_surprisal(
@@ -532,7 +527,7 @@ def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, no
 
     WAS_l1l2 = adaptation_surprisal(
         alignment,
-        surprisal_dict=sur_dict1,
+        surprisal_map=sur_dict1,
         ngram_size=ngram_size,
         phon_env=phon_env,
         normalize=False,
@@ -546,7 +541,7 @@ def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, no
         # interpolate the probability/surprisal of the 2gram with that of the phon_env equivalent
         raise NotImplementedError
     WAS_l2l1 = adaptation_surprisal(rev_alignment,
-                                    surprisal_dict=sur_dict2,
+                                    surprisal_map=sur_dict2,
                                     ngram_size=ngram_size,
                                     phon_env=phon_env,
                                     normalize=False,

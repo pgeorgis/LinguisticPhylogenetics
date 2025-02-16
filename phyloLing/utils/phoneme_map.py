@@ -12,8 +12,7 @@ class DoubleMap[TKey, TValue]:
         self.default_value = default_value
         self.values: dict[TKey, dict[TKey, TValue]] = values if values else {}
 
-    def get_value(self, primary_key: TKey,
-                  secondary_key: TKey) -> TValue:
+    def get_value(self, primary_key: TKey, secondary_key: TKey) -> TValue:
         first_map = self.values.get(primary_key)
         if first_map is None:
             self.set_value(primary_key, secondary_key, self.default_value)
@@ -24,20 +23,38 @@ class DoubleMap[TKey, TValue]:
             return self.default_value
         return second_map_value
 
-    def get_value_or_default(self, primary_key: TKey,
-                            secondary_key: TKey,
-                            default) -> TValue:
+    def get_value_or_default(self,
+                             primary_key: TKey,
+                             secondary_key: TKey,
+                             default) -> TValue:
         first_map = self.values.get(primary_key)
         if first_map is None:
             return default
         return first_map.get(secondary_key, default)
 
-    def set_value(self, primary_key: TKey,
-                  secondary_key: TKey,
-                  value: TValue):
+    def get_primary_key_map(self, primary_key: TKey) -> dict[TKey, TValue]:
+        return self.values.get(primary_key)
+
+    def set_value(self, primary_key: TKey, secondary_key: TKey, value: TValue):
         if primary_key not in self.values:
             self.values[primary_key] = {}
         self.values[primary_key][secondary_key] = value
+    
+    def increment_value(self, primary_key: TKey, secondary_key: TKey, value: SomeNumber):
+        if primary_key not in self.values:
+            self.values[primary_key] = {}
+        if secondary_key not in self.values[primary_key]:
+            self.values[primary_key][secondary_key] = self.default_value
+        self.values[primary_key][secondary_key] += value
+    
+    def delete_value(self, primary_key: TKey, secondary_key: TKey):
+        if primary_key in self.values:
+            if secondary_key in self.values[primary_key]:
+                del self.values[primary_key][secondary_key]
+
+    def delete_primary_key(self, primary_key: TKey):
+        if primary_key in self.values:
+            del self.values[primary_key]
 
     def is_empty(self):
         return len(self.values) == 0
@@ -105,10 +122,26 @@ class PhonemeMap:
                              default) -> SomeNumber:
         return self.internal_map.get_value_or_default(phoneme, other_phoneme, default)
 
-    def set_value(self, phoneme: Phoneme,
+    def get_primary_key_map(self, phoneme: MultiPhoneme) -> dict[MultiPhoneme, SomeNumber]:
+        return self.internal_map.get_primary_key_map(phoneme)
+
+    def set_value(self,
+                  phoneme: Phoneme,
                   other_phoneme: Phoneme,
                   value: SomeNumber) -> None:
         self.internal_map.set_value(phoneme, other_phoneme, value)
+
+    def increment_value(self,
+                        primary_key: Phoneme,
+                        secondary_key: Phoneme,
+                        value: SomeNumber) -> None:
+        self.internal_map.increment_value(primary_key, secondary_key, value)
+
+    def delete_value(self, primary_key: Phoneme, secondary_key: Phoneme):
+        self.internal_map.delete_value(primary_key, secondary_key)
+
+    def delete_primary_key(self, primary_key: Phoneme):
+        self.internal_map.delete_primary_key(primary_key)
 
     def has_value(self, phoneme: Phoneme, other_phoneme: Phoneme) -> bool:
         return self.internal_map.has_value(phoneme, other_phoneme)
@@ -183,16 +216,6 @@ def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0, drop_inf=Tr
             if len(vals) > 0:
                 results.set_value(corr1, corr2, mean(vals))
     return results
-
-
-def reverse_corr_dict(corr_dict: dict) -> dict:
-    if not isinstance(corr_dict, dict):
-        raise ValueError("corr_dict must be a dictionary")
-    reverse = defaultdict(lambda: defaultdict(lambda: 0))
-    for seg1 in corr_dict:
-        for seg2 in corr_dict[seg1]:
-            reverse[seg2][seg1] = corr_dict[seg1][seg2]
-    return reverse
 
 
 def reverse_corr_dict_map(corr_dict: PhonemeMap) -> PhonemeMap:
