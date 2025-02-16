@@ -2,4 +2,4 @@ experiment:
     name: "test-full"
 
 config:
-    extend: "datasets/BaltoSlavic/config/balto-slavic_config.yml"
+    extend: "datasets/BaltoSlavic/config/baltoslavic_config.yml"

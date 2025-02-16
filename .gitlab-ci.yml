@@ -95,7 +95,7 @@ test:
   needs:
     - prepare:install_dependencies
   script:
-    - DATASET_NAME=$(echo ${DATASET} | sed -r 's/([a-z])([A-Z])/\1-\2/g' | tr '[:upper:]' '[:lower:]')
+    - DATASET_NAME=$(echo ${DATASET} | tr '[:upper:]' '[:lower:]')
     - make test-tree-distance-${DATASET_NAME}
   artifacts:
     when: always
@@ -121,7 +121,7 @@ classify-sinitic:
   variables:
     DATASET: Sinitic
 
-classify-balto-slavic:
+classify-baltoslavic:
   extends: .classify-job
   variables:
     DATASET: BaltoSlavic
