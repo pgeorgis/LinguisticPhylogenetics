@@ -62,6 +62,7 @@ def phone_dist(x, y, **kwargs):
         return log(sim)
     return -inf
 PhoneFeatureDist = Distance(phone_dist, name='PhoneFeatureDist')
+PHON_GOP = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
 
 def fit_ibm_align_model(corpus: list[tuple],
                         iterations: int=5,
@@ -477,45 +478,44 @@ class PhonCorrelator:
 
         # Optionally add phone similarity measure between phone pairs to align costs/scores
         if add_phon_dist and align_costs.phon_dist_added is False:
-            phon_gop = -1.2 # approximately corresponds to log(0.3), i.e. insert gap if less than 30% phonetic similarity
-            for ngram1 in align_costs.get_primary_keys():
+            for ngram1, ngram2 in align_costs.get_key_pairs():
                 ngram1 = Ngram(ngram1)
+                ngram2 = Ngram(ngram2)
+
                 # Remove gaps and boundaries
                 gapless_ngram1 = ngram1.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
-                for ngram2 in align_costs.get_secondary_keys(ngram1.undo()):
-                    ngram2 = Ngram(ngram2)
-                    gapless_ngram2 = ngram2.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
+                gapless_ngram2 = ngram2.remove_boundaries(self.pad_ch).remove_gaps(self.gap_ch)
 
-                    # Skip computing phonetic similarity between gaps/boundaries with each other
-                    if gapless_ngram1.size == 0 and gapless_ngram2.size == 0:
-                        continue
-                    # For full gaps/boundaries with segments, assign cost as GOP * length of segment sequence
-                    elif gapless_ngram1.size == 0 or gapless_ngram2.size == 0:
-                        phon_align_cost = phon_gop * max(gapless_ngram1.size, gapless_ngram2.size)
-                    # Directly compute phonetic distance of two single phones
-                    elif gapless_ngram1.size == 1 and gapless_ngram2.size == 1:
-                        phon_align_cost = PhoneFeatureDist.eval(gapless_ngram1.string, gapless_ngram2.string)
-                    # Else compute phonetic distance of the two aligned ngram sequences
-                    else:
-                        phon_costs: PhonemeMap = calculate_alignment_costs(
-                            gapless_ngram1.ngram,
-                            gapless_ngram2.ngram,
-                            cost_func=PhoneFeatureDist,
-                            as_indices=False
-                        )
-                        phon_align_cost, _, _ = needleman_wunsch_extended(
-                            gapless_ngram1.ngram,
-                            gapless_ngram2.ngram,
-                            align_cost=phon_costs,
-                            gap_cost=PhonemeMap(),
-                            default_gop=phon_gop,
-                            maximize_score=True,
-                            gap_ch=self.gap_ch,
-                            allow_complex=False
-                        )
-                    # Add phonetic alignment cost to align_costs dict storing PMI values
-                    base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
-                    align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
+                # Skip computing phonetic similarity between gaps/boundaries with each other
+                if gapless_ngram1.size == 0 and gapless_ngram2.size == 0:
+                    continue
+                # For full gaps/boundaries with segments, assign cost as GOP * length of segment sequence
+                elif gapless_ngram1.size == 0 or gapless_ngram2.size == 0:
+                    phon_align_cost = PHON_GOP * max(gapless_ngram1.size, gapless_ngram2.size)
+                # Directly compute phonetic distance of two single phones
+                elif gapless_ngram1.size == 1 and gapless_ngram2.size == 1:
+                    phon_align_cost = PhoneFeatureDist.eval(gapless_ngram1.string, gapless_ngram2.string)
+                # Else compute phonetic distance of the two aligned ngram sequences
+                else:
+                    phon_costs: PhonemeMap = calculate_alignment_costs(
+                        gapless_ngram1.ngram,
+                        gapless_ngram2.ngram,
+                        cost_func=PhoneFeatureDist,
+                        as_indices=False
+                    )
+                    phon_align_cost, _, _ = needleman_wunsch_extended(
+                        gapless_ngram1.ngram,
+                        gapless_ngram2.ngram,
+                        align_cost=phon_costs,
+                        gap_cost=PhonemeMap(),
+                        default_gop=PHON_GOP,
+                        maximize_score=True,
+                        gap_ch=self.gap_ch,
+                        allow_complex=False
+                    )
+                # Add phonetic alignment cost to align_costs dict storing PMI values
+                base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
+                align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
             align_costs.phon_dist_added = True
 
         word_pairs = wordlist.word_pairs if isinstance(wordlist, Wordlist) else wordlist
@@ -1113,6 +1113,8 @@ class PhonCorrelator:
                     else:
                         disqualified.append(pair)
                         #other_word_pairs.add(pair)
+                if len(qualifying) == 0:
+                    logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
                 qualifying_wordlist = Wordlist(sort_wordlist(qualifying))
                 qualifying_wordlist, qualifying_alignments = prune_extraneous_synonyms(
                     wordlist=qualifying_wordlist,
@@ -1121,8 +1123,6 @@ class PhonCorrelator:
                     maximize_score=True,
                     family_index=family_index,
                 )
-                if len(qualifying) == 0:
-                    logger.warning(f'All word pairs were disqualified in PMI iteration {iteration}')
                 qualifying_words[iteration] = qualifying_wordlist
                 disqualified_words[iteration] = disqualified + diff_sample
 
