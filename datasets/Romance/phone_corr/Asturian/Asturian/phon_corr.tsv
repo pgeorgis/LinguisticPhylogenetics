@@ -1,5 +1,6 @@
 Asturian	Asturian	probability
 θ	θ	1.0
+β_a	β_a	1.0
 β	β	1.0
 ˈu	ˈu	1.0
 ˈo_ɾ	ˈo_ɾ	1.0
@@ -7,6 +8,7 @@ Asturian	Asturian	probability
 ˈi	ˈi	1.0
 ˈe_u	ˈe_u	1.0
 ˈe_s	ˈe_s	1.0
+ˈe_#>	ˈe_#>	1.0
 ˈe	ˈe	1.0
 ˈa_t	ˈa_t	1.0
 ˈa	ˈa	1.0
@@ -25,12 +27,14 @@ Asturian	Asturian	probability
 ɲ	ɲ	1.0
 ɣ	ɣ	1.0
 ɡ	ɡ	1.0
+ɟ͡ʝ	ɟ͡ʝ	1.0
 ŋ	ŋ	1.0
 ð	ð	1.0
 w	w	1.0
 u_s	u_s	1.0
 u	u	1.0
 t	t	1.0
+s_u	s_u	1.0
 s_e	s_e	1.0
 s_a	s_a	1.0
 s	s	1.0
@@ -52,6 +56,5 @@ e	e	1.0
 d	d	1.0
 b	b	1.0
 a_ɾ	a_ɾ	1.0
-a_n	a_n	1.0
 a	a	1.0
 <#_ˈe	<#_ˈe	1.0

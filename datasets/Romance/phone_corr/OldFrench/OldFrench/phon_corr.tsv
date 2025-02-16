@@ -1,6 +1,7 @@
 Old French	Old French	probability
 θ	θ	1.0
 ˈɛ	ˈɛ	1.0
+ˈɔ_l	ˈɔ_l	1.0
 ˈɔ	ˈɔ	1.0
 ˈỹ	ˈỹ	1.0
 ˈy	ˈy	1.0
@@ -27,16 +28,15 @@ Old French	Old French	probability
 ɔ	ɔ	1.0
 ŋ	ŋ	1.0
 z	z	1.0
-y	-	1.0
+y	y	1.0
 w_ə	w_ə	1.0
 w	w	1.0
-v_j	v_j	1.0
 v	v	1.0
 ũ	ũ	1.0
 u	u	1.0
 t_ə	t_ə	1.0
-t_r	t_r	1.0
 t	t	1.0
+s_ˈi	s_ˈi	1.0
 s_ə	s_ə	1.0
 s	s	1.0
 r_m	r_m	1.0
@@ -54,10 +54,13 @@ j_ə	j_ə	1.0
 j_r	j_r	1.0
 j	j	1.0
 ĩ	ĩ	1.0
-i	-	1.0
+i	i	1.0
+f_r	f_r	1.0
 f	f	1.0
 e	e	1.0
 d	d	1.0
 b	b	1.0
 ã	ã	1.0
 a	a	1.0
+<#_ˈɔ	<#_ˈɔ	1.0
+<#_ˈi	<#_ˈi	1.0
