@@ -4,7 +4,6 @@ Gallurese	Gallurese	probability
 ˈu	ˈu	1.0
 ˈo	ˈo	1.0
 ˈi	ˈi	1.0
-ˈe_u	ˈe_u	1.0
 ˈe	ˈe	1.0
 ˈa_i	ˈa_i	1.0
 ˈa	ˈa	1.0
@@ -21,11 +20,11 @@ Gallurese	Gallurese	probability
 ɟː	ɟː	1.0
 ɟ	ɟ	1.0
 ɖː	ɖː	1.0
-ɔ	ɔ	1.0
 ŋ	ŋ	1.0
 z	z	1.0
 w	w	1.0
 v	v	1.0
+u_t	u_t	1.0
 u_r	u_r	1.0
 u_l	u_l	1.0
 u	u	1.0
@@ -34,7 +33,6 @@ t	t	1.0
 sː	sː	1.0
 s	s	1.0
 rː	rː	1.0
-r_ˈɔ	r_ˈɔ	1.0
 r	r	1.0
 pː	pː	1.0
 p_u	p_u	1.0
@@ -46,6 +44,7 @@ n	n	1.0
 mː	mː	1.0
 m	m	1.0
 l_ˈi	l_ˈi	1.0
+l_ˈa	l_ˈa	1.0
 l_u	l_u	1.0
 l_i	l_i	1.0
 l_a	l_a	1.0
@@ -64,8 +63,8 @@ cː	cː	1.0
 c	c	1.0
 bː	bː	1.0
 b	b	1.0
+a_t	a_t	1.0
 a	a	1.0
-<#_ˈɔ	<#_ˈɔ	1.0
 <#_u	<#_u	1.0
 <#_i	<#_i	1.0
 <#_a	<#_a	1.0

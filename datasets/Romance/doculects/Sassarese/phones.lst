@@ -1,13 +1,13 @@
 VOWELS
 /u/ (0.107)
 	<ottu> /ˈotːu/ "EIGHT_NUM"
-	<pettu> /pˈetːu/ "BREAST_NOUN"
+	<pettu> /pˈɛtːu/ "BREAST_NOUN"
 	<caldhu> /kˈaɮdu/ "HOT_ADJ"
 
-/i/ (0.078)
+/i/ (0.079)
 	<crozi> /krˈɔʦi/ "CROSS_NOUN"
-	<peddi> /pˈedːi/ "SKIN_NOUN"
-	<mari> /mˈari/ "SEA_NOUN"
+	<setti> /sˈetːi/ "SEVEN_NUM"
+	<zirchà> /ʦixːˈa/ "SEARCH_VERB"
 
 /a/ (0.077)
 	<aneddu> /anˈɛdːu/ "RING_NOUN"
@@ -19,91 +19,87 @@ VOWELS
 	<càmmara> /kˈamːara/ "CHAMBER_NOUN"
 	<zirchà> /ʦixːˈa/ "SEARCH_VERB"
 
-/ˈɔ/ (0.032)
-	<curori> /kurˈɔri/ "COLOR_NOUN"
-	<nobi> /nˈɔβi/ "NINE_NUM"
+/ˈi/ (0.032)
+	<cunnuscì> /kunːuʃːˈi/ "BE ACQUAINTED WITH_VERB"
+	<punì> /punˈi/ "PUT_VERB"
+	<riu> /rˈiu/ "RIVER_NOUN"
+
+/ˈɔ/ (0.029)
+	<cosa> /kˈɔza/ "THING_NOUN"
+	<ossu> /ˈɔsːu/ "BONE_NOUN"
 	<porchu> /pˈɔxːu/ "PIG_NOUN"
 
-/ˈi/ (0.032)
-	<bidda> /bˈidːa/ "TOWN_NOUN"
-	<chisgina> /kiʒˈina/ "ASH_NOUN"
-	<via> /vˈia/ "ROAD_NOUN"
-
 /ˈɛ/ (0.026)
-	<genti> /ʤˈɛnti/ "PEOPLE_NOUN"
-	<re> /rˈɛ/ "KING_NOUN"
-	<terra> /tˈɛrːa/ "EARTH_NOUN"
+	<ferru> /fˈɛrːu/ "IRON_NOUN"
+	<lèpparu> /lˈɛpːaru/ "HARE_NOUN"
+	<pettu> /pˈɛtːu/ "BREAST_NOUN"
+
+/ˈo/ (0.026)
+	<rasgioni> /raʒˈoni/ "REASON_NOUN"
+	<totti> /tˈotːi/ "ALL (PL)_ADJ"
+	<voi> /vˈoj/ "YOU (PL)_PRON"
 
 /ˈe/ (0.024)
-	<péssigghi> /pˈesːiɡːi/ "PEACH_NOUN"
-	<mégliu> /mˈeʎːu/ "BETTER_ADV"
-	<lettu> /lˈetːu/ "BED_NOUN"
+	<fraddeddu> /fradːˈedːu/ "BROTHER_NOUN"
+	<sei> /sˈej/ "SIX_NUM"
+	<leggi> /lˈeʤːi/ "LAW_NOUN"
 
-/ˈo/ (0.023)
-	<ómmaru> /ˈomːaru/ "SHOULDER_NOUN"
-	<oru> /ˈoru/ "GOLD_NOUN"
-	<gora> /ɡˈora/ "THROAT_NOUN"
-
-/ˈu/ (0.017)
+/ˈu/ (0.018)
+	<luzi> /lˈuʦi/ "LIGHT_NOUN"
 	<lupu> /lˈupu/ "WOLF_NOUN"
 	<attugnu> /atːˈuɲːu/ "AUTUMN_NOUN"
-	<unu> /ˈunu/ "ONE_NUM"
 
-/o/ (0.002)
+/o/ (0.003)
 	<noialthri> /nojˈaɬtri/ "WE_PRON"
-	<operaju> /operˈaju/ "WORKER_NOUN"
 	<voialthri> /vojˈaɬtri/ "YOU (PL)_PRON"
-
-/e/ (0.002)
 	<operaju> /operˈaju/ "WORKER_NOUN"
-	<gerà> /ʤerˈa/ "FREEZE_VERB"
-	<regina> /reʤˈina/ "QUEEN_NOUN"
 
-/ɔ/ (0.001)
-	<no> /nɔ/ "NOT_ADVERB"
+/e/ (0.001)
+	<gerà> /ʤerˈa/ "FREEZE_VERB"
+	<operaju> /operˈaju/ "WORKER_NOUN"
 
 
 
 CONSONANTS
 /r/ (0.061)
+	<lìbaru> /lˈibaru/ "FREE_ADJ"
 	<gerà> /ʤerˈa/ "FREEZE_VERB"
 	<ómmaru> /ˈomːaru/ "SHOULDER_NOUN"
-	<geru> /ʤˈeru/ "ICE_NOUN"
 
 /n/ (0.053)
+	<nozi> /nˈɔʦi/ "NUT_NOUN"
 	<ventri> /vˈɛntri/ "BELLY_NOUN"
 	<cantà> /kantˈa/ "SING_VERB"
-	<giòbanu> /ʤˈɔβanu/ "YOUNG_ADJ"
 
 /k/ (0.028)
-	<caddena> /kadːˈɛna/ "CHAIN_NOUN"
+	<cosa> /kˈɔza/ "THING_NOUN"
+	<caddena> /kadːˈena/ "CHAIN_NOUN"
 	<crozi> /krˈɔʦi/ "CROSS_NOUN"
-	<oca> /ˈoka/ "GOOSE_NOUN"
 
 /p/ (0.027)
+	<péssigghi> /pˈesːiɡːi/ "PEACH_NOUN"
 	<piuma> /pjˈuma/ "FEATHER_NOUN"
 	<puntu> /pˈuntu/ "POINT_NOUN"
-	<pozzu> /pˈoʦːu/ "WELL_NOUN"
 
 /t/ (0.026)
-	<tu> /tˈu/ "THOU_PRON"
 	<noialthri> /nojˈaɬtri/ "WE_PRON"
+	<tu> /tˈu/ "THOU_PRON"
 	<muntagna> /muntˈaɲːa/ "MOUNTAIN_NOUN"
 
-/j/ (0.022)
-	<cazzià> /kaʦːjˈa/ "HUNT_VERB"
-	<sei> /sˈej/ "SIX_NUM"
-	<voi> /vˈɔj/ "YOU (PL)_PRON"
-
 /d/ (0.022)
-	<pidócciu> /pidˈoʧːu/ "LOUSE_NOUN"
-	<dòdizi> /dˈɔdiʦi/ "TWELVE_NUM"
-	<radizi> /radˈiʦi/ "ROOT_NOUN"
+	<deu> /dˈeu/ "GOD_NOUN"
+	<vidé> /vidˈe/ "SEE_VERB"
+	<dui> /dˈui/ "TWO (M)_NUM"
 
 /m/ (0.021)
-	<middai> /midːˈai/ "HALF_NOUN"
-	<rumanu> /rumˈanu/ "ROMAN_ADJ"
+	<mezu> /mˈɛʣu/ "MIDDLE_NOUN"
 	<tempu> /tˈɛmpu/ "TIME_NOUN"
+	<muntagna> /muntˈaɲːa/ "MOUNTAIN_NOUN"
+
+/j/ (0.021)
+	<aischulthà> /ajxːuɬtˈa/ "LISTEN_VERB"
+	<còipu> /kˈɔjpu/ "STRIKE_NOUN"
+	<voi> /vˈoj/ "YOU (PL)_PRON"
 
 /dː/ (0.02)
 	<beddu> /bˈɛdːu/ "BEAUTIFUL (M)_ADJ"
@@ -131,7 +127,7 @@ CONSONANTS
 	<crozi> /krˈɔʦi/ "CROSS_NOUN"
 
 /l/ (0.015)
-	<leggi> /lˈɛʤːi/ "LAW_NOUN"
+	<leggi> /lˈeʤːi/ "LAW_NOUN"
 	<linga> /lˈiŋɡa/ "TONGUE_NOUN"
 	<palazzu> /palˈaʦːu/ "PALACE_NOUN"
 
@@ -153,10 +149,10 @@ CONSONANTS
 /tː/ (0.01)
 	<attugnu> /atːˈuɲːu/ "AUTUMN_NOUN"
 	<quattru> /kwˈatːru/ "FOUR_NUM"
-	<lettu> /lˈetːu/ "BED_NOUN"
+	<lettu> /lˈɛtːu/ "BED_NOUN"
 
 /ɬ/ (0.009)
-	<castheddu> /kaɬtˈedːu/ "CASTLE_NOUN"
+	<castheddu> /kaɬtˈɛdːu/ "CASTLE_NOUN"
 	<althru> /ˈaɬtru/ "OTHER_ADJ"
 	<isthaddu> /iɬtˈadːu/ "STATE_NOUN"
 
@@ -166,7 +162,7 @@ CONSONANTS
 	<giagniba> /ʤaɲːˈiβa/ "GUMS_NOUN"
 
 /ʤ/ (0.008)
-	<regina> /reʤˈina/ "QUEEN_NOUN"
+	<regina> /riʤˈina/ "QUEEN_NOUN"
 	<giùdizi> /ʤˈudiʦi/ "JUDGE_NOUN"
 	<gènnaru> /ʤˈɛnːaru/ "SON-IN-LAW_NOUN"
 
@@ -195,24 +191,24 @@ CONSONANTS
 	<sabbuddu> /sabːˈudːu/ "KNOWN_VERB"
 	<babbu> /bˈabːu/ "FATHER_NOUN"
 
+/ʧː/ (0.004)
+	<ginócciu> /ʤinˈoʧːu/ "KNEE_NOUN"
+	<arecci> /arˈɛʧːi/ "EAR_NOUN"
+	<vécciu> /vˈɛʧːu/ "OLD_ADJ"
+
 /ʎː/ (0.004)
-	<fóglia> /fˈoʎːa/ "LEAF_NOUN"
-	<migliori> /miʎːˈori/ "BETTER_ADJ"
-	<muglieri> /muʎːˈɛri/ "WOMAN_WIFE_NOUN"
+	<àgliu> /ˈaʎːu/ "GARLIC_NOUN"
+	<figlioru> /fiʎːˈɔru/ "SON_NOUN"
+	<mégliu> /mˈɛʎːu/ "BETTER_ADV"
 
 /ŋ/ (0.004)
-	<zincu> /ʦˈiŋku/ "FIVE_NUM"
 	<linga> /lˈiŋɡa/ "TONGUE_NOUN"
-	<zinquanta> /ʦˈiŋkwˈanta/ "FIFTY_NUM"
-
-/ʧː/ (0.004)
-	<vécciu> /vˈeʧːu/ "OLD_ADJ"
-	<pidócciu> /pidˈoʧːu/ "LOUSE_NOUN"
-	<ghiàcciu> /ɡjˈaʧːu/ "ICE_NOUN"
+	<longu> /lˈoŋɡu/ "LONG_ADJ"
+	<biancu> /bjˈaŋku/ "WHITE_ADJ"
 
 /ʤː/ (0.004)
 	<viàggiu> /vjˈaʤːu/ "JOURNEY_NOUN"
-	<leggi> /lˈɛʤːi/ "LAW_NOUN"
+	<leggi> /lˈeʤːi/ "LAW_NOUN"
 	<aggiuddà> /aʤːudːˈa/ "HELP_VERB"
 
 /ʒ/ (0.004)
@@ -255,10 +251,10 @@ CONSONANTS
 	<ippada> /ipːˈada/ "SWORD_NOUN"
 	<ippina> /ipːˈina/ "SPINE_NOUN"
 
-/kː/ (0.003)
+/kː/ (0.002)
 	<vacca> /vˈakːa/ "COW_NOUN"
 	<bocca> /bˈɔkːa/ "MOUTH_NOUN"
-	<arecchji> /arˈɛkːji/ "EAR_NOUN"
+	<siccu> /sˈikːu/ "DRY (M)_ADJ"
 
 /ʧ/ (0.001)
 	<ciabi> /ʧˈaβi/ "KEY_NOUN"
@@ -273,7 +269,7 @@ CONSONANTS
 	<isthella> /iɬtˈelːa/ "STAR_NOUN"
 
 /ʣ/ (0.001)
-	<mezu> /mˈeʣu/ "MIDDLE_NOUN"
+	<mezu> /mˈɛʣu/ "MIDDLE_NOUN"
 
 /x/ (0.001)
 	<ischribì> /ixriβˈi/ "WRITE_VERB"

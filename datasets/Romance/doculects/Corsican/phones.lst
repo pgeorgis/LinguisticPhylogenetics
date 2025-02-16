@@ -1,5 +1,5 @@
 VOWELS
-/u/ (0.095)
+/u/ (0.096)
 	<uguale> /uɡwˈale/ "EQUAL_ADJ"
 	<toru> /tˈɔru/ "BULL_NOUN"
 	<isula> /ˈizula/ "ISLAND_NOUN"
@@ -14,7 +14,7 @@ VOWELS
 	<nasu> /nˈazu/ "NOSE_NOUN"
 	<spada> /spˈada/ "SWORD_NOUN"
 
-/e/ (0.06)
+/e/ (0.059)
 	<matre> /mˈatre/ "MOTHER_NOUN"
 	<patre> /pˈatre/ "FATHER_NOUN"
 	<putere> /putˈɛre/ "CAN_VERB"
@@ -32,16 +32,16 @@ VOWELS
 /ˈi/ (0.021)
 	<arzilla> /arʣˈilːa/ "CLAY_NOUN"
 	<lingua> /lˈiŋɡwa/ "TONGUE_NOUN"
-	<regina> /reʤˈina/ "QUEEN_NOUN"
+	<rigina> /riʤˈina/ "QUEEN_NOUN"
 
 /ˈe/ (0.021)
 	<ghjelu> /ɟˈelu/ "ICE_NOUN"
 	<castellu> /kastˈelːu/ "CASTLE_NOUN"
 	<prezzu> /prˈeʦːu/ "PRICE_NOUN"
 
-/i/ (0.019)
+/i/ (0.02)
 	<tutti> /tˈutːi/ "ALL (PL)_ADJ"
-	<videre> /vidˈɛre/ "SEE_VERB"
+	<circà> /ʧirkˈa/ "SEARCH_VERB"
 	<nisunu> /nizˈunu/ "NONE_PRON"
 
 /ˈu/ (0.019)
@@ -63,7 +63,7 @@ VOWELS
 
 CONSONANTS
 /r/ (0.06)
-	<regina> /reʤˈina/ "QUEEN_NOUN"
+	<rigina> /riʤˈina/ "QUEEN_NOUN"
 	<rena> /rˈɛna/ "SAND_NOUN"
 	<cantare> /kantˈare/ "SING_VERB"
 
@@ -102,7 +102,7 @@ CONSONANTS
 	<fiume> /fjˈume/ "RIVER_NOUN"
 	<vermu> /vˈɛrmu/ "WORM_NOUN"
 
-/v/ (0.025)
+/v/ (0.024)
 	<viaghju> /vjˈaɟu/ "JOURNEY_NOUN"
 	<poveru> /pˈɔveru/ "POOR_ADJ"
 	<vechju> /vˈecu/ "OLD_ADJ"
@@ -132,15 +132,15 @@ CONSONANTS
 	<billicu> /bˈilːiku/ "NAVEL_NOUN"
 	<ocellu> /oʧˈelːu/ "BIRD_NOUN"
 
-/ʧ/ (0.014)
-	<celu> /ʧˈelu/ "SKY_NOUN"
-	<dece> /dˈeʧe/ "TEN_NUM"
-	<croce> /krˈɔʧe/ "CROSS_NOUN"
-
 /b/ (0.014)
-	<nube> /nˈube/ "CLOUD_NOUN"
+	<bassu> /bˈasːu/ "LOW_ADJ"
 	<billicu> /bˈilːiku/ "NAVEL_NOUN"
-	<bonu> /bˈɔnu/ "GOOD (M.SG)_ADJ"
+	<brusgià> /bruʒˈa/ "BURN_VERB"
+
+/ʧ/ (0.013)
+	<cinque> /ʧˈiŋkwe/ "FIVE_NUM"
+	<dece> /dˈeʧe/ "TEN_NUM"
+	<radice> /radˈiʧe/ "ROOT_NOUN"
 
 /tː/ (0.01)
 	<ghjattu> /ɟˈatːu/ "CAT_NOUN"
@@ -157,7 +157,7 @@ CONSONANTS
 	<aragnu> /arˈaɲu/ "SPIDER_NOUN"
 	<ragnu> /rˈaɲu/ "SPIDER_NOUN"
 
-/ŋ/ (0.006)
+/ŋ/ (0.007)
 	<biancu> /bjˈaŋku/ "WHITE_ADJ"
 	<longu> /lˈoŋɡu/ "LONG_ADJ"
 	<manghjà> /maŋɟˈa/ "EAT_VERB"
