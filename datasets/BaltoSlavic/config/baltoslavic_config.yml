@@ -1,0 +1,52 @@
+family:
+    name: Balto-Slavic
+    file: datasets/BaltoSlavic/data/balto-slavic_data.tsv
+    min_amc: 0.6
+    exclude: [
+        'Čakavian (Istria)',
+        'Čakavian (Cres)',
+        'Čakavian (Burgenland)',
+        'Kajkavian',
+        'Latgalian',
+        'Samogitian',
+    ]
+    outdir: datasets/BaltoSlavic/
+
+# experiment:
+#   name: ""
+
+transcription:
+    global:
+        combine_diphthongs: true
+        normalize_geminates: false
+        suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', 'ˈ']
+        #level_suprasegmentals: 'ˈ'
+    doculects:
+        Latvian:
+            ignore_stress: true
+        Polish:
+            ignore_stress: true
+        "Upper Sorbian":
+            ignore_stress: true
+        "Lower Sorbian":
+            ignore_stress: true
+        Czech:
+            ignore_stress: true
+        Slovak:
+            ignore_stress: true
+
+phon_corr:
+    phon_env: false
+    refresh: []
+    refresh_all: true
+
+# evaluation:
+#     precalculated_word_scores: 
+
+tree:
+    linkage: nj
+    root: Proto-Balto-Slavic
+    reference: [
+        "datasets/BaltoSlavic/trees/ref/reference_001.tre",
+        "datasets/BaltoSlavic/trees/ref/reference_002.tre",
+    ]
