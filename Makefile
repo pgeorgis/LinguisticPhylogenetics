@@ -17,7 +17,7 @@ init:
 init-silent:
 	$(MAKE) init > /dev/null 2>&1
 
-classify: init-silent
+classify:
 ifdef CONFIG
 	@source venv/bin/activate && \
 		OUTPUT_LOG_DIR=$$(python3 -c "import os; from phyloLing.utils.utils import load_config; config = load_config('$(CONFIG)'); print(config.get('family', {}).get('outdir', os.path.dirname(config['family']['file'])))") && \
@@ -40,7 +40,7 @@ classify-balto-slavic:
 classify-sinitic:
 	$(MAKE) classify CONFIG=datasets/Sinitic/config/sinitic_config.yml
 
-test: init-silent
+test:
 ifndef DATASET
 	@echo "Error: Please provide a dataset to test using 'make test DATASET=<dataset>'"
 	exit 1
@@ -74,6 +74,9 @@ test-balto-slavic:
 
 test-sinitic:
 	$(MAKE) test-minimal DATASET=sinitic
+
+test-all:
+	$(MAKE) -j test-romance test-germanic test-balto-slavic test-sinitic
 
 test-tree-distance:
 ifndef DATASET

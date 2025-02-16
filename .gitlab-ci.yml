@@ -75,12 +75,12 @@ prepare:install_dependencies:
     <<: *commit-cache
     policy: pull-push
 
-.test-job:
+test:
   stage: test
   needs:
     - prepare:install_dependencies
   script:
-    - make test-${DATASET}
+    - make test-all
   artifacts:
     when: always
     paths:
@@ -89,26 +89,6 @@ prepare:install_dependencies:
     expire_in: 6 months
     reports:
       junit: tests/*.xml
-
-test-romance:
-  extends: .test-job
-  variables:
-    DATASET: romance
-
-test-germanic:
-  extends: .test-job
-  variables:
-    DATASET: germanic
-
-test-sinitic:
-  extends: .test-job
-  variables:
-    DATASET: sinitic
-
-test-balto-slavic:
-  extends: .test-job
-  variables:
-    DATASET: balto-slavic
 
 .classify-job:
   stage: get-trees
