@@ -375,41 +375,44 @@ class LexicalDataset:
 
         def str2ngram(str, join_ch='_'):
             return Ngram(str, lang=self, seg_sep=join_ch)
-
-        for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
-            if (lang1.name not in excepted) and (lang2.name not in excepted):
-                pmi_file = os.path.join(
-                    self.phone_corr_dir,
-                    lang1.path_name,
-                    lang2.path_name,
-                    "phonPMI.tsv"
-                )
-
-                # Try to load the file of saved PMI values, otherwise calculate PMI first
-                correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
-                    lang1,
-                    lang2,
-                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                    log_outdir=self.phone_corr_dir,
-                )
-                twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
-                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                )
-                if not os.path.exists(pmi_file):
-                    correlator.compute_phone_corrs(
-                        phone_correlators_index=FAMILY_INDEX[self.name],
-                        **kwargs
+        doculect_pairs = self.get_doculect_pairs(bidirectional=False)
+        with tqdm(total=len(doculect_pairs), unit="pair") as pbar:
+            for lang1, lang2 in doculect_pairs:
+                pbar.set_description(f"Loading phoneme PMI... [{lang1.name}-{lang2.name}]")
+                if (lang1.name not in excepted) and (lang2.name not in excepted):
+                    pmi_file = os.path.join(
+                        self.phone_corr_dir,
+                        lang1.path_name,
+                        lang2.path_name,
+                        "phonPMI.tsv"
                     )
-                pmi_data = pd.read_csv(pmi_file, sep=sep)
 
-                # Iterate through the dataframe and save the PMI values to the Language
-                # class objects' phoneme_pmi attribute
-                for _, row in pmi_data.iterrows():
-                    phone1, phone2 = row['Phone1'], row['Phone2']
-                    pmi_value = row['PMI']
-                    ngram1, ngram2 = map(str2ngram, [phone1, phone2])
-                    correlator.pmi_results.set_value(ngram1.undo(), ngram2.undo(), pmi_value)
-                    twin.pmi_results.set_value(ngram2.undo(), ngram1.undo(), pmi_value)
+                    # Try to load the file of saved PMI values, otherwise calculate PMI first
+                    correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
+                        lang1,
+                        lang2,
+                        phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                        log_outdir=self.phone_corr_dir,
+                    )
+                    twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
+                        phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                    )
+                    if not os.path.exists(pmi_file):
+                        correlator.compute_phone_corrs(
+                            phone_correlators_index=FAMILY_INDEX[self.name],
+                            **kwargs
+                        )
+                    pmi_data = pd.read_csv(pmi_file, sep=sep)
+
+                    # Iterate through the dataframe and save the PMI values to the Language
+                    # class objects' phoneme_pmi attribute
+                    for _, row in pmi_data.iterrows():
+                        phone1, phone2 = row['Phone1'], row['Phone2']
+                        pmi_value = row['PMI']
+                        ngram1, ngram2 = map(str2ngram, [phone1, phone2])
+                        correlator.pmi_results.set_value(ngram1.undo(), ngram2.undo(), pmi_value)
+                        twin.pmi_results.set_value(ngram2.undo(), ngram1.undo(), pmi_value)
+                pbar.update(1)
 
     def write_phoneme_pmi(self, **kwargs):
         logger.info(f'Saving {self.name} phoneme PMI...')
