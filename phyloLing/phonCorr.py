@@ -635,8 +635,8 @@ class PhonCorrelator:
                     corr_dict_l1l2.increment_value(seg_i, seg_j, 1)
                     if complex_idx2:
                         corr_dict_l2l1.increment_value(seg_j, seg_i, 1)
-                        for seg_j_j in seg_j:
-                            corr_dict_l2l1.increment_value(seg_j_j, seg_i, -1)
+                        # for seg_j_j in seg_j:
+                        #     corr_dict_l2l1.increment_value(seg_j_j, seg_i, -1)  # if this is added back, need to ensure the value doesn't become negative
             for idx2, seq1corrs in aligned_seq2.items():
                 seg_j = Ngram(aligned_pair.mots[idx2]).undo()
                 complex_idx1 = False
@@ -662,33 +662,14 @@ class PhonCorrelator:
                     corr_dict_l2l1.increment_value(seg_j, seg_i, 1)
                     if complex_idx1:
                         corr_dict_l1l2.increment_value(seg_i, seg_j, 1)
-                        for seg_i_i in seg_i:
-                            corr_dict_l1l2.increment_value(seg_i_i, seg_j, -1)
+                        # for seg_i_i in seg_i:
+                        #     corr_dict_l1l2.increment_value(seg_i_i, seg_j, -1) # if this is added back, need to ensure the value doesn't become negative
 
         # Prune correspondences which occur fewer than min_corr times
         # with the exception of phones which occur fewer than min_corr times in the sample
         exc1, exc2 = sample.phones_below_min_corr(min_corr=min_corr, lang1=lang1, lang2=lang2)
         corr_dict_l1l2 = prune_corrs(corr_dict_l1l2, min_val=min_corr, exc1=exc1, exc2=exc2)
         corr_dict_l2l1 = prune_corrs(corr_dict_l2l1, min_val=min_corr, exc1=exc1, exc2=exc2)
-
-        # Remove keys with 0 values
-        # (would occur from adjusting complex correspondences in preceding loop)
-        corr_l1l2_to_delete = [
-            seg_i
-            for seg_i in corr_dict_l1l2.get_primary_keys()
-            if corr_dict_l1l2.get_primary_key_map(seg_i) is not None
-            if sum(corr_dict_l1l2.get_primary_key_map(seg_i).values()) < 1
-        ]
-        for seg_i in corr_l1l2_to_delete:
-            corr_dict_l1l2.delete_primary_key(seg_i)
-        corr_l2l1_to_delete = [
-            seg_j
-            for seg_j in corr_dict_l2l1.get_primary_keys()
-            if corr_dict_l1l2.get_primary_key_map(seg_j) is not None
-            if sum(corr_dict_l1l2.get_primary_key_map(seg_j).values()) < 1
-        ]
-        for seg_j in corr_l2l1_to_delete:
-            corr_dict_l2l1.delete_primary_key(seg_j)
 
         return corr_dict_l1l2, corr_dict_l2l1
 
