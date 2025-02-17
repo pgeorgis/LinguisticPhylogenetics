@@ -4,7 +4,7 @@ VOWELS
 	<Stern> /ʃtˈɛɐn/ "star_NOUN"
 	<Wurm> /vˈʊɐm/ "worm_NOUN"
 
-/ˈɒ/ (0.031)
+/ˈɒ/ (0.03)
 	<Schlanga> /ʃlˈɒŋa/ "snake_NOUN"
 	<Abfl> /ˈɒb̥͡v̥l̩/ "apple_NOUN"
 	<kald> /ɡ̊ˈɒld̥/ "cold_ADJ"
@@ -64,10 +64,10 @@ VOWELS
 	<scheen> /ʃˈeːn/ "beautiful_ADJ"
 	<Meer> /mˈeːɐ/ "sea_NOUN"
 
-/ˈaʊ̯/ (0.011)
+/ˈaʊ̯/ (0.012)
 	<Maus> /mˈaʊ̯s/ "mouse_NOUN_FEM"
 	<sauer> /sˈaʊ̯ɐ/ "sour_ADJ"
-	<saung> /sˈaʊ̯ŋ/ "suck_VERB"
+	<dausnd> /d̥ˈaʊ̯z̥n̩d̥/ "thousand_NUM"
 
 /ˈɛː/ (0.004)
 	<dräma> /d̥rˈɛːma/ "dream_VERB"
@@ -109,9 +109,9 @@ CONSONANTS
 	<Dunner> /d̥ˈʊnɐ/ "thunder_NOUN"
 
 /n/ (0.084)
+	<Stern> /ʃtˈɛɐn/ "star_NOUN"
 	<Schwein> /ʃvˈaɪ̯n/ "swine_NOUN"
-	<Dräna> /d̥rˈɛːna/ "tear_NOUN_FEM"
-	<Mensch> /mˈɛnʃ/ "person_NOUN"
+	<Ufn> /ˈuːfn̩/ "oven_NOUN"
 
 /l/ (0.056)
 	<alt> /ˈɒld̥/ "old_ADJ"
@@ -134,7 +134,7 @@ CONSONANTS
 	<Ufn> /ˈuːfn̩/ "oven_NOUN"
 
 /m/ (0.038)
-	<Damma> /d̥ˈɒma/ "thumb_NOUN"
+	<Dauma> /d̥ˈaʊ̯ma/ "thumb_NOUN"
 	<fimf> /fˈɪmf/ "five_NUM"
 	<Ham> /hˈaːm/ "home_NOUN"
 
