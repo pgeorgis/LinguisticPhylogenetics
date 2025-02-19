@@ -1,7 +1,7 @@
 # Define the default target
 .DEFAULT_GOAL := help
 SHELL := /bin/bash
-TEST_DATASETS = romance germanic balto_slavic sinitic
+TEST_DATASETS = romance germanic baltoslavic sinitic
 COVERAGE_REPORT_CONFIG = datasets/BaltoSlavic/config/test_config_minimal.yml
 
 # Usage help
@@ -17,7 +17,7 @@ init:
 init-silent:
 	$(MAKE) init > /dev/null 2>&1
 
-classify: init-silent
+classify:
 ifdef CONFIG
 	@source venv/bin/activate && \
 		OUTPUT_LOG_DIR=$$(python3 -c "import os; from phyloLing.utils.utils import load_config; config = load_config('$(CONFIG)'); print(config.get('family', {}).get('outdir', os.path.dirname(config['family']['file'])))") && \
@@ -34,13 +34,13 @@ classify-romance:
 classify-germanic:
 	$(MAKE) classify CONFIG=datasets/Germanic/config/germanic_config.yml
 
-classify-balto-slavic:
-	$(MAKE) classify CONFIG=datasets/BaltoSlavic/config/balto-slavic_config.yml
+classify-baltoslavic:
+	$(MAKE) classify CONFIG=datasets/BaltoSlavic/config/baltoslavic_config.yml
 
 classify-sinitic:
 	$(MAKE) classify CONFIG=datasets/Sinitic/config/sinitic_config.yml
 
-test: init-silent
+test:
 ifndef DATASET
 	@echo "Error: Please provide a dataset to test using 'make test DATASET=<dataset>'"
 	exit 1
@@ -69,11 +69,14 @@ test-romance:
 test-germanic:
 	$(MAKE) test-minimal DATASET=germanic
 
-test-balto-slavic:
-	$(MAKE) test-minimal DATASET=balto_slavic
+test-baltoslavic:
+	$(MAKE) test-minimal DATASET=baltoslavic
 
 test-sinitic:
 	$(MAKE) test-minimal DATASET=sinitic
+
+test-all:
+	$(MAKE) -j test-romance test-germanic test-baltoslavic test-sinitic
 
 test-tree-distance:
 ifndef DATASET
@@ -88,8 +91,8 @@ test-tree-distance-romance:
 test-tree-distance-germanic:
 	$(MAKE) test-tree-distance DATASET=germanic
 
-test-tree-distance-balto-slavic:
-	$(MAKE) test-tree-distance DATASET=balto_slavic
+test-tree-distance-baltoslavic:
+	$(MAKE) test-tree-distance DATASET=baltoslavic
 
 test-tree-distance-sinitic:
 	$(MAKE) test-tree-distance DATASET=sinitic
