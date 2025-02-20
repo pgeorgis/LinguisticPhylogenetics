@@ -144,26 +144,30 @@ def postprocess_ibm_alignment(aligned_pair, remove_non_sequential_complex_alignm
 
         Disallow such complex/double alignments if they are not consecutive
         """
-        for j, i_s in aligned_seq2.items():
-            i_s.sort()
-            if len(i_s) > 1:
-                i_i = 0
-                i_s_len = len(i_s)
-                i_s_copy = i_s[:]
-                while i_i < i_s_len-1:
-                    i = i_s_copy[i_i]
-                    i_next = i_s_copy[i_i + 1]
+        for j, aligned_idxs in aligned_seq2.items():
+            aligned_idxs.sort()
+            if len(aligned_idxs) > 1:
+                offset = 0
+                n_aligned_idxs = len(aligned_idxs)
+                aligned_idxs_copy = aligned_idxs[:]
+                while offset < n_aligned_idxs - 1:
+                    i = aligned_idxs_copy[offset]
+                    i_next = aligned_idxs_copy[offset + 1]
                     if abs(i - i_next) > 1:
-                        anchor = mean(i_s+[j])
-
+                        anchor = mean(aligned_idxs + [j])
                         # Find which of the two is more distant from anchor
+                        i_next_distance = abs(i_next - anchor)
+                        i_distance = abs(i - anchor)
+                        # Choose to remove the later of the two if both equally distant
+                        # (to avoid non-deterministic choice using max)
+                        more_distant_i = i_next if i_next_distance >= i_distance else i
                         more_distant_i = max(i_next, i, key=lambda x: abs(x - anchor))
                         aligned_seq2[j].remove(more_distant_i)
                         if len(aligned_seq1[more_distant_i]) > 1:
                             aligned_seq1[more_distant_i].remove(j)
                         else:
                             aligned_seq1[more_distant_i] = [None]
-                    i_i += 1
+                    offset += 1
 
     return aligned_seq1, aligned_seq2
 
