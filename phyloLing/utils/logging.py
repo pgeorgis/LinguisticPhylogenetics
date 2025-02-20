@@ -2,7 +2,7 @@ import os
 
 from constants import ALIGNMENT_DELIMITER
 from phonAlign import visual_align
-from utils.information import prune_oov_surprisal, surprisal_to_prob
+from utils.information import surprisal_to_prob
 from utils.sequence import Ngram
 from utils.utils import dict_tuplelist
 from utils.wordlist import sort_wordlist
@@ -118,8 +118,6 @@ def write_phoneme_pmi_report(pmi_results, outfile, threshold=0.0001, sep='\t'):
 def write_phoneme_surprisal_report(surprisal_results, outfile, phon_env=True, ngram_size=1, sep='\t'):
     make_outdir(outfile)
     lines = []
-    surprisal_results, oov_value = prune_oov_surprisal(surprisal_results)
-    oov_value = round(oov_value, 3)
     for seg1, seg2 in surprisal_results.get_key_pairs():
         if ngram_size > 1:
             raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
@@ -131,8 +129,7 @@ def write_phoneme_surprisal_report(surprisal_results, outfile, phon_env=True, ng
             [
                 seg1_str,
                 ngram2log_format(seg2, phon_env=False),  # phon_env only on seg1
-                str(abs(round(surprisal_results.get_value_or_default(seg1, seg2, oov_value), 3))),
-                str(oov_value)
+                str(abs(round(surprisal_results.get_value(seg1, seg2), 3))),
             ]
         )
         if phon_env:
@@ -140,12 +137,14 @@ def write_phoneme_surprisal_report(surprisal_results, outfile, phon_env=True, ng
 
     # Sort by phone1 (by phon env if relevant) and then by surprisal in ascending order
     if phon_env:
+        # sort: phone1, phon_env, surprisal, phone2
         lines = sorted(lines, key=lambda x: (x[0], x[1], float(x[3]), x[2]), reverse=False)
     else:
+        # sort: phone1, surprisal, phone2
         lines = sorted(lines, key=lambda x: (x[0], float(x[2]), x[1]), reverse=False)
     lines = '\n'.join([sep.join(line) for line in lines])
     with open(outfile, 'w') as f:
-        header = ['Phone1', 'Phone2', 'Surprisal', 'OOV_Smoothed']
+        header = ['Phone1', 'Phone2', 'Surprisal']
         if phon_env:
             header.insert(1, "PhonEnv")
         header = sep.join(header)
@@ -155,7 +154,6 @@ def write_phoneme_surprisal_report(surprisal_results, outfile, phon_env=True, ng
 def write_phon_corr_report(corr, lang1_name, lang2_name, gap_ch, outfile, corr_type, min_prob=0.05):
     make_outdir(outfile)
     lines = []
-    corr, _ = prune_oov_surprisal(corr)
     l1_phons = sorted([p for p in corr.get_primary_keys() if gap_ch not in p], key=lambda x: Ngram(x).string)
     for p1 in l1_phons:
         p2_candidates = corr.get_primary_key_map(p1)

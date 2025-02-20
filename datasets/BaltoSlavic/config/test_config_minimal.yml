@@ -1,5 +1,5 @@
 family:
-    include: ['Proto-Balto-Slavic', 'Lithuanian', 'Russian', 'Polish']
+    include: ['Proto-Balto-Slavic', 'Proto-Slavic', 'Slovenian', 'Ukrainian', 'Štokavian', 'Upper Sorbian']
 
 experiment:
     name: "test-minimal"
