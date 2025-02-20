@@ -12,7 +12,7 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 from utils.cluster import draw_dendrogram
 from utils.information import calculate_infocontent_of_word, entropy
-from utils.sequence import Ngram, flatten_ngram, pad_sequence
+from utils.sequence import Ngram, PhonEnvNgram, flatten_ngram, pad_sequence
 from utils.string import format_as_variable, strip_ch
 from utils.utils import (create_default_dict, create_default_dict_of_dicts,
                          dict_of_sets, dict_tuplelist, normalize_dict)
@@ -247,10 +247,15 @@ class Doculect:
                         padded_phon_env = pad_sequence(phon_env_segments, pad_ch=pad_ch, pad_n=pad_n)
                     for i in range(len(padded) - pad_n):
                         ngram = Ngram(padded[i:i + ngram_size])
-                        self.ngrams[ngram_size][ngram.ngram] += 1
-                        if phon_env:
-                            phon_env_ngram = Ngram(padded_phon_env[i:i + ngram_size])
-                            self.phon_env_ngrams[ngram_size][phon_env_ngram.ngram] += 1
+                        self.ngrams[ngram.size][ngram.ngram] += 1
+                        if phon_env and (i > 0 or pad_n == 0):
+                            phon_env_ngram = PhonEnvNgram(padded_phon_env[i:i + ngram_size])
+                            for subcontext in phon_env_ngram.list_subcontexts():
+                                if ngram_size == 1:
+                                    key = (*phon_env_ngram.ngram, subcontext)
+                                else:
+                                    key = (phon_env_ngram.ngram, subcontext)
+                                self.phon_env_ngrams[phon_env_ngram.size][key] += 1
 
             if phon_env:
                 return self.phon_env_ngrams[ngram_size]

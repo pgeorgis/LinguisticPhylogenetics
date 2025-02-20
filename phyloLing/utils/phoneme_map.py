@@ -1,4 +1,4 @@
-from collections import defaultdict
+from copy import deepcopy
 from math import inf
 from statistics import mean
 from typing import Iterable, NewType
@@ -158,7 +158,9 @@ class PhonemeMap:
     def get_secondary_keys(self, primary_key: MultiPhoneme):
         return self.internal_map.get_secondary_keys(primary_key)
 
-    # equals
+    def copy(self):
+        return deepcopy(self)
+    
     def __eq__(self, other):
         if isinstance(other, PhonemeMap):
             return self.internal_map == other.internal_map

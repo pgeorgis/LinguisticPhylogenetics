@@ -1,11 +1,13 @@
 import re
 from functools import lru_cache
 from math import factorial
-from statistics import mean
+from typing import Iterable
 
-from constants import END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH
-from phonUtils.phonEnv import PHON_ENV_REGEX
+from constants import (END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT,
+                       PHON_ENV_JOIN_CH, SEG_JOIN_CH, START_PAD_CH)
+from phonUtils.phonEnv import PHON_ENV_REGEX, phon_env_ngrams
 from phonUtils.segment import _toSegment
+
 
 class Ngram:
     def __init__(self, ngram, lang=None, seg_sep=SEG_JOIN_CH):
@@ -70,13 +72,18 @@ class Ngram:
 
 
 class PhonEnvNgram(Ngram):
-    def __init__(self, ngram, **kwargs):
-        super().__init__(ngram, **kwargs)
+    def __init__(self, ngram, seg_sep=SEG_JOIN_CH, **kwargs):
+        super().__init__(ngram, seg_sep=seg_sep, **kwargs)
         self.ngram, self.phon_env = self.separate_phon_env_from_ngram()
         self.ngram_w_context = (Ngram(self.ngram).undo(), self.phon_env)
         self.size = len(self.ngram)
+        self.string = PHON_ENV_JOIN_CH.join([SEG_JOIN_CH.join(self.ngram), self.phon_env])
 
     def separate_phon_env_from_ngram(self):
+        if PHON_ENV_JOIN_CH in self.raw:
+            ngram, phon_env = self.raw.split(PHON_ENV_JOIN_CH)
+            ngram = self.get_ngram(ngram)
+            return ngram, phon_env
         ngram, phon_env = [], []
         for part in self.ngram:
             if isinstance(part, str) and PHON_ENV_REGEX.search(part):
@@ -100,18 +107,25 @@ class PhonEnvNgram(Ngram):
         return ngram, phon_env
 
     def combine_phon_envs(self, phon_envs):
-        if len(phon_envs) > 1:
-            if '|T|' in phon_envs:
-                phon_envs = list(phon_envs)
-                phon_envs.remove('|T|')
-                return self.combine_phon_envs(phon_envs)
-            else:
-                pre_env = phon_envs[0].split('|')[0]
-                post_env = phon_envs[-1].split('|')[-1]
-                return f'{pre_env}|S|{post_env}'
+        return combine_phon_envs(phon_envs)
+    
+    def list_subcontexts(self):
+        return phon_env_ngrams(self.phon_env, exclude={'|S|'})
+
+
+def combine_phon_envs(phon_envs):
+    if len(phon_envs) > 1:
+        if '|T|' in phon_envs:
+            phon_envs = list(phon_envs)
+            phon_envs.remove('|T|')
+            return combine_phon_envs(phon_envs)
         else:
-            assert len(phon_envs) == 1
-            return phon_envs[0]
+            pre_env = phon_envs[0].split('|')[0]
+            post_env = phon_envs[-1].split('|')[-1]
+            return f'{pre_env}|S|{post_env}'
+    else:
+        assert len(phon_envs) == 1
+        return phon_envs[0]
 
 
 @lru_cache(maxsize=None)
