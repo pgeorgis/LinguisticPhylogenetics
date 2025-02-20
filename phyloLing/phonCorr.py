@@ -161,7 +161,6 @@ def postprocess_ibm_alignment(aligned_pair, remove_non_sequential_complex_alignm
                         # Choose to remove the later of the two if both equally distant
                         # (to avoid non-deterministic choice using max)
                         more_distant_i = i_next if i_next_distance >= i_distance else i
-                        more_distant_i = max(i_next, i, key=lambda x: abs(x - anchor))
                         aligned_seq2[j].remove(more_distant_i)
                         if len(aligned_seq1[more_distant_i]) > 1:
                             aligned_seq1[more_distant_i].remove(j)
