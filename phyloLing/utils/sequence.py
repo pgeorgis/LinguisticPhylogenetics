@@ -4,7 +4,7 @@ from math import factorial
 from statistics import mean
 
 from constants import END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT, SEG_JOIN_CH, START_PAD_CH
-from phonUtils.phonEnv import PHON_ENV_REGEX
+from phonUtils.phonEnv import PHON_ENV_REGEX, phon_env_ngrams
 from phonUtils.segment import _toSegment
 
 class Ngram:
@@ -112,6 +112,9 @@ class PhonEnvNgram(Ngram):
         else:
             assert len(phon_envs) == 1
             return phon_envs[0]
+    
+    def list_subcontexts(self):
+        return phon_env_ngrams(self.phon_env, exclude={'|S|'})
 
 
 @lru_cache(maxsize=None)

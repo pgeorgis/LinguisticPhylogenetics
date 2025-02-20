@@ -577,26 +577,16 @@ class Alignment:
         for align_i in seq_map:
             if seq_map[align_i] is not None:
                 # for complex ngrams, consider only the preceding context of the first component segment and the following context of the last component segment
+                # e.g. (('s', '#|S|>'), ('k', '>|S|<')) -> (('s', 'k'), '#|S|<')
                 # therefore skip computing phon envs for any segs in between first and last within an alignment position
-                for j, seg_j, in enumerate(list(set(seq_map[align_i][:1] + seq_map[align_i][-1:]))):
-
-                    phon_env = env_func(self.seq1, seg_j)
-                    target = word1_aligned[align_i]
-                    if isinstance(target, str):
-                        word1_aligned[align_i] = word1_aligned[align_i], phon_env
+                full_phon_env = []
+                for j, seg_j in enumerate(seq_map[align_i]):
+                    if j == 0 or j == len(seq_map[align_i]) - 1:
+                        phon_env = env_func(self.seq1, seg_j)
+                        full_phon_env.append((self.seq1[seg_j], phon_env))
                     else:
-                        word1_aligned[align_i] = list(word1_aligned[align_i])  # needed because tuples don't support item assignment
-                        word1_aligned[align_i][j] = word1_aligned[align_i][j], phon_env
-                        word1_aligned[align_i] = PhonEnvNgram(word1_aligned[align_i]).ngram_w_context
-                if len(seq_map[align_i]) > 1:
-                    # Extract only preceding and following contexts from complex ngrams
-                    # e.g. (('s', '#|S|>'), ('k', '>|S|<')) -> (('s', 'k'), '#|S|<')
-                    word1_aligned[align_i] = PhonEnvNgram(word1_aligned[align_i]).ngram_w_context
-                    # segs = tuple(pair[0] for pair in word1_aligned[align_i])
-                    # pre_env = word1_aligned[align_i][0][-1].split('|')[0]
-                    # post_env = word1_aligned[align_i][-1][-1].split('|')[-1]
-                    # phon_env = f'{pre_env}|S|{post_env}'
-                    # word1_aligned[align_i] = segs, phon_env
+                        full_phon_env.append(self.seq1[seg_j])
+                word1_aligned[align_i] = PhonEnvNgram(full_phon_env).ngram_w_context
 
         # TODO use as tuple if possible, but this might disrupt some behavior elsewhere if lists are expected
         return list(zip(word1_aligned, word2_aligned))

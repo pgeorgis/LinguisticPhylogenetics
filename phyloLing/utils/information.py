@@ -82,17 +82,6 @@ def adaptation_surprisal(alignment: Alignment,
         return values
 
 
-def get_oov_val(corr_dict, oov_ch=NON_IPA_CH_DEFAULT):
-    # Determine the (potentially smoothed) value for unseen ("out of vocabulary" [OOV]) correspondences
-    # Check using an OOV/non-IPA character
-    oov_val = corr_dict[oov_ch]
-
-    # Then remove this character from the surprisal dictionary
-    del corr_dict[oov_ch]
-
-    return oov_val
-
-
 def prune_oov_surprisal(surprisal_dict: PhonemeMap):
     """Prune correspondences with a surprisal value greater than OOV surprisal."""
     oov_val = surprisal_dict.default_value
