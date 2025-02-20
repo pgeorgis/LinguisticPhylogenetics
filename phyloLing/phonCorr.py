@@ -1491,7 +1491,7 @@ class PhonCorrelator:
             corr_type=corr_type,
             outfile=outfile,
             lang1_name=self.lang1_name,
-            lang2_name=self.lang1_name,
+            lang2_name=self.lang2_name,
             gap_ch=self.gap_ch,
         )
 

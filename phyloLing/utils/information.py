@@ -82,17 +82,6 @@ def adaptation_surprisal(alignment: Alignment,
         return values
 
 
-def prune_oov_surprisal(surprisal_dict: PhonemeMap):
-    """Prune correspondences with a surprisal value greater than OOV surprisal."""
-    oov_val = surprisal_dict.default_value
-    pruned = PhonemeMap(oov_val)
-    for seg1, seg2 in surprisal_dict.get_key_pairs():
-        surprisal_val = surprisal_dict.get_value(seg1, seg2)
-        if surprisal_val < oov_val:
-            pruned.set_value(seg1, seg2, surprisal_val)
-    return pruned, oov_val
-
-
 def calculate_infocontent_of_word(seq, lang, ngram_size=3, pad_ch=PAD_CH_DEFAULT):
     if len(seq) < ngram_size:
         add_pad_n = ngram_size-len(seq)
