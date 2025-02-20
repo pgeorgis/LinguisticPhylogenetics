@@ -107,21 +107,25 @@ class PhonEnvNgram(Ngram):
         return ngram, phon_env
 
     def combine_phon_envs(self, phon_envs):
-        if len(phon_envs) > 1:
-            if '|T|' in phon_envs:
-                phon_envs = list(phon_envs)
-                phon_envs.remove('|T|')
-                return self.combine_phon_envs(phon_envs)
-            else:
-                pre_env = phon_envs[0].split('|')[0]
-                post_env = phon_envs[-1].split('|')[-1]
-                return f'{pre_env}|S|{post_env}'
-        else:
-            assert len(phon_envs) == 1
-            return phon_envs[0]
+        return combine_phon_envs(phon_envs)
     
     def list_subcontexts(self):
         return phon_env_ngrams(self.phon_env, exclude={'|S|'})
+
+
+def combine_phon_envs(phon_envs):
+    if len(phon_envs) > 1:
+        if '|T|' in phon_envs:
+            phon_envs = list(phon_envs)
+            phon_envs.remove('|T|')
+            return combine_phon_envs(phon_envs)
+        else:
+            pre_env = phon_envs[0].split('|')[0]
+            post_env = phon_envs[-1].split('|')[-1]
+            return f'{pre_env}|S|{post_env}'
+    else:
+        assert len(phon_envs) == 1
+        return phon_envs[0]
 
 
 @lru_cache(maxsize=None)
