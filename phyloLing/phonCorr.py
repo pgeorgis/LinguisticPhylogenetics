@@ -285,17 +285,16 @@ def prune_extraneous_synonyms(wordlist: Wordlist,
                 if index not in best_indices and index not in tied_indices[concept]:
                     indices_to_prune.add(index)
 
-            # Now check for multiple l1 words mappedåto the same l2 word
-            # Choose only the best of these
+            # Now check for multiple l1 words mapped to the same l2 word
+            # Choose only the best of these, 
+            # unless scores are tied, in which case all are kept
             selected_word2 = [wordlist.word_pairs[index][-1] for index in best_indices]
             if len(set(selected_word2)) < len(best_indices):
                 for word2 in set(selected_word2):
                     indices = [index for index in best_indices if wordlist.word_pairs[index][-1] == word2]
-                    if maximize_score:
-                        best_choice = max(indices, key=lambda x: scores[x])
-                    else:
-                        best_choice = min(indices, key=lambda x: scores[x])
-                    indices_to_prune.update([index for index in indices if index != best_choice])
+                    best_score = max(scores[x] for x in indices) if maximize_score else min(scores[x] for x in indices)
+                    best_choices = set(x for x in indices if scores[x] == best_score)
+                    indices_to_prune.update([index for index in indices if index not in best_choices])
 
     # Then prune all suboptimal word pair indices
     indices_to_prune = sorted(list(indices_to_prune), reverse=True)
