@@ -98,7 +98,7 @@ def prune_oov_surprisal(surprisal_dict: PhonemeMap):
     oov_val = surprisal_dict.default_value
     pruned = PhonemeMap(oov_val)
     for seg1, seg2 in surprisal_dict.get_key_pairs():
-        surprisal_val = surprisal_dict.get_value(seg1, seg2)
+        surprisal_val = surprisal_dict.get_value_or_default(seg1, seg2, oov_val)
         if surprisal_val < oov_val:
             pruned.set_value(seg1, seg2, surprisal_val)
     return pruned, oov_val

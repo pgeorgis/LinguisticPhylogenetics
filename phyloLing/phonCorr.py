@@ -194,7 +194,7 @@ def prune_corrs(corr_map: PhonemeMap, min_val: int=2, exc1: set=None, exc2: set=
         seg2_to_del = [
             seg2
             for seg2 in corr_map.get_secondary_keys(seg1)
-            if corr_map.get_value(seg1, seg2) < min_val
+            if corr_map.get_value_or_default(seg1, seg2, 0) < min_val
         ]
         for seg2 in seg2_to_del:
             if exc2 and Ngram(seg2).string in exc2:
@@ -516,7 +516,7 @@ class PhonCorrelator:
                         allow_complex=False
                     )
                 # Add phonetic alignment cost to align_costs dict storing PMI values
-                base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
+                base_align_cost = align_costs.get_value_or_default(ngram1.undo(), ngram2.undo(), 0)
                 align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
             align_costs.phon_dist_added = True
 
@@ -743,7 +743,7 @@ class PhonCorrelator:
             seg1_totals = agg_seg1_totals[seg1]
             for seg2 in conditional_counts.get_secondary_keys(seg1):
                 seg2_ngram = Ngram(seg2)
-                cond_count = conditional_counts.get_value(seg1, seg2)
+                cond_count = conditional_counts.get_value_or_default(seg1, seg2, 0)
                 cond_prob = cond_count / seg1_totals
                 p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
                 joint_prob = cond_prob * p_ind1
@@ -1246,7 +1246,7 @@ class PhonCorrelator:
                     interpolation[i].increment_value(
                         Ngram(ngram1).ngram,
                         Ngram(ngram2).ngram,
-                        correspondence_counts.get_value(ngram1, ngram2)
+                        correspondence_counts.get_value_or_default(ngram1, ngram2, 0)
                     )
 
         # Add in phonological environment correspondences, e.g. ('l', '#S<') (word-initial 'l') with 'ʎ'
@@ -1266,7 +1266,7 @@ class PhonCorrelator:
                         interpolation['phon_env'].increment_value(
                             ngram1_context,
                             Ngram(ngram2).ngram,
-                            phon_env_corr_counts.get_value(ngram1, ngram2)
+                            phon_env_corr_counts.get_value_or_default(ngram1, ngram2, 0)
                         )
 
         # Get lists of possible ngrams in lang1 and lang2
@@ -1414,7 +1414,7 @@ class PhonCorrelator:
             to_prune = [
                 ngram2
                 for ngram2 in smoothed_surprisal.get_primary_keys()
-                if smoothed_surprisal.get_value(key, ngram2) > oov_value
+                if smoothed_surprisal.get_value_or_default(key, ngram2, oov_value) > oov_value
             ]
             for ngram_to_prune in to_prune:
                 smoothed_surprisal.delete_value(key, ngram_to_prune)
