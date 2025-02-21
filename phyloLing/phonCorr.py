@@ -20,8 +20,8 @@ from utils.alignment import (calculate_alignment_costs,
                              needleman_wunsch_extended)
 from utils.distance import Distance
 from utils.doculect import Doculect
-from utils.information import (pointwise_mutual_info, surprisal,
-                               surprisal_to_prob)
+from utils.information import (marginalize_over_phon_env,
+                               pointwise_mutual_info, surprisal)
 from utils.logging import (log_phon_corr_iteration, write_alignments_log,
                            write_phon_corr_iteration_log,
                            write_phon_corr_report, write_phoneme_pmi_report,
@@ -29,10 +29,10 @@ from utils.logging import (log_phon_corr_iteration, write_alignments_log,
 from utils.phoneme_map import (PhonemeMap, average_corrs, average_nested_dicts,
                                reverse_corr_dict_map)
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
-                            filter_out_invalid_ngrams, pad_sequence,
-                            start_token)
+                            filter_out_invalid_ngrams, get_phonEnv_weight,
+                            pad_sequence, start_token)
 from utils.utils import (balanced_resample, create_default_dict, default_dict,
-                         normalize_dict, segment_ranges)
+                         segment_ranges)
 from utils.wordlist import Wordlist, sort_wordlist
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s phonCorr %(levelname)s: %(message)s')
@@ -1383,7 +1383,12 @@ class PhonCorrelator:
         # Get vanilla surprisal (no phon env) from phon_env surprisal by marginalizing over phon_env
         if phon_env:
             phon_env_surprisal_results = surprisal_results.copy()
-            surprisal_results = self.marginalize_over_phon_env_surprisal(phon_env_surprisal_results)
+            surprisal_results = marginalize_over_phon_env(
+                phon_env_surprisal_results,
+                from_surprisal=True,
+                to_surprisal=True,
+                doculect=self.lang1,
+            )
 
         # Save surprisal results
         self.surprisal_results[ngram_size] = surprisal_results
@@ -1399,28 +1404,6 @@ class PhonCorrelator:
         if phon_env:
             self.log_phoneme_surprisal(phon_env=True)
 
-
-    def marginalize_over_phon_env_surprisal(self,
-                                            phon_env_surprisal_dict: PhonemeMap,
-                                            ) -> PhonemeMap:
-        """Converts a phon env surprisal dictionary into a vanilla surprisal dictionary by marginalizing over phon envs"""
-        vanilla_surprisal_dict = PhonemeMap(0)
-        for phon_env_ngram in phon_env_surprisal_dict.get_primary_keys():
-            ngram1, _ = phon_env_ngram
-            count = self.lang1.phon_env_ngrams[Ngram(ngram1).size].get(phon_env_ngram, 0)
-            if count == 0:
-                continue
-            for ngram2, surprisal_val in phon_env_surprisal_dict.get_primary_key_map(phon_env_ngram).items():
-                prob = surprisal_to_prob(surprisal_val)
-                count_ngram2 = prob * count
-                if count_ngram2 > 0:
-                    vanilla_surprisal_dict.increment_value(ngram1, ngram2, count_ngram2)
-        for ngram1 in vanilla_surprisal_dict.get_primary_keys():
-            ngram1_map = vanilla_surprisal_dict.get_primary_key_map(ngram1)
-            inner_surprisal_dict = normalize_dict(ngram1_map)
-            for ngram2, prob in inner_surprisal_dict.items():
-                vanilla_surprisal_dict.set_value(ngram1, ngram2, surprisal(prob))
-        return vanilla_surprisal_dict
 
     def compute_noncognate_thresholds(self, eval_func, sample_size=None, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
@@ -1496,22 +1479,6 @@ class PhonCorrelator:
             lang2_name=self.lang2_name,
             gap_ch=self.gap_ch,
         )
-
-
-@lru_cache(maxsize=None)
-def get_phonEnv_weight(phonEnv):
-    # Weight contextual estimate based on the size of the context
-    # #|S|< would have weight 3 because it considers the segment plus context on both sides
-    # #|S would have weight 2 because it considers only the segment plus context on one side
-    # #|S|<_l would have weight 4 because it the context on both sides, with two attributes of RHS context
-    # #|S|<_ALVEOLAR_l would have weight 5 because it the context on both sides, with three attributes of RHS context
-    prefix, base, suffix = phonEnv.split('|')
-    weight = 1
-    prefix = [p for p in prefix.split('_') if p != '']
-    suffix = [s for s in suffix.split('_') if s != '']
-    weight += len(prefix)
-    weight += len(suffix)
-    return weight
 
 
 def get_phone_correlator(lang1,

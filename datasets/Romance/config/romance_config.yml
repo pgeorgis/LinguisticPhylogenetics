@@ -15,7 +15,7 @@ transcription:
         normalize_geminates: true
 
 phon_corr:
-    phon_env: false
+    phon_env: true
     refresh: []
     refresh_all: true
 
