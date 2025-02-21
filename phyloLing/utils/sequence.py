@@ -218,6 +218,22 @@ def filter_out_invalid_ngrams(ngrams, language=None):
     ]
 
 
+@lru_cache(maxsize=None)
+def get_phonEnv_weight(phonEnv):
+    # Weight contextual estimate based on the size of the context
+    # #|S|< would have weight 3 because it considers the segment plus context on both sides
+    # #|S would have weight 2 because it considers only the segment plus context on one side
+    # #|S|<_l would have weight 4 because it the context on both sides, with two attributes of RHS context
+    # #|S|<_ALVEOLAR_l would have weight 5 because it the context on both sides, with three attributes of RHS context
+    prefix, base, suffix = phonEnv.split('|')
+    weight = 1
+    prefix = [p for p in prefix.split('_') if p != '']
+    suffix = [s for s in suffix.split('_') if s != '']
+    weight += len(prefix)
+    weight += len(suffix)
+    return weight
+
+
 def score_is_better(score1, score2, maximize_score):
     return score1 > score2 if maximize_score else score1 < score2
 
@@ -228,8 +244,6 @@ def decompose_ngram(ngram):
     if isinstance(ngram, tuple):
         return [ngram] if len(ngram) == 1 else list(ngram)
     return [ngram]  # Handle non-tuple cases as unigrams
-
-
 
 
 def remove_overlapping_ngrams(ngrams,
