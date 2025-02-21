@@ -1381,7 +1381,12 @@ class PhonCorrelator:
         # Get vanilla surprisal (no phon env) from phon_env surprisal by marginalizing over phon_env
         if phon_env:
             phon_env_surprisal_results = surprisal_results.copy()
-            surprisal_results = self.marginalize_over_phon_env_surprisal(phon_env_surprisal_results)
+            surprisal_results = self.marginalize_over_phon_env(
+                phon_env_surprisal_results,
+                from_surprisal=True,
+                to_surprisal=True,
+                doculect=self.lang1,
+            )
 
         # Save surprisal results
         self.surprisal_results[ngram_size] = surprisal_results
@@ -1398,27 +1403,49 @@ class PhonCorrelator:
             self.log_phoneme_surprisal(phon_env=True)
 
 
-    def marginalize_over_phon_env_surprisal(self,
-                                            phon_env_surprisal_dict: PhonemeMap,
-                                            ) -> PhonemeMap:
-        """Converts a phon env surprisal dictionary into a vanilla surprisal dictionary by marginalizing over phon envs"""
-        vanilla_surprisal_dict = PhonemeMap(0)
-        for phon_env_ngram in phon_env_surprisal_dict.get_primary_keys():
-            ngram1, _ = phon_env_ngram
-            count = self.lang1.phon_env_ngrams[Ngram(ngram1).size].get(phon_env_ngram, 0)
+    def marginalize_over_phon_env(self,
+                                  phon_env_corr_map: PhonemeMap,
+                                  doculect: Doculect,
+                                  from_surprisal=False,
+                                  from_counts=True,
+                                  to_surprisal=False,
+                                  normalize=False,
+                                  ) -> PhonemeMap:
+        """Converts a phon env correspondence map into a vanilla correspondence map by marginalizing over phon envs"""
+        vanilla_corr_map = PhonemeMap(0)
+        for phon_env_ngram in phon_env_corr_map.get_primary_keys():
+            ngram1, _ = phon_env_ngram if len(phon_env_ngram) == 2 else (phon_env_ngram, '')
+            ngram_size = Ngram(ngram1).size
+            phon_env_ngrams_per_size = doculect.phon_env_ngrams[ngram_size]
+            if sum(phon_env_ngrams_per_size.values()) == 0:
+                doculect.list_ngrams(ngram_size, phon_env=True)
+            count = phon_env_ngrams_per_size.get(phon_env_ngram, 0)
             if count == 0:
                 continue
-            for ngram2, surprisal_val in phon_env_surprisal_dict.get_primary_key_map(phon_env_ngram).items():
-                prob = surprisal_to_prob(surprisal_val)
-                count_ngram2 = prob * count
+            for ngram2, val in phon_env_corr_map.get_primary_key_map(phon_env_ngram).items():
+                if from_surprisal:
+                    val = surprisal_to_prob(val)
+                    count_ngram2 = val * count
+                elif not from_counts:
+                    count_ngram2 = val * count
+                else:
+                    assert from_counts
+                    count_ngram2 = val
                 if count_ngram2 > 0:
-                    vanilla_surprisal_dict.increment_value(ngram1, ngram2, count_ngram2)
-        for ngram1 in vanilla_surprisal_dict.get_primary_keys():
-            ngram1_map = vanilla_surprisal_dict.get_primary_key_map(ngram1)
-            inner_surprisal_dict = normalize_dict(ngram1_map)
-            for ngram2, prob in inner_surprisal_dict.items():
-                vanilla_surprisal_dict.set_value(ngram1, ngram2, surprisal(prob))
-        return vanilla_surprisal_dict
+                    vanilla_corr_map.increment_value(ngram1, ngram2, count_ngram2)
+        for ngram1 in vanilla_corr_map.get_primary_keys():
+            ngram1_map = vanilla_corr_map.get_primary_key_map(ngram1)
+            if normalize or to_surprisal:
+                inner_map = normalize_dict(ngram1_map)
+            else:
+                inner_map = ngram1_map
+            for ngram2, val in inner_map.items():
+                if to_surprisal:
+                    vanilla_val = surprisal(val)
+                else:
+                    vanilla_val = val
+                vanilla_corr_map.set_value(ngram1, ngram2, vanilla_val)
+        return vanilla_corr_map
 
     def compute_noncognate_thresholds(self, eval_func, sample_size=None, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
