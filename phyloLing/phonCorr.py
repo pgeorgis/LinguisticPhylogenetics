@@ -328,7 +328,9 @@ class PhonCorrelator:
         # Prepare wordlists: sort out same/different-meaning words and loanwords
         self.input_wordlist = tuple(wordlist) if wordlist is not None else wordlist  # used for initializing twin, needs to be None of wordlist input arg was also None
         self.wordlist = self.get_concept_list(wordlist)
-        self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists()
+        self.same_meaning = None
+        self.diff_meaning = None
+        self.loanwords = None
         self.samples = {}
 
         # PMI and surprisal results
@@ -375,6 +377,10 @@ class PhonCorrelator:
         return wordlist
 
     def prepare_wordlists(self):
+        # Check if wordlists were already previously generated, if so skip
+        if self.wordlists_created() is True:
+            return
+
         # Get lexical items in each language belonging to the specified wordlist
         l1_wordlist = [word for concept in self.wordlist for word in self.lang1.vocabulary[concept]]
         l2_wordlist = [word for concept in self.wordlist for word in self.lang2.vocabulary[concept]]
@@ -396,8 +402,16 @@ class PhonCorrelator:
             else:
                 diff_meaning.append(pair)
 
-        # Return a tuple of the three word type lists
-        return same_meaning, diff_meaning, loanwords
+        # Set the three word type lists
+        self.same_meaning = same_meaning
+        self.diff_meaning = diff_meaning
+        self.loanwords = loanwords
+    
+    def wordlists_created(self):
+        """Returns True if wordlists have already been prepared, else false."""
+        if any(_wordlist is None for _wordlist in (self.same_meaning, self.diff_meaning, self.loanwords)):
+            return False
+        return True
 
     def sample_wordlists(self, n_samples, sample_size, start_seed=None, log_outfile='samples.log'):
         # Take N samples of same- and different-meaning words
@@ -952,6 +966,8 @@ class PhonCorrelator:
         Returns:
             results (dict): Nested dictionary of PMI correspondences.
         """
+        # Generate and prepare wordlists if not previously done
+        self.prepare_wordlists()
 
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
         sample_results: dict[int, PhonemeMap] = {}
@@ -1405,6 +1421,8 @@ class PhonCorrelator:
 
     def compute_noncognate_thresholds(self, eval_func, sample_size=None, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
+        # Generate and prepare wordlists if not previously done
+        self.prepare_wordlists()
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
         if sample_size is None:
