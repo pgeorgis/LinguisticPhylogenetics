@@ -9,11 +9,10 @@ from statistics import mean, stdev
 from typing import Self
 
 import numpy as np
-from constants import (END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT,
-                       PHONE_CORRELATORS_INDEX_KEY, SEG_JOIN_CH, START_PAD_CH)
+from constants import (GAP_CH_DEFAULT, PAD_CH_DEFAULT,
+                       PHONE_CORRELATORS_INDEX_KEY, SEG_JOIN_CH)
 from nltk.translate import AlignedSent, IBMModel1, IBMModel2
 from phonAlign import Alignment
-from phonUtils.phonEnv import phon_env_ngrams
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import Segment, _toSegment
 from scipy.stats import norm
@@ -21,9 +20,8 @@ from utils.alignment import (calculate_alignment_costs,
                              needleman_wunsch_extended)
 from utils.distance import Distance
 from utils.doculect import Doculect
-from utils.information import (get_oov_val, pointwise_mutual_info,
-                               prune_oov_surprisal, surprisal,
-                               surprisal_to_prob)
+from utils.information import (marginalize_over_phon_env,
+                               pointwise_mutual_info, surprisal)
 from utils.logging import (log_phon_corr_iteration, write_alignments_log,
                            write_phon_corr_iteration_log,
                            write_phon_corr_report, write_phoneme_pmi_report,
@@ -31,10 +29,10 @@ from utils.logging import (log_phon_corr_iteration, write_alignments_log,
 from utils.phoneme_map import (PhonemeMap, average_corrs, average_nested_dicts,
                                reverse_corr_dict_map)
 from utils.sequence import (Ngram, PhonEnvNgram, end_token,
-                            filter_out_invalid_ngrams, pad_sequence,
-                            start_token)
+                            filter_out_invalid_ngrams, get_phonEnv_weight,
+                            pad_sequence, start_token)
 from utils.utils import (balanced_resample, create_default_dict, default_dict,
-                         normalize_dict, segment_ranges)
+                         segment_ranges)
 from utils.wordlist import Wordlist, sort_wordlist
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s phonCorr %(levelname)s: %(message)s')
@@ -144,26 +142,29 @@ def postprocess_ibm_alignment(aligned_pair, remove_non_sequential_complex_alignm
 
         Disallow such complex/double alignments if they are not consecutive
         """
-        for j, i_s in aligned_seq2.items():
-            i_s.sort()
-            if len(i_s) > 1:
-                i_i = 0
-                i_s_len = len(i_s)
-                i_s_copy = i_s[:]
-                while i_i < i_s_len-1:
-                    i = i_s_copy[i_i]
-                    i_next = i_s_copy[i_i + 1]
+        for j, aligned_idxs in aligned_seq2.items():
+            aligned_idxs.sort()
+            if len(aligned_idxs) > 1:
+                offset = 0
+                n_aligned_idxs = len(aligned_idxs)
+                aligned_idxs_copy = aligned_idxs[:]
+                while offset < n_aligned_idxs - 1:
+                    i = aligned_idxs_copy[offset]
+                    i_next = aligned_idxs_copy[offset + 1]
                     if abs(i - i_next) > 1:
-                        anchor = mean(i_s+[j])
-
+                        anchor = mean(aligned_idxs + [j])
                         # Find which of the two is more distant from anchor
-                        more_distant_i = max(i_next, i, key=lambda x: abs(x - anchor))
+                        i_next_distance = abs(i_next - anchor)
+                        i_distance = abs(i - anchor)
+                        # Choose to remove the later of the two if both equally distant
+                        # (to avoid non-deterministic choice using max)
+                        more_distant_i = i_next if i_next_distance >= i_distance else i
                         aligned_seq2[j].remove(more_distant_i)
                         if len(aligned_seq1[more_distant_i]) > 1:
                             aligned_seq1[more_distant_i].remove(j)
                         else:
                             aligned_seq1[more_distant_i] = [None]
-                    i_i += 1
+                    offset += 1
 
     return aligned_seq1, aligned_seq2
 
@@ -191,7 +192,7 @@ def prune_corrs(corr_map: PhonemeMap, min_val: int=2, exc1: set=None, exc2: set=
         seg2_to_del = [
             seg2
             for seg2 in corr_map.get_secondary_keys(seg1)
-            if corr_map.get_value(seg1, seg2) < min_val
+            if corr_map.get_value_or_default(seg1, seg2, 0) < min_val
         ]
         for seg2 in seg2_to_del:
             if exc2 and Ngram(seg2).string in exc2:
@@ -285,17 +286,16 @@ def prune_extraneous_synonyms(wordlist: Wordlist,
                 if index not in best_indices and index not in tied_indices[concept]:
                     indices_to_prune.add(index)
 
-            # Now check for multiple l1 words mappedåto the same l2 word
-            # Choose only the best of these
+            # Now check for multiple l1 words mapped to the same l2 word
+            # Choose only the best of these, 
+            # unless scores are tied, in which case all are kept
             selected_word2 = [wordlist.word_pairs[index][-1] for index in best_indices]
             if len(set(selected_word2)) < len(best_indices):
                 for word2 in set(selected_word2):
                     indices = [index for index in best_indices if wordlist.word_pairs[index][-1] == word2]
-                    if maximize_score:
-                        best_choice = max(indices, key=lambda x: scores[x])
-                    else:
-                        best_choice = min(indices, key=lambda x: scores[x])
-                    indices_to_prune.update([index for index in indices if index != best_choice])
+                    best_score = max(scores[x] for x in indices) if maximize_score else min(scores[x] for x in indices)
+                    best_choices = set(x for x in indices if scores[x] == best_score)
+                    indices_to_prune.update([index for index in indices if index not in best_choices])
 
     # Then prune all suboptimal word pair indices
     indices_to_prune = sorted(list(indices_to_prune), reverse=True)
@@ -330,7 +330,9 @@ class PhonCorrelator:
         # Prepare wordlists: sort out same/different-meaning words and loanwords
         self.input_wordlist = tuple(wordlist) if wordlist is not None else wordlist  # used for initializing twin, needs to be None of wordlist input arg was also None
         self.wordlist = self.get_concept_list(wordlist)
-        self.same_meaning, self.diff_meaning, self.loanwords = self.prepare_wordlists()
+        self.same_meaning = None
+        self.diff_meaning = None
+        self.loanwords = None
         self.samples = {}
 
         # PMI and surprisal results
@@ -377,6 +379,10 @@ class PhonCorrelator:
         return wordlist
 
     def prepare_wordlists(self):
+        # Check if wordlists were already previously generated, if so skip
+        if self.wordlists_created() is True:
+            return
+
         # Get lexical items in each language belonging to the specified wordlist
         l1_wordlist = [word for concept in self.wordlist for word in self.lang1.vocabulary[concept]]
         l2_wordlist = [word for concept in self.wordlist for word in self.lang2.vocabulary[concept]]
@@ -398,8 +404,16 @@ class PhonCorrelator:
             else:
                 diff_meaning.append(pair)
 
-        # Return a tuple of the three word type lists
-        return same_meaning, diff_meaning, loanwords
+        # Set the three word type lists
+        self.same_meaning = same_meaning
+        self.diff_meaning = diff_meaning
+        self.loanwords = loanwords
+    
+    def wordlists_created(self):
+        """Returns True if wordlists have already been prepared, else false."""
+        if any(_wordlist is None for _wordlist in (self.same_meaning, self.diff_meaning, self.loanwords)):
+            return False
+        return True
 
     def sample_wordlists(self, n_samples, sample_size, start_seed=None, log_outfile='samples.log'):
         # Take N samples of same- and different-meaning words
@@ -514,7 +528,7 @@ class PhonCorrelator:
                         allow_complex=False
                     )
                 # Add phonetic alignment cost to align_costs dict storing PMI values
-                base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
+                base_align_cost = align_costs.get_value_or_default(ngram1.undo(), ngram2.undo(), 0)
                 align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
             align_costs.phon_dist_added = True
 
@@ -543,25 +557,20 @@ class PhonCorrelator:
 
         return alignment_list
 
-    def get_possible_ngrams(self, lang, ngram_size, phon_env=False):
+    def get_possible_ngrams(self, lang: Doculect, ngram_size: int, phon_env=False) -> set:
         # Iterate over all possible/attested ngrams
         # Only perform calculation for ngrams which have actually been observed/attested to
         # in the current dataset or which could have been observed (with gaps)
+        attested = lang.list_ngrams(ngram_size, phon_env=phon_env)
         if phon_env:
-            attested = lang.list_ngrams(ngram_size, phon_env=True)
-            phone_contexts = [(seg, env)
-                              for seg in lang.phon_environments
-                              for env in lang.phon_environments[seg]]
-            all_ngrams = product(phone_contexts + [f'{self.pad_ch}{END_PAD_CH}', f'{START_PAD_CH}{self.pad_ch}', self.gap_ch], repeat=ngram_size)
-
+            return attested
         else:
-            attested = lang.list_ngrams(ngram_size, phon_env=False)
-            all_ngrams = product(list(lang.phonemes.keys()) + [f'{self.pad_ch}{END_PAD_CH}', f'{START_PAD_CH}{self.pad_ch}', self.gap_ch], repeat=ngram_size)
-
-        gappy = set(ngram for ngram in all_ngrams if self.gap_ch in ngram)
-        all_ngrams = gappy.union(attested.keys())
-        all_ngrams = set(Ngram(ngram).ngram for ngram in all_ngrams)  # standardize forms
-        return all_ngrams
+            all_ngrams = set(product(
+                list(attested.keys()) + [self.gap_ch],
+                repeat=ngram_size
+            ))
+            all_ngrams = set(Ngram(ngram).ngram for ngram in all_ngrams)
+            return all_ngrams
 
     def fit_radial_ibm_model(self,
                              sample: Wordlist,
@@ -741,7 +750,7 @@ class PhonCorrelator:
             seg1_totals = agg_seg1_totals[seg1]
             for seg2 in conditional_counts.get_secondary_keys(seg1):
                 seg2_ngram = Ngram(seg2)
-                cond_count = conditional_counts.get_value(seg1, seg2)
+                cond_count = conditional_counts.get_value_or_default(seg1, seg2, 0)
                 cond_prob = cond_count / seg1_totals
                 p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
                 joint_prob = cond_prob * p_ind1
@@ -797,19 +806,20 @@ class PhonCorrelator:
 
         return corr_counts
 
-    def phon_env_corr_probs(self, alignment_list, counts=False, ngram_size=1):
-        if ngram_size > 1:
-            raise NotImplementedError
+    def phon_env_correspondence_probabilities(self, alignment_list: list[Alignment]) -> PhonemeMap:
+        """Computes conditional correspondence probabilities for phoneme environments.
 
-        corr_counts = defaultdict(lambda: defaultdict(lambda: 0))
+        Args:
+            alignment_list (list): List of Alignment objects.
+
+        Returns:
+            PhonemeMap: PhonemeMap of conditional phoneme environment correspondence probabilities.
+        """
+        corr_counts = PhonemeMap(0)
         for alignment in alignment_list:
             phon_env_align = alignment.add_phon_env()
             for phon_env_seg1, seg2 in phon_env_align:
-                corr_counts[phon_env_seg1][seg2] += 1
-        if not counts:
-            for seg1 in corr_counts:
-                corr_counts[seg1] = normalize_dict(corr_counts[seg1])
-
+                corr_counts.increment_value(phon_env_seg1, seg2, 1)
         return corr_counts
 
     def phoneme_pmi(self,
@@ -1148,6 +1158,8 @@ class PhonCorrelator:
         Returns:
             results (dict): Nested dictionary of PMI correspondences.
         """
+        # Generate and prepare wordlists if not previously done
+        self.prepare_wordlists()
 
         # Take a sample of same-meaning words, by default 80% of available same-meaning pairs
         sample_results: dict[int, PhonemeMap] = {}
@@ -1271,45 +1283,39 @@ class PhonCorrelator:
                           correspondence_counts: PhonemeMap,
                           phon_env_corr_counts: PhonemeMap=None,
                           ngram_size=1,
-                          weights=None,
-                          # attested_only=True,
-                          # alpha=0.2 # TODO conduct more formal experiment to select default alpha, or find way to adjust automatically; so far alpha=0.2 is best (at least on Romance)
                           ) -> PhonemeMap:
         # Set phon_env bool
-        phon_env = False
-        if phon_env_corr_counts is not None:
-            phon_env = True
+        use_phon_env = True if phon_env_corr_counts is not None else False
 
         # Interpolation smoothing
-        if weights is None:
-            # Each ngram estimate will be weighted proportional to its size
-            # Weight the estimate from a 2gram twice as much as 1gram, etc.
-            weights = [i + 1 for i in range(ngram_size)]
+        # Each ngram estimate will be weighted proportional to its size
+        # Weight the estimate from a 2gram twice as much as 1gram, etc.
+        ngram_weights = [i + 1 for i in range(ngram_size)]
         interpolation = defaultdict(lambda: PhonemeMap(0))
         for i in range(ngram_size, 0, -1):
             for ngram1, ngram2 in correspondence_counts.get_key_pairs():
                 # Exclude correspondences with a fully null ngram, e.g. ('k', 'a') with ('-', '-')
                 # Only needs to be done with ngram_size > 1
                 if (self.gap_ch,) * (max(ngram_size, 2)) not in [ngram1, ngram2]:
-                    # forward
-                    # interpolation[i][ngram1[-i:]][ngram2[-1]] += correspondence_counts[ngram1][ngram2]
-
-                    # backward
                     interpolation[i].increment_value(
                         Ngram(ngram1).ngram,
                         Ngram(ngram2).ngram,
-                        correspondence_counts.get_value(ngram1, ngram2)
+                        correspondence_counts.get_value_or_default(ngram1, ngram2, 0)
                     )
 
         # Add in phonological environment correspondences, e.g. ('l', '#S<') (word-initial 'l') with 'ʎ'
-        if phon_env:
+        max_ngram_size = ngram_size
+        if use_phon_env:
             for ngram1 in phon_env_corr_counts.get_primary_keys():
-                if ngram1 == self.gap_ch or self.pad_ch in ngram1:
-                    continue  # TODO verify that these should be skipped
+                if self.gap_ch in ngram1 or self.pad_ch in ngram1:
+                    continue  # skip before trying to compute PhonEnvNgram; gap_ch/pad_ch will raise an error in PhonEnvNgram
                 phon_env_ngram = PhonEnvNgram(ngram1)
-                contexts = phon_env_ngrams(phon_env_ngram.phon_env, exclude={'|S|'})
-                for context in contexts:
-                    if len(phon_env_ngram.ngram) > 1:
+                if phon_env_ngram.is_gappy(self.gap_ch) or phon_env_ngram.is_boundary(self.pad_ch):
+                    continue  # TODO verify that these should be skipped
+                if phon_env_ngram.size > max_ngram_size:
+                    max_ngram_size = phon_env_ngram.size
+                for context in phon_env_ngram.list_subcontexts():
+                    if phon_env_ngram.size > 1:
                         ngram1_context = (phon_env_ngram.ngram,) + (context,)
                     else:
                         ngram1_context = phon_env_ngram.ngram + (context,)
@@ -1318,158 +1324,89 @@ class PhonCorrelator:
                         interpolation['phon_env'].increment_value(
                             ngram1_context,
                             Ngram(ngram2).ngram,
-                            phon_env_corr_counts.get_value(ngram1, ngram2)
+                            phon_env_corr_counts.get_value_or_default(ngram1, ngram2, 0)
                         )
 
         # Get lists of possible ngrams in lang1 and lang2
         # lang2 ngram size fixed at 1, only trying to predict single phone; also not trying to predict its phon_env
         all_ngrams_lang2 = self.get_possible_ngrams(self.lang2, ngram_size=1, phon_env=False)
         all_ngrams_lang2.update(reverse_corr_dict_map(interpolation[1]).get_primary_keys())  # add any complex ngram corrs
-        all_ngrams_lang1 = self.get_possible_ngrams(
-            lang=self.lang1,
-            # phon_env ngrams fixed at size 1
-            ngram_size=ngram_size if not phon_env else 1,
-            phon_env=phon_env
-        )
+        all_ngrams_lang1 = set()
+        for size_i in range(1, max_ngram_size + 1):
+            all_ngrams_lang1.update(self.get_possible_ngrams(
+                lang=self.lang1,
+                ngram_size=size_i,
+                phon_env=use_phon_env
+            ))
         # Add complex ngram corrs to all_ngrams_lang1
-        if phon_env:
-            # for complex_ngram in self.complex_ngrams:
-            #     if complex_ngram.size > 1:
-            #         if self.pad_ch in complex_ngram.ngram[0]:  # complex ngram alignment with start boundary
-            #             ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(r'#\|S', ngram[-1]))
-            #         elif self.pad_ch in complex_ngram.ngram[-1]:  # complex ngram alignment with end boundary
-            #             ngram_envs = set(ngram[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(r'S\|#', ngram[-1]))
-            #         else:  # other complex ngram alignments
-            #             # get post environments of first segment and preceding environments of last segment in complex ngram
-            #             first_seg, last_seg = map(_toSegment, [complex_ngram.ngram[0], complex_ngram.ngram[-1]])
-            #             if complex_ngram.size == 2:
-            #                 next_seg, penult_seg = last_seg, first_seg
-            #             else:
-            #                 next_seg, penult_seg = map(_toSegment, [complex_ngram.ngram[1], complex_ngram.ngram[-2]])
-            #             rel_post_son = relative_post_sonority(first_seg, next_seg)
-            #             rel_prev_son = relative_prev_sonority(last_seg, penult_seg)
-            #             first_envs = set(ngram[-1].split('|')[0] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[:-1] and re.search(rf'S\|{rel_post_son}', ngram[-1]))
-            #             last_envs = set(ngram[-1].split('|')[-1] for ngram in all_ngrams_lang1 if ngram[:-1] == complex_ngram.ngram[1:] and re.search(rf'{rel_prev_son}\|S', ngram[-1]))
-            #             ngram_envs = set(f'{first_env}|S|{last_env}' for first_env, last_env in product(first_envs, last_envs))
-
-            #         complex_envs = set()
-            #         for ngram_env in ngram_envs:
-            #             phon_env_ngram = PhonEnvNgram((complex_ngram.ngram, ngram_env))
-            #             complex_envs.add(phon_env_ngram.ngram_w_context)
-            #         all_ngrams_lang1.update(complex_envs)
-            pass
+        if use_phon_env:
+            all_ngrams_lang1.update(interpolation['phon_env'].get_primary_keys())
         else:
             all_ngrams_lang1.update(interpolation[1].get_primary_keys())
 
         oov_value = self.lang2.phoneme_entropy * ngram_size
         smoothed_surprisal = PhonemeMap(oov_value)
         for ngram1 in all_ngrams_lang1:
-            # TODO use Ngram objects from here onward, if not already
-            if self.gap_ch in ngram1:
-                continue
-
-            if phon_env:
-                if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]): # skip adding phon env to e.g. ('#>',)
-                    ngram1_phon_env = PhonEnvNgram(ngram1)
-                    ngram1 = ngram1_phon_env.ngram
-                    if sum(interpolation['phon_env'].get_primary_key_map(ngram1_phon_env.ngram_w_context).values()) == 0:
-                        # TODO verify that these should be skipped
-                        continue
-
-            ngram1_map = interpolation[i].get_primary_key_map(ngram1)
+            if self.gap_ch in ngram1 or self.pad_ch in ngram1:
+                continue # skip before trying to compute PhonEnvNgram; gap_ch/pad_ch will raise an error in PhonEnvNgram
+            ngram1_obj = PhonEnvNgram(ngram1) if use_phon_env else Ngram(ngram1)
+            if ngram1_obj.is_gappy(self.gap_ch):
+                continue  # TODO verify that this should be skipped
+            if use_phon_env:
+                ngram1_phon_env_map = interpolation['phon_env'].get_primary_key_map(ngram1_obj.ngram_w_context)
+                if ngram1_phon_env_map is None or sum(ngram1_phon_env_map.values()) == 0:
+                    continue
+            ngram1_interpolation_key = ngram1_obj.ngram if use_phon_env else ngram1
+            ngram1_map = interpolation[i].get_primary_key_map(ngram1_interpolation_key)
             if ngram1_map is not None and sum(ngram1_map.values()) == 0:
                 continue
 
-            undone_ngram1 = Ngram(ngram1).undo()  # need to convert to dictionary form, whereby unigrams are strings and larger ngrams are tuples
+            ngram1_key = ngram1_obj.undo()  # need to convert to dictionary form, whereby unigrams are strings and larger ngrams are tuples
             for ngram2 in all_ngrams_lang2:
-                if interpolation[i].get_value_or_default(ngram1, ngram2, 0) == 0:
+                if interpolation[i].get_value_or_default(ngram1_interpolation_key, ngram2, 0) == 0:
                     continue
-
-                ngram_weights = weights[:]
-                # forward # TODO has not been updated since before addition of phon_env
-                # estimates = [interpolation[i][ngram1[-i:]][ngram2] / sum(interpolation[i][ngram1[-i:]].values())
-                #              if i > 1 else lidstone_smoothing(x=interpolation[i][ngram1[-i:]][ngram2],
-                #                                               N=sum(interpolation[i][ngram1[-i:]].values()),
-                #                                               d = len(self.lang2.phonemes) + 1)
-                #              for i in range(ngram_size,0,-1)]
-                # backward
-                estimates = [
-                    interpolation[i].get_value_or_default(ngram1, ngram2, 0) / sum(interpolation[i].get_primary_key_map(ngram1).values())
-                    for i in range(ngram_size, 0, -1)
-                ]
-                # estimates = [lidstone_smoothing(x=interpolation[i][ngram1[:i]].get(ngram2, 0),
-                #                                 N=sum(interpolation[i][ngram1[:i]].values()),
-                #                                 d = len(self.lang2.phonemes) + 1,
-                #                                 # modification: I believe the d (vocabulary size) value should be every combination of phones from lang1 and lang2
-                #                                 #d = n_ngram_pairs + 1,
-                #                                 # updated mod: it should actually be the vocabulary GIVEN the phone of lang1, otherwise skewed by frequency of phone1
-                #                                 #d = len(interpolation[i][ngram1[:i]]),
-                #                                 alpha=alpha)
-                #             for i in range(ngram_size,0,-1)]
-
-                # add interpolation with phon_env surprisal
-                if phon_env:
-                    if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]): # skip computing phon env probabilities with e.g. ('#>',)
-                        ngram1_w_context = ngram1_phon_env.ngram_w_context
-                        phonEnv_contexts = phon_env_ngrams(ngram1_phon_env.phon_env, exclude={'|S|'})
-                        for context in phonEnv_contexts:
-                            estimates.append(
-                                interpolation['phon_env'].get_value_or_default(ngram1_w_context, ngram2, 0) / sum(interpolation['phon_env'].get_primary_key_map(ngram1_w_context).values())
-                            )
-                            # estimates.append(lidstone_smoothing(x=interpolation['phon_env'][(ngram1_context,)].get(ngram2, 0),
-                            #                                     N=sum(interpolation['phon_env'][(ngram1_context,)].values()),
-                            #                                     d = len(self.lang2.phonemes) + 1,
-                            #                                     alpha=alpha)
-                            #                                     )
-                            # Weight each contextual estimate based on the size of the context
-                            ngram_weights.append(get_phonEnv_weight(context))
-
-                weight_sum = sum(ngram_weights)
-                ngram_weights = [i / weight_sum for i in ngram_weights]
-                assert (len(ngram_weights) == len(estimates))
-                smoothed = sum([estimate * weight for estimate, weight in zip(estimates, ngram_weights)])
-                undone_ngram2 = Ngram(ngram2).undo()  # need to convert to dictionary form, whereby unigrams are strings and larger ngrams are tuples
-                if phon_env:
-                    if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]):  # skip computing phon env probabilities with e.g. ('#>',)
-                        smoothed_surprisal.set_value(
-                            ngram1_w_context,
-                            undone_ngram2,
-                            surprisal(smoothed)
+                estimates = []
+                estimate_weights = ngram_weights.copy()
+                for i in range(ngram_size, 0, -1):
+                    ngram1_map_i = interpolation[i].get_primary_key_map(ngram1_interpolation_key)
+                    if ngram1_map_i is not None:
+                        estimates.append(
+                            interpolation[i].get_value_or_default(ngram1_interpolation_key, ngram2, 0) / sum(ngram1_map_i.values())
                         )
-                else:
-                    smoothed_surprisal.set_value(
-                        undone_ngram1,
-                        undone_ngram2,
-                        surprisal(smoothed)
-                    )
+                
+                assert (len(estimate_weights) == len(estimates))
+                # Add interpolation with phon env surprisal
+                if use_phon_env:
+                    if not (ngram1_obj.size == 1 and ngram1_obj.is_gappy(self.pad_ch)): # skip computing phon env probabilities with e.g. ('#>',)
+                        ngram1_w_context = ngram1_obj.ngram_w_context
+                        total_context_counts = sum(interpolation['phon_env'].get_primary_key_map(ngram1_w_context).values())
+                        estimates.append(
+                            interpolation['phon_env'].get_value_or_default(ngram1_w_context, ngram2, 0) / total_context_counts
+                        )
+                        # Weight each contextual estimate based on the size of the context
+                        estimate_weights.append(get_phonEnv_weight(ngram1_obj.phon_env))
 
-            # oov_estimates = [lidstone_smoothing(x=0, N=sum(interpolation[i][ngram1[:i]].values()),
-            #                                  d = len(self.lang2.phonemes) + 1,
-            #                                  alpha=alpha)
-            #               for i in range(ngram_size,0,-1)]
-            # if phon_env:
-            #     for context in phonEnv_contexts:
-            #         ngram1_context = ngram1_phon_env[0][:-1] + (context,)
-            #         oov_estimates.append(lidstone_smoothing(x=0,
-            #                                                 N=sum(interpolation['phon_env'][(ngram1_context,)].values()),
-            #                                                 d = len(self.lang2.phonemes) + 1,
-            #                                                 alpha=alpha)
-            #         )
-            # assert (len(ngram_weights) == len(oov_estimates))
-            # smoothed_oov = max(surprisal(sum([estimate*weight for estimate, weight in zip(oov_estimates, ngram_weights)])), self.lang2.phoneme_entropy)
-
-            # Prune saved surprisal values which exceed the phoneme entropy of lang2
-            if phon_env:
-                key = ngram1_w_context
-            else:
-                key = undone_ngram1
-            to_prune = [
-                ngram2
-                for ngram2 in smoothed_surprisal.get_primary_keys()
-                if smoothed_surprisal.get_value(key, ngram2) > oov_value
-            ]
-            for ngram_to_prune in to_prune:
-                smoothed_surprisal.delete_value(key, ngram_to_prune)
+                assert (len(estimate_weights) == len(estimates))
+                weight_sum = sum(estimate_weights)
+                estimate_weights = [i / weight_sum for i in estimate_weights]
+                smoothed = sum([estimate * weight for estimate, weight in zip(estimates, estimate_weights)])
+                surprisal_value = surprisal(smoothed)
+                # Skip saving surprisal values which exceed the oov_val (phoneme entropy of lang2)
+                if surprisal_value <= oov_value:
+                    ngram2_key = Ngram(ngram2).undo()  # need to convert to dictionary form, whereby unigrams are strings and larger ngrams are tuples
+                    if use_phon_env:
+                        if not (len(ngram1) == 1 and self.pad_ch in ngram1[0]):  # skip computing phon env probabilities with e.g. ('#>',)
+                            smoothed_surprisal.set_value(
+                                ngram1_obj.ngram_w_context,
+                                ngram2_key,
+                                surprisal_value
+                            )
+                    else:
+                        smoothed_surprisal.set_value(
+                            ngram1_key,
+                            ngram2_key,
+                            surprisal_value
+                        )
 
         return smoothed_surprisal
 
@@ -1504,11 +1441,7 @@ class PhonCorrelator:
         # Optionally calculate phonological environment correspondence probabilities
         phon_env_corr_counts = None
         if phon_env:
-            phon_env_corr_counts = self.phon_env_corr_probs(
-                alignments,
-                counts=True,
-                #ngram_size=ngram_size
-            )
+            phon_env_corr_counts = self.phon_env_correspondence_probabilities(alignments)
 
         # Calculate surprisal based on correspondence probabilities
         # NB: Will be phon_env surprisal if phon_env=True and therefore phon_env_corr_counts != None
@@ -1520,9 +1453,11 @@ class PhonCorrelator:
         # Get vanilla surprisal (no phon env) from phon_env surprisal by marginalizing over phon_env
         if phon_env:
             phon_env_surprisal_results = surprisal_results.copy()
-            surprisal_results = self.marginalize_over_phon_env_surprisal(
-                surprisal_results,
-                #ngram_size=ngram_size
+            surprisal_results = marginalize_over_phon_env(
+                phon_env_surprisal_results,
+                from_surprisal=True,
+                to_surprisal=True,
+                doculect=self.lang1,
             )
 
         # Save surprisal results
@@ -1540,40 +1475,10 @@ class PhonCorrelator:
             self.log_phoneme_surprisal(phon_env=True)
 
 
-    def marginalize_over_phon_env_surprisal(self, phon_env_surprisal_dict, ngram_size=1):
-        """Converts a phon env surprisal dictionary into a vanilla surprisal dictionary by marginalizing over phon envs"""
-        surprisal_dict = defaultdict(lambda: defaultdict(lambda: 0))
-        oov_vals = defaultdict(lambda: [])
-        for phon_env_ngram in phon_env_surprisal_dict:
-            if isinstance(phon_env_ngram, str):
-                assert phon_env_ngram == self.gap_ch or self.pad_ch in phon_env_ngram
-                ngram1 = phon_env_ngram
-            elif isinstance(phon_env_ngram, tuple):
-                assert len(phon_env_ngram) == 2
-                ngram1, phon_env = phon_env_ngram
-            else:
-                raise TypeError
-            count = self.lang1.phon_env_ngrams[ngram_size][phon_env_ngram]
-            oov_val = get_oov_val(phon_env_surprisal_dict[phon_env_ngram])
-            oov_vals[ngram1].append(oov_val)
-            for ngram2, surprisal_val in phon_env_surprisal_dict[phon_env_ngram].items():
-                if surprisal_val >= oov_val:
-                    continue
-                prob = surprisal_to_prob(surprisal_val)
-                count_ngram2 = prob * count
-                if count_ngram2 > 0:
-                    surprisal_dict[ngram1][ngram2] += count_ngram2
-        for ngram1 in surprisal_dict:
-            inner_surprisal_dict = normalize_dict(surprisal_dict[ngram1])
-            surprisal_dict[ngram1] = default_dict(inner_surprisal_dict, lmbda=mean(oov_vals[ngram1]))
-            for ngram2, prob in surprisal_dict[ngram1].items():
-                surprisal_dict[ngram1][ngram2] = surprisal(prob)
-        outer_oov_val = get_oov_val(phon_env_surprisal_dict)
-        surprisal_dict, oov_value = prune_oov_surprisal(default_dict(surprisal_dict, lmbda=outer_oov_val))
-        return surprisal_dict
-
     def compute_noncognate_thresholds(self, eval_func, sample_size=None, seed=None):
         """Calculate non-synonymous word pair scores against which to calibrate synonymous word scores"""
+        # Generate and prepare wordlists if not previously done
+        self.prepare_wordlists()
 
         # Take a sample of different-meaning words, by default as large as the same-meaning set
         if sample_size is None:
@@ -1643,25 +1548,9 @@ class PhonCorrelator:
             corr_type=corr_type,
             outfile=outfile,
             lang1_name=self.lang1_name,
-            lang2_name=self.lang1_name,
+            lang2_name=self.lang2_name,
             gap_ch=self.gap_ch,
         )
-
-
-@lru_cache(maxsize=None)
-def get_phonEnv_weight(phonEnv):
-    # Weight contextual estimate based on the size of the context
-    # #|S|< would have weight 3 because it considers the segment plus context on both sides
-    # #|S would have weight 2 because it considers only the segment plus context on one side
-    # #|S|<_l would have weight 4 because it the context on both sides, with two attributes of RHS context
-    # #|S|<_ALVEOLAR_l would have weight 5 because it the context on both sides, with three attributes of RHS context
-    prefix, base, suffix = phonEnv.split('|')
-    weight = 1
-    prefix = [p for p in prefix.split('_') if p != '']
-    suffix = [s for s in suffix.split('_') if s != '']
-    weight += len(prefix)
-    weight += len(suffix)
-    return weight
 
 
 def get_phone_correlator(lang1,

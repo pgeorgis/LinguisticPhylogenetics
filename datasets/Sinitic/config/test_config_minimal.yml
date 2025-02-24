@@ -1,5 +1,5 @@
 family:
-    include: ['Old Chinese', 'Standard Mandarin', 'Taiwanese Hokkien', 'Cantonese']
+    include: ['Old Chinese', 'Jin', 'Shanghainese', 'Taiwanese Hokkien', 'Fuzhounese']
 
 experiment:
     name: "test-minimal"

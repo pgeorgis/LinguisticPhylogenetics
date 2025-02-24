@@ -863,7 +863,7 @@ Latin	Latin			FLIGHT_NOUN	volum	wˈɔɫʊ̃ː	w ˈɔ ɫ ʊ̃ː		FLIGHT_NOUN_2
 Nuorese	Nuorese			FLIGHT_NOUN	bolu	bˈolu	b ˈo l u		FLIGHT_NOUN_2			
 Logudorese	Logudorese			FLIGHT_NOUN	bolu	bˈolu	b ˈo l u		FLIGHT_NOUN_2			
 Campidanese	Campidanese			FLIGHT_NOUN	bolu	bˈolu	b ˈo l u		FLIGHT_NOUN_2			
-Sassarese	Sassarese			FLIGHT_NOUN	boru	bˈoru	b ˈo r u		FLIGHT_NOUN_2			
+Sassarese	Sassarese			FLIGHT_NOUN	boru	bˈɔru	b ˈɔ r u		FLIGHT_NOUN_2			
 Italian	Italian			FLIGHT_NOUN	volo	vˈolo	v ˈo l o		FLIGHT_NOUN_2			
 Piedmontese	Piedmontese			FLIGHT_NOUN	vòl	vˈɔl	v ˈɔ l		FLIGHT_NOUN_2			
 French	French			FLIGHT_NOUN	vol	vɔl	v ɔ l		FLIGHT_NOUN_2		IRREGULAR	
@@ -1564,7 +1564,7 @@ Aromanian	Aromanian			EAR_NOUN	ureaclji	ure̯ˈakʎi	u r e̯ˈa k ʎ i		EAR_NOUN
 Dalmatian	Dalmatian			EAR_NOUN	oracla	orˈakla	o r ˈa k l a		EAR_NOUN_1			
 Sicilian	Sicilian			EAR_NOUN	auricchia	awɾˈicca	a w ɾ ˈi c c a		EAR_NOUN_1			
 Neapolitan	Neapolitan			EAR_NOUN	recchia	rˈekkjə	r ˈe k k j ə		EAR_NOUN_1			
-Sassarese	Sassarese			EAR_NOUN	arecchji	arˈɛkkji	a r ˈɛ k k j i		EAR_NOUN_1			
+Sassarese	Sassarese			EAR_NOUN	arecci	arˈɛʧʧi	a r ˈɛ ʧ ʧ i		EAR_NOUN_1			
 Gallurese	Gallurese			EAR_NOUN	aricchj	arˈicc	a r ˈi c c		EAR_NOUN_1			
 Corsican	Corsican			EAR_NOUN	orechja	orˈɛca	o r ˈɛ c a		EAR_NOUN_1			
 Italian	Italian			EAR_NOUN	orecchia	orˈekkja	o r ˈe k k j a		EAR_NOUN_1			
@@ -1756,7 +1756,7 @@ Dalmatian	Dalmatian			BIRD_NOUN	uciul	uʧˈul	u ʧ ˈu l		BIRD_NOUN_3
 Dalmatian	Dalmatian			BIRD_NOUN	ociel	oʧˈɛl	o ʧ ˈɛ l		BIRD_NOUN_3			
 Sicilian	Sicilian			BIRD_NOUN	aceddu	aɕˈɛɖɖʊ	a ɕ ˈɛ ɖ ɖ ʊ		BIRD_NOUN_3			
 Neapolitan	Neapolitan			BIRD_NOUN	auciello	awʃˈɛllə	a w ʃ ˈɛ l l ə		BIRD_NOUN_3			
-Gallurese	Gallurese			BIRD_NOUN	accedda	aʧʧˈeɖɖa	a ʧ ʧ ˈe ɖ ɖ a		BIRD_NOUN_3			
+Gallurese	Gallurese			BIRD_NOUN	accedda	aʧʧˈɛɖɖa	a ʧ ʧ ˈɛ ɖ ɖ a		BIRD_NOUN_3			
 Corsican	Corsican			BIRD_NOUN	ocellu	oʧˈellu	o ʧ ˈe l l u		BIRD_NOUN_3			
 Italian	Italian			BIRD_NOUN	uccello	uʧʧˈɛllo	u ʧ ʧ ˈɛ l l o		BIRD_NOUN_3			
 Venetian	Venetian			BIRD_NOUN	oxèło	ozˈɛo	o z ˈɛ o		BIRD_NOUN_3			
@@ -2354,8 +2354,8 @@ Aromanian	Aromanian			SKY_NOUN	tser	ʦˈer	ʦ ˈe r		SKY_NOUN_1
 Dalmatian	Dalmatian			SKY_NOUN	cil	ʧˈil	ʧ ˈi l		SKY_NOUN_1			
 Sicilian	Sicilian			SKY_NOUN	celu	ɕˈɛlʊ	ɕ ˈɛ l ʊ		SKY_NOUN_1			
 Neapolitan	Neapolitan			SKY_NOUN	cielo	ʃˈɛlə	ʃ ˈɛ l ə		SKY_NOUN_1			
-Sassarese	Sassarese			SKY_NOUN	zeru	ʦˈeru	ʦ ˈe r u		SKY_NOUN_1			
-Gallurese	Gallurese			SKY_NOUN	celu	ʧˈelu	ʧ ˈe l u		SKY_NOUN_1			
+Sassarese	Sassarese			SKY_NOUN	zeru	ʦˈɛru	ʦ ˈɛ r u		SKY_NOUN_1			
+Gallurese	Gallurese			SKY_NOUN	celu	ʧˈɛlu	ʧ ˈɛ l u		SKY_NOUN_1			
 Corsican	Corsican			SKY_NOUN	celu	ʧˈelu	ʧ ˈe l u		SKY_NOUN_1			
 Italian	Italian			SKY_NOUN	cielo	ʧˈɛlo	ʧ ˈɛ l o		SKY_NOUN_1			
 Venetian	Venetian			SKY_NOUN	çiél	sjˈel	s j ˈe l		SKY_NOUN_1			
@@ -2895,7 +2895,7 @@ Romanian	Romanian			CASTLE_NOUN	castel	kastˈel	k a s t ˈe l		CASTLE_NOUN_1	TRU
 Dalmatian	Dalmatian			CASTLE_NOUN	castial	kastjˈal	k a s t j ˈa l		CASTLE_NOUN_1			
 Sicilian	Sicilian			CASTLE_NOUN	casteddu	kastˈɛɖɖʊ	k a s t ˈɛ ɖ ɖ ʊ		CASTLE_NOUN_1			
 Neapolitan	Neapolitan			CASTLE_NOUN	castiello	kastjˈɛllə	k a s t j ˈɛ l l ə		CASTLE_NOUN_1			
-Sassarese	Sassarese			CASTLE_NOUN	castheddu	kaɬtˈeddu	k a ɬ t ˈe d d u		CASTLE_NOUN_1			
+Sassarese	Sassarese			CASTLE_NOUN	castheddu	kaɬtˈɛddu	k a ɬ t ˈɛ d d u		CASTLE_NOUN_1			
 Gallurese	Gallurese			CASTLE_NOUN	casteddu	kastˈɛɖɖu	k a s t ˈɛ ɖ ɖ u		CASTLE_NOUN_1			
 Corsican	Corsican			CASTLE_NOUN	castellu	kastˈellu	k a s t ˈe l l u		CASTLE_NOUN_1			
 Italian	Italian			CASTLE_NOUN	castello	kastˈɛllo	k a s t ˈɛ l l o		CASTLE_NOUN_1			
@@ -2935,8 +2935,8 @@ Aromanian	Aromanian			CHAIN_NOUN	cãtinã	kətˈinə	k ə t ˈi n ə		CHAIN_NOUN
 Dalmatian	Dalmatian			CHAIN_NOUN	cataina	katˈajna	k a t ˈa j n a		CHAIN_NOUN_1			
 Sicilian	Sicilian			CHAIN_NOUN	catina	katˈina	k a t ˈi n a		CHAIN_NOUN_1			
 Neapolitan	Neapolitan			CHAIN_NOUN	catina	katˈinə	k a t ˈi n ə		CHAIN_NOUN_1			
-Sassarese	Sassarese			CHAIN_NOUN	caddena	kaddˈɛna	k a d d ˈɛ n a		CHAIN_NOUN_1			
-Gallurese	Gallurese			CHAIN_NOUN	catena	katˈɛna	k a t ˈɛ n a		CHAIN_NOUN_1			
+Sassarese	Sassarese			CHAIN_NOUN	caddena	kaddˈena	k a d d ˈe n a		CHAIN_NOUN_1			
+Gallurese	Gallurese			CHAIN_NOUN	catena	katˈena	k a t ˈe n a		CHAIN_NOUN_1			
 Corsican	Corsican			CHAIN_NOUN	catena	katˈɛna	k a t ˈɛ n a		CHAIN_NOUN_1			
 Italian	Italian			CHAIN_NOUN	catena	katˈena	k a t ˈe n a		CHAIN_NOUN_1			
 Venetian	Venetian			CHAIN_NOUN	caéna	kaˈena	k a ˈe n a		CHAIN_NOUN_1			
@@ -3060,8 +3060,8 @@ Aromanian	Aromanian			WAX_NOUN	tsearã	ʦe̯ˈarə	ʦ e̯ˈa r ə		WAX_NOUN_1
 Dalmatian	Dalmatian			WAX_NOUN	caira	kˈajra	k ˈa j r a		WAX_NOUN_1			
 Sicilian	Sicilian			WAX_NOUN	cira	ɕˈiɾa	ɕ ˈi ɾ a		WAX_NOUN_1			
 Neapolitan	Neapolitan			WAX_NOUN	cira	ʃˈiɾə	ʃ ˈi ɾ ə		WAX_NOUN_1			
-Sassarese	Sassarese			WAX_NOUN	zera	ʦˈɛra	ʦ ˈɛ r a		WAX_NOUN_1			
-Gallurese	Gallurese			WAX_NOUN	cera	ʧˈɛra	ʧ ˈɛ r a		WAX_NOUN_1			
+Sassarese	Sassarese			WAX_NOUN	zera	ʦˈera	ʦ ˈe r a		WAX_NOUN_1			
+Gallurese	Gallurese			WAX_NOUN	cera	ʧˈera	ʧ ˈe r a		WAX_NOUN_1			
 Corsican	Corsican			WAX_NOUN	cera	ʧˈɛra	ʧ ˈɛ r a		WAX_NOUN_1			
 Italian	Italian			WAX_NOUN	cera	ʧˈera	ʧ ˈe r a		WAX_NOUN_1			
 Venetian	Venetian			WAX_NOUN	sièra	sjˈɛra	s j ˈɛ r a		WAX_NOUN_1			
@@ -3336,8 +3336,8 @@ Aromanian	Aromanian			TAIL_NOUN	coadã	ko̯ˈadə	k o̯ˈa d ə		TAIL_NOUN_1
 Dalmatian	Dalmatian			TAIL_NOUN	cauda	kˈawda	k ˈa w d a		TAIL_NOUN_1			
 Sicilian	Sicilian			TAIL_NOUN	cuda	kˈuɾa	k ˈu ɾ a		TAIL_NOUN_1			
 Neapolitan	Neapolitan			TAIL_NOUN	coda	kˈoɾə	k ˈo ɾ ə		TAIL_NOUN_1			
-Sassarese	Sassarese			TAIL_NOUN	coda	kˈɔda	k ˈɔ d a		TAIL_NOUN_1			
-Gallurese	Gallurese			TAIL_NOUN	coda	kˈɔda	k ˈɔ d a		TAIL_NOUN_1			
+Sassarese	Sassarese			TAIL_NOUN	coda	kˈoda	k ˈo d a		TAIL_NOUN_1			
+Gallurese	Gallurese			TAIL_NOUN	coda	kˈoda	k ˈo d a		TAIL_NOUN_1			
 Corsican	Corsican			TAIL_NOUN	coda	kˈɔda	k ˈɔ d a		TAIL_NOUN_1			
 Italian	Italian			TAIL_NOUN	coda	kˈoda	k ˈo d a		TAIL_NOUN_1			
 Venetian	Venetian			TAIL_NOUN	cóa	kˈoa	k ˈo a		TAIL_NOUN_1			
@@ -3436,8 +3436,8 @@ Campidanese	Campidanese			COLOR_NOUN	colori	kɔlˈɔɾi	k ɔ l ˈɔ ɾ i		COLOR_
 Romanian	Romanian			COLOR_NOUN	culoare	kulo̯ˈare	k u l o̯ˈa r e		COLOR_NOUN_1	TRUE		
 Dalmatian	Dalmatian			COLOR_NOUN	colaur	kolˈawr	k o l ˈa w r		COLOR_NOUN_1			
 Neapolitan	Neapolitan			COLOR_NOUN	culóre	kulˈoɾə	k u l ˈo ɾ ə		COLOR_NOUN_1			
-Sassarese	Sassarese			COLOR_NOUN	curori	kurˈɔri	k u r ˈɔ r i		COLOR_NOUN_1			
-Gallurese	Gallurese			COLOR_NOUN	culori	kulˈɔri	k u l ˈɔ r i		COLOR_NOUN_1			
+Sassarese	Sassarese			COLOR_NOUN	curori	kurˈori	k u r ˈo r i		COLOR_NOUN_1			
+Gallurese	Gallurese			COLOR_NOUN	culori	kulˈori	k u l ˈo r i		COLOR_NOUN_1			
 Corsican	Corsican			COLOR_NOUN	culore	kulˈɔre	k u l ˈɔ r e		COLOR_NOUN_1			
 Italian	Italian			COLOR_NOUN	colore	kolˈore	k o l ˈo r e		COLOR_NOUN_1			
 Venetian	Venetian			COLOR_NOUN	coƚór	koɰˈor	k o ɰ ˈo r		COLOR_NOUN_1			
@@ -4372,14 +4372,14 @@ Lengadocian	Lengadocian			DRAGON_NOUN	drac	dɾˈak	d ɾ ˈa k		DRAGON_NOUN_1
 Gascon	Gascon			DRAGON_NOUN	drac	dɾˈak	d ɾ ˈa k		DRAGON_NOUN_1			
 Catalan	Catalan			DRAGON_NOUN	drac	dɾˈak	d ɾ ˈa k		DRAGON_NOUN_1			
 Valencian	Valencian			DRAGON_NOUN	drac	dɾˈak	d ɾ ˈa k		DRAGON_NOUN_1			
-Asturian	Asturian			DRAGON_NOUN	dragu	dɾˈaɣu	d ɾ a ɣ ˈu		DRAGON_NOUN_1			
+Asturian	Asturian			DRAGON_NOUN	dragu	dɾˈaɣu	d ɾ ˈa ɣ u		DRAGON_NOUN_1			
 Latin	Latin			DRAGON_NOUN	dracōnem	drakˈoːnɛ̃ː	d r a k ˈoː n ɛ̃ː		DRAGON_NOUN_2			
 Nuorese	Nuorese			DRAGON_NOUN	dragone	dɾaɣˈɔnɛ	d ɾ a ɣ ˈɔ n ɛ		DRAGON_NOUN_2			
 Logudorese	Logudorese			DRAGON_NOUN	dragone	dɾaɣˈɔnɛ	d ɾ a ɣ ˈɔ n ɛ		DRAGON_NOUN_2			
 Campidanese	Campidanese			DRAGON_NOUN	stragoni	stɾaɣˈɔni	s t ɾ a ɣ ˈɔ n i		DRAGON_NOUN_2		IRREGULAR	
 Neapolitan	Neapolitan			DRAGON_NOUN	dragune	draɡˈunə	d r a ɡ ˈu n ə		DRAGON_NOUN_2			
-Sassarese	Sassarese			DRAGON_NOUN	dragoni	draɡˈɔni	d r a ɡ ˈɔ n i		DRAGON_NOUN_2			
-Gallurese	Gallurese			DRAGON_NOUN	dragoni	draɡˈɔni	d r a ɡ ˈɔ n i		DRAGON_NOUN_2			
+Sassarese	Sassarese			DRAGON_NOUN	dragoni	draɡˈoni	d r a ɡ ˈo n i		DRAGON_NOUN_2			
+Gallurese	Gallurese			DRAGON_NOUN	dragoni	draɡˈoni	d r a ɡ ˈo n i		DRAGON_NOUN_2			
 Corsican	Corsican			DRAGON_NOUN	dracone	drakˈɔne	d r a k ˈɔ n e		DRAGON_NOUN_2			
 Italian	Italian			DRAGON_NOUN	dragone	draɡˈone	d r a ɡ ˈo n e		DRAGON_NOUN_2			
 Venetian	Venetian			DRAGON_NOUN	dragón	draɡˈoŋ	d r a ɡ ˈo ŋ		DRAGON_NOUN_2			
@@ -4496,7 +4496,7 @@ Aromanian	Aromanian			TWELVE_NUM	dosprãdzatsi	dˈosprəʣaʦi	d ˈo s p r ə ʣ
 Dalmatian	Dalmatian			TWELVE_NUM	dotco	dˈotko	d ˈo t k o		TWELVE_NUM_1			
 Sicilian	Sicilian			TWELVE_NUM	dùdici	dˈuɾɪɕɪ	d ˈu ɾ ɪ ɕ ɪ		TWELVE_NUM_1			
 Neapolitan	Neapolitan			TWELVE_NUM	dùrece	dˈuɾəʃə	d ˈu ɾ ə ʃ ə		TWELVE_NUM_1			
-Sassarese	Sassarese			TWELVE_NUM	dòdizi	dˈɔdiʦi	d ˈɔ d i ʦ i		TWELVE_NUM_1			
+Sassarese	Sassarese			TWELVE_NUM	dòdizi	dˈodiʦi	d ˈo d i ʦ i		TWELVE_NUM_1			
 Gallurese	Gallurese			TWELVE_NUM	dódici	dˈodiʧi	d ˈo d i ʧ i		TWELVE_NUM_1			
 Corsican	Corsican			TWELVE_NUM	dodeci	dˈɔdeʧi	d ˈɔ d e ʧ i		TWELVE_NUM_1			
 Italian	Italian			TWELVE_NUM	dodici	dˈodiʧi	d ˈo d i ʧ i		TWELVE_NUM_1			
@@ -5187,8 +5187,8 @@ Aromanian	Aromanian			FLOWER_NOUN	floari	flo̯ˈari	f l o̯ˈa r i		FLOWER_NOUN_
 Dalmatian	Dalmatian			FLOWER_NOUN	fiaur	fjˈawr	f j ˈa w r		FLOWER_NOUN_1	TRUE		
 Sicilian	Sicilian			FLOWER_NOUN	ciuri	çˈuɾɪ	ç ˈu ɾ ɪ		FLOWER_NOUN_1			
 Neapolitan	Neapolitan			FLOWER_NOUN	ciore	ʃˈoɾə	ʃ ˈo ɾ ə		FLOWER_NOUN_1			
-Sassarese	Sassarese			FLOWER_NOUN	fiori	fjˈɔri	f j ˈɔ r i		FLOWER_NOUN_1			
-Gallurese	Gallurese			FLOWER_NOUN	fiori	fjˈɔri	f j ˈɔ r i		FLOWER_NOUN_1			
+Sassarese	Sassarese			FLOWER_NOUN	fiori	fjˈori	f j ˈo r i		FLOWER_NOUN_1			
+Gallurese	Gallurese			FLOWER_NOUN	fiori	fjˈori	f j ˈo r i		FLOWER_NOUN_1			
 Corsican	Corsican			FLOWER_NOUN	fiore	fjˈɔre	f j ˈɔ r e		FLOWER_NOUN_1			
 Italian	Italian			FLOWER_NOUN	fiore	fjˈore	f j ˈo r e		FLOWER_NOUN_1			
 Venetian	Venetian			FLOWER_NOUN	fiór	fjˈor	f j ˈo r		FLOWER_NOUN_1			
@@ -5633,8 +5633,8 @@ Romanian	Romanian			ICE_NOUN	ger	ʤˈer	ʤ ˈe r		ICE_NOUN_2
 Aromanian	Aromanian			ICE_NOUN	dzer	ʣˈer	ʣ ˈe r		ICE_NOUN_2			
 Sicilian	Sicilian			ICE_NOUN	jelu	jˈelʊ	j ˈe l ʊ		ICE_NOUN_2			
 Neapolitan	Neapolitan			ICE_NOUN	jélo	jˈelə	j ˈe l ə		ICE_NOUN_2			
-Sassarese	Sassarese			ICE_NOUN	geru	ʤˈeru	ʤ ˈe r u		ICE_NOUN_2			
-Gallurese	Gallurese			ICE_NOUN	ghjelu	ɟˈelu	ɟ ˈe l u		ICE_NOUN_2			
+Sassarese	Sassarese			ICE_NOUN	geru	ʤˈɛru	ʤ ˈɛ r u		ICE_NOUN_2			
+Gallurese	Gallurese			ICE_NOUN	ghjelu	ɟˈɛlu	ɟ ˈɛ l u		ICE_NOUN_2			
 Corsican	Corsican			ICE_NOUN	ghjelu	ɟˈelu	ɟ ˈe l u		ICE_NOUN_2			
 Italian	Italian			ICE_NOUN	gelo	ʤˈɛlo	ʤ ˈɛ l o		ICE_NOUN_2			
 Venetian	Venetian			ICE_NOUN	xèło	zˈɛɰo	z ˈɛ ɰ o		ICE_NOUN_2			
@@ -6054,8 +6054,8 @@ Campidanese	Campidanese			SAND_NOUN	arena	aɾˈɛna	a ɾ ˈɛ n a		SAND_NOUN_1
 Romanian	Romanian			SAND_NOUN	arină	arˈinə	a r ˈi n ə		SAND_NOUN_1			
 Aromanian	Aromanian			SAND_NOUN	arinã	arˈinə	a r ˈi n ə		SAND_NOUN_1			
 Neapolitan	Neapolitan			SAND_NOUN	rina	rˈinə	r ˈi n ə		SAND_NOUN_1			
-Sassarese	Sassarese			SAND_NOUN	rena	rˈɛna	r ˈɛ n a		SAND_NOUN_1			
-Gallurese	Gallurese			SAND_NOUN	rena	rˈɛna	r ˈɛ n a		SAND_NOUN_1			
+Sassarese	Sassarese			SAND_NOUN	rena	rˈena	r ˈe n a		SAND_NOUN_1			
+Gallurese	Gallurese			SAND_NOUN	rena	rˈena	r ˈe n a		SAND_NOUN_1			
 Corsican	Corsican			SAND_NOUN	rena	rˈɛna	r ˈɛ n a		SAND_NOUN_1			
 Italian	Italian			SAND_NOUN	arena	arˈena	a r ˈe n a		SAND_NOUN_1			
 Bellunese	Bellunese			SAND_NOUN	rèna	rˈena	r ˈe n a		SAND_NOUN_1			
@@ -6159,7 +6159,7 @@ Lengadocian	Lengadocian			SPAIN_PROPN	Espanha	espˈaɲɔ	e s p ˈa ɲ ɔ		SPAIN_
 Gascon	Gascon			SPAIN_PROPN	Espanha	espˈaɲɔ	e s p ˈa ɲ ɔ		SPAIN_PROPN_1			
 Catalan	Catalan			SPAIN_PROPN	Espanya	əspˈaɲə	ə s p ˈa ɲ ə		SPAIN_PROPN_1			
 Valencian	Valencian			SPAIN_PROPN	Espanya	espˈaɲɐ	e s p ˈa ɲ ɐ		SPAIN_PROPN_1			
-Aragonese	Aragonese			SPAIN_PROPN	Espanya	espˈaɲa	e s p ˈa a		SPAIN_PROPN_1			
+Aragonese	Aragonese			SPAIN_PROPN	Espanya	espˈaɲa	e s p ˈa ɲ a		SPAIN_PROPN_1			
 Spanish	Spanish			SPAIN_PROPN	España	espˈaɲa	e s p ˈa ɲ a		SPAIN_PROPN_1			
 Asturian	Asturian			SPAIN_PROPN	España	espˈaɲa	e s p ˈa ɲ a		SPAIN_PROPN_1			
 Galician	Galician			SPAIN_PROPN	España	espˈaɲɐ	e s p ˈa ɲ ɐ		SPAIN_PROPN_1			
@@ -6300,8 +6300,8 @@ Megleno-Romanian	Megleno-Romanian			GAME_NOUN	joc	ʒˈok	ʒ ˈo k		GAME_NOUN_1
 Aromanian	Aromanian			GAME_NOUN	gioc	ʤˈok	ʤ ˈo k		GAME_NOUN_1			
 Sicilian	Sicilian			GAME_NOUN	jocu	jˈɔkʊ	j ˈɔ k ʊ		GAME_NOUN_1			
 Neapolitan	Neapolitan			GAME_NOUN	juoco	jwˈɔkə	j w ˈɔ k ə		GAME_NOUN_1			
-Sassarese	Sassarese			GAME_NOUN	gioggu	ʤˈoɡɡu	ʤ ˈo ɡ ɡ u		GAME_NOUN_1			
-Gallurese	Gallurese			GAME_NOUN	ghjocu	ɟˈoku	ɟ ˈo k u		GAME_NOUN_1			
+Sassarese	Sassarese			GAME_NOUN	gioggu	ʤˈɔɡɡu	ʤ ˈɔ ɡ ɡ u		GAME_NOUN_1			
+Gallurese	Gallurese			GAME_NOUN	ghjocu	ɟˈɔku	ɟ ˈɔ k u		GAME_NOUN_1			
 Corsican	Corsican			GAME_NOUN	ghjocu	ɟˈoku	ɟ ˈo k u		GAME_NOUN_1			
 Italian	Italian			GAME_NOUN	gioco	ʤˈɔko	ʤ ˈɔ k o		GAME_NOUN_1			
 Venetian	Venetian			GAME_NOUN	xógo	zˈoɡo	z ˈo ɡ o		GAME_NOUN_1			
@@ -6442,8 +6442,8 @@ Aromanian	Aromanian			YOUNG_ADJ	gioni	ʤˈoni	ʤ ˈo n i		YOUNG_ADJ_1
 Dalmatian	Dalmatian			YOUNG_ADJ	jaun	jˈawŋ	j ˈa w ŋ		YOUNG_ADJ_1			
 Sicilian	Sicilian			YOUNG_ADJ	giùvini	ʤˈuvɪnɪ	ʤ ˈu v ɪ n ɪ		YOUNG_ADJ_1			
 Neapolitan	Neapolitan			YOUNG_ADJ	gióvene	ʤˈovənə	ʤ ˈo v ə n ə		YOUNG_ADJ_1			
-Sassarese	Sassarese			YOUNG_ADJ	giòbanu	ʤˈɔβanu	ʤ ˈɔ β a n u		YOUNG_ADJ_1			
-Gallurese	Gallurese			YOUNG_ADJ	ciòanu	ʧˈɔanu	ʧ ˈɔ a n u		YOUNG_ADJ_1			
+Sassarese	Sassarese			YOUNG_ADJ	giòbanu	ʤˈoβanu	ʤ ˈo β a n u		YOUNG_ADJ_1			
+Gallurese	Gallurese			YOUNG_ADJ	ciòanu	ʧˈoanu	ʧ ˈo a n u		YOUNG_ADJ_1			
 Corsican	Corsican			YOUNG_ADJ	ghjovanu	ɟˈɔvanu	ɟ ˈɔ v a n u		YOUNG_ADJ_1			
 Italian	Italian			YOUNG_ADJ	giovane	ʤˈovane	ʤ ˈo v a n e		YOUNG_ADJ_1			
 Venetian	Venetian			YOUNG_ADJ	xóvene	zˈovene	z ˈo v e n e		YOUNG_ADJ_1			
@@ -6641,8 +6641,8 @@ Logudorese	Logudorese			BED_NOUN	lettu	lˈetu	l ˈe t u		BED_NOUN_1
 Campidanese	Campidanese			BED_NOUN	lettu	lˈetu	l ˈe t u		BED_NOUN_1			
 Sicilian	Sicilian			BED_NOUN	lettu	lˈɛttʊ	l ˈɛ t t ʊ		BED_NOUN_1			
 Neapolitan	Neapolitan			BED_NOUN	lietto	ljˈɛttə	l j ˈɛ t t ə		BED_NOUN_1			
-Sassarese	Sassarese			BED_NOUN	lettu	lˈettu	l ˈe t t u		BED_NOUN_1			
-Gallurese	Gallurese			BED_NOUN	lettu	lˈettu	l ˈe t t u		BED_NOUN_1			
+Sassarese	Sassarese			BED_NOUN	lettu	lˈɛttu	l ˈɛ t t u		BED_NOUN_1			
+Gallurese	Gallurese			BED_NOUN	lettu	lˈɛttu	l ˈɛ t t u		BED_NOUN_1			
 Corsican	Corsican			BED_NOUN	lettu	lˈettu	l ˈe t t u		BED_NOUN_1			
 Italian	Italian			BED_NOUN	letto	lˈɛtto	l ˈɛ t t o		BED_NOUN_1			
 Venetian	Venetian			BED_NOUN	łèto	ˈɛto	ˈɛ t o		BED_NOUN_1			
@@ -6679,8 +6679,8 @@ Romanian	Romanian			LAW_NOUN	lege	lˈeʤe	l ˈe ʤ e		LAW_NOUN_1
 Aromanian	Aromanian			LAW_NOUN	leadzi	le̯ˈaʤi	l e̯ˈa ʤ i		LAW_NOUN_1			
 Sicilian	Sicilian			LAW_NOUN	ligge	lˈiʤʤɪ	l ˈi ʤ ʤ ɪ		LAW_NOUN_1			
 Neapolitan	Neapolitan			LAW_NOUN	legge	lˈeʤʤə	l ˈe ʤ ʤ ə		LAW_NOUN_1			
-Sassarese	Sassarese			LAW_NOUN	leggi	lˈɛʤʤi	l ˈɛ ʤ ʤ i		LAW_NOUN_1			
-Gallurese	Gallurese			LAW_NOUN	legghj	lˈɛɟɟ	l ˈɛ ɟ ɟ		LAW_NOUN_1			
+Sassarese	Sassarese			LAW_NOUN	leggi	lˈeʤʤi	l ˈe ʤ ʤ i		LAW_NOUN_1			
+Gallurese	Gallurese			LAW_NOUN	legghj	lˈeɟɟ	l ˈe ɟ ɟ		LAW_NOUN_1			
 Corsican	Corsican			LAW_NOUN	leghje	lˈɛɟe	l ˈɛ ɟ e		LAW_NOUN_1			
 Italian	Italian			LAW_NOUN	legge	lˈeʤʤe	l ˈe ʤ ʤ e		LAW_NOUN_1			
 Venetian	Venetian			LAW_NOUN	łéxe	ˈeze	ˈe z e		LAW_NOUN_1			
@@ -7540,7 +7540,7 @@ Campidanese	Campidanese			DOCTOR_NOUN	méigu	mˈeiɣu	m ˈe i ɣ u		DOCTOR_NOUN_
 Dalmatian	Dalmatian			DOCTOR_NOUN	medco	mˈedko	m ˈe d k o		DOCTOR_NOUN_1			
 Sicilian	Sicilian			DOCTOR_NOUN	mèricu	mˈɛɾikʊ	m ˈɛ ɾ i k ʊ		DOCTOR_NOUN_1			
 Neapolitan	Neapolitan			DOCTOR_NOUN	miedeco	mjˈɛɾəkə	m j ˈɛ ɾ ə k ə		DOCTOR_NOUN_1			
-Sassarese	Sassarese			DOCTOR_NOUN	médiggu	mˈediɡɡu	m ˈe d i ɡ ɡ u		DOCTOR_NOUN_1			
+Sassarese	Sassarese			DOCTOR_NOUN	médiggu	mˈɛdiɡɡu	m ˈɛ d i ɡ ɡ u		DOCTOR_NOUN_1			
 Gallurese	Gallurese			DOCTOR_NOUN	mèdicu	mˈɛdiku	m ˈɛ d i k u		DOCTOR_NOUN_1			
 Corsican	Corsican			DOCTOR_NOUN	medicu	mˈediku	m ˈe d i k u		DOCTOR_NOUN_1			
 Italian	Italian			DOCTOR_NOUN	medico	mˈɛdiko	m ˈɛ d i k o		DOCTOR_NOUN_1			
@@ -7600,8 +7600,8 @@ Aromanian	Aromanian			MIDDLE_NOUN	njedzu	ɲˈeʣu	ɲ ˈe ʣ u		MIDDLE_NOUN_1
 Dalmatian	Dalmatian			MIDDLE_NOUN	mesu	mˈezu	m ˈe z u		MIDDLE_NOUN_1			
 Sicilian	Sicilian			MIDDLE_NOUN	mezzu	mˈɛʦʦʊ	m ˈɛ ʦ ʦ ʊ		MIDDLE_NOUN_1			
 Neapolitan	Neapolitan			MIDDLE_NOUN	miezzo	mjˈɛʦʦə	m j ˈɛ ʦ ʦ ə		MIDDLE_NOUN_1			
-Sassarese	Sassarese			MIDDLE_NOUN	mezu	mˈeʣu	m ˈe ʣ u		MIDDLE_NOUN_1			
-Gallurese	Gallurese			MIDDLE_NOUN	mezu	mˈeʣu	m ˈe ʣ u		MIDDLE_NOUN_1			
+Sassarese	Sassarese			MIDDLE_NOUN	mezu	mˈɛʣu	m ˈɛ ʣ u		MIDDLE_NOUN_1			
+Gallurese	Gallurese			MIDDLE_NOUN	mezu	mˈɛʣu	m ˈɛ ʣ u		MIDDLE_NOUN_1			
 Corsican	Corsican			MIDDLE_NOUN	mezu	mˈeʣu	m ˈe ʣ u		MIDDLE_NOUN_1			
 Italian	Italian			MIDDLE_NOUN	mezzo	mˈɛʣʣo	m ˈɛ ʣ ʣ o		MIDDLE_NOUN_1			
 Venetian	Venetian			MIDDLE_NOUN	mèxo	mˈɛzo	m ˈɛ z o		MIDDLE_NOUN_1			
@@ -7667,8 +7667,8 @@ Logudorese	Logudorese			BETTER_ADV	mezus	mˈeʣuzŭ	m ˈe ʣ u z ŭ		BETTER_AD
 Campidanese	Campidanese			BETTER_ADV	mellus	mˈeɭɭuzŭ	m ˈe ɭ ɭ u z ŭ		BETTER_ADV_1			
 Sicilian	Sicilian			BETTER_ADV	megghiu	mˈɛɟɟʊ	m ˈɛ ɟ ɟ ʊ		BETTER_ADV_1			
 Neapolitan	Neapolitan			BETTER_ADV	mieglio	mjˈɛʎʎə	m j ˈɛ ʎ ʎ ə		BETTER_ADV_1			
-Sassarese	Sassarese			BETTER_ADV	mégliu	mˈeʎʎu	m ˈe ʎ ʎ u		BETTER_ADV_1			
-Gallurese	Gallurese			BETTER_ADV	meddu	mˈeɖɖu	m ˈe ɖ ɖ u		BETTER_ADV_1			
+Sassarese	Sassarese			BETTER_ADV	mégliu	mˈɛʎʎu	m ˈɛ ʎ ʎ u		BETTER_ADV_1			
+Gallurese	Gallurese			BETTER_ADV	meddu	mˈɛɖɖu	m ˈɛ ɖ ɖ u		BETTER_ADV_1			
 Corsican	Corsican			BETTER_ADV	megliu	mˈeʎu	m ˈe ʎ u		BETTER_ADV_1			
 Italian	Italian			BETTER_ADV	meglio	mˈɛʎʎo	m ˈɛ ʎ ʎ o		BETTER_ADV_1			
 Venetian	Venetian			BETTER_ADV	mègio	mˈɛʤo	m ˈɛ ʤ o		BETTER_ADV_1			
@@ -8309,8 +8309,8 @@ Aromanian	Aromanian			NAME_NOUN	numã	nˈumə	n ˈu m ə		NAME_NOUN_2
 Dalmatian	Dalmatian			NAME_NOUN	naum	nˈawm	n ˈa w m		NAME_NOUN_2			
 Sicilian	Sicilian			NAME_NOUN	nomi	nˈomɪ	n ˈo m ɪ		NAME_NOUN_2			
 Neapolitan	Neapolitan			NAME_NOUN	nomme	nˈommə	n ˈo m m ə		NAME_NOUN_2			
-Sassarese	Sassarese			NAME_NOUN	nommu	nˈɔmmu	n ˈɔ m m u		NAME_NOUN_2			
-Gallurese	Gallurese			NAME_NOUN	nommu	nˈɔmmu	n ˈɔ m m u		NAME_NOUN_2			
+Sassarese	Sassarese			NAME_NOUN	nommu	nˈommu	n ˈo m m u		NAME_NOUN_2			
+Gallurese	Gallurese			NAME_NOUN	nommu	nˈommu	n ˈo m m u		NAME_NOUN_2			
 Corsican	Corsican			NAME_NOUN	nome	nˈɔme	n ˈɔ m e		NAME_NOUN_2			
 Italian	Italian			NAME_NOUN	nome	nˈome	n ˈo m e		NAME_NOUN_2			
 Venetian	Venetian			NAME_NOUN	nòme	nˈɔme	n ˈɔ m e		NAME_NOUN_2			
@@ -8346,8 +8346,8 @@ Campidanese	Campidanese			NOT_ADVERB	non	nɔn	n ɔ n		NOT_ADVERB_1
 Romanian	Romanian			NOT_ADVERB	nu	nu	n u		NOT_ADVERB_1			
 Megleno-Romanian	Megleno-Romanian			NOT_ADVERB	nu	nu	n u		NOT_ADVERB_1			
 Dalmatian	Dalmatian			NOT_ADVERB	non	noŋ	n o ŋ		NOT_ADVERB_1			
-Sassarese	Sassarese			NOT_ADVERB	no	nɔ	n ɔ		NOT_ADVERB_1			
-Gallurese	Gallurese			NOT_ADVERB	non	nɔn	n ɔ n		NOT_ADVERB_1			
+Sassarese	Sassarese			NOT_ADVERB	no	no	n o		NOT_ADVERB_1			
+Gallurese	Gallurese			NOT_ADVERB	non	non	n o n		NOT_ADVERB_1			
 Corsican	Corsican			NOT_ADVERB	nun	nun	n u n		NOT_ADVERB_1			
 Italian	Italian			NOT_ADVERB	non	non	n o n		NOT_ADVERB_1			
 Venetian	Venetian			NOT_ADVERB	no	no	n o		NOT_ADVERB_1			
@@ -8382,8 +8382,8 @@ Aromanian	Aromanian			WE_PRON	noj	nˈoj	n ˈo j		WE_PRON_1
 Dalmatian	Dalmatian			WE_PRON	noj	nˈoj	n ˈo j		WE_PRON_1			
 Sicilian	Sicilian			WE_PRON	nui	nˈuj	n ˈu j		WE_PRON_1			
 Neapolitan	Neapolitan			WE_PRON	nuje	nˈujə	n ˈu j ə		WE_PRON_1			
-Sassarese	Sassarese			WE_PRON	noi	nˈɔj	n ˈɔ j		WE_PRON_1			
-Gallurese	Gallurese			WE_PRON	noi	nˈɔj	n ˈɔ j		WE_PRON_1			
+Sassarese	Sassarese			WE_PRON	noi	nˈoj	n ˈo j		WE_PRON_1			
+Gallurese	Gallurese			WE_PRON	noi	nˈoj	n ˈo j		WE_PRON_1			
 Corsican	Corsican			WE_PRON	noi	nˈɔj	n ˈɔ j		WE_PRON_1			
 Italian	Italian			WE_PRON	noi	nˈoj	n ˈo j		WE_PRON_1			
 Venetian	Venetian			WE_PRON	nu	nˈu	n ˈu		WE_PRON_1			
@@ -8417,8 +8417,8 @@ Dalmatian	Dalmatian			OUR_ADJ	nuester	nwˈester	n w ˈe s t e r		OUR_ADJ_1
 Istriot	Istriot			OUR_ADJ	nostro	nˈostro	n ˈo s t r o		OUR_ADJ_1			
 Sicilian	Sicilian			OUR_ADJ	nostru	nˈɔʃʃɽʊ	n ˈɔ ʃ ʃ ɽ ʊ		OUR_ADJ_1			
 Neapolitan	Neapolitan			OUR_ADJ	nuostro	nwˈɔstɾə	n w ˈɔ s t ɾ ə		OUR_ADJ_1			
-Sassarese	Sassarese			OUR_ADJ	nosthru	nˈoɬtru	n ˈo ɬ t r u		OUR_ADJ_1			
-Gallurese	Gallurese			OUR_ADJ	nostro	nˈostro	n ˈo s t r o		OUR_ADJ_1			
+Sassarese	Sassarese			OUR_ADJ	nosthru	nˈɔɬtru	n ˈɔ ɬ t r u		OUR_ADJ_1			
+Gallurese	Gallurese			OUR_ADJ	nostro	nˈɔstro	n ˈɔ s t r o		OUR_ADJ_1			
 Corsican	Corsican			OUR_ADJ	nostro	nˈostro	n ˈo s t r o		OUR_ADJ_1			
 Italian	Italian			OUR_ADJ	nostro	nˈɔstro	n ˈɔ s t r o		OUR_ADJ_1			
 Venetian	Venetian			OUR_ADJ	nostro	nˈɔstro	n ˈɔ s t r o		OUR_ADJ_1			
@@ -8750,8 +8750,8 @@ Aromanian	Aromanian			EYE_NOUN	oclju	ˈokʎu	ˈo k ʎ u		EYE_NOUN_1
 Dalmatian	Dalmatian			EYE_NOUN	uaclo	wˈaklo	w ˈa k l o		EYE_NOUN_1			
 Sicilian	Sicilian			EYE_NOUN	occhiu	ˈɔccʊ	ˈɔ c c ʊ		EYE_NOUN_1			
 Neapolitan	Neapolitan			EYE_NOUN	uocchio	wˈɔkkjə	w ˈɔ k k j ə		EYE_NOUN_1			
-Sassarese	Sassarese			EYE_NOUN	occi	ˈoʧʧi	ˈo ʧ ʧ i		EYE_NOUN_1			
-Gallurese	Gallurese			EYE_NOUN	occhj	ˈocc	ˈo c c		EYE_NOUN_1			
+Sassarese	Sassarese			EYE_NOUN	occi	ˈɔʧʧi	ˈɔ ʧ ʧ i		EYE_NOUN_1			
+Gallurese	Gallurese			EYE_NOUN	occhj	ˈɔcc	ˈɔ c c		EYE_NOUN_1			
 Corsican	Corsican			EYE_NOUN	ochju	ˈocu	ˈo c u		EYE_NOUN_1			
 Italian	Italian			EYE_NOUN	occhio	ˈɔkkjo	ˈɔ k k j o		EYE_NOUN_1			
 Venetian	Venetian			EYE_NOUN	òcio	ˈɔʧo	ˈɔ ʧ o		EYE_NOUN_1			
@@ -8866,8 +8866,8 @@ Auvergnat	Auvergnat			WORKER_NOUN	obrièir	ubʀjˈej	u b ʀ j ˈe j		WORKER_NOUN
 Provençal	Provençal			WORKER_NOUN	obrier	ubɾjˈe	u b ɾ j ˈe		WORKER_NOUN_1			
 Lengadocian	Lengadocian			WORKER_NOUN	obrièr	uβɾjˈɛ	u β ɾ j ˈɛ		WORKER_NOUN_1			
 Gascon	Gascon			WORKER_NOUN	obrèr	uβɾˈɛ	u β ɾ ˈɛ		WORKER_NOUN_1			
-Catalan	Catalan			WORKER_NOUN	obrer	uβɾˈe	u b ɾ ˈe		WORKER_NOUN_1			
-Valencian	Valencian			WORKER_NOUN	obrer	oβɾˈer	o b ɾ ˈe r		WORKER_NOUN_1			
+Catalan	Catalan			WORKER_NOUN	obrer	uβɾˈe	u β ɾ ˈe		WORKER_NOUN_1			
+Valencian	Valencian			WORKER_NOUN	obrer	oβɾˈer	o β ɾ ˈe r		WORKER_NOUN_1			
 Aragonese	Aragonese			WORKER_NOUN	obrero	oβɾˈeɾo	o β ɾ ˈe ɾ o		WORKER_NOUN_1			
 Spanish	Spanish			WORKER_NOUN	obrero	oβɾˈeɾo	o β ɾ ˈe ɾ o		WORKER_NOUN_1			
 Asturian	Asturian			WORKER_NOUN	obreru	oβɾˈeɾu	o β ɾ ˈe ɾ u		WORKER_NOUN_1			
@@ -8950,8 +8950,8 @@ Aromanian	Aromanian			EGG_NOUN	ou	ˈow	ˈo w		EGG_NOUN_1
 Dalmatian	Dalmatian			EGG_NOUN	juf	jˈuf	j ˈu f		EGG_NOUN_1			
 Sicilian	Sicilian			EGG_NOUN	ovu	ˈɔvʊ	ˈɔ v ʊ		EGG_NOUN_1			
 Neapolitan	Neapolitan			EGG_NOUN	uovo	wˈɔvə	w ˈɔ v ə		EGG_NOUN_1			
-Sassarese	Sassarese			EGG_NOUN	obu	ˈoβu	ˈo β u		EGG_NOUN_1			
-Gallurese	Gallurese			EGG_NOUN	ou	ˈou	ˈo u		EGG_NOUN_1			
+Sassarese	Sassarese			EGG_NOUN	obu	ˈɔβu	ˈɔ β u		EGG_NOUN_1			
+Gallurese	Gallurese			EGG_NOUN	ou	ˈɔu	ˈɔ u		EGG_NOUN_1			
 Corsican	Corsican			EGG_NOUN	ovu	ˈovu	ˈo v u		EGG_NOUN_1			
 Italian	Italian			EGG_NOUN	uovo	wˈɔvo	w ˈɔ v o		EGG_NOUN_1			
 Venetian	Venetian			EGG_NOUN	vóvo	vˈovo	v ˈo v o		EGG_NOUN_1			
@@ -9296,8 +9296,8 @@ Aromanian	Aromanian			BREAST_NOUN	cheptu	kˈeptu	k ˈe p t u		BREAST_NOUN_1
 Dalmatian	Dalmatian			BREAST_NOUN	pjat	pjˈat	p j ˈa t		BREAST_NOUN_1			
 Sicilian	Sicilian			BREAST_NOUN	pettu	pˈɛttʊ	p ˈɛ t t ʊ		BREAST_NOUN_1			
 Neapolitan	Neapolitan			BREAST_NOUN	pietto	pjˈɛttə	p j ˈɛ t t ə		BREAST_NOUN_1			
-Sassarese	Sassarese			BREAST_NOUN	pettu	pˈettu	p ˈe t t u		BREAST_NOUN_1			
-Gallurese	Gallurese			BREAST_NOUN	pettu	pˈettu	p ˈe t t u		BREAST_NOUN_1			
+Sassarese	Sassarese			BREAST_NOUN	pettu	pˈɛttu	p ˈɛ t t u		BREAST_NOUN_1			
+Gallurese	Gallurese			BREAST_NOUN	pettu	pˈɛttu	p ˈɛ t t u		BREAST_NOUN_1			
 Corsican	Corsican			BREAST_NOUN	pettu	pˈettu	p ˈe t t u		BREAST_NOUN_1			
 Italian	Italian			BREAST_NOUN	petto	pˈɛtto	p ˈɛ t t o		BREAST_NOUN_1			
 Venetian	Venetian			BREAST_NOUN	pèto	pˈɛto	p ˈɛ t o		BREAST_NOUN_1			
@@ -9900,8 +9900,8 @@ Logudorese	Logudorese			PAIN_NOUN	pena	pˈɛna	p ˈɛ n a		PAIN_NOUN_1
 Campidanese	Campidanese			PAIN_NOUN	pena	pˈɛna	p ˈɛ n a		PAIN_NOUN_1			
 Sicilian	Sicilian			PAIN_NOUN	pena	pˈena	p ˈe n a		PAIN_NOUN_1			
 Neapolitan	Neapolitan			PAIN_NOUN	pena	pˈenə	p ˈe n ə		PAIN_NOUN_1			
-Sassarese	Sassarese			PAIN_NOUN	pena	pˈɛna	p ˈɛ n a		PAIN_NOUN_1			
-Gallurese	Gallurese			PAIN_NOUN	pena	pˈɛna	p ˈɛ n a		PAIN_NOUN_1			
+Sassarese	Sassarese			PAIN_NOUN	pena	pˈena	p ˈe n a		PAIN_NOUN_1			
+Gallurese	Gallurese			PAIN_NOUN	pena	pˈena	p ˈe n a		PAIN_NOUN_1			
 Corsican	Corsican			PAIN_NOUN	pena	pˈɛna	p ˈɛ n a		PAIN_NOUN_1			
 Italian	Italian			PAIN_NOUN	pena	pˈena	p ˈe n a		PAIN_NOUN_1			
 Venetian	Venetian			PAIN_NOUN	péna	pˈena	p ˈe n a		PAIN_NOUN_1			
@@ -10117,8 +10117,8 @@ Campidanese	Campidanese			PRICE_NOUN	prétziu	prˈeʦju	p r ˈe ʦ j u		PRICE_NO
 Romanian	Romanian			PRICE_NOUN	preț	prˈeʦ	p r ˈe ʦ		PRICE_NOUN_1			
 Sicilian	Sicilian			PRICE_NOUN	prezzu	pɾˈɛʦʦʊ	p ɾ ˈɛ ʦ ʦ ʊ		PRICE_NOUN_1			
 Neapolitan	Neapolitan			PRICE_NOUN	priezzo	pɾjˈɛʦʦə	p ɾ j ˈɛ ʦ ʦ ə		PRICE_NOUN_1			
-Sassarese	Sassarese			PRICE_NOUN	présgiu	prˈeʒu	p r ˈe ʒ u		PRICE_NOUN_1			
-Gallurese	Gallurese			PRICE_NOUN	présgiu	prˈeʒu	p r ˈe ʒ u		PRICE_NOUN_1			
+Sassarese	Sassarese			PRICE_NOUN	présgiu	prˈɛʒu	p r ˈɛ ʒ u		PRICE_NOUN_1			
+Gallurese	Gallurese			PRICE_NOUN	présgiu	prˈɛʒu	p r ˈɛ ʒ u		PRICE_NOUN_1			
 Corsican	Corsican			PRICE_NOUN	prezzu	prˈeʦʦu	p r ˈe ʦ ʦ u		PRICE_NOUN_1			
 Italian	Italian			PRICE_NOUN	prezzo	prˈɛʦʦo	p r ˈɛ ʦ ʦ o		PRICE_NOUN_1			
 Venetian	Venetian			PRICE_NOUN	prèço	prˈɛso	p r ˈɛ s o		PRICE_NOUN_1			
@@ -10580,8 +10580,8 @@ Dalmatian	Dalmatian			KING_NOUN	ra	rˈa	r ˈa		KING_NOUN_1
 Sicilian	Sicilian			KING_NOUN	re	ʐˈe	ʐ ˈe		KING_NOUN_1			
 Sicilian	Sicilian			KING_NOUN	reji	ʐˈejɪ	ʐ ˈe j ɪ		KING_NOUN_1			
 Neapolitan	Neapolitan			KING_NOUN	re	rˈe	r ˈe		KING_NOUN_1			
-Sassarese	Sassarese			KING_NOUN	re	rˈɛ	r ˈɛ		KING_NOUN_1			
-Gallurese	Gallurese			KING_NOUN	re	rˈɛ	r ˈɛ		KING_NOUN_1			
+Sassarese	Sassarese			KING_NOUN	re	rˈe	r ˈe		KING_NOUN_1			
+Gallurese	Gallurese			KING_NOUN	re	rˈe	r ˈe		KING_NOUN_1			
 Corsican	Corsican			KING_NOUN	re	rˈɛ	r ˈɛ		KING_NOUN_1			
 Italian	Italian			KING_NOUN	re	rˈe	r ˈe		KING_NOUN_1			
 Venetian	Venetian			KING_NOUN	rè	rˈɛ	r ˈɛ		KING_NOUN_1			
@@ -10618,9 +10618,9 @@ Logudorese	Logudorese			QUEEN_NOUN	reghina	ɾeɣˈina	ɾ e ɣ ˈi n a		QUEEN_NOU
 Campidanese	Campidanese			QUEEN_NOUN	arreina	areˈina	a r e ˈi n a		QUEEN_NOUN_1			
 Romanian	Romanian			QUEEN_NOUN	regină	reʤˈinə	r e ʤ ˈi n ə		QUEEN_NOUN_1	TRUE		
 Sicilian	Sicilian			QUEEN_NOUN	riggina	ʐiʤʤˈina	ʐ i ʤ ʤ ˈi n a		QUEEN_NOUN_1			
-Sassarese	Sassarese			QUEEN_NOUN	regina	reʤˈina	r e ʤ ˈi n a		QUEEN_NOUN_1			
+Sassarese	Sassarese			QUEEN_NOUN	regina	riʤˈina	r i ʤ ˈi n a		QUEEN_NOUN_1			
 Gallurese	Gallurese			QUEEN_NOUN	regina	reʤˈina	r e ʤ ˈi n a		QUEEN_NOUN_1			
-Corsican	Corsican			QUEEN_NOUN	regina	reʤˈina	r e ʤ ˈi n a		QUEEN_NOUN_1			
+Corsican	Corsican			QUEEN_NOUN	rigina	riʤˈina	r i ʤ ˈi n a		QUEEN_NOUN_1			
 Italian	Italian			QUEEN_NOUN	regina	reʤˈina	r e ʤ ˈi n a		QUEEN_NOUN_1			
 Venetian	Venetian			QUEEN_NOUN	rexìna	rezˈina	r e z ˈi n a		QUEEN_NOUN_1			
 Romagnol	Romagnol			QUEEN_NOUN	regìna	reʤˈinɐ	r e ʤ ˈi n ɐ		QUEEN_NOUN_1			
@@ -11384,7 +11384,7 @@ Latin	Latin			SEED_NOUN	sēmen	sˈeːmɛ̃ː	s ˈeː m ɛ̃ː		SEED_NOUN_1
 Nuorese	Nuorese			SEED_NOUN	sèmene	sˈɛmɛnɛ	s ˈɛ m ɛ n ɛ		SEED_NOUN_1			
 Logudorese	Logudorese			SEED_NOUN	sèmene	sˈɛmɛnɛ	s ˈɛ m ɛ n ɛ		SEED_NOUN_1			
 Campidanese	Campidanese			SEED_NOUN	sémini	sˈemini	s ˈe m i n i		SEED_NOUN_1			
-Sassarese	Sassarese			SEED_NOUN	sèmini	sˈɛmini	s ˈɛ m i n i		SEED_NOUN_1			
+Sassarese	Sassarese			SEED_NOUN	sèmini	sˈemini	s ˈe m i n i		SEED_NOUN_1			
 Italian	Italian			SEED_NOUN	seme	sˈeme	s ˈe m e		SEED_NOUN_1			
 Venetian	Venetian			SEED_NOUN	séme	sˈeme	s ˈe m e		SEED_NOUN_1			
 Romansch	Romansch			SEED_NOUN	sem	sˈem	s ˈe m		SEED_NOUN_1			
@@ -11512,8 +11512,8 @@ Aromanian	Aromanian			EVENING_NOUN	searã	se̯ˈarə	s e̯ˈa r ə		EVENING_NOUN
 Dalmatian	Dalmatian			EVENING_NOUN	saira	sˈajra	s ˈa j r a		EVENING_NOUN_1			
 Sicilian	Sicilian			EVENING_NOUN	sira	sˈiɾa	s ˈi ɾ a		EVENING_NOUN_1			
 Neapolitan	Neapolitan			EVENING_NOUN	sira	sˈiɾə	s ˈi ɾ ə		EVENING_NOUN_1			
-Sassarese	Sassarese			EVENING_NOUN	sera	sˈɛra	s ˈɛ r a		EVENING_NOUN_1			
-Gallurese	Gallurese			EVENING_NOUN	sera	sˈɛra	s ˈɛ r a		EVENING_NOUN_1			
+Sassarese	Sassarese			EVENING_NOUN	sera	sˈera	s ˈe r a		EVENING_NOUN_1			
+Gallurese	Gallurese			EVENING_NOUN	sera	sˈera	s ˈe r a		EVENING_NOUN_1			
 Corsican	Corsican			EVENING_NOUN	sera	sˈɛra	s ˈɛ r a		EVENING_NOUN_1			
 Italian	Italian			EVENING_NOUN	sera	sˈera	s ˈe r a		EVENING_NOUN_1			
 Venetian	Venetian			EVENING_NOUN	séra	sˈera	s ˈe r a		EVENING_NOUN_1			
@@ -11542,8 +11542,8 @@ Campidanese	Campidanese			SILK_NOUN	seda	sˈɛða	s ˈɛ ð a		SILK_NOUN_1
 Dalmatian	Dalmatian			SILK_NOUN	saita	sˈajta	s ˈa j t a		SILK_NOUN_1			
 Sicilian	Sicilian			SILK_NOUN	sita	sˈita	s ˈi t a		SILK_NOUN_1			
 Neapolitan	Neapolitan			SILK_NOUN	seta	sˈetə	s ˈe t ə		SILK_NOUN_1			
-Sassarese	Sassarese			SILK_NOUN	sedda	sˈɛdda	s ˈɛ d d a		SILK_NOUN_1			
-Gallurese	Gallurese			SILK_NOUN	seta	sˈɛta	s ˈɛ t a		SILK_NOUN_1			
+Sassarese	Sassarese			SILK_NOUN	sedda	sˈedda	s ˈe d d a		SILK_NOUN_1			
+Gallurese	Gallurese			SILK_NOUN	seta	sˈeta	s ˈe t a		SILK_NOUN_1			
 Corsican	Corsican			SILK_NOUN	seta	sˈɛta	s ˈɛ t a		SILK_NOUN_1			
 Italian	Italian			SILK_NOUN	seta	sˈeta	s ˈe t a		SILK_NOUN_1			
 Venetian	Venetian			SILK_NOUN	séa	sˈea	s ˈe a		SILK_NOUN_1			
@@ -12135,8 +12135,8 @@ Dalmatian	Dalmatian			THREE_NUM	tra	trˈa	t r ˈa		THREE_NUM_1
 Sicilian	Sicilian			THREE_NUM	tri	ʈɽˈi	ʈ ɽ ˈi		THREE_NUM_1			
 Neapolitan	Neapolitan			THREE_NUM	trei	tɾˈej	t ɾ ˈe j		THREE_NUM_1			
 Neapolitan	Neapolitan			THREE_NUM	tre	tɾˈe	t ɾ ˈe		THREE_NUM_1			
-Sassarese	Sassarese			THREE_NUM	tre	trˈɛ	t r ˈɛ		THREE_NUM_1			
-Gallurese	Gallurese			THREE_NUM	tre	trˈɛ	t r ˈɛ		THREE_NUM_1			
+Sassarese	Sassarese			THREE_NUM	tre	trˈe	t r ˈe		THREE_NUM_1			
+Gallurese	Gallurese			THREE_NUM	tre	trˈe	t r ˈe		THREE_NUM_1			
 Corsican	Corsican			THREE_NUM	trè	trˈɛ	t r ˈɛ		THREE_NUM_1			
 Italian	Italian			THREE_NUM	tre	trˈe	t r ˈe		THREE_NUM_1			
 Venetian	Venetian			THREE_NUM	trè	trˈɛ	t r ˈɛ		THREE_NUM_1			
@@ -12657,8 +12657,8 @@ Dalmatian	Dalmatian			OLD_ADJ	vieclo	vjˈɛklo	v j ˈɛ k l o		OLD_ADJ_1
 Istriot	Istriot			OLD_ADJ	viécio	vjˈeʧo	v j ˈe ʧ o		OLD_ADJ_1			
 Sicilian	Sicilian			OLD_ADJ	vecchiu	vˈɛccʊ	v ˈɛ c c ʊ		OLD_ADJ_1			
 Neapolitan	Neapolitan			OLD_ADJ	viecchio	vjˈɛkkjə	v j ˈɛ k k j ə		OLD_ADJ_1			
-Sassarese	Sassarese			OLD_ADJ	vécciu	vˈeʧʧu	v ˈe ʧ ʧ u		OLD_ADJ_1			
-Gallurese	Gallurese			OLD_ADJ	vecchju	vˈeccu	v ˈe c c u		OLD_ADJ_1			
+Sassarese	Sassarese			OLD_ADJ	vécciu	vˈɛʧʧu	v ˈɛ ʧ ʧ u		OLD_ADJ_1			
+Gallurese	Gallurese			OLD_ADJ	vecchju	vˈɛccu	v ˈɛ c c u		OLD_ADJ_1			
 Corsican	Corsican			OLD_ADJ	vechju	vˈecu	v ˈe c u		OLD_ADJ_1			
 Italian	Italian			OLD_ADJ	vecchio	vˈɛkkjo	v ˈɛ k k j o		OLD_ADJ_1			
 Venetian	Venetian			OLD_ADJ	vècio	vˈɛʧo	v ˈɛ ʧ o		OLD_ADJ_1			
@@ -13086,7 +13086,6 @@ Sicilian	Sicilian			VOICE_NOUN	vuci	vˈuɕɪ	v ˈu ɕ ɪ		VOICE_NOUN_1
 Neapolitan	Neapolitan			VOICE_NOUN	vuce	vˈuʃə	v ˈu ʃ ə		VOICE_NOUN_1			
 Sassarese	Sassarese			VOICE_NOUN	bozi	bˈoʦi	b ˈo ʦ i		VOICE_NOUN_1			
 Gallurese	Gallurese			VOICE_NOUN	boci	bˈoʧi	b ˈo ʧ i		VOICE_NOUN_1			
-Corsican	Corsican			VOICE_NOUN	voce	vˈoʧe	v ˈo ʧ e		VOICE_NOUN_1			
 Corsican	Corsican			VOICE_NOUN	voce	vˈɔʧe	v ˈɔ ʧ e		VOICE_NOUN_1			
 Italian	Italian			VOICE_NOUN	voce	vˈoʧe	v ˈo ʧ e		VOICE_NOUN_1			
 Venetian	Venetian			VOICE_NOUN	vóxe	vˈoze	v ˈo z e		VOICE_NOUN_1			
@@ -13159,8 +13158,8 @@ Dalmatian	Dalmatian			YOU (PL)_PRON	voi	vˈoj	v ˈo j		YOU (PL)_PRON_1
 Istriot	Istriot			YOU (PL)_PRON	vui	vˈuj	v ˈu j		YOU (PL)_PRON_1			
 Sicilian	Sicilian			YOU (PL)_PRON	vui	vˈuj	v ˈu j		YOU (PL)_PRON_1			
 Neapolitan	Neapolitan			YOU (PL)_PRON	vuje	vˈujə	v ˈu j ə		YOU (PL)_PRON_1			
-Sassarese	Sassarese			YOU (PL)_PRON	voi	vˈɔj	v ˈɔ j		YOU (PL)_PRON_1			
-Gallurese	Gallurese			YOU (PL)_PRON	voi	vˈɔj	v ˈɔ j		YOU (PL)_PRON_1			
+Sassarese	Sassarese			YOU (PL)_PRON	voi	vˈoj	v ˈo j		YOU (PL)_PRON_1			
+Gallurese	Gallurese			YOU (PL)_PRON	voi	vˈoj	v ˈo j		YOU (PL)_PRON_1			
 Corsican	Corsican			YOU (PL)_PRON	voi	vˈɔj	v ˈɔ j		YOU (PL)_PRON_1			
 Italian	Italian			YOU (PL)_PRON	voi	vˈoj	v ˈo j		YOU (PL)_PRON_1			
 Venetian	Venetian			YOU (PL)_PRON	vu	vˈu	v ˈu		YOU (PL)_PRON_1			

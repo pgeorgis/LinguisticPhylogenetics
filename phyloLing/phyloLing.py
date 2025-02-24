@@ -32,6 +32,7 @@ from unidecode import unidecode
 from utils.cluster import cluster_items, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.doculect import Doculect
+from utils.phoneme_map import PhonemeMap
 from utils.sequence import Ngram
 from utils.string import format_as_variable, strip_ch
 from utils.tree import postprocess_newick, reroot_tree
@@ -157,7 +158,7 @@ class LexicalDataset:
                 self.concepts[concept][lang].extend(self.languages[lang].vocabulary[concept])
         for lang in language_list:
             self.write_missing_concepts(lang)
-    
+
     def write_missing_concepts(self, doculect):
         """Writes a missing_concepts.lst file indicating which concepts present
         in the lexical dataset are missing from a particular doculect."""
@@ -298,24 +299,26 @@ class LexicalDataset:
         combined_noncognate_scores = []
         if doculect_pairs is None:
             doculect_pairs = self.get_doculect_pairs()
-        for lang1, lang2 in doculect_pairs:
-            logger.info(f"Computing non-cognate thresholds: {lang1.name}-{lang2.name}")
-            noncognate_scores, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_noncognate_scores(
-                lang1,
-                lang2,
-                eval_func=eval_func,
-                phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                log_outdir=self.phone_corr_dir,
-                **kwargs
-            )
-            combined_noncognate_scores.extend(noncognate_scores)
+        with tqdm(total=len(doculect_pairs), unit="pair") as pbar:
+            for lang1, lang2 in doculect_pairs:
+                pbar.set_description(f"Computing non-cognate thresholds... [{lang1.name}-{lang2.name}]")
+                noncognate_scores, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_noncognate_scores(
+                    lang1,
+                    lang2,
+                    eval_func=eval_func,
+                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                    log_outdir=self.phone_corr_dir,
+                    **kwargs
+                )
+                combined_noncognate_scores.extend(noncognate_scores)
+                pbar.update(1)
         mean_nc_score = mean(noncognate_scores)
         nc_score_stdev = stdev(noncognate_scores)
         return mean_nc_score, nc_score_stdev
 
     def load_alignments(self, excepted=[], **kwargs):
         """Loads pre-computed phonetic sequence alignments from file."""
-        
+
         def parse_alignment_log(alignment_log, lang1, lang2, **kwargs):
             align_dict = {}
             with open(alignment_log, "r") as f:
@@ -337,78 +340,85 @@ class LexicalDataset:
                     )
                     align_dict[align_key.strip()] = alignment
             return align_dict
-        
-        for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
-            if (lang1.name not in excepted) and (lang2.name not in excepted):
-                alignment_file = os.path.join(
-                    self.phone_corr_dir,
-                    lang1.path_name,
-                    lang2.path_name,
-                    "alignments.log",
-                )
-                align_dict = parse_alignment_log(alignment_file, lang1=lang1, lang2=lang2, **kwargs)
-                # Get reverse alignments dict
-                reverse_align_dict = {}
-                for key, alignment in align_dict.items():
-                    reverse_key = ALIGNMENT_KEY_REGEX.sub(r"/\2/ - /\1/", key)
-                    reverse_alignment = alignment.reverse()
-                    reverse_align_dict[reverse_key] = reverse_alignment
-                
-                # Fetch correlators
-                correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
-                    lang1,
-                    lang2,
-                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                    log_outdir=self.phone_corr_dir,
-                )
-                twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
-                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                )
-                
-                # Update correlators with alignments
-                correlator.align_log.update(align_dict)
-                twin.align_log.update(reverse_align_dict)
+
+        doculect_pairs = self.get_doculect_pairs(bidirectional=False)
+        with tqdm(total=len(doculect_pairs), unit="pair") as pbar:
+            for lang1, lang2 in doculect_pairs:
+                pbar.set_description(f"Loading phonetic sequence alignments... [{lang1.name}-{lang2.name}]")
+                if (lang1.name not in excepted) and (lang2.name not in excepted):
+                    alignment_file = os.path.join(
+                        self.phone_corr_dir,
+                        lang1.path_name,
+                        lang2.path_name,
+                        "alignments.log",
+                    )
+                    align_dict = parse_alignment_log(alignment_file, lang1=lang1, lang2=lang2, **kwargs)
+                    # Get reverse alignments dict
+                    reverse_align_dict = {}
+                    for key, alignment in align_dict.items():
+                        reverse_key = ALIGNMENT_KEY_REGEX.sub(r"/\2/ - /\1/", key)
+                        reverse_alignment = alignment.reverse()
+                        reverse_align_dict[reverse_key] = reverse_alignment
+
+                    # Fetch correlators
+                    correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
+                        lang1,
+                        lang2,
+                        phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                        log_outdir=self.phone_corr_dir,
+                    )
+                    twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
+                        phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                    )
+
+                    # Update correlators with alignments
+                    correlator.align_log.update(align_dict)
+                    twin.align_log.update(reverse_align_dict)
+                pbar.update(1)
 
     def load_phoneme_pmi(self, excepted=[], sep='\t', **kwargs):
         """Loads pre-calculated phoneme PMI values from file"""
 
         def str2ngram(str, join_ch='_'):
             return Ngram(str, lang=self, seg_sep=join_ch)
-
-        for lang1, lang2 in self.get_doculect_pairs(bidirectional=False):
-            if (lang1.name not in excepted) and (lang2.name not in excepted):
-                pmi_file = os.path.join(
-                    self.phone_corr_dir,
-                    lang1.path_name,
-                    lang2.path_name,
-                    "phonPMI.tsv"
-                )
-
-                # Try to load the file of saved PMI values, otherwise calculate PMI first
-                correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
-                    lang1,
-                    lang2,
-                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                    log_outdir=self.phone_corr_dir,
-                )
-                twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
-                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                )
-                if not os.path.exists(pmi_file):
-                    correlator.compute_phone_corrs(
-                        phone_correlators_index=FAMILY_INDEX[self.name],
-                        **kwargs
+        doculect_pairs = self.get_doculect_pairs(bidirectional=False)
+        with tqdm(total=len(doculect_pairs), unit="pair") as pbar:
+            for lang1, lang2 in doculect_pairs:
+                pbar.set_description(f"Loading phoneme PMI... [{lang1.name}-{lang2.name}]")
+                if (lang1.name not in excepted) and (lang2.name not in excepted):
+                    pmi_file = os.path.join(
+                        self.phone_corr_dir,
+                        lang1.path_name,
+                        lang2.path_name,
+                        "phonPMI.tsv"
                     )
-                pmi_data = pd.read_csv(pmi_file, sep=sep)
 
-                # Iterate through the dataframe and save the PMI values to the Language
-                # class objects' phoneme_pmi attribute
-                for _, row in pmi_data.iterrows():
-                    phone1, phone2 = row['Phone1'], row['Phone2']
-                    pmi_value = row['PMI']
-                    ngram1, ngram2 = map(str2ngram, [phone1, phone2])
-                    correlator.pmi_results.set_value(ngram1.undo(), ngram2.undo(), pmi_value)
-                    twin.pmi_results.set_value(ngram2.undo(), ngram1.undo(), pmi_value)
+                    # Try to load the file of saved PMI values, otherwise calculate PMI first
+                    correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
+                        lang1,
+                        lang2,
+                        phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                        log_outdir=self.phone_corr_dir,
+                    )
+                    twin, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = correlator.get_twin(
+                        phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                    )
+                    if not os.path.exists(pmi_file):
+                        correlator.compute_phone_corrs(
+                            phone_correlators_index=FAMILY_INDEX[self.name],
+                            **kwargs
+                        )
+                    pmi_data = pd.read_csv(pmi_file, sep=sep)
+
+                    # Iterate through the dataframe and save the PMI values to the Language
+                    # class objects' phoneme_pmi attribute
+                    for _, row in pmi_data.iterrows():
+                        phone1, phone2 = row['Phone1'], row['Phone2']
+                        pmi_value = row['PMI']
+                        ngram1, ngram2 = map(str2ngram, [phone1, phone2])
+                        correlator.pmi_results.set_value(ngram1.undo(), ngram2.undo(), pmi_value)
+                        twin.pmi_results.set_value(ngram2.undo(), ngram1.undo(), pmi_value)
+                pbar.update(1)
 
     def write_phoneme_pmi(self, **kwargs):
         logger.info(f'Saving {self.name} phoneme PMI...')
@@ -455,13 +465,12 @@ class LexicalDataset:
             return Ngram(str, lang=self, seg_sep=join_ch)
 
         def extract_surprisal_from_df(surprisal_data, lang2, phon_env=False):
-            surprisal_dict = defaultdict(lambda: {})
-            oov_vals = {}
-            for index, row in surprisal_data.iterrows():
+            surprisal_dict = PhonemeMap(lang2.phoneme_entropy * ngram_size)
+            for _, row in surprisal_data.iterrows():
                 phone1, phone2 = row['Phone1'], row['Phone2']
                 surprisal_value = row['Surprisal']
                 if ngram_size > 1:
-                    breakpoint()  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
+                    raise NotImplementedError  # TODO need to decide format for how to save/load larger ngrams from logs; previously they were separated by whitespace
                 ngram1, ngram2 = map(str2ngram, [phone1, phone2])
                 ngram2_dict_form = ngram2.undo()
                 if phon_env:
@@ -469,58 +478,53 @@ class LexicalDataset:
                     ngram1_dict_form = (Ngram(phone1).undo(), env)
                 else:
                     ngram1_dict_form = ngram1.undo()
-                surprisal_dict[ngram1_dict_form][ngram2_dict_form] = surprisal_value
-                if ngram1_dict_form not in oov_vals:
-                    oov_smoothed = row['OOV_Smoothed']
-                    oov_vals[ngram1_dict_form] = oov_smoothed
-
-            # Iterate back through language pairs and phone1 combinations and set OOV values
-            for phone1 in oov_vals:
-                oov_val = oov_vals[phone1]
-                surprisal_dict[phone1] = default_dict(surprisal_dict[phone1], lmbda=oov_val)
-            surprisal_dict = default_dict(surprisal_dict, lmbda=defaultdict(lambda: oov_val))
+                surprisal_dict.set_value(ngram1_dict_form, ngram2_dict_form, surprisal_value)
 
             return surprisal_dict
 
-        for lang1, lang2 in self.get_doculect_pairs(bidirectional=True):
-            if (lang1.name not in excepted) and (lang2.name not in excepted):
-                phon_corr_dir = os.path.join(
-                    self.phone_corr_dir,
-                    lang1.path_name,
-                    lang2.path_name,
-                )
-                surprisal_file = os.path.join(phon_corr_dir, 'phonSurprisal.tsv')
-                if phon_env:
-                    surprisal_file_phon_env = os.path.join(phon_corr_dir, 'phonEnvSurprisal.tsv')
-
-                correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
-                    lang1,
-                    lang2,
-                    phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
-                    log_outdir=self.phone_corr_dir,
-                )
-                # Try to load the file of saved surprisal values, otherwise calculate surprisal first
-                if not os.path.exists(surprisal_file):
-                    correlator.compute_phone_corrs(
-                        phone_correlators_index=FAMILY_INDEX[self.name],
-                        ngram_size=ngram_size,
-                        phon_env=phon_env,
-                        **kwargs
+        doculect_pairs = self.get_doculect_pairs(bidirectional=True)
+        with tqdm(total=len(doculect_pairs), unit="pair") as pbar:
+            for lang1, lang2 in doculect_pairs:
+                pbar.set_description(f"Loading phoneme surprisal... [{lang1.name}-{lang2.name}]")
+                if (lang1.name not in excepted) and (lang2.name not in excepted):
+                    phon_corr_dir = os.path.join(
+                        self.phone_corr_dir,
+                        lang1.path_name,
+                        lang2.path_name,
                     )
-                surprisal_data = pd.read_csv(surprisal_file, sep=sep)
+                    surprisal_file = os.path.join(phon_corr_dir, 'phonSurprisal.tsv')
+                    if phon_env:
+                        surprisal_file_phon_env = os.path.join(phon_corr_dir, 'phonEnvSurprisal.tsv')
 
-                # Extract and save the surprisal values to phoneme_surprisal attribute of language object
-                loaded_surprisal = extract_surprisal_from_df(surprisal_data, lang2, phon_env=False)
-                correlator.surprisal_results[ngram_size] = loaded_surprisal
+                    correlator, FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY] = get_phone_correlator(
+                        lang1,
+                        lang2,
+                        phone_correlators_index=FAMILY_INDEX[self.name][PHONE_CORRELATORS_INDEX_KEY],
+                        log_outdir=self.phone_corr_dir,
+                    )
+                    # Try to load the file of saved surprisal values, otherwise calculate surprisal first
+                    if not os.path.exists(surprisal_file):
+                        correlator.compute_phone_corrs(
+                            phone_correlators_index=FAMILY_INDEX[self.name],
+                            ngram_size=ngram_size,
+                            phon_env=phon_env,
+                            **kwargs
+                        )
+                    surprisal_data = pd.read_csv(surprisal_file, sep=sep)
 
-                # Do the same for phonological environment surprisal
-                if phon_env and os.path.exists(surprisal_file_phon_env):
-                    phon_env_surprisal_data = pd.read_csv(surprisal_file_phon_env, sep=sep)
-                    loaded_phon_env_surprisal = extract_surprisal_from_df(phon_env_surprisal_data, lang2, phon_env=True)
-                    correlator.phon_env_surprisal_results = loaded_phon_env_surprisal
+                    # Extract and save the surprisal values to phoneme_surprisal attribute of language object
+                    loaded_surprisal = extract_surprisal_from_df(surprisal_data, lang2, phon_env=False)
+                    correlator.surprisal_results[ngram_size] = loaded_surprisal
 
-                elif phon_env:
-                    logger.warning(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}')
+                    # Do the same for phonological environment surprisal
+                    if phon_env and os.path.exists(surprisal_file_phon_env):
+                        phon_env_surprisal_data = pd.read_csv(surprisal_file_phon_env, sep=sep)
+                        loaded_phon_env_surprisal = extract_surprisal_from_df(phon_env_surprisal_data, lang2, phon_env=True)
+                        correlator.phon_env_surprisal_results = loaded_phon_env_surprisal
+
+                    elif phon_env:
+                        logger.warning(f'No saved phonological environment surprisal file found for {lang1.name}-{lang2.name}')
+                pbar.update(1)
 
     def get_doculect_pairs(self, bidirectional=False, include_self_pairs=True):
         if bidirectional:
@@ -543,7 +547,7 @@ class LexicalDataset:
         # TODO make option for instead using k-means clustering given a known/desired number of clusters, as a mutually exclusive parameter with cutoff
         concept_list = [concept for concept in concept_list if len(self.concepts[concept]) > 1]
         clustered_cognates = {}
-        
+
         # Unless otherwise specified, compute cluster threshold based on mean and standard deviation
         # of non-synonymous word pair scores across all doculect pairs
         if cluster_threshold is None and dist_func.cluster_threshold is not None:
@@ -553,16 +557,17 @@ class LexicalDataset:
             cluster_threshold = mean_nc - stdev_nc
             logger.info(f"Auto-computed cluster threshold: {round(cluster_threshold, 3)}")
         logger.info(f'Clustering cognates with threshold={round(cluster_threshold, 3)}...')
-
-        for concept in sorted(concept_list):
-            logger.info(f"Clustering cognates for concept '{concept}'...")
-            words = [word for lang in self.concepts[concept] for word in self.concepts[concept][lang]]
-            clusters = cluster_items(group=words,
-                                     dist_func=dist_func,
-                                     sim=dist_func.sim,
-                                     cutoff=cluster_threshold,
-                                     **kwargs)
-            clustered_cognates[concept] = clusters
+        with tqdm(total=len(concept_list)) as pbar:
+            for concept in sorted(concept_list):
+                pbar.set_description(f"Clustering cognates for concept '{concept}'...")
+                words = [word for lang in self.concepts[concept] for word in self.concepts[concept][lang]]
+                clusters = cluster_items(group=words,
+                                        dist_func=dist_func,
+                                        sim=dist_func.sim,
+                                        cutoff=cluster_threshold,
+                                        **kwargs)
+                clustered_cognates[concept] = clusters
+                pbar.update(1)
 
         # Create code and store the result
         if code is None:
@@ -813,7 +818,7 @@ class LexicalDataset:
 
         # Store computed distance matrix
         self.distance_matrices[code] = dm
-        
+
         # Write distance matrix to outfile
         if dm_outfile:
             outfile_dir = os.path.dirname(dm_outfile)
@@ -909,7 +914,7 @@ class LexicalDataset:
 
         # Fix formatting of Newick string
         newick_tree = postprocess_newick(newick_tree)
-        
+
         # Optionally root the tree at a specified tip or clade
         if root:
             newick_tree = reroot_tree(newick_tree, root)

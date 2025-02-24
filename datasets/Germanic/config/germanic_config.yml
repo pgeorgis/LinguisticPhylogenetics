@@ -1,7 +1,7 @@
 family:
     name: Germanic
     file: datasets/Germanic/data/germanic_data.tsv
-    exclude: ['Old English', 'Old West Norse', 'Plautdietsch', 'Old Dutch', 'Middle Dutch']
+    exclude: ['Old English', 'Plautdietsch', 'Old Dutch', 'Middle Dutch']
     outdir: datasets/Germanic/
 
 experiment:
@@ -18,6 +18,8 @@ transcription:
             normalize_geminates: true
         Gothic:
             normalize_geminates: true
+        "Old West Norse":
+            normalize_geminates: true
         Icelandic:
             normalize_geminates: true
         Faroese:
@@ -29,6 +31,12 @@ transcription:
         Elfdalian:
             normalize_geminates: true
         Swedish:
+            normalize_geminates: true
+        "Old English":
+            normalize_geminates: true
+        "Old High German":
+            normalize_geminates: true
+        "Middle High German":
             normalize_geminates: true
         "Swiss German":
             normalize_geminates: true

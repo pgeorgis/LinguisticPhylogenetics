@@ -1,5 +1,5 @@
 family:
-    include: ['Latin', 'Spanish', 'French', 'Romanian']
+    include: ['Latin', 'Sicilian', 'Italian', 'Venetian', 'Eastern Lombard', 'French']
 
 experiment:
     name: "test-minimal"

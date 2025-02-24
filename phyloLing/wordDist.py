@@ -632,7 +632,7 @@ def pmi_dist(word1, word2, family_index, normalize=True, sim2dist=True, alpha=0.
 
     # Calculate PMI scores for each aligned pair
     PMI_values = [
-        pmi_dict.get_value(Ngram(pair_left).undo(), Ngram(pair_right).undo())
+        pmi_dict.get_value_or_default(Ngram(pair_left).undo(), Ngram(pair_right).undo(), 0)
         for pair_left, pair_right in alignment.alignment
     ]
 

@@ -75,12 +75,12 @@ prepare:install_dependencies:
     <<: *commit-cache
     policy: pull-push
 
-.test-job:
+test:
   stage: test
   needs:
     - prepare:install_dependencies
   script:
-    - make test-${DATASET}
+    - make test-all
   artifacts:
     when: always
     paths:
@@ -90,32 +90,12 @@ prepare:install_dependencies:
     reports:
       junit: tests/*.xml
 
-test-romance:
-  extends: .test-job
-  variables:
-    DATASET: romance
-
-test-germanic:
-  extends: .test-job
-  variables:
-    DATASET: germanic
-
-test-sinitic:
-  extends: .test-job
-  variables:
-    DATASET: sinitic
-
-test-balto-slavic:
-  extends: .test-job
-  variables:
-    DATASET: balto-slavic
-
 .classify-job:
   stage: get-trees
   needs:
     - prepare:install_dependencies
   script:
-    - DATASET_NAME=$(echo ${DATASET} | sed -r 's/([a-z])([A-Z])/\1-\2/g' | tr '[:upper:]' '[:lower:]')
+    - DATASET_NAME=$(echo ${DATASET} | tr '[:upper:]' '[:lower:]')
     - make test-tree-distance-${DATASET_NAME}
   artifacts:
     when: always
@@ -141,7 +121,7 @@ classify-sinitic:
   variables:
     DATASET: Sinitic
 
-classify-balto-slavic:
+classify-baltoslavic:
   extends: .classify-job
   variables:
     DATASET: BaltoSlavic
