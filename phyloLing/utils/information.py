@@ -144,53 +144,6 @@ def marginalize_over_phon_env(phon_env_corr_map: PhonemeMap,
     return vanilla_corr_map
 
 
-def calculate_infocontent_of_word(seq, lang, ngram_size=3, pad_ch=PAD_CH_DEFAULT):
-    if len(seq) < ngram_size:
-        add_pad_n = ngram_size-len(seq)
-        seq = pad_sequence(seq, pad_n=add_pad_n, pad_ch=pad_ch)
-    pad_n = ngram_size - 1
-    info_content = {}
-    for i in range(pad_n, len(seq) - pad_n):
-        if ngram_size == 1:
-            unigram_count = lang.unigrams.get(Ngram(seq[i]).ngram, 0)
-            gappy_count = sum(lang.unigrams.values())
-            info_content_value = (seq[i], -log(unigram_count / gappy_count, 2))
-            info_content[i] = info_content_value
-        elif ngram_size == 2:
-            bigram_counts = 0
-            if i > 0:
-                bigram_counts += lang.bigrams.get((seq[i - 1], seq[i]), 0)
-            if i < len(seq) - 1:
-                bigram_counts += lang.bigrams.get((seq[i], seq[i + 1]), 0)
-            gappy_counts = 0
-            if i > 0:
-                gappy_counts += lang.gappy_bigrams.get((seq[i - 1], 'X'), 0)
-            if i < len(seq) - 1:
-                gappy_counts += lang.gappy_bigrams.get(('X', seq[i + 1]), 0)
-            try:
-                info_content_value = (seq[i], -log(bigram_counts / gappy_counts, 2))
-            except ZeroDivisionError:
-                breakpoint()
-            info_content[i] = info_content_value
-        else: # ngram_size = 3
-            trigram_counts = 0
-            trigram_counts += lang.trigrams.get((seq[i - 2], seq[i - 1], seq[i]), 0)
-            trigram_counts += lang.trigrams.get((seq[i - 1], seq[i], seq[i + 1]), 0)
-            trigram_counts += lang.trigrams.get((seq[i], seq[i + 1], seq[i + 2]), 0)
-            gappy_counts = 0
-            gappy_counts += lang.gappy_trigrams.get((seq[i - 2], seq[i - 1], 'X'), 0)
-            gappy_counts += lang.gappy_trigrams.get((seq[i - 1], 'X', seq[i + 1]), 0)
-            gappy_counts += lang.gappy_trigrams.get(('X', seq[i + 1], seq[i + 2]), 0)
-            # TODO : needs smoothing
-            try:
-                info_content_value = (seq[i], -log(trigram_counts / gappy_counts, 2))
-                info_content[i - 2] = info_content_value
-            except ValueError:
-                breakpoint()
-        
-    return info_content
-
-
 def entropy(x) -> float:
     """x should be a dictionary with absolute counts"""
     total = sum(x.values())

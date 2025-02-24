@@ -36,8 +36,8 @@ class Word:
         self.complex_segments = None
         self.syllables = None
         self.phon_env = self.getPhonEnv()
-        self.info_content = None
-        self.total_info_content = None
+        self.info_content = {}
+        self.total_info_content = {}
 
     def get_doculect(self, doculect_index):
         if self.doculect_key not in doculect_index:
@@ -103,7 +103,9 @@ class Word:
         def get_ngram_self_surprisal(ngram):
             ngram = Ngram(ngram)
             doculect = self.get_doculect(doculect_index=doculect_index)
-            ngram_info = doculect.self_surprisal(list(ngram.ngram), as_seq=True, ngram_size=ngram.size)
+            ngram_info = doculect.sequence_information_content(
+                ngram.ngram, ngram_size=ngram.size
+            )
             return mean([ngram_info[j][-1] for j in ngram_info])
         
         complex_ngram_seq = remove_overlapping_ngrams(
@@ -129,11 +131,11 @@ class Word:
             phon_env.append(get_phon_env(self.segments, i))
         return phon_env
 
-    def getInfoContent(self, doculect=None, total=False, doculect_index=None):
-        if self.info_content is not None:
+    def get_information_content(self, doculect=None, total=False, doculect_index=None, ngram_size=3):
+        if ngram_size in self.info_content:
             if total:
-                return self.total_info_content
-            return self.info_content
+                return self.total_info_content[ngram_size]
+            return self.info_content[ngram_size]
 
         if self.doculect_key is None and doculect is None:
             raise AssertionError('Doculect must be specified in order to calculate information content.')
@@ -142,11 +144,13 @@ class Word:
                 assert doculect.name == self.doculect_key
         else:
             doculect = self.get_doculect(doculect_index)
-        self.info_content = doculect.calculate_infocontent(self)
-        self.total_info_content = sum([self.info_content[j][-1] for j in self.info_content])
+
+        padded = pad_sequence(self.segments, pad_ch=PAD_CH_DEFAULT, pad_n=ngram_size - 1)
+        self.info_content[ngram_size] = doculect.sequence_information_content(seq=padded, ngram_size=ngram_size)
+        self.total_info_content[ngram_size] = sum([val for _, val in self.info_content[ngram_size].values()])
         if total:
-            return self.total_info_content
-        return self.info_content
+            return self.total_info_content[ngram_size]
+        return self.info_content[ngram_size]
 
     def __str__(self):
         syllables = self.get_syllables()
