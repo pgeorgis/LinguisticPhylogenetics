@@ -6,11 +6,8 @@ import re
 from collections import defaultdict
 from collections.abc import Iterable
 from itertools import combinations, product
-from math import sqrt
 from statistics import mean, stdev
-from tqdm import tqdm
 
-import bcubed
 import pandas as pd
 from constants import (ALIGNMENT_DELIMITER, ALIGNMENT_KEY_REGEX,
                        ALIGNMENT_PARAM_DEFAULTS, COGNATE_CLASS_LABEL,
@@ -23,18 +20,18 @@ from constants import (ALIGNMENT_DELIMITER, ALIGNMENT_KEY_REGEX,
 from lingDist import get_noncognate_scores
 from phonAlign import init_precomputed_alignment
 from phonCorr import get_phone_correlator
-from phonUtils.ipaTools import invalid_ch, normalize_ipa_ch, strip_diacritics
+from phonUtils.ipaTools import invalid_ch, normalize_ipa_ch
 from scipy.cluster.hierarchy import linkage
 from scipy.spatial.distance import squareform
 from skbio import DistanceMatrix
 from skbio.tree import nj
-from unidecode import unidecode
+from tqdm import tqdm
 from utils.cluster import cluster_items, linkage2newick
 from utils.distance import Distance, distance_matrix
 from utils.doculect import Doculect
 from utils.phoneme_map import PhonemeMap
 from utils.sequence import Ngram
-from utils.string import format_as_variable, strip_ch
+from utils.string import format_as_variable
 from utils.tree import postprocess_newick, reroot_tree
 from utils.utils import create_default_dict_of_dicts, csv2dict, default_dict
 
@@ -644,63 +641,6 @@ class LexicalDataset:
 
         return index
 
-    def evaluate_clusters(self, clustered_cognates, method='bcubed'):
-        """Evaluates B-cubed precision, recall, and F1 of results of automatic
-        cognate clustering against dataset's gold cognate classes"""
-
-        precision_scores, recall_scores, f1_scores, mcc_scores = {}, {}, {}, {}
-        ch_to_remove = self.transcription_params['global']['ch_to_remove'].union({'(', ')'})
-        for concept in clustered_cognates:
-            clusters = {'/'.join([strip_diacritics(unidecode.unidecode(item.split('/')[0])),
-                                  strip_ch(item.split('/')[1], ch_to_remove)]) + '/': {i} for i in clustered_cognates[concept]
-                        for item in clustered_cognates[concept][i]}
-
-            gold_clusters = {f'{strip_diacritics(unidecode.unidecode(lang))} /{strip_ch(tr, ch_to_remove)}/': {c}
-                             for c in self.cognate_sets
-                             if re.split('[-|_]', c)[0] == concept
-                             for lang in self.cognate_sets[c]
-                             for tr in self.cognate_sets[c][lang]}
-
-            # Skip concepts without any gold cognate class information
-            if len(gold_clusters) == 0:
-                continue
-
-            if method == 'bcubed':
-
-                precision = bcubed.precision(clusters, gold_clusters)
-                recall = bcubed.recall(clusters, gold_clusters)
-                fscore = bcubed.fscore(precision, recall)
-                precision_scores[concept] = precision
-                recall_scores[concept] = recall
-                f1_scores[concept] = fscore
-
-            elif method == 'mcc':
-                pairs = [(item1, item2) for item1 in gold_clusters for item2 in gold_clusters if item1 != item2]
-                results = []
-                for pair in pairs:
-                    w1, w2 = pair
-                    gold_value = gold_clusters[w1] == gold_clusters[w2]
-                    test_value = clusters[w1] == clusters[w2]
-                    results.append((gold_value, test_value))
-
-                TP = results.count((True, True))
-                FP = results.count((False, True))
-                TN = results.count((False, False))
-                FN = results.count((True, False))
-                num = (TP * TN) - (FP * FN)
-                dem = sqrt((TP + FP) * (TP + FN) * (TN + FP) * (TN + FN))
-                try:
-                    mcc = num / dem
-                except ZeroDivisionError:
-                    mcc = 0
-                mcc_scores[concept] = mcc
-
-            else:
-                raise ValueError(f'Error: Method "{method}" not recognized for cluster evaluation!')
-        if method == 'bcubed':
-            return mean(precision_scores.values()), mean(recall_scores.values()), mean(f1_scores.values())
-        elif method == 'mcc':
-            return mean(mcc_scores.values())
 
     def generate_test_code(self, dist_func, cognates=None, exclude=['logger'], **kwargs):  # TODO would it make more sense to create a separate class rather than the LexicalDataset for this?
         """Creates a unique identifier for the current experiment"""
