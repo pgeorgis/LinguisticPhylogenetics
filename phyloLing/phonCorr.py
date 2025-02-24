@@ -142,26 +142,29 @@ def postprocess_ibm_alignment(aligned_pair, remove_non_sequential_complex_alignm
 
         Disallow such complex/double alignments if they are not consecutive
         """
-        for j, i_s in aligned_seq2.items():
-            i_s.sort()
-            if len(i_s) > 1:
-                i_i = 0
-                i_s_len = len(i_s)
-                i_s_copy = i_s[:]
-                while i_i < i_s_len-1:
-                    i = i_s_copy[i_i]
-                    i_next = i_s_copy[i_i + 1]
+        for j, aligned_idxs in aligned_seq2.items():
+            aligned_idxs.sort()
+            if len(aligned_idxs) > 1:
+                offset = 0
+                n_aligned_idxs = len(aligned_idxs)
+                aligned_idxs_copy = aligned_idxs[:]
+                while offset < n_aligned_idxs - 1:
+                    i = aligned_idxs_copy[offset]
+                    i_next = aligned_idxs_copy[offset + 1]
                     if abs(i - i_next) > 1:
-                        anchor = mean(i_s+[j])
-
+                        anchor = mean(aligned_idxs + [j])
                         # Find which of the two is more distant from anchor
-                        more_distant_i = max(i_next, i, key=lambda x: abs(x - anchor))
+                        i_next_distance = abs(i_next - anchor)
+                        i_distance = abs(i - anchor)
+                        # Choose to remove the later of the two if both equally distant
+                        # (to avoid non-deterministic choice using max)
+                        more_distant_i = i_next if i_next_distance >= i_distance else i
                         aligned_seq2[j].remove(more_distant_i)
                         if len(aligned_seq1[more_distant_i]) > 1:
                             aligned_seq1[more_distant_i].remove(j)
                         else:
                             aligned_seq1[more_distant_i] = [None]
-                    i_i += 1
+                    offset += 1
 
     return aligned_seq1, aligned_seq2
 
@@ -189,7 +192,7 @@ def prune_corrs(corr_map: PhonemeMap, min_val: int=2, exc1: set=None, exc2: set=
         seg2_to_del = [
             seg2
             for seg2 in corr_map.get_secondary_keys(seg1)
-            if corr_map.get_value(seg1, seg2) < min_val
+            if corr_map.get_value_or_default(seg1, seg2, 0) < min_val
         ]
         for seg2 in seg2_to_del:
             if exc2 and Ngram(seg2).string in exc2:
@@ -283,17 +286,16 @@ def prune_extraneous_synonyms(wordlist: Wordlist,
                 if index not in best_indices and index not in tied_indices[concept]:
                     indices_to_prune.add(index)
 
-            # Now check for multiple l1 words mappedåto the same l2 word
-            # Choose only the best of these
+            # Now check for multiple l1 words mapped to the same l2 word
+            # Choose only the best of these, 
+            # unless scores are tied, in which case all are kept
             selected_word2 = [wordlist.word_pairs[index][-1] for index in best_indices]
             if len(set(selected_word2)) < len(best_indices):
                 for word2 in set(selected_word2):
                     indices = [index for index in best_indices if wordlist.word_pairs[index][-1] == word2]
-                    if maximize_score:
-                        best_choice = max(indices, key=lambda x: scores[x])
-                    else:
-                        best_choice = min(indices, key=lambda x: scores[x])
-                    indices_to_prune.update([index for index in indices if index != best_choice])
+                    best_score = max(scores[x] for x in indices) if maximize_score else min(scores[x] for x in indices)
+                    best_choices = set(x for x in indices if scores[x] == best_score)
+                    indices_to_prune.update([index for index in indices if index not in best_choices])
 
     # Then prune all suboptimal word pair indices
     indices_to_prune = sorted(list(indices_to_prune), reverse=True)
@@ -526,7 +528,7 @@ class PhonCorrelator:
                         allow_complex=False
                     )
                 # Add phonetic alignment cost to align_costs dict storing PMI values
-                base_align_cost = align_costs.get_value(ngram1.undo(), ngram2.undo())
+                base_align_cost = align_costs.get_value_or_default(ngram1.undo(), ngram2.undo(), 0)
                 align_costs.set_value(ngram1.undo(), ngram2.undo(), base_align_cost + phon_align_cost)
             align_costs.phon_dist_added = True
 
@@ -748,7 +750,7 @@ class PhonCorrelator:
             seg1_totals = agg_seg1_totals[seg1]
             for seg2 in conditional_counts.get_secondary_keys(seg1):
                 seg2_ngram = Ngram(seg2)
-                cond_count = conditional_counts.get_value(seg1, seg2)
+                cond_count = conditional_counts.get_value_or_default(seg1, seg2, 0)
                 cond_prob = cond_count / seg1_totals
                 p_ind1 = wordlist.ngram_probability(seg1_ngram, lang=1)
                 joint_prob = cond_prob * p_ind1
@@ -1244,7 +1246,7 @@ class PhonCorrelator:
                     interpolation[i].increment_value(
                         Ngram(ngram1).ngram,
                         Ngram(ngram2).ngram,
-                        correspondence_counts.get_value(ngram1, ngram2)
+                        correspondence_counts.get_value_or_default(ngram1, ngram2, 0)
                     )
 
         # Add in phonological environment correspondences, e.g. ('l', '#S<') (word-initial 'l') with 'ʎ'
@@ -1268,7 +1270,7 @@ class PhonCorrelator:
                         interpolation['phon_env'].increment_value(
                             ngram1_context,
                             Ngram(ngram2).ngram,
-                            phon_env_corr_counts.get_value(ngram1, ngram2)
+                            phon_env_corr_counts.get_value_or_default(ngram1, ngram2, 0)
                         )
 
         # Get lists of possible ngrams in lang1 and lang2

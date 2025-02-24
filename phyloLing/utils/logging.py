@@ -102,7 +102,7 @@ def write_phoneme_pmi_report(pmi_results, outfile, threshold=0.0001, sep='\t'):
     lines = []
     for seg1 in pmi_results.get_primary_keys():
         for seg2 in pmi_results.get_secondary_keys(seg1):
-            pmi_val = round(pmi_results.get_value(seg1, seg2), 3)
+            pmi_val = round(pmi_results.get_value_or_default(seg1, seg2, 0), 3)
             if abs(pmi_val) > threshold:
                 line = [ngram2log_format(seg1), ngram2log_format(seg2), str(pmi_val)]
                 lines.append(line)

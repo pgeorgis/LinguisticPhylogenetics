@@ -178,20 +178,20 @@ class PhonemeMap:
         return self.internal_map.length()
 
 
-def average_corrs(corr_dict1: PhonemeMap, corr_dict2: PhonemeMap) -> PhonemeMap:
-    avg_corr: PhonemeMap = PhonemeMap(0)
+def average_corrs(corr_dict1: PhonemeMap, corr_dict2: PhonemeMap, default=0) -> PhonemeMap:
+    avg_corr: PhonemeMap = PhonemeMap(default)
     for (seg1, seg2) in corr_dict1.get_key_pairs():
         avg_corr.set_value(
             seg1,
             seg2,
-            mean([corr_dict1.get_value(seg1, seg2), corr_dict2.get_value(seg2, seg1)])
+            mean([corr_dict1.get_value_or_default(seg1, seg2, default), corr_dict2.get_value_or_default(seg2, seg1, default)])
         )
     for (seg2, seg1) in corr_dict2.get_key_pairs():
         if not avg_corr.has_value(seg1, seg2):
             avg_corr.set_value(
                 seg1,
                 seg2,
-                mean([corr_dict1.get_value(seg1, seg2), corr_dict2.get_value(seg2, seg1)])
+                mean([corr_dict1.get_value_or_default(seg1, seg2, default), corr_dict2.get_value_or_default(seg2, seg1, default)])
             )
     return avg_corr
 
@@ -220,10 +220,10 @@ def average_nested_dicts(dict_list: Iterable[PhonemeMap], default=0, drop_inf=Tr
     return results
 
 
-def reverse_corr_dict_map(corr_dict: PhonemeMap) -> PhonemeMap:
+def reverse_corr_dict_map(corr_dict: PhonemeMap, default=0) -> PhonemeMap:
     if not isinstance(corr_dict, PhonemeMap):
         raise ValueError("corr_dict must be a PhonemeMap object")
-    reverse = PhonemeMap(0)
+    reverse = PhonemeMap(default)
     for (seg1, seg2) in corr_dict.get_key_pairs():
-        reverse.set_value(seg2, seg1, corr_dict.get_value(seg1, seg2))
+        reverse.set_value(seg2, seg1, corr_dict.get_value_or_default(seg1, seg2, default))
     return reverse
