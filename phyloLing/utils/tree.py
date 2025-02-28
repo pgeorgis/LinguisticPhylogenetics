@@ -340,11 +340,11 @@ def taxa_subset_state(tips, tree):
             triplet_clade = [tree.taxon_namespace[t] for t in tips if t != tip_n]
             triplet_labels = [t.label for t in triplet_clade]
             mrca_triplet = tree.mrca(taxon_labels=triplet_labels)
-            singleton_label = tree.taxon_namespace[tip_n].label
-            mrca_triplet_leaves = [leaf.label for leaf in mrca_triplet.leaf_nodes()]
-
-            if singleton_label not in mrca_triplet_leaves:
-                return 4 + i  # Singleton branch pattern
+            if mrca_triplet is not None:
+                singleton_label = tree.taxon_namespace[tip_n].label
+                mrca_triplet_leaves = [leaf.label for leaf in mrca_triplet.leaf_nodes()]
+                if singleton_label not in mrca_triplet_leaves:
+                    return 4 + i  # Singleton branch pattern
 
     else:
         raise NotImplementedError("Not supported for >4 tips")
@@ -395,6 +395,8 @@ def gqd(non_binary_tree, binary_tree, is_rooted=True, group_size=4, weight_by_de
                     for tip in ntet
                 ]
             )
+            if mrca is None:
+                continue
             incr = 1
             if weight_by_depth_in_tree:
                 weight = 1 + (max_depth - mrca.distance_from_root()) / max_depth
