@@ -1,18 +1,18 @@
 VOWELS
 /ə/ (0.094)
-	<drive> /dɾˈiːʋə/ "drive_VERB"
-	<tåre> /tʰˈoːɾə/ "tear_NOUN"
+	<drikke> /dɾˈɪkːə/ "drink_VERB"
+	<svømme> /sʋˈœmːə/ "swim_VERB"
 	<brygge> /bɾˈʏɡːə/ "bridge_NOUN"
 
-/ˈɑ/ (0.027)
-	<halv> /hˈɑlː/ "half_NOUN"
-	<svart> /sʋˈɑʈ/ "black_ADJ"
-	<natt> /nˈɑtː/ "night_NOUN_FEM"
-
-/ˈɛ/ (0.026)
-	<tretten> /tʰɾˈɛtːən/ "thirteen_NUM"
+/ˈɛ/ (0.027)
+	<gress> /ɡɾˈɛsː/ "grass_NOUN_NEU"
+	<egg> /ˈɛɡː/ "edge_NOUN"
 	<lett> /lˈɛtː/ "light_ADJ"
-	<menn> /mˈɛnː/ "men_NOUN_PL"
+
+/ˈɑ/ (0.027)
+	<vann> /ʋˈɑnː/ "water_NOUN"
+	<navn> /nˈɑʋn/ "name_NOUN"
+	<natt> /nˈɑtː/ "night_NOUN_FEM"
 
 /ˈuː/ (0.023)
 	<kone> /kʰˈuːnə/ "woman_NOUN"
@@ -54,17 +54,17 @@ VOWELS
 	<tørr> /tʰˈœɾ/ "dry_ADJ"
 	<grønn> /ɡɾˈœnː/ "green_ADJ"
 
-/ˈyː/ (0.014)
+/ˈyː/ (0.013)
 	<lyve> /lˈyːʋə/ "tell lies_VERB"
 	<dyr> /dˈyːɾ/ "animal_NOUN"
 	<ny> /nˈyː/ "new_ADJ"
 
-/ˈeː/ (0.014)
+/ˈeː/ (0.013)
 	<kne> /kʰnˈeː/ "knee_NOUN"
 	<en> /ˈeːn/ "one_NUM"
 	<tre> /tʰɾˈeː/ "tree_NOUN"
 
-/ˈɑː/ (0.013)
+/ˈɑː/ (0.012)
 	<blad> /blˈɑː/ "leaf_NOUN_NEU"
 	<dag> /dˈɑːɡ/ "day_NOUN"
 	<hare> /hˈɑːɾə/ "hare_NOUN"
@@ -192,23 +192,23 @@ CONSONANTS
 	<høy> /hˈøːj/ "high_ADJ"
 	<gjest> /jˈɛst/ "guest_NOUN"
 
-/lː/ (0.014)
-	<ull> /ˈʉlː/ "wool_NOUN_FEM"
-	<kald> /kʰˈɑlː/ "cold_ADJ"
-	<selv> /sˈɛlː/ "self_PRON"
-
 /tː/ (0.013)
-	<rett> /ɾˈɛtː/ "right_ADJ"
-	<føtter> /fˈœtːəɾ/ "feet_NOUN_PL"
-	<natt> /nˈɑtː/ "night_NOUN_FEM"
+	<tretten> /tʰɾˈɛtːən/ "thirteen_NUM"
+	<datter> /dˈɑtːəɾ/ "daughter_NOUN"
+	<nøtt> /nˈœtː/ "nut_NOUN"
 
-/kʰ/ (0.013)
+/lː/ (0.013)
+	<ull> /ˈʉlː/ "wool_NOUN_FEM"
+	<selv> /sˈɛlː/ "self_PRON"
+	<ild> /ˈɪlː/ "fire_NOUN"
+
+/kʰ/ (0.012)
+	<ku> /kʰˈʉː/ "cow_NOUN"
 	<kalv> /kʰˈɑlʋ/ "calf_NOUN"
 	<konge> /kʰˈʊŋə/ "king_NOUN"
-	<korn> /kʰˈuːɳ/ "corn_NOUN"
 
 /ŋː/ (0.009)
-	<ung> /ˈʉŋː/ "young_NOUN"
+	<slange> /slˈɑŋːə/ "snake_NOUN"
 	<ring> /ɾˈɪŋː/ "ring_NOUN"
 	<synge> /sˈʏŋːə/ "sing_VERB"
 
@@ -222,20 +222,20 @@ CONSONANTS
 	<skjold> /ʂˈɔlː/ "shield_NOUN"
 	<sju> /ʂˈʉː/ "seven_NUM"
 
+/ç/ (0.008)
+	<kjette> /çˈɛtːə/ "cat_NOUN"
+	<kjenne> /çˈɛnːə/ "ken_VERB"
+	<tjukk> /çˈʉkː/ "thick_ADJ"
+
 /ɳ/ (0.007)
-	<bjørn> /bjˈøːɳ/ "bear_NOUN"
 	<stjerne> /stjˈæːɳə/ "star_NOUN"
-	<torn> /tʰˈuːɳ/ "thorn_NOUN"
+	<garn> /ɡˈɑːɳ/ "yarn_NOUN"
+	<korn> /kʰˈuːɳ/ "corn_NOUN"
 
 /ɡː/ (0.007)
+	<egg> /ˈɛɡː/ "egg_NOUN_NEU"
 	<ligge> /lˈɪɡːə/ "lie_VERB"
-	<rygg> /ɾˈʏɡː/ "ridge_NOUN"
-	<egg> /ˈɛɡː/ "edge_NOUN"
-
-/ç/ (0.007)
-	<kjenne> /çˈɛnːə/ "ken_VERB"
-	<kjøtt> /çˈœtː/ "meat_NOUN"
-	<kylling> /çˈʏlːɪŋ/ "chicken_NOUN"
+	<brygge> /bɾˈʏɡːə/ "brew_VERB"
 
 /mː/ (0.006)
 	<drømme> /dɾˈœmːə/ "dream_VERB"

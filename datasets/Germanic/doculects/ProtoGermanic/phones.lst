@@ -6,13 +6,13 @@ VOWELS
 
 /ɑ̃/ (0.057)
 	<kiukīną> /kˈiu̯kiːnɑ̃/ "chicken_NOUN"
-	<mūlą> /mˈuːlɑ̃/ "mouth_NOUN"
-	<wībą> /wˈiːβɑ̃/ "wife_NOUN"
+	<ketwą> /kˈetwɑ̃/ "meat_NOUN"
+	<hwehwlą> /xʷˈexʷlɑ̃/ "wheel_NOUN"
 
-/ˈɑ/ (0.039)
-	<slahaną> /slˈɑxɑnɑ̃/ "slay_VERB"
-	<trahnuz> /trˈɑxnuz/ "tear_NOUN_FEM"
-	<anþeraz> /ˈɑnθerɑz/ "other_ADJ"
+/ˈɑ/ (0.04)
+	<skarpaz> /skˈɑrpɑz/ "sharp_ADJ"
+	<slangô> /slˈɑŋɡɔːː/ "snake_NOUN"
+	<nasō> /nˈɑsɔː/ "nose_NOUN"
 
 /ˈu/ (0.032)
 	<uns> /ˈuns/ "us_PRON"
@@ -60,19 +60,19 @@ VOWELS
 	<mūs> /mˈuːs/ "mouse_NOUN_FEM"
 
 /ɔː/ (0.009)
-	<mugjō> /mˈuɣjɔː/ "midge_NOUN"
-	<nasō> /nˈɑsɔː/ "nose_NOUN"
-	<fedwōr> /ɸˈeðwɔːr/ "four_NUM"
+	<librō> /lˈiβrɔː/ "liver_NOUN"
+	<wullō> /wˈulːɔː/ "wool_NOUN_FEM"
+	<þankōną> /θˈɑŋkɔːnɑ̃/ "thank_VERB"
 
 /ˈeu̯/ (0.008)
-	<leuganą> /lˈeu̯ɣɑnɑ̃/ "tell lies_VERB"
 	<fleugǭ> /ɸlˈeu̯ɣɔ̃ː/ "housefly_NOUN"
 	<deupaz> /dˈeu̯pɑz/ "deep_ADJ"
+	<deuzą> /dˈeu̯zɑ̃/ "animal_NOUN"
 
 /ɔ̃ː/ (0.008)
-	<askǭ> /ˈɑskɔ̃ː/ "ash_NOUN"
-	<uwwalǭ> /ˈuwːɑlɔ̃ː/ "owl_NOUN"
-	<sternǭ> /stˈernɔ̃ː/ "star_NOUN"
+	<fleugǭ> /ɸlˈeu̯ɣɔ̃ː/ "housefly_NOUN"
+	<frawjǭ> /ɸrˈɑwjɔ̃ː/ "woman_NOUN"
+	<sīdǭ> /sˈiːðɔ̃ː/ "side_NOUN"
 
 /ɔːː/ (0.008)
 	<namô> /nˈɑmɔːː/ "name_NOUN"
@@ -84,7 +84,7 @@ VOWELS
 	<sīdǭ> /sˈiːðɔ̃ː/ "side_NOUN"
 	<drībaną> /drˈiːβɑnɑ̃/ "drive_VERB"
 
-/ˈɛː/ (0.006)
+/ˈɛː/ (0.005)
 	<nēhwist> /nˈɛːxʷist/ "next_ADJ"
 	<wēpną> /wˈɛːpnɑ̃/ "weapon_NOUN"
 	<skēpą> /skˈɛːpɑ̃/ "sheep_NOUN"
@@ -145,7 +145,7 @@ CONSONANTS
 /n/ (0.067)
 	<blōþijaną> /blˈɔːθijɑnɑ̃/ "bleed_VERB"
 	<hanjō> /xˈɑnjɔː/ "hen_NOUN"
-	<stainaz> /stˈɑi̯nɑz/ "stone_NOUN"
+	<sternǭ> /stˈernɔ̃ː/ "star_NOUN"
 
 /s/ (0.053)
 	<sūkaną> /sˈuːkɑnɑ̃/ "suck_VERB"
@@ -163,121 +163,122 @@ CONSONANTS
 	<plihti> /plˈixti/ "plight_NOUN"
 
 /l/ (0.035)
-	<gelwaz> /ɣˈelwɑz/ "yellow_ADJ"
-	<apaliją> /ˈɑpɑlijɑ̃/ "apple_NOUN"
-	<skelduz> /skˈelduz/ "shield_NOUN"
+	<apluz> /ˈɑpluz/ "apple_NOUN"
+	<hailagaz> /xˈɑi̯lɑɣɑz/ "holy_ADJ"
+	<hlahjaną> /xlˈɑxjɑnɑ̃/ "laugh_VERB"
 
 /x/ (0.031)
-	<hertô> /xˈertɔːː/ "heart_NOUN"
-	<leuhtą> /lˈeu̯xtɑ̃/ "light_NOUN"
-	<mahtiz> /mˈɑxtiz/ "might_NOUN"
+	<haitaz> /xˈɑi̯tɑz/ "hot_ADJ"
+	<hlaupaną> /xlˈɑu̯pɑnɑ̃/ "leap_VERB"
+	<hunangą> /xˈunɑŋɡɑ̃/ "honey_NOUN"
 
-/k/ (0.03)
-	<kaldaz> /kˈɑldɑz/ "cold_ADJ"
-	<kannijaną> /kˈɑnːijɑnɑ̃/ "ken_VERB"
-	<aiks> /ˈɑi̯ks/ "oak_NOUN_FEM"
+/k/ (0.031)
+	<sōkijaną> /sˈɔːkijɑnɑ̃/ "seek_VERB"
+	<flaiski> /ɸlˈɑi̯ski/ "flesh_NOUN"
+	<knuttô> /knˈutːɔːː/ "knot_NOUN"
 
 /w/ (0.026)
-	<twalif> /twˈɑliɸ/ "twelve_NUM"
-	<windaz> /wˈindɑz/ "wind_NOUN"
-	<wīz> /wˈiːz/ "we_PRON"
+	<swōtuz> /swˈɔːtuz/ "sweet_ADJ"
+	<wundrą> /wˈundrɑ̃/ "wonder_NOUN"
+	<wilþijaz> /wˈilθijɑz/ "wild_ADJ"
 
 /ɣ/ (0.023)
-	<gudą> /ɣˈuðɑ̃/ "god_NOUN"
-	<sagjaną> /sˈɑɣjɑnɑ̃/ "say_VERB"
 	<twai tigiwiz> /twɑi̯tˈiɣiwiz/ "twenty_NUM"
+	<fuglaz> /ɸˈuɣlɑz/ "bird_NOUN_MASC"
+	<gastiz> /ɣˈɑstiz/ "guest_NOUN"
 
 /θ/ (0.02)
-	<þiudiskaz> /θˈiu̯ðiskɑz/ "Teutonic_ADJ"
-	<þunnuz> /θˈunːuz/ "thin_ADJ"
 	<þrīz> /θrˈiːz/ "three_NUM"
+	<þursuz> /θˈursuz/ "dry_ADJ"
+	<þūmô> /θˈuːmɔːː/ "thumb_NOUN"
 
 /j/ (0.02)
-	<diurijaz> /dˈiu̯rijɑz/ "expensive_ADJ"
-	<jūz> /jˈuːz/ "ye_PRON"
 	<jungaz> /jˈuŋɡɑz/ "young_NOUN"
+	<habjaną> /xˈɑβjɑnɑ̃/ "have_VERB"
+	<sagjaną> /sˈɑɣjɑnɑ̃/ "say_VERB"
 
 /ɸ/ (0.019)
-	<flaiski> /ɸlˈɑi̯ski/ "flesh_NOUN"
-	<fleugǭ> /ɸlˈeu̯ɣɔ̃ː/ "housefly_NOUN"
 	<fadēr> /ɸˈɑðɛːr/ "father_NOUN"
+	<swefaną> /swˈeɸɑnɑ̃/ "sleep_VERB"
+	<freusaną> /ɸrˈeu̯sɑnɑ̃/ "freeze_VERB"
 
 /m/ (0.019)
-	<þūmô> /θˈuːmɔːː/ "thumb_NOUN"
-	<mūlą> /mˈuːlɑ̃/ "mouth_NOUN"
 	<miz> /mˈiz/ "me_PRON_DAT"
+	<warmaz> /wˈɑrmɑz/ "warm_ADJ"
+	<samdaz> /sˈɑmdɑz/ "sand_NOUN"
 
 /d/ (0.017)
-	<wundrą> /wˈundrɑ̃/ "wonder_NOUN"
-	<draugiz> /drˈɑu̯ɣiz/ "dry_ADJ"
-	<draumijaną> /drˈɑu̯mijɑnɑ̃/ "dream_VERB"
+	<drībaną> /drˈiːβɑnɑ̃/ "drive_VERB"
+	<skelduz> /skˈelduz/ "shield_NOUN"
+	<dūbǭ> /dˈuːβɔ̃ː/ "dove_NOUN"
 
 /b/ (0.016)
-	<bōks> /bˈɔːks/ "book_NOUN_FEM"
-	<bergaz> /bˈerɣɑz/ "mountain_NOUN"
+	<baitaz> /bˈɑi̯tɑz/ "boat_NOUN"
 	<blōþijaną> /blˈɔːθijɑnɑ̃/ "bleed_VERB"
+	<baþą> /bˈɑθɑ̃/ "bath_NOUN_NEU"
 
 /ð/ (0.013)
-	<mōdēr> /mˈɔːðɛːr/ "mother_NOUN"
-	<hundaradą> /xˈundɑrɑðɑ̃/ "hundred_NUM"
-	<þiudiskaz> /θˈiu̯ðiskɑz/ "Teutonic_ADJ"
+	<sīdǭ> /sˈiːðɔ̃ː/ "side_NOUN"
+	<swerdą> /swˈerðɑ̃/ "sword_NOUN"
+	<haubudą> /xˈɑu̯βuðɑ̃/ "head_NOUN"
 
 /β/ (0.009)
-	<nabją> /nˈɑβjɑ̃/ "nose_NOUN"
 	<sebun> /sˈeβun/ "seven_NUM"
-	<librō> /lˈiβrɔː/ "liver_NOUN"
+	<leubaz> /lˈeu̯βɑz/ "beloved_ADJ"
+	<ubiri> /ˈuβiri/ "over_PREP"
 
 /ŋ/ (0.008)
-	<kukkilīngaz> /kˈukːiliːŋɡaz/ "chicken_NOUN"
-	<þingą> /θˈiŋɡɑ̃/ "thing_NOUN"
 	<ganganą> /ɣˈɑŋɡɑnɑ̃/ "go_VERB"
-
-/p/ (0.008)
-	<skēpą> /skˈɛːpɑ̃/ "sheep_NOUN"
-	<apluz> /ˈɑpluz/ "apple_NOUN"
-	<plōgaz> /plˈɔːɣɑz/ "plough_NOUN"
-
-/ɡ/ (0.007)
-	<þingą> /θˈiŋɡɑ̃/ "thing_NOUN"
-	<ganganą> /ɣˈɑŋɡɑnɑ̃/ "go_VERB"
+	<slangô> /slˈɑŋɡɔːː/ "snake_NOUN"
 	<fingraz> /ɸˈiŋɡrɑz/ "finger_NOUN"
 
-/xʷ/ (0.006)
-	<hwītaz> /xʷˈiːtɑz/ "white_ADJ"
-	<hwat> /xʷˈɑt/ "what_PRON"
+/p/ (0.008)
+	<plōgaz> /plˈɔːɣɑz/ "plough_NOUN"
+	<skarpaz> /skˈɑrpɑz/ "sharp_ADJ"
+	<apluz> /ˈɑpluz/ "apple_NOUN"
+
+/ɡ/ (0.007)
+	<fingraz> /ɸˈiŋɡrɑz/ "finger_NOUN"
+	<slangô> /slˈɑŋɡɔːː/ "snake_NOUN"
+	<hungruz> /xˈuŋɡruz/ "hunger_NOUN"
+
+/xʷ/ (0.005)
 	<nēhwist> /nˈɛːxʷist/ "next_ADJ"
+	<sehwaną> /sˈexʷɑnɑ̃/ "see_VERB"
+	<hwītaz> /xʷˈiːtɑz/ "white_ADJ"
 
 /nː/ (0.004)
 	<þunnuz> /θˈunːuz/ "thin_ADJ"
-	<þunniz> /θˈunːiz/ "thin_ADJ"
 	<kunnaną> /kˈunːɑnɑ̃/ "can_VERB"
-
-/kʷ/ (0.002)
-	<kwemaną> /kʷˈemɑnɑ̃/ "come_VERB"
-	<kwenǭ> /kʷˈenɔ̃ː/ "woman_NOUN"
-	<nakwadaz> /nˈɑkʷɑðɑz/ "naked_ADJ"
+	<manniz> /mˈɑnːiz/ "men_NOUN_PL"
 
 /tː/ (0.002)
 	<kattuz> /kˈɑtːuz/ "cat_NOUN"
-	<knuttô> /knˈutːɔːː/ "knot_NOUN"
+	<kattǭ> /kˈɑtːɔ̃ː/ "cat_NOUN"
 	<hwittaz> /xʷˈitːɑz/ "white_ADJ"
+
+/kʷ/ (0.002)
+	<waikwaz> /wˈɑi̯kʷɑz/ "weak_ADJ"
+	<kwemaną> /kʷˈemɑnɑ̃/ "come_VERB"
+	<kwenǭ> /kʷˈenɔ̃ː/ "woman_NOUN"
 
 /lː/ (0.002)
 	<fullaz> /ɸˈulːɑz/ "full_ADJ"
-	<allaz> /ˈɑlːɑz/ "all_ADJ"
 	<wullō> /wˈulːɔː/ "wool_NOUN_FEM"
+	<allaz> /ˈɑlːɑz/ "all_ADJ"
 
-/wː/ (0.001)
-	<uwwalǭ> /ˈuwːɑlɔ̃ː/ "owl_NOUN"
-	<brewwaną> /brˈewːɑnɑ̃/ "brew_VERB"
-
-/pː/ (0.001)
-	<kuppaz> /kˈupːɑz/ "head_NOUN"
-	<upp> /ˈupː/ "up_ADV"
-
-/kː/ (0.001)
+/kː/ (0.002)
 	<kukkilīngaz> /kˈukːiliːŋɡaz/ "chicken_NOUN"
 	<þrukkijaną> /θrˈukːijɑnɑ̃/ "press_VERB"
+	<hlakkōną> /xlˈɑkːɔːnɑ̃/ "laugh_VERB"
+
+/wː/ (0.001)
+	<brewwaną> /brˈewːɑnɑ̃/ "brew_VERB"
+	<uwwalǭ> /ˈuwːɑlɔ̃ː/ "owl_NOUN"
+
+/pː/ (0.001)
+	<upp> /ˈupː/ "up_ADV"
+	<kuppaz> /kˈupːɑz/ "head_NOUN"
 
 /ɡʷ/ (0.001)
 	<singwaną> /sˈiŋɡʷɑnɑ̃/ "sing_VERB"

@@ -9,15 +9,15 @@ VOWELS
 	<קומען> /kˈʊmən/ "come_VERB"
 	<זומער> /zˈʊməʀ/ "summer_NOUN"
 
-/ˈa/ (0.037)
-	<זאַמד> /zˈamd/ "sand_NOUN"
-	<שלאַנג> /ʃɫˈaŋɡ/ "snake_NOUN"
-	<נאַכט> /nˈaχt/ "night_NOUN_FEM"
+/ˈɔ/ (0.037)
+	<וואָפֿן> /vˈɔfn̩/ "weapon_NOUN"
+	<וואָס> /vˈɔs/ "what_PRON"
+	<שלאָפֿן> /ʃɫˈɔfn̩/ "sleep_VERB"
 
-/ˈɔ/ (0.036)
-	<קאָפּ> /kˈɔp/ "head_NOUN"
-	<פֿאָלגן> /fˈɔɫɡn̩/ "follow_VERB"
-	<וואָל> /vˈɔɫ/ "wool_NOUN_FEM"
+/ˈa/ (0.037)
+	<האַסן> /hˈasn̩/ "hate_VERB"
+	<קאַלט> /kˈaɫt/ "cold_ADJ"
+	<שפּראַך> /ʃpʀˈaχ/ "speech_NOUN_FEM"
 
 /ˈɛ/ (0.034)
 	<בער> /bˈɛʀ/ "bear_NOUN"
@@ -65,20 +65,20 @@ CONSONANTS
 	<בײַסן> /bˈaɪ̯sn̩/ "bite_VERB"
 	<זיצן> /zˈɪʦn̩/ "sit_VERB"
 
-/ʀ/ (0.082)
+/ʀ/ (0.083)
 	<גראָז> /ɡʀˈɔz/ "grass_NOUN_NEU"
-	<שטורעם> /ʃtˈʊʀɛm/ "storm_NOUN"
-	<דרײַ> /dʀˈaɪ̯/ "three_NUM"
+	<שטערן> /ʃtˈɛʀən/ "star_NOUN"
+	<דאָרן> /dˈɔʀn/ "thorn_NOUN"
 
 /t/ (0.064)
 	<נאַקעט> /nˈakɛt/ "naked_ADJ"
 	<טרוים> /tʀˈɔɪ̯m/ "dream_NOUN"
 	<גײַסט> /ɡˈaɪ̯st/ "ghost_NOUN"
 
-/ɫ/ (0.051)
+/ɫ/ (0.052)
 	<פֿאָלגן> /fˈɔɫɡn̩/ "follow_VERB"
-	<שטול> /ʃtˈʊɫ/ "stool_NOUN"
-	<וואָל> /vˈɔɫ/ "wool_NOUN_FEM"
+	<שלאַנג> /ʃɫˈaŋɡ/ "snake_NOUN"
+	<וואָלף> /vˈɔɫf/ "wolf_NOUN"
 
 /f/ (0.041)
 	<פֿליכט> /fɫˈɪχt/ "plight_NOUN"
@@ -90,10 +90,10 @@ CONSONANTS
 	<געל> /ɡˈɛɫ/ "yellow_ADJ"
 	<נאָגל> /nˈɔɡɫ̩/ "fingernail_NOUN"
 
-/v/ (0.031)
-	<שווימען> /ʃvˈɪmən/ "swim_VERB"
-	<ווילד> /vˈɪɫd/ "wild_ADJ"
-	<ווינטער> /vˈɪntəʀ/ "winter_NOUN"
+/v/ (0.032)
+	<שווייס> /ʃvˈɛɪ̯s/ "sweat_NOUN"
+	<ווײַב> /vˈaɪ̯b/ "wife_NOUN"
+	<ווײַן> /vˈaɪ̯n/ "wine_NOUN"
 
 /d/ (0.031)
 	<אונדז> /ˈʊndz/ "us_PRON"
@@ -140,10 +140,10 @@ CONSONANTS
 	<הויך> /hˈɔɪ̯χ/ "high_ADJ"
 	<הויז> /hˈɔɪ̯z/ "house_NOUN"
 
-/ʦ/ (0.015)
-	<צוועלף> /ʦvˈɛɫf/ "twelve_NUM"
-	<צוואַנציק> /ʦvˈanʦɪk/ "twenty_NUM"
+/ʦ/ (0.016)
+	<צוויי> /ʦvˈɛɪ̯/ "two_NUM"
 	<צאָן> /ʦˈɔn/ "tooth_NOUN"
+	<צוועלף> /ʦvˈɛɫf/ "twelve_NUM"
 
 /ŋ/ (0.01)
 	<זינגען> /zˈɪŋɡn̩/ "sing_VERB"

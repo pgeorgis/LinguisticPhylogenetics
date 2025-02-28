@@ -1,7 +1,7 @@
 VOWELS
-/æ/ (0.046)
+/æ/ (0.047)
 	<düer> /dˈyːæ/ "expensive_ADJ"
-	<Wäder> /vˈɛːɾæ/ "weather_NOUN"
+	<Wåter> /vˈɒːtæ/ "water_NOUN"
 	<Brauder> /brˈaʊ̯ɾæ/ "brother_NOUN"
 
 /ˈɪ/ (0.03)
@@ -49,12 +49,12 @@ VOWELS
 	<gäl> /jˈɛl/ "yellow_ADJ"
 	<seggen> /zˈɛŋ/ "say_VERB"
 
-/ˈʏ/ (0.012)
+/ˈʏ/ (0.011)
 	<drütteihn> /drˈʏtae̯n/ "thirteen_NUM"
 	<Brügg> /brˈʏç/ "bridge_NOUN"
 	<Süster> /zˈʏstæ/ "sister_NOUN"
 
-/ˈɔ/ (0.012)
+/ˈɔ/ (0.011)
 	<Sommer> /zˈɔmæ/ "summer_NOUN"
 	<Voss> /fˈɔs/ "fox_NOUN"
 	<Kopp> /kʰˈɔp/ "head_NOUN"
@@ -74,10 +74,10 @@ VOWELS
 	<Hart> /hˈaːt/ "heart_NOUN"
 	<Bad> /bˈaːd̥/ "bath_NOUN_NEU"
 
-/ˈœː/ (0.007)
-	<Sœhn> /zˈœːn/ "son_NOUN"
-	<för> /fˈœːæ/ "for_PREP"
+/ˈœː/ (0.008)
 	<œwer> /ˈœːvæ/ "over_PREP"
+	<Sœhn> /zˈœːn/ "son_NOUN"
+	<Sœch> /zˈœːç/ "sow_NOUN"
 
 /ˈoː/ (0.007)
 	<Hor> /hˈoːæ/ "hair_NOUN"
@@ -120,7 +120,7 @@ VOWELS
 
 
 CONSONANTS
-/n/ (0.099)
+/n/ (0.098)
 	<Minsch> /mˈɪnʃ/ "person_NOUN"
 	<wünschen> /vˈʏnʃn̩/ "wish_VERB"
 	<haten> /hˈaːtn̩/ "hate_VERB"
@@ -128,7 +128,7 @@ CONSONANTS
 /l/ (0.057)
 	<Land> /lˈand̥/ "land_NOUN"
 	<Nådel> /nˈɒːdl̩/ "needle_NOUN"
-	<Schlang> /ʃlˈaŋ/ "snake_NOUN"
+	<schlåpen> /ʃlˈɒːbm̩/ "sleep_VERB"
 
 /t/ (0.047)
 	<witt> /vˈɪt/ "white_ADJ"
@@ -142,8 +142,8 @@ CONSONANTS
 
 /d/ (0.034)
 	<Duf> /dˈuːv̥/ "dove_NOUN"
-	<drütteihn> /drˈʏtae̯n/ "thirteen_NUM"
-	<Ding> /dˈɪŋ/ "thing_NOUN"
+	<Döst> /dˈœst/ "thirst_NOUN"
+	<dünn> /dˈʏn/ "thin_ADJ"
 
 /r/ (0.03)
 	<gräun> /ɡrˈɔʏ̯n/ "green_ADJ"
@@ -160,10 +160,10 @@ CONSONANTS
 	<wünschen> /vˈʏnʃn̩/ "wish_VERB"
 	<Språk> /ʃprˈɒːk/ "speech_NOUN_FEM"
 
-/v/ (0.027)
-	<Wien> /vˈiːn/ "wine_NOUN"
-	<Wall> /vˈal/ "whale_NOUN"
-	<wünschen> /vˈʏnʃn̩/ "wish_VERB"
+/v/ (0.028)
+	<Wind> /vˈɪnd̥/ "wind_NOUN"
+	<Wäk> /vˈɛːk/ "week_NOUN"
+	<Winter> /vˈɪntæ/ "winter_NOUN"
 
 /f/ (0.027)
 	<finnen> /fˈɪnn̩/ "find_VERB"
@@ -210,7 +210,7 @@ CONSONANTS
 	<kolt> /kʰˈaʊ̯ld̥/ "cold_ADJ"
 	<Kind> /kʰˈɪnd̥/ "child_NOUN"
 
-/p/ (0.012)
+/p/ (0.011)
 	<Språk> /ʃprˈɒːk/ "speech_NOUN_FEM"
 	<Schipp> /ʃˈɪp/ "ship_NOUN"
 	<Kopp> /kʰˈɔp/ "head_NOUN"

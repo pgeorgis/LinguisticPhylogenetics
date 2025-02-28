@@ -1,8 +1,8 @@
 VOWELS
 /ə/ (0.115)
 	<die:pe> /dˈiːpə/ "deep_ADJ"
-	<zieə> /zˈiə/ "side_NOUN"
-	<vrou:we> /vɾˈɑu̯wə/ "woman_NOUN"
+	<schie:te> /sxˈiːtə/ "shoot_VERB"
+	<winter> /ʋˈɪntəɾ/ "winter_NOUN"
 
 /ˈɛː/ (0.028)
 	<waeter> /ʋˈɛːtəɾ/ "water_NOUN"
@@ -14,12 +14,12 @@ VOWELS
 	<lange> /ɫˈɑŋə/ "long_ADJ"
 	<wat> /ʋˈɑt/ "what_PRON"
 
-/ˈɔ/ (0.024)
+/ˈɔ/ (0.025)
 	<mogge> /mˈɔxə/ "midge_NOUN"
 	<mond> /mˈɔnd̥/ "mouth_NOUN"
-	<wonder> /ʋˈɔndəɾ/ "wonder_NOUN"
+	<ons> /ˈɔnz̥/ "us_PRON"
 
-/ˈʊə̯/ (0.022)
+/ˈʊə̯/ (0.021)
 	<ôôrn> /ˈʊə̯ɾən/ "horn_NOUN"
 	<ôôge> /ˈʊə̯xə/ "eye_NOUN"
 	<dôôd> /dˈʊə̯d̥/ "death_NOUN"
@@ -64,12 +64,12 @@ VOWELS
 	<wurm> /ʋˈʏɾm/ "worm_NOUN"
 	<dunder> /dˈʏndəɾ/ "thunder_NOUN"
 
-/ˈøː/ (0.008)
+/ˈøː/ (0.007)
 	<veugel> /vˈøːxəɫ/ "bird_NOUN_MASC"
 	<neut> /nˈøːt/ "nut_NOUN"
 	<euniengk> /ˈøːniŋk/ "honey_NOUN"
 
-/ˈuː/ (0.008)
+/ˈuː/ (0.007)
 	<stoe:l> /stˈuːɫ/ "stool_NOUN"
 	<goeːd> /xˈuːd̥/ "good_ADJ"
 	<moe:r> /mˈuːɾ/ "mother_NOUN"
@@ -119,109 +119,109 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.075)
+/ɾ/ (0.076)
 	<ie:r> /ˈiːɾ/ "here_ADV"
-	<stèrre> /stˈæɾə/ "star_NOUN"
-	<zeumer> /zˈøːməɾ/ "summer_NOUN"
+	<spraeke> /spɾˈɛːkə/ "speech_NOUN_FEM"
+	<sturm> /stˈʏɾm/ "storm_NOUN"
 
-/n/ (0.07)
+/n/ (0.069)
 	<zevene> /zˈeːvənə/ "seven_NUM"
 	<groe:n> /xɾˈuːn/ "green_ADJ"
 	<maend> /mˈɛːnd̥/ "month_NOUN"
 
 /t/ (0.054)
-	<dost> /dˈɔst/ "thirst_NOUN"
-	<twêêë> /tʋˈɪə̯ə/ "two_NUM"
+	<tie:ne> /tˈiːnə/ "ten_NUM"
 	<twintig> /tʋˈɪntɪx/ "twenty_NUM"
+	<winter> /ʋˈɪntəɾ/ "winter_NOUN"
 
-/ɫ/ (0.048)
+/ɫ/ (0.049)
+	<wulf> /ʋˈʏɫv̥/ "wolf_NOUN"
 	<lucht> /ɫˈʏxt/ "light_ADJ"
 	<kalləf> /kˈɑɫəv̥/ "calf_NOUN"
-	<melk> /mˈæɫk/ "milk_NOUN_FEM"
 
 /x/ (0.046)
+	<berg> /bˈæɾx/ "mountain_NOUN"
 	<geel> /xˈeːɫ/ "yellow_ADJ"
 	<zegge> /zˈæxə/ "say_VERB"
-	<egge> /ˈæxə/ "edge_NOUN"
 
 /k/ (0.04)
+	<kie:ken> /kˈiːkə/ "chicken_NOUN"
 	<komme> /kˈɔmə/ "come_VERB"
 	<joengk> /jˈuŋk/ "young_NOUN"
-	<riengk> /ɾˈiŋk/ "ring_NOUN"
 
-/d/ (0.038)
+/d/ (0.037)
+	<dost> /dˈɔst/ "thirst_NOUN"
 	<dinne> /dˈɪnə/ "thin_ADJ"
 	<dunder> /dˈʏndəɾ/ "thunder_NOUN"
-	<die:r> /dˈiːɾ/ "animal_NOUN"
 
 /d̥/ (0.032)
+	<uud> /ˈyːd̥/ "skin_NOUN"
+	<brôôd> /bɾˈʊə̯d̥/ "bread_NOUN"
 	<maend> /mˈɛːnd̥/ "month_NOUN"
-	<kind> /kˈɪnd̥/ "child_NOUN"
-	<goeːd> /xˈuːd̥/ "good_ADJ"
 
 /v/ (0.03)
+	<duve> /dˈyːvə/ "dove_NOUN"
+	<vis> /vˈɪs/ "fish_NOUN"
 	<lever> /ɫˈeːvəɾ/ "liver_NOUN"
-	<vos> /vˈɔs/ "fresh_ADJ"
-	<vrie:zen> /vɾˈiːzən/ "freeze_VERB"
 
 /z/ (0.029)
+	<zuu:r> /zˈyːɾ/ "sour_ADJ"
 	<zie:le> /zˈiːɫə/ "soul_NOUN"
 	<zieə> /zˈiə/ "side_NOUN"
-	<zuge> /zˈyːxə/ "suck_VERB"
+
+/ʋ/ (0.028)
+	<winter> /ʋˈɪntəɾ/ "winter_NOUN"
+	<zwaerd> /zʋˈɛːɾd̥/ "sword_NOUN"
+	<wêêl> /ʋˈɪə̯ɫ/ "wheel_NOUN"
 
 /s/ (0.028)
-	<vos> /vˈɔs/ "fresh_ADJ"
-	<zesse> /zˈæsə/ "six_NUM"
 	<gors> /xˈɔɾs/ "grass_NOUN_NEU"
-
-/ʋ/ (0.027)
-	<zwart> /zʋˈɑɾt/ "black_ADJ"
-	<wurm> /ʋˈʏɾm/ "worm_NOUN"
-	<twintig> /tʋˈɪntɪx/ "twenty_NUM"
+	<duuts> /dˈyːts/ "Teutonic_ADJ"
+	<sturm> /stˈʏɾm/ "storm_NOUN"
 
 /m/ (0.025)
+	<mogge> /mˈɔxə/ "midge_NOUN"
 	<sturm> /stˈʏɾm/ "storm_NOUN"
 	<melk> /mˈæɫk/ "milk_NOUN_FEM"
-	<mond> /mˈɔnd̥/ "mouth_NOUN"
 
 /b/ (0.017)
-	<brugge> /bɾˈʏxə/ "bridge_NOUN"
-	<blad> /bɫˈɑd̥/ "leaf_NOUN_NEU"
-	<brôôd> /bɾˈʊə̯d̥/ "bread_NOUN"
+	<blomme> /bɫˈɔmə/ "flower_NOUN"
+	<boek> /bˈuk/ "book_NOUN_FEM"
+	<bloe:je> /bɫˈuːjə/ "bleed_VERB"
 
 /p/ (0.015)
+	<op> /ˈɔp/ "up_ADV"
+	<schaep> /sxˈɛːp/ "sheep_NOUN"
 	<lôôpe> /ɫˈʊə̯pə/ "leap_VERB"
-	<ploeg> /pɫˈux/ "plough_NOUN"
-	<elləpe> /ˈæɫəpə/ "help_VERB"
 
 /ŋ/ (0.013)
-	<toenge> /tˈuŋə/ "tongue_NOUN"
+	<riengk> /ɾˈiŋk/ "ring_NOUN"
+	<keuniengk> /kˈøːnɪŋk/ "king_NOUN"
 	<zienge> /zˈiŋə/ "sing_VERB"
-	<dienk> /dˈiŋk/ "thing_NOUN"
 
 /v̥/ (0.011)
+	<wulf> /ʋˈʏɫv̥/ "wolf_NOUN"
 	<lie:f> /ɫˈiːv̥/ "beloved_ADJ"
 	<die:f> /dˈiːv̥/ "thief_NOUN"
-	<alf> /ˈɑɫv̥/ "eleven_NUM"
 
-/z̥/ (0.008)
-	<luus> /lˈyːz̥/ "louse_NOUN"
+/z̥/ (0.007)
 	<ons> /ˈɔnz̥/ "us_PRON"
-	<aes> /ˈɛːz̥/ "hare_NOUN"
+	<muus> /mˈyːz̥/ "mouse_NOUN_FEM"
+	<luus> /lˈyːz̥/ "louse_NOUN"
 
 /j/ (0.005)
-	<jaer> /jˈɛːɾ/ "year_NOUN"
-	<bloe:je> /bɫˈuːjə/ "bleed_VERB"
 	<koei> /kˈuj/ "cow_NOUN"
+	<joengk> /jˈuŋk/ "young_NOUN"
+	<jaer> /jˈɛːɾ/ "year_NOUN"
 
 /w/ (0.003)
-	<snêêuw> /snˈɪə̯w/ "snow_NOUN"
 	<nie:uw> /nˈiːw/ "new_ADJ"
+	<snêêuw> /snˈɪə̯w/ "snow_NOUN"
 	<vrou:we> /vɾˈɑu̯wə/ "woman_NOUN"
 
 /l/ (0.002)
-	<luus> /lˈyːz̥/ "louse_NOUN"
 	<voe:le> /vˈuːlə/ "feel_VERB"
+	<luus> /lˈyːz̥/ "louse_NOUN"
 
 
 

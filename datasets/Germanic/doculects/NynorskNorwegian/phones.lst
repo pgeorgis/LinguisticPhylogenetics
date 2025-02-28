@@ -1,8 +1,8 @@
 VOWELS
-/ɑ/ (0.045)
-	<driva> /dɾˈiːʋɑ/ "drive_VERB"
-	<syngja> /sˈʏɲjɑ/ "sing_VERB"
-	<kyrkja> /çˈʏɾçɑ/ "church_NOUN_FEM"
+/ɑ/ (0.046)
+	<drikka> /dɾˈɪʰkːɑ/ "drink_VERB"
+	<skyta> /ʂˈyːtɑ/ "shoot_VERB"
+	<kjetta> /çˈɛʰtːɑ/ "cat_NOUN"
 
 /e/ (0.041)
 	<hare> /hˈɑːɾe/ "hare_NOUN"
@@ -19,25 +19,25 @@ VOWELS
 	<sjuk> /ʂˈʉːk/ "sick_ADJ"
 	<fluge> /flˈʉːɡe/ "housefly_NOUN"
 
-/ˈuː/ (0.022)
-	<broder> /bɾˈuːdeɾ/ "brother_NOUN"
-	<sko> /skˈuː/ "shoe_NOUN"
-	<stor> /stˈuːɾ/ "big_ADJ"
-
-/ˈɛ/ (0.021)
-	<menn> /mˈɛnː/ "men_NOUN_PL"
-	<neste> /nˈɛste/ "next_ADJ"
+/ˈɛ/ (0.022)
+	<egg> /ˈɛɡː/ "edge_NOUN"
+	<menneske> /mˈɛnːɛʂe/ "person_NOUN"
 	<eple> /ˈɛple/ "apple_NOUN"
 
+/ˈuː/ (0.022)
+	<nord> /nˈuːɾ/ "north_NOUN"
+	<plog> /pʰlˈuːɡ/ "plough_NOUN"
+	<to> /tʰˈuː/ "two_NUM"
+
 /ˈoː/ (0.02)
+	<båt> /bˈoːt/ "boat_NOUN"
 	<sål> /sˈoːl/ "soul_NOUN"
 	<måne> /mˈoːne/ "moon_NOUN"
-	<månad> /mˈoːnɑ/ "month_NOUN"
 
 /ˈʉ/ (0.018)
+	<hundrad> /hˈʉndɾɑ/ "hundred_NUM"
 	<hund> /hˈʉnː/ "dog_NOUN"
 	<tjukk> /çˈʉʰkː/ "thick_ADJ"
-	<fugl> /fˈʉɡl/ "bird_NOUN_MASC"
 
 /ˈiː/ (0.018)
 	<bie> /bˈiːə/ "bee_NOUN"
@@ -45,74 +45,74 @@ VOWELS
 	<kvit> /kʰʋˈiːt/ "white_ADJ"
 
 /ˈeː/ (0.015)
-	<de> /dˈeː/ "ye_PRON"
-	<le> /lˈeː/ "laugh_VERB"
 	<tre> /tʰɾˈeː/ "three_NUM"
+	<meg> /mˈeːɡ/ "me_PRON_ACC"
+	<eg> /ˈeːɡ/ "I_PRON"
 
 /ˈʏ/ (0.014)
-	<brygge> /bɾˈʏɡːe/ "bridge_NOUN"
 	<mygg> /mˈʏɡː/ "midge_NOUN"
-	<symja> /sˈʏmjɑ/ "swim_VERB"
+	<syster> /sˈʏstɛɾ/ "sister_NOUN"
+	<brygge> /bɾˈʏɡːe/ "bridge_NOUN"
 
 /ˈɪ/ (0.014)
+	<liggja> /lˈɪjːɑ/ "lie_VERB"
+	<vill> /ʋˈɪlː/ "wild_ADJ"
 	<binda> /bˈɪndɑ/ "bind_VERB"
-	<ring> /ɾˈɪŋː/ "ring_NOUN"
-	<finger> /fˈɪŋːeɾ/ "finger_NOUN"
 
 /ˈɑː/ (0.014)
-	<kval> /kʰʋˈɑːl/ "whale_NOUN"
+	<ha> /hˈɑː/ "have_VERB"
+	<dag> /dˈɑːɡ/ "day_NOUN"
 	<hata> /hˈɑːtɑ/ "hate_VERB"
-	<kva> /kʰʋˈɑː/ "what_PRON"
 
 /ˈɔ/ (0.013)
+	<son> /sˈɔn/ "son_NOUN"
 	<storm> /stˈɔɾm/ "storm_NOUN"
 	<hors> /hˈɔɾs/ "horse_NOUN"
-	<omn> /ˈɔmn/ "oven_NOUN"
 
 /ˈæɪ̯/ (0.013)
+	<heit> /hˈæɪ̯t/ "hot_ADJ"
 	<heilag> /hˈæɪ̯lɑɡ/ "holy_ADJ"
 	<sveitte> /sʋˈæɪ̯ʰtːe/ "sweat_NOUN"
-	<veik> /ʋˈæɪ̯k/ "weak_ADJ"
 
 /ˈøː/ (0.011)
+	<føter> /fˈøːteɾ/ "feet_NOUN_PL"
 	<sjø> /ʂˈøː/ "sea_NOUN"
 	<grøn> /ɡɾˈøːn/ "green_ADJ"
-	<blø> /blˈøː/ "bleed_VERB"
 
 /ˈæʉ̯/ (0.009)
+	<braud> /bɾˈæʉ̯/ "bread_NOUN"
 	<lauv> /lˈæʉ̯ʋ/ "leaf_NOUN"
-	<daud> /dˈæʉ̯/ "dead_ADJ"
 	<laupa> /lˈæʉ̯pɑ/ "leap_VERB"
 
 /ˈyː/ (0.009)
-	<flyga> /flˈyːɡɑ/ "fly_VERB"
+	<skyta> /ʂˈyːtɑ/ "shoot_VERB"
 	<by> /bˈyː/ "bid_VERB"
-	<frysa> /fɾˈyːsɑ/ "freeze_VERB"
+	<ny> /nˈyː/ "new_ADJ"
 
 /ə/ (0.009)
-	<vatn> /ʋˈɑtən/ "water_NOUN"
-	<våpen> /ʋˈoːpən/ "weapon_NOUN"
 	<under> /ˈʉndəɾ/ "under_PREP"
+	<høne> /hˈøːnə/ "hen_NOUN"
+	<vatn> /ʋˈɑtən/ "water_NOUN"
 
 /ˈʊ/ (0.006)
-	<torn> /tʰˈʊɾn/ "thorn_NOUN"
-	<korn> /kʰˈʊɾn/ "corn_NOUN"
 	<horn> /hˈʊɾn/ "horn_NOUN"
+	<sumar> /sˈʊmɑɾ/ "summer_NOUN"
+	<kong> /kʰˈʊŋ/ "king_NOUN"
 
 /ˈœ/ (0.006)
-	<mjølk> /mjˈœlk/ "milk_NOUN_FEM"
 	<sjølv> /ʂˈœlʋ/ "self_PRON"
-	<nøtt> /nˈœʰtː/ "nut_NOUN"
+	<skjønn> /ʂˈœnː/ "beautiful_ADJ"
+	<mjølk> /mjˈœlk/ "milk_NOUN_FEM"
 
 /ˈœʏ̯/ (0.004)
-	<røyk> /ɾˈœʏ̯k/ "smoke_NOUN"
 	<høyra> /hˈœʏ̯ɾɑ/ "hear_VERB"
-	<drøyma> /dɾˈœʏ̯mɑ/ "dream_VERB"
+	<røyk> /ɾˈœʏ̯k/ "smoke_NOUN"
+	<øyra> /ˈœʏ̯ɾɑ/ "ear_NOUN"
 
 /ˈæː/ (0.004)
 	<vêr> /vˈæːɾ/ "weather_NOUN"
+	<sverd> /sʋˈæːɾ/ "sword_NOUN"
 	<bær> /bˈæːɾ/ "berry_NOUN"
-	<kjær> /çˈæːɾ/ "dear_ADJ"
 
 /ɛ/ (0.002)
 	<syster> /sˈʏstɛɾ/ "sister_NOUN"
@@ -130,105 +130,105 @@ VOWELS
 
 
 CONSONANTS
-/ɾ/ (0.086)
-	<rik> /ɾˈiːk/ "rich_ADJ"
-	<språk> /spɾˈoːk/ "speech_NOUN_FEM"
-	<barn> /bˈɑːɾn/ "child_NOUN_NEU"
-
-/s/ (0.055)
-	<svin> /sʋˈiːn/ "swine_NOUN"
-	<gjest> /jˈɛst/ "guest_NOUN"
-	<slange> /slˈɑŋːe/ "snake_NOUN"
-
-/n/ (0.047)
-	<ein> /ˈæɪ̯n/ "one_NUM"
-	<nase> /nˈɑːse/ "nose_NOUN"
-	<stein> /stˈæɪ̯n/ "stone_NOUN"
-
-/l/ (0.042)
-	<fugl> /fˈʉɡl/ "bird_NOUN_MASC"
-	<plikt> /pʰlˈɪkt/ "plight_NOUN"
-	<blø> /blˈøː/ "bleed_VERB"
-
-/ʋ/ (0.035)
-	<tolv> /tʰˈɔlʋ/ "twelve_NUM"
-	<våpen> /ʋˈoːpən/ "weapon_NOUN"
+/ɾ/ (0.085)
+	<hundrad> /hˈʉndɾɑ/ "hundred_NUM"
+	<tørste> /tʰˈœɾstə/ "thirst_NOUN"
 	<lever> /lˈeːʋeɾ/ "liver_NOUN"
 
-/t/ (0.033)
-	<gjest> /jˈɛst/ "guest_NOUN"
-	<kvit> /kʰʋˈiːt/ "white_ADJ"
-	<knut> /kʰnˈʉːt/ "knot_NOUN"
+/s/ (0.055)
+	<fisk> /fˈɪsk/ "fish_NOUN"
+	<syster> /sˈʏstɛɾ/ "sister_NOUN"
+	<stol> /stˈuːl/ "stool_NOUN"
 
-/ɡ/ (0.03)
-	<eg> /ˈeːɡ/ "I_PRON"
-	<regn> /ɾˈɛɡn/ "rain_NOUN"
-	<auga> /ˈæʉ̯ɡɑ/ "eye_NOUN"
-
-/m/ (0.027)
-	<mus> /mˈʉːs/ "mouse_NOUN_FEM"
-	<mann> /mˈɑnː/ "man_NOUN"
-	<mått> /mˈɔʰtː/ "might_NOUN"
-
-/d/ (0.025)
+/n/ (0.047)
+	<svin> /sʋˈiːn/ "swine_NOUN"
 	<frende> /fɾˈɛnde/ "friend_NOUN"
-	<drøyma> /dɾˈœʏ̯mɑ/ "dream_VERB"
 	<hundrad> /hˈʉndɾɑ/ "hundred_NUM"
 
+/l/ (0.042)
+	<sjølv> /ʂˈœlʋ/ "self_PRON"
+	<lang> /lˈɑŋː/ "long_ADJ"
+	<lett> /lˈɛʰtː/ "light_ADJ"
+
+/ʋ/ (0.035)
+	<vin> /ʋˈiːn/ "wine_NOUN"
+	<svart> /sʋˈɑɾt/ "black_ADJ"
+	<vind> /ʋˈɪnː/ "wind_NOUN"
+
+/t/ (0.033)
+	<bita> /bˈiːtɑ/ "bite_VERB"
+	<plikt> /pʰlˈɪkt/ "plight_NOUN"
+	<syster> /sˈʏstɛɾ/ "sister_NOUN"
+
+/ɡ/ (0.03)
+	<meg> /mˈeːɡ/ "me_PRON_ACC"
+	<dverg> /dʋˈɛɾɡ/ "dwarf_NOUN"
+	<grøn> /ɡɾˈøːn/ "green_ADJ"
+
+/m/ (0.027)
+	<mann> /mˈɑnː/ "man_NOUN"
+	<arm> /ˈɑɾm/ "arm_NOUN"
+	<symja> /sˈʏmjɑ/ "swim_VERB"
+
+/d/ (0.025)
+	<dødeleg> /dˈøːdeleɡ/ "deadly_ADJ"
+	<gud> /ɡˈʉːd/ "god_NOUN"
+	<daude> /dˈæʉ̯e/ "death_NOUN"
+
 /b/ (0.024)
+	<bok> /bˈuːk/ "book_NOUN_FEM"
+	<brygge> /bɾˈʏɡːe/ "bridge_NOUN"
 	<bein> /bˈæɪ̯n/ "bone_NOUN"
-	<bryst> /bɾˈʏst/ "breast_NOUN"
-	<blø> /blˈøː/ "bleed_VERB"
 
 /tʰ/ (0.022)
-	<to> /tʰˈuː/ "two_NUM"
-	<tunge> /tʰˈʉŋːe/ "tongue_NOUN"
-	<tre> /tʰɾˈeː/ "tree_NOUN"
+	<tann> /tʰˈɑnː/ "tooth_NOUN"
+	<tusen> /tʰˈʉːsen/ "thousand_NUM"
+	<tid> /tʰˈiː/ "time_NOUN"
 
 /h/ (0.02)
+	<høyra> /hˈœʏ̯ɾɑ/ "hear_VERB"
+	<hus> /hˈʉːs/ "house_NOUN"
 	<hund> /hˈʉnː/ "dog_NOUN"
-	<heilag> /hˈæɪ̯lɑɡ/ "holy_ADJ"
-	<heit> /hˈæɪ̯t/ "hot_ADJ"
 
 /f/ (0.02)
-	<få> /fˈoː/ "few_ADJ"
+	<fot> /fˈuːt/ "foot_NOUN"
 	<frisk> /fɾˈɪsk/ "fresh_ADJ"
-	<frende> /fɾˈɛnde/ "friend_NOUN"
+	<få> /fˈoː/ "few_ADJ"
 
 /k/ (0.019)
+	<teikn> /tʰˈæɪ̯kən/ "token_NOUN"
+	<veik> /ʋˈæɪ̯k/ "weak_ADJ"
 	<mjølk> /mjˈœlk/ "milk_NOUN_FEM"
-	<seks> /sˈɛks/ "six_NUM"
-	<oske> /ˈʊske/ "ash_NOUN"
 
 /nː/ (0.018)
+	<stjerne> /sçˈɛnːe/ "star_NOUN"
+	<kunna> /kʰˈʉnːɑ/ "can_VERB"
 	<tann> /tʰˈɑnː/ "tooth_NOUN"
-	<menneske> /mˈɛnːɛʂe/ "person_NOUN"
-	<land> /lˈɑnː/ "land_NOUN"
 
 /j/ (0.017)
-	<ljuga> /jˈʉːɡɑ/ "tell lies_VERB"
-	<seia> /sˈæɪ̯jɑ/ "say_VERB"
-	<geit> /jˈæɪ̯t/ "goat_NOUN"
+	<ljos> /jˈuːs/ "light_NOUN"
+	<gjeva> /jˈeːʋɑ/ "give_VERB"
+	<gjest> /jˈɛst/ "guest_NOUN"
 
 /kʰ/ (0.015)
-	<kone> /kʰˈuːne/ "woman_NOUN"
-	<korn> /kʰˈʊɾn/ "corn_NOUN"
 	<ku> /kʰˈʉː/ "cow_NOUN"
+	<kong> /kʰˈʊŋ/ "king_NOUN"
+	<korn> /kʰˈʊɾn/ "corn_NOUN"
+
+/ç/ (0.014)
+	<naken> /nˈɑːçen/ "naked_ADJ"
+	<kjøt> /çˈøːt/ "meat_NOUN"
+	<kjetta> /çˈɛʰtːɑ/ "cat_NOUN"
 
 /ʂ/ (0.013)
-	<sju> /ʂˈʉː/ "seven_NUM"
-	<skjønn> /ʂˈœnː/ "beautiful_ADJ"
 	<skit> /ʂˈiːt/ "shit_NOUN"
+	<ynskja> /ˈʏnʂɑ/ "wish_VERB"
+	<skjota> /ʂˈuːtɑ/ "shoot_VERB"
 
-/ç/ (0.013)
-	<tjukk> /çˈʉʰkː/ "thick_ADJ"
-	<tjov> /çˈuːʋ/ "thief_NOUN"
-	<tjuv> /çˈʉːʋ/ "thief_NOUN"
-
-/ʰtː/ (0.009)
-	<nøtt> /nˈœʰtː/ "nut_NOUN"
+/ʰtː/ (0.011)
 	<sveitte> /sʋˈæɪ̯ʰtːe/ "sweat_NOUN"
-	<natt> /nˈɑʰtː/ "night_NOUN_FEM"
+	<mått> /mˈɔʰtː/ "might_NOUN"
+	<nøtt> /nˈœʰtː/ "nut_NOUN"
 
 /p/ (0.009)
 	<ape> /ˈɑːpe/ "ape_NOUN"
@@ -267,27 +267,26 @@ CONSONANTS
 	<veke> /vˈeːke/ "week_NOUN"
 	<vêr> /vˈæːɾ/ "weather_NOUN"
 
-/tː/ (0.002)
-	<katt> /kʰˈɑtː/ "cat_NOUN"
-	<tretten> /tʰɾˈɛtːen/ "thirteen_NUM"
-
 /pʰ/ (0.002)
-	<plog> /pʰlˈuːɡ/ "plough_NOUN"
 	<plikt> /pʰlˈɪkt/ "plight_NOUN"
+	<plog> /pʰlˈuːɡ/ "plough_NOUN"
 
 /mː/ (0.002)
-	<lamb> /lˈɑmː/ "lamb_NOUN"
 	<tomme> /tʰˈɔmːe/ "thumb_NOUN"
+	<lamb> /lˈɑmː/ "lamb_NOUN"
 
 /jː/ (0.002)
-	<liggja> /lˈɪjːɑ/ "lie_VERB"
 	<bryggja> /bɾˈʏjːɑ/ "brew_VERB"
+	<liggja> /lˈɪjːɑ/ "lie_VERB"
 
 /ʰpː/ (0.001)
 	<upp> /ˈʉʰpː/ "up_ADV"
 
 /ɲ/ (0.001)
 	<syngja> /sˈʏɲjɑ/ "sing_VERB"
+
+/tː/ (0.001)
+	<tretten> /tʰɾˈɛtːen/ "thirteen_NUM"
 
 /sː/ (0.001)
 	<oss> /ˈɔsː/ "us_PRON"

@@ -1,57 +1,57 @@
 VOWELS
 /ɑ/ (0.05)
 	<bryddja> /brˈʏʥːɑ/ "bridge_NOUN"
-	<stjuota> /sʨˈʉːə̯tɑ/ "shoot_VERB"
-	<binda> /bˈɪndɑ/ "bind_VERB"
+	<syötja> /sˈyːœ̯ʨɑ/ "seek_VERB"
+	<kwinna> /kʰwˈɪnːɑ/ "woman_NOUN"
 
 /ˈʉːə̯/ (0.026)
+	<bluoð> /bɽˈʉːə̯ð/ "blood_NOUN"
 	<fuok> /fˈʉːə̯k/ "folk_NOUN"
 	<buok> /bˈʉːə̯k/ "book_NOUN_FEM"
-	<ruot> /rˈʉːə̯t/ "root_NOUN_FEM"
 
 /ɛ/ (0.022)
-	<syster> /sˈʏstɛr/ "sister_NOUN"
 	<tekken> /tʰˈɛkːɛn/ "token_NOUN"
-	<ugel> /ˈʉːɣɛɽ/ "owl_NOUN"
+	<syster> /sˈʏstɛr/ "sister_NOUN"
+	<under> /ˈʉndɛr/ "wonder_NOUN"
 
 /ˈɪ/ (0.021)
+	<singga> /sˈɪŋɡɑ/ "sing_VERB"
 	<witå> /wˈɪtɔ/ "know_VERB"
 	<fingger> /fˈɪŋɡɛr/ "finger_NOUN"
-	<tingg> /tʰˈɪŋɡ/ "thing_NOUN"
 
-/ˈʉ/ (0.019)
+/ˈʉ/ (0.018)
+	<under> /ˈʉndɛr/ "wonder_NOUN"
 	<brugga> /brˈʉɡːɑ/ "brew_VERB"
 	<under> /ˈʉndɛr/ "under_PREP"
-	<upp> /ˈʉpː/ "up_ADV"
 
-/ˈɛ/ (0.019)
+/ˈɛ/ (0.018)
+	<mennistj> /mˈɛnːɪsʨ/ "person_NOUN"
 	<eppel> /ˈɛpːɛɽ/ "apple_NOUN"
 	<rett> /rˈɛtː/ "right_ADJ"
-	<fem> /fˈɛm/ "five_NUM"
 
-/ˈɑ/ (0.015)
+/ˈɑ/ (0.016)
+	<nammen> /nˈɑmːɛn/ "name_NOUN"
+	<takka> /tʰˈɑkːɑ/ "thank_VERB"
 	<tann> /tʰˈɑnː/ "tooth_NOUN"
-	<warm> /wˈɑrm/ "warm_ADJ"
-	<katt> /kʰˈɑtː/ "cat_NOUN"
 
 /ˈɪː/ (0.013)
+	<kni> /kʰnˈɪː/ "knee_NOUN"
 	<tið> /tʰˈɪːð/ "time_NOUN"
 	<bia> /bˈɪːɑ/ "bee_NOUN"
-	<niu> /nˈɪːʉ/ "nine_NUM"
 
 /ˈʉː/ (0.012)
+	<ugel> /ˈʉːɣɛɽ/ "owl_NOUN"
 	<stur> /stˈʉːr/ "big_ADJ"
-	<tiugu> /tʰjˈʉːɣʉ/ "twenty_NUM"
 	<tusn> /tʰˈʉːsn̩/ "thousand_NUM"
 
 /ˈɔː/ (0.012)
+	<båt> /bˈɔːt/ "boat_NOUN"
 	<twå> /tʰwˈɔː/ "two_NUM"
 	<såmår> /sˈɔːmɔr/ "summer_NOUN"
-	<båt> /bˈɔːt/ "boat_NOUN"
 
 /ˈɑː/ (0.012)
+	<apa> /ˈɑːpɑ/ "ape_NOUN"
 	<blað> /bɽˈɑːð/ "leaf_NOUN_NEU"
-	<wapen> /wˈɑːpɛn/ "weapon_NOUN"
 	<faðer> /fˈɑːðɛr/ "father_NOUN"
 
 /ˈɑːu̯/ (0.01)
@@ -185,7 +185,7 @@ CONSONANTS
 	<sjǫ> /sjˈɔ̃ː/ "see_VERB"
 	<syster> /sˈʏstɛr/ "sister_NOUN"
 
-/n/ (0.049)
+/n/ (0.048)
 	<under> /ˈʉndɛr/ "under_PREP"
 	<knaut> /kʰnˈɑːu̯t/ "knot_NOUN"
 	<swain> /swˈɑːi̯n/ "swine_NOUN"
@@ -250,7 +250,7 @@ CONSONANTS
 	<fy> /fˈʏː/ "follow_VERB"
 	<fliuoga> /fɽjˈʉːə̯ɣɑ/ "fly_VERB"
 
-/ɣ/ (0.018)
+/ɣ/ (0.017)
 	<dag> /dˈɑːɣ/ "day_NOUN"
 	<oga> /ˈoːɣɑ/ "eye_NOUN"
 	<weg> /wˈɛːɣ/ "way_NOUN"
@@ -275,15 +275,15 @@ CONSONANTS
 	<kenna> /kʰˈɛnːɑ/ "ken_VERB"
 	<mennistj> /mˈɛnːɪsʨ/ "person_NOUN"
 
-/kʰ/ (0.011)
-	<kunungg> /kʰˈʉːnʉŋɡ/ "king_NOUN"
+/kʰ/ (0.012)
+	<kenna> /kʰˈɛnːɑ/ "ken_VERB"
 	<kunna> /kʰˈʉnːɑ/ "can_VERB"
 	<kåv> /kʰˈɔːv/ "calf_NOUN"
 
-/tː/ (0.009)
+/tː/ (0.01)
+	<åtta> /ˈɔtːɑ/ "eight_NUM"
+	<rett> /rˈɛtː/ "right_ADJ"
 	<litt> /ɽˈɪtː/ "light_ADJ"
-	<swett> /swˈɛtː/ "sweat_NOUN"
-	<duotter> /dˈʉə̯tːɛr/ "daughter_NOUN"
 
 /p/ (0.008)
 	<språk> /sprˈɔːk/ "speech_NOUN_FEM"

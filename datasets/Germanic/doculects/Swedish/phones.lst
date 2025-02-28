@@ -1,28 +1,28 @@
 VOWELS
-/a/ (0.06)
+/a/ (0.061)
 	<kunna> /kʰˈɵnːa/ "can_VERB"
-	<ligga> /lˈɪɡːa/ "lie_VERB"
-	<simma> /sˈɪmːa/ "swim_VERB"
+	<löpa> /lˈøːpa/ "leap_VERB"
+	<sommar> /sˈɔmːar/ "summer_NOUN"
 
-/ˈɛ/ (0.028)
+/ˈɛ/ (0.027)
 	<tretton> /tʰrˈɛtːɔn/ "thirteen_NUM"
 	<svett> /svˈɛtː/ "sweat_NOUN"
 	<egg> /ˈɛɡː/ "edge_NOUN"
 
-/ˈʉː/ (0.027)
+/ˈʉː/ (0.026)
 	<fluga> /flˈʉːɡa/ "housefly_NOUN"
 	<djup> /jˈʉːp/ "deep_ADJ"
 	<skjuta> /ɧˈʉːta/ "shoot_VERB"
 
-/ɛ/ (0.026)
+/ɛ/ (0.025)
 	<vinter> /vˈɪntɛr/ "winter_NOUN"
 	<över> /ˈøːvɛr/ "over_PREP"
 	<syster> /sˈʏstɛr/ "sister_NOUN"
 
 /ˈa/ (0.023)
-	<tand> /tʰˈand/ "tooth_NOUN"
-	<makt> /mˈakt/ "might_NOUN"
-	<kall> /kʰˈalː/ "cold_ADJ"
+	<tacka> /tʰˈakːa/ "thank_VERB"
+	<man> /mˈan/ "man_NOUN"
+	<katta> /kʰˈatːa/ "cat_NOUN"
 
 /ˈøː/ (0.021)
 	<bröd> /brˈøːd/ "bread_NOUN"
@@ -128,7 +128,7 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.07)
+/r/ (0.069)
 	<rygg> /rˈʏɡː/ "ridge_NOUN"
 	<dotter> /dˈɔtːɛr/ "daughter_NOUN"
 	<språk> /sprˈoːk/ "speech_NOUN_FEM"
@@ -158,12 +158,12 @@ CONSONANTS
 	<vek> /vˈeːk/ "weak_ADJ"
 	<löv> /lˈøːv/ "leaf_NOUN"
 
-/t/ (0.028)
+/t/ (0.027)
 	<fot> /fˈuːt/ "foot_NOUN"
 	<plikt> /pʰlˈɪkt/ "plight_NOUN"
 	<gäst> /jˈɛst/ "guest_NOUN"
 
-/ɡ/ (0.027)
+/ɡ/ (0.026)
 	<jag> /jˈɑːɡ/ "I_PRON"
 	<väg> /vˈɛːɡ/ "way_NOUN"
 	<nagel> /nˈɑːɡɛl/ "fingernail_NOUN"
@@ -203,20 +203,20 @@ CONSONANTS
 	<hem> /hˈɛːm/ "home_NOUN"
 	<hår> /hˈoːr/ "hair_NOUN"
 
-/ɧ/ (0.013)
-	<skit> /ɧˈiːt/ "shit_NOUN"
-	<sköld> /ɧˈœld/ "shield_NOUN"
-	<sjuk> /ɧˈʉːk/ "sick_ADJ"
-
-/tː/ (0.013)
+/tː/ (0.014)
+	<kött> /ɕˈœtː/ "meat_NOUN"
+	<fötter> /fˈœtːɛr/ "feet_NOUN_PL"
 	<rätt> /rˈɛtː/ "right_ADJ"
-	<åtta> /ˈɔtːa/ "eight_NUM"
-	<vatten> /vˈatːɛn/ "water_NOUN"
 
-/kʰ/ (0.011)
-	<ko> /kʰˈuː/ "cow_NOUN"
-	<kung> /kʰˈɵŋ/ "king_NOUN"
+/ɧ/ (0.013)
+	<skjuta> /ɧˈʉːta/ "shoot_VERB"
+	<själv> /ɧˈɛlv/ "self_PRON"
+	<stjärna> /ɧˈæːɳa/ "star_NOUN"
+
+/kʰ/ (0.012)
 	<korn> /kʰˈuːɳ/ "corn_NOUN"
+	<ko> /kʰˈuː/ "cow_NOUN"
+	<komma> /kʰˈɔmːa/ "come_VERB"
 
 /nː/ (0.009)
 	<människa> /mˈɛnːɪɧa/ "person_NOUN"
@@ -276,7 +276,7 @@ CONSONANTS
 /sː/ (0.003)
 	<russ> /rˈɵsː/ "horse_NOUN"
 	<oss> /ˈɔsː/ "us_PRON"
-	<möss> /mˈœsː/ "mice_NOUN"
+	<möss> /mˈœsː/ "mice_NOUN_PL"
 
 /pː/ (0.003)
 	<skepp> /ɧˈɛpː/ "ship_NOUN"

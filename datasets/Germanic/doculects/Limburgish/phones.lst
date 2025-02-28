@@ -1,7 +1,7 @@
 VOWELS
 /ə/ (0.092)
 	<druime> /dʀˈœi̯mə/ "dream_VERB"
-	<störm> /stˈœːʀəm/ "storm_NOUN"
+	<slaope> /slˈɒːpə/ "sleep_VERB"
 	<blooje> /blˈʊːjə/ "bleed_VERB"
 
 /ˈeː/ (0.032)
@@ -29,25 +29,25 @@ VOWELS
 	<slang> /slˈɑŋ/ "snake_NOUN"
 	<gas> /ɣˈɑs/ "guest_NOUN"
 
+/ˈɔ/ (0.012)
+	<god> /ɣˈɔd̥/ "god_NOUN"
+	<wortel> /βˈɔʀtəl/ "root_NOUN_FEM"
+	<dochter> /dˈɔxtəʀ/ "daughter_NOUN"
+
 /ˈɒː/ (0.012)
-	<naos> /nˈɒːz̥/ "nose_NOUN"
-	<spraok> /spʀˈɒːk/ "speech_NOUN_FEM"
-	<haor> /ɦˈɒːʀ/ "hair_NOUN"
+	<waope> /βˈɒːpə/ "weapon_NOUN"
+	<sjaop> /ʃˈɒːp/ "sheep_NOUN"
+	<naom> /nˈɒːm/ "name_NOUN"
 
 /ˈi/ (0.012)
 	<twie> /tβˈi/ "two_NUM"
-	<snie> /snˈi/ "snow_NOUN"
-	<miech> /mˈix/ "me_PRON_ACC"
+	<liech> /lˈix/ "light_ADJ"
+	<tien> /tˈin/ "ten_NUM"
 
 /ˈɪː/ (0.011)
-	<winse> /βˈɪːnsə/ "wish_VERB"
-	<vinger> /vˈɪːŋəʀ/ "finger_NOUN"
-	<wind> /βˈɪːnd̥/ "wind_NOUN"
-
-/ˈɔ/ (0.011)
-	<dor> /dˈɔʀ/ "dry_ADJ"
-	<vol> /vˈɔl/ "full_ADJ"
-	<dochter> /dˈɔxtəʀ/ "daughter_NOUN"
+	<drinke> /dʀˈɪːŋkə/ "drink_VERB"
+	<rink> /ʀˈɪːŋk/ "ring_NOUN"
+	<binde> /bˈɪːndə/ "bind_VERB"
 
 /ˈiː/ (0.011)
 	<dier> /dˈiːʀ/ "animal_NOUN"
@@ -64,22 +64,22 @@ VOWELS
 	<oer> /ˈuːʀ/ "ear_NOUN"
 	<zoeke> /zˈuːkə/ "suck_VERB"
 
-/ˈɪ/ (0.008)
+/ˈɪ/ (0.007)
 	<ligke> /lˈɪɡə/ "lie_VERB"
 	<dik> /dˈɪk/ "thick_ADJ"
 	<wit> /βˈɪt/ "white_ADJ"
 
-/ˈɛ/ (0.008)
+/ˈɛ/ (0.007)
 	<wèlle> /βˈɛlə/ "wild_ADJ"
 	<zègke> /zˈɛɡə/ "say_VERB"
 	<èlf> /ˈɛləv̥/ "eleven_NUM"
 
-/ˈɔː/ (0.008)
+/ˈɔː/ (0.007)
 	<rouk> /ʀˈɔːk/ "smoke_NOUN"
 	<droum> /dʀˈɔːm/ "dream_NOUN"
 	<wolf> /βˈɔːləv̥/ "wolf_NOUN"
 
-/ˈoː/ (0.008)
+/ˈoː/ (0.007)
 	<honing> /ɦˈoːnɪŋ/ "honey_NOUN"
 	<ploog> /plˈoːɣ̊/ "plough_NOUN"
 	<zomer> /zˈoːməʀ/ "summer_NOUN"
@@ -110,7 +110,7 @@ VOWELS
 	<doum> /dˈɔu̯m/ "thumb_NOUN"
 
 /ˈœi̯/ (0.005)
-	<muis> /mˈœi̯z̥/ "mice_NOUN"
+	<muis> /mˈœi̯z̥/ "mice_NOUN_PL"
 	<nui> /nˈœi̯/ "new_ADJ"
 	<uil> /ˈœi̯l/ "owl_NOUN"
 
@@ -156,39 +156,39 @@ VOWELS
 
 CONSONANTS
 /ʀ/ (0.082)
-	<vrouw> /vʀˈɔu̯/ "woman_NOUN"
-	<veer> /vˈeːʀ/ "we_PRON"
+	<winter> /βˈɪːntəʀ/ "winter_NOUN"
 	<water> /βˈaːtəʀ/ "water_NOUN"
+	<werm> /βˈæʀəm/ "warm_ADJ"
 
 /n/ (0.057)
 	<moond> /mˈʊːnd̥/ "mouth_NOUN"
 	<sloon> /slˈʊːn/ "slay_VERB"
 	<greun> /ɣʀˈøːn/ "green_ADJ"
 
-/l/ (0.048)
+/l/ (0.049)
 	<nagel> /nˈaːɣəl/ "fingernail_NOUN"
 	<moele> /mˈuːlə/ "mouth_NOUN"
 	<volk> /vˈɔːlək/ "folk_NOUN"
 
-/t/ (0.042)
+/t/ (0.043)
 	<duits> /dˈœi̯ts/ "Teutonic_ADJ"
 	<hart> /ɦˈɑʀt/ "heart_NOUN"
-	<teike> /tˈɛːkə/ "token_NOUN"
+	<tien> /tˈin/ "toe_NOUN"
 
 /k/ (0.041)
 	<daanke> /dˈaːŋkə/ "thank_VERB"
 	<drinke> /dʀˈɪːŋkə/ "drink_VERB"
 	<eik> /ˈɛːk/ "oak_NOUN_FEM"
 
-/d/ (0.038)
+/d/ (0.037)
 	<doe> /dˈuː/ "thou_PRON"
 	<ander> /ˈɑːndəʀ/ "other_ADJ"
 	<donder> /dˈɔndəʀ/ "thunder_NOUN"
 
-/β/ (0.031)
-	<wief> /βˈiːv̥/ "wife_NOUN"
-	<woonder> /βˈʊːndəʀ/ "wonder_NOUN"
-	<weik> /βˈɛːk/ "week_NOUN"
+/β/ (0.032)
+	<wit> /βˈɪt/ "white_ADJ"
+	<wolf> /βˈɔːləv̥/ "wolf_NOUN"
+	<weer> /βˈeːʀ/ "weather_NOUN"
 
 /v/ (0.031)
 	<vogel> /vˈoːɣəl/ "bird_NOUN_MASC"
@@ -215,12 +215,12 @@ CONSONANTS
 	<zoeke> /zˈuːkə/ "suck_VERB"
 	<zoer> /zˈuːʀ/ "sour_ADJ"
 
-/b/ (0.023)
+/b/ (0.022)
 	<binde> /bˈɪːndə/ "bind_VERB"
 	<brögk> /bʀˈœk/ "bridge_NOUN"
 	<broed> /bʀˈud̥/ "bread_NOUN"
 
-/ɦ/ (0.022)
+/ɦ/ (0.021)
 	<heim> /ɦˈɛːi̯m/ "home_NOUN"
 	<hin> /ɦˈɪn/ "hen_NOUN"
 	<hoeg> /ɦˈuɣ̊/ "high_ADJ"
@@ -265,7 +265,7 @@ CONSONANTS
 	<moes> /mˈuːz̥/ "mouse_NOUN_FEM"
 	<naos> /nˈɒːz̥/ "nose_NOUN"
 
-/ʃ/ (0.008)
+/ʃ/ (0.007)
 	<sjeep> /ʃˈeːp/ "ship_NOUN"
 	<sjerp> /ʃˈæːʀəp/ "sharp_ADJ"
 	<sjaop> /ʃˈɒːp/ "sheep_NOUN"
