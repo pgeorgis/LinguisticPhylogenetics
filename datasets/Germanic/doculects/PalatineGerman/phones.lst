@@ -1,20 +1,20 @@
 VOWELS
-/ɐ/ (0.054)
+/ɐ/ (0.055)
 	<Dochder> /d̥ˈɔxd̥ɐ/ "daughter_NOUN"
-	<Stern> /ʃd̥ˈɛɐn/ "star_NOUN"
-	<Johr> /jˈoːɐ/ "year_NOUN"
+	<sauer> /sˈau̯ɐ/ "sour_ADJ"
+	<ehr> /ˈeːɐ/ "ye_PRON"
 
 /ə/ (0.046)
 	<kenne> /kʰˈɛnə/ "can_VERB"
 	<gewwe> /ɡ̊ˈɛβə/ "give_VERB"
 	<trinke> /d̥rˈɪŋɡ̊ə/ "drink_VERB"
 
-/ˈɪ/ (0.034)
+/ˈɪ/ (0.033)
 	<Wind> /βˈɪnd̥/ "wind_NOUN"
 	<dinn> /d̥ˈɪn/ "thin_ADJ"
 	<wild> /βˈɪld̥/ "wild_ADJ"
 
-/ˈɑ/ (0.034)
+/ˈɑ/ (0.033)
 	<ander> /ˈɑnɐ/ "other_ADJ"
 	<hasse> /hˈɑsə/ "hate_VERB"
 	<kalt> /kʰˈɑld̥/ "cold_ADJ"
@@ -31,23 +31,23 @@ VOWELS
 
 /ˈɑː/ (0.022)
 	<Aarm> /ˈɑːɐm/ "arm_NOUN"
-	<Pad> /pʰˈɑːd̥/ "path_NOUN"
+	<Pad> /b̥ˈɑːd̥/ "path_NOUN"
 	<Haapt> /hˈɑːb̥d̥/ "head_NOUN"
 
+/ˈɔ/ (0.019)
+	<Gott> /ɡ̊ˈɔd̥/ "god_NOUN"
+	<Dochder> /d̥ˈɔxd̥ɐ/ "daughter_NOUN"
+	<Horn> /hˈɔɐn/ "horn_NOUN"
+
 /ˈoː/ (0.019)
-	<Hoor> /hˈoːɐ/ "hair_NOUN"
-	<Dod> /d̥ˈoːd̥/ "death_NOUN"
-	<Knode> /ɡ̊nˈoːrə/ "knot_NOUN"
+	<Vogel> /fˈoːɣ̊l̩/ "bird_NOUN_MASC"
+	<Johr> /jˈoːɐ/ "year_NOUN"
+	<Sproch> /ʃb̥rˈoːx/ "speech_NOUN_FEM"
 
 /ˈiː/ (0.019)
-	<Dier> /d̥ˈiːɐ/ "animal_NOUN"
-	<mir> /mˈiːɐ/ "we_PRON"
 	<Dieb> /d̥ˈiːb̥/ "thief_NOUN"
-
-/ˈɔ/ (0.018)
-	<Worm> /βˈɔɐm/ "worm_NOUN"
-	<Broscht> /b̥rˈɔʃd̥/ "breast_NOUN"
-	<Dorn> /d̥ˈɔɐn/ "thorn_NOUN"
+	<Dier> /d̥ˈiːɐ/ "animal_NOUN"
+	<Liecht> /lˈiːʃd̥/ "light_NOUN"
 
 /ˈu/ (0.018)
 	<Mudder> /mˈurɐ/ "mother_NOUN"
@@ -125,7 +125,7 @@ VOWELS
 CONSONANTS
 /d̥/ (0.086)
 	<Dorn> /d̥ˈɔɐn/ "thorn_NOUN"
-	<Pad> /pʰˈɑːd̥/ "path_NOUN"
+	<Pad> /b̥ˈɑːd̥/ "path_NOUN"
 	<Dod> /d̥ˈoːd̥/ "death_NOUN"
 
 /n/ (0.059)
@@ -138,9 +138,9 @@ CONSONANTS
 	<schwimme> /ʃβˈɪmə/ "swim_VERB"
 	<Fisch> /fˈɪʃ/ "fish_NOUN"
 
-/l/ (0.056)
+/l/ (0.057)
 	<lang> /lˈɑŋ/ "long_ADJ"
-	<wild> /βˈɪld̥/ "wild_ADJ"
+	<Wal> /βˈɑːl/ "whale_NOUN"
 	<lache> /lˈɑxə/ "laugh_VERB"
 
 /s/ (0.052)
@@ -148,68 +148,70 @@ CONSONANTS
 	<Scheiß> /ʃˈaɪ̯s/ "shit_NOUN"
 	<dausend> /d̥ˈau̯sənd̥/ "thousand_NUM"
 
-/r/ (0.042)
+/r/ (0.041)
 	<blude> /b̥lˈuːrə/ "bleed_VERB"
 	<Rick> /rˈɪɡ̊/ "ridge_NOUN"
 	<Brot> /b̥rˈoːd̥/ "bread_NOUN"
 
-/f/ (0.041)
+/f/ (0.04)
 	<fär> /fˈɛɐ/ "for_PREP"
 	<Fraa> /frˈɑː/ "woman_NOUN"
 	<Waff> /βˈɑf/ "weapon_NOUN"
 
 /β/ (0.038)
-	<Worm> /βˈɔɐm/ "worm_NOUN"
-	<was> /βˈɑs/ "what_PRON"
-	<Schwääß> /ʃβˈɛːs/ "sweat_NOUN"
+	<Wort> /βˈɔɐd̥/ "word_NOUN"
+	<Wal> /βˈɑːl/ "whale_NOUN"
+	<Schweschder> /ʃβˈɛʃd̥ɐ/ "sister_NOUN"
 
-/ɡ̊/ (0.034)
-	<gähⁿ> /ɡ̊ˈɛ̃ː/ "go_VERB"
-	<gääl> /ɡ̊ˈɛːl/ "yellow_ADJ"
-	<gut> /ɡ̊ˈuːd̥/ "good_ADJ"
-
-/m/ (0.032)
-	<Aarm> /ˈɑːɐm/ "arm_NOUN"
-	<Mick> /mˈɪɡ̊/ "midge_NOUN"
+/m/ (0.031)
+	<Männer> /mˈɛnɐ/ "men_NOUN_PL"
 	<Millich> /mˈɪlɪʃ/ "milk_NOUN_FEM"
+	<Aarm> /ˈɑːɐm/ "arm_NOUN"
 
 /b̥/ (0.031)
 	<Brot> /b̥rˈoːd̥/ "bread_NOUN"
-	<Kalb> /kʰˈɑlb̥/ "calf_NOUN"
-	<Buch> /b̥ˈuːx/ "book_NOUN_FEM"
+	<Brick> /b̥rˈɪɡ̊/ "bridge_NOUN"
+	<Pad> /b̥ˈɑːd̥/ "path_NOUN"
+
+/ɡ̊/ (0.031)
+	<griⁿ> /ɡ̊rˈĩː/ "green_ADJ"
+	<Gold> /ɡ̊ˈɔld̥/ "gold_NOUN_NEU"
+	<jung> /jˈunɡ̊/ "young_NOUN"
 
 /h/ (0.023)
 	<hääß> /hˈɛːs/ "hot_ADJ"
 	<Henne> /hˈɛnə/ "hen_NOUN"
 	<heilich> /hˈaɪ̯lɪʃ/ "holy_ADJ"
 
-/ʣ̥/ (0.017)
-	<Zeit> /ʣ̥ˈaɪ̯d̥/ "time_NOUN"
-	<Zeeche> /ʣ̥ˈeːʃə/ "token_NOUN"
-	<zwää> /ʣ̥βˈɛː/ "two_NUM"
-
-/x/ (0.014)
-	<suche> /sˈuːxə/ "seek_VERB"
-	<Sproch> /ʃb̥rˈoːx/ "speech_NOUN_FEM"
-	<Vogel> /fˈoːxl̩/ "bird_NOUN_MASC"
+/ʣ̥/ (0.018)
+	<dreizeh> /d̥rˈaɪ̯ʣ̥eː/ "thirteen_NUM"
+	<schwarz> /ʃβˈɑɐʣ̥/ "black_ADJ"
+	<sitze> /sˈɪʣ̥ə/ "sit_VERB"
 
 /kʰ/ (0.013)
-	<kalt> /kʰˈɑld̥/ "cold_ADJ"
+	<Kenich> /kʰˈeːnɪʃ/ "king_NOUN"
 	<kenne> /kʰˈɛnə/ "ken_VERB"
 	<Korn> /kʰˈɔɐn/ "corn_NOUN"
 
+/x/ (0.011)
+	<acht> /ˈɑxd̥/ "eight_NUM"
+	<Raach> /rˈɑːx/ "smoke_NOUN"
+	<Sproch> /ʃb̥rˈoːx/ "speech_NOUN_FEM"
+
 /ŋ/ (0.01)
-	<Hunger> /hˈuŋɐ/ "hunger_NOUN"
-	<Ding> /d̥ˈɪŋ/ "thing_NOUN"
 	<lang> /lˈɑŋ/ "long_ADJ"
+	<Schlang> /ʃlˈɑŋ/ "snake_NOUN"
+	<trinke> /d̥rˈɪŋɡ̊ə/ "drink_VERB"
+
+/ɣ̊/ (0.006)
+	<Nachel> /nˈɑːɣ̊l̩/ "fingernail_NOUN"
+	<Aag> /ˈɑːɣ̊/ "eye_NOUN"
+	<Dag> /d̥ˈɑːɣ̊/ "day_NOUN"
 
 /j/ (0.005)
+	<jung> /jˈunɡ̊/ "young_NOUN"
 	<Johr> /jˈoːɐ/ "year_NOUN"
-	<flieje> /flˈiːjə/ "fly_VERB"
 	<folje> /fˈɔljə/ "follow_VERB"
-
-/pʰ/ (0.001)
-	<Pad> /pʰˈɑːd̥/ "path_NOUN"
 
 
 

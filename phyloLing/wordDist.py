@@ -15,6 +15,7 @@ from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 from utils.phoneme_map import PhonemeMap
 from utils.distance import Distance, dist_to_sim, sim_to_dist
+from utils.doculect import Doculect
 from utils.information import adaptation_surprisal
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
@@ -45,7 +46,7 @@ class WordDistance(Distance):
             return result
 
 
-def get_doculects_from_word_pair(word1, word2, family_index):
+def get_doculects_from_word_pair(word1: Word, word2: Word, family_index: dict) -> tuple[Doculect, Doculect]:
     lang1 = word1.get_doculect(family_index[DOCULECT_INDEX_KEY])
     lang2 = word2.get_doculect(family_index[DOCULECT_INDEX_KEY])
     return lang1, lang2
@@ -491,7 +492,14 @@ def phonological_dist(word1: Word,
     return word_dist
 
 
-def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, normalize=False, pad_ch=PAD_CH_DEFAULT, **kwargs):
+def mutual_surprisal(word1: Word,
+                     word2: Word,
+                     family_index: dict,
+                     ngram_size: int=1,
+                     phon_env: bool=True,
+                     normalize: bool=False,
+                     **kwargs
+                     ):
     lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
 
     # Check whether phoneme PMI has been calculated for this language pair
@@ -549,9 +557,10 @@ def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, no
                                     gap_ch=lang2.alignment_params['gap_ch'],
                                     )
 
-    # Calculate self-surprisal values in each direction
-    self_surprisal1 = lang1.self_surprisal(word1, normalize=False)
-    self_surprisal2 = lang2.self_surprisal(word2, normalize=False)
+    # Calculate self-surprisal (information content) values in each direction
+    # Use trigram information content by default
+    self_surprisal1 = word1.get_information_content(doculect=lang1, ngram_size=3)
+    self_surprisal2 = word2.get_information_content(doculect=lang2, ngram_size=3)
 
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily
@@ -614,7 +623,14 @@ def mutual_surprisal(word1, word2, family_index, ngram_size=1, phon_env=True, no
     return score
 
 
-def pmi_dist(word1, word2, family_index, normalize=True, sim2dist=True, alpha=0.5, pad_ch=PAD_CH_DEFAULT, **kwargs):
+def pmi_dist(word1: Word,
+             word2: Word,
+             family_index: dict,
+             normalize: bool=True,
+             sim2dist: bool=True,
+             alpha: float|int=0.5,
+             **kwargs
+             ):
     lang1, lang2 = get_doculects_from_word_pair(word1, word2, family_index)
 
     # Check whether phoneme PMI has been calculated for this language pair
@@ -637,11 +653,11 @@ def pmi_dist(word1, word2, family_index, normalize=True, sim2dist=True, alpha=0.
     ]
 
     # Weight by information content per segment
-    def weight_by_info_content(alignment, PMI_vals):
-        info_content1 = word1.getInfoContent(doculect=lang1)
-        info_content2 = word2.getInfoContent(doculect=lang2)
-        total_info1 = word1.total_info_content
-        total_info2 = word2.total_info_content
+    def weight_by_info_content(alignment, PMI_vals, ngram_size=3):
+        info_content1 = word1.get_information_content(doculect=lang1, ngram_size=ngram_size)
+        info_content2 = word2.get_information_content(doculect=lang2, ngram_size=ngram_size)
+        total_info1 = word1.total_info_content[ngram_size]
+        total_info2 = word2.total_info_content[ngram_size]
         seq_map1, seq_map2 = alignment.seq_map
         weighted_PMI = []
         for i, pair in enumerate(alignment.alignment):

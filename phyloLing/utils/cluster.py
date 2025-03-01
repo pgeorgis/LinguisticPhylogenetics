@@ -1,11 +1,11 @@
 import re
 from collections import defaultdict
 
+import bcubed
 import seaborn as sns
 from matplotlib import pyplot as plt
 from scipy.cluster.hierarchy import dendrogram, fcluster, linkage, to_tree
 from scipy.spatial.distance import squareform
-
 from utils.distance import distance_matrix
 
 
@@ -41,6 +41,14 @@ def cluster_items(group,
         clusters[cluster].append(item)
 
     return clusters
+
+
+def evaluate_clusters(ref_clusters, hyp_clusters):
+    """Evaluates B-cubed F1 score of clustering results."""
+    precision = bcubed.precision(hyp_clusters, ref_clusters)
+    recall = bcubed.recall(hyp_clusters, ref_clusters)
+    fscore = bcubed.fscore(precision, recall)
+    return fscore
 
 
 def draw_dendrogram(group,

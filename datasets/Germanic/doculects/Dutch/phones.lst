@@ -1,7 +1,7 @@
 VOWELS
-/ə/ (0.072)
+/ə/ (0.073)
 	<drinken> /dɾˈɪŋkən/ "drink_VERB"
-	<twaalf> /tʋˈaːɫəv̥/ "twelve_NUM"
+	<teken> /tˈeːkən/ "token_NOUN"
 	<brouwen> /bɾˈɑu̯ən/ "brew_VERB"
 
 /ˈɑ/ (0.031)
@@ -14,15 +14,15 @@ VOWELS
 	<zoon> /zˈoːn/ "son_NOUN"
 	<noord> /nˈoːɾd̥/ "north_NOUN"
 
-/ˈeː/ (0.026)
+/ˈeː/ (0.025)
 	<week> /ʋˈeːk/ "weak_ADJ"
 	<vlees> /vɫˈeːz̥/ "flesh_NOUN"
 	<deeg> /dˈeːχ/ "dough_NOUN"
 
-/ˈɔ/ (0.024)
-	<storm> /stˈɔɾm/ "storm_NOUN"
+/ˈɔ/ (0.025)
+	<wortel> /ʋˈɔɾtəɫ/ "root_NOUN_FEM"
 	<borst> /bˈɔɾst/ "breast_NOUN"
-	<jong> /jˈɔŋ/ "young_NOUN"
+	<worm> /ʋˈɔɾm/ "worm_NOUN"
 
 /ˈaː/ (0.024)
 	<naakt> /nˈaːkt/ "naked_ADJ"
@@ -39,7 +39,7 @@ VOWELS
 	<hen> /ɦˈɛn/ "hen_NOUN"
 	<helpen> /ɦˈɛɫpən/ "help_VERB"
 
-/ˈi/ (0.019)
+/ˈi/ (0.018)
 	<dief> /dˈiv̥/ "thief_NOUN"
 	<diep> /dˈip/ "deep_ADJ"
 	<knie> /knˈi/ "knee_NOUN"
@@ -93,31 +93,31 @@ CONSONANTS
 	<wensen> /ʋˈɛnsən/ "wish_VERB"
 
 /ɾ/ (0.077)
-	<doorn> /dˈoːɾn/ "thorn_NOUN"
-	<worm> /ʋˈɔɾm/ "worm_NOUN"
+	<dertien> /dˈɛɾtin/ "thirteen_NUM"
+	<woord> /ʋˈoːɾd̥/ "word_NOUN"
 	<koren> /kˈoːɾən/ "corn_NOUN"
 
 /t/ (0.053)
 	<voeten> /vˈutən/ "feet_NOUN_PL"
-	<storm> /stˈɔɾm/ "storm_NOUN"
-	<dertien> /dˈɛɾtin/ "thirteen_NUM"
+	<stoel> /stˈuɫ/ "stool_NOUN"
+	<dorst> /dˈɔɾst/ "thirst_NOUN"
 
 /χ/ (0.05)
 	<garen> /χˈaːɾən/ "yarn_NOUN"
 	<god> /χˈɔd̥/ "god_NOUN"
 	<dwerg> /dʋˈɛɾχ/ "dwarf_NOUN"
 
-/ɫ/ (0.048)
-	<liegen> /ɫˈiχən/ "tell lies_VERB"
-	<vlieg> /vɫˈiχ/ "housefly_NOUN"
+/ɫ/ (0.049)
 	<stoel> /stˈuɫ/ "stool_NOUN"
+	<vlieg> /vɫˈiχ/ "housefly_NOUN"
+	<ziel> /zˈiɫ/ "soul_NOUN"
 
 /d/ (0.041)
 	<dik> /dˈɪk/ "thick_ADJ"
 	<ander> /ˈɑndəɾ/ "other_ADJ"
 	<donder> /dˈɔndəɾ/ "thunder_NOUN"
 
-/k/ (0.033)
+/k/ (0.032)
 	<koe> /kˈu/ "cow_NOUN"
 	<knie> /knˈi/ "knee_NOUN"
 	<koning> /kˈoːnɪŋ/ "king_NOUN"
@@ -127,15 +127,15 @@ CONSONANTS
 	<storm> /stˈɔɾm/ "storm_NOUN"
 	<slapen> /sɫˈaːpən/ "sleep_VERB"
 
-/d̥/ (0.03)
-	<brood> /bɾˈoːd̥/ "bread_NOUN"
-	<tand> /tˈɑnd̥/ "tooth_NOUN"
-	<land> /ɫˈɑnd̥/ "land_NOUN"
+/ʋ/ (0.03)
+	<weten> /ʋˈeːtən/ "know_VERB"
+	<wonder> /ʋˈɔndəɾ/ "wonder_NOUN"
+	<week> /ʋˈeːk/ "weak_ADJ"
 
-/ʋ/ (0.029)
-	<wijn> /ʋˈɛi̯n/ "wine_NOUN"
-	<winter> /ʋˈɪntəɾ/ "winter_NOUN"
-	<water> /ʋˈaːtəɾ/ "water_NOUN"
+/d̥/ (0.03)
+	<schild> /sχˈɪɫd̥/ "shield_NOUN"
+	<huid> /ɦˈœy̯d̥/ "skin_NOUN"
+	<goed> /χˈud̥/ "good_ADJ"
 
 /v/ (0.028)
 	<vriend> /vɾˈind̥/ "friend_NOUN"

@@ -1,7 +1,7 @@
 family:
     name: Germanic
     file: datasets/Germanic/data/germanic_data.tsv
-    exclude: ['Old English', 'Plautdietsch', 'Old Dutch', 'Middle Dutch']
+    exclude: ['Plautdietsch', 'Old Dutch', 'Middle Dutch', 'Old Saxon', 'Middle Low German', 'Australian English']
     outdir: datasets/Germanic/
 
 experiment:
@@ -11,42 +11,33 @@ transcription:
     global:
         ignore_stress: false
         combine_diphthongs: true
-        normalize_geminates: false
+        normalize_geminates: true
         ch_to_remove: ['̩']
     doculects:
-        Proto-Germanic:
-            normalize_geminates: true
-        Gothic:
-            normalize_geminates: true
-        "Old West Norse":
-            normalize_geminates: true
-        Icelandic:
-            normalize_geminates: true
-        Faroese:
-            normalize_geminates: true
-        "Nynorsk Norwegian":
-            normalize_geminates: true
-        "Bokmål Norwegian":
-            normalize_geminates: true
-        Elfdalian:
-            normalize_geminates: true
-        Swedish:
-            normalize_geminates: true
-        "Old English":
-            normalize_geminates: true
-        "Old High German":
-            normalize_geminates: true
-        "Middle High German":
-            normalize_geminates: true
-        "Swiss German":
-            normalize_geminates: true
+        "American English":
+            normalize_geminates: false
+        English:
+            normalize_geminates: false
+        Scots:
+            normalize_geminates: false
+        Westphalian:
+            normalize_geminates: false
+        Eastphalian:
+            normalize_geminates: false
+        Mecklenburgisch-Vorpommersch:
+            normalize_geminates: false
+        "East Frisian Low Saxon":
+            normalize_geminates: false
+        "Northern Low Saxon":
+            normalize_geminates: false
 
 phon_corr:
+    phon_env: true
     refresh: []
     refresh_all: true
 
 # cognates:
-#     cluster_threshold: 1.41 #1.366
+#     cluster_threshold: 
 
 # evaluation:
 #     precalculated_word_scores: 

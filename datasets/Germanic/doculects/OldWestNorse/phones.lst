@@ -1,8 +1,8 @@
 VOWELS
-/ɑ/ (0.043)
-	<dúfa> /dˈuːvɑ/ "dove_NOUN"
-	<skjóta> /scˈoːtɑ/ "shoot_VERB"
-	<vika> /vˈikɑ/ "week_NOUN"
+/ɑ/ (0.044)
+	<ketta> /cʰˈetːɑ/ "cat_NOUN"
+	<sǿkja> /sˈøːcɑ/ "seek_VERB"
+	<œskja> /ˈøːscɑ/ "wish_VERB"
 
 /ˈɑ/ (0.033)
 	<svartr> /svˈɑrtr̥/ "black_ADJ"
@@ -19,7 +19,7 @@ VOWELS
 	<ulfr> /ˈulvr̥/ "wolf_NOUN"
 	<ugla> /ˈuɡla/ "owl_NOUN"
 
-/ˈoː/ (0.02)
+/ˈoː/ (0.019)
 	<dóttir> /dˈoːtːir̥/ "daughter_NOUN"
 	<bók> /bˈoːk/ "book_NOUN_FEM"
 	<sjór> /sjˈoːr̥/ "sea_NOUN"
@@ -29,15 +29,15 @@ VOWELS
 	<sjá> /sjˈɑː/ "see_VERB"
 	<slá> /slˈɑː/ "slay_VERB"
 
-/ˈi/ (0.015)
-	<binda> /bˈindɑ/ "bind_VERB"
-	<þing> /θˈiŋɡ/ "thing_NOUN"
-	<mik> /mˈik/ "me_PRON_ACC"
-
-/ˈe/ (0.015)
+/ˈe/ (0.016)
+	<ek> /ˈek/ "I_PRON"
+	<sverð> /svˈerð/ "sword_NOUN"
 	<gefa> /ɟˈevɑ/ "give_VERB"
-	<dvergr> /dvˈerɣr̥/ "dwarf_NOUN"
-	<regn> /rˈeɣn/ "rain_NOUN"
+
+/ˈi/ (0.015)
+	<livr> /lˈivr̥/ "liver_NOUN"
+	<fiskr> /fˈiskr̥/ "fish_NOUN"
+	<hringr> /r̥ˈiŋɡr̥/ "ring_NOUN"
 
 /ˈuː/ (0.014)
 	<ljúfr> /ljˈuːfr̥/ "beloved_ADJ"
@@ -145,7 +145,7 @@ CONSONANTS
 	<fjǫðr> /fjˈɔðr/ "feather_NOUN"
 	<sumar> /sˈumɑr/ "summer_NOUN"
 
-/s/ (0.054)
+/s/ (0.053)
 	<sjalfr> /sjˈɑlvr̥/ "self_PRON"
 	<sjúkr> /sjˈuːkr̥/ "sick_ADJ"
 	<stjarna> /stjˈɑrnɑ/ "star_NOUN"
@@ -165,7 +165,7 @@ CONSONANTS
 	<tveir> /tʰvˈɛi̯r̥/ "two_NUM"
 	<lauf> /lˈɑu̯v/ "leaf_NOUN"
 
-/t/ (0.031)
+/t/ (0.03)
 	<gestr> /ɟˈɛstr̥/ "guest_NOUN"
 	<vatn> /vˈɑtn/ "water_NOUN"
 	<vita> /vˈitɑ/ "know_VERB"
@@ -241,9 +241,9 @@ CONSONANTS
 	<tuttugu> /tʰˈutːuɣu/ "twenty_NUM"
 
 /tː/ (0.008)
-	<nátt> /nˈɑːtː/ "night_NOUN_FEM"
-	<þrettán> /θrˈetːɑːn/ "thirteen_NUM"
+	<tuttugu> /tʰˈutːuɣu/ "twenty_NUM"
 	<máttr> /mˈɑːtːr̥/ "might_NOUN"
+	<réttr> /rˈeːtːr̥/ "right_ADJ"
 
 /kʰ/ (0.008)
 	<kalfr> /kʰˈɑlvr̥/ "calf_NOUN"
@@ -275,10 +275,10 @@ CONSONANTS
 	<fylgja> /fˈylɟa/ "follow_VERB"
 	<geit> /ɟˈɛi̯t/ "goat_NOUN"
 
-/cʰ/ (0.004)
-	<kýr> /cʰˈyːr̥/ "cow_NOUN"
-	<kærr> /cʰˈɛːr̥ː/ "dear_ADJ"
+/cʰ/ (0.005)
 	<kyklingr> /cʰˈykliŋɡr̥/ "chicken_NOUN"
+	<kýr> /cʰˈyːr̥/ "cow_NOUN"
+	<ketta> /cʰˈetːɑ/ "cat_NOUN"
 
 /ɡː/ (0.003)
 	<egg> /ˈɛɡː/ "edge_NOUN"

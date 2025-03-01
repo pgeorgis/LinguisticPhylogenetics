@@ -49,7 +49,7 @@ def filter_cognates_by_lang(lang, cluster):
         word.ipa,
         word.orthography,
         word.concept,
-        word.getInfoContent(total=True, doculect=lang)
+        word.get_information_content(total=True, doculect=lang)
         )
     )
     

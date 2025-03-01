@@ -1,5 +1,5 @@
 VOWELS
-/ə/ (0.07)
+/ə/ (0.069)
 	<Doochter> /d̥ˈoːxtəʁ/ "daughter_NOUN"
 	<drucke> /d̥ʁˈukə/ "press_VERB"
 	<Winter> /ʋˈintəʁ/ "winter_NOUN"
@@ -14,22 +14,22 @@ VOWELS
 	<schwàrz> /ʃwˈɒʁʦ/ "black_ADJ"
 	<Blàtt> /b̥lˈɒt/ "leaf_NOUN_NEU"
 
-/ˈu/ (0.028)
+/ˈu/ (0.029)
+	<Summer> /sˈuməʁ/ "summer_NOUN"
 	<Durscht> /d̥ˈuʁʃt/ "thirst_NOUN"
-	<Zung> /ʦˈuŋ/ "tongue_NOUN"
-	<Wunder> /ʋˈund̥əʁ/ "wonder_NOUN"
+	<Wuch> /ʋˈux/ "week_NOUN"
 
-/ˈiː/ (0.026)
+/ˈiː/ (0.025)
 	<Liecht> /lˈiːʃt/ "light_NOUN"
 	<Fiess> /fˈiːs/ "feet_NOUN_PL"
 	<dief> /d̥ˈiːf/ "deep_ADJ"
 
-/ˈoː/ (0.02)
+/ˈoː/ (0.019)
 	<Johr> /jˈoːʁ/ "year_NOUN"
 	<Brot> /b̥ʁˈoːt/ "bread_NOUN"
 	<Sohn> /sˈoːn/ "son_NOUN"
 
-/ˈʊː/ (0.016)
+/ˈʊː/ (0.018)
 	<Blüem> /b̥lˈʊːm/ "flower_NOUN"
 	<Baum> /b̥ˈʊːm/ "tree_NOUN"
 	<laufe> /lˈʊːfə/ "leap_VERB"
@@ -44,24 +44,24 @@ VOWELS
 	<Woll> /ʋˈol/ "wool_NOUN_FEM"
 	<voll> /fˈol/ "full_ADJ"
 
+/ˈeː/ (0.013)
+	<mer> /mˈeːʁ/ "me_PRON_DAT"
+	<scheen> /ʃˈeːn/ "beautiful_ADJ"
+	<zehn> /ʦˈeːn/ "ten_NUM"
+
 /ˈəi̯/ (0.012)
-	<heim> /hˈəi̯m/ "home_NOUN"
 	<Bein> /b̥ˈəi̯n/ "bone_NOUN"
 	<Stein> /ʃtˈəi̯n/ "stone_NOUN"
+	<zwei> /ʦʋˈəi̯/ "two_NUM"
 
 /ˈɒː/ (0.012)
-	<Àrm> /ˈɒːʁm/ "arm_NOUN"
-	<wàrm> /ʋˈɒːʁm/ "warm_ADJ"
+	<Nàs> /nˈɒːs/ "nose_NOUN"
+	<Ààl> /ˈɒːl/ "eel_NOUN"
 	<Wàl> /ʋˈɒːl/ "whale_NOUN"
-
-/ˈeː/ (0.012)
-	<Schnee> /ʃnˈeː/ "snow_NOUN"
-	<gehn> /ɡ̊ˈeːn/ "go_VERB"
-	<mer> /mˈeːʁ/ "we_PRON"
 
 /ˈyː/ (0.011)
 	<Düüb> /d̥ˈyːb̥/ "dove_NOUN"
-	<Müs> /mˈyːz̥/ "mouse_NOUN_FEM"
+	<Müs> /mˈyːs/ "mouse_NOUN_FEM"
 	<Hüt> /hˈyːt/ "skin_NOUN"
 
 /i/ (0.01)
@@ -70,7 +70,7 @@ VOWELS
 	<Millich> /mˈiliʃ/ "milk_NOUN_FEM"
 
 /ˈæː/ (0.007)
-	<Käs> /kʰˈæːz̥/ "cheese_NOUN"
+	<Käs> /kʰˈæːs/ "cheese_NOUN"
 	<Räje> /ʁˈæːjə/ "rain_NOUN"
 	<gäl> /ɡ̊ˈæːl/ "yellow_ADJ"
 
@@ -92,10 +92,6 @@ VOWELS
 /ˈɛ/ (0.002)
 	<Männer> /mˈɛnəʁ/ "men_NOUN_PL"
 	<Fädder> /fˈɛd̥əʁ/ "feather_NOUN"
-
-/ˈøː/ (0.002)
-	<Stüehl> /ʃtˈøːl/ "stool_NOUN"
-	<Müeter> /mˈøːtəʁ/ "mother_NOUN"
 
 /ˈɔi̯/ (0.001)
 	<Fràui> /fʁˈɔi̯/ "woman_NOUN"
@@ -121,110 +117,105 @@ VOWELS
 
 
 CONSONANTS
-/ʁ/ (0.087)
-	<Hoor> /hˈoːʁ/ "hair_NOUN"
-	<Stern> /ʃtˈeʁn/ "star_NOUN"
-	<Trän> /tʁˈæːn/ "tear_NOUN_FEM"
-
-/n/ (0.071)
-	<Stern> /ʃtˈeʁn/ "star_NOUN"
-	<gänn> /ɡ̊ˈæn/ "give_VERB"
-	<Knej> /ɡ̊nˈei̯/ "knee_NOUN"
-
-/l/ (0.054)
-	<Seel> /sˈeːl/ "soul_NOUN"
-	<gäl> /ɡ̊ˈæːl/ "yellow_ADJ"
-	<Liecht> /lˈiːʃt/ "light_NOUN"
-
-/t/ (0.051)
-	<Bruscht> /b̥ʁˈuʃt/ "breast_NOUN"
-	<Sit> /sˈiːt/ "side_NOUN"
-	<Stein> /ʃtˈəi̯n/ "stone_NOUN"
-
-/s/ (0.043)
-	<Geiss> /ɡ̊ˈəi̯s/ "goat_NOUN"
-	<wisse> /ʋˈisə/ "know_VERB"
-	<Seel> /sˈeːl/ "soul_NOUN"
-
-/d̥/ (0.043)
-	<drucke> /d̥ʁˈukə/ "press_VERB"
-	<Donner> /d̥ˈonəʁ/ "thunder_NOUN"
-	<Bàd> /b̥ˈɒːd̥/ "bath_NOUN_NEU"
-
-/ʃ/ (0.04)
-	<zwànzig> /ʦʋˈɒnʦiʃ/ "twenty_NUM"
+/ʁ/ (0.088)
 	<schwàrz> /ʃwˈɒʁʦ/ "black_ADJ"
-	<Rauch> /ʁˈʊːʃ/ "smoke_NOUN"
+	<wàrm> /ʋˈɒːʁm/ "warm_ADJ"
+	<Hoor> /hˈoːʁ/ "hair_NOUN"
 
-/f/ (0.039)
-	<helfe> /hˈælfə/ "help_VERB"
-	<zwelf> /ʦʋˈelf/ "twelve_NUM"
-	<frisch> /fʁˈiʃ/ "fresh_ADJ"
-
-/ʋ/ (0.033)
-	<Wind> /ʋˈind̥/ "wind_NOUN"
-	<Wetter> /ʋˈetəʁ/ "weather_NOUN"
-	<Winter> /ʋˈintəʁ/ "winter_NOUN"
-
-/m/ (0.032)
-	<Blüem> /b̥lˈʊːm/ "flower_NOUN"
-	<Mül> /mˈyːl/ "mouth_NOUN"
+/n/ (0.07)
+	<Donner> /d̥ˈonəʁ/ "thunder_NOUN"
+	<uns> /ˈuns/ "us_PRON"
 	<Mànn> /mˈɒn/ "man_NOUN"
 
+/l/ (0.054)
+	<Lüüs> /lˈyːs/ "louse_NOUN"
+	<Wolf> /ʋˈolf/ "wolf_NOUN"
+	<Blüem> /b̥lˈʊːm/ "flower_NOUN"
+
+/s/ (0.053)
+	<saawe> /sˈaːʋə/ "say_VERB"
+	<Summer> /sˈuməʁ/ "summer_NOUN"
+	<Füess> /fˈʊːs/ "foot_NOUN"
+
+/t/ (0.051)
+	<Sit> /sˈiːt/ "side_NOUN"
+	<Stein> /ʃtˈəi̯n/ "stone_NOUN"
+	<kàlt> /kʰˈɒlt/ "cold_ADJ"
+
+/d̥/ (0.042)
+	<Hund> /hˈund̥/ "dog_NOUN"
+	<Wind> /ʋˈind̥/ "wind_NOUN"
+	<Ding> /d̥ˈiŋ/ "thing_NOUN"
+
+/ʃ/ (0.04)
+	<Stern> /ʃtˈeʁn/ "star_NOUN"
+	<winsche> /ʋˈinʃə/ "wish_VERB"
+	<scheen> /ʃˈeːn/ "beautiful_ADJ"
+
+/f/ (0.039)
+	<fer> /fˈeʁ/ "for_PREP"
+	<Vöjel> /fˈøɡ̊l̩/ "bird_NOUN_MASC"
+	<Fiir> /fˈiːʁ/ "fire_NOUN"
+
+/ʋ/ (0.034)
+	<winsche> /ʋˈinʃə/ "wish_VERB"
+	<Wurm> /ʋˈuʁm/ "worm_NOUN"
+	<Wind> /ʋˈind̥/ "wind_NOUN"
+
+/m/ (0.033)
+	<Nàmme> /nˈɒmə/ "name_NOUN"
+	<Millich> /mˈiliʃ/ "milk_NOUN_FEM"
+	<Summer> /sˈuməʁ/ "summer_NOUN"
+
 /b̥/ (0.028)
-	<Bàd> /b̥ˈɒːd̥/ "bath_NOUN_NEU"
-	<bïsse> /b̥ˈiːsə/ "bite_VERB"
-	<tribe> /tʁˈiːb̥ə/ "drive_VERB"
+	<binde> /b̥ˈind̥ə/ "bind_VERB"
+	<Düüb> /d̥ˈyːb̥/ "dove_NOUN"
+	<blüete> /b̥lˈʊːtə/ "bleed_VERB"
 
 /h/ (0.021)
-	<hoch> /hˈoːx/ "high_ADJ"
-	<heiss> /hˈəi̯s/ "hot_ADJ"
+	<Hund> /hˈund̥/ "dog_NOUN"
+	<helfe> /hˈælfə/ "help_VERB"
 	<heili> /hˈəi̯li/ "holy_ADJ"
 
-/ʦ/ (0.017)
-	<drizehn> /d̥ʁˈiʦeːn/ "thirteen_NUM"
-	<Zàhn> /ʦˈɒːn/ "tooth_NOUN"
+/ʦ/ (0.018)
 	<zwei> /ʦʋˈəi̯/ "two_NUM"
+	<Zeiche> /ʦˈei̯ʃə/ "token_NOUN"
+	<Sàlz> /sˈɒlʦ/ "salt_NOUN"
 
 /ɡ̊/ (0.016)
-	<Gàns> /ɡ̊ˈɒnz̥/ "goose_NOUN"
-	<Geiss> /ɡ̊ˈəi̯s/ "goat_NOUN"
-	<grien> /ɡ̊ʁˈiːn/ "green_ADJ"
+	<güet> /ɡ̊ˈʊːt/ "good_ADJ"
+	<Gràs> /ɡ̊ʁˈɒːs/ "grass_NOUN_NEU"
+	<Gott> /ɡ̊ˈot/ "god_NOUN"
 
 /kʰ/ (0.016)
-	<Korn> /kʰˈoʁn/ "corn_NOUN"
 	<Küeh> /kʰˈʊː/ "cow_NOUN"
-	<Kàlb> /kʰˈɒlb̥/ "calf_NOUN"
+	<Kirich> /kʰˈiːʁiʃ/ "church_NOUN_FEM"
+	<kumme> /kʰˈumə/ "come_VERB"
 
 /ŋ/ (0.012)
-	<Schlàng> /ʃlˈɒŋ/ "snake_NOUN"
+	<Ring> /ʁˈiŋ/ "ring_NOUN"
 	<Zung> /ʦˈuŋ/ "tongue_NOUN"
-	<Hunger> /hˈuŋəʁ/ "hunger_NOUN"
-
-/z̥/ (0.011)
-	<uns> /ˈunz̥/ "us_PRON"
-	<Hüs> /hˈyːz̥/ "house_NOUN"
-	<Nàs> /nˈɒːz̥/ "nose_NOUN"
+	<trinke> /tʁˈiŋkə/ "drink_VERB"
 
 /k/ (0.011)
-	<Bruck> /b̥ʁˈuk/ "bridge_NOUN"
-	<Ruck> /ʁˈuk/ "ridge_NOUN"
 	<drucke> /d̥ʁˈukə/ "press_VERB"
+	<trucket> /tʁˈukət/ "dry_ADJ"
+	<Fuchs> /fˈuks/ "fox_NOUN"
 
-/x/ (0.009)
-	<hoch> /hˈoːx/ "high_ADJ"
+/x/ (0.008)
+	<Wuch> /ʋˈux/ "week_NOUN"
 	<Nààcht> /nˈɒːxt/ "night_NOUN_FEM"
-	<Sproch> /ʃpʁˈoːx/ "speech_NOUN_FEM"
+	<àcht> /ˈɒxt/ "eight_NUM"
 
-/j/ (0.009)
-	<lieje> /lˈiːjə/ "lie_VERB"
-	<Wäj> /ʋˈæj/ "way_NOUN"
+/j/ (0.008)
 	<laje> /lˈaːjə/ "tell lies_VERB"
+	<flieje> /flˈiːjə/ "fly_VERB"
+	<jung> /jˈuŋ/ "young_NOUN"
 
 /w/ (0.004)
 	<Schweschter> /ʃwˈeʃtəʁ/ "sister_NOUN"
-	<schwimme> /ʃwˈimə/ "swim_VERB"
 	<schwàrz> /ʃwˈɒʁʦ/ "black_ADJ"
+	<schwimme> /ʃwˈimə/ "swim_VERB"
 
 /p͡f/ (0.002)
 	<Kopf> /kʰˈop͡f/ "head_NOUN"

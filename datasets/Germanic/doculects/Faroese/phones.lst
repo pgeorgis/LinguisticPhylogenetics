@@ -1,13 +1,13 @@
 VOWELS
-/ʊ/ (0.081)
+/ʊ/ (0.08)
 	<turrur> /tʰˈʊɹʊɹ/ "dry_ADJ"
 	<sonur> /sˈɔnʊɹ/ "son_NOUN"
 	<køttur> /kʰˈœʰtʊɹ/ "cat_NOUN"
 
-/a/ (0.057)
-	<høna> /hˈøːna/ "hen_NOUN"
-	<oyra> /ˈɔːi̯ɹa/ "ear_NOUN"
-	<trettan> /tʰɹˈɛʰtan/ "thirteen_NUM"
+/a/ (0.058)
+	<hjálpa> /jˈɔl̥pa/ "help_VERB"
+	<dríva> /d̥ɹˈʊ̯iːva/ "drive_VERB"
+	<takka> /tʰˈaʰka/ "thank_VERB"
 
 /ˈɪ/ (0.021)
 	<kvinna> /kʰvˈɪnːa/ "woman_NOUN"
@@ -34,15 +34,15 @@ VOWELS
 	<menniskja> /mˈɛnːɪʃa/ "person_NOUN"
 	<fyri> /fˈiːɹɪ/ "for_PREP"
 
-/ˈɔ/ (0.017)
-	<ross> /ɹˈɔsː/ "horse_NOUN"
-	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
-	<hálvur> /hˈɔlvʊr/ "half_NOUN"
-
-/ˈɛ/ (0.016)
-	<menn> /mˈɛnː/ "men_NOUN_PL"
-	<drekka> /d̥ɹˈɛʰka/ "drink_VERB"
+/ˈɛ/ (0.017)
+	<ganga> /ɡ̊ˈɛŋɡ̊a/ "go_VERB"
 	<trettan> /tʰɹˈɛʰtan/ "thirteen_NUM"
+	<egg> /ˈɛɡ̊ː/ "egg_NOUN_NEU"
+
+/ˈɔ/ (0.017)
+	<nátt> /nˈɔʰt/ "night_NOUN_FEM"
+	<kálvur> /kʰˈɔlvʊɹ/ "calf_NOUN"
+	<vopn> /vˈɔʰpn̩/ "weapon_NOUN"
 
 /ˈʊ̯iː/ (0.015)
 	<dýr> /d̥ˈʊ̯iːɹ/ "animal_NOUN"
@@ -122,12 +122,12 @@ VOWELS
 
 
 CONSONANTS
-/ɹ/ (0.134)
+/ɹ/ (0.133)
 	<marur> /mˈɛːa̯ɹʊɹ/ "sea_NOUN"
 	<sjálvur> /ʃˈɔlvʊɹ/ "self_PRON"
 	<dagur> /d̥ˈɛːa̯wʊɹ/ "day_NOUN"
 
-/s/ (0.042)
+/s/ (0.041)
 	<seks> /sˈɛks/ "six_NUM"
 	<søtur> /sˈøːtʊɹ/ "sweet_ADJ"
 	<sonur> /sˈɔnʊɹ/ "son_NOUN"
@@ -165,7 +165,7 @@ CONSONANTS
 /m/ (0.022)
 	<móðir> /mˈɔːu̯wɪɹ/ "mother_NOUN"
 	<lamb> /lˈamb̥/ "lamb_NOUN"
-	<mýs> /mˈʊ̯iːs/ "mice_NOUN"
+	<mýs> /mˈʊ̯iːs/ "mice_NOUN_PL"
 
 /b̥/ (0.019)
 	<bryggja> /b̥ɹˈɪʤ̊ːa/ "bridge_NOUN"
@@ -192,10 +192,10 @@ CONSONANTS
 	<síða> /sˈʊ̯iːja/ "side_NOUN"
 	<eyga> /ˈɛːi̯ja/ "eye_NOUN"
 
-/ʰt/ (0.014)
-	<sveitti> /svˈai̯ʰtɪ/ "sweat_NOUN"
+/ʰt/ (0.015)
+	<rættur> /ɹˈɛːa̯ʰtʊɹ/ "right_ADJ"
 	<bátur> /b̥ˈɔ̯aːʰtʊɹ/ "boat_NOUN"
-	<lættur> /lˈaʰtʊɹ/ "light_ADJ"
+	<trettan> /tʰɹˈɛʰtan/ "thirteen_NUM"
 
 /kʰ/ (0.013)
 	<hvat> /kʰvˈɛːa̯ʰt/ "what_PRON"
@@ -217,20 +217,20 @@ CONSONANTS
 	<menniskja> /mˈɛnːɪʃa/ "person_NOUN"
 	<sjúkur> /ʃˈʉːu̯kʊɹ/ "sick_ADJ"
 
+/ʧʰ/ (0.008)
+	<tjúgu> /ʧʰˈʉːu̯wʊ/ "twenty_NUM"
+	<kjøt> /ʧʰˈøːʰt/ "meat_NOUN"
+	<tjóvur> /ʧʰˈɔːu̯vʊɹ/ "thief_NOUN"
+
 /w/ (0.008)
-	<navn> /nˈawn/ "name_NOUN"
-	<góður> /ɡ̊ˈɔːu̯wʊɹ/ "good_ADJ"
-	<móðir> /mˈɔːu̯wɪɹ/ "mother_NOUN"
+	<tjúgu> /ʧʰˈʉːu̯wʊ/ "twenty_NUM"
+	<bjóða> /b̥jˈɔːu̯wa/ "bid_VERB"
+	<dagur> /d̥ˈɛːa̯wʊɹ/ "day_NOUN"
 
 /nː/ (0.008)
+	<kenna> /ʧʰˈɛnːa/ "ken_VERB"
+	<tonn> /tʰˈɔnː/ "tooth_NOUN"
 	<kvinna> /kʰvˈɪnːa/ "woman_NOUN"
-	<kunna> /kʰˈʊnːa/ "can_VERB"
-	<menn> /mˈɛnː/ "men_NOUN_PL"
-
-/ʧʰ/ (0.007)
-	<kærur> /ʧʰˈɛːa̯ɹʊɹ/ "dear_ADJ"
-	<hjól> /ʧʰˈɔːu̯l/ "wheel_NOUN"
-	<tjóvur> /ʧʰˈɔːu̯vʊɹ/ "thief_NOUN"
 
 /v̥/ (0.007)
 	<dúgva> /d̥ˈɪɡ̊v̥a/ "dove_NOUN"

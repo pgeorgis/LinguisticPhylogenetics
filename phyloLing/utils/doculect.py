@@ -3,19 +3,20 @@ import os
 import random
 import re
 from functools import lru_cache
-from statistics import mean
-from typing import Self
+from math import log
+from typing import Iterable, Self
 
 from constants import ALIGNMENT_PARAM_DEFAULTS, TRANSCRIPTION_PARAM_DEFAULTS
 from phonUtils.initPhoneData import suprasegmental_diacritics
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 from utils.cluster import draw_dendrogram
-from utils.information import calculate_infocontent_of_word, entropy
+from utils.information import entropy
 from utils.sequence import Ngram, PhonEnvNgram, flatten_ngram, pad_sequence
 from utils.string import format_as_variable, strip_ch
 from utils.utils import (create_default_dict, create_default_dict_of_dicts,
-                         dict_of_sets, dict_tuplelist, normalize_dict)
+                         dict_of_sets, dict_tuplelist, normalize_dict,
+                         validate_class)
 from utils.word import Word
 
 logger = logging.getLogger(__name__)
@@ -312,45 +313,48 @@ class Doculect:
 
         return word
 
-    def calculate_infocontent(self, word, as_seq=False, ngram_size=3, **kwargs):
-        # Disambiguation by type of input
-        if isinstance(word, Word):  # Word object, no further modification needed
-            pass
-        elif as_seq and isinstance(word, (list, tuple)):
-            pass
-        elif isinstance(word, str) or isinstance(word, list):
-            if isinstance(word, str):
-                ipa_string = word
-            else:
-                ipa_string = ''.join(word)
-            word = Word(
-                ipa_string=ipa_string,
-                transcription_parameters=self.transcription_params,
-                doculect_key=self.name,
-            )
-        else:
-            raise TypeError
-
-        # Return the pre-calculated information content of the word, if possible
-        if isinstance(word, Word) and word.info_content:
-            return word.info_content
-
-        # Otherwise calculate it from scratch
-        # Pad the segmented word
-        pad_ch = self.alignment_params['pad_ch']
-        sequence = word.segments if not as_seq else word
+    def sequence_information_content(self, seq: Iterable, ngram_size: int=3):
+        if len(seq) < ngram_size:
+            pad_ch = self.alignment_params['pad_ch']
+            add_pad_n = ngram_size-len(seq)
+            seq = pad_sequence(seq, pad_n=add_pad_n, pad_ch=pad_ch)
         pad_n = ngram_size - 1
-        padded = pad_sequence(sequence, pad_ch=pad_ch, pad_n=pad_n)
-        info_content = calculate_infocontent_of_word(seq=padded, lang=self, ngram_size=ngram_size, **kwargs)
+        info_content = {}
+        for i in range(pad_n, len(seq) - pad_n):
+            if ngram_size == 1:
+                unigram_count = self.unigrams.get(Ngram(seq[i]).ngram, 0)
+                gappy_count = sum(self.unigrams.values())
+                info_content_value = (seq[i], -log(unigram_count / gappy_count, 2))
+                info_content[i] = info_content_value
+            elif ngram_size == 2:
+                bigram_counts = 0
+                if i > 0:
+                    bigram_counts += self.bigrams.get((seq[i - 1], seq[i]), 0)
+                if i < len(seq) - 1:
+                    bigram_counts += self.bigrams.get((seq[i], seq[i + 1]), 0)
+                gappy_counts = 0
+                if i > 0:
+                    gappy_counts += self.gappy_bigrams.get((seq[i - 1], 'X'), 0)
+                if i < len(seq) - 1:
+                    gappy_counts += self.gappy_bigrams.get(('X', seq[i + 1]), 0)
+                info_content_value = (seq[i], -log(bigram_counts / gappy_counts, 2))
+                info_content[i] = info_content_value
+            elif ngram_size == 3:
+                trigram_counts = 0
+                trigram_counts += self.trigrams.get((seq[i - 2], seq[i - 1], seq[i]), 0)
+                trigram_counts += self.trigrams.get((seq[i - 1], seq[i], seq[i + 1]), 0)
+                trigram_counts += self.trigrams.get((seq[i], seq[i + 1], seq[i + 2]), 0)
+                gappy_counts = 0
+                gappy_counts += self.gappy_trigrams.get((seq[i - 2], seq[i - 1], 'X'), 0)
+                gappy_counts += self.gappy_trigrams.get((seq[i - 1], 'X', seq[i + 1]), 0)
+                gappy_counts += self.gappy_trigrams.get(('X', seq[i + 1], seq[i + 2]), 0)
+                # TODO : needs smoothing
+                info_content_value = (seq[i], -log(trigram_counts / gappy_counts, 2))
+                info_content[i - 2] = info_content_value
+            else:
+                raise ValueError(f"Unsupported ngram_size {ngram_size}. Supported values are {{1, 2, 3}}")
+            
         return info_content
-
-    def self_surprisal(self, word, normalize=False, **kwargs):
-        info_content = self.calculate_infocontent(word, **kwargs)
-        if normalize:
-            return mean(info_content[j][1] for j in info_content)
-        else:
-            # return sum(info_content[j][1] for j in info_content)
-            return info_content
 
     def ngram_count(self, ngram):
         ngram = Ngram(ngram)

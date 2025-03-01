@@ -1,88 +1,88 @@
 VOWELS
-/ə/ (0.037)
+/ə/ (0.038)
 	<vinger> /v̥ˈəŋər/ "finger_NOUN"
 	<dodelik> /dˈʊə̯dəɫək/ "deadly_ADJ"
-	<muise> /mˈœɪ̯sə/ "mice_NOUN"
+	<muise> /mˈœɪ̯sə/ "mice_NOUN_PL"
 
-/ˈa/ (0.036)
+/ˈa/ (0.037)
 	<kan> /kˈan/ "can_VERB"
-	<tand> /tˈand̥/ "tooth_NOUN"
-	<sand> /sˈand̥/ "sand_NOUN"
+	<dank> /dˈaŋk/ "thank_VERB"
+	<pad> /pˈad̥/ "path_NOUN"
 
 /ˈʊə̯/ (0.03)
 	<hoor> /ɦˈʊə̯r/ "hear_VERB"
 	<noord> /nˈʊə̯rd̥/ "north_NOUN"
 	<oog> /ˈʊə̯χ/ "eye_NOUN"
 
+/ˈɔ/ (0.028)
+	<wol> /vˈɔɫ/ "wool_NOUN_FEM"
+	<volg> /v̥ˈɔɫχ/ "follow_VERB"
+	<dor> /dˈɔr/ "dry_ADJ"
+
 /ˈɑː/ (0.028)
-	<garing> /χˈɑːrəŋ/ "yarn_NOUN"
-	<haar> /ɦˈɑːr/ "hair_NOUN"
-	<aal> /ˈɑːɫ/ "eel_NOUN"
+	<naast> /nˈɑːst/ "next_ADJ"
+	<aap> /ˈɑːp/ "ape_NOUN"
+	<jaar> /jˈɑːr/ "year_NOUN"
 
-/ˈɔ/ (0.027)
-	<storm> /stˈɔrm/ "storm_NOUN"
-	<kom> /kˈɔm/ "come_VERB"
-	<honderd> /ɦˈɔndərd̥/ "hundred_NUM"
-
-/ˈə/ (0.025)
+/ˈə/ (0.024)
+	<ring> /rˈəŋ/ "ring_NOUN"
 	<skild> /skˈəɫd̥/ "shield_NOUN"
 	<twintig> /tvˈəntəχ/ "twenty_NUM"
-	<bind> /bˈənd̥/ "bind_VERB"
 
-/ˈɪə̯/ (0.023)
+/ˈɪə̯/ (0.022)
+	<beer> /bˈɪə̯r/ "bear_NOUN"
 	<sewe> /sˈɪə̯və/ "seven_NUM"
 	<weet> /vˈɪə̯t/ "know_VERB"
-	<gee> /χˈɪə̯/ "give_VERB"
 
-/ˈi/ (0.022)
+/ˈi/ (0.021)
+	<hier> /ɦˈir/ "here_ADV"
 	<dief> /dˈiv̥/ "thief_NOUN"
 	<vlieg> /v̥ɫˈiχ/ "fly_VERB"
-	<nuut> /nˈit/ "new_ADJ"
 
-/ˈəɪ̯/ (0.02)
+/ˈəɪ̯/ (0.019)
+	<my> /mˈəɪ̯/ "me_PRON_DAT"
 	<by> /bˈəɪ̯/ "bee_NOUN"
-	<jy> /jˈəɪ̯/ "ye_PRON"
 	<wyn> /vˈəɪ̯n/ "wine_NOUN"
 
 /ˈu/ (0.016)
 	<bloei> /bɫˈuj/ "bleed_VERB"
-	<stoel> /stˈuɫ/ "stool_NOUN"
-	<voete> /vˈutə/ "feet_NOUN_PL"
+	<moeder> /mˈudər/ "mother_NOUN"
+	<goed> /χˈud̥/ "good_ADJ"
 
 /ˈœɪ̯/ (0.011)
-	<duim> /dˈœɪ̯m/ "thumb_NOUN"
-	<luis> /ɫˈœɪ̯s/ "louse_NOUN"
+	<duits> /dˈœɪ̯ts/ "Teutonic_ADJ"
 	<uit> /ˈœɪ̯t/ "out_PREP"
+	<luis> /ɫˈœɪ̯s/ "louse_NOUN"
 
 /ˈæ/ (0.008)
+	<melk> /mˈæɫk/ "milk_NOUN_FEM"
+	<help> /ɦˈæɫp/ "help_VERB"
 	<ek> /ˈæk/ "I_PRON"
-	<elf> /ˈæɫv̥/ "eleven_NUM"
-	<kerk> /kˈærk/ "church_NOUN_FEM"
 
 /ˈɛ/ (0.007)
-	<wens> /vˈɛns/ "wish_VERB"
+	<ses> /sˈɛs/ "six_NUM"
+	<hen> /ɦˈɛn/ "hen_NOUN"
 	<mens> /mˈɛns/ "person_NOUN"
-	<swem> /svˈɛm/ "swim_VERB"
 
 /ˈœ/ (0.007)
+	<rug> /rˈœχ/ "ridge_NOUN"
 	<suster> /sˈœstər/ "sister_NOUN"
 	<mug> /mˈœχ/ "midge_NOUN"
-	<druk> /drˈœk/ "press_VERB"
 
 /ˈœu̯/ (0.006)
+	<goud> /χˈœu̯d̥/ "gold_NOUN_NEU"
 	<koud> /kˈœu̯d̥/ "cold_ADJ"
-	<vrou> /v̥rˈœu̯/ "woman_NOUN"
-	<oud> /ˈœu̯d̥/ "old_ADJ"
+	<soet> /sˈœu̯t/ "salt_NOUN"
 
 /ˈɪø̯/ (0.004)
-	<neut> /nˈɪø̯t/ "nut_NOUN"
-	<heuning> /ɦˈɪø̯nəŋ/ "honey_NOUN"
+	<seun> /sˈɪø̯n/ "son_NOUN"
 	<neus> /nˈɪø̯s/ "nose_NOUN"
+	<heuning> /ɦˈɪø̯nəŋ/ "honey_NOUN"
 
 /ˈæː/ (0.004)
-	<berg> /bˈæːrχ/ "mountain_NOUN"
 	<dertien> /dˈæːrtin/ "thirteen_NUM"
-	<skerp> /skˈæːrp/ "sharp_ADJ"
+	<ster> /stˈæːr/ "star_NOUN"
+	<berg> /bˈæːrχ/ "mountain_NOUN"
 
 /ˈɛː/ (0.003)
 	<hê> /ɦˈɛː/ "have_VERB"
@@ -91,12 +91,12 @@ VOWELS
 
 /ˈyː/ (0.003)
 	<suur> /sˈyːr/ "sour_ADJ"
-	<duur> /dˈyːr/ "expensive_ADJ"
 	<vuur> /v̥ˈyːr/ "fire_NOUN"
+	<duur> /dˈyːr/ "expensive_ADJ"
 
 /ˈɔː/ (0.002)
-	<nael> /nˈɔːɫ/ "fingernail_NOUN"
 	<bors> /bˈɔːrs/ "breast_NOUN"
+	<nael> /nˈɔːɫ/ "fingernail_NOUN"
 
 /i/ (0.002)
 	<dertien> /dˈæːrtin/ "thirteen_NUM"
@@ -108,72 +108,72 @@ VOWELS
 
 
 CONSONANTS
-/r/ (0.086)
-	<fars> /v̥ˈars/ "fresh_ADJ"
-	<druk> /drˈœk/ "press_VERB"
-	<rooi> /rˈoːj/ "red_ADJ"
+/r/ (0.087)
+	<water> /vˈɑːtər/ "water_NOUN"
+	<swart> /svˈart/ "black_ADJ"
+	<suur> /sˈyːr/ "sour_ADJ"
 
-/s/ (0.073)
-	<muise> /mˈœɪ̯sə/ "mice_NOUN"
-	<slaan> /sɫˈɑːn/ "slay_VERB"
-	<slaap> /sɫˈɑːp/ "sleep_VERB"
+/s/ (0.072)
+	<sien> /sˈin/ "see_VERB"
+	<siel> /sˈiɫ/ "soul_NOUN"
+	<spraak> /sprˈɑːk/ "speech_NOUN_FEM"
 
-/n/ (0.069)
-	<groen> /χrˈun/ "green_ADJ"
-	<teken> /tˈɪə̯kən/ "token_NOUN"
-	<wens> /vˈɛns/ "wish_VERB"
+/n/ (0.068)
+	<mans> /mˈans/ "men_NOUN_PL"
+	<seun> /sˈɪø̯n/ "son_NOUN"
+	<steen> /stˈɪə̯n/ "stone_NOUN"
 
-/ɫ/ (0.052)
-	<dodelik> /dˈʊə̯dəɫək/ "deadly_ADJ"
-	<wol> /vˈɔɫ/ "wool_NOUN_FEM"
-	<nael> /nˈɔːɫ/ "fingernail_NOUN"
+/ɫ/ (0.053)
+	<kalf> /kˈaɫv̥/ "calf_NOUN"
+	<lig> /ɫˈəχ/ "light_NOUN"
+	<siel> /sˈiɫ/ "soul_NOUN"
 
-/t/ (0.048)
-	<dertien> /dˈæːrtin/ "thirteen_NUM"
-	<ster> /stˈæːr/ "star_NOUN"
-	<suster> /sˈœstər/ "sister_NOUN"
-
-/χ/ (0.044)
-	<berg> /bˈæːrχ/ "mountain_NOUN"
+/t/ (0.049)
+	<traan> /trˈɑːn/ "tear_NOUN_FEM"
 	<dogter> /dˈɔχtər/ "daughter_NOUN"
-	<mag> /mˈaχ/ "might_NOUN"
+	<voet> /v̥ˈut/ "foot_NOUN"
+
+/χ/ (0.045)
+	<nag> /nˈaχ/ "night_NOUN_FEM"
+	<heilig> /ɦˈəɪ̯ɫəχ/ "holy_ADJ"
+	<gas> /χˈas/ "guest_NOUN"
 
 /k/ (0.042)
-	<boek> /bˈuk/ "book_NOUN_FEM"
-	<knie> /knˈi/ "knee_NOUN"
-	<week> /vˈɪə̯k/ "week_NOUN"
+	<skoen> /skˈun/ "shoe_NOUN"
+	<skoon> /skˈʊə̯n/ "beautiful_ADJ"
+	<skip> /skˈəp/ "ship_NOUN"
 
 /d/ (0.041)
+	<dogter> /dˈɔχtər/ "daughter_NOUN"
+	<vader> /v̥ˈɑːdər/ "father_NOUN"
 	<wonder> /vˈɔndər/ "wonder_NOUN"
-	<dik> /dˈək/ "thick_ADJ"
-	<droom> /drˈʊə̯m/ "dream_NOUN"
 
 /v̥/ (0.036)
+	<vol> /v̥ˈɔɫ/ "full_ADJ"
 	<vuur> /v̥ˈyːr/ "fire_NOUN"
 	<wolf> /vˈɔɫv̥/ "wolf_NOUN"
-	<vlieg> /v̥ɫˈiχ/ "fly_VERB"
 
-/v/ (0.035)
+/v/ (0.036)
+	<warm> /vˈarm/ "warm_ADJ"
 	<swart> /svˈart/ "black_ADJ"
-	<twee> /tvˈɪə̯/ "two_NUM"
-	<water> /vˈɑːtər/ "water_NOUN"
+	<twintig> /tvˈəntəχ/ "twenty_NUM"
 
 /d̥/ (0.035)
+	<goed> /χˈud̥/ "good_ADJ"
 	<sand> /sˈand̥/ "sand_NOUN"
 	<wind> /vˈənd̥/ "wind_NOUN"
-	<oud> /ˈœu̯d̥/ "old_ADJ"
 
 /m/ (0.029)
+	<mug> /mˈœχ/ "midge_NOUN"
 	<wurm> /vˈœrəm/ "worm_NOUN"
 	<mond> /mˈɔnd̥/ "mouth_NOUN"
-	<mug> /mˈœχ/ "midge_NOUN"
 
-/b/ (0.024)
+/b/ (0.023)
+	<been> /bˈɪə̯n/ "bone_NOUN"
 	<bors> /bˈɔːrs/ "breast_NOUN"
 	<bloei> /bɫˈuj/ "bleed_VERB"
-	<bid> /bˈəd̥/ "request_VERB"
 
-/ɦ/ (0.022)
+/ɦ/ (0.021)
 	<horing> /ɦˈʊə̯rəŋ/ "horn_NOUN"
 	<honderd> /ɦˈɔndərd̥/ "hundred_NUM"
 	<hond> /ɦˈɔnd̥/ "dog_NOUN"
