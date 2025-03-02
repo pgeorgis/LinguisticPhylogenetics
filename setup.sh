@@ -2,7 +2,7 @@
 set -eou pipefail
 
 # Initialize and update submodules
-git submodule update --init --recursive
+make sync-submodules
 
 # Install R dependencies
 ./install_r_dependencies.R

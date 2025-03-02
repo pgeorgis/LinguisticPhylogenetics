@@ -17,7 +17,10 @@ init:
 init-silent:
 	$(MAKE) init > /dev/null 2>&1
 
-classify:
+sync-submodules:
+	git submodule update --init --recursive
+
+classify: sync-submodules
 ifdef CONFIG
 	@source venv/bin/activate && \
 		OUTPUT_LOG_DIR=$$(python3 -c "import os; from phyloLing.utils.utils import load_config; config = load_config('$(CONFIG)'); print(config.get('family', {}).get('outdir', os.path.dirname(config['family']['file'])))") && \
@@ -40,7 +43,7 @@ classify-baltoslavic:
 classify-sinitic:
 	$(MAKE) classify CONFIG=datasets/Sinitic/config/sinitic_config.yml
 
-test:
+test: sync-submodules
 ifndef DATASET
 	@echo "Error: Please provide a dataset to test using 'make test DATASET=<dataset>'"
 	exit 1
