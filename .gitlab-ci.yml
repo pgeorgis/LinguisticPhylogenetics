@@ -10,7 +10,6 @@ workflow:
 
 variables:
   GIT_SUBMODULE_STRATEGY: none
-  GIT_STRATEGY: fetch
   CI_TAG_NAME: ${DOCKER_REGISTRY}/phyloling/ci
   CI_IMAGE: ${CI_TAG_NAME}:${CI_COMMIT_SHA}
   DIND_IMAGE: docker:27-dind
