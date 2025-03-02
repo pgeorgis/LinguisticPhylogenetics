@@ -113,7 +113,7 @@ Old Frisian	Old Frisian			church_NOUN_FEM	tsirke	ʦˈirkə	ʦ ˈi r k ə		church
 West Frisian	West Frisian			church_NOUN_FEM	tsjerke	ʦjˈɛrkə	ʦ j ˈɛ r k ə		church_NOUN_FEM_1			
 Saterland Frisian	Saterland Frisian			church_NOUN_FEM	Säärke	sˈɛːrkə	s ˈɛː r k ə		church_NOUN_FEM_1			
 Mainland North Frisian	Mainland North Frisian			church_NOUN_FEM	schörk	ʃˈœʀk	ʃ ˈœ ʀ k		church_NOUN_FEM_1			
-Insular North Frisian	Insular North Frisian			church_NOUN_FEM	Sērk	sˈɛːɐxk	s ˈɛː ɐ x k		church_NOUN_FEM_1			
+Insular North Frisian	Insular North Frisian			church_NOUN_FEM	Sērk	sˈɛːʁ̥k	s ˈɛː ʁ̥ k		church_NOUN_FEM_1			
 East Frisian Low Saxon	East Frisian Low Saxon			church_NOUN_FEM	kâark	kˈɑːɑ̯ɐk	k ˈɑːɑ̯ ɐ k		church_NOUN_FEM_1			
 Northern Low Saxon	Northern Low Saxon			church_NOUN_FEM	Kark	kʰˈaːɡ	kʰ ˈaː ɡ		church_NOUN_FEM_1			
 Westphalian	Westphalian			church_NOUN_FEM	Kiärk	kˈɪɛ̯k	k ˈɪɛ̯ k		church_NOUN_FEM_1			
@@ -461,7 +461,7 @@ English	English			egg_NOUN_NEU	egg	ˈeɡ	ˈe ɡ		egg_NOUN_NEU_1	TRUE
 American English	American English			egg_NOUN_NEU	egg	ˈɛɡ	ˈɛ ɡ		egg_NOUN_NEU_1	TRUE		
 Middle English	Middle English			egg_NOUN_NEU	ey	ˈæi̯	ˈæi̯		egg_NOUN_NEU_1			
 Old English	Old English			egg_NOUN_NEU	ǣġ	ˈæːj	ˈæː j		egg_NOUN_NEU_1			
-Old Frisian	Old Frisian			egg_NOUN_NEU	ei	ˈej	ˈe j		egg_NOUN_NEU_1			
+Old Frisian	Old Frisian			egg_NOUN_NEU	āi	ˈaːj	ˈaː j		egg_NOUN_NEU_1			
 West Frisian	West Frisian			egg_NOUN_NEU	aai	ˈaːj	ˈaː j		egg_NOUN_NEU_1			
 Saterland Frisian	Saterland Frisian			egg_NOUN_NEU	Oai	ˈɔːɪ̯	ˈɔːɪ̯		egg_NOUN_NEU_1			
 Mainland North Frisian	Mainland North Frisian			egg_NOUN_NEU	oi	ˈɔj	ˈɔ j		egg_NOUN_NEU_1			
@@ -970,7 +970,7 @@ Swedish	Swedish			child_NOUN_NEU	barn	bˈɑːɳ	b ˈɑː ɳ		child_NOUN_NEU_1
 Scots	Scots			child_NOUN_NEU	bairn	bˈeːrn	b ˈeː r n		child_NOUN_NEU_1			
 Middle English	Middle English			child_NOUN_NEU	barn	bˈarn	b ˈa r n		child_NOUN_NEU_1			
 Old English	Old English			child_NOUN_NEU	bearn	bˈæɑ̯rn	b ˈæɑ̯ r n		child_NOUN_NEU_1			
-Old Frisian	Old Frisian			child_NOUN_NEU	bern	bˈern	b ˈe r n		child_NOUN_NEU_1			
+Old Frisian	Old Frisian			child_NOUN_NEU	bern	bˈeːrn	b ˈeː r n		child_NOUN_NEU_1			
 West Frisian	West Frisian			child_NOUN_NEU	bern	bˈɛːn	b ˈɛː n		child_NOUN_NEU_1			
 Saterland Frisian	Saterland Frisian			child_NOUN_NEU	Bäiden	bˈɛɪ̯dən	b ˈɛɪ̯ d ə n		child_NOUN_NEU_1			
 Mainland North Frisian	Mainland North Frisian			child_NOUN_NEU	bjarn	bjˈaʀn	b j ˈa ʀ n		child_NOUN_NEU_1			
@@ -1247,7 +1247,7 @@ Middle English	Middle English			bid_VERB	beden	bˈeːdən	b ˈeː d ə n		bid_VE
 Old English	Old English			bid_VERB	bēodan	bˈeːo̯dɑn	b ˈeːo̯ d ɑ n		bid_VERB_1			
 Old Frisian	Old Frisian			bid_VERB	biāda	bˈi̯aːdə	b ˈi̯aː d ə		bid_VERB_1			
 West Frisian	West Frisian			bid_VERB	biede	bˈiə̯də	b ˈiə̯ d ə		bid_VERB_1			
-Saterland Frisian	Saterland Frisian			bid_VERB	biada	bˈiada	b ˈi a d a		bid_VERB_1			
+Saterland Frisian	Saterland Frisian			bid_VERB	bjode	bjˈoːdə	b j ˈoː d ə		bid_VERB_1			
 Mainland North Frisian	Mainland North Frisian			bid_VERB	biidje	bˈiːdʲə	b ˈiː dʲ ə		bid_VERB_1			
 Insular North Frisian	Insular North Frisian			bid_VERB	ber	bˈɛɾ	b ˈɛ ɾ		bid_VERB_1			
 East Frisian Low Saxon	East Frisian Low Saxon			bid_VERB	beeden	bˈeːdn̩	b ˈeː d n̩		bid_VERB_1			
@@ -2103,7 +2103,7 @@ Old Frisian	Old Frisian			animal_NOUN	diār	dˈi̯aːr	d ˈi̯aː r		animal_NOUN
 West Frisian	West Frisian			animal_NOUN	dier	dˈiə̯r	d ˈiə̯ r		animal_NOUN_1			
 Saterland Frisian	Saterland Frisian			animal_NOUN	Díert	dˈiːrt	d ˈiː r t		animal_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			animal_NOUN	diirt	dˈiːʀt	d ˈiː ʀ t		animal_NOUN_1			
-Insular North Frisian	Insular North Frisian			animal_NOUN	Diirt	dˈiːɐxt	d ˈiː ɐ x t		animal_NOUN_1			
+Insular North Frisian	Insular North Frisian			animal_NOUN	Diirt	dˈiːʁ̥t	d ˈiː ʁ̥ t		animal_NOUN_1			
 East Frisian Low Saxon	East Frisian Low Saxon			animal_NOUN	Däär	dˈæːɐ	d ˈæː ɐ		animal_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			animal_NOUN	Deert	dˈaɪ̯ɐd	d ˈaɪ̯ ɐ d		animal_NOUN_1			
 Westphalian	Westphalian			animal_NOUN	Dier	dˈiːɐ	d ˈiː ɐ		animal_NOUN_1			
@@ -2602,7 +2602,7 @@ Old Frisian	Old Frisian			earth_NOUN	erthe	ˈeːrðə	ˈeː r ð ə		earth_NOUN_
 West Frisian	West Frisian			earth_NOUN	ierde	ˈiə̯də	ˈiə̯ d ə		earth_NOUN_1			
 Saterland Frisian	Saterland Frisian			earth_NOUN	Äide	ˈɛɪ̯də	ˈɛɪ̯ d ə		earth_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			earth_NOUN	jard	jˈaʀd̥	j ˈa ʀ d̥		earth_NOUN_1			
-Insular North Frisian	Insular North Frisian			earth_NOUN	Öört	ˈøːɐxt	ˈøː ɐ x t		earth_NOUN_1			
+Insular North Frisian	Insular North Frisian			earth_NOUN	Öört	ˈøːʁ̥t	ˈøː ʁ̥ t		earth_NOUN_1			
 East Frisian Low Saxon	East Frisian Low Saxon			earth_NOUN	êer	ˈeːe̯ɐ	ˈeːe̯ ɐ		earth_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			earth_NOUN	Eir	ˈaɪ̯ɐ	ˈaɪ̯ ɐ		earth_NOUN_1			
 Westphalian	Westphalian			earth_NOUN	Äer	ˈɛːɐ	ˈɛː ɐ		earth_NOUN_1			
@@ -4144,7 +4144,7 @@ Old Frisian	Old Frisian			grass_NOUN_NEU	gers	ɡˈers	ɡ ˈe r s		grass_NOUN_NEU
 West Frisian	West Frisian			grass_NOUN_NEU	gers	ɡˈɛːs	ɡ ˈɛː s		grass_NOUN_NEU_1			
 Saterland Frisian	Saterland Frisian			grass_NOUN_NEU	Gäärs	ɣˈɛːrs	ɣ ˈɛː r s		grass_NOUN_NEU_1			
 Mainland North Frisian	Mainland North Frisian			grass_NOUN_NEU	gjars	jˈaʀs	j ˈa ʀ s		grass_NOUN_NEU_1			
-Insular North Frisian	Insular North Frisian			grass_NOUN_NEU	Gērs	ɡˈɛːɐs	ɡ ˈɛː ɐ s		grass_NOUN_NEU_1			
+Insular North Frisian	Insular North Frisian			grass_NOUN_NEU	Gērs	ɡˈɛːʁ̥s	ɡ ˈɛː ʁ̥ s		grass_NOUN_NEU_1			
 East Frisian Low Saxon	East Frisian Low Saxon			grass_NOUN_NEU	gres	ɡrˈɛz̥	ɡ r ˈɛ z̥		grass_NOUN_NEU_1			
 Northern Low Saxon	Northern Low Saxon			grass_NOUN_NEU	Gras	ɡrˈaz̥	ɡ r ˈa z̥		grass_NOUN_NEU_1			
 Westphalian	Westphalian			grass_NOUN_NEU	Gräs	xrˈɛːz̥	x r ˈɛː z̥		grass_NOUN_NEU_1			
@@ -4182,7 +4182,7 @@ Old Frisian	Old Frisian			great_ADJ	grāt	ɡrˈaːt	ɡ r ˈaː t		great_ADJ_1
 West Frisian	West Frisian			great_ADJ	grut	ɡrˈuːt	ɡ r ˈuː t		great_ADJ_1			
 Saterland Frisian	Saterland Frisian			great_ADJ	groot	ɣrˈoːt	ɣ r ˈoː t		great_ADJ_1			
 Mainland North Frisian	Mainland North Frisian			great_ADJ	grut	ɡʀˈʊt	ɡ ʀ ˈʊ t		great_ADJ_1			
-Insular North Frisian	Insular North Frisian			great_ADJ	gurt	ɡˈʊɐxt	ɡ ˈʊ ɐ x t		great_ADJ_1			
+Insular North Frisian	Insular North Frisian			great_ADJ	gurt	ɡˈʊʁ̥t	ɡ ˈʊ ʁ̥ t		great_ADJ_1			
 East Frisian Low Saxon	East Frisian Low Saxon			great_ADJ	groot	ɡrˈoːt	ɡ r ˈoː t		great_ADJ_1			
 Northern Low Saxon	Northern Low Saxon			great_ADJ	groot	ɡrˈaʊ̯d	ɡ r ˈaʊ̯ d		great_ADJ_1			
 Westphalian	Westphalian			great_ADJ	graut	xrˈaʊ̯t	x r ˈaʊ̯ t		great_ADJ_1			
@@ -4225,7 +4225,7 @@ English	English			green_ADJ	green	ɡɹˈiːn	ɡ ɹ ˈiː n		green_ADJ_1
 American English	American English			green_ADJ	green	ɡɹˈin	ɡ ɹ ˈi n		green_ADJ_1			
 Middle English	Middle English			green_ADJ	grene	ɡrˈeːnə	ɡ r ˈeː n ə		green_ADJ_1			
 Old English	Old English			green_ADJ	grēne	ɡrˈeːne	ɡ r ˈeː n e		green_ADJ_1			
-Old Frisian	Old Frisian			green_ADJ	grēne	ɡrˈeːne	ɡ r ˈeː n e		green_ADJ_1			
+Old Frisian	Old Frisian			green_ADJ	grēne	ɡrˈeːnə	ɡ r ˈeː n ə		green_ADJ_1			
 West Frisian	West Frisian			green_ADJ	grien	ɡrˈiə̯n	ɡ r ˈiə̯ n		green_ADJ_1			
 Saterland Frisian	Saterland Frisian			green_ADJ	gräin	ɣrˈɛɪ̯n	ɣ r ˈɛɪ̯ n		green_ADJ_1			
 Mainland North Frisian	Mainland North Frisian			green_ADJ	gräin	ɡʀˈɛi̯n	ɡ ʀ ˈɛi̯ n		green_ADJ_1			
@@ -4994,7 +4994,7 @@ Old Frisian	Old Frisian			heart_NOUN	herte	hˈertə	h ˈe r t ə		heart_NOUN_1
 West Frisian	West Frisian			heart_NOUN	hert	hˈɛːt	h ˈɛː t		heart_NOUN_1			
 Saterland Frisian	Saterland Frisian			heart_NOUN	Haat	hˈaːt	h ˈaː t		heart_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			heart_NOUN	hart	hˈaʀt	h ˈa ʀ t		heart_NOUN_1			
-Insular North Frisian	Insular North Frisian			heart_NOUN	Hart	hˈaxt	h ˈa x t		heart_NOUN_1			
+Insular North Frisian	Insular North Frisian			heart_NOUN	Hart	hˈaʁ̥t	h ˈa ʁ̥ t		heart_NOUN_1			
 East Frisian Low Saxon	East Frisian Low Saxon			heart_NOUN	haart	hˈɑːɐt	h ˈɑː ɐ t		heart_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			heart_NOUN	Hart	hˈad	h ˈa d		heart_NOUN_1			
 Westphalian	Westphalian			heart_NOUN	Hiärt	hˈɪɛ̯t	h ˈɪɛ̯ t		heart_NOUN_1			
@@ -5375,7 +5375,7 @@ Old Frisian	Old Frisian			hundred_NUM	hundred	hˈunderd	h ˈu n d e r d		hundred
 West Frisian	West Frisian			hundred_NUM	hûndert	hˈundət	h ˈu n d ə t		hundred_NUM_1			
 Saterland Frisian	Saterland Frisian			hundred_NUM	hundert	hˈʊndərt	h ˈʊ n d ə r t		hundred_NUM_1			
 Mainland North Frisian	Mainland North Frisian			hundred_NUM	hunert	hˈʊnəʀt	h ˈʊ n ə ʀ t		hundred_NUM_1			
-Insular North Frisian	Insular North Frisian			hundred_NUM	hönert	hˈœnəxt	h ˈœ n ə x t		hundred_NUM_1			
+Insular North Frisian	Insular North Frisian			hundred_NUM	hönert	hˈœnəʁ̥t	h ˈœ n ə ʁ̥ t		hundred_NUM_1			
 East Frisian Low Saxon	East Frisian Low Saxon			hundred_NUM	hunnert	hˈʊnɐt	h ˈʊ n ɐ t		hundred_NUM_1			
 Northern Low Saxon	Northern Low Saxon			hundred_NUM	hunnert	hˈʊnɐt	h ˈʊ n ɐ t		hundred_NUM_1			
 Westphalian	Westphalian			hundred_NUM	hunnert	hˈʊnɐd̥	h ˈʊ n ɐ d̥		hundred_NUM_1			
@@ -5500,7 +5500,7 @@ English	English			horn_NOUN	horn	hˈɔːn	h ˈɔː n		horn_NOUN_1
 American English	American English			horn_NOUN	horn	hˈɔɹn	h ˈɔ ɹ n		horn_NOUN_1			
 Middle English	Middle English			horn_NOUN	horn	hˈɔrn	h ˈɔ r n		horn_NOUN_1			
 Old English	Old English			horn_NOUN	horn	hˈorn	h ˈo r n		horn_NOUN_1			
-Old Frisian	Old Frisian			horn_NOUN	horn	hˈorn	h ˈo r n		horn_NOUN_1			
+Old Frisian	Old Frisian			horn_NOUN	hōrn	hˈɔːrn	h ˈɔː r n		horn_NOUN_1			
 West Frisian	West Frisian			horn_NOUN	hoarn	hˈoə̯n	h ˈoə̯ n		horn_NOUN_1			
 Saterland Frisian	Saterland Frisian			horn_NOUN	Houden	hˈoːu̯dən	h ˈoːu̯ d ə n		horn_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			horn_NOUN	horn	hˈɔʀn	h ˈɔ ʀ n		horn_NOUN_1			
@@ -5661,7 +5661,7 @@ Middle English	Middle English			wheel_NOUN	whel	ʍˈeːɫ	ʍ ˈeː ɫ		wheel_NOU
 Old English	Old English			wheel_NOUN	hwēol	hwˈeːo̯ɫ	h w ˈeːo̯ ɫ		wheel_NOUN_1			
 Old Frisian	Old Frisian			wheel_NOUN	fiāl	fˈi̯aːl	f ˈi̯aː l		wheel_NOUN_1			
 West Frisian	West Frisian			wheel_NOUN	fiel	fˈiə̯l	f ˈiə̯ l		wheel_NOUN_1			
-Saterland Frisian	Saterland Frisian			wheel_NOUN	Wäil	vˈɛɪ̯l	v ˈɛɪ̯ l		wheel_NOUN_1			
+Saterland Frisian	Saterland Frisian			wheel_NOUN	Fjool	fjˈoːl	f j ˈoː l		wheel_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			wheel_NOUN	fiilj	fˈiːlʲ	f ˈiː lʲ		wheel_NOUN_1			
 Insular North Frisian	Insular North Frisian			wheel_NOUN	Weel	vˈeːl	v ˈeː l		wheel_NOUN_1			
 East Frisian Low Saxon	East Frisian Low Saxon			wheel_NOUN	wäil	vˈæɪ̯l	v ˈæɪ̯ l		wheel_NOUN_1			
@@ -5815,6 +5815,7 @@ American English	American English			year_NOUN	year	jˈiɚ	j ˈi ɚ		year_NOUN_1
 Middle English	Middle English			year_NOUN	yeer	jˈɛːr	j ˈɛː r		year_NOUN_1			
 Old English	Old English			year_NOUN	ġēar	jˈæːɑ̯r	j ˈæːɑ̯ r		year_NOUN_1			
 Old Frisian	Old Frisian			year_NOUN	jēr	jˈeːr	j ˈeː r		year_NOUN_1			
+Old Frisian	Old Frisian			year_NOUN	jār	jˈaːr	j ˈaː r		year_NOUN_1			
 West Frisian	West Frisian			year_NOUN	jier	jˈiə̯r	j ˈiə̯ r		year_NOUN_1			
 Saterland Frisian	Saterland Frisian			year_NOUN	Jíer	jˈiːr	j ˈiː r		year_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			year_NOUN	iir	ˈiːʀ	ˈiː ʀ		year_NOUN_1			
@@ -6170,7 +6171,7 @@ American English	American English			chicken_NOUN	chicken	ʧˈɪkɪn	ʧ ˈɪ k ɪ
 Middle English	Middle English			chicken_NOUN	chiken	ʧˈikən	ʧ ˈi k ə n		chicken_NOUN_1			
 Old English	Old English			chicken_NOUN	ċicen	ʧˈiken	ʧ ˈi k e n		chicken_NOUN_1			
 Old Frisian	Old Frisian			chicken_NOUN	tsiūken	ʦˈi̯uːkən	ʦ ˈi̯uː k ə n		chicken_NOUN_1			
-Saterland Frisian	Saterland Frisian			chicken_NOUN	Sjuuken	sjˈukən	s j ˈu k ə n		chicken_NOUN_1			
+Saterland Frisian	Saterland Frisian			chicken_NOUN	Sjuuken	sjˈuːkən	s j ˈuː k ə n		chicken_NOUN_1			
 East Frisian Low Saxon	East Frisian Low Saxon			chicken_NOUN	küüken	kˈyːkn̩	k ˈyː k n̩		chicken_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			chicken_NOUN	Küken	kʰˈyːɡn̩	kʰ ˈyː ɡ n̩		chicken_NOUN_1			
 Westphalian	Westphalian			chicken_NOUN	Küken	kˈyːkn̩	k ˈyː k n̩		chicken_NOUN_1			
@@ -6390,7 +6391,7 @@ English	English			corn_NOUN	corn	kʰˈɔːn	kʰ ˈɔː n		corn_NOUN_1
 American English	American English			corn_NOUN	corn	kʰˈɔɹn	kʰ ˈɔ ɹ n		corn_NOUN_1			
 Middle English	Middle English			corn_NOUN	korn	kˈɔrn	k ˈɔ r n		corn_NOUN_1			
 Old English	Old English			corn_NOUN	corn	kˈorn	k ˈo r n		corn_NOUN_1			
-Old Frisian	Old Frisian			corn_NOUN	korn	kˈorn	k ˈo r n		corn_NOUN_1			
+Old Frisian	Old Frisian			corn_NOUN	kōrn	kˈɔːrn	k ˈɔː r n		corn_NOUN_1			
 West Frisian	West Frisian			corn_NOUN	koarn	kˈoə̯n	k ˈoə̯ n		corn_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			corn_NOUN	korn	kˈɔʀn	k ˈɔ ʀ n		corn_NOUN_1			
 Insular North Frisian	Insular North Frisian			corn_NOUN	Kuurn	kʰˈuːɐn	kʰ ˈuː ɐ n		corn_NOUN_1			
@@ -7970,7 +7971,7 @@ English	English			north_NOUN	north	nˈɔːθ	n ˈɔː θ		north_NOUN_1
 American English	American English			north_NOUN	north	nˈɔɹθ	n ˈɔ ɹ θ		north_NOUN_1			
 Middle English	Middle English			north_NOUN	north	nˈɔrθ	n ˈɔ r θ		north_NOUN_1			
 Old English	Old English			north_NOUN	norþ	nˈorθ	n ˈo r θ		north_NOUN_1			
-Old Frisian	Old Frisian			north_NOUN	north	nˈorθ	n ˈo r θ		north_NOUN_1			
+Old Frisian	Old Frisian			north_NOUN	nōrth	nˈɔːrθ	n ˈɔː r θ		north_NOUN_1			
 West Frisian	West Frisian			north_NOUN	noard	nˈoə̯d̥	n ˈoə̯ d̥		north_NOUN_1			
 Saterland Frisian	Saterland Frisian			north_NOUN	Noud	nˈoːu̯d	n ˈoːu̯ d		north_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			north_NOUN	nord	nˈɔʀd̥	n ˈɔ ʀ d̥		north_NOUN_1			
@@ -8851,10 +8852,11 @@ American English	American English			sharp_ADJ	sharp	ʃˈɑɹp	ʃ ˈɑ ɹ p		shar
 Middle English	Middle English			sharp_ADJ	scharp	ʃˈarp	ʃ ˈa r p		sharp_ADJ_1			
 Old English	Old English			sharp_ADJ	sċearp	ʃˈæɑ̯rp	ʃ ˈæɑ̯ r p		sharp_ADJ_1			
 Old Frisian	Old Frisian			sharp_ADJ	skerp	skˈerp	s k ˈe r p		sharp_ADJ_1			
+Old Frisian	Old Frisian			sharp_ADJ	skarp	skˈarp	s k ˈa r p		sharp_ADJ_1			
 West Frisian	West Frisian			sharp_ADJ	skerp	skˈɛrp	s k ˈɛ r p		sharp_ADJ_1			
 Saterland Frisian	Saterland Frisian			sharp_ADJ	skäärp	skˈɛːrp	s k ˈɛː r p		sharp_ADJ_1			
 Mainland North Frisian	Mainland North Frisian			sharp_ADJ	scharp	ʃˈaʀp	ʃ ˈa ʀ p		sharp_ADJ_1			
-Insular North Frisian	Insular North Frisian			sharp_ADJ	skarp	skˈaxp	s k ˈa x p		sharp_ADJ_1			
+Insular North Frisian	Insular North Frisian			sharp_ADJ	skarp	skˈaʁ̥p	s k ˈa ʁ̥ p		sharp_ADJ_1			
 East Frisian Low Saxon	East Frisian Low Saxon			sharp_ADJ	skaarp	skˈɑːɐp	s k ˈɑː ɐ p		sharp_ADJ_1			
 Northern Low Saxon	Northern Low Saxon			sharp_ADJ	scharp	ʃˈaːb	ʃ ˈaː b		sharp_ADJ_1			
 Westphalian	Westphalian			sharp_ADJ	scharp	ʃˈaɐp	ʃ ˈa ɐ p		sharp_ADJ_1			
@@ -8932,7 +8934,7 @@ English	English			shield_NOUN	shield	ʃˈiːld	ʃ ˈiː l d		shield_NOUN_1
 American English	American English			shield_NOUN	shield	ʃˈiɫ̩d	ʃ ˈi ɫ̩ d		shield_NOUN_1			
 Middle English	Middle English			shield_NOUN	scheld	ʃˈeːɫd	ʃ ˈeː ɫ d		shield_NOUN_1			
 Old English	Old English			shield_NOUN	sċield	ʃˈiy̯ɫd	ʃ ˈiy̯ ɫ d		shield_NOUN_1			
-Old Frisian	Old Frisian			shield_NOUN	skeld	skˈeld	s k ˈe l d		shield_NOUN_1			
+Old Frisian	Old Frisian			shield_NOUN	skēld	skˈeːld	s k ˈeː l d		shield_NOUN_1			
 West Frisian	West Frisian			shield_NOUN	skyld	skˈild̥	s k ˈi l d̥		shield_NOUN_1			
 Saterland Frisian	Saterland Frisian			shield_NOUN	Skíeld	skˈiːld	s k ˈiː l d		shield_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			shield_NOUN	schild	ʃˈild̥	ʃ ˈi l d̥		shield_NOUN_1			
@@ -9816,7 +9818,7 @@ Old Frisian	Old Frisian			black_ADJ	swart	swˈart	s w ˈa r t		black_ADJ_1
 West Frisian	West Frisian			black_ADJ	swart	svˈat	s v ˈa t		black_ADJ_1			
 Saterland Frisian	Saterland Frisian			black_ADJ	swot	svˈɔt	s v ˈɔ t		black_ADJ_1			
 Mainland North Frisian	Mainland North Frisian			black_ADJ	suurt	sˈuːʀt	s ˈuː ʀ t		black_ADJ_1			
-Insular North Frisian	Insular North Frisian			black_ADJ	suurt	sˈuːɐxt	s ˈuː ɐ x t		black_ADJ_1			
+Insular North Frisian	Insular North Frisian			black_ADJ	suurt	sˈuːʁ̥t	s ˈuː ʁ̥ t		black_ADJ_1			
 East Frisian Low Saxon	East Frisian Low Saxon			black_ADJ	swaart	swˈɑːɐt	s w ˈɑː ɐ t		black_ADJ_1			
 Northern Low Saxon	Northern Low Saxon			black_ADJ	swart	ʃvˈad	ʃ v ˈa d		black_ADJ_1			
 Westphalian	Westphalian			black_ADJ	swat	ʃʋˈat	ʃ ʋ ˈa t		black_ADJ_1			
@@ -9870,7 +9872,7 @@ Old Frisian	Old Frisian			sword_NOUN	swērd	swˈeːrd	s w ˈeː r d		sword_NOUN_
 West Frisian	West Frisian			sword_NOUN	swurd	svˈød̥	s v ˈø d̥		sword_NOUN_1			
 Saterland Frisian	Saterland Frisian			sword_NOUN	Swäid	svˈɛɪ̯d	s v ˈɛɪ̯ d		sword_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			sword_NOUN	swjard	svjˈaʀd̥	s v j ˈa ʀ d̥		sword_NOUN_1			
-Insular North Frisian	Insular North Frisian			sword_NOUN	Swērt	svˈɛːɐxt	s v ˈɛː ɐ x t		sword_NOUN_1			
+Insular North Frisian	Insular North Frisian			sword_NOUN	Swērt	svˈɛːʁ̥t	s v ˈɛː ʁ̥ t		sword_NOUN_1			
 East Frisian Low Saxon	East Frisian Low Saxon			sword_NOUN	sweerd	swˈeːɐd̥	s w ˈeː ɐ d̥		sword_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			sword_NOUN	Sweert	ʃvˈeːɐd	ʃ v ˈeː ɐ d		sword_NOUN_1			
 Dutch	Dutch			sword_NOUN	zwaard	zʋˈaːɾd̥	z ʋ ˈaː ɾ d̥		sword_NOUN_1			
@@ -11656,11 +11658,11 @@ English	English			word_NOUN	word	wˈɜːd	w ˈɜː d		word_NOUN_1
 American English	American English			word_NOUN	word	wˈɝd	w ˈɝ d		word_NOUN_1			
 Middle English	Middle English			word_NOUN	word	wˈurd	w ˈu r d		word_NOUN_1			
 Old English	Old English			word_NOUN	word	wˈord	w ˈo r d		word_NOUN_1			
-Old Frisian	Old Frisian			word_NOUN	word	wˈord	w ˈo r d		word_NOUN_1			
+Old Frisian	Old Frisian			word_NOUN	wōrd	wˈɔːrd	w ˈɔː r d		word_NOUN_1			
 West Frisian	West Frisian			word_NOUN	oer	ˈuə̯r	ˈuə̯ r		word_NOUN_1			
 Saterland Frisian	Saterland Frisian			word_NOUN	Woud	vˈoːu̯d	v ˈoːu̯ d		word_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			word_NOUN	uurd	ˈuːʀd̥	ˈuː ʀ d̥		word_NOUN_1			
-Insular North Frisian	Insular North Frisian			word_NOUN	Uurt	ˈuːɐxt	ˈuː ɐ x t		word_NOUN_1			
+Insular North Frisian	Insular North Frisian			word_NOUN	Uurt	ˈuːʁ̥t	ˈuː ʁ̥ t		word_NOUN_1			
 East Frisian Low Saxon	East Frisian Low Saxon			word_NOUN	woord	vˈoːɐd̥	v ˈoː ɐ d̥		word_NOUN_1			
 Northern Low Saxon	Northern Low Saxon			word_NOUN	Woort	vˈaʊ̯ɐd	v ˈaʊ̯ ɐ d		word_NOUN_1			
 Westphalian	Westphalian			word_NOUN	Waod	vˈɔːd̥	v ˈɔː d̥		word_NOUN_1			
@@ -12231,7 +12233,7 @@ English	English			thorn_NOUN	thorn	θˈɔːn	θ ˈɔː n		thorn_NOUN_1
 American English	American English			thorn_NOUN	thorn	θˈɔɹn	θ ˈɔ ɹ n		thorn_NOUN_1			
 Middle English	Middle English			thorn_NOUN	thorn	θˈɔrn	θ ˈɔ r n		thorn_NOUN_1			
 Old English	Old English			thorn_NOUN	þorn	θˈorn	θ ˈo r n		thorn_NOUN_1			
-Old Frisian	Old Frisian			thorn_NOUN	thorn	θˈorn	θ ˈo r n		thorn_NOUN_1			
+Old Frisian	Old Frisian			thorn_NOUN	thōrn	θˈɔːrn	θ ˈɔː r n		thorn_NOUN_1			
 West Frisian	West Frisian			thorn_NOUN	toarn	tˈoə̯n	t ˈoə̯ n		thorn_NOUN_1			
 Saterland Frisian	Saterland Frisian			thorn_NOUN	Touden	tˈoːu̯dən	t ˈoːu̯ d ə n		thorn_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			thorn_NOUN	torn	tˈɔʀn	t ˈɔ ʀ n		thorn_NOUN_1			
@@ -12274,7 +12276,7 @@ English	English			thirst_NOUN	thirst	θˈɜːst	θ ˈɜː s t		thirst_NOUN_1
 American English	American English			thirst_NOUN	thirst	θˈɝst	θ ˈɝ s t		thirst_NOUN_1			
 Middle English	Middle English			thirst_NOUN	thurst	θˈurst	θ ˈu r s t		thirst_NOUN_1			
 Old English	Old English			thirst_NOUN	þurst	θˈurst	θ ˈu r s t		thirst_NOUN_1			
-Old Frisian	Old Frisian			thirst_NOUN	thorst	θˈorst	θ ˈo r s t		thirst_NOUN_1			
+Old Frisian	Old Frisian			thirst_NOUN	thōrst	θˈɔːrst	θ ˈɔː r s t		thirst_NOUN_1			
 West Frisian	West Frisian			thirst_NOUN	toarst	tˈoə̯st	t ˈoə̯ s t		thirst_NOUN_1			
 Saterland Frisian	Saterland Frisian			thirst_NOUN	Toarst	tˈɔːrst	t ˈɔː r s t		thirst_NOUN_1			
 Mainland North Frisian	Mainland North Frisian			thirst_NOUN	turst	tˈuʀst	t ˈu ʀ s t		thirst_NOUN_1			
@@ -12343,7 +12345,7 @@ Old Frisian	Old Frisian			thousand_NUM	thūsend	θˈuːzənd	θ ˈuː z ə n d		
 West Frisian	West Frisian			thousand_NUM	tûzen	tˈuːzən	t ˈuː z ə n		thousand_NUM_1			
 Saterland Frisian	Saterland Frisian			thousand_NUM	duusend	dˈuːzənd	d ˈuː z ə n d		thousand_NUM_1			
 Mainland North Frisian	Mainland North Frisian			thousand_NUM	duusend	dˈuːzənd̥	d ˈuː z ə n d̥		thousand_NUM_1			
-Insular North Frisian	Insular North Frisian			thousand_NUM	düüsent	dˈyːzənt	d ˈyː z ə n t		thousand_NUM_1			
+Insular North Frisian	Insular North Frisian			thousand_NUM	düüsent	dˈyːsənt	d ˈyː s ə n t		thousand_NUM_1			
 East Frisian Low Saxon	East Frisian Low Saxon			thousand_NUM	duusend	dˈuːzn̩d	d ˈuː z n̩ d		thousand_NUM_1			
 Northern Low Saxon	Northern Low Saxon			thousand_NUM	dusend	dˈuːzn̩d	d ˈuː z n̩ d		thousand_NUM_1			
 Westphalian	Westphalian			thousand_NUM	dusend	dˈuːzn̩d̥	d ˈuː z n̩ d̥		thousand_NUM_1			
