@@ -7,7 +7,6 @@ from math import log
 from typing import Iterable, Self
 
 from constants import ALIGNMENT_PARAM_DEFAULTS, TRANSCRIPTION_PARAM_DEFAULTS
-from phonUtils.initPhoneData import suprasegmental_diacritics
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 from utils.cluster import draw_dendrogram
@@ -77,7 +76,7 @@ class Doculect:
         if self.transcription_params['ignore_stress']:
             self.transcription_params['ch_to_remove'].update({'ˈ', 'ˌ'})
         if self.transcription_params['suprasegmentals']:
-            self.transcription_params['suprasegmentals'] = suprasegmental_diacritics.union(self.transcription_params['suprasegmentals'])
+            self.transcription_params['suprasegmentals'] = set(self.transcription_params['suprasegmentals'])
         self.alignment_params = alignment_params
 
         # Initialize vocabulary and phoneme inventory

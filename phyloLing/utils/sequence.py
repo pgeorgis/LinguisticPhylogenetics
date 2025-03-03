@@ -5,9 +5,11 @@ from typing import Iterable
 
 from constants import (END_PAD_CH, GAP_CH_DEFAULT, PAD_CH_DEFAULT,
                        PHON_ENV_JOIN_CH, SEG_JOIN_CH, START_PAD_CH)
+from phonUtils.initPhoneData import suprasegmental_diacritics
 from phonUtils.phonEnv import PHON_ENV_REGEX, phon_env_ngrams
 from phonUtils.segment import _toSegment
 
+SUPRASEGMENTALS = set(suprasegmental_diacritics)
 
 class Ngram:
     def __init__(self, ngram, lang=None, seg_sep=SEG_JOIN_CH):
@@ -194,12 +196,12 @@ def is_valid_phon_ngram_unit(ngram, language=None):
     if ngram.size == 1:
         return True
 
-    # Stress with non-syllabic segment
-    if "ˈ" in ngram.ngram or "ˌ" in ngram.ngram:
+    # Suprasegmentals (stress / pitch accent) with non-syllabic segment
+    if any(suprasegmental in ngram.ngram for suprasegmental in SUPRASEGMENTALS):
         remaining_segs = [
             _toSegment(seg)
             for seg in ngram.ngram
-            if seg not in {"ˈ", "ˌ", start_token(), end_token()}
+            if seg not in SUPRASEGMENTALS.union({start_token(), end_token()})
         ]
         syllabic = any(seg.features['syllabic'] == 1 for seg in remaining_segs)
         if not syllabic and len(remaining_segs) > 0:
