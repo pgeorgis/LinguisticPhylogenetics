@@ -583,13 +583,14 @@ def mutual_surprisal(word1: Word,
                 seg = pair[gap_index - 1]
                 if gap_index == 0:
                     gap_lang = l1
+                    seg_lang = l2
                     # Skip surprisal of (free-standing, as independent unit) stress for languages where stress is not marked
                     ignore_stress = gap_lang.transcription_params['ignore_stress'] or any(sd in gap_lang.tonemes for sd in STRESS_DIACRITICS)
-                    if seg in STRESS_DIACRITICS and ignore_stress:
+                    if ignore_stress and seg in STRESS_DIACRITICS:
                         continue
-                #     if seg in seg_lang.tonemes:
-                #         if gap_lang.tonal is False:
-                #             continue
+                    # Skip surprisal of null-aligned tonemes from perspective of non-tonal/pitch accent language
+                    elif not gap_lang.tonal and seg in seg_lang.tonemes:
+                        continue
 
             if seq_map1[i] is not None:
                 weight = sum([self_surprisal[index][-1] for j, index in enumerate(seq_map1[i])]) / self_info
