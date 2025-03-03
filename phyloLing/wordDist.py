@@ -4,8 +4,8 @@ from math import sqrt
 from statistics import mean
 
 from asjp import ipa2asjp
-from constants import (DOCULECT_INDEX_KEY, PAD_CH_DEFAULT,
-                       PHONE_CORRELATORS_INDEX_KEY)
+from constants import (DOCULECT_INDEX_KEY, PHONE_CORRELATORS_INDEX_KEY,
+                       STRESS_DIACRITICS)
 from nltk import edit_distance
 from phonAlign import (Alignment, Gap, get_align_key, get_alignment_iter,
                        visual_align)
@@ -13,10 +13,10 @@ from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
-from utils.phoneme_map import PhonemeMap
 from utils.distance import Distance, dist_to_sim, sim_to_dist
 from utils.doculect import Doculect
 from utils.information import adaptation_surprisal
+from utils.phoneme_map import PhonemeMap
 from utils.sequence import Ngram
 from utils.string import preprocess_ipa_for_asjp_conversion, strip_ch
 from utils.word import Word
@@ -129,6 +129,7 @@ def prepare_alignment(word1, word2, family_index, **kwargs):
             align_costs=correlator.pmi_results,
             **kwargs
         )[0]
+        alignment.remove_padding()
 
         reverse_alignment = alignment.reverse()
         reverse_align_key = reverse_alignment.key
@@ -517,7 +518,6 @@ def mutual_surprisal(word1: Word,
 
     # Generate alignments in each direction
     alignment = prepare_alignment(word1, word2, family_index, phon_env=phon_env)
-    alignment.remove_padding()
     # Add phon env
     if phon_env:
         alignment.phon_env_alignment = alignment.add_phon_env()
@@ -548,14 +548,15 @@ def mutual_surprisal(word1: Word,
         # calculate the 2gram, then get the 2gram's phon_env equivalent
         # interpolate the probability/surprisal of the 2gram with that of the phon_env equivalent
         raise NotImplementedError
-    WAS_l2l1 = adaptation_surprisal(rev_alignment,
-                                    surprisal_map=sur_dict2,
-                                    ngram_size=ngram_size,
-                                    phon_env=phon_env,
-                                    normalize=False,
-                                    pad_ch=lang2.alignment_params['pad_ch'],
-                                    gap_ch=lang2.alignment_params['gap_ch'],
-                                    )
+    WAS_l2l1 = adaptation_surprisal(
+        rev_alignment,
+        surprisal_map=sur_dict2,
+        ngram_size=ngram_size,
+        phon_env=phon_env,
+        normalize=False,
+        pad_ch=lang2.alignment_params['pad_ch'],
+        gap_ch=lang2.alignment_params['gap_ch'],
+    )
 
     # Calculate self-surprisal (information content) values in each direction
     # Use trigram information content by default
@@ -565,7 +566,7 @@ def mutual_surprisal(word1: Word,
     # Weight surprisal values by self-surprisal/information content value of corresponding segment
     # Segments with greater information content weighted more heavily
     # Normalize by phoneme entropy
-    def weight_by_self_surprisal(alignment, WAS, self_surprisal, normalize_by, sur_dict, phon_env):
+    def weight_by_self_surprisal(alignment, WAS, self_surprisal, normalize_by, phon_env, l1, l2):
         self_info = sum([self_surprisal[j][-1] for j in self_surprisal])
         weighted_WAS = []
         seq_map1 = alignment.seq_map[0]
@@ -577,16 +578,18 @@ def mutual_surprisal(word1: Word,
             # Such gaps skew linguistic distances since tones/suprasegmental features occur on most or all words
             # and never have any equivalent
             # Also don't double-penalize deletion for shifted accent
-            # if alignment.gap_ch in pair:
-            #     gap_index = pair.index(alignment.gap_ch)
-            #     seg = pair[gap_index - 1]
-            #     if gap_index == 0:
-            #         seg_lang, gap_lang = alignment.word2.language, alignment.word1.language
-            #     else:
-            #         seg_lang, gap_lang = alignment.word1.language, alignment.word2.language
-            #     if seg in seg_lang.tonemes:
-            #         if gap_lang.tonal is False:
-            #             continue
+            if alignment.gap_ch in pair:
+                gap_index = pair.index(alignment.gap_ch)
+                seg = pair[gap_index - 1]
+                if gap_index == 0:
+                    gap_lang = l1
+                    # Skip surprisal of (free-standing, as independent unit) stress for languages where stress is not marked
+                    ignore_stress = gap_lang.transcription_params['ignore_stress'] or any(sd in gap_lang.tonemes for sd in STRESS_DIACRITICS)
+                    if seg in STRESS_DIACRITICS and ignore_stress:
+                        continue
+                #     if seg in seg_lang.tonemes:
+                #         if gap_lang.tonal is False:
+                #             continue
 
             if seq_map1[i] is not None:
                 weight = sum([self_surprisal[index][-1] for j, index in enumerate(seq_map1[i])]) / self_info
@@ -601,16 +604,18 @@ def mutual_surprisal(word1: Word,
         WAS_l1l2,
         self_surprisal1,
         normalize_by=lang2.phoneme_entropy,
-        sur_dict=sur_dict1,
-        phon_env=phon_env
+        phon_env=phon_env,
+        l1=lang1,
+        l2=lang2,
     )
     weighted_WAS_l2l1 = weight_by_self_surprisal(
         rev_alignment,
         WAS_l2l1,
         self_surprisal2,
         normalize_by=lang1.phoneme_entropy,
-        sur_dict=sur_dict2,
-        phon_env=phon_env
+        phon_env=phon_env,
+        l1=lang2,
+        l2=lang1,
     )
     # Return and save the average of these two values
     if normalize:
@@ -644,7 +649,6 @@ def pmi_dist(word1: Word,
 
     # Fetch already computed alignments
     alignment = prepare_alignment(word1, word2, family_index, **kwargs)
-    alignment.remove_padding()
 
     # Calculate PMI scores for each aligned pair
     PMI_values = [

@@ -6,7 +6,7 @@ from functools import lru_cache
 from math import log
 from typing import Iterable, Self
 
-from constants import ALIGNMENT_PARAM_DEFAULTS, TRANSCRIPTION_PARAM_DEFAULTS
+from constants import ALIGNMENT_PARAM_DEFAULTS, STRESS_DIACRITICS, TRANSCRIPTION_PARAM_DEFAULTS
 from phonUtils.phonSim import phone_sim
 from phonUtils.segment import _toSegment
 from utils.cluster import draw_dendrogram
@@ -74,7 +74,7 @@ class Doculect:
         # Transcription, segmentation, and alignment parameters
         self.transcription_params = transcription_params
         if self.transcription_params['ignore_stress']:
-            self.transcription_params['ch_to_remove'].update({'ˈ', 'ˌ'})
+            self.transcription_params['ch_to_remove'].update(STRESS_DIACRITICS)
         if self.transcription_params['suprasegmentals']:
             self.transcription_params['suprasegmentals'] = set(self.transcription_params['suprasegmentals'])
         self.alignment_params = alignment_params

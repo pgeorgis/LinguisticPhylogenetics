@@ -44,6 +44,7 @@ TRANSCRIPTION_PARAM_DEFAULTS = {
     'suprasegmentals': None,
     'min_phone_instances': 2,  # minimum instances of a phone in a doculect to be considered valid, else issue a warning
 }
+STRESS_DIACRITICS = {'ˌ', 'ˈ'}
 
 ALIGNMENT_PARAM_DEFAULTS = {
     'gap_ch': GAP_CH_DEFAULT,
