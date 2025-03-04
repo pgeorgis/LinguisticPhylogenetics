@@ -7,8 +7,8 @@ from asjp import ipa2asjp
 from constants import (DOCULECT_INDEX_KEY, PHONE_CORRELATORS_INDEX_KEY,
                        STRESS_DIACRITICS)
 from nltk import edit_distance
-from phonAlign import (Alignment, Gap, get_align_key, get_alignment_iter,
-                       visual_align)
+from phonAlign import (Alignment, Gap, compact_freestanding_diacritics,
+                       get_align_key, get_alignment_iter, visual_align)
 from phonUtils.initPhoneData import (alveolopalatal, nasals, palatal,
                                      postalveolar)
 from phonUtils.phonSim import phone_sim
@@ -408,11 +408,13 @@ def phonological_dist(word1: Word,
         (_remove_boundaries(left), _remove_boundaries(right))
         for left, right in alignment
     ]
-    # Remove any resulting (gap_ch, gap_ch) pairs
-    alignment = [pos for pos in alignment if pos != (gap_ch, gap_ch)]
 
     # Simplify complex ngram alignments to unigrams
     alignment = alignment_obj.get_unigram_alignment(alignment)
+    # Compact free-standing diacritics (e.g. suprasegmentals) onto preceding segments
+    alignment = compact_freestanding_diacritics(alignment, gap_ch)
+    # Remove any resulting (gap_ch, gap_ch) pairs
+    alignment = [pos for pos in alignment if pos != (gap_ch, gap_ch)]
     length = len(alignment)
 
     # Get list of penalties

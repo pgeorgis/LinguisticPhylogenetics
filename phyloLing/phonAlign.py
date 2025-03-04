@@ -5,7 +5,8 @@ from collections.abc import Iterable
 from constants import (ALIGNED_PAIR_DELIMITER, ALIGNMENT_KEY_REGEX,
                        ALIGNMENT_POSITION_DELIMITER, END_PAD_CH,
                        GAP_CH_DEFAULT, NULL_CH_DEFAULT, PAD_CH_DEFAULT,
-                       SEG_JOIN_CH, START_PAD_CH)
+                       POST_DIACRITICS, PRE_DIACRITICS, SEG_JOIN_CH,
+                       START_PAD_CH, STRESS_DIACRITICS)
 from phonUtils.phonEnv import get_phon_env
 from utils.alignment import needleman_wunsch_extended, to_unigram_alignment
 from utils.phoneme_map import PhonemeMap
@@ -766,6 +767,39 @@ def flatten_tuple(nested_tuple):
         else:
             flattened.append(item)
     return flattened
+
+
+def compact_freestanding_diacritics(alignment, gap_ch):
+    # Compact suprasegmentals onto preceding segments
+    # NB: works only with unigram alignment
+    # NB: Stress is segmented to the right of the base unit, like other suprasegmental diacritics
+    alignment = [list(pos) for pos in alignment]
+    for i, (left, right) in enumerate(alignment):
+        if left in POST_DIACRITICS.union(STRESS_DIACRITICS):
+            j = 1
+            while alignment[i - j][0] == gap_ch:
+                j += 1
+            alignment[i - j][0] += left
+            alignment[i][0] = gap_ch
+        elif left in PRE_DIACRITICS:
+            j = 1
+            while alignment[i + j][0] == gap_ch:
+                j += 1
+            alignment[i + j][0] += left
+            alignment[i][0] = gap_ch
+        if right in POST_DIACRITICS.union(STRESS_DIACRITICS):
+            j = 1
+            while alignment[i - j][-1] == gap_ch:
+                j += 1 
+            alignment[i - j][-1] += right
+            alignment[i][-1] = gap_ch
+        elif right in PRE_DIACRITICS:
+            j = 1
+            while alignment[i + j][-1] == gap_ch:
+                j += 1
+            alignment[i + j][-1] += right
+            alignment[i][-1] = gap_ch
+    return [tuple(pos) for pos in alignment]
 
 
 def init_precomputed_alignment(alignment,

@@ -1,6 +1,7 @@
 # Initialize logger
 import logging
 import re
+from phonUtils.initPhoneData import pre_diacritics, post_diacritics
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s %(name)s %(levelname)s: %(message)s')
 
@@ -45,6 +46,8 @@ TRANSCRIPTION_PARAM_DEFAULTS = {
     'min_phone_instances': 2,  # minimum instances of a phone in a doculect to be considered valid, else issue a warning
 }
 STRESS_DIACRITICS = {'ˌ', 'ˈ'}
+PRE_DIACRITICS = set(pre_diacritics)
+POST_DIACRITICS = set(post_diacritics)
 
 ALIGNMENT_PARAM_DEFAULTS = {
     'gap_ch': GAP_CH_DEFAULT,
