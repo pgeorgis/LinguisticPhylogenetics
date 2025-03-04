@@ -17,28 +17,28 @@ family:
 
 transcription:
     global:
-        combine_diphthongs: true
         normalize_geminates: false
-        #suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', 'ˈ']
-        #level_suprasegmentals: 'ˈ'
-    # doculects:
-    #     Latvian:
-    #         ignore_stress: true
-    #     Polish:
-    #         ignore_stress: true
-    #     "Upper Sorbian":
-    #         ignore_stress: true
-    #     "Lower Sorbian":
-    #         ignore_stress: true
-    #     Czech:
-    #         ignore_stress: true
-    #     Slovak:
-    #         ignore_stress: true
+        suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', 'ˈ']
+    doculects:
+        Latvian:
+            ignore_stress: true
+        Polish:
+            ignore_stress: true
+        "Upper Sorbian":
+            ignore_stress: true
+        "Lower Sorbian":
+            ignore_stress: true
+        Czech:
+            ignore_stress: true
+        Slovak:
+            ignore_stress: true
+        Macedonian:
+            ignore_stress: true
 
 phon_corr:
     phon_env: true
-    refresh: []
-    refresh_all: true
+    refresh: ["Macedonian"]
+    refresh_all: false
 
 # evaluation:
 #     precalculated_word_scores: 

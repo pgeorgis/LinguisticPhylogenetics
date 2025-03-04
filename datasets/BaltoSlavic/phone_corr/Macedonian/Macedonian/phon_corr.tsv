@@ -1,12 +1,4 @@
 Macedonian	Macedonian	probability
-ˈɛ	ˈɛ	1.0
-ˈɔ	ˈɔ	1.0
-ˈu	ˈu	1.0
-ˈr̩	ˈr̩	1.0
-ˈo	ˈo	1.0
-ˈi	ˈi	1.0
-ˈe	ˈe	1.0
-ˈa	ˈa	1.0
 ʧ	ʧ	1.0
 ʦ	ʦ	1.0
 ʣ	ʣ	1.0
@@ -19,6 +11,10 @@ Macedonian	Macedonian	probability
 ɡ̊	ɡ̊	1.0
 ɡ	ɡ	1.0
 ɟ	ɟ	1.0
+ɛ_v	ɛ_v	1.0
+ɛ_s	ɛ_s	1.0
+ɛ_r	ɛ_r	1.0
+ɛ_k	ɛ_k	1.0
 ɛ	ɛ	1.0
 ɔ	ɔ	1.0
 z̥	z̥	1.0
@@ -26,8 +22,11 @@ z	z	1.0
 x	x	1.0
 v	v	1.0
 u	u	1.0
+t_ɛ	t_ɛ	1.0
 t	t	1.0
+s_a	s_a	1.0
 s	s	1.0
+r̩	r̩	1.0
 r	r	1.0
 p	p	1.0
 o	o	1.0
@@ -44,4 +43,7 @@ d	d	1.0
 c	c	1.0
 b̥	b̥	1.0
 b	b	1.0
+a_r	a_r	1.0
+a_k	a_k	1.0
+a_d	a_d	1.0
 a	a	1.0

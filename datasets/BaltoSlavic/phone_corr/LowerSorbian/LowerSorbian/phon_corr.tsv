@@ -1,12 +1,4 @@
 Lower Sorbian	Lower Sorbian	probability
-ˈɪ	ˈɪ	1.0
-ˈɨ	ˈɨ	1.0
-ˈɛ	ˈɛ	1.0
-ˈɔ	ˈɔ	1.0
-ˈu	ˈu	1.0
-ˈi	ˈi	1.0
-ˈe	ˈe	1.0
-ˈa	ˈa	1.0
 ʨ	ʨ	1.0
 ʦ	ʦ	1.0
 ʒ	ʒ	1.0
@@ -15,12 +7,15 @@ Lower Sorbian	Lower Sorbian	probability
 ʐ	ʐ	1.0
 ʂ	ʂ	1.0
 ɲ	ɲ	1.0
+ɪ	ɪ	1.0
 ɨ	ɨ	1.0
 ɡ̊	ɡ̊	1.0
 ɡʲ	ɡʲ	1.0
 ɡ	ɡ	1.0
 ɛ	ɛ	1.0
 ɕ	ɕ	1.0
+ɔ_s	ɔ_s	1.0
+ɔ_r	ɔ_r	1.0
 ɔ	ɔ	1.0
 z̥	z̥	1.0
 z	z	1.0
@@ -31,6 +26,7 @@ v	v	1.0
 u	u	1.0
 t͡ʂ	t͡ʂ	1.0
 t	t	1.0
+s_a	s_a	1.0
 s	s	1.0
 rʲ	rʲ	1.0
 r	r	1.0
@@ -52,4 +48,5 @@ d	d	1.0
 b̥	b̥	1.0
 bʲ	bʲ	1.0
 b	b	1.0
+a_s	a_s	1.0
 a	a	1.0
