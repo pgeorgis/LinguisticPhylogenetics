@@ -1,8 +1,8 @@
 VOWELS
-/ə/ (0.099)
+/ə/ (0.1)
 	<Säärke> /sˈɛːrkə/ "church_NOUN_FEM"
 	<Moanske> /mˈɔːnskə/ "person_NOUN"
-	<Wunder> /vˈʊndər/ "wonder_NOUN"
+	<wonskje> /vˈɔnskjə/ "wish_VERB"
 
 /ˈoː/ (0.036)
 	<Koolich> /kˈoːləx/ "calf_NOUN"
@@ -57,7 +57,7 @@ VOWELS
 /ˈɛː/ (0.011)
 	<tään> /tˈɛːn/ "thin_ADJ"
 	<Ääske> /ˈɛːskə/ "ash_NOUN"
-	<Rääg> /rˈɛːx/ "ridge_NOUN"
+	<Rääg> /rˈɛːɣ̥/ "ridge_NOUN"
 
 /ˈɛ/ (0.01)
 	<hälpe> /hˈɛlpə/ "help_VERB"
@@ -79,15 +79,15 @@ VOWELS
 	<Hanne> /hˈanə/ "hen_NOUN"
 	<alven> /ˈalvən/ "eleven_NUM"
 
-/ɪ/ (0.004)
-	<helig> /hˈɛlɪx/ "holy_ADJ"
-	<twelig> /tvˈeːlɪx/ "twelve_NUM"
-	<Bíerig> /bˈiːrɪx/ "mountain_NOUN"
-
 /ˈaːi̯/ (0.004)
 	<Dai> /dˈaːi̯/ "day_NOUN"
-	<Wai> /vˈaːi̯/ "way_NOUN"
 	<Nail> /nˈaːi̯l/ "fingernail_NOUN"
+	<Wai> /vˈaːi̯/ "way_NOUN"
+
+/ɪ/ (0.004)
+	<Huunich> /hˈuːnɪɣ̥/ "honey_NOUN"
+	<Köänig> /kˈœːnɪɣ̥/ "king_NOUN"
+	<twintich> /tvˈɪntɪɣ̥/ "twenty_NUM"
 
 /ˈyː/ (0.003)
 	<düütsk> /dˈyːtsk/ "Teutonic_ADJ"
@@ -106,7 +106,7 @@ VOWELS
 	<Oai> /ˈɔːɪ̯/ "egg_NOUN_NEU"
 
 /ˈœː/ (0.001)
-	<Köänig> /kˈœːnɪx/ "king_NOUN"
+	<Köänig> /kˈœːnɪɣ̥/ "king_NOUN"
 
 /ˈøː/ (0.001)
 	<söögje> /sˈøːɣjə/ "suck_VERB"
@@ -161,7 +161,7 @@ CONSONANTS
 /v/ (0.034)
 	<Sweet> /svˈeːt/ "sweat_NOUN"
 	<wonskje> /vˈɔnskjə/ "wish_VERB"
-	<twelig> /tvˈeːlɪx/ "twelve_NUM"
+	<twelig> /tvˈeːləɣ̥/ "twelve_NUM"
 
 /j/ (0.032)
 	<ljoof> /ljˈoːf/ "beloved_ADJ"
@@ -193,25 +193,30 @@ CONSONANTS
 	<Fúgel> /fˈuːɣəl/ "bird_NOUN_MASC"
 	<gräin> /ɣrˈɛɪ̯n/ "green_ADJ"
 
-/x/ (0.02)
-	<Plicht> /plˈɪxt/ "plight_NOUN"
-	<Dwärch> /dvˈɛrx/ "dwarf_NOUN"
-	<Ploug> /plˈoːu̯x/ "plough_NOUN"
-
 /p/ (0.014)
-	<Paad> /pˈaːd/ "path_NOUN"
-	<Wäipen> /vˈɛɪ̯pən/ "weapon_NOUN"
-	<Oape> /ˈɔːpə/ "ape_NOUN"
+	<hälpe> /hˈɛlpə/ "help_VERB"
+	<Ploug> /plˈoːu̯ɣ̥/ "plough_NOUN"
+	<släipe> /slˈɛɪ̯pə/ "sleep_VERB"
+
+/ɣ̥/ (0.011)
+	<Ploug> /plˈoːu̯ɣ̥/ "plough_NOUN"
+	<hoog> /hˈoːɣ̥/ "high_ADJ"
+	<Köänig> /kˈœːnɪɣ̥/ "king_NOUN"
 
 /ŋ/ (0.011)
+	<drinke> /drˈɪŋkə/ "drink_VERB"
 	<Sloange> /slˈɔːŋə/ "snake_NOUN"
 	<Ring> /rˈɪŋ/ "ring_NOUN"
-	<Ding> /dˈɪŋ/ "thing_NOUN"
+
+/x/ (0.009)
+	<riucht> /rjˈʊxt/ "right_ADJ"
+	<Plicht> /plˈɪxt/ "plight_NOUN"
+	<laachje> /lˈaːxjə/ "laugh_VERB"
 
 /z/ (0.005)
 	<Noze> /nˈoːzə/ "nose_NOUN"
-	<Hoaze> /hˈɔːzə/ "hare_NOUN"
 	<Muze> /mˈuːzə/ "mice_NOUN_PL"
+	<duusend> /dˈuːzənd/ "thousand_NUM"
 
 /w/ (0.003)
 	<fieuw> /fˈiːw/ "five_NUM"
