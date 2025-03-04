@@ -18,7 +18,7 @@ family:
 transcription:
     global:
         normalize_geminates: false
-        suprasegmentals: ['ˀ', '̂', '̌', '̀', '́', 'ˈ']
+        autonomous_diacritics: ['ˀ', '̂', '̌', '̀', '́', 'ˈ']
     doculects:
         Latvian:
             ignore_stress: true

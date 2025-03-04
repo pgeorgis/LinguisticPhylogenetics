@@ -86,7 +86,7 @@ The following is a brief description of the configurable parameters.
 
   `preaspiration`: If `true`, accounts for preaspirated consonants during IPA string segmentation, e.g. Icelandic <þakka> /θˈaʰka/would be segmented as /θ/, /ˈa/, /ʰk/, /a/. If `false`, aspiration diacritics (<ʰ>, <ʱ>) are assumed to modify the preceding segment instead. Default is `true`.
 
-  `suprasegmentals`: Optional list of suprasegmental units which should be segmented as free-standing units rather than being combined with the segment they normally modify. Defaults to `none`.
+  `autonomous_diacritics`: Optional list of (typically prosodic) units represented by diacritics which should be segmented as free-standing units rather than being combined with the segment they normally modify. Defaults to `none`.
 
   `ch_to_remove`: Set of characters which are preprocessed out of transcriptions. By default this includes all suprasegmental diacritics other than stress, unless otherwise specified in `suprasegmentals`.
 

@@ -770,7 +770,7 @@ def flatten_tuple(nested_tuple):
 
 
 def compact_freestanding_diacritics(alignment, gap_ch):
-    # Compact suprasegmentals onto preceding segments
+    # Compact suprasegmentals and other autonomous diacritics onto preceding segments
     # NB: works only with unigram alignment
     # NB: Stress is segmented to the right of the base unit, like other suprasegmental diacritics
     alignment = [list(pos) for pos in alignment]

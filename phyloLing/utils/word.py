@@ -74,7 +74,7 @@ class Word:
             remove_ch=''.join(self.get_parameter('ch_to_remove')),
             combine_diphthongs=self.get_parameter('combine_diphthongs'),
             preaspiration=self.get_parameter('preaspiration'),
-            suprasegmentals=self.get_parameter('suprasegmentals')
+            autonomous_diacritics=self.get_parameter('autonomous_diacritics')
         )
     
     def get_ngrams(self, size, pad_ch=PAD_CH_DEFAULT, phon_env=False):

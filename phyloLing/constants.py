@@ -42,7 +42,7 @@ TRANSCRIPTION_PARAM_DEFAULTS = {
     'normalize_geminates': False,
     'preaspiration': True,
     'ch_to_remove': {' '},  # TODO add syllabic diacritics here
-    'suprasegmentals': None,
+    'autonomous_diacritics': None,
     'min_phone_instances': 2,  # minimum instances of a phone in a doculect to be considered valid, else issue a warning
 }
 STRESS_DIACRITICS = {'ˌ', 'ˈ'}

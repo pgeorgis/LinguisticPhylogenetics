@@ -574,12 +574,10 @@ def mutual_surprisal(word1: Word,
         seq_map1 = alignment.seq_map[0]
         align_iter = get_alignment_iter(alignment, phon_env=phon_env)
         for i, pair in enumerate(align_iter):
-
             # Skip pairs with aligned suprasegmental features with a gap
             # when the paired language (of the gap) does not have phonemic tones/suprasegmental features
-            # Such gaps skew linguistic distances since tones/suprasegmental features occur on most or all words
-            # and never have any equivalent
-            # Also don't double-penalize deletion for shifted accent
+            # Such gaps skew linguistic distances since tones/suprasegmental features occur on most or all words 
+            # in tonal/pitch accent languages and can never have any aligned equivalent in a non-tonal language
             if alignment.gap_ch in pair:
                 gap_index = pair.index(alignment.gap_ch)
                 seg = pair[gap_index - 1]

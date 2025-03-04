@@ -75,8 +75,8 @@ class Doculect:
         self.transcription_params = transcription_params
         if self.transcription_params['ignore_stress']:
             self.transcription_params['ch_to_remove'].update(STRESS_DIACRITICS)
-        if self.transcription_params['suprasegmentals']:
-            self.transcription_params['suprasegmentals'] = set(self.transcription_params['suprasegmentals'])
+        if self.transcription_params['autonomous_diacritics']:
+            self.transcription_params['autonomous_diacritics'] = set(self.transcription_params['autonomous_diacritics'])
         self.alignment_params = alignment_params
 
         # Initialize vocabulary and phoneme inventory
