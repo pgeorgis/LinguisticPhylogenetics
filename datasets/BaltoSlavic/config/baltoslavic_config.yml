@@ -37,8 +37,8 @@ transcription:
 
 phon_corr:
     phon_env: true
-    refresh: ["Macedonian"]
-    refresh_all: false
+    refresh: []
+    refresh_all: true
 
 # evaluation:
 #     precalculated_word_scores: 
