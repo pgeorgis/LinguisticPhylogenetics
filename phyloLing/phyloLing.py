@@ -805,27 +805,11 @@ class LexicalDataset:
             lm = linkage(dists, linkage_method, metric)
             return lm
 
-    def write_distance_matrix(self, dist_matrix, outfile, ordered_labels=None, float_format="%.5f"):
-        """Writes numpy distance matrix object to a TSV with decimals rounded to 5 places by default"""
-
-        languages = [self.languages[lang] for lang in self.languages]
-        names = [lang.name for lang in languages]
-
-        # np.savetxt(outfile, dist_matrix, delimiter='\t', fmt=fmt)
-
-        # Create a DataFrame using the distance matrix and labels
-        df = pd.DataFrame(dist_matrix, index=names, columns=names)
-
-        # Reorder the columns and rows based on the ordered list of labels
-        if ordered_labels:
-            ordered_labels = [label for label in ordered_labels if label in names]
-            if len(ordered_labels) == df.shape[0]:  # only if the dimensions match
-                df = df.reindex(index=ordered_labels, columns=ordered_labels)
-                names = ordered_labels
-
-        # Add an empty column and row for the labels
-        df.insert(0, "Labels", names)
-        df.insert(0, " ", [" "] * len(names))
+    def write_distance_matrix(self, dist_matrix, outfile, float_format="%.5f"):
+        """Write distance matrix object to a TSV."""
+        doculect_names = list(self.languages.keys())
+        df = pd.DataFrame(dist_matrix, index=doculect_names, columns=doculect_names)
+        df.insert(0, "", doculect_names)
         df.to_csv(outfile, sep='\t', index=False, float_format=float_format)
 
     def generate_tree(self,
