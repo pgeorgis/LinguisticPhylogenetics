@@ -7,7 +7,8 @@ Proto-Slavic	Proto-Slavic			ONE_NUM	edìnъ	edǐnŭ	e d ǐ n ŭ		ONE_NUM_1
 Old Church Slavonic	Old Church Slavonic			ONE_NUM	единъ	jɛdˈinʊ	j ɛ d ˈi n ʊ		ONE_NUM_1			
 Bulgarian	Bulgarian			ONE_NUM	един	ɛdˈin	ɛ d ˈi n		ONE_NUM_1			
 Macedonian	Macedonian			ONE_NUM	еден	ˈɛdɛn	ˈɛ d ɛ n		ONE_NUM_1			
-Štokavian	Štokavian			ONE_NUM	jèdan	jědan	j ě d a n		ONE_NUM_1			
+Standard Serbian	Standard Serbian			ONE_NUM	јèдан	jědan	j ě d a n		ONE_NUM_1			
+Standard Croatian	Standard Croatian			ONE_NUM	jèdan	jědan	j ě d a n		ONE_NUM_1			
 Čakavian	Čakavian			ONE_NUM	jedãn	jedǎːn	j e d ǎː n		ONE_NUM_1			
 Slovenian	Slovenian			ONE_NUM	édən	ɛ̀ːdən	ɛ̀ː d ə n		ONE_NUM_1			
 Slovak	Slovak			ONE_NUM	jeden	jˈɛdɛn	j ˈɛ d ɛ n		ONE_NUM_1			
@@ -29,7 +30,8 @@ Proto-Slavic	Proto-Slavic			CLEAR_ADJ	ě̀snъ	ɛːˀsnŭ	ɛːˀ s n ŭ		CLEAR
 Old Church Slavonic	Old Church Slavonic			CLEAR_ADJ	ꙗснъ	jˈɑsnʊ	j ˈɑ s n ʊ		CLEAR_ADJ_1			
 Bulgarian	Bulgarian			CLEAR_ADJ	ясен	jˈasɛn	j ˈa s ɛ n		CLEAR_ADJ_1			
 Macedonian	Macedonian			CLEAR_ADJ	јасен	jˈasɛn	j ˈa s ɛ n		CLEAR_ADJ_1			
-Štokavian	Štokavian			CLEAR_ADJ	jàsan	jǎsan	j ǎ s a n		CLEAR_ADJ_1			
+Standard Serbian	Standard Serbian			CLEAR_ADJ	јàсан	jǎsan	j ǎ s a n		CLEAR_ADJ_1			
+Standard Croatian	Standard Croatian			CLEAR_ADJ	jàsan	jǎsan	j ǎ s a n		CLEAR_ADJ_1			
 Slovenian	Slovenian			CLEAR_ADJ	jásen	jàːsən	j àː s ə n		CLEAR_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			STONE_NOUN	ákmō	ákmoː	á k m oː		STONE_NOUN_1			
 Lithuanian	Lithuanian			STONE_NOUN	akmuõ	ɐkmǔə̯	ɐ k m ǔə̯		STONE_NOUN_1			
@@ -56,8 +58,8 @@ Proto-Slavic	Proto-Slavic			COAL_NOUN	ǫ̀glь	õːˀɡlĭ	õːˀ ɡ l ĭ		C
 Old Church Slavonic	Old Church Slavonic			COAL_NOUN	ѫгль	ˈɔ̃ɡlɪ	ˈɔ̃ ɡ l ɪ		COAL_NOUN_1			
 Bulgarian	Bulgarian			COAL_NOUN	въглен	vˈɤɡlɛn	v ˈɤ ɡ l ɛ n		COAL_NOUN_1			
 Macedonian	Macedonian			COAL_NOUN	јаглен	jˈaɡlɛn	j ˈa ɡ l ɛ n		COAL_NOUN_1			
-Štokavian	Štokavian			COAL_NOUN	ȕgalj	ûɡaʎ	û ɡ a ʎ		COAL_NOUN_1			
-Štokavian	Štokavian			COAL_NOUN	ȕgljen	ûɡʎen	û ɡ ʎ e n		COAL_NOUN_1			
+Standard Serbian	Standard Serbian			COAL_NOUN	у̏гаљ	ûɡaʎ	û ɡ a ʎ		COAL_NOUN_1			
+Standard Croatian	Standard Croatian			COAL_NOUN	ȕgljen	ûɡʎen	û ɡ ʎ e n		COAL_NOUN_1			
 Čakavian	Čakavian			COAL_NOUN	ȕgljen	ûɡlen	û ɡ l e n		COAL_NOUN_1			
 Slovenian	Slovenian			COAL_NOUN	ọ̑gəł	óːɡəw	óː ɡ ə w		COAL_NOUN_1			
 Slovak	Slovak			COAL_NOUN	uhlie	ˈuɦʎɪ̯ɛ	ˈu ɦ ʎ ɪ̯ɛ		COAL_NOUN_1			
@@ -76,7 +78,8 @@ Proto-Slavic	Proto-Slavic			NUT_NOUN	orě̀xъ	orɛ̌ːxŭ	o r ɛ̌ː x ŭ		NU
 Old Church Slavonic	Old Church Slavonic			NUT_NOUN	орѣхъ	ɔrˈæxʊ	ɔ r ˈæ x ʊ		NUT_NOUN_1			
 Bulgarian	Bulgarian			NUT_NOUN	орех	ˈɔrɛx	ˈɔ r ɛ x		NUT_NOUN_1			
 Macedonian	Macedonian			NUT_NOUN	орев	ˈɔɾɛf	ˈɔ ɾ ɛ f		NUT_NOUN_1			
-Štokavian	Štokavian			NUT_NOUN	òrah	ǒrax	ǒ r a x		NUT_NOUN_1			
+Standard Serbian	Standard Serbian			NUT_NOUN	òрах	ǒrax	ǒ r a x		NUT_NOUN_1			
+Standard Croatian	Standard Croatian			NUT_NOUN	òrah	ǒrax	ǒ r a x		NUT_NOUN_1			
 Čakavian	Čakavian			NUT_NOUN	orȉh	orîx	o r î x		NUT_NOUN_1			
 Slovenian	Slovenian			NUT_NOUN	óreh	ɔ̀ːrɛx	ɔ̀ː r ɛ x		NUT_NOUN_1			
 Slovak	Slovak			NUT_NOUN	orech	ˈɔrɛx	ˈɔ r ɛ x		NUT_NOUN_1			
@@ -97,7 +100,8 @@ Proto-Slavic	Proto-Slavic			EAGLE_NOUN	orь̀lъ	orĭ̌lŭ	o r ĭ̌ l ŭ		EA
 Old Church Slavonic	Old Church Slavonic			EAGLE_NOUN	орьлъ	ɔrˈɪlʊ	ɔ r ˈɪ l ʊ		EAGLE_NOUN_1			
 Bulgarian	Bulgarian			EAGLE_NOUN	орел	orˈɛɫ	o r ˈɛ ɫ		EAGLE_NOUN_1			
 Macedonian	Macedonian			EAGLE_NOUN	орел	ˈɔrɛɫ	ˈɔ r ɛ ɫ		EAGLE_NOUN_1			
-Štokavian	Štokavian			EAGLE_NOUN	òrao	ǒrao	ǒ r a o		EAGLE_NOUN_1			
+Standard Serbian	Standard Serbian			EAGLE_NOUN	о̀рао	ǒrao	ǒ r a o		EAGLE_NOUN_1			
+Standard Croatian	Standard Croatian			EAGLE_NOUN	òrao	ǒrao	ǒ r a o		EAGLE_NOUN_1			
 Slovenian	Slovenian			EAGLE_NOUN	órəł	ɔ̀ːrəw	ɔ̀ː r ə w		EAGLE_NOUN_1			
 Slovak	Slovak			EAGLE_NOUN	orol	ˈɔrɔl	ˈɔ r ɔ l		EAGLE_NOUN_1			
 Czech	Czech			EAGLE_NOUN	orel	ˈorɛl	ˈo r ɛ l		EAGLE_NOUN_1			
@@ -115,7 +119,8 @@ Proto-Slavic	Proto-Slavic			PLOUGH_NOUN	őrdlo	oˀrdlo	oˀ r d l o		PLOUGH_NOUN
 Old Church Slavonic	Old Church Slavonic			PLOUGH_NOUN	рало	rˈɑlɔ	r ˈɑ l ɔ		PLOUGH_NOUN_1			
 Bulgarian	Bulgarian			PLOUGH_NOUN	рало	rˈaɫo	r ˈa ɫ o		PLOUGH_NOUN_1			
 Macedonian	Macedonian			PLOUGH_NOUN	рало	rˈaɫo	r ˈa ɫ o		PLOUGH_NOUN_1			
-Štokavian	Štokavian			PLOUGH_NOUN	rȁlo	râlo	r â l o		PLOUGH_NOUN_1			
+Standard Serbian	Standard Serbian			PLOUGH_NOUN	рȁло	râlo	r â l o		PLOUGH_NOUN_1			
+Standard Croatian	Standard Croatian			PLOUGH_NOUN	rȁlo	râlo	r â l o		PLOUGH_NOUN_1			
 Slovenian	Slovenian			PLOUGH_NOUN	rálo	ràːlɔ	r àː l ɔ		PLOUGH_NOUN_1			
 Slovak	Slovak			PLOUGH_NOUN	radlo	rˈadɫɔ	r ˈa d ɫ ɔ		PLOUGH_NOUN_1			
 Czech	Czech			PLOUGH_NOUN	rádlo	rˈaːdlo	r ˈaː d l o		PLOUGH_NOUN_1			
@@ -135,7 +140,8 @@ Proto-Slavic	Proto-Slavic			APPLE_NOUN	àblъko	aˀblŭko	aˀ b l ŭ k o		APPL
 Old Church Slavonic	Old Church Slavonic			APPLE_NOUN	аблъко	jˈablʊkɔ	j ˈa b l ʊ k ɔ		APPLE_NOUN_1			
 Bulgarian	Bulgarian			APPLE_NOUN	ябълка	jˈabɐɫkɐ	j ˈa b ɐ ɫ k ɐ		APPLE_NOUN_1			
 Macedonian	Macedonian			APPLE_NOUN	јаболко	jˈabɔɫkɔ	j ˈa b ɔ ɫ k ɔ		APPLE_NOUN_1			
-Štokavian	Štokavian			APPLE_NOUN	jȁbuka	jâbuka	j â b u k a		APPLE_NOUN_1			
+Standard Serbian	Standard Serbian			APPLE_NOUN	јȁбука	jâbuka	j â b u k a		APPLE_NOUN_1			
+Standard Croatian	Standard Croatian			APPLE_NOUN	jȁbuka	jâbuka	j â b u k a		APPLE_NOUN_1			
 Čakavian	Čakavian			APPLE_NOUN	jȁbuka	jâbuka	j â b u k a		APPLE_NOUN_1			
 Slovenian	Slovenian			APPLE_NOUN	jábołko	jàːbɔwkɔ	j àː b ɔ w k ɔ		APPLE_NOUN_1			
 Slovak	Slovak			APPLE_NOUN	jablko	jˈabl̩kɔ	j ˈa b l̩ k ɔ		APPLE_NOUN_1			
@@ -154,7 +160,8 @@ Proto-Slavic	Proto-Slavic			EIGHT_NUM	òsmь	ǒsmĭ	ǒ s m ĭ		EIGHT_NUM_1
 Old Church Slavonic	Old Church Slavonic			EIGHT_NUM	осмь	ˈɔsmɪ	ˈɔ s m ɪ		EIGHT_NUM_1			
 Bulgarian	Bulgarian			EIGHT_NUM	осем	ˈɔsɛm	ˈɔ s ɛ m		EIGHT_NUM_1			
 Macedonian	Macedonian			EIGHT_NUM	осум	ˈosum	ˈo s u m		EIGHT_NUM_1			
-Štokavian	Štokavian			EIGHT_NUM	ȍsam	ôsam	ô s a m		EIGHT_NUM_1			
+Standard Serbian	Standard Serbian			EIGHT_NUM	о̏сам	ôsam	ô s a m		EIGHT_NUM_1			
+Standard Croatian	Standard Croatian			EIGHT_NUM	ȍsam	ôsam	ô s a m		EIGHT_NUM_1			
 Čakavian	Čakavian			EIGHT_NUM	ȍsan	ôsan	ô s a n		EIGHT_NUM_1			
 Slovenian	Slovenian			EIGHT_NUM	ọ́səm	òːsəm	òː s ə m		EIGHT_NUM_1			
 Slovak	Slovak			EIGHT_NUM	osem	ˈɔsɛm	ˈɔ s ɛ m		EIGHT_NUM_1			
@@ -173,7 +180,8 @@ Proto-Slavic	Proto-Slavic			WHITE_ADJ	bě̃lъ	bɛ̌ːlŭ	b ɛ̌ː l ŭ		WHITE
 Old Church Slavonic	Old Church Slavonic			WHITE_ADJ	бѣлъ	bˈælʊ	b ˈæ l ʊ		WHITE_ADJ_1			
 Bulgarian	Bulgarian			WHITE_ADJ	бял	bʲˈaɫ	bʲ ˈa ɫ		WHITE_ADJ_1			
 Macedonian	Macedonian			WHITE_ADJ	бел	bˈɛɫ	b ˈɛ ɫ		WHITE_ADJ_1			
-Štokavian	Štokavian			WHITE_ADJ	bijȇl	bjêːl	b j êː l		WHITE_ADJ_1			
+Standard Serbian	Standard Serbian			WHITE_ADJ	бȅо	bêo	b ê o		WHITE_ADJ_1			
+Standard Croatian	Standard Croatian			WHITE_ADJ	bijȇl	bjêːl	b j êː l		WHITE_ADJ_1			
 Čakavian	Čakavian			WHITE_ADJ	bĩl	bǐːl	b ǐː l		WHITE_ADJ_1			
 Čakavian	Čakavian			WHITE_ADJ	bĩ	bǐː	b ǐː		WHITE_ADJ_1			
 Slovenian	Slovenian			WHITE_ADJ	bẹ́ł	bèːw	b èː w		WHITE_ADJ_1			
@@ -189,7 +197,8 @@ Proto-Slavic	Proto-Slavic			BEARD_NOUN	bordà	bordǎ	b o r d ǎ		BEARD_NOUN_1
 Old Church Slavonic	Old Church Slavonic			BEARD_NOUN	брада	brɑdˈɑ	b r ɑ d ˈɑ		BEARD_NOUN_1			
 Bulgarian	Bulgarian			BEARD_NOUN	брада	brɐdˈa	b r ɐ d ˈa		BEARD_NOUN_1			
 Macedonian	Macedonian			BEARD_NOUN	брада	brˈada	b r ˈa d a		BEARD_NOUN_1			
-Štokavian	Štokavian			BEARD_NOUN	bráda	brǎːda	b r ǎː d a		BEARD_NOUN_1			
+Standard Serbian	Standard Serbian			BEARD_NOUN	брáда	brǎːda	b r ǎː d a		BEARD_NOUN_1			
+Standard Croatian	Standard Croatian			BEARD_NOUN	bráda	brǎːda	b r ǎː d a		BEARD_NOUN_1			
 Čakavian	Čakavian			BEARD_NOUN	brādȁ	braːdâ	b r aː d â		BEARD_NOUN_1			
 Slovenian	Slovenian			BEARD_NOUN	bráda	bràːda	b r àː d a		BEARD_NOUN_1			
 Slovak	Slovak			BEARD_NOUN	brada	brˈada	b r ˈa d a		BEARD_NOUN_1			
@@ -208,7 +217,8 @@ Old Prussian	Old Prussian			BEAVER_NOUN	bebrus	bebrus	b e b r u s		BEAVER_NOUN_1
 Proto-Slavic	Proto-Slavic			BEAVER_NOUN	bòbrъ	bǒbrŭ	b ǒ b r ŭ		BEAVER_NOUN_1			
 Bulgarian	Bulgarian			BEAVER_NOUN	бобър	bˈɔbɐr	b ˈɔ b ɐ r		BEAVER_NOUN_1			
 Macedonian	Macedonian			BEAVER_NOUN	дабар	dˈabar	d ˈa b a r		BEAVER_NOUN_1			
-Štokavian	Štokavian			BEAVER_NOUN	dàbar	dǎbar	d ǎ b a r		BEAVER_NOUN_1			
+Standard Serbian	Standard Serbian			BEAVER_NOUN	дàбар	dǎbar	d ǎ b a r		BEAVER_NOUN_1			
+Standard Croatian	Standard Croatian			BEAVER_NOUN	dàbar	dǎbar	d ǎ b a r		BEAVER_NOUN_1			
 Slovenian	Slovenian			BEAVER_NOUN	bọ́bər	bòːbər	b òː b ə r		BEAVER_NOUN_1			
 Slovenian	Slovenian			BEAVER_NOUN	bóbər	 bɔ̀ːbər	b ɔ̀ː b ə r		BEAVER_NOUN_1			
 Slovak	Slovak			BEAVER_NOUN	bobor	bˈɔbɔr	b ˈɔ b ɔ r		BEAVER_NOUN_1			
@@ -229,7 +239,8 @@ Proto-Slavic	Proto-Slavic			BIRCH_NOUN	bèrza	beˀrza	b eˀ r z a		BIRCH_NOUN_1
 Old Church Slavonic	Old Church Slavonic			BIRCH_NOUN	брѣза	brˈæzɑ	b r ˈæ z ɑ		BIRCH_NOUN_1			
 Bulgarian	Bulgarian			BIRCH_NOUN	бреза	brɛzˈa	b r ɛ z ˈa		BIRCH_NOUN_1			
 Macedonian	Macedonian			BIRCH_NOUN	бреза	brˈɛza	b r ˈɛ z a		BIRCH_NOUN_1			
-Štokavian	Štokavian			BIRCH_NOUN	brȅza	brêza	b r ê z a		BIRCH_NOUN_1			
+Standard Serbian	Standard Serbian			BIRCH_NOUN	брȅза	brêza	b r ê z a		BIRCH_NOUN_1			
+Standard Croatian	Standard Croatian			BIRCH_NOUN	brȅza	brêza	b r ê z a		BIRCH_NOUN_1			
 Slovenian	Slovenian			BIRCH_NOUN	brẹ́za	brèːza	b r èː z a		BIRCH_NOUN_1			
 Slovak	Slovak			BIRCH_NOUN	breza	brˈɛza	b r ˈɛ z a		BIRCH_NOUN_1			
 Czech	Czech			BIRCH_NOUN	bříza	br̝ˈiːza	b r̝ ˈiː z a		BIRCH_NOUN_1			
@@ -249,7 +260,8 @@ Proto-Slavic	Proto-Slavic			WITHOUT_PREP	bezъ	bezŭ	b e z ŭ		WITHOUT_PREP_1
 Old Church Slavonic	Old Church Slavonic			WITHOUT_PREP	без	bˈɛz	b ˈɛ z		WITHOUT_PREP_1			
 Bulgarian	Bulgarian			WITHOUT_PREP	без	bˈɛz̥	b ˈɛ z̥		WITHOUT_PREP_1			
 Macedonian	Macedonian			WITHOUT_PREP	без	bˈɛz̥	b ˈɛ z̥		WITHOUT_PREP_1			
-Štokavian	Štokavian			WITHOUT_PREP	bèz	běz	b ě z		WITHOUT_PREP_1			
+Standard Serbian	Standard Serbian			WITHOUT_PREP	бèз	běz	b ě z		WITHOUT_PREP_1			
+Standard Croatian	Standard Croatian			WITHOUT_PREP	bèz	běz	b ě z		WITHOUT_PREP_1			
 Slovenian	Slovenian			WITHOUT_PREP	brèz	brɛ̀z̥	b r ɛ̀ z̥		WITHOUT_PREP_1			
 Slovak	Slovak			WITHOUT_PREP	bez	bˈɛz̥	b ˈɛ z̥		WITHOUT_PREP_1			
 Czech	Czech			WITHOUT_PREP	bez	bˈɛz̥	b ˈɛ z̥		WITHOUT_PREP_1			
@@ -268,7 +280,8 @@ Proto-Slavic	Proto-Slavic			BEE_NOUN	bьčelà	bĭʧelǎ	b ĭ ʧ e l ǎ		BEE
 Old Church Slavonic	Old Church Slavonic			BEE_NOUN	бъчела	bʊʧˈɛlɑ	b ʊ ʧ ˈɛ l ɑ		BEE_NOUN_1			
 Bulgarian	Bulgarian			BEE_NOUN	пчела	pʧɛɫˈa	p ʧ ɛ ɫ ˈa		BEE_NOUN_1			
 Macedonian	Macedonian			BEE_NOUN	пчела	pʧˈɛɫa	p ʧ ˈɛ ɫ a		BEE_NOUN_1			
-Štokavian	Štokavian			BEE_NOUN	pčèla	pʧěla	p ʧ ě l a		BEE_NOUN_1			
+Standard Serbian	Standard Serbian			BEE_NOUN	пчèла	pʧěla	p ʧ ě l a		BEE_NOUN_1			
+Standard Croatian	Standard Croatian			BEE_NOUN	pčèla	pʧěla	p ʧ ě l a		BEE_NOUN_1			
 Čakavian	Čakavian			BEE_NOUN	čȅla	ʧêla	ʧ ê l a		BEE_NOUN_1			
 Slovak	Slovak			BEE_NOUN	včela	 fʧˈɛɫa	f ʧ ˈɛ ɫ a		BEE_NOUN_1			
 Czech	Czech			BEE_NOUN	včela	 fʧˈɛla	f ʧ ˈɛ l a		BEE_NOUN_1			
@@ -285,7 +298,8 @@ Latvian	Latvian			BE_VERB	būt	bˈuːt	b ˈuː t		BE_VERB_1
 Old Prussian	Old Prussian			BE_VERB	būton	buːton	b uː t o n		BE_VERB_1			
 Proto-Slavic	Proto-Slavic			BE_VERB	bỳti	bɨˀti	b ɨˀ t i		BE_VERB_1			
 Old Church Slavonic	Old Church Slavonic			BE_VERB	бꙑти	bˈɯti	b ˈɯ t i		BE_VERB_1			
-Štokavian	Štokavian			BE_VERB	bȉti	bîti	b î t i		BE_VERB_1			
+Standard Serbian	Standard Serbian			BE_VERB	би̏ти	bîti	b î t i		BE_VERB_1			
+Standard Croatian	Standard Croatian			BE_VERB	bȉti	bîti	b î t i		BE_VERB_1			
 Čakavian	Čakavian			BE_VERB	bȉti	bîti	b î t i		BE_VERB_1			
 Slovenian	Slovenian			BE_VERB	bíti	bìːti	b ìː t i		BE_VERB_1			
 Slovak	Slovak			BE_VERB	byť	bˈic	b ˈi c		BE_VERB_1			
@@ -325,7 +339,8 @@ Proto-Slavic	Proto-Slavic			TEN_NUM	dȅsętь	dêsẽtĭ	d ê s ẽ t ĭ		TE
 Old Church Slavonic	Old Church Slavonic			TEN_NUM	десѧть	dˈɛsɛ̃tɪ	d ˈɛ s ɛ̃ t ɪ		TEN_NUM_1			
 Bulgarian	Bulgarian			TEN_NUM	десет	dˈɛsɛt	d ˈɛ s ɛ t		TEN_NUM_1			
 Macedonian	Macedonian			TEN_NUM	десет	dˈɛsɛt	d ˈɛ s ɛ t		TEN_NUM_1			
-Štokavian	Štokavian			TEN_NUM	dȅsēt	dêseːt	d ê s eː t		TEN_NUM_1			
+Standard Serbian	Standard Serbian			TEN_NUM	дȅсēт	dêseːt	d ê s eː t		TEN_NUM_1			
+Standard Croatian	Standard Croatian			TEN_NUM	dȅsēt	dêseːt	d ê s eː t		TEN_NUM_1			
 Čakavian	Čakavian			TEN_NUM	dȅset	dêset	d ê s e t		TEN_NUM_1			
 Slovenian	Slovenian			TEN_NUM	desẹ̑t	deséːt	d e s éː t		TEN_NUM_1			
 Slovak	Slovak			TEN_NUM	desať	ɟˈɛsac	ɟ ˈɛ s a c		TEN_NUM_1			
@@ -344,7 +359,8 @@ Proto-Slavic	Proto-Slavic			LONG_ADJ	dь̀lgъ	dĭˀlɡŭ	d ĭˀ l ɡ ŭ		LO
 Old Church Slavonic	Old Church Slavonic			LONG_ADJ	дльгъ	dlˈɪɡʊ	d l ˈɪ ɡ ʊ		LONG_ADJ_1			
 Bulgarian	Bulgarian			LONG_ADJ	дълъг	dˈɤɫɐɡ̊	d ˈɤ ɫ ɐ ɡ̊		LONG_ADJ_1			
 Macedonian	Macedonian			LONG_ADJ	долг	dˈoɫɡ̊	d ˈo ɫ ɡ̊		LONG_ADJ_1			
-Štokavian	Štokavian			LONG_ADJ	dȕg	dûɡ	d û ɡ		LONG_ADJ_1			
+Standard Serbian	Standard Serbian			LONG_ADJ	ду̑г	dûɡ	d û ɡ		LONG_ADJ_1			
+Standard Croatian	Standard Croatian			LONG_ADJ	dȕg	dûɡ	d û ɡ		LONG_ADJ_1			
 Čakavian	Čakavian			LONG_ADJ	dȕg	dûɡ̊	d û ɡ̊		LONG_ADJ_1			
 Slovenian	Slovenian			LONG_ADJ	dȏlg	dɔ́ːwɡ̊	d ɔ́ː w ɡ̊		LONG_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			LONG_ADJ		dǔːx	d ǔː x		LONG_ADJ_1			
@@ -355,8 +371,10 @@ Old Prussian	Old Prussian			DAUGHTER_NOUN	duckti	dukti	d u k t i		DAUGHTER_NOUN_
 Proto-Slavic	Proto-Slavic			DAUGHTER_NOUN	dъ̏ťi	dŭ̂tʲi	d ŭ̂ tʲ i		DAUGHTER_NOUN_1			
 Old Church Slavonic	Old Church Slavonic			DAUGHTER_NOUN	дъщи	dˈʊʃti	d ˈʊ ʃ t i		DAUGHTER_NOUN_1			
 Bulgarian	Bulgarian			DAUGHTER_NOUN	дъщеря	dɐʃtɛrʲˈa	d ɐ ʃ t ɛ rʲ ˈa		DAUGHTER_NOUN_1			
-Štokavian	Štokavian			DAUGHTER_NOUN	kćȇr	kʨêːr	k ʨ êː r		DAUGHTER_NOUN_1			
-Štokavian	Štokavian			DAUGHTER_NOUN	kćȋ	kʨîː	k ʨ îː		DAUGHTER_NOUN_1			
+Standard Serbian	Standard Serbian			DAUGHTER_NOUN	кће̑р	kʨêːr	k ʨ êː r		DAUGHTER_NOUN_1			
+Standard Serbian	Standard Serbian			DAUGHTER_NOUN	кћи̑	kʨîː	k ʨ îː		DAUGHTER_NOUN_1			
+Standard Croatian	Standard Croatian			DAUGHTER_NOUN	kćȇr	kʨêːr	k ʨ êː r		DAUGHTER_NOUN_1			
+Standard Croatian	Standard Croatian			DAUGHTER_NOUN	kćȋ	kʨîː	k ʨ îː		DAUGHTER_NOUN_1			
 Čakavian	Čakavian			DAUGHTER_NOUN	hćî	xcîː	x c îː		DAUGHTER_NOUN_1			
 Slovenian	Slovenian			DAUGHTER_NOUN	hčȋ	xʧíː	x ʧ íː		DAUGHTER_NOUN_1			
 Slovak	Slovak			DAUGHTER_NOUN	dcéra	ʦˈeːra	ʦ ˈeː r a		DAUGHTER_NOUN_1			
@@ -371,7 +389,8 @@ Proto-Slavic	Proto-Slavic			TWO_NUM	dъ̏va	dŭ̂va	d ŭ̂ v a		TWO_NUM_1
 Old Church Slavonic	Old Church Slavonic			TWO_NUM	дъва	dˈʊvɑ	d ˈʊ v ɑ		TWO_NUM_1			
 Bulgarian	Bulgarian			TWO_NUM	два	dvˈa	d v ˈa		TWO_NUM_1			
 Macedonian	Macedonian			TWO_NUM	два	dvˈa	d v ˈa		TWO_NUM_1			
-Štokavian	Štokavian			TWO_NUM	dvȃ	dʋâː	d ʋ âː		TWO_NUM_1			
+Standard Serbian	Standard Serbian			TWO_NUM	двȃ	dʋâː	d ʋ âː		TWO_NUM_1			
+Standard Croatian	Standard Croatian			TWO_NUM	dvȃ	dʋâː	d ʋ âː		TWO_NUM_1			
 Čakavian	Čakavian			TWO_NUM	dvȃ	dʋâː	d ʋ âː		TWO_NUM_1			
 Slovenian	Slovenian			TWO_NUM	dvȃ	dʋáː	d ʋ áː		TWO_NUM_1			
 Slovak	Slovak			TWO_NUM	dva	dʋˈa	d ʋ ˈa		TWO_NUM_1			
@@ -395,7 +414,8 @@ Proto-Slavic	Proto-Slavic			SMOKE_NOUN	dỳmъ	dɨˀmŭ	d ɨˀ m ŭ		SMOKE_NOU
 Old Church Slavonic	Old Church Slavonic			SMOKE_NOUN	дꙑмъ	dˈɯmʊ	d ˈɯ m ʊ		SMOKE_NOUN_1			
 Bulgarian	Bulgarian			SMOKE_NOUN	дим	dˈim	d ˈi m		SMOKE_NOUN_1			
 Macedonian	Macedonian			SMOKE_NOUN	дим	dˈim	d ˈi m		SMOKE_NOUN_1			
-Štokavian	Štokavian			SMOKE_NOUN	dȉm	dîm	d î m		SMOKE_NOUN_1			
+Standard Serbian	Standard Serbian			SMOKE_NOUN	ди̏м	dîm	d î m		SMOKE_NOUN_1			
+Standard Croatian	Standard Croatian			SMOKE_NOUN	dȉm	dîm	d î m		SMOKE_NOUN_1			
 Čakavian	Čakavian			SMOKE_NOUN	dĩm	dǐːm	d ǐː m		SMOKE_NOUN_1			
 Slovenian	Slovenian			SMOKE_NOUN	dȉm	dím	d í m		SMOKE_NOUN_1			
 Slovak	Slovak			SMOKE_NOUN	dym	dˈim	d ˈi m		SMOKE_NOUN_1			
@@ -420,7 +440,8 @@ Proto-Slavic	Proto-Slavic			LAKE_NOUN	ȅzero	êzero	ê z e r o		LAKE_NOUN_1
 Old Church Slavonic	Old Church Slavonic			LAKE_NOUN	ѥзеръ	jˈɛzɛrʊ	j ˈɛ z ɛ r ʊ		LAKE_NOUN_1			
 Bulgarian	Bulgarian			LAKE_NOUN	езеро	ˈɛzɛro	ˈɛ z ɛ r o		LAKE_NOUN_1			
 Macedonian	Macedonian			LAKE_NOUN	езеро	ˈɛzɛro	ˈɛ z ɛ r o		LAKE_NOUN_1			
-Štokavian	Štokavian			LAKE_NOUN	jȅzero	jêzero	j ê z e r o		LAKE_NOUN_1			
+Standard Serbian	Standard Serbian			LAKE_NOUN	јȅзеро	jêzero	j ê z e r o		LAKE_NOUN_1			
+Standard Croatian	Standard Croatian			LAKE_NOUN	jȅzero	jêzero	j ê z e r o		LAKE_NOUN_1			
 Čakavian	Čakavian			LAKE_NOUN	jȅzero	jêzero	j ê z e r o		LAKE_NOUN_1			
 Slovenian	Slovenian			LAKE_NOUN	jẹ̑zero	jéːzɛrɔ	j éː z ɛ r ɔ		LAKE_NOUN_1			
 Slovak	Slovak			LAKE_NOUN	jazero	jˈazɛrɔ	j ˈa z ɛ r ɔ		LAKE_NOUN_1			
@@ -440,7 +461,8 @@ Proto-Slavic	Proto-Slavic			I_POS	(j)ãzъ	jǎːzŭ	j ǎː z ŭ		I_POS_1
 Old Church Slavonic	Old Church Slavonic			I_POS	азъ	ˈɑzʊ	ˈɑ z ʊ		I_POS_1			
 Bulgarian	Bulgarian			I_POS	аз	ˈaz̥	ˈa z̥		I_POS_1			
 Macedonian	Macedonian			I_POS	јас	jˈas	j ˈa s		I_POS_1			
-Štokavian	Štokavian			I_POS	jâ	jâː	j âː		I_POS_1			
+Standard Serbian	Standard Serbian			I_POS	јâ	jâː	j âː		I_POS_1			
+Standard Croatian	Standard Croatian			I_POS	jâ	jâː	j âː		I_POS_1			
 Slovenian	Slovenian			I_POS	jȁz	jáz̥	j á z̥		I_POS_1			
 Slovak	Slovak			I_POS	ja	jˈa	j ˈa		I_POS_1			
 Czech	Czech			I_POS	ja	jˈa	j ˈa		I_POS_1			
@@ -456,7 +478,8 @@ Proto-Slavic	Proto-Slavic			VOICE_NOUN	gȏlsъ	ɡôːlsŭ	ɡ ôː l s ŭ		VO
 Old Church Slavonic	Old Church Slavonic			VOICE_NOUN	гласъ	ɡlˈɑsʊ	ɡ l ˈɑ s ʊ		VOICE_NOUN_1			
 Bulgarian	Bulgarian			VOICE_NOUN	глас	ɡɫˈas	ɡ ɫ ˈa s		VOICE_NOUN_1			
 Macedonian	Macedonian			VOICE_NOUN	глас	ɡɫˈas	ɡ ɫ ˈa s		VOICE_NOUN_1			
-Štokavian	Štokavian			VOICE_NOUN	glȃs	ɡlâːs	ɡ l âː s		VOICE_NOUN_1			
+Standard Serbian	Standard Serbian			VOICE_NOUN	глȃс	ɡlâːs	ɡ l âː s		VOICE_NOUN_1			
+Standard Croatian	Standard Croatian			VOICE_NOUN	glȃs	ɡlâːs	ɡ l âː s		VOICE_NOUN_1			
 Čakavian	Čakavian			VOICE_NOUN	glȃs	ɡlâːs	ɡ l âː s		VOICE_NOUN_1			
 Slovenian	Slovenian			VOICE_NOUN	glȃs	ɡláːs	ɡ l áː s		VOICE_NOUN_1			
 Slovak	Slovak			VOICE_NOUN	hlas	ɦɫˈas	ɦ ɫ ˈa s		VOICE_NOUN_1			
@@ -476,7 +499,8 @@ Proto-Slavic	Proto-Slavic			HEAD_NOUN	golvà	ɡolvaˀ	ɡ o l v aˀ		HEAD_NOUN_1
 Old Church Slavonic	Old Church Slavonic			HEAD_NOUN	глава	ɡlɑvˈɑ	ɡ l ɑ v ˈɑ		HEAD_NOUN_1			
 Bulgarian	Bulgarian			HEAD_NOUN	глава	ɡɫɐvˈa	ɡ ɫ ɐ v ˈa		HEAD_NOUN_1			
 Macedonian	Macedonian			HEAD_NOUN	глава	ɡɫˈava	ɡ ɫ ˈa v a		HEAD_NOUN_1			
-Štokavian	Štokavian			HEAD_NOUN	gláva	ɡlǎːʋa	ɡ l ǎː ʋ a		HEAD_NOUN_1			
+Standard Serbian	Standard Serbian			HEAD_NOUN	глáва	ɡlǎːʋa	ɡ l ǎː ʋ a		HEAD_NOUN_1			
+Standard Croatian	Standard Croatian			HEAD_NOUN	gláva	ɡlǎːʋa	ɡ l ǎː ʋ a		HEAD_NOUN_1			
 Čakavian	Čakavian			HEAD_NOUN	glāvȁ	ɡlaːʋâ	ɡ l aː ʋ â		HEAD_NOUN_1			
 Slovenian	Slovenian			HEAD_NOUN	gláva	ɡlàːʋa	ɡ l àː ʋ a		HEAD_NOUN_1			
 Slovak	Slovak			HEAD_NOUN	hlava	ɦɫˈaʋa	ɦ ɫ ˈa ʋ a		HEAD_NOUN_1			
@@ -498,7 +522,8 @@ Proto-Slavic	Proto-Slavic			MOUNTAIN_NOUN	gorà	ɡorǎ	ɡ o r ǎ		MOUNTAIN_NOU
 Old Church Slavonic	Old Church Slavonic			MOUNTAIN_NOUN	гора	ɡɔrˈɑ	ɡ ɔ r ˈɑ		MOUNTAIN_NOUN_1			
 Bulgarian	Bulgarian			MOUNTAIN_NOUN	гора	ɡorˈa	ɡ o r ˈa		MOUNTAIN_NOUN_1			
 Macedonian	Macedonian			MOUNTAIN_NOUN	гора	ɡˈora	ɡ ˈo r a		MOUNTAIN_NOUN_1			
-Štokavian	Štokavian			MOUNTAIN_NOUN	gòra	ɡǒra	ɡ ǒ r a		MOUNTAIN_NOUN_1			
+Standard Serbian	Standard Serbian			MOUNTAIN_NOUN	гòра	ɡǒra	ɡ ǒ r a		MOUNTAIN_NOUN_1			
+Standard Croatian	Standard Croatian			MOUNTAIN_NOUN	gòra	ɡǒra	ɡ ǒ r a		MOUNTAIN_NOUN_1			
 Čakavian	Čakavian			MOUNTAIN_NOUN	gorȁ	ɡorâ	ɡ o r â		MOUNTAIN_NOUN_1			
 Slovenian	Slovenian			MOUNTAIN_NOUN	góra	ɡɔ̀ːra	ɡ ɔ̀ː r a		MOUNTAIN_NOUN_1			
 Slovak	Slovak			MOUNTAIN_NOUN	hora	ɦˈɔra	ɦ ˈɔ r a		MOUNTAIN_NOUN_1			
@@ -520,7 +545,8 @@ Proto-Slavic	Proto-Slavic			CITY_NOUN	gôrdъ	ɡôːrdŭ	ɡ ôː r d ŭ		CIT
 Old Church Slavonic	Old Church Slavonic			CITY_NOUN	градъ	ɡrˈɑdʊ	ɡ r ˈɑ d ʊ		CITY_NOUN_1			
 Bulgarian	Bulgarian			CITY_NOUN	град	ɡrˈad̥	ɡ r ˈa d̥		CITY_NOUN_1			
 Macedonian	Macedonian			CITY_NOUN	град	ɡrˈad̥	ɡ r ˈa d̥		CITY_NOUN_1			
-Štokavian	Štokavian			CITY_NOUN	grȃd	ɡrâːd	ɡ r âː d		CITY_NOUN_1			
+Standard Serbian	Standard Serbian			CITY_NOUN	грȃд	ɡrâːd	ɡ r âː d		CITY_NOUN_1			
+Standard Croatian	Standard Croatian			CITY_NOUN	grȃd	ɡrâːd	ɡ r âː d		CITY_NOUN_1			
 Čakavian	Čakavian			CITY_NOUN	grȃd	ɡrâːd̥	ɡ r âː d̥		CITY_NOUN_1			
 Slovenian	Slovenian			CITY_NOUN	grȃd	ɡráːd̥	ɡ r áː d̥		CITY_NOUN_1			
 Slovak	Slovak			CITY_NOUN	hrad	ɦrˈad̥	ɦ r ˈa d̥		CITY_NOUN_1			
@@ -540,7 +566,8 @@ Proto-Slavic	Proto-Slavic			IRON_NOUN	želě̀zo	ʒelɛ̌ːzo	ʒ e l ɛ̌ː z o	
 Old Church Slavonic	Old Church Slavonic			IRON_NOUN	желѣзо	ʒɛlˈæzɔ	ʒ ɛ l ˈæ z ɔ		IRON_NOUN_1			
 Bulgarian	Bulgarian			IRON_NOUN	желязо	ʒɛlʲˈazo	ʒ ɛ lʲ ˈa z o		IRON_NOUN_1			
 Macedonian	Macedonian			IRON_NOUN	железо	ʒˈɛlɛzo	ʒ ˈɛ l ɛ z o		IRON_NOUN_1			
-Štokavian	Štokavian			IRON_NOUN	žèljezo	ʒěljezo	ʒ ě l j e z o		IRON_NOUN_1			
+Standard Serbian	Standard Serbian			IRON_NOUN	жѐљезо	ʒěljezo	ʒ ě l j e z o		IRON_NOUN_1			
+Standard Croatian	Standard Croatian			IRON_NOUN	žèljezo	ʒěljezo	ʒ ě l j e z o		IRON_NOUN_1			
 Čakavian	Čakavian			IRON_NOUN	želȅzo	ʒelêzo	ʒ e l ê z o		IRON_NOUN_1			
 Slovenian	Slovenian			IRON_NOUN	želẹ́zo	ʒɛlèːzɔ	ʒ ɛ l èː z ɔ		IRON_NOUN_1			
 Slovak	Slovak			IRON_NOUN	železo	ʒˈeʎezɔ	ʒ ˈe ʎ e z ɔ		IRON_NOUN_1			
@@ -557,7 +584,8 @@ Proto-Slavic	Proto-Slavic			WOMAN_NOUN	ženà	ʒenǎ	ʒ e n ǎ		WOMAN_NOUN_1
 Old Church Slavonic	Old Church Slavonic			WOMAN_NOUN	жена	ʒɛnˈɑ	ʒ ɛ n ˈɑ		WOMAN_NOUN_1			
 Bulgarian	Bulgarian			WOMAN_NOUN	жена	ʒɛnˈa	ʒ ɛ n ˈa		WOMAN_NOUN_1			
 Macedonian	Macedonian			WOMAN_NOUN	жена	ʒˈɛna	ʒ ˈɛ n a		WOMAN_NOUN_1			
-Štokavian	Štokavian			WOMAN_NOUN	žèna	ʒěna	ʒ ě n a		WOMAN_NOUN_1			
+Standard Serbian	Standard Serbian			WOMAN_NOUN	жèна	ʒěna	ʒ ě n a		WOMAN_NOUN_1			
+Standard Croatian	Standard Croatian			WOMAN_NOUN	žèna	ʒěna	ʒ ě n a		WOMAN_NOUN_1			
 Čakavian	Čakavian			WOMAN_NOUN	ženȁ	ʒenâ	ʒ e n â		WOMAN_NOUN_1			
 Slovenian	Slovenian			WOMAN_NOUN	žéna	ʒɛ̀ːna	ʒ ɛ̀ː n a		WOMAN_NOUN_1			
 Slovak	Slovak			WOMAN_NOUN	žena	ʒˈɛna	ʒ ˈɛ n a		WOMAN_NOUN_1			
@@ -582,7 +610,8 @@ Proto-Slavic	Proto-Slavic			ALIVE_ADJ	žȋvъ	ʒîːvŭ	ʒ îː v ŭ		ALIVE_
 Old Church Slavonic	Old Church Slavonic			ALIVE_ADJ	живъ	ʒˈivʊ	ʒ ˈi v ʊ		ALIVE_ADJ_1			
 Bulgarian	Bulgarian			ALIVE_ADJ	жив	ʒˈif	ʒ ˈi f		ALIVE_ADJ_1			
 Macedonian	Macedonian			ALIVE_ADJ	жив	ʒˈif	ʒ ˈi f		ALIVE_ADJ_1			
-Štokavian	Štokavian			ALIVE_ADJ	žȋv	ʒîːʋ	ʒ îː ʋ		ALIVE_ADJ_1			
+Standard Serbian	Standard Serbian			ALIVE_ADJ	жи̂в	ʒîːʋ	ʒ îː ʋ		ALIVE_ADJ_1			
+Standard Croatian	Standard Croatian			ALIVE_ADJ	žȋv	ʒîːʋ	ʒ îː ʋ		ALIVE_ADJ_1			
 Čakavian	Čakavian			ALIVE_ADJ	žȋv	ʒîːʋ	ʒ îː ʋ		ALIVE_ADJ_1			
 Slovenian	Slovenian			ALIVE_ADJ	žȋv	ʒíːʋ	ʒ íː ʋ		ALIVE_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			DEAF_ADJ	glaušas	ɡlau̯ʃas	ɡ l au̯ ʃ a s		DEAF_ADJ_1			
@@ -591,7 +620,8 @@ Proto-Slavic	Proto-Slavic			DEAF_ADJ	glȗxъ	ɡlûːxŭ	ɡ l ûː x ŭ		DEAF
 Old Church Slavonic	Old Church Slavonic			DEAF_ADJ	глоухъ	ɡlˈuxʊ	ɡ l ˈu x ʊ		DEAF_ADJ_1			
 Bulgarian	Bulgarian			DEAF_ADJ	глух	ɡɫˈux	ɡ ɫ ˈu x		DEAF_ADJ_1			
 Macedonian	Macedonian			DEAF_ADJ	глув	ɡɫˈuf	ɡ ɫ ˈu f		DEAF_ADJ_1			
-Štokavian	Štokavian			DEAF_ADJ	glȗh	ɡlûːx	ɡ l ûː x		DEAF_ADJ_1			
+Standard Serbian	Standard Serbian			DEAF_ADJ	глу̂в	ɡlûːʋ	ɡ l ûː ʋ		DEAF_ADJ_1			
+Standard Croatian	Standard Croatian			DEAF_ADJ	glȗh	ɡlûːx	ɡ l ûː x		DEAF_ADJ_1			
 Čakavian	Čakavian			DEAF_ADJ	glȗh	ɡlûːx	ɡ l ûː x		DEAF_ADJ_1			
 Slovenian	Slovenian			DEAF_ADJ	glȗh	ɡlúːx	ɡ l úː x		DEAF_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			SMOOTH_ADJ	glā́ˀdus	ɡláːˀdus	ɡ l áːˀ d u s		SMOOTH_ADJ_1			
@@ -601,7 +631,8 @@ Proto-Slavic	Proto-Slavic			SMOOTH_ADJ	glàdъkъ	ɡlaˀdŭkŭ	ɡ l aˀ d ŭ 
 Old Church Slavonic	Old Church Slavonic			SMOOTH_ADJ	гладъкъ	ɡlˈɑdʊkʊ	ɡ l ˈɑ d ʊ k ʊ		SMOOTH_ADJ_1			
 Bulgarian	Bulgarian			SMOOTH_ADJ	гладък	ɡɫˈadɐk	ɡ ɫ ˈa d ɐ k		SMOOTH_ADJ_1			
 Macedonian	Macedonian			SMOOTH_ADJ	гладок	ɡɫˈadok	ɡ ɫ ˈa d o k		SMOOTH_ADJ_1			
-Štokavian	Štokavian			SMOOTH_ADJ	glȁdak	ɡlâdak	ɡ l â d a k		SMOOTH_ADJ_1			
+Standard Serbian	Standard Serbian			SMOOTH_ADJ	глȁдак	ɡlâdak	ɡ l â d a k		SMOOTH_ADJ_1			
+Standard Croatian	Standard Croatian			SMOOTH_ADJ	glȁdak	ɡlâdak	ɡ l â d a k		SMOOTH_ADJ_1			
 Čakavian	Čakavian			SMOOTH_ADJ	glȁdak	ɡlâdak	ɡ l â d a k		SMOOTH_ADJ_1			
 Slovenian	Slovenian			SMOOTH_ADJ	gládək	ɡlàːdək	ɡ l àː d ə k		SMOOTH_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			FUNGUS_NOUN	gléiˀwāˀ	ɡléi̯ˀwaːˀ	ɡ l éi̯ˀ w aːˀ		FUNGUS_NOUN_1			
@@ -609,7 +640,8 @@ Lithuanian	Lithuanian			FUNGUS_NOUN	gléivės	ɡlʲæ̂ɪ̯vʲeːs	ɡ lʲ æ̂ɪ
 Latvian	Latvian			FUNGUS_NOUN	glīve	ɡlˈiːvɛ	ɡ l ˈiː v ɛ		FUNGUS_NOUN_1			
 Proto-Slavic	Proto-Slavic			FUNGUS_NOUN	glìva	ɡliˀva	ɡ l iˀ v a		FUNGUS_NOUN_1			
 Bulgarian	Bulgarian			FUNGUS_NOUN	глива	ɡlˈivɐ	ɡ l ˈi v ɐ		FUNGUS_NOUN_1			
-Štokavian	Štokavian			FUNGUS_NOUN	gljȉva	ɡʎîʋa	ɡ ʎ î ʋ a		FUNGUS_NOUN_1			
+Standard Serbian	Standard Serbian			FUNGUS_NOUN	гљи̏ва	ɡʎîʋa	ɡ ʎ î ʋ a		FUNGUS_NOUN_1			
+Standard Croatian	Standard Croatian			FUNGUS_NOUN	gljȉva	ɡʎîʋa	ɡ ʎ î ʋ a		FUNGUS_NOUN_1			
 Slovak	Slovak			FUNGUS_NOUN	hliva	ɦʎˈiʋa	ɦ ʎ ˈi ʋ a		FUNGUS_NOUN_1			
 Czech	Czech			FUNGUS_NOUN	hlíva	ɦlˈiːva	ɦ l ˈiː v a		FUNGUS_NOUN_1			
 Polish	Polish			FUNGUS_NOUN	gliwa	ɡlˈiva	ɡ l ˈi v a		FUNGUS_NOUN_1			
@@ -622,7 +654,8 @@ Proto-Slavic	Proto-Slavic			IN_PREP	vъ	vŭ	v ŭ		IN_PREP_1
 Old Church Slavonic	Old Church Slavonic			IN_PREP	vъ	vʊ	v ʊ		IN_PREP_1			
 Bulgarian	Bulgarian			IN_PREP	в	v	v		IN_PREP_1			
 Macedonian	Macedonian			IN_PREP	во	vo	v o		IN_PREP_1			
-Štokavian	Štokavian			IN_PREP	u	u	u		IN_PREP_1			
+Standard Serbian	Standard Serbian			IN_PREP	у	u	u		IN_PREP_1			
+Standard Croatian	Standard Croatian			IN_PREP	u	u	u		IN_PREP_1			
 Čakavian	Čakavian			IN_PREP	u	u	u		IN_PREP_1			
 Čakavian	Čakavian			IN_PREP	va	ʋa	ʋ a		IN_PREP_1			
 Slovenian	Slovenian			IN_PREP	v	ʋ	ʋ		IN_PREP_1			
@@ -643,7 +676,8 @@ Old Prussian	Old Prussian			SOUP_NOUN	juse	juse	j u s e		SOUP_NOUN_1
 Proto-Slavic	Proto-Slavic			SOUP_NOUN	jūxà	juːxǎ	j uː x ǎ		SOUP_NOUN_1			
 Bulgarian	Bulgarian			SOUP_NOUN	юха́	juxˈa	j u x ˈa		SOUP_NOUN_1			
 Macedonian	Macedonian			SOUP_NOUN	јува	jˈuva	j ˈu v a		SOUP_NOUN_1			
-Štokavian	Štokavian			SOUP_NOUN	júha	jǔːxa	j ǔː x a		SOUP_NOUN_1			
+Standard Serbian	Standard Serbian			SOUP_NOUN	ју́ха	jǔːxa	j ǔː x a		SOUP_NOUN_1			
+Standard Croatian	Standard Croatian			SOUP_NOUN	júha	jǔːxa	j ǔː x a		SOUP_NOUN_1			
 Čakavian	Čakavian			SOUP_NOUN	jūhȁ	juːxâ	j uː x â		SOUP_NOUN_1			
 Slovenian	Slovenian			SOUP_NOUN	júha	jùːxa	j ùː x a		SOUP_NOUN_1			
 Slovak	Slovak			SOUP_NOUN	jucha	jˈuxa	j ˈu x a		SOUP_NOUN_1			
@@ -659,7 +693,8 @@ Proto-Slavic	Proto-Slavic			WHOLE_ADJ	cě̑lъ	ʦɛ̂ːlŭ	ʦ ɛ̂ː l ŭ		WHO
 Old Church Slavonic	Old Church Slavonic			WHOLE_ADJ	цѣлъ	ʦˈælʊ	ʦ ˈæ l ʊ		WHOLE_ADJ_1			
 Bulgarian	Bulgarian			WHOLE_ADJ	цял	ʦʲˈaɫ	ʦʲ ˈa ɫ		WHOLE_ADJ_1			
 Macedonian	Macedonian			WHOLE_ADJ	цел	ʦˈɛɫ	ʦ ˈɛ ɫ		WHOLE_ADJ_1			
-Štokavian	Štokavian			WHOLE_ADJ	cȉo	ʦîo	ʦ î o		WHOLE_ADJ_1			
+Standard Serbian	Standard Serbian			WHOLE_ADJ	це̏о	ʦêo	ʦ ê o		WHOLE_ADJ_1			
+Standard Croatian	Standard Croatian			WHOLE_ADJ	cȉo	ʦîo	ʦ î o		WHOLE_ADJ_1			
 Čakavian	Čakavian			WHOLE_ADJ	cȋl	ʦîːl	ʦ îː l		WHOLE_ADJ_1			
 Čakavian	Čakavian			WHOLE_ADJ	cȋ	ʦîː	ʦ îː		WHOLE_ADJ_1			
 Slovenian	Slovenian			WHOLE_ADJ	cẹ̑ł	ʦéːw	ʦ éː w		WHOLE_ADJ_1			
@@ -670,7 +705,8 @@ Proto-Slavic	Proto-Slavic			PRICE_NOUN	cěnà	ʦɛːnaˀ	ʦ ɛː n aˀ		PRICE_NO
 Old Church Slavonic	Old Church Slavonic			PRICE_NOUN	цѣна	ʦænˈɑ	ʦ æ n ˈɑ		PRICE_NOUN_1			
 Bulgarian	Bulgarian			PRICE_NOUN	цена	ʦɛnˈa	ʦ ɛ n ˈa		PRICE_NOUN_1			
 Macedonian	Macedonian			PRICE_NOUN	цена	ʦˈɛna	ʦ ˈɛ n a		PRICE_NOUN_1			
-Štokavian	Štokavian			PRICE_NOUN	cijéna	ʦjěːna	ʦ j ěː n a		PRICE_NOUN_1			
+Standard Serbian	Standard Serbian			PRICE_NOUN	цéна	ʦěːna	ʦ ěː n a		PRICE_NOUN_1			
+Standard Croatian	Standard Croatian			PRICE_NOUN	cijéna	ʦjěːna	ʦ j ěː n a		PRICE_NOUN_1			
 Čakavian	Čakavian			PRICE_NOUN	cīnȁ	ʦiːnâ	ʦ iː n â		PRICE_NOUN_1			
 Slovenian	Slovenian			PRICE_NOUN	cẹ́na	ʦèːna	ʦ èː n a		PRICE_NOUN_1			
 Slovak	Slovak			PRICE_NOUN	cena	ʦˈɛna	ʦ ˈɛ n a		PRICE_NOUN_1			
@@ -687,7 +723,8 @@ Proto-Slavic	Proto-Slavic			BITE_VERB	kǫsàti	kõːsǎti	k õː s ǎ t i		B
 Old Church Slavonic	Old Church Slavonic			BITE_VERB	кѫсати	kɔ̃sˈɑti	k ɔ̃ s ˈɑ t i		BITE_VERB_1			
 Bulgarian	Bulgarian			BITE_VERB	късам	kˈɤsɐm	k ˈɤ s ɐ m		BITE_VERB_1			
 Macedonian	Macedonian			BITE_VERB	каса	kˈasa	k ˈa s a		BITE_VERB_1			
-Štokavian	Štokavian			BITE_VERB	kúsati	kǔːsati	k ǔː s a t i		BITE_VERB_1			
+Standard Serbian	Standard Serbian			BITE_VERB	ку́сати	kǔːsati	k ǔː s a t i		BITE_VERB_1			
+Standard Croatian	Standard Croatian			BITE_VERB	kúsati	kǔːsati	k ǔː s a t i		BITE_VERB_1			
 Slovenian	Slovenian			BITE_VERB	kọ̑sati	kóːsati	k óː s a t i		BITE_VERB_1			
 Slovak	Slovak			BITE_VERB	kúsať	kˈuːsac	k ˈuː s a c		BITE_VERB_1			
 Czech	Czech			BITE_VERB	kousat	kˈou̯sat	k ˈou̯ s a t		BITE_VERB_1			
@@ -701,7 +738,8 @@ Proto-Balto-Slavic	Proto-Balto-Slavic			BARK_NOUN	karā́ˀ	karáːˀ	k a r á
 Proto-Slavic	Proto-Slavic			BARK_NOUN	korà	korǎ	k o r ǎ		BARK_NOUN_1			
 Bulgarian	Bulgarian			BARK_NOUN	кора	korˈa	k o r ˈa		BARK_NOUN_1			
 Macedonian	Macedonian			BARK_NOUN	кора	kˈora	k ˈo r a		BARK_NOUN_1			
-Štokavian	Štokavian			BARK_NOUN	kȍra	kôra	k ô r a		BARK_NOUN_1			
+Standard Serbian	Standard Serbian			BARK_NOUN	ко̏ра	kôra	k ô r a		BARK_NOUN_1			
+Standard Croatian	Standard Croatian			BARK_NOUN	kȍra	kôra	k ô r a		BARK_NOUN_1			
 Čakavian	Čakavian			BARK_NOUN	kȍra	kôra	k ô r a		BARK_NOUN_1			
 Slovenian	Slovenian			BARK_NOUN	skọ̄rja	skòːrja	s k òː r j a		BARK_NOUN_1			
 Slovak	Slovak			BARK_NOUN	kôra	kʊ̯ˈɔra	k ʊ̯ˈɔ r a		BARK_NOUN_1			
@@ -721,7 +759,8 @@ Old Prussian	Old Prussian			COW_NOUN	curwis	kurvis	k u r v i s		COW_NOUN_1
 Proto-Slavic	Proto-Slavic			COW_NOUN	kőrva	koˀrva	k oˀ r v a		COW_NOUN_1			
 Bulgarian	Bulgarian			COW_NOUN	крава	krˈavɐ	k r ˈa v ɐ		COW_NOUN_1			
 Macedonian	Macedonian			COW_NOUN	крава	krˈava	k r ˈa v a		COW_NOUN_1			
-Štokavian	Štokavian			COW_NOUN	krȁva	krâʋa	k r â ʋ a		COW_NOUN_1			
+Standard Serbian	Standard Serbian			COW_NOUN	крȁва	krâʋa	k r â ʋ a		COW_NOUN_1			
+Standard Croatian	Standard Croatian			COW_NOUN	krȁva	krâʋa	k r â ʋ a		COW_NOUN_1			
 Čakavian	Čakavian			COW_NOUN	krȁva	krâʋa	k r â ʋ a		COW_NOUN_1			
 Slovenian	Slovenian			COW_NOUN	kráva	kràːʋa	k r àː ʋ a		COW_NOUN_1			
 Slovak	Slovak			COW_NOUN	krava	krˈaʋa	k r ˈa ʋ a		COW_NOUN_1			
@@ -742,7 +781,8 @@ Proto-Slavic	Proto-Slavic			WHAT_PRON	čьto	ʧĭto	ʧ ĭ t o		WHAT_PRON_1
 Old Church Slavonic	Old Church Slavonic			WHAT_PRON	чьто	ʧɪtˈɔ	ʧ ɪ t ˈɔ		WHAT_PRON_1			
 Bulgarian	Bulgarian			WHAT_PRON	що	ʃtˈɔ	ʃ t ˈɔ		WHAT_PRON_1			
 Macedonian	Macedonian			WHAT_PRON	што	ʃtˈo	ʃ t ˈo		WHAT_PRON_1			
-Štokavian	Štokavian			WHAT_PRON	štȍ	ʃtô	ʃ t ô		WHAT_PRON_1			
+Standard Serbian	Standard Serbian			WHAT_PRON	што̏	ʃtô	ʃ t ô		WHAT_PRON_1			
+Standard Croatian	Standard Croatian			WHAT_PRON	štȍ	ʃtô	ʃ t ô		WHAT_PRON_1			
 Čakavian	Čakavian			WHAT_PRON	čȁ	ʧâ	ʧ â		WHAT_PRON_1			
 Slovak	Slovak			WHAT_PRON	čo	ʧˈɔ	ʧ ˈɔ		WHAT_PRON_1			
 Czech	Czech			WHAT_PRON	co	ʦˈo	ʦ ˈo		WHAT_PRON_1			
@@ -758,7 +798,8 @@ Proto-Slavic	Proto-Slavic			STONE_NOUN	kàmy	kaˀmɨ	k aˀ m ɨ		STONE_NOUN_2
 Old Church Slavonic	Old Church Slavonic			STONE_NOUN	камꙑ	kˈɑmɯ	k ˈɑ m ɯ		STONE_NOUN_2			
 Bulgarian	Bulgarian			STONE_NOUN	камък	kˈamɐk	k ˈa m ɐ k		STONE_NOUN_2			
 Macedonian	Macedonian			STONE_NOUN	камен	kˈamɛn	k ˈa m ɛ n		STONE_NOUN_2			
-Štokavian	Štokavian			STONE_NOUN	kȁmēn	kâmeːn	k â m eː n		STONE_NOUN_2			
+Standard Serbian	Standard Serbian			STONE_NOUN	кȁмēн	kâmeːn	k â m eː n		STONE_NOUN_2			
+Standard Croatian	Standard Croatian			STONE_NOUN	kȁmēn	kâmeːn	k â m eː n		STONE_NOUN_2			
 Čakavian	Čakavian			STONE_NOUN	kȁmen	kâmen	k â m e n		STONE_NOUN_2			
 Slovenian	Slovenian			STONE_NOUN	kámən	kàːmən	k àː m ə n		STONE_NOUN_2			
 Slovak	Slovak			STONE_NOUN	kameň	kˈamɛɲ	k ˈa m ɛ ɲ		STONE_NOUN_2			
@@ -777,7 +818,8 @@ Proto-Slavic	Proto-Slavic			FOUR_NUM	četỳre	ʧetɨ̌re	ʧ e t ɨ̌ r e		FOUR_
 Old Church Slavonic	Old Church Slavonic			FOUR_NUM	чєтꙑрє	ʧɛtˈɯrɛ	ʧ ɛ t ˈɯ r ɛ		FOUR_NUM_1			
 Bulgarian	Bulgarian			FOUR_NUM	четири	ʧˈɛtiri	ʧ ˈɛ t i r i		FOUR_NUM_1			
 Macedonian	Macedonian			FOUR_NUM	четири	ʧˈɛtiri	ʧ ˈɛ t i r i		FOUR_NUM_1			
-Štokavian	Štokavian			FOUR_NUM	čètiri	ʧětiri	ʧ ě t i r i		FOUR_NUM_1			
+Standard Serbian	Standard Serbian			FOUR_NUM	чèтири	ʧětiri	ʧ ě t i r i		FOUR_NUM_1			
+Standard Croatian	Standard Croatian			FOUR_NUM	čètiri	ʧětiri	ʧ ě t i r i		FOUR_NUM_1			
 Čakavian	Čakavian			FOUR_NUM	četȉri	ʧetîri	ʧ e t î r i		FOUR_NUM_1			
 Slovenian	Slovenian			FOUR_NUM	štírje	ʃtìːrjɛ	ʃ t ìː r j ɛ		FOUR_NUM_1			
 Slovenian	Slovenian			FOUR_NUM	štíri	ʃtìːri	ʃ t ìː r i		FOUR_NUM_1			
@@ -797,7 +839,8 @@ Old Prussian	Old Prussian			BLOOD_NOUN	crauyo	krau̯jo	k r au̯ j o		BLOOD_NOUN_
 Proto-Slavic	Proto-Slavic			BLOOD_NOUN	krъ̏vь	krŭ̂vĭ	k r ŭ̂ v ĭ		BLOOD_NOUN_1			
 Bulgarian	Bulgarian			BLOOD_NOUN	кръв	krˈɤf	k r ˈɤ f		BLOOD_NOUN_1			
 Macedonian	Macedonian			BLOOD_NOUN	крв	kˈr̩f	k ˈr̩ f		BLOOD_NOUN_1			
-Štokavian	Štokavian			BLOOD_NOUN	kȓv	kr̩̂ːʋ	k r̩̂ː ʋ		BLOOD_NOUN_1			
+Standard Serbian	Standard Serbian			BLOOD_NOUN	кȓв	kr̩̂ːʋ	k r̩̂ː ʋ		BLOOD_NOUN_1			
+Standard Croatian	Standard Croatian			BLOOD_NOUN	kȓv	kr̩̂ːʋ	k r̩̂ː ʋ		BLOOD_NOUN_1			
 Čakavian	Čakavian			BLOOD_NOUN	kȑv	kr̩̂ʋ	k r̩̂ ʋ		BLOOD_NOUN_1			
 Slovak	Slovak			BLOOD_NOUN	krv	kˈr̩ʋ	k ˈr̩ ʋ		BLOOD_NOUN_1			
 Czech	Czech			BLOOD_NOUN	krev	krˈɛf	k r ˈɛ f		BLOOD_NOUN_1			
@@ -814,7 +857,8 @@ Proto-Slavic	Proto-Slavic			FLOWER_NOUN	kvě̑tъ	kvɛ̂ːtŭ	k v ɛ̂ː t ŭ	
 Old Church Slavonic	Old Church Slavonic			FLOWER_NOUN	цвѣтъ	ʦvˈætʊ	ʦ v ˈæ t ʊ		FLOWER_NOUN_1			
 Bulgarian	Bulgarian			FLOWER_NOUN	цвят	ʦvʲˈat	ʦ vʲ ˈa t		FLOWER_NOUN_1			
 Macedonian	Macedonian			FLOWER_NOUN	цвет	ʦvˈɛt	ʦ v ˈɛ t		FLOWER_NOUN_1			
-Štokavian	Štokavian			FLOWER_NOUN	cvijȇt	ʦʋjêːt	ʦ ʋ j êː t		FLOWER_NOUN_1			
+Standard Serbian	Standard Serbian			FLOWER_NOUN	цвȇт	ʦʋêːt	ʦ ʋ êː t		FLOWER_NOUN_1			
+Standard Croatian	Standard Croatian			FLOWER_NOUN	cvijȇt	ʦʋjêːt	ʦ ʋ j êː t		FLOWER_NOUN_1			
 Čakavian	Čakavian			FLOWER_NOUN	cvȋt	ʦʋîːt	ʦ ʋ îː t		FLOWER_NOUN_1			
 Slovenian	Slovenian			FLOWER_NOUN	cvẹ̑t	ʦʋéːt	ʦ ʋ éː t		FLOWER_NOUN_1			
 Slovak	Slovak			FLOWER_NOUN	kvet	kʋˈɛt	k ʋ ˈɛ t		FLOWER_NOUN_1			
@@ -831,7 +875,8 @@ Proto-Slavic	Proto-Slavic			SUMMER_NOUN	lě̀to	lɛ̌ːto	l ɛ̌ː t o		SUMMER_N
 Old Church Slavonic	Old Church Slavonic			SUMMER_NOUN	лѣто	lˈætɔ	l ˈæ t ɔ		SUMMER_NOUN_1			
 Bulgarian	Bulgarian			SUMMER_NOUN	лято	lʲˈato	lʲ ˈa t o		SUMMER_NOUN_1			
 Macedonian	Macedonian			SUMMER_NOUN	лето	lˈɛto	l ˈɛ t o		SUMMER_NOUN_1			
-Štokavian	Štokavian			SUMMER_NOUN	ljȅto	ljêto	l j ê t o		SUMMER_NOUN_1			
+Standard Serbian	Standard Serbian			SUMMER_NOUN	лȅто	lêto	l ê t o		SUMMER_NOUN_1			
+Standard Croatian	Standard Croatian			SUMMER_NOUN	ljȅto	ljêto	l j ê t o		SUMMER_NOUN_1			
 Čakavian	Čakavian			SUMMER_NOUN	lȉto	lîto	l î t o		SUMMER_NOUN_1			
 Slovenian	Slovenian			SUMMER_NOUN	lẹ́to	lèːtɔ	l èː t ɔ		SUMMER_NOUN_1			
 Slovak	Slovak			SUMMER_NOUN	leto	lˈɛtɔ	l ˈɛ t ɔ		SUMMER_NOUN_1			
@@ -856,7 +901,8 @@ Proto-Slavic	Proto-Slavic			ICE_NOUN	lȅdъ	lêdŭ	l ê d ŭ		ICE_NOUN_1
 Old Church Slavonic	Old Church Slavonic			ICE_NOUN	ледъ	lˈɛdʊ	l ˈɛ d ʊ		ICE_NOUN_1			
 Bulgarian	Bulgarian			ICE_NOUN	лед	lˈɛd̥	l ˈɛ d̥		ICE_NOUN_1			
 Macedonian	Macedonian			ICE_NOUN	лед	lˈɛd̥	l ˈɛ d̥		ICE_NOUN_1			
-Štokavian	Štokavian			ICE_NOUN	lȇd	lêːd	l êː d		ICE_NOUN_1			
+Standard Serbian	Standard Serbian			ICE_NOUN	лȇд	lêːd	l êː d		ICE_NOUN_1			
+Standard Croatian	Standard Croatian			ICE_NOUN	lȇd	lêːd	l êː d		ICE_NOUN_1			
 Čakavian	Čakavian			ICE_NOUN	lȇd	lêːd̥	l êː d̥		ICE_NOUN_1			
 Slovenian	Slovenian			ICE_NOUN	lẹ̑d	léːd̥	l éː d̥		ICE_NOUN_1			
 Slovak	Slovak			ICE_NOUN	ľad	ʎˈad̥	ʎ ˈa d̥		ICE_NOUN_1			
@@ -877,7 +923,8 @@ Proto-Slavic	Proto-Slavic			PEOPLE_NOUN	ľȗdьje	ʎûːdĭje	ʎ ûː d ĭ j
 Old Church Slavonic	Old Church Slavonic			PEOPLE_NOUN	людьѥ	lʲˈudɪjɛ	lʲ ˈu d ɪ j ɛ		PEOPLE_NOUN_1			
 Bulgarian	Bulgarian			PEOPLE_NOUN	люде	lʲˈudɛ	lʲ ˈu d ɛ		PEOPLE_NOUN_1			
 Macedonian	Macedonian			PEOPLE_NOUN	луѓе	ɫˈuɟɛ	ɫ ˈu ɟ ɛ		PEOPLE_NOUN_1			
-Štokavian	Štokavian			PEOPLE_NOUN	ljȗdi	ʎûːdi	ʎ ûː d i		PEOPLE_NOUN_1			
+Standard Serbian	Standard Serbian			PEOPLE_NOUN	љу̂ди	ʎûːdi	ʎ ûː d i		PEOPLE_NOUN_1			
+Standard Croatian	Standard Croatian			PEOPLE_NOUN	ljȗdi	ʎûːdi	ʎ ûː d i		PEOPLE_NOUN_1			
 Čakavian	Čakavian			PEOPLE_NOUN	ljûdi	lûːdi	l ûː d i		PEOPLE_NOUN_1			
 Slovenian	Slovenian			PEOPLE_NOUN	ljudjẹ̑	ludéː	l u d éː		PEOPLE_NOUN_1			
 Slovak	Slovak			PEOPLE_NOUN	ľudia	ʎˈuɟɪ̯a	ʎ ˈu ɟ ɪ̯a		PEOPLE_NOUN_1			
@@ -894,7 +941,8 @@ Proto-Slavic	Proto-Slavic			HUSBAND_NOUN	mǫ̑žь	mõ̂ːʒĭ	m õ̂ː ʒ i�
 Old Church Slavonic	Old Church Slavonic			HUSBAND_NOUN	мѫжь	mˈɔ̃ʒʊ	m ˈɔ̃ ʒ ʊ		HUSBAND_NOUN_1			
 Bulgarian	Bulgarian			HUSBAND_NOUN	мъж	mˈɤʒ̊	m ˈɤ ʒ̊		HUSBAND_NOUN_1			
 Macedonian	Macedonian			HUSBAND_NOUN	маж	mˈaʒ̊	m ˈa ʒ̊		HUSBAND_NOUN_1			
-Štokavian	Štokavian			HUSBAND_NOUN	mȗž	mûːʒ	m ûː ʒ		HUSBAND_NOUN_1			
+Standard Serbian	Standard Serbian			HUSBAND_NOUN	му̂ж	mûːʒ	m ûː ʒ		HUSBAND_NOUN_1			
+Standard Croatian	Standard Croatian			HUSBAND_NOUN	mȗž	mûːʒ	m ûː ʒ		HUSBAND_NOUN_1			
 Čakavian	Čakavian			HUSBAND_NOUN	mȗž	mûːʒ̊	m ûː ʒ̊		HUSBAND_NOUN_1			
 Slovenian	Slovenian			HUSBAND_NOUN	mọ̑ž	móːʒ̊	m óː ʒ̊		HUSBAND_NOUN_1			
 Slovak	Slovak			HUSBAND_NOUN	muž	mˈuʒ̊	m ˈu ʒ̊		HUSBAND_NOUN_1			
@@ -916,7 +964,8 @@ Old Prussian	Old Prussian			BRAIN_NOUN	musgeno	musɡeno	m u s ɡ e n o		BRAIN_NO
 Old Church Slavonic	Old Church Slavonic			BRAIN_NOUN	мозгъ	mˈɔzɡʊ	m ˈɔ z ɡ ʊ		BRAIN_NOUN_1			
 Bulgarian	Bulgarian			BRAIN_NOUN	мозък	mˈɔzɐk	m ˈɔ z ɐ k		BRAIN_NOUN_1			
 Macedonian	Macedonian			BRAIN_NOUN	мозок	mˈɔzɔk	m ˈɔ z ɔ k		BRAIN_NOUN_1			
-Štokavian	Štokavian			BRAIN_NOUN	mȍzak	môzaɡ̊	m ô z a ɡ̊		BRAIN_NOUN_1			
+Standard Serbian	Standard Serbian			BRAIN_NOUN	мо̏зак	môzaɡ̊	m ô z a ɡ̊		BRAIN_NOUN_1			
+Standard Croatian	Standard Croatian			BRAIN_NOUN	mȍzak	môzaɡ̊	m ô z a ɡ̊		BRAIN_NOUN_1			
 Čakavian	Čakavian			BRAIN_NOUN	mȍzak	môzaɡ̊	m ô z a ɡ̊		BRAIN_NOUN_1			
 Slovenian	Slovenian			BRAIN_NOUN	mọ̑zəg	móːzəɡ̊	m óː z ə ɡ̊		BRAIN_NOUN_1			
 Slovak	Slovak			BRAIN_NOUN	mozog	mˈɔzɔɡ̊	m ˈɔ z ɔ ɡ̊		BRAIN_NOUN_1			
@@ -936,7 +985,8 @@ Proto-Slavic	Proto-Slavic			HOUSEFLY_NOUN	mùxa	mǔxa	m ǔ x a		HOUSEFLY_NOUN_
 Old Church Slavonic	Old Church Slavonic			HOUSEFLY_NOUN	моуха	mˈuxɑ	m ˈu x ɑ		HOUSEFLY_NOUN_1			
 Bulgarian	Bulgarian			HOUSEFLY_NOUN	муха	muxˈa	m u x ˈa		HOUSEFLY_NOUN_1			
 Macedonian	Macedonian			HOUSEFLY_NOUN	мува	mˈuva	m ˈu v a		HOUSEFLY_NOUN_1			
-Štokavian	Štokavian			HOUSEFLY_NOUN	mùha	mǔxa	m ǔ x a		HOUSEFLY_NOUN_1			
+Standard Serbian	Standard Serbian			HOUSEFLY_NOUN	му̀ха	mǔxa	m ǔ x a		HOUSEFLY_NOUN_1			
+Standard Croatian	Standard Croatian			HOUSEFLY_NOUN	mùha	mǔxa	m ǔ x a		HOUSEFLY_NOUN_1			
 Čakavian	Čakavian			HOUSEFLY_NOUN	mȕha	mûxa	m û x a		HOUSEFLY_NOUN_1			
 Slovenian	Slovenian			HOUSEFLY_NOUN	múha	mùːxa	m ùː x a		HOUSEFLY_NOUN_1			
 Slovak	Slovak			HOUSEFLY_NOUN	mucha	mˈuxa	m ˈu x a		HOUSEFLY_NOUN_1			
@@ -957,7 +1007,8 @@ Proto-Slavic	Proto-Slavic			HONEY_NOUN	mȅdъ	mêdŭ	m ê d ŭ		HONEY_NOUN_1
 Old Church Slavonic	Old Church Slavonic			HONEY_NOUN	медъ	mˈɛdʊ	m ˈɛ d ʊ		HONEY_NOUN_1			
 Bulgarian	Bulgarian			HONEY_NOUN	мед	mˈɛd̥	m ˈɛ d̥		HONEY_NOUN_1			
 Macedonian	Macedonian			HONEY_NOUN	мед	mˈɛd̥	m ˈɛ d̥		HONEY_NOUN_1			
-Štokavian	Štokavian			HONEY_NOUN	mȇd	mêːd	m êː d		HONEY_NOUN_1			
+Standard Serbian	Standard Serbian			HONEY_NOUN	мȇд	mêːd	m êː d		HONEY_NOUN_1			
+Standard Croatian	Standard Croatian			HONEY_NOUN	mȇd	mêːd	m êː d		HONEY_NOUN_1			
 Čakavian	Čakavian			HONEY_NOUN	mȇd	mêːd̥	m êː d̥		HONEY_NOUN_1			
 Slovenian	Slovenian			HONEY_NOUN	mẹ̑d	méːd̥	m éː d̥		HONEY_NOUN_1			
 Slovak	Slovak			HONEY_NOUN	med	mˈed̥	m ˈe d̥		HONEY_NOUN_1			
@@ -976,7 +1027,8 @@ Proto-Slavic	Proto-Slavic			MEAT_NOUN	mę̑so	mẽ̂ːso	m ẽ̂ː s o		MEAT_NOU
 Old Church Slavonic	Old Church Slavonic			MEAT_NOUN	мѧсо	mˈɛ̃sɔ	m ˈɛ̃ s ɔ		MEAT_NOUN_1			
 Bulgarian	Bulgarian			MEAT_NOUN	месо	mɛsˈɔ	m ɛ s ˈɔ		MEAT_NOUN_1			
 Macedonian	Macedonian			MEAT_NOUN	месо	mˈɛso	m ˈɛ s o		MEAT_NOUN_1			
-Štokavian	Štokavian			MEAT_NOUN	mȇso	mêːso	m êː s o		MEAT_NOUN_1			
+Standard Serbian	Standard Serbian			MEAT_NOUN	мȇсо	mêːso	m êː s o		MEAT_NOUN_1			
+Standard Croatian	Standard Croatian			MEAT_NOUN	mȇso	mêːso	m êː s o		MEAT_NOUN_1			
 Čakavian	Čakavian			MEAT_NOUN	mȇso	mêːso	m êː s o		MEAT_NOUN_1			
 Slovenian	Slovenian			MEAT_NOUN	mesọ̑	mesóː	m e s óː		MEAT_NOUN_1			
 Slovak	Slovak			MEAT_NOUN	mäso	mˈæsɔ	m ˈæ s ɔ		MEAT_NOUN_1			
@@ -999,7 +1051,8 @@ Proto-Slavic	Proto-Slavic			FOG_NOUN	mьglà	mĭɡlǎ	m ĭ ɡ l ǎ		FOG_NOUN
 Old Church Slavonic	Old Church Slavonic			FOG_NOUN	мьгла	mɪɡlˈɑ	m ɪ ɡ l ˈɑ		FOG_NOUN_1			
 Bulgarian	Bulgarian			FOG_NOUN	мъгла	mɐɡɫˈa	m ɐ ɡ ɫ ˈa		FOG_NOUN_1			
 Macedonian	Macedonian			FOG_NOUN	магла	mˈaɡɫa	m ˈa ɡ ɫ a		FOG_NOUN_1			
-Štokavian	Štokavian			FOG_NOUN	màgla	mǎɡla	m ǎ ɡ l a		FOG_NOUN_1			
+Standard Serbian	Standard Serbian			FOG_NOUN	мàгла	mǎɡla	m ǎ ɡ l a		FOG_NOUN_1			
+Standard Croatian	Standard Croatian			FOG_NOUN	màgla	mǎɡla	m ǎ ɡ l a		FOG_NOUN_1			
 Čakavian	Čakavian			FOG_NOUN	maglȁ	maɡlâ	m a ɡ l â		FOG_NOUN_1			
 Slovenian	Slovenian			FOG_NOUN	məglȁ	məɡlá	m ə ɡ l á		FOG_NOUN_1			
 Slovenian	Slovenian			FOG_NOUN	mə̀gla	mə̀ɡla	m ə̀ ɡ l a		FOG_NOUN_1			
@@ -1018,7 +1071,8 @@ Proto-Slavic	Proto-Slavic			DEATH_NOUN	sъmьrtь	sŭmĭrtĭ	s ŭ m ĭ r t 
 Old Church Slavonic	Old Church Slavonic			DEATH_NOUN	съмрьть	sʊmrˈɪtɪ	s ʊ m r ˈɪ t ɪ		DEATH_NOUN_1			
 Bulgarian	Bulgarian			DEATH_NOUN	смърт	smˈɤrt	s m ˈɤ r t		DEATH_NOUN_1			
 Macedonian	Macedonian			DEATH_NOUN	смрт	smˈr̩t	s m ˈr̩ t		DEATH_NOUN_1			
-Štokavian	Štokavian			DEATH_NOUN	smȑt	smr̩̂t	s m r̩̂ t		DEATH_NOUN_1			
+Standard Serbian	Standard Serbian			DEATH_NOUN	смр̏т	smr̩̂t	s m r̩̂ t		DEATH_NOUN_1			
+Standard Croatian	Standard Croatian			DEATH_NOUN	smȑt	smr̩̂t	s m r̩̂ t		DEATH_NOUN_1			
 Čakavian	Čakavian			DEATH_NOUN	smȑt	smr̩̂t	s m r̩̂ t		DEATH_NOUN_1			
 Slovenian	Slovenian			DEATH_NOUN	smȓt	smə́rt	s m ə́ r t		DEATH_NOUN_1			
 Slovak	Slovak			DEATH_NOUN	smrť	smˈr̩c	s m ˈr̩ c		DEATH_NOUN_1			
@@ -1035,7 +1089,8 @@ Proto-Slavic	Proto-Slavic			DEAD_ADJ	mь̃rtvъ	mĭ̌ːrtvŭ	m ĭ̌ː r t v u
 Old Church Slavonic	Old Church Slavonic			DEAD_ADJ	мрьтвъ	mrˈɪtvʊ	m r ˈɪ t v ʊ		DEAD_ADJ_1			
 Bulgarian	Bulgarian			DEAD_ADJ	мъртъв	mˈɤrtɐf	m ˈɤ r t ɐ f		DEAD_ADJ_1			
 Macedonian	Macedonian			DEAD_ADJ	мртов	mˈr̩tof	m ˈr̩ t o f		DEAD_ADJ_1			
-Štokavian	Štokavian			DEAD_ADJ	mr̀tav	mř̩taʋ	m ř̩ t a ʋ		DEAD_ADJ_1			
+Standard Serbian	Standard Serbian			DEAD_ADJ	мр̀тав	mř̩taʋ	m ř̩ t a ʋ		DEAD_ADJ_1			
+Standard Croatian	Standard Croatian			DEAD_ADJ	mr̀tav	mř̩taʋ	m ř̩ t a ʋ		DEAD_ADJ_1			
 Čakavian	Čakavian			DEAD_ADJ	mrtãv	mr̩tǎːʋ	m r̩ t ǎː ʋ		DEAD_ADJ_1			
 Slovenian	Slovenian			DEAD_ADJ	mŕtəv	mə̀rtəʋ	m ə̀ r t ə ʋ		DEAD_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			WISE_ADJ	mondros	mondros	m o n d r o s		WISE_ADJ_1			
@@ -1045,7 +1100,8 @@ Proto-Slavic	Proto-Slavic			WISE_ADJ	mǫ̃drъ	mõ̌ːdrŭ	m õ̌ː d r ŭ		
 Old Church Slavonic	Old Church Slavonic			WISE_ADJ	мѫдръ	mˈɔ̃drʊ	m ˈɔ̃ d r ʊ		WISE_ADJ_1			
 Bulgarian	Bulgarian			WISE_ADJ	мъдър	mˈɤdɐr	m ˈɤ d ɐ r		WISE_ADJ_1			
 Macedonian	Macedonian			WISE_ADJ	мудар	mˈudar	m ˈu d a r		WISE_ADJ_1			
-Štokavian	Štokavian			WISE_ADJ	múdar	mǔːdar	m ǔː d a r		WISE_ADJ_1			
+Standard Serbian	Standard Serbian			WISE_ADJ	му́дар	mǔːdar	m ǔː d a r		WISE_ADJ_1			
+Standard Croatian	Standard Croatian			WISE_ADJ	múdar	mǔːdar	m ǔː d a r		WISE_ADJ_1			
 Čakavian	Čakavian			WISE_ADJ	mȗdar	mûːdar	m ûː d a r		WISE_ADJ_1			
 Slovenian	Slovenian			WISE_ADJ	mọ́dər	mòːdər	m òː d ə r		WISE_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			FINGERNAIL_NOUN	nágas	náɡas	n á ɡ a s		FINGERNAIL_NOUN_1			
@@ -1056,7 +1112,8 @@ Proto-Slavic	Proto-Slavic			FINGERNAIL_NOUN	nȍgъtь	nôɡŭtĭ	n ô ɡ ŭ
 Old Church Slavonic	Old Church Slavonic			FINGERNAIL_NOUN	ногъть	nˈɔɡʊtɪ	n ˈɔ ɡ ʊ t ɪ		FINGERNAIL_NOUN_1			
 Bulgarian	Bulgarian			FINGERNAIL_NOUN	нокът	nˈɔkɐt	n ˈɔ k ɐ t		FINGERNAIL_NOUN_1			
 Macedonian	Macedonian			FINGERNAIL_NOUN	нокт	nˈokt	n ˈo k t		FINGERNAIL_NOUN_1			
-Štokavian	Štokavian			FINGERNAIL_NOUN	nȍkat	nôkat	n ô k a t		FINGERNAIL_NOUN_1			
+Standard Serbian	Standard Serbian			FINGERNAIL_NOUN	но̏кат	nôkat	n ô k a t		FINGERNAIL_NOUN_1			
+Standard Croatian	Standard Croatian			FINGERNAIL_NOUN	nȍkat	nôkat	n ô k a t		FINGERNAIL_NOUN_1			
 Čakavian	Čakavian			FINGERNAIL_NOUN	nȍhat	nôxat	n ô x a t		FINGERNAIL_NOUN_1			
 Slovenian	Slovenian			FINGERNAIL_NOUN	nọ̑ht	nóːxt	n óː x t		FINGERNAIL_NOUN_1			
 Slovak	Slovak			FINGERNAIL_NOUN	necht	ɲˈɛxt	ɲ ˈɛ x t		FINGERNAIL_NOUN_1			
@@ -1078,7 +1135,8 @@ Proto-Slavic	Proto-Slavic			FOOT_NOUN	nogà	noɡǎ	n o ɡ ǎ		FOOT_NOUN_1
 Old Church Slavonic	Old Church Slavonic			FOOT_NOUN	нога	nɔɡˈɑ	n ɔ ɡ ˈɑ		FOOT_NOUN_1			
 Bulgarian	Bulgarian			FOOT_NOUN	нога	noɡˈa	n o ɡ ˈa		FOOT_NOUN_1			
 Macedonian	Macedonian			FOOT_NOUN	нога	nˈoɡa	n ˈo ɡ a		FOOT_NOUN_1			
-Štokavian	Štokavian			FOOT_NOUN	nòga	nǒɡa	n ǒ ɡ a		FOOT_NOUN_1			
+Standard Serbian	Standard Serbian			FOOT_NOUN	нòга	nǒɡa	n ǒ ɡ a		FOOT_NOUN_1			
+Standard Croatian	Standard Croatian			FOOT_NOUN	nòga	nǒɡa	n ǒ ɡ a		FOOT_NOUN_1			
 Čakavian	Čakavian			FOOT_NOUN	nogȁ	noɡâ	n o ɡ â		FOOT_NOUN_1			
 Slovenian	Slovenian			FOOT_NOUN	nóga	nɔ̀ːɡa	n ɔ̀ː ɡ a		FOOT_NOUN_1			
 Slovak	Slovak			FOOT_NOUN	noha	nˈɔɦa	n ˈɔ ɦ a		FOOT_NOUN_1			
@@ -1102,7 +1160,8 @@ Proto-Slavic	Proto-Slavic			NIGHT_NOUN	nȏktь	nôːktĭ	n ôː k t ĭ		NIGH
 Old Church Slavonic	Old Church Slavonic			NIGHT_NOUN	нощь	nˈɔʃtɪ	n ˈɔ ʃ t ɪ		NIGHT_NOUN_1			
 Bulgarian	Bulgarian			NIGHT_NOUN	нощ	nˈɔʃt	n ˈɔ ʃ t		NIGHT_NOUN_1			
 Macedonian	Macedonian			NIGHT_NOUN	ноќ	nˈoc	n ˈo c		NIGHT_NOUN_1			
-Štokavian	Štokavian			NIGHT_NOUN	nȏć	nôːʨ	n ôː ʨ		NIGHT_NOUN_1			
+Standard Serbian	Standard Serbian			NIGHT_NOUN	но̂ћ	nôːʨ	n ôː ʨ		NIGHT_NOUN_1			
+Standard Croatian	Standard Croatian			NIGHT_NOUN	nȏć	nôːʨ	n ôː ʨ		NIGHT_NOUN_1			
 Čakavian	Čakavian			NIGHT_NOUN	nȏć	nôːc	n ôː c		NIGHT_NOUN_1			
 Slovenian	Slovenian			NIGHT_NOUN	nọ̑č	nóːʧ	n óː ʧ		NIGHT_NOUN_1			
 Slovak	Slovak			NIGHT_NOUN	noc	nˈɔʦ	n ˈɔ ʦ		NIGHT_NOUN_1			
@@ -1126,7 +1185,8 @@ Proto-Slavic	Proto-Slavic			NOSE_NOUN	nȏsъ	nôːsŭ	n ôː s ŭ		NOSE_NOU
 Old Church Slavonic	Old Church Slavonic			NOSE_NOUN	носъ	nˈɔsʊ	n ˈɔ s ʊ		NOSE_NOUN_1			
 Bulgarian	Bulgarian			NOSE_NOUN	нос	nˈɔs	n ˈɔ s		NOSE_NOUN_1			
 Macedonian	Macedonian			NOSE_NOUN	нос	nˈos	n ˈo s		NOSE_NOUN_1			
-Štokavian	Štokavian			NOSE_NOUN	nȏs	nôːs	n ôː s		NOSE_NOUN_1			
+Standard Serbian	Standard Serbian			NOSE_NOUN	но̂с	nôːs	n ôː s		NOSE_NOUN_1			
+Standard Croatian	Standard Croatian			NOSE_NOUN	nȏs	nôːs	n ôː s		NOSE_NOUN_1			
 Čakavian	Čakavian			NOSE_NOUN	nȏs	nôːs	n ôː s		NOSE_NOUN_1			
 Slovenian	Slovenian			NOSE_NOUN	nọ̑s	nóːs	n óː s		NOSE_NOUN_1			
 Slovak	Slovak			NOSE_NOUN	nos	nˈɔs	n ˈɔ s		NOSE_NOUN_1			
@@ -1150,7 +1210,8 @@ Proto-Slavic	Proto-Slavic			NINE_NUM	dȅvętь	dêvẽtĭ	d ê v ẽ t ĭ		N
 Old Church Slavonic	Old Church Slavonic			NINE_NUM	девѧть	dˈɛvɛ̃tɪ	d ˈɛ v ɛ̃ t ɪ		NINE_NUM_1			
 Bulgarian	Bulgarian			NINE_NUM	девет	dˈɛvɛt	d ˈɛ v ɛ t		NINE_NUM_1			
 Macedonian	Macedonian			NINE_NUM	девет	dˈɛvɛt	d ˈɛ v ɛ t		NINE_NUM_1			
-Štokavian	Štokavian			NINE_NUM	dȅvēt	dêʋeːt	d ê ʋ eː t		NINE_NUM_1			
+Standard Serbian	Standard Serbian			NINE_NUM	дȅвēт	dêʋeːt	d ê ʋ eː t		NINE_NUM_1			
+Standard Croatian	Standard Croatian			NINE_NUM	dȅvēt	dêʋeːt	d ê ʋ eː t		NINE_NUM_1			
 Čakavian	Čakavian			NINE_NUM	dȅvet	dêʋet	d ê ʋ e t		NINE_NUM_1			
 Slovenian	Slovenian			NINE_NUM	devẹ̑t	deʋéːt	d e ʋ éː t		NINE_NUM_1			
 Slovak	Slovak			NINE_NUM	deväť	ɟˈɛʋæc	ɟ ˈɛ ʋ æ c		NINE_NUM_1			
@@ -1169,7 +1230,8 @@ Proto-Slavic	Proto-Slavic			BERRY_NOUN	a̋goda	aˀɡoda	aˀ ɡ o d a		BERRY_NOUN
 Old Church Slavonic	Old Church Slavonic			BERRY_NOUN	агода	jˈɑɡɔdɑ	j ˈɑ ɡ ɔ d ɑ		BERRY_NOUN_1			
 Bulgarian	Bulgarian			BERRY_NOUN	ягода	jˈaɡodɐ	j ˈa ɡ o d ɐ		BERRY_NOUN_1			
 Macedonian	Macedonian			BERRY_NOUN	јагода	jˈaɡoda	j ˈa ɡ o d a		BERRY_NOUN_1			
-Štokavian	Štokavian			BERRY_NOUN	jȁgoda	jâɡoda	j â ɡ o d a		BERRY_NOUN_1			
+Standard Serbian	Standard Serbian			BERRY_NOUN	јȁгода	jâɡoda	j â ɡ o d a		BERRY_NOUN_1			
+Standard Croatian	Standard Croatian			BERRY_NOUN	jȁgoda	jâɡoda	j â ɡ o d a		BERRY_NOUN_1			
 Čakavian	Čakavian			BERRY_NOUN	jȁgoda	jâɡoda	j â ɡ o d a		BERRY_NOUN_1			
 Slovenian	Slovenian			BERRY_NOUN	jágoda	jàːɡɔda	j àː ɡ ɔ d a		BERRY_NOUN_1			
 Slovak	Slovak			BERRY_NOUN	jahoda	jˈaɦɔda	j ˈa ɦ ɔ d a		BERRY_NOUN_1			
@@ -1187,7 +1249,8 @@ Proto-Slavic	Proto-Slavic			WAY_NOUN	pǫ́tь	põ̌ːtĭ	p õ̌ː t ĭ		WAY_
 Old Church Slavonic	Old Church Slavonic			WAY_NOUN	пѫть	pˈɔ̃tɪ	p ˈɔ̃ t ɪ		WAY_NOUN_1			
 Bulgarian	Bulgarian			WAY_NOUN	път	pˈɤt	p ˈɤ t		WAY_NOUN_1			
 Macedonian	Macedonian			WAY_NOUN	пат	pˈat	p ˈa t		WAY_NOUN_1			
-Štokavian	Štokavian			WAY_NOUN	pȗt	pûːt	p ûː t		WAY_NOUN_1			
+Standard Serbian	Standard Serbian			WAY_NOUN	пу̂т	pûːt	p ûː t		WAY_NOUN_1			
+Standard Croatian	Standard Croatian			WAY_NOUN	pȗt	pûːt	p ûː t		WAY_NOUN_1			
 Čakavian	Čakavian			WAY_NOUN	pũt	pǔːt	p ǔː t		WAY_NOUN_1			
 Slovenian	Slovenian			WAY_NOUN	pọ́t	pòːt	p òː t		WAY_NOUN_1			
 Slovak	Slovak			WAY_NOUN	púť	pˈuːc	p ˈuː c		WAY_NOUN_1			
@@ -1206,7 +1269,8 @@ Proto-Slavic	Proto-Slavic			FIVE_NUM	pę̑tь	pẽ̂ːtĭ	p ẽ̂ː t ĭ		FIVE
 Old Church Slavonic	Old Church Slavonic			FIVE_NUM	пѧть	pˈɛ̃tɪ	p ˈɛ̃ t ɪ		FIVE_NUM_1			
 Bulgarian	Bulgarian			FIVE_NUM	пет	pˈɛt	p ˈɛ t		FIVE_NUM_1			
 Macedonian	Macedonian			FIVE_NUM	пет	pˈɛt	p ˈɛ t		FIVE_NUM_1			
-Štokavian	Štokavian			FIVE_NUM	pȇt	pêːt	p êː t		FIVE_NUM_1			
+Standard Serbian	Standard Serbian			FIVE_NUM	пȇт	pêːt	p êː t		FIVE_NUM_1			
+Standard Croatian	Standard Croatian			FIVE_NUM	pȇt	pêːt	p êː t		FIVE_NUM_1			
 Čakavian	Čakavian			FIVE_NUM	pȇt	pêːt	p êː t		FIVE_NUM_1			
 Slovenian	Slovenian			FIVE_NUM	pẹ̑t	péːt	p éː t		FIVE_NUM_1			
 Slovak	Slovak			FIVE_NUM	päť	pˈæc	p ˈæ c		FIVE_NUM_1			
@@ -1226,7 +1290,8 @@ Proto-Slavic	Proto-Slavic			FULL_ADJ	pь̋lnъ	pĭˀlnŭ	p ĭˀ l n ŭ		FULL
 Old Church Slavonic	Old Church Slavonic			FULL_ADJ	пльнъ	plˈɪnʊ	p l ˈɪ n ʊ		FULL_ADJ_1			
 Bulgarian	Bulgarian			FULL_ADJ	пълен	pˈɤlɛn	p ˈɤ l ɛ n		FULL_ADJ_1			
 Macedonian	Macedonian			FULL_ADJ	полн	pˈoɫn	p ˈo ɫ n		FULL_ADJ_1			
-Štokavian	Štokavian			FULL_ADJ	pȕn	pûn	p û n		FULL_ADJ_1			
+Standard Serbian	Standard Serbian			FULL_ADJ	пу̏н	pûn	p û n		FULL_ADJ_1			
+Standard Croatian	Standard Croatian			FULL_ADJ	pȕn	pûn	p û n		FULL_ADJ_1			
 Čakavian	Čakavian			FULL_ADJ	pũn	pǔːn	p ǔː n		FULL_ADJ_1			
 Slovenian	Slovenian			FULL_ADJ	pȏłn	pɔ́ːwn	p ɔ́ː w n		FULL_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			FULL_ADJ		pǔːn	p ǔː n		FULL_ADJ_1			
@@ -1242,7 +1307,8 @@ Proto-Slavic	Proto-Slavic			FINGER_NOUN	pь̀rstъ	pĭ̌rstŭ	p ĭ̌ r s t u�
 Old Church Slavonic	Old Church Slavonic			FINGER_NOUN	прьстъ	prˈɪstʊ	p r ˈɪ s t ʊ		FINGER_NOUN_1			
 Bulgarian	Bulgarian			FINGER_NOUN	пръст	prˈɤst	p r ˈɤ s t		FINGER_NOUN_1			
 Macedonian	Macedonian			FINGER_NOUN	прст	pˈr̩st	p ˈr̩ s t		FINGER_NOUN_1			
-Štokavian	Štokavian			FINGER_NOUN	pȑst	pr̩̂st	p r̩̂ s t		FINGER_NOUN_1			
+Standard Serbian	Standard Serbian			FINGER_NOUN	пр̏ст	pr̩̂st	p r̩̂ s t		FINGER_NOUN_1			
+Standard Croatian	Standard Croatian			FINGER_NOUN	pȑst	pr̩̂st	p r̩̂ s t		FINGER_NOUN_1			
 Čakavian	Čakavian			FINGER_NOUN	pȑst	pr̩̂st	p r̩̂ s t		FINGER_NOUN_1			
 Slovenian	Slovenian			FINGER_NOUN	pȓst	pə́rst	p ə́ r s t		FINGER_NOUN_1			
 Slovak	Slovak			FINGER_NOUN	prst	pˈr̩st	p ˈr̩ s t		FINGER_NOUN_1			
@@ -1256,7 +1322,8 @@ Proto-Slavic	Proto-Slavic			DRINK_VERB	pìti	pǐti	p ǐ t i		DRINK_VERB_1
 Old Church Slavonic	Old Church Slavonic			DRINK_VERB	пити	pˈiti	p ˈi t i		DRINK_VERB_1			
 Bulgarian	Bulgarian			DRINK_VERB	пия	pˈijɐ	p ˈi j ɐ		DRINK_VERB_1			
 Macedonian	Macedonian			DRINK_VERB	пие	pˈiɛ	p ˈi ɛ		DRINK_VERB_1			
-Štokavian	Štokavian			DRINK_VERB	pȉti	pîti	p î t i		DRINK_VERB_1			
+Standard Serbian	Standard Serbian			DRINK_VERB	пи̏ти	pîti	p î t i		DRINK_VERB_1			
+Standard Croatian	Standard Croatian			DRINK_VERB	pȉti	pîti	p î t i		DRINK_VERB_1			
 Čakavian	Čakavian			DRINK_VERB	pȉti	pîti	p î t i		DRINK_VERB_1			
 Slovenian	Slovenian			DRINK_VERB	píti	pìːti	p ìː t i		DRINK_VERB_1			
 Slovak	Slovak			DRINK_VERB	piť	pˈic	p ˈi c		DRINK_VERB_1			
@@ -1277,7 +1344,8 @@ Proto-Slavic	Proto-Slavic			HORN_NOUN	rȍgъ	rôɡŭ	r ô ɡ ŭ		HORN_NOUN_1
 Old Church Slavonic	Old Church Slavonic			HORN_NOUN	рогъ	rˈɔɡʊ	r ˈɔ ɡ ʊ		HORN_NOUN_1			
 Bulgarian	Bulgarian			HORN_NOUN	рог	rˈɔɡ̊	r ˈɔ ɡ̊		HORN_NOUN_1			
 Macedonian	Macedonian			HORN_NOUN	рог	rˈoɡ̊	r ˈo ɡ̊		HORN_NOUN_1			
-Štokavian	Štokavian			HORN_NOUN	rȏg	rôːɡ	r ôː ɡ		HORN_NOUN_1			
+Standard Serbian	Standard Serbian			HORN_NOUN	ро̑г	rôːɡ	r ôː ɡ		HORN_NOUN_1			
+Standard Croatian	Standard Croatian			HORN_NOUN	rȏg	rôːɡ	r ôː ɡ		HORN_NOUN_1			
 Čakavian	Čakavian			HORN_NOUN	rȏg	rôːɡ̊	r ôː ɡ̊		HORN_NOUN_1			
 Slovenian	Slovenian			HORN_NOUN	rọ̑g	róːɡ̊	r óː ɡ̊		HORN_NOUN_1			
 Slovak	Slovak			HORN_NOUN	roh	rˈɔx	r ˈɔ x		HORN_NOUN_1			
@@ -1303,7 +1371,8 @@ Proto-Slavic	Proto-Slavic			HAND_NOUN	rǭkà	rõːkǎ	r õː k ǎ		HAND_NO
 Old Church Slavonic	Old Church Slavonic			HAND_NOUN	рѫка	rɔ̃kˈɑ	r ɔ̃ k ˈɑ		HAND_NOUN_1			
 Bulgarian	Bulgarian			HAND_NOUN	ръка	rɐkˈa	r ɐ k ˈa		HAND_NOUN_1			
 Macedonian	Macedonian			HAND_NOUN	рака	rˈaka	r ˈa k a		HAND_NOUN_1			
-Štokavian	Štokavian			HAND_NOUN	rúka	rǔːka	r ǔː k a		HAND_NOUN_1			
+Standard Serbian	Standard Serbian			HAND_NOUN	ру́ка	rǔːka	r ǔː k a		HAND_NOUN_1			
+Standard Croatian	Standard Croatian			HAND_NOUN	rúka	rǔːka	r ǔː k a		HAND_NOUN_1			
 Čakavian	Čakavian			HAND_NOUN	rūkȁ	ruːkâ	r uː k â		HAND_NOUN_1			
 Slovenian	Slovenian			HAND_NOUN	róka	rɔ̀ːka	r ɔ̀ː k a		HAND_NOUN_1			
 Slovak	Slovak			HAND_NOUN	ruka	rˈuka	r ˈu k a		HAND_NOUN_1			
@@ -1326,7 +1395,8 @@ Proto-Slavic	Proto-Slavic			GARDEN_NOUN	sȃdъ	sâːdŭ	s âː d ŭ		GARDEN_
 Old Church Slavonic	Old Church Slavonic			GARDEN_NOUN	садъ	sˈɑdʊ	s ˈɑ d ʊ		GARDEN_NOUN_1			
 Bulgarian	Bulgarian			GARDEN_NOUN	сад	sˈad̥	s ˈa d̥		GARDEN_NOUN_1			
 Macedonian	Macedonian			GARDEN_NOUN	сад	sˈad̥	s ˈa d̥		GARDEN_NOUN_1			
-Štokavian	Štokavian			GARDEN_NOUN	sȃd	sâːd	s âː d		GARDEN_NOUN_1			
+Standard Serbian	Standard Serbian			GARDEN_NOUN	сȃд	sâːd	s âː d		GARDEN_NOUN_1			
+Standard Croatian	Standard Croatian			GARDEN_NOUN	sȃd	sâːd	s âː d		GARDEN_NOUN_1			
 Slovenian	Slovenian			GARDEN_NOUN	sȃd	sáːd̥	s áː d̥		GARDEN_NOUN_1			
 Slovak	Slovak			GARDEN_NOUN	sad	sˈad̥	s ˈa d̥		GARDEN_NOUN_1			
 Czech	Czech			GARDEN_NOUN	sad	sˈad̥	s ˈa d̥		GARDEN_NOUN_1			
@@ -1344,7 +1414,8 @@ Proto-Slavic	Proto-Slavic			DRY_ADJ	sȗxъ	sûːxŭ	s ûː x ŭ		DRY_ADJ_1
 Old Church Slavonic	Old Church Slavonic			DRY_ADJ	соухъ	sˈuxʊ	s ˈu x ʊ		DRY_ADJ_1			
 Bulgarian	Bulgarian			DRY_ADJ	сух	sˈux	s ˈu x		DRY_ADJ_1			
 Macedonian	Macedonian			DRY_ADJ	сув	sˈuf	s ˈu f		DRY_ADJ_1			
-Štokavian	Štokavian			DRY_ADJ	sȗh	sûːx	s ûː x		DRY_ADJ_1			
+Standard Serbian	Standard Serbian			DRY_ADJ	су̂в	sûːʋ	s ûː ʋ		DRY_ADJ_1			
+Standard Croatian	Standard Croatian			DRY_ADJ	sȗh	sûːx	s ûː x		DRY_ADJ_1			
 Čakavian	Čakavian			DRY_ADJ	sȗh	sûːx	s ûː x		DRY_ADJ_1			
 Slovenian	Slovenian			DRY_ADJ	sȗh	súːx	s úː x		DRY_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			DRY_ADJ		sûːx	s ûː x		DRY_ADJ_1			
@@ -1359,7 +1430,8 @@ Proto-Slavic	Proto-Slavic			SUN_NOUN	sъ̏lnьce	sŭ̂lnĭʦe	s ŭ̂ l n ĭ 
 Old Church Slavonic	Old Church Slavonic			SUN_NOUN	слъньце	slˈʊnɪʦɛ	s l ˈʊ n ɪ ʦ ɛ		SUN_NOUN_1			
 Bulgarian	Bulgarian			SUN_NOUN	слънце	sɫˈɤnʦɛ	s ɫ ˈɤ n ʦ ɛ		SUN_NOUN_1			
 Macedonian	Macedonian			SUN_NOUN	сонце	sˈonʦɛ	s ˈo n ʦ ɛ		SUN_NOUN_1			
-Štokavian	Štokavian			SUN_NOUN	sȗnce	sûːnʦe	s ûː n ʦ e		SUN_NOUN_1			
+Standard Serbian	Standard Serbian			SUN_NOUN	су̂нце	sûːnʦe	s ûː n ʦ e		SUN_NOUN_1			
+Standard Croatian	Standard Croatian			SUN_NOUN	sȗnce	sûːnʦe	s ûː n ʦ e		SUN_NOUN_1			
 Čakavian	Čakavian			SUN_NOUN	sȗnce	sûːnʦe	s ûː n ʦ e		SUN_NOUN_1			
 Slovenian	Slovenian			SUN_NOUN	sọ̑nce	sóːnʦɛ	s óː n ʦ ɛ		SUN_NOUN_1			
 Slovak	Slovak			SUN_NOUN	slnce	sˈɫ̩nʦɛ	s ˈɫ̩ n ʦ ɛ		SUN_NOUN_1			
@@ -1382,7 +1454,8 @@ Proto-Slavic	Proto-Slavic			SALT_NOUN	sȍlь	sôlĭ	s ô l ĭ		SALT_NOUN_1
 Old Church Slavonic	Old Church Slavonic			SALT_NOUN	соль	sˈɔlɪ	s ˈɔ l ɪ		SALT_NOUN_1			
 Bulgarian	Bulgarian			SALT_NOUN	сол	sˈɔɫ	s ˈɔ ɫ		SALT_NOUN_1			
 Macedonian	Macedonian			SALT_NOUN	сол	sˈoɫ	s ˈo ɫ		SALT_NOUN_1			
-Štokavian	Štokavian			SALT_NOUN	sȏl	sôːl	s ôː l		SALT_NOUN_1			
+Standard Serbian	Standard Serbian			SALT_NOUN	со̑	sôː	s ôː		SALT_NOUN_1			
+Standard Croatian	Standard Croatian			SALT_NOUN	sȏl	sôːl	s ôː l		SALT_NOUN_1			
 Čakavian	Čakavian			SALT_NOUN	sȏ	sôː	s ôː		SALT_NOUN_1			
 Slovenian	Slovenian			SALT_NOUN	sọ̑ł	sóːw	s óː w		SALT_NOUN_1			
 Slovak	Slovak			SALT_NOUN	soľ	sˈɔʎ	s ˈɔ ʎ		SALT_NOUN_1			
@@ -1405,7 +1478,8 @@ Proto-Slavic	Proto-Slavic			SEVEN_NUM	sèdmь	sědmĭ	s ě d m ĭ		SEVEN_NU
 Old Church Slavonic	Old Church Slavonic			SEVEN_NUM	седмь	sˈɛdmɪ	s ˈɛ d m ɪ		SEVEN_NUM_1			
 Bulgarian	Bulgarian			SEVEN_NUM	седем	sˈɛdɛm	s ˈɛ d ɛ m		SEVEN_NUM_1			
 Macedonian	Macedonian			SEVEN_NUM	седум	sˈɛdum	s ˈɛ d u m		SEVEN_NUM_1			
-Štokavian	Štokavian			SEVEN_NUM	sȅdam	sêdam	s ê d a m		SEVEN_NUM_1			
+Standard Serbian	Standard Serbian			SEVEN_NUM	сȅдам	sêdam	s ê d a m		SEVEN_NUM_1			
+Standard Croatian	Standard Croatian			SEVEN_NUM	sȅdam	sêdam	s ê d a m		SEVEN_NUM_1			
 Čakavian	Čakavian			SEVEN_NUM	sȅdan	sêdan	s ê d a n		SEVEN_NUM_1			
 Slovenian	Slovenian			SEVEN_NUM	sẹ́dəm	sèːdəm	s èː d ə m		SEVEN_NUM_1			
 Slovak	Slovak			SEVEN_NUM	sedem	sˈɛɟɛm	s ˈɛ ɟ ɛ m		SEVEN_NUM_1			
@@ -1424,7 +1498,8 @@ Proto-Slavic	Proto-Slavic			HEART_NOUN	sь̑rdьce	sĭ̂rdĭʦe	s ĭ̂ r d i�
 Old Church Slavonic	Old Church Slavonic			HEART_NOUN	срьдьце	srˈɪdɪʦɛ	s r ˈɪ d ɪ ʦ ɛ		HEART_NOUN_1			
 Bulgarian	Bulgarian			HEART_NOUN	сърце	sɐrʦˈɛ	s ɐ r ʦ ˈɛ		HEART_NOUN_1			
 Macedonian	Macedonian			HEART_NOUN	срце	sˈr̩ʦɛ	s ˈr̩ ʦ ɛ		HEART_NOUN_1			
-Štokavian	Štokavian			HEART_NOUN	sȑce	sr̩̂ʦe	s r̩̂ ʦ e		HEART_NOUN_1			
+Standard Serbian	Standard Serbian			HEART_NOUN	ср̏це	sr̩̂ʦe	s r̩̂ ʦ e		HEART_NOUN_1			
+Standard Croatian	Standard Croatian			HEART_NOUN	sȑce	sr̩̂ʦe	s r̩̂ ʦ e		HEART_NOUN_1			
 Čakavian	Čakavian			HEART_NOUN	sȑce	sr̩̂ʦe	s r̩̂ ʦ e		HEART_NOUN_1			
 Slovenian	Slovenian			HEART_NOUN	srcẹ̑	sərʦéː	s ə r ʦ éː		HEART_NOUN_1			
 Slovak	Slovak			HEART_NOUN	srdce	sˈr̩ʦɛ	s ˈr̩ ʦ ɛ		HEART_NOUN_1			
@@ -1446,7 +1521,8 @@ Proto-Slavic	Proto-Slavic			SIX_NUM	šȇstь	ʃêːstĭ	ʃ êː s t ĭ		SIX_
 Old Church Slavonic	Old Church Slavonic			SIX_NUM	шесть	ʃˈɛstɪ	ʃ ˈɛ s t ɪ		SIX_NUM_1			
 Bulgarian	Bulgarian			SIX_NUM	шест	ʃˈɛst	ʃ ˈɛ s t		SIX_NUM_1			
 Macedonian	Macedonian			SIX_NUM	шест	ʃˈɛst	ʃ ˈɛ s t		SIX_NUM_1			
-Štokavian	Štokavian			SIX_NUM	šȇst	ʃêːst	ʃ êː s t		SIX_NUM_1			
+Standard Serbian	Standard Serbian			SIX_NUM	шȇст	ʃêːst	ʃ êː s t		SIX_NUM_1			
+Standard Croatian	Standard Croatian			SIX_NUM	šȇst	ʃêːst	ʃ êː s t		SIX_NUM_1			
 Čakavian	Čakavian			SIX_NUM	šȇst	ʃêːst	ʃ êː s t		SIX_NUM_1			
 Slovenian	Slovenian			SIX_NUM	šẹ̑st	ʃéːst	ʃ éː s t		SIX_NUM_1			
 Slovak	Slovak			SIX_NUM	šesť	ʃˈɛsc	ʃ ˈɛ s c		SIX_NUM_1			
@@ -1466,7 +1542,8 @@ Proto-Slavic	Proto-Slavic			HUNDRED_NUM	sъ̏to	sŭ̂to	s ŭ̂ t o		HUNDRED_NU
 Old Church Slavonic	Old Church Slavonic			HUNDRED_NUM	съто	sˈʊtɔ	s ˈʊ t ɔ		HUNDRED_NUM_1			
 Bulgarian	Bulgarian			HUNDRED_NUM	сто	stˈɔ	s t ˈɔ		HUNDRED_NUM_1			
 Macedonian	Macedonian			HUNDRED_NUM	сто	stˈo	s t ˈo		HUNDRED_NUM_1			
-Štokavian	Štokavian			HUNDRED_NUM	stȏ	stôː	s t ôː		HUNDRED_NUM_1			
+Standard Serbian	Standard Serbian			HUNDRED_NUM	сто̑	stôː	s t ôː		HUNDRED_NUM_1			
+Standard Croatian	Standard Croatian			HUNDRED_NUM	stȏ	stôː	s t ôː		HUNDRED_NUM_1			
 Čakavian	Čakavian			HUNDRED_NUM	stȏ	stôː	s t ôː		HUNDRED_NUM_1			
 Slovenian	Slovenian			HUNDRED_NUM	stọ̑	stóː	s t óː		HUNDRED_NUM_1			
 Slovak	Slovak			HUNDRED_NUM	sto	stˈɔ	s t ˈɔ		HUNDRED_NUM_1			
@@ -1486,7 +1563,8 @@ Proto-Slavic	Proto-Slavic			GLORY_NOUN	slàva	slaˀva	s l aˀ v a		GLORY_NOUN_1
 Old Church Slavonic	Old Church Slavonic			GLORY_NOUN	слава	slˈɑvɑ	s l ˈɑ v ɑ		GLORY_NOUN_1			
 Bulgarian	Bulgarian			GLORY_NOUN	слава	sɫˈavɐ	s ɫ ˈa v ɐ		GLORY_NOUN_1			
 Macedonian	Macedonian			GLORY_NOUN	слава	sɫˈava	s ɫ ˈa v a		GLORY_NOUN_1			
-Štokavian	Štokavian			GLORY_NOUN	slȁva	slâʋa	s l â ʋ a		GLORY_NOUN_1			
+Standard Serbian	Standard Serbian			GLORY_NOUN	слȁва	slâʋa	s l â ʋ a		GLORY_NOUN_1			
+Standard Croatian	Standard Croatian			GLORY_NOUN	slȁva	slâʋa	s l â ʋ a		GLORY_NOUN_1			
 Čakavian	Čakavian			GLORY_NOUN	slȁva	slâʋa	s l â ʋ a		GLORY_NOUN_1			
 Slovenian	Slovenian			GLORY_NOUN	sláva	slàːʋa	s l àː ʋ a		GLORY_NOUN_1			
 Slovak	Slovak			GLORY_NOUN	sláva	sɫˈaːʋa	s ɫ ˈaː ʋ a		GLORY_NOUN_1			
@@ -1506,7 +1584,8 @@ Proto-Slavic	Proto-Slavic			SNOW_NOUN	sně̑gъ	snɛ̂ːɡŭ	s n ɛ̂ː ɡ ŭ	
 Old Church Slavonic	Old Church Slavonic			SNOW_NOUN	снѣгъ	snˈæɡʊ	s n ˈæ ɡ ʊ		SNOW_NOUN_1			
 Bulgarian	Bulgarian			SNOW_NOUN	сняг	snʲˈaɡ̊	s nʲ ˈa ɡ̊		SNOW_NOUN_1			
 Macedonian	Macedonian			SNOW_NOUN	снег	snˈɛɡ̊	s n ˈɛ ɡ̊		SNOW_NOUN_1			
-Štokavian	Štokavian			SNOW_NOUN	snijȇg	snjêːɡ	s n j êː ɡ		SNOW_NOUN_1			
+Standard Serbian	Standard Serbian			SNOW_NOUN	снȇг	snêːɡ	s n êː ɡ		SNOW_NOUN_1			
+Standard Croatian	Standard Croatian			SNOW_NOUN	snijȇg	snjêːɡ	s n j êː ɡ		SNOW_NOUN_1			
 Čakavian	Čakavian			SNOW_NOUN	snȋg	snîːɡ̊	s n îː ɡ̊		SNOW_NOUN_1			
 Slovenian	Slovenian			SNOW_NOUN	snẹ̑g	snéːɡ̊	s n éː ɡ̊		SNOW_NOUN_1			
 Slovak	Slovak			SNOW_NOUN	sneh	sɲˈɛx	s ɲ ˈɛ x		SNOW_NOUN_1			
@@ -1525,7 +1604,8 @@ Proto-Slavic	Proto-Slavic			TABLE_NOUN	stòlъ	stǒlŭ	s t ǒ l ŭ		TABLE_NO
 Old Church Slavonic	Old Church Slavonic			TABLE_NOUN	столъ	stˈɔlʊ	s t ˈɔ l ʊ		TABLE_NOUN_1			
 Bulgarian	Bulgarian			TABLE_NOUN	стол	stˈɔɫ	s t ˈɔ ɫ		TABLE_NOUN_1			
 Macedonian	Macedonian			TABLE_NOUN	стол	stˈoɫ	s t ˈo ɫ		TABLE_NOUN_1			
-Štokavian	Štokavian			TABLE_NOUN	stȏl	stôːl	s t ôː l		TABLE_NOUN_1			
+Standard Serbian	Standard Serbian			TABLE_NOUN	сто̑	stôː	s t ôː		TABLE_NOUN_1			
+Standard Croatian	Standard Croatian			TABLE_NOUN	stȏl	stôːl	s t ôː l		TABLE_NOUN_1			
 Čakavian	Čakavian			TABLE_NOUN	stõ	stǒː	s t ǒː		TABLE_NOUN_1			
 Slovenian	Slovenian			TABLE_NOUN	stȍł	stɔ́w	s t ɔ́ w		TABLE_NOUN_1			
 Slovak	Slovak			TABLE_NOUN	stôl	stʊ̯ˈɔɫ	s t ʊ̯ˈɔ ɫ		TABLE_NOUN_1			
@@ -1542,7 +1622,8 @@ Lithuanian	Lithuanian			OLD_ADJ	stóras	stôːrɐs	s t ôː r ɐ s		OLD_ADJ_1
 Proto-Slavic	Proto-Slavic			OLD_ADJ	sta̋rъ	staˀrŭ	s t aˀ r ŭ		OLD_ADJ_1			
 Old Church Slavonic	Old Church Slavonic			OLD_ADJ	старъ	stˈɑrʊ	s t ˈɑ r ʊ		OLD_ADJ_1			
 Bulgarian	Bulgarian			OLD_ADJ	стар	stˈar	s t ˈa r		OLD_ADJ_1			
-Štokavian	Štokavian			OLD_ADJ	stȁr	stâr	s t â r		OLD_ADJ_1			
+Standard Serbian	Standard Serbian			OLD_ADJ	стȁр	stâr	s t â r		OLD_ADJ_1			
+Standard Croatian	Standard Croatian			OLD_ADJ	stȁr	stâr	s t â r		OLD_ADJ_1			
 Čakavian	Čakavian			OLD_ADJ	stãr	stǎːr	s t ǎː r		OLD_ADJ_1			
 Slovenian	Slovenian			OLD_ADJ	stȁr	stár	s t á r		OLD_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			DREAM_NOUN	súpnas	súpnas	s ú p n a s		DREAM_NOUN_1			
@@ -1554,7 +1635,8 @@ Proto-Slavic	Proto-Slavic			DREAM_NOUN	sъ̀nъ	sŭ̌nŭ	s ŭ̌ n ŭ		DREAM_
 Old Church Slavonic	Old Church Slavonic			DREAM_NOUN	сънъ	sˈʊnʊ	s ˈʊ n ʊ		DREAM_NOUN_1			
 Bulgarian	Bulgarian			DREAM_NOUN	сън	sˈɤn	s ˈɤ n		DREAM_NOUN_1			
 Macedonian	Macedonian			DREAM_NOUN	сон	sˈɔn	s ˈɔ n		DREAM_NOUN_1			
-Štokavian	Štokavian			DREAM_NOUN	sȁn	sân	s â n		DREAM_NOUN_1			
+Standard Serbian	Standard Serbian			DREAM_NOUN	сȁн	sân	s â n		DREAM_NOUN_1			
+Standard Croatian	Standard Croatian			DREAM_NOUN	sȁn	sân	s â n		DREAM_NOUN_1			
 Čakavian	Čakavian			DREAM_NOUN	sãnj	sǎːɲ	s ǎː ɲ		DREAM_NOUN_1			
 Slovenian	Slovenian			DREAM_NOUN	sə̏n	sə́n	s ə́ n		DREAM_NOUN_1			
 Slovak	Slovak			DREAM_NOUN	sen	sˈɛn	s ˈɛ n		DREAM_NOUN_1			
@@ -1571,7 +1653,8 @@ Proto-Slavic	Proto-Slavic			SON_NOUN	sy̑nъ	sɨ̂ːnŭ	s ɨ̂ː n ŭ		SON_NOU
 Old Church Slavonic	Old Church Slavonic			SON_NOUN	сꙑнъ	sˈɯnʊ	s ˈɯ n ʊ		SON_NOUN_1			
 Bulgarian	Bulgarian			SON_NOUN	син	sˈin	s ˈi n		SON_NOUN_1			
 Macedonian	Macedonian			SON_NOUN	син	sˈin	s ˈi n		SON_NOUN_1			
-Štokavian	Štokavian			SON_NOUN	sȋn	sîːn	s îː n		SON_NOUN_1			
+Standard Serbian	Standard Serbian			SON_NOUN	си̂н	sîːn	s îː n		SON_NOUN_1			
+Standard Croatian	Standard Croatian			SON_NOUN	sȋn	sîːn	s îː n		SON_NOUN_1			
 Čakavian	Čakavian			SON_NOUN	sȋn	sîːn	s îː n		SON_NOUN_1			
 Slovenian	Slovenian			SON_NOUN	sȋn	síːn	s íː n		SON_NOUN_1			
 Slovak	Slovak			SON_NOUN	syn	sˈin	s ˈi n		SON_NOUN_1			
@@ -1591,7 +1674,8 @@ Proto-Slavic	Proto-Slavic			CHEESE_NOUN	sỳrъ	sɨˀrŭ	s ɨˀ r ŭ		CHEESE_N
 Old Church Slavonic	Old Church Slavonic			CHEESE_NOUN	сꙑръ	sˈɯrʊ	s ˈɯ r ʊ		CHEESE_NOUN_1			
 Bulgarian	Bulgarian			CHEESE_NOUN	сир	sˈir	s ˈi r		CHEESE_NOUN_1			
 Macedonian	Macedonian			CHEESE_NOUN	сир	sˈir	s ˈi r		CHEESE_NOUN_1			
-Štokavian	Štokavian			CHEESE_NOUN	sȉr	sîr	s î r		CHEESE_NOUN_1			
+Standard Serbian	Standard Serbian			CHEESE_NOUN	си̏р	sîr	s î r		CHEESE_NOUN_1			
+Standard Croatian	Standard Croatian			CHEESE_NOUN	sȉr	sîr	s î r		CHEESE_NOUN_1			
 Čakavian	Čakavian			CHEESE_NOUN	sĩr	sǐːr	s ǐː r		CHEESE_NOUN_1			
 Slovenian	Slovenian			CHEESE_NOUN	sȉr	sír	s í r		CHEESE_NOUN_1			
 Slovak	Slovak			CHEESE_NOUN	syr	sˈir	s ˈi r		CHEESE_NOUN_1			
@@ -1610,7 +1694,8 @@ Proto-Slavic	Proto-Slavic			HOLY_ADJ	svę̑tъ	svẽ̂ːtŭ	s v ẽ̂ː t ŭ		
 Old Church Slavonic	Old Church Slavonic			HOLY_ADJ	свѧтъ	svˈɛ̃tʊ	s v ˈɛ̃ t ʊ		HOLY_ADJ_1			
 Bulgarian	Bulgarian			HOLY_ADJ	свят	svʲˈat	s vʲ ˈa t		HOLY_ADJ_1			
 Macedonian	Macedonian			HOLY_ADJ	свет	svˈɛt	s v ˈɛ t		HOLY_ADJ_1			
-Štokavian	Štokavian			HOLY_ADJ	svȇt	sʋêːt	s ʋ êː t		HOLY_ADJ_1			
+Standard Serbian	Standard Serbian			HOLY_ADJ	свȇт	sʋêːt	s ʋ êː t		HOLY_ADJ_1			
+Standard Croatian	Standard Croatian			HOLY_ADJ	svȇt	sʋêːt	s ʋ êː t		HOLY_ADJ_1			
 Čakavian	Čakavian			HOLY_ADJ	svȇt	sʋêːt	s ʋ êː t		HOLY_ADJ_1			
 Slovenian	Slovenian			HOLY_ADJ	svẹ̑t	sʋéːt	s ʋ éː t		HOLY_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			QUIET_ADJ	teišus	tei̯ʃus	t ei̯ ʃ u s		QUIET_ADJ_1			
@@ -1619,7 +1704,8 @@ Proto-Slavic	Proto-Slavic			QUIET_ADJ	tixъ	tixŭ	t i x ŭ		QUIET_ADJ_1
 Old Church Slavonic	Old Church Slavonic			QUIET_ADJ	тихъ	tˈixʊ	t ˈi x ʊ		QUIET_ADJ_1			
 Bulgarian	Bulgarian			QUIET_ADJ	тих	tˈix	t ˈi x		QUIET_ADJ_1			
 Macedonian	Macedonian			QUIET_ADJ	тих	tˈix	t ˈi x		QUIET_ADJ_1			
-Štokavian	Štokavian			QUIET_ADJ	tȉh	tîx	t î x		QUIET_ADJ_1			
+Standard Serbian	Standard Serbian			QUIET_ADJ	ти̏х	tîx	t î x		QUIET_ADJ_1			
+Standard Croatian	Standard Croatian			QUIET_ADJ	tȉh	tîx	t î x		QUIET_ADJ_1			
 Slovenian	Slovenian			QUIET_ADJ	tȋh	tíːx	t íː x		QUIET_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			HEAVY_ADJ	tingús	tiŋɡús	t i ŋ ɡ ú s		HEAVY_ADJ_1			
 Lithuanian	Lithuanian			HEAVY_ADJ	tingùs	tʲɪŋɡˈʊs	tʲ ɪ ŋ ɡ ˈʊ s		HEAVY_ADJ_1			
@@ -1627,7 +1713,8 @@ Proto-Slavic	Proto-Slavic			HEAVY_ADJ	tęžьkъ	tẽʒĭkŭ	t ẽ ʒ ĭ k u�
 Old Church Slavonic	Old Church Slavonic			HEAVY_ADJ	тѧжькъ	tˈɛ̃ʒɪkʊ	t ˈɛ̃ ʒ ɪ k ʊ		HEAVY_ADJ_1			
 Bulgarian	Bulgarian			HEAVY_ADJ	тежък	tˈɛʒɐk	t ˈɛ ʒ ɐ k		HEAVY_ADJ_1			
 Macedonian	Macedonian			HEAVY_ADJ	тежок	tˈɛʒok	t ˈɛ ʒ o k		HEAVY_ADJ_1			
-Štokavian	Štokavian			HEAVY_ADJ	téžak	těːʒak	t ěː ʒ a k		HEAVY_ADJ_1			
+Standard Serbian	Standard Serbian			HEAVY_ADJ	тéжак	těːʒak	t ěː ʒ a k		HEAVY_ADJ_1			
+Standard Croatian	Standard Croatian			HEAVY_ADJ	téžak	těːʒak	t ěː ʒ a k		HEAVY_ADJ_1			
 Čakavian	Čakavian			HEAVY_ADJ	tȅžak	têʒak	t ê ʒ a k		HEAVY_ADJ_1			
 Slovenian	Slovenian			HEAVY_ADJ	téžək	tɛ̀ːʒək	t ɛ̀ː ʒ ə k		HEAVY_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			HEAVY_ADJ		tˈɛʒak	t ˈɛ ʒ a k		HEAVY_ADJ_1			
@@ -1642,7 +1729,8 @@ Proto-Slavic	Proto-Slavic			THREE_NUM	tri	tri	t r i		THREE_NUM_1
 Old Church Slavonic	Old Church Slavonic			THREE_NUM	три	trˈi	t r ˈi		THREE_NUM_1			
 Bulgarian	Bulgarian			THREE_NUM	три	trˈi	t r ˈi		THREE_NUM_1			
 Macedonian	Macedonian			THREE_NUM	три	trˈi	t r ˈi		THREE_NUM_1			
-Štokavian	Štokavian			THREE_NUM	trȋ	trîː	t r îː		THREE_NUM_1			
+Standard Serbian	Standard Serbian			THREE_NUM	три̂	trîː	t r îː		THREE_NUM_1			
+Standard Croatian	Standard Croatian			THREE_NUM	trȋ	trîː	t r îː		THREE_NUM_1			
 Čakavian	Čakavian			THREE_NUM	trȋ	trîː	t r îː		THREE_NUM_1			
 Slovak	Slovak			THREE_NUM	tri	trˈi	t r ˈi		THREE_NUM_1			
 Czech	Czech			THREE_NUM	tři	tr̝̊ˈɪ	t r̝̊ ˈɪ		THREE_NUM_1			
@@ -1660,7 +1748,8 @@ Proto-Slavic	Proto-Slavic			HARD_ADJ	tvь̑rdъ	tvĭ̂rdŭ	t v ĭ̂ r d ŭ		
 Old Church Slavonic	Old Church Slavonic			HARD_ADJ	тврьдъ	tvrˈɪdʊ	t v r ˈɪ d ʊ		HARD_ADJ_1			
 Bulgarian	Bulgarian			HARD_ADJ	твърд	tvˈɤrd̥	t v ˈɤ r d̥		HARD_ADJ_1			
 Macedonian	Macedonian			HARD_ADJ	тврд	tvˈr̩d̥	t v ˈr̩ d̥		HARD_ADJ_1			
-Štokavian	Štokavian			HARD_ADJ	tvȓd	tʋr̩̂ːd	t ʋ r̩̂ː d		HARD_ADJ_1			
+Standard Serbian	Standard Serbian			HARD_ADJ	твȓд	tʋr̩̂ːd	t ʋ r̩̂ː d		HARD_ADJ_1			
+Standard Croatian	Standard Croatian			HARD_ADJ	tvȓd	tʋr̩̂ːd	t ʋ r̩̂ː d		HARD_ADJ_1			
 Čakavian	Čakavian			HARD_ADJ	tvȑd	tʋr̩̂d̥	t ʋ r̩̂ d̥		HARD_ADJ_1			
 Slovenian	Slovenian			HARD_ADJ	tȓd	tə́rd̥	t ə́ r d̥		HARD_ADJ_1			
 Proto-Balto-Slavic	Proto-Balto-Slavic			FIRE_NOUN	úngnis	úŋɡnis	ú ŋ ɡ n i s		FIRE_NOUN_1			
@@ -1671,7 +1760,8 @@ Proto-Slavic	Proto-Slavic			FIRE_NOUN	ògňь	ǒɡɲĭ	ǒ ɡ ɲ ĭ		FIRE_NOU
 Old Church Slavonic	Old Church Slavonic			FIRE_NOUN	огн҄ь	ˈɔɡnʲɪ	ˈɔ ɡ nʲ ɪ		FIRE_NOUN_1			
 Bulgarian	Bulgarian			FIRE_NOUN	огън	ˈɔɡɐn	ˈɔ ɡ ɐ n		FIRE_NOUN_1			
 Macedonian	Macedonian			FIRE_NOUN	оган	ˈoɡan	ˈo ɡ a n		FIRE_NOUN_1			
-Štokavian	Štokavian			FIRE_NOUN	òganj	ǒɡaɲ	ǒ ɡ a ɲ		FIRE_NOUN_1			
+Standard Serbian	Standard Serbian			FIRE_NOUN	òгањ	ǒɡaɲ	ǒ ɡ a ɲ		FIRE_NOUN_1			
+Standard Croatian	Standard Croatian			FIRE_NOUN	òganj	ǒɡaɲ	ǒ ɡ a ɲ		FIRE_NOUN_1			
 Čakavian	Čakavian			FIRE_NOUN	ȍganj	ôɡaɲ	ô ɡ a ɲ		FIRE_NOUN_1			
 Slovenian	Slovenian			FIRE_NOUN	ógənj	ɔ̀ːɡən	ɔ̀ː ɡ ə n		FIRE_NOUN_1			
 Slovak	Slovak			FIRE_NOUN	oheň	ˈɔɦɛɲ	ˈɔ ɦ ɛ ɲ		FIRE_NOUN_1			
@@ -1695,7 +1785,8 @@ Old Prussian	Old Prussian			OTTER_NOUN	wudro	vudro	v u d r o		OTTER_NOUN_2
 Proto-Slavic	Proto-Slavic			OTTER_NOUN	vỳdra	vɨˀdra	v ɨˀ d r a		OTTER_NOUN_2			
 Bulgarian	Bulgarian			OTTER_NOUN	видра	vˈidrɐ	v ˈi d r ɐ		OTTER_NOUN_2			
 Macedonian	Macedonian			OTTER_NOUN	видра	vˈidra	v ˈi d r a		OTTER_NOUN_2			
-Štokavian	Štokavian			OTTER_NOUN	vȉdra	ʋîdra	ʋ î d r a		OTTER_NOUN_2			
+Standard Serbian	Standard Serbian			OTTER_NOUN	ви̏дра	ʋîdra	ʋ î d r a		OTTER_NOUN_2			
+Standard Croatian	Standard Croatian			OTTER_NOUN	vȉdra	ʋîdra	ʋ î d r a		OTTER_NOUN_2			
 Slovenian	Slovenian			OTTER_NOUN	vȋdra	ʋíːdra	ʋ íː d r a		OTTER_NOUN_2			
 Slovak	Slovak			OTTER_NOUN	vydra	ʋˈidra	ʋ ˈi d r a		OTTER_NOUN_2			
 Czech	Czech			OTTER_NOUN	vydra	vˈɪdra	v ˈɪ d r a		OTTER_NOUN_2			
@@ -1711,7 +1802,8 @@ Proto-Slavic	Proto-Slavic			OX_NOUN	vòlъ	vǒlŭ	v ǒ l ŭ		OX_NOUN_1
 Old Church Slavonic	Old Church Slavonic			OX_NOUN	волъ	vˈɔlʊ	v ˈɔ l ʊ		OX_NOUN_1			
 Bulgarian	Bulgarian			OX_NOUN	вол	vˈɔɫ	v ˈɔ ɫ		OX_NOUN_1			
 Macedonian	Macedonian			OX_NOUN	вол	vˈoɫ	v ˈo ɫ		OX_NOUN_1			
-Štokavian	Štokavian			OX_NOUN	vȏl	ʋôːl	ʋ ôː l		OX_NOUN_1			
+Standard Serbian	Standard Serbian			OX_NOUN	во̂	ʋôː	ʋ ôː		OX_NOUN_1			
+Standard Croatian	Standard Croatian			OX_NOUN	vȏl	ʋôːl	ʋ ôː l		OX_NOUN_1			
 Slovenian	Slovenian			OX_NOUN	vȍł	ʋɔ́w	ʋ ɔ́ w		OX_NOUN_1			
 Slovak	Slovak			OX_NOUN	vôl	ʋʊ̯ˈɔɫ	ʋ ʊ̯ˈɔ ɫ		OX_NOUN_1			
 Czech	Czech			OX_NOUN	vůl	vˈuːl	v ˈuː l		OX_NOUN_1			
@@ -1729,7 +1821,8 @@ Proto-Slavic	Proto-Slavic			WATER_NOUN	vodà	vodǎ	v o d ǎ		WATER_NOUN_1
 Old Church Slavonic	Old Church Slavonic			WATER_NOUN	вода	vɔdˈɑ	v ɔ d ˈɑ		WATER_NOUN_1			
 Bulgarian	Bulgarian			WATER_NOUN	вода	vodˈa	v o d ˈa		WATER_NOUN_1			
 Macedonian	Macedonian			WATER_NOUN	вода	vˈoda	v ˈo d a		WATER_NOUN_1			
-Štokavian	Štokavian			WATER_NOUN	vòda	ʋǒda	ʋ ǒ d a		WATER_NOUN_1			
+Standard Serbian	Standard Serbian			WATER_NOUN	вòда	ʋǒda	ʋ ǒ d a		WATER_NOUN_1			
+Standard Croatian	Standard Croatian			WATER_NOUN	vòda	ʋǒda	ʋ ǒ d a		WATER_NOUN_1			
 Čakavian	Čakavian			WATER_NOUN	vodȁ	ʋodâ	ʋ o d â		WATER_NOUN_1			
 Slovenian	Slovenian			WATER_NOUN	vóda	ʋɔ̀ːda	ʋ ɔ̀ː d a		WATER_NOUN_1			
 Slovak	Slovak			WATER_NOUN	voda	ʋˈɔda	ʋ ˈɔ d a		WATER_NOUN_1			
@@ -1753,7 +1846,8 @@ Proto-Slavic	Proto-Slavic			WASP_NOUN	osà	osǎ	o s ǎ		WASP_NOUN_1
 Old Church Slavonic	Old Church Slavonic			WASP_NOUN	оса	ɔsˈɑ	ɔ s ˈɑ		WASP_NOUN_1			
 Bulgarian	Bulgarian			WASP_NOUN	оса	osˈa	o s ˈa		WASP_NOUN_1			
 Macedonian	Macedonian			WASP_NOUN	оса	ˈosa	ˈo s a		WASP_NOUN_1			
-Štokavian	Štokavian			WASP_NOUN	òsa	ǒsa	ǒ s a		WASP_NOUN_1			
+Standard Serbian	Standard Serbian			WASP_NOUN	òса	ǒsa	ǒ s a		WASP_NOUN_1			
+Standard Croatian	Standard Croatian			WASP_NOUN	òsa	ǒsa	ǒ s a		WASP_NOUN_1			
 Slovenian	Slovenian			WASP_NOUN	ósa	ɔ̀ːsa	ɔ̀ː s a		WASP_NOUN_1			
 Slovak	Slovak			WASP_NOUN	osa	ˈɔsa	ˈɔ s a		WASP_NOUN_1			
 Czech	Czech			WASP_NOUN	vosa	vˈosa	v ˈo s a		WASP_NOUN_1			
@@ -1770,7 +1864,8 @@ Proto-Slavic	Proto-Slavic			WAX_NOUN	vȍskъ	vôskŭ	v ô s k ŭ		WAX_NOUN_1
 Old Church Slavonic	Old Church Slavonic			WAX_NOUN	воскъ	vˈɔskʊ	v ˈɔ s k ʊ		WAX_NOUN_1			
 Bulgarian	Bulgarian			WAX_NOUN	восък	vˈɔsɐk	v ˈɔ s ɐ k		WAX_NOUN_1			
 Macedonian	Macedonian			WAX_NOUN	восок	vˈɔsɔk	v ˈɔ s ɔ k		WAX_NOUN_1			
-Štokavian	Štokavian			WAX_NOUN	vȍsak	ʋôsak	ʋ ô s a k		WAX_NOUN_1			
+Standard Serbian	Standard Serbian			WAX_NOUN	во̏сак	ʋôsak	ʋ ô s a k		WAX_NOUN_1			
+Standard Croatian	Standard Croatian			WAX_NOUN	vȍsak	ʋôsak	ʋ ô s a k		WAX_NOUN_1			
 Čakavian	Čakavian			WAX_NOUN	vȍsak	ʋôsak	ʋ ô s a k		WAX_NOUN_1			
 Slovenian	Slovenian			WAX_NOUN	vọ̑sək	ʋóːsək	ʋ óː s ə k		WAX_NOUN_1			
 Slovak	Slovak			WAX_NOUN	vosk	ʋˈɔsk	ʋ ˈɔ s k		WAX_NOUN_1			
@@ -1789,7 +1884,8 @@ Proto-Slavic	Proto-Slavic			EVENING_NOUN	vȅčerъ	vêʧerŭ	v ê ʧ e r ŭ	
 Old Church Slavonic	Old Church Slavonic			EVENING_NOUN	вечеръ	vˈɛʧɛrʊ	v ˈɛ ʧ ɛ r ʊ		EVENING_NOUN_1			
 Bulgarian	Bulgarian			EVENING_NOUN	вечер	vˈɛʧɛr	v ˈɛ ʧ ɛ r		EVENING_NOUN_1			
 Macedonian	Macedonian			EVENING_NOUN	вечер	vˈɛʧɛr	v ˈɛ ʧ ɛ r		EVENING_NOUN_1			
-Štokavian	Štokavian			EVENING_NOUN	vȅčēr	ʋêʧeːr	ʋ ê ʧ eː r		EVENING_NOUN_1			
+Standard Serbian	Standard Serbian			EVENING_NOUN	вȅчēр	ʋêʧeːr	ʋ ê ʧ eː r		EVENING_NOUN_1			
+Standard Croatian	Standard Croatian			EVENING_NOUN	vȅčēr	ʋêʧeːr	ʋ ê ʧ eː r		EVENING_NOUN_1			
 Čakavian	Čakavian			EVENING_NOUN	vȅčēr	ʋêʧeːr	ʋ ê ʧ eː r		EVENING_NOUN_1			
 Slovenian	Slovenian			EVENING_NOUN	večẹ̑r	ʋɛʧéːr	ʋ ɛ ʧ éː r		EVENING_NOUN_1			
 Slovak	Slovak			EVENING_NOUN	večer	ʋˈɛʧɛr	ʋ ˈɛ ʧ ɛ r		EVENING_NOUN_1			
@@ -1809,7 +1905,8 @@ Proto-Slavic	Proto-Slavic			WOLF_NOUN	vь̑lkъ	vĭ̂lkŭ	v ĭ̂ l k ŭ		WOL
 Old Church Slavonic	Old Church Slavonic			WOLF_NOUN	влькъ	vlˈɪkʊ	v l ˈɪ k ʊ		WOLF_NOUN_1			
 Bulgarian	Bulgarian			WOLF_NOUN	вълк	vˈɤɫk	v ˈɤ ɫ k		WOLF_NOUN_1			
 Macedonian	Macedonian			WOLF_NOUN	волк	vˈoɫk	v ˈo ɫ k		WOLF_NOUN_1			
-Štokavian	Štokavian			WOLF_NOUN	vȗk	ʋûːk	ʋ ûː k		WOLF_NOUN_1			
+Standard Serbian	Standard Serbian			WOLF_NOUN	ву̂к	ʋûːk	ʋ ûː k		WOLF_NOUN_1			
+Standard Croatian	Standard Croatian			WOLF_NOUN	vȗk	ʋûːk	ʋ ûː k		WOLF_NOUN_1			
 Čakavian	Čakavian			WOLF_NOUN	vȗk	ʋûːk	ʋ ûː k		WOLF_NOUN_1			
 Slovenian	Slovenian			WOLF_NOUN	vȏłk	ʋɔ́ːwk	ʋ ɔ́ː w k		WOLF_NOUN_1			
 Slovak	Slovak			WOLF_NOUN	vlk	ʋˈɫ̩k	ʋ ˈɫ̩ k		WOLF_NOUN_1			
@@ -1828,7 +1925,8 @@ Proto-Slavic	Proto-Slavic			TOOTH_NOUN	zǫ̑bъ	zõ̂ːbŭ	z õ̂ː b ŭ		TO
 Old Church Slavonic	Old Church Slavonic			TOOTH_NOUN	зѫбъ	zˈɔ̃bʊ	z ˈɔ̃ b ʊ		TOOTH_NOUN_1			
 Bulgarian	Bulgarian			TOOTH_NOUN	зъб	zˈɤb̥	z ˈɤ b̥		TOOTH_NOUN_1			
 Macedonian	Macedonian			TOOTH_NOUN	заб	zˈab̥	z ˈa b̥		TOOTH_NOUN_1			
-Štokavian	Štokavian			TOOTH_NOUN	zȗb	zûːb	z ûː b		TOOTH_NOUN_1			
+Standard Serbian	Standard Serbian			TOOTH_NOUN	зу̂б	zûːb	z ûː b		TOOTH_NOUN_1			
+Standard Croatian	Standard Croatian			TOOTH_NOUN	zȗb	zûːb	z ûː b		TOOTH_NOUN_1			
 Čakavian	Čakavian			TOOTH_NOUN	zȗb	zûːb̥	z ûː b̥		TOOTH_NOUN_1			
 Slovenian	Slovenian			TOOTH_NOUN	zọ̑b	zóːb̥	z óː b̥		TOOTH_NOUN_1			
 Slovak	Slovak			TOOTH_NOUN	zub	zˈub̥	z ˈu b̥		TOOTH_NOUN_1			
@@ -1863,7 +1961,8 @@ Proto-Balto-Slavic	Proto-Balto-Slavic			GOOSE_NOUN	źanskāˀ	zʲanskaːˀ	zʲ a
 Proto-Slavic	Proto-Slavic			GOOSE_NOUN	gǫ̑sъka	ɡõ̂ːsŭka	ɡ õ̂ː s ŭ k a		GOOSE_NOUN_2			
 Bulgarian	Bulgarian			GOOSE_NOUN	гъска	ɡˈɤskɐ	ɡ ˈɤ s k ɐ		GOOSE_NOUN_2			
 Macedonian	Macedonian			GOOSE_NOUN	гуска	ɡˈuska	ɡ ˈu s k a		GOOSE_NOUN_2			
-Štokavian	Štokavian			GOOSE_NOUN	gȕska	ɡûska	ɡ û s k a		GOOSE_NOUN_2			
+Standard Serbian	Standard Serbian			GOOSE_NOUN	гу̏ска	ɡûska	ɡ û s k a		GOOSE_NOUN_2			
+Standard Croatian	Standard Croatian			GOOSE_NOUN	gȕska	ɡûska	ɡ û s k a		GOOSE_NOUN_2			
 Ukrainian	Ukrainian			GOOSE_NOUN	гуска	ɦˈuskɐ	ɦ ˈu s k ɐ		GOOSE_NOUN_2			
 Proto-Balto-Slavic	Proto-Balto-Slavic			WINTER_NOUN	źeimā́ˀ	zʲei̯máːˀ	zʲ ei̯ m áːˀ		WINTER_NOUN_1			
 Lithuanian	Lithuanian			WINTER_NOUN	žiemà	ʑiə̯mˈɐ	ʑ iə̯ m ˈɐ		WINTER_NOUN_1			
@@ -1874,7 +1973,8 @@ Proto-Slavic	Proto-Slavic			WINTER_NOUN	zimà	zimaˀ	z i m aˀ		WINTER_NOUN_1
 Old Church Slavonic	Old Church Slavonic			WINTER_NOUN	зима	zimˈɑ	z i m ˈɑ		WINTER_NOUN_1			
 Bulgarian	Bulgarian			WINTER_NOUN	зима	zˈimɐ	z ˈi m ɐ		WINTER_NOUN_1			
 Macedonian	Macedonian			WINTER_NOUN	зима	zˈima	z ˈi m a		WINTER_NOUN_1			
-Štokavian	Štokavian			WINTER_NOUN	zíma	zǐːma	z ǐː m a		WINTER_NOUN_1			
+Standard Serbian	Standard Serbian			WINTER_NOUN	зи́ма	zǐːma	z ǐː m a		WINTER_NOUN_1			
+Standard Croatian	Standard Croatian			WINTER_NOUN	zíma	zǐːma	z ǐː m a		WINTER_NOUN_1			
 Čakavian	Čakavian			WINTER_NOUN	zīmȁ	ziːmâ	z iː m â		WINTER_NOUN_1			
 Slovenian	Slovenian			WINTER_NOUN	zíma	zìːma	z ìː m a		WINTER_NOUN_1			
 Slovak	Slovak			WINTER_NOUN	zima	zˈima	z ˈi m a		WINTER_NOUN_1			
@@ -1894,7 +1994,8 @@ Proto-Slavic	Proto-Slavic			EARTH_NOUN	zemľà	zemʎǎ	z e m ʎ ǎ		EARTH_NOUN
 Old Church Slavonic	Old Church Slavonic			EARTH_NOUN	землꙗ	zɛmlʲˈɑ	z ɛ m lʲ ˈɑ		EARTH_NOUN_1			
 Bulgarian	Bulgarian			EARTH_NOUN	земя	zɛmʲˈa	z ɛ mʲ ˈa		EARTH_NOUN_1			
 Macedonian	Macedonian			EARTH_NOUN	земја	zˈɛmja	z ˈɛ m j a		EARTH_NOUN_1			
-Štokavian	Štokavian			EARTH_NOUN	zèmlja	zěmʎa	z ě m ʎ a		EARTH_NOUN_1			
+Standard Serbian	Standard Serbian			EARTH_NOUN	зèмља	zěmʎa	z ě m ʎ a		EARTH_NOUN_1			
+Standard Croatian	Standard Croatian			EARTH_NOUN	zèmlja	zěmʎa	z ě m ʎ a		EARTH_NOUN_1			
 Čakavian	Čakavian			EARTH_NOUN	zemlȁ	zemlâ	z e m l â		EARTH_NOUN_1			
 Slovenian	Slovenian			EARTH_NOUN	zémlja	zɛ̀ːmlja	z ɛ̀ː m l j a		EARTH_NOUN_1			
 Slovak	Slovak			EARTH_NOUN	zem	zˈɛm	z ˈɛ m		EARTH_NOUN_1			
@@ -1918,7 +2019,8 @@ Proto-Slavic	Proto-Slavic			KNOW_VERB	znàti	znǎti	z n ǎ t i		KNOW_VERB_1
 Old Church Slavonic	Old Church Slavonic			KNOW_VERB	знати	znˈɑti	z n ˈɑ t i		KNOW_VERB_1			
 Bulgarian	Bulgarian			KNOW_VERB	зная	znˈajɐ	z n ˈa j ɐ		KNOW_VERB_1			
 Macedonian	Macedonian			KNOW_VERB	знае	znˈaɛ	z n ˈa ɛ		KNOW_VERB_1			
-Štokavian	Štokavian			KNOW_VERB	znȁti	znâti	z n â t i		KNOW_VERB_1			
+Standard Serbian	Standard Serbian			KNOW_VERB	знȁти	znâti	z n â t i		KNOW_VERB_1			
+Standard Croatian	Standard Croatian			KNOW_VERB	znȁti	znâti	z n â t i		KNOW_VERB_1			
 Slovenian	Slovenian			KNOW_VERB	znáti	znàːti	z n àː t i		KNOW_VERB_1			
 Slovak	Slovak			KNOW_VERB	znať	znˈac	z n ˈa c		KNOW_VERB_1			
 Czech	Czech			KNOW_VERB	znát	znˈaːt	z n ˈaː t		KNOW_VERB_1			
@@ -1939,7 +2041,8 @@ Proto-Slavic	Proto-Slavic			STAR_NOUN	gvě̄zdà	ɡvɛːzdǎ	ɡ v ɛː z d ǎ	
 Old Church Slavonic	Old Church Slavonic			STAR_NOUN	звѣзда	zvæzdˈɑ	z v æ z d ˈɑ		STAR_NOUN_1			
 Bulgarian	Bulgarian			STAR_NOUN	звезда	zvɛzdˈa	z v ɛ z d ˈa		STAR_NOUN_1			
 Macedonian	Macedonian			STAR_NOUN	ѕвезда	ʣvˈɛzda	ʣ v ˈɛ z d a		STAR_NOUN_1			
-Štokavian	Štokavian			STAR_NOUN	zvijézda	zʋjěːzda	z ʋ j ěː z d a		STAR_NOUN_1			
+Standard Serbian	Standard Serbian			STAR_NOUN	звéзда	zʋěːzda	z ʋ ěː z d a		STAR_NOUN_1			
+Standard Croatian	Standard Croatian			STAR_NOUN	zvijézda	zʋjěːzda	z ʋ j ěː z d a		STAR_NOUN_1			
 Čakavian	Čakavian			STAR_NOUN	zvīzdȁ	zʋiːzdâ	z ʋ iː z d â		STAR_NOUN_1			
 Slovenian	Slovenian			STAR_NOUN	zvẹ́zda	zʋèːzda	z ʋ èː z d a		STAR_NOUN_1			
 Slovak	Slovak			STAR_NOUN	hviezda	ɦʋɪ̯ˈɛzda	ɦ ʋ ɪ̯ˈɛ z d a		STAR_NOUN_1			
@@ -1963,7 +2066,8 @@ Proto-Slavic	Proto-Slavic			BEAST_NOUN	zvě̑rь 	zvɛ̂ːrĭ	z v ɛ̂ː r ĭ	
 Old Church Slavonic	Old Church Slavonic			BEAST_NOUN	звѣрь	zvˈærɪ	z v ˈæ r ɪ		BEAST_NOUN_1			
 Bulgarian	Bulgarian			BEAST_NOUN	звяр	zvʲˈar	z vʲ ˈa r		BEAST_NOUN_1			
 Macedonian	Macedonian			BEAST_NOUN	ѕвер	ʣvˈer	ʣ v ˈe r		BEAST_NOUN_1			
-Štokavian	Štokavian			BEAST_NOUN	zvijȇr	zʋjêːr	z ʋ j êː r		BEAST_NOUN_1			
+Standard Serbian	Standard Serbian			BEAST_NOUN	звȇр	zʋêːr	z ʋ êː r		BEAST_NOUN_1			
+Standard Croatian	Standard Croatian			BEAST_NOUN	zvijȇr	zʋjêːr	z ʋ j êː r		BEAST_NOUN_1			
 Čakavian	Čakavian			BEAST_NOUN	zvȋr	zʋîːr	z ʋ îː r		BEAST_NOUN_1			
 Slovenian	Slovenian			BEAST_NOUN	zvẹ̑r	zʋéːr	z ʋ éː r		BEAST_NOUN_1			
 Slovak	Slovak			BEAST_NOUN	zver	zʋˈɛr	z ʋ ˈɛ r		BEAST_NOUN_1			
@@ -1990,7 +2094,8 @@ Proto-Slavic	Proto-Slavic			GOD_NOUN	bȏgъ	bôːɡŭ	b ôː ɡ ŭ		GOD_NOU
 Old Church Slavonic	Old Church Slavonic			GOD_NOUN	богъ	bˈɔɡʊ	b ˈɔ ɡ ʊ		GOD_NOUN_2			
 Bulgarian	Bulgarian			GOD_NOUN	бог	bˈɔɡ̊	b ˈɔ ɡ̊		GOD_NOUN_2			
 Macedonian	Macedonian			GOD_NOUN	бог	bˈoɡ̊	b ˈo ɡ̊		GOD_NOUN_2			
-Štokavian	Štokavian			GOD_NOUN	bȏg	bôːɡ	b ôː ɡ		GOD_NOUN_2			
+Standard Serbian	Standard Serbian			GOD_NOUN	бо̂г	bôːɡ	b ôː ɡ		GOD_NOUN_2			
+Standard Croatian	Standard Croatian			GOD_NOUN	bȏg	bôːɡ	b ôː ɡ		GOD_NOUN_2			
 Čakavian	Čakavian			GOD_NOUN	bȏg	bôːɡ̊	b ôː ɡ̊		GOD_NOUN_2			
 Slovenian	Slovenian			GOD_NOUN	bọ̑g	bóːɡ̊	b óː ɡ̊		GOD_NOUN_2			
 Slovak	Slovak			GOD_NOUN	boh	bˈɔx	b ˈɔ x		GOD_NOUN_2			
@@ -2007,7 +2112,8 @@ Proto-Slavic	Proto-Slavic			PERSON_NOUN	čelověkъ	ʧelovɛːkŭ	ʧ e l o v ɛ
 Old Church Slavonic	Old Church Slavonic			PERSON_NOUN	чловѣкъ	ʧlɔvˈækʊ	ʧ l ɔ v ˈæ k ʊ		PERSON_NOUN_1			
 Bulgarian	Bulgarian			PERSON_NOUN	човек	ʧovˈɛk	ʧ o v ˈɛ k		PERSON_NOUN_1			
 Macedonian	Macedonian			PERSON_NOUN	човек	ʧˈovɛk	ʧ ˈo v ɛ k		PERSON_NOUN_1			
-Štokavian	Štokavian			PERSON_NOUN	čòvjek	ʧǒʋjek	ʧ ǒ ʋ j e k		PERSON_NOUN_1			
+Standard Serbian	Standard Serbian			PERSON_NOUN	чòвек	ʧǒʋek	ʧ ǒ ʋ e k		PERSON_NOUN_1			
+Standard Croatian	Standard Croatian			PERSON_NOUN	čòvjek	ʧǒʋjek	ʧ ǒ ʋ j e k		PERSON_NOUN_1			
 Čakavian	Čakavian			PERSON_NOUN	čovȉk	ʧoʋîk	ʧ o ʋ î k		PERSON_NOUN_1			
 Slovenian	Slovenian			PERSON_NOUN	člóvek	ʧlɔ̀ːʋɛk	ʧ l ɔ̀ː ʋ ɛ k		PERSON_NOUN_1			
 Slovak	Slovak			PERSON_NOUN	človek	ʧɫˈɔʋɛk	ʧ ɫ ˈɔ ʋ ɛ k		PERSON_NOUN_1			
@@ -2024,7 +2130,8 @@ Russian	Russian			PERSON_NOUN	человек	ʨɪɫɐvʲˈek	ʨ ɪ ɫ ɐ vʲ ˈe
 Čakavian (Burgenland)	Čakavian (Burgenland)			PERSON_NOUN		ʧlˈɔviːk	ʧ l ˈɔ v iː k		PERSON_NOUN_1			
 Kajkavian	Kajkavian			PERSON_NOUN		ʧlˈu̯ovæk	ʧ l ˈu̯o v æ k		PERSON_NOUN_1			
 Proto-Slavic	Proto-Slavic			WHOLE_ADJ	cělъjь	ʦɛ̂ːlŭjĭ	ʦ ɛ̂ː l ŭ j ĭ		WHOLE_ADJ_2			
-Štokavian	Štokavian			WHOLE_ADJ	cijȇlī	ʦjêːliː	ʦ j êː l iː		WHOLE_ADJ_2			
+Standard Serbian	Standard Serbian			WHOLE_ADJ	цȇлӣ	ʦêːliː	ʦ êː l iː		WHOLE_ADJ_2			
+Standard Croatian	Standard Croatian			WHOLE_ADJ	cijȇlī	ʦjêːliː	ʦ j êː l iː		WHOLE_ADJ_2			
 Slovak	Slovak			WHOLE_ADJ	celý	ʦˈɛɫiː	ʦ ˈɛ ɫ iː		WHOLE_ADJ_2			
 Czech	Czech			WHOLE_ADJ	celý	ʦˈɛliː	ʦ ˈɛ l iː		WHOLE_ADJ_2			
 Upper Sorbian	Upper Sorbian			WHOLE_ADJ	cyły	ʦˈɪwɪ	ʦ ˈɪ w ɪ		WHOLE_ADJ_2			
@@ -2040,8 +2147,9 @@ Proto-Slavic	Proto-Slavic			BLACK_ADJ	čь̀rnъ	ʧĭ̌rnŭ	ʧ ĭ̌ r n ŭ		
 Old Church Slavonic	Old Church Slavonic			BLACK_ADJ	чрьнъ	ʧrˈɪnʊ	ʧ r ˈɪ n ʊ		BLACK_ADJ_1			
 Bulgarian	Bulgarian			BLACK_ADJ	черен	ʧˈɛrɛn	ʧ ˈɛ r ɛ n		BLACK_ADJ_1			
 Macedonian	Macedonian			BLACK_ADJ	црн	ʦˈr̩n	ʦ ˈr̩ n		BLACK_ADJ_1			
-Štokavian	Štokavian			BLACK_ADJ	cȓn	ʦr̩̂ːn	ʦ r̩̂ː n		BLACK_ADJ_1			
-Čakavian	Čakavian			BLACK_ADJ	cȑn	ʦr̩̂n	ʦ r̩̂ n		BLACK_ADJ_1			
+Standard Serbian	Standard Serbian			BLACK_ADJ	цȓн	ʦr̩̂ːn	ʦ r̩̂ː n		BLACK_ADJ_1			
+Standard Croatian	Standard Croatian			BLACK_ADJ	cȓn	ʦr̩̂ːn	ʦ r̩̂ː n		BLACK_ADJ_1			
+Čakavian	Čakavian			BLACK_ADJ	čȑn	ʧr̩̂n	ʧ r̩̂ n		BLACK_ADJ_1			
 Slovenian	Slovenian			BLACK_ADJ	čŕn	ʧə̀rn	ʧ ə̀ r n		BLACK_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			BLACK_ADJ		ʧr̩̂n	ʧ r̩̂ n		BLACK_ADJ_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			BLACK_ADJ		ʧjêran	ʧ j ê r a n		BLACK_ADJ_1			
@@ -2061,7 +2169,8 @@ Proto-Slavic	Proto-Slavic			GOOD_ADJ	dòbrъ	dǒbrŭ	d ǒ b r ŭ		GOOD_ADJ_1
 Old Church Slavonic	Old Church Slavonic			GOOD_ADJ	добръ	dˈɔbrʊ	d ˈɔ b r ʊ		GOOD_ADJ_1			
 Bulgarian	Bulgarian			GOOD_ADJ	добър	dobˈɤr	d o b ˈɤ r		GOOD_ADJ_1			
 Macedonian	Macedonian			GOOD_ADJ	добар	dˈobar	d ˈo b a r		GOOD_ADJ_1			
-Štokavian	Štokavian			GOOD_ADJ	dȍbar	dôbar	d ô b a r		GOOD_ADJ_1			
+Standard Serbian	Standard Serbian			GOOD_ADJ	до̏бар	dôbar	d ô b a r		GOOD_ADJ_1			
+Standard Croatian	Standard Croatian			GOOD_ADJ	dȍbar	dôbar	d ô b a r		GOOD_ADJ_1			
 Čakavian	Čakavian			GOOD_ADJ	dȍbar	dôbar	d ô b a r		GOOD_ADJ_1			
 Slovenian	Slovenian			GOOD_ADJ	dọ́bər	dòːbər	d òː b ə r		GOOD_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			GOOD_ADJ		dˈɔbar	d ˈɔ b a r		GOOD_ADJ_1			
@@ -2080,7 +2189,8 @@ Belarusian	Belarusian			GOOD_ADJ	добры	dˈobrɨ	d ˈo b r ɨ		GOOD_ADJ_2
 Proto-Slavic	Proto-Slavic			TREE_NOUN	drъ̏vo	drŭ̂vo	d r ŭ̂ v o		TREE_NOUN_2			
 Bulgarian	Bulgarian			TREE_NOUN	дърво	dɐrvˈɔ	d ɐ r v ˈɔ		TREE_NOUN_2			
 Macedonian	Macedonian			TREE_NOUN	дрво	dˈr̩vo	d ˈr̩ v o		TREE_NOUN_2			
-Štokavian	Štokavian			TREE_NOUN	dȑvo	dr̩̂ʋo	d r̩̂ ʋ o		TREE_NOUN_2			
+Standard Serbian	Standard Serbian			TREE_NOUN	др̏во	dr̩̂ʋo	d r̩̂ ʋ o		TREE_NOUN_2			
+Standard Croatian	Standard Croatian			TREE_NOUN	dȑvo	dr̩̂ʋo	d r̩̂ ʋ o		TREE_NOUN_2			
 Proto-Slavic	Proto-Slavic			DAUGHTER_NOUN	dъťьkà	dŭtʲkǎ	d ŭ tʲ k ǎ		DAUGHTER_NOUN_2			
 Macedonian	Macedonian			DAUGHTER_NOUN	ќерка	cˈɛrka	c ˈɛ r k a		DAUGHTER_NOUN_2			
 Ukrainian	Ukrainian			DAUGHTER_NOUN	дочка	dɔʧkˈɑ	d ɔ ʧ k ˈɑ		DAUGHTER_NOUN_2			
@@ -2089,7 +2199,8 @@ Proto-Slavic	Proto-Slavic			RAIN_NOUN	dъ̀ždžь	dŭ̌ʒʤĭ	d ŭ̌ ʒ ʤ i
 Old Church Slavonic	Old Church Slavonic			RAIN_NOUN	дъждь	dˈʊʒdɪ	d ˈʊ ʒ d ɪ		RAIN_NOUN_1			
 Bulgarian	Bulgarian			RAIN_NOUN	дъжд	dˈɤʒ̊d̥	d ˈɤ ʒ̊ d̥		RAIN_NOUN_1			
 Macedonian	Macedonian			RAIN_NOUN	дожд	dˈoʒ̊d̥	d ˈo ʒ̊ d̥		RAIN_NOUN_1			
-Štokavian	Štokavian			RAIN_NOUN	dȁžd	dâʒd	d â ʒ d		RAIN_NOUN_1			
+Standard Serbian	Standard Serbian			RAIN_NOUN	дȁжд	dâʒd	d â ʒ d		RAIN_NOUN_1			
+Standard Croatian	Standard Croatian			RAIN_NOUN	dȁžd	dâʒd	d â ʒ d		RAIN_NOUN_1			
 Čakavian	Čakavian			RAIN_NOUN	dȁž	dâʒ̊	d â ʒ̊		RAIN_NOUN_1			
 Slovenian	Slovenian			RAIN_NOUN	də̏ž	də́ʒ̊	d ə́ ʒ̊		RAIN_NOUN_1			
 Slovak	Slovak			RAIN_NOUN	dážď	dˈaːʒ̊ɟ̊	d ˈaː ʒ̊ ɟ̊		RAIN_NOUN_1			
@@ -2122,7 +2233,8 @@ Proto-Slavic	Proto-Slavic			DAY_NOUN	dь̏nь	dînĭ	d î n ĭ		DAY_NOUN_1
 Old Church Slavonic	Old Church Slavonic			DAY_NOUN	дьнь	dˈɪnɪ	d ˈɪ n ɪ		DAY_NOUN_1			
 Bulgarian	Bulgarian			DAY_NOUN	ден	dˈɛn	d ˈɛ n		DAY_NOUN_1			
 Macedonian	Macedonian			DAY_NOUN	ден	dˈɛn	d ˈɛ n		DAY_NOUN_1			
-Štokavian	Štokavian			DAY_NOUN	dȃn	dâːn	d âː n		DAY_NOUN_1			
+Standard Serbian	Standard Serbian			DAY_NOUN	дȃн	dâːn	d âː n		DAY_NOUN_1			
+Standard Croatian	Standard Croatian			DAY_NOUN	dȃn	dâːn	d âː n		DAY_NOUN_1			
 Čakavian	Čakavian			DAY_NOUN	dȃn	dâːn	d âː n		DAY_NOUN_1			
 Slovenian	Slovenian			DAY_NOUN	dȃn	dáːn	d áː n		DAY_NOUN_1			
 Slovak	Slovak			DAY_NOUN	deň	ɟˈɛɲ	ɟ ˈɛ ɲ		DAY_NOUN_1			
@@ -2150,7 +2262,8 @@ Proto-Slavic	Proto-Slavic			TONGUE_NOUN	ęzy̋kъ	ẽzɨˀkŭ	ẽ z ɨˀ k ŭ	
 Old Church Slavonic	Old Church Slavonic			TONGUE_NOUN	ѩзꙑкъ	jɛ̃zˈɯkʊ	j ɛ̃ z ˈɯ k ʊ		TONGUE_NOUN_1			
 Bulgarian	Bulgarian			TONGUE_NOUN	език	ɛzˈik	ɛ z ˈi k		TONGUE_NOUN_1			
 Macedonian	Macedonian			TONGUE_NOUN	јазик	jˈazik	j ˈa z i k		TONGUE_NOUN_1			
-Štokavian	Štokavian			TONGUE_NOUN	jèzik	jězik	j ě z i k		TONGUE_NOUN_1			
+Standard Serbian	Standard Serbian			TONGUE_NOUN	јèзик	jězik	j ě z i k		TONGUE_NOUN_1			
+Standard Croatian	Standard Croatian			TONGUE_NOUN	jèzik	jězik	j ě z i k		TONGUE_NOUN_1			
 Čakavian	Čakavian			TONGUE_NOUN	jazȉk	jazîk	j a z î k		TONGUE_NOUN_1			
 Slovenian	Slovenian			TONGUE_NOUN	jézik	jɛ̀ːzik	j ɛ̀ː z i k		TONGUE_NOUN_1			
 Slovak	Slovak			TONGUE_NOUN	jazyk	jˈazik	j ˈa z i k		TONGUE_NOUN_1			
@@ -2167,7 +2280,8 @@ Russian	Russian			TONGUE_NOUN	язык	jɪzˈɨk	j ɪ z ˈɨ k		TONGUE_NOUN_1
 Čakavian (Burgenland)	Čakavian (Burgenland)			TONGUE_NOUN		jˈɛziːk	j ˈɛ z iː k		TONGUE_NOUN_1			
 Kajkavian	Kajkavian			TONGUE_NOUN		jˈæzik	j ˈæ z i k		TONGUE_NOUN_1			
 Proto-Slavic	Proto-Slavic			SMOOTH_ADJ	glàdъkъjь	ɡlaˀdŭkŭjĭ	ɡ l aˀ d ŭ k ŭ j ĭ		SMOOTH_ADJ_2			
-Štokavian	Štokavian			SMOOTH_ADJ	glàtkī	ɡlǎd̥kiː	ɡ l ǎ d̥ k iː		SMOOTH_ADJ_2			
+Standard Serbian	Standard Serbian			SMOOTH_ADJ	глàткӣ	ɡlǎd̥kiː	ɡ l ǎ d̥ k iː		SMOOTH_ADJ_2			
+Standard Croatian	Standard Croatian			SMOOTH_ADJ	glàtkī	ɡlǎd̥kiː	ɡ l ǎ d̥ k iː		SMOOTH_ADJ_2			
 Slovak	Slovak			SMOOTH_ADJ	hladký	ɦɫˈad̥kiː	ɦ ɫ ˈa d̥ k iː		SMOOTH_ADJ_2			
 Czech	Czech			SMOOTH_ADJ	hladký	ɦlˈad̥kiː	ɦ l ˈa d̥ k iː		SMOOTH_ADJ_2			
 Upper Sorbian	Upper Sorbian			SMOOTH_ADJ	hładki	ɦwˈad̥kʲi	ɦ w ˈa d̥ kʲ i		SMOOTH_ADJ_2			
@@ -2178,10 +2292,11 @@ Ukrainian	Ukrainian			SMOOTH_ADJ	гладкий	ɦɫɐdkˈɪj	ɦ ɫ ɐ d k ˈɪ 
 Ukrainian	Ukrainian			SMOOTH_ADJ	гладкий	ɦɫˈɑdkej	ɦ ɫ ˈɑ d k e j		SMOOTH_ADJ_2			
 Belarusian	Belarusian			SMOOTH_ADJ	гладкі	ɣɫˈad̥ʲkʲi	ɣ ɫ ˈa d̥ʲ kʲ i		SMOOTH_ADJ_2			
 Russian	Russian			SMOOTH_ADJ	гладкий	ɡɫˈad̥kʲɪj	ɡ ɫ ˈa d̥ kʲ ɪ j		SMOOTH_ADJ_2			
-Proto-Slavic	Proto-Slavic			STUPID_ADJ	glũpъ	ɡlǔːpŭ	ɡ l ǔː p ŭ		STUPID_ADJ_1			
+Proto-Slavic	Proto-Slavic			STUPID_ADJ	glũpъ	ɡlûːpŭ	ɡ l ûː p ŭ		STUPID_ADJ_1			
 Bulgarian	Bulgarian			STUPID_ADJ	глуп	ɡɫˈup	ɡ ɫ ˈu p		STUPID_ADJ_1			
 Macedonian	Macedonian			STUPID_ADJ	глуп	ɡɫˈup	ɡ ɫ ˈu p		STUPID_ADJ_1			
-Štokavian	Štokavian			STUPID_ADJ	glȗp	ɡlûːp	ɡ l ûː p		STUPID_ADJ_1			
+Standard Serbian	Standard Serbian			STUPID_ADJ	глу̂п	ɡlûːp	ɡ l ûː p		STUPID_ADJ_1			
+Standard Croatian	Standard Croatian			STUPID_ADJ	glȗp	ɡlûːp	ɡ l ûː p		STUPID_ADJ_1			
 Čakavian	Čakavian			STUPID_ADJ	glȗp	ɡlûːp	ɡ l ûː p		STUPID_ADJ_1			
 Slovenian	Slovenian			STUPID_ADJ	glȗp	ɡlúːp	ɡ l úː p		STUPID_ADJ_1			
 Proto-Slavic	Proto-Slavic			STUPID_ADJ	glũpъjь	ɡlǔːpŭjĭ	ɡ l ǔː p ŭ j ĭ		STUPID_ADJ_2			
@@ -2205,7 +2320,8 @@ Proto-Slavic	Proto-Slavic			HOUR_NOUN	godina	ɡodina	ɡ o d i n a		HOUR_NOUN_1
 Old Church Slavonic	Old Church Slavonic			HOUR_NOUN	година	ɡɔdˈinɑ	ɡ ɔ d ˈi n ɑ		HOUR_NOUN_1			
 Bulgarian	Bulgarian			HOUR_NOUN	година	ɡodˈinɐ	ɡ o d ˈi n ɐ		HOUR_NOUN_1			
 Macedonian	Macedonian			HOUR_NOUN	година	ɡˈodina	ɡ ˈo d i n a		HOUR_NOUN_1			
-Štokavian	Štokavian			HOUR_NOUN	gȍdina	ɡôdina	ɡ ô d i n a		HOUR_NOUN_1			
+Standard Serbian	Standard Serbian			HOUR_NOUN	го̏дина	ɡôdina	ɡ ô d i n a		HOUR_NOUN_1			
+Standard Croatian	Standard Croatian			HOUR_NOUN	gȍdina	ɡôdina	ɡ ô d i n a		HOUR_NOUN_1			
 Čakavian	Čakavian			HOUR_NOUN	gȍdina	ɡôdina	ɡ ô d i n a		HOUR_NOUN_1			
 Slovak	Slovak			HOUR_NOUN	hodina	ɦˈɔɟina	ɦ ˈɔ ɟ i n a		HOUR_NOUN_1			
 Czech	Czech			HOUR_NOUN	hodina	ɦˈoɟɪna	ɦ ˈo ɟ ɪ n a		HOUR_NOUN_1			
@@ -2220,7 +2336,8 @@ Proto-Slavic	Proto-Slavic			DOVE_NOUN	gȍlǭbь	ɡôlõːbĭ	ɡ ô l õː b
 Old Church Slavonic	Old Church Slavonic			DOVE_NOUN	голѫбь	ɡˈɔlɔ̃bɪ	ɡ ˈɔ l ɔ̃ b ɪ		DOVE_NOUN_1			
 Bulgarian	Bulgarian			DOVE_NOUN	гълъб	ɡˈɤɫɐb̥	ɡ ˈɤ ɫ ɐ b̥		DOVE_NOUN_1			
 Macedonian	Macedonian			DOVE_NOUN	гулаб	ɡˈuɫab̥	ɡ ˈu ɫ a b̥		DOVE_NOUN_1			
-Štokavian	Štokavian			DOVE_NOUN	gȍlūb	ɡôluːb	ɡ ô l uː b		DOVE_NOUN_1			
+Standard Serbian	Standard Serbian			DOVE_NOUN	го̏лӯб	ɡôluːb	ɡ ô l uː b		DOVE_NOUN_1			
+Standard Croatian	Standard Croatian			DOVE_NOUN	gȍlūb	ɡôluːb	ɡ ô l uː b		DOVE_NOUN_1			
 Čakavian	Čakavian			DOVE_NOUN	gȍlūb	ɡôluːb̥	ɡ ô l uː b̥		DOVE_NOUN_1			
 Slovenian	Slovenian			DOVE_NOUN	golọ̑b	ɡɔlóːb̥	ɡ ɔ l óː b̥		DOVE_NOUN_1			
 Slovak	Slovak			DOVE_NOUN	holub	ɦˈɔɫub̥	ɦ ˈɔ ɫ u b̥		DOVE_NOUN_1			
@@ -2237,7 +2354,8 @@ Proto-Slavic	Proto-Slavic			NAME_NOUN	jь̏mę	jĭ̂mẽ	j ĭ̂ m ẽ		NAME_NO
 Old Church Slavonic	Old Church Slavonic			NAME_NOUN	имѧ	ˈimɛ̃	ˈi m ɛ̃		NAME_NOUN_1			
 Bulgarian	Bulgarian			NAME_NOUN	име	ˈimɛ	ˈi m ɛ		NAME_NOUN_1			
 Macedonian	Macedonian			NAME_NOUN	име	ˈimɛ	ˈi m ɛ		NAME_NOUN_1			
-Štokavian	Štokavian			NAME_NOUN	ȉme	îme	î m e		NAME_NOUN_1			
+Standard Serbian	Standard Serbian			NAME_NOUN	и̏ме	îme	î m e		NAME_NOUN_1			
+Standard Croatian	Standard Croatian			NAME_NOUN	ȉme	îme	î m e		NAME_NOUN_1			
 Čakavian	Čakavian			NAME_NOUN	ȉme	îme	î m e		NAME_NOUN_1			
 Slovenian	Slovenian			NAME_NOUN	imẹ̑	iméː	i m éː		NAME_NOUN_1			
 Slovak	Slovak			NAME_NOUN	meno	mˈɛnɔ	m ˈɛ n ɔ		NAME_NOUN_1			
@@ -2261,7 +2379,8 @@ Proto-Slavic	Proto-Slavic			KNEE_NOUN	kolě̋no	kolɛːˀno	k o l ɛːˀ n o		KN
 Old Church Slavonic	Old Church Slavonic			KNEE_NOUN	колѣно	kɔlˈænɔ	k ɔ l ˈæ n ɔ		KNEE_NOUN_1			
 Bulgarian	Bulgarian			KNEE_NOUN	коляно	kolʲˈano	k o lʲ ˈa n o		KNEE_NOUN_1			
 Macedonian	Macedonian			KNEE_NOUN	колено	kˈolɛno	k ˈo l ɛ n o		KNEE_NOUN_1			
-Štokavian	Štokavian			KNEE_NOUN	kòljeno	kǒljeno	k ǒ l j e n o		KNEE_NOUN_1			
+Standard Serbian	Standard Serbian			KNEE_NOUN	кòлено	kǒleno	k ǒ l e n o		KNEE_NOUN_1			
+Standard Croatian	Standard Croatian			KNEE_NOUN	kòljeno	kǒljeno	k ǒ l j e n o		KNEE_NOUN_1			
 Čakavian	Čakavian			KNEE_NOUN	kolȉno	kolîno	k o l î n o		KNEE_NOUN_1			
 Slovenian	Slovenian			KNEE_NOUN	kolẹ́no	kolèːnɔ	k o l èː n ɔ		KNEE_NOUN_1			
 Slovak	Slovak			KNEE_NOUN	koleno	kˈɔlɛnɔ	k ˈɔ l ɛ n ɔ		KNEE_NOUN_1			
@@ -2281,7 +2400,8 @@ Proto-Slavic	Proto-Slavic			HORSE_NOUN	kòňь	kǒɲĭ	k ǒ ɲ ĭ		HORSE_NOU
 Old Church Slavonic	Old Church Slavonic			HORSE_NOUN	кон҄ь	kˈɔnʲɪ	k ˈɔ nʲ ɪ		HORSE_NOUN_1			
 Bulgarian	Bulgarian			HORSE_NOUN	кон	kˈɔn	k ˈɔ n		HORSE_NOUN_1			
 Macedonian	Macedonian			HORSE_NOUN	коњ	kˈoɲ	k ˈo ɲ		HORSE_NOUN_1			
-Štokavian	Štokavian			HORSE_NOUN	kȍnj	kôɲ	k ô ɲ		HORSE_NOUN_1			
+Standard Serbian	Standard Serbian			HORSE_NOUN	ко̏њ	kôɲ	k ô ɲ		HORSE_NOUN_1			
+Standard Croatian	Standard Croatian			HORSE_NOUN	kȍnj	kôɲ	k ô ɲ		HORSE_NOUN_1			
 Čakavian	Čakavian			HORSE_NOUN	kõnj	kǒːɲ	k ǒː ɲ		HORSE_NOUN_1			
 Slovenian	Slovenian			HORSE_NOUN	kȍnj	kɔ́n	k ɔ́ n		HORSE_NOUN_1			
 Slovak	Slovak			HORSE_NOUN	kôň	kʊ̯ˈɔɲ	k ʊ̯ˈɔ ɲ		HORSE_NOUN_1			
@@ -2299,7 +2419,8 @@ Proto-Slavic	Proto-Slavic			ROOT_NOUN	kȍrě̄nь	kôrɛːnĭ	k ô r ɛː n 
 Old Church Slavonic	Old Church Slavonic			ROOT_NOUN	корень	kˈɔrɛnɪ	k ˈɔ r ɛ n ɪ		ROOT_NOUN_1			
 Bulgarian	Bulgarian			ROOT_NOUN	корен	kˈɔrɛn	k ˈɔ r ɛ n		ROOT_NOUN_1			
 Macedonian	Macedonian			ROOT_NOUN	корен	kˈorɛn	k ˈo r ɛ n		ROOT_NOUN_1			
-Štokavian	Štokavian			ROOT_NOUN	kȍrijēn	kôrjeːn	k ô r j eː n		ROOT_NOUN_1			
+Standard Serbian	Standard Serbian			ROOT_NOUN	ко̏рēн	kôreːn	k ô r eː n		ROOT_NOUN_1			
+Standard Croatian	Standard Croatian			ROOT_NOUN	kȍrijēn	kôrjeːn	k ô r j eː n		ROOT_NOUN_1			
 Čakavian	Čakavian			ROOT_NOUN	kȍren	kôren	k ô r e n		ROOT_NOUN_1			
 Slovenian	Slovenian			ROOT_NOUN	korẹ̑n	koréːn	k o r éː n		ROOT_NOUN_1			
 Slovak	Slovak			ROOT_NOUN	koreň	kˈɔrɛɲ	k ˈɔ r ɛ ɲ		ROOT_NOUN_1			
@@ -2320,7 +2441,8 @@ Latvian	Latvian			KING_NOUN	karalis	kˈaralis	k ˈa r a l i s		KING_NOUN_1	TRUE
 Proto-Slavic	Proto-Slavic			KING_NOUN	kõrľь	kǒːrʎŭ	k ǒː r ʎ ŭ		KING_NOUN_1			
 Bulgarian	Bulgarian			KING_NOUN	крал	krˈaɫ	k r ˈa ɫ		KING_NOUN_1			
 Macedonian	Macedonian			KING_NOUN	крал	krˈaɫ	k r ˈa ɫ		KING_NOUN_1			
-Štokavian	Štokavian			KING_NOUN	krȃlj	krâːʎ	k r âː ʎ		KING_NOUN_1			
+Standard Serbian	Standard Serbian			KING_NOUN	крȃљ	krâːʎ	k r âː ʎ		KING_NOUN_1			
+Standard Croatian	Standard Croatian			KING_NOUN	krȃlj	krâːʎ	k r âː ʎ		KING_NOUN_1			
 Čakavian	Čakavian			KING_NOUN	krãlj	krǎːl	k r ǎː l		KING_NOUN_1			
 Slovenian	Slovenian			KING_NOUN	králj	kràːl	k r àː l		KING_NOUN_1			
 Slovak	Slovak			KING_NOUN	kráľ	krˈaːʎ	k r ˈaː ʎ		KING_NOUN_1			
@@ -2336,7 +2458,8 @@ Proto-Slavic	Proto-Slavic			BONE_NOUN	kȍstь	kôstĭ	k ô s t ĭ		BONE_NOUN
 Old Church Slavonic	Old Church Slavonic			BONE_NOUN	кость	kˈɔstɪ	k ˈɔ s t ɪ		BONE_NOUN_1			
 Bulgarian	Bulgarian			BONE_NOUN	кост	kˈɔst	k ˈɔ s t		BONE_NOUN_1			
 Macedonian	Macedonian			BONE_NOUN	 коска	kˈoska	k ˈo s k a		BONE_NOUN_1			
-Štokavian	Štokavian			BONE_NOUN	kȏst	kôːst	k ôː s t		BONE_NOUN_1			
+Standard Serbian	Standard Serbian			BONE_NOUN	ко̂ст	kôːst	k ôː s t		BONE_NOUN_1			
+Standard Croatian	Standard Croatian			BONE_NOUN	kȏst	kôːst	k ôː s t		BONE_NOUN_1			
 Čakavian	Čakavian			BONE_NOUN	kȏst	kôːst	k ôː s t		BONE_NOUN_1			
 Slovenian	Slovenian			BONE_NOUN	kọ̑st	kóːst	k óː s t		BONE_NOUN_1			
 Slovak	Slovak			BONE_NOUN	kosť	kˈɔsc	k ˈɔ s c		BONE_NOUN_1			
@@ -2356,7 +2479,8 @@ Proto-Slavic	Proto-Slavic			SKIN_NOUN	kòža	kǒʒa	k ǒ ʒ a		SKIN_NOUN_1
 Old Church Slavonic	Old Church Slavonic			SKIN_NOUN	кожа	kˈɔʒɑ	k ˈɔ ʒ ɑ		SKIN_NOUN_1			
 Bulgarian	Bulgarian			SKIN_NOUN	кожа	kˈɔʒɐ	k ˈɔ ʒ ɐ		SKIN_NOUN_1			
 Macedonian	Macedonian			SKIN_NOUN	кожа	kˈoʒa	k ˈo ʒ a		SKIN_NOUN_1			
-Štokavian	Štokavian			SKIN_NOUN	kȍža	kôʒa	k ô ʒ a		SKIN_NOUN_1			
+Standard Serbian	Standard Serbian			SKIN_NOUN	ко̏жа	kôʒa	k ô ʒ a		SKIN_NOUN_1			
+Standard Croatian	Standard Croatian			SKIN_NOUN	kȍža	kôʒa	k ô ʒ a		SKIN_NOUN_1			
 Čakavian	Čakavian			SKIN_NOUN	kȍža	kôʒa	k ô ʒ a		SKIN_NOUN_1			
 Slovenian	Slovenian			SKIN_NOUN	kọ́ža	kòːʒa	k òː ʒ a		SKIN_NOUN_1			
 Slovak	Slovak			SKIN_NOUN	koža	kˈɔʒa	k ˈɔ ʒ a		SKIN_NOUN_1			
@@ -2372,7 +2496,8 @@ Proto-Slavic	Proto-Slavic			WING_NOUN	krīdlò	kriːdlǒ	k r iː d l ǒ		WING_
 Old Church Slavonic	Old Church Slavonic			WING_NOUN	крило	krilˈɔ	k r i l ˈɔ		WING_NOUN_1			
 Bulgarian	Bulgarian			WING_NOUN	крило	kriɫˈɔ	k r i ɫ ˈɔ		WING_NOUN_1			
 Macedonian	Macedonian			WING_NOUN	крило	krˈiɫo	k r ˈi ɫ o		WING_NOUN_1			
-Štokavian	Štokavian			WING_NOUN	krílo	krǐːlo	k r ǐː l o		WING_NOUN_1			
+Standard Serbian	Standard Serbian			WING_NOUN	кри́ло	krǐːlo	k r ǐː l o		WING_NOUN_1			
+Standard Croatian	Standard Croatian			WING_NOUN	krílo	krǐːlo	k r ǐː l o		WING_NOUN_1			
 Čakavian	Čakavian			WING_NOUN	krīlȍ	kriːlô	k r iː l ô		WING_NOUN_1			
 Slovenian	Slovenian			WING_NOUN	krílo	krìːlɔ	k r ìː l ɔ		WING_NOUN_1			
 Slovak	Slovak			WING_NOUN	krídlo	krˈiːdɫɔ	k r ˈiː d ɫ ɔ		WING_NOUN_1			
@@ -2415,7 +2540,8 @@ Proto-Slavic	Proto-Slavic			LEAF_NOUN	lȋstъ	lîːstŭ	l îː s t ŭ		LEAF_
 Old Church Slavonic	Old Church Slavonic			LEAF_NOUN	листъ	lˈistʊ	l ˈi s t ʊ		LEAF_NOUN_1			
 Bulgarian	Bulgarian			LEAF_NOUN	лист	lˈist	l ˈi s t		LEAF_NOUN_1			
 Macedonian	Macedonian			LEAF_NOUN	лист	lˈist	l ˈi s t		LEAF_NOUN_1			
-Štokavian	Štokavian			LEAF_NOUN	lȋst	lîːst	l îː s t		LEAF_NOUN_1			
+Standard Serbian	Standard Serbian			LEAF_NOUN	ли̂ст	lîːst	l îː s t		LEAF_NOUN_1			
+Standard Croatian	Standard Croatian			LEAF_NOUN	lȋst	lîːst	l îː s t		LEAF_NOUN_1			
 Čakavian	Čakavian			LEAF_NOUN	lȋst	lîːst	l îː s t		LEAF_NOUN_1			
 Slovenian	Slovenian			LEAF_NOUN	lȋst	líːst	l íː s t		LEAF_NOUN_1			
 Slovak	Slovak			LEAF_NOUN	list	lˈist	l ˈi s t		LEAF_NOUN_1			
@@ -2434,7 +2560,8 @@ Proto-Slavic	Proto-Slavic			LION_NOUN	lь̀vъ	lĭ̌vŭ	l ĭ̌ v ŭ		LION_NO
 Old Church Slavonic	Old Church Slavonic			LION_NOUN	львъ	lˈɪvʊ	l ˈɪ v ʊ		LION_NOUN_1			
 Bulgarian	Bulgarian			LION_NOUN	лъв	ɫˈɤf	ɫ ˈɤ f		LION_NOUN_1			
 Macedonian	Macedonian			LION_NOUN	лав	ɫˈaf	ɫ ˈa f		LION_NOUN_1			
-Štokavian	Štokavian			LION_NOUN	lȁv	lâʋ	l â ʋ		LION_NOUN_1			
+Standard Serbian	Standard Serbian			LION_NOUN	лȁв	lâʋ	l â ʋ		LION_NOUN_1			
+Standard Croatian	Standard Croatian			LION_NOUN	lȁv	lâʋ	l â ʋ		LION_NOUN_1			
 Slovenian	Slovenian			LION_NOUN	lȅv	lɛ́ʋ	l ɛ́ ʋ		LION_NOUN_1			
 Slovak	Slovak			LION_NOUN	lev	lˈɛʋ	l ˈɛ ʋ		LION_NOUN_1			
 Czech	Czech			LION_NOUN	lev	lˈɛf	l ˈɛ f		LION_NOUN_1			
@@ -2449,7 +2576,8 @@ Proto-Slavic	Proto-Slavic			MILK_NOUN	mělkò	mɛlkǒ	m ɛ l k ǒ		MILK_NOUN_
 Old Church Slavonic	Old Church Slavonic			MILK_NOUN	млѣко	mlækˈɔ	m l æ k ˈɔ		MILK_NOUN_1			
 Bulgarian	Bulgarian			MILK_NOUN	мляко	mlʲˈako	m lʲ ˈa k o		MILK_NOUN_1			
 Macedonian	Macedonian			MILK_NOUN	млеко	mlˈɛko	m l ˈɛ k o		MILK_NOUN_1			
-Štokavian	Štokavian			MILK_NOUN	mlijéko	mljěːko	m l j ěː k o		MILK_NOUN_1			
+Standard Serbian	Standard Serbian			MILK_NOUN	млéко	mlěːko	m l ěː k o		MILK_NOUN_1			
+Standard Croatian	Standard Croatian			MILK_NOUN	mlijéko	mljěːko	m l j ěː k o		MILK_NOUN_1			
 Čakavian	Čakavian			MILK_NOUN	mlīkȍ	mliːkô	m l iː k ô		MILK_NOUN_1			
 Slovenian	Slovenian			MILK_NOUN	mlẹ́ko	mlèːkɔ	m l èː k ɔ		MILK_NOUN_1			
 Slovak	Slovak			MILK_NOUN	mlieko	mlɪ̯ˈɛkɔ	m l ɪ̯ˈɛ k ɔ		MILK_NOUN_1			
@@ -2465,12 +2593,13 @@ Russian	Russian			MILK_NOUN	молоко	məɫɐkˈo	m ə ɫ ɐ k ˈo		MILK_NOUN
 Lithuanian	Lithuanian			MONTH_NOUN	mė́nesis	mʲêːnʲɛsʲɪs	mʲ êː nʲ ɛ sʲ ɪ s		MONTH_NOUN_1			
 Latvian	Latvian			MONTH_NOUN	mēness	mˈɛːness	m ˈɛː n e s s		MONTH_NOUN_1			
 Old Prussian	Old Prussian			MONTH_NOUN	menig	meniɡ	m e n i ɡ		MONTH_NOUN_1			
-Proto-Slavic	Proto-Slavic			MONTH_NOUN	mě̀sę̄cь	mɛːˀsẽːʦĭ	m ɛːˀ s ẽː ʦ ĭ		MONTH_NOUN_1			
+Proto-Slavic	Proto-Slavic			MONTH_NOUN	mě̀sę̄cь	mɛ̌ːsẽːʦĭ	m ɛ̌ː s ẽː ʦ ĭ		MONTH_NOUN_1			
 Old Church Slavonic	Old Church Slavonic			MONTH_NOUN	мѣсѧць	mˈæsɛ̃ʦɪ	m ˈæ s ɛ̃ ʦ ɪ		MONTH_NOUN_1			
 Bulgarian	Bulgarian			MONTH_NOUN	месец	mˈɛsɛʦ	m ˈɛ s ɛ ʦ		MONTH_NOUN_1			
 Macedonian	Macedonian			MONTH_NOUN	месец	mˈɛsɛʦ	m ˈɛ s ɛ ʦ		MONTH_NOUN_1			
-Štokavian	Štokavian			MONTH_NOUN	mjȅsēc	mjêseːʦ	m j ê s eː ʦ		MONTH_NOUN_1			
-Čakavian	Čakavian			MONTH_NOUN	mȉsēc	mîseːʦ	m î s eː ʦ		MONTH_NOUN_1			
+Standard Serbian	Standard Serbian			MONTH_NOUN	мȅсēц	mêseːʦ	m ê s eː ʦ		MONTH_NOUN_1			
+Standard Croatian	Standard Croatian			MONTH_NOUN	mjȅsēc	mjêseːʦ	m j ê s eː ʦ		MONTH_NOUN_1			
+Čakavian	Čakavian			MONTH_NOUN	mȉsec	mîseʦ	m î s e ʦ		MONTH_NOUN_1			
 Slovenian	Slovenian			MONTH_NOUN	mẹ̑səc	méːsəʦ	m éː s ə ʦ		MONTH_NOUN_1			
 Slovak	Slovak			MONTH_NOUN	mesiac	mˈɛsɪ̯aʦ	m ˈɛ s ɪ̯a ʦ		MONTH_NOUN_1			
 Czech	Czech			MONTH_NOUN	měsíc	mɲˈɛsiːʦ	m ɲ ˈɛ s iː ʦ		MONTH_NOUN_1			
@@ -2488,7 +2617,8 @@ Proto-Slavic	Proto-Slavic			PLACE_NOUN	mě̀sto	mɛˀsto	m ɛˀ s t o		PLACE_NO
 Old Church Slavonic	Old Church Slavonic			PLACE_NOUN	мѣсто	mˈæstɔ	m ˈæ s t ɔ		PLACE_NOUN_1			
 Bulgarian	Bulgarian			PLACE_NOUN	място	mʲˈasto	mʲ ˈa s t o		PLACE_NOUN_1			
 Macedonian	Macedonian			PLACE_NOUN	место	mˈɛsto	m ˈɛ s t o		PLACE_NOUN_1			
-Štokavian	Štokavian			PLACE_NOUN	mjȅsto	mjêsto	m j ê s t o		PLACE_NOUN_1			
+Standard Serbian	Standard Serbian			PLACE_NOUN	мȅсто	mêsto	m ê s t o		PLACE_NOUN_1			
+Standard Croatian	Standard Croatian			PLACE_NOUN	mjȅsto	mjêsto	m j ê s t o		PLACE_NOUN_1			
 Čakavian	Čakavian			PLACE_NOUN	mȉsto	mîsto	m î s t o		PLACE_NOUN_1			
 Slovenian	Slovenian			PLACE_NOUN	mẹ́sto	mèːstɔ	m èː s t ɔ		PLACE_NOUN_1			
 Slovak	Slovak			PLACE_NOUN	miesto	mɪ̯ˈɛstɔ	m ɪ̯ˈɛ s t ɔ		PLACE_NOUN_1			
@@ -2515,7 +2645,8 @@ Proto-Slavic	Proto-Slavic			SEA_NOUN	mȍře	môrʲe	m ô rʲ e		SEA_NOUN_1
 Old Church Slavonic	Old Church Slavonic			SEA_NOUN	морѥ	mˈɔrʲɛ	m ˈɔ rʲ ɛ		SEA_NOUN_1			
 Bulgarian	Bulgarian			SEA_NOUN	море	morˈɛ	m o r ˈɛ		SEA_NOUN_1			
 Macedonian	Macedonian			SEA_NOUN	море	mˈorɛ	m ˈo r ɛ		SEA_NOUN_1			
-Štokavian	Štokavian			SEA_NOUN	mȏre	môːre	m ôː r e		SEA_NOUN_1			
+Standard Serbian	Standard Serbian			SEA_NOUN	мо̂ре	môːre	m ôː r e		SEA_NOUN_1			
+Standard Croatian	Standard Croatian			SEA_NOUN	mȏre	môːre	m ôː r e		SEA_NOUN_1			
 Čakavian	Čakavian			SEA_NOUN	mȏre	môːre	m ôː r e		SEA_NOUN_1			
 Slovenian	Slovenian			SEA_NOUN	mọ̑rje	móːrjɛ	m óː r j ɛ		SEA_NOUN_1			
 Slovenian	Slovenian			SEA_NOUN	morjẹ̑	mɔrjéː	m ɔ r j éː		SEA_NOUN_1			
@@ -2532,7 +2663,8 @@ Proto-Slavic	Proto-Slavic			THOUGHT_NOUN	my̑slь	mɨ̂ːslĭ	m ɨ̂ː s l ĭ	
 Old Church Slavonic	Old Church Slavonic			THOUGHT_NOUN	мꙑсль	mˈɯslɪ	m ˈɯ s l ɪ		THOUGHT_NOUN_1			
 Bulgarian	Bulgarian			THOUGHT_NOUN	мисъл	mˈisɐɫ	m ˈi s ɐ ɫ		THOUGHT_NOUN_1			
 Macedonian	Macedonian			THOUGHT_NOUN	мисла	mˈisɫa	m ˈi s ɫ a		THOUGHT_NOUN_1			
-Štokavian	Štokavian			THOUGHT_NOUN	mȋsao	mîːsao	m îː s a o		THOUGHT_NOUN_1			
+Standard Serbian	Standard Serbian			THOUGHT_NOUN	ми̂сао	mîːsao	m îː s a o		THOUGHT_NOUN_1			
+Standard Croatian	Standard Croatian			THOUGHT_NOUN	mȋsao	mîːsao	m îː s a o		THOUGHT_NOUN_1			
 Čakavian	Čakavian			THOUGHT_NOUN	mȋsal	mîːsal	m îː s a l		THOUGHT_NOUN_1			
 Slovenian	Slovenian			THOUGHT_NOUN	mȋsəł	míːsəw	m íː s ə w		THOUGHT_NOUN_1			
 Slovak	Slovak			THOUGHT_NOUN	myseľ	mˈisɛʎ	m ˈi s ɛ ʎ		THOUGHT_NOUN_1			
@@ -2545,7 +2677,8 @@ Ukrainian	Ukrainian			THOUGHT_NOUN	мисль	mˈɪsʲlʲ	m ˈɪ sʲ lʲ		THOUGH
 Belarusian	Belarusian			THOUGHT_NOUN	мысль	mˈɨsʲlʲ	m ˈɨ sʲ lʲ		THOUGHT_NOUN_1			
 Russian	Russian			THOUGHT_NOUN	мысль	mˈɨsʲlʲ	m ˈɨ sʲ lʲ		THOUGHT_NOUN_1			
 Proto-Slavic	Proto-Slavic			DEAD_ADJ	mь̃rtvъjь	mĭ̌ːrtvŭjĭ	m ĭ̌ː r t v ŭ j ĭ		DEAD_ADJ_2			
-Štokavian	Štokavian			DEAD_ADJ	mȓtvī	mr̩̂ːtʋiː	m r̩̂ː t ʋ iː		DEAD_ADJ_2			
+Standard Serbian	Standard Serbian			DEAD_ADJ	мȓтвӣ	mr̩̂ːtʋiː	m r̩̂ː t ʋ iː		DEAD_ADJ_2			
+Standard Croatian	Standard Croatian			DEAD_ADJ	mȓtvī	mr̩̂ːtʋiː	m r̩̂ː t ʋ iː		DEAD_ADJ_2			
 Slovak	Slovak			DEAD_ADJ	mŕtvy	mˈr̩ːtʋi	m ˈr̩ː t ʋ i		DEAD_ADJ_2			
 Czech	Czech			DEAD_ADJ	mrtvý	mˈr̩tviː	m ˈr̩ t v iː		DEAD_ADJ_2			
 Upper Sorbian	Upper Sorbian			DEAD_ADJ	mortwy	mˈɔʀtwɪ	m ˈɔ ʀ t w ɪ		DEAD_ADJ_2			
@@ -2558,7 +2691,8 @@ Proto-Slavic	Proto-Slavic			BRIDE_NOUN	nevě̀sta	nevɛ̌ːsta	n e v ɛ̌ː s t 
 Old Church Slavonic	Old Church Slavonic			BRIDE_NOUN	невѣста	nɛvˈæstɑ	n ɛ v ˈæ s t ɑ		BRIDE_NOUN_1			
 Bulgarian	Bulgarian			BRIDE_NOUN	невяста	nɛvʲˈastɐ	n ɛ vʲ ˈa s t ɐ		BRIDE_NOUN_1			
 Macedonian	Macedonian			BRIDE_NOUN	невеста	nˈɛvɛsta	n ˈɛ v ɛ s t a		BRIDE_NOUN_1			
-Štokavian	Štokavian			BRIDE_NOUN	nèvjesta	něʋjesta	n ě ʋ j e s t a		BRIDE_NOUN_1			
+Standard Serbian	Standard Serbian			BRIDE_NOUN	нèвеста	něʋesta	n ě ʋ e s t a		BRIDE_NOUN_1			
+Standard Croatian	Standard Croatian			BRIDE_NOUN	nèvjesta	něʋjesta	n ě ʋ j e s t a		BRIDE_NOUN_1			
 Čakavian	Čakavian			BRIDE_NOUN	nevȉsta	neʋîsta	n e ʋ î s t a		BRIDE_NOUN_1			
 Slovenian	Slovenian			BRIDE_NOUN	nevesta	nèːʋɛsta	n èː ʋ ɛ s t a		BRIDE_NOUN_1			
 Slovak	Slovak			BRIDE_NOUN	nevesta	ɲˈɛʋɛsta	ɲ ˈɛ ʋ ɛ s t a		BRIDE_NOUN_1			
@@ -2573,8 +2707,9 @@ Proto-Slavic	Proto-Slavic			CLOUD_NOUN	ȍbolkъ	ôbolkŭ	ô b o l k ŭ		CLOU
 Old Church Slavonic	Old Church Slavonic			CLOUD_NOUN	облакъ	ˈɔblɑkʊ	ˈɔ b l ɑ k ʊ		CLOUD_NOUN_1			
 Bulgarian	Bulgarian			CLOUD_NOUN	облак	ˈɔbɫɐk	ˈɔ b ɫ ɐ k		CLOUD_NOUN_1			
 Macedonian	Macedonian			CLOUD_NOUN	облак	ˈobɫak	ˈo b ɫ a k		CLOUD_NOUN_1			
-Štokavian	Štokavian			CLOUD_NOUN	ȍblāk	ôblaːk	ô b l aː k		CLOUD_NOUN_1			
-Čakavian	Čakavian			CLOUD_NOUN	ȍblāk	ôblaːk	ô b l aː k		CLOUD_NOUN_1			
+Standard Serbian	Standard Serbian			CLOUD_NOUN	о̏блāк	ôblaːk	ô b l aː k		CLOUD_NOUN_1			
+Standard Croatian	Standard Croatian			CLOUD_NOUN	ȍblāk	ôblaːk	ô b l aː k		CLOUD_NOUN_1			
+Čakavian	Čakavian			CLOUD_NOUN	ȍblak	ôblak	ô b l a k		CLOUD_NOUN_1			
 Slovenian	Slovenian			CLOUD_NOUN	oblȃk	obláːk	o b l áː k		CLOUD_NOUN_1			
 Slovak	Slovak			CLOUD_NOUN	oblak	ˈɔbɫak	ˈɔ b ɫ a k		CLOUD_NOUN_1			
 Czech	Czech			CLOUD_NOUN	oblak	ˈoblak	ˈo b l a k		CLOUD_NOUN_1			
@@ -2592,7 +2727,8 @@ Proto-Slavic	Proto-Slavic			EYE_NOUN	ȍko	ôko	ô k o		EYE_NOUN_1
 Old Church Slavonic	Old Church Slavonic			EYE_NOUN	око	ˈɔkɔ	ˈɔ k ɔ		EYE_NOUN_1			
 Bulgarian	Bulgarian			EYE_NOUN	око	okˈɔ	o k ˈɔ		EYE_NOUN_1			
 Macedonian	Macedonian			EYE_NOUN	око	ˈoko	ˈo k o		EYE_NOUN_1			
-Štokavian	Štokavian			EYE_NOUN	ȍko	ôko	ô k o		EYE_NOUN_1			
+Standard Serbian	Standard Serbian			EYE_NOUN	о̏ко	ôko	ô k o		EYE_NOUN_1			
+Standard Croatian	Standard Croatian			EYE_NOUN	ȍko	ôko	ô k o		EYE_NOUN_1			
 Čakavian	Čakavian			EYE_NOUN	ȍko	ôko	ô k o		EYE_NOUN_1			
 Slovenian	Slovenian			EYE_NOUN	okọ̑	okóː	o k óː		EYE_NOUN_1			
 Slovak	Slovak			EYE_NOUN	oko	ˈɔkɔ	ˈɔ k ɔ		EYE_NOUN_1			
@@ -2611,7 +2747,8 @@ Proto-Slavic	Proto-Slavic			ELBOW_NOUN	ȍlkъtь	ôlkŭtĭ	ô l k ŭ t ĭ	
 Old Church Slavonic	Old Church Slavonic			ELBOW_NOUN	лакъть	lˈɑkʊtɪ	l ˈɑ k ʊ t ɪ		ELBOW_NOUN_1			
 Bulgarian	Bulgarian			ELBOW_NOUN	лакът	ɫˈakɐt	ɫ ˈa k ɐ t		ELBOW_NOUN_1			
 Macedonian	Macedonian			ELBOW_NOUN	лакт	ɫˈakt	ɫ ˈa k t		ELBOW_NOUN_1			
-Štokavian	Štokavian			ELBOW_NOUN	lȁkat	lâkat	l â k a t		ELBOW_NOUN_1			
+Standard Serbian	Standard Serbian			ELBOW_NOUN	лȁкат	lâkat	l â k a t		ELBOW_NOUN_1			
+Standard Croatian	Standard Croatian			ELBOW_NOUN	lȁkat	lâkat	l â k a t		ELBOW_NOUN_1			
 Čakavian	Čakavian			ELBOW_NOUN	lȁkat	lâkat	l â k a t		ELBOW_NOUN_1			
 Slovak	Slovak			ELBOW_NOUN	lakeť	ɫˈakɛc	ɫ ˈa k ɛ c		ELBOW_NOUN_1			
 Czech	Czech			ELBOW_NOUN	loket	lˈokɛt	l ˈo k ɛ t		ELBOW_NOUN_1			
@@ -2626,7 +2763,8 @@ Proto-Slavic	Proto-Slavic			GROWTH_NOUN	ȍrstъ	ôrstŭ	ô r s t ŭ		GROWTH_
 Old Church Slavonic	Old Church Slavonic			GROWTH_NOUN	растъ	rˈɑstʊ	r ˈɑ s t ʊ		GROWTH_NOUN_1			
 Bulgarian	Bulgarian			GROWTH_NOUN	ръст	rˈɤst	r ˈɤ s t		GROWTH_NOUN_1			
 Macedonian	Macedonian			GROWTH_NOUN	раст	rˈast	r ˈa s t		GROWTH_NOUN_1			
-Štokavian	Štokavian			GROWTH_NOUN	rȃst	râːst	r âː s t		GROWTH_NOUN_1			
+Standard Serbian	Standard Serbian			GROWTH_NOUN	рȃст	râːst	r âː s t		GROWTH_NOUN_1			
+Standard Croatian	Standard Croatian			GROWTH_NOUN	rȃst	râːst	r âː s t		GROWTH_NOUN_1			
 Slovenian	Slovenian			GROWTH_NOUN	rȃst	ráːst	r áː s t		GROWTH_NOUN_1			
 Slovak	Slovak			GROWTH_NOUN	rast	rˈast	r ˈa s t		GROWTH_NOUN_1			
 Czech	Czech			GROWTH_NOUN	růst	rˈuːst	r ˈuː s t		GROWTH_NOUN_1			
@@ -2640,7 +2778,8 @@ Proto-Slavic	Proto-Slavic			ASH_NOUN	pȅpelъ	pêpelŭ	p ê p e l ŭ		ASH_NO
 Old Church Slavonic	Old Church Slavonic			ASH_NOUN	пепелъ	pˈɛpɛlʊ	p ˈɛ p ɛ l ʊ		ASH_NOUN_1			
 Bulgarian	Bulgarian			ASH_NOUN	пепел	pˈɛpɛɫ	p ˈɛ p ɛ ɫ		ASH_NOUN_1			
 Macedonian	Macedonian			ASH_NOUN	пепел	pˈɛpɛɫ	p ˈɛ p ɛ ɫ		ASH_NOUN_1			
-Štokavian	Štokavian			ASH_NOUN	pȅpeo	pêpeo	p ê p e o		ASH_NOUN_1			
+Standard Serbian	Standard Serbian			ASH_NOUN	пȅпео	pêpeo	p ê p e o		ASH_NOUN_1			
+Standard Croatian	Standard Croatian			ASH_NOUN	pȅpeo	pêpeo	p ê p e o		ASH_NOUN_1			
 Slovenian	Slovenian			ASH_NOUN	pepẹ̑ł	pepéːw	p e p éː w		ASH_NOUN_1			
 Russian	Russian			ASH_NOUN	пепел	pʲˈepʲɪɫ	pʲ ˈe pʲ ɪ ɫ		ASH_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			ASH_NOUN		pjěpɛl	p j ě p ɛ l		ASH_NOUN_1			
@@ -2649,7 +2788,8 @@ Proto-Slavic	Proto-Slavic			SAND_NOUN	pě̄sъ̀kъ	pɛːsŭ̌kŭ	p ɛː s ŭ
 Old Church Slavonic	Old Church Slavonic			SAND_NOUN	пѣсъкъ	pæsˈʊkʊ	p æ s ˈʊ k ʊ		SAND_NOUN_1			
 Bulgarian	Bulgarian			SAND_NOUN	пясък	pʲˈasɐk	pʲ ˈa s ɐ k		SAND_NOUN_1			
 Macedonian	Macedonian			SAND_NOUN	песок	pˈɛsok	p ˈɛ s o k		SAND_NOUN_1			
-Štokavian	Štokavian			SAND_NOUN	pijésak	pjěːsak	p j ěː s a k		SAND_NOUN_1			
+Standard Serbian	Standard Serbian			SAND_NOUN	пéсак	pěːsak	p ěː s a k		SAND_NOUN_1			
+Standard Croatian	Standard Croatian			SAND_NOUN	pijésak	pjěːsak	p j ěː s a k		SAND_NOUN_1			
 Slovenian	Slovenian			SAND_NOUN	pẹ́sək	pèːsək	p èː s ə k		SAND_NOUN_1			
 Slovak	Slovak			SAND_NOUN	piesok	pɪ̯ˈɛsɔk	p ɪ̯ˈɛ s ɔ k		SAND_NOUN_1			
 Czech	Czech			SAND_NOUN	písek	pˈiːsɛk	p ˈiː s ɛ k		SAND_NOUN_1			
@@ -2687,7 +2827,8 @@ Belarusian	Belarusian			BIRD_NOUN	птах	ptˈax	p t ˈa x		BIRD_NOUN_1
 Proto-Slavic	Proto-Slavic			BIRD_NOUN	pъti̋ca	pŭtiˀʦa	p ŭ t iˀ ʦ a		BIRD_NOUN_2			
 Old Church Slavonic	Old Church Slavonic			BIRD_NOUN	пътица	pʊtˈiʦɑ	p ʊ t ˈi ʦ ɑ		BIRD_NOUN_2			
 Bulgarian	Bulgarian			BIRD_NOUN	птица	ptˈiʦɐ	p t ˈi ʦ ɐ		BIRD_NOUN_2			
-Štokavian	Štokavian			BIRD_NOUN	ptȉca	ptîʦa	p t î ʦ a		BIRD_NOUN_2			
+Standard Serbian	Standard Serbian			BIRD_NOUN	пти̏ца	ptîʦa	p t î ʦ a		BIRD_NOUN_2			
+Standard Croatian	Standard Croatian			BIRD_NOUN	ptȉca	ptîʦa	p t î ʦ a		BIRD_NOUN_2			
 Čakavian	Čakavian			BIRD_NOUN	tȉca	tîʦa	t î ʦ a		BIRD_NOUN_2			
 Slovenian	Slovenian			BIRD_NOUN	ptíca	ptìːʦa	p t ìː ʦ a		BIRD_NOUN_2			
 Russian	Russian			BIRD_NOUN	птица	ptʲˈiʦə	p tʲ ˈi ʦ ə		BIRD_NOUN_2			
@@ -2707,7 +2848,8 @@ Belarusian	Belarusian			FULL_ADJ	поўны	pˈownɨ	p ˈo w n ɨ		FULL_ADJ_2
 Russian	Russian			FULL_ADJ	полный	pˈoɫnɨj	p ˈo ɫ n ɨ j		FULL_ADJ_2			
 Čakavian (Cres)	Čakavian (Cres)			FULL_ADJ		pˈɛlni	p ˈɛ l n i		FULL_ADJ_2			
 Proto-Slavic	Proto-Slavic			DOG_NOUN	pь̀sъ	pĭ̌sŭ	p ĭ̌ s ŭ		DOG_NOUN_1			
-Štokavian	Štokavian			DOG_NOUN	pȁs	pâs	p â s		DOG_NOUN_1			
+Standard Serbian	Standard Serbian			DOG_NOUN	пȁс	pâs	p â s		DOG_NOUN_1			
+Standard Croatian	Standard Croatian			DOG_NOUN	pȁs	pâs	p â s		DOG_NOUN_1			
 Čakavian	Čakavian			DOG_NOUN	pȁs	pâs	p â s		DOG_NOUN_1			
 Slovenian	Slovenian			DOG_NOUN	pə̏s	pə́s	p ə́ s		DOG_NOUN_1			
 Slovak	Slovak			DOG_NOUN	pes	pˈɛs	p ˈɛ s		DOG_NOUN_1			
@@ -2725,7 +2867,8 @@ Proto-Slavic	Proto-Slavic			RIVER_NOUN	rěkà	rɛːkǎ	r ɛː k ǎ		RIVER_NOUN
 Old Church Slavonic	Old Church Slavonic			RIVER_NOUN	рѣка	rækˈɑ	r æ k ˈɑ		RIVER_NOUN_1			
 Bulgarian	Bulgarian			RIVER_NOUN	река	rɛkˈa	r ɛ k ˈa		RIVER_NOUN_1			
 Macedonian	Macedonian			RIVER_NOUN	река	rˈɛka	r ˈɛ k a		RIVER_NOUN_1			
-Štokavian	Štokavian			RIVER_NOUN	rijéka	rjěːka	r j ěː k a		RIVER_NOUN_1			
+Standard Serbian	Standard Serbian			RIVER_NOUN	рéка	rěːka	r ěː k a		RIVER_NOUN_1			
+Standard Croatian	Standard Croatian			RIVER_NOUN	rijéka	rjěːka	r j ěː k a		RIVER_NOUN_1			
 Čakavian	Čakavian			RIVER_NOUN	rĩka	rǐːka	r ǐː k a		RIVER_NOUN_1			
 Slovenian	Slovenian			RIVER_NOUN	rẹ́ka	rèːka	r èː k a		RIVER_NOUN_1			
 Slovak	Slovak			RIVER_NOUN	rieka	rɪ̯ˈɛka	r ɪ̯ˈɛ k a		RIVER_NOUN_1			
@@ -2741,7 +2884,8 @@ Proto-Slavic	Proto-Slavic			FISH_NOUN	rỳba	rɨ̌ba	r ɨ̌ b a		FISH_NOUN_1
 Old Church Slavonic	Old Church Slavonic			FISH_NOUN	рꙑба	rˈɯbɑ	r ˈɯ b ɑ		FISH_NOUN_1			
 Bulgarian	Bulgarian			FISH_NOUN	риба	rˈibɐ	r ˈi b ɐ		FISH_NOUN_1			
 Macedonian	Macedonian			FISH_NOUN	риба	rˈiba	r ˈi b a		FISH_NOUN_1			
-Štokavian	Štokavian			FISH_NOUN	rȉba	rîba	r î b a		FISH_NOUN_1			
+Standard Serbian	Standard Serbian			FISH_NOUN	ри̏ба	rîba	r î b a		FISH_NOUN_1			
+Standard Croatian	Standard Croatian			FISH_NOUN	rȉba	rîba	r î b a		FISH_NOUN_1			
 Čakavian	Čakavian			FISH_NOUN	rȉba	rîba	r î b a		FISH_NOUN_1			
 Slovenian	Slovenian			FISH_NOUN	ríba	rìːba	r ìː b a		FISH_NOUN_1			
 Slovak	Slovak			FISH_NOUN	ryba	rˈiba	r ˈi b a		FISH_NOUN_1			
@@ -2800,7 +2944,8 @@ Proto-Slavic	Proto-Slavic			HEALTHY_ADJ	sъdòrvъ	sŭdǒrvŭ	s ŭ d ǒ r v
 Old Church Slavonic	Old Church Slavonic			HEALTHY_ADJ	съдравъ	sʊdrˈɑvʊ	s ʊ d r ˈɑ v ʊ		HEALTHY_ADJ_1			
 Bulgarian	Bulgarian			HEALTHY_ADJ	здрав	zdrˈaf	z d r ˈa f		HEALTHY_ADJ_1			
 Macedonian	Macedonian			HEALTHY_ADJ	здрав	zdrˈaf	z d r ˈa f		HEALTHY_ADJ_1			
-Štokavian	Štokavian			HEALTHY_ADJ	zdrȁv	zdrâʋ	z d r â ʋ		HEALTHY_ADJ_1			
+Standard Serbian	Standard Serbian			HEALTHY_ADJ	здрȁв	zdrâʋ	z d r â ʋ		HEALTHY_ADJ_1			
+Standard Croatian	Standard Croatian			HEALTHY_ADJ	zdrȁv	zdrâʋ	z d r â ʋ		HEALTHY_ADJ_1			
 Čakavian	Čakavian			HEALTHY_ADJ	zdrãv	zdrǎːʋ	z d r ǎː ʋ		HEALTHY_ADJ_1			
 Slovenian	Slovenian			HEALTHY_ADJ	zdrȁv	zdráʋ	z d r á ʋ		HEALTHY_ADJ_1			
 Proto-Slavic	Proto-Slavic			HEALTHY_ADJ	sъdòrvъjь	sŭdǒrvŭjĭ	s ŭ d ǒ r v ŭ j ĭ		HEALTHY_ADJ_2			
@@ -2817,7 +2962,8 @@ Proto-Slavic	Proto-Slavic			CALF_NOUN	telę̀	telẽ̌	t e l ẽ̌		CALF_NOUN_1
 Old Church Slavonic	Old Church Slavonic			CALF_NOUN	телѧ	tɛlˈɛ̃	t ɛ l ˈɛ̃		CALF_NOUN_1			
 Bulgarian	Bulgarian			CALF_NOUN	теле	tɛlˈɛ	t ɛ l ˈɛ		CALF_NOUN_1			
 Macedonian	Macedonian			CALF_NOUN	теле	tˈɛlɛ	t ˈɛ l ɛ		CALF_NOUN_1			
-Štokavian	Štokavian			CALF_NOUN	tèle	těle	t ě l e		CALF_NOUN_1			
+Standard Serbian	Standard Serbian			CALF_NOUN	тèле	těle	t ě l e		CALF_NOUN_1			
+Standard Croatian	Standard Croatian			CALF_NOUN	tèle	těle	t ě l e		CALF_NOUN_1			
 Slovenian	Slovenian			CALF_NOUN	téle	tɛ̀ːlɛ	t ɛ̀ː l ɛ		CALF_NOUN_1			
 Slovak	Slovak			CALF_NOUN	teľa	cˈɛʎa	c ˈɛ ʎ a		CALF_NOUN_1			
 Czech	Czech			CALF_NOUN	tele	tˈɛlɛ	t ˈɛ l ɛ		CALF_NOUN_1			
@@ -2831,7 +2977,8 @@ Proto-Slavic	Proto-Slavic			BODY_NOUN	tě̑lo	tɛ̂ːlo	t ɛ̂ː l o		BODY_NOUN_
 Old Church Slavonic	Old Church Slavonic			BODY_NOUN	тѣло	tˈælɔ	t ˈæ l ɔ		BODY_NOUN_1			
 Bulgarian	Bulgarian			BODY_NOUN	тяло	tʲˈaɫo	tʲ ˈa ɫ o		BODY_NOUN_1			
 Macedonian	Macedonian			BODY_NOUN	тело	tˈɛɫo	t ˈɛ ɫ o		BODY_NOUN_1			
-Štokavian	Štokavian			BODY_NOUN	tijȇlo	tjêːlo	t j êː l o		BODY_NOUN_1			
+Standard Serbian	Standard Serbian			BODY_NOUN	тȇло	têːlo	t êː l o		BODY_NOUN_1			
+Standard Croatian	Standard Croatian			BODY_NOUN	tijȇlo	tjêːlo	t j êː l o		BODY_NOUN_1			
 Slovenian	Slovenian			BODY_NOUN	telọ̑	telóː	t e l óː		BODY_NOUN_1			
 Slovak	Slovak			BODY_NOUN	telo	cˈɛɫɔ	c ˈɛ ɫ ɔ		BODY_NOUN_1			
 Czech	Czech			BODY_NOUN	tělo	cˈɛlo	c ˈɛ l o		BODY_NOUN_1			
@@ -2876,7 +3023,8 @@ Proto-Slavic	Proto-Slavic			WARM_ADJ	tòplъ	tǒplŭ	t ǒ p l ŭ		WARM_ADJ_
 Old Church Slavonic	Old Church Slavonic			WARM_ADJ	топлъ	tˈɔplʊ	t ˈɔ p l ʊ		WARM_ADJ_2			
 Bulgarian	Bulgarian			WARM_ADJ	топъл	tˈɔpɐɫ	t ˈɔ p ɐ ɫ		WARM_ADJ_2			
 Macedonian	Macedonian			WARM_ADJ	топол	tˈopoɫ	t ˈo p o ɫ		WARM_ADJ_2			
-Štokavian	Štokavian			WARM_ADJ	tȍpao	tôpao	t ô p a o		WARM_ADJ_2			
+Standard Serbian	Standard Serbian			WARM_ADJ	то̏пао	tôpao	t ô p a o		WARM_ADJ_2			
+Standard Croatian	Standard Croatian			WARM_ADJ	tȍpao	tôpao	t ô p a o		WARM_ADJ_2			
 Slovenian	Slovenian			WARM_ADJ	tópəł	tɔ̀ːpəw	t ɔ̀ː p ə w		WARM_ADJ_2			
 Slovenian	Slovenian			WARM_ADJ	tọ́pəł	tòːpəw	t òː p ə w		WARM_ADJ_2			
 Čakavian (Istria)	Čakavian (Istria)			WARM_ADJ		tˈɛpal	t ˈɛ p a l		WARM_ADJ_2			
@@ -2887,7 +3035,8 @@ Proto-Slavic	Proto-Slavic			GRASS_NOUN	trāvà	traːvǎ	t r aː v ǎ		GRASS_NO
 Old Church Slavonic	Old Church Slavonic			GRASS_NOUN	трѣва	trævˈɑ	t r æ v ˈɑ		GRASS_NOUN_1			
 Bulgarian	Bulgarian			GRASS_NOUN	трева	trɛvˈa	t r ɛ v ˈa		GRASS_NOUN_1			
 Macedonian	Macedonian			GRASS_NOUN	трева	trˈɛva	t r ˈɛ v a		GRASS_NOUN_1			
-Štokavian	Štokavian			GRASS_NOUN	tráva	trǎːʋa	t r ǎː ʋ a		GRASS_NOUN_1			
+Standard Serbian	Standard Serbian			GRASS_NOUN	трáва	trǎːʋa	t r ǎː ʋ a		GRASS_NOUN_1			
+Standard Croatian	Standard Croatian			GRASS_NOUN	tráva	trǎːʋa	t r ǎː ʋ a		GRASS_NOUN_1			
 Čakavian	Čakavian			GRASS_NOUN	trāvȁ	traːʋâ	t r aː ʋ â		GRASS_NOUN_1			
 Slovenian	Slovenian			GRASS_NOUN	tráva	tràːʋa	t r àː ʋ a		GRASS_NOUN_1			
 Slovak	Slovak			GRASS_NOUN	tráva	trˈaːʋa	t r ˈaː ʋ a		GRASS_NOUN_1			
@@ -2919,7 +3068,8 @@ Proto-Slavic	Proto-Slavic			MOUTH_NOUN	ūstà	uːstǎ	uː s t ǎ		MOUTH_NOUN_1
 Old Church Slavonic	Old Church Slavonic			MOUTH_NOUN	оуста	ustˈɑ	u s t ˈɑ		MOUTH_NOUN_1			
 Bulgarian	Bulgarian			MOUTH_NOUN	уста	ustˈa	u s t ˈa		MOUTH_NOUN_1			
 Macedonian	Macedonian			MOUTH_NOUN	уста	ˈusta	ˈu s t a		MOUTH_NOUN_1			
-Štokavian	Štokavian			MOUTH_NOUN	ústa	ǔːsta	ǔː s t a		MOUTH_NOUN_1			
+Standard Serbian	Standard Serbian			MOUTH_NOUN	у́ста	ǔːsta	ǔː s t a		MOUTH_NOUN_1			
+Standard Croatian	Standard Croatian			MOUTH_NOUN	ústa	ǔːsta	ǔː s t a		MOUTH_NOUN_1			
 Čakavian	Čakavian			MOUTH_NOUN	ũsta	ǔːsta	ǔː s t a		MOUTH_NOUN_1			
 Slovenian	Slovenian			MOUTH_NOUN	ústa	ùːsta	ùː s t a		MOUTH_NOUN_1			
 Slovak	Slovak			MOUTH_NOUN	ústa	ˈuːsta	ˈuː s t a		MOUTH_NOUN_1			
@@ -2937,7 +3087,8 @@ Proto-Slavic	Proto-Slavic			EAR_NOUN	ȗxo	ûːxo	ûː x o		EAR_NOUN_1
 Old Church Slavonic	Old Church Slavonic			EAR_NOUN	оухо	ˈuxɔ	ˈu x ɔ		EAR_NOUN_1			
 Bulgarian	Bulgarian			EAR_NOUN	ухо	uxˈɔ	u x ˈɔ		EAR_NOUN_1			
 Macedonian	Macedonian			EAR_NOUN	уво	ˈuvo	ˈu v o		EAR_NOUN_1			
-Štokavian	Štokavian			EAR_NOUN	ȕho	ûxo	û x o		EAR_NOUN_1			
+Standard Serbian	Standard Serbian			EAR_NOUN	у̏во	ûʋo	û ʋ o		EAR_NOUN_1			
+Standard Croatian	Standard Croatian			EAR_NOUN	ȕho	ûxo	û x o		EAR_NOUN_1			
 Čakavian	Čakavian			EAR_NOUN	ȕho	ûxo	û x o		EAR_NOUN_1			
 Slovenian	Slovenian			EAR_NOUN	uhọ̑	uxóː	u x óː		EAR_NOUN_1			
 Slovak	Slovak			EAR_NOUN	ucho	ˈuxɔ	ˈu x ɔ		EAR_NOUN_1			
@@ -2957,7 +3108,8 @@ Proto-Slavic	Proto-Slavic			GREAT_ADJ	velìkъ	velǐkŭ	v e l ǐ k ŭ		GREAT
 Old Church Slavonic	Old Church Slavonic			GREAT_ADJ	великъ	vɛlˈikʊ	v ɛ l ˈi k ʊ		GREAT_ADJ_1			
 Bulgarian	Bulgarian			GREAT_ADJ	велик	vɛlˈik	v ɛ l ˈi k		GREAT_ADJ_1			
 Macedonian	Macedonian			GREAT_ADJ	велик	vˈɛlik	v ˈɛ l i k		GREAT_ADJ_1			
-Štokavian	Štokavian			GREAT_ADJ	vèlik	ʋělik	ʋ ě l i k		GREAT_ADJ_1			
+Standard Serbian	Standard Serbian			GREAT_ADJ	вèлик	ʋělik	ʋ ě l i k		GREAT_ADJ_1			
+Standard Croatian	Standard Croatian			GREAT_ADJ	vèlik	ʋělik	ʋ ě l i k		GREAT_ADJ_1			
 Čakavian	Čakavian			GREAT_ADJ	vȅlik	ʋêlik	ʋ ê l i k		GREAT_ADJ_1			
 Slovenian	Slovenian			GREAT_ADJ	vélik	ʋɛ̀ːlik	ʋ ɛ̀ː l i k		GREAT_ADJ_1			
 Proto-Slavic	Proto-Slavic			GREAT_ADJ	velìkъjь	velǐkŭjĭ	v e l ǐ k ŭ j ĭ		GREAT_ADJ_2			
@@ -2976,7 +3128,8 @@ Proto-Slavic	Proto-Slavic			DRAG_VERB	velkti	velkti	v e l k t i		DRAG_VERB_1
 Old Church Slavonic	Old Church Slavonic			DRAG_VERB	влѣщи	vlæʃtˈi	v l æ ʃ t ˈi		DRAG_VERB_1			
 Bulgarian	Bulgarian			DRAG_VERB	влека	vlɛkˈɤ	v l ɛ k ˈɤ		DRAG_VERB_1			
 Macedonian	Macedonian			DRAG_VERB	влече	vlˈɛʧɛ	v l ˈɛ ʧ ɛ		DRAG_VERB_1			
-Štokavian	Štokavian			DRAG_VERB	vući	ʋûːʨi	ʋ ûː ʨ i		DRAG_VERB_1			
+Standard Serbian	Standard Serbian			DRAG_VERB	вући	ʋûːʨi	ʋ ûː ʨ i		DRAG_VERB_1			
+Standard Croatian	Standard Croatian			DRAG_VERB	vući	ʋûːʨi	ʋ ûː ʨ i		DRAG_VERB_1			
 Čakavian	Čakavian			DRAG_VERB	vũći	ʋǔːci	ʋ ǔː c i		DRAG_VERB_1			
 Slovenian	Slovenian			DRAG_VERB	vlẹ́či	ʋlèːʧi	ʋ l èː ʧ i		DRAG_VERB_1			
 Slovak	Slovak			DRAG_VERB	vliecť	ʋɫɪ̯ˈɛʦc	ʋ ɫ ɪ̯ˈɛ ʦ c		DRAG_VERB_1			
@@ -2993,7 +3146,8 @@ Proto-Slavic	Proto-Slavic			WIND_NOUN	vě̀trъ	vɛːˀtrŭ	v ɛːˀ t r ŭ		W
 Old Church Slavonic	Old Church Slavonic			WIND_NOUN	вѣтръ	vˈætrʊ	v ˈæ t r ʊ		WIND_NOUN_1			
 Bulgarian	Bulgarian			WIND_NOUN	вятър	vʲˈatɐr	vʲ ˈa t ɐ r		WIND_NOUN_1			
 Macedonian	Macedonian			WIND_NOUN	ветер	vˈɛtɛr	v ˈɛ t ɛ r		WIND_NOUN_1			
-Štokavian	Štokavian			WIND_NOUN	vjȅtar	ʋjêtar	ʋ j ê t a r		WIND_NOUN_1			
+Standard Serbian	Standard Serbian			WIND_NOUN	вȅтар	ʋêtar	ʋ ê t a r		WIND_NOUN_1			
+Standard Croatian	Standard Croatian			WIND_NOUN	vjȅtar	ʋjêtar	ʋ j ê t a r		WIND_NOUN_1			
 Čakavian	Čakavian			WIND_NOUN	vȉtar	ʋîtar	ʋ î t a r		WIND_NOUN_1			
 Slovenian	Slovenian			WIND_NOUN	vẹ̑tər	ʋéːtər	ʋ éː t ə r		WIND_NOUN_1			
 Slovak	Slovak			WIND_NOUN	vietor	ʋɪ̯ˈɛtɔr	ʋ ɪ̯ˈɛ t ɔ r		WIND_NOUN_1			
@@ -3012,7 +3166,8 @@ Kajkavian	Kajkavian			WIND_NOUN		vjˈetær	v j ˈe t æ r		WIND_NOUN_1
 Proto-Slavic	Proto-Slavic			TIE_VERB	vę̄zàti	vẽːzǎti	v ẽː z ǎ t i		TIE_VERB_1			
 Old Church Slavonic	Old Church Slavonic			TIE_VERB	вѧзати	vɛ̃zˈɑti	v ɛ̃ z ˈɑ t i		TIE_VERB_1			
 Bulgarian	Bulgarian			TIE_VERB	вежа	vˈɛʒɐ	v ˈɛ ʒ ɐ		TIE_VERB_1			
-Štokavian	Štokavian			TIE_VERB	vézati	ʋěːzati	ʋ ěː z a t i		TIE_VERB_1			
+Standard Serbian	Standard Serbian			TIE_VERB	вéзати	ʋěːzati	ʋ ěː z a t i		TIE_VERB_1			
+Standard Croatian	Standard Croatian			TIE_VERB	vézati	ʋěːzati	ʋ ěː z a t i		TIE_VERB_1			
 Čakavian	Čakavian			TIE_VERB	vēzȁti	ʋeːzâti	ʋ eː z â t i		TIE_VERB_1			
 Slovenian	Slovenian			TIE_VERB	vẹ́zati	ʋèːzati	ʋ èː z a t i		TIE_VERB_1			
 Slovenian	Slovenian			TIE_VERB	vezáti	ʋɛzàːti	ʋ ɛ z àː t i		TIE_VERB_1			
@@ -3029,7 +3184,8 @@ Proto-Slavic	Proto-Slavic			SEE_VERB	vìděti	vǐdɛːti	v ǐ d ɛː t i		SEE_
 Old Church Slavonic	Old Church Slavonic			SEE_VERB	видѣти	vidˈæti	v i d ˈæ t i		SEE_VERB_1			
 Bulgarian	Bulgarian			SEE_VERB	видя	vˈidʲɐ	v ˈi dʲ ɐ		SEE_VERB_1			
 Macedonian	Macedonian			SEE_VERB	види	vˈidi	v ˈi d i		SEE_VERB_1			
-Štokavian	Štokavian			SEE_VERB	vȉdjeti	ʋîdjeti	ʋ î d j e t i		SEE_VERB_1			
+Standard Serbian	Standard Serbian			SEE_VERB	ви̏дети	ʋîdeti	ʋ î d e t i		SEE_VERB_1			
+Standard Croatian	Standard Croatian			SEE_VERB	vȉdjeti	ʋîdjeti	ʋ î d j e t i		SEE_VERB_1			
 Čakavian	Čakavian			SEE_VERB	vìti	ʋǐti	ʋ ǐ t i		SEE_VERB_1			
 Slovenian	Slovenian			SEE_VERB	vídeti	ʋìːdɛti	ʋ ìː d ɛ t i		SEE_VERB_1			
 Slovak	Slovak			SEE_VERB	vidieť	ʋˈiɟɪ̯ɛc	ʋ ˈi ɟ ɪ̯ɛ c		SEE_VERB_1			
@@ -3049,7 +3205,8 @@ Proto-Slavic	Proto-Slavic			TAKE_VERB	vъzęti	vŭzẽti	v ŭ z ẽ t i		TAKE_
 Old Church Slavonic	Old Church Slavonic			TAKE_VERB	възѧти	vʊzˈæti	v ʊ z ˈæ t i		TAKE_VERB_1			
 Bulgarian	Bulgarian			TAKE_VERB	взема	vzˈɛmɐ	v z ˈɛ m ɐ		TAKE_VERB_1			
 Macedonian	Macedonian			TAKE_VERB	земе	zˈɛmɛ	z ˈɛ m ɛ		TAKE_VERB_1			
-Štokavian	Štokavian			TAKE_VERB	ùzēti	ǔzeːti	ǔ z eː t i		TAKE_VERB_1			
+Standard Serbian	Standard Serbian			TAKE_VERB	у̀зēти	ǔzeːti	ǔ z eː t i		TAKE_VERB_1			
+Standard Croatian	Standard Croatian			TAKE_VERB	ùzēti	ǔzeːti	ǔ z eː t i		TAKE_VERB_1			
 Slovenian	Slovenian			TAKE_VERB	vzẹ́ti	ʋzèːti	ʋ z èː t i		TAKE_VERB_1			
 Slovak	Slovak			TAKE_VERB	vziať	vzɪ̯ˈac	v z ɪ̯ˈa c		TAKE_VERB_1			
 Czech	Czech			TAKE_VERB	vzít	vzˈiːt	v z ˈiː t		TAKE_VERB_1			
@@ -3063,7 +3220,8 @@ Proto-Slavic	Proto-Slavic			BREAD_NOUN	xlě̀bъ	xlɛ̌ːbŭ	x l ɛ̌ː b ŭ		
 Old Church Slavonic	Old Church Slavonic			BREAD_NOUN	хлѣбъ	xlˈæbʊ	x l ˈæ b ʊ		BREAD_NOUN_1			
 Bulgarian	Bulgarian			BREAD_NOUN	хляб	xlʲˈab̥	x lʲ ˈa b̥		BREAD_NOUN_1			
 Macedonian	Macedonian			BREAD_NOUN	леб	lˈɛb̥	l ˈɛ b̥		BREAD_NOUN_1			
-Štokavian	Štokavian			BREAD_NOUN	hljȅb	xljêb	x l j ê b		BREAD_NOUN_1			
+Standard Serbian	Standard Serbian			BREAD_NOUN	хлȅб	xlêb	x l ê b		BREAD_NOUN_1			
+Standard Croatian	Standard Croatian			BREAD_NOUN	hljȅb	xljêb	x l j ê b		BREAD_NOUN_1			
 Čakavian	Čakavian			BREAD_NOUN	hlȉb	xlîb̥	x l î b̥		BREAD_NOUN_1			
 Slovenian	Slovenian			BREAD_NOUN	hlẹ̑b	xléːb̥	x l éː b̥		BREAD_NOUN_1			
 Slovenian	Slovenian			BREAD_NOUN	hlȅb	xlɛ́b̥	x l ɛ́ b̥		BREAD_NOUN_1			
@@ -3081,7 +3239,8 @@ Proto-Slavic	Proto-Slavic			COLD_ADJ	xȏldьnъ	xôːldĭnŭ	x ôː l d ĭ 
 Old Church Slavonic	Old Church Slavonic			COLD_ADJ	хладьнъ	xlˈɑdɪnʊ	x l ˈɑ d ɪ n ʊ		COLD_ADJ_1			
 Bulgarian	Bulgarian			COLD_ADJ	хладен	xɫˈadɛn	x ɫ ˈa d ɛ n		COLD_ADJ_1			
 Macedonian	Macedonian			COLD_ADJ	ладен	ɫˈaden	ɫ ˈa d e n		COLD_ADJ_1			
-Štokavian	Štokavian			COLD_ADJ	hládan	xlǎːdan	x l ǎː d a n		COLD_ADJ_1			
+Standard Serbian	Standard Serbian			COLD_ADJ	хлáдан	xlǎːdan	x l ǎː d a n		COLD_ADJ_1			
+Standard Croatian	Standard Croatian			COLD_ADJ	hládan	xlǎːdan	x l ǎː d a n		COLD_ADJ_1			
 Čakavian	Čakavian			COLD_ADJ	hlȃdan	xlâːdan	x l âː d a n		COLD_ADJ_1			
 Slovenian	Slovenian			COLD_ADJ	hlȃdən	xláːdən	x l áː d ə n		COLD_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			COLD_ADJ		xlâːdan	x l âː d a n		COLD_ADJ_1			
@@ -3100,7 +3259,8 @@ Proto-Slavic	Proto-Slavic			SPINE_NOUN	xrьbьtъ	xrĭbĭtŭ	x r ĭ b ĭ t 
 Old Church Slavonic	Old Church Slavonic			SPINE_NOUN	хрьбьтъ	xrɪbˈɪtʊ	x r ɪ b ˈɪ t ʊ		SPINE_NOUN_1			
 Bulgarian	Bulgarian			SPINE_NOUN	хръбет	xrɐbˈɛt	x r ɐ b ˈɛ t		SPINE_NOUN_1			
 Macedonian	Macedonian			SPINE_NOUN	’рбет	ˈr̩bɛt	ˈr̩ b ɛ t		SPINE_NOUN_1			
-Štokavian	Štokavian			SPINE_NOUN	hȑbat	xr̩̂bat	x r̩̂ b a t		SPINE_NOUN_1			
+Standard Serbian	Standard Serbian			SPINE_NOUN	хр̏бат	xr̩̂bat	x r̩̂ b a t		SPINE_NOUN_1			
+Standard Croatian	Standard Croatian			SPINE_NOUN	hȑbat	xr̩̂bat	x r̩̂ b a t		SPINE_NOUN_1			
 Slovenian	Slovenian			SPINE_NOUN	hŕbət	xə̀rbət	x ə̀ r b ə t		SPINE_NOUN_1			
 Slovenian	Slovenian			SPINE_NOUN	hrbə̏t	xərbə́t	x ə r b ə́ t		SPINE_NOUN_1			
 Slovak	Slovak			SPINE_NOUN	chrbát	xˈr̩baːt	x ˈr̩ b aː t		SPINE_NOUN_1			
@@ -3118,7 +3278,8 @@ Proto-Slavic	Proto-Slavic			GREEN_ADJ	zelènъ	zelěnŭ	z e l ě n ŭ		GREE
 Old Church Slavonic	Old Church Slavonic			GREEN_ADJ	зеленъ	zɛlˈɛnʊ	z ɛ l ˈɛ n ʊ		GREEN_ADJ_1			
 Bulgarian	Bulgarian			GREEN_ADJ	зелен	zɛlˈɛn	z ɛ l ˈɛ n		GREEN_ADJ_1			
 Macedonian	Macedonian			GREEN_ADJ	зелен	zˈɛlɛn	z ˈɛ l ɛ n		GREEN_ADJ_1			
-Štokavian	Štokavian			GREEN_ADJ	zèlen	zělen	z ě l e n		GREEN_ADJ_1			
+Standard Serbian	Standard Serbian			GREEN_ADJ	зèлен	zělen	z ě l e n		GREEN_ADJ_1			
+Standard Croatian	Standard Croatian			GREEN_ADJ	zèlen	zělen	z ě l e n		GREEN_ADJ_1			
 Čakavian	Čakavian			GREEN_ADJ	zelẽn	zelěːn	z e l ěː n		GREEN_ADJ_1			
 Slovenian	Slovenian			GREEN_ADJ	zelȅn	zɛlɛ́n	z ɛ l ɛ́ n		GREEN_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			GREEN_ADJ		zˈɛlɛn	z ˈɛ l ɛ n		GREEN_ADJ_1			
@@ -3152,7 +3313,8 @@ Old Prussian	Old Prussian			LIVE_VERB	giwīt	ɡiviːt	ɡ i v iː t		LIVE_VERB_2
 Proto-Slavic	Proto-Slavic			LIVE_VERB	živěti	ʒivɛːti	ʒ i v ɛː t i		LIVE_VERB_2			
 Bulgarian	Bulgarian			LIVE_VERB	живея	ʒivˈɛjɐ	ʒ i v ˈɛ j ɐ		LIVE_VERB_2			
 Macedonian	Macedonian			LIVE_VERB	живее	ʒˈivɛɛ	ʒ ˈi v ɛ ɛ		LIVE_VERB_2			
-Štokavian	Štokavian			LIVE_VERB	žívjeti	ʒǐːʋjeti	ʒ ǐː ʋ j e t i		LIVE_VERB_2			
+Standard Serbian	Standard Serbian			LIVE_VERB	жи́вети	ʒǐːʋeti	ʒ ǐː ʋ e t i		LIVE_VERB_2			
+Standard Croatian	Standard Croatian			LIVE_VERB	žívjeti	ʒǐːʋjeti	ʒ ǐː ʋ j e t i		LIVE_VERB_2			
 Čakavian	Čakavian			LIVE_VERB	žīvȉti	ʒiːʋîti	ʒ iː ʋ î t i		LIVE_VERB_2			
 Slovenian	Slovenian			LIVE_VERB	živẹ́ti	ʒiʋèːti	ʒ i ʋ èː t i		LIVE_VERB_2			
 Proto-Slavic	Proto-Slavic			ALIVE_ADJ	žȋvъjь	ʒîːvŭjĭ	ʒ îː v ŭ j ĭ		ALIVE_ADJ_2			
@@ -3171,7 +3333,8 @@ Proto-Slavic	Proto-Slavic			YELLOW_ADJ	žь̑ltъ	ʒĭ̂ltŭ	ʒ ĭ̂ l t ŭ	
 Old Church Slavonic	Old Church Slavonic			YELLOW_ADJ	жлътъ	ʒlˈʊtʊ	ʒ l ˈʊ t ʊ		YELLOW_ADJ_1			
 Bulgarian	Bulgarian			YELLOW_ADJ	жълт	ʒˈɤɫt	ʒ ˈɤ ɫ t		YELLOW_ADJ_1			
 Macedonian	Macedonian			YELLOW_ADJ	жолт	ʒˈoɫt	ʒ ˈo ɫ t		YELLOW_ADJ_1			
-Štokavian	Štokavian			YELLOW_ADJ	žȗt	ʒûːt	ʒ ûː t		YELLOW_ADJ_1			
+Standard Serbian	Standard Serbian			YELLOW_ADJ	жу̂т	ʒûːt	ʒ ûː t		YELLOW_ADJ_1			
+Standard Croatian	Standard Croatian			YELLOW_ADJ	žȗt	ʒûːt	ʒ ûː t		YELLOW_ADJ_1			
 Čakavian	Čakavian			YELLOW_ADJ	žȗt	ʒûːt	ʒ ûː t		YELLOW_ADJ_1			
 Slovenian	Slovenian			YELLOW_ADJ	žȏłt	ʒɔ́ːwt	ʒ ɔ́ː w t		YELLOW_ADJ_1			
 Čakavian (Istria)	Čakavian (Istria)			YELLOW_ADJ		ʒûːt	ʒ ûː t		YELLOW_ADJ_1			
