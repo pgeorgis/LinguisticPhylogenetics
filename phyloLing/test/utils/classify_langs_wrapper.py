@@ -24,9 +24,9 @@ def _read_experiment_values(result_path: str) -> DistanceMatrix:
     with (open(result_path, 'r') as file):
         reader = csv.DictReader(file, delimiter='\t')
         for row in reader:
-            lang1 = row['Labels']
+            lang1 = row.get('')
             for lang2, measurement in row.items():
-                if lang2 == 'Labels' or lang1 == lang2 or measurement.strip() == '' or actual_values.get((lang2, lang1)) is not None:
+                if lang2 == '' or lang1 == lang2 or measurement.strip() == '' or actual_values.get((lang2, lang1)) is not None:
                     continue
                 actual_values[(lang1, lang2)] = float(measurement)
     return actual_values
@@ -102,13 +102,11 @@ def _load_result_config(output_config_path: str) -> ExecutionReference:
         config = yaml.safe_load(file)
 
     dist_matrix_path: str = config.get('output', {}).get('dist_matrix')
-    languages: list[str] = []
+    languages: list[str]
     with (open(dist_matrix_path, 'r') as file):
         reader = csv.DictReader(file, delimiter='\t')
-        for row in reader:
-            language: str = row['Labels'].strip()
-            if language != 'Labels':
-                languages.append(language)
+        first_row = next(reader)
+        languages = [label for label in first_row.keys() if label != '']
 
     tree_config: dict = config.get('tree', {})
     tree_root_language: str | None = tree_config.get('root')
