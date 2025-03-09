@@ -4,7 +4,7 @@ VOWELS
 	<osta> /ˈuɔ̯sta/ "MOUTH_NOUN"
 	<balts> /bˈalts/ "WHITE_ADJ"
 
-/i/ (0.066)
+/i/ (0.065)
 	<divi> /dˈivi/ "TWO_NUM"
 	<vilkt> /vˈilkt/ "DRAG_VERB"
 	<migla> /mˈiɡla/ "FOG_NOUN"
@@ -29,12 +29,12 @@ VOWELS
 	<diena> /dˈiɛ̯na/ "DAY_NOUN"
 	<rieksts> /rˈiɛ̯ksts/ "NUT_NOUN"
 
-/u/ (0.014)
+/u/ (0.013)
 	<ledus> /lˈædus/ "ICE_NOUN"
 	<uguns> /ˈuɡuns/ "FIRE_NOUN"
 	<muša> /mˈuʃa/ "HOUSEFLY_NOUN"
 
-/aː/ (0.014)
+/aː/ (0.013)
 	<zināt> /zˈinaːt/ "KNOW_VERB"
 	<slāve> /slˈaːvɛ/ "GLORY_NOUN"
 	<bārda> /bˈaːrda/ "BEARD_NOUN"
@@ -44,15 +44,15 @@ VOWELS
 	<būt> /bˈuːt/ "BE_VERB"
 	<sūrs> /sˈuːrs/ "CHEESE_NOUN"
 
+/au̯/ (0.011)
+	<sauss> /sˈau̯ss/ "DRY_ADJ"
+	<saule> /sˈau̯lɛ/ "SUN_NOUN"
+	<ļaudis> /ʎˈau̯dis/ "PEOPLE_NOUN"
+
 /iː/ (0.009)
 	<dzīvs> /ʣˈiːws/ "ALIVE_ADJ"
+	<glīve> /ɡlˈiːvɛ/ "FUNGUS_NOUN"
 	<trīs> /trˈiːs/ "THREE_NUM"
-	<dzīvot> /ʣˈiːvuɔ̯t/ "LIVE_VERB"
-
-/au̯/ (0.009)
-	<sauss> /sˈau̯ss/ "DRY_ADJ"
-	<auss> /ˈau̯ss/ "EAR_NOUN"
-	<saule> /sˈau̯lɛ/ "SUN_NOUN"
 
 /ɛː/ (0.007)
 	<mēness> /mˈɛːness/ "MONTH_NOUN"
@@ -73,7 +73,7 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.188)
+/s/ (0.187)
 	<rags> /rˈaɡ̊s/ "HORN_NOUN"
 	<lapsene> /lˈapsɛnɛ/ "WASP_NOUN"
 	<mēness> /mˈɛːness/ "MONTH_NOUN"
@@ -83,7 +83,7 @@ CONSONANTS
 	<karalis> /kˈaralis/ "KING_NOUN"
 	<gluds> /ɡlˈud̥s/ "SMOOTH_ADJ"
 
-/t/ (0.05)
+/t/ (0.049)
 	<dzeltens> /ʣˈæltæns/ "YELLOW_ADJ"
 	<teļš> /tˈɛʎʃ/ "CALF_NOUN"
 	<astoņi> /ˈastuɔ̯ɲi/ "EIGHT_NUM"
@@ -93,65 +93,65 @@ CONSONANTS
 	<sūrs> /sˈuːrs/ "CHEESE_NOUN"
 	<tvirts> /tvˈirts/ "HARD_ADJ"
 
-/n/ (0.041)
-	<ūdens> /ˈuːdɛns/ "WATER_NOUN"
-	<zvaigzne> /zvˈai̯ɡznɛ/ "STAR_NOUN"
-	<zināt> /zˈinaːt/ "KNOW_VERB"
+/n/ (0.043)
+	<lapsene> /lˈapsɛnɛ/ "WASP_NOUN"
+	<sniegs> /snˈiɛ̯ɡ̊s/ "SNOW_NOUN"
+	<dzeltens> /ʣˈæltæns/ "YELLOW_ADJ"
 
-/v/ (0.039)
+/v/ (0.038)
+	<tvirts> /tvˈirts/ "HARD_ADJ"
 	<dzīvot> /ʣˈiːvuɔ̯t/ "LIVE_VERB"
-	<vilks> /vˈilks/ "WOLF_NOUN"
-	<vējš> /vˈɛːjʃ/ "WIND_NOUN"
+	<slava> /slˈava/ "GLORY_NOUN"
 
 /k/ (0.029)
+	<akmens> /ˈakmɛns/ "STONE_NOUN"
 	<rieksts> /rˈiɛ̯ksts/ "NUT_NOUN"
 	<arkls> /ˈarkl̩s/ "PLOUGH_NOUN"
-	<nakts> /nˈakts/ "NIGHT_NOUN"
 
 /d/ (0.029)
+	<ūdrs> /ˈuːdr̩s/ "OTTER_NOUN"
 	<desmit> /dˈɛsmit/ "TEN_NUM"
 	<bārda> /bˈaːrda/ "BEARD_NOUN"
-	<ļaudis> /ʎˈau̯dis/ "PEOPLE_NOUN"
 
 /m/ (0.025)
+	<akmens> /ˈakmɛns/ "STONE_NOUN"
 	<muša> /mˈuʃa/ "HOUSEFLY_NOUN"
 	<dūmi> /dˈuːmi/ "SMOKE_NOUN"
-	<ziema> /zˈiɛ̯ma/ "WINTER_NOUN"
 
-/ɡ/ (0.023)
+/ɡ/ (0.022)
+	<glīve> /ɡlˈiːvɛ/ "FUNGUS_NOUN"
 	<ogle> /ˈuɔ̯ɡlɛ/ "COAL_NOUN"
 	<migla> /mˈiɡla/ "FOG_NOUN"
-	<gluds> /ɡlˈud̥s/ "SMOOTH_ADJ"
 
-/z/ (0.023)
-	<zeme> /zˈɛmɛ/ "EARTH_NOUN"
-	<zobs> /zˈuɔ̯b̥s/ "TOOTH_NOUN"
+/z/ (0.022)
+	<ziema> /zˈiɛ̯ma/ "WINTER_NOUN"
 	<ezers> /ˈæzærs/ "LAKE_NOUN"
+	<zvērs> /zvˈæːrs/ "BEAST_NOUN"
 
 /b/ (0.02)
-	<bārda> /bˈaːrda/ "BEARD_NOUN"
-	<balts> /bˈalts/ "WHITE_ADJ"
 	<bez> /bˈɛz̥/ "WITHOUT_PREP"
+	<bērzs> /bˈæːrz̥s/ "BIRCH_NOUN"
+	<būt> /bˈuːt/ "BE_VERB"
 
 /p/ (0.016)
+	<pelni> /pˈælni/ "ASH_NOUN"
+	<sapnis> /sˈapnis/ "DREAM_NOUN"
 	<pilns> /pˈilns/ "FULL_ADJ"
-	<pieci> /pˈiɛ̯ʦi/ "FIVE_NUM"
-	<pirksts> /pˈirksts/ "FINGER_NOUN"
+
+/ʃ/ (0.013)
+	<naujš> /nˈau̯jʃ/ "NEW_ADJ"
+	<muša> /mˈuʃa/ "HOUSEFLY_NOUN"
+	<vējš> /vˈɛːjʃ/ "WIND_NOUN"
 
 /ʦ/ (0.011)
-	<ciens> /ʦˈiɛ̯ns/ "PRICE_NOUN"
 	<acs> /ˈaʦs/ "EYE_NOUN"
-	<pieci> /pˈiɛ̯ʦi/ "FIVE_NUM"
+	<ciens> /ʦˈiɛ̯ns/ "PRICE_NOUN"
+	<cers> /ʦˈærs/ "ROOT_NOUN"
 
 /ʣ/ (0.011)
-	<dzīvs> /ʣˈiːws/ "ALIVE_ADJ"
 	<dzīvot> /ʣˈiːvuɔ̯t/ "LIVE_VERB"
 	<odze> /ˈuɔ̯ʣɛ/ "SNAKE_NOUN"
-
-/ʃ/ (0.011)
-	<vējš> /vˈɛːjʃ/ "WIND_NOUN"
-	<seši> /sˈɛʃi/ "SIX_NUM"
-	<muša> /mˈuʃa/ "HOUSEFLY_NOUN"
+	<dzeltens> /ʣˈæltæns/ "YELLOW_ADJ"
 
 /ɡ̊/ (0.009)
 	<rags> /rˈaɡ̊s/ "HORN_NOUN"
@@ -183,18 +183,19 @@ CONSONANTS
 	<bebrs> /bˈæbr̩s/ "BEAVER_NOUN"
 	<modrs> /mˈuɔ̯dr̩s/ "WISE_ADJ"
 
-/w/ (0.005)
+/w/ (0.004)
 	<dievs> /dˈiɛ̯ws/ "GOD_NOUN"
 	<dzīvs> /ʣˈiːws/ "ALIVE_ADJ"
+
+/j/ (0.004)
+	<vējš> /vˈɛːjʃ/ "WIND_NOUN"
+	<naujš> /nˈau̯jʃ/ "NEW_ADJ"
 
 /ʧ/ (0.002)
 	<četri> /ʧˈɛtri/ "FOUR_NUM"
 
 /l̩/ (0.002)
 	<arkls> /ˈarkl̩s/ "PLOUGH_NOUN"
-
-/j/ (0.002)
-	<vējš> /vˈɛːjʃ/ "WIND_NOUN"
 
 /b̥/ (0.002)
 	<zobs> /zˈuɔ̯b̥s/ "TOOTH_NOUN"

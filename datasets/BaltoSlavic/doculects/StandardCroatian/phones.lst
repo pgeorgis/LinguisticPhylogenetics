@@ -4,10 +4,10 @@ VOWELS
 	<kúsati> /kǔːsati/ "BITE_VERB"
 	<gláva> /ɡlǎːʋa/ "HEAD_NOUN"
 
-/o/ (0.049)
+/o/ (0.05)
 	<òrao> /ǒrao/ "EAGLE_NOUN"
-	<dȑvo> /dr̩̂ʋo/ "TREE_NOUN"
-	<kȍža> /kôʒa/ "SKIN_NOUN"
+	<mȋsao> /mîːsao/ "THOUGHT_NOUN"
+	<kȍrijēn> /kôrjeːn/ "ROOT_NOUN"
 
 /e/ (0.044)
 	<vjȅtar> /ʋjêtar/ "WIND_NOUN"
@@ -36,7 +36,7 @@ VOWELS
 
 /iː/ (0.014)
 	<kćȋ> /kʨîː/ "DAUGHTER_NOUN"
-	<glàtkī> /ɡlǎd̥kiː/ "SMOOTH_ADJ"
+	<glàtkī> /ɡlǎtkiː/ "SMOOTH_ADJ"
 	<žȋv> /ʒîːʋ/ "ALIVE_ADJ"
 
 /oː/ (0.011)
@@ -52,9 +52,9 @@ VOWELS
 
 
 CONSONANTS
-/t/ (0.051)
+/t/ (0.052)
 	<ptȉca> /ptîʦa/ "BIRD_NOUN"
-	<hȑbat> /xr̩̂bat/ "SPINE_NOUN"
+	<glàtkī> /ɡlǎtkiː/ "SMOOTH_ADJ"
 	<pȇt> /pêːt/ "FIVE_NUM"
 
 /s/ (0.043)
@@ -62,25 +62,25 @@ CONSONANTS
 	<sȗnce> /sûːnʦe/ "SUN_NOUN"
 	<glȃs> /ɡlâːs/ "VOICE_NOUN"
 
-/ʋ/ (0.037)
+/ʋ/ (0.038)
 	<tvȓd> /tʋr̩̂ːd/ "HARD_ADJ"
-	<vȏl> /ʋôːl/ "OX_NOUN"
-	<vòda> /ʋǒda/ "WATER_NOUN"
+	<vȉdra> /ʋîdra/ "OTTER_NOUN"
+	<dvȃ> /dʋâː/ "TWO_NUM"
 
 /r/ (0.037)
 	<rȏg> /rôːɡ/ "HORN_NOUN"
 	<bráda> /brǎːda/ "BEARD_NOUN"
 	<rijéka> /rjěːka/ "RIVER_NOUN"
 
-/l/ (0.036)
-	<glȗh> /ɡlûːx/ "DEAF_ADJ"
-	<vèlik> /ʋělik/ "GREAT_ADJ"
-	<lȁv> /lâʋ/ "LION_NOUN"
+/k/ (0.037)
+	<ȍblāk> /ôblaːk/ "CLOUD_NOUN"
+	<ȍko> /ôko/ "EYE_NOUN"
+	<krȃlj> /krâːʎ/ "KING_NOUN"
 
-/k/ (0.036)
-	<kćȇr> /kʨêːr/ "DAUGHTER_NOUN"
-	<rijéka> /rjěːka/ "RIVER_NOUN"
-	<kȁmēn> /kâmeːn/ "STONE_NOUN"
+/l/ (0.036)
+	<gȍlūb> /ɡôluːb/ "DOVE_NOUN"
+	<rȁlo> /râlo/ "PLOUGH_NOUN"
+	<stȏl> /stôːl/ "TABLE_NOUN"
 
 /j/ (0.035)
 	<čòvjek> /ʧǒʋjek/ "PERSON_NOUN"
@@ -92,10 +92,10 @@ CONSONANTS
 	<sȃd> /sâːd/ "GARDEN_NOUN"
 	<zdrȁv> /zdrâʋ/ "HEALTHY_ADJ"
 
-/n/ (0.027)
+/n/ (0.028)
 	<pȕn> /pûn/ "FULL_ADJ"
-	<kȍrijēn> /kôrjeːn/ "ROOT_NOUN"
-	<nȏs> /nôːs/ "NOSE_NOUN"
+	<cijéna> /ʦjěːna/ "PRICE_NOUN"
+	<nȏć> /nôːʨ/ "NIGHT_NOUN"
 
 /m/ (0.025)
 	<sȅdam> /sêdam/ "SEVEN_NUM"
@@ -170,24 +170,18 @@ CONSONANTS
 	<òganj> /ǒɡaɲ/ "FIRE_NOUN"
 	<kȍnj> /kôɲ/ "HORSE_NOUN"
 
-/ɡ̊/ (0.001)
-	<mȍzak> /môzaɡ̊/ "BRAIN_NOUN"
-
-/d̥/ (0.001)
-	<glàtkī> /ɡlǎd̥kiː/ "SMOOTH_ADJ"
-
 
 
 SUPRASEGMENTALS
 /̂/ (0.132)
+	<mȇd> /mêːd/ "HONEY_NOUN"
+	<brȅza> /brêza/ "BIRCH_NOUN"
 	<jâ> /jâː/ "I_POS"
-	<cijȇlī> /ʦjêːliː/ "WHOLE_ADJ"
-	<bȏg> /bôːɡ/ "GOD_NOUN"
 
 /̌/ (0.053)
+	<kòljeno> /kǒljeno/ "KNEE_NOUN"
 	<zvijézda> /zʋjěːzda/ "STAR_NOUN"
 	<júha> /jǔːxa/ "SOUP_NOUN"
-	<màgla> /mǎɡla/ "FOG_NOUN"
 
 
 

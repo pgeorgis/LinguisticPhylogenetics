@@ -9,24 +9,24 @@ VOWELS
 	<hlíva> /ɦlˈiːva/ "FUNGUS_NOUN"
 	<nevěsta> /nˈɛvjɛsta/ "BRIDE_NOUN"
 
-/o/ (0.063)
-	<místo> /mˈiːsto/ "PLACE_NOUN"
-	<nos> /nˈos/ "NOSE_NOUN"
+/o/ (0.064)
 	<člověk> /ʧlˈovjɛk/ "PERSON_NOUN"
+	<noc> /nˈoʦ/ "NIGHT_NOUN"
+	<ořech> /ˈor̝ɛx/ "NUT_NOUN"
 
-/iː/ (0.06)
-	<starý> /stˈariː/ "OLD_ADJ"
+/iː/ (0.061)
+	<žlutý> /ʒlˈutiː/ "YELLOW_ADJ"
+	<nový> /nˈoviː/ "NEW_ADJ"
 	<dobrý> /dˈobriː/ "GOOD_ADJ"
-	<chladný> /xlˈadniː/ "COLD_ADJ"
 
 /ɪ/ (0.023)
+	<ryba> /rˈɪba/ "FISH_NOUN"
 	<lidé> /lˈɪdɛː/ "PEOPLE_NOUN"
 	<živý> /ʒˈɪviː/ "ALIVE_ADJ"
-	<vydra> /vˈɪdra/ "OTTER_NOUN"
 
 /u/ (0.016)
 	<ruka> /rˈuka/ "HAND_NOUN"
-	<zub> /zˈub̥/ "TOOTH_NOUN"
+	<žlutý> /ʒlˈutiː/ "YELLOW_ADJ"
 	<uhel> /ˈuɦɛl/ "COAL_NOUN"
 
 /aː/ (0.014)
@@ -67,10 +67,10 @@ CONSONANTS
 	<husa> /ɦˈusa/ "GOOSE_NOUN"
 	<měsíc> /mɲˈɛsiːʦ/ "MONTH_NOUN"
 
-/v/ (0.046)
+/v/ (0.047)
 	<zdravý> /zdrˈaviː/ "HEALTHY_ADJ"
-	<vosk> /vˈosk/ "WAX_NOUN"
-	<vydra> /vˈɪdra/ "OTTER_NOUN"
+	<voda> /vˈoda/ "WATER_NOUN"
+	<devět> /dˈɛvjɛt/ "NINE_NUM"
 
 /k/ (0.043)
 	<vlk> /vˈl̩k/ "WOLF_NOUN"
@@ -82,17 +82,17 @@ CONSONANTS
 	<starý> /stˈariː/ "OLD_ADJ"
 	<krev> /krˈɛf/ "BLOOD_NOUN"
 
-/n/ (0.033)
+/n/ (0.034)
 	<sen> /sˈɛn/ "DREAM_NOUN"
-	<kámen> /kˈaːmɛn/ "STONE_NOUN"
-	<zelený> /zˈɛlɛniː/ "GREEN_ADJ"
+	<syn> /sˈɪn/ "SON_NOUN"
+	<žena> /ʒˈɛna/ "WOMAN_NOUN"
 
 /d/ (0.033)
+	<jeden> /jˈɛdɛn/ "ONE_NUM"
 	<den> /dˈɛn/ "DAY_NOUN"
 	<vydra> /vˈɪdra/ "OTTER_NOUN"
-	<moudrý> /mˈou̯driː/ "WISE_ADJ"
 
-/ɦ/ (0.029)
+/ɦ/ (0.028)
 	<hřbet> /ɦr̝bˈɛt/ "SPINE_NOUN"
 	<dlouhý> /dlˈou̯ɦiː/ "LONG_ADJ"
 	<hlas> /ɦlˈas/ "VOICE_NOUN"
@@ -112,7 +112,7 @@ CONSONANTS
 	<hvězda> /ɦvjˈɛzda/ "STAR_NOUN"
 	<zvěř> /zvjˈɛr̝̊/ "BEAST_NOUN"
 
-/b/ (0.019)
+/b/ (0.018)
 	<bůh> /bˈuːx/ "GOD_NOUN"
 	<být> /bˈiːt/ "BE_VERB"
 	<ryba> /rˈɪba/ "FISH_NOUN"

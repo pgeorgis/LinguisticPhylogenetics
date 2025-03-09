@@ -9,7 +9,7 @@ VOWELS
 	<mŕtəv> /mə̀rtəʋ/ "DEAD_ADJ"
 	<tópəł> /tɔ̀ːpəw/ "WARM_ADJ"
 
-/a/ (0.039)
+/a/ (0.038)
 	<zvẹ́zda> /zʋèːzda/ "STAR_NOUN"
 	<ósa> /ɔ̀ːsa/ "WASP_NOUN"
 	<cẹ́na> /ʦèːna/ "PRICE_NOUN"
@@ -34,40 +34,40 @@ VOWELS
 	<krȋ> /kríː/ "BLOOD_NOUN"
 	<vȋdra> /ʋíːdra/ "OTTER_NOUN"
 
+/ɔ/ (0.019)
+	<jábołko> /jàːbɔwkɔ/ "APPLE_NOUN"
+	<krílo> /krìːlɔ/ "WING_NOUN"
+	<stȍł> /stɔ́w/ "TABLE_NOUN"
+
 /i/ (0.019)
 	<bíti> /bìːti/ "BE_VERB"
-	<jézik> /jɛ̀ːzik/ "TONGUE_NOUN"
 	<vẹ́zati> /ʋèːzati/ "TIE_VERB"
-
-/ɔ/ (0.018)
-	<rálo> /ràːlɔ/ "PLOUGH_NOUN"
-	<vȍł> /ʋɔ́w/ "OX_NOUN"
-	<jábołko> /jàːbɔwkɔ/ "APPLE_NOUN"
+	<vélik> /ʋɛ̀ːlik/ "GREAT_ADJ"
 
 /ɔː/ (0.017)
-	<žȏłt> /ʒɔ́ːwt/ "YELLOW_ADJ"
-	<dȏlg> /dɔ́ːwɡ̊/ "LONG_ADJ"
 	<tópəł> /tɔ̀ːpəw/ "WARM_ADJ"
+	<nóga> /nɔ̀ːɡa/ "FOOT_NOUN"
+	<dȏlg> /dɔ́ːwɡ̊/ "LONG_ADJ"
 
 /ɛː/ (0.008)
-	<zémlja> /zɛ̀ːmlja/ "EARTH_NOUN"
-	<téžək> /tɛ̀ːʒək/ "HEAVY_ADJ"
+	<jézik> /jɛ̀ːzik/ "TONGUE_NOUN"
 	<téle> /tɛ̀ːlɛ/ "CALF_NOUN"
+	<édən> /ɛ̀ːdən/ "ONE_NUM"
 
 /uː/ (0.007)
-	<júha> /jùːxa/ "SOUP_NOUN"
 	<sȗh> /súːx/ "DRY_ADJ"
 	<ústa> /ùːsta/ "MOUTH_NOUN"
+	<júha> /jùːxa/ "SOUP_NOUN"
 
 /e/ (0.007)
-	<devẹ̑t> /deʋéːt/ "NINE_NUM"
 	<desẹ̑t> /deséːt/ "TEN_NUM"
 	<telọ̑> /telóː/ "BODY_NOUN"
+	<mesọ̑> /mesóː/ "MEAT_NOUN"
 
 /o/ (0.005)
+	<okọ̑> /okóː/ "EYE_NOUN"
 	<kolẹ́no> /kolèːnɔ/ "KNEE_NOUN"
 	<oblȃk> /obláːk/ "CLOUD_NOUN"
-	<korẹ̑n> /koréːn/ "ROOT_NOUN"
 
 /u/ (0.002)
 	<ljudjẹ̑> /ludéː/ "PEOPLE_NOUN"
@@ -91,35 +91,35 @@ CONSONANTS
 	<pə̏s> /pə́s/ "DOG_NOUN"
 	<mesọ̑> /mesóː/ "MEAT_NOUN"
 
-/ʋ/ (0.036)
-	<dvȃ> /dʋáː/ "TWO_NUM"
+/ʋ/ (0.037)
+	<vȏłk> /ʋɔ́ːwk/ "WOLF_NOUN"
+	<drevọ̑> /dreʋóː/ "TREE_NOUN"
 	<zdrȁv> /zdráʋ/ "HEALTHY_ADJ"
-	<vȍł> /ʋɔ́w/ "OX_NOUN"
 
 /l/ (0.036)
+	<králj> /kràːl/ "KING_NOUN"
 	<želẹ́zo> /ʒɛlèːzɔ/ "IRON_NOUN"
 	<krílo> /krìːlɔ/ "WING_NOUN"
-	<člóvek> /ʧlɔ̀ːʋɛk/ "PERSON_NOUN"
 
 /k/ (0.031)
+	<rẹ́ka> /rèːka/ "RIVER_NOUN"
+	<králj> /kràːl/ "KING_NOUN"
 	<pẹ́sək> /pèːsək/ "SAND_NOUN"
-	<skọ̄rja> /skòːrja/ "BARK_NOUN"
-	<člóvek> /ʧlɔ̀ːʋɛk/ "PERSON_NOUN"
 
-/n/ (0.027)
+/n/ (0.028)
+	<nevesta> /nèːʋɛsta/ "BRIDE_NOUN"
+	<nọ̑č> /nóːʧ/ "NIGHT_NOUN"
 	<ógənj> /ɔ̀ːɡən/ "FIRE_NOUN"
-	<žéna> /ʒɛ̀ːna/ "WOMAN_NOUN"
-	<kolẹ́no> /kolèːnɔ/ "KNEE_NOUN"
 
 /m/ (0.026)
+	<mẹ̑səc> /méːsəʦ/ "MONTH_NOUN"
 	<imẹ̑> /iméː/ "NAME_NOUN"
 	<zíma> /zìːma/ "WINTER_NOUN"
-	<məglȁ> /məɡlá/ "FOG_NOUN"
 
 /d/ (0.025)
+	<zdrȁv> /zdráʋ/ "HEALTHY_ADJ"
 	<də̏ž> /də́ʒ̊/ "RAIN_NOUN"
 	<desẹ̑t> /deséːt/ "TEN_NUM"
-	<mọ́dər> /mòːdər/ "WISE_ADJ"
 
 /z/ (0.019)
 	<vezáti> /ʋɛzàːti/ "TIE_VERB"
@@ -203,8 +203,8 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
-/́/ (0.101)
-	<ljudjẹ̑> /ludéː/ "PEOPLE_NOUN"
+/́/ (0.102)
+	<vȍł> /ʋɔ́w/ "OX_NOUN"
 	<stọ̑> /stóː/ "HUNDRED_NUM"
 	<mesọ̑> /mesóː/ "MEAT_NOUN"
 

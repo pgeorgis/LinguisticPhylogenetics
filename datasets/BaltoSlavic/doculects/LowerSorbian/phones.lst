@@ -1,23 +1,23 @@
 VOWELS
-/a/ (0.085)
-	<njewjesta> /ɲɛvʲˈɛsta/ "BRIDE_NOUN"
-	<wudra> /vˈudra/ "OTTER_NOUN"
+/ɔ/ (0.084)
+	<chłodny> /xˈɔdnɨ/ "COLD_ADJ"
+	<nos> /nˈɔs/ "NOSE_NOUN"
 	<žona> /ʐˈɔna/ "WOMAN_NOUN"
 
-/ɔ/ (0.083)
-	<co> /ʦˈɔ/ "WHAT_PRON"
-	<coła> /ʦˈɔwa/ "BEE_NOUN"
-	<wogeń> /ˈɔɡʲɛɲ/ "FIRE_NOUN"
+/a/ (0.084)
+	<wósa> /vˈɛsa/ "WASP_NOUN"
+	<brjaza> /brʲˈaza/ "BIRCH_NOUN"
+	<ryba> /rˈɨba/ "FISH_NOUN"
+
+/ɨ/ (0.053)
+	<suchy> /sˈuxɨ/ "DRY_ADJ"
+	<zyma> /zˈɨma/ "WINTER_NOUN"
+	<śopły> /ɕˈɔpwɨ/ "WARM_ADJ"
 
 /ɛ/ (0.053)
-	<śele> /ɕˈɛlɛ/ "CALF_NOUN"
 	<wórjech> /vˈɛrʲɛx/ "NUT_NOUN"
-	<wósk> /vˈɛsk/ "WAX_NOUN"
-
-/ɨ/ (0.052)
-	<běły> /bʲˈɪwɨ/ "WHITE_ADJ"
-	<zyma> /zˈɨma/ "WINTER_NOUN"
-	<słyńco> /swˈɨɲʦɔ/ "SUN_NOUN"
+	<kóža> /kˈɛʐa/ "SKIN_NOUN"
+	<kóleno> /kˈɛlɛnɔ/ "KNEE_NOUN"
 
 /e/ (0.033)
 	<wjeliki> /vʲˈelikʲi/ "GREAT_ADJ"
@@ -42,7 +42,7 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.058)
+/s/ (0.057)
 	<suchy> /sˈuxɨ/ "DRY_ADJ"
 	<mjasec> /mʲˈasɛʦ/ "MONTH_NOUN"
 	<kósć> /kˈɛsʨ/ "BONE_NOUN"
@@ -67,10 +67,10 @@ CONSONANTS
 	<rog> /rˈɔɡ̊/ "HORN_NOUN"
 	<smjerś> /smʲˈerɕ/ "DEATH_NOUN"
 
-/v/ (0.03)
+/v/ (0.032)
+	<wuž> /vˈuʐ̊/ "SNAKE_NOUN"
 	<wześ> /vzˈɛɕ/ "TAKE_VERB"
-	<drjewo> /drʲˈevɔ/ "TREE_NOUN"
-	<wósa> /vˈɛsa/ "WASP_NOUN"
+	<dwa> /dvˈa/ "TWO_NUM"
 
 /l/ (0.03)
 	<zeleny> /zˈelenɨ/ "GREEN_ADJ"
@@ -87,15 +87,15 @@ CONSONANTS
 	<drjewo> /drʲˈevɔ/ "TREE_NOUN"
 	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
 
-/z/ (0.023)
-	<mórzgi> /mˈɛrzɡʲi/ "BRAIN_NOUN"
-	<wjezaś> /vʲˈezaɕ/ "TIE_VERB"
-	<jězyk> /jˈɪzɨk/ "TONGUE_NOUN"
+/n/ (0.024)
+	<połny> /pˈɔwnɨ/ "FULL_ADJ"
+	<nowy> /nˈɔvɨ/ "NEW_ADJ"
+	<noc> /nˈɔʦ/ "NIGHT_NOUN"
 
-/n/ (0.023)
-	<syn> /sˈɨn/ "SON_NOUN"
-	<noga> /nˈɔɡa/ "FOOT_NOUN"
-	<jasny> /jˈasnɨ/ "CLEAR_ADJ"
+/z/ (0.023)
+	<zyma> /zˈɨma/ "WINTER_NOUN"
+	<zeleny> /zˈelenɨ/ "GREEN_ADJ"
+	<brjaza> /brʲˈaza/ "BIRCH_NOUN"
 
 /ɡ/ (0.021)
 	<gwězda> /ɡvʲˈɪzda/ "STAR_NOUN"

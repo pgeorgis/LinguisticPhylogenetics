@@ -1,13 +1,13 @@
 VOWELS
 /ʊ/ (0.092)
 	<съмрьть> /sʊmrˈɪtɪ/ "DEATH_NOUN"
-	<бѣлъ> /bˈælʊ/ "WHITE_ADJ"
+	<воскъ> /vˈɔskʊ/ "WAX_NOUN"
 	<хлѣбъ> /xlˈæbʊ/ "BREAD_NOUN"
 
-/ɔ/ (0.053)
+/ɔ/ (0.054)
 	<добръ> /dˈɔbrʊ/ "GOOD_ADJ"
 	<голѫбь> /ɡˈɔlɔ̃bɪ/ "DOVE_NOUN"
-	<мѣсто> /mˈæstɔ/ "PLACE_NOUN"
+	<чловѣкъ> /ʧlɔvˈækʊ/ "PERSON_NOUN"
 
 /ɑ/ (0.053)
 	<оуста> /ustˈɑ/ "MOUTH_NOUN"
@@ -29,7 +29,7 @@ VOWELS
 	<орѣхъ> /ɔrˈæxʊ/ "NUT_NOUN"
 	<видѣти> /vidˈæti/ "SEE_VERB"
 
-/i/ (0.027)
+/i/ (0.026)
 	<живъ> /ʒˈivʊ/ "ALIVE_ADJ"
 	<тихъ> /tˈixʊ/ "QUIET_ADJ"
 	<година> /ɡɔdˈinɑ/ "HOUR_NOUN"
@@ -65,7 +65,7 @@ CONSONANTS
 	<прьстъ> /prˈɪstʊ/ "FINGER_NOUN"
 	<нощь> /nˈɔʃtɪ/ "NIGHT_NOUN"
 
-/l/ (0.05)
+/l/ (0.049)
 	<рало> /rˈɑlɔ/ "PLOUGH_NOUN"
 	<слъньце> /slˈʊnɪʦɛ/ "SUN_NOUN"
 	<лакъть> /lˈɑkʊtɪ/ "ELBOW_NOUN"
@@ -80,84 +80,84 @@ CONSONANTS
 	<звѣрь> /zvˈærɪ/ "BEAST_NOUN"
 	<рало> /rˈɑlɔ/ "PLOUGH_NOUN"
 
+/v/ (0.033)
+	<вода> /vɔdˈɑ/ "WATER_NOUN"
+	<влькъ> /vlˈɪkʊ/ "WOLF_NOUN"
+	<девѧть> /dˈɛvɛ̃tɪ/ "NINE_NUM"
+
 /d/ (0.033)
-	<дъва> /dˈʊvɑ/ "TWO_NUM"
-	<людьѥ> /lʲˈudɪjɛ/ "PEOPLE_NOUN"
 	<седмь> /sˈɛdmɪ/ "SEVEN_NUM"
+	<хладьнъ> /xlˈɑdɪnʊ/ "COLD_ADJ"
+	<дьнь> /dˈɪnɪ/ "DAY_NOUN"
 
-/v/ (0.032)
-	<мрьтвъ> /mrˈɪtvʊ/ "DEAD_ADJ"
-	<вечеръ> /vˈɛʧɛrʊ/ "EVENING_NOUN"
-	<звѣзда> /zvæzdˈɑ/ "STAR_NOUN"
-
-/k/ (0.027)
+/k/ (0.026)
+	<ѩзꙑкъ> /jɛ̃zˈɯkʊ/ "TONGUE_NOUN"
 	<влькъ> /vlˈɪkʊ/ "WOLF_NOUN"
 	<тѧжькъ> /tˈɛ̃ʒɪkʊ/ "HEAVY_ADJ"
-	<кость> /kˈɔstɪ/ "BONE_NOUN"
 
-/n/ (0.024)
+/n/ (0.025)
+	<хладьнъ> /xlˈɑdɪnʊ/ "COLD_ADJ"
 	<година> /ɡɔdˈinɑ/ "HOUR_NOUN"
-	<цѣна> /ʦænˈɑ/ "PRICE_NOUN"
-	<нощь> /nˈɔʃtɪ/ "NIGHT_NOUN"
+	<жена> /ʒɛnˈɑ/ "WOMAN_NOUN"
 
 /m/ (0.023)
 	<дꙑмъ> /dˈɯmʊ/ "SMOKE_NOUN"
-	<медъ> /mˈɛdʊ/ "HONEY_NOUN"
-	<мѧсо> /mˈɛ̃sɔ/ "MEAT_NOUN"
+	<мѣсто> /mˈæstɔ/ "PLACE_NOUN"
+	<мѫдръ> /mˈɔ̃drʊ/ "WISE_ADJ"
 
 /ɡ/ (0.022)
+	<ногъть> /nˈɔɡʊtɪ/ "FINGERNAIL_NOUN"
 	<нога> /nɔɡˈɑ/ "FOOT_NOUN"
 	<снѣгъ> /snˈæɡʊ/ "SNOW_NOUN"
-	<дльгъ> /dlˈɪɡʊ/ "LONG_ADJ"
 
 /z/ (0.019)
-	<ѩзꙑкъ> /jɛ̃zˈɯkʊ/ "TONGUE_NOUN"
-	<звѣзда> /zvæzdˈɑ/ "STAR_NOUN"
+	<без> /bˈɛz/ "WITHOUT_PREP"
 	<зѫбъ> /zˈɔ̃bʊ/ "TOOTH_NOUN"
-
-/b/ (0.017)
-	<аблъко> /jˈablʊkɔ/ "APPLE_NOUN"
-	<голѫбь> /ɡˈɔlɔ̃bɪ/ "DOVE_NOUN"
-	<бꙑти> /bˈɯti/ "BE_VERB"
-
-/p/ (0.013)
-	<пльнъ> /plˈɪnʊ/ "FULL_ADJ"
-	<пѫть> /pˈɔ̃tɪ/ "WAY_NOUN"
-	<пътица> /pʊtˈiʦɑ/ "BIRD_NOUN"
-
-/ʒ/ (0.01)
-	<дъждь> /dˈʊʒdɪ/ "RAIN_NOUN"
-	<жлътъ> /ʒlˈʊtʊ/ "YELLOW_ADJ"
-	<живъ> /ʒˈivʊ/ "ALIVE_ADJ"
-
-/x/ (0.01)
-	<тихъ> /tˈixʊ/ "QUIET_ADJ"
-	<хладьнъ> /xlˈɑdɪnʊ/ "COLD_ADJ"
-	<орѣхъ> /ɔrˈæxʊ/ "NUT_NOUN"
-
-/j/ (0.009)
-	<ꙗснъ> /jˈɑsnʊ/ "CLEAR_ADJ"
-	<единъ> /jɛdˈinʊ/ "ONE_NUM"
 	<ѥзеръ> /jˈɛzɛrʊ/ "LAKE_NOUN"
 
+/b/ (0.016)
+	<облакъ> /ˈɔblɑkʊ/ "CLOUD_NOUN"
+	<богъ> /bˈɔɡʊ/ "GOD_NOUN"
+	<аблъко> /jˈablʊkɔ/ "APPLE_NOUN"
+
+/p/ (0.013)
+	<пѣсъкъ> /pæsˈʊkʊ/ "SAND_NOUN"
+	<пити> /pˈiti/ "DRINK_VERB"
+	<пльнъ> /plˈɪnʊ/ "FULL_ADJ"
+
+/ʒ/ (0.01)
+	<кожа> /kˈɔʒɑ/ "SKIN_NOUN"
+	<мѫжь> /mˈɔ̃ʒʊ/ "HUSBAND_NOUN"
+	<жена> /ʒɛnˈɑ/ "WOMAN_NOUN"
+
+/x/ (0.01)
+	<хрьбьтъ> /xrɪbˈɪtʊ/ "SPINE_NOUN"
+	<моуха> /mˈuxɑ/ "HOUSEFLY_NOUN"
+	<хлѣбъ> /xlˈæbʊ/ "BREAD_NOUN"
+
+/j/ (0.009)
+	<ѩзꙑкъ> /jɛ̃zˈɯkʊ/ "TONGUE_NOUN"
+	<людьѥ> /lʲˈudɪjɛ/ "PEOPLE_NOUN"
+	<единъ> /jɛdˈinʊ/ "ONE_NUM"
+
 /ʦ/ (0.008)
-	<срьдьце> /srˈɪdɪʦɛ/ "HEART_NOUN"
-	<мѣсѧць> /mˈæsɛ̃ʦɪ/ "MONTH_NOUN"
 	<пътица> /pʊtˈiʦɑ/ "BIRD_NOUN"
+	<цвѣтъ> /ʦvˈætʊ/ "FLOWER_NOUN"
+	<цѣна> /ʦænˈɑ/ "PRICE_NOUN"
 
 /ʧ/ (0.007)
 	<чєтꙑрє> /ʧɛtˈɯrɛ/ "FOUR_NUM"
-	<бъчела> /bʊʧˈɛlɑ/ "BEE_NOUN"
 	<вечеръ> /vˈɛʧɛrʊ/ "EVENING_NOUN"
+	<чьто> /ʧɪtˈɔ/ "WHAT_PRON"
 
 /ʃ/ (0.004)
-	<шесть> /ʃˈɛstɪ/ "SIX_NUM"
-	<нощь> /nˈɔʃtɪ/ "NIGHT_NOUN"
 	<дъщи> /dˈʊʃti/ "DAUGHTER_NOUN"
+	<влѣщи> /vlæʃtˈi/ "DRAG_VERB"
+	<шесть> /ʃˈɛstɪ/ "SIX_NUM"
 
 /nʲ/ (0.002)
-	<огн҄ь> /ˈɔɡnʲɪ/ "FIRE_NOUN"
 	<кон҄ь> /kˈɔnʲɪ/ "HORSE_NOUN"
+	<огн҄ь> /ˈɔɡnʲɪ/ "FIRE_NOUN"
 
 /lʲ/ (0.002)
 	<землꙗ> /zɛmlʲˈɑ/ "EARTH_NOUN"
@@ -170,9 +170,9 @@ CONSONANTS
 
 SUPRASEGMENTALS
 /ˈ/ (0.169)
-	<рало> /rˈɑlɔ/ "PLOUGH_NOUN"
-	<вѧзати> /vɛ̃zˈɑti/ "TIE_VERB"
-	<млѣко> /mlækˈɔ/ "MILK_NOUN"
+	<попелъ> /pˈɔpɛlʊ/ "ASH_NOUN"
+	<лѣсъ> /lˈæsʊ/ "FOREST_NOUN"
+	<топлъ> /tˈɔplʊ/ "WARM_ADJ"
 
 
 

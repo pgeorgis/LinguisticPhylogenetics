@@ -6,8 +6,8 @@ VOWELS
 
 /o/ (0.052)
 	<о̀рао> /ǒrao/ "EAGLE_NOUN"
-	<др̏во> /dr̩̂ʋo/ "TREE_NOUN"
-	<ко̏жа> /kôʒa/ "SKIN_NOUN"
+	<ми̂сао> /mîːsao/ "THOUGHT_NOUN"
+	<ко̏рēн> /kôreːn/ "ROOT_NOUN"
 
 /e/ (0.047)
 	<це̏о> /ʦêo/ "WHOLE_ADJ"
@@ -36,7 +36,7 @@ VOWELS
 
 /iː/ (0.014)
 	<кћи̑> /kʨîː/ "DAUGHTER_NOUN"
-	<глàткӣ> /ɡlǎd̥kiː/ "SMOOTH_ADJ"
+	<глàткӣ> /ɡlǎtkiː/ "SMOOTH_ADJ"
 	<жи̂в> /ʒîːʋ/ "ALIVE_ADJ"
 
 /oː/ (0.012)
@@ -44,7 +44,7 @@ VOWELS
 	<сто̑> /stôː/ "TABLE_NOUN"
 	<мо̂ре> /môːre/ "SEA_NOUN"
 
-/u/ (0.011)
+/u/ (0.01)
 	<у> /u/ "IN_PREP"
 	<пу̏н> /pûn/ "FULL_ADJ"
 	<ду̑г> /dûɡ/ "LONG_ADJ"
@@ -52,9 +52,9 @@ VOWELS
 
 
 CONSONANTS
-/t/ (0.053)
+/t/ (0.054)
 	<пти̏ца> /ptîʦa/ "BIRD_NOUN"
-	<хр̏бат> /xr̩̂bat/ "SPINE_NOUN"
+	<глàткӣ> /ɡlǎtkiː/ "SMOOTH_ADJ"
 	<пȇт> /pêːt/ "FIVE_NUM"
 
 /s/ (0.044)
@@ -62,20 +62,20 @@ CONSONANTS
 	<су̂нце> /sûːnʦe/ "SUN_NOUN"
 	<глȃс> /ɡlâːs/ "VOICE_NOUN"
 
-/ʋ/ (0.042)
+/ʋ/ (0.043)
 	<слȁва> /slâʋa/ "GLORY_NOUN"
 	<жи́вети> /ʒǐːʋeti/ "LIVE_VERB"
-	<вéзати> /ʋěːzati/ "TIE_VERB"
+	<звéзда> /zʋěːzda/ "STAR_NOUN"
 
-/r/ (0.039)
+/r/ (0.038)
 	<ро̑г> /rôːɡ/ "HORN_NOUN"
 	<брáда> /brǎːda/ "BEARD_NOUN"
 	<рéка> /rěːka/ "RIVER_NOUN"
 
-/k/ (0.037)
-	<крȁва> /krâʋa/ "COW_NOUN"
-	<но̏кат> /nôkat/ "FINGERNAIL_NOUN"
-	<кòлено> /kǒleno/ "KNEE_NOUN"
+/k/ (0.038)
+	<о̏блāк> /ôblaːk/ "CLOUD_NOUN"
+	<о̏ко> /ôko/ "EYE_NOUN"
+	<крȃљ> /krâːʎ/ "KING_NOUN"
 
 /d/ (0.035)
 	<грȃд> /ɡrâːd/ "CITY_NOUN"
@@ -87,19 +87,19 @@ CONSONANTS
 	<глȁдак> /ɡlâdak/ "SMOOTH_ADJ"
 	<кòлено> /kǒleno/ "KNEE_NOUN"
 
-/n/ (0.027)
-	<но̂ћ> /nôːʨ/ "NIGHT_NOUN"
-	<цéна> /ʦěːna/ "PRICE_NOUN"
-	<су̂нце> /sûːnʦe/ "SUN_NOUN"
+/n/ (0.028)
+	<но̏в> /nôʋ/ "NEW_ADJ"
+	<јèдан> /jědan/ "ONE_NUM"
+	<кȁмēн> /kâmeːn/ "STONE_NOUN"
 
 /m/ (0.026)
 	<мàгла> /mǎɡla/ "FOG_NOUN"
 	<му̂ж> /mûːʒ/ "HUSBAND_NOUN"
 	<кȁмēн> /kâmeːn/ "STONE_NOUN"
 
-/ɡ/ (0.025)
+/ɡ/ (0.024)
 	<гòра> /ɡǒra/ "MOUNTAIN_NOUN"
-	<глàткӣ> /ɡlǎd̥kiː/ "SMOOTH_ADJ"
+	<глàткӣ> /ɡlǎtkiː/ "SMOOTH_ADJ"
 	<ро̑г> /rôːɡ/ "HORN_NOUN"
 
 /z/ (0.02)
@@ -107,7 +107,7 @@ CONSONANTS
 	<знȁти> /znâti/ "KNOW_VERB"
 	<зèмља> /zěmʎa/ "EARTH_NOUN"
 
-/b/ (0.018)
+/b/ (0.017)
 	<хр̏бат> /xr̩̂bat/ "SPINE_NOUN"
 	<зу̂б> /zûːb/ "TOOTH_NOUN"
 	<о̏блāк> /ôblaːk/ "CLOUD_NOUN"
@@ -117,17 +117,17 @@ CONSONANTS
 	<то̏пао> /tôpao/ "WARM_ADJ"
 	<пти̏ца> /ptîʦa/ "BIRD_NOUN"
 
-/ʦ/ (0.011)
+/ʦ/ (0.01)
 	<цéна> /ʦěːna/ "PRICE_NOUN"
 	<це̏о> /ʦêo/ "WHOLE_ADJ"
 	<пти̏ца> /ptîʦa/ "BIRD_NOUN"
 
-/ʒ/ (0.011)
+/ʒ/ (0.01)
 	<жèна> /ʒěna/ "WOMAN_NOUN"
 	<тéжак> /těːʒak/ "HEAVY_ADJ"
 	<ко̏жа> /kôʒa/ "SKIN_NOUN"
 
-/j/ (0.011)
+/j/ (0.01)
 	<јàсан> /jǎsan/ "CLEAR_ADJ"
 	<јèдан> /jědan/ "ONE_NUM"
 	<јèзик> /jězik/ "TONGUE_NOUN"
@@ -170,24 +170,18 @@ CONSONANTS
 	<ко̏њ> /kôɲ/ "HORSE_NOUN"
 	<òгањ> /ǒɡaɲ/ "FIRE_NOUN"
 
-/ɡ̊/ (0.001)
-	<мо̏зак> /môzaɡ̊/ "BRAIN_NOUN"
-
-/d̥/ (0.001)
-	<глàткӣ> /ɡlǎd̥kiː/ "SMOOTH_ADJ"
-
 
 
 SUPRASEGMENTALS
 /̂/ (0.136)
-	<лȁв> /lâʋ/ "LION_NOUN"
+	<рȃст> /râːst/ "GROWTH_NOUN"
 	<дȅсēт> /dêseːt/ "TEN_NUM"
-	<но̂ћ> /nôːʨ/ "NIGHT_NOUN"
+	<пу̂т> /pûːt/ "WAY_NOUN"
 
 /̌/ (0.055)
-	<нòга> /nǒɡa/ "FOOT_NOUN"
-	<у́ста> /ǔːsta/ "MOUTH_NOUN"
-	<ку́сати> /kǔːsati/ "BITE_VERB"
+	<рéка> /rěːka/ "RIVER_NOUN"
+	<мр̀тав> /mř̩taʋ/ "DEAD_ADJ"
+	<пéсак> /pěːsak/ "SAND_NOUN"
 
 
 

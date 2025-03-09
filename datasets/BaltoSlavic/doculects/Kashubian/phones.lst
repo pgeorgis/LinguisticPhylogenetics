@@ -1,5 +1,5 @@
 VOWELS
-/a/ (0.06)
+/a/ (0.059)
 	<jasny> /jˈasni/ "CLEAR_ADJ"
 	<lato> /lˈatɔ/ "SUMMER_NOUN"
 	<jagòda> /jˈaɡu̯ɛda/ "BERRY_NOUN"
@@ -9,15 +9,15 @@ VOWELS
 	<wãdżel> /vˈãʤɛl/ "COAL_NOUN"
 	<miesąc> /mjˈɛsõʦ/ "MONTH_NOUN"
 
-/ɔ/ (0.036)
-	<skrzidło> /skr̝ˈidwɔ/ "WING_NOUN"
+/ɔ/ (0.037)
+	<co> /ʦˈɔ/ "WHAT_PRON"
 	<miãso> /mjˈãsɔ/ "MEAT_NOUN"
 	<miono> /mjˈɔnɔ/ "NAME_NOUN"
 
-/i/ (0.034)
-	<wzyc> /vzˈiʦ/ "TAKE_VERB"
+/i/ (0.035)
+	<syn> /sˈin/ "SON_NOUN"
 	<czãżczi> /ʧˈãʒ̊ʧi/ "HEAVY_ADJ"
-	<mądri> /mˈõdri/ "WISE_ADJ"
+	<skrzidło> /skr̝ˈidwɔ/ "WING_NOUN"
 
 /u̯ɛ/ (0.027)
 	<òrzéł> /u̯ˈɛr̝ew/ "EAGLE_NOUN"
@@ -34,7 +34,7 @@ VOWELS
 	<dłudżi> /dwˈuʤi/ "LONG_ADJ"
 	<róg> /rˈuɡ̊/ "HORN_NOUN"
 
-/ɞ/ (0.017)
+/ɞ/ (0.016)
 	<wiôldżi> /vjˈɞlʤi/ "GREAT_ADJ"
 	<wôłk> /vˈɞwk/ "WOLF_NOUN"
 	<trôwa> /trˈɞva/ "GRASS_NOUN"
@@ -92,9 +92,9 @@ CONSONANTS
 	<jabkò> /jˈab̥ku̯ɛ/ "APPLE_NOUN"
 	<król> /krˈul/ "KING_NOUN"
 
-/v/ (0.029)
-	<wiãzac> /vjˈãzaʦ/ "TIE_VERB"
-	<wòda> /vu̯ˈɛda/ "WATER_NOUN"
+/v/ (0.03)
+	<wzyc> /vzˈiʦ/ "TAKE_VERB"
+	<dwa> /dvˈa/ "TWO_NUM"
 	<karwa> /kˈarva/ "COW_NOUN"
 
 /m/ (0.027)
@@ -102,17 +102,17 @@ CONSONANTS
 	<mlékò> /mlˈeku̯ɛ/ "MILK_NOUN"
 	<òsmë> /u̯ˈɛsmə/ "EIGHT_NUM"
 
-/n/ (0.023)
+/n/ (0.024)
 	<znac> /znˈaʦ/ "KNOW_VERB"
-	<syn> /sˈin/ "SON_NOUN"
-	<nos> /nˈɔs/ "NOSE_NOUN"
+	<cena> /ʦˈɛna/ "PRICE_NOUN"
+	<noc> /nˈɔʦ/ "NIGHT_NOUN"
 
 /d/ (0.023)
 	<skrzidło> /skr̝ˈidwɔ/ "WING_NOUN"
 	<jeden> /jˈɛdɛn/ "ONE_NUM"
 	<deszcz> /dˈɛʃʧ/ "RAIN_NOUN"
 
-/l/ (0.022)
+/l/ (0.021)
 	<lëst> /lˈəst/ "LEAF_NOUN"
 	<lato> /lˈatɔ/ "SUMMER_NOUN"
 	<lëdze> /lˈəʣɛ/ "PEOPLE_NOUN"
@@ -122,7 +122,7 @@ CONSONANTS
 	<miasto> /mjˈastɔ/ "PLACE_NOUN"
 	<trzë> /tr̝ˈə/ "THREE_NUM"
 
-/z/ (0.017)
+/z/ (0.016)
 	<zwierzã> /zvjˈɛr̝ã/ "BEAST_NOUN"
 	<gwiôzda> /ɡvjˈɞzda/ "STAR_NOUN"
 	<zelony> /zɛlˈɔni/ "GREEN_ADJ"
@@ -218,9 +218,9 @@ CONSONANTS
 
 SUPRASEGMENTALS
 /ˈ/ (0.181)
-	<stôri> /stˈɞri/ "OLD_ADJ"
-	<sétmë> /sˈedmə/ "SEVEN_NUM"
-	<dzewiãc> /ʣˈɛvjãʦ/ "NINE_NUM"
+	<òrzech> /u̯ˈɛr̝ɛx/ "NUT_NOUN"
+	<widzec> /vˈiʣeʦ/ "SEE_VERB"
+	<noc> /nˈɔʦ/ "NIGHT_NOUN"
 
 
 

@@ -1,15 +1,15 @@
 VOWELS
-/i/ (0.089)
+/i/ (0.088)
 	<anglis> /aŋɡlis/ "COAL_NOUN"
 	<giwīt> /ɡiviːt/ "LIVE_VERB"
 	<pintis> /pintis/ "WAY_NOUN"
 
-/a/ (0.086)
+/a/ (0.085)
 	<stalis> /stalis/ "TABLE_NOUN"
 	<swāigstan> /zvaːi̯ɡstan/ "STAR_NOUN"
 	<anglis> /aŋɡlis/ "COAL_NOUN"
 
-/e/ (0.07)
+/e/ (0.069)
 	<meddo> /medo/ "HONEY_NOUN"
 	<berse> /berze/ "BIRCH_NOUN"
 	<juse> /juse/ "SOUP_NOUN"
@@ -24,15 +24,15 @@ VOWELS
 	<insuwis> /inzuvis/ "TONGUE_NOUN"
 	<suris> /suris/ "CHEESE_NOUN"
 
-/iː/ (0.011)
-	<swīrins> /zviːrins/ "BEAST_NOUN"
-	<sīmtan> /siːmtan/ "HUNDRED_NUM"
-	<newīnts> /newiːnts/ "NINE_NUM"
-
-/au̯/ (0.011)
-	<saule> /sau̯le/ "SUN_NOUN"
-	<sausā> /sau̯sa/ "DRY_ADJ"
+/au̯/ (0.014)
 	<crauyo> /krau̯jo/ "BLOOD_NOUN"
+	<nauns> /nau̯ns/ "NEW_ADJ"
+	<saule> /sau̯le/ "SUN_NOUN"
+
+/iː/ (0.011)
+	<newīnts> /newiːnts/ "NINE_NUM"
+	<sīmtan> /siːmtan/ "HUNDRED_NUM"
+	<swīrins> /zviːrins/ "BEAST_NOUN"
 
 /uː/ (0.006)
 	<soūns> /suːns/ "SON_NOUN"
@@ -64,14 +64,14 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.15)
-	<nosy> /nosi/ "NOSE_NOUN"
+/s/ (0.152)
+	<newīnts> /newiːnts/ "NINE_NUM"
 	<bordus> /bordus/ "BEARD_NOUN"
-	<soūns> /suːns/ "SON_NOUN"
-
-/n/ (0.097)
-	<āusins> /aːu̯sins/ "EAR_NOUN"
 	<snaygis> /snajɡis/ "SNOW_NOUN"
+
+/n/ (0.102)
+	<āusins> /aːu̯sins/ "EAR_NOUN"
+	<ainan> /ai̯nan/ "ONE_NUM"
 	<en> /en/ "IN_PREP"
 
 /t/ (0.047)
@@ -99,7 +99,7 @@ CONSONANTS
 	<musgeno> /musɡeno/ "BRAIN_NOUN"
 	<anglis> /aŋɡlis/ "COAL_NOUN"
 
-/m/ (0.031)
+/m/ (0.03)
 	<semo> /zemo/ "WINTER_NOUN"
 	<sīmtan> /siːmtan/ "HUNDRED_NUM"
 	<semmē> /zemeː/ "EARTH_NOUN"

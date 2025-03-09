@@ -4,9 +4,9 @@ VOWELS
 	<imię> /ˈimjɛw̃/ "NAME_NOUN"
 	<słońce> /swˈɔɲʦɛ/ "SUN_NOUN"
 
-/ɔ/ (0.088)
-	<drzewo> /dʐˈɛvɔ/ "TREE_NOUN"
-	<wziąć> /vʑˈɔɲʨ/ "TAKE_VERB"
+/ɔ/ (0.089)
+	<ząb> /zˈɔmb̥/ "TOOTH_NOUN"
+	<słońce> /swˈɔɲʦɛ/ "SUN_NOUN"
 	<pszczoła> /pʂʈ͡ʂˈɔwa/ "BEE_NOUN"
 
 /a/ (0.084)
@@ -14,176 +14,176 @@ VOWELS
 	<kąsać> /kˈɔw̃saʨ/ "BITE_VERB"
 	<żelazo> /ʐɛlˈazɔ/ "IRON_NOUN"
 
-/ɨ/ (0.043)
-	<język> /jˈɛw̃zɨk/ "TONGUE_NOUN"
-	<zdrowy> /zdrˈɔvɨ/ "HEALTHY_ADJ"
-	<święty> /ɕfjˈɛntɨ/ "HOLY_ADJ"
+/ɨ/ (0.044)
+	<cały> /ʦˈawɨ/ "WHOLE_ADJ"
+	<mądry> /mˈɔndrɨ/ "WISE_ADJ"
+	<trzy> /tʐ̊ˈɨ/ "THREE_NUM"
 
-/u/ (0.034)
-	<sól> /sˈul/ "SALT_NOUN"
-	<mucha> /mˈuxa/ "HOUSEFLY_NOUN"
+/u/ (0.033)
 	<suchy> /sˈuxɨ/ "DRY_ADJ"
+	<gród> /ɡrˈud̥/ "CITY_NOUN"
+	<długi> /dwˈuɡi/ "LONG_ADJ"
 
 /i/ (0.019)
-	<gliwa> /ɡlˈiva/ "FUNGUS_NOUN"
-	<imię> /ˈimjɛw̃/ "NAME_NOUN"
 	<pić> /pˈiʨ/ "DRINK_VERB"
+	<długi> /dwˈuɡi/ "LONG_ADJ"
+	<zima> /ʑˈima/ "WINTER_NOUN"
 
 
 
 CONSONANTS
-/j/ (0.05)
-	<dziewięć> /ʥˈɛvjɛɲʨ/ "NINE_NUM"
-	<miasto> /mjˈastɔ/ "PLACE_NOUN"
+/j/ (0.049)
 	<jabłko> /jˈab̥wkɔ/ "APPLE_NOUN"
+	<piasek> /pjˈasɛk/ "SAND_NOUN"
+	<święty> /ɕfjˈɛntɨ/ "HOLY_ADJ"
 
-/r/ (0.04)
-	<król> /krˈul/ "KING_NOUN"
-	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
-	<córa> /ʦˈura/ "DAUGHTER_NOUN"
-
-/v/ (0.039)
-	<drzewo> /dʐˈɛvɔ/ "TREE_NOUN"
-	<woda> /vˈɔda/ "WATER_NOUN"
+/v/ (0.04)
+	<wiązać> /vjˈɔw̃zaʨ/ "TIE_VERB"
+	<dwa> /dvˈa/ "TWO_NUM"
 	<gliwa> /ɡlˈiva/ "FUNGUS_NOUN"
 
-/k/ (0.039)
-	<mleko> /mlˈɛkɔ/ "MILK_NOUN"
-	<kąsać> /kˈɔw̃saʨ/ "BITE_VERB"
-	<wilk> /vˈilk/ "WOLF_NOUN"
+/r/ (0.04)
+	<twardy> /tfˈardɨ/ "HARD_ADJ"
+	<czarny> /ʈ͡ʂˈarnɨ/ "BLACK_ADJ"
+	<wiatr> /vjˈatr/ "WIND_NOUN"
 
-/w/ (0.038)
-	<mgła> /mɡwˈa/ "FOG_NOUN"
+/k/ (0.039)
+	<paznokieć> /paznˈɔkjɛʨ/ "FINGERNAIL_NOUN"
 	<jabłko> /jˈab̥wkɔ/ "APPLE_NOUN"
-	<słońce> /swˈɔɲʦɛ/ "SUN_NOUN"
+	<rzeka> /ʐˈɛka/ "RIVER_NOUN"
+
+/w/ (0.037)
+	<radło> /rˈadwɔ/ "PLOUGH_NOUN"
+	<jabłko> /jˈab̥wkɔ/ "APPLE_NOUN"
+	<sława> /swˈava/ "GLORY_NOUN"
 
 /s/ (0.036)
-	<miasto> /mjˈastɔ/ "PLACE_NOUN"
-	<kąsać> /kˈɔw̃saʨ/ "BITE_VERB"
-	<sto> /stˈɔ/ "HUNDRED_NUM"
+	<słońce> /swˈɔɲʦɛ/ "SUN_NOUN"
+	<suchy> /sˈuxɨ/ "DRY_ADJ"
+	<mięso> /mjˈɛw̃sɔ/ "MEAT_NOUN"
 
 /ʨ/ (0.032)
-	<wiązać> /vjˈɔw̃zaʨ/ "TIE_VERB"
-	<pić> /pˈiʨ/ "DRINK_VERB"
-	<liść> /lˈiɕʨ/ "LEAF_NOUN"
+	<pąć> /pˈɔɲʨ/ "WAY_NOUN"
+	<być> /bˈɨʨ/ "BE_VERB"
+	<cichy> /ʨˈixɨ/ "QUIET_ADJ"
 
 /m/ (0.031)
-	<mózg> /mˈuz̥ɡ̊/ "BRAIN_NOUN"
-	<siedem> /ɕˈɛdɛm/ "SEVEN_NUM"
 	<miód> /mjˈud̥/ "HONEY_NOUN"
+	<miasto> /mjˈastɔ/ "PLACE_NOUN"
+	<morze> /mˈɔʐɛ/ "SEA_NOUN"
 
-/n/ (0.027)
-	<nos> /nˈɔs/ "NOSE_NOUN"
-	<jeden> /jˈɛdɛn/ "ONE_NUM"
-	<syn> /sˈɨn/ "SON_NOUN"
+/n/ (0.028)
+	<cena> /ʦˈɛna/ "PRICE_NOUN"
+	<zielony> /ʑɛlˈɔnɨ/ "GREEN_ADJ"
+	<znać> /znˈaʨ/ "KNOW_VERB"
 
 /l/ (0.027)
 	<zielony> /ʑɛlˈɔnɨ/ "GREEN_ADJ"
-	<kolano> /kɔlˈanɔ/ "KNEE_NOUN"
 	<wilk> /vˈilk/ "WOLF_NOUN"
+	<mleko> /mlˈɛkɔ/ "MILK_NOUN"
 
 /ɡ/ (0.025)
-	<noga> /nˈɔɡa/ "FOOT_NOUN"
-	<gładki> /ɡwˈad̥ki/ "SMOOTH_ADJ"
 	<gęś> /ɡˈɛw̃ɕ/ "GOOSE_NOUN"
+	<jagoda> /jaɡˈɔda/ "BERRY_NOUN"
+	<góra> /ɡˈura/ "MOUNTAIN_NOUN"
 
 /t/ (0.025)
-	<ptak> /ptˈak/ "BIRD_NOUN"
-	<grzbiet> /ɡʐbjˈɛt/ "SPINE_NOUN"
+	<wiatr> /vjˈatr/ "WIND_NOUN"
 	<kwiat> /kfjˈat/ "FLOWER_NOUN"
+	<trawa> /trˈava/ "GRASS_NOUN"
 
 /d/ (0.025)
-	<zdrowy> /zdrˈɔvɨ/ "HEALTHY_ADJ"
 	<radło> /rˈadwɔ/ "PLOUGH_NOUN"
 	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
+	<deszcz> /dˈɛʂʈ͡ʂ/ "RAIN_NOUN"
 
 /ɲ/ (0.019)
 	<wziąć> /vʑˈɔɲʨ/ "TAKE_VERB"
-	<koń> /kˈɔɲ/ "HORSE_NOUN"
 	<pąć> /pˈɔɲʨ/ "WAY_NOUN"
+	<śnieg> /ɕɲˈɛɡ̊/ "SNOW_NOUN"
 
 /ʐ/ (0.017)
-	<żona> /ʐˈɔna/ "WOMAN_NOUN"
-	<morze> /mˈɔʐɛ/ "SEA_NOUN"
 	<rzeka> /ʐˈɛka/ "RIVER_NOUN"
+	<morze> /mˈɔʐɛ/ "SEA_NOUN"
+	<drzewo> /dʐˈɛvɔ/ "TREE_NOUN"
 
 /ɕ/ (0.017)
-	<siedem> /ɕˈɛdɛm/ "SEVEN_NUM"
-	<śnieg> /ɕɲˈɛɡ̊/ "SNOW_NOUN"
 	<gęś> /ɡˈɛw̃ɕ/ "GOOSE_NOUN"
+	<szczęście> /ʂʈ͡ʂˈɛɲɕʨɛ/ "HAPPINESS_NOUN"
+	<dziesięć> /ʥˈɛɕɛɲʨ/ "TEN_NUM"
 
 /p/ (0.017)
-	<pić> /pˈiʨ/ "DRINK_VERB"
-	<pąć> /pˈɔɲʨ/ "WAY_NOUN"
 	<głupi> /ɡwˈupi/ "STUPID_ADJ"
+	<pełny> /pˈɛwnɨ/ "FULL_ADJ"
+	<piasek> /pjˈasɛk/ "SAND_NOUN"
 
 /b/ (0.016)
-	<dobry> /dˈɔbrɨ/ "GOOD_ADJ"
-	<grzbiet> /ɡʐbjˈɛt/ "SPINE_NOUN"
 	<bóg> /bˈuɡ̊/ "GOD_NOUN"
+	<biały> /bjˈawɨ/ "WHITE_ADJ"
+	<broda> /brˈɔda/ "BEARD_NOUN"
 
 /z/ (0.013)
-	<ząb> /zˈɔmb̥/ "TOOTH_NOUN"
-	<zwierz> /zvjˈɛʐ̊/ "BEAST_NOUN"
 	<wiązać> /vjˈɔw̃zaʨ/ "TIE_VERB"
+	<zdrowy> /zdrˈɔvɨ/ "HEALTHY_ADJ"
+	<gwiazda> /ɡvjˈazda/ "STAR_NOUN"
 
 /w̃/ (0.013)
-	<ciężki> /ʨˈɛw̃ʐ̊ki/ "HEAVY_ADJ"
 	<imię> /ˈimjɛw̃/ "NAME_NOUN"
-	<wiązać> /vjˈɔw̃zaʨ/ "TIE_VERB"
+	<gęś> /ɡˈɛw̃ɕ/ "GOOSE_NOUN"
+	<mięso> /mjˈɛw̃sɔ/ "MEAT_NOUN"
 
 /ʦ/ (0.012)
-	<serce> /sˈɛrʦɛ/ "HEART_NOUN"
+	<cały> /ʦˈawɨ/ "WHOLE_ADJ"
 	<cena> /ʦˈɛna/ "PRICE_NOUN"
-	<noc> /nˈɔʦ/ "NIGHT_NOUN"
+	<córa> /ʦˈura/ "DAUGHTER_NOUN"
 
 /x/ (0.012)
-	<mucha> /mˈuxa/ "HOUSEFLY_NOUN"
+	<cichy> /ʨˈixɨ/ "QUIET_ADJ"
 	<chłodny> /xwˈɔdnɨ/ "COLD_ADJ"
-	<suchy> /sˈuxɨ/ "DRY_ADJ"
+	<orzech> /ˈɔʐɛx/ "NUT_NOUN"
 
 /ʈ͡ʂ/ (0.009)
-	<człowiek> /ʈ͡ʂwˈɔvjɛk/ "PERSON_NOUN"
+	<czarny> /ʈ͡ʂˈarnɨ/ "BLACK_ADJ"
 	<szczęście> /ʂʈ͡ʂˈɛɲɕʨɛ/ "HAPPINESS_NOUN"
-	<pszczoła> /pʂʈ͡ʂˈɔwa/ "BEE_NOUN"
+	<cztery> /ʈ͡ʂtˈɛrɨ/ "FOUR_NUM"
 
 /ʥ/ (0.008)
-	<godzina> /ɡɔʥˈina/ "HOUR_NOUN"
-	<widzieć> /vˈiʥɛʨ/ "SEE_VERB"
+	<dziewięć> /ʥˈɛvjɛɲʨ/ "NINE_NUM"
 	<ludzie> /lˈuʥɛ/ "PEOPLE_NOUN"
+	<dzień> /ʥˈɛɲ/ "DAY_NOUN"
 
 /ʐ̊/ (0.008)
-	<mąż> /mˈɔw̃ʐ̊/ "HUSBAND_NOUN"
 	<wąż> /vˈɔw̃ʐ̊/ "SNAKE_NOUN"
 	<zwierz> /zvjˈɛʐ̊/ "BEAST_NOUN"
+	<mąż> /mˈɔw̃ʐ̊/ "HUSBAND_NOUN"
 
 /f/ (0.008)
+	<lew> /lˈɛf/ "LION_NOUN"
+	<święty> /ɕfjˈɛntɨ/ "HOLY_ADJ"
 	<twardy> /tfˈardɨ/ "HARD_ADJ"
-	<krew> /krˈɛf/ "BLOOD_NOUN"
-	<kwiat> /kfjˈat/ "FLOWER_NOUN"
 
 /ʑ/ (0.007)
+	<zielony> /ʑɛlˈɔnɨ/ "GREEN_ADJ"
 	<zima> /ʑˈima/ "WINTER_NOUN"
-	<wziąć> /vʑˈɔɲʨ/ "TAKE_VERB"
 	<jezioro> /jɛʑˈɔrɔ/ "LAKE_NOUN"
 
 /d̥/ (0.007)
 	<sad> /sˈad̥/ "GARDEN_NOUN"
-	<gładki> /ɡwˈad̥ki/ "SMOOTH_ADJ"
-	<miód> /mjˈud̥/ "HONEY_NOUN"
+	<gród> /ɡrˈud̥/ "CITY_NOUN"
+	<lód> /lˈud̥/ "ICE_NOUN"
 
 /ʂ/ (0.005)
 	<szczęście> /ʂʈ͡ʂˈɛɲɕʨɛ/ "HAPPINESS_NOUN"
-	<pszczoła> /pʂʈ͡ʂˈɔwa/ "BEE_NOUN"
+	<sześć> /ʂˈɛɕʨ/ "SIX_NUM"
 	<deszcz> /dˈɛʂʈ͡ʂ/ "RAIN_NOUN"
 
 /ɡ̊/ (0.005)
+	<róg> /rˈuɡ̊/ "HORN_NOUN"
 	<bóg> /bˈuɡ̊/ "GOD_NOUN"
 	<śnieg> /ɕɲˈɛɡ̊/ "SNOW_NOUN"
-	<róg> /rˈuɡ̊/ "HORN_NOUN"
 
 /b̥/ (0.005)
-	<gołąb> /ɡˈɔwɔmb̥/ "DOVE_NOUN"
+	<jabłko> /jˈab̥wkɔ/ "APPLE_NOUN"
 	<chleb> /xlˈɛb̥/ "BREAD_NOUN"
 	<ząb> /zˈɔmb̥/ "TOOTH_NOUN"
 

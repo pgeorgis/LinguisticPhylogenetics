@@ -964,8 +964,8 @@ Old Prussian	Old Prussian			BRAIN_NOUN	musgeno	musɡeno	m u s ɡ e n o		BRAIN_NO
 Old Church Slavonic	Old Church Slavonic			BRAIN_NOUN	мозгъ	mˈɔzɡʊ	m ˈɔ z ɡ ʊ		BRAIN_NOUN_1			
 Bulgarian	Bulgarian			BRAIN_NOUN	мозък	mˈɔzɐk	m ˈɔ z ɐ k		BRAIN_NOUN_1			
 Macedonian	Macedonian			BRAIN_NOUN	мозок	mˈɔzɔk	m ˈɔ z ɔ k		BRAIN_NOUN_1			
-Standard Serbian	Standard Serbian			BRAIN_NOUN	мо̏зак	môzaɡ̊	m ô z a ɡ̊		BRAIN_NOUN_1			
-Standard Croatian	Standard Croatian			BRAIN_NOUN	mȍzak	môzaɡ̊	m ô z a ɡ̊		BRAIN_NOUN_1			
+Standard Serbian	Standard Serbian			BRAIN_NOUN	мо̏зак	môzak	m ô z a k		BRAIN_NOUN_1			
+Standard Croatian	Standard Croatian			BRAIN_NOUN	mȍzak	môzak	m ô z a k		BRAIN_NOUN_1			
 Čakavian	Čakavian			BRAIN_NOUN	mȍzak	môzaɡ̊	m ô z a ɡ̊		BRAIN_NOUN_1			
 Slovenian	Slovenian			BRAIN_NOUN	mọ̑zəg	móːzəɡ̊	m óː z ə ɡ̊		BRAIN_NOUN_1			
 Slovak	Slovak			BRAIN_NOUN	mozog	mˈɔzɔɡ̊	m ˈɔ z ɔ ɡ̊		BRAIN_NOUN_1			
@@ -1202,6 +1202,18 @@ Russian	Russian			NOSE_NOUN	нос	nˈos	n ˈo s		NOSE_NOUN_1
 Čakavian (Cres)	Čakavian (Cres)			NOSE_NOUN		nôːs	n ôː s		NOSE_NOUN_1			
 Čakavian (Burgenland)	Čakavian (Burgenland)			NOSE_NOUN		nu̯ôs	n u̯ô s		NOSE_NOUN_1			
 Kajkavian	Kajkavian			NOSE_NOUN		nu̯os	n u̯o s		NOSE_NOUN_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			NEW_ADJ	náujas	náu̯jas	n áu̯ j a s		NEW_ADJ_1			
+Lithuanian	Lithuanian			NEW_ADJ	naũjas	nɐ̌ʊ̯jɐs	n ɐ̌ʊ̯ j ɐ s		NEW_ADJ_1			
+Latvian	Latvian			NEW_ADJ	naujš	nˈau̯jʃ	n ˈau̯ j ʃ		NEW_ADJ_1			
+Old Prussian	Old Prussian			NEW_ADJ	nauns	nau̯ns	n au̯ n s		NEW_ADJ_1			
+Proto-Balto-Slavic	Proto-Balto-Slavic			NEW_ADJ	náwas	náwas	n á w a s		NEW_ADJ_2			
+Proto-Slavic	Proto-Slavic			NEW_ADJ	nòvъ	nǒvŭ	n ǒ v ŭ		NEW_ADJ_2			
+Old Church Slavonic	Old Church Slavonic			NEW_ADJ	новъ	nˈɔvʊ	n ˈɔ v ʊ		NEW_ADJ_2			
+Bulgarian	Bulgarian			NEW_ADJ	нов	nˈɔf	n ˈɔ f		NEW_ADJ_2			
+Macedonian	Macedonian			NEW_ADJ	нов	nˈof	n ˈo f		NEW_ADJ_2			
+Standard Serbian	Standard Serbian			NEW_ADJ	но̏в	nôʋ	n ô ʋ		NEW_ADJ_2			
+Standard Croatian	Standard Croatian			NEW_ADJ	nȍv	nôʋ	n ô ʋ		NEW_ADJ_2			
+Slovenian	Slovenian			NEW_ADJ	nȍv	nɔ́ʋ	n ɔ́ ʋ		NEW_ADJ_2			
 Proto-Balto-Slavic	Proto-Balto-Slavic			NINE_NUM	néwin	néwin	n é w i n		NINE_NUM_1			
 Lithuanian	Lithuanian			NINE_NUM	devynì	dʲɛvʲiːnʲˈɪ	dʲ ɛ vʲ iː nʲ ˈɪ		NINE_NUM_1			
 Latvian	Latvian			NINE_NUM	deviņi	dˈɛviɲi	d ˈɛ v i ɲ i		NINE_NUM_1			
@@ -2280,8 +2292,8 @@ Russian	Russian			TONGUE_NOUN	язык	jɪzˈɨk	j ɪ z ˈɨ k		TONGUE_NOUN_1
 Čakavian (Burgenland)	Čakavian (Burgenland)			TONGUE_NOUN		jˈɛziːk	j ˈɛ z iː k		TONGUE_NOUN_1			
 Kajkavian	Kajkavian			TONGUE_NOUN		jˈæzik	j ˈæ z i k		TONGUE_NOUN_1			
 Proto-Slavic	Proto-Slavic			SMOOTH_ADJ	glàdъkъjь	ɡlaˀdŭkŭjĭ	ɡ l aˀ d ŭ k ŭ j ĭ		SMOOTH_ADJ_2			
-Standard Serbian	Standard Serbian			SMOOTH_ADJ	глàткӣ	ɡlǎd̥kiː	ɡ l ǎ d̥ k iː		SMOOTH_ADJ_2			
-Standard Croatian	Standard Croatian			SMOOTH_ADJ	glàtkī	ɡlǎd̥kiː	ɡ l ǎ d̥ k iː		SMOOTH_ADJ_2			
+Standard Serbian	Standard Serbian			SMOOTH_ADJ	глàткӣ	ɡlǎtkiː	ɡ l ǎ t k iː		SMOOTH_ADJ_2			
+Standard Croatian	Standard Croatian			SMOOTH_ADJ	glàtkī	ɡlǎtkiː	ɡ l ǎ t k iː		SMOOTH_ADJ_2			
 Slovak	Slovak			SMOOTH_ADJ	hladký	ɦɫˈad̥kiː	ɦ ɫ ˈa d̥ k iː		SMOOTH_ADJ_2			
 Czech	Czech			SMOOTH_ADJ	hladký	ɦlˈad̥kiː	ɦ l ˈa d̥ k iː		SMOOTH_ADJ_2			
 Upper Sorbian	Upper Sorbian			SMOOTH_ADJ	hładki	ɦwˈad̥kʲi	ɦ w ˈa d̥ kʲ i		SMOOTH_ADJ_2			
@@ -2703,6 +2715,17 @@ Polish	Polish			BRIDE_NOUN	niewiasta	ɲɛvjˈasta	ɲ ɛ v j ˈa s t a		BRIDE_NOU
 Ukrainian	Ukrainian			BRIDE_NOUN	невіста	neʋʲˈistɐ	n e ʋʲ ˈi s t ɐ		BRIDE_NOUN_1			
 Belarusian	Belarusian			BRIDE_NOUN	нявеста	nʲævʲˈesta	nʲ æ vʲ ˈe s t a		BRIDE_NOUN_1			
 Russian	Russian			BRIDE_NOUN	невеста	nʲɪvʲˈestə	nʲ ɪ vʲ ˈe s t ə		BRIDE_NOUN_1			
+Proto-Slavic	Proto-Slavic			NEW_ADJ	novъjь	nǒvŭjĭ	n ǒ v ŭ j ĭ		NEW_ADJ_3			
+Čakavian	Čakavian			NEW_ADJ	nȍvī	nôʋiː	n ô ʋ iː		NEW_ADJ_3			
+Slovak	Slovak			NEW_ADJ	nový	nˈɔviː	n ˈɔ v iː		NEW_ADJ_3			
+Czech	Czech			NEW_ADJ	nový	nˈoviː	n ˈo v iː		NEW_ADJ_3			
+Upper Sorbian	Upper Sorbian			NEW_ADJ	nowy	nˈɔwɪ	n ˈɔ w ɪ		NEW_ADJ_3			
+Lower Sorbian	Lower Sorbian			NEW_ADJ	nowy	nˈɔvɨ	n ˈɔ v ɨ		NEW_ADJ_3			
+Polish	Polish			NEW_ADJ	nowy	nˈɔvɨ	n ˈɔ v ɨ		NEW_ADJ_3			
+Kashubian	Kashubian			NEW_ADJ	nowi	nˈɔvi	n ˈɔ v i		NEW_ADJ_3			
+Ukrainian	Ukrainian			NEW_ADJ	новий	nɔʋˈɪj	n ɔ ʋ ˈɪ j		NEW_ADJ_3			
+Belarusian	Belarusian			NEW_ADJ	новы	nˈovɨ	n ˈo v ɨ		NEW_ADJ_3			
+Russian	Russian			NEW_ADJ	новый	nˈovɨj	n ˈo v ɨ j		NEW_ADJ_3			
 Proto-Slavic	Proto-Slavic			CLOUD_NOUN	ȍbolkъ	ôbolkŭ	ô b o l k ŭ		CLOUD_NOUN_1			
 Old Church Slavonic	Old Church Slavonic			CLOUD_NOUN	облакъ	ˈɔblɑkʊ	ˈɔ b l ɑ k ʊ		CLOUD_NOUN_1			
 Bulgarian	Bulgarian			CLOUD_NOUN	облак	ˈɔbɫɐk	ˈɔ b ɫ ɐ k		CLOUD_NOUN_1			

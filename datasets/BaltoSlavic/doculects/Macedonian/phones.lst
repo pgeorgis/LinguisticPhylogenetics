@@ -9,10 +9,10 @@ VOWELS
 	<јува> /jˈuva/ "SOUP_NOUN"
 	<пчела> /pʧˈɛɫa/ "BEE_NOUN"
 
-/o/ (0.085)
+/o/ (0.086)
 	<рог> /rˈoɡ̊/ "HORN_NOUN"
 	<осум> /ˈosum/ "EIGHT_NUM"
-	<човек> /ʧˈovɛk/ "PERSON_NOUN"
+	<вол> /vˈoɫ/ "OX_NOUN"
 
 /i/ (0.034)
 	<син> /sˈin/ "SON_NOUN"
@@ -46,12 +46,12 @@ CONSONANTS
 	<место> /mˈɛsto/ "PLACE_NOUN"
 	<невеста> /nˈɛvɛsta/ "BRIDE_NOUN"
 
-/ɫ/ (0.05)
+/ɫ/ (0.049)
 	<пепел> /pˈɛpɛɫ/ "ASH_NOUN"
 	<јаболко> /jˈabɔɫkɔ/ "APPLE_NOUN"
 	<мисла> /mˈisɫa/ "THOUGHT_NOUN"
 
-/k/ (0.05)
+/k/ (0.049)
 	<река> /rˈɛka/ "RIVER_NOUN"
 	<облак> /ˈobɫak/ "CLOUD_NOUN"
 	<велик> /vˈɛlik/ "GREAT_ADJ"
@@ -66,12 +66,12 @@ CONSONANTS
 	<два> /dvˈa/ "TWO_NUM"
 	<во> /vo/ "IN_PREP"
 
-/n/ (0.039)
-	<ноќ> /nˈoc/ "NIGHT_NOUN"
-	<еден> /ˈɛdɛn/ "ONE_NUM"
+/n/ (0.04)
+	<нов> /nˈof/ "NEW_ADJ"
+	<нос> /nˈos/ "NOSE_NOUN"
 	<нокт> /nˈokt/ "FINGERNAIL_NOUN"
 
-/d/ (0.036)
+/d/ (0.035)
 	<видра> /vˈidra/ "OTTER_NOUN"
 	<година> /ɡˈodina/ "HOUR_NOUN"
 	<вода> /vˈoda/ "WATER_NOUN"
@@ -111,20 +111,20 @@ CONSONANTS
 	<’рбет> /ˈr̩bɛt/ "SPINE_NOUN"
 	<срце> /sˈr̩ʦɛ/ "HEART_NOUN"
 
-/j/ (0.012)
-	<јува> /jˈuva/ "SOUP_NOUN"
-	<земја> /zˈɛmja/ "EARTH_NOUN"
-	<јаболко> /jˈabɔɫkɔ/ "APPLE_NOUN"
-
-/f/ (0.012)
+/f/ (0.014)
 	<орев> /ˈɔɾɛf/ "NUT_NOUN"
-	<крв> /kˈr̩f/ "BLOOD_NOUN"
-	<здрав> /zdrˈaf/ "HEALTHY_ADJ"
+	<лав> /ɫˈaf/ "LION_NOUN"
+	<сув> /sˈuf/ "DRY_ADJ"
+
+/j/ (0.012)
+	<јаболко> /jˈabɔɫkɔ/ "APPLE_NOUN"
+	<јаглен> /jˈaɡlɛn/ "COAL_NOUN"
+	<јагода> /jˈaɡoda/ "BERRY_NOUN"
 
 /ʦ/ (0.011)
-	<цел> /ʦˈɛɫ/ "WHOLE_ADJ"
-	<месец> /mˈɛsɛʦ/ "MONTH_NOUN"
 	<сонце> /sˈonʦɛ/ "SUN_NOUN"
+	<месец> /mˈɛsɛʦ/ "MONTH_NOUN"
+	<цел> /ʦˈɛɫ/ "WHOLE_ADJ"
 
 /ʒ/ (0.011)
 	<жена> /ʒˈɛna/ "WOMAN_NOUN"

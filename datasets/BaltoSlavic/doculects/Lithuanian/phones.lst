@@ -1,10 +1,10 @@
 VOWELS
-/ɐ/ (0.103)
+/ɐ/ (0.104)
 	<nãgas> /nǎːɡɐs/ "FINGERNAIL_NOUN"
 	<anglìs> /ɐŋɡlʲˈɪs/ "COAL_NOUN"
 	<àš> /ˈɐʃ/ "I_POS"
 
-/ɪ/ (0.064)
+/ɪ/ (0.063)
 	<mirtìs> /mʲɪrʲtʲˈɪs/ "DEATH_NOUN"
 	<naktìs> /nɐktʲˈɪs/ "NIGHT_NOUN"
 	<ìlgas> /ˈɪɫɡɐs/ "LONG_ADJ"
@@ -29,7 +29,7 @@ VOWELS
 	<mė́nesis> /mʲêːnʲɛsʲɪs/ "MONTH_NOUN"
 	<žvėrìs> /ʑvʲeːrʲˈɪs/ "BEAST_NOUN"
 
-/æː/ (0.016)
+/æː/ (0.015)
 	<ẽžeras> /æ̌ːʑɛrɐs/ "LAKE_NOUN"
 	<žẽmė> /ʑæ̌ːmʲeː/ "EARTH_NOUN"
 	<erẽlis> /ɛrʲæ̌ːlʲɪs/ "EAGLE_NOUN"
@@ -59,9 +59,9 @@ VOWELS
 	<obuolỹs> /oːbuə̯lʲǐːs/ "APPLE_NOUN"
 	<úoga> /ûə̯ɡɐ/ "BERRY_NOUN"
 
-/ɐʊ̯/ (0.004)
+/ɐʊ̯/ (0.006)
+	<naũjas> /nɐ̌ʊ̯jɐs/ "NEW_ADJ"
 	<saũsas> /sɐ̌ʊ̯sɐs/ "DRY_ADJ"
-	<ausìs> /ɐʊ̯sʲˈɪs/ "EAR_NOUN"
 	<kraũjas> /krɐ̌ʊ̯jɐs/ "BLOOD_NOUN"
 
 /aɪ̯/ (0.004)
@@ -87,7 +87,7 @@ VOWELS
 
 
 CONSONANTS
-/s/ (0.121)
+/s/ (0.122)
 	<ugnìs> /ʊɡnʲˈɪs/ "FIRE_NOUN"
 	<lẽdas> /lʲæ̌ːdɐs/ "ICE_NOUN"
 	<sãpnas> /sǎːpnɐs/ "DREAM_NOUN"
@@ -97,52 +97,52 @@ CONSONANTS
 	<kẽras> /kʲæ̌ːrɐs/ "ROOT_NOUN"
 	<stóras> /stôːrɐs/ "OLD_ADJ"
 
-/k/ (0.024)
-	<vil̃kas> /vʲɪɫ̌kɐs/ "WOLF_NOUN"
-	<vãkaras> /vǎːkɐrɐs/ "EVENING_NOUN"
-	<duktė̃> /dʊktʲěː/ "DAUGHTER_NOUN"
-
-/n/ (0.023)
-	<nósis> /nôːsʲɪs/ "NOSE_NOUN"
+/n/ (0.024)
 	<geltónas> /ɡʲɛɫtôːnɐs/ "YELLOW_ADJ"
-	<žinóti> /ʑɪnôːtʲɪ/ "KNOW_VERB"
+	<šveñtas> /ɕvʲɛ̌ntɐs/ "HOLY_ADJ"
+	<nagà> /nɐɡˈɐ/ "FOOT_NOUN"
+
+/k/ (0.024)
+	<láiškas> /ɫâɪ̯ʃkɐs/ "LEAF_NOUN"
+	<kàs> /kˈɐs/ "WHAT_PRON"
+	<akmuõ> /ɐkmǔə̯/ "STONE_NOUN"
 
 /ɫ/ (0.021)
-	<vil̃kas> /vʲɪɫ̌kɐs/ "WOLF_NOUN"
 	<ìlgas> /ˈɪɫɡɐs/ "LONG_ADJ"
 	<galvà> /ɡɐɫvˈɐ/ "HEAD_NOUN"
+	<árklas> /âːrkɫɐs/ "PLOUGH_NOUN"
 
 /ɡ/ (0.021)
-	<galvà> /ɡɐɫvˈɐ/ "HEAD_NOUN"
 	<glodùs> /ɡɫoːdˈʊs/ "SMOOTH_ADJ"
 	<úoga> /ûə̯ɡɐ/ "BERRY_NOUN"
+	<nagà> /nɐɡˈɐ/ "FOOT_NOUN"
 
 /tʲ/ (0.02)
-	<tingùs> /tʲɪŋɡˈʊs/ "HEAVY_ADJ"
 	<duktė̃> /dʊktʲěː/ "DAUGHTER_NOUN"
 	<teisùs> /tʲɛɪ̯sˈʊs/ "QUIET_ADJ"
-
-/t/ (0.02)
-	<báltas> /bâːɫtɐs/ "WHITE_ADJ"
-	<šim̃tas> /ɕɪ̌mtɐs/ "HUNDRED_NUM"
-	<geltónas> /ɡʲɛɫtôːnɐs/ "YELLOW_ADJ"
-
-/vʲ/ (0.018)
-	<liežùvis> /lʲiə̯ʒˈʊvʲɪs/ "TONGUE_NOUN"
-	<vil̃kti> /vʲɪɫ̌ktʲɪ/ "DRAG_VERB"
 	<tvìrtas> /tʲvʲˈɪrtɐs/ "HARD_ADJ"
 
+/t/ (0.02)
+	<šim̃tas> /ɕɪ̌mtɐs/ "HUNDRED_NUM"
+	<stãlas> /stǎːɫɐs/ "TABLE_NOUN"
+	<pir̃štas> /pʲɪ̌rʃtɐs/ "FINGER_NOUN"
+
+/vʲ/ (0.018)
+	<tvìrtas> /tʲvʲˈɪrtɐs/ "HARD_ADJ"
+	<devynì> /dʲɛvʲiːnʲˈɪ/ "NINE_NUM"
+	<liežùvis> /lʲiə̯ʒˈʊvʲɪs/ "TONGUE_NOUN"
+
 /lʲ/ (0.017)
-	<kẽlis> /kʲæ̌ːlʲɪs/ "KNEE_NOUN"
-	<sáulė> /sâʊ̯lʲeː/ "SUN_NOUN"
+	<liežùvis> /lʲiə̯ʒˈʊvʲɪs/ "TONGUE_NOUN"
 	<lẽdas> /lʲæ̌ːdɐs/ "ICE_NOUN"
+	<anglìs> /ɐŋɡlʲˈɪs/ "COAL_NOUN"
 
 /d/ (0.017)
-	<gar̃das> /ɡɐ̌rdɐs/ "CITY_NOUN"
 	<dū́mas> /dûːmɐs/ "SMOKE_NOUN"
+	<vanduõ> /vɐndǔə̯/ "WATER_NOUN"
 	<glodùs> /ɡɫoːdˈʊs/ "SMOOTH_ADJ"
 
-/rʲ/ (0.016)
+/rʲ/ (0.015)
 	<sū́ris> /sûːrʲɪs/ "CHEESE_NOUN"
 	<kárvė> /kâːrʲvʲeː/ "COW_NOUN"
 	<ríešutas> /rʲîə̯ʃʊtɐs/ "NUT_NOUN"
@@ -217,20 +217,20 @@ CONSONANTS
 	<penkì> /pʲɛŋʲkʲˈɪ/ "FIVE_NUM"
 	<pìlnas> /pʲˈɪɫnɐs/ "FULL_ADJ"
 
+/j/ (0.006)
+	<vė́jas> /vʲêːjɐs/ "WIND_NOUN"
+	<naũjas> /nɐ̌ʊ̯jɐs/ "NEW_ADJ"
+	<kraũjas> /krɐ̌ʊ̯jɐs/ "BLOOD_NOUN"
+
 /bʲ/ (0.006)
-	<bè> /bʲˈɛ/ "WITHOUT_PREP"
+	<béržas> /bʲæ̂ːrʒɐs/ "BIRCH_NOUN"
 	<bìtė> /bʲˈɪtʲeː/ "BEE_NOUN"
 	<bẽbras> /bʲæ̌ːbrɐs/ "BEAVER_NOUN"
 
 /ŋ/ (0.004)
+	<anglìs> /ɐŋɡlʲˈɪs/ "COAL_NOUN"
 	<tingùs> /tʲɪŋɡˈʊs/ "HEAVY_ADJ"
 	<rankà> /rɐŋkˈɐ/ "HAND_NOUN"
-	<anglìs> /ɐŋɡlʲˈɪs/ "COAL_NOUN"
-
-/j/ (0.004)
-	<vė́jas> /vʲêːjɐs/ "WIND_NOUN"
-	<kraũjas> /krɐ̌ʊ̯jɐs/ "BLOOD_NOUN"
-	<jū́šė> /jûːɕeː/ "SOUP_NOUN"
 
 /ŋʲ/ (0.003)
 	<penkì> /pʲɛŋʲkʲˈɪ/ "FIVE_NUM"
@@ -246,20 +246,20 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
-/ˈ/ (0.061)
-	<dienà> /dʲiə̯nˈɐ/ "DAY_NOUN"
-	<glùšas> /ɡɫˈʊʃɐs/ "DEAF_ADJ"
+/ˈ/ (0.06)
 	<žvėrìs> /ʑvʲeːrʲˈɪs/ "BEAST_NOUN"
+	<girià> /ɡʲɪrʲˈɐ/ "MOUNTAIN_NOUN"
+	<barzdà> /bɐrzdˈɐ/ "BEARD_NOUN"
 
-/̌/ (0.056)
-	<mãrios> /mǎːrʲoːs/ "SEA_NOUN"
-	<obuolỹs> /oːbuə̯lʲǐːs/ "APPLE_NOUN"
+/̌/ (0.057)
 	<diẽvas> /dʲǐə̯vɐs/ "GOD_NOUN"
+	<sõdas> /sǒːdɐs/ "GARDEN_NOUN"
+	<vil̃kti> /vʲɪɫ̌ktʲɪ/ "DRAG_VERB"
 
 /̂/ (0.041)
-	<šáltas> /ʃâːɫtɐs/ "COLD_ADJ"
-	<kárvė> /kâːrʲvʲeː/ "COW_NOUN"
-	<béržas> /bʲæ̂ːrʒɐs/ "BIRCH_NOUN"
+	<sáulė> /sâʊ̯lʲeː/ "SUN_NOUN"
+	<ū́dra> /ûːdrɐ/ "OTTER_NOUN"
+	<sū́ris> /sûːrʲɪs/ "CHEESE_NOUN"
 
 
 

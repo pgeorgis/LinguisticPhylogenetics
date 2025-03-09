@@ -1,25 +1,25 @@
 VOWELS
-/a/ (0.11)
+/a/ (0.109)
 	<дачка> /daʧkˈa/ "DAUGHTER_NOUN"
 	<зима> /zʲimˈa/ "WINTER_NOUN"
 	<кусаць> /kusˈaʦʲ/ "BITE_VERB"
 
-/o/ (0.053)
+/o/ (0.054)
 	<ногаць> /nˈoɣaʦʲ/ "FINGERNAIL_NOUN"
 	<воблака> /vˈobɫaka/ "CLOUD_NOUN"
-	<нос> /nˈos/ "NOSE_NOUN"
+	<ноч> /nˈoʧ/ "NIGHT_NOUN"
 
 /ɨ/ (0.041)
-	<цэлы> /ʦˈɛɫɨ/ "WHOLE_ADJ"
-	<мудры> /mˈudrɨ/ "WISE_ADJ"
-	<тры> /trˈɨ/ "THREE_NUM"
+	<белы> /bʲˈeɫɨ/ "WHITE_ADJ"
+	<крыло> /krɨɫˈo/ "WING_NOUN"
+	<мысль> /mˈɨsʲlʲ/ "THOUGHT_NOUN"
 
 /e/ (0.038)
 	<жалеза> /ʐalʲˈeza/ "IRON_NOUN"
 	<смерць> /sʲmʲˈerʦʲ/ "DEATH_NOUN"
 	<без> /bʲˈez̥/ "WITHOUT_PREP"
 
-/æ/ (0.027)
+/æ/ (0.026)
 	<ягада> /jˈæɣada/ "BERRY_NOUN"
 	<месяц> /mʲˈesʲæʦ/ "MONTH_NOUN"
 	<імя> /imʲˈæ/ "NAME_NOUN"
@@ -81,7 +81,7 @@ CONSONANTS
 	<воўк> /vˈowk/ "WOLF_NOUN"
 	<калена> /kalʲˈena/ "KNEE_NOUN"
 
-/v/ (0.025)
+/v/ (0.026)
 	<слава> /sɫˈava/ "GLORY_NOUN"
 	<жывы> /ʐɨvˈɨ/ "ALIVE_ADJ"
 	<возера> /vˈozʲera/ "LAKE_NOUN"
@@ -91,7 +91,7 @@ CONSONANTS
 	<кветка> /kʲvʲˈetka/ "FLOWER_NOUN"
 	<чатыры> /ʧatˈɨrɨ/ "FOUR_NUM"
 
-/n/ (0.021)
+/n/ (0.022)
 	<калена> /kalʲˈena/ "KNEE_NOUN"
 	<сон> /sˈon/ "DREAM_NOUN"
 	<знаць> /znˈaʦʲ/ "KNOW_VERB"
@@ -252,7 +252,7 @@ SUPRASEGMENTALS
 /ˈ/ (0.183)
 	<сыр> /sˈɨr/ "CHEESE_NOUN"
 	<барада> /bʌradˈa/ "BEARD_NOUN"
-	<пясок> /pʲæsˈok/ "SAND_NOUN"
+	<соль> /sˈolʲ/ "SALT_NOUN"
 
 
 

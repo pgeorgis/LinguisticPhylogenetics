@@ -1,15 +1,15 @@
 VOWELS
-/a/ (0.08)
+/a/ (0.079)
 	<ȍblak> /ôblak/ "CLOUD_NOUN"
 	<glȁdak> /ɡlâdak/ "SMOOTH_ADJ"
 	<mȗdar> /mûːdar/ "WISE_ADJ"
 
-/o/ (0.045)
+/o/ (0.046)
 	<jȁgoda> /jâɡoda/ "BERRY_NOUN"
 	<ȍko> /ôko/ "EYE_NOUN"
 	<mȍzak> /môzaɡ̊/ "BRAIN_NOUN"
 
-/e/ (0.041)
+/e/ (0.04)
 	<dȅvet> /dêʋet/ "NINE_NUM"
 	<ženȁ> /ʒenâ/ "WOMAN_NOUN"
 	<ȉme> /îme/ "NAME_NOUN"
@@ -19,10 +19,10 @@ VOWELS
 	<vēzȁti> /ʋeːzâti/ "TIE_VERB"
 	<mȉsec> /mîseʦ/ "MONTH_NOUN"
 
-/iː/ (0.032)
+/iː/ (0.033)
 	<žīvȉti> /ʒiːʋîti/ "LIVE_VERB"
 	<hćî> /xcîː/ "DAUGHTER_NOUN"
-	<trȋ> /trîː/ "THREE_NUM"
+	<mȋsal> /mîːsal/ "THOUGHT_NOUN"
 
 /uː/ (0.024)
 	<glȗh> /ɡlûːx/ "DEAF_ADJ"
@@ -62,17 +62,17 @@ CONSONANTS
 	<sȗh> /sûːx/ "DRY_ADJ"
 	<lȋst> /lîːst/ "LEAF_NOUN"
 
+/ʋ/ (0.042)
+	<vēzȁti> /ʋeːzâti/ "TIE_VERB"
+	<žȋv> /ʒîːʋ/ "ALIVE_ADJ"
+	<va> /ʋa/ "IN_PREP"
+
 /l/ (0.042)
-	<glȗp> /ɡlûːp/ "STUPID_ADJ"
-	<pȍpel> /pôpel/ "ASH_NOUN"
-	<želȅzo> /ʒelêzo/ "IRON_NOUN"
+	<gȍlūb> /ɡôluːb̥/ "DOVE_NOUN"
+	<lȉto> /lîto/ "SUMMER_NOUN"
+	<glāvȁ> /ɡlaːʋâ/ "HEAD_NOUN"
 
-/ʋ/ (0.041)
-	<vȅčēr> /ʋêʧeːr/ "EVENING_NOUN"
-	<dvȃ> /dʋâː/ "TWO_NUM"
-	<zdrãv> /zdrǎːʋ/ "HEALTHY_ADJ"
-
-/r/ (0.038)
+/r/ (0.037)
 	<jȅzero> /jêzero/ "LAKE_NOUN"
 	<orȉh> /orîx/ "NUT_NOUN"
 	<rȉba> /rîba/ "FISH_NOUN"
@@ -82,9 +82,9 @@ CONSONANTS
 	<ȍko> /ôko/ "EYE_NOUN"
 	<jazȉk> /jazîk/ "TONGUE_NOUN"
 
-/n/ (0.032)
+/n/ (0.033)
 	<nogȁ> /noɡâ/ "FOOT_NOUN"
-	<jedãn> /jedǎːn/ "ONE_NUM"
+	<nȏs> /nôːs/ "NOSE_NOUN"
 	<zelẽn> /zelěːn/ "GREEN_ADJ"
 
 /d/ (0.029)
@@ -92,12 +92,12 @@ CONSONANTS
 	<dĩm> /dǐːm/ "SMOKE_NOUN"
 	<drȋvo> /drîːʋo/ "TREE_NOUN"
 
-/m/ (0.027)
+/m/ (0.026)
 	<zemlȁ> /zemlâ/ "EARTH_NOUN"
 	<mȇd> /mêːd̥/ "HONEY_NOUN"
 	<mlīkȍ> /mliːkô/ "MILK_NOUN"
 
-/ɡ/ (0.02)
+/ɡ/ (0.019)
 	<grȃd> /ɡrâːd̥/ "CITY_NOUN"
 	<glȁdak> /ɡlâdak/ "SMOOTH_ADJ"
 	<ȍganj> /ôɡaɲ/ "FIRE_NOUN"
@@ -182,12 +182,12 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
-/̂/ (0.166)
+/̂/ (0.167)
 	<lȋst> /lîːst/ "LEAF_NOUN"
 	<slȁva> /slâʋa/ "GLORY_NOUN"
-	<vȍsak> /ʋôsak/ "WAX_NOUN"
+	<vodȁ> /ʋodâ/ "WATER_NOUN"
 
-/̌/ (0.027)
+/̌/ (0.026)
 	<bĩl> /bǐːl/ "WHITE_ADJ"
 	<jedãn> /jedǎːn/ "ONE_NUM"
 	<dĩm> /dǐːm/ "SMOKE_NOUN"

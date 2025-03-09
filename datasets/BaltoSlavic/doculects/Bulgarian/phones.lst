@@ -1,5 +1,5 @@
 VOWELS
-/ɛ/ (0.077)
+/ɛ/ (0.076)
 	<хладен> /xɫˈadɛn/ "COLD_ADJ"
 	<орех> /ˈɔrɛx/ "NUT_NOUN"
 	<жена> /ʒɛnˈa/ "WOMAN_NOUN"
@@ -9,15 +9,15 @@ VOWELS
 	<лято> /lʲˈato/ "SUMMER_NOUN"
 	<пчела> /pʧɛɫˈa/ "BEE_NOUN"
 
-/ɐ/ (0.055)
+/ɐ/ (0.054)
 	<огън> /ˈɔɡɐn/ "FIRE_NOUN"
 	<невяста> /nɛvʲˈastɐ/ "BRIDE_NOUN"
 	<пясък> /pʲˈasɐk/ "SAND_NOUN"
 
-/ɔ/ (0.031)
-	<восък> /vˈɔsɐk/ "WAX_NOUN"
+/ɔ/ (0.032)
+	<топъл> /tˈɔpɐɫ/ "WARM_ADJ"
+	<нов> /nˈɔf/ "NEW_ADJ"
 	<нощ> /nˈɔʃt/ "NIGHT_NOUN"
-	<нос> /nˈɔs/ "NOSE_NOUN"
 
 /i/ (0.029)
 	<три> /trˈi/ "THREE_NUM"
@@ -47,7 +47,7 @@ CONSONANTS
 	<дърво> /dɐrvˈɔ/ "TREE_NOUN"
 	<кръв> /krˈɤf/ "BLOOD_NOUN"
 
-/t/ (0.047)
+/t/ (0.046)
 	<сто> /stˈɔ/ "HUNDRED_NUM"
 	<кост> /kˈɔst/ "BONE_NOUN"
 	<топъл> /tˈɔpɐɫ/ "WARM_ADJ"
@@ -72,10 +72,10 @@ CONSONANTS
 	<вол> /vˈɔɫ/ "OX_NOUN"
 	<видя> /vˈidʲɐ/ "SEE_VERB"
 
-/n/ (0.028)
+/n/ (0.029)
 	<нокът> /nˈɔkɐt/ "FINGERNAIL_NOUN"
 	<зелен> /zɛlˈɛn/ "GREEN_ADJ"
-	<син> /sˈin/ "SON_NOUN"
+	<корен> /kˈɔrɛn/ "ROOT_NOUN"
 
 /d/ (0.027)
 	<година> /ɡodˈinɐ/ "HOUR_NOUN"
@@ -137,30 +137,30 @@ CONSONANTS
 	<пия> /pˈijɐ/ "DRINK_VERB"
 	<зная> /znˈajɐ/ "KNOW_VERB"
 
+/f/ (0.007)
+	<жив> /ʒˈif/ "ALIVE_ADJ"
+	<кръв> /krˈɤf/ "BLOOD_NOUN"
+	<здрав> /zdrˈaf/ "HEALTHY_ADJ"
+
 /d̥/ (0.007)
-	<град> /ɡrˈad̥/ "CITY_NOUN"
-	<сад> /sˈad̥/ "GARDEN_NOUN"
+	<твърд> /tvˈɤrd̥/ "HARD_ADJ"
 	<мед> /mˈɛd̥/ "HONEY_NOUN"
+	<град> /ɡrˈad̥/ "CITY_NOUN"
 
 /ʧ/ (0.006)
-	<вечер> /vˈɛʧɛr/ "EVENING_NOUN"
 	<четири> /ʧˈɛtiri/ "FOUR_NUM"
-	<човек> /ʧovˈɛk/ "PERSON_NOUN"
+	<пчела> /pʧɛɫˈa/ "BEE_NOUN"
+	<черен> /ʧˈɛrɛn/ "BLACK_ADJ"
 
 /ʃ/ (0.006)
-	<дъщеря> /dɐʃtɛrʲˈa/ "DAUGHTER_NOUN"
-	<шест> /ʃˈɛst/ "SIX_NUM"
 	<що> /ʃtˈɔ/ "WHAT_PRON"
+	<шест> /ʃˈɛst/ "SIX_NUM"
+	<нощ> /nˈɔʃt/ "NIGHT_NOUN"
 
 /vʲ/ (0.006)
-	<цвят> /ʦvʲˈat/ "FLOWER_NOUN"
-	<свят> /svʲˈat/ "HOLY_ADJ"
+	<невяста> /nɛvʲˈastɐ/ "BRIDE_NOUN"
 	<вятър> /vʲˈatɐr/ "WIND_NOUN"
-
-/f/ (0.006)
-	<кръв> /krˈɤf/ "BLOOD_NOUN"
-	<лъв> /ɫˈɤf/ "LION_NOUN"
-	<мъртъв> /mˈɤrtɐf/ "DEAD_ADJ"
+	<цвят> /ʦvʲˈat/ "FLOWER_NOUN"
 
 /ɡ̊/ (0.005)
 	<рог> /rˈɔɡ̊/ "HORN_NOUN"
@@ -208,10 +208,10 @@ CONSONANTS
 
 
 SUPRASEGMENTALS
-/ˈ/ (0.186)
-	<камък> /kˈamɐk/ "STONE_NOUN"
-	<вол> /vˈɔɫ/ "OX_NOUN"
-	<сняг> /snʲˈaɡ̊/ "SNOW_NOUN"
+/ˈ/ (0.187)
+	<звезда> /zvɛzdˈa/ "STAR_NOUN"
+	<видра> /vˈidrɐ/ "OTTER_NOUN"
+	<гладък> /ɡɫˈadɐk/ "SMOOTH_ADJ"
 
 
 

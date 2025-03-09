@@ -4,12 +4,12 @@ VOWELS
 	<ústa> /ˈuːsta/ "MOUTH_NOUN"
 	<zima> /zˈima/ "WINTER_NOUN"
 
-/ɔ/ (0.076)
+/ɔ/ (0.077)
 	<telo> /cˈɛɫɔ/ "BODY_NOUN"
 	<dobrý> /dˈɔbriː/ "GOOD_ADJ"
 	<oblak> /ˈɔbɫak/ "CLOUD_NOUN"
 
-/ɛ/ (0.073)
+/ɛ/ (0.072)
 	<more> /mˈɔrɛ/ "SEA_NOUN"
 	<človek> /ʧɫˈɔʋɛk/ "PERSON_NOUN"
 	<koreň> /kˈɔrɛɲ/ "ROOT_NOUN"
@@ -19,9 +19,9 @@ VOWELS
 	<vydra> /ʋˈidra/ "OTTER_NOUN"
 	<ryba> /rˈiba/ "FISH_NOUN"
 
-/iː/ (0.031)
+/iː/ (0.032)
 	<hluchý> /ɦlˈuxiː/ "DEAF_ADJ"
-	<tichý> /cˈixiː/ "QUIET_ADJ"
+	<starý> /stˈariː/ "OLD_ADJ"
 	<živý> /ʒˈiʋiː/ "ALIVE_ADJ"
 
 /ɪ̯ɛ/ (0.019)
@@ -99,7 +99,7 @@ CONSONANTS
 	<necht> /ɲˈɛxt/ "FINGERNAIL_NOUN"
 	<svätý> /sʋˈætiː/ "HOLY_ADJ"
 
-/m/ (0.031)
+/m/ (0.03)
 	<dym> /dˈim/ "SMOKE_NOUN"
 	<miesto> /mɪ̯ˈɛstɔ/ "PLACE_NOUN"
 	<múdry> /mˈuːdri/ "WISE_ADJ"
@@ -109,47 +109,47 @@ CONSONANTS
 	<sláva> /sɫˈaːʋa/ "GLORY_NOUN"
 	<celý> /ʦˈɛɫiː/ "WHOLE_ADJ"
 
-/ɦ/ (0.026)
-	<hviezda> /ɦʋɪ̯ˈɛzda/ "STAR_NOUN"
-	<hlúpy> /ɦɫˈuːpi/ "STUPID_ADJ"
-	<dlhý> /dˈɫ̩ɦiː/ "LONG_ADJ"
-
-/n/ (0.026)
-	<jasný> /jˈasniː/ "CLEAR_ADJ"
+/n/ (0.027)
+	<žena> /ʒˈɛna/ "WOMAN_NOUN"
+	<cena> /ʦˈɛna/ "PRICE_NOUN"
 	<syn> /sˈin/ "SON_NOUN"
-	<hodina> /ɦˈɔɟina/ "HOUR_NOUN"
+
+/ɦ/ (0.026)
+	<dlhý> /dˈɫ̩ɦiː/ "LONG_ADJ"
+	<hrad> /ɦrˈad̥/ "CITY_NOUN"
+	<hviezda> /ɦʋɪ̯ˈɛzda/ "STAR_NOUN"
 
 /d/ (0.026)
+	<jeden> /jˈɛdɛn/ "ONE_NUM"
 	<hviezda> /ɦʋɪ̯ˈɛzda/ "STAR_NOUN"
 	<drevo> /drˈɛʋɔ/ "TREE_NOUN"
-	<zdravý> /zdrˈaʋiː/ "HEALTHY_ADJ"
 
 /z/ (0.022)
+	<vziať> /vzɪ̯ˈac/ "TAKE_VERB"
+	<mozog> /mˈɔzɔɡ̊/ "BRAIN_NOUN"
 	<zdravý> /zdrˈaʋiː/ "HEALTHY_ADJ"
-	<jazero> /jˈazɛrɔ/ "LAKE_NOUN"
-	<viazať> /ʋɪ̯ˈazac/ "TIE_VERB"
 
 /x/ (0.02)
-	<jucha> /jˈuxa/ "SOUP_NOUN"
-	<tichý> /cˈixiː/ "QUIET_ADJ"
+	<mucha> /mˈuxa/ "HOUSEFLY_NOUN"
 	<sneh> /sɲˈɛx/ "SNOW_NOUN"
+	<tichý> /cˈixiː/ "QUIET_ADJ"
 
 /b/ (0.019)
+	<bez> /bˈɛz̥/ "WITHOUT_PREP"
 	<oblak> /ˈɔbɫak/ "CLOUD_NOUN"
 	<brada> /brˈada/ "BEARD_NOUN"
-	<boh> /bˈɔx/ "GOD_NOUN"
 
 /l/ (0.017)
+	<lev> /lˈɛʋ/ "LION_NOUN"
 	<teplý> /cˈɛpliː/ "WARM_ADJ"
 	<mlieko> /mlɪ̯ˈɛkɔ/ "MILK_NOUN"
-	<hluchý> /ɦlˈuxiː/ "DEAF_ADJ"
 
 /p/ (0.016)
+	<pes> /pˈɛs/ "DOG_NOUN"
 	<piť> /pˈic/ "DRINK_VERB"
-	<teplý> /cˈɛpliː/ "WARM_ADJ"
 	<piesok> /pɪ̯ˈɛsɔk/ "SAND_NOUN"
 
-/ʎ/ (0.015)
+/ʎ/ (0.014)
 	<železo> /ʒˈeʎezɔ/ "IRON_NOUN"
 	<ľudia> /ʎˈuɟɪ̯a/ "PEOPLE_NOUN"
 	<teľa> /cˈɛʎa/ "CALF_NOUN"
@@ -209,14 +209,15 @@ CONSONANTS
 	<šťastie> /ʃcˈascɪ̯ɛ/ "HAPPINESS_NOUN"
 	<šesť> /ʃˈɛsc/ "SIX_NUM"
 
-/b̥/ (0.004)
-	<zub> /zˈub̥/ "TOOTH_NOUN"
-	<chlieb> /xlɪ̯ˈɛb̥/ "BREAD_NOUN"
-	<holub> /ɦˈɔɫub̥/ "DOVE_NOUN"
-
-/v/ (0.003)
+/v/ (0.004)
 	<vziať> /vzɪ̯ˈac/ "TAKE_VERB"
 	<v> /v/ "IN_PREP"
+	<nový> /nˈɔviː/ "NEW_ADJ"
+
+/b̥/ (0.004)
+	<holub> /ɦˈɔɫub̥/ "DOVE_NOUN"
+	<zub> /zˈub̥/ "TOOTH_NOUN"
+	<chlieb> /xlɪ̯ˈɛb̥/ "BREAD_NOUN"
 
 /f/ (0.003)
 	<vták> /ftˈaːk/ "BIRD_NOUN"
